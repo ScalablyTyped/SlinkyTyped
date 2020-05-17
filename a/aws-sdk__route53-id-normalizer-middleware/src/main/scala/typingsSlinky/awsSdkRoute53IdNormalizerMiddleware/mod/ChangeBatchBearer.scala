@@ -1,18 +1,18 @@
 package typingsSlinky.awsSdkRoute53IdNormalizerMiddleware.mod
 
-import typingsSlinky.awsSdkRoute53IdNormalizerMiddleware.AnonChanges
+import typingsSlinky.awsSdkRoute53IdNormalizerMiddleware.anon.Changes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ChangeBatchBearer extends js.Object {
-  var ChangeBatch: AnonChanges = js.native
+  var ChangeBatch: Changes = js.native
 }
 
 object ChangeBatchBearer {
   @scala.inline
-  def apply(ChangeBatch: AnonChanges): ChangeBatchBearer = {
+  def apply(ChangeBatch: Changes): ChangeBatchBearer = {
     val __obj = js.Dynamic.literal(ChangeBatch = ChangeBatch.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChangeBatchBearer]
   }
@@ -23,7 +23,7 @@ object ChangeBatchBearer {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withChangeBatch(value: AnonChanges): Self = {
+    def withChangeBatch(value: Changes): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ChangeBatch")(value.asInstanceOf[js.Any])
         ret

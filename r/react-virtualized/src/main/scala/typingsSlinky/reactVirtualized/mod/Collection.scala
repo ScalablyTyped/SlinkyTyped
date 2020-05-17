@@ -1,7 +1,7 @@
 package typingsSlinky.reactVirtualized.mod
 
-import typingsSlinky.reactVirtualized.AnonArialabel
-import typingsSlinky.reactVirtualized.AnonCellGroupRenderer
+import typingsSlinky.reactVirtualized.anon.Arialabel
+import typingsSlinky.reactVirtualized.anon.CellGroupRenderer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ class Collection ()
 @JSImport("react-virtualized", "Collection")
 @js.native
 object Collection extends js.Object {
-  var defaultProps: AnonCellGroupRenderer = js.native
-  var propTypes: AnonArialabel = js.native
+  var defaultProps: CellGroupRenderer = js.native
+  var propTypes: Arialabel = js.native
 }
 

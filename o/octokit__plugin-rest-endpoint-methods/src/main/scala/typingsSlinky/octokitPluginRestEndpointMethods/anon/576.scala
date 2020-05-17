@@ -1,0 +1,26 @@
+package typingsSlinky.octokitPluginRestEndpointMethods.anon
+
+import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.TeamsUpdateParams
+import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.TeamsUpdateParamsDeprecatedPermission
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait `576` extends js.Object {
+  var endpoint: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify EndpointInterface */ js.Any = js.native
+  def apply(): js.Promise[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<TeamsUpdateResponse> */ _
+  ] = js.native
+  def apply(
+    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with TeamsUpdateParams
+  ): js.Promise[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<TeamsUpdateResponse> */ _
+  ] = js.native
+  def apply(
+    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with TeamsUpdateParamsDeprecatedPermission
+  ): js.Promise[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<TeamsUpdateResponse> */ _
+  ] = js.native
+}
+

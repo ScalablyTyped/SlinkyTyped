@@ -3,7 +3,9 @@ package typingsSlinky.reactEventListener.mod
 import org.scalajs.dom.experimental.deviceorientation.DeviceMotionEvent
 import org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent
 import org.scalajs.dom.raw.BeforeUnloadEvent
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.DragEvent
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.HashChangeEvent
 import org.scalajs.dom.raw.KeyboardEvent
@@ -15,12 +17,10 @@ import org.scalajs.dom.raw.ProgressEvent
 import org.scalajs.dom.raw.StorageEvent
 import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Window
 import typingsSlinky.std.MSGestureEvent
 import typingsSlinky.std.MSPointerEvent
 import typingsSlinky.std.PageTransitionEvent
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,26 +29,26 @@ import scala.scalajs.js.annotation._
 trait EventListenerProps extends js.Object {
   var oNmsPointerUp: js.UndefOr[js.Function1[/* ev */ MSPointerEvent, _]] = js.native
   var oNmsPointerUpCapture: js.UndefOr[js.Function1[/* ev */ MSPointerEvent, _]] = js.native
-  var onAbort: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onAbortCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onAfterPrint: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onAfterPrintCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onBeforePrint: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onBeforePrintCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
+  var onAbort: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onAbortCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onAfterPrint: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onAfterPrintCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onBeforePrint: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onBeforePrintCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
   var onBeforeUnload: js.UndefOr[js.Function1[/* ev */ BeforeUnloadEvent, _]] = js.native
   var onBeforeUnloadCapture: js.UndefOr[js.Function1[/* ev */ BeforeUnloadEvent, _]] = js.native
   var onBlur: js.UndefOr[js.Function1[/* ev */ FocusEvent, _]] = js.native
   var onBlurCapture: js.UndefOr[js.Function1[/* ev */ FocusEvent, _]] = js.native
-  var onCanPlay: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onCanPlayCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onCanPlayThrough: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onCanPlayThroughCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onChange: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onChangeCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
+  var onCanPlay: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onCanPlayCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onCanPlayThrough: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onCanPlayThroughCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onChangeCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
   var onClick: js.UndefOr[js.Function1[/* ev */ MouseEvent, _]] = js.native
   var onClickCapture: js.UndefOr[js.Function1[/* ev */ MouseEvent, _]] = js.native
-  var onCompassNeedsCalibration: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onCompassNeedsCalibrationCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
+  var onCompassNeedsCalibration: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onCompassNeedsCalibrationCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
   var onContextMenu: js.UndefOr[js.Function1[/* ev */ PointerEvent, _]] = js.native
   var onContextMenuCapture: js.UndefOr[js.Function1[/* ev */ PointerEvent, _]] = js.native
   var onDblClick: js.UndefOr[js.Function1[/* ev */ MouseEvent, _]] = js.native
@@ -71,12 +71,12 @@ trait EventListenerProps extends js.Object {
   var onDragStartCapture: js.UndefOr[js.Function1[/* ev */ DragEvent, _]] = js.native
   var onDrop: js.UndefOr[js.Function1[/* ev */ DragEvent, _]] = js.native
   var onDropCapture: js.UndefOr[js.Function1[/* ev */ DragEvent, _]] = js.native
-  var onDurationChange: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onDurationChangeCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onEmptied: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onEmptiedCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onEnded: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onEndedCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
+  var onDurationChange: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onDurationChangeCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onEmptied: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onEmptiedCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onEnded: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onEndedCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
   var onError: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ErrorEventHandler */ js.Any
   ] = js.native
@@ -87,22 +87,22 @@ trait EventListenerProps extends js.Object {
   var onFocusCapture: js.UndefOr[js.Function1[/* ev */ FocusEvent, _]] = js.native
   var onHashChange: js.UndefOr[js.Function1[/* ev */ HashChangeEvent, _]] = js.native
   var onHashChangeCapture: js.UndefOr[js.Function1[/* ev */ HashChangeEvent, _]] = js.native
-  var onInput: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onInputCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
+  var onInput: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onInputCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
   var onKeyDown: js.UndefOr[js.Function1[/* ev */ KeyboardEvent, _]] = js.native
   var onKeyDownCapture: js.UndefOr[js.Function1[/* ev */ KeyboardEvent, _]] = js.native
   var onKeyPress: js.UndefOr[js.Function1[/* ev */ KeyboardEvent, _]] = js.native
   var onKeyPressCapture: js.UndefOr[js.Function1[/* ev */ KeyboardEvent, _]] = js.native
   var onKeyUp: js.UndefOr[js.Function1[/* ev */ KeyboardEvent, _]] = js.native
   var onKeyUpCapture: js.UndefOr[js.Function1[/* ev */ KeyboardEvent, _]] = js.native
-  var onLoad: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onLoadCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onLoadStart: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onLoadStartCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onLoadedData: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onLoadedDataCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onLoadedMetadata: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onLoadedMetadataCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
+  var onLoad: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onLoadCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onLoadStart: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onLoadStartCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onLoadedData: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onLoadedDataCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onLoadedMetadata: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onLoadedMetadataCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
   var onMessage: js.UndefOr[js.Function1[/* ev */ MessageEvent, _]] = js.native
   var onMessageCapture: js.UndefOr[js.Function1[/* ev */ MessageEvent, _]] = js.native
   var onMouseDown: js.UndefOr[js.Function1[/* ev */ MouseEvent, _]] = js.native
@@ -149,22 +149,22 @@ trait EventListenerProps extends js.Object {
   var onMsPointerOutCapture: js.UndefOr[js.Function1[/* ev */ MSPointerEvent, _]] = js.native
   var onMsPointerOver: js.UndefOr[js.Function1[/* ev */ MSPointerEvent, _]] = js.native
   var onMsPointerOverCapture: js.UndefOr[js.Function1[/* ev */ MSPointerEvent, _]] = js.native
-  var onOffline: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onOfflineCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onOnline: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onOnlineCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onOrientationChange: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onOrientationChangeCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
+  var onOffline: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onOfflineCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onOnline: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onOnlineCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onOrientationChange: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onOrientationChangeCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
   var onPageHide: js.UndefOr[js.Function1[/* ev */ PageTransitionEvent, _]] = js.native
   var onPageHideCapture: js.UndefOr[js.Function1[/* ev */ PageTransitionEvent, _]] = js.native
   var onPageShow: js.UndefOr[js.Function1[/* ev */ PageTransitionEvent, _]] = js.native
   var onPageShowCapture: js.UndefOr[js.Function1[/* ev */ PageTransitionEvent, _]] = js.native
-  var onPause: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onPauseCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onPlay: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onPlayCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onPlaying: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onPlayingCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
+  var onPause: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onPauseCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onPlay: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onPlayCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onPlaying: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onPlayingCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
   // Global events
   var onPointerCancel: js.UndefOr[js.Function1[/* ev */ PointerEvent, _]] = js.native
   var onPointerCancelCapture: js.UndefOr[js.Function1[/* ev */ PointerEvent, _]] = js.native
@@ -186,34 +186,34 @@ trait EventListenerProps extends js.Object {
   var onPopStateCapture: js.UndefOr[js.Function1[/* ev */ PopStateEvent, _]] = js.native
   var onProgress: js.UndefOr[js.Function1[/* ev */ ProgressEvent, _]] = js.native
   var onProgressCapture: js.UndefOr[js.Function1[/* ev */ ProgressEvent, _]] = js.native
-  var onRateChange: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onRateChangeCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
+  var onRateChange: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onRateChangeCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
   var onReadyStateChange: js.UndefOr[js.Function1[/* ev */ ProgressEvent, _]] = js.native
   var onReadyStateChangeCapture: js.UndefOr[js.Function1[/* ev */ ProgressEvent, _]] = js.native
-  var onReset: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onResetCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
+  var onReset: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onResetCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
   var onResize: js.UndefOr[js.Function1[/* ev */ UIEvent, _]] = js.native
   var onResizeCapture: js.UndefOr[js.Function1[/* ev */ UIEvent, _]] = js.native
   var onScroll: js.UndefOr[js.Function1[/* ev */ UIEvent, _]] = js.native
   var onScrollCapture: js.UndefOr[js.Function1[/* ev */ UIEvent, _]] = js.native
-  var onSeeked: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onSeekedCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onSeeking: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onSeekingCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
+  var onSeeked: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onSeekedCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onSeeking: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onSeekingCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
   var onSelect: js.UndefOr[js.Function1[/* ev */ UIEvent, _]] = js.native
   var onSelectCapture: js.UndefOr[js.Function1[/* ev */ UIEvent, _]] = js.native
-  var onSelectionChange: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onSelectionChangeCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onStalled: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onStalledCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
+  var onSelectionChange: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onSelectionChangeCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onStalled: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onStalledCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
   var onStorage: js.UndefOr[js.Function1[/* ev */ StorageEvent, _]] = js.native
   var onStorageCapture: js.UndefOr[js.Function1[/* ev */ StorageEvent, _]] = js.native
-  var onSubmit: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onSubmitCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onSuspend: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onSuspendCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onTimeUpdate: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onTimeUpdateCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
+  var onSubmit: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onSubmitCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onSuspend: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onSuspendCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onTimeUpdate: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onTimeUpdateCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
   var onTouchCancel: js.UndefOr[js.Any] = js.native
   var onTouchCancelCapture: js.UndefOr[js.Any] = js.native
   var onTouchEnd: js.UndefOr[js.Any] = js.native
@@ -222,23 +222,23 @@ trait EventListenerProps extends js.Object {
   var onTouchMoveCapture: js.UndefOr[js.Any] = js.native
   var onTouchStart: js.UndefOr[js.Any] = js.native
   var onTouchStartCapture: js.UndefOr[js.Any] = js.native
-  var onUnload: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onUnloadCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onVolumeChange: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onVolumeChangeCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onWaiting: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
-  var onWaitingCapture: js.UndefOr[js.Function1[/* ev */ Event_, _]] = js.native
+  var onUnload: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onUnloadCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onVolumeChange: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onVolumeChangeCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onWaiting: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
+  var onWaitingCapture: js.UndefOr[js.Function1[/* ev */ Event, _]] = js.native
   var onWheel: js.UndefOr[js.Function1[/* ev */ WheelEvent, _]] = js.native
   var onWheelCapture: js.UndefOr[js.Function1[/* ev */ WheelEvent, _]] = js.native
   /**
     * Target (window or document)
     */
-  var target: Window_ | Document_ | String = js.native
+  var target: Window | Document | String = js.native
 }
 
 object EventListenerProps {
   @scala.inline
-  def apply(target: Window_ | Document_ | String): EventListenerProps = {
+  def apply(target: Window | Document | String): EventListenerProps = {
     val __obj = js.Dynamic.literal(target = target.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventListenerProps]
   }
@@ -249,7 +249,19 @@ object EventListenerProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTarget(value: Window_ | Document_ | String): Self = {
+    def withTargetDocument(value: Document): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetWindow(value: Window): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTarget(value: Window | Document | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
         ret
@@ -279,7 +291,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnAbort(value: /* ev */ Event_ => _): Self = {
+    def withOnAbort(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAbort")(js.Any.fromFunction1(value))
         ret
@@ -291,7 +303,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnAbortCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnAbortCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAbortCapture")(js.Any.fromFunction1(value))
         ret
@@ -303,7 +315,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnAfterPrint(value: /* ev */ Event_ => _): Self = {
+    def withOnAfterPrint(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAfterPrint")(js.Any.fromFunction1(value))
         ret
@@ -315,7 +327,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnAfterPrintCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnAfterPrintCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAfterPrintCapture")(js.Any.fromFunction1(value))
         ret
@@ -327,7 +339,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnBeforePrint(value: /* ev */ Event_ => _): Self = {
+    def withOnBeforePrint(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforePrint")(js.Any.fromFunction1(value))
         ret
@@ -339,7 +351,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnBeforePrintCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnBeforePrintCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforePrintCapture")(js.Any.fromFunction1(value))
         ret
@@ -399,7 +411,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnCanPlay(value: /* ev */ Event_ => _): Self = {
+    def withOnCanPlay(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlay")(js.Any.fromFunction1(value))
         ret
@@ -411,7 +423,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnCanPlayCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnCanPlayCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlayCapture")(js.Any.fromFunction1(value))
         ret
@@ -423,7 +435,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnCanPlayThrough(value: /* ev */ Event_ => _): Self = {
+    def withOnCanPlayThrough(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlayThrough")(js.Any.fromFunction1(value))
         ret
@@ -435,7 +447,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnCanPlayThroughCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnCanPlayThroughCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlayThroughCapture")(js.Any.fromFunction1(value))
         ret
@@ -447,7 +459,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* ev */ Event_ => _): Self = {
+    def withOnChange(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -459,7 +471,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnChangeCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnChangeCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChangeCapture")(js.Any.fromFunction1(value))
         ret
@@ -495,7 +507,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnCompassNeedsCalibration(value: /* ev */ Event_ => _): Self = {
+    def withOnCompassNeedsCalibration(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCompassNeedsCalibration")(js.Any.fromFunction1(value))
         ret
@@ -507,7 +519,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnCompassNeedsCalibrationCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnCompassNeedsCalibrationCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCompassNeedsCalibrationCapture")(js.Any.fromFunction1(value))
         ret
@@ -783,7 +795,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnDurationChange(value: /* ev */ Event_ => _): Self = {
+    def withOnDurationChange(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDurationChange")(js.Any.fromFunction1(value))
         ret
@@ -795,7 +807,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnDurationChangeCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnDurationChangeCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDurationChangeCapture")(js.Any.fromFunction1(value))
         ret
@@ -807,7 +819,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnEmptied(value: /* ev */ Event_ => _): Self = {
+    def withOnEmptied(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEmptied")(js.Any.fromFunction1(value))
         ret
@@ -819,7 +831,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnEmptiedCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnEmptiedCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEmptiedCapture")(js.Any.fromFunction1(value))
         ret
@@ -831,7 +843,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnEnded(value: /* ev */ Event_ => _): Self = {
+    def withOnEnded(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEnded")(js.Any.fromFunction1(value))
         ret
@@ -843,7 +855,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnEndedCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnEndedCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEndedCapture")(js.Any.fromFunction1(value))
         ret
@@ -931,7 +943,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnInput(value: /* ev */ Event_ => _): Self = {
+    def withOnInput(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInput")(js.Any.fromFunction1(value))
         ret
@@ -943,7 +955,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnInputCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnInputCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInputCapture")(js.Any.fromFunction1(value))
         ret
@@ -1027,7 +1039,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnLoad(value: /* ev */ Event_ => _): Self = {
+    def withOnLoad(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction1(value))
         ret
@@ -1039,7 +1051,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnLoadCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnLoadCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadCapture")(js.Any.fromFunction1(value))
         ret
@@ -1051,7 +1063,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnLoadStart(value: /* ev */ Event_ => _): Self = {
+    def withOnLoadStart(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadStart")(js.Any.fromFunction1(value))
         ret
@@ -1063,7 +1075,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnLoadStartCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnLoadStartCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadStartCapture")(js.Any.fromFunction1(value))
         ret
@@ -1075,7 +1087,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnLoadedData(value: /* ev */ Event_ => _): Self = {
+    def withOnLoadedData(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedData")(js.Any.fromFunction1(value))
         ret
@@ -1087,7 +1099,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnLoadedDataCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnLoadedDataCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedDataCapture")(js.Any.fromFunction1(value))
         ret
@@ -1099,7 +1111,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnLoadedMetadata(value: /* ev */ Event_ => _): Self = {
+    def withOnLoadedMetadata(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedMetadata")(js.Any.fromFunction1(value))
         ret
@@ -1111,7 +1123,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnLoadedMetadataCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnLoadedMetadataCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedMetadataCapture")(js.Any.fromFunction1(value))
         ret
@@ -1675,7 +1687,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnOffline(value: /* ev */ Event_ => _): Self = {
+    def withOnOffline(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOffline")(js.Any.fromFunction1(value))
         ret
@@ -1687,7 +1699,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnOfflineCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnOfflineCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOfflineCapture")(js.Any.fromFunction1(value))
         ret
@@ -1699,7 +1711,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnOnline(value: /* ev */ Event_ => _): Self = {
+    def withOnOnline(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOnline")(js.Any.fromFunction1(value))
         ret
@@ -1711,7 +1723,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnOnlineCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnOnlineCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOnlineCapture")(js.Any.fromFunction1(value))
         ret
@@ -1723,7 +1735,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnOrientationChange(value: /* ev */ Event_ => _): Self = {
+    def withOnOrientationChange(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOrientationChange")(js.Any.fromFunction1(value))
         ret
@@ -1735,7 +1747,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnOrientationChangeCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnOrientationChangeCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOrientationChangeCapture")(js.Any.fromFunction1(value))
         ret
@@ -1795,7 +1807,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnPause(value: /* ev */ Event_ => _): Self = {
+    def withOnPause(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.Any.fromFunction1(value))
         ret
@@ -1807,7 +1819,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnPauseCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnPauseCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPauseCapture")(js.Any.fromFunction1(value))
         ret
@@ -1819,7 +1831,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnPlay(value: /* ev */ Event_ => _): Self = {
+    def withOnPlay(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.Any.fromFunction1(value))
         ret
@@ -1831,7 +1843,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnPlayCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnPlayCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlayCapture")(js.Any.fromFunction1(value))
         ret
@@ -1843,7 +1855,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnPlaying(value: /* ev */ Event_ => _): Self = {
+    def withOnPlaying(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaying")(js.Any.fromFunction1(value))
         ret
@@ -1855,7 +1867,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnPlayingCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnPlayingCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlayingCapture")(js.Any.fromFunction1(value))
         ret
@@ -2107,7 +2119,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnRateChange(value: /* ev */ Event_ => _): Self = {
+    def withOnRateChange(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRateChange")(js.Any.fromFunction1(value))
         ret
@@ -2119,7 +2131,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnRateChangeCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnRateChangeCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRateChangeCapture")(js.Any.fromFunction1(value))
         ret
@@ -2155,7 +2167,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnReset(value: /* ev */ Event_ => _): Self = {
+    def withOnReset(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onReset")(js.Any.fromFunction1(value))
         ret
@@ -2167,7 +2179,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnResetCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnResetCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onResetCapture")(js.Any.fromFunction1(value))
         ret
@@ -2227,7 +2239,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnSeeked(value: /* ev */ Event_ => _): Self = {
+    def withOnSeeked(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeked")(js.Any.fromFunction1(value))
         ret
@@ -2239,7 +2251,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnSeekedCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnSeekedCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeekedCapture")(js.Any.fromFunction1(value))
         ret
@@ -2251,7 +2263,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnSeeking(value: /* ev */ Event_ => _): Self = {
+    def withOnSeeking(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeking")(js.Any.fromFunction1(value))
         ret
@@ -2263,7 +2275,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnSeekingCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnSeekingCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeekingCapture")(js.Any.fromFunction1(value))
         ret
@@ -2299,7 +2311,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnSelectionChange(value: /* ev */ Event_ => _): Self = {
+    def withOnSelectionChange(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChange")(js.Any.fromFunction1(value))
         ret
@@ -2311,7 +2323,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnSelectionChangeCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnSelectionChangeCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChangeCapture")(js.Any.fromFunction1(value))
         ret
@@ -2323,7 +2335,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnStalled(value: /* ev */ Event_ => _): Self = {
+    def withOnStalled(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onStalled")(js.Any.fromFunction1(value))
         ret
@@ -2335,7 +2347,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnStalledCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnStalledCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onStalledCapture")(js.Any.fromFunction1(value))
         ret
@@ -2371,7 +2383,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnSubmit(value: /* ev */ Event_ => _): Self = {
+    def withOnSubmit(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(js.Any.fromFunction1(value))
         ret
@@ -2383,7 +2395,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnSubmitCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnSubmitCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmitCapture")(js.Any.fromFunction1(value))
         ret
@@ -2395,7 +2407,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnSuspend(value: /* ev */ Event_ => _): Self = {
+    def withOnSuspend(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSuspend")(js.Any.fromFunction1(value))
         ret
@@ -2407,7 +2419,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnSuspendCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnSuspendCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSuspendCapture")(js.Any.fromFunction1(value))
         ret
@@ -2419,7 +2431,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnTimeUpdate(value: /* ev */ Event_ => _): Self = {
+    def withOnTimeUpdate(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTimeUpdate")(js.Any.fromFunction1(value))
         ret
@@ -2431,7 +2443,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnTimeUpdateCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnTimeUpdateCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTimeUpdateCapture")(js.Any.fromFunction1(value))
         ret
@@ -2539,7 +2551,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnUnload(value: /* ev */ Event_ => _): Self = {
+    def withOnUnload(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onUnload")(js.Any.fromFunction1(value))
         ret
@@ -2551,7 +2563,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnUnloadCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnUnloadCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onUnloadCapture")(js.Any.fromFunction1(value))
         ret
@@ -2563,7 +2575,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnVolumeChange(value: /* ev */ Event_ => _): Self = {
+    def withOnVolumeChange(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onVolumeChange")(js.Any.fromFunction1(value))
         ret
@@ -2575,7 +2587,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnVolumeChangeCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnVolumeChangeCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onVolumeChangeCapture")(js.Any.fromFunction1(value))
         ret
@@ -2587,7 +2599,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnWaiting(value: /* ev */ Event_ => _): Self = {
+    def withOnWaiting(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onWaiting")(js.Any.fromFunction1(value))
         ret
@@ -2599,7 +2611,7 @@ object EventListenerProps {
         ret
     }
     @scala.inline
-    def withOnWaitingCapture(value: /* ev */ Event_ => _): Self = {
+    def withOnWaitingCapture(value: /* ev */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onWaitingCapture")(js.Any.fromFunction1(value))
         ret

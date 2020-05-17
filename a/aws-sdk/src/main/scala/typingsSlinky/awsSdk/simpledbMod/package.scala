@@ -18,10 +18,4 @@ package object simpledbMod {
   type ReplaceableAttributeList = js.Array[typingsSlinky.awsSdk.simpledbMod.ReplaceableAttribute]
   type ReplaceableItemList = js.Array[typingsSlinky.awsSdk.simpledbMod.ReplaceableItem]
   type String = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2009-04-15`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.simpledbMod._apiVersion | java.lang.String
 }

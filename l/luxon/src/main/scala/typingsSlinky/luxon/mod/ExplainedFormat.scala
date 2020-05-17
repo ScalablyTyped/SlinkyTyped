@@ -1,7 +1,7 @@
 package typingsSlinky.luxon.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.luxon.AnonLiteral
+import typingsSlinky.luxon.anon.Literal
 import typingsSlinky.std.RegExpMatchArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,13 +15,13 @@ trait ExplainedFormat extends js.Object {
   var rawMatches: js.UndefOr[RegExpMatchArray | Null] = js.native
   var regex: js.UndefOr[js.RegExp] = js.native
   var result: js.UndefOr[StringDictionary[js.Any] | Null] = js.native
-  var tokens: js.Array[AnonLiteral] = js.native
+  var tokens: js.Array[Literal] = js.native
   var zone: js.UndefOr[Zone | Null] = js.native
 }
 
 object ExplainedFormat {
   @scala.inline
-  def apply(input: String, tokens: js.Array[AnonLiteral]): ExplainedFormat = {
+  def apply(input: String, tokens: js.Array[Literal]): ExplainedFormat = {
     val __obj = js.Dynamic.literal(input = input.asInstanceOf[js.Any], tokens = tokens.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExplainedFormat]
   }
@@ -38,7 +38,7 @@ object ExplainedFormat {
         ret
     }
     @scala.inline
-    def withTokens(value: js.Array[AnonLiteral]): Self = {
+    def withTokens(value: js.Array[Literal]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tokens")(value.asInstanceOf[js.Any])
         ret

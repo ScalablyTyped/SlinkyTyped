@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.FramingBehavior")
 @js.native
-class FramingBehavior () extends Behavior[ArcRotateCamera] {
+trait FramingBehavior extends Behavior[ArcRotateCamera] {
   var _animatables: js.Any = js.native
   /**
     *  Applies any current user interaction to the camera. Takes into account maximum alpha rotation.
@@ -184,27 +183,5 @@ class FramingBehavior () extends Behavior[ArcRotateCamera] {
     * Sets the flag that indicates if user zooming should stop animation.
     */
   def zoomStopsAnimation(flag: Boolean): js.Any = js.native
-}
-
-/* static members */
-@JSGlobal("BABYLON.FramingBehavior")
-@js.native
-object FramingBehavior extends js.Object {
-  /**
-    * The easing function used by animations
-    */
-  var EasingFunction: ExponentialEase = js.native
-  /**
-    * The easing mode used by animations
-    */
-  var EasingMode: Double = js.native
-  /**
-    * The camera is not allowed to zoom closer to the mesh than the point at which the adjusted bounding sphere touches the frustum sides
-    */
-  var FitFrustumSidesMode: Double = js.native
-  /**
-    * The camera can move all the way towards the mesh.
-    */
-  var IgnoreBoundsSizeMode: Double = js.native
 }
 

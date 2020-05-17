@@ -1,6 +1,6 @@
 package typingsSlinky.symbolTree.mod
 
-import typingsSlinky.symbolTree.TypeofTreePosition
+import typingsSlinky.symbolTree.anon.TypeofTreePosition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

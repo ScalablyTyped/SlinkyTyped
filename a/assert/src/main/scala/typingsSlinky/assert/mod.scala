@@ -1,5 +1,6 @@
 package typingsSlinky.assert
 
+import typingsSlinky.assert.anon.Actual
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation._
 object mod extends js.Object {
   @js.native
   class AssertionError () extends Error {
-    def this(options: AnonActual) = this()
+    def this(options: Actual) = this()
     var actual: js.Any = js.native
     var expected: js.Any = js.native
     var generatedMessage: Boolean = js.native

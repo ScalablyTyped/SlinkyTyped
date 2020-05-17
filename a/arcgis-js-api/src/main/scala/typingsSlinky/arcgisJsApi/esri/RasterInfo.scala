@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`vector-magdir`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`vector-uv`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.elevation
@@ -139,7 +138,126 @@ trait RasterInfo extends JSONSupport {
   var width: Double = js.native
 }
 
-@JSGlobal("__esri.RasterInfo")
-@js.native
-object RasterInfo extends TopLevel[RasterInfoConstructor]
+object RasterInfo {
+  @scala.inline
+  def apply(
+    attributeTable: FeatureSet,
+    bandCount: Double,
+    colormap: js.Array[js.Array[Double]],
+    dataType: generic | elevation | thematic | processed | scientific | `vector-uv` | `vector-magdir`,
+    extent: Extent,
+    height: Double,
+    histograms: js.Array[_],
+    keyProperties: js.Any,
+    multidimensionalInfo: js.Any,
+    noDataValue: Double | js.Array[Double],
+    pixelSize: RasterInfoPixelSize,
+    pixelType: unknown | s8 | s16 | s32 | u8 | u16 | u32 | f32 | f64,
+    spatialReference: SpatialReference,
+    statistics: js.Array[RasterInfoStatistics],
+    toJSON: () => js.Any,
+    width: Double
+  ): RasterInfo = {
+    val __obj = js.Dynamic.literal(attributeTable = attributeTable.asInstanceOf[js.Any], bandCount = bandCount.asInstanceOf[js.Any], colormap = colormap.asInstanceOf[js.Any], dataType = dataType.asInstanceOf[js.Any], extent = extent.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], histograms = histograms.asInstanceOf[js.Any], keyProperties = keyProperties.asInstanceOf[js.Any], multidimensionalInfo = multidimensionalInfo.asInstanceOf[js.Any], noDataValue = noDataValue.asInstanceOf[js.Any], pixelSize = pixelSize.asInstanceOf[js.Any], pixelType = pixelType.asInstanceOf[js.Any], spatialReference = spatialReference.asInstanceOf[js.Any], statistics = statistics.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), width = width.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RasterInfo]
+  }
+  @scala.inline
+  implicit class RasterInfoOps[Self <: RasterInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributeTable(value: FeatureSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeTable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBandCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bandCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColormap(value: js.Array[js.Array[Double]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colormap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDataType(value: generic | elevation | thematic | processed | scientific | `vector-uv` | `vector-magdir`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtent(value: Extent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHistograms(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("histograms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeyProperties(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMultidimensionalInfo(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multidimensionalInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNoDataValue(value: Double | js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noDataValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPixelSize(value: RasterInfoPixelSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPixelType(value: unknown | s8 | s16 | s32 | u8 | u16 | u32 | f32 | f64): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpatialReference(value: SpatialReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spatialReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatistics(value: js.Array[RasterInfoStatistics]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statistics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

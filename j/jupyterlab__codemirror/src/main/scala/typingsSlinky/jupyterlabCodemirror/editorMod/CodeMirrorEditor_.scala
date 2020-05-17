@@ -1,6 +1,7 @@
 package typingsSlinky.jupyterlabCodemirror.editorMod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.KeyboardEvent
 import typingsSlinky.codemirror.mod.Doc
 import typingsSlinky.codemirror.mod.Editor
@@ -11,9 +12,9 @@ import typingsSlinky.codemirror.mod.TextMarker
 import typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.EdgeLocation
 import typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.IEditor
 import typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.IPosition
-import typingsSlinky.jupyterlabCodemirror.AnonBias
-import typingsSlinky.jupyterlabCodemirror.AnonBottom
-import typingsSlinky.jupyterlabCodemirror.AnonFrom
+import typingsSlinky.jupyterlabCodemirror.anon.Bias
+import typingsSlinky.jupyterlabCodemirror.anon.Bottom
+import typingsSlinky.jupyterlabCodemirror.anon.From
 import typingsSlinky.jupyterlabCodemirror.editorMod.CodeMirrorEditor.IOptions
 import typingsSlinky.jupyterlabCodemirror.jupyterlabCodemirrorStrings.autoClosingBrackets
 import typingsSlinky.jupyterlabCodemirror.jupyterlabCodemirrorStrings.bounded
@@ -54,7 +55,6 @@ import typingsSlinky.jupyterlabCodemirror.jupyterlabCodemirrorStrings.window
 import typingsSlinky.jupyterlabCodemirror.jupyterlabCodemirrorStrings.wordWrapColumn
 import typingsSlinky.jupyterlabCodemirror.modeMod.Mode.IMode
 import typingsSlinky.phosphorSignaling.mod.Signal
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -178,13 +178,13 @@ class CodeMirrorEditor_ protected () extends IEditor {
   def addOverlay(mode: String, options: js.Object): Unit = js.native
   def addOverlay(mode: js.Object): Unit = js.native
   def addOverlay(mode: js.Object, options: js.Object): Unit = js.native
-  def cursorCoords(where: Boolean): AnonBottom = js.native
+  def cursorCoords(where: Boolean): Bottom = js.native
   @JSName("cursorCoords")
-  def cursorCoords_local(where: Boolean, mode: local): AnonBottom = js.native
+  def cursorCoords_local(where: Boolean, mode: local): Bottom = js.native
   @JSName("cursorCoords")
-  def cursorCoords_page(where: Boolean, mode: page): AnonBottom = js.native
+  def cursorCoords_page(where: Boolean, mode: page): Bottom = js.native
   @JSName("cursorCoords")
-  def cursorCoords_window(where: Boolean, mode: window): AnonBottom = js.native
+  def cursorCoords_window(where: Boolean, mode: window): Bottom = js.native
   /**
     * Execute a codemirror command on the editor.
     *
@@ -279,7 +279,7 @@ class CodeMirrorEditor_ protected () extends IEditor {
     * called in response to events on the editor's DOM node. It should
     * not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
   def lastLine(): Double = js.native
   /**
     * Handle keydown events from the editor.
@@ -288,8 +288,8 @@ class CodeMirrorEditor_ protected () extends IEditor {
   def operation[T](fn: js.Function0[T]): T = js.native
   def removeOverlay(mode: String): Unit = js.native
   def removeOverlay(mode: js.Object): Unit = js.native
-  def scrollIntoView(pos: AnonFrom, margin: Double): Unit = js.native
-  def setCursorPosition(position: IPosition, options: AnonBias): Unit = js.native
+  def scrollIntoView(pos: From, margin: Double): Unit = js.native
+  def setCursorPosition(position: IPosition, options: Bias): Unit = js.native
   def setOption(option: lineWrap, value: bounded): Unit = js.native
   def setOption(option: lineWrap, value: off): Unit = js.native
   def setOption(option: lineWrap, value: on): Unit = js.native

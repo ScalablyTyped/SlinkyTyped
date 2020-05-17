@@ -1,7 +1,7 @@
 package typingsSlinky.babylonjs.webXRControllerTeleportationMod
 
-import typingsSlinky.babylonjs.AnonDisableAnimation
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
+import typingsSlinky.babylonjs.anon.DisableAnimation
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.webXRInputMod.WebXRInput
@@ -18,7 +18,7 @@ trait IWebXRTeleportationOptions extends js.Object {
   /**
     * Values to configure the default target mesh
     */
-  var defaultTargetMeshOptions: js.UndefOr[AnonDisableAnimation] = js.native
+  var defaultTargetMeshOptions: js.UndefOr[DisableAnimation] = js.native
   /**
     * A list of meshes to use as floor meshes.
     * Meshes can be added and removed after initializing the feature using the
@@ -101,7 +101,7 @@ object IWebXRTeleportationOptions {
         ret
     }
     @scala.inline
-    def withDefaultTargetMeshOptions(value: AnonDisableAnimation): Self = {
+    def withDefaultTargetMeshOptions(value: DisableAnimation): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTargetMeshOptions")(value.asInstanceOf[js.Any])
         ret

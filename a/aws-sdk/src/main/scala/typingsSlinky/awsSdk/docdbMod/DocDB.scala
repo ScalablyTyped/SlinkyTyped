@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.docdbMod
 
-import typingsSlinky.awsSdk.DescribeDBInstancesMessag
+import typingsSlinky.awsSdk.anon.DescribeDBInstancesMessag
 import typingsSlinky.awsSdk.awsSdkStrings.dBInstanceAvailable
 import typingsSlinky.awsSdk.awsSdkStrings.dBInstanceDeleted
 import typingsSlinky.awsSdk.configMod.ConfigBase

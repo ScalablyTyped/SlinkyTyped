@@ -1,10 +1,10 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonComponentDxFileManager
-import typingsSlinky.devextreme.AnonCopy
-import typingsSlinky.devextreme.AnonFileItem
-import typingsSlinky.devextreme.AnonMaxFileSize
-import typingsSlinky.devextreme.AnonMode
+import typingsSlinky.devextreme.anon.ComponentDxFileManager
+import typingsSlinky.devextreme.anon.Copy
+import typingsSlinky.devextreme.anon.FileItem
+import typingsSlinky.devextreme.anon.MaxFileSize
+import typingsSlinky.devextreme.anon.Mode
 import typingsSlinky.devextreme.devextremeStrings.multiple
 import typingsSlinky.devextreme.devextremeStrings.single_
 import scala.scalajs.js
@@ -28,13 +28,13 @@ trait dxFileManagerOptions extends WidgetOptions[dxFileManager] {
   /** Specifies the file provider. */
   var fileProvider: js.UndefOr[js.Any] = js.native
   /** Configures the file and folder view. */
-  var itemView: js.UndefOr[AnonMode] = js.native
+  var itemView: js.UndefOr[Mode] = js.native
   /** A function that is executed when the current directory is changed. */
-  var onCurrentDirectoryChanged: js.UndefOr[js.Function1[/* e */ AnonComponentDxFileManager, _]] = js.native
+  var onCurrentDirectoryChanged: js.UndefOr[js.Function1[/* e */ ComponentDxFileManager, _]] = js.native
   /** A function that is executed when the selected file is opened. */
-  var onSelectedFileOpened: js.UndefOr[js.Function1[/* e */ AnonFileItem, _]] = js.native
+  var onSelectedFileOpened: js.UndefOr[js.Function1[/* e */ FileItem, _]] = js.native
   /** Specifies actions that a user is allowed to perform on files and folders. */
-  var permissions: js.UndefOr[AnonCopy] = js.native
+  var permissions: js.UndefOr[Copy] = js.native
   /** Specifies the root folder name. */
   var rootFolderName: js.UndefOr[String] = js.native
   /** Specifies whether a user can select a single or multiple files and folders in the item view simultaneously. */
@@ -42,7 +42,7 @@ trait dxFileManagerOptions extends WidgetOptions[dxFileManager] {
   /** Configures toolbar settings. */
   var toolbar: js.UndefOr[dxFileManagerToolbar] = js.native
   /** Configures upload settings. */
-  var upload: js.UndefOr[AnonMaxFileSize] = js.native
+  var upload: js.UndefOr[MaxFileSize] = js.native
 }
 
 object dxFileManagerOptions {
@@ -130,7 +130,7 @@ object dxFileManagerOptions {
         ret
     }
     @scala.inline
-    def withItemView(value: AnonMode): Self = {
+    def withItemView(value: Mode): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemView")(value.asInstanceOf[js.Any])
         ret
@@ -142,7 +142,7 @@ object dxFileManagerOptions {
         ret
     }
     @scala.inline
-    def withOnCurrentDirectoryChanged(value: /* e */ AnonComponentDxFileManager => _): Self = {
+    def withOnCurrentDirectoryChanged(value: /* e */ ComponentDxFileManager => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCurrentDirectoryChanged")(js.Any.fromFunction1(value))
         ret
@@ -154,7 +154,7 @@ object dxFileManagerOptions {
         ret
     }
     @scala.inline
-    def withOnSelectedFileOpened(value: /* e */ AnonFileItem => _): Self = {
+    def withOnSelectedFileOpened(value: /* e */ FileItem => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectedFileOpened")(js.Any.fromFunction1(value))
         ret
@@ -166,7 +166,7 @@ object dxFileManagerOptions {
         ret
     }
     @scala.inline
-    def withPermissions(value: AnonCopy): Self = {
+    def withPermissions(value: Copy): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
         ret
@@ -214,7 +214,7 @@ object dxFileManagerOptions {
         ret
     }
     @scala.inline
-    def withUpload(value: AnonMaxFileSize): Self = {
+    def withUpload(value: MaxFileSize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(value.asInstanceOf[js.Any])
         ret

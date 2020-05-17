@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +11,31 @@ trait SVGAnimatedLengthList extends js.Object {
   val baseVal: org.scalajs.dom.raw.SVGLengthList = js.native
 }
 
-@JSGlobal("SVGAnimatedLengthList")
-@js.native
-object SVGAnimatedLengthList
-  extends Instantiable0[org.scalajs.dom.raw.SVGAnimatedLengthList]
+object SVGAnimatedLengthList {
+  @scala.inline
+  def apply(animVal: org.scalajs.dom.raw.SVGLengthList, baseVal: org.scalajs.dom.raw.SVGLengthList): SVGAnimatedLengthList = {
+    val __obj = js.Dynamic.literal(animVal = animVal.asInstanceOf[js.Any], baseVal = baseVal.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SVGAnimatedLengthList]
+  }
+  @scala.inline
+  implicit class SVGAnimatedLengthListOps[Self <: org.scalajs.dom.raw.SVGAnimatedLengthList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnimVal(value: org.scalajs.dom.raw.SVGLengthList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animVal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBaseVal(value: org.scalajs.dom.raw.SVGLengthList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseVal")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

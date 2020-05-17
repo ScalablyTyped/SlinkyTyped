@@ -1,0 +1,16 @@
+package typingsSlinky.kineticjs.global.Kinetic
+
+import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.kineticjs.Kinetic.ICollection
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("Kinetic.Collection")
+@js.native
+class Collection () extends ICollection
+
+@JSGlobal("Kinetic.Collection")
+@js.native
+object Collection extends Instantiable0[ICollection]
+

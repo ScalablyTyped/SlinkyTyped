@@ -1,8 +1,8 @@
 package typingsSlinky.semanticUiReactEventStack
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.semanticUiReactEventStack.typesMod.CallableEventListener
 import typingsSlinky.semanticUiReactEventStack.typesMod.EventListeners
-import typingsSlinky.std.Event_
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ object eventPoolMod extends js.Object {
     val handlerSets: js.Any = js.native
     val poolName: js.Any = js.native
     def addHandlers(eventType: String, eventHandlers: EventListeners): EventPool = js.native
-    def dispatchEvent(eventType: String, event: Event_): Unit = js.native
+    def dispatchEvent(eventType: String, event: Event): Unit = js.native
     def hasHandlers(): Boolean = js.native
     def hasHandlers(eventType: String): Boolean = js.native
     def removeHandlers(eventType: String, eventHandlers: EventListeners): EventPool = js.native

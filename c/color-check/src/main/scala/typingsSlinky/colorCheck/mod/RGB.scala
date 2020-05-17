@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RGB extends js.Object {
+trait RGB extends Color {
   var b: String | Double = js.native
   var g: String | Double = js.native
   var r: String | Double = js.native

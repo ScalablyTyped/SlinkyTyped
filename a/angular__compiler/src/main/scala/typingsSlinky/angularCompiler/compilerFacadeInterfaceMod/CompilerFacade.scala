@@ -1,6 +1,6 @@
 package typingsSlinky.angularCompiler.compilerFacadeInterfaceMod
 
-import typingsSlinky.angularCompiler.AnonInstantiableResourceLoader
+import typingsSlinky.angularCompiler.anon.InstantiableResourceLoader
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CompilerFacade extends js.Object {
   var R3ResolvedDependencyType: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof R3ResolvedDependencyType */ js.Any = js.native
-  var ResourceLoader: AnonInstantiableResourceLoader = js.native
+  var ResourceLoader: InstantiableResourceLoader = js.native
   def compileBase(angularCoreEnv: CoreEnvironment, sourceMapUrl: String, meta: R3BaseMetadataFacade): js.Any = js.native
   def compileComponent(angularCoreEnv: CoreEnvironment, sourceMapUrl: String, meta: R3ComponentMetadataFacade): js.Any = js.native
   def compileDirective(angularCoreEnv: CoreEnvironment, sourceMapUrl: String, meta: R3DirectiveMetadataFacade): js.Any = js.native
@@ -23,7 +23,7 @@ object CompilerFacade {
   @scala.inline
   def apply(
     R3ResolvedDependencyType: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof R3ResolvedDependencyType */ js.Any,
-    ResourceLoader: AnonInstantiableResourceLoader,
+    ResourceLoader: InstantiableResourceLoader,
     compileBase: (CoreEnvironment, String, R3BaseMetadataFacade) => js.Any,
     compileComponent: (CoreEnvironment, String, R3ComponentMetadataFacade) => js.Any,
     compileDirective: (CoreEnvironment, String, R3DirectiveMetadataFacade) => js.Any,
@@ -51,7 +51,7 @@ object CompilerFacade {
         ret
     }
     @scala.inline
-    def withResourceLoader(value: AnonInstantiableResourceLoader): Self = {
+    def withResourceLoader(value: InstantiableResourceLoader): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceLoader")(value.asInstanceOf[js.Any])
         ret

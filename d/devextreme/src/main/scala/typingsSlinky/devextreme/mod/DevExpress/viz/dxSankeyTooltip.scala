@@ -1,12 +1,12 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonSource
-import typingsSlinky.devextreme.AnonTitle
-import typingsSlinky.devextreme.AnonWeightIn
+import typingsSlinky.devextreme.anon.Source
+import typingsSlinky.devextreme.anon.Title
+import typingsSlinky.devextreme.anon.WeightIn
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.core.template
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,16 +14,16 @@ import scala.scalajs.js.annotation._
 @js.native
 trait dxSankeyTooltip extends BaseWidgetTooltip {
   /** Customizes link tooltips' appearance. */
-  var customizeLinkTooltip: js.UndefOr[js.Function1[/* info */ AnonSource, _]] = js.native
+  var customizeLinkTooltip: js.UndefOr[js.Function1[/* info */ Source, _]] = js.native
   /** Customizes node tooltips' appearance. */
-  var customizeNodeTooltip: js.UndefOr[js.Function1[/* info */ AnonTitle, _]] = js.native
+  var customizeNodeTooltip: js.UndefOr[js.Function1[/* info */ Title, _]] = js.native
   /** Specifies a custom template for a link's tooltip. */
   var linkTooltipTemplate: js.UndefOr[
-    template | (js.Function2[/* info */ AnonSource, /* element */ dxElement, String | Element | JQuery])
+    template | (js.Function2[/* info */ Source, /* element */ dxElement, String | Element | JQuery])
   ] = js.native
   /** Specifies a custom template for a node's tooltip. */
   var nodeTooltipTemplate: js.UndefOr[
-    template | (js.Function2[/* info */ AnonWeightIn, /* element */ dxElement, String | Element | JQuery])
+    template | (js.Function2[/* info */ WeightIn, /* element */ dxElement, String | Element | JQuery])
   ] = js.native
 }
 
@@ -40,7 +40,7 @@ object dxSankeyTooltip {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCustomizeLinkTooltip(value: /* info */ AnonSource => _): Self = {
+    def withCustomizeLinkTooltip(value: /* info */ Source => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customizeLinkTooltip")(js.Any.fromFunction1(value))
         ret
@@ -52,7 +52,7 @@ object dxSankeyTooltip {
         ret
     }
     @scala.inline
-    def withCustomizeNodeTooltip(value: /* info */ AnonTitle => _): Self = {
+    def withCustomizeNodeTooltip(value: /* info */ Title => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customizeNodeTooltip")(js.Any.fromFunction1(value))
         ret
@@ -64,7 +64,7 @@ object dxSankeyTooltip {
         ret
     }
     @scala.inline
-    def withLinkTooltipTemplateFunction2(value: (/* info */ AnonSource, /* element */ dxElement) => String | Element | JQuery): Self = {
+    def withLinkTooltipTemplateFunction2(value: (/* info */ Source, /* element */ dxElement) => String | Element | JQuery): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("linkTooltipTemplate")(js.Any.fromFunction2(value))
         ret
@@ -77,7 +77,7 @@ object dxSankeyTooltip {
     }
     @scala.inline
     def withLinkTooltipTemplate(
-      value: template | (js.Function2[/* info */ AnonSource, /* element */ dxElement, String | Element | JQuery])
+      value: template | (js.Function2[/* info */ Source, /* element */ dxElement, String | Element | JQuery])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("linkTooltipTemplate")(value.asInstanceOf[js.Any])
@@ -90,7 +90,7 @@ object dxSankeyTooltip {
         ret
     }
     @scala.inline
-    def withNodeTooltipTemplateFunction2(value: (/* info */ AnonWeightIn, /* element */ dxElement) => String | Element | JQuery): Self = {
+    def withNodeTooltipTemplateFunction2(value: (/* info */ WeightIn, /* element */ dxElement) => String | Element | JQuery): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nodeTooltipTemplate")(js.Any.fromFunction2(value))
         ret
@@ -103,7 +103,7 @@ object dxSankeyTooltip {
     }
     @scala.inline
     def withNodeTooltipTemplate(
-      value: template | (js.Function2[/* info */ AnonWeightIn, /* element */ dxElement, String | Element | JQuery])
+      value: template | (js.Function2[/* info */ WeightIn, /* element */ dxElement, String | Element | JQuery])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nodeTooltipTemplate")(value.asInstanceOf[js.Any])

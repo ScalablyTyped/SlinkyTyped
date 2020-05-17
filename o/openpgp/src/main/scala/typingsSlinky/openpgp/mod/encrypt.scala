@@ -1,14 +1,14 @@
 package typingsSlinky.openpgp.mod
 
-import typingsSlinky.openpgp.EncryptOptionsarmorfalsed
-import typingsSlinky.openpgp.EncryptOptionsarmorfalsedArmor
-import typingsSlinky.openpgp.EncryptOptionsarmortruede
-import typingsSlinky.openpgp.EncryptOptionsarmortruedeArmor
-import typingsSlinky.openpgp.EncryptResultdatastring
-import typingsSlinky.openpgp.EncryptResultdatastringRe
-import typingsSlinky.openpgp.EncryptResultdatastringsi
-import typingsSlinky.openpgp.EncryptResultmessageMessa
-import typingsSlinky.openpgp.EncryptResultmessageMessaMessage
+import typingsSlinky.openpgp.anon.EncryptOptionsarmorfalsed
+import typingsSlinky.openpgp.anon.EncryptOptionsarmorfalsedArmor
+import typingsSlinky.openpgp.anon.EncryptOptionsarmortruede
+import typingsSlinky.openpgp.anon.EncryptOptionsarmortruedeArmor
+import typingsSlinky.openpgp.anon.EncryptResultdatastring
+import typingsSlinky.openpgp.anon.EncryptResultdatastringRe
+import typingsSlinky.openpgp.anon.EncryptResultdatastringsi
+import typingsSlinky.openpgp.anon.EncryptResultmessageMessa
+import typingsSlinky.openpgp.anon.EncryptResultmessageMessaMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

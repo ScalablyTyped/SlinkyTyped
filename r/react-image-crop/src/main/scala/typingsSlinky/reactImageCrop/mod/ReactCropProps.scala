@@ -1,5 +1,6 @@
 package typingsSlinky.reactImageCrop.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLImageElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
@@ -7,7 +8,6 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactImageCrop.reactImageCropStrings.`use-credentials`
 import typingsSlinky.reactImageCrop.reactImageCropStrings.anonymous
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +31,7 @@ trait ReactCropProps extends js.Object {
   var onComplete: js.UndefOr[js.Function2[/* crop */ Crop, /* percentCrop */ PercentCrop, Unit]] = js.native
   var onDragEnd: js.UndefOr[js.Function0[Unit]] = js.native
   var onDragStart: js.UndefOr[js.Function0[Unit]] = js.native
-  var onImageError: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, HTMLImageElement], Unit]] = js.native
+  var onImageError: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLImageElement], Unit]] = js.native
   var onImageLoaded: js.UndefOr[js.Function1[/* target */ HTMLImageElement, Unit]] = js.native
   var renderComponent: js.UndefOr[TagMod[Any]] = js.native
   var renderSelectionAddon: js.UndefOr[js.Function1[/* state */ js.Any, TagMod[Any]]] = js.native
@@ -276,7 +276,7 @@ object ReactCropProps {
         ret
     }
     @scala.inline
-    def withOnImageError(value: /* event */ SyntheticEvent[Event_, HTMLImageElement] => Unit): Self = {
+    def withOnImageError(value: /* event */ SyntheticEvent[Event, HTMLImageElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onImageError")(js.Any.fromFunction1(value))
         ret

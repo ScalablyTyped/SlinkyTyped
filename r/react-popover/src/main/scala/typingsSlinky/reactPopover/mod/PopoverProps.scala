@@ -1,10 +1,10 @@
 package typingsSlinky.reactPopover.mod
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait PopoverProps extends js.Object {
   var className: js.UndefOr[String] = js.native
   var enterExitTransitionDurationMs: js.UndefOr[Double] = js.native
   var isOpen: js.UndefOr[Boolean] = js.native
-  var onOuterAction: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onOuterAction: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   var place: js.UndefOr[PopoverPlace] = js.native
   var preferPlace: js.UndefOr[PopoverPlace] = js.native
   var refreshIntervalMs: js.UndefOr[Double] = js.native
@@ -98,7 +98,7 @@ object PopoverProps {
         ret
     }
     @scala.inline
-    def withOnOuterAction(value: /* event */ Event_ => Unit): Self = {
+    def withOnOuterAction(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOuterAction")(js.Any.fromFunction1(value))
         ret

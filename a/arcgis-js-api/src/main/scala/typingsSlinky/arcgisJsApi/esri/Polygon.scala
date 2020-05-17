@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.polygon
 import typingsSlinky.arcgisJsApi.esri.geometry.Geometry
 import scala.scalajs.js
@@ -126,8 +125,4 @@ trait Polygon
     */
   def setPoint(ringIndex: Double, pointIndex: Double, point: Point): Polygon = js.native
 }
-
-@JSGlobal("__esri.Polygon")
-@js.native
-object Polygon extends TopLevel[PolygonConstructor]
 

@@ -1,10 +1,10 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonAnd
-import typingsSlinky.devextreme.AnonContains
-import typingsSlinky.devextreme.AnonEditorElement
-import typingsSlinky.devextreme.AnonEditorName
-import typingsSlinky.devextreme.AnonModelPreviousValue
+import typingsSlinky.devextreme.anon.And
+import typingsSlinky.devextreme.anon.Contains
+import typingsSlinky.devextreme.anon.EditorElement
+import typingsSlinky.devextreme.anon.EditorName
+import typingsSlinky.devextreme.anon.ModelPreviousValue
 import typingsSlinky.devextreme.devextremeStrings.and
 import typingsSlinky.devextreme.devextremeStrings.notAnd
 import typingsSlinky.devextreme.devextremeStrings.notOr
@@ -22,19 +22,19 @@ trait dxFilterBuilderOptions extends WidgetOptions[dxFilterBuilder] {
   /** Configures fields. */
   var fields: js.UndefOr[js.Array[dxFilterBuilderField]] = js.native
   /** Specifies filter operation descriptions. */
-  var filterOperationDescriptions: js.UndefOr[AnonContains] = js.native
+  var filterOperationDescriptions: js.UndefOr[Contains] = js.native
   /** Specifies group operation descriptions. */
-  var groupOperationDescriptions: js.UndefOr[AnonAnd] = js.native
+  var groupOperationDescriptions: js.UndefOr[And] = js.native
   /** Specifies a set of available group operations. */
   var groupOperations: js.UndefOr[js.Array[and | or | notAnd | notOr]] = js.native
   /** Specifies groups' maximum nesting level. */
   var maxGroupLevel: js.UndefOr[Double] = js.native
   /** A function that is executed after an editor is created. */
-  var onEditorPrepared: js.UndefOr[js.Function1[/* e */ AnonEditorElement, _]] = js.native
+  var onEditorPrepared: js.UndefOr[js.Function1[/* e */ EditorElement, _]] = js.native
   /** A function that is executed before an editor is created. */
-  var onEditorPreparing: js.UndefOr[js.Function1[/* e */ AnonEditorName, _]] = js.native
+  var onEditorPreparing: js.UndefOr[js.Function1[/* e */ EditorName, _]] = js.native
   /** A function that is executed after the widget's value is changed. */
-  var onValueChanged: js.UndefOr[js.Function1[/* e */ AnonModelPreviousValue, _]] = js.native
+  var onValueChanged: js.UndefOr[js.Function1[/* e */ ModelPreviousValue, _]] = js.native
   /** Allows you to specify a filter. */
   var value: js.UndefOr[String | js.Array[_] | js.Function] = js.native
 }
@@ -88,7 +88,7 @@ object dxFilterBuilderOptions {
         ret
     }
     @scala.inline
-    def withFilterOperationDescriptions(value: AnonContains): Self = {
+    def withFilterOperationDescriptions(value: Contains): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filterOperationDescriptions")(value.asInstanceOf[js.Any])
         ret
@@ -100,7 +100,7 @@ object dxFilterBuilderOptions {
         ret
     }
     @scala.inline
-    def withGroupOperationDescriptions(value: AnonAnd): Self = {
+    def withGroupOperationDescriptions(value: And): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("groupOperationDescriptions")(value.asInstanceOf[js.Any])
         ret
@@ -136,7 +136,7 @@ object dxFilterBuilderOptions {
         ret
     }
     @scala.inline
-    def withOnEditorPrepared(value: /* e */ AnonEditorElement => _): Self = {
+    def withOnEditorPrepared(value: /* e */ EditorElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEditorPrepared")(js.Any.fromFunction1(value))
         ret
@@ -148,7 +148,7 @@ object dxFilterBuilderOptions {
         ret
     }
     @scala.inline
-    def withOnEditorPreparing(value: /* e */ AnonEditorName => _): Self = {
+    def withOnEditorPreparing(value: /* e */ EditorName => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEditorPreparing")(js.Any.fromFunction1(value))
         ret
@@ -160,7 +160,7 @@ object dxFilterBuilderOptions {
         ret
     }
     @scala.inline
-    def withOnValueChanged(value: /* e */ AnonModelPreviousValue => _): Self = {
+    def withOnValueChanged(value: /* e */ ModelPreviousValue => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onValueChanged")(js.Any.fromFunction1(value))
         ret

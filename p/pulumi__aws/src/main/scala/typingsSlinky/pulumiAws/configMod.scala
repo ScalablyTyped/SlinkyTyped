@@ -1,5 +1,7 @@
 package typingsSlinky.pulumiAws
 
+import typingsSlinky.pulumiAws.anon.Accessanalyzer
+import typingsSlinky.pulumiAws.anon.ExternalId
 import typingsSlinky.pulumiAws.regionMod.Region
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,8 +12,8 @@ import scala.scalajs.js.annotation._
 object configMod extends js.Object {
   var accessKey: js.UndefOr[String] = js.native
   var allowedAccountIds: js.UndefOr[js.Array[String]] = js.native
-  var assumeRole: js.UndefOr[AnonExternalId] = js.native
-  var endpoints: js.UndefOr[js.Array[AnonAccessanalyzer]] = js.native
+  var assumeRole: js.UndefOr[ExternalId] = js.native
+  var endpoints: js.UndefOr[js.Array[Accessanalyzer]] = js.native
   var forbiddenAccountIds: js.UndefOr[js.Array[String]] = js.native
   var ignoreTagPrefixes: js.UndefOr[js.Array[String]] = js.native
   var ignoreTags: js.UndefOr[js.Array[String]] = js.native

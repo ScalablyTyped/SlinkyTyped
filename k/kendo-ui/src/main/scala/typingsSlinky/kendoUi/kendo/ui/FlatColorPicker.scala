@@ -1,17 +1,13 @@
 package typingsSlinky.kendoUi.kendo.ui
 
-import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.JQuery
 import typingsSlinky.kendoUi.kendo.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.ui.FlatColorPicker")
 @js.native
-class FlatColorPicker protected () extends Widget {
-  def this(element: Element) = this()
-  def this(element: Element, options: FlatColorPickerOptions) = this()
+trait FlatColorPicker extends Widget {
   @JSName("options")
   var options_FlatColorPicker: FlatColorPickerOptions = js.native
   var wrapper: JQuery = js.native
@@ -26,13 +22,5 @@ class FlatColorPicker protected () extends Widget {
   def value(color: String): Unit = js.native
   @JSName("value")
   def value_Unit(): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("kendo.ui.FlatColorPicker")
-@js.native
-object FlatColorPicker extends js.Object {
-  var fn: FlatColorPicker = js.native
-  def extend(proto: js.Object): FlatColorPicker = js.native
 }
 

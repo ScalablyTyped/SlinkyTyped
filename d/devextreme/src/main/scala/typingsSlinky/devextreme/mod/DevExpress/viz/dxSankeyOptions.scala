@@ -1,13 +1,13 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonColorMode
-import typingsSlinky.devextreme.AnonComponentDxSankey
-import typingsSlinky.devextreme.AnonComponentElementEventModel
-import typingsSlinky.devextreme.AnonEventModelTarget
-import typingsSlinky.devextreme.AnonHorizontalOffset
-import typingsSlinky.devextreme.AnonKeepLabels
-import typingsSlinky.devextreme.AnonPadding
-import typingsSlinky.devextreme.AnonTargetDxSankeyNode
+import typingsSlinky.devextreme.anon.ColorMode
+import typingsSlinky.devextreme.anon.ComponentDxSankey
+import typingsSlinky.devextreme.anon.ComponentElementEventModel
+import typingsSlinky.devextreme.anon.EventModelTarget
+import typingsSlinky.devextreme.anon.HorizontalOffset
+import typingsSlinky.devextreme.anon.KeepLabels
+import typingsSlinky.devextreme.anon.Padding
+import typingsSlinky.devextreme.anon.TargetDxSankeyNode
 import typingsSlinky.devextreme.devextremeStrings.Bright
 import typingsSlinky.devextreme.devextremeStrings.Carmine
 import typingsSlinky.devextreme.devextremeStrings.Default
@@ -39,7 +39,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait dxSankeyOptions extends BaseWidgetOptions[dxSankey] {
   /** Specifies adaptive layout options. */
-  var adaptiveLayout: js.UndefOr[AnonKeepLabels] = js.native
+  var adaptiveLayout: js.UndefOr[KeepLabels] = js.native
   /** Aligns node columns vertically. */
   var alignment: js.UndefOr[bottom | center | top | (js.Array[bottom | center | top])] = js.native
   /** Binds the widget to data. */
@@ -47,19 +47,19 @@ trait dxSankeyOptions extends BaseWidgetOptions[dxSankey] {
   /** Specifies whether nodes and links change their style when they are hovered over or pressed. */
   var hoverEnabled: js.UndefOr[Boolean] = js.native
   /** Configures sankey nodes' labels. */
-  var label: js.UndefOr[AnonHorizontalOffset] = js.native
+  var label: js.UndefOr[HorizontalOffset] = js.native
   /** Configures sankey links' appearance. */
-  var link: js.UndefOr[AnonColorMode] = js.native
+  var link: js.UndefOr[ColorMode] = js.native
   /** Configures sankey nodes' appearance. */
-  var node: js.UndefOr[AnonPadding] = js.native
+  var node: js.UndefOr[Padding] = js.native
   /** A function that is executed when a sankey link is clicked or tapped. */
-  var onLinkClick: js.UndefOr[(js.Function1[/* e */ AnonEventModelTarget, _]) | String] = js.native
+  var onLinkClick: js.UndefOr[(js.Function1[/* e */ EventModelTarget, _]) | String] = js.native
   /** A function that is executed after the pointer enters or leaves a sankey link. */
-  var onLinkHoverChanged: js.UndefOr[js.Function1[/* e */ AnonComponentDxSankey, _]] = js.native
+  var onLinkHoverChanged: js.UndefOr[js.Function1[/* e */ ComponentDxSankey, _]] = js.native
   /** A function that is executed when a sankey node is clicked or tapped. */
-  var onNodeClick: js.UndefOr[(js.Function1[/* e */ AnonComponentElementEventModel, _]) | String] = js.native
+  var onNodeClick: js.UndefOr[(js.Function1[/* e */ ComponentElementEventModel, _]) | String] = js.native
   /** A function that is executed after the pointer enters or leaves a sankey node. */
-  var onNodeHoverChanged: js.UndefOr[js.Function1[/* e */ AnonTargetDxSankeyNode, _]] = js.native
+  var onNodeHoverChanged: js.UndefOr[js.Function1[/* e */ TargetDxSankeyNode, _]] = js.native
   /** Sets the palette to be used to colorize sankey nodes. */
   var palette: js.UndefOr[
     js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
@@ -92,7 +92,7 @@ object dxSankeyOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAdaptiveLayout(value: AnonKeepLabels): Self = {
+    def withAdaptiveLayout(value: KeepLabels): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("adaptiveLayout")(value.asInstanceOf[js.Any])
         ret
@@ -140,7 +140,7 @@ object dxSankeyOptions {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonHorizontalOffset): Self = {
+    def withLabel(value: HorizontalOffset): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -152,7 +152,7 @@ object dxSankeyOptions {
         ret
     }
     @scala.inline
-    def withLink(value: AnonColorMode): Self = {
+    def withLink(value: ColorMode): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("link")(value.asInstanceOf[js.Any])
         ret
@@ -164,7 +164,7 @@ object dxSankeyOptions {
         ret
     }
     @scala.inline
-    def withNode(value: AnonPadding): Self = {
+    def withNode(value: Padding): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
         ret
@@ -176,13 +176,13 @@ object dxSankeyOptions {
         ret
     }
     @scala.inline
-    def withOnLinkClickFunction1(value: /* e */ AnonEventModelTarget => _): Self = {
+    def withOnLinkClickFunction1(value: /* e */ EventModelTarget => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLinkClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnLinkClick(value: (js.Function1[/* e */ AnonEventModelTarget, _]) | String): Self = {
+    def withOnLinkClick(value: (js.Function1[/* e */ EventModelTarget, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLinkClick")(value.asInstanceOf[js.Any])
         ret
@@ -194,7 +194,7 @@ object dxSankeyOptions {
         ret
     }
     @scala.inline
-    def withOnLinkHoverChanged(value: /* e */ AnonComponentDxSankey => _): Self = {
+    def withOnLinkHoverChanged(value: /* e */ ComponentDxSankey => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLinkHoverChanged")(js.Any.fromFunction1(value))
         ret
@@ -206,13 +206,13 @@ object dxSankeyOptions {
         ret
     }
     @scala.inline
-    def withOnNodeClickFunction1(value: /* e */ AnonComponentElementEventModel => _): Self = {
+    def withOnNodeClickFunction1(value: /* e */ ComponentElementEventModel => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnNodeClick(value: (js.Function1[/* e */ AnonComponentElementEventModel, _]) | String): Self = {
+    def withOnNodeClick(value: (js.Function1[/* e */ ComponentElementEventModel, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeClick")(value.asInstanceOf[js.Any])
         ret
@@ -224,7 +224,7 @@ object dxSankeyOptions {
         ret
     }
     @scala.inline
-    def withOnNodeHoverChanged(value: /* e */ AnonTargetDxSankeyNode => _): Self = {
+    def withOnNodeHoverChanged(value: /* e */ TargetDxSankeyNode => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeHoverChanged")(js.Any.fromFunction1(value))
         ret

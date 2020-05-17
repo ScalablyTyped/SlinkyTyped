@@ -1,6 +1,7 @@
 package typingsSlinky.reactCalendarTimeline.components
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
@@ -28,7 +29,6 @@ import typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.left
 import typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.move
 import typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.resize
 import typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.right
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -95,19 +95,19 @@ object ReactCalendarTimeline {
     @scala.inline
     def onBoundsChange(value: (/* canvasTimeStart */ Double, /* canvasTimeEnd */ Double) => _): this.type = set("onBoundsChange", js.Any.fromFunction2(value))
     @scala.inline
-    def onCanvasClick(value: (/* groupId */ Id, /* time */ Double, /* e */ SyntheticEvent[Event_, Element]) => Unit): this.type = set("onCanvasClick", js.Any.fromFunction3(value))
+    def onCanvasClick(value: (/* groupId */ Id, /* time */ Double, /* e */ SyntheticEvent[Event, Element]) => Unit): this.type = set("onCanvasClick", js.Any.fromFunction3(value))
     @scala.inline
-    def onCanvasContextMenu(value: (/* groupId */ Id, /* time */ Double, /* e */ SyntheticEvent[Event_, Element]) => Unit): this.type = set("onCanvasContextMenu", js.Any.fromFunction3(value))
+    def onCanvasContextMenu(value: (/* groupId */ Id, /* time */ Double, /* e */ SyntheticEvent[Event, Element]) => Unit): this.type = set("onCanvasContextMenu", js.Any.fromFunction3(value))
     @scala.inline
-    def onCanvasDoubleClick(value: (/* groupId */ Id, /* time */ Double, /* e */ SyntheticEvent[Event_, Element]) => Unit): this.type = set("onCanvasDoubleClick", js.Any.fromFunction3(value))
+    def onCanvasDoubleClick(value: (/* groupId */ Id, /* time */ Double, /* e */ SyntheticEvent[Event, Element]) => Unit): this.type = set("onCanvasDoubleClick", js.Any.fromFunction3(value))
     @scala.inline
-    def onItemClick(value: (/* itemId */ Id, /* e */ SyntheticEvent[Event_, Element], /* time */ Double) => Unit): this.type = set("onItemClick", js.Any.fromFunction3(value))
+    def onItemClick(value: (/* itemId */ Id, /* e */ SyntheticEvent[Event, Element], /* time */ Double) => Unit): this.type = set("onItemClick", js.Any.fromFunction3(value))
     @scala.inline
-    def onItemContextMenu(value: (/* itemId */ Id, /* e */ SyntheticEvent[Event_, Element], /* time */ Double) => Unit): this.type = set("onItemContextMenu", js.Any.fromFunction3(value))
+    def onItemContextMenu(value: (/* itemId */ Id, /* e */ SyntheticEvent[Event, Element], /* time */ Double) => Unit): this.type = set("onItemContextMenu", js.Any.fromFunction3(value))
     @scala.inline
-    def onItemDeselect(value: /* e */ SyntheticEvent[Event_, Element] => Unit): this.type = set("onItemDeselect", js.Any.fromFunction1(value))
+    def onItemDeselect(value: /* e */ SyntheticEvent[Event, Element] => Unit): this.type = set("onItemDeselect", js.Any.fromFunction1(value))
     @scala.inline
-    def onItemDoubleClick(value: (/* itemId */ Id, /* e */ SyntheticEvent[Event_, Element], /* time */ Double) => Unit): this.type = set("onItemDoubleClick", js.Any.fromFunction3(value))
+    def onItemDoubleClick(value: (/* itemId */ Id, /* e */ SyntheticEvent[Event, Element], /* time */ Double) => Unit): this.type = set("onItemDoubleClick", js.Any.fromFunction3(value))
     @scala.inline
     def onItemDrag(value: /* itemDragObject */ OnItemDragObjectMove | OnItemDragObjectResize => Unit): this.type = set("onItemDrag", js.Any.fromFunction1(value))
     @scala.inline

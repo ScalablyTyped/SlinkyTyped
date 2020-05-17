@@ -1,12 +1,12 @@
 package typingsSlinky.officeUiFabricReact.choiceGroupTypesMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.InputHTMLAttributes
-import typingsSlinky.std.Event_
 import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -40,7 +40,7 @@ trait IChoiceGroupProps extends InputHTMLAttributes[HTMLElement | HTMLInputEleme
   @JSName("onChange")
   var onChange_IChoiceGroupProps: js.UndefOr[
     js.Function2[
-      /* ev */ js.UndefOr[SyntheticEvent[EventTarget with (HTMLElement | HTMLInputElement), Event_]], 
+      /* ev */ js.UndefOr[SyntheticEvent[EventTarget with (HTMLElement | HTMLInputElement), Event]], 
       /* option */ js.UndefOr[IChoiceGroupOption], 
       Unit
     ]
@@ -52,7 +52,7 @@ trait IChoiceGroupProps extends InputHTMLAttributes[HTMLElement | HTMLInputEleme
   var onChanged: js.UndefOr[
     js.Function2[
       /* option */ IChoiceGroupOption, 
-      /* evt */ js.UndefOr[SyntheticEvent[EventTarget with (HTMLElement | HTMLInputElement), Event_]], 
+      /* evt */ js.UndefOr[SyntheticEvent[EventTarget with (HTMLElement | HTMLInputElement), Event]], 
       Unit
     ]
   ] = js.native
@@ -149,7 +149,7 @@ object IChoiceGroupProps {
     }
     @scala.inline
     def withOnChange(
-      value: (/* ev */ js.UndefOr[SyntheticEvent[EventTarget with (HTMLElement | HTMLInputElement), Event_]], /* option */ js.UndefOr[IChoiceGroupOption]) => Unit
+      value: (/* ev */ js.UndefOr[SyntheticEvent[EventTarget with (HTMLElement | HTMLInputElement), Event]], /* option */ js.UndefOr[IChoiceGroupOption]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
@@ -163,7 +163,7 @@ object IChoiceGroupProps {
     }
     @scala.inline
     def withOnChanged(
-      value: (/* option */ IChoiceGroupOption, /* evt */ js.UndefOr[SyntheticEvent[EventTarget with (HTMLElement | HTMLInputElement), Event_]]) => Unit
+      value: (/* option */ IChoiceGroupOption, /* evt */ js.UndefOr[SyntheticEvent[EventTarget with (HTMLElement | HTMLInputElement), Event]]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChanged")(js.Any.fromFunction2(value))

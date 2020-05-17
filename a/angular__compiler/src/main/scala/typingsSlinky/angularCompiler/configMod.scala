@@ -1,5 +1,6 @@
 package typingsSlinky.angularCompiler
 
+import typingsSlinky.angularCompiler.anon.DefaultEncapsulation
 import typingsSlinky.angularCompiler.coreMod.MissingTranslationStrategy
 import typingsSlinky.angularCompiler.coreMod.ViewEncapsulation
 import scala.scalajs.js
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation._
 object configMod extends js.Object {
   @js.native
   class CompilerConfig () extends js.Object {
-    def this(hasDefaultEncapsulationUseJitJitDevModeMissingTranslationPreserveWhitespacesStrictInjectionParameters: AnonDefaultEncapsulation) = this()
+    def this(hasDefaultEncapsulationUseJitJitDevModeMissingTranslationPreserveWhitespacesStrictInjectionParameters: DefaultEncapsulation) = this()
     var defaultEncapsulation: ViewEncapsulation | Null = js.native
     var jitDevMode: Boolean = js.native
     var missingTranslation: MissingTranslationStrategy | Null = js.native

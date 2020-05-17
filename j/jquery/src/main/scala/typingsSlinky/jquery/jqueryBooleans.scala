@@ -1,13 +1,13 @@
 package typingsSlinky.jquery
 
-import typingsSlinky.jquery.JQuery_._Falsy
+import typingsSlinky.jquery.JQuery.Falsy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object jqueryBooleans {
   @js.native
-  sealed trait `false` extends _Falsy
+  sealed trait `false` extends Falsy
   
   @js.native
   sealed trait `true` extends js.Object

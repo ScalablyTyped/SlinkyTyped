@@ -1,0 +1,28 @@
+package typingsSlinky.jointjs.mod
+
+import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.SVGElement
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("jointjs", "V")
+@js.native
+object V extends js.Object {
+  def apply(svg: String): Vectorizer = js.native
+  def apply(svg: String, attrs: StringDictionary[js.Any]): Vectorizer = js.native
+  def apply(svg: String, attrs: StringDictionary[js.Any], children: js.Array[SVGElement | Vectorizer]): Vectorizer = js.native
+  def apply(svg: String, attrs: StringDictionary[js.Any], children: Vectorizer): Vectorizer = js.native
+  def apply(svg: String, attrs: StringDictionary[js.Any], children: SVGElement): Vectorizer = js.native
+  def apply(svg: Vectorizer): Vectorizer = js.native
+  def apply(svg: Vectorizer, attrs: StringDictionary[js.Any]): Vectorizer = js.native
+  def apply(svg: Vectorizer, attrs: StringDictionary[js.Any], children: js.Array[SVGElement | Vectorizer]): Vectorizer = js.native
+  def apply(svg: Vectorizer, attrs: StringDictionary[js.Any], children: Vectorizer): Vectorizer = js.native
+  def apply(svg: Vectorizer, attrs: StringDictionary[js.Any], children: SVGElement): Vectorizer = js.native
+  def apply(svg: SVGElement): Vectorizer = js.native
+  def apply(svg: SVGElement, attrs: StringDictionary[js.Any]): Vectorizer = js.native
+  def apply(svg: SVGElement, attrs: StringDictionary[js.Any], children: js.Array[SVGElement | Vectorizer]): Vectorizer = js.native
+  def apply(svg: SVGElement, attrs: StringDictionary[js.Any], children: Vectorizer): Vectorizer = js.native
+  def apply(svg: SVGElement, attrs: StringDictionary[js.Any], children: SVGElement): Vectorizer = js.native
+}
+

@@ -1,6 +1,6 @@
 package typingsSlinky.stripeV3.stripe
 
-import typingsSlinky.stripeV3.AnonSepadebit
+import typingsSlinky.stripeV3.anon.Sepadebit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait ConfirmSepaDebitPaymentData extends js.Object {
     * by passing data directly and to supply additional required billing
     * details:
     */
-  var payment_method: js.UndefOr[String | AnonSepadebit] = js.native
+  var payment_method: js.UndefOr[String | Sepadebit] = js.native
 }
 
 object ConfirmSepaDebitPaymentData {
@@ -28,7 +28,7 @@ object ConfirmSepaDebitPaymentData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPayment_method(value: String | AnonSepadebit): Self = {
+    def withPayment_method(value: String | Sepadebit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("payment_method")(value.asInstanceOf[js.Any])
         ret

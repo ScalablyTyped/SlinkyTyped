@@ -1,18 +1,18 @@
 package typingsSlinky.reactNativeWebrtc.mod
 
-import typingsSlinky.reactNativeWebrtc.AnonIceConnectionState
+import typingsSlinky.reactNativeWebrtc.anon.IceConnectionState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait EventOnConnectionStateChange extends js.Object {
-  var target: AnonIceConnectionState = js.native
+  var target: IceConnectionState = js.native
 }
 
 object EventOnConnectionStateChange {
   @scala.inline
-  def apply(target: AnonIceConnectionState): EventOnConnectionStateChange = {
+  def apply(target: IceConnectionState): EventOnConnectionStateChange = {
     val __obj = js.Dynamic.literal(target = target.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventOnConnectionStateChange]
   }
@@ -23,7 +23,7 @@ object EventOnConnectionStateChange {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTarget(value: AnonIceConnectionState): Self = {
+    def withTarget(value: IceConnectionState): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
         ret

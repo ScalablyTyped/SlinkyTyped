@@ -1,5 +1,6 @@
 package typingsSlinky.graphql
 
+import typingsSlinky.graphql.anon.MaxErrors
 import typingsSlinky.graphql.astMod.DocumentNode
 import typingsSlinky.graphql.graphQLErrorMod.GraphQLError
 import typingsSlinky.graphql.maybeMod.Maybe
@@ -29,7 +30,7 @@ object validationValidateMod extends js.Object {
     documentAST: DocumentNode,
     rules: js.Array[ValidationRule],
     typeInfo: TypeInfo,
-    options: AnonMaxErrors
+    options: MaxErrors
   ): js.Array[GraphQLError] = js.native
   def validateSDL(documentAST: DocumentNode): js.Array[GraphQLError] = js.native
   def validateSDL(documentAST: DocumentNode, schemaToExtend: Maybe[GraphQLSchema]): js.Array[GraphQLError] = js.native

@@ -1,18 +1,18 @@
 package typingsSlinky.openpgp.mod
 
-import typingsSlinky.openpgp.AnonAeadAlgorithm
+import typingsSlinky.openpgp.anon.AeadAlgorithm
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait EncryptResult extends js.Object {
-  var sessionKey: AnonAeadAlgorithm = js.native
+  var sessionKey: AeadAlgorithm = js.native
 }
 
 object EncryptResult {
   @scala.inline
-  def apply(sessionKey: AnonAeadAlgorithm): EncryptResult = {
+  def apply(sessionKey: AeadAlgorithm): EncryptResult = {
     val __obj = js.Dynamic.literal(sessionKey = sessionKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[EncryptResult]
   }
@@ -23,7 +23,7 @@ object EncryptResult {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSessionKey(value: AnonAeadAlgorithm): Self = {
+    def withSessionKey(value: AeadAlgorithm): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sessionKey")(value.asInstanceOf[js.Any])
         ret

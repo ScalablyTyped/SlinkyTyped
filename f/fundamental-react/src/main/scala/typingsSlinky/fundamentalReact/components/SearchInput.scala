@@ -3,8 +3,8 @@ package typingsSlinky.fundamentalReact.components
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.fundamentalReact.AnonCallback
-import typingsSlinky.fundamentalReact.AnonText
+import typingsSlinky.fundamentalReact.anon.Callback
+import typingsSlinky.fundamentalReact.anon.Text
 import typingsSlinky.fundamentalReact.searchInputMod.SearchInputProps
 import typingsSlinky.fundamentalReact.searchInputMod.default
 import typingsSlinky.react.mod.ChangeEvent
@@ -50,9 +50,9 @@ object SearchInput {
     @scala.inline
     def searchBtnProps(value: js.Any): this.type = set("searchBtnProps", value.asInstanceOf[js.Any])
     @scala.inline
-    def searchList(value: js.Array[AnonCallback]): this.type = set("searchList", value.asInstanceOf[js.Any])
+    def searchList(value: js.Array[Callback]): this.type = set("searchList", value.asInstanceOf[js.Any])
     @scala.inline
-    def validationState(value: AnonText): this.type = set("validationState", value.asInstanceOf[js.Any])
+    def validationState(value: Text): this.type = set("validationState", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SearchInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

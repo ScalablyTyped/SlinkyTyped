@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCore
 
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonToastElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonToastElement
 import typingsSlinky.ionicCore.ionicCoreStrings.bottom
 import typingsSlinky.ionicCore.ionicCoreStrings.end
 import typingsSlinky.ionicCore.ionicCoreStrings.ios

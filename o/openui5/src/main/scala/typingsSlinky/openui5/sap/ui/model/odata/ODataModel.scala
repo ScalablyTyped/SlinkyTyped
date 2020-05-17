@@ -1,25 +1,15 @@
 package typingsSlinky.openui5.sap.ui.model.odata
 
 import typingsSlinky.jquery.JQueryPromise
-import typingsSlinky.openui5.TypeofCountMode
+import typingsSlinky.openui5.anon.TypeofCountMode
 import typingsSlinky.openui5.sap.ui.model.Context
 import typingsSlinky.openui5.sap.ui.model.Model
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("sap.ui.model.odata.ODataModel")
 @js.native
-class ODataModel protected () extends Model {
-  /**
-    * Constructor for a new ODataModel.
-    * @param sServiceUrl base uri of the service to request data from; additional URL parameters appended
-    * here will be appended to every request								can be passed with the mParameters object as well:
-    * [mParameters.serviceUrl] A serviceURl is required!
-    * @param mParameters (optional) a map which contains the following parameter properties:
-    */
-  def this(sServiceUrl: String) = this()
-  def this(sServiceUrl: String, mParameters: js.Any) = this()
+trait ODataModel extends Model {
   /**
     * Adds (a) new URL(s) to the be parsed for OData annotations, which are then merged into the
     * annotations objectwhich can be retrieved by calling the getServiceAnnotations()-method. If a

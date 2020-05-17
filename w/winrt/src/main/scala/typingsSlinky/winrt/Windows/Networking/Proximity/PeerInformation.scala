@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Networking.Proximity.PeerInformation")
 @js.native
-class PeerInformation () extends IPeerInformation
+trait PeerInformation extends IPeerInformation
+
+object PeerInformation {
+  @scala.inline
+  def apply(displayName: String): PeerInformation = {
+    val __obj = js.Dynamic.literal(displayName = displayName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PeerInformation]
+  }
+}
 

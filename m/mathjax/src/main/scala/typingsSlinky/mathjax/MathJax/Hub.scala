@@ -1,6 +1,5 @@
 package typingsSlinky.mathjax.MathJax
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -135,7 +134,247 @@ trait Hub extends js.Object {
   def setRenderer(renderer: String, `type`: String): Unit = js.native
 }
 
-@JSGlobal("MathJax.Hub")
-@js.native
-object Hub extends TopLevel[Hub]
+object Hub {
+  @scala.inline
+  def apply(
+    Config: Config => Unit,
+    Configured: () => Unit,
+    Insert: (js.Any, js.Any) => js.Any,
+    PreProcess: (js.Any, js.Any) => js.Any,
+    Process: (js.Any, js.Any) => js.Any,
+    Queue: js.Any => js.Any,
+    Reprocess: (js.Any, js.Any) => js.Any,
+    Rerender: (js.Any, js.Any) => js.Any,
+    Typeset: (js.Any, js.Any) => js.Any,
+    Update: (js.Any, js.Any) => js.Any,
+    formatError: (js.Any, js.Any) => Unit,
+    getAllJax: js.Any => js.Array[_],
+    getJaxByInputType: (String, js.Any) => Unit,
+    getJaxByType: (String, js.Any) => Unit,
+    getJaxFor: js.Any => js.Any,
+    isJax: js.Any => Double,
+    setRenderer: (String, String) => Unit
+  ): Hub = {
+    val __obj = js.Dynamic.literal(Config = js.Any.fromFunction1(Config), Configured = js.Any.fromFunction0(Configured), Insert = js.Any.fromFunction2(Insert), PreProcess = js.Any.fromFunction2(PreProcess), Process = js.Any.fromFunction2(Process), Queue = js.Any.fromFunction1(Queue), Reprocess = js.Any.fromFunction2(Reprocess), Rerender = js.Any.fromFunction2(Rerender), Typeset = js.Any.fromFunction2(Typeset), Update = js.Any.fromFunction2(Update), formatError = js.Any.fromFunction2(formatError), getAllJax = js.Any.fromFunction1(getAllJax), getJaxByInputType = js.Any.fromFunction2(getJaxByInputType), getJaxByType = js.Any.fromFunction2(getJaxByType), getJaxFor = js.Any.fromFunction1(getJaxFor), isJax = js.Any.fromFunction1(isJax), setRenderer = js.Any.fromFunction2(setRenderer))
+    __obj.asInstanceOf[Hub]
+  }
+  @scala.inline
+  implicit class HubOps[Self <: Hub] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfig(value: Config => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Config")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withConfigured(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Configured")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withInsert(value: (js.Any, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Insert")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withPreProcess(value: (js.Any, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PreProcess")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withProcess(value: (js.Any, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Process")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withQueue(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Queue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withReprocess(value: (js.Any, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reprocess")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRerender(value: (js.Any, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rerender")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withTypeset(value: (js.Any, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Typeset")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: (js.Any, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Update")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withFormatError(value: (js.Any, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatError")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetAllJax(value: js.Any => js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllJax")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetJaxByInputType(value: (String, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getJaxByInputType")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetJaxByType(value: (String, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getJaxByType")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetJaxFor(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getJaxFor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsJax(value: js.Any => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isJax")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetRenderer(value: (String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setRenderer")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withBrowser(value: BrowserInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Browser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBrowser: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Browser")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegister(value: Register): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Register")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegister: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Register")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withoutConfig: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withInputJax(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputJax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutInputJax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputJax")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOutputJax(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputJax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOutputJax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputJax")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProcessSectionDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("processSectionDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProcessSectionDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("processSectionDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProcessUpdateDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("processUpdateDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProcessUpdateDelay: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("processUpdateDelay")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withProcessUpdateTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("processUpdateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutProcessUpdateTime: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("processUpdateTime")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withoutQueue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSignal(value: Signal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSignal: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signal")(js.undefined)
+        ret
+    }
+  }
+  
+}
 

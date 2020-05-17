@@ -1,13 +1,13 @@
 package typingsSlinky.atom.mod
 
-import typingsSlinky.atom.AnonClassName
+import typingsSlinky.atom.anon.ClassName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait NotificationOptions extends js.Object {
-  var buttons: js.UndefOr[js.Array[AnonClassName]] = js.native
+  var buttons: js.UndefOr[js.Array[ClassName]] = js.native
   var description: js.UndefOr[String] = js.native
   var detail: js.UndefOr[String] = js.native
   var dismissable: js.UndefOr[Boolean] = js.native
@@ -27,7 +27,7 @@ object NotificationOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withButtons(value: js.Array[AnonClassName]): Self = {
+    def withButtons(value: js.Array[ClassName]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
         ret

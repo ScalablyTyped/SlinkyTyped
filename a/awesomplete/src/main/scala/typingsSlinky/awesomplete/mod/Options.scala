@@ -2,7 +2,7 @@ package typingsSlinky.awesomplete.mod
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.awesomplete.AnonValue
+import typingsSlinky.awesomplete.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait Options extends js.Object {
   var data: js.UndefOr[js.Function2[/* item */ Suggestion, /* input */ String, String]] = js.native
   var filter: js.UndefOr[js.Function2[/* text */ String, /* input */ String, Boolean]] = js.native
   var item: js.UndefOr[js.Function2[/* text */ String, /* input */ String, HTMLElement]] = js.native
-  var list: js.UndefOr[String | (js.Array[AnonValue | String | (js.Tuple2[String, String])]) | Element] = js.native
+  var list: js.UndefOr[String | (js.Array[String | (js.Tuple2[String, String]) | Value]) | Element] = js.native
   var maxItems: js.UndefOr[Double] = js.native
   var minChars: js.UndefOr[Double] = js.native
   var replace: js.UndefOr[js.Function1[/* suggestion */ String | Suggestion, Unit]] = js.native
@@ -87,7 +87,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withList(value: String | (js.Array[AnonValue | String | (js.Tuple2[String, String])]) | Element): Self = {
+    def withList(value: String | (js.Array[String | (js.Tuple2[String, String]) | Value]) | Element): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(value.asInstanceOf[js.Any])
         ret

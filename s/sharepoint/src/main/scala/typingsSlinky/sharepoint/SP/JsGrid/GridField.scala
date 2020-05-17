@@ -4,44 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("SP.JsGrid.GridField")
 @js.native
-class GridField protected () extends js.Object {
-  def this(key: String, hasDataValue: Boolean, hasLocalizedValue: Boolean, textDirection: TextDirection) = this()
-  def this(
-    key: String,
-    hasDataValue: Boolean,
-    hasLocalizedValue: Boolean,
-    textDirection: TextDirection,
-    defaultCellStyleId: js.Any
-  ) = this()
-  def this(
-    key: String,
-    hasDataValue: Boolean,
-    hasLocalizedValue: Boolean,
-    textDirection: TextDirection,
-    defaultCellStyleId: js.Any,
-    editMode: EditMode
-  ) = this()
-  def this(
-    key: String,
-    hasDataValue: Boolean,
-    hasLocalizedValue: Boolean,
-    textDirection: TextDirection,
-    defaultCellStyleId: js.Any,
-    editMode: EditMode,
-    dateOnly: Boolean
-  ) = this()
-  def this(
-    key: String,
-    hasDataValue: Boolean,
-    hasLocalizedValue: Boolean,
-    textDirection: TextDirection,
-    defaultCellStyleId: js.Any,
-    editMode: EditMode,
-    dateOnly: Boolean,
-    csrInfo: js.Any
-  ) = this()
+trait GridField extends js.Object {
   var csrInfo: js.Any = js.native
   var dateOnly: Boolean = js.native
   var hasDataValue: Boolean = js.native
@@ -58,5 +22,134 @@ class GridField protected () extends js.Object {
   def SetEditMode(mode: EditMode): Unit = js.native
   def SetIsMultiValue(listSeparator: js.Any): Unit = js.native
   def SetSingleValuePropType(svPropType: js.Any): Unit = js.native
+}
+
+object GridField {
+  @scala.inline
+  def apply(
+    CompareSingleDataEqual: (js.Any, js.Any) => Boolean,
+    GetDefaultCellStyleId: () => js.Any,
+    GetEditMode: () => EditMode,
+    GetIsMultiValue: () => Boolean,
+    GetMultiValuePropType: () => js.Any,
+    GetPropType: () => js.Any,
+    GetSingleValuePropType: () => js.Any,
+    SetEditMode: EditMode => Unit,
+    SetIsMultiValue: js.Any => Unit,
+    SetSingleValuePropType: js.Any => Unit,
+    csrInfo: js.Any,
+    dateOnly: Boolean,
+    hasDataValue: Boolean,
+    hasLocalizedValue: Boolean,
+    key: String,
+    textDirection: TextDirection
+  ): GridField = {
+    val __obj = js.Dynamic.literal(CompareSingleDataEqual = js.Any.fromFunction2(CompareSingleDataEqual), GetDefaultCellStyleId = js.Any.fromFunction0(GetDefaultCellStyleId), GetEditMode = js.Any.fromFunction0(GetEditMode), GetIsMultiValue = js.Any.fromFunction0(GetIsMultiValue), GetMultiValuePropType = js.Any.fromFunction0(GetMultiValuePropType), GetPropType = js.Any.fromFunction0(GetPropType), GetSingleValuePropType = js.Any.fromFunction0(GetSingleValuePropType), SetEditMode = js.Any.fromFunction1(SetEditMode), SetIsMultiValue = js.Any.fromFunction1(SetIsMultiValue), SetSingleValuePropType = js.Any.fromFunction1(SetSingleValuePropType), csrInfo = csrInfo.asInstanceOf[js.Any], dateOnly = dateOnly.asInstanceOf[js.Any], hasDataValue = hasDataValue.asInstanceOf[js.Any], hasLocalizedValue = hasLocalizedValue.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], textDirection = textDirection.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GridField]
+  }
+  @scala.inline
+  implicit class GridFieldOps[Self <: GridField] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompareSingleDataEqual(value: (js.Any, js.Any) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CompareSingleDataEqual")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetDefaultCellStyleId(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetDefaultCellStyleId")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetEditMode(value: () => EditMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetEditMode")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetIsMultiValue(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetIsMultiValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMultiValuePropType(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetMultiValuePropType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPropType(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetPropType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSingleValuePropType(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetSingleValuePropType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetEditMode(value: EditMode => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetEditMode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetIsMultiValue(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetIsMultiValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetSingleValuePropType(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetSingleValuePropType")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCsrInfo(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("csrInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDateOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHasDataValue(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasDataValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHasLocalizedValue(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasLocalizedValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextDirection(value: TextDirection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textDirection")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

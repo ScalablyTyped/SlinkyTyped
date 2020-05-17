@@ -1,6 +1,6 @@
 package typingsSlinky.sumoLogger.mod
 
-import typingsSlinky.sumoLogger.PartialPerMessageOptions
+import typingsSlinky.sumoLogger.anon.PartialPerMessageOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -6,7 +6,7 @@ import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -50,11 +50,11 @@ import typingsSlinky.reactNative.reactNativeStrings.scrollableAxes
 import typingsSlinky.reactNative.reactNativeStrings.start
 import typingsSlinky.reactNative.reactNativeStrings.white
 import typingsSlinky.reactNative.reactNativeStrings.yes
-import typingsSlinky.reactNativeGestureHandler.AnonBottom
-import typingsSlinky.reactNativeGestureHandler.AnonBottomHeight
-import typingsSlinky.reactNativeGestureHandler.AnonHeight
-import typingsSlinky.reactNativeGestureHandler.AnonLeft
-import typingsSlinky.reactNativeGestureHandler.AnonRight
+import typingsSlinky.reactNativeGestureHandler.anon.Bottom
+import typingsSlinky.reactNativeGestureHandler.anon.BottomHeight
+import typingsSlinky.reactNativeGestureHandler.anon.Height
+import typingsSlinky.reactNativeGestureHandler.anon.Left
+import typingsSlinky.reactNativeGestureHandler.anon.Right
 import typingsSlinky.reactNativeGestureHandler.mod.NativeViewGestureHandlerGestureEvent
 import typingsSlinky.reactNativeGestureHandler.mod.NativeViewGestureHandlerProperties
 import typingsSlinky.reactNativeGestureHandler.mod.NativeViewGestureHandlerStateChangeEvent
@@ -144,7 +144,7 @@ object ScrollView {
     @scala.inline
     def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
     @scala.inline
-    def hitSlop(value: Double | AnonBottom | AnonLeft | AnonRight | AnonHeight | AnonBottomHeight): this.type = set("hitSlop", value.asInstanceOf[js.Any])
+    def hitSlop(value: Double | Bottom | Left | Right | Height | BottomHeight): this.type = set("hitSlop", value.asInstanceOf[js.Any])
     @scala.inline
     def horizontal(value: Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.fields
 import typingsSlinky.arcgisJsApi.esri.content.Content
 import scala.scalajs.js
@@ -28,8 +27,4 @@ trait FieldsContent
   @JSName("type")
   val type_FieldsContent: fields = js.native
 }
-
-@JSGlobal("__esri.FieldsContent")
-@js.native
-object FieldsContent extends TopLevel[FieldsContentConstructor]
 

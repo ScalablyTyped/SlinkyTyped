@@ -1,9 +1,9 @@
 package typingsSlinky.swaggerParser.mod
 
-import typingsSlinky.swaggerParser.AnonCircular
-import typingsSlinky.swaggerParser.AnonDictkey
-import typingsSlinky.swaggerParser.AnonExternal
-import typingsSlinky.swaggerParser.AnonSchema
+import typingsSlinky.swaggerParser.anon.Circular
+import typingsSlinky.swaggerParser.anon.Dictkey
+import typingsSlinky.swaggerParser.anon.External
+import typingsSlinky.swaggerParser.anon.Schema
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,23 +13,23 @@ trait Options extends js.Object {
   /**
     * The `dereference` options control how JSON Schema `$Ref` Parser will dereference `$ref` pointers within the JSON schema.
     */
-  var dereference: js.UndefOr[AnonCircular] = js.native
+  var dereference: js.UndefOr[Circular] = js.native
   /**
     * The `parse` options determine how different types of files will be parsed.
     *
     * JSON Schema `$Ref` Parser comes with built-in JSON, YAML, plain-text, and binary parsers, any of which you can configure or disable. You can also add your own custom parsers if you want.
     */
-  var parse: js.UndefOr[AnonDictkey] = js.native
+  var parse: js.UndefOr[Dictkey] = js.native
   /**
     * The `resolve` options control how Swagger Parser will resolve file paths and URLs, and how those files will be read/downloaded.
     *
     * JSON Schema `$Ref` Parser comes with built-in support for HTTP and HTTPS, as well as support for local files (when running in Node.js). You can configure or disable either of these built-in resolvers. You can also add your own custom resolvers if you want.
     */
-  var resolve: js.UndefOr[AnonExternal] = js.native
+  var resolve: js.UndefOr[External] = js.native
   /**
     * The `validate` options control how Swagger Parser will validate the API.
     */
-  var validate: js.UndefOr[AnonSchema] = js.native
+  var validate: js.UndefOr[Schema] = js.native
 }
 
 object Options {
@@ -45,7 +45,7 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDereference(value: AnonCircular): Self = {
+    def withDereference(value: Circular): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dereference")(value.asInstanceOf[js.Any])
         ret
@@ -57,7 +57,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withParse(value: AnonDictkey): Self = {
+    def withParse(value: Dictkey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(value.asInstanceOf[js.Any])
         ret
@@ -69,7 +69,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withResolve(value: AnonExternal): Self = {
+    def withResolve(value: External): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resolve")(value.asInstanceOf[js.Any])
         ret
@@ -81,7 +81,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withValidate(value: AnonSchema): Self = {
+    def withValidate(value: Schema): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(value.asInstanceOf[js.Any])
         ret

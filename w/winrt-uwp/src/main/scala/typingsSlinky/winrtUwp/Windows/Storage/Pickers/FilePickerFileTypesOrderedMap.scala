@@ -9,9 +9,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a collection of display names mapped to the associated file types (extensions). Each element in this collection maps a display name to a corresponding collection of file name extensions. The key is a single string, the value is a list/vector of strings representing one or more extension choices. */
-@JSGlobal("Windows.Storage.Pickers.FilePickerFileTypesOrderedMap")
 @js.native
-abstract class FilePickerFileTypesOrderedMap () extends js.Object {
+trait FilePickerFileTypesOrderedMap extends js.Object {
   /** Gets the number of items in the mapped collection of display names and associated file types. */
   var size: Double = js.native
   /** Removes all display names and associated file name extensions from the collection. */
@@ -50,5 +49,78 @@ abstract class FilePickerFileTypesOrderedMap () extends js.Object {
     * @param key The key associated with the item to remove.
     */
   def remove(key: String): Unit = js.native
+}
+
+object FilePickerFileTypesOrderedMap {
+  @scala.inline
+  def apply(
+    clear: () => Unit,
+    first: () => IIterator[IKeyValuePair[_, _]],
+    getView: () => IMapView[String, IVector[String]],
+    hasKey: String => Boolean,
+    insert: (String, IVector[String]) => Boolean,
+    lookup: String => IVector[String],
+    remove: String => Unit,
+    size: Double
+  ): FilePickerFileTypesOrderedMap = {
+    val __obj = js.Dynamic.literal(clear = js.Any.fromFunction0(clear), first = js.Any.fromFunction0(first), getView = js.Any.fromFunction0(getView), hasKey = js.Any.fromFunction1(hasKey), insert = js.Any.fromFunction2(insert), lookup = js.Any.fromFunction1(lookup), remove = js.Any.fromFunction1(remove), size = size.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FilePickerFileTypesOrderedMap]
+  }
+  @scala.inline
+  implicit class FilePickerFileTypesOrderedMapOps[Self <: FilePickerFileTypesOrderedMap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClear(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withFirst(value: () => IIterator[IKeyValuePair[_, _]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetView(value: () => IMapView[String, IVector[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getView")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHasKey(value: String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasKey")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInsert(value: (String, IVector[String]) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withLookup(value: String => IVector[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lookup")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemove(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -3,6 +3,7 @@ package typingsSlinky.rdfjsFetch
 import typingsSlinky.rdfJs.mod.BaseQuad
 import typingsSlinky.rdfJs.mod.DatasetCore
 import typingsSlinky.rdfJs.mod.Quad
+import typingsSlinky.rdfjsFetch.anon.PartialFormatsInit
 import typingsSlinky.rdfjsFetchLite.mod.DatasetResponse
 import typingsSlinky.rdfjsFetchLite.mod.FactoryInit
 import typingsSlinky.rdfjsFetchLite.mod.RdfFetchResponse

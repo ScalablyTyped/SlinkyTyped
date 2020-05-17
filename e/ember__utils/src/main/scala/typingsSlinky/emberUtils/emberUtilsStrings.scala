@@ -1,12 +1,14 @@
 package typingsSlinky.emberUtils
 
+import typingsSlinky.emberUtils.typesMod.TypeOf
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object emberUtilsStrings {
   @js.native
-  sealed trait `object` extends js.Object
+  sealed trait `object`
+    extends TypeOf[js.Any, js.Any]
   
   @js.native
   sealed trait undefined extends js.Object

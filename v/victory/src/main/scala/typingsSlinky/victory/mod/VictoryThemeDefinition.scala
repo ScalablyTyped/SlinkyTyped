@@ -1,13 +1,13 @@
 package typingsSlinky.victory.mod
 
-import typingsSlinky.victory.AnonCornerRadius
-import typingsSlinky.victory.borderWidthnumberstyledat
-import typingsSlinky.victory.gutternumberorientationve
-import typingsSlinky.victory.styleaxisCSSPropertiesaxi
-import typingsSlinky.victory.styledataCSSPropertieslab
-import typingsSlinky.victory.styledataCSSPropertieslabCandleColors
-import typingsSlinky.victory.styledataCSSPropertieslabColorScale
-import typingsSlinky.victory.stylemaxCSSPropertiesmaxL
+import typingsSlinky.victory.anon.CornerRadius
+import typingsSlinky.victory.anon.borderWidthnumberstyledat
+import typingsSlinky.victory.anon.gutternumberorientationve
+import typingsSlinky.victory.anon.styleaxisCSSPropertiesaxi
+import typingsSlinky.victory.anon.styledataCSSPropertieslab
+import typingsSlinky.victory.anon.styledataCSSPropertieslabCandleColors
+import typingsSlinky.victory.anon.styledataCSSPropertieslabColorScale
+import typingsSlinky.victory.anon.stylemaxCSSPropertiesmaxL
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +27,7 @@ trait VictoryThemeDefinition extends js.Object {
   var pie: js.UndefOr[styledataCSSPropertieslab] = js.native
   var scatter: js.UndefOr[styledataCSSPropertieslab] = js.native
   var stack: js.UndefOr[ThemeBaseProps] = js.native
-  var tooltip: js.UndefOr[AnonCornerRadius] = js.native
+  var tooltip: js.UndefOr[CornerRadius] = js.native
   var voronoi: js.UndefOr[styledataCSSPropertieslabColorScale] = js.native
 }
 
@@ -200,7 +200,7 @@ object VictoryThemeDefinition {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonCornerRadius): Self = {
+    def withTooltip(value: CornerRadius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

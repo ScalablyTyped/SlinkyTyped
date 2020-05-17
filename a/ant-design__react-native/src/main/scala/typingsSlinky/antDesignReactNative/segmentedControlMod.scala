@@ -1,6 +1,7 @@
 package typingsSlinky.antDesignReactNative
 
 import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.antDesignReactNative.anon.SelectedIndex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +16,7 @@ object segmentedControlMod extends js.Object {
   @js.native
   object default
     extends Instantiable0[typingsSlinky.antDesignReactNative.segmentedIosMod.default] {
-    var defaultProps: AnonSelectedIndex = js.native
+    var defaultProps: SelectedIndex = js.native
   }
   
 }

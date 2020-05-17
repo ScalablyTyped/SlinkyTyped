@@ -1,6 +1,6 @@
 package typingsSlinky.breeze.mod
 
-import typingsSlinky.breeze.AnonExtractKeyMappings
+import typingsSlinky.breeze.anon.ExtractKeyMappings
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class JsonResultsAdapter protected ()
   extends typingsSlinky.breeze.breeze.JsonResultsAdapter {
-  def this(config: AnonExtractKeyMappings) = this()
+  def this(config: ExtractKeyMappings) = this()
 }
 

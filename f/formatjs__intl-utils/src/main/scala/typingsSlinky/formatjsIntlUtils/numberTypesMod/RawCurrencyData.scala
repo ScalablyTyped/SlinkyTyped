@@ -1,6 +1,6 @@
 package typingsSlinky.formatjsIntlUtils.numberTypesMod
 
-import typingsSlinky.formatjsIntlUtils.RecordDecimalFormatNumLDM
+import typingsSlinky.formatjsIntlUtils.anon.RecordDecimalFormatNumLDM
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

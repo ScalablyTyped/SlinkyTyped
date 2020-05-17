@@ -2,9 +2,9 @@ package typingsSlinky.jsdom.mod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.jsdom.ReadonlyDISABLEDstringSIL
-import typingsSlinky.jsdom.TypeofCookie
-import typingsSlinky.jsdom.TypeofCookieJar
+import typingsSlinky.jsdom.anon.ReadonlyDISABLEDstringSIL
+import typingsSlinky.jsdom.anon.TypeofCookie
+import typingsSlinky.jsdom.anon.TypeofCookieJar
 import typingsSlinky.toughCookie.mod.Cookie
 import typingsSlinky.toughCookie.mod.Cookie.ParseOptions
 import scala.scalajs.js

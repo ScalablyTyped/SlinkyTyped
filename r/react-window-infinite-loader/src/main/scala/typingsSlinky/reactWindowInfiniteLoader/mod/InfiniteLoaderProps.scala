@@ -1,7 +1,6 @@
 package typingsSlinky.reactWindowInfiniteLoader.mod
 
 import slinky.core.TagMod
-import typingsSlinky.reactWindowInfiniteLoader.AnonOnItemsRendered
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,7 @@ trait InfiniteLoaderProps extends js.Object {
   var itemCount: Double = js.native
   var minimumBatchSize: js.UndefOr[Double] = js.native
   var threshold: js.UndefOr[Double] = js.native
-  def children(props: AnonOnItemsRendered): TagMod[Any] = js.native
+  def children(props: typingsSlinky.reactWindowInfiniteLoader.anon.OnItemsRendered): TagMod[Any] = js.native
   def isItemLoaded(index: Double): Boolean = js.native
   def loadMoreItems(startIndex: Double, stopIndex: Double): js.Promise[_] | Null = js.native
 }
@@ -19,7 +18,7 @@ trait InfiniteLoaderProps extends js.Object {
 object InfiniteLoaderProps {
   @scala.inline
   def apply(
-    children: AnonOnItemsRendered => TagMod[Any],
+    children: typingsSlinky.reactWindowInfiniteLoader.anon.OnItemsRendered => TagMod[Any],
     isItemLoaded: Double => Boolean,
     itemCount: Double,
     loadMoreItems: (Double, Double) => js.Promise[_] | Null
@@ -34,7 +33,7 @@ object InfiniteLoaderProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withChildren(value: AnonOnItemsRendered => TagMod[Any]): Self = {
+    def withChildren(value: typingsSlinky.reactWindowInfiniteLoader.anon.OnItemsRendered => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.webpack.mod.EvalSourceMapDevToolPlugin
 
-import typingsSlinky.webpack.AnonExclude
+import typingsSlinky.webpack.anon.Exclude
 import typingsSlinky.webpack.webpackBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait Options extends js.Object {
   var append: js.UndefOr[`false` | String] = js.native
   var columns: js.UndefOr[Boolean] = js.native
-  var lineToLine: js.UndefOr[Boolean | AnonExclude] = js.native
+  var lineToLine: js.UndefOr[Boolean | Exclude] = js.native
   var module: js.UndefOr[Boolean] = js.native
   var moduleFilenameTemplate: js.UndefOr[String] = js.native
   var sourceRoot: js.UndefOr[String] = js.native
@@ -53,7 +53,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withLineToLine(value: Boolean | AnonExclude): Self = {
+    def withLineToLine(value: Boolean | Exclude): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lineToLine")(value.asInstanceOf[js.Any])
         ret

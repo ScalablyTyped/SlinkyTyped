@@ -2,15 +2,14 @@ package typingsSlinky.googleAuthLibrary.googleauthMod
 
 import typingsSlinky.gaxios.commonMod.GaxiosOptions
 import typingsSlinky.gaxios.commonMod.GaxiosResponse
-import typingsSlinky.googleAuthLibrary.AnonHeaders
-import typingsSlinky.googleAuthLibrary.AnonUri
-import typingsSlinky.googleAuthLibrary.TypeofDefaultTransporter
+import typingsSlinky.googleAuthLibrary.anon.Headers
+import typingsSlinky.googleAuthLibrary.anon.TypeofDefaultTransporter
+import typingsSlinky.googleAuthLibrary.anon.Uri
 import typingsSlinky.googleAuthLibrary.computeclientMod.Compute
 import typingsSlinky.googleAuthLibrary.credentialsMod.CredentialBody
 import typingsSlinky.googleAuthLibrary.credentialsMod.JWTInput
 import typingsSlinky.googleAuthLibrary.envDetectMod.GCPEnv
 import typingsSlinky.googleAuthLibrary.jwtclientMod.JWT
-import typingsSlinky.googleAuthLibrary.oauth2clientMod.Headers
 import typingsSlinky.googleAuthLibrary.oauth2clientMod.RefreshOptions
 import typingsSlinky.googleAuthLibrary.refreshclientMod.UserRefreshClient
 import typingsSlinky.googleAuthLibrary.transportersMod.Transporter
@@ -106,7 +105,7 @@ class GoogleAuth () extends js.Object {
     * the request options.
     * @param opts Axios or Request options on which to attach the headers
     */
-  def authorizeRequest(opts: AnonHeaders): js.Promise[AnonUri] = js.native
+  def authorizeRequest(opts: Headers): js.Promise[Uri] = js.native
   /**
     * Create a credentials instance using the given API key string.
     * @param apiKey The API key string
@@ -188,8 +187,8 @@ class GoogleAuth () extends js.Object {
     * Obtain the HTTP headers that will provide authorization for a given
     * request.
     */
-  def getRequestHeaders(): js.Promise[Headers] = js.native
-  def getRequestHeaders(url: String): js.Promise[Headers] = js.native
+  def getRequestHeaders(): js.Promise[typingsSlinky.googleAuthLibrary.oauth2clientMod.Headers] = js.native
+  def getRequestHeaders(url: String): js.Promise[typingsSlinky.googleAuthLibrary.oauth2clientMod.Headers] = js.native
   /**
     * Automatically obtain application default credentials, and make an
     * HTTP request using the given options.

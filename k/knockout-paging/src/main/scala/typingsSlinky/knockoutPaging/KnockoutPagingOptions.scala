@@ -1,5 +1,6 @@
 package typingsSlinky.knockoutPaging
 
+import typingsSlinky.knockoutPaging.anon.Dictname
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait KnockoutPagingOptions extends js.Object {
   var defaults: KnockoutPagingDefaultOptions = js.native
-  var generators: AnonDictname = js.native
+  var generators: Dictname = js.native
 }
 
 object KnockoutPagingOptions {
   @scala.inline
-  def apply(defaults: KnockoutPagingDefaultOptions, generators: AnonDictname): KnockoutPagingOptions = {
+  def apply(defaults: KnockoutPagingDefaultOptions, generators: Dictname): KnockoutPagingOptions = {
     val __obj = js.Dynamic.literal(defaults = defaults.asInstanceOf[js.Any], generators = generators.asInstanceOf[js.Any])
     __obj.asInstanceOf[KnockoutPagingOptions]
   }
@@ -29,7 +30,7 @@ object KnockoutPagingOptions {
         ret
     }
     @scala.inline
-    def withGenerators(value: AnonDictname): Self = {
+    def withGenerators(value: Dictname): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("generators")(value.asInstanceOf[js.Any])
         ret

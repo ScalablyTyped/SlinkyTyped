@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.std.stdStrings.`object`
 import typingsSlinky.std.stdStrings.`var`
 import typingsSlinky.std.stdStrings.a
@@ -147,6 +146,7 @@ import typingsSlinky.std.stdStrings.slot
 import typingsSlinky.std.stdStrings.small
 import typingsSlinky.std.stdStrings.source
 import typingsSlinky.std.stdStrings.span
+import typingsSlinky.std.stdStrings.stop
 import typingsSlinky.std.stdStrings.strong
 import typingsSlinky.std.stdStrings.style
 import typingsSlinky.std.stdStrings.sub
@@ -210,8 +210,8 @@ trait Element
     * Returns the local name.
     */
   val localName: java.lang.String = js.native
-  var onfullscreenchange: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
-  var onfullscreenerror: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
+  var onfullscreenchange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onfullscreenerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
   var outerHTML: java.lang.String = js.native
   /**
     * Returns the namespace prefix.
@@ -234,31 +234,37 @@ trait Element
     */
   val tagName: java.lang.String = js.native
   @JSName("addEventListener")
-  def addEventListener_fullscreenchange(`type`: fullscreenchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_fullscreenchange(
+    `type`: fullscreenchange,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenchange(
     `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenchange(
     `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_fullscreenerror(`type`: fullscreenerror, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_fullscreenerror(
+    `type`: fullscreenerror,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenerror(
     `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenerror(
     `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   /**
@@ -552,7 +558,7 @@ trait Element
   @JSName("closest")
   def closest_span(selector: span): org.scalajs.dom.raw.HTMLSpanElement | Null = js.native
   @JSName("closest")
-  def closest_stop(selector: typingsSlinky.std.stdStrings.stop): org.scalajs.dom.raw.SVGStopElement | Null = js.native
+  def closest_stop(selector: stop): org.scalajs.dom.raw.SVGStopElement | Null = js.native
   @JSName("closest")
   def closest_strong(selector: strong): org.scalajs.dom.raw.HTMLElement | Null = js.native
   @JSName("closest")
@@ -923,7 +929,7 @@ trait Element
   @JSName("getElementsByTagName")
   def getElementsByTagName_span(qualifiedName: span): HTMLCollectionOf[org.scalajs.dom.raw.HTMLSpanElement] = js.native
   @JSName("getElementsByTagName")
-  def getElementsByTagName_stop(qualifiedName: typingsSlinky.std.stdStrings.stop): HTMLCollectionOf[org.scalajs.dom.raw.SVGStopElement] = js.native
+  def getElementsByTagName_stop(qualifiedName: stop): HTMLCollectionOf[org.scalajs.dom.raw.SVGStopElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_strong(qualifiedName: strong): HTMLCollectionOf[org.scalajs.dom.raw.HTMLElement] = js.native
   @JSName("getElementsByTagName")
@@ -1018,31 +1024,37 @@ trait Element
   def removeAttributeNS(namespace: Null, localName: java.lang.String): Unit = js.native
   def removeAttributeNode(attr: org.scalajs.dom.raw.Attr): org.scalajs.dom.raw.Attr = js.native
   @JSName("removeEventListener")
-  def removeEventListener_fullscreenchange(`type`: fullscreenchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_fullscreenchange(
+    `type`: fullscreenchange,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenchange(
     `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenchange(
     `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_fullscreenerror(`type`: fullscreenerror, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_fullscreenerror(
+    `type`: fullscreenerror,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenerror(
     `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenerror(
     `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   /**
@@ -1086,9 +1098,4 @@ trait Element
   def toggleAttribute(qualifiedName: java.lang.String, force: scala.Boolean): scala.Boolean = js.native
   def webkitMatchesSelector(selectors: java.lang.String): scala.Boolean = js.native
 }
-
-@JSGlobal("Element")
-@js.native
-object Element
-  extends Instantiable0[org.scalajs.dom.raw.Element]
 

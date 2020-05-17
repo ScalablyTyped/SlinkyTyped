@@ -1,5 +1,6 @@
 package typingsSlinky.ramda
 
+import typingsSlinky.ramda.anon.Fn2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

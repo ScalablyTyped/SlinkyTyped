@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientS3Browser.typesGetBucketWebsiteOutputMod
 
-import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientS3Browser.typesErrorDocumentMod.UnmarshalledErrorDocument
 import typingsSlinky.awsSdkClientS3Browser.typesIndexDocumentMod.UnmarshalledIndexDocument
 import typingsSlinky.awsSdkClientS3Browser.typesRedirectAllRequestsToMod.UnmarshalledRedirectAllRequestsTo
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetBucketWebsiteOutput
   extends MetadataBearer
-     with _OutputTypesUnion {
+     with OutputTypesUnion {
   /**
     * _ErrorDocument shape
     */

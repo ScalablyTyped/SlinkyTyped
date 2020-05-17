@@ -1,7 +1,7 @@
 package typingsSlinky.sinon.mod
 
-import typingsSlinky.sinon.AnonCreate
-import typingsSlinky.sinon.PartialSinonSandboxConfig
+import typingsSlinky.sinon.anon.Create
+import typingsSlinky.sinon.anon.PartialSinonSandboxConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SinonApi extends js.Object {
   var FakeXMLHttpRequest: SinonFakeXMLHttpRequestStatic = js.native
-  var clock: AnonCreate = js.native
+  var clock: Create = js.native
   var defaultConfig: PartialSinonSandboxConfig = js.native
   var expectation: SinonExpectationStatic = js.native
   var fakeServer: SinonFakeServerStatic = js.native

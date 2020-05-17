@@ -7,10 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A representation of a Bluetooth LE advertisement payload. */
-@JSGlobal("Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisement")
 @js.native
-/** Creates a new BluetoothLEAdvertisement object. */
-class BluetoothLEAdvertisement () extends js.Object {
+trait BluetoothLEAdvertisement extends js.Object {
   /** Gets the list of raw data sections. */
   var dataSections: IVector[BluetoothLEAdvertisementDataSection] = js.native
   /** Bluetooth LE advertisement flags. */
@@ -33,5 +31,71 @@ class BluetoothLEAdvertisement () extends js.Object {
     * @return A vector of all the BluetoothLEAdvertisementDataSection matching the given advertisement type.
     */
   def getSectionsByType(`type`: Double): IVectorView[BluetoothLEAdvertisementDataSection] = js.native
+}
+
+object BluetoothLEAdvertisement {
+  @scala.inline
+  def apply(
+    dataSections: IVector[BluetoothLEAdvertisementDataSection],
+    flags: BluetoothLEAdvertisementFlags,
+    getManufacturerDataByCompanyId: Double => IVectorView[BluetoothLEManufacturerData],
+    getSectionsByType: Double => IVectorView[BluetoothLEAdvertisementDataSection],
+    localName: String,
+    manufacturerData: IVector[BluetoothLEManufacturerData],
+    serviceUuids: IVector[String]
+  ): BluetoothLEAdvertisement = {
+    val __obj = js.Dynamic.literal(dataSections = dataSections.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], getManufacturerDataByCompanyId = js.Any.fromFunction1(getManufacturerDataByCompanyId), getSectionsByType = js.Any.fromFunction1(getSectionsByType), localName = localName.asInstanceOf[js.Any], manufacturerData = manufacturerData.asInstanceOf[js.Any], serviceUuids = serviceUuids.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BluetoothLEAdvertisement]
+  }
+  @scala.inline
+  implicit class BluetoothLEAdvertisementOps[Self <: BluetoothLEAdvertisement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDataSections(value: IVector[BluetoothLEAdvertisementDataSection]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataSections")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFlags(value: BluetoothLEAdvertisementFlags): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flags")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetManufacturerDataByCompanyId(value: Double => IVectorView[BluetoothLEManufacturerData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getManufacturerDataByCompanyId")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetSectionsByType(value: Double => IVectorView[BluetoothLEAdvertisementDataSection]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSectionsByType")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLocalName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withManufacturerData(value: IVector[BluetoothLEManufacturerData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturerData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServiceUuids(value: IVector[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceUuids")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

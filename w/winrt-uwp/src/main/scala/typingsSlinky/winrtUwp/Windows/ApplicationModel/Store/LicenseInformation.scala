@@ -9,9 +9,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides access to the current app's license metadata. */
-@JSGlobal("Windows.ApplicationModel.Store.LicenseInformation")
 @js.native
-abstract class LicenseInformation () extends js.Object {
+trait LicenseInformation extends js.Object {
   /** Gets the license expiration date and time relative to the system clock. */
   var expirationDate: js.Date = js.native
   /** Gets a value that indicates whether the license is active. */

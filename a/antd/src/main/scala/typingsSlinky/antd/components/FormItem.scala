@@ -9,7 +9,7 @@ import typingsSlinky.antd.formItemMod.FormItemProps
 import typingsSlinky.antd.formItemMod.ValidateStatus
 import typingsSlinky.antd.gridColMod.ColProps
 import typingsSlinky.antd.interfaceMod.FormLabelAlign
-import typingsSlinky.rcFieldForm.AnonSource
+import typingsSlinky.rcFieldForm.anon.Source
 import typingsSlinky.rcFieldForm.fieldMod.ShouldUpdate
 import typingsSlinky.rcFieldForm.interfaceMod.EventArgs
 import typingsSlinky.rcFieldForm.interfaceMod.NamePath
@@ -77,7 +77,7 @@ object FormItem {
     @scala.inline
     def rules(value: js.Array[Rule]): this.type = set("rules", value.asInstanceOf[js.Any])
     @scala.inline
-    def shouldUpdateFunction3(value: (/* prevValues */ Store, /* nextValues */ Store, /* info */ AnonSource) => Boolean): this.type = set("shouldUpdate", js.Any.fromFunction3(value))
+    def shouldUpdateFunction3(value: (/* prevValues */ Store, /* nextValues */ Store, /* info */ Source) => Boolean): this.type = set("shouldUpdate", js.Any.fromFunction3(value))
     @scala.inline
     def shouldUpdate(value: ShouldUpdate): this.type = set("shouldUpdate", value.asInstanceOf[js.Any])
     @scala.inline

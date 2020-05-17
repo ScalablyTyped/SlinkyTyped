@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.point
 import typingsSlinky.arcgisJsApi.esri.geometry.Geometry
 import scala.scalajs.js
@@ -101,8 +100,4 @@ trait Point
     */
   def normalize(): Point = js.native
 }
-
-@JSGlobal("__esri.Point")
-@js.native
-object Point extends TopLevel[PointConstructor]
 

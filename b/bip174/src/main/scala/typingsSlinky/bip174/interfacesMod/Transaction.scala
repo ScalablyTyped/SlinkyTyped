@@ -1,6 +1,6 @@
 package typingsSlinky.bip174.interfacesMod
 
-import typingsSlinky.bip174.AnonInputCount
+import typingsSlinky.bip174.anon.InputCount
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait Transaction extends js.Object {
   def addInput(objectArg: js.Any): Unit = js.native
   def addOutput(objectArg: js.Any): Unit = js.native
-  def getInputOutputCounts(): AnonInputCount = js.native
+  def getInputOutputCounts(): InputCount = js.native
   def toBuffer(): Buffer = js.native
 }
 
@@ -19,7 +19,7 @@ object Transaction {
   def apply(
     addInput: js.Any => Unit,
     addOutput: js.Any => Unit,
-    getInputOutputCounts: () => AnonInputCount,
+    getInputOutputCounts: () => InputCount,
     toBuffer: () => Buffer
   ): Transaction = {
     val __obj = js.Dynamic.literal(addInput = js.Any.fromFunction1(addInput), addOutput = js.Any.fromFunction1(addOutput), getInputOutputCounts = js.Any.fromFunction0(getInputOutputCounts), toBuffer = js.Any.fromFunction0(toBuffer))
@@ -44,7 +44,7 @@ object Transaction {
         ret
     }
     @scala.inline
-    def withGetInputOutputCounts(value: () => AnonInputCount): Self = {
+    def withGetInputOutputCounts(value: () => InputCount): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getInputOutputCounts")(js.Any.fromFunction0(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.intlMessageformatParser
 
-import typingsSlinky.intlMessageformatParser.mod._ValidPluralRule
+import typingsSlinky.intlMessageformatParser.mod.ValidPluralRule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,8 +20,8 @@ object intlMessageformatParserStrings {
   
   @js.native
   sealed trait few
-    extends _ValidPluralRule
-       with typingsSlinky.intlMessageformatParser.typesMod._ValidPluralRule
+    extends ValidPluralRule
+       with typingsSlinky.intlMessageformatParser.typesMod.ValidPluralRule
   
   @js.native
   sealed trait h11 extends js.Object
@@ -40,31 +40,31 @@ object intlMessageformatParserStrings {
   
   @js.native
   sealed trait many
-    extends _ValidPluralRule
-       with typingsSlinky.intlMessageformatParser.typesMod._ValidPluralRule
+    extends ValidPluralRule
+       with typingsSlinky.intlMessageformatParser.typesMod.ValidPluralRule
   
   @js.native
   sealed trait one
-    extends _ValidPluralRule
-       with typingsSlinky.intlMessageformatParser.typesMod._ValidPluralRule
+    extends ValidPluralRule
+       with typingsSlinky.intlMessageformatParser.typesMod.ValidPluralRule
   
   @js.native
   sealed trait ordinal extends js.Object
   
   @js.native
   sealed trait other
-    extends _ValidPluralRule
-       with typingsSlinky.intlMessageformatParser.typesMod._ValidPluralRule
+    extends ValidPluralRule
+       with typingsSlinky.intlMessageformatParser.typesMod.ValidPluralRule
   
   @js.native
   sealed trait two
-    extends _ValidPluralRule
-       with typingsSlinky.intlMessageformatParser.typesMod._ValidPluralRule
+    extends ValidPluralRule
+       with typingsSlinky.intlMessageformatParser.typesMod.ValidPluralRule
   
   @js.native
   sealed trait zero
-    extends _ValidPluralRule
-       with typingsSlinky.intlMessageformatParser.typesMod._ValidPluralRule
+    extends ValidPluralRule
+       with typingsSlinky.intlMessageformatParser.typesMod.ValidPluralRule
   
   @scala.inline
   def any: any = "any".asInstanceOf[any]

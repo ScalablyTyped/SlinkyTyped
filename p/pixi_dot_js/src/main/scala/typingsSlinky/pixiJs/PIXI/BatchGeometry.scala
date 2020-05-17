@@ -10,10 +10,8 @@ import scala.scalajs.js.annotation._
   * @class
   * @memberof PIXI
   */
-@JSGlobal("PIXI.BatchGeometry")
 @js.native
-class BatchGeometry () extends js.Object {
-  def this(_static: Boolean) = this()
+trait BatchGeometry extends js.Object {
   /**
     * Buffer used for position, color, texture IDs
     *
@@ -28,5 +26,33 @@ class BatchGeometry () extends js.Object {
     * @protected
     */
   var _indexBuffer: Buffer = js.native
+}
+
+object BatchGeometry {
+  @scala.inline
+  def apply(_buffer: Buffer, _indexBuffer: Buffer): BatchGeometry = {
+    val __obj = js.Dynamic.literal(_buffer = _buffer.asInstanceOf[js.Any], _indexBuffer = _indexBuffer.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BatchGeometry]
+  }
+  @scala.inline
+  implicit class BatchGeometryOps[Self <: BatchGeometry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_buffer(value: Buffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_buffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_indexBuffer(value: Buffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_indexBuffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

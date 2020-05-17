@@ -1,14 +1,11 @@
 package typingsSlinky.vexflow.Vex.Flow
 
-import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Vex.Flow.Tuning")
 @js.native
-class Tuning () extends js.Object {
-  def this(tuningString: String) = this()
+trait Tuning extends js.Object {
   def getNoteForFret(fretNum: String, stringNum: String): String = js.native
   def getValueForFret(fretNum: String, stringNum: String): Double = js.native
   def getValueForString(stringNum: String): Double = js.native
@@ -16,11 +13,55 @@ class Tuning () extends js.Object {
   def setTuning(tuningString: String): Unit = js.native
 }
 
-@JSGlobal("Vex.Flow.Tuning")
-@js.native
-object Tuning extends js.Object {
-  @js.native
-  object names extends /* name */ StringDictionary[String]
+object Tuning {
+  @scala.inline
+  def apply(
+    getNoteForFret: (String, String) => String,
+    getValueForFret: (String, String) => Double,
+    getValueForString: String => Double,
+    noteToInteger: String => Double,
+    setTuning: String => Unit
+  ): Tuning = {
+    val __obj = js.Dynamic.literal(getNoteForFret = js.Any.fromFunction2(getNoteForFret), getValueForFret = js.Any.fromFunction2(getValueForFret), getValueForString = js.Any.fromFunction1(getValueForString), noteToInteger = js.Any.fromFunction1(noteToInteger), setTuning = js.Any.fromFunction1(setTuning))
+    __obj.asInstanceOf[Tuning]
+  }
+  @scala.inline
+  implicit class TuningOps[Self <: Tuning] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetNoteForFret(value: (String, String) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNoteForFret")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetValueForFret(value: (String, String) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getValueForFret")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetValueForString(value: String => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getValueForString")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withNoteToInteger(value: String => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noteToInteger")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetTuning(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTuning")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
   
 }
 

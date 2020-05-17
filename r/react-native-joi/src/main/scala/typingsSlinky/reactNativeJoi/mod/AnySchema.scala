@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait AnySchema
-  extends _Schema
+  extends Schema
      with JoiObject {
   var schemaType: js.UndefOr[Types | String] = js.native
   /**

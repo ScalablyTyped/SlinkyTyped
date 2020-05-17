@@ -2,8 +2,8 @@ package typingsSlinky.combokeys.mod
 
 import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Element
-import typingsSlinky.combokeys.Combokeys_.Combokeys
-import typingsSlinky.combokeys.Combokeys_.CombokeysStatic
+import typingsSlinky.combokeys.Combokeys.Combokeys
+import typingsSlinky.combokeys.Combokeys.CombokeysStatic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

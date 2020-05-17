@@ -50,23 +50,6 @@ package object autoscalingMod {
   type LifecycleHookNames = js.Array[typingsSlinky.awsSdk.autoscalingMod.AsciiStringMaxLen255]
   type LifecycleHookSpecifications = js.Array[typingsSlinky.awsSdk.autoscalingMod.LifecycleHookSpecification]
   type LifecycleHooks = js.Array[typingsSlinky.awsSdk.autoscalingMod.LifecycleHook]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.Pending_
-    - typingsSlinky.awsSdk.awsSdkStrings.PendingColonWait
-    - typingsSlinky.awsSdk.awsSdkStrings.PendingColonProceed
-    - typingsSlinky.awsSdk.awsSdkStrings.Quarantined
-    - typingsSlinky.awsSdk.awsSdkStrings.InService
-    - typingsSlinky.awsSdk.awsSdkStrings.Terminating_
-    - typingsSlinky.awsSdk.awsSdkStrings.TerminatingColonWait
-    - typingsSlinky.awsSdk.awsSdkStrings.TerminatingColonProceed
-    - typingsSlinky.awsSdk.awsSdkStrings.Terminated_
-    - typingsSlinky.awsSdk.awsSdkStrings.Detaching_
-    - typingsSlinky.awsSdk.awsSdkStrings.Detached_
-    - typingsSlinky.awsSdk.awsSdkStrings.EnteringStandby
-    - typingsSlinky.awsSdk.awsSdkStrings.Standby_
-    - java.lang.String
-  */
-  type LifecycleState = typingsSlinky.awsSdk.autoscalingMod._LifecycleState | java.lang.String
   type LifecycleTransition = java.lang.String
   type LoadBalancerNames = js.Array[typingsSlinky.awsSdk.autoscalingMod.XmlStringMaxLen255]
   type LoadBalancerStates = js.Array[typingsSlinky.awsSdk.autoscalingMod.LoadBalancerState]
@@ -83,23 +66,6 @@ package object autoscalingMod {
   type MetricName = java.lang.String
   type MetricNamespace = java.lang.String
   type MetricScale = scala.Double
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.Average_
-    - typingsSlinky.awsSdk.awsSdkStrings.Minimum_
-    - typingsSlinky.awsSdk.awsSdkStrings.Maximum_
-    - typingsSlinky.awsSdk.awsSdkStrings.SampleCount
-    - typingsSlinky.awsSdk.awsSdkStrings.Sum_
-    - java.lang.String
-  */
-  type MetricStatistic = typingsSlinky.awsSdk.autoscalingMod._MetricStatistic | java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.ASGAverageCPUUtilization
-    - typingsSlinky.awsSdk.awsSdkStrings.ASGAverageNetworkIn
-    - typingsSlinky.awsSdk.awsSdkStrings.ASGAverageNetworkOut
-    - typingsSlinky.awsSdk.awsSdkStrings.ALBRequestCountPerTarget
-    - java.lang.String
-  */
-  type MetricType = typingsSlinky.awsSdk.autoscalingMod._MetricType | java.lang.String
   type MetricUnit = java.lang.String
   type Metrics = js.Array[typingsSlinky.awsSdk.autoscalingMod.XmlStringMaxLen255]
   type MinAdjustmentMagnitude = scala.Double
@@ -123,22 +89,6 @@ package object autoscalingMod {
   type PropagateAtLaunch = scala.Boolean
   type ProtectedFromScaleIn = scala.Boolean
   type ResourceName = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.PendingSpotBidPlacement
-    - typingsSlinky.awsSdk.awsSdkStrings.WaitingForSpotInstanceRequestId
-    - typingsSlinky.awsSdk.awsSdkStrings.WaitingForSpotInstanceId
-    - typingsSlinky.awsSdk.awsSdkStrings.WaitingForInstanceId
-    - typingsSlinky.awsSdk.awsSdkStrings.PreInService
-    - typingsSlinky.awsSdk.awsSdkStrings.InProgress_
-    - typingsSlinky.awsSdk.awsSdkStrings.WaitingForELBConnectionDraining
-    - typingsSlinky.awsSdk.awsSdkStrings.MidLifecycleAction
-    - typingsSlinky.awsSdk.awsSdkStrings.WaitingForInstanceWarmup
-    - typingsSlinky.awsSdk.awsSdkStrings.Successful_
-    - typingsSlinky.awsSdk.awsSdkStrings.Failed_
-    - typingsSlinky.awsSdk.awsSdkStrings.Cancelled_
-    - java.lang.String
-  */
-  type ScalingActivityStatusCode = typingsSlinky.awsSdk.autoscalingMod._ScalingActivityStatusCode | java.lang.String
   type ScalingPolicies = js.Array[typingsSlinky.awsSdk.autoscalingMod.ScalingPolicy]
   type ScalingPolicyEnabled = scala.Boolean
   type ScheduledActionNames = js.Array[typingsSlinky.awsSdk.autoscalingMod.ResourceName]
@@ -169,10 +119,4 @@ package object autoscalingMod {
   type XmlStringMaxLen511 = java.lang.String
   type XmlStringMaxLen64 = java.lang.String
   type XmlStringUserData = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2011-01-01`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.autoscalingMod._apiVersion | java.lang.String
 }

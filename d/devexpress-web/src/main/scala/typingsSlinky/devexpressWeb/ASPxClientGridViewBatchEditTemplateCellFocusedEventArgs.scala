@@ -7,14 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientGridView.BatchEditTemplateCellFocused event.
   */
-@JSGlobal("ASPxClientGridViewBatchEditTemplateCellFocusedEventArgs")
 @js.native
-class ASPxClientGridViewBatchEditTemplateCellFocusedEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientGridViewBatchEditTemplateCellFocusedEventArgs class with the specified column.
-    * @param column An ASPxClientGridViewColumn object that is the processed grid column. This value is assigned to the ASPxClientGridViewBatchEditTemplateCellFocusedEventArgs.column property.
-    */
-  def this(column: ASPxClientGridViewColumn) = this()
+trait ASPxClientGridViewBatchEditTemplateCellFocusedEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the currently processed column.
     */
@@ -23,5 +17,33 @@ class ASPxClientGridViewBatchEditTemplateCellFocusedEventArgs protected () exten
     * Gets or sets a value specifying whether the event was handled.
     */
   var handled: Boolean = js.native
+}
+
+object ASPxClientGridViewBatchEditTemplateCellFocusedEventArgs {
+  @scala.inline
+  def apply(column: ASPxClientGridViewColumn, handled: Boolean): ASPxClientGridViewBatchEditTemplateCellFocusedEventArgs = {
+    val __obj = js.Dynamic.literal(column = column.asInstanceOf[js.Any], handled = handled.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientGridViewBatchEditTemplateCellFocusedEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientGridViewBatchEditTemplateCellFocusedEventArgsOps[Self <: ASPxClientGridViewBatchEditTemplateCellFocusedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumn(value: ASPxClientGridViewColumn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHandled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handled")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

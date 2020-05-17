@@ -7,12 +7,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RTCDtlsTransportEventMap extends js.Object {
   var error: RTCErrorEvent = js.native
-  var statechange: Event_ = js.native
+  var statechange: org.scalajs.dom.raw.Event = js.native
 }
 
 object RTCDtlsTransportEventMap {
   @scala.inline
-  def apply(error: RTCErrorEvent, statechange: Event_): RTCDtlsTransportEventMap = {
+  def apply(error: RTCErrorEvent, statechange: org.scalajs.dom.raw.Event): RTCDtlsTransportEventMap = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], statechange = statechange.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCDtlsTransportEventMap]
   }
@@ -29,7 +29,7 @@ object RTCDtlsTransportEventMap {
         ret
     }
     @scala.inline
-    def withStatechange(value: Event_): Self = {
+    def withStatechange(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("statechange")(value.asInstanceOf[js.Any])
         ret

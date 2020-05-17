@@ -1,8 +1,8 @@
 package typingsSlinky.chaiAsPromised
 
-import typingsSlinky.chai.Chai_.LanguageChains
-import typingsSlinky.chai.Chai_.NumericComparison
-import typingsSlinky.chai.Chai_.TypeComparison
+import typingsSlinky.chai.Chai.LanguageChains
+import typingsSlinky.chai.Chai.NumericComparison
+import typingsSlinky.chai.Chai.TypeComparison
 import typingsSlinky.std.PromiseLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`

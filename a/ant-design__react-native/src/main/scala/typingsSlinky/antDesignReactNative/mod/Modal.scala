@@ -1,8 +1,8 @@
 package typingsSlinky.antDesignReactNative.mod
 
 import slinky.core.TagMod
-import typingsSlinky.antDesignReactNative.AnonAnimateAppear
-import typingsSlinky.antDesignReactNative.AnonAntLocale
+import typingsSlinky.antDesignReactNative.anon.AnimateAppear
+import typingsSlinky.antDesignReactNative.anon.AntLocale
 import typingsSlinky.antDesignReactNative.modalMod.default
 import typingsSlinky.antDesignReactNative.modalPropsTypeMod.Action
 import typingsSlinky.antDesignReactNative.modalPropsTypeMod.CallbackOnBackHandler
@@ -27,8 +27,8 @@ object Modal extends js.Object {
     /* onBackHandler */ js.UndefOr[CallbackOnBackHandler], 
     Double
   ] = js.native
-  var contextTypes: AnonAntLocale = js.native
-  var defaultProps: AnonAnimateAppear = js.native
+  var contextTypes: AntLocale = js.native
+  var defaultProps: AnimateAppear = js.native
   var operation: js.Function2[
     /* actions */ js.Array[_], 
     /* onBackHandler */ js.UndefOr[CallbackOnBackHandler], 

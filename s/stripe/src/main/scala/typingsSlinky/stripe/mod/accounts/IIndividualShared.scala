@@ -1,8 +1,8 @@
 package typingsSlinky.stripe.mod.accounts
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.stripe.AnonDay
-import typingsSlinky.stripe.AnonDetails
+import typingsSlinky.stripe.anon.Day
+import typingsSlinky.stripe.anon.Details
 import typingsSlinky.stripe.mod.IAddress
 import typingsSlinky.stripe.mod.IAddressKana
 import typingsSlinky.stripe.mod.IAddressKanji
@@ -29,7 +29,7 @@ trait IIndividualShared extends js.Object {
   /**
     * The individual’s date of birth.
     */
-  var dob: js.UndefOr[AnonDay] = js.native
+  var dob: js.UndefOr[Day] = js.native
   /**
     * The individual's email address.
     */
@@ -88,7 +88,7 @@ trait IIndividualShared extends js.Object {
   /**
     * The individual’s verification document information.
     */
-  var verification: js.UndefOr[AnonDetails] = js.native
+  var verification: js.UndefOr[Details] = js.native
 }
 
 object IIndividualShared {
@@ -140,7 +140,7 @@ object IIndividualShared {
         ret
     }
     @scala.inline
-    def withDob(value: AnonDay): Self = {
+    def withDob(value: Day): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dob")(value.asInstanceOf[js.Any])
         ret
@@ -284,7 +284,7 @@ object IIndividualShared {
         ret
     }
     @scala.inline
-    def withVerification(value: AnonDetails): Self = {
+    def withVerification(value: Details): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("verification")(value.asInstanceOf[js.Any])
         ret

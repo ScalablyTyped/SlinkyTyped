@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait HeatmapTransform extends _Transforms {
+trait HeatmapTransform extends Transforms {
   var as: js.UndefOr[String | SignalRef] = js.native
   var color: js.UndefOr[String | TransformField] = js.native
   var field: js.UndefOr[String | TransformField] = js.native

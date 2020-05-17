@@ -13,9 +13,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * An audio player object used for streaming audio to the device, and low-level control of the audio playback.
 		 */
-@JSGlobal("Titanium.Media.AudioPlayer")
 @js.native
-class AudioPlayer () extends Proxy {
+trait AudioPlayer extends Proxy {
   /**
   			 * Used to identify the volume of audio streams for alarms.
   			 */

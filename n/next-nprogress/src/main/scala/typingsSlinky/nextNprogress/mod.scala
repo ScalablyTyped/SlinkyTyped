@@ -1,6 +1,7 @@
 package typingsSlinky.nextNprogress
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.nextNprogress.anon.PartialNProgressOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

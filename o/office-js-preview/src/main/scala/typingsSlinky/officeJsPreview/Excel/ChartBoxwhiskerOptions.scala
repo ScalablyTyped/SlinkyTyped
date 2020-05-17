@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartBoxwhiskerOptionsData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartBoxwhiskerOptionsLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartBoxwhiskerOptionsUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Exclusive
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Inclusive
 import scala.scalajs.js
@@ -18,9 +18,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@JSGlobal("Excel.ChartBoxwhiskerOptions")
 @js.native
-class ChartBoxwhiskerOptions () extends ClientObject {
+trait ChartBoxwhiskerOptions extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_ChartBoxwhiskerOptions: RequestContext = js.native
@@ -66,7 +65,7 @@ class ChartBoxwhiskerOptions () extends ClientObject {
     */
   def load(): ChartBoxwhiskerOptions = js.native
   def load(options: ChartBoxwhiskerOptionsLoadOptions): ChartBoxwhiskerOptions = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartBoxwhiskerOptions = js.native
+  def load(propertyNamesAndPaths: Expand): ChartBoxwhiskerOptions = js.native
   def load(propertyNames: String): ChartBoxwhiskerOptions = js.native
   def load(propertyNames: js.Array[String]): ChartBoxwhiskerOptions = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

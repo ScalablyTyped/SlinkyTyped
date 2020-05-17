@@ -1,7 +1,7 @@
 package typingsSlinky.socketIo.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.socketIo.AnonWs
+import typingsSlinky.socketIo.anon.Ws
 import typingsSlinky.socketIo.socketIoStrings.connect
 import typingsSlinky.socketIo.socketIoStrings.connection
 import scala.scalajs.js
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Server extends js.Object {
-  var engine: AnonWs = js.native
+  var engine: Ws = js.native
   /**
   		 * Sets the 'json' flag when emitting an event
   		 */

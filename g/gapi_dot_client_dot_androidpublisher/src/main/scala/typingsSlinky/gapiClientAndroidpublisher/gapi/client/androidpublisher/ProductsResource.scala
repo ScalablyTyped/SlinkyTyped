@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientAndroidpublisher.gapi.client.androidpublisher
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAndroidpublisher.AnonProductId
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAndroidpublisher.anon.ProductId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ProductsResource extends js.Object {
   /** Checks the purchase and consumption status of an inapp item. */
-  def get(request: AnonProductId): Request_[ProductPurchase] = js.native
+  def get(request: ProductId): Request[ProductPurchase] = js.native
 }
 
 object ProductsResource {
   @scala.inline
-  def apply(get: AnonProductId => Request_[ProductPurchase]): ProductsResource = {
+  def apply(get: ProductId => Request[ProductPurchase]): ProductsResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get))
     __obj.asInstanceOf[ProductsResource]
   }
@@ -25,7 +25,7 @@ object ProductsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonProductId => Request_[ProductPurchase]): Self = {
+    def withGet(value: ProductId => Request[ProductPurchase]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret

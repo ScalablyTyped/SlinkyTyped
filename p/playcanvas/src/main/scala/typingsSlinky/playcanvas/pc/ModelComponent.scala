@@ -42,10 +42,8 @@ import scala.scalajs.js.annotation._
   * @property {number[]} layers An array of layer IDs ({@link pc.Layer#id}) to which this model should belong.
   * Don't push/pop/splice or modify this array, if you want to change it - set a new one instead.
   */
-@JSGlobal("pc.ModelComponent")
 @js.native
-class ModelComponent protected () extends Component {
-  def this(system: ModelComponentSystem, entity: Entity) = this()
+trait ModelComponent extends Component {
   /**
     * The asset for the model (only applies to models of type 'asset') - can also be an asset id.
     */

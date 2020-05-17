@@ -1,10 +1,10 @@
 package typingsSlinky.primereact.autocompleteAutoCompleteMod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.facade.ReactElement
-import typingsSlinky.primereact.AnonOriginalEvent
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.OriginalEvent
+import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait AutoCompleteProps extends js.Object {
   var ariaLabelledBy: js.UndefOr[String] = js.native
   var autoFocus: js.UndefOr[Boolean] = js.native
   var className: js.UndefOr[String] = js.native
-  var completeMethod: js.UndefOr[js.Function1[/* e */ AnonOriginalEvent, Unit]] = js.native
+  var completeMethod: js.UndefOr[js.Function1[/* e */ OriginalEvent, Unit]] = js.native
   var delay: js.UndefOr[Double] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
   var dropdown: js.UndefOr[Boolean] = js.native
@@ -30,19 +30,19 @@ trait AutoCompleteProps extends js.Object {
   var minLength: js.UndefOr[Double] = js.native
   var multiple: js.UndefOr[Boolean] = js.native
   var name: js.UndefOr[String] = js.native
-  var onBlur: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onChange: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
-  var onClear: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onClick: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onContextMenu: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onDblClick: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onDropdownClick: js.UndefOr[js.Function1[/* e */ AnonOriginalEvent, Unit]] = js.native
-  var onFocus: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onKeyPress: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onKeyUp: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onMouseDown: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onSelect: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
-  var onUnselect: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
+  var onBlur: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
+  var onClear: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onContextMenu: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onDblClick: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onDropdownClick: js.UndefOr[js.Function1[/* e */ OriginalEvent, Unit]] = js.native
+  var onFocus: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onKeyPress: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onKeyUp: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onMouseDown: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onSelect: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
+  var onUnselect: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var readonly: js.UndefOr[Boolean] = js.native
   var scrollHeight: js.UndefOr[String] = js.native
@@ -118,7 +118,7 @@ object AutoCompleteProps {
         ret
     }
     @scala.inline
-    def withCompleteMethod(value: /* e */ AnonOriginalEvent => Unit): Self = {
+    def withCompleteMethod(value: /* e */ OriginalEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("completeMethod")(js.Any.fromFunction1(value))
         ret
@@ -298,7 +298,7 @@ object AutoCompleteProps {
         ret
     }
     @scala.inline
-    def withOnBlur(value: /* event */ Event_ => Unit): Self = {
+    def withOnBlur(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
         ret
@@ -310,7 +310,7 @@ object AutoCompleteProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* e */ AnonValue => Unit): Self = {
+    def withOnChange(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -322,7 +322,7 @@ object AutoCompleteProps {
         ret
     }
     @scala.inline
-    def withOnClear(value: /* event */ Event_ => Unit): Self = {
+    def withOnClear(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClear")(js.Any.fromFunction1(value))
         ret
@@ -334,7 +334,7 @@ object AutoCompleteProps {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* event */ Event_ => Unit): Self = {
+    def withOnClick(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret
@@ -346,7 +346,7 @@ object AutoCompleteProps {
         ret
     }
     @scala.inline
-    def withOnContextMenu(value: /* event */ Event_ => Unit): Self = {
+    def withOnContextMenu(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(js.Any.fromFunction1(value))
         ret
@@ -358,7 +358,7 @@ object AutoCompleteProps {
         ret
     }
     @scala.inline
-    def withOnDblClick(value: /* event */ Event_ => Unit): Self = {
+    def withOnDblClick(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDblClick")(js.Any.fromFunction1(value))
         ret
@@ -370,7 +370,7 @@ object AutoCompleteProps {
         ret
     }
     @scala.inline
-    def withOnDropdownClick(value: /* e */ AnonOriginalEvent => Unit): Self = {
+    def withOnDropdownClick(value: /* e */ OriginalEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDropdownClick")(js.Any.fromFunction1(value))
         ret
@@ -382,7 +382,7 @@ object AutoCompleteProps {
         ret
     }
     @scala.inline
-    def withOnFocus(value: /* event */ Event_ => Unit): Self = {
+    def withOnFocus(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
         ret
@@ -394,7 +394,7 @@ object AutoCompleteProps {
         ret
     }
     @scala.inline
-    def withOnKeyPress(value: /* event */ Event_ => Unit): Self = {
+    def withOnKeyPress(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyPress")(js.Any.fromFunction1(value))
         ret
@@ -406,7 +406,7 @@ object AutoCompleteProps {
         ret
     }
     @scala.inline
-    def withOnKeyUp(value: /* event */ Event_ => Unit): Self = {
+    def withOnKeyUp(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyUp")(js.Any.fromFunction1(value))
         ret
@@ -418,7 +418,7 @@ object AutoCompleteProps {
         ret
     }
     @scala.inline
-    def withOnMouseDown(value: /* event */ Event_ => Unit): Self = {
+    def withOnMouseDown(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(js.Any.fromFunction1(value))
         ret
@@ -430,7 +430,7 @@ object AutoCompleteProps {
         ret
     }
     @scala.inline
-    def withOnSelect(value: /* e */ AnonValue => Unit): Self = {
+    def withOnSelect(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
         ret
@@ -442,7 +442,7 @@ object AutoCompleteProps {
         ret
     }
     @scala.inline
-    def withOnUnselect(value: /* e */ AnonValue => Unit): Self = {
+    def withOnUnselect(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onUnselect")(js.Any.fromFunction1(value))
         ret

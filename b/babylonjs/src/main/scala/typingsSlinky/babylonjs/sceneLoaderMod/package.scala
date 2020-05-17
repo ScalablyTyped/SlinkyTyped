@@ -8,5 +8,5 @@ package object sceneLoaderMod {
   type ISceneLoaderPluginExtensions = /**
     * Defines the list of supported extensions
     */
-  org.scalablytyped.runtime.StringDictionary[typingsSlinky.babylonjs.AnonIsBinary]
+  org.scalablytyped.runtime.StringDictionary[typingsSlinky.babylonjs.anon.IsBinary]
 }

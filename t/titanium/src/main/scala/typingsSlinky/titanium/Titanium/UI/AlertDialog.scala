@@ -24,9 +24,8 @@ import scala.scalajs.js.annotation._
 		 * An alert dialog is a modal view that includes an optional title, a message and buttons,
 		 * positioned in the middle of the display.
 		 */
-@JSGlobal("Titanium.UI.AlertDialog")
 @js.native
-class AlertDialog () extends View {
+trait AlertDialog extends View {
   /**
   			 * View to load inside the message area, to create a custom layout.
   			 */

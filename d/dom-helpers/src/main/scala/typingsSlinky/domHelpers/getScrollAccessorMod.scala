@@ -1,5 +1,6 @@
 package typingsSlinky.domHelpers
 
+import typingsSlinky.domHelpers.anon.FnCall
 import typingsSlinky.domHelpers.domHelpersStrings.pageXOffset
 import typingsSlinky.domHelpers.domHelpersStrings.pageYOffset
 import scala.scalajs.js

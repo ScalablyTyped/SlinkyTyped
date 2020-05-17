@@ -8,8 +8,8 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.popperJs.mod.Data
 import typingsSlinky.popperJs.mod.Modifiers
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactFloater.AnonOffset
-import typingsSlinky.reactFloater.PartialStyles
+import typingsSlinky.reactFloater.anon.Offset
+import typingsSlinky.reactFloater.anon.PartialStyles
 import typingsSlinky.reactFloater.mod.Action
 import typingsSlinky.reactFloater.mod.Placement
 import typingsSlinky.reactFloater.mod.PropsWithComponent
@@ -87,7 +87,7 @@ object ReactFloater {
       @scala.inline
       def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
       @scala.inline
-      def wrapperOptions(value: AnonOffset): this.type = set("wrapperOptions", value.asInstanceOf[js.Any])
+      def wrapperOptions(value: Offset): this.type = set("wrapperOptions", value.asInstanceOf[js.Any])
     }
     
     def withProps(p: typingsSlinky.reactFloater.mod.PropsWithComponent): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
@@ -162,7 +162,7 @@ object ReactFloater {
       @scala.inline
       def title(value: TagMod[Any]): this.type = set("title", value.asInstanceOf[js.Any])
       @scala.inline
-      def wrapperOptions(value: AnonOffset): this.type = set("wrapperOptions", value.asInstanceOf[js.Any])
+      def wrapperOptions(value: Offset): this.type = set("wrapperOptions", value.asInstanceOf[js.Any])
     }
     
     def withProps(p: typingsSlinky.reactFloater.mod.PropsWithContent): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

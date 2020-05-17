@@ -1,0 +1,152 @@
+package typingsSlinky.cesium.anon
+
+import typingsSlinky.cesium.mod.Cartesian3
+import typingsSlinky.cesium.mod.VertexFormat
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait CloseBottom extends js.Object {
+  var closeBottom: js.UndefOr[Boolean] = js.native
+  var closeTop: js.UndefOr[Boolean] = js.native
+  var ellipsoid: js.UndefOr[typingsSlinky.cesium.mod.Ellipsoid] = js.native
+  var extrudedHeight: js.UndefOr[Double] = js.native
+  var granularity: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[Double] = js.native
+  var perPositionHeight: js.UndefOr[Boolean] = js.native
+  var positions: js.Array[Cartesian3] = js.native
+  var stRotation: js.UndefOr[Double] = js.native
+  var vertexFormat: js.UndefOr[VertexFormat] = js.native
+}
+
+object CloseBottom {
+  @scala.inline
+  def apply(positions: js.Array[Cartesian3]): CloseBottom = {
+    val __obj = js.Dynamic.literal(positions = positions.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CloseBottom]
+  }
+  @scala.inline
+  implicit class CloseBottomOps[Self <: CloseBottom] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPositions(value: js.Array[Cartesian3]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCloseBottom(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeBottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseBottom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeBottom")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withCloseTop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseTop: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeTop")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withEllipsoid(value: typingsSlinky.cesium.mod.Ellipsoid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutEllipsoid: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ellipsoid")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withExtrudedHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extrudedHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutExtrudedHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extrudedHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGranularity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("granularity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGranularity: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("granularity")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPerPositionHeight(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("perPositionHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPerPositionHeight: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("perPositionHeight")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStRotation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stRotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStRotation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stRotation")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVertexFormat(value: VertexFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVertexFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexFormat")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

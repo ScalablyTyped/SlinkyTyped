@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.std.stdStrings.controllerchange
 import typingsSlinky.std.stdStrings.message
 import typingsSlinky.std.stdStrings.messageerror
@@ -12,22 +11,25 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ServiceWorkerContainer extends EventTarget {
   val controller: org.scalajs.dom.experimental.serviceworkers.ServiceWorker | Null = js.native
-  var oncontrollerchange: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
+  var oncontrollerchange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
   var onmessage: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _]) | Null = js.native
   var onmessageerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _]) | Null = js.native
   val ready: js.Promise[org.scalajs.dom.experimental.serviceworkers.ServiceWorkerRegistration] = js.native
   @JSName("addEventListener")
-  def addEventListener_controllerchange(`type`: controllerchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_controllerchange(
+    `type`: controllerchange,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_controllerchange(
     `type`: controllerchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_controllerchange(
     `type`: controllerchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -74,17 +76,20 @@ trait ServiceWorkerContainer extends EventTarget {
   def register(scriptURL: java.lang.String): js.Promise[org.scalajs.dom.experimental.serviceworkers.ServiceWorkerRegistration] = js.native
   def register(scriptURL: java.lang.String, options: RegistrationOptions): js.Promise[org.scalajs.dom.experimental.serviceworkers.ServiceWorkerRegistration] = js.native
   @JSName("removeEventListener")
-  def removeEventListener_controllerchange(`type`: controllerchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_controllerchange(
+    `type`: controllerchange,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_controllerchange(
     `type`: controllerchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_controllerchange(
     `type`: controllerchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -123,9 +128,4 @@ trait ServiceWorkerContainer extends EventTarget {
   ): Unit = js.native
   def startMessages(): Unit = js.native
 }
-
-@JSGlobal("ServiceWorkerContainer")
-@js.native
-object ServiceWorkerContainer
-  extends Instantiable0[org.scalajs.dom.experimental.serviceworkers.ServiceWorkerContainer]
 

@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A toast notification.
 		 */
-@JSGlobal("Titanium.UI.Notification")
 @js.native
-class Notification () extends Proxy {
+trait Notification extends Proxy {
   /**
   			 * Determines how long the notification stays on screen.
   			 */

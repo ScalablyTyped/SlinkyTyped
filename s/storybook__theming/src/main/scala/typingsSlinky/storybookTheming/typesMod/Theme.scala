@@ -1,7 +1,7 @@
 package typingsSlinky.storybookTheming.typesMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.storybookTheming.AnonBorder
+import typingsSlinky.storybookTheming.anon.Border
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait Theme
   var code: StringDictionary[String | js.Object] = js.native
   var color: Color = js.native
   var easing: Easing = js.native
-  var input: AnonBorder = js.native
+  var input: Border = js.native
   var layoutMargin: Double = js.native
   var typography: Typography = js.native
 }
@@ -39,7 +39,7 @@ object Theme {
     code: StringDictionary[String | js.Object],
     color: Color,
     easing: Easing,
-    input: AnonBorder,
+    input: Border,
     layoutMargin: Double,
     typography: Typography
   ): Theme = {
@@ -119,7 +119,7 @@ object Theme {
         ret
     }
     @scala.inline
-    def withInput(value: AnonBorder): Self = {
+    def withInput(value: Border): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
         ret

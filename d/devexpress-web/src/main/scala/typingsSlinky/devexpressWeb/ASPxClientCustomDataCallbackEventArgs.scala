@@ -7,17 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the CustomCallback event.
   */
-@JSGlobal("ASPxClientCustomDataCallbackEventArgs")
 @js.native
-class ASPxClientCustomDataCallbackEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new object of the ASPxClientCustomDataCallbackEventArgs type with the specified settings.
-    * @param result A string value that represents the result of server-side processing.
-    */
-  def this(result: String) = this()
+trait ASPxClientCustomDataCallbackEventArgs extends ASPxClientEventArgs {
   /**
     * Gets a string that contains specific information (if any) that has been passed from the server to the client side for further processing, related to the CustomCallback event.
     */
   var result: String = js.native
+}
+
+object ASPxClientCustomDataCallbackEventArgs {
+  @scala.inline
+  def apply(result: String): ASPxClientCustomDataCallbackEventArgs = {
+    val __obj = js.Dynamic.literal(result = result.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientCustomDataCallbackEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientCustomDataCallbackEventArgsOps[Self <: ASPxClientCustomDataCallbackEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResult(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

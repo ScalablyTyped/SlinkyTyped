@@ -1,7 +1,7 @@
 package typingsSlinky.reactSelect.componentsMultiValueMod
 
 import slinky.core.TagMod
-import typingsSlinky.reactSelect.AnonOnTouchEnd
+import typingsSlinky.reactSelect.anon.OnTouchEnd
 import typingsSlinky.reactSelect.selectMod.Props
 import typingsSlinky.reactSelect.typesMod.ActionTypes
 import typingsSlinky.reactSelect.typesMod.ClassNamesState
@@ -18,17 +18,17 @@ trait MultiValueRemoveProps[OptionType /* <: OptionTypeBase */] extends js.Objec
   var children: TagMod[Any] = js.native
   var className: js.UndefOr[String] = js.native
   var hasValue: Boolean = js.native
-  var innerProps: AnonOnTouchEnd = js.native
+  var innerProps: OnTouchEnd = js.native
   var isMulti: Boolean = js.native
   var options: OptionsType[OptionType] = js.native
   var selectProps: Props[OptionType] with js.Any = js.native
   def clearValue(): Unit = js.native
   def cx(): String | Unit = js.native
   def cx(a: String): String | Unit = js.native
-  def cx(a: String, b: js.UndefOr[ClassNamesState], c: String): String | Unit = js.native
   def cx(a: String, b: ClassNamesState): String | Unit = js.native
-  def cx(a: Null, b: js.UndefOr[ClassNamesState], c: String): String | Unit = js.native
+  def cx(a: String, b: ClassNamesState, c: String): String | Unit = js.native
   def cx(a: Null, b: ClassNamesState): String | Unit = js.native
+  def cx(a: Null, b: ClassNamesState, c: String): String | Unit = js.native
   /*
     Get the styles of a particular part of the select. Pass in the name of the
     property as the first argument, and the current props as the second argument.

@@ -1,7 +1,7 @@
 package typingsSlinky.dockerode.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.dockerode.AnonRefCount
+import typingsSlinky.dockerode.anon.RefCount
 import typingsSlinky.dockerode.dockerodeStrings.global
 import typingsSlinky.dockerode.dockerodeStrings.local
 import scala.scalajs.js
@@ -20,7 +20,7 @@ trait VolumeInspectInfo extends js.Object {
   var Scope: local | global = js.native
   var Status: js.UndefOr[StringDictionary[String]] = js.native
   // Field is sometimes present, and sometimes null
-  var UsageData: js.UndefOr[AnonRefCount | Null] = js.native
+  var UsageData: js.UndefOr[RefCount | Null] = js.native
 }
 
 object VolumeInspectInfo {
@@ -96,7 +96,7 @@ object VolumeInspectInfo {
         ret
     }
     @scala.inline
-    def withUsageData(value: AnonRefCount): Self = {
+    def withUsageData(value: RefCount): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("UsageData")(value.asInstanceOf[js.Any])
         ret

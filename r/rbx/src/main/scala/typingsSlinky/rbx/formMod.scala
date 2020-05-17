@@ -1,6 +1,11 @@
 package typingsSlinky.rbx
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.rbx.anon.AsElementType
+import typingsSlinky.rbx.anon.PickBadgeHelpersPropsFloa
+import typingsSlinky.rbx.anon.PreferHelpersPropsOverrid
+import typingsSlinky.rbx.anon.PreferHelpersPropsOverridBackgroundColor
+import typingsSlinky.rbx.anon.`7`
 import typingsSlinky.rbx.controlMod.ControlProps
 import typingsSlinky.rbx.exoticMod.ForwardRefAsExoticComponent
 import typingsSlinky.rbx.exoticMod.FromReactType
@@ -85,12 +90,12 @@ object formMod extends js.Object {
     @JSName("$$typeof")
     var DollarDollartypeof: js.Symbol = js.native
     var Label: ForwardRefAsExoticComponent[FieldLabelProps, ReactElement] = js.native
-    var defaultProps: AnonAsElementType with (Partial[
+    var defaultProps: AsElementType with (Partial[
         HelpersPropsOverrides with PickBadgeHelpersPropsFloa with FieldModifierProps with (Pick[_, String | Double | js.Symbol])
       ]) = js.native
     var displayName: js.UndefOr[String] = js.native
     def apply[TAsComponent /* <: ReactElement */](
-      props: Anon7[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with FieldModifierProps with (Pick[
+      props: `7`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with FieldModifierProps with (Pick[
           ComponentProps[TAsComponent], 
           Exclude[
             /* keyof react.react.ComponentProps<TAsComponent> */ String, 
@@ -109,12 +114,12 @@ object formMod extends js.Object {
     var Input: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
     var Label: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
     var Name: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-    var defaultProps: AnonAsElementType with (Partial[
+    var defaultProps: AsElementType with (Partial[
         HelpersPropsOverrides with PickBadgeHelpersPropsFloa with FileModifierProps with (Pick[_, String | Double | js.Symbol])
       ]) = js.native
     var displayName: js.UndefOr[String] = js.native
     def apply[TAsComponent /* <: ReactElement */](
-      props: Anon7[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with FileModifierProps with (Pick[
+      props: `7`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with FileModifierProps with (Pick[
           ComponentProps[TAsComponent], 
           Exclude[
             /* keyof react.react.ComponentProps<TAsComponent> */ String, 
@@ -130,12 +135,12 @@ object formMod extends js.Object {
     @JSName("$$typeof")
     var DollarDollartypeof: js.Symbol = js.native
     var Option: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-    var defaultProps: AnonAsElementType with (Partial[
+    var defaultProps: AsElementType with (Partial[
         HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[_, String | Double | js.Symbol])
       ]) = js.native
     var displayName: js.UndefOr[String] = js.native
     def apply[TAsComponent /* <: ReactElement */](
-      props: Anon7[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[
+      props: `7`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[
           ComponentProps[TAsComponent], 
           Exclude[
             /* keyof react.react.ComponentProps<TAsComponent> */ String, 

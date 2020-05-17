@@ -1,7 +1,7 @@
 package typingsSlinky.qiniu.mod.rs
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.qiniu.AnonForce
+import typingsSlinky.qiniu.anon.Force
 import typingsSlinky.qiniu.mod.auth.digest.Mac
 import typingsSlinky.qiniu.mod.callback
 import typingsSlinky.qiniu.mod.conf.Config
@@ -76,7 +76,7 @@ class BucketManager () extends js.Object {
     srcKey: String,
     destBucket: String,
     destKey: String,
-    options: AnonForce,
+    options: Force,
     callback: callback
   ): Unit = js.native
   /**
@@ -152,7 +152,7 @@ class BucketManager () extends js.Object {
     srcKey: String,
     destBucket: String,
     destKey: String,
-    options: AnonForce,
+    options: Force,
     callback: callback
   ): Unit = js.native
   /**

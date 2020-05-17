@@ -1,6 +1,6 @@
 package typingsSlinky.oracleOraclejet.ojdvtBaseMod
 
-import typingsSlinky.oracleOraclejet.AnonLabelCountWithTotal
+import typingsSlinky.oracleOraclejet.anon.LabelCountWithTotal
 import typingsSlinky.oracleOraclejet.mod.baseComponentSettableProperties
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.off
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.on
@@ -12,12 +12,12 @@ import scala.scalajs.js.annotation._
 trait dvtBaseComponentSettableProperties extends baseComponentSettableProperties {
   var trackResize: on | off = js.native
   @JSName("translations")
-  var translations_dvtBaseComponentSettableProperties: AnonLabelCountWithTotal = js.native
+  var translations_dvtBaseComponentSettableProperties: LabelCountWithTotal = js.native
 }
 
 object dvtBaseComponentSettableProperties {
   @scala.inline
-  def apply(trackResize: on | off, translations: AnonLabelCountWithTotal): dvtBaseComponentSettableProperties = {
+  def apply(trackResize: on | off, translations: LabelCountWithTotal): dvtBaseComponentSettableProperties = {
     val __obj = js.Dynamic.literal(trackResize = trackResize.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[dvtBaseComponentSettableProperties]
   }
@@ -34,7 +34,7 @@ object dvtBaseComponentSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelCountWithTotal): Self = {
+    def withTranslations(value: LabelCountWithTotal): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

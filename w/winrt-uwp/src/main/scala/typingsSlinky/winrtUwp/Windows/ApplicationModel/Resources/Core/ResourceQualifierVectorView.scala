@@ -1,17 +1,16 @@
 package typingsSlinky.winrtUwp.Windows.ApplicationModel.Resources.Core
 
 import typingsSlinky.std.Array
-import typingsSlinky.winrtUwp.AnonIndex
-import typingsSlinky.winrtUwp.AnonItemsResourceQualifier
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
+import typingsSlinky.winrtUwp.anon.Index
+import typingsSlinky.winrtUwp.anon.ItemsResourceQualifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An unchangeable view into a vector of ResourceQualifier objects. */
-@JSGlobal("Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView")
 @js.native
-abstract class ResourceQualifierVectorView () extends Array[ResourceQualifier] {
+trait ResourceQualifierVectorView extends Array[ResourceQualifier] {
   /** Gets the number of ResourceQualifier objects in the view. */
   var size: Double = js.native
   /**
@@ -29,13 +28,13 @@ abstract class ResourceQualifierVectorView () extends Array[ResourceQualifier] {
     * Returns the ResourceQualifier objects that start at the specified index in the view.
     * @param startIndex The zero-based index of the start of the objects in the view to return.
     */
-  def getMany(startIndex: Double): AnonItemsResourceQualifier = js.native
-  def indexOf(value: ResourceQualifier, extra: js.Any*): AnonIndex = js.native
+  def getMany(startIndex: Double): ItemsResourceQualifier = js.native
+  def indexOf(value: ResourceQualifier, extra: js.Any*): Index = js.native
   /**
     * Returns the index of a specified ResourceQualifier in the view.
     * @param value The ResourceQualifier to find in the set.
     */
   @JSName("indexOf")
-  def indexOf_AnonIndex(value: ResourceQualifier): AnonIndex = js.native
+  def indexOf_Index(value: ResourceQualifier): Index = js.native
 }
 

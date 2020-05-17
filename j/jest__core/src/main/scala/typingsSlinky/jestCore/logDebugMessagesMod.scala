@@ -2,7 +2,7 @@ package typingsSlinky.jestCore
 
 import typingsSlinky.jestTypes.configMod.GlobalConfig
 import typingsSlinky.jestTypes.configMod.ProjectConfig
-import typingsSlinky.node.processMod._Global_.NodeJS.WriteStream
+import typingsSlinky.node.processMod.global.NodeJS.WriteStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

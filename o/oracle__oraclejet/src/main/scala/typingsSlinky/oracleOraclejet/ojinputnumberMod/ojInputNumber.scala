@@ -2,7 +2,7 @@ package typingsSlinky.oracleOraclejet.ojinputnumberMod
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.AnonNumberRange
+import typingsSlinky.oracleOraclejet.anon.NumberRange
 import typingsSlinky.oracleOraclejet.ojeditablevalueMod.editableValue
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.AsyncValidator
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.Converter
@@ -75,7 +75,7 @@ trait ojInputNumber extends editableValue[Double | Null, ojInputNumberSettablePr
   var required: Boolean = js.native
   var step: Double | Null = js.native
   @JSName("translations")
-  var translations_ojInputNumber: AnonNumberRange = js.native
+  var translations_ojInputNumber: NumberRange = js.native
   var validators: js.Array[Validator[Double] | RegisteredValidator] = js.native
   var virtualKeyboard: auto | number | text = js.native
   def addEventListener(`type`: autocompleteChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
@@ -245,7 +245,7 @@ trait ojInputNumber extends editableValue[Double | Null, ojInputNumberSettablePr
   @JSName("setProperty")
   def setProperty_step(property: step, value: Double): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonNumberRange): Unit = js.native
+  def setProperty_translations(property: translations, value: NumberRange): Unit = js.native
   @JSName("setProperty")
   def setProperty_validators(property: validators, value: js.Array[Validator[Double] | RegisteredValidator]): Unit = js.native
   @JSName("setProperty")

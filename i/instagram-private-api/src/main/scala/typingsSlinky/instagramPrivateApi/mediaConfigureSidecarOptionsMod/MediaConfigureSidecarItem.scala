@@ -1,8 +1,8 @@
 package typingsSlinky.instagramPrivateApi.mediaConfigureSidecarOptionsMod
 
-import typingsSlinky.instagramPrivateApi.AnonAndroidversion
-import typingsSlinky.instagramPrivateApi.AnonCropcenter
-import typingsSlinky.instagramPrivateApi.AnonSourceheight
+import typingsSlinky.instagramPrivateApi.anon.Androidversion
+import typingsSlinky.instagramPrivateApi.anon.Cropcenter
+import typingsSlinky.instagramPrivateApi.anon.Sourceheight
 import typingsSlinky.instagramPrivateApi.postingOptionsMod.PostingUsertags
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,9 +11,9 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MediaConfigureSidecarItem extends js.Object {
   var caption: js.UndefOr[Null] = js.native
-  var device: js.UndefOr[AnonAndroidversion | String] = js.native
-  var edits: js.UndefOr[AnonCropcenter | String] = js.native
-  var extra: js.UndefOr[AnonSourceheight | String] = js.native
+  var device: js.UndefOr[Androidversion | String] = js.native
+  var edits: js.UndefOr[Cropcenter | String] = js.native
+  var extra: js.UndefOr[Sourceheight | String] = js.native
   var height: Double = js.native
   var source_type: js.UndefOr[String] = js.native
   var timezone_offset: js.UndefOr[String] = js.native
@@ -53,25 +53,7 @@ object MediaConfigureSidecarItem {
         ret
     }
     @scala.inline
-    def withCaption(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCaption: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCaptionNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(null)
-        ret
-    }
-    @scala.inline
-    def withDevice(value: AnonAndroidversion | String): Self = {
+    def withDevice(value: Androidversion | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("device")(value.asInstanceOf[js.Any])
         ret
@@ -83,7 +65,7 @@ object MediaConfigureSidecarItem {
         ret
     }
     @scala.inline
-    def withEdits(value: AnonCropcenter | String): Self = {
+    def withEdits(value: Cropcenter | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("edits")(value.asInstanceOf[js.Any])
         ret
@@ -95,7 +77,7 @@ object MediaConfigureSidecarItem {
         ret
     }
     @scala.inline
-    def withExtra(value: AnonSourceheight | String): Self = {
+    def withExtra(value: Sourceheight | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
         ret

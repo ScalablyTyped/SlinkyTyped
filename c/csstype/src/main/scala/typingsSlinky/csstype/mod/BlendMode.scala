@@ -22,7 +22,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.screen
   - typingsSlinky.csstype.csstypeStrings.`soft-light`
 */
-trait BlendMode extends _BackgroundBlendModeProperty
+trait BlendMode extends BackgroundBlendModeProperty
 
 object BlendMode {
   @scala.inline

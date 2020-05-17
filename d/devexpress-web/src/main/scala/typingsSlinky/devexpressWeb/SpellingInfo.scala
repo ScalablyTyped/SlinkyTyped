@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Contains spell checking related settings.
   */
-@JSGlobal("SpellingInfo")
 @js.native
-class SpellingInfo () extends js.Object {
+trait SpellingInfo extends js.Object {
   /**
     * Provides access to an array containing misspelled intervals.
     */
@@ -18,5 +17,33 @@ class SpellingInfo () extends js.Object {
     * Gets a value specifying the spell checking state.
     */
   val spellCheckerState: SpellCheckerState = js.native
+}
+
+object SpellingInfo {
+  @scala.inline
+  def apply(misspelledIntervals: js.Array[MisspelledInterval], spellCheckerState: SpellCheckerState): SpellingInfo = {
+    val __obj = js.Dynamic.literal(misspelledIntervals = misspelledIntervals.asInstanceOf[js.Any], spellCheckerState = spellCheckerState.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SpellingInfo]
+  }
+  @scala.inline
+  implicit class SpellingInfoOps[Self <: SpellingInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMisspelledIntervals(value: js.Array[MisspelledInterval]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("misspelledIntervals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpellCheckerState(value: SpellCheckerState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spellCheckerState")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

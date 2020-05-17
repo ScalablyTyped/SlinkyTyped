@@ -7,17 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientHtmlEditor.ActiveTabChanged event that concerns manipulations on tabs.
   */
-@JSGlobal("ASPxClientHtmlEditorTabEventArgs")
 @js.native
-class ASPxClientHtmlEditorTabEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new object of the ASPxClientHtmlEditorTabEventArgs type with the specified setting.
-    * @param name A string value that uniquely identifies the name of a tab related to the event.
-    */
-  def this(name: String) = this()
+trait ASPxClientHtmlEditorTabEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the name that uniquely identifies an editor tab.
     */
   var name: String = js.native
+}
+
+object ASPxClientHtmlEditorTabEventArgs {
+  @scala.inline
+  def apply(name: String): ASPxClientHtmlEditorTabEventArgs = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientHtmlEditorTabEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientHtmlEditorTabEventArgsOps[Self <: ASPxClientHtmlEditorTabEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

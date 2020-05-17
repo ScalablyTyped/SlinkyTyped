@@ -1,7 +1,7 @@
 package typingsSlinky.firefoxWebextBrowser.browser.omnibox
 
-import typingsSlinky.firefoxWebextBrowser.AnonLength
-import typingsSlinky.firefoxWebextBrowser.AnonOffset
+import typingsSlinky.firefoxWebextBrowser.anon.Length
+import typingsSlinky.firefoxWebextBrowser.anon.Offset
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,12 +15,12 @@ trait DefaultSuggestResult extends js.Object {
     * An array of style ranges for the description, as provided by the extension.
     * @deprecated Unsupported on Firefox at this time.
     */
-  var descriptionStyles: js.UndefOr[js.Array[AnonLength]] = js.native
+  var descriptionStyles: js.UndefOr[js.Array[Length]] = js.native
   /**
     * An array of style ranges for the description, as provided by ToValue().
     * @deprecated Unsupported on Firefox at this time.
     */
-  var descriptionStylesRaw: js.UndefOr[js.Array[AnonOffset]] = js.native
+  var descriptionStylesRaw: js.UndefOr[js.Array[Offset]] = js.native
 }
 
 object DefaultSuggestResult {
@@ -42,7 +42,7 @@ object DefaultSuggestResult {
         ret
     }
     @scala.inline
-    def withDescriptionStyles(value: js.Array[AnonLength]): Self = {
+    def withDescriptionStyles(value: js.Array[Length]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("descriptionStyles")(value.asInstanceOf[js.Any])
         ret
@@ -54,7 +54,7 @@ object DefaultSuggestResult {
         ret
     }
     @scala.inline
-    def withDescriptionStylesRaw(value: js.Array[AnonOffset]): Self = {
+    def withDescriptionStylesRaw(value: js.Array[Offset]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("descriptionStylesRaw")(value.asInstanceOf[js.Any])
         ret

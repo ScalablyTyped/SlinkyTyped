@@ -1,7 +1,7 @@
 package typingsSlinky.blueprintjsCore.menuMod
 
-import typingsSlinky.blueprintjsCore.TypeofMenuDivider
-import typingsSlinky.blueprintjsCore.TypeofMenuItem
+import typingsSlinky.blueprintjsCore.anon.TypeofMenuDivider
+import typingsSlinky.blueprintjsCore.anon.TypeofMenuItem
 import typingsSlinky.blueprintjsCore.commonMod.AbstractPureComponent2
 import scala.scalajs.js
 import scala.scalajs.js.`|`

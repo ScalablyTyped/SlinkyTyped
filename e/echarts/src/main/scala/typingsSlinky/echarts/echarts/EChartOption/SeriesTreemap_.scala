@@ -1,13 +1,13 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonBorderColorSaturation
-import typingsSlinky.echarts.AnonBottom
-import typingsSlinky.echarts.AnonChildrenVisibleMin
-import typingsSlinky.echarts.AnonEllipsis
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonLink
-import typingsSlinky.echarts.AnonTextShadowOffsetX
-import typingsSlinky.echarts.AnonUpperLabel
+import typingsSlinky.echarts.anon.BorderColorSaturation
+import typingsSlinky.echarts.anon.Bottom
+import typingsSlinky.echarts.anon.ChildrenVisibleMin
+import typingsSlinky.echarts.anon.Ellipsis
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.Link
+import typingsSlinky.echarts.anon.TextShadowOffsetX
+import typingsSlinky.echarts.anon.UpperLabel
 import typingsSlinky.echarts.echarts.EChartOption.SeriesTreemap.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -137,7 +137,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.breadcrumb
     */
-  var breadcrumb: js.UndefOr[AnonBottom] = js.native
+  var breadcrumb: js.UndefOr[Bottom] = js.native
   /**
     * Children will not be shown when area size of a node is smaller
     * than this value (unit: px square).
@@ -320,7 +320,7 @@ trait SeriesTreemap_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-treemap.emphasis
     */
-  var emphasis: js.UndefOr[AnonUpperLabel] = js.native
+  var emphasis: js.UndefOr[UpperLabel] = js.native
   /**
     * Height of treemap component.
     *
@@ -360,7 +360,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBorderColorSaturation] = js.native
+  var itemStyle: js.UndefOr[BorderColorSaturation] = js.native
   /**
     * `label` decribes the style of the label in each node.
     *
@@ -383,7 +383,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.label
     */
-  var label: js.UndefOr[AnonEllipsis] = js.native
+  var label: js.UndefOr[Ellipsis] = js.native
   /**
     * When `leafDepth` is set, the feature "drill down" is enabled,
     * which means when clicking a tree node, this node will be set
@@ -516,7 +516,7 @@ trait SeriesTreemap_ extends js.Object {
     * []
     * @see https://echarts.apache.org/en/option.html#series-treemap.levels
     */
-  var levels: js.UndefOr[AnonChildrenVisibleMin] = js.native
+  var levels: js.UndefOr[ChildrenVisibleMin] = js.native
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -581,7 +581,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.silent
     */
-  var silent: js.UndefOr[AnonLink] = js.native
+  var silent: js.UndefOr[Link] = js.native
   /**
     * The expected square ratio.
     * Layout would approach the ratio as close as possible.
@@ -599,7 +599,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * Distance between treemap component and the top side of the container.
     *
@@ -667,7 +667,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.upperLabel
     */
-  var upperLabel: js.UndefOr[AnonTextShadowOffsetX] = js.native
+  var upperLabel: js.UndefOr[TextShadowOffsetX] = js.native
   /**
     * A node will not be shown when its area size is smaller than this
     * value (unit: px square).
@@ -882,7 +882,7 @@ object SeriesTreemap_ {
         ret
     }
     @scala.inline
-    def withBreadcrumb(value: AnonBottom): Self = {
+    def withBreadcrumb(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("breadcrumb")(value.asInstanceOf[js.Any])
         ret
@@ -966,7 +966,7 @@ object SeriesTreemap_ {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonUpperLabel): Self = {
+    def withEmphasis(value: UpperLabel): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -1002,7 +1002,7 @@ object SeriesTreemap_ {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonBorderColorSaturation): Self = {
+    def withItemStyle(value: BorderColorSaturation): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -1014,7 +1014,7 @@ object SeriesTreemap_ {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonEllipsis): Self = {
+    def withLabel(value: Ellipsis): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -1050,7 +1050,7 @@ object SeriesTreemap_ {
         ret
     }
     @scala.inline
-    def withLevels(value: AnonChildrenVisibleMin): Self = {
+    def withLevels(value: ChildrenVisibleMin): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("levels")(value.asInstanceOf[js.Any])
         ret
@@ -1110,7 +1110,7 @@ object SeriesTreemap_ {
         ret
     }
     @scala.inline
-    def withSilent(value: AnonLink): Self = {
+    def withSilent(value: Link): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("silent")(value.asInstanceOf[js.Any])
         ret
@@ -1134,7 +1134,7 @@ object SeriesTreemap_ {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
@@ -1170,7 +1170,7 @@ object SeriesTreemap_ {
         ret
     }
     @scala.inline
-    def withUpperLabel(value: AnonTextShadowOffsetX): Self = {
+    def withUpperLabel(value: TextShadowOffsetX): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("upperLabel")(value.asInstanceOf[js.Any])
         ret

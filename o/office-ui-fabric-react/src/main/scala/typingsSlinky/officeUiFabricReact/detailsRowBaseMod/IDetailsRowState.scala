@@ -1,13 +1,13 @@
 package typingsSlinky.officeUiFabricReact.detailsRowBaseMod
 
-import typingsSlinky.officeUiFabricReact.AnonColumn
+import typingsSlinky.officeUiFabricReact.anon.Column
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IDetailsRowState extends js.Object {
-  var columnMeasureInfo: js.UndefOr[AnonColumn] = js.native
+  var columnMeasureInfo: js.UndefOr[Column] = js.native
   var isDropping: js.UndefOr[Boolean] = js.native
   var selectionState: IDetailsRowSelectionState = js.native
 }
@@ -31,7 +31,7 @@ object IDetailsRowState {
         ret
     }
     @scala.inline
-    def withColumnMeasureInfo(value: AnonColumn): Self = {
+    def withColumnMeasureInfo(value: Column): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnMeasureInfo")(value.asInstanceOf[js.Any])
         ret

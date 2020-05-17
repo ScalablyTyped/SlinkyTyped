@@ -1,6 +1,6 @@
 package typingsSlinky.sqlBricks.mod
 
-import typingsSlinky.sqlBricks.AnonPlaceholder
+import typingsSlinky.sqlBricks.anon.Placeholder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,6 +21,6 @@ trait Statement extends js.Object {
     *    // {"text": "UPDATE person SET first_name = ?1 WHERE last_name = ?2", "values": ["Fred", "Flintstone"]}
     */
   def toParams(): SqlBricksParam = js.native
-  def toParams(options: AnonPlaceholder): SqlBricksParam = js.native
+  def toParams(options: Placeholder): SqlBricksParam = js.native
 }
 

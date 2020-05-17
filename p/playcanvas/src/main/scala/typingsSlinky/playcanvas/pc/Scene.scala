@@ -77,9 +77,8 @@ import scala.scalajs.js.annotation._
   * @property {pc.Entity} root The root entity of the scene, which is usually the only
   * child to the Application root entity.
   */
-@JSGlobal("pc.Scene")
 @js.native
-class Scene () extends EventHandler {
+trait Scene extends EventHandler {
   /**
     * The color of the scene's ambient light. Defaults
     * to black (0, 0, 0).

@@ -1,14 +1,14 @@
 package typingsSlinky.rax.mod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.rax.raxStrings.down
 import typingsSlinky.rax.raxStrings.up
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait AppearEvent[T] extends BaseSyntheticEvent[Event_, EventTarget with T, EventTarget] {
+trait AppearEvent[T] extends BaseSyntheticEvent[Event, EventTarget with T, EventTarget] {
   var direction: up | down = js.native
 }
 
@@ -24,7 +24,7 @@ object AppearEvent {
     isDefaultPrevented: () => Boolean,
     isPropagationStopped: () => Boolean,
     isTrusted: Boolean,
-    nativeEvent: Event_,
+    nativeEvent: Event,
     persist: () => Unit,
     preventDefault: () => Unit,
     stopPropagation: () => Unit,

@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait UUID extends js.Object {
+trait UUID extends UuidTypes {
   var variant: String = js.native
   var version: String = js.native
   def toBuffer(): Buffer = js.native

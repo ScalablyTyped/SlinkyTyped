@@ -1,6 +1,6 @@
 package typingsSlinky.bluebird.mod
 
-import typingsSlinky.bluebird.TypeofBluebird
+import typingsSlinky.bluebird.anon.TypeofBluebird
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.mangopay2NodejsSdk.mod.models
 
-import typingsSlinky.mangopay2NodejsSdk.MakeKeysRequiredPartialUs
+import typingsSlinky.mangopay2NodejsSdk.anon.MakeKeysRequiredPartialUs
 import typingsSlinky.mangopay2NodejsSdk.mod.user.UserLegalData
 import scala.scalajs.js
 import scala.scalajs.js.`|`

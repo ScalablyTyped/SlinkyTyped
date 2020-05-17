@@ -1,6 +1,6 @@
 package typingsSlinky.browserSync.mod
 
-import typingsSlinky.browserSync.AnonHeartbeatTimeout
+import typingsSlinky.browserSync.anon.HeartbeatTimeout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SocketOptions extends js.Object {
   var clientPath: js.UndefOr[String] = js.native
-  var clients: js.UndefOr[AnonHeartbeatTimeout] = js.native
+  var clients: js.UndefOr[HeartbeatTimeout] = js.native
   var domain: js.UndefOr[String] = js.native
   var namespace: js.UndefOr[String] = js.native
   var path: js.UndefOr[String] = js.native
@@ -40,7 +40,7 @@ object SocketOptions {
         ret
     }
     @scala.inline
-    def withClients(value: AnonHeartbeatTimeout): Self = {
+    def withClients(value: HeartbeatTimeout): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("clients")(value.asInstanceOf[js.Any])
         ret

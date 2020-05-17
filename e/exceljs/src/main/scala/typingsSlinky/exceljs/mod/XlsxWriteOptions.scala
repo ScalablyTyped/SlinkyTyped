@@ -1,6 +1,6 @@
 package typingsSlinky.exceljs.mod
 
-import typingsSlinky.exceljs.PartialJSZipGeneratorOpti
+import typingsSlinky.exceljs.anon.PartialJSZipGeneratorOpti
 import typingsSlinky.exceljs.mod.stream.xlsx.WorkbookWriterOptions
 import typingsSlinky.node.streamMod.Stream
 import scala.scalajs.js

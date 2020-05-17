@@ -1,6 +1,6 @@
 package typingsSlinky.newman.mod
 
-import typingsSlinky.newman.AnonAssertions
+import typingsSlinky.newman.anon.Assertions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,16 +9,12 @@ import scala.scalajs.js.annotation._
 trait NewmanRun extends js.Object {
   var executions: js.Array[NewmanRunExecution] = js.native
   var failures: js.Array[NewmanRunFailure] = js.native
-  var stats: AnonAssertions = js.native
+  var stats: Assertions = js.native
 }
 
 object NewmanRun {
   @scala.inline
-  def apply(
-    executions: js.Array[NewmanRunExecution],
-    failures: js.Array[NewmanRunFailure],
-    stats: AnonAssertions
-  ): NewmanRun = {
+  def apply(executions: js.Array[NewmanRunExecution], failures: js.Array[NewmanRunFailure], stats: Assertions): NewmanRun = {
     val __obj = js.Dynamic.literal(executions = executions.asInstanceOf[js.Any], failures = failures.asInstanceOf[js.Any], stats = stats.asInstanceOf[js.Any])
     __obj.asInstanceOf[NewmanRun]
   }
@@ -41,7 +37,7 @@ object NewmanRun {
         ret
     }
     @scala.inline
-    def withStats(value: AnonAssertions): Self = {
+    def withStats(value: Assertions): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
         ret

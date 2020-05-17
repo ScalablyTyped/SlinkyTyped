@@ -2,10 +2,10 @@ package typingsSlinky.tablesorter
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
+import typingsSlinky.jquery.JQuery.Selector
+import typingsSlinky.jquery.JQuery.TypeOrArray
+import typingsSlinky.jquery.JQuery.jqXHR
 import typingsSlinky.jquery.JQueryAjaxSettings
-import typingsSlinky.jquery.JQuery_.Selector
-import typingsSlinky.jquery.JQuery_.TypeOrArray
-import typingsSlinky.jquery.JQuery_.jqXHR
 import typingsSlinky.tablesorter.columnFilterMod.ColumnFilter
 import typingsSlinky.tablesorter.emptySortingMod.EmptySorting
 import typingsSlinky.tablesorter.filterFormatterMod.FilterFormatter
@@ -13,8 +13,8 @@ import typingsSlinky.tablesorter.filterStaticMod.FilterStatic
 import typingsSlinky.tablesorter.headerResizeOptionsMod.HeaderResizeOptions
 import typingsSlinky.tablesorter.localeMod.Locale
 import typingsSlinky.tablesorter.mappedSettingsMod.MappedSettings
-import typingsSlinky.tablesorter.mod._Global_.HTMLElement
-import typingsSlinky.tablesorter.mod._Global_.JQuery
+import typingsSlinky.tablesorter.mod.global.HTMLElement
+import typingsSlinky.tablesorter.mod.global.JQuery
 import typingsSlinky.tablesorter.parsedCellMod.ParsedCell
 import typingsSlinky.tablesorter.parsedDataMod.ParsedData
 import typingsSlinky.tablesorter.parserMod.Parser

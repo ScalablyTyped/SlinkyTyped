@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ViewportStyles extends js.Object {
+trait ViewportStyles extends Styles {
   var height: String = js.native
   var width: String = js.native
 }

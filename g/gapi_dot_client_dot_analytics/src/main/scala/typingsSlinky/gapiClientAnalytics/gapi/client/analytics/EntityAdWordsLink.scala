@@ -1,6 +1,5 @@
 package typingsSlinky.gapiClientAnalytics.gapi.client.analytics
 
-import typingsSlinky.gapiClientAnalytics.AnonWebPropertyRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +9,7 @@ trait EntityAdWordsLink extends js.Object {
   /** A list of AdWords client accounts. These cannot be MCC accounts. This field is required when creating an AdWords link. It cannot be empty. */
   var adWordsAccounts: js.UndefOr[js.Array[AdWordsAccount]] = js.native
   /** Web property being linked. */
-  var entity: js.UndefOr[AnonWebPropertyRef] = js.native
+  var entity: js.UndefOr[typingsSlinky.gapiClientAnalytics.anon.WebPropertyRef] = js.native
   /** Entity AdWords link ID */
   var id: js.UndefOr[String] = js.native
   /** Resource type for entity AdWords link. */
@@ -48,7 +47,7 @@ object EntityAdWordsLink {
         ret
     }
     @scala.inline
-    def withEntity(value: AnonWebPropertyRef): Self = {
+    def withEntity(value: typingsSlinky.gapiClientAnalytics.anon.WebPropertyRef): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("entity")(value.asInstanceOf[js.Any])
         ret

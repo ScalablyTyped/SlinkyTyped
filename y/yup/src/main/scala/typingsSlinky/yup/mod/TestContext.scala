@@ -1,6 +1,6 @@
 package typingsSlinky.yup.mod
 
-import typingsSlinky.yup.AnonMessage
+import typingsSlinky.yup.anon.Message
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait TestContext extends js.Object {
   var path: String = js.native
   var schema: Schema[_] = js.native
   def createError(): ValidationError = js.native
-  def createError(params: AnonMessage): ValidationError = js.native
+  def createError(params: Message): ValidationError = js.native
   def resolve(value: js.Any): js.Any = js.native
 }
 

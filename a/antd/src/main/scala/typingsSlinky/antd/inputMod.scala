@@ -1,6 +1,11 @@
 package typingsSlinky.antd
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.antd.anon.PartialInputState
+import typingsSlinky.antd.anon.Type
+import typingsSlinky.antd.anon.TypeofPassword
+import typingsSlinky.antd.anon.TypeofSearch
+import typingsSlinky.antd.anon.TypeofTextArea
 import typingsSlinky.antd.inputGroupMod.GroupProps
 import typingsSlinky.antd.inputInputMod.InputProps
 import typingsSlinky.antd.inputInputMod.InputState
@@ -24,7 +29,7 @@ object inputMod extends js.Object {
     var Password: TypeofPassword = js.native
     var Search: TypeofSearch = js.native
     var TextArea: TypeofTextArea = js.native
-    var defaultProps: AnonType = js.native
+    var defaultProps: Type = js.native
     def getDerivedStateFromProps(nextProps: InputProps, hasPrevValue: InputState): PartialInputState = js.native
   }
   

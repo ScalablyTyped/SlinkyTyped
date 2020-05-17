@@ -2,7 +2,7 @@ package typingsSlinky.bootstrapMenu.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +36,7 @@ trait BootstrapMenuOptions extends js.Object {
   /**
     * Obtain specific data about the currently opened element, to pass it to the rest of user-defined functions of an action.
     */
-  var fetchElementData: js.UndefOr[js.Function1[/* jqueryElement */ JQuery_[HTMLElement], BootstrapMenuRowElement]] = js.native
+  var fetchElementData: js.UndefOr[js.Function1[/* jqueryElement */ JQuery[HTMLElement], BootstrapMenuRowElement]] = js.native
   /**
     * The event to listen to open the menu. Valid values are *click*, *right-click*, *hover*. Defaults to *right-click*.
     */
@@ -111,7 +111,7 @@ object BootstrapMenuOptions {
         ret
     }
     @scala.inline
-    def withFetchElementData(value: /* jqueryElement */ JQuery_[HTMLElement] => BootstrapMenuRowElement): Self = {
+    def withFetchElementData(value: /* jqueryElement */ JQuery[HTMLElement] => BootstrapMenuRowElement): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fetchElementData")(js.Any.fromFunction1(value))
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.jestWatcher.jestHooksMod
 
-import typingsSlinky.jestWatcher.ReadonlyJestHookEmitter
-import typingsSlinky.jestWatcher.ReadonlyJestHookSubscribe
+import typingsSlinky.jestWatcher.anon.ReadonlyJestHookEmitter
+import typingsSlinky.jestWatcher.anon.ReadonlyJestHookSubscribe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

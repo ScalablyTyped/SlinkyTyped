@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientDrive.gapi.client.drive
 
-import typingsSlinky.gapiClientDrive.AnonMimeType
+import typingsSlinky.gapiClientDrive.anon.MimeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ trait Comment extends js.Object {
     * The file content to which the comment refers, typically within the anchor region. For a text file, for example, this would be the text at the location
     * of the comment.
     */
-  var quotedFileContent: js.UndefOr[AnonMimeType] = js.native
+  var quotedFileContent: js.UndefOr[MimeType] = js.native
   /** The full list of replies to the comment in chronological order. */
   var replies: js.UndefOr[js.Array[Reply]] = js.native
   /** Whether the comment has been resolved by one of its replies. */
@@ -157,7 +157,7 @@ object Comment {
         ret
     }
     @scala.inline
-    def withQuotedFileContent(value: AnonMimeType): Self = {
+    def withQuotedFileContent(value: MimeType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("quotedFileContent")(value.asInstanceOf[js.Any])
         ret

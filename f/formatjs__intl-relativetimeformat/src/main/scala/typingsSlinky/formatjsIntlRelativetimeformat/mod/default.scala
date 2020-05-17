@@ -1,6 +1,6 @@
 package typingsSlinky.formatjsIntlRelativetimeformat.mod
 
-import typingsSlinky.formatjsIntlRelativetimeformat.PickIntlRelativeTimeForma
+import typingsSlinky.formatjsIntlRelativetimeformat.anon.PickIntlRelativeTimeForma
 import typingsSlinky.formatjsIntlUtils.relativeTimeTypesMod.RelativeTimeLocaleData
 import typingsSlinky.formatjsIntlUtils.relativeTimeTypesMod.UnpackedLocaleFieldsData
 import typingsSlinky.std.Record

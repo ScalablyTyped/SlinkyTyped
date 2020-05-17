@@ -1,6 +1,6 @@
 package typingsSlinky.terser.mod
 
-import typingsSlinky.terser.AnonCol
+import typingsSlinky.terser.anon.Col
 import typingsSlinky.terser.terserBooleans.`false`
 import typingsSlinky.terser.terserStrings.all
 import typingsSlinky.terser.terserStrings.some
@@ -14,7 +14,7 @@ trait OutputOptions extends js.Object {
   var beautify: js.UndefOr[Boolean] = js.native
   var braces: js.UndefOr[Boolean] = js.native
   var comments: js.UndefOr[
-    Boolean | all | some | js.RegExp | (js.Function2[/* node */ ASTNode, /* comment */ AnonCol, Boolean])
+    Boolean | all | some | js.RegExp | (js.Function2[/* node */ ASTNode, /* comment */ Col, Boolean])
   ] = js.native
   var ecma: js.UndefOr[ECMA] = js.native
   var ie8: js.UndefOr[Boolean] = js.native
@@ -87,7 +87,7 @@ object OutputOptions {
         ret
     }
     @scala.inline
-    def withCommentsFunction2(value: (/* node */ ASTNode, /* comment */ AnonCol) => Boolean): Self = {
+    def withCommentsFunction2(value: (/* node */ ASTNode, /* comment */ Col) => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(js.Any.fromFunction2(value))
         ret
@@ -100,7 +100,7 @@ object OutputOptions {
     }
     @scala.inline
     def withComments(
-      value: Boolean | all | some | js.RegExp | (js.Function2[/* node */ ASTNode, /* comment */ AnonCol, Boolean])
+      value: Boolean | all | some | js.RegExp | (js.Function2[/* node */ ASTNode, /* comment */ Col, Boolean])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("comments")(value.asInstanceOf[js.Any])

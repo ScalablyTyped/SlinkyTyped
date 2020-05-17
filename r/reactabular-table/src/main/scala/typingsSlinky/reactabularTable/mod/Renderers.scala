@@ -1,16 +1,16 @@
 package typingsSlinky.reactabularTable.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactabularTable.AnonCell
-import typingsSlinky.reactabularTable.AnonRow
+import typingsSlinky.reactabularTable.anon.Cell
+import typingsSlinky.reactabularTable.anon.Row
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Renderers extends js.Object {
-  var body: js.UndefOr[AnonRow] = js.native
-  var header: js.UndefOr[AnonCell] = js.native
+  var body: js.UndefOr[Row] = js.native
+  var header: js.UndefOr[Cell] = js.native
   var table: js.UndefOr[String | js.Function0[ReactElement]] = js.native
 }
 
@@ -27,7 +27,7 @@ object Renderers {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBody(value: AnonRow): Self = {
+    def withBody(value: Row): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
         ret
@@ -39,7 +39,7 @@ object Renderers {
         ret
     }
     @scala.inline
-    def withHeader(value: AnonCell): Self = {
+    def withHeader(value: Cell): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
         ret

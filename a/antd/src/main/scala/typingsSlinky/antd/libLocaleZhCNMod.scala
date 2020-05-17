@@ -1,5 +1,16 @@
 package typingsSlinky.antd
 
+import typingsSlinky.antd.anon.Back
+import typingsSlinky.antd.anon.CancelText
+import typingsSlinky.antd.anon.CancelTextOkText
+import typingsSlinky.antd.anon.Collapse
+import typingsSlinky.antd.anon.Copied
+import typingsSlinky.antd.anon.Description
+import typingsSlinky.antd.anon.DownloadFile
+import typingsSlinky.antd.anon.ItemUnit
+import typingsSlinky.antd.anon.Lang
+import typingsSlinky.antd.anon.Placeholder
+import typingsSlinky.antd.anon.PlaceholderString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,20 +20,20 @@ import scala.scalajs.js.annotation._
 object libLocaleZhCNMod extends js.Object {
   @js.native
   object default extends js.Object {
-    var Calendar: AnonLang = js.native
-    var DatePicker: AnonLang = js.native
-    var Empty: AnonDescription = js.native
-    var Icon: AnonIcon = js.native
-    var Modal: AnonCancelText = js.native
-    var PageHeader: AnonBack = js.native
+    var Calendar: Lang = js.native
+    var DatePicker: Lang = js.native
+    var Empty: Description = js.native
+    var Icon: typingsSlinky.antd.anon.Icon = js.native
+    var Modal: CancelText = js.native
+    var PageHeader: Back = js.native
     var Pagination: js.Any = js.native
-    var Popconfirm: AnonCancelTextOkText = js.native
-    var Table: AnonCollapse = js.native
-    var Text: AnonCopied = js.native
-    var TimePicker: AnonPlaceholder = js.native
-    var Transfer: AnonItemUnit = js.native
-    var Upload: AnonDownloadFile = js.native
-    var global: AnonPlaceholderString = js.native
+    var Popconfirm: CancelTextOkText = js.native
+    var Table: Collapse = js.native
+    var Text: Copied = js.native
+    var TimePicker: Placeholder = js.native
+    var Transfer: ItemUnit = js.native
+    var Upload: DownloadFile = js.native
+    var global: PlaceholderString = js.native
     var locale: String = js.native
   }
   

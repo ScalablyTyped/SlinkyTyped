@@ -1,11 +1,5 @@
 package typingsSlinky.babelTypes.mod
 
-import typingsSlinky.babelTypes.babelTypesStrings.ArrayPattern
-import typingsSlinky.babelTypes.babelTypesStrings.AssignmentPattern
-import typingsSlinky.babelTypes.babelTypesStrings.Identifier
-import typingsSlinky.babelTypes.babelTypesStrings.MemberExpression
-import typingsSlinky.babelTypes.babelTypesStrings.ObjectPattern
-import typingsSlinky.babelTypes.babelTypesStrings.RestElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,80 +17,18 @@ trait LVal extends js.Object
 
 object LVal {
   @scala.inline
-  def Identifier_(end: Double, loc: SourceLocation, name: String, start: Double, `type`: Identifier): LVal = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LVal]
-  }
+  implicit def apply(value: ArrayPattern_): LVal = value.asInstanceOf[LVal]
   @scala.inline
-  def ObjectPattern_(
-    end: Double,
-    loc: SourceLocation,
-    properties: js.Array[AssignmentProperty | RestProperty_],
-    start: Double,
-    `type`: ObjectPattern
-  ): LVal = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LVal]
-  }
+  implicit def apply(value: AssignmentPattern_): LVal = value.asInstanceOf[LVal]
   @scala.inline
-  def MemberExpression_(
-    computed: Boolean,
-    end: Double,
-    loc: SourceLocation,
-    `object`: Expression | Super,
-    property: Expression,
-    start: Double,
-    `type`: MemberExpression
-  ): LVal = {
-    val __obj = js.Dynamic.literal(computed = computed.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], property = property.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LVal]
-  }
+  implicit def apply(value: Identifier_): LVal = value.asInstanceOf[LVal]
   @scala.inline
-  def ArrayPattern_(
-    elements: js.Array[Expression],
-    end: Double,
-    loc: SourceLocation,
-    start: Double,
-    `type`: ArrayPattern
-  ): LVal = {
-    val __obj = js.Dynamic.literal(elements = elements.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LVal]
-  }
+  implicit def apply(value: MemberExpression_): LVal = value.asInstanceOf[LVal]
   @scala.inline
-  def AssignmentPattern_(
-    end: Double,
-    left: Identifier_,
-    loc: SourceLocation,
-    right: Expression,
-    start: Double,
-    `type`: AssignmentPattern
-  ): LVal = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], left = left.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LVal]
-  }
+  implicit def apply(value: ObjectPattern_): LVal = value.asInstanceOf[LVal]
   @scala.inline
-  def TSParameterProperty(
-    end: Double,
-    loc: SourceLocation,
-    parameter: Identifier_ | AssignmentPattern_,
-    start: Double,
-    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSParameterProperty
-  ): LVal = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], parameter = parameter.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LVal]
-  }
+  implicit def apply(value: RestElement_): LVal = value.asInstanceOf[LVal]
   @scala.inline
-  def RestElement_(argument: LVal, end: Double, loc: SourceLocation, start: Double, `type`: RestElement): LVal = {
-    val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LVal]
-  }
+  implicit def apply(value: TSParameterProperty): LVal = value.asInstanceOf[LVal]
 }
 

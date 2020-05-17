@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
 trait OmittedExpression
   extends Expression
      with ArrayBindingElement
-     with BindingOrAssignmentElementTarget
-     with _BindingOrAssignmentElement {
+     with BindingOrAssignmentElement
+     with BindingOrAssignmentElementTarget {
   @JSName("kind")
   var kind_OmittedExpression: typingsSlinky.typescript.mod.SyntaxKind.OmittedExpression = js.native
 }

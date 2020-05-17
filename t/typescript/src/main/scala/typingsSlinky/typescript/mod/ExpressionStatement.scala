@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 trait ExpressionStatement
   extends Statement
      with JSDocContainer
-     with _HasJSDoc {
+     with HasJSDoc {
   var expression: Expression = js.native
   @JSName("kind")
   var kind_ExpressionStatement: typingsSlinky.typescript.mod.SyntaxKind.ExpressionStatement = js.native

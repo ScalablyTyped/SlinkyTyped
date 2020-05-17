@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ReturnStatement
-  extends _Statement
+  extends Statement
      with Base[typingsSlinky.luaparse.luaparseStrings.ReturnStatement] {
   var arguments: js.Array[Expression] = js.native
 }

@@ -1,8 +1,8 @@
 package typingsSlinky.momentMini
 
+import typingsSlinky.momentMini.mod.CalendarKey
 import typingsSlinky.momentMini.mod.LongDateFormatKey
 import typingsSlinky.momentMini.mod.RelativeTimeKey
-import typingsSlinky.momentMini.mod._CalendarKey
 import typingsSlinky.momentMini.mod.unitOfTime.All
 import typingsSlinky.momentMini.mod.unitOfTime.Base
 import typingsSlinky.momentMini.mod.unitOfTime.Diff
@@ -203,10 +203,10 @@ object momentMiniStrings {
   sealed trait l_ extends LongDateFormatKey
   
   @js.native
-  sealed trait lastDay extends _CalendarKey
+  sealed trait lastDay extends CalendarKey
   
   @js.native
-  sealed trait lastWeek extends _CalendarKey
+  sealed trait lastWeek extends CalendarKey
   
   @js.native
   sealed trait ll_ extends LongDateFormatKey
@@ -300,10 +300,10 @@ object momentMiniStrings {
        with StartOf
   
   @js.native
-  sealed trait nextDay extends _CalendarKey
+  sealed trait nextDay extends CalendarKey
   
   @js.native
-  sealed trait nextWeek extends _CalendarKey
+  sealed trait nextWeek extends CalendarKey
   
   @js.native
   sealed trait quarter
@@ -332,10 +332,10 @@ object momentMiniStrings {
        with StartOf
   
   @js.native
-  sealed trait sameDay extends _CalendarKey
+  sealed trait sameDay extends CalendarKey
   
   @js.native
-  sealed trait sameElse extends _CalendarKey
+  sealed trait sameElse extends CalendarKey
   
   @js.native
   sealed trait second

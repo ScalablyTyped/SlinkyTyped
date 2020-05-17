@@ -1,5 +1,6 @@
 package typingsSlinky.intlRelativeformat
 
+import typingsSlinky.intlRelativeformat.anon.RecordSUPPORTEDFIELDnumbe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

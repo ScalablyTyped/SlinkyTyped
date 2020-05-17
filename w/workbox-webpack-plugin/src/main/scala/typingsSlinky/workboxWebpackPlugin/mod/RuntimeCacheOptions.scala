@@ -1,9 +1,9 @@
 package typingsSlinky.workboxWebpackPlugin.mod
 
-import typingsSlinky.workboxWebpackPlugin.AnonChannelName
-import typingsSlinky.workboxWebpackPlugin.AnonHeaders
-import typingsSlinky.workboxWebpackPlugin.AnonMaxAgeSeconds
-import typingsSlinky.workboxWebpackPlugin.AnonName
+import typingsSlinky.workboxWebpackPlugin.anon.ChannelName
+import typingsSlinky.workboxWebpackPlugin.anon.Headers
+import typingsSlinky.workboxWebpackPlugin.anon.MaxAgeSeconds
+import typingsSlinky.workboxWebpackPlugin.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,11 +13,11 @@ trait RuntimeCacheOptions extends js.Object {
   /**
   	 * Configure background sync.
   	 */
-  var backgroundSync: js.UndefOr[AnonName] = js.native
+  var backgroundSync: js.UndefOr[Name] = js.native
   /**
   	 * Configure the broadcast cache update plugin.
   	 */
-  var broadcastUpdate: js.UndefOr[AnonChannelName] = js.native
+  var broadcastUpdate: js.UndefOr[ChannelName] = js.native
   /**
   	 * A custom cache name for this route.
   	 */
@@ -25,11 +25,11 @@ trait RuntimeCacheOptions extends js.Object {
   /**
   	 * Configure which responses are considered cacheable.
   	 */
-  var cacheableResponse: js.UndefOr[AnonHeaders] = js.native
+  var cacheableResponse: js.UndefOr[Headers] = js.native
   /**
   	 * Custom cache expiration.
   	 */
-  var expiration: js.UndefOr[AnonMaxAgeSeconds] = js.native
+  var expiration: js.UndefOr[MaxAgeSeconds] = js.native
   /**
   	 * Used to configure the handler.
   	 */
@@ -61,7 +61,7 @@ object RuntimeCacheOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBackgroundSync(value: AnonName): Self = {
+    def withBackgroundSync(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundSync")(value.asInstanceOf[js.Any])
         ret
@@ -73,7 +73,7 @@ object RuntimeCacheOptions {
         ret
     }
     @scala.inline
-    def withBroadcastUpdate(value: AnonChannelName): Self = {
+    def withBroadcastUpdate(value: ChannelName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("broadcastUpdate")(value.asInstanceOf[js.Any])
         ret
@@ -97,7 +97,7 @@ object RuntimeCacheOptions {
         ret
     }
     @scala.inline
-    def withCacheableResponse(value: AnonHeaders): Self = {
+    def withCacheableResponse(value: Headers): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cacheableResponse")(value.asInstanceOf[js.Any])
         ret
@@ -109,7 +109,7 @@ object RuntimeCacheOptions {
         ret
     }
     @scala.inline
-    def withExpiration(value: AnonMaxAgeSeconds): Self = {
+    def withExpiration(value: MaxAgeSeconds): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("expiration")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.braintreeWeb.mod
 
-import typingsSlinky.braintreeWeb.AnonLabel
+import typingsSlinky.braintreeWeb.anon.Label
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,7 +42,7 @@ trait ApplePayPaymentRequest extends js.Object {
   var shippingMethods: js.UndefOr[js.Any] = js.native
   var shippingType: js.UndefOr[js.Any] = js.native
   var supportedNetworks: js.Array[String] = js.native
-  var total: AnonLabel = js.native
+  var total: Label = js.native
 }
 
 object ApplePayPaymentRequest {
@@ -52,7 +52,7 @@ object ApplePayPaymentRequest {
     currencyCode: String,
     merchantCapabilities: js.Array[String],
     supportedNetworks: js.Array[String],
-    total: AnonLabel
+    total: Label
   ): ApplePayPaymentRequest = {
     val __obj = js.Dynamic.literal(countryCode = countryCode.asInstanceOf[js.Any], currencyCode = currencyCode.asInstanceOf[js.Any], merchantCapabilities = merchantCapabilities.asInstanceOf[js.Any], supportedNetworks = supportedNetworks.asInstanceOf[js.Any], total = total.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplePayPaymentRequest]
@@ -88,7 +88,7 @@ object ApplePayPaymentRequest {
         ret
     }
     @scala.inline
-    def withTotal(value: AnonLabel): Self = {
+    def withTotal(value: Label): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
         ret

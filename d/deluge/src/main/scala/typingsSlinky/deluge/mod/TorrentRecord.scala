@@ -1,7 +1,7 @@
 package typingsSlinky.deluge.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.deluge.AnonState
+import typingsSlinky.deluge.anon.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,14 +9,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TorrentRecord extends js.Object {
   var connected: Boolean = js.native
-  var filters: AnonState = js.native
+  var filters: State = js.native
   var stats: DelugeStats = js.native
   var torrents: StringDictionary[Torrent] = js.native
 }
 
 object TorrentRecord {
   @scala.inline
-  def apply(connected: Boolean, filters: AnonState, stats: DelugeStats, torrents: StringDictionary[Torrent]): TorrentRecord = {
+  def apply(connected: Boolean, filters: State, stats: DelugeStats, torrents: StringDictionary[Torrent]): TorrentRecord = {
     val __obj = js.Dynamic.literal(connected = connected.asInstanceOf[js.Any], filters = filters.asInstanceOf[js.Any], stats = stats.asInstanceOf[js.Any], torrents = torrents.asInstanceOf[js.Any])
     __obj.asInstanceOf[TorrentRecord]
   }
@@ -33,7 +33,7 @@ object TorrentRecord {
         ret
     }
     @scala.inline
-    def withFilters(value: AnonState): Self = {
+    def withFilters(value: State): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
         ret

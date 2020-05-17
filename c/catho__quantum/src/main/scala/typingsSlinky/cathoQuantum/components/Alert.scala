@@ -4,9 +4,9 @@ import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonColors
 import typingsSlinky.cathoQuantum.alertMod.AlertProps
 import typingsSlinky.cathoQuantum.alertMod.default
+import typingsSlinky.cathoQuantum.anon.Colors
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.error
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.neutral
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.primary
@@ -30,7 +30,7 @@ object Alert {
     @scala.inline
     def skin(value: primary | success | error | neutral | warning): this.type = set("skin", value.asInstanceOf[js.Any])
     @scala.inline
-    def theme(value: AnonColors): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: Colors): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: AlertProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

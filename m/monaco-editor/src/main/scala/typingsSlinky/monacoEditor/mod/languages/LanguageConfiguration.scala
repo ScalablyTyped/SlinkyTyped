@@ -1,6 +1,6 @@
 package typingsSlinky.monacoEditor.mod.languages
 
-import typingsSlinky.monacoEditor.AnonDocComment
+import typingsSlinky.monacoEditor.anon.DocComment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait LanguageConfiguration extends js.Object {
     *
     * @deprecated Will be replaced by a better API soon.
     */
-  var __electricCharacterSupport: js.UndefOr[AnonDocComment] = js.native
+  var __electricCharacterSupport: js.UndefOr[DocComment] = js.native
   /**
     * Defines what characters must be after the cursor for bracket or quote autoclosing to occur when using the \'languageDefined\' autoclosing setting.
     *
@@ -74,7 +74,7 @@ object LanguageConfiguration {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with__electricCharacterSupport(value: AnonDocComment): Self = {
+    def with__electricCharacterSupport(value: DocComment): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("__electricCharacterSupport")(value.asInstanceOf[js.Any])
         ret

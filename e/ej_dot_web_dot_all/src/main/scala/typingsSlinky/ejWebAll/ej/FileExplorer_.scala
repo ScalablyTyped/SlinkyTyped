@@ -1,19 +1,12 @@
 package typingsSlinky.ejWebAll.ej
 
-import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.ejWebAll.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("ej.FileExplorer")
 @js.native
-class FileExplorer_ protected () extends Widget_ {
-  def this(element: JQuery) = this()
-  def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.FileExplorer.Model) = this()
-  def this(element: Element, options: typingsSlinky.ejWebAll.ej.FileExplorer.Model) = this()
+trait FileExplorer_ extends Widget_ {
   var defaults: typingsSlinky.ejWebAll.ej.FileExplorer.Model = js.native
   @JSName("model")
   var model_FileExplorer_ : typingsSlinky.ejWebAll.ej.FileExplorer.Model = js.native

@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait FittingDef
-  extends /* prop */ StringDictionary[js.Any] {
+  extends // allow other config settings
+/* prop */ StringDictionary[js.Any]
+     with PipeDef {
   /** Static values passed to the fitting during construction */
   var config: js.UndefOr[js.Any] = js.native
   /** Dynamic values passed to the fitting during execution */

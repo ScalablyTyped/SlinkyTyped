@@ -1,0 +1,26 @@
+package typingsSlinky.gapiClientDiscovery
+
+import typingsSlinky.gapiClientDiscovery.gapi.client.discovery.ApisResource
+import typingsSlinky.gapiClientDiscovery.gapiClientDiscoveryStrings.discovery
+import typingsSlinky.gapiClientDiscovery.gapiClientDiscoveryStrings.v1
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobalScope
+@js.native
+object global extends js.Object {
+  @js.native
+  object gapi extends js.Object {
+    @js.native
+    object client extends js.Object {
+      val apis: ApisResource = js.native
+      /** Load APIs Discovery Service v1 */
+      def load(name: discovery, version: v1): js.Thenable[Unit] = js.native
+      def load(name: discovery, version: v1, callback: js.Function0[_]): Unit = js.native
+    }
+    
+  }
+  
+}
+

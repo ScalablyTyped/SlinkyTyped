@@ -6,7 +6,7 @@ import typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataInput
 import typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataOption
 import typingsSlinky.ionicCliFramework.definitionsMod.ICommand
 import typingsSlinky.ionicCliFramework.definitionsMod.INamespace
-import typingsSlinky.node.processMod._Global_.NodeJS.WriteStream
+import typingsSlinky.node.processMod.global.NodeJS.WriteStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,7 @@
 package typingsSlinky.airtable.mod
 
-import typingsSlinky.airtable.mod._Global_.Airtable
-import typingsSlinky.airtable.mod._Global_.Airtable.AirtableOptions
+import typingsSlinky.airtable.mod.global.Airtable
+import typingsSlinky.airtable.mod.global.Airtable.AirtableOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

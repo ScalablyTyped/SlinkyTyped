@@ -1,6 +1,6 @@
 package typingsSlinky.rotJs.uniformMod
 
-import typingsSlinky.rotJs.PartialOptionsRoomDugPercentage
+import typingsSlinky.rotJs.anon.PartialOptionsRoomDugPercentage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait PathProps
-  extends _SvgProperties[js.Any] {
+  extends SvgProperties[js.Any] {
   var d: String = js.native
 }
 

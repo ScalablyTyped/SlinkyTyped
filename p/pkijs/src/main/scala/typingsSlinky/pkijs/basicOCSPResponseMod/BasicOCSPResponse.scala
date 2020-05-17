@@ -2,7 +2,7 @@ package typingsSlinky.pkijs.basicOCSPResponseMod
 
 import org.scalajs.dom.crypto.CryptoKey
 import typingsSlinky.asn1js.mod.BitString
-import typingsSlinky.pkijs.AnonTrustedCerts
+import typingsSlinky.pkijs.anon.TrustedCerts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,6 +42,6 @@ trait BasicOCSPResponse extends js.Object {
     * @returns {PromiseLike<boolean>}
     */
   def verify(): js.Thenable[Boolean] = js.native
-  def verify(parameters: AnonTrustedCerts): js.Thenable[Boolean] = js.native
+  def verify(parameters: TrustedCerts): js.Thenable[Boolean] = js.native
 }
 

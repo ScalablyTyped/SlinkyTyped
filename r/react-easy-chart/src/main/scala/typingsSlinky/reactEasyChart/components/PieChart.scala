@@ -3,7 +3,7 @@ package typingsSlinky.reactEasyChart.components
 import org.scalajs.dom.raw.MouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactEasyChart.AnonColor
+import typingsSlinky.reactEasyChart.anon.Color
 import typingsSlinky.reactEasyChart.mod.PieChartProps
 import typingsSlinky.reactEasyChart.mod.PieData
 import scala.scalajs.js
@@ -39,7 +39,7 @@ object PieChart {
   
   def withProps(p: PieChartProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(data: js.Array[AnonColor]): Builder = {
+  def apply(data: js.Array[Color]): Builder = {
     val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[PieChartProps]))
   }

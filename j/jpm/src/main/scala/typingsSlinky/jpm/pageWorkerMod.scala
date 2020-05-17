@@ -1,6 +1,8 @@
 package typingsSlinky.jpm
 
 import typingsSlinky.jpm.FFAddonSDK.Port
+import typingsSlinky.jpm.anon.Allow
+import typingsSlinky.jpm.anon.Script
 import typingsSlinky.jpm.jpmStrings.error
 import typingsSlinky.jpm.jpmStrings.message
 import scala.scalajs.js
@@ -15,7 +17,7 @@ import scala.scalajs.js.annotation._
 object pageWorkerMod extends js.Object {
   @js.native
   trait PageWorker extends js.Object {
-    var allow: js.UndefOr[AnonScript] = js.native
+    var allow: js.UndefOr[Script] = js.native
     var contentScript: js.UndefOr[String | js.Array[String]] = js.native
     var contentScriptFile: js.UndefOr[String | js.Array[String]] = js.native
     var contentURL: js.UndefOr[String] = js.native
@@ -29,6 +31,6 @@ object pageWorkerMod extends js.Object {
     def removeListener(event: String, listener: js.Function): Unit = js.native
   }
   
-  def Page(options: AnonAllow): PageWorker = js.native
+  def Page(options: Allow): PageWorker = js.native
 }
 

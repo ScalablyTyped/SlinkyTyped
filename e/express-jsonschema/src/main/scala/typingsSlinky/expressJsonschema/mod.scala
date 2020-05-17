@@ -4,6 +4,8 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.express.mod.NextFunction
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.express.mod.Response_
+import typingsSlinky.expressJsonschema.anon.Instance
+import typingsSlinky.expressJsonschema.anon.Messages
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.jsonSchema.mod.JSONSchema4
@@ -23,10 +25,10 @@ object mod extends js.Object {
   
   @js.native
   class JsonSchemaValidation protected () extends js.Object {
-    def this(validations: StringDictionary[AnonInstance]) = this()
+    def this(validations: StringDictionary[Instance]) = this()
     var message: String = js.native
     var name: String = js.native
-    var validations: StringDictionary[js.Array[AnonMessages]] = js.native
+    var validations: StringDictionary[js.Array[Messages]] = js.native
   }
   
   def addSchemaProperties(

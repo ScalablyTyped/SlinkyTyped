@@ -1,7 +1,5 @@
 package typingsSlinky.openapiTypes.mod.OpenAPI
 
-import typingsSlinky.openapiTypes.mod.OpenAPIV3.InfoObject
-import typingsSlinky.openapiTypes.mod.OpenAPIV3.PathsObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,9 +12,8 @@ trait Document extends js.Object
 
 object Document {
   @scala.inline
-  def Document(info: InfoObject, openapi: String, paths: PathsObject): Document = {
-    val __obj = js.Dynamic.literal(info = info.asInstanceOf[js.Any], openapi = openapi.asInstanceOf[js.Any], paths = paths.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Document]
-  }
+  implicit def apply(value: typingsSlinky.openapiTypes.mod.OpenAPIV2.Document): Document = value.asInstanceOf[Document]
+  @scala.inline
+  implicit def apply(value: typingsSlinky.openapiTypes.mod.OpenAPIV3.Document): Document = value.asInstanceOf[Document]
 }
 

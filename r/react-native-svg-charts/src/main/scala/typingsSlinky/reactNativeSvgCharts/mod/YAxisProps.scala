@@ -1,13 +1,13 @@
 package typingsSlinky.reactNativeSvgCharts.mod
 
-import typingsSlinky.reactNativeSvgCharts.AnonTop
+import typingsSlinky.reactNativeSvgCharts.anon.Top
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait YAxisProps[T] extends AxisProps[T] {
-  var contentInset: js.UndefOr[AnonTop] = js.native
+  var contentInset: js.UndefOr[Top] = js.native
   var max: js.UndefOr[Double] = js.native
   var min: js.UndefOr[Double] = js.native
   var yAccessor: js.UndefOr[AccessorFunction[T, _]] = js.native
@@ -26,7 +26,7 @@ object YAxisProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withContentInset(value: AnonTop): Self[T] = {
+    def withContentInset(value: Top): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentInset")(value.asInstanceOf[js.Any])
         ret

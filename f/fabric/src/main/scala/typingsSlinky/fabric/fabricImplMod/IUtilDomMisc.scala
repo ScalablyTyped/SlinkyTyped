@@ -1,7 +1,7 @@
 package typingsSlinky.fabric.fabricImplMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.fabric.AnonLeftTop
+import typingsSlinky.fabric.anon.LeftTop
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ trait IUtilDomMisc extends js.Object {
   	 * Returns offset for a given element
   	 * @param element Element to get offset for
   	 */
-  def getElementOffset(element: HTMLElement): AnonLeftTop = js.native
+  def getElementOffset(element: HTMLElement): LeftTop = js.native
   /**
   	 * Returns style attribute value of a given element
   	 * @param element Element to get style attribute for
@@ -40,7 +40,7 @@ trait IUtilDomMisc extends js.Object {
   	 * Returns element scroll offsets
   	 * @param element Element to operate on
   	 */
-  def getScrollLeftTop(element: HTMLElement): AnonLeftTop = js.native
+  def getScrollLeftTop(element: HTMLElement): LeftTop = js.native
   /**
   	 * Creates specified element with specified attributes
   	 * @param tagName Type of an element to create

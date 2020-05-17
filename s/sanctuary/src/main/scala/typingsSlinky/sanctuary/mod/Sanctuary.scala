@@ -1,17 +1,17 @@
 package typingsSlinky.sanctuary.mod
 
-import typingsSlinky.sanctuary.AnonCheckTypes
-import typingsSlinky.sanctuary.AnonName
-import typingsSlinky.sanctuary.Fn0
-import typingsSlinky.sanctuary.FnCall
-import typingsSlinky.sanctuary.FnCallContravariant
-import typingsSlinky.sanctuary.FnCallF
-import typingsSlinky.sanctuary.FnCallFoldable
-import typingsSlinky.sanctuary.FnCallM
-import typingsSlinky.sanctuary.FnCallQ
-import typingsSlinky.sanctuary.FnCallR
-import typingsSlinky.sanctuary.FnCallX
-import typingsSlinky.sanctuary.FnCallXs
+import typingsSlinky.sanctuary.anon.CheckTypes
+import typingsSlinky.sanctuary.anon.Fn0
+import typingsSlinky.sanctuary.anon.FnCall
+import typingsSlinky.sanctuary.anon.FnCallContravariant
+import typingsSlinky.sanctuary.anon.FnCallF
+import typingsSlinky.sanctuary.anon.FnCallFoldable
+import typingsSlinky.sanctuary.anon.FnCallM
+import typingsSlinky.sanctuary.anon.FnCallQ
+import typingsSlinky.sanctuary.anon.FnCallR
+import typingsSlinky.sanctuary.anon.FnCallX
+import typingsSlinky.sanctuary.anon.FnCallXs
+import typingsSlinky.sanctuary.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ object Sanctuary extends js.Object {
   @js.native
   trait Environment extends Static {
     var env: js.Array[_] = js.native
-    def create(opts: AnonCheckTypes): Static = js.native
+    def create(opts: CheckTypes): Static = js.native
   }
   
   @js.native
@@ -217,7 +217,7 @@ object Sanctuary extends js.Object {
       ] = js.native
     def trim(s: String): String = js.native
     //  Classify
-    def `type`(x: js.Any): AnonName = js.native
+    def `type`(x: js.Any): Name = js.native
     def unfoldr[A, B](f: Fn[B, Maybe[Pair[A, B]]]): js.Function1[/* x */ B, js.Array[A]] = js.native
     def unless[A](p: Predicate[A]): js.Function1[/* q */ Fn[A, A], Fn[A, A]] = js.native
     def unlines(xs: js.Array[String]): String = js.native

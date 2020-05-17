@@ -1,14 +1,14 @@
 package typingsSlinky.jsrsasign.mod.KJUR
 
-import typingsSlinky.jsrsasign.Anon2a864886f70d010101
-import typingsSlinky.jsrsasign.AnonAlgString
-import typingsSlinky.jsrsasign.AnonCurve
-import typingsSlinky.jsrsasign.AnonHmacmd5
-import typingsSlinky.jsrsasign.AnonMd2
-import typingsSlinky.jsrsasign.AnonMd5
-import typingsSlinky.jsrsasign.AnonPass
-import typingsSlinky.jsrsasign.AnonProv
-import typingsSlinky.jsrsasign.AnonRipemd160
+import typingsSlinky.jsrsasign.anon.AlgString
+import typingsSlinky.jsrsasign.anon.Curve
+import typingsSlinky.jsrsasign.anon.Hmacmd5
+import typingsSlinky.jsrsasign.anon.Md2
+import typingsSlinky.jsrsasign.anon.Md5
+import typingsSlinky.jsrsasign.anon.Pass
+import typingsSlinky.jsrsasign.anon.Prov
+import typingsSlinky.jsrsasign.anon.Ripemd160
+import typingsSlinky.jsrsasign.anon.`2a864886f70d010101`
 import typingsSlinky.jsrsasign.jsrsasign.BigInteger
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.crypto.ECParameter
 import typingsSlinky.jsrsasign.jsrsasign.RSAKey
@@ -56,7 +56,7 @@ object crypto extends js.Object {
   @js.native
   class ECDSA ()
     extends typingsSlinky.jsrsasign.jsrsasign.KJUR.crypto.ECDSA {
-    def this(publicKey: AnonCurve) = this()
+    def this(publicKey: Curve) = this()
   }
   
   /**
@@ -95,7 +95,7 @@ object crypto extends js.Object {
   @js.native
   class Mac protected ()
     extends typingsSlinky.jsrsasign.jsrsasign.KJUR.crypto.Mac {
-    def this(params: AnonPass) = this()
+    def this(params: Pass) = this()
   }
   
   /**
@@ -129,7 +129,7 @@ object crypto extends js.Object {
   @js.native
   class MessageDigest protected ()
     extends typingsSlinky.jsrsasign.jsrsasign.KJUR.crypto.MessageDigest {
-    def this(params: AnonProv) = this()
+    def this(params: Prov) = this()
   }
   
   /**
@@ -199,7 +199,7 @@ object crypto extends js.Object {
   @js.native
   class Signature ()
     extends typingsSlinky.jsrsasign.jsrsasign.KJUR.crypto.Signature {
-    def this(params: AnonAlgString) = this()
+    def this(params: AlgString) = this()
   }
   
   /**
@@ -385,7 +385,7 @@ object crypto extends js.Object {
   @js.native
   object MessageDigest extends js.Object {
     /** static Array of resulted byte length of hash (ex. HASHLENGTH["sha1"] == 20) */
-    val HASHLENGTH: AnonMd5 = js.native
+    val HASHLENGTH: Md5 = js.native
     /**
       * get canonical hash algorithm name
       * @param alg hash algorithm name (ex. MD5, SHA-1, SHA1, SHA512 et.al.)
@@ -416,7 +416,7 @@ object crypto extends js.Object {
   @js.native
   object OID extends js.Object {
     /** key value of hexadecimal OID and its name (ex. '2a8648ce3d030107' and 'secp256r1') */
-    val oidhex2name: Anon2a864886f70d010101 = js.native
+    val oidhex2name: `2a864886f70d010101` = js.native
   }
   
   /* static members */
@@ -429,11 +429,11 @@ object crypto extends js.Object {
   /** static object for cryptographic function utilities */
   @js.native
   object Util extends js.Object {
-    var CRYPTOJSMESSAGEDIGESTNAME: AnonRipemd160 = js.native
+    var CRYPTOJSMESSAGEDIGESTNAME: Ripemd160 = js.native
     /** associative array of default provider name for each hash and signature algorithms */
-    var DEFAULTPROVIDER: AnonHmacmd5 = js.native
+    var DEFAULTPROVIDER: Hmacmd5 = js.native
     /** PKCS#1 DigestInfo heading hexadecimal bytes for each hash algorithms */
-    var DIGESTINFOHEAD: AnonMd2 = js.native
+    var DIGESTINFOHEAD: Md2 = js.native
     /**
       * get hexadecimal DigestInfo
       * @param hHash hexadecimal hash value

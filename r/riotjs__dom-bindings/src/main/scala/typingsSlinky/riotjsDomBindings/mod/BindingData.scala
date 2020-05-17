@@ -15,33 +15,14 @@ trait BindingData extends js.Object
 
 object BindingData {
   @scala.inline
-  def IfBindingData(template: TemplateChunk[_, _]): BindingData = {
-    val __obj = js.Dynamic.literal(template = template.asInstanceOf[js.Any])
-    __obj.asInstanceOf[BindingData]
-  }
+  implicit def apply(value: EachBindingData): BindingData = value.asInstanceOf[BindingData]
   @scala.inline
-  def EachBindingData(itemName: String, template: TemplateChunk[_, _]): BindingData = {
-    val __obj = js.Dynamic.literal(itemName = itemName.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any])
-    __obj.asInstanceOf[BindingData]
-  }
+  implicit def apply(value: IfBindingData): BindingData = value.asInstanceOf[BindingData]
   @scala.inline
-  def SlotBindingData(bindings: BindingData, html: String, id: String): BindingData = {
-    val __obj = js.Dynamic.literal(bindings = bindings.asInstanceOf[js.Any], html = html.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
-    __obj.asInstanceOf[BindingData]
-  }
+  implicit def apply(value: SimpleBindingData): BindingData = value.asInstanceOf[BindingData]
   @scala.inline
-  def TagBindingData(
-    attributes: js.Array[AttributeExpressionData],
-    getComponent: String => TemplateChunk[_, _],
-    slots: js.Array[SlotBindingData]
-  ): BindingData = {
-    val __obj = js.Dynamic.literal(attributes = attributes.asInstanceOf[js.Any], getComponent = js.Any.fromFunction1(getComponent), slots = slots.asInstanceOf[js.Any])
-    __obj.asInstanceOf[BindingData]
-  }
+  implicit def apply(value: SlotBindingData): BindingData = value.asInstanceOf[BindingData]
   @scala.inline
-  def SimpleBindingData(expressions: js.Array[ExpressionData]): BindingData = {
-    val __obj = js.Dynamic.literal(expressions = expressions.asInstanceOf[js.Any])
-    __obj.asInstanceOf[BindingData]
-  }
+  implicit def apply(value: TagBindingData): BindingData = value.asInstanceOf[BindingData]
 }
 

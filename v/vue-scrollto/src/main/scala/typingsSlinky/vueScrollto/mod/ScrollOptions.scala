@@ -1,7 +1,7 @@
 package typingsSlinky.vueScrollto.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import typingsSlinky.vueScrollto.vueScrolltoBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +19,7 @@ trait ScrollOptions extends js.Object {
   var offset: js.UndefOr[
     Double | (js.Function2[/* element */ ElementDescriptor, /* container */ ElementDescriptor, Double])
   ] = js.native
-  var onCancel: js.UndefOr[(js.Function2[/* event */ Event_, /* element */ Element, _]) | `false`] = js.native
+  var onCancel: js.UndefOr[(js.Function2[/* event */ Event, /* element */ Element, _]) | `false`] = js.native
   var onDone: js.UndefOr[(js.Function1[/* element */ Element, _]) | `false`] = js.native
   var onStart: js.UndefOr[(js.Function1[/* element */ Element, _]) | `false`] = js.native
   var x: js.UndefOr[Boolean] = js.native
@@ -161,13 +161,13 @@ object ScrollOptions {
         ret
     }
     @scala.inline
-    def withOnCancelFunction2(value: (/* event */ Event_, /* element */ Element) => _): Self = {
+    def withOnCancelFunction2(value: (/* event */ Event, /* element */ Element) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCancel")(js.Any.fromFunction2(value))
         ret
     }
     @scala.inline
-    def withOnCancel(value: (js.Function2[/* event */ Event_, /* element */ Element, _]) | `false`): Self = {
+    def withOnCancel(value: (js.Function2[/* event */ Event, /* element */ Element, _]) | `false`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCancel")(value.asInstanceOf[js.Any])
         ret

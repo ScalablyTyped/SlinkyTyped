@@ -7,14 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientReportDesigner.CustomizeOpenDialog event.
   */
-@JSGlobal("ASPxClientReportDesignerCustomizeOpenDialogEventArgs")
 @js.native
-class ASPxClientReportDesignerCustomizeOpenDialogEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientReportDesignerCustomizeOpenDialogEventArgs class with the specified settings.
-    * @param popup An object that specifies the Open Report dialog.
-    */
-  def this(popup: ASPxDesignerOpenDialog) = this()
+trait ASPxClientReportDesignerCustomizeOpenDialogEventArgs extends ASPxClientEventArgs {
   /**
     * Provides access to the Open Report dialog.
     */
@@ -25,5 +19,33 @@ class ASPxClientReportDesignerCustomizeOpenDialogEventArgs protected () extends 
     * @param model A model of the Open Report dialog.
     */
   def Customize(template: String, model: ASPxDesignerDialogModel): Unit = js.native
+}
+
+object ASPxClientReportDesignerCustomizeOpenDialogEventArgs {
+  @scala.inline
+  def apply(Customize: (String, ASPxDesignerDialogModel) => Unit, Popup: ASPxDesignerOpenDialog): ASPxClientReportDesignerCustomizeOpenDialogEventArgs = {
+    val __obj = js.Dynamic.literal(Customize = js.Any.fromFunction2(Customize), Popup = Popup.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientReportDesignerCustomizeOpenDialogEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientReportDesignerCustomizeOpenDialogEventArgsOps[Self <: ASPxClientReportDesignerCustomizeOpenDialogEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomize(value: (String, ASPxDesignerDialogModel) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Customize")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withPopup(value: ASPxDesignerOpenDialog): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Popup")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

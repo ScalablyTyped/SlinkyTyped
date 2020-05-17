@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdkClientS3Browser.s3ConfigurationMod
 
 import org.scalajs.dom.raw.Blob
-import typingsSlinky.awsSdkClientS3Browser.AnonInstantiable
+import typingsSlinky.awsSdkClientS3Browser.anon.Instantiable
 import typingsSlinky.awsSdkTypes.credentialsMod.Credentials
 import typingsSlinky.awsSdkTypes.cryptoMod.HashConstructor
 import typingsSlinky.awsSdkTypes.cryptoMod.StreamHasher
@@ -81,7 +81,7 @@ trait S3Configuration extends js.Object {
   /**
     * A constructor for a class implementing the @aws-sdk/types.Hash interface that computes the MD5 checksum of a string or binary buffer
     */
-  var md5: js.UndefOr[AnonInstantiable] = js.native
+  var md5: js.UndefOr[Instantiable] = js.native
   /**
     * The configuration profile to use.
     */
@@ -327,7 +327,7 @@ object S3Configuration {
         ret
     }
     @scala.inline
-    def withMd5(value: AnonInstantiable): Self = {
+    def withMd5(value: Instantiable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("md5")(value.asInstanceOf[js.Any])
         ret
@@ -424,7 +424,7 @@ object S3Configuration {
     }
     @scala.inline
     def withStreamHasher(
-      value: (/* hashCtor */ typingsSlinky.awsSdkTypes.AnonInstantiable, Blob) => js.Promise[js.typedarray.Uint8Array]
+      value: (/* hashCtor */ typingsSlinky.awsSdkTypes.anon.Instantiable, Blob) => js.Promise[js.typedarray.Uint8Array]
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("streamHasher")(js.Any.fromFunction2(value))

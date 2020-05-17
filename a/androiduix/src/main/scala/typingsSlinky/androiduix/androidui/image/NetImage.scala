@@ -5,11 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("androidui.image.NetImage")
 @js.native
-class NetImage protected () extends js.Object {
-  def this(src: String) = this()
-  def this(src: String, overrideImageRatio: Double) = this()
+trait NetImage extends js.Object {
   var browserImage: js.Any = js.native
   val height: Double = js.native
   var mImageHeight: js.Any = js.native

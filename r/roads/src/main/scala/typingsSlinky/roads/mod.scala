@@ -4,10 +4,11 @@ import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Window
+import typingsSlinky.roads.anon.CacheMaxAge
 import typingsSlinky.roads.buildMod.RoadsBuildOptions
 import typingsSlinky.roads.requestMod.default
 import typingsSlinky.roads.roadMod.ResponseMiddleware
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,7 +62,7 @@ object mod extends js.Object {
       * @param {HTMLElement} container_element - The element that will be filled with your roads output
       * @param {Window} window - The pages window object to help set page title and other items
       */
-    def this(road: typingsSlinky.roads.roadMod.default, container_element: HTMLElement, window: Window_) = this()
+    def this(road: typingsSlinky.roads.roadMod.default, container_element: HTMLElement, window: Window) = this()
   }
   
   def build(input_file: String, output_file: String, options: RoadsBuildOptions): Unit = js.native
@@ -81,7 +82,7 @@ object mod extends js.Object {
     @JSName("cookie")
     var cookie_Original: typingsSlinky.roads.roadMod.Middleware = js.native
     @JSName("cors")
-    var cors_Original: js.Function1[/* options */ AnonCacheMaxAge, typingsSlinky.roads.roadMod.Middleware] = js.native
+    var cors_Original: js.Function1[/* options */ CacheMaxAge, typingsSlinky.roads.roadMod.Middleware] = js.native
     @JSName("killSlash")
     var killSlash_Original: typingsSlinky.roads.roadMod.Middleware = js.native
     @JSName("parseBody")
@@ -102,7 +103,7 @@ object mod extends js.Object {
       headers: StringDictionary[js.Any],
       next: ResponseMiddleware
     ): js.Promise[typingsSlinky.roads.responseMod.default] = js.native
-    def cors(options: AnonCacheMaxAge): typingsSlinky.roads.roadMod.Middleware = js.native
+    def cors(options: CacheMaxAge): typingsSlinky.roads.roadMod.Middleware = js.native
     def killSlash(
       method: String,
       path: String,

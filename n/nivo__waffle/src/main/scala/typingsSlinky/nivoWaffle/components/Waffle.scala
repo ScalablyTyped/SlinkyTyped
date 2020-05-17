@@ -6,8 +6,8 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.canvas.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoColors.mod.InheritedColorProp
-import typingsSlinky.nivoCore.AnonDictkey
-import typingsSlinky.nivoCore.AnonId
+import typingsSlinky.nivoCore.anon.Dictkey
+import typingsSlinky.nivoCore.anon.Id
 import typingsSlinky.nivoCore.mod.Box
 import typingsSlinky.nivoCore.mod.Colors
 import typingsSlinky.nivoCore.mod.Dimensions
@@ -46,7 +46,7 @@ object Waffle {
     @scala.inline
     def colors(value: Colors): this.type = set("colors", value.asInstanceOf[js.Any])
     @scala.inline
-    def defs(value: js.Array[AnonDictkey]): this.type = set("defs", value.asInstanceOf[js.Any])
+    def defs(value: js.Array[Dictkey]): this.type = set("defs", value.asInstanceOf[js.Any])
     @scala.inline
     def emptyColor(value: String): this.type = set("emptyColor", value.asInstanceOf[js.Any])
     @scala.inline
@@ -54,7 +54,7 @@ object Waffle {
     @scala.inline
     def enableLabels(value: Boolean): this.type = set("enableLabels", value.asInstanceOf[js.Any])
     @scala.inline
-    def fill(value: js.Array[AnonId[WaffleDatum]]): this.type = set("fill", value.asInstanceOf[js.Any])
+    def fill(value: js.Array[Id[WaffleDatum]]): this.type = set("fill", value.asInstanceOf[js.Any])
     @scala.inline
     def fillDirection(value: WaffleFillDirection): this.type = set("fillDirection", value.asInstanceOf[js.Any])
     @scala.inline

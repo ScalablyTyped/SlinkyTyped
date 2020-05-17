@@ -14,7 +14,7 @@ import typingsSlinky.devextreme.devextremeStrings.slide
 import typingsSlinky.devextreme.devextremeStrings.top
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.event
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

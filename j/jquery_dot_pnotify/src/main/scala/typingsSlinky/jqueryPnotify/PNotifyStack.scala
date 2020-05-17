@@ -1,14 +1,14 @@
 package typingsSlinky.jqueryPnotify
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait PNotifyStack extends js.Object {
-  var context: js.UndefOr[JQuery_[HTMLElement]] = js.native
+  var context: js.UndefOr[JQuery[HTMLElement]] = js.native
   var dir1: js.UndefOr[String] = js.native
   var dir2: js.UndefOr[String] = js.native
   var firstpos1: js.UndefOr[Double] = js.native
@@ -32,7 +32,7 @@ object PNotifyStack {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContext(value: JQuery_[HTMLElement]): Self = {
+    def withContext(value: JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
         ret

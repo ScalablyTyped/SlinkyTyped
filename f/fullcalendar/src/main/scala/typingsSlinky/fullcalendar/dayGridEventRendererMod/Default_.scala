@@ -1,6 +1,6 @@
 package typingsSlinky.fullcalendar.dayGridEventRendererMod
 
-import typingsSlinky.fullcalendar.AnonCellMatrix
+import typingsSlinky.fullcalendar.anon.CellMatrix
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ class Default_ protected ()
   var rowStructs: js.Any = js.native
   def buildSegLevels(segs: js.Any): js.Array[_] = js.native
   def groupSegRows(segs: js.Any): js.Array[_] = js.native
-  def renderSegRow(row: js.Any, rowSegs: js.Any): AnonCellMatrix = js.native
+  def renderSegRow(row: js.Any, rowSegs: js.Any): CellMatrix = js.native
   def renderSegRows(segs: js.Any): js.Array[_] = js.native
   def unrenderFgSegs(): Unit = js.native
 }

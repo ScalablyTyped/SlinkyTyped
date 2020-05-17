@@ -1,6 +1,6 @@
 package typingsSlinky.connectHistoryApiFallback.mod
 
-import typingsSlinky.connectHistoryApiFallback.FnCall
+import typingsSlinky.connectHistoryApiFallback.anon.FnCall
 import typingsSlinky.connectHistoryApiFallback.connectHistoryApiFallbackBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`

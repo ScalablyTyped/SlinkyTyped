@@ -1,8 +1,8 @@
 package typingsSlinky.onfleetNodeOnfleet.workersMod
 
-import typingsSlinky.onfleetNodeOnfleet.AnonEntries
-import typingsSlinky.onfleetNodeOnfleet.AnonTasks
-import typingsSlinky.onfleetNodeOnfleet.AnonWorkers
+import typingsSlinky.onfleetNodeOnfleet.anon.Entries
+import typingsSlinky.onfleetNodeOnfleet.anon.Tasks
+import typingsSlinky.onfleetNodeOnfleet.anon.Workers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,10 +14,10 @@ trait Worker extends js.Object {
   def get(): js.Promise[js.Array[OnfleetWorker]] = js.native
   def get(id: String): js.Promise[OnfleetWorker] = js.native
   def get(id: String, query: GetWorkerQueryProps): js.Promise[OnfleetWorker] = js.native
-  def getByLocation(location: GetWorkerByLocationProps): js.Promise[AnonWorkers] = js.native
-  def getSchedule(id: String): js.Promise[AnonEntries] = js.native
-  def insertTask(id: String, obj: AnonTasks): js.Promise[OnfleetWorker] = js.native
-  def setSchedule(id: String, schedule: WorkerSchedule): js.Promise[AnonEntries] = js.native
+  def getByLocation(location: GetWorkerByLocationProps): js.Promise[Workers] = js.native
+  def getSchedule(id: String): js.Promise[Entries] = js.native
+  def insertTask(id: String, obj: Tasks): js.Promise[OnfleetWorker] = js.native
+  def setSchedule(id: String, schedule: WorkerSchedule): js.Promise[Entries] = js.native
   def update(id: String, worker: UpdateWorkerProps): js.Promise[OnfleetWorker] = js.native
 }
 

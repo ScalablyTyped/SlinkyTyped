@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.multipoint
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.point
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.polygon
@@ -201,8 +200,4 @@ trait StreamLayer
   def getFieldDomain(fieldName: String): Domain = js.native
   def getFieldDomain(fieldName: String, options: StreamLayerGetFieldDomainOptions): Domain = js.native
 }
-
-@JSGlobal("__esri.StreamLayer")
-@js.native
-object StreamLayer extends TopLevel[StreamLayerConstructor]
 

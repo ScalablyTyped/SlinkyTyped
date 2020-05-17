@@ -1,7 +1,7 @@
 package typingsSlinky.jqueryui.JQueryUI
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait DialogOptions extends DialogEvents {
   var appendTo: js.UndefOr[String] = js.native
   var autoOpen: js.UndefOr[Boolean] = js.native
   var buttons: js.UndefOr[
-    (StringDictionary[js.Function1[/* event */ js.UndefOr[Event_], Unit]]) | js.Array[DialogButtonOptions]
+    (StringDictionary[js.Function1[/* event */ js.UndefOr[Event], Unit]]) | js.Array[DialogButtonOptions]
   ] = js.native
   var classes: js.UndefOr[DialogClasses] = js.native
   var closeOnEscape: js.UndefOr[Boolean] = js.native
@@ -76,7 +76,7 @@ object DialogOptions {
     }
     @scala.inline
     def withButtons(
-      value: (StringDictionary[js.Function1[/* event */ js.UndefOr[Event_], Unit]]) | js.Array[DialogButtonOptions]
+      value: (StringDictionary[js.Function1[/* event */ js.UndefOr[Event], Unit]]) | js.Array[DialogButtonOptions]
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])

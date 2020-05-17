@@ -2,7 +2,7 @@ package typingsSlinky.primereact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonIndexItem
+import typingsSlinky.primereact.anon.IndexItem
 import typingsSlinky.primereact.menuItemMod.MenuItem
 import typingsSlinky.primereact.stepsMod.StepsProps
 import scala.scalajs.js
@@ -25,7 +25,7 @@ object Steps {
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
-    def onSelect(value: /* e */ AnonIndexItem => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    def onSelect(value: /* e */ IndexItem => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline
     def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
     @scala.inline

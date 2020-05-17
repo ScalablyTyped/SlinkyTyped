@@ -10,6 +10,6 @@ package object mod {
   // https://github.com/Microsoft/TypeScript/pull/17819#issuecomment-363636904
   type IErrorCallback = js.Function2[/* error */ js.Error | java.lang.String, /* response */ scala.Null, scala.Unit]
   // Form and data property has been written this way so they're mutually exclusive.
-  type IWithData[T /* <: js.Object */] = T with typingsSlinky.phin.AnonData
-  type IWithForm[T /* <: js.Object */] = T with typingsSlinky.phin.AnonForm
+  type IWithData[T /* <: js.Object */] = T with typingsSlinky.phin.anon.Data
+  type IWithForm[T /* <: js.Object */] = T with typingsSlinky.phin.anon.Form
 }

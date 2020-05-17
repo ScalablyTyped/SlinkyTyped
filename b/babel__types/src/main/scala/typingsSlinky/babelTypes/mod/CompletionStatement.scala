@@ -1,9 +1,5 @@
 package typingsSlinky.babelTypes.mod
 
-import typingsSlinky.babelTypes.babelTypesStrings.BreakStatement
-import typingsSlinky.babelTypes.babelTypesStrings.ContinueStatement
-import typingsSlinky.babelTypes.babelTypesStrings.ReturnStatement
-import typingsSlinky.babelTypes.babelTypesStrings.ThrowStatement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,32 +10,16 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.ReturnStatement_
   - typingsSlinky.babelTypes.mod.ThrowStatement_
 */
-trait CompletionStatement extends _Node
+trait CompletionStatement extends Node
 
 object CompletionStatement {
   @scala.inline
-  def BreakStatement_(`type`: BreakStatement): CompletionStatement = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CompletionStatement]
-  }
+  implicit def apply(value: BreakStatement_): CompletionStatement = value.asInstanceOf[CompletionStatement]
   @scala.inline
-  def ContinueStatement_(`type`: ContinueStatement): CompletionStatement = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CompletionStatement]
-  }
+  implicit def apply(value: ContinueStatement_): CompletionStatement = value.asInstanceOf[CompletionStatement]
   @scala.inline
-  def ReturnStatement_(`type`: ReturnStatement): CompletionStatement = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CompletionStatement]
-  }
+  implicit def apply(value: ReturnStatement_): CompletionStatement = value.asInstanceOf[CompletionStatement]
   @scala.inline
-  def ThrowStatement_(argument: Expression, `type`: ThrowStatement): CompletionStatement = {
-    val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CompletionStatement]
-  }
+  implicit def apply(value: ThrowStatement_): CompletionStatement = value.asInstanceOf[CompletionStatement]
 }
 

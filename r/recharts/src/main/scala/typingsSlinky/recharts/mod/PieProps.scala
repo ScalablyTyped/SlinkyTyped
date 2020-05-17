@@ -2,7 +2,7 @@ package typingsSlinky.recharts.mod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.recharts.AnonOffsetRadius
+import typingsSlinky.recharts.anon.OffsetRadius
 import typingsSlinky.recharts.rechartsNumbers.`100`
 import typingsSlinky.recharts.rechartsNumbers.`200`
 import typingsSlinky.recharts.rechartsNumbers.`300`
@@ -88,7 +88,7 @@ trait PieProps extends js.Object {
   var isAnimationActive: js.UndefOr[Boolean] = js.native
   var isUpdateAnimationActive: js.UndefOr[Boolean] = js.native
   var kerning: js.UndefOr[Double | String] = js.native
-  var label: js.UndefOr[AnonOffsetRadius | ReactElement | ContentRenderer[PieLabelRenderProps] | Boolean] = js.native
+  var label: js.UndefOr[OffsetRadius | ReactElement | ContentRenderer[PieLabelRenderProps] | Boolean] = js.native
   var labelLine: js.UndefOr[js.Object | (ContentRenderer[LineProps with js.Any]) | ReactElement | Boolean] = js.native
   var legendType: js.UndefOr[LegendType] = js.native
   var letterSpacing: js.UndefOr[String] = js.native
@@ -824,7 +824,7 @@ object PieProps {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonOffsetRadius | ReactElement | ContentRenderer[PieLabelRenderProps] | Boolean): Self = {
+    def withLabel(value: OffsetRadius | ReactElement | ContentRenderer[PieLabelRenderProps] | Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret

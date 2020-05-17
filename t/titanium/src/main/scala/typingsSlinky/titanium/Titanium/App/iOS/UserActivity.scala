@@ -11,9 +11,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * The UserActivity module is used to enable device Handoff and to create User Activities.
 			 */
-@JSGlobal("Titanium.App.iOS.UserActivity")
 @js.native
-class UserActivity () extends Proxy {
+trait UserActivity extends Proxy {
   /**
   				 * Name of the activity type.
   				 */

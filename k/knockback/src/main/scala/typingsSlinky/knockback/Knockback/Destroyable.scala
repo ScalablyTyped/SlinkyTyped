@@ -4,9 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Knockback.Destroyable")
 @js.native
-class Destroyable () extends js.Object {
+trait Destroyable extends js.Object {
   def destroy(): js.Any = js.native
+}
+
+object Destroyable {
+  @scala.inline
+  def apply(destroy: () => js.Any): Destroyable = {
+    val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy))
+    __obj.asInstanceOf[Destroyable]
+  }
+  @scala.inline
+  implicit class DestroyableOps[Self <: Destroyable] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestroy(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

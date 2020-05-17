@@ -1,9 +1,9 @@
 package typingsSlinky.jupyterlabCoreutils.tokensMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.jupyterlabCoreutils.AnonComposite
+import typingsSlinky.jupyterlabCoreutils.anon.Composite
+import typingsSlinky.jupyterlabCoreutils.anon.phaseinPhaseTransform
 import typingsSlinky.jupyterlabCoreutils.interfacesMod.IDataConnector
-import typingsSlinky.jupyterlabCoreutils.phaseinPhaseTransform
 import typingsSlinky.jupyterlabCoreutils.settingregistryMod.ISchemaValidator
 import typingsSlinky.jupyterlabCoreutils.tokensMod.ISettingRegistry.IPlugin
 import typingsSlinky.jupyterlabCoreutils.tokensMod.ISettingRegistry.ISchema
@@ -46,7 +46,7 @@ trait ISettingRegistry_ extends js.Object {
     *
     * @returns A promise that resolves when the setting is retrieved.
     */
-  def get(plugin: String, key: String): js.Promise[AnonComposite] = js.native
+  def get(plugin: String, key: String): js.Promise[Composite] = js.native
   /**
     * Load a plugin's settings into the setting registry.
     *
@@ -123,7 +123,7 @@ object ISettingRegistry_ {
   @scala.inline
   def apply(
     connector: IDataConnector[IPlugin, String, String],
-    get: (String, String) => js.Promise[AnonComposite],
+    get: (String, String) => js.Promise[Composite],
     load: String => js.Promise[ISettings],
     pluginChanged: ISignal[ISettingRegistry_, String],
     plugins: StringDictionary[IPlugin],
@@ -151,7 +151,7 @@ object ISettingRegistry_ {
         ret
     }
     @scala.inline
-    def withGet(value: (String, String) => js.Promise[AnonComposite]): Self = {
+    def withGet(value: (String, String) => js.Promise[Composite]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction2(value))
         ret

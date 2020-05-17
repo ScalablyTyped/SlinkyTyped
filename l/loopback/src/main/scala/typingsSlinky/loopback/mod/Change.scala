@@ -1,6 +1,6 @@
 package typingsSlinky.loopback.mod
 
-import typingsSlinky.loopback.AnonHashAlgorithm
+import typingsSlinky.loopback.anon.HashAlgorithm
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,7 +43,7 @@ class Change () extends PersistedModel {
     * However, if this setting is true, then errors will not throw exceptions.
     */
   @JSName("settings")
-  var settings_Change: AnonHashAlgorithm = js.native
+  var settings_Change: HashAlgorithm = js.native
   /**
     * Does this change conflict with the given change.
     * @param  {Change} change

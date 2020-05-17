@@ -1,5 +1,6 @@
 package typingsSlinky.firebaseDatabase
 
+import typingsSlinky.firebaseDatabase.anon.RepoInfo
 import typingsSlinky.firebaseDatabase.pathMod.Path
 import typingsSlinky.firebaseDatabase.pathMod.ValidationPath
 import scala.scalajs.js
@@ -39,7 +40,7 @@ object validationMod extends js.Object {
   def validatePriority(fnName: String, argumentNumber: Double, priority: js.Any, optional: Boolean): Unit = js.native
   def validateRootPathString(fnName: String, argumentNumber: Double, pathString: String, optional: Boolean): Unit = js.native
   def validateString(fnName: String, argumentNumber: Double, string: js.Any, optional: Boolean): Unit = js.native
-  def validateUrl(fnName: String, argumentNumber: Double, parsedUrl: AnonRepoInfo): Unit = js.native
+  def validateUrl(fnName: String, argumentNumber: Double, parsedUrl: RepoInfo): Unit = js.native
   def validateWritablePath(fnName: String, path: Path): Unit = js.native
 }
 

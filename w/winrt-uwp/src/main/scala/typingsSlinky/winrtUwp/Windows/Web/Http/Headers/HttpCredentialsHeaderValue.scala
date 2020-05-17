@@ -1,26 +1,13 @@
 package typingsSlinky.winrtUwp.Windows.Web.Http.Headers
 
-import typingsSlinky.winrtUwp.AnonCredentialsHeaderValue
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the value of the Authorization or Proxy-Authorization HTTP header on an HTTP request. */
-@JSGlobal("Windows.Web.Http.Headers.HttpCredentialsHeaderValue")
 @js.native
-class HttpCredentialsHeaderValue protected () extends js.Object {
-  /**
-    * Initializes a new instance of the HttpCredentialsHeaderValue class with the scheme to use for authentication.
-    * @param scheme The scheme to use for authentication.
-    */
-  def this(scheme: String) = this()
-  /**
-    * Initializes a new instance of the HttpCredentialsHeaderValue class with the scheme and user token information to use for authentication.
-    * @param scheme The scheme to use for authentication.
-    * @param token The user token information to use for authentication.
-    */
-  def this(scheme: String, token: String) = this()
+trait HttpCredentialsHeaderValue extends js.Object {
   /** Gets a set of name/value pairs included in the Authorization or Proxy-Authorization HTTP header. */
   var parameters: IVector[HttpNameValueHeaderValue] = js.native
   /** Gets the scheme to use for authentication. */
@@ -29,20 +16,37 @@ class HttpCredentialsHeaderValue protected () extends js.Object {
   var token: String = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Web.Http.Headers.HttpCredentialsHeaderValue")
-@js.native
-object HttpCredentialsHeaderValue extends js.Object {
-  /**
-    * Converts a string to an HttpCredentialsHeaderValue instance.
-    * @param input A string that represents the credential information in the Authorization or Proxy-Authorization HTTP header.
-    * @return An HttpCredentialsHeaderValue instance.
-    */
-  def parse(input: String): HttpCredentialsHeaderValue = js.native
-  /**
-    * Determines whether a string is valid HttpCredentialsHeaderValue information.
-    * @param input The string to validate.
-    */
-  def tryParse(input: String): AnonCredentialsHeaderValue = js.native
+object HttpCredentialsHeaderValue {
+  @scala.inline
+  def apply(parameters: IVector[HttpNameValueHeaderValue], scheme: String, token: String): HttpCredentialsHeaderValue = {
+    val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], scheme = scheme.asInstanceOf[js.Any], token = token.asInstanceOf[js.Any])
+    __obj.asInstanceOf[HttpCredentialsHeaderValue]
+  }
+  @scala.inline
+  implicit class HttpCredentialsHeaderValueOps[Self <: HttpCredentialsHeaderValue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParameters(value: IVector[HttpNameValueHeaderValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScheme(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scheme")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

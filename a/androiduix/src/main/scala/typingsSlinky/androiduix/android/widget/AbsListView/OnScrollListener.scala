@@ -15,11 +15,34 @@ trait OnScrollListener extends js.Object {
   def onScrollStateChanged(view: typingsSlinky.androiduix.android.widget.AbsListView, scrollState: Double): Unit = js.native
 }
 
-@JSGlobal("android.widget.AbsListView.OnScrollListener")
-@js.native
-object OnScrollListener extends js.Object {
-  var SCROLL_STATE_FLING: Double = js.native
-  var SCROLL_STATE_IDLE: Double = js.native
-  var SCROLL_STATE_TOUCH_SCROLL: Double = js.native
+object OnScrollListener {
+  @scala.inline
+  def apply(
+    onScroll: (typingsSlinky.androiduix.android.widget.AbsListView, Double, Double, Double) => Unit,
+    onScrollStateChanged: (typingsSlinky.androiduix.android.widget.AbsListView, Double) => Unit
+  ): OnScrollListener = {
+    val __obj = js.Dynamic.literal(onScroll = js.Any.fromFunction4(onScroll), onScrollStateChanged = js.Any.fromFunction2(onScrollStateChanged))
+    __obj.asInstanceOf[OnScrollListener]
+  }
+  @scala.inline
+  implicit class OnScrollListenerOps[Self <: OnScrollListener] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnScroll(value: (typingsSlinky.androiduix.android.widget.AbsListView, Double, Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withOnScrollStateChanged(value: (typingsSlinky.androiduix.android.widget.AbsListView, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onScrollStateChanged")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

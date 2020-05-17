@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides client functionality for the Change Element Properties dialog within the  ASPxHtmlEditor.
   */
-@JSGlobal("ASPxClientHtmlEditorChangeElementPropertiesDialog")
 @js.native
-class ASPxClientHtmlEditorChangeElementPropertiesDialog () extends ASPxClientHtmlEditorEditElementDialog {
+trait ASPxClientHtmlEditorChangeElementPropertiesDialog extends ASPxClientHtmlEditorEditElementDialog {
   /**
     * Provides access to the client object of the "Accept" text box in the Html Editor's "Change Element Properties" dialog.
     */
@@ -102,5 +101,194 @@ class ASPxClientHtmlEditorChangeElementPropertiesDialog () extends ASPxClientHtm
     * Provides access to the client ASPxComboBox object that allows you to specify the element width measurement unit in the Html Editor's "Change Element Properties" dialog.
     */
   def GetWidthValueTypeComboBox(): ASPxClientComboBox = js.native
+}
+
+object ASPxClientHtmlEditorChangeElementPropertiesDialog {
+  @scala.inline
+  def apply(
+    GetAcceptTextBox: () => ASPxClientTextBox,
+    GetActionTextBox: () => ASPxClientTextBox,
+    GetAltTextBox: () => ASPxClientTextBox,
+    GetBorderColorColorEdit: () => ASPxClientColorEdit,
+    GetBorderStyleComboBox: () => ASPxClientComboBox,
+    GetBorderWidthSpinEdit: () => ASPxClientSpinEdit,
+    GetBottomMarginTextBox: () => ASPxClientTextBox,
+    GetCancelButton: () => ASPxClientButton,
+    GetCheckedCheckBox: () => ASPxClientCheckBox,
+    GetCssClassNameComboBox: () => ASPxClientComboBox,
+    GetDirectionComboBox: () => ASPxClientComboBox,
+    GetDisabledCheckBox: () => ASPxClientCheckBox,
+    GetForTextBox: () => ASPxClientTextBox,
+    GetFormLayout: () => ASPxClientFormLayout,
+    GetHeightValueSpinEdit: () => ASPxClientSpinEdit,
+    GetHeightValueTypeComboBox: () => ASPxClientComboBox,
+    GetIdTextBox: () => ASPxClientTextBox,
+    GetInputTypeComboBox: () => ASPxClientComboBox,
+    GetLeftMarginTextBox: () => ASPxClientTextBox,
+    GetMaxLengthTextBox: () => ASPxClientTextBox,
+    GetMethodTextBox: () => ASPxClientTextBox,
+    GetNameTextBox: () => ASPxClientTextBox,
+    GetOkButton: () => ASPxClientButton,
+    GetReadonlyCheckBox: () => ASPxClientCheckBox,
+    GetRightMarginTextBox: () => ASPxClientTextBox,
+    GetSizeTextBox: () => ASPxClientTextBox,
+    GetSrcTextBox: () => ASPxClientTextBox,
+    GetStartSpinEdit: () => ASPxClientTextBox,
+    GetTabIndexTextBox: () => ASPxClientTextBox,
+    GetTitleTextBox: () => ASPxClientTextBox,
+    GetTopMarginTextBox: () => ASPxClientTextBox,
+    GetValueTextBox: () => ASPxClientTextBox,
+    GetWidthValueSpinEdit: () => ASPxClientSpinEdit,
+    GetWidthValueTypeComboBox: () => ASPxClientComboBox
+  ): ASPxClientHtmlEditorChangeElementPropertiesDialog = {
+    val __obj = js.Dynamic.literal(GetAcceptTextBox = js.Any.fromFunction0(GetAcceptTextBox), GetActionTextBox = js.Any.fromFunction0(GetActionTextBox), GetAltTextBox = js.Any.fromFunction0(GetAltTextBox), GetBorderColorColorEdit = js.Any.fromFunction0(GetBorderColorColorEdit), GetBorderStyleComboBox = js.Any.fromFunction0(GetBorderStyleComboBox), GetBorderWidthSpinEdit = js.Any.fromFunction0(GetBorderWidthSpinEdit), GetBottomMarginTextBox = js.Any.fromFunction0(GetBottomMarginTextBox), GetCancelButton = js.Any.fromFunction0(GetCancelButton), GetCheckedCheckBox = js.Any.fromFunction0(GetCheckedCheckBox), GetCssClassNameComboBox = js.Any.fromFunction0(GetCssClassNameComboBox), GetDirectionComboBox = js.Any.fromFunction0(GetDirectionComboBox), GetDisabledCheckBox = js.Any.fromFunction0(GetDisabledCheckBox), GetForTextBox = js.Any.fromFunction0(GetForTextBox), GetFormLayout = js.Any.fromFunction0(GetFormLayout), GetHeightValueSpinEdit = js.Any.fromFunction0(GetHeightValueSpinEdit), GetHeightValueTypeComboBox = js.Any.fromFunction0(GetHeightValueTypeComboBox), GetIdTextBox = js.Any.fromFunction0(GetIdTextBox), GetInputTypeComboBox = js.Any.fromFunction0(GetInputTypeComboBox), GetLeftMarginTextBox = js.Any.fromFunction0(GetLeftMarginTextBox), GetMaxLengthTextBox = js.Any.fromFunction0(GetMaxLengthTextBox), GetMethodTextBox = js.Any.fromFunction0(GetMethodTextBox), GetNameTextBox = js.Any.fromFunction0(GetNameTextBox), GetOkButton = js.Any.fromFunction0(GetOkButton), GetReadonlyCheckBox = js.Any.fromFunction0(GetReadonlyCheckBox), GetRightMarginTextBox = js.Any.fromFunction0(GetRightMarginTextBox), GetSizeTextBox = js.Any.fromFunction0(GetSizeTextBox), GetSrcTextBox = js.Any.fromFunction0(GetSrcTextBox), GetStartSpinEdit = js.Any.fromFunction0(GetStartSpinEdit), GetTabIndexTextBox = js.Any.fromFunction0(GetTabIndexTextBox), GetTitleTextBox = js.Any.fromFunction0(GetTitleTextBox), GetTopMarginTextBox = js.Any.fromFunction0(GetTopMarginTextBox), GetValueTextBox = js.Any.fromFunction0(GetValueTextBox), GetWidthValueSpinEdit = js.Any.fromFunction0(GetWidthValueSpinEdit), GetWidthValueTypeComboBox = js.Any.fromFunction0(GetWidthValueTypeComboBox))
+    __obj.asInstanceOf[ASPxClientHtmlEditorChangeElementPropertiesDialog]
+  }
+  @scala.inline
+  implicit class ASPxClientHtmlEditorChangeElementPropertiesDialogOps[Self <: ASPxClientHtmlEditorChangeElementPropertiesDialog] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetAcceptTextBox(value: () => ASPxClientTextBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetAcceptTextBox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetActionTextBox(value: () => ASPxClientTextBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetActionTextBox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetAltTextBox(value: () => ASPxClientTextBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetAltTextBox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetCheckedCheckBox(value: () => ASPxClientCheckBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetCheckedCheckBox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDirectionComboBox(value: () => ASPxClientComboBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetDirectionComboBox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDisabledCheckBox(value: () => ASPxClientCheckBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetDisabledCheckBox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetForTextBox(value: () => ASPxClientTextBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetForTextBox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetHeightValueSpinEdit(value: () => ASPxClientSpinEdit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetHeightValueSpinEdit")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetHeightValueTypeComboBox(value: () => ASPxClientComboBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetHeightValueTypeComboBox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetIdTextBox(value: () => ASPxClientTextBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetIdTextBox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetInputTypeComboBox(value: () => ASPxClientComboBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetInputTypeComboBox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMaxLengthTextBox(value: () => ASPxClientTextBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetMaxLengthTextBox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMethodTextBox(value: () => ASPxClientTextBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetMethodTextBox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetNameTextBox(value: () => ASPxClientTextBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetNameTextBox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetReadonlyCheckBox(value: () => ASPxClientCheckBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetReadonlyCheckBox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSizeTextBox(value: () => ASPxClientTextBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetSizeTextBox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSrcTextBox(value: () => ASPxClientTextBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetSrcTextBox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetStartSpinEdit(value: () => ASPxClientTextBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetStartSpinEdit")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetTabIndexTextBox(value: () => ASPxClientTextBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetTabIndexTextBox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetTitleTextBox(value: () => ASPxClientTextBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetTitleTextBox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetValueTextBox(value: () => ASPxClientTextBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetValueTextBox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetWidthValueSpinEdit(value: () => ASPxClientSpinEdit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetWidthValueSpinEdit")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetWidthValueTypeComboBox(value: () => ASPxClientComboBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetWidthValueTypeComboBox")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.graphql.definitionMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.graphql.GraphQLUnionTypeConfigany
+import typingsSlinky.graphql.anon.GraphQLUnionTypeConfigany
 import typingsSlinky.graphql.astMod.UnionTypeDefinitionNode
 import typingsSlinky.graphql.astMod.UnionTypeExtensionNode
 import typingsSlinky.graphql.maybeMod.Maybe
@@ -14,11 +14,11 @@ import scala.scalajs.js.annotation._
 @js.native
 class GraphQLUnionType protected ()
   extends GraphQLAbstractType
-     with _GraphQLCompositeType
-     with _GraphQLNamedType
-     with _GraphQLNullableType
-     with _GraphQLOutputType
-     with _GraphQLType {
+     with GraphQLCompositeType
+     with GraphQLNamedType
+     with GraphQLNullableType
+     with GraphQLOutputType
+     with GraphQLType {
   def this(config: GraphQLUnionTypeConfig[_, _]) = this()
   var astNode: Maybe[UnionTypeDefinitionNode] = js.native
   var description: Maybe[String] = js.native

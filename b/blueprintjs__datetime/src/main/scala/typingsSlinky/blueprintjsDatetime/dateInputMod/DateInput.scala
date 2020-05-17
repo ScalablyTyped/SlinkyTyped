@@ -1,7 +1,7 @@
 package typingsSlinky.blueprintjsDatetime.dateInputMod
 
 import typingsSlinky.blueprintjsCore.mod.AbstractPureComponent2
-import typingsSlinky.blueprintjsDatetime.PartialIDateInputProps
+import typingsSlinky.blueprintjsDatetime.anon.PartialIDateInputProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

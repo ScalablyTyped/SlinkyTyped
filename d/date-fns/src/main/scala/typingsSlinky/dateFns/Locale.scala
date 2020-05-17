@@ -1,5 +1,8 @@
 package typingsSlinky.dateFns
 
+import typingsSlinky.dateFns.anon.DateTime
+import typingsSlinky.dateFns.anon.Day
+import typingsSlinky.dateFns.anon.FirstWeekContainsDateWeekStartsOn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,11 +11,11 @@ import scala.scalajs.js.annotation._
 trait Locale extends js.Object {
   var code: js.UndefOr[String] = js.native
   var formatDistance: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
-  var formatLong: js.UndefOr[AnonDateTime] = js.native
+  var formatLong: js.UndefOr[DateTime] = js.native
   var formatRelative: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
-  var localize: js.UndefOr[AnonDay] = js.native
-  var `match`: js.UndefOr[AnonDay] = js.native
-  var options: js.UndefOr[AnonFirstWeekContainsDateWeekStartsOn] = js.native
+  var localize: js.UndefOr[Day] = js.native
+  var `match`: js.UndefOr[Day] = js.native
+  var options: js.UndefOr[FirstWeekContainsDateWeekStartsOn] = js.native
 }
 
 object Locale {
@@ -52,7 +55,7 @@ object Locale {
         ret
     }
     @scala.inline
-    def withFormatLong(value: AnonDateTime): Self = {
+    def withFormatLong(value: DateTime): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formatLong")(value.asInstanceOf[js.Any])
         ret
@@ -76,7 +79,7 @@ object Locale {
         ret
     }
     @scala.inline
-    def withLocalize(value: AnonDay): Self = {
+    def withLocalize(value: Day): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("localize")(value.asInstanceOf[js.Any])
         ret
@@ -88,7 +91,7 @@ object Locale {
         ret
     }
     @scala.inline
-    def withMatch(value: AnonDay): Self = {
+    def withMatch(value: Day): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("match")(value.asInstanceOf[js.Any])
         ret
@@ -100,7 +103,7 @@ object Locale {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonFirstWeekContainsDateWeekStartsOn): Self = {
+    def withOptions(value: FirstWeekContainsDateWeekStartsOn): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

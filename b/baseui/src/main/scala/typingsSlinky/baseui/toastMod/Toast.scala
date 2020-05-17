@@ -1,8 +1,8 @@
 package typingsSlinky.baseui.toastMod
 
-import typingsSlinky.baseui.ReadonlySharedStylePropsA
+import org.scalajs.dom.raw.Event
+import typingsSlinky.baseui.anon.ReadonlySharedStylePropsA
 import typingsSlinky.react.mod.Component
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,10 +16,10 @@ class Toast ()
   def clearTimeout(): Unit = js.native
   def dismiss(): Unit = js.native
   def getSharedProps(): ReadonlySharedStylePropsA = js.native
-  def onBlur(e: Event_): Unit = js.native
-  def onFocus(e: Event_): Unit = js.native
-  def onMouseEnter(e: Event_): Unit = js.native
-  def onMouseLeave(e: Event_): Unit = js.native
+  def onBlur(e: Event): Unit = js.native
+  def onFocus(e: Event): Unit = js.native
+  def onMouseEnter(e: Event): Unit = js.native
+  def onMouseLeave(e: Event): Unit = js.native
   def startTimeout(): Unit = js.native
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientSafebrowsing.gapi.client.safebrowsing
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientSafebrowsing.AnonAlt
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientSafebrowsing.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait FullHashesResource extends js.Object {
   /** Finds the full hashes that match the requested hash prefixes. */
-  def find(request: AnonAlt): Request_[FindFullHashesResponse] = js.native
+  def find(request: Alt): Request[FindFullHashesResponse] = js.native
 }
 
 object FullHashesResource {
   @scala.inline
-  def apply(find: AnonAlt => Request_[FindFullHashesResponse]): FullHashesResource = {
+  def apply(find: Alt => Request[FindFullHashesResponse]): FullHashesResource = {
     val __obj = js.Dynamic.literal(find = js.Any.fromFunction1(find))
     __obj.asInstanceOf[FullHashesResource]
   }
@@ -25,7 +25,7 @@ object FullHashesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFind(value: AnonAlt => Request_[FindFullHashesResponse]): Self = {
+    def withFind(value: Alt => Request[FindFullHashesResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("find")(js.Any.fromFunction1(value))
         ret

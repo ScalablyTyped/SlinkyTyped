@@ -1,7 +1,7 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

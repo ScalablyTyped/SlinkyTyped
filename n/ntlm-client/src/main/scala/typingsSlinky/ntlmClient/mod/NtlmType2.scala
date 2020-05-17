@@ -1,7 +1,6 @@
 package typingsSlinky.ntlmClient.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.ntlmClient.AnonBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,7 @@ trait NtlmType2 extends js.Object {
   var challenge: Buffer = js.native
   var encoding: String = js.native
   var flags: Double = js.native
-  var targetInfo: AnonBuffer = js.native
+  var targetInfo: typingsSlinky.ntlmClient.anon.Buffer = js.native
   var targetName: String = js.native
   var version: Double = js.native
 }
@@ -22,7 +21,7 @@ object NtlmType2 {
     challenge: Buffer,
     encoding: String,
     flags: Double,
-    targetInfo: AnonBuffer,
+    targetInfo: typingsSlinky.ntlmClient.anon.Buffer,
     targetName: String,
     version: Double
   ): NtlmType2 = {
@@ -54,7 +53,7 @@ object NtlmType2 {
         ret
     }
     @scala.inline
-    def withTargetInfo(value: AnonBuffer): Self = {
+    def withTargetInfo(value: typingsSlinky.ntlmClient.anon.Buffer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("targetInfo")(value.asInstanceOf[js.Any])
         ret

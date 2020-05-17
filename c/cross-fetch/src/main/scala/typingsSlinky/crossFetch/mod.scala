@@ -2,9 +2,12 @@ package typingsSlinky.crossFetch
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
+import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.experimental.ResponseInit
+import typingsSlinky.crossFetch.anon.Error
+import typingsSlinky.crossFetch.anon.Instantiable
+import typingsSlinky.crossFetch.anon.InstantiableHeaders
 import typingsSlinky.std.BodyInit
 import typingsSlinky.std.HeadersInit
 import typingsSlinky.std.RequestInfo
@@ -38,31 +41,17 @@ object mod extends js.Object {
   
   @js.native
   object Headers
-    extends Instantiable0[org.scalajs.dom.experimental.Headers]
-       with Instantiable1[/* init */ HeadersInit, org.scalajs.dom.experimental.Headers]
+    extends TopLevel[InstantiableHeaders with Instantiable0[typingsSlinky.std.global.Headers]]
   
   @js.native
   object Request
-    extends Instantiable1[/* input */ RequestInfo, org.scalajs.dom.experimental.Request]
-       with Instantiable2[
-          /* input */ RequestInfo, 
-          /* init */ RequestInit, 
-          org.scalajs.dom.experimental.Request
+    extends TopLevel[
+          Instantiable with (Instantiable1[/* input */ RequestInfo, typingsSlinky.std.global.Request])
         ]
   
   @js.native
   object Response
-    extends Instantiable0[org.scalajs.dom.experimental.Response]
-       with Instantiable1[/* body */ BodyInit, org.scalajs.dom.experimental.Response]
-       with Instantiable2[
-          (/* body */ BodyInit) | (/* body */ Null), 
-          /* init */ ResponseInit, 
-          org.scalajs.dom.experimental.Response
-        ] {
-    def error(): org.scalajs.dom.experimental.Response = js.native
-    def redirect(url: String): org.scalajs.dom.experimental.Response = js.native
-    def redirect(url: String, status: Double): org.scalajs.dom.experimental.Response = js.native
-  }
+    extends TopLevel[Error with Instantiable0[typingsSlinky.std.global.Response]]
   
   @js.native
   object default extends js.Object {

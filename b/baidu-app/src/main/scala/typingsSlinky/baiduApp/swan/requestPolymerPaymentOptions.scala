@@ -1,6 +1,5 @@
 package typingsSlinky.baiduApp.swan
 
-import typingsSlinky.baiduApp.AnonAuthSetting
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +22,7 @@ trait requestPolymerPaymentOptions
   var orderInfo: orderInfoOptions = js.native
    // 需要隐藏的支付方式
   @JSName("success")
-  var success_requestPolymerPaymentOptions: js.UndefOr[js.Function1[/* res */ AnonAuthSetting, Unit]] = js.native
+  var success_requestPolymerPaymentOptions: js.UndefOr[js.Function1[/* res */ typingsSlinky.baiduApp.anon.AuthSetting, Unit]] = js.native
 }
 
 object requestPolymerPaymentOptions {
@@ -57,7 +56,7 @@ object requestPolymerPaymentOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonAuthSetting => Unit): Self = {
+    def withSuccess(value: /* res */ typingsSlinky.baiduApp.anon.AuthSetting => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

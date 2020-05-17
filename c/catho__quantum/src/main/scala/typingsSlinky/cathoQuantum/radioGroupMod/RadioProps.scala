@@ -1,7 +1,7 @@
 package typingsSlinky.cathoQuantum.radioGroupMod
 
 import org.scalajs.dom.raw.HTMLInputElement
-import typingsSlinky.cathoQuantum.AnonColorsSpacing
+import typingsSlinky.cathoQuantum.anon.ColorsSpacing
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.ChangeEventHandler
 import scala.scalajs.js
@@ -15,7 +15,7 @@ trait RadioProps extends js.Object {
   var error: js.UndefOr[Boolean] = js.native
   var label: js.UndefOr[String] = js.native
   var onChange: js.UndefOr[ChangeEventHandler[HTMLInputElement]] = js.native
-  var theme: js.UndefOr[AnonColorsSpacing] = js.native
+  var theme: js.UndefOr[ColorsSpacing] = js.native
   var value: String = js.native
 }
 
@@ -98,7 +98,7 @@ object RadioProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonColorsSpacing): Self = {
+    def withTheme(value: ColorsSpacing): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

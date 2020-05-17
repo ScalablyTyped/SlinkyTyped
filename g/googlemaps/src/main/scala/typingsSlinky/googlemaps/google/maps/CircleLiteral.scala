@@ -1,6 +1,6 @@
 package typingsSlinky.googlemaps.google.maps
 
-import typingsSlinky.googlemaps.google.maps.places._LocationBias
+import typingsSlinky.googlemaps.google.maps.places.LocationBias
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CircleLiteral
   extends CircleOptions
-     with _LocationBias
+     with LocationBias
 
 object CircleLiteral {
   @scala.inline

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TimelineMarginOption extends js.Object {
+trait TimelineMarginOption extends TimelineOptionsMarginType {
   var axis: js.UndefOr[Double] = js.native
   var item: js.UndefOr[TimelineMarginItemType] = js.native
 }

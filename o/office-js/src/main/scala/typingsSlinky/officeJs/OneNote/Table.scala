@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.OneNote
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJs.OneNote.Interfaces.TableData
 import typingsSlinky.officeJs.OneNote.Interfaces.TableLoadOptions
 import typingsSlinky.officeJs.OneNote.Interfaces.TableUpdateData
+import typingsSlinky.officeJs.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: OneNoteApi 1.1]
   */
-@JSGlobal("OneNote.Table")
 @js.native
-class Table () extends ClientObject {
+trait Table extends ClientObject {
   /**
     *
     * Gets or sets whether the borders are visible or not. True if they are visible, false if they are hidden.
@@ -141,8 +140,8 @@ class Table () extends ClientObject {
   def load(): Table = js.native
   def load(option: String): Table = js.native
   def load(option: js.Array[String]): Table = js.native
-  def load(option: AnonExpand): Table = js.native
   def load(option: TableLoadOptions): Table = js.native
+  def load(option: Expand): Table = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.
     *
     * @remarks

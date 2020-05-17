@@ -1,9 +1,9 @@
 package typingsSlinky.rollup.mod
 
 import typingsSlinky.estree.mod.Node
-import typingsSlinky.rollup.AnonAssetFileName
-import typingsSlinky.rollup.AnonAssetReferenceId
-import typingsSlinky.rollup.AnonCode
+import typingsSlinky.rollup.anon.AssetFileName
+import typingsSlinky.rollup.anon.AssetReferenceId
+import typingsSlinky.rollup.anon.Code
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,19 +32,19 @@ trait OutputPluginHooks extends js.Object {
   /** @deprecated Use `writeBundle` instead */
   def onwrite(options: OnWriteOptions, chunk: OutputChunk): Unit | js.Promise[Unit] = js.native
   def outputOptions(options: OutputOptions): js.UndefOr[OutputOptions | Null] = js.native
-  def renderChunk(code: String, chunk: RenderedChunk, options: OutputOptions): (js.Promise[AnonCode | Null]) | AnonCode | String | Null = js.native
+  def renderChunk(code: String, chunk: RenderedChunk, options: OutputOptions): (js.Promise[Code | Null]) | Code | String | Null = js.native
   def renderError(): js.Promise[Unit] | Unit = js.native
   def renderError(err: js.Error): js.Promise[Unit] | Unit = js.native
   def renderStart(outputOptions: OutputOptions, inputOptions: InputOptions): js.Promise[Unit] | Unit = js.native
   /** @deprecated Use `resolveFileUrl` instead */
-  def resolveAssetUrl(options: AnonAssetFileName): js.UndefOr[String | Null] = js.native
+  def resolveAssetUrl(options: AssetFileName): js.UndefOr[String | Null] = js.native
   def resolveDynamicImport(specifier: String, importer: String): js.Promise[ResolveIdResult] | ResolveIdResult = js.native
   def resolveDynamicImport(specifier: Node, importer: String): js.Promise[ResolveIdResult] | ResolveIdResult = js.native
-  def resolveFileUrl(options: AnonAssetReferenceId): js.UndefOr[String | Null] = js.native
+  def resolveFileUrl(options: AssetReferenceId): js.UndefOr[String | Null] = js.native
   /** @deprecated Use `renderChunk` instead */
-  def transformBundle(code: String, options: OutputOptions): js.UndefOr[(js.Promise[js.UndefOr[AnonCode | Null]]) | AnonCode | Null] = js.native
+  def transformBundle(code: String, options: OutputOptions): js.UndefOr[(js.Promise[js.UndefOr[Code | Null]]) | Code | Null] = js.native
   /** @deprecated Use `renderChunk` instead */
-  def transformChunk(code: String, options: OutputOptions): js.UndefOr[(js.Promise[js.UndefOr[AnonCode | Null]]) | AnonCode | Null] = js.native
+  def transformChunk(code: String, options: OutputOptions): js.UndefOr[(js.Promise[js.UndefOr[Code | Null]]) | Code | Null] = js.native
   def writeBundle(bundle: OutputBundle): Unit | js.Promise[Unit] = js.native
 }
 

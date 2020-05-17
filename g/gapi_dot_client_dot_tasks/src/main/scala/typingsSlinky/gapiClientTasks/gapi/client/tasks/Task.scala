@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientTasks.gapi.client.tasks
 
-import typingsSlinky.gapiClientTasks.AnonDescription
+import typingsSlinky.gapiClientTasks.anon.Description
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +28,7 @@ trait Task extends js.Object {
   /** Type of the resource. This is always "tasks#task". */
   var kind: js.UndefOr[String] = js.native
   /** Collection of links. This collection is read-only. */
-  var links: js.UndefOr[js.Array[AnonDescription]] = js.native
+  var links: js.UndefOr[js.Array[Description]] = js.native
   /** Notes describing the task. Optional. */
   var notes: js.UndefOr[String] = js.native
   /**
@@ -149,7 +149,7 @@ object Task {
         ret
     }
     @scala.inline
-    def withLinks(value: js.Array[AnonDescription]): Self = {
+    def withLinks(value: js.Array[Description]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
         ret

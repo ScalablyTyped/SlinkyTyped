@@ -1,6 +1,6 @@
 package typingsSlinky.orientjs.mod
 
-import typingsSlinky.orientjs.AnonFields
+import typingsSlinky.orientjs.anon.Fields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PropertyUpdateConfig extends js.Object {
   var collate: js.UndefOr[String] = js.native
-  var custom: js.UndefOr[AnonFields] = js.native
+  var custom: js.UndefOr[Fields] = js.native
   var default: js.UndefOr[js.Any] = js.native
   var linkedClass: js.UndefOr[String] = js.native
   var linkedType: js.UndefOr[String] = js.native
@@ -60,7 +60,7 @@ object PropertyUpdateConfig {
         ret
     }
     @scala.inline
-    def withCustom(value: AnonFields): Self = {
+    def withCustom(value: Fields): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(value.asInstanceOf[js.Any])
         ret

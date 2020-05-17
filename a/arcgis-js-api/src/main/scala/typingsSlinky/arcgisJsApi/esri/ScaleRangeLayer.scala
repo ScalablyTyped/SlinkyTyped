@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +24,31 @@ trait ScaleRangeLayer extends js.Object {
   var minScale: Double = js.native
 }
 
-@JSGlobal("__esri.ScaleRangeLayer")
-@js.native
-object ScaleRangeLayer extends TopLevel[ScaleRangeLayerConstructor]
+object ScaleRangeLayer {
+  @scala.inline
+  def apply(maxScale: Double, minScale: Double): ScaleRangeLayer = {
+    val __obj = js.Dynamic.literal(maxScale = maxScale.asInstanceOf[js.Any], minScale = minScale.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ScaleRangeLayer]
+  }
+  @scala.inline
+  implicit class ScaleRangeLayerOps[Self <: ScaleRangeLayer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

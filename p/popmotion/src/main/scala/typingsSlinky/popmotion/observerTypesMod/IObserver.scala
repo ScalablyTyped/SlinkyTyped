@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IObserver extends _ObserverCandidate {
+trait IObserver extends ObserverCandidate {
   @JSName("complete")
   var complete_Original: Complete = js.native
   @JSName("error")

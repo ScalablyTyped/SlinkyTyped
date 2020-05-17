@@ -1,0 +1,48 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.ucb
+
+import typingsSlinky.activexLibreoffice.com_.sun.star.beans.Property
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * The argument for the "addProperty" command.
+  * @see XCommandProcessor
+  * @since Apache OpenOffice 4.0, LibreOffice 4.2
+  */
+@js.native
+trait PropertyCommandArgument extends js.Object {
+  /** The default value of the property. */
+  var DefaultValue: js.Any = js.native
+  /** The property that the command has to add. */
+  var Property: typingsSlinky.activexLibreoffice.com_.sun.star.beans.Property = js.native
+}
+
+object PropertyCommandArgument {
+  @scala.inline
+  def apply(DefaultValue: js.Any, Property: Property): PropertyCommandArgument = {
+    val __obj = js.Dynamic.literal(DefaultValue = DefaultValue.asInstanceOf[js.Any], Property = Property.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PropertyCommandArgument]
+  }
+  @scala.inline
+  implicit class PropertyCommandArgumentOps[Self <: PropertyCommandArgument] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProperty(value: Property): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Property")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

@@ -1,8 +1,12 @@
 package typingsSlinky.formik
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import slinky.core.ReactComponentClass
+import typingsSlinky.formik.anon.EnableReinitialize
+import typingsSlinky.formik.anon.FormikFormikContext
+import typingsSlinky.formik.anon.PickFormHTMLAttributesHTM
 import typingsSlinky.formik.errorMessageMod.ErrorMessageProps
 import typingsSlinky.formik.fieldArrayMod.FieldArrayConfig
 import typingsSlinky.formik.typesMod.FormikConfig
@@ -14,7 +18,6 @@ import typingsSlinky.formik.withFormikMod.ComponentDecorator
 import typingsSlinky.formik.withFormikMod.WithFormikConfig
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.ProviderProps
-import typingsSlinky.std.Document_
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -65,9 +68,9 @@ object mod extends js.Object {
   }
   
   /* import warning: parser.TsParser#tsDeclVar Dropped IArray(FormikConsumer) */ val FormikProvider: ReactComponentClass[ProviderProps[FormikContext[js.Any]]] = js.native
-  def connect[OuterProps, Values](Comp: ReactComponentClass[OuterProps with AnonFormikFormikContext[Values]]): ReactComponentClass[OuterProps] = js.native
+  def connect[OuterProps, Values](Comp: ReactComponentClass[OuterProps with FormikFormikContext[Values]]): ReactComponentClass[OuterProps] = js.native
   def getActiveElement(): Element | Null = js.native
-  def getActiveElement(doc: Document_): Element | Null = js.native
+  def getActiveElement(doc: Document): Element | Null = js.native
   def getIn(obj: js.Any, key: String): js.Any = js.native
   def getIn(obj: js.Any, key: String, `def`: js.Any): js.Any = js.native
   def getIn(obj: js.Any, key: String, `def`: js.Any, p: Double): js.Any = js.native
@@ -116,7 +119,7 @@ object mod extends js.Object {
   /* static members */
   @js.native
   object Formik extends js.Object {
-    var defaultProps: AnonEnableReinitialize = js.native
+    var defaultProps: EnableReinitialize = js.native
   }
   
 }

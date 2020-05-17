@@ -1,6 +1,6 @@
 package typingsSlinky.openpgp.mod
 
-import typingsSlinky.openpgp.AnonValid
+import typingsSlinky.openpgp.anon.Valid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait DecryptResult extends js.Object {
   var data: String | (ReadableStream[String | js.typedarray.Uint8Array]) | NodeStream | js.typedarray.Uint8Array = js.native
   var filename: String = js.native
-  var signatures: js.Array[AnonValid] = js.native
+  var signatures: js.Array[Valid] = js.native
 }
 
 object DecryptResult {
@@ -17,7 +17,7 @@ object DecryptResult {
   def apply(
     data: String | (ReadableStream[String | js.typedarray.Uint8Array]) | NodeStream | js.typedarray.Uint8Array,
     filename: String,
-    signatures: js.Array[AnonValid]
+    signatures: js.Array[Valid]
   ): DecryptResult = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], filename = filename.asInstanceOf[js.Any], signatures = signatures.asInstanceOf[js.Any])
     __obj.asInstanceOf[DecryptResult]
@@ -49,7 +49,7 @@ object DecryptResult {
         ret
     }
     @scala.inline
-    def withSignatures(value: js.Array[AnonValid]): Self = {
+    def withSignatures(value: js.Array[Valid]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("signatures")(value.asInstanceOf[js.Any])
         ret

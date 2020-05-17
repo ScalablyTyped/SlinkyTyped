@@ -1,6 +1,12 @@
 package typingsSlinky.reactAce
 
 import typingsSlinky.reactAce.aceMod.IAceEditorProps
+import typingsSlinky.reactAce.anon.PartialIAceEditorProps
+import typingsSlinky.reactAce.anon.PartialIDiffEditorProps
+import typingsSlinky.reactAce.anon.PartialISplitEditorProps
+import typingsSlinky.reactAce.anon.ValidationMapIAceEditorPr
+import typingsSlinky.reactAce.anon.ValidationMapIDiffEditorP
+import typingsSlinky.reactAce.anon.ValidationMapISplitEditor
 import typingsSlinky.reactAce.diffMod.IDiffEditorProps
 import typingsSlinky.reactAce.splitMod.ISplitEditorProps
 import scala.scalajs.js

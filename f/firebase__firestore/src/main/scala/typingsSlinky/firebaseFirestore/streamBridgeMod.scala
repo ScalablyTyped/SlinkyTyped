@@ -1,5 +1,6 @@
 package typingsSlinky.firebaseFirestore
 
+import typingsSlinky.firebaseFirestore.anon.CloseFn
 import typingsSlinky.firebaseFirestore.connectionMod.Stream
 import typingsSlinky.firebaseFirestore.errorMod.FirestoreError
 import scala.scalajs.js
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation._
 object streamBridgeMod extends js.Object {
   @js.native
   class StreamBridge[I, O] protected () extends Stream[I, O] {
-    def this(args: AnonCloseFn[I]) = this()
+    def this(args: CloseFn[I]) = this()
     var closeFn: js.Any = js.native
     var sendFn: js.Any = js.native
     var wrappedOnClose: js.Any = js.native

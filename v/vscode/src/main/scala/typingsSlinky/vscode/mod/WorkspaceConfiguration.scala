@@ -1,8 +1,8 @@
 package typingsSlinky.vscode.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.vscode.AnonDefaultLanguageValue
 import typingsSlinky.vscode.Thenable
+import typingsSlinky.vscode.anon.DefaultLanguageValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,7 +49,7 @@ trait WorkspaceConfiguration
   		 * @param section Configuration name, supports _dotted_ names.
   		 * @return Information about a configuration setting or `undefined`.
   		 */
-  def inspect[T](section: String): js.UndefOr[AnonDefaultLanguageValue[T]] = js.native
+  def inspect[T](section: String): js.UndefOr[DefaultLanguageValue[T]] = js.native
   /**
   		 * Update a configuration value. The updated configuration values are persisted.
   		 *

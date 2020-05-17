@@ -2,7 +2,7 @@ package typingsSlinky.antDesignReactNative.accordionMod
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
-import typingsSlinky.antDesignReactNative.PartialAccordionStyle
+import typingsSlinky.antDesignReactNative.anon.PartialAccordionStyle
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.bottom
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.center
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.top

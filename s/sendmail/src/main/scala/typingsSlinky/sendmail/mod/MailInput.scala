@@ -1,13 +1,13 @@
 package typingsSlinky.sendmail.mod
 
-import typingsSlinky.sendmail.AnonContent
+import typingsSlinky.sendmail.anon.Content
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait MailInput extends js.Object {
-  var attachments: js.UndefOr[js.Array[AnonContent]] = js.native
+  var attachments: js.UndefOr[js.Array[Content]] = js.native
   var bcc: js.UndefOr[String] = js.native
   var cc: js.UndefOr[String] = js.native
   var charset: js.UndefOr[String] = js.native
@@ -55,7 +55,7 @@ object MailInput {
         ret
     }
     @scala.inline
-    def withAttachments(value: js.Array[AnonContent]): Self = {
+    def withAttachments(value: js.Array[Content]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(value.asInstanceOf[js.Any])
         ret

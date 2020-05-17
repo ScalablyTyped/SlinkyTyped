@@ -1,7 +1,7 @@
 package typingsSlinky.weixinApp.wx
 
-import typingsSlinky.weixinApp.AnonAppId
-import typingsSlinky.weixinApp.AnonVersion
+import typingsSlinky.weixinApp.anon.AppId
+import typingsSlinky.weixinApp.anon.Version
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,14 +11,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AccountInfo extends js.Object {
   /* 小程序账号信息 */
-  var miniProgram: AnonAppId = js.native
+  var miniProgram: AppId = js.native
   /* 插件账号信息（仅在插件中调用时包含这一项）	 */
-  var plugin: js.UndefOr[AnonVersion] = js.native
+  var plugin: js.UndefOr[Version] = js.native
 }
 
 object AccountInfo {
   @scala.inline
-  def apply(miniProgram: AnonAppId): AccountInfo = {
+  def apply(miniProgram: AppId): AccountInfo = {
     val __obj = js.Dynamic.literal(miniProgram = miniProgram.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountInfo]
   }
@@ -29,13 +29,13 @@ object AccountInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMiniProgram(value: AnonAppId): Self = {
+    def withMiniProgram(value: AppId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("miniProgram")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPlugin(value: AnonVersion): Self = {
+    def withPlugin(value: Version): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("plugin")(value.asInstanceOf[js.Any])
         ret

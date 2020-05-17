@@ -53,10 +53,8 @@ import scala.scalajs.js.annotation._
   * @property {pc.Model} model The model that is added to the scene graph for the mesh collision
   * volume.
   */
-@JSGlobal("pc.CollisionComponent")
 @js.native
-class CollisionComponent protected () extends Component {
-  def this(system: CollisionComponentSystem, entity: Entity) = this()
+trait CollisionComponent extends Component {
   /**
     * The asset for the model of the mesh collision volume - can also be
     * an asset id. Defaults to null.

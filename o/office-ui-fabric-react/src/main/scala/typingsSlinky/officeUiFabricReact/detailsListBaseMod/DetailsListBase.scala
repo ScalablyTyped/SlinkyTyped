@@ -1,7 +1,7 @@
 package typingsSlinky.officeUiFabricReact.detailsListBaseMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.officeUiFabricReact.AnonCheckboxVisibility
+import typingsSlinky.officeUiFabricReact.anon.CheckboxVisibility
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IDetailsList
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IDetailsListProps
 import typingsSlinky.officeUiFabricReact.detailsRowTypesMod.IDetailsRowProps
@@ -102,6 +102,6 @@ class DetailsListBase protected ()
 @JSImport("office-ui-fabric-react/lib/components/DetailsList/DetailsList.base", "DetailsListBase")
 @js.native
 object DetailsListBase extends js.Object {
-  var defaultProps: AnonCheckboxVisibility = js.native
+  var defaultProps: CheckboxVisibility = js.native
 }
 

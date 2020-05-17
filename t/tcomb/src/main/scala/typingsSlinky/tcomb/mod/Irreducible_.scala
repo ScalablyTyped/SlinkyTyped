@@ -1,6 +1,6 @@
 package typingsSlinky.tcomb.mod
 
-import typingsSlinky.tcomb.AnonKind
+import typingsSlinky.tcomb.anon.Kind
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +11,6 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Irreducible_[T] extends Type[T] {
   @JSName("meta")
-  var meta_Irreducible_ : AnonKind[T] = js.native
+  var meta_Irreducible_ : Kind[T] = js.native
 }
 

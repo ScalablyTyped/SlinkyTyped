@@ -1,0 +1,33 @@
+package typingsSlinky.rcFieldForm.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait MismatchString extends js.Object {
+  var mismatch: String = js.native
+}
+
+object MismatchString {
+  @scala.inline
+  def apply(mismatch: String): MismatchString = {
+    val __obj = js.Dynamic.literal(mismatch = mismatch.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MismatchString]
+  }
+  @scala.inline
+  implicit class MismatchStringOps[Self <: MismatchString] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMismatch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mismatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

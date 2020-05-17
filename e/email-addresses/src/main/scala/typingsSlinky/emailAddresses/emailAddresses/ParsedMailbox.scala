@@ -1,6 +1,6 @@
 package typingsSlinky.emailAddresses.emailAddresses
 
-import typingsSlinky.emailAddresses.AnonAddress
+import typingsSlinky.emailAddresses.anon.Address
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,13 +12,13 @@ trait ParsedMailbox extends js.Object {
   var local: String = js.native
   var name: String = js.native
   var node: js.UndefOr[ASTNode] = js.native
-  var parts: AnonAddress = js.native
+  var parts: Address = js.native
   var `type`: String = js.native
 }
 
 object ParsedMailbox {
   @scala.inline
-  def apply(address: String, domain: String, local: String, name: String, parts: AnonAddress, `type`: String): ParsedMailbox = {
+  def apply(address: String, domain: String, local: String, name: String, parts: Address, `type`: String): ParsedMailbox = {
     val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], domain = domain.asInstanceOf[js.Any], local = local.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parts = parts.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParsedMailbox]
@@ -54,7 +54,7 @@ object ParsedMailbox {
         ret
     }
     @scala.inline
-    def withParts(value: AnonAddress): Self = {
+    def withParts(value: Address): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parts")(value.asInstanceOf[js.Any])
         ret

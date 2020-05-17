@@ -1,5 +1,6 @@
 package typingsSlinky.reduxSagaCore.typesMod
 
+import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object eventChannel extends js.Object {
   def apply[T](subscribe: Subscribe[T]): EventChannel_[T] = js.native
-  def apply[T](subscribe: Subscribe[T], buffer: typingsSlinky.node.Buffer): EventChannel_[T] = js.native
+  def apply[T](subscribe: Subscribe[T], buffer: Buffer): EventChannel_[T] = js.native
 }
 

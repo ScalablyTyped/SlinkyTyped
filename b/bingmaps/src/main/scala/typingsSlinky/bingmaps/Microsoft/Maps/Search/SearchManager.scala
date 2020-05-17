@@ -1,19 +1,11 @@
 package typingsSlinky.bingmaps.Microsoft.Maps.Search
 
-import typingsSlinky.bingmaps.Microsoft.Maps.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Microsoft.Maps.Search.SearchManager")
 @js.native
-class SearchManager protected () extends js.Object {
-  /**
-    * @constructor
-    * @requires The Microsoft.Maps.Search module.
-    * @param map A Map object
-    */
-  def this(map: Map) = this()
+trait SearchManager extends js.Object {
   /**
     * Matches the address or place query in the specified request 
     * options to a location and returns the results to the request 
@@ -27,5 +19,33 @@ class SearchManager protected () extends js.Object {
     * @param request Options for sending reverse geocode request
     */
   def reverseGeocode(request: ReverseGeocodeRequestOptions): Unit = js.native
+}
+
+object SearchManager {
+  @scala.inline
+  def apply(geocode: IGeocodeRequestOptions => Unit, reverseGeocode: ReverseGeocodeRequestOptions => Unit): SearchManager = {
+    val __obj = js.Dynamic.literal(geocode = js.Any.fromFunction1(geocode), reverseGeocode = js.Any.fromFunction1(reverseGeocode))
+    __obj.asInstanceOf[SearchManager]
+  }
+  @scala.inline
+  implicit class SearchManagerOps[Self <: SearchManager] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGeocode(value: IGeocodeRequestOptions => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geocode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withReverseGeocode(value: ReverseGeocodeRequestOptions => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverseGeocode")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

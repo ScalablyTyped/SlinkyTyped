@@ -1,6 +1,6 @@
 package typingsSlinky.evernote.mod.NoteStore
 
-import typingsSlinky.evernote.AnonIncludeExpunged
+import typingsSlinky.evernote.anon.IncludeExpunged
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("evernote", "NoteStore.SyncChunkFilter")
 @js.native
 class SyncChunkFilter () extends js.Object {
-  def this(args: AnonIncludeExpunged) = this()
+  def this(args: IncludeExpunged) = this()
   var includeExpunged: js.UndefOr[Boolean] = js.native
   var includeLinkedNotebooks: js.UndefOr[Boolean] = js.native
   var includeNoteApplicationDataFullMap: js.UndefOr[Boolean] = js.native

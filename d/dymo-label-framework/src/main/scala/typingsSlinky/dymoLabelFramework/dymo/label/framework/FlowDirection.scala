@@ -1,6 +1,5 @@
 package typingsSlinky.dymoLabelFramework.dymo.label.framework
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,14 +21,6 @@ object FlowDirection extends js.Object {
   /** Indicates that the content flows from right to left. */
   @js.native
   sealed trait RightToLeft extends FlowDirection
-  
-  @JSBracketAccess
-  def apply(value: Double): js.UndefOr[FlowDirection with Double] = js.native
-  /* 0 */ @js.native
-  object LeftToRight extends TopLevel[LeftToRight with Double]
-  
-  /* 1 */ @js.native
-  object RightToLeft extends TopLevel[RightToLeft with Double]
   
 }
 

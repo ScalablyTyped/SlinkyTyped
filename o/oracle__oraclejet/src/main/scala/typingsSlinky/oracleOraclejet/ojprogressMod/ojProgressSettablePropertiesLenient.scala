@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojprogressMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonAriaIndeterminateProgressText
+import typingsSlinky.oracleOraclejet.anon.AriaIndeterminateProgressText
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.bar
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.circle
 import scala.scalajs.js
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 trait ojProgressSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
   var max: js.UndefOr[Double] = js.native
-  var translations: js.UndefOr[AnonAriaIndeterminateProgressText] = js.native
+  var translations: js.UndefOr[AriaIndeterminateProgressText] = js.native
   var `type`: js.UndefOr[bar | circle] = js.native
   var value: js.UndefOr[Double] = js.native
 }
@@ -43,7 +43,7 @@ object ojProgressSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonAriaIndeterminateProgressText): Self = {
+    def withTranslations(value: AriaIndeterminateProgressText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

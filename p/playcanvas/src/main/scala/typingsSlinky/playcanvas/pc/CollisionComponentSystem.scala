@@ -12,9 +12,6 @@ import scala.scalajs.js.annotation._
   * @description Creates a new CollisionComponentSystem.
   * @param {pc.Application} app - The running {pc.Application}.
   */
-@JSGlobal("pc.CollisionComponentSystem")
 @js.native
-class CollisionComponentSystem protected () extends ComponentSystem {
-  def this(app: Application) = this()
-}
+trait CollisionComponentSystem extends ComponentSystem
 

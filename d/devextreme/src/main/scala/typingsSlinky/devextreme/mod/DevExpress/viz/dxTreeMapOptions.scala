@@ -1,12 +1,12 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonColorCodeField
-import typingsSlinky.devextreme.AnonElementModelNode
-import typingsSlinky.devextreme.AnonHeaderHeight
-import typingsSlinky.devextreme.AnonJQueryEventModelNode
-import typingsSlinky.devextreme.AnonModelRoot
-import typingsSlinky.devextreme.AnonRect
-import typingsSlinky.devextreme.AnonSelectionStyle
+import typingsSlinky.devextreme.anon.ColorCodeField
+import typingsSlinky.devextreme.anon.ElementModelNode
+import typingsSlinky.devextreme.anon.HeaderHeight
+import typingsSlinky.devextreme.anon.JQueryEventModelNode
+import typingsSlinky.devextreme.anon.ModelRoot
+import typingsSlinky.devextreme.anon.Rect
+import typingsSlinky.devextreme.anon.SelectionStyle
 import typingsSlinky.devextreme.devextremeStrings.ellipsis
 import typingsSlinky.devextreme.devextremeStrings.hide
 import typingsSlinky.devextreme.devextremeStrings.leftBottomRightTop
@@ -32,11 +32,11 @@ trait dxTreeMapOptions extends BaseWidgetOptions[dxTreeMap] {
   /** Specifies the name of the data source field that provides colors for tiles. */
   var colorField: js.UndefOr[String] = js.native
   /** Manages the color settings. */
-  var colorizer: js.UndefOr[AnonColorCodeField] = js.native
+  var colorizer: js.UndefOr[ColorCodeField] = js.native
   /** Binds the widget to data. */
   var dataSource: js.UndefOr[js.Array[_] | DataSource | DataSourceOptions | String] = js.native
   /** Configures groups. */
-  var group: js.UndefOr[AnonHeaderHeight] = js.native
+  var group: js.UndefOr[HeaderHeight] = js.native
   /** Specifies whether tiles and groups change their style when a user pauses on them. */
   var hoverEnabled: js.UndefOr[Boolean] = js.native
   /** Specifies the name of the data source field that provides IDs for items. Applies to plain data sources only. */
@@ -46,7 +46,7 @@ trait dxTreeMapOptions extends BaseWidgetOptions[dxTreeMap] {
   /** Specifies the name of the data source field that provides texts for tile and group labels. */
   var labelField: js.UndefOr[String] = js.native
   /** Specifies the layout algorithm. */
-  var layoutAlgorithm: js.UndefOr[sliceanddice | squarified | strip | (js.Function1[/* e */ AnonRect, _])] = js.native
+  var layoutAlgorithm: js.UndefOr[sliceanddice | squarified | strip | (js.Function1[/* e */ Rect, _])] = js.native
   /** Specifies the direction in which the items will be laid out. */
   var layoutDirection: js.UndefOr[
     leftBottomRightTop | leftTopRightBottom | rightBottomLeftTop | rightTopLeftBottom
@@ -54,17 +54,17 @@ trait dxTreeMapOptions extends BaseWidgetOptions[dxTreeMap] {
   /** Specifies how many hierarchical levels must be visualized. */
   var maxDepth: js.UndefOr[Double] = js.native
   /** A function that is executed when a node is clicked or tapped. */
-  var onClick: js.UndefOr[(js.Function1[/* e */ AnonJQueryEventModelNode, _]) | String] = js.native
+  var onClick: js.UndefOr[(js.Function1[/* e */ JQueryEventModelNode, _]) | String] = js.native
   /** A function that is executed when a user drills up or down. */
-  var onDrill: js.UndefOr[js.Function1[/* e */ AnonElementModelNode, _]] = js.native
+  var onDrill: js.UndefOr[js.Function1[/* e */ ElementModelNode, _]] = js.native
   /** A function that is executed after the pointer enters or leaves a node. */
-  var onHoverChanged: js.UndefOr[js.Function1[/* e */ AnonElementModelNode, _]] = js.native
+  var onHoverChanged: js.UndefOr[js.Function1[/* e */ ElementModelNode, _]] = js.native
   /** A function that is executed only once, after the nodes are initialized. */
-  var onNodesInitialized: js.UndefOr[js.Function1[/* e */ AnonModelRoot, _]] = js.native
+  var onNodesInitialized: js.UndefOr[js.Function1[/* e */ ModelRoot, _]] = js.native
   /** A function that is executed before the nodes are displayed and each time the collection of active nodes is changed. */
-  var onNodesRendering: js.UndefOr[js.Function1[/* e */ AnonElementModelNode, _]] = js.native
+  var onNodesRendering: js.UndefOr[js.Function1[/* e */ ElementModelNode, _]] = js.native
   /** A function that is executed when a node is selected or selection is canceled. */
-  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonElementModelNode, _]] = js.native
+  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ ElementModelNode, _]] = js.native
   /** Specifies the name of the data source field that provides parent IDs for items. Applies to plain data sources only. */
   var parentField: js.UndefOr[String] = js.native
   /** @deprecated Use the tile.label.textOverflow option instead. */
@@ -73,7 +73,7 @@ trait dxTreeMapOptions extends BaseWidgetOptions[dxTreeMap] {
   /** Specifies whether a single or multiple nodes can be in the selected state simultaneously. */
   var selectionMode: js.UndefOr[multiple | none | single_] = js.native
   /** Configures tiles. */
-  var tile: js.UndefOr[AnonSelectionStyle] = js.native
+  var tile: js.UndefOr[SelectionStyle] = js.native
   /** Configures tooltips - small pop-up rectangles that display information about a data-visualizing widget element being pressed or hovered over with the mouse pointer. */
   @JSName("tooltip")
   var tooltip_dxTreeMapOptions: js.UndefOr[dxTreeMapTooltip] = js.native
@@ -118,7 +118,7 @@ object dxTreeMapOptions {
         ret
     }
     @scala.inline
-    def withColorizer(value: AnonColorCodeField): Self = {
+    def withColorizer(value: ColorCodeField): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("colorizer")(value.asInstanceOf[js.Any])
         ret
@@ -142,7 +142,7 @@ object dxTreeMapOptions {
         ret
     }
     @scala.inline
-    def withGroup(value: AnonHeaderHeight): Self = {
+    def withGroup(value: HeaderHeight): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
         ret
@@ -202,13 +202,13 @@ object dxTreeMapOptions {
         ret
     }
     @scala.inline
-    def withLayoutAlgorithmFunction1(value: /* e */ AnonRect => _): Self = {
+    def withLayoutAlgorithmFunction1(value: /* e */ Rect => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("layoutAlgorithm")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withLayoutAlgorithm(value: sliceanddice | squarified | strip | (js.Function1[/* e */ AnonRect, _])): Self = {
+    def withLayoutAlgorithm(value: sliceanddice | squarified | strip | (js.Function1[/* e */ Rect, _])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("layoutAlgorithm")(value.asInstanceOf[js.Any])
         ret
@@ -244,13 +244,13 @@ object dxTreeMapOptions {
         ret
     }
     @scala.inline
-    def withOnClickFunction1(value: /* e */ AnonJQueryEventModelNode => _): Self = {
+    def withOnClickFunction1(value: /* e */ JQueryEventModelNode => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnClick(value: (js.Function1[/* e */ AnonJQueryEventModelNode, _]) | String): Self = {
+    def withOnClick(value: (js.Function1[/* e */ JQueryEventModelNode, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(value.asInstanceOf[js.Any])
         ret
@@ -262,7 +262,7 @@ object dxTreeMapOptions {
         ret
     }
     @scala.inline
-    def withOnDrill(value: /* e */ AnonElementModelNode => _): Self = {
+    def withOnDrill(value: /* e */ ElementModelNode => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDrill")(js.Any.fromFunction1(value))
         ret
@@ -274,7 +274,7 @@ object dxTreeMapOptions {
         ret
     }
     @scala.inline
-    def withOnHoverChanged(value: /* e */ AnonElementModelNode => _): Self = {
+    def withOnHoverChanged(value: /* e */ ElementModelNode => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onHoverChanged")(js.Any.fromFunction1(value))
         ret
@@ -286,7 +286,7 @@ object dxTreeMapOptions {
         ret
     }
     @scala.inline
-    def withOnNodesInitialized(value: /* e */ AnonModelRoot => _): Self = {
+    def withOnNodesInitialized(value: /* e */ ModelRoot => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onNodesInitialized")(js.Any.fromFunction1(value))
         ret
@@ -298,7 +298,7 @@ object dxTreeMapOptions {
         ret
     }
     @scala.inline
-    def withOnNodesRendering(value: /* e */ AnonElementModelNode => _): Self = {
+    def withOnNodesRendering(value: /* e */ ElementModelNode => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onNodesRendering")(js.Any.fromFunction1(value))
         ret
@@ -310,7 +310,7 @@ object dxTreeMapOptions {
         ret
     }
     @scala.inline
-    def withOnSelectionChanged(value: /* e */ AnonElementModelNode => _): Self = {
+    def withOnSelectionChanged(value: /* e */ ElementModelNode => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.Any.fromFunction1(value))
         ret
@@ -358,7 +358,7 @@ object dxTreeMapOptions {
         ret
     }
     @scala.inline
-    def withTile(value: AnonSelectionStyle): Self = {
+    def withTile(value: SelectionStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tile")(value.asInstanceOf[js.Any])
         ret

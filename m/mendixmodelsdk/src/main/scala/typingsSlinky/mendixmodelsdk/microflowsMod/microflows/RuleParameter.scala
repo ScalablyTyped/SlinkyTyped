@@ -13,6 +13,7 @@ import scala.scalajs.js.annotation._
   * See: {@link https://docs.mendix.com/refguide7/parameter relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IByNameReferrable because Already inherited

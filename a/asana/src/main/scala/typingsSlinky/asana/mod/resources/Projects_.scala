@@ -1,6 +1,6 @@
 package typingsSlinky.asana.mod.resources
 
-import typingsSlinky.asana.CreateParamsworkspacenumb
+import typingsSlinky.asana.anon.CreateParamsworkspacenumb
 import typingsSlinky.asana.mod.resources.Projects.CreateParams
 import typingsSlinky.asana.mod.resources.Projects.FindAllParams
 import typingsSlinky.asana.mod.resources.Projects.FindByParams

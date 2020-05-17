@@ -1,6 +1,6 @@
 package typingsSlinky.tensorflowTfjsCore.engineMod
 
-import typingsSlinky.tensorflowTfjsCore.AnonError
+import typingsSlinky.tensorflowTfjsCore.anon.Error
 import typingsSlinky.tensorflowTfjsCore.backendMod.BackendTimingInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +13,7 @@ trait TimingInfo extends BackendTimingInfo {
 
 object TimingInfo {
   @scala.inline
-  def apply(kernelMs: Double | AnonError, wallMs: Double): TimingInfo = {
+  def apply(kernelMs: Double | Error, wallMs: Double): TimingInfo = {
     val __obj = js.Dynamic.literal(kernelMs = kernelMs.asInstanceOf[js.Any], wallMs = wallMs.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimingInfo]
   }

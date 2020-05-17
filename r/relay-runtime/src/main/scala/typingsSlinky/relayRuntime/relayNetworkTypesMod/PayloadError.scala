@@ -1,6 +1,6 @@
 package typingsSlinky.relayRuntime.relayNetworkTypesMod
 
-import typingsSlinky.relayRuntime.AnonColumn
+import typingsSlinky.relayRuntime.anon.Column
 import typingsSlinky.relayRuntime.relayRuntimeStrings.CRITICAL
 import typingsSlinky.relayRuntime.relayRuntimeStrings.ERROR
 import typingsSlinky.relayRuntime.relayRuntimeStrings.WARNING
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait PayloadError extends js.Object {
-  var locations: js.UndefOr[js.Array[AnonColumn]] = js.native
+  var locations: js.UndefOr[js.Array[Column]] = js.native
   var message: String = js.native
   var severity: js.UndefOr[CRITICAL | ERROR | WARNING] = js.native
 }
@@ -34,7 +34,7 @@ object PayloadError {
         ret
     }
     @scala.inline
-    def withLocations(value: js.Array[AnonColumn]): Self = {
+    def withLocations(value: js.Array[Column]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(value.asInstanceOf[js.Any])
         ret

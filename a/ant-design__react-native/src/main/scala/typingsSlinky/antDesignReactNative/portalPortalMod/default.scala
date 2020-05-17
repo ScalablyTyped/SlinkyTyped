@@ -1,7 +1,7 @@
 package typingsSlinky.antDesignReactNative.portalPortalMod
 
 import slinky.core.TagMod
-import typingsSlinky.antDesignReactNative.TypeofPortalHost
+import typingsSlinky.antDesignReactNative.anon.TypeofPortalHost
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

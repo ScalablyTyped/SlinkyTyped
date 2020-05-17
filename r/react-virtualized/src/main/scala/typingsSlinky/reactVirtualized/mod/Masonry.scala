@@ -1,6 +1,6 @@
 package typingsSlinky.reactVirtualized.mod
 
-import typingsSlinky.reactVirtualized.AnonKeyMapper
+import typingsSlinky.reactVirtualized.anon.KeyMapper
 import typingsSlinky.reactVirtualized.esMasonryMod.MasonryProps
 import typingsSlinky.reactVirtualized.esMasonryMod.MasonryState
 import scala.scalajs.js
@@ -16,7 +16,7 @@ class Masonry ()
 @JSImport("react-virtualized", "Masonry")
 @js.native
 object Masonry extends js.Object {
-  var defaultProps: AnonKeyMapper = js.native
+  var defaultProps: KeyMapper = js.native
   def getDerivedStateFromProps(nextProps: MasonryProps, prevState: MasonryState): MasonryState | Null = js.native
 }
 

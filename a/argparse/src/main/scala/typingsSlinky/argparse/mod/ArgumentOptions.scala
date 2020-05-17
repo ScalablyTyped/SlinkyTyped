@@ -1,13 +1,13 @@
 package typingsSlinky.argparse.mod
 
-import typingsSlinky.argparse.AnonInstantiableAction
+import typingsSlinky.argparse.anon.InstantiableAction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ArgumentOptions extends js.Object {
-  var action: js.UndefOr[String | AnonInstantiableAction] = js.native
+  var action: js.UndefOr[String | InstantiableAction] = js.native
    // tslint:disable-line:ban-types
   var choices: js.UndefOr[String | js.Array[String]] = js.native
   var constant: js.UndefOr[js.Any] = js.native
@@ -35,7 +35,7 @@ object ArgumentOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAction(value: String | AnonInstantiableAction): Self = {
+    def withAction(value: String | InstantiableAction): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
         ret

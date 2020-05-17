@@ -3,6 +3,7 @@ package typingsSlinky.testingLibraryJestDom
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.SVGElement
 import typingsSlinky.std.Record
+import typingsSlinky.testingLibraryJestDom.anon.NormalizeWhitespace
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -368,9 +369,9 @@ object jest extends js.Object {
       * [testing-library/jest-dom#tohavetextcontent](https:github.com/testing-library/jest-dom#tohavetextcontent)
       */
     def toHaveTextContent(text: String): R = js.native
-    def toHaveTextContent(text: String, options: AnonNormalizeWhitespace): R = js.native
+    def toHaveTextContent(text: String, options: NormalizeWhitespace): R = js.native
     def toHaveTextContent(text: js.RegExp): R = js.native
-    def toHaveTextContent(text: js.RegExp, options: AnonNormalizeWhitespace): R = js.native
+    def toHaveTextContent(text: js.RegExp, options: NormalizeWhitespace): R = js.native
     /**
       * @description
       * Check whether the given form element has the specified value.

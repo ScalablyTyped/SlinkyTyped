@@ -1,0 +1,25 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.Deferrability
+
+import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`5`
+import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`6`
+import typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`7`
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`5`
+  - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`6`
+  - typingsSlinky.activexLibreoffice.activexLibreofficeNumbers.`7`
+*/
+trait Constants extends js.Object
+
+object Constants {
+  @scala.inline
+  def INITIALLY_DEFERRED: `5` = 5.asInstanceOf[`5`]
+  @scala.inline
+  def INITIALLY_IMMEDIATE: `6` = 6.asInstanceOf[`6`]
+  @scala.inline
+  def NONE: `7` = 7.asInstanceOf[`7`]
+}
+

@@ -1,17 +1,16 @@
 package typingsSlinky.winrtUwp.Windows.Data.Xml.Dom
 
 import typingsSlinky.std.Array
-import typingsSlinky.winrtUwp.AnonIndex
-import typingsSlinky.winrtUwp.AnonItemsIXmlNode
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
+import typingsSlinky.winrtUwp.anon.Index
+import typingsSlinky.winrtUwp.anon.ItemsIXmlNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Encapsulates iteration through the collection of attribute nodes. */
-@JSGlobal("Windows.Data.Xml.Dom.XmlNamedNodeMap")
 @js.native
-abstract class XmlNamedNodeMap () extends Array[IXmlNode] {
+trait XmlNamedNodeMap extends Array[IXmlNode] {
   /** Gets the number of elements in the vector view. */
   var size: Double = js.native
   /**
@@ -29,7 +28,7 @@ abstract class XmlNamedNodeMap () extends Array[IXmlNode] {
     * Returns the items that start at the specified index of the vector view.
     * @param startIndex The zero-based index of the start of the items in the vector to return.
     */
-  def getMany(startIndex: Double): AnonItemsIXmlNode = js.native
+  def getMany(startIndex: Double): ItemsIXmlNode = js.native
   /**
     * Retrieves the attribute with the specified name.
     * @param name The name of the attribute.
@@ -43,13 +42,13 @@ abstract class XmlNamedNodeMap () extends Array[IXmlNode] {
     * @return The attribute with the specified namespace and name. This method returns Null if the attribute node is not in this collection.
     */
   def getNamedItemNS(namespaceUri: js.Any, name: String): IXmlNode = js.native
-  def indexOf(value: IXmlNode, extra: js.Any*): AnonIndex = js.native
+  def indexOf(value: IXmlNode, extra: js.Any*): Index = js.native
   /**
     * Returns the index of a specified item in the vector view.
     * @param value The item to find in the vector view.
     */
   @JSName("indexOf")
-  def indexOf_AnonIndex(value: IXmlNode): AnonIndex = js.native
+  def indexOf_Index(value: IXmlNode): Index = js.native
   /**
     * Allows random access to individual nodes within the collection.
     * @param index The index of the item within the collection. The first item is zero.

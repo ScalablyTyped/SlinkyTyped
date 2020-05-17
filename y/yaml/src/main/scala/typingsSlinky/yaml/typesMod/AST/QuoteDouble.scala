@@ -14,5 +14,7 @@ trait QuoteDouble
   var cstNode_QuoteDouble: js.UndefOr[typingsSlinky.yaml.parseCstMod.CST.QuoteDouble] = js.native
   @JSName("type")
   var type_QuoteDouble: QUOTE_DOUBLE = js.native
+  /* InferMemberOverrides */
+  override def toJSON(arg: js.Any, ctx: NodeToJsonContext): js.Any = js.native
 }
 

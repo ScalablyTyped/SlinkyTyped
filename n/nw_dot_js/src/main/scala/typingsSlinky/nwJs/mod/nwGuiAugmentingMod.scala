@@ -9,24 +9,24 @@ import scala.scalajs.js.annotation._
 object nwGuiAugmentingMod extends js.Object {
   @js.native
   class Menu ()
-    extends typingsSlinky.nwJs.mod._Global_.nw.Menu
+    extends typingsSlinky.nwJs.mod.global.nw.Menu
   
   @js.native
   class MenuItem ()
-    extends typingsSlinky.nwJs.mod._Global_.nw.MenuItem
+    extends typingsSlinky.nwJs.mod.global.nw.MenuItem
   
   @js.native
   class Shortcut ()
-    extends typingsSlinky.nwJs.mod._Global_.nw.Shortcut
+    extends typingsSlinky.nwJs.mod.global.nw.Shortcut
   
   @js.native
   class Tray ()
-    extends typingsSlinky.nwJs.mod._Global_.nw.Tray
+    extends typingsSlinky.nwJs.mod.global.nw.Tray
   
-  var App: typingsSlinky.nwJs.mod._Global_.nw.App = js.native
-  var Clipboard: typingsSlinky.nwJs.mod._Global_.nw.Clipboard = js.native
-  var Screen: typingsSlinky.nwJs.mod._Global_.nw.Screen = js.native
-  var Shell: typingsSlinky.nwJs.mod._Global_.nw.Shell = js.native
-  var Window: typingsSlinky.nwJs.mod._Global_.nw.Window = js.native
+  var App: typingsSlinky.nwJs.mod.global.nw.App = js.native
+  var Clipboard: typingsSlinky.nwJs.mod.global.nw.Clipboard = js.native
+  var Screen: typingsSlinky.nwJs.mod.global.nw.Screen = js.native
+  var Shell: typingsSlinky.nwJs.mod.global.nw.Shell = js.native
+  var Window: typingsSlinky.nwJs.mod.global.nw.Window = js.native
 }
 

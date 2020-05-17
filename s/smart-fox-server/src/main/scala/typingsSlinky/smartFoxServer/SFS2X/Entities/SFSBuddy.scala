@@ -5,19 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("SFS2X.Entities.SFSBuddy")
 @js.native
-class SFSBuddy protected () extends js.Object {
-  /**
-    * Creates a new SFSBuddy instance.
-    * @param {number}  id        The buddy id.
-    * @param {string}  name      The buddy name.
-    * @param {boolean} [isBlocked=false] If true, the buddy is blocked by the current user.
-    * @param {boolean} [isTemp=false]    If true, the buddy is just temporary in the current user's buddy list.
-    */
-  def this(id: Double, name: String) = this()
-  def this(id: Double, name: String, isBlocked: Boolean) = this()
-  def this(id: Double, name: String, isBlocked: Boolean, isTemp: Boolean) = this()
+trait SFSBuddy extends js.Object {
   /** @type {number} Indicates the id of this buddy. */
   var id: Double = js.native
   /** @type {string} Indicates the name of this buddy. */
@@ -74,5 +63,106 @@ class SFSBuddy protected () extends js.Object {
     * @return {boolean} Returns: true if the buddy is temporary.
     */
   def isTemp(): Boolean = js.native
+}
+
+object SFSBuddy {
+  @scala.inline
+  def apply(
+    containsVariable: String => Boolean,
+    getNickName: () => String,
+    getOfflineVariables: () => js.Array[SFSBuddyVariable],
+    getOnlineVariables: () => js.Array[SFSBuddyVariable],
+    getState: () => String,
+    getVariable: String => SFSBuddyVariable,
+    getVariables: () => js.Array[SFSBuddyVariable],
+    id: Double,
+    isBlocked: () => Boolean,
+    isOnline: () => Boolean,
+    isTemp: () => Boolean,
+    name: String
+  ): SFSBuddy = {
+    val __obj = js.Dynamic.literal(containsVariable = js.Any.fromFunction1(containsVariable), getNickName = js.Any.fromFunction0(getNickName), getOfflineVariables = js.Any.fromFunction0(getOfflineVariables), getOnlineVariables = js.Any.fromFunction0(getOnlineVariables), getState = js.Any.fromFunction0(getState), getVariable = js.Any.fromFunction1(getVariable), getVariables = js.Any.fromFunction0(getVariables), id = id.asInstanceOf[js.Any], isBlocked = js.Any.fromFunction0(isBlocked), isOnline = js.Any.fromFunction0(isOnline), isTemp = js.Any.fromFunction0(isTemp), name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SFSBuddy]
+  }
+  @scala.inline
+  implicit class SFSBuddyOps[Self <: SFSBuddy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainsVariable(value: String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containsVariable")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetNickName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNickName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetOfflineVariables(value: () => js.Array[SFSBuddyVariable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getOfflineVariables")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetOnlineVariables(value: () => js.Array[SFSBuddyVariable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getOnlineVariables")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetState(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getState")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetVariable(value: String => SFSBuddyVariable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getVariable")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetVariables(value: () => js.Array[SFSBuddyVariable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getVariables")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsBlocked(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isBlocked")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsOnline(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isOnline")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsTemp(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTemp")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`nautical-miles`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.feet_
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.kilometers_
@@ -64,8 +63,4 @@ trait BufferParameters extends Accessor {
     */
   def toJSON(): js.Any = js.native
 }
-
-@JSGlobal("__esri.BufferParameters")
-@js.native
-object BufferParameters extends TopLevel[BufferParametersConstructor]
 

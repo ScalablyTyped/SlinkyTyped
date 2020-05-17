@@ -9,9 +9,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a custom device. */
-@JSGlobal("Windows.Devices.Custom.CustomDevice")
 @js.native
-abstract class CustomDevice () extends js.Object {
+trait CustomDevice extends js.Object {
   /** The input stream. */
   var inputStream: IInputStream = js.native
   /** The output stream. */
@@ -34,23 +33,48 @@ abstract class CustomDevice () extends js.Object {
   def trySendIOControlAsync(ioControlCode: IIOControlCode, inputBuffer: IBuffer, outputBuffer: IBuffer): IPromiseWithIAsyncOperation[Boolean] = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Devices.Custom.CustomDevice")
-@js.native
-object CustomDevice extends js.Object {
-  /**
-    * Creates a CustomDevice object asynchronously for the specified DeviceInformation.Id .
-    * @param deviceId The DeviceInformation.Id of the device .
-    * @param desiredAccess The desired access.
-    * @param sharingMode The sharing mode.
-    * @return Returns a custom device.
-    */
-  def fromIdAsync(deviceId: String, desiredAccess: DeviceAccessMode, sharingMode: DeviceSharingMode): IPromiseWithIAsyncOperation[CustomDevice] = js.native
-  /**
-    * Gets a device selector.
-    * @param classGuid The Device Interface Class GUID of the device interface to create a device selector for.
-    * @return The device selector.
-    */
-  def getDeviceSelector(classGuid: String): String = js.native
+object CustomDevice {
+  @scala.inline
+  def apply(
+    inputStream: IInputStream,
+    outputStream: IOutputStream,
+    sendIOControlAsync: (IIOControlCode, IBuffer, IBuffer) => IPromiseWithIAsyncOperation[Double],
+    trySendIOControlAsync: (IIOControlCode, IBuffer, IBuffer) => IPromiseWithIAsyncOperation[Boolean]
+  ): CustomDevice = {
+    val __obj = js.Dynamic.literal(inputStream = inputStream.asInstanceOf[js.Any], outputStream = outputStream.asInstanceOf[js.Any], sendIOControlAsync = js.Any.fromFunction3(sendIOControlAsync), trySendIOControlAsync = js.Any.fromFunction3(trySendIOControlAsync))
+    __obj.asInstanceOf[CustomDevice]
+  }
+  @scala.inline
+  implicit class CustomDeviceOps[Self <: CustomDevice] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInputStream(value: IInputStream): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputStream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutputStream(value: IOutputStream): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputStream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSendIOControlAsync(value: (IIOControlCode, IBuffer, IBuffer) => IPromiseWithIAsyncOperation[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendIOControlAsync")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withTrySendIOControlAsync(value: (IIOControlCode, IBuffer, IBuffer) => IPromiseWithIAsyncOperation[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trySendIOControlAsync")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,7 @@
 package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.officeUiFabricReact.anon.PartialIColorPickerProps
 import typingsSlinky.officeUiFabricReact.colorPickerTypesMod.IColorPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

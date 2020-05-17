@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait TypeReferenceType extends js.Object
 
+object TypeReferenceType {
+  @scala.inline
+  implicit def apply(value: ExpressionWithTypeArguments): TypeReferenceType = value.asInstanceOf[TypeReferenceType]
+  @scala.inline
+  implicit def apply(value: TypeReferenceNode): TypeReferenceType = value.asInstanceOf[TypeReferenceType]
+}
+

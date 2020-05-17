@@ -1,23 +1,23 @@
 package typingsSlinky.markdownlint.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.markdownlint.Anon0
-import typingsSlinky.markdownlint.Anon1
-import typingsSlinky.markdownlint.AnonAllowdifferentnesting
-import typingsSlinky.markdownlint.AnonAllowedelements
-import typingsSlinky.markdownlint.AnonBrspaces
-import typingsSlinky.markdownlint.AnonCodeblocks
-import typingsSlinky.markdownlint.AnonFrontmattertitle
-import typingsSlinky.markdownlint.AnonHeaders
-import typingsSlinky.markdownlint.AnonIndent
-import typingsSlinky.markdownlint.AnonLevel
-import typingsSlinky.markdownlint.AnonLinesabove
-import typingsSlinky.markdownlint.AnonMaximum
-import typingsSlinky.markdownlint.AnonNames
-import typingsSlinky.markdownlint.AnonOlmulti
-import typingsSlinky.markdownlint.AnonPunctuation
-import typingsSlinky.markdownlint.AnonStyle
-import typingsSlinky.markdownlint.AnonStyleString
+import typingsSlinky.markdownlint.anon.Allowdifferentnesting
+import typingsSlinky.markdownlint.anon.Allowedelements
+import typingsSlinky.markdownlint.anon.Brspaces
+import typingsSlinky.markdownlint.anon.Codeblocks
+import typingsSlinky.markdownlint.anon.Frontmattertitle
+import typingsSlinky.markdownlint.anon.Headers
+import typingsSlinky.markdownlint.anon.Indent
+import typingsSlinky.markdownlint.anon.Level
+import typingsSlinky.markdownlint.anon.Linesabove
+import typingsSlinky.markdownlint.anon.Maximum
+import typingsSlinky.markdownlint.anon.Names
+import typingsSlinky.markdownlint.anon.Olmulti
+import typingsSlinky.markdownlint.anon.Punctuation
+import typingsSlinky.markdownlint.anon.Style
+import typingsSlinky.markdownlint.anon.StyleString
+import typingsSlinky.markdownlint.anon.`0`
+import typingsSlinky.markdownlint.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,9 +26,9 @@ import scala.scalajs.js.annotation._
 trait MarkdownlintConfig
   extends /* rule */ StringDictionary[js.UndefOr[String | Double | Boolean | StringDictionary[js.Any]]] {
   var `blanks-around-fences`: js.UndefOr[Boolean] = js.native
-  var `blanks-around-headings`: js.UndefOr[Boolean | AnonLinesabove] = js.native
+  var `blanks-around-headings`: js.UndefOr[Boolean | Linesabove] = js.native
   var `blanks-around-lists`: js.UndefOr[Boolean] = js.native
-  var `blanks-around_headers`: js.UndefOr[Boolean | AnonLinesabove] = js.native
+  var `blanks-around_headers`: js.UndefOr[Boolean | Linesabove] = js.native
   var `commands-show-output`: js.UndefOr[Boolean] = js.native
   /**
     * Default state for all rules.
@@ -42,16 +42,16 @@ trait MarkdownlintConfig
     * @see {"first-line-heading"}
     * @see {"first-line-h1"}
     */
-  var `first-header-h1`: js.UndefOr[Boolean | AnonLevel] = js.native
+  var `first-header-h1`: js.UndefOr[Boolean | Level] = js.native
   /**
     * First heading should be a top level heading.
     * @deprecated
     * @see {"first-line-heading"}
     * @see {"first-line-h1"}
     */
-  var `first-heading-h1`: js.UndefOr[Boolean | AnonLevel] = js.native
-  var `first-line-h1`: js.UndefOr[AnonFrontmattertitle] = js.native
-  var `first-line-heading`: js.UndefOr[AnonFrontmattertitle] = js.native
+  var `first-heading-h1`: js.UndefOr[Boolean | Level] = js.native
+  var `first-line-h1`: js.UndefOr[Frontmattertitle] = js.native
+  var `first-line-heading`: js.UndefOr[Frontmattertitle] = js.native
   /**
     * Heading levels should only increment by one level at a time.
     *
@@ -63,7 +63,7 @@ trait MarkdownlintConfig
     * Heading style.
     * @default "consistent"
     */
-  var `header-style`: js.UndefOr[AnonStyle] = js.native
+  var `header-style`: js.UndefOr[Style] = js.native
   /**
     * Heading levels should only increment by one level at a time.
     *
@@ -75,27 +75,27 @@ trait MarkdownlintConfig
     * Heading style.
     * @default "consistent"
     */
-  var `heading-style`: js.UndefOr[AnonStyle] = js.native
-  var `hr-style`: js.UndefOr[AnonStyleString] = js.native
-  var `line-length`: js.UndefOr[Boolean | AnonHeaders] = js.native
+  var `heading-style`: js.UndefOr[Style] = js.native
+  var `hr-style`: js.UndefOr[StyleString] = js.native
+  var `line-length`: js.UndefOr[Boolean | Headers] = js.native
   /**
     * Inconsistent indentation for list items at the same level
     */
   var `list-indent`: js.UndefOr[Boolean] = js.native
-  var `list-marker-space`: js.UndefOr[Boolean | AnonOlmulti] = js.native
+  var `list-marker-space`: js.UndefOr[Boolean | Olmulti] = js.native
   var `no-alt-text`: js.UndefOr[Boolean] = js.native
   var `no-bare-urls`: js.UndefOr[Boolean] = js.native
   var `no-blanks-blockquote`: js.UndefOr[Boolean] = js.native
-  var `no-duplicate-header`: js.UndefOr[Boolean | AnonAllowdifferentnesting] = js.native
-  var `no-duplicate-heading`: js.UndefOr[Boolean | AnonAllowdifferentnesting] = js.native
-  var `no-emphasis-as-header`: js.UndefOr[Boolean | AnonPunctuation] = js.native
-  var `no-emphasis-as-heading`: js.UndefOr[Boolean | AnonPunctuation] = js.native
+  var `no-duplicate-header`: js.UndefOr[Boolean | Allowdifferentnesting] = js.native
+  var `no-duplicate-heading`: js.UndefOr[Boolean | Allowdifferentnesting] = js.native
+  var `no-emphasis-as-header`: js.UndefOr[Boolean | Punctuation] = js.native
+  var `no-emphasis-as-heading`: js.UndefOr[Boolean | Punctuation] = js.native
   var `no-empty-links`: js.UndefOr[Boolean] = js.native
-  var `no-hard-tabs`: js.UndefOr[Boolean | AnonCodeblocks] = js.native
-  var `no-inline-html`: js.UndefOr[Boolean | AnonAllowedelements] = js.native
+  var `no-hard-tabs`: js.UndefOr[Boolean | Codeblocks] = js.native
+  var `no-inline-html`: js.UndefOr[Boolean | Allowedelements] = js.native
   var `no-missing-space-atx`: js.UndefOr[Boolean] = js.native
   var `no-missing-space-closed-atx`: js.UndefOr[Boolean] = js.native
-  var `no-multiple-blanks`: js.UndefOr[Boolean | AnonMaximum] = js.native
+  var `no-multiple-blanks`: js.UndefOr[Boolean | Maximum] = js.native
   var `no-multiple-space-atx`: js.UndefOr[Boolean] = js.native
   var `no-multiple-space-blockquote`: js.UndefOr[Boolean] = js.native
   var `no-multiple-space-closed-atx`: js.UndefOr[Boolean] = js.native
@@ -103,19 +103,19 @@ trait MarkdownlintConfig
   var `no-space-in-code`: js.UndefOr[Boolean] = js.native
   var `no-space-in-emphasis`: js.UndefOr[Boolean] = js.native
   var `no-space-in-links`: js.UndefOr[Boolean] = js.native
-  var `no-trailing-punctuation`: js.UndefOr[Boolean | AnonPunctuation] = js.native
-  var `no-trailing-spaces`: js.UndefOr[Boolean | AnonBrspaces] = js.native
-  var `ol-prefix`: js.UndefOr[Boolean | Anon1] = js.native
-  var `proper-names`: js.UndefOr[AnonNames] = js.native
+  var `no-trailing-punctuation`: js.UndefOr[Boolean | Punctuation] = js.native
+  var `no-trailing-spaces`: js.UndefOr[Boolean | Brspaces] = js.native
+  var `ol-prefix`: js.UndefOr[Boolean | `1`] = js.native
+  var `proper-names`: js.UndefOr[Names] = js.native
   var `required-headers`: js.UndefOr[js.Array[String]] = js.native
   var `required-headings`: js.UndefOr[js.Array[String]] = js.native
-  var `single-h1`: js.UndefOr[Boolean | AnonFrontmattertitle] = js.native
-  var `single-title`: js.UndefOr[Boolean | AnonFrontmattertitle] = js.native
+  var `single-h1`: js.UndefOr[Boolean | Frontmattertitle] = js.native
+  var `single-title`: js.UndefOr[Boolean | Frontmattertitle] = js.native
   /**
     * This rule is triggered when list items are not indented by the configured number of spaces.
     * @default 2
     */
-  var `ul-indent`: js.UndefOr[Boolean | AnonIndent] = js.native
+  var `ul-indent`: js.UndefOr[Boolean | Indent] = js.native
   /**
     * Consider starting bulleted lists at the beginning of the line.
     */
@@ -131,7 +131,7 @@ trait MarkdownlintConfig
     *
     * @default "consistent"
     */
-  var `ul-style`: js.UndefOr[Anon0] = js.native
+  var `ul-style`: js.UndefOr[`0`] = js.native
 }
 
 object MarkdownlintConfig {
@@ -159,7 +159,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withBlanks-around-headings`(value: Boolean | AnonLinesabove): Self = {
+    def `withBlanks-around-headings`(value: Boolean | Linesabove): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("blanks-around-headings")(value.asInstanceOf[js.Any])
         ret
@@ -183,7 +183,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withBlanks-around_headers`(value: Boolean | AnonLinesabove): Self = {
+    def `withBlanks-around_headers`(value: Boolean | Linesabove): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("blanks-around_headers")(value.asInstanceOf[js.Any])
         ret
@@ -231,7 +231,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withFirst-header-h1`(value: Boolean | AnonLevel): Self = {
+    def `withFirst-header-h1`(value: Boolean | Level): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("first-header-h1")(value.asInstanceOf[js.Any])
         ret
@@ -243,7 +243,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withFirst-heading-h1`(value: Boolean | AnonLevel): Self = {
+    def `withFirst-heading-h1`(value: Boolean | Level): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("first-heading-h1")(value.asInstanceOf[js.Any])
         ret
@@ -255,7 +255,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withFirst-line-h1`(value: AnonFrontmattertitle): Self = {
+    def `withFirst-line-h1`(value: Frontmattertitle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("first-line-h1")(value.asInstanceOf[js.Any])
         ret
@@ -267,7 +267,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withFirst-line-heading`(value: AnonFrontmattertitle): Self = {
+    def `withFirst-line-heading`(value: Frontmattertitle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("first-line-heading")(value.asInstanceOf[js.Any])
         ret
@@ -303,7 +303,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withHeader-style`(value: AnonStyle): Self = {
+    def `withHeader-style`(value: Style): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("header-style")(value.asInstanceOf[js.Any])
         ret
@@ -339,7 +339,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withHeading-style`(value: AnonStyle): Self = {
+    def `withHeading-style`(value: Style): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("heading-style")(value.asInstanceOf[js.Any])
         ret
@@ -351,7 +351,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withHr-style`(value: AnonStyleString): Self = {
+    def `withHr-style`(value: StyleString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hr-style")(value.asInstanceOf[js.Any])
         ret
@@ -363,7 +363,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withLine-length`(value: Boolean | AnonHeaders): Self = {
+    def `withLine-length`(value: Boolean | Headers): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("line-length")(value.asInstanceOf[js.Any])
         ret
@@ -387,7 +387,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withList-marker-space`(value: Boolean | AnonOlmulti): Self = {
+    def `withList-marker-space`(value: Boolean | Olmulti): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list-marker-space")(value.asInstanceOf[js.Any])
         ret
@@ -435,7 +435,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withNo-duplicate-header`(value: Boolean | AnonAllowdifferentnesting): Self = {
+    def `withNo-duplicate-header`(value: Boolean | Allowdifferentnesting): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("no-duplicate-header")(value.asInstanceOf[js.Any])
         ret
@@ -447,7 +447,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withNo-duplicate-heading`(value: Boolean | AnonAllowdifferentnesting): Self = {
+    def `withNo-duplicate-heading`(value: Boolean | Allowdifferentnesting): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("no-duplicate-heading")(value.asInstanceOf[js.Any])
         ret
@@ -459,7 +459,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withNo-emphasis-as-header`(value: Boolean | AnonPunctuation): Self = {
+    def `withNo-emphasis-as-header`(value: Boolean | Punctuation): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("no-emphasis-as-header")(value.asInstanceOf[js.Any])
         ret
@@ -471,7 +471,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withNo-emphasis-as-heading`(value: Boolean | AnonPunctuation): Self = {
+    def `withNo-emphasis-as-heading`(value: Boolean | Punctuation): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("no-emphasis-as-heading")(value.asInstanceOf[js.Any])
         ret
@@ -495,7 +495,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withNo-hard-tabs`(value: Boolean | AnonCodeblocks): Self = {
+    def `withNo-hard-tabs`(value: Boolean | Codeblocks): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("no-hard-tabs")(value.asInstanceOf[js.Any])
         ret
@@ -507,7 +507,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withNo-inline-html`(value: Boolean | AnonAllowedelements): Self = {
+    def `withNo-inline-html`(value: Boolean | Allowedelements): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("no-inline-html")(value.asInstanceOf[js.Any])
         ret
@@ -543,7 +543,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withNo-multiple-blanks`(value: Boolean | AnonMaximum): Self = {
+    def `withNo-multiple-blanks`(value: Boolean | Maximum): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("no-multiple-blanks")(value.asInstanceOf[js.Any])
         ret
@@ -639,7 +639,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withNo-trailing-punctuation`(value: Boolean | AnonPunctuation): Self = {
+    def `withNo-trailing-punctuation`(value: Boolean | Punctuation): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("no-trailing-punctuation")(value.asInstanceOf[js.Any])
         ret
@@ -651,7 +651,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withNo-trailing-spaces`(value: Boolean | AnonBrspaces): Self = {
+    def `withNo-trailing-spaces`(value: Boolean | Brspaces): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("no-trailing-spaces")(value.asInstanceOf[js.Any])
         ret
@@ -663,7 +663,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withOl-prefix`(value: Boolean | Anon1): Self = {
+    def `withOl-prefix`(value: Boolean | `1`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ol-prefix")(value.asInstanceOf[js.Any])
         ret
@@ -675,7 +675,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withProper-names`(value: AnonNames): Self = {
+    def `withProper-names`(value: Names): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("proper-names")(value.asInstanceOf[js.Any])
         ret
@@ -711,7 +711,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withSingle-h1`(value: Boolean | AnonFrontmattertitle): Self = {
+    def `withSingle-h1`(value: Boolean | Frontmattertitle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("single-h1")(value.asInstanceOf[js.Any])
         ret
@@ -723,7 +723,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withSingle-title`(value: Boolean | AnonFrontmattertitle): Self = {
+    def `withSingle-title`(value: Boolean | Frontmattertitle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("single-title")(value.asInstanceOf[js.Any])
         ret
@@ -735,7 +735,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withUl-indent`(value: Boolean | AnonIndent): Self = {
+    def `withUl-indent`(value: Boolean | Indent): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ul-indent")(value.asInstanceOf[js.Any])
         ret
@@ -759,7 +759,7 @@ object MarkdownlintConfig {
         ret
     }
     @scala.inline
-    def `withUl-style`(value: Anon0): Self = {
+    def `withUl-style`(value: `0`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ul-style")(value.asInstanceOf[js.Any])
         ret

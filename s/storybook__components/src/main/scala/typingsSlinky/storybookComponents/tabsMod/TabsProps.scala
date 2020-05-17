@@ -2,7 +2,7 @@ package typingsSlinky.storybookComponents.tabsMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.storybookComponents.AnonOnSelect
+import typingsSlinky.storybookComponents.anon.OnSelect
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TabsProps extends js.Object {
   var absolute: js.UndefOr[Boolean] = js.native
-  var actions: js.UndefOr[AnonOnSelect] = js.native
+  var actions: js.UndefOr[OnSelect] = js.native
   var backgroundColor: js.UndefOr[String] = js.native
   var bordered: js.UndefOr[Boolean] = js.native
   var id: js.UndefOr[String] = js.native
@@ -43,7 +43,7 @@ object TabsProps {
         ret
     }
     @scala.inline
-    def withActions(value: AnonOnSelect): Self = {
+    def withActions(value: OnSelect): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
         ret

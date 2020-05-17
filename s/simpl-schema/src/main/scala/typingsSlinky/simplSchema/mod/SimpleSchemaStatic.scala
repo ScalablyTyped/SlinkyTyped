@@ -3,8 +3,8 @@ package typingsSlinky.simplSchema.mod
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.simplSchema.AnonBADDATE
-import typingsSlinky.simplSchema.AnonDomain
+import typingsSlinky.simplSchema.anon.BADDATE
+import typingsSlinky.simplSchema.anon.Domain
 import typingsSlinky.std.ArrayConstructor
 import typingsSlinky.std.BooleanConstructor
 import typingsSlinky.std.DateConstructor
@@ -18,9 +18,9 @@ import scala.scalajs.js.annotation._
 trait SimpleSchemaStatic
   extends Instantiable1[/* schema */ SimpleSchemaDefinition, SimpleSchema]
      with Instantiable2[/* schema */ SimpleSchemaDefinition, /* options */ SimpleSchemaOptions, SimpleSchema] {
-  var ErrorTypes: AnonBADDATE = js.native
+  var ErrorTypes: BADDATE = js.native
   var Integer: js.RegExp = js.native
-  var RegEx: AnonDomain = js.native
+  var RegEx: Domain = js.native
   def addValidator(validator: js.Function0[Boolean]): js.Any = js.native
   def allowsKey(key: js.Any): String = js.native
   def clean(doc: js.Any): js.Any = js.native

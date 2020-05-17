@@ -1,7 +1,7 @@
 package typingsSlinky.sharedb.mod
 
 import org.scalajs.dom.raw.WebSocket
-import typingsSlinky.sharedb.AnonResults
+import typingsSlinky.sharedb.anon.Results
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,13 +13,13 @@ class Connection protected () extends js.Object {
   def createFetchQuery(
     collectionName: String,
     query: String,
-    options: AnonResults,
+    options: Results,
     callback: js.Function2[/* err */ Error, /* results */ js.Any, _]
   ): typingsSlinky.sharedb.sharedbMod.Query = js.native
   def createSubscribeQuery(
     collectionName: String,
     query: String,
-    options: AnonResults,
+    options: Results,
     callback: js.Function2[/* err */ Error, /* results */ js.Any, _]
   ): typingsSlinky.sharedb.sharedbMod.Query = js.native
   def get(collectionName: String, documentID: String): typingsSlinky.sharedb.sharedbMod.Doc = js.native

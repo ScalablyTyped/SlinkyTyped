@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignCompatible.mentionMod
 
-import typingsSlinky.antDesignCompatible.AnonLoading
+import typingsSlinky.antDesignCompatible.anon.Loading
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ class default protected () extends Mention {
 @js.native
 object default extends js.Object {
   var Nav: js.Any = js.native
-  var defaultProps: AnonLoading = js.native
+  var defaultProps: Loading = js.native
   var getMentions: js.Any = js.native
   var toContentState: js.Any = js.native
   @JSName("toString")

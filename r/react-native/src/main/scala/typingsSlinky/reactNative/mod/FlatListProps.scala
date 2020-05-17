@@ -1,7 +1,7 @@
 package typingsSlinky.reactNative.mod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.reactNative.AnonIndex
+import typingsSlinky.reactNative.anon.Index
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,7 +44,7 @@ trait FlatListProps[ItemT] extends VirtualizedListProps[ItemT] {
     */
   @JSName("getItemLayout")
   var getItemLayout_FlatListProps: js.UndefOr[
-    js.Function2[/* data */ js.UndefOr[js.Array[ItemT] | Null], /* index */ Double, AnonIndex]
+    js.Function2[/* data */ js.UndefOr[js.Array[ItemT] | Null], /* index */ Double, Index]
   ] = js.native
   /**
     * Uses legacy MetroListView instead of default VirtualizedSectionList
@@ -177,7 +177,7 @@ object FlatListProps {
         ret
     }
     @scala.inline
-    def withGetItemLayout(value: (/* data */ js.UndefOr[js.Array[ItemT] | Null], /* index */ Double) => AnonIndex): Self[ItemT] = {
+    def withGetItemLayout(value: (/* data */ js.UndefOr[js.Array[ItemT] | Null], /* index */ Double) => Index): Self[ItemT] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getItemLayout")(js.Any.fromFunction2(value))
         ret

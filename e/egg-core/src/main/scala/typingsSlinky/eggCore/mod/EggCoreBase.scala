@@ -1,7 +1,7 @@
 package typingsSlinky.eggCore.mod
 
 import typingsSlinky.depd.mod.Deprecate
-import typingsSlinky.eggCore.AnonIsWeakDep
+import typingsSlinky.eggCore.anon.IsWeakDep
 import typingsSlinky.koa.mod.DefaultContext
 import typingsSlinky.koa.mod.DefaultState
 import typingsSlinky.koa.mod.^
@@ -118,7 +118,7 @@ trait EggCoreBase[Config] extends ^[DefaultState, DefaultContext] {
     * mysql.ready(done);
     */
   def readyCallback(name: String): js.Function0[Unit] = js.native
-  def readyCallback(name: String, opts: AnonIsWeakDep): js.Function0[Unit] = js.native
+  def readyCallback(name: String, opts: IsWeakDep): js.Function0[Unit] = js.native
   /**
     * Convert a generator function to a promisable one.
     *

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ClassProvider
   extends ClassSansProvider
-     with _Provider {
+     with Provider {
   /**
     * When true, injector returns an array of instances. This is useful to allow multiple
     * providers spread across many files to provide configuration information to a common token.

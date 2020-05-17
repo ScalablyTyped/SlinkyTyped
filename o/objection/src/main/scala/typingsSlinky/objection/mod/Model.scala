@@ -8,8 +8,8 @@ import typingsSlinky.knex.mod.RawBinding
 import typingsSlinky.knex.mod.RawBuilder
 import typingsSlinky.knex.mod.SafePartial
 import typingsSlinky.knex.mod.ValueDict
-import typingsSlinky.objection.TypeofModel
-import typingsSlinky.objection.TypeofQueryBuilder
+import typingsSlinky.objection.anon.TypeofModel
+import typingsSlinky.objection.anon.TypeofQueryBuilder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

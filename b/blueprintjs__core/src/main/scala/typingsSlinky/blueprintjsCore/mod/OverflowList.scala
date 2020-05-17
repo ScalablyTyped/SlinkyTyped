@@ -1,7 +1,7 @@
 package typingsSlinky.blueprintjsCore.mod
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.blueprintjsCore.PartialIOverflowListPropsClassName
+import typingsSlinky.blueprintjsCore.anon.PartialIOverflowListPropsClassName
 import typingsSlinky.blueprintjsCore.overflowListMod.IOverflowListProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

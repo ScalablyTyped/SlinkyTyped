@@ -1,18 +1,18 @@
 package typingsSlinky.firebaseMessaging.apiMod
 
-import typingsSlinky.firebaseMessaging.AnonApplicationPubKey
+import typingsSlinky.firebaseMessaging.anon.ApplicationPubKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ApiRequestBody extends js.Object {
-  var web: AnonApplicationPubKey = js.native
+  var web: ApplicationPubKey = js.native
 }
 
 object ApiRequestBody {
   @scala.inline
-  def apply(web: AnonApplicationPubKey): ApiRequestBody = {
+  def apply(web: ApplicationPubKey): ApiRequestBody = {
     val __obj = js.Dynamic.literal(web = web.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApiRequestBody]
   }
@@ -23,7 +23,7 @@ object ApiRequestBody {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withWeb(value: AnonApplicationPubKey): Self = {
+    def withWeb(value: ApplicationPubKey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("web")(value.asInstanceOf[js.Any])
         ret

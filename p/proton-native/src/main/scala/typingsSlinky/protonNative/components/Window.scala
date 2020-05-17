@@ -2,8 +2,8 @@ package typingsSlinky.protonNative.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.protonNative.AnonW
-import typingsSlinky.protonNative.AnonY
+import typingsSlinky.protonNative.anon.W
+import typingsSlinky.protonNative.anon.Y
 import typingsSlinky.protonNative.mod.WindowProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -33,9 +33,9 @@ object Window {
     @scala.inline
     def onClose(value: () => Unit): this.type = set("onClose", js.Any.fromFunction0(value))
     @scala.inline
-    def onContentSizeChange(value: /* size */ AnonY => Unit): this.type = set("onContentSizeChange", js.Any.fromFunction1(value))
+    def onContentSizeChange(value: /* size */ Y => Unit): this.type = set("onContentSizeChange", js.Any.fromFunction1(value))
     @scala.inline
-    def size(value: AnonW): this.type = set("size", value.asInstanceOf[js.Any])
+    def size(value: W): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   }

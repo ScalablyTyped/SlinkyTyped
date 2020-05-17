@@ -1,9 +1,9 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonHeader
 import typingsSlinky.aliApp.aliAppStrings.audio
 import typingsSlinky.aliApp.aliAppStrings.image
 import typingsSlinky.aliApp.aliAppStrings.video
+import typingsSlinky.aliApp.anon.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +24,7 @@ trait UploadFileOptions
   /** HTTP 请求 Header */
   var header: js.UndefOr[RequestHeader] = js.native
   @JSName("success")
-  var success_UploadFileOptions: js.UndefOr[js.Function1[/* res */ AnonHeader, Unit]] = js.native
+  var success_UploadFileOptions: js.UndefOr[js.Function1[/* res */ Data, Unit]] = js.native
   /** 开发者服务器地址 */
   var url: String = js.native
 }
@@ -90,7 +90,7 @@ object UploadFileOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonHeader => Unit): Self = {
+    def withSuccess(value: /* res */ Data => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

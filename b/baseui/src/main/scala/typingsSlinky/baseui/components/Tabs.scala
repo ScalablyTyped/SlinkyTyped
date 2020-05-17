@@ -2,8 +2,8 @@ package typingsSlinky.baseui.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonActiveKey
-import typingsSlinky.baseui.SharedPropsactiveboolean
+import typingsSlinky.baseui.anon.ActiveKey
+import typingsSlinky.baseui.anon.SharedPropsactiveboolean
 import typingsSlinky.baseui.baseuiStrings.horizontal
 import typingsSlinky.baseui.baseuiStrings.vertical
 import typingsSlinky.baseui.tabsMod.TabsOverrides
@@ -27,7 +27,7 @@ object Tabs {
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* args */ AnonActiveKey => _): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* args */ ActiveKey => _): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def orientation(value: horizontal | vertical): this.type = set("orientation", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,7 +1,7 @@
 package typingsSlinky.phantom.mod
 
-import typingsSlinky.phantom.AnonBottom
-import typingsSlinky.phantom.AnonContents
+import typingsSlinky.phantom.anon.Bottom
+import typingsSlinky.phantom.anon.Contents
 import typingsSlinky.phantom.phantomStrings.A3
 import typingsSlinky.phantom.phantomStrings.A4
 import typingsSlinky.phantom.phantomStrings.A5
@@ -16,11 +16,11 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait IPaperSizeOptions extends js.Object {
-  var footer: js.UndefOr[AnonContents] = js.native
+  var footer: js.UndefOr[Contents] = js.native
   var format: js.UndefOr[A3 | A4 | A5 | Legal | Letter | Tabloid] = js.native
-  var header: js.UndefOr[AnonContents] = js.native
+  var header: js.UndefOr[Contents] = js.native
   var height: js.UndefOr[String] = js.native
-  var margin: js.UndefOr[String | AnonBottom] = js.native
+  var margin: js.UndefOr[String | Bottom] = js.native
   var orientation: js.UndefOr[portrait | landscape] = js.native
   var width: js.UndefOr[String] = js.native
 }
@@ -38,7 +38,7 @@ object IPaperSizeOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFooter(value: AnonContents): Self = {
+    def withFooter(value: Contents): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
         ret
@@ -62,7 +62,7 @@ object IPaperSizeOptions {
         ret
     }
     @scala.inline
-    def withHeader(value: AnonContents): Self = {
+    def withHeader(value: Contents): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
         ret
@@ -86,7 +86,7 @@ object IPaperSizeOptions {
         ret
     }
     @scala.inline
-    def withMargin(value: String | AnonBottom): Self = {
+    def withMargin(value: String | Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
         ret

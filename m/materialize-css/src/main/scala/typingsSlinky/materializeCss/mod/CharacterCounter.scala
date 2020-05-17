@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("materialize-css", "CharacterCounter")
 @js.native
 class CharacterCounter ()
-  extends typingsSlinky.materializeCss.M.CharacterCounter
+  extends typingsSlinky.materializeCss.M.Component[js.UndefOr[scala.Nothing]]
 
 /* static members */
 @JSImport("materialize-css", "CharacterCounter")

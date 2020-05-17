@@ -2,9 +2,9 @@ package typingsSlinky.gestalt.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.Anon1
-import typingsSlinky.gestalt.Anon2
-import typingsSlinky.gestalt.AnonEventSyntheticEventValueString
+import typingsSlinky.gestalt.anon.EventSyntheticEventValueString
+import typingsSlinky.gestalt.anon.`1`
+import typingsSlinky.gestalt.anon.`2`
 import typingsSlinky.gestalt.gestaltStrings.`current-password`
 import typingsSlinky.gestalt.gestaltStrings.`new-password`
 import typingsSlinky.gestalt.gestaltStrings.date
@@ -45,11 +45,11 @@ object TextField {
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def onBlur(value: /* args */ Anon1 => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    def onBlur(value: /* args */ `1` => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onFocus(value: /* args */ Anon1 => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    def onFocus(value: /* args */ `1` => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
-    def onKeyDown(value: /* args */ Anon2 => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    def onKeyDown(value: /* args */ `2` => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
@@ -62,7 +62,7 @@ object TextField {
   
   def withProps(p: TextFieldProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(id: String, onChange: AnonEventSyntheticEventValueString => Unit): Builder = {
+  def apply(id: String, onChange: EventSyntheticEventValueString => Unit): Builder = {
     val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
     new Builder(js.Array(this.component, __props.asInstanceOf[TextFieldProps]))
   }

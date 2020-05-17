@@ -1,0 +1,17 @@
+package typingsSlinky.officeJsPreview.global.Word
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  *
+  * Represents a row in a Word document.
+  *
+  * [Api set: WordApi 1.3]
+  */
+@JSGlobal("Word.TableRow")
+@js.native
+class TableRow ()
+  extends typingsSlinky.officeJsPreview.Word.TableRow
+

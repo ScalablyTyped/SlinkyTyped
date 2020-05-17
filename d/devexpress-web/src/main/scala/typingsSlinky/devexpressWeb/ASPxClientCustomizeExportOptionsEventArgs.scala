@@ -7,14 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientWebDocumentViewer.CustomizeExportOptions and ASPxClientReportDesigner.PreviewCustomizeExportOptions events.
   */
-@JSGlobal("ASPxClientCustomizeExportOptionsEventArgs")
 @js.native
-class ASPxClientCustomizeExportOptionsEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientCustomizeExportOptionsEventArgs class with the specified export options.
-    * @param options An object that stores export options.
-    */
-  def this(options: js.Any) = this()
+trait ASPxClientCustomizeExportOptionsEventArgs extends ASPxClientEventArgs {
   /**
     * Returns the export options model for the specified export format. An export options model.
     * @param format An object that specifies the export format whose model should be returned.
@@ -35,5 +29,50 @@ class ASPxClientCustomizeExportOptionsEventArgs protected () extends ASPxClientE
     * @param properties An array of properties to hide.
     */
   def HideProperties(format: js.Any, properties: js.Any*): Unit = js.native
+}
+
+object ASPxClientCustomizeExportOptionsEventArgs {
+  @scala.inline
+  def apply(
+    GetExportOptionsModel: js.Any => js.Any,
+    HideExportOptionsPanel: () => Unit,
+    HideFormat: js.Any => Unit,
+    HideProperties: (js.Any, /* repeated */ js.Any) => Unit
+  ): ASPxClientCustomizeExportOptionsEventArgs = {
+    val __obj = js.Dynamic.literal(GetExportOptionsModel = js.Any.fromFunction1(GetExportOptionsModel), HideExportOptionsPanel = js.Any.fromFunction0(HideExportOptionsPanel), HideFormat = js.Any.fromFunction1(HideFormat), HideProperties = js.Any.fromFunction2(HideProperties))
+    __obj.asInstanceOf[ASPxClientCustomizeExportOptionsEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientCustomizeExportOptionsEventArgsOps[Self <: ASPxClientCustomizeExportOptionsEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetExportOptionsModel(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetExportOptionsModel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHideExportOptionsPanel(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HideExportOptionsPanel")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHideFormat(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HideFormat")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHideProperties(value: (js.Any, /* repeated */ js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HideProperties")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.baseui.menuMod
 
-import typingsSlinky.baseui.AnonEmptyState
+import typingsSlinky.baseui.anon.EmptyState
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import scala.scalajs.js
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait MenuProps extends BaseMenuPropsT {
-  var overrides: js.UndefOr[AnonEmptyState] = js.native
+  var overrides: js.UndefOr[EmptyState] = js.native
   var size: js.UndefOr[default_ | compact] = js.native
 }
 
@@ -26,7 +26,7 @@ object MenuProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOverrides(value: AnonEmptyState): Self = {
+    def withOverrides(value: EmptyState): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
         ret

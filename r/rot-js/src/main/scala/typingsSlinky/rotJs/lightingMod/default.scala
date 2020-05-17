@@ -1,6 +1,6 @@
 package typingsSlinky.rotJs.lightingMod
 
-import typingsSlinky.rotJs.PartialOptionsEmissionThreshold
+import typingsSlinky.rotJs.anon.PartialOptionsEmissionThreshold
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

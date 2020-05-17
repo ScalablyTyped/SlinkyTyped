@@ -7,20 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Contains settings to define a hyperlink.
   */
-@JSGlobal("HyperlinkSettings")
 @js.native
-/**
-  * Initializes a new instance of the HyperlinkSettings object.
-  * @param url A hyperlink URL.
-  * @param bookmark A bookmark name.
-  * @param tooltip A tooltip text.
-  * @param text A hyperlink text.
-  */
-class HyperlinkSettings () extends js.Object {
-  def this(url: String) = this()
-  def this(url: String, bookmark: String) = this()
-  def this(url: String, bookmark: String, tooltip: String) = this()
-  def this(url: String, bookmark: String, tooltip: String, text: String) = this()
+trait HyperlinkSettings extends js.Object {
   /**
     * Specifies a hyperlink's bookmark.
     */
@@ -37,5 +25,45 @@ class HyperlinkSettings () extends js.Object {
     * Specifies a hyperlink's destination.
     */
   var url: String = js.native
+}
+
+object HyperlinkSettings {
+  @scala.inline
+  def apply(bookmark: String, text: String, tooltip: String, url: String): HyperlinkSettings = {
+    val __obj = js.Dynamic.literal(bookmark = bookmark.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any], tooltip = tooltip.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    __obj.asInstanceOf[HyperlinkSettings]
+  }
+  @scala.inline
+  implicit class HyperlinkSettingsOps[Self <: HyperlinkSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBookmark(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bookmark")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

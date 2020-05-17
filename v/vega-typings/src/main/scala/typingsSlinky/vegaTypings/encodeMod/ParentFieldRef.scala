@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ParentFieldRef extends _Field {
+trait ParentFieldRef extends Field {
   var level: js.UndefOr[Double] = js.native
   var parent: Field = js.native
 }

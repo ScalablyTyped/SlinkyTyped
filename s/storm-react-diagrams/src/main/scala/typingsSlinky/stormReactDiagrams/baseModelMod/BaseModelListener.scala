@@ -1,6 +1,6 @@
 package typingsSlinky.stormReactDiagrams.baseModelMod
 
-import typingsSlinky.stormReactDiagrams.BaseEventBaseModelBaseEnt
+import typingsSlinky.stormReactDiagrams.anon.BaseEventBaseModelBaseEnt
 import typingsSlinky.stormReactDiagrams.baseEntityMod.BaseEntity
 import typingsSlinky.stormReactDiagrams.baseEntityMod.BaseEvent
 import typingsSlinky.stormReactDiagrams.baseEntityMod.BaseListener

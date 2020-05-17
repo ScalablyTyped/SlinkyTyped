@@ -1,6 +1,6 @@
 package typingsSlinky.screeps
 
-import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.screeps.anon.Pos
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -126,8 +126,6 @@ trait PowerCreep
     * @param path A path value as returned from Room.findPath or RoomPosition.findPathTo methods. Both array form and serialized string form are accepted.
     */
   def moveByPath(path: js.Array[PathStep | RoomPosition]): CreepMoveReturnCode | ERR_NOT_FOUND | ERR_INVALID_ARGS = js.native
-  def moveTo(target: AnonPos): CreepMoveReturnCode | ERR_NO_PATH | ERR_INVALID_TARGET | ERR_NOT_FOUND = js.native
-  def moveTo(target: AnonPos, opts: MoveToOpts): CreepMoveReturnCode | ERR_NO_PATH | ERR_INVALID_TARGET | ERR_NOT_FOUND = js.native
   /**
     * Find the optimal path to the target within the same room and move to it.
     * A shorthand to consequent calls of pos.findPathTo() and move() methods.
@@ -139,6 +137,8 @@ trait PowerCreep
     */
   def moveTo(target: RoomPosition): CreepMoveReturnCode | ERR_NO_PATH | ERR_INVALID_TARGET | ERR_NOT_FOUND = js.native
   def moveTo(target: RoomPosition, opts: MoveToOpts): CreepMoveReturnCode | ERR_NO_PATH | ERR_INVALID_TARGET | ERR_NOT_FOUND = js.native
+  def moveTo(target: Pos): CreepMoveReturnCode | ERR_NO_PATH | ERR_INVALID_TARGET | ERR_NOT_FOUND = js.native
+  def moveTo(target: Pos, opts: MoveToOpts): CreepMoveReturnCode | ERR_NO_PATH | ERR_INVALID_TARGET | ERR_NOT_FOUND = js.native
   /**
     * Find the optimal path to the target within the same room and move to it.
     * A shorthand to consequent calls of pos.findPathTo() and move() methods.
@@ -229,8 +229,4 @@ trait PowerCreep
   def withdraw(target: Tombstone, resourceType: ResourceConstant): ScreepsReturnCode = js.native
   def withdraw(target: Tombstone, resourceType: ResourceConstant, amount: Double): ScreepsReturnCode = js.native
 }
-
-@JSGlobal("PowerCreep")
-@js.native
-object PowerCreep extends TopLevel[PowerCreepConstructor]
 

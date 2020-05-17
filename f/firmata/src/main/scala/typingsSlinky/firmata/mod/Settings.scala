@@ -1,6 +1,6 @@
 package typingsSlinky.firmata.mod
 
-import typingsSlinky.firmata.AnonBaudRate
+import typingsSlinky.firmata.anon.BaudRate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait Settings extends js.Object {
   var reportVersionTimeout: Double = js.native
   var samplingInterval: Double = js.native
-  var serialport: AnonBaudRate = js.native
+  var serialport: BaudRate = js.native
 }
 
 object Settings {
   @scala.inline
-  def apply(reportVersionTimeout: Double, samplingInterval: Double, serialport: AnonBaudRate): Settings = {
+  def apply(reportVersionTimeout: Double, samplingInterval: Double, serialport: BaudRate): Settings = {
     val __obj = js.Dynamic.literal(reportVersionTimeout = reportVersionTimeout.asInstanceOf[js.Any], samplingInterval = samplingInterval.asInstanceOf[js.Any], serialport = serialport.asInstanceOf[js.Any])
     __obj.asInstanceOf[Settings]
   }
@@ -37,7 +37,7 @@ object Settings {
         ret
     }
     @scala.inline
-    def withSerialport(value: AnonBaudRate): Self = {
+    def withSerialport(value: BaudRate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("serialport")(value.asInstanceOf[js.Any])
         ret

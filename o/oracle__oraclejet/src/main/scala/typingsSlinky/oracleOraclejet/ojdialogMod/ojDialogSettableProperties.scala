@@ -1,6 +1,6 @@
 package typingsSlinky.oracleOraclejet.ojdialogMod
 
-import typingsSlinky.oracleOraclejet.AnonLabelCloseIcon
+import typingsSlinky.oracleOraclejet.anon.LabelCloseIcon
 import typingsSlinky.oracleOraclejet.mod.baseComponentSettableProperties
 import typingsSlinky.oracleOraclejet.ojdialogMod.ojDialog.Position
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`title-bar`
@@ -27,7 +27,7 @@ trait ojDialogSettableProperties extends baseComponentSettableProperties {
   var resizeBehavior: resizable | none = js.native
   var role: String = js.native
   @JSName("translations")
-  var translations_ojDialogSettableProperties: AnonLabelCloseIcon = js.native
+  var translations_ojDialogSettableProperties: LabelCloseIcon = js.native
 }
 
 object ojDialogSettableProperties {
@@ -40,7 +40,7 @@ object ojDialogSettableProperties {
     position: Position,
     resizeBehavior: resizable | none,
     role: String,
-    translations: AnonLabelCloseIcon
+    translations: LabelCloseIcon
   ): ojDialogSettableProperties = {
     val __obj = js.Dynamic.literal(cancelBehavior = cancelBehavior.asInstanceOf[js.Any], dragAffordance = dragAffordance.asInstanceOf[js.Any], initialVisibility = initialVisibility.asInstanceOf[js.Any], modality = modality.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], resizeBehavior = resizeBehavior.asInstanceOf[js.Any], role = role.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojDialogSettableProperties]
@@ -94,7 +94,7 @@ object ojDialogSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelCloseIcon): Self = {
+    def withTranslations(value: LabelCloseIcon): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

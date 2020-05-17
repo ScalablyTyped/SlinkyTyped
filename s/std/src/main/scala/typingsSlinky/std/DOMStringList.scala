@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.NumberDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,9 +24,4 @@ trait DOMStringList
     */
   def item(index: Double): java.lang.String | Null = js.native
 }
-
-@JSGlobal("DOMStringList")
-@js.native
-object DOMStringList
-  extends Instantiable0[org.scalajs.dom.raw.DOMStringList]
 

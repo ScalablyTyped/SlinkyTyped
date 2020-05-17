@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
+import typingsSlinky.babylonjs.anon.Input
 import typingsSlinky.babylonjs.effectFallbacksMod.EffectFallbacks
 import typingsSlinky.babylonjs.effectMod.Effect
 import typingsSlinky.babylonjs.meshMod.Mesh
@@ -115,7 +116,7 @@ object nodeMaterialBlockMod extends js.Object {
       * @returns the current block
       */
     def connectTo(other: NodeMaterialBlock): js.UndefOr[this.type] = js.native
-    def connectTo(other: NodeMaterialBlock, options: AnonInput): js.UndefOr[this.type] = js.native
+    def connectTo(other: NodeMaterialBlock, options: Input): js.UndefOr[this.type] = js.native
     /**
       * Release resources
       */

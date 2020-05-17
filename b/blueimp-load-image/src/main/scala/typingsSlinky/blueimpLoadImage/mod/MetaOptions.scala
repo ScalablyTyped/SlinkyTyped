@@ -12,14 +12,8 @@ trait MetaOptions extends js.Object
 
 object MetaOptions {
   @scala.inline
-  def MetaTrueOptions(orientation: Orientation): MetaOptions = {
-    val __obj = js.Dynamic.literal(orientation = orientation.asInstanceOf[js.Any])
-    __obj.asInstanceOf[MetaOptions]
-  }
+  implicit def apply(value: MetaFalseOptions): MetaOptions = value.asInstanceOf[MetaOptions]
   @scala.inline
-  def MetaFalseOptions(): MetaOptions = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[MetaOptions]
-  }
+  implicit def apply(value: MetaTrueOptions): MetaOptions = value.asInstanceOf[MetaOptions]
 }
 

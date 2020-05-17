@@ -14,17 +14,17 @@ object CheckboxEditor {
   
   def apply(p: js.Any): Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Editors.CheckboxEditor
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Editors.CheckboxEditor
   ] = new Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Editors.CheckboxEditor
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Editors.CheckboxEditor
   ](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: CheckboxEditor.type): Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Editors.CheckboxEditor
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Editors.CheckboxEditor
   ] = new Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Editors.CheckboxEditor
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Editors.CheckboxEditor
   ](js.Array(this.component, js.Dictionary.empty))()
 }
 

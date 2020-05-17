@@ -2,7 +2,7 @@ package typingsSlinky.leafletGpx.mod
 
 import typingsSlinky.leaflet.mod.MarkerOptions
 import typingsSlinky.leaflet.mod.PolylineOptions
-import typingsSlinky.leafletGpx.AnonParseElements
+import typingsSlinky.leafletGpx.anon.ParseElements
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GPXOptions extends js.Object {
   var async: js.UndefOr[Boolean] = js.native
-  var gpx_options: js.UndefOr[AnonParseElements] = js.native
+  var gpx_options: js.UndefOr[ParseElements] = js.native
   var marker_options: js.UndefOr[MarkerOptions] = js.native
   var max_point_interval: js.UndefOr[Double] = js.native
   var polyline_options: js.UndefOr[PolylineOptions] = js.native
@@ -41,7 +41,7 @@ object GPXOptions {
         ret
     }
     @scala.inline
-    def withGpx_options(value: AnonParseElements): Self = {
+    def withGpx_options(value: ParseElements): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gpx_options")(value.asInstanceOf[js.Any])
         ret

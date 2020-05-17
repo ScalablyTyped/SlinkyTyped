@@ -1,17 +1,17 @@
 package typingsSlinky.swfobject.swfobject
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Event_
-import typingsSlinky.swfobject.AnonIe
+import typingsSlinky.swfobject.anon.Ie
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SwfObject extends js.Object {
-  var ua: AnonIe = js.native
+  var ua: Ie = js.native
   def addDomLoadEvent(fn: js.Function0[Unit]): Unit = js.native
-  def addLoadEvent(fn: js.Function1[/* event */ js.UndefOr[Event_], Unit]): Unit = js.native
+  def addLoadEvent(fn: js.Function1[/* event */ js.UndefOr[Event], Unit]): Unit = js.native
   def createCSS(selStr: String, declStr: String): Unit = js.native
   def createCSS(selStr: String, declStr: String, mediaStr: String): Unit = js.native
   def createCSS(selStr: String, declStr: String, mediaStr: String, newStyleBoolean: Boolean): Unit = js.native

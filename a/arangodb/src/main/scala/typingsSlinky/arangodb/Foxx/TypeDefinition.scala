@@ -1,6 +1,6 @@
 package typingsSlinky.arangodb.Foxx
 
-import typingsSlinky.arangodb.AnonData
+import typingsSlinky.arangodb.anon.Data
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait TypeDefinition extends js.Object {
-  var forClient: js.UndefOr[js.Function1[/* body */ js.Any, AnonData]] = js.native
+  var forClient: js.UndefOr[js.Function1[/* body */ js.Any, Data]] = js.native
   var fromClient: js.UndefOr[
     js.Function3[/* body */ String | Buffer, /* req */ Request, /* type */ MediaType, _]
   ] = js.native
@@ -27,7 +27,7 @@ object TypeDefinition {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withForClient(value: /* body */ js.Any => AnonData): Self = {
+    def withForClient(value: /* body */ js.Any => Data): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("forClient")(js.Any.fromFunction1(value))
         ret

@@ -1,21 +1,21 @@
 package typingsSlinky.foundation.Foundation
 
 import org.scalajs.dom.raw.CSSStyleSheet
-import typingsSlinky.foundation.AnonAddcustomrule
-import typingsSlinky.foundation.AnonNamespace
 import typingsSlinky.foundation.JQuery
+import typingsSlinky.foundation.anon.Addcustomrule
+import typingsSlinky.foundation.anon.Namespace
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait FoundationStatic extends js.Object {
-  var global: AnonNamespace = js.native
+  var global: Namespace = js.native
   var libs: js.Any = js.native
   var media_queries: js.Object = js.native
   var name: String = js.native
   var stylesheet: CSSStyleSheet = js.native
-  var utils: AnonAddcustomrule = js.native
+  var utils: Addcustomrule = js.native
   var version: String = js.native
   def inherit(scope: JQuery, methods: String): Unit = js.native
   def init(scope: JQuery): JQuery = js.native

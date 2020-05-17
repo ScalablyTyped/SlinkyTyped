@@ -5,7 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ObjectType extends Type {
+trait ObjectType
+  extends Type
+     with BaseType
+     with StructuredType {
   var objectFlags: ObjectFlags = js.native
 }
 

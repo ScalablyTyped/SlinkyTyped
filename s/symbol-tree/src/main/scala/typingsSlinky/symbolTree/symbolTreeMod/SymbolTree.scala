@@ -1,6 +1,6 @@
 package typingsSlinky.symbolTree.symbolTreeMod
 
-import typingsSlinky.symbolTree.AnonFilter
+import typingsSlinky.symbolTree.anon.Filter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ trait SymbolTree[T /* <: js.Object */] extends js.Object {
   @JSName("ancestorsToArray")
   def ancestorsToArray_THIS[THIS](`object`: T): js.Array[T] = js.native
   @JSName("ancestorsToArray")
-  def ancestorsToArray_THIS[THIS](`object`: T, options: ToArrayOptions[T] with (AnonFilter[THIS, T])): js.Array[T] = js.native
+  def ancestorsToArray_THIS[THIS](`object`: T, options: ToArrayOptions[T] with (Filter[THIS, T])): js.Array[T] = js.native
   /**
   	 * Insert the given object as the last child of the given reference object.
   	 * `newObject` is now the last child of `referenceObject`.
@@ -61,7 +61,7 @@ trait SymbolTree[T /* <: js.Object */] extends js.Object {
   @JSName("childrenToArray")
   def childrenToArray_THIS[THIS](parent: T): js.Array[T] = js.native
   @JSName("childrenToArray")
-  def childrenToArray_THIS[THIS](parent: T, options: ToArrayOptions[T] with (AnonFilter[THIS, T])): js.Array[T] = js.native
+  def childrenToArray_THIS[THIS](parent: T, options: ToArrayOptions[T] with (Filter[THIS, T])): js.Array[T] = js.native
   /**
   	 * Compare the position of an object relative to another object. A bit set is returned:
   	 *
@@ -234,6 +234,6 @@ trait SymbolTree[T /* <: js.Object */] extends js.Object {
   @JSName("treeToArray")
   def treeToArray_THIS[THIS](`object`: T): js.Array[T] = js.native
   @JSName("treeToArray")
-  def treeToArray_THIS[THIS](`object`: T, options: ToArrayOptions[T] with (AnonFilter[THIS, T])): js.Array[T] = js.native
+  def treeToArray_THIS[THIS](`object`: T, options: ToArrayOptions[T] with (Filter[THIS, T])): js.Array[T] = js.native
 }
 

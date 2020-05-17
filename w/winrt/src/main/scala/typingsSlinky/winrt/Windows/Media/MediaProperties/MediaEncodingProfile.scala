@@ -1,26 +1,21 @@
 package typingsSlinky.winrt.Windows.Media.MediaProperties
 
-import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
-import typingsSlinky.winrt.Windows.Storage.IStorageFile
-import typingsSlinky.winrt.Windows.Storage.Streams.IRandomAccessStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Media.MediaProperties.MediaEncodingProfile")
 @js.native
-class MediaEncodingProfile () extends IMediaEncodingProfile
+trait MediaEncodingProfile extends IMediaEncodingProfile
 
-/* static members */
-@JSGlobal("Windows.Media.MediaProperties.MediaEncodingProfile")
-@js.native
-object MediaEncodingProfile extends js.Object {
-  def createFromFileAsync(file: IStorageFile): IAsyncOperation[MediaEncodingProfile] = js.native
-  def createFromStreamAsync(stream: IRandomAccessStream): IAsyncOperation[MediaEncodingProfile] = js.native
-  def createM4a(quality: AudioEncodingQuality): MediaEncodingProfile = js.native
-  def createMp3(quality: AudioEncodingQuality): MediaEncodingProfile = js.native
-  def createMp4(quality: VideoEncodingQuality): MediaEncodingProfile = js.native
-  def createWma(quality: AudioEncodingQuality): MediaEncodingProfile = js.native
-  def createWmv(quality: VideoEncodingQuality): MediaEncodingProfile = js.native
+object MediaEncodingProfile {
+  @scala.inline
+  def apply(
+    audio: AudioEncodingProperties,
+    container: ContainerEncodingProperties,
+    video: VideoEncodingProperties
+  ): MediaEncodingProfile = {
+    val __obj = js.Dynamic.literal(audio = audio.asInstanceOf[js.Any], container = container.asInstanceOf[js.Any], video = video.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MediaEncodingProfile]
+  }
 }
 

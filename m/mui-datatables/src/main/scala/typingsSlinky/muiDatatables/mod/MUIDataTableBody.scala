@@ -1,6 +1,6 @@
 package typingsSlinky.muiDatatables.mod
 
-import typingsSlinky.muiDatatables.AnonRowIndex
+import typingsSlinky.muiDatatables.anon.RowIndex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait MUIDataTableBody extends js.Object {
   var count: Double = js.native
   var data: js.Array[js.Object | (js.Array[Double | String])] = js.native
   var filterList: js.UndefOr[js.Array[js.Array[String]]] = js.native
-  var onRowClick: js.UndefOr[js.Function2[/* rowData */ js.Array[String], /* rowMeta */ AnonRowIndex, Unit]] = js.native
+  var onRowClick: js.UndefOr[js.Function2[/* rowData */ js.Array[String], /* rowMeta */ RowIndex, Unit]] = js.native
   var options: js.Object = js.native
   var searchText: js.UndefOr[String] = js.native
   var selectRowUpdate: js.UndefOr[js.Function1[/* args */ js.Any, _]] = js.native
@@ -81,7 +81,7 @@ object MUIDataTableBody {
         ret
     }
     @scala.inline
-    def withOnRowClick(value: (/* rowData */ js.Array[String], /* rowMeta */ AnonRowIndex) => Unit): Self = {
+    def withOnRowClick(value: (/* rowData */ js.Array[String], /* rowMeta */ RowIndex) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowClick")(js.Any.fromFunction2(value))
         ret

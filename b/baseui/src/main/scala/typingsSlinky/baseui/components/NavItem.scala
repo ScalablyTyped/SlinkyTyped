@@ -2,7 +2,7 @@ package typingsSlinky.baseui.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonItemAny
+import typingsSlinky.baseui.anon.ItemAny
 import typingsSlinky.baseui.sideNavigationMod.Item
 import typingsSlinky.baseui.sideNavigationMod.NavItemOverrides
 import typingsSlinky.baseui.sideNavigationMod.NavItemProps
@@ -26,7 +26,7 @@ object NavItem {
     @scala.inline
     def $selectable(value: Boolean): this.type = set("$selectable", value.asInstanceOf[js.Any])
     @scala.inline
-    def onSelect(value: /* args */ AnonItemAny => _): this.type = set("onSelect", js.Any.fromFunction1(value))
+    def onSelect(value: /* args */ ItemAny => _): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline
     def overrides(value: NavItemOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
   }

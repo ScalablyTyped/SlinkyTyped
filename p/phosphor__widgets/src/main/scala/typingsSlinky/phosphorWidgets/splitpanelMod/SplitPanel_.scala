@@ -1,12 +1,12 @@
 package typingsSlinky.phosphorWidgets.splitpanelMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.phosphorWidgets.panelMod.Panel
 import typingsSlinky.phosphorWidgets.splitpanelMod.SplitPanel.Alignment
 import typingsSlinky.phosphorWidgets.splitpanelMod.SplitPanel.IOptions
 import typingsSlinky.phosphorWidgets.splitpanelMod.SplitPanel.IRenderer
 import typingsSlinky.phosphorWidgets.splitpanelMod.SplitPanel.Orientation
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -92,7 +92,7 @@ class SplitPanel_ () extends Panel {
     * called in response to events on the panel's DOM node. It should
     * not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
   /**
     * Get the relative sizes of the widgets in the panel.
     *

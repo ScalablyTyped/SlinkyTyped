@@ -1,18 +1,18 @@
 package typingsSlinky.reactSizeme.mod
 
-import typingsSlinky.reactSizeme.AnonHeight
+import typingsSlinky.reactSizeme.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SizeMeProps extends js.Object {
-  val size: AnonHeight = js.native
+  val size: Height = js.native
 }
 
 object SizeMeProps {
   @scala.inline
-  def apply(size: AnonHeight): SizeMeProps = {
+  def apply(size: Height): SizeMeProps = {
     val __obj = js.Dynamic.literal(size = size.asInstanceOf[js.Any])
     __obj.asInstanceOf[SizeMeProps]
   }
@@ -23,7 +23,7 @@ object SizeMeProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSize(value: AnonHeight): Self = {
+    def withSize(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
         ret

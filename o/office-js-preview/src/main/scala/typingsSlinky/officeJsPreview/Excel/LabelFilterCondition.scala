@@ -1,6 +1,5 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -112,37 +111,6 @@ object LabelFilterCondition extends js.Object {
     */
   @js.native
   sealed trait unknown extends LabelFilterCondition
-  
-  /* "Equals" */ @JSName("equals")
-  val equals_ : equals with String = js.native
-  @JSBracketAccess
-  def apply(value: String): js.UndefOr[LabelFilterCondition with String] = js.native
-  /* "BeginsWith" */ @js.native
-  object beginsWith extends TopLevel[beginsWith with String]
-  
-  /* "Between" */ @js.native
-  object between extends TopLevel[between with String]
-  
-  /* "Contains" */ @js.native
-  object contains extends TopLevel[contains with String]
-  
-  /* "EndsWith" */ @js.native
-  object endsWith extends TopLevel[endsWith with String]
-  
-  /* "GreaterThan" */ @js.native
-  object greaterThan extends TopLevel[greaterThan with String]
-  
-  /* "GreaterThanOrEqualTo" */ @js.native
-  object greaterThanOrEqualTo extends TopLevel[greaterThanOrEqualTo with String]
-  
-  /* "LessThan" */ @js.native
-  object lessThan extends TopLevel[lessThan with String]
-  
-  /* "LessThanOrEqualTo" */ @js.native
-  object lessThanOrEqualTo extends TopLevel[lessThanOrEqualTo with String]
-  
-  /* "Unknown" */ @js.native
-  object unknown extends TopLevel[unknown with String]
   
 }
 

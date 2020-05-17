@@ -1,5 +1,6 @@
 package typingsSlinky.baseui.components
 
+import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.baseuiStrings.`inline`
@@ -9,7 +10,6 @@ import typingsSlinky.baseui.baseuiStrings.positive
 import typingsSlinky.baseui.baseuiStrings.toast
 import typingsSlinky.baseui.baseuiStrings.warning
 import typingsSlinky.baseui.toastMod.ToastOverrides
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,15 +29,15 @@ class SharedBuilder_ToastProps_508882891[R <: js.Object] (val args: js.Array[js.
   @scala.inline
   def notificationType(value: `inline` | toast): this.type = set("notificationType", value.asInstanceOf[js.Any])
   @scala.inline
-  def onBlur(value: /* e */ Event_ => _): this.type = set("onBlur", js.Any.fromFunction1(value))
+  def onBlur(value: /* e */ Event => _): this.type = set("onBlur", js.Any.fromFunction1(value))
   @scala.inline
   def onClose(value: () => _): this.type = set("onClose", js.Any.fromFunction0(value))
   @scala.inline
-  def onFocus(value: /* e */ Event_ => _): this.type = set("onFocus", js.Any.fromFunction1(value))
+  def onFocus(value: /* e */ Event => _): this.type = set("onFocus", js.Any.fromFunction1(value))
   @scala.inline
-  def onMouseEnter(value: /* e */ Event_ => _): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+  def onMouseEnter(value: /* e */ Event => _): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
   @scala.inline
-  def onMouseLeave(value: /* e */ Event_ => _): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+  def onMouseLeave(value: /* e */ Event => _): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
   @scala.inline
   def overrides(value: ToastOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
 }

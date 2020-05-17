@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait JsxOpeningLikeElement extends CallLikeExpression
 
+object JsxOpeningLikeElement {
+  @scala.inline
+  implicit def apply(value: JsxOpeningElement): JsxOpeningLikeElement = value.asInstanceOf[JsxOpeningLikeElement]
+  @scala.inline
+  implicit def apply(value: JsxSelfClosingElement): JsxOpeningLikeElement = value.asInstanceOf[JsxOpeningLikeElement]
+}
+

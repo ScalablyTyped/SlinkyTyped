@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("PowerPoint.PlotArea")
 @js.native
-class PlotArea protected () extends js.Object {
+trait PlotArea extends js.Object {
   val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application = js.native
   val Border: ChartBorder = js.native
   val Creator: Double = js.native
@@ -28,5 +27,163 @@ class PlotArea protected () extends js.Object {
   var Width: Double = js.native
   def ClearFormats(): js.Any = js.native
   def Select(): js.Any = js.native
+}
+
+object PlotArea {
+  @scala.inline
+  def apply(
+    Application: Application,
+    Border: ChartBorder,
+    ClearFormats: () => js.Any,
+    Creator: Double,
+    Fill: ChartFillFormat,
+    Format: ChartFormat,
+    Height: Double,
+    InsideHeight: Double,
+    InsideLeft: Double,
+    InsideTop: Double,
+    InsideWidth: Double,
+    Interior: Interior,
+    Left: Double,
+    Name: String,
+    Parent: js.Any,
+    Position: XlChartElementPosition,
+    PowerPointDotPlotArea_typekey: PlotArea,
+    Select: () => js.Any,
+    Top: Double,
+    Width: Double
+  ): PlotArea = {
+    val __obj = js.Dynamic.literal(Application = Application.asInstanceOf[js.Any], Border = Border.asInstanceOf[js.Any], ClearFormats = js.Any.fromFunction0(ClearFormats), Creator = Creator.asInstanceOf[js.Any], Fill = Fill.asInstanceOf[js.Any], Format = Format.asInstanceOf[js.Any], Height = Height.asInstanceOf[js.Any], InsideHeight = InsideHeight.asInstanceOf[js.Any], InsideLeft = InsideLeft.asInstanceOf[js.Any], InsideTop = InsideTop.asInstanceOf[js.Any], InsideWidth = InsideWidth.asInstanceOf[js.Any], Interior = Interior.asInstanceOf[js.Any], Left = Left.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Parent = Parent.asInstanceOf[js.Any], Position = Position.asInstanceOf[js.Any], Select = js.Any.fromFunction0(Select), Top = Top.asInstanceOf[js.Any], Width = Width.asInstanceOf[js.Any])
+    __obj.updateDynamic("PowerPoint.PlotArea_typekey")(PowerPointDotPlotArea_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PlotArea]
+  }
+  @scala.inline
+  implicit class PlotAreaOps[Self <: PlotArea] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplication(value: Application): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBorder(value: ChartBorder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Border")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClearFormats(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClearFormats")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withCreator(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFill(value: ChartFillFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFormat(value: ChartFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInsideHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InsideHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInsideLeft(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InsideLeft")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInsideTop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InsideTop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInsideWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InsideWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInterior(value: Interior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Interior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLeft(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPosition(value: XlChartElementPosition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPowerPointDotPlotArea_typekey(value: PlotArea): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PowerPoint.PlotArea_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSelect(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Select")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withTop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Top")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Width")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

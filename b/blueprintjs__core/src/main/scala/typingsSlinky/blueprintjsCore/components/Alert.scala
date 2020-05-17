@@ -1,5 +1,6 @@
 package typingsSlinky.blueprintjsCore.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
@@ -10,7 +11,6 @@ import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,17 +43,15 @@ object Alert {
     @scala.inline
     def intent(value: Intent): this.type = set("intent", value.asInstanceOf[js.Any])
     @scala.inline
-    def onCancel(value: /* evt */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]] => Unit): this.type = set("onCancel", js.Any.fromFunction1(value))
+    def onCancel(value: /* evt */ js.UndefOr[SyntheticEvent[Event, HTMLElement]] => Unit): this.type = set("onCancel", js.Any.fromFunction1(value))
     @scala.inline
-    def onClose(
-      value: (/* confirmed */ Boolean, /* evt */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]]) => Unit
-    ): this.type = set("onClose", js.Any.fromFunction2(value))
+    def onClose(value: (/* confirmed */ Boolean, /* evt */ js.UndefOr[SyntheticEvent[Event, HTMLElement]]) => Unit): this.type = set("onClose", js.Any.fromFunction2(value))
     @scala.inline
     def onClosed(value: /* node */ HTMLElement => Unit): this.type = set("onClosed", js.Any.fromFunction1(value))
     @scala.inline
     def onClosing(value: /* node */ HTMLElement => Unit): this.type = set("onClosing", js.Any.fromFunction1(value))
     @scala.inline
-    def onConfirm(value: /* evt */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]] => Unit): this.type = set("onConfirm", js.Any.fromFunction1(value))
+    def onConfirm(value: /* evt */ js.UndefOr[SyntheticEvent[Event, HTMLElement]] => Unit): this.type = set("onConfirm", js.Any.fromFunction1(value))
     @scala.inline
     def onOpened(value: /* node */ HTMLElement => Unit): this.type = set("onOpened", js.Any.fromFunction1(value))
     @scala.inline

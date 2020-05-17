@@ -1,8 +1,8 @@
 package typingsSlinky.gapiYoutube.gapi.client.youtube
 
 import typingsSlinky.gapi.gapi.client.HttpRequest
-import typingsSlinky.gapiYoutube.AnonOnBehalfOfContentOwner
 import typingsSlinky.gapiYoutube.GoogleApiYouTubeChannelBannerResource
+import typingsSlinky.gapiYoutube.anon.OnBehalfOfContentOwner
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +12,12 @@ trait channelBanners extends js.Object {
   /**
     * Uploads a channel banner to YouTube.
     */
-  def insert(`object`: AnonOnBehalfOfContentOwner): HttpRequest[GoogleApiYouTubeChannelBannerResource] = js.native
+  def insert(`object`: OnBehalfOfContentOwner): HttpRequest[GoogleApiYouTubeChannelBannerResource] = js.native
 }
 
 object channelBanners {
   @scala.inline
-  def apply(insert: AnonOnBehalfOfContentOwner => HttpRequest[GoogleApiYouTubeChannelBannerResource]): channelBanners = {
+  def apply(insert: OnBehalfOfContentOwner => HttpRequest[GoogleApiYouTubeChannelBannerResource]): channelBanners = {
     val __obj = js.Dynamic.literal(insert = js.Any.fromFunction1(insert))
     __obj.asInstanceOf[channelBanners]
   }
@@ -28,7 +28,7 @@ object channelBanners {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withInsert(value: AnonOnBehalfOfContentOwner => HttpRequest[GoogleApiYouTubeChannelBannerResource]): Self = {
+    def withInsert(value: OnBehalfOfContentOwner => HttpRequest[GoogleApiYouTubeChannelBannerResource]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
         ret

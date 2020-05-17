@@ -1,6 +1,6 @@
 package typingsSlinky.qrcode.mod
 
-import typingsSlinky.qrcode.AnonQuality
+import typingsSlinky.qrcode.anon.Quality
 import typingsSlinky.qrcode.qrcodeStrings.imageSlashjpeg
 import typingsSlinky.qrcode.qrcodeStrings.imageSlashpng
 import typingsSlinky.qrcode.qrcodeStrings.imageSlashwebp
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait QRCodeToDataURLOptions extends QRCodeRenderersOptions {
-  var rendererOpts: js.UndefOr[AnonQuality] = js.native
+  var rendererOpts: js.UndefOr[Quality] = js.native
   /**
     * Data URI format.
     * Default: image/png
@@ -31,7 +31,7 @@ object QRCodeToDataURLOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withRendererOpts(value: AnonQuality): Self = {
+    def withRendererOpts(value: Quality): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rendererOpts")(value.asInstanceOf[js.Any])
         ret

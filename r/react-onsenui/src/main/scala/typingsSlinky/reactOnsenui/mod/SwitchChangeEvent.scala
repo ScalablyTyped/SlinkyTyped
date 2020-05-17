@@ -1,13 +1,13 @@
 package typingsSlinky.reactOnsenui.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Event_
+import typingsSlinky.std.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SwitchChangeEvent extends Event_ {
+trait SwitchChangeEvent extends Event {
   var isInteractive: Boolean = js.native
   var switch: HTMLElement = js.native
   var value: Boolean = js.native

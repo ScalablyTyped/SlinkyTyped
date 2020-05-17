@@ -2,9 +2,9 @@ package typingsSlinky.protonNative.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.protonNative.AnonButtons
-import typingsSlinky.protonNative.AnonH
-import typingsSlinky.protonNative.AnonX
+import typingsSlinky.protonNative.anon.Buttons
+import typingsSlinky.protonNative.anon.H
+import typingsSlinky.protonNative.anon.X
 import typingsSlinky.protonNative.mod.AreaProps
 import typingsSlinky.protonNative.mod.KeyboardEvent
 import typingsSlinky.protonNative.mod.MouseEvent
@@ -26,11 +26,11 @@ object Area {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.protonNative.mod.Area] {
     @scala.inline
-    def align(value: AnonH): this.type = set("align", value.asInstanceOf[js.Any])
+    def align(value: H): this.type = set("align", value.asInstanceOf[js.Any])
     @scala.inline
     def column(value: Double): this.type = set("column", value.asInstanceOf[js.Any])
     @scala.inline
-    def expand(value: AnonH): this.type = set("expand", value.asInstanceOf[js.Any])
+    def expand(value: H): this.type = set("expand", value.asInstanceOf[js.Any])
     @scala.inline
     def fill(value: String): this.type = set("fill", value.asInstanceOf[js.Any])
     @scala.inline
@@ -48,13 +48,13 @@ object Area {
     @scala.inline
     def onMouseLeave(value: () => Unit): this.type = set("onMouseLeave", js.Any.fromFunction0(value))
     @scala.inline
-    def onMouseMove(value: /* event */ AnonButtons => Unit): this.type = set("onMouseMove", js.Any.fromFunction1(value))
+    def onMouseMove(value: /* event */ Buttons => Unit): this.type = set("onMouseMove", js.Any.fromFunction1(value))
     @scala.inline
     def onMouseUp(value: /* event */ MouseEvent => Unit): this.type = set("onMouseUp", js.Any.fromFunction1(value))
     @scala.inline
     def row(value: Double): this.type = set("row", value.asInstanceOf[js.Any])
     @scala.inline
-    def span(value: AnonX): this.type = set("span", value.asInstanceOf[js.Any])
+    def span(value: X): this.type = set("span", value.asInstanceOf[js.Any])
     @scala.inline
     def stretchy(value: Boolean): this.type = set("stretchy", value.asInstanceOf[js.Any])
     @scala.inline

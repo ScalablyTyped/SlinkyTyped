@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "async-stream-emitter"
-version := "3.0-dt-20200205Z-e00bcb"
-scalaVersion := "2.13.1"
+version := "3.0-dt-20200205Z-b32fea"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "consumable-stream" % "1.0-dt-20200205Z-4552ae",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e",
-  "org.scalablytyped.slinky" %%% "writable-consumable-stream" % "1.1-dt-20200205Z-fb63ff")
+  "org.scalablytyped.slinky" %%% "consumable-stream" % "1.0-dt-20200205Z-da1d91",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb",
+  "org.scalablytyped.slinky" %%% "writable-consumable-stream" % "1.1-dt-20200205Z-7144cf")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

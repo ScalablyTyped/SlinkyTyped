@@ -4,7 +4,7 @@ import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
-import typingsSlinky.materialUiCore.PartialClassNameMapCollap
+import typingsSlinky.materialUiCore.anon.PartialClassNameMapCollap
 import typingsSlinky.materialUiCore.createMuiThemeMod.Theme
 import typingsSlinky.materialUiCore.materialUiCoreStrings.auto
 import typingsSlinky.react.mod.CSSProperties

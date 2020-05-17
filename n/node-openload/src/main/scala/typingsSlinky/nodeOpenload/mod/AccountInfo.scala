@@ -1,6 +1,6 @@
 package typingsSlinky.nodeOpenload.mod
 
-import typingsSlinky.nodeOpenload.AnonLeft
+import typingsSlinky.nodeOpenload.anon.Left
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait AccountInfo extends js.Object {
   var signup_at: String = js.native
   var storage_left: Double = js.native
   var storage_used: String = js.native
-  var traffic: AnonLeft = js.native
+  var traffic: Left = js.native
 }
 
 object AccountInfo {
@@ -28,7 +28,7 @@ object AccountInfo {
     signup_at: String,
     storage_left: Double,
     storage_used: String,
-    traffic: AnonLeft
+    traffic: Left
   ): AccountInfo = {
     val __obj = js.Dynamic.literal(balance = balance.asInstanceOf[js.Any], email = email.asInstanceOf[js.Any], extid = extid.asInstanceOf[js.Any], signup_at = signup_at.asInstanceOf[js.Any], storage_left = storage_left.asInstanceOf[js.Any], storage_used = storage_used.asInstanceOf[js.Any], traffic = traffic.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountInfo]
@@ -76,7 +76,7 @@ object AccountInfo {
         ret
     }
     @scala.inline
-    def withTraffic(value: AnonLeft): Self = {
+    def withTraffic(value: Left): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("traffic")(value.asInstanceOf[js.Any])
         ret

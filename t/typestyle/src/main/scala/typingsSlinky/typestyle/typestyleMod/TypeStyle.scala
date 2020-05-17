@@ -1,7 +1,7 @@
 package typingsSlinky.typestyle.typestyleMod
 
 import typingsSlinky.std.Record
-import typingsSlinky.typestyle.AnonAutoGenerateTag
+import typingsSlinky.typestyle.anon.AutoGenerateTag
 import typingsSlinky.typestyle.typesMod.FontFace
 import typingsSlinky.typestyle.typesMod.KeyFrames
 import typingsSlinky.typestyle.typesMod.NestedCSSProperties
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @JSImport("typestyle/lib/internal/typestyle", "TypeStyle")
 @js.native
 class TypeStyle protected () extends js.Object {
-  def this(hasAutoGenerateTag: AnonAutoGenerateTag) = this()
+  def this(hasAutoGenerateTag: AutoGenerateTag) = this()
   var _autoGenerateTag: js.Any = js.native
   var _freeStyle: js.Any = js.native
   /**

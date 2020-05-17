@@ -1,7 +1,7 @@
 package typingsSlinky.joi.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.joi.AnonWrapArrays
+import typingsSlinky.joi.anon.WrapArrays
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait LanguageRootOptions extends /* key */ StringDictionary[LanguageOptions] {
   var function: js.UndefOr[LanguageOptions] = js.native
   var key: js.UndefOr[String] = js.native
   var `lazy`: js.UndefOr[LanguageOptions] = js.native
-  var messages: js.UndefOr[AnonWrapArrays] = js.native
+  var messages: js.UndefOr[WrapArrays] = js.native
   var number: js.UndefOr[LanguageOptions] = js.native
   var `object`: js.UndefOr[LanguageOptions] = js.native
   var root: js.UndefOr[String] = js.native
@@ -194,7 +194,7 @@ object LanguageRootOptions {
         ret
     }
     @scala.inline
-    def withMessages(value: AnonWrapArrays): Self = {
+    def withMessages(value: WrapArrays): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
         ret

@@ -1,9 +1,9 @@
 package typingsSlinky.tstl.mod
 
-import typingsSlinky.tstl.PickISharedLockablelocksh
-import typingsSlinky.tstl.PickISharedLockabletryloc
-import typingsSlinky.tstl.PickISharedTimedLockablet
-import typingsSlinky.tstl.PickISharedTimedLockabletTrylockshareduntil
+import typingsSlinky.tstl.anon.PickISharedLockablelocksh
+import typingsSlinky.tstl.anon.PickISharedLockabletryloc
+import typingsSlinky.tstl.anon.PickISharedTimedLockablet
+import typingsSlinky.tstl.anon.PickISharedTimedLockabletTrylockshareduntil
 import typingsSlinky.tstl.sharedLockMod.Closure
 import typingsSlinky.tstl.sharedLockMod.IMutex
 import scala.scalajs.js

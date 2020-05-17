@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.date
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.season
 import scala.scalajs.js
@@ -44,8 +43,4 @@ trait Daylight extends Widget_ {
     */
   var visibleElements: DaylightVisibleElements = js.native
 }
-
-@JSGlobal("__esri.Daylight")
-@js.native
-object Daylight extends TopLevel[DaylightConstructor]
 

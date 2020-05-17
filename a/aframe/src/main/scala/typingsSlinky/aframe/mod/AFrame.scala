@@ -1,6 +1,6 @@
 package typingsSlinky.aframe.mod
 
-import typingsSlinky.aframe.AnonGetMeshMixin
+import typingsSlinky.aframe.anon.GetMeshMixin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait AFrame extends js.Object {
   var TWEEN: TweenLib = js.native
   var components: ObjectMap[ComponentDescriptor[Component[_, System[_]]]] = js.native
   var geometries: ObjectMap[GeometryDescriptor[Geometry[_]]] = js.native
-  var primitives: AnonGetMeshMixin = js.native
+  var primitives: GetMeshMixin = js.native
   var scenes: js.Array[Scene] = js.native
   var schema: SchemaUtils = js.native
   var shaders: ObjectMap[ShaderDescriptor[Shader]] = js.native
@@ -41,7 +41,7 @@ object AFrame {
     TWEEN: TweenLib,
     components: ObjectMap[ComponentDescriptor[Component[_, System[_]]]],
     geometries: ObjectMap[GeometryDescriptor[Geometry[_]]],
-    primitives: AnonGetMeshMixin,
+    primitives: GetMeshMixin,
     registerComponent: (String, ComponentDefinition[js.Any]) => ComponentConstructor[js.Any],
     registerElement: (String, js.Object) => Unit,
     registerGeometry: (String, GeometryDefinition[js.Any, _]) => GeometryConstructor[js.Any],
@@ -113,7 +113,7 @@ object AFrame {
         ret
     }
     @scala.inline
-    def withPrimitives(value: AnonGetMeshMixin): Self = {
+    def withPrimitives(value: GetMeshMixin): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("primitives")(value.asInstanceOf[js.Any])
         ret

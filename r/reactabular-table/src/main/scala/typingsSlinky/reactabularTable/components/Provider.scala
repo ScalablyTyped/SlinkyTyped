@@ -2,7 +2,7 @@ package typingsSlinky.reactabularTable.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactabularTable.PartialCSSStyleDeclaratio
+import typingsSlinky.reactabularTable.anon.PartialCSSStyleDeclaratio
 import typingsSlinky.reactabularTable.mod.Column
 import typingsSlinky.reactabularTable.mod.ProviderProps
 import typingsSlinky.reactabularTable.mod.Renderers

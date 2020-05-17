@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TimelineEditableOption extends js.Object {
+trait TimelineEditableOption extends TimelineOptionsEditableType {
   var add: js.UndefOr[Boolean] = js.native
   var overrideItems: js.UndefOr[Boolean] = js.native
   var remove: js.UndefOr[Boolean] = js.native

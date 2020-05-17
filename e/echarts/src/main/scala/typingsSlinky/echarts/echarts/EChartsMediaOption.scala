@@ -1,6 +1,6 @@
 package typingsSlinky.echarts.echarts
 
-import typingsSlinky.echarts.AnonAspectRatio
+import typingsSlinky.echarts.anon.AspectRatio
 import typingsSlinky.echarts.echarts.EChartOption.Series
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait EChartsMediaOption extends js.Object {
   var option: EChartOption[Series] = js.native
-  var query: AnonAspectRatio = js.native
+  var query: AspectRatio = js.native
 }
 
 object EChartsMediaOption {
   @scala.inline
-  def apply(option: EChartOption[Series], query: AnonAspectRatio): EChartsMediaOption = {
+  def apply(option: EChartOption[Series], query: AspectRatio): EChartsMediaOption = {
     val __obj = js.Dynamic.literal(option = option.asInstanceOf[js.Any], query = query.asInstanceOf[js.Any])
     __obj.asInstanceOf[EChartsMediaOption]
   }
@@ -31,7 +31,7 @@ object EChartsMediaOption {
         ret
     }
     @scala.inline
-    def withQuery(value: AnonAspectRatio): Self = {
+    def withQuery(value: AspectRatio): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
         ret

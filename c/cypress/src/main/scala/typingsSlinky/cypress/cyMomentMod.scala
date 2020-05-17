@@ -1,5 +1,6 @@
 package typingsSlinky.cypress
 
+import typingsSlinky.cypress.anon.DATE
 import typingsSlinky.moment.mod.DurationInputArg1
 import typingsSlinky.moment.mod.DurationInputArg2
 import typingsSlinky.moment.mod.Duration_
@@ -20,7 +21,7 @@ import scala.scalajs.js.annotation._
 object cyMomentMod extends js.Object {
   @js.native
   trait MomentStatic extends js.Object {
-    var HTML5_FMT: AnonDATE = js.native
+    var HTML5_FMT: DATE = js.native
     var ISO_8601: MomentBuiltinFormat = js.native
     var RFC_2822: MomentBuiltinFormat = js.native
     var defaultFormat: String = js.native

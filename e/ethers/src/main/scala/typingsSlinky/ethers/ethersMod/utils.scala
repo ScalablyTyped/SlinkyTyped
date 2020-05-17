@@ -1,6 +1,6 @@
 package typingsSlinky.ethers.ethersMod
 
-import typingsSlinky.ethers.AnonFrom
+import typingsSlinky.ethers.anon.From
 import typingsSlinky.ethers.typesMod.Arrayish
 import typingsSlinky.ethers.typesMod.BigNumber
 import typingsSlinky.ethers.typesMod.BigNumberish
@@ -51,7 +51,7 @@ object utils extends js.Object {
   def formatUnits(value: BigNumberish, unitType: Double): String = js.native
   def formatUnits(value: BigNumberish, unitType: Double, options: js.Any): String = js.native
   def getAddress(address: String): String = js.native
-  def getContractAddress(transaction: AnonFrom): String = js.native
+  def getContractAddress(transaction: From): String = js.native
   def getIcapAddress(address: String): String = js.native
   def getJsonWalletAddress(json: String): String = js.native
   def getNetwork(network: Networkish): Network = js.native

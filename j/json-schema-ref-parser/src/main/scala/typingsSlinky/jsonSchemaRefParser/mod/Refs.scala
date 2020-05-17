@@ -46,7 +46,8 @@ class Refs () extends js.Object {
     * @param $ref The JSON Reference path, optionally with a JSON Pointer in the hash
     * @param value The value to assign. Can be anything (object, string, number, etc.)
     */
-  def set($ref: String, value: JSONSchema4Type | JSONSchema6Type): Unit = js.native
+  def set($ref: String, value: JSONSchema4Type): Unit = js.native
+  def set($ref: String, value: JSONSchema6Type): Unit = js.native
   /**
     * Returns a map of paths/URLs and their correspond values.
     *

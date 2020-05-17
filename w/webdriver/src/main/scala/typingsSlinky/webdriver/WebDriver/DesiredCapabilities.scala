@@ -1,8 +1,8 @@
 package typingsSlinky.webdriver.WebDriver
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.webdriver.AnonBrowser
-import typingsSlinky.webdriver.AnonBufferUsageReportingInterval
+import typingsSlinky.webdriver.anon.Browser
+import typingsSlinky.webdriver.anon.BufferUsageReportingInterval
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -137,7 +137,7 @@ trait DesiredCapabilities extends Capabilities {
   var locationServicesEnabled: js.UndefOr[Boolean] = js.native
   var logFile: js.UndefOr[String] = js.native
   var logLevel: js.UndefOr[String] = js.native
-  var loggingPrefs: js.UndefOr[AnonBrowser] = js.native
+  var loggingPrefs: js.UndefOr[Browser] = js.native
   var maxInstances: js.UndefOr[Double] = js.native
   var mobileEmulationEnabled: js.UndefOr[Boolean] = js.native
   @JSName("moz:firefoxOptions")
@@ -163,7 +163,7 @@ trait DesiredCapabilities extends Capabilities {
   var orientation: js.UndefOr[String] = js.native
   var otherApps: js.UndefOr[String] = js.native
   var pageLoadingStrategy: js.UndefOr[String] = js.native
-  var perfLoggingPrefs: js.UndefOr[AnonBufferUsageReportingInterval] = js.native
+  var perfLoggingPrefs: js.UndefOr[BufferUsageReportingInterval] = js.native
   var platform: js.UndefOr[String] = js.native
   var platformVersion: js.UndefOr[String] = js.native
   var printPageSourceOnFindFailure: js.UndefOr[Boolean] = js.native
@@ -1567,7 +1567,7 @@ object DesiredCapabilities {
         ret
     }
     @scala.inline
-    def withLoggingPrefs(value: AnonBrowser): Self = {
+    def withLoggingPrefs(value: Browser): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loggingPrefs")(value.asInstanceOf[js.Any])
         ret
@@ -1819,7 +1819,7 @@ object DesiredCapabilities {
         ret
     }
     @scala.inline
-    def withPerfLoggingPrefs(value: AnonBufferUsageReportingInterval): Self = {
+    def withPerfLoggingPrefs(value: BufferUsageReportingInterval): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("perfLoggingPrefs")(value.asInstanceOf[js.Any])
         ret

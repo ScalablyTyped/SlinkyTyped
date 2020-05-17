@@ -1,6 +1,6 @@
 package typingsSlinky.jweixin.mod
 
-import typingsSlinky.jweixin.AnonServerId
+import typingsSlinky.jweixin.anon.ServerId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,12 +13,12 @@ trait IuploadImage extends BaseParams {
    // 默认为1，显示进度提示
   // 返回图片的服务器端ID
   @JSName("success")
-  def success_MIuploadImage(res: AnonServerId): Unit = js.native
+  def success_MIuploadImage(res: ServerId): Unit = js.native
 }
 
 object IuploadImage {
   @scala.inline
-  def apply(isShowProgressTips: Double, localId: String, success: AnonServerId => Unit): IuploadImage = {
+  def apply(isShowProgressTips: Double, localId: String, success: ServerId => Unit): IuploadImage = {
     val __obj = js.Dynamic.literal(isShowProgressTips = isShowProgressTips.asInstanceOf[js.Any], localId = localId.asInstanceOf[js.Any], success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[IuploadImage]
   }
@@ -41,7 +41,7 @@ object IuploadImage {
         ret
     }
     @scala.inline
-    def withSuccess(value: AnonServerId => Unit): Self = {
+    def withSuccess(value: ServerId => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

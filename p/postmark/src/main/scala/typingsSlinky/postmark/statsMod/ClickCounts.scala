@@ -1,6 +1,6 @@
 package typingsSlinky.postmark.statsMod
 
-import typingsSlinky.postmark.AnonClicks
+import typingsSlinky.postmark.anon.Clicks
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ClickCounts extends js.Object {
   var Clicks: Double = js.native
-  var Days: js.Array[AnonClicks] = js.native
+  var Days: js.Array[Clicks] = js.native
   var Unique: Double = js.native
 }
 
 object ClickCounts {
   @scala.inline
-  def apply(Clicks: Double, Days: js.Array[AnonClicks], Unique: Double): ClickCounts = {
+  def apply(Clicks: Double, Days: js.Array[Clicks], Unique: Double): ClickCounts = {
     val __obj = js.Dynamic.literal(Clicks = Clicks.asInstanceOf[js.Any], Days = Days.asInstanceOf[js.Any], Unique = Unique.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClickCounts]
   }
@@ -31,7 +31,7 @@ object ClickCounts {
         ret
     }
     @scala.inline
-    def withDays(value: js.Array[AnonClicks]): Self = {
+    def withDays(value: js.Array[Clicks]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Days")(value.asInstanceOf[js.Any])
         ret

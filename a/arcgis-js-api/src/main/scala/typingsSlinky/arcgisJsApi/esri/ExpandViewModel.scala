@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.disabled
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ready
 import scala.scalajs.js
@@ -46,8 +45,4 @@ trait ExpandViewModel extends Accessor {
     */
   var view: MapView | SceneView = js.native
 }
-
-@JSGlobal("__esri.ExpandViewModel")
-@js.native
-object ExpandViewModel extends TopLevel[ExpandViewModelConstructor]
 

@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.std.stdStrings.abort
 import typingsSlinky.std.stdStrings.load
 import typingsSlinky.std.stdStrings.loadend
@@ -235,14 +234,5 @@ trait FileReader extends EventTarget {
     listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
-}
-
-@JSGlobal("FileReader")
-@js.native
-object FileReader
-  extends Instantiable0[org.scalajs.dom.raw.FileReader] {
-  val DONE: Double = js.native
-  val EMPTY: Double = js.native
-  val LOADING: Double = js.native
 }
 

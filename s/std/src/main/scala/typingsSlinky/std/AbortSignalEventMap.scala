@@ -6,12 +6,12 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait AbortSignalEventMap extends js.Object {
-  var abort: Event_ = js.native
+  var abort: org.scalajs.dom.raw.Event = js.native
 }
 
 object AbortSignalEventMap {
   @scala.inline
-  def apply(abort: Event_): AbortSignalEventMap = {
+  def apply(abort: org.scalajs.dom.raw.Event): AbortSignalEventMap = {
     val __obj = js.Dynamic.literal(abort = abort.asInstanceOf[js.Any])
     __obj.asInstanceOf[AbortSignalEventMap]
   }
@@ -22,7 +22,7 @@ object AbortSignalEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAbort(value: Event_): Self = {
+    def withAbort(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("abort")(value.asInstanceOf[js.Any])
         ret

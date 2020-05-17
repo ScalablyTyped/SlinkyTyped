@@ -4,14 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.AudioSceneComponent")
 @js.native
-class AudioSceneComponent protected () extends ISceneSerializableComponent {
-  /**
-    * Creates a new instance of the component for the given scene
-    * @param scene Defines the scene to register the component in
-    */
-  def this(scene: Scene) = this()
+trait AudioSceneComponent extends ISceneSerializableComponent {
   var _afterRender: js.Any = js.native
   var _audioEnabled: js.Any = js.native
   var _audioListenerPositionProvider: js.Any = js.native

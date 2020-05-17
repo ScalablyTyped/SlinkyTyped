@@ -1,5 +1,6 @@
 package typingsSlinky.hopscotch
 
+import typingsSlinky.hopscotch.anon.CloseTooltip
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +10,7 @@ trait HopscotchConfiguration extends js.Object {
   var arrowWidth: js.UndefOr[Double] = js.native
   var bubbleWidth: js.UndefOr[Double] = js.native
   var buddleHeight: js.UndefOr[Double] = js.native
-  var i18n: js.UndefOr[AnonCloseTooltip] = js.native
+  var i18n: js.UndefOr[CloseTooltip] = js.native
   var nextOnTargetClick: js.UndefOr[Boolean] = js.native
   var onClose: js.UndefOr[CallbackNameNamesOrDefinition] = js.native
   var onEnd: js.UndefOr[CallbackNameNamesOrDefinition] = js.native
@@ -76,7 +77,7 @@ object HopscotchConfiguration {
         ret
     }
     @scala.inline
-    def withI18n(value: AnonCloseTooltip): Self = {
+    def withI18n(value: CloseTooltip): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("i18n")(value.asInstanceOf[js.Any])
         ret

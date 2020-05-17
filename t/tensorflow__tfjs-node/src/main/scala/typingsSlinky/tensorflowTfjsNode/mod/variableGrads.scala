@@ -1,6 +1,6 @@
 package typingsSlinky.tensorflowTfjsNode.mod
 
-import typingsSlinky.tensorflowTfjsCore.AnonValue
+import typingsSlinky.tensorflowTfjsCore.anon.Value
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Scalar
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Variable
 import scala.scalajs.js
@@ -39,10 +39,10 @@ object variableGrads extends js.Object {
     *     that map the names of the non-trainable variables to `null`.
     */
   /** @doc {heading: 'Training', subheading: 'Gradients'} */
-  def apply(f: js.Function0[Scalar]): AnonValue = js.native
+  def apply(f: js.Function0[Scalar]): Value = js.native
   def apply(
     f: js.Function0[Scalar],
     varList: js.Array[Variable[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]]
-  ): AnonValue = js.native
+  ): Value = js.native
 }
 

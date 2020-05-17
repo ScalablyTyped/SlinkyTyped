@@ -3,7 +3,6 @@ package typingsSlinky.baseui.phoneInputMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactRef
-import typingsSlinky.baseui.AnonCountrySelect
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
@@ -23,7 +22,7 @@ trait CountrySelectProps extends js.Object {
   var maxDropdownHeight: js.UndefOr[String] = js.native
   var maxDropdownWidth: js.UndefOr[String] = js.native
   var onCountryChange: js.UndefOr[js.Function1[/* event */ OnChangeParams, _]] = js.native
-  var overrides: js.UndefOr[AnonCountrySelect] = js.native
+  var overrides: js.UndefOr[typingsSlinky.baseui.anon.CountrySelect] = js.native
   var size: js.UndefOr[mini | default_ | compact | large_] = js.native
 }
 
@@ -136,7 +135,7 @@ object CountrySelectProps {
         ret
     }
     @scala.inline
-    def withOverrides(value: AnonCountrySelect): Self = {
+    def withOverrides(value: typingsSlinky.baseui.anon.CountrySelect): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
         ret

@@ -16,18 +16,16 @@ package object mod {
     scala.Unit
   ]
   type HistoryAction = java.lang.String
-  type HistoryEntries = js.Array[typingsSlinky.reduxFirstRouter.AnonPathname]
+  type HistoryEntries = js.Array[typingsSlinky.reduxFirstRouter.anon.Pathname]
   type Listener = js.Function2[
     /* location */ typingsSlinky.reduxFirstRouter.mod.HistoryLocation, 
     /* action */ typingsSlinky.reduxFirstRouter.mod.HistoryAction, 
     scala.Unit
   ]
   type Navigators[TState] = org.scalablytyped.runtime.StringDictionary[typingsSlinky.reduxFirstRouter.mod.Navigator[TState]]
-  type Nullable[T] = js.UndefOr[T | scala.Null]
   type Params = org.scalablytyped.runtime.StringDictionary[js.Any]
   type Query = org.scalablytyped.runtime.StringDictionary[js.UndefOr[java.lang.String]]
-  type Route[TKeys, TState] = typingsSlinky.reduxFirstRouter.mod.RouteString | (typingsSlinky.reduxFirstRouter.mod.RouteObject[TKeys, TState])
-  type RouteObject[TKeys, TState] = TKeys with typingsSlinky.reduxFirstRouter.AnonCapitalizedWords[TState]
+  type RouteObject[TKeys, TState] = TKeys with typingsSlinky.reduxFirstRouter.anon.CapitalizedWords[TState]
   type RouteString = java.lang.String
   type RouteThunk[TState] = js.Function2[
     /* dispatch */ typingsSlinky.redux.mod.Dispatch[js.Any], 

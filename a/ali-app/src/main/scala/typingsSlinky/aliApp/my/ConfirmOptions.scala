@@ -1,6 +1,6 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonConfirm
+import typingsSlinky.aliApp.anon.Confirm
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait ConfirmOptions
   /** confirm框的标题 */
   var title: String = js.native
   @JSName("success")
-  def success_MConfirmOptions(result: AnonConfirm): Unit = js.native
+  def success_MConfirmOptions(result: Confirm): Unit = js.native
 }
 
 object ConfirmOptions {
@@ -26,7 +26,7 @@ object ConfirmOptions {
     cancelButtonText: String,
     confirmButtonText: String,
     content: String,
-    success: AnonConfirm => Unit,
+    success: Confirm => Unit,
     title: String
   ): ConfirmOptions = {
     val __obj = js.Dynamic.literal(cancelButtonText = cancelButtonText.asInstanceOf[js.Any], confirmButtonText = confirmButtonText.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], success = js.Any.fromFunction1(success), title = title.asInstanceOf[js.Any])
@@ -57,7 +57,7 @@ object ConfirmOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: AnonConfirm => Unit): Self = {
+    def withSuccess(value: Confirm => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

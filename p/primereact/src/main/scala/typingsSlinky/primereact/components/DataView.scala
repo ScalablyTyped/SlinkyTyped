@@ -3,7 +3,7 @@ package typingsSlinky.primereact.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonRows
+import typingsSlinky.primereact.anon.Rows
 import typingsSlinky.primereact.dataViewMod.DataViewProps
 import typingsSlinky.primereact.primereactStrings.grid
 import typingsSlinky.primereact.primereactStrings.list
@@ -47,7 +47,7 @@ object DataView {
     @scala.inline
     def `lazy`(value: Boolean): this.type = set("lazy", value.asInstanceOf[js.Any])
     @scala.inline
-    def onPage(value: /* e */ AnonRows => Unit): this.type = set("onPage", js.Any.fromFunction1(value))
+    def onPage(value: /* e */ Rows => Unit): this.type = set("onPage", js.Any.fromFunction1(value))
     @scala.inline
     def pageLinkSize(value: Double): this.type = set("pageLinkSize", value.asInstanceOf[js.Any])
     @scala.inline

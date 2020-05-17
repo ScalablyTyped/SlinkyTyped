@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +32,48 @@ trait UpdateWorkflowData extends js.Object {
   var viewModel: EditorViewModel = js.native
 }
 
-@JSGlobal("__esri.UpdateWorkflowData")
-@js.native
-object UpdateWorkflowData extends TopLevel[UpdateWorkflowData]
+object UpdateWorkflowData {
+  @scala.inline
+  def apply(
+    candidates: js.Array[Graphic],
+    editableItem: EditableItem,
+    edits: Edits,
+    viewModel: EditorViewModel
+  ): UpdateWorkflowData = {
+    val __obj = js.Dynamic.literal(candidates = candidates.asInstanceOf[js.Any], editableItem = editableItem.asInstanceOf[js.Any], edits = edits.asInstanceOf[js.Any], viewModel = viewModel.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UpdateWorkflowData]
+  }
+  @scala.inline
+  implicit class UpdateWorkflowDataOps[Self <: UpdateWorkflowData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCandidates(value: js.Array[Graphic]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("candidates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEditableItem(value: EditableItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editableItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEdits(value: Edits): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withViewModel(value: EditorViewModel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewModel")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

@@ -1,0 +1,30 @@
+package typingsSlinky.std.global
+
+import org.scalablytyped.runtime.Instantiable0
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("CSSRule")
+@js.native
+class CSSRule ()
+  extends typingsSlinky.std.CSSRule
+
+@JSGlobal("CSSRule")
+@js.native
+object CSSRule
+  extends Instantiable0[org.scalajs.dom.raw.CSSRule] {
+  val CHARSET_RULE: Double = js.native
+  val FONT_FACE_RULE: Double = js.native
+  val IMPORT_RULE: Double = js.native
+  val KEYFRAMES_RULE: Double = js.native
+  val KEYFRAME_RULE: Double = js.native
+  val MEDIA_RULE: Double = js.native
+  val NAMESPACE_RULE: Double = js.native
+  val PAGE_RULE: Double = js.native
+  val STYLE_RULE: Double = js.native
+  val SUPPORTS_RULE: Double = js.native
+  val UNKNOWN_RULE: Double = js.native
+  val VIEWPORT_RULE: Double = js.native
+}
+

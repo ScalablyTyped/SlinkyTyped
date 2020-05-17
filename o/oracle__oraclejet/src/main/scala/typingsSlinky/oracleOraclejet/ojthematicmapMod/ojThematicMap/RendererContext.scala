@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojthematicmapMod.ojThematicMap
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.oracleOraclejet.AnonFocused
+import typingsSlinky.oracleOraclejet.anon.Focused
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,9 +17,9 @@ trait RendererContext[K1, K2, K3, D1, D2, D3] extends js.Object {
   var label: String = js.native
   var location: String | Null = js.native
   var parentElement: Element = js.native
-  var previousState: AnonFocused = js.native
+  var previousState: Focused = js.native
   var root: Element | Null = js.native
-  var state: AnonFocused = js.native
+  var state: Focused = js.native
   var x: Double | Null = js.native
   var y: Double | Null = js.native
   def renderDefaultFocus(): Unit = js.native
@@ -37,11 +37,11 @@ object RendererContext {
     itemData: D1 | D2 | D3,
     label: String,
     parentElement: Element,
-    previousState: AnonFocused,
+    previousState: Focused,
     renderDefaultFocus: () => Unit,
     renderDefaultHover: () => Unit,
     renderDefaultSelection: () => Unit,
-    state: AnonFocused
+    state: Focused
   ): RendererContext[K1, K2, K3, D1, D2, D3] = {
     val __obj = js.Dynamic.literal(color = color.asInstanceOf[js.Any], componentElement = componentElement.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], itemData = itemData.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], parentElement = parentElement.asInstanceOf[js.Any], previousState = previousState.asInstanceOf[js.Any], renderDefaultFocus = js.Any.fromFunction0(renderDefaultFocus), renderDefaultHover = js.Any.fromFunction0(renderDefaultHover), renderDefaultSelection = js.Any.fromFunction0(renderDefaultSelection), state = state.asInstanceOf[js.Any])
     __obj.asInstanceOf[RendererContext[K1, K2, K3, D1, D2, D3]]
@@ -95,7 +95,7 @@ object RendererContext {
         ret
     }
     @scala.inline
-    def withPreviousState(value: AnonFocused): Self[K1, K2, K3, D1, D2, D3] = {
+    def withPreviousState(value: Focused): Self[K1, K2, K3, D1, D2, D3] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("previousState")(value.asInstanceOf[js.Any])
         ret
@@ -119,7 +119,7 @@ object RendererContext {
         ret
     }
     @scala.inline
-    def withState(value: AnonFocused): Self[K1, K2, K3, D1, D2, D3] = {
+    def withState(value: Focused): Self[K1, K2, K3, D1, D2, D3] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
         ret

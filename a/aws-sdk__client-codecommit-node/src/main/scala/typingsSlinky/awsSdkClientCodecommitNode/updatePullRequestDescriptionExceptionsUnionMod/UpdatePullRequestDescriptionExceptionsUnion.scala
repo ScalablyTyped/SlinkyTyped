@@ -1,0 +1,33 @@
+package typingsSlinky.awsSdkClientCodecommitNode.updatePullRequestDescriptionExceptionsUnionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidDescriptionExceptionMod.InvalidDescriptionException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidPullRequestIdExceptionMod.InvalidPullRequestIdException
+import typingsSlinky.awsSdkClientCodecommitNode.typesPullRequestAlreadyClosedExceptionMod.PullRequestAlreadyClosedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesPullRequestDoesNotExistExceptionMod.PullRequestDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesPullRequestIdRequiredExceptionMod.PullRequestIdRequiredException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.awsSdkClientCodecommitNode.typesPullRequestDoesNotExistExceptionMod.PullRequestDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidPullRequestIdExceptionMod.InvalidPullRequestIdException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesPullRequestIdRequiredExceptionMod.PullRequestIdRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidDescriptionExceptionMod.InvalidDescriptionException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesPullRequestAlreadyClosedExceptionMod.PullRequestAlreadyClosedException
+*/
+trait UpdatePullRequestDescriptionExceptionsUnion extends js.Object
+
+object UpdatePullRequestDescriptionExceptionsUnion {
+  @scala.inline
+  implicit def apply(value: InvalidDescriptionException): UpdatePullRequestDescriptionExceptionsUnion = value.asInstanceOf[UpdatePullRequestDescriptionExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidPullRequestIdException): UpdatePullRequestDescriptionExceptionsUnion = value.asInstanceOf[UpdatePullRequestDescriptionExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: PullRequestAlreadyClosedException): UpdatePullRequestDescriptionExceptionsUnion = value.asInstanceOf[UpdatePullRequestDescriptionExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: PullRequestDoesNotExistException): UpdatePullRequestDescriptionExceptionsUnion = value.asInstanceOf[UpdatePullRequestDescriptionExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: PullRequestIdRequiredException): UpdatePullRequestDescriptionExceptionsUnion = value.asInstanceOf[UpdatePullRequestDescriptionExceptionsUnion]
+}
+

@@ -15,7 +15,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ComposeUnionTypeConfig[TSource, TContext] extends js.Object {
+trait ComposeUnionTypeConfig[TSource, TContext] extends UnionTypeComposeDefinition[TSource, TContext] {
   var description: js.UndefOr[String | Null] = js.native
   var extensions: js.UndefOr[Extensions] = js.native
   var name: String = js.native

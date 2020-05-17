@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdkClientGlacierNode.typesUploadArchiveInputMod
 
+import typingsSlinky.awsSdkClientGlacierNode.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.httpMod.NodeHttpOptions
 import scala.scalajs.js
@@ -7,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait UploadArchiveInput[StreamType] extends js.Object {
+trait UploadArchiveInput[StreamType] extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *

@@ -1,7 +1,7 @@
 package typingsSlinky.reactVirtualized.esScrollSyncMod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactVirtualized.AnonChildrenValidator
+import typingsSlinky.reactVirtualized.anon.ChildrenValidator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +15,6 @@ class ScrollSync ()
 @JSImport("react-virtualized/dist/es/ScrollSync", "ScrollSync")
 @js.native
 object ScrollSync extends js.Object {
-  var propTypes: AnonChildrenValidator = js.native
+  var propTypes: ChildrenValidator = js.native
 }
 

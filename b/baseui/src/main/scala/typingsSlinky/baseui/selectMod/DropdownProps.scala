@@ -3,8 +3,8 @@ package typingsSlinky.baseui.selectMod
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
-import typingsSlinky.baseui.AnonItem
-import typingsSlinky.baseui.AnonOptionState
+import typingsSlinky.baseui.anon.Item
+import typingsSlinky.baseui.anon.OptionState
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DropdownProps extends js.Object {
   var error: js.UndefOr[Boolean] = js.native
-  var getOptionLabel: js.UndefOr[js.Function1[/* args */ AnonOptionState, TagMod[Any]]] = js.native
+  var getOptionLabel: js.UndefOr[js.Function1[/* args */ OptionState, TagMod[Any]]] = js.native
   var id: js.UndefOr[String] = js.native
   var innerRef: js.UndefOr[Ref[_]] = js.native
   var isLoading: js.UndefOr[Boolean] = js.native
@@ -66,7 +66,7 @@ object DropdownProps {
         ret
     }
     @scala.inline
-    def withGetOptionLabel(value: /* args */ AnonOptionState => TagMod[Any]): Self = {
+    def withGetOptionLabel(value: /* args */ OptionState => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getOptionLabel")(js.Any.fromFunction1(value))
         ret
@@ -198,7 +198,7 @@ object DropdownProps {
         ret
     }
     @scala.inline
-    def withOnItemSelect(value: /* args */ AnonItem => js.Any): Self = {
+    def withOnItemSelect(value: /* args */ Item => js.Any): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemSelect")(js.Any.fromFunction1(value))
         ret

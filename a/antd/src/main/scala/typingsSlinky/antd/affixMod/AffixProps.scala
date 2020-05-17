@@ -1,9 +1,9 @@
 package typingsSlinky.antd.affixMod
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Window
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ trait AffixProps extends js.Object {
   var prefixCls: js.UndefOr[String] = js.native
   var style: js.UndefOr[CSSProperties] = js.native
   /** 设置 Affix 需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数 */
-  var target: js.UndefOr[js.Function0[Window_ | HTMLElement | Null]] = js.native
+  var target: js.UndefOr[js.Function0[Window | HTMLElement | Null]] = js.native
 }
 
 object AffixProps {
@@ -117,7 +117,7 @@ object AffixProps {
         ret
     }
     @scala.inline
-    def withTarget(value: () => Window_ | HTMLElement | Null): Self = {
+    def withTarget(value: () => Window | HTMLElement | Null): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.Any.fromFunction0(value))
         ret

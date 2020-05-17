@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabServices.messagesMod.KernelMessage
 
-import typingsSlinky.jupyterlabServices.AnonPassword
+import typingsSlinky.jupyterlabServices.anon.Password
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.input_request
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.stdin
 import typingsSlinky.phosphorCoreutils.jsonMod.JSONObject
@@ -16,16 +16,16 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IInputRequestMsg
   extends IStdinMessage[input_request]
-     with _Message {
+     with Message {
   @JSName("content")
-  var content_IInputRequestMsg: AnonPassword = js.native
+  var content_IInputRequestMsg: Password = js.native
 }
 
 object IInputRequestMsg {
   @scala.inline
   def apply(
     channel: stdin,
-    content: AnonPassword,
+    content: Password,
     header: IHeader[input_request],
     metadata: JSONObject,
     parent_header: IHeader[MessageType] | js.Object
@@ -40,7 +40,7 @@ object IInputRequestMsg {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContent(value: AnonPassword): Self = {
+    def withContent(value: Password): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
         ret

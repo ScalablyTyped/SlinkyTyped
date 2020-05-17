@@ -17,5 +17,5 @@ package object mod {
     /* ref */ js.UndefOr[slinky.core.facade.ReactRef[js.Any]], 
     slinky.core.facade.ReactRef[js.Any]
   ]
-  type WithTestHook[P /* <: js.Object */] = P with typingsSlinky.cavy.AnonGenerateTestHook
+  type WithTestHook[P /* <: js.Object */] = P with typingsSlinky.cavy.anon.GenerateTestHook
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.particlesIndexMod
 
-import typingsSlinky.babylonjs.Partialcapacitynumberrand
+import typingsSlinky.babylonjs.anon.Partialcapacitynumberrand
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`

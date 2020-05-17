@@ -1,8 +1,8 @@
 package typingsSlinky.antDesignProLayout.getPageTitleMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.antDesignProLayout.AnonDefaultMessage
-import typingsSlinky.antDesignProLayout.AnonDefaultOpenAll
+import typingsSlinky.antDesignProLayout.anon.DefaultMessage
+import typingsSlinky.antDesignProLayout.anon.DefaultOpenAll
 import typingsSlinky.antDesignProLayout.typingsMod.MenuDataItem
 import typingsSlinky.std.Map
 import scala.scalajs.js
@@ -13,8 +13,8 @@ import scala.scalajs.js.annotation._
 trait GetPageTitleProps extends js.Object {
   var breadcrumb: js.UndefOr[StringDictionary[MenuDataItem]] = js.native
   var breadcrumbMap: js.UndefOr[Map[String, MenuDataItem]] = js.native
-  var formatMessage: js.UndefOr[js.Function1[/* data */ AnonDefaultMessage, String]] = js.native
-  var menu: js.UndefOr[AnonDefaultOpenAll] = js.native
+  var formatMessage: js.UndefOr[js.Function1[/* data */ DefaultMessage, String]] = js.native
+  var menu: js.UndefOr[DefaultOpenAll] = js.native
   var pageName: js.UndefOr[String] = js.native
   var pathname: js.UndefOr[String] = js.native
   var title: js.UndefOr[String] = js.native
@@ -57,7 +57,7 @@ object GetPageTitleProps {
         ret
     }
     @scala.inline
-    def withFormatMessage(value: /* data */ AnonDefaultMessage => String): Self = {
+    def withFormatMessage(value: /* data */ DefaultMessage => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formatMessage")(js.Any.fromFunction1(value))
         ret
@@ -69,7 +69,7 @@ object GetPageTitleProps {
         ret
     }
     @scala.inline
-    def withMenu(value: AnonDefaultOpenAll): Self = {
+    def withMenu(value: DefaultOpenAll): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.nodal.mod
 
-import typingsSlinky.nodal.TypeofModel
+import typingsSlinky.nodal.anon.TypeofModel
 import typingsSlinky.nodal.nodalStrings.ASC
 import typingsSlinky.nodal.nodalStrings.DESC
 import typingsSlinky.nodal.nodalStrings.DSC

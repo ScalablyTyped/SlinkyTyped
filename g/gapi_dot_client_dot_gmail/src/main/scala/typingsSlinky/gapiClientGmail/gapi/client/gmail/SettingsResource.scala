@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientGmail.gapi.client.gmail
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientGmail.AnonAlt
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientGmail.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,25 +12,25 @@ trait SettingsResource extends js.Object {
   var forwardingAddresses: ForwardingAddressesResource = js.native
   var sendAs: SendAsResource = js.native
   /** Gets the auto-forwarding setting for the specified account. */
-  def getAutoForwarding(request: AnonAlt): Request_[AutoForwarding] = js.native
+  def getAutoForwarding(request: Alt): Request[AutoForwarding] = js.native
   /** Gets IMAP settings. */
-  def getImap(request: AnonAlt): Request_[ImapSettings] = js.native
+  def getImap(request: Alt): Request[ImapSettings] = js.native
   /** Gets POP settings. */
-  def getPop(request: AnonAlt): Request_[PopSettings] = js.native
+  def getPop(request: Alt): Request[PopSettings] = js.native
   /** Gets vacation responder settings. */
-  def getVacation(request: AnonAlt): Request_[VacationSettings] = js.native
+  def getVacation(request: Alt): Request[VacationSettings] = js.native
   /**
     * Updates the auto-forwarding setting for the specified account. A verified forwarding address must be specified when auto-forwarding is enabled.
     *
     * This method is only available to service account clients that have been delegated domain-wide authority.
     */
-  def updateAutoForwarding(request: AnonAlt): Request_[AutoForwarding] = js.native
+  def updateAutoForwarding(request: Alt): Request[AutoForwarding] = js.native
   /** Updates IMAP settings. */
-  def updateImap(request: AnonAlt): Request_[ImapSettings] = js.native
+  def updateImap(request: Alt): Request[ImapSettings] = js.native
   /** Updates POP settings. */
-  def updatePop(request: AnonAlt): Request_[PopSettings] = js.native
+  def updatePop(request: Alt): Request[PopSettings] = js.native
   /** Updates vacation responder settings. */
-  def updateVacation(request: AnonAlt): Request_[VacationSettings] = js.native
+  def updateVacation(request: Alt): Request[VacationSettings] = js.native
 }
 
 object SettingsResource {
@@ -38,15 +38,15 @@ object SettingsResource {
   def apply(
     filters: FiltersResource,
     forwardingAddresses: ForwardingAddressesResource,
-    getAutoForwarding: AnonAlt => Request_[AutoForwarding],
-    getImap: AnonAlt => Request_[ImapSettings],
-    getPop: AnonAlt => Request_[PopSettings],
-    getVacation: AnonAlt => Request_[VacationSettings],
+    getAutoForwarding: Alt => Request[AutoForwarding],
+    getImap: Alt => Request[ImapSettings],
+    getPop: Alt => Request[PopSettings],
+    getVacation: Alt => Request[VacationSettings],
     sendAs: SendAsResource,
-    updateAutoForwarding: AnonAlt => Request_[AutoForwarding],
-    updateImap: AnonAlt => Request_[ImapSettings],
-    updatePop: AnonAlt => Request_[PopSettings],
-    updateVacation: AnonAlt => Request_[VacationSettings]
+    updateAutoForwarding: Alt => Request[AutoForwarding],
+    updateImap: Alt => Request[ImapSettings],
+    updatePop: Alt => Request[PopSettings],
+    updateVacation: Alt => Request[VacationSettings]
   ): SettingsResource = {
     val __obj = js.Dynamic.literal(filters = filters.asInstanceOf[js.Any], forwardingAddresses = forwardingAddresses.asInstanceOf[js.Any], getAutoForwarding = js.Any.fromFunction1(getAutoForwarding), getImap = js.Any.fromFunction1(getImap), getPop = js.Any.fromFunction1(getPop), getVacation = js.Any.fromFunction1(getVacation), sendAs = sendAs.asInstanceOf[js.Any], updateAutoForwarding = js.Any.fromFunction1(updateAutoForwarding), updateImap = js.Any.fromFunction1(updateImap), updatePop = js.Any.fromFunction1(updatePop), updateVacation = js.Any.fromFunction1(updateVacation))
     __obj.asInstanceOf[SettingsResource]
@@ -70,25 +70,25 @@ object SettingsResource {
         ret
     }
     @scala.inline
-    def withGetAutoForwarding(value: AnonAlt => Request_[AutoForwarding]): Self = {
+    def withGetAutoForwarding(value: Alt => Request[AutoForwarding]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getAutoForwarding")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGetImap(value: AnonAlt => Request_[ImapSettings]): Self = {
+    def withGetImap(value: Alt => Request[ImapSettings]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getImap")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGetPop(value: AnonAlt => Request_[PopSettings]): Self = {
+    def withGetPop(value: Alt => Request[PopSettings]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getPop")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGetVacation(value: AnonAlt => Request_[VacationSettings]): Self = {
+    def withGetVacation(value: Alt => Request[VacationSettings]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getVacation")(js.Any.fromFunction1(value))
         ret
@@ -100,25 +100,25 @@ object SettingsResource {
         ret
     }
     @scala.inline
-    def withUpdateAutoForwarding(value: AnonAlt => Request_[AutoForwarding]): Self = {
+    def withUpdateAutoForwarding(value: Alt => Request[AutoForwarding]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("updateAutoForwarding")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdateImap(value: AnonAlt => Request_[ImapSettings]): Self = {
+    def withUpdateImap(value: Alt => Request[ImapSettings]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("updateImap")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdatePop(value: AnonAlt => Request_[PopSettings]): Self = {
+    def withUpdatePop(value: Alt => Request[PopSettings]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("updatePop")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdateVacation(value: AnonAlt => Request_[VacationSettings]): Self = {
+    def withUpdateVacation(value: Alt => Request[VacationSettings]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("updateVacation")(js.Any.fromFunction1(value))
         ret

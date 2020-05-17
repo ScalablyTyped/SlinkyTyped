@@ -13,7 +13,8 @@ trait Vcard extends js.Object {
   /** The full name of the contact person. For example: John A. Smith. */
   var fn: js.UndefOr[String] = js.native
   /** The organization associated with the registering entity. */
-  var org: js.UndefOr[VcardTypedText] = js.native
+  @JSName("org")
+  var org_ : js.UndefOr[VcardTypedText] = js.native
   /** A telephone number that can be used to call the contact. */
   var tel: js.UndefOr[VcardTelephone] = js.native
 }
@@ -67,13 +68,13 @@ object Vcard {
         ret
     }
     @scala.inline
-    def withOrg(value: VcardTypedText): Self = {
+    def withOrg_(value: VcardTypedText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withoutOrg: Self = {
+    def withoutOrg_ : Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(js.undefined)
         ret

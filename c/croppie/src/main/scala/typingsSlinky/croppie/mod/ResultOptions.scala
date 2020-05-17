@@ -1,6 +1,6 @@
 package typingsSlinky.croppie.mod
 
-import typingsSlinky.croppie.AnonHeight
+import typingsSlinky.croppie.anon.Height
 import typingsSlinky.croppie.croppieStrings.original
 import typingsSlinky.croppie.croppieStrings.viewport
 import scala.scalajs.js
@@ -12,7 +12,7 @@ trait ResultOptions extends js.Object {
   var circle: js.UndefOr[Boolean] = js.native
   var format: js.UndefOr[Format] = js.native
   var quality: js.UndefOr[Double] = js.native
-  var size: js.UndefOr[viewport | original | AnonHeight] = js.native
+  var size: js.UndefOr[viewport | original | Height] = js.native
   var `type`: js.UndefOr[Type] = js.native
 }
 
@@ -65,7 +65,7 @@ object ResultOptions {
         ret
     }
     @scala.inline
-    def withSize(value: viewport | original | AnonHeight): Self = {
+    def withSize(value: viewport | original | Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
         ret

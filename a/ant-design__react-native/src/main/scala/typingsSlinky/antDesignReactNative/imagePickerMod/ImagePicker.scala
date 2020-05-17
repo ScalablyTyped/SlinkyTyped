@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.imagePickerMod
 
-import typingsSlinky.antDesignReactNative.AnonCloseText
+import typingsSlinky.antDesignReactNative.anon.CloseText
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,8 +14,8 @@ trait ImagePicker
   def addImage(imageObj: js.Any): Unit = js.native
   def hideImageRoll(): Unit = js.native
   def onImageClick(index: Double): Unit = js.native
-  def onPressIn(styles: AnonCloseText): js.Function0[Unit] = js.native
-  def onPressOut(styles: AnonCloseText): js.Function0[Unit] = js.native
+  def onPressIn(styles: CloseText): js.Function0[Unit] = js.native
+  def onPressOut(styles: CloseText): js.Function0[Unit] = js.native
   def removeImage(idx: Double): Unit = js.native
   def showPicker(): Unit = js.native
 }

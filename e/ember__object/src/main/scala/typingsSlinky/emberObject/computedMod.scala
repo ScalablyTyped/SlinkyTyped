@@ -1,5 +1,7 @@
 package typingsSlinky.emberObject
 
+import typingsSlinky.emberObject.anon.Id
+import typingsSlinky.emberObject.anon.Until
 import typingsSlinky.std.PropertyDecorator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -51,8 +53,8 @@ object computedMod extends js.Object {
   def bool(dependentKey: String): ComputedProperty[Boolean, Boolean] = js.native
   def collect(dependentKeys: String*): ComputedProperty[js.Array[_], js.Array[_]] = js.native
   def deprecatingAlias(dependentKey: String): ComputedProperty[_, _] = js.native
-  def deprecatingAlias(dependentKey: String, options: AnonId): ComputedProperty[_, _] = js.native
-  def deprecatingAlias(dependentKey: String, options: AnonUntil): ComputedProperty[_, _] = js.native
+  def deprecatingAlias(dependentKey: String, options: Id): ComputedProperty[_, _] = js.native
+  def deprecatingAlias(dependentKey: String, options: Until): ComputedProperty[_, _] = js.native
   def empty(dependentKey: String): ComputedProperty[Boolean, Boolean] = js.native
   def equal(dependentKey: String, value: js.Any): ComputedProperty[Boolean, Boolean] = js.native
   def expandProperties(pattern: String, callback: js.Function1[/* expanded */ String, Unit]): Unit = js.native

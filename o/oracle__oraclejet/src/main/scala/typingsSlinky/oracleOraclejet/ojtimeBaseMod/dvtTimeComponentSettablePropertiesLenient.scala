@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojtimeBaseMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonLabelCountWithTotal
+import typingsSlinky.oracleOraclejet.anon.LabelCountWithTotal
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.off
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.on
 import scala.scalajs.js
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 trait dvtTimeComponentSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
   var trackResize: js.UndefOr[on | off] = js.native
-  var translations: js.UndefOr[AnonLabelCountWithTotal] = js.native
+  var translations: js.UndefOr[LabelCountWithTotal] = js.native
 }
 
 object dvtTimeComponentSettablePropertiesLenient {
@@ -41,7 +41,7 @@ object dvtTimeComponentSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelCountWithTotal): Self = {
+    def withTranslations(value: LabelCountWithTotal): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

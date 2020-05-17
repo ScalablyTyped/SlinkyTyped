@@ -2,10 +2,10 @@ package typingsSlinky.youtubePlayer.typesMod
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLIFrameElement
-import typingsSlinky.youtubePlayer.AnonEndSeconds
-import typingsSlinky.youtubePlayer.AnonIndex
-import typingsSlinky.youtubePlayer.AnonMediaContentUrl
-import typingsSlinky.youtubePlayer.CustomEventanydatanumber
+import typingsSlinky.youtubePlayer.anon.CustomEventanydatanumber
+import typingsSlinky.youtubePlayer.anon.EndSeconds
+import typingsSlinky.youtubePlayer.anon.Index
+import typingsSlinky.youtubePlayer.anon.MediaContentUrl
 import typingsSlinky.youtubePlayer.eventNamesMod.EventType
 import typingsSlinky.youtubePlayer.playerStatesMod.PlayerStates
 import typingsSlinky.youtubePlayer.youtubePlayerStrings.stateChange
@@ -24,15 +24,15 @@ trait YouTubePlayer extends js.Object {
   def cuePlaylist(playlist: js.Array[String], index: Double): Unit = js.native
   def cuePlaylist(playlist: js.Array[String], index: Double, startSeconds: Double): Unit = js.native
   def cuePlaylist(playlist: js.Array[String], index: Double, startSeconds: Double, suggestedQuality: String): Unit = js.native
-  def cuePlaylist(playlist: AnonIndex): Unit = js.native
+  def cuePlaylist(playlist: Index): Unit = js.native
   def cueVideoById(videoId: String): Unit = js.native
   def cueVideoById(videoId: String, startSeconds: Double): Unit = js.native
   def cueVideoById(videoId: String, startSeconds: Double, suggestedQuality: String): Unit = js.native
-  def cueVideoById(video: AnonEndSeconds): Unit = js.native
+  def cueVideoById(video: EndSeconds): Unit = js.native
   def cueVideoByUrl(mediaContentUrl: String): Unit = js.native
   def cueVideoByUrl(mediaContentUrl: String, startSeconds: Double): Unit = js.native
   def cueVideoByUrl(mediaContentUrl: String, startSeconds: Double, suggestedQuality: String): Unit = js.native
-  def cueVideoByUrl(video: AnonMediaContentUrl): Unit = js.native
+  def cueVideoByUrl(video: MediaContentUrl): Unit = js.native
   def destroy(): Unit = js.native
   def getAvailablePlaybackRates(): js.Array[Double] = js.native
   def getAvailableQualityLevels(): js.Array[String] = js.native
@@ -60,15 +60,15 @@ trait YouTubePlayer extends js.Object {
   def loadPlaylist(playlist: js.Array[String], index: Double): Unit = js.native
   def loadPlaylist(playlist: js.Array[String], index: Double, startSeconds: Double): Unit = js.native
   def loadPlaylist(playlist: js.Array[String], index: Double, startSeconds: Double, suggestedQuality: String): Unit = js.native
-  def loadPlaylist(playlist: AnonIndex): Unit = js.native
+  def loadPlaylist(playlist: Index): Unit = js.native
   def loadVideoById(videoId: String): Unit = js.native
   def loadVideoById(videoId: String, startSeconds: Double): Unit = js.native
   def loadVideoById(videoId: String, startSeconds: Double, suggestedQuality: String): Unit = js.native
-  def loadVideoById(video: AnonEndSeconds): Unit = js.native
+  def loadVideoById(video: EndSeconds): Unit = js.native
   def loadVideoByUrl(mediaContentUrl: String): Unit = js.native
   def loadVideoByUrl(mediaContentUrl: String, startSeconds: Double): Unit = js.native
   def loadVideoByUrl(mediaContentUrl: String, startSeconds: Double, suggestedQuality: String): Unit = js.native
-  def loadVideoByUrl(video: AnonMediaContentUrl): Unit = js.native
+  def loadVideoByUrl(video: MediaContentUrl): Unit = js.native
   def mute(): Unit = js.native
   def nextVideo(): Unit = js.native
   def on(eventType: EventType, listener: js.Function1[/* event */ CustomEvent, Unit]): Unit = js.native

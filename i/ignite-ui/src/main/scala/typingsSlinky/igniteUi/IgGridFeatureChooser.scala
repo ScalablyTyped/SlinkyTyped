@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -75,7 +75,7 @@ object IgGridFeatureChooser {
         ret
     }
     @scala.inline
-    def withFeatureChooserDropDownOpened(value: (/* event */ Event_, /* ui */ FeatureChooserDropDownOpenedEventUIParam) => Unit): Self = {
+    def withFeatureChooserDropDownOpened(value: (/* event */ Event, /* ui */ FeatureChooserDropDownOpenedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("featureChooserDropDownOpened")(js.Any.fromFunction2(value))
         ret
@@ -87,7 +87,7 @@ object IgGridFeatureChooser {
         ret
     }
     @scala.inline
-    def withFeatureChooserDropDownOpening(value: (/* event */ Event_, /* ui */ FeatureChooserDropDownOpeningEventUIParam) => Unit): Self = {
+    def withFeatureChooserDropDownOpening(value: (/* event */ Event, /* ui */ FeatureChooserDropDownOpeningEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("featureChooserDropDownOpening")(js.Any.fromFunction2(value))
         ret
@@ -99,7 +99,7 @@ object IgGridFeatureChooser {
         ret
     }
     @scala.inline
-    def withFeatureChooserRendered(value: (/* event */ Event_, /* ui */ FeatureChooserRenderedEventUIParam) => Unit): Self = {
+    def withFeatureChooserRendered(value: (/* event */ Event, /* ui */ FeatureChooserRenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("featureChooserRendered")(js.Any.fromFunction2(value))
         ret
@@ -111,7 +111,7 @@ object IgGridFeatureChooser {
         ret
     }
     @scala.inline
-    def withFeatureChooserRendering(value: (/* event */ Event_, /* ui */ FeatureChooserRenderingEventUIParam) => Unit): Self = {
+    def withFeatureChooserRendering(value: (/* event */ Event, /* ui */ FeatureChooserRenderingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("featureChooserRendering")(js.Any.fromFunction2(value))
         ret
@@ -123,7 +123,7 @@ object IgGridFeatureChooser {
         ret
     }
     @scala.inline
-    def withFeatureToggled(value: (/* event */ Event_, /* ui */ FeatureToggledEventUIParam) => Unit): Self = {
+    def withFeatureToggled(value: (/* event */ Event, /* ui */ FeatureToggledEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("featureToggled")(js.Any.fromFunction2(value))
         ret
@@ -135,7 +135,7 @@ object IgGridFeatureChooser {
         ret
     }
     @scala.inline
-    def withFeatureToggling(value: (/* event */ Event_, /* ui */ FeatureTogglingEventUIParam) => Unit): Self = {
+    def withFeatureToggling(value: (/* event */ Event, /* ui */ FeatureTogglingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("featureToggling")(js.Any.fromFunction2(value))
         ret
@@ -171,7 +171,7 @@ object IgGridFeatureChooser {
         ret
     }
     @scala.inline
-    def withMenuToggling(value: (/* event */ Event_, /* ui */ MenuTogglingEventUIParam) => Unit): Self = {
+    def withMenuToggling(value: (/* event */ Event, /* ui */ MenuTogglingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("menuToggling")(js.Any.fromFunction2(value))
         ret

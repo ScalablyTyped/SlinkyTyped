@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * The SearchableIndex module is used to add or remove Ti.App.iOS.SearchableItem objects from the device search index.
 			 */
-@JSGlobal("Titanium.App.iOS.SearchableIndex")
 @js.native
-class SearchableIndex () extends Proxy {
+trait SearchableIndex extends Proxy {
   /**
   				 * Adds an array of Titanium.App.iOS.SearchableItem objects to the default search index.
   				 */

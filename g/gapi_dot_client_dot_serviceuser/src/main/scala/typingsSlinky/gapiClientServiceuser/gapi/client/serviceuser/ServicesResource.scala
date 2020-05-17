@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientServiceuser.gapi.client.serviceuser
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientServiceuser.AnonAccesstoken
-import typingsSlinky.gapiClientServiceuser.AnonAlt
-import typingsSlinky.gapiClientServiceuser.AnonBearertoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientServiceuser.anon.Accesstoken
+import typingsSlinky.gapiClientServiceuser.anon.Alt
+import typingsSlinky.gapiClientServiceuser.anon.Bearertoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait ServicesResource extends js.Object {
     *
     * Operation<response: google.protobuf.Empty>
     */
-  def disable(request: AnonAccesstoken): Request_[Operation] = js.native
+  def disable(request: Accesstoken): Request[Operation] = js.native
   /**
     * Enable a service so it can be used with a project.
     * See [Cloud Auth Guide](https://cloud.google.com/docs/authentication) for
@@ -25,9 +25,9 @@ trait ServicesResource extends js.Object {
     *
     * Operation<response: google.protobuf.Empty>
     */
-  def enable(request: AnonAccesstoken): Request_[Operation] = js.native
+  def enable(request: Accesstoken): Request[Operation] = js.native
   /** List enabled services for the specified consumer. */
-  def list(request: AnonAlt): Request_[ListEnabledServicesResponse] = js.native
+  def list(request: Alt): Request[ListEnabledServicesResponse] = js.native
   /**
     * Search available services.
     *
@@ -35,16 +35,16 @@ trait ServicesResource extends js.Object {
     * authenticated users, also returns all services the calling user has
     * "servicemanagement.services.bind" permission for.
     */
-  def search(request: AnonBearertoken): Request_[SearchServicesResponse] = js.native
+  def search(request: Bearertoken): Request[SearchServicesResponse] = js.native
 }
 
 object ServicesResource {
   @scala.inline
   def apply(
-    disable: AnonAccesstoken => Request_[Operation],
-    enable: AnonAccesstoken => Request_[Operation],
-    list: AnonAlt => Request_[ListEnabledServicesResponse],
-    search: AnonBearertoken => Request_[SearchServicesResponse]
+    disable: Accesstoken => Request[Operation],
+    enable: Accesstoken => Request[Operation],
+    list: Alt => Request[ListEnabledServicesResponse],
+    search: Bearertoken => Request[SearchServicesResponse]
   ): ServicesResource = {
     val __obj = js.Dynamic.literal(disable = js.Any.fromFunction1(disable), enable = js.Any.fromFunction1(enable), list = js.Any.fromFunction1(list), search = js.Any.fromFunction1(search))
     __obj.asInstanceOf[ServicesResource]
@@ -56,25 +56,25 @@ object ServicesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDisable(value: AnonAccesstoken => Request_[Operation]): Self = {
+    def withDisable(value: Accesstoken => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withEnable(value: AnonAccesstoken => Request_[Operation]): Self = {
+    def withEnable(value: Accesstoken => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonAlt => Request_[ListEnabledServicesResponse]): Self = {
+    def withList(value: Alt => Request[ListEnabledServicesResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withSearch(value: AnonBearertoken => Request_[SearchServicesResponse]): Self = {
+    def withSearch(value: Bearertoken => Request[SearchServicesResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("search")(js.Any.fromFunction1(value))
         ret

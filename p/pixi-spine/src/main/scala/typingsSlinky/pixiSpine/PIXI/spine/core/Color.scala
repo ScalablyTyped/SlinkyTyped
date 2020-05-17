@@ -4,13 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("PIXI.spine.core.Color")
 @js.native
-class Color () extends js.Object {
-  def this(r: Double) = this()
-  def this(r: Double, g: Double) = this()
-  def this(r: Double, g: Double, b: Double) = this()
-  def this(r: Double, g: Double, b: Double, a: Double) = this()
+trait Color extends js.Object {
   var a: Double = js.native
   var b: Double = js.native
   var g: Double = js.native
@@ -22,16 +17,83 @@ class Color () extends js.Object {
   def setFromString(hex: String): this.type = js.native
 }
 
-/* static members */
-@JSGlobal("PIXI.spine.core.Color")
-@js.native
-object Color extends js.Object {
-  var BLUE: Color = js.native
-  var GREEN: Color = js.native
-  var MAGENTA: Color = js.native
-  var RED: Color = js.native
-  var WHITE: Color = js.native
-  def rgb888ToColor(color: Color, value: Double): Unit = js.native
-  def rgba8888ToColor(color: Color, value: Double): Unit = js.native
+object Color {
+  @scala.inline
+  def apply(
+    a: Double,
+    add: (Double, Double, Double, Double) => Color,
+    b: Double,
+    clamp: () => Color,
+    g: Double,
+    r: Double,
+    set: (Double, Double, Double, Double) => Color,
+    setFromColor: Color => Color,
+    setFromString: String => Color
+  ): Color = {
+    val __obj = js.Dynamic.literal(a = a.asInstanceOf[js.Any], add = js.Any.fromFunction4(add), b = b.asInstanceOf[js.Any], clamp = js.Any.fromFunction0(clamp), g = g.asInstanceOf[js.Any], r = r.asInstanceOf[js.Any], set = js.Any.fromFunction4(set), setFromColor = js.Any.fromFunction1(setFromColor), setFromString = js.Any.fromFunction1(setFromString))
+    __obj.asInstanceOf[Color]
+  }
+  @scala.inline
+  implicit class ColorOps[Self <: Color] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withA(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("a")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdd(value: (Double, Double, Double, Double) => Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withB(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("b")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClamp(value: () => Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clamp")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withG(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("g")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withR(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("r")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSet(value: (Double, Double, Double, Double) => Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withSetFromColor(value: Color => Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFromColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetFromString(value: String => Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFromString")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -5,7 +5,7 @@ import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactSortableTree.PartialListProps
+import typingsSlinky.reactSortableTree.anon.PartialListProps
 import typingsSlinky.reactSortableTree.mod.ExtendedNodeData
 import typingsSlinky.reactSortableTree.mod.FullTree
 import typingsSlinky.reactSortableTree.mod.NodeData

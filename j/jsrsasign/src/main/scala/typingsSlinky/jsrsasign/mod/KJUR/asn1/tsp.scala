@@ -1,16 +1,15 @@
 package typingsSlinky.jsrsasign.mod.KJUR.asn1
 
-import typingsSlinky.jsrsasign.AnonAccuracy
-import typingsSlinky.jsrsasign.AnonAddInfoNotAvailable
-import typingsSlinky.jsrsasign.AnonCertreq
-import typingsSlinky.jsrsasign.AnonFailinfo
-import typingsSlinky.jsrsasign.AnonGranted
-import typingsSlinky.jsrsasign.AnonHashValue
-import typingsSlinky.jsrsasign.AnonMi
-import typingsSlinky.jsrsasign.AnonMicros
-import typingsSlinky.jsrsasign.AnonSigAlg
-import typingsSlinky.jsrsasign.AnonSignerCert
-import typingsSlinky.jsrsasign.AnonStatus
+import typingsSlinky.jsrsasign.anon.AddInfoNotAvailable
+import typingsSlinky.jsrsasign.anon.Certreq
+import typingsSlinky.jsrsasign.anon.Failinfo
+import typingsSlinky.jsrsasign.anon.Granted
+import typingsSlinky.jsrsasign.anon.HashValue
+import typingsSlinky.jsrsasign.anon.Mi
+import typingsSlinky.jsrsasign.anon.Micros
+import typingsSlinky.jsrsasign.anon.SigAlg
+import typingsSlinky.jsrsasign.anon.SignerCert
+import typingsSlinky.jsrsasign.anon.Status
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ArrayParam
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.IntegerParam
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.NameParam
@@ -61,7 +60,7 @@ object tsp extends js.Object {
   @js.native
   class Accuracy ()
     extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.tsp.Accuracy {
-    def this(params: AnonMicros) = this()
+    def this(params: Micros) = this()
   }
   
   /**
@@ -82,7 +81,7 @@ object tsp extends js.Object {
   @js.native
   class FixedTSAAdapter ()
     extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.tsp.FixedTSAAdapter {
-    def this(initParams: AnonSigAlg) = this()
+    def this(initParams: SigAlg) = this()
   }
   
   /**
@@ -101,7 +100,7 @@ object tsp extends js.Object {
   @js.native
   class MessageImprint ()
     extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.tsp.MessageImprint {
-    def this(params: AnonHashValue) = this()
+    def this(params: HashValue) = this()
   }
   
   /**
@@ -122,7 +121,7 @@ object tsp extends js.Object {
     */
   @js.native
   class PKIFailureInfo ()
-    extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.tsp.PKIFailureInfo {
+    extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ASN1Object {
     def this(params: IntegerParam) = this()
     def this(params: NameParam) = this()
   }
@@ -138,7 +137,7 @@ object tsp extends js.Object {
     */
   @js.native
   class PKIFreeText ()
-    extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.tsp.PKIFreeText {
+    extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ASN1Object {
     def this(params: ArrayParam[String]) = this()
   }
   
@@ -158,7 +157,7 @@ object tsp extends js.Object {
     */
   @js.native
   class PKIStatus ()
-    extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.tsp.PKIStatus {
+    extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ASN1Object {
     def this(params: NameParam) = this()
   }
   
@@ -175,8 +174,8 @@ object tsp extends js.Object {
     */
   @js.native
   class PKIStatusInfo ()
-    extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.tsp.PKIStatusInfo {
-    def this(params: AnonFailinfo) = this()
+    extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ASN1Object {
+    def this(params: Failinfo) = this()
   }
   
   /**
@@ -187,7 +186,7 @@ object tsp extends js.Object {
   @js.native
   class SimpleTSAAdapter ()
     extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.tsp.SimpleTSAAdapter {
-    def this(initParams: AnonSigAlg) = this()
+    def this(initParams: SigAlg) = this()
   }
   
   /**
@@ -221,7 +220,7 @@ object tsp extends js.Object {
   @js.native
   class TSTInfo protected ()
     extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.tsp.TSTInfo {
-    def this(params: AnonAccuracy) = this()
+    def this(params: typingsSlinky.jsrsasign.anon.Accuracy) = this()
   }
   
   /**
@@ -241,7 +240,7 @@ object tsp extends js.Object {
   @js.native
   class TimeStampReq ()
     extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.tsp.TimeStampReq {
-    def this(params: AnonMi) = this()
+    def this(params: Mi) = this()
   }
   
   /**
@@ -256,8 +255,8 @@ object tsp extends js.Object {
     */
   @js.native
   class TimeStampResp ()
-    extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.tsp.TimeStampResp {
-    def this(params: AnonStatus) = this()
+    extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ASN1Object {
+    def this(params: Status) = this()
   }
   
   /**
@@ -290,17 +289,17 @@ object tsp extends js.Object {
     *  nonce: '9abcf318...',            // nonce (OPTION)
     *  certreq: true}                   // certReq (OPTION)
     */
-  def parseTimeStampReq(reqHex: String): AnonCertreq = js.native
+  def parseTimeStampReq(reqHex: String): Certreq = js.native
   /* static members */
   @js.native
   object PKIFailureInfo extends js.Object {
-    val valueList: AnonAddInfoNotAvailable = js.native
+    val valueList: AddInfoNotAvailable = js.native
   }
   
   /* static members */
   @js.native
   object PKIStatus extends js.Object {
-    val valueList: AnonGranted = js.native
+    val valueList: Granted = js.native
   }
   
   @js.native
@@ -313,7 +312,7 @@ object tsp extends js.Object {
       * @example
       */
     def newTimeStampToken(): SignedData = js.native
-    def newTimeStampToken(param: AnonSignerCert): SignedData = js.native
+    def newTimeStampToken(param: SignerCert): SignedData = js.native
   }
   
 }

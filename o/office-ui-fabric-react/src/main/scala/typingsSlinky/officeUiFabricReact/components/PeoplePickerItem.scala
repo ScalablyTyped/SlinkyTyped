@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.components
 
-import typingsSlinky.officeUiFabricReact.IPersonaPropsValidationSt
+import typingsSlinky.officeUiFabricReact.anon.IPersonaPropsValidationSt
 import typingsSlinky.officeUiFabricReact.peoplePickerItemTypesMod.IPeoplePickerItemSelectedProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

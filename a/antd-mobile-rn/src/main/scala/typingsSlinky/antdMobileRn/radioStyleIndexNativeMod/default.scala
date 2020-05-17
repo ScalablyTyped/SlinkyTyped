@@ -1,10 +1,10 @@
 package typingsSlinky.antdMobileRn.radioStyleIndexNativeMod
 
-import typingsSlinky.antdMobileRn.Anon1
-import typingsSlinky.antdMobileRn.AnonAlignItemsFlexDirection
-import typingsSlinky.antdMobileRn.AnonColorString
-import typingsSlinky.antdMobileRn.AnonHeightWidth
-import typingsSlinky.antdMobileRn.AnonMarginLeftMarginRight
+import typingsSlinky.antdMobileRn.anon.AlignItemsFlexDirection
+import typingsSlinky.antdMobileRn.anon.ColorString
+import typingsSlinky.antdMobileRn.anon.HeightWidth
+import typingsSlinky.antdMobileRn.anon.MarginLeftMarginRight
+import typingsSlinky.antdMobileRn.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,11 +12,11 @@ import scala.scalajs.js.annotation._
 @JSImport("antd-mobile-rn/lib/radio/style/index.native", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var icon: AnonHeightWidth = js.native
-  var radioItem: AnonAlignItemsFlexDirection = js.native
-  var radioItemContent: Anon1 = js.native
-  var radioItemContentDisable: AnonColorString = js.native
-  var radioItemRadio: AnonMarginLeftMarginRight = js.native
-  var wrapper: AnonAlignItemsFlexDirection = js.native
+  var icon: HeightWidth = js.native
+  var radioItem: AlignItemsFlexDirection = js.native
+  var radioItemContent: `1` = js.native
+  var radioItemContentDisable: ColorString = js.native
+  var radioItemRadio: MarginLeftMarginRight = js.native
+  var wrapper: AlignItemsFlexDirection = js.native
 }
 

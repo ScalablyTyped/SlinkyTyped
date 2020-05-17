@@ -1,7 +1,7 @@
 package typingsSlinky.reactDraftWysiwyg.mod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactDraftWysiwyg.ReadonlyEditorProps
+import typingsSlinky.reactDraftWysiwyg.anon.ReadonlyEditorProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

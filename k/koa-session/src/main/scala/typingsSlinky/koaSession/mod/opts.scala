@@ -1,8 +1,8 @@
 package typingsSlinky.koaSession.mod
 
 import typingsSlinky.koa.mod.Context
-import typingsSlinky.koaSession.AnonInstantiable
-import typingsSlinky.koaSession.PartialSession
+import typingsSlinky.koaSession.anon.Instantiable
+import typingsSlinky.koaSession.anon.PartialSession
 import typingsSlinky.koaSession.koaSessionStrings.lax
 import typingsSlinky.koaSession.koaSessionStrings.none
 import typingsSlinky.koaSession.koaSessionStrings.session
@@ -19,7 +19,7 @@ trait opts extends js.Object {
     * ContextStore must be a class which claims three instance methods demonstrated above.
     * new ContextStore(ctx) will be executed on every request.
     */
-  var ContextStore: js.UndefOr[AnonInstantiable] = js.native
+  var ContextStore: js.UndefOr[Instantiable] = js.native
   /**
     * Hook: before save session
     */

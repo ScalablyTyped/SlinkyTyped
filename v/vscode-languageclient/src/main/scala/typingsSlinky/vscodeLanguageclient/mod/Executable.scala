@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Executable extends _ServerOptions {
+trait Executable extends ServerOptions {
   var args: js.UndefOr[js.Array[String]] = js.native
   var command: String = js.native
   var options: js.UndefOr[ExecutableOptions] = js.native

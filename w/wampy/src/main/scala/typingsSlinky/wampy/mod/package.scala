@@ -14,7 +14,6 @@ package object mod {
   type Dict = org.scalablytyped.runtime.StringDictionary[js.Any]
   type ErrorCallback = js.Function1[/* args */ typingsSlinky.wampy.mod.ErrorArgs, scala.Unit]
   type EventCallback = js.Function1[/* args */ typingsSlinky.wampy.mod.DataArgs, scala.Unit]
-  type Payload = typingsSlinky.wampy.mod.Args | typingsSlinky.wampy.mod.Dict | java.lang.String | scala.Double | scala.Boolean | js.Array[js.Any] | scala.Null
   type RPCCallback = js.Function1[
     /* args */ typingsSlinky.wampy.mod.DataArgs, 
     typingsSlinky.wampy.mod.RPCResult | scala.Unit

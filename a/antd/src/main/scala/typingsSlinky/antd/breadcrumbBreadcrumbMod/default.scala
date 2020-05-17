@@ -1,8 +1,8 @@
 package typingsSlinky.antd.breadcrumbBreadcrumbMod
 
-import typingsSlinky.antd.AnonSeparator
-import typingsSlinky.antd.TypeofBreadcrumbItem
-import typingsSlinky.antd.TypeofBreadcrumbSeparator
+import typingsSlinky.antd.anon.Separator
+import typingsSlinky.antd.anon.TypeofBreadcrumbItem
+import typingsSlinky.antd.anon.TypeofBreadcrumbSeparator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,6 +17,6 @@ class default () extends Breadcrumb
 object default extends js.Object {
   var Item: TypeofBreadcrumbItem = js.native
   var Separator: TypeofBreadcrumbSeparator = js.native
-  var defaultProps: AnonSeparator = js.native
+  var defaultProps: Separator = js.native
 }
 

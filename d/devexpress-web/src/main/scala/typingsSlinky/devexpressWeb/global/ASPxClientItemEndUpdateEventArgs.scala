@@ -1,0 +1,14 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Provides data for the ASPxClientDashboard.ItemEndUpdate event.
+  */
+@JSGlobal("ASPxClientItemEndUpdateEventArgs")
+@js.native
+class ASPxClientItemEndUpdateEventArgs ()
+  extends typingsSlinky.devexpressWeb.ASPxClientItemEndUpdateEventArgs
+

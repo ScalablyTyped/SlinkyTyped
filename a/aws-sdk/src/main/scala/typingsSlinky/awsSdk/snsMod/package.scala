@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 package object snsMod {
   type ActionsList = js.Array[typingsSlinky.awsSdk.snsMod.action]
   type AmazonResourceName = java.lang.String
-  type Binary = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.snsMod.Blob | java.lang.String
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.snsMod.ClientApiVersions
   type DelegatesList = js.Array[typingsSlinky.awsSdk.snsMod.delegate]
   type ListOfEndpoints = js.Array[typingsSlinky.awsSdk.snsMod.Endpoint_]
@@ -28,12 +27,6 @@ package object snsMod {
   type TopicsList = js.Array[typingsSlinky.awsSdk.snsMod.Topic]
   type account = java.lang.String
   type action = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2010-03-31`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.snsMod._apiVersion | java.lang.String
   type attributeName = java.lang.String
   type attributeValue = java.lang.String
   type authenticateOnUnsubscribe = java.lang.String

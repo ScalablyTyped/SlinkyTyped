@@ -12,14 +12,8 @@ trait SparklineNonNativeOptions[TEntry] extends js.Object
 
 object SparklineNonNativeOptions {
   @scala.inline
-  def SparklineOptions[TEntry](): SparklineNonNativeOptions[TEntry] = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[SparklineNonNativeOptions[TEntry]]
-  }
+  implicit def apply[TEntry](value: SparklineOptions): SparklineNonNativeOptions[TEntry] = value.asInstanceOf[SparklineNonNativeOptions[TEntry]]
   @scala.inline
-  def SparklineOptionsFetch[TEntry](fetch: TEntry => Double): SparklineNonNativeOptions[TEntry] = {
-    val __obj = js.Dynamic.literal(fetch = js.Any.fromFunction1(fetch))
-    __obj.asInstanceOf[SparklineNonNativeOptions[TEntry]]
-  }
+  implicit def apply[TEntry](value: SparklineOptionsFetch[TEntry]): SparklineNonNativeOptions[TEntry] = value.asInstanceOf[SparklineNonNativeOptions[TEntry]]
 }
 

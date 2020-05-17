@@ -1,6 +1,6 @@
 package typingsSlinky.webgme.GmeClasses
 
-import typingsSlinky.webgme.AnonMembers
+import typingsSlinky.webgme.anon.Members
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait MetaSetParameters extends js.Object {
     */
   var multiplicity: js.UndefOr[Boolean] = js.native
   /** the input parameters of the query. */
-  var `object`: AnonMembers = js.native
+  var `object`: Members = js.native
   /** 
     * if true, the query filters out the 
     * abstract and connection-like nodes 
@@ -27,7 +27,7 @@ trait MetaSetParameters extends js.Object {
 
 object MetaSetParameters {
   @scala.inline
-  def apply(`object`: AnonMembers): MetaSetParameters = {
+  def apply(`object`: Members): MetaSetParameters = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetaSetParameters]
@@ -39,7 +39,7 @@ object MetaSetParameters {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withObject(value: AnonMembers): Self = {
+    def withObject(value: Members): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
         ret

@@ -2,6 +2,7 @@ package typingsSlinky.rotJs
 
 import org.scalablytyped.runtime.Instantiable4
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.rotJs.anon.PartialOptions
 import typingsSlinky.rotJs.pathPathMod.PassableCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`

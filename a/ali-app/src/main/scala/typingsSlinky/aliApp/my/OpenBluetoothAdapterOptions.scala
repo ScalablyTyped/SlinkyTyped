@@ -1,6 +1,6 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonIsSupportBLE
+import typingsSlinky.aliApp.anon.IsSupportBLE
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +14,12 @@ trait OpenBluetoothAdapterOptions
   /** 不传的话默认是true，表示是否在离开当前页面时自动断开蓝牙(仅对android有效) */
   var autoClose: Boolean = js.native
   @JSName("success")
-  def success_MOpenBluetoothAdapterOptions(res: AnonIsSupportBLE): Unit = js.native
+  def success_MOpenBluetoothAdapterOptions(res: IsSupportBLE): Unit = js.native
 }
 
 object OpenBluetoothAdapterOptions {
   @scala.inline
-  def apply(autoClose: Boolean, success: AnonIsSupportBLE => Unit): OpenBluetoothAdapterOptions = {
+  def apply(autoClose: Boolean, success: IsSupportBLE => Unit): OpenBluetoothAdapterOptions = {
     val __obj = js.Dynamic.literal(autoClose = autoClose.asInstanceOf[js.Any], success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[OpenBluetoothAdapterOptions]
   }
@@ -36,7 +36,7 @@ object OpenBluetoothAdapterOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: AnonIsSupportBLE => Unit): Self = {
+    def withSuccess(value: IsSupportBLE => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

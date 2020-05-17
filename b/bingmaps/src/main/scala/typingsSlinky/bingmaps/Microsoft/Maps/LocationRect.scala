@@ -4,16 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Microsoft.Maps.LocationRect")
 @js.native
-class LocationRect protected () extends js.Object {
-  /**
-    * @constructor
-    * @param center The center of the LocationRect.
-    * @param width The width of the LocationRect in degrees.
-    * @param height The height of the LocationRect in degrees.
-    */
-  def this(center: Location, width: Double, height: Double) = this()
+trait LocationRect extends js.Object {
   /** The location that defines the center of the rectangle. */
   var center: Location = js.native
   /** The height, in degrees, of the rectangle. */
@@ -78,57 +70,118 @@ class LocationRect protected () extends js.Object {
   def splitByInternationalDateLine(): js.Array[LocationRect] = js.native
 }
 
-/* static members */
-@JSGlobal("Microsoft.Maps.LocationRect")
-@js.native
-object LocationRect extends js.Object {
-  /**
-    * Gets a LocationRect using the specified locations for the northwest and southeast corners.
-    * @param northwest The north west corner of the LocationRect.
-    * @param southeast The south east corner of the LocationRect.
-    * @returns A LocationRect using the specified locations for the northwest and southeast corners.
-    */
-  def fromCorners(northwest: Location, southeast: Location): LocationRect = js.native
-  /**
-    * Gets a LocationRect using the specified northern and southern latitudes and western and eastern longitudes for the rectangle boundaries.
-    * @param north The northern latitude of the LocationRect.
-    * @param west The western longitude of the LocationRect.
-    * @param south The southern latitude of the LocationRect.
-    * @param east The eastern longitude of the LocationRect.
-    * @returns A LocationRect defined by the specified northern and southern latitudes and western and eastern longitudes for the rectangle boundaries.
-    */
-  def fromEdges(north: Double, west: Double, south: Double, east: Double): LocationRect = js.native
-  /**
-    * Gets a LocationRect using a list of locations.
-    * @param locations A list of locations.
-    * @returns A LocationRect that encloses all the specified locations.
-    */
-  def fromLocations(locations: Location*): LocationRect = js.native
-  /**
-    * Gets a LocationRect using an array of locations.
-    * @param locations An array of locations.
-    * @returns A LocationRect that encloses all the specified locations.
-    */
-  def fromLocations(locations: js.Array[Location]): LocationRect = js.native
-  def fromShapes(shapes: js.Array[IPrimitive | js.Array[IPrimitive]]): LocationRect = js.native
-  /**
-    * Calculates the LocationRect for an indivudal shape or an array of shapes.
-    * @param shapes An indivudal shape or an array of shapes to calculate the LocationRect for.
-    * @returns A LocationRect for the shapes.
-    */
-  def fromShapes(shapes: IPrimitive): LocationRect = js.native
-  /**
-    * Creates a LocationRect from a string with the following format: "north,west,south,east". North, west, south and east specify the coordinate number values.
-    * @param str A string that repsents a LocationRect with the format "north,west,south,east".
-    * @returns A LocationRect defined by the specified northern and southern latitudes and western and eastern longitudes for the rectangle boundaries that have been parsed by the string.
-    */
-  def fromString(str: String): LocationRect = js.native
-  /**
-    * A static function that merges two LocationRect to form a new LocationRect which represents the combined area of the two LocationRect objects.
-    * @param rect1 The first LocationRect to merge with the second LocationRect.
-    * @param rect2 The second LocationRect to merge with the first LocationRect.
-    * @returns A new LocationRect which represents the combined area of the two LocationRect objects.
-    */
-  def merge(rect1: LocationRect, rect2: LocationRect): LocationRect = js.native
+object LocationRect {
+  @scala.inline
+  def apply(
+    buffer: Double => Unit,
+    center: Location,
+    contains: Location => Boolean,
+    crossesInternationalDateLine: () => Boolean,
+    getEast: () => Double,
+    getNorth: () => Double,
+    getNorthwest: () => Location,
+    getSouth: () => Double,
+    getSoutheast: () => Location,
+    getWest: () => Double,
+    height: Double,
+    intersects: LocationRect => Boolean,
+    splitByInternationalDateLine: () => js.Array[LocationRect],
+    width: Double
+  ): LocationRect = {
+    val __obj = js.Dynamic.literal(buffer = js.Any.fromFunction1(buffer), center = center.asInstanceOf[js.Any], contains = js.Any.fromFunction1(contains), crossesInternationalDateLine = js.Any.fromFunction0(crossesInternationalDateLine), getEast = js.Any.fromFunction0(getEast), getNorth = js.Any.fromFunction0(getNorth), getNorthwest = js.Any.fromFunction0(getNorthwest), getSouth = js.Any.fromFunction0(getSouth), getSoutheast = js.Any.fromFunction0(getSoutheast), getWest = js.Any.fromFunction0(getWest), height = height.asInstanceOf[js.Any], intersects = js.Any.fromFunction1(intersects), splitByInternationalDateLine = js.Any.fromFunction0(splitByInternationalDateLine), width = width.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LocationRect]
+  }
+  @scala.inline
+  implicit class LocationRectOps[Self <: LocationRect] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBuffer(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCenter(value: Location): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContains(value: Location => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCrossesInternationalDateLine(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossesInternationalDateLine")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetEast(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getEast")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetNorth(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNorth")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetNorthwest(value: () => Location): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNorthwest")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSouth(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSouth")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSoutheast(value: () => Location): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSoutheast")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetWest(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getWest")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIntersects(value: LocationRect => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intersects")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSplitByInternationalDateLine(value: () => js.Array[LocationRect]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splitByInternationalDateLine")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

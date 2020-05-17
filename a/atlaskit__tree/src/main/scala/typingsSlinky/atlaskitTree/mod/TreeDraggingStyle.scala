@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 /* Inlined parent @atlaskit/tree.@atlaskit/tree.Omit<react-beautiful-dnd.react-beautiful-dnd.DraggingStyle, 'transition'> */
 @js.native
-trait TreeDraggingStyle extends js.Object {
+trait TreeDraggingStyle extends TreeDraggableStyle {
   var boxSizing: `border-box` = js.native
   var height: Double = js.native
   var left: Double = js.native

@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
   * Provides read/write access to a SQLite database. Useful for persistence
   * and to embed a cache in an agent.
   */
-@JSGlobal("SqliteDatabase")
 @js.native
-class SqliteDatabase () extends js.Object {
+trait SqliteDatabase extends js.Object {
   /**
     * Closes the database. You should call this function when you're done with
     * the database, unless you are fine with this happening when the object is
@@ -42,34 +41,43 @@ class SqliteDatabase () extends js.Object {
   def prepare(sql: String): SqliteStatement = js.native
 }
 
-/* static members */
-@JSGlobal("SqliteDatabase")
-@js.native
-object SqliteDatabase extends js.Object {
-  /**
-    * Opens the SQLite v3 database at `path` on the filesystem. The database
-    * will by default be opened read-write, and the returned `SqliteDatabase`
-    * object will allow you to perform queries on it. Throws an exception if
-    * the database cannot be opened.
-    *
-    * @param path Filesystem path to database.
-    * @param options Options to customize how the database should be opened.
-    */
-  def open(path: String): SqliteDatabase = js.native
-  def open(path: String, options: SqliteOpenOptions): SqliteDatabase = js.native
-  /**
-    * Just like `open()` but the contents of the database is provided as a
-    * string containing its data, Base64-encoded. We recommend gzipping the
-    * database before Base64-encoding it, but this is optional and detected
-    * by looking for a gzip magic marker. The database is opened read-write,
-    * but is 100% in-memory and never touches the filesystem. Throws an
-    * exception if the database is malformed.
-    *
-    * This is useful for agents that need to bundle a cache of precomputed
-    * data, e.g. static analysis data used to guide dynamic analysis.
-    *
-    * @param encodedContents Base64-encoded database contents.
-    */
-  def openInline(encodedContents: String): SqliteDatabase = js.native
+object SqliteDatabase {
+  @scala.inline
+  def apply(close: () => Unit, dump: () => String, exec: String => Unit, prepare: String => SqliteStatement): SqliteDatabase = {
+    val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), dump = js.Any.fromFunction0(dump), exec = js.Any.fromFunction1(exec), prepare = js.Any.fromFunction1(prepare))
+    __obj.asInstanceOf[SqliteDatabase]
+  }
+  @scala.inline
+  implicit class SqliteDatabaseOps[Self <: SqliteDatabase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDump(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dump")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withExec(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exec")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPrepare(value: String => SqliteStatement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prepare")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

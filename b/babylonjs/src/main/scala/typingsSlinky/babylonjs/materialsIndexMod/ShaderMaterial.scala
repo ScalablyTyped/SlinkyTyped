@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.materialsIndexMod
 
-import typingsSlinky.babylonjs.PartialIShaderMaterialOpt
+import typingsSlinky.babylonjs.anon.PartialIShaderMaterialOpt
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`

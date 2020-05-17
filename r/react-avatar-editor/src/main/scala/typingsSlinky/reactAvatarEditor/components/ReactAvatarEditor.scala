@@ -1,6 +1,7 @@
 package typingsSlinky.reactAvatarEditor.components
 
 import org.scalajs.dom.raw.DragEvent
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.File
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -8,7 +9,6 @@ import typingsSlinky.reactAvatarEditor.mod.AvatarEditorProps
 import typingsSlinky.reactAvatarEditor.mod.ImageState
 import typingsSlinky.reactAvatarEditor.mod.Position
 import typingsSlinky.reactAvatarEditor.mod.default
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,13 +43,13 @@ object ReactAvatarEditor {
     @scala.inline
     def onImageChange(value: () => Unit): this.type = set("onImageChange", js.Any.fromFunction0(value))
     @scala.inline
-    def onImageReady(value: /* event */ Event_ => Unit): this.type = set("onImageReady", js.Any.fromFunction1(value))
+    def onImageReady(value: /* event */ Event => Unit): this.type = set("onImageReady", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoadFailure(value: /* event */ Event_ => Unit): this.type = set("onLoadFailure", js.Any.fromFunction1(value))
+    def onLoadFailure(value: /* event */ Event => Unit): this.type = set("onLoadFailure", js.Any.fromFunction1(value))
     @scala.inline
     def onLoadSuccess(value: /* imgInfo */ ImageState => Unit): this.type = set("onLoadSuccess", js.Any.fromFunction1(value))
     @scala.inline
-    def onMouseMove(value: /* event */ Event_ => Unit): this.type = set("onMouseMove", js.Any.fromFunction1(value))
+    def onMouseMove(value: /* event */ Event => Unit): this.type = set("onMouseMove", js.Any.fromFunction1(value))
     @scala.inline
     def onMouseUp(value: () => Unit): this.type = set("onMouseUp", js.Any.fromFunction0(value))
     @scala.inline

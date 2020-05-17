@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait Renderer3 extends js.Object
 
+object Renderer3 {
+  @scala.inline
+  implicit def apply(value: ObjectOrientedRenderer3): Renderer3 = value.asInstanceOf[Renderer3]
+  @scala.inline
+  implicit def apply(value: ProceduralRenderer3): Renderer3 = value.asInstanceOf[Renderer3]
+}
+

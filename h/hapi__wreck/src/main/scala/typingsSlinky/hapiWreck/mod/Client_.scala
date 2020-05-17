@@ -1,6 +1,6 @@
 package typingsSlinky.hapiWreck.mod
 
-import typingsSlinky.hapiWreck.PromiseIncomingMessagereq
+import typingsSlinky.hapiWreck.anon.PromiseIncomingMessagereq
 import typingsSlinky.hapiWreck.mod.Client.Agents
 import typingsSlinky.hapiWreck.mod.Client.Events
 import typingsSlinky.hapiWreck.mod.Client.Options

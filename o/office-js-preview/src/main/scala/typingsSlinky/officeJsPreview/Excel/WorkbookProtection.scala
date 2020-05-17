@@ -1,9 +1,9 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.WorkbookProtectionData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.WorkbookProtectionLoadOptions
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
+import typingsSlinky.officeJsPreview.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,9 +14,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.7]
   */
-@JSGlobal("Excel.WorkbookProtection")
 @js.native
-class WorkbookProtection () extends ClientObject {
+trait WorkbookProtection extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_WorkbookProtection: RequestContext = js.native
@@ -34,7 +33,7 @@ class WorkbookProtection () extends ClientObject {
     */
   def load(): WorkbookProtection = js.native
   def load(options: WorkbookProtectionLoadOptions): WorkbookProtection = js.native
-  def load(propertyNamesAndPaths: AnonExpand): WorkbookProtection = js.native
+  def load(propertyNamesAndPaths: Expand): WorkbookProtection = js.native
   def load(propertyNames: String): WorkbookProtection = js.native
   def load(propertyNames: js.Array[String]): WorkbookProtection = js.native
   /**

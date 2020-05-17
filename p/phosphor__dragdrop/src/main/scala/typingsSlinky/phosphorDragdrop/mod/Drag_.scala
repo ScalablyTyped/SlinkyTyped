@@ -1,10 +1,10 @@
 package typingsSlinky.phosphorDragdrop.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.phosphorCoreutils.mod.MimeData
 import typingsSlinky.phosphorDisposable.mod.IDisposable
 import typingsSlinky.phosphorDragdrop.mod.Drag.IOptions
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -114,7 +114,7 @@ class Drag_ protected () extends IDisposable {
     * called in response to events on the document. It should not be
     * called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
   /**
     * Start the drag operation at the specified client position.
     *

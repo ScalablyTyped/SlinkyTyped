@@ -1,8 +1,8 @@
 package typingsSlinky.reactLazylog.lazyLogMod
 
 import org.scalajs.dom.raw.CloseEvent
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.WebSocket
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
 trait WebsocketOptions extends js.Object {
   var formatMessage: js.UndefOr[js.Function1[/* message */ js.Any, String]] = js.native
   var onClose: js.UndefOr[js.Function1[/* e */ CloseEvent, Unit]] = js.native
-  var onError: js.UndefOr[js.Function1[/* e */ Event_, Unit]] = js.native
-  var onOpen: js.UndefOr[js.Function2[/* e */ Event_, /* socket */ WebSocket, Unit]] = js.native
+  var onError: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
+  var onOpen: js.UndefOr[js.Function2[/* e */ Event, /* socket */ WebSocket, Unit]] = js.native
 }
 
 object WebsocketOptions {
@@ -52,7 +52,7 @@ object WebsocketOptions {
         ret
     }
     @scala.inline
-    def withOnError(value: /* e */ Event_ => Unit): Self = {
+    def withOnError(value: /* e */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
         ret
@@ -64,7 +64,7 @@ object WebsocketOptions {
         ret
     }
     @scala.inline
-    def withOnOpen(value: (/* e */ Event_, /* socket */ WebSocket) => Unit): Self = {
+    def withOnOpen(value: (/* e */ Event, /* socket */ WebSocket) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.Any.fromFunction2(value))
         ret

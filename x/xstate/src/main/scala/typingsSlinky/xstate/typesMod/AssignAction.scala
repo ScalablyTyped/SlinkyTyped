@@ -6,7 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.xstate.typesMod.Action because Already inherited */ @js.native
 trait AssignAction[TContext, TEvent /* <: EventObject */] extends ActionObject[TContext, TEvent] {
   var assignment: (Assigner[TContext, TEvent]) | (PropertyAssigner[TContext, TEvent]) = js.native
   @JSName("type")

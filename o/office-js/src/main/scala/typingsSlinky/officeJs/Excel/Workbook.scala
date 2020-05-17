@@ -1,6 +1,5 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.WorkbookData
 import typingsSlinky.officeJs.Excel.Interfaces.WorkbookLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.WorkbookUpdateData
@@ -8,6 +7,7 @@ import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.ClientResult
 import typingsSlinky.officeJs.OfficeExtension.EventHandlers
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +19,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.Workbook")
 @js.native
-class Workbook () extends ClientObject {
+trait Workbook extends ClientObject {
   /**
     *
     * Represents the Excel application instance that contains this workbook. Read-only.
@@ -291,7 +290,7 @@ class Workbook () extends ClientObject {
     */
   def load(): Workbook = js.native
   def load(options: WorkbookLoadOptions): Workbook = js.native
-  def load(propertyNamesAndPaths: AnonExpand): Workbook = js.native
+  def load(propertyNamesAndPaths: Expand): Workbook = js.native
   def load(propertyNames: String): Workbook = js.native
   def load(propertyNames: js.Array[String]): Workbook = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

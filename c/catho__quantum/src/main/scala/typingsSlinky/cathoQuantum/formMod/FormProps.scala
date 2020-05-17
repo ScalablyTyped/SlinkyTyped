@@ -3,7 +3,7 @@ package typingsSlinky.cathoQuantum.formMod
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.cathoQuantum.AnonValid
+import typingsSlinky.cathoQuantum.anon.Valid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait FormProps extends js.Object {
   var children: js.Array[TagMod[Any]] | TagMod[Any] = js.native
   var noValidate: js.UndefOr[Boolean] = js.native
-  var onSubmit: js.UndefOr[js.Function1[/* hasValid */ js.UndefOr[AnonValid], Unit]] = js.native
+  var onSubmit: js.UndefOr[js.Function1[/* hasValid */ js.UndefOr[Valid], Unit]] = js.native
   var onValidSubmit: js.UndefOr[
     js.Function1[/* values */ js.UndefOr[StringDictionary[js.UndefOr[String]]], Unit]
   ] = js.native
@@ -61,7 +61,7 @@ object FormProps {
         ret
     }
     @scala.inline
-    def withOnSubmit(value: /* hasValid */ js.UndefOr[AnonValid] => Unit): Self = {
+    def withOnSubmit(value: /* hasValid */ js.UndefOr[Valid] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(js.Any.fromFunction1(value))
         ret

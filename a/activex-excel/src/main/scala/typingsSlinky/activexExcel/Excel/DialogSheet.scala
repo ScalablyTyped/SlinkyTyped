@@ -8,9 +8,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.activexExcel.Excel.AddSheetResult because Already inherited */ @JSGlobal("Excel.DialogSheet")
-@js.native
-class DialogSheet protected () extends Sheet {
+- typingsSlinky.activexExcel.Excel.AddSheetResult because Already inherited */ @js.native
+trait DialogSheet extends Sheet {
   val Application: typingsSlinky.activexExcel.Excel.Application = js.native
   val AutoFilter: typingsSlinky.activexExcel.Excel.AutoFilter = js.native
   val CodeName: String = js.native

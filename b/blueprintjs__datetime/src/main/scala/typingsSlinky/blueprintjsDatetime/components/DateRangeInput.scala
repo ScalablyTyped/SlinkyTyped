@@ -4,7 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.inputGroupMod.IInputGroupProps
 import typingsSlinky.blueprintjsCore.propsMod.HTMLInputProps
-import typingsSlinky.blueprintjsDatetime.PartialIPopoverProps
+import typingsSlinky.blueprintjsDatetime.anon.PartialIPopoverProps
 import typingsSlinky.blueprintjsDatetime.blueprintjsDatetimeBooleans.`false`
 import typingsSlinky.blueprintjsDatetime.datePickerCoreMod.IDatePickerModifiers
 import typingsSlinky.blueprintjsDatetime.dateRangeInputMod.IDateRangeInputProps

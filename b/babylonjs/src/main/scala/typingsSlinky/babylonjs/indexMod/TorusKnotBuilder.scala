@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.indexMod
 
-import typingsSlinky.babylonjs.AnonQ
+import typingsSlinky.babylonjs.anon.Q
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,6 +29,6 @@ object TorusKnotBuilder extends js.Object {
     * @returns the torus knot mesh
     * @see  https://doc.babylonjs.com/how_to/set_shapes#torus-knot
     */
-  def CreateTorusKnot(name: String, options: AnonQ, scene: js.Any): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTorusKnot(name: String, options: Q, scene: js.Any): typingsSlinky.babylonjs.meshMod.Mesh = js.native
 }
 

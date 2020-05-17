@@ -2,8 +2,8 @@ package typingsSlinky.baseui.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonActiveKey
-import typingsSlinky.baseui.SharedPropsactiveboolean
+import typingsSlinky.baseui.anon.ActiveKey
+import typingsSlinky.baseui.anon.SharedPropsactiveboolean
 import typingsSlinky.baseui.baseuiStrings.change_
 import typingsSlinky.baseui.baseuiStrings.horizontal
 import typingsSlinky.baseui.baseuiStrings.vertical
@@ -31,7 +31,7 @@ object StatefulTabs {
     @scala.inline
     def initialState(value: State): this.type = set("initialState", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* args */ AnonActiveKey => _): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* args */ ActiveKey => _): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def orientation(value: horizontal | vertical): this.type = set("orientation", value.asInstanceOf[js.Any])
     @scala.inline

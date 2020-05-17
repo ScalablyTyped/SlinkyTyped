@@ -12,9 +12,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.ChartFill")
 @js.native
-class ChartFill () extends ClientObject {
+trait ChartFill extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_ChartFill: RequestContext = js.native
@@ -37,5 +36,51 @@ class ChartFill () extends ClientObject {
     * Whereas the original Excel.ChartFill object is an API object, the `toJSON` method returns a plain JavaScript object (typed as `Excel.Interfaces.ChartFillData`) that contains shallow copies of any loaded child properties from the original object.
     */
   def toJSON(): StringDictionary[String] = js.native
+}
+
+object ChartFill {
+  @scala.inline
+  def apply(
+    clear: () => Unit,
+    context: RequestContext,
+    isNullObject: Boolean,
+    setSolidColor: String => Unit,
+    toJSON: () => StringDictionary[String]
+  ): ChartFill = {
+    val __obj = js.Dynamic.literal(clear = js.Any.fromFunction0(clear), context = context.asInstanceOf[js.Any], isNullObject = isNullObject.asInstanceOf[js.Any], setSolidColor = js.Any.fromFunction1(setSolidColor), toJSON = js.Any.fromFunction0(toJSON))
+    __obj.asInstanceOf[ChartFill]
+  }
+  @scala.inline
+  implicit class ChartFillOps[Self <: ChartFill] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClear(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withContext(value: RequestContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetSolidColor(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSolidColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withToJSON(value: () => StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

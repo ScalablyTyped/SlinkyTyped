@@ -30,10 +30,8 @@ import scala.scalajs.js.annotation._
   * @property {pc.Entity} horizontalScrollbarEntity The entity to be used as the vertical scrollbar. This entity must have a Scrollbar component.
   * @property {pc.Entity} verticalScrollbarEntity The entity to be used as the vertical scrollbar. This entity must have a Scrollbar component.
   */
-@JSGlobal("pc.ScrollViewComponent")
 @js.native
-class ScrollViewComponent protected () extends Component {
-  def this(system: ScrollViewComponentSystem, entity: Entity) = this()
+trait ScrollViewComponent extends Component {
   /**
     * Controls how far the content should move before bouncing back.
     */

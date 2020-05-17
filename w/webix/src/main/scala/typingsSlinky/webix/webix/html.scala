@@ -1,8 +1,7 @@
 package typingsSlinky.webix.webix
 
-import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,19 +26,15 @@ trait html extends js.Object {
   def index(node: HTMLElement): Double = js.native
   def insertBefore(node: HTMLElement, before: HTMLElement): Unit = js.native
   def insertBefore(node: HTMLElement, before: HTMLElement, rescue: HTMLElement): Unit = js.native
-  def locate(ev: Event_, name: String): String = js.native
+  def locate(ev: Event, name: String): String = js.native
   def locate(ev: HTMLElement, name: String): String = js.native
   def offset(node: HTMLElement): js.Any = js.native
-  def pos(ev: Event_): js.Any = js.native
-  def posRelative(ev: Event_): js.Any = js.native
-  def preventEvent(ev: Event_): Boolean = js.native
+  def pos(ev: Event): js.Any = js.native
+  def posRelative(ev: Event): js.Any = js.native
+  def preventEvent(ev: Event): Boolean = js.native
   def remove(node: js.Array[HTMLElement]): Unit = js.native
   def remove(node: HTMLElement): Unit = js.native
   def removeCss(node: HTMLElement, name: String): Unit = js.native
-  def stopEvent(ev: Event_): Boolean = js.native
+  def stopEvent(ev: Event): Boolean = js.native
 }
-
-@JSGlobal("webix.html")
-@js.native
-object html extends TopLevel[html]
 

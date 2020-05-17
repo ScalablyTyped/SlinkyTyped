@@ -22,7 +22,7 @@ package object mod {
     /* exclude */ js.UndefOr[
       (js.Array[java.lang.String | js.RegExp]) | java.lang.String | js.RegExp | scala.Null
     ], 
-    /* options */ js.UndefOr[typingsSlinky.rollupPluginutils.AnonResolve], 
+    /* options */ js.UndefOr[typingsSlinky.rollupPluginutils.anon.Resolve], 
     js.Function1[/* id */ java.lang.String | js.Any, scala.Boolean]
   ]
   type DataToEsm_ = js.Function2[

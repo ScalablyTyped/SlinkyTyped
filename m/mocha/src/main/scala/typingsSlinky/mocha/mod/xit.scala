@@ -1,7 +1,7 @@
 package typingsSlinky.mocha.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.mocha.Mocha_.PendingTestFunction
+import typingsSlinky.mocha.Mocha.PendingTestFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 	* @brief zip 文件访问对象
 	* @detail 
 	*/
-@JSGlobal("Class_ZipFile")
 @js.native
-class ClassZipFile () extends ClassObject {
+trait ClassZipFile extends ClassObject {
   /**
   	 * 
   	 * @brief 关闭打开的zip文件

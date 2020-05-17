@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait FormatSV extends _Format {
+trait FormatSV extends Format {
   var header: js.UndefOr[js.Array[String]] = js.native
   var parse: js.UndefOr[Parse] = js.native
   var `type`: csv | tsv = js.native

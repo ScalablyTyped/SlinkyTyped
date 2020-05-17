@@ -1,5 +1,11 @@
 package typingsSlinky.emberArray
 
+import typingsSlinky.emberArray.anon.Fn0
+import typingsSlinky.emberArray.anon.Fn1
+import typingsSlinky.emberArray.anon.FnCall
+import typingsSlinky.emberArray.anon.FnCallCallbackfnInitialValue
+import typingsSlinky.emberArray.anon.FnCallCallbackfnThisArg
+import typingsSlinky.emberArray.anon.FnCallPredicateThisArg
 import typingsSlinky.emberArray.nativeArrayMod.NativeArray
 import typingsSlinky.emberObject.computedMod.ComputedProperty
 import scala.scalajs.js

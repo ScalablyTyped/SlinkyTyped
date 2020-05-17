@@ -1,13 +1,13 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonComponentDxSlideOut
+import typingsSlinky.devextreme.anon.ComponentDxSlideOut
 import typingsSlinky.devextreme.devextremeStrings.inverted
 import typingsSlinky.devextreme.devextremeStrings.normal
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -51,9 +51,9 @@ trait dxSlideOutOptions extends CollectionWidgetOptions[dxSlideOut] {
   /** Specifies whether or not the slide-out menu is displayed. */
   var menuVisible: js.UndefOr[Boolean] = js.native
   /** A function that is executed when a group menu item is rendered. */
-  var onMenuGroupRendered: js.UndefOr[js.Function1[/* e */ AnonComponentDxSlideOut, _]] = js.native
+  var onMenuGroupRendered: js.UndefOr[js.Function1[/* e */ ComponentDxSlideOut, _]] = js.native
   /** A function that is executed when a regular menu item is rendered. */
-  var onMenuItemRendered: js.UndefOr[js.Function1[/* e */ AnonComponentDxSlideOut, _]] = js.native
+  var onMenuItemRendered: js.UndefOr[js.Function1[/* e */ ComponentDxSlideOut, _]] = js.native
   /** Indicates whether the menu can be shown/hidden by swiping the widget's main panel. */
   var swipeEnabled: js.UndefOr[Boolean] = js.native
 }
@@ -223,7 +223,7 @@ object dxSlideOutOptions {
         ret
     }
     @scala.inline
-    def withOnMenuGroupRendered(value: /* e */ AnonComponentDxSlideOut => _): Self = {
+    def withOnMenuGroupRendered(value: /* e */ ComponentDxSlideOut => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMenuGroupRendered")(js.Any.fromFunction1(value))
         ret
@@ -235,7 +235,7 @@ object dxSlideOutOptions {
         ret
     }
     @scala.inline
-    def withOnMenuItemRendered(value: /* e */ AnonComponentDxSlideOut => _): Self = {
+    def withOnMenuItemRendered(value: /* e */ ComponentDxSlideOut => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMenuItemRendered")(js.Any.fromFunction1(value))
         ret

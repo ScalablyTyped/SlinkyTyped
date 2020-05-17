@@ -1,7 +1,6 @@
 package typingsSlinky.phaser.spine.webgl
 
 import org.scalajs.dom.raw.HTMLCanvasElement
-import org.scalajs.dom.raw.WebGLRenderingContext
 import typingsSlinky.phaser.spine.ArrayLike
 import typingsSlinky.phaser.spine.Color
 import typingsSlinky.phaser.spine.Disposable
@@ -11,13 +10,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("spine.webgl.SceneRenderer")
 @js.native
-class SceneRenderer protected () extends Disposable {
-  def this(canvas: HTMLCanvasElement, context: ManagedWebGLRenderingContext) = this()
-  def this(canvas: HTMLCanvasElement, context: WebGLRenderingContext) = this()
-  def this(canvas: HTMLCanvasElement, context: ManagedWebGLRenderingContext, twoColorTint: Boolean) = this()
-  def this(canvas: HTMLCanvasElement, context: WebGLRenderingContext, twoColorTint: Boolean) = this()
+trait SceneRenderer extends Disposable {
   var QUAD: js.Any = js.native
   var QUAD_TRIANGLES: js.Any = js.native
   var WHITE: js.Any = js.native

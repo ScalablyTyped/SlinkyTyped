@@ -1,6 +1,7 @@
 package typingsSlinky.reactDndHtml5Backend
 
 import typingsSlinky.dndCore.interfacesMod.XYCoord
+import typingsSlinky.reactDndHtml5Backend.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +15,8 @@ object offsetUtilsMod extends js.Object {
     clientOffset: XYCoord,
     anchorPoint: js.Any,
     offsetPoint: js.Any
-  ): AnonX = js.native
-  def getEventClientOffset(e: js.Any): AnonX = js.native
-  def getNodeClientOffset(node: js.Any): AnonX | Null = js.native
+  ): X = js.native
+  def getEventClientOffset(e: js.Any): X = js.native
+  def getNodeClientOffset(node: js.Any): X | Null = js.native
 }
 

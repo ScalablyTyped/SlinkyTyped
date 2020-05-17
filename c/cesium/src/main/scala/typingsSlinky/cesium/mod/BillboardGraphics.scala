@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonAlignedAxis
+import typingsSlinky.cesium.anon.AlignedAxis
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "BillboardGraphics")
 @js.native
 class BillboardGraphics () extends js.Object {
-  def this(options: AnonAlignedAxis) = this()
+  def this(options: AlignedAxis) = this()
   var alignedAxis: Property = js.native
   var color: Property = js.native
   var definitionChanged: Event[js.Array[_]] = js.native

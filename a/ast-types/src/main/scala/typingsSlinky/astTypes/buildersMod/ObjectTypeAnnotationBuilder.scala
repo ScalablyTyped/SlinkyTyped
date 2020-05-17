@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonCallProperties
+import typingsSlinky.astTypes.anon.CallProperties
 import typingsSlinky.astTypes.kindsMod.ObjectTypeCallPropertyKind
 import typingsSlinky.astTypes.kindsMod.ObjectTypeIndexerKind
 import typingsSlinky.astTypes.kindsMod.ObjectTypePropertyKind
@@ -22,6 +22,6 @@ trait ObjectTypeAnnotationBuilder extends js.Object {
     indexers: js.Array[ObjectTypeIndexerKind],
     callProperties: js.Array[ObjectTypeCallPropertyKind]
   ): ObjectTypeAnnotation = js.native
-  def from(params: AnonCallProperties): ObjectTypeAnnotation = js.native
+  def from(params: CallProperties): ObjectTypeAnnotation = js.native
 }
 

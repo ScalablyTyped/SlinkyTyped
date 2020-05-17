@@ -12,14 +12,8 @@ trait NavItemDescriptor extends js.Object
 
 object NavItemDescriptor {
   @scala.inline
-  def NavItemIconUrlDescriptor(name: String): NavItemDescriptor = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NavItemDescriptor]
-  }
+  implicit def apply(value: NavItemIconHtmlDescriptor): NavItemDescriptor = value.asInstanceOf[NavItemDescriptor]
   @scala.inline
-  def NavItemIconHtmlDescriptor(name: String): NavItemDescriptor = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NavItemDescriptor]
-  }
+  implicit def apply(value: NavItemIconUrlDescriptor): NavItemDescriptor = value.asInstanceOf[NavItemDescriptor]
 }
 

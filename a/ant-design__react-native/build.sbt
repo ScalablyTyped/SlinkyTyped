@@ -1,23 +1,23 @@
 organization := "org.scalablytyped.slinky"
 name := "ant-design__react-native"
-version := "3.3.0-b787c9"
-scalaVersion := "2.13.1"
+version := "3.3.0-e34ecf"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "bang88__react-native-drawer-layout" % "2.0.3-f60452",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-fa3762",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-24495c",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200409Z-47fb9f",
-  "org.scalablytyped.slinky" %%% "react-native" % "0.62-dt-20200423Z-43c31c",
-  "org.scalablytyped.slinky" %%% "react-native-collapsible" % "1.5.1-2294be",
-  "org.scalablytyped.slinky" %%% "react-native-community__viewpager" % "1.1.7-ad95e7",
-  "org.scalablytyped.slinky" %%% "react-native-modal-popover" % "0.0.12-a5a3a7",
-  "org.scalablytyped.slinky" %%% "react-native-swipeout" % "2.3.6-36f4b8",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
+  "org.scalablytyped.slinky" %%% "bang88__react-native-drawer-layout" % "2.0.3-548856",
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-e9335f",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-7e1d98",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200409Z-36b705",
+  "org.scalablytyped.slinky" %%% "react-native" % "0.62-dt-20200423Z-550f26",
+  "org.scalablytyped.slinky" %%% "react-native-collapsible" % "1.5.1-defc93",
+  "org.scalablytyped.slinky" %%% "react-native-community__viewpager" % "1.1.7-4a2939",
+  "org.scalablytyped.slinky" %%% "react-native-modal-popover" % "0.0.12-12cc0a",
+  "org.scalablytyped.slinky" %%% "react-native-swipeout" % "2.3.6-2fb928",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

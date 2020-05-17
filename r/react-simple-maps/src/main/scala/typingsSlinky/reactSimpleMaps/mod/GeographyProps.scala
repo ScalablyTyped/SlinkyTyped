@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.SVGPathElement
 import slinky.core.TagMod
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.ClipboardEventHandler
@@ -22,7 +22,7 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
-import typingsSlinky.reactSimpleMaps.AnonDefault
+import typingsSlinky.reactSimpleMaps.anon.Default
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings._empty
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`additions text`
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`after-edge`
@@ -188,7 +188,7 @@ trait GeographyProps extends js.Object {
   var cx: js.UndefOr[Double | String] = js.native
   var cy: js.UndefOr[Double | String] = js.native
   var d: js.UndefOr[String] = js.native
-  var dangerouslySetInnerHTML: js.UndefOr[AnonHtml] = js.native
+  var dangerouslySetInnerHTML: js.UndefOr[Html] = js.native
   var decelerate: js.UndefOr[Double | String] = js.native
   var descent: js.UndefOr[Double | String] = js.native
   var diffuseConstant: js.UndefOr[Double | String] = js.native
@@ -439,7 +439,7 @@ trait GeographyProps extends js.Object {
   var strokeMiterlimit: js.UndefOr[Double | String] = js.native
   var strokeOpacity: js.UndefOr[Double | String] = js.native
   var strokeWidth: js.UndefOr[Double | String] = js.native
-  var style: js.UndefOr[AnonDefault] = js.native
+  var style: js.UndefOr[Default] = js.native
   var surfaceScale: js.UndefOr[Double | String] = js.native
   var systemLanguage: js.UndefOr[Double | String] = js.native
   var tabIndex: js.UndefOr[Double] = js.native

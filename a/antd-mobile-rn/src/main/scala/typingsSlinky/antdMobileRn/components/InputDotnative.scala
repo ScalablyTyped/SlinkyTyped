@@ -5,8 +5,8 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antdMobileRn.inputNativeMod.TextInputProps
 import typingsSlinky.antdMobileRn.inputNativeMod.default
-import typingsSlinky.reactNative.AnonStart
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.Start
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -302,7 +302,7 @@ object InputDotnative {
     @scala.inline
     def selectTextOnFocus(value: Boolean): this.type = set("selectTextOnFocus", value.asInstanceOf[js.Any])
     @scala.inline
-    def selection(value: AnonStart): this.type = set("selection", value.asInstanceOf[js.Any])
+    def selection(value: Start): this.type = set("selection", value.asInstanceOf[js.Any])
     @scala.inline
     def selectionColor(value: String): this.type = set("selectionColor", value.asInstanceOf[js.Any])
     @scala.inline

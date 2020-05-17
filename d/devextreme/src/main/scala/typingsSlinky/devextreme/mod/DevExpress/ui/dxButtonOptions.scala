@@ -1,8 +1,8 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonIcon
-import typingsSlinky.devextreme.AnonValidationGroup
+import typingsSlinky.devextreme.anon.Icon
+import typingsSlinky.devextreme.anon.ValidationGroup
 import typingsSlinky.devextreme.devextremeStrings.back
 import typingsSlinky.devextreme.devextremeStrings.contained
 import typingsSlinky.devextreme.devextremeStrings.danger
@@ -12,7 +12,7 @@ import typingsSlinky.devextreme.devextremeStrings.outlined
 import typingsSlinky.devextreme.devextremeStrings.success
 import typingsSlinky.devextreme.devextremeStrings.text
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,12 +22,12 @@ trait dxButtonOptions extends WidgetOptions[dxButton] {
   /** Specifies the icon to be displayed on the button. */
   var icon: js.UndefOr[String] = js.native
   /** A function that is executed when the Button is clicked or tapped. */
-  var onClick: js.UndefOr[js.Function1[/* e */ AnonValidationGroup, _]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* e */ ValidationGroup, _]] = js.native
   /** Specifies how the button is styled. */
   var stylingMode: js.UndefOr[text | outlined | contained] = js.native
   /** Specifies a custom template for the Button widget. */
   var template: js.UndefOr[
-    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* buttonData */ AnonIcon, /* contentElement */ dxElement, String | Element | JQuery])
+    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* buttonData */ Icon, /* contentElement */ dxElement, String | Element | JQuery])
   ] = js.native
   /** The text displayed on the button. */
   var text: js.UndefOr[String] = js.native
@@ -64,7 +64,7 @@ object dxButtonOptions {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* e */ AnonValidationGroup => _): Self = {
+    def withOnClick(value: /* e */ ValidationGroup => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret
@@ -88,7 +88,7 @@ object dxButtonOptions {
         ret
     }
     @scala.inline
-    def withTemplateFunction2(value: (/* buttonData */ AnonIcon, /* contentElement */ dxElement) => String | Element | JQuery): Self = {
+    def withTemplateFunction2(value: (/* buttonData */ Icon, /* contentElement */ dxElement) => String | Element | JQuery): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.Any.fromFunction2(value))
         ret
@@ -101,7 +101,7 @@ object dxButtonOptions {
     }
     @scala.inline
     def withTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* buttonData */ AnonIcon, /* contentElement */ dxElement, String | Element | JQuery])
+      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* buttonData */ Icon, /* contentElement */ dxElement, String | Element | JQuery])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])

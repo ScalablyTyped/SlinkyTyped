@@ -1,13 +1,13 @@
 package typingsSlinky.sharepoint.SP.JsGrid
 
-import typingsSlinky.sharepoint.AnonAllSelected
-import typingsSlinky.sharepoint.AnonDra
 import typingsSlinky.sharepoint.SP.JsGrid.IStyleType.Cell
 import typingsSlinky.sharepoint.SP.JsGrid.IStyleType.GridPane
 import typingsSlinky.sharepoint.SP.JsGrid.IStyleType.Header
 import typingsSlinky.sharepoint.SP.JsGrid.IStyleType.Splitter
 import typingsSlinky.sharepoint.SP.JsGrid.IStyleType.TimescaleTier
 import typingsSlinky.sharepoint.SP.JsGrid.IStyleType.Widget
+import typingsSlinky.sharepoint.anon.AllSelected
+import typingsSlinky.sharepoint.anon.Dra
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,14 +15,14 @@ import scala.scalajs.js.annotation._
 // tslint:disable-next-line: interface-name
 @js.native
 trait IStyleManager extends js.Object {
-  var columnHeaderStyleCollection: AnonAllSelected = js.native
+  var columnHeaderStyleCollection: AllSelected = js.native
   var defaultCellStyle: Cell = js.native
   var gridPaneStyle: GridPane = js.native
   var groupingStyles: js.Array[_] = js.native
   var readOnlyCellStyle: Cell = js.native
   var readOnlyFocusedCellStyle: Cell = js.native
-  var rowHeaderStyleCollection: AnonAllSelected = js.native
-  var splitterStyleCollection: AnonDra = js.native
+  var rowHeaderStyleCollection: AllSelected = js.native
+  var splitterStyleCollection: Dra = js.native
   var timescaleTierStyle: TimescaleTier = js.native
   var widgetDockHoverStyle: Widget = js.native
   var widgetDockPressedStyle: Widget = js.native
@@ -46,14 +46,14 @@ object IStyleManager {
     UpdateGroupStylesFromCss: (Cell, String) => Unit,
     UpdateHeaderStyleFromCss: (Header, js.Any) => Unit,
     UpdateSplitterStyleFromCss: (Splitter, js.Any) => Unit,
-    columnHeaderStyleCollection: AnonAllSelected,
+    columnHeaderStyleCollection: AllSelected,
     defaultCellStyle: Cell,
     gridPaneStyle: GridPane,
     groupingStyles: js.Array[_],
     readOnlyCellStyle: Cell,
     readOnlyFocusedCellStyle: Cell,
-    rowHeaderStyleCollection: AnonAllSelected,
-    splitterStyleCollection: AnonDra,
+    rowHeaderStyleCollection: AllSelected,
+    splitterStyleCollection: Dra,
     timescaleTierStyle: TimescaleTier,
     widgetDockHoverStyle: Widget,
     widgetDockPressedStyle: Widget,
@@ -111,7 +111,7 @@ object IStyleManager {
         ret
     }
     @scala.inline
-    def withColumnHeaderStyleCollection(value: AnonAllSelected): Self = {
+    def withColumnHeaderStyleCollection(value: AllSelected): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnHeaderStyleCollection")(value.asInstanceOf[js.Any])
         ret
@@ -147,13 +147,13 @@ object IStyleManager {
         ret
     }
     @scala.inline
-    def withRowHeaderStyleCollection(value: AnonAllSelected): Self = {
+    def withRowHeaderStyleCollection(value: AllSelected): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowHeaderStyleCollection")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSplitterStyleCollection(value: AnonDra): Self = {
+    def withSplitterStyleCollection(value: Dra): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("splitterStyleCollection")(value.asInstanceOf[js.Any])
         ret

@@ -2,7 +2,7 @@ package typingsSlinky.officeUiFabricReact.searchBoxTypesMod
 
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactRef
-import typingsSlinky.officeUiFabricReact.PickIIconPropsExcludekeyo
+import typingsSlinky.officeUiFabricReact.anon.PickIIconPropsExcludekeyo
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonProps
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.InputHTMLAttributes

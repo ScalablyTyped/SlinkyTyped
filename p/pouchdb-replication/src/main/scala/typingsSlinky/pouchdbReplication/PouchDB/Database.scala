@@ -1,17 +1,17 @@
 package typingsSlinky.pouchdbReplication.PouchDB
 
 import typingsSlinky.pouchdbCore.PouchDB.Core.Callback
-import typingsSlinky.pouchdbReplication.AnonFrom
 import typingsSlinky.pouchdbReplication.PouchDB.Replication.Sync
 import typingsSlinky.pouchdbReplication.PouchDB.Replication.SyncOptions
 import typingsSlinky.pouchdbReplication.PouchDB.Replication.SyncResultComplete
+import typingsSlinky.pouchdbReplication.anon.From
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Database[Content /* <: js.Object */] extends js.Object {
-  var replicate: AnonFrom = js.native
+  var replicate: From = js.native
   /**
     * Sync data from src to target and target to src. This is a convenience method for bidirectional data replication.
     *

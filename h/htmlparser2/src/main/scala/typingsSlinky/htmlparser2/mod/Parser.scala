@@ -1,6 +1,6 @@
 package typingsSlinky.htmlparser2.mod
 
-import typingsSlinky.htmlparser2.PartialDomHandler
+import typingsSlinky.htmlparser2.anon.PartialDomHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

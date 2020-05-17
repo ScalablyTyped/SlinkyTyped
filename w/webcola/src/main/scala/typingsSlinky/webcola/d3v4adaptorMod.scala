@@ -6,6 +6,9 @@ import typingsSlinky.d3Dispatch.mod.Dispatch_
 import typingsSlinky.d3Drag.mod.DragBehavior
 import typingsSlinky.d3Drag.mod.SubjectPosition
 import typingsSlinky.d3Timer.mod.Timer_
+import typingsSlinky.webcola.anon.Fn0
+import typingsSlinky.webcola.anon.FnCall
+import typingsSlinky.webcola.anon.FnCallTypes
 import typingsSlinky.webcola.d3adaptorMod.ID3StyleLayoutAdaptor
 import typingsSlinky.webcola.layoutMod.Event
 import typingsSlinky.webcola.layoutMod.Layout

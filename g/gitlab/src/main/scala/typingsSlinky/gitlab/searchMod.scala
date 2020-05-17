@@ -1,5 +1,6 @@
 package typingsSlinky.gitlab
 
+import typingsSlinky.gitlab.anon.projectIdstringnumbergrou
 import typingsSlinky.gitlab.infrastructureMod.BaseService
 import typingsSlinky.gitlab.requestHelperMod.GetResponse
 import scala.scalajs.js

@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.NodeList
+import typingsSlinky.ionicCore.anon.ClearExistingCallbacks
 import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.PlayOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -96,18 +97,18 @@ object animatorMod extends js.Object {
       * RECURSION
       */
     def _hasDomReads(): Boolean = js.native
-    def _hasDuration(): Boolean = js.native
     /**
       * NO DOM
       * RECURSION
       */
+    def _hasDuration(): Boolean = js.native
     def _hasDuration(opts: PlayOptions): Boolean = js.native
-    def _playDomInspect(): Unit = js.native
     /**
       * DOM WRITE
       * NO RECURSION
       * ROOT ANIMATION
       */
+    def _playDomInspect(): Unit = js.native
     def _playDomInspect(opts: PlayOptions): Unit = js.native
     /**
       * DOM WRITE
@@ -115,11 +116,11 @@ object animatorMod extends js.Object {
       */
     def _playEnd(): Unit = js.native
     def _playEnd(stepValue: Double): Unit = js.native
-    def _playProgress(): Unit = js.native
     /**
       * DOM WRITE
       * RECURSION
       */
+    def _playProgress(): Unit = js.native
     def _playProgress(opts: PlayOptions): Unit = js.native
     /**
       * DOM WRITE
@@ -266,7 +267,7 @@ object animatorMod extends js.Object {
       * Add a callback to fire when the animation has finished.
       */
     def onFinish(callback: js.Function1[/* animation */ js.UndefOr[js.Any], Unit]): Animator = js.native
-    def onFinish(callback: js.Function1[/* animation */ js.UndefOr[js.Any], Unit], opts: AnonClearExistingCallbacks): Animator = js.native
+    def onFinish(callback: js.Function1[/* animation */ js.UndefOr[js.Any], Unit], opts: ClearExistingCallbacks): Animator = js.native
     /**
       * Play the animation.
       */

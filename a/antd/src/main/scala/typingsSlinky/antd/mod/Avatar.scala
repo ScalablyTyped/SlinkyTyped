@@ -1,6 +1,6 @@
 package typingsSlinky.antd.mod
 
-import typingsSlinky.antd.AnonShape
+import typingsSlinky.antd.anon.Shape
 import typingsSlinky.antd.avatarMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +14,6 @@ class Avatar () extends default
 @JSImport("antd", "Avatar")
 @js.native
 object Avatar extends js.Object {
-  var defaultProps: AnonShape = js.native
+  var defaultProps: Shape = js.native
 }
 

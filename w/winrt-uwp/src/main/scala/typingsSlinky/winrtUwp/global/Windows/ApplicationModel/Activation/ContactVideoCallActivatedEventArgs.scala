@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Activation
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Provides data when an app is activated to video call a contact. */
+@JSGlobal("Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs")
+@js.native
+abstract class ContactVideoCallActivatedEventArgs ()
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Activation.ContactVideoCallActivatedEventArgs
+

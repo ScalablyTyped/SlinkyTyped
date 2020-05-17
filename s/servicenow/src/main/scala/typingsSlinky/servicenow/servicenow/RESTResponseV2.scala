@@ -1,6 +1,6 @@
 package typingsSlinky.servicenow.servicenow
 
-import typingsSlinky.servicenow.AnonGet
+import typingsSlinky.servicenow.anon.Get
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RESTResponseV2 extends js.Object {
   def getBody(): String = js.native
-  def getCookies(): AnonGet = js.native
+  def getCookies(): Get = js.native
   def getErrorCode(): Double = js.native
   def getErrorMessage(): String = js.native
   def getHeader(name: String): String = js.native
@@ -24,7 +24,7 @@ object RESTResponseV2 {
   @scala.inline
   def apply(
     getBody: () => String,
-    getCookies: () => AnonGet,
+    getCookies: () => Get,
     getErrorCode: () => Double,
     getErrorMessage: () => String,
     getHeader: String => String,
@@ -51,7 +51,7 @@ object RESTResponseV2 {
         ret
     }
     @scala.inline
-    def withGetCookies(value: () => AnonGet): Self = {
+    def withGetCookies(value: () => Get): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getCookies")(js.Any.fromFunction0(value))
         ret

@@ -1,15 +1,12 @@
 package typingsSlinky.sharepoint.SP.Publishing
 
-import typingsSlinky.sharepoint.SP.ClientContext
 import typingsSlinky.sharepoint.SP.ClientObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("SP.Publishing.AddinPlugin")
 @js.native
-class AddinPlugin protected () extends ClientObject {
-  def this(ctx: ClientContext) = this()
+trait AddinPlugin extends ClientObject {
   def get_description(): String = js.native
   def get_markup(): String = js.native
   def get_title(): String = js.native

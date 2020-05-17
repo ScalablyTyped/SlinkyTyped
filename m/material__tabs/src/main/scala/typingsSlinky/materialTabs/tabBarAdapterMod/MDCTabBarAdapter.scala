@@ -1,6 +1,6 @@
 package typingsSlinky.materialTabs.tabBarAdapterMod
 
-import typingsSlinky.materialTabs.AnonActiveTabIndex
+import typingsSlinky.materialTabs.anon.ActiveTabIndex
 import typingsSlinky.materialTabs.materialTabsBooleans.`true`
 import typingsSlinky.std.EventListener
 import scala.scalajs.js
@@ -20,7 +20,7 @@ trait MDCTabBarAdapter extends js.Object {
   def isDefaultPreventedOnClickForTabAtIndex(index: Double): Boolean = js.native
   def isTabActiveAtIndex(index: Double): Boolean = js.native
   def measureTabAtIndex(index: Double): Unit = js.native
-  def notifyChange(evtData: AnonActiveTabIndex): Unit = js.native
+  def notifyChange(evtData: ActiveTabIndex): Unit = js.native
   def registerResizeHandler(handler: EventListener): Unit = js.native
   def removeClass(className: String): Unit = js.native
   def setPreventDefaultOnClickForTabAtIndex(index: Double, preventDefaultOnClick: Boolean): Unit = js.native
@@ -44,7 +44,7 @@ object MDCTabBarAdapter {
     isDefaultPreventedOnClickForTabAtIndex: Double => Boolean,
     isTabActiveAtIndex: Double => Boolean,
     measureTabAtIndex: Double => Unit,
-    notifyChange: AnonActiveTabIndex => Unit,
+    notifyChange: ActiveTabIndex => Unit,
     registerResizeHandler: EventListener => Unit,
     removeClass: String => Unit,
     setPreventDefaultOnClickForTabAtIndex: (Double, Boolean) => Unit,
@@ -128,7 +128,7 @@ object MDCTabBarAdapter {
         ret
     }
     @scala.inline
-    def withNotifyChange(value: AnonActiveTabIndex => Unit): Self = {
+    def withNotifyChange(value: ActiveTabIndex => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notifyChange")(js.Any.fromFunction1(value))
         ret

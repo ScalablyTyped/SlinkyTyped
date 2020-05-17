@@ -9,7 +9,8 @@ trait App extends js.Object {
   var association: js.UndefOr[Null | AppAssociation] = js.native
   var id: String = js.native
   var name: String = js.native
-  var org: Null | Org = js.native
+  @JSName("org")
+  var org_ : Null | Org = js.native
   var repo_url: js.UndefOr[String] = js.native
   var slug: String = js.native
 }
@@ -63,13 +64,13 @@ object App {
         ret
     }
     @scala.inline
-    def withOrg(value: Org): Self = {
+    def withOrg_(value: Org): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOrgNull: Self = {
+    def withOrg_Null: Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(null)
         ret

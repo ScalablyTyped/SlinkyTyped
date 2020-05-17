@@ -21,10 +21,8 @@ import scala.scalajs.js.annotation._
   * @property {number} fitHeightProportion The amount of additional vertical space that the element should take up, if necessary to satisfy a Stretch/Shrink fitting calculation. This is specified as a proportion, taking into account the proportion values of other siblings.
   * @property {number} excludeFromLayout If set to true, the child will be excluded from all layout calculations.
   */
-@JSGlobal("pc.LayoutChildComponent")
 @js.native
-class LayoutChildComponent protected () extends Component {
-  def this(system: LayoutChildComponentSystem, entity: Entity) = this()
+trait LayoutChildComponent extends Component {
   /**
     * If set to true, the child will be excluded from all layout calculations.
     */

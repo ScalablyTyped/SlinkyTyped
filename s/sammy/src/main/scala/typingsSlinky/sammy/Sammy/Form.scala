@@ -9,9 +9,25 @@ trait Form extends js.Object {
   def formFor(name: String, `object`: js.Any, content_callback: js.Function): FormBuilder = js.native
 }
 
-@JSGlobal("Sammy.Form")
-@js.native
-object Form extends js.Object {
-  def apply(app: js.Any): js.Any = js.native
+object Form {
+  @scala.inline
+  def apply(formFor: (String, js.Any, js.Function) => FormBuilder): Form = {
+    val __obj = js.Dynamic.literal(formFor = js.Any.fromFunction3(formFor))
+    __obj.asInstanceOf[Form]
+  }
+  @scala.inline
+  implicit class FormOps[Self <: Form] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormFor(value: (String, js.Any, js.Function) => FormBuilder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formFor")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

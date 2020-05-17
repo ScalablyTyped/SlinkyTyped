@@ -1,7 +1,7 @@
 package typingsSlinky.ipp.mod
 
-import typingsSlinky.ipp.AnonAttributesnaturallanguage
-import typingsSlinky.ipp.AnonJobstate
+import typingsSlinky.ipp.anon.Attributesnaturallanguage
+import typingsSlinky.ipp.anon.Jobstate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SendDocumentResponse extends js.Object {
   var id: Double = js.native
-  var `job-attributes-tag`: AnonJobstate = js.native
-  var `operation-attributes-tag`: AnonAttributesnaturallanguage = js.native
+  var `job-attributes-tag`: Jobstate = js.native
+  var `operation-attributes-tag`: Attributesnaturallanguage = js.native
   var statusCode: StatusCode = js.native
   var `unsupported-attributes`: js.UndefOr[js.Array[String]] = js.native
   var version: IPPVersion = js.native
@@ -20,8 +20,8 @@ object SendDocumentResponse {
   @scala.inline
   def apply(
     id: Double,
-    `job-attributes-tag`: AnonJobstate,
-    `operation-attributes-tag`: AnonAttributesnaturallanguage,
+    `job-attributes-tag`: Jobstate,
+    `operation-attributes-tag`: Attributesnaturallanguage,
     statusCode: StatusCode,
     version: IPPVersion
   ): SendDocumentResponse = {
@@ -43,13 +43,13 @@ object SendDocumentResponse {
         ret
     }
     @scala.inline
-    def `withJob-attributes-tag`(value: AnonJobstate): Self = {
+    def `withJob-attributes-tag`(value: Jobstate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("job-attributes-tag")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def `withOperation-attributes-tag`(value: AnonAttributesnaturallanguage): Self = {
+    def `withOperation-attributes-tag`(value: Attributesnaturallanguage): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("operation-attributes-tag")(value.asInstanceOf[js.Any])
         ret

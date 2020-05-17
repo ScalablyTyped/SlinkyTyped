@@ -1,5 +1,6 @@
 package typingsSlinky.sweetalert
 
+import typingsSlinky.sweetalert.anon.PartialSwalOptions
 import typingsSlinky.sweetalert.stateMod.ActionOptions
 import typingsSlinky.sweetalert.stateMod.SwalState
 import scala.scalajs.js

@@ -1,18 +1,18 @@
 package typingsSlinky.recurlyRecurlyJs.paypalMod
 
-import typingsSlinky.recurlyRecurlyJs.AnonClientAuthorization
+import typingsSlinky.recurlyRecurlyJs.anon.ClientAuthorization
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait BraintreeConfig extends PayPalConfig {
-  var braintree: AnonClientAuthorization = js.native
+  var braintree: ClientAuthorization = js.native
 }
 
 object BraintreeConfig {
   @scala.inline
-  def apply(braintree: AnonClientAuthorization): BraintreeConfig = {
+  def apply(braintree: ClientAuthorization): BraintreeConfig = {
     val __obj = js.Dynamic.literal(braintree = braintree.asInstanceOf[js.Any])
     __obj.asInstanceOf[BraintreeConfig]
   }
@@ -23,7 +23,7 @@ object BraintreeConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBraintree(value: AnonClientAuthorization): Self = {
+    def withBraintree(value: ClientAuthorization): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("braintree")(value.asInstanceOf[js.Any])
         ret

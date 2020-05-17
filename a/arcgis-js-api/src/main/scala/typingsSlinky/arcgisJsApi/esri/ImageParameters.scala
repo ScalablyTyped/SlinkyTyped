@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.bmp
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.exclude
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.gif
@@ -95,8 +94,4 @@ trait ImageParameters extends Accessor {
     */
   def toJSON(): js.Any = js.native
 }
-
-@JSGlobal("__esri.ImageParameters")
-@js.native
-object ImageParameters extends TopLevel[ImageParametersConstructor]
 

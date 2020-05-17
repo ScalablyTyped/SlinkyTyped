@@ -1,5 +1,6 @@
 package typingsSlinky.antd
 
+import typingsSlinky.antd.anon.Gutter
 import typingsSlinky.antd.gridRowMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +19,7 @@ object libGridMod extends js.Object {
   /* static members */
   @js.native
   object Row extends js.Object {
-    var defaultProps: AnonGutter = js.native
+    var defaultProps: Gutter = js.native
   }
   
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.wxJsSdkDt.wx
 
-import typingsSlinky.wxJsSdkDt.AnonLocalIds
+import typingsSlinky.wxJsSdkDt.anon.LocalIds
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,12 +22,12 @@ trait ChooseImageConfig extends js.Object {
   /**
     * 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
     */
-  def success(res: AnonLocalIds): Unit = js.native
+  def success(res: LocalIds): Unit = js.native
 }
 
 object ChooseImageConfig {
   @scala.inline
-  def apply(success: AnonLocalIds => Unit): ChooseImageConfig = {
+  def apply(success: LocalIds => Unit): ChooseImageConfig = {
     val __obj = js.Dynamic.literal(success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[ChooseImageConfig]
   }
@@ -38,7 +38,7 @@ object ChooseImageConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSuccess(value: AnonLocalIds => Unit): Self = {
+    def withSuccess(value: LocalIds => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

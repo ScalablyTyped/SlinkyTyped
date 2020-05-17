@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.invoices
 
-import typingsSlinky.stripe.AnonName
+import typingsSlinky.stripe.anon.Name
 import typingsSlinky.stripe.mod.IDataOptionsWithMetadata
 import typingsSlinky.stripe.stripeStrings.charge_automatically
 import typingsSlinky.stripe.stripeStrings.send_invoice
@@ -37,7 +37,7 @@ trait IInvoiceCreationOptions extends IDataOptionsWithMetadata {
   /**
     * A list of up to 4 custom fields to be displayed on the invoice.
     */
-  var custom_fields: js.UndefOr[js.Array[AnonName]] = js.native
+  var custom_fields: js.UndefOr[js.Array[Name]] = js.native
   var customer: String = js.native
   /**
     * The number of days from when the invoice is created until it is due. Valid only for
@@ -145,7 +145,7 @@ object IInvoiceCreationOptions {
         ret
     }
     @scala.inline
-    def withCustom_fields(value: js.Array[AnonName]): Self = {
+    def withCustom_fields(value: js.Array[Name]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("custom_fields")(value.asInstanceOf[js.Any])
         ret

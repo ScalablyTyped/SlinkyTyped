@@ -8,10 +8,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides the service methods for content metering operations. */
-@JSGlobal("Windows.Media.Protection.PlayReady.PlayReadyMeteringReportServiceRequest")
 @js.native
-/** Initializes a new instance of the PlayReadyMeteringReportServiceRequest class. */
-class PlayReadyMeteringReportServiceRequest () extends js.Object {
+trait PlayReadyMeteringReportServiceRequest extends js.Object {
   /** Gets or sets the custom data of the request challenge. */
   var challengeCustomData: String = js.native
   /** Gets or sets the current metering certificate property. */
@@ -45,5 +43,93 @@ class PlayReadyMeteringReportServiceRequest () extends js.Object {
     * @return If the methods succeeds, it returns S_OK. If it fails, it returns an error code.
     */
   def processManualEnablingResponse(responseBytes: js.Array[Double]): WinRTError = js.native
+}
+
+object PlayReadyMeteringReportServiceRequest {
+  @scala.inline
+  def apply(
+    beginServiceRequest: () => IAsyncAction,
+    challengeCustomData: String,
+    generateManualEnablingChallenge: () => PlayReadySoapMessage,
+    meteringCertificate: Double,
+    nextServiceRequest: () => IPlayReadyServiceRequest,
+    processManualEnablingResponse: js.Array[Double] => WinRTError,
+    protectionSystem: String,
+    responseCustomData: String,
+    `type`: String,
+    uri: Uri
+  ): PlayReadyMeteringReportServiceRequest = {
+    val __obj = js.Dynamic.literal(beginServiceRequest = js.Any.fromFunction0(beginServiceRequest), challengeCustomData = challengeCustomData.asInstanceOf[js.Any], generateManualEnablingChallenge = js.Any.fromFunction0(generateManualEnablingChallenge), meteringCertificate = meteringCertificate.asInstanceOf[js.Any], nextServiceRequest = js.Any.fromFunction0(nextServiceRequest), processManualEnablingResponse = js.Any.fromFunction1(processManualEnablingResponse), protectionSystem = protectionSystem.asInstanceOf[js.Any], responseCustomData = responseCustomData.asInstanceOf[js.Any], uri = uri.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PlayReadyMeteringReportServiceRequest]
+  }
+  @scala.inline
+  implicit class PlayReadyMeteringReportServiceRequestOps[Self <: PlayReadyMeteringReportServiceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBeginServiceRequest(value: () => IAsyncAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beginServiceRequest")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withChallengeCustomData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("challengeCustomData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGenerateManualEnablingChallenge(value: () => PlayReadySoapMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generateManualEnablingChallenge")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withMeteringCertificate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meteringCertificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNextServiceRequest(value: () => IPlayReadyServiceRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextServiceRequest")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withProcessManualEnablingResponse(value: js.Array[Double] => WinRTError): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("processManualEnablingResponse")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withProtectionSystem(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protectionSystem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResponseCustomData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseCustomData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUri(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

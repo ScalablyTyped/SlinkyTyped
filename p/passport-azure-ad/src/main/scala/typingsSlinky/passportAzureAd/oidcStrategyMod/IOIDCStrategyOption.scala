@@ -1,6 +1,6 @@
 package typingsSlinky.passportAzureAd.oidcStrategyMod
 
-import typingsSlinky.passportAzureAd.AnonIv
+import typingsSlinky.passportAzureAd.anon.Iv
 import typingsSlinky.passportAzureAd.commonMod.IBaseStrategyOption
 import typingsSlinky.passportAzureAd.passportAzureAdStrings.`code id_token`
 import typingsSlinky.passportAzureAd.passportAzureAdStrings.`id_token code`
@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
 trait IOIDCStrategyOption extends IBaseStrategyOption {
   var allowHttpForRedirectUrl: js.UndefOr[Boolean] = js.native
   var clientSecret: js.UndefOr[String] = js.native
-  var cookieEncryptionKeys: js.UndefOr[js.Array[AnonIv]] = js.native
+  var cookieEncryptionKeys: js.UndefOr[js.Array[Iv]] = js.native
   var cookieSameSite: js.UndefOr[Boolean] = js.native
   var nonceLifetime: js.UndefOr[Double] = js.native
   var nonceMaxAmount: js.UndefOr[Double] = js.native
@@ -90,7 +90,7 @@ object IOIDCStrategyOption {
         ret
     }
     @scala.inline
-    def withCookieEncryptionKeys(value: js.Array[AnonIv]): Self = {
+    def withCookieEncryptionKeys(value: js.Array[Iv]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cookieEncryptionKeys")(value.asInstanceOf[js.Any])
         ret

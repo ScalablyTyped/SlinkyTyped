@@ -1,6 +1,5 @@
 package typingsSlinky.vexflow.mod.Flow
 
-import typingsSlinky.vexflow.Vex.Flow.Volta.`type`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class Volta protected ()
   extends typingsSlinky.vexflow.Vex.Flow.Volta {
-  def this(`type`: `type`, number: Double, x: Double, y_shift: Double) = this()
+  def this(`type`: typingsSlinky.vexflow.Vex.Flow.Volta.`type`, number: Double, x: Double, y_shift: Double) = this()
 }
 

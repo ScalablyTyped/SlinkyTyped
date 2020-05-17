@@ -1,6 +1,6 @@
 package typingsSlinky.sequelize.mod
 
-import typingsSlinky.sequelize.AnonDatabase
+import typingsSlinky.sequelize.anon.Database
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +12,8 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait ReplicationOptions extends js.Object {
-  var read: js.UndefOr[js.Array[AnonDatabase]] = js.native
-  var write: js.UndefOr[AnonDatabase] = js.native
+  var read: js.UndefOr[js.Array[Database]] = js.native
+  var write: js.UndefOr[Database] = js.native
 }
 
 object ReplicationOptions {
@@ -29,7 +29,7 @@ object ReplicationOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withRead(value: js.Array[AnonDatabase]): Self = {
+    def withRead(value: js.Array[Database]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("read")(value.asInstanceOf[js.Any])
         ret
@@ -41,7 +41,7 @@ object ReplicationOptions {
         ret
     }
     @scala.inline
-    def withWrite(value: AnonDatabase): Self = {
+    def withWrite(value: Database): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("write")(value.asInstanceOf[js.Any])
         ret

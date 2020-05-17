@@ -1,6 +1,7 @@
 package typingsSlinky.apolloUtilities
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.apolloUtilities.anon.Directive
 import typingsSlinky.graphql.astMod.DirectiveNode
 import typingsSlinky.graphql.astMod.DocumentNode
 import typingsSlinky.graphql.astMod.FieldNode
@@ -20,6 +21,6 @@ object directivesMod extends js.Object {
   def shouldInclude(selection: SelectionNode): Boolean = js.native
   def shouldInclude(selection: SelectionNode, variables: StringDictionary[js.Any]): Boolean = js.native
   type DirectiveInfo = StringDictionary[StringDictionary[js.Any]]
-  type InclusionDirectives = js.Array[AnonDirective]
+  type InclusionDirectives = js.Array[Directive]
 }
 

@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.HTMLSpanElement
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.reactSvg.AnonHasError
+import typingsSlinky.reactSvg.anon.HasError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +19,9 @@ trait ReactSVG
     ] {
   var _isMounted: Boolean = js.native
   var container: js.UndefOr[WrapperType | Null] = js.native
-  var initialState: AnonHasError = js.native
+  var initialState: HasError = js.native
   @JSName("state")
-  var state_ReactSVG: AnonHasError = js.native
+  var state_ReactSVG: HasError = js.native
   var svgWrapper: js.UndefOr[WrapperType | Null] = js.native
   @JSName("componentDidMount")
   def componentDidMount_MReactSVG(): Unit = js.native

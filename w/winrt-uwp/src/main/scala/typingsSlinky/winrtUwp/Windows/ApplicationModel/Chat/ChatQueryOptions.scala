@@ -5,11 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the criteria for finding chat messages. */
-@JSGlobal("Windows.ApplicationModel.Chat.ChatQueryOptions")
 @js.native
-/** Initializes a new instance of the ChatQueryOptions class. */
-class ChatQueryOptions () extends js.Object {
+trait ChatQueryOptions extends js.Object {
   /** Gets or sets the string to search for the in ChatMessageStore . */
   var searchString: String = js.native
+}
+
+object ChatQueryOptions {
+  @scala.inline
+  def apply(searchString: String): ChatQueryOptions = {
+    val __obj = js.Dynamic.literal(searchString = searchString.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ChatQueryOptions]
+  }
+  @scala.inline
+  implicit class ChatQueryOptionsOps[Self <: ChatQueryOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSearchString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchString")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.arrayFrom
 
+import typingsSlinky.arrayFrom.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,7 @@
 package typingsSlinky.protractor.pluginsMod
 
-import typingsSlinky.protractor.AnonSpecName
-import typingsSlinky.protractor.AnonSpecNameString
+import typingsSlinky.protractor.anon.SpecName
+import typingsSlinky.protractor.anon.SpecNameString
 import typingsSlinky.protractor.browserMod.ProtractorBrowser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,7 +26,7 @@ trait ProtractorPlugin extends js.Object {
     * @throws {Error} Throws an error if called after results have been reported
     */
   var addFailure: js.UndefOr[
-    js.Function2[/* message */ js.UndefOr[String], /* info */ js.UndefOr[AnonSpecName], Unit]
+    js.Function2[/* message */ js.UndefOr[String], /* info */ js.UndefOr[SpecName], Unit]
   ] = js.native
   /**
     * Adds a passed assertion to the test's results.
@@ -41,7 +41,7 @@ trait ProtractorPlugin extends js.Object {
     *
     * @throws {Error} Throws an error if called after results have been reported
     */
-  var addSuccess: js.UndefOr[js.Function1[/* info */ js.UndefOr[AnonSpecNameString], Unit]] = js.native
+  var addSuccess: js.UndefOr[js.Function1[/* info */ js.UndefOr[SpecNameString], Unit]] = js.native
   /**
     * Warns the user that something is problematic.
     *
@@ -55,7 +55,7 @@ trait ProtractorPlugin extends js.Object {
     *     Defaults to `{}`.
     */
   var addWarning: js.UndefOr[
-    js.Function2[/* message */ js.UndefOr[String], /* info */ js.UndefOr[AnonSpecNameString], Unit]
+    js.Function2[/* message */ js.UndefOr[String], /* info */ js.UndefOr[SpecNameString], Unit]
   ] = js.native
   /**
     * The plugin's configuration object.
@@ -263,7 +263,7 @@ object ProtractorPlugin {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddFailure(value: (/* message */ js.UndefOr[String], /* info */ js.UndefOr[AnonSpecName]) => Unit): Self = {
+    def withAddFailure(value: (/* message */ js.UndefOr[String], /* info */ js.UndefOr[SpecName]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addFailure")(js.Any.fromFunction2(value))
         ret
@@ -275,7 +275,7 @@ object ProtractorPlugin {
         ret
     }
     @scala.inline
-    def withAddSuccess(value: /* info */ js.UndefOr[AnonSpecNameString] => Unit): Self = {
+    def withAddSuccess(value: /* info */ js.UndefOr[SpecNameString] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addSuccess")(js.Any.fromFunction1(value))
         ret
@@ -287,7 +287,7 @@ object ProtractorPlugin {
         ret
     }
     @scala.inline
-    def withAddWarning(value: (/* message */ js.UndefOr[String], /* info */ js.UndefOr[AnonSpecNameString]) => Unit): Self = {
+    def withAddWarning(value: (/* message */ js.UndefOr[String], /* info */ js.UndefOr[SpecNameString]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addWarning")(js.Any.fromFunction2(value))
         ret

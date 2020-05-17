@@ -2,8 +2,8 @@ package typingsSlinky.reactSignatureCanvas.mod
 
 import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactSignatureCanvas.FnCall
-import typingsSlinky.reactSignatureCanvas.FnCallTypeEncoderOptions
+import typingsSlinky.reactSignatureCanvas.anon.FnCall
+import typingsSlinky.reactSignatureCanvas.anon.FnCallTypeEncoderOptions
 import typingsSlinky.signaturePad.mod.SignaturePad.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`

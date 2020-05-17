@@ -1,6 +1,6 @@
 package typingsSlinky.wxJsSdkDt.wx
 
-import typingsSlinky.wxJsSdkDt.AnonResultStr
+import typingsSlinky.wxJsSdkDt.anon.ResultStr
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait ScanQRCodeConfig extends WxBaseRequestConfig {
     * resultStr 是当 needResult 为 1 时，扫码返回的结果
     */
   @JSName("success")
-  var success_ScanQRCodeConfig: js.UndefOr[js.Function1[/* res */ AnonResultStr, Unit]] = js.native
+  var success_ScanQRCodeConfig: js.UndefOr[js.Function1[/* res */ ResultStr, Unit]] = js.native
 }
 
 object ScanQRCodeConfig {
@@ -59,7 +59,7 @@ object ScanQRCodeConfig {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonResultStr => Unit): Self = {
+    def withSuccess(value: /* res */ ResultStr => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

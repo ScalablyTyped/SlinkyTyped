@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonCategory
+import typingsSlinky.cesium.anon.Category
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "ProviderViewModel")
 @js.native
 class ProviderViewModel protected () extends js.Object {
-  def this(options: AnonCategory) = this()
+  def this(options: Category) = this()
   var creationCommand: Command = js.native
   var iconUrl: String = js.native
   var name: String = js.native

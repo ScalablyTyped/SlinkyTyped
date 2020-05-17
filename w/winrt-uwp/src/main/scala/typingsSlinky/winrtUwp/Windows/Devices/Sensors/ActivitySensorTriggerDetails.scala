@@ -6,13 +6,34 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents details about the sensor triggering. */
-@JSGlobal("Windows.Devices.Sensors.ActivitySensorTriggerDetails")
 @js.native
-abstract class ActivitySensorTriggerDetails () extends js.Object {
+trait ActivitySensorTriggerDetails extends js.Object {
   /**
     * Reads reports about the sensor triggering.
     * @return Returns a list of ActivitySensorReadingChangeReport objects that provides data for the sensor trigger.
     */
   def readReports(): IVectorView[ActivitySensorReadingChangeReport] = js.native
+}
+
+object ActivitySensorTriggerDetails {
+  @scala.inline
+  def apply(readReports: () => IVectorView[ActivitySensorReadingChangeReport]): ActivitySensorTriggerDetails = {
+    val __obj = js.Dynamic.literal(readReports = js.Any.fromFunction0(readReports))
+    __obj.asInstanceOf[ActivitySensorTriggerDetails]
+  }
+  @scala.inline
+  implicit class ActivitySensorTriggerDetailsOps[Self <: ActivitySensorTriggerDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReadReports(value: () => IVectorView[ActivitySensorReadingChangeReport]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readReports")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

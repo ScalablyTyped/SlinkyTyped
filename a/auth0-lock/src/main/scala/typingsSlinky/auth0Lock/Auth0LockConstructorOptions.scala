@@ -1,5 +1,6 @@
 package typingsSlinky.auth0Lock
 
+import typingsSlinky.auth0Lock.anon.Email
 import typingsSlinky.auth0Lock.auth0LockStrings.big
 import typingsSlinky.auth0Lock.auth0LockStrings.forgotPassword
 import typingsSlinky.auth0Lock.auth0LockStrings.login
@@ -45,7 +46,7 @@ trait Auth0LockConstructorOptions extends js.Object {
   var mustAcceptTerms: js.UndefOr[Boolean] = js.native
   var oidcConformant: js.UndefOr[Boolean] = js.native
   var popupOptions: js.UndefOr[Auth0LockPopupOptions] = js.native
-  var prefill: js.UndefOr[AnonEmail] = js.native
+  var prefill: js.UndefOr[Email] = js.native
   var rememberLastLogin: js.UndefOr[Boolean] = js.native
   var scrollGlobalMessagesIntoView: js.UndefOr[Boolean] = js.native
   var signupLink: js.UndefOr[String] = js.native
@@ -481,7 +482,7 @@ object Auth0LockConstructorOptions {
         ret
     }
     @scala.inline
-    def withPrefill(value: AnonEmail): Self = {
+    def withPrefill(value: Email): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("prefill")(value.asInstanceOf[js.Any])
         ret

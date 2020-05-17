@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.accepts.mod.Accepts
 import typingsSlinky.contentDisposition.mod.Options
 import typingsSlinky.cookies.mod.Cookies
-import typingsSlinky.koa.AnonCall
+import typingsSlinky.koa.anon.Call
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.node.netMod.Socket
@@ -34,7 +34,7 @@ trait Context
     * See: https://github.com/jshttp/http-assert
     */
   @JSName("assert")
-  var assert_Original: AnonCall = js.native
+  var assert_Original: Call = js.native
   /**
     * Get/Set response body.
     */

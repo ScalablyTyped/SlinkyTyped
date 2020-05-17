@@ -1,6 +1,6 @@
 package typingsSlinky.blessed.mod.Widgets
 
-import typingsSlinky.blessed.AnonCh
+import typingsSlinky.blessed.anon.Ch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait ScrollableBoxOptions extends ElementOptions {
     * Object enabling a scrollbar.
     * Style of the scrollbar track if present (takes regular style options).
     */
-  var scrollbar: js.UndefOr[AnonCh] = js.native
+  var scrollbar: js.UndefOr[Ch] = js.native
 }
 
 object ScrollableBoxOptions {
@@ -60,7 +60,7 @@ object ScrollableBoxOptions {
         ret
     }
     @scala.inline
-    def withScrollbar(value: AnonCh): Self = {
+    def withScrollbar(value: Ch): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollbar")(value.asInstanceOf[js.Any])
         ret

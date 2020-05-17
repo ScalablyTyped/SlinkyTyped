@@ -10,9 +10,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides socket information on a StreamSocket object. */
-@JSGlobal("Windows.Networking.Sockets.StreamSocketInformation")
 @js.native
-abstract class StreamSocketInformation () extends js.Object {
+trait StreamSocketInformation extends js.Object {
   /** Gets bandwidth information for network data transfer on a StreamSocket object. */
   var bandwidthStatistics: BandwidthStatistics = js.native
   /** Gets the local IP address associated with a StreamSocket object. */
@@ -41,5 +40,120 @@ abstract class StreamSocketInformation () extends js.Object {
   var serverIntermediateCertificates: IVectorView[Certificate] = js.native
   /** Get a byte array that represents the private shared secret exchanged by proximity devices. */
   var sessionKey: IBuffer = js.native
+}
+
+object StreamSocketInformation {
+  @scala.inline
+  def apply(
+    bandwidthStatistics: BandwidthStatistics,
+    localAddress: HostName,
+    localPort: String,
+    protectionLevel: SocketProtectionLevel,
+    remoteAddress: HostName,
+    remoteHostName: HostName,
+    remotePort: String,
+    remoteServiceName: String,
+    roundTripTimeStatistics: RoundTripTimeStatistics,
+    serverCertificate: Certificate,
+    serverCertificateErrorSeverity: SocketSslErrorSeverity,
+    serverCertificateErrors: IVectorView[ChainValidationResult],
+    serverIntermediateCertificates: IVectorView[Certificate],
+    sessionKey: IBuffer
+  ): StreamSocketInformation = {
+    val __obj = js.Dynamic.literal(bandwidthStatistics = bandwidthStatistics.asInstanceOf[js.Any], localAddress = localAddress.asInstanceOf[js.Any], localPort = localPort.asInstanceOf[js.Any], protectionLevel = protectionLevel.asInstanceOf[js.Any], remoteAddress = remoteAddress.asInstanceOf[js.Any], remoteHostName = remoteHostName.asInstanceOf[js.Any], remotePort = remotePort.asInstanceOf[js.Any], remoteServiceName = remoteServiceName.asInstanceOf[js.Any], roundTripTimeStatistics = roundTripTimeStatistics.asInstanceOf[js.Any], serverCertificate = serverCertificate.asInstanceOf[js.Any], serverCertificateErrorSeverity = serverCertificateErrorSeverity.asInstanceOf[js.Any], serverCertificateErrors = serverCertificateErrors.asInstanceOf[js.Any], serverIntermediateCertificates = serverIntermediateCertificates.asInstanceOf[js.Any], sessionKey = sessionKey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[StreamSocketInformation]
+  }
+  @scala.inline
+  implicit class StreamSocketInformationOps[Self <: StreamSocketInformation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBandwidthStatistics(value: BandwidthStatistics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bandwidthStatistics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocalAddress(value: HostName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocalPort(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localPort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProtectionLevel(value: SocketProtectionLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protectionLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoteAddress(value: HostName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoteHostName(value: HostName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteHostName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemotePort(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remotePort")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoteServiceName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteServiceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoundTripTimeStatistics(value: RoundTripTimeStatistics): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roundTripTimeStatistics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServerCertificate(value: Certificate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverCertificate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServerCertificateErrorSeverity(value: SocketSslErrorSeverity): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverCertificateErrorSeverity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServerCertificateErrors(value: IVectorView[ChainValidationResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverCertificateErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServerIntermediateCertificates(value: IVectorView[Certificate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverIntermediateCertificates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSessionKey(value: IBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

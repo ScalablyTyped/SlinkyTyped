@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait SparklineOptions
-  extends SparklineNonNativeOptions[js.Any] {
+  extends SparklineNativeOptions[js.Any]
+     with SparklineNonNativeOptions[js.Any] {
   /**
     * Set the cursor width. The default is 2.
     */

@@ -1,6 +1,6 @@
 package typingsSlinky.monacoEditor.mod.languages
 
-import typingsSlinky.monacoEditor.AnonIgnoreIfExists
+import typingsSlinky.monacoEditor.anon.IgnoreIfExists
 import typingsSlinky.monacoEditor.mod.Uri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation._
 trait ResourceFileEdit extends js.Object {
   var newUri: Uri = js.native
   var oldUri: Uri = js.native
-  var options: AnonIgnoreIfExists = js.native
+  var options: IgnoreIfExists = js.native
 }
 
 object ResourceFileEdit {
   @scala.inline
-  def apply(newUri: Uri, oldUri: Uri, options: AnonIgnoreIfExists): ResourceFileEdit = {
+  def apply(newUri: Uri, oldUri: Uri, options: IgnoreIfExists): ResourceFileEdit = {
     val __obj = js.Dynamic.literal(newUri = newUri.asInstanceOf[js.Any], oldUri = oldUri.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceFileEdit]
   }
@@ -38,7 +38,7 @@ object ResourceFileEdit {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonIgnoreIfExists): Self = {
+    def withOptions(value: IgnoreIfExists): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

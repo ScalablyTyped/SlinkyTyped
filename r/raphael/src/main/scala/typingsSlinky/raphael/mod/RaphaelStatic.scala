@@ -7,9 +7,10 @@ import org.scalablytyped.runtime.Instantiable3
 import org.scalablytyped.runtime.Instantiable4
 import org.scalablytyped.runtime.Instantiable5
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.raphael.PartialRaphaelAttributes
-import typingsSlinky.raphael.RaphaelPotentialFailureRa
-import typingsSlinky.raphael.RaphaelPotentialFailureRaB
+import org.scalajs.dom.raw.Window
+import typingsSlinky.raphael.anon.PartialRaphaelAttributes
+import typingsSlinky.raphael.anon.RaphaelPotentialFailureRa
+import typingsSlinky.raphael.anon.RaphaelPotentialFailureRaB
 import typingsSlinky.raphael.raphaelStrings.`null`
 import typingsSlinky.raphael.raphaelStrings.`object`
 import typingsSlinky.raphael.raphaelStrings.array
@@ -20,7 +21,6 @@ import typingsSlinky.raphael.raphaelStrings.string
 import typingsSlinky.raphael.raphaelStrings.symbol
 import typingsSlinky.raphael.raphaelStrings.undefined
 import typingsSlinky.std.Record
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,7 +43,7 @@ Instantiable0[RaphaelPaper[TTechnology]]
   * @return A new raphael paper that can be used for drawing shapes to the canvas.
   */
 Instantiable1[
-      (/* all */ RaphaelConstructionOptionsArray4) | (/* all */ RaphaelConstructionOptionsArray5) | (/* onReadyCallback */ js.ThisFunction0[/* this */ Window_, Unit]), 
+      (/* all */ RaphaelConstructionOptionsArray4) | (/* all */ RaphaelConstructionOptionsArray5) | (/* onReadyCallback */ js.ThisFunction0[/* this */ Window, Unit]), 
       RaphaelPaper[TTechnology] | RaphaelSet[TTechnology]
     ]
      with /**
@@ -267,7 +267,7 @@ Instantiable4[
     height: Double,
     callback: js.ThisFunction0[/* this */ RaphaelPaper[TTechnology], Unit]
   ): RaphaelPaper[TTechnology] = js.native
-  def apply(onReadyCallback: js.ThisFunction0[/* this */ Window_, Unit]): RaphaelPaper[TTechnology] = js.native
+  def apply(onReadyCallback: js.ThisFunction0[/* this */ Window, Unit]): RaphaelPaper[TTechnology] = js.native
   /**
     * Creates a canvas object on which to draw. You must do this first, as all future calls to drawing methods
     * from this instance will be bound to this canvas.
@@ -680,7 +680,7 @@ Instantiable4[
     * Used when you need to draw in IFRAME. Switches window to the iframe one.
     * @param newWindow The new window object
     */
-  def setWindow(newWindow: Window_): Unit = js.native
+  def setWindow(newWindow: Window): Unit = js.native
   def snapTo(values: js.Array[Double], value: Double): Double = js.native
   def snapTo(values: js.Array[Double], value: Double, tolerance: Double): Double = js.native
   /**

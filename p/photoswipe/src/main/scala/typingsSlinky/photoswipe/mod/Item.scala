@@ -1,6 +1,6 @@
 package typingsSlinky.photoswipe.mod
 
-import typingsSlinky.photoswipe.AnonTop
+import typingsSlinky.photoswipe.anon.Top
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,7 +47,7 @@ trait Item extends js.Object {
   /**
     * Internal property added by PhotoSwipe.
     */
-  var vGap: js.UndefOr[AnonTop] = js.native
+  var vGap: js.UndefOr[Top] = js.native
   /**
     * The width of this image.
     */
@@ -175,7 +175,7 @@ object Item {
         ret
     }
     @scala.inline
-    def withVGap(value: AnonTop): Self = {
+    def withVGap(value: Top): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("vGap")(value.asInstanceOf[js.Any])
         ret

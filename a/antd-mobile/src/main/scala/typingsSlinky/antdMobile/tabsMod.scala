@@ -1,6 +1,8 @@
 package typingsSlinky.antdMobile
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.antdMobile.anon.PrefixCls
+import typingsSlinky.antdMobile.anon.TypeofDefaultTabBar
 import typingsSlinky.antdMobile.tabsPropsTypeMod.TabsProps
 import typingsSlinky.react.mod.Component
 import typingsSlinky.rmcTabs.propsTypeMod.TabBarPropsType
@@ -34,7 +36,7 @@ object tabsMod extends js.Object {
   @js.native
   object default extends js.Object {
     var DefaultTabBar: TypeofDefaultTabBar = js.native
-    var defaultProps: AnonPrefixCls = js.native
+    var defaultProps: PrefixCls = js.native
   }
   
 }

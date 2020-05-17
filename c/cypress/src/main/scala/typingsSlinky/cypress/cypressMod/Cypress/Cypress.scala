@@ -2,24 +2,27 @@ package typingsSlinky.cypress.cypressMod.Cypress
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.BeforeUnloadEvent
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLSelectElement
-import typingsSlinky.cypress.Anon2
-import typingsSlinky.cypress.AnonDebug
-import typingsSlinky.cypress.AnonDefaults
-import typingsSlinky.cypress.AnonIsHidden
-import typingsSlinky.cypress.AnonName
-import typingsSlinky.cypress.AnonOverwrite
+import org.scalajs.dom.raw.Window
+import typingsSlinky.cypress.JQuery
+import typingsSlinky.cypress.JQuery.PlainObject
+import typingsSlinky.cypress.JQuery.Selector
+import typingsSlinky.cypress.JQuery.htmlString
 import typingsSlinky.cypress.JQueryStatic
-import typingsSlinky.cypress.JQuery_
-import typingsSlinky.cypress.JQuery_.PlainObject
-import typingsSlinky.cypress.JQuery_.Selector
-import typingsSlinky.cypress.JQuery_.htmlString
-import typingsSlinky.cypress.Mocha_.IRunnable
-import typingsSlinky.cypress.Mocha_.ITest
-import typingsSlinky.cypress.PartialConfigOptions
-import typingsSlinky.cypress.PartialLogConfig
+import typingsSlinky.cypress.Mocha.IRunnable
+import typingsSlinky.cypress.Mocha.ITest
+import typingsSlinky.cypress.anon.Add
+import typingsSlinky.cypress.anon.Debug
+import typingsSlinky.cypress.anon.Defaults
+import typingsSlinky.cypress.anon.IsHidden
+import typingsSlinky.cypress.anon.Name
+import typingsSlinky.cypress.anon.PartialConfigOptions
+import typingsSlinky.cypress.anon.PartialLogConfig
+import typingsSlinky.cypress.anon.`0`
 import typingsSlinky.cypress.cyBlobUtilMod.BlobUtilStatic
 import typingsSlinky.cypress.cyBluebirdMod.BluebirdStatic
 import typingsSlinky.cypress.cyMinimatchMod.MinimatchOptions
@@ -85,9 +88,6 @@ import typingsSlinky.moment.mod.Moment
 import typingsSlinky.moment.mod.MomentFormatSpecification
 import typingsSlinky.moment.mod.MomentInput
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Event_
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -120,11 +120,11 @@ trait Cypress extends js.Object {
   /**
     * @see https://on.cypress.io/api/commands
     */
-  var Commands: AnonOverwrite = js.native
+  var Commands: Add = js.native
   /**
     * @see https://on.cypress.io/cookies
     */
-  var Cookies: AnonDebug = js.native
+  var Cookies: Debug = js.native
   /**
     * Internal class for LocalStorage management.
     */
@@ -141,11 +141,11 @@ trait Cypress extends js.Object {
   /**
     * @see https://on.cypress.io/api/screenshot-api
     */
-  var Screenshot: Anon2 = js.native
+  var Screenshot: `0` = js.native
   /**
     * @see https://on.cypress.io/api/api-server
     */
-  var Server: AnonDefaults = js.native
+  var Server: Defaults = js.native
   /**
     * Lodash library
     *
@@ -170,7 +170,7 @@ trait Cypress extends js.Object {
   /**
     * @see https://on.cypress.io/dom
     */
-  var dom: AnonIsHidden = js.native
+  var dom: IsHidden = js.native
   /**
     * Cypress automatically includes minimatch and exposes it as Cypress.minimatch.
     *
@@ -231,7 +231,7 @@ trait Cypress extends js.Object {
     // }
     ```
     */
-  var spec: AnonName = js.native
+  var spec: Name = js.native
   /**
     * Cypress version string. i.e. "1.1.2"
     * @see https://on.cypress.io/version
@@ -263,7 +263,7 @@ trait Cypress extends js.Object {
     *    Cypress.$('p')
     */
   @JSName("$")
-  def $(element: HTMLSelectElement): JQuery_[HTMLSelectElement] = js.native
+  def $(element: HTMLSelectElement): JQuery[HTMLSelectElement] = js.native
   // HACK: This is the factory function returned when importing jQuery without a DOM. Declaring it separately breaks using the type parameter on JQueryStatic.
   // HACK: The discriminator parameter handles the edge case of passing a Window object to JQueryStatic. It doesn't actually exist on the factory function.
   /**
@@ -274,7 +274,7 @@ trait Cypress extends js.Object {
     *    Cypress.$('p')
     */
   @JSName("$")
-  def $(window: Window_, discriminator: Boolean): JQueryStatic = js.native
+  def $(window: Window, discriminator: Boolean): JQueryStatic = js.native
   /**
     * Returns an empty jQuery set.
     * @see \`{@link https://api.jquery.com/jQuery/ }\`
@@ -289,7 +289,7 @@ trait Cypress extends js.Object {
     *    Cypress.$('p')
     */
   @JSName("$")
-  def $[TElement](): JQuery_[TElement] = js.native
+  def $[TElement](): JQuery[TElement] = js.native
   /**
     * Binds a function to be executed when the DOM has finished loading.
     * @param callback The function to execute when the DOM is ready.
@@ -317,9 +317,9 @@ trait Cypress extends js.Object {
     *    Cypress.$('p')
     */
   @JSName("$")
-  def $[TElement](callback: js.ThisFunction1[/* this */ Document_, /* $ */ this.type, Unit]): JQuery_[TElement] = js.native
+  def $[TElement](callback: js.ThisFunction1[/* this */ Document, /* $ */ this.type, Unit]): JQuery[TElement] = js.native
   @JSName("$")
-  def $[T /* <: Element */](element_elementArray: ArrayLike[T]): JQuery_[T] = js.native
+  def $[T /* <: Element */](element_elementArray: ArrayLike[T]): JQuery[T] = js.native
   /**
     * Creates DOM elements on the fly from the provided string of raw HTML.
     * @param html _&#x40;param_ `html`
@@ -358,11 +358,11 @@ trait Cypress extends js.Object {
     *    Cypress.$('p')
     */
   @JSName("$")
-  def $[TElement /* <: HTMLElement */](html: htmlString): JQuery_[TElement] = js.native
+  def $[TElement /* <: HTMLElement */](html: htmlString): JQuery[TElement] = js.native
   @JSName("$")
-  def $[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery_[TElement] = js.native
+  def $[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery[TElement] = js.native
   @JSName("$")
-  def $[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: Document_): JQuery_[TElement] = js.native
+  def $[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: Document): JQuery[TElement] = js.native
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
     * @param object A plain object to wrap in a jQuery object.
@@ -377,7 +377,7 @@ trait Cypress extends js.Object {
     *    Cypress.$('p')
     */
   @JSName("$")
-  def $[T /* <: PlainObject[_] */](`object`: T): JQuery_[T] = js.native
+  def $[T /* <: PlainObject[_] */](`object`: T): JQuery[T] = js.native
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
     * @param selection An existing jQuery object to clone.
@@ -392,11 +392,11 @@ trait Cypress extends js.Object {
     *    Cypress.$('p')
     */
   @JSName("$")
-  def $[T](selection: JQuery_[T]): JQuery_[T] = js.native
+  def $[T](selection: JQuery[T]): JQuery[T] = js.native
   @JSName("$")
-  def $[TElement /* <: Element */](selector: Selector, context: JQuery_[HTMLElement]): JQuery_[TElement] = js.native
+  def $[TElement /* <: Element */](selector: Selector, context: JQuery[HTMLElement]): JQuery[TElement] = js.native
   @JSName("$")
-  def $[TElement /* <: Element */](selector: Selector, context: Element): JQuery_[TElement] = js.native
+  def $[TElement /* <: Element */](selector: Selector, context: Element): JQuery[TElement] = js.native
   /**
     * Accepts a string containing a CSS selector which is then used to match a set of elements.
     * @param selector A string containing a selector expression
@@ -443,9 +443,9 @@ trait Cypress extends js.Object {
     *    Cypress.$('p')
     */
   @JSName("$")
-  def $_TElement_Element[TElement /* <: Element */](selector: Selector): JQuery_[TElement] = js.native
+  def $_TElement_Element[TElement /* <: Element */](selector: Selector): JQuery[TElement] = js.native
   @JSName("$")
-  def $_TElement_Element[TElement /* <: Element */](selector: Selector, context: Document_): JQuery_[TElement] = js.native
+  def $_TElement_Element[TElement /* <: Element */](selector: Selector, context: Document): JQuery[TElement] = js.native
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
     * @param element_elementArray _&#x40;param_ `element_elementArray`
@@ -471,7 +471,7 @@ trait Cypress extends js.Object {
     *    Cypress.$('p')
     */
   @JSName("$")
-  def $_T_Element[T /* <: Element */](element_elementArray: T): JQuery_[T] = js.native
+  def $_T_Element[T /* <: Element */](element_elementArray: T): JQuery[T] = js.native
   /**
     * Creates a lodash object which wraps value to enable implicit method chain sequences.
     * Methods that operate on and return arrays, collections, and functions can be chained together.
@@ -955,7 +955,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_scrolled(action: scrolled, fn: js.Function1[/* $el */ JQuery_[HTMLElement], Unit]): Unit = js.native
+  def off_scrolled(action: scrolled, fn: js.Function1[/* $el */ JQuery[HTMLElement], Unit]): Unit = js.native
   /**
     * Fires after the test and all **afterEach** and **after** hooks run.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1035,7 +1035,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_windowbeforeload(action: windowColonbeforeColonload, fn: js.Function1[/* win */ Window_, Unit]): Unit = js.native
+  def off_windowbeforeload(action: windowColonbeforeColonload, fn: js.Function1[/* win */ Window, Unit]): Unit = js.native
   /**
     * Fires when your application is about to navigate away. The real event object is provided to you. Your app may have set a `returnValue` on the event, which is useful to assert on.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1057,7 +1057,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_windowload(action: windowColonload, fn: js.Function1[/* win */ Window_, Unit]): Unit = js.native
+  def off_windowload(action: windowColonload, fn: js.Function1[/* win */ Window, Unit]): Unit = js.native
   /**
     * Fires when your application is has unloaded and is navigating away. The real event object is provided to you. This event is not cancelable.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1067,7 +1067,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("off")
-  def off_windowunload(action: windowColonunload, fn: js.Function1[/* event */ Event_, Unit]): Unit = js.native
+  def off_windowunload(action: windowColonunload, fn: js.Function1[/* event */ Event, Unit]): Unit = js.native
   /**
     * Fires when an uncaught exception occurs in your application.
     * Cypress will fail the test when this fires.
@@ -1198,7 +1198,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_scrolled(action: scrolled, fn: js.Function1[/* $el */ JQuery_[HTMLElement], Unit]): Unit = js.native
+  def on_scrolled(action: scrolled, fn: js.Function1[/* $el */ JQuery[HTMLElement], Unit]): Unit = js.native
   /**
     * Fires after the test and all **afterEach** and **after** hooks run.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1278,7 +1278,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_windowbeforeload(action: windowColonbeforeColonload, fn: js.Function1[/* win */ Window_, Unit]): Unit = js.native
+  def on_windowbeforeload(action: windowColonbeforeColonload, fn: js.Function1[/* win */ Window, Unit]): Unit = js.native
   /**
     * Fires when your application is about to navigate away. The real event object is provided to you. Your app may have set a `returnValue` on the event, which is useful to assert on.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1300,7 +1300,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_windowload(action: windowColonload, fn: js.Function1[/* win */ Window_, Unit]): Unit = js.native
+  def on_windowload(action: windowColonload, fn: js.Function1[/* win */ Window, Unit]): Unit = js.native
   /**
     * Fires when your application is has unloaded and is navigating away. The real event object is provided to you. This event is not cancelable.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1310,7 +1310,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("on")
-  def on_windowunload(action: windowColonunload, fn: js.Function1[/* event */ Event_, Unit]): Unit = js.native
+  def on_windowunload(action: windowColonunload, fn: js.Function1[/* event */ Event, Unit]): Unit = js.native
   /**
     * Fires when an uncaught exception occurs in your application.
     * Cypress will fail the test when this fires.
@@ -1441,7 +1441,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_scrolled(action: scrolled, fn: js.Function1[/* $el */ JQuery_[HTMLElement], Unit]): Unit = js.native
+  def once_scrolled(action: scrolled, fn: js.Function1[/* $el */ JQuery[HTMLElement], Unit]): Unit = js.native
   /**
     * Fires after the test and all **afterEach** and **after** hooks run.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1521,7 +1521,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_windowbeforeload(action: windowColonbeforeColonload, fn: js.Function1[/* win */ Window_, Unit]): Unit = js.native
+  def once_windowbeforeload(action: windowColonbeforeColonload, fn: js.Function1[/* win */ Window, Unit]): Unit = js.native
   /**
     * Fires when your application is about to navigate away. The real event object is provided to you. Your app may have set a `returnValue` on the event, which is useful to assert on.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1543,7 +1543,7 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_windowload(action: windowColonload, fn: js.Function1[/* win */ Window_, Unit]): Unit = js.native
+  def once_windowload(action: windowColonload, fn: js.Function1[/* win */ Window, Unit]): Unit = js.native
   /**
     * Fires when your application is has unloaded and is navigating away. The real event object is provided to you. This event is not cancelable.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -1553,6 +1553,6 @@ trait Cypress extends js.Object {
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
   @JSName("once")
-  def once_windowunload(action: windowColonunload, fn: js.Function1[/* event */ Event_, Unit]): Unit = js.native
+  def once_windowunload(action: windowColonunload, fn: js.Function1[/* event */ Event, Unit]): Unit = js.native
 }
 

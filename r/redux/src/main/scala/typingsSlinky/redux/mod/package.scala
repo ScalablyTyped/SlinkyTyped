@@ -9,7 +9,7 @@ package object mod {
   type ActionCreatorsMapObject[A] = org.scalablytyped.runtime.StringDictionary[typingsSlinky.redux.mod.ActionCreator[A]]
   type ActionFromReducer[R] = js.Any
   type ActionFromReducersMapObject[M] = typingsSlinky.redux.mod.ActionFromReducer[typingsSlinky.redux.mod.ReducerFromReducersMapObject[M]]
-  type CombinedState[S] = typingsSlinky.redux.AnonCombinedState with S
+  type CombinedState[S] = typingsSlinky.redux.anon.CombinedState with S
   type DeepPartial[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]:? T[K] extends object? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias redux.redux.DeepPartial<T[K]> * / object : T[K]}
     */ typingsSlinky.redux.reduxStrings.DeepPartial with org.scalablytyped.runtime.TopLevel[js.Any]

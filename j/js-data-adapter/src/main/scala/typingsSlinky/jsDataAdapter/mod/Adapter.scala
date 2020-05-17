@@ -1,7 +1,7 @@
 package typingsSlinky.jsDataAdapter.mod
 
 import typingsSlinky.jsData.mod.Mapper
-import typingsSlinky.jsDataAdapter.TypeofAdapter
+import typingsSlinky.jsDataAdapter.anon.TypeofAdapter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

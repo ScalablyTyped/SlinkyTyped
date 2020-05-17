@@ -24,9 +24,8 @@ import scala.scalajs.js.annotation._
 			 * A button bar that maintains a selected state.
 			 * @deprecated Use [Titanium.UI.TabbedBar](Titanium.UI.TabbedBar) instead.
 			 */
-@JSGlobal("Titanium.UI.iOS.TabbedBar")
 @js.native
-class TabbedBar () extends View {
+trait TabbedBar extends View {
   /**
   				 * Index of the currently selected button.
   				 */

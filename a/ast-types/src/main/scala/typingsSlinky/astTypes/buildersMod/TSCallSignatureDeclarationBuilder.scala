@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonParameters
+import typingsSlinky.astTypes.anon.Parameters
 import typingsSlinky.astTypes.kindsMod.ArrayPatternKind
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.kindsMod.ObjectPatternKind
@@ -18,6 +18,6 @@ trait TSCallSignatureDeclarationBuilder extends js.Object {
     parameters: js.Array[IdentifierKind | RestElementKind | ArrayPatternKind | ObjectPatternKind],
     typeAnnotation: TSTypeAnnotationKind
   ): TSCallSignatureDeclaration = js.native
-  def from(params: AnonParameters): TSCallSignatureDeclaration = js.native
+  def from(params: Parameters): TSCallSignatureDeclaration = js.native
 }
 

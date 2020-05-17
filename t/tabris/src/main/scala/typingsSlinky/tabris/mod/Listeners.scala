@@ -1,14 +1,14 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.AnonTarget
-import typingsSlinky.tabris.PickNativeObjectonoffonce
+import typingsSlinky.tabris.anon.PickNativeObjectonoffonce
+import typingsSlinky.tabris.anon.Target
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("tabris", "Listeners")
 @js.native
-class Listeners[EventData /* <: AnonTarget */] protected () extends js.Object {
+class Listeners[EventData /* <: Target */] protected () extends js.Object {
   def this(target: TargetType[EventData], `type`: String) = this()
   /**
     * The object that issues the events, e.g. a widget.

@@ -1,0 +1,14 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Represents the client-side equivalent of the XYDiagramPane class.
+  */
+@JSGlobal("ASPxClientXYDiagramPane")
+@js.native
+class ASPxClientXYDiagramPane ()
+  extends typingsSlinky.devexpressWeb.ASPxClientXYDiagramPane
+

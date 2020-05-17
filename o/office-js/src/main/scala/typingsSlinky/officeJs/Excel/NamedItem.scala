@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.NamedItemData
 import typingsSlinky.officeJs.Excel.Interfaces.NamedItemLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.NamedItemUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.Array
 import typingsSlinky.officeJs.officeJsStrings.Boolean
 import typingsSlinky.officeJs.officeJsStrings.Double
@@ -21,9 +21,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.NamedItem")
 @js.native
-class NamedItem () extends ClientObject {
+trait NamedItem extends ClientObject {
   /**
     *
     * Returns an object containing values and types of the named item. Read-only.
@@ -122,7 +121,7 @@ class NamedItem () extends ClientObject {
     */
   def load(): NamedItem = js.native
   def load(options: NamedItemLoadOptions): NamedItem = js.native
-  def load(propertyNamesAndPaths: AnonExpand): NamedItem = js.native
+  def load(propertyNamesAndPaths: Expand): NamedItem = js.native
   def load(propertyNames: String): NamedItem = js.native
   def load(propertyNames: js.Array[String]): NamedItem = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

@@ -1,6 +1,6 @@
 package typingsSlinky.rbx.tooltipMod
 
-import typingsSlinky.rbx.KinVariablesbreakpointsco
+import typingsSlinky.rbx.anon.KinVariablesbreakpointsco
 import typingsSlinky.rbx.rbxStrings.black
 import typingsSlinky.rbx.rbxStrings.bottom
 import typingsSlinky.rbx.rbxStrings.danger

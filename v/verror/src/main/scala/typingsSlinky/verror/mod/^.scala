@@ -1,6 +1,6 @@
 package typingsSlinky.verror.mod
 
-import typingsSlinky.verror.TypeofVError
+import typingsSlinky.verror.anon.TypeofVError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

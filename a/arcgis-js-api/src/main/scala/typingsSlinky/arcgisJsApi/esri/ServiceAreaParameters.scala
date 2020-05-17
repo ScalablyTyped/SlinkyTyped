@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`allow-backtrack`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`at-dead-ends-and-intersections`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`at-dead-ends-only`
@@ -274,8 +273,4 @@ trait ServiceAreaParameters
     */
   var useHierarchy: Boolean = js.native
 }
-
-@JSGlobal("__esri.ServiceAreaParameters")
-@js.native
-object ServiceAreaParameters extends TopLevel[ServiceAreaParametersConstructor]
 

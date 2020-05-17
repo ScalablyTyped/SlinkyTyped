@@ -1,6 +1,6 @@
 package typingsSlinky.orientjs.mod
 
-import typingsSlinky.orientjs.AnonHost
+import typingsSlinky.orientjs.anon.Host
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("orientjs", "ODatabase")
 @js.native
 class ODatabase () extends ODB {
-  def this(config: AnonHost) = this()
+  def this(config: Host) = this()
 }
 

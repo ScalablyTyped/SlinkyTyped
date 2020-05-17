@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -91,9 +90,4 @@ trait HTMLLinkElement
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
-
-@JSGlobal("HTMLLinkElement")
-@js.native
-object HTMLLinkElement
-  extends Instantiable0[org.scalajs.dom.raw.HTMLLinkElement]
 

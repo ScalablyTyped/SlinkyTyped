@@ -1,7 +1,7 @@
 package typingsSlinky.puppeteer.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.puppeteer.Anon0
+import typingsSlinky.puppeteer.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -90,7 +90,7 @@ trait FrameBase
     * @param options: The typing parameters.
     */
   def `type`(selector: String, text: String): js.Promise[Unit] = js.native
-  def `type`(selector: String, text: String, options: Anon0): js.Promise[Unit] = js.native
+  def `type`(selector: String, text: String, options: `0`): js.Promise[Unit] = js.native
   /** Returns frame's url. */
   def url(): String = js.native
   /**

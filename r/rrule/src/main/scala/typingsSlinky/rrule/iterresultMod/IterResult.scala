@@ -1,6 +1,6 @@
 package typingsSlinky.rrule.iterresultMod
 
-import typingsSlinky.rrule.PartialIterArgs
+import typingsSlinky.rrule.anon.PartialIterArgs
 import typingsSlinky.rrule.typesMod.IterResultType
 import typingsSlinky.rrule.typesMod.QueryMethodTypes
 import scala.scalajs.js

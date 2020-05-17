@@ -1,6 +1,6 @@
 package typingsSlinky.divaJs.documentLayoutMod
 
-import typingsSlinky.divaJs.AnonX
+import typingsSlinky.divaJs.anon.X
 import typingsSlinky.divaJs.interfacesMod.Dimensions
 import typingsSlinky.divaJs.interfacesMod.Offset
 import typingsSlinky.divaJs.interfacesMod.PageGroup
@@ -18,7 +18,7 @@ trait DocumentLayout extends js.Object {
   def getPageInfo(pageIndex: Double): PageInfo | Null = js.native
   def getPageOffset(pageIndex: Double, options: js.Object): Offset = js.native
   def getPageRegion(pageIndex: Double, options: js.Object): Offset = js.native
-  def getPageToViewportCenterOffset(pageIndex: Double, viewport: Region): AnonX = js.native
+  def getPageToViewportCenterOffset(pageIndex: Double, viewport: Region): X = js.native
 }
 
 object DocumentLayout {
@@ -29,7 +29,7 @@ object DocumentLayout {
     getPageInfo: Double => PageInfo | Null,
     getPageOffset: (Double, js.Object) => Offset,
     getPageRegion: (Double, js.Object) => Offset,
-    getPageToViewportCenterOffset: (Double, Region) => AnonX,
+    getPageToViewportCenterOffset: (Double, Region) => X,
     pageGroups: js.Array[PageGroup]
   ): DocumentLayout = {
     val __obj = js.Dynamic.literal(dimensions = dimensions.asInstanceOf[js.Any], getPageDimensions = js.Any.fromFunction1(getPageDimensions), getPageInfo = js.Any.fromFunction1(getPageInfo), getPageOffset = js.Any.fromFunction2(getPageOffset), getPageRegion = js.Any.fromFunction2(getPageRegion), getPageToViewportCenterOffset = js.Any.fromFunction2(getPageToViewportCenterOffset), pageGroups = pageGroups.asInstanceOf[js.Any])
@@ -72,7 +72,7 @@ object DocumentLayout {
         ret
     }
     @scala.inline
-    def withGetPageToViewportCenterOffset(value: (Double, Region) => AnonX): Self = {
+    def withGetPageToViewportCenterOffset(value: (Double, Region) => X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getPageToViewportCenterOffset")(js.Any.fromFunction2(value))
         ret

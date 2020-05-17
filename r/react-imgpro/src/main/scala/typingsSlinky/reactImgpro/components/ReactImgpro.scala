@@ -2,10 +2,10 @@ package typingsSlinky.reactImgpro.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactImgpro.AnonBlue
-import typingsSlinky.reactImgpro.AnonDegree
-import typingsSlinky.reactImgpro.AnonHeight
-import typingsSlinky.reactImgpro.AnonHorizontal
+import typingsSlinky.reactImgpro.anon.Blue
+import typingsSlinky.reactImgpro.anon.Degree
+import typingsSlinky.reactImgpro.anon.Height
+import typingsSlinky.reactImgpro.anon.Horizontal
 import typingsSlinky.reactImgpro.mod.ReactImgpro.ProcessImageProps
 import typingsSlinky.reactImgpro.mod.ReactImgpro.Shape
 import typingsSlinky.reactImgpro.mod.ReactImgpro.Size
@@ -28,7 +28,7 @@ object ReactImgpro {
     @scala.inline
     def brightness(value: Double): this.type = set("brightness", value.asInstanceOf[js.Any])
     @scala.inline
-    def colors(value: AnonBlue): this.type = set("colors", value.asInstanceOf[js.Any])
+    def colors(value: Blue): this.type = set("colors", value.asInstanceOf[js.Any])
     @scala.inline
     def contain(value: Size): this.type = set("contain", value.asInstanceOf[js.Any])
     @scala.inline
@@ -46,7 +46,7 @@ object ReactImgpro {
     @scala.inline
     def fade(value: Double): this.type = set("fade", value.asInstanceOf[js.Any])
     @scala.inline
-    def flip(value: AnonHorizontal): this.type = set("flip", value.asInstanceOf[js.Any])
+    def flip(value: Horizontal): this.type = set("flip", value.asInstanceOf[js.Any])
     @scala.inline
     def greyscale(value: Boolean): this.type = set("greyscale", value.asInstanceOf[js.Any])
     @scala.inline
@@ -64,11 +64,11 @@ object ReactImgpro {
     @scala.inline
     def resize(value: Shape): this.type = set("resize", value.asInstanceOf[js.Any])
     @scala.inline
-    def rotate(value: AnonDegree): this.type = set("rotate", value.asInstanceOf[js.Any])
+    def rotate(value: Degree): this.type = set("rotate", value.asInstanceOf[js.Any])
     @scala.inline
     def scale(value: Boolean): this.type = set("scale", value.asInstanceOf[js.Any])
     @scala.inline
-    def scaleToFitImage(value: AnonHeight): this.type = set("scaleToFitImage", value.asInstanceOf[js.Any])
+    def scaleToFitImage(value: Height): this.type = set("scaleToFitImage", value.asInstanceOf[js.Any])
     @scala.inline
     def sepia(value: Boolean): this.type = set("sepia", value.asInstanceOf[js.Any])
     @scala.inline

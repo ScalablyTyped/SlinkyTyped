@@ -6,10 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** The ConnectionProfileFilter class defines a set of properties that are used to improve the relevance of FindConnectionProfilesAsync results. */
-@JSGlobal("Windows.Networking.Connectivity.ConnectionProfileFilter")
 @js.native
-/** Creates an instance of ConnectionProfileFilter , which contains a set of properties that are used to improve the relevance of FindConnectionProfilesAsync results. */
-class ConnectionProfileFilter () extends js.Object {
+trait ConnectionProfileFilter extends js.Object {
   /** Gets or sets whether background data usage is restricted by this connection profile filter. */
   var isBackgroundDataUsageRestricted: Boolean = js.native
   /** Indicates if connection profiles that represent currently established connections are included in query results. */
@@ -28,5 +26,85 @@ class ConnectionProfileFilter () extends js.Object {
   var rawData: IBuffer = js.native
   /** Indicates a specific network operator ID to query for. */
   var serviceProviderGuid: String = js.native
+}
+
+object ConnectionProfileFilter {
+  @scala.inline
+  def apply(
+    isBackgroundDataUsageRestricted: Boolean,
+    isConnected: Boolean,
+    isOverDataLimit: Boolean,
+    isRoaming: Boolean,
+    isWlanConnectionProfile: Boolean,
+    isWwanConnectionProfile: Boolean,
+    networkCostType: NetworkCostType,
+    rawData: IBuffer,
+    serviceProviderGuid: String
+  ): ConnectionProfileFilter = {
+    val __obj = js.Dynamic.literal(isBackgroundDataUsageRestricted = isBackgroundDataUsageRestricted.asInstanceOf[js.Any], isConnected = isConnected.asInstanceOf[js.Any], isOverDataLimit = isOverDataLimit.asInstanceOf[js.Any], isRoaming = isRoaming.asInstanceOf[js.Any], isWlanConnectionProfile = isWlanConnectionProfile.asInstanceOf[js.Any], isWwanConnectionProfile = isWwanConnectionProfile.asInstanceOf[js.Any], networkCostType = networkCostType.asInstanceOf[js.Any], rawData = rawData.asInstanceOf[js.Any], serviceProviderGuid = serviceProviderGuid.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ConnectionProfileFilter]
+  }
+  @scala.inline
+  implicit class ConnectionProfileFilterOps[Self <: ConnectionProfileFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsBackgroundDataUsageRestricted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isBackgroundDataUsageRestricted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsConnected(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isConnected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsOverDataLimit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isOverDataLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsRoaming(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRoaming")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsWlanConnectionProfile(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isWlanConnectionProfile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsWwanConnectionProfile(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isWwanConnectionProfile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNetworkCostType(value: NetworkCostType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkCostType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRawData(value: IBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServiceProviderGuid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceProviderGuid")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

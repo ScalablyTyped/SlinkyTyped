@@ -1,8 +1,8 @@
 package typingsSlinky.fundamentalReact.timePickerMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.fundamentalReact.AnonHour
-import typingsSlinky.fundamentalReact.AnonMeridiemPM
+import typingsSlinky.fundamentalReact.anon.Hour
+import typingsSlinky.fundamentalReact.anon.MeridiemPM
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,14 +17,14 @@ trait TimePickerProps
   var format12Hours: js.UndefOr[Boolean] = js.native
   var id: js.UndefOr[String] = js.native
   var inputProps: js.UndefOr[StringDictionary[js.Any]] = js.native
-  var localizedText: js.UndefOr[AnonMeridiemPM] = js.native
+  var localizedText: js.UndefOr[MeridiemPM] = js.native
   var onChange: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
   var popoverProps: js.UndefOr[StringDictionary[js.Any]] = js.native
   var showHour: js.UndefOr[Boolean] = js.native
   var showMinute: js.UndefOr[Boolean] = js.native
   var showSecond: js.UndefOr[Boolean] = js.native
   var spinners: js.UndefOr[Boolean] = js.native
-  var time: js.UndefOr[AnonHour] = js.native
+  var time: js.UndefOr[Hour] = js.native
   var timeProps: js.UndefOr[StringDictionary[js.Any]] = js.native
   var value: js.UndefOr[String] = js.native
 }
@@ -114,7 +114,7 @@ object TimePickerProps {
         ret
     }
     @scala.inline
-    def withLocalizedText(value: AnonMeridiemPM): Self = {
+    def withLocalizedText(value: MeridiemPM): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("localizedText")(value.asInstanceOf[js.Any])
         ret
@@ -198,7 +198,7 @@ object TimePickerProps {
         ret
     }
     @scala.inline
-    def withTime(value: AnonHour): Self = {
+    def withTime(value: Hour): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.cassandraDriver.metadataMod.metadata
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.cassandraDriver.AnonDictoption
+import typingsSlinky.cassandraDriver.anon.Dictoption
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait DataCollection extends js.Object {
   var comment: String = js.native
   var compactionClass: String = js.native
   var compactionOptions: StringDictionary[js.Any] = js.native
-  var compression: AnonDictoption = js.native
+  var compression: Dictoption = js.native
   var crcCheckChange: js.UndefOr[Double] = js.native
   var defaultTtl: Double = js.native
   var extensions: StringDictionary[js.Any] = js.native
@@ -44,7 +44,7 @@ object DataCollection {
     comment: String,
     compactionClass: String,
     compactionOptions: StringDictionary[js.Any],
-    compression: AnonDictoption,
+    compression: Dictoption,
     defaultTtl: Double,
     extensions: StringDictionary[js.Any],
     gcGraceSeconds: Double,
@@ -119,7 +119,7 @@ object DataCollection {
         ret
     }
     @scala.inline
-    def withCompression(value: AnonDictoption): Self = {
+    def withCompression(value: Dictoption): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(value.asInstanceOf[js.Any])
         ret

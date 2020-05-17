@@ -1,9 +1,9 @@
 package typingsSlinky.intlMessageformat.coreMod
 
-import typingsSlinky.intlMessageformat.AnonDate
-import typingsSlinky.intlMessageformat.AnonLocale
-import typingsSlinky.intlMessageformat.FnCall
-import typingsSlinky.intlMessageformat.PartialFormats
+import typingsSlinky.intlMessageformat.anon.Date
+import typingsSlinky.intlMessageformat.anon.FnCall
+import typingsSlinky.intlMessageformat.anon.Locale
+import typingsSlinky.intlMessageformat.anon.PartialFormats
 import typingsSlinky.intlMessageformat.formattersMod.FormatXMLElementFn
 import typingsSlinky.intlMessageformat.formattersMod.MessageFormatPart
 import typingsSlinky.intlMessageformat.formattersMod.PrimitiveType
@@ -62,7 +62,7 @@ class IntlMessageFormat protected () extends js.Object {
   def formatToParts(): js.Array[MessageFormatPart] = js.native
   def formatToParts(values: Record[String, _]): js.Array[MessageFormatPart] = js.native
   def getAst(): js.Array[MessageFormatElement] = js.native
-  def resolvedOptions(): AnonLocale = js.native
+  def resolvedOptions(): Locale = js.native
 }
 
 /* static members */
@@ -71,6 +71,6 @@ class IntlMessageFormat protected () extends js.Object {
 object IntlMessageFormat extends js.Object {
   var __parse: js.UndefOr[FnCall] = js.native
   var defaultLocale: String = js.native
-  var formats: AnonDate = js.native
+  var formats: Date = js.native
 }
 

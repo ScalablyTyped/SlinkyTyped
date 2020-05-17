@@ -1,7 +1,7 @@
 package typingsSlinky.node.moduleMod
 
 import typingsSlinky.node.NodeRequire
-import typingsSlinky.node.TypeofModule
+import typingsSlinky.node.anon.TypeofModule
 import typingsSlinky.node.urlMod.URL_
 import scala.scalajs.js
 import scala.scalajs.js.`|`

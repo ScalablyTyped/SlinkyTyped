@@ -3,7 +3,7 @@ package typingsSlinky.materialUiCore.components
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.materialUiCore.PartialClassNameMapListItRoot
+import typingsSlinky.materialUiCore.anon.PartialClassNameMapListItRoot
 import typingsSlinky.materialUiCore.listItemSecondaryActionListItemSecondaryActionMod.ListItemSecondaryActionProps
 import typingsSlinky.materialUiCore.listItemSecondaryActionMod.default
 import typingsSlinky.react.mod.CSSProperties

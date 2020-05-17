@@ -1,6 +1,6 @@
 package typingsSlinky.antd.tableInterfaceMod
 
-import typingsSlinky.antd.AnonColumn
+import typingsSlinky.antd.anon.Column
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ trait ColumnTitleProps[RecordType] extends js.Object {
   var filters: js.UndefOr[Record[String, js.Array[String]]] = js.native
   /** @deprecated Please use `sorterColumns` instead. */
   var sortColumn: js.UndefOr[ColumnType[RecordType]] = js.native
-  var sortColumns: js.UndefOr[js.Array[AnonColumn[RecordType]]] = js.native
+  var sortColumns: js.UndefOr[js.Array[Column[RecordType]]] = js.native
   /** @deprecated Please use `sorterColumns` instead. */
   var sortOrder: js.UndefOr[SortOrder] = js.native
 }
@@ -53,7 +53,7 @@ object ColumnTitleProps {
         ret
     }
     @scala.inline
-    def withSortColumns(value: js.Array[AnonColumn[RecordType]]): Self[RecordType] = {
+    def withSortColumns(value: js.Array[Column[RecordType]]): Self[RecordType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sortColumns")(value.asInstanceOf[js.Any])
         ret

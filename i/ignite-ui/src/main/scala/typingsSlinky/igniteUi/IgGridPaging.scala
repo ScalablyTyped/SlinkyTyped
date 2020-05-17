@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -444,7 +444,7 @@ object IgGridPaging {
         ret
     }
     @scala.inline
-    def withPageIndexChanged(value: (/* event */ Event_, /* ui */ PageIndexChangedEventUIParam) => Unit): Self = {
+    def withPageIndexChanged(value: (/* event */ Event, /* ui */ PageIndexChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pageIndexChanged")(js.Any.fromFunction2(value))
         ret
@@ -456,7 +456,7 @@ object IgGridPaging {
         ret
     }
     @scala.inline
-    def withPageIndexChanging(value: (/* event */ Event_, /* ui */ PageIndexChangingEventUIParam) => Unit): Self = {
+    def withPageIndexChanging(value: (/* event */ Event, /* ui */ PageIndexChangingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pageIndexChanging")(js.Any.fromFunction2(value))
         ret
@@ -492,7 +492,7 @@ object IgGridPaging {
         ret
     }
     @scala.inline
-    def withPageSizeChanged(value: (/* event */ Event_, /* ui */ PageSizeChangedEventUIParam) => Unit): Self = {
+    def withPageSizeChanged(value: (/* event */ Event, /* ui */ PageSizeChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pageSizeChanged")(js.Any.fromFunction2(value))
         ret
@@ -504,7 +504,7 @@ object IgGridPaging {
         ret
     }
     @scala.inline
-    def withPageSizeChanging(value: (/* event */ Event_, /* ui */ PageSizeChangingEventUIParam) => Unit): Self = {
+    def withPageSizeChanging(value: (/* event */ Event, /* ui */ PageSizeChangingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pageSizeChanging")(js.Any.fromFunction2(value))
         ret
@@ -624,7 +624,7 @@ object IgGridPaging {
         ret
     }
     @scala.inline
-    def withPagerRendered(value: (/* event */ Event_, /* ui */ PagerRenderedEventUIParam) => Unit): Self = {
+    def withPagerRendered(value: (/* event */ Event, /* ui */ PagerRenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pagerRendered")(js.Any.fromFunction2(value))
         ret
@@ -636,7 +636,7 @@ object IgGridPaging {
         ret
     }
     @scala.inline
-    def withPagerRendering(value: (/* event */ Event_, /* ui */ PagerRenderingEventUIParam) => Unit): Self = {
+    def withPagerRendering(value: (/* event */ Event, /* ui */ PagerRenderingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pagerRendering")(js.Any.fromFunction2(value))
         ret

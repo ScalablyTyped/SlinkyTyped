@@ -1,9 +1,9 @@
 package typingsSlinky.winjs.mod.UI
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.winjs.AnonEntrance
 import typingsSlinky.winjs.WinJS.Promise
 import typingsSlinky.winjs.WinJS.UI.Animation.IAnimationMethodResponse
+import typingsSlinky.winjs.anon.Entrance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -93,7 +93,7 @@ object Animation extends js.Object {
     * @param movingBackwards Boolean value for whether the navigation is moving backwards.
     * @returns an object containing the exit and entrance animations to play based on the parameters given.
     **/
-  def createPageNavigationAnimations(currentPreferredAnimation: String, nextPreferredAnimation: String, movingBackwards: Boolean): AnonEntrance = js.native
+  def createPageNavigationAnimations(currentPreferredAnimation: String, nextPreferredAnimation: String, movingBackwards: Boolean): Entrance = js.native
   /**
     * Creates an object that performs a peek animation.
     * @param element Element or elements involved in the peek.

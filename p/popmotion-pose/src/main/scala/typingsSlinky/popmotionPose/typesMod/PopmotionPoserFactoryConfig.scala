@@ -2,7 +2,7 @@ package typingsSlinky.popmotionPose.typesMod
 
 import typingsSlinky.popmotion.mod.Action_
 import typingsSlinky.popmotion.typesMod.ColdSubscription
-import typingsSlinky.popmotionPose.AnonElementStyler
+import typingsSlinky.popmotionPose.anon.ElementStyler
 import typingsSlinky.poseCore.typesMod.ExtendAPI
 import typingsSlinky.poseCore.typesMod.Poser
 import typingsSlinky.poseCore.typesMod.PoserConfig
@@ -27,8 +27,8 @@ trait PopmotionPoserFactoryConfig[P, TD] extends js.Object {
     state: typingsSlinky.poseCore.typesMod.PoserState[Value, Action_, ColdSubscription, P],
     config: PoserConfig[Value]
   ): Poser[Value, Action_, ColdSubscription, P] = js.native
-  def forceRender(props: AnonElementStyler): Unit = js.native
-  def setValueNative(key: String, to: js.Any, props: AnonElementStyler): Unit = js.native
+  def forceRender(props: ElementStyler): Unit = js.native
+  def setValueNative(key: String, to: js.Any, props: ElementStyler): Unit = js.native
   def transformPose(
     pose: typingsSlinky.poseCore.typesMod.Pose[Action_, TD],
     key: String,

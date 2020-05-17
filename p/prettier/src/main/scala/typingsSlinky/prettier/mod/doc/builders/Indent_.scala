@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Indent_ extends _Doc {
+trait Indent_ extends Doc {
   var contents: Doc = js.native
   var `type`: typingsSlinky.prettier.prettierStrings.indent = js.native
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.screeps
 
-import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.screeps.anon.StoreRESOURCEENERGYRESOURAlloy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -53,7 +53,79 @@ trait StructureNuker
   def launchNuke(pos: RoomPosition): ScreepsReturnCode = js.native
 }
 
-@JSGlobal("StructureNuker")
-@js.native
-object StructureNuker extends TopLevel[StructureNukerConstructor]
+object StructureNuker {
+  @scala.inline
+  def apply(
+    cooldown: Double,
+    destroy: () => ScreepsReturnCode,
+    effects: js.Array[RoomObjectEffect],
+    energy: Double,
+    energyCapacity: Double,
+    ghodium: Double,
+    ghodiumCapacity: Double,
+    hits: Double,
+    hitsMax: Double,
+    id: Id[StructureNuker],
+    isActive: () => Boolean,
+    launchNuke: RoomPosition => ScreepsReturnCode,
+    notifyWhenAttacked: Boolean => ScreepsReturnCode,
+    pos: RoomPosition,
+    room: Room,
+    store: StoreRESOURCEENERGYRESOURAlloy,
+    structureType: STRUCTURE_NUKER
+  ): StructureNuker = {
+    val __obj = js.Dynamic.literal(cooldown = cooldown.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), effects = effects.asInstanceOf[js.Any], energy = energy.asInstanceOf[js.Any], energyCapacity = energyCapacity.asInstanceOf[js.Any], ghodium = ghodium.asInstanceOf[js.Any], ghodiumCapacity = ghodiumCapacity.asInstanceOf[js.Any], hits = hits.asInstanceOf[js.Any], hitsMax = hitsMax.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isActive = js.Any.fromFunction0(isActive), launchNuke = js.Any.fromFunction1(launchNuke), notifyWhenAttacked = js.Any.fromFunction1(notifyWhenAttacked), pos = pos.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any], store = store.asInstanceOf[js.Any], structureType = structureType.asInstanceOf[js.Any])
+    __obj.asInstanceOf[StructureNuker]
+  }
+  @scala.inline
+  implicit class StructureNukerOps[Self <: StructureNuker] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCooldown(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cooldown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnergy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("energy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnergyCapacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("energyCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGhodium(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ghodium")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGhodiumCapacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ghodiumCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLaunchNuke(value: RoomPosition => ScreepsReturnCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launchNuke")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withStore(value: StoreRESOURCEENERGYRESOURAlloy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

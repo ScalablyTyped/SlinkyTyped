@@ -2,7 +2,6 @@ package typingsSlinky.amapJsApi.AMap.ShapeOverlay
 
 import typingsSlinky.amapJsApi.AMap.Event_
 import typingsSlinky.amapJsApi.AMap.MapsEvent
-import typingsSlinky.amapJsApi.AnonTargetI
 import typingsSlinky.amapJsApi.amapJsApiStrings.change
 import typingsSlinky.amapJsApi.amapJsApiStrings.click
 import typingsSlinky.amapJsApi.amapJsApiStrings.dblclick
@@ -17,6 +16,7 @@ import typingsSlinky.amapJsApi.amapJsApiStrings.show
 import typingsSlinky.amapJsApi.amapJsApiStrings.touchend
 import typingsSlinky.amapJsApi.amapJsApiStrings.touchmove
 import typingsSlinky.amapJsApi.amapJsApiStrings.touchstart
+import typingsSlinky.amapJsApi.anon.TargetI
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,26 +24,26 @@ import scala.scalajs.js.annotation._
 @js.native
 trait EventMap[I]
   extends typingsSlinky.amapJsApi.AMap.Overlay.EventMap[I] {
-  var change: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.change, AnonTargetI[I]] = js.native
-  var hide: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.hide, AnonTargetI[I]] = js.native
+  var change: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.change, TargetI[I]] = js.native
+  var hide: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.hide, TargetI[I]] = js.native
   var options: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.options, js.UndefOr[scala.Nothing]] = js.native
-  var show: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.show, AnonTargetI[I]] = js.native
+  var show: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.show, TargetI[I]] = js.native
 }
 
 object EventMap {
   @scala.inline
   def apply[I](
-    change: Event_[change, AnonTargetI[I]],
+    change: Event_[change, TargetI[I]],
     click: MapsEvent[click, I],
     dblclick: MapsEvent[dblclick, I],
-    hide: Event_[hide, AnonTargetI[I]],
+    hide: Event_[hide, TargetI[I]],
     mousedown: MapsEvent[mousedown, I],
     mousemove: MapsEvent[mousemove, I],
     mouseover: MapsEvent[mouseover, I],
     mouseup: MapsEvent[mouseup, I],
     options: Event_[options, js.UndefOr[scala.Nothing]],
     rightclick: MapsEvent[rightclick, I],
-    show: Event_[show, AnonTargetI[I]],
+    show: Event_[show, TargetI[I]],
     touchend: MapsEvent[touchend, I],
     touchmove: MapsEvent[touchmove, I],
     touchstart: MapsEvent[touchstart, I]
@@ -58,13 +58,13 @@ object EventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[I] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[I] with Other]
     @scala.inline
-    def withChange(value: Event_[change, AnonTargetI[I]]): Self[I] = {
+    def withChange(value: Event_[change, TargetI[I]]): Self[I] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("change")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withHide(value: Event_[hide, AnonTargetI[I]]): Self[I] = {
+    def withHide(value: Event_[hide, TargetI[I]]): Self[I] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(value.asInstanceOf[js.Any])
         ret
@@ -76,7 +76,7 @@ object EventMap {
         ret
     }
     @scala.inline
-    def withShow(value: Event_[show, AnonTargetI[I]]): Self[I] = {
+    def withShow(value: Event_[show, TargetI[I]]): Self[I] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("show")(value.asInstanceOf[js.Any])
         ret

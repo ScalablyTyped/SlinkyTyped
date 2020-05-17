@@ -2,7 +2,7 @@ package typingsSlinky.reactCircularProgressbar.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
-import typingsSlinky.reactCircularProgressbar.AnonBackground
+import typingsSlinky.reactCircularProgressbar.anon.Background
 import typingsSlinky.reactCircularProgressbar.circularProgressbarMod.default
 import typingsSlinky.reactCircularProgressbar.typesMod.CircularProgressbarProps
 import typingsSlinky.reactCircularProgressbar.typesMod.CircularProgressbarStyles
@@ -22,7 +22,7 @@ object CircularProgressbar {
     backgroundPadding: Double,
     circleRatio: Double,
     className: String,
-    classes: AnonBackground,
+    classes: Background,
     counterClockwise: Boolean,
     maxValue: Double,
     minValue: Double,

@@ -1,7 +1,7 @@
 package typingsSlinky.sipJs.uAMod.UA
 
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.sipJs.AnonBuiltinEnabled
+import typingsSlinky.sipJs.anon.BuiltinEnabled
 import typingsSlinky.sipJs.coreMod.DigestAuthentication
 import typingsSlinky.sipJs.coreMod.URI
 import typingsSlinky.sipJs.libConstantsMod.C.supported
@@ -35,7 +35,7 @@ trait Options extends js.Object {
   var hackViaTcp: js.UndefOr[Boolean] = js.native
   var hackWssInTransport: js.UndefOr[Boolean] = js.native
   var hostportParams: js.UndefOr[js.Any] = js.native
-  var log: js.UndefOr[AnonBuiltinEnabled] = js.native
+  var log: js.UndefOr[BuiltinEnabled] = js.native
   var noAnswerTimeout: js.UndefOr[Double] = js.native
   var password: js.UndefOr[String] = js.native
   var register: js.UndefOr[Boolean] = js.native
@@ -260,7 +260,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withLog(value: AnonBuiltinEnabled): Self = {
+    def withLog(value: BuiltinEnabled): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
         ret

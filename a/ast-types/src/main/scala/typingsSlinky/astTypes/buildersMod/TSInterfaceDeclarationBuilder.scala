@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonDeclareExtends
+import typingsSlinky.astTypes.anon.DeclareExtends
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.kindsMod.TSInterfaceBodyKind
 import typingsSlinky.astTypes.kindsMod.TSQualifiedNameKind
@@ -13,6 +13,6 @@ import scala.scalajs.js.annotation._
 trait TSInterfaceDeclarationBuilder extends js.Object {
   def apply(id: IdentifierKind, body: TSInterfaceBodyKind): TSInterfaceDeclaration = js.native
   def apply(id: TSQualifiedNameKind, body: TSInterfaceBodyKind): TSInterfaceDeclaration = js.native
-  def from(params: AnonDeclareExtends): TSInterfaceDeclaration = js.native
+  def from(params: DeclareExtends): TSInterfaceDeclaration = js.native
 }
 

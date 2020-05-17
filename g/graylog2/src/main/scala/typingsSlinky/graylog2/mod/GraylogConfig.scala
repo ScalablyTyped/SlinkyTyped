@@ -1,6 +1,6 @@
 package typingsSlinky.graylog2.mod
 
-import typingsSlinky.graylog2.Readonlyhoststringportnum
+import typingsSlinky.graylog2.anon.Readonlyhoststringportnum
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

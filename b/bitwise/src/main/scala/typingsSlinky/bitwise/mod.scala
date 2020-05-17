@@ -1,5 +1,11 @@
 package typingsSlinky.bitwise
 
+import typingsSlinky.bitwise.anon.Modify
+import typingsSlinky.bitwise.anon.Nand
+import typingsSlinky.bitwise.anon.ReadWrite
+import typingsSlinky.bitwise.anon.SetBit
+import typingsSlinky.bitwise.anon.`0`
+import typingsSlinky.bitwise.anon.`1`
 import typingsSlinky.bitwise.bitwiseTypesMod.Bit
 import typingsSlinky.bitwise.bitwiseTypesMod.UInt4
 import typingsSlinky.bitwise.bitwiseTypesMod.UInt8
@@ -69,12 +75,12 @@ object mod extends js.Object {
   
   @js.native
   object default extends js.Object {
-    var bits: AnonNand = js.native
-    var buffer: AnonModify = js.native
-    var byte: AnonReadWrite = js.native
-    var integer: AnonSetBit = js.native
-    var nibble: Anon0 = js.native
-    var string: Anon1 = js.native
+    var bits: Nand = js.native
+    var buffer: Modify = js.native
+    var byte: ReadWrite = js.native
+    var integer: SetBit = js.native
+    var nibble: `0` = js.native
+    var string: `1` = js.native
   }
   
   @js.native

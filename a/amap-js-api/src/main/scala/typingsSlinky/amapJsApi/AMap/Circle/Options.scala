@@ -3,6 +3,7 @@ package typingsSlinky.amapJsApi.AMap.Circle
 import typingsSlinky.amapJsApi.AMap.LocationValue
 import typingsSlinky.amapJsApi.AMap.Map
 import typingsSlinky.amapJsApi.AMap.StrokeStyle
+import typingsSlinky.amapJsApi.ReferOverlayOptions
 import typingsSlinky.amapJsApi.amapJsApiStrings.meter
 import typingsSlinky.amapJsApi.amapJsApiStrings.px
 import scala.scalajs.js
@@ -10,7 +11,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Options[ExtraData] extends js.Object {
+trait Options[ExtraData]
+  extends ReferOverlayOptions[js.Any] {
   var bubble: js.UndefOr[Boolean] = js.native
   var center: js.UndefOr[LocationValue] = js.native
   var cursor: js.UndefOr[String] = js.native

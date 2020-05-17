@@ -1,7 +1,5 @@
 package typingsSlinky.graphql.astMod
 
-import typingsSlinky.graphql.graphqlStrings.FragmentDefinition
-import typingsSlinky.graphql.graphqlStrings.OperationDefinition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,19 +12,8 @@ trait ExecutableDefinitionNode extends DefinitionNode
 
 object ExecutableDefinitionNode {
   @scala.inline
-  def OperationDefinitionNode(kind: OperationDefinition, operation: OperationTypeNode, selectionSet: SelectionSetNode): ExecutableDefinitionNode = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], operation = operation.asInstanceOf[js.Any], selectionSet = selectionSet.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ExecutableDefinitionNode]
-  }
+  implicit def apply(value: FragmentDefinitionNode): ExecutableDefinitionNode = value.asInstanceOf[ExecutableDefinitionNode]
   @scala.inline
-  def FragmentDefinitionNode(
-    kind: FragmentDefinition,
-    name: NameNode,
-    selectionSet: SelectionSetNode,
-    typeCondition: NamedTypeNode
-  ): ExecutableDefinitionNode = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selectionSet = selectionSet.asInstanceOf[js.Any], typeCondition = typeCondition.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ExecutableDefinitionNode]
-  }
+  implicit def apply(value: OperationDefinitionNode): ExecutableDefinitionNode = value.asInstanceOf[ExecutableDefinitionNode]
 }
 

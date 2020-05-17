@@ -12,14 +12,8 @@ trait PaletteColorOptions extends js.Object
 
 object PaletteColorOptions {
   @scala.inline
-  def SimplePaletteColorOptions(main: String): PaletteColorOptions = {
-    val __obj = js.Dynamic.literal(main = main.asInstanceOf[js.Any])
-    __obj.asInstanceOf[PaletteColorOptions]
-  }
+  implicit def apply(value: ColorPartial): PaletteColorOptions = value.asInstanceOf[PaletteColorOptions]
   @scala.inline
-  def ColorPartial(): PaletteColorOptions = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[PaletteColorOptions]
-  }
+  implicit def apply(value: SimplePaletteColorOptions): PaletteColorOptions = value.asInstanceOf[PaletteColorOptions]
 }
 

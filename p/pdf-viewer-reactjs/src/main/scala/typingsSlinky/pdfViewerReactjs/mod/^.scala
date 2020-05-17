@@ -1,6 +1,6 @@
 package typingsSlinky.pdfViewerReactjs.mod
 
-import typingsSlinky.pdfViewerReactjs.PartialPDFViewerProps
+import typingsSlinky.pdfViewerReactjs.anon.PartialPDFViewerProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

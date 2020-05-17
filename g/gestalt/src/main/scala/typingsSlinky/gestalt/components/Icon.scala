@@ -2,7 +2,7 @@ package typingsSlinky.gestalt.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.AnonPath
+import typingsSlinky.gestalt.anon.Path
 import typingsSlinky.gestalt.gestaltStrings.blue
 import typingsSlinky.gestalt.gestaltStrings.darkGray
 import typingsSlinky.gestalt.gestaltStrings.eggplant
@@ -40,7 +40,7 @@ object Icon {
       value: blue | darkGray | eggplant | gray | green | lightGray | maroon | midnight | navy | olive | orange | orchid | pine | purple | red | watermelon | white
     ): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
-    def dangerouslySetSvgPath(value: AnonPath): this.type = set("dangerouslySetSvgPath", value.asInstanceOf[js.Any])
+    def dangerouslySetSvgPath(value: Path): this.type = set("dangerouslySetSvgPath", value.asInstanceOf[js.Any])
     @scala.inline
     def icon(value: Icons): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline

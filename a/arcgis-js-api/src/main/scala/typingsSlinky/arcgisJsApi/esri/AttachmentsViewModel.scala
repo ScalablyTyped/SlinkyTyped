@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.add
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.disabled
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.edit
@@ -62,8 +61,4 @@ trait AttachmentsViewModel extends Accessor {
     */
   def getAttachments(): js.Promise[js.Array[AttachmentInfo]] = js.native
 }
-
-@JSGlobal("__esri.AttachmentsViewModel")
-@js.native
-object AttachmentsViewModel extends TopLevel[AttachmentsViewModelConstructor]
 

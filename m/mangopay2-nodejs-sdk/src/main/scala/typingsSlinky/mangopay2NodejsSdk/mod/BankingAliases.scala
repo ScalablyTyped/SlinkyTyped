@@ -1,6 +1,6 @@
 package typingsSlinky.mangopay2NodejsSdk.mod
 
-import typingsSlinky.mangopay2NodejsSdk.PartialOmitCreateIBANBank
+import typingsSlinky.mangopay2NodejsSdk.anon.PartialOmitCreateIBANBank
 import typingsSlinky.mangopay2NodejsSdk.mod.bankingAlias.CreateIBANBankingAlias
 import typingsSlinky.mangopay2NodejsSdk.mod.bankingAlias.IBANBankingAliasData
 import scala.scalajs.js

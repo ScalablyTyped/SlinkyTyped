@@ -1,11 +1,11 @@
 package typingsSlinky.fixedDataTable2.mod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import typingsSlinky.fixedDataTable2.fixedDataTable2Strings.auto
 import typingsSlinky.fixedDataTable2.fixedDataTable2Strings.hidden
 import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -495,7 +495,7 @@ object TableProps {
         ret
     }
     @scala.inline
-    def withOnRowClick(value: (/* event */ SyntheticEvent[Event_, Table], /* rowIndex */ Double) => Unit): Self = {
+    def withOnRowClick(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowClick")(js.Any.fromFunction2(value))
         ret
@@ -507,7 +507,7 @@ object TableProps {
         ret
     }
     @scala.inline
-    def withOnRowDoubleClick(value: (/* event */ SyntheticEvent[Event_, Table], /* rowIndex */ Double) => Unit): Self = {
+    def withOnRowDoubleClick(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowDoubleClick")(js.Any.fromFunction2(value))
         ret
@@ -519,7 +519,7 @@ object TableProps {
         ret
     }
     @scala.inline
-    def withOnRowMouseDown(value: (/* event */ SyntheticEvent[Event_, Table], /* rowIndex */ Double) => Unit): Self = {
+    def withOnRowMouseDown(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowMouseDown")(js.Any.fromFunction2(value))
         ret
@@ -531,7 +531,7 @@ object TableProps {
         ret
     }
     @scala.inline
-    def withOnRowMouseEnter(value: (/* event */ SyntheticEvent[Event_, Table], /* rowIndex */ Double) => Unit): Self = {
+    def withOnRowMouseEnter(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowMouseEnter")(js.Any.fromFunction2(value))
         ret
@@ -543,7 +543,7 @@ object TableProps {
         ret
     }
     @scala.inline
-    def withOnRowMouseLeave(value: (/* event */ SyntheticEvent[Event_, Table], /* rowIndex */ Double) => Unit): Self = {
+    def withOnRowMouseLeave(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowMouseLeave")(js.Any.fromFunction2(value))
         ret
@@ -555,7 +555,7 @@ object TableProps {
         ret
     }
     @scala.inline
-    def withOnRowMouseUp(value: (/* event */ SyntheticEvent[Event_, Table], /* rowIndex */ Double) => Unit): Self = {
+    def withOnRowMouseUp(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowMouseUp")(js.Any.fromFunction2(value))
         ret
@@ -567,7 +567,7 @@ object TableProps {
         ret
     }
     @scala.inline
-    def withOnRowTouchEnd(value: (/* event */ SyntheticEvent[Event_, Table], /* rowIndex */ Double) => Unit): Self = {
+    def withOnRowTouchEnd(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowTouchEnd")(js.Any.fromFunction2(value))
         ret
@@ -579,7 +579,7 @@ object TableProps {
         ret
     }
     @scala.inline
-    def withOnRowTouchMove(value: (/* event */ SyntheticEvent[Event_, Table], /* rowIndex */ Double) => Unit): Self = {
+    def withOnRowTouchMove(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowTouchMove")(js.Any.fromFunction2(value))
         ret
@@ -591,7 +591,7 @@ object TableProps {
         ret
     }
     @scala.inline
-    def withOnRowTouchStart(value: (/* event */ SyntheticEvent[Event_, Table], /* rowIndex */ Double) => Unit): Self = {
+    def withOnRowTouchStart(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowTouchStart")(js.Any.fromFunction2(value))
         ret

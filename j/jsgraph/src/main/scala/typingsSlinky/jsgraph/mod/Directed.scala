@@ -1,8 +1,8 @@
 package typingsSlinky.jsgraph.mod
 
-import typingsSlinky.jsgraph.AnonDirgaph
-import typingsSlinky.jsgraph.AnonError
-import typingsSlinky.jsgraph.AnonResult
+import typingsSlinky.jsgraph.anon.Dirgaph
+import typingsSlinky.jsgraph.anon.Error
+import typingsSlinky.jsgraph.anon.Result
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,10 +12,10 @@ trait Directed extends js.Object {
   var colors: typingsSlinky.jsgraph.mod.colors = js.native
   var directedGraph: DirectedGraph = js.native
   def breadthFirstTraverse(params: TraversalParams): TraversalResult = js.native
-  def create(): AnonResult = js.native
-  def createTraversalContext(req: AnonDirgaph): TraversalContext = js.native
+  def create(): Result = js.native
+  def createTraversalContext(req: Dirgaph): TraversalContext = js.native
   def depthFirstTraverse(params: TraversalParams): TraversalResult = js.native
-  def transpose(graph: DirectedGraph): AnonError = js.native
+  def transpose(graph: DirectedGraph): Error = js.native
 }
 
 object Directed {
@@ -23,11 +23,11 @@ object Directed {
   def apply(
     breadthFirstTraverse: TraversalParams => TraversalResult,
     colors: colors,
-    create: () => AnonResult,
-    createTraversalContext: AnonDirgaph => TraversalContext,
+    create: () => Result,
+    createTraversalContext: Dirgaph => TraversalContext,
     depthFirstTraverse: TraversalParams => TraversalResult,
     directedGraph: DirectedGraph,
-    transpose: DirectedGraph => AnonError
+    transpose: DirectedGraph => Error
   ): Directed = {
     val __obj = js.Dynamic.literal(breadthFirstTraverse = js.Any.fromFunction1(breadthFirstTraverse), colors = colors.asInstanceOf[js.Any], create = js.Any.fromFunction0(create), createTraversalContext = js.Any.fromFunction1(createTraversalContext), depthFirstTraverse = js.Any.fromFunction1(depthFirstTraverse), directedGraph = directedGraph.asInstanceOf[js.Any], transpose = js.Any.fromFunction1(transpose))
     __obj.asInstanceOf[Directed]
@@ -51,13 +51,13 @@ object Directed {
         ret
     }
     @scala.inline
-    def withCreate(value: () => AnonResult): Self = {
+    def withCreate(value: () => Result): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction0(value))
         ret
     }
     @scala.inline
-    def withCreateTraversalContext(value: AnonDirgaph => TraversalContext): Self = {
+    def withCreateTraversalContext(value: Dirgaph => TraversalContext): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("createTraversalContext")(js.Any.fromFunction1(value))
         ret
@@ -75,7 +75,7 @@ object Directed {
         ret
     }
     @scala.inline
-    def withTranspose(value: DirectedGraph => AnonError): Self = {
+    def withTranspose(value: DirectedGraph => Error): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("transpose")(js.Any.fromFunction1(value))
         ret

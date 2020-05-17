@@ -1,8 +1,8 @@
 package typingsSlinky.keystonejsKeystone.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.keystonejsKeystone.AnonField
-import typingsSlinky.keystonejsKeystone.AnonMaxTotalResults
+import typingsSlinky.keystonejsKeystone.anon.Field
+import typingsSlinky.keystonejsKeystone.anon.MaxTotalResults
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,11 +13,11 @@ trait KeystoneOptions extends js.Object {
   var adapters: js.UndefOr[StringDictionary[BaseKeystoneAdapter]] = js.native
   var cookieMaxAge: js.UndefOr[Double] = js.native
   var cookieSecret: js.UndefOr[String] = js.native
-  var defaultAcces: js.UndefOr[AnonField] = js.native
+  var defaultAcces: js.UndefOr[Field] = js.native
   var defaultAdapter: js.UndefOr[String] = js.native
   var name: String = js.native
   var onConnect: js.UndefOr[js.Function0[Unit]] = js.native
-  var queryLimits: js.UndefOr[AnonMaxTotalResults] = js.native
+  var queryLimits: js.UndefOr[MaxTotalResults] = js.native
    // TODO: bring in express session types
   var schemaNames: js.UndefOr[js.Array[String]] = js.native
   var secureCookies: js.UndefOr[Boolean] = js.native
@@ -85,7 +85,7 @@ object KeystoneOptions {
         ret
     }
     @scala.inline
-    def withDefaultAcces(value: AnonField): Self = {
+    def withDefaultAcces(value: Field): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAcces")(value.asInstanceOf[js.Any])
         ret
@@ -121,7 +121,7 @@ object KeystoneOptions {
         ret
     }
     @scala.inline
-    def withQueryLimits(value: AnonMaxTotalResults): Self = {
+    def withQueryLimits(value: MaxTotalResults): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("queryLimits")(value.asInstanceOf[js.Any])
         ret

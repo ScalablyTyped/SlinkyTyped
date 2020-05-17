@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait GroupFieldRef extends _Field {
+trait GroupFieldRef extends Field {
   var group: Field = js.native
   var level: js.UndefOr[Double] = js.native
 }

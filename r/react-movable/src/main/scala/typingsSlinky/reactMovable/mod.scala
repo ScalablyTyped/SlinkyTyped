@@ -1,5 +1,6 @@
 package typingsSlinky.reactMovable
 
+import typingsSlinky.reactMovable.anon.LockVertically
 import typingsSlinky.reactMovable.listMod.default
 import typingsSlinky.reactMovable.typesMod.IProps
 import scala.scalajs.js
@@ -19,7 +20,7 @@ object mod extends js.Object {
   /* static members */
   @js.native
   object List extends js.Object {
-    var defaultProps: AnonLockVertically = js.native
+    var defaultProps: LockVertically = js.native
   }
   
 }

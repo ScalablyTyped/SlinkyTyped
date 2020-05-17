@@ -1,7 +1,7 @@
 package typingsSlinky.wegameApi.wx.types
 
-import typingsSlinky.wegameApi.Anon0
-import typingsSlinky.wegameApi.AnonErrMsg
+import typingsSlinky.wegameApi.anon.ErrMsg
+import typingsSlinky.wegameApi.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,9 +10,9 @@ import scala.scalajs.js.annotation._
 trait ReadfileParams extends js.Object {
   var complete: js.UndefOr[js.Function0[Unit]] = js.native
   var encoding: js.UndefOr[FileContentEncoding] = js.native
-  var fail: js.UndefOr[js.Function1[/* res */ AnonErrMsg, Unit]] = js.native
+  var fail: js.UndefOr[js.Function1[/* res */ ErrMsg, Unit]] = js.native
   var filePath: String = js.native
-  var success: js.UndefOr[js.Function1[/* res */ Anon0, Unit]] = js.native
+  var success: js.UndefOr[js.Function1[/* res */ `0`, Unit]] = js.native
 }
 
 object ReadfileParams {
@@ -58,7 +58,7 @@ object ReadfileParams {
         ret
     }
     @scala.inline
-    def withFail(value: /* res */ AnonErrMsg => Unit): Self = {
+    def withFail(value: /* res */ ErrMsg => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction1(value))
         ret
@@ -70,7 +70,7 @@ object ReadfileParams {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ Anon0 => Unit): Self = {
+    def withSuccess(value: /* res */ `0` => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

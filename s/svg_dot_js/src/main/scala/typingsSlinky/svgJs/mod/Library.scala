@@ -1,10 +1,10 @@
 package typingsSlinky.svgJs.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.svgJs.Anon
-import typingsSlinky.svgJs.AnonAttrs
-import typingsSlinky.svgJs.AnonDegrees
-import typingsSlinky.svgJs.AnonDelimiter
+import typingsSlinky.svgJs.anon.Attrs
+import typingsSlinky.svgJs.anon.Degrees
+import typingsSlinky.svgJs.anon.Delimiter
+import typingsSlinky.svgJs.anon._empty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,14 +61,14 @@ trait Library extends js.Object {
   var Tspan: typingsSlinky.svgJs.mod.Tspan = js.native
   var Use: typingsSlinky.svgJs.mod.Use = js.native
   var ViewBox: typingsSlinky.svgJs.mod.ViewBox = js.native
-  var defaults: AnonAttrs = js.native
+  var defaults: Attrs = js.native
   var did: Double = js.native
-  var easing: Anon = js.native
+  var easing: _empty = js.native
   var ns: String = js.native
-  var regex: AnonDelimiter = js.native
+  var regex: Delimiter = js.native
   var supported: Boolean = js.native
   var svgjs: String = js.native
-  var utils: AnonDegrees = js.native
+  var utils: Degrees = js.native
   var xlink: String = js.native
   var xmlns: String = js.native
   def apply(domElement: HTMLElement): Doc = js.native

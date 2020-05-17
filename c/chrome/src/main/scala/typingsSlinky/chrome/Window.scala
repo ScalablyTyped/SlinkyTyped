@@ -1,5 +1,6 @@
 package typingsSlinky.chrome
 
+import typingsSlinky.chrome.anon.Typeofchrome
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,7 @@
 package typingsSlinky.qlik.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait Extension extends js.Object {
   var paint_Original: Paint = js.native
   var support: js.UndefOr[Support] = js.native
   def paint(
-    $element: js.UndefOr[JQuery_[HTMLElement]],
+    $element: js.UndefOr[JQuery[HTMLElement]],
     layout: js.UndefOr[Layout],
     qDimensionInfo: js.UndefOr[NxDimensionInfo],
     qMeasureInfo: js.UndefOr[NxDimensionInfo],

@@ -14,36 +14,12 @@ trait ModuleSpecifier extends Node
 
 object ModuleSpecifier {
   @scala.inline
-  def ImportSpecifier(
-    imported: Identifier,
-    local: Identifier,
-    `type`: typingsSlinky.estree.estreeStrings.ImportSpecifier
-  ): ModuleSpecifier = {
-    val __obj = js.Dynamic.literal(imported = imported.asInstanceOf[js.Any], local = local.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ModuleSpecifier]
-  }
+  implicit def apply(value: ExportSpecifier): ModuleSpecifier = value.asInstanceOf[ModuleSpecifier]
   @scala.inline
-  def ImportDefaultSpecifier(local: Identifier, `type`: typingsSlinky.estree.estreeStrings.ImportDefaultSpecifier): ModuleSpecifier = {
-    val __obj = js.Dynamic.literal(local = local.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ModuleSpecifier]
-  }
+  implicit def apply(value: ImportDefaultSpecifier): ModuleSpecifier = value.asInstanceOf[ModuleSpecifier]
   @scala.inline
-  def ImportNamespaceSpecifier(local: Identifier, `type`: typingsSlinky.estree.estreeStrings.ImportNamespaceSpecifier): ModuleSpecifier = {
-    val __obj = js.Dynamic.literal(local = local.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ModuleSpecifier]
-  }
+  implicit def apply(value: ImportNamespaceSpecifier): ModuleSpecifier = value.asInstanceOf[ModuleSpecifier]
   @scala.inline
-  def ExportSpecifier(
-    exported: Identifier,
-    local: Identifier,
-    `type`: typingsSlinky.estree.estreeStrings.ExportSpecifier
-  ): ModuleSpecifier = {
-    val __obj = js.Dynamic.literal(exported = exported.asInstanceOf[js.Any], local = local.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ModuleSpecifier]
-  }
+  implicit def apply(value: ImportSpecifier): ModuleSpecifier = value.asInstanceOf[ModuleSpecifier]
 }
 

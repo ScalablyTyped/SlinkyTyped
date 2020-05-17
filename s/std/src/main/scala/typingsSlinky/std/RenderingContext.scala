@@ -12,3 +12,14 @@ import scala.scalajs.js.annotation._
 */
 trait RenderingContext extends js.Object
 
+object RenderingContext {
+  @scala.inline
+  implicit def apply(value: org.scalajs.dom.raw.CanvasRenderingContext2D): RenderingContext = value.asInstanceOf[RenderingContext]
+  @scala.inline
+  implicit def apply(value: ImageBitmapRenderingContext): RenderingContext = value.asInstanceOf[RenderingContext]
+  @scala.inline
+  implicit def apply(value: WebGL2RenderingContext): RenderingContext = value.asInstanceOf[RenderingContext]
+  @scala.inline
+  implicit def apply(value: org.scalajs.dom.raw.WebGLRenderingContext): RenderingContext = value.asInstanceOf[RenderingContext]
+}
+

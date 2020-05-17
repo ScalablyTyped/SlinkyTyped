@@ -1,6 +1,6 @@
 package typingsSlinky.mqttPacket.mod
 
-import typingsSlinky.mqttPacket.AnonReasonString
+import typingsSlinky.mqttPacket.anon.ReasonString
 import typingsSlinky.mqttPacket.mqttPacketStrings.suback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +13,7 @@ trait ISubackPacket
   @JSName("cmd")
   var cmd_ISubackPacket: suback = js.native
   var granted: js.Array[Double | js.Object] = js.native
-  var properties: js.UndefOr[AnonReasonString] = js.native
+  var properties: js.UndefOr[ReasonString] = js.native
 }
 
 object ISubackPacket {
@@ -41,7 +41,7 @@ object ISubackPacket {
         ret
     }
     @scala.inline
-    def withProperties(value: AnonReasonString): Self = {
+    def withProperties(value: ReasonString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.graphqlReact.mod
 
-import typingsSlinky.graphqlReact.AnonLocations
+import typingsSlinky.graphqlReact.anon.Locations
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait GraphQLCacheValue[T] extends js.Object {
   var data: T = js.native
   var fetchError: Null | String = js.native
-  var graphQLErrors: Null | js.Array[AnonLocations] = js.native
+  var graphQLErrors: Null | js.Array[Locations] = js.native
   var httpError: Null | HttpError = js.native
   var parseError: Null | String = js.native
 }
@@ -45,7 +45,7 @@ object GraphQLCacheValue {
         ret
     }
     @scala.inline
-    def withGraphQLErrors(value: js.Array[AnonLocations]): Self[T] = {
+    def withGraphQLErrors(value: js.Array[Locations]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("graphQLErrors")(value.asInstanceOf[js.Any])
         ret

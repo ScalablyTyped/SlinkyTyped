@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignProLayout.typingsMod
 
-import typingsSlinky.antDesignProLayout.AnonPathname
+import typingsSlinky.antDesignProLayout.anon.Pathname
 import typingsSlinky.history.mod.History
 import typingsSlinky.history.mod.Location
 import typingsSlinky.history.mod.LocationState
@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 trait RouterTypes[P] extends js.Object {
   var computedMatch: js.UndefOr[`match`[P]] = js.native
   var history: History[LocationState] = js.native
-  var location: Location[LocationState] | AnonPathname = js.native
+  var location: Location[LocationState] | Pathname = js.native
   var `match`: typingsSlinky.reactRouter.mod.`match`[js.Object] = js.native
   var route: js.UndefOr[Route] = js.native
   var staticContext: js.UndefOr[StaticContext] = js.native
@@ -25,7 +25,7 @@ object RouterTypes {
   @scala.inline
   def apply[P](
     history: History[LocationState],
-    location: Location[LocationState] | AnonPathname,
+    location: Location[LocationState] | Pathname,
     `match`: `match`[js.Object]
   ): RouterTypes[P] = {
     val __obj = js.Dynamic.literal(history = history.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any])
@@ -45,7 +45,7 @@ object RouterTypes {
         ret
     }
     @scala.inline
-    def withLocation(value: Location[LocationState] | AnonPathname): Self[P] = {
+    def withLocation(value: Location[LocationState] | Pathname): Self[P] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
         ret

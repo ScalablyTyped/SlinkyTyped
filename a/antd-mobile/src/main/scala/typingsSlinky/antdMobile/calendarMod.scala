@@ -1,5 +1,7 @@
 package typingsSlinky.antdMobile
 
+import typingsSlinky.antdMobile.anon.AntLocale
+import typingsSlinky.antdMobile.anon.TimePickerPickerPrefixCls
 import typingsSlinky.antdMobile.calendarPropsTypeMod.CalendarProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -19,8 +21,8 @@ object calendarMod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var contextTypes: AnonAntLocale = js.native
-    var defaultProps: AnonTimePickerPickerPrefixCls = js.native
+    var contextTypes: AntLocale = js.native
+    var defaultProps: TimePickerPickerPrefixCls = js.native
   }
   
 }

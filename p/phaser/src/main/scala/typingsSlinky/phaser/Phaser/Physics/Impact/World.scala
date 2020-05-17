@@ -7,7 +7,6 @@ import typingsSlinky.phaser.Phaser.Structs.Set
 import typingsSlinky.phaser.Phaser.Tilemaps.DynamicTilemapLayer
 import typingsSlinky.phaser.Phaser.Tilemaps.StaticTilemapLayer
 import typingsSlinky.phaser.Phaser.Types.Physics.Impact.CollisionOptions
-import typingsSlinky.phaser.Phaser.Types.Physics.Impact.WorldConfig
 import typingsSlinky.phaser.Phaser.Types.Physics.Impact.WorldDefaults
 import typingsSlinky.phaser.Phaser.Types.Physics.Impact.WorldWalls
 import typingsSlinky.phaser.integer
@@ -18,15 +17,8 @@ import scala.scalajs.js.annotation._
 /**
   * [description]
   */
-@JSGlobal("Phaser.Physics.Impact.World")
 @js.native
-class World protected () extends EventEmitter {
-  /**
-    * 
-    * @param scene The Scene to which this Impact World instance belongs.
-    * @param config [description]
-    */
-  def this(scene: Scene, config: WorldConfig) = this()
+trait World extends EventEmitter {
   /**
     * [description]
     */

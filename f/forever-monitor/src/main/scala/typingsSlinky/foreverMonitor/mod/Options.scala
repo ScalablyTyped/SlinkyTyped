@@ -1,6 +1,6 @@
 package typingsSlinky.foreverMonitor.mod
 
-import typingsSlinky.foreverMonitor.AnonArgs
+import typingsSlinky.foreverMonitor.anon.Args
 import typingsSlinky.node.NodeJS.ProcessEnv
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ trait Options extends js.Object {
   var max: js.UndefOr[Double] = js.native
   var minUptime: js.UndefOr[Double] = js.native
   var outFile: js.UndefOr[String] = js.native
-  var parser: js.UndefOr[js.Function2[/* command */ String, /* args */ js.Array[String], AnonArgs]] = js.native
+  var parser: js.UndefOr[js.Function2[/* command */ String, /* args */ js.Array[String], Args]] = js.native
   var pidFile: js.UndefOr[String] = js.native
   var silent: js.UndefOr[Boolean] = js.native
   var sourceDir: js.UndefOr[String] = js.native
@@ -164,7 +164,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withParser(value: (/* command */ String, /* args */ js.Array[String]) => AnonArgs): Self = {
+    def withParser(value: (/* command */ String, /* args */ js.Array[String]) => Args): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(js.Any.fromFunction2(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.jestCli.typesMod
 
-import typingsSlinky.jestCli.PartialInitialOptions
+import typingsSlinky.jestCli.anon.PartialInitialOptions
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DelegateMiddleware extends js.Object {
+trait DelegateMiddleware extends Middleware {
   def register(endpoint: Endpoint): SimpleMiddleware = js.native
 }
 

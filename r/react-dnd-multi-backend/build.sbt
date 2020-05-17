@@ -1,19 +1,19 @@
 organization := "org.scalablytyped.slinky"
 name := "react-dnd-multi-backend"
-version := "5.0-dt-20200128Z-4e93fc"
-scalaVersion := "2.13.1"
+version := "5.0-dt-20200128Z-36a0bf"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-fa3762",
-  "org.scalablytyped.slinky" %%% "dnd-core" % "9.5.1-14e2a2",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-24495c",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200409Z-47fb9f",
-  "org.scalablytyped.slinky" %%% "redux" % "4.0.5-e999f1",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-e9335f",
+  "org.scalablytyped.slinky" %%% "dnd-core" % "9.5.1-049dd4",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-7e1d98",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200409Z-36b705",
+  "org.scalablytyped.slinky" %%% "redux" % "4.0.5-d1b67b",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

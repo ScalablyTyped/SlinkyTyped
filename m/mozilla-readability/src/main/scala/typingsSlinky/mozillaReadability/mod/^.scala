@@ -1,6 +1,6 @@
 package typingsSlinky.mozillaReadability.mod
 
-import typingsSlinky.std.Document_
+import org.scalajs.dom.raw.Document
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("mozilla-readability", JSImport.Namespace)
 @js.native
 class ^ protected () extends Readability {
-  def this(doc: Document_) = this()
-  def this(doc: Document_, options: Options) = this()
+  def this(doc: Document) = this()
+  def this(doc: Document, options: Options) = this()
 }
 

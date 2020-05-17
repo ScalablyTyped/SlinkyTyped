@@ -1,0 +1,14 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * A command to insert the line break at the current position in the document.
+  */
+@JSGlobal("InsertLineBreakCommand")
+@js.native
+class InsertLineBreakCommand ()
+  extends typingsSlinky.devexpressWeb.InsertLineBreakCommand
+

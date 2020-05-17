@@ -1,6 +1,7 @@
 package typingsSlinky.rcTreeSelect
 
 import slinky.core.TagMod
+import typingsSlinky.rcTreeSelect.anon.FilterOption
 import typingsSlinky.rcTreeSelect.interfaceMod.DataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.DefaultValueType
 import typingsSlinky.rcTreeSelect.interfaceMod.FlattenDataNode
@@ -15,11 +16,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object valueUtilMod extends js.Object {
   def addValue(rawValues: js.Array[RawValueType], value: RawValueType): js.Array[String | Double] = js.native
-  def filterOptions(
-    searchValue: String,
-    options: js.Array[DataNode],
-    hasOptionFilterPropFilterOption: AnonFilterOption
-  ): js.Array[DataNode] = js.native
+  def filterOptions(searchValue: String, options: js.Array[DataNode], hasOptionFilterPropFilterOption: FilterOption): js.Array[DataNode] = js.native
   def findValueOption(values: js.Array[RawValueType], options: js.Array[FlattenDataNode]): js.Array[DataNode] = js.native
   def flattenOptions(options: js.Array[DataNode]): js.Array[FlattenDataNode] = js.native
   def getRawValueLabeled(

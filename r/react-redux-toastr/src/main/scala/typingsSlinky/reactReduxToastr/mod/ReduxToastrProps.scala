@@ -1,6 +1,6 @@
 package typingsSlinky.reactReduxToastr.mod
 
-import typingsSlinky.reactReduxToastr.AnonCancelText
+import typingsSlinky.reactReduxToastr.anon.CancelText
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait ReduxToastrProps extends js.Object {
   var className: js.UndefOr[String] = js.native
   var closeOnToastrClick: js.UndefOr[Boolean] = js.native
-  var confirmOptions: js.UndefOr[AnonCancelText] = js.native
+  var confirmOptions: js.UndefOr[CancelText] = js.native
   var newestOnTop: js.UndefOr[Boolean] = js.native
   var options: js.UndefOr[js.Any] = js.native
    // This is currently not used, waiting for response from the package author to remove
@@ -59,7 +59,7 @@ object ReduxToastrProps {
         ret
     }
     @scala.inline
-    def withConfirmOptions(value: AnonCancelText): Self = {
+    def withConfirmOptions(value: CancelText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("confirmOptions")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.trtcJsSdk.mod
 
-import typingsSlinky.trtcJsSdk.AnonAudio
-import typingsSlinky.trtcJsSdk.AnonCurState
+import typingsSlinky.trtcJsSdk.anon.Audio
+import typingsSlinky.trtcJsSdk.anon.CurState
 import typingsSlinky.trtcJsSdk.trtcJsSdkStrings.Asterisk
 import typingsSlinky.trtcJsSdk.trtcJsSdkStrings.`client-banned`
 import typingsSlinky.trtcJsSdk.trtcJsSdkStrings.`connection-state-changed`
@@ -49,7 +49,7 @@ trait Client extends js.Object {
   @JSName("off")
   def off_clientbanned(event: `client-banned`, handler: Callback[RtcError]): Unit = js.native
   @JSName("off")
-  def off_connectionstatechanged(event: `connection-state-changed`, handler: Callback[AnonCurState]): Unit = js.native
+  def off_connectionstatechanged(event: `connection-state-changed`, handler: Callback[CurState]): Unit = js.native
   @JSName("off")
   def off_error(event: error, handler: Callback[RtcError]): Unit = js.native
   @JSName("off")
@@ -76,7 +76,7 @@ trait Client extends js.Object {
   @JSName("on")
   def on_clientbanned(event: `client-banned`, handler: Callback[RtcError]): Unit = js.native
   @JSName("on")
-  def on_connectionstatechanged(event: `connection-state-changed`, handler: Callback[AnonCurState]): Unit = js.native
+  def on_connectionstatechanged(event: `connection-state-changed`, handler: Callback[CurState]): Unit = js.native
   @JSName("on")
   def on_error(event: error, handler: Callback[RtcError]): Unit = js.native
   @JSName("on")
@@ -148,7 +148,7 @@ trait Client extends js.Object {
     * ```
     */
   def subscribe(stream: RemoteStream): Unit = js.native
-  def subscribe(stream: RemoteStream, options: AnonAudio): Unit = js.native
+  def subscribe(stream: RemoteStream, options: Audio): Unit = js.native
   /** 切换用户角色 */
   def switchRole(role: Role): js.Promise[Unit] = js.native
   /** 取消发布本地流。 取消发布本地流后远端会收到 'stream-removed' 事件通知。 */

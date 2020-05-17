@@ -27,9 +27,8 @@ import scala.scalajs.js.annotation._
 			 * Note: Apple introduced two new constants <Titanium.UI.iOS.BLUR_EFFECT_STYLE_REGULAR> and <Titanium.UI.iOS.BLUR_EFFECT_STYLE_PROMINENT> in
 			 * iOS 10. These are internally mapped to <Titanium.UI.iOS.BLUR_EFFECT_STYLE_LIGHT> and <Titanium.UI.iOS.BLUR_EFFECT_STYLE_EXTRA_LIGHT>.
 			 */
-@JSGlobal("Titanium.UI.iOS.BlurView")
 @js.native
-class BlurView () extends View {
+trait BlurView extends View {
   /**
   				 * The effect you provide for the view.
   				 */

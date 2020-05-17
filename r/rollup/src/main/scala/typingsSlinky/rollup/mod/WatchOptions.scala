@@ -1,6 +1,6 @@
 package typingsSlinky.rollup.mod
 
-import typingsSlinky.rollup.AnonPollInterval
+import typingsSlinky.rollup.anon.PollInterval
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait WatchOptions extends js.Object {
   var alwaysStat: js.UndefOr[Boolean] = js.native
   var atomic: js.UndefOr[Boolean | Double] = js.native
-  var awaitWriteFinish: js.UndefOr[AnonPollInterval | Boolean] = js.native
+  var awaitWriteFinish: js.UndefOr[PollInterval | Boolean] = js.native
   var binaryInterval: js.UndefOr[Double] = js.native
   var cwd: js.UndefOr[String] = js.native
   var depth: js.UndefOr[Double] = js.native
@@ -61,7 +61,7 @@ object WatchOptions {
         ret
     }
     @scala.inline
-    def withAwaitWriteFinish(value: AnonPollInterval | Boolean): Self = {
+    def withAwaitWriteFinish(value: PollInterval | Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("awaitWriteFinish")(value.asInstanceOf[js.Any])
         ret

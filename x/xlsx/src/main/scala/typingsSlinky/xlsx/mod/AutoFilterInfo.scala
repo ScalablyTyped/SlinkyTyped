@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait AutoFilterInfo extends _WSKeys {
+trait AutoFilterInfo extends WSKeys {
   /** Range of the AutoFilter table */
   var ref: String = js.native
 }

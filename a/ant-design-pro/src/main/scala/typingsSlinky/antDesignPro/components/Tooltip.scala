@@ -2,7 +2,7 @@ package typingsSlinky.antDesignPro.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.bizcharts.AnonStyle
+import typingsSlinky.bizcharts.anon.Style
 import typingsSlinky.bizcharts.mod.PositionType
 import typingsSlinky.bizcharts.mod.TooltipProps
 import typingsSlinky.bizcharts.mod.triggerOnType
@@ -23,7 +23,7 @@ object Tooltip {
     @scala.inline
     def containerTpl(value: String): this.type = set("containerTpl", value.asInstanceOf[js.Any])
     @scala.inline
-    def crosshairs(value: AnonStyle | Boolean): this.type = set("crosshairs", value.asInstanceOf[js.Any])
+    def crosshairs(value: Style | Boolean): this.type = set("crosshairs", value.asInstanceOf[js.Any])
     @scala.inline
     def enterable(value: Boolean): this.type = set("enterable", value.asInstanceOf[js.Any])
     @scala.inline

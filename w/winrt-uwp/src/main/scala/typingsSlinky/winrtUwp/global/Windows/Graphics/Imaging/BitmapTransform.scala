@@ -1,0 +1,13 @@
+package typingsSlinky.winrtUwp.global.Windows.Graphics.Imaging
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Contains transformations that can be applied to pixel data. */
+@JSGlobal("Windows.Graphics.Imaging.BitmapTransform")
+@js.native
+/** Creates a new BitmapTransform object. */
+class BitmapTransform ()
+  extends typingsSlinky.winrtUwp.Windows.Graphics.Imaging.BitmapTransform
+

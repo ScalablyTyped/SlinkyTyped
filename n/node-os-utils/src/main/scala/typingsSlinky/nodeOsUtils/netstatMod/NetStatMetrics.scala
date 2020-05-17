@@ -1,19 +1,19 @@
 package typingsSlinky.nodeOsUtils.netstatMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.nodeOsUtils.AnonInputMb
+import typingsSlinky.nodeOsUtils.anon.InputMb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait NetStatMetrics extends /* key */ StringDictionary[AnonInputMb] {
-  var total: AnonInputMb = js.native
+trait NetStatMetrics extends /* key */ StringDictionary[InputMb] {
+  var total: InputMb = js.native
 }
 
 object NetStatMetrics {
   @scala.inline
-  def apply(total: AnonInputMb): NetStatMetrics = {
+  def apply(total: InputMb): NetStatMetrics = {
     val __obj = js.Dynamic.literal(total = total.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetStatMetrics]
   }
@@ -24,7 +24,7 @@ object NetStatMetrics {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTotal(value: AnonInputMb): Self = {
+    def withTotal(value: InputMb): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
         ret

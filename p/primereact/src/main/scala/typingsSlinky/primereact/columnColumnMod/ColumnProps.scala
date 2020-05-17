@@ -1,7 +1,7 @@
 package typingsSlinky.primereact.columnColumnMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.primereact.AnonField
+import typingsSlinky.primereact.anon.Field
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,7 +44,7 @@ trait ColumnProps extends js.Object {
   var rowSpan: js.UndefOr[Double] = js.native
   var selectionMode: js.UndefOr[String] = js.native
   var sortField: js.UndefOr[String] = js.native
-  var sortFunction: js.UndefOr[js.Function1[/* e */ AnonField, Unit]] = js.native
+  var sortFunction: js.UndefOr[js.Function1[/* e */ Field, Unit]] = js.native
   var sortable: js.UndefOr[Boolean] = js.native
   var style: js.UndefOr[js.Object] = js.native
 }
@@ -494,7 +494,7 @@ object ColumnProps {
         ret
     }
     @scala.inline
-    def withSortFunction(value: /* e */ AnonField => Unit): Self = {
+    def withSortFunction(value: /* e */ Field => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sortFunction")(js.Any.fromFunction1(value))
         ret

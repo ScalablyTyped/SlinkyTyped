@@ -1,8 +1,5 @@
 package typingsSlinky.webAnimationsJs
 
-import org.scalablytyped.runtime.Instantiable0
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.std.AnimationEffect
 import typingsSlinky.std.AnimationPlayState
 import typingsSlinky.std.EventListener
@@ -40,15 +37,4 @@ trait Animation extends EventTarget {
   def removeEventListener_finish(`type`: finish, handler: EventListener): Unit = js.native
   def reverse(): Unit = js.native
 }
-
-@JSGlobal("Animation")
-@js.native
-object Animation
-  extends Instantiable0[Animation]
-     with Instantiable1[/* effect */ AnimationEffect, Animation]
-     with Instantiable2[
-      (/* effect */ AnimationEffect) | (/* effect */ Null), 
-      /* timeline */ AnimationTimeline, 
-      Animation
-    ]
 

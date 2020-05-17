@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait HTMLOrSVGImageElement extends CanvasImageSource
 
+object HTMLOrSVGImageElement {
+  @scala.inline
+  implicit def apply(value: org.scalajs.dom.raw.HTMLImageElement): HTMLOrSVGImageElement = value.asInstanceOf[HTMLOrSVGImageElement]
+  @scala.inline
+  implicit def apply(value: org.scalajs.dom.raw.SVGImageElement): HTMLOrSVGImageElement = value.asInstanceOf[HTMLOrSVGImageElement]
+}
+

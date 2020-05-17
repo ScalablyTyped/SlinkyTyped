@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.Networking.Connectivity
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Represents physical identification data for a specific NetworkAdapter object. */
+@JSGlobal("Windows.Networking.Connectivity.LanIdentifier")
+@js.native
+abstract class LanIdentifier ()
+  extends typingsSlinky.winrtUwp.Windows.Networking.Connectivity.LanIdentifier
+

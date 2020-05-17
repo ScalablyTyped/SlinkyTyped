@@ -5,9 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.parse5.mod.Node because Already inherited
 - typingsSlinky.parse5.mod.DefaultTreeNode because Already inherited
 - typingsSlinky.parse5.mod.DefaultTreeParentNode because var conflicts: nodeName. Inlined childNodes */ @js.native
-trait DefaultTreeElement extends DefaultTreeChildNode {
+trait DefaultTreeElement
+  extends DefaultTreeChildNode
+     with Element
+     with ParentNode {
   /**
     * List of element attributes.
     */

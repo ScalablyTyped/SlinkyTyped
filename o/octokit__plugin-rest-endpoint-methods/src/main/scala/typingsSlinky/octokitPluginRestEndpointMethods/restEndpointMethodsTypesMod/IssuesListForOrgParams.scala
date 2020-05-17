@@ -34,7 +34,8 @@ trait IssuesListForOrgParams extends js.Object {
     * A list of comma separated label names. Example: `bug,ui,@high`
     */
   var labels: js.UndefOr[String] = js.native
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
   /**
     * Page number of the results to fetch.
     */
@@ -59,8 +60,9 @@ trait IssuesListForOrgParams extends js.Object {
 
 object IssuesListForOrgParams {
   @scala.inline
-  def apply(org: String): IssuesListForOrgParams = {
-    val __obj = js.Dynamic.literal(org = org.asInstanceOf[js.Any])
+  def apply(org_ : String): IssuesListForOrgParams = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[IssuesListForOrgParams]
   }
   @scala.inline
@@ -70,7 +72,7 @@ object IssuesListForOrgParams {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

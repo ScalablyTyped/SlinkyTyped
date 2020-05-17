@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientBlogger.gapi.client.blogger
 
-import typingsSlinky.gapiClientBlogger.AnonCount
+import typingsSlinky.gapiClientBlogger.anon.Count
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait Pageviews extends js.Object {
   /** Blog Id */
   var blogId: js.UndefOr[String] = js.native
   /** The container of posts in this blog. */
-  var counts: js.UndefOr[js.Array[AnonCount]] = js.native
+  var counts: js.UndefOr[js.Array[Count]] = js.native
   /** The kind of this entry. Always blogger#page_views */
   var kind: js.UndefOr[String] = js.native
 }
@@ -40,7 +40,7 @@ object Pageviews {
         ret
     }
     @scala.inline
-    def withCounts(value: js.Array[AnonCount]): Self = {
+    def withCounts(value: js.Array[Count]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("counts")(value.asInstanceOf[js.Any])
         ret

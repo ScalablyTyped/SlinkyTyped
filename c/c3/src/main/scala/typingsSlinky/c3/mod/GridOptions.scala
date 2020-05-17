@@ -1,15 +1,15 @@
 package typingsSlinky.c3.mod
 
-import typingsSlinky.c3.AnonFront
-import typingsSlinky.c3.AnonShow
+import typingsSlinky.c3.anon.Front
+import typingsSlinky.c3.anon.Show
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait GridOptions extends js.Object {
-  var focus: js.UndefOr[AnonShow] = js.native
-  var lines: js.UndefOr[AnonFront] = js.native
+  var focus: js.UndefOr[Show] = js.native
+  var lines: js.UndefOr[Front] = js.native
   var x: js.UndefOr[AxisGridOptions] = js.native
   var y: js.UndefOr[AxisGridOptions] = js.native
 }
@@ -27,7 +27,7 @@ object GridOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFocus(value: AnonShow): Self = {
+    def withFocus(value: Show): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(value.asInstanceOf[js.Any])
         ret
@@ -39,7 +39,7 @@ object GridOptions {
         ret
     }
     @scala.inline
-    def withLines(value: AnonFront): Self = {
+    def withLines(value: Front): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lines")(value.asInstanceOf[js.Any])
         ret

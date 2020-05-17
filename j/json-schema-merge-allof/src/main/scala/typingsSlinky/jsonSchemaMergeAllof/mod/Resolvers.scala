@@ -1,6 +1,6 @@
 package typingsSlinky.jsonSchemaMergeAllof.mod
 
-import typingsSlinky.jsonSchemaMergeAllof.AnonAdditionalProperties
+import typingsSlinky.jsonSchemaMergeAllof.anon.AdditionalProperties
 import typingsSlinky.jsonSchemaMergeAllof.jsonSchemaMergeAllofStrings.additionalProperties
 import typingsSlinky.jsonSchemaMergeAllof.jsonSchemaMergeAllofStrings.patternProperties
 import typingsSlinky.jsonSchemaMergeAllof.jsonSchemaMergeAllofStrings.properties
@@ -15,13 +15,13 @@ trait Resolvers[Schema /* <: JSONSchema */] extends js.Object {
   @JSName("$id")
   def $id_id(
     values: js.Array[
-      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonId>['$id'] */ js.Any
+      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.Id>['$id'] */ js.Any
     ],
     path: js.Array[String],
     mergeSchemas: MergeSchemas,
     options: Options_[Schema]
   ): NonNullable[
-    /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonId>['$id'] */ js.Any
+    /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.Id>['$id'] */ js.Any
   ] = js.native
   @JSName("$ref")
   def $ref_ref(
@@ -81,13 +81,13 @@ trait Resolvers[Schema /* <: JSONSchema */] extends js.Object {
   @JSName("contains")
   def contains_contains(
     values: js.Array[
-      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonContains>['contains'] */ js.Any
+      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.Contains>['contains'] */ js.Any
     ],
     path: js.Array[String],
     mergeSchemas: MergeSchemas,
     options: Options_[Schema]
   ): NonNullable[
-    /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonContains>['contains'] */ js.Any
+    /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.Contains>['contains'] */ js.Any
   ] = js.native
   @JSName("default")
   def default_default(
@@ -147,13 +147,13 @@ trait Resolvers[Schema /* <: JSONSchema */] extends js.Object {
   @JSName("examples")
   def examples_examples(
     values: js.Array[
-      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonExamples>['examples'] */ js.Any
+      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.Examples>['examples'] */ js.Any
     ],
     path: js.Array[String],
     mergeSchemas: MergeSchemas,
     options: Options_[Schema]
   ): NonNullable[
-    /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonExamples>['examples'] */ js.Any
+    /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.Examples>['examples'] */ js.Any
   ] = js.native
   @JSName("exclusiveMaximum")
   def exclusiveMaximum_exclusiveMaximum(
@@ -360,7 +360,7 @@ trait Resolvers[Schema /* <: JSONSchema */] extends js.Object {
   def properties(
     values: js.Array[Schema],
     path: js.Array[String],
-    mergers: AnonAdditionalProperties,
+    mergers: AdditionalProperties,
     options: Options_[Schema]
   ): Pick[
     Schema, 
@@ -369,13 +369,13 @@ trait Resolvers[Schema /* <: JSONSchema */] extends js.Object {
   @JSName("propertyNames")
   def propertyNames_propertyNames(
     values: js.Array[
-      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonPropertyNames>['propertyNames'] */ js.Any
+      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.PropertyNames>['propertyNames'] */ js.Any
     ],
     path: js.Array[String],
     mergeSchemas: MergeSchemas,
     options: Options_[Schema]
   ): NonNullable[
-    /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonPropertyNames>['propertyNames'] */ js.Any
+    /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.PropertyNames>['propertyNames'] */ js.Any
   ] = js.native
   @JSName("required")
   def required_required(
@@ -427,9 +427,9 @@ object Resolvers {
   @scala.inline
   def apply[Schema](
     $id: (js.Array[
-      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonId>['$id'] */ js.Any
+      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.Id>['$id'] */ js.Any
     ], js.Array[String], MergeSchemas, Options_[Schema]) => NonNullable[
-      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonId>['$id'] */ js.Any
+      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.Id>['$id'] */ js.Any
     ],
     $ref: (js.Array[
       /* import warning: importer.ImportType#apply Failed type conversion: Schema['$ref'] */ js.Any
@@ -457,9 +457,9 @@ object Resolvers {
       /* import warning: importer.ImportType#apply Failed type conversion: Schema['anyOf'] */ js.Any
     ],
     contains: (js.Array[
-      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonContains>['contains'] */ js.Any
+      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.Contains>['contains'] */ js.Any
     ], js.Array[String], MergeSchemas, Options_[Schema]) => NonNullable[
-      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonContains>['contains'] */ js.Any
+      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.Contains>['contains'] */ js.Any
     ],
     default: (js.Array[
       /* import warning: importer.ImportType#apply Failed type conversion: Schema['default'] */ js.Any
@@ -487,9 +487,9 @@ object Resolvers {
       /* import warning: importer.ImportType#apply Failed type conversion: Schema['enum'] */ js.Any
     ],
     examples: (js.Array[
-      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonExamples>['examples'] */ js.Any
+      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.Examples>['examples'] */ js.Any
     ], js.Array[String], MergeSchemas, Options_[Schema]) => NonNullable[
-      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonExamples>['examples'] */ js.Any
+      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.Examples>['examples'] */ js.Any
     ],
     exclusiveMaximum: (js.Array[
       /* import warning: importer.ImportType#apply Failed type conversion: Schema['exclusiveMaximum'] */ js.Any
@@ -566,11 +566,11 @@ object Resolvers {
     ], js.Array[String], MergeSchemas, Options_[Schema]) => NonNullable[
       /* import warning: importer.ImportType#apply Failed type conversion: Schema['pattern'] */ js.Any
     ],
-    properties: (js.Array[Schema], js.Array[String], AnonAdditionalProperties, Options_[Schema]) => Pick[Schema, properties | patternProperties | additionalProperties],
+    properties: (js.Array[Schema], js.Array[String], AdditionalProperties, Options_[Schema]) => Pick[Schema, properties | patternProperties | additionalProperties],
     propertyNames: (js.Array[
-      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonPropertyNames>['propertyNames'] */ js.Any
+      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.PropertyNames>['propertyNames'] */ js.Any
     ], js.Array[String], MergeSchemas, Options_[Schema]) => NonNullable[
-      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonPropertyNames>['propertyNames'] */ js.Any
+      /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.PropertyNames>['propertyNames'] */ js.Any
     ],
     required: (js.Array[
       /* import warning: importer.ImportType#apply Failed type conversion: Schema['required'] */ js.Any
@@ -606,9 +606,9 @@ object Resolvers {
     @scala.inline
     def with$id(
       value: (js.Array[
-          /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonId>['$id'] */ js.Any
+          /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.Id>['$id'] */ js.Any
         ], js.Array[String], MergeSchemas, Options_[Schema]) => NonNullable[
-          /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonId>['$id'] */ js.Any
+          /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.Id>['$id'] */ js.Any
         ]
     ): Self[Schema] = {
         val ret = this.duplicate
@@ -678,9 +678,9 @@ object Resolvers {
     @scala.inline
     def withContains(
       value: (js.Array[
-          /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonContains>['contains'] */ js.Any
+          /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.Contains>['contains'] */ js.Any
         ], js.Array[String], MergeSchemas, Options_[Schema]) => NonNullable[
-          /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonContains>['contains'] */ js.Any
+          /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.Contains>['contains'] */ js.Any
         ]
     ): Self[Schema] = {
         val ret = this.duplicate
@@ -750,9 +750,9 @@ object Resolvers {
     @scala.inline
     def withExamples(
       value: (js.Array[
-          /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonExamples>['examples'] */ js.Any
+          /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.Examples>['examples'] */ js.Any
         ], js.Array[String], MergeSchemas, Options_[Schema]) => NonNullable[
-          /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonExamples>['examples'] */ js.Any
+          /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.Examples>['examples'] */ js.Any
         ]
     ): Self[Schema] = {
         val ret = this.duplicate
@@ -941,7 +941,7 @@ object Resolvers {
     }
     @scala.inline
     def withProperties(
-      value: (js.Array[Schema], js.Array[String], AnonAdditionalProperties, Options_[Schema]) => Pick[Schema, properties | patternProperties | additionalProperties]
+      value: (js.Array[Schema], js.Array[String], AdditionalProperties, Options_[Schema]) => Pick[Schema, properties | patternProperties | additionalProperties]
     ): Self[Schema] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.Any.fromFunction4(value))
@@ -950,9 +950,9 @@ object Resolvers {
     @scala.inline
     def withPropertyNames(
       value: (js.Array[
-          /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonPropertyNames>['propertyNames'] */ js.Any
+          /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.PropertyNames>['propertyNames'] */ js.Any
         ], js.Array[String], MergeSchemas, Options_[Schema]) => NonNullable[
-          /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.AnonPropertyNames>['propertyNames'] */ js.Any
+          /* import warning: importer.ImportType#apply Failed type conversion: std.Extract<Schema, json-schema-merge-allof.anon.PropertyNames>['propertyNames'] */ js.Any
         ]
     ): Self[Schema] = {
         val ret = this.duplicate

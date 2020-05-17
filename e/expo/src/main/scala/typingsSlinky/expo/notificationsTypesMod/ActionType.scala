@@ -1,6 +1,6 @@
 package typingsSlinky.expo.notificationsTypesMod
 
-import typingsSlinky.expo.AnonPlaceholder
+import typingsSlinky.expo.anon.Placeholder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait ActionType extends js.Object {
   var doNotOpenInForeground: js.UndefOr[Boolean] = js.native
   var isAuthenticationRequired: js.UndefOr[Boolean] = js.native
   var isDestructive: js.UndefOr[Boolean] = js.native
-  var textInput: js.UndefOr[AnonPlaceholder] = js.native
+  var textInput: js.UndefOr[Placeholder] = js.native
 }
 
 object ActionType {
@@ -76,7 +76,7 @@ object ActionType {
         ret
     }
     @scala.inline
-    def withTextInput(value: AnonPlaceholder): Self = {
+    def withTextInput(value: Placeholder): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("textInput")(value.asInstanceOf[js.Any])
         ret

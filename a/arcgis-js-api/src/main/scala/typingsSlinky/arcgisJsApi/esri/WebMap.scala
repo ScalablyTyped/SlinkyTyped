@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`not-loaded`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.failed
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.loading
@@ -179,8 +178,4 @@ trait WebMap
   def updateFrom(view: MapView): js.Promise[_] = js.native
   def updateFrom(view: MapView, options: WebMapUpdateFromOptions): js.Promise[_] = js.native
 }
-
-@JSGlobal("__esri.WebMap")
-@js.native
-object WebMap extends TopLevel[WebMapConstructor]
 

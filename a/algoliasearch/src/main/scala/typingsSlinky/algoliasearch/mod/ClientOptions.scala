@@ -1,6 +1,6 @@
 package typingsSlinky.algoliasearch.mod
 
-import typingsSlinky.algoliasearch.AnonRead
+import typingsSlinky.algoliasearch.anon.Read
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait ClientOptions extends js.Object {
     * read: array of read hosts to use to call  servers, computed automatically
     * write: array of read hosts to use to call  servers, computed automatically
     */
-  var hosts: js.UndefOr[AnonRead] = js.native
+  var hosts: js.UndefOr[Read] = js.native
   /**
     * (node only) httpAgent instance to use when communicating with  servers.
     */
@@ -60,7 +60,7 @@ object ClientOptions {
         ret
     }
     @scala.inline
-    def withHosts(value: AnonRead): Self = {
+    def withHosts(value: Read): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hosts")(value.asInstanceOf[js.Any])
         ret

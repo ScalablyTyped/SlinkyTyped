@@ -1,13 +1,13 @@
 package typingsSlinky.reactRnd.mod
 
-import typingsSlinky.reactRnd.AnonBottom
+import typingsSlinky.reactRnd.anon.Bottom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait State extends js.Object {
-  var bounds: AnonBottom = js.native
+  var bounds: Bottom = js.native
   var maxHeight: js.UndefOr[Double | String] = js.native
   var maxWidth: js.UndefOr[Double | String] = js.native
   var original: Position = js.native
@@ -15,7 +15,7 @@ trait State extends js.Object {
 
 object State {
   @scala.inline
-  def apply(bounds: AnonBottom, original: Position): State = {
+  def apply(bounds: Bottom, original: Position): State = {
     val __obj = js.Dynamic.literal(bounds = bounds.asInstanceOf[js.Any], original = original.asInstanceOf[js.Any])
     __obj.asInstanceOf[State]
   }
@@ -26,7 +26,7 @@ object State {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBounds(value: AnonBottom): Self = {
+    def withBounds(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
         ret

@@ -69,6 +69,7 @@ import typingsSlinky.electron.electronStrings.login
 import typingsSlinky.electron.electronStrings.offscreen
 import typingsSlinky.electron.electronStrings.other
 import typingsSlinky.electron.electronStrings.paint
+import typingsSlinky.electron.electronStrings.remote
 import typingsSlinky.electron.electronStrings.responsive
 import typingsSlinky.electron.electronStrings.unresponsive
 import typingsSlinky.electron.electronStrings.webview
@@ -78,9 +79,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Electron.WebContents")
 @js.native
-class WebContents_ () extends EventEmitter {
+trait WebContents_ extends EventEmitter {
   var debugger: Debugger = js.native
   var devToolsWebContents: WebContents_ = js.native
   var hostWebContents: WebContents_ = js.native
@@ -505,7 +505,7 @@ class WebContents_ () extends EventEmitter {
   def getPrinters(): js.Array[PrinterInfo] = js.native
   def getProcessId(): Double = js.native
   def getTitle(): String = js.native
-  def getType(): backgroundPage | window | browserView | typingsSlinky.electron.electronStrings.remote | webview | offscreen = js.native
+  def getType(): backgroundPage | window | browserView | remote | webview | offscreen = js.native
   def getURL(): String = js.native
   def getUserAgent(): String = js.native
   def getWebRTCIPHandlingPolicy(): String = js.native
@@ -1936,15 +1936,5 @@ class WebContents_ () extends EventEmitter {
     * Executes the editing command unselect in web page.
     */
   def unselect(): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("Electron.WebContents")
-@js.native
-object WebContents_ extends js.Object {
-  // Docs: http://electronjs.org/docs/api/web-contents
-  def fromId(id: Double): WebContents_ = js.native
-  def getAllWebContents(): js.Array[WebContents_] = js.native
-  def getFocusedWebContents(): WebContents_ = js.native
 }
 

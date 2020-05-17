@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait StratifyTransform extends _Transforms {
+trait StratifyTransform extends Transforms {
   var key: FieldRef = js.native
   var parentKey: FieldRef = js.native
   var `type`: stratify = js.native

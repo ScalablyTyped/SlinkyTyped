@@ -3,9 +3,9 @@ package typingsSlinky.restIo.mod
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.express.mod.Application_
-import typingsSlinky.restIo.AnonADMIN
-import typingsSlinky.restIo.TypeofResource
-import typingsSlinky.restIo.TypeofauthorizedResource
+import typingsSlinky.restIo.anon.ADMIN
+import typingsSlinky.restIo.anon.TypeofResource
+import typingsSlinky.restIo.anon.TypeofauthorizedResource
 import typingsSlinky.restIo.authorizedSubResourceMod.ISubResource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,7 +27,7 @@ object default extends js.Object {
     /* subResDef */ ISubResource, 
     typingsSlinky.restIo.authorizedSubResourceMod.default
   ] = js.native
-  var ROLES: AnonADMIN = js.native
+  var ROLES: ADMIN = js.native
   var Resource: TypeofResource = js.native
   var SubResource: Instantiable1[
     /* subResDef */ typingsSlinky.restIo.subResourceMod.ISubResource, 

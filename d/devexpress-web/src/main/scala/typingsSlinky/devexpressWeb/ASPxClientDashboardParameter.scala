@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * A client-side dashboard parameter.
   */
-@JSGlobal("ASPxClientDashboardParameter")
 @js.native
-class ASPxClientDashboardParameter () extends js.Object {
+trait ASPxClientDashboardParameter extends js.Object {
   /** @deprecated Use the GetName method instead. */
   /**
     * Gets the dashboard parameter name on the client side.
@@ -49,5 +48,85 @@ class ASPxClientDashboardParameter () extends js.Object {
     * @param value The current parameter value(s).
     */
   def SetValue(value: js.Any): Unit = js.native
+}
+
+object ASPxClientDashboardParameter {
+  @scala.inline
+  def apply(
+    GetDefaultValue: () => js.Any,
+    GetDescription: () => String,
+    GetName: () => String,
+    GetType: () => String,
+    GetValue: () => js.Any,
+    GetValues: () => js.Array[ASPxClientDashboardParameterValue],
+    Name: String,
+    SetValue: js.Any => Unit,
+    Value: js.Any
+  ): ASPxClientDashboardParameter = {
+    val __obj = js.Dynamic.literal(GetDefaultValue = js.Any.fromFunction0(GetDefaultValue), GetDescription = js.Any.fromFunction0(GetDescription), GetName = js.Any.fromFunction0(GetName), GetType = js.Any.fromFunction0(GetType), GetValue = js.Any.fromFunction0(GetValue), GetValues = js.Any.fromFunction0(GetValues), Name = Name.asInstanceOf[js.Any], SetValue = js.Any.fromFunction1(SetValue), Value = Value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientDashboardParameter]
+  }
+  @scala.inline
+  implicit class ASPxClientDashboardParameterOps[Self <: ASPxClientDashboardParameter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetDefaultValue(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetDefaultValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDescription(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetDescription")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetType(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetValue(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetValues(value: () => js.Array[ASPxClientDashboardParameterValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetValues")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetValue(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.mongoose.mod
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.mongoose.Typeofmongoose
+import typingsSlinky.mongoose.anon.Typeofmongoose
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

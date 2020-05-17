@@ -1,8 +1,8 @@
 package typingsSlinky.formstate.typesMod
 
-import typingsSlinky.formstate.AnonHasError
-import typingsSlinky.formstate.AnonOnReinit
-import typingsSlinky.formstate.AnonValue
+import typingsSlinky.formstate.anon.HasError
+import typingsSlinky.formstate.anon.OnReinit
+import typingsSlinky.formstate.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait ComposibleValidatable[TValue] extends Validatable[TValue] {
   @JSName("_on$ValidationPass")
   def _on$ValidationPass(): Unit = js.native
   /** Used by the parent to register listeners */
-  def _setCompositionParent(config: AnonOnReinit): Unit = js.native
+  def _setCompositionParent(config: OnReinit): Unit = js.native
   /** Allows a convinient reset for all fields */
   def reset(): Unit = js.native
 }
@@ -26,12 +26,12 @@ object ComposibleValidatable {
     $: TValue,
     _on$Reinit: () => Unit,
     _on$ValidationPass: () => Unit,
-    _setCompositionParent: AnonOnReinit => Unit,
+    _setCompositionParent: OnReinit => Unit,
     disableAutoValidation: () => Unit,
     enableAutoValidation: () => Unit,
     hasError: Boolean,
     reset: () => Unit,
-    validate: () => js.Promise[AnonHasError | AnonValue[TValue]],
+    validate: () => js.Promise[HasError | Value[TValue]],
     validating: Boolean
   ): ComposibleValidatable[TValue] = {
     val __obj = js.Dynamic.literal($ = $.asInstanceOf[js.Any], _on$Reinit = js.Any.fromFunction0(_on$Reinit), _on$ValidationPass = js.Any.fromFunction0(_on$ValidationPass), _setCompositionParent = js.Any.fromFunction1(_setCompositionParent), disableAutoValidation = js.Any.fromFunction0(disableAutoValidation), enableAutoValidation = js.Any.fromFunction0(enableAutoValidation), hasError = hasError.asInstanceOf[js.Any], reset = js.Any.fromFunction0(reset), validate = js.Any.fromFunction0(validate), validating = validating.asInstanceOf[js.Any])
@@ -56,7 +56,7 @@ object ComposibleValidatable {
         ret
     }
     @scala.inline
-    def with_setCompositionParent(value: AnonOnReinit => Unit): Self[TValue] = {
+    def with_setCompositionParent(value: OnReinit => Unit): Self[TValue] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("_setCompositionParent")(js.Any.fromFunction1(value))
         ret

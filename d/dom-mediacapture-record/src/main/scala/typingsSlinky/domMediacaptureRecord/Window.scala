@@ -1,6 +1,7 @@
 package typingsSlinky.domMediacaptureRecord
 
 import org.scalablytyped.runtime.Instantiable2
+import typingsSlinky.domMediacaptureRecord.anon.TypeofMediaRecorder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

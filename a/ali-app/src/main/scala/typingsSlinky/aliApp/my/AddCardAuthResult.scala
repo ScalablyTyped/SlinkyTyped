@@ -1,6 +1,6 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonAppid
+import typingsSlinky.aliApp.anon.Appid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait AddCardAuthResult extends js.Object {
   		 */
   var code: String = js.native
   	// 9000 表示成功
-  var result: AnonAppid = js.native
+  var result: Appid = js.native
   		// true 表示领卡成功
   var resultStatus: String = js.native
   var success: Boolean = js.native
@@ -29,7 +29,7 @@ trait AddCardAuthResult extends js.Object {
 
 object AddCardAuthResult {
   @scala.inline
-  def apply(code: String, result: AnonAppid, resultStatus: String, success: Boolean): AddCardAuthResult = {
+  def apply(code: String, result: Appid, resultStatus: String, success: Boolean): AddCardAuthResult = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any], resultStatus = resultStatus.asInstanceOf[js.Any], success = success.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddCardAuthResult]
   }
@@ -46,7 +46,7 @@ object AddCardAuthResult {
         ret
     }
     @scala.inline
-    def withResult(value: AnonAppid): Self = {
+    def withResult(value: Appid): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.oakdexPokedex.mod
 
-import typingsSlinky.oakdexPokedex.AnonJump
+import typingsSlinky.oakdexPokedex.anon.Jump
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait PokemonVariation extends js.Object {
   var height_us: js.UndefOr[String] = js.native
   var image_suffix: js.UndefOr[String] = js.native
   var names: Translations = js.native
-  var pokeathlon_stats: js.UndefOr[AnonJump] = js.native
+  var pokeathlon_stats: js.UndefOr[Jump] = js.native
   var types: js.Array[String] = js.native
   var weight_eu: js.UndefOr[String] = js.native
   var weight_us: js.UndefOr[String] = js.native
@@ -117,7 +117,7 @@ object PokemonVariation {
         ret
     }
     @scala.inline
-    def withPokeathlon_stats(value: AnonJump): Self = {
+    def withPokeathlon_stats(value: Jump): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pokeathlon_stats")(value.asInstanceOf[js.Any])
         ret

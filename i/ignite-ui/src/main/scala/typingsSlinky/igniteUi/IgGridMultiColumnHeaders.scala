@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,7 +47,7 @@ object IgGridMultiColumnHeaders {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGroupCollapsed(value: (/* event */ Event_, /* ui */ GroupCollapsedEventUIParam) => Unit): Self = {
+    def withGroupCollapsed(value: (/* event */ Event, /* ui */ GroupCollapsedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("groupCollapsed")(js.Any.fromFunction2(value))
         ret
@@ -59,7 +59,7 @@ object IgGridMultiColumnHeaders {
         ret
     }
     @scala.inline
-    def withGroupCollapsing(value: (/* event */ Event_, /* ui */ GroupCollapsingEventUIParam) => Unit): Self = {
+    def withGroupCollapsing(value: (/* event */ Event, /* ui */ GroupCollapsingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("groupCollapsing")(js.Any.fromFunction2(value))
         ret
@@ -71,7 +71,7 @@ object IgGridMultiColumnHeaders {
         ret
     }
     @scala.inline
-    def withGroupExpanded(value: (/* event */ Event_, /* ui */ GroupExpandedEventUIParam) => Unit): Self = {
+    def withGroupExpanded(value: (/* event */ Event, /* ui */ GroupExpandedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("groupExpanded")(js.Any.fromFunction2(value))
         ret
@@ -83,7 +83,7 @@ object IgGridMultiColumnHeaders {
         ret
     }
     @scala.inline
-    def withGroupExpanding(value: (/* event */ Event_, /* ui */ GroupExpandingEventUIParam) => Unit): Self = {
+    def withGroupExpanding(value: (/* event */ Event, /* ui */ GroupExpandingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("groupExpanding")(js.Any.fromFunction2(value))
         ret

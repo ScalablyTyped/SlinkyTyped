@@ -7,15 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * A client point object.
   */
-@JSGlobal("ASPxClientPoint")
 @js.native
-class ASPxClientPoint protected () extends js.Object {
-  /**
-    * Initializes a new instance of the ASPxClientPoint object. For internal use only.
-    * @param x An integer value specifying the x-coordinate of the point.
-    * @param y An integer value specifying the y-coordinate of the point.
-    */
-  def this(x: Double, y: Double) = this()
+trait ASPxClientPoint extends js.Object {
   /**
     * Gets the point's X-coordinate.
     */
@@ -24,5 +17,33 @@ class ASPxClientPoint protected () extends js.Object {
     * Gets the point's Y-coordinate.
     */
   def GetY(): Double = js.native
+}
+
+object ASPxClientPoint {
+  @scala.inline
+  def apply(GetX: () => Double, GetY: () => Double): ASPxClientPoint = {
+    val __obj = js.Dynamic.literal(GetX = js.Any.fromFunction0(GetX), GetY = js.Any.fromFunction0(GetY))
+    __obj.asInstanceOf[ASPxClientPoint]
+  }
+  @scala.inline
+  implicit class ASPxClientPointOps[Self <: ASPxClientPoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetX(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetX")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetY(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetY")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

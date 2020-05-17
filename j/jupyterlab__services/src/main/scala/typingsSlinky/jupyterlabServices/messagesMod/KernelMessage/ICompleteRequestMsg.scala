@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabServices.messagesMod.KernelMessage
 
-import typingsSlinky.jupyterlabServices.AnonCode
+import typingsSlinky.jupyterlabServices.anon.Code
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.complete_request
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.shell
 import typingsSlinky.phosphorCoreutils.jsonMod.JSONObject
@@ -18,16 +18,16 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ICompleteRequestMsg
   extends IShellMessage[complete_request]
-     with _Message {
+     with Message {
   @JSName("content")
-  var content_ICompleteRequestMsg: AnonCode = js.native
+  var content_ICompleteRequestMsg: Code = js.native
 }
 
 object ICompleteRequestMsg {
   @scala.inline
   def apply(
     channel: shell,
-    content: AnonCode,
+    content: Code,
     header: IHeader[complete_request],
     metadata: JSONObject,
     parent_header: IHeader[MessageType] | js.Object
@@ -42,7 +42,7 @@ object ICompleteRequestMsg {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContent(value: AnonCode): Self = {
+    def withContent(value: Code): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
         ret

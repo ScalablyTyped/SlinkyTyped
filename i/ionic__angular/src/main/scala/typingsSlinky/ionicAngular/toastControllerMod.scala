@@ -1,7 +1,7 @@
 package typingsSlinky.ionicAngular
 
 import typingsSlinky.ionicAngular.overlayMod.OverlayBaseController
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonToastElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonToastElement
 import typingsSlinky.ionicCore.toastInterfaceMod.ToastOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`

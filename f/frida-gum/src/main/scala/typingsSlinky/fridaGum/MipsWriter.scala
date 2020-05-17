@@ -7,18 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Generates machine code for mips.
   */
-@JSGlobal("MipsWriter")
 @js.native
-class MipsWriter protected () extends js.Object {
-  /**
-    * Creates a new code writer for generating MIPS machine code
-    * written directly to memory at `codeAddress`.
-    *
-    * @param codeAddress Memory address to write generated code to.
-    * @param options Options for customizing code generation.
-    */
-  def this(codeAddress: NativePointerValue) = this()
-  def this(codeAddress: NativePointerValue, options: MipsWriterOptions) = this()
+trait MipsWriter extends js.Object {
   /**
     * Memory location of the first byte of output.
     */
@@ -127,8 +117,8 @@ class MipsWriter protected () extends js.Object {
     * Puts a LW instruction.
     */
   def putLwRegRegOffset(dstReg: MipsRegister, srcReg: MipsRegister, srcOffset: Double): Unit = js.native
-  def putLwRegRegOffset(dstReg: MipsRegister, srcReg: MipsRegister, srcOffset: Int64_): Unit = js.native
-  def putLwRegRegOffset(dstReg: MipsRegister, srcReg: MipsRegister, srcOffset: UInt64_): Unit = js.native
+  def putLwRegRegOffset(dstReg: MipsRegister, srcReg: MipsRegister, srcOffset: Int64): Unit = js.native
+  def putLwRegRegOffset(dstReg: MipsRegister, srcReg: MipsRegister, srcOffset: UInt64): Unit = js.native
   /**
     * Puts a MFHI instruction.
     */
@@ -177,8 +167,8 @@ class MipsWriter protected () extends js.Object {
     * Puts a SW instruction.
     */
   def putSwRegRegOffset(srcReg: MipsRegister, dstReg: MipsRegister, dstOffset: Double): Unit = js.native
-  def putSwRegRegOffset(srcReg: MipsRegister, dstReg: MipsRegister, dstOffset: Int64_): Unit = js.native
-  def putSwRegRegOffset(srcReg: MipsRegister, dstReg: MipsRegister, dstOffset: UInt64_): Unit = js.native
+  def putSwRegRegOffset(srcReg: MipsRegister, dstReg: MipsRegister, dstOffset: Int64): Unit = js.native
+  def putSwRegRegOffset(srcReg: MipsRegister, dstReg: MipsRegister, dstOffset: UInt64): Unit = js.native
   /**
     * Recycles instance.
     */

@@ -2,7 +2,7 @@ package typingsSlinky.antd.textAreaMod
 
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.web.SyntheticKeyboardEvent
-import typingsSlinky.antd.AnonHeight
+import typingsSlinky.antd.anon.Height
 import typingsSlinky.antd.resizableTextAreaMod.AutoSizeType
 import typingsSlinky.react.mod.KeyboardEventHandler
 import typingsSlinky.react.mod.TextareaHTMLAttributes
@@ -15,7 +15,7 @@ trait TextAreaProps extends TextareaHTMLAttributes[HTMLTextAreaElement] {
   var allowClear: js.UndefOr[Boolean] = js.native
   var autoSize: js.UndefOr[Boolean | AutoSizeType] = js.native
   var onPressEnter: js.UndefOr[KeyboardEventHandler[HTMLTextAreaElement]] = js.native
-  var onResize: js.UndefOr[js.Function1[/* size */ AnonHeight, Unit]] = js.native
+  var onResize: js.UndefOr[js.Function1[/* size */ Height, Unit]] = js.native
   var prefixCls: js.UndefOr[String] = js.native
 }
 
@@ -68,7 +68,7 @@ object TextAreaProps {
         ret
     }
     @scala.inline
-    def withOnResize(value: /* size */ AnonHeight => Unit): Self = {
+    def withOnResize(value: /* size */ Height => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onResize")(js.Any.fromFunction1(value))
         ret

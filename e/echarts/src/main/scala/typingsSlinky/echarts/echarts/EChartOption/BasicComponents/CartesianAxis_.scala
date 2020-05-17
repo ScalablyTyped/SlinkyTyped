@@ -1,6 +1,6 @@
 package typingsSlinky.echarts.echarts.EChartOption.BasicComponents
 
-import typingsSlinky.echarts.AnonMax
+import typingsSlinky.echarts.anon.Max
 import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.DataObject
 import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.Label
 import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.MinorSplitLine
@@ -149,7 +149,7 @@ trait CartesianAxis_ extends js.Object {
     * @default null
     * @see https://echarts.apache.org/option.html#yAxis.max
     */
-  var max: js.UndefOr[Double | String | (js.Function1[/* value */ AnonMax, Double])] = js.native
+  var max: js.UndefOr[Double | String | (js.Function1[/* value */ Max, Double])] = js.native
   /**
     * The minimun value of axis.
     * It can be set to a special value `'dataMin'` so that
@@ -165,7 +165,7 @@ trait CartesianAxis_ extends js.Object {
     * @default null
     * @see https://echarts.apache.org/option.html#yAxis.min
     */
-  var min: js.UndefOr[Double | String | (js.Function1[/* value */ AnonMax, Double])] = js.native
+  var min: js.UndefOr[Double | String | (js.Function1[/* value */ Max, Double])] = js.native
   /**
     * Maximum gap between split lines.
     * For example, in time axis (type is `'time'`),
@@ -467,13 +467,13 @@ object CartesianAxis_ {
         ret
     }
     @scala.inline
-    def withMaxFunction1(value: /* value */ AnonMax => Double): Self = {
+    def withMaxFunction1(value: /* value */ Max => Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withMax(value: Double | String | (js.Function1[/* value */ AnonMax, Double])): Self = {
+    def withMax(value: Double | String | (js.Function1[/* value */ Max, Double])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
         ret
@@ -485,13 +485,13 @@ object CartesianAxis_ {
         ret
     }
     @scala.inline
-    def withMinFunction1(value: /* value */ AnonMax => Double): Self = {
+    def withMinFunction1(value: /* value */ Max => Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withMin(value: Double | String | (js.Function1[/* value */ AnonMax, Double])): Self = {
+    def withMin(value: Double | String | (js.Function1[/* value */ Max, Double])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
         ret

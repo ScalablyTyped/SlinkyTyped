@@ -1,6 +1,6 @@
 package typingsSlinky.eggCore.mod
 
-import typingsSlinky.eggCore.AnonPath
+import typingsSlinky.eggCore.anon.Path
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait ContextLoaderOption extends js.Object {
   var fieldClass: js.UndefOr[String] = js.native
   var filter: js.UndefOr[js.Function1[/* obj */ js.Object, Boolean]] = js.native
   var ignore: js.UndefOr[String | js.Array[String]] = js.native
-  var initializer: js.UndefOr[js.Function2[/* obj */ js.Object, /* options */ AnonPath, _]] = js.native
+  var initializer: js.UndefOr[js.Function2[/* obj */ js.Object, /* options */ Path, _]] = js.native
   /** required inject */
   var inject: js.Object = js.native
   var `match`: js.UndefOr[String | js.Array[String]] = js.native
@@ -123,7 +123,7 @@ object ContextLoaderOption {
         ret
     }
     @scala.inline
-    def withInitializer(value: (/* obj */ js.Object, /* options */ AnonPath) => _): Self = {
+    def withInitializer(value: (/* obj */ js.Object, /* options */ Path) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("initializer")(js.Any.fromFunction2(value))
         ret

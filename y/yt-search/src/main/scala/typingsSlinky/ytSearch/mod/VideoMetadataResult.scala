@@ -1,6 +1,6 @@
 package typingsSlinky.ytSearch.mod
 
-import typingsSlinky.ytSearch.AnonSeconds
+import typingsSlinky.ytSearch.anon.Seconds
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait VideoMetadataResult extends js.Object {
   var ago: String = js.native
   var author: Author = js.native
   var description: String = js.native
-  var duration: AnonSeconds = js.native
+  var duration: Seconds = js.native
   var genre: String = js.native
   var image: String = js.native
   var seconds: Double = js.native
@@ -29,7 +29,7 @@ object VideoMetadataResult {
     ago: String,
     author: Author,
     description: String,
-    duration: AnonSeconds,
+    duration: Seconds,
     genre: String,
     image: String,
     seconds: Double,
@@ -69,7 +69,7 @@ object VideoMetadataResult {
         ret
     }
     @scala.inline
-    def withDuration(value: AnonSeconds): Self = {
+    def withDuration(value: Seconds): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
         ret

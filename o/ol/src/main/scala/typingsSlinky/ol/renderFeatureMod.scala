@@ -3,6 +3,8 @@ package typingsSlinky.ol
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.ol.extentMod.Extent
 import typingsSlinky.ol.geometryTypeMod.GeometryType
+import typingsSlinky.ol.olFeatureMod.FeatureClass
+import typingsSlinky.ol.olFeatureMod.FeatureLike
 import typingsSlinky.ol.projMod.ProjectionLike
 import typingsSlinky.ol.projMod.TransformFunction
 import scala.scalajs.js
@@ -35,7 +37,10 @@ object renderFeatureMod extends js.Object {
   }
   
   @js.native
-  class default protected () extends RenderFeature {
+  class default protected ()
+    extends RenderFeature
+       with FeatureClass
+       with FeatureLike {
     def this(
       `type`: GeometryType,
       flatCoordinates: js.Array[Double],

@@ -1,8 +1,8 @@
 package typingsSlinky.materialUi.MaterialUI.Stepper
 
+import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.materialUi.MaterialUI.Snackbar
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.react.mod.Props
@@ -11,7 +11,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SnackbarProps extends Props[Snackbar] {
+trait SnackbarProps
+  extends Props[ReactComponentClass[typingsSlinky.materialUi.MaterialUI.SnackbarProps]] {
   var action: js.UndefOr[String] = js.native
   var autoHideDuration: js.UndefOr[Double] = js.native
   var bodyStyle: js.UndefOr[CSSProperties] = js.native

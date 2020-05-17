@@ -2,7 +2,7 @@ package typingsSlinky.tunnelSsh.mod
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ReadableStream
-import typingsSlinky.tunnelSsh.AnonCipher
+import typingsSlinky.tunnelSsh.anon.Cipher
 import typingsSlinky.tunnelSsh.tunnelSshStrings.force
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait Config extends js.Object {
   var agent: js.UndefOr[String] = js.native
   var agentForward: js.UndefOr[Boolean] = js.native
-  var algorithms: js.UndefOr[AnonCipher] = js.native
+  var algorithms: js.UndefOr[Cipher] = js.native
   var authHandler: js.UndefOr[
     js.Function3[
       /* methodsLeft */ Null | js.Array[String], 
@@ -92,7 +92,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withAlgorithms(value: AnonCipher): Self = {
+    def withAlgorithms(value: Cipher): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("algorithms")(value.asInstanceOf[js.Any])
         ret

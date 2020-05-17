@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.indexBundleMod
 
-import typingsSlinky.officeUiFabricReact.PartialITooltipProps
+import typingsSlinky.officeUiFabricReact.anon.PartialITooltipProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

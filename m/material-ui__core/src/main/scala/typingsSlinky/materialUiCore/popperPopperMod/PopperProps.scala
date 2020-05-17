@@ -6,7 +6,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.materialUiCore.AnonPlacement
+import typingsSlinky.materialUiCore.anon.Placement
 import typingsSlinky.popperJs.mod.ReferenceObject
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.ReactInstance
@@ -20,7 +20,7 @@ trait PopperProps extends HTMLAttributes[HTMLDivElement] {
     Null | HTMLElement | ReferenceObject | (js.Function1[/* element */ HTMLElement, HTMLElement])
   ] = js.native
   @JSName("children")
-  var children_PopperProps: TagMod[Any] | (js.Function1[/* props */ AnonPlacement, TagMod[Any]]) = js.native
+  var children_PopperProps: TagMod[Any] | (js.Function1[/* props */ Placement, TagMod[Any]]) = js.native
   var container: js.UndefOr[ReactInstance | js.Function0[ReactInstance] | Null] = js.native
   var disablePortal: js.UndefOr[Boolean] = js.native
   var keepMounted: js.UndefOr[Boolean] = js.native
@@ -86,13 +86,13 @@ object PopperProps {
         ret
     }
     @scala.inline
-    def withChildrenFunction1(value: /* props */ AnonPlacement => TagMod[Any]): Self = {
+    def withChildrenFunction1(value: /* props */ Placement => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withChildren(value: TagMod[Any] | (js.Function1[/* props */ AnonPlacement, TagMod[Any]])): Self = {
+    def withChildren(value: TagMod[Any] | (js.Function1[/* props */ Placement, TagMod[Any]])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
         ret

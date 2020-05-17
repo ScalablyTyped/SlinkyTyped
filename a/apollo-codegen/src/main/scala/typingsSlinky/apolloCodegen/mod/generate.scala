@@ -1,6 +1,6 @@
 package typingsSlinky.apolloCodegen.mod
 
-import typingsSlinky.apolloCodegen.AnonAddTypename
+import typingsSlinky.apolloCodegen.anon.AddTypename
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ object generate extends js.Object {
     target: TargetType,
     tagName: String,
     projectName: String,
-    options: AnonAddTypename
+    options: AddTypename
   ): Unit = js.native
 }
 

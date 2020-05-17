@@ -4,27 +4,26 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.EventTarget
-import typingsSlinky.kefir.AnonObservable
-import typingsSlinky.kefir.AnonOff
-import typingsSlinky.kefir.Fn0
-import typingsSlinky.kefir.Fn1
-import typingsSlinky.kefir.FnCall
-import typingsSlinky.kefir.FnCallError
-import typingsSlinky.kefir.FnCallFn
-import typingsSlinky.kefir.FnCallGenerator
-import typingsSlinky.kefir.FnCallIntervalFn
-import typingsSlinky.kefir.FnCallIntervalHandler
-import typingsSlinky.kefir.FnCallIntervalValues
-import typingsSlinky.kefir.FnCallObservable
-import typingsSlinky.kefir.FnCallObss
-import typingsSlinky.kefir.FnCallObssObssPCombinator
-import typingsSlinky.kefir.FnCallObssPassiveObssCombinator
-import typingsSlinky.kefir.FnCallPromise
-import typingsSlinky.kefir.FnCallSubscribe
-import typingsSlinky.kefir.FnCallTargetEventNameTransform
-import typingsSlinky.kefir.FnCallValue
+import typingsSlinky.kefir.anon.Fn0
+import typingsSlinky.kefir.anon.Fn1
+import typingsSlinky.kefir.anon.FnCall
+import typingsSlinky.kefir.anon.FnCallError
+import typingsSlinky.kefir.anon.FnCallFn
+import typingsSlinky.kefir.anon.FnCallGenerator
+import typingsSlinky.kefir.anon.FnCallIntervalFn
+import typingsSlinky.kefir.anon.FnCallIntervalHandler
+import typingsSlinky.kefir.anon.FnCallIntervalValues
+import typingsSlinky.kefir.anon.FnCallObservable
+import typingsSlinky.kefir.anon.FnCallObss
+import typingsSlinky.kefir.anon.FnCallObssObssPCombinator
+import typingsSlinky.kefir.anon.FnCallObssPassiveObssCombinator
+import typingsSlinky.kefir.anon.FnCallPromise
+import typingsSlinky.kefir.anon.FnCallSubscribe
+import typingsSlinky.kefir.anon.FnCallTargetEventNameTransform
+import typingsSlinky.kefir.anon.FnCallValue
+import typingsSlinky.kefir.anon.Observable
+import typingsSlinky.kefir.anon.Off
 import typingsSlinky.kefir.mod.Emitter
-import typingsSlinky.kefir.mod.Observable
 import typingsSlinky.kefir.mod.Pool_
 import typingsSlinky.kefir.mod.Property
 import typingsSlinky.kefir.mod.Stream_
@@ -73,14 +72,18 @@ object ^ extends js.Object {
   var repeat_Original: FnCallGenerator = js.native
   @JSName("sequentially")
   var sequentially_Original: FnCallIntervalValues = js.native
-  var staticLand: AnonObservable = js.native
+  var staticLand: Observable = js.native
   @JSName("stream")
   var stream_Original: FnCallSubscribe = js.native
   @JSName("withInterval")
   var withInterval_Original: FnCallIntervalHandler = js.native
   @JSName("zip")
   var zip_Original: FnCallObssPassiveObssCombinator = js.native
-  def combine[T /* <: js.Tuple3[Observable[_, _], Observable[_, _], Observable[_, _]] */](obss: T): Stream_[
+  def combine[T /* <: js.Tuple3[
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _]
+  ] */](obss: T): Stream_[
     js.Tuple3[
       ValueOfAnObservable[
         /* import warning: importer.ImportType#apply Failed type conversion: T[0] */ js.Any
@@ -94,15 +97,21 @@ object ^ extends js.Object {
     ], 
     _
   ] = js.native
-  def combine[T, S, U](obss: js.Array[Observable[T, S]], combinator: js.Function1[/* repeated */ T, U]): Stream_[U, S] = js.native
-  def combine[T, S, U](obss: js.Array[Observable[T, S]], passiveObss: js.Array[Observable[T, S]]): Stream_[U, S] = js.native
   def combine[T, S, U](
-    obss: js.Array[Observable[T, S]],
-    passiveObss: js.Array[Observable[T, S]],
+    obss: js.Array[typingsSlinky.kefir.mod.Observable[T, S]],
+    combinator: js.Function1[/* repeated */ T, U]
+  ): Stream_[U, S] = js.native
+  def combine[T, S, U](
+    obss: js.Array[typingsSlinky.kefir.mod.Observable[T, S]],
+    passiveObss: js.Array[typingsSlinky.kefir.mod.Observable[T, S]]
+  ): Stream_[U, S] = js.native
+  def combine[T, S, U](
+    obss: js.Array[typingsSlinky.kefir.mod.Observable[T, S]],
+    passiveObss: js.Array[typingsSlinky.kefir.mod.Observable[T, S]],
     combinator: js.Function1[/* repeated */ T, U]
   ): Stream_[U, S] = js.native
   @JSName("combine")
-  def combine_0[T /* <: js.Array[Observable[_, _]] */, P /* <: js.Array[Observable[_, _]] */, K](
+  def combine_0[T /* <: js.Array[typingsSlinky.kefir.mod.Observable[_, _]] */, P /* <: js.Array[typingsSlinky.kefir.mod.Observable[_, _]] */, K](
     obss: T,
     obssP: P,
     combinator: js.Function2[
@@ -110,11 +119,11 @@ object ^ extends js.Object {
       /* import warning: importer.ImportType#apply Failed type conversion: P[0][''] */ /* b */ js.Any, 
       K
     ]
-  ): Observable[K, _] = js.native
+  ): typingsSlinky.kefir.mod.Observable[K, _] = js.native
   @JSName("combine")
   def combine_T_ArrayNothing[T /* <: js.Array[scala.Nothing] */](obss: T): Stream_[scala.Nothing, scala.Nothing] = js.native
   @JSName("combine")
-  def combine_T_ArrayObservableWildcardWildcard[T /* <: js.Array[Observable[_, _]] */](obss: T): Stream_[
+  def combine_T_ArrayObservableWildcardWildcard[T /* <: js.Array[typingsSlinky.kefir.mod.Observable[_, _]] */](obss: T): Stream_[
     js.Array[
       ValueOfAnObservable[
         /* import warning: importer.ImportType#apply Failed type conversion: T[0] */ js.Any
@@ -123,7 +132,7 @@ object ^ extends js.Object {
     _
   ] = js.native
   @JSName("combine")
-  def combine_T_ArrayObservableWildcardWildcardP_String[T /* <: js.Array[Observable[_, _]] */, P /* <: /* keyof T */ String */](obss: T): Stream_[
+  def combine_T_ArrayObservableWildcardWildcardP_String[T /* <: js.Array[typingsSlinky.kefir.mod.Observable[_, _]] */, P /* <: /* keyof T */ String */](obss: T): Stream_[
     js.Array[
       ValueOfAnObservable[
         /* import warning: importer.ImportType#apply Failed type conversion: T[0] */ js.Any
@@ -132,14 +141,14 @@ object ^ extends js.Object {
     _
   ] = js.native
   @JSName("combine")
-  def combine_T_StringDictionaryObservableWildcardWildcard[T /* <: StringDictionary[Observable[_, _]] */](obss: T): Stream_[
+  def combine_T_StringDictionaryObservableWildcardWildcard[T /* <: StringDictionary[typingsSlinky.kefir.mod.Observable[_, _]] */](obss: T): Stream_[
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]: kefir.kefir.ValueOfAnObservable<T[P]>}
     */ typingsSlinky.kefir.kefirStrings.^  with TopLevel[T], 
     _
   ] = js.native
   @JSName("combine")
-  def combine_T_Tuple2ObservableWildcardWildcardObservableWildcardWildcard[T /* <: js.Tuple2[Observable[_, _], Observable[_, _]] */](obss: T): Stream_[
+  def combine_T_Tuple2ObservableWildcardWildcardObservableWildcardWildcard[T /* <: js.Tuple2[typingsSlinky.kefir.mod.Observable[_, _], typingsSlinky.kefir.mod.Observable[_, _]] */](obss: T): Stream_[
     js.Tuple2[
       ValueOfAnObservable[
         /* import warning: importer.ImportType#apply Failed type conversion: T[0] */ js.Any
@@ -151,7 +160,12 @@ object ^ extends js.Object {
     _
   ] = js.native
   @JSName("combine")
-  def combine_T_Tuple4ObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcard[T /* <: js.Tuple4[Observable[_, _], Observable[_, _], Observable[_, _], Observable[_, _]] */](obss: T): Stream_[
+  def combine_T_Tuple4ObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcard[T /* <: js.Tuple4[
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _]
+  ] */](obss: T): Stream_[
     js.Tuple4[
       ValueOfAnObservable[
         /* import warning: importer.ImportType#apply Failed type conversion: T[0] */ js.Any
@@ -169,7 +183,13 @@ object ^ extends js.Object {
     _
   ] = js.native
   @JSName("combine")
-  def combine_T_Tuple5ObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcard[T /* <: js.Tuple5[Observable[_, _], Observable[_, _], Observable[_, _], Observable[_, _], Observable[_, _]] */](obss: T): Stream_[
+  def combine_T_Tuple5ObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcard[T /* <: js.Tuple5[
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _]
+  ] */](obss: T): Stream_[
     js.Tuple5[
       ValueOfAnObservable[
         /* import warning: importer.ImportType#apply Failed type conversion: T[0] */ js.Any
@@ -191,12 +211,12 @@ object ^ extends js.Object {
   ] = js.native
   @JSName("combine")
   def combine_T_Tuple6ObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcard[T /* <: js.Tuple6[
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _]
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _]
   ] */](obss: T): Stream_[
     js.Tuple6[
       ValueOfAnObservable[
@@ -222,13 +242,13 @@ object ^ extends js.Object {
   ] = js.native
   @JSName("combine")
   def combine_T_Tuple7ObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcard[T /* <: js.Tuple7[
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _]
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _]
   ] */](obss: T): Stream_[
     js.Tuple7[
       ValueOfAnObservable[
@@ -257,14 +277,14 @@ object ^ extends js.Object {
   ] = js.native
   @JSName("combine")
   def combine_T_Tuple8ObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcardObservableWildcardWildcard[T /* <: js.Tuple8[
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _], 
-    Observable[_, _]
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _], 
+    typingsSlinky.kefir.mod.Observable[_, _]
   ] */](obss: T): Stream_[
     js.Tuple8[
       ValueOfAnObservable[
@@ -294,13 +314,13 @@ object ^ extends js.Object {
     ], 
     _
   ] = js.native
-  def concat[T, S](obss: js.Array[Observable[T, S]]): Observable[T, S] = js.native
+  def concat[T, S](obss: js.Array[typingsSlinky.kefir.mod.Observable[T, S]]): typingsSlinky.kefir.mod.Observable[T, S] = js.native
   def constant[T](value: T): Property[T, scala.Nothing] = js.native
   def constantError[T](error: T): Property[scala.Nothing, T] = js.native
   def fromCallback[T](fn: js.Function1[/* callback */ js.Function1[/* value */ T, Unit], Unit]): Stream_[T, scala.Nothing] = js.native
   def fromESObservable[T, S](observable: js.Any): Stream_[T, S] = js.native
-  def fromEvents[T, S](target: AnonOff, eventName: String): Stream_[T, S] = js.native
-  def fromEvents[T, S](target: AnonOff, eventName: String, transform: js.Function1[/* value */ T, S]): Stream_[T, S] = js.native
+  def fromEvents[T, S](target: Off, eventName: String): Stream_[T, S] = js.native
+  def fromEvents[T, S](target: Off, eventName: String, transform: js.Function1[/* value */ T, S]): Stream_[T, S] = js.native
   def fromEvents[T, S](target: EventEmitter, eventName: String): Stream_[T, S] = js.native
   def fromEvents[T, S](target: EventEmitter, eventName: String, transform: js.Function1[/* value */ T, S]): Stream_[T, S] = js.native
   def fromEvents[T, S](target: EventTarget, eventName: String): Stream_[T, S] = js.native
@@ -310,18 +330,21 @@ object ^ extends js.Object {
   def fromPromise[T, S](promise: js.Promise[T]): Property[T, S] = js.native
   def interval[T](interval: Double, value: T): Stream_[T, scala.Nothing] = js.native
   def later[T](interval: Double, value: T): Stream_[T, scala.Nothing] = js.native
-  def merge[T, S](obss: js.Array[Observable[T, S]]): Observable[T, S] = js.native
+  def merge[T, S](obss: js.Array[typingsSlinky.kefir.mod.Observable[T, S]]): typingsSlinky.kefir.mod.Observable[T, S] = js.native
   def pool[T, S](): Pool_[T, S] = js.native
-  def repeat[T, S](generator: js.Function1[/* i */ Double, (Observable[T, S]) | Boolean]): Observable[T, S] = js.native
+  def repeat[T, S](generator: js.Function1[/* i */ Double, (typingsSlinky.kefir.mod.Observable[T, S]) | Boolean]): typingsSlinky.kefir.mod.Observable[T, S] = js.native
   def sequentially[T](interval: Double, values: js.Array[T]): Stream_[T, scala.Nothing] = js.native
   def stream[T, S](subscribe: js.Function1[/* emitter */ Emitter[T, S], js.Function | Unit]): Stream_[T, S] = js.native
   def withInterval[T, S](interval: Double, handler: js.Function1[/* emitter */ Emitter[T, S], Unit]): Stream_[T, S] = js.native
-  def zip[T, S, U](obss: js.Array[Observable[T, S]]): Observable[U, S] = js.native
-  def zip[T, S, U](obss: js.Array[Observable[T, S]], passiveObss: js.Array[Observable[T, S]]): Observable[U, S] = js.native
+  def zip[T, S, U](obss: js.Array[typingsSlinky.kefir.mod.Observable[T, S]]): typingsSlinky.kefir.mod.Observable[U, S] = js.native
   def zip[T, S, U](
-    obss: js.Array[Observable[T, S]],
-    passiveObss: js.Array[Observable[T, S]],
+    obss: js.Array[typingsSlinky.kefir.mod.Observable[T, S]],
+    passiveObss: js.Array[typingsSlinky.kefir.mod.Observable[T, S]]
+  ): typingsSlinky.kefir.mod.Observable[U, S] = js.native
+  def zip[T, S, U](
+    obss: js.Array[typingsSlinky.kefir.mod.Observable[T, S]],
+    passiveObss: js.Array[typingsSlinky.kefir.mod.Observable[T, S]],
     combinator: js.Function1[/* repeated */ T, U]
-  ): Observable[U, S] = js.native
+  ): typingsSlinky.kefir.mod.Observable[U, S] = js.native
 }
 

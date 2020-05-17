@@ -1,5 +1,7 @@
 package typingsSlinky.babylonjs.BABYLON
 
+import org.scalajs.dom.raw.Document
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventListenerOptions
 import org.scalajs.dom.raw.ProgressEvent
 import org.scalajs.dom.raw.XMLHttpRequest
@@ -13,16 +15,13 @@ import typingsSlinky.babylonjs.babylonjsStrings.readystatechange
 import typingsSlinky.babylonjs.babylonjsStrings.timeout
 import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.BodyInit
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Event_
 import typingsSlinky.std.XMLHttpRequestResponseType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.WebRequest")
 @js.native
-class WebRequest () extends IWebRequest {
+trait WebRequest extends IWebRequest {
   var _injectCustomRequestHeaders: js.Any = js.native
   var _xhr: js.Any = js.native
   /**
@@ -118,20 +117,17 @@ class WebRequest () extends IWebRequest {
   ): Unit = js.native
   /** @hidden */
   @JSName("addEventListener")
-  def addEventListener_readystatechange(
-    `type`: readystatechange,
-    listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ Event_, _]
-  ): Unit = js.native
+  def addEventListener_readystatechange(`type`: readystatechange, listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_readystatechange(
     `type`: readystatechange,
-    listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_readystatechange(
     `type`: readystatechange,
-    listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -260,20 +256,17 @@ class WebRequest () extends IWebRequest {
   ): Unit = js.native
   /** @hidden */
   @JSName("removeEventListener")
-  def removeEventListener_readystatechange(
-    `type`: readystatechange,
-    listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ Event_, _]
-  ): Unit = js.native
+  def removeEventListener_readystatechange(`type`: readystatechange, listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_readystatechange(
     `type`: readystatechange,
-    listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_readystatechange(
     `type`: readystatechange,
-    listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ XMLHttpRequest, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -314,7 +307,7 @@ class WebRequest () extends IWebRequest {
     */
   def send(): Unit = js.native
   def send(body: BodyInit): Unit = js.native
-  def send(body: Document_): Unit = js.native
+  def send(body: Document): Unit = js.native
   /**
     * Sets the value of a request header.
     * @param name The name of the header whose value is to be set
@@ -331,20 +324,5 @@ class WebRequest () extends IWebRequest {
     */
   @JSName("status")
   def status_MWebRequest: Double = js.native
-}
-
-/* static members */
-@JSGlobal("BABYLON.WebRequest")
-@js.native
-object WebRequest extends js.Object {
-  /**
-    * Custom HTTP Request Headers to be sent with XMLHttpRequests
-    * i.e. when loading files, where the server/service expects an Authorization header
-    */
-  var CustomRequestHeaders: org.scalablytyped.runtime.StringDictionary[String] = js.native
-  /**
-    * Add callback functions in this array to update all the requests before they get sent to the network
-    */
-  var CustomRequestModifiers: js.Array[js.Function2[/* request */ XMLHttpRequest, /* url */ String, Unit]] = js.native
 }
 

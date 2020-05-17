@@ -1,22 +1,23 @@
 package typingsSlinky.aureliaPal.mod
 
+import org.scalablytyped.runtime.Instantiable0
 import org.scalajs.dom.raw.Attr
 import org.scalajs.dom.raw.CSSStyleDeclaration
 import org.scalajs.dom.raw.Comment
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.DocumentFragment
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MutationObserver
 import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.NodeList
 import org.scalajs.dom.raw.Text
-import typingsSlinky.aureliaPal.AnonInstantiableElement
-import typingsSlinky.aureliaPal.AnonInstantiableNodeList
-import typingsSlinky.aureliaPal.AnonInstantiableSVGElement
+import typingsSlinky.aureliaPal.anon.InstantiableElement
+import typingsSlinky.aureliaPal.anon.InstantiableNodeList
+import typingsSlinky.aureliaPal.anon.InstantiableSVGElement
 import typingsSlinky.std.CustomEventInit
 import typingsSlinky.std.EventListenerOrEventListenerObject
-import typingsSlinky.std.Event_
 import typingsSlinky.std.HTMLTemplateElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,15 +28,15 @@ trait Dom extends js.Object {
   /**
     * The global DOM Element type.
     */
-  var Element: AnonInstantiableElement = js.native
+  var Element: InstantiableElement with Instantiable0[typingsSlinky.std.global.Element] = js.native
   /**
     * The global DOM NodeList type.
     */
-  var NodeList: AnonInstantiableNodeList = js.native
+  var NodeList: InstantiableNodeList with Instantiable0[typingsSlinky.std.global.NodeList] = js.native
   /**
     * The global DOM SVGElement type.
     */
-  var SVGElement: AnonInstantiableSVGElement = js.native
+  var SVGElement: InstantiableSVGElement with Instantiable0[typingsSlinky.std.global.SVGElement] = js.native
   /**
     * The document's active/focused element.
     */
@@ -127,7 +128,7 @@ trait Dom extends js.Object {
     * Dispatches an event on the document.
     * @param evt The event to dispatch.
     */
-  def dispatchEvent(evt: Event_): Unit = js.native
+  def dispatchEvent(evt: Event): Unit = js.native
   /**
     * Gives the values of all the CSS properties of an element after applying the active stylesheets and resolving any basic computation those values may contain.
     * @param element The Element for which to get the computed style.

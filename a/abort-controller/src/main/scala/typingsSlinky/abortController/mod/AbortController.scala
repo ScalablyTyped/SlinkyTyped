@@ -17,7 +17,7 @@ class AbortController () extends js.Object {
   /**
     * Returns the `AbortSignal` object associated with this object.
     */
-  val signal: typingsSlinky.abortController.AbortSignal = js.native
+  val signal: typingsSlinky.abortController.anon.AbortSignal = js.native
   /**
     * Abort and signal to any observers that the associated activity is to be aborted.
     */

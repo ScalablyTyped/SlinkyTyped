@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientPartners.gapi.client.partners
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientPartners.AnonAddress
-import typingsSlinky.gapiClientPartners.AnonCompanyName
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientPartners.anon.Address
+import typingsSlinky.gapiClientPartners.anon.CompanyName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,17 +11,17 @@ import scala.scalajs.js.annotation._
 trait CompaniesResource extends js.Object {
   var leads: LeadsResource = js.native
   /** Gets a company. */
-  def get(request: AnonAddress): Request_[GetCompanyResponse] = js.native
+  def get(request: Address): Request[GetCompanyResponse] = js.native
   /** Lists companies. */
-  def list(request: AnonCompanyName): Request_[ListCompaniesResponse] = js.native
+  def list(request: CompanyName): Request[ListCompaniesResponse] = js.native
 }
 
 object CompaniesResource {
   @scala.inline
   def apply(
-    get: AnonAddress => Request_[GetCompanyResponse],
+    get: Address => Request[GetCompanyResponse],
     leads: LeadsResource,
-    list: AnonCompanyName => Request_[ListCompaniesResponse]
+    list: CompanyName => Request[ListCompaniesResponse]
   ): CompaniesResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), leads = leads.asInstanceOf[js.Any], list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[CompaniesResource]
@@ -33,7 +33,7 @@ object CompaniesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonAddress => Request_[GetCompanyResponse]): Self = {
+    def withGet(value: Address => Request[GetCompanyResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
@@ -45,7 +45,7 @@ object CompaniesResource {
         ret
     }
     @scala.inline
-    def withList(value: AnonCompanyName => Request_[ListCompaniesResponse]): Self = {
+    def withList(value: CompanyName => Request[ListCompaniesResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

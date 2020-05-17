@@ -1,6 +1,5 @@
 package typingsSlinky.behavior3.b3
 
-import typingsSlinky.behavior3.AnonCategory
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,13 +23,8 @@ import scala.scalajs.js.annotation._
   * `_execute` method, which is called in the tree traversal.
   *
   */
-@JSGlobal("b3.BaseNode")
 @js.native
-/**
-  * Initialization method.
-  */
-class BaseNode () extends js.Object {
-  def this(hasCategoryNameTitleDescriptionProperties: AnonCategory) = this()
+trait BaseNode extends js.Object {
   /**
     * Wrapper for close method.
     */
@@ -93,5 +87,99 @@ class BaseNode () extends js.Object {
     *
     */
   def tick(tick: Tick): Unit = js.native
+}
+
+object BaseNode {
+  @scala.inline
+  def apply(
+    _close: Tick => Unit,
+    _enter: Tick => Unit,
+    _execute: Tick => Double,
+    _exit: Tick => Unit,
+    _open: Tick => Unit,
+    _tick: Tick => Double,
+    close: Tick => Unit,
+    enter: Tick => Unit,
+    exit: Tick => Unit,
+    open: Tick => Unit,
+    tick: Tick => Unit
+  ): BaseNode = {
+    val __obj = js.Dynamic.literal(_close = js.Any.fromFunction1(_close), _enter = js.Any.fromFunction1(_enter), _execute = js.Any.fromFunction1(_execute), _exit = js.Any.fromFunction1(_exit), _open = js.Any.fromFunction1(_open), _tick = js.Any.fromFunction1(_tick), close = js.Any.fromFunction1(close), enter = js.Any.fromFunction1(enter), exit = js.Any.fromFunction1(exit), open = js.Any.fromFunction1(open), tick = js.Any.fromFunction1(tick))
+    __obj.asInstanceOf[BaseNode]
+  }
+  @scala.inline
+  implicit class BaseNodeOps[Self <: BaseNode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_close(value: Tick => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_close")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def with_enter(value: Tick => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_enter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def with_execute(value: Tick => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_execute")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def with_exit(value: Tick => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_exit")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def with_open(value: Tick => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_open")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def with_tick(value: Tick => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_tick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withClose(value: Tick => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEnter(value: Tick => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withExit(value: Tick => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exit")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOpen(value: Tick => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTick(value: Tick => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -4,8 +4,8 @@ import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactChild
-import typingsSlinky.reactTagInput.AnonActiveSuggestion
-import typingsSlinky.reactTagInput.AnonId
+import typingsSlinky.reactTagInput.anon.ActiveSuggestion
+import typingsSlinky.reactTagInput.anon.Id
 import typingsSlinky.reactTagInput.mod.Tag
 import typingsSlinky.reactTagInput.reactTagInputNumbers.`1`
 import typingsSlinky.reactTagInput.reactTagInputStrings.`inline`
@@ -32,11 +32,11 @@ class SharedBuilder_ReactTagsProps_1858233423[R <: js.Object] (val args: js.Arra
   @scala.inline
   def autofocus(value: Boolean): this.type = set("autofocus", value.asInstanceOf[js.Any])
   @scala.inline
-  def classNames(value: AnonActiveSuggestion): this.type = set("classNames", value.asInstanceOf[js.Any])
+  def classNames(value: ActiveSuggestion): this.type = set("classNames", value.asInstanceOf[js.Any])
   @scala.inline
   def delimiters(value: js.Array[Double]): this.type = set("delimiters", value.asInstanceOf[js.Any])
   @scala.inline
-  def handleDrag(value: (/* tag */ AnonId, /* currPos */ Double, /* newPos */ Double) => Unit): this.type = set("handleDrag", js.Any.fromFunction3(value))
+  def handleDrag(value: (/* tag */ Id, /* currPos */ Double, /* newPos */ Double) => Unit): this.type = set("handleDrag", js.Any.fromFunction3(value))
   @scala.inline
   def handleFilterSuggestions(
     value: (/* textInputValue */ String, /* possibleSuggestionsArray */ js.Array[Tag]) => js.Array[Tag]

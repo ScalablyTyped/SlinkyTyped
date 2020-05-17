@@ -8,9 +8,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data for a MessageReceived event on a DatagramSocket . */
-@JSGlobal("Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs")
 @js.native
-abstract class DatagramSocketMessageReceivedEventArgs () extends js.Object {
+trait DatagramSocketMessageReceivedEventArgs extends js.Object {
   /** Gets the local IP address associated with a DatagramSocket when a message was received. */
   var localAddress: HostName = js.native
   /** Gets the IP address of the remote sender of the datagram on the DatagramSocket when a message is received. */
@@ -27,5 +26,57 @@ abstract class DatagramSocketMessageReceivedEventArgs () extends js.Object {
     * @return An IInputStream object that represents a sequential stream of bytes to be read as a message.
     */
   def getDataStream(): IInputStream = js.native
+}
+
+object DatagramSocketMessageReceivedEventArgs {
+  @scala.inline
+  def apply(
+    getDataReader: () => DataReader,
+    getDataStream: () => IInputStream,
+    localAddress: HostName,
+    remoteAddress: HostName,
+    remotePort: String
+  ): DatagramSocketMessageReceivedEventArgs = {
+    val __obj = js.Dynamic.literal(getDataReader = js.Any.fromFunction0(getDataReader), getDataStream = js.Any.fromFunction0(getDataStream), localAddress = localAddress.asInstanceOf[js.Any], remoteAddress = remoteAddress.asInstanceOf[js.Any], remotePort = remotePort.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DatagramSocketMessageReceivedEventArgs]
+  }
+  @scala.inline
+  implicit class DatagramSocketMessageReceivedEventArgsOps[Self <: DatagramSocketMessageReceivedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetDataReader(value: () => DataReader): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDataReader")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDataStream(value: () => IInputStream): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDataStream")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withLocalAddress(value: HostName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoteAddress(value: HostName): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemotePort(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remotePort")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

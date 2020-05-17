@@ -1,7 +1,7 @@
 package typingsSlinky.frctlFractal.mod.fractal.api.components
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.frctlFractal.AnonHandle
+import typingsSlinky.frctlFractal.anon.Handle
 import typingsSlinky.frctlFractal.mod.fractal.core.StatusInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -69,7 +69,7 @@ object ComponentConfig {
         ret
     }
     @scala.inline
-    def withDefaultDotcollator(value: (/* markup */ String, /* item */ AnonHandle) => String): Self = {
+    def withDefaultDotcollator(value: (/* markup */ String, /* item */ Handle) => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("default.collator")(js.Any.fromFunction2(value))
         ret

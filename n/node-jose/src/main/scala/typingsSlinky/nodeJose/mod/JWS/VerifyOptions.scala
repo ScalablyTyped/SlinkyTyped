@@ -1,6 +1,5 @@
 package typingsSlinky.nodeJose.mod.JWS
 
-import typingsSlinky.nodeJose.AnonExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +8,12 @@ import scala.scalajs.js.annotation._
 trait VerifyOptions extends js.Object {
   var algorithms: js.UndefOr[js.Array[String]] = js.native
   var allowEmbeddedKey: js.UndefOr[Boolean] = js.native
-  var handlers: AnonExp = js.native
+  var handlers: typingsSlinky.nodeJose.anon.Exp = js.native
 }
 
 object VerifyOptions {
   @scala.inline
-  def apply(handlers: AnonExp): VerifyOptions = {
+  def apply(handlers: typingsSlinky.nodeJose.anon.Exp): VerifyOptions = {
     val __obj = js.Dynamic.literal(handlers = handlers.asInstanceOf[js.Any])
     __obj.asInstanceOf[VerifyOptions]
   }
@@ -25,7 +24,7 @@ object VerifyOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withHandlers(value: AnonExp): Self = {
+    def withHandlers(value: typingsSlinky.nodeJose.anon.Exp): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("handlers")(value.asInstanceOf[js.Any])
         ret

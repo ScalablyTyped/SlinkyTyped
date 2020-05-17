@@ -1,33 +1,33 @@
 package typingsSlinky.aframe.mod
 
-import typingsSlinky.aframe.AnonComponentName
-import typingsSlinky.aframe.AnonEl
-import typingsSlinky.aframe.AnonId
-import typingsSlinky.aframe.AnonName
-import typingsSlinky.aframe.AnonState
+import org.scalajs.dom.raw.Event
+import typingsSlinky.aframe.anon.ComponentName
+import typingsSlinky.aframe.anon.El
+import typingsSlinky.aframe.anon.Id
+import typingsSlinky.aframe.anon.Name
+import typingsSlinky.aframe.anon.State
 import typingsSlinky.std.EventListener
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait EntityEventMap extends js.Object {
-  var `child-attached`: DetailEvent[AnonEl] = js.native
-  var `child-detached`: DetailEvent[AnonEl] = js.native
-  var componentchanged: DetailEvent[AnonId] = js.native
-  var componentremoved: DetailEvent[AnonName] = js.native
+  var `child-attached`: DetailEvent[El] = js.native
+  var `child-detached`: DetailEvent[El] = js.native
+  var componentchanged: DetailEvent[Id] = js.native
+  var componentremoved: DetailEvent[Name] = js.native
   @JSName("loaded")
   var loaded_Original: EventListener = js.native
   @JSName("pause")
   var pause_Original: EventListener = js.native
   @JSName("play")
   var play_Original: EventListener = js.native
-  var schemachanged: DetailEvent[AnonComponentName] = js.native
-  var stateadded: DetailEvent[AnonState] = js.native
-  var stateremoved: DetailEvent[AnonState] = js.native
-  def loaded(evt: Event_): Unit = js.native
-  def pause(evt: Event_): Unit = js.native
-  def play(evt: Event_): Unit = js.native
+  var schemachanged: DetailEvent[ComponentName] = js.native
+  var stateadded: DetailEvent[State] = js.native
+  var stateremoved: DetailEvent[State] = js.native
+  def loaded(evt: Event): Unit = js.native
+  def pause(evt: Event): Unit = js.native
+  def play(evt: Event): Unit = js.native
 }
 

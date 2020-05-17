@@ -3,7 +3,7 @@ package typingsSlinky.angularUiBootstrap.mod.angularAugmentingMod.ui.bootstrap
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.angular.mod.IAugmentedJQuery
 import typingsSlinky.angular.mod.IScope
-import typingsSlinky.angular.mod._Global_.Function
+import typingsSlinky.angular.mod.global.Function
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

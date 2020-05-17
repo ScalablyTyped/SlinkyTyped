@@ -1,6 +1,6 @@
 package typingsSlinky.mapboxMapboxSdk.staticMod
 
-import typingsSlinky.mapboxMapboxSdk.AnonBearing
+import typingsSlinky.mapboxMapboxSdk.anon.Bearing
 import typingsSlinky.mapboxMapboxSdk.mapboxMapboxSdkStrings.auto
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,14 +15,14 @@ trait StaticMapRequest extends js.Object {
   var logo: js.UndefOr[Boolean] = js.native
   var overlays: js.UndefOr[js.Array[CustomMarkerOverlay | GeoJsonOverlay | PathOverlay]] = js.native
   var ownerId: String = js.native
-  var position: AnonBearing | auto = js.native
+  var position: Bearing | auto = js.native
   var styleId: String = js.native
   var width: Double = js.native
 }
 
 object StaticMapRequest {
   @scala.inline
-  def apply(height: Double, ownerId: String, position: AnonBearing | auto, styleId: String, width: Double): StaticMapRequest = {
+  def apply(height: Double, ownerId: String, position: Bearing | auto, styleId: String, width: Double): StaticMapRequest = {
     val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], ownerId = ownerId.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], styleId = styleId.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
     __obj.asInstanceOf[StaticMapRequest]
   }
@@ -45,7 +45,7 @@ object StaticMapRequest {
         ret
     }
     @scala.inline
-    def withPosition(value: AnonBearing | auto): Self = {
+    def withPosition(value: Bearing | auto): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
         ret

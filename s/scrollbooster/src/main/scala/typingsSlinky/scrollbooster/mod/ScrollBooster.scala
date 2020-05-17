@@ -1,6 +1,6 @@
 package typingsSlinky.scrollbooster.mod
 
-import typingsSlinky.scrollbooster.PartialScrollBoosterOptio
+import typingsSlinky.scrollbooster.anon.PartialScrollBoosterOptio
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

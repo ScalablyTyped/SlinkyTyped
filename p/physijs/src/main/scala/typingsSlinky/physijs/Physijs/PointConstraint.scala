@@ -1,15 +1,17 @@
 package typingsSlinky.physijs.Physijs
 
-import typingsSlinky.three.mod.Object3D
-import typingsSlinky.three.mod.Vector3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Physijs.PointConstraint")
 @js.native
-class PointConstraint protected () extends Constraint {
-  def this(objecta: Object3D, objectb: Object3D) = this()
-  def this(objecta: Object3D, objectb: Object3D, position: Vector3) = this()
+trait PointConstraint extends Constraint
+
+object PointConstraint {
+  @scala.inline
+  def apply(getDefinition: () => js.Any): PointConstraint = {
+    val __obj = js.Dynamic.literal(getDefinition = js.Any.fromFunction0(getDefinition))
+    __obj.asInstanceOf[PointConstraint]
+  }
 }
 

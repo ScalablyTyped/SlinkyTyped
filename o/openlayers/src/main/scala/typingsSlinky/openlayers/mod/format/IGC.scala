@@ -1,11 +1,11 @@
 package typingsSlinky.openlayers.mod.format
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Node
 import typingsSlinky.openlayers.mod.GlobalObject
 import typingsSlinky.openlayers.mod.olx.format.IGCOptions
 import typingsSlinky.openlayers.mod.olx.format.ReadOptions
 import typingsSlinky.openlayers.mod.proj.Projection
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,8 +40,8 @@ class IGC () extends TextFeature {
     * @return Feature.
     * @api
     */
-  def readFeature(source: Document_): typingsSlinky.openlayers.mod.Feature = js.native
-  def readFeature(source: Document_, opt_options: ReadOptions): typingsSlinky.openlayers.mod.Feature = js.native
+  def readFeature(source: Document): typingsSlinky.openlayers.mod.Feature = js.native
+  def readFeature(source: Document, opt_options: ReadOptions): typingsSlinky.openlayers.mod.Feature = js.native
   def readFeature(source: Node): typingsSlinky.openlayers.mod.Feature = js.native
   def readFeature(source: Node, opt_options: ReadOptions): typingsSlinky.openlayers.mod.Feature = js.native
   def readFeatures(source: String): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
@@ -57,8 +57,8 @@ class IGC () extends TextFeature {
     * @return Features.
     * @api
     */
-  def readFeatures(source: Document_): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
-  def readFeatures(source: Document_, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
+  def readFeatures(source: Document): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
+  def readFeatures(source: Document, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: Node): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: Node, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readProjection(source: String): Projection = js.native
@@ -70,7 +70,7 @@ class IGC () extends TextFeature {
     * @return Projection.
     * @api
     */
-  def readProjection(source: Document_): Projection = js.native
+  def readProjection(source: Document): Projection = js.native
   def readProjection(source: Node): Projection = js.native
 }
 

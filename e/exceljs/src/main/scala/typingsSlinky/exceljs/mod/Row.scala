@@ -1,8 +1,8 @@
 package typingsSlinky.exceljs.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.exceljs.AnonIncludeEmpty
-import typingsSlinky.exceljs.PartialRowModel
+import typingsSlinky.exceljs.anon.IncludeEmpty
+import typingsSlinky.exceljs.anon.PartialRowModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,7 +61,7 @@ trait Row extends Style {
   /**
   	 * Iterate over all cells in a row (including empty cells)
   	 */
-  def eachCell(opt: AnonIncludeEmpty, callback: js.Function2[/* cell */ Cell, /* colNumber */ Double, Unit]): Unit = js.native
+  def eachCell(opt: IncludeEmpty, callback: js.Function2[/* cell */ Cell, /* colNumber */ Double, Unit]): Unit = js.native
   def findCell(colNumber: Double): js.UndefOr[Cell] = js.native
   def getCell(indexOrKey: String): Cell = js.native
   /**

@@ -1,15 +1,12 @@
 package typingsSlinky.amapJsSdk.AMap
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.amapJsSdk.AnonAsDestination
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("AMap.AdvancedInfoWindow")
 @js.native
-class AdvancedInfoWindow () extends EventBindable {
-  def this(options: AnonAsDestination) = this()
+trait AdvancedInfoWindow extends EventBindable {
   def close(): Unit = js.native
   def getContent(): String = js.native
   def getIsOpen(): Boolean = js.native

@@ -16,10 +16,8 @@ import scala.scalajs.js.annotation._
   * @property {number} height Height of the pick buffer in pixels (read-only).
   * @property {pc.RenderTarget} renderTarget The render target used by the picker internally (read-only).
   */
-@JSGlobal("pc.Picker")
 @js.native
-class Picker protected () extends js.Object {
-  def this(app: Application, width: Double, height: Double) = this()
+trait Picker extends js.Object {
   /**
     * Height of the pick buffer in pixels (read-only).
     */

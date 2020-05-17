@@ -5,7 +5,7 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.antd.gridColMod.ColProps
 import typingsSlinky.antd.interfaceMod.FormLabelAlign
-import typingsSlinky.rcFieldForm.AnonSource
+import typingsSlinky.rcFieldForm.anon.Source
 import typingsSlinky.rcFieldForm.fieldMod.ShouldUpdate
 import typingsSlinky.rcFieldForm.interfaceMod.EventArgs
 import typingsSlinky.rcFieldForm.interfaceMod.NamePath
@@ -353,7 +353,7 @@ object FormItemProps {
         ret
     }
     @scala.inline
-    def withShouldUpdateFunction3(value: (/* prevValues */ Store, /* nextValues */ Store, /* info */ AnonSource) => Boolean): Self = {
+    def withShouldUpdateFunction3(value: (/* prevValues */ Store, /* nextValues */ Store, /* info */ Source) => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shouldUpdate")(js.Any.fromFunction3(value))
         ret

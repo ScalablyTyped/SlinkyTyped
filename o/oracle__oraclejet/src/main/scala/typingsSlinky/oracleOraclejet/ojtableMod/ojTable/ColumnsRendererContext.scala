@@ -2,7 +2,7 @@ package typingsSlinky.oracleOraclejet.ojtableMod.ojTable
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
-import typingsSlinky.oracleOraclejet.AnonDatasource
+import typingsSlinky.oracleOraclejet.anon.Datasource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 // tslint:disable-next-line interface-over-type-literal
 @js.native
 trait ColumnsRendererContext[K, D] extends js.Object {
-  var cellContext: AnonDatasource[K, D] = js.native
+  var cellContext: Datasource[K, D] = js.native
   var columnIndex: Double = js.native
   var componentElement: Element = js.native
   var data: D = js.native
@@ -21,7 +21,7 @@ trait ColumnsRendererContext[K, D] extends js.Object {
 object ColumnsRendererContext {
   @scala.inline
   def apply[K, D](
-    cellContext: AnonDatasource[K, D],
+    cellContext: Datasource[K, D],
     columnIndex: Double,
     componentElement: Element,
     data: D,
@@ -38,7 +38,7 @@ object ColumnsRendererContext {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): (Self[K, D]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[K, D]) with Other]
     @scala.inline
-    def withCellContext(value: AnonDatasource[K, D]): Self[K, D] = {
+    def withCellContext(value: Datasource[K, D]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cellContext")(value.asInstanceOf[js.Any])
         ret

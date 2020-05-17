@@ -1,8 +1,8 @@
 package typingsSlinky.knex.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.knex.AnonColumn
-import typingsSlinky.knex.AnonOrder
+import typingsSlinky.knex.anon.Column
+import typingsSlinky.knex.anon.Order
 import typingsSlinky.knex.knexBooleans.`false`
 import typingsSlinky.knex.knexStrings.Asterisk
 import typingsSlinky.knex.knexStrings.Count
@@ -889,7 +889,7 @@ trait QueryInterface[TRecord /* <: js.Object */, TResult] extends js.Object {
   @JSName("orWhere")
   def orWhere_TResult2[TResult2](raw: Raw[TResult2]): QueryBuilder[TRecord, TResult2] = js.native
   // Order by
-  def orderBy(columnDefs: js.Array[AnonColumn[TRecord] | AnonOrder | (/* keyof TRecord */ String)]): QueryBuilder[TRecord, TResult] = js.native
+  def orderBy(columnDefs: js.Array[Column[TRecord] | Order | (/* keyof TRecord */ String)]): QueryBuilder[TRecord, TResult] = js.native
   // Order by
   def orderBy(columnName: /* keyof TRecord */ String): QueryBuilder[TRecord, TResult] = js.native
   def orderBy(columnName: String, order: String): QueryBuilder[TRecord, TResult] = js.native

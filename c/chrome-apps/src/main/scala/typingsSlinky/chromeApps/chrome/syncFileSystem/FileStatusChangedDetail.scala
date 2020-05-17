@@ -1,11 +1,9 @@
 package typingsSlinky.chromeApps.chrome.syncFileSystem
 
-import typingsSlinky.chromeApps.AnonADDED
-import typingsSlinky.chromeApps.AnonCONFLICTING
-import typingsSlinky.chromeApps.AnonLOCALTOREMOTE
+import typingsSlinky.chromeApps.anon.ADDED
+import typingsSlinky.chromeApps.anon.CONFLICTING
+import typingsSlinky.chromeApps.anon.LOCALTOREMOTE
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
-import typingsSlinky.chromeApps.chromeAppsStrings.ADDED
-import typingsSlinky.chromeApps.chromeAppsStrings.CONFLICTING
 import typingsSlinky.chromeApps.chromeAppsStrings.DELETED
 import typingsSlinky.chromeApps.chromeAppsStrings.LOCAL_TO_REMOTE
 import typingsSlinky.chromeApps.chromeAppsStrings.PENDING
@@ -35,10 +33,10 @@ trait FileStatusChangedDetail extends js.Object {
     */
   var action: js.UndefOr[
     ToStringLiteral[
-      AnonADDED, 
-      /* keyof chrome-apps.AnonADDED */ ADDED | UPDATED | DELETED, 
+      ADDED, 
+      /* keyof chrome-apps.anon.ADDED */ typingsSlinky.chromeApps.chromeAppsStrings.ADDED | UPDATED | DELETED, 
       Exclude[
-        /* keyof chrome-apps.AnonADDED */ ADDED | UPDATED | DELETED, 
+        /* keyof chrome-apps.anon.ADDED */ typingsSlinky.chromeApps.chromeAppsStrings.ADDED | UPDATED | DELETED, 
         added_ | updated_ | deleted_
       ]
     ]
@@ -50,10 +48,10 @@ trait FileStatusChangedDetail extends js.Object {
     */
   var direction: js.UndefOr[
     ToStringLiteral[
-      AnonLOCALTOREMOTE, 
-      /* keyof chrome-apps.AnonLOCALTOREMOTE */ LOCAL_TO_REMOTE | REMOTE_TO_LOCAL, 
+      LOCALTOREMOTE, 
+      /* keyof chrome-apps.anon.LOCALTOREMOTE */ LOCAL_TO_REMOTE | REMOTE_TO_LOCAL, 
       Exclude[
-        /* keyof chrome-apps.AnonLOCALTOREMOTE */ LOCAL_TO_REMOTE | REMOTE_TO_LOCAL, 
+        /* keyof chrome-apps.anon.LOCALTOREMOTE */ LOCAL_TO_REMOTE | REMOTE_TO_LOCAL, 
         local_to_remote_ | remote_to_local_
       ]
     ]
@@ -70,10 +68,10 @@ trait FileStatusChangedDetail extends js.Object {
     * @see FileStatus
     */
   var status: ToStringLiteral[
-    AnonCONFLICTING, 
-    /* keyof chrome-apps.AnonCONFLICTING */ SYNCED | PENDING | CONFLICTING, 
+    CONFLICTING, 
+    /* keyof chrome-apps.anon.CONFLICTING */ SYNCED | PENDING | typingsSlinky.chromeApps.chromeAppsStrings.CONFLICTING, 
     Exclude[
-      /* keyof chrome-apps.AnonCONFLICTING */ SYNCED | PENDING | CONFLICTING, 
+      /* keyof chrome-apps.anon.CONFLICTING */ SYNCED | PENDING | typingsSlinky.chromeApps.chromeAppsStrings.CONFLICTING, 
       synced_ | pending_ | conflicting_
     ]
   ] = js.native
@@ -84,10 +82,10 @@ object FileStatusChangedDetail {
   def apply(
     fileEntry: FileEntry,
     status: ToStringLiteral[
-      AnonCONFLICTING, 
-      /* keyof chrome-apps.AnonCONFLICTING */ SYNCED | PENDING | CONFLICTING, 
+      CONFLICTING, 
+      /* keyof chrome-apps.anon.CONFLICTING */ SYNCED | PENDING | typingsSlinky.chromeApps.chromeAppsStrings.CONFLICTING, 
       Exclude[
-        /* keyof chrome-apps.AnonCONFLICTING */ SYNCED | PENDING | CONFLICTING, 
+        /* keyof chrome-apps.anon.CONFLICTING */ SYNCED | PENDING | typingsSlinky.chromeApps.chromeAppsStrings.CONFLICTING, 
         synced_ | pending_ | conflicting_
       ]
     ]
@@ -110,10 +108,10 @@ object FileStatusChangedDetail {
     @scala.inline
     def withStatus(
       value: ToStringLiteral[
-          AnonCONFLICTING, 
-          /* keyof chrome-apps.AnonCONFLICTING */ SYNCED | PENDING | CONFLICTING, 
+          CONFLICTING, 
+          /* keyof chrome-apps.anon.CONFLICTING */ SYNCED | PENDING | typingsSlinky.chromeApps.chromeAppsStrings.CONFLICTING, 
           Exclude[
-            /* keyof chrome-apps.AnonCONFLICTING */ SYNCED | PENDING | CONFLICTING, 
+            /* keyof chrome-apps.anon.CONFLICTING */ SYNCED | PENDING | typingsSlinky.chromeApps.chromeAppsStrings.CONFLICTING, 
             synced_ | pending_ | conflicting_
           ]
         ]
@@ -125,10 +123,10 @@ object FileStatusChangedDetail {
     @scala.inline
     def withAction(
       value: ToStringLiteral[
-          AnonADDED, 
-          /* keyof chrome-apps.AnonADDED */ ADDED | UPDATED | DELETED, 
+          ADDED, 
+          /* keyof chrome-apps.anon.ADDED */ typingsSlinky.chromeApps.chromeAppsStrings.ADDED | UPDATED | DELETED, 
           Exclude[
-            /* keyof chrome-apps.AnonADDED */ ADDED | UPDATED | DELETED, 
+            /* keyof chrome-apps.anon.ADDED */ typingsSlinky.chromeApps.chromeAppsStrings.ADDED | UPDATED | DELETED, 
             added_ | updated_ | deleted_
           ]
         ]
@@ -146,10 +144,10 @@ object FileStatusChangedDetail {
     @scala.inline
     def withDirection(
       value: ToStringLiteral[
-          AnonLOCALTOREMOTE, 
-          /* keyof chrome-apps.AnonLOCALTOREMOTE */ LOCAL_TO_REMOTE | REMOTE_TO_LOCAL, 
+          LOCALTOREMOTE, 
+          /* keyof chrome-apps.anon.LOCALTOREMOTE */ LOCAL_TO_REMOTE | REMOTE_TO_LOCAL, 
           Exclude[
-            /* keyof chrome-apps.AnonLOCALTOREMOTE */ LOCAL_TO_REMOTE | REMOTE_TO_LOCAL, 
+            /* keyof chrome-apps.anon.LOCALTOREMOTE */ LOCAL_TO_REMOTE | REMOTE_TO_LOCAL, 
             local_to_remote_ | remote_to_local_
           ]
         ]

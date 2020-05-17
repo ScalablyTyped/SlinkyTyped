@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.OmitVideoset
+import typingsSlinky.tabris.anon.OmitVideoset
 import typingsSlinky.tabris.tabrisStrings.autoPlay
 import typingsSlinky.tabris.tabrisStrings.controlsVisible
 import typingsSlinky.tabris.tabrisStrings.empty

@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdkClientS3Browser.typesPutObjectAclOutputMod
 
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.requester_
-import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PutObjectAclOutput
   extends MetadataBearer
-     with _OutputTypesUnion {
+     with OutputTypesUnion {
   /**
     * <p>If present, indicates that the requester was successfully charged for the request.</p>
     */

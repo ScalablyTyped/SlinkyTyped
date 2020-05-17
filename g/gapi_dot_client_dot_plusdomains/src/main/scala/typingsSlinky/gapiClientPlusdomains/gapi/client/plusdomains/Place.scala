@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientPlusdomains.gapi.client.plusdomains
 
-import typingsSlinky.gapiClientPlusdomains.AnonFormattedString
-import typingsSlinky.gapiClientPlusdomains.AnonLatitude
+import typingsSlinky.gapiClientPlusdomains.anon.FormattedString
+import typingsSlinky.gapiClientPlusdomains.anon.Latitude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Place extends js.Object {
   /** The physical address of the place. */
-  var address: js.UndefOr[AnonFormattedString] = js.native
+  var address: js.UndefOr[FormattedString] = js.native
   /** The display name of the place. */
   var displayName: js.UndefOr[String] = js.native
   /** The id of the place. */
@@ -17,7 +17,7 @@ trait Place extends js.Object {
   /** Identifies this resource as a place. Value: "plus#place". */
   var kind: js.UndefOr[String] = js.native
   /** The position of the place. */
-  var position: js.UndefOr[AnonLatitude] = js.native
+  var position: js.UndefOr[Latitude] = js.native
 }
 
 object Place {
@@ -33,7 +33,7 @@ object Place {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddress(value: AnonFormattedString): Self = {
+    def withAddress(value: FormattedString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
         ret
@@ -81,7 +81,7 @@ object Place {
         ret
     }
     @scala.inline
-    def withPosition(value: AnonLatitude): Self = {
+    def withPosition(value: Latitude): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
         ret

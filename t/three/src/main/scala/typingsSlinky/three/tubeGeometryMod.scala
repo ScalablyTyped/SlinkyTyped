@@ -1,5 +1,6 @@
 package typingsSlinky.three
 
+import typingsSlinky.three.anon.Closed
 import typingsSlinky.three.bufferGeometryMod.BufferGeometry
 import typingsSlinky.three.curveMod.Curve
 import typingsSlinky.three.geometryMod.Geometry
@@ -26,7 +27,7 @@ object tubeGeometryMod extends js.Object {
     ) = this()
     var binormals: js.Array[Vector3] = js.native
     var normals: js.Array[Vector3] = js.native
-    var parameters: AnonClosed = js.native
+    var parameters: Closed = js.native
     var tangents: js.Array[Vector3] = js.native
   }
   
@@ -45,7 +46,7 @@ object tubeGeometryMod extends js.Object {
     ) = this()
     var binormals: js.Array[Vector3] = js.native
     var normals: js.Array[Vector3] = js.native
-    var parameters: AnonClosed = js.native
+    var parameters: Closed = js.native
     var tangents: js.Array[Vector3] = js.native
   }
   

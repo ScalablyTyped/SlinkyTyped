@@ -3,6 +3,8 @@ package typingsSlinky.antd
 import org.scalajs.dom.raw.AnimationEvent
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
+import typingsSlinky.antd.anon.Cancel
+import typingsSlinky.antd.anon.InsertExtraNode
 import typingsSlinky.antd.antdStrings.`ant-click-animating-without-extra-node`
 import typingsSlinky.antd.antdStrings.`ant-click-animating`
 import typingsSlinky.antd.contextMod.ConfigConsumerProps
@@ -16,7 +18,7 @@ import scala.scalajs.js.annotation._
 object waveMod extends js.Object {
   @js.native
   trait Wave
-    extends Component[AnonInsertExtraNode, js.Object, js.Any] {
+    extends Component[InsertExtraNode, js.Object, js.Any] {
     var animationStart: js.Any = js.native
     var animationStartId: js.Any = js.native
     var clickWaveTimeoutId: js.Any = js.native
@@ -24,7 +26,7 @@ object waveMod extends js.Object {
     var destroyed: js.Any = js.native
     var extraNode: js.Any = js.native
     var instance: js.UndefOr[js.Any] = js.native
-    def bindAnimationEvent(node: HTMLElement): js.UndefOr[AnonCancel] = js.native
+    def bindAnimationEvent(node: HTMLElement): js.UndefOr[Cancel] = js.native
     @JSName("componentDidMount")
     def componentDidMount_MWave(): Unit = js.native
     @JSName("componentWillUnmount")

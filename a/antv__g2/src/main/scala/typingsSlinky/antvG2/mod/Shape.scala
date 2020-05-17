@@ -1,9 +1,9 @@
 package typingsSlinky.antvG2.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.antvG2.AnonDraw
-import typingsSlinky.antvG2.AnonDrawShape
-import typingsSlinky.antvG2.AnonParsePath
+import typingsSlinky.antvG2.anon.Draw
+import typingsSlinky.antvG2.anon.DrawShape
+import typingsSlinky.antvG2.anon.ParsePath
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,8 +15,8 @@ trait Shape extends js.Object {
     js.Function3[
       /* chartType */ String, 
       /* shapeName */ String, 
-      /* config */ AnonDraw | AnonDrawShape, 
-      AnonParsePath
+      /* config */ Draw | DrawShape, 
+      ParsePath
     ]
   ] = js.native
 }

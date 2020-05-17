@@ -1,6 +1,6 @@
 package typingsSlinky.cathoQuantum.toggleMod
 
-import typingsSlinky.cathoQuantum.AnonBaseFontSize
+import typingsSlinky.cathoQuantum.anon.BaseFontSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait ToggleProps extends js.Object {
   var checked: js.UndefOr[Boolean] = js.native
   var id: js.UndefOr[String] = js.native
-  var theme: js.UndefOr[AnonBaseFontSize] = js.native
+  var theme: js.UndefOr[BaseFontSize] = js.native
 }
 
 object ToggleProps {
@@ -49,7 +49,7 @@ object ToggleProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonBaseFontSize): Self = {
+    def withTheme(value: BaseFontSize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

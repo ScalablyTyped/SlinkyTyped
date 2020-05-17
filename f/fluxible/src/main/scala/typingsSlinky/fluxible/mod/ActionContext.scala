@@ -1,7 +1,7 @@
 package typingsSlinky.fluxible.mod
 
-import typingsSlinky.fluxible.AnonCreate
-import typingsSlinky.fluxible.AnonInstantiable
+import typingsSlinky.fluxible.anon.Create
+import typingsSlinky.fluxible.anon.Instantiable
 import typingsSlinky.fluxible.baseStoreMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +13,7 @@ class ActionContext () extends js.Object {
   /**
     * Data service. available only if fetch plugin is added
     */
-  var service: js.UndefOr[AnonCreate] = js.native
+  var service: js.UndefOr[Create] = js.native
   /**
     * Dispatches a payload to all registered callbacks.
     * @param action Action name
@@ -57,6 +57,6 @@ class ActionContext () extends js.Object {
   /**
     * Getter for store from dispatcher
     */
-  def getStore[T /* <: ^[js.Object] */](store: AnonInstantiable[T]): T = js.native
+  def getStore[T /* <: ^[js.Object] */](store: Instantiable[T]): T = js.native
 }
 

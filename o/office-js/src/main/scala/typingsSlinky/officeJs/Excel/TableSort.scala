@@ -1,9 +1,9 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.TableSortData
 import typingsSlinky.officeJs.Excel.Interfaces.TableSortLoadOptions
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
+import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.PinYin
 import typingsSlinky.officeJs.officeJsStrings.StrokeCount
 import scala.scalajs.js
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.2]
   */
-@JSGlobal("Excel.TableSort")
 @js.native
-class TableSort () extends ClientObject {
+trait TableSort extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_TableSort: RequestContext = js.native
@@ -75,7 +74,7 @@ class TableSort () extends ClientObject {
     */
   def load(): TableSort = js.native
   def load(options: TableSortLoadOptions): TableSort = js.native
-  def load(propertyNamesAndPaths: AnonExpand): TableSort = js.native
+  def load(propertyNamesAndPaths: Expand): TableSort = js.native
   def load(propertyNames: String): TableSort = js.native
   def load(propertyNames: js.Array[String]): TableSort = js.native
   /**

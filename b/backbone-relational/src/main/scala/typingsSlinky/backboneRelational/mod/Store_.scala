@@ -2,7 +2,7 @@ package typingsSlinky.backboneRelational.mod
 
 import typingsSlinky.backbone.mod.Collection
 import typingsSlinky.backbone.mod.EventsMixin
-import typingsSlinky.backboneRelational.TypeofModel
+import typingsSlinky.backboneRelational.anon.TypeofModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

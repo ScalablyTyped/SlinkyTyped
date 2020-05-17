@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.choiceGroupOptionTypesMod
 
-import typingsSlinky.officeUiFabricReact.AnonHeightWidth
+import typingsSlinky.officeUiFabricReact.anon.HeightWidth
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,7 +24,7 @@ trait IChoiceGroupOptionStyleProps extends js.Object {
     * Image sizes used when `hasImage` or `hasIcon` style props are enabled.
     * @defaultvalue \{height: 32, width: 32\}
     */
-  var imageSize: js.UndefOr[AnonHeightWidth] = js.native
+  var imageSize: js.UndefOr[HeightWidth] = js.native
   /** Theme provided by High-Order Component. */
   var theme: ITheme = js.native
 }
@@ -120,7 +120,7 @@ object IChoiceGroupOptionStyleProps {
         ret
     }
     @scala.inline
-    def withImageSize(value: AnonHeightWidth): Self = {
+    def withImageSize(value: HeightWidth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("imageSize")(value.asInstanceOf[js.Any])
         ret

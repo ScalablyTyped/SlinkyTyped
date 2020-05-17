@@ -6,8 +6,8 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.popperJs.mod.Data
 import typingsSlinky.popperJs.mod.Modifiers
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactFloater.AnonOffset
-import typingsSlinky.reactFloater.PartialStyles
+import typingsSlinky.reactFloater.anon.Offset
+import typingsSlinky.reactFloater.anon.PartialStyles
 import typingsSlinky.reactFloater.reactFloaterStrings.click
 import typingsSlinky.reactFloater.reactFloaterStrings.floater
 import typingsSlinky.reactFloater.reactFloaterStrings.hover
@@ -109,7 +109,7 @@ trait Props extends js.Object {
   /**
     * Position the wrapper relative to the target.
     */
-  var wrapperOptions: js.UndefOr[AnonOffset] = js.native
+  var wrapperOptions: js.UndefOr[Offset] = js.native
 }
 
 object Props {
@@ -419,7 +419,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withWrapperOptions(value: AnonOffset): Self = {
+    def withWrapperOptions(value: Offset): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("wrapperOptions")(value.asInstanceOf[js.Any])
         ret

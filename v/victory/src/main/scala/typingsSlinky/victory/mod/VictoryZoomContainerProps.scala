@@ -212,7 +212,7 @@ object VictoryZoomContainerProps {
         ret
     }
     @scala.inline
-    def withZoomDimension(value: x | y): Self = {
+    def withZoomDimension(value: typingsSlinky.victory.victoryStrings.x | y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("zoomDimension")(value.asInstanceOf[js.Any])
         ret

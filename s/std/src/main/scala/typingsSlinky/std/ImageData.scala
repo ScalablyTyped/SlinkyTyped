@@ -1,7 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable2
-import org.scalablytyped.runtime.Instantiable3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,18 +23,37 @@ trait ImageData
   val width: Double = js.native
 }
 
-@JSGlobal("ImageData")
-@js.native
-object ImageData
-  extends Instantiable2[
-      (/* width */ Double) | (/* array */ js.typedarray.Uint8ClampedArray), 
-      /* width */ Double, 
-      org.scalajs.dom.raw.ImageData
-    ]
-     with Instantiable3[
-      /* array */ js.typedarray.Uint8ClampedArray, 
-      /* width */ Double, 
-      /* height */ Double, 
-      org.scalajs.dom.raw.ImageData
-    ]
+object ImageData {
+  @scala.inline
+  def apply(data: js.typedarray.Uint8ClampedArray, height: Double, width: Double): ImageData = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ImageData]
+  }
+  @scala.inline
+  implicit class ImageDataOps[Self <: org.scalajs.dom.raw.ImageData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withData(value: js.typedarray.Uint8ClampedArray): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

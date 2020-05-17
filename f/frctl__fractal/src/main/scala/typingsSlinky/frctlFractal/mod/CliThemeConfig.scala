@@ -1,14 +1,14 @@
 package typingsSlinky.frctlFractal.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.frctlFractal.AnonFormat
+import typingsSlinky.frctlFractal.anon.Format
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CliThemeConfig extends js.Object {
-  var delimiter: js.UndefOr[AnonFormat] = js.native
+  var delimiter: js.UndefOr[Format] = js.native
   @JSName("delimiter.format")
   var delimiterDotformat: js.UndefOr[js.Function1[/* str */ String, String]] = js.native
   @JSName("delimiter.text")
@@ -29,7 +29,7 @@ object CliThemeConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDelimiter(value: AnonFormat): Self = {
+    def withDelimiter(value: Format): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delimiter")(value.asInstanceOf[js.Any])
         ret

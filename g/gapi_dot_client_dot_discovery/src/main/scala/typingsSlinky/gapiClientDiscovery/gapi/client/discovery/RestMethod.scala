@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientDiscovery.gapi.client.discovery
 
-import typingsSlinky.gapiClientDiscovery.AnonAccept
-import typingsSlinky.gapiClientDiscovery.AnonParameterName
-import typingsSlinky.gapiClientDiscovery.AnonRefString
+import typingsSlinky.gapiClientDiscovery.anon.Accept
+import typingsSlinky.gapiClientDiscovery.anon.ParameterName
+import typingsSlinky.gapiClientDiscovery.anon.RefString
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +19,7 @@ trait RestMethod extends js.Object {
   /** A unique ID for this method. This property can be used to match methods between different versions of Discovery. */
   var id: js.UndefOr[String] = js.native
   /** Media upload parameters. */
-  var mediaUpload: js.UndefOr[AnonAccept] = js.native
+  var mediaUpload: js.UndefOr[Accept] = js.native
   /**
     * Ordered list of required parameters, serves as a hint to clients on how to structure their method signatures. The array is ordered such that the
     * "most-significant" parameter appears first.
@@ -30,9 +30,9 @@ trait RestMethod extends js.Object {
   /** The URI path of this REST method. Should be used in conjunction with the basePath property at the api-level. */
   var path: js.UndefOr[String] = js.native
   /** The schema for the request. */
-  var request: js.UndefOr[AnonParameterName] = js.native
+  var request: js.UndefOr[ParameterName] = js.native
   /** The schema for the response. */
-  var response: js.UndefOr[AnonRefString] = js.native
+  var response: js.UndefOr[RefString] = js.native
   /** OAuth 2.0 scopes applicable to this method. */
   var scopes: js.UndefOr[js.Array[String]] = js.native
   /** Whether this method supports media downloads. */
@@ -106,7 +106,7 @@ object RestMethod {
         ret
     }
     @scala.inline
-    def withMediaUpload(value: AnonAccept): Self = {
+    def withMediaUpload(value: Accept): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mediaUpload")(value.asInstanceOf[js.Any])
         ret
@@ -154,7 +154,7 @@ object RestMethod {
         ret
     }
     @scala.inline
-    def withRequest(value: AnonParameterName): Self = {
+    def withRequest(value: ParameterName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
         ret
@@ -166,7 +166,7 @@ object RestMethod {
         ret
     }
     @scala.inline
-    def withResponse(value: AnonRefString): Self = {
+    def withResponse(value: RefString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
         ret

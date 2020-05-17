@@ -1,7 +1,7 @@
 package typingsSlinky.jqueryTypeahead.RunningCoder.Typeahead
 
+import typingsSlinky.jquery.JQuery.AjaxSettings
 import typingsSlinky.jquery.JQueryXHR
-import typingsSlinky.jquery.JQuery_.AjaxSettings
 import typingsSlinky.jqueryTypeahead.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`

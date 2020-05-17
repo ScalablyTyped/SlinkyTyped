@@ -2,8 +2,8 @@ package typingsSlinky.vis.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.vis.AnonEdges
-import typingsSlinky.vis.AnonFromId
+import typingsSlinky.vis.anon.Edges
+import typingsSlinky.vis.anon.FromId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -188,8 +188,8 @@ class Network protected () extends js.Object {
     *
     * @param nodeOrEdgeId a node or edge id
     */
-  def getConnectedNodes(nodeOrEdgeId: IdType): js.Array[AnonFromId | IdType] = js.native
-  def getConnectedNodes(nodeOrEdgeId: IdType, direction: DirectionType): js.Array[AnonFromId | IdType] = js.native
+  def getConnectedNodes(nodeOrEdgeId: IdType): js.Array[FromId | IdType] = js.native
+  def getConnectedNodes(nodeOrEdgeId: IdType, direction: DirectionType): js.Array[FromId | IdType] = js.native
   /**
     * Returns a edgeId or undefined.
     * The DOM positions are expected to be in pixels from the top left corner of the canvas.
@@ -256,7 +256,7 @@ class Network protected () extends js.Object {
     * Returns an object with selected nodes and edges ids.
     *
     */
-  def getSelection(): AnonEdges = js.native
+  def getSelection(): Edges = js.native
   /**
     * Returns the current central focus point of the view in the form: { x: {Number}, y: {Number} }
     *
@@ -367,8 +367,8 @@ class Network protected () extends js.Object {
     * You can also pass only nodes or edges in selection object.
     *
     */
-  def setSelection(selection: AnonEdges): Unit = js.native
-  def setSelection(selection: AnonEdges, options: SelectionOptions): Unit = js.native
+  def setSelection(selection: Edges): Unit = js.native
+  def setSelection(selection: Edges, options: SelectionOptions): Unit = js.native
   /**
     * Set the size of the canvas.
     * This is automatically done on a window resize.

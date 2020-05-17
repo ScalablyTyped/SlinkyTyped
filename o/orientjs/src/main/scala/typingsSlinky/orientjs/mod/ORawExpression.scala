@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ORawExpression extends _OSqlExpression {
+trait ORawExpression extends OSqlExpression {
   var db: ODB = js.native
   var value: String = js.native
   def as(alias: String): ORawExpression = js.native

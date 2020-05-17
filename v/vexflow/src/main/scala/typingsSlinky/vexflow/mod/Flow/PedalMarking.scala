@@ -1,7 +1,7 @@
 package typingsSlinky.vexflow.mod.Flow
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.vexflow.AnonXshift
+import typingsSlinky.vexflow.anon.Xshift
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ object PedalMarking extends js.Object {
   def createSustain(notes: js.Array[typingsSlinky.vexflow.Vex.Flow.Note]): typingsSlinky.vexflow.Vex.Flow.PedalMarking = js.native
   def createUnaCorda(notes: js.Array[typingsSlinky.vexflow.Vex.Flow.Note]): typingsSlinky.vexflow.Vex.Flow.PedalMarking = js.native
   @js.native
-  object GLYPHS extends /* name */ StringDictionary[AnonXshift]
+  object GLYPHS extends /* name */ StringDictionary[Xshift]
   
 }
 

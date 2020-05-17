@@ -7,5 +7,5 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Nested
   extends Container
-     with _ParentTypeAlias
+     with ParentTypeAlias
 

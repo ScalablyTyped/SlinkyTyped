@@ -1,6 +1,6 @@
 package typingsSlinky.jweixin.mod
 
-import typingsSlinky.jweixin.AnonCheckResult
+import typingsSlinky.jweixin.anon.CheckResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +12,12 @@ trait IcheckJsApi extends BaseParams {
   // 以键值对的形式返回，可用的api值true，不可用为false
   // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
   @JSName("success")
-  def success_MIcheckJsApi(res: AnonCheckResult): Unit = js.native
+  def success_MIcheckJsApi(res: CheckResult): Unit = js.native
 }
 
 object IcheckJsApi {
   @scala.inline
-  def apply(jsApiList: jsApiList, success: AnonCheckResult => Unit): IcheckJsApi = {
+  def apply(jsApiList: jsApiList, success: CheckResult => Unit): IcheckJsApi = {
     val __obj = js.Dynamic.literal(jsApiList = jsApiList.asInstanceOf[js.Any], success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[IcheckJsApi]
   }
@@ -34,7 +34,7 @@ object IcheckJsApi {
         ret
     }
     @scala.inline
-    def withSuccess(value: AnonCheckResult => Unit): Self = {
+    def withSuccess(value: CheckResult => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

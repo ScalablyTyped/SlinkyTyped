@@ -2,7 +2,7 @@ package typingsSlinky.gestalt.mod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
-import typingsSlinky.gestalt.AnonData
+import typingsSlinky.gestalt.anon.Data
 import typingsSlinky.gestalt.gestaltStrings.MasonryDefaultLayout
 import typingsSlinky.gestalt.gestaltStrings.MasonryUniformRowLayout
 import scala.scalajs.js
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MasonryProps extends js.Object {
   var columnWidth: js.UndefOr[Double] = js.native
-  var comp: ReactComponentClass[AnonData] = js.native
+  var comp: ReactComponentClass[Data] = js.native
   var flexible: js.UndefOr[Boolean] = js.native
   var gutterWidth: js.UndefOr[Double] = js.native
   var items: js.Array[_] = js.native
@@ -28,7 +28,7 @@ trait MasonryProps extends js.Object {
 
 object MasonryProps {
   @scala.inline
-  def apply(comp: ReactComponentClass[AnonData], items: js.Array[_]): MasonryProps = {
+  def apply(comp: ReactComponentClass[Data], items: js.Array[_]): MasonryProps = {
     val __obj = js.Dynamic.literal(comp = comp.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
     __obj.asInstanceOf[MasonryProps]
   }
@@ -39,7 +39,7 @@ object MasonryProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withComp(value: ReactComponentClass[AnonData]): Self = {
+    def withComp(value: ReactComponentClass[Data]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("comp")(value.asInstanceOf[js.Any])
         ret

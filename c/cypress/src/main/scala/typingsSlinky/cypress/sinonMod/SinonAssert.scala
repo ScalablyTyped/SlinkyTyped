@@ -1,6 +1,6 @@
 package typingsSlinky.cypress.sinonMod
 
-import typingsSlinky.cypress.PartialSinonExposeOptions
+import typingsSlinky.cypress.anon.PartialSinonExposeOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

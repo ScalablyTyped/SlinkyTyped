@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Outlook.AccountRuleCondition")
 @js.native
-class AccountRuleCondition protected () extends js.Object {
+trait AccountRuleCondition extends js.Object {
   var Account: typingsSlinky.activexOutlook.Outlook.Account = js.native
   val Application: typingsSlinky.activexOutlook.Outlook.Application = js.native
   val Class: OlObjectClass = js.native
@@ -16,5 +15,79 @@ class AccountRuleCondition protected () extends js.Object {
   var OutlookDotAccountRuleCondition_typekey: AccountRuleCondition = js.native
   val Parent: js.Any = js.native
   val Session: NameSpace = js.native
+}
+
+object AccountRuleCondition {
+  @scala.inline
+  def apply(
+    Account: Account,
+    Application: Application,
+    Class: OlObjectClass,
+    ConditionType: OlRuleConditionType,
+    Enabled: Boolean,
+    OutlookDotAccountRuleCondition_typekey: AccountRuleCondition,
+    Parent: js.Any,
+    Session: NameSpace
+  ): AccountRuleCondition = {
+    val __obj = js.Dynamic.literal(Account = Account.asInstanceOf[js.Any], Application = Application.asInstanceOf[js.Any], Class = Class.asInstanceOf[js.Any], ConditionType = ConditionType.asInstanceOf[js.Any], Enabled = Enabled.asInstanceOf[js.Any], Parent = Parent.asInstanceOf[js.Any], Session = Session.asInstanceOf[js.Any])
+    __obj.updateDynamic("Outlook.AccountRuleCondition_typekey")(OutlookDotAccountRuleCondition_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AccountRuleCondition]
+  }
+  @scala.inline
+  implicit class AccountRuleConditionOps[Self <: AccountRuleCondition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccount(value: Account): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Account")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withApplication(value: Application): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClass(value: OlObjectClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Class")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConditionType(value: OlRuleConditionType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ConditionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutlookDotAccountRuleCondition_typekey(value: AccountRuleCondition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook.AccountRuleCondition_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSession(value: NameSpace): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Session")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

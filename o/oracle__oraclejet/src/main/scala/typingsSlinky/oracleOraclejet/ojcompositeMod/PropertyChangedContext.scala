@@ -1,6 +1,6 @@
 package typingsSlinky.oracleOraclejet.ojcompositeMod
 
-import typingsSlinky.oracleOraclejet.AnonPath
+import typingsSlinky.oracleOraclejet.anon.Path
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.external
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.internal
 import scala.scalajs.js
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait PropertyChangedContext extends js.Object {
   var previousValue: js.Any = js.native
   var property: String = js.native
-  var subproperty: js.UndefOr[AnonPath] = js.native
+  var subproperty: js.UndefOr[Path] = js.native
   var updatedFrom: external | internal = js.native
   var value: js.Any = js.native
 }
@@ -53,7 +53,7 @@ object PropertyChangedContext {
         ret
     }
     @scala.inline
-    def withSubproperty(value: AnonPath): Self = {
+    def withSubproperty(value: Path): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("subproperty")(value.asInstanceOf[js.Any])
         ret

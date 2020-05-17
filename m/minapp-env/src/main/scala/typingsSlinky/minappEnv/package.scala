@@ -25,31 +25,6 @@ package object minappEnv {
     /* descriptor */ typingsSlinky.minappEnv.TypedPropertyDescriptor[js.Any], 
     typingsSlinky.minappEnv.TypedPropertyDescriptor[js.Any] | scala.Unit
   ]
-  type OQ[T /* <: typingsSlinky.minappEnv.OptionalRecordcompletesuc */] = (typingsSlinky.minappEnv.RQ[T] with (typingsSlinky.minappEnv.Required[
-    typingsSlinky.minappEnv.Pick[T, typingsSlinky.minappEnv.minappEnvStrings.success]
-  ])) | (typingsSlinky.minappEnv.RQ[T] with (typingsSlinky.minappEnv.Required[typingsSlinky.minappEnv.Pick[T, typingsSlinky.minappEnv.minappEnvStrings.fail]])) | (typingsSlinky.minappEnv.RQ[T] with (typingsSlinky.minappEnv.Required[
-    typingsSlinky.minappEnv.Pick[T, typingsSlinky.minappEnv.minappEnvStrings.complete]
-  ])) | (typingsSlinky.minappEnv.RQ[T] with (typingsSlinky.minappEnv.Required[
-    typingsSlinky.minappEnv.Pick[
-      T, 
-      typingsSlinky.minappEnv.minappEnvStrings.success | typingsSlinky.minappEnv.minappEnvStrings.fail
-    ]
-  ])) | (typingsSlinky.minappEnv.RQ[T] with (typingsSlinky.minappEnv.Required[
-    typingsSlinky.minappEnv.Pick[
-      T, 
-      typingsSlinky.minappEnv.minappEnvStrings.success | typingsSlinky.minappEnv.minappEnvStrings.complete
-    ]
-  ])) | (typingsSlinky.minappEnv.RQ[T] with (typingsSlinky.minappEnv.Required[
-    typingsSlinky.minappEnv.Pick[
-      T, 
-      typingsSlinky.minappEnv.minappEnvStrings.fail | typingsSlinky.minappEnv.minappEnvStrings.complete
-    ]
-  ])) | (typingsSlinky.minappEnv.RQ[T] with (typingsSlinky.minappEnv.Required[
-    typingsSlinky.minappEnv.Pick[
-      T, 
-      typingsSlinky.minappEnv.minappEnvStrings.fail | typingsSlinky.minappEnv.minappEnvStrings.complete | typingsSlinky.minappEnv.minappEnvStrings.success
-    ]
-  ]))
   type Optional[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]:? T[K]}
     */ typingsSlinky.minappEnv.minappEnvStrings.Optional with org.scalablytyped.runtime.TopLevel[T]
@@ -89,8 +64,7 @@ package object minappEnv {
     scala.Unit
   ]
   type PropertyDescriptorMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.minappEnv.PropertyDescriptor]
-  type PropertyKey = java.lang.String | scala.Double | js.Symbol
-  type RQ[T /* <: typingsSlinky.minappEnv.OptionalRecordcompletesuc */] = typingsSlinky.minappEnv.Pick[
+  type RQ[T /* <: typingsSlinky.minappEnv.anon.OptionalRecordcompletesuc */] = typingsSlinky.minappEnv.Pick[
     T, 
     typingsSlinky.minappEnv.Exclude[
       /* keyof T */ java.lang.String, 
@@ -115,5 +89,4 @@ package object minappEnv {
   type Required[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]: -? T[P]}
     */ typingsSlinky.minappEnv.minappEnvStrings.Required with org.scalablytyped.runtime.TopLevel[T]
-  type Void[T] = js.UndefOr[T | scala.Null]
 }

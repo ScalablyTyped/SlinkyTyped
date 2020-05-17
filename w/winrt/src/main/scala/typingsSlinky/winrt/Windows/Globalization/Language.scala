@@ -4,17 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Globalization.Language")
 @js.native
-class Language protected () extends ILanguage {
-  def this(languageTag: String) = this()
-}
+trait Language extends ILanguage
 
-/* static members */
-@JSGlobal("Windows.Globalization.Language")
-@js.native
-object Language extends js.Object {
-  var currentInputMethodLanguageTag: String = js.native
-  def isWellFormed(languageTag: String): Boolean = js.native
+object Language {
+  @scala.inline
+  def apply(displayName: String, languageTag: String, nativeName: String, script: String): Language = {
+    val __obj = js.Dynamic.literal(displayName = displayName.asInstanceOf[js.Any], languageTag = languageTag.asInstanceOf[js.Any], nativeName = nativeName.asInstanceOf[js.Any], script = script.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Language]
+  }
 }
 

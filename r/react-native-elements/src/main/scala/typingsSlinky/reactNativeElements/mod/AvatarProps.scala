@@ -7,8 +7,8 @@ import typingsSlinky.reactNative.mod.ImageStyle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeElements.PartialIconProps
-import typingsSlinky.reactNativeElements.PartialImageProps
+import typingsSlinky.reactNativeElements.anon.PartialIconProps
+import typingsSlinky.reactNativeElements.anon.PartialImageProps
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.large
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.medium
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.small

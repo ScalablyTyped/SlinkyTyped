@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("google.earth.KmlStyleMap")
 @js.native
-class KmlStyleMap () extends KmlObject {
+trait KmlStyleMap extends KmlObject {
   /**
     * Defines highlighted styles for a placemark, so that the highlighted version appears when the user mouses over the icon in Google Earth.
     */
@@ -47,5 +46,106 @@ class KmlStyleMap () extends KmlObject {
     * Sets both URLs for the placemark style.
     */
   def setUrl(normalStyleUrl: String, highlightStyleUrl: String): Unit = js.native
+}
+
+object KmlStyleMap {
+  @scala.inline
+  def apply(
+    click: KmlMouseEvent => Unit,
+    dblclick: KmlMouseEvent => Unit,
+    equals: KmlObject => Boolean,
+    getHighlightStyle: () => KmlStyle,
+    getHighlightStyleUrl: () => String,
+    getId: () => String,
+    getNormalStyle: () => KmlStyle,
+    getNormalStyleUrl: () => String,
+    getOwnerDocument: () => KmlDocument,
+    getParentNode: () => KmlObject,
+    getType: () => String,
+    getUrl: () => String,
+    mousedown: KmlMouseEvent => Unit,
+    mousemove: KmlMouseEvent => Unit,
+    mouseout: KmlMouseEvent => Unit,
+    mouseover: KmlMouseEvent => Unit,
+    mouseup: KmlMouseEvent => Unit,
+    release: () => Unit,
+    setHighlightStyle: KmlStyle => Unit,
+    setHighlightStyleUrl: String => Unit,
+    setNormalStyle: KmlStyle => Unit,
+    setNormalStyleUrl: String => Unit,
+    setStyle: (KmlStyle, KmlStyle) => Unit,
+    setUrl: (String, String) => Unit
+  ): KmlStyleMap = {
+    val __obj = js.Dynamic.literal(click = js.Any.fromFunction1(click), dblclick = js.Any.fromFunction1(dblclick), equals = js.Any.fromFunction1(equals), getHighlightStyle = js.Any.fromFunction0(getHighlightStyle), getHighlightStyleUrl = js.Any.fromFunction0(getHighlightStyleUrl), getId = js.Any.fromFunction0(getId), getNormalStyle = js.Any.fromFunction0(getNormalStyle), getNormalStyleUrl = js.Any.fromFunction0(getNormalStyleUrl), getOwnerDocument = js.Any.fromFunction0(getOwnerDocument), getParentNode = js.Any.fromFunction0(getParentNode), getType = js.Any.fromFunction0(getType), getUrl = js.Any.fromFunction0(getUrl), mousedown = js.Any.fromFunction1(mousedown), mousemove = js.Any.fromFunction1(mousemove), mouseout = js.Any.fromFunction1(mouseout), mouseover = js.Any.fromFunction1(mouseover), mouseup = js.Any.fromFunction1(mouseup), release = js.Any.fromFunction0(release), setHighlightStyle = js.Any.fromFunction1(setHighlightStyle), setHighlightStyleUrl = js.Any.fromFunction1(setHighlightStyleUrl), setNormalStyle = js.Any.fromFunction1(setNormalStyle), setNormalStyleUrl = js.Any.fromFunction1(setNormalStyleUrl), setStyle = js.Any.fromFunction2(setStyle), setUrl = js.Any.fromFunction2(setUrl))
+    __obj.asInstanceOf[KmlStyleMap]
+  }
+  @scala.inline
+  implicit class KmlStyleMapOps[Self <: KmlStyleMap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetHighlightStyle(value: () => KmlStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getHighlightStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetHighlightStyleUrl(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getHighlightStyleUrl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetNormalStyle(value: () => KmlStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNormalStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetNormalStyleUrl(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNormalStyleUrl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetHighlightStyle(value: KmlStyle => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setHighlightStyle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetHighlightStyleUrl(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setHighlightStyleUrl")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetNormalStyle(value: KmlStyle => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setNormalStyle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetNormalStyleUrl(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setNormalStyleUrl")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetStyle(value: (KmlStyle, KmlStyle) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStyle")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetUrl(value: (String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setUrl")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

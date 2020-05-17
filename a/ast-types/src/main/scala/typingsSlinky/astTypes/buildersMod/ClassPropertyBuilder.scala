@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonAccess
+import typingsSlinky.astTypes.anon.Access
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.kindsMod.LiteralKind
@@ -74,6 +74,6 @@ trait ClassPropertyBuilder extends js.Object {
   ): ClassProperty = js.native
   def apply(key: LiteralKind, value: ExpressionKind, typeAnnotation: TypeAnnotationKind): ClassProperty = js.native
   def apply(key: LiteralKind, value: ExpressionKind, typeAnnotation: TypeAnnotationKind, staticParam: Boolean): ClassProperty = js.native
-  def from(params: AnonAccess): ClassProperty = js.native
+  def from(params: Access): ClassProperty = js.native
 }
 

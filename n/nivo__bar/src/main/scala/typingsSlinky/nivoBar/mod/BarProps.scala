@@ -1,7 +1,7 @@
 package typingsSlinky.nivoBar.mod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.nivoBar.dataFromindexeskeysLegend
+import typingsSlinky.nivoBar.anon.dataFromindexeskeysLegend
 import typingsSlinky.nivoBar.nivoBarStrings.auto
 import typingsSlinky.nivoBar.nivoBarStrings.grouped
 import typingsSlinky.nivoBar.nivoBarStrings.horizontal

@@ -2,8 +2,8 @@ package typingsSlinky.oracleOraclejet.ojgaugeMod
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.Anon9
-import typingsSlinky.oracleOraclejet.AnonSource
+import typingsSlinky.oracleOraclejet.anon.Source
+import typingsSlinky.oracleOraclejet.anon.`9`
 import typingsSlinky.oracleOraclejet.ojgaugeMod.ojRatingGauge.Threshold
 import typingsSlinky.oracleOraclejet.oracleOraclejetNumbers.`0.5`
 import typingsSlinky.oracleOraclejet.oracleOraclejetNumbers.`1`
@@ -50,8 +50,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ojRatingGauge_ extends dvtBaseGauge[ojRatingGaugeSettableProperties] {
   var changed: Boolean = js.native
-  var changedState: AnonSource = js.native
-  var hoverState: AnonSource = js.native
+  var changedState: Source = js.native
+  var hoverState: Source = js.native
   var max: Double = js.native
   var min: Double = js.native
   var onChangedChanged: (js.Function1[CustomEvent, _]) | Null = js.native
@@ -73,12 +73,12 @@ trait ojRatingGauge_ extends dvtBaseGauge[ojRatingGaugeSettableProperties] {
   var orientation: vertical | horizontal = js.native
   var preserveAspectRatio: none | meet = js.native
   var readonly: Boolean = js.native
-  var selectedState: AnonSource = js.native
+  var selectedState: Source = js.native
   var step: `0.5` | `1` = js.native
   var thresholds: js.Array[Threshold] = js.native
-  var tooltip: Anon9 = js.native
+  var tooltip: `9` = js.native
   val transientValue: Double | Null = js.native
-  var unselectedState: AnonSource = js.native
+  var unselectedState: Source = js.native
   var value: Double | Null = js.native
   var visualEffects: none | auto = js.native
   def addEventListener(`type`: orientationChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
@@ -207,9 +207,9 @@ trait ojRatingGauge_ extends dvtBaseGauge[ojRatingGaugeSettableProperties] {
   @JSName("getProperty")
   def getProperty_changed(property: changed): Boolean = js.native
   @JSName("getProperty")
-  def getProperty_changedState(property: changedState): AnonSource = js.native
+  def getProperty_changedState(property: changedState): Source = js.native
   @JSName("getProperty")
-  def getProperty_hoverState(property: hoverState): AnonSource = js.native
+  def getProperty_hoverState(property: hoverState): Source = js.native
   @JSName("getProperty")
   def getProperty_max(property: max): Double = js.native
   @JSName("getProperty")
@@ -221,17 +221,17 @@ trait ojRatingGauge_ extends dvtBaseGauge[ojRatingGaugeSettableProperties] {
   @JSName("getProperty")
   def getProperty_readonly(property: readonly_): Boolean = js.native
   @JSName("getProperty")
-  def getProperty_selectedState(property: selectedState): AnonSource = js.native
+  def getProperty_selectedState(property: selectedState): Source = js.native
   @JSName("getProperty")
   def getProperty_step(property: step): `0.5` | `1` = js.native
   @JSName("getProperty")
   def getProperty_thresholds(property: thresholds): js.Array[Threshold] = js.native
   @JSName("getProperty")
-  def getProperty_tooltip(property: tooltip): Anon9 = js.native
+  def getProperty_tooltip(property: tooltip): `9` = js.native
   @JSName("getProperty")
   def getProperty_transientValue(property: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.transientValue): Double | Null = js.native
   @JSName("getProperty")
-  def getProperty_unselectedState(property: unselectedState): AnonSource = js.native
+  def getProperty_unselectedState(property: unselectedState): Source = js.native
   @JSName("getProperty")
   def getProperty_value(property: value): Double | Null = js.native
   @JSName("getProperty")
@@ -248,9 +248,9 @@ trait ojRatingGauge_ extends dvtBaseGauge[ojRatingGaugeSettableProperties] {
   @JSName("setProperty")
   def setProperty_changed(property: changed, value: Boolean): Unit = js.native
   @JSName("setProperty")
-  def setProperty_changedState(property: changedState, value: AnonSource): Unit = js.native
+  def setProperty_changedState(property: changedState, value: Source): Unit = js.native
   @JSName("setProperty")
-  def setProperty_hoverState(property: hoverState, value: AnonSource): Unit = js.native
+  def setProperty_hoverState(property: hoverState, value: Source): Unit = js.native
   @JSName("setProperty")
   def setProperty_max(property: max, value: Double): Unit = js.native
   @JSName("setProperty")
@@ -258,17 +258,17 @@ trait ojRatingGauge_ extends dvtBaseGauge[ojRatingGaugeSettableProperties] {
   @JSName("setProperty")
   def setProperty_readonly(property: readonly_, value: Boolean): Unit = js.native
   @JSName("setProperty")
-  def setProperty_selectedState(property: selectedState, value: AnonSource): Unit = js.native
+  def setProperty_selectedState(property: selectedState, value: Source): Unit = js.native
   @JSName("setProperty")
   def setProperty_thresholds(property: thresholds, value: js.Array[Threshold]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_tooltip(property: tooltip, value: Anon9): Unit = js.native
+  def setProperty_tooltip(property: tooltip, value: `9`): Unit = js.native
   @JSName("setProperty")
   def setProperty_transientValue(property: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.transientValue): Unit = js.native
   @JSName("setProperty")
   def setProperty_transientValue(property: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.transientValue, value: Double): Unit = js.native
   @JSName("setProperty")
-  def setProperty_unselectedState(property: unselectedState, value: AnonSource): Unit = js.native
+  def setProperty_unselectedState(property: unselectedState, value: Source): Unit = js.native
   @JSName("setProperty")
   def setProperty_value(property: value): Unit = js.native
   @JSName("setProperty")

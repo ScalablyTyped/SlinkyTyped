@@ -1,7 +1,7 @@
 package typingsSlinky.cleanCss.mod
 
-import typingsSlinky.cleanCss.AnonAfterAtRule
-import typingsSlinky.cleanCss.AnonAroundSelectorRelation
+import typingsSlinky.cleanCss.anon.AfterAtRule
+import typingsSlinky.cleanCss.anon.AroundSelectorRelation
 import typingsSlinky.cleanCss.cleanCssBooleans.`false`
 import typingsSlinky.cleanCss.cleanCssStrings.space
 import typingsSlinky.cleanCss.cleanCssStrings.tab
@@ -22,7 +22,7 @@ trait FormatOptions extends js.Object {
   /**
     *  Controls where to insert breaks
     */
-  var breaks: js.UndefOr[AnonAfterAtRule] = js.native
+  var breaks: js.UndefOr[AfterAtRule] = js.native
   /**
     * Controls number of characters to indent with; defaults to `0`
     */
@@ -34,7 +34,7 @@ trait FormatOptions extends js.Object {
   /**
     * Controls where to insert spaces
     */
-  var spaces: js.UndefOr[AnonAroundSelectorRelation] = js.native
+  var spaces: js.UndefOr[AroundSelectorRelation] = js.native
   /**
     * Controls maximum line length; defaults to `false`
     */
@@ -66,7 +66,7 @@ object FormatOptions {
         ret
     }
     @scala.inline
-    def withBreaks(value: AnonAfterAtRule): Self = {
+    def withBreaks(value: AfterAtRule): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("breaks")(value.asInstanceOf[js.Any])
         ret
@@ -102,7 +102,7 @@ object FormatOptions {
         ret
     }
     @scala.inline
-    def withSpaces(value: AnonAroundSelectorRelation): Self = {
+    def withSpaces(value: AroundSelectorRelation): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("spaces")(value.asInstanceOf[js.Any])
         ret

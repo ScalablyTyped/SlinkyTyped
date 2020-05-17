@@ -1,13 +1,13 @@
 package typingsSlinky.sugar
 
+import typingsSlinky.sugar.sugarjs.NativeConstructor
 import typingsSlinky.sugar.sugarjs.Range
-import typingsSlinky.sugar.sugarjs._NativeConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait NumberConstructor extends _NativeConstructor {
+trait NumberConstructor extends NativeConstructor {
   def random(): Double = js.native
   def random(n1: Double): Double = js.native
   def random(n1: Double, n2: Double): Double = js.native

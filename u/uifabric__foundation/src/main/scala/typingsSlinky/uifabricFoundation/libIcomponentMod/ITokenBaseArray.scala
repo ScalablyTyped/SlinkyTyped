@@ -6,5 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ITokenBaseArray[TViewProps, TTokens] extends Array[IToken[TViewProps, TTokens]]
+trait ITokenBaseArray[TViewProps, TTokens]
+  extends Array[IToken[TViewProps, TTokens]]
+     with IToken[TViewProps, TTokens]
 

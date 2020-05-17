@@ -18,14 +18,8 @@ import scala.scalajs.js.annotation._
   * {@link PathItem#getIntersections},
   * etc.
   */
-@JSGlobal("paper.CurveLocation")
 @js.native
-class CurveLocation protected () extends js.Object {
-  /** 
-    * Creates a new CurveLocation object.
-    */
-  def this(curve: Curve, time: Double) = this()
-  def this(curve: Curve, time: Double, point: Point) = this()
+trait CurveLocation extends js.Object {
   /** 
     * The curvature of the {@link #curve} at the given location.
     */
@@ -129,5 +123,141 @@ class CurveLocation protected () extends js.Object {
     * merely touching another curve
     */
   def isTouching(): Boolean = js.native
+}
+
+object CurveLocation {
+  @scala.inline
+  def apply(
+    curvature: Double,
+    curve: Curve,
+    curveOffset: Double,
+    distance: Double,
+    equals: CurveLocation => Boolean,
+    hasOverlap: () => Boolean,
+    index: Double,
+    intersection: CurveLocation,
+    isCrossing: () => Boolean,
+    isTouching: () => Boolean,
+    normal: Point,
+    offset: Double,
+    path: Path,
+    point: Point,
+    segment: Segment,
+    tangent: Point,
+    time: Double
+  ): CurveLocation = {
+    val __obj = js.Dynamic.literal(curvature = curvature.asInstanceOf[js.Any], curve = curve.asInstanceOf[js.Any], curveOffset = curveOffset.asInstanceOf[js.Any], distance = distance.asInstanceOf[js.Any], equals = js.Any.fromFunction1(equals), hasOverlap = js.Any.fromFunction0(hasOverlap), index = index.asInstanceOf[js.Any], intersection = intersection.asInstanceOf[js.Any], isCrossing = js.Any.fromFunction0(isCrossing), isTouching = js.Any.fromFunction0(isTouching), normal = normal.asInstanceOf[js.Any], offset = offset.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], point = point.asInstanceOf[js.Any], segment = segment.asInstanceOf[js.Any], tangent = tangent.asInstanceOf[js.Any], time = time.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CurveLocation]
+  }
+  @scala.inline
+  implicit class CurveLocationOps[Self <: CurveLocation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurvature(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curvature")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurve(value: Curve): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curve")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurveOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curveOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDistance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEquals(value: CurveLocation => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHasOverlap(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasOverlap")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIntersection(value: CurveLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intersection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsCrossing(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCrossing")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsTouching(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTouching")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNormal(value: Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPath(value: Path): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPoint(value: Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("point")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSegment(value: Segment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTangent(value: Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tangent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

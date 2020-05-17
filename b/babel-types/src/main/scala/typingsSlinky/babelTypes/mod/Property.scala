@@ -1,7 +1,5 @@
 package typingsSlinky.babelTypes.mod
 
-import typingsSlinky.babelTypes.babelTypesStrings.ClassProperty
-import typingsSlinky.babelTypes.babelTypesStrings.ObjectProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,32 +12,8 @@ trait Property extends js.Object
 
 object Property {
   @scala.inline
-  def ObjectProperty_(
-    computed: Boolean,
-    end: Double,
-    key: Expression,
-    loc: SourceLocation,
-    shorthand: Boolean,
-    start: Double,
-    `type`: ObjectProperty,
-    value: Expression
-  ): Property = {
-    val __obj = js.Dynamic.literal(computed = computed.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], shorthand = shorthand.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Property]
-  }
+  implicit def apply(value: ClassProperty_): Property = value.asInstanceOf[Property]
   @scala.inline
-  def ClassProperty_(
-    end: Double,
-    key: Identifier_,
-    loc: SourceLocation,
-    start: Double,
-    `type`: ClassProperty,
-    value: Expression
-  ): Property = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Property]
-  }
+  implicit def apply(value: ObjectProperty_): Property = value.asInstanceOf[Property]
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.sipJs.apiMod
 
-import typingsSlinky.sipJs.PartialUserAgentOptions
+import typingsSlinky.sipJs.anon.PartialUserAgentOptions
 import typingsSlinky.sipJs.coreMod.URI
 import scala.scalajs.js
 import scala.scalajs.js.`|`

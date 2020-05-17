@@ -1,35 +1,35 @@
 package typingsSlinky.reactMovable.typesMod
 
 import slinky.core.TagMod
-import typingsSlinky.reactMovable.AnonChildren
-import typingsSlinky.reactMovable.AnonElements
-import typingsSlinky.reactMovable.AnonIndex
-import typingsSlinky.reactMovable.AnonNewIndex
+import typingsSlinky.reactMovable.anon.Children
+import typingsSlinky.reactMovable.anon.Elements
+import typingsSlinky.reactMovable.anon.Index
+import typingsSlinky.reactMovable.anon.NewIndex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IProps[Value] extends js.Object {
-  var beforeDrag: js.UndefOr[js.Function1[/* params */ AnonElements, Unit]] = js.native
+  var beforeDrag: js.UndefOr[js.Function1[/* params */ Elements, Unit]] = js.native
   var lockVertically: Boolean = js.native
   var removableByMove: Boolean = js.native
   var transitionDuration: Double = js.native
   var values: js.Array[Value] = js.native
   var voiceover: IVoiceover = js.native
-  def onChange(meta: AnonNewIndex): Unit = js.native
-  def renderItem(params: AnonIndex[Value]): TagMod[Any] = js.native
-  def renderList(props: AnonChildren): TagMod[Any] = js.native
+  def onChange(meta: NewIndex): Unit = js.native
+  def renderItem(params: Index[Value]): TagMod[Any] = js.native
+  def renderList(props: Children): TagMod[Any] = js.native
 }
 
 object IProps {
   @scala.inline
   def apply[Value](
     lockVertically: Boolean,
-    onChange: AnonNewIndex => Unit,
+    onChange: NewIndex => Unit,
     removableByMove: Boolean,
-    renderItem: AnonIndex[Value] => TagMod[Any],
-    renderList: AnonChildren => TagMod[Any],
+    renderItem: Index[Value] => TagMod[Any],
+    renderList: Children => TagMod[Any],
     transitionDuration: Double,
     values: js.Array[Value],
     voiceover: IVoiceover
@@ -50,7 +50,7 @@ object IProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: AnonNewIndex => Unit): Self[Value] = {
+    def withOnChange(value: NewIndex => Unit): Self[Value] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -62,13 +62,13 @@ object IProps {
         ret
     }
     @scala.inline
-    def withRenderItem(value: AnonIndex[Value] => TagMod[Any]): Self[Value] = {
+    def withRenderItem(value: Index[Value] => TagMod[Any]): Self[Value] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderItem")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withRenderList(value: AnonChildren => TagMod[Any]): Self[Value] = {
+    def withRenderList(value: Children => TagMod[Any]): Self[Value] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderList")(js.Any.fromFunction1(value))
         ret
@@ -92,7 +92,7 @@ object IProps {
         ret
     }
     @scala.inline
-    def withBeforeDrag(value: /* params */ AnonElements => Unit): Self[Value] = {
+    def withBeforeDrag(value: /* params */ Elements => Unit): Self[Value] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeDrag")(js.Any.fromFunction1(value))
         ret

@@ -25,9 +25,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * A progress dialog or a horizontal progress bar in the title of the window.
 			 */
-@JSGlobal("Titanium.UI.Android.ProgressIndicator")
 @js.native
-class ProgressIndicator () extends View {
+trait ProgressIndicator extends View {
   /**
   				 * When `true` allows the user to cancel the progress dialog by pressing the BACK button.
   				 */

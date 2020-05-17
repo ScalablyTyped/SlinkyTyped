@@ -1,16 +1,15 @@
 package typingsSlinky.numeric.mod
 
-import typingsSlinky.numeric.AnonA
-import typingsSlinky.numeric.AnonB
-import typingsSlinky.numeric.AnonE
-import typingsSlinky.numeric.AnonF
-import typingsSlinky.numeric.AnonH
-import typingsSlinky.numeric.AnonHinv
-import typingsSlinky.numeric.AnonIact
-import typingsSlinky.numeric.AnonIterations
-import typingsSlinky.numeric.AnonLU
-import typingsSlinky.numeric.AnonRandom
-import typingsSlinky.numeric.AnonS
+import typingsSlinky.numeric.anon.A
+import typingsSlinky.numeric.anon.B
+import typingsSlinky.numeric.anon.E
+import typingsSlinky.numeric.anon.F
+import typingsSlinky.numeric.anon.H
+import typingsSlinky.numeric.anon.Hinv
+import typingsSlinky.numeric.anon.Iact
+import typingsSlinky.numeric.anon.Iterations
+import typingsSlinky.numeric.anon.Random
+import typingsSlinky.numeric.anon.S
 import typingsSlinky.numeric.numericStrings.L
 import typingsSlinky.numeric.numericStrings.periodic
 import scala.scalajs.js
@@ -22,7 +21,7 @@ trait Numeric extends js.Object {
   val epsilon: Double = js.native
   var largeArray: Double = js.native
   var precision: Double = js.native
-  var seedrandom: AnonRandom = js.native
+  var seedrandom: Random = js.native
   val version: String = js.native
   def apply(x: Scalar, y: Scalar, args: (Scalar | Vector)*): Vector = js.native
   def apply(x: Scalar, y: Vector, args: (Scalar | Vector)*): Vector = js.native
@@ -786,9 +785,9 @@ trait Numeric extends js.Object {
   def GreaterthansignGreaterthansign_Scalar(x: Scalar, y: Scalar, args: Scalar*): Scalar = js.native
   @JSName(">")
   def Greaterthansign_VectorBoolean(x: Vector, y: Vector): VectorBoolean = js.native
-  def LU(matrix: Matrix): AnonLU = js.native
-  def LU(matrix: Matrix, fast: Boolean): AnonLU = js.native
-  def LUsolve(lup: AnonLU, vector: Vector): Vector = js.native
+  def LU(matrix: Matrix): typingsSlinky.numeric.anon.LU = js.native
+  def LU(matrix: Matrix, fast: Boolean): typingsSlinky.numeric.anon.LU = js.native
+  def LUsolve(lup: typingsSlinky.numeric.anon.LU, vector: Vector): Vector = js.native
   @JSName("<")
   def Lessthansign(x: MultidimensionalMatrix, y: MultidimensionalMatrix): MultidimensionalArray[Boolean] = js.native
   @JSName("<")
@@ -1239,8 +1238,8 @@ trait Numeric extends js.Object {
   ): js.Array[js.Array[Double]] = js.native
   @JSName("+")
   def Plussign_Scalar(x: Scalar, y: Scalar, args: Scalar*): Scalar = js.native
-  def QRFrancis(x: Matrix): AnonB = js.native
-  def QRFrancis(x: Matrix, maxiter: Double): AnonB = js.native
+  def QRFrancis(x: Matrix): B = js.native
+  def QRFrancis(x: Matrix, maxiter: Double): B = js.native
   @JSName("/")
   def Slash(x: Scalar, y: Scalar, args: (Scalar | Vector)*): Vector = js.native
   @JSName("/")
@@ -3465,9 +3464,9 @@ trait Numeric extends js.Object {
   def dotVM(x: Vector, y: Matrix): Vector = js.native
   def dotVV(x: Vector, y: Vector): Scalar = js.native
   // Linear programming
-  def echelonize(matrix: Matrix): AnonA = js.native
-  def eig(A: Matrix): AnonE = js.native
-  def eig(A: Matrix, maxiter: Double): AnonE = js.native
+  def echelonize(matrix: Matrix): A = js.native
+  def eig(A: Matrix): E = js.native
+  def eig(A: Matrix, maxiter: Double): E = js.native
   def eq(x: MultidimensionalMatrix, y: MultidimensionalMatrix): MultidimensionalArray[Boolean] = js.native
   // Pointwise comparison x === y
   def eq(x: Scalar, y: Scalar): Boolean = js.native
@@ -5424,14 +5423,14 @@ trait Numeric extends js.Object {
   def sineqV(x: Vector): Vector = js.native
   // Solving the linear problem Ax=b
   def solve(matrix: Matrix, vector: Vector): Vector = js.native
-  def solveLP(c: Vector, A: Matrix, b: Vector): AnonIterations = js.native
-  def solveLP(c: Vector, A: Matrix, b: Vector, Aeq: Matrix): AnonIterations = js.native
-  def solveLP(c: Vector, A: Matrix, b: Vector, Aeq: Matrix, beq: Matrix): AnonIterations = js.native
-  def solveLP(c: Vector, A: Matrix, b: Vector, Aeq: Matrix, beq: Matrix, tol: Double): AnonIterations = js.native
-  def solveLP(c: Vector, A: Matrix, b: Vector, Aeq: Matrix, beq: Matrix, tol: Double, maxit: Double): AnonIterations = js.native
-  def solveQP(Dmat: Matrix, dvec: Vector, Amat: Matrix, bvec: Vector): AnonIact = js.native
-  def solveQP(Dmat: Matrix, dvec: Vector, Amat: Matrix, bvec: Vector, meq: Double): AnonIact = js.native
-  def solveQP(Dmat: Matrix, dvec: Vector, Amat: Matrix, bvec: Vector, meq: Double, factorized: js.Any): AnonIact = js.native
+  def solveLP(c: Vector, A: Matrix, b: Vector): Iterations = js.native
+  def solveLP(c: Vector, A: Matrix, b: Vector, Aeq: Matrix): Iterations = js.native
+  def solveLP(c: Vector, A: Matrix, b: Vector, Aeq: Matrix, beq: Matrix): Iterations = js.native
+  def solveLP(c: Vector, A: Matrix, b: Vector, Aeq: Matrix, beq: Matrix, tol: Double): Iterations = js.native
+  def solveLP(c: Vector, A: Matrix, b: Vector, Aeq: Matrix, beq: Matrix, tol: Double, maxit: Double): Iterations = js.native
+  def solveQP(Dmat: Matrix, dvec: Vector, Amat: Matrix, bvec: Vector): Iact = js.native
+  def solveQP(Dmat: Matrix, dvec: Vector, Amat: Matrix, bvec: Vector, meq: Double): Iact = js.native
+  def solveQP(Dmat: Matrix, dvec: Vector, Amat: Matrix, bvec: Vector, meq: Double, factorized: js.Any): Iact = js.native
   // Splines
   def spline(x: Vector, y: Matrix | Vector): Spline = js.native
   def spline(x: Vector, y: Matrix | Vector, k1: Scalar): Spline = js.native
@@ -5659,7 +5658,7 @@ trait Numeric extends js.Object {
   // Largest value of entries (not modulus)
   def sup(x: Scalar): Double = js.native
   def supV(x: Vector): Double = js.native
-  def svd(matrix: Matrix): AnonS = js.native
+  def svd(matrix: Matrix): S = js.native
   // return instance of Tensor class. X — real value, y — imaginary part.
   def t(x: TensorValue): Tensor = js.native
   def t(x: TensorValue, y: TensorValue): Tensor = js.native
@@ -5727,7 +5726,7 @@ trait Numeric extends js.Object {
   // toCSV is buggy.
   // https://github.com/sloisel/numeric/pull/51
   def toCSV(csvArray: js.Array[js.Array[_]]): String = js.native
-  def toUpperHessenberg(matrix: Matrix): AnonH = js.native
+  def toUpperHessenberg(matrix: Matrix): H = js.native
   // Matrix transpose
   def transpose(x: Matrix): Matrix = js.native
   def trunc(x: Double, y: Double): Vector = js.native
@@ -5739,10 +5738,10 @@ trait Numeric extends js.Object {
   // Round the values of entries
   def truncVV(x: Vector, y: Vector): Vector = js.native
   // Unconstrained optimisations
-  def uncmin(f: js.Function1[/* x */ Vector, Scalar], x0: Vector): AnonF = js.native
-  def uncmin(f: js.Function1[/* x */ Vector, Scalar], x0: Vector, tol: Double): AnonF = js.native
-  def uncmin(f: js.Function1[/* x */ Vector, Scalar], x0: Vector, tol: Double, gradient: js.Any): AnonF = js.native
-  def uncmin(f: js.Function1[/* x */ Vector, Scalar], x0: Vector, tol: Double, gradient: js.Any, maxit: Double): AnonF = js.native
+  def uncmin(f: js.Function1[/* x */ Vector, Scalar], x0: Vector): F = js.native
+  def uncmin(f: js.Function1[/* x */ Vector, Scalar], x0: Vector, tol: Double): F = js.native
+  def uncmin(f: js.Function1[/* x */ Vector, Scalar], x0: Vector, tol: Double, gradient: js.Any): F = js.native
+  def uncmin(f: js.Function1[/* x */ Vector, Scalar], x0: Vector, tol: Double, gradient: js.Any, maxit: Double): F = js.native
   def uncmin(
     f: js.Function1[/* x */ Vector, Scalar],
     x0: Vector,
@@ -5750,7 +5749,7 @@ trait Numeric extends js.Object {
     gradient: js.Any,
     maxit: Double,
     callback: js.Function5[/* it */ Double, /* x0 */ Vector, /* f0 */ Scalar, /* g0 */ Vector, /* h1 */ Matrix, _]
-  ): AnonF = js.native
+  ): F = js.native
   def uncmin(
     f: js.Function1[/* x */ Vector, Scalar],
     x0: Vector,
@@ -5758,7 +5757,7 @@ trait Numeric extends js.Object {
     gradient: js.Any,
     maxit: Double,
     callback: js.Function5[/* it */ Double, /* x0 */ Vector, /* f0 */ Scalar, /* g0 */ Vector, /* h1 */ Matrix, _],
-    options: AnonHinv
-  ): AnonF = js.native
+    options: Hinv
+  ): F = js.native
 }
 

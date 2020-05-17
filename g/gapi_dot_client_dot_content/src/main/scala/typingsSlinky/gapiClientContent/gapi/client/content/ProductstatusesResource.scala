@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientContent.gapi.client.content
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientContent.AnonFieldsIncludeAttributes
-import typingsSlinky.gapiClientContent.AnonIncludeAttributes
-import typingsSlinky.gapiClientContent.AnonPageToken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientContent.anon.FieldsIncludeAttributes
+import typingsSlinky.gapiClientContent.anon.IncludeAttributes
+import typingsSlinky.gapiClientContent.anon.PageToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,19 +11,19 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ProductstatusesResource extends js.Object {
   /** Gets the statuses of multiple products in a single request. This method can only be called for non-multi-client accounts. */
-  def custombatch(request: AnonIncludeAttributes): Request_[ProductstatusesCustomBatchResponse] = js.native
+  def custombatch(request: IncludeAttributes): Request[ProductstatusesCustomBatchResponse] = js.native
   /** Gets the status of a product from your Merchant Center account. This method can only be called for non-multi-client accounts. */
-  def get(request: AnonFieldsIncludeAttributes): Request_[ProductStatus] = js.native
+  def get(request: FieldsIncludeAttributes): Request[ProductStatus] = js.native
   /** Lists the statuses of the products in your Merchant Center account. This method can only be called for non-multi-client accounts. */
-  def list(request: AnonPageToken): Request_[ProductstatusesListResponse] = js.native
+  def list(request: PageToken): Request[ProductstatusesListResponse] = js.native
 }
 
 object ProductstatusesResource {
   @scala.inline
   def apply(
-    custombatch: AnonIncludeAttributes => Request_[ProductstatusesCustomBatchResponse],
-    get: AnonFieldsIncludeAttributes => Request_[ProductStatus],
-    list: AnonPageToken => Request_[ProductstatusesListResponse]
+    custombatch: IncludeAttributes => Request[ProductstatusesCustomBatchResponse],
+    get: FieldsIncludeAttributes => Request[ProductStatus],
+    list: PageToken => Request[ProductstatusesListResponse]
   ): ProductstatusesResource = {
     val __obj = js.Dynamic.literal(custombatch = js.Any.fromFunction1(custombatch), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[ProductstatusesResource]
@@ -35,19 +35,19 @@ object ProductstatusesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCustombatch(value: AnonIncludeAttributes => Request_[ProductstatusesCustomBatchResponse]): Self = {
+    def withCustombatch(value: IncludeAttributes => Request[ProductstatusesCustomBatchResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("custombatch")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonFieldsIncludeAttributes => Request_[ProductStatus]): Self = {
+    def withGet(value: FieldsIncludeAttributes => Request[ProductStatus]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonPageToken => Request_[ProductstatusesListResponse]): Self = {
+    def withList(value: PageToken => Request[ProductstatusesListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

@@ -1,8 +1,8 @@
 package typingsSlinky.reactForm.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +33,7 @@ trait FormFunctionProps
   def setValue(fieldName: String, value: js.Any): Unit = js.native
   def setWarning(field: String, warning: String): Unit = js.native
   // Methods
-  def submitForm(event: SyntheticEvent[Event_, _]): Unit = js.native
+  def submitForm(event: SyntheticEvent[Event, _]): Unit = js.native
   def swapValues(name: String, index1: Double, index2: Double): Unit = js.native
 }
 
@@ -55,7 +55,7 @@ object FormFunctionProps {
     setTouched: (String, Boolean) => Unit,
     setValue: (String, js.Any) => Unit,
     setWarning: (String, String) => Unit,
-    submitForm: SyntheticEvent[Event_, _] => Unit,
+    submitForm: SyntheticEvent[Event, _] => Unit,
     submits: Double,
     submitted: Boolean,
     successes: FormErrors,
@@ -155,7 +155,7 @@ object FormFunctionProps {
         ret
     }
     @scala.inline
-    def withSubmitForm(value: SyntheticEvent[Event_, _] => Unit): Self = {
+    def withSubmitForm(value: SyntheticEvent[Event, _] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("submitForm")(js.Any.fromFunction1(value))
         ret

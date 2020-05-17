@@ -1,18 +1,18 @@
 organization := "org.scalablytyped.slinky"
 name := "rollup-plugin-typescript2"
-version := "0.25.2-a6a808"
-scalaVersion := "2.13.1"
+version := "0.25.2-cabf4b"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "estree" % "0.0-unknown-dt-20200320Z-3b5711",
-  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-6c3110",
-  "org.scalablytyped.slinky" %%% "rollup" % "1.32.1-b074e3",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e",
-  "org.scalablytyped.slinky" %%% "typescript" % "3.8.3-961b8f")
+  "org.scalablytyped.slinky" %%% "estree" % "0.0-unknown-dt-20200320Z-9738bf",
+  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-9e8213",
+  "org.scalablytyped.slinky" %%% "rollup" % "1.32.1-20e39f",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb",
+  "org.scalablytyped.slinky" %%% "typescript" % "3.8.3-472acc")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

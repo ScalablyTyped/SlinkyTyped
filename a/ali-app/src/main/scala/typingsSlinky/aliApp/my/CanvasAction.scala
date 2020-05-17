@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CanvasAction extends js.Object {
+trait CanvasAction extends Color {
   /**
   		 * 创建一个颜色的渐变点。
   		 * 小于最小 stop 的部分会按最小 stop 的 color 来渲染，大于最大 stop 的部分会按最大 stop 的 color 来渲染。

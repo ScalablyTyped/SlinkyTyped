@@ -1,7 +1,7 @@
 package typingsSlinky.reduxTestkit.mod
 
 import typingsSlinky.redux.mod.Action
-import typingsSlinky.reduxTestkit.AnonToChangeInState
+import typingsSlinky.reduxTestkit.anon.ToChangeInState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ReducerTestkit extends js.Object {
   def execute(action: Action[_]): js.Any = js.native
-  def expect(action: Action[_]): AnonToChangeInState = js.native
+  def expect(action: Action[_]): ToChangeInState = js.native
 }
 
 object ReducerTestkit {
   @scala.inline
-  def apply(execute: Action[_] => js.Any, expect: Action[_] => AnonToChangeInState): ReducerTestkit = {
+  def apply(execute: Action[_] => js.Any, expect: Action[_] => ToChangeInState): ReducerTestkit = {
     val __obj = js.Dynamic.literal(execute = js.Any.fromFunction1(execute), expect = js.Any.fromFunction1(expect))
     __obj.asInstanceOf[ReducerTestkit]
   }
@@ -31,7 +31,7 @@ object ReducerTestkit {
         ret
     }
     @scala.inline
-    def withExpect(value: Action[_] => AnonToChangeInState): Self = {
+    def withExpect(value: Action[_] => ToChangeInState): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("expect")(js.Any.fromFunction1(value))
         ret

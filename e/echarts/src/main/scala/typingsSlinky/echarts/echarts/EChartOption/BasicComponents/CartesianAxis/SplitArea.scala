@@ -1,6 +1,6 @@
 package typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis
 
-import typingsSlinky.echarts.AnonColor
+import typingsSlinky.echarts.anon.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait SplitArea extends js.Object {
-  var areaStyle: js.UndefOr[AnonColor] = js.native
+  var areaStyle: js.UndefOr[Color] = js.native
   var interval: js.UndefOr[Double | js.Function] = js.native
   var show: js.UndefOr[Boolean] = js.native
 }
@@ -28,7 +28,7 @@ object SplitArea {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAreaStyle(value: AnonColor): Self = {
+    def withAreaStyle(value: Color): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("areaStyle")(value.asInstanceOf[js.Any])
         ret

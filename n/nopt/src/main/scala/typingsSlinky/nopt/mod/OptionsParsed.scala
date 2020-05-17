@@ -1,7 +1,7 @@
 package typingsSlinky.nopt.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.nopt.AnonCooked
+import typingsSlinky.nopt.anon.Cooked
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait OptionsParsed
   extends /* k */ StringDictionary[js.Any] {
-  var argv: AnonCooked = js.native
+  var argv: Cooked = js.native
 }
 
 object OptionsParsed {
   @scala.inline
-  def apply(argv: AnonCooked): OptionsParsed = {
+  def apply(argv: Cooked): OptionsParsed = {
     val __obj = js.Dynamic.literal(argv = argv.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionsParsed]
   }
@@ -25,7 +25,7 @@ object OptionsParsed {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withArgv(value: AnonCooked): Self = {
+    def withArgv(value: Cooked): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("argv")(value.asInstanceOf[js.Any])
         ret

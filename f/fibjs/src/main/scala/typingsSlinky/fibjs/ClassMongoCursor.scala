@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 	* @brief mongodb 数据库数据游标对象
 	* @detail 
 	*/
-@JSGlobal("Class_MongoCursor")
 @js.native
-class ClassMongoCursor () extends ClassObject {
+trait ClassMongoCursor extends ClassObject {
   /**
   	 * 
   	 * @brief 查询游标的记录总数

@@ -5,7 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LengthValidatorConfig extends SimpleValidatorConfig {
+trait LengthValidatorConfig
+  extends SimpleValidatorConfig
+     with LengthValidator {
   var length: Double = js.native
 }
 

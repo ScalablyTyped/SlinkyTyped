@@ -3,7 +3,7 @@ package typingsSlinky.materialUiCore.nativeSelectInputMod
 import org.scalajs.dom.raw.HTMLSelectElement
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
-import typingsSlinky.materialUiCore.AnonNode
+import typingsSlinky.materialUiCore.anon.Node
 import typingsSlinky.materialUiCore.materialUiCoreStrings.filled
 import typingsSlinky.materialUiCore.materialUiCoreStrings.outlined
 import typingsSlinky.materialUiCore.materialUiCoreStrings.standard
@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
 trait NativeSelectInputProps extends js.Object {
   var IconComponent: js.UndefOr[ReactComponentClass[_]] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
-  var inputRef: js.UndefOr[js.Function1[/* ref */ HTMLSelectElement | AnonNode, Unit]] = js.native
+  var inputRef: js.UndefOr[js.Function1[/* ref */ HTMLSelectElement | Node, Unit]] = js.native
   var name: js.UndefOr[String] = js.native
   var onChange: js.UndefOr[
     js.Function2[/* event */ ChangeEvent[HTMLSelectElement], /* child */ TagMod[Any], Unit]
@@ -74,7 +74,7 @@ object NativeSelectInputProps {
         ret
     }
     @scala.inline
-    def withInputRef(value: /* ref */ HTMLSelectElement | AnonNode => Unit): Self = {
+    def withInputRef(value: /* ref */ HTMLSelectElement | Node => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(js.Any.fromFunction1(value))
         ret

@@ -1,8 +1,6 @@
 package typingsSlinky.winrtUwp.Windows.Devices.Sensors
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtUwp.Windows.Foundation.EventHandler
-import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtUwp.Windows.Foundation.TypedEventHandler
 import typingsSlinky.winrtUwp.Windows.WinRTEvent
 import typingsSlinky.winrtUwp.winrtUwpStrings.readingchanged
@@ -11,9 +9,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides an interface for a pedometer to measure the number of steps taken. */
-@JSGlobal("Windows.Devices.Sensors.Pedometer")
 @js.native
-abstract class Pedometer () extends js.Object {
+trait Pedometer extends js.Object {
   /** Gets the device identifier. */
   var deviceId: String = js.native
   var getCurrentReadings: js.Any = js.native
@@ -34,41 +31,5 @@ abstract class Pedometer () extends js.Object {
   def removeEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_readingchanged(`type`: readingchanged, listener: TypedEventHandler[Pedometer, PedometerReadingChangedEventArgs]): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("Windows.Devices.Sensors.Pedometer")
-@js.native
-object Pedometer extends js.Object {
-  var getReadingsFromTriggerDetails: js.Any = js.native
-  /**
-    * Obtains the pedometer from its identifier.
-    * @param deviceId The sensor identifier.
-    * @return Returns the Pedometer object from its identifier.
-    */
-  def fromIdAsync(deviceId: String): IPromiseWithIAsyncOperation[Pedometer] = js.native
-  /**
-    * Asynchronously obtains the default pedometer.
-    * @return Asynchronously returns a Pedometer object that represents the default sensor.
-    */
-  def getDefaultAsync(): IPromiseWithIAsyncOperation[Pedometer] = js.native
-  /**
-    * Gets the device selector.
-    * @return Returns the device selector, if it exists; otherwise null.
-    */
-  def getDeviceSelector(): String = js.native
-   /* unmapped type */ /**
-    * Asynchronously gets sensor readings from a specific time.
-    * @param fromTime The time for which you want to retrieve the reading.
-    * @return Asynchronously returns a list of PedometerReading objects that represent info about the sensor.
-    */
-  def getSystemHistoryAsync(fromTime: js.Date): IPromiseWithIAsyncOperation[IVectorView[_]] = js.native
-  /**
-    * Asynchronously gets pedometer readings from a specific time and duration.
-    * @param fromTime The time for which you want to retrieve the reading.
-    * @param duration The duration over which you want to retrieve data.
-    * @return Asynchronously returns a list of PedometerReading objects that represent info about the sensor.
-    */
-  def getSystemHistoryAsync(fromTime: js.Date, duration: Double): IPromiseWithIAsyncOperation[IVectorView[_]] = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.vegaTypings.exprMod
 
-import typingsSlinky.vegaTypings.onEventsMod._Update
+import typingsSlinky.vegaTypings.onEventsMod.Update
 import typingsSlinky.vegaTypings.transformMod.TransformField
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ExprRef
   extends TransformField
-     with _Update {
+     with Update {
   var expr: Expr = js.native
 }
 

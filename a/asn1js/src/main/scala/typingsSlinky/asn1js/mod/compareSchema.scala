@@ -1,6 +1,6 @@
 package typingsSlinky.asn1js.mod
 
-import typingsSlinky.asn1js.AnonResult
+import typingsSlinky.asn1js.anon.Result
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,6 +16,6 @@ object compareSchema extends js.Object {
     * @param {*} inputSchema Input ASN.1 schema to compare with
     * @returns {{ verified: boolean, result?: any }}
     */
-  def apply(root: js.Any, inputData: js.Any, inputSchema: js.Any): AnonResult = js.native
+  def apply(root: js.Any, inputData: js.Any, inputSchema: js.Any): Result = js.native
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientDfareporting.gapi.client.dfareporting
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientDfareporting.AnonFields
-import typingsSlinky.gapiClientDfareporting.AnonSearchString
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientDfareporting.anon.Fields
+import typingsSlinky.gapiClientDfareporting.anon.SearchString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ProjectsResource extends js.Object {
   /** Gets one project by ID. */
-  def get(request: AnonFields): Request_[Project] = js.native
+  def get(request: Fields): Request[Project] = js.native
   /** Retrieves a list of projects, possibly filtered. This method supports paging. */
-  def list(request: AnonSearchString): Request_[ProjectsListResponse] = js.native
+  def list(request: SearchString): Request[ProjectsListResponse] = js.native
 }
 
 object ProjectsResource {
   @scala.inline
-  def apply(get: AnonFields => Request_[Project], list: AnonSearchString => Request_[ProjectsListResponse]): ProjectsResource = {
+  def apply(get: Fields => Request[Project], list: SearchString => Request[ProjectsListResponse]): ProjectsResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[ProjectsResource]
   }
@@ -28,13 +28,13 @@ object ProjectsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonFields => Request_[Project]): Self = {
+    def withGet(value: Fields => Request[Project]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonSearchString => Request_[ProjectsListResponse]): Self = {
+    def withList(value: SearchString => Request[ProjectsListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

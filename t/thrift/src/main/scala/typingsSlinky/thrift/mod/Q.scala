@@ -1,6 +1,6 @@
 package typingsSlinky.thrift.mod
 
-import typingsSlinky.q.Typeofq
+import typingsSlinky.q.anon.Typeofq
 import typingsSlinky.q.mod.Deferred
 import typingsSlinky.q.mod.IPromise
 import typingsSlinky.q.mod.IWhenable

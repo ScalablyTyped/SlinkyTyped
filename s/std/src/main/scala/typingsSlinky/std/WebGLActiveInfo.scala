@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +12,38 @@ trait WebGLActiveInfo extends js.Object {
   val `type`: GLenum = js.native
 }
 
-@JSGlobal("WebGLActiveInfo")
-@js.native
-object WebGLActiveInfo
-  extends Instantiable0[org.scalajs.dom.raw.WebGLActiveInfo]
+object WebGLActiveInfo {
+  @scala.inline
+  def apply(name: java.lang.String, size: GLint, `type`: GLenum): WebGLActiveInfo = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebGLActiveInfo]
+  }
+  @scala.inline
+  implicit class WebGLActiveInfoOps[Self <: org.scalajs.dom.raw.WebGLActiveInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSize(value: GLint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: GLenum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

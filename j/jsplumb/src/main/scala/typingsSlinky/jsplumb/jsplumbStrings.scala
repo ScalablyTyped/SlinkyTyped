@@ -2,10 +2,10 @@ package typingsSlinky.jsplumb
 
 import typingsSlinky.jsplumb.mod.AnchorContinuousId
 import typingsSlinky.jsplumb.mod.AnchorStaticId
+import typingsSlinky.jsplumb.mod.ConnectorId
 import typingsSlinky.jsplumb.mod.ContinuousAnchorFace
 import typingsSlinky.jsplumb.mod.OverlayId
 import typingsSlinky.jsplumb.mod.PerimeterShape
-import typingsSlinky.jsplumb.mod._ConnectorId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ object jsplumbStrings {
   sealed trait AutoDefault extends js.Object
   
   @js.native
-  sealed trait Bezier extends _ConnectorId
+  sealed trait Bezier extends ConnectorId
   
   @js.native
   sealed trait Blank extends js.Object
@@ -72,7 +72,7 @@ object jsplumbStrings {
   sealed trait Ellipse extends PerimeterShape
   
   @js.native
-  sealed trait Flowchart extends _ConnectorId
+  sealed trait Flowchart extends ConnectorId
   
   @js.native
   sealed trait Label extends OverlayId
@@ -102,10 +102,10 @@ object jsplumbStrings {
   sealed trait Square extends PerimeterShape
   
   @js.native
-  sealed trait StateMachine extends _ConnectorId
+  sealed trait StateMachine extends ConnectorId
   
   @js.native
-  sealed trait Straight extends _ConnectorId
+  sealed trait Straight extends ConnectorId
   
   @js.native
   sealed trait Top extends AnchorStaticId

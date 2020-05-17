@@ -1,7 +1,7 @@
 package typingsSlinky.shopifyPrime.orderMod
 
-import typingsSlinky.shopifyPrime.AnonName
 import typingsSlinky.shopifyPrime.addressMod.Address
+import typingsSlinky.shopifyPrime.anon.Name
 import typingsSlinky.shopifyPrime.baseMod.ShopifyObject
 import typingsSlinky.shopifyPrime.clientDetailsMod.ClientDetails
 import typingsSlinky.shopifyPrime.customerMod.Customer
@@ -42,7 +42,7 @@ trait Order extends ShopifyObject {
   var line_items: js.UndefOr[js.Array[LineItem]] = js.native
   var name: js.UndefOr[String] = js.native
   var note: js.UndefOr[String] = js.native
-  var note_attributes: js.UndefOr[AnonName] = js.native
+  var note_attributes: js.UndefOr[Name] = js.native
   var number: js.UndefOr[Double] = js.native
   var order_number: js.UndefOr[Double] = js.native
   var payment_details: js.UndefOr[PaymentDetails] = js.native
@@ -332,7 +332,7 @@ object Order {
         ret
     }
     @scala.inline
-    def withNote_attributes(value: AnonName): Self = {
+    def withNote_attributes(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("note_attributes")(value.asInstanceOf[js.Any])
         ret

@@ -1,10 +1,10 @@
 package typingsSlinky.firebasePerformance.apiServiceMod
 
+import org.scalajs.dom.raw.Document
+import org.scalajs.dom.raw.Navigator
 import org.scalajs.dom.raw.PerformanceEntry
 import org.scalajs.dom.raw.Storage
-import typingsSlinky.firebasePerformance.apiServiceMod._Global_.Window
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Navigator_
+import typingsSlinky.firebasePerformance.apiServiceMod.global.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,9 +15,9 @@ class Api () extends js.Object {
   def this(window: Window) = this()
   /** PreformanceObserver constructor function. */
   val PerformanceObserver: js.Any = js.native
-  val document: Document_ = js.native
+  val document: Document = js.native
   val localStorage: js.UndefOr[Storage] = js.native
-  val navigator: Navigator_ = js.native
+  val navigator: Navigator = js.native
   val onFirstInputDelay: js.UndefOr[js.Function] = js.native
   val performance: js.Any = js.native
   val window: js.UndefOr[Window] = js.native

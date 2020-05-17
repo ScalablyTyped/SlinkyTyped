@@ -3,7 +3,7 @@ package typingsSlinky.firebaseFunctions.serviceMod
 import typingsSlinky.firebaseAppTypes.privateMod.FirebaseService
 import typingsSlinky.firebaseAuthInteropTypes.mod.FirebaseAuthInternalName
 import typingsSlinky.firebaseComponent.mod.Provider
-import typingsSlinky.firebaseFunctions.AnonDelete
+import typingsSlinky.firebaseFunctions.anon.Delete
 import typingsSlinky.firebaseFunctions.mod.FirebaseApp
 import typingsSlinky.firebaseFunctionsTypes.mod.FirebaseFunctions
 import typingsSlinky.firebaseMessagingTypes.mod.FirebaseMessagingName
@@ -33,7 +33,7 @@ class Service protected ()
     region_ : String
   ) = this()
   @JSName("INTERNAL")
-  var INTERNAL_Service: AnonDelete = js.native
+  var INTERNAL_Service: Delete = js.native
   var app_ : js.Any = js.native
   /**
     * Calls a callable function asynchronously and returns the result.

@@ -3,8 +3,8 @@ package typingsSlinky.nivoChord.components
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.nivoChord.OmitArcDataformattedValue
-import typingsSlinky.nivoChord.OmitArcDatalabel
+import typingsSlinky.nivoChord.anon.OmitArcDataformattedValue
+import typingsSlinky.nivoChord.anon.OmitArcDatalabel
 import typingsSlinky.nivoChord.mod.ArcData
 import typingsSlinky.nivoChord.mod.ChordProps
 import typingsSlinky.nivoChord.mod.LabelAccessor

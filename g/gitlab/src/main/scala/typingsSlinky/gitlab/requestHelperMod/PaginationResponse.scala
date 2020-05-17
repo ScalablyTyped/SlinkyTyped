@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PaginationResponse extends js.Object {
+trait PaginationResponse extends GetResponse {
   var data: js.Array[js.Object] = js.native
   var pagination: PaginationOptions = js.native
 }

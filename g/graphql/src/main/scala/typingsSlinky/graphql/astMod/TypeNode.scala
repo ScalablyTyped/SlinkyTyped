@@ -1,8 +1,5 @@
 package typingsSlinky.graphql.astMod
 
-import typingsSlinky.graphql.graphqlStrings.ListType
-import typingsSlinky.graphql.graphqlStrings.NamedType
-import typingsSlinky.graphql.graphqlStrings.NonNullType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,21 +13,10 @@ trait TypeNode extends js.Object
 
 object TypeNode {
   @scala.inline
-  def NamedTypeNode(kind: NamedType, name: NameNode): TypeNode = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TypeNode]
-  }
+  implicit def apply(value: ListTypeNode): TypeNode = value.asInstanceOf[TypeNode]
   @scala.inline
-  def ListTypeNode(kind: ListType, `type`: TypeNode): TypeNode = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TypeNode]
-  }
+  implicit def apply(value: NamedTypeNode): TypeNode = value.asInstanceOf[TypeNode]
   @scala.inline
-  def NonNullTypeNode(kind: NonNullType, `type`: NamedTypeNode | ListTypeNode): TypeNode = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TypeNode]
-  }
+  implicit def apply(value: NonNullTypeNode): TypeNode = value.asInstanceOf[TypeNode]
 }
 

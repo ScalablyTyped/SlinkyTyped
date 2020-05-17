@@ -2,7 +2,7 @@ package typingsSlinky.nodeFetch.mod
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ReadableStream
-import typingsSlinky.nodeFetch.AnonSize
+import typingsSlinky.nodeFetch.anon.Size
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Body () extends js.Object {
   def this(body: js.Any) = this()
-  def this(body: js.Any, opts: AnonSize) = this()
+  def this(body: js.Any, opts: Size) = this()
   var body: ReadableStream = js.native
   var bodyUsed: Boolean = js.native
   var size: Double = js.native

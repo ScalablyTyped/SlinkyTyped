@@ -3,7 +3,7 @@ package typingsSlinky.reactInstantsearchDom.mod
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.ComponentType
 import typingsSlinky.react.mod.StatelessComponent
-import typingsSlinky.reactInstantsearchCore.PartialStatsProvided
+import typingsSlinky.reactInstantsearchCore.anon.PartialStatsProvided
 import typingsSlinky.reactInstantsearchCore.mod.Omit
 import typingsSlinky.reactInstantsearchCore.mod.StatsProvided
 import scala.scalajs.js

@@ -1,5 +1,6 @@
 package typingsSlinky.gitlab
 
+import typingsSlinky.gitlab.anon.shastringSudo
 import typingsSlinky.gitlab.infrastructureMod.BaseService
 import typingsSlinky.gitlab.requestHelperMod.BaseRequestOptions
 import typingsSlinky.gitlab.requestHelperMod.GetResponse

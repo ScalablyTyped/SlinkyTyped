@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
 import typingsSlinky.popmotionPose.typesMod.DomPopmotionConfig
 import typingsSlinky.popmotionPose.typesMod.DomPopmotionPoser
-import typingsSlinky.reactPose.AnonCurrent
+import typingsSlinky.reactPose.anon.Current
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait PoseElementProps
   var getInitialPoseFromParent: js.UndefOr[js.Function0[CurrentPose | Unit]] = js.native
   var getParentPoseConfig: js.UndefOr[js.Function0[DomPopmotionConfig]] = js.native
   var initialPose: js.UndefOr[CurrentPose] = js.native
-  var innerRef: js.UndefOr[AnonCurrent | RefFunc] = js.native
+  var innerRef: js.UndefOr[Current | RefFunc] = js.native
   var onPoseComplete: js.UndefOr[js.Function1[/* pose */ CurrentPose, _]] = js.native
   var onUnmount: js.UndefOr[js.Function1[/* child */ DomPopmotionPoser, _]] = js.native
   var onValueChange: js.UndefOr[StringDictionary[js.Function1[/* v */ js.Any, _]]] = js.native
@@ -106,7 +106,7 @@ object PoseElementProps {
         ret
     }
     @scala.inline
-    def withInnerRef(value: AnonCurrent | RefFunc): Self = {
+    def withInnerRef(value: Current | RefFunc): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("innerRef")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientSiteverification.gapi.client.siteverification
 
-import typingsSlinky.gapiClientSiteverification.AnonIdentifier
+import typingsSlinky.gapiClientSiteverification.anon.Identifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SiteVerificationWebResourceGettokenRequest extends js.Object {
   /** The site for which a verification token will be generated. */
-  var site: js.UndefOr[AnonIdentifier] = js.native
+  var site: js.UndefOr[Identifier] = js.native
   /** The verification method that will be used to verify this site. For sites, 'FILE' or 'META' methods may be used. For domains, only 'DNS' may be used. */
   var verificationMethod: js.UndefOr[String] = js.native
 }
@@ -26,7 +26,7 @@ object SiteVerificationWebResourceGettokenRequest {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSite(value: AnonIdentifier): Self = {
+    def withSite(value: Identifier): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("site")(value.asInstanceOf[js.Any])
         ret

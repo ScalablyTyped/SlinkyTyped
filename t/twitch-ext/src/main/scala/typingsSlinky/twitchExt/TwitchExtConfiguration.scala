@@ -1,5 +1,6 @@
 package typingsSlinky.twitchExt
 
+import typingsSlinky.twitchExt.anon.Content
 import typingsSlinky.twitchExt.twitchExtStrings.broadcaster
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,15 +14,15 @@ trait TwitchExtConfiguration extends js.Object {
   /**
   	 * This property returns the record for the broadcaster segment if one is found; otherwise, undefined.
   	 */
-  var broadcaster: js.UndefOr[AnonContent] = js.native
+  var broadcaster: js.UndefOr[Content] = js.native
   /**
   	 * This property returns the record for the developer segment if one is found; otherwise, undefined.
   	 */
-  var developer: js.UndefOr[AnonContent] = js.native
+  var developer: js.UndefOr[Content] = js.native
   /**
   	 * This property returns the record for the global segment if one is found; otherwise, undefined.
   	 */
-  var global: js.UndefOr[AnonContent] = js.native
+  var global: js.UndefOr[Content] = js.native
   /**
   	 * This function registers a callback that is called whenever an extension configuration is received.
   	 * The callback function takes no input and returns nothing. After this is called for the first time,
@@ -64,7 +65,7 @@ object TwitchExtConfiguration {
         ret
     }
     @scala.inline
-    def withBroadcaster(value: AnonContent): Self = {
+    def withBroadcaster(value: Content): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("broadcaster")(value.asInstanceOf[js.Any])
         ret
@@ -76,7 +77,7 @@ object TwitchExtConfiguration {
         ret
     }
     @scala.inline
-    def withDeveloper(value: AnonContent): Self = {
+    def withDeveloper(value: Content): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("developer")(value.asInstanceOf[js.Any])
         ret
@@ -88,7 +89,7 @@ object TwitchExtConfiguration {
         ret
     }
     @scala.inline
-    def withGlobal(value: AnonContent): Self = {
+    def withGlobal(value: Content): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("global")(value.asInstanceOf[js.Any])
         ret

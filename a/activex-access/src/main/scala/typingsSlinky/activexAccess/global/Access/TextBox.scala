@@ -1,0 +1,11 @@
+package typingsSlinky.activexAccess.global.Access
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("Access.TextBox")
+@js.native
+class TextBox protected ()
+  extends typingsSlinky.activexAccess.Access.TextBox
+

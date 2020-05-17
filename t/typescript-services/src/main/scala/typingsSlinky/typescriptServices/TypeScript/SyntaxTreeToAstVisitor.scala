@@ -4,10 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("TypeScript.SyntaxTreeToAstVisitor")
 @js.native
-class SyntaxTreeToAstVisitor protected () extends ISyntaxVisitor {
-  def this(fileName: String, lineMap: LineMap, compilationSettings: ImmutableCompilationSettings) = this()
+trait SyntaxTreeToAstVisitor extends ISyntaxVisitor {
   var compilationSettings: js.Any = js.native
   var fileName: js.Any = js.native
   var lineMap: LineMap = js.native
@@ -39,17 +37,5 @@ class SyntaxTreeToAstVisitor protected () extends ISyntaxVisitor {
   def visitSyntaxList(node: ISyntaxList): ISyntaxList2 = js.native
   def visitTokenWorker(token: ISyntaxToken): IASTToken = js.native
   def visitType(`type`: ITypeSyntax): AST = js.native
-}
-
-/* static members */
-@JSGlobal("TypeScript.SyntaxTreeToAstVisitor")
-@js.native
-object SyntaxTreeToAstVisitor extends js.Object {
-  def visit(
-    syntaxTree: SyntaxTree,
-    fileName: String,
-    compilationSettings: ImmutableCompilationSettings,
-    incrementalAST: Boolean
-  ): SourceUnit = js.native
 }
 

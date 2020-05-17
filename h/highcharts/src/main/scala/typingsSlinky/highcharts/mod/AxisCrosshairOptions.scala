@@ -12,14 +12,8 @@ trait AxisCrosshairOptions extends js.Object
 
 object AxisCrosshairOptions {
   @scala.inline
-  def XAxisCrosshairOptions(): AxisCrosshairOptions = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AxisCrosshairOptions]
-  }
+  implicit def apply(value: XAxisCrosshairOptions): AxisCrosshairOptions = value.asInstanceOf[AxisCrosshairOptions]
   @scala.inline
-  def YAxisCrosshairOptions(): AxisCrosshairOptions = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AxisCrosshairOptions]
-  }
+  implicit def apply(value: YAxisCrosshairOptions): AxisCrosshairOptions = value.asInstanceOf[AxisCrosshairOptions]
 }
 

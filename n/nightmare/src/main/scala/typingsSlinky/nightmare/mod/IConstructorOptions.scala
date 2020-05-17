@@ -1,7 +1,7 @@
 package typingsSlinky.nightmare.mod
 
-import typingsSlinky.nightmare.AnonDownloads
-import typingsSlinky.nightmare.AnonMode
+import typingsSlinky.nightmare.anon.Downloads
+import typingsSlinky.nightmare.anon.Mode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,8 +18,8 @@ trait IConstructorOptions extends js.Object {
   var interval: js.UndefOr[js.Any] = js.native
   var loadImages: js.UndefOr[Boolean] = js.native
   var maxDownloadRequestWait: js.UndefOr[Double] = js.native
-  var openDevTools: js.UndefOr[AnonMode] = js.native
-  var paths: js.UndefOr[AnonDownloads] = js.native
+  var openDevTools: js.UndefOr[Mode] = js.native
+  var paths: js.UndefOr[Downloads] = js.native
   var phantomPath: js.UndefOr[String] = js.native
   var pollInterval: js.UndefOr[Double] = js.native
    // number | string;
@@ -160,7 +160,7 @@ object IConstructorOptions {
         ret
     }
     @scala.inline
-    def withOpenDevTools(value: AnonMode): Self = {
+    def withOpenDevTools(value: Mode): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("openDevTools")(value.asInstanceOf[js.Any])
         ret
@@ -172,7 +172,7 @@ object IConstructorOptions {
         ret
     }
     @scala.inline
-    def withPaths(value: AnonDownloads): Self = {
+    def withPaths(value: Downloads): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
         ret

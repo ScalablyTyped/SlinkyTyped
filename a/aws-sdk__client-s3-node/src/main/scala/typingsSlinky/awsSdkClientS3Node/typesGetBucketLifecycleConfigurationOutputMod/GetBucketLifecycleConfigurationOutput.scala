@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientS3Node.typesGetBucketLifecycleConfigurationOutputMod
 
-import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientS3Node.typesLifecycleRuleMod.UnmarshalledLifecycleRule
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetBucketLifecycleConfigurationOutput
   extends MetadataBearer
-     with _OutputTypesUnion {
+     with OutputTypesUnion {
   /**
     * _LifecycleRules shape
     */

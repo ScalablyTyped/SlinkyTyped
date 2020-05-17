@@ -1,29 +1,21 @@
 package typingsSlinky.jimp.mod
 
-import typingsSlinky.jimp.jimpStrings.`before-change`
-import typingsSlinky.jimp.jimpStrings.changed
-import typingsSlinky.jimp.jimpStrings.clone
-import typingsSlinky.jimp.jimpStrings.constructor
+import typingsSlinky.jimp.anon.Dictkey
+import typingsSlinky.jimp.anon.EventName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.jimp.AnonEventName[T]
-  - typingsSlinky.jimp.AnonDictkey[T]
+  - typingsSlinky.jimp.anon.EventName[T]
+  - typingsSlinky.jimp.anon.Dictkey[T]
 */
 trait ListenerData[T /* <: ListenableName */] extends js.Object
 
 object ListenerData {
   @scala.inline
-  def AnonEventName[T](eventName: T, methodName: clone | ChangeName | constructor): ListenerData[T] = {
-    val __obj = js.Dynamic.literal(eventName = eventName.asInstanceOf[js.Any], methodName = methodName.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ListenerData[T]]
-  }
+  implicit def apply[T](value: Dictkey[T]): ListenerData[T] = value.asInstanceOf[ListenerData[T]]
   @scala.inline
-  def AnonDictkey[T](eventName: `before-change` | changed, methodName: T): ListenerData[T] = {
-    val __obj = js.Dynamic.literal(eventName = eventName.asInstanceOf[js.Any], methodName = methodName.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ListenerData[T]]
-  }
+  implicit def apply[T](value: EventName[T]): ListenerData[T] = value.asInstanceOf[ListenerData[T]]
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.jestEach
 
+import typingsSlinky.jestEach.anon.Describe
 import typingsSlinky.jestEach.bindMod.GlobalCallback
 import typingsSlinky.jestTypes.globalMod.EachTable
 import typingsSlinky.jestTypes.globalMod.EachTestFn
@@ -22,8 +23,8 @@ object mod extends js.Object {
   ] = js.native
   @js.native
   object default extends js.Object {
-    def apply(table: EachTable, data: js.Any*): AnonDescribe = js.native
-    def withGlobal(g: typingsSlinky.jestTypes.globalMod.Global): js.Function2[/* table */ EachTable, /* repeated */ js.Any, AnonDescribe] = js.native
+    def apply(table: EachTable, data: js.Any*): Describe = js.native
+    def withGlobal(g: typingsSlinky.jestTypes.globalMod.Global): js.Function2[/* table */ EachTable, /* repeated */ js.Any, Describe] = js.native
   }
   
   type Global = typingsSlinky.jestTypes.globalMod.Global

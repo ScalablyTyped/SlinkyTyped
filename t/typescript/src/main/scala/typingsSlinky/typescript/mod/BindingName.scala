@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait BindingName extends js.Object
 
+object BindingName {
+  @scala.inline
+  implicit def apply(value: BindingPattern): BindingName = value.asInstanceOf[BindingName]
+  @scala.inline
+  implicit def apply(value: Identifier): BindingName = value.asInstanceOf[BindingName]
+}
+

@@ -3,8 +3,8 @@ package typingsSlinky.multer.mod
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
-import typingsSlinky.multer.PartialFile
-import typingsSlinky.multer.mod._Global_.Express.Multer.File
+import typingsSlinky.multer.anon.PartialFile
+import typingsSlinky.multer.mod.global.Express.Multer.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

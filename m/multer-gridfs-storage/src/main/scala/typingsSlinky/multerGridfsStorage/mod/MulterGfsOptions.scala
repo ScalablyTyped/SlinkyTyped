@@ -1,7 +1,7 @@
 package typingsSlinky.multerGridfsStorage.mod
 
 import org.scalajs.dom.experimental.Request
-import typingsSlinky.multerGridfsStorage.mod._Global_.Express.Multer.File
+import typingsSlinky.multerGridfsStorage.mod.global.Express.Multer.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

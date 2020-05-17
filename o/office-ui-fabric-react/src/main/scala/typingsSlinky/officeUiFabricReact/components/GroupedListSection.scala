@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.officeUiFabricReact.AnonCallback
+import typingsSlinky.officeUiFabricReact.anon.Callback
 import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropEvents
 import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropHelper
 import typingsSlinky.officeUiFabricReact.groupFooterTypesMod.IGroupFooterProps
@@ -42,7 +42,7 @@ object GroupedListSection {
     @scala.inline
     def dragDropHelper(value: IDragDropHelper): this.type = set("dragDropHelper", value.asInstanceOf[js.Any])
     @scala.inline
-    def eventsToRegister(value: js.Array[AnonCallback]): this.type = set("eventsToRegister", value.asInstanceOf[js.Any])
+    def eventsToRegister(value: js.Array[Callback]): this.type = set("eventsToRegister", value.asInstanceOf[js.Any])
     @scala.inline
     def footerProps(value: IGroupFooterProps): this.type = set("footerProps", value.asInstanceOf[js.Any])
     @scala.inline

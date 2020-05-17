@@ -1,8 +1,8 @@
 package typingsSlinky.rxLite.mod
 
 import typingsSlinky.rxCore.Rx.IDisposable
-import typingsSlinky.rxLite.AnonGetDisposable
 import typingsSlinky.rxLite.Rx.IScheduler
+import typingsSlinky.rxLite.anon.GetDisposable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +35,7 @@ object internals extends js.Object {
     ) = this()
   }
   
-  def addRef[T](xs: typingsSlinky.rxLite.Rx.Observable[T], r: AnonGetDisposable): typingsSlinky.rxLite.Rx.Observable[T] = js.native
+  def addRef[T](xs: typingsSlinky.rxLite.Rx.Observable[T], r: GetDisposable): typingsSlinky.rxLite.Rx.Observable[T] = js.native
   def isEqual(left: js.Any, right: js.Any): Boolean = js.native
   /* static members */
   @js.native

@@ -1,8 +1,8 @@
 package typingsSlinky.fundamentalReact.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.fundamentalReact.PartialTableProps
-import typingsSlinky.fundamentalReact.WeakValidationMapTablePro
+import typingsSlinky.fundamentalReact.anon.PartialTableProps
+import typingsSlinky.fundamentalReact.anon.WeakValidationMapTablePro
 import typingsSlinky.fundamentalReact.tableMod.TableProps
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap

@@ -6,12 +6,12 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Window extends js.Object {
-  var BluetoothClassicSerial: BluetoothClassicSerial_ = js.native
+  var BluetoothClassicSerial: typingsSlinky.cordovaPluginBluetoothclassicSerial.BluetoothClassicSerial = js.native
 }
 
 object Window {
   @scala.inline
-  def apply(BluetoothClassicSerial: BluetoothClassicSerial_): Window = {
+  def apply(BluetoothClassicSerial: BluetoothClassicSerial): Window = {
     val __obj = js.Dynamic.literal(BluetoothClassicSerial = BluetoothClassicSerial.asInstanceOf[js.Any])
     __obj.asInstanceOf[Window]
   }
@@ -22,7 +22,7 @@ object Window {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBluetoothClassicSerial(value: BluetoothClassicSerial_): Self = {
+    def withBluetoothClassicSerial(value: BluetoothClassicSerial): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("BluetoothClassicSerial")(value.asInstanceOf[js.Any])
         ret

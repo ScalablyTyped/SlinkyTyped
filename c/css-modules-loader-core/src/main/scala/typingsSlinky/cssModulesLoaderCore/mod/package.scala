@@ -12,5 +12,4 @@ package object mod {
     /* depTrace */ java.lang.String, 
     scala.Unit
   ]
-  type Source = java.lang.String | typingsSlinky.cssModulesLoaderCore.AnonToString
 }

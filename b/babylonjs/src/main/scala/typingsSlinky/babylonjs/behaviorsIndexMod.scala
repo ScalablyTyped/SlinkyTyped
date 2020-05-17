@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs
 
+import typingsSlinky.babylonjs.anon.DragAxis
 import typingsSlinky.babylonjs.easingMod.BackEase
 import typingsSlinky.babylonjs.easingMod.ExponentialEase
 import typingsSlinky.babylonjs.transformNodeMod.TransformNode
@@ -53,7 +54,7 @@ object behaviorsIndexMod extends js.Object {
     */
   class PointerDragBehavior ()
     extends typingsSlinky.babylonjs.meshesIndexMod.PointerDragBehavior {
-    def this(options: AnonDragAxis) = this()
+    def this(options: DragAxis) = this()
   }
   
   @js.native

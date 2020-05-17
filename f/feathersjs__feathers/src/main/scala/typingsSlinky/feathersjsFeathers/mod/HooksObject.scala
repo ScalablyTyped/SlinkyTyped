@@ -1,6 +1,6 @@
 package typingsSlinky.feathersjsFeathers.mod
 
-import typingsSlinky.feathersjsFeathers.PartialHookMap
+import typingsSlinky.feathersjsFeathers.anon.PartialHookMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

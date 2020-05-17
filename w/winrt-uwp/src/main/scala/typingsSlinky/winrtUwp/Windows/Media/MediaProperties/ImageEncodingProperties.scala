@@ -5,10 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Describes the format of an image stream. */
-@JSGlobal("Windows.Media.MediaProperties.ImageEncodingProperties")
 @js.native
-/** Creates a new instance of the ImageEncodingProperties class. */
-class ImageEncodingProperties () extends js.Object {
+trait ImageEncodingProperties extends js.Object {
   /** Gets or sets the image height. */
   var height: Double = js.native
   /** Gets additional format properties for the image stream. */
@@ -21,35 +19,50 @@ class ImageEncodingProperties () extends js.Object {
   var width: Double = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Media.MediaProperties.ImageEncodingProperties")
-@js.native
-object ImageEncodingProperties extends js.Object {
-  /**
-    * Creates an instance of ImageEncodingProperties for a BMP image.
-    * @return The image encoding properties.
-    */
-  def createBmp(): ImageEncodingProperties = js.native
-  /**
-    * Creates an instance of ImageEncodingProperties for a JPEG image.
-    * @return The properties for the image stream.
-    */
-  def createJpeg(): ImageEncodingProperties = js.native
-  /**
-    * Creates an instance of ImageEncodingProperties for a JPEG XR image.
-    * @return The properties for the image stream.
-    */
-  def createJpegXR(): ImageEncodingProperties = js.native
-  /**
-    * Creates an instance of ImageEncodingProperties for a PNG image.
-    * @return The properties for the image stream.
-    */
-  def createPng(): ImageEncodingProperties = js.native
-  /**
-    * Creates an instance of ImageEncodingProperties for an uncompressed image.
-    * @param format The media pixel format.
-    * @return The image encoding properties.
-    */
-  def createUncompressed(format: MediaPixelFormat): ImageEncodingProperties = js.native
+object ImageEncodingProperties {
+  @scala.inline
+  def apply(height: Double, properties: MediaPropertySet, subtype: String, `type`: String, width: Double): ImageEncodingProperties = {
+    val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], subtype = subtype.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ImageEncodingProperties]
+  }
+  @scala.inline
+  implicit class ImageEncodingPropertiesOps[Self <: ImageEncodingProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProperties(value: MediaPropertySet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubtype(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtype")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

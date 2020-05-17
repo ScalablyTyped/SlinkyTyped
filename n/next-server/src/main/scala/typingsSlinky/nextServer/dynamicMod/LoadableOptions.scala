@@ -1,17 +1,17 @@
 package typingsSlinky.nextServer.dynamicMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.nextServer.AnonError
+import typingsSlinky.nextServer.anon.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined next-server.next-server/dist/lib/dynamic.LoadableBaseOptions<P> & {  render ? :(loader : any, props : any): react.react._Global_.JSX.Element} */
+/* Inlined next-server.next-server/dist/lib/dynamic.LoadableBaseOptions<P> & {  render ? :(loader : any, props : any): react.react.<global>.JSX.Element} */
 @js.native
 trait LoadableOptions[P] extends js.Object {
   var loadableGenerated: js.UndefOr[LoadableGeneratedOptions] = js.native
   var loader: js.UndefOr[Loader[P] | LoaderMap] = js.native
-  var loading: js.UndefOr[js.Function1[/* hasErrorIsLoadingPastDelay */ AnonError, ReactElement | Null]] = js.native
+  var loading: js.UndefOr[js.Function1[/* hasErrorIsLoadingPastDelay */ Error, ReactElement | Null]] = js.native
   var modules: js.UndefOr[js.Function0[LoaderMap]] = js.native
   var render: js.UndefOr[js.Function2[/* loader */ js.Any, /* props */ js.Any, ReactElement]] = js.native
   var ssr: js.UndefOr[Boolean] = js.native
@@ -61,7 +61,7 @@ object LoadableOptions {
         ret
     }
     @scala.inline
-    def withLoading(value: /* hasErrorIsLoadingPastDelay */ AnonError => ReactElement | Null): Self[P] = {
+    def withLoading(value: /* hasErrorIsLoadingPastDelay */ Error => ReactElement | Null): Self[P] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(js.Any.fromFunction1(value))
         ret

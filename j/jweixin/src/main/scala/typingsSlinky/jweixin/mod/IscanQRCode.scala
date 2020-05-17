@@ -1,6 +1,6 @@
 package typingsSlinky.jweixin.mod
 
-import typingsSlinky.jweixin.AnonResultStr
+import typingsSlinky.jweixin.anon.ResultStr
 import typingsSlinky.jweixin.jweixinNumbers.`0`
 import typingsSlinky.jweixin.jweixinNumbers.`1`
 import scala.scalajs.js
@@ -15,12 +15,12 @@ trait IscanQRCode extends BaseParams {
    // 可以指定扫二维码还是一维码，默认二者都有
   // 当needResult 为 1 时，扫码返回的结果
   @JSName("success")
-  def success_MIscanQRCode(res: AnonResultStr): Unit = js.native
+  def success_MIscanQRCode(res: ResultStr): Unit = js.native
 }
 
 object IscanQRCode {
   @scala.inline
-  def apply(needResult: `0` | `1`, scanType: js.Array[scanType], success: AnonResultStr => Unit): IscanQRCode = {
+  def apply(needResult: `0` | `1`, scanType: js.Array[scanType], success: ResultStr => Unit): IscanQRCode = {
     val __obj = js.Dynamic.literal(needResult = needResult.asInstanceOf[js.Any], scanType = scanType.asInstanceOf[js.Any], success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[IscanQRCode]
   }
@@ -43,7 +43,7 @@ object IscanQRCode {
         ret
     }
     @scala.inline
-    def withSuccess(value: AnonResultStr => Unit): Self = {
+    def withSuccess(value: ResultStr => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

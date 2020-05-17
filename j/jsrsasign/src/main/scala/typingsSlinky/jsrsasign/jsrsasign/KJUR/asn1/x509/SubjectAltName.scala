@@ -1,6 +1,5 @@
 package typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.x509
 
-import typingsSlinky.jsrsasign.ArrayParamUriParamcritica
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,11 +32,49 @@ import scala.scalajs.js.annotation._
   *   array: [{uri: 'http://aaa.com/'}, {uri: 'http://bbb.com/'}]
   * });
   */
-@JSGlobal("jsrsasign.KJUR.asn1.x509.SubjectAltName")
 @js.native
-class SubjectAltName () extends Extension {
-  def this(params: ArrayParamUriParamcritica) = this()
+trait SubjectAltName extends Extension {
   def getExtnValueHex(): String = js.native
   def setNameArray(paramsArray: js.Array[UriParam]): Unit = js.native
+}
+
+object SubjectAltName {
+  @scala.inline
+  def apply(
+    getEncodedHex: () => String,
+    getExtnValueHex: () => String,
+    getFreshValueHex: () => String,
+    getLengthHexFromValue: () => String,
+    getValueHex: () => String,
+    hL: String,
+    hT: String,
+    hTLV: String,
+    hV: String,
+    isModified: String,
+    setNameArray: js.Array[UriParam] => Unit
+  ): SubjectAltName = {
+    val __obj = js.Dynamic.literal(getEncodedHex = js.Any.fromFunction0(getEncodedHex), getExtnValueHex = js.Any.fromFunction0(getExtnValueHex), getFreshValueHex = js.Any.fromFunction0(getFreshValueHex), getLengthHexFromValue = js.Any.fromFunction0(getLengthHexFromValue), getValueHex = js.Any.fromFunction0(getValueHex), hL = hL.asInstanceOf[js.Any], hT = hT.asInstanceOf[js.Any], hTLV = hTLV.asInstanceOf[js.Any], hV = hV.asInstanceOf[js.Any], isModified = isModified.asInstanceOf[js.Any], setNameArray = js.Any.fromFunction1(setNameArray))
+    __obj.asInstanceOf[SubjectAltName]
+  }
+  @scala.inline
+  implicit class SubjectAltNameOps[Self <: SubjectAltName] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetExtnValueHex(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getExtnValueHex")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetNameArray(value: js.Array[UriParam] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setNameArray")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.googleCloudStorage.fileMod
 
-import typingsSlinky.googleCloudStorage.AnonMax
+import typingsSlinky.googleCloudStorage.anon.Max
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetSignedPolicyOptions extends js.Object {
   var acl: js.UndefOr[String] = js.native
-  var contentLengthRange: js.UndefOr[AnonMax] = js.native
+  var contentLengthRange: js.UndefOr[Max] = js.native
   @JSName("equals")
   var equals_FGetSignedPolicyOptions: js.UndefOr[js.Array[js.Array[String] | String]] = js.native
   var expires: String | Double | js.Date = js.native
@@ -54,7 +54,7 @@ object GetSignedPolicyOptions {
         ret
     }
     @scala.inline
-    def withContentLengthRange(value: AnonMax): Self = {
+    def withContentLengthRange(value: Max): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentLengthRange")(value.asInstanceOf[js.Any])
         ret

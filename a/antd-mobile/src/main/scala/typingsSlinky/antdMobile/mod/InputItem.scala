@@ -1,7 +1,7 @@
 package typingsSlinky.antdMobile.mod
 
-import typingsSlinky.antdMobile.AnonAntLocale
-import typingsSlinky.antdMobile.AnonClear
+import typingsSlinky.antdMobile.anon.AntLocale
+import typingsSlinky.antdMobile.anon.Clear
 import typingsSlinky.antdMobile.inputItemMod.InputItemProps
 import typingsSlinky.antdMobile.inputItemMod.default
 import scala.scalajs.js
@@ -18,7 +18,7 @@ class InputItem protected () extends default {
 @JSImport("antd-mobile", "InputItem")
 @js.native
 object InputItem extends js.Object {
-  var contextTypes: AnonAntLocale = js.native
-  var defaultProps: AnonClear = js.native
+  var contextTypes: AntLocale = js.native
+  var defaultProps: Clear = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.angularToastr.mod.angularAugmentingMod.toastr
 
-import typingsSlinky.angularToastr.AnonProgressbar
+import typingsSlinky.angularToastr.anon.Progressbar
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait IToastBaseConfig extends js.Object {
   var onTap: js.UndefOr[js.Function1[/* toast */ IToast, Unit]] = js.native
   var progressBar: js.UndefOr[Boolean] = js.native
   var tapToDismiss: js.UndefOr[Boolean] = js.native
-  var templates: js.UndefOr[AnonProgressbar] = js.native
+  var templates: js.UndefOr[Progressbar] = js.native
   var timeOut: js.UndefOr[Double] = js.native
   var titleClass: js.UndefOr[String] = js.native
   var toastClass: js.UndefOr[String] = js.native
@@ -169,7 +169,7 @@ object IToastBaseConfig {
         ret
     }
     @scala.inline
-    def withTemplates(value: AnonProgressbar): Self = {
+    def withTemplates(value: Progressbar): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("templates")(value.asInstanceOf[js.Any])
         ret

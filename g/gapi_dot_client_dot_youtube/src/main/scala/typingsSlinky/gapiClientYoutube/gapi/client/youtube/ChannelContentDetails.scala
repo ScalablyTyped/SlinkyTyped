@@ -1,13 +1,13 @@
 package typingsSlinky.gapiClientYoutube.gapi.client.youtube
 
-import typingsSlinky.gapiClientYoutube.AnonFavorites
+import typingsSlinky.gapiClientYoutube.anon.Favorites
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ChannelContentDetails extends js.Object {
-  var relatedPlaylists: js.UndefOr[AnonFavorites] = js.native
+  var relatedPlaylists: js.UndefOr[Favorites] = js.native
 }
 
 object ChannelContentDetails {
@@ -23,7 +23,7 @@ object ChannelContentDetails {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withRelatedPlaylists(value: AnonFavorites): Self = {
+    def withRelatedPlaylists(value: Favorites): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("relatedPlaylists")(value.asInstanceOf[js.Any])
         ret

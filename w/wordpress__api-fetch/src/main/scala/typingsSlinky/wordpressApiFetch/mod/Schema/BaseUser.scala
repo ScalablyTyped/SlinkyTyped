@@ -1,13 +1,15 @@
 package typingsSlinky.wordpressApiFetch.mod.Schema
 
 import typingsSlinky.std.Record
-import typingsSlinky.wordpressApiFetch.AnonDictk
+import typingsSlinky.wordpressApiFetch.anon.Dictk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait BaseUser[T /* <: Context */] extends BaseResponse {
+trait BaseUser[T /* <: Context */]
+  extends BaseResponse
+     with User[T] {
   var avatar_urls: Record[Double, String] = js.native
   var capabilities: Record[String, Boolean] = js.native
   var description: String = js.native
@@ -30,7 +32,7 @@ trait BaseUser[T /* <: Context */] extends BaseResponse {
 object BaseUser {
   @scala.inline
   def apply[T](
-    _links: Record[String, js.Array[AnonDictk]],
+    _links: Record[String, js.Array[Dictk]],
     avatar_urls: Record[Double, String],
     capabilities: Record[String, Boolean],
     description: String,

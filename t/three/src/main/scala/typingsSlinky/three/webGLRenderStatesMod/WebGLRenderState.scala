@@ -1,6 +1,6 @@
 package typingsSlinky.three.webGLRenderStatesMod
 
-import typingsSlinky.three.AnonLights
+import typingsSlinky.three.anon.Lights
 import typingsSlinky.three.cameraMod.Camera
 import typingsSlinky.three.lightMod.Light
 import scala.scalajs.js
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait WebGLRenderState extends js.Object {
-  var state: AnonLights = js.native
+  var state: Lights = js.native
   def init(): Unit = js.native
   def pushLight(light: Light): Unit = js.native
   def pushShadow(shadowLight: Light): Unit = js.native
@@ -23,7 +23,7 @@ object WebGLRenderState {
     pushLight: Light => Unit,
     pushShadow: Light => Unit,
     setupLights: Camera => Unit,
-    state: AnonLights
+    state: Lights
   ): WebGLRenderState = {
     val __obj = js.Dynamic.literal(init = js.Any.fromFunction0(init), pushLight = js.Any.fromFunction1(pushLight), pushShadow = js.Any.fromFunction1(pushShadow), setupLights = js.Any.fromFunction1(setupLights), state = state.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebGLRenderState]
@@ -59,7 +59,7 @@ object WebGLRenderState {
         ret
     }
     @scala.inline
-    def withState(value: AnonLights): Self = {
+    def withState(value: Lights): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
         ret

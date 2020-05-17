@@ -2,7 +2,7 @@ package typingsSlinky.gestalt.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.AnonEventValue
+import typingsSlinky.gestalt.anon.EventValue
 import typingsSlinky.gestalt.mod.SwitchProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,7 +27,7 @@ object Switch {
   
   def withProps(p: SwitchProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(id: String, onChange: AnonEventValue => Unit): Builder = {
+  def apply(id: String, onChange: EventValue => Unit): Builder = {
     val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
     new Builder(js.Array(this.component, __props.asInstanceOf[SwitchProps]))
   }

@@ -1,6 +1,6 @@
 package typingsSlinky.lodashDecorators.sharedMod
 
-import typingsSlinky.lodashDecorators.AnonInstantiable
+import typingsSlinky.lodashDecorators.anon.Instantiable
 import typingsSlinky.lodashDecorators.commonMod.ResolvableFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait MemoizeConfig[T, U] extends js.Object {
   var cache: js.UndefOr[MemoizeMap[T, U]] = js.native
   var resolver: js.UndefOr[ResolvableFunction] = js.native
-  var `type`: js.UndefOr[AnonInstantiable[T, U]] = js.native
+  var `type`: js.UndefOr[Instantiable[T, U]] = js.native
 }
 
 object MemoizeConfig {
@@ -50,7 +50,7 @@ object MemoizeConfig {
         ret
     }
     @scala.inline
-    def withType(value: AnonInstantiable[T, U]): Self[T, U] = {
+    def withType(value: Instantiable[T, U]): Self[T, U] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
         ret

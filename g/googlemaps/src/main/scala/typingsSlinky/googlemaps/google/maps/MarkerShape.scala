@@ -1,8 +1,5 @@
 package typingsSlinky.googlemaps.google.maps
 
-import typingsSlinky.googlemaps.googlemapsStrings.circle
-import typingsSlinky.googlemaps.googlemapsStrings.poly
-import typingsSlinky.googlemaps.googlemapsStrings.rect
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,22 +19,10 @@ trait MarkerShape extends js.Object
 
 object MarkerShape {
   @scala.inline
-  def MarkerShapeCircle(coords: js.Tuple3[Double, Double, Double], `type`: circle): MarkerShape = {
-    val __obj = js.Dynamic.literal(coords = coords.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[MarkerShape]
-  }
+  implicit def apply(value: MarkerShapeCircle): MarkerShape = value.asInstanceOf[MarkerShape]
   @scala.inline
-  def MarkerShapeRect(coords: js.Tuple4[Double, Double, Double, Double], `type`: rect): MarkerShape = {
-    val __obj = js.Dynamic.literal(coords = coords.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[MarkerShape]
-  }
+  implicit def apply(value: MarkerShapePoly): MarkerShape = value.asInstanceOf[MarkerShape]
   @scala.inline
-  def MarkerShapePoly(coords: MarkerShapePolyCoords, `type`: poly): MarkerShape = {
-    val __obj = js.Dynamic.literal(coords = coords.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[MarkerShape]
-  }
+  implicit def apply(value: MarkerShapeRect): MarkerShape = value.asInstanceOf[MarkerShape]
 }
 

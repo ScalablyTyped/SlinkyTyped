@@ -1,9 +1,9 @@
 package typingsSlinky.extjs.Ext.dd
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.extjs.Ext.Array
 import typingsSlinky.extjs.Ext.IBase
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,7 +54,7 @@ trait IDragDrop extends IBase {
   /** [Method] Called when we are done dragging the object
   		* @param e Event the mouseup event
   		*/
-  var endDrag: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event_], Unit]] = js.native
+  var endDrag: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event], Unit]] = js.native
   /** [Method] Returns a reference to the actual element to drag
   		* @returns HTMLElement the html element
   		*/
@@ -125,39 +125,39 @@ trait IDragDrop extends IBase {
   /** [Method] Abstract method called during the onMouseMove event while dragging an object
   		* @param e Event the mousemove event
   		*/
-  var onDrag: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event_], Unit]] = js.native
+  var onDrag: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event], Unit]] = js.native
   /** [Method] Abstract method called when this item is dropped on another DragDrop obj
   		* @param e Event the mouseup event
   		* @param id String/Ext.dd.DragDrop[] In POINT mode, the element id this was dropped on. In INTERSECT mode, an array of dd items this was dropped on.
   		*/
-  var onDragDrop: js.UndefOr[js.Function2[/* e */ js.UndefOr[Event_], /* id */ js.UndefOr[js.Any], Unit]] = js.native
+  var onDragDrop: js.UndefOr[js.Function2[/* e */ js.UndefOr[Event], /* id */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Abstract method called when this element fist begins hovering over another DragDrop obj
   		* @param e Event the mousemove event
   		* @param id String/Ext.dd.DragDrop[] In POINT mode, the element id this is hovering over. In INTERSECT mode, an array of one or more dragdrop items being hovered over.
   		*/
-  var onDragEnter: js.UndefOr[js.Function2[/* e */ js.UndefOr[Event_], /* id */ js.UndefOr[js.Any], Unit]] = js.native
+  var onDragEnter: js.UndefOr[js.Function2[/* e */ js.UndefOr[Event], /* id */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Abstract method called when we are no longer hovering over an element
   		* @param e Event the mousemove event
   		* @param id String/Ext.dd.DragDrop[] In POINT mode, the element id this was hovering over. In INTERSECT mode, an array of dd items that the mouse is no longer over.
   		*/
-  var onDragOut: js.UndefOr[js.Function2[/* e */ js.UndefOr[Event_], /* id */ js.UndefOr[js.Any], Unit]] = js.native
+  var onDragOut: js.UndefOr[js.Function2[/* e */ js.UndefOr[Event], /* id */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Abstract method called when this element is hovering over another DragDrop obj
   		* @param e Event the mousemove event
   		* @param id String/Ext.dd.DragDrop[] In POINT mode, the element id this is hovering over. In INTERSECT mode, an array of dd items being hovered over.
   		*/
-  var onDragOver: js.UndefOr[js.Function2[/* e */ js.UndefOr[Event_], /* id */ js.UndefOr[js.Any], Unit]] = js.native
+  var onDragOver: js.UndefOr[js.Function2[/* e */ js.UndefOr[Event], /* id */ js.UndefOr[js.Any], Unit]] = js.native
   /** [Method] Abstract method called when this item is dropped on an area with no drop target
   		* @param e Event the mouseup event
   		*/
-  var onInvalidDrop: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event_], Unit]] = js.native
+  var onInvalidDrop: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event], Unit]] = js.native
   /** [Method] Called when a drag drop obj gets a mousedown
   		* @param e Event the mousedown event
   		*/
-  var onMouseDown: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event_], Unit]] = js.native
+  var onMouseDown: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event], Unit]] = js.native
   /** [Method] Called when a drag drop obj gets a mouseup
   		* @param e Event the mouseup event
   		*/
-  var onMouseUp: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event_], Unit]] = js.native
+  var onMouseUp: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event], Unit]] = js.native
   /** [Property] (Number[]) */
   var padding: js.UndefOr[Array] = js.native
   /** [Property] (Boolean) */
@@ -409,7 +409,7 @@ object IDragDrop {
         ret
     }
     @scala.inline
-    def withEndDrag(value: /* e */ js.UndefOr[Event_] => Unit): Self = {
+    def withEndDrag(value: /* e */ js.UndefOr[Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("endDrag")(js.Any.fromFunction1(value))
         ret
@@ -641,7 +641,7 @@ object IDragDrop {
         ret
     }
     @scala.inline
-    def withOnDrag(value: /* e */ js.UndefOr[Event_] => Unit): Self = {
+    def withOnDrag(value: /* e */ js.UndefOr[Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDrag")(js.Any.fromFunction1(value))
         ret
@@ -653,7 +653,7 @@ object IDragDrop {
         ret
     }
     @scala.inline
-    def withOnDragDrop(value: (/* e */ js.UndefOr[Event_], /* id */ js.UndefOr[js.Any]) => Unit): Self = {
+    def withOnDragDrop(value: (/* e */ js.UndefOr[Event], /* id */ js.UndefOr[js.Any]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDragDrop")(js.Any.fromFunction2(value))
         ret
@@ -665,7 +665,7 @@ object IDragDrop {
         ret
     }
     @scala.inline
-    def withOnDragEnter(value: (/* e */ js.UndefOr[Event_], /* id */ js.UndefOr[js.Any]) => Unit): Self = {
+    def withOnDragEnter(value: (/* e */ js.UndefOr[Event], /* id */ js.UndefOr[js.Any]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnter")(js.Any.fromFunction2(value))
         ret
@@ -677,7 +677,7 @@ object IDragDrop {
         ret
     }
     @scala.inline
-    def withOnDragOut(value: (/* e */ js.UndefOr[Event_], /* id */ js.UndefOr[js.Any]) => Unit): Self = {
+    def withOnDragOut(value: (/* e */ js.UndefOr[Event], /* id */ js.UndefOr[js.Any]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDragOut")(js.Any.fromFunction2(value))
         ret
@@ -689,7 +689,7 @@ object IDragDrop {
         ret
     }
     @scala.inline
-    def withOnDragOver(value: (/* e */ js.UndefOr[Event_], /* id */ js.UndefOr[js.Any]) => Unit): Self = {
+    def withOnDragOver(value: (/* e */ js.UndefOr[Event], /* id */ js.UndefOr[js.Any]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDragOver")(js.Any.fromFunction2(value))
         ret
@@ -701,7 +701,7 @@ object IDragDrop {
         ret
     }
     @scala.inline
-    def withOnInvalidDrop(value: /* e */ js.UndefOr[Event_] => Unit): Self = {
+    def withOnInvalidDrop(value: /* e */ js.UndefOr[Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInvalidDrop")(js.Any.fromFunction1(value))
         ret
@@ -713,7 +713,7 @@ object IDragDrop {
         ret
     }
     @scala.inline
-    def withOnMouseDown(value: /* e */ js.UndefOr[Event_] => Unit): Self = {
+    def withOnMouseDown(value: /* e */ js.UndefOr[Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(js.Any.fromFunction1(value))
         ret
@@ -725,7 +725,7 @@ object IDragDrop {
         ret
     }
     @scala.inline
-    def withOnMouseUp(value: /* e */ js.UndefOr[Event_] => Unit): Self = {
+    def withOnMouseUp(value: /* e */ js.UndefOr[Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseUp")(js.Any.fromFunction1(value))
         ret

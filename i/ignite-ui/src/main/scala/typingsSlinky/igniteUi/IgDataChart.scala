@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -706,7 +706,7 @@ object IgDataChart {
         ret
     }
     @scala.inline
-    def withAssigningCategoryMarkerStyle(value: (/* event */ Event_, /* ui */ AssigningCategoryMarkerStyleEventUIParam) => Unit): Self = {
+    def withAssigningCategoryMarkerStyle(value: (/* event */ Event, /* ui */ AssigningCategoryMarkerStyleEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("assigningCategoryMarkerStyle")(js.Any.fromFunction2(value))
         ret
@@ -718,7 +718,7 @@ object IgDataChart {
         ret
     }
     @scala.inline
-    def withAssigningCategoryStyle(value: (/* event */ Event_, /* ui */ AssigningCategoryStyleEventUIParam) => Unit): Self = {
+    def withAssigningCategoryStyle(value: (/* event */ Event, /* ui */ AssigningCategoryStyleEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("assigningCategoryStyle")(js.Any.fromFunction2(value))
         ret
@@ -766,7 +766,7 @@ object IgDataChart {
         ret
     }
     @scala.inline
-    def withAxisRangeChanged(value: (/* event */ Event_, /* ui */ AxisRangeChangedEventUIParam) => Unit): Self = {
+    def withAxisRangeChanged(value: (/* event */ Event, /* ui */ AxisRangeChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("axisRangeChanged")(js.Any.fromFunction2(value))
         ret
@@ -790,7 +790,7 @@ object IgDataChart {
         ret
     }
     @scala.inline
-    def withBrowserNotSupported(value: (/* event */ Event_, /* ui */ BrowserNotSupportedEventUIParam) => Unit): Self = {
+    def withBrowserNotSupported(value: (/* event */ Event, /* ui */ BrowserNotSupportedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("browserNotSupported")(js.Any.fromFunction2(value))
         ret
@@ -934,7 +934,7 @@ object IgDataChart {
         ret
     }
     @scala.inline
-    def withGridAreaRectChanged(value: (/* event */ Event_, /* ui */ GridAreaRectChangedEventUIParam) => Unit): Self = {
+    def withGridAreaRectChanged(value: (/* event */ Event, /* ui */ GridAreaRectChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gridAreaRectChanged")(js.Any.fromFunction2(value))
         ret
@@ -1258,7 +1258,7 @@ object IgDataChart {
         ret
     }
     @scala.inline
-    def withProgressiveLoadStatusChanged(value: (/* event */ Event_, /* ui */ ProgressiveLoadStatusChangedEventUIParam) => Unit): Self = {
+    def withProgressiveLoadStatusChanged(value: (/* event */ Event, /* ui */ ProgressiveLoadStatusChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("progressiveLoadStatusChanged")(js.Any.fromFunction2(value))
         ret
@@ -1282,7 +1282,7 @@ object IgDataChart {
         ret
     }
     @scala.inline
-    def withRefreshCompleted(value: (/* event */ Event_, /* ui */ RefreshCompletedEventUIParam) => Unit): Self = {
+    def withRefreshCompleted(value: (/* event */ Event, /* ui */ RefreshCompletedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("refreshCompleted")(js.Any.fromFunction2(value))
         ret
@@ -1342,7 +1342,7 @@ object IgDataChart {
         ret
     }
     @scala.inline
-    def withSeriesCursorMouseMove(value: (/* event */ Event_, /* ui */ SeriesCursorMouseMoveEventUIParam) => Unit): Self = {
+    def withSeriesCursorMouseMove(value: (/* event */ Event, /* ui */ SeriesCursorMouseMoveEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seriesCursorMouseMove")(js.Any.fromFunction2(value))
         ret
@@ -1354,7 +1354,7 @@ object IgDataChart {
         ret
     }
     @scala.inline
-    def withSeriesMouseEnter(value: (/* event */ Event_, /* ui */ SeriesMouseEnterEventUIParam) => Unit): Self = {
+    def withSeriesMouseEnter(value: (/* event */ Event, /* ui */ SeriesMouseEnterEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seriesMouseEnter")(js.Any.fromFunction2(value))
         ret
@@ -1366,7 +1366,7 @@ object IgDataChart {
         ret
     }
     @scala.inline
-    def withSeriesMouseLeave(value: (/* event */ Event_, /* ui */ SeriesMouseLeaveEventUIParam) => Unit): Self = {
+    def withSeriesMouseLeave(value: (/* event */ Event, /* ui */ SeriesMouseLeaveEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seriesMouseLeave")(js.Any.fromFunction2(value))
         ret
@@ -1378,7 +1378,7 @@ object IgDataChart {
         ret
     }
     @scala.inline
-    def withSeriesMouseLeftButtonDown(value: (/* event */ Event_, /* ui */ SeriesMouseLeftButtonDownEventUIParam) => Unit): Self = {
+    def withSeriesMouseLeftButtonDown(value: (/* event */ Event, /* ui */ SeriesMouseLeftButtonDownEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seriesMouseLeftButtonDown")(js.Any.fromFunction2(value))
         ret
@@ -1390,7 +1390,7 @@ object IgDataChart {
         ret
     }
     @scala.inline
-    def withSeriesMouseLeftButtonUp(value: (/* event */ Event_, /* ui */ SeriesMouseLeftButtonUpEventUIParam) => Unit): Self = {
+    def withSeriesMouseLeftButtonUp(value: (/* event */ Event, /* ui */ SeriesMouseLeftButtonUpEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seriesMouseLeftButtonUp")(js.Any.fromFunction2(value))
         ret
@@ -1402,7 +1402,7 @@ object IgDataChart {
         ret
     }
     @scala.inline
-    def withSeriesMouseMove(value: (/* event */ Event_, /* ui */ SeriesMouseMoveEventUIParam) => Unit): Self = {
+    def withSeriesMouseMove(value: (/* event */ Event, /* ui */ SeriesMouseMoveEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seriesMouseMove")(js.Any.fromFunction2(value))
         ret
@@ -1690,7 +1690,7 @@ object IgDataChart {
         ret
     }
     @scala.inline
-    def withTooltipHidden(value: (/* event */ Event_, /* ui */ TooltipHiddenEventUIParam) => Unit): Self = {
+    def withTooltipHidden(value: (/* event */ Event, /* ui */ TooltipHiddenEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipHidden")(js.Any.fromFunction2(value))
         ret
@@ -1702,7 +1702,7 @@ object IgDataChart {
         ret
     }
     @scala.inline
-    def withTooltipHiding(value: (/* event */ Event_, /* ui */ TooltipHidingEventUIParam) => Unit): Self = {
+    def withTooltipHiding(value: (/* event */ Event, /* ui */ TooltipHidingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipHiding")(js.Any.fromFunction2(value))
         ret
@@ -1714,7 +1714,7 @@ object IgDataChart {
         ret
     }
     @scala.inline
-    def withTooltipShowing(value: (/* event */ Event_, /* ui */ TooltipShowingEventUIParam) => Unit): Self = {
+    def withTooltipShowing(value: (/* event */ Event, /* ui */ TooltipShowingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipShowing")(js.Any.fromFunction2(value))
         ret
@@ -1726,7 +1726,7 @@ object IgDataChart {
         ret
     }
     @scala.inline
-    def withTooltipShown(value: (/* event */ Event_, /* ui */ TooltipShownEventUIParam) => Unit): Self = {
+    def withTooltipShown(value: (/* event */ Event, /* ui */ TooltipShownEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipShown")(js.Any.fromFunction2(value))
         ret
@@ -1762,7 +1762,7 @@ object IgDataChart {
         ret
     }
     @scala.inline
-    def withTypicalBasedOn(value: (/* event */ Event_, /* ui */ TypicalBasedOnEventUIParam) => Unit): Self = {
+    def withTypicalBasedOn(value: (/* event */ Event, /* ui */ TypicalBasedOnEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("typicalBasedOn")(js.Any.fromFunction2(value))
         ret
@@ -1846,7 +1846,7 @@ object IgDataChart {
         ret
     }
     @scala.inline
-    def withWindowRectChanged(value: (/* event */ Event_, /* ui */ WindowRectChangedEventUIParam) => Unit): Self = {
+    def withWindowRectChanged(value: (/* event */ Event, /* ui */ WindowRectChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("windowRectChanged")(js.Any.fromFunction2(value))
         ret

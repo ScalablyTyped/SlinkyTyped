@@ -1,7 +1,7 @@
 package typingsSlinky.ionicCore.headerUtilsMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonTitleElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonTitleElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

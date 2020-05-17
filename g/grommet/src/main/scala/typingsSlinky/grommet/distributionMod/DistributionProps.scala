@@ -1,6 +1,6 @@
 package typingsSlinky.grommet.distributionMod
 
-import typingsSlinky.grommet.AnonColorValue
+import typingsSlinky.grommet.anon.ColorValue
 import typingsSlinky.grommet.utilsMod.A11yTitleType
 import typingsSlinky.grommet.utilsMod.AlignSelfType
 import typingsSlinky.grommet.utilsMod.BasisType
@@ -21,12 +21,12 @@ trait DistributionProps extends js.Object {
   var gap: js.UndefOr[GapType] = js.native
   var gridArea: js.UndefOr[GridAreaType] = js.native
   var margin: js.UndefOr[MarginType] = js.native
-  var values: js.Array[AnonColorValue] = js.native
+  var values: js.Array[ColorValue] = js.native
 }
 
 object DistributionProps {
   @scala.inline
-  def apply(values: js.Array[AnonColorValue]): DistributionProps = {
+  def apply(values: js.Array[ColorValue]): DistributionProps = {
     val __obj = js.Dynamic.literal(values = values.asInstanceOf[js.Any])
     __obj.asInstanceOf[DistributionProps]
   }
@@ -37,7 +37,7 @@ object DistributionProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withValues(value: js.Array[AnonColorValue]): Self = {
+    def withValues(value: js.Array[ColorValue]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
         ret

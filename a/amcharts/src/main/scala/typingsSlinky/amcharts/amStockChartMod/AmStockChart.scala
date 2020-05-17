@@ -1,6 +1,6 @@
 package typingsSlinky.amcharts.amStockChartMod
 
-import typingsSlinky.amcharts.AnonDate
+import typingsSlinky.amcharts.anon.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -122,7 +122,7 @@ trait AmStockChart extends js.Object {
     * "rollOverStockEvent", "zoomed".
     * @param handler - The event handler.
     */
-  def addListener(`type`: String, handler: js.Function1[/* e */ AnonDate, Unit]): Unit = js.native
+  def addListener(`type`: String, handler: js.Function1[/* e */ Date, Unit]): Unit = js.native
   /**
     * Adds panel to the stock chart. Requires stockChart.validateNow() method to be called after this action.
     */
@@ -173,7 +173,7 @@ trait AmStockChart extends js.Object {
 object AmStockChart {
   @scala.inline
   def apply(
-    addListener: (String, js.Function1[/* e */ AnonDate, Unit]) => Unit,
+    addListener: (String, js.Function1[/* e */ Date, Unit]) => Unit,
     addPanel: typingsSlinky.amcharts.stockPanelMod.default => Unit,
     addPanelAt: (typingsSlinky.amcharts.stockPanelMod.default, Double) => Unit,
     animationPlayed: Boolean,
@@ -220,7 +220,7 @@ object AmStockChart {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddListener(value: (String, js.Function1[/* e */ AnonDate, Unit]) => Unit): Self = {
+    def withAddListener(value: (String, js.Function1[/* e */ Date, Unit]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addListener")(js.Any.fromFunction2(value))
         ret

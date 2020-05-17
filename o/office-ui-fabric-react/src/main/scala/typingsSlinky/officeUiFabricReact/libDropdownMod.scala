@@ -1,6 +1,7 @@
 package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.officeUiFabricReact.anon.Options
 import typingsSlinky.officeUiFabricReact.dropdownTypesMod.IDropdownProps
 import typingsSlinky.officeUiFabricReact.selectableOptionTypesMod.SelectableOptionMenuItemType
 import scala.scalajs.js
@@ -20,7 +21,7 @@ object libDropdownMod extends js.Object {
   /* static members */
   @js.native
   object DropdownBase extends js.Object {
-    var defaultProps: AnonOptions = js.native
+    var defaultProps: Options = js.native
   }
   
   @js.native

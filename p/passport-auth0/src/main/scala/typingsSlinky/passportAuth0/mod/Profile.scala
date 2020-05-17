@@ -1,6 +1,6 @@
 package typingsSlinky.passportAuth0.mod
 
-import typingsSlinky.passportAuth0.AnonMax
+import typingsSlinky.passportAuth0.anon.Max
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait Profile
   extends typingsSlinky.passport.mod.Profile {
   var _json: js.Any = js.native
   var _raw: String = js.native
-  var ageRange: js.UndefOr[AnonMax] = js.native
+  var ageRange: js.UndefOr[Max] = js.native
   var birthday: String = js.native
   var gender: js.UndefOr[String] = js.native
   var profileUrl: js.UndefOr[String] = js.native
@@ -47,7 +47,7 @@ object Profile {
         ret
     }
     @scala.inline
-    def withAgeRange(value: AnonMax): Self = {
+    def withAgeRange(value: Max): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ageRange")(value.asInstanceOf[js.Any])
         ret

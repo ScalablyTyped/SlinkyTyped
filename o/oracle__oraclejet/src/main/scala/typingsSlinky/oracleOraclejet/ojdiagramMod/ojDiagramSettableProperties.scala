@@ -1,11 +1,11 @@
 package typingsSlinky.oracleOraclejet.ojdiagramMod
 
-import typingsSlinky.oracleOraclejet.Anon5
-import typingsSlinky.oracleOraclejet.AnonAnimationDuration
-import typingsSlinky.oracleOraclejet.AnonDrop
-import typingsSlinky.oracleOraclejet.AnonHalign
-import typingsSlinky.oracleOraclejet.AnonInsertSVGElement
-import typingsSlinky.oracleOraclejet.AnonLabelClearSelection
+import typingsSlinky.oracleOraclejet.anon.AnimationDuration
+import typingsSlinky.oracleOraclejet.anon.Drop
+import typingsSlinky.oracleOraclejet.anon.Halign
+import typingsSlinky.oracleOraclejet.anon.InsertSVGElement
+import typingsSlinky.oracleOraclejet.anon.LabelClearSelection
+import typingsSlinky.oracleOraclejet.anon.`5`
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojdiagramMod.ojDiagram.RendererContext
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponentSettableProperties
@@ -39,36 +39,36 @@ trait ojDiagramSettableProperties[K1, K2, D1, D2] extends dvtBaseComponentSettab
   var animationOnDataChange: auto | none = js.native
   var animationOnDisplay: auto | none = js.native
   var as: String = js.native
-  var dnd: AnonDrop = js.native
+  var dnd: Drop = js.native
   var expanded: KeySet[K1] = js.native
-  var focusRenderer: (js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]) | Null = js.native
+  var focusRenderer: (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
   var hiddenCategories: js.Array[String] = js.native
   var highlightMatch: any | all = js.native
   var highlightedCategories: js.Array[String] = js.native
   var hoverBehavior: dim | none = js.native
-  var hoverRenderer: (js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]) | Null = js.native
+  var hoverRenderer: (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
   var linkData: (DataProvider[K2, D2]) | Null = js.native
   var linkHighlightMode: linkAndNodes | link = js.native
   var maxZoom: Double = js.native
   var minZoom: Double = js.native
   var nodeData: (DataProvider[K1, D1]) | Null = js.native
   var nodeHighlightMode: nodeAndIncomingLinks | nodeAndOutgoingLinks | nodeAndLinks | node = js.native
-  var overview: AnonHalign = js.native
+  var overview: Halign = js.native
   var panDirection: x | y | auto = js.native
   var panning: auto | none = js.native
   var promotedLinkBehavior: none | full | `lazy` = js.native
   var selection: js.Array[K1 | K2] = js.native
   var selectionMode: single | multiple | none = js.native
-  var selectionRenderer: (js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]) | Null = js.native
-  var styleDefaults: AnonAnimationDuration = js.native
-  var tooltip: Anon5[K1, K2, D1, D2] = js.native
+  var selectionRenderer: (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
+  var styleDefaults: AnimationDuration = js.native
+  var tooltip: `5`[K1, K2, D1, D2] = js.native
   var touchResponse: touchStart | auto = js.native
   @JSName("translations")
-  var translations_ojDiagramSettableProperties: AnonLabelClearSelection = js.native
-  var zoomRenderer: (js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]) | Null = js.native
+  var translations_ojDiagramSettableProperties: LabelClearSelection = js.native
+  var zoomRenderer: (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
   var zooming: auto | none = js.native
   def layout(param0: DvtDiagramLayoutContext): Unit = js.native
-  def renderer(context: RendererContext[K1, D1]): AnonInsertSVGElement = js.native
+  def renderer(context: RendererContext[K1, D1]): InsertSVGElement = js.native
 }
 
 object ojDiagramSettableProperties {
@@ -77,7 +77,7 @@ object ojDiagramSettableProperties {
     animationOnDataChange: auto | none,
     animationOnDisplay: auto | none,
     as: String,
-    dnd: AnonDrop,
+    dnd: Drop,
     expanded: KeySet[K1],
     hiddenCategories: js.Array[String],
     highlightMatch: any | all,
@@ -88,18 +88,18 @@ object ojDiagramSettableProperties {
     maxZoom: Double,
     minZoom: Double,
     nodeHighlightMode: nodeAndIncomingLinks | nodeAndOutgoingLinks | nodeAndLinks | node,
-    overview: AnonHalign,
+    overview: Halign,
     panDirection: x | y | auto,
     panning: auto | none,
     promotedLinkBehavior: none | full | `lazy`,
-    renderer: RendererContext[K1, D1] => AnonInsertSVGElement,
+    renderer: RendererContext[K1, D1] => InsertSVGElement,
     selection: js.Array[K1 | K2],
     selectionMode: single | multiple | none,
-    styleDefaults: AnonAnimationDuration,
-    tooltip: Anon5[K1, K2, D1, D2],
+    styleDefaults: AnimationDuration,
+    tooltip: `5`[K1, K2, D1, D2],
     touchResponse: touchStart | auto,
     trackResize: on | off,
-    translations: AnonLabelClearSelection,
+    translations: LabelClearSelection,
     zooming: auto | none
   ): ojDiagramSettableProperties[K1, K2, D1, D2] = {
     val __obj = js.Dynamic.literal(animationOnDataChange = animationOnDataChange.asInstanceOf[js.Any], animationOnDisplay = animationOnDisplay.asInstanceOf[js.Any], as = as.asInstanceOf[js.Any], dnd = dnd.asInstanceOf[js.Any], expanded = expanded.asInstanceOf[js.Any], hiddenCategories = hiddenCategories.asInstanceOf[js.Any], highlightMatch = highlightMatch.asInstanceOf[js.Any], highlightedCategories = highlightedCategories.asInstanceOf[js.Any], hoverBehavior = hoverBehavior.asInstanceOf[js.Any], layout = js.Any.fromFunction1(layout), linkHighlightMode = linkHighlightMode.asInstanceOf[js.Any], maxZoom = maxZoom.asInstanceOf[js.Any], minZoom = minZoom.asInstanceOf[js.Any], nodeHighlightMode = nodeHighlightMode.asInstanceOf[js.Any], overview = overview.asInstanceOf[js.Any], panDirection = panDirection.asInstanceOf[js.Any], panning = panning.asInstanceOf[js.Any], promotedLinkBehavior = promotedLinkBehavior.asInstanceOf[js.Any], renderer = js.Any.fromFunction1(renderer), selection = selection.asInstanceOf[js.Any], selectionMode = selectionMode.asInstanceOf[js.Any], styleDefaults = styleDefaults.asInstanceOf[js.Any], tooltip = tooltip.asInstanceOf[js.Any], touchResponse = touchResponse.asInstanceOf[js.Any], trackResize = trackResize.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any], zooming = zooming.asInstanceOf[js.Any])
@@ -130,7 +130,7 @@ object ojDiagramSettableProperties {
         ret
     }
     @scala.inline
-    def withDnd(value: AnonDrop): Self[K1, K2, D1, D2] = {
+    def withDnd(value: Drop): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dnd")(value.asInstanceOf[js.Any])
         ret
@@ -196,13 +196,13 @@ object ojDiagramSettableProperties {
         ret
     }
     @scala.inline
-    def withOverview(value: AnonHalign): Self[K1, K2, D1, D2] = {
+    def withOverview(value: Halign): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overview")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPanDirection(value: x | y | auto): Self[K1, K2, D1, D2] = {
+    def withPanDirection(value: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.x | y | auto): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("panDirection")(value.asInstanceOf[js.Any])
         ret
@@ -220,7 +220,7 @@ object ojDiagramSettableProperties {
         ret
     }
     @scala.inline
-    def withRenderer(value: RendererContext[K1, D1] => AnonInsertSVGElement): Self[K1, K2, D1, D2] = {
+    def withRenderer(value: RendererContext[K1, D1] => InsertSVGElement): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(js.Any.fromFunction1(value))
         ret
@@ -238,13 +238,13 @@ object ojDiagramSettableProperties {
         ret
     }
     @scala.inline
-    def withStyleDefaults(value: AnonAnimationDuration): Self[K1, K2, D1, D2] = {
+    def withStyleDefaults(value: AnimationDuration): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styleDefaults")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withTooltip(value: Anon5[K1, K2, D1, D2]): Self[K1, K2, D1, D2] = {
+    def withTooltip(value: `5`[K1, K2, D1, D2]): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
@@ -256,7 +256,7 @@ object ojDiagramSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelClearSelection): Self[K1, K2, D1, D2] = {
+    def withTranslations(value: LabelClearSelection): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret
@@ -268,7 +268,7 @@ object ojDiagramSettableProperties {
         ret
     }
     @scala.inline
-    def withFocusRenderer(value: /* context */ RendererContext[K1, D1] => AnonInsertSVGElement | Unit): Self[K1, K2, D1, D2] = {
+    def withFocusRenderer(value: /* context */ RendererContext[K1, D1] => InsertSVGElement | Unit): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("focusRenderer")(js.Any.fromFunction1(value))
         ret
@@ -280,7 +280,7 @@ object ojDiagramSettableProperties {
         ret
     }
     @scala.inline
-    def withHoverRenderer(value: /* context */ RendererContext[K1, D1] => AnonInsertSVGElement | Unit): Self[K1, K2, D1, D2] = {
+    def withHoverRenderer(value: /* context */ RendererContext[K1, D1] => InsertSVGElement | Unit): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hoverRenderer")(js.Any.fromFunction1(value))
         ret
@@ -316,7 +316,7 @@ object ojDiagramSettableProperties {
         ret
     }
     @scala.inline
-    def withSelectionRenderer(value: /* context */ RendererContext[K1, D1] => AnonInsertSVGElement | Unit): Self[K1, K2, D1, D2] = {
+    def withSelectionRenderer(value: /* context */ RendererContext[K1, D1] => InsertSVGElement | Unit): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectionRenderer")(js.Any.fromFunction1(value))
         ret
@@ -328,7 +328,7 @@ object ojDiagramSettableProperties {
         ret
     }
     @scala.inline
-    def withZoomRenderer(value: /* context */ RendererContext[K1, D1] => AnonInsertSVGElement | Unit): Self[K1, K2, D1, D2] = {
+    def withZoomRenderer(value: /* context */ RendererContext[K1, D1] => InsertSVGElement | Unit): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("zoomRenderer")(js.Any.fromFunction1(value))
         ret

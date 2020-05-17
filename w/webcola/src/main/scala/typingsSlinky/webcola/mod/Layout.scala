@@ -1,6 +1,6 @@
 package typingsSlinky.webcola.mod
 
-import typingsSlinky.webcola.AnonX
+import typingsSlinky.webcola.anon.X
 import typingsSlinky.webcola.layoutMod.Group
 import typingsSlinky.webcola.layoutMod.Link
 import typingsSlinky.webcola.layoutMod.Node
@@ -19,11 +19,11 @@ class Layout ()
 object Layout extends js.Object {
   var stopNode: js.Any = js.native
   var storeOffset: js.Any = js.native
-  def drag(d: Group, position: AnonX): Unit = js.native
-  def drag(d: Node, position: AnonX): Unit = js.native
+  def drag(d: Group, position: X): Unit = js.native
+  def drag(d: Node, position: X): Unit = js.native
   def dragEnd(d: js.Any): Unit = js.native
-  def dragOrigin(d: Group): AnonX = js.native
-  def dragOrigin(d: Node): AnonX = js.native
+  def dragOrigin(d: Group): X = js.native
+  def dragOrigin(d: Node): X = js.native
   def dragStart(d: Group): Unit = js.native
   def dragStart(d: Node): Unit = js.native
   def getSourceIndex(e: Link[Node | Double]): Double = js.native

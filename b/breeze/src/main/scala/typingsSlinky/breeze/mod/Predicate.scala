@@ -1,6 +1,5 @@
 package typingsSlinky.breeze.mod
 
-import typingsSlinky.breeze.AnonDataType
 import typingsSlinky.breeze.breeze.IRecursiveArray
 import typingsSlinky.breeze.breeze.PredicateMethod
 import scala.scalajs.js
@@ -18,9 +17,13 @@ class Predicate ()
   def this(passthru: String) = this()
   def this(predicate: typingsSlinky.breeze.breeze.Predicate) = this()
   def this(property: String, operator: String, value: js.Any) = this()
-  def this(property: String, operator: String, value: AnonDataType) = this()
+  def this(property: String, operator: String, value: typingsSlinky.breeze.anon.DataType) = this()
   def this(property: String, operator: typingsSlinky.breeze.breeze.FilterQueryOpSymbol, value: js.Any) = this()
-  def this(property: String, operator: typingsSlinky.breeze.breeze.FilterQueryOpSymbol, value: AnonDataType) = this()
+  def this(
+    property: String,
+    operator: typingsSlinky.breeze.breeze.FilterQueryOpSymbol,
+    value: typingsSlinky.breeze.anon.DataType
+  ) = this()
     // for any/all clauses
   def this(property: String, filterop: String, property2: String, filterop2: String, value: js.Any) = this()
   def this(

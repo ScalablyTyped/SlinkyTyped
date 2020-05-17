@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Electron.WebRequest")
 @js.native
-class WebRequest () extends EventEmitter {
+trait WebRequest extends EventEmitter {
   def onBeforeRedirect(): Unit = js.native
   def onBeforeRedirect(filter: OnBeforeRedirectFilter): Unit = js.native
   /**

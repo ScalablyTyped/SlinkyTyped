@@ -1,6 +1,6 @@
 package typingsSlinky.meteor.mongoMod.Mongo
 
-import typingsSlinky.meteor.AnonCaseSensitive
+import typingsSlinky.meteor.anon.CaseSensitive
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -62,7 +62,7 @@ trait FieldExpression[T] extends js.Object {
   @JSName("$size")
   var $size: js.UndefOr[Double] = js.native
   @JSName("$text")
-  var $text: js.UndefOr[AnonCaseSensitive] = js.native
+  var $text: js.UndefOr[CaseSensitive] = js.native
   @JSName("$type")
   var $type: js.UndefOr[js.Array[BsonType] | BsonType] = js.native
   @JSName("$where")
@@ -412,7 +412,7 @@ object FieldExpression {
         ret
     }
     @scala.inline
-    def with$text(value: AnonCaseSensitive): Self[T] = {
+    def with$text(value: CaseSensitive): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("$text")(value.asInstanceOf[js.Any])
         ret

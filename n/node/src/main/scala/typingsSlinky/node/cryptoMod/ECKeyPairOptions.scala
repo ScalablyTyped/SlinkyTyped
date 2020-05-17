@@ -1,7 +1,7 @@
 package typingsSlinky.node.cryptoMod
 
-import typingsSlinky.node.Anon1
-import typingsSlinky.node.AnonFormat
+import typingsSlinky.node.anon.Format
+import typingsSlinky.node.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,16 +12,16 @@ trait ECKeyPairOptions[PubF /* <: KeyFormat */, PrivF /* <: KeyFormat */] extend
     * Name of the curve to use.
     */
   var namedCurve: String = js.native
-  var privateKeyEncoding: BasePrivateKeyEncodingOptions[PrivF] with Anon1 = js.native
-  var publicKeyEncoding: AnonFormat[PubF] = js.native
+  var privateKeyEncoding: BasePrivateKeyEncodingOptions[PrivF] with `1` = js.native
+  var publicKeyEncoding: Format[PubF] = js.native
 }
 
 object ECKeyPairOptions {
   @scala.inline
   def apply[PubF, PrivF](
     namedCurve: String,
-    privateKeyEncoding: BasePrivateKeyEncodingOptions[PrivF] with Anon1,
-    publicKeyEncoding: AnonFormat[PubF]
+    privateKeyEncoding: BasePrivateKeyEncodingOptions[PrivF] with `1`,
+    publicKeyEncoding: Format[PubF]
   ): ECKeyPairOptions[PubF, PrivF] = {
     val __obj = js.Dynamic.literal(namedCurve = namedCurve.asInstanceOf[js.Any], privateKeyEncoding = privateKeyEncoding.asInstanceOf[js.Any], publicKeyEncoding = publicKeyEncoding.asInstanceOf[js.Any])
     __obj.asInstanceOf[ECKeyPairOptions[PubF, PrivF]]
@@ -39,13 +39,13 @@ object ECKeyPairOptions {
         ret
     }
     @scala.inline
-    def withPrivateKeyEncoding(value: BasePrivateKeyEncodingOptions[PrivF] with Anon1): Self[PubF, PrivF] = {
+    def withPrivateKeyEncoding(value: BasePrivateKeyEncodingOptions[PrivF] with `1`): Self[PubF, PrivF] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("privateKeyEncoding")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPublicKeyEncoding(value: AnonFormat[PubF]): Self[PubF, PrivF] = {
+    def withPublicKeyEncoding(value: Format[PubF]): Self[PubF, PrivF] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("publicKeyEncoding")(value.asInstanceOf[js.Any])
         ret

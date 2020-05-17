@@ -1,6 +1,6 @@
 package typingsSlinky.googlemaps.google.maps
 
-import typingsSlinky.googlemaps.google.maps.places._LocationBias
+import typingsSlinky.googlemaps.google.maps.places.LocationBias
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
   * @see {@link https://developers.google.com/maps/documentation/javascript/reference/coordinates#LatLngLiteral Maps JavaScript API}
   */
 @js.native
-trait LatLngLiteral extends _LocationBias {
+trait LatLngLiteral extends LocationBias {
   /**
     * Latitude in degrees. Values will be clamped to the range [-90, 90]. This
     * means that if the value specified is less than -90, it will be set to

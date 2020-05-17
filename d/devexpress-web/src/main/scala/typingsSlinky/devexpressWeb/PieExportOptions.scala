@@ -7,13 +7,34 @@ import scala.scalajs.js.annotation._
 /**
   * Contains settings that specify parameters affecting how the Pie dashboard item is exported.
   */
-@JSGlobal("PieExportOptions")
 @js.native
-class PieExportOptions () extends js.Object {
+trait PieExportOptions extends js.Object {
   /** @deprecated The PieExportOptions.AutoArrangeContent property is obsolete now. Use the DashboardPdfExportOptions.PieAutoArrangeContent property instead. To learn more, see the following KB article: https://www.devexpress.com/Support/Center/Question/Details/T488764 */
   /**
     * Gets or sets whether dashboard item elements are arranged automatically on the exported page.
     */
   var AutoArrangeContent: Boolean = js.native
+}
+
+object PieExportOptions {
+  @scala.inline
+  def apply(AutoArrangeContent: Boolean): PieExportOptions = {
+    val __obj = js.Dynamic.literal(AutoArrangeContent = AutoArrangeContent.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PieExportOptions]
+  }
+  @scala.inline
+  implicit class PieExportOptionsOps[Self <: PieExportOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoArrangeContent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoArrangeContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

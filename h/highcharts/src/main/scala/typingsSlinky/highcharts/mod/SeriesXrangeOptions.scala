@@ -113,18 +113,6 @@ object SeriesXrangeOptions {
         ret
     }
     @scala.inline
-    def withCrisp(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crisp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrisp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crisp")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withData(value: js.Array[SeriesXrangeDataOptions]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
@@ -134,42 +122,6 @@ object SeriesXrangeOptions {
     def withoutData: Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDepth(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDepth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeColor(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeWidth(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeWidth")(js.undefined)
         ret
     }
     @scala.inline

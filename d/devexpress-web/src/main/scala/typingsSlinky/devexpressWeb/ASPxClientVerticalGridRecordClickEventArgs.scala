@@ -7,15 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientVerticalGrid.RecordClick event.
   */
-@JSGlobal("ASPxClientVerticalGridRecordClickEventArgs")
 @js.native
-class ASPxClientVerticalGridRecordClickEventArgs protected () extends ASPxClientCancelEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientVerticalGridRecordClickEventArgs class.
-    * @param visibleIndex A zero-based integer index that identifies the clicked record.
-    * @param htmlEvent An object that contains parameters associated with the event. This value is assigned to the ASPxClientVerticalGridRecordClickEventArgs.htmlEvent property.
-    */
-  def this(visibleIndex: Double, htmlEvent: js.Any) = this()
+trait ASPxClientVerticalGridRecordClickEventArgs extends ASPxClientCancelEventArgs {
   /**
     * Provides access to the parameters associated with the ASPxClientVerticalGrid.RecordClick event.
     */
@@ -24,5 +17,33 @@ class ASPxClientVerticalGridRecordClickEventArgs protected () extends ASPxClient
     * Gets the processed record's visible index.
     */
   var visibleIndex: Double = js.native
+}
+
+object ASPxClientVerticalGridRecordClickEventArgs {
+  @scala.inline
+  def apply(cancel: Boolean, htmlEvent: js.Any, visibleIndex: Double): ASPxClientVerticalGridRecordClickEventArgs = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], htmlEvent = htmlEvent.asInstanceOf[js.Any], visibleIndex = visibleIndex.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientVerticalGridRecordClickEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientVerticalGridRecordClickEventArgsOps[Self <: ASPxClientVerticalGridRecordClickEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHtmlEvent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVisibleIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

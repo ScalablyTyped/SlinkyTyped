@@ -1,13 +1,13 @@
 package typingsSlinky.anydbSql.mod
 
-import typingsSlinky.anydbSql.AnonRTRIM
+import typingsSlinky.anydbSql.anon.RTRIM
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait AnydbSql extends DatabaseConnection {
-  var functions: AnonRTRIM = js.native
+  var functions: RTRIM = js.native
   var models: Dictionary[Table[_]] = js.native
   def allOf(tables: Table[_]*): js.Any = js.native
   def begin(): Transaction = js.native

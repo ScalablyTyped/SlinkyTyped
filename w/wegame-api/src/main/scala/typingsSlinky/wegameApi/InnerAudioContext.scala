@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * InnerAudioContext 实例，可通过 wx.createInnerAudioContext 接口获取实例。
   */
-@JSGlobal("InnerAudioContext")
 @js.native
-class InnerAudioContext () extends js.Object {
+trait InnerAudioContext extends js.Object {
   /**
     * 是否自动播放
     */
@@ -147,5 +146,260 @@ class InnerAudioContext () extends js.Object {
     * 停止。停止后的音频再播放会从头开始播放。
     */
   def stop(): Unit = js.native
+}
+
+object InnerAudioContext {
+  @scala.inline
+  def apply(
+    autoplay: Boolean,
+    buffered: Double,
+    currentTime: Double,
+    destroy: () => Unit,
+    duration: Double,
+    loop: Boolean,
+    obeyMuteSwitch: Boolean,
+    offCanplay: js.Function0[Unit] => Unit,
+    offEnded: js.Function0[Unit] => Unit,
+    offError: js.Function0[Unit] => Unit,
+    offPause: js.Function0[Unit] => Unit,
+    offPlay: js.Function0[Unit] => Unit,
+    offSeeked: js.Function0[Unit] => Unit,
+    offSeeking: js.Function0[Unit] => Unit,
+    offStop: js.Function0[Unit] => Unit,
+    offTimeUpdate: js.Function0[Unit] => Unit,
+    offWaiting: js.Function0[Unit] => Unit,
+    onCanplay: js.Function0[Unit] => Unit,
+    onEnded: js.Function0[Unit] => Unit,
+    onError: js.Function0[Unit] => Unit,
+    onPause: js.Function0[Unit] => Unit,
+    onPlay: js.Function0[Unit] => Unit,
+    onSeeked: js.Function0[Unit] => Unit,
+    onSeeking: js.Function0[Unit] => Unit,
+    onStop: js.Function0[Unit] => Unit,
+    onTimeUpdate: js.Function0[Unit] => Unit,
+    onWaiting: js.Function0[Unit] => Unit,
+    pause: () => Unit,
+    paused: Boolean,
+    play: () => Unit,
+    seek: Double => Unit,
+    src: String,
+    stop: () => Unit,
+    volume: Double
+  ): InnerAudioContext = {
+    val __obj = js.Dynamic.literal(autoplay = autoplay.asInstanceOf[js.Any], buffered = buffered.asInstanceOf[js.Any], currentTime = currentTime.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), duration = duration.asInstanceOf[js.Any], loop = loop.asInstanceOf[js.Any], obeyMuteSwitch = obeyMuteSwitch.asInstanceOf[js.Any], offCanplay = js.Any.fromFunction1(offCanplay), offEnded = js.Any.fromFunction1(offEnded), offError = js.Any.fromFunction1(offError), offPause = js.Any.fromFunction1(offPause), offPlay = js.Any.fromFunction1(offPlay), offSeeked = js.Any.fromFunction1(offSeeked), offSeeking = js.Any.fromFunction1(offSeeking), offStop = js.Any.fromFunction1(offStop), offTimeUpdate = js.Any.fromFunction1(offTimeUpdate), offWaiting = js.Any.fromFunction1(offWaiting), onCanplay = js.Any.fromFunction1(onCanplay), onEnded = js.Any.fromFunction1(onEnded), onError = js.Any.fromFunction1(onError), onPause = js.Any.fromFunction1(onPause), onPlay = js.Any.fromFunction1(onPlay), onSeeked = js.Any.fromFunction1(onSeeked), onSeeking = js.Any.fromFunction1(onSeeking), onStop = js.Any.fromFunction1(onStop), onTimeUpdate = js.Any.fromFunction1(onTimeUpdate), onWaiting = js.Any.fromFunction1(onWaiting), pause = js.Any.fromFunction0(pause), paused = paused.asInstanceOf[js.Any], play = js.Any.fromFunction0(play), seek = js.Any.fromFunction1(seek), src = src.asInstanceOf[js.Any], stop = js.Any.fromFunction0(stop), volume = volume.asInstanceOf[js.Any])
+    __obj.asInstanceOf[InnerAudioContext]
+  }
+  @scala.inline
+  implicit class InnerAudioContextOps[Self <: InnerAudioContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoplay(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoplay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBuffered(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buffered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestroy(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoop(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withObeyMuteSwitch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("obeyMuteSwitch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOffCanplay(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offCanplay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOffEnded(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offEnded")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOffError(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offError")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOffPause(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offPause")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOffPlay(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offPlay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOffSeeked(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offSeeked")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOffSeeking(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offSeeking")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOffStop(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offStop")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOffTimeUpdate(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offTimeUpdate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOffWaiting(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offWaiting")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnCanplay(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCanplay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnEnded(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnded")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnError(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnPause(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnPlay(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnSeeked(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeked")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnSeeking(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeking")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnStop(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onStop")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnTimeUpdate(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTimeUpdate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnWaiting(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onWaiting")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPause(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pause")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPaused(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlay(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("play")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSeek(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seek")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSrc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStop(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withVolume(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

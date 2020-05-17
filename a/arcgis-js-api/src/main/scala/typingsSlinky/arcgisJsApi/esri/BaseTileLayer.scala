@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`base-tile`
@@ -92,8 +91,4 @@ trait BaseTileLayer
     */
   def getTileUrl(level: Double, row: Double, col: Double): String = js.native
 }
-
-@JSGlobal("__esri.BaseTileLayer")
-@js.native
-object BaseTileLayer extends TopLevel[BaseTileLayerConstructor]
 

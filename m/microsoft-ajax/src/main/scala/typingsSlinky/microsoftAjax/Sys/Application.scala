@@ -1,7 +1,6 @@
 package typingsSlinky.microsoftAjax.Sys
 
 import org.scalablytyped.runtime.Instantiable0
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
@@ -121,8 +120,4 @@ Instantiable0[Unit] {
     */
   def unregisterDisposableObject(`object`: js.Any): Unit = js.native
 }
-
-@JSGlobal("Sys.Application")
-@js.native
-object Application extends TopLevel[Application]
 

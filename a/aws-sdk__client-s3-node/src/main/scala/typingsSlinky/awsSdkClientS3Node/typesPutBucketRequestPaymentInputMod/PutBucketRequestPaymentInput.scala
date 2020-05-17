@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientS3Node.typesPutBucketRequestPaymentInputMod
 
-import typingsSlinky.awsSdkClientS3Node.inputTypesUnionMod._InputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientS3Node.typesRequestPaymentConfigurationMod.RequestPaymentConfiguration
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.httpMod.NodeHttpOptions
@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PutBucketRequestPaymentInput extends _InputTypesUnion {
+trait PutBucketRequestPaymentInput extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *

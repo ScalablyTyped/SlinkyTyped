@@ -1,6 +1,6 @@
 package typingsSlinky.stylus.mod.Stylus.Nodes
 
-import typingsSlinky.stylus.AnonColumn
+import typingsSlinky.stylus.anon.Column
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,7 +41,7 @@ trait Node extends js.Object {
   /**
     * Return a JSON representation of this node.
     */
-  def toJSON(): AnonColumn = js.native
+  def toJSON(): Column = js.native
 }
 
 object Node {
@@ -59,7 +59,7 @@ object Node {
     shouldCoerce: java.lang.String => scala.Boolean,
     toBoolean: () => Boolean,
     toExpression: () => Expression,
-    toJSON: () => AnonColumn
+    toJSON: () => Column
   ): Node = {
     val __obj = js.Dynamic.literal(coerce = js.Any.fromFunction1(coerce), column = column.asInstanceOf[js.Any], eval = js.Any.fromFunction0(eval), filename = filename.asInstanceOf[js.Any], first = first.asInstanceOf[js.Any], hash = hash.asInstanceOf[js.Any], lineno = lineno.asInstanceOf[js.Any], nodeName = nodeName.asInstanceOf[js.Any], operate = js.Any.fromFunction2(operate), shouldCoerce = js.Any.fromFunction1(shouldCoerce), toBoolean = js.Any.fromFunction0(toBoolean), toExpression = js.Any.fromFunction0(toExpression), toJSON = js.Any.fromFunction0(toJSON))
     __obj.asInstanceOf[Node]
@@ -143,7 +143,7 @@ object Node {
         ret
     }
     @scala.inline
-    def withToJSON(value: () => AnonColumn): Self = {
+    def withToJSON(value: () => Column): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
         ret

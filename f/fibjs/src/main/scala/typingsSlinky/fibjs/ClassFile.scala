@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Class_File")
 @js.native
-class ClassFile () extends ClassSeekableStream {
+trait ClassFile extends ClassSeekableStream {
   /**
   	 * class prop 
   	 *

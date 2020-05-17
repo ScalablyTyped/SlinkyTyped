@@ -1,6 +1,6 @@
 package typingsSlinky.mqttPacket.mod
 
-import typingsSlinky.mqttPacket.AnonCorrelationData
+import typingsSlinky.mqttPacket.anon.CorrelationData
 import typingsSlinky.mqttPacket.mqttPacketStrings.publish
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
@@ -15,7 +15,7 @@ trait IPublishPacket
   var cmd_IPublishPacket: publish = js.native
   var dup: Boolean = js.native
   var payload: String | Buffer = js.native
-  var properties: js.UndefOr[AnonCorrelationData] = js.native
+  var properties: js.UndefOr[CorrelationData] = js.native
   var qos: QoS = js.native
   var retain: Boolean = js.native
   var topic: String = js.native
@@ -70,7 +70,7 @@ object IPublishPacket {
         ret
     }
     @scala.inline
-    def withProperties(value: AnonCorrelationData): Self = {
+    def withProperties(value: CorrelationData): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
         ret

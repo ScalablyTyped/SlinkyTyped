@@ -12,14 +12,8 @@ trait NormalizationArgument extends js.Object
 
 object NormalizationArgument {
   @scala.inline
-  def NormalizationLiteral(kind: String, name: String): NormalizationArgument = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NormalizationArgument]
-  }
+  implicit def apply(value: NormalizationLiteral): NormalizationArgument = value.asInstanceOf[NormalizationArgument]
   @scala.inline
-  def NormalizationVariable(kind: String, name: String, variableName: String): NormalizationArgument = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], variableName = variableName.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NormalizationArgument]
-  }
+  implicit def apply(value: NormalizationVariable): NormalizationArgument = value.asInstanceOf[NormalizationArgument]
 }
 

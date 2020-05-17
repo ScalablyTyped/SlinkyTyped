@@ -1,15 +1,15 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonEventItemData
-import typingsSlinky.devextreme.AnonRemovedItems
+import typingsSlinky.devextreme.anon.EventItemData
+import typingsSlinky.devextreme.anon.RemovedItems
 import typingsSlinky.devextreme.devextremeStrings.contained
 import typingsSlinky.devextreme.devextremeStrings.multiple
 import typingsSlinky.devextreme.devextremeStrings.outlined
 import typingsSlinky.devextreme.devextremeStrings.single_
 import typingsSlinky.devextreme.devextremeStrings.text
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,9 +28,9 @@ trait dxButtonGroupOptions extends WidgetOptions[dxButtonGroup] {
   /** Specifies which data field provides keys used to distinguish between the selected buttons. */
   var keyExpr: js.UndefOr[String | js.Function] = js.native
   /** A function that is executed when a button is clicked or tapped. */
-  var onItemClick: js.UndefOr[js.Function1[/* e */ AnonEventItemData, _]] = js.native
+  var onItemClick: js.UndefOr[js.Function1[/* e */ EventItemData, _]] = js.native
   /** A function that is executed when a button is selected or selection is canceled. */
-  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonRemovedItems, _]] = js.native
+  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ RemovedItems, _]] = js.native
   /** Contains the keys of the selected buttons and allows selecting buttons initially. */
   var selectedItemKeys: js.UndefOr[js.Array[_]] = js.native
   /** Contains the data objects that correspond to the selected buttons. The data objects are taken from the items array. */
@@ -122,7 +122,7 @@ object dxButtonGroupOptions {
         ret
     }
     @scala.inline
-    def withOnItemClick(value: /* e */ AnonEventItemData => _): Self = {
+    def withOnItemClick(value: /* e */ EventItemData => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction1(value))
         ret
@@ -134,7 +134,7 @@ object dxButtonGroupOptions {
         ret
     }
     @scala.inline
-    def withOnSelectionChanged(value: /* e */ AnonRemovedItems => _): Self = {
+    def withOnSelectionChanged(value: /* e */ RemovedItems => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.Any.fromFunction1(value))
         ret

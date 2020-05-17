@@ -1,13 +1,13 @@
 package typingsSlinky.crumb.mod.hapiAugmentingMod
 
-import typingsSlinky.crumb.AnonKey
+import typingsSlinky.crumb.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait PluginSpecificConfiguration extends js.Object {
-  var crumb: js.UndefOr[Boolean | AnonKey] = js.native
+  var crumb: js.UndefOr[Boolean | Key] = js.native
 }
 
 object PluginSpecificConfiguration {
@@ -23,7 +23,7 @@ object PluginSpecificConfiguration {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCrumb(value: Boolean | AnonKey): Self = {
+    def withCrumb(value: Boolean | Key): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("crumb")(value.asInstanceOf[js.Any])
         ret

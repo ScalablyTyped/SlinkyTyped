@@ -1,6 +1,6 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonAdCode
+import typingsSlinky.aliApp.anon.AdCode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait ChooseCityOptions
   var showLocatedCity: Boolean = js.native
   			// 自定义热门城市列表，列表内对象字段见下表
   @JSName("success")
-  def success_MChooseCityOptions(result: AnonAdCode): Unit = js.native
+  def success_MChooseCityOptions(result: AdCode): Unit = js.native
 }
 
 object ChooseCityOptions {
@@ -27,7 +27,7 @@ object ChooseCityOptions {
     hotCities: js.Array[City],
     showHotCities: Boolean,
     showLocatedCity: Boolean,
-    success: AnonAdCode => Unit
+    success: AdCode => Unit
   ): ChooseCityOptions = {
     val __obj = js.Dynamic.literal(cities = cities.asInstanceOf[js.Any], hotCities = hotCities.asInstanceOf[js.Any], showHotCities = showHotCities.asInstanceOf[js.Any], showLocatedCity = showLocatedCity.asInstanceOf[js.Any], success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[ChooseCityOptions]
@@ -63,7 +63,7 @@ object ChooseCityOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: AnonAdCode => Unit): Self = {
+    def withSuccess(value: AdCode => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLDivElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -72,7 +71,83 @@ trait DOMContainer extends js.Object {
   val width: Double = js.native
 }
 
-@JSGlobal("__esri.DOMContainer")
-@js.native
-object DOMContainer extends TopLevel[DOMContainerConstructor]
+object DOMContainer {
+  @scala.inline
+  def apply(
+    container: HTMLDivElement,
+    focused: Boolean,
+    height: Double,
+    popup: Popup,
+    resizing: Boolean,
+    size: js.Array[Double],
+    suspended: Boolean,
+    ui: DefaultUI,
+    width: Double
+  ): DOMContainer = {
+    val __obj = js.Dynamic.literal(container = container.asInstanceOf[js.Any], focused = focused.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], popup = popup.asInstanceOf[js.Any], resizing = resizing.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], suspended = suspended.asInstanceOf[js.Any], ui = ui.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DOMContainer]
+  }
+  @scala.inline
+  implicit class DOMContainerOps[Self <: DOMContainer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainer(value: HTMLDivElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFocused(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focused")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPopup(value: Popup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResizing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resizing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSize(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuspended(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suspended")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUi(value: DefaultUI): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ui")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

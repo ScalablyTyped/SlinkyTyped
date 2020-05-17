@@ -1,6 +1,6 @@
 package typingsSlinky.usePosition.mod
 
-import typingsSlinky.usePosition.AnonAccuracy
+import typingsSlinky.usePosition.anon.Accuracy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("use-position", "usePosition")
 @js.native
 object usePosition extends js.Object {
-  def apply(watch: Boolean): AnonAccuracy = js.native
-  def apply(watch: Boolean, settings: PositionOptions): AnonAccuracy = js.native
+  def apply(watch: Boolean): Accuracy = js.native
+  def apply(watch: Boolean, settings: PositionOptions): Accuracy = js.native
 }
 

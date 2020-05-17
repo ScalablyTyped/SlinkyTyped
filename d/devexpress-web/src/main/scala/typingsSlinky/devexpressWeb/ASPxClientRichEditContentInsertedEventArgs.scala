@@ -7,15 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientRichEdit.ContentInserted event.
   */
-@JSGlobal("ASPxClientRichEditContentInsertedEventArgs")
 @js.native
-class ASPxClientRichEditContentInsertedEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientRichEditContentInsertedEventArgs object. For internal use only.
-    * @param subDocumentId An identifier of a sub-document that contains the inserted content.
-    * @param interval An interval object that relates to the inserted content.
-    */
-  def this(subDocumentId: Double, interval: Interval) = this()
+trait ASPxClientRichEditContentInsertedEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the text buffer interval related to the inserted content.
     */
@@ -24,5 +17,33 @@ class ASPxClientRichEditContentInsertedEventArgs protected () extends ASPxClient
     * Gets the active sub-document's identifier.
     */
   var subDocumentId: Double = js.native
+}
+
+object ASPxClientRichEditContentInsertedEventArgs {
+  @scala.inline
+  def apply(interval: Interval, subDocumentId: Double): ASPxClientRichEditContentInsertedEventArgs = {
+    val __obj = js.Dynamic.literal(interval = interval.asInstanceOf[js.Any], subDocumentId = subDocumentId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientRichEditContentInsertedEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientRichEditContentInsertedEventArgsOps[Self <: ASPxClientRichEditContentInsertedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInterval(value: Interval): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubDocumentId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subDocumentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

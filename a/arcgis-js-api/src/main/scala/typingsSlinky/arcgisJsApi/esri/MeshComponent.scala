@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.flat
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.smooth
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.source
@@ -36,8 +35,4 @@ trait MeshComponent extends Accessor {
     */
   var shading: source | flat | smooth = js.native
 }
-
-@JSGlobal("__esri.MeshComponent")
-@js.native
-object MeshComponent extends TopLevel[MeshComponentConstructor]
 

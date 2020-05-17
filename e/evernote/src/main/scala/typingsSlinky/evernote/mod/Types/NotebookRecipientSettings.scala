@@ -1,6 +1,6 @@
 package typingsSlinky.evernote.mod.Types
 
-import typingsSlinky.evernote.AnonInMyList
+import typingsSlinky.evernote.anon.InMyList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("evernote", "Types.NotebookRecipientSettings")
 @js.native
 class NotebookRecipientSettings () extends js.Object {
-  def this(args: AnonInMyList) = this()
+  def this(args: InMyList) = this()
   var inMyList: js.UndefOr[Boolean] = js.native
   var reminderNotifyEmail: js.UndefOr[Boolean] = js.native
   var reminderNotifyInApp: js.UndefOr[Boolean] = js.native

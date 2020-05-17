@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientMl.gapi.client.ml
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientMl.AnonAccesstoken
-import typingsSlinky.gapiClientMl.AnonFilter
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientMl.anon.Accesstoken
+import typingsSlinky.gapiClientMl.anon.Filter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,20 +21,20 @@ trait OperationsResource extends js.Object {
     * an Operation.error value with a google.rpc.Status.code of 1,
     * corresponding to `Code.CANCELLED`.
     */
-  def cancel(request: AnonAccesstoken): Request_[js.Object] = js.native
+  def cancel(request: Accesstoken): Request[js.Object] = js.native
   /**
     * Deletes a long-running operation. This method indicates that the client is
     * no longer interested in the operation result. It does not cancel the
     * operation. If the server doesn't support this method, it returns
     * `google.rpc.Code.UNIMPLEMENTED`.
     */
-  def delete(request: AnonAccesstoken): Request_[js.Object] = js.native
+  def delete(request: Accesstoken): Request[js.Object] = js.native
   /**
     * Gets the latest state of a long-running operation.  Clients can use this
     * method to poll the operation result at intervals as recommended by the API
     * service.
     */
-  def get(request: AnonAccesstoken): Request_[GoogleLongrunningOperation] = js.native
+  def get(request: Accesstoken): Request[GoogleLongrunningOperation] = js.native
   /**
     * Lists operations that match the specified filter in the request. If the
     * server doesn't support this method, it returns `UNIMPLEMENTED`.
@@ -47,16 +47,16 @@ trait OperationsResource extends js.Object {
     * collection id, however overriding users must ensure the name binding
     * is the parent resource, without the operations collection id.
     */
-  def list(request: AnonFilter): Request_[GoogleLongrunningListOperationsResponse] = js.native
+  def list(request: Filter): Request[GoogleLongrunningListOperationsResponse] = js.native
 }
 
 object OperationsResource {
   @scala.inline
   def apply(
-    cancel: AnonAccesstoken => Request_[js.Object],
-    delete: AnonAccesstoken => Request_[js.Object],
-    get: AnonAccesstoken => Request_[GoogleLongrunningOperation],
-    list: AnonFilter => Request_[GoogleLongrunningListOperationsResponse]
+    cancel: Accesstoken => Request[js.Object],
+    delete: Accesstoken => Request[js.Object],
+    get: Accesstoken => Request[GoogleLongrunningOperation],
+    list: Filter => Request[GoogleLongrunningListOperationsResponse]
   ): OperationsResource = {
     val __obj = js.Dynamic.literal(cancel = js.Any.fromFunction1(cancel), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[OperationsResource]
@@ -68,25 +68,25 @@ object OperationsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCancel(value: AnonAccesstoken => Request_[js.Object]): Self = {
+    def withCancel(value: Accesstoken => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonAccesstoken => Request_[js.Object]): Self = {
+    def withDelete(value: Accesstoken => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonAccesstoken => Request_[GoogleLongrunningOperation]): Self = {
+    def withGet(value: Accesstoken => Request[GoogleLongrunningOperation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonFilter => Request_[GoogleLongrunningListOperationsResponse]): Self = {
+    def withList(value: Filter => Request[GoogleLongrunningListOperationsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

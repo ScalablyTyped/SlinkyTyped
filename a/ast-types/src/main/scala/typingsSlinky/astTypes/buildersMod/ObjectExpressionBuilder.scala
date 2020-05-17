@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonProperties
+import typingsSlinky.astTypes.anon.Properties
 import typingsSlinky.astTypes.kindsMod.ObjectMethodKind
 import typingsSlinky.astTypes.kindsMod.ObjectPropertyKind
 import typingsSlinky.astTypes.kindsMod.PropertyKind
@@ -18,6 +18,6 @@ trait ObjectExpressionBuilder extends js.Object {
       PropertyKind | ObjectMethodKind | ObjectPropertyKind | SpreadPropertyKind | SpreadElementKind
     ]
   ): ObjectExpression = js.native
-  def from(params: AnonProperties): ObjectExpression = js.native
+  def from(params: Properties): ObjectExpression = js.native
 }
 

@@ -4,8 +4,8 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable3
-import typingsSlinky.stylus.TypeofHSLA
-import typingsSlinky.stylus.TypeofRGBA
+import typingsSlinky.stylus.anon.TypeofHSLA
+import typingsSlinky.stylus.anon.TypeofRGBA
 import typingsSlinky.stylus.mod.Stylus.Nodes.Arguments
 import typingsSlinky.stylus.mod.Stylus.Nodes.Atblock
 import typingsSlinky.stylus.mod.Stylus.Nodes.Atrule

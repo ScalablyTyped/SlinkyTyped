@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait JoinAggregateTransform extends _Transforms {
+trait JoinAggregateTransform extends Transforms {
   var as: js.UndefOr[(js.Array[String | SignalRef | Null]) | SignalRef] = js.native
   var fields: js.UndefOr[(js.Array[FieldRef | Null]) | SignalRef] = js.native
   var groupby: js.UndefOr[js.Array[FieldRef] | SignalRef] = js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabCoreutils.nbformatMod.nbformat
 
-import typingsSlinky.jupyterlabCoreutils.PartialIRawCellMetadata
+import typingsSlinky.jupyterlabCoreutils.anon.PartialIRawCellMetadata
 import typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.raw
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IRawCell
   extends IBaseCell
-     with _ICell {
+     with ICell {
   /**
     * Cell attachments.
     */

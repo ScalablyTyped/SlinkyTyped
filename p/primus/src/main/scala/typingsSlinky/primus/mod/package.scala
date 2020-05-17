@@ -8,7 +8,7 @@ package object mod {
   type AuthorizationHandler = js.Function2[
     /* req */ typingsSlinky.node.httpMod.IncomingMessage, 
     /* done */ js.Function1[
-      /* err */ js.UndefOr[java.lang.String | js.Error | typingsSlinky.primus.AnonAuthenticate], 
+      /* err */ js.UndefOr[java.lang.String | js.Error | typingsSlinky.primus.anon.Authenticate], 
       scala.Unit
     ], 
     scala.Unit

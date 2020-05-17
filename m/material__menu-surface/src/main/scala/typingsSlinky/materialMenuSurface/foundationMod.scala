@@ -4,6 +4,11 @@ import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.materialBase.foundationMod.MDCFoundation
 import typingsSlinky.materialMenuSurface.adapterMod.MDCMenuSurfaceAdapter
+import typingsSlinky.materialMenuSurface.anon.ANCHOR
+import typingsSlinky.materialMenuSurface.anon.ANCHORTOMENUSURFACEWIDTHRATIO
+import typingsSlinky.materialMenuSurface.anon.CLOSEDEVENT
+import typingsSlinky.materialMenuSurface.anon.PartialMDCMenuDistance
+import typingsSlinky.materialMenuSurface.anon.PartialMDCMenuSurfaceAdap
 import typingsSlinky.materialMenuSurface.constantsMod.Corner
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -55,26 +60,26 @@ object foundationMod extends js.Object {
   @js.native
   object MDCMenuSurfaceFoundation extends js.Object {
     val Corner: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Corner */ js.Any = js.native
-    val cssClasses: AnonANCHOR = js.native
+    val cssClasses: ANCHOR = js.native
     /**
       * @see {@link MDCMenuSurfaceAdapter} for typing information on parameters and return types.
       */
     val defaultAdapter: MDCMenuSurfaceAdapter = js.native
-    val numbers: AnonANCHORTOMENUSURFACEWIDTHRATIO = js.native
-    val strings: AnonCLOSEDEVENT = js.native
+    val numbers: ANCHORTOMENUSURFACEWIDTHRATIO = js.native
+    val strings: CLOSEDEVENT = js.native
   }
   
   /* static members */
   @js.native
   object default extends js.Object {
     val Corner: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Corner */ js.Any = js.native
-    val cssClasses: AnonANCHOR = js.native
+    val cssClasses: ANCHOR = js.native
     /**
       * @see {@link MDCMenuSurfaceAdapter} for typing information on parameters and return types.
       */
     val defaultAdapter: MDCMenuSurfaceAdapter = js.native
-    val numbers: AnonANCHORTOMENUSURFACEWIDTHRATIO = js.native
-    val strings: AnonCLOSEDEVENT = js.native
+    val numbers: ANCHORTOMENUSURFACEWIDTHRATIO = js.native
+    val strings: CLOSEDEVENT = js.native
   }
   
 }

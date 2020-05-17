@@ -1,6 +1,6 @@
 package typingsSlinky.fhirJsClient.FHIR.SMART
 
-import typingsSlinky.fhirJsClient.AnonDictpropName
+import typingsSlinky.fhirJsClient.anon.DictpropName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait CommonQueryFilters extends js.Object {
   /**
     * Addition filters to be applied on the history query. The object will be converted into query string parameters.
     */
-  var params: js.UndefOr[AnonDictpropName] = js.native
+  var params: js.UndefOr[DictpropName] = js.native
   /**
     * Only include resource versions that were created at or after the given instant in time
     *
@@ -51,7 +51,7 @@ object CommonQueryFilters {
         ret
     }
     @scala.inline
-    def withParams(value: AnonDictpropName): Self = {
+    def withParams(value: DictpropName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
         ret

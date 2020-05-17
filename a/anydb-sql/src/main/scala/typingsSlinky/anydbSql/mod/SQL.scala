@@ -1,18 +1,18 @@
 package typingsSlinky.anydbSql.mod
 
-import typingsSlinky.anydbSql.AnonLOWER
+import typingsSlinky.anydbSql.anon.LOWER
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SQL extends js.Object {
-  var functions: AnonLOWER = js.native
+  var functions: LOWER = js.native
 }
 
 object SQL {
   @scala.inline
-  def apply(functions: AnonLOWER): SQL = {
+  def apply(functions: LOWER): SQL = {
     val __obj = js.Dynamic.literal(functions = functions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SQL]
   }
@@ -23,7 +23,7 @@ object SQL {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFunctions(value: AnonLOWER): Self = {
+    def withFunctions(value: LOWER): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("functions")(value.asInstanceOf[js.Any])
         ret

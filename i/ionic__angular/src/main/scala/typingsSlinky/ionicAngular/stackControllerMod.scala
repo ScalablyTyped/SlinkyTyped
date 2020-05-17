@@ -8,7 +8,7 @@ import typingsSlinky.angularRouter.mod.Router
 import typingsSlinky.ionicAngular.navControllerMod.NavController
 import typingsSlinky.ionicAngular.stackUtilsMod.RouteView
 import typingsSlinky.ionicAngular.stackUtilsMod.StackEvent
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonRouterOutletElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonRouterOutletElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,15 +19,7 @@ object stackControllerMod extends js.Object {
   @js.native
   class StackController protected () extends js.Object {
     def this(
-      tabsPrefix: js.UndefOr[scala.Nothing],
-      containerEl: HTMLIonRouterOutletElement,
-      router: Router,
-      navCtrl: NavController,
-      zone: NgZone,
-      location: Location
-    ) = this()
-    def this(
-      tabsPrefix: String,
+      tabsPrefix: js.UndefOr[String],
       containerEl: HTMLIonRouterOutletElement,
       router: Router,
       navCtrl: NavController,

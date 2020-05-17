@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TreeTransform extends _Transforms {
+trait TreeTransform extends Transforms {
   var as: js.UndefOr[(Vector4[String | SignalRef]) | SignalRef] = js.native
   var field: js.UndefOr[FieldRef] = js.native
   var method: js.UndefOr[TreeMethod | SignalRef] = js.native

@@ -2,7 +2,7 @@ package typingsSlinky.cesium.mod
 
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
-import typingsSlinky.cesium.AnonBuffer
+import typingsSlinky.cesium.anon.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "HeightmapTerrainData")
 @js.native
 class HeightmapTerrainData protected () extends js.Object {
-  def this(options: AnonBuffer) = this()
+  def this(options: Buffer) = this()
   var waterMask: js.typedarray.Uint8Array | HTMLImageElement | HTMLCanvasElement = js.native
   def createMesh(tilingScheme: TilingScheme, x: Double, y: Double, level: Double): js.Promise[TerrainMesh] = js.native
   def interpolateHeight(rectangle: Rectangle, longitude: Double, latitude: Double): Double = js.native

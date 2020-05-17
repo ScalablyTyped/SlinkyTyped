@@ -4,12 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("google.maps.DirectionsService")
 @js.native
-class DirectionsService () extends js.Object {
+trait DirectionsService extends js.Object {
   def route(
     request: DirectionsRequest,
     callback: js.Function2[/* result */ DirectionsResult, /* status */ DirectionsStatus, Unit]
   ): Unit = js.native
+}
+
+object DirectionsService {
+  @scala.inline
+  def apply(
+    route: (DirectionsRequest, js.Function2[/* result */ DirectionsResult, /* status */ DirectionsStatus, Unit]) => Unit
+  ): DirectionsService = {
+    val __obj = js.Dynamic.literal(route = js.Any.fromFunction2(route))
+    __obj.asInstanceOf[DirectionsService]
+  }
+  @scala.inline
+  implicit class DirectionsServiceOps[Self <: DirectionsService] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRoute(
+      value: (DirectionsRequest, js.Function2[/* result */ DirectionsResult, /* status */ DirectionsStatus, Unit]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("route")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

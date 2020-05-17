@@ -1,12 +1,45 @@
 package typingsSlinky.amapJsApiMap3d.AMap.Object3D
 
+import org.scalajs.dom.raw.HTMLCanvasElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("AMap.Object3D.RoundPoints")
 @js.native
-class RoundPoints () extends Points {
+trait RoundPoints extends Points {
   var merge: Boolean = js.native
+}
+
+object RoundPoints {
+  @scala.inline
+  def apply(
+    DEPTH_TEST: Boolean,
+    borderColor: String,
+    borderWeight: Double,
+    geometry: typingsSlinky.amapJsApiMap3d.AMap.Geometry3D.Points,
+    merge: Boolean,
+    needUpdate: Boolean,
+    reDraw: () => Unit,
+    reset: () => Unit,
+    textures: js.Array[String | HTMLCanvasElement],
+    transparent: Boolean
+  ): RoundPoints = {
+    val __obj = js.Dynamic.literal(DEPTH_TEST = DEPTH_TEST.asInstanceOf[js.Any], borderColor = borderColor.asInstanceOf[js.Any], borderWeight = borderWeight.asInstanceOf[js.Any], geometry = geometry.asInstanceOf[js.Any], merge = merge.asInstanceOf[js.Any], needUpdate = needUpdate.asInstanceOf[js.Any], reDraw = js.Any.fromFunction0(reDraw), reset = js.Any.fromFunction0(reset), textures = textures.asInstanceOf[js.Any], transparent = transparent.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RoundPoints]
+  }
+  @scala.inline
+  implicit class RoundPointsOps[Self <: RoundPoints] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMerge(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merge")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

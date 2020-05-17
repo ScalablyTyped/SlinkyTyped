@@ -1,5 +1,6 @@
 package typingsSlinky.typedoc
 
+import typingsSlinky.typedoc.anon.Caption
 import typingsSlinky.typedoc.eventsMod.MarkdownEvent
 import typingsSlinky.typedoc.eventsMod.RendererEvent
 import typingsSlinky.typedoc.outputComponentsMod.ContextAwareRendererComponent
@@ -26,7 +27,7 @@ object markedLinksPluginMod extends js.Object {
   /* static members */
   @js.native
   object MarkedLinksPlugin extends js.Object {
-    def splitLinkText(text: String): AnonCaption = js.native
+    def splitLinkText(text: String): Caption = js.native
   }
   
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.pgPromise.mod
 
-import typingsSlinky.pgPromise.AnonCapSQL
-import typingsSlinky.pgPromise.AnonRawType
+import typingsSlinky.pgPromise.anon.CapSQL
+import typingsSlinky.pgPromise.anon.RawType
 import typingsSlinky.std.BigInt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,13 +11,13 @@ import scala.scalajs.js.annotation._
 // API: http://vitaly-t.github.io/pg-promise/formatting.html
 @js.native
 trait IFormatting extends js.Object {
-  var ctf: AnonRawType = js.native
+  var ctf: RawType = js.native
   def alias(name: String): String = js.native
   def alias(name: js.Function0[String]): String = js.native
   def array(arr: js.Array[_]): String = js.native
-  def array(arr: js.Array[_], options: AnonCapSQL): String = js.native
+  def array(arr: js.Array[_], options: CapSQL): String = js.native
   def array(arr: js.Function0[js.Array[_]]): String = js.native
-  def array(arr: js.Function0[js.Array[_]], options: AnonCapSQL): String = js.native
+  def array(arr: js.Function0[js.Array[_]], options: CapSQL): String = js.native
   def bool(value: js.Any): String = js.native
   def bool(value: js.Function0[_]): String = js.native
   def buffer(obj: js.Function0[js.Object]): String = js.native

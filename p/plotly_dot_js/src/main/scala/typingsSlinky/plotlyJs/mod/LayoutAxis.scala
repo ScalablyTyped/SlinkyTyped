@@ -1,9 +1,9 @@
 package typingsSlinky.plotlyJs.mod
 
-import typingsSlinky.plotlyJs.PartialDataTitle
-import typingsSlinky.plotlyJs.PartialFont
-import typingsSlinky.plotlyJs.PartialRangeSelector
-import typingsSlinky.plotlyJs.PartialRangeSlider
+import typingsSlinky.plotlyJs.anon.PartialDataTitle
+import typingsSlinky.plotlyJs.anon.PartialFont
+import typingsSlinky.plotlyJs.anon.PartialRangeSelector
+import typingsSlinky.plotlyJs.anon.PartialRangeSlider
 import typingsSlinky.plotlyJs.plotlyJsBooleans.`false`
 import typingsSlinky.plotlyJs.plotlyJsBooleans.`true`
 import typingsSlinky.plotlyJs.plotlyJsStrings.B

@@ -1,8 +1,8 @@
 package typingsSlinky.uirouterAngularjs.mod
 
-import typingsSlinky.uirouterCore.AnonConfiguration
-import typingsSlinky.uirouterCore.AnonInstantiable
-import typingsSlinky.uirouterCore.AnonInstantiableLocationConfig
+import typingsSlinky.uirouterCore.anon.Configuration
+import typingsSlinky.uirouterCore.anon.Instantiable
+import typingsSlinky.uirouterCore.anon.InstantiableLocationConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +13,8 @@ object locationPluginFactory extends js.Object {
   def apply(
     name: String,
     isHtml5: Boolean,
-    serviceClass: AnonInstantiable,
-    configurationClass: AnonInstantiableLocationConfig
-  ): js.Function1[/* uiRouter */ typingsSlinky.uirouterCore.routerMod.UIRouter, AnonConfiguration] = js.native
+    serviceClass: Instantiable,
+    configurationClass: InstantiableLocationConfig
+  ): js.Function1[/* uiRouter */ typingsSlinky.uirouterCore.routerMod.UIRouter, Configuration] = js.native
 }
 

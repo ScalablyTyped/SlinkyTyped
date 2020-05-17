@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.ApplicationModel.Resources.Core.ResourceContextLanguagesVectorView")
 @js.native
-class ResourceContextLanguagesVectorView () extends IVectorView[String]
+trait ResourceContextLanguagesVectorView extends IVectorView[String]
 

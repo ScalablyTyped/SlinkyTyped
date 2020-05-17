@@ -1,7 +1,7 @@
 package typingsSlinky.webpack.mod.optimize.UglifyJsPlugin
 
 import typingsSlinky.uglifyJs.mod.MinifyOptions
-import typingsSlinky.webpack.AnonCache
+import typingsSlinky.webpack.anon.Cache
 import typingsSlinky.webpack.mod.Condition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ trait Options extends MinifyOptions {
   var exclude: js.UndefOr[Condition | js.Array[Condition]] = js.native
   var include: js.UndefOr[Condition | js.Array[Condition]] = js.native
   /** Parallelization can speedup your build significantly and is therefore highly recommended. */
-  var parallel: js.UndefOr[Boolean | AnonCache] = js.native
+  var parallel: js.UndefOr[Boolean | Cache] = js.native
   @JSName("sourceMap")
   var sourceMap_Options: js.UndefOr[Boolean] = js.native
   var test: js.UndefOr[Condition | js.Array[Condition]] = js.native
@@ -117,7 +117,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withParallel(value: Boolean | AnonCache): Self = {
+    def withParallel(value: Boolean | Cache): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parallel")(value.asInstanceOf[js.Any])
         ret

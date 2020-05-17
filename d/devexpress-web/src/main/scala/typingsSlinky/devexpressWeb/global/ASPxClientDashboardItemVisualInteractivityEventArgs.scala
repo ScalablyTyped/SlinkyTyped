@@ -1,0 +1,14 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Provides data for the ASPxClientDashboard.ItemVisualInteractivity event.
+  */
+@JSGlobal("ASPxClientDashboardItemVisualInteractivityEventArgs")
+@js.native
+class ASPxClientDashboardItemVisualInteractivityEventArgs ()
+  extends typingsSlinky.devexpressWeb.ASPxClientDashboardItemVisualInteractivityEventArgs
+

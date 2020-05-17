@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobile.mod
 
-import typingsSlinky.antdMobile.AnonAccept
+import typingsSlinky.antdMobile.anon.Accept
 import typingsSlinky.antdMobile.imagePickerMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +14,6 @@ class ImagePicker () extends default
 @JSImport("antd-mobile", "ImagePicker")
 @js.native
 object ImagePicker extends js.Object {
-  var defaultProps: AnonAccept = js.native
+  var defaultProps: Accept = js.native
 }
 

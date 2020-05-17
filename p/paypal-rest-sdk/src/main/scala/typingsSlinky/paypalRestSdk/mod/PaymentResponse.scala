@@ -1,6 +1,6 @@
 package typingsSlinky.paypalRestSdk.mod
 
-import typingsSlinky.paypalRestSdk.AnonPaymentmethod
+import typingsSlinky.paypalRestSdk.anon.Paymentmethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,12 +15,7 @@ trait PaymentResponse
 
 object PaymentResponse {
   @scala.inline
-  def apply(
-    httpStatusCode: Double,
-    intent: String,
-    payer: AnonPaymentmethod,
-    transactions: js.Array[Transaction]
-  ): PaymentResponse = {
+  def apply(httpStatusCode: Double, intent: String, payer: Paymentmethod, transactions: js.Array[Transaction]): PaymentResponse = {
     val __obj = js.Dynamic.literal(httpStatusCode = httpStatusCode.asInstanceOf[js.Any], intent = intent.asInstanceOf[js.Any], payer = payer.asInstanceOf[js.Any], transactions = transactions.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaymentResponse]
   }

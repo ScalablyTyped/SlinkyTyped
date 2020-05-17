@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientDoubleclicksearch.gapi.client.doubleclicksearch
 
-import typingsSlinky.gapiClientDoubleclicksearch.AnonAdGroupId
-import typingsSlinky.gapiClientDoubleclicksearch.AnonChangedAttributesSinceTimestamp
-import typingsSlinky.gapiClientDoubleclicksearch.AnonColumn
-import typingsSlinky.gapiClientDoubleclicksearch.AnonSortOrder
+import typingsSlinky.gapiClientDoubleclicksearch.anon.AdGroupId
+import typingsSlinky.gapiClientDoubleclicksearch.anon.ChangedAttributesSinceTimestamp
+import typingsSlinky.gapiClientDoubleclicksearch.anon.Column
+import typingsSlinky.gapiClientDoubleclicksearch.anon.SortOrder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait ReportRequest extends js.Object {
   /** Format that the report should be returned in. Currently csv or tsv is supported. */
   var downloadFormat: js.UndefOr[String] = js.native
   /** A list of filters to be applied to the report. */
-  var filters: js.UndefOr[js.Array[AnonColumn]] = js.native
+  var filters: js.UndefOr[js.Array[Column]] = js.native
   /** Determines if removed entities should be included in the report. Defaults to false. Deprecated, please use includeRemovedEntities instead. */
   var includeDeletedEntities: js.UndefOr[Boolean] = js.native
   /** Determines if removed entities should be included in the report. Defaults to false. */
@@ -30,12 +30,12 @@ trait ReportRequest extends js.Object {
     */
   var maxRowsPerFile: js.UndefOr[Double] = js.native
   /** Synchronous report only. A list of columns and directions defining sorting to be performed on the report rows. */
-  var orderBy: js.UndefOr[js.Array[AnonSortOrder]] = js.native
+  var orderBy: js.UndefOr[js.Array[SortOrder]] = js.native
   /**
     * The reportScope is a set of IDs that are used to determine which subset of entities will be returned in the report. The full lineage of IDs from the
     * lowest scoped level desired up through agency is required.
     */
-  var reportScope: js.UndefOr[AnonAdGroupId] = js.native
+  var reportScope: js.UndefOr[AdGroupId] = js.native
   /**
     * Determines the type of rows that are returned in the report. For example, if you specify reportType: keyword, each row in the report will contain data
     * about a keyword. See the Types of Reports reference for the columns that are available for each type.
@@ -54,7 +54,7 @@ trait ReportRequest extends js.Object {
     */
   var statisticsCurrency: js.UndefOr[String] = js.native
   /** If metrics are requested in a report, this argument will be used to restrict the metrics to a specific time range. */
-  var timeRange: js.UndefOr[AnonChangedAttributesSinceTimestamp] = js.native
+  var timeRange: js.UndefOr[ChangedAttributesSinceTimestamp] = js.native
   /** If true, the report would only be created if all the requested stat data are sourced from a single timezone. Defaults to false. */
   var verifySingleTimeZone: js.UndefOr[Boolean] = js.native
 }
@@ -96,7 +96,7 @@ object ReportRequest {
         ret
     }
     @scala.inline
-    def withFilters(value: js.Array[AnonColumn]): Self = {
+    def withFilters(value: js.Array[Column]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
         ret
@@ -144,7 +144,7 @@ object ReportRequest {
         ret
     }
     @scala.inline
-    def withOrderBy(value: js.Array[AnonSortOrder]): Self = {
+    def withOrderBy(value: js.Array[SortOrder]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("orderBy")(value.asInstanceOf[js.Any])
         ret
@@ -156,7 +156,7 @@ object ReportRequest {
         ret
     }
     @scala.inline
-    def withReportScope(value: AnonAdGroupId): Self = {
+    def withReportScope(value: AdGroupId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("reportScope")(value.asInstanceOf[js.Any])
         ret
@@ -216,7 +216,7 @@ object ReportRequest {
         ret
     }
     @scala.inline
-    def withTimeRange(value: AnonChangedAttributesSinceTimestamp): Self = {
+    def withTimeRange(value: ChangedAttributesSinceTimestamp): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("timeRange")(value.asInstanceOf[js.Any])
         ret

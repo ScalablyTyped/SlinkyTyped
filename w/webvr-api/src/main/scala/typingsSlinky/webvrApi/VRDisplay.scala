@@ -1,6 +1,5 @@
 package typingsSlinky.webvrApi
 
-import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.std.EventTarget
 import typingsSlinky.std.FrameRequestCallback
 import scala.scalajs.js
@@ -108,8 +107,4 @@ trait VRDisplay extends EventTarget {
   def submitFrame(): Unit = js.native
   def submitFrame(pose: VRPose): Unit = js.native
 }
-
-@JSGlobal("VRDisplay")
-@js.native
-object VRDisplay extends Instantiable0[VRDisplay]
 

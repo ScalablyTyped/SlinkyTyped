@@ -3,7 +3,7 @@ package typingsSlinky.antDesignReactNative.components
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignReactNative.AnonNativeEvent
+import typingsSlinky.antDesignReactNative.anon.NativeEvent
 import typingsSlinky.antDesignReactNative.searchBarMod.SearchBarProps
 import typingsSlinky.antDesignReactNative.searchBarMod.default
 import typingsSlinky.antDesignReactNative.searchBarStyleMod.SearchBarStyle
@@ -52,7 +52,7 @@ object SearchBar {
     @scala.inline
     def onSubmit(value: /* value */ String => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))
     @scala.inline
-    def onSubmitEditing(value: /* event */ AnonNativeEvent => Unit): this.type = set("onSubmitEditing", js.Any.fromFunction1(value))
+    def onSubmitEditing(value: /* event */ NativeEvent => Unit): this.type = set("onSubmitEditing", js.Any.fromFunction1(value))
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline

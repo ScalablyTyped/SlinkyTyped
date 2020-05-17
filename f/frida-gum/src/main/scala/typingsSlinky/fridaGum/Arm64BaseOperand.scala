@@ -1,5 +1,6 @@
 package typingsSlinky.fridaGum
 
+import typingsSlinky.fridaGum.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Arm64BaseOperand extends js.Object {
   var ext: js.UndefOr[Arm64Extender] = js.native
-  var shift: js.UndefOr[AnonValue] = js.native
+  var shift: js.UndefOr[Value] = js.native
   var vas: js.UndefOr[Arm64Vas] = js.native
   var vectorIndex: js.UndefOr[Double] = js.native
 }
@@ -37,7 +38,7 @@ object Arm64BaseOperand {
         ret
     }
     @scala.inline
-    def withShift(value: AnonValue): Self = {
+    def withShift(value: Value): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shift")(value.asInstanceOf[js.Any])
         ret

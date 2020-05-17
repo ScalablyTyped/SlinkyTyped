@@ -1,6 +1,6 @@
 package typingsSlinky.firebaseDatabase.mod
 
-import typingsSlinky.firebaseDatabase.AnonSv
+import typingsSlinky.firebaseDatabase.anon.Sv
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@firebase/database", "ServerValue")
 @js.native
 object ServerValue extends js.Object {
-  var TIMESTAMP: AnonSv = js.native
+  var TIMESTAMP: Sv = js.native
 }
 

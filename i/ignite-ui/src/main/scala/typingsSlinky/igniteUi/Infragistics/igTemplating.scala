@@ -1,14 +1,11 @@
 package typingsSlinky.igniteUi.Infragistics
 
-import typingsSlinky.igniteUi.IgTemplatingRegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Infragistics.igTemplating")
 @js.native
-class igTemplating protected () extends js.Object {
-  def this(regExp: IgTemplatingRegExp) = this()
+trait igTemplating extends js.Object {
   def clearTmplCache(): Unit = js.native
   /**
   	 * Populates the given template with the provided data. If data is a function that requires arguments, the arguments need to be provided as an array following the data. tmpl(template, data[, args])

@@ -1,7 +1,7 @@
 package typingsSlinky.pgPromise.mod
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.pgPromise.AnonDeferrable
+import typingsSlinky.pgPromise.anon.Deferrable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,17 +10,14 @@ import scala.scalajs.js.annotation._
 // API: http://vitaly-t.github.io/pg-promise/txMode.html
 @js.native
 trait ITXMode extends js.Object {
-  var TransactionMode: Instantiable1[
-    js.UndefOr[/* options */ AnonDeferrable], 
-    typingsSlinky.pgPromise.mod.TransactionMode
-  ] = js.native
+  var TransactionMode: Instantiable1[js.UndefOr[/* options */ Deferrable], typingsSlinky.pgPromise.mod.TransactionMode] = js.native
   var isolationLevel: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof isolationLevel */ js.Any = js.native
 }
 
 object ITXMode {
   @scala.inline
   def apply(
-    TransactionMode: Instantiable1[js.UndefOr[/* options */ AnonDeferrable], TransactionMode],
+    TransactionMode: Instantiable1[js.UndefOr[/* options */ Deferrable], TransactionMode],
     isolationLevel: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof isolationLevel */ js.Any
   ): ITXMode = {
     val __obj = js.Dynamic.literal(TransactionMode = TransactionMode.asInstanceOf[js.Any], isolationLevel = isolationLevel.asInstanceOf[js.Any])
@@ -33,7 +30,7 @@ object ITXMode {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTransactionMode(value: Instantiable1[js.UndefOr[/* options */ AnonDeferrable], TransactionMode]): Self = {
+    def withTransactionMode(value: Instantiable1[js.UndefOr[/* options */ Deferrable], TransactionMode]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TransactionMode")(value.asInstanceOf[js.Any])
         ret

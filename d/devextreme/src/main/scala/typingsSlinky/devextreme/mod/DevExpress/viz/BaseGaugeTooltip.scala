@@ -1,10 +1,10 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonValueText
+import typingsSlinky.devextreme.anon.ValueText
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.core.template
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,10 +14,10 @@ import scala.scalajs.js.annotation._
 trait BaseGaugeTooltip extends BaseWidgetTooltip {
   /** Specifies a custom template for a tooltip. */
   var contentTemplate: js.UndefOr[
-    template | (js.Function2[/* scaleValue */ AnonValueText, /* element */ dxElement, String | Element | JQuery])
+    template | (js.Function2[/* scaleValue */ ValueText, /* element */ dxElement, String | Element | JQuery])
   ] = js.native
   /** Allows you to change the appearance of specified tooltips. */
-  var customizeTooltip: js.UndefOr[js.Function1[/* scaleValue */ AnonValueText, _]] = js.native
+  var customizeTooltip: js.UndefOr[js.Function1[/* scaleValue */ ValueText, _]] = js.native
 }
 
 object BaseGaugeTooltip {
@@ -33,7 +33,7 @@ object BaseGaugeTooltip {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContentTemplateFunction2(value: (/* scaleValue */ AnonValueText, /* element */ dxElement) => String | Element | JQuery): Self = {
+    def withContentTemplateFunction2(value: (/* scaleValue */ ValueText, /* element */ dxElement) => String | Element | JQuery): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentTemplate")(js.Any.fromFunction2(value))
         ret
@@ -46,7 +46,7 @@ object BaseGaugeTooltip {
     }
     @scala.inline
     def withContentTemplate(
-      value: template | (js.Function2[/* scaleValue */ AnonValueText, /* element */ dxElement, String | Element | JQuery])
+      value: template | (js.Function2[/* scaleValue */ ValueText, /* element */ dxElement, String | Element | JQuery])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentTemplate")(value.asInstanceOf[js.Any])
@@ -59,7 +59,7 @@ object BaseGaugeTooltip {
         ret
     }
     @scala.inline
-    def withCustomizeTooltip(value: /* scaleValue */ AnonValueText => _): Self = {
+    def withCustomizeTooltip(value: /* scaleValue */ ValueText => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customizeTooltip")(js.Any.fromFunction1(value))
         ret

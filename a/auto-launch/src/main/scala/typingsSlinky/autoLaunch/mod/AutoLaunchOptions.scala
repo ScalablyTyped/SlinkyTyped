@@ -1,6 +1,6 @@
 package typingsSlinky.autoLaunch.mod
 
-import typingsSlinky.autoLaunch.AnonUseLaunchAgent
+import typingsSlinky.autoLaunch.anon.UseLaunchAgent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait AutoLaunchOptions extends js.Object {
   /**
     * For Mac-only options.
     */
-  var mac: js.UndefOr[AnonUseLaunchAgent] = js.native
+  var mac: js.UndefOr[UseLaunchAgent] = js.native
   /**
     * Application name.
     */
@@ -56,7 +56,7 @@ object AutoLaunchOptions {
         ret
     }
     @scala.inline
-    def withMac(value: AnonUseLaunchAgent): Self = {
+    def withMac(value: UseLaunchAgent): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mac")(value.asInstanceOf[js.Any])
         ret

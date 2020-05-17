@@ -1,7 +1,7 @@
 package typingsSlinky.stellarSdk.serverApiMod.ServerApi
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.stellarSdk.AnonAssetcode
+import typingsSlinky.stellarSdk.anon.Assetcode
 import typingsSlinky.stellarSdk.horizonApiMod.Horizon.BaseResponse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ trait PaymentPathRecord
   var destination_asset_code: String = js.native
   var destination_asset_issuer: String = js.native
   var destination_asset_type: String = js.native
-  var path: js.Array[AnonAssetcode] = js.native
+  var path: js.Array[Assetcode] = js.native
   var source_amount: String = js.native
   var source_asset_code: String = js.native
   var source_asset_issuer: String = js.native
@@ -31,7 +31,7 @@ object PaymentPathRecord {
     destination_asset_code: String,
     destination_asset_issuer: String,
     destination_asset_type: String,
-    path: js.Array[AnonAssetcode],
+    path: js.Array[Assetcode],
     source_amount: String,
     source_asset_code: String,
     source_asset_issuer: String,
@@ -71,7 +71,7 @@ object PaymentPathRecord {
         ret
     }
     @scala.inline
-    def withPath(value: js.Array[AnonAssetcode]): Self = {
+    def withPath(value: js.Array[Assetcode]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
         ret

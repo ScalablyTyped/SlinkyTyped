@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PreFilterObject[LHS, RHS] extends js.Object {
+trait PreFilterObject[LHS, RHS] extends PreFilter[LHS, RHS] {
   var normalize: js.UndefOr[
     js.Function4[
       /* currentPath */ js.Any, 

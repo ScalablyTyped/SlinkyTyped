@@ -2,7 +2,7 @@ package typingsSlinky.sccBrokerClient.clientPoolMod
 
 import typingsSlinky.asyncStreamEmitter.mod.AsyncStreamEmitter
 import typingsSlinky.jsonwebtoken.mod.Secret
-import typingsSlinky.sccBrokerClient.AnonError
+import typingsSlinky.sccBrokerClient.anon.Error
 import typingsSlinky.sccBrokerClient.sccBrokerClientStrings.error
 import typingsSlinky.sccBrokerClient.sccBrokerClientStrings.publish
 import typingsSlinky.sccBrokerClient.sccBrokerClientStrings.publishFail
@@ -26,7 +26,7 @@ trait ClientPool
   def closeChannel(channelName: String): Unit = js.native
   def destroy(): Unit = js.native
   @JSName("emit")
-  def emit_error(eventName: error, data: AnonError): Unit = js.native
+  def emit_error(eventName: error, data: Error): Unit = js.native
   @JSName("emit")
   def emit_publish(eventName: publish, data: PublishData): Unit = js.native
   @JSName("emit")
@@ -39,7 +39,7 @@ trait ClientPool
   def isSubscribed(channelName: String): Boolean = js.native
   def isSubscribed(channelName: String, includePending: Boolean): Boolean = js.native
   @JSName("listener")
-  def listener_error(eventName: error): typingsSlinky.consumableStream.mod.^[AnonError] = js.native
+  def listener_error(eventName: error): typingsSlinky.consumableStream.mod.^[Error] = js.native
   @JSName("listener")
   def listener_publish(eventName: publish): typingsSlinky.consumableStream.mod.^[PublishData] = js.native
   @JSName("listener")

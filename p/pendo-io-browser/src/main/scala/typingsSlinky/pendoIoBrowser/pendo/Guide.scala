@@ -1,7 +1,7 @@
 package typingsSlinky.pendoIoBrowser.pendo
 
-import typingsSlinky.pendoIoBrowser.AnonBadge
-import typingsSlinky.pendoIoBrowser.AnonFilters
+import typingsSlinky.pendoIoBrowser.anon.Badge
+import typingsSlinky.pendoIoBrowser.anon.Filters
 import typingsSlinky.pendoIoBrowser.pendoIoBrowserStrings.api
 import typingsSlinky.pendoIoBrowser.pendoIoBrowserStrings.automatic
 import typingsSlinky.pendoIoBrowser.pendoIoBrowserStrings.badge
@@ -17,10 +17,10 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Guide extends js.Object {
-  var attributes: AnonBadge = js.native
+  var attributes: Badge = js.native
   var audience: js.Array[_] = js.native
    // TODO
-  var audienceUiHint: AnonFilters = js.native
+  var audienceUiHint: Filters = js.native
   var createdAt: Double = js.native
   var createdByUser: User = js.native
   var id: String = js.native
@@ -42,9 +42,9 @@ trait Guide extends js.Object {
 object Guide {
   @scala.inline
   def apply(
-    attributes: AnonBadge,
+    attributes: Badge,
     audience: js.Array[_],
-    audienceUiHint: AnonFilters,
+    audienceUiHint: Filters,
     createdAt: Double,
     createdByUser: User,
     id: String,
@@ -71,7 +71,7 @@ object Guide {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAttributes(value: AnonBadge): Self = {
+    def withAttributes(value: Badge): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
         ret
@@ -83,7 +83,7 @@ object Guide {
         ret
     }
     @scala.inline
-    def withAudienceUiHint(value: AnonFilters): Self = {
+    def withAudienceUiHint(value: Filters): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("audienceUiHint")(value.asInstanceOf[js.Any])
         ret

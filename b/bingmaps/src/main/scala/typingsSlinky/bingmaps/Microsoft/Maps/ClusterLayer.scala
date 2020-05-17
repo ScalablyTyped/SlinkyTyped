@@ -4,17 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Microsoft.Maps.ClusterLayer")
 @js.native
-class ClusterLayer protected () extends IDataLayer {
-  /**
-    * @constructor
-    * @requires The Microsoft.Maps.Clustering module.
-    * @param pushpins An array of pushpins to cluster in the layer.
-    * @param options The options used to customize how the ClusterLayer functions.
-    */
-  def this(pushpins: js.Array[Pushpin]) = this()
-  def this(pushpins: js.Array[Pushpin], options: IClusterLayerOptions) = this()
+trait ClusterLayer extends IDataLayer {
   /**
     * Gets the pushpin in the specified cluster grid cell which can be either a ClusterPushpin if there are multiple pushpins in a cell or a single Pushpin.
     * @param The gridKey index to retrieve the pushpins for.
@@ -52,5 +43,72 @@ class ClusterLayer protected () extends IDataLayer {
     * @param pushpins An array of pushpins that are to be used by the clustering layer.
     */
   def setPushpins(pushpins: js.Array[Pushpin]): Unit = js.native
+}
+
+object ClusterLayer {
+  @scala.inline
+  def apply(
+    clear: () => Unit,
+    getClusterPushpinByGridKey: Double => ClusterPushpin | Pushpin,
+    getDisplayedPushpins: () => js.Array[Pushpin],
+    getOptions: () => IClusterLayerOptions,
+    getPushpins: () => js.Array[Pushpin],
+    getPushpinsByGridKey: Double => js.Array[Pushpin],
+    setOptions: IClusterLayerOptions => Unit,
+    setPushpins: js.Array[Pushpin] => Unit
+  ): ClusterLayer = {
+    val __obj = js.Dynamic.literal(clear = js.Any.fromFunction0(clear), getClusterPushpinByGridKey = js.Any.fromFunction1(getClusterPushpinByGridKey), getDisplayedPushpins = js.Any.fromFunction0(getDisplayedPushpins), getOptions = js.Any.fromFunction0(getOptions), getPushpins = js.Any.fromFunction0(getPushpins), getPushpinsByGridKey = js.Any.fromFunction1(getPushpinsByGridKey), setOptions = js.Any.fromFunction1(setOptions), setPushpins = js.Any.fromFunction1(setPushpins))
+    __obj.asInstanceOf[ClusterLayer]
+  }
+  @scala.inline
+  implicit class ClusterLayerOps[Self <: ClusterLayer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetClusterPushpinByGridKey(value: Double => ClusterPushpin | Pushpin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getClusterPushpinByGridKey")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetDisplayedPushpins(value: () => js.Array[Pushpin]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDisplayedPushpins")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetOptions(value: () => IClusterLayerOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getOptions")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPushpins(value: () => js.Array[Pushpin]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPushpins")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPushpinsByGridKey(value: Double => js.Array[Pushpin]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPushpinsByGridKey")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetOptions(value: IClusterLayerOptions => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setOptions")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetPushpins(value: js.Array[Pushpin] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setPushpins")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

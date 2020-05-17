@@ -1,5 +1,6 @@
 package typingsSlinky.bingmaps.Microsoft.Maps
 
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,14 +8,8 @@ import scala.scalajs.js.annotation._
 /**
   * A map overlay that binds an image to a bounding box area on the map.
   */
-@JSGlobal("Microsoft.Maps.GroundOverlay")
 @js.native
-class GroundOverlay protected () extends CustomOverlay {
-  /**
-    * @constructor
-    * @param options The options used to render the ground overlay.
-    */
-  def this(options: IGroundOverlayOptions) = this()
+trait GroundOverlay extends CustomOverlay {
   /** Optional property to store any additional metadata for this layer. */
   var metadata: js.Any = js.native
   /**
@@ -57,5 +52,92 @@ class GroundOverlay protected () extends CustomOverlay {
     * @param value A value indicating if the Ground Overlay should be displayed or not.
     */
   def setVisible(visible: Boolean): Unit = js.native
+}
+
+object GroundOverlay {
+  @scala.inline
+  def apply(
+    _map: Map,
+    getBackgroundColor: () => String | Color,
+    getBounds: () => LocationRect,
+    getHtmlElement: () => HTMLElement,
+    getImageUrl: () => String,
+    getMap: () => Map,
+    getOpacity: () => Double,
+    getRotation: () => Double,
+    getVisible: () => Boolean,
+    metadata: js.Any,
+    onAdd: () => Unit,
+    onLoad: () => Unit,
+    onRemove: () => Unit,
+    setHtmlElement: HTMLElement => Unit,
+    setOptions: IGroundOverlayOptions => Unit,
+    setVisible: Boolean => Unit
+  ): GroundOverlay = {
+    val __obj = js.Dynamic.literal(_map = _map.asInstanceOf[js.Any], getBackgroundColor = js.Any.fromFunction0(getBackgroundColor), getBounds = js.Any.fromFunction0(getBounds), getHtmlElement = js.Any.fromFunction0(getHtmlElement), getImageUrl = js.Any.fromFunction0(getImageUrl), getMap = js.Any.fromFunction0(getMap), getOpacity = js.Any.fromFunction0(getOpacity), getRotation = js.Any.fromFunction0(getRotation), getVisible = js.Any.fromFunction0(getVisible), metadata = metadata.asInstanceOf[js.Any], onAdd = js.Any.fromFunction0(onAdd), onLoad = js.Any.fromFunction0(onLoad), onRemove = js.Any.fromFunction0(onRemove), setHtmlElement = js.Any.fromFunction1(setHtmlElement), setOptions = js.Any.fromFunction1(setOptions), setVisible = js.Any.fromFunction1(setVisible))
+    __obj.asInstanceOf[GroundOverlay]
+  }
+  @scala.inline
+  implicit class GroundOverlayOps[Self <: GroundOverlay] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetBackgroundColor(value: () => String | Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBackgroundColor")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetBounds(value: () => LocationRect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBounds")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetImageUrl(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getImageUrl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetOpacity(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getOpacity")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRotation(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRotation")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetVisible(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getVisible")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetOptions(value: IGroundOverlayOptions => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setOptions")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetVisible(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setVisible")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

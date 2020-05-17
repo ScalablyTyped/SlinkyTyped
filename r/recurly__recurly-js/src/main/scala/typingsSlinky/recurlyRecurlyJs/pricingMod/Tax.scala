@@ -1,13 +1,13 @@
 package typingsSlinky.recurlyRecurlyJs.pricingMod
 
-import typingsSlinky.recurlyRecurlyJs.AnonNext
+import typingsSlinky.recurlyRecurlyJs.anon.Next
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Tax extends js.Object {
-  var amounts: js.UndefOr[AnonNext] = js.native
+  var amounts: js.UndefOr[Next] = js.native
   var tax_code: String = js.native
   var vat_number: js.UndefOr[String] = js.native
 }
@@ -31,7 +31,7 @@ object Tax {
         ret
     }
     @scala.inline
-    def withAmounts(value: AnonNext): Self = {
+    def withAmounts(value: Next): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("amounts")(value.asInstanceOf[js.Any])
         ret

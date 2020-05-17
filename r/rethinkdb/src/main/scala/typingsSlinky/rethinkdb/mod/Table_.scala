@@ -1,6 +1,6 @@
 package typingsSlinky.rethinkdb.mod
 
-import typingsSlinky.rethinkdb.AnonFunction
+import typingsSlinky.rethinkdb.anon.Function
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -120,8 +120,8 @@ trait Table_
   def indexCreate(name: String, index: IndexFunction[_]): Operation[CreateResult] = js.native
   def indexDrop(name: String): Operation[DropResult] = js.native
   def indexList(): Operation[js.Array[String]] = js.native
-  def indexWait(): Operation[js.Array[AnonFunction]] = js.native
-  def indexWait(name: String): Operation[js.Array[AnonFunction]] = js.native
+  def indexWait(): Operation[js.Array[Function]] = js.native
+  def indexWait(name: String): Operation[js.Array[Function]] = js.native
   def insert(obj: js.Any): Operation[WriteResult] = js.native
   def insert(obj: js.Any, options: InsertOptions): Operation[WriteResult] = js.native
   def insert(obj: js.Array[_]): Operation[WriteResult] = js.native

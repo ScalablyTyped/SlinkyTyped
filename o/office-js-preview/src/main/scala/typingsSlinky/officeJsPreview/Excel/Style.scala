@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.StyleData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.StyleLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.StyleUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Bottom
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Center
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.CenterAcrossSelection
@@ -29,9 +29,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.7]
   */
-@JSGlobal("Excel.Style")
 @js.native
-class Style () extends ClientObject {
+trait Style extends ClientObject {
   /**
     *
     * Indicates if text is automatically indented when the text alignment in a cell is set to equal distribution.
@@ -209,7 +208,7 @@ class Style () extends ClientObject {
     */
   def load(): Style = js.native
   def load(options: StyleLoadOptions): Style = js.native
-  def load(propertyNamesAndPaths: AnonExpand): Style = js.native
+  def load(propertyNamesAndPaths: Expand): Style = js.native
   def load(propertyNames: String): Style = js.native
   def load(propertyNames: js.Array[String]): Style = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

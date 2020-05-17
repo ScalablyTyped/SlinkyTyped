@@ -4,7 +4,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.googlemaps.google.maps.places.AutocompletionRequest
-import typingsSlinky.reactGooglePlacesSuggest.Typeofmaps
+import typingsSlinky.reactGooglePlacesSuggest.anon.Typeofmaps
 import typingsSlinky.reactGooglePlacesSuggest.mod.ReactGooglePlacesSuggest.GeocodedPrediction
 import typingsSlinky.reactGooglePlacesSuggest.mod.ReactGooglePlacesSuggest.Prediction
 import typingsSlinky.reactGooglePlacesSuggest.mod.ReactGooglePlacesSuggest.Props

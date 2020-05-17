@@ -3,9 +3,9 @@ package typingsSlinky.nukaCarousel.mod
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactRef
-import typingsSlinky.nukaCarousel.AnonContainerClassName
+import typingsSlinky.nukaCarousel.anon.ContainerClassName
+import typingsSlinky.nukaCarousel.anon.slideActioninCarouselSlid
 import typingsSlinky.nukaCarousel.nukaCarouselStrings.zoom
-import typingsSlinky.nukaCarousel.slideActioninCarouselSlid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -63,7 +63,7 @@ trait CarouselProps extends js.Object {
   /**
     * This prop lets you apply custom classes and styles to the default Next, Previous, and Paging Dots controls
     */
-  var defaultControlsConfig: js.UndefOr[AnonContainerClassName] = js.native
+  var defaultControlsConfig: js.UndefOr[ContainerClassName] = js.native
   /**
     * Disable slides animation
     * @default false
@@ -386,7 +386,7 @@ object CarouselProps {
         ret
     }
     @scala.inline
-    def withDefaultControlsConfig(value: AnonContainerClassName): Self = {
+    def withDefaultControlsConfig(value: ContainerClassName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defaultControlsConfig")(value.asInstanceOf[js.Any])
         ret

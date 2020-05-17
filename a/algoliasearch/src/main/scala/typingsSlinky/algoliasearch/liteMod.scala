@@ -1,5 +1,8 @@
 package typingsSlinky.algoliasearch
 
+import typingsSlinky.algoliasearch.anon.IndexName
+import typingsSlinky.algoliasearch.anon.Params
+import typingsSlinky.algoliasearch.anon.Results
 import typingsSlinky.algoliasearch.mod.BrowseParameters
 import typingsSlinky.algoliasearch.mod.BrowseResponse
 import typingsSlinky.algoliasearch.mod.ClientOptions
@@ -41,19 +44,19 @@ object liteMod extends js.Object {
       * Query on multiple index
       * https://github.com/algolia/algoliasearch-client-js#multiple-queries---multiplequeries
       */
-    def search[T](queries: js.Array[AnonIndexName]): js.Promise[MultiResponse[T]] = js.native
+    def search[T](queries: js.Array[IndexName]): js.Promise[MultiResponse[T]] = js.native
     /**
       * Query on multiple index
       * https://github.com/algolia/algoliasearch-client-js#multiple-queries---multiplequeries
       */
     def search[T](
-      queries: js.Array[AnonIndexName],
+      queries: js.Array[IndexName],
       cb: js.Function2[/* err */ js.Error, /* res */ MultiResponse[T], Unit]
     ): Unit = js.native
     /**
       * Query for facet values of a specific facet
       */
-    def searchForFacetValues(queries: js.Array[AnonParams]): js.Promise[js.Array[Response]] = js.native
+    def searchForFacetValues(queries: js.Array[Params]): js.Promise[js.Array[Response]] = js.native
     /**
       * Add a header to be sent with all upcoming requests
       */
@@ -129,12 +132,12 @@ object liteMod extends js.Object {
       * Gets a list of objects
       * https://github.com/algolia/algoliasearch-client-js#find-by-ids---getobjects
       */
-    def getObjects(objectIDs: js.Array[String]): js.Promise[AnonResults] = js.native
+    def getObjects(objectIDs: js.Array[String]): js.Promise[Results] = js.native
     /**
       * Gets a list of objects
       * https://github.com/algolia/algoliasearch-client-js#find-by-ids---getobjects
       */
-    def getObjects(objectIDs: js.Array[String], cb: js.Function2[/* err */ js.Error, /* res */ AnonResults, Unit]): Unit = js.native
+    def getObjects(objectIDs: js.Array[String], cb: js.Function2[/* err */ js.Error, /* res */ Results, Unit]): Unit = js.native
     /**
       * Search in an index
       * https://github.com/algolia/algoliasearch-client-js#search-in-an-index---search

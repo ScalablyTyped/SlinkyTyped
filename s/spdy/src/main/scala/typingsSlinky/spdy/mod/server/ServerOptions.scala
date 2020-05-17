@@ -1,7 +1,7 @@
 package typingsSlinky.spdy.mod.server
 
 import typingsSlinky.node.tlsMod.TlsOptions
-import typingsSlinky.spdy.AnonConnection
+import typingsSlinky.spdy.anon.Connection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait ServerOptions
   extends TlsOptions
      with typingsSlinky.node.httpMod.ServerOptions {
-  var spdy: js.UndefOr[AnonConnection] = js.native
+  var spdy: js.UndefOr[Connection] = js.native
 }
 
 object ServerOptions {
@@ -26,7 +26,7 @@ object ServerOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSpdy(value: AnonConnection): Self = {
+    def withSpdy(value: Connection): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("spdy")(value.asInstanceOf[js.Any])
         ret

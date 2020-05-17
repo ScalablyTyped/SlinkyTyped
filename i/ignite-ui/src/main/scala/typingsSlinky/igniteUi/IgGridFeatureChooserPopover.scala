@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -264,7 +264,7 @@ object IgGridFeatureChooserPopover {
         ret
     }
     @scala.inline
-    def withHidden(value: (/* event */ Event_, /* ui */ HiddenEventUIParam) => Unit): Self = {
+    def withHidden(value: (/* event */ Event, /* ui */ HiddenEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.Any.fromFunction2(value))
         ret
@@ -276,7 +276,7 @@ object IgGridFeatureChooserPopover {
         ret
     }
     @scala.inline
-    def withHiding(value: (/* event */ Event_, /* ui */ HidingEventUIParam) => Unit): Self = {
+    def withHiding(value: (/* event */ Event, /* ui */ HidingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hiding")(js.Any.fromFunction2(value))
         ret
@@ -360,7 +360,7 @@ object IgGridFeatureChooserPopover {
         ret
     }
     @scala.inline
-    def withShowing(value: (/* event */ Event_, /* ui */ ShowingEventUIParam) => Unit): Self = {
+    def withShowing(value: (/* event */ Event, /* ui */ ShowingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("showing")(js.Any.fromFunction2(value))
         ret
@@ -372,7 +372,7 @@ object IgGridFeatureChooserPopover {
         ret
     }
     @scala.inline
-    def withShown(value: (/* event */ Event_, /* ui */ ShownEventUIParam) => Unit): Self = {
+    def withShown(value: (/* event */ Event, /* ui */ ShownEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shown")(js.Any.fromFunction2(value))
         ret

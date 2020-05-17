@@ -20,10 +20,8 @@ import scala.scalajs.js.annotation._
   * is running. Can be any of pc.XRSPACE_*.
   * @property {pc.Entity|null} camera Active camera for which XR session is running or null.
   */
-@JSGlobal("pc.XrManager")
 @js.native
-class XrManager protected () extends EventHandler {
-  def this(app: Application) = this()
+trait XrManager extends EventHandler {
   /**
     * True if XR session is running.
     */

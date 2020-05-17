@@ -1,5 +1,6 @@
 package typingsSlinky.blueprintjsCore.tagInputMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
@@ -15,7 +16,6 @@ import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
 import typingsSlinky.blueprintjsCore.tagMod.ITagProps
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
 import typingsSlinky.react.mod.FormEventHandler
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -336,7 +336,7 @@ object ITagInputProps {
         ret
     }
     @scala.inline
-    def withOnInputChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit): Self = {
+    def withOnInputChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInputChange")(js.Any.fromFunction1(value))
         ret

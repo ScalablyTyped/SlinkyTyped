@@ -1,6 +1,5 @@
 package typingsSlinky.reduxFirstRouter.mod
 
-import typingsSlinky.reduxFirstRouter.AnonParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Router[TState] extends js.Object {
   def getActionForPathAndParams(path: String): Nullable[js.Object] = js.native
-  def getPathAndParamsForState(state: TState): AnonParams = js.native
+  def getPathAndParamsForState(state: TState): typingsSlinky.reduxFirstRouter.anon.Params = js.native
   def getStateForAction(action: js.Object, state: Nullable[TState]): Nullable[TState] = js.native
   def getStateForActionOriginal(action: js.Object, state: Nullable[TState]): Nullable[TState] = js.native
 }
@@ -17,7 +16,7 @@ object Router {
   @scala.inline
   def apply[TState](
     getActionForPathAndParams: String => Nullable[js.Object],
-    getPathAndParamsForState: TState => AnonParams,
+    getPathAndParamsForState: TState => typingsSlinky.reduxFirstRouter.anon.Params,
     getStateForAction: (js.Object, Nullable[TState]) => Nullable[TState],
     getStateForActionOriginal: (js.Object, Nullable[TState]) => Nullable[TState]
   ): Router[TState] = {
@@ -37,7 +36,7 @@ object Router {
         ret
     }
     @scala.inline
-    def withGetPathAndParamsForState(value: TState => AnonParams): Self[TState] = {
+    def withGetPathAndParamsForState(value: TState => typingsSlinky.reduxFirstRouter.anon.Params): Self[TState] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getPathAndParamsForState")(js.Any.fromFunction1(value))
         ret

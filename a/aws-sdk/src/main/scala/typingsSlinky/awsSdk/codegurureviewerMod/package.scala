@@ -15,29 +15,9 @@ package object codegurureviewerMod {
   type NextToken = java.lang.String
   type Owner = java.lang.String
   type Owners = js.Array[typingsSlinky.awsSdk.codegurureviewerMod.Owner]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.CodeCommit_
-    - typingsSlinky.awsSdk.awsSdkStrings.GitHub_
-    - java.lang.String
-  */
-  type ProviderType = typingsSlinky.awsSdk.codegurureviewerMod._ProviderType | java.lang.String
   type ProviderTypes = js.Array[typingsSlinky.awsSdk.codegurureviewerMod.ProviderType]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.Associated_
-    - typingsSlinky.awsSdk.awsSdkStrings.Associating_
-    - typingsSlinky.awsSdk.awsSdkStrings.Failed_
-    - typingsSlinky.awsSdk.awsSdkStrings.Disassociating_
-    - java.lang.String
-  */
-  type RepositoryAssociationState = typingsSlinky.awsSdk.codegurureviewerMod._RepositoryAssociationState | java.lang.String
   type RepositoryAssociationStates = js.Array[typingsSlinky.awsSdk.codegurureviewerMod.RepositoryAssociationState]
   type RepositoryAssociationSummaries = js.Array[typingsSlinky.awsSdk.codegurureviewerMod.RepositoryAssociationSummary]
   type StateReason = java.lang.String
   type TimeStamp = js.Date
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2019-09-19`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.codegurureviewerMod._apiVersion | java.lang.String
 }

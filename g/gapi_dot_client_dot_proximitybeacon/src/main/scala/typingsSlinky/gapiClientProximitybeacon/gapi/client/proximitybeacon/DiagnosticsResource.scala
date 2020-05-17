@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientProximitybeacon.gapi.client.proximitybeacon
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientProximitybeacon.AnonAlertFilter
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientProximitybeacon.anon.AlertFilter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,12 +17,12 @@ trait DiagnosticsResource extends js.Object {
     * from a signed-in user with &#42;&#42;viewer&#42;&#42;, &#42;&#42;Is owner&#42;&#42; or &#42;&#42;Can edit&#42;&#42;
     * permissions in the Google Developers Console project.
     */
-  def list(request: AnonAlertFilter): Request_[ListDiagnosticsResponse] = js.native
+  def list(request: AlertFilter): Request[ListDiagnosticsResponse] = js.native
 }
 
 object DiagnosticsResource {
   @scala.inline
-  def apply(list: AnonAlertFilter => Request_[ListDiagnosticsResponse]): DiagnosticsResource = {
+  def apply(list: AlertFilter => Request[ListDiagnosticsResponse]): DiagnosticsResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[DiagnosticsResource]
   }
@@ -33,7 +33,7 @@ object DiagnosticsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withList(value: AnonAlertFilter => Request_[ListDiagnosticsResponse]): Self = {
+    def withList(value: AlertFilter => Request[ListDiagnosticsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.antd.statisticStatisticMod
 
-import typingsSlinky.antd.TypeofCountdown
+import typingsSlinky.antd.anon.TypeofCountdown
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

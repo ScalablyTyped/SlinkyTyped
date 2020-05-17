@@ -1,39 +1,5 @@
 package typingsSlinky.babelTypes.mod
 
-import typingsSlinky.babelTypes.babelTypesStrings.TSAnyKeyword
-import typingsSlinky.babelTypes.babelTypesStrings.TSArrayType
-import typingsSlinky.babelTypes.babelTypesStrings.TSBigIntKeyword
-import typingsSlinky.babelTypes.babelTypesStrings.TSBooleanKeyword
-import typingsSlinky.babelTypes.babelTypesStrings.TSConditionalType
-import typingsSlinky.babelTypes.babelTypesStrings.TSConstructorType
-import typingsSlinky.babelTypes.babelTypesStrings.TSExpressionWithTypeArguments
-import typingsSlinky.babelTypes.babelTypesStrings.TSFunctionType
-import typingsSlinky.babelTypes.babelTypesStrings.TSImportType
-import typingsSlinky.babelTypes.babelTypesStrings.TSIndexedAccessType
-import typingsSlinky.babelTypes.babelTypesStrings.TSInferType
-import typingsSlinky.babelTypes.babelTypesStrings.TSIntersectionType
-import typingsSlinky.babelTypes.babelTypesStrings.TSLiteralType
-import typingsSlinky.babelTypes.babelTypesStrings.TSMappedType
-import typingsSlinky.babelTypes.babelTypesStrings.TSNeverKeyword
-import typingsSlinky.babelTypes.babelTypesStrings.TSNullKeyword
-import typingsSlinky.babelTypes.babelTypesStrings.TSNumberKeyword
-import typingsSlinky.babelTypes.babelTypesStrings.TSObjectKeyword
-import typingsSlinky.babelTypes.babelTypesStrings.TSOptionalType
-import typingsSlinky.babelTypes.babelTypesStrings.TSParenthesizedType
-import typingsSlinky.babelTypes.babelTypesStrings.TSRestType
-import typingsSlinky.babelTypes.babelTypesStrings.TSStringKeyword
-import typingsSlinky.babelTypes.babelTypesStrings.TSSymbolKeyword
-import typingsSlinky.babelTypes.babelTypesStrings.TSThisType
-import typingsSlinky.babelTypes.babelTypesStrings.TSTupleType
-import typingsSlinky.babelTypes.babelTypesStrings.TSTypeLiteral
-import typingsSlinky.babelTypes.babelTypesStrings.TSTypeOperator
-import typingsSlinky.babelTypes.babelTypesStrings.TSTypePredicate
-import typingsSlinky.babelTypes.babelTypesStrings.TSTypeQuery
-import typingsSlinky.babelTypes.babelTypesStrings.TSTypeReference
-import typingsSlinky.babelTypes.babelTypesStrings.TSUndefinedKeyword
-import typingsSlinky.babelTypes.babelTypesStrings.TSUnionType
-import typingsSlinky.babelTypes.babelTypesStrings.TSUnknownKeyword
-import typingsSlinky.babelTypes.babelTypesStrings.TSVoidKeyword
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -74,218 +40,76 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.TSExpressionWithTypeArguments_
   - typingsSlinky.babelTypes.mod.TSImportType_
 */
-trait TSType extends _Node
+trait TSType extends Node
 
 object TSType {
   @scala.inline
-  def TSUndefinedKeyword_(`type`: TSUndefinedKeyword): TSType = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSAnyKeyword_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSBooleanKeyword_(`type`: TSBooleanKeyword): TSType = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSArrayType_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSLiteralType_(literal: NumericLiteral_ | StringLiteral_ | BooleanLiteral_, `type`: TSLiteralType): TSType = {
-    val __obj = js.Dynamic.literal(literal = literal.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSBigIntKeyword_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSTupleType_(elementTypes: js.Array[TSType], `type`: TSTupleType): TSType = {
-    val __obj = js.Dynamic.literal(elementTypes = elementTypes.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSBooleanKeyword_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSConstructorType_(parameters: js.Array[Identifier_ | RestElement_], `type`: TSConstructorType): TSType = {
-    val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSConditionalType_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSIndexedAccessType_(indexType: TSType, objectType: TSType, `type`: TSIndexedAccessType): TSType = {
-    val __obj = js.Dynamic.literal(indexType = indexType.asInstanceOf[js.Any], objectType = objectType.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSConstructorType_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSBigIntKeyword_(`type`: TSBigIntKeyword): TSType = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSExpressionWithTypeArguments_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSNullKeyword_(`type`: TSNullKeyword): TSType = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSFunctionType_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSFunctionType_(parameters: js.Array[Identifier_ | RestElement_], `type`: TSFunctionType): TSType = {
-    val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSImportType_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSThisType_(`type`: TSThisType): TSType = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSIndexedAccessType_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSTypeLiteral_(members: js.Array[TSTypeElement], `type`: TSTypeLiteral): TSType = {
-    val __obj = js.Dynamic.literal(members = members.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSInferType_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSExpressionWithTypeArguments_(expression: TSEntityName, `type`: TSExpressionWithTypeArguments): TSType = {
-    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSIntersectionType_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSConditionalType_(
-    checkType: TSType,
-    extendsType: TSType,
-    falseType: TSType,
-    trueType: TSType,
-    `type`: TSConditionalType
-  ): TSType = {
-    val __obj = js.Dynamic.literal(checkType = checkType.asInstanceOf[js.Any], extendsType = extendsType.asInstanceOf[js.Any], falseType = falseType.asInstanceOf[js.Any], trueType = trueType.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSLiteralType_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSTypeQuery_(exprName: TSEntityName | TSImportType_, `type`: TSTypeQuery): TSType = {
-    val __obj = js.Dynamic.literal(exprName = exprName.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSMappedType_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSArrayType_(elementType: TSType, `type`: TSArrayType): TSType = {
-    val __obj = js.Dynamic.literal(elementType = elementType.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSNeverKeyword_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSNeverKeyword_(`type`: TSNeverKeyword): TSType = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSNullKeyword_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSTypeOperator_(operator: String, `type`: TSTypeOperator, typeAnnotation: TSType): TSType = {
-    val __obj = js.Dynamic.literal(operator = operator.asInstanceOf[js.Any], typeAnnotation = typeAnnotation.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSNumberKeyword_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSRestType_(`type`: TSRestType, typeAnnotation: TSType): TSType = {
-    val __obj = js.Dynamic.literal(typeAnnotation = typeAnnotation.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSObjectKeyword_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSVoidKeyword_(`type`: TSVoidKeyword): TSType = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSOptionalType_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSOptionalType_(`type`: TSOptionalType, typeAnnotation: TSType): TSType = {
-    val __obj = js.Dynamic.literal(typeAnnotation = typeAnnotation.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSParenthesizedType_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSIntersectionType_(`type`: TSIntersectionType, types: js.Array[TSType]): TSType = {
-    val __obj = js.Dynamic.literal(types = types.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSRestType_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSUnknownKeyword_(`type`: TSUnknownKeyword): TSType = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSStringKeyword_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSUnionType_(`type`: TSUnionType, types: js.Array[TSType]): TSType = {
-    val __obj = js.Dynamic.literal(types = types.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSSymbolKeyword_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSSymbolKeyword_(`type`: TSSymbolKeyword): TSType = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSThisType_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSObjectKeyword_(`type`: TSObjectKeyword): TSType = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSTupleType_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSTypeReference_(`type`: TSTypeReference, typeName: TSEntityName): TSType = {
-    val __obj = js.Dynamic.literal(typeName = typeName.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSTypeLiteral_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSStringKeyword_(`type`: TSStringKeyword): TSType = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSTypeOperator_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSAnyKeyword_(`type`: TSAnyKeyword): TSType = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSTypePredicate_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSNumberKeyword_(`type`: TSNumberKeyword): TSType = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSTypeQuery_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSMappedType_(`type`: TSMappedType, typeParameter: TSTypeParameter_): TSType = {
-    val __obj = js.Dynamic.literal(typeParameter = typeParameter.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSTypeReference_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSInferType_(`type`: TSInferType, typeParameter: TSTypeParameter_): TSType = {
-    val __obj = js.Dynamic.literal(typeParameter = typeParameter.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSUndefinedKeyword_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSParenthesizedType_(`type`: TSParenthesizedType, typeAnnotation: TSType): TSType = {
-    val __obj = js.Dynamic.literal(typeAnnotation = typeAnnotation.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSUnionType_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSTypePredicate_(parameterName: Identifier_ | TSThisType_, `type`: TSTypePredicate): TSType = {
-    val __obj = js.Dynamic.literal(parameterName = parameterName.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSUnknownKeyword_): TSType = value.asInstanceOf[TSType]
   @scala.inline
-  def TSImportType_(argument: StringLiteral_, `type`: TSImportType): TSType = {
-    val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSType]
-  }
+  implicit def apply(value: TSVoidKeyword_): TSType = value.asInstanceOf[TSType]
 }
 

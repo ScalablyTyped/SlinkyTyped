@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @js.native
 trait List
   extends Array[Input]
-     with _Input
+     with Input
 

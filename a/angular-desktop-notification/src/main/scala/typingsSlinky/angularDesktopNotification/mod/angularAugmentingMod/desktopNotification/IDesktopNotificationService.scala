@@ -2,7 +2,7 @@ package typingsSlinky.angularDesktopNotification.mod.angularAugmentingMod.deskto
 
 import org.scalajs.dom.experimental.NotificationOptions
 import typingsSlinky.angular.mod.IPromise
-import typingsSlinky.angularDesktopNotification.AnonDefault
+import typingsSlinky.angularDesktopNotification.anon.Default
 import typingsSlinky.std.NotificationPermission
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 // tslint:disable-next-line interface-name
 @js.native
 trait IDesktopNotificationService extends js.Object {
-  var permissions: AnonDefault = js.native
+  var permissions: Default = js.native
   /**
     * This method will get the current permission set in the browser which could be one of the ff.
     * - desktopNotification.permissions.default

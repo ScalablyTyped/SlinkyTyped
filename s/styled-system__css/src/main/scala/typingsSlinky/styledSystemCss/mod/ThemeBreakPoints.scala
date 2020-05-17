@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ThemeBreakPoints extends _Theme {
+trait ThemeBreakPoints extends Theme {
   var breakpoints: js.Array[Double | String] = js.native
 }
 

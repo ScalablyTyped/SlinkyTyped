@@ -14,11 +14,11 @@ package object mod {
     /* component */ js.Any, 
     slinky.core.ReactComponentClass[
       (typingsSlinky.materialUiCore.mod.Omit[
-        typingsSlinky.react.mod._Global_.JSX.LibraryManagedAttributes[_, typingsSlinky.materialUiCore.mod.PropsOf[_]], 
+        typingsSlinky.react.mod.global.JSX.LibraryManagedAttributes[_, typingsSlinky.materialUiCore.mod.PropsOf[_]], 
         /* keyof InjectedProps */ java.lang.String
       ]) with AdditionalProps
     ]
   ]
-  type PropsOf[C] = /* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements[C] */ js.Any
-  type StandardProps[C, ClassKey /* <: java.lang.String */, Removals /* <: /* keyof C */ java.lang.String */] = (typingsSlinky.materialUiCore.mod.Omit[C, typingsSlinky.materialUiCore.materialUiCoreStrings.classes | Removals]) with typingsSlinky.materialUiCore.withStylesMod.StyledComponentProps[ClassKey] with typingsSlinky.materialUiCore.AnonClassName
+  type PropsOf[C] = /* import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[C] */ js.Any
+  type StandardProps[C, ClassKey /* <: java.lang.String */, Removals /* <: /* keyof C */ java.lang.String */] = (typingsSlinky.materialUiCore.mod.Omit[C, typingsSlinky.materialUiCore.materialUiCoreStrings.classes | Removals]) with typingsSlinky.materialUiCore.withStylesMod.StyledComponentProps[ClassKey] with typingsSlinky.materialUiCore.anon.ClassName
 }

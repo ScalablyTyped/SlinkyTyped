@@ -1,18 +1,18 @@
 package typingsSlinky.angularMaterial.mod.angularAugmentingMod.material
 
-import typingsSlinky.angularMaterial.AnonMethods
+import typingsSlinky.angularMaterial.anon.Methods
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IDialogProvider extends js.Object {
-  def addPreset(presetName: String, presetOptions: AnonMethods): IDialogProvider = js.native
+  def addPreset(presetName: String, presetOptions: Methods): IDialogProvider = js.native
 }
 
 object IDialogProvider {
   @scala.inline
-  def apply(addPreset: (String, AnonMethods) => IDialogProvider): IDialogProvider = {
+  def apply(addPreset: (String, Methods) => IDialogProvider): IDialogProvider = {
     val __obj = js.Dynamic.literal(addPreset = js.Any.fromFunction2(addPreset))
     __obj.asInstanceOf[IDialogProvider]
   }
@@ -23,7 +23,7 @@ object IDialogProvider {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddPreset(value: (String, AnonMethods) => IDialogProvider): Self = {
+    def withAddPreset(value: (String, Methods) => IDialogProvider): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addPreset")(js.Any.fromFunction2(value))
         ret

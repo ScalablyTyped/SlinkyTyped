@@ -1,7 +1,8 @@
 package typingsSlinky.cypress.mochaMod
 
-import typingsSlinky.cypress.Mocha_.IContext
-import typingsSlinky.cypress.Mocha_.ISuite
+import typingsSlinky.cypress.Mocha.IContext
+import typingsSlinky.cypress.Mocha.ISuite
+import typingsSlinky.cypress.Mocha.Suite
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,10 +36,9 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("mocha", "Suite")
 @js.native
-class Suite_ protected ()
-  extends typingsSlinky.cypress.Mocha_.Suite_ {
+class Suite_ protected () extends Suite {
   def this(title: String) = this()
-  def this(title: String, parentContext: typingsSlinky.cypress.Mocha_.Context) = this()
+  def this(title: String, parentContext: typingsSlinky.cypress.Mocha.Context) = this()
   def this(title: String, parentContext: IContext) = this()
 }
 
@@ -47,7 +47,7 @@ class Suite_ protected ()
 @js.native
 object Suite_ extends js.Object {
   /** @deprecated Use the overload that accepts `Mocha.Suite` instead. */
-  def create(parent: ISuite, title: String): typingsSlinky.cypress.Mocha_.Suite_ = js.native
+  def create(parent: ISuite, title: String): Suite = js.native
   /**
     * Create a new `Suite` with the given `title` and parent `Suite`. When a suite
     * with the same title is already present, that suite is returned to provide
@@ -55,6 +55,6 @@ object Suite_ extends js.Object {
     *
     * @see https://mochajs.org/api/mocha#.exports.create
     */
-  def create(parent: typingsSlinky.cypress.Mocha_.Suite_, title: String): typingsSlinky.cypress.Mocha_.Suite_ = js.native
+  def create(parent: Suite, title: String): Suite = js.native
 }
 

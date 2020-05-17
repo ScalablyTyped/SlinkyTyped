@@ -4,11 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Infragistics.IgValidatorLengthRule")
 @js.native
-class IgValidatorLengthRule protected () extends js.Object {
-  def this(formatItems: js.Array[_]) = this()
-  def this(name: String) = this()
+trait IgValidatorLengthRule extends js.Object {
   /**
   	 * Formats an error message using rule-specific values (usually from formatItems).
   	 *
@@ -30,5 +27,57 @@ class IgValidatorLengthRule protected () extends js.Object {
   	 * @param value The stringified value to check.
   	 */
   def shouldRun(options: js.Object, value: String): Boolean = js.native
+}
+
+object IgValidatorLengthRule {
+  @scala.inline
+  def apply(
+    formatMessage: String => String,
+    getMessageType: () => Unit,
+    getRuleMessage: js.Object => String,
+    isValid: (js.Object, js.Object) => Unit,
+    shouldRun: (js.Object, String) => Boolean
+  ): IgValidatorLengthRule = {
+    val __obj = js.Dynamic.literal(formatMessage = js.Any.fromFunction1(formatMessage), getMessageType = js.Any.fromFunction0(getMessageType), getRuleMessage = js.Any.fromFunction1(getRuleMessage), isValid = js.Any.fromFunction2(isValid), shouldRun = js.Any.fromFunction2(shouldRun))
+    __obj.asInstanceOf[IgValidatorLengthRule]
+  }
+  @scala.inline
+  implicit class IgValidatorLengthRuleOps[Self <: IgValidatorLengthRule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormatMessage(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatMessage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetMessageType(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMessageType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRuleMessage(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRuleMessage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsValid(value: (js.Object, js.Object) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isValid")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withShouldRun(value: (js.Object, String) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldRun")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

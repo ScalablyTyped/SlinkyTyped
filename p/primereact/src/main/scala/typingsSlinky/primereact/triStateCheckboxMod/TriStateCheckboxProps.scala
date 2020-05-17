@@ -1,6 +1,6 @@
 package typingsSlinky.primereact.triStateCheckboxMod
 
-import typingsSlinky.primereact.AnonValueBoolean
+import typingsSlinky.primereact.anon.ValueBoolean
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +13,7 @@ trait TriStateCheckboxProps extends js.Object {
   var id: js.UndefOr[String] = js.native
   var inputId: js.UndefOr[String] = js.native
   var name: js.UndefOr[String] = js.native
-  var onChange: js.UndefOr[js.Function1[/* e */ AnonValueBoolean, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* e */ ValueBoolean, Unit]] = js.native
   var style: js.UndefOr[js.Object] = js.native
   var tooltip: js.UndefOr[js.Any] = js.native
   var tooltipOptions: js.UndefOr[TooltipOptions] = js.native
@@ -93,7 +93,7 @@ object TriStateCheckboxProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* e */ AnonValueBoolean => Unit): Self = {
+    def withOnChange(value: /* e */ ValueBoolean => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

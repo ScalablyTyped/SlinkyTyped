@@ -1,7 +1,7 @@
 package typingsSlinky.griddleReact.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.griddleReact.AnonFilterPlaceholder
+import typingsSlinky.griddleReact.anon.FilterPlaceholder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait GriddleInitialState
     ]
   ] = js.native
   var sortProperties: js.UndefOr[js.Array[GriddleSortKey]] = js.native
-  var textProperties: js.UndefOr[AnonFilterPlaceholder] = js.native
+  var textProperties: js.UndefOr[FilterPlaceholder] = js.native
 }
 
 object GriddleInitialState {
@@ -86,7 +86,7 @@ object GriddleInitialState {
         ret
     }
     @scala.inline
-    def withTextProperties(value: AnonFilterPlaceholder): Self = {
+    def withTextProperties(value: FilterPlaceholder): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("textProperties")(value.asInstanceOf[js.Any])
         ret

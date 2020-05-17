@@ -1,23 +1,23 @@
 package typingsSlinky.diagnosticChannelPublishers.pgPubMod
 
-import typingsSlinky.diagnosticChannelPublishers.AnonPlan
-import typingsSlinky.diagnosticChannelPublishers.AnonPort
+import typingsSlinky.diagnosticChannelPublishers.anon.Plan
+import typingsSlinky.diagnosticChannelPublishers.anon.Port
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IPostgresData extends js.Object {
-  var database: AnonPort = js.native
+  var database: Port = js.native
   var duration: Double = js.native
   var error: js.UndefOr[js.Error] = js.native
-  var query: AnonPlan = js.native
+  var query: Plan = js.native
   var result: js.UndefOr[IPostgresResult] = js.native
 }
 
 object IPostgresData {
   @scala.inline
-  def apply(database: AnonPort, duration: Double, query: AnonPlan): IPostgresData = {
+  def apply(database: Port, duration: Double, query: Plan): IPostgresData = {
     val __obj = js.Dynamic.literal(database = database.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any], query = query.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPostgresData]
   }
@@ -28,7 +28,7 @@ object IPostgresData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDatabase(value: AnonPort): Self = {
+    def withDatabase(value: Port): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("database")(value.asInstanceOf[js.Any])
         ret
@@ -40,7 +40,7 @@ object IPostgresData {
         ret
     }
     @scala.inline
-    def withQuery(value: AnonPlan): Self = {
+    def withQuery(value: Plan): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
         ret

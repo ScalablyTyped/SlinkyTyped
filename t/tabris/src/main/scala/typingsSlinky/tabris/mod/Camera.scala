@@ -1,8 +1,8 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.AnonFlash
-import typingsSlinky.tabris.AnonHeight
-import typingsSlinky.tabris.AnonWidth
+import typingsSlinky.tabris.anon.Flash
+import typingsSlinky.tabris.anon.Height
+import typingsSlinky.tabris.anon.Width
 import typingsSlinky.tabris.tabrisStrings.active
 import typingsSlinky.tabris.tabrisStrings.back
 import typingsSlinky.tabris.tabrisStrings.captureResolution
@@ -27,7 +27,7 @@ class Camera protected () extends NativeObject {
     * An array of resolutions supported by the camera. Each array entry is an object consisting of `width`
     * and `height`. Eg.: `{width: 4000, height: 3000}
     */
-  val availableCaptureResolutions: js.Array[AnonWidth] = js.native
+  val availableCaptureResolutions: js.Array[Width] = js.native
   /**
     * The id of the device camera given by the native platform.
     * @constant
@@ -45,7 +45,7 @@ class Camera protected () extends NativeObject {
     * When setting the `captureResolution` on the iOS platform, a small grace period should pass before
     * capturing an image. Otherwise the image might turn out incorrectly exposed.
     */
-  var captureResolution: AnonWidth = js.native
+  var captureResolution: Width = js.native
   /**
     * Fired when the [*active*](#active) property has changed.
     */
@@ -71,7 +71,7 @@ class Camera protected () extends NativeObject {
     * property describing the dimensions of the captured image.
     * @param options A set of capture options to apply when taking a picture.
     */
-  def captureImage(): js.Promise[AnonHeight] = js.native
-  def captureImage(options: AnonFlash): js.Promise[AnonHeight] = js.native
+  def captureImage(): js.Promise[Height] = js.native
+  def captureImage(options: Flash): js.Promise[Height] = js.native
 }
 

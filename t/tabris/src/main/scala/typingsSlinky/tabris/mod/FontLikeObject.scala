@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait FontLikeObject extends _FontValue {
+trait FontLikeObject extends FontValue {
   var family: js.UndefOr[js.Array[String]] = js.native
   var size: Double = js.native
   var style: js.UndefOr[FontStyle] = js.native

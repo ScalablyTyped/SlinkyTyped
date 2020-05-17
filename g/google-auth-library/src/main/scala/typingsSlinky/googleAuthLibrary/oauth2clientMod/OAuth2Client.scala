@@ -3,7 +3,7 @@ package typingsSlinky.googleAuthLibrary.oauth2clientMod
 import typingsSlinky.gaxios.commonMod.GaxiosOptions
 import typingsSlinky.gaxios.commonMod.GaxiosPromise
 import typingsSlinky.gaxios.commonMod.GaxiosResponse
-import typingsSlinky.googleAuthLibrary.AnonCodeChallenge
+import typingsSlinky.googleAuthLibrary.anon.CodeChallenge
 import typingsSlinky.googleAuthLibrary.authclientMod.AuthClient
 import typingsSlinky.googleAuthLibrary.loginticketMod.LoginTicket
 import typingsSlinky.googleAuthLibrary.transportersMod.BodyResponseCallback
@@ -57,7 +57,7 @@ class OAuth2Client () extends AuthClient {
     * resulting SHA256. If used, this must be paired with a S256
     * code_challenge_method.
     */
-  def generateCodeVerifierAsync(): js.Promise[AnonCodeChallenge] = js.native
+  def generateCodeVerifierAsync(): js.Promise[CodeChallenge] = js.native
   /**
     * Get a non-expired access token, after refreshing if necessary
     *

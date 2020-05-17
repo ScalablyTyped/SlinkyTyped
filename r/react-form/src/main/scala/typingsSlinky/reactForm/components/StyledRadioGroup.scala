@@ -3,7 +3,7 @@ package typingsSlinky.reactForm.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactText
-import typingsSlinky.reactForm.StyledPropschildrenpropsF
+import typingsSlinky.reactForm.anon.StyledPropschildrenpropsF
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

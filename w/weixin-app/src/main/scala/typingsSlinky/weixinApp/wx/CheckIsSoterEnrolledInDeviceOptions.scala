@@ -1,6 +1,6 @@
 package typingsSlinky.weixinApp.wx
 
-import typingsSlinky.weixinApp.AnonIsEnrolled
+import typingsSlinky.weixinApp.anon.IsEnrolled
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait CheckIsSoterEnrolledInDeviceOptions
   var checkAuthMode: AuthModes = js.native
    // 认证方式
   @JSName("success")
-  var success_CheckIsSoterEnrolledInDeviceOptions: js.UndefOr[js.Function1[/* res */ AnonIsEnrolled, Unit]] = js.native
+  var success_CheckIsSoterEnrolledInDeviceOptions: js.UndefOr[js.Function1[/* res */ IsEnrolled, Unit]] = js.native
 }
 
 object CheckIsSoterEnrolledInDeviceOptions {
@@ -33,7 +33,7 @@ object CheckIsSoterEnrolledInDeviceOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonIsEnrolled => Unit): Self = {
+    def withSuccess(value: /* res */ IsEnrolled => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

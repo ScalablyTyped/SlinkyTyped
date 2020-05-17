@@ -4,8 +4,8 @@ import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.File
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.ProgressEvent
-import typingsSlinky.babylonjs.AnonCrossOrigin
 import typingsSlinky.babylonjs.ImageBitmap
+import typingsSlinky.babylonjs.anon.CrossOrigin
 import typingsSlinky.babylonjs.fileRequestMod.IFileRequest
 import typingsSlinky.babylonjs.iofflineproviderMod.IOfflineProvider
 import typingsSlinky.babylonjs.typesMod.Nullable
@@ -282,7 +282,7 @@ object FileTools extends js.Object {
     * @param url define the url we are trying
     * @param element define the dom element where to configure the cors policy
     */
-  def SetCorsBehavior(url: String, element: AnonCrossOrigin): Unit = js.native
-  def SetCorsBehavior(url: js.Array[String], element: AnonCrossOrigin): Unit = js.native
+  def SetCorsBehavior(url: String, element: CrossOrigin): Unit = js.native
+  def SetCorsBehavior(url: js.Array[String], element: CrossOrigin): Unit = js.native
 }
 

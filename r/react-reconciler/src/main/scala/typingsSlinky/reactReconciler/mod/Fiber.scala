@@ -1,6 +1,6 @@
 package typingsSlinky.reactReconciler.mod
 
-import typingsSlinky.reactReconciler.AnonStringRef
+import typingsSlinky.reactReconciler.anon.StringRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -70,7 +70,7 @@ trait Fiber extends js.Object {
   var pendingProps: js.Any = js.native
   // The ref last used to attach this node.
   // I'll avoid adding an owner field for prod and model that as functions.
-  var ref: Null | ((js.Function1[/* handle */ js.Any, Unit]) with AnonStringRef) | RefObject = js.native
+  var ref: Null | ((js.Function1[/* handle */ js.Any, Unit]) with StringRef) | RefObject = js.native
   // Conceptual aliases
   // parent : Instance -> return The parent happens to be the same as the
   // return fiber since we've merged the fiber and instance.
@@ -375,7 +375,7 @@ object Fiber {
         ret
     }
     @scala.inline
-    def withRef(value: ((js.Function1[/* handle */ js.Any, Unit]) with AnonStringRef) | RefObject): Self = {
+    def withRef(value: ((js.Function1[/* handle */ js.Any, Unit]) with StringRef) | RefObject): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
         ret

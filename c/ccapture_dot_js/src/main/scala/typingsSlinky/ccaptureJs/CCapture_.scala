@@ -2,15 +2,12 @@ package typingsSlinky.ccaptureJs
 
 import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.ccaptureJs.CCapture.Settings
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("CCapture")
 @js.native
-class CCapture_ protected () extends js.Object {
-  def this(settings: Settings) = this()
+trait CCapture_ extends js.Object {
   def capture(canvas: HTMLElement): Unit = js.native
   def save(): Unit = js.native
   def save(cb: js.Function1[/* blob */ Blob, Unit]): Unit = js.native

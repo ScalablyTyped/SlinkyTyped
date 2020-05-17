@@ -1,6 +1,6 @@
 package typingsSlinky.materialUiCore.reactHelpersMod
 
-import typingsSlinky.materialUiCore.StandardPropsnevernever
+import typingsSlinky.materialUiCore.anon.StandardPropsnevernever
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,18 +1,18 @@
 package typingsSlinky.wxServerSdk.mod
 
-import typingsSlinky.wxServerSdk.AnonUpdated
+import typingsSlinky.wxServerSdk.anon.Updated
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait UpateCollectionResult extends js.Object {
-  var stats: AnonUpdated = js.native
+  var stats: Updated = js.native
 }
 
 object UpateCollectionResult {
   @scala.inline
-  def apply(stats: AnonUpdated): UpateCollectionResult = {
+  def apply(stats: Updated): UpateCollectionResult = {
     val __obj = js.Dynamic.literal(stats = stats.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpateCollectionResult]
   }
@@ -23,7 +23,7 @@ object UpateCollectionResult {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withStats(value: AnonUpdated): Self = {
+    def withStats(value: Updated): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
         ret

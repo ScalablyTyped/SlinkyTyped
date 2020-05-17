@@ -1,6 +1,6 @@
 package typingsSlinky.winrt.Windows.Data.Json
 
-import typingsSlinky.winrt.AnonResultSucceeded
+import typingsSlinky.winrt.anon.Result
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait IJsonValueStatics extends js.Object {
   def createNumberValue(input: Double): JsonValue = js.native
   def createStringValue(input: String): JsonValue = js.native
   def parse(input: String): JsonValue = js.native
-  def tryParse(input: String): AnonResultSucceeded = js.native
+  def tryParse(input: String): Result = js.native
 }
 
 object IJsonValueStatics {
@@ -21,7 +21,7 @@ object IJsonValueStatics {
     createNumberValue: Double => JsonValue,
     createStringValue: String => JsonValue,
     parse: String => JsonValue,
-    tryParse: String => AnonResultSucceeded
+    tryParse: String => Result
   ): IJsonValueStatics = {
     val __obj = js.Dynamic.literal(createBooleanValue = js.Any.fromFunction1(createBooleanValue), createNumberValue = js.Any.fromFunction1(createNumberValue), createStringValue = js.Any.fromFunction1(createStringValue), parse = js.Any.fromFunction1(parse), tryParse = js.Any.fromFunction1(tryParse))
     __obj.asInstanceOf[IJsonValueStatics]
@@ -57,7 +57,7 @@ object IJsonValueStatics {
         ret
     }
     @scala.inline
-    def withTryParse(value: String => AnonResultSucceeded): Self = {
+    def withTryParse(value: String => Result): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tryParse")(js.Any.fromFunction1(value))
         ret

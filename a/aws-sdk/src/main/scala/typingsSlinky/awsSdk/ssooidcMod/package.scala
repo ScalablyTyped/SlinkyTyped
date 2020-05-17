@@ -24,10 +24,4 @@ package object ssooidcMod {
   type TokenType = java.lang.String
   type URI = java.lang.String
   type UserCode = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2019-06-10`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.ssooidcMod._apiVersion | java.lang.String
 }

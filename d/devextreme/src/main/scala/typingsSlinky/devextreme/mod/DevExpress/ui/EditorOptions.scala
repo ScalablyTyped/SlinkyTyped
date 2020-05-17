@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonJQueryEvent
+import typingsSlinky.devextreme.anon.JQueryEvent
 import typingsSlinky.devextreme.devextremeStrings.always
 import typingsSlinky.devextreme.devextremeStrings.auto
 import typingsSlinky.devextreme.devextremeStrings.invalid
@@ -15,7 +15,7 @@ trait EditorOptions[T] extends WidgetOptions[T] {
   /** Specifies or indicates whether the editor's value is valid. */
   var isValid: js.UndefOr[Boolean] = js.native
   /** A function that is executed after the widget's value is changed. */
-  var onValueChanged: js.UndefOr[js.Function1[/* e */ AnonJQueryEvent[T], _]] = js.native
+  var onValueChanged: js.UndefOr[js.Function1[/* e */ JQueryEvent[T], _]] = js.native
   /** Specifies whether the editor is read-only. */
   var readOnly: js.UndefOr[Boolean] = js.native
   /** Information on the broken validation rule. Contains the first item from the validationErrors array. */
@@ -55,7 +55,7 @@ object EditorOptions {
         ret
     }
     @scala.inline
-    def withOnValueChanged(value: /* e */ AnonJQueryEvent[T] => _): Self[T] = {
+    def withOnValueChanged(value: /* e */ JQueryEvent[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onValueChanged")(js.Any.fromFunction1(value))
         ret

@@ -1,8 +1,8 @@
 package typingsSlinky.grommet.worldMapMod
 
-import typingsSlinky.grommet.AnonLight
-import typingsSlinky.grommet.AnonLocation
-import typingsSlinky.grommet.AnonName
+import typingsSlinky.grommet.anon.Light
+import typingsSlinky.grommet.anon.Location
+import typingsSlinky.grommet.anon.Name
 import typingsSlinky.grommet.utilsMod.A11yTitleType
 import typingsSlinky.grommet.utilsMod.AlignSelfType
 import typingsSlinky.grommet.utilsMod.ColorType
@@ -18,13 +18,13 @@ trait WorldMapProps extends js.Object {
   var a11yTitle: js.UndefOr[A11yTitleType] = js.native
   var alignSelf: js.UndefOr[AlignSelfType] = js.native
   var color: js.UndefOr[ColorType] = js.native
-  var continents: js.UndefOr[js.Array[AnonName]] = js.native
+  var continents: js.UndefOr[js.Array[Name]] = js.native
   var fill: js.UndefOr[FillType] = js.native
   var gridArea: js.UndefOr[GridAreaType] = js.native
-  var hoverColor: js.UndefOr[String | AnonLight] = js.native
+  var hoverColor: js.UndefOr[String | Light] = js.native
   var margin: js.UndefOr[MarginType] = js.native
   var onSelectPlace: js.UndefOr[js.Function1[/* place */ js.Array[Double], Unit]] = js.native
-  var places: js.UndefOr[js.Array[AnonLocation]] = js.native
+  var places: js.UndefOr[js.Array[Location]] = js.native
 }
 
 object WorldMapProps {
@@ -76,7 +76,7 @@ object WorldMapProps {
         ret
     }
     @scala.inline
-    def withContinents(value: js.Array[AnonName]): Self = {
+    def withContinents(value: js.Array[Name]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("continents")(value.asInstanceOf[js.Any])
         ret
@@ -112,7 +112,7 @@ object WorldMapProps {
         ret
     }
     @scala.inline
-    def withHoverColor(value: String | AnonLight): Self = {
+    def withHoverColor(value: String | Light): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hoverColor")(value.asInstanceOf[js.Any])
         ret
@@ -148,7 +148,7 @@ object WorldMapProps {
         ret
     }
     @scala.inline
-    def withPlaces(value: js.Array[AnonLocation]): Self = {
+    def withPlaces(value: js.Array[Location]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("places")(value.asInstanceOf[js.Any])
         ret

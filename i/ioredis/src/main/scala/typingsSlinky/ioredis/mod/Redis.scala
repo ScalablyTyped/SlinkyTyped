@@ -1,5 +1,6 @@
 package typingsSlinky.ioredis.mod
 
+import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.std.PromiseConstructor
 import scala.scalajs.js
@@ -11,7 +12,19 @@ trait Redis
   extends EventEmitter
      with Commander
      with Commands {
-  var Promise: PromiseConstructor = js.native
+  var Promise: PromiseConstructor with (Instantiable1[
+    /* executor */ js.Function2[
+      /* resolve */ js.Function1[
+        /* value */ js.UndefOr[
+          (/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any) | (js.Thenable[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any])
+        ], 
+        Unit
+      ], 
+      /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
+      Unit
+    ], 
+    typingsSlinky.std.global.Promise[js.Object]
+  ]) = js.native
   var status: String = js.native
   def connect(): js.Promise[Unit] = js.native
   def connect(callback: js.Function0[Unit]): js.Promise[Unit] = js.native

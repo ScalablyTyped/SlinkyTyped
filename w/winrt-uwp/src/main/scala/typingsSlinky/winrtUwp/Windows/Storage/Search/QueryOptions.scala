@@ -10,21 +10,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Specifies the parameters of a search query for enumerating the contents of storage folders. */
-@JSGlobal("Windows.Storage.Search.QueryOptions")
 @js.native
-/** Creates an instance of the QueryOptions class for enumerating storage items, and initializes it with the following default settings: QueryOptions.FolderDepth gets FolderDepth.Shallow and QueryOptions.IndexerOption gets IndexerOption.DoNotUseIndexer . */
-class QueryOptions () extends js.Object {
-  /**
-    * Creates an instance of the QueryOptions class for enumerating subfolders and initializes it with values based on the specified CommonFolderQuery .
-    * @param query An enumeration value that specifies how to group the contents of the folder where the query is created into subfolders to enumerate. The subfolders that are retrieved using a CommonFolderQuery can be actual file system folders or virtual folders that represent groups of files (which are determined by the CommonFolderQuery value). For example, the CommonFolderQuery.GroupByArtist uses the Artist of the files in the folder (and its subfolders) to group files, creating one virtual folder (or file group) for each artist.
-    */
-  def this(query: CommonFolderQuery) = this()
-  /**
-    * Creates an instance of the QueryOptions class for enumerating files and initializes it with values provided by the specified CommonFileQuery and an optional file type filter that determines which files to include in query results.
-    * @param query An enumeration value that specifies the search parameters to use to query files.
-    * @param fileTypeFilter An array of file types to be included in the query results. To include all file types, supply null or an array containing a single entry of "*".
-    */
-  def this(query: CommonFileQuery, fileTypeFilter: IIterable[String]) = this()
+trait QueryOptions extends js.Object {
   /** Gets or sets an application-defined Advanced Query Syntax (AQS) string for filtering files by keywords or properties. This property is combined with the UserSearchFilter to create the query's search filter. */
   var applicationSearchFilter: String = js.native
   /** Gets the unit of time used to group files into folders if the QueryOptions object was created with a CommonFolderQuery based on date. For example, if CommonFolderQuery.GroupByYear is used to create a QueryOptions object, the value of this property is DateStackOption.Year . */
@@ -68,5 +55,120 @@ class QueryOptions () extends js.Object {
     * @param options The enum value that describes the desired behavior to use to retrieve the thumbnail image. The specified behavior might affect the size and/or quality of the image and how quickly the thumbnail image is retrieved.
     */
   def setThumbnailPrefetch(mode: ThumbnailMode, requestedSize: Double, options: ThumbnailOptions): Unit = js.native
+}
+
+object QueryOptions {
+  @scala.inline
+  def apply(
+    applicationSearchFilter: String,
+    dateStackOption: DateStackOption,
+    fileTypeFilter: IVector[String],
+    folderDepth: FolderDepth,
+    groupPropertyName: String,
+    indexerOption: IndexerOption,
+    language: String,
+    loadFromString: String => Unit,
+    saveToString: () => String,
+    setPropertyPrefetch: (PropertyPrefetchOptions, IIterable[String]) => Unit,
+    setThumbnailPrefetch: (ThumbnailMode, Double, ThumbnailOptions) => Unit,
+    sortOrder: IVector[SortEntry],
+    storageProviderIdFilter: IVector[String],
+    userSearchFilter: String
+  ): QueryOptions = {
+    val __obj = js.Dynamic.literal(applicationSearchFilter = applicationSearchFilter.asInstanceOf[js.Any], dateStackOption = dateStackOption.asInstanceOf[js.Any], fileTypeFilter = fileTypeFilter.asInstanceOf[js.Any], folderDepth = folderDepth.asInstanceOf[js.Any], groupPropertyName = groupPropertyName.asInstanceOf[js.Any], indexerOption = indexerOption.asInstanceOf[js.Any], language = language.asInstanceOf[js.Any], loadFromString = js.Any.fromFunction1(loadFromString), saveToString = js.Any.fromFunction0(saveToString), setPropertyPrefetch = js.Any.fromFunction2(setPropertyPrefetch), setThumbnailPrefetch = js.Any.fromFunction3(setThumbnailPrefetch), sortOrder = sortOrder.asInstanceOf[js.Any], storageProviderIdFilter = storageProviderIdFilter.asInstanceOf[js.Any], userSearchFilter = userSearchFilter.asInstanceOf[js.Any])
+    __obj.asInstanceOf[QueryOptions]
+  }
+  @scala.inline
+  implicit class QueryOptionsOps[Self <: QueryOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationSearchFilter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationSearchFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDateStackOption(value: DateStackOption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateStackOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFileTypeFilter(value: IVector[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileTypeFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFolderDepth(value: FolderDepth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("folderDepth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGroupPropertyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupPropertyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIndexerOption(value: IndexerOption): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexerOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoadFromString(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadFromString")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSaveToString(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("saveToString")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetPropertyPrefetch(value: (PropertyPrefetchOptions, IIterable[String]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setPropertyPrefetch")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetThumbnailPrefetch(value: (ThumbnailMode, Double, ThumbnailOptions) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setThumbnailPrefetch")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withSortOrder(value: IVector[SortEntry]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortOrder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStorageProviderIdFilter(value: IVector[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storageProviderIdFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserSearchFilter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userSearchFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

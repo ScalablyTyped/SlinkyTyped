@@ -1,9 +1,9 @@
 package typingsSlinky.awsSdk.dmsMod
 
-import typingsSlinky.awsSdk.DescribeConnectionsMessag
-import typingsSlinky.awsSdk.DescribeEndpointsMessagew
-import typingsSlinky.awsSdk.DescribeReplicationInstan
-import typingsSlinky.awsSdk.DescribeReplicationTasksM
+import typingsSlinky.awsSdk.anon.DescribeConnectionsMessag
+import typingsSlinky.awsSdk.anon.DescribeEndpointsMessagew
+import typingsSlinky.awsSdk.anon.DescribeReplicationInstan
+import typingsSlinky.awsSdk.anon.DescribeReplicationTasksM
 import typingsSlinky.awsSdk.awsSdkStrings.endpointDeleted
 import typingsSlinky.awsSdk.awsSdkStrings.replicationInstanceAvailable
 import typingsSlinky.awsSdk.awsSdkStrings.replicationInstanceDeleted

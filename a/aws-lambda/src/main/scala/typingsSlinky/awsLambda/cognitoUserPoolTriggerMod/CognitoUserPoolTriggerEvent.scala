@@ -1,8 +1,8 @@
 package typingsSlinky.awsLambda.cognitoUserPoolTriggerMod
 
-import typingsSlinky.awsLambda.AnonAnswerCorrect
-import typingsSlinky.awsLambda.AnonAwsSdkVersion
-import typingsSlinky.awsLambda.AnonChallengeAnswer
+import typingsSlinky.awsLambda.anon.AnswerCorrect
+import typingsSlinky.awsLambda.anon.AwsSdkVersion
+import typingsSlinky.awsLambda.anon.ChallengeAnswer
 import typingsSlinky.awsLambda.awsLambdaStrings.CreateAuthChallenge_Authentication
 import typingsSlinky.awsLambda.awsLambdaStrings.CustomMessage_AdminCreateUser
 import typingsSlinky.awsLambda.awsLambdaStrings.CustomMessage_Authentication
@@ -33,10 +33,10 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait CognitoUserPoolTriggerEvent extends js.Object {
-  var callerContext: AnonAwsSdkVersion = js.native
+  var callerContext: AwsSdkVersion = js.native
   var region: String = js.native
-  var request: AnonChallengeAnswer = js.native
-  var response: AnonAnswerCorrect = js.native
+  var request: ChallengeAnswer = js.native
+  var response: AnswerCorrect = js.native
   var triggerSource: PreSignUp_SignUp | PreSignUp_ExternalProvider | PostConfirmation_ConfirmSignUp | PreAuthentication_Authentication | PostAuthentication_Authentication | CustomMessage_SignUp | CustomMessage_AdminCreateUser | CustomMessage_ResendCode | CustomMessage_ForgotPassword | CustomMessage_UpdateUserAttribute | CustomMessage_VerifyUserAttribute | CustomMessage_Authentication | DefineAuthChallenge_Authentication | CreateAuthChallenge_Authentication | VerifyAuthChallengeResponse_Authentication | PreSignUp_AdminCreateUser | PostConfirmation_ConfirmForgotPassword | TokenGeneration_HostedAuth | TokenGeneration_Authentication | TokenGeneration_NewPasswordChallenge | TokenGeneration_AuthenticateDevice | TokenGeneration_RefreshTokens | UserMigration_Authentication | UserMigration_ForgotPassword = js.native
   var userName: js.UndefOr[String] = js.native
   var userPoolId: String = js.native
@@ -46,10 +46,10 @@ trait CognitoUserPoolTriggerEvent extends js.Object {
 object CognitoUserPoolTriggerEvent {
   @scala.inline
   def apply(
-    callerContext: AnonAwsSdkVersion,
+    callerContext: AwsSdkVersion,
     region: String,
-    request: AnonChallengeAnswer,
-    response: AnonAnswerCorrect,
+    request: ChallengeAnswer,
+    response: AnswerCorrect,
     triggerSource: PreSignUp_SignUp | PreSignUp_ExternalProvider | PostConfirmation_ConfirmSignUp | PreAuthentication_Authentication | PostAuthentication_Authentication | CustomMessage_SignUp | CustomMessage_AdminCreateUser | CustomMessage_ResendCode | CustomMessage_ForgotPassword | CustomMessage_UpdateUserAttribute | CustomMessage_VerifyUserAttribute | CustomMessage_Authentication | DefineAuthChallenge_Authentication | CreateAuthChallenge_Authentication | VerifyAuthChallengeResponse_Authentication | PreSignUp_AdminCreateUser | PostConfirmation_ConfirmForgotPassword | TokenGeneration_HostedAuth | TokenGeneration_Authentication | TokenGeneration_NewPasswordChallenge | TokenGeneration_AuthenticateDevice | TokenGeneration_RefreshTokens | UserMigration_Authentication | UserMigration_ForgotPassword,
     userPoolId: String,
     version: Double
@@ -64,7 +64,7 @@ object CognitoUserPoolTriggerEvent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCallerContext(value: AnonAwsSdkVersion): Self = {
+    def withCallerContext(value: AwsSdkVersion): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("callerContext")(value.asInstanceOf[js.Any])
         ret
@@ -76,13 +76,13 @@ object CognitoUserPoolTriggerEvent {
         ret
     }
     @scala.inline
-    def withRequest(value: AnonChallengeAnswer): Self = {
+    def withRequest(value: ChallengeAnswer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withResponse(value: AnonAnswerCorrect): Self = {
+    def withResponse(value: AnswerCorrect): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
         ret

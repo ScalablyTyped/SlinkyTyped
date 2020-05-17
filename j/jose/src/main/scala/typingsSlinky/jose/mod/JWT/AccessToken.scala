@@ -19,12 +19,11 @@ object AccessToken extends js.Object {
     key: ConsumeKeyInputWithNone,
     options: VerifyOptions[`false`] with VerifyProfileOptions[atPlussignJWT]
   ): js.Object = js.native
-  def verify(jwt: String, key: NoneKey, options: VerifyOptions[`true`] with VerifyProfileOptions[atPlussignJWT]): completeResult[NoneKey] = js.native
-  @JSName("verify")
-  def verify_completeResult(
+  def verify(
     jwt: String,
     key: ConsumeKeyInput,
     options: VerifyOptions[`true`] with VerifyProfileOptions[atPlussignJWT]
   ): completeResult[Key] = js.native
+  def verify(jwt: String, key: NoneKey, options: VerifyOptions[`true`] with VerifyProfileOptions[atPlussignJWT]): completeResult[NoneKey] = js.native
 }
 

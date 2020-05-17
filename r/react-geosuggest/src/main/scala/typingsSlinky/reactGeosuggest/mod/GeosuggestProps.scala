@@ -3,7 +3,7 @@ package typingsSlinky.reactGeosuggest.mod
 import typingsSlinky.googlemaps.google.maps.LatLng
 import typingsSlinky.googlemaps.google.maps.LatLngBounds
 import typingsSlinky.googlemaps.google.maps.places.AutocompletePrediction
-import typingsSlinky.reactGeosuggest.Typeofmaps
+import typingsSlinky.reactGeosuggest.anon.Typeofmaps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -255,7 +255,7 @@ object IgVideoPlayer {
         ret
     }
     @scala.inline
-    def withBannerClick(value: (/* event */ Event_, /* ui */ BannerClickEventUIParam) => Unit): Self = {
+    def withBannerClick(value: (/* event */ Event, /* ui */ BannerClickEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bannerClick")(js.Any.fromFunction2(value))
         ret
@@ -267,7 +267,7 @@ object IgVideoPlayer {
         ret
     }
     @scala.inline
-    def withBannerHidden(value: (/* event */ Event_, /* ui */ BannerHiddenEventUIParam) => Unit): Self = {
+    def withBannerHidden(value: (/* event */ Event, /* ui */ BannerHiddenEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bannerHidden")(js.Any.fromFunction2(value))
         ret
@@ -279,7 +279,7 @@ object IgVideoPlayer {
         ret
     }
     @scala.inline
-    def withBannerVisible(value: (/* event */ Event_, /* ui */ BannerVisibleEventUIParam) => Unit): Self = {
+    def withBannerVisible(value: (/* event */ Event, /* ui */ BannerVisibleEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bannerVisible")(js.Any.fromFunction2(value))
         ret
@@ -303,7 +303,7 @@ object IgVideoPlayer {
         ret
     }
     @scala.inline
-    def withBookmarkClick(value: (/* event */ Event_, /* ui */ BookmarkClickEventUIParam) => Unit): Self = {
+    def withBookmarkClick(value: (/* event */ Event, /* ui */ BookmarkClickEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bookmarkClick")(js.Any.fromFunction2(value))
         ret
@@ -315,7 +315,7 @@ object IgVideoPlayer {
         ret
     }
     @scala.inline
-    def withBookmarkHit(value: (/* event */ Event_, /* ui */ BookmarkHitEventUIParam) => Unit): Self = {
+    def withBookmarkHit(value: (/* event */ Event, /* ui */ BookmarkHitEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bookmarkHit")(js.Any.fromFunction2(value))
         ret
@@ -351,7 +351,7 @@ object IgVideoPlayer {
         ret
     }
     @scala.inline
-    def withBrowserNotSupported(value: (/* event */ Event_, /* ui */ BrowserNotSupportedEventUIParam) => Unit): Self = {
+    def withBrowserNotSupported(value: (/* event */ Event, /* ui */ BrowserNotSupportedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("browserNotSupported")(js.Any.fromFunction2(value))
         ret
@@ -363,7 +363,7 @@ object IgVideoPlayer {
         ret
     }
     @scala.inline
-    def withBuffering(value: (/* event */ Event_, /* ui */ BufferingEventUIParam) => Unit): Self = {
+    def withBuffering(value: (/* event */ Event, /* ui */ BufferingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("buffering")(js.Any.fromFunction2(value))
         ret
@@ -399,7 +399,7 @@ object IgVideoPlayer {
         ret
     }
     @scala.inline
-    def withEnded(value: (/* event */ Event_, /* ui */ EndedEventUIParam) => Unit): Self = {
+    def withEnded(value: (/* event */ Event, /* ui */ EndedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ended")(js.Any.fromFunction2(value))
         ret
@@ -411,7 +411,7 @@ object IgVideoPlayer {
         ret
     }
     @scala.inline
-    def withEnterFullScreen(value: (/* event */ Event_, /* ui */ EnterFullScreenEventUIParam) => Unit): Self = {
+    def withEnterFullScreen(value: (/* event */ Event, /* ui */ EnterFullScreenEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("enterFullScreen")(js.Any.fromFunction2(value))
         ret
@@ -423,7 +423,7 @@ object IgVideoPlayer {
         ret
     }
     @scala.inline
-    def withExitFullScreen(value: (/* event */ Event_, /* ui */ ExitFullScreenEventUIParam) => Unit): Self = {
+    def withExitFullScreen(value: (/* event */ Event, /* ui */ ExitFullScreenEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("exitFullScreen")(js.Any.fromFunction2(value))
         ret
@@ -507,7 +507,7 @@ object IgVideoPlayer {
         ret
     }
     @scala.inline
-    def withPaused(value: (/* event */ Event_, /* ui */ PausedEventUIParam) => Unit): Self = {
+    def withPaused(value: (/* event */ Event, /* ui */ PausedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("paused")(js.Any.fromFunction2(value))
         ret
@@ -519,7 +519,7 @@ object IgVideoPlayer {
         ret
     }
     @scala.inline
-    def withPlaying(value: (/* event */ Event_, /* ui */ PlayingEventUIParam) => Unit): Self = {
+    def withPlaying(value: (/* event */ Event, /* ui */ PlayingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("playing")(js.Any.fromFunction2(value))
         ret
@@ -555,7 +555,7 @@ object IgVideoPlayer {
         ret
     }
     @scala.inline
-    def withProgress(value: (/* event */ Event_, /* ui */ ProgressEventUIParam) => Unit): Self = {
+    def withProgress(value: (/* event */ Event, /* ui */ ProgressEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(js.Any.fromFunction2(value))
         ret
@@ -591,7 +591,7 @@ object IgVideoPlayer {
         ret
     }
     @scala.inline
-    def withRelatedVideoClick(value: (/* event */ Event_, /* ui */ RelatedVideoClickEventUIParam) => Unit): Self = {
+    def withRelatedVideoClick(value: (/* event */ Event, /* ui */ RelatedVideoClickEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("relatedVideoClick")(js.Any.fromFunction2(value))
         ret
@@ -675,7 +675,7 @@ object IgVideoPlayer {
         ret
     }
     @scala.inline
-    def withWaiting(value: (/* event */ Event_, /* ui */ WaitingEventUIParam) => Unit): Self = {
+    def withWaiting(value: (/* event */ Event, /* ui */ WaitingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("waiting")(js.Any.fromFunction2(value))
         ret

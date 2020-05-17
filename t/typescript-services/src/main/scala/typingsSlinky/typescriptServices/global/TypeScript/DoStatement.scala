@@ -1,0 +1,17 @@
+package typingsSlinky.typescriptServices.global.TypeScript
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("TypeScript.DoStatement")
+@js.native
+class DoStatement protected ()
+  extends typingsSlinky.typescriptServices.TypeScript.DoStatement {
+  def this(
+    statement: typingsSlinky.typescriptServices.TypeScript.AST,
+    whileKeyword: typingsSlinky.typescriptServices.TypeScript.ASTSpan,
+    condition: typingsSlinky.typescriptServices.TypeScript.AST
+  ) = this()
+}
+

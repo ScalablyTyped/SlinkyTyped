@@ -1,11 +1,11 @@
 package typingsSlinky.rbx.dropdownDropdownMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.rbx.Anon7
-import typingsSlinky.rbx.AnonAsElementType
-import typingsSlinky.rbx.PickDropdownContainerProp
-import typingsSlinky.rbx.PreferHelpersPropsOverridBackgroundColor
-import typingsSlinky.rbx.TypeofDropdownContainer
+import typingsSlinky.rbx.anon.AsElementType
+import typingsSlinky.rbx.anon.PickDropdownContainerProp
+import typingsSlinky.rbx.anon.PreferHelpersPropsOverridBackgroundColor
+import typingsSlinky.rbx.anon.TypeofDropdownContainer
+import typingsSlinky.rbx.anon.`7`
 import typingsSlinky.rbx.dropdownContextMod.DropdownContextValue
 import typingsSlinky.rbx.dropdownItemMod.DropdownItemProps
 import typingsSlinky.rbx.dropdownTriggerMod.DropdownTriggerProps
@@ -71,10 +71,10 @@ object Dropdown extends js.Object {
   var Item: ForwardRefAsExoticComponent[DropdownItemProps, ReactElement] = js.native
   var Menu: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
   var Trigger: ForwardRefAsExoticComponent[DropdownTriggerProps, ReactElement] = js.native
-  var defaultProps: AnonAsElementType with (Partial[PickDropdownContainerProp with (Pick[_, String | Double | js.Symbol])]) = js.native
+  var defaultProps: AsElementType with (Partial[PickDropdownContainerProp with (Pick[_, String | Double | js.Symbol])]) = js.native
   var displayName: js.UndefOr[String] = js.native
   def apply[TAsComponent /* <: ReactElement */](
-    props: Anon7[TAsComponent] with PickDropdownContainerProp with (Pick[
+    props: `7`[TAsComponent] with PickDropdownContainerProp with (Pick[
       ComponentProps[TAsComponent], 
       Exclude[
         /* keyof react.react.ComponentProps<TAsComponent> */ String, 

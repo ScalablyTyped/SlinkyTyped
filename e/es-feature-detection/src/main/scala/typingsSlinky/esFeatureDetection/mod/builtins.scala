@@ -1,6 +1,6 @@
 package typingsSlinky.esFeatureDetection.mod
 
-import typingsSlinky.esFeatureDetection.RecordES2015BuiltinsES201
+import typingsSlinky.esFeatureDetection.anon.RecordES2015BuiltinsES201
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

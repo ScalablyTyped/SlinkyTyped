@@ -1,13 +1,13 @@
 package typingsSlinky.babelCore.mod
 
-import typingsSlinky.babelCore.AnonRequest
+import typingsSlinky.babelCore.anon.Request
 import typingsSlinky.babelCore.babelCoreBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ConfigItem extends js.Object {
+trait ConfigItem extends PluginItem {
   /**
     * The path that the options are relative to.
     */
@@ -16,7 +16,7 @@ trait ConfigItem extends js.Object {
     * Information about the plugin's file, if Babel knows it.
     *  *
     */
-  var file: js.UndefOr[AnonRequest | Null] = js.native
+  var file: js.UndefOr[Request | Null] = js.native
   /**
     * The name that the user gave the plugin instance, e.g. `plugins: [ ['env', {}, 'my-env'] ]`
     */
@@ -62,7 +62,7 @@ object ConfigItem {
         ret
     }
     @scala.inline
-    def withFile(value: AnonRequest): Self = {
+    def withFile(value: Request): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
         ret

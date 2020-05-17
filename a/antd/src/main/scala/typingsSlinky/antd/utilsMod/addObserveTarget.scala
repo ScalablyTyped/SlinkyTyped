@@ -1,8 +1,8 @@
 package typingsSlinky.antd.utilsMod
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Window
 import typingsSlinky.antd.affixMod.default
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,6 +12,6 @@ import scala.scalajs.js.annotation._
 object addObserveTarget extends js.Object {
   def apply(target: Null, affix: default): Unit = js.native
   def apply(target: HTMLElement, affix: default): Unit = js.native
-  def apply(target: Window_, affix: default): Unit = js.native
+  def apply(target: Window, affix: default): Unit = js.native
 }
 

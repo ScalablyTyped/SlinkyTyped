@@ -1,6 +1,6 @@
 package typingsSlinky.mongodb.mod
 
-import typingsSlinky.mongodb.AnonBatchSizeNumber
+import typingsSlinky.mongodb.anon.BatchSizeNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ trait CollectionAggregationOptions extends js.Object {
     * Return the query as cursor, on 2.6 > it returns as a real cursor
     * on pre 2.6 it returns as an emulated cursor.
     */
-  var cursor: js.UndefOr[AnonBatchSizeNumber] = js.native
+  var cursor: js.UndefOr[BatchSizeNumber] = js.native
   /**
     * Explain returns the aggregation execution plan (requires mongodb 2.6 >).
     */
@@ -102,7 +102,7 @@ object CollectionAggregationOptions {
         ret
     }
     @scala.inline
-    def withCursor(value: AnonBatchSizeNumber): Self = {
+    def withCursor(value: BatchSizeNumber): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(value.asInstanceOf[js.Any])
         ret

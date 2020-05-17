@@ -1,6 +1,8 @@
 package typingsSlinky.semanticUiReactEventStack.typesMod
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Window
 import slinky.core.facade.ReactRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -37,7 +39,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withTargetRefObject(value: ReactRef[TargetElement]): Self = {
+    def withTargetDocument(value: Document): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
         ret
@@ -49,7 +51,19 @@ object Options {
         ret
     }
     @scala.inline
+    def withTargetRefObject(value: ReactRef[TargetElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
     def withTarget(value: InputTargetElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetWindow(value: Window): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
         ret

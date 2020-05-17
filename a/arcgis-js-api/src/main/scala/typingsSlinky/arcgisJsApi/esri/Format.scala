@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,7 +60,69 @@ trait Format extends js.Object {
   var viewModel: CoordinateConversionViewModel = js.native
 }
 
-@JSGlobal("__esri.Format")
-@js.native
-object Format extends TopLevel[Format]
+object Format {
+  @scala.inline
+  def apply(
+    conversionInfo: ConversionInfo,
+    coordinateSegments: js.Array[CoordinateSegment],
+    currentPattern: String,
+    defaultPattern: String,
+    name: String,
+    spatialReference: SpatialReference,
+    viewModel: CoordinateConversionViewModel
+  ): Format = {
+    val __obj = js.Dynamic.literal(conversionInfo = conversionInfo.asInstanceOf[js.Any], coordinateSegments = coordinateSegments.asInstanceOf[js.Any], currentPattern = currentPattern.asInstanceOf[js.Any], defaultPattern = defaultPattern.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], spatialReference = spatialReference.asInstanceOf[js.Any], viewModel = viewModel.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Format]
+  }
+  @scala.inline
+  implicit class FormatOps[Self <: Format] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConversionInfo(value: ConversionInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("conversionInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCoordinateSegments(value: js.Array[CoordinateSegment]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("coordinateSegments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentPattern(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultPattern(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpatialReference(value: SpatialReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spatialReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withViewModel(value: CoordinateConversionViewModel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewModel")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

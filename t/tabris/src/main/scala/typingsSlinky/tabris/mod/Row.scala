@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.OmitRowset
+import typingsSlinky.tabris.anon.OmitRowset
 import typingsSlinky.tabris.tabrisStrings.baseline
 import typingsSlinky.tabris.tabrisStrings.bottom
 import typingsSlinky.tabris.tabrisStrings.centerY

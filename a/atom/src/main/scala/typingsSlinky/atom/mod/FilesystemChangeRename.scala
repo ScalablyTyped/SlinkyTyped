@@ -5,7 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.atom.mod.FilesystemChange because Already inherited */ @js.native
 trait FilesystemChangeRename extends FilesystemChangeBasic[renamed] {
   /**
     *  For rename events, a string containing the filesystem entry's former

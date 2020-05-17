@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a single ADC channel. */
-@JSGlobal("Windows.Devices.Adc.AdcChannel")
 @js.native
-abstract class AdcChannel () extends js.Object {
+trait AdcChannel extends js.Object {
   /** Gets the ADC controller for this channel. */
   var controller: AdcController = js.native
   /** Closes the connection on this channel, making it available to be opened by others. */
@@ -22,5 +21,45 @@ abstract class AdcChannel () extends js.Object {
     * @return The digital value.
     */
   def readValue(): Double = js.native
+}
+
+object AdcChannel {
+  @scala.inline
+  def apply(close: () => Unit, controller: AdcController, readRatio: () => Double, readValue: () => Double): AdcChannel = {
+    val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), controller = controller.asInstanceOf[js.Any], readRatio = js.Any.fromFunction0(readRatio), readValue = js.Any.fromFunction0(readValue))
+    __obj.asInstanceOf[AdcChannel]
+  }
+  @scala.inline
+  implicit class AdcChannelOps[Self <: AdcChannel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withController(value: AdcController): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReadRatio(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readRatio")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withReadValue(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readValue")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

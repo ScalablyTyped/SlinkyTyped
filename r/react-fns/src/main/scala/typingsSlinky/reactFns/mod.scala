@@ -1,6 +1,8 @@
 package typingsSlinky.reactFns
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.reactFns.anon.PartialScrollConfig
+import typingsSlinky.reactFns.anon.PartialWindowSizeConfig
 import typingsSlinky.reactFns.deviceMotionDeviceMotionMod.DeviceMotionProps
 import typingsSlinky.reactFns.deviceOrientationDeviceOrientationMod.DeviceOrientationProps
 import typingsSlinky.reactFns.geoPositionGeoPositionMod.GeoPositionProps

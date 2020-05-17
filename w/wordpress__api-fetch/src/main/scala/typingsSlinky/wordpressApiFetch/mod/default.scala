@@ -2,7 +2,7 @@ package typingsSlinky.wordpressApiFetch.mod
 
 import org.scalajs.dom.experimental.Response
 import typingsSlinky.std.Record
-import typingsSlinky.wordpressApiFetch.APIFetchOptionsparsefalse
+import typingsSlinky.wordpressApiFetch.anon.APIFetchOptionsparsefalse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientFusiontables.gapi.client.fusiontables
 
-import typingsSlinky.gapiClientFusiontables.AnonColors
+import typingsSlinky.gapiClientFusiontables.anon.Colors
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait StyleFunction extends js.Object {
   /** Name of the column whose value is used in the style. */
   var columnName: js.UndefOr[String] = js.native
   /** Gradient function that interpolates a range of colors based on column value. */
-  var gradient: js.UndefOr[AnonColors] = js.native
+  var gradient: js.UndefOr[Colors] = js.native
   /**
     * Stylers can be one of three kinds: "fusiontables#fromColumn if the column value is to be used as is, i.e., the column values can have colors in
     * #RRGGBBAA format or integer line widths or icon names; fusiontables#gradient if the styling of the row is to be based on applying the gradient function
@@ -58,7 +58,7 @@ object StyleFunction {
         ret
     }
     @scala.inline
-    def withGradient(value: AnonColors): Self = {
+    def withGradient(value: Colors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gradient")(value.asInstanceOf[js.Any])
         ret

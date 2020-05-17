@@ -4,14 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Microsoft.Maps.TileSource")
 @js.native
-class TileSource protected () extends js.Object {
-  /**
-    * @constructor
-    * @param options The options to use to define the tile source.
-    */
-  def this(options: ITileSourceOptions) = this()
+trait TileSource extends js.Object {
   /**
     * Gets the specified bounding box of the of the tile source.
     * @returns The specified bounding box of the of the tile source.
@@ -42,5 +36,64 @@ class TileSource protected () extends js.Object {
     * @returns The pixel width of each tile in the tile source.
     */
   def getWidth(): Double = js.native
+}
+
+object TileSource {
+  @scala.inline
+  def apply(
+    getBounds: () => LocationRect,
+    getHeight: () => Double,
+    getMaxZoom: () => Double,
+    getMinZoom: () => Double,
+    getUriConstructor: () => String | (js.Function1[/* tile */ PyramidTileId, String]),
+    getWidth: () => Double
+  ): TileSource = {
+    val __obj = js.Dynamic.literal(getBounds = js.Any.fromFunction0(getBounds), getHeight = js.Any.fromFunction0(getHeight), getMaxZoom = js.Any.fromFunction0(getMaxZoom), getMinZoom = js.Any.fromFunction0(getMinZoom), getUriConstructor = js.Any.fromFunction0(getUriConstructor), getWidth = js.Any.fromFunction0(getWidth))
+    __obj.asInstanceOf[TileSource]
+  }
+  @scala.inline
+  implicit class TileSourceOps[Self <: TileSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetBounds(value: () => LocationRect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBounds")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetHeight(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getHeight")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMaxZoom(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxZoom")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMinZoom(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMinZoom")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetUriConstructor(value: () => String | (js.Function1[/* tile */ PyramidTileId, String])): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getUriConstructor")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetWidth(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getWidth")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeMaterialKit.mod
 
 import typingsSlinky.reactNative.mod.TouchableWithoutFeedbackProps
-import typingsSlinky.reactNativeMaterialKit.AnonChecked
+import typingsSlinky.reactNativeMaterialKit.anon.Checked
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait MKSwitchProperties extends TouchableWithoutFeedbackProps {
   var checked: js.UndefOr[Boolean] = js.native
   var offColor: js.UndefOr[String] = js.native
-  var onCheckedChange: js.UndefOr[js.Function1[/* opts */ AnonChecked, Unit]] = js.native
+  var onCheckedChange: js.UndefOr[js.Function1[/* opts */ Checked, Unit]] = js.native
   var onColor: js.UndefOr[String] = js.native
   var rippleAniDuration: js.UndefOr[Double] = js.native
   var rippleColor: js.UndefOr[String] = js.native
@@ -59,7 +59,7 @@ object MKSwitchProperties {
         ret
     }
     @scala.inline
-    def withOnCheckedChange(value: /* opts */ AnonChecked => Unit): Self = {
+    def withOnCheckedChange(value: /* opts */ Checked => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCheckedChange")(js.Any.fromFunction1(value))
         ret

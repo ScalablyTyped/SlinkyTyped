@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait JsxAttributeLike extends js.Object
 
+object JsxAttributeLike {
+  @scala.inline
+  implicit def apply(value: JsxAttribute): JsxAttributeLike = value.asInstanceOf[JsxAttributeLike]
+  @scala.inline
+  implicit def apply(value: JsxSpreadAttribute): JsxAttributeLike = value.asInstanceOf[JsxAttributeLike]
+}
+

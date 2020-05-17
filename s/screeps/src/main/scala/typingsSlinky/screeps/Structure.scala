@@ -1,6 +1,5 @@
 package typingsSlinky.screeps
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,7 +46,78 @@ trait Structure[T /* <: StructureConstant */] extends RoomObject {
   def notifyWhenAttacked(enabled: Boolean): ScreepsReturnCode = js.native
 }
 
-@JSGlobal("Structure")
-@js.native
-object Structure extends TopLevel[StructureConstructor]
+object Structure {
+  @scala.inline
+  def apply[T](
+    destroy: () => ScreepsReturnCode,
+    effects: js.Array[RoomObjectEffect],
+    hits: Double,
+    hitsMax: Double,
+    id: Id[Structure[T]],
+    isActive: () => Boolean,
+    notifyWhenAttacked: Boolean => ScreepsReturnCode,
+    pos: RoomPosition,
+    room: Room,
+    structureType: T
+  ): Structure[T] = {
+    val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), effects = effects.asInstanceOf[js.Any], hits = hits.asInstanceOf[js.Any], hitsMax = hitsMax.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isActive = js.Any.fromFunction0(isActive), notifyWhenAttacked = js.Any.fromFunction1(notifyWhenAttacked), pos = pos.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any], structureType = structureType.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Structure[T]]
+  }
+  @scala.inline
+  implicit class StructureOps[Self[t] <: Structure[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withDestroy(value: () => ScreepsReturnCode): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHits(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHitsMax(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hitsMax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: Id[Structure[T]]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsActive(value: () => Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isActive")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNotifyWhenAttacked(value: Boolean => ScreepsReturnCode): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notifyWhenAttacked")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRoom(value: Room): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("room")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStructureType(value: T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("structureType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

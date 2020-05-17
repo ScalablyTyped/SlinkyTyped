@@ -1,5 +1,6 @@
 package typingsSlinky.materialUi.MaterialUI
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
@@ -9,7 +10,6 @@ import slinky.web.SyntheticKeyboardEvent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.FocusEventHandler
 import typingsSlinky.react.mod.KeyboardEventHandler
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,7 +41,7 @@ trait TextFieldProps extends js.Object {
   var name: js.UndefOr[String] = js.native
   var onBlur: js.UndefOr[FocusEventHandler[js.Object]] = js.native
   var onChange: js.UndefOr[
-    js.Function2[SyntheticEvent[EventTarget with js.Object, Event_], /* newValue */ String, Unit]
+    js.Function2[SyntheticEvent[EventTarget with js.Object, Event], /* newValue */ String, Unit]
   ] = js.native
   var onFocus: js.UndefOr[FocusEventHandler[js.Object]] = js.native
   var onKeyDown: js.UndefOr[KeyboardEventHandler[js.Object]] = js.native
@@ -382,7 +382,7 @@ object TextFieldProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: (SyntheticEvent[EventTarget with js.Object, Event_], /* newValue */ String) => Unit): Self = {
+    def withOnChange(value: (SyntheticEvent[EventTarget with js.Object, Event], /* newValue */ String) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
         ret

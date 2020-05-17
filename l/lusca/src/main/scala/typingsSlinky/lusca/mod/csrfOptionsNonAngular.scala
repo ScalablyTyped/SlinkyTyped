@@ -1,6 +1,6 @@
 package typingsSlinky.lusca.mod
 
-import typingsSlinky.lusca.AnonName
+import typingsSlinky.lusca.anon.Name
 import typingsSlinky.lusca.luscaBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait csrfOptionsNonAngular extends csrfOptionsAngularOrNonAngular {
   var angular: js.UndefOr[`false`] = js.native
-  var cookie: js.UndefOr[String | AnonName] = js.native
+  var cookie: js.UndefOr[String | Name] = js.native
 }
 
 object csrfOptionsNonAngular {
@@ -37,7 +37,7 @@ object csrfOptionsNonAngular {
         ret
     }
     @scala.inline
-    def withCookie(value: String | AnonName): Self = {
+    def withCookie(value: String | Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cookie")(value.asInstanceOf[js.Any])
         ret

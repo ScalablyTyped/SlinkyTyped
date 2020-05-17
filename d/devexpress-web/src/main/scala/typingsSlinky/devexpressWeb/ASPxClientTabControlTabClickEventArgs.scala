@@ -7,17 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for events which concern clicking on the control's tabs.
   */
-@JSGlobal("ASPxClientTabControlTabClickEventArgs")
 @js.native
-class ASPxClientTabControlTabClickEventArgs protected () extends ASPxClientTabControlTabCancelEventArgs {
-  /**
-    * Initializes a new object of the ASPxClientTabControlTabClickEventArgs type with the specified settings.
-    * @param processOnServer true to process the event on the server side; false to completely handle it on the client side.
-    * @param tab An ASPxClientTab object that represents a tab related to the event.
-    * @param htmlElement An HTML object that contains the processed tab.
-    * @param htmlEvent A DHTML event object that relates to the processed event.
-    */
-  def this(processOnServer: Boolean, tab: ASPxClientTab, htmlElement: js.Any, htmlEvent: js.Any) = this()
+trait ASPxClientTabControlTabClickEventArgs extends ASPxClientTabControlTabCancelEventArgs {
   /**
     * Gets the HTML object that contains the processed tab.
     */
@@ -26,5 +17,40 @@ class ASPxClientTabControlTabClickEventArgs protected () extends ASPxClientTabCo
     * Gets a DHTML event object that relates to the processed event.
     */
   var htmlEvent: js.Any = js.native
+}
+
+object ASPxClientTabControlTabClickEventArgs {
+  @scala.inline
+  def apply(
+    cancel: Boolean,
+    htmlElement: js.Any,
+    htmlEvent: js.Any,
+    processOnServer: Boolean,
+    reloadContentOnCallback: Boolean,
+    tab: ASPxClientTab
+  ): ASPxClientTabControlTabClickEventArgs = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], htmlElement = htmlElement.asInstanceOf[js.Any], htmlEvent = htmlEvent.asInstanceOf[js.Any], processOnServer = processOnServer.asInstanceOf[js.Any], reloadContentOnCallback = reloadContentOnCallback.asInstanceOf[js.Any], tab = tab.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientTabControlTabClickEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientTabControlTabClickEventArgsOps[Self <: ASPxClientTabControlTabClickEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHtmlElement(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtmlEvent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.puppeteer.mod
 
-import typingsSlinky.puppeteer.AnonDeviceScaleFactor
+import typingsSlinky.puppeteer.anon.DeviceScaleFactor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait BrowserOptions extends js.Object {
   /**
     * Sets a consistent viewport for each page. Defaults to an 800x600 viewport. null disables the default viewport.
     */
-  var defaultViewport: js.UndefOr[AnonDeviceScaleFactor | Null] = js.native
+  var defaultViewport: js.UndefOr[DeviceScaleFactor | Null] = js.native
   /**
     * Whether to ignore HTTPS errors during navigation.
     * @default false
@@ -36,7 +36,7 @@ object BrowserOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDefaultViewport(value: AnonDeviceScaleFactor): Self = {
+    def withDefaultViewport(value: DeviceScaleFactor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defaultViewport")(value.asInstanceOf[js.Any])
         ret

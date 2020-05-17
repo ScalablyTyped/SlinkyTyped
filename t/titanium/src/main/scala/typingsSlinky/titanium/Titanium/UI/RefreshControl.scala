@@ -12,9 +12,8 @@ import scala.scalajs.js.annotation._
 		 * [UIRefreshControl](https://developer.apple.com/documentation/uikit/uirefreshcontrol)
 		 * and Android [SwipeRefreshLayout](https://developer.android.com/reference/android/support/v4/widget/SwipeRefreshLayout.html).
 		 */
-@JSGlobal("Titanium.UI.RefreshControl")
 @js.native
-class RefreshControl () extends Proxy {
+trait RefreshControl extends Proxy {
   /**
   			 * The tint color for the refresh control, as a color name or hex triplet.
   			 */

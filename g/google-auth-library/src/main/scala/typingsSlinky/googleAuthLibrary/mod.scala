@@ -1,5 +1,6 @@
 package typingsSlinky.googleAuthLibrary
 
+import typingsSlinky.googleAuthLibrary.anon.TypeofDefaultTransporter
 import typingsSlinky.googleAuthLibrary.computeclientMod.ComputeOptions
 import typingsSlinky.googleAuthLibrary.googleauthMod.GoogleAuthOptions
 import typingsSlinky.googleAuthLibrary.jwtclientMod.JWTOptions

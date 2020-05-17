@@ -2,12 +2,11 @@ package typingsSlinky.inboxsdk.mod.Compose
 
 import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.inboxsdk.AnonCancel
-import typingsSlinky.inboxsdk.AnonClosedByInboxSDK
-import typingsSlinky.inboxsdk.AnonContact
-import typingsSlinky.inboxsdk.AnonFullscreen
-import typingsSlinky.inboxsdk.AnonGetMessageID
-import typingsSlinky.inboxsdk.AnonIsForward
+import typingsSlinky.inboxsdk.anon.Cancel
+import typingsSlinky.inboxsdk.anon.ClosedByInboxSDK
+import typingsSlinky.inboxsdk.anon.Fullscreen
+import typingsSlinky.inboxsdk.anon.GetMessageID
+import typingsSlinky.inboxsdk.anon.IsForward
 import typingsSlinky.inboxsdk.inboxsdkStrings.bccContactAdded
 import typingsSlinky.inboxsdk.inboxsdkStrings.bccContactRemoved
 import typingsSlinky.inboxsdk.inboxsdkStrings.bodyChanged
@@ -68,31 +67,31 @@ trait ComposeView extends js.Object {
   def isMinimized(): Boolean = js.native
   def isReply(): Boolean = js.native
   @JSName("on")
-  def on_bccContactAdded(name: bccContactAdded, cb: js.Function1[/* event */ AnonContact, Unit]): Unit = js.native
+  def on_bccContactAdded(name: bccContactAdded, cb: js.Function1[/* event */ typingsSlinky.inboxsdk.anon.Contact, Unit]): Unit = js.native
   @JSName("on")
-  def on_bccContactRemoved(name: bccContactRemoved, cb: js.Function1[/* event */ AnonContact, Unit]): Unit = js.native
+  def on_bccContactRemoved(name: bccContactRemoved, cb: js.Function1[/* event */ typingsSlinky.inboxsdk.anon.Contact, Unit]): Unit = js.native
   @JSName("on")
   def on_bodyChanged(name: bodyChanged, cb: js.Function0[Unit]): Unit = js.native
   @JSName("on")
-  def on_ccContactAdded(name: ccContactAdded, cb: js.Function1[/* event */ AnonContact, Unit]): Unit = js.native
+  def on_ccContactAdded(name: ccContactAdded, cb: js.Function1[/* event */ typingsSlinky.inboxsdk.anon.Contact, Unit]): Unit = js.native
   @JSName("on")
-  def on_ccContactRemoved(name: ccContactRemoved, cb: js.Function1[/* event */ AnonContact, Unit]): Unit = js.native
+  def on_ccContactRemoved(name: ccContactRemoved, cb: js.Function1[/* event */ typingsSlinky.inboxsdk.anon.Contact, Unit]): Unit = js.native
   @JSName("on")
-  def on_destroy(name: destroy, cb: js.Function1[/* event */ AnonClosedByInboxSDK, Unit]): Unit = js.native
+  def on_destroy(name: destroy, cb: js.Function1[/* event */ ClosedByInboxSDK, Unit]): Unit = js.native
   @JSName("on")
   def on_discard(name: discard, cb: js.Function0[Unit]): Unit = js.native
   @JSName("on")
-  def on_fromContactChanged(name: fromContactChanged, cb: js.Function1[/* event */ AnonContact, Unit]): Unit = js.native
+  def on_fromContactChanged(name: fromContactChanged, cb: js.Function1[/* event */ typingsSlinky.inboxsdk.anon.Contact, Unit]): Unit = js.native
   @JSName("on")
-  def on_fullscreenChanged(name: fullscreenChanged, cb: js.Function1[/* event */ AnonFullscreen, Unit]): Unit = js.native
+  def on_fullscreenChanged(name: fullscreenChanged, cb: js.Function1[/* event */ Fullscreen, Unit]): Unit = js.native
   @JSName("on")
   def on_minimized(name: minimized, cb: js.Function0[Unit]): Unit = js.native
   @JSName("on")
-  def on_presending(name: presending, cb: js.Function1[/* event */ AnonCancel, Unit]): Unit = js.native
+  def on_presending(name: presending, cb: js.Function1[/* event */ Cancel, Unit]): Unit = js.native
   @JSName("on")
   def on_recipientsChanged(name: recipientsChanged, cb: js.Function1[/* event */ RecipientsChangedEvent, Unit]): Unit = js.native
   @JSName("on")
-  def on_responseTypeChanged(name: responseTypeChanged, cb: js.Function1[/* event */ AnonIsForward, Unit]): Unit = js.native
+  def on_responseTypeChanged(name: responseTypeChanged, cb: js.Function1[/* event */ IsForward, Unit]): Unit = js.native
   @JSName("on")
   def on_restored(name: restored, cb: js.Function0[Unit]): Unit = js.native
   @JSName("on")
@@ -100,11 +99,11 @@ trait ComposeView extends js.Object {
   @JSName("on")
   def on_sending(name: sending, cb: js.Function0[Unit]): Unit = js.native
   @JSName("on")
-  def on_sent(name: sent, cb: js.Function1[/* event */ AnonGetMessageID, Unit]): Unit = js.native
+  def on_sent(name: sent, cb: js.Function1[/* event */ GetMessageID, Unit]): Unit = js.native
   @JSName("on")
-  def on_toContactAdded(name: toContactAdded, cb: js.Function1[/* event */ AnonContact, Unit]): Unit = js.native
+  def on_toContactAdded(name: toContactAdded, cb: js.Function1[/* event */ typingsSlinky.inboxsdk.anon.Contact, Unit]): Unit = js.native
   @JSName("on")
-  def on_toContactRemoved(name: toContactRemoved, cb: js.Function1[/* event */ AnonContact, Unit]): Unit = js.native
+  def on_toContactRemoved(name: toContactRemoved, cb: js.Function1[/* event */ typingsSlinky.inboxsdk.anon.Contact, Unit]): Unit = js.native
   def popOut(): js.Promise[ComposeView] = js.native
   def send(): Unit = js.native
   def send(options: SendOptions): Unit = js.native

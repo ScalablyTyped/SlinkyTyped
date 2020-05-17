@@ -1,13 +1,13 @@
 package typingsSlinky.webgme.Gme
 
-import typingsSlinky.webgme.AnonId
+import typingsSlinky.webgme.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait PointerMeta extends js.Object {
-  var items: js.Array[AnonId] = js.native
+  var items: js.Array[Id] = js.native
   /**
     * the maximum allowed targets for a pointer is 1.
     * more than 1 requires a set.
@@ -17,7 +17,7 @@ trait PointerMeta extends js.Object {
 
 object PointerMeta {
   @scala.inline
-  def apply(items: js.Array[AnonId], max: Double): PointerMeta = {
+  def apply(items: js.Array[Id], max: Double): PointerMeta = {
     val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any], max = max.asInstanceOf[js.Any])
     __obj.asInstanceOf[PointerMeta]
   }
@@ -28,7 +28,7 @@ object PointerMeta {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withItems(value: js.Array[AnonId]): Self = {
+    def withItems(value: js.Array[Id]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
         ret

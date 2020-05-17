@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("google.earth.KmlDateTime")
 @js.native
-class KmlDateTime () extends js.Object {
+trait KmlDateTime extends js.Object {
   /**
     * Returns the date and time in XML Schema time format.
     */
@@ -18,5 +17,33 @@ class KmlDateTime () extends js.Object {
     * Additionally, the value can be expressed as a date only.
     */
   def set(date: String): Unit = js.native
+}
+
+object KmlDateTime {
+  @scala.inline
+  def apply(get: () => String, set: String => Unit): KmlDateTime = {
+    val __obj = js.Dynamic.literal(get = js.Any.fromFunction0(get), set = js.Any.fromFunction1(set))
+    __obj.asInstanceOf[KmlDateTime]
+  }
+  @scala.inline
+  implicit class KmlDateTimeOps[Self <: KmlDateTime] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGet(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSet(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

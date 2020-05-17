@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.colorPickerBaseMod
 
-import typingsSlinky.officeUiFabricReact.AnonComponent
+import typingsSlinky.officeUiFabricReact.anon.Component
 import typingsSlinky.officeUiFabricReact.interfacesMod.IColor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IColorPickerState extends js.Object {
   var color: IColor = js.native
-  var editingColor: js.UndefOr[AnonComponent] = js.native
+  var editingColor: js.UndefOr[Component] = js.native
 }
 
 object IColorPickerState {
@@ -31,7 +31,7 @@ object IColorPickerState {
         ret
     }
     @scala.inline
-    def withEditingColor(value: AnonComponent): Self = {
+    def withEditingColor(value: Component): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editingColor")(value.asInstanceOf[js.Any])
         ret

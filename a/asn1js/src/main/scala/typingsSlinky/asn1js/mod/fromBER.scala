@@ -1,6 +1,6 @@
 package typingsSlinky.asn1js.mod
 
-import typingsSlinky.asn1js.AnonOffset
+import typingsSlinky.asn1js.anon.Offset
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +14,6 @@ object fromBER extends js.Object {
     * @param {ArrayBuffer} inputBuffer ASN.1 BER encoded array of bytes
     * @returns {{ offset: number; result: LocalBaseBlock }}
     */
-  def apply(inputBuffer: js.typedarray.ArrayBuffer): AnonOffset = js.native
+  def apply(inputBuffer: js.typedarray.ArrayBuffer): Offset = js.native
 }
 

@@ -1,9 +1,9 @@
 package typingsSlinky.vis.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Event_
-import typingsSlinky.vis.AnonEnd
-import typingsSlinky.vis.AnonGroups
+import typingsSlinky.vis.anon.End
+import typingsSlinky.vis.anon.Groups
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +33,7 @@ class Graph2d protected () extends js.Object {
   def getCurrentTime(): js.Date = js.native
   def getCustomTime(): js.Date = js.native
   def getCustomTime(id: IdType): js.Date = js.native
-  def getEventProperties(event: Event_): TimelineEventPropertiesResult = js.native
+  def getEventProperties(event: Event): TimelineEventPropertiesResult = js.native
   def getItemRange(): js.Any = js.native
   def getLegend(): TimelineWindow = js.native
    // TODO
@@ -41,7 +41,7 @@ class Graph2d protected () extends js.Object {
   def getVisibleItems(): js.Array[IdType] = js.native
   def getWindow(): TimelineWindow = js.native
   @JSName("getWindow")
-  def getWindow_AnonEnd(): AnonEnd = js.native
+  def getWindow_End(): End = js.native
   def moveTo(time: DateType): Unit = js.native
   def moveTo(time: DateType, options: TimelineAnimationOptions): Unit = js.native
   def off(event: TimelineEvents, callback: js.Function0[Unit]): Unit = js.native
@@ -56,7 +56,7 @@ class Graph2d protected () extends js.Object {
   def setCustomTime(time: DateType, id: IdType): Unit = js.native
   def setCustomTimeTitle(title: String): Unit = js.native
   def setCustomTimeTitle(title: String, id: IdType): Unit = js.native
-  def setData(data: AnonGroups): Unit = js.native
+  def setData(data: Groups): Unit = js.native
   def setGroups(): Unit = js.native
   def setGroups(groups: js.Array[TimelineGroup]): Unit = js.native
   def setGroups(groups: DataGroupCollectionType): Unit = js.native

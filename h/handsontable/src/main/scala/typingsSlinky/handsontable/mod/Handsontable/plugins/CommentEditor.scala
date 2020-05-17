@@ -1,8 +1,8 @@
 package typingsSlinky.handsontable.mod.Handsontable.plugins
 
 import org.scalajs.dom.raw.CSSStyleDeclaration
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait CommentEditor extends js.Object {
   var editor: HTMLElement = js.native
   var editorStyle: CSSStyleDeclaration = js.native
   var hidden: Boolean = js.native
-  var rootDocument: Document_ = js.native
+  var rootDocument: Document = js.native
   def createEditor(): HTMLElement = js.native
   def destroy(): Unit = js.native
   def focus(): Unit = js.native

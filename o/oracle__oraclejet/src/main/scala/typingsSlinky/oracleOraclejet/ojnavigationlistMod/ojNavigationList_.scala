@@ -3,8 +3,8 @@ package typingsSlinky.oracleOraclejet.ojnavigationlistMod
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.AnonDefaultRootLabel
-import typingsSlinky.oracleOraclejet.AnonSelectable
+import typingsSlinky.oracleOraclejet.anon.DefaultRootLabel
+import typingsSlinky.oracleOraclejet.anon.Selectable
 import typingsSlinky.oracleOraclejet.mod.baseComponent
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojkeysetMod.KeySet
@@ -65,7 +65,7 @@ trait ojNavigationList_[K, D] extends baseComponent[ojNavigationListSettableProp
   var edge: top | start = js.native
   var expanded: KeySet[K] = js.native
   var hierarchyMenuThreshold: Double = js.native
-  var item: AnonSelectable[K, D] = js.native
+  var item: Selectable[K, D] = js.native
   var onAsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var onCurrentItemChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var onDataChanged: (js.Function1[CustomEvent, _]) | Null = js.native
@@ -90,7 +90,7 @@ trait ojNavigationList_[K, D] extends baseComponent[ojNavigationListSettableProp
   var rootLabel: String | Null = js.native
   var selection: K = js.native
   @JSName("translations")
-  var translations_ojNavigationList_ : AnonDefaultRootLabel = js.native
+  var translations_ojNavigationList_ : DefaultRootLabel = js.native
   def addEventListener(`type`: displayChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: displayChanged,
@@ -264,7 +264,7 @@ trait ojNavigationList_[K, D] extends baseComponent[ojNavigationListSettableProp
   @JSName("getProperty")
   def getProperty_hierarchyMenuThreshold(property: hierarchyMenuThreshold): Double = js.native
   @JSName("getProperty")
-  def getProperty_item(property: item): AnonSelectable[K, D] = js.native
+  def getProperty_item(property: item): Selectable[K, D] = js.native
   @JSName("getProperty")
   def getProperty_overflow(property: overflow): popup | hidden = js.native
   @JSName("getProperty")
@@ -294,7 +294,7 @@ trait ojNavigationList_[K, D] extends baseComponent[ojNavigationListSettableProp
   @JSName("setProperty")
   def setProperty_hierarchyMenuThreshold(property: hierarchyMenuThreshold, value: Double): Unit = js.native
   @JSName("setProperty")
-  def setProperty_item(property: item, value: AnonSelectable[K, D]): Unit = js.native
+  def setProperty_item(property: item, value: Selectable[K, D]): Unit = js.native
   @JSName("setProperty")
   def setProperty_rootLabel(property: rootLabel): Unit = js.native
   @JSName("setProperty")
@@ -302,6 +302,6 @@ trait ojNavigationList_[K, D] extends baseComponent[ojNavigationListSettableProp
   @JSName("setProperty")
   def setProperty_selection(property: selection, value: K): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonDefaultRootLabel): Unit = js.native
+  def setProperty_translations(property: translations, value: DefaultRootLabel): Unit = js.native
 }
 

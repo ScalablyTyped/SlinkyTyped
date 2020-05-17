@@ -1,6 +1,6 @@
 package typingsSlinky.babelCore.mod
 
-import typingsSlinky.babelCore.AnonFile
+import typingsSlinky.babelCore.anon.File
 import typingsSlinky.babelTypes.mod.File_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ trait BabelFileResult extends js.Object {
   var ast: js.UndefOr[File_ | Null] = js.native
   var code: js.UndefOr[String | Null] = js.native
   var ignored: js.UndefOr[Boolean] = js.native
-  var map: js.UndefOr[AnonFile | Null] = js.native
+  var map: js.UndefOr[File | Null] = js.native
   var metadata: js.UndefOr[BabelFileMetadata] = js.native
 }
 
@@ -76,7 +76,7 @@ object BabelFileResult {
         ret
     }
     @scala.inline
-    def withMap(value: AnonFile): Self = {
+    def withMap(value: File): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
         ret

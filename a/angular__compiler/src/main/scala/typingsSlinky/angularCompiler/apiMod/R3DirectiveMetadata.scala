@@ -1,7 +1,7 @@
 package typingsSlinky.angularCompiler.apiMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.angularCompiler.AnonUsesOnChanges
+import typingsSlinky.angularCompiler.anon.UsesOnChanges
 import typingsSlinky.angularCompiler.outputAstMod.Expression
 import typingsSlinky.angularCompiler.r3FactoryMod.R3DependencyMetadata
 import typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
@@ -33,7 +33,7 @@ trait R3DirectiveMetadata extends js.Object {
     * Information about usage of specific lifecycle events which require special treatment in the
     * code generator.
     */
-  var lifecycle: AnonUsesOnChanges = js.native
+  var lifecycle: UsesOnChanges = js.native
   /**
     * Name of the directive type.
     */
@@ -81,7 +81,7 @@ object R3DirectiveMetadata {
   def apply(
     host: R3HostMetadata,
     inputs: StringDictionary[String | (js.Tuple2[String, String])],
-    lifecycle: AnonUsesOnChanges,
+    lifecycle: UsesOnChanges,
     name: String,
     outputs: StringDictionary[String],
     queries: js.Array[R3QueryMetadata],
@@ -114,7 +114,7 @@ object R3DirectiveMetadata {
         ret
     }
     @scala.inline
-    def withLifecycle(value: AnonUsesOnChanges): Self = {
+    def withLifecycle(value: UsesOnChanges): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycle")(value.asInstanceOf[js.Any])
         ret

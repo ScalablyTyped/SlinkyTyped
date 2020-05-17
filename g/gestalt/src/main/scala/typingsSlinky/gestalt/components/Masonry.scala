@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.AnonData
+import typingsSlinky.gestalt.anon.Data
 import typingsSlinky.gestalt.gestaltStrings.MasonryDefaultLayout
 import typingsSlinky.gestalt.gestaltStrings.MasonryUniformRowLayout
 import typingsSlinky.gestalt.mod.MasonryProps
@@ -47,7 +47,7 @@ object Masonry {
   
   def withProps(p: MasonryProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(comp: ReactComponentClass[AnonData], items: js.Array[_]): Builder = {
+  def apply(comp: ReactComponentClass[Data], items: js.Array[_]): Builder = {
     val __props = js.Dynamic.literal(comp = comp.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[MasonryProps]))
   }

@@ -1,7 +1,7 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.AnonInstantiableU
-import typingsSlinky.tabris.OmitNavigationViewPageAct
+import typingsSlinky.tabris.anon.InstantiableU
+import typingsSlinky.tabris.anon.OmitNavigationViewPageAct
 import typingsSlinky.tabris.tabrisStrings.actionColor
 import typingsSlinky.tabris.tabrisStrings.actionTextColor
 import typingsSlinky.tabris.tabrisStrings.default
@@ -98,6 +98,6 @@ class NavigationView[PageType /* <: Page */, ActionType /* <: Action */] () exte
     * topmost page as the last element. Same as children(), but only accepts subclasses of `Page`.
     * @param constructor A class to filter the results.
     */
-  def pages[U /* <: Page */](constructor: AnonInstantiableU[U]): WidgetCollection[U] = js.native
+  def pages[U /* <: Page */](constructor: InstantiableU[U]): WidgetCollection[U] = js.native
 }
 

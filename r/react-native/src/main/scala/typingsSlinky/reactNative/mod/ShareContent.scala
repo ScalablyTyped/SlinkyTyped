@@ -1,25 +1,21 @@
 package typingsSlinky.reactNative.mod
 
+import typingsSlinky.reactNative.anon.Message
+import typingsSlinky.reactNative.anon.Title
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.reactNative.AnonMessage
-  - typingsSlinky.reactNative.AnonTitle
+  - typingsSlinky.reactNative.anon.Message
+  - typingsSlinky.reactNative.anon.Title
 */
 trait ShareContent extends js.Object
 
 object ShareContent {
   @scala.inline
-  def AnonMessage(message: String): ShareContent = {
-    val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ShareContent]
-  }
+  implicit def apply(value: Message): ShareContent = value.asInstanceOf[ShareContent]
   @scala.inline
-  def AnonTitle(url: String): ShareContent = {
-    val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ShareContent]
-  }
+  implicit def apply(value: Title): ShareContent = value.asInstanceOf[ShareContent]
 }
 

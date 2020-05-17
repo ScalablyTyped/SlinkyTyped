@@ -14,12 +14,12 @@ trait EnumerateClassLoadersCallbacks extends js.Object {
     * Called with a `java.lang.ClassLoader` wrapper for each class loader
     * found in the VM.
     */
-  def onMatch(loader: typingsSlinky.fridaGum.Wrapper): Unit = js.native
+  def onMatch(loader: typingsSlinky.fridaGum.anon.Wrapper): Unit = js.native
 }
 
 object EnumerateClassLoadersCallbacks {
   @scala.inline
-  def apply(onComplete: () => Unit, onMatch: typingsSlinky.fridaGum.Wrapper => Unit): EnumerateClassLoadersCallbacks = {
+  def apply(onComplete: () => Unit, onMatch: typingsSlinky.fridaGum.anon.Wrapper => Unit): EnumerateClassLoadersCallbacks = {
     val __obj = js.Dynamic.literal(onComplete = js.Any.fromFunction0(onComplete), onMatch = js.Any.fromFunction1(onMatch))
     __obj.asInstanceOf[EnumerateClassLoadersCallbacks]
   }
@@ -36,7 +36,7 @@ object EnumerateClassLoadersCallbacks {
         ret
     }
     @scala.inline
-    def withOnMatch(value: typingsSlinky.fridaGum.Wrapper => Unit): Self = {
+    def withOnMatch(value: typingsSlinky.fridaGum.anon.Wrapper => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMatch")(js.Any.fromFunction1(value))
         ret

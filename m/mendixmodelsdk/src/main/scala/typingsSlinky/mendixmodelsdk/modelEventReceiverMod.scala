@@ -1,6 +1,7 @@
 package typingsSlinky.mendixmodelsdk
 
 import typingsSlinky.eventsource.mod.^
+import typingsSlinky.mendixmodelsdk.anon.HandleError
 import typingsSlinky.mendixmodelsdk.imodeleventMod.IDeltaEvent
 import typingsSlinky.mendixmodelsdk.imodeleventMod.IFileEvent
 import typingsSlinky.mendixmodelsdk.imodelserverclientMod.IModelServerClient
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation._
 object modelEventReceiverMod extends js.Object {
   @js.native
   class ModelEventReceiver protected () extends js.Object {
-    def this(workingCopyId: String, client: IModelServerClient, errorHandler: AnonHandleError) = this()
+    def this(workingCopyId: String, client: IModelServerClient, errorHandler: HandleError) = this()
     var client: js.Any = js.native
     var deltaEventEmitter: js.Any = js.native
     var errorHandler: js.Any = js.native

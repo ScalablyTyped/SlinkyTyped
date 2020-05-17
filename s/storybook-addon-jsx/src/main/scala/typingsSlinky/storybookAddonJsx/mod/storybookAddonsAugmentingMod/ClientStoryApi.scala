@@ -1,8 +1,8 @@
 package typingsSlinky.storybookAddonJsx.mod.storybookAddonsAugmentingMod
 
 import typingsSlinky.node.NodeModule
-import typingsSlinky.storybookAddonJsx.AnonAddWithJSX
-import typingsSlinky.storybookAddonJsx.ParametersjsxAddonParamet
+import typingsSlinky.storybookAddonJsx.anon.AddWithJSX
+import typingsSlinky.storybookAddonJsx.anon.ParametersjsxAddonParamet
 import typingsSlinky.storybookAddons.typesMod.DecoratorFunction
 import typingsSlinky.storybookAddons.typesMod.StoryApi
 import scala.scalajs.js
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 trait ClientStoryApi[StoryFnReturnType] extends js.Object {
   def addDecorator(decorator: DecoratorFunction[StoryFnReturnType]): StoryApi[StoryFnReturnType] = js.native
   def addParameters(parameter: ParametersjsxAddonParamet): StoryApi[StoryFnReturnType] = js.native
-  def storiesOf(kind: String, module: NodeModule): StoryApi[StoryFnReturnType] with AnonAddWithJSX[StoryFnReturnType] = js.native
+  def storiesOf(kind: String, module: NodeModule): StoryApi[StoryFnReturnType] with AddWithJSX[StoryFnReturnType] = js.native
 }
 
 object ClientStoryApi {
@@ -21,7 +21,7 @@ object ClientStoryApi {
   def apply[StoryFnReturnType](
     addDecorator: DecoratorFunction[StoryFnReturnType] => StoryApi[StoryFnReturnType],
     addParameters: ParametersjsxAddonParamet => StoryApi[StoryFnReturnType],
-    storiesOf: (String, NodeModule) => StoryApi[StoryFnReturnType] with AnonAddWithJSX[StoryFnReturnType]
+    storiesOf: (String, NodeModule) => StoryApi[StoryFnReturnType] with AddWithJSX[StoryFnReturnType]
   ): ClientStoryApi[StoryFnReturnType] = {
     val __obj = js.Dynamic.literal(addDecorator = js.Any.fromFunction1(addDecorator), addParameters = js.Any.fromFunction1(addParameters), storiesOf = js.Any.fromFunction2(storiesOf))
     __obj.asInstanceOf[ClientStoryApi[StoryFnReturnType]]
@@ -45,7 +45,7 @@ object ClientStoryApi {
         ret
     }
     @scala.inline
-    def withStoriesOf(value: (String, NodeModule) => StoryApi[StoryFnReturnType] with AnonAddWithJSX[StoryFnReturnType]): Self[StoryFnReturnType] = {
+    def withStoriesOf(value: (String, NodeModule) => StoryApi[StoryFnReturnType] with AddWithJSX[StoryFnReturnType]): Self[StoryFnReturnType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("storiesOf")(js.Any.fromFunction2(value))
         ret

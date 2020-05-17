@@ -6,10 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the information associated with a meeting. */
-@JSGlobal("Windows.ApplicationModel.Email.EmailMeetingInfo")
 @js.native
-/** Initializes a new instance of the EmailMeetingInfo class. */
-class EmailMeetingInfo () extends js.Object {
+trait EmailMeetingInfo extends js.Object {
   /** Gets or sets a Boolean value indicating whether the proposal of a new time is allowed. */
   var allowNewTimeProposal: Boolean = js.native
   /** Gets or sets the start time for a meeting. */
@@ -38,5 +36,120 @@ class EmailMeetingInfo () extends js.Object {
   var remoteChangeNumber: Double = js.native
   /** Gets or sets the start time for the meeting. */
   var startTime: js.Date = js.native
+}
+
+object EmailMeetingInfo {
+  @scala.inline
+  def apply(
+    allowNewTimeProposal: Boolean,
+    appointmentOriginalStartTime: js.Date,
+    appointmentRoamingId: String,
+    duration: Double,
+    isAllDay: Boolean,
+    isReportedOutOfDateByServer: Boolean,
+    isResponseRequested: Boolean,
+    location: String,
+    proposedDuration: Double,
+    proposedStartTime: js.Date,
+    recurrence: AppointmentRecurrence,
+    recurrenceStartTime: js.Date,
+    remoteChangeNumber: Double,
+    startTime: js.Date
+  ): EmailMeetingInfo = {
+    val __obj = js.Dynamic.literal(allowNewTimeProposal = allowNewTimeProposal.asInstanceOf[js.Any], appointmentOriginalStartTime = appointmentOriginalStartTime.asInstanceOf[js.Any], appointmentRoamingId = appointmentRoamingId.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any], isAllDay = isAllDay.asInstanceOf[js.Any], isReportedOutOfDateByServer = isReportedOutOfDateByServer.asInstanceOf[js.Any], isResponseRequested = isResponseRequested.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], proposedDuration = proposedDuration.asInstanceOf[js.Any], proposedStartTime = proposedStartTime.asInstanceOf[js.Any], recurrence = recurrence.asInstanceOf[js.Any], recurrenceStartTime = recurrenceStartTime.asInstanceOf[js.Any], remoteChangeNumber = remoteChangeNumber.asInstanceOf[js.Any], startTime = startTime.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EmailMeetingInfo]
+  }
+  @scala.inline
+  implicit class EmailMeetingInfoOps[Self <: EmailMeetingInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowNewTimeProposal(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowNewTimeProposal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAppointmentOriginalStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentOriginalStartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAppointmentRoamingId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentRoamingId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsAllDay(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAllDay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsReportedOutOfDateByServer(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isReportedOutOfDateByServer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsResponseRequested(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isResponseRequested")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProposedDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proposedDuration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProposedStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proposedStartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRecurrence(value: AppointmentRecurrence): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRecurrenceStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recurrenceStartTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoteChangeNumber(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteChangeNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

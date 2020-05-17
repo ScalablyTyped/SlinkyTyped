@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobileRn.mod
 
-import typingsSlinky.antdMobileRn.TypeofRMCDefaultTabBar
+import typingsSlinky.antdMobileRn.anon.TypeofRMCDefaultTabBar
 import typingsSlinky.antdMobileRn.tabsIndexNativeMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -6,7 +6,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.blueprintjsCore.PartialIPopoverProps
+import typingsSlinky.blueprintjsCore.anon.PartialIPopoverProps
 import typingsSlinky.blueprintjsCore.intentMod.Intent
 import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName

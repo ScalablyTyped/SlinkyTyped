@@ -1,13 +1,13 @@
 package typingsSlinky.arangodb.Foxx
 
-import typingsSlinky.arangodb.AnonCharset
+import typingsSlinky.arangodb.anon.Charset
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait MediaType extends js.Object {
-  var parameters: AnonCharset = js.native
+  var parameters: Charset = js.native
   var subtype: String = js.native
   var suffix: js.UndefOr[String] = js.native
   var `type`: String = js.native
@@ -15,7 +15,7 @@ trait MediaType extends js.Object {
 
 object MediaType {
   @scala.inline
-  def apply(parameters: AnonCharset, subtype: String, `type`: String): MediaType = {
+  def apply(parameters: Charset, subtype: String, `type`: String): MediaType = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], subtype = subtype.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaType]
@@ -27,7 +27,7 @@ object MediaType {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withParameters(value: AnonCharset): Self = {
+    def withParameters(value: Charset): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
         ret

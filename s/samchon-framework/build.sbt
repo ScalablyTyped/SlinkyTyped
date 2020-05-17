@@ -1,19 +1,19 @@
 organization := "org.scalablytyped.slinky"
 name := "samchon-framework"
-version := "2.1.4-25bec7"
-scalaVersion := "2.13.1"
+version := "2.1.4-ca315c"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "ecol" % "1.1.0-920f4f",
-  "org.scalablytyped.slinky" %%% "samchon" % "2.1.4-1cd6ed",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e",
-  "org.scalablytyped.slinky" %%% "sxml" % "1.0.3-376462",
-  "org.scalablytyped.slinky" %%% "tstl" % "2.4.2-78e4ae",
-  "org.scalablytyped.slinky" %%% "url-variables" % "1.0.2-66979f")
+  "org.scalablytyped.slinky" %%% "ecol" % "1.1.0-0412f3",
+  "org.scalablytyped.slinky" %%% "samchon" % "2.1.4-836e77",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb",
+  "org.scalablytyped.slinky" %%% "sxml" % "1.0.3-6ef5d6",
+  "org.scalablytyped.slinky" %%% "tstl" % "2.4.2-f3354a",
+  "org.scalablytyped.slinky" %%% "url-variables" % "1.0.2-b251ab")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

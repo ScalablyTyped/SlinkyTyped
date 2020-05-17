@@ -1,7 +1,7 @@
 package typingsSlinky.dagreD3.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.dagreD3.Node
+import typingsSlinky.dagreD3.anon.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

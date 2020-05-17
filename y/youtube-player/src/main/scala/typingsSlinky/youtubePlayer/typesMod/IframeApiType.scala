@@ -1,18 +1,18 @@
 package typingsSlinky.youtubePlayer.typesMod
 
-import typingsSlinky.youtubePlayer.AnonInstantiable
+import typingsSlinky.youtubePlayer.anon.Instantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IframeApiType extends js.Object {
-  var Player: AnonInstantiable = js.native
+  var Player: Instantiable = js.native
 }
 
 object IframeApiType {
   @scala.inline
-  def apply(Player: AnonInstantiable): IframeApiType = {
+  def apply(Player: Instantiable): IframeApiType = {
     val __obj = js.Dynamic.literal(Player = Player.asInstanceOf[js.Any])
     __obj.asInstanceOf[IframeApiType]
   }
@@ -23,7 +23,7 @@ object IframeApiType {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPlayer(value: AnonInstantiable): Self = {
+    def withPlayer(value: Instantiable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Player")(value.asInstanceOf[js.Any])
         ret

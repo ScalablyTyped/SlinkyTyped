@@ -18,9 +18,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.5]
   */
-@JSGlobal("Excel.CustomXmlPartScopedCollection")
 @js.native
-class CustomXmlPartScopedCollection () extends ClientObject {
+trait CustomXmlPartScopedCollection extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_CustomXmlPartScopedCollection: RequestContext = js.native

@@ -86,6 +86,12 @@ object MessageEventInit {
         ret
     }
     @scala.inline
+    def withSourceWindow(value: org.scalajs.dom.raw.Window): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
     def withSource(value: MessageEventSource): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])

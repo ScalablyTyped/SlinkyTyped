@@ -1,10 +1,10 @@
 package typingsSlinky.materialComponentsWeb.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.materialIconButton.AnonARIAPRESSED
-import typingsSlinky.materialIconButton.AnonICONBUTTONON
-import typingsSlinky.materialIconButton.PartialMDCIconButtonToggl
 import typingsSlinky.materialIconButton.adapterMod.MDCIconButtonToggleAdapter
+import typingsSlinky.materialIconButton.anon.ARIAPRESSED
+import typingsSlinky.materialIconButton.anon.ICONBUTTONON
+import typingsSlinky.materialIconButton.anon.PartialMDCIconButtonToggl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,9 +31,9 @@ object iconButton extends js.Object {
   /* static members */
   @js.native
   object MDCIconButtonToggleFoundation extends js.Object {
-    val cssClasses: AnonICONBUTTONON = js.native
+    val cssClasses: ICONBUTTONON = js.native
     val defaultAdapter: MDCIconButtonToggleAdapter = js.native
-    val strings: AnonARIAPRESSED = js.native
+    val strings: ARIAPRESSED = js.native
   }
   
   @js.native

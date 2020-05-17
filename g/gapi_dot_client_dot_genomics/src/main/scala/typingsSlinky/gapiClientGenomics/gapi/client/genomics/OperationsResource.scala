@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientGenomics.gapi.client.genomics
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientGenomics.AnonFilter
-import typingsSlinky.gapiClientGenomics.AnonName
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientGenomics.anon.Filter
+import typingsSlinky.gapiClientGenomics.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,23 +14,23 @@ trait OperationsResource extends js.Object {
     * Clients may use Operations.GetOperation or Operations.ListOperations to check whether the cancellation succeeded or the operation completed despite
     * cancellation.
     */
-  def cancel(request: AnonName): Request_[js.Object] = js.native
+  def cancel(request: Name): Request[js.Object] = js.native
   /**
     * Gets the latest state of a long-running operation.  Clients can use this
     * method to poll the operation result at intervals as recommended by the API
     * service.
     */
-  def get(request: AnonName): Request_[Operation] = js.native
+  def get(request: Name): Request[Operation] = js.native
   /** Lists operations that match the specified filter in the request. */
-  def list(request: AnonFilter): Request_[ListOperationsResponse] = js.native
+  def list(request: Filter): Request[ListOperationsResponse] = js.native
 }
 
 object OperationsResource {
   @scala.inline
   def apply(
-    cancel: AnonName => Request_[js.Object],
-    get: AnonName => Request_[Operation],
-    list: AnonFilter => Request_[ListOperationsResponse]
+    cancel: Name => Request[js.Object],
+    get: Name => Request[Operation],
+    list: Filter => Request[ListOperationsResponse]
   ): OperationsResource = {
     val __obj = js.Dynamic.literal(cancel = js.Any.fromFunction1(cancel), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[OperationsResource]
@@ -42,19 +42,19 @@ object OperationsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCancel(value: AnonName => Request_[js.Object]): Self = {
+    def withCancel(value: Name => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonName => Request_[Operation]): Self = {
+    def withGet(value: Name => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonFilter => Request_[ListOperationsResponse]): Self = {
+    def withList(value: Filter => Request[ListOperationsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

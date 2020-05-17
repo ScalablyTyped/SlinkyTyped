@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientSourcerepo.gapi.client.sourcerepo
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientSourcerepo.AnonAccesstoken
-import typingsSlinky.gapiClientSourcerepo.AnonAlt
-import typingsSlinky.gapiClientSourcerepo.AnonBearertoken
-import typingsSlinky.gapiClientSourcerepo.AnonCallback
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientSourcerepo.anon.Accesstoken
+import typingsSlinky.gapiClientSourcerepo.anon.Alt
+import typingsSlinky.gapiClientSourcerepo.anon.Bearertoken
+import typingsSlinky.gapiClientSourcerepo.anon.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,45 +17,45 @@ trait ReposResource extends js.Object {
     * If the named repository already exists, `CreateRepo` returns
     * `ALREADY_EXISTS`.
     */
-  def create(request: AnonAccesstoken): Request_[Repo] = js.native
+  def create(request: Accesstoken): Request[Repo] = js.native
   /** Deletes a repo. */
-  def delete(request: AnonAlt): Request_[js.Object] = js.native
+  def delete(request: Alt): Request[js.Object] = js.native
   /** Returns information about a repo. */
-  def get(request: AnonAlt): Request_[Repo] = js.native
+  def get(request: Alt): Request[Repo] = js.native
   /**
     * Gets the access control policy for a resource.
     * Returns an empty policy if the resource exists and does not have a policy
     * set.
     */
-  def getIamPolicy(request: AnonBearertoken): Request_[Policy] = js.native
+  def getIamPolicy(request: Bearertoken): Request[Policy] = js.native
   /**
     * Returns all repos belonging to a project. The sizes of the repos are
     * not set by ListRepos.  To get the size of a repo, use GetRepo.
     */
-  def list(request: AnonCallback): Request_[ListReposResponse] = js.native
+  def list(request: Callback): Request[ListReposResponse] = js.native
   /**
     * Sets the access control policy on the specified resource. Replaces any
     * existing policy.
     */
-  def setIamPolicy(request: AnonBearertoken): Request_[Policy] = js.native
+  def setIamPolicy(request: Bearertoken): Request[Policy] = js.native
   /**
     * Returns permissions that a caller has on the specified resource.
     * If the resource does not exist, this will return an empty set of
     * permissions, not a NOT_FOUND error.
     */
-  def testIamPermissions(request: AnonBearertoken): Request_[TestIamPermissionsResponse] = js.native
+  def testIamPermissions(request: Bearertoken): Request[TestIamPermissionsResponse] = js.native
 }
 
 object ReposResource {
   @scala.inline
   def apply(
-    create: AnonAccesstoken => Request_[Repo],
-    delete: AnonAlt => Request_[js.Object],
-    get: AnonAlt => Request_[Repo],
-    getIamPolicy: AnonBearertoken => Request_[Policy],
-    list: AnonCallback => Request_[ListReposResponse],
-    setIamPolicy: AnonBearertoken => Request_[Policy],
-    testIamPermissions: AnonBearertoken => Request_[TestIamPermissionsResponse]
+    create: Accesstoken => Request[Repo],
+    delete: Alt => Request[js.Object],
+    get: Alt => Request[Repo],
+    getIamPolicy: Bearertoken => Request[Policy],
+    list: Callback => Request[ListReposResponse],
+    setIamPolicy: Bearertoken => Request[Policy],
+    testIamPermissions: Bearertoken => Request[TestIamPermissionsResponse]
   ): ReposResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), getIamPolicy = js.Any.fromFunction1(getIamPolicy), list = js.Any.fromFunction1(list), setIamPolicy = js.Any.fromFunction1(setIamPolicy), testIamPermissions = js.Any.fromFunction1(testIamPermissions))
     __obj.asInstanceOf[ReposResource]
@@ -67,43 +67,43 @@ object ReposResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: AnonAccesstoken => Request_[Repo]): Self = {
+    def withCreate(value: Accesstoken => Request[Repo]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonAlt => Request_[js.Object]): Self = {
+    def withDelete(value: Alt => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonAlt => Request_[Repo]): Self = {
+    def withGet(value: Alt => Request[Repo]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGetIamPolicy(value: AnonBearertoken => Request_[Policy]): Self = {
+    def withGetIamPolicy(value: Bearertoken => Request[Policy]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getIamPolicy")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonCallback => Request_[ListReposResponse]): Self = {
+    def withList(value: Callback => Request[ListReposResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withSetIamPolicy(value: AnonBearertoken => Request_[Policy]): Self = {
+    def withSetIamPolicy(value: Bearertoken => Request[Policy]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("setIamPolicy")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withTestIamPermissions(value: AnonBearertoken => Request_[TestIamPermissionsResponse]): Self = {
+    def withTestIamPermissions(value: Bearertoken => Request[TestIamPermissionsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("testIamPermissions")(js.Any.fromFunction1(value))
         ret

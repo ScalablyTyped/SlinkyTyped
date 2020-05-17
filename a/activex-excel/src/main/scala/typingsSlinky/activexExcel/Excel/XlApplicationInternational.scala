@@ -11,3 +11,12 @@ import scala.scalajs.js.annotation._
 */
 trait XlApplicationInternational extends js.Object
 
+object XlApplicationInternational {
+  @scala.inline
+  implicit def apply(value: XlApplicationInternationalBooleans): XlApplicationInternational = value.asInstanceOf[XlApplicationInternational]
+  @scala.inline
+  implicit def apply(value: XlApplicationInternationalNumbers): XlApplicationInternational = value.asInstanceOf[XlApplicationInternational]
+  @scala.inline
+  implicit def apply(value: XlApplicationInternationalStrings): XlApplicationInternational = value.asInstanceOf[XlApplicationInternational]
+}
+

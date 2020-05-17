@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,12 +12,5 @@ trait PushManager extends js.Object {
   def permissionState(options: PushSubscriptionOptionsInit): js.Promise[org.scalajs.dom.experimental.push.PushPermissionState] = js.native
   def subscribe(): js.Promise[org.scalajs.dom.experimental.push.PushSubscription] = js.native
   def subscribe(options: PushSubscriptionOptionsInit): js.Promise[org.scalajs.dom.experimental.push.PushSubscription] = js.native
-}
-
-@JSGlobal("PushManager")
-@js.native
-object PushManager
-  extends Instantiable0[org.scalajs.dom.experimental.push.PushManager] {
-  val supportedContentEncodings: js.Array[java.lang.String] = js.native
 }
 

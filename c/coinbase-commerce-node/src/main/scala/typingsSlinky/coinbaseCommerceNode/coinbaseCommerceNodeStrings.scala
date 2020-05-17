@@ -2,9 +2,9 @@ package typingsSlinky.coinbaseCommerceNode
 
 import typingsSlinky.coinbaseCommerceNode.mod.CryptoCurrency
 import typingsSlinky.coinbaseCommerceNode.mod.CryptoName
+import typingsSlinky.coinbaseCommerceNode.mod.FiatCurrency
 import typingsSlinky.coinbaseCommerceNode.mod.PaymentStatus
 import typingsSlinky.coinbaseCommerceNode.mod.PricingType
-import typingsSlinky.coinbaseCommerceNode.mod._FiatCurrency
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,13 +32,13 @@ object coinbaseCommerceNodeStrings {
   sealed trait ETH extends CryptoCurrency
   
   @js.native
-  sealed trait EUR extends _FiatCurrency
+  sealed trait EUR extends FiatCurrency
   
   @js.native
   sealed trait EXPIRED extends PaymentStatus
   
   @js.native
-  sealed trait GBP extends _FiatCurrency
+  sealed trait GBP extends FiatCurrency
   
   @js.native
   sealed trait GET extends js.Object
@@ -80,7 +80,7 @@ object coinbaseCommerceNodeStrings {
   sealed trait UNRESOLVED extends PaymentStatus
   
   @js.native
-  sealed trait USD extends _FiatCurrency
+  sealed trait USD extends FiatCurrency
   
   @js.native
   sealed trait USDC extends CryptoCurrency

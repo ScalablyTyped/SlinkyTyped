@@ -1,6 +1,6 @@
 package typingsSlinky.reactBootstrapTypeahead.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait MenuItemContext[T /* <: TypeaheadModel */] extends js.Object {
   var isOnlyResult: js.UndefOr[Boolean] = js.native
   var onActiveItemChange: js.UndefOr[js.Function1[/* options */ T, Unit]] = js.native
   var onInitialItemChange: js.UndefOr[js.Function1[/* option */ T, Unit]] = js.native
-  var onMenuItemClick: js.UndefOr[js.Function2[/* option */ T, /* e */ Event_, Unit]] = js.native
+  var onMenuItemClick: js.UndefOr[js.Function2[/* option */ T, /* e */ Event, Unit]] = js.native
 }
 
 object MenuItemContext {
@@ -76,7 +76,7 @@ object MenuItemContext {
         ret
     }
     @scala.inline
-    def withOnMenuItemClick(value: (/* option */ T, /* e */ Event_) => Unit): Self[T] = {
+    def withOnMenuItemClick(value: (/* option */ T, /* e */ Event) => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMenuItemClick")(js.Any.fromFunction2(value))
         ret

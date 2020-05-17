@@ -1,18 +1,18 @@
 package typingsSlinky.tstl.errorGeneratorMod
 
-import typingsSlinky.tstl.AnonMODULE
+import typingsSlinky.tstl.anon.MODULE
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Instance extends js.Object {
-  var constructor: AnonMODULE = js.native
+  var constructor: MODULE = js.native
 }
 
 object Instance {
   @scala.inline
-  def apply(constructor: AnonMODULE): Instance = {
+  def apply(constructor: MODULE): Instance = {
     val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any])
     __obj.asInstanceOf[Instance]
   }
@@ -23,7 +23,7 @@ object Instance {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withConstructor(value: AnonMODULE): Self = {
+    def withConstructor(value: MODULE): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("constructor")(value.asInstanceOf[js.Any])
         ret

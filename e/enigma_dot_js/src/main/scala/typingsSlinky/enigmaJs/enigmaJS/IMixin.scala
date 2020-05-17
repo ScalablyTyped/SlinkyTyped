@@ -1,6 +1,6 @@
 package typingsSlinky.enigmaJs.enigmaJS
 
-import typingsSlinky.enigmaJs.AnonApi
+import typingsSlinky.enigmaJs.anon.Api
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,12 +24,12 @@ trait IMixin extends js.Object {
     * An API will get both their generic type as well as custom type mixins applied.
     */
   var types: js.Array[MixinType] = js.native
-  def init(args: AnonApi): Unit = js.native
+  def init(args: Api): Unit = js.native
 }
 
 object IMixin {
   @scala.inline
-  def apply(init: AnonApi => Unit, types: js.Array[MixinType]): IMixin = {
+  def apply(init: Api => Unit, types: js.Array[MixinType]): IMixin = {
     val __obj = js.Dynamic.literal(init = js.Any.fromFunction1(init), types = types.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMixin]
   }
@@ -40,7 +40,7 @@ object IMixin {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withInit(value: AnonApi => Unit): Self = {
+    def withInit(value: Api => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction1(value))
         ret

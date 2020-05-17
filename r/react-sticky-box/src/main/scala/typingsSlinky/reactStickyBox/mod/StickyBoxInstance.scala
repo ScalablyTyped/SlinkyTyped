@@ -1,7 +1,7 @@
 package typingsSlinky.reactStickyBox.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait StickyBoxInstance extends js.Object {
   var nodeHeight: Double = js.native
   var offset: Double = js.native
   var parentHeight: Double = js.native
-  var scrollPane: HTMLElement | Window_ = js.native
+  var scrollPane: HTMLElement | Window = js.native
   var viewportHeight: Double = js.native
 }
 
@@ -29,7 +29,7 @@ object StickyBoxInstance {
     nodeHeight: Double,
     offset: Double,
     parentHeight: Double,
-    scrollPane: HTMLElement | Window_,
+    scrollPane: HTMLElement | Window,
     viewportHeight: Double
   ): StickyBoxInstance = {
     val __obj = js.Dynamic.literal(latestScrollY = latestScrollY.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], naturalTop = naturalTop.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any], nodeHeight = nodeHeight.asInstanceOf[js.Any], offset = offset.asInstanceOf[js.Any], parentHeight = parentHeight.asInstanceOf[js.Any], scrollPane = scrollPane.asInstanceOf[js.Any], viewportHeight = viewportHeight.asInstanceOf[js.Any])
@@ -84,13 +84,19 @@ object StickyBoxInstance {
         ret
     }
     @scala.inline
+    def withScrollPaneWindow(value: Window): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPane")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
     def withScrollPaneHTMLElement(value: HTMLElement): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPane")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withScrollPane(value: HTMLElement | Window_): Self = {
+    def withScrollPane(value: HTMLElement | Window): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPane")(value.asInstanceOf[js.Any])
         ret

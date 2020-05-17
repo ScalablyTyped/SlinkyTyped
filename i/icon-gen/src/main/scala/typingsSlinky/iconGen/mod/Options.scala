@@ -1,16 +1,16 @@
 package typingsSlinky.iconGen.mod
 
-import typingsSlinky.iconGen.AnonIco
-import typingsSlinky.iconGen.AnonName
+import typingsSlinky.iconGen.anon.Ico
+import typingsSlinky.iconGen.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Options extends js.Object {
-  var favicon: js.UndefOr[AnonIco | js.Object] = js.native
-  var icns: js.UndefOr[AnonName | js.Object] = js.native
-  var ico: js.UndefOr[AnonName | js.Object] = js.native
+  var favicon: js.UndefOr[Ico | js.Object] = js.native
+  var icns: js.UndefOr[Name | js.Object] = js.native
+  var ico: js.UndefOr[Name | js.Object] = js.native
   var report: js.UndefOr[Boolean] = js.native
 }
 
@@ -27,7 +27,7 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFavicon(value: AnonIco | js.Object): Self = {
+    def withFavicon(value: Ico | js.Object): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("favicon")(value.asInstanceOf[js.Any])
         ret
@@ -39,7 +39,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withIcns(value: AnonName | js.Object): Self = {
+    def withIcns(value: Name | js.Object): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("icns")(value.asInstanceOf[js.Any])
         ret
@@ -51,7 +51,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withIco(value: AnonName | js.Object): Self = {
+    def withIco(value: Name | js.Object): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ico")(value.asInstanceOf[js.Any])
         ret

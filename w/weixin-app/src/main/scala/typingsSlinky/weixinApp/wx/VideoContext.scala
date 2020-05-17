@@ -1,7 +1,7 @@
 package typingsSlinky.weixinApp.wx
 
-import typingsSlinky.weixinApp.AnonColor
-import typingsSlinky.weixinApp.AnonDirection
+import typingsSlinky.weixinApp.anon.Color
+import typingsSlinky.weixinApp.anon.Direction
 import typingsSlinky.weixinApp.weixinAppNumbers.`0.5`
 import typingsSlinky.weixinApp.weixinAppNumbers.`0.8`
 import typingsSlinky.weixinApp.weixinAppNumbers.`1.0`
@@ -44,7 +44,7 @@ trait VideoContext extends js.Object {
   		 *  进入全屏
   		 */
   def requestFullScreen(): Unit = js.native
-  def requestFullScreen(options: AnonDirection): Unit = js.native
+  def requestFullScreen(options: Direction): Unit = js.native
   /**
   		 * 跳转到指定位置，单位 s
   		 */
@@ -52,6 +52,6 @@ trait VideoContext extends js.Object {
   /**
   		 * 发送弹幕，danmu 包含两个属性 text, color。
   		 */
-  def sendDanmu(danmu: AnonColor): Unit = js.native
+  def sendDanmu(danmu: Color): Unit = js.native
 }
 

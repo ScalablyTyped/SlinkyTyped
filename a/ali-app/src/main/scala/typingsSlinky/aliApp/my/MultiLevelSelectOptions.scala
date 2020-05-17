@@ -1,6 +1,6 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonResult
+import typingsSlinky.aliApp.anon.Result
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait MultiLevelSelectOptions
   var subList: js.UndefOr[js.Array[MultiLevelSelectItem]] = js.native
   	// 子条目列表
   @JSName("success")
-  var success_MultiLevelSelectOptions: js.UndefOr[js.Function1[/* res */ AnonResult, Unit]] = js.native
+  var success_MultiLevelSelectOptions: js.UndefOr[js.Function1[/* res */ Result, Unit]] = js.native
   var title: js.UndefOr[String] = js.native
 }
 
@@ -69,7 +69,7 @@ object MultiLevelSelectOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonResult => Unit): Self = {
+    def withSuccess(value: /* res */ Result => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

@@ -15,11 +15,8 @@ import scala.scalajs.js.annotation._
   * @param {pc.Vec3} [center] - The world space coordinate marking the center of the sphere. The constructor takes a reference of this parameter.
   * @param {number} [radius] - The radius of the bounding sphere. Defaults to 0.5.
   */
-@JSGlobal("pc.BoundingSphere")
 @js.native
-class BoundingSphere () extends js.Object {
-  def this(center: Vec3) = this()
-  def this(center: Vec3, radius: Double) = this()
+trait BoundingSphere extends js.Object {
   /**
     * @function
     * @name pc.BoundingSphere#intersectsBoundingSphere

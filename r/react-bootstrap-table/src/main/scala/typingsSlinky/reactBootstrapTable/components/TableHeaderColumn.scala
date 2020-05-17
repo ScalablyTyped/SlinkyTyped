@@ -4,7 +4,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactBootstrapTable.AnonGetElement
+import typingsSlinky.reactBootstrapTable.anon.GetElement
 import typingsSlinky.reactBootstrapTable.mod.CSVFieldType
 import typingsSlinky.reactBootstrapTable.mod.CustomAttrs
 import typingsSlinky.reactBootstrapTable.mod.CustomEditor
@@ -88,7 +88,7 @@ object TableHeaderColumn {
     @scala.inline
     def customEditor(value: CustomEditor[_, _]): this.type = set("customEditor", value.asInstanceOf[js.Any])
     @scala.inline
-    def customInsertEditor(value: AnonGetElement): this.type = set("customInsertEditor", value.asInstanceOf[js.Any])
+    def customInsertEditor(value: GetElement): this.type = set("customInsertEditor", value.asInstanceOf[js.Any])
     @scala.inline
     def dataAlign(value: DataAlignType): this.type = set("dataAlign", value.asInstanceOf[js.Any])
     @scala.inline

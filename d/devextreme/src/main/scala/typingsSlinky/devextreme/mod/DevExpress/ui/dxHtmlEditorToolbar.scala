@@ -27,7 +27,7 @@ import typingsSlinky.devextreme.devextremeStrings.superscript
 import typingsSlinky.devextreme.devextremeStrings.underline
 import typingsSlinky.devextreme.devextremeStrings.undo
 import typingsSlinky.devextreme.devextremeStrings.variable
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

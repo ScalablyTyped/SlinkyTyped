@@ -13,8 +13,8 @@ import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.ScrollViewProps
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeSnapCarousel.AnonIndex
-import typingsSlinky.reactNativeSnapCarousel.AnonInputRange
+import typingsSlinky.reactNativeSnapCarousel.anon.Index
+import typingsSlinky.reactNativeSnapCarousel.anon.InputRange
 import typingsSlinky.reactNativeSnapCarousel.reactNativeSnapCarouselStrings.center
 import typingsSlinky.reactNativeSnapCarousel.reactNativeSnapCarouselStrings.decay
 import typingsSlinky.reactNativeSnapCarousel.reactNativeSnapCarouselStrings.end
@@ -205,7 +205,7 @@ trait CarouselProps[T] extends Props[ScrollViewProps] {
     * Used to define custom interpolations
     */
   var scrollInterpolator: js.UndefOr[
-    js.Function2[/* index */ Double, /* carouselProps */ CarouselProps[_], AnonInputRange]
+    js.Function2[/* index */ Double, /* carouselProps */ CarouselProps[_], InputRange]
   ] = js.native
   /**
     * Whether to implement a shouldComponentUpdate strategy to minimize updates
@@ -254,7 +254,7 @@ trait CarouselProps[T] extends Props[ScrollViewProps] {
     * Function that takes an item from the `data` array and returns a React
     * Element. See `react-native`'s `FlatList`
     */
-  def renderItem(item: AnonIndex[T]): TagMod[Any] = js.native
-  def renderItem(item: AnonIndex[T], parallaxProps: AdditionalParallaxProps): TagMod[Any] = js.native
+  def renderItem(item: Index[T]): TagMod[Any] = js.native
+  def renderItem(item: Index[T], parallaxProps: AdditionalParallaxProps): TagMod[Any] = js.native
 }
 

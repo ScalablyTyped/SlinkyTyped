@@ -1,6 +1,6 @@
 package typingsSlinky.actionsOnGoogle.apiV1Mod
 
-import typingsSlinky.actionsOnGoogle.AnonDevices
+import typingsSlinky.actionsOnGoogle.anon.Devices
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SmartHomeV1ReportStateRequest extends js.Object {
   var agentUserId: String = js.native
-  var payload: AnonDevices = js.native
+  var payload: Devices = js.native
   var requestId: String = js.native
 }
 
 object SmartHomeV1ReportStateRequest {
   @scala.inline
-  def apply(agentUserId: String, payload: AnonDevices, requestId: String): SmartHomeV1ReportStateRequest = {
+  def apply(agentUserId: String, payload: Devices, requestId: String): SmartHomeV1ReportStateRequest = {
     val __obj = js.Dynamic.literal(agentUserId = agentUserId.asInstanceOf[js.Any], payload = payload.asInstanceOf[js.Any], requestId = requestId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SmartHomeV1ReportStateRequest]
   }
@@ -31,7 +31,7 @@ object SmartHomeV1ReportStateRequest {
         ret
     }
     @scala.inline
-    def withPayload(value: AnonDevices): Self = {
+    def withPayload(value: Devices): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
         ret

@@ -1,9 +1,9 @@
 package typingsSlinky.reactAutosuggest.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
 import slinky.web.SyntheticFocusEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,12 +19,12 @@ trait InputProps[TSuggestion] extends js.Object {
     ]
   ] = js.native
   var value: String = js.native
-  def onChange(event: SyntheticEvent[EventTarget, Event_], params: ChangeEvent): Unit = js.native
+  def onChange(event: SyntheticEvent[EventTarget, Event], params: ChangeEvent): Unit = js.native
 }
 
 object InputProps {
   @scala.inline
-  def apply[TSuggestion](onChange: (SyntheticEvent[EventTarget, Event_], ChangeEvent) => Unit, value: String): InputProps[TSuggestion] = {
+  def apply[TSuggestion](onChange: (SyntheticEvent[EventTarget, Event], ChangeEvent) => Unit, value: String): InputProps[TSuggestion] = {
     val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction2(onChange), value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputProps[TSuggestion]]
   }
@@ -35,7 +35,7 @@ object InputProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[TSuggestion] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TSuggestion] with Other]
     @scala.inline
-    def withOnChange(value: (SyntheticEvent[EventTarget, Event_], ChangeEvent) => Unit): Self[TSuggestion] = {
+    def withOnChange(value: (SyntheticEvent[EventTarget, Event], ChangeEvent) => Unit): Self[TSuggestion] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
         ret

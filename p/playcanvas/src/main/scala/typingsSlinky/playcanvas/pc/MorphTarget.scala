@@ -1,6 +1,5 @@
 package typingsSlinky.playcanvas.pc
 
-import typingsSlinky.playcanvas.AnonAabb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,9 +19,6 @@ import scala.scalajs.js.annotation._
   * @param {string} [options.name] - Name.
   * @param {pc.BoundingBox} [options.aabb] - Bounding box. Will be automatically generated, if undefined.
   */
-@JSGlobal("pc.MorphTarget")
 @js.native
-class MorphTarget protected () extends js.Object {
-  def this(options: AnonAabb) = this()
-}
+trait MorphTarget extends js.Object
 

@@ -2,6 +2,7 @@ package typingsSlinky.reactToastr
 
 import slinky.core.TagMod
 import typingsSlinky.react.mod.Component
+import typingsSlinky.reactToastr.anon.ClassName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation._
 object mod extends js.Object {
   @js.native
   class ToastContainer ()
-    extends Component[AnonClassName, js.Object, js.Any] {
+    extends Component[ClassName, js.Object, js.Any] {
     def clear(): Unit = js.native
     def error(message: TagMod[Any], title: TagMod[Any]): Unit = js.native
     def error(message: TagMod[Any], title: TagMod[Any], optionsOverride: js.Object): Unit = js.native

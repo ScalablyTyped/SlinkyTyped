@@ -4,6 +4,10 @@ import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.preact.mod.Component
 import typingsSlinky.preact.mod.ComponentChild
 import typingsSlinky.preact.mod.VNode
+import typingsSlinky.preactI18n.anon.Children
+import typingsSlinky.preactI18n.anon.Definition
+import typingsSlinky.preactI18n.anon.Fields
+import typingsSlinky.preactI18n.anon.Scope
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,14 +18,14 @@ object mod extends js.Object {
   @js.native
   class IntlProvider ()
     extends Component[
-          AnonDefinition, 
+          Definition, 
           /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for S */ js.Any
         ]
   
   @js.native
   class Localizer ()
     extends Component[
-          AnonChildren, 
+          Children, 
           /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for S */ js.Any
         ]
   
@@ -34,7 +38,7 @@ object mod extends js.Object {
   @js.native
   class TextComponent ()
     extends Component[
-          AnonFields, 
+          Fields, 
           /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for S */ js.Any
         ]
   
@@ -49,7 +53,7 @@ object mod extends js.Object {
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for P */ _, 
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for S */ _
     ],
-    options: AnonScope
+    options: Scope
   ): VNode[js.Object] = js.native
   def withText[Props, Context](mapping: js.Object): js.Function1[
     /* Child */ ComponentChild, 

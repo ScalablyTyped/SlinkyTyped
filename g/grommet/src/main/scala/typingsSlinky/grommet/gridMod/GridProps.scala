@@ -1,9 +1,9 @@
 package typingsSlinky.grommet.gridMod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.grommet.AnonColumn
-import typingsSlinky.grommet.AnonCount
-import typingsSlinky.grommet.AnonEnd
+import typingsSlinky.grommet.anon.Column
+import typingsSlinky.grommet.anon.Count
+import typingsSlinky.grommet.anon.End
 import typingsSlinky.grommet.grommetStrings.`1Slash2`
 import typingsSlinky.grommet.grommetStrings.`1Slash3`
 import typingsSlinky.grommet.grommetStrings.`1Slash4`
@@ -42,15 +42,15 @@ trait GridProps extends js.Object {
   var align: js.UndefOr[start | center | end | stretch] = js.native
   var alignContent: js.UndefOr[AlignContentType] = js.native
   var alignSelf: js.UndefOr[AlignSelfType] = js.native
-  var areas: js.UndefOr[js.Array[AnonEnd | js.Array[String]]] = js.native
+  var areas: js.UndefOr[js.Array[js.Array[String] | End]] = js.native
   var as: js.UndefOr[PolymorphicType] = js.native
   var columns: js.UndefOr[
     (js.Array[
       xsmall | small | medium | large | xlarge | full | `1Slash2` | `1Slash3` | `2Slash3` | `1Slash4` | `2Slash4` | `3Slash4` | flex | auto | String | js.Array[String]
-    ]) | xsmall | small | medium | large | xlarge | AnonCount | String
+    ]) | xsmall | small | medium | large | xlarge | Count | String
   ] = js.native
   var fill: js.UndefOr[FillType] = js.native
-  var gap: js.UndefOr[GapType | AnonColumn] = js.native
+  var gap: js.UndefOr[GapType | Column] = js.native
   var gridArea: js.UndefOr[GridAreaType] = js.native
   var justify: js.UndefOr[start | center | end | stretch] = js.native
   var justifyContent: js.UndefOr[JustifyContentType] = js.native
@@ -126,7 +126,7 @@ object GridProps {
         ret
     }
     @scala.inline
-    def withAreas(value: js.Array[AnonEnd | js.Array[String]]): Self = {
+    def withAreas(value: js.Array[js.Array[String] | End]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("areas")(value.asInstanceOf[js.Any])
         ret
@@ -165,7 +165,7 @@ object GridProps {
     def withColumns(
       value: (js.Array[
           xsmall | small | medium | large | xlarge | full | `1Slash2` | `1Slash3` | `2Slash3` | `1Slash4` | `2Slash4` | `3Slash4` | flex | auto | String | js.Array[String]
-        ]) | xsmall | small | medium | large | xlarge | AnonCount | String
+        ]) | xsmall | small | medium | large | xlarge | Count | String
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
@@ -190,7 +190,7 @@ object GridProps {
         ret
     }
     @scala.inline
-    def withGap(value: GapType | AnonColumn): Self = {
+    def withGap(value: GapType | Column): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gap")(value.asInstanceOf[js.Any])
         ret

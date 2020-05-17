@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabCoreutils.statedbMod.StateDB
 
-import typingsSlinky.jupyterlabCoreutils.AnonIdsValues
+import typingsSlinky.jupyterlabCoreutils.anon.IdsValues
 import typingsSlinky.jupyterlabCoreutils.interfacesMod.IDataConnector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,6 +13,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class Connector () extends IDataConnector[String, String, String] {
   var _storage: js.Any = js.native
-  def list(query: String): js.Promise[AnonIdsValues] = js.native
+  def list(query: String): js.Promise[IdsValues] = js.native
 }
 

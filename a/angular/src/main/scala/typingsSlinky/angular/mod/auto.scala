@@ -1,7 +1,6 @@
 package typingsSlinky.angular.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.angular.AnonInstantiable
 import typingsSlinky.angular.angularStrings.$anchorScroll
 import typingsSlinky.angular.angularStrings.$cacheFactory
 import typingsSlinky.angular.angularStrings.$compile
@@ -29,7 +28,8 @@ import typingsSlinky.angular.angularStrings.$templateRequest
 import typingsSlinky.angular.angularStrings.$timeout
 import typingsSlinky.angular.angularStrings.$window
 import typingsSlinky.angular.angularStrings.$xhrFactory
-import typingsSlinky.angular.mod._Global_.Function
+import typingsSlinky.angular.anon.Instantiable
+import typingsSlinky.angular.mod.global.Function
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -109,8 +109,8 @@ object auto extends js.Object {
     @JSName("get")
     def get_xhrFactory[T](name: $xhrFactory): IXhrFactory[T] = js.native
     def has(name: String): Boolean = js.native
-    def instantiate[T](typeConstructor: AnonInstantiable[T]): T = js.native
-    def instantiate[T](typeConstructor: AnonInstantiable[T], locals: js.Any): T = js.native
+    def instantiate[T](typeConstructor: Instantiable[T]): T = js.native
+    def instantiate[T](typeConstructor: Instantiable[T], locals: js.Any): T = js.native
     def invoke[T](func: Injectable[Function | (js.Function1[/* repeated */ _, T])]): T = js.native
     def invoke[T](func: Injectable[Function | (js.Function1[/* repeated */ _, T])], context: js.Any): T = js.native
     def invoke[T](func: Injectable[Function | (js.Function1[/* repeated */ _, T])], context: js.Any, locals: js.Any): T = js.native

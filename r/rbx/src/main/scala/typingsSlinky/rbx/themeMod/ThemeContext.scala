@@ -1,7 +1,7 @@
 package typingsSlinky.rbx.themeMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.rbx.PreferHelpersPropsOverrid
+import typingsSlinky.rbx.anon.PreferHelpersPropsOverrid
 import typingsSlinky.react.mod.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`

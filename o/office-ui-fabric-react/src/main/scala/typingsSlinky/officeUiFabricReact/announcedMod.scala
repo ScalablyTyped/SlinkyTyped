@@ -2,6 +2,7 @@ package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.officeUiFabricReact.announcedTypesMod.IAnnouncedProps
+import typingsSlinky.officeUiFabricReact.anon.PartialIAnnouncedProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

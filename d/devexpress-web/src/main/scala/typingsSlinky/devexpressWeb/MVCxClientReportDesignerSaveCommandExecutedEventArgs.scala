@@ -7,17 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the MVCxClientReportDesigner.SaveCommandExecuted event.
   */
-@JSGlobal("MVCxClientReportDesignerSaveCommandExecutedEventArgs")
 @js.native
-class MVCxClientReportDesignerSaveCommandExecutedEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the MVCxClientReportDesignerSaveCommandExecutedEventArgs class with the specified settings.
-    * @param result A string value that represents the result of server-side processing.
-    */
-  def this(result: String) = this()
+trait MVCxClientReportDesignerSaveCommandExecutedEventArgs extends ASPxClientEventArgs {
   /**
     * Returns the operation result.
     */
   var Result: String = js.native
+}
+
+object MVCxClientReportDesignerSaveCommandExecutedEventArgs {
+  @scala.inline
+  def apply(Result: String): MVCxClientReportDesignerSaveCommandExecutedEventArgs = {
+    val __obj = js.Dynamic.literal(Result = Result.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MVCxClientReportDesignerSaveCommandExecutedEventArgs]
+  }
+  @scala.inline
+  implicit class MVCxClientReportDesignerSaveCommandExecutedEventArgsOps[Self <: MVCxClientReportDesignerSaveCommandExecutedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResult(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Result")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

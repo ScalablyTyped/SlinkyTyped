@@ -1,6 +1,6 @@
 package typingsSlinky.vexflow.mod.Flow
 
-import typingsSlinky.vexflow.AnonPosition
+import typingsSlinky.vexflow.anon.Position
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class TextBracket protected ()
   extends typingsSlinky.vexflow.Vex.Flow.TextBracket {
-  def this(bracket_data: AnonPosition) = this()
+  def this(bracket_data: Position) = this()
 }
 
 /* static members */

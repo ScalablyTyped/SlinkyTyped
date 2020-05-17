@@ -1,6 +1,6 @@
 package typingsSlinky.activedirectory2.mod
 
-import typingsSlinky.activedirectory2.AnonCa
+import typingsSlinky.activedirectory2.anon.Ca
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,13 +13,13 @@ trait LDAPjsReqProps extends js.Object {
   var socketPath: js.UndefOr[String] = js.native
   var strictDN: js.UndefOr[Boolean] = js.native
   var timeout: js.UndefOr[Double] = js.native
-  var tlsOptions: AnonCa = js.native
+  var tlsOptions: Ca = js.native
   var url: String = js.native
 }
 
 object LDAPjsReqProps {
   @scala.inline
-  def apply(tlsOptions: AnonCa, url: String): LDAPjsReqProps = {
+  def apply(tlsOptions: Ca, url: String): LDAPjsReqProps = {
     val __obj = js.Dynamic.literal(tlsOptions = tlsOptions.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[LDAPjsReqProps]
   }
@@ -30,7 +30,7 @@ object LDAPjsReqProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTlsOptions(value: AnonCa): Self = {
+    def withTlsOptions(value: Ca): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tlsOptions")(value.asInstanceOf[js.Any])
         ret

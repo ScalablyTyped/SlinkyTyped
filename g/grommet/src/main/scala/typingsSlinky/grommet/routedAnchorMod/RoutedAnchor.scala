@@ -2,7 +2,7 @@ package typingsSlinky.grommet.routedAnchorMod
 
 import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
-import typingsSlinky.grommet.RoutedAnchorPropsOmitAnch
+import typingsSlinky.grommet.anon.RoutedAnchorPropsOmitAnch
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

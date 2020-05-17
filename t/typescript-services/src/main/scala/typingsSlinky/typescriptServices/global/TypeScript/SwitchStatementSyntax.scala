@@ -1,0 +1,40 @@
+package typingsSlinky.typescriptServices.global.TypeScript
+
+import typingsSlinky.typescriptServices.TypeScript.IExpressionSyntax
+import typingsSlinky.typescriptServices.TypeScript.ISyntaxList
+import typingsSlinky.typescriptServices.TypeScript.ISyntaxToken
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("TypeScript.SwitchStatementSyntax")
+@js.native
+class SwitchStatementSyntax protected ()
+  extends typingsSlinky.typescriptServices.TypeScript.SwitchStatementSyntax {
+  def this(
+    switchKeyword: ISyntaxToken,
+    openParenToken: ISyntaxToken,
+    expression: IExpressionSyntax,
+    closeParenToken: ISyntaxToken,
+    openBraceToken: ISyntaxToken,
+    switchClauses: ISyntaxList,
+    closeBraceToken: ISyntaxToken,
+    parsedInStrictMode: Boolean
+  ) = this()
+}
+
+/* static members */
+@JSGlobal("TypeScript.SwitchStatementSyntax")
+@js.native
+object SwitchStatementSyntax extends js.Object {
+  def create(
+    switchKeyword: ISyntaxToken,
+    openParenToken: ISyntaxToken,
+    expression: IExpressionSyntax,
+    closeParenToken: ISyntaxToken,
+    openBraceToken: ISyntaxToken,
+    closeBraceToken: ISyntaxToken
+  ): typingsSlinky.typescriptServices.TypeScript.SwitchStatementSyntax = js.native
+  def create1(expression: IExpressionSyntax): typingsSlinky.typescriptServices.TypeScript.SwitchStatementSyntax = js.native
+}
+

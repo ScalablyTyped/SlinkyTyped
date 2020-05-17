@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Storage.Pickers.FilePickerSelectedFilesArray")
 @js.native
-class FilePickerSelectedFilesArray () extends IVectorView[StorageFile]
+trait FilePickerSelectedFilesArray extends IVectorView[StorageFile]
 

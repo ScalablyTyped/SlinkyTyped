@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeMaterialKit.components
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -28,7 +28,7 @@ import typingsSlinky.reactNative.reactNativeStrings.polite
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.yes
-import typingsSlinky.reactNativeMaterialKit.AnonChecked
+import typingsSlinky.reactNativeMaterialKit.anon.Checked
 import typingsSlinky.reactNativeMaterialKit.mod.MKSwitchProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -98,7 +98,7 @@ object MKSwitch {
     @scala.inline
     def onBlur(value: SyntheticEvent[NodeHandle, TargetedEvent] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onCheckedChange(value: /* opts */ AnonChecked => Unit): this.type = set("onCheckedChange", js.Any.fromFunction1(value))
+    def onCheckedChange(value: /* opts */ Checked => Unit): this.type = set("onCheckedChange", js.Any.fromFunction1(value))
     @scala.inline
     def onColor(value: String): this.type = set("onColor", value.asInstanceOf[js.Any])
     @scala.inline

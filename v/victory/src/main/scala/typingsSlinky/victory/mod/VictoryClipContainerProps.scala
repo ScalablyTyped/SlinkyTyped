@@ -2,7 +2,7 @@ package typingsSlinky.victory.mod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.DOMAttributes
-import typingsSlinky.victory.AnonY
+import typingsSlinky.victory.anon.Y
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -72,7 +72,7 @@ trait VictoryClipContainerProps extends js.Object {
     * Victory components will pass an `origin` prop is to define the center point in svg coordinates for polar charts.
     * **This prop should not be set manually.**
     */
-  var origin: js.UndefOr[AnonY] = js.native
+  var origin: js.UndefOr[Y] = js.native
   /**
     * Victory components can pass a boolean `polar` prop to specify whether a label is part of a polar chart.
     * **This prop should not be set manually.**
@@ -243,7 +243,7 @@ object VictoryClipContainerProps {
         ret
     }
     @scala.inline
-    def withOrigin(value: AnonY): Self = {
+    def withOrigin(value: Y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
         ret

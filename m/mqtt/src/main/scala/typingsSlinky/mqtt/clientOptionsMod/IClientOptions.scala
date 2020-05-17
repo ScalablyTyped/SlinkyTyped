@@ -1,9 +1,9 @@
 package typingsSlinky.mqtt.clientOptionsMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.mqtt.AnonAuthenticationData
-import typingsSlinky.mqtt.AnonHost
-import typingsSlinky.mqtt.AnonPayload
+import typingsSlinky.mqtt.anon.AuthenticationData
+import typingsSlinky.mqtt.anon.Host
+import typingsSlinky.mqtt.anon.Payload
 import typingsSlinky.mqtt.clientMod.MqttClient
 import typingsSlinky.mqtt.mqttStrings.mqtt
 import typingsSlinky.mqtt.mqttStrings.mqtts
@@ -54,7 +54,7 @@ trait IClientOptions extends ISecureClientOptions {
   var password: js.UndefOr[String] = js.native
   var path: js.UndefOr[String] = js.native
   var port: js.UndefOr[Double] = js.native
-  var properties: js.UndefOr[AnonAuthenticationData] = js.native
+  var properties: js.UndefOr[AuthenticationData] = js.native
   var protocol: js.UndefOr[wss | ws | mqtt | mqtts | tcp | ssl | wx | wxs] = js.native
   /**
     * 'MQTT'
@@ -74,7 +74,7 @@ trait IClientOptions extends ISecureClientOptions {
     * true, set to false to disable re-subscribe functionality
     */
   var resubscribe: js.UndefOr[Boolean] = js.native
-  var servers: js.UndefOr[js.Array[AnonHost]] = js.native
+  var servers: js.UndefOr[js.Array[Host]] = js.native
   var transformWsUrl: js.UndefOr[
     js.Function3[/* url */ String, /* options */ IClientOptions, /* client */ MqttClient, String]
   ] = js.native
@@ -85,7 +85,7 @@ trait IClientOptions extends ISecureClientOptions {
   /**
     * a message that will sent by the broker automatically when the client disconnect badly.
     */
-  var will: js.UndefOr[AnonPayload] = js.native
+  var will: js.UndefOr[Payload] = js.native
   var wsOptions: js.UndefOr[StringDictionary[js.Any]] = js.native
 }
 
@@ -234,7 +234,7 @@ object IClientOptions {
         ret
     }
     @scala.inline
-    def withProperties(value: AnonAuthenticationData): Self = {
+    def withProperties(value: AuthenticationData): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
         ret
@@ -330,7 +330,7 @@ object IClientOptions {
         ret
     }
     @scala.inline
-    def withServers(value: js.Array[AnonHost]): Self = {
+    def withServers(value: js.Array[Host]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("servers")(value.asInstanceOf[js.Any])
         ret
@@ -366,7 +366,7 @@ object IClientOptions {
         ret
     }
     @scala.inline
-    def withWill(value: AnonPayload): Self = {
+    def withWill(value: Payload): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("will")(value.asInstanceOf[js.Any])
         ret

@@ -1,13 +1,13 @@
 package typingsSlinky.ionic.definitionsMod
 
-import typingsSlinky.ionic.AnonIdNumber
+import typingsSlinky.ionic.anon.IdNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ISession extends js.Object {
-  def getUser(): AnonIdNumber = js.native
+  def getUser(): IdNumber = js.native
   def getUserToken(): String = js.native
   def isLoggedIn(): Boolean = js.native
   def login(email: String, password: String): js.Promise[Unit] = js.native
@@ -19,7 +19,7 @@ trait ISession extends js.Object {
 object ISession {
   @scala.inline
   def apply(
-    getUser: () => AnonIdNumber,
+    getUser: () => IdNumber,
     getUserToken: () => String,
     isLoggedIn: () => Boolean,
     login: (String, String) => js.Promise[Unit],
@@ -37,7 +37,7 @@ object ISession {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetUser(value: () => AnonIdNumber): Self = {
+    def withGetUser(value: () => IdNumber): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getUser")(js.Any.fromFunction0(value))
         ret

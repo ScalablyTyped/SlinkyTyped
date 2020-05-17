@@ -3,8 +3,8 @@ package typingsSlinky.tablesorter
 import typingsSlinky.tablesorter.html5ColorOptionsMod.Html5ColorOptions
 import typingsSlinky.tablesorter.html5NumberOptionsMod.Html5NumberOptions
 import typingsSlinky.tablesorter.html5RangeOptionsMod.Html5RangeOptions
-import typingsSlinky.tablesorter.mod._Global_.HTMLElement
-import typingsSlinky.tablesorter.mod._Global_.JQuery
+import typingsSlinky.tablesorter.mod.global.HTMLElement
+import typingsSlinky.tablesorter.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

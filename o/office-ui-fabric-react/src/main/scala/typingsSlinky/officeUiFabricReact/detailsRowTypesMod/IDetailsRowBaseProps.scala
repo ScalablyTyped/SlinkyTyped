@@ -5,7 +5,7 @@ import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
-import typingsSlinky.officeUiFabricReact.AnonEventName
+import typingsSlinky.officeUiFabricReact.anon.EventName
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.CheckboxVisibility
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IColumn
 import typingsSlinky.officeUiFabricReact.detailsRowBaseMod.DetailsRowBase
@@ -86,7 +86,7 @@ trait IDetailsRowBaseProps extends js.Object {
   /**
     * A list of events to register
     */
-  var eventsToRegister: js.UndefOr[js.Array[AnonEventName]] = js.native
+  var eventsToRegister: js.UndefOr[js.Array[EventName]] = js.native
   var getCellValueKey: js.UndefOr[
     js.Function3[
       /* item */ js.UndefOr[js.Any], 
@@ -381,7 +381,7 @@ object IDetailsRowBaseProps {
         ret
     }
     @scala.inline
-    def withEventsToRegister(value: js.Array[AnonEventName]): Self = {
+    def withEventsToRegister(value: js.Array[EventName]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("eventsToRegister")(value.asInstanceOf[js.Any])
         ret

@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ProjectsListForOrgParams extends js.Object {
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
   /**
     * Page number of the results to fetch.
     */
@@ -26,8 +27,9 @@ trait ProjectsListForOrgParams extends js.Object {
 
 object ProjectsListForOrgParams {
   @scala.inline
-  def apply(org: String): ProjectsListForOrgParams = {
-    val __obj = js.Dynamic.literal(org = org.asInstanceOf[js.Any])
+  def apply(org_ : String): ProjectsListForOrgParams = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectsListForOrgParams]
   }
   @scala.inline
@@ -37,7 +39,7 @@ object ProjectsListForOrgParams {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

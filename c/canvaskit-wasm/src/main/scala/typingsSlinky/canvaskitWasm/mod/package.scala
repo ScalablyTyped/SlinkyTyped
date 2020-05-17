@@ -14,7 +14,7 @@ package object mod {
   type SkColorType = typingsSlinky.canvaskitWasm.mod.SkEnumValue
   type SkContext = scala.Double
   type SkDecoration = scala.Double
-  type SkEnum[T, V /* <: typingsSlinky.std.Record[java.lang.String, T] */] = V with typingsSlinky.canvaskitWasm.AnonValues[T]
+  type SkEnum[T, V /* <: typingsSlinky.std.Record[java.lang.String, T] */] = V with typingsSlinky.canvaskitWasm.anon.Values[T]
   type SkFillType = typingsSlinky.canvaskitWasm.mod.SkEnumValue
   type SkFilterQuality = typingsSlinky.canvaskitWasm.mod.SkEnumValue
   type SkFontSlant = typingsSlinky.canvaskitWasm.mod.SkEnumValue

@@ -2,7 +2,7 @@ package typingsSlinky.reactNativePhotoView.mod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.ImageSourcePropType
-import typingsSlinky.reactNativePhotoView.AnonX
+import typingsSlinky.reactNativePhotoView.anon.X
 import typingsSlinky.reactNativePhotoView.reactNativePhotoViewStrings.center
 import typingsSlinky.reactNativePhotoView.reactNativePhotoViewStrings.centerCrop
 import typingsSlinky.reactNativePhotoView.reactNativePhotoViewStrings.centerInside
@@ -27,8 +27,8 @@ trait ReactNativePhotoViewProps extends js.Object {
   var onLoadStart: js.UndefOr[js.Function0[Unit]] = js.native
   var onProgress: js.UndefOr[js.Function2[/* loaded */ Double, /* total */ Double, Unit]] = js.native
   var onScale: js.UndefOr[js.Function2[/* scale */ Double, /* target */ js.UndefOr[ReactElement], Unit]] = js.native
-  var onTap: js.UndefOr[js.Function2[/* point */ AnonX, /* target */ js.UndefOr[ReactElement], Unit]] = js.native
-  var onViewTap: js.UndefOr[js.Function2[/* point */ AnonX, /* target */ js.UndefOr[ReactElement], Unit]] = js.native
+  var onTap: js.UndefOr[js.Function2[/* point */ X, /* target */ js.UndefOr[ReactElement], Unit]] = js.native
+  var onViewTap: js.UndefOr[js.Function2[/* point */ X, /* target */ js.UndefOr[ReactElement], Unit]] = js.native
   var scale: js.UndefOr[Double] = js.native
   var showsHorizontalScrollIndicator: js.UndefOr[Boolean] = js.native
   var showsVerticalScrollIndicator: js.UndefOr[Boolean] = js.native
@@ -180,7 +180,7 @@ object ReactNativePhotoViewProps {
         ret
     }
     @scala.inline
-    def withOnTap(value: (/* point */ AnonX, /* target */ js.UndefOr[ReactElement]) => Unit): Self = {
+    def withOnTap(value: (/* point */ X, /* target */ js.UndefOr[ReactElement]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTap")(js.Any.fromFunction2(value))
         ret
@@ -192,7 +192,7 @@ object ReactNativePhotoViewProps {
         ret
     }
     @scala.inline
-    def withOnViewTap(value: (/* point */ AnonX, /* target */ js.UndefOr[ReactElement]) => Unit): Self = {
+    def withOnViewTap(value: (/* point */ X, /* target */ js.UndefOr[ReactElement]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onViewTap")(js.Any.fromFunction2(value))
         ret

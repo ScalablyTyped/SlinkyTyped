@@ -1,6 +1,5 @@
 package typingsSlinky.mathjax.MathJax
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -48,7 +47,76 @@ trait InputJax extends js.Object {
   def needsUpdate(element: js.Any): Boolean = js.native
 }
 
-@JSGlobal("MathJax.InputJax")
-@js.native
-object InputJax extends TopLevel[InputJax]
+object InputJax {
+  @scala.inline
+  def apply(
+    Process: (js.Any, js.Any) => js.Any,
+    Register: String => Unit,
+    Translate: (js.Any, js.Any) => ElementJax,
+    directory: String,
+    elementJax: String,
+    id: String,
+    needsUpdate: js.Any => Boolean,
+    version: String
+  ): InputJax = {
+    val __obj = js.Dynamic.literal(Process = js.Any.fromFunction2(Process), Register = js.Any.fromFunction1(Register), Translate = js.Any.fromFunction2(Translate), directory = directory.asInstanceOf[js.Any], elementJax = elementJax.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], needsUpdate = js.Any.fromFunction1(needsUpdate), version = version.asInstanceOf[js.Any])
+    __obj.asInstanceOf[InputJax]
+  }
+  @scala.inline
+  implicit class InputJaxOps[Self <: InputJax] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProcess(value: (js.Any, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Process")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRegister(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Register")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTranslate(value: (js.Any, js.Any) => ElementJax): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Translate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withDirectory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withElementJax(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elementJax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNeedsUpdate(value: js.Any => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("needsUpdate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

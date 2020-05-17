@@ -7,12 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * A command to invoke the File Open dialog allowing one to select and load a document file into RichEdit.
   */
-@JSGlobal("FileOpenDialogCommand")
 @js.native
-class FileOpenDialogCommand () extends CommandWithSimpleStateBase {
+trait FileOpenDialogCommand extends CommandWithSimpleStateBase {
   /**
     * Executes the FileOpenDialogCommand command.
     */
   def execute(): Boolean = js.native
+}
+
+object FileOpenDialogCommand {
+  @scala.inline
+  def apply(execute: () => Boolean, getState: () => SimpleCommandState): FileOpenDialogCommand = {
+    val __obj = js.Dynamic.literal(execute = js.Any.fromFunction0(execute), getState = js.Any.fromFunction0(getState))
+    __obj.asInstanceOf[FileOpenDialogCommand]
+  }
+  @scala.inline
+  implicit class FileOpenDialogCommandOps[Self <: FileOpenDialogCommand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExecute(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

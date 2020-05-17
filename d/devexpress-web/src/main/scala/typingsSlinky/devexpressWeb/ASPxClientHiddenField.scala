@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a client-side equivalent of the ASPxHiddenField control.
   */
-@JSGlobal("ASPxClientHiddenField")
 @js.native
-class ASPxClientHiddenField () extends ASPxClientControl {
+trait ASPxClientHiddenField extends ASPxClientControl {
   /**
     * Occurs when a callback for server-side processing is initiated.
     */
@@ -60,14 +59,105 @@ class ASPxClientHiddenField () extends ASPxClientControl {
   def Set(propertyName: String, propertyValue: js.Any): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("ASPxClientHiddenField")
-@js.native
-object ASPxClientHiddenField extends js.Object {
-  /**
-    * Converts the specified object to the ASPxClientHiddenField type. The converted client object specified by the obj parameter.
-    * @param obj The client object to be type cast.
-    */
-  def Cast(obj: js.Any): ASPxClientHiddenField = js.native
+object ASPxClientHiddenField {
+  @scala.inline
+  def apply(
+    Add: (String, js.Any) => Unit,
+    AdjustControl: () => Unit,
+    BeginCallback: ASPxClientEvent[ASPxClientBeginCallbackEventHandler[ASPxClientHiddenField]],
+    CallbackError: ASPxClientEvent[ASPxClientCallbackErrorEventHandler[ASPxClientHiddenField]],
+    Clear: () => Unit,
+    Contains: String => Boolean,
+    EndCallback: ASPxClientEvent[ASPxClientEndCallbackEventHandler[ASPxClientHiddenField]],
+    Get: String => js.Any,
+    GetClientVisible: () => Boolean,
+    GetHeight: () => Double,
+    GetMainElement: () => js.Any,
+    GetParentControl: () => js.Any,
+    GetVisible: () => Boolean,
+    GetWidth: () => Double,
+    InCallback: () => Boolean,
+    Init: ASPxClientEvent[ASPxClientEventHandler[ASPxClientControlBase]],
+    PerformCallback: String => Unit,
+    Remove: String => Unit,
+    SendMessageToAssistiveTechnology: String => Unit,
+    Set: (String, js.Any) => Unit,
+    SetClientVisible: Boolean => Unit,
+    SetHeight: Double => Unit,
+    SetVisible: Boolean => Unit,
+    SetWidth: Double => Unit,
+    name: String
+  ): ASPxClientHiddenField = {
+    val __obj = js.Dynamic.literal(Add = js.Any.fromFunction2(Add), AdjustControl = js.Any.fromFunction0(AdjustControl), BeginCallback = BeginCallback.asInstanceOf[js.Any], CallbackError = CallbackError.asInstanceOf[js.Any], Clear = js.Any.fromFunction0(Clear), Contains = js.Any.fromFunction1(Contains), EndCallback = EndCallback.asInstanceOf[js.Any], Get = js.Any.fromFunction1(Get), GetClientVisible = js.Any.fromFunction0(GetClientVisible), GetHeight = js.Any.fromFunction0(GetHeight), GetMainElement = js.Any.fromFunction0(GetMainElement), GetParentControl = js.Any.fromFunction0(GetParentControl), GetVisible = js.Any.fromFunction0(GetVisible), GetWidth = js.Any.fromFunction0(GetWidth), InCallback = js.Any.fromFunction0(InCallback), Init = Init.asInstanceOf[js.Any], PerformCallback = js.Any.fromFunction1(PerformCallback), Remove = js.Any.fromFunction1(Remove), SendMessageToAssistiveTechnology = js.Any.fromFunction1(SendMessageToAssistiveTechnology), Set = js.Any.fromFunction2(Set), SetClientVisible = js.Any.fromFunction1(SetClientVisible), SetHeight = js.Any.fromFunction1(SetHeight), SetVisible = js.Any.fromFunction1(SetVisible), SetWidth = js.Any.fromFunction1(SetWidth), name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientHiddenField]
+  }
+  @scala.inline
+  implicit class ASPxClientHiddenFieldOps[Self <: ASPxClientHiddenField] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdd(value: (String, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Add")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withBeginCallback(value: ASPxClientEvent[ASPxClientBeginCallbackEventHandler[ASPxClientHiddenField]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCallbackError(value: ASPxClientEvent[ASPxClientCallbackErrorEventHandler[ASPxClientHiddenField]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CallbackError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClear(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Clear")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withContains(value: String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Contains")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEndCallback(value: ASPxClientEvent[ASPxClientEndCallbackEventHandler[ASPxClientHiddenField]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGet(value: String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPerformCallback(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PerformCallback")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemove(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Remove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet(value: (String, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Set")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

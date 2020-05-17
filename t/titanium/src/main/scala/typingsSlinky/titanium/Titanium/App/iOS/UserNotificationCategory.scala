@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * A set of notification actions to associate with a notification.
 			 */
-@JSGlobal("Titanium.App.iOS.UserNotificationCategory")
 @js.native
-class UserNotificationCategory () extends Proxy {
+trait UserNotificationCategory extends Proxy {
   /**
   				 * Array of notification actions to associate with the group.
   				 */

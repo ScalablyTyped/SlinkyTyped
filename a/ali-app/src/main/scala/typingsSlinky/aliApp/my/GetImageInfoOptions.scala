@@ -1,6 +1,6 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonHeight
+import typingsSlinky.aliApp.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait GetImageInfoOptions
   		 */
   var src: String = js.native
   @JSName("success")
-  var success_GetImageInfoOptions: js.UndefOr[js.Function1[/* res */ AnonHeight, Unit]] = js.native
+  var success_GetImageInfoOptions: js.UndefOr[js.Function1[/* res */ Height, Unit]] = js.native
 }
 
 object GetImageInfoOptions {
@@ -38,7 +38,7 @@ object GetImageInfoOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonHeight => Unit): Self = {
+    def withSuccess(value: /* res */ Height => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

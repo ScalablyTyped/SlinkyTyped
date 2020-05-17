@@ -1,5 +1,6 @@
 package typingsSlinky.three
 
+import typingsSlinky.three.anon.Dictattachment
 import typingsSlinky.three.face3Mod.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +24,7 @@ object eventDispatcherMod extends js.Object {
     	 * Fire an event type.
     	 * @param type The type of event that gets fired.
     	 */
-    def dispatchEvent(event: AnonDictattachment): Unit = js.native
+    def dispatchEvent(event: Dictattachment): Unit = js.native
     /**
     	 * Checks if listener is added to an event type.
     	 * @param type The type of event to listen to.

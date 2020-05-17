@@ -1,9 +1,9 @@
 package typingsSlinky.oracleOraclejet.ojgaugeMod
 
-import typingsSlinky.oracleOraclejet.Anon8
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
-import typingsSlinky.oracleOraclejet.AnonText
-import typingsSlinky.oracleOraclejet.AnonTextType
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
+import typingsSlinky.oracleOraclejet.anon.Text
+import typingsSlinky.oracleOraclejet.anon.TextType
+import typingsSlinky.oracleOraclejet.anon.`8`
 import typingsSlinky.oracleOraclejet.ojgaugeMod.ojLedGauge.Threshold
 import typingsSlinky.oracleOraclejet.oracleOraclejetNumbers.`0`
 import typingsSlinky.oracleOraclejet.oracleOraclejetNumbers.`180`
@@ -29,16 +29,16 @@ import scala.scalajs.js.annotation._
 trait ojLedGaugeSettableProperties extends dvtBaseGaugeSettableProperties {
   var borderColor: String = js.native
   var color: String = js.native
-  var label: AnonText = js.native
+  var label: Text = js.native
   var max: Double = js.native
-  var metricLabel: AnonTextType = js.native
+  var metricLabel: TextType = js.native
   var min: Double = js.native
   var rotation: `90` | `180` | `270` | `0` = js.native
   var size: Double = js.native
   var svgClassName: String = js.native
   var svgStyle: js.Object = js.native
   var thresholds: js.Array[Threshold] = js.native
-  var tooltip: Anon8 = js.native
+  var tooltip: `8` = js.native
   var `type`: arrow | diamond | square | rectangle | triangle | star | human | circle = js.native
   var value: Double | Null = js.native
   var visualEffects: none | auto = js.native
@@ -49,18 +49,18 @@ object ojLedGaugeSettableProperties {
   def apply(
     borderColor: String,
     color: String,
-    label: AnonText,
+    label: Text,
     max: Double,
-    metricLabel: AnonTextType,
+    metricLabel: TextType,
     min: Double,
     rotation: `90` | `180` | `270` | `0`,
     size: Double,
     svgClassName: String,
     svgStyle: js.Object,
     thresholds: js.Array[Threshold],
-    tooltip: Anon8,
+    tooltip: `8`,
     trackResize: on | off,
-    translations: AnonLabelAndValue,
+    translations: LabelAndValue,
     `type`: arrow | diamond | square | rectangle | triangle | star | human | circle,
     visualEffects: none | auto
   ): ojLedGaugeSettableProperties = {
@@ -87,7 +87,7 @@ object ojLedGaugeSettableProperties {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonText): Self = {
+    def withLabel(value: Text): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -99,7 +99,7 @@ object ojLedGaugeSettableProperties {
         ret
     }
     @scala.inline
-    def withMetricLabel(value: AnonTextType): Self = {
+    def withMetricLabel(value: TextType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metricLabel")(value.asInstanceOf[js.Any])
         ret
@@ -141,7 +141,7 @@ object ojLedGaugeSettableProperties {
         ret
     }
     @scala.inline
-    def withTooltip(value: Anon8): Self = {
+    def withTooltip(value: `8`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

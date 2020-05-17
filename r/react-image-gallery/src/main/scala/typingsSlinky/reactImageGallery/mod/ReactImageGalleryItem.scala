@@ -1,7 +1,7 @@
 package typingsSlinky.reactImageGallery.mod
 
 import slinky.core.TagMod
-import typingsSlinky.reactImageGallery.AnonCurrentIndex
+import typingsSlinky.reactImageGallery.anon.CurrentIndex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ReactImageGalleryItem extends js.Object {
   var bulletClass: js.UndefOr[String] = js.native
-  var bulletOnClick: js.UndefOr[js.Function1[/* hasItemItemIndexCurrentIndex */ AnonCurrentIndex, Unit]] = js.native
+  var bulletOnClick: js.UndefOr[js.Function1[/* hasItemItemIndexCurrentIndex */ CurrentIndex, Unit]] = js.native
   var description: js.UndefOr[String] = js.native
   var fullscreen: js.UndefOr[String] = js.native
   var original: js.UndefOr[String] = js.native
@@ -52,7 +52,7 @@ object ReactImageGalleryItem {
         ret
     }
     @scala.inline
-    def withBulletOnClick(value: /* hasItemItemIndexCurrentIndex */ AnonCurrentIndex => Unit): Self = {
+    def withBulletOnClick(value: /* hasItemItemIndexCurrentIndex */ CurrentIndex => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bulletOnClick")(js.Any.fromFunction1(value))
         ret

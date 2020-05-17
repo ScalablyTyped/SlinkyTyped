@@ -2,7 +2,7 @@ package typingsSlinky.reactVirtualized.esWindowScrollerMod
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactVirtualized.AnonOnResize
+import typingsSlinky.reactVirtualized.anon.OnResize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,6 +19,6 @@ class WindowScroller ()
 @JSImport("react-virtualized/dist/es/WindowScroller", "WindowScroller")
 @js.native
 object WindowScroller extends js.Object {
-  var defaultProps: AnonOnResize = js.native
+  var defaultProps: OnResize = js.native
 }
 

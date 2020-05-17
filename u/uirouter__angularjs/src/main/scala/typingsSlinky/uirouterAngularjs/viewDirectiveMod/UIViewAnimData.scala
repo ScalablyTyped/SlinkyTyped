@@ -1,6 +1,6 @@
 package typingsSlinky.uirouterAngularjs.viewDirectiveMod
 
-import typingsSlinky.uirouterAngularjs.AnonResolve
+import typingsSlinky.uirouterAngularjs.anon.Resolve
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +12,12 @@ trait UIViewAnimData extends js.Object {
   @JSName("$animLeave")
   var $animLeave: js.Promise[_] = js.native
   @JSName("$$animLeave")
-  var DollarDollaranimLeave: AnonResolve = js.native
+  var DollarDollaranimLeave: Resolve = js.native
 }
 
 object UIViewAnimData {
   @scala.inline
-  def apply($animEnter: js.Promise[_], $animLeave: js.Promise[_], DollarDollaranimLeave: AnonResolve): UIViewAnimData = {
+  def apply($animEnter: js.Promise[_], $animLeave: js.Promise[_], DollarDollaranimLeave: Resolve): UIViewAnimData = {
     val __obj = js.Dynamic.literal($animEnter = $animEnter.asInstanceOf[js.Any], $animLeave = $animLeave.asInstanceOf[js.Any])
     __obj.updateDynamic("$$animLeave")(DollarDollaranimLeave.asInstanceOf[js.Any])
     __obj.asInstanceOf[UIViewAnimData]
@@ -41,7 +41,7 @@ object UIViewAnimData {
         ret
     }
     @scala.inline
-    def withDollarDollaranimLeave(value: AnonResolve): Self = {
+    def withDollarDollaranimLeave(value: Resolve): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("$$animLeave")(value.asInstanceOf[js.Any])
         ret

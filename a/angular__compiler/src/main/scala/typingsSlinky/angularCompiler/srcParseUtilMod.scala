@@ -1,6 +1,7 @@
 package typingsSlinky.angularCompiler
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.angularCompiler.anon.After
 import typingsSlinky.angularCompiler.compileMetadataMod.CompileIdentifierMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,7 +30,7 @@ object srcParseUtilMod extends js.Object {
     var file: ParseSourceFile = js.native
     var line: Double = js.native
     var offset: Double = js.native
-    def getContext(maxChars: Double, maxLines: Double): AnonAfter | Null = js.native
+    def getContext(maxChars: Double, maxLines: Double): After | Null = js.native
     def moveBy(delta: Double): ParseLocation = js.native
   }
   

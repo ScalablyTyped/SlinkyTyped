@@ -2,7 +2,7 @@ package typingsSlinky.semanticUiReact.tabTabMod
 
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.semanticUiReact.AnonMenuItem
+import typingsSlinky.semanticUiReact.anon.MenuItem
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.left
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.right
 import scala.scalajs.js
@@ -46,7 +46,7 @@ trait StrictTabProps extends js.Object {
     *   pane: 'Welcome',
     * }
     */
-  var panes: js.UndefOr[js.Array[AnonMenuItem]] = js.native
+  var panes: js.UndefOr[js.Array[MenuItem]] = js.native
   /** A Tab can render only active pane. */
   var renderActiveOnly: js.UndefOr[Boolean] = js.native
 }
@@ -148,7 +148,7 @@ object StrictTabProps {
         ret
     }
     @scala.inline
-    def withPanes(value: js.Array[AnonMenuItem]): Self = {
+    def withPanes(value: js.Array[MenuItem]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("panes")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.graphqlTools.interfacesMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.graphqlTools.TypeofSchemaDirectiveVisi
+import typingsSlinky.graphqlTools.anon.TypeofSchemaDirectiveVisi
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

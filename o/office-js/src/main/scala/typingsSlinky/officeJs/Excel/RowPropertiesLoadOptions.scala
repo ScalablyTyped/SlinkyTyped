@@ -1,6 +1,6 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.CellPropertiesFormatLoadO
+import typingsSlinky.officeJs.anon.CellPropertiesFormatLoadO
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

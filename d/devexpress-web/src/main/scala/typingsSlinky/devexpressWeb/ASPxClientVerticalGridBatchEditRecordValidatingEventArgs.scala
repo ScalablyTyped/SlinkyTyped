@@ -7,15 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientVerticalGrid.BatchEditRecordValidating event.
   */
-@JSGlobal("ASPxClientVerticalGridBatchEditRecordValidatingEventArgs")
 @js.native
-class ASPxClientVerticalGridBatchEditRecordValidatingEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientVerticalGridBatchEditRecordValidatingEventArgs class.
-    * @param visibleIndex An integer value that specifies the processed record's visible index.
-    * @param validationInfo An object containing validation information.
-    */
-  def this(visibleIndex: Double, validationInfo: js.Any) = this()
+trait ASPxClientVerticalGridBatchEditRecordValidatingEventArgs extends ASPxClientEventArgs {
   /**
     * Provides validation information on the record currently being validated.
     */
@@ -24,5 +17,33 @@ class ASPxClientVerticalGridBatchEditRecordValidatingEventArgs protected () exte
     * Gets the processed record's visible index.
     */
   var visibleIndex: Double = js.native
+}
+
+object ASPxClientVerticalGridBatchEditRecordValidatingEventArgs {
+  @scala.inline
+  def apply(validationInfo: js.Any, visibleIndex: Double): ASPxClientVerticalGridBatchEditRecordValidatingEventArgs = {
+    val __obj = js.Dynamic.literal(validationInfo = validationInfo.asInstanceOf[js.Any], visibleIndex = visibleIndex.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientVerticalGridBatchEditRecordValidatingEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientVerticalGridBatchEditRecordValidatingEventArgsOps[Self <: ASPxClientVerticalGridBatchEditRecordValidatingEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withValidationInfo(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validationInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVisibleIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

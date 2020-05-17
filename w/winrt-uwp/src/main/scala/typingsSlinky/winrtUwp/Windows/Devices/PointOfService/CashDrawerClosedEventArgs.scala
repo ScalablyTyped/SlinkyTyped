@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This object is passed as a parameter to the event handlers for the DrawerClosed event. */
-@JSGlobal("Windows.Devices.PointOfService.CashDrawerClosedEventArgs")
 @js.native
-abstract class CashDrawerClosedEventArgs () extends js.Object {
+trait CashDrawerClosedEventArgs extends js.Object {
   /** Gets the data associated with the DrawerClosed event. */
   var cashDrawer: CashDrawer = js.native
+}
+
+object CashDrawerClosedEventArgs {
+  @scala.inline
+  def apply(cashDrawer: CashDrawer): CashDrawerClosedEventArgs = {
+    val __obj = js.Dynamic.literal(cashDrawer = cashDrawer.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CashDrawerClosedEventArgs]
+  }
+  @scala.inline
+  implicit class CashDrawerClosedEventArgsOps[Self <: CashDrawerClosedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCashDrawer(value: CashDrawer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cashDrawer")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

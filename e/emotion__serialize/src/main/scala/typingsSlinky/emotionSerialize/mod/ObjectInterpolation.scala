@@ -9,7 +9,7 @@ trait ObjectInterpolation[MP]
   extends CSSOthersObject[MP]
      with CSSPropertiesWithMultiValues
      with CSSPseudos[MP]
-     with _Interpolation[MP]
+     with Interpolation[MP]
 
 object ObjectInterpolation {
   @scala.inline

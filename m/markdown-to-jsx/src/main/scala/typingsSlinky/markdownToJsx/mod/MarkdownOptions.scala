@@ -3,7 +3,7 @@ package typingsSlinky.markdownToJsx.mod
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.markdownToJsx.AnonDictkey
+import typingsSlinky.markdownToJsx.anon.Dictkey
 import typingsSlinky.react.mod.Attributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,7 +25,7 @@ trait MarkdownOptions extends js.Object {
   /** Force all input strings to use inline layout. */
   var forceInline: js.UndefOr[Boolean] = js.native
   /** Override representation of any HTML tag or custom component. */
-  var overrides: js.UndefOr[AnonDictkey] = js.native
+  var overrides: js.UndefOr[Dictkey] = js.native
   /** Custom function to generate an HTML id from headings. */
   var slugify: js.UndefOr[js.Function1[/* text */ String, String]] = js.native
 }
@@ -81,7 +81,7 @@ object MarkdownOptions {
         ret
     }
     @scala.inline
-    def withOverrides(value: AnonDictkey): Self = {
+    def withOverrides(value: Dictkey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
         ret

@@ -1,34 +1,34 @@
 package typingsSlinky.d3pie.d3pie
 
-import typingsSlinky.d3pie.AnonCanvasHeight
-import typingsSlinky.d3pie.AnonCanvasPadding
-import typingsSlinky.d3pie.AnonContent
-import typingsSlinky.d3pie.AnonFormatter
-import typingsSlinky.d3pie.AnonHighlightLuminosity
-import typingsSlinky.d3pie.AnonLocation
-import typingsSlinky.d3pie.AnonOnClickSegment
-import typingsSlinky.d3pie.AnonPlaceholderParser
-import typingsSlinky.d3pie.locationleftID3PieTextOpt
+import typingsSlinky.d3pie.anon.CanvasHeight
+import typingsSlinky.d3pie.anon.CanvasPadding
+import typingsSlinky.d3pie.anon.Content
+import typingsSlinky.d3pie.anon.Formatter
+import typingsSlinky.d3pie.anon.HighlightLuminosity
+import typingsSlinky.d3pie.anon.Location
+import typingsSlinky.d3pie.anon.OnClickSegment
+import typingsSlinky.d3pie.anon.PlaceholderParser
+import typingsSlinky.d3pie.anon.locationleftID3PieTextOpt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ID3PieOptions extends js.Object {
-  var callbacks: js.UndefOr[AnonOnClickSegment] = js.native
-  var data: AnonContent = js.native
-  var effects: js.UndefOr[AnonHighlightLuminosity] = js.native
+  var callbacks: js.UndefOr[OnClickSegment] = js.native
+  var data: Content = js.native
+  var effects: js.UndefOr[HighlightLuminosity] = js.native
   var footer: js.UndefOr[locationleftID3PieTextOpt] = js.native
-  var header: js.UndefOr[AnonLocation] = js.native
-  var labels: js.UndefOr[AnonFormatter] = js.native
-  var misc: js.UndefOr[AnonCanvasPadding] = js.native
-  var size: js.UndefOr[AnonCanvasHeight] = js.native
-  var tooltips: js.UndefOr[AnonPlaceholderParser] = js.native
+  var header: js.UndefOr[Location] = js.native
+  var labels: js.UndefOr[Formatter] = js.native
+  var misc: js.UndefOr[CanvasPadding] = js.native
+  var size: js.UndefOr[CanvasHeight] = js.native
+  var tooltips: js.UndefOr[PlaceholderParser] = js.native
 }
 
 object ID3PieOptions {
   @scala.inline
-  def apply(data: AnonContent): ID3PieOptions = {
+  def apply(data: Content): ID3PieOptions = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     __obj.asInstanceOf[ID3PieOptions]
   }
@@ -39,13 +39,13 @@ object ID3PieOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withData(value: AnonContent): Self = {
+    def withData(value: Content): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withCallbacks(value: AnonOnClickSegment): Self = {
+    def withCallbacks(value: OnClickSegment): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("callbacks")(value.asInstanceOf[js.Any])
         ret
@@ -57,7 +57,7 @@ object ID3PieOptions {
         ret
     }
     @scala.inline
-    def withEffects(value: AnonHighlightLuminosity): Self = {
+    def withEffects(value: HighlightLuminosity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("effects")(value.asInstanceOf[js.Any])
         ret
@@ -81,7 +81,7 @@ object ID3PieOptions {
         ret
     }
     @scala.inline
-    def withHeader(value: AnonLocation): Self = {
+    def withHeader(value: Location): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
         ret
@@ -93,7 +93,7 @@ object ID3PieOptions {
         ret
     }
     @scala.inline
-    def withLabels(value: AnonFormatter): Self = {
+    def withLabels(value: Formatter): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
         ret
@@ -105,7 +105,7 @@ object ID3PieOptions {
         ret
     }
     @scala.inline
-    def withMisc(value: AnonCanvasPadding): Self = {
+    def withMisc(value: CanvasPadding): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("misc")(value.asInstanceOf[js.Any])
         ret
@@ -117,7 +117,7 @@ object ID3PieOptions {
         ret
     }
     @scala.inline
-    def withSize(value: AnonCanvasHeight): Self = {
+    def withSize(value: CanvasHeight): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
         ret
@@ -129,7 +129,7 @@ object ID3PieOptions {
         ret
     }
     @scala.inline
-    def withTooltips(value: AnonPlaceholderParser): Self = {
+    def withTooltips(value: PlaceholderParser): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltips")(value.asInstanceOf[js.Any])
         ret

@@ -4,12 +4,12 @@ import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.koa.mod.DefaultContext
 import typingsSlinky.koa.mod.DefaultState
 import typingsSlinky.koa.mod.Middleware
-import typingsSlinky.koaPassport.AnonPauseStream
-import typingsSlinky.koaPassport.AnonUserProperty
-import typingsSlinky.koaPassport.FnCall
-import typingsSlinky.koaPassport.FnCallFn
+import typingsSlinky.koaPassport.anon.FnCall
+import typingsSlinky.koaPassport.anon.FnCallFn
+import typingsSlinky.koaPassport.anon.PauseStream
+import typingsSlinky.koaPassport.anon.UserProperty
 import typingsSlinky.node.httpMod.IncomingMessage
-import typingsSlinky.passport.AnonInstantiable
+import typingsSlinky.passport.anon.Instantiable
 import typingsSlinky.passport.mod.AuthenticateOptions
 import typingsSlinky.passport.mod.Framework
 import typingsSlinky.passport.mod.Strategy
@@ -81,7 +81,7 @@ object KoaPassport extends js.Object {
     ): Unit = js.native
     def framework(fw: Framework[_, _, _]): this.type = js.native
     def initialize(): Middleware[DefaultState, DefaultContext] = js.native
-    def initialize(options: AnonUserProperty): Middleware[DefaultState, DefaultContext] = js.native
+    def initialize(options: UserProperty): Middleware[DefaultState, DefaultContext] = js.native
     def serializeUser[TUser, TID](
       fn: js.Function2[
           /* user */ TUser, 
@@ -98,7 +98,7 @@ object KoaPassport extends js.Object {
         ]
     ): Unit = js.native
     def session(): Middleware[DefaultState, DefaultContext] = js.native
-    def session(options: AnonPauseStream): Middleware[DefaultState, DefaultContext] = js.native
+    def session(options: PauseStream): Middleware[DefaultState, DefaultContext] = js.native
     def transformAuthInfo(
       fn: js.Function2[
           /* info */ js.Any, 
@@ -114,9 +114,9 @@ object KoaPassport extends js.Object {
   @js.native
   trait Static
     extends typingsSlinky.koaPassport.mod.KoaPassport.KoaPassport {
-    var Authenticator: AnonInstantiable = js.native
+    var Authenticator: Instantiable = js.native
     var KoaPassport: Instantiable0[typingsSlinky.koaPassport.mod.KoaPassport.KoaPassport] = js.native
-    var Passport: AnonInstantiable = js.native
+    var Passport: Instantiable = js.native
   }
   
 }

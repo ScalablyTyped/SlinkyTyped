@@ -1,8 +1,8 @@
 package typingsSlinky.relayRuntime.relayStoreTypesMod
 
-import typingsSlinky.relayRuntime.AnonCacheConfig
-import typingsSlinky.relayRuntime.AnonOperation
-import typingsSlinky.relayRuntime.AnonSource
+import typingsSlinky.relayRuntime.anon.CacheConfig
+import typingsSlinky.relayRuntime.anon.Operation
+import typingsSlinky.relayRuntime.anon.Source
 import typingsSlinky.relayRuntime.relayNetworkTypesMod.GraphQLResponse
 import typingsSlinky.relayRuntime.relayNetworkTypesMod.Network
 import typingsSlinky.relayRuntime.relayNetworkTypesMod.PayloadData
@@ -56,7 +56,7 @@ trait Environment extends js.Object {
     * Note: Observables are lazy, so calling this method will do nothing until
     * the result is subscribed to: environment.execute({...}).subscribe({...}).
     */
-  def execute(config: AnonCacheConfig): RelayObservable[GraphQLResponse] = js.native
+  def execute(config: CacheConfig): RelayObservable[GraphQLResponse] = js.native
   /**
     * Returns an Observable of GraphQLResponse resulting from executing the
     * provided Mutation operation, the result of which is then normalized and
@@ -67,7 +67,7 @@ trait Environment extends js.Object {
     * the result is subscribed to:
     * environment.executeMutation({...}).subscribe({...}).
     */
-  def executeMutation(hasOperationOptimisticUpdaterOptimisticResponseUpdaterUploadables: AnonOperation): RelayObservable[GraphQLResponse] = js.native
+  def executeMutation(hasOperationOptimisticUpdaterOptimisticResponseUpdaterUploadables: Operation): RelayObservable[GraphQLResponse] = js.native
   /**
     * Returns an Observable of GraphQLResponse resulting from executing the
     * provided Query or Subscription operation responses, the result of which is
@@ -77,7 +77,7 @@ trait Environment extends js.Object {
     * the result is subscribed to:
     * environment.executeWithSource({...}).subscribe({...}).
     */
-  def executeWithSource(hasOperationSource: AnonSource): RelayObservable[GraphQLResponse] = js.native
+  def executeWithSource(hasOperationSource: Source): RelayObservable[GraphQLResponse] = js.native
   /**
     * Get the environment's internal Network.
     */

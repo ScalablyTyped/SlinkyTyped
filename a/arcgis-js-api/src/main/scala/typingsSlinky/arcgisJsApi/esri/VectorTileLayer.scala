@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`vector-tile`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -124,8 +123,4 @@ trait VectorTileLayer
     */
   def setPaintProperties(layer: String, painter: js.Any): Unit = js.native
 }
-
-@JSGlobal("__esri.VectorTileLayer")
-@js.native
-object VectorTileLayer extends TopLevel[VectorTileLayerConstructor]
 

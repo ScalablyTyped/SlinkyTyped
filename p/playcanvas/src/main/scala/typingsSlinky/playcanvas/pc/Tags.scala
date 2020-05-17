@@ -13,10 +13,8 @@ import scala.scalajs.js.annotation._
   * @param {object} [parent] - Parent object who tags belong to.
   * Note: Tags are used as addition of `pc.Entity` and `pc.Asset` as `tags` field.
   */
-@JSGlobal("pc.Tags")
 @js.native
-class Tags () extends EventHandler {
-  def this(parent: js.Any) = this()
+trait Tags extends EventHandler {
   /**
     * @field
     * @readonly

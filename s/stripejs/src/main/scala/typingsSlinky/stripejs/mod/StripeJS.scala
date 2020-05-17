@@ -1,6 +1,6 @@
 package typingsSlinky.stripejs.mod
 
-import typingsSlinky.stripejs.AnonClientsecret
+import typingsSlinky.stripejs.anon.Clientsecret
 import typingsSlinky.stripejs.elementMod.ElementCreatorOptions
 import typingsSlinky.stripejs.elementMod.ElementFactory
 import typingsSlinky.stripejs.elementMod.StripeElement
@@ -97,6 +97,6 @@ trait StripeJS extends js.Object {
     *
     * @return an object containing the generated Source or an error
     */
-  def retrieveSource(hasIdClient_secret: AnonClientsecret): js.Promise[SourceResult] = js.native
+  def retrieveSource(hasIdClient_secret: Clientsecret): js.Promise[SourceResult] = js.native
 }
 

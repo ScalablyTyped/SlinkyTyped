@@ -1,75 +1,42 @@
 package typingsSlinky.reactInstantsearch.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.reactInstantsearchDom.AnonProps
-import typingsSlinky.reactInstantsearchDom.mod.InstantSearchProps
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactInstantsearchCore.mod.InstantSearchProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object InstantSearch
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactInstantsearch.domMod.InstantSearch] {
+object InstantSearch {
   @JSImport("react-instantsearch/dom", "InstantSearch")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def UsingSearchClientProps(
-    indexName: String,
-    searchClient: js.Any,
-    createURL: /* repeated */ js.Any => _ = null,
-    onSearchParameters: /* repeated */ js.Any => _ = null,
-    onSearchStateChange: /* repeated */ js.Any => _ = null,
-    refresh: js.UndefOr[Boolean] = js.undefined,
-    resultsState: js.Any = null,
-    root: AnonProps = null,
-    searchState: js.Any = null,
-    stalledSearchDelay: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactInstantsearch.domMod.InstantSearch] = {
-    val __obj = js.Dynamic.literal(indexName = indexName.asInstanceOf[js.Any], searchClient = searchClient.asInstanceOf[js.Any])
-    if (createURL != null) __obj.updateDynamic("createURL")(js.Any.fromFunction1(createURL))
-    if (onSearchParameters != null) __obj.updateDynamic("onSearchParameters")(js.Any.fromFunction1(onSearchParameters))
-    if (onSearchStateChange != null) __obj.updateDynamic("onSearchStateChange")(js.Any.fromFunction1(onSearchStateChange))
-    if (!js.isUndefined(refresh)) __obj.updateDynamic("refresh")(refresh.asInstanceOf[js.Any])
-    if (resultsState != null) __obj.updateDynamic("resultsState")(resultsState.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
-    if (searchState != null) __obj.updateDynamic("searchState")(searchState.asInstanceOf[js.Any])
-    if (stalledSearchDelay != null) __obj.updateDynamic("stalledSearchDelay")(stalledSearchDelay.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactInstantsearch.domMod.InstantSearch] {
+    @scala.inline
+    def createURL(value: /* repeated */ js.Any => _): this.type = set("createURL", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSearchParameters(value: /* repeated */ js.Any => _): this.type = set("onSearchParameters", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSearchStateChange(value: /* repeated */ js.Any => _): this.type = set("onSearchStateChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def refresh(value: Boolean): this.type = set("refresh", value.asInstanceOf[js.Any])
+    @scala.inline
+    def resultsState(value: js.Any): this.type = set("resultsState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def searchState(value: js.Any): this.type = set("searchState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stalledSearchDelay(value: Double): this.type = set("stalledSearchDelay", value.asInstanceOf[js.Any])
   }
-  def UsingManualInfoProps(
-    apiKey: String,
-    appId: String,
-    indexName: String,
-    algoliaClient: js.Any = null,
-    createURL: /* repeated */ js.Any => _ = null,
-    onSearchParameters: /* repeated */ js.Any => _ = null,
-    onSearchStateChange: /* repeated */ js.Any => _ = null,
-    refresh: js.UndefOr[Boolean] = js.undefined,
-    resultsState: js.Any = null,
-    root: AnonProps = null,
-    searchState: js.Any = null,
-    stalledSearchDelay: Int | Double = null,
-    _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactInstantsearch.domMod.InstantSearch] = {
-    val __obj = js.Dynamic.literal(apiKey = apiKey.asInstanceOf[js.Any], appId = appId.asInstanceOf[js.Any], indexName = indexName.asInstanceOf[js.Any])
-    if (algoliaClient != null) __obj.updateDynamic("algoliaClient")(algoliaClient.asInstanceOf[js.Any])
-    if (createURL != null) __obj.updateDynamic("createURL")(js.Any.fromFunction1(createURL))
-    if (onSearchParameters != null) __obj.updateDynamic("onSearchParameters")(js.Any.fromFunction1(onSearchParameters))
-    if (onSearchStateChange != null) __obj.updateDynamic("onSearchStateChange")(js.Any.fromFunction1(onSearchStateChange))
-    if (!js.isUndefined(refresh)) __obj.updateDynamic("refresh")(refresh.asInstanceOf[js.Any])
-    if (resultsState != null) __obj.updateDynamic("resultsState")(resultsState.asInstanceOf[js.Any])
-    if (root != null) __obj.updateDynamic("root")(root.asInstanceOf[js.Any])
-    if (searchState != null) __obj.updateDynamic("searchState")(searchState.asInstanceOf[js.Any])
-    if (stalledSearchDelay != null) __obj.updateDynamic("stalledSearchDelay")(stalledSearchDelay.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props])
+  
+  def withProps(p: InstantSearchProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  def apply(indexName: String, searchClient: js.Any): Builder = {
+    val __props = js.Dynamic.literal(indexName = indexName.asInstanceOf[js.Any], searchClient = searchClient.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[InstantSearchProps]))
   }
-  type Props = InstantSearchProps
 }
 

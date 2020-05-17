@@ -1,8 +1,8 @@
 package typingsSlinky.node.NodeJS
 
-import typingsSlinky.node.AnonEnd
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
+import typingsSlinky.node.anon.End
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait ReadableStream extends EventEmitter {
   def isPaused(): Boolean = js.native
   def pause(): this.type = js.native
   def pipe[T /* <: WritableStream */](destination: T): T = js.native
-  def pipe[T /* <: WritableStream */](destination: T, options: AnonEnd): T = js.native
+  def pipe[T /* <: WritableStream */](destination: T, options: End): T = js.native
   def read(): String | Buffer = js.native
   def read(size: Double): String | Buffer = js.native
   def resume(): this.type = js.native

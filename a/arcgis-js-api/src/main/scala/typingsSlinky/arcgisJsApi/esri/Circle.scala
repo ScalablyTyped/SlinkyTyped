@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`nautical-miles`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.feet_
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.kilometers_
@@ -52,8 +51,4 @@ trait Circle extends Polygon {
     */
   var radiusUnit: feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards = js.native
 }
-
-@JSGlobal("__esri.Circle")
-@js.native
-object Circle extends TopLevel[CircleConstructor]
 

@@ -1,6 +1,6 @@
 package typingsSlinky.webPush.mod
 
-import typingsSlinky.webPush.AnonPrivateKey
+import typingsSlinky.webPush.anon.PrivateKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait RequestOptions extends js.Object {
    // the type of push encoding to use (e.g. 'aesgcm', by default, or 'aes128gcm').
   var proxy: js.UndefOr[String] = js.native
    // can be a GCM API key to be used for this request and this request only. This overrides any API key set via setGCMAPIKey().
-  var vapidDetails: js.UndefOr[AnonPrivateKey] = js.native
+  var vapidDetails: js.UndefOr[PrivateKey] = js.native
 }
 
 object RequestOptions {
@@ -91,7 +91,7 @@ object RequestOptions {
         ret
     }
     @scala.inline
-    def withVapidDetails(value: AnonPrivateKey): Self = {
+    def withVapidDetails(value: PrivateKey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("vapidDetails")(value.asInstanceOf[js.Any])
         ret

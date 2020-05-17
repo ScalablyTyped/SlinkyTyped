@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ParsedTemplate extends js.Object {
+trait ParsedTemplate extends Template {
   /** If csp mode was used to parse, the map of expression string -> expression functions. */
   var e: js.UndefOr[StringDictionary[js.Function]] = js.native
   /** If the template includes any partials, the map of partial name -> template nodes. */

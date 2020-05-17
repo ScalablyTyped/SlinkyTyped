@@ -1,7 +1,7 @@
 package typingsSlinky.reachRect.mod
 
 import slinky.core.TagMod
-import typingsSlinky.reachRect.AnonRect
+import typingsSlinky.reachRect.anon.Rect
 import typingsSlinky.std.DOMRect
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait RectProps extends js.Object {
-  var children: js.UndefOr[js.Function1[/* args */ AnonRect, TagMod[Any]]] = js.native
+  var children: js.UndefOr[js.Function1[/* args */ Rect, TagMod[Any]]] = js.native
   var observe: js.UndefOr[Boolean] = js.native
   var onChange: js.UndefOr[js.Function1[/* rect */ DOMRect, Unit]] = js.native
 }
@@ -27,7 +27,7 @@ object RectProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withChildren(value: /* args */ AnonRect => TagMod[Any]): Self = {
+    def withChildren(value: /* args */ Rect => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.Any.fromFunction1(value))
         ret

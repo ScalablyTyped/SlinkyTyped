@@ -7,7 +7,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SimpleEffect[T, P] extends js.Object {
+trait SimpleEffect[T, P]
+  extends Effect[T]
+     with StrictEffect[T] {
   @JSName("@@redux-saga/IO")
   var `@@redux-sagaSlashIO`: `true` = js.native
   var combinator: `false` = js.native

@@ -13,22 +13,10 @@ trait MergeTag extends js.Object
 
 object MergeTag {
   @scala.inline
-  def SimpleMergeTag(name: String, value: String): MergeTag = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    __obj.asInstanceOf[MergeTag]
-  }
+  implicit def apply(value: ConditionalMergeTag): MergeTag = value.asInstanceOf[MergeTag]
   @scala.inline
-  def ConditionalMergeTag(name: String, rules: js.Array[ConditionalMergeTagRule]): MergeTag = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], rules = rules.asInstanceOf[js.Any])
-    __obj.asInstanceOf[MergeTag]
-  }
+  implicit def apply(value: GroupedMergeTag): MergeTag = value.asInstanceOf[MergeTag]
   @scala.inline
-  def GroupedMergeTag(
-    mergeTags: js.Array[SimpleMergeTag | typingsSlinky.reactEmailEditor.mod.GroupedMergeTag],
-    name: String
-  ): MergeTag = {
-    val __obj = js.Dynamic.literal(mergeTags = mergeTags.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[MergeTag]
-  }
+  implicit def apply(value: SimpleMergeTag): MergeTag = value.asInstanceOf[MergeTag]
 }
 

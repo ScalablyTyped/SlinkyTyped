@@ -1,17 +1,18 @@
 package typingsSlinky.twitchExt
 
+import typingsSlinky.twitchExt.anon.Ext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Window extends js.Object {
-  var Twitch: AnonExt = js.native
+  var Twitch: Ext = js.native
 }
 
 object Window {
   @scala.inline
-  def apply(Twitch: AnonExt): Window = {
+  def apply(Twitch: Ext): Window = {
     val __obj = js.Dynamic.literal(Twitch = Twitch.asInstanceOf[js.Any])
     __obj.asInstanceOf[Window]
   }
@@ -22,7 +23,7 @@ object Window {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTwitch(value: AnonExt): Self = {
+    def withTwitch(value: Ext): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Twitch")(value.asInstanceOf[js.Any])
         ret

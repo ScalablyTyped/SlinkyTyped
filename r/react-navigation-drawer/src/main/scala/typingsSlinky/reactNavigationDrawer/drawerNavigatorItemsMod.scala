@@ -4,6 +4,7 @@ import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.Context
 import typingsSlinky.react.mod.ContextType
 import typingsSlinky.reactNavigation.mod.SupportedThemes
+import typingsSlinky.reactNavigationDrawer.anon.ActiveBackgroundColor
 import typingsSlinky.reactNavigationDrawer.typesMod.DrawerNavigatorItemsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -30,7 +31,7 @@ object drawerNavigatorItemsMod extends js.Object {
   @js.native
   object default extends js.Object {
     var contextType: Context[SupportedThemes] = js.native
-    var defaultProps: AnonActiveBackgroundColor = js.native
+    var defaultProps: ActiveBackgroundColor = js.native
   }
   
 }

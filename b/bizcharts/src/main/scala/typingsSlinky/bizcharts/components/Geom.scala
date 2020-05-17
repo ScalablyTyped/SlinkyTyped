@@ -2,8 +2,8 @@ package typingsSlinky.bizcharts.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.bizcharts.AnonDodgeBy
-import typingsSlinky.bizcharts.AnonName
+import typingsSlinky.bizcharts.anon.DodgeBy
+import typingsSlinky.bizcharts.anon.Name
 import typingsSlinky.bizcharts.mod.GeomProps
 import typingsSlinky.bizcharts.mod.GeomType
 import scala.scalajs.js
@@ -22,7 +22,7 @@ object Geom {
     @scala.inline
     def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
     @scala.inline
-    def adjust(value: String | (js.Array[AnonDodgeBy | String])): this.type = set("adjust", value.asInstanceOf[js.Any])
+    def adjust(value: String | (js.Array[DodgeBy | String])): this.type = set("adjust", value.asInstanceOf[js.Any])
     @scala.inline
     def animate(value: js.Any): this.type = set("animate", value.asInstanceOf[js.Any])
     @scala.inline
@@ -53,7 +53,7 @@ object Geom {
     @scala.inline
     def style(value: js.Object | (js.Tuple2[String, js.Object])): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
-    def tooltip(value: Boolean | String | (js.Tuple2[String, js.Function1[/* repeated */ _, AnonName]])): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    def tooltip(value: Boolean | String | (js.Tuple2[String, js.Function1[/* repeated */ _, Name]])): this.type = set("tooltip", value.asInstanceOf[js.Any])
     @scala.inline
     def `type`(value: GeomType): this.type = set("type", value.asInstanceOf[js.Any])
   }

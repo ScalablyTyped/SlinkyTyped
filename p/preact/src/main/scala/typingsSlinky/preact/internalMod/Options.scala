@@ -1,10 +1,10 @@
 package typingsSlinky.preact.internalMod
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.DocumentFragment
 import org.scalajs.dom.raw.Element
 import typingsSlinky.preact.mod.ComponentChild
 import typingsSlinky.preact.mod.Options_
-import typingsSlinky.std.Document_
 import typingsSlinky.std.ShadowRoot
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -30,12 +30,12 @@ trait Options extends Options_ {
   var _root: js.UndefOr[
     js.Function2[
       /* vnode */ ComponentChild, 
-      /* parent */ Element | Document_ | ShadowRoot | DocumentFragment, 
+      /* parent */ Element | Document | ShadowRoot | DocumentFragment, 
       Unit
     ]
   ] = js.native
-  def _catchError(error: js.Any, vnode: VNode[js.Object]): Unit = js.native
   /** Attach a hook that is invoked after an error is caught in a component but before calling lifecycle hooks */
+  def _catchError(error: js.Any, vnode: VNode[js.Object]): Unit = js.native
   def _catchError(error: js.Any, vnode: VNode[js.Object], oldVNode: VNode[js.Object]): Unit = js.native
 }
 

@@ -4,6 +4,10 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.node.Buffer
 import typingsSlinky.redux.mod.Action
+import typingsSlinky.reduxSagaCore.anon.Context
+import typingsSlinky.reduxSagaCore.anon.ContextCtx
+import typingsSlinky.reduxSagaCore.anon.ContextFn
+import typingsSlinky.reduxSagaCore.anon.Fn
 import typingsSlinky.reduxSagaCore.effectsMod.ActionChannelEffect
 import typingsSlinky.reduxSagaCore.effectsMod.AllEffect
 import typingsSlinky.reduxSagaCore.effectsMod.CallEffect
@@ -67,7 +71,7 @@ object mod extends js.Object {
   def call[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): any}
     */ call_ with TopLevel[js.Any] */, Name /* <: String */](
-    ctxAndFnName: AnonContext[Ctx, Name],
+    ctxAndFnName: Context[Ctx, Name],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
     ]
@@ -77,7 +81,7 @@ object mod extends js.Object {
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
   ): CallEffect = js.native
   def call[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, _] */](
-    ctxAndFn: AnonFn[Ctx, Fn],
+    ctxAndFn: ContextFn[Ctx, Fn],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
   ): CallEffect = js.native
   @JSName("call")
@@ -107,7 +111,7 @@ object mod extends js.Object {
   def cps[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): void}
     */ cps_ with TopLevel[js.Any] */, Name /* <: String */](
-    ctxAndFnName: AnonContextFn[Ctx, Name],
+    ctxAndFnName: Fn[Ctx, Name],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type CpsFunctionParameters<Ctx[Name]> is not an array type */ args: CpsFunctionParameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
     ]
@@ -117,7 +121,7 @@ object mod extends js.Object {
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type CpsFunctionParameters<Fn> is not an array type */ args: CpsFunctionParameters[Fn]
   ): CpsEffect = js.native
   def cps[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, Unit] */](
-    ctxAndFn: AnonContextCtx[Ctx, Fn],
+    ctxAndFn: ContextCtx[Ctx, Fn],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type CpsFunctionParameters<Fn> is not an array type */ args: CpsFunctionParameters[Fn]
   ): CpsEffect = js.native
   @JSName("cps")
@@ -182,13 +186,13 @@ object mod extends js.Object {
   def fork[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): any}
     */ fork_ with TopLevel[js.Any] */, Name /* <: String */](
-    ctxAndFnName: AnonContext[Ctx, Name],
+    ctxAndFnName: Context[Ctx, Name],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
     ]
   ): ForkEffect = js.native
   def fork[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, _] */](
-    ctxAndFn: AnonFn[Ctx, Fn],
+    ctxAndFn: ContextFn[Ctx, Fn],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
   ): ForkEffect = js.native
   @JSName("fork")
@@ -241,13 +245,13 @@ object mod extends js.Object {
   def spawn[Ctx /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in Name ]: (this : Ctx, args : ...any): any}
     */ typingsSlinky.reduxSagaCore.reduxSagaCoreStrings.spawn with TopLevel[js.Any] */, Name /* <: String */](
-    ctxAndFnName: AnonContext[Ctx, Name],
+    ctxAndFnName: Context[Ctx, Name],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Ctx[Name]> is not an array type */ args: Parameters[
       /* import warning: importer.ImportType#apply Failed type conversion: Ctx[Name] */ js.Any
     ]
   ): ForkEffect = js.native
   def spawn[Ctx, Fn /* <: js.ThisFunction1[/* this */ Ctx, /* repeated */ js.Any, _] */](
-    ctxAndFn: AnonFn[Ctx, Fn],
+    ctxAndFn: ContextFn[Ctx, Fn],
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Parameters<Fn> is not an array type */ args: Parameters[Fn]
   ): ForkEffect = js.native
   @JSName("spawn")

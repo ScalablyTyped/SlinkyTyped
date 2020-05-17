@@ -1,7 +1,6 @@
 package typingsSlinky.breeze.breeze
 
-import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.breeze.AnonNextNumber
+import typingsSlinky.breeze.anon.NextNumber
 import typingsSlinky.breeze.breeze.core.IEnum
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,7 +23,7 @@ trait DataType extends IEnum {
   var String: DataTypeSymbol = js.native
   var Time: DataTypeSymbol = js.native
   var Undefined: DataTypeSymbol = js.native
-  var constants: AnonNextNumber = js.native
+  var constants: NextNumber = js.native
   def fromEdmDataType(typeName: String): DataTypeSymbol = js.native
   def fromValue(`val`: js.Any): DataTypeSymbol = js.native
   def getComparableFn(dataType: DataTypeSymbol): js.Function1[/* value */ js.Any, _] = js.native
@@ -34,8 +33,4 @@ trait DataType extends IEnum {
   def parseRawValue(`val`: js.Any, dataType: DataTypeSymbol): js.Any = js.native
   def parseTimeFromServer(source: js.Any): String = js.native
 }
-
-@JSGlobal("breeze.DataType")
-@js.native
-object DataType extends TopLevel[DataType]
 

@@ -4,14 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.BoundingBoxRenderer")
 @js.native
-class BoundingBoxRenderer protected () extends ISceneComponent {
-  /**
-    * Instantiates a new bounding box renderer in a scene.
-    * @param scene the scene the  renderer renders in
-    */
-  def this(scene: Scene) = this()
+trait BoundingBoxRenderer extends ISceneComponent {
   var _activeMesh: js.Any = js.native
   var _colorShader: js.Any = js.native
   var _createIndexBuffer: js.Any = js.native
@@ -51,5 +45,139 @@ class BoundingBoxRenderer protected () extends ISceneComponent {
     * @hidden
     */
   def reset(): Unit = js.native
+}
+
+object BoundingBoxRenderer {
+  @scala.inline
+  def apply(
+    _activeMesh: js.Any,
+    _colorShader: js.Any,
+    _createIndexBuffer: js.Any,
+    _evaluateSubMesh: js.Any,
+    _fillIndexBuffer: js.Any,
+    _fillIndexData: js.Any,
+    _indexBuffer: js.Any,
+    _prepareRessources: js.Any,
+    _vertexBuffers: js.Any,
+    backColor: Color3,
+    dispose: () => Unit,
+    frontColor: Color3,
+    name: String,
+    rebuild: () => Unit,
+    register: () => Unit,
+    render: Double => Unit,
+    renderList: SmartArray[BoundingBox],
+    renderOcclusionBoundingBox: AbstractMesh => Unit,
+    reset: () => Unit,
+    scene: Scene,
+    showBackLines: Boolean
+  ): BoundingBoxRenderer = {
+    val __obj = js.Dynamic.literal(_activeMesh = _activeMesh.asInstanceOf[js.Any], _colorShader = _colorShader.asInstanceOf[js.Any], _createIndexBuffer = _createIndexBuffer.asInstanceOf[js.Any], _evaluateSubMesh = _evaluateSubMesh.asInstanceOf[js.Any], _fillIndexBuffer = _fillIndexBuffer.asInstanceOf[js.Any], _fillIndexData = _fillIndexData.asInstanceOf[js.Any], _indexBuffer = _indexBuffer.asInstanceOf[js.Any], _prepareRessources = _prepareRessources.asInstanceOf[js.Any], _vertexBuffers = _vertexBuffers.asInstanceOf[js.Any], backColor = backColor.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), frontColor = frontColor.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], rebuild = js.Any.fromFunction0(rebuild), register = js.Any.fromFunction0(register), render = js.Any.fromFunction1(render), renderList = renderList.asInstanceOf[js.Any], renderOcclusionBoundingBox = js.Any.fromFunction1(renderOcclusionBoundingBox), reset = js.Any.fromFunction0(reset), scene = scene.asInstanceOf[js.Any], showBackLines = showBackLines.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BoundingBoxRenderer]
+  }
+  @scala.inline
+  implicit class BoundingBoxRendererOps[Self <: BoundingBoxRenderer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_activeMesh(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_activeMesh")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_colorShader(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_colorShader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_createIndexBuffer(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_createIndexBuffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_evaluateSubMesh(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_evaluateSubMesh")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_fillIndexBuffer(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fillIndexBuffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_fillIndexData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fillIndexData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_indexBuffer(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_indexBuffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_prepareRessources(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_prepareRessources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_vertexBuffers(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_vertexBuffers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBackColor(value: Color3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("backColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFrontColor(value: Color3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frontColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRender(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRenderList(value: SmartArray[BoundingBox]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRenderOcclusionBoundingBox(value: AbstractMesh => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderOcclusionBoundingBox")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withReset(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withShowBackLines(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showBackLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

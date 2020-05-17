@@ -1,9 +1,9 @@
 package typingsSlinky.weixinApp.wx
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.weixinApp.PartialLifetimes
-import typingsSlinky.weixinApp.PartialPageLifetimes
-import typingsSlinky.weixinApp.PartialaddGlobalClassbool
+import typingsSlinky.weixinApp.anon.PartialLifetimes
+import typingsSlinky.weixinApp.anon.PartialPageLifetimes
+import typingsSlinky.weixinApp.anon.PartialaddGlobalClassbool
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.NumberDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,9 +22,4 @@ trait NamedNodeMap
   def setNamedItem(attr: org.scalajs.dom.raw.Attr): org.scalajs.dom.raw.Attr | Null = js.native
   def setNamedItemNS(attr: org.scalajs.dom.raw.Attr): org.scalajs.dom.raw.Attr | Null = js.native
 }
-
-@JSGlobal("NamedNodeMap")
-@js.native
-object NamedNodeMap
-  extends Instantiable0[org.scalajs.dom.raw.NamedNodeMap]
 

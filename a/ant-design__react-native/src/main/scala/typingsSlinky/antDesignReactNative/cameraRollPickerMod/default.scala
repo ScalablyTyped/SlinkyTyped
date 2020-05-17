@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.cameraRollPickerMod
 
-import typingsSlinky.antDesignReactNative.AnonAssetType
+import typingsSlinky.antDesignReactNative.anon.AssetType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +15,6 @@ class default protected () extends CameraRollPicker {
 @JSImport("@ant-design/react-native/lib/image-picker/CameraRollPicker", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonAssetType = js.native
+  var defaultProps: AssetType = js.native
 }
 

@@ -1,18 +1,11 @@
 package typingsSlinky.ejWebAll.ej
 
-import org.scalajs.dom.raw.Element
-import typingsSlinky.ejWebAll.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("ej.SunburstChart")
 @js.native
-class SunburstChart_ protected () extends Widget_ {
-  def this(element: JQuery) = this()
-  def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.SunburstChart.Model) = this()
-  def this(element: Element, options: typingsSlinky.ejWebAll.ej.SunburstChart.Model) = this()
+trait SunburstChart_ extends Widget_ {
   var defaults: typingsSlinky.ejWebAll.ej.SunburstChart.Model = js.native
   @JSName("model")
   var model_SunburstChart_ : typingsSlinky.ejWebAll.ej.SunburstChart.Model = js.native

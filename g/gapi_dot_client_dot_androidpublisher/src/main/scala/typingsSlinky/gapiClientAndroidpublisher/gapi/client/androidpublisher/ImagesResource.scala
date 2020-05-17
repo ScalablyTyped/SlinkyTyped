@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientAndroidpublisher.gapi.client.androidpublisher
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAndroidpublisher.AnonFields
-import typingsSlinky.gapiClientAndroidpublisher.AnonImageType
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAndroidpublisher.anon.Fields
+import typingsSlinky.gapiClientAndroidpublisher.anon.ImageType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,22 +10,22 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ImagesResource extends js.Object {
   /** Deletes the image (specified by id) from the edit. */
-  def delete(request: AnonFields): Request_[Unit] = js.native
+  def delete(request: Fields): Request[Unit] = js.native
   /** Deletes all images for the specified language and image type. */
-  def deleteall(request: AnonImageType): Request_[ImagesDeleteAllResponse] = js.native
+  def deleteall(request: ImageType): Request[ImagesDeleteAllResponse] = js.native
   /** Lists all images for the specified language and image type. */
-  def list(request: AnonImageType): Request_[ImagesListResponse] = js.native
+  def list(request: ImageType): Request[ImagesListResponse] = js.native
   /** Uploads a new image and adds it to the list of images for the specified language and image type. */
-  def upload(request: AnonImageType): Request_[ImagesUploadResponse] = js.native
+  def upload(request: ImageType): Request[ImagesUploadResponse] = js.native
 }
 
 object ImagesResource {
   @scala.inline
   def apply(
-    delete: AnonFields => Request_[Unit],
-    deleteall: AnonImageType => Request_[ImagesDeleteAllResponse],
-    list: AnonImageType => Request_[ImagesListResponse],
-    upload: AnonImageType => Request_[ImagesUploadResponse]
+    delete: Fields => Request[Unit],
+    deleteall: ImageType => Request[ImagesDeleteAllResponse],
+    list: ImageType => Request[ImagesListResponse],
+    upload: ImageType => Request[ImagesUploadResponse]
   ): ImagesResource = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), deleteall = js.Any.fromFunction1(deleteall), list = js.Any.fromFunction1(list), upload = js.Any.fromFunction1(upload))
     __obj.asInstanceOf[ImagesResource]
@@ -37,25 +37,25 @@ object ImagesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDelete(value: AnonFields => Request_[Unit]): Self = {
+    def withDelete(value: Fields => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDeleteall(value: AnonImageType => Request_[ImagesDeleteAllResponse]): Self = {
+    def withDeleteall(value: ImageType => Request[ImagesDeleteAllResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("deleteall")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonImageType => Request_[ImagesListResponse]): Self = {
+    def withList(value: ImageType => Request[ImagesListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpload(value: AnonImageType => Request_[ImagesUploadResponse]): Self = {
+    def withUpload(value: ImageType => Request[ImagesUploadResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(js.Any.fromFunction1(value))
         ret

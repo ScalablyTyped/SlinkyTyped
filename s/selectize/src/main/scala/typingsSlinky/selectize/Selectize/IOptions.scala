@@ -1,8 +1,8 @@
 package typingsSlinky.selectize.Selectize
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.selectize.AnonDirection
 import typingsSlinky.selectize.JQuery
+import typingsSlinky.selectize.anon.Direction
 import typingsSlinky.selectize.selectizeStrings.focus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -324,7 +324,7 @@ trait IOptions[T, U] extends js.Object {
     *
     * Default: "$order"
     */
-  var sortField: js.UndefOr[String | js.Array[AnonDirection]] = js.native
+  var sortField: js.UndefOr[String | js.Array[Direction]] = js.native
   /**
     * The name of the property to use as the "value" when an item is selected.
     *
@@ -970,7 +970,7 @@ object IOptions {
         ret
     }
     @scala.inline
-    def withSortField(value: String | js.Array[AnonDirection]): Self[T, U] = {
+    def withSortField(value: String | js.Array[Direction]): Self[T, U] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sortField")(value.asInstanceOf[js.Any])
         ret

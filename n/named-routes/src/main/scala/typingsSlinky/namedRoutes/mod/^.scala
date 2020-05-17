@@ -1,6 +1,6 @@
 package typingsSlinky.namedRoutes.mod
 
-import typingsSlinky.namedRoutes.PartialRouterOptions
+import typingsSlinky.namedRoutes.anon.PartialRouterOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.ecol.collectionEventMod.CollectionEvent
 import typingsSlinky.ecol.ieventdispatcherMod.IEventDispatcher
-import typingsSlinky.tstl.Iteratoranyanyanyany
+import typingsSlinky.tstl.anon.Iteratoranyanyanyany
 import typingsSlinky.tstl.entryMod.Entry
 import typingsSlinky.tstl.hashMapMod.HashMap
 import typingsSlinky.tstl.hashMapMod.HashMap.Iterator
@@ -61,6 +61,14 @@ object hashMapCollectionMod extends js.Object {
     /* InferMemberOverrides */
     override def assign[InputIterator /* <: IForwardIterator[IPair[Key, T], InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
     /**
+      * Iterator to the first element.
+      *
+      * @return Iterator to the first element.
+      */
+    /* InferMemberOverrides */
+    /* InferMemberOverrides */
+    override def begin(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[Entry[Key, T], HashMap[Key, T], Iterator[Key, T], ReverseIterator[Key, T], IPair[Key, T]] = js.native
+    /**
       * @inheritDoc
       */
     /* InferMemberOverrides */
@@ -80,6 +88,14 @@ object hashMapCollectionMod extends js.Object {
     override def emplace(key: Key, `val`: T): InsertRet[Key, T, `true`, HashMap[Key, T], Iterator[Key, T], ReverseIterator[Key, T]] = js.native
     /* InferMemberOverrides */
     override def emplace_hint(hint: Iterator[Key, T], key: Key, `val`: T): Iterator[Key, T] = js.native
+    /**
+      * Iterator to the end.
+      *
+      * @return Iterator to the end.
+      */
+    /* InferMemberOverrides */
+    /* InferMemberOverrides */
+    override def end(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[Entry[Key, T], HashMap[Key, T], Iterator[Key, T], ReverseIterator[Key, T], IPair[Key, T]] = js.native
     /**
       * Erase elements in range.
       *
@@ -183,6 +199,13 @@ object hashMapCollectionMod extends js.Object {
     /* InferMemberOverrides */
     override def merge(source: HashMap[Key, T]): Unit = js.native
     /**
+      * Reverse iterator to the first element in reverse.
+      *
+      * @return Reverse iterator to the first.
+      */
+    /* InferMemberOverrides */
+    override def rbegin(): ReverseIterator[Key, T] = js.native
+    /**
       * @inheritDoc
       */
     def refresh(): Unit = js.native
@@ -194,6 +217,13 @@ object hashMapCollectionMod extends js.Object {
       * @inheritDoc
       */
     def refresh(it: Iterator[Key, T]): Unit = js.native
+    /**
+      * Reverse iterator to the reverse end.
+      *
+      * @return Reverse iterator to the end.
+      */
+    /* InferMemberOverrides */
+    override def rend(): ReverseIterator[Key, T] = js.native
     /**
       * Set a value with key.
       *

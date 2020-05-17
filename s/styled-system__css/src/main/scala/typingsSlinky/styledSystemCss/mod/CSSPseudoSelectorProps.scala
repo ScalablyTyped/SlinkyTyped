@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 /* Inlined {[ K in csstype.csstype.Pseudos ]:? @styled-system/css.@styled-system/css.SystemStyleObject} */
 @js.native
-trait CSSPseudoSelectorProps extends _SystemStyleObject {
+trait CSSPseudoSelectorProps extends SystemStyleObject {
   @JSName(":-moz-any-link")
   var `Colon-moz-any-link`: js.UndefOr[SystemStyleObject] = js.native
   @JSName(":-moz-any()")

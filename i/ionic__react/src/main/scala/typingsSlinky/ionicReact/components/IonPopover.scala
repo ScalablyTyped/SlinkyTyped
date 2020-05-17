@@ -1,16 +1,16 @@
 package typingsSlinky.ionicReact.components
 
 import org.scalajs.dom.raw.CustomEvent
+import org.scalajs.dom.raw.Event
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonPopoverElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonPopoverElement
 import typingsSlinky.ionicCore.mod.FrameworkDelegate
 import typingsSlinky.ionicCore.mod.Mode
 import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation
-import typingsSlinky.ionicReact.childrenReactNodeforwardeAnimated
+import typingsSlinky.ionicReact.anon.childrenReactNodeforwardeAnimated
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ object IonPopover {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, Ref[js.Any]] {
     @scala.inline
     def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
     @scala.inline
@@ -37,7 +37,7 @@ object IonPopover {
       value: (/* Animation */ Animation, /* baseEl */ js.Any, /* opts */ js.UndefOr[js.Any]) => js.Promise[Animation]
     ): this.type = set("enterAnimation", js.Any.fromFunction3(value))
     @scala.inline
-    def event(value: Event_): this.type = set("event", value.asInstanceOf[js.Any])
+    def event(value: Event): this.type = set("event", value.asInstanceOf[js.Any])
     @scala.inline
     def forwardedRef(value: ReactRef[HTMLIonPopoverElement]): this.type = set("forwardedRef", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,8 +1,8 @@
 package typingsSlinky.oracleOraclejet.ojfilmstripMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonId
-import typingsSlinky.oracleOraclejet.AnonLabelAccArrowNextPage
+import typingsSlinky.oracleOraclejet.anon.Id
+import typingsSlinky.oracleOraclejet.anon.LabelAccArrowNextPage
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.adjacent
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.auto
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.hidden
@@ -23,11 +23,11 @@ trait ojFilmStripSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
   var arrowPlacement: js.UndefOr[adjacent | overlay] = js.native
   var arrowVisibility: js.UndefOr[visible | hidden | hover | auto] = js.native
-  var currentItem: js.UndefOr[AnonId] = js.native
+  var currentItem: js.UndefOr[Id] = js.native
   var looping: js.UndefOr[off | page] = js.native
   var maxItemsPerPage: js.UndefOr[Double] = js.native
   var orientation: js.UndefOr[horizontal | vertical] = js.native
-  var translations: js.UndefOr[AnonLabelAccArrowNextPage] = js.native
+  var translations: js.UndefOr[LabelAccArrowNextPage] = js.native
 }
 
 object ojFilmStripSettablePropertiesLenient {
@@ -67,7 +67,7 @@ object ojFilmStripSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withCurrentItem(value: AnonId): Self = {
+    def withCurrentItem(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("currentItem")(value.asInstanceOf[js.Any])
         ret
@@ -115,7 +115,7 @@ object ojFilmStripSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelAccArrowNextPage): Self = {
+    def withTranslations(value: LabelAccArrowNextPage): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

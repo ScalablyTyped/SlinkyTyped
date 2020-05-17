@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.groupedListBaseMod
 
-import typingsSlinky.officeUiFabricReact.AnonCompact
+import typingsSlinky.officeUiFabricReact.anon.Compact
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.IGroupedList
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.IGroupedListProps
 import typingsSlinky.react.mod.Component
@@ -45,6 +45,6 @@ class GroupedListBase protected ()
 @JSImport("office-ui-fabric-react/lib/components/GroupedList/GroupedList.base", "GroupedListBase")
 @js.native
 object GroupedListBase extends js.Object {
-  var defaultProps: AnonCompact = js.native
+  var defaultProps: Compact = js.native
 }
 

@@ -5,14 +5,13 @@ import typingsSlinky.puppeteer.mod.Base64ScreenShotOptions
 import typingsSlinky.puppeteer.mod.Browser
 import typingsSlinky.puppeteer.mod.DirectNavigationOptions
 import typingsSlinky.puppeteer.mod.Page
-import typingsSlinky.storybookAddonStoryshotsPuppeteer.AnonContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ImageSnapshotConfig extends CommonConfig {
-  def afterScreenshot(options: AnonContext): Unit = js.native
+  def afterScreenshot(options: typingsSlinky.storybookAddonStoryshotsPuppeteer.anon.Context): Unit = js.native
   def beforeScreenshot(page: Page, options: Options): Unit = js.native
   def getMatchOptions(options: Options): MatchImageSnapshotOptions = js.native
   def getScreenshotOptions(options: Options): Base64ScreenShotOptions = js.native
@@ -21,7 +20,7 @@ trait ImageSnapshotConfig extends CommonConfig {
 object ImageSnapshotConfig {
   @scala.inline
   def apply(
-    afterScreenshot: AnonContext => Unit,
+    afterScreenshot: typingsSlinky.storybookAddonStoryshotsPuppeteer.anon.Context => Unit,
     beforeScreenshot: (Page, Options) => Unit,
     chromeExecutablePath: String,
     customizePage: Page => js.Promise[Unit],
@@ -43,7 +42,7 @@ object ImageSnapshotConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAfterScreenshot(value: AnonContext => Unit): Self = {
+    def withAfterScreenshot(value: typingsSlinky.storybookAddonStoryshotsPuppeteer.anon.Context => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterScreenshot")(js.Any.fromFunction1(value))
         ret

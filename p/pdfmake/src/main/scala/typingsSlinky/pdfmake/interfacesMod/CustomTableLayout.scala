@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CustomTableLayout extends _TableLayout {
+trait CustomTableLayout extends TableLayout {
   var defaultBorder: js.UndefOr[Boolean] = js.native
   var fillColor: js.UndefOr[String | DynamicLayout[String]] = js.native
   var fillOpacity: js.UndefOr[Double | DynamicLayout[Double]] = js.native

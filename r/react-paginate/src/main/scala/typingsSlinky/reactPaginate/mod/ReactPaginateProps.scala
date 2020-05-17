@@ -2,7 +2,7 @@ package typingsSlinky.reactPaginate.mod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactPaginate.AnonSelected
+import typingsSlinky.reactPaginate.anon.Selected
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -76,7 +76,7 @@ trait ReactPaginateProps extends js.Object {
   /**
     * The method to call when a page is clicked. Exposes the current page object as an argument.
     */
-  var onPageChange: js.UndefOr[js.Function1[/* selectedItem */ AnonSelected, Unit]] = js.native
+  var onPageChange: js.UndefOr[js.Function1[/* selectedItem */ Selected, Unit]] = js.native
   /**
     * The classname on tag `li` of each page element.
     */
@@ -330,7 +330,7 @@ object ReactPaginateProps {
         ret
     }
     @scala.inline
-    def withOnPageChange(value: /* selectedItem */ AnonSelected => Unit): Self = {
+    def withOnPageChange(value: /* selectedItem */ Selected => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPageChange")(js.Any.fromFunction1(value))
         ret

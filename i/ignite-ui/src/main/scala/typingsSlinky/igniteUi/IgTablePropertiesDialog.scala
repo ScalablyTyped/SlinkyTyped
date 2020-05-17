@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,7 +50,7 @@ object IgTablePropertiesDialog {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withApply(value: (/* event */ Event_, /* ui */ ApplyEventUIParam) => Unit): Self = {
+    def withApply(value: (/* event */ Event, /* ui */ ApplyEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("apply")(js.Any.fromFunction2(value))
         ret
@@ -62,7 +62,7 @@ object IgTablePropertiesDialog {
         ret
     }
     @scala.inline
-    def withCancel(value: (/* event */ Event_, /* ui */ CancelEventUIParam) => Unit): Self = {
+    def withCancel(value: (/* event */ Event, /* ui */ CancelEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction2(value))
         ret
@@ -74,7 +74,7 @@ object IgTablePropertiesDialog {
         ret
     }
     @scala.inline
-    def withHide(value: (/* event */ Event_, /* ui */ HideEventUIParam) => Unit): Self = {
+    def withHide(value: (/* event */ Event, /* ui */ HideEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.Any.fromFunction2(value))
         ret
@@ -146,7 +146,7 @@ object IgTablePropertiesDialog {
         ret
     }
     @scala.inline
-    def withShow(value: (/* event */ Event_, /* ui */ ShowEventUIParam) => Unit): Self = {
+    def withShow(value: (/* event */ Event, /* ui */ ShowEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.Any.fromFunction2(value))
         ret

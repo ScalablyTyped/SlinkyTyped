@@ -1,7 +1,7 @@
 package typingsSlinky.dockerode.mod
 
-import typingsSlinky.dockerode.AnonDetails
-import typingsSlinky.dockerode.AnonNameString
+import typingsSlinky.dockerode.anon.Details
+import typingsSlinky.dockerode.anon.NameString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,13 +11,13 @@ trait DockerVersion extends js.Object {
   var ApiVersion: String = js.native
   var Arch: String = js.native
   var BuildTime: js.Date = js.native
-  var Components: js.Array[AnonDetails] = js.native
+  var Components: js.Array[Details] = js.native
   var GitCommit: String = js.native
   var GoVersion: String = js.native
   var KernelVersion: String = js.native
   var MinAPIVersion: String = js.native
   var Os: String = js.native
-  var Platform: AnonNameString = js.native
+  var Platform: NameString = js.native
   var Version: String = js.native
 }
 
@@ -27,13 +27,13 @@ object DockerVersion {
     ApiVersion: String,
     Arch: String,
     BuildTime: js.Date,
-    Components: js.Array[AnonDetails],
+    Components: js.Array[Details],
     GitCommit: String,
     GoVersion: String,
     KernelVersion: String,
     MinAPIVersion: String,
     Os: String,
-    Platform: AnonNameString,
+    Platform: NameString,
     Version: String
   ): DockerVersion = {
     val __obj = js.Dynamic.literal(ApiVersion = ApiVersion.asInstanceOf[js.Any], Arch = Arch.asInstanceOf[js.Any], BuildTime = BuildTime.asInstanceOf[js.Any], Components = Components.asInstanceOf[js.Any], GitCommit = GitCommit.asInstanceOf[js.Any], GoVersion = GoVersion.asInstanceOf[js.Any], KernelVersion = KernelVersion.asInstanceOf[js.Any], MinAPIVersion = MinAPIVersion.asInstanceOf[js.Any], Os = Os.asInstanceOf[js.Any], Platform = Platform.asInstanceOf[js.Any], Version = Version.asInstanceOf[js.Any])
@@ -64,7 +64,7 @@ object DockerVersion {
         ret
     }
     @scala.inline
-    def withComponents(value: js.Array[AnonDetails]): Self = {
+    def withComponents(value: js.Array[Details]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Components")(value.asInstanceOf[js.Any])
         ret
@@ -100,7 +100,7 @@ object DockerVersion {
         ret
     }
     @scala.inline
-    def withPlatform(value: AnonNameString): Self = {
+    def withPlatform(value: NameString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Platform")(value.asInstanceOf[js.Any])
         ret

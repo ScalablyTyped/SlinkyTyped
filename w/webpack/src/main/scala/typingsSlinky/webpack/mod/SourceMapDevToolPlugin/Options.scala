@@ -1,6 +1,6 @@
 package typingsSlinky.webpack.mod.SourceMapDevToolPlugin
 
-import typingsSlinky.webpack.AnonExclude
+import typingsSlinky.webpack.anon.Exclude
 import typingsSlinky.webpack.mod.Condition
 import typingsSlinky.webpack.webpackBooleans.`false`
 import scala.scalajs.js
@@ -16,7 +16,7 @@ trait Options extends js.Object {
   var fallbackModuleFilenameTemplate: js.UndefOr[String] = js.native
   var filename: js.UndefOr[Null | `false` | String] = js.native
   var include: js.UndefOr[Condition | js.Array[Condition]] = js.native
-  var lineToLine: js.UndefOr[Boolean | AnonExclude] = js.native
+  var lineToLine: js.UndefOr[Boolean | Exclude] = js.native
   var module: js.UndefOr[Boolean] = js.native
   var moduleFilenameTemplate: js.UndefOr[String] = js.native
   var noSources: js.UndefOr[Boolean] = js.native
@@ -140,7 +140,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withLineToLine(value: Boolean | AnonExclude): Self = {
+    def withLineToLine(value: Boolean | Exclude): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lineToLine")(value.asInstanceOf[js.Any])
         ret

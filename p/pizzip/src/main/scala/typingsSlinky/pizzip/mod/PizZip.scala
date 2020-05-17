@@ -3,11 +3,11 @@ package typingsSlinky.pizzip.mod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Blob
 import typingsSlinky.node.Buffer
-import typingsSlinky.pizzip.GenerateOptionstypearrayb
-import typingsSlinky.pizzip.GenerateOptionstypeblob
-import typingsSlinky.pizzip.GenerateOptionstypenodebu
-import typingsSlinky.pizzip.GenerateOptionstypestring
-import typingsSlinky.pizzip.GenerateOptionstypeuint8a
+import typingsSlinky.pizzip.anon.GenerateOptionstypearrayb
+import typingsSlinky.pizzip.anon.GenerateOptionstypeblob
+import typingsSlinky.pizzip.anon.GenerateOptionstypenodebu
+import typingsSlinky.pizzip.anon.GenerateOptionstypestring
+import typingsSlinky.pizzip.anon.GenerateOptionstypeuint8a
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

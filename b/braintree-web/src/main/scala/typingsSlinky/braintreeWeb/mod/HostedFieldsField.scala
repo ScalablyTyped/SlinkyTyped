@@ -1,6 +1,6 @@
 package typingsSlinky.braintreeWeb.mod
 
-import typingsSlinky.braintreeWeb.AnonOptions
+import typingsSlinky.braintreeWeb.anon.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ trait HostedFieldsField extends js.Object {
   var placeholder: js.UndefOr[String] = js.native
   var prefill: js.UndefOr[String] = js.native
   var rejectUnsupportedCards: js.UndefOr[Boolean] = js.native
-  var select: js.UndefOr[Boolean | AnonOptions] = js.native
+  var select: js.UndefOr[Boolean | Options] = js.native
   var selector: String = js.native
   var `type`: js.UndefOr[String] = js.native
 }
@@ -146,7 +146,7 @@ object HostedFieldsField {
         ret
     }
     @scala.inline
-    def withSelect(value: Boolean | AnonOptions): Self = {
+    def withSelect(value: Boolean | Options): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
         ret

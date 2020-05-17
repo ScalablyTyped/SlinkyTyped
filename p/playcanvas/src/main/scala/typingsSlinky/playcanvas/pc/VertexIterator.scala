@@ -12,10 +12,8 @@ import scala.scalajs.js.annotation._
   * @param {pc.VertexBuffer} vertexBuffer - The vertex buffer to be iterated.
   * @property {object} element The vertex buffer elements.
   */
-@JSGlobal("pc.VertexIterator")
 @js.native
-class VertexIterator protected () extends js.Object {
-  def this(vertexBuffer: VertexBuffer) = this()
+trait VertexIterator extends js.Object {
   /**
     * The vertex buffer elements.
     */

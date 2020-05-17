@@ -11,9 +11,8 @@ import scala.scalajs.js.annotation._
 			 * A search query object manages the criteria to apply when searching app content that you have previously
 			 * indexed by using the Core Spotlight APIs.
 			 */
-@JSGlobal("Titanium.App.iOS.SearchQuery")
 @js.native
-class SearchQuery () extends Proxy {
+trait SearchQuery extends Proxy {
   /**
   				 * An array of strings that represent the attributes of indexed items.
   				 */

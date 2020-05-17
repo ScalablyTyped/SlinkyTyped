@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.ChartDataLabelData
 import typingsSlinky.officeJs.Excel.Interfaces.ChartDataLabelLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.ChartDataLabelUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.BestFit
 import typingsSlinky.officeJs.officeJsStrings.Bottom
 import typingsSlinky.officeJs.officeJsStrings.Callout
@@ -30,9 +30,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.7]
   */
-@JSGlobal("Excel.ChartDataLabel")
 @js.native
-class ChartDataLabel () extends ClientObject {
+trait ChartDataLabel extends ClientObject {
   /**
     *
     * Boolean value representing if data label automatically generates appropriate text based on context.
@@ -192,7 +191,7 @@ class ChartDataLabel () extends ClientObject {
     */
   def load(): ChartDataLabel = js.native
   def load(options: ChartDataLabelLoadOptions): ChartDataLabel = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartDataLabel = js.native
+  def load(propertyNamesAndPaths: Expand): ChartDataLabel = js.native
   def load(propertyNames: String): ChartDataLabel = js.native
   def load(propertyNames: js.Array[String]): ChartDataLabel = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

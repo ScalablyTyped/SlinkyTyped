@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A browser for the discovery and retrieval of Bonjour services available on the network.
 		 */
-@JSGlobal("Titanium.Network.BonjourBrowser")
 @js.native
-class BonjourBrowser () extends Proxy {
+trait BonjourBrowser extends Proxy {
   /**
   			 * The domain the browser is searching in
   			 */

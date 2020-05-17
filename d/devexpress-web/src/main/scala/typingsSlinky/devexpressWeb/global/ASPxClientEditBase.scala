@@ -1,0 +1,14 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Serves as the base object for all the editors included in the client-side object model.
+  */
+@JSGlobal("ASPxClientEditBase")
+@js.native
+class ASPxClientEditBase ()
+  extends typingsSlinky.devexpressWeb.ASPxClientEditBase
+

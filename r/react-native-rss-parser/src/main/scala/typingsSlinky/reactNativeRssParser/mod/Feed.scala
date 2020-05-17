@@ -1,26 +1,26 @@
 package typingsSlinky.reactNativeRssParser.mod
 
-import typingsSlinky.reactNativeRssParser.AnonBlock
-import typingsSlinky.reactNativeRssParser.AnonDescription
-import typingsSlinky.reactNativeRssParser.AnonName
-import typingsSlinky.reactNativeRssParser.AnonRel
+import typingsSlinky.reactNativeRssParser.anon.Block
+import typingsSlinky.reactNativeRssParser.anon.Description
+import typingsSlinky.reactNativeRssParser.anon.Name
+import typingsSlinky.reactNativeRssParser.anon.Rel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Feed extends js.Object {
-  var authors: js.Array[Maybe[AnonName]] = js.native
-  var categories: js.Array[Maybe[AnonName]] = js.native
+  var authors: js.Array[Maybe[Name]] = js.native
+  var categories: js.Array[Maybe[Name]] = js.native
   var copyright: Maybe[String] = js.native
   var description: String = js.native
-  var image: AnonDescription = js.native
+  var image: Description = js.native
   var items: js.Array[FeedItem] = js.native
-  var itunes: AnonBlock = js.native
+  var itunes: Block = js.native
   var language: String = js.native
   var lastPublished: String = js.native
   var lastUpdated: String = js.native
-  var links: js.Array[AnonRel] = js.native
+  var links: js.Array[Rel] = js.native
   var title: String = js.native
   var `type`: String = js.native
 }
@@ -28,16 +28,16 @@ trait Feed extends js.Object {
 object Feed {
   @scala.inline
   def apply(
-    authors: js.Array[Maybe[AnonName]],
-    categories: js.Array[Maybe[AnonName]],
+    authors: js.Array[Maybe[Name]],
+    categories: js.Array[Maybe[Name]],
     description: String,
-    image: AnonDescription,
+    image: Description,
     items: js.Array[FeedItem],
-    itunes: AnonBlock,
+    itunes: Block,
     language: String,
     lastPublished: String,
     lastUpdated: String,
-    links: js.Array[AnonRel],
+    links: js.Array[Rel],
     title: String,
     `type`: String
   ): Feed = {
@@ -52,13 +52,13 @@ object Feed {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAuthors(value: js.Array[Maybe[AnonName]]): Self = {
+    def withAuthors(value: js.Array[Maybe[Name]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("authors")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withCategories(value: js.Array[Maybe[AnonName]]): Self = {
+    def withCategories(value: js.Array[Maybe[Name]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
         ret
@@ -70,7 +70,7 @@ object Feed {
         ret
     }
     @scala.inline
-    def withImage(value: AnonDescription): Self = {
+    def withImage(value: Description): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
         ret
@@ -82,7 +82,7 @@ object Feed {
         ret
     }
     @scala.inline
-    def withItunes(value: AnonBlock): Self = {
+    def withItunes(value: Block): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itunes")(value.asInstanceOf[js.Any])
         ret
@@ -106,7 +106,7 @@ object Feed {
         ret
     }
     @scala.inline
-    def withLinks(value: js.Array[AnonRel]): Self = {
+    def withLinks(value: js.Array[Rel]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
         ret

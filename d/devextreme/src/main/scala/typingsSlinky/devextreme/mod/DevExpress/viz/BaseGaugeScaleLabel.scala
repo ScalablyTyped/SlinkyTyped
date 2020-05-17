@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonValueText
+import typingsSlinky.devextreme.anon.ValueText
 import typingsSlinky.devextreme.devextremeStrings.hide
 import typingsSlinky.devextreme.devextremeStrings.none
 import typingsSlinky.devextreme.mod.DevExpress.ui.format
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait BaseGaugeScaleLabel extends js.Object {
   /** Specifies a callback function that returns the text to be displayed in scale labels. */
-  var customizeText: js.UndefOr[js.Function1[/* scaleValue */ AnonValueText, String]] = js.native
+  var customizeText: js.UndefOr[js.Function1[/* scaleValue */ ValueText, String]] = js.native
   /** Specifies font options for the text displayed in the scale labels of the gauge. */
   var font: js.UndefOr[Font] = js.native
   /** Formats a value before it is displayed in a scale label. Accepts only numeric formats. */
@@ -38,7 +38,7 @@ object BaseGaugeScaleLabel {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCustomizeText(value: /* scaleValue */ AnonValueText => String): Self = {
+    def withCustomizeText(value: /* scaleValue */ ValueText => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customizeText")(js.Any.fromFunction1(value))
         ret

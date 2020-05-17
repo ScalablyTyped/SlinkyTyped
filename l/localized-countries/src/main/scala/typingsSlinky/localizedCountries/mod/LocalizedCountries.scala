@@ -1,21 +1,21 @@
 package typingsSlinky.localizedCountries.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.localizedCountries.AnonCode
+import typingsSlinky.localizedCountries.anon.Code
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait LocalizedCountries extends js.Object {
-  def array(): js.Array[AnonCode] = js.native
+  def array(): js.Array[Code] = js.native
   def get(code: String): String = js.native
   def `object`(): StringDictionary[String] = js.native
 }
 
 object LocalizedCountries {
   @scala.inline
-  def apply(array: () => js.Array[AnonCode], get: String => String, `object`: () => StringDictionary[String]): LocalizedCountries = {
+  def apply(array: () => js.Array[Code], get: String => String, `object`: () => StringDictionary[String]): LocalizedCountries = {
     val __obj = js.Dynamic.literal(array = js.Any.fromFunction0(array), get = js.Any.fromFunction1(get))
     __obj.updateDynamic("object")(js.Any.fromFunction0(`object`))
     __obj.asInstanceOf[LocalizedCountries]
@@ -27,7 +27,7 @@ object LocalizedCountries {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withArray(value: () => js.Array[AnonCode]): Self = {
+    def withArray(value: () => js.Array[Code]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("array")(js.Any.fromFunction0(value))
         ret

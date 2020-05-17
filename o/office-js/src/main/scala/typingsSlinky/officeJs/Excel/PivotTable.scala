@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.PivotTableData
 import typingsSlinky.officeJs.Excel.Interfaces.PivotTableLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.PivotTableUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,9 +17,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.3]
   */
-@JSGlobal("Excel.PivotTable")
 @js.native
-class PivotTable () extends ClientObject {
+trait PivotTable extends ClientObject {
   /**
     *
     * The Column Pivot Hierarchies of the PivotTable.
@@ -113,7 +112,7 @@ class PivotTable () extends ClientObject {
     */
   def load(): PivotTable = js.native
   def load(options: PivotTableLoadOptions): PivotTable = js.native
-  def load(propertyNamesAndPaths: AnonExpand): PivotTable = js.native
+  def load(propertyNamesAndPaths: Expand): PivotTable = js.native
   def load(propertyNames: String): PivotTable = js.native
   def load(propertyNames: js.Array[String]): PivotTable = js.native
   /**

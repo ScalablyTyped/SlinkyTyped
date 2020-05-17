@@ -14,17 +14,8 @@ import scala.scalajs.js.annotation._
   * @param {number} [z] - The quaternion's z component. Default value 0.
   * @param {number} [w] - The quaternion's w component. Default value 1.
   */
-@JSGlobal("pc.Quat")
 @js.native
-class Quat () extends js.Object {
-  def this(x: js.Array[Double]) = this()
-  def this(x: Double) = this()
-  def this(x: js.Array[Double], y: Double) = this()
-  def this(x: Double, y: Double) = this()
-  def this(x: js.Array[Double], y: Double, z: Double) = this()
-  def this(x: Double, y: Double, z: Double) = this()
-  def this(x: js.Array[Double], y: Double, z: Double, w: Double) = this()
-  def this(x: Double, y: Double, z: Double, w: Double) = this()
+trait Quat extends js.Object {
   /**
     * @field
     * @name pc.Quat#w
@@ -325,29 +316,5 @@ class Quat () extends js.Object {
     */
   def transformVector(vec: Vec3): Vec3 = js.native
   def transformVector(vec: Vec3, res: Vec3): Vec3 = js.native
-}
-
-/* static members */
-@JSGlobal("pc.Quat")
-@js.native
-object Quat extends js.Object {
-  /**
-    * @field
-    * @static
-    * @readonly
-    * @name pc.Quat.IDENTITY
-    * @type {pc.Quat}
-    * @description A constant quaternion set to [0, 0, 0, 1] (the identity).
-    */
-  val IDENTITY: Quat = js.native
-  /**
-    * @field
-    * @static
-    * @readonly
-    * @name pc.Quat.ZERO
-    * @type {pc.Quat}
-    * @description A constant quaternion set to [0, 0, 0, 0].
-    */
-  val ZERO: Quat = js.native
 }
 

@@ -1,9 +1,9 @@
 package typingsSlinky.onfleetNodeOnfleet.tasksMod
 
-import typingsSlinky.onfleetNodeOnfleet.AnonActions
-import typingsSlinky.onfleetNodeOnfleet.AnonChecksum
-import typingsSlinky.onfleetNodeOnfleet.AnonOrganization
-import typingsSlinky.onfleetNodeOnfleet.AnonRecipientName
+import typingsSlinky.onfleetNodeOnfleet.anon.Actions
+import typingsSlinky.onfleetNodeOnfleet.anon.Checksum
+import typingsSlinky.onfleetNodeOnfleet.anon.Organization
+import typingsSlinky.onfleetNodeOnfleet.anon.RecipientName
 import typingsSlinky.onfleetNodeOnfleet.destinationsMod.OnfleetDestination
 import typingsSlinky.onfleetNodeOnfleet.metadataMod.OnfleetMetadata
 import typingsSlinky.onfleetNodeOnfleet.recipientsMod.OnfleetRecipient
@@ -15,8 +15,8 @@ import scala.scalajs.js.annotation._
 trait OnfleetTask extends js.Object {
   var completeAfter: Double = js.native
   var completeBefore: Double = js.native
-  var completionDetails: AnonActions = js.native
-  var container: AnonOrganization = js.native
+  var completionDetails: Actions = js.native
+  var container: Organization = js.native
   var creator: String = js.native
   var dependencies: js.Array[String] = js.native
   var destination: OnfleetDestination = js.native
@@ -24,12 +24,12 @@ trait OnfleetTask extends js.Object {
   var executor: String = js.native
   var feedback: js.Array[_] = js.native
   var id: String = js.native
-  var identity: AnonChecksum = js.native
+  var identity: Checksum = js.native
   var merchant: String = js.native
   var metadata: js.Array[OnfleetMetadata] = js.native
   var notes: String = js.native
   var organization: String = js.native
-  var overrides: AnonRecipientName = js.native
+  var overrides: RecipientName = js.native
   var pickupTask: Boolean = js.native
   var quantity: Double = js.native
   var recipients: js.Array[OnfleetRecipient] = js.native
@@ -48,8 +48,8 @@ object OnfleetTask {
   def apply(
     completeAfter: Double,
     completeBefore: Double,
-    completionDetails: AnonActions,
-    container: AnonOrganization,
+    completionDetails: Actions,
+    container: Organization,
     creator: String,
     dependencies: js.Array[String],
     destination: OnfleetDestination,
@@ -57,12 +57,12 @@ object OnfleetTask {
     executor: String,
     feedback: js.Array[_],
     id: String,
-    identity: AnonChecksum,
+    identity: Checksum,
     merchant: String,
     metadata: js.Array[OnfleetMetadata],
     notes: String,
     organization: String,
-    overrides: AnonRecipientName,
+    overrides: RecipientName,
     pickupTask: Boolean,
     quantity: Double,
     recipients: js.Array[OnfleetRecipient],
@@ -96,13 +96,13 @@ object OnfleetTask {
         ret
     }
     @scala.inline
-    def withCompletionDetails(value: AnonActions): Self = {
+    def withCompletionDetails(value: Actions): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("completionDetails")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withContainer(value: AnonOrganization): Self = {
+    def withContainer(value: Organization): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
         ret
@@ -150,7 +150,7 @@ object OnfleetTask {
         ret
     }
     @scala.inline
-    def withIdentity(value: AnonChecksum): Self = {
+    def withIdentity(value: Checksum): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("identity")(value.asInstanceOf[js.Any])
         ret
@@ -180,7 +180,7 @@ object OnfleetTask {
         ret
     }
     @scala.inline
-    def withOverrides(value: AnonRecipientName): Self = {
+    def withOverrides(value: RecipientName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
         ret

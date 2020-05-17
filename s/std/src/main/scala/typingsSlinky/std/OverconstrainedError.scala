@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +9,25 @@ trait OverconstrainedError extends Error {
   var constraint: java.lang.String = js.native
 }
 
-@JSGlobal("OverconstrainedError")
-@js.native
-object OverconstrainedError extends Instantiable0[OverconstrainedError]
+object OverconstrainedError {
+  @scala.inline
+  def apply(constraint: java.lang.String, message: java.lang.String, name: java.lang.String): OverconstrainedError = {
+    val __obj = js.Dynamic.literal(constraint = constraint.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OverconstrainedError]
+  }
+  @scala.inline
+  implicit class OverconstrainedErrorOps[Self <: OverconstrainedError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConstraint(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constraint")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

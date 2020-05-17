@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonComponentRow
+import typingsSlinky.devextreme.anon.ComponentRow
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,9 +10,9 @@ trait dxDataGridEditing extends GridBaseEditing {
   /** Specifies whether a user can add new rows. */
   var allowAdding: js.UndefOr[Boolean] = js.native
   /** Specifies whether a user can delete rows. It is called for each data row when defined as a function. */
-  var allowDeleting: js.UndefOr[Boolean | (js.Function1[/* options */ AnonComponentRow, Boolean])] = js.native
+  var allowDeleting: js.UndefOr[Boolean | (js.Function1[/* options */ ComponentRow, Boolean])] = js.native
   /** Specifies whether a user can update rows. It is called for each data row when defined as a function. */
-  var allowUpdating: js.UndefOr[Boolean | (js.Function1[/* options */ AnonComponentRow, Boolean])] = js.native
+  var allowUpdating: js.UndefOr[Boolean | (js.Function1[/* options */ ComponentRow, Boolean])] = js.native
   /** Contains options that specify texts for editing-related UI elements. */
   @JSName("texts")
   var texts_dxDataGridEditing: js.UndefOr[js.Any] = js.native
@@ -43,13 +43,13 @@ object dxDataGridEditing {
         ret
     }
     @scala.inline
-    def withAllowDeletingFunction1(value: /* options */ AnonComponentRow => Boolean): Self = {
+    def withAllowDeletingFunction1(value: /* options */ ComponentRow => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("allowDeleting")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withAllowDeleting(value: Boolean | (js.Function1[/* options */ AnonComponentRow, Boolean])): Self = {
+    def withAllowDeleting(value: Boolean | (js.Function1[/* options */ ComponentRow, Boolean])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("allowDeleting")(value.asInstanceOf[js.Any])
         ret
@@ -61,13 +61,13 @@ object dxDataGridEditing {
         ret
     }
     @scala.inline
-    def withAllowUpdatingFunction1(value: /* options */ AnonComponentRow => Boolean): Self = {
+    def withAllowUpdatingFunction1(value: /* options */ ComponentRow => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("allowUpdating")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withAllowUpdating(value: Boolean | (js.Function1[/* options */ AnonComponentRow, Boolean])): Self = {
+    def withAllowUpdating(value: Boolean | (js.Function1[/* options */ ComponentRow, Boolean])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("allowUpdating")(value.asInstanceOf[js.Any])
         ret

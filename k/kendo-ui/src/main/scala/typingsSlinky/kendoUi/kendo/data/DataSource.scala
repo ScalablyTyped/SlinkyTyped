@@ -1,15 +1,13 @@
 package typingsSlinky.kendoUi.kendo.data
 
 import typingsSlinky.kendoUi.JQueryPromise
-import typingsSlinky.kendoUi.kendo.Observable_
+import typingsSlinky.kendoUi.kendo.Observable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.data.DataSource")
 @js.native
-class DataSource () extends Observable_ {
-  def this(options: DataSourceOptions) = this()
+trait DataSource extends Observable {
   var options: DataSourceOptions = js.native
   def add(model: js.Object): Model = js.native
   def add(model: Model): Model = js.native
@@ -64,13 +62,5 @@ class DataSource () extends Observable_ {
   def total(): Double = js.native
   def totalPages(): Double = js.native
   def view(): ObservableArray = js.native
-}
-
-/* static members */
-@JSGlobal("kendo.data.DataSource")
-@js.native
-object DataSource extends js.Object {
-  def create(): DataSource = js.native
-  def create(options: DataSourceOptions): DataSource = js.native
 }
 

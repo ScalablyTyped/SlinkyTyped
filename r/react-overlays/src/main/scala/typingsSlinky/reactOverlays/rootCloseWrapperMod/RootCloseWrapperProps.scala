@@ -1,11 +1,11 @@
 package typingsSlinky.reactOverlays.rootCloseWrapperMod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactOverlays.reactOverlaysStrings.click
 import typingsSlinky.reactOverlays.reactOverlaysStrings.mousedown
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +28,7 @@ trait RootCloseWrapperProps extends js.Object {
   /**
     * Callback fired after click or mousedown. Also triggers when user hits `esc`.
     */
-  var onRootClose: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event_, _], Unit]] = js.native
+  var onRootClose: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event, _], Unit]] = js.native
 }
 
 object RootCloseWrapperProps {
@@ -86,7 +86,7 @@ object RootCloseWrapperProps {
         ret
     }
     @scala.inline
-    def withOnRootClose(value: /* e */ SyntheticEvent[Event_, _] => Unit): Self = {
+    def withOnRootClose(value: /* e */ SyntheticEvent[Event, _] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRootClose")(js.Any.fromFunction1(value))
         ret

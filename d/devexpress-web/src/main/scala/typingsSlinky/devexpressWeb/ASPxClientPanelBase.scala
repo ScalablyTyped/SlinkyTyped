@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Serves as the base class for controls that implement panel functionality.
   */
-@JSGlobal("ASPxClientPanelBase")
 @js.native
-class ASPxClientPanelBase () extends ASPxClientControl {
+trait ASPxClientPanelBase extends ASPxClientControl {
   /**
     * Returns the HTML code that is the content of the panel.
     */
@@ -30,14 +29,63 @@ class ASPxClientPanelBase () extends ASPxClientControl {
   def SetEnabled(enabled: Boolean): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("ASPxClientPanelBase")
-@js.native
-object ASPxClientPanelBase extends js.Object {
-  /**
-    * Converts the specified object to the current object's type. The converted client object specified by the obj parameter.
-    * @param obj The client object to be type cast.
-    */
-  def Cast(obj: js.Any): ASPxClientPanelBase = js.native
+object ASPxClientPanelBase {
+  @scala.inline
+  def apply(
+    AdjustControl: () => Unit,
+    GetClientVisible: () => Boolean,
+    GetContentHtml: () => String,
+    GetEnabled: () => Boolean,
+    GetHeight: () => Double,
+    GetMainElement: () => js.Any,
+    GetParentControl: () => js.Any,
+    GetVisible: () => Boolean,
+    GetWidth: () => Double,
+    InCallback: () => Boolean,
+    Init: ASPxClientEvent[ASPxClientEventHandler[ASPxClientControlBase]],
+    SendMessageToAssistiveTechnology: String => Unit,
+    SetClientVisible: Boolean => Unit,
+    SetContentHtml: String => Unit,
+    SetEnabled: Boolean => Unit,
+    SetHeight: Double => Unit,
+    SetVisible: Boolean => Unit,
+    SetWidth: Double => Unit,
+    name: String
+  ): ASPxClientPanelBase = {
+    val __obj = js.Dynamic.literal(AdjustControl = js.Any.fromFunction0(AdjustControl), GetClientVisible = js.Any.fromFunction0(GetClientVisible), GetContentHtml = js.Any.fromFunction0(GetContentHtml), GetEnabled = js.Any.fromFunction0(GetEnabled), GetHeight = js.Any.fromFunction0(GetHeight), GetMainElement = js.Any.fromFunction0(GetMainElement), GetParentControl = js.Any.fromFunction0(GetParentControl), GetVisible = js.Any.fromFunction0(GetVisible), GetWidth = js.Any.fromFunction0(GetWidth), InCallback = js.Any.fromFunction0(InCallback), Init = Init.asInstanceOf[js.Any], SendMessageToAssistiveTechnology = js.Any.fromFunction1(SendMessageToAssistiveTechnology), SetClientVisible = js.Any.fromFunction1(SetClientVisible), SetContentHtml = js.Any.fromFunction1(SetContentHtml), SetEnabled = js.Any.fromFunction1(SetEnabled), SetHeight = js.Any.fromFunction1(SetHeight), SetVisible = js.Any.fromFunction1(SetVisible), SetWidth = js.Any.fromFunction1(SetWidth), name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientPanelBase]
+  }
+  @scala.inline
+  implicit class ASPxClientPanelBaseOps[Self <: ASPxClientPanelBase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetContentHtml(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetContentHtml")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetEnabled(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetEnabled")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetContentHtml(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetContentHtml")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetEnabled(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetEnabled")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

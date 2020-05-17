@@ -1,7 +1,7 @@
 package typingsSlinky.primereact.dataViewMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.primereact.AnonRows
+import typingsSlinky.primereact.anon.Rows
 import typingsSlinky.primereact.primereactStrings.grid
 import typingsSlinky.primereact.primereactStrings.list
 import scala.scalajs.js
@@ -23,7 +23,7 @@ trait DataViewProps extends js.Object {
   ] = js.native
   var layout: js.UndefOr[String] = js.native
   var `lazy`: js.UndefOr[Boolean] = js.native
-  var onPage: js.UndefOr[js.Function1[/* e */ AnonRows, Unit]] = js.native
+  var onPage: js.UndefOr[js.Function1[/* e */ Rows, Unit]] = js.native
   var pageLinkSize: js.UndefOr[Double] = js.native
   var paginator: js.UndefOr[Boolean] = js.native
   var paginatorLeft: js.UndefOr[js.Any] = js.native
@@ -196,7 +196,7 @@ object DataViewProps {
         ret
     }
     @scala.inline
-    def withOnPage(value: /* e */ AnonRows => Unit): Self = {
+    def withOnPage(value: /* e */ Rows => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPage")(js.Any.fromFunction1(value))
         ret

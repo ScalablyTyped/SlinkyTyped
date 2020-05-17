@@ -6,28 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object rdsMod {
   type AccountQuotaList = js.Array[typingsSlinky.awsSdk.rdsMod.AccountQuota]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.sync
-    - typingsSlinky.awsSdk.awsSdkStrings.async
-    - java.lang.String
-  */
-  type ActivityStreamMode = typingsSlinky.awsSdk.rdsMod._ActivityStreamMode | java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.stopped__
-    - typingsSlinky.awsSdk.awsSdkStrings.starting__
-    - typingsSlinky.awsSdk.awsSdkStrings.started__
-    - typingsSlinky.awsSdk.awsSdkStrings.stopping__
-    - java.lang.String
-  */
-  type ActivityStreamStatus = typingsSlinky.awsSdk.rdsMod._ActivityStreamStatus | java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.immediate_
-    - typingsSlinky.awsSdk.awsSdkStrings.`pending-reboot`
-    - java.lang.String
-  */
-  type ApplyMethod = typingsSlinky.awsSdk.rdsMod._ApplyMethod | java.lang.String
   type AttributeValueList = js.Array[typingsSlinky.awsSdk.rdsMod.String]
-  type AuthScheme = typingsSlinky.awsSdk.awsSdkStrings.SECRETS | java.lang.String
   type AvailabilityZoneList = js.Array[typingsSlinky.awsSdk.rdsMod.AvailabilityZone]
   type AvailabilityZones = js.Array[typingsSlinky.awsSdk.rdsMod.String]
   type AvailableProcessorFeatureList = js.Array[typingsSlinky.awsSdk.rdsMod.AvailableProcessorFeature]
@@ -53,16 +32,6 @@ package object rdsMod {
   type DBParameterGroupList = js.Array[typingsSlinky.awsSdk.rdsMod.DBParameterGroup]
   type DBParameterGroupStatusList = js.Array[typingsSlinky.awsSdk.rdsMod.DBParameterGroupStatus]
   type DBProxyList = js.Array[typingsSlinky.awsSdk.rdsMod.DBProxy]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.available__
-    - typingsSlinky.awsSdk.awsSdkStrings.modifying_
-    - typingsSlinky.awsSdk.awsSdkStrings.`incompatible-network`
-    - typingsSlinky.awsSdk.awsSdkStrings.`insufficient-resource-limits`
-    - typingsSlinky.awsSdk.awsSdkStrings.creating__
-    - typingsSlinky.awsSdk.awsSdkStrings.deleting__
-    - java.lang.String
-  */
-  type DBProxyStatus = typingsSlinky.awsSdk.rdsMod._DBProxyStatus | java.lang.String
   type DBSecurityGroupMembershipList = js.Array[typingsSlinky.awsSdk.rdsMod.DBSecurityGroupMembership]
   type DBSecurityGroupNameList = js.Array[typingsSlinky.awsSdk.rdsMod.String]
   type DBSecurityGroups = js.Array[typingsSlinky.awsSdk.rdsMod.DBSecurityGroup]
@@ -75,7 +44,6 @@ package object rdsMod {
   type DoubleOptional = scala.Double
   type DoubleRangeList = js.Array[typingsSlinky.awsSdk.rdsMod.DoubleRange]
   type EC2SecurityGroupList = js.Array[typingsSlinky.awsSdk.rdsMod.EC2SecurityGroup]
-  type EngineFamily = typingsSlinky.awsSdk.awsSdkStrings.MYSQL | java.lang.String
   type EngineModeList = js.Array[typingsSlinky.awsSdk.rdsMod.String]
   type EventCategoriesList = js.Array[typingsSlinky.awsSdk.rdsMod.String]
   type EventCategoriesMapList = js.Array[typingsSlinky.awsSdk.rdsMod.EventCategoriesMap]
@@ -87,12 +55,6 @@ package object rdsMod {
   type FilterValueList = js.Array[typingsSlinky.awsSdk.rdsMod.String]
   type GlobalClusterList = js.Array[typingsSlinky.awsSdk.rdsMod.GlobalCluster]
   type GlobalClusterMemberList = js.Array[typingsSlinky.awsSdk.rdsMod.GlobalClusterMember]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
-    - typingsSlinky.awsSdk.awsSdkStrings.REQUIRED
-    - java.lang.String
-  */
-  type IAMAuthMode = typingsSlinky.awsSdk.rdsMod._IAMAuthMode | java.lang.String
   type IPRangeList = js.Array[typingsSlinky.awsSdk.rdsMod.IPRange]
   type InstallationMediaList = js.Array[typingsSlinky.awsSdk.rdsMod.InstallationMedia]
   type Integer = scala.Double
@@ -130,16 +92,6 @@ package object rdsMod {
   type ReservedDBInstancesOfferingList = js.Array[typingsSlinky.awsSdk.rdsMod.ReservedDBInstancesOffering]
   type SourceIdsList = js.Array[typingsSlinky.awsSdk.rdsMod.String]
   type SourceRegionList = js.Array[typingsSlinky.awsSdk.rdsMod.SourceRegion]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`db-instance`
-    - typingsSlinky.awsSdk.awsSdkStrings.`db-parameter-group`
-    - typingsSlinky.awsSdk.awsSdkStrings.`db-security-group`
-    - typingsSlinky.awsSdk.awsSdkStrings.`db-snapshot`
-    - typingsSlinky.awsSdk.awsSdkStrings.`db-cluster`
-    - typingsSlinky.awsSdk.awsSdkStrings.`db-cluster-snapshot`
-    - java.lang.String
-  */
-  type SourceType = typingsSlinky.awsSdk.rdsMod._SourceType | java.lang.String
   type String = java.lang.String
   type StringList = js.Array[typingsSlinky.awsSdk.rdsMod.String]
   type StringSensitive = java.lang.String
@@ -151,27 +103,10 @@ package object rdsMod {
   type TagList = js.Array[typingsSlinky.awsSdk.rdsMod.Tag]
   type TargetGroupList = js.Array[typingsSlinky.awsSdk.rdsMod.DBProxyTargetGroup]
   type TargetList = js.Array[typingsSlinky.awsSdk.rdsMod.DBProxyTarget]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.RDS_INSTANCE
-    - typingsSlinky.awsSdk.awsSdkStrings.RDS_SERVERLESS_ENDPOINT
-    - typingsSlinky.awsSdk.awsSdkStrings.TRACKED_CLUSTER
-    - java.lang.String
-  */
-  type TargetType = typingsSlinky.awsSdk.rdsMod._TargetType | java.lang.String
   type UserAuthConfigInfoList = js.Array[typingsSlinky.awsSdk.rdsMod.UserAuthConfigInfo]
   type UserAuthConfigList = js.Array[typingsSlinky.awsSdk.rdsMod.UserAuthConfig]
   type ValidStorageOptionsList = js.Array[typingsSlinky.awsSdk.rdsMod.ValidStorageOptions]
   type ValidUpgradeTargetList = js.Array[typingsSlinky.awsSdk.rdsMod.UpgradeTarget]
   type VpcSecurityGroupIdList = js.Array[typingsSlinky.awsSdk.rdsMod.String]
   type VpcSecurityGroupMembershipList = js.Array[typingsSlinky.awsSdk.rdsMod.VpcSecurityGroupMembership]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2013-01-10`
-    - typingsSlinky.awsSdk.awsSdkStrings.`2013-02-12`
-    - typingsSlinky.awsSdk.awsSdkStrings.`2013-09-09`
-    - typingsSlinky.awsSdk.awsSdkStrings.`2014-09-01`
-    - typingsSlinky.awsSdk.awsSdkStrings.`2014-10-31`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.rdsMod._apiVersion | java.lang.String
 }

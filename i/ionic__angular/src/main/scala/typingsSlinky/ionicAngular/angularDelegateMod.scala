@@ -29,14 +29,7 @@ object angularDelegateMod extends js.Object {
     def this(
       resolver: ComponentFactoryResolver,
       injector: Injector,
-      location: js.UndefOr[scala.Nothing],
-      appRef: ApplicationRef,
-      zone: NgZone
-    ) = this()
-    def this(
-      resolver: ComponentFactoryResolver,
-      injector: Injector,
-      location: ViewContainerRef,
+      location: js.UndefOr[ViewContainerRef],
       appRef: ApplicationRef,
       zone: NgZone
     ) = this()
@@ -53,7 +46,7 @@ object angularDelegateMod extends js.Object {
     zone: NgZone,
     resolver: ComponentFactoryResolver,
     injector: Injector,
-    location: js.UndefOr[scala.Nothing],
+    location: js.UndefOr[ViewContainerRef],
     appRef: ApplicationRef,
     elRefMap: WeakMap[HTMLElement, _],
     elEventsMap: WeakMap[HTMLElement, js.Function0[Unit]],
@@ -65,32 +58,7 @@ object angularDelegateMod extends js.Object {
     zone: NgZone,
     resolver: ComponentFactoryResolver,
     injector: Injector,
-    location: js.UndefOr[scala.Nothing],
-    appRef: ApplicationRef,
-    elRefMap: WeakMap[HTMLElement, _],
-    elEventsMap: WeakMap[HTMLElement, js.Function0[Unit]],
-    container: js.Any,
-    component: js.Any,
-    params: js.Any,
-    cssClasses: js.Array[String]
-  ): js.Any = js.native
-  def attachView(
-    zone: NgZone,
-    resolver: ComponentFactoryResolver,
-    injector: Injector,
-    location: ViewContainerRef,
-    appRef: ApplicationRef,
-    elRefMap: WeakMap[HTMLElement, _],
-    elEventsMap: WeakMap[HTMLElement, js.Function0[Unit]],
-    container: js.Any,
-    component: js.Any,
-    params: js.Any
-  ): js.Any = js.native
-  def attachView(
-    zone: NgZone,
-    resolver: ComponentFactoryResolver,
-    injector: Injector,
-    location: ViewContainerRef,
+    location: js.UndefOr[ViewContainerRef],
     appRef: ApplicationRef,
     elRefMap: WeakMap[HTMLElement, _],
     elEventsMap: WeakMap[HTMLElement, js.Function0[Unit]],

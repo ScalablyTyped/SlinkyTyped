@@ -1,11 +1,11 @@
 package typingsSlinky.reactOverlays.dropdownMenuMod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
-import typingsSlinky.reactOverlays.AnonArialabelledby
-import typingsSlinky.reactOverlays.AnonRef
+import typingsSlinky.reactOverlays.anon.Arialabelledby
+import typingsSlinky.reactOverlays.anon.Ref
 import typingsSlinky.reactOverlays.overlayMod.OverlayRenderProps
 import typingsSlinky.reactOverlays.overlayMod.Placements
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,17 +13,17 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DropdownMenuRenderProps extends OverlayRenderProps {
   var alignEnd: Boolean = js.native
-  def close(event: SyntheticEvent[Event_, _]): Unit = js.native
+  def close(event: SyntheticEvent[Event, _]): Unit = js.native
 }
 
 object DropdownMenuRenderProps {
   @scala.inline
   def apply(
     alignEnd: Boolean,
-    arrowProps: AnonRef,
-    close: SyntheticEvent[Event_, _] => Unit,
+    arrowProps: Ref,
+    close: SyntheticEvent[Event, _] => Unit,
     placement: Placements,
-    props: AnonArialabelledby,
+    props: Arialabelledby,
     scheduleUpdate: () => Unit,
     show: Boolean
   ): DropdownMenuRenderProps = {
@@ -43,7 +43,7 @@ object DropdownMenuRenderProps {
         ret
     }
     @scala.inline
-    def withClose(value: SyntheticEvent[Event_, _] => Unit): Self = {
+    def withClose(value: SyntheticEvent[Event, _] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction1(value))
         ret

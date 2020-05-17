@@ -3,6 +3,7 @@ package typingsSlinky.zoneJs
 import typingsSlinky.std.PropertyDescriptorMap
 import typingsSlinky.std.PropertyKey
 import typingsSlinky.std.ThisType
+import typingsSlinky.zoneJs.anon.ADDEVENTLISTENERSTR
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +28,7 @@ trait ZonePrivate extends js.Object {
   def bindArguments(args: js.Array[_], source: String): js.Array[_] = js.native
   def currentZoneFrame(): ZoneFrame = js.native
   def filterProperties(target: js.Any, onProperties: js.Array[String], ignoreProperties: js.Array[_]): js.Array[String] = js.native
-  def getGlobalObjects(): js.UndefOr[AnonADDEVENTLISTENERSTR] = js.native
+  def getGlobalObjects(): js.UndefOr[ADDEVENTLISTENERSTR] = js.native
   def isIEOrEdge(): Boolean = js.native
   def microtaskDrainDone(): Unit = js.native
   def onUnhandledError(error: js.Error): Unit = js.native

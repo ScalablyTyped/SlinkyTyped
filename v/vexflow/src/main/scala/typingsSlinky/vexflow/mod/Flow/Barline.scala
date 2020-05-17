@@ -1,6 +1,5 @@
 package typingsSlinky.vexflow.mod.Flow
 
-import typingsSlinky.vexflow.Vex.Flow.Barline.`type`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class Barline protected ()
   extends typingsSlinky.vexflow.Vex.Flow.Barline {
-  def this(`type`: `type`, x: Double) = this()
+  def this(`type`: typingsSlinky.vexflow.Vex.Flow.Barline.`type`, x: Double) = this()
 }
 

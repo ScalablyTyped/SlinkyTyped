@@ -1,6 +1,6 @@
 package typingsSlinky.mendixmodelsdk.iworkingcopyeventMod
 
-import typingsSlinky.mendixmodelsdk.AnonEventId
+import typingsSlinky.mendixmodelsdk.anon.EventId
 import typingsSlinky.mendixmodelsdk.mendixmodelsdkStrings.buildResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait IBuildResultEvent extends IWorkingCopyEvent {
-  var data: AnonEventId = js.native
+  var data: EventId = js.native
   var `type`: buildResult = js.native
 }
 
 object IBuildResultEvent {
   @scala.inline
-  def apply(data: AnonEventId, `type`: buildResult): IBuildResultEvent = {
+  def apply(data: EventId, `type`: buildResult): IBuildResultEvent = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IBuildResultEvent]
@@ -26,7 +26,7 @@ object IBuildResultEvent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withData(value: AnonEventId): Self = {
+    def withData(value: EventId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

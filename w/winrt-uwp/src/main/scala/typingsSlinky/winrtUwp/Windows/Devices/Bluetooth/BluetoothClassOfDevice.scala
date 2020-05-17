@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides functionality to determine the Bluetooth Class Of Device (Bluetooth COD) information for a device. */
-@JSGlobal("Windows.Devices.Bluetooth.BluetoothClassOfDevice")
 @js.native
-abstract class BluetoothClassOfDevice () extends js.Object {
+trait BluetoothClassOfDevice extends js.Object {
   /** Gets the Major Class code of the Bluetooth device. */
   var majorClass: BluetoothMajorClass = js.native
   /** Gets the Minor Class code of the device. */
@@ -18,27 +17,48 @@ abstract class BluetoothClassOfDevice () extends js.Object {
   var serviceCapabilities: BluetoothServiceCapabilities = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Devices.Bluetooth.BluetoothClassOfDevice")
-@js.native
-object BluetoothClassOfDevice extends js.Object {
-  /**
-    * Creates a BluetoothClassOfDevice object by supplying values for BluetoothMajorClass , BluetoothMinorClass and BluetoothClassOfDevice.
-    * @param majorClass One of the enumeration values that specifies the device's main function.
-    * @param minorClass One of the enumeration values that specifies the minor class value to be used.
-    * @param serviceCapabilities One of the enumeration values that specifies the service the device supports.
-    * @return A BluetoothClassOfDevice object.
-    */
-  def fromParts(
+object BluetoothClassOfDevice {
+  @scala.inline
+  def apply(
     majorClass: BluetoothMajorClass,
     minorClass: BluetoothMinorClass,
+    rawValue: Double,
     serviceCapabilities: BluetoothServiceCapabilities
-  ): BluetoothClassOfDevice = js.native
-  /**
-    * Creates a BluetoothClassOfDevice object from a raw integer value representing the Major Class, Minor Class and Service Capabilities of the device.
-    * @param rawValue The raw integer value from which to create the BluetoothClassOfDevice object.
-    * @return A BluetoothClassOfDevice object.
-    */
-  def fromRawValue(rawValue: Double): BluetoothClassOfDevice = js.native
+  ): BluetoothClassOfDevice = {
+    val __obj = js.Dynamic.literal(majorClass = majorClass.asInstanceOf[js.Any], minorClass = minorClass.asInstanceOf[js.Any], rawValue = rawValue.asInstanceOf[js.Any], serviceCapabilities = serviceCapabilities.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BluetoothClassOfDevice]
+  }
+  @scala.inline
+  implicit class BluetoothClassOfDeviceOps[Self <: BluetoothClassOfDevice] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMajorClass(value: BluetoothMajorClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("majorClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinorClass(value: BluetoothMinorClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minorClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRawValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServiceCapabilities(value: BluetoothServiceCapabilities): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceCapabilities")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

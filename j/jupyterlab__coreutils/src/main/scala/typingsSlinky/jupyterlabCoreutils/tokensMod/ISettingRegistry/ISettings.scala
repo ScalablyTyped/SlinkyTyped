@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabCoreutils.tokensMod.ISettingRegistry
 
-import typingsSlinky.jupyterlabCoreutils.AnonUser
+import typingsSlinky.jupyterlabCoreutils.anon.User
 import typingsSlinky.jupyterlabCoreutils.settingregistryMod.ISchemaValidator.IError
 import typingsSlinky.phosphorCoreutils.jsonMod.JSONValue
 import typingsSlinky.phosphorCoreutils.jsonMod.ReadonlyJSONObject
@@ -63,7 +63,7 @@ trait ISettings extends IDisposable {
     *
     * @returns The setting value.
     */
-  def get(key: String): AnonUser = js.native
+  def get(key: String): User = js.native
   /**
     * Remove a single setting.
     *
@@ -110,7 +110,7 @@ object ISettings {
     composite: ReadonlyJSONObject,
     default: String => js.UndefOr[JSONValue],
     dispose: () => Unit,
-    get: String => AnonUser,
+    get: String => User,
     id: String,
     isDisposed: Boolean,
     plugin: IPlugin,
@@ -157,7 +157,7 @@ object ISettings {
         ret
     }
     @scala.inline
-    def withGet(value: String => AnonUser): Self = {
+    def withGet(value: String => User): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret

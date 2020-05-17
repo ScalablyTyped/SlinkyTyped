@@ -14,7 +14,8 @@ trait MigrationsStartForOrgParams extends js.Object {
     * Indicates whether repositories should be locked (to prevent manipulation) while migrating data.
     */
   var lock_repositories: js.UndefOr[Boolean] = js.native
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
   /**
     * A list of arrays indicating which repositories should be migrated.
     */
@@ -23,8 +24,9 @@ trait MigrationsStartForOrgParams extends js.Object {
 
 object MigrationsStartForOrgParams {
   @scala.inline
-  def apply(org: String, repositories: js.Array[String]): MigrationsStartForOrgParams = {
-    val __obj = js.Dynamic.literal(org = org.asInstanceOf[js.Any], repositories = repositories.asInstanceOf[js.Any])
+  def apply(org_ : String, repositories: js.Array[String]): MigrationsStartForOrgParams = {
+    val __obj = js.Dynamic.literal(repositories = repositories.asInstanceOf[js.Any])
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[MigrationsStartForOrgParams]
   }
   @scala.inline
@@ -34,7 +36,7 @@ object MigrationsStartForOrgParams {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

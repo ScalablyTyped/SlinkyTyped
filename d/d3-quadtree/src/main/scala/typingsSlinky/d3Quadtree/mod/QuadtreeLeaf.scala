@@ -39,18 +39,6 @@ object QuadtreeLeaf {
         ret
     }
     @scala.inline
-    def withLength(value: scala.Nothing): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLength: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withNext(value: QuadtreeLeaf[T]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])

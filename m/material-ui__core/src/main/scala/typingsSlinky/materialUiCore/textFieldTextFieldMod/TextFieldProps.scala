@@ -1,7 +1,5 @@
 package typingsSlinky.materialUiCore.textFieldTextFieldMod
 
-import typingsSlinky.materialUiCore.materialUiCoreStrings.filled
-import typingsSlinky.materialUiCore.materialUiCoreStrings.outlined
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,19 +13,10 @@ trait TextFieldProps extends js.Object
 
 object TextFieldProps {
   @scala.inline
-  def StandardTextFieldProps(): TextFieldProps = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[TextFieldProps]
-  }
+  implicit def apply(value: FilledTextFieldProps): TextFieldProps = value.asInstanceOf[TextFieldProps]
   @scala.inline
-  def FilledTextFieldProps(variant: filled): TextFieldProps = {
-    val __obj = js.Dynamic.literal(variant = variant.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TextFieldProps]
-  }
+  implicit def apply(value: OutlinedTextFieldProps): TextFieldProps = value.asInstanceOf[TextFieldProps]
   @scala.inline
-  def OutlinedTextFieldProps(variant: outlined): TextFieldProps = {
-    val __obj = js.Dynamic.literal(variant = variant.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TextFieldProps]
-  }
+  implicit def apply(value: StandardTextFieldProps): TextFieldProps = value.asInstanceOf[TextFieldProps]
 }
 

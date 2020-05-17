@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.ChartSeriesData
 import typingsSlinky.officeJs.Excel.Interfaces.ChartSeriesLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.ChartSeriesUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.Automatic
 import typingsSlinky.officeJs.officeJsStrings.Banner
 import typingsSlinky.officeJs.officeJsStrings.Circle
@@ -42,9 +42,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.ChartSeries")
 @js.native
-class ChartSeries () extends ClientObject {
+trait ChartSeries extends ClientObject {
   /**
     *
     * Returns or sets the group for the specified series. Read/Write
@@ -385,7 +384,7 @@ class ChartSeries () extends ClientObject {
     */
   def load(): ChartSeries = js.native
   def load(options: ChartSeriesLoadOptions): ChartSeries = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartSeries = js.native
+  def load(propertyNamesAndPaths: Expand): ChartSeries = js.native
   def load(propertyNames: String): ChartSeries = js.native
   def load(propertyNames: js.Array[String]): ChartSeries = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

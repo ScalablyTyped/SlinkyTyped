@@ -1,7 +1,7 @@
 package typingsSlinky.webdriverio.WebdriverIO
 
 import typingsSlinky.webdriver.WebDriver.DesiredCapabilities
-import typingsSlinky.webdriverio.AnonDuration
+import typingsSlinky.webdriverio.anon.Duration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ trait HookFunctions extends js.Object {
     js.Function5[
       /* test */ js.Any, 
       /* context */ js.Any, 
-      /* result */ AnonDuration, 
+      /* result */ Duration, 
       /* stepData */ js.UndefOr[js.Any], 
       /* world */ js.UndefOr[js.Any], 
       Unit
@@ -44,9 +44,7 @@ trait HookFunctions extends js.Object {
     ]
   ] = js.native
   var afterSuite: js.UndefOr[js.Function1[/* suite */ Suite, Unit]] = js.native
-  var afterTest: js.UndefOr[
-    js.Function3[/* test */ Test, /* context */ js.Any, /* result */ AnonDuration, Unit]
-  ] = js.native
+  var afterTest: js.UndefOr[js.Function3[/* test */ Test, /* context */ js.Any, /* result */ Duration, Unit]] = js.native
   var before: js.UndefOr[
     js.Function2[/* capabilities */ DesiredCapabilities, /* specs */ js.Array[String], Unit]
   ] = js.native
@@ -127,7 +125,7 @@ object HookFunctions {
     }
     @scala.inline
     def withAfterHook(
-      value: (/* test */ js.Any, /* context */ js.Any, /* result */ AnonDuration, /* stepData */ js.UndefOr[js.Any], /* world */ js.UndefOr[js.Any]) => Unit
+      value: (/* test */ js.Any, /* context */ js.Any, /* result */ Duration, /* stepData */ js.UndefOr[js.Any], /* world */ js.UndefOr[js.Any]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterHook")(js.Any.fromFunction5(value))
@@ -166,7 +164,7 @@ object HookFunctions {
         ret
     }
     @scala.inline
-    def withAfterTest(value: (/* test */ Test, /* context */ js.Any, /* result */ AnonDuration) => Unit): Self = {
+    def withAfterTest(value: (/* test */ Test, /* context */ js.Any, /* result */ Duration) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterTest")(js.Any.fromFunction3(value))
         ret

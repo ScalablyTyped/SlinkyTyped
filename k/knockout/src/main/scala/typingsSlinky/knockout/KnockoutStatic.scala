@@ -1,6 +1,14 @@
 package typingsSlinky.knockout
 
 import org.scalajs.dom.raw.Node
+import typingsSlinky.knockout.anon.AddTemplate
+import typingsSlinky.knockout.anon.ApplyMemoizedBindingsToNextSibling
+import typingsSlinky.knockout.anon.BindingRewriteValidators
+import typingsSlinky.knockout.anon.DeferUpdates
+import typingsSlinky.knockout.anon.Instance
+import typingsSlinky.knockout.anon.InstantiableInstance
+import typingsSlinky.knockout.anon.InstantiableKnockoutTemplateEngine
+import typingsSlinky.knockout.anon.ReadValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +18,7 @@ import scala.scalajs.js.annotation._
 trait KnockoutStatic extends js.Object {
   var bindingHandlers: KnockoutBindingHandlers = js.native
   /////////////////////////////////
-  var bindingProvider: AnonInstantiableInstance = js.native
+  var bindingProvider: InstantiableInstance = js.native
   var components: KnockoutComponents = js.native
   /**
     * Get information about the current computed property during the execution of a computed observable’s evaluator function.
@@ -18,17 +26,17 @@ trait KnockoutStatic extends js.Object {
   var computedContext: KnockoutComputedContext = js.native
   @JSName("computed")
   var computed_Original: KnockoutComputedStatic = js.native
-  var expressionRewriting: AnonBindingRewriteValidators = js.native
+  var expressionRewriting: BindingRewriteValidators = js.native
   var extenders: KnockoutExtenders = js.native
   //////////////////////////////////
   // jqueryTmplTemplateEngine.js
   //////////////////////////////////
-  var jqueryTmplTemplateEngine: AnonAddTemplate = js.native
+  var jqueryTmplTemplateEngine: AddTemplate = js.native
   var memoization: KnockoutMemoization = js.native
   //////////////////////////////////
   // nativeTemplateEngine.js
   //////////////////////////////////
-  var nativeTemplateEngine: AnonInstance = js.native
+  var nativeTemplateEngine: Instance = js.native
   @JSName("observableArray")
   var observableArray_Original: KnockoutObservableArrayStatic = js.native
   @JSName("observable")
@@ -40,11 +48,11 @@ trait KnockoutStatic extends js.Object {
   /////////////////////////////////
   // options.js
   /////////////////////////////////
-  var options: AnonDeferUpdates = js.native
+  var options: DeferUpdates = js.native
   /////////////////////////////////
   // selectExtensions.js
   /////////////////////////////////
-  var selectExtensions: AnonReadValue = js.native
+  var selectExtensions: ReadValue = js.native
   var subscribable: KnockoutSubscribableStatic = js.native
   /////////////////////////////////
   // tasks.js
@@ -53,11 +61,11 @@ trait KnockoutStatic extends js.Object {
   //////////////////////////////////
   // templateEngine.js
   //////////////////////////////////
-  var templateEngine: AnonInstantiableKnockoutTemplateEngine = js.native
+  var templateEngine: InstantiableKnockoutTemplateEngine = js.native
   //////////////////////////////////
   // templateRewriting.js
   //////////////////////////////////
-  var templateRewriting: AnonApplyMemoizedBindingsToNextSibling = js.native
+  var templateRewriting: ApplyMemoizedBindingsToNextSibling = js.native
   //////////////////////////////////
   // templateSources.js
   //////////////////////////////////
@@ -280,10 +288,10 @@ trait KnockoutStatic extends js.Object {
     targetNode: Node,
     parentBindingContext: KnockoutBindingContext
   ): js.Any = js.native
-  def setTemplateEngine(): Unit = js.native
   //////////////////////////////////
   // templating.js
   //////////////////////////////////
+  def setTemplateEngine(): Unit = js.native
   def setTemplateEngine(templateEngine: KnockoutNativeTemplateEngine): Unit = js.native
   /**
     * Clones object substituting for each observable the current value of that observable.

@@ -7,17 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientTreeView.ExpandedChanged events.
   */
-@JSGlobal("BootstrapClientTreeViewNodeEventArgs")
 @js.native
-class BootstrapClientTreeViewNodeEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new object of the BootstrapClientTreeViewNodeEventArgs type with the specified value.
-    * @param node An BootstrapClientTreeViewNode object representing the node related to the event.
-    */
-  def this(node: BootstrapClientTreeViewNode) = this()
+trait BootstrapClientTreeViewNodeEventArgs extends ASPxClientEventArgs {
   /**
     * Gets a node object related to the event.
     */
   var node: BootstrapClientTreeViewNode = js.native
+}
+
+object BootstrapClientTreeViewNodeEventArgs {
+  @scala.inline
+  def apply(node: BootstrapClientTreeViewNode): BootstrapClientTreeViewNodeEventArgs = {
+    val __obj = js.Dynamic.literal(node = node.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BootstrapClientTreeViewNodeEventArgs]
+  }
+  @scala.inline
+  implicit class BootstrapClientTreeViewNodeEventArgsOps[Self <: BootstrapClientTreeViewNodeEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNode(value: BootstrapClientTreeViewNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -4,14 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("sap.ui.model.analytics.odata4analytics.ParameterValueSetRequest")
 @js.native
-class ParameterValueSetRequest protected () extends js.Object {
-  /**
-    * Create a request object for interaction with a query parameter value help.
-    * @param oParameter Description of a query parameter
-    */
-  def this(oParameter: Parameter) = this()
+trait ParameterValueSetRequest extends js.Object {
   /**
     * Get the filter expression for this request.Expressions are represented by separate objects. If none
     * exists so far, anew expression object gets created.
@@ -57,5 +51,71 @@ class ParameterValueSetRequest protected () extends js.Object {
     * @param oSorter The sort object to be associated with this request.
     */
   def setSortExpression(oSorter: SortExpression): Unit = js.native
+}
+
+object ParameterValueSetRequest {
+  @scala.inline
+  def apply(
+    getFilterExpression: () => FilterExpression,
+    getSortExpression: () => SortExpression,
+    getURIQueryOptionValue: String => String,
+    getURIToParameterValueSetEntries: String => String,
+    includeParameterText: js.Any => Unit,
+    setFilterExpression: FilterExpression => Unit,
+    setSortExpression: SortExpression => Unit
+  ): ParameterValueSetRequest = {
+    val __obj = js.Dynamic.literal(getFilterExpression = js.Any.fromFunction0(getFilterExpression), getSortExpression = js.Any.fromFunction0(getSortExpression), getURIQueryOptionValue = js.Any.fromFunction1(getURIQueryOptionValue), getURIToParameterValueSetEntries = js.Any.fromFunction1(getURIToParameterValueSetEntries), includeParameterText = js.Any.fromFunction1(includeParameterText), setFilterExpression = js.Any.fromFunction1(setFilterExpression), setSortExpression = js.Any.fromFunction1(setSortExpression))
+    __obj.asInstanceOf[ParameterValueSetRequest]
+  }
+  @scala.inline
+  implicit class ParameterValueSetRequestOps[Self <: ParameterValueSetRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetFilterExpression(value: () => FilterExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilterExpression")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSortExpression(value: () => SortExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSortExpression")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetURIQueryOptionValue(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getURIQueryOptionValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetURIToParameterValueSetEntries(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getURIToParameterValueSetEntries")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIncludeParameterText(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeParameterText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetFilterExpression(value: FilterExpression => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFilterExpression")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetSortExpression(value: SortExpression => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSortExpression")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

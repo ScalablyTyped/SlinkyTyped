@@ -1,6 +1,5 @@
 package typingsSlinky.bullArena.mod.BullArena
 
-import typingsSlinky.redis.mod.ClientOpts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,19 +13,10 @@ trait ConnectionOptions extends js.Object
 
 object ConnectionOptions {
   @scala.inline
-  def PortHostConnectionOptions(host: String): ConnectionOptions = {
-    val __obj = js.Dynamic.literal(host = host.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ConnectionOptions]
-  }
+  implicit def apply(value: PortHostConnectionOptions): ConnectionOptions = value.asInstanceOf[ConnectionOptions]
   @scala.inline
-  def RedisUrlConnectionOptions(url: String): ConnectionOptions = {
-    val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ConnectionOptions]
-  }
+  implicit def apply(value: RedisClientConnectionOptions): ConnectionOptions = value.asInstanceOf[ConnectionOptions]
   @scala.inline
-  def RedisClientConnectionOptions(redis: ClientOpts): ConnectionOptions = {
-    val __obj = js.Dynamic.literal(redis = redis.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ConnectionOptions]
-  }
+  implicit def apply(value: RedisUrlConnectionOptions): ConnectionOptions = value.asInstanceOf[ConnectionOptions]
 }
 

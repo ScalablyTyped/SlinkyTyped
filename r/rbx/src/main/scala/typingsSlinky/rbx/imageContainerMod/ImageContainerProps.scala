@@ -1,7 +1,7 @@
 package typingsSlinky.rbx.imageContainerMod
 
-import typingsSlinky.rbx.BinVariablesbreakpointsLi
-import typingsSlinky.rbx.KinVariablesbreakpointsto
+import typingsSlinky.rbx.anon.BinVariablesbreakpointsLi
+import typingsSlinky.rbx.anon.KinVariablesbreakpointsto
 import typingsSlinky.rbx.rbxNumbers.`128`
 import typingsSlinky.rbx.rbxNumbers.`16`
 import typingsSlinky.rbx.rbxNumbers.`1`

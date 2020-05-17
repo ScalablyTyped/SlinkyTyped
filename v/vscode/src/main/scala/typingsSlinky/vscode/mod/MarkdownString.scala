@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 		 * @param value Optional, initial value.
 		 * @param supportThemeIcons Optional, Specifies whether [ThemeIcons](#ThemeIcon) are supported within the [`MarkdownString`](#MarkdownString).
 		 */
-class MarkdownString () extends _MarkedString {
+class MarkdownString () extends MarkedString {
   def this(value: String) = this()
   def this(value: String, supportThemeIcons: Boolean) = this()
   /**

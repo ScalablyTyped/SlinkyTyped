@@ -1,11 +1,12 @@
 package typingsSlinky.actionsOnGoogle.v2Mod
 
+import typingsSlinky.actionsOnGoogle.responseMediaMod.MediaObjectString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait GoogleActionsV2MediaObject extends js.Object {
+trait GoogleActionsV2MediaObject extends MediaObjectString {
   /**
     * The url pointing to the media content.
     */

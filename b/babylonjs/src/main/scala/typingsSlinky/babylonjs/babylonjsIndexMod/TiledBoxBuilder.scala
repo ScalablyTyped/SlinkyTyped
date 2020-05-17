@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.babylonjsIndexMod
 
-import typingsSlinky.babylonjs.AnonPattern
+import typingsSlinky.babylonjs.anon.Pattern
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
@@ -28,7 +28,7 @@ object TiledBoxBuilder extends js.Object {
     * @param scene defines the hosting scene
     * @returns the box mesh
     */
-  def CreateTiledBox(name: String, options: AnonPattern): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateTiledBox(name: String, options: AnonPattern, scene: Nullable[Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTiledBox(name: String, options: Pattern): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTiledBox(name: String, options: Pattern, scene: Nullable[Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
 }
 

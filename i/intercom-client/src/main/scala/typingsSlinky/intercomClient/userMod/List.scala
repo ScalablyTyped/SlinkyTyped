@@ -1,6 +1,6 @@
 package typingsSlinky.intercomClient.userMod
 
-import typingsSlinky.intercomClient.AnonNext
+import typingsSlinky.intercomClient.anon.Next
 import typingsSlinky.intercomClient.intercomClientStrings.userDotlist
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait List extends js.Object {
-  var pages: AnonNext = js.native
+  var pages: Next = js.native
   var total_count: Double = js.native
   var `type`: userDotlist = js.native
   var users: js.Array[User] = js.native
@@ -16,7 +16,7 @@ trait List extends js.Object {
 
 object List {
   @scala.inline
-  def apply(pages: AnonNext, total_count: Double, `type`: userDotlist, users: js.Array[User]): List = {
+  def apply(pages: Next, total_count: Double, `type`: userDotlist, users: js.Array[User]): List = {
     val __obj = js.Dynamic.literal(pages = pages.asInstanceOf[js.Any], total_count = total_count.asInstanceOf[js.Any], users = users.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[List]
@@ -28,7 +28,7 @@ object List {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPages(value: AnonNext): Self = {
+    def withPages(value: Next): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pages")(value.asInstanceOf[js.Any])
         ret

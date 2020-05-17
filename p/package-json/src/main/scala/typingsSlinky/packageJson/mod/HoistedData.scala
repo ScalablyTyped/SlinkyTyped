@@ -1,8 +1,8 @@
 package typingsSlinky.packageJson.mod
 
-import typingsSlinky.packageJson.AnonEmail
-import typingsSlinky.packageJson.AnonType
-import typingsSlinky.packageJson.AnonUrl
+import typingsSlinky.packageJson.anon.Email
+import typingsSlinky.packageJson.anon.Type
+import typingsSlinky.packageJson.anon.Url
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait HoistedData extends js.Object {
   val author: js.UndefOr[Person] = js.native
-  val bugs: js.UndefOr[AnonEmail | AnonUrl] = js.native
+  val bugs: js.UndefOr[Email | Url] = js.native
   val contributors: js.UndefOr[js.Array[Person]] = js.native
   val description: js.UndefOr[String] = js.native
   val homepage: js.UndefOr[String] = js.native
@@ -19,7 +19,7 @@ trait HoistedData extends js.Object {
   val maintainers: js.UndefOr[js.Array[Person]] = js.native
   val readme: js.UndefOr[String] = js.native
   val readmeFilename: js.UndefOr[String] = js.native
-  val repository: js.UndefOr[AnonType] = js.native
+  val repository: js.UndefOr[Type] = js.native
 }
 
 object HoistedData {
@@ -47,7 +47,7 @@ object HoistedData {
         ret
     }
     @scala.inline
-    def withBugs(value: AnonEmail | AnonUrl): Self = {
+    def withBugs(value: Email | Url): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bugs")(value.asInstanceOf[js.Any])
         ret
@@ -155,7 +155,7 @@ object HoistedData {
         ret
     }
     @scala.inline
-    def withRepository(value: AnonType): Self = {
+    def withRepository(value: Type): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(value.asInstanceOf[js.Any])
         ret

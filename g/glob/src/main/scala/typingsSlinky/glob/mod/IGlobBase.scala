@@ -1,7 +1,7 @@
 package typingsSlinky.glob.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.glob.AnonIsDirectory
+import typingsSlinky.glob.anon.IsDirectory
 import typingsSlinky.glob.globBooleans.`false`
 import typingsSlinky.glob.globStrings.DIR
 import typingsSlinky.glob.globStrings.FILE
@@ -18,7 +18,7 @@ trait IGlobBase extends js.Object {
   var minimatch: IMinimatch = js.native
   var options: IOptions = js.native
   var realpathCache: StringDictionary[String] = js.native
-  var statCache: StringDictionary[js.UndefOr[`false` | AnonIsDirectory]] = js.native
+  var statCache: StringDictionary[js.UndefOr[`false` | IsDirectory]] = js.native
   var symlinks: StringDictionary[js.UndefOr[Boolean]] = js.native
 }
 
@@ -31,7 +31,7 @@ object IGlobBase {
     minimatch: IMinimatch,
     options: IOptions,
     realpathCache: StringDictionary[String],
-    statCache: StringDictionary[js.UndefOr[`false` | AnonIsDirectory]],
+    statCache: StringDictionary[js.UndefOr[`false` | IsDirectory]],
     symlinks: StringDictionary[js.UndefOr[Boolean]]
   ): IGlobBase = {
     val __obj = js.Dynamic.literal(aborted = aborted.asInstanceOf[js.Any], cache = cache.asInstanceOf[js.Any], found = found.asInstanceOf[js.Any], minimatch = minimatch.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], realpathCache = realpathCache.asInstanceOf[js.Any], statCache = statCache.asInstanceOf[js.Any], symlinks = symlinks.asInstanceOf[js.Any])
@@ -80,7 +80,7 @@ object IGlobBase {
         ret
     }
     @scala.inline
-    def withStatCache(value: StringDictionary[js.UndefOr[`false` | AnonIsDirectory]]): Self = {
+    def withStatCache(value: StringDictionary[js.UndefOr[`false` | IsDirectory]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("statCache")(value.asInstanceOf[js.Any])
         ret

@@ -2,7 +2,7 @@ package typingsSlinky.popperJs.mod.Popper
 
 import org.scalajs.dom.raw.CSSStyleDeclaration
 import org.scalajs.dom.raw.Element
-import typingsSlinky.popperJs.AnonArrow
+import typingsSlinky.popperJs.anon.Arrow
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait Data extends js.Object {
   var flipped: Boolean = js.native
   var hide: Boolean = js.native
   var instance: typingsSlinky.popperJs.mod.Popper = js.native
-  var offsets: AnonArrow = js.native
+  var offsets: Arrow = js.native
   var originalPlacement: Placement = js.native
   var placement: Placement = js.native
   var styles: CSSStyleDeclaration = js.native
@@ -32,7 +32,7 @@ object Data {
     flipped: Boolean,
     hide: Boolean,
     instance: typingsSlinky.popperJs.mod.Popper,
-    offsets: AnonArrow,
+    offsets: Arrow,
     originalPlacement: Placement,
     placement: Placement,
     styles: CSSStyleDeclaration
@@ -89,7 +89,7 @@ object Data {
         ret
     }
     @scala.inline
-    def withOffsets(value: AnonArrow): Self = {
+    def withOffsets(value: Arrow): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("offsets")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.ethers.typesMod
 
-import typingsSlinky.ethers.AnonN
+import typingsSlinky.ethers.anon.N
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait EncryptOptions extends js.Object {
   var mnemonic: js.UndefOr[String] = js.native
   var path: js.UndefOr[String] = js.native
   var salt: js.UndefOr[Arrayish] = js.native
-  var scrypt: js.UndefOr[AnonN] = js.native
+  var scrypt: js.UndefOr[N] = js.native
   var uuid: js.UndefOr[String] = js.native
 }
 
@@ -102,7 +102,7 @@ object EncryptOptions {
         ret
     }
     @scala.inline
-    def withScrypt(value: AnonN): Self = {
+    def withScrypt(value: N): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrypt")(value.asInstanceOf[js.Any])
         ret

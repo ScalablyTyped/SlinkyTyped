@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView")
 @js.native
-class ResourceQualifierVectorView () extends IVectorView[ResourceQualifier]
+trait ResourceQualifierVectorView extends IVectorView[ResourceQualifier]
 

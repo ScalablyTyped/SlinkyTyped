@@ -1,5 +1,6 @@
 package typingsSlinky.fixedDataTable2.components
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
@@ -10,7 +11,6 @@ import typingsSlinky.fixedDataTable2.mod.ColumnReorderEndEvent
 import typingsSlinky.fixedDataTable2.mod.ElementOrFunc
 import typingsSlinky.fixedDataTable2.mod.RowProps
 import typingsSlinky.fixedDataTable2.mod.TableProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -56,39 +56,39 @@ object Table {
     def onHorizontalScroll(value: /* scrollPos */ Double => Boolean): this.type = set("onHorizontalScroll", js.Any.fromFunction1(value))
     @scala.inline
     def onRowClick(
-      value: (/* event */ SyntheticEvent[Event_, typingsSlinky.fixedDataTable2.mod.Table], /* rowIndex */ Double) => Unit
+      value: (/* event */ SyntheticEvent[Event, typingsSlinky.fixedDataTable2.mod.Table], /* rowIndex */ Double) => Unit
     ): this.type = set("onRowClick", js.Any.fromFunction2(value))
     @scala.inline
     def onRowDoubleClick(
-      value: (/* event */ SyntheticEvent[Event_, typingsSlinky.fixedDataTable2.mod.Table], /* rowIndex */ Double) => Unit
+      value: (/* event */ SyntheticEvent[Event, typingsSlinky.fixedDataTable2.mod.Table], /* rowIndex */ Double) => Unit
     ): this.type = set("onRowDoubleClick", js.Any.fromFunction2(value))
     @scala.inline
     def onRowMouseDown(
-      value: (/* event */ SyntheticEvent[Event_, typingsSlinky.fixedDataTable2.mod.Table], /* rowIndex */ Double) => Unit
+      value: (/* event */ SyntheticEvent[Event, typingsSlinky.fixedDataTable2.mod.Table], /* rowIndex */ Double) => Unit
     ): this.type = set("onRowMouseDown", js.Any.fromFunction2(value))
     @scala.inline
     def onRowMouseEnter(
-      value: (/* event */ SyntheticEvent[Event_, typingsSlinky.fixedDataTable2.mod.Table], /* rowIndex */ Double) => Unit
+      value: (/* event */ SyntheticEvent[Event, typingsSlinky.fixedDataTable2.mod.Table], /* rowIndex */ Double) => Unit
     ): this.type = set("onRowMouseEnter", js.Any.fromFunction2(value))
     @scala.inline
     def onRowMouseLeave(
-      value: (/* event */ SyntheticEvent[Event_, typingsSlinky.fixedDataTable2.mod.Table], /* rowIndex */ Double) => Unit
+      value: (/* event */ SyntheticEvent[Event, typingsSlinky.fixedDataTable2.mod.Table], /* rowIndex */ Double) => Unit
     ): this.type = set("onRowMouseLeave", js.Any.fromFunction2(value))
     @scala.inline
     def onRowMouseUp(
-      value: (/* event */ SyntheticEvent[Event_, typingsSlinky.fixedDataTable2.mod.Table], /* rowIndex */ Double) => Unit
+      value: (/* event */ SyntheticEvent[Event, typingsSlinky.fixedDataTable2.mod.Table], /* rowIndex */ Double) => Unit
     ): this.type = set("onRowMouseUp", js.Any.fromFunction2(value))
     @scala.inline
     def onRowTouchEnd(
-      value: (/* event */ SyntheticEvent[Event_, typingsSlinky.fixedDataTable2.mod.Table], /* rowIndex */ Double) => Unit
+      value: (/* event */ SyntheticEvent[Event, typingsSlinky.fixedDataTable2.mod.Table], /* rowIndex */ Double) => Unit
     ): this.type = set("onRowTouchEnd", js.Any.fromFunction2(value))
     @scala.inline
     def onRowTouchMove(
-      value: (/* event */ SyntheticEvent[Event_, typingsSlinky.fixedDataTable2.mod.Table], /* rowIndex */ Double) => Unit
+      value: (/* event */ SyntheticEvent[Event, typingsSlinky.fixedDataTable2.mod.Table], /* rowIndex */ Double) => Unit
     ): this.type = set("onRowTouchMove", js.Any.fromFunction2(value))
     @scala.inline
     def onRowTouchStart(
-      value: (/* event */ SyntheticEvent[Event_, typingsSlinky.fixedDataTable2.mod.Table], /* rowIndex */ Double) => Unit
+      value: (/* event */ SyntheticEvent[Event, typingsSlinky.fixedDataTable2.mod.Table], /* rowIndex */ Double) => Unit
     ): this.type = set("onRowTouchStart", js.Any.fromFunction2(value))
     @scala.inline
     def onScrollEnd(value: (/* x */ Double, /* y */ Double) => Unit): this.type = set("onScrollEnd", js.Any.fromFunction2(value))

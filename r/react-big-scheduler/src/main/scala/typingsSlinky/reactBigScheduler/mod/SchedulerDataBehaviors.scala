@@ -1,6 +1,6 @@
 package typingsSlinky.reactBigScheduler.mod
 
-import typingsSlinky.reactBigScheduler.AnonCellUnit
+import typingsSlinky.reactBigScheduler.anon.CellUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait SchedulerDataBehaviors extends js.Object {
       /* schedulerData */ SchedulerData, 
       /* num */ Double, 
       /* date */ js.UndefOr[String], 
-      AnonCellUnit
+      CellUnit
     ]
   ] = js.native
   var isNonWorkingTimeFunc: js.UndefOr[js.Function2[/* schedulerData */ SchedulerData, /* time */ String, Boolean]] = js.native
@@ -32,7 +32,7 @@ object SchedulerDataBehaviors {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
     def withGetCustomDateFunc(
-      value: (/* schedulerData */ SchedulerData, /* num */ Double, /* date */ js.UndefOr[String]) => AnonCellUnit
+      value: (/* schedulerData */ SchedulerData, /* num */ Double, /* date */ js.UndefOr[String]) => CellUnit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getCustomDateFunc")(js.Any.fromFunction3(value))

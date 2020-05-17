@@ -1,9 +1,9 @@
 package typingsSlinky.glReact.mod
 
-import typingsSlinky.glReact.AnonGlParent
-import typingsSlinky.glReact.AnonGlParentAny
-import typingsSlinky.glReact.AnonGlParentBus
-import typingsSlinky.glReact.AnonGlSurface
+import typingsSlinky.glReact.anon.GlParent
+import typingsSlinky.glReact.anon.GlParentAny
+import typingsSlinky.glReact.anon.GlParentBus
+import typingsSlinky.glReact.anon.GlSurface
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 class Bus ()
   extends Component[BusProps, js.Object, js.Any] {
   @JSName("context")
-  var context_Bus: AnonGlParent = js.native
+  var context_Bus: GlParent = js.native
   var dependents: js.Array[Node | Surface[_]] = js.native
   var glBusRootNode: js.Any = js.native
   var glNode: js.UndefOr[Node] = js.native
@@ -24,7 +24,7 @@ class Bus ()
   def capture(x: Double, y: Double): js.Array[_] = js.native
   def capture(x: Double, y: Double, w: Double): js.Array[_] = js.native
   def capture(x: Double, y: Double, w: Double, h: Double): js.Array[_] = js.native
-  def getChildContext(): AnonGlParentBus = js.native
+  def getChildContext(): GlParentBus = js.native
   def getGLName(): String = js.native
   def getGLRenderableContent(): js.Any = js.native
   def getGLRenderableNode(): Node = js.native
@@ -37,8 +37,8 @@ class Bus ()
 @JSImport("gl-react", "Bus")
 @js.native
 object Bus extends js.Object {
-  var childContextTypes: AnonGlParentAny = js.native
-  var contextTypes: AnonGlSurface = js.native
+  var childContextTypes: GlParentAny = js.native
+  var contextTypes: GlSurface = js.native
   var defaultProps: BusProps = js.native
 }
 

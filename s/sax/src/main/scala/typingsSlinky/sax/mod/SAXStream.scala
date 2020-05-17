@@ -2,9 +2,9 @@ package typingsSlinky.sax.mod
 
 import typingsSlinky.node.streamMod.Duplex
 import typingsSlinky.node.streamMod.Readable
-import typingsSlinky.sax.AnonBody
-import typingsSlinky.sax.AnonName
-import typingsSlinky.sax.AnonPrefix
+import typingsSlinky.sax.anon.Body
+import typingsSlinky.sax.anon.Name
+import typingsSlinky.sax.anon.Prefix
 import typingsSlinky.sax.saxStrings.attribute
 import typingsSlinky.sax.saxStrings.cdata
 import typingsSlinky.sax.saxStrings.close
@@ -41,7 +41,7 @@ class SAXStream () extends Duplex {
   def on(event: String, listener: js.ThisFunction1[/* this */ this.type, /* repeated */ js.Any, Unit]): this.type = js.native
   def on(event: js.Symbol, listener: js.ThisFunction1[/* this */ this.type, /* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("on")
-  def on_attribute(event: attribute, listener: js.ThisFunction1[/* this */ this.type, /* attr */ AnonName, Unit]): this.type = js.native
+  def on_attribute(event: attribute, listener: js.ThisFunction1[/* this */ this.type, /* attr */ Name, Unit]): this.type = js.native
   @JSName("on")
   def on_cdata(event: cdata, listener: js.ThisFunction1[/* this */ this.type, /* cdata */ String, Unit]): this.type = js.native
   @JSName("on")
@@ -49,7 +49,7 @@ class SAXStream () extends Duplex {
   @JSName("on")
   def on_closecdata(event: closecdata, listener: js.ThisFunction0[/* this */ this.type, Unit]): this.type = js.native
   @JSName("on")
-  def on_closenamespace(event: closenamespace, listener: js.ThisFunction1[/* this */ this.type, /* ns */ AnonPrefix, Unit]): this.type = js.native
+  def on_closenamespace(event: closenamespace, listener: js.ThisFunction1[/* this */ this.type, /* ns */ Prefix, Unit]): this.type = js.native
   @JSName("on")
   def on_closetag(event: closetag, listener: js.ThisFunction1[/* this */ this.type, /* tagName */ String, Unit]): this.type = js.native
   @JSName("on")
@@ -69,7 +69,7 @@ class SAXStream () extends Duplex {
   @JSName("on")
   def on_opencdata(event: opencdata, listener: js.ThisFunction0[/* this */ this.type, Unit]): this.type = js.native
   @JSName("on")
-  def on_opennamespace(event: opennamespace, listener: js.ThisFunction1[/* this */ this.type, /* ns */ AnonPrefix, Unit]): this.type = js.native
+  def on_opennamespace(event: opennamespace, listener: js.ThisFunction1[/* this */ this.type, /* ns */ Prefix, Unit]): this.type = js.native
   @JSName("on")
   def on_opentag(
     event: opentag,
@@ -80,7 +80,7 @@ class SAXStream () extends Duplex {
   @JSName("on")
   def on_processinginstruction(
     event: processinginstruction,
-    listener: js.ThisFunction1[/* this */ this.type, /* node */ AnonBody, Unit]
+    listener: js.ThisFunction1[/* this */ this.type, /* node */ Body, Unit]
   ): this.type = js.native
   @JSName("on")
   def on_readable(event: readable, listener: js.ThisFunction0[/* this */ this.type, Unit]): this.type = js.native

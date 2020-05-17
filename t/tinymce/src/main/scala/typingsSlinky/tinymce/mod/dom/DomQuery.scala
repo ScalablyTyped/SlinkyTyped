@@ -1,7 +1,7 @@
 package typingsSlinky.tinymce.mod.dom
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class DomQuery () extends js.Object {
   def this(selector: String) = this()
-  def this(selector: String, context: Document_) = this()
+  def this(selector: String, context: Document) = this()
   def add[T](items: js.Array[T]): DomQuery = js.native
   def add[T](items: js.Array[T], sort: Boolean): DomQuery = js.native
   def addClass(className: String): DomQuery = js.native

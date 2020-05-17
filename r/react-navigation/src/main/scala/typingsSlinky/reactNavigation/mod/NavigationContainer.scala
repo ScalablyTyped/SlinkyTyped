@@ -1,7 +1,7 @@
 package typingsSlinky.reactNavigation.mod
 
 import typingsSlinky.react.mod.ComponentClass
-import typingsSlinky.reactNavigation.AnonNav
+import typingsSlinky.reactNavigation.anon.Nav
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +15,6 @@ trait NavigationContainer
   var navigationOptions: js.Any = js.native
   var router: NavigationRouter[_, _] = js.native
   var screenProps: js.Any = js.native
-  var state: AnonNav = js.native
+  var state: Nav = js.native
 }
 

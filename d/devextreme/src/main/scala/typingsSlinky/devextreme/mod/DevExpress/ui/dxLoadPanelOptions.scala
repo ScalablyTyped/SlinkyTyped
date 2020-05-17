@@ -11,7 +11,7 @@ import typingsSlinky.devextreme.devextremeStrings.left
 import typingsSlinky.devextreme.devextremeStrings.right
 import typingsSlinky.devextreme.devextremeStrings.top
 import typingsSlinky.devextreme.mod.DevExpress.positionConfig
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,10 +1,10 @@
 package typingsSlinky.antd.backTopMod
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Window
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.MouseEventHandler
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait BackTopProps extends js.Object {
   var onClick: js.UndefOr[MouseEventHandler[HTMLElement]] = js.native
   var prefixCls: js.UndefOr[String] = js.native
   var style: js.UndefOr[CSSProperties] = js.native
-  var target: js.UndefOr[js.Function0[HTMLElement | Window_]] = js.native
+  var target: js.UndefOr[js.Function0[HTMLElement | Window]] = js.native
   var visibilityHeight: js.UndefOr[Double] = js.native
   var visible: js.UndefOr[Boolean] = js.native
 }
@@ -81,7 +81,7 @@ object BackTopProps {
         ret
     }
     @scala.inline
-    def withTarget(value: () => HTMLElement | Window_): Self = {
+    def withTarget(value: () => HTMLElement | Window): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("target")(js.Any.fromFunction0(value))
         ret

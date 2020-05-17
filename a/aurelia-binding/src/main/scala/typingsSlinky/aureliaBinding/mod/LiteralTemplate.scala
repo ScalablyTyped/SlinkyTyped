@@ -1,6 +1,6 @@
 package typingsSlinky.aureliaBinding.mod
 
-import typingsSlinky.aureliaBinding.ArraystringrawArraystring
+import typingsSlinky.aureliaBinding.anon.ArraystringrawArraystring
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

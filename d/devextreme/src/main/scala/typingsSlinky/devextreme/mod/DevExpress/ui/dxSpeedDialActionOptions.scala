@@ -1,7 +1,7 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonActionElement
-import typingsSlinky.devextreme.AnonActionElementComponent
+import typingsSlinky.devextreme.anon.ActionElement
+import typingsSlinky.devextreme.anon.ActionElementComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,10 +15,10 @@ trait dxSpeedDialActionOptions extends WidgetOptions[dxSpeedDialAction] {
   /** Specifies the text label displayed inside the FAB or near the speed dial action button. */
   var label: js.UndefOr[String] = js.native
   /** A function that is executed when the FAB or speed dial action button is clicked or tapped. */
-  var onClick: js.UndefOr[js.Function1[/* e */ AnonActionElement, _]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* e */ ActionElement, _]] = js.native
   /** A function that is executed when the widget's content is ready and each time the content is changed. */
   @JSName("onContentReady")
-  var onContentReady_dxSpeedDialActionOptions: js.UndefOr[js.Function1[/* e */ AnonActionElementComponent, _]] = js.native
+  var onContentReady_dxSpeedDialActionOptions: js.UndefOr[js.Function1[/* e */ ActionElementComponent, _]] = js.native
 }
 
 object dxSpeedDialActionOptions {
@@ -70,7 +70,7 @@ object dxSpeedDialActionOptions {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* e */ AnonActionElement => _): Self = {
+    def withOnClick(value: /* e */ ActionElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret
@@ -82,7 +82,7 @@ object dxSpeedDialActionOptions {
         ret
     }
     @scala.inline
-    def withOnContentReady(value: /* e */ AnonActionElementComponent => _): Self = {
+    def withOnContentReady(value: /* e */ ActionElementComponent => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContentReady")(js.Any.fromFunction1(value))
         ret

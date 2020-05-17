@@ -1,7 +1,7 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonAutoClosingPairs
-import typingsSlinky.vscode.AnonBrackets
+import typingsSlinky.vscode.anon.AutoClosingPairs
+import typingsSlinky.vscode.anon.Brackets
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,13 +13,13 @@ trait LanguageConfiguration extends js.Object {
   		 *
   		 * @deprecated * Use the autoClosingPairs property in the language configuration file instead.
   		 */
-  var __characterPairSupport: js.UndefOr[AnonAutoClosingPairs] = js.native
+  var __characterPairSupport: js.UndefOr[AutoClosingPairs] = js.native
   /**
   		 * **Deprecated** Do not use.
   		 *
   		 * @deprecated Will be replaced by a better API soon.
   		 */
-  var __electricCharacterSupport: js.UndefOr[AnonBrackets] = js.native
+  var __electricCharacterSupport: js.UndefOr[Brackets] = js.native
   /**
   		 * The language's brackets.
   		 * This configuration implicitly affects pressing Enter around these brackets.
@@ -60,7 +60,7 @@ object LanguageConfiguration {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with__characterPairSupport(value: AnonAutoClosingPairs): Self = {
+    def with__characterPairSupport(value: AutoClosingPairs): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("__characterPairSupport")(value.asInstanceOf[js.Any])
         ret
@@ -72,7 +72,7 @@ object LanguageConfiguration {
         ret
     }
     @scala.inline
-    def with__electricCharacterSupport(value: AnonBrackets): Self = {
+    def with__electricCharacterSupport(value: Brackets): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("__electricCharacterSupport")(value.asInstanceOf[js.Any])
         ret

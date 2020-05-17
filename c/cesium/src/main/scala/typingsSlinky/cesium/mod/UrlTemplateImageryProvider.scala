@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonGetFeatureInfoFormats
+import typingsSlinky.cesium.anon.GetFeatureInfoFormats
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "UrlTemplateImageryProvider")
 @js.native
 class UrlTemplateImageryProvider protected () extends ImageryProvider {
-  def this(options: AnonGetFeatureInfoFormats) = this()
+  def this(options: GetFeatureInfoFormats) = this()
   var ellipsoid: Ellipsoid = js.native
   var enablePickFeatures: Boolean = js.native
   var getFeatureInfoFormats: js.Array[GetFeatureInfoFormat] = js.native

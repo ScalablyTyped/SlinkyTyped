@@ -1,6 +1,6 @@
 package typingsSlinky.weixinApp.wx
 
-import typingsSlinky.weixinApp.servicesArrayuuidstringis
+import typingsSlinky.weixinApp.anon.servicesArrayuuidstringis
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

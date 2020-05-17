@@ -30,30 +30,6 @@ object Done {
         ret.asInstanceOf[js.Dynamic].updateDynamic("done")(value.asInstanceOf[js.Any])
         ret
     }
-    @scala.inline
-    def withFilename(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutFilename: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("filename")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withValue(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
   }
   
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.formatjsIntlDisplaynames.libMod
 
-import typingsSlinky.formatjsIntlDisplaynames.PickDisplayNamesOptionslo
+import typingsSlinky.formatjsIntlDisplaynames.anon.PickDisplayNamesOptionslo
 import typingsSlinky.formatjsIntlUtils.displaynamesTypesMod.DisplayNamesData
 import typingsSlinky.formatjsIntlUtils.displaynamesTypesMod.DisplayNamesLocaleData
 import typingsSlinky.std.Record

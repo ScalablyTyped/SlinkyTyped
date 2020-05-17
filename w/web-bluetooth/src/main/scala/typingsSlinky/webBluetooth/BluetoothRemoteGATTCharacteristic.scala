@@ -1,8 +1,8 @@
 package typingsSlinky.webBluetooth
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.std.BufferSource
 import typingsSlinky.std.EventTarget
-import typingsSlinky.std.Event_
 import typingsSlinky.webBluetooth.webBluetoothStrings.characteristicvaluechanged
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,12 +19,12 @@ trait BluetoothRemoteGATTCharacteristic
   @JSName("addEventListener")
   def addEventListener_characteristicvaluechanged(
     `type`: characteristicvaluechanged,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_characteristicvaluechanged(
     `type`: characteristicvaluechanged,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   def getDescriptor(descriptor: BluetoothDescriptorUUID): js.Promise[BluetoothRemoteGATTDescriptor] = js.native

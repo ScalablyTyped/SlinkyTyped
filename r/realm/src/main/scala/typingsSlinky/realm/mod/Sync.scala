@@ -1,7 +1,6 @@
 package typingsSlinky.realm.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.realm.AnonProvider
 import typingsSlinky.realm.Realm.Sync.ChangeEvent
 import typingsSlinky.realm.Realm.Sync.LocalRealm
 import typingsSlinky.realm.Realm.Sync.LogLevel
@@ -13,6 +12,7 @@ import typingsSlinky.realm.Realm.Sync.RealmWatchPredicate
 import typingsSlinky.realm.Realm.Sync.SSLConfiguration
 import typingsSlinky.realm.Realm.Sync.SerializedTokenUser
 import typingsSlinky.realm.Realm.Sync.SerializedUser
+import typingsSlinky.realm.anon.Provider
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -217,7 +217,7 @@ object Sync extends js.Object {
     /** @deprecated, to be removed in future versions */
     def register(server: String, username: String, password: String): js.Promise[typingsSlinky.realm.Realm.Sync.User] = js.native
     /** @deprecated, to be removed in future versions */
-    def registerWithProvider(server: String, options: AnonProvider): js.Promise[typingsSlinky.realm.Realm.Sync.User] = js.native
+    def registerWithProvider(server: String, options: Provider): js.Promise[typingsSlinky.realm.Realm.Sync.User] = js.native
     def requestEmailConfirmation(server: String, email: String): js.Promise[Unit] = js.native
     def requestPasswordReset(server: String, email: String): js.Promise[Unit] = js.native
   }

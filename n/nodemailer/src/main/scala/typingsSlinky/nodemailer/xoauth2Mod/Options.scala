@@ -1,6 +1,6 @@
 package typingsSlinky.nodemailer.xoauth2Mod
 
-import typingsSlinky.nodemailer.AnonKey
+import typingsSlinky.nodemailer.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait Options extends js.Object {
   /** Optional Access Token expire time in ms */
   var expires: js.UndefOr[ms] = js.native
   /** Private key for JSW */
-  var privateKey: js.UndefOr[String | AnonKey] = js.native
+  var privateKey: js.UndefOr[String | Key] = js.native
   /** Function to run when a new access token is required */
   var provisionCallback: js.UndefOr[
     js.Function3[
@@ -110,7 +110,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withPrivateKey(value: String | AnonKey): Self = {
+    def withPrivateKey(value: String | Key): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("privateKey")(value.asInstanceOf[js.Any])
         ret

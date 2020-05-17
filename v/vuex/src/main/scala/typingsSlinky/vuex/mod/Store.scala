@@ -1,7 +1,7 @@
 package typingsSlinky.vuex.mod
 
 import typingsSlinky.vue.optionsMod.WatchOptions
-import typingsSlinky.vuex.AnonActions
+import typingsSlinky.vuex.anon.Actions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ class Store[S] protected () extends js.Object {
   def dispatch(`type`: String, payload: js.Any, options: DispatchOptions): js.Promise[_] = js.native
   def dispatch[P /* <: Payload */](payloadWithType: P): js.Promise[_] = js.native
   def dispatch[P /* <: Payload */](payloadWithType: P, options: DispatchOptions): js.Promise[_] = js.native
-  def hotUpdate(options: AnonActions[S]): Unit = js.native
+  def hotUpdate(options: Actions[S]): Unit = js.native
   def registerModule[T](path: String, module: Module[T, S]): Unit = js.native
   def registerModule[T](path: String, module: Module[T, S], options: ModuleOptions): Unit = js.native
   def registerModule[T](path: js.Array[String], module: Module[T, S]): Unit = js.native

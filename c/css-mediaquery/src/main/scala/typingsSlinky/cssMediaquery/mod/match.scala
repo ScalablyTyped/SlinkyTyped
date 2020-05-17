@@ -1,6 +1,6 @@
 package typingsSlinky.cssMediaquery.mod
 
-import typingsSlinky.cssMediaquery.PartialMediaValues
+import typingsSlinky.cssMediaquery.anon.PartialMediaValues
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

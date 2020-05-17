@@ -1,16 +1,16 @@
 package typingsSlinky.angularPlatformBrowser.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLDocument
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLStyleElement
+import org.scalajs.dom.raw.History
+import org.scalajs.dom.raw.Location
 import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.Text
 import typingsSlinky.angularCore.mod.Type
-import typingsSlinky.std.Document_
-import typingsSlinky.std.History_
-import typingsSlinky.std.Location_
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -58,23 +58,23 @@ abstract class ɵDomAdapter () extends js.Object {
   def getAnimationPrefix(): String = js.native
   def getAttribute(element: js.Any, attribute: String): String | Null = js.native
   def getAttributeNS(element: js.Any, ns: String, attribute: String): String | Null = js.native
-  def getBaseHref(doc: Document_): String | Null = js.native
+  def getBaseHref(doc: Document): String | Null = js.native
   def getBoundingClientRect(el: js.Any): js.Any = js.native
   def getChecked(el: js.Any): Boolean = js.native
   def getComputedStyle(element: js.Any): js.Any = js.native
   def getCookie(name: String): String | Null = js.native
   def getData(element: js.Any, name: String): String | Null = js.native
-  def getDefaultDocument(): Document_ = js.native
+  def getDefaultDocument(): Document = js.native
   def getDistributedNodes(el: js.Any): js.Array[Node] = js.native
   def getElementsByClassName(element: js.Any, name: String): js.Array[HTMLElement] = js.native
   def getElementsByTagName(element: js.Any, name: String): js.Array[HTMLElement] = js.native
   def getEventKey(event: js.Any): String = js.native
-  def getGlobalEventTarget(doc: Document_, target: String): js.Any = js.native
-  def getHistory(): History_ = js.native
+  def getGlobalEventTarget(doc: Document, target: String): js.Any = js.native
+  def getHistory(): History = js.native
   def getHost(el: js.Any): js.Any = js.native
   def getHref(element: js.Any): String = js.native
   def getInnerHTML(el: js.Any): String = js.native
-  def getLocation(): Location_ = js.native
+  def getLocation(): Location = js.native
   def getOuterHTML(el: js.Any): String = js.native
   def getProperty(el: Element, name: String): js.Any = js.native
   def getShadowRoot(el: js.Any): js.Any = js.native
@@ -82,7 +82,7 @@ abstract class ɵDomAdapter () extends js.Object {
   /** Returns content if el is a <template> element, null otherwise. */
   def getTemplateContent(el: js.Any): js.Any = js.native
   def getText(el: js.Any): String | Null = js.native
-  def getTitle(doc: Document_): String = js.native
+  def getTitle(doc: Document): String = js.native
   def getTransitionEnd(): String = js.native
   def getUserAgent(): String = js.native
   def getValue(el: js.Any): String = js.native
@@ -137,7 +137,7 @@ abstract class ɵDomAdapter () extends js.Object {
   def setProperty(el: Element, name: String, value: js.Any): js.Any = js.native
   def setStyle(element: js.Any, styleName: String, styleValue: String): js.Any = js.native
   def setText(el: js.Any, value: String): js.Any = js.native
-  def setTitle(doc: Document_, newTitle: String): js.Any = js.native
+  def setTitle(doc: Document, newTitle: String): js.Any = js.native
   def setValue(el: js.Any, value: String): js.Any = js.native
   def supportsAnimation(): Boolean = js.native
   def supportsCookies(): Boolean = js.native

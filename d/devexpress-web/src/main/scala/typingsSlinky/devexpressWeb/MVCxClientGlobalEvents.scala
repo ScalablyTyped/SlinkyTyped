@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * An ASP.NET MVC equivalent of the client ASPxClientGlobalEvents component.
   */
-@JSGlobal("MVCxClientGlobalEvents")
 @js.native
-class MVCxClientGlobalEvents () extends js.Object {
+trait MVCxClientGlobalEvents extends js.Object {
   /**
     * Occurs on the client when a callback for server-side processing is initiated.
     */
@@ -28,29 +27,48 @@ class MVCxClientGlobalEvents () extends js.Object {
   var EndCallback: ASPxClientEvent[ASPxClientGlobalEndCallbackEventHandler[MVCxClientGlobalEvents]] = js.native
 }
 
-/* static members */
-@JSGlobal("MVCxClientGlobalEvents")
-@js.native
-object MVCxClientGlobalEvents extends js.Object {
-  /**
-    * Dynamically connects the MVCxClientGlobalEvents.BeginCallback client event with an appropriate event handler function.
-    * @param handler A object containing the event handling function's content.
-    */
-  def AddBeginCallbackEventHandler(handler: ASPxClientEvent[MVCxClientBeginCallbackEventHandler[MVCxClientGlobalEvents]]): Unit = js.native
-  /**
-    * Dynamically connects the MVCxClientGlobalEvents.CallbackError client event with an appropriate event handler function.
-    * @param handler A object containing the event handling function's content.
-    */
-  def AddCallbackErrorHandler(handler: ASPxClientEvent[ASPxClientCallbackErrorEventHandler[MVCxClientGlobalEvents]]): Unit = js.native
-  /**
-    * Dynamically connects the MVCxClientGlobalEvents.ControlsInitialized client event with an appropriate event handler function.
-    * @param handler A object representing the event handling function's content.
-    */
-  def AddControlsInitializedEventHandler(handler: ASPxClientEvent[ASPxClientControlsInitializedEventHandler[MVCxClientGlobalEvents]]): Unit = js.native
-  /**
-    * Dynamically connects the MVCxClientGlobalEvents.EndCallback client event with an appropriate event handler function.
-    * @param handler A object containing the event handling function's content.
-    */
-  def AddEndCallbackEventHandler(handler: ASPxClientEvent[ASPxClientEndCallbackEventHandler[MVCxClientGlobalEvents]]): Unit = js.native
+object MVCxClientGlobalEvents {
+  @scala.inline
+  def apply(
+    BeginCallback: ASPxClientEvent[MVCxClientGlobalBeginCallbackEventHandler[MVCxClientGlobalEvents]],
+    CallbackError: ASPxClientEvent[ASPxClientGlobalCallbackErrorEventHandler[MVCxClientGlobalEvents]],
+    ControlsInitialized: ASPxClientEvent[ASPxClientControlsInitializedEventHandler[MVCxClientGlobalEvents]],
+    EndCallback: ASPxClientEvent[ASPxClientGlobalEndCallbackEventHandler[MVCxClientGlobalEvents]]
+  ): MVCxClientGlobalEvents = {
+    val __obj = js.Dynamic.literal(BeginCallback = BeginCallback.asInstanceOf[js.Any], CallbackError = CallbackError.asInstanceOf[js.Any], ControlsInitialized = ControlsInitialized.asInstanceOf[js.Any], EndCallback = EndCallback.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MVCxClientGlobalEvents]
+  }
+  @scala.inline
+  implicit class MVCxClientGlobalEventsOps[Self <: MVCxClientGlobalEvents] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBeginCallback(value: ASPxClientEvent[MVCxClientGlobalBeginCallbackEventHandler[MVCxClientGlobalEvents]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCallbackError(value: ASPxClientEvent[ASPxClientGlobalCallbackErrorEventHandler[MVCxClientGlobalEvents]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CallbackError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withControlsInitialized(value: ASPxClientEvent[ASPxClientControlsInitializedEventHandler[MVCxClientGlobalEvents]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ControlsInitialized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndCallback(value: ASPxClientEvent[ASPxClientGlobalEndCallbackEventHandler[MVCxClientGlobalEvents]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

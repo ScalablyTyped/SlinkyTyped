@@ -1,7 +1,7 @@
 package typingsSlinky.reactHotLoader.mod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.reactHotLoader.AnonErrors
+import typingsSlinky.reactHotLoader.anon.Errors
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait Config extends js.Object {
   /**
     * Global error overlay
     */
-  var ErrorOverlay: ReactComponentClass[AnonErrors] = js.native
+  var ErrorOverlay: ReactComponentClass[Errors] = js.native
   /**
     * Allows SFC to be used, enables "intermediate" components used by Relay, should be disabled for Preact
     */
@@ -80,7 +80,7 @@ trait Config extends js.Object {
 object Config {
   @scala.inline
   def apply(
-    ErrorOverlay: ReactComponentClass[AnonErrors],
+    ErrorOverlay: ReactComponentClass[Errors],
     allowSFC: Boolean,
     disableHotRenderer: Boolean,
     disableHotRendererWhenInjected: Boolean,
@@ -106,7 +106,7 @@ object Config {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withErrorOverlay(value: ReactComponentClass[AnonErrors]): Self = {
+    def withErrorOverlay(value: ReactComponentClass[Errors]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorOverlay")(value.asInstanceOf[js.Any])
         ret

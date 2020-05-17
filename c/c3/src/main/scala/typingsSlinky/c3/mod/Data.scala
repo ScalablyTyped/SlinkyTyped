@@ -2,11 +2,11 @@ package typingsSlinky.c3.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.SVGElement
-import typingsSlinky.c3.Anon0
-import typingsSlinky.c3.AnonDraggable
-import typingsSlinky.c3.AnonFormat
-import typingsSlinky.c3.AnonLabelAnonText
-import typingsSlinky.c3.AnonValue
+import typingsSlinky.c3.anon.Draggable
+import typingsSlinky.c3.anon.Format
+import typingsSlinky.c3.anon.LabelText
+import typingsSlinky.c3.anon.Value
+import typingsSlinky.c3.anon.`0`
 import typingsSlinky.c3.c3Strings.asc
 import typingsSlinky.c3.c3Strings.desc
 import typingsSlinky.d3Color.mod.HSLColor
@@ -55,7 +55,7 @@ trait Data extends js.Object {
     * Set text displayed when empty data.
     * Defaults to `""`.
     */
-  var empty: js.UndefOr[AnonLabelAnonText] = js.native
+  var empty: js.UndefOr[LabelText] = js.native
   /**
     * For Stanford charts, specify the key of the epochs data, which maps values to their color.
     * Defaults to `"epochs"`.
@@ -102,12 +102,12 @@ trait Data extends js.Object {
   /**
     * If `data.json` is provided and is in row form, these keys are used to pull the data from each row.
     */
-  var keys: js.UndefOr[AnonValue] = js.native
+  var keys: js.UndefOr[Value] = js.native
   /**
     * Show labels on each data points or set formatter function for data labels.
     * Control all labels with a boolean value or `format` function, or control behavior for individual data with a `format` object.
     */
-  var labels: js.UndefOr[Boolean | AnonFormat | Anon0] = js.native
+  var labels: js.UndefOr[Boolean | Format | `0`] = js.native
   /**
     * Used if loading JSON via `data.url`.
     */
@@ -173,7 +173,7 @@ trait Data extends js.Object {
     * A list of rows, where the first row is the column names and the remaining rows are data.  If `url` or `json` are provided this will be ignored.
     */
   var rows: js.UndefOr[js.Array[PrimitiveArray]] = js.native
-  var selection: js.UndefOr[AnonDraggable] = js.native
+  var selection: js.UndefOr[Draggable] = js.native
   /**
     * Set chart type at once.
     * If this option is specified, the type will be applied to every data. This setting can be overwritten for individual data by `data.types`.
@@ -296,7 +296,7 @@ object Data {
         ret
     }
     @scala.inline
-    def withEmpty(value: AnonLabelAnonText): Self = {
+    def withEmpty(value: LabelText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(value.asInstanceOf[js.Any])
         ret
@@ -394,7 +394,7 @@ object Data {
         ret
     }
     @scala.inline
-    def withKeys(value: AnonValue): Self = {
+    def withKeys(value: Value): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
         ret
@@ -406,7 +406,7 @@ object Data {
         ret
     }
     @scala.inline
-    def withLabels(value: Boolean | AnonFormat | Anon0): Self = {
+    def withLabels(value: Boolean | Format | `0`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
         ret
@@ -554,7 +554,7 @@ object Data {
         ret
     }
     @scala.inline
-    def withSelection(value: AnonDraggable): Self = {
+    def withSelection(value: Draggable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
         ret

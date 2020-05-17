@@ -1,31 +1,25 @@
 package typingsSlinky.intercomClient.userMod
 
+import typingsSlinky.intercomClient.anon.Email
+import typingsSlinky.intercomClient.anon.Id
+import typingsSlinky.intercomClient.anon.Userid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.intercomClient.AnonId
-  - typingsSlinky.intercomClient.AnonUserid
-  - typingsSlinky.intercomClient.AnonEmail
+  - typingsSlinky.intercomClient.anon.Id
+  - typingsSlinky.intercomClient.anon.Userid
+  - typingsSlinky.intercomClient.anon.Email
 */
 trait UserIdentifier extends js.Object
 
 object UserIdentifier {
   @scala.inline
-  def AnonId(id: String): UserIdentifier = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
-    __obj.asInstanceOf[UserIdentifier]
-  }
+  implicit def apply(value: Email): UserIdentifier = value.asInstanceOf[UserIdentifier]
   @scala.inline
-  def AnonUserid(user_id: String): UserIdentifier = {
-    val __obj = js.Dynamic.literal(user_id = user_id.asInstanceOf[js.Any])
-    __obj.asInstanceOf[UserIdentifier]
-  }
+  implicit def apply(value: Id): UserIdentifier = value.asInstanceOf[UserIdentifier]
   @scala.inline
-  def AnonEmail(email: String): UserIdentifier = {
-    val __obj = js.Dynamic.literal(email = email.asInstanceOf[js.Any])
-    __obj.asInstanceOf[UserIdentifier]
-  }
+  implicit def apply(value: Userid): UserIdentifier = value.asInstanceOf[UserIdentifier]
 }
 

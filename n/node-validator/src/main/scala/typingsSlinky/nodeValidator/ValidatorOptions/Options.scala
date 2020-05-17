@@ -13,19 +13,10 @@ trait Options extends js.Object
 
 object Options {
   @scala.inline
-  def IsStringOptions(): Options = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Options]
-  }
+  implicit def apply(value: IsDateOptions): Options = value.asInstanceOf[Options]
   @scala.inline
-  def IsNumberOptions(): Options = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Options]
-  }
+  implicit def apply(value: IsNumberOptions): Options = value.asInstanceOf[Options]
   @scala.inline
-  def IsDateOptions(): Options = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Options]
-  }
+  implicit def apply(value: IsStringOptions): Options = value.asInstanceOf[Options]
 }
 

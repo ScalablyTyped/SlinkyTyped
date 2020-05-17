@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.ImageData
@@ -48,8 +47,4 @@ trait MeshTexture extends Accessor {
     */
   var wrap: clamp | repeat | mirror | SeparableWrapModes = js.native
 }
-
-@JSGlobal("__esri.MeshTexture")
-@js.native
-object MeshTexture extends TopLevel[MeshTextureConstructor]
 

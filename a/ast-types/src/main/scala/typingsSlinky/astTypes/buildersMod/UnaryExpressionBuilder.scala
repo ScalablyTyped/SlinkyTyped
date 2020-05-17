@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonOperator
+import typingsSlinky.astTypes.anon.Operator
 import typingsSlinky.astTypes.astTypesStrings.Exclamationmark
 import typingsSlinky.astTypes.astTypesStrings.Plussign
 import typingsSlinky.astTypes.astTypesStrings.Tilde
@@ -30,6 +30,6 @@ trait UnaryExpressionBuilder extends js.Object {
   def apply(operator: typeof, argument: ExpressionKind, prefix: Boolean): UnaryExpression = js.native
   def apply(operator: void, argument: ExpressionKind): UnaryExpression = js.native
   def apply(operator: void, argument: ExpressionKind, prefix: Boolean): UnaryExpression = js.native
-  def from(params: AnonOperator): UnaryExpression = js.native
+  def from(params: Operator): UnaryExpression = js.native
 }
 

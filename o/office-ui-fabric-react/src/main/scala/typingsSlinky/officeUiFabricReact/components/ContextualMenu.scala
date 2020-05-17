@@ -3,6 +3,7 @@ package typingsSlinky.officeUiFabricReact.components
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
+import org.scalajs.dom.raw.Window
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
@@ -24,7 +25,6 @@ import typingsSlinky.officeUiFabricReact.contextualMenuTypesMod.IContextualMenuS
 import typingsSlinky.officeUiFabricReact.directionalHintMod.DirectionalHint
 import typingsSlinky.officeUiFabricReact.withResponsiveModeMod.ResponsiveMode
 import typingsSlinky.std.Partial
-import typingsSlinky.std.Window_
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
@@ -50,13 +50,13 @@ object ContextualMenu {
     def beakWidth(value: Double): this.type = set("beakWidth", value.asInstanceOf[js.Any])
     @scala.inline
     def boundsFunction2(
-      value: (/* target */ js.UndefOr[Target], /* targetWindow */ js.UndefOr[Window_]) => js.UndefOr[IRectangle]
+      value: (/* target */ js.UndefOr[Target], /* targetWindow */ js.UndefOr[Window]) => js.UndefOr[IRectangle]
     ): this.type = set("bounds", js.Any.fromFunction2(value))
     @scala.inline
     def bounds(
       value: IRectangle | (js.Function2[
           /* target */ js.UndefOr[Target], 
-          /* targetWindow */ js.UndefOr[Window_], 
+          /* targetWindow */ js.UndefOr[Window], 
           js.UndefOr[IRectangle]
         ])
     ): this.type = set("bounds", value.asInstanceOf[js.Any])

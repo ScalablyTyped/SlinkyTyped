@@ -1,6 +1,6 @@
 package typingsSlinky.expoLocation.mod
 
-import typingsSlinky.expoLocation.AnonLatitude
+import typingsSlinky.expoLocation.anon.Latitude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("expo-location", "reverseGeocodeAsync")
 @js.native
 object reverseGeocodeAsync extends js.Object {
-  def apply(location: AnonLatitude): js.Promise[js.Array[Address]] = js.native
+  def apply(location: Latitude): js.Promise[js.Array[Address]] = js.native
 }
 

@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.typescript.mod.NamedDeclaration because var conflicts: decorators, end, flags, kind, modifiers, parent, pos. Inlined name */ @js.native
 trait PropertyAccessExpression
   extends MemberExpression
-     with BindingOrAssignmentElementTarget
-     with _BindingOrAssignmentElement {
+     with BindingOrAssignmentElement
+     with BindingOrAssignmentElementTarget {
   var _declarationBrand: js.Any = js.native
   var expression: LeftHandSideExpression = js.native
   @JSName("kind")

@@ -5,10 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("SP.ClientRuntimeContext")
 @js.native
-class ClientRuntimeContext protected () extends IDisposable {
-  def this(serverRelativeUrlOrFullUrl: String) = this()
+trait ClientRuntimeContext extends IDisposable {
   def addQuery(query: ClientAction): Unit = js.native
   def addQueryIdAndResultObject(id: Double, obj: js.Any): Unit = js.native
   def add_beginningRequest(value: js.Function2[/* sender */ js.Any, /* args */ ClientRequestEventArgs, Unit]): Unit = js.native

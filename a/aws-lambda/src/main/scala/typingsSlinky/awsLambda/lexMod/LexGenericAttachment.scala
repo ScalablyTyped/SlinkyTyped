@@ -1,6 +1,6 @@
 package typingsSlinky.awsLambda.lexMod
 
-import typingsSlinky.awsLambda.AnonText
+import typingsSlinky.awsLambda.anon.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LexGenericAttachment extends js.Object {
   var attachmentLinkUrl: String = js.native
-  var buttons: js.Array[AnonText] = js.native
+  var buttons: js.Array[Text] = js.native
   var imageUrl: String = js.native
   var subTitle: String = js.native
   var title: String = js.native
@@ -18,7 +18,7 @@ object LexGenericAttachment {
   @scala.inline
   def apply(
     attachmentLinkUrl: String,
-    buttons: js.Array[AnonText],
+    buttons: js.Array[Text],
     imageUrl: String,
     subTitle: String,
     title: String
@@ -39,7 +39,7 @@ object LexGenericAttachment {
         ret
     }
     @scala.inline
-    def withButtons(value: js.Array[AnonText]): Self = {
+    def withButtons(value: js.Array[Text]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.comboBoxClassNamesMod
 
-import typingsSlinky.officeUiFabricReact.PartialIComboBoxOptionSty
+import typingsSlinky.officeUiFabricReact.anon.PartialIComboBoxOptionSty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

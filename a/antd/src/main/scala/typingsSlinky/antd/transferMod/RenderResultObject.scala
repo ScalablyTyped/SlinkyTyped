@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RenderResultObject extends js.Object {
+trait RenderResultObject extends RenderResult {
   var label: ReactElement = js.native
   var value: String = js.native
 }

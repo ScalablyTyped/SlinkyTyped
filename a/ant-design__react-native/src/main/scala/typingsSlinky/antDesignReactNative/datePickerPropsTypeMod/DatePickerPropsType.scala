@@ -2,7 +2,7 @@ package typingsSlinky.antDesignReactNative.datePickerPropsTypeMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antDesignReactNative.AnonDatePickerLocale
+import typingsSlinky.antDesignReactNative.anon.DatePickerLocale
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.date
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.datetime
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.month
@@ -22,7 +22,7 @@ trait DatePickerPropsType extends DatePickerProps {
   var extra: js.UndefOr[String] = js.native
   var format: js.UndefOr[String | (js.Function1[/* value */ js.Date, String])] = js.native
   @JSName("locale")
-  var locale_DatePickerPropsType: js.UndefOr[AnonDatePickerLocale] = js.native
+  var locale_DatePickerPropsType: js.UndefOr[DatePickerLocale] = js.native
   @JSName("maxDate")
   var maxDate_DatePickerPropsType: js.UndefOr[js.Date] = js.native
   @JSName("minDate")
@@ -128,7 +128,7 @@ object DatePickerPropsType {
         ret
     }
     @scala.inline
-    def withLocale(value: AnonDatePickerLocale): Self = {
+    def withLocale(value: DatePickerLocale): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
         ret

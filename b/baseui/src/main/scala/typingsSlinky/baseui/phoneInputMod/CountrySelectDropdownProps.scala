@@ -1,7 +1,6 @@
 package typingsSlinky.baseui.phoneInputMod
 
-import typingsSlinky.baseui.AnonCountrySelectDropdown
-import typingsSlinky.baseui.ReadonlyArrayReactNode
+import typingsSlinky.baseui.anon.ReadonlyArrayReactNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +11,7 @@ trait CountrySelectDropdownProps extends js.Object {
   var country: js.UndefOr[Country] = js.native
   var mapIsoToLabel: js.UndefOr[js.Function1[/* iso */ String, String]] = js.native
   var maxDropdownHeight: js.UndefOr[String] = js.native
-  var overrides: js.UndefOr[AnonCountrySelectDropdown] = js.native
+  var overrides: js.UndefOr[typingsSlinky.baseui.anon.CountrySelectDropdown] = js.native
 }
 
 object CountrySelectDropdownProps {
@@ -76,7 +75,7 @@ object CountrySelectDropdownProps {
         ret
     }
     @scala.inline
-    def withOverrides(value: AnonCountrySelectDropdown): Self = {
+    def withOverrides(value: typingsSlinky.baseui.anon.CountrySelectDropdown): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
         ret

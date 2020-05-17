@@ -1,11 +1,11 @@
 package typingsSlinky.pgPromise.mod
 
 import typingsSlinky.node.NodeJS.ReadableStream
-import typingsSlinky.pgPromise.AnonCnd
-import typingsSlinky.pgPromise.AnonDuration
-import typingsSlinky.pgPromise.AnonMode
-import typingsSlinky.pgPromise.AnonReusable
-import typingsSlinky.pgPromise.AnonTag
+import typingsSlinky.pgPromise.anon.Cnd
+import typingsSlinky.pgPromise.anon.Duration
+import typingsSlinky.pgPromise.anon.Mode
+import typingsSlinky.pgPromise.anon.Reusable
+import typingsSlinky.pgPromise.anon.Tag
 import typingsSlinky.pgPromise.pgSubsetMod.IResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -87,29 +87,29 @@ trait IBaseProtocol[Ext] extends js.Object {
   def result[T](query: QueryParam, values: js.Any, cb: js.Function1[/* value */ IResultExt, T]): XPromise[T] = js.native
   def result[T](query: QueryParam, values: js.Any, cb: js.Function1[/* value */ IResultExt, T], thisArg: js.Any): XPromise[T] = js.native
   // API: http://vitaly-t.github.io/pg-promise/Database.html#stream
-  def stream(qs: js.Object, init: js.Function1[/* stream */ ReadableStream, Unit]): XPromise[AnonDuration] = js.native
+  def stream(qs: js.Object, init: js.Function1[/* stream */ ReadableStream, Unit]): XPromise[Duration] = js.native
   // Tasks;
   // API: http://vitaly-t.github.io/pg-promise/Database.html#task
   def task[T](cb: js.Function1[/* t */ ITask[Ext] with Ext, T | XPromise[T]]): XPromise[T] = js.native
-  def task[T](options: AnonTag, cb: js.Function1[/* t */ ITask[Ext] with Ext, T | XPromise[T]]): XPromise[T] = js.native
+  def task[T](options: Tag, cb: js.Function1[/* t */ ITask[Ext] with Ext, T | XPromise[T]]): XPromise[T] = js.native
   def task[T](tag: String, cb: js.Function1[/* t */ ITask[Ext] with Ext, T | XPromise[T]]): XPromise[T] = js.native
   def task[T](tag: Double, cb: js.Function1[/* t */ ITask[Ext] with Ext, T | XPromise[T]]): XPromise[T] = js.native
   // Conditional Tasks;
   // API: http://vitaly-t.github.io/pg-promise/Database.html#taskIf
   def taskIf[T](cb: js.Function1[/* t */ ITask[Ext] with Ext, T | XPromise[T]]): XPromise[T] = js.native
-  def taskIf[T](options: AnonCnd[Ext], cb: js.Function1[/* t */ ITask[Ext] with Ext, T | XPromise[T]]): XPromise[T] = js.native
+  def taskIf[T](options: Cnd[Ext], cb: js.Function1[/* t */ ITask[Ext] with Ext, T | XPromise[T]]): XPromise[T] = js.native
   def taskIf[T](tag: String, cb: js.Function1[/* t */ ITask[Ext] with Ext, T | XPromise[T]]): XPromise[T] = js.native
   def taskIf[T](tag: Double, cb: js.Function1[/* t */ ITask[Ext] with Ext, T | XPromise[T]]): XPromise[T] = js.native
   // Transactions;
   // API: http://vitaly-t.github.io/pg-promise/Database.html#tx
   def tx[T](cb: js.Function1[/* t */ ITask[Ext] with Ext, T | XPromise[T]]): XPromise[T] = js.native
-  def tx[T](options: AnonMode, cb: js.Function1[/* t */ ITask[Ext] with Ext, T | XPromise[T]]): XPromise[T] = js.native
+  def tx[T](options: Mode, cb: js.Function1[/* t */ ITask[Ext] with Ext, T | XPromise[T]]): XPromise[T] = js.native
   def tx[T](tag: String, cb: js.Function1[/* t */ ITask[Ext] with Ext, T | XPromise[T]]): XPromise[T] = js.native
   def tx[T](tag: Double, cb: js.Function1[/* t */ ITask[Ext] with Ext, T | XPromise[T]]): XPromise[T] = js.native
   // Conditional Transactions;
   // API: http://vitaly-t.github.io/pg-promise/Database.html#txIf
   def txIf[T](cb: js.Function1[/* t */ ITask[Ext] with Ext, T | XPromise[T]]): XPromise[T] = js.native
-  def txIf[T](options: AnonReusable[Ext], cb: js.Function1[/* t */ ITask[Ext] with Ext, T | XPromise[T]]): XPromise[T] = js.native
+  def txIf[T](options: Reusable[Ext], cb: js.Function1[/* t */ ITask[Ext] with Ext, T | XPromise[T]]): XPromise[T] = js.native
   def txIf[T](tag: String, cb: js.Function1[/* t */ ITask[Ext] with Ext, T | XPromise[T]]): XPromise[T] = js.native
   def txIf[T](tag: Double, cb: js.Function1[/* t */ ITask[Ext] with Ext, T | XPromise[T]]): XPromise[T] = js.native
 }

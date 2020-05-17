@@ -1,19 +1,19 @@
 package typingsSlinky.onesignalCordovaPlugin.OneSignalCordovaPlugin
 
-import typingsSlinky.onesignalCordovaPlugin.AnonActionID
+import typingsSlinky.onesignalCordovaPlugin.anon.ActionID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait OSNotificationOpenedResult extends js.Object {
-  var action: AnonActionID = js.native
+  var action: ActionID = js.native
   var notification: OSNotification = js.native
 }
 
 object OSNotificationOpenedResult {
   @scala.inline
-  def apply(action: AnonActionID, notification: OSNotification): OSNotificationOpenedResult = {
+  def apply(action: ActionID, notification: OSNotification): OSNotificationOpenedResult = {
     val __obj = js.Dynamic.literal(action = action.asInstanceOf[js.Any], notification = notification.asInstanceOf[js.Any])
     __obj.asInstanceOf[OSNotificationOpenedResult]
   }
@@ -24,7 +24,7 @@ object OSNotificationOpenedResult {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAction(value: AnonActionID): Self = {
+    def withAction(value: ActionID): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
         ret

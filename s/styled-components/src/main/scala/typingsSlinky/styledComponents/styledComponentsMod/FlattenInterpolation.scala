@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 trait FlattenInterpolation[P]
   extends ReadonlyArray[Interpolation[P]]
-     with _Interpolation[P]
+     with CSSProp[js.Any]
+     with Interpolation[P]
 

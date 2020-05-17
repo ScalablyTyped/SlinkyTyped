@@ -1,7 +1,7 @@
 package typingsSlinky.materialUiLab.skeletonSkeletonMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.materialUiLab.AnonAnimation
+import typingsSlinky.materialUiLab.anon.Animation
 import typingsSlinky.materialUiLab.materialUiLabStrings.div
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,12 +11,12 @@ import scala.scalajs.js.annotation._
 trait SkeletonTypeMap[P, D /* <: ReactElement */] extends js.Object {
   var classKey: SkeletonClassKey = js.native
   var defaultComponent: div = js.native
-  var props: P with AnonAnimation = js.native
+  var props: P with Animation = js.native
 }
 
 object SkeletonTypeMap {
   @scala.inline
-  def apply[P, D](classKey: SkeletonClassKey, defaultComponent: div, props: P with AnonAnimation): SkeletonTypeMap[P, D] = {
+  def apply[P, D](classKey: SkeletonClassKey, defaultComponent: div, props: P with Animation): SkeletonTypeMap[P, D] = {
     val __obj = js.Dynamic.literal(classKey = classKey.asInstanceOf[js.Any], defaultComponent = defaultComponent.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any])
     __obj.asInstanceOf[SkeletonTypeMap[P, D]]
   }
@@ -39,7 +39,7 @@ object SkeletonTypeMap {
         ret
     }
     @scala.inline
-    def withProps(value: P with AnonAnimation): Self[P, D] = {
+    def withProps(value: P with Animation): Self[P, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("props")(value.asInstanceOf[js.Any])
         ret

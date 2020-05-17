@@ -1,6 +1,5 @@
 package typingsSlinky.jupyterlabCoreutils
 
-import typingsSlinky.jupyterlabCoreutils.interfacesMod.IPoll._Phase
 import typingsSlinky.jupyterlabCoreutils.nbformatMod.nbformat.CellType
 import typingsSlinky.jupyterlabCoreutils.nbformatMod.nbformat.OutputType
 import typingsSlinky.jupyterlabCoreutils.nbformatMod.nbformat.StreamType
@@ -35,14 +34,14 @@ object jupyterlabCoreutilsStrings {
   
   @js.native
   sealed trait constructed
-    extends _Phase[js.Any]
+    extends typingsSlinky.jupyterlabCoreutils.interfacesMod.IPoll.Phase[js.Any]
   
   @js.native
   sealed trait display_data extends OutputType
   
   @js.native
   sealed trait disposed
-    extends _Phase[js.Any]
+    extends typingsSlinky.jupyterlabCoreutils.interfacesMod.IPoll.Phase[js.Any]
   
   @js.native
   sealed trait error extends OutputType
@@ -82,33 +81,33 @@ object jupyterlabCoreutilsStrings {
   
   @js.native
   sealed trait reconnected
-    extends _Phase[js.Any]
+    extends typingsSlinky.jupyterlabCoreutils.interfacesMod.IPoll.Phase[js.Any]
   
   @js.native
   sealed trait refreshed
-    extends _Phase[js.Any]
+    extends typingsSlinky.jupyterlabCoreutils.interfacesMod.IPoll.Phase[js.Any]
   
   @js.native
   sealed trait rejected
-    extends _Phase[js.Any]
+    extends typingsSlinky.jupyterlabCoreutils.interfacesMod.IPoll.Phase[js.Any]
   
   @js.native
   sealed trait remove extends js.Object
   
   @js.native
   sealed trait resolved
-    extends _Phase[js.Any]
+    extends typingsSlinky.jupyterlabCoreutils.interfacesMod.IPoll.Phase[js.Any]
   
   @js.native
   sealed trait save extends js.Object
   
   @js.native
   sealed trait standby
-    extends _Phase[js.Any]
+    extends typingsSlinky.jupyterlabCoreutils.interfacesMod.IPoll.Phase[js.Any]
   
   @js.native
   sealed trait started
-    extends _Phase[js.Any]
+    extends typingsSlinky.jupyterlabCoreutils.interfacesMod.IPoll.Phase[js.Any]
   
   @js.native
   sealed trait stderr extends StreamType
@@ -118,7 +117,7 @@ object jupyterlabCoreutilsStrings {
   
   @js.native
   sealed trait stopped
-    extends _Phase[js.Any]
+    extends typingsSlinky.jupyterlabCoreutils.interfacesMod.IPoll.Phase[js.Any]
   
   @js.native
   sealed trait stream extends OutputType

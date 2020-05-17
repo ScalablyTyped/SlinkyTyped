@@ -1,7 +1,7 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonFormatPosition
-import typingsSlinky.devextreme.AnonShowMode
+import typingsSlinky.devextreme.anon.FormatPosition
+import typingsSlinky.devextreme.anon.ShowMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait dxSliderBaseOptions[T] extends dxTrackBarOptions[T] {
   /** Specifies the step by which a handle moves when a user presses Page Up or Page Down. */
   var keyStep: js.UndefOr[Double] = js.native
   /** Configures the labels displayed at the min and max values. */
-  var label: js.UndefOr[AnonFormatPosition] = js.native
+  var label: js.UndefOr[FormatPosition] = js.native
   /** The value to be assigned to the `name` attribute of the underlying HTML element. */
   var name: js.UndefOr[String] = js.native
   /** Specifies whether to highlight the selected range. */
@@ -19,7 +19,7 @@ trait dxSliderBaseOptions[T] extends dxTrackBarOptions[T] {
   /** Specifies the step by which the widget's value changes when a user drags a handler. */
   var step: js.UndefOr[Double] = js.native
   /** Configures a tooltip. */
-  var tooltip: js.UndefOr[AnonShowMode] = js.native
+  var tooltip: js.UndefOr[ShowMode] = js.native
 }
 
 object dxSliderBaseOptions {
@@ -47,7 +47,7 @@ object dxSliderBaseOptions {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonFormatPosition): Self[T] = {
+    def withLabel(value: FormatPosition): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -95,7 +95,7 @@ object dxSliderBaseOptions {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonShowMode): Self[T] = {
+    def withTooltip(value: ShowMode): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

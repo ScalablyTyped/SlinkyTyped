@@ -17,10 +17,8 @@ import scala.scalajs.js.annotation._
   * @memberof PIXI
   * @extends PIXI.ObjectRenderer
   */
-@JSGlobal("PIXI.AbstractBatchRenderer")
 @js.native
-class AbstractBatchRenderer protected () extends ObjectRenderer {
-  def this(renderer: Renderer) = this()
+trait AbstractBatchRenderer extends ObjectRenderer {
   /**
     * Maximum number of textures that can be uploaded to
     * the GPU under the current context. It is initialized
@@ -150,31 +148,117 @@ class AbstractBatchRenderer protected () extends ObjectRenderer {
   ): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("PIXI.AbstractBatchRenderer")
-@js.native
-object AbstractBatchRenderer extends js.Object {
-  /**
-    * Pool of `BatchDrawCall` objects that `flush` used
-    * to create "batches" of the objects being rendered.
-    *
-    * These are never re-allocated again.
-    * Shared between all batch renderers because it can be only one "flush" working at the moment.
-    *
-    * @static
-    * @member {PIXI.BatchDrawCall[]}
-    */
-  var _drawCallPool: js.Array[BatchDrawCall] = js.native
-  /**
-    * Pool of `BatchDrawCall` objects that `flush` used
-    * to create "batches" of the objects being rendered.
-    *
-    * These are never re-allocated again.
-    * Shared between all batch renderers because it can be only one "flush" working at the moment.
-    *
-    * @static
-    * @member {PIXI.BatchTextureArray[]}
-    */
-  var _textureArrayPool: js.Array[BatchTextureArray] = js.native
+object AbstractBatchRenderer {
+  @scala.inline
+  def apply(
+    MAX_TEXTURES: Double,
+    _shader: Shader,
+    bindAndClearTexArray: BatchTextureArray => Unit,
+    buildDrawCalls: (BatchTextureArray, Double, Double) => Unit,
+    contextChange: () => Unit,
+    destroy: () => Unit,
+    flush: () => Unit,
+    geometryClass: js.Any,
+    initFlushBuffers: () => Unit,
+    onPrerender: () => Unit,
+    packInterleavedGeometry: (Sprite, ViewableBuffer, js.typedarray.Uint16Array, Double, Double) => Unit,
+    render: DisplayObject => Unit,
+    renderer: Renderer,
+    shaderGenerator: BatchShaderGenerator,
+    size: Double,
+    start: () => Unit,
+    state: State,
+    stop: () => Unit,
+    vertexSize: Double
+  ): AbstractBatchRenderer = {
+    val __obj = js.Dynamic.literal(MAX_TEXTURES = MAX_TEXTURES.asInstanceOf[js.Any], _shader = _shader.asInstanceOf[js.Any], bindAndClearTexArray = js.Any.fromFunction1(bindAndClearTexArray), buildDrawCalls = js.Any.fromFunction3(buildDrawCalls), contextChange = js.Any.fromFunction0(contextChange), destroy = js.Any.fromFunction0(destroy), flush = js.Any.fromFunction0(flush), geometryClass = geometryClass.asInstanceOf[js.Any], initFlushBuffers = js.Any.fromFunction0(initFlushBuffers), onPrerender = js.Any.fromFunction0(onPrerender), packInterleavedGeometry = js.Any.fromFunction5(packInterleavedGeometry), render = js.Any.fromFunction1(render), renderer = renderer.asInstanceOf[js.Any], shaderGenerator = shaderGenerator.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], start = js.Any.fromFunction0(start), state = state.asInstanceOf[js.Any], stop = js.Any.fromFunction0(stop), vertexSize = vertexSize.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AbstractBatchRenderer]
+  }
+  @scala.inline
+  implicit class AbstractBatchRendererOps[Self <: AbstractBatchRenderer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMAX_TEXTURES(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MAX_TEXTURES")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_shader(value: Shader): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_shader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBindAndClearTexArray(value: BatchTextureArray => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindAndClearTexArray")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withBuildDrawCalls(value: (BatchTextureArray, Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buildDrawCalls")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withContextChange(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contextChange")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGeometryClass(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geometryClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInitFlushBuffers(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initFlushBuffers")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnPrerender(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPrerender")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPackInterleavedGeometry(value: (Sprite, ViewableBuffer, js.typedarray.Uint16Array, Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packInterleavedGeometry")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withShaderGenerator(value: BatchShaderGenerator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shaderGenerator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withState(value: State): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVertexSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

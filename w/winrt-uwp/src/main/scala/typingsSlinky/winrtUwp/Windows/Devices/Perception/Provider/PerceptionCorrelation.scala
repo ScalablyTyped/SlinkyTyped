@@ -7,21 +7,47 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A description of the physical position and orientation of a device specified by the IPerceptionFrameProvider's unique identifier (PerceptionFrameProviderInfo::Id) sharing a common coordinate frame of other PerceptionCorrelations that will be combined into a PerceptionCorrelationGroup. */
-@JSGlobal("Windows.Devices.Perception.Provider.PerceptionCorrelation")
 @js.native
-class PerceptionCorrelation protected () extends js.Object {
-  /**
-    * Initializes a new PerceptionCorrelation instance.
-    * @param targetId The unique identifier of the IPerceptionFrameProvider being described.
-    * @param position The position of the device in a common coordinate frame of all members of a PerceptionCorrelationGroup.
-    * @param orientation The orientation of the device in a common coordinate frame of all members of a PerceptionCorrelationGroup.
-    */
-  def this(targetId: String, position: Vector3, orientation: Quaternion) = this()
+trait PerceptionCorrelation extends js.Object {
   /** The orientation of the device in the common coordinate frame shared by other PerceptionCorrelations in the PerceptionCorrelationGroup. */
   var orientation: Quaternion = js.native
   /** The position of the device in the common coordinate frame shared by other PerceptionCorrelations in the PerceptionCorrelationGroup. */
   var position: Vector3 = js.native
   /** The unique identifier of the described device. */
   var targetId: String = js.native
+}
+
+object PerceptionCorrelation {
+  @scala.inline
+  def apply(orientation: Quaternion, position: Vector3, targetId: String): PerceptionCorrelation = {
+    val __obj = js.Dynamic.literal(orientation = orientation.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], targetId = targetId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PerceptionCorrelation]
+  }
+  @scala.inline
+  implicit class PerceptionCorrelationOps[Self <: PerceptionCorrelation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOrientation(value: Quaternion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPosition(value: Vector3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.reactElemental.mod
 
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactElemental.AnonLabelValue
+import typingsSlinky.reactElemental.anon.LabelValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait TabsProps extends js.Object {
   val fit: js.UndefOr[Boolean] = js.native
   val invert: js.UndefOr[Boolean] = js.native
   val onChange: js.UndefOr[js.Function1[/* value */ String, Unit]] = js.native
-  val options: js.UndefOr[js.Array[AnonLabelValue]] = js.native
+  val options: js.UndefOr[js.Array[LabelValue]] = js.native
   val secondary: js.UndefOr[Boolean] = js.native
   val style: js.UndefOr[CSSProperties] = js.native
   val value: js.UndefOr[String] = js.native
@@ -66,7 +66,7 @@ object TabsProps {
         ret
     }
     @scala.inline
-    def withOptions(value: js.Array[AnonLabelValue]): Self = {
+    def withOptions(value: js.Array[LabelValue]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

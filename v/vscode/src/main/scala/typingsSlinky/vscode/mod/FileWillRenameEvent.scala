@@ -1,7 +1,7 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonNewUri
 import typingsSlinky.vscode.Thenable
+import typingsSlinky.vscode.anon.NewUri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait FileWillRenameEvent extends js.Object {
   /**
   		 * The files that are going to be renamed.
   		 */
-  val files: js.Array[AnonNewUri] = js.native
+  val files: js.Array[NewUri] = js.native
   /**
   		 * Allows to pause the event and to apply a [workspace edit](#WorkspaceEdit).
   		 *

@@ -1,8 +1,8 @@
 package typingsSlinky.officeUiFabricReact.docPageTypesMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.officeUiFabricReact.AnonRoot
-import typingsSlinky.officeUiFabricReact.AnonTheme
+import typingsSlinky.officeUiFabricReact.anon.Root
+import typingsSlinky.officeUiFabricReact.anon.Theme
 import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import scala.scalajs.js
@@ -17,7 +17,7 @@ trait IExample extends js.Object {
   var codepenJS: js.UndefOr[String] = js.native
   var isScrollable: js.UndefOr[Boolean] = js.native
   /** Custom styles. Partial version of `IExampleCardProps['styles']`. */
-  var styles: js.UndefOr[IStyleFunctionOrObject[AnonTheme, AnonRoot]] = js.native
+  var styles: js.UndefOr[IStyleFunctionOrObject[Theme, Root]] = js.native
   /** Title of the example */
   var title: String = js.native
   /** Working example of the example */
@@ -79,13 +79,13 @@ object IExample {
         ret
     }
     @scala.inline
-    def withStylesFunction1(value: AnonTheme => Partial[AnonRoot]): Self = {
+    def withStylesFunction1(value: Theme => Partial[Root]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withStyles(value: IStyleFunctionOrObject[AnonTheme, AnonRoot]): Self = {
+    def withStyles(value: IStyleFunctionOrObject[Theme, Root]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
         ret

@@ -20,7 +20,6 @@ package object parserTypesMod {
     /* headers */ typingsSlinky.fastCsv.parserTypesMod.HeaderArray, 
     typingsSlinky.fastCsv.parserTypesMod.HeaderArray
   ]
-  type Row = typingsSlinky.fastCsv.parserTypesMod.RowMap | typingsSlinky.fastCsv.parserTypesMod.RowArray
   type RowArray = js.Array[java.lang.String]
   type RowMap = org.scalablytyped.runtime.StringDictionary[java.lang.String]
   type RowTransformCallback = js.Function2[
@@ -28,8 +27,6 @@ package object parserTypesMod {
     /* row */ js.UndefOr[typingsSlinky.fastCsv.parserTypesMod.Row], 
     scala.Unit
   ]
-  type RowTransformFunction = typingsSlinky.fastCsv.parserTypesMod.SyncRowTransform | typingsSlinky.fastCsv.parserTypesMod.AsyncRowTransform
-  type RowValidate = typingsSlinky.fastCsv.parserTypesMod.AsyncRowValidate | typingsSlinky.fastCsv.parserTypesMod.SyncRowValidate
   type RowValidateCallback = js.Function3[
     /* error */ js.UndefOr[js.Error | scala.Null], 
     /* isValid */ js.UndefOr[scala.Boolean], 

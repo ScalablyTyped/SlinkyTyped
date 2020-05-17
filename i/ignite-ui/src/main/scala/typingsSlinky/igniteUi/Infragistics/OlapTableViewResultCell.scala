@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Infragistics.OlapTableViewResultCell")
 @js.native
-class OlapTableViewResultCell () extends js.Object {
+trait OlapTableViewResultCell extends js.Object {
   /**
   	 * Returns the ordinal of this cell used to determine its position into the data cells' grid.
   	 */
@@ -23,5 +22,50 @@ class OlapTableViewResultCell () extends js.Object {
   	 * Returns the value provided by $.ig.Cell object.
   	 */
   def value(): js.Object = js.native
+}
+
+object OlapTableViewResultCell {
+  @scala.inline
+  def apply(
+    cellOrdinal: () => Double,
+    formattedValue: () => String,
+    resultCellIndex: () => Double,
+    value: () => js.Object
+  ): OlapTableViewResultCell = {
+    val __obj = js.Dynamic.literal(cellOrdinal = js.Any.fromFunction0(cellOrdinal), formattedValue = js.Any.fromFunction0(formattedValue), resultCellIndex = js.Any.fromFunction0(resultCellIndex), value = js.Any.fromFunction0(value))
+    __obj.asInstanceOf[OlapTableViewResultCell]
+  }
+  @scala.inline
+  implicit class OlapTableViewResultCellOps[Self <: OlapTableViewResultCell] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCellOrdinal(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellOrdinal")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withFormattedValue(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formattedValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withResultCellIndex(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resultCellIndex")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withValue(value: () => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

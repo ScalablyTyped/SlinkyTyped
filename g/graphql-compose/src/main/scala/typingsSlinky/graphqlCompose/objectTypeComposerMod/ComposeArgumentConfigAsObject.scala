@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ComposeArgumentConfigAsObject extends js.Object {
+trait ComposeArgumentConfigAsObject extends ComposeArgumentConfig {
   @JSName("$call")
   var $call: js.UndefOr[Unit] = js.native
   var astNode: js.UndefOr[InputValueDefinitionNode | Null] = js.native

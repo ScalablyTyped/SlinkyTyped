@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonComputedKey
+import typingsSlinky.astTypes.anon.ComputedKey
 import typingsSlinky.astTypes.kindsMod.ArrayPatternKind
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
@@ -23,6 +23,6 @@ trait TSMethodSignatureBuilder extends js.Object {
     parameters: js.Array[IdentifierKind | RestElementKind | ArrayPatternKind | ObjectPatternKind],
     typeAnnotation: TSTypeAnnotationKind
   ): TSMethodSignature = js.native
-  def from(params: AnonComputedKey): TSMethodSignature = js.native
+  def from(params: ComputedKey): TSMethodSignature = js.native
 }
 

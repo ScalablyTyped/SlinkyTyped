@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait FromTo extends _DurationInputArg1 {
+trait FromTo extends DurationInputArg1 {
   var from: MomentInput = js.native
   var to: MomentInput = js.native
 }

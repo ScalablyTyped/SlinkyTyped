@@ -1,20 +1,20 @@
 package typingsSlinky.archiver.mod
 
-import typingsSlinky.archiver.AnonProcessed
-import typingsSlinky.archiver.AnonProcessedBytes
+import typingsSlinky.archiver.anon.Processed
+import typingsSlinky.archiver.anon.ProcessedBytes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ProgressData extends js.Object {
-  var entries: AnonProcessed = js.native
-  var fs: AnonProcessedBytes = js.native
+  var entries: Processed = js.native
+  var fs: ProcessedBytes = js.native
 }
 
 object ProgressData {
   @scala.inline
-  def apply(entries: AnonProcessed, fs: AnonProcessedBytes): ProgressData = {
+  def apply(entries: Processed, fs: ProcessedBytes): ProgressData = {
     val __obj = js.Dynamic.literal(entries = entries.asInstanceOf[js.Any], fs = fs.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProgressData]
   }
@@ -25,13 +25,13 @@ object ProgressData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEntries(value: AnonProcessed): Self = {
+    def withEntries(value: Processed): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withFs(value: AnonProcessedBytes): Self = {
+    def withFs(value: ProcessedBytes): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fs")(value.asInstanceOf[js.Any])
         ret

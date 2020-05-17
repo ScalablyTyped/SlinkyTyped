@@ -13,7 +13,7 @@ import typingsSlinky.bang88ReactNativeDrawerLayout.bang88ReactNativeDrawerLayout
 import typingsSlinky.bang88ReactNativeDrawerLayout.mod.DrawerLayoutProperties
 import typingsSlinky.bang88ReactNativeDrawerLayout.mod.DrawerLayoutSlideEvent
 import typingsSlinky.bang88ReactNativeDrawerLayout.mod.default
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState

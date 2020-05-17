@@ -1,6 +1,6 @@
 package typingsSlinky.nodeGettext.mod
 
-import typingsSlinky.nodeGettext.AnonDebug
+import typingsSlinky.nodeGettext.anon.Debug
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("node-gettext", JSImport.Namespace)
 @js.native
 class ^ () extends GetText {
-  def this(options: AnonDebug) = this()
+  def this(options: Debug) = this()
 }
 
 @JSImport("node-gettext", JSImport.Namespace)

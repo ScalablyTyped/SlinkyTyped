@@ -1,7 +1,7 @@
 package typingsSlinky.ptomasroosReactNativeMultiSlider.mod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.ptomasroosReactNativeMultiSlider.AnonBorderRadius
+import typingsSlinky.ptomasroosReactNativeMultiSlider.anon.BorderRadius
 import typingsSlinky.reactNative.mod.ViewStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -34,7 +34,7 @@ trait MultiSliderProps extends js.Object {
   var sliderLength: js.UndefOr[Double] = js.native
   var snapped: js.UndefOr[Boolean] = js.native
   var step: js.UndefOr[Double] = js.native
-  var touchDimensions: js.UndefOr[AnonBorderRadius] = js.native
+  var touchDimensions: js.UndefOr[BorderRadius] = js.native
   var trackStyle: js.UndefOr[ViewStyle] = js.native
   var unselectedStyle: js.UndefOr[ViewStyle] = js.native
   var valuePrefix: js.UndefOr[String] = js.native
@@ -391,7 +391,7 @@ object MultiSliderProps {
         ret
     }
     @scala.inline
-    def withTouchDimensions(value: AnonBorderRadius): Self = {
+    def withTouchDimensions(value: BorderRadius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("touchDimensions")(value.asInstanceOf[js.Any])
         ret

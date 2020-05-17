@@ -1,7 +1,7 @@
 package typingsSlinky.stripeV3.stripe
 
-import typingsSlinky.stripeV3.AnonBank
-import typingsSlinky.stripeV3.AnonIban
+import typingsSlinky.stripeV3.anon.Bank
+import typingsSlinky.stripeV3.anon.Iban
 import typingsSlinky.stripeV3.stripe.elements.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
 trait PaymentMethodData extends js.Object {
   var billing_details: js.UndefOr[BillingDetails] = js.native
   var card: js.UndefOr[Element] = js.native
-  var ideal: js.UndefOr[Element | AnonBank] = js.native
-  var sepa_debit: js.UndefOr[Element | AnonIban] = js.native
+  var ideal: js.UndefOr[Element | Bank] = js.native
+  var sepa_debit: js.UndefOr[Element | Iban] = js.native
   /**
     * Billing information associated with the PaymentMethod
     * that may be used or required by particular types of
@@ -65,7 +65,7 @@ object PaymentMethodData {
         ret
     }
     @scala.inline
-    def withIdeal(value: Element | AnonBank): Self = {
+    def withIdeal(value: Element | Bank): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ideal")(value.asInstanceOf[js.Any])
         ret
@@ -77,7 +77,7 @@ object PaymentMethodData {
         ret
     }
     @scala.inline
-    def withSepa_debit(value: Element | AnonIban): Self = {
+    def withSepa_debit(value: Element | Iban): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sepa_debit")(value.asInstanceOf[js.Any])
         ret

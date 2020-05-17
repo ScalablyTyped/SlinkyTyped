@@ -1,8 +1,8 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonColorVisible
-import typingsSlinky.devextreme.AnonHeightUrl
-import typingsSlinky.devextreme.AnonSize
+import typingsSlinky.devextreme.anon.ColorVisible
+import typingsSlinky.devextreme.anon.HeightUrl
+import typingsSlinky.devextreme.anon.Size
 import typingsSlinky.devextreme.devextremeStrings.allArgumentPoints
 import typingsSlinky.devextreme.devextremeStrings.allSeriesPoints
 import typingsSlinky.devextreme.devextremeStrings.circle
@@ -21,19 +21,19 @@ import scala.scalajs.js.annotation._
 @js.native
 trait dxChartSeriesTypesCommonSeriesPoint extends js.Object {
   /** Configures the appearance of the series point border in scatter, line- and area-like series. */
-  var border: js.UndefOr[AnonColorVisible] = js.native
+  var border: js.UndefOr[ColorVisible] = js.native
   /** Colors the series points. */
   var color: js.UndefOr[String] = js.native
   /** Specifies series elements to be highlighted when a user pauses on a series point. */
   var hoverMode: js.UndefOr[allArgumentPoints | allSeriesPoints | none | onlyPoint] = js.native
   /** Configures the appearance adopted by a series point when a user pauses on it. */
-  var hoverStyle: js.UndefOr[AnonSize] = js.native
+  var hoverStyle: js.UndefOr[Size] = js.native
   /** Substitutes the standard point symbols with an image. */
-  var image: js.UndefOr[String | AnonHeightUrl] = js.native
+  var image: js.UndefOr[String | HeightUrl] = js.native
   /** Specifies series elements to be highlighted when a user selects a series point. */
   var selectionMode: js.UndefOr[allArgumentPoints | allSeriesPoints | none | onlyPoint] = js.native
   /** Configures the appearance of a selected series point. */
-  var selectionStyle: js.UndefOr[AnonSize] = js.native
+  var selectionStyle: js.UndefOr[Size] = js.native
   /** Specifies the diameter of series points in pixels. */
   var size: js.UndefOr[Double] = js.native
   /** Specifies which symbol should represent series points in scatter, line- and area-like series. */
@@ -55,7 +55,7 @@ object dxChartSeriesTypesCommonSeriesPoint {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBorder(value: AnonColorVisible): Self = {
+    def withBorder(value: ColorVisible): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
         ret
@@ -91,7 +91,7 @@ object dxChartSeriesTypesCommonSeriesPoint {
         ret
     }
     @scala.inline
-    def withHoverStyle(value: AnonSize): Self = {
+    def withHoverStyle(value: Size): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hoverStyle")(value.asInstanceOf[js.Any])
         ret
@@ -103,7 +103,7 @@ object dxChartSeriesTypesCommonSeriesPoint {
         ret
     }
     @scala.inline
-    def withImage(value: String | AnonHeightUrl): Self = {
+    def withImage(value: String | HeightUrl): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
         ret
@@ -127,7 +127,7 @@ object dxChartSeriesTypesCommonSeriesPoint {
         ret
     }
     @scala.inline
-    def withSelectionStyle(value: AnonSize): Self = {
+    def withSelectionStyle(value: Size): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectionStyle")(value.asInstanceOf[js.Any])
         ret

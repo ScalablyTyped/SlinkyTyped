@@ -1,5 +1,7 @@
 package typingsSlinky.antd
 
+import typingsSlinky.antd.anon.Clear
+import typingsSlinky.antd.anon.PlaceholderString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +11,8 @@ import scala.scalajs.js.annotation._
 object localeHeILMod extends js.Object {
   @js.native
   object default extends js.Object {
-    var lang: AnonClear = js.native
-    var timePickerLocale: AnonPlaceholderString = js.native
+    var lang: Clear = js.native
+    var timePickerLocale: PlaceholderString = js.native
   }
   
 }

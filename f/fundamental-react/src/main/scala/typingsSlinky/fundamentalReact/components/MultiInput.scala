@@ -2,7 +2,7 @@ package typingsSlinky.fundamentalReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.fundamentalReact.AnonText
+import typingsSlinky.fundamentalReact.anon.Text
 import typingsSlinky.fundamentalReact.multiInputMod.MultiInputProps
 import typingsSlinky.fundamentalReact.multiInputMod.default
 import scala.scalajs.js
@@ -41,7 +41,7 @@ object MultiInput {
     @scala.inline
     def tagProps(value: js.Any): this.type = set("tagProps", value.asInstanceOf[js.Any])
     @scala.inline
-    def validationState(value: AnonText): this.type = set("validationState", value.asInstanceOf[js.Any])
+    def validationState(value: Text): this.type = set("validationState", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: MultiInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

@@ -1,7 +1,7 @@
 package typingsSlinky.parquetjs.metadataInterfaceMod
 
 import typingsSlinky.nodeInt64.mod.^
-import typingsSlinky.parquetjs.AnonKey
+import typingsSlinky.parquetjs.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MetadataInterface extends js.Object {
   var created_by: String = js.native
-  var key_value_metadata: js.Array[AnonKey] = js.native
+  var key_value_metadata: js.Array[Key] = js.native
   var num_rows: ^ = js.native
   var row_groups: js.Array[MetadataRowGroupsInterface] = js.native
   var schema: js.Array[MetadataSchemaInterface] = js.native
@@ -20,7 +20,7 @@ object MetadataInterface {
   @scala.inline
   def apply(
     created_by: String,
-    key_value_metadata: js.Array[AnonKey],
+    key_value_metadata: js.Array[Key],
     num_rows: ^,
     row_groups: js.Array[MetadataRowGroupsInterface],
     schema: js.Array[MetadataSchemaInterface],
@@ -42,7 +42,7 @@ object MetadataInterface {
         ret
     }
     @scala.inline
-    def withKey_value_metadata(value: js.Array[AnonKey]): Self = {
+    def withKey_value_metadata(value: js.Array[Key]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("key_value_metadata")(value.asInstanceOf[js.Any])
         ret

@@ -1,12 +1,12 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonAnimation
-import typingsSlinky.echarts.AnonAnimationDelay
-import typingsSlinky.echarts.AnonAnimationDelayUpdate
-import typingsSlinky.echarts.AnonBarBorderColor
-import typingsSlinky.echarts.AnonDictunknownProperty
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonItemStyle
+import typingsSlinky.echarts.anon.Animation
+import typingsSlinky.echarts.anon.AnimationDelay
+import typingsSlinky.echarts.anon.AnimationDelayUpdate
+import typingsSlinky.echarts.anon.BarBorderColor
+import typingsSlinky.echarts.anon.DictunknownProperty
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.ItemStyle
 import typingsSlinky.echarts.echarts.EChartOption.SeriesBar.DataObject
 import typingsSlinky.echarts.echartsStrings.bar
 import scala.scalajs.js
@@ -448,7 +448,7 @@ trait SeriesBar_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-bar.emphasis
     */
-  var emphasis: js.UndefOr[AnonItemStyle] = js.native
+  var emphasis: js.UndefOr[ItemStyle] = js.native
   /**
     * Define what is encoded to for each dimension of `data`.
     * For example:
@@ -502,7 +502,7 @@ trait SeriesBar_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBarBorderColor] = js.native
+  var itemStyle: js.UndefOr[BarBorderColor] = js.native
   /**
     * Text label of , to explain some data information about graphic
     * item like value, name and so on.
@@ -514,7 +514,7 @@ trait SeriesBar_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.label
     */
-  var label: js.UndefOr[AnonDictunknownProperty] = js.native
+  var label: js.UndefOr[DictunknownProperty] = js.native
   /**
     * Whether to enable the optimization of large-scale data.
     * It could be set when large data causes performance problem.
@@ -556,21 +556,21 @@ trait SeriesBar_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.markArea
     */
-  var markArea: js.UndefOr[AnonAnimationDelayUpdate] = js.native
+  var markArea: js.UndefOr[AnimationDelayUpdate] = js.native
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.markLine
     */
-  var markLine: js.UndefOr[AnonAnimationDelay] = js.native
+  var markLine: js.UndefOr[AnimationDelay] = js.native
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.markPoint
     */
-  var markPoint: js.UndefOr[AnonAnimation] = js.native
+  var markPoint: js.UndefOr[Animation] = js.native
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -660,7 +660,7 @@ trait SeriesBar_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * @default
     * "bar"
@@ -965,7 +965,7 @@ object SeriesBar_ {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonItemStyle): Self = {
+    def withEmphasis(value: ItemStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -1001,7 +1001,7 @@ object SeriesBar_ {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonBarBorderColor): Self = {
+    def withItemStyle(value: BarBorderColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -1013,7 +1013,7 @@ object SeriesBar_ {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonDictunknownProperty): Self = {
+    def withLabel(value: DictunknownProperty): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -1061,7 +1061,7 @@ object SeriesBar_ {
         ret
     }
     @scala.inline
-    def withMarkArea(value: AnonAnimationDelayUpdate): Self = {
+    def withMarkArea(value: AnimationDelayUpdate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(value.asInstanceOf[js.Any])
         ret
@@ -1073,7 +1073,7 @@ object SeriesBar_ {
         ret
     }
     @scala.inline
-    def withMarkLine(value: AnonAnimationDelay): Self = {
+    def withMarkLine(value: AnimationDelay): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(value.asInstanceOf[js.Any])
         ret
@@ -1085,7 +1085,7 @@ object SeriesBar_ {
         ret
     }
     @scala.inline
-    def withMarkPoint(value: AnonAnimation): Self = {
+    def withMarkPoint(value: Animation): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(value.asInstanceOf[js.Any])
         ret
@@ -1169,7 +1169,7 @@ object SeriesBar_ {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

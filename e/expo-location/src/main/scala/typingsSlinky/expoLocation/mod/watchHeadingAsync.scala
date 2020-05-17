@@ -1,6 +1,6 @@
 package typingsSlinky.expoLocation.mod
 
-import typingsSlinky.expoLocation.AnonRemove
+import typingsSlinky.expoLocation.anon.Remove
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("expo-location", "watchHeadingAsync")
 @js.native
 object watchHeadingAsync extends js.Object {
-  def apply(callback: HeadingCallback): js.Promise[AnonRemove] = js.native
+  def apply(callback: HeadingCallback): js.Promise[Remove] = js.native
 }
 

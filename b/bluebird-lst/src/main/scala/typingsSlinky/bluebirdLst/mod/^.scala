@@ -1,7 +1,7 @@
 package typingsSlinky.bluebirdLst.mod
 
-import typingsSlinky.bluebirdLst.AnonCancellation
-import typingsSlinky.bluebirdLst.TypeofBluebird
+import typingsSlinky.bluebirdLst.anon.Cancellation
+import typingsSlinky.bluebirdLst.anon.TypeofBluebird
 import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.Map
 import scala.scalajs.js
@@ -80,7 +80,7 @@ object ^ extends js.Object {
     * Note that even though false is the default here, a development environment might be detected which automatically
     *  enables long stack traces and warnings.
     */
-  def config(options: AnonCancellation): Unit = js.native
+  def config(options: Cancellation): Unit = js.native
   /**
     * Returns a function that can use `yield` to run asynchronous code synchronously. This feature requires the support of generators which are drafted in the next version of the language. Node version greater than `0.11.2` is required and needs to be executed with the `--harmony-generators` (or `--harmony`) command-line switch.
     */

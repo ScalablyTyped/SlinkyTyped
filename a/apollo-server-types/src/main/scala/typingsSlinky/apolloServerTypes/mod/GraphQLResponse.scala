@@ -1,6 +1,6 @@
 package typingsSlinky.apolloServerTypes.mod
 
-import typingsSlinky.apolloServerTypes.PickResponseheadersPartia
+import typingsSlinky.apolloServerTypes.anon.PickResponseheadersPartia
 import typingsSlinky.graphql.formatErrorMod.GraphQLFormattedError
 import typingsSlinky.std.Record
 import scala.scalajs.js

@@ -42,18 +42,6 @@ object UnsuccessfulHandshakeMessage {
         ret
     }
     @scala.inline
-    def withReestablish(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reestablish")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReestablish: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reestablish")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withSupportedConnectionTypes(value: js.Array[ConnectionType]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("supportedConnectionTypes")(value.asInstanceOf[js.Any])

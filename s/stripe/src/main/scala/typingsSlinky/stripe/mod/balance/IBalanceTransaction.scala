@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.balance
 
-import typingsSlinky.stripe.AnonAmount
+import typingsSlinky.stripe.anon.Amount
 import typingsSlinky.stripe.mod.IList
 import typingsSlinky.stripe.mod.IResourceObject
 import typingsSlinky.stripe.mod.transfers.ITransfer
@@ -32,7 +32,7 @@ trait IBalanceTransaction extends IResourceObject {
   /**
     * Detailed breakdown of fees (in cents/pence) paid for this transaction
     */
-  var fee_details: js.Array[AnonAmount] = js.native
+  var fee_details: js.Array[Amount] = js.native
   /**
     * Net amount of the transaction, in cents.
     */
@@ -66,7 +66,7 @@ object IBalanceTransaction {
     created: Double,
     currency: String,
     fee: Double,
-    fee_details: js.Array[AnonAmount],
+    fee_details: js.Array[Amount],
     id: String,
     net: Double,
     `object`: String,
@@ -116,7 +116,7 @@ object IBalanceTransaction {
         ret
     }
     @scala.inline
-    def withFee_details(value: js.Array[AnonAmount]): Self = {
+    def withFee_details(value: js.Array[Amount]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fee_details")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.baseui.dataTableMod
 
-import typingsSlinky.baseui.AnonEvent
+import typingsSlinky.baseui.anon.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait RowActionT extends js.Object {
   var label: String = js.native
   var renderIcon: js.Any = js.native
-  def onClick(params: AnonEvent): js.Any = js.native
+  def onClick(params: Event): js.Any = js.native
 }
 
 object RowActionT {
   @scala.inline
-  def apply(label: String, onClick: AnonEvent => js.Any, renderIcon: js.Any): RowActionT = {
+  def apply(label: String, onClick: Event => js.Any, renderIcon: js.Any): RowActionT = {
     val __obj = js.Dynamic.literal(label = label.asInstanceOf[js.Any], onClick = js.Any.fromFunction1(onClick), renderIcon = renderIcon.asInstanceOf[js.Any])
     __obj.asInstanceOf[RowActionT]
   }
@@ -31,7 +31,7 @@ object RowActionT {
         ret
     }
     @scala.inline
-    def withOnClick(value: AnonEvent => js.Any): Self = {
+    def withOnClick(value: Event => js.Any): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret

@@ -9,5 +9,4 @@ package object sourceSourceMod {
     /* p0 */ typingsSlinky.ol.pluggableMapMod.FrameState, 
     java.lang.String | js.Array[java.lang.String]
   ]
-  type AttributionLike = java.lang.String | js.Array[java.lang.String] | typingsSlinky.ol.sourceSourceMod.Attribution
 }

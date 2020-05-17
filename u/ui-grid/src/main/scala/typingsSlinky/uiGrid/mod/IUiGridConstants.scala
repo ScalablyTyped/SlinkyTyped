@@ -1,12 +1,12 @@
 package typingsSlinky.uiGrid.mod
 
-import typingsSlinky.uiGrid.AnonALL
-import typingsSlinky.uiGrid.AnonALT
-import typingsSlinky.uiGrid.AnonALWAYS
-import typingsSlinky.uiGrid.AnonAvg
-import typingsSlinky.uiGrid.AnonCOLUMNHEADERCLICK
-import typingsSlinky.uiGrid.AnonCONTAINS
-import typingsSlinky.uiGrid.AnonDOWN
+import typingsSlinky.uiGrid.anon.ALL
+import typingsSlinky.uiGrid.anon.ALT
+import typingsSlinky.uiGrid.anon.ALWAYS
+import typingsSlinky.uiGrid.anon.Avg
+import typingsSlinky.uiGrid.anon.COLUMNHEADERCLICK
+import typingsSlinky.uiGrid.anon.CONTAINS
+import typingsSlinky.uiGrid.anon.DOWN
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,13 +30,13 @@ trait IUiGridConstants extends js.Object {
   var MODEL_COL_FIELD: js.RegExp = js.native
   var TEMPLATE_REGEXP: js.RegExp = js.native
   var TOOLTIP: js.RegExp = js.native
-  var aggregationTypes: AnonAvg = js.native
-  var dataChange: AnonALL = js.native
-  var events: AnonCOLUMNHEADERCLICK = js.native
-  var filter: AnonCONTAINS = js.native
-  var keymap: AnonALT = js.native
-  var scrollDirection: AnonDOWN = js.native
-  var scrollbars: AnonALWAYS = js.native
+  var aggregationTypes: Avg = js.native
+  var dataChange: ALL = js.native
+  var events: COLUMNHEADERCLICK = js.native
+  var filter: CONTAINS = js.native
+  var keymap: ALT = js.native
+  var scrollDirection: DOWN = js.native
+  var scrollbars: ALWAYS = js.native
 }
 
 object IUiGridConstants {
@@ -59,13 +59,13 @@ object IUiGridConstants {
     MODEL_COL_FIELD: js.RegExp,
     TEMPLATE_REGEXP: js.RegExp,
     TOOLTIP: js.RegExp,
-    aggregationTypes: AnonAvg,
-    dataChange: AnonALL,
-    events: AnonCOLUMNHEADERCLICK,
-    filter: AnonCONTAINS,
-    keymap: AnonALT,
-    scrollDirection: AnonDOWN,
-    scrollbars: AnonALWAYS
+    aggregationTypes: Avg,
+    dataChange: ALL,
+    events: COLUMNHEADERCLICK,
+    filter: CONTAINS,
+    keymap: ALT,
+    scrollDirection: DOWN,
+    scrollbars: ALWAYS
   ): IUiGridConstants = {
     val __obj = js.Dynamic.literal(APOS_REGEXP = APOS_REGEXP.asInstanceOf[js.Any], ASC = ASC.asInstanceOf[js.Any], BRACKET_REGEXP = BRACKET_REGEXP.asInstanceOf[js.Any], COL_CLASS_PREFIX = COL_CLASS_PREFIX.asInstanceOf[js.Any], COL_FIELD = COL_FIELD.asInstanceOf[js.Any], CURRENCY_SYMBOLS = CURRENCY_SYMBOLS.asInstanceOf[js.Any], CUSTOM_FILTERS = CUSTOM_FILTERS.asInstanceOf[js.Any], DESC = DESC.asInstanceOf[js.Any], DISPLAY_CELL_TEMPLATE = DISPLAY_CELL_TEMPLATE.asInstanceOf[js.Any], DOT_REGEXP = DOT_REGEXP.asInstanceOf[js.Any], FUNC_REGEXP = FUNC_REGEXP.asInstanceOf[js.Any], LOG_DEBUG_MESSAGES = LOG_DEBUG_MESSAGES.asInstanceOf[js.Any], LOG_ERROR_MESSAGES = LOG_ERROR_MESSAGES.asInstanceOf[js.Any], LOG_WARN_MESSAGES = LOG_WARN_MESSAGES.asInstanceOf[js.Any], MODEL_COL_FIELD = MODEL_COL_FIELD.asInstanceOf[js.Any], TEMPLATE_REGEXP = TEMPLATE_REGEXP.asInstanceOf[js.Any], TOOLTIP = TOOLTIP.asInstanceOf[js.Any], aggregationTypes = aggregationTypes.asInstanceOf[js.Any], dataChange = dataChange.asInstanceOf[js.Any], events = events.asInstanceOf[js.Any], filter = filter.asInstanceOf[js.Any], keymap = keymap.asInstanceOf[js.Any], scrollDirection = scrollDirection.asInstanceOf[js.Any], scrollbars = scrollbars.asInstanceOf[js.Any])
     __obj.asInstanceOf[IUiGridConstants]
@@ -179,43 +179,43 @@ object IUiGridConstants {
         ret
     }
     @scala.inline
-    def withAggregationTypes(value: AnonAvg): Self = {
+    def withAggregationTypes(value: Avg): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("aggregationTypes")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withDataChange(value: AnonALL): Self = {
+    def withDataChange(value: ALL): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataChange")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withEvents(value: AnonCOLUMNHEADERCLICK): Self = {
+    def withEvents(value: COLUMNHEADERCLICK): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withFilter(value: AnonCONTAINS): Self = {
+    def withFilter(value: CONTAINS): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withKeymap(value: AnonALT): Self = {
+    def withKeymap(value: ALT): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keymap")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withScrollDirection(value: AnonDOWN): Self = {
+    def withScrollDirection(value: DOWN): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollDirection")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withScrollbars(value: AnonALWAYS): Self = {
+    def withScrollbars(value: ALWAYS): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollbars")(value.asInstanceOf[js.Any])
         ret

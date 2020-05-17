@@ -1,6 +1,7 @@
 package typingsSlinky.reduxDevtoolsExtension
 
 import typingsSlinky.redux.mod.StoreEnhancer
+import typingsSlinky.reduxDevtoolsExtension.anon.FnCall
 import typingsSlinky.reduxDevtoolsExtension.mod.EnhancerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,5 +1,6 @@
 package typingsSlinky.sketchapp
 
+import typingsSlinky.sketchapp.anon.Data
 import typingsSlinky.sketchapp.sketchappStrings.imageData
 import typingsSlinky.sketchapp.sketchappStrings.jSONOriginalDataReference
 import scala.scalajs.js
@@ -11,19 +12,13 @@ trait SketchMSImageDataReference extends js.Object {
   var _class: jSONOriginalDataReference = js.native
   var _ref: String = js.native
   var _ref_class: imageData = js.native
-  var data: AnonData = js.native
-  var sha1: AnonData = js.native
+  var data: Data = js.native
+  var sha1: Data = js.native
 }
 
 object SketchMSImageDataReference {
   @scala.inline
-  def apply(
-    _class: jSONOriginalDataReference,
-    _ref: String,
-    _ref_class: imageData,
-    data: AnonData,
-    sha1: AnonData
-  ): SketchMSImageDataReference = {
+  def apply(_class: jSONOriginalDataReference, _ref: String, _ref_class: imageData, data: Data, sha1: Data): SketchMSImageDataReference = {
     val __obj = js.Dynamic.literal(_class = _class.asInstanceOf[js.Any], _ref = _ref.asInstanceOf[js.Any], _ref_class = _ref_class.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], sha1 = sha1.asInstanceOf[js.Any])
     __obj.asInstanceOf[SketchMSImageDataReference]
   }
@@ -52,13 +47,13 @@ object SketchMSImageDataReference {
         ret
     }
     @scala.inline
-    def withData(value: AnonData): Self = {
+    def withData(value: Data): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSha1(value: AnonData): Self = {
+    def withSha1(value: Data): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sha1")(value.asInstanceOf[js.Any])
         ret

@@ -7,7 +7,7 @@ import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.inherit
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.initial
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.unset
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.uifabricFoundation.AnonSlots
+import typingsSlinky.uifabricFoundation.anon.Slots
 import typingsSlinky.uifabricFoundation.libIcomponentMod.IStylesFunctionOrObject
 import typingsSlinky.uifabricFoundation.libIcomponentMod.ITokenFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation._
 trait IStackProps
   extends HTMLAttributes[HTMLElement]
      with IStackSlots
-     with AnonSlots[IStackSlots] {
+     with Slots[IStackSlots] {
   /**
     * Defines how to render the Stack.
     */

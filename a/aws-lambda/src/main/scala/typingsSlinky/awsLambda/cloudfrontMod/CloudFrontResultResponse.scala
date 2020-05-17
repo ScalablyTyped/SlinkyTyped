@@ -2,13 +2,16 @@ package typingsSlinky.awsLambda.cloudfrontMod
 
 import typingsSlinky.awsLambda.awsLambdaStrings.base64
 import typingsSlinky.awsLambda.awsLambdaStrings.text_
-import typingsSlinky.awsLambda.cloudfrontRequestMod._CloudFrontRequestResult
+import typingsSlinky.awsLambda.cloudfrontRequestMod.CloudFrontRequestResult
+import typingsSlinky.awsLambda.cloudfrontResponseMod.CloudFrontResponseResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CloudFrontResultResponse extends _CloudFrontRequestResult {
+trait CloudFrontResultResponse
+  extends CloudFrontRequestResult
+     with CloudFrontResponseResult {
   var body: js.UndefOr[String] = js.native
   var bodyEncoding: js.UndefOr[text_ | base64] = js.native
   var headers: js.UndefOr[CloudFrontHeaders] = js.native

@@ -1,13 +1,13 @@
 package typingsSlinky.pdfmake.interfacesMod
 
-import typingsSlinky.pdfmake.AnonLength
+import typingsSlinky.pdfmake.anon.Length
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait LineStyle extends js.Object {
-  var dash: js.UndefOr[AnonLength] = js.native
+  var dash: js.UndefOr[Length] = js.native
 }
 
 object LineStyle {
@@ -23,7 +23,7 @@ object LineStyle {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDash(value: AnonLength): Self = {
+    def withDash(value: Length): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dash")(value.asInstanceOf[js.Any])
         ret

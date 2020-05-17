@@ -17,10 +17,8 @@ import scala.scalajs.js.annotation._
   * @property {number[]|pc.Asset[]} assets An array of asset ids or assets that contain localization data in the expected format. I18n will automatically load
   * translations from these assets as the assets are loaded and it will also automatically unload translations if the assets get removed or unloaded at runtime.
   */
-@JSGlobal("pc.I18n")
 @js.native
-class I18n protected () extends EventHandler {
-  def this(app: Application) = this()
+trait I18n extends EventHandler {
   /**
     * An array of asset ids or assets that contain localization data in the expected format. I18n will automatically load
     * translations from these assets as the assets are loaded and it will also automatically unload translations if the assets get removed or unloaded at runtime.

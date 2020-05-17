@@ -1,6 +1,6 @@
 package typingsSlinky.baseui.ratingMod
 
-import typingsSlinky.baseui.AnonValueNumber
+import typingsSlinky.baseui.anon.ValueNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait StarRatingProps extends js.Object {
   var numItems: js.UndefOr[Double] = js.native
-  var onChange: js.UndefOr[js.Function1[/* args */ AnonValueNumber, _]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* args */ ValueNumber, _]] = js.native
   var overrides: js.UndefOr[RatingOverrides] = js.native
   var value: js.UndefOr[Double] = js.native
 }
@@ -38,7 +38,7 @@ object StarRatingProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* args */ AnonValueNumber => _): Self = {
+    def withOnChange(value: /* args */ ValueNumber => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

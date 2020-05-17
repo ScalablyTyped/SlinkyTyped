@@ -4,21 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("FirebaseFirestore.Timestamp")
 @js.native
-class Timestamp protected () extends js.Object {
-  /**
-    * Creates a new timestamp.
-    *
-    * @param seconds The number of seconds of UTC time since Unix epoch
-    * 1970-01-01T00:00:00Z. Must be from 0001-01-01T00:00:00Z to
-    * 9999-12-31T23:59:59Z inclusive.
-    * @param nanoseconds The non-negative fractions of a second at nanosecond
-    * resolution. Negative second values with fractions must still have
-    * non-negative nanoseconds values that count forward in time. Must be from
-    * 0 to 999,999,999 inclusive.
-    */
-  def this(seconds: Double, nanoseconds: Double) = this()
+trait Timestamp extends js.Object {
   /** The non-negative fractions of a second at nanosecond resolution. */
   val nanoseconds: Double = js.native
   /**
@@ -49,32 +36,55 @@ class Timestamp protected () extends js.Object {
   def toMillis(): Double = js.native
 }
 
-/* static members */
-@JSGlobal("FirebaseFirestore.Timestamp")
-@js.native
-object Timestamp extends js.Object {
-  /**
-    * Creates a new timestamp from the given date.
-    *
-    * @param date The date to initialize the `Timestamp` from.
-    * @return A new `Timestamp` representing the same point in time as the
-    * given date.
-    */
-  def fromDate(date: js.Date): Timestamp = js.native
-  /**
-    * Creates a new timestamp from the given number of milliseconds.
-    *
-    * @param milliseconds Number of milliseconds since Unix epoch
-    * 1970-01-01T00:00:00Z.
-    * @return A new `Timestamp` representing the same point in time as the
-    * given number of milliseconds.
-    */
-  def fromMillis(milliseconds: Double): Timestamp = js.native
-  /**
-    * Creates a new timestamp with the current date, with millisecond precision.
-    *
-    * @return A new `Timestamp` representing the current date.
-    */
-  def now(): Timestamp = js.native
+object Timestamp {
+  @scala.inline
+  def apply(
+    isEqual: Timestamp => Boolean,
+    nanoseconds: Double,
+    seconds: Double,
+    toDate: () => js.Date,
+    toMillis: () => Double
+  ): Timestamp = {
+    val __obj = js.Dynamic.literal(isEqual = js.Any.fromFunction1(isEqual), nanoseconds = nanoseconds.asInstanceOf[js.Any], seconds = seconds.asInstanceOf[js.Any], toDate = js.Any.fromFunction0(toDate), toMillis = js.Any.fromFunction0(toMillis))
+    __obj.asInstanceOf[Timestamp]
+  }
+  @scala.inline
+  implicit class TimestampOps[Self <: Timestamp] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsEqual(value: Timestamp => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEqual")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withNanoseconds(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nanoseconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSeconds(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToDate(value: () => js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toDate")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withToMillis(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toMillis")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.azdata.mod
 
-import typingsSlinky.azdata.FormComponentlayoutFormIt
+import typingsSlinky.azdata.anon.FormComponentlayoutFormIt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

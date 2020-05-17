@@ -1,5 +1,6 @@
 package typingsSlinky.reactDatepicker.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
@@ -12,15 +13,14 @@ import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.dateFns.mod.Locale
 import typingsSlinky.popperJs.mod.Modifiers
-import typingsSlinky.reactDatepicker.AnonChangeMonth
-import typingsSlinky.reactDatepicker.AnonChildren
-import typingsSlinky.reactDatepicker.AnonCode
+import typingsSlinky.reactDatepicker.anon.ChangeMonth
+import typingsSlinky.reactDatepicker.anon.Children
+import typingsSlinky.reactDatepicker.anon.Code
 import typingsSlinky.reactDatepicker.mod.HighlightDates
 import typingsSlinky.reactDatepicker.mod.ReactDatePickerProps
 import typingsSlinky.reactDatepicker.mod.default
 import typingsSlinky.reactDatepicker.reactDatepickerStrings.scroll
 import typingsSlinky.reactDatepicker.reactDatepickerStrings.select
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,7 +47,7 @@ object ReactDatepicker {
     @scala.inline
     def calendarClassName(value: String): this.type = set("calendarClassName", value.asInstanceOf[js.Any])
     @scala.inline
-    def calendarContainer(value: /* props */ AnonChildren => TagMod[Any]): this.type = set("calendarContainer", js.Any.fromFunction1(value))
+    def calendarContainer(value: /* props */ Children => TagMod[Any]): this.type = set("calendarContainer", js.Any.fromFunction1(value))
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -143,7 +143,7 @@ object ReactDatepicker {
     @scala.inline
     def onInputClick(value: () => Unit): this.type = set("onInputClick", js.Any.fromFunction0(value))
     @scala.inline
-    def onInputError(value: /* err */ AnonCode => Unit): this.type = set("onInputError", js.Any.fromFunction1(value))
+    def onInputError(value: /* err */ Code => Unit): this.type = set("onInputError", js.Any.fromFunction1(value))
     @scala.inline
     def onKeyDown(value: /* event */ SyntheticKeyboardEvent[HTMLDivElement] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
     @scala.inline
@@ -151,10 +151,10 @@ object ReactDatepicker {
     @scala.inline
     def onMonthMouseLeave(value: () => Unit): this.type = set("onMonthMouseLeave", js.Any.fromFunction0(value))
     @scala.inline
-    def onSelect(value: (/* date */ js.Date, /* event */ js.UndefOr[SyntheticEvent[Event_, _]]) => Unit): this.type = set("onSelect", js.Any.fromFunction2(value))
+    def onSelect(value: (/* date */ js.Date, /* event */ js.UndefOr[SyntheticEvent[Event, _]]) => Unit): this.type = set("onSelect", js.Any.fromFunction2(value))
     @scala.inline
     def onWeekSelect(
-      value: (/* firstDayOfWeek */ js.Date, /* weekNumber */ String | Double, /* event */ js.UndefOr[SyntheticEvent[Event_, _]]) => Unit
+      value: (/* firstDayOfWeek */ js.Date, /* weekNumber */ String | Double, /* event */ js.UndefOr[SyntheticEvent[Event, _]]) => Unit
     ): this.type = set("onWeekSelect", js.Any.fromFunction3(value))
     @scala.inline
     def onYearChange(value: /* date */ js.Date => Unit): this.type = set("onYearChange", js.Any.fromFunction1(value))
@@ -169,7 +169,7 @@ object ReactDatepicker {
     @scala.inline
     def popperClassName(value: String): this.type = set("popperClassName", value.asInstanceOf[js.Any])
     @scala.inline
-    def popperContainer(value: /* props */ AnonChildren => TagMod[Any]): this.type = set("popperContainer", js.Any.fromFunction1(value))
+    def popperContainer(value: /* props */ Children => TagMod[Any]): this.type = set("popperContainer", js.Any.fromFunction1(value))
     @scala.inline
     def popperModifiers(value: Modifiers): this.type = set("popperModifiers", value.asInstanceOf[js.Any])
     @scala.inline
@@ -185,7 +185,7 @@ object ReactDatepicker {
     @scala.inline
     def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderCustomHeader(value: /* params */ AnonChangeMonth => TagMod[Any]): this.type = set("renderCustomHeader", js.Any.fromFunction1(value))
+    def renderCustomHeader(value: /* params */ ChangeMonth => TagMod[Any]): this.type = set("renderCustomHeader", js.Any.fromFunction1(value))
     @scala.inline
     def renderDayContents(value: (/* dayOfMonth */ Double, /* date */ js.UndefOr[js.Date]) => TagMod[Any]): this.type = set("renderDayContents", js.Any.fromFunction2(value))
     @scala.inline
@@ -270,7 +270,7 @@ object ReactDatepicker {
   
   def withProps(p: ReactDatePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(onChange: (js.UndefOr[js.Date | Null], js.UndefOr[SyntheticEvent[Event_, _]]) => Unit): Builder = {
+  def apply(onChange: (js.UndefOr[js.Date | Null], js.UndefOr[SyntheticEvent[Event, _]]) => Unit): Builder = {
     val __props = js.Dynamic.literal(onChange = js.Any.fromFunction2(onChange))
     new Builder(js.Array(this.component, __props.asInstanceOf[ReactDatePickerProps]))
   }

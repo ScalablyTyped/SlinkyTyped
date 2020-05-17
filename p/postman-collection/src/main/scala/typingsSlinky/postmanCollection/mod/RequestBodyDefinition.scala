@@ -1,13 +1,13 @@
 package typingsSlinky.postmanCollection.mod
 
-import typingsSlinky.postmanCollection.AnonSrcString
+import typingsSlinky.postmanCollection.anon.SrcString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait RequestBodyDefinition extends PropertyBaseDefinition {
-  var file: js.UndefOr[String | AnonSrcString] = js.native
+  var file: js.UndefOr[String | SrcString] = js.native
   var formdata: js.UndefOr[js.Array[FormParamDefinition] | PropertyList[FormParam]] = js.native
   var mode: String = js.native
   var raw: js.UndefOr[String] = js.native
@@ -33,7 +33,7 @@ object RequestBodyDefinition {
         ret
     }
     @scala.inline
-    def withFile(value: String | AnonSrcString): Self = {
+    def withFile(value: String | SrcString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
         ret

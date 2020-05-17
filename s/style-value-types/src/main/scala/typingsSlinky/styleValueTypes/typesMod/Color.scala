@@ -12,14 +12,8 @@ trait Color extends js.Object
 
 object Color {
   @scala.inline
-  def HSLA(hue: Double, lightness: Double, saturation: Double): Color = {
-    val __obj = js.Dynamic.literal(hue = hue.asInstanceOf[js.Any], lightness = lightness.asInstanceOf[js.Any], saturation = saturation.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Color]
-  }
+  implicit def apply(value: HSLA): Color = value.asInstanceOf[Color]
   @scala.inline
-  def RGBA(blue: Double, green: Double, red: Double): Color = {
-    val __obj = js.Dynamic.literal(blue = blue.asInstanceOf[js.Any], green = green.asInstanceOf[js.Any], red = red.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Color]
-  }
+  implicit def apply(value: RGBA): Color = value.asInstanceOf[Color]
 }
 

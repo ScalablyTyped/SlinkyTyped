@@ -1,12 +1,12 @@
 package typingsSlinky.reactVirtualKeyboard.components
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactVirtualKeyboard.mod.KeyboardProps
 import typingsSlinky.reactVirtualKeyboard.mod.ReactKeyboardOptions
 import typingsSlinky.reactVirtualKeyboard.mod.default
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,17 +22,17 @@ object ReactVirtualKeyboard {
        with StBuildingComponent[tag.type, default] {
     @scala.inline
     def callbackParent(
-      value: (/* event */ js.UndefOr[String | Event_], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+      value: (/* event */ js.UndefOr[String | Event], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
     ): this.type = set("callbackParent", js.Any.fromFunction3(value))
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
     def onAccepted(
-      value: (/* event */ js.UndefOr[String | Event_], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+      value: (/* event */ js.UndefOr[String | Event], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
     ): this.type = set("onAccepted", js.Any.fromFunction3(value))
     @scala.inline
     def onChange(
-      value: (/* event */ js.UndefOr[String | Event_], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+      value: (/* event */ js.UndefOr[String | Event], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
     ): this.type = set("onChange", js.Any.fromFunction3(value))
     @scala.inline
     def options(value: ReactKeyboardOptions): this.type = set("options", value.asInstanceOf[js.Any])

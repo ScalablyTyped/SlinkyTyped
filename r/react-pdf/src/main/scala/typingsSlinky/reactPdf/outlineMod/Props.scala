@@ -1,7 +1,7 @@
 package typingsSlinky.reactPdf.outlineMod
 
 import typingsSlinky.pdfjsDist.mod.PDFTreeNode
-import typingsSlinky.reactPdf.AnonPageNumber
+import typingsSlinky.reactPdf.anon.PageNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait Props extends js.Object {
     * Function called when an outline item has been clicked.
     * Usually, you would like to use this callback to move the user wherever they requested to.
     */
-  var onItemClick: js.UndefOr[js.Function1[/* hasPageNumber */ AnonPageNumber, Unit]] = js.native
+  var onItemClick: js.UndefOr[js.Function1[/* hasPageNumber */ PageNumber, Unit]] = js.native
   /**
     * Function called in case of an error while retrieving the outline.
     */
@@ -53,7 +53,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withOnItemClick(value: /* hasPageNumber */ AnonPageNumber => Unit): Self = {
+    def withOnItemClick(value: /* hasPageNumber */ PageNumber => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction1(value))
         ret

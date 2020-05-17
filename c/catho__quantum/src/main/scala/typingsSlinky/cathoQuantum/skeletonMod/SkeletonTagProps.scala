@@ -1,6 +1,6 @@
 package typingsSlinky.cathoQuantum.skeletonMod
 
-import typingsSlinky.cathoQuantum.AnonBaseFontSizeNumber
+import typingsSlinky.cathoQuantum.anon.BaseFontSizeNumber
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.large
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.medium
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.small
@@ -12,12 +12,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SkeletonTagProps extends js.Object {
   var size: xsmall | small | medium | large = js.native
-  var theme: AnonBaseFontSizeNumber = js.native
+  var theme: BaseFontSizeNumber = js.native
 }
 
 object SkeletonTagProps {
   @scala.inline
-  def apply(size: xsmall | small | medium | large, theme: AnonBaseFontSizeNumber): SkeletonTagProps = {
+  def apply(size: xsmall | small | medium | large, theme: BaseFontSizeNumber): SkeletonTagProps = {
     val __obj = js.Dynamic.literal(size = size.asInstanceOf[js.Any], theme = theme.asInstanceOf[js.Any])
     __obj.asInstanceOf[SkeletonTagProps]
   }
@@ -34,7 +34,7 @@ object SkeletonTagProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonBaseFontSizeNumber): Self = {
+    def withTheme(value: BaseFontSizeNumber): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

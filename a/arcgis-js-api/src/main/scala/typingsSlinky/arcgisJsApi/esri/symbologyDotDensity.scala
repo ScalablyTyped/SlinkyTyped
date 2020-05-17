@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -57,7 +56,48 @@ trait symbologyDotDensity extends js.Object {
   def getSchemesByTag(params: dotDensityGetSchemesByTagParams): js.Array[DotDensityScheme] = js.native
 }
 
-@JSGlobal("__esri.symbologyDotDensity")
-@js.native
-object symbologyDotDensity extends TopLevel[symbologyDotDensity]
+object symbologyDotDensity {
+  @scala.inline
+  def apply(
+    cloneScheme: DotDensityScheme => DotDensityScheme,
+    getSchemeByName: dotDensityGetSchemeByNameParams => DotDensityScheme,
+    getSchemes: dotDensityGetSchemesParams => DotDensitySchemes,
+    getSchemesByTag: dotDensityGetSchemesByTagParams => js.Array[DotDensityScheme]
+  ): symbologyDotDensity = {
+    val __obj = js.Dynamic.literal(cloneScheme = js.Any.fromFunction1(cloneScheme), getSchemeByName = js.Any.fromFunction1(getSchemeByName), getSchemes = js.Any.fromFunction1(getSchemes), getSchemesByTag = js.Any.fromFunction1(getSchemesByTag))
+    __obj.asInstanceOf[symbologyDotDensity]
+  }
+  @scala.inline
+  implicit class symbologyDotDensityOps[Self <: symbologyDotDensity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloneScheme(value: DotDensityScheme => DotDensityScheme): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloneScheme")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetSchemeByName(value: dotDensityGetSchemeByNameParams => DotDensityScheme): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSchemeByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetSchemes(value: dotDensityGetSchemesParams => DotDensitySchemes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSchemes")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetSchemesByTag(value: dotDensityGetSchemesByTagParams => js.Array[DotDensityScheme]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSchemesByTag")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

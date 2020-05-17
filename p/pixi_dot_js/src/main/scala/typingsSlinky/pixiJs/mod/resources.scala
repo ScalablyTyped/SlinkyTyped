@@ -5,12 +5,12 @@ import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLVideoElement
 import org.scalajs.dom.raw.SVGElement
-import typingsSlinky.pixiJs.AnonAutoLoad
-import typingsSlinky.pixiJs.AnonAutoPlay
-import typingsSlinky.pixiJs.AnonCreateBitmap
-import typingsSlinky.pixiJs.AnonHeightWidth
-import typingsSlinky.pixiJs.AnonWidth
 import typingsSlinky.pixiJs.PIXI.ISize
+import typingsSlinky.pixiJs.anon.AutoLoad
+import typingsSlinky.pixiJs.anon.AutoPlay
+import typingsSlinky.pixiJs.anon.CreateBitmap
+import typingsSlinky.pixiJs.anon.HeightWidth
+import typingsSlinky.pixiJs.anon.Width
 import typingsSlinky.std.ImageBitmap
 import typingsSlinky.std.OffscreenCanvas
 import scala.scalajs.js
@@ -48,8 +48,8 @@ object resources extends js.Object {
     extends typingsSlinky.pixiJs.PIXI.resources.ArrayResource {
     def this(source: js.Array[_]) = this()
     def this(source: Double) = this()
-    def this(source: js.Array[_], options: AnonWidth) = this()
-    def this(source: Double, options: AnonWidth) = this()
+    def this(source: js.Array[_], options: Width) = this()
+    def this(source: Double, options: Width) = this()
   }
   
   /**
@@ -76,9 +76,9 @@ object resources extends js.Object {
   @js.native
   class BufferResource protected ()
     extends typingsSlinky.pixiJs.PIXI.resources.BufferResource {
-    def this(source: js.typedarray.Float32Array, options: AnonHeightWidth) = this()
-    def this(source: js.typedarray.Uint32Array, options: AnonHeightWidth) = this()
-    def this(source: js.typedarray.Uint8Array, options: AnonHeightWidth) = this()
+    def this(source: js.typedarray.Float32Array, options: HeightWidth) = this()
+    def this(source: js.typedarray.Uint32Array, options: HeightWidth) = this()
+    def this(source: js.typedarray.Uint8Array, options: HeightWidth) = this()
   }
   
   /**
@@ -110,7 +110,7 @@ object resources extends js.Object {
   class CubeResource ()
     extends typingsSlinky.pixiJs.PIXI.resources.CubeResource {
     def this(source: js.Array[String | typingsSlinky.pixiJs.PIXI.resources.Resource]) = this()
-    def this(source: js.Array[String | typingsSlinky.pixiJs.PIXI.resources.Resource], options: AnonWidth) = this()
+    def this(source: js.Array[String | typingsSlinky.pixiJs.PIXI.resources.Resource], options: Width) = this()
   }
   
   /**
@@ -180,7 +180,7 @@ object resources extends js.Object {
   class SVGResource protected ()
     extends typingsSlinky.pixiJs.PIXI.resources.SVGResource {
     def this(source: String) = this()
-    def this(source: String, options: AnonAutoLoad) = this()
+    def this(source: String, options: AutoLoad) = this()
   }
   
   /**
@@ -203,10 +203,10 @@ object resources extends js.Object {
     def this(source: js.Any) = this()
     def this(source: js.Array[String | _]) = this()
     def this(source: HTMLVideoElement) = this()
-    def this(source: String, options: AnonAutoPlay) = this()
-    def this(source: js.Any, options: AnonAutoPlay) = this()
-    def this(source: js.Array[String | _], options: AnonAutoPlay) = this()
-    def this(source: HTMLVideoElement, options: AnonAutoPlay) = this()
+    def this(source: String, options: AutoPlay) = this()
+    def this(source: js.Any, options: AutoPlay) = this()
+    def this(source: js.Array[String | _], options: AutoPlay) = this()
+    def this(source: HTMLVideoElement, options: AutoPlay) = this()
   }
   
   /**
@@ -266,9 +266,9 @@ object resources extends js.Object {
     * @return {PIXI.resources.Resource} The created resource.
     */
   def autoDetectResource(source: String): typingsSlinky.pixiJs.PIXI.resources.Resource = js.native
-  def autoDetectResource(source: String, options: AnonCreateBitmap): typingsSlinky.pixiJs.PIXI.resources.Resource = js.native
+  def autoDetectResource(source: String, options: CreateBitmap): typingsSlinky.pixiJs.PIXI.resources.Resource = js.native
   def autoDetectResource(source: js.Any): typingsSlinky.pixiJs.PIXI.resources.Resource = js.native
-  def autoDetectResource(source: js.Any, options: AnonCreateBitmap): typingsSlinky.pixiJs.PIXI.resources.Resource = js.native
+  def autoDetectResource(source: js.Any, options: CreateBitmap): typingsSlinky.pixiJs.PIXI.resources.Resource = js.native
   /* static members */
   @js.native
   object BaseImageResource extends js.Object {

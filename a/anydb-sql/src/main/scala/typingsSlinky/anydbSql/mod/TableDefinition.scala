@@ -1,6 +1,6 @@
 package typingsSlinky.anydbSql.mod
 
-import typingsSlinky.anydbSql.AnonFrom
+import typingsSlinky.anydbSql.anon.From
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TableDefinition extends js.Object {
   var columns: Dictionary[ColumnDefinition] = js.native
-  var has: js.UndefOr[Dictionary[AnonFrom]] = js.native
+  var has: js.UndefOr[Dictionary[From]] = js.native
   var name: String = js.native
 }
 
@@ -37,7 +37,7 @@ object TableDefinition {
         ret
     }
     @scala.inline
-    def withHas(value: Dictionary[AnonFrom]): Self = {
+    def withHas(value: Dictionary[From]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("has")(value.asInstanceOf[js.Any])
         ret

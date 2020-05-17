@@ -2,7 +2,7 @@ package typingsSlinky.reactToastNotifications.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactToastNotifications.AnonToast
+import typingsSlinky.reactToastNotifications.anon.Toast
 import typingsSlinky.reactToastNotifications.mod.Placement
 import typingsSlinky.reactToastNotifications.mod.ToastProviderProps
 import scala.scalajs.js
@@ -23,7 +23,7 @@ object ToastProvider {
     @scala.inline
     def autoDismissTimeout(value: Double): this.type = set("autoDismissTimeout", value.asInstanceOf[js.Any])
     @scala.inline
-    def components(value: AnonToast): this.type = set("components", value.asInstanceOf[js.Any])
+    def components(value: Toast): this.type = set("components", value.asInstanceOf[js.Any])
     @scala.inline
     def placement(value: Placement): this.type = set("placement", value.asInstanceOf[js.Any])
     @scala.inline

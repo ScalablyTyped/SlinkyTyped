@@ -6,12 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Box2D.Dynamics.Joints.b2PulleyJointDef")
 @js.native
-/**
-		* Constructor.
-		**/
-class b2PulleyJointDef () extends b2JointDef {
+trait b2PulleyJointDef extends b2JointDef {
   /**
   		* The first ground anchor in world coordinates. This point never moves.
   		**/
@@ -58,5 +54,98 @@ class b2PulleyJointDef () extends b2JointDef {
   		* @param anchorB Anchor B.
   		**/
   def Initialize(bA: b2Body, bB: b2Body, gaA: b2Vec2, gaB: b2Vec2, anchorA: b2Vec2, anchorB: b2Vec2): Unit = js.native
+}
+
+object b2PulleyJointDef {
+  @scala.inline
+  def apply(
+    Initialize: (b2Body, b2Body, b2Vec2, b2Vec2, b2Vec2, b2Vec2) => Unit,
+    bodyA: b2Body,
+    bodyB: b2Body,
+    collideConnected: Boolean,
+    groundAnchorA: b2Vec2,
+    groundAnchorB: b2Vec2,
+    lengthA: Double,
+    lengthB: Double,
+    localAnchorA: b2Vec2,
+    localAnchorB: b2Vec2,
+    maxLengthA: Double,
+    maxLengthB: Double,
+    ratio: Double,
+    `type`: Double,
+    userData: js.Any
+  ): b2PulleyJointDef = {
+    val __obj = js.Dynamic.literal(Initialize = js.Any.fromFunction6(Initialize), bodyA = bodyA.asInstanceOf[js.Any], bodyB = bodyB.asInstanceOf[js.Any], collideConnected = collideConnected.asInstanceOf[js.Any], groundAnchorA = groundAnchorA.asInstanceOf[js.Any], groundAnchorB = groundAnchorB.asInstanceOf[js.Any], lengthA = lengthA.asInstanceOf[js.Any], lengthB = lengthB.asInstanceOf[js.Any], localAnchorA = localAnchorA.asInstanceOf[js.Any], localAnchorB = localAnchorB.asInstanceOf[js.Any], maxLengthA = maxLengthA.asInstanceOf[js.Any], maxLengthB = maxLengthB.asInstanceOf[js.Any], ratio = ratio.asInstanceOf[js.Any], userData = userData.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[b2PulleyJointDef]
+  }
+  @scala.inline
+  implicit class b2PulleyJointDefOps[Self <: b2PulleyJointDef] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInitialize(value: (b2Body, b2Body, b2Vec2, b2Vec2, b2Vec2, b2Vec2) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Initialize")(js.Any.fromFunction6(value))
+        ret
+    }
+    @scala.inline
+    def withGroundAnchorA(value: b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groundAnchorA")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGroundAnchorB(value: b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groundAnchorB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLengthA(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lengthA")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLengthB(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lengthB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocalAnchorA(value: b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localAnchorA")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocalAnchorB(value: b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localAnchorB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxLengthA(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLengthA")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxLengthB(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxLengthB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ratio")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

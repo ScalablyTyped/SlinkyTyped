@@ -1,6 +1,6 @@
 package typingsSlinky.jexl.mod
 
-import typingsSlinky.jexl.AnonInstantiable
+import typingsSlinky.jexl.anon.Instantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,6 +12,6 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait BuildableJexl extends Jexl {
-  var Jexl: AnonInstantiable = js.native
+  var Jexl: Instantiable = js.native
 }
 

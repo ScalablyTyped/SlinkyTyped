@@ -18,7 +18,6 @@ package object localIndexeddbSchemaMod {
   type DbMutationBatchKey = typingsSlinky.firebaseFirestore.coreTypesMod.BatchId
   type DbMutationQueueKey = java.lang.String
   type DbPrimaryClientKey = /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof DbPrimaryClient.key */ js.Any
-  type DbQuery = typingsSlinky.firebaseFirestore.firestoreProtoApiMod.QueryTarget | typingsSlinky.firebaseFirestore.firestoreProtoApiMod.DocumentsTarget
   type DbRemoteDocumentGlobalKey = /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof DbRemoteDocumentGlobal.key */ js.Any
   type DbRemoteDocumentKey = js.Array[java.lang.String]
   type DbTargetDocumentKey = js.Tuple2[

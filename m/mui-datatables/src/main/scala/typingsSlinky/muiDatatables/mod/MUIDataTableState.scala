@@ -1,6 +1,6 @@
 package typingsSlinky.muiDatatables.mod
 
-import typingsSlinky.muiDatatables.AnonData
+import typingsSlinky.muiDatatables.anon.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait MUIDataTableState extends js.Object {
   var columns: js.Array[MUIDataTableColumnState] = js.native
   var count: Double = js.native
   var data: js.Array[_] = js.native
-  var displayData: js.Array[AnonData] = js.native
+  var displayData: js.Array[Data] = js.native
   var expandedRows: MUIDataTableStateRows = js.native
   var filterData: js.Array[_] = js.native
   var filterList: js.Array[js.Array[String]] = js.native
@@ -30,7 +30,7 @@ object MUIDataTableState {
     columns: js.Array[MUIDataTableColumnState],
     count: Double,
     data: js.Array[_],
-    displayData: js.Array[AnonData],
+    displayData: js.Array[Data],
     expandedRows: MUIDataTableStateRows,
     filterData: js.Array[_],
     filterList: js.Array[js.Array[String]],
@@ -68,7 +68,7 @@ object MUIDataTableState {
         ret
     }
     @scala.inline
-    def withDisplayData(value: js.Array[AnonData]): Self = {
+    def withDisplayData(value: js.Array[Data]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("displayData")(value.asInstanceOf[js.Any])
         ret

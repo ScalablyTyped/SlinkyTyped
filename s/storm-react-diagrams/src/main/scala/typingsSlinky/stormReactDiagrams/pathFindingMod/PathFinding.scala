@@ -1,7 +1,7 @@
 package typingsSlinky.stormReactDiagrams.pathFindingMod
 
-import typingsSlinky.stormReactDiagrams.AnonEnd
-import typingsSlinky.stormReactDiagrams.AnonX
+import typingsSlinky.stormReactDiagrams.anon.End
+import typingsSlinky.stormReactDiagrams.anon.X
 import typingsSlinky.stormReactDiagrams.mod.DiagramEngine
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,15 +15,15 @@ trait PathFinding extends js.Object {
     * Taking as argument a fully unblocked walking matrix, this method
     * finds a direct path from point A to B.
     */
-  def calculateDirectPath(from: AnonX, to: AnonX): js.Array[js.Array[Double]] = js.native
+  def calculateDirectPath(from: X, to: X): js.Array[js.Array[Double]] = js.native
   /**
     * Puts everything together: merges the paths from/to the centre of the ports,
     * with the path calculated around other elements.
     */
   def calculateDynamicPath(
     routingMatrix: js.Array[js.Array[Double]],
-    start: AnonX,
-    end: AnonX,
+    start: X,
+    end: X,
     pathToStart: js.Array[js.Array[Double]],
     pathToEnd: js.Array[js.Array[Double]]
   ): js.Any = js.native
@@ -32,15 +32,15 @@ trait PathFinding extends js.Object {
     * determine the first walkable point found in the matrix that includes
     * blocked paths.
     */
-  def calculateLinkStartEndCoords(matrix: js.Array[js.Array[Double]], path: js.Array[js.Array[Double]]): AnonEnd = js.native
+  def calculateLinkStartEndCoords(matrix: js.Array[js.Array[Double]], path: js.Array[js.Array[Double]]): End = js.native
 }
 
 object PathFinding {
   @scala.inline
   def apply(
-    calculateDirectPath: (AnonX, AnonX) => js.Array[js.Array[Double]],
-    calculateDynamicPath: (js.Array[js.Array[Double]], AnonX, AnonX, js.Array[js.Array[Double]], js.Array[js.Array[Double]]) => js.Any,
-    calculateLinkStartEndCoords: (js.Array[js.Array[Double]], js.Array[js.Array[Double]]) => AnonEnd,
+    calculateDirectPath: (X, X) => js.Array[js.Array[Double]],
+    calculateDynamicPath: (js.Array[js.Array[Double]], X, X, js.Array[js.Array[Double]], js.Array[js.Array[Double]]) => js.Any,
+    calculateLinkStartEndCoords: (js.Array[js.Array[Double]], js.Array[js.Array[Double]]) => End,
     diagramEngine: DiagramEngine,
     instance: js.Any
   ): PathFinding = {
@@ -54,21 +54,21 @@ object PathFinding {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCalculateDirectPath(value: (AnonX, AnonX) => js.Array[js.Array[Double]]): Self = {
+    def withCalculateDirectPath(value: (X, X) => js.Array[js.Array[Double]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("calculateDirectPath")(js.Any.fromFunction2(value))
         ret
     }
     @scala.inline
     def withCalculateDynamicPath(
-      value: (js.Array[js.Array[Double]], AnonX, AnonX, js.Array[js.Array[Double]], js.Array[js.Array[Double]]) => js.Any
+      value: (js.Array[js.Array[Double]], X, X, js.Array[js.Array[Double]], js.Array[js.Array[Double]]) => js.Any
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("calculateDynamicPath")(js.Any.fromFunction5(value))
         ret
     }
     @scala.inline
-    def withCalculateLinkStartEndCoords(value: (js.Array[js.Array[Double]], js.Array[js.Array[Double]]) => AnonEnd): Self = {
+    def withCalculateLinkStartEndCoords(value: (js.Array[js.Array[Double]], js.Array[js.Array[Double]]) => End): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("calculateLinkStartEndCoords")(js.Any.fromFunction2(value))
         ret

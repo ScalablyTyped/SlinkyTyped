@@ -16,3 +16,22 @@ import scala.scalajs.js.annotation._
 */
 trait DeclarationName extends js.Object
 
+object DeclarationName {
+  @scala.inline
+  implicit def apply(value: BindingPattern): DeclarationName = value.asInstanceOf[DeclarationName]
+  @scala.inline
+  implicit def apply(value: ComputedPropertyName): DeclarationName = value.asInstanceOf[DeclarationName]
+  @scala.inline
+  implicit def apply(value: ElementAccessExpression): DeclarationName = value.asInstanceOf[DeclarationName]
+  @scala.inline
+  implicit def apply(value: EntityNameExpression): DeclarationName = value.asInstanceOf[DeclarationName]
+  @scala.inline
+  implicit def apply(value: Identifier): DeclarationName = value.asInstanceOf[DeclarationName]
+  @scala.inline
+  implicit def apply(value: NumericLiteral): DeclarationName = value.asInstanceOf[DeclarationName]
+  @scala.inline
+  implicit def apply(value: PrivateIdentifier): DeclarationName = value.asInstanceOf[DeclarationName]
+  @scala.inline
+  implicit def apply(value: StringLiteralLike): DeclarationName = value.asInstanceOf[DeclarationName]
+}
+

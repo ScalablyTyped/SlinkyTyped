@@ -1,7 +1,7 @@
 package typingsSlinky.ionicCore
 
 import typingsSlinky.ionicCore.actionSheetInterfaceMod.ActionSheetOptions
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonActionSheetElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonActionSheetElement
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayController
 import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
 import scala.scalajs.js

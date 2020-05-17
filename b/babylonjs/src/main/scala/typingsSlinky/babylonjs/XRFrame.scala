@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs
 
 import org.scalajs.dom.raw.EventTarget
+import typingsSlinky.babylonjs.anon.DetectedPlanes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +12,7 @@ trait XRFrame extends js.Object {
   // Anchors
   var trackedAnchors: js.UndefOr[XRAnchorSet] = js.native
   // Planes
-  var worldInformation: AnonDetectedPlanes = js.native
+  var worldInformation: DetectedPlanes = js.native
   def getPose(space: EventTarget, baseSpace: EventTarget): js.UndefOr[XRPose] = js.native
   def getViewerPose(referenceSpace: XRReferenceSpace): js.UndefOr[XRViewerPose] = js.native
 }
@@ -22,7 +23,7 @@ object XRFrame {
     getPose: (EventTarget, EventTarget) => js.UndefOr[XRPose],
     getViewerPose: XRReferenceSpace => js.UndefOr[XRViewerPose],
     session: XRSession,
-    worldInformation: AnonDetectedPlanes
+    worldInformation: DetectedPlanes
   ): XRFrame = {
     val __obj = js.Dynamic.literal(getPose = js.Any.fromFunction2(getPose), getViewerPose = js.Any.fromFunction1(getViewerPose), session = session.asInstanceOf[js.Any], worldInformation = worldInformation.asInstanceOf[js.Any])
     __obj.asInstanceOf[XRFrame]
@@ -52,7 +53,7 @@ object XRFrame {
         ret
     }
     @scala.inline
-    def withWorldInformation(value: AnonDetectedPlanes): Self = {
+    def withWorldInformation(value: DetectedPlanes): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("worldInformation")(value.asInstanceOf[js.Any])
         ret

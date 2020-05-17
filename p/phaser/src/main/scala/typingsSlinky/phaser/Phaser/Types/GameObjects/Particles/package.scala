@@ -20,17 +20,6 @@ package object Particles {
     /* value */ scala.Double, 
     scala.Unit
   ]
-  /* Rewritten from type alias, can be one of: 
-    - scala.Double
-    - js.Array[scala.Double]
-    - typingsSlinky.phaser.Phaser.Types.GameObjects.Particles.EmitterOpOnEmitCallback
-    - typingsSlinky.phaser.Phaser.Types.GameObjects.Particles.EmitterOpRandomConfig
-    - typingsSlinky.phaser.Phaser.Types.GameObjects.Particles.EmitterOpRandomMinMaxConfig
-    - typingsSlinky.phaser.Phaser.Types.GameObjects.Particles.EmitterOpRandomStartEndConfig
-    - typingsSlinky.phaser.Phaser.Types.GameObjects.Particles.EmitterOpSteppedConfig
-    - typingsSlinky.phaser.Phaser.Types.GameObjects.Particles.EmitterOpCustomEmitConfig
-  */
-  type EmitterOpOnEmitType = typingsSlinky.phaser.Phaser.Types.GameObjects.Particles._EmitterOpOnEmitType | js.Array[scala.Double] | scala.Double | typingsSlinky.phaser.Phaser.Types.GameObjects.Particles.EmitterOpOnEmitCallback
   /**
     * The returned value updates the property for the duration of the particle's life.
     */
@@ -41,12 +30,6 @@ package object Particles {
     /* value */ scala.Double, 
     scala.Unit
   ]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.phaser.Phaser.Types.GameObjects.Particles.EmitterOpOnUpdateCallback
-    - typingsSlinky.phaser.Phaser.Types.GameObjects.Particles.EmitterOpEaseConfig
-    - typingsSlinky.phaser.Phaser.Types.GameObjects.Particles.EmitterOpCustomUpdateConfig
-  */
-  type EmitterOpOnUpdateType = typingsSlinky.phaser.Phaser.Types.GameObjects.Particles._EmitterOpOnUpdateType | typingsSlinky.phaser.Phaser.Types.GameObjects.Particles.EmitterOpOnUpdateCallback
   type ParticleDeathCallback = js.Function1[
     /* particle */ typingsSlinky.phaser.Phaser.GameObjects.Particles.Particle, 
     scala.Unit

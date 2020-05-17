@@ -1,6 +1,6 @@
 package typingsSlinky.breeze.mod
 
-import typingsSlinky.breeze.AnonIsCaseSensitive
+import typingsSlinky.breeze.anon.IsCaseSensitive
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class LocalQueryComparisonOptions protected ()
   extends typingsSlinky.breeze.breeze.LocalQueryComparisonOptions {
-  def this(config: AnonIsCaseSensitive) = this()
+  def this(config: IsCaseSensitive) = this()
 }
 
 /* static members */

@@ -1,7 +1,7 @@
 package typingsSlinky.awsCryptoSupportsWebCrypto
 
 import org.scalajs.dom.crypto.SubtleCrypto
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation._
 @JSImport("@aws-crypto/supports-web-crypto/build/supportsWebCrypto", JSImport.Namespace)
 @js.native
 object supportsWebCryptoMod extends js.Object {
-  def supportsSecureRandom(window: Window_): Boolean = js.native
+  def supportsSecureRandom(window: Window): Boolean = js.native
   def supportsSubtleCrypto(subtle: SubtleCrypto): Boolean = js.native
-  def supportsWebCrypto(window: Window_): Boolean = js.native
+  def supportsWebCrypto(window: Window): Boolean = js.native
   def supportsZeroByteGCM(subtle: SubtleCrypto): js.Promise[Boolean] = js.native
 }
 

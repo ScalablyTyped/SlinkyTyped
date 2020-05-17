@@ -1,21 +1,23 @@
 package typingsSlinky.jqueryContextmenu
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
+import typingsSlinky.jqueryContextmenu.anon.Duration
+import typingsSlinky.jqueryContextmenu.anon.Hide
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait JQueryContextMenuOptions extends js.Object {
-  var animation: js.UndefOr[AnonDuration] = js.native
+  var animation: js.UndefOr[Duration] = js.native
   var appendTo: js.UndefOr[String] = js.native
   var autoHide: js.UndefOr[Boolean] = js.native
-  var build: js.UndefOr[js.Function2[/* triggerElement */ JQuery, /* e */ Event_, _]] = js.native
+  var build: js.UndefOr[js.Function2[/* triggerElement */ JQuery, /* e */ Event, _]] = js.native
   var callback: js.UndefOr[js.Function2[/* key */ js.Any, /* options */ js.Any, _]] = js.native
   var className: js.UndefOr[String] = js.native
   var delay: js.UndefOr[Double] = js.native
   var determinePosition: js.UndefOr[js.Function1[/* menu */ JQuery, Unit]] = js.native
-  var events: js.UndefOr[AnonHide] = js.native
+  var events: js.UndefOr[Hide] = js.native
   var itemClickEvent: js.UndefOr[String] = js.native
   var items: js.UndefOr[js.Any] = js.native
   var position: js.UndefOr[js.Function3[/* opt */ JQuery, /* x */ Double, /* y */ Double, Unit]] = js.native
@@ -45,7 +47,7 @@ object JQueryContextMenuOptions {
         ret
     }
     @scala.inline
-    def withAnimation(value: AnonDuration): Self = {
+    def withAnimation(value: Duration): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
         ret
@@ -81,7 +83,7 @@ object JQueryContextMenuOptions {
         ret
     }
     @scala.inline
-    def withBuild(value: (/* triggerElement */ JQuery, /* e */ Event_) => _): Self = {
+    def withBuild(value: (/* triggerElement */ JQuery, /* e */ Event) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("build")(js.Any.fromFunction2(value))
         ret
@@ -141,7 +143,7 @@ object JQueryContextMenuOptions {
         ret
     }
     @scala.inline
-    def withEvents(value: AnonHide): Self = {
+    def withEvents(value: Hide): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
         ret

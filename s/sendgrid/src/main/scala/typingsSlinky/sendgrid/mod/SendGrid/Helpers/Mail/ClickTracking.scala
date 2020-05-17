@@ -1,6 +1,6 @@
 package typingsSlinky.sendgrid.mod.SendGrid.Helpers.Mail
 
-import typingsSlinky.sendgrid.AnonEnable
+import typingsSlinky.sendgrid.anon.Enable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait ClickTracking extends js.Object {
   def getEnableText(): Boolean = js.native
   def setEnable(enabled: Boolean): Unit = js.native
   def setEnableText(enableText: Boolean): Unit = js.native
-  def toJSON(): AnonEnable = js.native
+  def toJSON(): Enable = js.native
 }
 
 object ClickTracking {
@@ -21,7 +21,7 @@ object ClickTracking {
     getEnableText: () => Boolean,
     setEnable: Boolean => Unit,
     setEnableText: Boolean => Unit,
-    toJSON: () => AnonEnable
+    toJSON: () => Enable
   ): ClickTracking = {
     val __obj = js.Dynamic.literal(getEnable = js.Any.fromFunction0(getEnable), getEnableText = js.Any.fromFunction0(getEnableText), setEnable = js.Any.fromFunction1(setEnable), setEnableText = js.Any.fromFunction1(setEnableText), toJSON = js.Any.fromFunction0(toJSON))
     __obj.asInstanceOf[ClickTracking]
@@ -57,7 +57,7 @@ object ClickTracking {
         ret
     }
     @scala.inline
-    def withToJSON(value: () => AnonEnable): Self = {
+    def withToJSON(value: () => Enable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
         ret

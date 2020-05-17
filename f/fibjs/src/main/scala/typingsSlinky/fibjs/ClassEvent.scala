@@ -4,18 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Class_Event")
 @js.native
-/**
-	 * 
-	 * @brief 事件对象构造函数
-	 * @param value 指定是否等待，为 true 时等待，缺省为 false
-	 * 
-	 * 
-	 * 
-	 */
-class ClassEvent () extends ClassLock {
-  def this(value: Boolean) = this()
+trait ClassEvent extends ClassLock {
   /**
   	 * 
   	 * @brief 重置事件（将事件状态改为false）

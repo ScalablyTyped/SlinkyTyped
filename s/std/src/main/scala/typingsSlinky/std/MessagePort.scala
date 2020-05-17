@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.std.stdStrings.message
 import typingsSlinky.std.stdStrings.messageerror
 import scala.scalajs.js
@@ -11,8 +10,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MessagePort
   extends EventTarget
-     with Transferable
-     with _MessageEventSource {
+     with MessageEventSource
+     with Transferable {
   var onmessage: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _]) | Null = js.native
   var onmessageerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MessageEvent, _]) | Null = js.native
   @JSName("addEventListener")
@@ -100,9 +99,4 @@ trait MessagePort
     */
   def start(): Unit = js.native
 }
-
-@JSGlobal("MessagePort")
-@js.native
-object MessagePort
-  extends Instantiable0[org.scalajs.dom.raw.MessagePort]
 

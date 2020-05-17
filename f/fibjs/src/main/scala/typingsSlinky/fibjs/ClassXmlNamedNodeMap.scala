@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 	* @brief XmlNamedNodeMap 对象表示一个无顺序的属性列表
 	* @detail 
 	*/
-@JSGlobal("Class_XmlNamedNodeMap")
 @js.native
-class ClassXmlNamedNodeMap () extends ClassObject {
+trait ClassXmlNamedNodeMap extends ClassObject {
   /**
   	 * class prop 
   	 *

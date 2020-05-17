@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientAnalytics.gapi.client.analytics
 
-import typingsSlinky.gapiClientAnalytics.AnonBucketId
-import typingsSlinky.gapiClientAnalytics.AnonDocumentId
+import typingsSlinky.gapiClientAnalytics.anon.BucketId
+import typingsSlinky.gapiClientAnalytics.anon.DocumentId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait UnsampledReport extends js.Object {
   /** Account ID to which this unsampled report belongs. */
   var accountId: js.UndefOr[String] = js.native
   /** Download details for a file stored in Google Cloud Storage. */
-  var cloudStorageDownloadDetails: js.UndefOr[AnonBucketId] = js.native
+  var cloudStorageDownloadDetails: js.UndefOr[BucketId] = js.native
   /** Time this unsampled report was created. */
   var created: js.UndefOr[String] = js.native
   /** The dimensions for the unsampled report. */
@@ -22,7 +22,7 @@ trait UnsampledReport extends js.Object {
     */
   var downloadType: js.UndefOr[String] = js.native
   /** Download details for a file stored in Google Drive. */
-  var driveDownloadDetails: js.UndefOr[AnonDocumentId] = js.native
+  var driveDownloadDetails: js.UndefOr[DocumentId] = js.native
   /** The end date for the unsampled report. */
   var `end-date`: js.UndefOr[String] = js.native
   /** The filters for the unsampled report. */
@@ -76,7 +76,7 @@ object UnsampledReport {
         ret
     }
     @scala.inline
-    def withCloudStorageDownloadDetails(value: AnonBucketId): Self = {
+    def withCloudStorageDownloadDetails(value: BucketId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cloudStorageDownloadDetails")(value.asInstanceOf[js.Any])
         ret
@@ -124,7 +124,7 @@ object UnsampledReport {
         ret
     }
     @scala.inline
-    def withDriveDownloadDetails(value: AnonDocumentId): Self = {
+    def withDriveDownloadDetails(value: DocumentId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("driveDownloadDetails")(value.asInstanceOf[js.Any])
         ret

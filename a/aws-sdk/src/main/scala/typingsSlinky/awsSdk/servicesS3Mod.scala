@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdk
 
+import typingsSlinky.awsSdk.anon.TypeofManagedUpload
 import typingsSlinky.awsSdk.managedUploadMod.ManagedUpload
 import typingsSlinky.awsSdk.managedUploadMod.ManagedUpload.ManagedUploadOptions
 import typingsSlinky.awsSdk.managedUploadMod.ManagedUpload.SendData

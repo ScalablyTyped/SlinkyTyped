@@ -2,7 +2,7 @@ package typingsSlinky.reactSelect.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactSelect.AnonOnKeyDown
+import typingsSlinky.reactSelect.anon.OnKeyDown
 import typingsSlinky.reactSelect.containersMod.ContainerProps
 import typingsSlinky.reactSelect.selectMod.Props
 import typingsSlinky.reactSelect.typesMod.ActionTypes
@@ -34,7 +34,7 @@ object SelectContainer {
     getStyles: (String, js.Any) => js.Object,
     getValue: () => ValueType[js.Any],
     hasValue: Boolean,
-    innerProps: AnonOnKeyDown,
+    innerProps: OnKeyDown,
     isDisabled: Boolean,
     isMulti: Boolean,
     isRtl: Boolean,

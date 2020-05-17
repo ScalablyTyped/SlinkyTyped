@@ -1,6 +1,6 @@
 package typingsSlinky.mobxReactDevtools.mod
 
-import typingsSlinky.mobxReactDevtools.AnonBottom
+import typingsSlinky.mobxReactDevtools.anon.Bottom
 import typingsSlinky.mobxReactDevtools.mobxReactDevtoolsStrings.bottomLeft
 import typingsSlinky.mobxReactDevtools.mobxReactDevtoolsStrings.bottomRight
 import typingsSlinky.mobxReactDevtools.mobxReactDevtoolsStrings.topLeft
@@ -15,7 +15,7 @@ trait IDevToolProps extends js.Object {
   var className: js.UndefOr[String] = js.native
   var highlightTimeout: js.UndefOr[Double] = js.native
   var noPanel: js.UndefOr[Boolean] = js.native
-  var position: js.UndefOr[topRight | bottomRight | bottomLeft | topLeft | AnonBottom] = js.native
+  var position: js.UndefOr[topRight | bottomRight | bottomLeft | topLeft | Bottom] = js.native
   var style: js.UndefOr[CSSProperties] = js.native
 }
 
@@ -68,7 +68,7 @@ object IDevToolProps {
         ret
     }
     @scala.inline
-    def withPosition(value: topRight | bottomRight | bottomLeft | topLeft | AnonBottom): Self = {
+    def withPosition(value: topRight | bottomRight | bottomLeft | topLeft | Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
         ret

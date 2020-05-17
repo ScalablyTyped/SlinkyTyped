@@ -7,15 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientSpreadsheet.PopupMenuShowing event.
   */
-@JSGlobal("ASPxClientSpreadsheetPopupMenuShowingEventArgs")
 @js.native
-class ASPxClientSpreadsheetPopupMenuShowingEventArgs protected () extends ASPxClientCancelEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientSpreadsheetPopupMenuShowingEventArgs class with the specified settings.
-    * @param menuItems Provides access to the context menu's item collection.
-    * @param menuType Specifies the currently displayed context menu's type.
-    */
-  def this(menuItems: js.Any, menuType: js.Any) = this()
+trait ASPxClientSpreadsheetPopupMenuShowingEventArgs extends ASPxClientCancelEventArgs {
   /**
     * Provides access to a collection of menu items in the context menu being invoked.
     */
@@ -24,5 +17,37 @@ class ASPxClientSpreadsheetPopupMenuShowingEventArgs protected () extends ASPxCl
     * Gets the currently displayed context menu's type.
     */
   var menuType: ASPxClientSpreadsheetPopupMenuType = js.native
+}
+
+object ASPxClientSpreadsheetPopupMenuShowingEventArgs {
+  @scala.inline
+  def apply(
+    cancel: Boolean,
+    menuItems: ASPxClientSpreadsheetPopupMenuItemCollection,
+    menuType: ASPxClientSpreadsheetPopupMenuType
+  ): ASPxClientSpreadsheetPopupMenuShowingEventArgs = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], menuItems = menuItems.asInstanceOf[js.Any], menuType = menuType.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientSpreadsheetPopupMenuShowingEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientSpreadsheetPopupMenuShowingEventArgsOps[Self <: ASPxClientSpreadsheetPopupMenuShowingEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMenuItems(value: ASPxClientSpreadsheetPopupMenuItemCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMenuType(value: ASPxClientSpreadsheetPopupMenuType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -12,7 +12,7 @@ trait Navigator extends js.Object {
   var compass: Compass = js.native
   var connection: Connection = js.native
   var contacts: Contacts = js.native
-  var device: Device_ = js.native
+  var device: Device = js.native
   var globalization: Globalization = js.native
   var notification: PhonegapNotification = js.native
   var splashscreen: Splashscreen = js.native
@@ -27,7 +27,7 @@ object Navigator {
     compass: Compass,
     connection: Connection,
     contacts: Contacts,
-    device: Device_,
+    device: Device,
     globalization: Globalization,
     notification: PhonegapNotification,
     splashscreen: Splashscreen
@@ -78,7 +78,7 @@ object Navigator {
         ret
     }
     @scala.inline
-    def withDevice(value: Device_): Self = {
+    def withDevice(value: Device): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("device")(value.asInstanceOf[js.Any])
         ret

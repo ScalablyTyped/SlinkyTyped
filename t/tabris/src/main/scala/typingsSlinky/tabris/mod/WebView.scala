@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.OmitWebViewset
+import typingsSlinky.tabris.anon.OmitWebViewset
 import typingsSlinky.tabris.tabrisStrings.html
 import typingsSlinky.tabris.tabrisStrings.set
 import typingsSlinky.tabris.tabrisStrings.url

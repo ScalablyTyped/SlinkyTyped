@@ -5,11 +5,10 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.Props
-import typingsSlinky.reactBigCalendar.AnonAction
-import typingsSlinky.reactBigCalendar.AnonStart
-import typingsSlinky.reactBigCalendar.AnonX
+import typingsSlinky.reactBigCalendar.anon.Action
+import typingsSlinky.reactBigCalendar.anon.Start
+import typingsSlinky.reactBigCalendar.anon.X
 import typingsSlinky.reactBigCalendar.reactBigCalendarStrings.ignoreEvents
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,22 +46,30 @@ trait CalendarProps[TEvent /* <: js.Object */, TResource /* <: js.Object */] ext
   var messages: js.UndefOr[Messages] = js.native
   var min: js.UndefOr[stringOrDate] = js.native
   var onDoubleClickEvent: js.UndefOr[
-    js.Function2[/* event */ TEvent, /* e */ SyntheticEvent[Event_, HTMLElement], Unit]
+    js.Function2[
+      /* event */ TEvent, 
+      /* e */ SyntheticEvent[org.scalajs.dom.raw.Event, HTMLElement], 
+      Unit
+    ]
   ] = js.native
   var onDrillDown: js.UndefOr[js.Function2[/* date */ js.Date, /* view */ View, Unit]] = js.native
   var onNavigate: js.UndefOr[
     js.Function3[/* newDate */ js.Date, /* view */ View, /* action */ NavigateAction, Unit]
   ] = js.native
-  var onRangeChange: js.UndefOr[js.Function1[/* range */ js.Array[js.Date] | AnonStart, Unit]] = js.native
+  var onRangeChange: js.UndefOr[js.Function1[/* range */ js.Array[js.Date] | Start, Unit]] = js.native
   var onSelectEvent: js.UndefOr[
-    js.Function2[/* event */ TEvent, /* e */ SyntheticEvent[Event_, HTMLElement], Unit]
+    js.Function2[
+      /* event */ TEvent, 
+      /* e */ SyntheticEvent[org.scalajs.dom.raw.Event, HTMLElement], 
+      Unit
+    ]
   ] = js.native
-  var onSelectSlot: js.UndefOr[js.Function1[/* slotInfo */ AnonAction, Unit]] = js.native
-  var onSelecting: js.UndefOr[js.Function1[/* range */ AnonStart, js.UndefOr[Boolean | Null]]] = js.native
+  var onSelectSlot: js.UndefOr[js.Function1[/* slotInfo */ Action, Unit]] = js.native
+  var onSelecting: js.UndefOr[js.Function1[/* range */ Start, js.UndefOr[Boolean | Null]]] = js.native
   var onShowMore: js.UndefOr[js.Function2[/* events */ js.Array[TEvent], /* date */ js.Date, Unit]] = js.native
   var onView: js.UndefOr[js.Function1[/* view */ View, Unit]] = js.native
   var popup: js.UndefOr[Boolean] = js.native
-  var popupOffset: js.UndefOr[Double | AnonX] = js.native
+  var popupOffset: js.UndefOr[Double | X] = js.native
   var resourceAccessor: js.UndefOr[(/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, _])] = js.native
   var resourceIdAccessor: js.UndefOr[(/* keyof TResource */ String) | (js.Function1[/* resource */ TResource, _])] = js.native
   var resourceTitleAccessor: js.UndefOr[(/* keyof TResource */ String) | (js.Function1[/* resource */ TResource, _])] = js.native
@@ -415,7 +422,9 @@ object CalendarProps {
         ret
     }
     @scala.inline
-    def withOnDoubleClickEvent(value: (/* event */ TEvent, /* e */ SyntheticEvent[Event_, HTMLElement]) => Unit): Self[TEvent, TResource] = {
+    def withOnDoubleClickEvent(
+      value: (/* event */ TEvent, /* e */ SyntheticEvent[org.scalajs.dom.raw.Event, HTMLElement]) => Unit
+    ): Self[TEvent, TResource] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDoubleClickEvent")(js.Any.fromFunction2(value))
         ret
@@ -451,7 +460,7 @@ object CalendarProps {
         ret
     }
     @scala.inline
-    def withOnRangeChange(value: /* range */ js.Array[js.Date] | AnonStart => Unit): Self[TEvent, TResource] = {
+    def withOnRangeChange(value: /* range */ js.Array[js.Date] | Start => Unit): Self[TEvent, TResource] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRangeChange")(js.Any.fromFunction1(value))
         ret
@@ -463,7 +472,9 @@ object CalendarProps {
         ret
     }
     @scala.inline
-    def withOnSelectEvent(value: (/* event */ TEvent, /* e */ SyntheticEvent[Event_, HTMLElement]) => Unit): Self[TEvent, TResource] = {
+    def withOnSelectEvent(
+      value: (/* event */ TEvent, /* e */ SyntheticEvent[org.scalajs.dom.raw.Event, HTMLElement]) => Unit
+    ): Self[TEvent, TResource] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectEvent")(js.Any.fromFunction2(value))
         ret
@@ -475,7 +486,7 @@ object CalendarProps {
         ret
     }
     @scala.inline
-    def withOnSelectSlot(value: /* slotInfo */ AnonAction => Unit): Self[TEvent, TResource] = {
+    def withOnSelectSlot(value: /* slotInfo */ Action => Unit): Self[TEvent, TResource] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectSlot")(js.Any.fromFunction1(value))
         ret
@@ -487,7 +498,7 @@ object CalendarProps {
         ret
     }
     @scala.inline
-    def withOnSelecting(value: /* range */ AnonStart => js.UndefOr[Boolean | Null]): Self[TEvent, TResource] = {
+    def withOnSelecting(value: /* range */ Start => js.UndefOr[Boolean | Null]): Self[TEvent, TResource] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelecting")(js.Any.fromFunction1(value))
         ret
@@ -535,7 +546,7 @@ object CalendarProps {
         ret
     }
     @scala.inline
-    def withPopupOffset(value: Double | AnonX): Self[TEvent, TResource] = {
+    def withPopupOffset(value: Double | X): Self[TEvent, TResource] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("popupOffset")(value.asInstanceOf[js.Any])
         ret

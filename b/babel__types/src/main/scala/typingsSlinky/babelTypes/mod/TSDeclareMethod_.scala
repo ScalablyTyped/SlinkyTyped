@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TSDeclareMethod_
   extends BaseNode
-     with _Node {
+     with Node {
   var `abstract`: Boolean | Null = js.native
   var access: public | `private` | `protected` | Null = js.native
   var accessibility: public | `private` | `protected` | Null = js.native

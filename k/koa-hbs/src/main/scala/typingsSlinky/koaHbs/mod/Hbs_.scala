@@ -3,8 +3,8 @@ package typingsSlinky.koaHbs.mod
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.handlebars.Handlebars.HelperDeclareSpec
 import typingsSlinky.handlebars.Handlebars.HelperDelegate
-import typingsSlinky.koaHbs.FnCall
-import typingsSlinky.koaHbs.TypeofUtils
+import typingsSlinky.koaHbs.anon.FnCall
+import typingsSlinky.koaHbs.anon.TypeofUtils
 import typingsSlinky.koaHbs.mod.Hbs.Middleware
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,7 +1,7 @@
 package typingsSlinky.meyda.mod
 
-import typingsSlinky.meyda.AnonImag
-import typingsSlinky.meyda.AnonSpecific
+import typingsSlinky.meyda.anon.Imag
+import typingsSlinky.meyda.anon.Specific
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,9 +11,9 @@ trait MeydaFeaturesObject extends js.Object {
   var amplitudeSpectrum: js.typedarray.Float32Array = js.native
   var buffer: js.Array[Double] = js.native
   var chroma: js.Array[Double] = js.native
-  var complexSpectrum: AnonImag = js.native
+  var complexSpectrum: Imag = js.native
   var energy: Double = js.native
-  var loudness: AnonSpecific = js.native
+  var loudness: Specific = js.native
   var mfcc: js.Array[Double] = js.native
   var perceptualSharpness: Double = js.native
   var perceptualSpread: Double = js.native
@@ -35,9 +35,9 @@ object MeydaFeaturesObject {
     amplitudeSpectrum: js.typedarray.Float32Array,
     buffer: js.Array[Double],
     chroma: js.Array[Double],
-    complexSpectrum: AnonImag,
+    complexSpectrum: Imag,
     energy: Double,
-    loudness: AnonSpecific,
+    loudness: Specific,
     mfcc: js.Array[Double],
     perceptualSharpness: Double,
     perceptualSpread: Double,
@@ -80,7 +80,7 @@ object MeydaFeaturesObject {
         ret
     }
     @scala.inline
-    def withComplexSpectrum(value: AnonImag): Self = {
+    def withComplexSpectrum(value: Imag): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("complexSpectrum")(value.asInstanceOf[js.Any])
         ret
@@ -92,7 +92,7 @@ object MeydaFeaturesObject {
         ret
     }
     @scala.inline
-    def withLoudness(value: AnonSpecific): Self = {
+    def withLoudness(value: Specific): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loudness")(value.asInstanceOf[js.Any])
         ret

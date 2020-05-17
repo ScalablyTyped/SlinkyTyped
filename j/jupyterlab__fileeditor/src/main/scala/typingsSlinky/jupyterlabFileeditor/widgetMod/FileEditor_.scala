@@ -1,11 +1,11 @@
 package typingsSlinky.jupyterlabFileeditor.widgetMod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.IEditor
 import typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.IModel
 import typingsSlinky.jupyterlabDocregistry.registryMod.DocumentRegistry.Context
 import typingsSlinky.jupyterlabFileeditor.widgetMod.FileEditor.IOptions
 import typingsSlinky.phosphorWidgets.mod.Widget
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -48,6 +48,6 @@ class FileEditor_ protected () extends Widget {
     * called in response to events on the widget's node. It should
     * not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
 }
 

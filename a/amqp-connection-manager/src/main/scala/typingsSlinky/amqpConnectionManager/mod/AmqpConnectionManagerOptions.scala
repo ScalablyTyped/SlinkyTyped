@@ -1,6 +1,6 @@
 package typingsSlinky.amqpConnectionManager.mod
 
-import typingsSlinky.amqpConnectionManager.ConnectionOptionsnoDelayb
+import typingsSlinky.amqpConnectionManager.anon.ConnectionOptionsnoDelayb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

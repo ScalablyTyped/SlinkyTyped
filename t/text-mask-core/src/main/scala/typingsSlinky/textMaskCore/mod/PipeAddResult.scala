@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PipeAddResult extends _PipeResult {
+trait PipeAddResult extends PipeResult {
   var indexesOfPipedChars: js.Array[Double] = js.native
   var value: String = js.native
 }

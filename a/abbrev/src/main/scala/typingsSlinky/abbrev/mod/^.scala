@@ -1,7 +1,7 @@
 package typingsSlinky.abbrev.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.abbrev.mod._Global_.Array
+import typingsSlinky.abbrev.mod.global.Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,13 +1,15 @@
 package typingsSlinky.pdfkit.PDFKit
 
 import org.scalablytyped.runtime.Instantiable1
+import typingsSlinky.pdfkit.PDFKit.Mixins.ColorValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait PDFGradient
-  extends Instantiable1[/* document */ js.Any, PDFGradient] {
+  extends ColorValue
+     with Instantiable1[/* document */ js.Any, PDFGradient] {
   @JSName("apply")
   def apply(): Unit = js.native
   def embed(): Unit = js.native

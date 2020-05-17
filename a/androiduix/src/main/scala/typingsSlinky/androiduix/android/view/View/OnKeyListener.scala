@@ -10,16 +10,25 @@ trait OnKeyListener extends js.Object {
   def onKey(v: typingsSlinky.androiduix.android.view.View, keyCode: Double, event: KeyEvent): Unit = js.native
 }
 
-@JSGlobal("android.view.View.OnKeyListener")
-@js.native
-object OnKeyListener extends js.Object {
-  def fromFunction(
-    func: js.Function3[
-      /* v */ typingsSlinky.androiduix.android.view.View, 
-      /* keyCode */ Double, 
-      /* event */ KeyEvent, 
-      Unit
-    ]
-  ): OnKeyListener = js.native
+object OnKeyListener {
+  @scala.inline
+  def apply(onKey: (typingsSlinky.androiduix.android.view.View, Double, KeyEvent) => Unit): OnKeyListener = {
+    val __obj = js.Dynamic.literal(onKey = js.Any.fromFunction3(onKey))
+    __obj.asInstanceOf[OnKeyListener]
+  }
+  @scala.inline
+  implicit class OnKeyListenerOps[Self <: OnKeyListener] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnKey(value: (typingsSlinky.androiduix.android.view.View, Double, KeyEvent) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onKey")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

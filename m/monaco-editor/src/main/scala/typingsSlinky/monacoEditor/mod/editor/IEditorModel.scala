@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait IEditorModel extends js.Object
 
+object IEditorModel {
+  @scala.inline
+  implicit def apply(value: IDiffEditorModel): IEditorModel = value.asInstanceOf[IEditorModel]
+  @scala.inline
+  implicit def apply(value: ITextModel): IEditorModel = value.asInstanceOf[IEditorModel]
+}
+

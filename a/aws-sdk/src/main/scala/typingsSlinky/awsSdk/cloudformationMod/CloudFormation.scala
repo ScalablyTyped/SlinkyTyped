@@ -1,8 +1,8 @@
 package typingsSlinky.awsSdk.cloudformationMod
 
-import typingsSlinky.awsSdk.DescribeChangeSetInputwai
-import typingsSlinky.awsSdk.DescribeStacksInputwaiter
-import typingsSlinky.awsSdk.DescribeTypeRegistrationI
+import typingsSlinky.awsSdk.anon.DescribeChangeSetInputwai
+import typingsSlinky.awsSdk.anon.DescribeStacksInputwaiter
+import typingsSlinky.awsSdk.anon.DescribeTypeRegistrationI
 import typingsSlinky.awsSdk.awsSdkStrings.changeSetCreateComplete
 import typingsSlinky.awsSdk.awsSdkStrings.stackCreateComplete
 import typingsSlinky.awsSdk.awsSdkStrings.stackDeleteComplete

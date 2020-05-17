@@ -1,16 +1,15 @@
 package typingsSlinky.gun.mod.Gun
 
-import typingsSlinky.gun.Anon0
-import typingsSlinky.gun.AnonAck
-import typingsSlinky.gun.AnonChange
-import typingsSlinky.gun.AnonErrString
-import typingsSlinky.gun.AnonGun
-import typingsSlinky.gun.AnonPub
-import typingsSlinky.gun.AnonPut
-import typingsSlinky.gun.AnonSessionStorage
-import typingsSlinky.gun.AnonWait
-import typingsSlinky.gun.Recordgunrootidbackontagg
-import typingsSlinky.gun.Recordofftonexttheonasbac
+import typingsSlinky.gun.anon.Ack
+import typingsSlinky.gun.anon.Change
+import typingsSlinky.gun.anon.ErrString
+import typingsSlinky.gun.anon.Pub
+import typingsSlinky.gun.anon.Put
+import typingsSlinky.gun.anon.Recordgunrootidbackontagg
+import typingsSlinky.gun.anon.Recordofftonexttheonasbac
+import typingsSlinky.gun.anon.SessionStorage
+import typingsSlinky.gun.anon.Wait
+import typingsSlinky.gun.anon.`0`
 import typingsSlinky.gun.gunBooleans.`false`
 import typingsSlinky.gun.gunStrings.pre_root
 import typingsSlinky.gun.gunStrings.root
@@ -20,7 +19,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ChainReference[DataType, ReferenceKey, IsTop /* <: pre_root | root | `false` */] extends js.Object {
+trait ChainReference[DataType, ReferenceKey, IsTop /* <: pre_root | root | `false` */] extends Saveable[DataType] {
   /**
     * bye lets you change data after that browser peer disconnects.
     * This is useful for games and status messages,
@@ -29,7 +28,7 @@ trait ChainReference[DataType, ReferenceKey, IsTop /* <: pre_root | root | `fals
     * **Warning**: Not included by default! You must include it yourself via `require('gun/lib/bye.js')` or
     * `<script src="https://cdn.jsdelivr.net/npm/gun/lib/bye.js"></script>`!
     */
-  var bye: js.UndefOr[js.Function0[AnonPut[DataType]]] = js.native
+  var bye: js.UndefOr[js.Function0[Put[DataType]]] = js.native
   /**
     * Say you save some data, but want to do something with it later, like expire it or refresh it.
     * Well, then `later` is for you! You could use this to easily implement a TTL or similar behavior.
@@ -111,11 +110,11 @@ trait ChainReference[DataType, ReferenceKey, IsTop /* <: pre_root | root | `fals
     js.Function1[
       /* onfulfilled */ js.UndefOr[
         js.Function1[
-          /* value */ AnonGun[DataType, ReferenceKey], 
-          (AnonGun[DataType, ReferenceKey]) | (js.Thenable[AnonGun[DataType, ReferenceKey]])
+          /* value */ typingsSlinky.gun.anon.Gun[DataType, ReferenceKey], 
+          (typingsSlinky.gun.anon.Gun[DataType, ReferenceKey]) | (js.Thenable[typingsSlinky.gun.anon.Gun[DataType, ReferenceKey]])
         ]
       ], 
-      js.Promise[AnonGun[DataType, ReferenceKey]]
+      js.Promise[typingsSlinky.gun.anon.Gun[DataType, ReferenceKey]]
     ]
   ] = js.native
   /**
@@ -165,13 +164,8 @@ trait ChainReference[DataType, ReferenceKey, IsTop /* <: pre_root | root | `fals
     * @param opt Option Object containing options for authentiaction. (In gun options are added at end of syntax. opt is rarely used, hence is added at the end.)
     */
   def auth(alias: String, pass: String): ChainReference[_, _, `false`] = js.native
-  def auth(alias: String, pass: String, cb: js.Function1[/* ack */ AnonAck | AnonErrString, Unit]): ChainReference[_, _, `false`] = js.native
-  def auth(
-    alias: String,
-    pass: String,
-    cb: js.Function1[/* ack */ AnonAck | AnonErrString, Unit],
-    opt: js.Object
-  ): ChainReference[_, _, `false`] = js.native
+  def auth(alias: String, pass: String, cb: js.Function1[/* ack */ Ack | ErrString, Unit]): ChainReference[_, _, `false`] = js.native
+  def auth(alias: String, pass: String, cb: js.Function1[/* ack */ Ack | ErrString, Unit], opt: js.Object): ChainReference[_, _, `false`] = js.native
   /**
     * Move up to the parent context on the chain.
     *
@@ -192,13 +186,8 @@ trait ChainReference[DataType, ReferenceKey, IsTop /* <: pre_root | root | `fals
     * @param opt Option Object containing options for creation. (In gun options are added at end of syntax. opt is rarely used, hence is added at the end.)
     */
   def create(alias: String, pass: String): ChainReference[_, _, `false`] = js.native
-  def create(alias: String, pass: String, cb: js.Function1[/* ack */ AnonPub | AnonErrString, Unit]): ChainReference[_, _, `false`] = js.native
-  def create(
-    alias: String,
-    pass: String,
-    cb: js.Function1[/* ack */ AnonPub | AnonErrString, Unit],
-    opt: js.Object
-  ): ChainReference[_, _, `false`] = js.native
+  def create(alias: String, pass: String, cb: js.Function1[/* ack */ Pub | ErrString, Unit]): ChainReference[_, _, `false`] = js.native
+  def create(alias: String, pass: String, cb: js.Function1[/* ack */ Pub | ErrString, Unit], opt: js.Object): ChainReference[_, _, `false`] = js.native
   /**
     * Deletes a user from the current gun instance and propagates the delete to other peers.
     * @param alias Username or alias.
@@ -206,7 +195,7 @@ trait ChainReference[DataType, ReferenceKey, IsTop /* <: pre_root | root | `fals
     * @param cb Callback that is called when the user was successfully deleted.
     */
   def delete(alias: String, pass: String): js.Promise[Unit] = js.native
-  def delete(alias: String, pass: String, cb: js.Function1[/* ack */ Anon0, Unit]): js.Promise[Unit] = js.native
+  def delete(alias: String, pass: String, cb: js.Function1[/* ack */ `0`, Unit]): js.Promise[Unit] = js.native
   /**
     * Where to read data from.
     * @param key The key is the ID or property name of the data that you saved from earlier
@@ -288,7 +277,7 @@ trait ChainReference[DataType, ReferenceKey, IsTop /* <: pre_root | root | `fals
       /* key */ ReferenceKey, 
       Unit
     ],
-    option: AnonChange
+    option: Change
   ): ChainReference[DataType, ReferenceKey, `false`] = js.native
   /**
     * Get the current data without subscribing to updates. Or `undefined` if it cannot be found.
@@ -308,7 +297,7 @@ trait ChainReference[DataType, ReferenceKey, IsTop /* <: pre_root | root | `fals
       /* key */ ReferenceKey, 
       Unit
     ],
-    option: AnonWait
+    option: Wait
   ): ChainReference[DataType, ReferenceKey, `false`] = js.native
   /**
     * Change the configuration of the gun database instance.
@@ -347,10 +336,10 @@ trait ChainReference[DataType, ReferenceKey, IsTop /* <: pre_root | root | `fals
     * @param cb internally the callback is passed on to the user.auth function to logged the user back in. Refer to user.auth for callback documentation.
     */
   def recall(): ChainReference[_, _, `false`] = js.native
-  def recall(opt: AnonSessionStorage): ChainReference[_, _, `false`] = js.native
+  def recall(opt: SessionStorage): ChainReference[_, _, `false`] = js.native
   def recall(
-    opt: AnonSessionStorage,
-    cb: /* import warning: importer.ImportType#apply Failed type conversion: gun.gun.Gun.Parameters<(alias : string, pass : string, cb ? : (ack : gun.AnonAck | gun.AnonErrString): void, opt ? : {}): gun.gun.Gun.ChainReference<any, any, false>>[2] */ js.Any
+    opt: SessionStorage,
+    cb: /* import warning: importer.ImportType#apply Failed type conversion: gun.gun.Gun.Parameters<(alias : string, pass : string, cb ? : (ack : gun.anon.Ack | gun.anon.ErrString): void, opt ? : {}): gun.gun.Gun.ChainReference<any, any, false>>[2] */ js.Any
   ): ChainReference[_, _, `false`] = js.native
   /**
     * **.set does not means 'set data', it means a Mathematical Set**

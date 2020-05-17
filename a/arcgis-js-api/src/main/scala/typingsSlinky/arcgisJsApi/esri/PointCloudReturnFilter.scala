@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`return`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.firstOfMany
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.last
@@ -29,8 +28,4 @@ trait PointCloudReturnFilter extends PointCloudFilter {
   @JSName("type")
   val type_PointCloudReturnFilter: `return` = js.native
 }
-
-@JSGlobal("__esri.PointCloudReturnFilter")
-@js.native
-object PointCloudReturnFilter extends TopLevel[PointCloudReturnFilterConstructor]
 

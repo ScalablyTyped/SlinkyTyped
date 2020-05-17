@@ -1,5 +1,6 @@
 package typingsSlinky.ionic
 
+import typingsSlinky.ionic.anon.PartialReadonlyEnterprise
 import typingsSlinky.ionic.definitionsMod.EnterpriseProjectIntegration
 import typingsSlinky.ionic.libIntegrationsMod.BaseIntegration
 import typingsSlinky.ionic.libIntegrationsMod.IntegationUnion

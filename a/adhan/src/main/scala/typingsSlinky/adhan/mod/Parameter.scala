@@ -1,13 +1,13 @@
 package typingsSlinky.adhan.mod
 
-import typingsSlinky.adhan.AnonAsr
+import typingsSlinky.adhan.anon.Asr
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Parameter extends js.Object {
-  var adjustments: AnonAsr = js.native
+  var adjustments: Asr = js.native
   var fajrAngle: Double = js.native
   var highLatitudeRule: HighLatitudeRule = js.native
   var ishaAngle: Double = js.native
@@ -19,7 +19,7 @@ trait Parameter extends js.Object {
 object Parameter {
   @scala.inline
   def apply(
-    adjustments: AnonAsr,
+    adjustments: Asr,
     fajrAngle: Double,
     highLatitudeRule: HighLatitudeRule,
     ishaAngle: Double,
@@ -37,7 +37,7 @@ object Parameter {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAdjustments(value: AnonAsr): Self = {
+    def withAdjustments(value: Asr): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("adjustments")(value.asInstanceOf[js.Any])
         ret

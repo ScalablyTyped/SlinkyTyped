@@ -1,13 +1,13 @@
 package typingsSlinky.angularPermission.mod.permission
 
-import typingsSlinky.angularPermission.AnonExcept
+import typingsSlinky.angularPermission.anon.Except
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait DataWithPermissions extends js.Object {
-  var permissions: js.UndefOr[AnonExcept] = js.native
+  var permissions: js.UndefOr[Except] = js.native
 }
 
 object DataWithPermissions {
@@ -23,7 +23,7 @@ object DataWithPermissions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPermissions(value: AnonExcept): Self = {
+    def withPermissions(value: Except): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
         ret

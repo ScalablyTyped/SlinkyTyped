@@ -1,17 +1,13 @@
 package typingsSlinky.kendoUi.kendo.ui
 
-import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.JQuery
 import typingsSlinky.kendoUi.kendo.data.DataSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.ui.ComboBox")
 @js.native
-class ComboBox protected () extends Widget {
-  def this(element: Element) = this()
-  def this(element: Element, options: ComboBoxOptions) = this()
+trait ComboBox extends Widget {
   var dataSource: DataSource = js.native
   var input: JQuery = js.native
   var list: JQuery = js.native
@@ -41,13 +37,5 @@ class ComboBox protected () extends Widget {
   def toggle(toggle: Boolean): Unit = js.native
   def value(): String = js.native
   def value(value: String): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("kendo.ui.ComboBox")
-@js.native
-object ComboBox extends js.Object {
-  var fn: ComboBox = js.native
-  def extend(proto: js.Object): ComboBox = js.native
 }
 

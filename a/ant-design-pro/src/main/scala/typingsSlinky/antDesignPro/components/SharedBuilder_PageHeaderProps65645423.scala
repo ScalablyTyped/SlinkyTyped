@@ -4,8 +4,8 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignPro.AnonKey
-import typingsSlinky.antDesignPro.AnonTitle
+import typingsSlinky.antDesignPro.anon.Key
+import typingsSlinky.antDesignPro.anon.Title
 import typingsSlinky.history.mod.Location
 import typingsSlinky.history.mod.LocationState
 import typingsSlinky.react.mod.CSSProperties
@@ -22,7 +22,7 @@ class SharedBuilder_PageHeaderProps65645423[R <: js.Object] (val args: js.Array[
   @scala.inline
   def action(value: TagMod[Any] | String): this.type = set("action", value.asInstanceOf[js.Any])
   @scala.inline
-  def breadcrumbList(value: js.Array[AnonTitle]): this.type = set("breadcrumbList", value.asInstanceOf[js.Any])
+  def breadcrumbList(value: js.Array[Title]): this.type = set("breadcrumbList", value.asInstanceOf[js.Any])
   @scala.inline
   def breadcrumbNameMap(value: js.Any): this.type = set("breadcrumbNameMap", value.asInstanceOf[js.Any])
   @scala.inline
@@ -74,7 +74,7 @@ class SharedBuilder_PageHeaderProps65645423[R <: js.Object] (val args: js.Array[
   @scala.inline
   def tabDefaultActiveKey(value: String): this.type = set("tabDefaultActiveKey", value.asInstanceOf[js.Any])
   @scala.inline
-  def tabList(value: js.Array[AnonKey]): this.type = set("tabList", value.asInstanceOf[js.Any])
+  def tabList(value: js.Array[Key]): this.type = set("tabList", value.asInstanceOf[js.Any])
   @scala.inline
   def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
   @scala.inline

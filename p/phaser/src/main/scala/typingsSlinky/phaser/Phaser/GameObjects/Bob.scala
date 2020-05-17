@@ -21,19 +21,8 @@ import scala.scalajs.js.annotation._
   * You can manipulate Bob objects directly from your game code, but the creation and destruction of them should be
   * handled via the Blitter parent.
   */
-@JSGlobal("Phaser.GameObjects.Bob")
 @js.native
-class Bob protected () extends js.Object {
-  /**
-    * 
-    * @param blitter The parent Blitter object is responsible for updating this Bob.
-    * @param x The horizontal position of this Game Object in the world, relative to the parent Blitter position.
-    * @param y The vertical position of this Game Object in the world, relative to the parent Blitter position.
-    * @param frame The Frame this Bob will render with, as defined in the Texture the parent Blitter is using.
-    * @param visible Should the Bob render visible or not to start with?
-    */
-  def this(blitter: Blitter, x: Double, y: Double, frame: String, visible: Boolean) = this()
-  def this(blitter: Blitter, x: Double, y: Double, frame: integer, visible: Boolean) = this()
+trait Bob extends js.Object {
   /**
     * The alpha value of the Bob, between 0 and 1.
     * 

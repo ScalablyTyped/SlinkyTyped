@@ -13,9 +13,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * An object for playing basic audio resources.
 		 */
-@JSGlobal("Titanium.Media.Sound")
 @js.native
-class Sound () extends Proxy {
+trait Sound extends Proxy {
   /**
   			 * Used to identify the volume of audio streams for alarms.
   			 */

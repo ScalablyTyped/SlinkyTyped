@@ -1,7 +1,7 @@
 package typingsSlinky.antdMobileRn.mod
 
-import typingsSlinky.antdMobileRn.Anon0
-import typingsSlinky.antdMobileRn.TypeofItem
+import typingsSlinky.antdMobileRn.anon.TypeofItem
+import typingsSlinky.antdMobileRn.anon.`0`
 import typingsSlinky.antdMobileRn.listIndexNativeMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,6 +16,6 @@ class List () extends default
 @js.native
 object List extends js.Object {
   var Item: TypeofItem = js.native
-  var defaultProps: Anon0 = js.native
+  var defaultProps: `0` = js.native
 }
 

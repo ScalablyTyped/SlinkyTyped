@@ -3,7 +3,7 @@ package typingsSlinky.primereact.components
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonNode
+import typingsSlinky.primereact.anon.Node
 import typingsSlinky.primereact.organizationChartMod.OrganizationChartNodeData
 import typingsSlinky.primereact.organizationChartMod.OrganizationChartProps
 import scala.scalajs.js
@@ -29,9 +29,9 @@ object OrganizationChart {
     @scala.inline
     def nodeTemplate(value: /* node */ OrganizationChartNodeData => TagMod[Any]): this.type = set("nodeTemplate", js.Any.fromFunction1(value))
     @scala.inline
-    def onNodeSelect(value: /* e */ AnonNode => Unit): this.type = set("onNodeSelect", js.Any.fromFunction1(value))
+    def onNodeSelect(value: /* e */ Node => Unit): this.type = set("onNodeSelect", js.Any.fromFunction1(value))
     @scala.inline
-    def onNodeUnselect(value: /* e */ AnonNode => Unit): this.type = set("onNodeUnselect", js.Any.fromFunction1(value))
+    def onNodeUnselect(value: /* e */ Node => Unit): this.type = set("onNodeUnselect", js.Any.fromFunction1(value))
     @scala.inline
     def selection(value: js.Any): this.type = set("selection", value.asInstanceOf[js.Any])
     @scala.inline

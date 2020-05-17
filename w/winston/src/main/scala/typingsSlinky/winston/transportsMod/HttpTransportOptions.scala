@@ -1,7 +1,7 @@
 package typingsSlinky.winston.transportsMod
 
 import typingsSlinky.node.httpMod.Agent
-import typingsSlinky.winston.AnonPassword
+import typingsSlinky.winston.anon.Password
 import typingsSlinky.winstonTransport.mod.TransportStreamOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait HttpTransportOptions extends TransportStreamOptions {
   var agent: js.UndefOr[Agent] = js.native
-  var auth: js.UndefOr[AnonPassword] = js.native
+  var auth: js.UndefOr[Password] = js.native
   var headers: js.UndefOr[js.Object] = js.native
   var host: js.UndefOr[String] = js.native
   var path: js.UndefOr[String] = js.native
@@ -43,7 +43,7 @@ object HttpTransportOptions {
         ret
     }
     @scala.inline
-    def withAuth(value: AnonPassword): Self = {
+    def withAuth(value: Password): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
         ret

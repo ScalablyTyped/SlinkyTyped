@@ -1,9 +1,8 @@
 package typingsSlinky.gapiClientAndroidenterprise.gapi.client.androidenterprise
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAndroidenterprise.AnonEnterpriseId
-import typingsSlinky.gapiClientAndroidenterprise.AnonEntitlementId
-import typingsSlinky.gapiClientAndroidenterprise.AnonInstall
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAndroidenterprise.anon.EnterpriseId
+import typingsSlinky.gapiClientAndroidenterprise.anon.EntitlementId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,25 +10,25 @@ import scala.scalajs.js.annotation._
 @js.native
 trait EntitlementsResource extends js.Object {
   /** Removes an entitlement to an app for a user. */
-  def delete(request: AnonEntitlementId): Request_[Unit] = js.native
+  def delete(request: EntitlementId): Request[Unit] = js.native
   /** Retrieves details of an entitlement. */
-  def get(request: AnonEntitlementId): Request_[Entitlement] = js.native
+  def get(request: EntitlementId): Request[Entitlement] = js.native
   /** Lists all entitlements for the specified user. Only the ID is set. */
-  def list(request: AnonEnterpriseId): Request_[EntitlementsListResponse] = js.native
+  def list(request: EnterpriseId): Request[EntitlementsListResponse] = js.native
   /** Adds or updates an entitlement to an app for a user. This method supports patch semantics. */
-  def patch(request: AnonInstall): Request_[Entitlement] = js.native
+  def patch(request: typingsSlinky.gapiClientAndroidenterprise.anon.Install): Request[Entitlement] = js.native
   /** Adds or updates an entitlement to an app for a user. */
-  def update(request: AnonInstall): Request_[Entitlement] = js.native
+  def update(request: typingsSlinky.gapiClientAndroidenterprise.anon.Install): Request[Entitlement] = js.native
 }
 
 object EntitlementsResource {
   @scala.inline
   def apply(
-    delete: AnonEntitlementId => Request_[Unit],
-    get: AnonEntitlementId => Request_[Entitlement],
-    list: AnonEnterpriseId => Request_[EntitlementsListResponse],
-    patch: AnonInstall => Request_[Entitlement],
-    update: AnonInstall => Request_[Entitlement]
+    delete: EntitlementId => Request[Unit],
+    get: EntitlementId => Request[Entitlement],
+    list: EnterpriseId => Request[EntitlementsListResponse],
+    patch: typingsSlinky.gapiClientAndroidenterprise.anon.Install => Request[Entitlement],
+    update: typingsSlinky.gapiClientAndroidenterprise.anon.Install => Request[Entitlement]
   ): EntitlementsResource = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[EntitlementsResource]
@@ -41,31 +40,31 @@ object EntitlementsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDelete(value: AnonEntitlementId => Request_[Unit]): Self = {
+    def withDelete(value: EntitlementId => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonEntitlementId => Request_[Entitlement]): Self = {
+    def withGet(value: EntitlementId => Request[Entitlement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonEnterpriseId => Request_[EntitlementsListResponse]): Self = {
+    def withList(value: EnterpriseId => Request[EntitlementsListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPatch(value: AnonInstall => Request_[Entitlement]): Self = {
+    def withPatch(value: typingsSlinky.gapiClientAndroidenterprise.anon.Install => Request[Entitlement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonInstall => Request_[Entitlement]): Self = {
+    def withUpdate(value: typingsSlinky.gapiClientAndroidenterprise.anon.Install => Request[Entitlement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

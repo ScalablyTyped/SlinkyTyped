@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`day-short-month-year-long-time-24`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`day-short-month-year-long-time`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`day-short-month-year-short-time-24`
@@ -101,8 +100,4 @@ trait intl extends js.Object {
   def substitute(template: String, data: js.Any): String = js.native
   def substitute(template: String, data: js.Any, options: SubstituteOptions): String = js.native
 }
-
-@JSGlobal("__esri.intl")
-@js.native
-object intl extends TopLevel[intl]
 

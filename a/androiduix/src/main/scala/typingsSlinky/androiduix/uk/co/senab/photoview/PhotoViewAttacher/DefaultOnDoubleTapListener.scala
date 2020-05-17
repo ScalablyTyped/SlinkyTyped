@@ -1,15 +1,48 @@
 package typingsSlinky.androiduix.uk.co.senab.photoview.PhotoViewAttacher
 
 import typingsSlinky.androiduix.android.view.GestureDetector.OnDoubleTapListener
+import typingsSlinky.androiduix.android.view.MotionEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("uk.co.senab.photoview.PhotoViewAttacher.DefaultOnDoubleTapListener")
 @js.native
-class DefaultOnDoubleTapListener protected () extends OnDoubleTapListener {
-  def this(photoViewAttacher: typingsSlinky.androiduix.uk.co.senab.photoview.PhotoViewAttacher) = this()
+trait DefaultOnDoubleTapListener extends OnDoubleTapListener {
   var photoViewAttacher: js.Any = js.native
   def setPhotoViewAttacher(newPhotoViewAttacher: typingsSlinky.androiduix.uk.co.senab.photoview.PhotoViewAttacher): Unit = js.native
+}
+
+object DefaultOnDoubleTapListener {
+  @scala.inline
+  def apply(
+    onDoubleTap: MotionEvent => Boolean,
+    onDoubleTapEvent: MotionEvent => Boolean,
+    onSingleTapConfirmed: MotionEvent => Boolean,
+    photoViewAttacher: js.Any,
+    setPhotoViewAttacher: typingsSlinky.androiduix.uk.co.senab.photoview.PhotoViewAttacher => Unit
+  ): DefaultOnDoubleTapListener = {
+    val __obj = js.Dynamic.literal(onDoubleTap = js.Any.fromFunction1(onDoubleTap), onDoubleTapEvent = js.Any.fromFunction1(onDoubleTapEvent), onSingleTapConfirmed = js.Any.fromFunction1(onSingleTapConfirmed), photoViewAttacher = photoViewAttacher.asInstanceOf[js.Any], setPhotoViewAttacher = js.Any.fromFunction1(setPhotoViewAttacher))
+    __obj.asInstanceOf[DefaultOnDoubleTapListener]
+  }
+  @scala.inline
+  implicit class DefaultOnDoubleTapListenerOps[Self <: DefaultOnDoubleTapListener] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPhotoViewAttacher(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("photoViewAttacher")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetPhotoViewAttacher(value: typingsSlinky.androiduix.uk.co.senab.photoview.PhotoViewAttacher => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setPhotoViewAttacher")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

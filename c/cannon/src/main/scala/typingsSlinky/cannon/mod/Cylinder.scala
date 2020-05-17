@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cannon", "Cylinder")
 @js.native
 class Cylinder protected ()
-  extends typingsSlinky.cannon.CANNON.Cylinder {
+  extends typingsSlinky.cannon.CANNON.Shape {
   def this(radiusTop: Double, radiusBottom: Double, height: Double, numSegments: Double) = this()
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.node.cryptoMod
 
-import typingsSlinky.node.AnonFormat
-import typingsSlinky.node.AnonType
+import typingsSlinky.node.anon.Format
+import typingsSlinky.node.anon.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,20 +12,20 @@ trait RSAKeyPairOptions[PubF /* <: KeyFormat */, PrivF /* <: KeyFormat */] exten
     * Key size in bits
     */
   var modulusLength: Double = js.native
-  var privateKeyEncoding: BasePrivateKeyEncodingOptions[PrivF] with AnonType = js.native
+  var privateKeyEncoding: BasePrivateKeyEncodingOptions[PrivF] with Type = js.native
   /**
     * @default 0x10001
     */
   var publicExponent: js.UndefOr[Double] = js.native
-  var publicKeyEncoding: AnonFormat[PubF] = js.native
+  var publicKeyEncoding: Format[PubF] = js.native
 }
 
 object RSAKeyPairOptions {
   @scala.inline
   def apply[PubF, PrivF](
     modulusLength: Double,
-    privateKeyEncoding: BasePrivateKeyEncodingOptions[PrivF] with AnonType,
-    publicKeyEncoding: AnonFormat[PubF]
+    privateKeyEncoding: BasePrivateKeyEncodingOptions[PrivF] with Type,
+    publicKeyEncoding: Format[PubF]
   ): RSAKeyPairOptions[PubF, PrivF] = {
     val __obj = js.Dynamic.literal(modulusLength = modulusLength.asInstanceOf[js.Any], privateKeyEncoding = privateKeyEncoding.asInstanceOf[js.Any], publicKeyEncoding = publicKeyEncoding.asInstanceOf[js.Any])
     __obj.asInstanceOf[RSAKeyPairOptions[PubF, PrivF]]
@@ -43,13 +43,13 @@ object RSAKeyPairOptions {
         ret
     }
     @scala.inline
-    def withPrivateKeyEncoding(value: BasePrivateKeyEncodingOptions[PrivF] with AnonType): Self[PubF, PrivF] = {
+    def withPrivateKeyEncoding(value: BasePrivateKeyEncodingOptions[PrivF] with Type): Self[PubF, PrivF] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("privateKeyEncoding")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPublicKeyEncoding(value: AnonFormat[PubF]): Self[PubF, PrivF] = {
+    def withPublicKeyEncoding(value: Format[PubF]): Self[PubF, PrivF] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("publicKeyEncoding")(value.asInstanceOf[js.Any])
         ret

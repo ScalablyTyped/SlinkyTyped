@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -119,7 +119,7 @@ object IgTreeGridColumnFixing {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withColumnFixed(value: (/* event */ Event_, /* ui */ ColumnFixedEventUIParam) => Unit): Self = {
+    def withColumnFixed(value: (/* event */ Event, /* ui */ ColumnFixedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnFixed")(js.Any.fromFunction2(value))
         ret
@@ -131,7 +131,7 @@ object IgTreeGridColumnFixing {
         ret
     }
     @scala.inline
-    def withColumnFixing(value: (/* event */ Event_, /* ui */ ColumnFixingEventUIParam) => Unit): Self = {
+    def withColumnFixing(value: (/* event */ Event, /* ui */ ColumnFixingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnFixing")(js.Any.fromFunction2(value))
         ret
@@ -143,7 +143,7 @@ object IgTreeGridColumnFixing {
         ret
     }
     @scala.inline
-    def withColumnFixingRefused(value: (/* event */ Event_, /* ui */ ColumnFixingRefusedEventUIParam) => Unit): Self = {
+    def withColumnFixingRefused(value: (/* event */ Event, /* ui */ ColumnFixingRefusedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnFixingRefused")(js.Any.fromFunction2(value))
         ret
@@ -167,7 +167,7 @@ object IgTreeGridColumnFixing {
         ret
     }
     @scala.inline
-    def withColumnUnfixed(value: (/* event */ Event_, /* ui */ ColumnUnfixedEventUIParam) => Unit): Self = {
+    def withColumnUnfixed(value: (/* event */ Event, /* ui */ ColumnUnfixedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnUnfixed")(js.Any.fromFunction2(value))
         ret
@@ -179,7 +179,7 @@ object IgTreeGridColumnFixing {
         ret
     }
     @scala.inline
-    def withColumnUnfixing(value: (/* event */ Event_, /* ui */ ColumnUnfixingEventUIParam) => Unit): Self = {
+    def withColumnUnfixing(value: (/* event */ Event, /* ui */ ColumnUnfixingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnUnfixing")(js.Any.fromFunction2(value))
         ret
@@ -191,7 +191,7 @@ object IgTreeGridColumnFixing {
         ret
     }
     @scala.inline
-    def withColumnUnfixingRefused(value: (/* event */ Event_, /* ui */ ColumnUnfixingRefusedEventUIParam) => Unit): Self = {
+    def withColumnUnfixingRefused(value: (/* event */ Event, /* ui */ ColumnUnfixingRefusedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnUnfixingRefused")(js.Any.fromFunction2(value))
         ret

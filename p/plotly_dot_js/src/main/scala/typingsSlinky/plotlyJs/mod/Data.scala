@@ -1,16 +1,16 @@
 package typingsSlinky.plotlyJs.mod
 
-import typingsSlinky.plotlyJs.AnonEnd
-import typingsSlinky.plotlyJs.PartialDataTitle
-import typingsSlinky.plotlyJs.PartialDelta
-import typingsSlinky.plotlyJs.PartialFont
-import typingsSlinky.plotlyJs.PartialGauge
-import typingsSlinky.plotlyJs.PartialHoverLabel
-import typingsSlinky.plotlyJs.PartialPlotMarker
-import typingsSlinky.plotlyJs.PartialPlotNumber
-import typingsSlinky.plotlyJs.PartialScatterLine
-import typingsSlinky.plotlyJs.PartialScatterMarkerLine
-import typingsSlinky.plotlyJs.Partialrowsnumbercolumnsn
+import typingsSlinky.plotlyJs.anon.End
+import typingsSlinky.plotlyJs.anon.PartialDataTitle
+import typingsSlinky.plotlyJs.anon.PartialDelta
+import typingsSlinky.plotlyJs.anon.PartialFont
+import typingsSlinky.plotlyJs.anon.PartialGauge
+import typingsSlinky.plotlyJs.anon.PartialHoverLabel
+import typingsSlinky.plotlyJs.anon.PartialPlotMarker
+import typingsSlinky.plotlyJs.anon.PartialPlotNumber
+import typingsSlinky.plotlyJs.anon.PartialScatterLine
+import typingsSlinky.plotlyJs.anon.PartialScatterMarkerLine
+import typingsSlinky.plotlyJs.anon.Partialrowsnumbercolumnsn
 import typingsSlinky.plotlyJs.plotlyJsBooleans.`false`
 import typingsSlinky.plotlyJs.plotlyJsStrings.`bottom center`
 import typingsSlinky.plotlyJs.plotlyJsStrings.`bottom left`
@@ -221,7 +221,7 @@ trait Data extends js.Object {
   var width: js.UndefOr[Double | js.Array[Double]] = js.native
   var x: js.UndefOr[(js.Array[js.Array[Datum] | Datum]) | TypedArray] = js.native
   var xaxis: js.UndefOr[String] = js.native
-  var xbins: js.UndefOr[AnonEnd] = js.native
+  var xbins: js.UndefOr[End] = js.native
   var xgap: js.UndefOr[Double] = js.native
   var xy: js.UndefOr[js.typedarray.Float32Array] = js.native
   var y: js.UndefOr[(js.Array[js.Array[Datum] | Datum]) | TypedArray] = js.native
@@ -413,7 +413,7 @@ object Data {
     }
     @scala.inline
     def withHoverinfo(
-      value: all | name | none | skip | text | x | xPlussigntext | xPlussignname | xPlussigny | xPlussignyPlussigntext | xPlussignyPlussignname | xPlussignyPlussignz | xPlussignyPlussignzPlussigntext | xPlussignyPlussignzPlussignname | yPlussignname | yPlussignx | yPlussigntext | yPlussignxPlussigntext | yPlussignxPlussignname | yPlussignz | yPlussignzPlussigntext | yPlussignzPlussignname | yPlussignxPlussignz | yPlussignxPlussignzPlussigntext | yPlussignxPlussignzPlussignname | zPlussignx | zPlussignxPlussigntext | zPlussignxPlussignname | zPlussignyPlussignx | zPlussignyPlussignxPlussigntext | zPlussignyPlussignxPlussignname | zPlussignxPlussigny | zPlussignxPlussignyPlussigntext | zPlussignxPlussignyPlussignname
+      value: all | name | none | skip | text | typingsSlinky.plotlyJs.plotlyJsStrings.x | xPlussigntext | xPlussignname | xPlussigny | xPlussignyPlussigntext | xPlussignyPlussignname | xPlussignyPlussignz | xPlussignyPlussignzPlussigntext | xPlussignyPlussignzPlussignname | yPlussignname | yPlussignx | yPlussigntext | yPlussignxPlussigntext | yPlussignxPlussignname | yPlussignz | yPlussignzPlussigntext | yPlussignzPlussignname | yPlussignxPlussignz | yPlussignxPlussignzPlussigntext | yPlussignxPlussignzPlussignname | zPlussignx | zPlussignxPlussigntext | zPlussignxPlussignname | zPlussignyPlussignx | zPlussignyPlussignxPlussigntext | zPlussignyPlussignxPlussignname | zPlussignxPlussigny | zPlussignxPlussignyPlussigntext | zPlussignxPlussignyPlussignname
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hoverinfo")(value.asInstanceOf[js.Any])
@@ -1194,7 +1194,7 @@ object Data {
         ret
     }
     @scala.inline
-    def withXbins(value: AnonEnd): Self = {
+    def withXbins(value: End): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("xbins")(value.asInstanceOf[js.Any])
         ret

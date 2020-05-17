@@ -2,7 +2,7 @@ package typingsSlinky.gestalt.mod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.gestalt.AnonEventSyntheticEvent
+import typingsSlinky.gestalt.anon.EventSyntheticEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +12,8 @@ trait CardProps extends js.Object {
   var active: js.UndefOr[Boolean] = js.native
   var children: js.UndefOr[TagMod[Any]] = js.native
   var image: js.UndefOr[TagMod[Any]] = js.native
-  var onMouseEnter: js.UndefOr[js.Function1[/* args */ AnonEventSyntheticEvent, Unit]] = js.native
-  var onMouseLeave: js.UndefOr[js.Function1[/* args */ AnonEventSyntheticEvent, Unit]] = js.native
+  var onMouseEnter: js.UndefOr[js.Function1[/* args */ EventSyntheticEvent, Unit]] = js.native
+  var onMouseLeave: js.UndefOr[js.Function1[/* args */ EventSyntheticEvent, Unit]] = js.native
 }
 
 object CardProps {
@@ -77,7 +77,7 @@ object CardProps {
         ret
     }
     @scala.inline
-    def withOnMouseEnter(value: /* args */ AnonEventSyntheticEvent => Unit): Self = {
+    def withOnMouseEnter(value: /* args */ EventSyntheticEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction1(value))
         ret
@@ -89,7 +89,7 @@ object CardProps {
         ret
     }
     @scala.inline
-    def withOnMouseLeave(value: /* args */ AnonEventSyntheticEvent => Unit): Self = {
+    def withOnMouseLeave(value: /* args */ EventSyntheticEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.reactRelay.mod
 
-import typingsSlinky.reactRelay.PartialPageInfo
+import typingsSlinky.reactRelay.anon.PartialPageInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

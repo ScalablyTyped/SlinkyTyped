@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait FoldTransform extends _Transforms {
+trait FoldTransform extends Transforms {
   var as: js.UndefOr[(Vector2[String | SignalRef]) | SignalRef] = js.native
   var fields: js.Array[FieldRef] | SignalRef = js.native
   var `type`: fold = js.native

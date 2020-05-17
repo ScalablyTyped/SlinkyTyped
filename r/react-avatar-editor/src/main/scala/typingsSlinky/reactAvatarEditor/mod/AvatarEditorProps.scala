@@ -1,8 +1,8 @@
 package typingsSlinky.reactAvatarEditor.mod
 
 import org.scalajs.dom.raw.DragEvent
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.File
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,10 +20,10 @@ trait AvatarEditorProps extends js.Object {
   var image: String | File = js.native
   var onDropFile: js.UndefOr[js.Function1[/* event */ DragEvent, Unit]] = js.native
   var onImageChange: js.UndefOr[js.Function0[Unit]] = js.native
-  var onImageReady: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onLoadFailure: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onImageReady: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onLoadFailure: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   var onLoadSuccess: js.UndefOr[js.Function1[/* imgInfo */ ImageState, Unit]] = js.native
-  var onMouseMove: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onMouseMove: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   var onMouseUp: js.UndefOr[js.Function0[Unit]] = js.native
   var onPositionChange: js.UndefOr[js.Function1[/* position */ Position, Unit]] = js.native
   var position: js.UndefOr[Position] = js.native
@@ -178,7 +178,7 @@ object AvatarEditorProps {
         ret
     }
     @scala.inline
-    def withOnImageReady(value: /* event */ Event_ => Unit): Self = {
+    def withOnImageReady(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onImageReady")(js.Any.fromFunction1(value))
         ret
@@ -190,7 +190,7 @@ object AvatarEditorProps {
         ret
     }
     @scala.inline
-    def withOnLoadFailure(value: /* event */ Event_ => Unit): Self = {
+    def withOnLoadFailure(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadFailure")(js.Any.fromFunction1(value))
         ret
@@ -214,7 +214,7 @@ object AvatarEditorProps {
         ret
     }
     @scala.inline
-    def withOnMouseMove(value: /* event */ Event_ => Unit): Self = {
+    def withOnMouseMove(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(js.Any.fromFunction1(value))
         ret

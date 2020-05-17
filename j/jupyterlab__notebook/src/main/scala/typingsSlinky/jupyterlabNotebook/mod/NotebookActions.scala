@@ -2,7 +2,7 @@ package typingsSlinky.jupyterlabNotebook.mod
 
 import typingsSlinky.jupyterlabApputils.clientsessionMod.IClientSession
 import typingsSlinky.jupyterlabCoreutils.nbformatMod.nbformat.CellType
-import typingsSlinky.jupyterlabNotebook.AnonCell
+import typingsSlinky.jupyterlabNotebook.anon.Cell
 import typingsSlinky.jupyterlabNotebook.jupyterlabNotebookStrings.above
 import typingsSlinky.jupyterlabNotebook.jupyterlabNotebookStrings.below
 import typingsSlinky.jupyterlabNotebook.jupyterlabNotebookStrings.replace
@@ -32,7 +32,7 @@ object NotebookActions extends js.Object {
   /**
     * A signal that emits whenever a cell is run.
     */
-  val executed: ISignal[_, AnonCell] = js.native
+  val executed: ISignal[_, Cell] = js.native
   /**
     * Change the selected cell type(s).
     *

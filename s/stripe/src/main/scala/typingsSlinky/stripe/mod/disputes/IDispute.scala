@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.disputes
 
-import typingsSlinky.stripe.AnonDueby
+import typingsSlinky.stripe.anon.Dueby
 import typingsSlinky.stripe.mod.IMetadata
 import typingsSlinky.stripe.mod.IResourceObject
 import typingsSlinky.stripe.mod.balance.IBalanceTransaction
@@ -68,7 +68,7 @@ trait IDispute extends IResourceObject {
   /**
     * Information about the evidence submission.
     */
-  var evidence_details: js.UndefOr[AnonDueby] = js.native
+  var evidence_details: js.UndefOr[Dueby] = js.native
   /**
     * If true, it is still possible to refund the disputed payment. Once the payment has been fully
     * refunded, no further funds will be withdrawn from your Stripe account as a result of this dispute.
@@ -200,7 +200,7 @@ object IDispute {
         ret
     }
     @scala.inline
-    def withEvidence_details(value: AnonDueby): Self = {
+    def withEvidence_details(value: Dueby): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("evidence_details")(value.asInstanceOf[js.Any])
         ret

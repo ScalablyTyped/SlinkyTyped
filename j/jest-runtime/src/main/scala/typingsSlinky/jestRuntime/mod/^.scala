@@ -2,8 +2,8 @@ package typingsSlinky.jestRuntime.mod
 
 import typingsSlinky.jestEnvironment.mod.JestEnvironment
 import typingsSlinky.jestHasteMap.mod.ModuleMap
-import typingsSlinky.jestRuntime.AnonConsole
-import typingsSlinky.jestRuntime.Recordcacheconfigdebugver
+import typingsSlinky.jestRuntime.anon.Console
+import typingsSlinky.jestRuntime.anon.Recordcacheconfigdebugver
 import typingsSlinky.jestTypes.configMod.Argv
 import typingsSlinky.jestTypes.configMod.Path
 import typingsSlinky.jestTypes.configMod.ProjectConfig
@@ -34,7 +34,7 @@ class ^ protected () extends Runtime {
 @js.native
 object ^ extends js.Object {
   var ScriptTransformer: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ScriptTransformer */ js.Any = js.native
-  def createContext(config: ProjectConfig, options: AnonConsole): js.Promise[typingsSlinky.jestRuntime.typesMod.Context] = js.native
+  def createContext(config: ProjectConfig, options: Console): js.Promise[typingsSlinky.jestRuntime.typesMod.Context] = js.native
   def createHasteMap(config: ProjectConfig): typingsSlinky.jestHasteMap.mod.^ = js.native
   def createHasteMap(config: ProjectConfig, options: HasteMapOptions): typingsSlinky.jestHasteMap.mod.^ = js.native
   def createResolver(config: ProjectConfig, moduleMap: ModuleMap): typingsSlinky.jestResolve.mod.^ = js.native

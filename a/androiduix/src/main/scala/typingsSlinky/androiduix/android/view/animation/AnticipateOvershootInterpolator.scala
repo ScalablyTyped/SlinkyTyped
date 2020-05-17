@@ -4,19 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.view.animation.AnticipateOvershootInterpolator")
 @js.native
-class AnticipateOvershootInterpolator () extends Interpolator {
-  def this(tension: Double) = this()
-  def this(tension: Double, extraTension: Double) = this()
+trait AnticipateOvershootInterpolator extends Interpolator {
   var mTension: js.Any = js.native
 }
 
-/* static members */
-@JSGlobal("android.view.animation.AnticipateOvershootInterpolator")
-@js.native
-object AnticipateOvershootInterpolator extends js.Object {
-  /* private */ def a(t: js.Any, s: js.Any): js.Any = js.native
-  /* private */ def o(t: js.Any, s: js.Any): js.Any = js.native
+object AnticipateOvershootInterpolator {
+  @scala.inline
+  def apply(getInterpolation: Double => Double, mTension: js.Any): AnticipateOvershootInterpolator = {
+    val __obj = js.Dynamic.literal(getInterpolation = js.Any.fromFunction1(getInterpolation), mTension = mTension.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AnticipateOvershootInterpolator]
+  }
+  @scala.inline
+  implicit class AnticipateOvershootInterpolatorOps[Self <: AnticipateOvershootInterpolator] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMTension(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mTension")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

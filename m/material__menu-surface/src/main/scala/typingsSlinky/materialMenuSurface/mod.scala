@@ -1,9 +1,13 @@
 package typingsSlinky.materialMenuSurface
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Window
 import typingsSlinky.materialMenuSurface.adapterMod.MDCMenuSurfaceAdapter
+import typingsSlinky.materialMenuSurface.anon.ANCHOR
+import typingsSlinky.materialMenuSurface.anon.ANCHORTOMENUSURFACEWIDTHRATIO
+import typingsSlinky.materialMenuSurface.anon.CLOSEDEVENT
+import typingsSlinky.materialMenuSurface.anon.PartialMDCMenuSurfaceAdap
 import typingsSlinky.materialMenuSurface.utilMod.CssTransformPropertyName
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -65,13 +69,13 @@ object mod extends js.Object {
   @js.native
   object MDCMenuSurfaceFoundation extends js.Object {
     val Corner: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Corner */ js.Any = js.native
-    val cssClasses: AnonANCHOR = js.native
+    val cssClasses: ANCHOR = js.native
     /**
       * @see {@link MDCMenuSurfaceAdapter} for typing information on parameters and return types.
       */
     val defaultAdapter: MDCMenuSurfaceAdapter = js.native
-    val numbers: AnonANCHORTOMENUSURFACEWIDTHRATIO = js.native
-    val strings: AnonCLOSEDEVENT = js.native
+    val numbers: ANCHORTOMENUSURFACEWIDTHRATIO = js.native
+    val strings: CLOSEDEVENT = js.native
   }
   
   /**
@@ -130,8 +134,8 @@ object mod extends js.Object {
     /**
       * Returns the name of the correct transform property to use on the current browser.
       */
-    def getTransformPropertyName(globalObj: Window_): CssTransformPropertyName = js.native
-    def getTransformPropertyName(globalObj: Window_, forceRefresh: Boolean): CssTransformPropertyName = js.native
+    def getTransformPropertyName(globalObj: Window): CssTransformPropertyName = js.native
+    def getTransformPropertyName(globalObj: Window, forceRefresh: Boolean): CssTransformPropertyName = js.native
   }
   
 }

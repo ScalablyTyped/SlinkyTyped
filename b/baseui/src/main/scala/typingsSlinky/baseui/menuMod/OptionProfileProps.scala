@@ -2,8 +2,8 @@ package typingsSlinky.baseui.menuMod
 
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
-import typingsSlinky.baseui.AnonBody
-import typingsSlinky.baseui.AnonListItemProfile
+import typingsSlinky.baseui.anon.Body
+import typingsSlinky.baseui.anon.ListItemProfile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,11 +14,11 @@ trait OptionProfileProps extends BaseMenuPropsT {
   var $isHighlighted: js.UndefOr[Boolean] = js.native
   var getChildMenu: js.UndefOr[js.Function1[/* item */ js.Any, TagMod[Any]]] = js.native
   var item: js.Any = js.native
-  var overrides: js.UndefOr[AnonListItemProfile] = js.native
+  var overrides: js.UndefOr[ListItemProfile] = js.native
   var resetMenu: js.UndefOr[js.Function0[Unit]] = js.native
   def getProfileItemImg(item: js.Any): String | ReactComponentClass[_] = js.native
   def getProfileItemImgText(item: js.Any): String = js.native
-  def getProfileItemLabels(item: js.Any): AnonBody = js.native
+  def getProfileItemLabels(item: js.Any): Body = js.native
 }
 
 object OptionProfileProps {
@@ -26,7 +26,7 @@ object OptionProfileProps {
   def apply(
     getProfileItemImg: js.Any => String | ReactComponentClass[_],
     getProfileItemImgText: js.Any => String,
-    getProfileItemLabels: js.Any => AnonBody,
+    getProfileItemLabels: js.Any => Body,
     item: js.Any
   ): OptionProfileProps = {
     val __obj = js.Dynamic.literal(getProfileItemImg = js.Any.fromFunction1(getProfileItemImg), getProfileItemImgText = js.Any.fromFunction1(getProfileItemImgText), getProfileItemLabels = js.Any.fromFunction1(getProfileItemLabels), item = item.asInstanceOf[js.Any])
@@ -51,7 +51,7 @@ object OptionProfileProps {
         ret
     }
     @scala.inline
-    def withGetProfileItemLabels(value: js.Any => AnonBody): Self = {
+    def withGetProfileItemLabels(value: js.Any => Body): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getProfileItemLabels")(js.Any.fromFunction1(value))
         ret
@@ -87,7 +87,7 @@ object OptionProfileProps {
         ret
     }
     @scala.inline
-    def withOverrides(value: AnonListItemProfile): Self = {
+    def withOverrides(value: ListItemProfile): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
         ret

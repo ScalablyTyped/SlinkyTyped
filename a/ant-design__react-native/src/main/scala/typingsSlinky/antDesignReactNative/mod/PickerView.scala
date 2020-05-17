@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.mod
 
-import typingsSlinky.antDesignReactNative.AnonCascade
+import typingsSlinky.antDesignReactNative.anon.Cascade
 import typingsSlinky.antDesignReactNative.pickerViewMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +14,6 @@ class PickerView () extends default
 @JSImport("@ant-design/react-native", "PickerView")
 @js.native
 object PickerView extends js.Object {
-  var defaultProps: AnonCascade = js.native
+  var defaultProps: Cascade = js.native
 }
 

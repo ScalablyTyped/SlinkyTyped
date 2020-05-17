@@ -1,6 +1,6 @@
 package typingsSlinky.apolloClient.watchQueryOptionsMod
 
-import typingsSlinky.apolloClient.AnonSubscriptionData
+import typingsSlinky.apolloClient.anon.SubscriptionData
 import typingsSlinky.graphql.astMod.DocumentNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -45,9 +45,7 @@ object SubscribeToMoreOptions {
         ret
     }
     @scala.inline
-    def withUpdateQuery(
-      value: (TData, /* options */ AnonSubscriptionData[TSubscriptionData, TSubscriptionVariables]) => TData
-    ): Self[TData, TSubscriptionVariables, TSubscriptionData] = {
+    def withUpdateQuery(value: (TData, /* options */ SubscriptionData[TSubscriptionData, TSubscriptionVariables]) => TData): Self[TData, TSubscriptionVariables, TSubscriptionData] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("updateQuery")(js.Any.fromFunction2(value))
         ret

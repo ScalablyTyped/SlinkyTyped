@@ -1,6 +1,6 @@
 package typingsSlinky.anyproxy.mod
 
-import typingsSlinky.anyproxy.PartialResponse
+import typingsSlinky.anyproxy.anon.PartialResponse
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.RequestOptions
 import scala.scalajs.js

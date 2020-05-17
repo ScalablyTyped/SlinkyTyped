@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +12,4 @@ trait MSMediaKeySession extends EventTarget {
   def close(): Unit = js.native
   def update(key: js.typedarray.Uint8Array): Unit = js.native
 }
-
-@JSGlobal("MSMediaKeySession")
-@js.native
-object MSMediaKeySession extends Instantiable0[MSMediaKeySession]
 

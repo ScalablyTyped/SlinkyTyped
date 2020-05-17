@@ -1,13 +1,13 @@
 package typingsSlinky.gapiCalendar.gapi.client.calendar
 
-import typingsSlinky.gapiCalendar.AnonAdditionalGuests
-import typingsSlinky.gapiCalendar.AnonDate
-import typingsSlinky.gapiCalendar.AnonDateTime
-import typingsSlinky.gapiCalendar.AnonDisplay
-import typingsSlinky.gapiCalendar.AnonFileUrl
-import typingsSlinky.gapiCalendar.AnonOverrides
-import typingsSlinky.gapiCalendar.AnonPrivate
-import typingsSlinky.gapiCalendar.AnonTitle
+import typingsSlinky.gapiCalendar.anon.AdditionalGuests
+import typingsSlinky.gapiCalendar.anon.Date
+import typingsSlinky.gapiCalendar.anon.DateTime
+import typingsSlinky.gapiCalendar.anon.Display
+import typingsSlinky.gapiCalendar.anon.FileUrl
+import typingsSlinky.gapiCalendar.anon.Overrides
+import typingsSlinky.gapiCalendar.anon.Private
+import typingsSlinky.gapiCalendar.anon.Title
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,23 +17,23 @@ trait EventInput extends js.Object {
   // Optional Properties
   var anyoneCanAddSelf: js.UndefOr[Boolean] = js.native
   // Required Properties
-  var attachments: js.UndefOr[js.Array[AnonFileUrl]] = js.native
-  var attendees: js.UndefOr[js.Array[AnonAdditionalGuests]] = js.native
+  var attachments: js.UndefOr[js.Array[FileUrl]] = js.native
+  var attendees: js.UndefOr[js.Array[AdditionalGuests]] = js.native
   var colorId: js.UndefOr[String] = js.native
   var description: js.UndefOr[String] = js.native
-  var end: AnonDate = js.native
-  var extendedProperties: js.UndefOr[AnonPrivate] = js.native
-  var gadget: js.UndefOr[AnonDisplay] = js.native
+  var end: Date = js.native
+  var extendedProperties: js.UndefOr[Private] = js.native
+  var gadget: js.UndefOr[Display] = js.native
   var guestsCanInviteOthers: js.UndefOr[Boolean] = js.native
   var guestsCanSeeOtherGuests: js.UndefOr[Boolean] = js.native
   var id: js.UndefOr[String] = js.native
   var location: js.UndefOr[String] = js.native
-  var originalStartTime: js.UndefOr[AnonDateTime] = js.native
+  var originalStartTime: js.UndefOr[DateTime] = js.native
   var recurrence: js.UndefOr[js.Array[String]] = js.native
-  var reminders: js.UndefOr[AnonOverrides] = js.native
+  var reminders: js.UndefOr[Overrides] = js.native
   var sequence: js.UndefOr[integer] = js.native
-  var source: js.UndefOr[AnonTitle] = js.native
-  var start: AnonDate = js.native
+  var source: js.UndefOr[Title] = js.native
+  var start: Date = js.native
   var status: js.UndefOr[EventStatus] = js.native
   var summary: js.UndefOr[String] = js.native
   var transparency: js.UndefOr[EventTransparency] = js.native
@@ -42,7 +42,7 @@ trait EventInput extends js.Object {
 
 object EventInput {
   @scala.inline
-  def apply(end: AnonDate, start: AnonDate): EventInput = {
+  def apply(end: Date, start: Date): EventInput = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventInput]
   }
@@ -53,13 +53,13 @@ object EventInput {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEnd(value: AnonDate): Self = {
+    def withEnd(value: Date): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withStart(value: AnonDate): Self = {
+    def withStart(value: Date): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
         ret
@@ -77,7 +77,7 @@ object EventInput {
         ret
     }
     @scala.inline
-    def withAttachments(value: js.Array[AnonFileUrl]): Self = {
+    def withAttachments(value: js.Array[FileUrl]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(value.asInstanceOf[js.Any])
         ret
@@ -89,7 +89,7 @@ object EventInput {
         ret
     }
     @scala.inline
-    def withAttendees(value: js.Array[AnonAdditionalGuests]): Self = {
+    def withAttendees(value: js.Array[AdditionalGuests]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("attendees")(value.asInstanceOf[js.Any])
         ret
@@ -125,7 +125,7 @@ object EventInput {
         ret
     }
     @scala.inline
-    def withExtendedProperties(value: AnonPrivate): Self = {
+    def withExtendedProperties(value: Private): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("extendedProperties")(value.asInstanceOf[js.Any])
         ret
@@ -137,7 +137,7 @@ object EventInput {
         ret
     }
     @scala.inline
-    def withGadget(value: AnonDisplay): Self = {
+    def withGadget(value: Display): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gadget")(value.asInstanceOf[js.Any])
         ret
@@ -197,7 +197,7 @@ object EventInput {
         ret
     }
     @scala.inline
-    def withOriginalStartTime(value: AnonDateTime): Self = {
+    def withOriginalStartTime(value: DateTime): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("originalStartTime")(value.asInstanceOf[js.Any])
         ret
@@ -221,7 +221,7 @@ object EventInput {
         ret
     }
     @scala.inline
-    def withReminders(value: AnonOverrides): Self = {
+    def withReminders(value: Overrides): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("reminders")(value.asInstanceOf[js.Any])
         ret
@@ -245,7 +245,7 @@ object EventInput {
         ret
     }
     @scala.inline
-    def withSource(value: AnonTitle): Self = {
+    def withSource(value: Title): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
         ret

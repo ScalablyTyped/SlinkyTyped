@@ -1,6 +1,6 @@
 package typingsSlinky.expo.mod
 
-import typingsSlinky.expo.AnonEventListener
+import typingsSlinky.expo.anon.EventListener
 import typingsSlinky.expo.updatesMod.UpdateCheckResult
 import typingsSlinky.expo.updatesMod.UpdateFetchResult
 import typingsSlinky.fbemitter.mod.EventSubscription
@@ -15,7 +15,7 @@ object Updates extends js.Object {
   def checkForUpdateAsync(): js.Promise[UpdateCheckResult] = js.native
   def clearUpdateCacheExperimentalAsync(abiVersion: String): js.Promise[Unit] = js.native
   def fetchUpdateAsync(): js.Promise[UpdateFetchResult] = js.native
-  def fetchUpdateAsync(hasEventListener: AnonEventListener): js.Promise[UpdateFetchResult] = js.native
+  def fetchUpdateAsync(hasEventListener: EventListener): js.Promise[UpdateFetchResult] = js.native
   def reload(): js.Promise[Unit] = js.native
   def reloadFromCache(): js.Promise[Unit] = js.native
   @js.native

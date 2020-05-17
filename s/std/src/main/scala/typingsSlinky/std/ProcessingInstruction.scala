@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,9 +9,4 @@ import scala.scalajs.js.annotation._
 trait ProcessingInstruction extends CharacterData {
   val target: java.lang.String = js.native
 }
-
-@JSGlobal("ProcessingInstruction")
-@js.native
-object ProcessingInstruction
-  extends Instantiable0[org.scalajs.dom.raw.ProcessingInstruction]
 

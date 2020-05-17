@@ -1,10 +1,10 @@
 package typingsSlinky.officeUiFabricReact.documentCardTypesMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.std.Event_
 import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -34,7 +34,7 @@ trait IDocumentCardProps
     * Function to call when the card is clicked or keyboard Enter/Space is pushed.
     */
   @JSName("onClick")
-  var onClick_IDocumentCardProps: js.UndefOr[js.Function1[/* ev */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]], Unit]] = js.native
+  var onClick_IDocumentCardProps: js.UndefOr[js.Function1[/* ev */ js.UndefOr[SyntheticEvent[Event, HTMLElement]], Unit]] = js.native
   /**
     * Call to provide customized styling that will layer on top of the variant rules
     */
@@ -75,7 +75,7 @@ object IDocumentCardProps {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* ev */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]] => Unit): Self = {
+    def withOnClick(value: /* ev */ js.UndefOr[SyntheticEvent[Event, HTMLElement]] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret

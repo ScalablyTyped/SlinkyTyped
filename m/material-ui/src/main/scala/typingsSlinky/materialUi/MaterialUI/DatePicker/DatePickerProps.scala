@@ -5,8 +5,8 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticTouchEvent
-import typingsSlinky.materialUi.AnonCall
 import typingsSlinky.materialUi.MaterialUI.propTypes.utils
+import typingsSlinky.materialUi.anon.Call
 import typingsSlinky.materialUi.materialUiStrings.`inline`
 import typingsSlinky.materialUi.materialUiStrings.dialog
 import typingsSlinky.materialUi.materialUiStrings.landscape
@@ -22,7 +22,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DatePickerProps extends js.Object {
   // <TextField/> is the element that get the 'other' properties
-  var DateTimeFormat: js.UndefOr[AnonCall] = js.native
+  var DateTimeFormat: js.UndefOr[Call] = js.native
   var autoOk: js.UndefOr[Boolean] = js.native
   var cancelLabel: js.UndefOr[TagMod[Any]] = js.native
   // From <TextField />
@@ -87,7 +87,7 @@ object DatePickerProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDateTimeFormat(value: AnonCall): Self = {
+    def withDateTimeFormat(value: Call): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DateTimeFormat")(value.asInstanceOf[js.Any])
         ret

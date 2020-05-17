@@ -6,15 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides simplified access to app resources such as app UI strings. */
-@JSGlobal("Windows.ApplicationModel.Resources.ResourceLoader")
 @js.native
-/** Constructs a new ResourceLoader object for the "Resources" subtree of the currently running app's main ResourceMap . */
-class ResourceLoader () extends js.Object {
-  /**
-    * Constructs a new ResourceLoader object for the specified ResourceMap .
-    * @param name The resource identifier of the ResourceMap that the new resource loader uses for unqualified resource references. It can then retrieve resources relative to those references.
-    */
-  def this(name: String) = this()
+trait ResourceLoader extends js.Object {
   /**
     * Returns the most appropriate string value of a resource, specified by resource identifier, for the default ResourceContext of the view in which the ResourceLoader was obtained using ResourceLoader.GetForCurrentView .
     * @param resource The resource identifier of the resource to be resolved.
@@ -29,37 +22,31 @@ class ResourceLoader () extends js.Object {
   def getStringForUri(uri: Uri): String = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.ApplicationModel.Resources.ResourceLoader")
-@js.native
-object ResourceLoader extends js.Object {
-  /**
-    * Gets a ResourceLoader object for the Resources subtree of the currently running app's main ResourceMap . This ResourceLoader uses a default context associated with the current view.
-    * @return A resource loader for the Resources subtree of the currently running app's main ResourceMap .
-    */
-  def getForCurrentView(): ResourceLoader = js.native
-  /**
-    * Gets a ResourceLoader object for the specified ResourceMap . This ResourceLoader uses a default context associated with the current view.
-    * @param name The resource identifier of the ResourceMap that the new resource loader uses for unqualified resource references. The loader can then retrieve resources relative to those references.
-    * @return A resource loader for the specified ResourceMap .
-    */
-  def getForCurrentView(name: String): ResourceLoader = js.native
-  /**
-    * Gets a ResourceLoader object for the Resources subtree of the currently running app's main ResourceMap . This ResourceLoader uses a default context that's not associated with any view.
-    * @return A resource loader for the Resources subtree of the currently running app's main ResourceMap . This ResourceLoader uses a default context that's not associated with any view. You can't use this ResourceLoader to retrieve any resource that has resource candidates qualified for scale.
-    */
-  def getForViewIndependentUse(): ResourceLoader = js.native
-  /**
-    * Gets a ResourceLoader object for the specified ResourceMap . This ResourceLoader uses a default context that's not associated with any view.
-    * @param name The resource identifier of the ResourceMap that the new resource loader uses for unqualified resource references. The loader can then retrieve resources relative to those references.
-    * @return A resource loader for the Resources subtree of the currently running app's main ResourceMap . This ResourceLoader uses a default context that's not associated with any view. You can't use this ResourceLoader to retrieve any resource that has resource candidates qualified for scale.
-    */
-  def getForViewIndependentUse(name: String): ResourceLoader = js.native
-  /**
-    * Returns the most appropriate string value of a resource, specified as a Uri for a resource identifier, for the default ResourceContext of the currently running app.
-    * @param uri A Uri that represents the resource to be retrieved.
-    * @return The most appropriate string value of the specified resource for the default ResourceContext .
-    */
-  def getStringForReference(uri: Uri): String = js.native
+object ResourceLoader {
+  @scala.inline
+  def apply(getString: String => String, getStringForUri: Uri => String): ResourceLoader = {
+    val __obj = js.Dynamic.literal(getString = js.Any.fromFunction1(getString), getStringForUri = js.Any.fromFunction1(getStringForUri))
+    __obj.asInstanceOf[ResourceLoader]
+  }
+  @scala.inline
+  implicit class ResourceLoaderOps[Self <: ResourceLoader] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetString(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getString")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetStringForUri(value: Uri => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStringForUri")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

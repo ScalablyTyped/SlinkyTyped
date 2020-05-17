@@ -1,6 +1,6 @@
 package typingsSlinky.baiduApp.swan
 
-import typingsSlinky.baiduApp.servicesArrayuuidstringis
+import typingsSlinky.baiduApp.anon.servicesArrayuuidstringis
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

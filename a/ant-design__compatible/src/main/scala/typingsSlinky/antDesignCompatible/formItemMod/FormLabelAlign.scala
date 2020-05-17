@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait FormLabelAlign extends js.Object
 
+object FormLabelAlign {
+  @scala.inline
+  def left: typingsSlinky.antDesignCompatible.antDesignCompatibleStrings.left = "left".asInstanceOf[typingsSlinky.antDesignCompatible.antDesignCompatibleStrings.left]
+  @scala.inline
+  def right: typingsSlinky.antDesignCompatible.antDesignCompatibleStrings.right = "right".asInstanceOf[typingsSlinky.antDesignCompatible.antDesignCompatibleStrings.right]
+}
+

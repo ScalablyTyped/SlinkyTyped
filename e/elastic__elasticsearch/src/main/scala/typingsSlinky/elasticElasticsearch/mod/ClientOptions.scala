@@ -1,10 +1,10 @@
 package typingsSlinky.elasticElasticsearch.mod
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.elasticElasticsearch.AnonId
-import typingsSlinky.elasticElasticsearch.AnonInstantiable
-import typingsSlinky.elasticElasticsearch.AnonResurrectStrategies
-import typingsSlinky.elasticElasticsearch.AnonSniffReasons
+import typingsSlinky.elasticElasticsearch.anon.Id
+import typingsSlinky.elasticElasticsearch.anon.Instantiable
+import typingsSlinky.elasticElasticsearch.anon.ResurrectStrategies
+import typingsSlinky.elasticElasticsearch.anon.SniffReasons
 import typingsSlinky.elasticElasticsearch.connectionMod.AgentOptions
 import typingsSlinky.elasticElasticsearch.connectionMod.agentFn
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.gzip
@@ -26,13 +26,13 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ClientOptions extends js.Object {
-  var Connection: js.UndefOr[AnonInstantiable] = js.native
-  var ConnectionPool: js.UndefOr[AnonResurrectStrategies] = js.native
+  var Connection: js.UndefOr[Instantiable] = js.native
+  var ConnectionPool: js.UndefOr[ResurrectStrategies] = js.native
   var Serializer: js.UndefOr[Instantiable0[default]] = js.native
-  var Transport: js.UndefOr[AnonSniffReasons] = js.native
+  var Transport: js.UndefOr[SniffReasons] = js.native
   var agent: js.UndefOr[AgentOptions | agentFn] = js.native
   var auth: js.UndefOr[BasicAuth | ApiKeyAuth] = js.native
-  var cloud: js.UndefOr[AnonId] = js.native
+  var cloud: js.UndefOr[Id] = js.native
   var compression: js.UndefOr[gzip] = js.native
   var generateRequestId: js.UndefOr[generateRequestIdFn] = js.native
   var headers: js.UndefOr[anyObject] = js.native
@@ -67,7 +67,7 @@ object ClientOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withConnection(value: AnonInstantiable): Self = {
+    def withConnection(value: Instantiable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Connection")(value.asInstanceOf[js.Any])
         ret
@@ -79,7 +79,7 @@ object ClientOptions {
         ret
     }
     @scala.inline
-    def withConnectionPool(value: AnonResurrectStrategies): Self = {
+    def withConnectionPool(value: ResurrectStrategies): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ConnectionPool")(value.asInstanceOf[js.Any])
         ret
@@ -103,7 +103,7 @@ object ClientOptions {
         ret
     }
     @scala.inline
-    def withTransport(value: AnonSniffReasons): Self = {
+    def withTransport(value: SniffReasons): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Transport")(value.asInstanceOf[js.Any])
         ret
@@ -145,7 +145,7 @@ object ClientOptions {
         ret
     }
     @scala.inline
-    def withCloud(value: AnonId): Self = {
+    def withCloud(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cloud")(value.asInstanceOf[js.Any])
         ret

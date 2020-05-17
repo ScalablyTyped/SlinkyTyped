@@ -4,10 +4,10 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignReactNative.PartialAccordionStyle
 import typingsSlinky.antDesignReactNative.accordionMod.AccordionHeader
 import typingsSlinky.antDesignReactNative.accordionMod.AccordionNativeProps
 import typingsSlinky.antDesignReactNative.accordionMod.default
+import typingsSlinky.antDesignReactNative.anon.PartialAccordionStyle
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.bottom
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.center
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.top

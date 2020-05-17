@@ -3,24 +3,25 @@ package typingsSlinky.vegaTypings
 import typingsSlinky.vegaTypings.autosizeMod.AutoSizeType
 import typingsSlinky.vegaTypings.axisMod.AxisOrient
 import typingsSlinky.vegaTypings.axisMod.FormatType
-import typingsSlinky.vegaTypings.axisMod._LabelOverlap
+import typingsSlinky.vegaTypings.axisMod.LabelOverlap
 import typingsSlinky.vegaTypings.colorMod.ColorName
 import typingsSlinky.vegaTypings.configMod.AxisConfigKeys
 import typingsSlinky.vegaTypings.configMod.Cursor
 import typingsSlinky.vegaTypings.configMod.MarkConfigKeys
 import typingsSlinky.vegaTypings.dataMod.DataType
+import typingsSlinky.vegaTypings.dataMod.Parse
 import typingsSlinky.vegaTypings.encodeMod.Align
 import typingsSlinky.vegaTypings.encodeMod.Baseline
+import typingsSlinky.vegaTypings.encodeMod.Blend
 import typingsSlinky.vegaTypings.encodeMod.EncodeEntryName
+import typingsSlinky.vegaTypings.encodeMod.FontStyle
 import typingsSlinky.vegaTypings.encodeMod.FontWeight
 import typingsSlinky.vegaTypings.encodeMod.Interpolate
 import typingsSlinky.vegaTypings.encodeMod.Orient
 import typingsSlinky.vegaTypings.encodeMod.Orientation
+import typingsSlinky.vegaTypings.encodeMod.SymbolShape
 import typingsSlinky.vegaTypings.encodeMod.TextBaseline
 import typingsSlinky.vegaTypings.encodeMod.TextDirection
-import typingsSlinky.vegaTypings.encodeMod._Blend
-import typingsSlinky.vegaTypings.encodeMod._FontStyle
-import typingsSlinky.vegaTypings.encodeMod._SymbolShape
 import typingsSlinky.vegaTypings.layoutMod.LayoutAlign
 import typingsSlinky.vegaTypings.layoutMod.LayoutBounds
 import typingsSlinky.vegaTypings.layoutMod.LayoutTitleAnchor
@@ -47,9 +48,9 @@ import typingsSlinky.vegaTypings.schemeMod.Diverging
 import typingsSlinky.vegaTypings.schemeMod.SequentialMultiHue
 import typingsSlinky.vegaTypings.schemeMod.SequentialSingleHue
 import typingsSlinky.vegaTypings.streamMod.EventType
+import typingsSlinky.vegaTypings.titleMod.TitleAnchor
 import typingsSlinky.vegaTypings.titleMod.TitleFrame
 import typingsSlinky.vegaTypings.titleMod.TitleOrient
-import typingsSlinky.vegaTypings.titleMod._TitleAnchor
 import typingsSlinky.vegaTypings.transformMod.AggregateOp
 import typingsSlinky.vegaTypings.transformMod.DensityMethod
 import typingsSlinky.vegaTypings.transformMod.ImputeMethod
@@ -134,13 +135,15 @@ object vegaTypingsStrings {
   sealed trait argmin extends AggregateOp
   
   @js.native
-  sealed trait arrow extends _SymbolShape
+  sealed trait arrow extends SymbolShape
   
   @js.native
   sealed trait ascending extends SortOrder
   
   @js.native
-  sealed trait auto extends Cursor
+  sealed trait auto
+    extends Cursor
+       with Parse
   
   @js.native
   sealed trait average extends AggregateOp
@@ -373,10 +376,10 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait bottom
-    extends AxisOrient
+    extends Orient
+       with AxisOrient
        with Baseline
        with LegendOrient
-       with Orient
        with SceneTextBaseline
        with TextBaseline
        with TitleOrient
@@ -518,7 +521,7 @@ object vegaTypingsStrings {
   sealed trait ci1 extends AggregateOp
   
   @js.native
-  sealed trait circle extends _SymbolShape
+  sealed trait circle extends SymbolShape
   
   @js.native
   sealed trait click extends EventType
@@ -536,13 +539,13 @@ object vegaTypingsStrings {
   sealed trait collide extends js.Object
   
   @js.native
-  sealed trait color extends _Blend
+  sealed trait color extends Blend
   
   @js.native
-  sealed trait `color-burn` extends _Blend
+  sealed trait `color-burn` extends Blend
   
   @js.native
-  sealed trait `color-dodge` extends _Blend
+  sealed trait `color-dodge` extends Blend
   
   @js.native
   sealed trait conicConformal extends ProjectionType
@@ -587,7 +590,7 @@ object vegaTypingsStrings {
   sealed trait crimson extends ColorName
   
   @js.native
-  sealed trait cross extends _SymbolShape
+  sealed trait cross extends SymbolShape
   
   @js.native
   sealed trait crossfilter extends js.Object
@@ -625,7 +628,7 @@ object vegaTypingsStrings {
   sealed trait darkcyan extends ColorName
   
   @js.native
-  sealed trait darken extends _Blend
+  sealed trait darken extends Blend
   
   @js.native
   sealed trait darkgoldenrod extends ColorName
@@ -713,13 +716,13 @@ object vegaTypingsStrings {
   sealed trait diagonal extends LinkPathShape
   
   @js.native
-  sealed trait diamond extends _SymbolShape
+  sealed trait diamond extends SymbolShape
   
   @js.native
   sealed trait dice extends TreemapMethod
   
   @js.native
-  sealed trait difference extends _Blend
+  sealed trait difference extends Blend
   
   @js.native
   sealed trait dimgray extends ColorName
@@ -759,8 +762,8 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait end
-    extends LayoutTitleAnchor
-       with _TitleAnchor
+    extends TitleAnchor
+       with LayoutTitleAnchor
   
   @js.native
   sealed trait enter extends EncodeEntryName
@@ -775,7 +778,7 @@ object vegaTypingsStrings {
   sealed trait `ew-resize` extends Cursor
   
   @js.native
-  sealed trait exclusion extends _Blend
+  sealed trait exclusion extends Blend
   
   @js.native
   sealed trait exit extends EncodeEntryName
@@ -880,7 +883,7 @@ object vegaTypingsStrings {
   sealed trait gray extends ColorName
   
   @js.native
-  sealed trait greedy extends _LabelOverlap
+  sealed trait greedy extends LabelOverlap
   
   @js.native
   sealed trait green extends ColorName
@@ -948,7 +951,7 @@ object vegaTypingsStrings {
        with TitleFrame
   
   @js.native
-  sealed trait `hard-light` extends _Blend
+  sealed trait `hard-light` extends Blend
   
   @js.native
   sealed trait hcl extends ScaleInterpolateEnum
@@ -998,7 +1001,7 @@ object vegaTypingsStrings {
   sealed trait https extends js.Object
   
   @js.native
-  sealed trait hue extends _Blend
+  sealed trait hue extends Blend
   
   @js.native
   sealed trait identifier extends js.Object
@@ -1040,7 +1043,7 @@ object vegaTypingsStrings {
   sealed trait isocontour extends js.Object
   
   @js.native
-  sealed trait italic extends _FontStyle
+  sealed trait italic extends FontStyle
   
   @js.native
   sealed trait ivory extends ColorName
@@ -1124,7 +1127,7 @@ object vegaTypingsStrings {
   sealed trait lightcyan extends ColorName
   
   @js.native
-  sealed trait lighten extends _Blend
+  sealed trait lighten extends Blend
   
   @js.native
   sealed trait lighter extends FontWeight
@@ -1224,7 +1227,7 @@ object vegaTypingsStrings {
   sealed trait ltr extends TextDirection
   
   @js.native
-  sealed trait luminosity extends _Blend
+  sealed trait luminosity extends Blend
   
   @js.native
   sealed trait magenta extends ColorName
@@ -1287,10 +1290,10 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait middle
-    extends Baseline
+    extends TextBaseline
+       with Baseline
        with SceneTextBaseline
-       with TextBaseline
-       with _TitleAnchor
+       with TitleAnchor
   
   @js.native
   sealed trait midnightblue extends ColorName
@@ -1357,7 +1360,7 @@ object vegaTypingsStrings {
   sealed trait move extends Cursor
   
   @js.native
-  sealed trait multiply extends _Blend
+  sealed trait multiply extends Blend
   
   @js.native
   sealed trait `n-resize` extends Cursor
@@ -1403,8 +1406,8 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait normal
-    extends FontWeight
-       with _FontStyle
+    extends FontStyle
+       with FontWeight
   
   @js.native
   sealed trait normalize extends StackOffset
@@ -1433,7 +1436,7 @@ object vegaTypingsStrings {
   sealed trait `nwse-resize` extends Cursor
   
   @js.native
-  sealed trait oblique extends _FontStyle
+  sealed trait oblique extends FontStyle
   
   @js.native
   sealed trait oldlace extends ColorName
@@ -1512,7 +1515,7 @@ object vegaTypingsStrings {
   sealed trait outer extends js.Object
   
   @js.native
-  sealed trait overlay extends _Blend
+  sealed trait overlay extends Blend
   
   @js.native
   sealed trait pack extends js.Object
@@ -1544,7 +1547,7 @@ object vegaTypingsStrings {
   sealed trait papayawhip extends ColorName
   
   @js.native
-  sealed trait parity extends _LabelOverlap
+  sealed trait parity extends LabelOverlap
   
   @js.native
   sealed trait partition extends js.Object
@@ -2264,13 +2267,13 @@ object vegaTypingsStrings {
   sealed trait sandybrown extends ColorName
   
   @js.native
-  sealed trait saturation extends _Blend
+  sealed trait saturation extends Blend
   
   @js.native
   sealed trait scope extends js.Object
   
   @js.native
-  sealed trait screen extends _Blend
+  sealed trait screen extends Blend
   
   @js.native
   sealed trait `se-resize` extends Cursor
@@ -2354,7 +2357,7 @@ object vegaTypingsStrings {
   sealed trait snow extends ColorName
   
   @js.native
-  sealed trait `soft-light` extends _Blend
+  sealed trait `soft-light` extends Blend
   
   @js.native
   sealed trait spectral
@@ -2415,7 +2418,7 @@ object vegaTypingsStrings {
        with ScaleType
   
   @js.native
-  sealed trait square extends _SymbolShape
+  sealed trait square extends SymbolShape
   
   @js.native
   sealed trait squarify extends TreemapMethod
@@ -2425,8 +2428,8 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait start
-    extends LayoutTitleAnchor
-       with _TitleAnchor
+    extends TitleAnchor
+       with LayoutTitleAnchor
   
   @js.native
   sealed trait stderr extends AggregateOp
@@ -2459,7 +2462,7 @@ object vegaTypingsStrings {
   sealed trait string extends DataType
   
   @js.native
-  sealed trait stroke extends _SymbolShape
+  sealed trait stroke extends SymbolShape
   
   @js.native
   sealed trait sum extends AggregateOp
@@ -2532,10 +2535,10 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait top
-    extends AxisOrient
+    extends Orient
+       with AxisOrient
        with Baseline
        with LegendOrient
-       with Orient
        with SceneTextBaseline
        with TextBaseline
        with TitleOrient
@@ -2576,19 +2579,19 @@ object vegaTypingsStrings {
   sealed trait treemap extends js.Object
   
   @js.native
-  sealed trait triangle extends _SymbolShape
+  sealed trait triangle extends SymbolShape
   
   @js.native
-  sealed trait `triangle-down` extends _SymbolShape
+  sealed trait `triangle-down` extends SymbolShape
   
   @js.native
-  sealed trait `triangle-left` extends _SymbolShape
+  sealed trait `triangle-left` extends SymbolShape
   
   @js.native
-  sealed trait `triangle-right` extends _SymbolShape
+  sealed trait `triangle-right` extends SymbolShape
   
   @js.native
-  sealed trait `triangle-up` extends _SymbolShape
+  sealed trait `triangle-up` extends SymbolShape
   
   @js.native
   sealed trait tsv extends js.Object
@@ -2653,7 +2656,7 @@ object vegaTypingsStrings {
   sealed trait wait extends Cursor
   
   @js.native
-  sealed trait wedge extends _SymbolShape
+  sealed trait wedge extends SymbolShape
   
   @js.native
   sealed trait week

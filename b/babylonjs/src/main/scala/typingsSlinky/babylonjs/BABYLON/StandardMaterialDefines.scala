@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.StandardMaterialDefines")
 @js.native
-class StandardMaterialDefines ()
+trait StandardMaterialDefines
   extends MaterialDefines
      with IImageProcessingConfigurationDefines {
   var ALPHAFROMDIFFUSE: Boolean = js.native

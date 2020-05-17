@@ -1,38 +1,29 @@
 package typingsSlinky.apolloEngineReporting.agentMod
 
-import typingsSlinky.apolloEngineReporting.apolloEngineReportingBooleans.`true`
+import typingsSlinky.apolloEngineReporting.anon.All
+import typingsSlinky.apolloEngineReporting.anon.ExceptNames
+import typingsSlinky.apolloEngineReporting.anon.None
+import typingsSlinky.apolloEngineReporting.anon.OnlyNames
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.apolloEngineReporting.AnonOnlyNames
-  - typingsSlinky.apolloEngineReporting.AnonExceptNames
-  - typingsSlinky.apolloEngineReporting.AnonAll
-  - typingsSlinky.apolloEngineReporting.AnonNone
+  - typingsSlinky.apolloEngineReporting.anon.OnlyNames
+  - typingsSlinky.apolloEngineReporting.anon.ExceptNames
+  - typingsSlinky.apolloEngineReporting.anon.All
+  - typingsSlinky.apolloEngineReporting.anon.None
 */
 trait SendValuesBaseOptions extends VariableValueOptions
 
 object SendValuesBaseOptions {
   @scala.inline
-  def AnonOnlyNames(onlyNames: js.Array[String]): SendValuesBaseOptions = {
-    val __obj = js.Dynamic.literal(onlyNames = onlyNames.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SendValuesBaseOptions]
-  }
+  implicit def apply(value: All): SendValuesBaseOptions = value.asInstanceOf[SendValuesBaseOptions]
   @scala.inline
-  def AnonExceptNames(exceptNames: js.Array[String]): SendValuesBaseOptions = {
-    val __obj = js.Dynamic.literal(exceptNames = exceptNames.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SendValuesBaseOptions]
-  }
+  implicit def apply(value: ExceptNames): SendValuesBaseOptions = value.asInstanceOf[SendValuesBaseOptions]
   @scala.inline
-  def AnonAll(all: `true`): SendValuesBaseOptions = {
-    val __obj = js.Dynamic.literal(all = all.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SendValuesBaseOptions]
-  }
+  implicit def apply(value: None): SendValuesBaseOptions = value.asInstanceOf[SendValuesBaseOptions]
   @scala.inline
-  def AnonNone(none: `true`): SendValuesBaseOptions = {
-    val __obj = js.Dynamic.literal(none = none.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SendValuesBaseOptions]
-  }
+  implicit def apply(value: OnlyNames): SendValuesBaseOptions = value.asInstanceOf[SendValuesBaseOptions]
 }
 

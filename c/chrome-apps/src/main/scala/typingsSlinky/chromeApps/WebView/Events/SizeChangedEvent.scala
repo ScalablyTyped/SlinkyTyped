@@ -1,7 +1,7 @@
 package typingsSlinky.chromeApps.WebView.Events
 
 import typingsSlinky.chromeApps.chrome.integer
-import typingsSlinky.std.Event_
+import typingsSlinky.std.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
   * Only fires if autosize is enabled.
   */
 @js.native
-trait SizeChangedEvent extends Event_ {
+trait SizeChangedEvent extends Event {
   /** New height of embedded web content. */
   var newHeight: integer = js.native
   /** New width of embedded web content. */

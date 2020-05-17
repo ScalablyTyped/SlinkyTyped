@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.OmitStatusBarset
+import typingsSlinky.tabris.anon.OmitStatusBarset
 import typingsSlinky.tabris.tabrisStrings.background
 import typingsSlinky.tabris.tabrisStrings.dark
 import typingsSlinky.tabris.tabrisStrings.default

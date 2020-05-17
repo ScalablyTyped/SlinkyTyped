@@ -1,6 +1,6 @@
 package typingsSlinky.cathoQuantum.gridMod
 
-import typingsSlinky.cathoQuantum.AnonBreakpointsComponents
+import typingsSlinky.cathoQuantum.anon.BreakpointsComponents
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait ContainerProps extends js.Object {
   var fluid: js.UndefOr[Boolean] = js.native
   var hide: js.UndefOr[BreakpointsType | js.Array[String]] = js.native
   var `no-gutters`: js.UndefOr[Boolean] = js.native
-  var theme: js.UndefOr[AnonBreakpointsComponents] = js.native
+  var theme: js.UndefOr[BreakpointsComponents] = js.native
   var withBreakpoints: js.UndefOr[Boolean] = js.native
 }
 
@@ -63,7 +63,7 @@ object ContainerProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonBreakpointsComponents): Self = {
+    def withTheme(value: BreakpointsComponents): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

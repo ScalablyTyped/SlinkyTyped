@@ -1,6 +1,6 @@
 package typingsSlinky.loadableWebpackPlugin.mod
 
-import typingsSlinky.loadableWebpackPlugin.AnonFilename
+import typingsSlinky.loadableWebpackPlugin.anon.Filename
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ trait PluginOptions extends js.Object {
     *
     * @default false
     */
-  var writeToDisk: js.UndefOr[Boolean | AnonFilename] = js.native
+  var writeToDisk: js.UndefOr[Boolean | Filename] = js.native
 }
 
 object PluginOptions {
@@ -62,7 +62,7 @@ object PluginOptions {
         ret
     }
     @scala.inline
-    def withWriteToDisk(value: Boolean | AnonFilename): Self = {
+    def withWriteToDisk(value: Boolean | Filename): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("writeToDisk")(value.asInstanceOf[js.Any])
         ret

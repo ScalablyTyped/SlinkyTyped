@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 /* Inlined waterline.waterline.BaseAttribute<number> & {  type  :'integer',   autoIncrement ? :boolean} */
 @js.native
-trait IntegerAttribute extends _Attribute {
+trait IntegerAttribute extends Attribute {
   var after: js.UndefOr[AttributeValidation[String]] = js.native
   var alpha: js.UndefOr[AttributeValidation[Boolean]] = js.native
   var alphanumeric: js.UndefOr[AttributeValidation[Boolean]] = js.native

@@ -3,18 +3,18 @@ package typingsSlinky.oracleOraclejet.ojganttMod
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.Anon7
-import typingsSlinky.oracleOraclejet.AnonAccessibleDependencyInfo
-import typingsSlinky.oracleOraclejet.AnonBaseline
-import typingsSlinky.oracleOraclejet.AnonBaselineDate
-import typingsSlinky.oracleOraclejet.AnonHeightNumber
-import typingsSlinky.oracleOraclejet.AnonIndex
-import typingsSlinky.oracleOraclejet.AnonMaxWidth
-import typingsSlinky.oracleOraclejet.AnonMove
-import typingsSlinky.oracleOraclejet.AnonOffsetY
-import typingsSlinky.oracleOraclejet.AnonRowIndex
-import typingsSlinky.oracleOraclejet.AnonScale
-import typingsSlinky.oracleOraclejet.AnonVertical
+import typingsSlinky.oracleOraclejet.anon.AccessibleDependencyInfo
+import typingsSlinky.oracleOraclejet.anon.Baseline
+import typingsSlinky.oracleOraclejet.anon.BaselineDate
+import typingsSlinky.oracleOraclejet.anon.HeightNumber
+import typingsSlinky.oracleOraclejet.anon.Index
+import typingsSlinky.oracleOraclejet.anon.MaxWidth
+import typingsSlinky.oracleOraclejet.anon.Move
+import typingsSlinky.oracleOraclejet.anon.OffsetY
+import typingsSlinky.oracleOraclejet.anon.RowIndex
+import typingsSlinky.oracleOraclejet.anon.Scale
+import typingsSlinky.oracleOraclejet.anon.Vertical
+import typingsSlinky.oracleOraclejet.anon.`7`
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojganttMod.ojGantt.ReferenceObject
 import typingsSlinky.oracleOraclejet.ojtimeBaseMod.dvtTimeComponent
@@ -84,11 +84,11 @@ trait ojGantt_[K1, K2, D1, D2] extends dvtTimeComponent[ojGanttSettablePropertie
   var as: String = js.native
   var axisPosition: bottom | top = js.native
   var dependencyData: js.UndefOr[DataProvider[K1, D1]] = js.native
-  var dnd: AnonMove = js.native
+  var dnd: Move = js.native
   var end: String = js.native
-  var gridlines: AnonVertical = js.native
-  var majorAxis: AnonScale = js.native
-  var minorAxis: AnonScale = js.native
+  var gridlines: Vertical = js.native
+  var majorAxis: Scale = js.native
+  var minorAxis: Scale = js.native
   var onAnimationOnDataChangeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var onAnimationOnDisplayChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var onAsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
@@ -115,18 +115,18 @@ trait ojGantt_[K1, K2, D1, D2] extends dvtTimeComponent[ojGanttSettablePropertie
   var onViewportEndChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var onViewportStartChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var referenceObjects: js.Array[ReferenceObject] = js.native
-  var rowAxis: AnonMaxWidth[K2, D2] = js.native
-  var rowDefaults: AnonHeightNumber = js.native
-  var scrollPosition: AnonOffsetY = js.native
+  var rowAxis: MaxWidth[K2, D2] = js.native
+  var rowDefaults: HeightNumber = js.native
+  var scrollPosition: OffsetY = js.native
   var selection: js.Array[K2] = js.native
   var selectionMode: single | multiple | none = js.native
   var start: String = js.native
   var taskData: js.UndefOr[DataProvider[K2, D2]] = js.native
-  var taskDefaults: AnonBaseline = js.native
-  var tooltip: Anon7[K2, D2] = js.native
+  var taskDefaults: Baseline = js.native
+  var tooltip: `7`[K2, D2] = js.native
   @JSName("translations")
-  var translations_ojGantt_ : AnonAccessibleDependencyInfo = js.native
-  var valueFormats: AnonBaselineDate = js.native
+  var translations_ojGantt_ : AccessibleDependencyInfo = js.native
+  var valueFormats: BaselineDate = js.native
   var viewportEnd: String = js.native
   var viewportStart: String = js.native
   def addEventListener(
@@ -330,7 +330,7 @@ trait ojGantt_[K1, K2, D1, D2] extends dvtTimeComponent[ojGanttSettablePropertie
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
-  def getContextByNode(node: Element): AnonIndex | AnonRowIndex | Null = js.native
+  def getContextByNode(node: Element): Index | RowIndex | Null = js.native
   @JSName("getProperty")
   def getProperty_animationOnDataChange(property: animationOnDataChange): auto | none = js.native
   @JSName("getProperty")
@@ -342,23 +342,23 @@ trait ojGantt_[K1, K2, D1, D2] extends dvtTimeComponent[ojGanttSettablePropertie
   @JSName("getProperty")
   def getProperty_dependencyData(property: dependencyData): js.UndefOr[DataProvider[K1, D1]] = js.native
   @JSName("getProperty")
-  def getProperty_dnd(property: dnd): AnonMove = js.native
+  def getProperty_dnd(property: dnd): Move = js.native
   @JSName("getProperty")
   def getProperty_end(property: end): String = js.native
   @JSName("getProperty")
-  def getProperty_gridlines(property: gridlines): AnonVertical = js.native
+  def getProperty_gridlines(property: gridlines): Vertical = js.native
   @JSName("getProperty")
-  def getProperty_majorAxis(property: majorAxis): AnonScale = js.native
+  def getProperty_majorAxis(property: majorAxis): Scale = js.native
   @JSName("getProperty")
-  def getProperty_minorAxis(property: minorAxis): AnonScale = js.native
+  def getProperty_minorAxis(property: minorAxis): Scale = js.native
   @JSName("getProperty")
   def getProperty_referenceObjects(property: referenceObjects): js.Array[ReferenceObject] = js.native
   @JSName("getProperty")
-  def getProperty_rowAxis(property: rowAxis): AnonMaxWidth[K2, D2] = js.native
+  def getProperty_rowAxis(property: rowAxis): MaxWidth[K2, D2] = js.native
   @JSName("getProperty")
-  def getProperty_rowDefaults(property: rowDefaults): AnonHeightNumber = js.native
+  def getProperty_rowDefaults(property: rowDefaults): HeightNumber = js.native
   @JSName("getProperty")
-  def getProperty_scrollPosition(property: scrollPosition): AnonOffsetY = js.native
+  def getProperty_scrollPosition(property: scrollPosition): OffsetY = js.native
   @JSName("getProperty")
   def getProperty_selection(property: selection): js.Array[K2] = js.native
   @JSName("getProperty")
@@ -368,11 +368,11 @@ trait ojGantt_[K1, K2, D1, D2] extends dvtTimeComponent[ojGanttSettablePropertie
   @JSName("getProperty")
   def getProperty_taskData(property: taskData): js.UndefOr[DataProvider[K2, D2]] = js.native
   @JSName("getProperty")
-  def getProperty_taskDefaults(property: taskDefaults): AnonBaseline = js.native
+  def getProperty_taskDefaults(property: taskDefaults): Baseline = js.native
   @JSName("getProperty")
-  def getProperty_tooltip(property: tooltip): Anon7[K2, D2] = js.native
+  def getProperty_tooltip(property: tooltip): `7`[K2, D2] = js.native
   @JSName("getProperty")
-  def getProperty_valueFormats(property: valueFormats): AnonBaselineDate = js.native
+  def getProperty_valueFormats(property: valueFormats): BaselineDate = js.native
   @JSName("getProperty")
   def getProperty_viewportEnd(property: viewportEnd): String = js.native
   @JSName("getProperty")
@@ -392,23 +392,23 @@ trait ojGantt_[K1, K2, D1, D2] extends dvtTimeComponent[ojGanttSettablePropertie
   @JSName("setProperty")
   def setProperty_dependencyData(property: dependencyData, value: DataProvider[K1, D1]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_dnd(property: dnd, value: AnonMove): Unit = js.native
+  def setProperty_dnd(property: dnd, value: Move): Unit = js.native
   @JSName("setProperty")
   def setProperty_end(property: end, value: String): Unit = js.native
   @JSName("setProperty")
-  def setProperty_gridlines(property: gridlines, value: AnonVertical): Unit = js.native
+  def setProperty_gridlines(property: gridlines, value: Vertical): Unit = js.native
   @JSName("setProperty")
-  def setProperty_majorAxis(property: majorAxis, value: AnonScale): Unit = js.native
+  def setProperty_majorAxis(property: majorAxis, value: Scale): Unit = js.native
   @JSName("setProperty")
-  def setProperty_minorAxis(property: minorAxis, value: AnonScale): Unit = js.native
+  def setProperty_minorAxis(property: minorAxis, value: Scale): Unit = js.native
   @JSName("setProperty")
   def setProperty_referenceObjects(property: referenceObjects, value: js.Array[ReferenceObject]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_rowAxis(property: rowAxis, value: AnonMaxWidth[K2, D2]): Unit = js.native
+  def setProperty_rowAxis(property: rowAxis, value: MaxWidth[K2, D2]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_rowDefaults(property: rowDefaults, value: AnonHeightNumber): Unit = js.native
+  def setProperty_rowDefaults(property: rowDefaults, value: HeightNumber): Unit = js.native
   @JSName("setProperty")
-  def setProperty_scrollPosition(property: scrollPosition, value: AnonOffsetY): Unit = js.native
+  def setProperty_scrollPosition(property: scrollPosition, value: OffsetY): Unit = js.native
   @JSName("setProperty")
   def setProperty_selection(property: selection, value: js.Array[K2]): Unit = js.native
   @JSName("setProperty")
@@ -416,13 +416,13 @@ trait ojGantt_[K1, K2, D1, D2] extends dvtTimeComponent[ojGanttSettablePropertie
   @JSName("setProperty")
   def setProperty_taskData(property: taskData, value: DataProvider[K2, D2]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_taskDefaults(property: taskDefaults, value: AnonBaseline): Unit = js.native
+  def setProperty_taskDefaults(property: taskDefaults, value: Baseline): Unit = js.native
   @JSName("setProperty")
-  def setProperty_tooltip(property: tooltip, value: Anon7[K2, D2]): Unit = js.native
+  def setProperty_tooltip(property: tooltip, value: `7`[K2, D2]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonAccessibleDependencyInfo): Unit = js.native
+  def setProperty_translations(property: translations, value: AccessibleDependencyInfo): Unit = js.native
   @JSName("setProperty")
-  def setProperty_valueFormats(property: valueFormats, value: AnonBaselineDate): Unit = js.native
+  def setProperty_valueFormats(property: valueFormats, value: BaselineDate): Unit = js.native
   @JSName("setProperty")
   def setProperty_viewportEnd(property: viewportEnd, value: String): Unit = js.native
   @JSName("setProperty")

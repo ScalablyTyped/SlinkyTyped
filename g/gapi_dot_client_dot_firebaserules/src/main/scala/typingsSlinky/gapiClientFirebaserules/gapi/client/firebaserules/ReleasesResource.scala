@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientFirebaserules.gapi.client.firebaserules
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientFirebaserules.AnonAccesstoken
-import typingsSlinky.gapiClientFirebaserules.AnonAlt
-import typingsSlinky.gapiClientFirebaserules.AnonBearertoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientFirebaserules.anon.Accesstoken
+import typingsSlinky.gapiClientFirebaserules.anon.Alt
+import typingsSlinky.gapiClientFirebaserules.anon.Bearertoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,19 +34,19 @@ trait ReleasesResource extends js.Object {
     * refers to a new `Ruleset`. The `Ruleset` reference for a `Release` may be
     * updated using the UpdateRelease method.
     */
-  def create(request: AnonAccesstoken): Request_[Release] = js.native
+  def create(request: Accesstoken): Request[Release] = js.native
   /** Delete a `Release` by resource name. */
-  def delete(request: AnonAccesstoken): Request_[js.Object] = js.native
+  def delete(request: Accesstoken): Request[js.Object] = js.native
   /** Get a `Release` by name. */
-  def get(request: AnonAccesstoken): Request_[Release] = js.native
+  def get(request: Accesstoken): Request[Release] = js.native
   /** Get the `Release` executable to use when enforcing rules. */
-  def getExecutable(request: AnonAlt): Request_[GetReleaseExecutableResponse] = js.native
+  def getExecutable(request: Alt): Request[GetReleaseExecutableResponse] = js.native
   /**
     * List the `Release` values for a project. This list may optionally be
     * filtered by `Release` name, `Ruleset` name, `TestSuite` name, or any
     * combination thereof.
     */
-  def list(request: AnonBearertoken): Request_[ListReleasesResponse] = js.native
+  def list(request: Bearertoken): Request[ListReleasesResponse] = js.native
   /**
     * Update a `Release`.
     *
@@ -54,18 +54,18 @@ trait ReleasesResource extends js.Object {
     * honored. `Release` rename is not supported. To create a `Release` use the
     * CreateRelease method.
     */
-  def update(request: AnonAccesstoken): Request_[Release] = js.native
+  def update(request: Accesstoken): Request[Release] = js.native
 }
 
 object ReleasesResource {
   @scala.inline
   def apply(
-    create: AnonAccesstoken => Request_[Release],
-    delete: AnonAccesstoken => Request_[js.Object],
-    get: AnonAccesstoken => Request_[Release],
-    getExecutable: AnonAlt => Request_[GetReleaseExecutableResponse],
-    list: AnonBearertoken => Request_[ListReleasesResponse],
-    update: AnonAccesstoken => Request_[Release]
+    create: Accesstoken => Request[Release],
+    delete: Accesstoken => Request[js.Object],
+    get: Accesstoken => Request[Release],
+    getExecutable: Alt => Request[GetReleaseExecutableResponse],
+    list: Bearertoken => Request[ListReleasesResponse],
+    update: Accesstoken => Request[Release]
   ): ReleasesResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), getExecutable = js.Any.fromFunction1(getExecutable), list = js.Any.fromFunction1(list), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[ReleasesResource]
@@ -77,37 +77,37 @@ object ReleasesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: AnonAccesstoken => Request_[Release]): Self = {
+    def withCreate(value: Accesstoken => Request[Release]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonAccesstoken => Request_[js.Object]): Self = {
+    def withDelete(value: Accesstoken => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonAccesstoken => Request_[Release]): Self = {
+    def withGet(value: Accesstoken => Request[Release]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGetExecutable(value: AnonAlt => Request_[GetReleaseExecutableResponse]): Self = {
+    def withGetExecutable(value: Alt => Request[GetReleaseExecutableResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getExecutable")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonBearertoken => Request_[ListReleasesResponse]): Self = {
+    def withList(value: Bearertoken => Request[ListReleasesResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonAccesstoken => Request_[Release]): Self = {
+    def withUpdate(value: Accesstoken => Request[Release]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

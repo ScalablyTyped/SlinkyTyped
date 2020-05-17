@@ -1,6 +1,6 @@
 package typingsSlinky.apolloLinkHttpCommon.mod
 
-import typingsSlinky.apolloLinkHttpCommon.AnonController
+import typingsSlinky.apolloLinkHttpCommon.anon.Controller
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("apollo-link-http-common", "createSignalIfSupported")
 @js.native
 object createSignalIfSupported extends js.Object {
-  def apply(): AnonController = js.native
+  def apply(): Controller = js.native
 }
 

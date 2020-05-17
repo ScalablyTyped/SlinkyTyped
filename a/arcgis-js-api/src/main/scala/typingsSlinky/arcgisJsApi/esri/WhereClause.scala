@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +38,48 @@ trait WhereClause extends js.Object {
   def testFeature(feature: js.Any): Boolean = js.native
 }
 
-@JSGlobal("__esri.WhereClause")
-@js.native
-object WhereClause extends TopLevel[WhereClause]
+object WhereClause {
+  @scala.inline
+  def apply(
+    calculateValue: js.Any => js.Any,
+    fieldNames: js.Array[String],
+    isStandardized: Boolean,
+    testFeature: js.Any => Boolean
+  ): WhereClause = {
+    val __obj = js.Dynamic.literal(calculateValue = js.Any.fromFunction1(calculateValue), fieldNames = fieldNames.asInstanceOf[js.Any], isStandardized = isStandardized.asInstanceOf[js.Any], testFeature = js.Any.fromFunction1(testFeature))
+    __obj.asInstanceOf[WhereClause]
+  }
+  @scala.inline
+  implicit class WhereClauseOps[Self <: WhereClause] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCalculateValue(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculateValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFieldNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsStandardized(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isStandardized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTestFeature(value: js.Any => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("testFeature")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

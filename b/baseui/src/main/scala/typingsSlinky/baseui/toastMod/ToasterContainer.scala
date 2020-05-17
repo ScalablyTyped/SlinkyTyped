@@ -1,10 +1,10 @@
 package typingsSlinky.baseui.toastMod
 
 import slinky.core.TagMod
-import typingsSlinky.baseui.AnonPlacement
-import typingsSlinky.baseui.ReadonlyToastPropskeyKey
-import typingsSlinky.baseui.ReadonlyToasterProps
-import typingsSlinky.baseui.ToastPropskeyKey
+import typingsSlinky.baseui.anon.Placement
+import typingsSlinky.baseui.anon.ReadonlyToastPropskeyKey
+import typingsSlinky.baseui.anon.ReadonlyToasterProps
+import typingsSlinky.baseui.anon.ToastPropskeyKey
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.Key
 import scala.scalajs.js
@@ -20,7 +20,7 @@ class ToasterContainer ()
   def dismiss(key: Key): Unit = js.native
   def getOnCloseHandler(key: Key): js.Function0[_] = js.native
   def getOnCloseHandler(key: Key, onClose: js.Function0[_]): js.Function0[_] = js.native
-  def getSharedProps(): AnonPlacement = js.native
+  def getSharedProps(): Placement = js.native
   def getToastProps(props: ToastProps): ReadonlyToastPropskeyKey = js.native
   def internalOnClose(key: Key): Unit = js.native
   def renderToast(toastProps: ToastPropskeyKey): TagMod[Any] = js.native

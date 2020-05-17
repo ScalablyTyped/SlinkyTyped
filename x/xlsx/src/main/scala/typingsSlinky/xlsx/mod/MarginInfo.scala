@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait MarginInfo extends _SheetKeys {
+trait MarginInfo extends SheetKeys {
   /** Bottom side margin (inches) */
   var bottom: js.UndefOr[Double] = js.native
   /** Footer bottom height (inches) */

@@ -3,6 +3,7 @@ package typingsSlinky.jupyterlabCodemirror
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.codemirror.mod.Editor
 import typingsSlinky.jupyterlabCodeeditor.tokensMod.IEditorServices
+import typingsSlinky.jupyterlabCodemirror.anon.PartialIConfig
 import typingsSlinky.jupyterlabCodemirror.editorMod.CodeMirrorEditor.IConfig
 import typingsSlinky.jupyterlabCodemirror.editorMod.CodeMirrorEditor.IOptions
 import typingsSlinky.jupyterlabCodemirror.modeMod.Mode.ISpec

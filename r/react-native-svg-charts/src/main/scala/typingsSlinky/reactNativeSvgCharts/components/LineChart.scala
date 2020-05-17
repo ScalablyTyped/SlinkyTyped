@@ -8,8 +8,8 @@ import typingsSlinky.d3Scale.mod.ScaleBand_
 import typingsSlinky.d3Shape.mod.CurveGenerator
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeSvgCharts.AnonBottom
-import typingsSlinky.reactNativeSvgCharts.PartialPathProps
+import typingsSlinky.reactNativeSvgCharts.anon.Bottom
+import typingsSlinky.reactNativeSvgCharts.anon.PartialPathProps
 import typingsSlinky.reactNativeSvgCharts.mod.AccessorFunctionProps
 import typingsSlinky.reactNativeSvgCharts.mod.ChartProps
 import typingsSlinky.reactNativeSvgCharts.mod.GridProps
@@ -32,7 +32,7 @@ object LineChart {
     @scala.inline
     def animationDuration(value: Double): this.type = set("animationDuration", value.asInstanceOf[js.Any])
     @scala.inline
-    def contentInset(value: AnonBottom): this.type = set("contentInset", value.asInstanceOf[js.Any])
+    def contentInset(value: Bottom): this.type = set("contentInset", value.asInstanceOf[js.Any])
     @scala.inline
     def curve(value: /* context */ CanvasRenderingContext2D | Path_ => CurveGenerator): this.type = set("curve", js.Any.fromFunction1(value))
     @scala.inline

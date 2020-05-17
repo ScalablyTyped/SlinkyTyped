@@ -1,5 +1,6 @@
 package typingsSlinky.officeUiFabricReact.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
@@ -17,9 +18,9 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.officeUiFabricReact.PartialIButtonStyles
-import typingsSlinky.officeUiFabricReact.PartialIComboBoxOptionSty
-import typingsSlinky.officeUiFabricReact.PartialIComboBoxStyles
+import typingsSlinky.officeUiFabricReact.anon.PartialIButtonStyles
+import typingsSlinky.officeUiFabricReact.anon.PartialIComboBoxOptionSty
+import typingsSlinky.officeUiFabricReact.anon.PartialIComboBoxStyles
 import typingsSlinky.officeUiFabricReact.autofillTypesMod.IAutofillProps
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonProps
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutProps
@@ -34,7 +35,7 @@ import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.on
 import typingsSlinky.officeUiFabricReact.panelTypesMod.IPanelProps
 import typingsSlinky.officeUiFabricReact.selectableDroppableTextTypesMod.ISelectableDroppableTextProps
 import typingsSlinky.officeUiFabricReact.selectableOptionTypesMod.ISelectableOption
-import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
@@ -82,7 +83,6 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
-import typingsSlinky.std.Event_
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
@@ -232,7 +232,7 @@ class SharedBuilder_IComboBoxProps467733828[R <: js.Object] (val args: js.Array[
   @scala.inline
   def contextMenu(value: String): this.type = set("contextMenu", value.asInstanceOf[js.Any])
   @scala.inline
-  def dangerouslySetInnerHTML(value: AnonHtml): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
+  def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
   @scala.inline
   def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
   @scala.inline
@@ -292,7 +292,7 @@ class SharedBuilder_IComboBoxProps467733828[R <: js.Object] (val args: js.Array[
   @scala.inline
   def multiSelect(value: Boolean): this.type = set("multiSelect", value.asInstanceOf[js.Any])
   @scala.inline
-  def onAbort(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
+  def onAbort(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
   @scala.inline
   def onAnimationEnd(value: SyntheticAnimationEvent[IComboBox] => Unit): this.type = set("onAnimationEnd", js.Any.fromFunction1(value))
   @scala.inline
@@ -302,16 +302,16 @@ class SharedBuilder_IComboBoxProps467733828[R <: js.Object] (val args: js.Array[
   @scala.inline
   def onAuxClick(value: SyntheticMouseEvent[IComboBox] => Unit): this.type = set("onAuxClick", js.Any.fromFunction1(value))
   @scala.inline
-  def onBeforeInput(value: SyntheticEvent[EventTarget with IComboBox, Event_] => Unit): this.type = set("onBeforeInput", js.Any.fromFunction1(value))
+  def onBeforeInput(value: SyntheticEvent[EventTarget with IComboBox, Event] => Unit): this.type = set("onBeforeInput", js.Any.fromFunction1(value))
   @scala.inline
   def onBlur(value: SyntheticFocusEvent[IComboBox] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
   @scala.inline
-  def onCanPlay(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onCanPlay", js.Any.fromFunction1(value))
+  def onCanPlay(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onCanPlay", js.Any.fromFunction1(value))
   @scala.inline
-  def onCanPlayThrough(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
+  def onCanPlayThrough(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
   @scala.inline
   def onChange(
-    value: (SyntheticEvent[EventTarget with IComboBox, Event_], /* option */ js.UndefOr[IComboBoxOption], /* index */ js.UndefOr[Double], /* value */ js.UndefOr[String]) => Unit
+    value: (SyntheticEvent[EventTarget with IComboBox, Event], /* option */ js.UndefOr[IComboBoxOption], /* index */ js.UndefOr[Double], /* value */ js.UndefOr[String]) => Unit
   ): this.type = set("onChange", js.Any.fromFunction4(value))
   @scala.inline
   def onClick(value: SyntheticMouseEvent[IComboBox] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
@@ -348,24 +348,24 @@ class SharedBuilder_IComboBoxProps467733828[R <: js.Object] (val args: js.Array[
   @scala.inline
   def onDrop(value: DragEvent[IComboBox] => Unit): this.type = set("onDrop", js.Any.fromFunction1(value))
   @scala.inline
-  def onDurationChange(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onDurationChange", js.Any.fromFunction1(value))
+  def onDurationChange(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onDurationChange", js.Any.fromFunction1(value))
   @scala.inline
-  def onEmptied(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onEmptied", js.Any.fromFunction1(value))
+  def onEmptied(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onEmptied", js.Any.fromFunction1(value))
   @scala.inline
-  def onEncrypted(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onEncrypted", js.Any.fromFunction1(value))
+  def onEncrypted(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onEncrypted", js.Any.fromFunction1(value))
   @scala.inline
-  def onEnded(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onEnded", js.Any.fromFunction1(value))
+  def onEnded(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onEnded", js.Any.fromFunction1(value))
   @scala.inline
-  def onError(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onError", js.Any.fromFunction1(value))
+  def onError(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onError", js.Any.fromFunction1(value))
   @scala.inline
   def onFocus(value: SyntheticFocusEvent[IComboBox] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
   @scala.inline
-  def onInput(value: SyntheticEvent[EventTarget with IComboBox, Event_] => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
+  def onInput(value: SyntheticEvent[EventTarget with IComboBox, Event] => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
   @scala.inline
-  def onInvalid(value: SyntheticEvent[EventTarget with IComboBox, Event_] => Unit): this.type = set("onInvalid", js.Any.fromFunction1(value))
+  def onInvalid(value: SyntheticEvent[EventTarget with IComboBox, Event] => Unit): this.type = set("onInvalid", js.Any.fromFunction1(value))
   @scala.inline
   def onItemClick(
-    value: (SyntheticEvent[EventTarget with IComboBox, Event_], /* option */ js.UndefOr[IComboBoxOption], /* index */ js.UndefOr[Double]) => Unit
+    value: (SyntheticEvent[EventTarget with IComboBox, Event], /* option */ js.UndefOr[IComboBoxOption], /* index */ js.UndefOr[Double]) => Unit
   ): this.type = set("onItemClick", js.Any.fromFunction3(value))
   @scala.inline
   def onKeyDown(value: SyntheticKeyboardEvent[IComboBox] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
@@ -374,13 +374,13 @@ class SharedBuilder_IComboBoxProps467733828[R <: js.Object] (val args: js.Array[
   @scala.inline
   def onKeyUp(value: SyntheticKeyboardEvent[IComboBox] => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
   @scala.inline
-  def onLoad(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
+  def onLoad(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
   @scala.inline
-  def onLoadStart(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onLoadStart", js.Any.fromFunction1(value))
+  def onLoadStart(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onLoadStart", js.Any.fromFunction1(value))
   @scala.inline
-  def onLoadedData(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onLoadedData", js.Any.fromFunction1(value))
+  def onLoadedData(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onLoadedData", js.Any.fromFunction1(value))
   @scala.inline
-  def onLoadedMetadata(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onLoadedMetadata", js.Any.fromFunction1(value))
+  def onLoadedMetadata(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onLoadedMetadata", js.Any.fromFunction1(value))
   @scala.inline
   def onMenuDismiss(value: () => Unit): this.type = set("onMenuDismiss", js.Any.fromFunction0(value))
   @scala.inline
@@ -404,15 +404,15 @@ class SharedBuilder_IComboBoxProps467733828[R <: js.Object] (val args: js.Array[
   @scala.inline
   def onPaste(value: SyntheticClipboardEvent[IComboBox] => Unit): this.type = set("onPaste", js.Any.fromFunction1(value))
   @scala.inline
-  def onPause(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onPause", js.Any.fromFunction1(value))
+  def onPause(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onPause", js.Any.fromFunction1(value))
   @scala.inline
   def onPendingValueChanged(
     value: (/* option */ js.UndefOr[IComboBoxOption], /* index */ js.UndefOr[Double], /* value */ js.UndefOr[String]) => Unit
   ): this.type = set("onPendingValueChanged", js.Any.fromFunction3(value))
   @scala.inline
-  def onPlay(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onPlay", js.Any.fromFunction1(value))
+  def onPlay(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onPlay", js.Any.fromFunction1(value))
   @scala.inline
-  def onPlaying(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onPlaying", js.Any.fromFunction1(value))
+  def onPlaying(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onPlaying", js.Any.fromFunction1(value))
   @scala.inline
   def onPointerCancel(value: SyntheticPointerEvent[IComboBox] => Unit): this.type = set("onPointerCancel", js.Any.fromFunction1(value))
   @scala.inline
@@ -430,9 +430,9 @@ class SharedBuilder_IComboBoxProps467733828[R <: js.Object] (val args: js.Array[
   @scala.inline
   def onPointerUp(value: SyntheticPointerEvent[IComboBox] => Unit): this.type = set("onPointerUp", js.Any.fromFunction1(value))
   @scala.inline
-  def onProgress(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
+  def onProgress(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
   @scala.inline
-  def onRateChange(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onRateChange", js.Any.fromFunction1(value))
+  def onRateChange(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onRateChange", js.Any.fromFunction1(value))
   @scala.inline
   def onRenderContainer(
     value: (/* props */ js.UndefOr[ISelectableDroppableTextProps[IComboBox, IComboBox]], /* defaultRender */ js.UndefOr[
@@ -474,7 +474,7 @@ class SharedBuilder_IComboBoxProps467733828[R <: js.Object] (val args: js.Array[
     value: (/* props */ js.UndefOr[IComboBoxProps], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IComboBoxProps], ReactElement | Null]]) => ReactElement | Null
   ): this.type = set("onRenderUpperContent", js.Any.fromFunction2(value))
   @scala.inline
-  def onReset(value: SyntheticEvent[EventTarget with IComboBox, Event_] => Unit): this.type = set("onReset", js.Any.fromFunction1(value))
+  def onReset(value: SyntheticEvent[EventTarget with IComboBox, Event] => Unit): this.type = set("onReset", js.Any.fromFunction1(value))
   @scala.inline
   def onResolveOptions(
     value: /* options */ js.Array[IComboBoxOption] => js.Array[IComboBoxOption] | js.Thenable[js.Array[IComboBoxOption]]
@@ -484,19 +484,19 @@ class SharedBuilder_IComboBoxProps467733828[R <: js.Object] (val args: js.Array[
   @scala.inline
   def onScrollToItem(value: /* itemIndex */ Double => Unit): this.type = set("onScrollToItem", js.Any.fromFunction1(value))
   @scala.inline
-  def onSeeked(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onSeeked", js.Any.fromFunction1(value))
+  def onSeeked(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onSeeked", js.Any.fromFunction1(value))
   @scala.inline
-  def onSeeking(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onSeeking", js.Any.fromFunction1(value))
+  def onSeeking(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onSeeking", js.Any.fromFunction1(value))
   @scala.inline
-  def onSelect(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+  def onSelect(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
   @scala.inline
-  def onStalled(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onStalled", js.Any.fromFunction1(value))
+  def onStalled(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onStalled", js.Any.fromFunction1(value))
   @scala.inline
-  def onSubmit(value: SyntheticEvent[EventTarget with IComboBox, Event_] => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))
+  def onSubmit(value: SyntheticEvent[EventTarget with IComboBox, Event] => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))
   @scala.inline
-  def onSuspend(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onSuspend", js.Any.fromFunction1(value))
+  def onSuspend(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onSuspend", js.Any.fromFunction1(value))
   @scala.inline
-  def onTimeUpdate(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onTimeUpdate", js.Any.fromFunction1(value))
+  def onTimeUpdate(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onTimeUpdate", js.Any.fromFunction1(value))
   @scala.inline
   def onTouchCancel(value: SyntheticTouchEvent[IComboBox] => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))
   @scala.inline
@@ -508,9 +508,9 @@ class SharedBuilder_IComboBoxProps467733828[R <: js.Object] (val args: js.Array[
   @scala.inline
   def onTransitionEnd(value: SyntheticTransitionEvent[IComboBox] => Unit): this.type = set("onTransitionEnd", js.Any.fromFunction1(value))
   @scala.inline
-  def onVolumeChange(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
+  def onVolumeChange(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
   @scala.inline
-  def onWaiting(value: SyntheticEvent[Event_, IComboBox] => Unit): this.type = set("onWaiting", js.Any.fromFunction1(value))
+  def onWaiting(value: SyntheticEvent[Event, IComboBox] => Unit): this.type = set("onWaiting", js.Any.fromFunction1(value))
   @scala.inline
   def onWheel(value: SyntheticWheelEvent[IComboBox] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
   @scala.inline

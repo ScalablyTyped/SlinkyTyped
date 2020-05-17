@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ImputeTransform extends _Transforms {
+trait ImputeTransform extends Transforms {
   var field: FieldRef = js.native
   var groupby: js.UndefOr[js.Array[FieldRef] | SignalRef] = js.native
   var key: FieldRef = js.native

@@ -1,14 +1,12 @@
 package typingsSlinky.kendoUi.kendo.dataviz.diagram
 
-import typingsSlinky.kendoUi.kendo.Observable_
+import typingsSlinky.kendoUi.kendo.Observable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.dataviz.diagram.Rectangle")
 @js.native
-class Rectangle () extends Observable_ {
-  def this(options: RectangleOptions) = this()
+trait Rectangle extends Observable {
   var drawingElement: typingsSlinky.kendoUi.kendo.drawing.Path = js.native
   var options: RectangleOptions = js.native
   def visible(): Boolean = js.native

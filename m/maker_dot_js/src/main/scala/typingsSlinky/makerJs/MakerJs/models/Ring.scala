@@ -6,11 +6,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("MakerJs.models.Ring")
 @js.native
-class Ring protected () extends IModel {
-  def this(outerRadius: Double, innerRadius: Double) = this()
+trait Ring extends IModel {
   @JSName("paths")
   var paths_Ring: IPathMap = js.native
+}
+
+object Ring {
+  @scala.inline
+  def apply(paths: IPathMap): Ring = {
+    val __obj = js.Dynamic.literal(paths = paths.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Ring]
+  }
+  @scala.inline
+  implicit class RingOps[Self <: Ring] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPaths(value: IPathMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

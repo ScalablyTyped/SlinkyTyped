@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CDataValue extends _Value {
+trait CDataValue extends Value {
   var value: String = js.native
 }
 

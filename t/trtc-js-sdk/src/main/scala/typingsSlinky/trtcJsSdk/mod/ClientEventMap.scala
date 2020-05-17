@@ -1,6 +1,6 @@
 package typingsSlinky.trtcJsSdk.mod
 
-import typingsSlinky.trtcJsSdk.AnonCurState
+import typingsSlinky.trtcJsSdk.anon.CurState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait ClientEventMap extends js.Object {
   /** 用户被踢出房间通知，被踢原因有 */
   var `client-banned`: RtcError = js.native
   /** 信令通道连接状态变化事件 */
-  var `connection-state-changed`: AnonCurState = js.native
+  var `connection-state-changed`: CurState = js.native
   /** 客户端错误事件 */
   var error: RtcError = js.native
   /** 远端用户禁用音频通知。 */
@@ -39,7 +39,7 @@ object ClientEventMap {
   @scala.inline
   def apply(
     `client-banned`: RtcError,
-    `connection-state-changed`: AnonCurState,
+    `connection-state-changed`: CurState,
     error: RtcError,
     `mute-audio`: RemoteUserInfo,
     `mute-video`: RemoteUserInfo,
@@ -80,7 +80,7 @@ object ClientEventMap {
         ret
     }
     @scala.inline
-    def `withConnection-state-changed`(value: AnonCurState): Self = {
+    def `withConnection-state-changed`(value: CurState): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("connection-state-changed")(value.asInstanceOf[js.Any])
         ret

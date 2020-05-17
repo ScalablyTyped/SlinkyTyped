@@ -7,17 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientUploadControl.TextChanged client event that allows you to respond to an end-user changing an edit box's text.
   */
-@JSGlobal("ASPxClientUploadControlTextChangedEventArgs")
 @js.native
-class ASPxClientUploadControlTextChangedEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientUploadControlTextChangedEventArgs class.
-    * @param inputIndex An integer value that specifies the file input element's index within the ASPxUploadControl.UploadedFiles collection.
-    */
-  def this(inputIndex: Double) = this()
+trait ASPxClientUploadControlTextChangedEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the index of a <strong>file input element</strong> within the ASPxUploadControl.
     */
   var inputIndex: Double = js.native
+}
+
+object ASPxClientUploadControlTextChangedEventArgs {
+  @scala.inline
+  def apply(inputIndex: Double): ASPxClientUploadControlTextChangedEventArgs = {
+    val __obj = js.Dynamic.literal(inputIndex = inputIndex.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientUploadControlTextChangedEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientUploadControlTextChangedEventArgsOps[Self <: ASPxClientUploadControlTextChangedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInputIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,12 +1,12 @@
 package typingsSlinky.tabris.clientMockMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.tabris.PartialClientCallCall
-import typingsSlinky.tabris.PartialClientCreateCall
-import typingsSlinky.tabris.PartialClientDestroyCall
-import typingsSlinky.tabris.PartialClientGetCall
-import typingsSlinky.tabris.PartialClientListenCall
-import typingsSlinky.tabris.PartialClientSetCall
+import typingsSlinky.tabris.anon.PartialClientCallCall
+import typingsSlinky.tabris.anon.PartialClientCreateCall
+import typingsSlinky.tabris.anon.PartialClientDestroyCall
+import typingsSlinky.tabris.anon.PartialClientGetCall
+import typingsSlinky.tabris.anon.PartialClientListenCall
+import typingsSlinky.tabris.anon.PartialClientSetCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

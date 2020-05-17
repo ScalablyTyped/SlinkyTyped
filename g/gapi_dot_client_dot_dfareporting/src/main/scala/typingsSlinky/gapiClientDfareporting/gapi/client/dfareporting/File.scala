@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientDfareporting.gapi.client.dfareporting
 
-import typingsSlinky.gapiClientDfareporting.AnonApiUrl
+import typingsSlinky.gapiClientDfareporting.anon.ApiUrl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ trait File extends js.Object {
   /** The status of the report file. */
   var status: js.UndefOr[String] = js.native
   /** The URLs where the completed report file can be downloaded. */
-  var urls: js.UndefOr[AnonApiUrl] = js.native
+  var urls: js.UndefOr[ApiUrl] = js.native
 }
 
 object File {
@@ -150,7 +150,7 @@ object File {
         ret
     }
     @scala.inline
-    def withUrls(value: AnonApiUrl): Self = {
+    def withUrls(value: ApiUrl): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("urls")(value.asInstanceOf[js.Any])
         ret

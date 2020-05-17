@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * A service that runs when the application is placed in the background.
 			 */
-@JSGlobal("Titanium.App.iOS.BackgroundService")
 @js.native
-class BackgroundService () extends Proxy {
+trait BackgroundService extends Proxy {
   /**
   				 * A local URL to a JavaScript file containing the code to run in the background.
   				 */

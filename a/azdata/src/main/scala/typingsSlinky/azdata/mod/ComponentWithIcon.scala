@@ -1,6 +1,6 @@
 package typingsSlinky.azdata.mod
 
-import typingsSlinky.azdata.AnonDark
+import typingsSlinky.azdata.anon.Dark
 import typingsSlinky.vscode.mod.Uri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,7 @@ trait ComponentWithIcon extends js.Object {
   /**
   		 * @deprecated This will be moved to `ComponentWithIconProperties`
   		 */
-  var iconPath: js.UndefOr[String | Uri | AnonDark] = js.native
+  var iconPath: js.UndefOr[String | Uri | Dark] = js.native
   /**
   		 * @deprecated This will be moved to `ComponentWithIconProperties`
   		 */
@@ -47,7 +47,7 @@ object ComponentWithIcon {
         ret
     }
     @scala.inline
-    def withIconPath(value: String | Uri | AnonDark): Self = {
+    def withIconPath(value: String | Uri | Dark): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("iconPath")(value.asInstanceOf[js.Any])
         ret

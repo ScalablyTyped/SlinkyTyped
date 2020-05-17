@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.codedeployMod
 
-import typingsSlinky.awsSdk.GetDeploymentInputwaiterW
+import typingsSlinky.awsSdk.anon.GetDeploymentInputwaiterW
 import typingsSlinky.awsSdk.awsSdkStrings.deploymentSuccessful
 import typingsSlinky.awsSdk.configMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError

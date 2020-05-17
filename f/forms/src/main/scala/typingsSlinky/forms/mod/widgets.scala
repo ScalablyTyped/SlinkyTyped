@@ -1,6 +1,6 @@
 package typingsSlinky.forms.mod
 
-import typingsSlinky.forms.WidgetParametersrowsnumbe
+import typingsSlinky.forms.anon.WidgetParametersrowsnumbe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

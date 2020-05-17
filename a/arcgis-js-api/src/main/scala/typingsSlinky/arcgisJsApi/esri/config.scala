@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -66,7 +65,69 @@ trait config extends js.Object {
   var workers: configWorkers = js.native
 }
 
-@JSGlobal("__esri.config")
-@js.native
-object config extends TopLevel[config]
+object config {
+  @scala.inline
+  def apply(
+    fontsUrl: String,
+    geoRSSServiceUrl: String,
+    geometryServiceUrl: String,
+    kmlServiceUrl: String,
+    portalUrl: String,
+    request: configRequest,
+    workers: configWorkers
+  ): config = {
+    val __obj = js.Dynamic.literal(fontsUrl = fontsUrl.asInstanceOf[js.Any], geoRSSServiceUrl = geoRSSServiceUrl.asInstanceOf[js.Any], geometryServiceUrl = geometryServiceUrl.asInstanceOf[js.Any], kmlServiceUrl = kmlServiceUrl.asInstanceOf[js.Any], portalUrl = portalUrl.asInstanceOf[js.Any], request = request.asInstanceOf[js.Any], workers = workers.asInstanceOf[js.Any])
+    __obj.asInstanceOf[config]
+  }
+  @scala.inline
+  implicit class configOps[Self <: config] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFontsUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontsUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGeoRSSServiceUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geoRSSServiceUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGeometryServiceUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geometryServiceUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKmlServiceUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kmlServiceUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPortalUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("portalUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRequest(value: configRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWorkers(value: configWorkers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workers")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

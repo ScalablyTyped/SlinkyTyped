@@ -1,15 +1,15 @@
 package typingsSlinky.arangodb.arangodbRequestMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.arangodb.AnonBearer
-import typingsSlinky.arangodb.AnonUsername
+import typingsSlinky.arangodb.anon.Bearer
+import typingsSlinky.arangodb.anon.Password
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait RequestOptions extends js.Object {
-  var auth: js.UndefOr[AnonUsername | AnonBearer] = js.native
+  var auth: js.UndefOr[Password | Bearer] = js.native
   var body: js.UndefOr[js.Any] = js.native
   var encoding: js.UndefOr[String | Null] = js.native
   var followRedirect: js.UndefOr[Boolean] = js.native
@@ -37,7 +37,7 @@ object RequestOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAuth(value: AnonUsername | AnonBearer): Self = {
+    def withAuth(value: Password | Bearer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
         ret

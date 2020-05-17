@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ElseifClause
   extends Base[typingsSlinky.luaparse.luaparseStrings.ElseifClause]
-     with _Node {
+     with Node {
   var body: js.Array[Statement] = js.native
   var condition: Expression = js.native
 }

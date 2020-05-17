@@ -1,19 +1,12 @@
 package typingsSlinky.amapJsApi.AMap
 
-import typingsSlinky.amapJsApi.AMap.Rectangle.Options
-import typingsSlinky.amapJsApi.PartialOptionsany
+import typingsSlinky.amapJsApi.anon.PartialOptionsany
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("AMap.Rectangle")
 @js.native
-/**
-  * 矩形
-  * @param options 选项
-  */
-class Rectangle_[ExtraData] () extends Polygon[ExtraData] {
-  def this(options: Options[ExtraData]) = this()
+trait Rectangle_[ExtraData] extends Polygon[ExtraData] {
   /**
     * 获取矩形范围
     * @param bounds 矩形的范围

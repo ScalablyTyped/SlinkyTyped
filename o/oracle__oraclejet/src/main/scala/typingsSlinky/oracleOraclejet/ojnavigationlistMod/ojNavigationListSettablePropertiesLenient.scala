@@ -1,8 +1,8 @@
 package typingsSlinky.oracleOraclejet.ojnavigationlistMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonDefaultRootLabel
-import typingsSlinky.oracleOraclejet.AnonSelectable
+import typingsSlinky.oracleOraclejet.anon.DefaultRootLabel
+import typingsSlinky.oracleOraclejet.anon.Selectable
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojkeysetMod.KeySet
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.all
@@ -30,11 +30,11 @@ trait ojNavigationListSettablePropertiesLenient[K, D]
   var edge: js.UndefOr[top | start] = js.native
   var expanded: js.UndefOr[KeySet[K]] = js.native
   var hierarchyMenuThreshold: js.UndefOr[Double] = js.native
-  var item: js.UndefOr[AnonSelectable[K, D]] = js.native
+  var item: js.UndefOr[Selectable[K, D]] = js.native
   var overflow: js.UndefOr[popup | hidden] = js.native
   var rootLabel: js.UndefOr[String] = js.native
   var selection: js.UndefOr[K] = js.native
-  var translations: js.UndefOr[AnonDefaultRootLabel] = js.native
+  var translations: js.UndefOr[DefaultRootLabel] = js.native
 }
 
 object ojNavigationListSettablePropertiesLenient {
@@ -146,7 +146,7 @@ object ojNavigationListSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withItem(value: AnonSelectable[K, D]): Self[K, D] = {
+    def withItem(value: Selectable[K, D]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
         ret
@@ -194,7 +194,7 @@ object ojNavigationListSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonDefaultRootLabel): Self[K, D] = {
+    def withTranslations(value: DefaultRootLabel): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

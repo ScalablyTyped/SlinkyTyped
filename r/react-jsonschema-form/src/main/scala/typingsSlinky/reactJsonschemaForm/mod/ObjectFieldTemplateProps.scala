@@ -2,22 +2,22 @@ package typingsSlinky.reactJsonschemaForm.mod
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.jsonSchema.mod.JSONSchema6
-import typingsSlinky.reactJsonschemaForm.AnonContent
-import typingsSlinky.reactJsonschemaForm.AnonDescription
-import typingsSlinky.reactJsonschemaForm.AnonId
+import typingsSlinky.reactJsonschemaForm.anon.Content
+import typingsSlinky.reactJsonschemaForm.anon.Description
+import typingsSlinky.reactJsonschemaForm.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ObjectFieldTemplateProps[T] extends js.Object {
-  var DescriptionField: ReactComponentClass[AnonDescription] = js.native
-  var TitleField: ReactComponentClass[AnonId] = js.native
+  var DescriptionField: ReactComponentClass[Description] = js.native
+  var TitleField: ReactComponentClass[Id] = js.native
   var description: String = js.native
   var formContext: js.Any = js.native
   var formData: T = js.native
   var idSchema: IdSchema[_] = js.native
-  var properties: js.Array[AnonContent] = js.native
+  var properties: js.Array[Content] = js.native
   var required: Boolean = js.native
   var schema: JSONSchema6 = js.native
   var title: String = js.native
@@ -27,13 +27,13 @@ trait ObjectFieldTemplateProps[T] extends js.Object {
 object ObjectFieldTemplateProps {
   @scala.inline
   def apply[T](
-    DescriptionField: ReactComponentClass[AnonDescription],
-    TitleField: ReactComponentClass[AnonId],
+    DescriptionField: ReactComponentClass[Description],
+    TitleField: ReactComponentClass[Id],
     description: String,
     formContext: js.Any,
     formData: T,
     idSchema: IdSchema[_],
-    properties: js.Array[AnonContent],
+    properties: js.Array[Content],
     required: Boolean,
     schema: JSONSchema6,
     title: String,
@@ -49,13 +49,13 @@ object ObjectFieldTemplateProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withDescriptionField(value: ReactComponentClass[AnonDescription]): Self[T] = {
+    def withDescriptionField(value: ReactComponentClass[Description]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DescriptionField")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withTitleField(value: ReactComponentClass[AnonId]): Self[T] = {
+    def withTitleField(value: ReactComponentClass[Id]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TitleField")(value.asInstanceOf[js.Any])
         ret
@@ -85,7 +85,7 @@ object ObjectFieldTemplateProps {
         ret
     }
     @scala.inline
-    def withProperties(value: js.Array[AnonContent]): Self[T] = {
+    def withProperties(value: js.Array[Content]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
         ret

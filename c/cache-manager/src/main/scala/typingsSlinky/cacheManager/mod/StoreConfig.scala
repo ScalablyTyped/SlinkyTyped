@@ -1,7 +1,7 @@
 package typingsSlinky.cacheManager.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.cacheManager.AnonCreate
+import typingsSlinky.cacheManager.anon.Create
 import typingsSlinky.cacheManager.cacheManagerStrings.memory
 import typingsSlinky.cacheManager.cacheManagerStrings.none
 import scala.scalajs.js
@@ -17,12 +17,12 @@ trait StoreConfig
   */
 /* key */ StringDictionary[js.Any] {
   var max: js.UndefOr[Double] = js.native
-  var store: memory | none | Store | AnonCreate = js.native
+  var store: memory | none | Store | Create = js.native
 }
 
 object StoreConfig {
   @scala.inline
-  def apply(store: memory | none | Store | AnonCreate, ttl: Double | TtlFunction): StoreConfig = {
+  def apply(store: memory | none | Store | Create, ttl: Double | TtlFunction): StoreConfig = {
     val __obj = js.Dynamic.literal(store = store.asInstanceOf[js.Any], ttl = ttl.asInstanceOf[js.Any])
     __obj.asInstanceOf[StoreConfig]
   }
@@ -33,7 +33,7 @@ object StoreConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withStore(value: memory | none | Store | AnonCreate): Self = {
+    def withStore(value: memory | none | Store | Create): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("store")(value.asInstanceOf[js.Any])
         ret

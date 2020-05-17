@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,7 +37,41 @@ trait urlUtils extends js.Object {
   def urlToObject(url: String): js.Any = js.native
 }
 
-@JSGlobal("__esri.urlUtils")
-@js.native
-object urlUtils extends TopLevel[urlUtils]
+object urlUtils {
+  @scala.inline
+  def apply(
+    addProxyRule: urlUtilsAddProxyRuleRule => Double,
+    getProxyRule: String => js.Any,
+    urlToObject: String => js.Any
+  ): urlUtils = {
+    val __obj = js.Dynamic.literal(addProxyRule = js.Any.fromFunction1(addProxyRule), getProxyRule = js.Any.fromFunction1(getProxyRule), urlToObject = js.Any.fromFunction1(urlToObject))
+    __obj.asInstanceOf[urlUtils]
+  }
+  @scala.inline
+  implicit class urlUtilsOps[Self <: urlUtils] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddProxyRule(value: urlUtilsAddProxyRuleRule => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addProxyRule")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetProxyRule(value: String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getProxyRule")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUrlToObject(value: String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("urlToObject")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

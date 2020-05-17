@@ -2,7 +2,7 @@ package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -362,7 +362,7 @@ object IgValidator {
         ret
     }
     @scala.inline
-    def withError(value: (/* event */ Event_, /* ui */ ErrorEventUIParam) => Unit): Self = {
+    def withError(value: (/* event */ Event, /* ui */ ErrorEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction2(value))
         ret
@@ -374,7 +374,7 @@ object IgValidator {
         ret
     }
     @scala.inline
-    def withErrorHidden(value: (/* event */ Event_, /* ui */ ErrorHiddenEventUIParam) => Unit): Self = {
+    def withErrorHidden(value: (/* event */ Event, /* ui */ ErrorHiddenEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("errorHidden")(js.Any.fromFunction2(value))
         ret
@@ -386,7 +386,7 @@ object IgValidator {
         ret
     }
     @scala.inline
-    def withErrorHiding(value: (/* event */ Event_, /* ui */ ErrorHidingEventUIParam) => Unit): Self = {
+    def withErrorHiding(value: (/* event */ Event, /* ui */ ErrorHidingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("errorHiding")(js.Any.fromFunction2(value))
         ret
@@ -410,7 +410,7 @@ object IgValidator {
         ret
     }
     @scala.inline
-    def withErrorShowing(value: (/* event */ Event_, /* ui */ ErrorShowingEventUIParam) => Unit): Self = {
+    def withErrorShowing(value: (/* event */ Event, /* ui */ ErrorShowingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("errorShowing")(js.Any.fromFunction2(value))
         ret
@@ -422,7 +422,7 @@ object IgValidator {
         ret
     }
     @scala.inline
-    def withErrorShown(value: (/* event */ Event_, /* ui */ ErrorShownEventUIParam) => Unit): Self = {
+    def withErrorShown(value: (/* event */ Event, /* ui */ ErrorShownEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("errorShown")(js.Any.fromFunction2(value))
         ret
@@ -458,7 +458,7 @@ object IgValidator {
         ret
     }
     @scala.inline
-    def withFormError(value: (/* event */ Event_, /* ui */ FormErrorEventUIParam) => Unit): Self = {
+    def withFormError(value: (/* event */ Event, /* ui */ FormErrorEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formError")(js.Any.fromFunction2(value))
         ret
@@ -470,7 +470,7 @@ object IgValidator {
         ret
     }
     @scala.inline
-    def withFormSuccess(value: (/* event */ Event_, /* ui */ FormSuccessEventUIParam) => Unit): Self = {
+    def withFormSuccess(value: (/* event */ Event, /* ui */ FormSuccessEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formSuccess")(js.Any.fromFunction2(value))
         ret
@@ -482,7 +482,7 @@ object IgValidator {
         ret
     }
     @scala.inline
-    def withFormValidated(value: (/* event */ Event_, /* ui */ FormValidatedEventUIParam) => Unit): Self = {
+    def withFormValidated(value: (/* event */ Event, /* ui */ FormValidatedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formValidated")(js.Any.fromFunction2(value))
         ret
@@ -494,7 +494,7 @@ object IgValidator {
         ret
     }
     @scala.inline
-    def withFormValidating(value: (/* event */ Event_, /* ui */ FormValidatingEventUIParam) => Unit): Self = {
+    def withFormValidating(value: (/* event */ Event, /* ui */ FormValidatingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formValidating")(js.Any.fromFunction2(value))
         ret
@@ -674,7 +674,7 @@ object IgValidator {
         ret
     }
     @scala.inline
-    def withSuccess(value: (/* event */ Event_, /* ui */ SuccessEventUIParam) => Unit): Self = {
+    def withSuccess(value: (/* event */ Event, /* ui */ SuccessEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction2(value))
         ret
@@ -686,7 +686,7 @@ object IgValidator {
         ret
     }
     @scala.inline
-    def withSuccessHidden(value: (/* event */ Event_, /* ui */ SuccessHiddenEventUIParam) => Unit): Self = {
+    def withSuccessHidden(value: (/* event */ Event, /* ui */ SuccessHiddenEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("successHidden")(js.Any.fromFunction2(value))
         ret
@@ -698,7 +698,7 @@ object IgValidator {
         ret
     }
     @scala.inline
-    def withSuccessHiding(value: (/* event */ Event_, /* ui */ SuccessHidingEventUIParam) => Unit): Self = {
+    def withSuccessHiding(value: (/* event */ Event, /* ui */ SuccessHidingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("successHiding")(js.Any.fromFunction2(value))
         ret
@@ -722,7 +722,7 @@ object IgValidator {
         ret
     }
     @scala.inline
-    def withSuccessShowing(value: (/* event */ Event_, /* ui */ SuccessShowingEventUIParam) => Unit): Self = {
+    def withSuccessShowing(value: (/* event */ Event, /* ui */ SuccessShowingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("successShowing")(js.Any.fromFunction2(value))
         ret
@@ -734,7 +734,7 @@ object IgValidator {
         ret
     }
     @scala.inline
-    def withSuccessShown(value: (/* event */ Event_, /* ui */ SuccessShownEventUIParam) => Unit): Self = {
+    def withSuccessShown(value: (/* event */ Event, /* ui */ SuccessShownEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("successShown")(js.Any.fromFunction2(value))
         ret
@@ -758,7 +758,7 @@ object IgValidator {
         ret
     }
     @scala.inline
-    def withValidated(value: (/* event */ Event_, /* ui */ ValidatedEventUIParam) => Unit): Self = {
+    def withValidated(value: (/* event */ Event, /* ui */ ValidatedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validated")(js.Any.fromFunction2(value))
         ret
@@ -770,7 +770,7 @@ object IgValidator {
         ret
     }
     @scala.inline
-    def withValidating(value: (/* event */ Event_, /* ui */ ValidatingEventUIParam) => Unit): Self = {
+    def withValidating(value: (/* event */ Event, /* ui */ ValidatingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validating")(js.Any.fromFunction2(value))
         ret

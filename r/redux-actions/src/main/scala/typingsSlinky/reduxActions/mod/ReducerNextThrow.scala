@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ReducerNextThrow[State, Payload] extends _ReducerMapValue[State, Payload] {
+trait ReducerNextThrow[State, Payload] extends ReducerMapValue[State, Payload] {
   var next: js.UndefOr[js.Function2[/* state */ State, /* action */ Action[Payload], State]] = js.native
   var `throw`: js.UndefOr[js.Function2[/* state */ State, /* action */ Action[Payload], State]] = js.native
 }

@@ -1,5 +1,8 @@
 package typingsSlinky.gapiPagespeedonline
 
+import typingsSlinky.gapiPagespeedonline.anon.CssResponsebytes
+import typingsSlinky.gapiPagespeedonline.anon.Locale
+import typingsSlinky.gapiPagespeedonline.anon.Major
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +12,7 @@ trait GoogleApiPageSpeedOnlineResource extends js.Object {
   /**
     * Localized PageSpeed results. Contains a ruleResults entry for each PageSpeed rule instantiated and run by the server.
     */
-  var formattedResults: AnonLocale = js.native
+  var formattedResults: Locale = js.native
   /**
     * Canonicalized and final URL for the document, after following page redirects (if any).
     */
@@ -25,7 +28,7 @@ trait GoogleApiPageSpeedOnlineResource extends js.Object {
   /**
     * Summary statistics for the page, such as number of JavaScript bytes, number of HTML bytes, etc.
     */
-  var pageStats: AnonCssResponsebytes = js.native
+  var pageStats: CssResponsebytes = js.native
   /**
     * Response code for the document. 200 indicates a normal page load. 4xx/5xx indicates an error.
     */
@@ -41,21 +44,21 @@ trait GoogleApiPageSpeedOnlineResource extends js.Object {
   /**
     * The version of the PageSpeed SDK used to generate these results.
     */
-  var version: AnonMajor = js.native
+  var version: Major = js.native
 }
 
 object GoogleApiPageSpeedOnlineResource {
   @scala.inline
   def apply(
-    formattedResults: AnonLocale,
+    formattedResults: Locale,
     id: String,
     invalidRules: js.Array[String],
     kind: String,
-    pageStats: AnonCssResponsebytes,
+    pageStats: CssResponsebytes,
     responseCode: Double,
     score: Double,
     title: String,
-    version: AnonMajor
+    version: Major
   ): GoogleApiPageSpeedOnlineResource = {
     val __obj = js.Dynamic.literal(formattedResults = formattedResults.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], invalidRules = invalidRules.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], pageStats = pageStats.asInstanceOf[js.Any], responseCode = responseCode.asInstanceOf[js.Any], score = score.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleApiPageSpeedOnlineResource]
@@ -67,7 +70,7 @@ object GoogleApiPageSpeedOnlineResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFormattedResults(value: AnonLocale): Self = {
+    def withFormattedResults(value: Locale): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formattedResults")(value.asInstanceOf[js.Any])
         ret
@@ -91,7 +94,7 @@ object GoogleApiPageSpeedOnlineResource {
         ret
     }
     @scala.inline
-    def withPageStats(value: AnonCssResponsebytes): Self = {
+    def withPageStats(value: CssResponsebytes): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pageStats")(value.asInstanceOf[js.Any])
         ret
@@ -115,7 +118,7 @@ object GoogleApiPageSpeedOnlineResource {
         ret
     }
     @scala.inline
-    def withVersion(value: AnonMajor): Self = {
+    def withVersion(value: Major): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
         ret

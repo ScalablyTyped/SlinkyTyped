@@ -1,6 +1,6 @@
 package typingsSlinky.hdkey.mod
 
-import typingsSlinky.hdkey.AnonXpriv
+import typingsSlinky.hdkey.anon.Xpriv
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ trait HDNode extends js.Object {
   var privateKey: Buffer = js.native
   var publicKey: Buffer = js.native
   def derive(path: String): HDNode = js.native
-  def toJSON(): AnonXpriv = js.native
+  def toJSON(): Xpriv = js.native
 }
 
 object HDNode {
@@ -22,7 +22,7 @@ object HDNode {
     derive: String => HDNode,
     privateKey: Buffer,
     publicKey: Buffer,
-    toJSON: () => AnonXpriv
+    toJSON: () => Xpriv
   ): HDNode = {
     val __obj = js.Dynamic.literal(chainCode = chainCode.asInstanceOf[js.Any], derive = js.Any.fromFunction1(derive), privateKey = privateKey.asInstanceOf[js.Any], publicKey = publicKey.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON))
     __obj.asInstanceOf[HDNode]
@@ -58,7 +58,7 @@ object HDNode {
         ret
     }
     @scala.inline
-    def withToJSON(value: () => AnonXpriv): Self = {
+    def withToJSON(value: () => Xpriv): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
         ret

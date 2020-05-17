@@ -1,10 +1,8 @@
 package typingsSlinky.appleMapkitJs.mapkit
 
-import typingsSlinky.appleMapkitJs.AnonAnnotation
-import typingsSlinky.appleMapkitJs.AnonAnnotationAnnotation
-import typingsSlinky.appleMapkitJs.AnonCode
-import typingsSlinky.appleMapkitJs.AnonCoordinate
-import typingsSlinky.appleMapkitJs.AnonTimestamp
+import typingsSlinky.appleMapkitJs.anon.AnnotationAnnotation
+import typingsSlinky.appleMapkitJs.anon.Code
+import typingsSlinky.appleMapkitJs.anon.Timestamp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,11 +10,11 @@ import scala.scalajs.js.annotation._
 // prettier-ignore
 @js.native
 trait MapEvents[T] extends js.Object {
-  var deselect: EventBase[T] with AnonAnnotation = js.native
+  var deselect: EventBase[T] with typingsSlinky.appleMapkitJs.anon.Annotation = js.native
   var `double-tap`: EventBase[T] = js.native
-  var `drag-end`: EventBase[T] with AnonAnnotationAnnotation = js.native
-  var `drag-start`: EventBase[T] with AnonAnnotationAnnotation = js.native
-  var dragging: EventBase[T] with AnonCoordinate = js.native
+  var `drag-end`: EventBase[T] with AnnotationAnnotation = js.native
+  var `drag-start`: EventBase[T] with AnnotationAnnotation = js.native
+  var dragging: EventBase[T] with typingsSlinky.appleMapkitJs.anon.Coordinate = js.native
   var `long-press`: EventBase[T] = js.native
   var `map-type-change`: EventBase[T] = js.native
   var `region-change-end`: EventBase[T] = js.native
@@ -24,11 +22,11 @@ trait MapEvents[T] extends js.Object {
   var `scroll-end`: EventBase[T] = js.native
   var `scroll-start`: EventBase[T] = js.native
   // Annotation Events
-  var select: EventBase[T] with AnonAnnotation = js.native
+  var select: EventBase[T] with typingsSlinky.appleMapkitJs.anon.Annotation = js.native
   var `single-tap`: EventBase[T] = js.native
   // User Location Events
-  var `user-location-change`: EventBase[T] with AnonTimestamp = js.native
-  var `user-location-error`: EventBase[T] with AnonCode = js.native
+  var `user-location-change`: EventBase[T] with Timestamp = js.native
+  var `user-location-error`: EventBase[T] with Code = js.native
   var `zoom-end`: EventBase[T] = js.native
   var `zoom-start`: EventBase[T] = js.native
 }
@@ -36,21 +34,21 @@ trait MapEvents[T] extends js.Object {
 object MapEvents {
   @scala.inline
   def apply[T](
-    deselect: EventBase[T] with AnonAnnotation,
+    deselect: EventBase[T] with typingsSlinky.appleMapkitJs.anon.Annotation,
     `double-tap`: EventBase[T],
-    `drag-end`: EventBase[T] with AnonAnnotationAnnotation,
-    `drag-start`: EventBase[T] with AnonAnnotationAnnotation,
-    dragging: EventBase[T] with AnonCoordinate,
+    `drag-end`: EventBase[T] with AnnotationAnnotation,
+    `drag-start`: EventBase[T] with AnnotationAnnotation,
+    dragging: EventBase[T] with typingsSlinky.appleMapkitJs.anon.Coordinate,
     `long-press`: EventBase[T],
     `map-type-change`: EventBase[T],
     `region-change-end`: EventBase[T],
     `region-change-start`: EventBase[T],
     `scroll-end`: EventBase[T],
     `scroll-start`: EventBase[T],
-    select: EventBase[T] with AnonAnnotation,
+    select: EventBase[T] with typingsSlinky.appleMapkitJs.anon.Annotation,
     `single-tap`: EventBase[T],
-    `user-location-change`: EventBase[T] with AnonTimestamp,
-    `user-location-error`: EventBase[T] with AnonCode,
+    `user-location-change`: EventBase[T] with Timestamp,
+    `user-location-error`: EventBase[T] with Code,
     `zoom-end`: EventBase[T],
     `zoom-start`: EventBase[T]
   ): MapEvents[T] = {
@@ -78,7 +76,7 @@ object MapEvents {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withDeselect(value: EventBase[T] with AnonAnnotation): Self[T] = {
+    def withDeselect(value: EventBase[T] with typingsSlinky.appleMapkitJs.anon.Annotation): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("deselect")(value.asInstanceOf[js.Any])
         ret
@@ -90,19 +88,19 @@ object MapEvents {
         ret
     }
     @scala.inline
-    def `withDrag-end`(value: EventBase[T] with AnonAnnotationAnnotation): Self[T] = {
+    def `withDrag-end`(value: EventBase[T] with AnnotationAnnotation): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("drag-end")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def `withDrag-start`(value: EventBase[T] with AnonAnnotationAnnotation): Self[T] = {
+    def `withDrag-start`(value: EventBase[T] with AnnotationAnnotation): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("drag-start")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withDragging(value: EventBase[T] with AnonCoordinate): Self[T] = {
+    def withDragging(value: EventBase[T] with typingsSlinky.appleMapkitJs.anon.Coordinate): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragging")(value.asInstanceOf[js.Any])
         ret
@@ -144,7 +142,7 @@ object MapEvents {
         ret
     }
     @scala.inline
-    def withSelect(value: EventBase[T] with AnonAnnotation): Self[T] = {
+    def withSelect(value: EventBase[T] with typingsSlinky.appleMapkitJs.anon.Annotation): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
         ret
@@ -156,13 +154,13 @@ object MapEvents {
         ret
     }
     @scala.inline
-    def `withUser-location-change`(value: EventBase[T] with AnonTimestamp): Self[T] = {
+    def `withUser-location-change`(value: EventBase[T] with Timestamp): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("user-location-change")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def `withUser-location-error`(value: EventBase[T] with AnonCode): Self[T] = {
+    def `withUser-location-error`(value: EventBase[T] with Code): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("user-location-error")(value.asInstanceOf[js.Any])
         ret

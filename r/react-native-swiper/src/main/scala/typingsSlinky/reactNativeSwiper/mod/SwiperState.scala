@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeSwiper.mod
 
-import typingsSlinky.reactNativeSwiper.AnonX
+import typingsSlinky.reactNativeSwiper.anon.X
 import typingsSlinky.reactNativeSwiper.reactNativeSwiperStrings.x
 import typingsSlinky.reactNativeSwiper.reactNativeSwiperStrings.y
 import scala.scalajs.js
@@ -15,7 +15,7 @@ trait SwiperState extends js.Object {
   var index: Double = js.native
   var isScrolling: Boolean = js.native
   var loopJump: Boolean = js.native
-  var offset: AnonX = js.native
+  var offset: X = js.native
   var total: Double = js.native
   var width: Double = js.native
 }
@@ -29,7 +29,7 @@ object SwiperState {
     index: Double,
     isScrolling: Boolean,
     loopJump: Boolean,
-    offset: AnonX,
+    offset: X,
     total: Double,
     width: Double
   ): SwiperState = {
@@ -49,7 +49,7 @@ object SwiperState {
         ret
     }
     @scala.inline
-    def withDir(value: x | y): Self = {
+    def withDir(value: typingsSlinky.reactNativeSwiper.reactNativeSwiperStrings.x | y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
         ret
@@ -79,7 +79,7 @@ object SwiperState {
         ret
     }
     @scala.inline
-    def withOffset(value: AnonX): Self = {
+    def withOffset(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
         ret

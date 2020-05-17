@@ -1,11 +1,11 @@
 package typingsSlinky.officeUiFabricReact.positioningContainerPositioningContainerMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.officeUiFabricReact.positioningContainerTypesMod.IPositioningContainerProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,8 +61,8 @@ class PositioningContainer protected ()
   def UNSAFE_componentWillMount_MPositioningContainer(): Unit = js.native
   @JSName("UNSAFE_componentWillUpdate")
   def UNSAFE_componentWillUpdate_MPositioningContainer(newProps: IPositioningContainerProps): Unit = js.native
-  /* protected */ def _dismissOnLostFocus(ev: Event_): Unit = js.native
-  /* protected */ def _dismissOnScroll(ev: Event_): Unit = js.native
+  /* protected */ def _dismissOnLostFocus(ev: Event): Unit = js.native
+  /* protected */ def _dismissOnScroll(ev: Event): Unit = js.native
   /* protected */ def _onComponentDidMount(): Unit = js.native
   /* protected */ def _setInitialFocus(): Unit = js.native
   @JSName("componentDidMount")
@@ -78,11 +78,11 @@ class PositioningContainer protected ()
   def dismiss(): Unit = js.native
   def dismiss(ev: SyntheticKeyboardEvent[HTMLElement]): Unit = js.native
   def dismiss(ev: SyntheticMouseEvent[HTMLElement]): Unit = js.native
-  def dismiss(ev: Event_): Unit = js.native
+  def dismiss(ev: Event): Unit = js.native
   def onResize(): Unit = js.native
   def onResize(ev: SyntheticKeyboardEvent[HTMLElement]): Unit = js.native
   def onResize(ev: SyntheticMouseEvent[HTMLElement]): Unit = js.native
-  def onResize(ev: Event_): Unit = js.native
+  def onResize(ev: Event): Unit = js.native
 }
 
 /* static members */

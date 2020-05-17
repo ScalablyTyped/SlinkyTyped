@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientBlogger.gapi.client.blogger
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientBlogger.AnonUserId
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientBlogger.anon.UserId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UsersResource extends js.Object {
   /** Gets one user by ID. */
-  def get(request: AnonUserId): Request_[User] = js.native
+  def get(request: UserId): Request[User] = js.native
 }
 
 object UsersResource {
   @scala.inline
-  def apply(get: AnonUserId => Request_[User]): UsersResource = {
+  def apply(get: UserId => Request[User]): UsersResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get))
     __obj.asInstanceOf[UsersResource]
   }
@@ -25,7 +25,7 @@ object UsersResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonUserId => Request_[User]): Self = {
+    def withGet(value: UserId => Request[User]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret

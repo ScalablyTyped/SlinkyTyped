@@ -1,6 +1,6 @@
 package typingsSlinky.reactVega.mod
 
-import typingsSlinky.reactVega.TypeofVegaWithSpec
+import typingsSlinky.reactVega.anon.TypeofVegaWithSpec
 import typingsSlinky.vegaTypings.specMod.Spec
 import scala.scalajs.js
 import scala.scalajs.js.`|`

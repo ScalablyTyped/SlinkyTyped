@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartDataLabelData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartDataLabelLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartDataLabelUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.BestFit
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Bottom
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Callout
@@ -30,9 +30,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.7]
   */
-@JSGlobal("Excel.ChartDataLabel")
 @js.native
-class ChartDataLabel () extends ClientObject {
+trait ChartDataLabel extends ClientObject {
   /**
     *
     * Boolean value representing if data label automatically generates appropriate text based on context.
@@ -192,7 +191,7 @@ class ChartDataLabel () extends ClientObject {
     */
   def load(): ChartDataLabel = js.native
   def load(options: ChartDataLabelLoadOptions): ChartDataLabel = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartDataLabel = js.native
+  def load(propertyNamesAndPaths: Expand): ChartDataLabel = js.native
   def load(propertyNames: String): ChartDataLabel = js.native
   def load(propertyNames: js.Array[String]): ChartDataLabel = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

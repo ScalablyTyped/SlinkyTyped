@@ -1,6 +1,6 @@
 package typingsSlinky.apn.mod
 
-import typingsSlinky.apn.AnonReason
+import typingsSlinky.apn.anon.Reason
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait ResponseFailure extends js.Object {
   var device: String = js.native
   var error: js.UndefOr[js.Error] = js.native
-  var response: js.UndefOr[AnonReason] = js.native
+  var response: js.UndefOr[Reason] = js.native
   var status: js.UndefOr[String] = js.native
 }
 
@@ -44,7 +44,7 @@ object ResponseFailure {
         ret
     }
     @scala.inline
-    def withResponse(value: AnonReason): Self = {
+    def withResponse(value: Reason): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
         ret

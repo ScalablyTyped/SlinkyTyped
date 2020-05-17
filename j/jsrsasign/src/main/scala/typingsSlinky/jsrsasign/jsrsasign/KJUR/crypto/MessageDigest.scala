@@ -1,7 +1,5 @@
 package typingsSlinky.jsrsasign.jsrsasign.KJUR.crypto
 
-import typingsSlinky.jsrsasign.AnonMd5
-import typingsSlinky.jsrsasign.AnonProv
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,10 +32,8 @@ import scala.scalajs.js.annotation._
   * KJUR.crypto.MessageDigest.HASHLENGTH['sha1'] → 20
   * KJUR.crypto.MessageDigest.HASHLENGTH['sha512'] → 64
   */
-@JSGlobal("jsrsasign.KJUR.crypto.MessageDigest")
 @js.native
-class MessageDigest protected () extends js.Object {
-  def this(params: AnonProv) = this()
+trait MessageDigest extends js.Object {
   /**
     * completes hash calculation and returns hash result
     * @description
@@ -104,35 +100,62 @@ class MessageDigest protected () extends js.Object {
   def updateString(str: String): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("jsrsasign.KJUR.crypto.MessageDigest")
-@js.native
-object MessageDigest extends js.Object {
-  /** static Array of resulted byte length of hash (ex. HASHLENGTH["sha1"] == 20) */
-  val HASHLENGTH: AnonMd5 = js.native
-  /**
-    * get canonical hash algorithm name
-    * @param alg hash algorithm name (ex. MD5, SHA-1, SHA1, SHA512 et.al.)
-    * @return canonical hash algorithm name
-    * @description
-    * This static method normalizes from any hash algorithm name such as
-    * "SHA-1", "SHA1", "MD5", "sha512" to lower case name without hyphens
-    * such as "sha1".
-    * @example
-    * KJUR.crypto.MessageDigest.getCanonicalAlgName("SHA-1") → "sha1"
-    * KJUR.crypto.MessageDigest.getCanonicalAlgName("MD5")   → "md5"
-    */
-  def getCanonicalAlgName(alg: String): String = js.native
-  /**
-    * get resulted hash byte length for specified algorithm name
-    * @param alg non-canonicalized hash algorithm name (ex. MD5, SHA-1, SHA1, SHA512 et.al.)
-    * @return resulted hash byte length
-    * @description
-    * This static method returns resulted byte length for specified algorithm name such as "SHA-1".
-    * @example
-    * KJUR.crypto.MessageDigest.getHashLength("SHA-1") → 20
-    * KJUR.crypto.MessageDigest.getHashLength("sha1") → 20
-    */
-  def getHashLength(alg: String): Double = js.native
+object MessageDigest {
+  @scala.inline
+  def apply(
+    digest: () => Unit,
+    digestHex: String => Unit,
+    digestString: String => Unit,
+    setAlgAndProvider: (String, String) => Unit,
+    updateHex: String => Unit,
+    updateString: String => Unit
+  ): MessageDigest = {
+    val __obj = js.Dynamic.literal(digest = js.Any.fromFunction0(digest), digestHex = js.Any.fromFunction1(digestHex), digestString = js.Any.fromFunction1(digestString), setAlgAndProvider = js.Any.fromFunction2(setAlgAndProvider), updateHex = js.Any.fromFunction1(updateHex), updateString = js.Any.fromFunction1(updateString))
+    __obj.asInstanceOf[MessageDigest]
+  }
+  @scala.inline
+  implicit class MessageDigestOps[Self <: MessageDigest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDigest(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("digest")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDigestHex(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("digestHex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDigestString(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("digestString")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetAlgAndProvider(value: (String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAlgAndProvider")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateHex(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateHex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateString(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateString")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

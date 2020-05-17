@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.highcharts.mod.ChartCallbackFunction
 import typingsSlinky.highcharts.mod.Chart_
 import typingsSlinky.highcharts.mod.Options
-import typingsSlinky.highchartsReactOfficial.TypeofHighcharts
+import typingsSlinky.highchartsReactOfficial.anon.TypeofHighcharts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

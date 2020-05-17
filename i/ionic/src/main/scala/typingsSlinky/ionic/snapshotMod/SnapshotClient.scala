@@ -1,7 +1,7 @@
 package typingsSlinky.ionic.snapshotMod
 
-import typingsSlinky.ionic.AnonIdString
-import typingsSlinky.ionic.PartialPaginateArgsResponGuard
+import typingsSlinky.ionic.anon.IdString
+import typingsSlinky.ionic.anon.PartialPaginateArgsResponGuard
 import typingsSlinky.ionic.definitionsMod.IClient
 import typingsSlinky.ionic.definitionsMod.IPaginator
 import typingsSlinky.ionic.definitionsMod.PaginatorState
@@ -21,7 +21,7 @@ class SnapshotClient protected ()
      with ResourceClientLoad[Snapshot]
      with ResourceClientPaginate[Snapshot] {
   def this(hasClientAppToken: SnapshotClientDeps) = this()
-  var app: AnonIdString = js.native
+  var app: IdString = js.native
   var client: IClient = js.native
   var token: String = js.native
   def load(id: String): js.Promise[Snapshot] = js.native

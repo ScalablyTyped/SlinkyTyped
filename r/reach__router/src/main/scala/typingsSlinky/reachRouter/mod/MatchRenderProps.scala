@@ -1,7 +1,7 @@
 package typingsSlinky.reachRouter.mod
 
 import typingsSlinky.history.mod.LocationState
-import typingsSlinky.reachRouter.AnonPath
+import typingsSlinky.reachRouter.anon.Path
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MatchRenderProps[TParams] extends js.Object {
   var location: WindowLocation[LocationState] = js.native
-  var `match`: Null | (AnonPath with TParams) = js.native
+  var `match`: Null | (Path with TParams) = js.native
   var navigate: NavigateFn = js.native
 }
 
@@ -38,7 +38,7 @@ object MatchRenderProps {
         ret
     }
     @scala.inline
-    def withMatch(value: AnonPath with TParams): Self[TParams] = {
+    def withMatch(value: Path with TParams): Self[TParams] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("match")(value.asInstanceOf[js.Any])
         ret

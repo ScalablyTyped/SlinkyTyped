@@ -12,5 +12,4 @@ package object mod {
     /* wantedBy */ js.UndefOr[js.Object], 
     scala.Unit
   ]
-  type Token = java.lang.String | typingsSlinky.nearley.AnonValue
 }

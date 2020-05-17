@@ -1,6 +1,6 @@
 package typingsSlinky.reactNative.mod
 
-import typingsSlinky.reactNative.FnCall
+import typingsSlinky.reactNative.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

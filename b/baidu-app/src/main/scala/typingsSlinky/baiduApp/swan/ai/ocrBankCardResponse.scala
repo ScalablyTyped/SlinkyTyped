@@ -1,6 +1,6 @@
 package typingsSlinky.baiduApp.swan.ai
 
-import typingsSlinky.baiduApp.AnonBankcardnumber
+import typingsSlinky.baiduApp.anon.Bankcardnumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait ocrBankCardResponse extends js.Object {
   var log_id: String = js.native
    // 请求标识码，随机数，唯一。
-  var result: AnonBankcardnumber = js.native
+  var result: Bankcardnumber = js.native
 }
 
 object ocrBankCardResponse {
   @scala.inline
-  def apply(log_id: String, result: AnonBankcardnumber): ocrBankCardResponse = {
+  def apply(log_id: String, result: Bankcardnumber): ocrBankCardResponse = {
     val __obj = js.Dynamic.literal(log_id = log_id.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any])
     __obj.asInstanceOf[ocrBankCardResponse]
   }
@@ -31,7 +31,7 @@ object ocrBankCardResponse {
         ret
     }
     @scala.inline
-    def withResult(value: AnonBankcardnumber): Self = {
+    def withResult(value: Bankcardnumber): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
         ret

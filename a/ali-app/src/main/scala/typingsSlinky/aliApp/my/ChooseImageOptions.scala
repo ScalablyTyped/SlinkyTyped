@@ -1,6 +1,6 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonApFilePaths
+import typingsSlinky.aliApp.anon.ApFilePaths
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +14,12 @@ trait ChooseImageOptions
   var sourceType: js.Array[ImageSourceType] = js.native
   /** 成功则返回图片的本地文件路径列表 tempFilePaths */
   @JSName("success")
-  def success_MChooseImageOptions(res: AnonApFilePaths): Unit = js.native
+  def success_MChooseImageOptions(res: ApFilePaths): Unit = js.native
 }
 
 object ChooseImageOptions {
   @scala.inline
-  def apply(count: Double, sourceType: js.Array[ImageSourceType], success: AnonApFilePaths => Unit): ChooseImageOptions = {
+  def apply(count: Double, sourceType: js.Array[ImageSourceType], success: ApFilePaths => Unit): ChooseImageOptions = {
     val __obj = js.Dynamic.literal(count = count.asInstanceOf[js.Any], sourceType = sourceType.asInstanceOf[js.Any], success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[ChooseImageOptions]
   }
@@ -42,7 +42,7 @@ object ChooseImageOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: AnonApFilePaths => Unit): Self = {
+    def withSuccess(value: ApFilePaths => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

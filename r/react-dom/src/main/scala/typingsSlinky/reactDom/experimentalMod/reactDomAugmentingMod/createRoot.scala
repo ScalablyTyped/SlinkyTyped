@@ -1,9 +1,9 @@
 package typingsSlinky.reactDom.experimentalMod.reactDomAugmentingMod
 
 import org.scalajs.dom.raw.Comment
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.DocumentFragment
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ object createRoot extends js.Object {
     *
     * @see https://reactjs.org/docs/concurrent-mode-reference.html#createroot
     */
-  def apply(container: Element | Document_ | DocumentFragment | Comment): Root = js.native
-  def apply(container: Element | Document_ | DocumentFragment | Comment, options: RootOptions): Root = js.native
+  def apply(container: Element | Document | DocumentFragment | Comment): Root = js.native
+  def apply(container: Element | Document | DocumentFragment | Comment, options: RootOptions): Root = js.native
 }
 

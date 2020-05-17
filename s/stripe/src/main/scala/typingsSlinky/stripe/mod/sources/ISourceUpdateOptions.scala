@@ -1,7 +1,7 @@
 package typingsSlinky.stripe.mod.sources
 
-import typingsSlinky.stripe.AnonCurrency
-import typingsSlinky.stripe.AnonEmailName
+import typingsSlinky.stripe.anon.Currency
+import typingsSlinky.stripe.anon.EmailName
 import typingsSlinky.stripe.mod.IDataOptionsWithMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ISourceUpdateOptions extends IDataOptionsWithMetadata {
-  var mandate: js.UndefOr[AnonCurrency] = js.native
-  var owner: js.UndefOr[AnonEmailName] = js.native
+  var mandate: js.UndefOr[Currency] = js.native
+  var owner: js.UndefOr[EmailName] = js.native
 }
 
 object ISourceUpdateOptions {
@@ -26,7 +26,7 @@ object ISourceUpdateOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMandate(value: AnonCurrency): Self = {
+    def withMandate(value: Currency): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mandate")(value.asInstanceOf[js.Any])
         ret
@@ -38,7 +38,7 @@ object ISourceUpdateOptions {
         ret
     }
     @scala.inline
-    def withOwner(value: AnonEmailName): Self = {
+    def withOwner(value: EmailName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
         ret

@@ -1,5 +1,6 @@
 package typingsSlinky.wrench
 
+import typingsSlinky.wrench.anon.Preserve
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +21,7 @@ object mod extends js.Object {
   def chownSyncRecursive(sourceDir: String, uid: Double, gid: Double): Unit = js.native
   def copyDirRecursive(srcDir: String, newDir: String, fn: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def copyDirSyncRecursive(sourceDir: String, newDirLocation: String): Unit = js.native
-  def copyDirSyncRecursive(sourceDir: String, newDirLocation: String, opts: AnonPreserve): Unit = js.native
+  def copyDirSyncRecursive(sourceDir: String, newDirLocation: String, opts: Preserve): Unit = js.native
   def mkdirSyncRecursive(path: String, mode: Double): Unit = js.native
   def readdirRecursive(baseDir: String, fn: js.Function2[/* err */ js.Error, /* files */ js.Array[String], Unit]): Unit = js.native
   def readdirSyncRecursive(baseDir: String): js.Array[String] = js.native

@@ -2,11 +2,11 @@ package typingsSlinky.baseui.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonExpanded
-import typingsSlinky.baseui.SharedPropsexpandednever
 import typingsSlinky.baseui.accordionMod.AccordionOverrides
 import typingsSlinky.baseui.accordionMod.AccordionProps
 import typingsSlinky.baseui.accordionMod.AccordionState
+import typingsSlinky.baseui.anon.Expanded
+import typingsSlinky.baseui.anon.SharedPropsexpandednever
 import typingsSlinky.baseui.baseuiStrings.expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -28,7 +28,7 @@ object Accordion {
     @scala.inline
     def initialState(value: AccordionState): this.type = set("initialState", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* args */ AnonExpanded => _): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* args */ Expanded => _): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def overrides(value: AccordionOverrides[SharedPropsexpandednever]): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline

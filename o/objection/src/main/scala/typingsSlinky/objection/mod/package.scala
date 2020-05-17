@@ -7,19 +7,6 @@ import scala.scalajs.js.annotation._
 package object mod {
   type As[QM /* <: typingsSlinky.objection.mod.Model */, RM, RV] = js.Function1[/* alias */ java.lang.String, typingsSlinky.objection.mod.QueryBuilder[QM, RM, RV]]
   type BluebirdMapper[T, Result] = js.Function2[/* item */ T, /* index */ scala.Double, Result]
-  type ColumnRef = java.lang.String | typingsSlinky.objection.mod.Raw_ | typingsSlinky.objection.mod.Reference | (typingsSlinky.objection.mod.QueryBuilder[
-    js.Any, 
-    js.Array[js.Any], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ js.Any
-  ])
-  type DeepPartialGraph[T] = T | typingsSlinky.objection.mod.DeepPartialGraphModel[T] | (typingsSlinky.objection.mod.DeepPartialGraphArray[
-    /* import warning: importer.ImportType#apply Failed type conversion: T[number] */ js.Any
-  ])
-  type DeepPartialGraphModel[T] = (typingsSlinky.objection.mod.GraphModel[
-    /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ P in objection.objection.NonFunctionPropertyNames<T> ]:? objection.objection.DeepPartialGraph<T[P]>}
-    */ typingsSlinky.objection.objectionStrings.DeepPartialGraphModel with org.scalablytyped.runtime.TopLevel[T]
-  ]) | typingsSlinky.std.Partial[T]
   type Distinct[QM /* <: typingsSlinky.objection.mod.Model */, RM, RV] = typingsSlinky.objection.mod.ColumnNamesMethod[QM, RM, RV]
   type ErrorHash = org.scalablytyped.runtime.StringDictionary[js.Array[typingsSlinky.objection.mod.ValidationErrorItem]]
   /**
@@ -55,9 +42,6 @@ package object mod {
       scala.Unit
     ]
   ]
-  type GraphModel[T] = (typingsSlinky.objection.AnonId with T) | (typingsSlinky.objection.AnonRef with typingsSlinky.objection.objectionStrings.GraphModel with org.scalablytyped.runtime.TopLevel[js.Any]) | (typingsSlinky.objection.AnonDbRef with typingsSlinky.objection.objectionStrings.GraphModel with org.scalablytyped.runtime.TopLevel[js.Any])
-  type Id = java.lang.String | scala.Double
-  type IdOrIds = typingsSlinky.objection.mod.Id | typingsSlinky.objection.mod.Ids
   type Ids = js.Array[typingsSlinky.objection.mod.Id]
   type JoinRaw[QM /* <: typingsSlinky.objection.mod.Model */, RM, RV] = js.Function2[
     /* sql */ java.lang.String, 
@@ -73,7 +57,6 @@ package object mod {
       /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ js.Any
     ]
   ]
-  type JsonObjectOrFieldExpression = js.Object | js.Array[js.Object] | typingsSlinky.objection.mod.FieldExpression
   type Literal = typingsSlinky.objection.mod.Castable
   type LiteralBuilder = js.Function1[
     /* value */ typingsSlinky.objection.mod.Value | typingsSlinky.objection.mod.LiteralObject, 
@@ -96,48 +79,22 @@ package object mod {
   {[ P in keyof QM ]:? QM[P] | objection.objection.Raw | objection.objection.Reference | objection.objection.QueryBuilder<any, std.Array<any>, / * import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV * / any>}
     */ typingsSlinky.objection.objectionStrings.PartialUpdate with org.scalablytyped.runtime.TopLevel[QM]
   type Plugin = js.Function1[
-    /* modelClass */ typingsSlinky.objection.TypeofModel, 
-    typingsSlinky.objection.TypeofModel
+    /* modelClass */ typingsSlinky.objection.anon.TypeofModel, 
+    typingsSlinky.objection.anon.TypeofModel
   ]
   type Pojo = org.scalablytyped.runtime.StringDictionary[js.Any]
   type Properties = org.scalablytyped.runtime.StringDictionary[scala.Boolean]
-  type QBOrCallback[QM /* <: typingsSlinky.objection.mod.Model */] = (typingsSlinky.objection.mod.QueryBuilder[
-    QM, 
-    js.Array[QM], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ js.Any
-  ]) | (js.ThisFunction1[
-    /* this */ typingsSlinky.objection.mod.QueryBuilder[
-      QM, 
-      js.Array[QM], 
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ js.Any
-    ], 
-    /* queryBuilder */ typingsSlinky.objection.mod.QueryBuilder[
-      QM, 
-      js.Array[QM], 
-      /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ js.Any
-    ], 
-    scala.Unit
-  ])
   type QueryBuilderYieldingOne[QM /* <: typingsSlinky.objection.mod.Model */] = typingsSlinky.objection.mod.QueryBuilder[QM, QM, QM]
   type QueryBuilderYieldingOneOrNone[QM /* <: typingsSlinky.objection.mod.Model */] = typingsSlinky.objection.mod.QueryBuilder[QM, QM, js.UndefOr[QM]]
   type Raw_ = typingsSlinky.knex.mod.Raw[js.Any]
   type Reference = typingsSlinky.objection.mod.Castable
   type ReferenceBuilder = js.Function1[/* expression */ java.lang.String, typingsSlinky.objection.mod.Reference]
-  /**
-    * @see http://vincit.github.io/objection.js/#relationexpression
-    */
-  type RelationExpression = java.lang.String | js.Object
   type RelationExpressionMethod[QM /* <: typingsSlinky.objection.mod.Model */, RM, RV] = js.Function1[
     /* relationExpression */ typingsSlinky.objection.mod.RelationExpression, 
     typingsSlinky.objection.mod.QueryBuilder[QM, RM, RV]
   ]
   type RelationMappings = org.scalablytyped.runtime.StringDictionary[typingsSlinky.objection.mod.RelationMapping]
   type Select[QM /* <: typingsSlinky.objection.mod.Model */, RM, RV] = typingsSlinky.objection.mod.ColumnNamesMethod[QM, RM, RV]
-  type TableName = java.lang.String | typingsSlinky.objection.mod.Raw_ | typingsSlinky.objection.mod.Reference | (typingsSlinky.objection.mod.QueryBuilder[
-    js.Any, 
-    js.Array[js.Any], 
-    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for RV */ js.Any
-  ])
   type TraverserFunction = js.Function3[
     /* model */ typingsSlinky.objection.mod.Model, 
     /* parentModel */ typingsSlinky.objection.mod.Model, 
@@ -145,12 +102,6 @@ package object mod {
     scala.Unit
   ]
   type ValidatorContext = org.scalablytyped.runtime.StringDictionary[js.Any]
-  //
-  // Partial revision of
-  // https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/knex/index.d.ts,
-  // to change the signatures to return Objection's typed QueryBuilder wrapper:
-  //
-  type Value = java.lang.String | scala.Double | scala.Boolean | js.Date | (js.Array[scala.Boolean | js.Date | scala.Double | java.lang.String]) | scala.Null | typingsSlinky.node.Buffer | typingsSlinky.objection.mod.Raw_ | typingsSlinky.objection.mod.Literal
   type WhereBetween[QM /* <: typingsSlinky.objection.mod.Model */, RM, RV] = js.Function2[
     /* column */ typingsSlinky.objection.mod.ColumnRef, 
     /* range */ js.Tuple2[typingsSlinky.objection.mod.Value, typingsSlinky.objection.mod.Value], 

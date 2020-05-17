@@ -1,7 +1,7 @@
 package typingsSlinky.reactDraggable.mod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactDraggable.PartialDraggableCoreProps
+import typingsSlinky.reactDraggable.anon.PartialDraggableCoreProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.jestRunner.testWorkerMod
 
-import typingsSlinky.jestRunner.AnonSerializableResolvers
+import typingsSlinky.jestRunner.anon.SerializableResolvers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("jest-runner/build/testWorker", "setup")
 @js.native
 object setup extends js.Object {
-  def apply(setupData: AnonSerializableResolvers): Unit = js.native
+  def apply(setupData: SerializableResolvers): Unit = js.native
 }
 

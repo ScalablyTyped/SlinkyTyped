@@ -12,7 +12,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LabelTransform extends _Transforms {
+trait LabelTransform extends Transforms {
   var anchor: js.UndefOr[js.Array[String] | String | SignalRef] = js.native
   var as: js.UndefOr[(Vector7[String | SignalRef]) | SignalRef] = js.native
   var avoidBaseMark: js.UndefOr[Boolean | SignalRef] = js.native

@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("ethers/dist/types/utils/types", "BigNumber")
 @js.native
-abstract class BigNumber () extends js.Object {
+abstract class BigNumber () extends BigNumberish {
   def add(other: BigNumberish): BigNumber = js.native
   def div(other: BigNumberish): BigNumber = js.native
   def eq(other: BigNumberish): Boolean = js.native

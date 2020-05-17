@@ -1,6 +1,6 @@
 package typingsSlinky.instagramPrivateApi.postingOptionsMod
 
-import typingsSlinky.instagramPrivateApi.AnonStorystickerids
+import typingsSlinky.instagramPrivateApi.anon.Storystickerids
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.once
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.replayable
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story
@@ -34,7 +34,7 @@ trait PostingStoryOptions extends js.Object {
   var recipientUsers: js.UndefOr[js.Array[String]] = js.native
   var replyType: js.UndefOr[story | String] = js.native
   var slider: js.UndefOr[StorySlider] = js.native
-  var stickerConfig: js.UndefOr[(js.Any with AnonStorystickerids) | StickerBuilder] = js.native
+  var stickerConfig: js.UndefOr[(js.Any with Storystickerids) | StickerBuilder] = js.native
   var threadIds: js.UndefOr[js.Array[String]] = js.native
   var toBesties: js.UndefOr[Boolean] = js.native
   var viewMode: js.UndefOr[replayable | once | String] = js.native
@@ -221,7 +221,7 @@ object PostingStoryOptions {
         ret
     }
     @scala.inline
-    def withStickerConfig(value: (js.Any with AnonStorystickerids) | StickerBuilder): Self = {
+    def withStickerConfig(value: (js.Any with Storystickerids) | StickerBuilder): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stickerConfig")(value.asInstanceOf[js.Any])
         ret

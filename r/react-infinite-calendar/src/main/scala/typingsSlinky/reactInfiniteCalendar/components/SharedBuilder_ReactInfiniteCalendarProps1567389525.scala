@@ -3,10 +3,10 @@ package typingsSlinky.reactInfiniteCalendar.components
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactInfiniteCalendar.AnonAccentColor
-import typingsSlinky.reactInfiniteCalendar.AnonBlank
-import typingsSlinky.reactInfiniteCalendar.AnonEnd
-import typingsSlinky.reactInfiniteCalendar.AnonHideYearsOnSelect
+import typingsSlinky.reactInfiniteCalendar.anon.AccentColor
+import typingsSlinky.reactInfiniteCalendar.anon.Blank
+import typingsSlinky.reactInfiniteCalendar.anon.End
+import typingsSlinky.reactInfiniteCalendar.anon.HideYearsOnSelect
 import typingsSlinky.reactInfiniteCalendar.mod.DateType
 import typingsSlinky.reactInfiniteCalendar.mod.RangedSelection
 import typingsSlinky.reactInfiniteCalendar.mod.ReactInfiniteCalendarProps
@@ -43,13 +43,13 @@ class SharedBuilder_ReactInfiniteCalendarProps1567389525[R <: js.Object] (val ar
   @scala.inline
   def display(value: days | years): this.type = set("display", value.asInstanceOf[js.Any])
   @scala.inline
-  def displayOptions(value: AnonHideYearsOnSelect): this.type = set("displayOptions", value.asInstanceOf[js.Any])
+  def displayOptions(value: HideYearsOnSelect): this.type = set("displayOptions", value.asInstanceOf[js.Any])
   @scala.inline
   def height(value: Double | auto): this.type = set("height", value.asInstanceOf[js.Any])
   @scala.inline
   def interpolateSelection(value: (/* date */ js.Date, /* selected */ js.Array[js.Date]) => js.Array[js.Date]): this.type = set("interpolateSelection", js.Any.fromFunction2(value))
   @scala.inline
-  def locale(value: AnonBlank): this.type = set("locale", value.asInstanceOf[js.Any])
+  def locale(value: Blank): this.type = set("locale", value.asInstanceOf[js.Any])
   @scala.inline
   def maxDate(value: js.Date): this.type = set("max", value.asInstanceOf[js.Any])
   @scala.inline
@@ -73,11 +73,11 @@ class SharedBuilder_ReactInfiniteCalendarProps1567389525[R <: js.Object] (val ar
   @scala.inline
   def selectedDate(value: js.Date): this.type = set("selected", value.asInstanceOf[js.Any])
   @scala.inline
-  def selected(value: DateType | `false` | AnonEnd): this.type = set("selected", value.asInstanceOf[js.Any])
+  def selected(value: DateType | `false` | End): this.type = set("selected", value.asInstanceOf[js.Any])
   @scala.inline
   def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
   @scala.inline
-  def theme(value: AnonAccentColor): this.type = set("theme", value.asInstanceOf[js.Any])
+  def theme(value: AccentColor): this.type = set("theme", value.asInstanceOf[js.Any])
   @scala.inline
   def width(value: Double | auto | `100Percentsign`): this.type = set("width", value.asInstanceOf[js.Any])
 }

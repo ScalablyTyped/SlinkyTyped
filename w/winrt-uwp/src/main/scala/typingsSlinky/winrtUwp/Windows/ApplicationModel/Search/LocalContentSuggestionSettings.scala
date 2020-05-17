@@ -7,10 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Stores settings that determine whether the app provides suggestions based on local files, and that define the criteria used to locate and filter these suggestions. */
-@JSGlobal("Windows.ApplicationModel.Search.LocalContentSuggestionSettings")
 @js.native
-/** Creates a new instance of the localContentSuggestionSettings class. */
-class LocalContentSuggestionSettings () extends js.Object {
+trait LocalContentSuggestionSettings extends js.Object {
   /** An Advanced Query Syntax (AQS) string that limits the types and kinds of files that are used to provide suggestions. If no AQS string is specified, suggestions are provided from all local files in locations specified by the locations property. */
   var aqsFilter: String = js.native
   /** Indicates whether suggestions based on local files are displayed in the search pane. */
@@ -19,5 +17,50 @@ class LocalContentSuggestionSettings () extends js.Object {
   var locations: IVector[StorageFolder] = js.native
   /** A list of the file properties whose values are used to provide suggestions from local files. If the list is empty, all of the file properties that are available for suggestions are used. */
   var propertiesToMatch: IVector[String] = js.native
+}
+
+object LocalContentSuggestionSettings {
+  @scala.inline
+  def apply(
+    aqsFilter: String,
+    enabled: Boolean,
+    locations: IVector[StorageFolder],
+    propertiesToMatch: IVector[String]
+  ): LocalContentSuggestionSettings = {
+    val __obj = js.Dynamic.literal(aqsFilter = aqsFilter.asInstanceOf[js.Any], enabled = enabled.asInstanceOf[js.Any], locations = locations.asInstanceOf[js.Any], propertiesToMatch = propertiesToMatch.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LocalContentSuggestionSettings]
+  }
+  @scala.inline
+  implicit class LocalContentSuggestionSettingsOps[Self <: LocalContentSuggestionSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAqsFilter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aqsFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocations(value: IVector[StorageFolder]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPropertiesToMatch(value: IVector[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propertiesToMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

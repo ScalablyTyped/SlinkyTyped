@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +21,27 @@ trait predominantCategories extends js.Object {
   def predominantCategories(params: predominantCategoriesPredominantCategoriesParams): js.Promise[PredominantCategoriesResult] = js.native
 }
 
-@JSGlobal("__esri.predominantCategories")
-@js.native
-object predominantCategories extends TopLevel[predominantCategories]
+object predominantCategories {
+  @scala.inline
+  def apply(
+    predominantCategories: predominantCategoriesPredominantCategoriesParams => js.Promise[PredominantCategoriesResult]
+  ): predominantCategories = {
+    val __obj = js.Dynamic.literal(predominantCategories = js.Any.fromFunction1(predominantCategories))
+    __obj.asInstanceOf[predominantCategories]
+  }
+  @scala.inline
+  implicit class predominantCategoriesOps[Self <: predominantCategories] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPredominantCategories(value: predominantCategoriesPredominantCategoriesParams => js.Promise[PredominantCategoriesResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("predominantCategories")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

@@ -1,6 +1,5 @@
 package typingsSlinky.pixiJs.PIXI
 
-import typingsSlinky.pixiJs.AnonResolution
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,11 +44,8 @@ import scala.scalajs.js.annotation._
   * @extends PIXI.Texture
   * @memberof PIXI
   */
-@JSGlobal("PIXI.RenderTexture")
 @js.native
-class RenderTexture protected () extends Texture {
-  def this(baseRenderTexture: BaseRenderTexture) = this()
-  def this(baseRenderTexture: BaseRenderTexture, frame: Rectangle) = this()
+trait RenderTexture extends Texture {
   /**
     * Stores `sourceFrame` when this texture is inside current filter stack.
     * You can read it inside filters.
@@ -79,23 +75,5 @@ class RenderTexture protected () extends Texture {
     * @param {number} resolution - The new resolution to apply to RenderTexture
     */
   def setResolution(resolution: Double): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("PIXI.RenderTexture")
-@js.native
-object RenderTexture extends js.Object {
-  /**
-    * A short hand way of creating a render texture.
-    *
-    * @param {object} [options] - Options
-    * @param {number} [options.width=100] - The width of the render texture
-    * @param {number} [options.height=100] - The height of the render texture
-    * @param {number} [options.scaleMode=PIXI.settings.SCALE_MODE] - See {@link PIXI.SCALE_MODES} for possible values
-    * @param {number} [options.resolution=1] - The resolution / device pixel ratio of the texture being generated
-    * @return {PIXI.RenderTexture} The new render texture
-    */
-  def create(): RenderTexture = js.native
-  def create(options: AnonResolution): RenderTexture = js.native
 }
 

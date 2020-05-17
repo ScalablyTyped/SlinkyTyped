@@ -1,7 +1,7 @@
 package typingsSlinky.angularGridster.mod.angularAugmentingMod.gridster
 
-import typingsSlinky.angularGridster.AnonDrag
-import typingsSlinky.angularGridster.AnonEnabled
+import typingsSlinky.angularGridster.anon.Drag
+import typingsSlinky.angularGridster.anon.Enabled
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait GridsterConfig extends js.Object {
   // default height of an item in rows
   var defaultSizeY: js.UndefOr[Double] = js.native
   // options to pass to draggable handler
-  var draggable: js.UndefOr[AnonDrag] = js.native
+  var draggable: js.UndefOr[Drag] = js.native
   // whether to automatically float items up so they stack
   var floating: js.UndefOr[Boolean] = js.native
   // toggle mobile view
@@ -49,7 +49,7 @@ trait GridsterConfig extends js.Object {
   var pushing: js.UndefOr[Boolean] = js.native
   // grid item height in mobile display. true- to use the calculated height by sizeY given
   // options to pass to resizable handler
-  var resizable: js.UndefOr[AnonEnabled] = js.native
+  var resizable: js.UndefOr[Enabled] = js.native
   // height of grid rows. 'match' will make it the same as the column width, a numeric value will be interpreted as pixels,
   // '/2' is half the column width, '*5' is five times the column width, etc.
   var rowHeight: js.UndefOr[String] = js.native
@@ -121,7 +121,7 @@ object GridsterConfig {
         ret
     }
     @scala.inline
-    def withDraggable(value: AnonDrag): Self = {
+    def withDraggable(value: Drag): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("draggable")(value.asInstanceOf[js.Any])
         ret
@@ -301,7 +301,7 @@ object GridsterConfig {
         ret
     }
     @scala.inline
-    def withResizable(value: AnonEnabled): Self = {
+    def withResizable(value: Enabled): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resizable")(value.asInstanceOf[js.Any])
         ret

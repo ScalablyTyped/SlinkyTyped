@@ -1,7 +1,7 @@
 package typingsSlinky.cleanCss.mod
 
-import typingsSlinky.cleanCss.AnonAll
-import typingsSlinky.cleanCss.AnonMergeAdjacentRules
+import typingsSlinky.cleanCss.anon.All
+import typingsSlinky.cleanCss.anon.MergeAdjacentRules
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait OptimizationsOptions extends js.Object {
-  var `1`: js.UndefOr[AnonAll] = js.native
-  var `2`: js.UndefOr[AnonMergeAdjacentRules] = js.native
+  var `1`: js.UndefOr[All] = js.native
+  var `2`: js.UndefOr[MergeAdjacentRules] = js.native
 }
 
 object OptimizationsOptions {
@@ -28,7 +28,7 @@ object OptimizationsOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with1(value: AnonAll): Self = {
+    def with1(value: All): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("1")(value.asInstanceOf[js.Any])
         ret
@@ -40,7 +40,7 @@ object OptimizationsOptions {
         ret
     }
     @scala.inline
-    def with2(value: AnonMergeAdjacentRules): Self = {
+    def with2(value: MergeAdjacentRules): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("2")(value.asInstanceOf[js.Any])
         ret

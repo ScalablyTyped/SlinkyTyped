@@ -2,7 +2,7 @@ package typingsSlinky.rmcCalendar.singleMonthMod
 
 import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.react.mod.Component
-import typingsSlinky.rmcCalendar.AnonWeekComponents
+import typingsSlinky.rmcCalendar.anon.WeekComponents
 import typingsSlinky.rmcCalendar.dataTypesMod.Models.CellData
 import typingsSlinky.rmcCalendar.dataTypesMod.Models.MonthData
 import scala.scalajs.js
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait SingleMonth
-  extends Component[PropsType, AnonWeekComponents, js.Any] {
+  extends Component[PropsType, WeekComponents, js.Any] {
   var wrapperDivDOM: HTMLDivElement | Null = js.native
   @JSName("componentWillMount")
   def componentWillMount_MSingleMonth(): Unit = js.native

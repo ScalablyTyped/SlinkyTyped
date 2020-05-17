@@ -1,6 +1,6 @@
 package typingsSlinky.webtorrent.mod
 
-import typingsSlinky.webtorrent.AnonFiles
+import typingsSlinky.webtorrent.anon.Files
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait TorrentOptions extends js.Object {
   var maxWebConns: js.UndefOr[Double] = js.native
   var name: js.UndefOr[String] = js.native
   var path: js.UndefOr[String] = js.native
-  var store: js.UndefOr[js.Function2[/* chunkLength */ Double, /* storeOpts */ AnonFiles, _]] = js.native
+  var store: js.UndefOr[js.Function2[/* chunkLength */ Double, /* storeOpts */ Files, _]] = js.native
 }
 
 object TorrentOptions {
@@ -88,7 +88,7 @@ object TorrentOptions {
         ret
     }
     @scala.inline
-    def withStore(value: (/* chunkLength */ Double, /* storeOpts */ AnonFiles) => _): Self = {
+    def withStore(value: (/* chunkLength */ Double, /* storeOpts */ Files) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("store")(js.Any.fromFunction2(value))
         ret

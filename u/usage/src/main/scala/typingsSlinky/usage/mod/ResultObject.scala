@@ -1,6 +1,6 @@
 package typingsSlinky.usage.mod
 
-import typingsSlinky.usage.AnonRss
+import typingsSlinky.usage.anon.Rss
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait ResultObject extends js.Object {
   var cpu: Double = js.native
   var memory: Double = js.native
-  var memoryInfo: AnonRss = js.native
+  var memoryInfo: Rss = js.native
 }
 
 object ResultObject {
   @scala.inline
-  def apply(cpu: Double, memory: Double, memoryInfo: AnonRss): ResultObject = {
+  def apply(cpu: Double, memory: Double, memoryInfo: Rss): ResultObject = {
     val __obj = js.Dynamic.literal(cpu = cpu.asInstanceOf[js.Any], memory = memory.asInstanceOf[js.Any], memoryInfo = memoryInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResultObject]
   }
@@ -37,7 +37,7 @@ object ResultObject {
         ret
     }
     @scala.inline
-    def withMemoryInfo(value: AnonRss): Self = {
+    def withMemoryInfo(value: Rss): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("memoryInfo")(value.asInstanceOf[js.Any])
         ret

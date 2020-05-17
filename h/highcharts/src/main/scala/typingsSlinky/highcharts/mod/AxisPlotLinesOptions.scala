@@ -13,19 +13,10 @@ trait AxisPlotLinesOptions extends js.Object
 
 object AxisPlotLinesOptions {
   @scala.inline
-  def XAxisPlotLinesOptions(): AxisPlotLinesOptions = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AxisPlotLinesOptions]
-  }
+  implicit def apply(value: XAxisPlotLinesOptions): AxisPlotLinesOptions = value.asInstanceOf[AxisPlotLinesOptions]
   @scala.inline
-  def YAxisPlotLinesOptions(): AxisPlotLinesOptions = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AxisPlotLinesOptions]
-  }
+  implicit def apply(value: YAxisPlotLinesOptions): AxisPlotLinesOptions = value.asInstanceOf[AxisPlotLinesOptions]
   @scala.inline
-  def ZAxisPlotLinesOptions(): AxisPlotLinesOptions = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AxisPlotLinesOptions]
-  }
+  implicit def apply(value: ZAxisPlotLinesOptions): AxisPlotLinesOptions = value.asInstanceOf[AxisPlotLinesOptions]
 }
 

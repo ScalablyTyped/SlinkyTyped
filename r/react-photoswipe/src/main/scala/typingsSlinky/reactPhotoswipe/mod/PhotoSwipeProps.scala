@@ -3,8 +3,8 @@ package typingsSlinky.reactPhotoswipe.mod
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.photoswipe.mod.Item
 import typingsSlinky.photoswipe.mod.Options
-import typingsSlinky.reactPhotoswipe.AnonPrevent
-import typingsSlinky.reactPhotoswipe.AnonX
+import typingsSlinky.reactPhotoswipe.anon.Prevent
+import typingsSlinky.reactPhotoswipe.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -131,7 +131,7 @@ trait PhotoSwipeProps extends js.Object {
       /* instance */ PhotoSwipe, 
       /* e */ MouseEvent, 
       /* isDown */ Boolean, 
-      /* preventObj */ AnonPrevent, 
+      /* preventObj */ Prevent, 
       Unit
     ]
   ] = js.native
@@ -169,7 +169,7 @@ trait PhotoSwipeProps extends js.Object {
     * Look at the "Implementing inline gallery display" FAQ section for more info.
     * {@link https://photoswipe.com/documentation/api.html}
     */
-  var updateScrollOffset: js.UndefOr[js.Function2[/* instance */ PhotoSwipe, /* _offset */ AnonX, Unit]] = js.native
+  var updateScrollOffset: js.UndefOr[js.Function2[/* instance */ PhotoSwipe, /* _offset */ X, Unit]] = js.native
 }
 
 object PhotoSwipeProps {
@@ -390,7 +390,7 @@ object PhotoSwipeProps {
     }
     @scala.inline
     def withPreventDragEvent(
-      value: (/* instance */ PhotoSwipe, /* e */ MouseEvent, /* isDown */ Boolean, /* preventObj */ AnonPrevent) => Unit
+      value: (/* instance */ PhotoSwipe, /* e */ MouseEvent, /* isDown */ Boolean, /* preventObj */ Prevent) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("preventDragEvent")(js.Any.fromFunction4(value))
@@ -439,7 +439,7 @@ object PhotoSwipeProps {
         ret
     }
     @scala.inline
-    def withUpdateScrollOffset(value: (/* instance */ PhotoSwipe, /* _offset */ AnonX) => Unit): Self = {
+    def withUpdateScrollOffset(value: (/* instance */ PhotoSwipe, /* _offset */ X) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("updateScrollOffset")(js.Any.fromFunction2(value))
         ret

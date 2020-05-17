@@ -1,6 +1,6 @@
 package typingsSlinky.casperjs.mod
 
-import typingsSlinky.casperjs.AnonUrl
+import typingsSlinky.casperjs.anon.Url
 import typingsSlinky.casperjs.casperjsBooleans.`false`
 import typingsSlinky.casperjs.casperjsBooleans.`true`
 import typingsSlinky.phantomjs.ClipRect
@@ -204,15 +204,11 @@ class Casper protected () extends js.Object {
   def waitForResource(testFx: String, `then`: FunctionThen): Casper = js.native
   def waitForResource(testFx: String, `then`: FunctionThen, onTimeout: js.Function): Casper = js.native
   def waitForResource(testFx: String, `then`: FunctionThen, onTimeout: js.Function, timeout: Double): Casper = js.native
-  def waitForResource(testFx: js.Function1[/* resource */ AnonUrl, Boolean]): Casper = js.native
-  def waitForResource(testFx: js.Function1[/* resource */ AnonUrl, Boolean], `then`: FunctionThen): Casper = js.native
+  def waitForResource(testFx: js.Function1[/* resource */ Url, Boolean]): Casper = js.native
+  def waitForResource(testFx: js.Function1[/* resource */ Url, Boolean], `then`: FunctionThen): Casper = js.native
+  def waitForResource(testFx: js.Function1[/* resource */ Url, Boolean], `then`: FunctionThen, onTimeout: js.Function): Casper = js.native
   def waitForResource(
-    testFx: js.Function1[/* resource */ AnonUrl, Boolean],
-    `then`: FunctionThen,
-    onTimeout: js.Function
-  ): Casper = js.native
-  def waitForResource(
-    testFx: js.Function1[/* resource */ AnonUrl, Boolean],
+    testFx: js.Function1[/* resource */ Url, Boolean],
     `then`: FunctionThen,
     onTimeout: js.Function,
     timeout: Double

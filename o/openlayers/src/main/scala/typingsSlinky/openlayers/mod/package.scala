@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type AttributionLike = java.lang.String | (js.Array[typingsSlinky.openlayers.mod.Attribution | java.lang.String]) | typingsSlinky.openlayers.mod.Attribution
   type CanvasFunctionType = js.Function5[
     /* extent */ typingsSlinky.openlayers.mod.Extent_, 
     /* resolution */ scala.Double, 
@@ -14,8 +13,6 @@ package object mod {
     /* proj */ typingsSlinky.openlayers.mod.proj.Projection, 
     org.scalajs.dom.raw.HTMLCanvasElement
   ]
-  type ColorLike_ = java.lang.String | org.scalajs.dom.raw.CanvasPattern | org.scalajs.dom.raw.CanvasGradient
-  type Color_ = (js.Tuple4[scala.Double, scala.Double, scala.Double, scala.Double]) | js.typedarray.Uint8Array | js.typedarray.Uint8ClampedArray
   type CoordinateFormatType = js.Function1[
     /* coords */ js.UndefOr[typingsSlinky.openlayers.mod.Coordinate_], 
     java.lang.String
@@ -73,7 +70,6 @@ package object mod {
     /* state */ js.UndefOr[typingsSlinky.openlayers.mod.olx.FrameState], 
     scala.Boolean
   ]
-  type ProjectionLike = js.UndefOr[typingsSlinky.openlayers.mod.proj.Projection | java.lang.String]
   type RasterOperation = js.Function2[
     /* data */ js.Array[js.Array[scala.Double] | org.scalajs.dom.raw.ImageData], 
     /* obj */ typingsSlinky.openlayers.mod.GlobalObject, 

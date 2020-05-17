@@ -1,17 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "aws-sdk__credential-provider-cognito-identity"
-version := "0.1.0-preview.2-c99fab"
-scalaVersion := "2.13.1"
+version := "0.1.0-preview.2-e8d6d4"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "aws-sdk__client-cognito-identity-browser" % "0.1.0-preview.2-0689b5",
-  "org.scalablytyped.slinky" %%% "aws-sdk__middleware-stack" % "0.1.0-preview.2-7a39bd",
-  "org.scalablytyped.slinky" %%% "aws-sdk__types" % "0.1.0-preview.1-d1f79d",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
+  "org.scalablytyped.slinky" %%% "aws-sdk__client-cognito-identity-browser" % "0.1.0-preview.2-63a61c",
+  "org.scalablytyped.slinky" %%% "aws-sdk__middleware-stack" % "0.1.0-preview.2-ebffa9",
+  "org.scalablytyped.slinky" %%% "aws-sdk__types" % "0.1.0-preview.1-d5bd20",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

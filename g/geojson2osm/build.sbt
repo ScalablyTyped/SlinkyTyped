@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "geojson2osm"
-version := "0.0.5-dt-20200226Z-ecef73"
-scalaVersion := "2.13.1"
+version := "0.0.5-dt-20200226Z-9b5eda"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "geojson" % "7946.0-dt-20190925Z-e99f8f",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
+  "org.scalablytyped.slinky" %%% "geojson" % "7946.0-dt-20190925Z-114ee8",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

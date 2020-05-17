@@ -1,6 +1,6 @@
 package typingsSlinky.pdfmake.interfacesMod
 
-import typingsSlinky.pdfmake.AnonHorizontalRatio
+import typingsSlinky.pdfmake.anon.HorizontalRatio
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait Node extends js.Object {
   var pages: Double = js.native
   var qr: js.UndefOr[String] = js.native
   var stack: Boolean = js.native
-  var startPosition: AnonHorizontalRatio = js.native
+  var startPosition: HorizontalRatio = js.native
   var style: js.UndefOr[String | js.Array[String] | Style] = js.native
   var svg: js.UndefOr[String] = js.native
   var table: js.UndefOr[Table] = js.native
@@ -29,7 +29,7 @@ trait Node extends js.Object {
 
 object Node {
   @scala.inline
-  def apply(pageNumbers: js.Array[Double], pages: Double, stack: Boolean, startPosition: AnonHorizontalRatio): Node = {
+  def apply(pageNumbers: js.Array[Double], pages: Double, stack: Boolean, startPosition: HorizontalRatio): Node = {
     val __obj = js.Dynamic.literal(pageNumbers = pageNumbers.asInstanceOf[js.Any], pages = pages.asInstanceOf[js.Any], stack = stack.asInstanceOf[js.Any], startPosition = startPosition.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
@@ -58,7 +58,7 @@ object Node {
         ret
     }
     @scala.inline
-    def withStartPosition(value: AnonHorizontalRatio): Self = {
+    def withStartPosition(value: HorizontalRatio): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("startPosition")(value.asInstanceOf[js.Any])
         ret

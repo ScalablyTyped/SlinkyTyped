@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ContentTable
   extends ContentBase
-     with _Content {
+     with Content {
   var layout: js.UndefOr[TableLayout] = js.native
   var table: Table = js.native
 }

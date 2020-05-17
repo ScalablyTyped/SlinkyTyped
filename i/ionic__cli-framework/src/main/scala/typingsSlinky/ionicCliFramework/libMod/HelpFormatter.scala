@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCliFramework.libMod
 
-import typingsSlinky.ionicCliFramework.AnonColors
+import typingsSlinky.ionicCliFramework.anon.Colors
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 abstract class HelpFormatter protected ()
   extends typingsSlinky.ionicCliFramework.helpMod.HelpFormatter {
-  def this(hasColors: AnonColors) = this()
+  def this(hasColors: Colors) = this()
 }
 

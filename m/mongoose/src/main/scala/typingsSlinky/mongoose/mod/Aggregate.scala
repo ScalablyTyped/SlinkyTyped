@@ -1,8 +1,8 @@
 package typingsSlinky.mongoose.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.mongoose.AnonIncludeArrayIndex
-import typingsSlinky.mongoose.FnCallOnfulfilledOnrejected
+import typingsSlinky.mongoose.anon.FnCallOnfulfilledOnrejected
+import typingsSlinky.mongoose.anon.IncludeArrayIndex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -155,11 +155,6 @@ trait Aggregate[T] extends js.Object {
   /** Provides promise for aggregate. */
   def `then`[TResult1, TResult2](): js.Promise[TResult1 | TResult2] = js.native
   /** Provides promise for aggregate. */
-  def `then`[TResult1, TResult2](
-    onfulfilled: js.UndefOr[scala.Nothing],
-    onrejected: js.Function1[/* reason */ js.Any, TResult2 | js.Thenable[TResult2]]
-  ): js.Promise[TResult1 | TResult2] = js.native
-  /** Provides promise for aggregate. */
   def `then`[TResult1, TResult2](onfulfilled: js.Function1[/* value */ T, TResult1 | js.Thenable[TResult1]]): js.Promise[TResult1 | TResult2] = js.native
   /** Provides promise for aggregate. */
   def `then`[TResult1, TResult2](
@@ -178,6 +173,6 @@ trait Aggregate[T] extends js.Object {
     * Appends new custom $unwind operator(s) to this aggregate pipeline
     * new in mongodb 3.2
     */
-  def unwind(fields: (AnonIncludeArrayIndex | String)*): this.type = js.native
+  def unwind(fields: (IncludeArrayIndex | String)*): this.type = js.native
 }
 

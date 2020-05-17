@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.view.animation.LinearInterpolator")
 @js.native
-class LinearInterpolator () extends Interpolator
+trait LinearInterpolator extends Interpolator
+
+object LinearInterpolator {
+  @scala.inline
+  def apply(getInterpolation: Double => Double): LinearInterpolator = {
+    val __obj = js.Dynamic.literal(getInterpolation = js.Any.fromFunction1(getInterpolation))
+    __obj.asInstanceOf[LinearInterpolator]
+  }
+}
 

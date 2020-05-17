@@ -2,7 +2,7 @@ package typingsSlinky.primereact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.listBoxHeaderMod.ListBoxHeaderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +22,7 @@ object ListBoxHeader {
     @scala.inline
     def filter(value: String): this.type = set("filter", value.asInstanceOf[js.Any])
     @scala.inline
-    def onFilter(value: /* e */ AnonValue => Unit): this.type = set("onFilter", js.Any.fromFunction1(value))
+    def onFilter(value: /* e */ Value => Unit): this.type = set("onFilter", js.Any.fromFunction1(value))
   }
   
   def withProps(p: ListBoxHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

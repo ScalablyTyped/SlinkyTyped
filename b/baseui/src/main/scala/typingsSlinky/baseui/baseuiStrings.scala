@@ -11,7 +11,7 @@ import typingsSlinky.baseui.blockMod.JustifyItems
 import typingsSlinky.baseui.blockMod.JustifySelf
 import typingsSlinky.baseui.blockMod.Overflow
 import typingsSlinky.baseui.blockMod.Position
-import typingsSlinky.baseui.dataTableMod._SortDirectionsT
+import typingsSlinky.baseui.dataTableMod.SortDirectionsT
 import typingsSlinky.baseui.listMod.ArtworkSizesT
 import typingsSlinky.baseui.phoneInputMod.StateChange
 import scala.scalajs.js
@@ -71,7 +71,7 @@ object baseuiStrings {
   sealed trait AS extends js.Object
   
   @js.native
-  sealed trait ASC extends _SortDirectionsT
+  sealed trait ASC extends SortDirectionsT
   
   @js.native
   sealed trait AT extends js.Object
@@ -410,7 +410,7 @@ object baseuiStrings {
   sealed trait DEFAULT extends js.Object
   
   @js.native
-  sealed trait DESC extends _SortDirectionsT
+  sealed trait DESC extends SortDirectionsT
   
   @js.native
   sealed trait DJ extends js.Object

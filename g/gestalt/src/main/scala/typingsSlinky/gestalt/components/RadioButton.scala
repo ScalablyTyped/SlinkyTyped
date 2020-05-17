@@ -2,7 +2,7 @@ package typingsSlinky.gestalt.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.AnonCheckedBoolean
+import typingsSlinky.gestalt.anon.CheckedBoolean
 import typingsSlinky.gestalt.gestaltStrings.md
 import typingsSlinky.gestalt.gestaltStrings.sm
 import typingsSlinky.gestalt.mod.RadioButtonProps
@@ -33,7 +33,7 @@ object RadioButton {
   
   def withProps(p: RadioButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(id: String, onChange: AnonCheckedBoolean => Unit): Builder = {
+  def apply(id: String, onChange: CheckedBoolean => Unit): Builder = {
     val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
     new Builder(js.Array(this.component, __props.asInstanceOf[RadioButtonProps]))
   }

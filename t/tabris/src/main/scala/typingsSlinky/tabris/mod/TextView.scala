@@ -1,7 +1,7 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.AnonChildren
-import typingsSlinky.tabris.OmitTextViewset
+import typingsSlinky.tabris.anon.OmitTextViewset
+import typingsSlinky.tabris.anon.`5`
 import typingsSlinky.tabris.tabrisStrings.alignment
 import typingsSlinky.tabris.tabrisStrings.centerX
 import typingsSlinky.tabris.tabrisStrings.font
@@ -34,7 +34,7 @@ class TextView () extends Widget {
     * @constant
     */
   @JSName("jsxAttributes")
-  val jsxAttributes_TextView: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with AnonChildren = js.native
+  val jsxAttributes_TextView: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with `5` = js.native
   /**
     * The amount of space between each line of text. The `lineSpacing` property is a factor with a default
     * value of `1.0`.

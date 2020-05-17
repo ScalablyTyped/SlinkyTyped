@@ -7,15 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientReportDesigner.ComponentAdded event.
   */
-@JSGlobal("ASPxClientReportDesignerComponentAddedEventArgs")
 @js.native
-class ASPxClientReportDesignerComponentAddedEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientReportDesignerComponentAddedEventArgs class with the specified settings.
-    * @param model An object that specifies the model of a component that has been added to a report. This value is assigned to the ASPxClientReportDesignerComponentAddedEventArgs.Model property.
-    * @param parent An object that specifies the parent of a component that has been added to a report. This value is assigned to the ASPxClientReportDesignerComponentAddedEventArgs.Parent property.
-    */
-  def this(model: js.Any, parent: js.Any) = this()
+trait ASPxClientReportDesignerComponentAddedEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the model of a component that has been added to a report.
     */
@@ -24,5 +17,33 @@ class ASPxClientReportDesignerComponentAddedEventArgs protected () extends ASPxC
     * Gets the parent of a component that has been added to a report.
     */
   var Parent: js.Any = js.native
+}
+
+object ASPxClientReportDesignerComponentAddedEventArgs {
+  @scala.inline
+  def apply(Model: js.Any, Parent: js.Any): ASPxClientReportDesignerComponentAddedEventArgs = {
+    val __obj = js.Dynamic.literal(Model = Model.asInstanceOf[js.Any], Parent = Parent.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientReportDesignerComponentAddedEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientReportDesignerComponentAddedEventArgsOps[Self <: ASPxClientReportDesignerComponentAddedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withModel(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

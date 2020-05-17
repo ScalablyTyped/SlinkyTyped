@@ -1,6 +1,5 @@
 package typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.x509
 
-import typingsSlinky.jsrsasign.AnonArrayArray
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.HexParam
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.NameParam
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ObjectIdentifierParam
@@ -23,11 +22,49 @@ import scala.scalajs.js.annotation._
   * // ExtKeyUsageSyntax ::= SEQUENCE SIZE (1..MAX) OF KeyPurposeId
   * // KeyPurposeId ::= OBJECT IDENTIFIER
   */
-@JSGlobal("jsrsasign.KJUR.asn1.x509.ExtKeyUsage")
 @js.native
-class ExtKeyUsage () extends Extension {
-  def this(params: AnonArrayArray) = this()
+trait ExtKeyUsage extends Extension {
   def getExtnValueHex(): String = js.native
   def setPurposeArray(purposeArray: js.Array[ObjectIdentifierParam | HexParam | NameParam]): Unit = js.native
+}
+
+object ExtKeyUsage {
+  @scala.inline
+  def apply(
+    getEncodedHex: () => String,
+    getExtnValueHex: () => String,
+    getFreshValueHex: () => String,
+    getLengthHexFromValue: () => String,
+    getValueHex: () => String,
+    hL: String,
+    hT: String,
+    hTLV: String,
+    hV: String,
+    isModified: String,
+    setPurposeArray: js.Array[ObjectIdentifierParam | HexParam | NameParam] => Unit
+  ): ExtKeyUsage = {
+    val __obj = js.Dynamic.literal(getEncodedHex = js.Any.fromFunction0(getEncodedHex), getExtnValueHex = js.Any.fromFunction0(getExtnValueHex), getFreshValueHex = js.Any.fromFunction0(getFreshValueHex), getLengthHexFromValue = js.Any.fromFunction0(getLengthHexFromValue), getValueHex = js.Any.fromFunction0(getValueHex), hL = hL.asInstanceOf[js.Any], hT = hT.asInstanceOf[js.Any], hTLV = hTLV.asInstanceOf[js.Any], hV = hV.asInstanceOf[js.Any], isModified = isModified.asInstanceOf[js.Any], setPurposeArray = js.Any.fromFunction1(setPurposeArray))
+    __obj.asInstanceOf[ExtKeyUsage]
+  }
+  @scala.inline
+  implicit class ExtKeyUsageOps[Self <: ExtKeyUsage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetExtnValueHex(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getExtnValueHex")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetPurposeArray(value: js.Array[ObjectIdentifierParam | HexParam | NameParam] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setPurposeArray")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

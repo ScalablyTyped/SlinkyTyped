@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ReducerMap[State, Payload]
   extends /* actionType */ StringDictionary[ReducerMapValue[State, Payload]]
-     with _ReducerMapValue[State, Payload]
+     with ReducerMapValue[State, Payload]
 
 object ReducerMap {
   @scala.inline

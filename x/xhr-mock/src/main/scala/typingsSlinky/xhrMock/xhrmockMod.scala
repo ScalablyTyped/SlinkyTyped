@@ -1,5 +1,6 @@
 package typingsSlinky.xhrMock
 
+import typingsSlinky.xhrMock.anon.Instantiable
 import typingsSlinky.xhrMock.typesMod.ErrorCallbackEvent
 import typingsSlinky.xhrMock.typesMod.Mock
 import typingsSlinky.xhrMock.typesMod.MockFunction
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation._
 object xhrmockMod extends js.Object {
   @js.native
   class XHRMock () extends js.Object {
-    var RealXMLHttpRequest: AnonInstantiable = js.native
+    var RealXMLHttpRequest: Instantiable = js.native
     def delete(url: String, mock: Mock): XHRMock = js.native
     def delete(url: js.RegExp, mock: Mock): XHRMock = js.native
     def error(callback: js.Function1[/* event */ ErrorCallbackEvent, Unit]): XHRMock = js.native

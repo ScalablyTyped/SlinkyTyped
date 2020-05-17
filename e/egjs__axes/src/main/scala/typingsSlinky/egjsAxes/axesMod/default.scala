@@ -2,7 +2,7 @@ package typingsSlinky.egjsAxes.axesMod
 
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.egjsAxes.TypeofPanInput
+import typingsSlinky.egjsAxes.anon.TypeofPanInput
 import typingsSlinky.egjsAxes.axisManagerMod.Axis
 import typingsSlinky.egjsAxes.axisManagerMod.AxisOption
 import typingsSlinky.egjsAxes.constMod.DIRECTION

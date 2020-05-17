@@ -1,13 +1,13 @@
 package typingsSlinky.antd.menuMod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ClickParam extends js.Object {
-  var domEvent: Event_ = js.native
+  var domEvent: Event = js.native
   var item: js.Any = js.native
   var key: String = js.native
   var keyPath: js.Array[String] = js.native
@@ -15,7 +15,7 @@ trait ClickParam extends js.Object {
 
 object ClickParam {
   @scala.inline
-  def apply(domEvent: Event_, item: js.Any, key: String, keyPath: js.Array[String]): ClickParam = {
+  def apply(domEvent: Event, item: js.Any, key: String, keyPath: js.Array[String]): ClickParam = {
     val __obj = js.Dynamic.literal(domEvent = domEvent.asInstanceOf[js.Any], item = item.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], keyPath = keyPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClickParam]
   }
@@ -26,7 +26,7 @@ object ClickParam {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDomEvent(value: Event_): Self = {
+    def withDomEvent(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("domEvent")(value.asInstanceOf[js.Any])
         ret

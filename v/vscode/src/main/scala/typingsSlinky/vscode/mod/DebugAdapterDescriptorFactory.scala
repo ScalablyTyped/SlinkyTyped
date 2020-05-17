@@ -6,7 +6,6 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait DebugAdapterDescriptorFactory extends js.Object {
-  def createDebugAdapterDescriptor(session: DebugSession): ProviderResult[DebugAdapterDescriptor] = js.native
   /**
   		 * 'createDebugAdapterDescriptor' is called at the start of a debug session to provide details about the debug adapter to use.
   		 * These details must be returned as objects of type [DebugAdapterDescriptor](#DebugAdapterDescriptor).
@@ -24,6 +23,7 @@ trait DebugAdapterDescriptorFactory extends js.Object {
   		 * @param executable The debug adapter's executable information as specified in the package.json (or undefined if no such information exists).
   		 * @return a [debug adapter descriptor](#DebugAdapterDescriptor) or undefined.
   		 */
+  def createDebugAdapterDescriptor(session: DebugSession): ProviderResult[DebugAdapterDescriptor] = js.native
   def createDebugAdapterDescriptor(session: DebugSession, executable: DebugAdapterExecutable): ProviderResult[DebugAdapterDescriptor] = js.native
 }
 

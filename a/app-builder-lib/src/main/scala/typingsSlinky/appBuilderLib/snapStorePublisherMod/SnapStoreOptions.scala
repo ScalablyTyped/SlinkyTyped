@@ -1,5 +1,6 @@
 package typingsSlinky.appBuilderLib.snapStorePublisherMod
 
+import typingsSlinky.appBuilderLib.coreMod.Publish
 import typingsSlinky.builderUtilRuntime.publishOptionsMod.PublishConfiguration
 import typingsSlinky.builderUtilRuntime.publishOptionsMod.PublishProvider
 import scala.scalajs.js
@@ -7,7 +8,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SnapStoreOptions extends PublishConfiguration {
+trait SnapStoreOptions
+  extends PublishConfiguration
+     with Publish {
   /**
     * The list of channels the snap would be released.
     * @default ["edge"]

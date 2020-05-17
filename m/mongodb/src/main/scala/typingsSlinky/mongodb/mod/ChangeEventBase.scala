@@ -1,8 +1,8 @@
 package typingsSlinky.mongodb.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.mongodb.AnonColl
-import typingsSlinky.mongodb.AnonUid
+import typingsSlinky.mongodb.anon.Coll
+import typingsSlinky.mongodb.anon.Uid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,19 +11,19 @@ import scala.scalajs.js.annotation._
 trait ChangeEventBase[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
   var _id: ResumeToken = js.native
   var clusterTime: typingsSlinky.bson.mod.Timestamp = js.native
-  var lsid: js.UndefOr[AnonUid] = js.native
+  var lsid: js.UndefOr[Uid] = js.native
   /**
     * We leave this off the base type so that we can differentiate
     * by checking its value and get intelligent types on the other fields
     */
   // operationType: ChangeEventTypes;
-  var ns: AnonColl = js.native
+  var ns: Coll = js.native
   var txnNumber: js.UndefOr[scala.Double] = js.native
 }
 
 object ChangeEventBase {
   @scala.inline
-  def apply[TSchema](_id: ResumeToken, clusterTime: typingsSlinky.bson.mod.Timestamp, ns: AnonColl): ChangeEventBase[TSchema] = {
+  def apply[TSchema](_id: ResumeToken, clusterTime: typingsSlinky.bson.mod.Timestamp, ns: Coll): ChangeEventBase[TSchema] = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], clusterTime = clusterTime.asInstanceOf[js.Any], ns = ns.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChangeEventBase[TSchema]]
   }
@@ -46,13 +46,13 @@ object ChangeEventBase {
         ret
     }
     @scala.inline
-    def withNs(value: AnonColl): Self[TSchema] = {
+    def withNs(value: Coll): Self[TSchema] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ns")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withLsid(value: AnonUid): Self[TSchema] = {
+    def withLsid(value: Uid): Self[TSchema] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lsid")(value.asInstanceOf[js.Any])
         ret

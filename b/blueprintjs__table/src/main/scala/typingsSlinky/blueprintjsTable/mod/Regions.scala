@@ -1,6 +1,6 @@
 package typingsSlinky.blueprintjsTable.mod
 
-import typingsSlinky.blueprintjsTable.AnonCol
+import typingsSlinky.blueprintjsTable.anon.Col
 import typingsSlinky.blueprintjsTable.commonCellMod.IFocusedCellCoordinates
 import typingsSlinky.blueprintjsTable.esmRegionsMod.ICellCoordinate
 import typingsSlinky.blueprintjsTable.esmRegionsMod.IRegion
@@ -95,7 +95,7 @@ object Regions extends js.Object {
     * type CELLS that define the bounds of the given region
     */
   def getCellRegionFromRegion(region: IRegion, numRows: Double, numCols: Double): IRegion = js.native
-  def getFocusCellCoordinatesFromRegion(region: IRegion): AnonCol = js.native
+  def getFocusCellCoordinatesFromRegion(region: IRegion): Col = js.native
   /**
     * Determines the cardinality of a region. We use null values to indicate
     * an unbounded interval. Therefore, an example of a region containing the

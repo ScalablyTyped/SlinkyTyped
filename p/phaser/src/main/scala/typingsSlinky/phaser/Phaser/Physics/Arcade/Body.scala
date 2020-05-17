@@ -16,15 +16,8 @@ import scala.scalajs.js.annotation._
   * 
   * Its static counterpart is {@link Phaser.Physics.Arcade.StaticBody}.
   */
-@JSGlobal("Phaser.Physics.Arcade.Body")
 @js.native
-class Body protected () extends js.Object {
-  /**
-    * 
-    * @param world The Arcade Physics simulation this Body belongs to.
-    * @param gameObject The Game Object this Body belongs to.
-    */
-  def this(world: World, gameObject: GameObject) = this()
+trait Body extends js.Object {
   /**
     * The Body's change in velocity, in pixels per second squared.
     */

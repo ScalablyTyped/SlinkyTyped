@@ -1,6 +1,6 @@
 package typingsSlinky.atlassianCrowdClient.groupMod
 
-import typingsSlinky.atlassianCrowdClient.AnonActive
+import typingsSlinky.atlassianCrowdClient.anon.Active
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,6 +17,6 @@ class ^ protected () extends Group {
 @JSImport("atlassian-crowd-client/lib/models/group", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
-  def fromCrowd(obj: AnonActive): Group = js.native
+  def fromCrowd(obj: Active): Group = js.native
 }
 

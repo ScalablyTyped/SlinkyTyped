@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Supports the ability to identify the connected pointer devices and determine their capabilities. */
-@JSGlobal("Windows.Devices.Input.PointerDevice")
 @js.native
-abstract class PointerDevice () extends js.Object {
+trait PointerDevice extends js.Object {
   /** Gets a value indicating whether the pointer device is an integrated device. For example, a video display with an integrated touch digitizer compared to an external pen/stylus digitizer. */
   var isIntegrated: Boolean = js.native
   /** Gets a value indicating the maximum number of contacts supported by the input device. */
@@ -25,20 +24,69 @@ abstract class PointerDevice () extends js.Object {
   var supportedUsages: IVectorView[PointerDeviceUsage] = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Devices.Input.PointerDevice")
-@js.native
-object PointerDevice extends js.Object {
-  /**
-    * Gets information about the pointer device associated with the specified input pointer ID.
-    * @param pointerId The ID of the pointer input.
-    * @return The PointerDevice object that represents the associated pointer device.
-    */
-  def getPointerDevice(pointerId: Double): PointerDevice = js.native
-  /**
-    * Gets information about the pointer devices attached to the system.
-    * @return The collection of PointerDevice objects that represent the pointer devices attached to the system.
-    */
-  def getPointerDevices(): IVectorView[PointerDevice] = js.native
+object PointerDevice {
+  @scala.inline
+  def apply(
+    isIntegrated: Boolean,
+    maxContacts: Double,
+    maxPointersWithZDistance: js.Any,
+    physicalDeviceRect: Rect,
+    pointerDeviceType: PointerDeviceType,
+    screenRect: Rect,
+    supportedUsages: IVectorView[PointerDeviceUsage]
+  ): PointerDevice = {
+    val __obj = js.Dynamic.literal(isIntegrated = isIntegrated.asInstanceOf[js.Any], maxContacts = maxContacts.asInstanceOf[js.Any], maxPointersWithZDistance = maxPointersWithZDistance.asInstanceOf[js.Any], physicalDeviceRect = physicalDeviceRect.asInstanceOf[js.Any], pointerDeviceType = pointerDeviceType.asInstanceOf[js.Any], screenRect = screenRect.asInstanceOf[js.Any], supportedUsages = supportedUsages.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PointerDevice]
+  }
+  @scala.inline
+  implicit class PointerDeviceOps[Self <: PointerDevice] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsIntegrated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isIntegrated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxContacts(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxContacts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxPointersWithZDistance(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPointersWithZDistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPhysicalDeviceRect(value: Rect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("physicalDeviceRect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPointerDeviceType(value: PointerDeviceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerDeviceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScreenRect(value: Rect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenRect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSupportedUsages(value: IVectorView[PointerDeviceUsage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedUsages")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

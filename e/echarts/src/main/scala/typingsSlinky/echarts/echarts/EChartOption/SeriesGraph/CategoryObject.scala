@@ -1,8 +1,8 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesGraph
 
-import typingsSlinky.echarts.AnonBorderRadius
-import typingsSlinky.echarts.AnonBorderType
-import typingsSlinky.echarts.AnonItemStyleAnonBorderTypeLabelAnonDistance
+import typingsSlinky.echarts.anon.BorderRadius
+import typingsSlinky.echarts.anon.BorderType
+import typingsSlinky.echarts.anon.ItemStyleBorderTypeLabelDistance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,21 +12,21 @@ trait CategoryObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-graph.categories.emphasis
     */
-  var emphasis: js.UndefOr[AnonItemStyleAnonBorderTypeLabelAnonDistance] = js.native
+  var emphasis: js.UndefOr[ItemStyleBorderTypeLabelDistance] = js.native
   /**
     * The style of node in this category.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.categories.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBorderType] = js.native
+  var itemStyle: js.UndefOr[BorderType] = js.native
   /**
     * The label style of node in this category.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.categories.label
     */
-  var label: js.UndefOr[AnonBorderRadius] = js.native
+  var label: js.UndefOr[BorderRadius] = js.native
   /**
     * Name of category, which is used to correspond with
     * [legend](https://echarts.apache.org/en/option.html#legend)
@@ -144,7 +144,7 @@ object CategoryObject {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEmphasis(value: AnonItemStyleAnonBorderTypeLabelAnonDistance): Self = {
+    def withEmphasis(value: ItemStyleBorderTypeLabelDistance): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -156,7 +156,7 @@ object CategoryObject {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonBorderType): Self = {
+    def withItemStyle(value: BorderType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -168,7 +168,7 @@ object CategoryObject {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonBorderRadius): Self = {
+    def withLabel(value: BorderRadius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret

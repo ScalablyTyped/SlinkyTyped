@@ -18,8 +18,6 @@ import typingsSlinky.phaser.Phaser.GameObjects.Components.Transform
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Visible
 import typingsSlinky.phaser.Phaser.Renderer.Canvas.CanvasRenderer
 import typingsSlinky.phaser.Phaser.Renderer.WebGL.WebGLRenderer
-import typingsSlinky.phaser.Phaser.Scene
-import typingsSlinky.phaser.Phaser.Types.GameObjects.Text.TextMetrics
 import typingsSlinky.phaser.Phaser.Types.GameObjects.Text.TextPadding
 import typingsSlinky.phaser.TextStyleWordWrapCallback
 import typingsSlinky.phaser.integer
@@ -66,9 +64,8 @@ import scala.scalajs.js.annotation._
   * Text objects in your game. If you run into performance issues you would be better off using Bitmap Text
   * instead, as it benefits from batching and avoids expensive Canvas API calls.
   */
-@JSGlobal("Phaser.GameObjects.Text")
 @js.native
-class Text protected ()
+trait Text
   extends GameObject
      with Alpha
      with BlendMode
@@ -84,28 +81,6 @@ class Text protected ()
      with Tint
      with Transform
      with Visible {
-  /**
-    * 
-    * @param scene The Scene to which this Game Object belongs. A Game Object can only belong to one Scene at a time.
-    * @param x The horizontal position of this Game Object in the world.
-    * @param y The vertical position of this Game Object in the world.
-    * @param text The text this Text object will display.
-    * @param style The text style configuration object.
-    */
-  def this(
-    scene: Scene,
-    x: Double,
-    y: Double,
-    text: String,
-    style: typingsSlinky.phaser.Phaser.Types.GameObjects.Text.TextStyle
-  ) = this()
-  def this(
-    scene: Scene,
-    x: Double,
-    y: Double,
-    text: js.Array[String],
-    style: typingsSlinky.phaser.Phaser.Types.GameObjects.Text.TextStyle
-  ) = this()
   /**
     * Whether to automatically round line positions.
     */
@@ -415,23 +390,5 @@ class Text protected ()
     * Update the displayed text.
     */
   def updateText(): Text = js.native
-}
-
-/* static members */
-@JSGlobal("Phaser.GameObjects.Text")
-@js.native
-object Text extends js.Object {
-  /**
-    * Returns an object containing dimensions of the Text object.
-    * @param text The Text object to calculate the size from.
-    * @param size The Text metrics to use when calculating the size.
-    * @param lines The lines of text to calculate the size from.
-    */
-  def GetTextSize(text: Text, size: TextMetrics, lines: js.Array[_]): js.Object = js.native
-  /**
-    * Calculates the ascent, descent and fontSize of a given font style.
-    * @param textStyle The TextStyle object to measure.
-    */
-  def MeasureText(textStyle: TextStyle): TextMetrics = js.native
 }
 

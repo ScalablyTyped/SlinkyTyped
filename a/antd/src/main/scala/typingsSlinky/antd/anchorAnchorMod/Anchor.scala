@@ -2,8 +2,8 @@ package typingsSlinky.antd.anchorAnchorMod
 
 import org.scalajs.dom.raw.HTMLSpanElement
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.AnonActiveLink
-import typingsSlinky.antd.AnonAntAnchorAntAnchor
+import typingsSlinky.antd.anon.ActiveLink
+import typingsSlinky.antd.anon.AntAnchorAntAnchor
 import typingsSlinky.antd.contextMod.ConfigConsumerProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -20,14 +20,14 @@ trait Anchor
   var scrollContainer: js.Any = js.native
   var scrollEvent: js.Any = js.native
   @JSName("state")
-  var state_Anchor: AnonActiveLink = js.native
+  var state_Anchor: ActiveLink = js.native
   @JSName("componentDidMount")
   def componentDidMount_MAnchor(): Unit = js.native
   @JSName("componentDidUpdate")
   def componentDidUpdate_MAnchor(): Unit = js.native
   @JSName("componentWillUnmount")
   def componentWillUnmount_MAnchor(): Unit = js.native
-  def getChildContext(): AnonAntAnchorAntAnchor = js.native
+  def getChildContext(): AntAnchorAntAnchor = js.native
   def getCurrentAnchor(): String = js.native
   def getCurrentAnchor(offsetTop: Double): String = js.native
   def getCurrentAnchor(offsetTop: Double, bounds: Double): String = js.native

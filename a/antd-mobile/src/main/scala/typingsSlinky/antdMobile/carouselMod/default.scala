@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobile.carouselMod
 
-import typingsSlinky.antdMobile.AnonArrows
+import typingsSlinky.antdMobile.anon.Arrows
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +15,6 @@ class default protected () extends Carousel {
 @JSImport("antd-mobile/lib/carousel", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonArrows = js.native
+  var defaultProps: Arrows = js.native
 }
 

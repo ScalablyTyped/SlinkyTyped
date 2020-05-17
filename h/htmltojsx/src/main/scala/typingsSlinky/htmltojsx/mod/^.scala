@@ -1,6 +1,6 @@
 package typingsSlinky.htmltojsx.mod
 
-import typingsSlinky.htmltojsx.AnonCreateClass
+import typingsSlinky.htmltojsx.anon.CreateClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("htmltojsx", JSImport.Namespace)
 @js.native
 class ^ () extends HTMLtoJSX {
-  def this(options: AnonCreateClass) = this()
+  def this(options: CreateClass) = this()
 }
 

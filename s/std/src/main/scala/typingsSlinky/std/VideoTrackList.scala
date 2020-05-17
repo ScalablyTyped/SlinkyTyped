@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.NumberDictionary
 import typingsSlinky.std.stdStrings.addtrack
 import typingsSlinky.std.stdStrings.change
@@ -18,7 +17,7 @@ trait VideoTrackList
   var iterator: js.Function0[IterableIterator[VideoTrack]] = js.native
   val length: Double = js.native
   var onaddtrack: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TrackEvent, _]) | Null = js.native
-  var onchange: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
+  var onchange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
   var onremovetrack: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TrackEvent, _]) | Null = js.native
   val selectedIndex: Double = js.native
   @JSName("addEventListener")
@@ -39,17 +38,20 @@ trait VideoTrackList
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_change(`type`: change, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_change(
+    `type`: change,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_change(
     `type`: change,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_change(
     `type`: change,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -89,17 +91,20 @@ trait VideoTrackList
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_change(`type`: change, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_change(
+    `type`: change,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_change(
     `type`: change,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_change(
     `type`: change,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -120,8 +125,4 @@ trait VideoTrackList
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
-
-@JSGlobal("VideoTrackList")
-@js.native
-object VideoTrackList extends Instantiable0[VideoTrackList]
 

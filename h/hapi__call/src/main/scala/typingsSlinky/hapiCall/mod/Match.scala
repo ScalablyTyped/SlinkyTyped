@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Match[P, D] extends js.Object {
+trait Match[P, D] extends Route[P, D] {
   var params: P = js.native
   var paramsArray: js.Array[String] = js.native
   var route: D = js.native

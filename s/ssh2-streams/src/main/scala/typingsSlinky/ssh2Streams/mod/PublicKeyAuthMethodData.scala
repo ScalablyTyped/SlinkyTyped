@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PublicKeyAuthMethodData extends _AuthMethodData {
+trait PublicKeyAuthMethodData extends AuthMethodData {
   var blob: js.UndefOr[Buffer] = js.native
   var key: Buffer = js.native
   var keyAlgo: String = js.native

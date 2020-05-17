@@ -1,13 +1,13 @@
 package typingsSlinky.instagramPrivateApi.userLookupOptionsMod
 
-import typingsSlinky.instagramPrivateApi.AnonCountrycode
+import typingsSlinky.instagramPrivateApi.anon.Countrycode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait UserLookupOptions extends js.Object {
-  var countryCodes: js.UndefOr[js.Array[AnonCountrycode]] = js.native
+  var countryCodes: js.UndefOr[js.Array[Countrycode]] = js.native
   var directlySignIn: js.UndefOr[Boolean] = js.native
   var query: String = js.native
   var waterfallId: js.UndefOr[String] = js.native
@@ -32,7 +32,7 @@ object UserLookupOptions {
         ret
     }
     @scala.inline
-    def withCountryCodes(value: js.Array[AnonCountrycode]): Self = {
+    def withCountryCodes(value: js.Array[Countrycode]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("countryCodes")(value.asInstanceOf[js.Any])
         ret

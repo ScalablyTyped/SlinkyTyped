@@ -3,12 +3,12 @@ package typingsSlinky.devextreme.mod.DevExpress.viz
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.SVGElement
 import org.scalajs.dom.raw.SVGGElement
-import typingsSlinky.devextreme.AnonColorEnd
-import typingsSlinky.devextreme.AnonLayer
+import typingsSlinky.devextreme.anon.ColorEnd
+import typingsSlinky.devextreme.anon.Layer
 import typingsSlinky.devextreme.devextremeStrings.circle
 import typingsSlinky.devextreme.devextremeStrings.square
 import typingsSlinky.devextreme.mod.DevExpress.core.template
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,13 +16,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait dxVectorMapLegends extends BaseLegend {
   /** Specifies text for a hint that appears when a user hovers the mouse pointer over the text of a legend item. */
-  var customizeHint: js.UndefOr[js.Function1[/* itemInfo */ AnonColorEnd, String]] = js.native
+  var customizeHint: js.UndefOr[js.Function1[/* itemInfo */ ColorEnd, String]] = js.native
   /** Allows you to change the order and visibility of legend items. */
   var customizeItems: js.UndefOr[
     js.Function1[/* items */ js.Array[VectorMapLegendItem], js.Array[VectorMapLegendItem]]
   ] = js.native
   /** Specifies text for legend items. */
-  var customizeText: js.UndefOr[js.Function1[/* itemInfo */ AnonColorEnd, String]] = js.native
+  var customizeText: js.UndefOr[js.Function1[/* itemInfo */ ColorEnd, String]] = js.native
   /** Specifies the color of item markers in the legend. The specified color applied only when the legend uses 'size' source. */
   var markerColor: js.UndefOr[String] = js.native
   /** Specifies the shape of item markers. */
@@ -36,7 +36,7 @@ trait dxVectorMapLegends extends BaseLegend {
     ])
   ] = js.native
   /** Specifies the source of data for the legend. */
-  var source: js.UndefOr[AnonLayer] = js.native
+  var source: js.UndefOr[Layer] = js.native
 }
 
 object dxVectorMapLegends {
@@ -52,7 +52,7 @@ object dxVectorMapLegends {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCustomizeHint(value: /* itemInfo */ AnonColorEnd => String): Self = {
+    def withCustomizeHint(value: /* itemInfo */ ColorEnd => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customizeHint")(js.Any.fromFunction1(value))
         ret
@@ -76,7 +76,7 @@ object dxVectorMapLegends {
         ret
     }
     @scala.inline
-    def withCustomizeText(value: /* itemInfo */ AnonColorEnd => String): Self = {
+    def withCustomizeText(value: /* itemInfo */ ColorEnd => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customizeText")(js.Any.fromFunction1(value))
         ret
@@ -144,7 +144,7 @@ object dxVectorMapLegends {
         ret
     }
     @scala.inline
-    def withSource(value: AnonLayer): Self = {
+    def withSource(value: Layer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
         ret

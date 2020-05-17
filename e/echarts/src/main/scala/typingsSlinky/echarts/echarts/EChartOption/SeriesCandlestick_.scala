@@ -1,11 +1,11 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonAnimationDelay
-import typingsSlinky.echarts.AnonAnimationDelayUpdate
-import typingsSlinky.echarts.AnonAnimationDuration
-import typingsSlinky.echarts.AnonBorderColor0
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonItemStyleAnonBorderColor0
+import typingsSlinky.echarts.anon.AnimationDelay
+import typingsSlinky.echarts.anon.AnimationDelayUpdate
+import typingsSlinky.echarts.anon.AnimationDuration
+import typingsSlinky.echarts.anon.BorderColor0
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.ItemStyleBorderColor0
 import typingsSlinky.echarts.echarts.EChartOption.SeriesCandlestick.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -208,7 +208,7 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.emphasis
     */
-  var emphasis: js.UndefOr[AnonItemStyleAnonBorderColor0] = js.native
+  var emphasis: js.UndefOr[ItemStyleBorderColor0] = js.native
   /**
     * Define what is encoded to for each dimension of `data`.
     * For example:
@@ -270,7 +270,7 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBorderColor0] = js.native
+  var itemStyle: js.UndefOr[BorderColor0] = js.native
   /**
     * Whether to enable the optimization of large-scale data.
     * It could be set when large data causes performance problem.
@@ -332,21 +332,21 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.markArea
     */
-  var markArea: js.UndefOr[AnonAnimationDelayUpdate] = js.native
+  var markArea: js.UndefOr[AnimationDelayUpdate] = js.native
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.markLine
     */
-  var markLine: js.UndefOr[AnonAnimationDelay] = js.native
+  var markLine: js.UndefOr[AnimationDelay] = js.native
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.markPoint
     */
-  var markPoint: js.UndefOr[AnonAnimationDuration] = js.native
+  var markPoint: js.UndefOr[AnimationDuration] = js.native
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -414,7 +414,7 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * @default
     * "candlestick"
@@ -595,7 +595,7 @@ object SeriesCandlestick_ {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonItemStyleAnonBorderColor0): Self = {
+    def withEmphasis(value: ItemStyleBorderColor0): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -643,7 +643,7 @@ object SeriesCandlestick_ {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonBorderColor0): Self = {
+    def withItemStyle(value: BorderColor0): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -703,7 +703,7 @@ object SeriesCandlestick_ {
         ret
     }
     @scala.inline
-    def withMarkArea(value: AnonAnimationDelayUpdate): Self = {
+    def withMarkArea(value: AnimationDelayUpdate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(value.asInstanceOf[js.Any])
         ret
@@ -715,7 +715,7 @@ object SeriesCandlestick_ {
         ret
     }
     @scala.inline
-    def withMarkLine(value: AnonAnimationDelay): Self = {
+    def withMarkLine(value: AnimationDelay): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(value.asInstanceOf[js.Any])
         ret
@@ -727,7 +727,7 @@ object SeriesCandlestick_ {
         ret
     }
     @scala.inline
-    def withMarkPoint(value: AnonAnimationDuration): Self = {
+    def withMarkPoint(value: AnimationDuration): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(value.asInstanceOf[js.Any])
         ret
@@ -799,7 +799,7 @@ object SeriesCandlestick_ {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCliFramework.loggerMod
 
-import typingsSlinky.ionicCliFramework.PartialLoggerOptions
+import typingsSlinky.ionicCliFramework.anon.PartialLoggerOptions
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.std.ReadonlySet
 import typingsSlinky.std.Set

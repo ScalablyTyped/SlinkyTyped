@@ -1,0 +1,39 @@
+package typingsSlinky.forgeApis.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Access extends js.Object {
+  var access: js.UndefOr[String] = js.native
+}
+
+object Access {
+  @scala.inline
+  def apply(): Access = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[Access]
+  }
+  @scala.inline
+  implicit class AccessOps[Self <: Access] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccess(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("access")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAccess: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("access")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

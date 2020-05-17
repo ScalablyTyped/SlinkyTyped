@@ -10,7 +10,6 @@ import typingsSlinky.phaser.Phaser.GameObjects.Components.ScrollFactor
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Transform
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Visible
 import typingsSlinky.phaser.Phaser.Math.Vector4
-import typingsSlinky.phaser.Phaser.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -68,9 +67,8 @@ import scala.scalajs.js.annotation._
   * UI. The choice is up to you, just remember that you're dealing with standard HTML and CSS floating over the top
   * of your game, and should treat it accordingly.
   */
-@JSGlobal("Phaser.GameObjects.DOMElement")
 @js.native
-class DOMElement protected ()
+trait DOMElement
   extends GameObject
      with AlphaSingle
      with BlendMode
@@ -79,28 +77,6 @@ class DOMElement protected ()
      with ScrollFactor
      with Transform
      with Visible {
-  /**
-    * 
-    * @param scene The Scene to which this Game Object belongs. A Game Object can only belong to one Scene at a time.
-    * @param x The horizontal position of this DOM Element in the world. Default 0.
-    * @param y The vertical position of this DOM Element in the world. Default 0.
-    * @param element An existing DOM element, or a string. If a string starting with a # it will do a `getElementById` look-up on the string (minus the hash). Without a hash, it represents the type of element to create, i.e. 'div'.
-    * @param style If a string, will be set directly as the elements `style` property value. If a plain object, will be iterated and the values transferred. In both cases the values replacing whatever CSS styles may have been previously set.
-    * @param innerText If given, will be set directly as the elements `innerText` property value, replacing whatever was there before.
-    */
-  def this(scene: Scene) = this()
-  def this(scene: Scene, x: Double) = this()
-  def this(scene: Scene, x: Double, y: Double) = this()
-  def this(scene: Scene, x: Double, y: Double, element: String) = this()
-  def this(scene: Scene, x: Double, y: Double, element: Element) = this()
-  def this(scene: Scene, x: Double, y: Double, element: String, style: String) = this()
-  def this(scene: Scene, x: Double, y: Double, element: String, style: js.Any) = this()
-  def this(scene: Scene, x: Double, y: Double, element: Element, style: String) = this()
-  def this(scene: Scene, x: Double, y: Double, element: Element, style: js.Any) = this()
-  def this(scene: Scene, x: Double, y: Double, element: String, style: String, innerText: String) = this()
-  def this(scene: Scene, x: Double, y: Double, element: String, style: js.Any, innerText: String) = this()
-  def this(scene: Scene, x: Double, y: Double, element: Element, style: String, innerText: String) = this()
-  def this(scene: Scene, x: Double, y: Double, element: Element, style: js.Any, innerText: String) = this()
   /**
     * A reference to the HTML Cache.
     */

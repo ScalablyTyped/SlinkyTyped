@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Class_SeekableStream")
 @js.native
-class ClassSeekableStream () extends ClassStream {
+trait ClassSeekableStream extends ClassStream {
   /**
   	 * 
   	 * @brief 查询文件是否到结尾

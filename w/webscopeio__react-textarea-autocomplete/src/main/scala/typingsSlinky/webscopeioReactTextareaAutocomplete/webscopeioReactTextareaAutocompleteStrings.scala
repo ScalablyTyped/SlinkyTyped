@@ -1,19 +1,19 @@
 package typingsSlinky.webscopeioReactTextareaAutocomplete
 
-import typingsSlinky.webscopeioReactTextareaAutocomplete.mod._CaretPositionType
+import typingsSlinky.webscopeioReactTextareaAutocomplete.mod.CaretPositionType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object webscopeioReactTextareaAutocompleteStrings {
   @js.native
-  sealed trait end extends _CaretPositionType
+  sealed trait end extends CaretPositionType
   
   @js.native
-  sealed trait next extends _CaretPositionType
+  sealed trait next extends CaretPositionType
   
   @js.native
-  sealed trait start extends _CaretPositionType
+  sealed trait start extends CaretPositionType
   
   @scala.inline
   def end: end = "end".asInstanceOf[end]

@@ -3,7 +3,7 @@ package typingsSlinky.reactInstantsearchDom.mod
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.ComponentType
 import typingsSlinky.react.mod.StatelessComponent
-import typingsSlinky.reactInstantsearchCore.PartialStateResultsProvid
+import typingsSlinky.reactInstantsearchCore.anon.PartialStateResultsProvid
 import typingsSlinky.reactInstantsearchCore.mod.BasicDoc
 import typingsSlinky.reactInstantsearchCore.mod.Omit
 import typingsSlinky.reactInstantsearchCore.mod.StateResultsProvided

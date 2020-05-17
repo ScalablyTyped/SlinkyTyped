@@ -11,7 +11,7 @@ package object mod {
   ]
   type InstalledPluginsSet = typingsSlinky.std.Set[typingsSlinky.riot.mod.ComponentEnhancer]
   type PureComponentFactoryFunction[InitialProps, Context] = js.Function1[
-    /* hasSlotsAttributesProps */ typingsSlinky.riot.AnonAttributes[InitialProps], 
+    /* hasSlotsAttributesProps */ typingsSlinky.riot.anon.Attributes[InitialProps], 
     typingsSlinky.riot.mod.RiotPureComponent[Context]
   ]
   type RegisteredComponentsMap = typingsSlinky.std.Map[

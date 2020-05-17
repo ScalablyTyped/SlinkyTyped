@@ -1,6 +1,6 @@
 package typingsSlinky.node.osMod
 
-import typingsSlinky.node.AnonIdle
+import typingsSlinky.node.anon.Idle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait CpuInfo extends js.Object {
   var model: String = js.native
   var speed: Double = js.native
-  var times: AnonIdle = js.native
+  var times: Idle = js.native
 }
 
 object CpuInfo {
   @scala.inline
-  def apply(model: String, speed: Double, times: AnonIdle): CpuInfo = {
+  def apply(model: String, speed: Double, times: Idle): CpuInfo = {
     val __obj = js.Dynamic.literal(model = model.asInstanceOf[js.Any], speed = speed.asInstanceOf[js.Any], times = times.asInstanceOf[js.Any])
     __obj.asInstanceOf[CpuInfo]
   }
@@ -37,7 +37,7 @@ object CpuInfo {
         ret
     }
     @scala.inline
-    def withTimes(value: AnonIdle): Self = {
+    def withTimes(value: Idle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("times")(value.asInstanceOf[js.Any])
         ret

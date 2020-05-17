@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RuleSetLoader extends js.Object {
+trait RuleSetLoader extends RuleSetUseItem {
   /**
     * Unique loader identifier
     */

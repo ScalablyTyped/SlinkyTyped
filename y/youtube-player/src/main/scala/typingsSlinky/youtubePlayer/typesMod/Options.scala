@@ -1,7 +1,7 @@
 package typingsSlinky.youtubePlayer.typesMod
 
-import typingsSlinky.youtubePlayer.AnonAutoplay
-import typingsSlinky.youtubePlayer.eventTypeinEventTypeevent
+import typingsSlinky.youtubePlayer.anon.Autoplay
+import typingsSlinky.youtubePlayer.anon.eventTypeinEventTypeevent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait Options extends js.Object {
   var events: js.UndefOr[eventTypeinEventTypeevent] = js.native
   var height: js.UndefOr[Double] = js.native
-  var playerVars: js.UndefOr[AnonAutoplay] = js.native
+  var playerVars: js.UndefOr[Autoplay] = js.native
   var videoId: js.UndefOr[String] = js.native
   var width: js.UndefOr[Double] = js.native
 }
@@ -52,7 +52,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withPlayerVars(value: AnonAutoplay): Self = {
+    def withPlayerVars(value: Autoplay): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("playerVars")(value.asInstanceOf[js.Any])
         ret

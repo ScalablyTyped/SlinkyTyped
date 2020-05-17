@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsCore.engineMod
 
 import typingsSlinky.std.WeakMap
-import typingsSlinky.tensorflowTfjsCore.AnonBackend
+import typingsSlinky.tensorflowTfjsCore.anon.Backend
 import typingsSlinky.tensorflowTfjsCore.tapeMod.TapeNode
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedVariableMap
 import scala.scalajs.js
@@ -29,7 +29,7 @@ trait EngineState extends js.Object {
   var profiling: Boolean = js.native
   var registeredVariables: NamedVariableMap = js.native
   var scopeStack: js.Array[ScopeState] = js.native
-  var tensorInfo: WeakMap[js.Object, AnonBackend] = js.native
+  var tensorInfo: WeakMap[js.Object, Backend] = js.native
   def dispose(): Unit = js.native
 }
 
@@ -52,7 +52,7 @@ object EngineState {
     profiling: Boolean,
     registeredVariables: NamedVariableMap,
     scopeStack: js.Array[ScopeState],
-    tensorInfo: WeakMap[js.Object, AnonBackend]
+    tensorInfo: WeakMap[js.Object, Backend]
   ): EngineState = {
     val __obj = js.Dynamic.literal(activeProfile = activeProfile.asInstanceOf[js.Any], activeScope = activeScope.asInstanceOf[js.Any], activeTape = activeTape.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), gradientDepth = gradientDepth.asInstanceOf[js.Any], kernelDepth = kernelDepth.asInstanceOf[js.Any], nextScopeId = nextScopeId.asInstanceOf[js.Any], nextTapeNodeId = nextTapeNodeId.asInstanceOf[js.Any], numBytes = numBytes.asInstanceOf[js.Any], numDataBuffers = numDataBuffers.asInstanceOf[js.Any], numDataMovesStack = numDataMovesStack.asInstanceOf[js.Any], numStringTensors = numStringTensors.asInstanceOf[js.Any], numTensors = numTensors.asInstanceOf[js.Any], profiling = profiling.asInstanceOf[js.Any], registeredVariables = registeredVariables.asInstanceOf[js.Any], scopeStack = scopeStack.asInstanceOf[js.Any], tensorInfo = tensorInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[EngineState]
@@ -160,7 +160,7 @@ object EngineState {
         ret
     }
     @scala.inline
-    def withTensorInfo(value: WeakMap[js.Object, AnonBackend]): Self = {
+    def withTensorInfo(value: WeakMap[js.Object, Backend]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tensorInfo")(value.asInstanceOf[js.Any])
         ret

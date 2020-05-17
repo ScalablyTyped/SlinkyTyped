@@ -1,14 +1,14 @@
 package typingsSlinky.officeUiFabricReact.panelBaseMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
-import typingsSlinky.officeUiFabricReact.PartialIPanelState
-import typingsSlinky.officeUiFabricReact.ReadonlyIPanelProps
-import typingsSlinky.officeUiFabricReact.ReadonlyIPanelState
+import typingsSlinky.officeUiFabricReact.anon.PartialIPanelState
+import typingsSlinky.officeUiFabricReact.anon.ReadonlyIPanelProps
+import typingsSlinky.officeUiFabricReact.anon.ReadonlyIPanelState
 import typingsSlinky.officeUiFabricReact.panelTypesMod.IPanel
 import typingsSlinky.officeUiFabricReact.panelTypesMod.IPanelProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,7 +50,7 @@ class PanelBase protected ()
   def componentDidUpdate_MPanelBase(previousProps: IPanelProps, previousState: IPanelState): Unit = js.native
   @JSName("componentWillUnmount")
   def componentWillUnmount_MPanelBase(): Unit = js.native
-  def dismiss(ev: SyntheticEvent[Event_, HTMLElement]): Unit = js.native
+  def dismiss(ev: SyntheticEvent[Event, HTMLElement]): Unit = js.native
 }
 
 /* static members */

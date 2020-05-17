@@ -1,6 +1,6 @@
 package typingsSlinky.mailgunJs.mod
 
-import typingsSlinky.mailgunJs.AnonInterval
+import typingsSlinky.mailgunJs.anon.Interval
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait ConstructorParams extends js.Object {
   var protocol: js.UndefOr[String] = js.native
   var proxy: js.UndefOr[String] = js.native
   var publicApiKey: js.UndefOr[String] = js.native
-  var retry: js.UndefOr[Double | AnonInterval] = js.native
+  var retry: js.UndefOr[Double | Interval] = js.native
   var testMode: js.UndefOr[Boolean] = js.native
   var testModeLogger: js.UndefOr[
     js.Function3[
@@ -138,7 +138,7 @@ object ConstructorParams {
         ret
     }
     @scala.inline
-    def withRetry(value: Double | AnonInterval): Self = {
+    def withRetry(value: Double | Interval): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("retry")(value.asInstanceOf[js.Any])
         ret

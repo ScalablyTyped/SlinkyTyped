@@ -1,7 +1,7 @@
 package typingsSlinky.atom.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.atom.AnonHide
+import typingsSlinky.atom.anon.Hide
 import typingsSlinky.atom.atomBooleans.`false`
 import typingsSlinky.atom.atomStrings.auto
 import typingsSlinky.atom.atomStrings.bottom_
@@ -22,7 +22,7 @@ trait TooltipOptions extends js.Object {
     *  Delay showing and hiding the tooltip (ms) - does not apply to manual
     *  trigger type.
     */
-  var delay: js.UndefOr[Double | AnonHide] = js.native
+  var delay: js.UndefOr[Double | Hide] = js.native
   /** Allow HTML in the tooltip. */
   var html: js.UndefOr[Boolean] = js.native
   /** How to position the tooltip. */
@@ -90,7 +90,7 @@ object TooltipOptions {
         ret
     }
     @scala.inline
-    def withDelay(value: Double | AnonHide): Self = {
+    def withDelay(value: Double | Hide): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
         ret

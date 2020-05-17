@@ -1,6 +1,6 @@
 package typingsSlinky.noble.mod
 
-import typingsSlinky.noble.AnonData
+import typingsSlinky.noble.anon.Data
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait Advertisement extends js.Object {
   var localName: String = js.native
   var manufacturerData: Buffer = js.native
-  var serviceData: js.Array[AnonData] = js.native
+  var serviceData: js.Array[Data] = js.native
   var serviceUuids: js.Array[String] = js.native
   var txPowerLevel: Double = js.native
 }
@@ -20,7 +20,7 @@ object Advertisement {
   def apply(
     localName: String,
     manufacturerData: Buffer,
-    serviceData: js.Array[AnonData],
+    serviceData: js.Array[Data],
     serviceUuids: js.Array[String],
     txPowerLevel: Double
   ): Advertisement = {
@@ -46,7 +46,7 @@ object Advertisement {
         ret
     }
     @scala.inline
-    def withServiceData(value: js.Array[AnonData]): Self = {
+    def withServiceData(value: js.Array[Data]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("serviceData")(value.asInstanceOf[js.Any])
         ret

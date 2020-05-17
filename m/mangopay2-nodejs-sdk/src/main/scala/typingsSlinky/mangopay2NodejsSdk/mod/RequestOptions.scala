@@ -1,8 +1,8 @@
 package typingsSlinky.mangopay2NodejsSdk.mod
 
-import typingsSlinky.mangopay2NodejsSdk.AnonApiVersion
-import typingsSlinky.mangopay2NodejsSdk.AnonTimeout
-import typingsSlinky.mangopay2NodejsSdk.PartialHeaders
+import typingsSlinky.mangopay2NodejsSdk.anon.ApiVersion
+import typingsSlinky.mangopay2NodejsSdk.anon.PartialHeaders
+import typingsSlinky.mangopay2NodejsSdk.anon.Timeout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,19 +13,14 @@ trait RequestOptions extends js.Object {
   /**
     * Path options are replacing the ${placeholders} from apiMethods
     */
-  var path: AnonApiVersion = js.native
-  var requestConfig: AnonTimeout = js.native
-  var responseConfig: AnonTimeout = js.native
+  var path: ApiVersion = js.native
+  var requestConfig: Timeout = js.native
+  var responseConfig: Timeout = js.native
 }
 
 object RequestOptions {
   @scala.inline
-  def apply(
-    headers: PartialHeaders,
-    path: AnonApiVersion,
-    requestConfig: AnonTimeout,
-    responseConfig: AnonTimeout
-  ): RequestOptions = {
+  def apply(headers: PartialHeaders, path: ApiVersion, requestConfig: Timeout, responseConfig: Timeout): RequestOptions = {
     val __obj = js.Dynamic.literal(headers = headers.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], requestConfig = requestConfig.asInstanceOf[js.Any], responseConfig = responseConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestOptions]
   }
@@ -42,19 +37,19 @@ object RequestOptions {
         ret
     }
     @scala.inline
-    def withPath(value: AnonApiVersion): Self = {
+    def withPath(value: ApiVersion): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withRequestConfig(value: AnonTimeout): Self = {
+    def withRequestConfig(value: Timeout): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("requestConfig")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withResponseConfig(value: AnonTimeout): Self = {
+    def withResponseConfig(value: Timeout): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("responseConfig")(value.asInstanceOf[js.Any])
         ret

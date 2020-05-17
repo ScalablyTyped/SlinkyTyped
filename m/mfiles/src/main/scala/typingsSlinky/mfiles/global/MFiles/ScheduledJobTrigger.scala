@@ -1,0 +1,16 @@
+package typingsSlinky.mfiles.global.MFiles
+
+import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.IScheduledJobTrigger
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("MFiles.ScheduledJobTrigger")
+@js.native
+class ScheduledJobTrigger () extends IScheduledJobTrigger
+
+@JSGlobal("MFiles.ScheduledJobTrigger")
+@js.native
+object ScheduledJobTrigger extends Instantiable0[IScheduledJobTrigger]
+

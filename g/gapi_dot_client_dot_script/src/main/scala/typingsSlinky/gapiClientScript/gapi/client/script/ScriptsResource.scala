@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientScript.gapi.client.script
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientScript.AnonAccesstoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientScript.anon.Accesstoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,12 +19,12 @@ trait ScriptsResource extends js.Object {
     * authentication token, open the project in the script editor, then select
     * &#42;&#42;File > Project properties&#42;&#42; and click the &#42;&#42;Scopes&#42;&#42; tab.
     */
-  def run(request: AnonAccesstoken): Request_[Operation] = js.native
+  def run(request: Accesstoken): Request[Operation] = js.native
 }
 
 object ScriptsResource {
   @scala.inline
-  def apply(run: AnonAccesstoken => Request_[Operation]): ScriptsResource = {
+  def apply(run: Accesstoken => Request[Operation]): ScriptsResource = {
     val __obj = js.Dynamic.literal(run = js.Any.fromFunction1(run))
     __obj.asInstanceOf[ScriptsResource]
   }
@@ -35,7 +35,7 @@ object ScriptsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withRun(value: AnonAccesstoken => Request_[Operation]): Self = {
+    def withRun(value: Accesstoken => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("run")(js.Any.fromFunction1(value))
         ret

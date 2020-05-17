@@ -1,14 +1,14 @@
 package typingsSlinky.nodeLogglyBulk.mod
 
 import typingsSlinky.loggly.mod.LogglyOptions
-import typingsSlinky.nodeLogglyBulk.AnonRetriesInMilliSeconds
+import typingsSlinky.nodeLogglyBulk.anon.RetriesInMilliSeconds
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait LogglyBulkOptions extends LogglyOptions {
-  var bufferOptions: js.UndefOr[AnonRetriesInMilliSeconds] = js.native
+  var bufferOptions: js.UndefOr[RetriesInMilliSeconds] = js.native
   var isBulk: js.UndefOr[Boolean] = js.native
   var networkErrorsOnConsole: js.UndefOr[Boolean] = js.native
   var proxy: js.UndefOr[js.Any] = js.native
@@ -29,7 +29,7 @@ object LogglyBulkOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBufferOptions(value: AnonRetriesInMilliSeconds): Self = {
+    def withBufferOptions(value: RetriesInMilliSeconds): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bufferOptions")(value.asInstanceOf[js.Any])
         ret

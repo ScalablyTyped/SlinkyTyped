@@ -1,14 +1,12 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A StorageEvent is sent to a window when a storage area it has access to is changed within the context of another document. */
 @js.native
-trait StorageEvent extends Event_ {
+trait StorageEvent extends Event {
   /**
     * Returns the key of the storage item being changed.
     */
@@ -30,14 +28,4 @@ trait StorageEvent extends Event_ {
     */
   val url: java.lang.String = js.native
 }
-
-@JSGlobal("StorageEvent")
-@js.native
-object StorageEvent
-  extends Instantiable1[/* type */ java.lang.String, org.scalajs.dom.raw.StorageEvent]
-     with Instantiable2[
-      /* type */ java.lang.String, 
-      /* eventInitDict */ StorageEventInit, 
-      org.scalajs.dom.raw.StorageEvent
-    ]
 

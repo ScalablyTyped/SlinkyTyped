@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TimelineHiddenDateOption extends js.Object {
+trait TimelineHiddenDateOption extends TimelineOptionsHiddenDatesType {
   var end: DateType = js.native
   var repeat: js.UndefOr[daily | weekly | monthly | yearly] = js.native
   var start: DateType = js.native

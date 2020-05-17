@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Manages delayed activation for an app. */
-@JSGlobal("Windows.UI.WebUI.ActivatedDeferral")
 @js.native
-abstract class ActivatedDeferral () extends js.Object {
+trait ActivatedDeferral extends js.Object {
   /** Notifies the system that the app has set up its state and initial UI and is ready to be displayed. */
   def complete(): Unit = js.native
+}
+
+object ActivatedDeferral {
+  @scala.inline
+  def apply(complete: () => Unit): ActivatedDeferral = {
+    val __obj = js.Dynamic.literal(complete = js.Any.fromFunction0(complete))
+    __obj.asInstanceOf[ActivatedDeferral]
+  }
+  @scala.inline
+  implicit class ActivatedDeferralOps[Self <: ActivatedDeferral] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComplete(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

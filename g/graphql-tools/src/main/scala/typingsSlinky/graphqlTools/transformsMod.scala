@@ -6,6 +6,9 @@ import typingsSlinky.graphql.definitionMod.GraphQLNamedType
 import typingsSlinky.graphql.definitionMod.GraphQLResolveInfo
 import typingsSlinky.graphql.mod.GraphQLSchema
 import typingsSlinky.graphqlTools.addArgumentsAsVariablesMod.default
+import typingsSlinky.graphqlTools.anon.Field
+import typingsSlinky.graphqlTools.anon.From
+import typingsSlinky.graphqlTools.anon.GraphQLSchematransformsAr
 import typingsSlinky.graphqlTools.filterRootFieldsMod.RootFilter
 import typingsSlinky.graphqlTools.graphqlToolsStrings.Mutation
 import typingsSlinky.graphqlTools.graphqlToolsStrings.Query
@@ -48,7 +51,7 @@ object transformsMod extends js.Object {
   @js.native
   class ExtractField protected ()
     extends typingsSlinky.graphqlTools.extractFieldMod.default {
-    def this(hasFromTo: AnonFrom) = this()
+    def this(hasFromTo: From) = this()
   }
   
   @js.native
@@ -90,7 +93,7 @@ object transformsMod extends js.Object {
   @js.native
   class ReplaceFieldWithFragment protected ()
     extends typingsSlinky.graphqlTools.replaceFieldWithFragmentMod.default {
-    def this(targetSchema: GraphQLSchema, fragments: js.Array[AnonField]) = this()
+    def this(targetSchema: GraphQLSchema, fragments: js.Array[Field]) = this()
   }
   
   @js.native

@@ -1,19 +1,19 @@
 package typingsSlinky.minappEnv.DB
 
-import typingsSlinky.minappEnv.AnonRemoved
 import typingsSlinky.minappEnv.IAPISuccessParam
+import typingsSlinky.minappEnv.anon.Removed
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IRemoveResult extends IAPISuccessParam {
-  var stats: AnonRemoved = js.native
+  var stats: Removed = js.native
 }
 
 object IRemoveResult {
   @scala.inline
-  def apply(errMsg: String, stats: AnonRemoved): IRemoveResult = {
+  def apply(errMsg: String, stats: Removed): IRemoveResult = {
     val __obj = js.Dynamic.literal(errMsg = errMsg.asInstanceOf[js.Any], stats = stats.asInstanceOf[js.Any])
     __obj.asInstanceOf[IRemoveResult]
   }
@@ -24,7 +24,7 @@ object IRemoveResult {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withStats(value: AnonRemoved): Self = {
+    def withStats(value: Removed): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
         ret

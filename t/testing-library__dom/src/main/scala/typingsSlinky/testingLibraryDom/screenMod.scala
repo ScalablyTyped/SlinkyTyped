@@ -3,6 +3,7 @@ package typingsSlinky.testingLibraryDom
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLDocument
 import typingsSlinky.prettyFormat.mod.OptionsReceived
+import typingsSlinky.testingLibraryDom.anon.Debug
 import typingsSlinky.testingLibraryDom.getQueriesForElementMod.BoundFunction
 import typingsSlinky.testingLibraryDom.getQueriesForElementMod.BoundFunctions
 import typingsSlinky.testingLibraryDom.getQueriesForElementMod.Queries
@@ -93,6 +94,6 @@ object screenMod extends js.Object {
     def debug(element: HTMLDocument, maxLength: Double, options: OptionsReceived): Unit = js.native
   }
   
-  type Screen_[Q /* <: Queries */] = BoundFunctions[Q] with AnonDebug
+  type Screen_[Q /* <: Queries */] = BoundFunctions[Q] with Debug
 }
 

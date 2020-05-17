@@ -1,9 +1,9 @@
 package typingsSlinky.cypress.cypressMod.Cypress
 
+import org.scalajs.dom.raw.Document
 import typingsSlinky.cypress.cypressStrings.fullPage
 import typingsSlinky.cypress.cypressStrings.runner
 import typingsSlinky.cypress.cypressStrings.viewport
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,15 +16,15 @@ trait ScreenshotOptions extends js.Object {
   var disableTimersAndAnimations: Boolean = js.native
   var padding: Padding = js.native
   var scale: Boolean = js.native
-  def afterScreenshot(doc: Document_): Unit = js.native
-  def beforeScreenshot(doc: Document_): Unit = js.native
+  def afterScreenshot(doc: Document): Unit = js.native
+  def beforeScreenshot(doc: Document): Unit = js.native
 }
 
 object ScreenshotOptions {
   @scala.inline
   def apply(
-    afterScreenshot: Document_ => Unit,
-    beforeScreenshot: Document_ => Unit,
+    afterScreenshot: Document => Unit,
+    beforeScreenshot: Document => Unit,
     blackout: js.Array[String],
     capture: runner | viewport | fullPage,
     clip: Dimensions,
@@ -42,13 +42,13 @@ object ScreenshotOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAfterScreenshot(value: Document_ => Unit): Self = {
+    def withAfterScreenshot(value: Document => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterScreenshot")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withBeforeScreenshot(value: Document_ => Unit): Self = {
+    def withBeforeScreenshot(value: Document => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeScreenshot")(js.Any.fromFunction1(value))
         ret

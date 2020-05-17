@@ -1,5 +1,6 @@
 package typingsSlinky.materialUi.MaterialUI.Menus
 
+import org.scalajs.dom.raw.Event
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
@@ -9,7 +10,6 @@ import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.origin
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.MouseEventHandler
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,15 +34,11 @@ trait IconMenuProps extends js.Object {
   var menuStyle: js.UndefOr[CSSProperties] = js.native
   var multiple: js.UndefOr[Boolean] = js.native
   var onChange: js.UndefOr[
-    js.Function2[
-      /* e */ SyntheticEvent[Event_, js.Object], 
-      /* itemValue */ js.Any | js.Array[_], 
-      Unit
-    ]
+    js.Function2[/* e */ SyntheticEvent[Event, js.Object], /* itemValue */ js.Any | js.Array[_], Unit]
   ] = js.native
-  var onClick: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event_, js.Object], Unit]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event, js.Object], Unit]] = js.native
   var onItemClick: js.UndefOr[
-    js.Function2[/* e */ SyntheticEvent[Event_, js.Object], /* item */ MenuItem, Unit]
+    js.Function2[/* e */ SyntheticEvent[Event, js.Object], ReactComponentClass[MenuItemProps], Unit]
   ] = js.native
   var onKeyboardFocus: js.UndefOr[
     js.Function2[/* e */ SyntheticFocusEvent[js.Object], /* isKeyboardFocused */ Boolean, Unit]
@@ -246,7 +242,7 @@ object IconMenuProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: (/* e */ SyntheticEvent[Event_, js.Object], /* itemValue */ js.Any | js.Array[_]) => Unit): Self = {
+    def withOnChange(value: (/* e */ SyntheticEvent[Event, js.Object], /* itemValue */ js.Any | js.Array[_]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
         ret
@@ -258,7 +254,7 @@ object IconMenuProps {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* e */ SyntheticEvent[Event_, js.Object] => Unit): Self = {
+    def withOnClick(value: /* e */ SyntheticEvent[Event, js.Object] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret
@@ -270,7 +266,7 @@ object IconMenuProps {
         ret
     }
     @scala.inline
-    def withOnItemClick(value: (/* e */ SyntheticEvent[Event_, js.Object], /* item */ MenuItem) => Unit): Self = {
+    def withOnItemClick(value: (/* e */ SyntheticEvent[Event, js.Object], ReactComponentClass[MenuItemProps]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction2(value))
         ret

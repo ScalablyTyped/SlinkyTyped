@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 	* @brief mongodb 数据库数据集对象
 	* @detail 使用 MongoDB.getCollection 创建：,```JavaScript,var col1 = mdb.getCollection('test');,var col = mdb.test;,```
 	*/
-@JSGlobal("Class_MongoCollection")
 @js.native
-class ClassMongoCollection () extends ClassObject {
+trait ClassMongoCollection extends ClassObject {
   /**
   	 * 
   	 * @brief 删除当前集合

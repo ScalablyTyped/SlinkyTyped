@@ -1,6 +1,6 @@
 package typingsSlinky.autoprefixerCore.mod
 
-import typingsSlinky.autoprefixerCore.AnonInline
+import typingsSlinky.autoprefixerCore.anon.Inline
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Options extends js.Object {
   var from: js.UndefOr[String] = js.native
-  var map: js.UndefOr[AnonInline] = js.native
+  var map: js.UndefOr[Inline] = js.native
   var safe: js.UndefOr[Boolean] = js.native
   var to: js.UndefOr[String] = js.native
 }
@@ -38,7 +38,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withMap(value: AnonInline): Self = {
+    def withMap(value: Inline): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
         ret

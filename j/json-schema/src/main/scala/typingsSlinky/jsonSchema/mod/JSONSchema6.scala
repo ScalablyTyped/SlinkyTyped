@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait JSONSchema6 extends js.Object {
+trait JSONSchema6 extends JSONSchema6Definition {
   @JSName("$id")
   var $id: js.UndefOr[String] = js.native
   @JSName("$ref")

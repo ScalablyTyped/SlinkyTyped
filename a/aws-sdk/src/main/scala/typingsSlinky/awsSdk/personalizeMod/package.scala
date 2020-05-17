@@ -54,7 +54,6 @@ package object personalizeMod {
   type ParameterValue = java.lang.String
   type PerformAutoML = scala.Boolean
   type PerformHPO = scala.Boolean
-  type RecipeProvider = typingsSlinky.awsSdk.awsSdkStrings.SERVICE | java.lang.String
   type RecipeType = java.lang.String
   type Recipes = js.Array[typingsSlinky.awsSdk.personalizeMod.RecipeSummary]
   type ResourceConfig = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.personalizeMod.ParameterValue]
@@ -67,18 +66,6 @@ package object personalizeMod {
   type TrackingId = java.lang.String
   type TrainingHours = scala.Double
   type TrainingInputMode = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.FULL
-    - typingsSlinky.awsSdk.awsSdkStrings.UPDATE
-    - java.lang.String
-  */
-  type TrainingMode = typingsSlinky.awsSdk.personalizeMod._TrainingMode | java.lang.String
   type TransactionsPerSecond = scala.Double
   type Tunable = scala.Boolean
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2018-05-22`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.personalizeMod._apiVersion | java.lang.String
 }

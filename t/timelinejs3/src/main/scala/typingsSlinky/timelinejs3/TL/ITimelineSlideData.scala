@@ -1,6 +1,6 @@
 package typingsSlinky.timelinejs3.TL
 
-import typingsSlinky.timelinejs3.AnonColor
+import typingsSlinky.timelinejs3.anon.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait ITimelineSlideData extends js.Object {
     * url: the fully-qualified URL pointing to an image which will be used as the background
     * color: a CSS color, in hexadecimal (e.g. #0f9bd1) or a valid CSS color keyword.
     */
-  var background: js.UndefOr[AnonColor] = js.native
+  var background: js.UndefOr[Color] = js.native
   /*
     * A string which will be used when Timeline displays the date for this. If used, override's display_date
     * values set on the start or end date for this event, which is useful if you want to control how the two
@@ -76,7 +76,7 @@ object ITimelineSlideData {
         ret
     }
     @scala.inline
-    def withBackground(value: AnonColor): Self = {
+    def withBackground(value: Color): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.sailsIoJs.mod
 
-import typingsSlinky.sailsIoJs.AnonBody
+import typingsSlinky.sailsIoJs.anon.Body
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +12,12 @@ trait JWR extends js.Object {
   var headers: Headers = js.native
   var statusCode: Double = js.native
   def pipe(): js.Error = js.native
-  def toPOJO(): AnonBody = js.native
+  def toPOJO(): Body = js.native
 }
 
 object JWR {
   @scala.inline
-  def apply(body: js.Any, headers: Headers, pipe: () => js.Error, statusCode: Double, toPOJO: () => AnonBody): JWR = {
+  def apply(body: js.Any, headers: Headers, pipe: () => js.Error, statusCode: Double, toPOJO: () => Body): JWR = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], headers = headers.asInstanceOf[js.Any], pipe = js.Any.fromFunction0(pipe), statusCode = statusCode.asInstanceOf[js.Any], toPOJO = js.Any.fromFunction0(toPOJO))
     __obj.asInstanceOf[JWR]
   }
@@ -52,7 +52,7 @@ object JWR {
         ret
     }
     @scala.inline
-    def withToPOJO(value: () => AnonBody): Self = {
+    def withToPOJO(value: () => Body): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toPOJO")(js.Any.fromFunction0(value))
         ret

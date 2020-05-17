@@ -1,6 +1,6 @@
 package typingsSlinky.yandexMaps.mod
 
-import typingsSlinky.yandexMaps.AnonHref
+import typingsSlinky.yandexMaps.anon.Href
 import typingsSlinky.yandexMaps.yandexMapsStrings.clusterNumbersignballoonAccordion
 import typingsSlinky.yandexMaps.yandexMapsStrings.clusterNumbersignballoonCarousel
 import typingsSlinky.yandexMaps.yandexMapsStrings.clusterNumbersignballoonTwoColumns
@@ -24,7 +24,7 @@ trait IClusterPlacemarkOptions extends js.Object {
   var iconContentLayout: js.UndefOr[String | IClassConstructor[ILayout]] = js.native
   var iconLayout: js.UndefOr[String | IClassConstructor[ILayout]] = js.native
   var iconShape: js.UndefOr[IGeometryJson] = js.native
-  var icons: js.UndefOr[js.Array[AnonHref]] = js.native
+  var icons: js.UndefOr[js.Array[Href]] = js.native
   var interactivityModel: js.UndefOr[InteractivityModelKey] = js.native
   var numbers: js.UndefOr[js.Array[Double]] = js.native
   var openBalloonOnClick: js.UndefOr[Boolean] = js.native
@@ -192,7 +192,7 @@ object IClusterPlacemarkOptions {
         ret
     }
     @scala.inline
-    def withIcons(value: js.Array[AnonHref]): Self = {
+    def withIcons(value: js.Array[Href]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
         ret

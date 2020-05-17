@@ -3,8 +3,8 @@ package typingsSlinky.antd.components
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.AnonLang
-import typingsSlinky.antd.AnonOnChange
+import typingsSlinky.antd.anon.Lang
+import typingsSlinky.antd.anon.OnChange
 import typingsSlinky.antd.generateCalendarMod.CalendarMode
 import typingsSlinky.antd.generateCalendarMod.CalendarProps
 import typingsSlinky.moment.mod.Moment
@@ -35,9 +35,9 @@ object Calendar {
     @scala.inline
     def fullscreen(value: Boolean): this.type = set("fullscreen", value.asInstanceOf[js.Any])
     @scala.inline
-    def headerRender(value: /* config */ AnonOnChange[Moment] => TagMod[Any]): this.type = set("headerRender", js.Any.fromFunction1(value))
+    def headerRender(value: /* config */ OnChange[Moment] => TagMod[Any]): this.type = set("headerRender", js.Any.fromFunction1(value))
     @scala.inline
-    def locale(value: AnonLang): this.type = set("locale", value.asInstanceOf[js.Any])
+    def locale(value: Lang): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline
     def mode(value: CalendarMode): this.type = set("mode", value.asInstanceOf[js.Any])
     @scala.inline

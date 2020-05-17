@@ -1,6 +1,6 @@
 package typingsSlinky.oracleOraclejet.ojpopupMod
 
-import typingsSlinky.oracleOraclejet.AnonAriaCloseSkipLink
+import typingsSlinky.oracleOraclejet.anon.AriaCloseSkipLink
 import typingsSlinky.oracleOraclejet.mod.baseComponentSettableProperties
 import typingsSlinky.oracleOraclejet.ojpopupMod.ojPopup.Position
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.auto
@@ -25,7 +25,7 @@ trait ojPopupSettableProperties extends baseComponentSettableProperties {
   var position: Position = js.native
   var tail: none | simple = js.native
   @JSName("translations")
-  var translations_ojPopupSettableProperties: AnonAriaCloseSkipLink = js.native
+  var translations_ojPopupSettableProperties: AriaCloseSkipLink = js.native
 }
 
 object ojPopupSettableProperties {
@@ -37,7 +37,7 @@ object ojPopupSettableProperties {
     modality: modeless | modal,
     position: Position,
     tail: none | simple,
-    translations: AnonAriaCloseSkipLink
+    translations: AriaCloseSkipLink
   ): ojPopupSettableProperties = {
     val __obj = js.Dynamic.literal(autoDismiss = autoDismiss.asInstanceOf[js.Any], chrome = chrome.asInstanceOf[js.Any], initialFocus = initialFocus.asInstanceOf[js.Any], modality = modality.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], tail = tail.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojPopupSettableProperties]
@@ -85,7 +85,7 @@ object ojPopupSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonAriaCloseSkipLink): Self = {
+    def withTranslations(value: AriaCloseSkipLink): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

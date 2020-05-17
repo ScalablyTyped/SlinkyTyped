@@ -1,10 +1,10 @@
 package typingsSlinky.escpos.mod
 
-import typingsSlinky.escpos.AnonAlign
-import typingsSlinky.escpos.AnonCols
-import typingsSlinky.escpos.AnonEncoding
-import typingsSlinky.escpos.AnonFont
-import typingsSlinky.escpos.AnonMode
+import typingsSlinky.escpos.anon.Align
+import typingsSlinky.escpos.anon.Cols
+import typingsSlinky.escpos.anon.Encoding
+import typingsSlinky.escpos.anon.Font
+import typingsSlinky.escpos.anon.Mode
 import typingsSlinky.escpos.escposNumbers.`0`
 import typingsSlinky.escpos.escposNumbers.`1`
 import typingsSlinky.escpos.escposNumbers.`2`
@@ -18,10 +18,10 @@ import scala.scalajs.js.annotation._
 @js.native
 class Printer protected () extends js.Object {
   def this(adapter: Adapter) = this()
-  def this(adapter: Adapter, options: AnonEncoding) = this()
+  def this(adapter: Adapter, options: Encoding) = this()
   def align(align: TXT_ALIGN): Printer = js.native
   def barcode(code: String, `type`: BARCODE_TYPE): Printer = js.native
-  def barcode(code: String, `type`: BARCODE_TYPE, options: AnonFont): Printer = js.native
+  def barcode(code: String, `type`: BARCODE_TYPE, options: Font): Printer = js.native
   /**
     * Printer Buzzer (Beep sound)
     */
@@ -125,10 +125,10 @@ class Printer protected () extends js.Object {
     content: String,
     callback: js.Function2[/* error */ js.Error | Null, /* printer */ js.UndefOr[this.type], Unit]
   ): Printer = js.native
-  def qrimage(content: String, options: AnonMode): Printer = js.native
+  def qrimage(content: String, options: Mode): Printer = js.native
   def qrimage(
     content: String,
-    options: AnonMode,
+    options: Mode,
     callback: js.Function2[/* error */ js.Error | Null, /* printer */ js.UndefOr[this.type], Unit]
   ): Printer = js.native
   def raster(image: Image): Printer = js.native
@@ -157,10 +157,10 @@ class Printer protected () extends js.Object {
     */
   def table(data: js.Array[String]): Printer = js.native
   def table(data: js.Array[String], encoding: String): Printer = js.native
-  def tableCustom(data: AnonAlign): Printer = js.native
-  def tableCustom(data: AnonAlign, encoding: String): Printer = js.native
-  def tableCustom(data: AnonCols): Printer = js.native
-  def tableCustom(data: AnonCols, encoding: String): Printer = js.native
+  def tableCustom(data: Align): Printer = js.native
+  def tableCustom(data: Align, encoding: String): Printer = js.native
+  def tableCustom(data: Cols): Printer = js.native
+  def tableCustom(data: Cols, encoding: String): Printer = js.native
   /**
     * Print text with EOL
     */

@@ -1,6 +1,6 @@
 package typingsSlinky.stropheJs.mod.Strophe
 
-import typingsSlinky.std.Document_
+import org.scalajs.dom.raw.Document
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +14,6 @@ object xmlGenerator extends js.Object {
     *  Returns:
     *    The currently used DOM document.
     */
-  def apply(): Document_ = js.native
+  def apply(): Document = js.native
 }
 

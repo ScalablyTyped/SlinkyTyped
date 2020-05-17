@@ -1,9 +1,9 @@
 package typingsSlinky.htmlWebpackPlugin.mod
 
-import typingsSlinky.htmlWebpackPlugin.AnonAssets
-import typingsSlinky.htmlWebpackPlugin.AnonBody
-import typingsSlinky.htmlWebpackPlugin.AnonHtml
-import typingsSlinky.htmlWebpackPlugin.AnonOutputName
+import typingsSlinky.htmlWebpackPlugin.anon.Assets
+import typingsSlinky.htmlWebpackPlugin.anon.Body
+import typingsSlinky.htmlWebpackPlugin.anon.Html
+import typingsSlinky.htmlWebpackPlugin.anon.OutputName
 import typingsSlinky.tapable.mod.AsyncSeriesHook
 import typingsSlinky.tapable.mod.AsyncSeriesWaterfallHook
 import typingsSlinky.tapable.mod.SyncBailHook
@@ -23,11 +23,11 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Hooks extends CompilationHooks {
-  var htmlWebpackPluginAfterEmit: AsyncSeriesWaterfallHook[AnonOutputName, _, _] = js.native
-  var htmlWebpackPluginAfterHtmlProcessing: AsyncSeriesWaterfallHook[AnonHtml, _, _] = js.native
-  var htmlWebpackPluginAlterAssetTags: AsyncSeriesWaterfallHook[AnonBody, _, _] = js.native
-  var htmlWebpackPluginBeforeHtmlGeneration: AsyncSeriesWaterfallHook[AnonAssets, _, _] = js.native
-  var htmlWebpackPluginBeforeHtmlProcessing: AsyncSeriesWaterfallHook[AnonHtml, _, _] = js.native
+  var htmlWebpackPluginAfterEmit: AsyncSeriesWaterfallHook[OutputName, _, _] = js.native
+  var htmlWebpackPluginAfterHtmlProcessing: AsyncSeriesWaterfallHook[Html, _, _] = js.native
+  var htmlWebpackPluginAlterAssetTags: AsyncSeriesWaterfallHook[Body, _, _] = js.native
+  var htmlWebpackPluginBeforeHtmlGeneration: AsyncSeriesWaterfallHook[Assets, _, _] = js.native
+  var htmlWebpackPluginBeforeHtmlProcessing: AsyncSeriesWaterfallHook[Html, _, _] = js.native
 }
 
 object Hooks {
@@ -61,11 +61,11 @@ object Hooks {
     failedModule: SyncHook[Module, js.Error, _],
     finishModules: SyncHook[js.Array[Module], _, _],
     finishRebuildingModule: SyncHook[Module, _, _],
-    htmlWebpackPluginAfterEmit: AsyncSeriesWaterfallHook[AnonOutputName, _, _],
-    htmlWebpackPluginAfterHtmlProcessing: AsyncSeriesWaterfallHook[AnonHtml, _, _],
-    htmlWebpackPluginAlterAssetTags: AsyncSeriesWaterfallHook[AnonBody, _, _],
-    htmlWebpackPluginBeforeHtmlGeneration: AsyncSeriesWaterfallHook[AnonAssets, _, _],
-    htmlWebpackPluginBeforeHtmlProcessing: AsyncSeriesWaterfallHook[AnonHtml, _, _],
+    htmlWebpackPluginAfterEmit: AsyncSeriesWaterfallHook[OutputName, _, _],
+    htmlWebpackPluginAfterHtmlProcessing: AsyncSeriesWaterfallHook[Html, _, _],
+    htmlWebpackPluginAlterAssetTags: AsyncSeriesWaterfallHook[Body, _, _],
+    htmlWebpackPluginBeforeHtmlGeneration: AsyncSeriesWaterfallHook[Assets, _, _],
+    htmlWebpackPluginBeforeHtmlProcessing: AsyncSeriesWaterfallHook[Html, _, _],
     moduleAsset: SyncHook[Module, String, _],
     moduleIds: SyncHook[js.Array[Module], _, _],
     needAdditionalPass: SyncBailHook[_, _, _, _],
@@ -118,31 +118,31 @@ object Hooks {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withHtmlWebpackPluginAfterEmit(value: AsyncSeriesWaterfallHook[AnonOutputName, _, _]): Self = {
+    def withHtmlWebpackPluginAfterEmit(value: AsyncSeriesWaterfallHook[OutputName, _, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("htmlWebpackPluginAfterEmit")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withHtmlWebpackPluginAfterHtmlProcessing(value: AsyncSeriesWaterfallHook[AnonHtml, _, _]): Self = {
+    def withHtmlWebpackPluginAfterHtmlProcessing(value: AsyncSeriesWaterfallHook[Html, _, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("htmlWebpackPluginAfterHtmlProcessing")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withHtmlWebpackPluginAlterAssetTags(value: AsyncSeriesWaterfallHook[AnonBody, _, _]): Self = {
+    def withHtmlWebpackPluginAlterAssetTags(value: AsyncSeriesWaterfallHook[Body, _, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("htmlWebpackPluginAlterAssetTags")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withHtmlWebpackPluginBeforeHtmlGeneration(value: AsyncSeriesWaterfallHook[AnonAssets, _, _]): Self = {
+    def withHtmlWebpackPluginBeforeHtmlGeneration(value: AsyncSeriesWaterfallHook[Assets, _, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("htmlWebpackPluginBeforeHtmlGeneration")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withHtmlWebpackPluginBeforeHtmlProcessing(value: AsyncSeriesWaterfallHook[AnonHtml, _, _]): Self = {
+    def withHtmlWebpackPluginBeforeHtmlProcessing(value: AsyncSeriesWaterfallHook[Html, _, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("htmlWebpackPluginBeforeHtmlProcessing")(value.asInstanceOf[js.Any])
         ret

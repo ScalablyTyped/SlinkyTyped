@@ -1,6 +1,5 @@
 package typingsSlinky.reactNativeChartsWrapper.mod
 
-import typingsSlinky.reactNativeChartsWrapper.AnonColor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,7 @@ trait PieChartProps extends PieRadarChartBase {
   var holeColor: js.UndefOr[Color] = js.native
   var holeRadius: js.UndefOr[Double] = js.native
   var maxAngle: js.UndefOr[Double] = js.native
-  var styledCenterText: js.UndefOr[AnonColor] = js.native
+  var styledCenterText: js.UndefOr[typingsSlinky.reactNativeChartsWrapper.anon.Color] = js.native
   var transparentCircleColor: js.UndefOr[Color] = js.native
   var transparentCircleRadius: js.UndefOr[Double] = js.native
   var usePercentValues: js.UndefOr[Boolean] = js.native
@@ -143,7 +142,7 @@ object PieChartProps {
         ret
     }
     @scala.inline
-    def withStyledCenterText(value: AnonColor): Self = {
+    def withStyledCenterText(value: typingsSlinky.reactNativeChartsWrapper.anon.Color): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styledCenterText")(value.asInstanceOf[js.Any])
         ret

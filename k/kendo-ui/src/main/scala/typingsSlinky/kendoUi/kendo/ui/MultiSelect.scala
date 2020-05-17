@@ -1,17 +1,13 @@
 package typingsSlinky.kendoUi.kendo.ui
 
-import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.JQuery
 import typingsSlinky.kendoUi.kendo.data.DataSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.ui.MultiSelect")
 @js.native
-class MultiSelect protected () extends Widget {
-  def this(element: Element) = this()
-  def this(element: Element, options: MultiSelectOptions) = this()
+trait MultiSelect extends Widget {
   var dataSource: DataSource = js.native
   var input: JQuery = js.native
   var list: JQuery = js.native
@@ -36,13 +32,5 @@ class MultiSelect protected () extends Widget {
   def value(): js.Any = js.native
   def value(value: String): Unit = js.native
   def value(value: js.Any): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("kendo.ui.MultiSelect")
-@js.native
-object MultiSelect extends js.Object {
-  var fn: MultiSelect = js.native
-  def extend(proto: js.Object): MultiSelect = js.native
 }
 

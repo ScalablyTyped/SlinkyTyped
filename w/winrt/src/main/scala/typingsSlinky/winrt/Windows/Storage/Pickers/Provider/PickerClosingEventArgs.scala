@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Storage.Pickers.Provider.PickerClosingEventArgs")
 @js.native
-class PickerClosingEventArgs () extends IPickerClosingEventArgs
+trait PickerClosingEventArgs extends IPickerClosingEventArgs
+
+object PickerClosingEventArgs {
+  @scala.inline
+  def apply(closingOperation: PickerClosingOperation, isCanceled: Boolean): PickerClosingEventArgs = {
+    val __obj = js.Dynamic.literal(closingOperation = closingOperation.asInstanceOf[js.Any], isCanceled = isCanceled.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PickerClosingEventArgs]
+  }
+}
 

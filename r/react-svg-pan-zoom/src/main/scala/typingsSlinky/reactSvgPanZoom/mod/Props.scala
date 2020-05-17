@@ -2,8 +2,8 @@ package typingsSlinky.reactSvgPanZoom.mod
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactSvgPanZoom.AnonBackground
-import typingsSlinky.reactSvgPanZoom.AnonPosition
+import typingsSlinky.reactSvgPanZoom.anon.Background
+import typingsSlinky.reactSvgPanZoom.anon.Position
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ trait Props extends js.Object {
   var disableDoubleClickZoomWithToolAuto: js.UndefOr[Boolean] = js.native
   // height of the viewer displayed on screen
   var height: Double = js.native
-  var miniatureProps: js.UndefOr[AnonBackground] = js.native
+  var miniatureProps: js.UndefOr[Background] = js.native
   var modifierKeys: js.UndefOr[js.Array[String]] = js.native
   var onClick: js.UndefOr[js.Function1[/* event */ ViewerMouseEvent[_], Unit]] = js.native
   var onDoubleClick: js.UndefOr[js.Function1[/* event */ ViewerMouseEvent[_], Unit]] = js.native
@@ -39,7 +39,7 @@ trait Props extends js.Object {
   var style: js.UndefOr[js.Object] = js.native
   // current active tool (TOOL_NONE, TOOL_PAN, TOOL_ZOOM_IN, TOOL_ZOOM_OUT)
   var tool: Tool = js.native
-  var toolbarProps: js.UndefOr[AnonPosition] = js.native
+  var toolbarProps: js.UndefOr[Position] = js.native
   // value of the viewer (current point of view)
   var value: Value | Null = js.native
   // width of the viewer displayed on screen
@@ -237,7 +237,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withMiniatureProps(value: AnonBackground): Self = {
+    def withMiniatureProps(value: Background): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("miniatureProps")(value.asInstanceOf[js.Any])
         ret
@@ -417,7 +417,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withToolbarProps(value: AnonPosition): Self = {
+    def withToolbarProps(value: Position): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarProps")(value.asInstanceOf[js.Any])
         ret

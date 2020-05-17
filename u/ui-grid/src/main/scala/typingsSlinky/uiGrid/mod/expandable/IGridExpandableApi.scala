@@ -1,6 +1,6 @@
 package typingsSlinky.uiGrid.mod.expandable
 
-import typingsSlinky.uiGrid.AnonRowExpandedStateChanged
+import typingsSlinky.uiGrid.anon.RowExpandedStateChanged
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IGridExpandableApi[TEntity] extends js.Object {
   // Events
-  var on: AnonRowExpandedStateChanged[TEntity] = js.native
+  var on: RowExpandedStateChanged[TEntity] = js.native
   // Methods
   /**
     * Collapse all subgrids.
@@ -34,7 +34,7 @@ object IGridExpandableApi {
   def apply[TEntity](
     collapseAllRows: () => Unit,
     expandAllRows: () => Unit,
-    on: AnonRowExpandedStateChanged[TEntity],
+    on: RowExpandedStateChanged[TEntity],
     toggleAllRows: () => Unit,
     toggleRowExpansion: TEntity => Unit
   ): IGridExpandableApi[TEntity] = {
@@ -60,7 +60,7 @@ object IGridExpandableApi {
         ret
     }
     @scala.inline
-    def withOn(value: AnonRowExpandedStateChanged[TEntity]): Self[TEntity] = {
+    def withOn(value: RowExpandedStateChanged[TEntity]): Self[TEntity] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
         ret

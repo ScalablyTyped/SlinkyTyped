@@ -1,6 +1,6 @@
 package typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins
 
-import typingsSlinky.react.mod.Component
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,21 +8,9 @@ import scala.scalajs.js.annotation._
 @JSGlobal("AdazzleReactDataGridPlugins.Filters")
 @js.native
 object Filters extends js.Object {
-  @js.native
-  class AutoCompleteFilter ()
-    extends Component[js.Any, js.Object, js.Any]
-  
-  @js.native
-  class MultiSelectFilter ()
-    extends Component[js.Any, js.Object, js.Any]
-  
-  @js.native
-  class NumericFilter ()
-    extends Component[js.Any, js.Object, js.Any]
-  
-  @js.native
-  class SingleSelectFilter ()
-    extends Component[js.Any, js.Object, js.Any]
-  
+  type AutoCompleteFilter = ReactComponentClass[js.Any]
+  type MultiSelectFilter = ReactComponentClass[js.Any]
+  type NumericFilter = ReactComponentClass[js.Any]
+  type SingleSelectFilter = ReactComponentClass[js.Any]
 }
 

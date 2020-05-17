@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ExtentTransform extends _Transforms {
+trait ExtentTransform extends Transforms {
   var field: FieldRef = js.native
   var signal: js.UndefOr[String] = js.native
   var `type`: extent = js.native

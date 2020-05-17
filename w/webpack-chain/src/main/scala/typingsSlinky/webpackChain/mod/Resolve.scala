@@ -1,7 +1,7 @@
 package typingsSlinky.webpackChain.mod
 
 import typingsSlinky.webpack.mod.ResolvePlugin
-import typingsSlinky.webpackChain.AnonPath
+import typingsSlinky.webpackChain.anon.Path
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ class Resolve ()
   var mainFiles: TypedChainedSet[this.type, String] = js.native
   var modules: TypedChainedSet[this.type, String] = js.native
   var plugins: TypedChainedMap[this.type, Plugin[this.type, ResolvePlugin]] = js.native
-  def cachePredicate(value: js.Function1[/* data */ AnonPath, Boolean]): this.type = js.native
+  def cachePredicate(value: js.Function1[/* data */ Path, Boolean]): this.type = js.native
   def cacheWithContext(value: Boolean): this.type = js.native
   def enforceExtension(value: Boolean): this.type = js.native
   def enforceModuleExtension(value: Boolean): this.type = js.native

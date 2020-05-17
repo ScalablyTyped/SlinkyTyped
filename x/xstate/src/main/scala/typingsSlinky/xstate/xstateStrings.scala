@@ -1,6 +1,6 @@
 package typingsSlinky.xstate
 
-import typingsSlinky.xstate.typesMod._StateTypes
+import typingsSlinky.xstate.typesMod.StateTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,10 +31,10 @@ object xstateStrings {
   sealed trait TransitionsConfigMap extends js.Object
   
   @js.native
-  sealed trait atomic extends _StateTypes
+  sealed trait atomic extends StateTypes
   
   @js.native
-  sealed trait compound extends _StateTypes
+  sealed trait compound extends StateTypes
   
   @js.native
   sealed trait configuration extends js.Object
@@ -46,16 +46,16 @@ object xstateStrings {
   sealed trait external extends js.Object
   
   @js.native
-  sealed trait `final` extends _StateTypes
+  sealed trait `final` extends StateTypes
   
   @js.native
-  sealed trait history extends _StateTypes
+  sealed trait history extends StateTypes
   
   @js.native
   sealed trait internal extends js.Object
   
   @js.native
-  sealed trait parallel extends _StateTypes
+  sealed trait parallel extends StateTypes
   
   @js.native
   sealed trait platform extends js.Object

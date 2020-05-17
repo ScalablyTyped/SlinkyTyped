@@ -1,8 +1,8 @@
 package typingsSlinky.dbus.mod
 
-import typingsSlinky.dbus.AnonGetter
-import typingsSlinky.dbus.AnonIn
-import typingsSlinky.dbus.AnonTypes
+import typingsSlinky.dbus.anon.Getter
+import typingsSlinky.dbus.anon.In
+import typingsSlinky.dbus.anon.Types
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait DBusServiceInterface extends js.Object {
   def addMethod(
     method: String,
-    opts: AnonIn,
+    opts: In,
     handler: js.Function3[
       /* name */ String, 
       /* quality */ js.Any, 
@@ -19,8 +19,8 @@ trait DBusServiceInterface extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  def addProperty(name: String, opts: AnonGetter): Unit = js.native
-  def addSignal(name: String, opts: AnonTypes): Unit = js.native
+  def addProperty(name: String, opts: Getter): Unit = js.native
+  def addSignal(name: String, opts: Types): Unit = js.native
   def emitSignal(name: String, values: js.Any*): Unit = js.native
   def update(): Unit = js.native
 }
@@ -28,14 +28,14 @@ trait DBusServiceInterface extends js.Object {
 object DBusServiceInterface {
   @scala.inline
   def apply(
-    addMethod: (String, AnonIn, js.Function3[
+    addMethod: (String, In, js.Function3[
       /* name */ String, 
       /* quality */ js.Any, 
       /* callback */ js.Function1[/* res */ js.Any, Unit], 
       Unit
     ]) => Unit,
-    addProperty: (String, AnonGetter) => Unit,
-    addSignal: (String, AnonTypes) => Unit,
+    addProperty: (String, Getter) => Unit,
+    addSignal: (String, Types) => Unit,
     emitSignal: (String, /* repeated */ js.Any) => Unit,
     update: () => Unit
   ): DBusServiceInterface = {
@@ -50,7 +50,7 @@ object DBusServiceInterface {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
     def withAddMethod(
-      value: (String, AnonIn, js.Function3[
+      value: (String, In, js.Function3[
           /* name */ String, 
           /* quality */ js.Any, 
           /* callback */ js.Function1[/* res */ js.Any, Unit], 
@@ -62,13 +62,13 @@ object DBusServiceInterface {
         ret
     }
     @scala.inline
-    def withAddProperty(value: (String, AnonGetter) => Unit): Self = {
+    def withAddProperty(value: (String, Getter) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addProperty")(js.Any.fromFunction2(value))
         ret
     }
     @scala.inline
-    def withAddSignal(value: (String, AnonTypes) => Unit): Self = {
+    def withAddSignal(value: (String, Types) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addSignal")(js.Any.fromFunction2(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.jestSpecificSnapshot.mod
 
-import typingsSlinky.jestSpecificSnapshot.AnonMessage
+import typingsSlinky.jestSpecificSnapshot.anon.Message
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("jest-specific-snapshot", "toMatchSpecificSnapshot")
 @js.native
 object toMatchSpecificSnapshot extends js.Object {
-  def apply(data: js.Any, snapshotFile: String, testName: String): js.Function0[AnonMessage] = js.native
+  def apply(data: js.Any, snapshotFile: String, testName: String): js.Function0[Message] = js.native
 }
 

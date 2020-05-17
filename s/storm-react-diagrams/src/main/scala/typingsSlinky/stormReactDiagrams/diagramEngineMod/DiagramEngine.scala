@@ -3,14 +3,14 @@ package typingsSlinky.stormReactDiagrams.diagramEngineMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
 import slinky.core.facade.ReactElement
-import typingsSlinky.stormReactDiagrams.AnonHAdjustmentFactor
-import typingsSlinky.stormReactDiagrams.AnonHeight
-import typingsSlinky.stormReactDiagrams.AnonWidth
-import typingsSlinky.stormReactDiagrams.AnonX
 import typingsSlinky.stormReactDiagrams.abstractLabelFactoryMod.AbstractLabelFactory
 import typingsSlinky.stormReactDiagrams.abstractLinkFactoryMod.AbstractLinkFactory
 import typingsSlinky.stormReactDiagrams.abstractNodeFactoryMod.AbstractNodeFactory
 import typingsSlinky.stormReactDiagrams.abstractPortFactoryMod.AbstractPortFactory
+import typingsSlinky.stormReactDiagrams.anon.HAdjustmentFactor
+import typingsSlinky.stormReactDiagrams.anon.Height
+import typingsSlinky.stormReactDiagrams.anon.Width
+import typingsSlinky.stormReactDiagrams.anon.X
 import typingsSlinky.stormReactDiagrams.baseEntityMod.BaseEntity
 import typingsSlinky.stormReactDiagrams.baseEntityMod.BaseListener
 import typingsSlinky.stormReactDiagrams.baseModelMod.BaseModel
@@ -46,7 +46,7 @@ class DiagramEngine () extends BaseEntity[DiagramEngineListener] {
     * Despite being a long method, we simply iterate over all three collections (nodes, ports and points)
     * to find the highest X and Y dimensions, so we can build the matrix large enough to contain all elements.
     */
-  def calculateMatrixDimensions(): AnonHAdjustmentFactor = js.native
+  def calculateMatrixDimensions(): HAdjustmentFactor = js.native
   def calculateRoutingMatrix(): Unit = js.native
   def canEntityRepaint(baseModel: BaseModel[BaseEntity[BaseListener[_]], BaseModelListener]): Boolean = js.native
   def clearRepaintEntities(): Unit = js.native
@@ -81,19 +81,19 @@ class DiagramEngine () extends BaseEntity[DiagramEngineListener] {
     * Determine the width and height of the node passed in.
     * It currently assumes nodes have a rectangular shape, can be overriden for customised shapes.
     */
-  def getNodeDimensions(node: NodeModel): AnonWidth = js.native
+  def getNodeDimensions(node: NodeModel): Width = js.native
   def getNodeElement(node: NodeModel): Element = js.native
   def getNodeFactories(): StringDictionary[AbstractNodeFactory[NodeModel]] = js.native
   def getNodeFactory(`type`: String): AbstractNodeFactory[NodeModel] = js.native
   def getNodePortElement(port: PortModel): js.Any = js.native
-  def getPortCenter(port: PortModel): AnonX = js.native
+  def getPortCenter(port: PortModel): X = js.native
   /**
     * Calculate rectangular coordinates of the port passed in.
     */
-  def getPortCoords(port: PortModel): AnonHeight = js.native
+  def getPortCoords(port: PortModel): Height = js.native
   def getPortFactory(`type`: String): AbstractPortFactory[PortModel] = js.native
-  def getRelativeMousePoint(event: js.Any): AnonX = js.native
-  def getRelativePoint(x: js.Any, y: js.Any): AnonX = js.native
+  def getRelativeMousePoint(event: js.Any): X = js.native
+  def getRelativePoint(x: js.Any, y: js.Any): X = js.native
   /**
     * A representation of the canvas in the following format:
     *

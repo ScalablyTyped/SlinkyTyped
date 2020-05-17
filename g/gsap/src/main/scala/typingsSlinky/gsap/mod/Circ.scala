@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("gsap", "Circ")
 @js.native
 class Circ ()
-  extends typingsSlinky.gsap.gsap.Circ
+  extends typingsSlinky.gsap.gsap.Ease
 
 /* static members */
 @JSImport("gsap", "Circ")

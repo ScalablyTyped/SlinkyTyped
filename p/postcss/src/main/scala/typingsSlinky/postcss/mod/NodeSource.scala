@@ -1,6 +1,6 @@
 package typingsSlinky.postcss.mod
 
-import typingsSlinky.postcss.AnonColumn
+import typingsSlinky.postcss.anon.Column
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +10,12 @@ trait NodeSource extends js.Object {
   /**
     * The ending position of the node's source.
     */
-  var end: js.UndefOr[AnonColumn] = js.native
+  var end: js.UndefOr[Column] = js.native
   var input: Input = js.native
   /**
     * The starting position of the node's source.
     */
-  var start: js.UndefOr[AnonColumn] = js.native
+  var start: js.UndefOr[Column] = js.native
 }
 
 object NodeSource {
@@ -37,7 +37,7 @@ object NodeSource {
         ret
     }
     @scala.inline
-    def withEnd(value: AnonColumn): Self = {
+    def withEnd(value: Column): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
         ret
@@ -49,7 +49,7 @@ object NodeSource {
         ret
     }
     @scala.inline
-    def withStart(value: AnonColumn): Self = {
+    def withStart(value: Column): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
         ret

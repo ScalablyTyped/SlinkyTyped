@@ -1,8 +1,8 @@
 package typingsSlinky.hexoFs.mod
 
-import typingsSlinky.hexoFs.Anon0
-import typingsSlinky.hexoFs.Anon1
-import typingsSlinky.hexoFs.AnonEncoding
+import typingsSlinky.hexoFs.anon.Encoding
+import typingsSlinky.hexoFs.anon.`0`
+import typingsSlinky.hexoFs.anon.`1`
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.fsMod.PathLike
@@ -15,9 +15,9 @@ import scala.scalajs.js.annotation._
 object readdir extends js.Object {
   def apply(path: PathLike): typingsSlinky.bluebird.mod.^[js.Array[String]] = js.native
   def apply(path: PathLike, options: String): typingsSlinky.bluebird.mod.^[js.Array[String | Buffer]] = js.native
-  def apply(path: PathLike, options: Anon0): typingsSlinky.bluebird.mod.^[js.Array[Buffer]] = js.native
-  def apply(path: PathLike, options: Anon1): typingsSlinky.bluebird.mod.^[js.Array[String | Buffer]] = js.native
-  def apply(path: PathLike, options: AnonEncoding): typingsSlinky.bluebird.mod.^[js.Array[String]] = js.native
+  def apply(path: PathLike, options: Encoding): typingsSlinky.bluebird.mod.^[js.Array[String]] = js.native
+  def apply(path: PathLike, options: `0`): typingsSlinky.bluebird.mod.^[js.Array[Buffer]] = js.native
+  def apply(path: PathLike, options: `1`): typingsSlinky.bluebird.mod.^[js.Array[String | Buffer]] = js.native
   def apply(path: PathLike, options: BufferEncoding): typingsSlinky.bluebird.mod.^[js.Array[String]] = js.native
 }
 

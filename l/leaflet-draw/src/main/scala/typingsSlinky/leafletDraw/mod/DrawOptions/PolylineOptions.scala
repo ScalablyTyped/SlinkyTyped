@@ -3,7 +3,7 @@ package typingsSlinky.leafletDraw.mod.DrawOptions
 import typingsSlinky.leaflet.mod.DivIcon_
 import typingsSlinky.leaflet.mod.IconOptions
 import typingsSlinky.leaflet.mod.Icon_
-import typingsSlinky.leafletDraw.PolylineOptionsclickableb
+import typingsSlinky.leafletDraw.anon.PolylineOptionsclickableb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

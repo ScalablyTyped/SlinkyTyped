@@ -1,10 +1,10 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesPie
 
-import typingsSlinky.echarts.AnonBorderType
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonLabelAnonPadding
-import typingsSlinky.echarts.AnonLineHeight
-import typingsSlinky.echarts.AnonSmooth
+import typingsSlinky.echarts.anon.BorderType
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.LabelPadding
+import typingsSlinky.echarts.anon.LineHeight
+import typingsSlinky.echarts.anon.Smooth
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait DataObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-pie.data.emphasis
     */
-  var emphasis: js.UndefOr[AnonLabelAnonPadding] = js.native
+  var emphasis: js.UndefOr[LabelPadding] = js.native
   /**
     * Graphic style of , `emphasis` is the style when it is highlighted,
     * like being hovered by mouse, or highlighted via legend connect.
@@ -22,21 +22,21 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.data.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBorderType] = js.native
+  var itemStyle: js.UndefOr[BorderType] = js.native
   /**
     * The label configuration of a single sector.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.data.label
     */
-  var label: js.UndefOr[AnonLineHeight] = js.native
+  var label: js.UndefOr[LineHeight] = js.native
   /**
     * The style of visual guide line.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.data.labelLine
     */
-  var labelLine: js.UndefOr[AnonSmooth] = js.native
+  var labelLine: js.UndefOr[Smooth] = js.native
   /**
     * The name of data item.
     *
@@ -57,7 +57,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.data.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * Data value.
     *
@@ -80,7 +80,7 @@ object DataObject {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEmphasis(value: AnonLabelAnonPadding): Self = {
+    def withEmphasis(value: LabelPadding): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -92,7 +92,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonBorderType): Self = {
+    def withItemStyle(value: BorderType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -104,7 +104,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonLineHeight): Self = {
+    def withLabel(value: LineHeight): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -116,7 +116,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withLabelLine(value: AnonSmooth): Self = {
+    def withLabelLine(value: Smooth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("labelLine")(value.asInstanceOf[js.Any])
         ret
@@ -152,7 +152,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

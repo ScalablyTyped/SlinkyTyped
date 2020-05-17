@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientVideointelligence.gapi.client.videointelligence
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientVideointelligence.AnonAccesstoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientVideointelligence.anon.Accesstoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +14,12 @@ trait VideosResource extends js.Object {
     * `Operation.metadata` contains `AnnotateVideoProgress` (progress).
     * `Operation.response` contains `AnnotateVideoResponse` (results).
     */
-  def annotate(request: AnonAccesstoken): Request_[GoogleLongrunningOperation] = js.native
+  def annotate(request: Accesstoken): Request[GoogleLongrunningOperation] = js.native
 }
 
 object VideosResource {
   @scala.inline
-  def apply(annotate: AnonAccesstoken => Request_[GoogleLongrunningOperation]): VideosResource = {
+  def apply(annotate: Accesstoken => Request[GoogleLongrunningOperation]): VideosResource = {
     val __obj = js.Dynamic.literal(annotate = js.Any.fromFunction1(annotate))
     __obj.asInstanceOf[VideosResource]
   }
@@ -30,7 +30,7 @@ object VideosResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAnnotate(value: AnonAccesstoken => Request_[GoogleLongrunningOperation]): Self = {
+    def withAnnotate(value: Accesstoken => Request[GoogleLongrunningOperation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("annotate")(js.Any.fromFunction1(value))
         ret

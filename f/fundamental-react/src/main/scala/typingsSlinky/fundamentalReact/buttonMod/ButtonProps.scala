@@ -52,7 +52,7 @@ import typingsSlinky.fundamentalReact.fundamentalReactStrings.tree
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.url
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.vertical
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.yes
-import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -274,7 +274,7 @@ trait ButtonProps extends js.Object {
   var compact: js.UndefOr[Boolean] = js.native
   var contentEditable: js.UndefOr[Booleanish | inherit] = js.native
   var contextMenu: js.UndefOr[String] = js.native
-  var dangerouslySetInnerHTML: js.UndefOr[AnonHtml] = js.native
+  var dangerouslySetInnerHTML: js.UndefOr[Html] = js.native
   var datatype: js.UndefOr[String] = js.native
   // React-specific Attributes
   var defaultChecked: js.UndefOr[Boolean] = js.native

@@ -3,7 +3,7 @@ package typingsSlinky.reactBurgerMenu.mod
 import org.scalajs.dom.raw.Element
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
-import typingsSlinky.reactBurgerMenu.PartialStyles
+import typingsSlinky.reactBurgerMenu.anon.PartialStyles
 import typingsSlinky.reactBurgerMenu.reactBurgerMenuBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`

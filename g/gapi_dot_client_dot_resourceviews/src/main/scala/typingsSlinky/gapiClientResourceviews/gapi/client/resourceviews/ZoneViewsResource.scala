@@ -1,11 +1,11 @@
 package typingsSlinky.gapiClientResourceviews.gapi.client.resourceviews
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientResourceviews.AnonFormat
-import typingsSlinky.gapiClientResourceviews.AnonMaxResults
-import typingsSlinky.gapiClientResourceviews.AnonOauthtoken
-import typingsSlinky.gapiClientResourceviews.AnonPrettyPrint
-import typingsSlinky.gapiClientResourceviews.AnonProject
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientResourceviews.anon.Format
+import typingsSlinky.gapiClientResourceviews.anon.MaxResults
+import typingsSlinky.gapiClientResourceviews.anon.Oauthtoken
+import typingsSlinky.gapiClientResourceviews.anon.PrettyPrint
+import typingsSlinky.gapiClientResourceviews.anon.Project
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,37 +13,37 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ZoneViewsResource extends js.Object {
   /** Add resources to the view. */
-  def addResources(request: AnonOauthtoken): Request_[Operation] = js.native
+  def addResources(request: Oauthtoken): Request[Operation] = js.native
   /** Delete a resource view. */
-  def delete(request: AnonOauthtoken): Request_[Operation] = js.native
+  def delete(request: Oauthtoken): Request[Operation] = js.native
   /** Get the information of a zonal resource view. */
-  def get(request: AnonOauthtoken): Request_[ResourceView] = js.native
+  def get(request: Oauthtoken): Request[ResourceView] = js.native
   /** Get the service information of a resource view or a resource. */
-  def getService(request: AnonPrettyPrint): Request_[ZoneViewsGetServiceResponse] = js.native
+  def getService(request: PrettyPrint): Request[ZoneViewsGetServiceResponse] = js.native
   /** Create a resource view. */
-  def insert(request: AnonProject): Request_[Operation] = js.native
+  def insert(request: Project): Request[Operation] = js.native
   /** List resource views. */
-  def list(request: AnonMaxResults): Request_[ZoneViewsList] = js.native
+  def list(request: MaxResults): Request[ZoneViewsList] = js.native
   /** List the resources of the resource view. */
-  def listResources(request: AnonFormat): Request_[ZoneViewsListResourcesResponse] = js.native
+  def listResources(request: Format): Request[ZoneViewsListResourcesResponse] = js.native
   /** Remove resources from the view. */
-  def removeResources(request: AnonOauthtoken): Request_[Operation] = js.native
+  def removeResources(request: Oauthtoken): Request[Operation] = js.native
   /** Update the service information of a resource view or a resource. */
-  def setService(request: AnonOauthtoken): Request_[Operation] = js.native
+  def setService(request: Oauthtoken): Request[Operation] = js.native
 }
 
 object ZoneViewsResource {
   @scala.inline
   def apply(
-    addResources: AnonOauthtoken => Request_[Operation],
-    delete: AnonOauthtoken => Request_[Operation],
-    get: AnonOauthtoken => Request_[ResourceView],
-    getService: AnonPrettyPrint => Request_[ZoneViewsGetServiceResponse],
-    insert: AnonProject => Request_[Operation],
-    list: AnonMaxResults => Request_[ZoneViewsList],
-    listResources: AnonFormat => Request_[ZoneViewsListResourcesResponse],
-    removeResources: AnonOauthtoken => Request_[Operation],
-    setService: AnonOauthtoken => Request_[Operation]
+    addResources: Oauthtoken => Request[Operation],
+    delete: Oauthtoken => Request[Operation],
+    get: Oauthtoken => Request[ResourceView],
+    getService: PrettyPrint => Request[ZoneViewsGetServiceResponse],
+    insert: Project => Request[Operation],
+    list: MaxResults => Request[ZoneViewsList],
+    listResources: Format => Request[ZoneViewsListResourcesResponse],
+    removeResources: Oauthtoken => Request[Operation],
+    setService: Oauthtoken => Request[Operation]
   ): ZoneViewsResource = {
     val __obj = js.Dynamic.literal(addResources = js.Any.fromFunction1(addResources), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), getService = js.Any.fromFunction1(getService), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), listResources = js.Any.fromFunction1(listResources), removeResources = js.Any.fromFunction1(removeResources), setService = js.Any.fromFunction1(setService))
     __obj.asInstanceOf[ZoneViewsResource]
@@ -55,55 +55,55 @@ object ZoneViewsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddResources(value: AnonOauthtoken => Request_[Operation]): Self = {
+    def withAddResources(value: Oauthtoken => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addResources")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonOauthtoken => Request_[Operation]): Self = {
+    def withDelete(value: Oauthtoken => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonOauthtoken => Request_[ResourceView]): Self = {
+    def withGet(value: Oauthtoken => Request[ResourceView]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGetService(value: AnonPrettyPrint => Request_[ZoneViewsGetServiceResponse]): Self = {
+    def withGetService(value: PrettyPrint => Request[ZoneViewsGetServiceResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getService")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withInsert(value: AnonProject => Request_[Operation]): Self = {
+    def withInsert(value: Project => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonMaxResults => Request_[ZoneViewsList]): Self = {
+    def withList(value: MaxResults => Request[ZoneViewsList]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withListResources(value: AnonFormat => Request_[ZoneViewsListResourcesResponse]): Self = {
+    def withListResources(value: Format => Request[ZoneViewsListResourcesResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("listResources")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withRemoveResources(value: AnonOauthtoken => Request_[Operation]): Self = {
+    def withRemoveResources(value: Oauthtoken => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("removeResources")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withSetService(value: AnonOauthtoken => Request_[Operation]): Self = {
+    def withSetService(value: Oauthtoken => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("setService")(js.Any.fromFunction1(value))
         ret

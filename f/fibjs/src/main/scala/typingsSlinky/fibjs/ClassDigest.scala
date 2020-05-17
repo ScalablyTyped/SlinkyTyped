@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 	* @brief 信息摘要对象
 	* @detail 
 	*/
-@JSGlobal("Class_Digest")
 @js.native
-class ClassDigest () extends ClassObject {
+trait ClassDigest extends ClassObject {
   /**
   	 * class prop 
   	 *

@@ -1,21 +1,21 @@
 package typingsSlinky.cathoQuantum.accordionMod
 
-import typingsSlinky.cathoQuantum.AnonBaseFontSize
-import typingsSlinky.cathoQuantum.AnonContent
+import typingsSlinky.cathoQuantum.anon.BaseFontSize
+import typingsSlinky.cathoQuantum.anon.Content
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait AccordionProps extends js.Object {
-  var items: js.Array[AnonContent] = js.native
+  var items: js.Array[Content] = js.native
   var keepOnlyOneOpen: js.UndefOr[Boolean] = js.native
-  var theme: js.UndefOr[AnonBaseFontSize] = js.native
+  var theme: js.UndefOr[BaseFontSize] = js.native
 }
 
 object AccordionProps {
   @scala.inline
-  def apply(items: js.Array[AnonContent]): AccordionProps = {
+  def apply(items: js.Array[Content]): AccordionProps = {
     val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccordionProps]
   }
@@ -26,7 +26,7 @@ object AccordionProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withItems(value: js.Array[AnonContent]): Self = {
+    def withItems(value: js.Array[Content]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
         ret
@@ -44,7 +44,7 @@ object AccordionProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonBaseFontSize): Self = {
+    def withTheme(value: BaseFontSize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

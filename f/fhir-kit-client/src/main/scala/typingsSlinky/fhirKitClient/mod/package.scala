@@ -9,7 +9,6 @@ package object mod {
     typingsSlinky.fhirKitClient.mod.ResourceType, 
     typingsSlinky.fhirKitClient.mod.KnownResourceType
   ]
-  type FhirResource = typingsSlinky.fhirKitClient.mod.CustomResource | typingsSlinky.fhir.fhir.Resource
   type ResourceType = java.lang.String
   type SearchParams = org.scalablytyped.runtime.StringDictionary[
     java.lang.String | scala.Double | scala.Boolean | (js.Array[java.lang.String | scala.Double | scala.Boolean])

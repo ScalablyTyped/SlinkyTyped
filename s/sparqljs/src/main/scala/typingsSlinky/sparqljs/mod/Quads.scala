@@ -1,7 +1,5 @@
 package typingsSlinky.sparqljs.mod
 
-import typingsSlinky.sparqljs.sparqljsStrings.bgp
-import typingsSlinky.sparqljs.sparqljsStrings.graph
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,16 +12,8 @@ trait Quads extends js.Object
 
 object Quads {
   @scala.inline
-  def BgpPattern(triples: js.Array[Triple], `type`: bgp): Quads = {
-    val __obj = js.Dynamic.literal(triples = triples.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Quads]
-  }
+  implicit def apply(value: BgpPattern): Quads = value.asInstanceOf[Quads]
   @scala.inline
-  def GraphQuads(name: Term, triples: js.Array[Triple], `type`: graph): Quads = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], triples = triples.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Quads]
-  }
+  implicit def apply(value: GraphQuads): Quads = value.asInstanceOf[Quads]
 }
 

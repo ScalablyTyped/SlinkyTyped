@@ -133,42 +133,6 @@ object SeriesSolidgaugeOptions {
         ret
     }
     @scala.inline
-    def withDataParser(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataParser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataParser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataParser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataURL(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDial(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dial")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDial: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dial")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withId(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
@@ -229,18 +193,6 @@ object SeriesSolidgaugeOptions {
         ret
     }
     @scala.inline
-    def withPivot(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivot")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPivot: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pivot")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withStack(value: Double | scala.Nothing | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(value.asInstanceOf[js.Any])
@@ -262,18 +214,6 @@ object SeriesSolidgaugeOptions {
     def withoutTreemap: Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("treemap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWrap(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWrap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(js.undefined)
         ret
     }
     @scala.inline

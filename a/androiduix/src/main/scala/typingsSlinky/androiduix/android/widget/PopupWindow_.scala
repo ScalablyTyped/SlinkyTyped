@@ -1,6 +1,5 @@
 package typingsSlinky.androiduix.android.widget
 
-import typingsSlinky.androiduix.android.content.Context
 import typingsSlinky.androiduix.android.graphics.drawable.Drawable
 import typingsSlinky.androiduix.android.view.MotionEvent
 import typingsSlinky.androiduix.android.view.View
@@ -8,20 +7,12 @@ import typingsSlinky.androiduix.android.view.View.OnTouchListener
 import typingsSlinky.androiduix.android.view.Window.Callback
 import typingsSlinky.androiduix.android.view.animation.Animation
 import typingsSlinky.androiduix.android.widget.PopupWindow.OnDismissListener
-import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.widget.PopupWindow")
 @js.native
-class PopupWindow_ protected () extends Callback {
-  def this(contentView: View) = this()
-  def this(context: Context) = this()
-  def this(contentView: View, width: Double) = this()
-  def this(context: Context, styleAttr: Map[String, String]) = this()
-  def this(contentView: View, width: Double, height: Double) = this()
-  def this(contentView: View, width: Double, height: Double, focusable: Boolean) = this()
+trait PopupWindow_ extends Callback {
   var mAboveAnchor: js.Any = js.native
   var mAboveAnchorBackgroundDrawable: js.Any = js.native
   var mAllowScrollingAnchorParent: js.Any = js.native

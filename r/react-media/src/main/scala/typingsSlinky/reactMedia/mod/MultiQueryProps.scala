@@ -1,9 +1,9 @@
 package typingsSlinky.reactMedia.mod
 
+import org.scalajs.dom.raw.Window
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.std.Partial
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait MultiQueryProps[Queries] extends js.Object {
   var onChange: js.UndefOr[js.Function1[/* matches */ QueryResults[Queries], Unit]] = js.native
   var queries: Queries = js.native
   var render: js.UndefOr[js.Function0[TagMod[Any]]] = js.native
-  var targetWindow: js.UndefOr[Window_] = js.native
+  var targetWindow: js.UndefOr[Window] = js.native
 }
 
 object MultiQueryProps {
@@ -98,7 +98,7 @@ object MultiQueryProps {
         ret
     }
     @scala.inline
-    def withTargetWindow(value: Window_): Self[Queries] = {
+    def withTargetWindow(value: Window): Self[Queries] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("targetWindow")(value.asInstanceOf[js.Any])
         ret

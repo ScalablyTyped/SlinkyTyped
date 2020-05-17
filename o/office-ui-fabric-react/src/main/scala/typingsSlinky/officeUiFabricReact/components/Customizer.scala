@@ -3,7 +3,7 @@ package typingsSlinky.officeUiFabricReact.components
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.uifabricUtilities.ReadonlyICustomizerContex
+import typingsSlinky.uifabricUtilities.anon.ReadonlyICustomizerContex
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.customizationsMod.ISettings
 import typingsSlinky.uifabricUtilities.customizationsMod.ISettingsFunction

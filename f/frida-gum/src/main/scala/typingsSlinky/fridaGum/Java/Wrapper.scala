@@ -42,11 +42,11 @@ trait Wrapper[T /* <: Members[T] */]
     * Instance used for chaining up to super-class method implementations.
     */
   @JSName("$super")
-  var $super: typingsSlinky.fridaGum.Wrapper = js.native
+  var $super: typingsSlinky.fridaGum.anon.Wrapper = js.native
   /**
     * Retrieves a `java.lang.Class` wrapper for the current class.
     */
-  var `class`: typingsSlinky.fridaGum.Wrapper = js.native
+  var `class`: typingsSlinky.fridaGum.anon.Wrapper = js.native
   /**
     * Allocates a new instance without initializing it.
     *

@@ -1,9 +1,9 @@
 package typingsSlinky.antDesignReactNative.cardMod
 
-import typingsSlinky.antDesignReactNative.AnonFull
-import typingsSlinky.antDesignReactNative.TypeofCardBody
-import typingsSlinky.antDesignReactNative.TypeofCardFooter
-import typingsSlinky.antDesignReactNative.TypeofCardHeader
+import typingsSlinky.antDesignReactNative.anon.Full
+import typingsSlinky.antDesignReactNative.anon.TypeofCardBody
+import typingsSlinky.antDesignReactNative.anon.TypeofCardFooter
+import typingsSlinky.antDesignReactNative.anon.TypeofCardHeader
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,6 +19,6 @@ object default extends js.Object {
   var Body: TypeofCardBody = js.native
   var Footer: TypeofCardFooter = js.native
   var Header: TypeofCardHeader = js.native
-  var defaultProps: AnonFull = js.native
+  var defaultProps: Full = js.native
 }
 

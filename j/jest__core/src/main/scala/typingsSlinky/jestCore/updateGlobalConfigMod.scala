@@ -1,5 +1,6 @@
 package typingsSlinky.jestCore
 
+import typingsSlinky.jestCore.anon.PartialPickGlobalConfigba
 import typingsSlinky.jestTypes.configMod.GlobalConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`

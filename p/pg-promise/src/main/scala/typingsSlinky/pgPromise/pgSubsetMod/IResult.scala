@@ -1,6 +1,6 @@
 package typingsSlinky.pgPromise.pgSubsetMod
 
-import typingsSlinky.pgPromise.AnonBinary
+import typingsSlinky.pgPromise.anon.Binary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IResult extends js.Object {
   var _parsers: js.Array[js.Function] = js.native
-  var _types: AnonBinary = js.native
+  var _types: Binary = js.native
   var command: String = js.native
   var fields: js.Array[IColumn] = js.native
   // properties below are not available within Native Bindings:
@@ -21,7 +21,7 @@ object IResult {
   @scala.inline
   def apply(
     _parsers: js.Array[js.Function],
-    _types: AnonBinary,
+    _types: Binary,
     command: String,
     fields: js.Array[IColumn],
     rowAsArray: Boolean,
@@ -44,7 +44,7 @@ object IResult {
         ret
     }
     @scala.inline
-    def with_types(value: AnonBinary): Self = {
+    def with_types(value: Binary): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("_types")(value.asInstanceOf[js.Any])
         ret

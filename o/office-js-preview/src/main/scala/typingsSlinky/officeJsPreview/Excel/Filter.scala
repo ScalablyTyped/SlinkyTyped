@@ -1,9 +1,9 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.FilterData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.FilterLoadOptions
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.AboveAverage
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.AllDatesInPeriodApril
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.AllDatesInPeriodAugust
@@ -51,9 +51,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.2]
   */
-@JSGlobal("Excel.Filter")
 @js.native
-class Filter () extends ClientObject {
+trait Filter extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_Filter: RequestContext = js.native
@@ -184,7 +183,7 @@ class Filter () extends ClientObject {
     */
   def load(): Filter = js.native
   def load(options: FilterLoadOptions): Filter = js.native
-  def load(propertyNamesAndPaths: AnonExpand): Filter = js.native
+  def load(propertyNamesAndPaths: Expand): Filter = js.native
   def load(propertyNames: String): Filter = js.native
   def load(propertyNames: js.Array[String]): Filter = js.native
   /**

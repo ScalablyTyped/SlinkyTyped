@@ -1,6 +1,6 @@
 package typingsSlinky.jqueryAjaxChain.ajaxChain
 
-import typingsSlinky.jquery.JQuery_.PromiseBase
+import typingsSlinky.jquery.JQuery.PromiseBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

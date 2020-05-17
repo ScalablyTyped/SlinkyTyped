@@ -1,6 +1,6 @@
 package typingsSlinky.nivoLine.mod
 
-import typingsSlinky.nivoLine.AnonX
+import typingsSlinky.nivoLine.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LineComputedSerieDatum extends js.Object {
   var data: LineDatum = js.native
-  var position: AnonX = js.native
+  var position: X = js.native
 }
 
 object LineComputedSerieDatum {
   @scala.inline
-  def apply(data: LineDatum, position: AnonX): LineComputedSerieDatum = {
+  def apply(data: LineDatum, position: X): LineComputedSerieDatum = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any])
     __obj.asInstanceOf[LineComputedSerieDatum]
   }
@@ -30,7 +30,7 @@ object LineComputedSerieDatum {
         ret
     }
     @scala.inline
-    def withPosition(value: AnonX): Self = {
+    def withPosition(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.onionoo.mod.Onionoo
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.onionoo.PartialRecord1week1month6
+import typingsSlinky.onionoo.anon.PartialRecord1week1month6
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

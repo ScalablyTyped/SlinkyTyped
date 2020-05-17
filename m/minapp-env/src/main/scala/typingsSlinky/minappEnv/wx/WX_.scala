@@ -1,18 +1,18 @@
 package typingsSlinky.minappEnv.wx
 
-import typingsSlinky.minappEnv.AnonCallFunction
+import typingsSlinky.minappEnv.anon.CallFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait WX_ extends js.Object {
-  var cloud: AnonCallFunction = js.native
+  var cloud: CallFunction = js.native
 }
 
 object WX_ {
   @scala.inline
-  def apply(cloud: AnonCallFunction): WX_ = {
+  def apply(cloud: CallFunction): WX_ = {
     val __obj = js.Dynamic.literal(cloud = cloud.asInstanceOf[js.Any])
     __obj.asInstanceOf[WX_]
   }
@@ -23,7 +23,7 @@ object WX_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCloud(value: AnonCallFunction): Self = {
+    def withCloud(value: CallFunction): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cloud")(value.asInstanceOf[js.Any])
         ret

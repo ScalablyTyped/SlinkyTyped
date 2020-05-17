@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientClassroom.gapi.client.classroom
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientClassroom.AnonAccesstoken
-import typingsSlinky.gapiClientClassroom.AnonAlias
-import typingsSlinky.gapiClientClassroom.AnonAlt
-import typingsSlinky.gapiClientClassroom.AnonCallback
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientClassroom.anon.Accesstoken
+import typingsSlinky.gapiClientClassroom.anon.Alias
+import typingsSlinky.gapiClientClassroom.anon.Alt
+import typingsSlinky.gapiClientClassroom.anon.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,8 +24,8 @@ trait AliasesResource extends js.Object {
     * requesting user or course (for example, if a user not in a domain
     * attempts to access a domain-scoped alias).
     */
-  def create(request: AnonAccesstoken): Request_[CourseAlias] = js.native
-  def create(request: AnonAlt, body: CourseAlias): Request_[CourseAlias] = js.native
+  def create(request: Accesstoken): Request[CourseAlias] = js.native
+  def create(request: Alt, body: CourseAlias): Request[CourseAlias] = js.native
   /**
     * Deletes an alias of a course.
     *
@@ -38,8 +38,8 @@ trait AliasesResource extends js.Object {
     * requesting user or course (for example, if a user not in a domain
     * attempts to delete a domain-scoped alias).
     */
-  def delete(): Request_[js.Object] = js.native
-  def delete(request: AnonAlias): Request_[js.Object] = js.native
+  def delete(): Request[js.Object] = js.native
+  def delete(request: Alias): Request[js.Object] = js.native
   /**
     * Returns a list of aliases for a course.
     *
@@ -49,7 +49,7 @@ trait AliasesResource extends js.Object {
     * course or for access errors.
     * &#42; `NOT_FOUND` if the course does not exist.
     */
-  def list(): Request_[ListCourseAliasesResponse] = js.native
-  def list(request: AnonCallback): Request_[ListCourseAliasesResponse] = js.native
+  def list(): Request[ListCourseAliasesResponse] = js.native
+  def list(request: Callback): Request[ListCourseAliasesResponse] = js.native
 }
 

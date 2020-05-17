@@ -1,7 +1,7 @@
 package typingsSlinky.formatjsIntlUtils.displaynamesTypesMod
 
-import typingsSlinky.formatjsIntlUtils.AnonCurrency
-import typingsSlinky.formatjsIntlUtils.AnonLocale
+import typingsSlinky.formatjsIntlUtils.anon.Currency
+import typingsSlinky.formatjsIntlUtils.anon.Locale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,17 +13,17 @@ trait DisplayNamesData extends js.Object {
     * e.g. zh-Hans-SG + "{0}（{1}）" -> 简体中文（新加坡）
     * Here {0} is replaced by language display name and {1} is replaced by region display name.
     */
-  var patterns: AnonLocale = js.native
+  var patterns: Locale = js.native
   /**
     * Note that for style fields, `short` and `narrow` might not exist.
     * At runtime, the fallback order will be narrow -> short -> long.
     */
-  var types: AnonCurrency = js.native
+  var types: Currency = js.native
 }
 
 object DisplayNamesData {
   @scala.inline
-  def apply(patterns: AnonLocale, types: AnonCurrency): DisplayNamesData = {
+  def apply(patterns: Locale, types: Currency): DisplayNamesData = {
     val __obj = js.Dynamic.literal(patterns = patterns.asInstanceOf[js.Any], types = types.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisplayNamesData]
   }
@@ -34,13 +34,13 @@ object DisplayNamesData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPatterns(value: AnonLocale): Self = {
+    def withPatterns(value: Locale): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("patterns")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withTypes(value: AnonCurrency): Self = {
+    def withTypes(value: Currency): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
         ret

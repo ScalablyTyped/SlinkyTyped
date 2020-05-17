@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonKind
+import typingsSlinky.astTypes.anon.Kind
 import typingsSlinky.astTypes.astTypesStrings.constructor
 import typingsSlinky.astTypes.astTypesStrings.get
 import typingsSlinky.astTypes.astTypesStrings.method
@@ -22,6 +22,6 @@ trait MethodDefinitionBuilder extends js.Object {
   def apply(kind: method, key: ExpressionKind, value: FunctionKind, staticParam: Boolean): MethodDefinition = js.native
   def apply(kind: set, key: ExpressionKind, value: FunctionKind): MethodDefinition = js.native
   def apply(kind: set, key: ExpressionKind, value: FunctionKind, staticParam: Boolean): MethodDefinition = js.native
-  def from(params: AnonKind): MethodDefinition = js.native
+  def from(params: Kind): MethodDefinition = js.native
 }
 

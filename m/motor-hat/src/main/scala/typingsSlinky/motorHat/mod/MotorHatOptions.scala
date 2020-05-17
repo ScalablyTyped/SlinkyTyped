@@ -1,6 +1,6 @@
 package typingsSlinky.motorHat.mod
 
-import typingsSlinky.motorHat.AnonW2
+import typingsSlinky.motorHat.anon.W2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,7 +37,7 @@ trait MotorHatOptions extends js.Object {
     * { W1: winding, W2: winding }. Each winding should be one of following: 'M1', 'M2', 'M3',
     * 'M4' depending on the port the stepper is connected to. Correct example: { W1: 'M3', W2: 'M1' }
     */
-  var steppers: js.UndefOr[js.Array[AnonW2]] = js.native
+  var steppers: js.UndefOr[js.Array[W2]] = js.native
 }
 
 object MotorHatOptions {
@@ -101,7 +101,7 @@ object MotorHatOptions {
         ret
     }
     @scala.inline
-    def withSteppers(value: js.Array[AnonW2]): Self = {
+    def withSteppers(value: js.Array[W2]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("steppers")(value.asInstanceOf[js.Any])
         ret

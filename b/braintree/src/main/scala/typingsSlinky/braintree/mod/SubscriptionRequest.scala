@@ -1,24 +1,24 @@
 package typingsSlinky.braintree.mod
 
-import typingsSlinky.braintree.AnonAdd
-import typingsSlinky.braintree.AnonDoNotInheritAddOnsOrDiscounts
-import typingsSlinky.braintree.AnonRemove
+import typingsSlinky.braintree.anon.Add
+import typingsSlinky.braintree.anon.DoNotInheritAddOnsOrDiscounts
+import typingsSlinky.braintree.anon.Remove
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SubscriptionRequest extends js.Object {
-  var addOns: js.UndefOr[AnonAdd] = js.native
+  var addOns: js.UndefOr[Add] = js.native
   var billingDayOfMonth: js.UndefOr[Double] = js.native
   var descriptor: js.UndefOr[Descriptor] = js.native
-  var discounts: js.UndefOr[AnonRemove] = js.native
+  var discounts: js.UndefOr[Remove] = js.native
   var firstBillingDate: js.UndefOr[js.Date] = js.native
   var id: js.UndefOr[String] = js.native
   var merchantAccountId: js.UndefOr[String] = js.native
   var neverExpires: js.UndefOr[Boolean] = js.native
   var numberOfBillingCycles: js.UndefOr[Double] = js.native
-  var options: js.UndefOr[AnonDoNotInheritAddOnsOrDiscounts] = js.native
+  var options: js.UndefOr[DoNotInheritAddOnsOrDiscounts] = js.native
   var paymentMethodNonce: js.UndefOr[String] = js.native
   var paymentMethodToken: String = js.native
   var planId: String = js.native
@@ -53,7 +53,7 @@ object SubscriptionRequest {
         ret
     }
     @scala.inline
-    def withAddOns(value: AnonAdd): Self = {
+    def withAddOns(value: Add): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addOns")(value.asInstanceOf[js.Any])
         ret
@@ -89,7 +89,7 @@ object SubscriptionRequest {
         ret
     }
     @scala.inline
-    def withDiscounts(value: AnonRemove): Self = {
+    def withDiscounts(value: Remove): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("discounts")(value.asInstanceOf[js.Any])
         ret
@@ -161,7 +161,7 @@ object SubscriptionRequest {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonDoNotInheritAddOnsOrDiscounts): Self = {
+    def withOptions(value: DoNotInheritAddOnsOrDiscounts): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

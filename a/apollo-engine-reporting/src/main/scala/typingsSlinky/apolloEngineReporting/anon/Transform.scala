@@ -1,0 +1,36 @@
+package typingsSlinky.apolloEngineReporting.anon
+
+import typingsSlinky.apolloEngineReporting.agentMod.VariableValueOptions
+import typingsSlinky.apolloEngineReporting.agentMod.VariableValueTransformOptions
+import typingsSlinky.std.Record
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Transform extends VariableValueOptions {
+  def transform(options: VariableValueTransformOptions): Record[String, _] = js.native
+}
+
+object Transform {
+  @scala.inline
+  def apply(transform: VariableValueTransformOptions => Record[String, _]): Transform = {
+    val __obj = js.Dynamic.literal(transform = js.Any.fromFunction1(transform))
+    __obj.asInstanceOf[Transform]
+  }
+  @scala.inline
+  implicit class TransformOps[Self <: Transform] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTransform(value: VariableValueTransformOptions => Record[String, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
+

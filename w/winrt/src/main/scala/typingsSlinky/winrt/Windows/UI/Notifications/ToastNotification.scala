@@ -5,9 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.UI.Notifications.ToastNotification")
 @js.native
-class ToastNotification protected () extends IToastNotification {
-  def this(content: XmlDocument) = this()
+trait ToastNotification extends IToastNotification
+
+object ToastNotification {
+  @scala.inline
+  def apply(
+    content: XmlDocument,
+    expirationTime: js.Date,
+    onactivated: js.Any,
+    ondismissed: js.Any,
+    onfailed: js.Any
+  ): ToastNotification = {
+    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], expirationTime = expirationTime.asInstanceOf[js.Any], onactivated = onactivated.asInstanceOf[js.Any], ondismissed = ondismissed.asInstanceOf[js.Any], onfailed = onfailed.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ToastNotification]
+  }
 }
 

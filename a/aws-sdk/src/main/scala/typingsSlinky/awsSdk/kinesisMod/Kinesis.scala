@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.kinesisMod
 
-import typingsSlinky.awsSdk.DescribeStreamInputwaiter
+import typingsSlinky.awsSdk.anon.DescribeStreamInputwaiter
 import typingsSlinky.awsSdk.awsSdkStrings.streamExists
 import typingsSlinky.awsSdk.awsSdkStrings.streamNotExists
 import typingsSlinky.awsSdk.configMod.ConfigBase

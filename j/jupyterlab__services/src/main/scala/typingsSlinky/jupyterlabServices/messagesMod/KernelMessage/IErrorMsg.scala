@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabServices.messagesMod.KernelMessage
 
-import typingsSlinky.jupyterlabServices.AnonEname
+import typingsSlinky.jupyterlabServices.anon.Ename
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.error
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.iopub
 import typingsSlinky.phosphorCoreutils.jsonMod.JSONObject
@@ -16,16 +16,16 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IErrorMsg
   extends IIOPubMessage[error]
-     with _Message {
+     with Message {
   @JSName("content")
-  var content_IErrorMsg: AnonEname = js.native
+  var content_IErrorMsg: Ename = js.native
 }
 
 object IErrorMsg {
   @scala.inline
   def apply(
     channel: iopub,
-    content: AnonEname,
+    content: Ename,
     header: IHeader[error],
     metadata: JSONObject,
     parent_header: IHeader[MessageType] | js.Object
@@ -40,7 +40,7 @@ object IErrorMsg {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContent(value: AnonEname): Self = {
+    def withContent(value: Ename): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,9 +43,4 @@ trait CSSStyleSheet extends StyleSheet {
   def removeImport(lIndex: Double): Unit = js.native
   def removeRule(lIndex: Double): Unit = js.native
 }
-
-@JSGlobal("CSSStyleSheet")
-@js.native
-object CSSStyleSheet
-  extends Instantiable0[org.scalajs.dom.raw.CSSStyleSheet]
 

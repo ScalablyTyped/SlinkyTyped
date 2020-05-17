@@ -1,6 +1,7 @@
 package typingsSlinky.welldoneSoftwareWhyDidYouRender
 
 import typingsSlinky.welldoneSoftwareWhyDidYouRender.WhyDidYouRender.WhyDidYouRenderOptions
+import typingsSlinky.welldoneSoftwareWhyDidYouRender.anon.TypeofReact
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

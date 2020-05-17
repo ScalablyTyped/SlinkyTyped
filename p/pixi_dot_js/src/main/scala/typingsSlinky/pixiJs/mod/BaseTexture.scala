@@ -4,8 +4,8 @@ import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLVideoElement
 import org.scalajs.dom.raw.SVGElement
-import typingsSlinky.pixiJs.AnonAlphaMode
 import typingsSlinky.pixiJs.PIXI.resources.Resource
+import typingsSlinky.pixiJs.anon.AlphaMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,11 +45,11 @@ class BaseTexture ()
   def this(resource: HTMLCanvasElement) = this()
   def this(resource: HTMLImageElement) = this()
   def this(resource: HTMLVideoElement) = this()
-  def this(resource: String, options: AnonAlphaMode) = this()
-  def this(resource: Resource, options: AnonAlphaMode) = this()
-  def this(resource: HTMLCanvasElement, options: AnonAlphaMode) = this()
-  def this(resource: HTMLImageElement, options: AnonAlphaMode) = this()
-  def this(resource: HTMLVideoElement, options: AnonAlphaMode) = this()
+  def this(resource: String, options: AlphaMode) = this()
+  def this(resource: Resource, options: AlphaMode) = this()
+  def this(resource: HTMLCanvasElement, options: AlphaMode) = this()
+  def this(resource: HTMLImageElement, options: AlphaMode) = this()
+  def this(resource: HTMLVideoElement, options: AlphaMode) = this()
 }
 
 /* static members */

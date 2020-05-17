@@ -1,6 +1,6 @@
 package typingsSlinky.egg.mod
 
-import typingsSlinky.egg.AnonFieldNameSize
+import typingsSlinky.egg.anon.FieldNameSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait GetFileStreamOptions extends js.Object {
   ] = js.native
    // required file submit, default is true
   var defCharset: js.UndefOr[String] = js.native
-  var limits: js.UndefOr[AnonFieldNameSize] = js.native
+  var limits: js.UndefOr[FieldNameSize] = js.native
   var requireFile: js.UndefOr[Boolean] = js.native
 }
 
@@ -62,7 +62,7 @@ object GetFileStreamOptions {
         ret
     }
     @scala.inline
-    def withLimits(value: AnonFieldNameSize): Self = {
+    def withLimits(value: FieldNameSize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("limits")(value.asInstanceOf[js.Any])
         ret

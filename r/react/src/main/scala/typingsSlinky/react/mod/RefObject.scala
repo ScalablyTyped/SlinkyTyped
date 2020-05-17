@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RefObject[T] extends js.Object {
+trait RefObject[T] extends Ref[T] {
   val current: T | Null = js.native
 }
 

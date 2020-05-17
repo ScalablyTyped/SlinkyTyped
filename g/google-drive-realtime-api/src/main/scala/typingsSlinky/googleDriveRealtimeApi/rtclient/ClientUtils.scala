@@ -1,6 +1,6 @@
 package typingsSlinky.googleDriveRealtimeApi.rtclient
 
-import typingsSlinky.googleDriveRealtimeApi.AnonFileIds
+import typingsSlinky.googleDriveRealtimeApi.anon.FileIds
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait ClientUtils extends js.Object {
   var RealtimeLoader: RealtimeLoaderFactory = js.native
   // INCOMPLETE
-  var params: AnonFileIds = js.native
+  var params: FileIds = js.native
   /**
   		 * Creates a new Realtime file.
   		 * @param title {string} title of the newly created file.
@@ -24,7 +24,7 @@ object ClientUtils {
   def apply(
     RealtimeLoader: RealtimeLoaderFactory,
     createRealtimeFile: (String, String, js.Function1[/* file */ DriveAPIFileResource, Unit]) => Unit,
-    params: AnonFileIds
+    params: FileIds
   ): ClientUtils = {
     val __obj = js.Dynamic.literal(RealtimeLoader = RealtimeLoader.asInstanceOf[js.Any], createRealtimeFile = js.Any.fromFunction3(createRealtimeFile), params = params.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientUtils]
@@ -48,7 +48,7 @@ object ClientUtils {
         ret
     }
     @scala.inline
-    def withParams(value: AnonFileIds): Self = {
+    def withParams(value: FileIds): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
         ret

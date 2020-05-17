@@ -4,7 +4,7 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.WeakValidationMap
 import typingsSlinky.std.Partial
-import typingsSlinky.styledComponents.AnonAs
+import typingsSlinky.styledComponents.anon.As
 import typingsSlinky.styledComponents.styledComponentsStrings.`object`
 import typingsSlinky.styledComponents.styledComponentsStrings.`var`
 import typingsSlinky.styledComponents.styledComponentsStrings.a
@@ -204,7 +204,7 @@ trait StyledComponentBase[C /* <: /* import warning: LimitUnionLength.leaveTypeR
   //   props: StyledComponentPropsWithAs<AsC, T, O, A>
   // ): React.ReactElement<StyledComponentPropsWithAs<AsC, T, O, A>>
   // TODO (TypeScript 3.2): delete this overload
-  def apply(props: (StyledComponentProps[C, T, O, A]) with AnonAs): ReactElement = js.native
+  def apply(props: (StyledComponentProps[C, T, O, A]) with As): ReactElement = js.native
   def withComponent[WithC /* <: ReactComponentClass[_] */](component: WithC): StyledComponent[WithC, T, O, A] = js.native
   @JSName("withComponent")
   def withComponent_WithC_AnyStyledComponent[WithC /* <: AnyStyledComponent */](component: WithC): StyledComponent[

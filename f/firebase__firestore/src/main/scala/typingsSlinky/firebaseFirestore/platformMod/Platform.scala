@@ -1,12 +1,12 @@
 package typingsSlinky.firebaseFirestore.platformMod
 
+import org.scalajs.dom.raw.Document
+import org.scalajs.dom.raw.Window
 import typingsSlinky.firebaseFirestore.connectionMod.Connection
 import typingsSlinky.firebaseFirestore.connectivityMonitorMod.ConnectivityMonitor
 import typingsSlinky.firebaseFirestore.databaseInfoMod.DatabaseId
 import typingsSlinky.firebaseFirestore.databaseInfoMod.DatabaseInfo
 import typingsSlinky.firebaseFirestore.serializerMod.JsonProtoSerializer
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,9 @@ trait Platform extends js.Object {
   /** True if and only if the Base64 conversion functions are available. */
   val base64Available: Boolean = js.native
   /** The Platform's 'document' implementation or null if not available. */
-  val document: Document_ | Null = js.native
+  val document: Document | Null = js.native
   /** The Platform's 'window' implementation or null if not available. */
-  val window: Window_ | Null = js.native
+  val window: Window | Null = js.native
   /** Converts a Base64 encoded string to a binary string. */
   def atob(encoded: String): String = js.native
   /** Converts a binary string to a Base64 encoded string. */
@@ -93,7 +93,7 @@ object Platform {
         ret
     }
     @scala.inline
-    def withDocument(value: Document_): Self = {
+    def withDocument(value: Document): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
         ret
@@ -105,7 +105,7 @@ object Platform {
         ret
     }
     @scala.inline
-    def withWindow(value: Window_): Self = {
+    def withWindow(value: Window): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("window")(value.asInstanceOf[js.Any])
         ret

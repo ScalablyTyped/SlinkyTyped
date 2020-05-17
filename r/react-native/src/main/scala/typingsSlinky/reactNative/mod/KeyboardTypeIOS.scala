@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactNative.reactNativeStrings.twitter
   - typingsSlinky.reactNative.reactNativeStrings.`web-search`
 */
-trait KeyboardTypeIOS extends _KeyboardTypeOptions
+trait KeyboardTypeIOS extends KeyboardTypeOptions
 
 object KeyboardTypeIOS {
   @scala.inline

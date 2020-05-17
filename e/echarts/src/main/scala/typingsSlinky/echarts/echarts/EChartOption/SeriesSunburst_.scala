@@ -1,9 +1,9 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonBorderType
-import typingsSlinky.echarts.AnonDownplay
-import typingsSlinky.echarts.AnonLabelAnonMinAngle
-import typingsSlinky.echarts.AnonMinAngle
+import typingsSlinky.echarts.anon.BorderType
+import typingsSlinky.echarts.anon.Downplay
+import typingsSlinky.echarts.anon.LabelMinAngle
+import typingsSlinky.echarts.anon.MinAngle
 import typingsSlinky.echarts.echarts.EChartOption.SeriesSunburst.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -173,7 +173,7 @@ trait SeriesSunburst_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.downplay
     */
-  var downplay: js.UndefOr[AnonLabelAnonMinAngle] = js.native
+  var downplay: js.UndefOr[LabelMinAngle] = js.native
   /**
     * Item style when mouse is hovering. See
     * [highlightPolicy](https://echarts.apache.org/en/option.html#series-sunburst.highlightPolicy)
@@ -182,7 +182,7 @@ trait SeriesSunburst_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.emphasis
     */
-  var emphasis: js.UndefOr[AnonLabelAnonMinAngle] = js.native
+  var emphasis: js.UndefOr[LabelMinAngle] = js.native
   /**
     * Item style when mouse is hovering related items. See
     * [highlightPolicy](https://echarts.apache.org/en/option.html#series-sunburst.highlightPolicy)
@@ -191,7 +191,7 @@ trait SeriesSunburst_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.highlight
     */
-  var highlight: js.UndefOr[AnonLabelAnonMinAngle] = js.native
+  var highlight: js.UndefOr[LabelMinAngle] = js.native
   /**
     * When mouse hovers a sector, the sector is emphasized.
     * **If `highlightPolicy` is set to be `'descendant'`, then the
@@ -268,7 +268,7 @@ trait SeriesSunburst_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBorderType] = js.native
+  var itemStyle: js.UndefOr[BorderType] = js.native
   /**
     * `label` sets the text style for every sectors.
     *
@@ -290,7 +290,7 @@ trait SeriesSunburst_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.label
     */
-  var label: js.UndefOr[AnonMinAngle] = js.native
+  var label: js.UndefOr[MinAngle] = js.native
   /**
     * **Multiple levels**
     *
@@ -312,7 +312,7 @@ trait SeriesSunburst_ extends js.Object {
     * []
     * @see https://echarts.apache.org/en/option.html#series-sunburst.levels
     */
-  var levels: js.UndefOr[AnonDownplay] = js.native
+  var levels: js.UndefOr[Downplay] = js.native
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -554,7 +554,7 @@ object SeriesSunburst_ {
         ret
     }
     @scala.inline
-    def withDownplay(value: AnonLabelAnonMinAngle): Self = {
+    def withDownplay(value: LabelMinAngle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("downplay")(value.asInstanceOf[js.Any])
         ret
@@ -566,7 +566,7 @@ object SeriesSunburst_ {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonLabelAnonMinAngle): Self = {
+    def withEmphasis(value: LabelMinAngle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -578,7 +578,7 @@ object SeriesSunburst_ {
         ret
     }
     @scala.inline
-    def withHighlight(value: AnonLabelAnonMinAngle): Self = {
+    def withHighlight(value: LabelMinAngle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(value.asInstanceOf[js.Any])
         ret
@@ -614,7 +614,7 @@ object SeriesSunburst_ {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonBorderType): Self = {
+    def withItemStyle(value: BorderType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -626,7 +626,7 @@ object SeriesSunburst_ {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonMinAngle): Self = {
+    def withLabel(value: MinAngle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -638,7 +638,7 @@ object SeriesSunburst_ {
         ret
     }
     @scala.inline
-    def withLevels(value: AnonDownplay): Self = {
+    def withLevels(value: Downplay): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("levels")(value.asInstanceOf[js.Any])
         ret

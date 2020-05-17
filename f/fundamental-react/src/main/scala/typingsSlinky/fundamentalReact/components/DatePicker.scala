@@ -2,9 +2,9 @@ package typingsSlinky.fundamentalReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.fundamentalReact.AnonDate
-import typingsSlinky.fundamentalReact.AnonNextMonth
-import typingsSlinky.fundamentalReact.AnonState
+import typingsSlinky.fundamentalReact.anon.Date
+import typingsSlinky.fundamentalReact.anon.NextMonth
+import typingsSlinky.fundamentalReact.anon.State
 import typingsSlinky.fundamentalReact.datePickerMod.DatePickerProps
 import typingsSlinky.fundamentalReact.datePickerMod.default
 import scala.scalajs.js
@@ -49,11 +49,11 @@ object DatePicker {
     @scala.inline
     def locale(value: String): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline
-    def localizedText(value: AnonNextMonth): this.type = set("localizedText", value.asInstanceOf[js.Any])
+    def localizedText(value: NextMonth): this.type = set("localizedText", value.asInstanceOf[js.Any])
     @scala.inline
-    def onBlur(value: /* hasDateFormattedDate */ AnonDate => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    def onBlur(value: /* hasDateFormattedDate */ Date => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def validationState(value: AnonState): this.type = set("validationState", value.asInstanceOf[js.Any])
+    def validationState(value: State): this.type = set("validationState", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: DatePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SpatialReference extends js.Object {
+trait SpatialReference extends SpatialReferenceExpression {
   var wkid: js.UndefOr[Double] = js.native
   var wkt: js.UndefOr[String] = js.native
 }

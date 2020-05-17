@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.charm.charmStrings.black
   - typingsSlinky.charm.charmStrings.white
 */
-trait CharmColorName extends js.Object
+trait CharmColorName extends CharmColor
 
 object CharmColorName {
   @scala.inline

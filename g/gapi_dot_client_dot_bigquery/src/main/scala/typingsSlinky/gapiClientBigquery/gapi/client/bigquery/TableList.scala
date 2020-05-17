@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientBigquery.gapi.client.bigquery
 
-import typingsSlinky.gapiClientBigquery.AnonCreationTime
+import typingsSlinky.gapiClientBigquery.anon.CreationTime
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait TableList extends js.Object {
   /** A token to request the next page of results. */
   var nextPageToken: js.UndefOr[String] = js.native
   /** Tables in the requested dataset. */
-  var tables: js.UndefOr[js.Array[AnonCreationTime]] = js.native
+  var tables: js.UndefOr[js.Array[CreationTime]] = js.native
   /** The total number of tables in the dataset. */
   var totalItems: js.UndefOr[Double] = js.native
 }
@@ -68,7 +68,7 @@ object TableList {
         ret
     }
     @scala.inline
-    def withTables(value: js.Array[AnonCreationTime]): Self = {
+    def withTables(value: js.Array[CreationTime]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tables")(value.asInstanceOf[js.Any])
         ret

@@ -1,11 +1,12 @@
 package typingsSlinky.w3cImageCapture
 
+import typingsSlinky.w3cImageCapture.W3C.ConstrainPoint2D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ConstrainPoint2DParameters extends js.Object {
+trait ConstrainPoint2DParameters extends ConstrainPoint2D {
   var exact: js.Array[Point2D] = js.native
   var ideal: js.Array[Point2D] = js.native
 }

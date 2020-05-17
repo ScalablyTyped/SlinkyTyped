@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Manages delayed navigation for an app. */
-@JSGlobal("Windows.UI.WebUI.WebUINavigatedDeferral")
 @js.native
-abstract class WebUINavigatedDeferral () extends js.Object {
+trait WebUINavigatedDeferral extends js.Object {
   /** Notifies the system that the app has set up its state and UI and is ready to be displayed after a top level navigation. */
   def complete(): Unit = js.native
+}
+
+object WebUINavigatedDeferral {
+  @scala.inline
+  def apply(complete: () => Unit): WebUINavigatedDeferral = {
+    val __obj = js.Dynamic.literal(complete = js.Any.fromFunction0(complete))
+    __obj.asInstanceOf[WebUINavigatedDeferral]
+  }
+  @scala.inline
+  implicit class WebUINavigatedDeferralOps[Self <: WebUINavigatedDeferral] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComplete(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

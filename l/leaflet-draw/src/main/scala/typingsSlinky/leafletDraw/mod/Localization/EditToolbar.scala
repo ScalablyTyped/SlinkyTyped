@@ -1,20 +1,19 @@
 package typingsSlinky.leafletDraw.mod.Localization
 
-import typingsSlinky.leafletDraw.AnonCancel
-import typingsSlinky.leafletDraw.AnonEdit
+import typingsSlinky.leafletDraw.anon.Cancel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait EditToolbar extends js.Object {
-  var actions: AnonCancel = js.native
-  var buttons: AnonEdit = js.native
+  var actions: Cancel = js.native
+  var buttons: typingsSlinky.leafletDraw.anon.Edit = js.native
 }
 
 object EditToolbar {
   @scala.inline
-  def apply(actions: AnonCancel, buttons: AnonEdit): EditToolbar = {
+  def apply(actions: Cancel, buttons: typingsSlinky.leafletDraw.anon.Edit): EditToolbar = {
     val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], buttons = buttons.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditToolbar]
   }
@@ -25,13 +24,13 @@ object EditToolbar {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActions(value: AnonCancel): Self = {
+    def withActions(value: Cancel): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withButtons(value: AnonEdit): Self = {
+    def withButtons(value: typingsSlinky.leafletDraw.anon.Edit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
         ret

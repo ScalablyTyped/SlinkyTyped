@@ -1,6 +1,6 @@
 package typingsSlinky.gfc.mod
 
-import typingsSlinky.gfc.AnonContents
+import typingsSlinky.gfc.anon.Contents
 import typingsSlinky.gfc.gfcBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ trait Options[TExecOptions] extends js.Object {
   var commit: js.UndefOr[Boolean] = js.native
   var cwd: js.UndefOr[String] = js.native
   var exec: js.UndefOr[TExecOptions] = js.native
-  var file: js.UndefOr[AnonContents | `false`] = js.native
+  var file: js.UndefOr[Contents | `false`] = js.native
   var forceFile: js.UndefOr[Boolean] = js.native
   var message: js.UndefOr[String] = js.native
   var push: js.UndefOr[Boolean] = js.native
@@ -67,7 +67,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withFile(value: AnonContents | `false`): Self[TExecOptions] = {
+    def withFile(value: Contents | `false`): Self[TExecOptions] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.sharepoint.SP.JsGrid
 
-import typingsSlinky.sharepoint.AnonBDelayInit
-import typingsSlinky.sharepoint.AnonDataValue
+import typingsSlinky.sharepoint.anon.BDelayInit
+import typingsSlinky.sharepoint.anon.DataValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait IMultiValuePropertyType extends IPropertyType {
   var bMultiValue: Boolean = js.native
   var separator: String = js.native
   var singleValuePropType: String = js.native
-  def GetSerializableMultiValuePropType(): AnonBDelayInit = js.native
+  def GetSerializableMultiValuePropType(): BDelayInit = js.native
   def InitSingleValuePropType(): Unit = js.native
   def LocStrArrayToLocStr(locStrArray: js.Array[String]): String = js.native
   def LocStrToLocStrArray(locStr: String): js.Array[String] = js.native
@@ -21,8 +21,8 @@ trait IMultiValuePropertyType extends IPropertyType {
 object IMultiValuePropertyType {
   @scala.inline
   def apply(
-    BeginValidateNormalizeConvert: (Double, String, js.Any, Boolean, js.Function1[/* args */ AnonDataValue, Unit], js.Any) => Unit,
-    GetSerializableMultiValuePropType: () => AnonBDelayInit,
+    BeginValidateNormalizeConvert: (Double, String, js.Any, Boolean, js.Function1[/* args */ DataValue, Unit], js.Any) => Unit,
+    GetSerializableMultiValuePropType: () => BDelayInit,
     ID: String,
     InitSingleValuePropType: () => Unit,
     LocStrArrayToLocStr: js.Array[String] => String,
@@ -41,7 +41,7 @@ object IMultiValuePropertyType {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetSerializableMultiValuePropType(value: () => AnonBDelayInit): Self = {
+    def withGetSerializableMultiValuePropType(value: () => BDelayInit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("GetSerializableMultiValuePropType")(js.Any.fromFunction0(value))
         ret

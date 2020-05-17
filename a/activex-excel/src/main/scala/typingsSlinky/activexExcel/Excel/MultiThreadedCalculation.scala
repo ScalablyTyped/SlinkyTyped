@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Excel.MultiThreadedCalculation")
 @js.native
-class MultiThreadedCalculation protected () extends js.Object {
+trait MultiThreadedCalculation extends js.Object {
   val Application: typingsSlinky.activexExcel.Excel.Application = js.native
   val Creator: XlCreator = js.native
   var Enabled: Boolean = js.native
@@ -15,5 +14,72 @@ class MultiThreadedCalculation protected () extends js.Object {
   val Parent: js.Any = js.native
   var ThreadCount: Double = js.native
   var ThreadMode: XlThreadMode = js.native
+}
+
+object MultiThreadedCalculation {
+  @scala.inline
+  def apply(
+    Application: Application,
+    Creator: XlCreator,
+    Enabled: Boolean,
+    ExcelDotMultiThreadedCalculation_typekey: MultiThreadedCalculation,
+    Parent: js.Any,
+    ThreadCount: Double,
+    ThreadMode: XlThreadMode
+  ): MultiThreadedCalculation = {
+    val __obj = js.Dynamic.literal(Application = Application.asInstanceOf[js.Any], Creator = Creator.asInstanceOf[js.Any], Enabled = Enabled.asInstanceOf[js.Any], Parent = Parent.asInstanceOf[js.Any], ThreadCount = ThreadCount.asInstanceOf[js.Any], ThreadMode = ThreadMode.asInstanceOf[js.Any])
+    __obj.updateDynamic("Excel.MultiThreadedCalculation_typekey")(ExcelDotMultiThreadedCalculation_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MultiThreadedCalculation]
+  }
+  @scala.inline
+  implicit class MultiThreadedCalculationOps[Self <: MultiThreadedCalculation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplication(value: Application): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreator(value: XlCreator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExcelDotMultiThreadedCalculation_typekey(value: MultiThreadedCalculation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Excel.MultiThreadedCalculation_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThreadCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreadCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThreadMode(value: XlThreadMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ThreadMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

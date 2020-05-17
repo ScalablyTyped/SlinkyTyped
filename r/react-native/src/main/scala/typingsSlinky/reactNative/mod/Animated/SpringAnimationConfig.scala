@@ -1,6 +1,6 @@
 package typingsSlinky.reactNative.mod.Animated
 
-import typingsSlinky.reactNative.AnonX
+import typingsSlinky.reactNative.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,13 +18,13 @@ trait SpringAnimationConfig extends AnimationConfig {
   var speed: js.UndefOr[Double] = js.native
   var stiffness: js.UndefOr[Double] = js.native
   var tension: js.UndefOr[Double] = js.native
-  var toValue: Double | AnimatedValue | AnonX | AnimatedValueXY = js.native
-  var velocity: js.UndefOr[Double | AnonX] = js.native
+  var toValue: Double | AnimatedValue | X | AnimatedValueXY = js.native
+  var velocity: js.UndefOr[Double | X] = js.native
 }
 
 object SpringAnimationConfig {
   @scala.inline
-  def apply(toValue: Double | AnimatedValue | AnonX | AnimatedValueXY, useNativeDriver: Boolean): SpringAnimationConfig = {
+  def apply(toValue: Double | AnimatedValue | X | AnimatedValueXY, useNativeDriver: Boolean): SpringAnimationConfig = {
     val __obj = js.Dynamic.literal(toValue = toValue.asInstanceOf[js.Any], useNativeDriver = useNativeDriver.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpringAnimationConfig]
   }
@@ -35,7 +35,7 @@ object SpringAnimationConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withToValue(value: Double | AnimatedValue | AnonX | AnimatedValueXY): Self = {
+    def withToValue(value: Double | AnimatedValue | X | AnimatedValueXY): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toValue")(value.asInstanceOf[js.Any])
         ret
@@ -173,7 +173,7 @@ object SpringAnimationConfig {
         ret
     }
     @scala.inline
-    def withVelocity(value: Double | AnonX): Self = {
+    def withVelocity(value: Double | X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("velocity")(value.asInstanceOf[js.Any])
         ret

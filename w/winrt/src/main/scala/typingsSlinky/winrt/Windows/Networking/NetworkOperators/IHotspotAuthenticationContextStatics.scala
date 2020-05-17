@@ -1,18 +1,18 @@
 package typingsSlinky.winrt.Windows.Networking.NetworkOperators
 
-import typingsSlinky.winrt.AnonContext
+import typingsSlinky.winrt.anon.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IHotspotAuthenticationContextStatics extends js.Object {
-  def tryGetAuthenticationContext(evenToken: String): AnonContext = js.native
+  def tryGetAuthenticationContext(evenToken: String): Context = js.native
 }
 
 object IHotspotAuthenticationContextStatics {
   @scala.inline
-  def apply(tryGetAuthenticationContext: String => AnonContext): IHotspotAuthenticationContextStatics = {
+  def apply(tryGetAuthenticationContext: String => Context): IHotspotAuthenticationContextStatics = {
     val __obj = js.Dynamic.literal(tryGetAuthenticationContext = js.Any.fromFunction1(tryGetAuthenticationContext))
     __obj.asInstanceOf[IHotspotAuthenticationContextStatics]
   }
@@ -23,7 +23,7 @@ object IHotspotAuthenticationContextStatics {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTryGetAuthenticationContext(value: String => AnonContext): Self = {
+    def withTryGetAuthenticationContext(value: String => Context): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tryGetAuthenticationContext")(js.Any.fromFunction1(value))
         ret

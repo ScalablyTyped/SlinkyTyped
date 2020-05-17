@@ -1,5 +1,8 @@
 package typingsSlinky.typedoc
 
+import typingsSlinky.typedoc.anon.Area
+import typingsSlinky.typedoc.anon.Caption
+import typingsSlinky.typedoc.anon.Code
 import typingsSlinky.typedoc.navigationItemMod.NavigationItem
 import typingsSlinky.typedoc.reflectionsMod.Reflection
 import scala.scalajs.js
@@ -44,14 +47,14 @@ object outputPluginsMod extends js.Object {
   /* static members */
   @js.native
   object MarkedLinksPlugin extends js.Object {
-    def splitLinkText(text: String): AnonCaption = js.native
+    def splitLinkText(text: String): Caption = js.native
   }
   
   /* static members */
   @js.native
   object PrettyPrintPlugin extends js.Object {
-    var IGNORED_TAGS: AnonArea = js.native
-    var PRE_TAGS: AnonCode = js.native
+    var IGNORED_TAGS: Area = js.native
+    var PRE_TAGS: Code = js.native
   }
   
   /* static members */

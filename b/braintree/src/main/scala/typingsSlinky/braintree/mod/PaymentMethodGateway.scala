@@ -1,6 +1,6 @@
 package typingsSlinky.braintree.mod
 
-import typingsSlinky.braintree.AnonAllowVaulting
+import typingsSlinky.braintree.anon.AllowVaulting
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait PaymentMethodGateway extends js.Object {
   def create(request: PaymentMethodCreateRequest): js.Promise[ValidatedResponse[PaymentMethod]] = js.native
   def delete(token: String): js.Promise[Unit] = js.native
   def find(token: String): js.Promise[PaymentMethod] = js.native
-  def grant(sharedPaymentMethodToken: String, options: AnonAllowVaulting): js.Promise[ValidatedResponse[PaymentMethodNonce]] = js.native
+  def grant(sharedPaymentMethodToken: String, options: AllowVaulting): js.Promise[ValidatedResponse[PaymentMethodNonce]] = js.native
   def revoke(sharedPaymentMethodToken: String): js.Promise[Unit] = js.native
   def update(token: String, updates: PaymentMethodUpdateRequest): js.Promise[ValidatedResponse[PaymentMethod]] = js.native
 }
@@ -21,7 +21,7 @@ object PaymentMethodGateway {
     create: PaymentMethodCreateRequest => js.Promise[ValidatedResponse[PaymentMethod]],
     delete: String => js.Promise[Unit],
     find: String => js.Promise[PaymentMethod],
-    grant: (String, AnonAllowVaulting) => js.Promise[ValidatedResponse[PaymentMethodNonce]],
+    grant: (String, AllowVaulting) => js.Promise[ValidatedResponse[PaymentMethodNonce]],
     revoke: String => js.Promise[Unit],
     update: (String, PaymentMethodUpdateRequest) => js.Promise[ValidatedResponse[PaymentMethod]]
   ): PaymentMethodGateway = {
@@ -53,7 +53,7 @@ object PaymentMethodGateway {
         ret
     }
     @scala.inline
-    def withGrant(value: (String, AnonAllowVaulting) => js.Promise[ValidatedResponse[PaymentMethodNonce]]): Self = {
+    def withGrant(value: (String, AllowVaulting) => js.Promise[ValidatedResponse[PaymentMethodNonce]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("grant")(js.Any.fromFunction2(value))
         ret

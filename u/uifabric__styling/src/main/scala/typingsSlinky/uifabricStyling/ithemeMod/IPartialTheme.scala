@@ -1,12 +1,12 @@
 package typingsSlinky.uifabricStyling.ithemeMod
 
 import typingsSlinky.uifabricMergeStyles.istyleMod.IRawStyle
-import typingsSlinky.uifabricStyling.PartialIEffects
-import typingsSlinky.uifabricStyling.PartialIFontStyles
-import typingsSlinky.uifabricStyling.PartialIPalette
-import typingsSlinky.uifabricStyling.PartialISemanticColors
-import typingsSlinky.uifabricStyling.PartialISpacing
-import typingsSlinky.uifabricStyling.PinISchemeNamesIScheme
+import typingsSlinky.uifabricStyling.anon.PartialIEffects
+import typingsSlinky.uifabricStyling.anon.PartialIFontStyles
+import typingsSlinky.uifabricStyling.anon.PartialIPalette
+import typingsSlinky.uifabricStyling.anon.PartialISemanticColors
+import typingsSlinky.uifabricStyling.anon.PartialISpacing
+import typingsSlinky.uifabricStyling.anon.PinISchemeNamesIScheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

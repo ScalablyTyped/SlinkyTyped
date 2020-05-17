@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.schemasMod
 
-import typingsSlinky.awsSdk.DescribeCodeBindingReques
+import typingsSlinky.awsSdk.anon.DescribeCodeBindingReques
 import typingsSlinky.awsSdk.awsSdkStrings.codeBindingExists
 import typingsSlinky.awsSdk.configMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError

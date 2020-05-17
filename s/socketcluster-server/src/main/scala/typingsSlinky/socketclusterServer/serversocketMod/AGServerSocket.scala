@@ -1,15 +1,16 @@
 package typingsSlinky.socketclusterServer.serversocketMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.agSimpleBroker.mod.SimpleExchange
 import typingsSlinky.asyncStreamEmitter.mod.AsyncStreamEmitter
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.scErrors.mod.SocketProtocolErrorStatuses_
 import typingsSlinky.scErrors.mod.SocketProtocolIgnoreStatuses_
-import typingsSlinky.socketclusterServer.AnonBinary
-import typingsSlinky.socketclusterServer.AnonError
-import typingsSlinky.socketclusterServer.AnonMessage
-import typingsSlinky.socketclusterServer.AnonRejectOnFailedDelivery
-import typingsSlinky.socketclusterServer.AnonSignedAuthToken
+import typingsSlinky.socketclusterServer.anon.Binary
+import typingsSlinky.socketclusterServer.anon.Error
+import typingsSlinky.socketclusterServer.anon.Message
+import typingsSlinky.socketclusterServer.anon.RejectOnFailedDelivery
+import typingsSlinky.socketclusterServer.anon.SignedAuthToken
 import typingsSlinky.socketclusterServer.socketclusterServerStrings.authStateChange
 import typingsSlinky.socketclusterServer.socketclusterServerStrings.authTokenSigned
 import typingsSlinky.socketclusterServer.socketclusterServerStrings.authenticate
@@ -51,7 +52,7 @@ trait AGServerSocket
   var channelSubscriptionsCount: Double = js.native
   var cloneData: Boolean = js.native
   val errorStatuses: SocketProtocolErrorStatuses_ = js.native
-  var exchange: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AGSimpleBroker.SimpleExchange */ js.Any = js.native
+  var exchange: SimpleExchange = js.native
   var forwardedForAddress: js.UndefOr[String] = js.native
   var id: String = js.native
   val ignoreStatuses: SocketProtocolIgnoreStatuses_ = js.native
@@ -88,7 +89,7 @@ trait AGServerSocket
   def closeProcedure(procedureName: String): Unit = js.native
   def closeReceiver(receiverName: String): Unit = js.native
   def deauthenticate(): js.Promise[Unit] = js.native
-  def deauthenticate(options: AnonRejectOnFailedDelivery): js.Promise[Unit] = js.native
+  def deauthenticate(options: RejectOnFailedDelivery): js.Promise[Unit] = js.native
   def deauthenticateSelf(): Unit = js.native
   def decode(message: js.Any): js.Any = js.native
   def disconnect(): Unit = js.native
@@ -100,9 +101,9 @@ trait AGServerSocket
   @JSName("emit")
   def emit_authStateChange(eventName: authStateChange, data: StateChangeData): Unit = js.native
   @JSName("emit")
-  def emit_authTokenSigned(eventName: authTokenSigned): typingsSlinky.consumableStream.mod.^[AnonSignedAuthToken] = js.native
+  def emit_authTokenSigned(eventName: authTokenSigned): typingsSlinky.consumableStream.mod.^[SignedAuthToken] = js.native
   @JSName("emit")
-  def emit_authTokenSigned(eventName: authTokenSigned, data: AnonSignedAuthToken): Unit = js.native
+  def emit_authTokenSigned(eventName: authTokenSigned, data: SignedAuthToken): Unit = js.native
   @JSName("emit")
   def emit_authenticate(eventName: authenticate): typingsSlinky.consumableStream.mod.^[AuthenticateData] = js.native
   @JSName("emit")
@@ -132,17 +133,17 @@ trait AGServerSocket
   @JSName("emit")
   def emit_disconnect(eventName: disconnect, data: DisconnectData): Unit = js.native
   @JSName("emit")
-  def emit_error(eventName: error): typingsSlinky.consumableStream.mod.^[AnonError] = js.native
+  def emit_error(eventName: error): typingsSlinky.consumableStream.mod.^[Error] = js.native
   @JSName("emit")
-  def emit_error(eventName: error, data: AnonError): Unit = js.native
+  def emit_error(eventName: error, data: Error): Unit = js.native
   @JSName("emit")
-  def emit_message(eventName: message): typingsSlinky.consumableStream.mod.^[AnonMessage] = js.native
+  def emit_message(eventName: message): typingsSlinky.consumableStream.mod.^[Message] = js.native
   @JSName("emit")
-  def emit_message(eventName: message, data: AnonMessage): Unit = js.native
+  def emit_message(eventName: message, data: Message): Unit = js.native
   @JSName("emit")
-  def emit_raw(eventName: raw): typingsSlinky.consumableStream.mod.^[AnonMessage] = js.native
+  def emit_raw(eventName: raw): typingsSlinky.consumableStream.mod.^[Message] = js.native
   @JSName("emit")
-  def emit_raw(eventName: raw, data: AnonMessage): Unit = js.native
+  def emit_raw(eventName: raw, data: Message): Unit = js.native
   @JSName("emit")
   def emit_subscribe(eventName: subscribe): typingsSlinky.consumableStream.mod.^[SubscribeData] = js.native
   @JSName("emit")
@@ -194,7 +195,7 @@ trait AGServerSocket
   def killReceiverConsumer(consumerId: Double): Unit = js.native
   def procedure(procedureName: String): typingsSlinky.streamDemux.demuxedConsumableStreamMod.^[_] = js.native
   def receiver(receiverName: String): typingsSlinky.streamDemux.demuxedConsumableStreamMod.^[_] = js.native
-  def send(data: js.Any, options: AnonBinary): Unit = js.native
+  def send(data: js.Any, options: Binary): Unit = js.native
   def sendObject(`object`: js.Any): Unit = js.native
   def serializeObject(`object`: js.Any): js.Any = js.native
   def setAuthToken(data: AuthToken): js.Promise[Unit] = js.native

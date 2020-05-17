@@ -1,6 +1,6 @@
 package typingsSlinky.promClient.mod
 
-import typingsSlinky.promClient.FnCall
+import typingsSlinky.promClient.anon.FnCall
 import typingsSlinky.std.ReturnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`

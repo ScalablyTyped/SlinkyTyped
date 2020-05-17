@@ -1,31 +1,32 @@
 package typingsSlinky.reactInstantsearch.components
 
-import org.scalablytyped.runtime.StringDictionary
-import slinky.core.BuildingComponent
-import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
-import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.reactInstantsearchDom.AnonHit
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactInstantsearchDom.anon.Hit
 import typingsSlinky.reactInstantsearchDom.mod.HitsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Hits
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactInstantsearch.domMod.Hits[js.Any]] {
+object Hits {
   @JSImport("react-instantsearch/dom", "Hits")
   @js.native
-  object componentImport extends js.Object
+  object component extends js.Object
   
-  override val component: String | js.Object = this.componentImport
-  def apply[T](hitComponent: ReactComponentClass[AnonHit[T]] = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, typingsSlinky.reactInstantsearch.domMod.Hits[js.Any]] = {
-    val __obj = js.Dynamic.literal()
-    if (hitComponent != null) __obj.updateDynamic("hitComponent")(hitComponent.asInstanceOf[js.Any])
-    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactInstantsearch.domMod.Hits[js.Any]]]
+  @scala.inline
+  class Builder[T] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactInstantsearch.domMod.Hits[js.Any]] {
+    @scala.inline
+    def hitComponentFunctionComponent(value: ReactComponentClass[Hit[T]]): this.type = set("hitComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hitComponentComponentClass(value: ReactComponentClass[Hit[T]]): this.type = set("hitComponent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def hitComponent(value: ReactComponentClass[Hit[T]]): this.type = set("hitComponent", value.asInstanceOf[js.Any])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactInstantsearch.domMod.Hits[js.Any]] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactInstantsearch.domMod.Hits[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = HitsProps[js.Any]
+  
+  def withProps[T](p: HitsProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[T](companion: Hits.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

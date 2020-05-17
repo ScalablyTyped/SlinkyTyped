@@ -11,5 +11,4 @@ package object mod {
   type Callback = js.Function0[scala.Unit]
   type OrientationFlipType = typingsSlinky.chessboardjs.chessboardjsStrings.flip
   type PositionFenType = typingsSlinky.chessboardjs.chessboardjsStrings.fen
-  type PositionType = typingsSlinky.chessboardjs.chessboardjsStrings.start | java.lang.String | typingsSlinky.chessboardjs.mod.BoardPositionType
 }

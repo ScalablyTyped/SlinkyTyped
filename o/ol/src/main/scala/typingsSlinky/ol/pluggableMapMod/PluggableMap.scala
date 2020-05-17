@@ -1,5 +1,6 @@
 package typingsSlinky.ol.pluggableMapMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.TouchEvent
 import typingsSlinky.ol.coordinateMod.Coordinate
@@ -23,7 +24,6 @@ import typingsSlinky.ol.olStrings.rendercomplete
 import typingsSlinky.ol.olStrings.singleclick
 import typingsSlinky.ol.pixelMod.Pixel
 import typingsSlinky.ol.sizeMod.Size
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -79,9 +79,9 @@ trait PluggableMap
   def getControls(): typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.controlControlMod.default] = js.native
   def getCoordinateFromPixel(pixel: Pixel): Coordinate = js.native
   def getCoordinateFromPixelInternal(pixel: Pixel): Coordinate = js.native
-  def getEventCoordinate(event: Event_): Coordinate = js.native
-  def getEventCoordinateInternal(event: Event_): Coordinate = js.native
-  def getEventPixel(event: Event_): Pixel = js.native
+  def getEventCoordinate(event: Event): Coordinate = js.native
+  def getEventCoordinateInternal(event: Event): Coordinate = js.native
+  def getEventPixel(event: Event): Pixel = js.native
   def getEventPixel(event: TouchEvent): Pixel = js.native
   def getFeaturesAtPixel(pixel: Pixel): js.Array[FeatureLike] = js.native
   def getFeaturesAtPixel(pixel: Pixel, opt_options: AtPixelOptions): js.Array[FeatureLike] = js.native
@@ -108,8 +108,8 @@ trait PluggableMap
   ): Double = js.native
   def getView(): typingsSlinky.ol.viewMod.default = js.native
   def getViewport(): HTMLElement = js.native
-  def handleBrowserEvent(browserEvent: Event_): Unit = js.native
-  def handleBrowserEvent(browserEvent: Event_, opt_type: String): Unit = js.native
+  def handleBrowserEvent(browserEvent: Event): Unit = js.native
+  def handleBrowserEvent(browserEvent: Event, opt_type: String): Unit = js.native
   def handleMapBrowserEvent(mapBrowserEvent: typingsSlinky.ol.mapBrowserEventMod.default): Unit = js.native
   /* protected */ def handlePostRender(): Unit = js.native
   def hasFeatureAtPixel(pixel: Pixel): Boolean = js.native

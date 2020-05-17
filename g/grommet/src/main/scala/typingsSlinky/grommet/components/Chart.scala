@@ -2,10 +2,10 @@ package typingsSlinky.grommet.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.grommet.AnonColor
-import typingsSlinky.grommet.AnonHeight
-import typingsSlinky.grommet.AnonLabel
-import typingsSlinky.grommet.AnonValue
+import typingsSlinky.grommet.anon.Color
+import typingsSlinky.grommet.anon.Height
+import typingsSlinky.grommet.anon.Label
+import typingsSlinky.grommet.anon.Value
 import typingsSlinky.grommet.chartMod.ChartProps
 import typingsSlinky.grommet.grommetStrings.area
 import typingsSlinky.grommet.grommetStrings.bar
@@ -45,7 +45,7 @@ object Chart {
     @scala.inline
     def bounds(value: js.Array[js.Array[Double]]): this.type = set("bounds", value.asInstanceOf[js.Any])
     @scala.inline
-    def color(value: String | AnonColor | js.Array[AnonValue]): this.type = set("color", value.asInstanceOf[js.Any])
+    def color(value: String | Color | js.Array[Value]): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
     def gap(value: GapType): this.type = set("gap", value.asInstanceOf[js.Any])
     @scala.inline
@@ -61,7 +61,7 @@ object Chart {
     @scala.inline
     def round(value: Boolean): this.type = set("round", value.asInstanceOf[js.Any])
     @scala.inline
-    def size(value: xxsmall | xsmall | small | medium | large | xlarge | full | AnonHeight | String): this.type = set("size", value.asInstanceOf[js.Any])
+    def size(value: xxsmall | xsmall | small | medium | large | xlarge | full | Height | String): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline
     def thickness(value: hair | xsmall | small | medium | large | xlarge | none | String): this.type = set("thickness", value.asInstanceOf[js.Any])
     @scala.inline
@@ -70,7 +70,7 @@ object Chart {
   
   def withProps(p: ChartProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(values: js.Array[Double | js.Array[Double] | AnonLabel]): Builder = {
+  def apply(values: js.Array[Double | js.Array[Double] | Label]): Builder = {
     val __props = js.Dynamic.literal(values = values.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[ChartProps]))
   }

@@ -1,6 +1,6 @@
 package typingsSlinky.gestalt.mod
 
-import typingsSlinky.gestalt.AnonPath
+import typingsSlinky.gestalt.anon.Path
 import typingsSlinky.gestalt.gestaltStrings.blue
 import typingsSlinky.gestalt.gestaltStrings.darkGray
 import typingsSlinky.gestalt.gestaltStrings.eggplant
@@ -28,7 +28,7 @@ trait IconProps extends js.Object {
   var color: js.UndefOr[
     blue | darkGray | eggplant | gray | green | lightGray | maroon | midnight | navy | olive | orange | orchid | pine | purple | red | watermelon | white
   ] = js.native
-  var dangerouslySetSvgPath: js.UndefOr[AnonPath] = js.native
+  var dangerouslySetSvgPath: js.UndefOr[Path] = js.native
   var icon: js.UndefOr[Icons] = js.native
   var `inline`: js.UndefOr[Boolean] = js.native
   var size: js.UndefOr[Double | String] = js.native
@@ -67,7 +67,7 @@ object IconProps {
         ret
     }
     @scala.inline
-    def withDangerouslySetSvgPath(value: AnonPath): Self = {
+    def withDangerouslySetSvgPath(value: Path): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetSvgPath")(value.asInstanceOf[js.Any])
         ret

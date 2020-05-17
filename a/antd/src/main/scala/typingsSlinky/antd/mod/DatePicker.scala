@@ -3,8 +3,8 @@ package typingsSlinky.antd.mod
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import slinky.core.ReactComponentClass
-import typingsSlinky.antd.PickPickPickerDatePropsMo
-import typingsSlinky.antd.PickPickPickerTimePropsMo
+import typingsSlinky.antd.anon.PickPickPickerDatePropsMo
+import typingsSlinky.antd.anon.PickPickPickerTimePropsMo
 import typingsSlinky.antd.generatePickerMod.PickerProps
 import typingsSlinky.antd.generatePickerMod.RangePickerProps
 import typingsSlinky.moment.mod.Moment

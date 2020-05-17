@@ -10,10 +10,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.graphics.Paint")
 @js.native
-class Paint_ () extends js.Object {
-  def this(flag: Double) = this()
+trait Paint_ extends js.Object {
   var align: js.Any = js.native
   var drawableState: js.Array[Double] = js.native
   var hasShadow: Boolean = js.native

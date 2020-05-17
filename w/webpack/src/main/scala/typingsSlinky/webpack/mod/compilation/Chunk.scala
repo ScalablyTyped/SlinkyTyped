@@ -1,9 +1,9 @@
 package typingsSlinky.webpack.mod.compilation
 
 import typingsSlinky.std.Set
-import typingsSlinky.webpack.AnonChunkOverhead
-import typingsSlinky.webpack.AnonContentHash
-import typingsSlinky.webpack.AnonHash
+import typingsSlinky.webpack.anon.ChunkOverhead
+import typingsSlinky.webpack.anon.ContentHash
+import typingsSlinky.webpack.anon.Hash
 import typingsSlinky.webpack.mod.SortableSet
 import typingsSlinky.webpack.webpackBooleans.`false`
 import typingsSlinky.webpack.webpackNumbers.`-1`
@@ -42,7 +42,7 @@ class Chunk () extends js.Object {
   var renderedHash: js.UndefOr[String] = js.native
   def addGroup(chunkGroup: ChunkGroup): Boolean = js.native
   def addModule(module: Module): Boolean = js.native
-  def addMultiplierAndOverhead(size: Double, options: AnonChunkOverhead): Double = js.native
+  def addMultiplierAndOverhead(size: Double, options: ChunkOverhead): Double = js.native
   def canBeInitial(): Boolean = js.native
   def canBeIntegrated(otherChunk: Chunk): Boolean = js.native
   def compareTo(otherChunk: Chunk): `-1` | `0` | `1` = js.native
@@ -51,9 +51,9 @@ class Chunk () extends js.Object {
   def getChildIdsByOrders(): js.Any = js.native
   def getChildIdsByOrdersMap(): js.Any = js.native
   def getChildIdsByOrdersMap(includeDirectChildren: Boolean): js.Any = js.native
-  def getChunkMaps(realHash: Boolean): AnonContentHash = js.native
+  def getChunkMaps(realHash: Boolean): ContentHash = js.native
   // tslint:disable-next-line:ban-types
-  def getChunkModuleMaps(filterFn: js.Function): AnonHash = js.native
+  def getChunkModuleMaps(filterFn: js.Function): Hash = js.native
   def getModules(): js.Array[Module] = js.native
   def getModulesIdent(): js.Array[_] = js.native
   def getNumberOfGroups(): Double = js.native
@@ -77,7 +77,7 @@ class Chunk () extends js.Object {
   def removeModule(module: Module): Boolean = js.native
   def setModules(modules: js.Array[Module]): Unit = js.native
   def size(): Double = js.native
-  def size(options: AnonChunkOverhead): Double = js.native
+  def size(options: ChunkOverhead): Double = js.native
   def sortItems(): Unit = js.native
   def sortModules(sortByFn: js.Function2[/* module1 */ Module, /* module2 */ Module, `-1` | `0` | `1`]): Unit = js.native
   def split(newChunk: Chunk): Unit = js.native

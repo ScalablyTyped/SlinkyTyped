@@ -1,6 +1,6 @@
 package typingsSlinky.stripeV3.stripe.paymentIntents
 
-import typingsSlinky.stripeV3.AnonDestination
+import typingsSlinky.stripeV3.anon.Destination
 import typingsSlinky.stripeV3.stripe.Error
 import typingsSlinky.stripeV3.stripe.List
 import typingsSlinky.stripeV3.stripe.Metadata
@@ -141,7 +141,7 @@ trait PaymentIntent extends js.Object {
   /**
     * The data with which to automatically create a Transfer when the payment is finalized.
     */
-  var transfer_data: AnonDestination | Null = js.native
+  var transfer_data: Destination | Null = js.native
   /**
     * A string that identifies the resulting payment as part of a group.
     */
@@ -443,7 +443,7 @@ object PaymentIntent {
         ret
     }
     @scala.inline
-    def withTransfer_data(value: AnonDestination): Self = {
+    def withTransfer_data(value: Destination): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("transfer_data")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientS3Node.typesGetBucketAclInputMod
 
-import typingsSlinky.awsSdkClientS3Node.inputTypesUnionMod._InputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.httpMod.NodeHttpOptions
 import scala.scalajs.js
@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait GetBucketAclInput extends _InputTypesUnion {
+trait GetBucketAclInput extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *

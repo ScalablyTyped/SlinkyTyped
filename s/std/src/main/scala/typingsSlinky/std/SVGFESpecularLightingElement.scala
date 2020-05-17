@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -53,9 +52,4 @@ trait SVGFESpecularLightingElement
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
-
-@JSGlobal("SVGFESpecularLightingElement")
-@js.native
-object SVGFESpecularLightingElement
-  extends Instantiable0[org.scalajs.dom.raw.SVGFESpecularLightingElement]
 

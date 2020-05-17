@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.CommentReplyData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.CommentReplyLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.CommentReplyUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Mention
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Plain
 import scala.scalajs.js
@@ -18,9 +18,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.10]
   */
-@JSGlobal("Excel.CommentReply")
 @js.native
-class CommentReply () extends ClientObject {
+trait CommentReply extends ClientObject {
   /**
     *
     * Gets the email of the comment reply's author.
@@ -114,7 +113,7 @@ class CommentReply () extends ClientObject {
     */
   def load(): CommentReply = js.native
   def load(options: CommentReplyLoadOptions): CommentReply = js.native
-  def load(propertyNamesAndPaths: AnonExpand): CommentReply = js.native
+  def load(propertyNamesAndPaths: Expand): CommentReply = js.native
   def load(propertyNames: String): CommentReply = js.native
   def load(propertyNames: js.Array[String]): CommentReply = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

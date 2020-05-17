@@ -2,8 +2,8 @@ package typingsSlinky.tensorflowTfjsCore.engineMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.tensorflowTfjsCore.AnonFactory
-import typingsSlinky.tensorflowTfjsCore.AnonGrads
+import typingsSlinky.tensorflowTfjsCore.anon.Factory
+import typingsSlinky.tensorflowTfjsCore.anon.Grads
 import typingsSlinky.tensorflowTfjsCore.backendMod.DataMover
 import typingsSlinky.tensorflowTfjsCore.backendMod.KernelBackend
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
@@ -63,7 +63,7 @@ class Engine protected ()
   var profiler: js.Any = js.native
   val registeredVariables: NamedVariableMap = js.native
   var registry: StringDictionary[KernelBackend] = js.native
-  var registryFactory: StringDictionary[AnonFactory] = js.native
+  var registryFactory: StringDictionary[Factory] = js.native
   var scopedRun: js.Any = js.native
   var setupRegisteredKernels: js.Any = js.native
   var shouldCheckForMemLeaks: js.Any = js.native
@@ -93,9 +93,9 @@ class Engine protected ()
     * was not a function of that `x`. It also takes optional dy to multiply the
     * gradient, which defaults to `1`.
     */
-  def gradients[T /* <: Tensor[Rank] */](f: js.Function0[T], xs: js.Array[Tensor[Rank]]): AnonGrads[T] = js.native
-  def gradients[T /* <: Tensor[Rank] */](f: js.Function0[T], xs: js.Array[Tensor[Rank]], dy: T): AnonGrads[T] = js.native
-  def gradients[T /* <: Tensor[Rank] */](f: js.Function0[T], xs: js.Array[Tensor[Rank]], dy: T, allowNoGradients: Boolean): AnonGrads[T] = js.native
+  def gradients[T /* <: Tensor[Rank] */](f: js.Function0[T], xs: js.Array[Tensor[Rank]]): Grads[T] = js.native
+  def gradients[T /* <: Tensor[Rank] */](f: js.Function0[T], xs: js.Array[Tensor[Rank]], dy: T): Grads[T] = js.native
+  def gradients[T /* <: Tensor[Rank] */](f: js.Function0[T], xs: js.Array[Tensor[Rank]], dy: T, allowNoGradients: Boolean): Grads[T] = js.native
   def incRef(a: Tensor[Rank], backend: KernelBackend): Unit = js.native
   def isTapeOn(): Boolean = js.native
   def keep[T /* <: Tensor[Rank] */](result: T): T = js.native

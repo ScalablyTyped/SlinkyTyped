@@ -3,9 +3,9 @@ package typingsSlinky.chartJs.mod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLCanvasElement
-import typingsSlinky.chartJs.AnonDictkey
-import typingsSlinky.chartJs.AnonDisableCSSInjection
-import typingsSlinky.chartJs.TypeofChart
+import typingsSlinky.chartJs.anon.Dictkey
+import typingsSlinky.chartJs.anon.DisableCSSInjection
+import typingsSlinky.chartJs.anon.TypeofChart
 import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,10 +27,10 @@ object ^ extends js.Object {
   // Tooltip Static Options
   var Tooltip: ChartTooltipsStaticConfiguration = js.native
   var controllers: StringDictionary[js.Any] = js.native
-  var defaults: AnonDictkey = js.native
+  var defaults: Dictkey = js.native
   var helpers: StringDictionary[js.Any] = js.native
   val instances: StringDictionary[typingsSlinky.chartJs.mod.Chart] = js.native
-  var platform: AnonDisableCSSInjection = js.native
+  var platform: DisableCSSInjection = js.native
   var pluginService: PluginServiceStatic = js.native
   var plugins: PluginServiceStatic = js.native
 }

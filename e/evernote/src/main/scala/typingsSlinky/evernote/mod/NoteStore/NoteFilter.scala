@@ -1,6 +1,6 @@
 package typingsSlinky.evernote.mod.NoteStore
 
-import typingsSlinky.evernote.AnonAscending
+import typingsSlinky.evernote.anon.Ascending
 import typingsSlinky.evernote.mod.Types.Guid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("evernote", "NoteStore.NoteFilter")
 @js.native
 class NoteFilter () extends js.Object {
-  def this(args: AnonAscending) = this()
+  def this(args: Ascending) = this()
   var ascending: Boolean = js.native
   var emphasized: String = js.native
   var inactive: Boolean = js.native

@@ -1,13 +1,13 @@
 package typingsSlinky.frctlFractal.mod
 
-import typingsSlinky.frctlFractal.AnonAuthor
+import typingsSlinky.frctlFractal.anon.Author
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait FractalConfig extends js.Object {
-  var project: js.UndefOr[AnonAuthor] = js.native
+  var project: js.UndefOr[Author] = js.native
   @JSName("project.author")
   var projectDotauthor: js.UndefOr[String] = js.native
   @JSName("project.title")
@@ -29,7 +29,7 @@ object FractalConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withProject(value: AnonAuthor): Self = {
+    def withProject(value: Author): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("project")(value.asInstanceOf[js.Any])
         ret

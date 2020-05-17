@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait AudioTrackPublication extends js.Object
 
+object AudioTrackPublication {
+  @scala.inline
+  implicit def apply(value: LocalAudioTrackPublication): AudioTrackPublication = value.asInstanceOf[AudioTrackPublication]
+  @scala.inline
+  implicit def apply(value: RemoteAudioTrackPublication): AudioTrackPublication = value.asInstanceOf[AudioTrackPublication]
+}
+

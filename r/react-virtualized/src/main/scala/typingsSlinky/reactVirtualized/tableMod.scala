@@ -2,6 +2,11 @@ package typingsSlinky.reactVirtualized
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
+import typingsSlinky.reactVirtualized.anon.CellDataGetter
+import typingsSlinky.reactVirtualized.anon.CellRenderer
+import typingsSlinky.reactVirtualized.anon.ClassName
+import typingsSlinky.reactVirtualized.anon.DisableHeader
+import typingsSlinky.reactVirtualized.anon.SortBy
 import typingsSlinky.reactVirtualized.esTableMod.MultiSortOptions
 import typingsSlinky.reactVirtualized.esTableMod.MultiSortReturn
 import typingsSlinky.reactVirtualized.esTableMod.SortDirectionStatic
@@ -25,26 +30,26 @@ object tableMod extends js.Object {
     extends typingsSlinky.reactVirtualized.esTableMod.Table
   
   val SortDirection: SortDirectionStatic = js.native
-  val SortIndicator: ReactComponentClass[AnonSortDirection] = js.native
+  val SortIndicator: ReactComponentClass[typingsSlinky.reactVirtualized.anon.SortDirection] = js.native
   val defaultCellDataGetter: TableCellDataGetter = js.native
   val defaultCellRenderer: TableCellRenderer = js.native
   val defaultHeaderRowRenderer: TableHeaderRowRenderer = js.native
   val defaultRowRenderer: TableRowRenderer = js.native
-  def createMultiSort(sortCallback: js.Function1[/* params */ AnonSortBy, Unit]): MultiSortReturn = js.native
-  def createMultiSort(sortCallback: js.Function1[/* params */ AnonSortBy, Unit], options: MultiSortOptions): MultiSortReturn = js.native
+  def createMultiSort(sortCallback: js.Function1[/* params */ SortBy, Unit]): MultiSortReturn = js.native
+  def createMultiSort(sortCallback: js.Function1[/* params */ SortBy, Unit], options: MultiSortOptions): MultiSortReturn = js.native
   def defaultHeaderRenderer(): js.Array[ReactElement] = js.native
   /* static members */
   @js.native
   object Column extends js.Object {
-    var defaultProps: AnonCellRenderer = js.native
-    var propTypes: AnonCellDataGetter = js.native
+    var defaultProps: CellRenderer = js.native
+    var propTypes: CellDataGetter = js.native
   }
   
   /* static members */
   @js.native
   object Table extends js.Object {
-    var defaultProps: AnonDisableHeader = js.native
-    var propTypes: AnonClassName = js.native
+    var defaultProps: DisableHeader = js.native
+    var propTypes: ClassName = js.native
   }
   
 }

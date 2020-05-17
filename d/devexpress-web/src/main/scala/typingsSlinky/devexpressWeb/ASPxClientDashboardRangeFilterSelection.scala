@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * A range in the Range Filter or Date Filter dashboard item.
   */
-@JSGlobal("ASPxClientDashboardRangeFilterSelection")
 @js.native
-class ASPxClientDashboardRangeFilterSelection () extends js.Object {
+trait ASPxClientDashboardRangeFilterSelection extends js.Object {
   /**
     * Gets or sets a maximum value in the range of the Range Filter dashboard item.
     */
@@ -18,5 +17,33 @@ class ASPxClientDashboardRangeFilterSelection () extends js.Object {
     * Gets or sets a minimum value in the range of the Range Filter dashboard item.
     */
   var Minimum: js.Any = js.native
+}
+
+object ASPxClientDashboardRangeFilterSelection {
+  @scala.inline
+  def apply(Maximum: js.Any, Minimum: js.Any): ASPxClientDashboardRangeFilterSelection = {
+    val __obj = js.Dynamic.literal(Maximum = Maximum.asInstanceOf[js.Any], Minimum = Minimum.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientDashboardRangeFilterSelection]
+  }
+  @scala.inline
+  implicit class ASPxClientDashboardRangeFilterSelectionOps[Self <: ASPxClientDashboardRangeFilterSelection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaximum(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Maximum")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinimum(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Minimum")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

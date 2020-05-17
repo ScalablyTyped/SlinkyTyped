@@ -1,14 +1,14 @@
 package typingsSlinky.relayRuntime.readerNodeMod
 
-import typingsSlinky.relayRuntime.AnonCount
+import typingsSlinky.relayRuntime.anon.Count
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ReaderPaginationMetadata extends js.Object {
-  val backward: AnonCount | Null = js.native
-  val forward: AnonCount | Null = js.native
+  val backward: Count | Null = js.native
+  val forward: Count | Null = js.native
   val path: js.Array[String] = js.native
 }
 
@@ -31,7 +31,7 @@ object ReaderPaginationMetadata {
         ret
     }
     @scala.inline
-    def withBackward(value: AnonCount): Self = {
+    def withBackward(value: Count): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("backward")(value.asInstanceOf[js.Any])
         ret
@@ -43,7 +43,7 @@ object ReaderPaginationMetadata {
         ret
     }
     @scala.inline
-    def withForward(value: AnonCount): Self = {
+    def withForward(value: Count): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("forward")(value.asInstanceOf[js.Any])
         ret

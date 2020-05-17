@@ -1,0 +1,49 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.sheet.opencl
+
+import typingsSlinky.std.SafeArray
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait OpenCLPlatform extends js.Object {
+  var Devices: SafeArray[OpenCLDevice] = js.native
+  /** The name of the platform as returned by OpenCL */
+  var Name: String = js.native
+  var Vendor: String = js.native
+}
+
+object OpenCLPlatform {
+  @scala.inline
+  def apply(Devices: SafeArray[OpenCLDevice], Name: String, Vendor: String): OpenCLPlatform = {
+    val __obj = js.Dynamic.literal(Devices = Devices.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Vendor = Vendor.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OpenCLPlatform]
+  }
+  @scala.inline
+  implicit class OpenCLPlatformOps[Self <: OpenCLPlatform] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDevices(value: SafeArray[OpenCLDevice]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Devices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVendor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Vendor")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

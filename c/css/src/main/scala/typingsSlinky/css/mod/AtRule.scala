@@ -21,59 +21,26 @@ trait AtRule extends js.Object
 
 object AtRule {
   @scala.inline
-  def CustomMedia(): AtRule = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
-  }
+  implicit def apply(value: Charset): AtRule = value.asInstanceOf[AtRule]
   @scala.inline
-  def Media(): AtRule = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
-  }
+  implicit def apply(value: CustomMedia): AtRule = value.asInstanceOf[AtRule]
   @scala.inline
-  def FontFace(): AtRule = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
-  }
+  implicit def apply(value: Document): AtRule = value.asInstanceOf[AtRule]
   @scala.inline
-  def KeyFrames(): AtRule = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
-  }
+  implicit def apply(value: FontFace): AtRule = value.asInstanceOf[AtRule]
   @scala.inline
-  def Import(): AtRule = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
-  }
+  implicit def apply(value: Host): AtRule = value.asInstanceOf[AtRule]
   @scala.inline
-  def Namespace(): AtRule = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
-  }
+  implicit def apply(value: Import): AtRule = value.asInstanceOf[AtRule]
   @scala.inline
-  def Host(): AtRule = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
-  }
+  implicit def apply(value: KeyFrames): AtRule = value.asInstanceOf[AtRule]
   @scala.inline
-  def Page(): AtRule = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
-  }
+  implicit def apply(value: Media): AtRule = value.asInstanceOf[AtRule]
   @scala.inline
-  def Charset(): AtRule = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
-  }
+  implicit def apply(value: Namespace): AtRule = value.asInstanceOf[AtRule]
   @scala.inline
-  def Supports(): AtRule = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
-  }
+  implicit def apply(value: Page): AtRule = value.asInstanceOf[AtRule]
   @scala.inline
-  def Document(): AtRule = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AtRule]
-  }
+  implicit def apply(value: Supports): AtRule = value.asInstanceOf[AtRule]
 }
 

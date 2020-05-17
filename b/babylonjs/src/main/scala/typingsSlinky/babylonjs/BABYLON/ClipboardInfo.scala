@@ -5,24 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.ClipboardInfo")
 @js.native
-class ClipboardInfo protected () extends js.Object {
-  /**
-    *Creates an instance of ClipboardInfo.
-    * @param type Defines the type of event (BABYLON.ClipboardEventTypes)
-    * @param event Defines the related dom event
-    */
-  def this(
-    /**
-    * Defines the type of event (BABYLON.ClipboardEventTypes)
-    */
-  `type`: Double,
-    /**
-    * Defines the related dom event
-    */
-  event: ClipboardEvent
-  ) = this()
+trait ClipboardInfo extends js.Object {
   /**
     * Defines the related dom event
     */
@@ -33,15 +17,32 @@ class ClipboardInfo protected () extends js.Object {
   var `type`: Double = js.native
 }
 
-/* static members */
-@JSGlobal("BABYLON.ClipboardInfo")
-@js.native
-object ClipboardInfo extends js.Object {
-  /**
-    *  Get the clipboard event's type from the keycode.
-    * @param keyCode Defines the keyCode for the current keyboard event.
-    * @return {number}
-    */
-  def GetTypeFromCharacter(keyCode: Double): Double = js.native
+object ClipboardInfo {
+  @scala.inline
+  def apply(event: ClipboardEvent, `type`: Double): ClipboardInfo = {
+    val __obj = js.Dynamic.literal(event = event.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ClipboardInfo]
+  }
+  @scala.inline
+  implicit class ClipboardInfoOps[Self <: ClipboardInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEvent(value: ClipboardEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

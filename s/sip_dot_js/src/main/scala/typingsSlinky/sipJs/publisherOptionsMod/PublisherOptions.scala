@@ -1,6 +1,6 @@
 package typingsSlinky.sipJs.publisherOptionsMod
 
-import typingsSlinky.sipJs.AnonFromTag
+import typingsSlinky.sipJs.anon.FromTag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait PublisherOptions extends js.Object {
     */
   var extraHeaders: js.UndefOr[js.Array[String]] = js.native
   /** @deprecated TODO: provide alternative. */
-  var params: js.UndefOr[AnonFromTag] = js.native
+  var params: js.UndefOr[FromTag] = js.native
   /**
     * If set true, UA will gracefully unpublish for the event on UA close.
     * @defaultValue true
@@ -90,7 +90,7 @@ object PublisherOptions {
         ret
     }
     @scala.inline
-    def withParams(value: AnonFromTag): Self = {
+    def withParams(value: FromTag): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
         ret

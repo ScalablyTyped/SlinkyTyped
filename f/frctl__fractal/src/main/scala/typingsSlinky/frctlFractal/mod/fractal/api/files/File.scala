@@ -223,66 +223,6 @@ object File {
         ret
     }
     @scala.inline
-    def withIsAsset(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAsset")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsAsset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isAsset")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsCollection(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCollection")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsCollection: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isCollection")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsComponent(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isComponent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isComponent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsDoc(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDoc")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsDoc: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isDoc")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withIsVariant(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVariant")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIsVariant: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isVariant")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withStat(value: Stats): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stat")(value.asInstanceOf[js.Any])

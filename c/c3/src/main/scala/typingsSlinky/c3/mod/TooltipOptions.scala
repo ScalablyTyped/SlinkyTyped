@@ -1,9 +1,9 @@
 package typingsSlinky.c3.mod
 
 import org.scalajs.dom.raw.SVGElement
-import typingsSlinky.c3.AnonLeft
-import typingsSlinky.c3.AnonName
-import typingsSlinky.c3.AnonPositionShow
+import typingsSlinky.c3.anon.Left
+import typingsSlinky.c3.anon.Name
+import typingsSlinky.c3.anon.PositionShow
 import typingsSlinky.c3.c3Strings.asc
 import typingsSlinky.c3.c3Strings.desc
 import scala.scalajs.js
@@ -26,7 +26,7 @@ trait TooltipOptions extends js.Object {
       String
     ]
   ] = js.native
-  var format: js.UndefOr[AnonName] = js.native
+  var format: js.UndefOr[Name] = js.native
   /**
     * Set if tooltip is grouped or not for the data points.
     * Defaults to `true`.
@@ -34,7 +34,7 @@ trait TooltipOptions extends js.Object {
   var grouped: js.UndefOr[Boolean] = js.native
   /** Show the tooltips based on the horizontal position of the mouse. */
   var horizontal: js.UndefOr[Boolean] = js.native
-  var init: js.UndefOr[AnonPositionShow] = js.native
+  var init: js.UndefOr[PositionShow] = js.native
   /**
     * Set tooltip values order.
     */
@@ -51,7 +51,7 @@ trait TooltipOptions extends js.Object {
       /* width */ Double, 
       /* height */ Double, 
       /* element */ SVGElement, 
-      AnonLeft
+      Left
     ]
   ] = js.native
   /**
@@ -95,7 +95,7 @@ object TooltipOptions {
         ret
     }
     @scala.inline
-    def withFormat(value: AnonName): Self = {
+    def withFormat(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
         ret
@@ -131,7 +131,7 @@ object TooltipOptions {
         ret
     }
     @scala.inline
-    def withInit(value: AnonPositionShow): Self = {
+    def withInit(value: PositionShow): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("init")(value.asInstanceOf[js.Any])
         ret
@@ -174,7 +174,7 @@ object TooltipOptions {
           /* width */ Double, 
           /* height */ Double, 
           /* element */ SVGElement, 
-          AnonLeft
+          Left
         ]
     ): Self = {
         val ret = this.duplicate

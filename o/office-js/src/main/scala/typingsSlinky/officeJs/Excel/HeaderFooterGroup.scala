@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.HeaderFooterGroupData
 import typingsSlinky.officeJs.Excel.Interfaces.HeaderFooterGroupLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.HeaderFooterGroupUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.Default
 import typingsSlinky.officeJs.officeJsStrings.FirstAndDefault
 import typingsSlinky.officeJs.officeJsStrings.FirstOddAndEven
@@ -17,9 +17,8 @@ import scala.scalajs.js.annotation._
 /**
   * [Api set: ExcelApi 1.9]
   */
-@JSGlobal("Excel.HeaderFooterGroup")
 @js.native
-class HeaderFooterGroup () extends ClientObject {
+trait HeaderFooterGroup extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_HeaderFooterGroup: RequestContext = js.native
@@ -79,7 +78,7 @@ class HeaderFooterGroup () extends ClientObject {
     */
   def load(): HeaderFooterGroup = js.native
   def load(options: HeaderFooterGroupLoadOptions): HeaderFooterGroup = js.native
-  def load(propertyNamesAndPaths: AnonExpand): HeaderFooterGroup = js.native
+  def load(propertyNamesAndPaths: Expand): HeaderFooterGroup = js.native
   def load(propertyNames: String): HeaderFooterGroup = js.native
   def load(propertyNames: js.Array[String]): HeaderFooterGroup = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

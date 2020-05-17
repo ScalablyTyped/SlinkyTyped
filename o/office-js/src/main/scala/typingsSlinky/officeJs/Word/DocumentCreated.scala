@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Word
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJs.Word.Interfaces.DocumentCreatedData
 import typingsSlinky.officeJs.Word.Interfaces.DocumentCreatedLoadOptions
 import typingsSlinky.officeJs.Word.Interfaces.DocumentCreatedUpdateData
+import typingsSlinky.officeJs.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: WordApi 1.3]
   */
-@JSGlobal("Word.DocumentCreated")
 @js.native
-class DocumentCreated () extends ClientObject {
+trait DocumentCreated extends ClientObject {
   /**
     *
     * Gets the body object of the document. The body is the text that excludes headers, footers, footnotes, textboxes, etc.. Read-only.
@@ -75,8 +74,8 @@ class DocumentCreated () extends ClientObject {
   def load(): DocumentCreated = js.native
   def load(option: String): DocumentCreated = js.native
   def load(option: js.Array[String]): DocumentCreated = js.native
-  def load(option: AnonExpand): DocumentCreated = js.native
   def load(option: DocumentCreatedLoadOptions): DocumentCreated = js.native
+  def load(option: Expand): DocumentCreated = js.native
   /**
     *
     * Opens the document.

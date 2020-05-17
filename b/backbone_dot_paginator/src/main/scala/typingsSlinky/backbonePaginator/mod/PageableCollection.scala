@@ -3,7 +3,7 @@ package typingsSlinky.backbonePaginator.mod
 import typingsSlinky.backbone.mod.Collection
 import typingsSlinky.backbone.mod.CollectionFetchOptions
 import typingsSlinky.backbone.mod.Model
-import typingsSlinky.backbonePaginator.TypeofPageableCollection
+import typingsSlinky.backbonePaginator.anon.TypeofPageableCollection
 import typingsSlinky.jquery.JQueryXHR
 import scala.scalajs.js
 import scala.scalajs.js.`|`

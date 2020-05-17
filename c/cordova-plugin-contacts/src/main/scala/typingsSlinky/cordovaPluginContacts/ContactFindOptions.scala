@@ -1,9 +1,5 @@
 package typingsSlinky.cordovaPluginContacts
 
-import org.scalablytyped.runtime.Instantiable0
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
-import org.scalablytyped.runtime.Instantiable3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,17 +15,55 @@ trait ContactFindOptions extends js.Object {
   var multiple: js.UndefOr[Boolean] = js.native
 }
 
-@JSGlobal("ContactFindOptions")
-@js.native
-object ContactFindOptions
-  extends /** Constructor for ContactFindOptions object */
-Instantiable0[ContactFindOptions]
-     with Instantiable1[/* filter */ String, ContactFindOptions]
-     with Instantiable2[/* filter */ String, /* multiple */ Boolean, ContactFindOptions]
-     with Instantiable3[
-      /* filter */ String, 
-      /* multiple */ Boolean, 
-      /* desiredFields */ js.Array[ContactFieldType], 
-      ContactFindOptions
-    ]
+object ContactFindOptions {
+  @scala.inline
+  def apply(): ContactFindOptions = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ContactFindOptions]
+  }
+  @scala.inline
+  implicit class ContactFindOptionsOps[Self <: ContactFindOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDesiredFields(value: js.Array[ContactFieldType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDesiredFields: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredFields")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFilter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFilter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiple(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiple: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiple")(js.undefined)
+        ret
+    }
+  }
+  
+}
 

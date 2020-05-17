@@ -2,7 +2,7 @@ package typingsSlinky.reactWindow.mod
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Key
-import typingsSlinky.reactWindow.AnonColumnIndex
+import typingsSlinky.reactWindow.anon.ColumnIndex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -188,7 +188,7 @@ object GridProps {
         ret
     }
     @scala.inline
-    def withItemKey(value: /* params */ AnonColumnIndex => Key): Self = {
+    def withItemKey(value: /* params */ ColumnIndex => Key): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemKey")(js.Any.fromFunction1(value))
         ret

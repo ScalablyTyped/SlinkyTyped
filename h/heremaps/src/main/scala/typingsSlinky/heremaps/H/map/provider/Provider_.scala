@@ -2,7 +2,6 @@ package typingsSlinky.heremaps.H.map.provider
 
 import typingsSlinky.heremaps.H.geo.Rect
 import typingsSlinky.heremaps.H.map.ICopyright
-import typingsSlinky.heremaps.H.map.provider.Provider.Options
 import typingsSlinky.heremaps.H.util.EventTarget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,14 +15,8 @@ import scala.scalajs.js.annotation._
   * @property max {number} - Maximum zoom level at which provider can server data, set at construction time
   * @property uid {string} - Provider instance unique identifier, generated at construction time
   */
-@JSGlobal("H.map.provider.Provider")
 @js.native
-/**
-  * Constructor
-  * @param opt_options {H.map.provider.Provider.Options=}
-  */
-class Provider_ () extends EventTarget {
-  def this(opt_options: Options) = this()
+trait Provider_ extends EventTarget {
   var max: Double = js.native
   var min: Double = js.native
   var uid: String = js.native

@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,9 +22,4 @@ trait Cache extends js.Object {
   def matchAll(request: RequestInfo, options: org.scalajs.dom.experimental.serviceworkers.CacheQueryOptions): js.Promise[js.Array[org.scalajs.dom.experimental.Response]] = js.native
   def put(request: RequestInfo, response: org.scalajs.dom.experimental.Response): js.Promise[Unit] = js.native
 }
-
-@JSGlobal("Cache")
-@js.native
-object Cache
-  extends Instantiable0[org.scalajs.dom.experimental.serviceworkers.Cache]
 

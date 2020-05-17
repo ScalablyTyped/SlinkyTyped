@@ -1,7 +1,7 @@
 package typingsSlinky.oracledb.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.oracledb.AnonTables
+import typingsSlinky.oracledb.anon.Tables
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait SubscriptionMessage extends js.Object {
   /** Name of the database which sent the notification. */
   var dbName: js.UndefOr[String] = js.native
   /** Array of objects specifying the queries which were affected by the Query Change notification. */
-  var queries: js.UndefOr[js.Array[AnonTables]] = js.native
+  var queries: js.UndefOr[js.Array[Tables]] = js.native
   /**
     * Name of the Advanced Queue. Undefined for CQN.
     * 
@@ -75,7 +75,7 @@ object SubscriptionMessage {
         ret
     }
     @scala.inline
-    def withQueries(value: js.Array[AnonTables]): Self = {
+    def withQueries(value: js.Array[Tables]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("queries")(value.asInstanceOf[js.Any])
         ret

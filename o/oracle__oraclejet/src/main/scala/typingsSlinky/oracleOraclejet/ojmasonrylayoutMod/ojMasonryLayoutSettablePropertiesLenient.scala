@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojmasonrylayoutMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonLabelCut
+import typingsSlinky.oracleOraclejet.anon.LabelCut
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait ojMasonryLayoutSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
   var reorderHandle: js.UndefOr[String] = js.native
-  var translations: js.UndefOr[AnonLabelCut] = js.native
+  var translations: js.UndefOr[LabelCut] = js.native
 }
 
 object ojMasonryLayoutSettablePropertiesLenient {
@@ -39,7 +39,7 @@ object ojMasonryLayoutSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelCut): Self = {
+    def withTranslations(value: LabelCut): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

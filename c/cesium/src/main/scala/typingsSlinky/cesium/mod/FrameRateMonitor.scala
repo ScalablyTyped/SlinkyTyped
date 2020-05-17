@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonMinimumFrameRateAfterWarmup
+import typingsSlinky.cesium.anon.MinimumFrameRateAfterWarmup
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "FrameRateMonitor")
 @js.native
 class FrameRateMonitor () extends js.Object {
-  def this(options: AnonMinimumFrameRateAfterWarmup) = this()
+  def this(options: MinimumFrameRateAfterWarmup) = this()
   var lastFramesPerSecond: Double = js.native
   var lowFrameRate: Event[js.Array[_]] = js.native
   var minimumFrameRateAfterWarmup: Double = js.native

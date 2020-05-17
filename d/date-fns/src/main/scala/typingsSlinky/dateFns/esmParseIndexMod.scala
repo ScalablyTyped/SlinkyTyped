@@ -1,5 +1,6 @@
 package typingsSlinky.dateFns
 
+import typingsSlinky.dateFns.anon.UseAdditionalWeekYearTokensWeekStartsOn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,14 +15,14 @@ object esmParseIndexMod extends js.Object {
       dateString: String,
       formatString: String,
       referenceDate: Double,
-      options: AnonUseAdditionalWeekYearTokensWeekStartsOn
+      options: UseAdditionalWeekYearTokensWeekStartsOn
     ): js.Date = js.native
     def apply(dateString: String, formatString: String, referenceDate: js.Date): js.Date = js.native
     def apply(
       dateString: String,
       formatString: String,
       referenceDate: js.Date,
-      options: AnonUseAdditionalWeekYearTokensWeekStartsOn
+      options: UseAdditionalWeekYearTokensWeekStartsOn
     ): js.Date = js.native
   }
   

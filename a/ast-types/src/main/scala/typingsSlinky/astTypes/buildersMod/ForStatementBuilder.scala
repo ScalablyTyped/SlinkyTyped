@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonInit
+import typingsSlinky.astTypes.anon.Init
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.kindsMod.StatementKind
 import typingsSlinky.astTypes.kindsMod.VariableDeclarationKind
@@ -23,6 +23,6 @@ trait ForStatementBuilder extends js.Object {
   def apply(init: VariableDeclarationKind, test: Null, update: ExpressionKind, body: StatementKind): ForStatement = js.native
   def apply(init: VariableDeclarationKind, test: ExpressionKind, update: Null, body: StatementKind): ForStatement = js.native
   def apply(init: VariableDeclarationKind, test: ExpressionKind, update: ExpressionKind, body: StatementKind): ForStatement = js.native
-  def from(params: AnonInit): ForStatement = js.native
+  def from(params: Init): ForStatement = js.native
 }
 

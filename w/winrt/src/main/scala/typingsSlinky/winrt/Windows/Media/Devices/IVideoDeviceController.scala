@@ -1,11 +1,11 @@
 package typingsSlinky.winrt.Windows.Media.Devices
 
-import typingsSlinky.winrt.AnonValue
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrt.Windows.Foundation.IAsyncAction
 import typingsSlinky.winrt.Windows.Media.Capture.MediaStreamType
 import typingsSlinky.winrt.Windows.Media.Capture.PowerlineFrequency
 import typingsSlinky.winrt.Windows.Media.MediaProperties.IMediaEncodingProperties
+import typingsSlinky.winrt.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ trait IVideoDeviceController extends IMediaDeviceController {
   var tilt: MediaDeviceControl = js.native
   var whiteBalance: MediaDeviceControl = js.native
   var zoom: MediaDeviceControl = js.native
-  def tryGetPowerlineFrequency(): AnonValue = js.native
+  def tryGetPowerlineFrequency(): Value = js.native
   def trySetPowerlineFrequency(value: PowerlineFrequency): Boolean = js.native
 }
 
@@ -42,7 +42,7 @@ object IVideoDeviceController {
     roll: MediaDeviceControl,
     setMediaStreamPropertiesAsync: (MediaStreamType, IMediaEncodingProperties) => IAsyncAction,
     tilt: MediaDeviceControl,
-    tryGetPowerlineFrequency: () => AnonValue,
+    tryGetPowerlineFrequency: () => Value,
     trySetPowerlineFrequency: PowerlineFrequency => Boolean,
     whiteBalance: MediaDeviceControl,
     zoom: MediaDeviceControl
@@ -111,7 +111,7 @@ object IVideoDeviceController {
         ret
     }
     @scala.inline
-    def withTryGetPowerlineFrequency(value: () => AnonValue): Self = {
+    def withTryGetPowerlineFrequency(value: () => Value): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tryGetPowerlineFrequency")(js.Any.fromFunction0(value))
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeTabView.pagerMod
 
 import typingsSlinky.react.mod.Context
-import typingsSlinky.reactNativeTabView.AnonSpringVelocityScale
+import typingsSlinky.reactNativeTabView.anon.SpringVelocityScale
 import typingsSlinky.reactNativeTabView.typesMod.Route
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,6 +16,6 @@ class default[T /* <: Route */] () extends Pager[T]
 @js.native
 object default extends js.Object {
   var contextType: Context[js.Object] = js.native
-  var defaultProps: AnonSpringVelocityScale = js.native
+  var defaultProps: SpringVelocityScale = js.native
 }
 

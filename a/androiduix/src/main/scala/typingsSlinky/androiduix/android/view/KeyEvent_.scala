@@ -7,9 +7,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.view.KeyEvent")
 @js.native
-class KeyEvent_ () extends js.Object {
+trait KeyEvent_ extends js.Object {
   var _downingKeyEventMap: js.Any = js.native
   var mAction: js.Any = js.native
   var mAltKey: js.Any = js.native

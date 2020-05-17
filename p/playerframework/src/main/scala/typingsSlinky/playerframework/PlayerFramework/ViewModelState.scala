@@ -1,6 +1,5 @@
 package typingsSlinky.playerframework.PlayerFramework
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,20 +33,6 @@ object ViewModelState extends js.Object {
   		*/
   @js.native
   sealed trait unloaded extends ViewModelState
-  
-  @JSBracketAccess
-  def apply(value: Double): js.UndefOr[ViewModelState with Double] = js.native
-  /* 1 */ @js.native
-  object loading extends TopLevel[loading with Double]
-  
-  /* 2 */ @js.native
-  object paused extends TopLevel[paused with Double]
-  
-  /* 3 */ @js.native
-  object playing extends TopLevel[playing with Double]
-  
-  /* 0 */ @js.native
-  object unloaded extends TopLevel[unloaded with Double]
   
 }
 

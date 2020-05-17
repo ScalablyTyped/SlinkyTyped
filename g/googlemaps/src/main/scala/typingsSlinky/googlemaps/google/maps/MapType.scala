@@ -1,7 +1,7 @@
 package typingsSlinky.googlemaps.google.maps
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,13 +16,13 @@ trait MapType extends js.Object {
   var projection: js.UndefOr[Projection] = js.native
   var radius: js.UndefOr[Double] = js.native
   var tileSize: js.UndefOr[Size] = js.native
-  def getTile(tileCoord: Point, zoom: Double, ownerDocument: Document_): Element = js.native
+  def getTile(tileCoord: Point, zoom: Double, ownerDocument: Document): Element = js.native
   def releaseTile(tile: Element): Unit = js.native
 }
 
 object MapType {
   @scala.inline
-  def apply(getTile: (Point, Double, Document_) => Element, releaseTile: Element => Unit): MapType = {
+  def apply(getTile: (Point, Double, Document) => Element, releaseTile: Element => Unit): MapType = {
     val __obj = js.Dynamic.literal(getTile = js.Any.fromFunction3(getTile), releaseTile = js.Any.fromFunction1(releaseTile))
     __obj.asInstanceOf[MapType]
   }
@@ -33,7 +33,7 @@ object MapType {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetTile(value: (Point, Double, Document_) => Element): Self = {
+    def withGetTile(value: (Point, Double, Document) => Element): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getTile")(js.Any.fromFunction3(value))
         ret

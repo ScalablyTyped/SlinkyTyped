@@ -11,17 +11,8 @@ import scala.scalajs.js.annotation._
   * Constructs an event driven XML parser. It does not itself do any parsing therfore the callback functions must be set before starting to parse.
   * @see https://docs.scriptable.app/xmlparser/#-new-xmlparser
   */
-@JSGlobal("XMLParser")
 @js.native
-class XMLParser protected () extends js.Object {
-  /**
-    * _Event driven XML parser._
-    *
-    * Constructs an event driven XML parser. It does not itself do any parsing therfore the callback functions must be set before starting to parse.
-    * @param string - XML string to be parsed.
-    * @see https://docs.scriptable.app/xmlparser/#-new-xmlparser
-    */
-  def this(string: String) = this()
+trait XMLParser extends js.Object {
   /**
     * _XML string to be parsed._
     * @see https://docs.scriptable.app/xmlparser/#string
@@ -78,5 +69,78 @@ class XMLParser protected () extends js.Object {
     * @see https://docs.scriptable.app/xmlparser/#parseerroroccurred
     */
   def parseErrorOccurred(arg0: String): Unit = js.native
+}
+
+object XMLParser {
+  @scala.inline
+  def apply(
+    didEndDocument: () => Unit,
+    didEndElement: String => Unit,
+    didStartDocument: () => Unit,
+    didStartElement: (String, StringDictionary[String]) => Unit,
+    foundCharacters: String => Unit,
+    parse: () => Boolean,
+    parseErrorOccurred: String => Unit,
+    string: String
+  ): XMLParser = {
+    val __obj = js.Dynamic.literal(didEndDocument = js.Any.fromFunction0(didEndDocument), didEndElement = js.Any.fromFunction1(didEndElement), didStartDocument = js.Any.fromFunction0(didStartDocument), didStartElement = js.Any.fromFunction2(didStartElement), foundCharacters = js.Any.fromFunction1(foundCharacters), parse = js.Any.fromFunction0(parse), parseErrorOccurred = js.Any.fromFunction1(parseErrorOccurred), string = string.asInstanceOf[js.Any])
+    __obj.asInstanceOf[XMLParser]
+  }
+  @scala.inline
+  implicit class XMLParserOps[Self <: XMLParser] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDidEndDocument(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("didEndDocument")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDidEndElement(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("didEndElement")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDidStartDocument(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("didStartDocument")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDidStartElement(value: (String, StringDictionary[String]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("didStartElement")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withFoundCharacters(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("foundCharacters")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withParse(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withParseErrorOccurred(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parseErrorOccurred")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -42,30 +42,6 @@ object WrappedAst {
         ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
         ret
     }
-    @scala.inline
-    def withParent(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSkip(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSkip: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(js.undefined)
-        ret
-    }
   }
   
 }

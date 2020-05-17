@@ -1,9 +1,10 @@
 package typingsSlinky.sortablejs.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.TouchEvent
-import typingsSlinky.sortablejs.AnonGet
-import typingsSlinky.sortablejs.AnonX
+import typingsSlinky.sortablejs.anon.Get
+import typingsSlinky.sortablejs.anon.X
 import typingsSlinky.sortablejs.sortablejsStrings.animation
 import typingsSlinky.sortablejs.sortablejsStrings.bubbleScroll
 import typingsSlinky.sortablejs.sortablejsStrings.chosenClass
@@ -46,7 +47,6 @@ import typingsSlinky.sortablejs.sortablejsStrings.swap
 import typingsSlinky.sortablejs.sortablejsStrings.swapClass
 import typingsSlinky.sortablejs.sortablejsStrings.swapThreshold
 import typingsSlinky.sortablejs.sortablejsStrings.touchStartThreshold
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -137,9 +137,9 @@ trait Sortable extends js.Object {
   @JSName("option")
   def option_fallbackClass(name: fallbackClass, value: String): Unit = js.native
   @JSName("option")
-  def option_fallbackOffset(name: fallbackOffset): AnonX = js.native
+  def option_fallbackOffset(name: fallbackOffset): X = js.native
   @JSName("option")
-  def option_fallbackOffset(name: fallbackOffset, value: AnonX): Unit = js.native
+  def option_fallbackOffset(name: fallbackOffset, value: X): Unit = js.native
   @JSName("option")
   def option_fallbackOnBody(name: fallbackOnBody): Boolean = js.native
   @JSName("option")
@@ -151,7 +151,7 @@ trait Sortable extends js.Object {
   @JSName("option")
   def option_filter(name: filter): String | (js.ThisFunction3[
     /* this */ this.type, 
-    /* event */ Event_ | TouchEvent, 
+    /* event */ Event | TouchEvent, 
     /* target */ HTMLElement, 
     /* sortable */ this.type, 
     Boolean
@@ -163,7 +163,7 @@ trait Sortable extends js.Object {
     name: filter,
     value: js.ThisFunction3[
       /* this */ this.type, 
-      /* event */ Event_ | TouchEvent, 
+      /* event */ Event | TouchEvent, 
       /* target */ HTMLElement, 
       /* sortable */ this.type, 
       Boolean
@@ -246,9 +246,9 @@ trait Sortable extends js.Object {
   @JSName("option")
   def option_sort(name: sort, value: Boolean): Unit = js.native
   @JSName("option")
-  def option_store(name: store): AnonGet = js.native
+  def option_store(name: store): Get = js.native
   @JSName("option")
-  def option_store(name: store, value: AnonGet): Unit = js.native
+  def option_store(name: store, value: Get): Unit = js.native
   @JSName("option")
   def option_swap(name: swap): Boolean = js.native
   @JSName("option")

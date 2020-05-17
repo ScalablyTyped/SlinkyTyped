@@ -1,7 +1,7 @@
 package typingsSlinky.linguiReact.i18nMod
 
 import slinky.core.TagMod
-import typingsSlinky.linguiReact.AnonI18n
+import typingsSlinky.linguiReact.anon.I18n
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation._
 trait I18nComponentProps extends js.Object {
   var update: js.UndefOr[Boolean] = js.native
   var withHash: js.UndefOr[Boolean] = js.native
-  def children(hasI18nI18nHash: AnonI18n): TagMod[Any] = js.native
+  def children(hasI18nI18nHash: I18n): TagMod[Any] = js.native
 }
 
 object I18nComponentProps {
   @scala.inline
-  def apply(children: AnonI18n => TagMod[Any]): I18nComponentProps = {
+  def apply(children: I18n => TagMod[Any]): I18nComponentProps = {
     val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children))
     __obj.asInstanceOf[I18nComponentProps]
   }
@@ -26,7 +26,7 @@ object I18nComponentProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withChildren(value: AnonI18n => TagMod[Any]): Self = {
+    def withChildren(value: I18n => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.Any.fromFunction1(value))
         ret

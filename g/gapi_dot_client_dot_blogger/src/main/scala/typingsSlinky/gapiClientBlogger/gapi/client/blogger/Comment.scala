@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientBlogger.gapi.client.blogger
 
-import typingsSlinky.gapiClientBlogger.AnonDisplayName
-import typingsSlinky.gapiClientBlogger.AnonId
+import typingsSlinky.gapiClientBlogger.anon.DisplayName
+import typingsSlinky.gapiClientBlogger.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,19 +9,19 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Comment extends js.Object {
   /** The author of this Comment. */
-  var author: js.UndefOr[AnonDisplayName] = js.native
+  var author: js.UndefOr[DisplayName] = js.native
   /** Data about the blog containing this comment. */
-  var blog: js.UndefOr[AnonId] = js.native
+  var blog: js.UndefOr[Id] = js.native
   /** The actual content of the comment. May include HTML markup. */
   var content: js.UndefOr[String] = js.native
   /** The identifier for this resource. */
   var id: js.UndefOr[String] = js.native
   /** Data about the comment this is in reply to. */
-  var inReplyTo: js.UndefOr[AnonId] = js.native
+  var inReplyTo: js.UndefOr[Id] = js.native
   /** The kind of this entry. Always blogger#comment */
   var kind: js.UndefOr[String] = js.native
   /** Data about the post containing this comment. */
-  var post: js.UndefOr[AnonId] = js.native
+  var post: js.UndefOr[Id] = js.native
   /** RFC 3339 date-time when this comment was published. */
   var published: js.UndefOr[String] = js.native
   /** The API REST URL to fetch this resource from. */
@@ -45,7 +45,7 @@ object Comment {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAuthor(value: AnonDisplayName): Self = {
+    def withAuthor(value: DisplayName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
         ret
@@ -57,7 +57,7 @@ object Comment {
         ret
     }
     @scala.inline
-    def withBlog(value: AnonId): Self = {
+    def withBlog(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("blog")(value.asInstanceOf[js.Any])
         ret
@@ -93,7 +93,7 @@ object Comment {
         ret
     }
     @scala.inline
-    def withInReplyTo(value: AnonId): Self = {
+    def withInReplyTo(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("inReplyTo")(value.asInstanceOf[js.Any])
         ret
@@ -117,7 +117,7 @@ object Comment {
         ret
     }
     @scala.inline
-    def withPost(value: AnonId): Self = {
+    def withPost(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("post")(value.asInstanceOf[js.Any])
         ret

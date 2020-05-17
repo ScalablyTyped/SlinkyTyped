@@ -1,0 +1,14 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Represents an individual item of the Rich Edit's context menu.
+  */
+@JSGlobal("ASPxClientRichEditPopupMenuItem")
+@js.native
+class ASPxClientRichEditPopupMenuItem ()
+  extends typingsSlinky.devexpressWeb.ASPxClientRichEditPopupMenuItem
+

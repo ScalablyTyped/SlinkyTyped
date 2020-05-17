@@ -1,6 +1,6 @@
 package typingsSlinky.dispatchr.mod
 
-import typingsSlinky.dispatchr.AnonActionName
+import typingsSlinky.dispatchr.anon.ActionName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DispatcherError extends js.Object {
   var message: String = js.native
-  var meta: AnonActionName = js.native
+  var meta: ActionName = js.native
   var `type`: String = js.native
 }
 
 object DispatcherError {
   @scala.inline
-  def apply(message: String, meta: AnonActionName, `type`: String): DispatcherError = {
+  def apply(message: String, meta: ActionName, `type`: String): DispatcherError = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DispatcherError]
@@ -32,7 +32,7 @@ object DispatcherError {
         ret
     }
     @scala.inline
-    def withMeta(value: AnonActionName): Self = {
+    def withMeta(value: ActionName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
         ret

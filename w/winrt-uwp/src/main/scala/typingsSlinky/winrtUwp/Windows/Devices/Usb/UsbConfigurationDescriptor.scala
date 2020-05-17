@@ -1,14 +1,12 @@
 package typingsSlinky.winrtUwp.Windows.Devices.Usb
 
-import typingsSlinky.winrtUwp.AnonParsed
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Derives information from the first 9 bytes of a USB configuration descriptor. The information includes the power capabilities of the device when the configuration is active and the number of interfaces included in that configuration. For an explanation of a configuration descriptor, Section 9.6.3 Universal Serial Bus Specification. For information about descriptor fields, see: */
-@JSGlobal("Windows.Devices.Usb.UsbConfigurationDescriptor")
 @js.native
-abstract class UsbConfigurationDescriptor () extends js.Object {
+trait UsbConfigurationDescriptor extends js.Object {
   /** Gets the bConfigurationValue field of a USB configuration descriptor. The value is the number that identifies the configuration. */
   var configurationValue: Double = js.native
   /** Gets the bMaxPower field of a USB configuration descriptor. The value indicates the maximum power (in milliamp units) that the device can draw from the bus, when the device is bus-powered. */
@@ -19,20 +17,43 @@ abstract class UsbConfigurationDescriptor () extends js.Object {
   var selfPowered: Boolean = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Devices.Usb.UsbConfigurationDescriptor")
-@js.native
-object UsbConfigurationDescriptor extends js.Object {
-  /**
-    * Parses the specified USB descriptor and returns fields of a USB configuration descriptor.
-    * @param descriptor A UsbDescriptor object that contains first 9 bytes of the USB configuration descriptor.
-    * @return A UsbConfigurationDescriptor object that contains fields of a USB configuration descriptor.
-    */
-  def parse(descriptor: UsbDescriptor): UsbConfigurationDescriptor = js.native
-  /**
-    * Retrieves the first 9 bytes of a USB configuration descriptor in a UsbConfigurationDescriptor object that is contained in a UsbDescriptor object.
-    * @param descriptor The UsbDescriptor object to parse.
-    */
-  def tryParse(descriptor: UsbDescriptor): AnonParsed = js.native
+object UsbConfigurationDescriptor {
+  @scala.inline
+  def apply(configurationValue: Double, maxPowerMilliamps: Double, remoteWakeup: Boolean, selfPowered: Boolean): UsbConfigurationDescriptor = {
+    val __obj = js.Dynamic.literal(configurationValue = configurationValue.asInstanceOf[js.Any], maxPowerMilliamps = maxPowerMilliamps.asInstanceOf[js.Any], remoteWakeup = remoteWakeup.asInstanceOf[js.Any], selfPowered = selfPowered.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UsbConfigurationDescriptor]
+  }
+  @scala.inline
+  implicit class UsbConfigurationDescriptorOps[Self <: UsbConfigurationDescriptor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigurationValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxPowerMilliamps(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPowerMilliamps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoteWakeup(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteWakeup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSelfPowered(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selfPowered")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

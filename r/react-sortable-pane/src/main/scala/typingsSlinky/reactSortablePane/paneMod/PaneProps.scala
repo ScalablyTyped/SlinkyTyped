@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactSortablePane.AnonHeight
+import typingsSlinky.reactSortablePane.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait PaneProps
   extends /* otherProps */ StringDictionary[js.Any] {
   var children: js.UndefOr[String | TagMod[Any]] = js.native
   var className: js.UndefOr[String] = js.native
-  var defaultSize: js.UndefOr[AnonHeight] = js.native
+  var defaultSize: js.UndefOr[Height] = js.native
   var grid: js.UndefOr[js.Tuple2[Double, Double]] = js.native
   var maxHeight: js.UndefOr[PaneSize] = js.native
   var maxWidth: js.UndefOr[PaneSize] = js.native
@@ -22,7 +22,7 @@ trait PaneProps
   var minWidth: js.UndefOr[PaneSize] = js.native
   var onSizeChange: js.UndefOr[js.Function0[Unit]] = js.native
   var resizable: js.UndefOr[IsPaneResizable] = js.native
-  var size: js.UndefOr[AnonHeight] = js.native
+  var size: js.UndefOr[Height] = js.native
   var style: js.UndefOr[CSSProperties] = js.native
 }
 
@@ -69,7 +69,7 @@ object PaneProps {
         ret
     }
     @scala.inline
-    def withDefaultSize(value: AnonHeight): Self = {
+    def withDefaultSize(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSize")(value.asInstanceOf[js.Any])
         ret
@@ -165,7 +165,7 @@ object PaneProps {
         ret
     }
     @scala.inline
-    def withSize(value: AnonHeight): Self = {
+    def withSize(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
         ret

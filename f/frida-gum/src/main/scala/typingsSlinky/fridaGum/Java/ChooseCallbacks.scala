@@ -18,12 +18,12 @@ trait ChooseCallbacks extends js.Object {
     *
     * May return `EnumerateAction.Stop` to stop the enumeration early.
     */
-  def onMatch(instance: typingsSlinky.fridaGum.Wrapper): Unit | EnumerateAction = js.native
+  def onMatch(instance: typingsSlinky.fridaGum.anon.Wrapper): Unit | EnumerateAction = js.native
 }
 
 object ChooseCallbacks {
   @scala.inline
-  def apply(onComplete: () => Unit, onMatch: typingsSlinky.fridaGum.Wrapper => Unit | EnumerateAction): ChooseCallbacks = {
+  def apply(onComplete: () => Unit, onMatch: typingsSlinky.fridaGum.anon.Wrapper => Unit | EnumerateAction): ChooseCallbacks = {
     val __obj = js.Dynamic.literal(onComplete = js.Any.fromFunction0(onComplete), onMatch = js.Any.fromFunction1(onMatch))
     __obj.asInstanceOf[ChooseCallbacks]
   }
@@ -40,7 +40,7 @@ object ChooseCallbacks {
         ret
     }
     @scala.inline
-    def withOnMatch(value: typingsSlinky.fridaGum.Wrapper => Unit | EnumerateAction): Self = {
+    def withOnMatch(value: typingsSlinky.fridaGum.anon.Wrapper => Unit | EnumerateAction): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMatch")(js.Any.fromFunction1(value))
         ret

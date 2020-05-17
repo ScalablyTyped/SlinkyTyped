@@ -5,8 +5,8 @@ import typingsSlinky.jestWatcher.typesMod.JestHookSubscriber
 import typingsSlinky.jestWatcher.typesMod.UpdateConfigCallback
 import typingsSlinky.jestWatcher.typesMod.UsageData
 import typingsSlinky.jestWatcher.typesMod.WatchPlugin
-import typingsSlinky.node.processMod._Global_.NodeJS.ReadStream
-import typingsSlinky.node.processMod._Global_.NodeJS.WriteStream
+import typingsSlinky.node.processMod.global.NodeJS.ReadStream
+import typingsSlinky.node.processMod.global.NodeJS.WriteStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

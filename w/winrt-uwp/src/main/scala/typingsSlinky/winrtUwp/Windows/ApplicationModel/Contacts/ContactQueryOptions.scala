@@ -6,21 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Used to specify the query options when searching for contacts. */
-@JSGlobal("Windows.ApplicationModel.Contacts.ContactQueryOptions")
 @js.native
-/** Initializes a new instance of the ContactQueryOptions class. */
-class ContactQueryOptions () extends js.Object {
-  /**
-    * Initializes a new instance of the ContactQueryOptions class.
-    * @param text The text to match in the search operation.
-    */
-  def this(text: String) = this()
-  /**
-    * Initializes a new instance of the ContactQueryOptions class.
-    * @param text The text to match in the search operation.
-    * @param fields Specifies which contact fields to search for a match.
-    */
-  def this(text: String, fields: ContactQuerySearchFields) = this()
+trait ContactQueryOptions extends js.Object {
   /** Gets a list to which you can add ContactAnnotationList.Id values for which to search. */
   var annotationListIds: IVector[String] = js.native
   /** Gets a list to which you can add ContactList.Id values for which to search. */
@@ -33,5 +20,64 @@ class ContactQueryOptions () extends js.Object {
   var includeContactsFromHiddenLists: Boolean = js.native
   /** Gets a ContactQueryTextSearch object that can be used for text searches. */
   var textSearch: ContactQueryTextSearch = js.native
+}
+
+object ContactQueryOptions {
+  @scala.inline
+  def apply(
+    annotationListIds: IVector[String],
+    contactListIds: IVector[String],
+    desiredFields: ContactQueryDesiredFields,
+    desiredOperations: ContactAnnotationOperations,
+    includeContactsFromHiddenLists: Boolean,
+    textSearch: ContactQueryTextSearch
+  ): ContactQueryOptions = {
+    val __obj = js.Dynamic.literal(annotationListIds = annotationListIds.asInstanceOf[js.Any], contactListIds = contactListIds.asInstanceOf[js.Any], desiredFields = desiredFields.asInstanceOf[js.Any], desiredOperations = desiredOperations.asInstanceOf[js.Any], includeContactsFromHiddenLists = includeContactsFromHiddenLists.asInstanceOf[js.Any], textSearch = textSearch.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ContactQueryOptions]
+  }
+  @scala.inline
+  implicit class ContactQueryOptionsOps[Self <: ContactQueryOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnnotationListIds(value: IVector[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("annotationListIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContactListIds(value: IVector[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contactListIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDesiredFields(value: ContactQueryDesiredFields): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDesiredOperations(value: ContactAnnotationOperations): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredOperations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIncludeContactsFromHiddenLists(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeContactsFromHiddenLists")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextSearch(value: ContactQueryTextSearch): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textSearch")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

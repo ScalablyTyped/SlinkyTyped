@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * A collection object used on the client side to maintain particular client control objects
   */
-@JSGlobal("ASPxClientControlCollection")
 @js.native
-class ASPxClientControlCollection () extends js.Object {
+trait ASPxClientControlCollection extends js.Object {
   /**
     * Occurs when a callback for server-side processing is initiated by any DevExpress control.
     */
@@ -60,5 +59,99 @@ class ASPxClientControlCollection () extends js.Object {
     * @param type The object specifying the client control type.
     */
   def GetControlsByType(`type`: js.Any): js.Array[_] = js.native
+}
+
+object ASPxClientControlCollection {
+  @scala.inline
+  def apply(
+    BeginCallback: ASPxClientEvent[ASPxClientGlobalBeginCallbackEventHandler[ASPxClientControlCollection]],
+    BrowserWindowResized: ASPxClientEvent[ASPxClientEventHandler[ASPxClientControlCollection]],
+    CallbackError: ASPxClientEvent[ASPxClientGlobalCallbackErrorEventHandler[ASPxClientControlCollection]],
+    ControlsInitialized: ASPxClientEvent[ASPxClientControlsInitializedEventHandler[ASPxClientControlCollection]],
+    EndCallback: ASPxClientEvent[ASPxClientGlobalEndCallbackEventHandler[ASPxClientControlCollection]],
+    ForEachControl: ASPxClientControlAction => Unit,
+    Get: js.Any => js.Any,
+    GetByName: String => js.Any,
+    GetControlsByPredicate: ASPxClientControlPredicate => js.Array[_],
+    GetControlsByType: js.Any => js.Array[_],
+    ValidationCompleted: ASPxClientEvent[ASPxClientValidationCompletedEventHandler[ASPxClientControlCollection]]
+  ): ASPxClientControlCollection = {
+    val __obj = js.Dynamic.literal(BeginCallback = BeginCallback.asInstanceOf[js.Any], BrowserWindowResized = BrowserWindowResized.asInstanceOf[js.Any], CallbackError = CallbackError.asInstanceOf[js.Any], ControlsInitialized = ControlsInitialized.asInstanceOf[js.Any], EndCallback = EndCallback.asInstanceOf[js.Any], ForEachControl = js.Any.fromFunction1(ForEachControl), Get = js.Any.fromFunction1(Get), GetByName = js.Any.fromFunction1(GetByName), GetControlsByPredicate = js.Any.fromFunction1(GetControlsByPredicate), GetControlsByType = js.Any.fromFunction1(GetControlsByType), ValidationCompleted = ValidationCompleted.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientControlCollection]
+  }
+  @scala.inline
+  implicit class ASPxClientControlCollectionOps[Self <: ASPxClientControlCollection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBeginCallback(value: ASPxClientEvent[ASPxClientGlobalBeginCallbackEventHandler[ASPxClientControlCollection]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBrowserWindowResized(value: ASPxClientEvent[ASPxClientEventHandler[ASPxClientControlCollection]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BrowserWindowResized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCallbackError(value: ASPxClientEvent[ASPxClientGlobalCallbackErrorEventHandler[ASPxClientControlCollection]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CallbackError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withControlsInitialized(value: ASPxClientEvent[ASPxClientControlsInitializedEventHandler[ASPxClientControlCollection]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ControlsInitialized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndCallback(value: ASPxClientEvent[ASPxClientGlobalEndCallbackEventHandler[ASPxClientControlCollection]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForEachControl(value: ASPxClientControlAction => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ForEachControl")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetByName(value: String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetControlsByPredicate(value: ASPxClientControlPredicate => js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetControlsByPredicate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetControlsByType(value: js.Any => js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetControlsByType")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withValidationCompleted(value: ASPxClientEvent[ASPxClientValidationCompletedEventHandler[ASPxClientControlCollection]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValidationCompleted")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -3,7 +3,7 @@ package typingsSlinky.cathoQuantum.components
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonTheme
+import typingsSlinky.cathoQuantum.anon.Theme
 import typingsSlinky.react.mod.Context
 import typingsSlinky.react.mod.ValidationMap
 import typingsSlinky.react.mod.WeakValidationMap
@@ -23,15 +23,13 @@ object CardContent {
       extends AnyVal
          with StBuildingComponent[tag.type, js.Object] {
       @scala.inline
-      def Instantiable1(
-        Instantiable1: org.scalablytyped.runtime.Instantiable1[AnonTheme, ReactComponentClass[AnonTheme]] = null
-      ): this.type = {
+      def Instantiable1(Instantiable1: org.scalablytyped.runtime.Instantiable1[Theme, ReactComponentClass[Theme]] = null): this.type = {
             if (Instantiable1 != null) js.Dynamic.global.Object.assign(args(1), Instantiable1)
             this
       }
       @scala.inline
       def Instantiable2(
-        Instantiable2: org.scalablytyped.runtime.Instantiable2[AnonTheme, /* context */ js.Any, ReactComponentClass[AnonTheme]] = null
+        Instantiable2: org.scalablytyped.runtime.Instantiable2[Theme, /* context */ js.Any, ReactComponentClass[Theme]] = null
       ): this.type = {
             if (Instantiable2 != null) js.Dynamic.global.Object.assign(args(1), Instantiable2)
             this
@@ -43,18 +41,18 @@ object CardContent {
       @scala.inline
       def contextTypes(value: ValidationMap[_]): this.type = set("contextTypes", value.asInstanceOf[js.Any])
       @scala.inline
-      def defaultProps(value: Partial[AnonTheme]): this.type = set("defaultProps", value.asInstanceOf[js.Any])
+      def defaultProps(value: Partial[Theme]): this.type = set("defaultProps", value.asInstanceOf[js.Any])
       @scala.inline
       def displayName(value: String): this.type = set("displayName", value.asInstanceOf[js.Any])
       @scala.inline
       def getDerivedStateFromError(value: /* error */ js.Any => Partial[js.Object] | Null): this.type = set("getDerivedStateFromError", js.Any.fromFunction1(value))
       @scala.inline
-      def getDerivedStateFromProps(value: (AnonTheme, js.Object) => Partial[js.Object] | Null): this.type = set("getDerivedStateFromProps", js.Any.fromFunction2(value))
+      def getDerivedStateFromProps(value: (Theme, js.Object) => Partial[js.Object] | Null): this.type = set("getDerivedStateFromProps", js.Any.fromFunction2(value))
       @scala.inline
-      def propTypes(value: WeakValidationMap[AnonTheme]): this.type = set("propTypes", value.asInstanceOf[js.Any])
+      def propTypes(value: WeakValidationMap[Theme]): this.type = set("propTypes", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: ReactComponentClass[AnonTheme]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    def withProps(p: ReactComponentClass[Theme]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     implicit def make(companion: ComponentClass.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   }
   
@@ -70,14 +68,14 @@ object CardContent {
       @scala.inline
       def contextTypes(value: ValidationMap[_]): this.type = set("contextTypes", value.asInstanceOf[js.Any])
       @scala.inline
-      def defaultProps(value: Partial[AnonTheme]): this.type = set("defaultProps", value.asInstanceOf[js.Any])
+      def defaultProps(value: Partial[Theme]): this.type = set("defaultProps", value.asInstanceOf[js.Any])
       @scala.inline
       def displayName(value: String): this.type = set("displayName", value.asInstanceOf[js.Any])
       @scala.inline
-      def propTypes(value: WeakValidationMap[AnonTheme]): this.type = set("propTypes", value.asInstanceOf[js.Any])
+      def propTypes(value: WeakValidationMap[Theme]): this.type = set("propTypes", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: ReactComponentClass[AnonTheme]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    def withProps(p: ReactComponentClass[Theme]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     implicit def make(companion: FunctionComponent.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   }
   

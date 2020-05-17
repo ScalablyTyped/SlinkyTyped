@@ -1,6 +1,5 @@
 package typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.csr
 
-import typingsSlinky.jsrsasign.AnonCsrinfo
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ASN1Object
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,10 +28,8 @@ import scala.scalajs.js.annotation._
   * //   subjectPKInfo SubjectPublicKeyInfo{{ PKInfoAlgorithms }},
   * //   attributes    [0] Attributes{{ CRIAttributes }} }
   */
-@JSGlobal("jsrsasign.KJUR.asn1.csr.CertificationRequest")
 @js.native
-class CertificationRequest () extends ASN1Object {
-  def this(params: AnonCsrinfo) = this()
+trait CertificationRequest extends ASN1Object {
   /**
     * get PEM formatted certificate signing request (CSR/PKCS#10)
     * @return PEM formatted string of CSR/PKCS#10
@@ -60,5 +57,45 @@ class CertificationRequest () extends ASN1Object {
     * csr.sign("SHA256withRSA", prvKeyObj);
     */
   def sign(sigAlgName: String, prvKeyObj: js.Any): Unit = js.native
+}
+
+object CertificationRequest {
+  @scala.inline
+  def apply(
+    getEncodedHex: () => String,
+    getFreshValueHex: () => String,
+    getLengthHexFromValue: () => String,
+    getPEMString: () => String,
+    getValueHex: () => String,
+    hL: String,
+    hT: String,
+    hTLV: String,
+    hV: String,
+    isModified: String,
+    sign: (String, js.Any) => Unit
+  ): CertificationRequest = {
+    val __obj = js.Dynamic.literal(getEncodedHex = js.Any.fromFunction0(getEncodedHex), getFreshValueHex = js.Any.fromFunction0(getFreshValueHex), getLengthHexFromValue = js.Any.fromFunction0(getLengthHexFromValue), getPEMString = js.Any.fromFunction0(getPEMString), getValueHex = js.Any.fromFunction0(getValueHex), hL = hL.asInstanceOf[js.Any], hT = hT.asInstanceOf[js.Any], hTLV = hTLV.asInstanceOf[js.Any], hV = hV.asInstanceOf[js.Any], isModified = isModified.asInstanceOf[js.Any], sign = js.Any.fromFunction2(sign))
+    __obj.asInstanceOf[CertificationRequest]
+  }
+  @scala.inline
+  implicit class CertificationRequestOps[Self <: CertificationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetPEMString(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPEMString")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSign(value: (String, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sign")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.protocolBuffersSchema.typesMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.protocolBuffersSchema.AnonOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +9,16 @@ import scala.scalajs.js.annotation._
 trait Enum extends js.Object {
   var name: String = js.native
   var options: Options = js.native
-  var values: StringDictionary[AnonOptions] = js.native
+  var values: StringDictionary[typingsSlinky.protocolBuffersSchema.anon.Options] = js.native
 }
 
 object Enum {
   @scala.inline
-  def apply(name: String, options: Options, values: StringDictionary[AnonOptions]): Enum = {
+  def apply(
+    name: String,
+    options: Options,
+    values: StringDictionary[typingsSlinky.protocolBuffersSchema.anon.Options]
+  ): Enum = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
     __obj.asInstanceOf[Enum]
   }
@@ -38,7 +41,7 @@ object Enum {
         ret
     }
     @scala.inline
-    def withValues(value: StringDictionary[AnonOptions]): Self = {
+    def withValues(value: StringDictionary[typingsSlinky.protocolBuffersSchema.anon.Options]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
         ret

@@ -1,18 +1,18 @@
 package typingsSlinky.chromeApps.chrome.runtime
 
-import typingsSlinky.chromeApps.AnonProductId
+import typingsSlinky.chromeApps.anon.ProductId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait USBDevicesPermission extends Permission {
-  var usbDevices: js.Array[AnonProductId] = js.native
+  var usbDevices: js.Array[ProductId] = js.native
 }
 
 object USBDevicesPermission {
   @scala.inline
-  def apply(usbDevices: js.Array[AnonProductId]): USBDevicesPermission = {
+  def apply(usbDevices: js.Array[ProductId]): USBDevicesPermission = {
     val __obj = js.Dynamic.literal(usbDevices = usbDevices.asInstanceOf[js.Any])
     __obj.asInstanceOf[USBDevicesPermission]
   }
@@ -23,7 +23,7 @@ object USBDevicesPermission {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withUsbDevices(value: js.Array[AnonProductId]): Self = {
+    def withUsbDevices(value: js.Array[ProductId]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("usbDevices")(value.asInstanceOf[js.Any])
         ret

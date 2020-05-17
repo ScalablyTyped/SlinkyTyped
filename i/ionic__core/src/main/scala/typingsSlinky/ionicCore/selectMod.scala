@@ -1,7 +1,7 @@
 package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.UIEvent
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonSelectElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonSelectElement
 import typingsSlinky.ionicCore.mod.StyleEventDetail
 import typingsSlinky.ionicCore.selectInterfaceMod.SelectChangeEventDetail
 import typingsSlinky.ionicCore.selectInterfaceMod.SelectCompareFn

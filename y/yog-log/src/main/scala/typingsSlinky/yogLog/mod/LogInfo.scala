@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LogInfo extends js.Object {
+trait LogInfo extends LogInput {
   var msg: String = js.native
 }
 

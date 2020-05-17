@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientAdsense.gapi.client.adsense
 
-import typingsSlinky.gapiClientAdsense.AnonAdPosition
-import typingsSlinky.gapiClientAdsense.AnonBackupOption
-import typingsSlinky.gapiClientAdsense.AnonMarkupLanguage
+import typingsSlinky.gapiClientAdsense.anon.AdPosition
+import typingsSlinky.gapiClientAdsense.anon.BackupOption
+import typingsSlinky.gapiClientAdsense.anon.MarkupLanguage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,17 +12,17 @@ trait AdUnit extends js.Object {
   /** Identity code of this ad unit, not necessarily unique across ad clients. */
   var code: js.UndefOr[String] = js.native
   /** Settings specific to content ads (AFC) and highend mobile content ads (AFMC - deprecated). */
-  var contentAdsSettings: js.UndefOr[AnonBackupOption] = js.native
+  var contentAdsSettings: js.UndefOr[BackupOption] = js.native
   /** Custom style information specific to this ad unit. */
   var customStyle: js.UndefOr[AdStyle] = js.native
   /** Settings specific to feed ads (AFF) - deprecated. */
-  var feedAdsSettings: js.UndefOr[AnonAdPosition] = js.native
+  var feedAdsSettings: js.UndefOr[AdPosition] = js.native
   /** Unique identifier of this ad unit. This should be considered an opaque identifier; it is not safe to rely on it being in any particular format. */
   var id: js.UndefOr[String] = js.native
   /** Kind of resource this is, in this case adsense#adUnit. */
   var kind: js.UndefOr[String] = js.native
   /** Settings specific to WAP mobile content ads (AFMC) - deprecated. */
-  var mobileContentAdsSettings: js.UndefOr[AnonMarkupLanguage] = js.native
+  var mobileContentAdsSettings: js.UndefOr[MarkupLanguage] = js.native
   /** Name of this ad unit. */
   var name: js.UndefOr[String] = js.native
   /** ID of the saved ad style which holds this ad unit's style information. */
@@ -63,7 +63,7 @@ object AdUnit {
         ret
     }
     @scala.inline
-    def withContentAdsSettings(value: AnonBackupOption): Self = {
+    def withContentAdsSettings(value: BackupOption): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentAdsSettings")(value.asInstanceOf[js.Any])
         ret
@@ -87,7 +87,7 @@ object AdUnit {
         ret
     }
     @scala.inline
-    def withFeedAdsSettings(value: AnonAdPosition): Self = {
+    def withFeedAdsSettings(value: AdPosition): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("feedAdsSettings")(value.asInstanceOf[js.Any])
         ret
@@ -123,7 +123,7 @@ object AdUnit {
         ret
     }
     @scala.inline
-    def withMobileContentAdsSettings(value: AnonMarkupLanguage): Self = {
+    def withMobileContentAdsSettings(value: MarkupLanguage): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mobileContentAdsSettings")(value.asInstanceOf[js.Any])
         ret

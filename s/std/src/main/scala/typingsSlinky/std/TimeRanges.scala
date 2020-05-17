@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +12,37 @@ trait TimeRanges extends js.Object {
   def start(index: Double): Double = js.native
 }
 
-@JSGlobal("TimeRanges")
-@js.native
-object TimeRanges
-  extends Instantiable0[org.scalajs.dom.raw.TimeRanges]
+object TimeRanges {
+  @scala.inline
+  def apply(end: Double => Double, length: Double, start: Double => Double): TimeRanges = {
+    val __obj = js.Dynamic.literal(end = js.Any.fromFunction1(end), length = length.asInstanceOf[js.Any], start = js.Any.fromFunction1(start))
+    __obj.asInstanceOf[TimeRanges]
+  }
+  @scala.inline
+  implicit class TimeRangesOps[Self <: org.scalajs.dom.raw.TimeRanges] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnd(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStart(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

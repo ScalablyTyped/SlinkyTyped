@@ -1,5 +1,10 @@
 package typingsSlinky.expo
 
+import typingsSlinky.expo.anon.Data
+import typingsSlinky.expo.anon.Day
+import typingsSlinky.expo.anon.GcmSenderId
+import typingsSlinky.expo.anon.Interval
+import typingsSlinky.expo.anon.IntervalMs
 import typingsSlinky.expo.notificationsTypesMod.ActionType
 import typingsSlinky.expo.notificationsTypesMod.Channel
 import typingsSlinky.expo.notificationsTypesMod.LocalNotification
@@ -27,14 +32,14 @@ object notificationsMod extends js.Object {
     def dismissAllNotificationsAsync(): js.Promise[Unit] = js.native
     def dismissNotificationAsync(notificationId: ReactText): js.Promise[Unit] = js.native
     def getBadgeNumberAsync(): js.Promise[Double] = js.native
-    def getDevicePushTokenAsync(config: AnonGcmSenderId): js.Promise[AnonData] = js.native
+    def getDevicePushTokenAsync(config: GcmSenderId): js.Promise[Data] = js.native
     def getExpoPushTokenAsync(): js.Promise[String] = js.native
     def presentLocalNotificationAsync(notification: LocalNotification): js.Promise[ReactText] = js.native
     def scheduleLocalNotificationAsync(notification: LocalNotification): js.Promise[ReactText] = js.native
-    def scheduleLocalNotificationAsync(notification: LocalNotification, options: AnonIntervalMs): js.Promise[ReactText] = js.native
+    def scheduleLocalNotificationAsync(notification: LocalNotification, options: IntervalMs): js.Promise[ReactText] = js.native
     def scheduleNotificationWithCalendarAsync(notification: LocalNotification): js.Promise[String] = js.native
-    def scheduleNotificationWithCalendarAsync(notification: LocalNotification, options: AnonDay): js.Promise[String] = js.native
-    def scheduleNotificationWithTimerAsync(notification: LocalNotification, options: AnonInterval): js.Promise[String] = js.native
+    def scheduleNotificationWithCalendarAsync(notification: LocalNotification, options: Day): js.Promise[String] = js.native
+    def scheduleNotificationWithTimerAsync(notification: LocalNotification, options: Interval): js.Promise[String] = js.native
     def setBadgeNumberAsync(number: Double): js.Promise[Unit] = js.native
   }
   

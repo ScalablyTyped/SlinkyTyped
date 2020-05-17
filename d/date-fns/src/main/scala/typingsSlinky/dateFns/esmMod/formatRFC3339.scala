@@ -1,6 +1,6 @@
 package typingsSlinky.dateFns.esmMod
 
-import typingsSlinky.dateFns.AnonFractionDigits
+import typingsSlinky.dateFns.anon.FractionDigits
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object formatRFC3339 extends js.Object {
   def apply(date: Double): String = js.native
-  def apply(date: Double, options: AnonFractionDigits): String = js.native
+  def apply(date: Double, options: FractionDigits): String = js.native
   def apply(date: js.Date): String = js.native
-  def apply(date: js.Date, options: AnonFractionDigits): String = js.native
+  def apply(date: js.Date, options: FractionDigits): String = js.native
 }
 

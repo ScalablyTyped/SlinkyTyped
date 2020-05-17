@@ -13,22 +13,10 @@ trait PromptQuestion extends js.Object
 
 object PromptQuestion {
   @scala.inline
-  def PromptQuestionConfirm(message: String, `type`: PromptTypeConfirm): PromptQuestion = {
-    val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[PromptQuestion]
-  }
+  implicit def apply(value: PromptQuestionCheckbox): PromptQuestion = value.asInstanceOf[PromptQuestion]
   @scala.inline
-  def PromptQuestionCheckbox(message: String, `type`: PromptTypeCheckbox): PromptQuestion = {
-    val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[PromptQuestion]
-  }
+  implicit def apply(value: PromptQuestionConfirm): PromptQuestion = value.asInstanceOf[PromptQuestion]
   @scala.inline
-  def PromptQuestionOther(message: String, `type`: PromptTypeOther): PromptQuestion = {
-    val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[PromptQuestion]
-  }
+  implicit def apply(value: PromptQuestionOther): PromptQuestion = value.asInstanceOf[PromptQuestion]
 }
 

@@ -2,7 +2,7 @@ package typingsSlinky.grommet.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.grommet.AnonSkipTo
+import typingsSlinky.grommet.anon.SkipTo
 import typingsSlinky.grommet.skipLinksMod.SkipLinksProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ object SkipLinks {
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
-    def messages(value: AnonSkipTo): this.type = set("messages", value.asInstanceOf[js.Any])
+    def messages(value: SkipTo): this.type = set("messages", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SkipLinksProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 // tslint:disable-line no-empty-interface
 @js.native
-trait Fraction extends _MathType {
+trait Fraction extends MathType {
   var d: Double = js.native
   var n: Double = js.native
   var s: Double = js.native

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -83,8 +82,4 @@ trait FeatureViewModel extends Accessor {
     */
   val waitingForContent: Boolean = js.native
 }
-
-@JSGlobal("__esri.FeatureViewModel")
-@js.native
-object FeatureViewModel extends TopLevel[FeatureViewModelConstructor]
 

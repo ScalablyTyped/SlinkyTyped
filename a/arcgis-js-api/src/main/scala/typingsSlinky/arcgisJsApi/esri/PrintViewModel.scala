@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.disabled
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.error
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.initializing
@@ -87,8 +86,4 @@ trait PrintViewModel extends Accessor {
     */
   def print(printTemplate: PrintTemplate): js.Promise[_] = js.native
 }
-
-@JSGlobal("__esri.PrintViewModel")
-@js.native
-object PrintViewModel extends TopLevel[PrintViewModelConstructor]
 

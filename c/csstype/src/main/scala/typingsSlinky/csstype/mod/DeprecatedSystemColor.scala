@@ -34,7 +34,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.WindowFrame
   - typingsSlinky.csstype.csstypeStrings.WindowText
 */
-trait DeprecatedSystemColor extends _Color
+trait DeprecatedSystemColor extends Color
 
 object DeprecatedSystemColor {
   @scala.inline

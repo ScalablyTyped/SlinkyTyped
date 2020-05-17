@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("gsap", "Power0")
 @js.native
 class Power0 ()
-  extends typingsSlinky.gsap.gsap.Linear
+  extends typingsSlinky.gsap.gsap.Ease
 
 @JSImport("gsap", "Power0")
 @js.native

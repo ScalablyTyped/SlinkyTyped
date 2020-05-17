@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.carouselMod
 
-import typingsSlinky.antDesignReactNative.AnonPagination
+import typingsSlinky.antDesignReactNative.anon.Pagination
 import typingsSlinky.antDesignReactNative.libStyleMod.Theme
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -15,17 +15,13 @@ trait PaginationProps extends js.Object {
   var current: Double = js.native
   var dotActiveStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
   var dotStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var styles: ReturnType[js.Function1[/* theme */ Theme, AnonPagination]] = js.native
+  var styles: ReturnType[js.Function1[/* theme */ Theme, Pagination]] = js.native
   var vertical: js.UndefOr[Boolean] = js.native
 }
 
 object PaginationProps {
   @scala.inline
-  def apply(
-    count: Double,
-    current: Double,
-    styles: ReturnType[js.Function1[/* theme */ Theme, AnonPagination]]
-  ): PaginationProps = {
+  def apply(count: Double, current: Double, styles: ReturnType[js.Function1[/* theme */ Theme, Pagination]]): PaginationProps = {
     val __obj = js.Dynamic.literal(count = count.asInstanceOf[js.Any], current = current.asInstanceOf[js.Any], styles = styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaginationProps]
   }
@@ -48,7 +44,7 @@ object PaginationProps {
         ret
     }
     @scala.inline
-    def withStyles(value: ReturnType[js.Function1[/* theme */ Theme, AnonPagination]]): Self = {
+    def withStyles(value: ReturnType[js.Function1[/* theme */ Theme, Pagination]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
         ret

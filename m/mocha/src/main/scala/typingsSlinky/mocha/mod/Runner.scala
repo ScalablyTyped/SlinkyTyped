@@ -1,7 +1,8 @@
 package typingsSlinky.mocha.mod
 
-import typingsSlinky.mocha.Mocha_.ISuite
-import typingsSlinky.mocha.Mocha_.RunnerConstants
+import typingsSlinky.mocha.Mocha.ISuite
+import typingsSlinky.mocha.Mocha.RunnerConstants
+import typingsSlinky.mocha.Mocha.Suite
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,10 +40,10 @@ import scala.scalajs.js.annotation._
 @JSImport("mocha", "Runner")
 @js.native
 class Runner protected ()
-  extends typingsSlinky.mocha.Mocha_.Runner {
+  extends typingsSlinky.mocha.Mocha.Runner {
   /** @deprecated Use the overload that accepts `Mocha.Suite` instead. */
   def this(suite: ISuite, delay: Boolean) = this()
-  def this(suite: typingsSlinky.mocha.Mocha_.Suite_, delay: Boolean) = this()
+  def this(suite: Suite, delay: Boolean) = this()
 }
 
 /* static members */

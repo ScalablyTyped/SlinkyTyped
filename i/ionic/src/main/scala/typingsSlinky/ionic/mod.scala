@@ -44,7 +44,7 @@ object mod extends js.Object {
   def isMultiProjectConfig(configFile: js.Any): /* is ionic.ionic/definitions.IMultiProjectConfig */ Boolean = js.native
   def isOAuthLogin(login: js.Any): /* is ionic.ionic/guards.OAuthLogin */ Boolean = js.native
   def isOAuthLoginResponse(res: js.Any): /* is ionic.ionic/definitions.Response<ionic.ionic/guards.OAuthLogin> */ Boolean = js.native
-  def isOrg(org: js.Any): /* is ionic.ionic/definitions.Org */ Boolean = js.native
+  def isOrg(org_ : js.Any): /* is ionic.ionic/definitions.Org */ Boolean = js.native
   def isProjectConfig(configFile: js.Any): /* is ionic.ionic/definitions.IProjectConfig */ Boolean = js.native
   def isSSHKey(key: js.Any): /* is ionic.ionic/definitions.SSHKey */ Boolean = js.native
   def isSSHKeyListResponse(res: APIResponse): /* is ionic.ionic/definitions.Response<std.Array<ionic.ionic/definitions.SSHKey>> */ Boolean = js.native

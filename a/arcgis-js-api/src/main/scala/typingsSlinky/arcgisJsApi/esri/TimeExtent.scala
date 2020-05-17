@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,7 +33,37 @@ trait TimeExtent extends JSONSupport {
   def intersection(timeExtent: TimeExtent): TimeExtent = js.native
 }
 
-@JSGlobal("__esri.TimeExtent")
-@js.native
-object TimeExtent extends TopLevel[TimeExtentConstructor]
+object TimeExtent {
+  @scala.inline
+  def apply(end: js.Date, intersection: TimeExtent => TimeExtent, start: js.Date, toJSON: () => js.Any): TimeExtent = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], intersection = js.Any.fromFunction1(intersection), start = start.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON))
+    __obj.asInstanceOf[TimeExtent]
+  }
+  @scala.inline
+  implicit class TimeExtentOps[Self <: TimeExtent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnd(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIntersection(value: TimeExtent => TimeExtent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intersection")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withStart(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a client-side equivalent of the BootstrapWebClientUIWidget class.
   */
-@JSGlobal("BootstrapUIWidgetBase")
 @js.native
-class BootstrapUIWidgetBase () extends ASPxClientControl {
+trait BootstrapUIWidgetBase extends ASPxClientControl {
   /**
     * Fires when the widget is removed from the DOM using the remove(), empty(), or html() jQuery methods only.
     */
@@ -73,5 +72,148 @@ class BootstrapUIWidgetBase () extends ASPxClientControl {
     * @param options An object containing key-value pairs specifying new option values.
     */
   def SetOptions(options: js.Any): Unit = js.native
+}
+
+object BootstrapUIWidgetBase {
+  @scala.inline
+  def apply(
+    AdjustControl: () => Unit,
+    Disposing: ASPxClientEvent[BootstrapUIWidgetDisposingEventHandler[BootstrapUIWidgetBase]],
+    Drawn: ASPxClientEvent[BootstrapUIWidgetDrawnEventHandler[BootstrapUIWidgetBase]],
+    ExportTo: (String, String) => Unit,
+    Exported: ASPxClientEvent[BootstrapUIWidgetExportedEventHandler[BootstrapUIWidgetBase]],
+    Exporting: ASPxClientEvent[BootstrapUIWidgetExportingEventHandler[BootstrapUIWidgetBase]],
+    FileSaving: ASPxClientEvent[BootstrapUIWidgetFileSavingEventHandler[BootstrapUIWidgetBase]],
+    GetClientVisible: () => Boolean,
+    GetDataSource: () => js.Any,
+    GetEnabled: () => Boolean,
+    GetHeight: () => Double,
+    GetInstance: () => js.Any,
+    GetMainElement: () => js.Any,
+    GetParentControl: () => js.Any,
+    GetVisible: () => Boolean,
+    GetWidth: () => Double,
+    InCallback: () => Boolean,
+    IncidentOccurred: ASPxClientEvent[BootstrapUIWidgetErrorEventHandler[BootstrapUIWidgetBase]],
+    Init: ASPxClientEvent[BootstrapUIWidgetInitializedEventHandler[BootstrapUIWidgetBase]],
+    OptionChanged: ASPxClientEvent[BootstrapUIWidgetOptionChangedEventHandler[BootstrapUIWidgetBase]],
+    Print: () => Unit,
+    SendMessageToAssistiveTechnology: String => Unit,
+    SetClientVisible: Boolean => Unit,
+    SetDataSource: js.Any => Unit,
+    SetEnabled: Boolean => Unit,
+    SetHeight: Double => Unit,
+    SetOptions: js.Any => Unit,
+    SetVisible: Boolean => Unit,
+    SetWidth: Double => Unit,
+    name: String
+  ): BootstrapUIWidgetBase = {
+    val __obj = js.Dynamic.literal(AdjustControl = js.Any.fromFunction0(AdjustControl), Disposing = Disposing.asInstanceOf[js.Any], Drawn = Drawn.asInstanceOf[js.Any], ExportTo = js.Any.fromFunction2(ExportTo), Exported = Exported.asInstanceOf[js.Any], Exporting = Exporting.asInstanceOf[js.Any], FileSaving = FileSaving.asInstanceOf[js.Any], GetClientVisible = js.Any.fromFunction0(GetClientVisible), GetDataSource = js.Any.fromFunction0(GetDataSource), GetEnabled = js.Any.fromFunction0(GetEnabled), GetHeight = js.Any.fromFunction0(GetHeight), GetInstance = js.Any.fromFunction0(GetInstance), GetMainElement = js.Any.fromFunction0(GetMainElement), GetParentControl = js.Any.fromFunction0(GetParentControl), GetVisible = js.Any.fromFunction0(GetVisible), GetWidth = js.Any.fromFunction0(GetWidth), InCallback = js.Any.fromFunction0(InCallback), IncidentOccurred = IncidentOccurred.asInstanceOf[js.Any], Init = Init.asInstanceOf[js.Any], OptionChanged = OptionChanged.asInstanceOf[js.Any], Print = js.Any.fromFunction0(Print), SendMessageToAssistiveTechnology = js.Any.fromFunction1(SendMessageToAssistiveTechnology), SetClientVisible = js.Any.fromFunction1(SetClientVisible), SetDataSource = js.Any.fromFunction1(SetDataSource), SetEnabled = js.Any.fromFunction1(SetEnabled), SetHeight = js.Any.fromFunction1(SetHeight), SetOptions = js.Any.fromFunction1(SetOptions), SetVisible = js.Any.fromFunction1(SetVisible), SetWidth = js.Any.fromFunction1(SetWidth), name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BootstrapUIWidgetBase]
+  }
+  @scala.inline
+  implicit class BootstrapUIWidgetBaseOps[Self <: BootstrapUIWidgetBase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisposing(value: ASPxClientEvent[BootstrapUIWidgetDisposingEventHandler[BootstrapUIWidgetBase]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Disposing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDrawn(value: ASPxClientEvent[BootstrapUIWidgetDrawnEventHandler[BootstrapUIWidgetBase]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Drawn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExportTo(value: (String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportTo")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withExported(value: ASPxClientEvent[BootstrapUIWidgetExportedEventHandler[BootstrapUIWidgetBase]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Exported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExporting(value: ASPxClientEvent[BootstrapUIWidgetExportingEventHandler[BootstrapUIWidgetBase]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Exporting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFileSaving(value: ASPxClientEvent[BootstrapUIWidgetFileSavingEventHandler[BootstrapUIWidgetBase]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileSaving")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetDataSource(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetDataSource")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetEnabled(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetEnabled")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetInstance(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetInstance")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIncidentOccurred(value: ASPxClientEvent[BootstrapUIWidgetErrorEventHandler[BootstrapUIWidgetBase]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncidentOccurred")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInit(value: ASPxClientEvent[BootstrapUIWidgetInitializedEventHandler[BootstrapUIWidgetBase]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Init")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOptionChanged(value: ASPxClientEvent[BootstrapUIWidgetOptionChangedEventHandler[BootstrapUIWidgetBase]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OptionChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrint(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Print")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetDataSource(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetDataSource")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetEnabled(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetEnabled")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetOptions(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetOptions")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

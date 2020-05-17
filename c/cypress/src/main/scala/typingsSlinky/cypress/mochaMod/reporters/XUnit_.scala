@@ -1,8 +1,9 @@
 package typingsSlinky.cypress.mochaMod.reporters
 
-import typingsSlinky.cypress.Mocha_.IRunner
-import typingsSlinky.cypress.Mocha_.Runner
-import typingsSlinky.cypress.Mocha_.reporters.XUnit_.MochaOptions
+import typingsSlinky.cypress.Mocha.IRunner
+import typingsSlinky.cypress.Mocha.Runner
+import typingsSlinky.cypress.Mocha.reporters.XUnit
+import typingsSlinky.cypress.Mocha.reporters.XUnit.MochaOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +15,7 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("mocha", "reporters.XUnit")
 @js.native
-class XUnit_ protected ()
-  extends typingsSlinky.cypress.Mocha_.reporters.XUnit_ {
+class XUnit_ protected () extends XUnit {
   /** @deprecated Use the overload that accepts `Mocha.Runner` instead. */
   def this(runner: IRunner) = this()
   def this(runner: Runner) = this()

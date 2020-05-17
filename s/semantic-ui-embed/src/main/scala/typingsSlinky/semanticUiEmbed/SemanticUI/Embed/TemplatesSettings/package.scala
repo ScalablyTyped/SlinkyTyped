@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object TemplatesSettings {
-  type Param = (typingsSlinky.semanticUiEmbed.PickImpliframe | typingsSlinky.semanticUiEmbed.PickImplplaceholderPlaceholder) with typingsSlinky.semanticUiEmbed.PartialPickImplkeyofImplIframe
+  type Param = (typingsSlinky.semanticUiEmbed.anon.PickImpliframe | typingsSlinky.semanticUiEmbed.anon.PickImplplaceholderPlaceholder) with typingsSlinky.semanticUiEmbed.anon.PartialPickImplkeyofImplIframe
 }

@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.SVGElement
 import org.scalajs.dom.raw.SVGGElement
 import typingsSlinky.devextreme.mod.DevExpress.core.template
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

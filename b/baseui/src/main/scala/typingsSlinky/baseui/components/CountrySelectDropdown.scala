@@ -2,7 +2,6 @@ package typingsSlinky.baseui.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonCountrySelectDropdown
 import typingsSlinky.baseui.phoneInputMod.Country
 import typingsSlinky.baseui.phoneInputMod.CountrySelectDropdownProps
 import scala.scalajs.js
@@ -25,7 +24,7 @@ object CountrySelectDropdown {
     @scala.inline
     def maxDropdownHeight(value: String): this.type = set("maxDropdownHeight", value.asInstanceOf[js.Any])
     @scala.inline
-    def overrides(value: AnonCountrySelectDropdown): this.type = set("overrides", value.asInstanceOf[js.Any])
+    def overrides(value: typingsSlinky.baseui.anon.CountrySelectDropdown): this.type = set("overrides", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: CountrySelectDropdownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

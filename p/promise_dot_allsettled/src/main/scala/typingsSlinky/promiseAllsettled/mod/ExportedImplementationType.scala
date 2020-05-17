@@ -1,6 +1,6 @@
 package typingsSlinky.promiseAllsettled.mod
 
-import typingsSlinky.promiseAllsettled.FnCall
+import typingsSlinky.promiseAllsettled.anon.FnCall
 import typingsSlinky.promiseAllsettled.implementationMod.PromiseTuple
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,6 +1,5 @@
 package typingsSlinky.screeps
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +34,37 @@ trait InterShardMemory extends js.Object {
   def setLocal(value: String): Unit = js.native
 }
 
-@JSGlobal("InterShardMemory")
-@js.native
-object InterShardMemory extends TopLevel[InterShardMemory]
+object InterShardMemory {
+  @scala.inline
+  def apply(getLocal: () => String, getRemote: String => String | Null, setLocal: String => Unit): InterShardMemory = {
+    val __obj = js.Dynamic.literal(getLocal = js.Any.fromFunction0(getLocal), getRemote = js.Any.fromFunction1(getRemote), setLocal = js.Any.fromFunction1(setLocal))
+    __obj.asInstanceOf[InterShardMemory]
+  }
+  @scala.inline
+  implicit class InterShardMemoryOps[Self <: InterShardMemory] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetLocal(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLocal")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRemote(value: String => String | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRemote")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetLocal(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setLocal")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

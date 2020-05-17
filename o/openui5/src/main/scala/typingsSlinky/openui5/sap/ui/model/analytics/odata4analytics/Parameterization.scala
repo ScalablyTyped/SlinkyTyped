@@ -4,17 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("sap.ui.model.analytics.odata4analytics.Parameterization")
 @js.native
-class Parameterization protected () extends js.Object {
-  /**
-    * Create a representation of a parameterization for an analytic query. Do not create your own
-    * instances.
-    * @param oEntityType The OData entity type for this parameterization
-    * @param oEntitySet The OData entity set for this parameterization offered           by the OData
-    * service
-    */
-  def this(oEntityType: EntityType, oEntitySet: EntitySet) = this()
+trait Parameterization extends js.Object {
   /**
     * Find parameter by name
     * @param sName Parameter name
@@ -55,5 +46,71 @@ class Parameterization protected () extends js.Object {
     * @returns The parameter object with         this name or null if it does not exist
     */
   def getNavigationPropertyToQueryResult(): QueryResult = js.native
+}
+
+object Parameterization {
+  @scala.inline
+  def apply(
+    findParameterByName: String => Parameter,
+    getAllParameterNames: () => js.Array[String],
+    getAllParameters: () => js.Any,
+    getEntitySet: () => EntitySet,
+    getEntityType: () => EntityType,
+    getName: () => String,
+    getNavigationPropertyToQueryResult: () => QueryResult
+  ): Parameterization = {
+    val __obj = js.Dynamic.literal(findParameterByName = js.Any.fromFunction1(findParameterByName), getAllParameterNames = js.Any.fromFunction0(getAllParameterNames), getAllParameters = js.Any.fromFunction0(getAllParameters), getEntitySet = js.Any.fromFunction0(getEntitySet), getEntityType = js.Any.fromFunction0(getEntityType), getName = js.Any.fromFunction0(getName), getNavigationPropertyToQueryResult = js.Any.fromFunction0(getNavigationPropertyToQueryResult))
+    __obj.asInstanceOf[Parameterization]
+  }
+  @scala.inline
+  implicit class ParameterizationOps[Self <: Parameterization] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFindParameterByName(value: String => Parameter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findParameterByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetAllParameterNames(value: () => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllParameterNames")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetAllParameters(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllParameters")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetEntitySet(value: () => EntitySet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getEntitySet")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetEntityType(value: () => EntityType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getEntityType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetNavigationPropertyToQueryResult(value: () => QueryResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNavigationPropertyToQueryResult")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

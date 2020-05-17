@@ -1,6 +1,6 @@
 package typingsSlinky.fundamentalReact.switchMod
 
-import typingsSlinky.fundamentalReact.AnonChecked
+import typingsSlinky.fundamentalReact.anon.Checked
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait SwitchProps extends js.Object {
   var disabled: js.UndefOr[Boolean] = js.native
   var id: js.UndefOr[String] = js.native
   var inputProps: js.UndefOr[js.Any] = js.native
-  var internalLabels: js.UndefOr[AnonChecked] = js.native
+  var internalLabels: js.UndefOr[Checked] = js.native
   var labelProps: js.UndefOr[js.Any] = js.native
   var onChange: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
   var semantic: js.UndefOr[Boolean] = js.native
@@ -117,7 +117,7 @@ object SwitchProps {
         ret
     }
     @scala.inline
-    def withInternalLabels(value: AnonChecked): Self = {
+    def withInternalLabels(value: Checked): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("internalLabels")(value.asInstanceOf[js.Any])
         ret

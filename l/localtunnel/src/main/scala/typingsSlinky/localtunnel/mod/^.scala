@@ -1,6 +1,6 @@
 package typingsSlinky.localtunnel.mod
 
-import typingsSlinky.localtunnel.TunnelConfigportnumber
+import typingsSlinky.localtunnel.anon.TunnelConfigportnumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

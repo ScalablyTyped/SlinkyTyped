@@ -1,6 +1,6 @@
 package typingsSlinky.nodeGcm.mod
 
-import typingsSlinky.nodeGcm.AnonError
+import typingsSlinky.nodeGcm.anon.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait IResponseBody extends js.Object {
   var canonical_ids: Double = js.native
   var failure: Double = js.native
   var multicast_id: js.UndefOr[Double] = js.native
-  var results: js.UndefOr[js.Array[AnonError]] = js.native
+  var results: js.UndefOr[js.Array[Error]] = js.native
   var success: Double = js.native
 }
 
@@ -57,7 +57,7 @@ object IResponseBody {
         ret
     }
     @scala.inline
-    def withResults(value: js.Array[AnonError]): Self = {
+    def withResults(value: js.Array[Error]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("results")(value.asInstanceOf[js.Any])
         ret

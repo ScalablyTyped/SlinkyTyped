@@ -1,6 +1,6 @@
 package typingsSlinky.matrixAppserviceBridge.mod
 
-import typingsSlinky.matrixAppserviceBridge.AnonAge
+import typingsSlinky.matrixAppserviceBridge.anon.Age
 import typingsSlinky.matrixJsSdk.mod.EventType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ trait Event extends js.Object {
   var sender: String = js.native
   var state_key: String = js.native
   var `type`: EventType = js.native
-  var unsigned: AnonAge = js.native
+  var unsigned: Age = js.native
   var user_id: String = js.native
 }
 
@@ -31,7 +31,7 @@ object Event {
     sender: String,
     state_key: String,
     `type`: EventType,
-    unsigned: AnonAge,
+    unsigned: Age,
     user_id: String
   ): Event = {
     val __obj = js.Dynamic.literal(age = age.asInstanceOf[js.Any], event_id = event_id.asInstanceOf[js.Any], room_id = room_id.asInstanceOf[js.Any], sender = sender.asInstanceOf[js.Any], state_key = state_key.asInstanceOf[js.Any], unsigned = unsigned.asInstanceOf[js.Any], user_id = user_id.asInstanceOf[js.Any])
@@ -81,7 +81,7 @@ object Event {
         ret
     }
     @scala.inline
-    def withUnsigned(value: AnonAge): Self = {
+    def withUnsigned(value: Age): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("unsigned")(value.asInstanceOf[js.Any])
         ret

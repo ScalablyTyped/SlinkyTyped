@@ -1,12 +1,12 @@
 package typingsSlinky.ckeditor.CKEDITOR
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.ckeditor.AnonGroups
 import typingsSlinky.ckeditor.CKEDITOR.config.styleObject
 import typingsSlinky.ckeditor.CKEDITOR.dom.element
 import typingsSlinky.ckeditor.CKEDITOR.editor.eventObject
 import typingsSlinky.ckeditor.CKEDITOR.filter.allowedContentRules
 import typingsSlinky.ckeditor.CKEDITOR.filter.disallowedContentRules
+import typingsSlinky.ckeditor.anon.Groups
 import typingsSlinky.ckeditor.ckeditorStrings.html
 import typingsSlinky.ckeditor.ckeditorStrings.text
 import scala.scalajs.js
@@ -258,7 +258,7 @@ trait config_ extends js.Object {
   var templates_files: js.UndefOr[StringDictionary[js.Any]] = js.native
   var templates_replaceContent: js.UndefOr[Boolean] = js.native
   var title: js.UndefOr[String | Boolean] = js.native
-  var toolbar: js.UndefOr[String | (js.Array[String | js.Array[String] | AnonGroups]) | Null] = js.native
+  var toolbar: js.UndefOr[String | (js.Array[String | js.Array[String] | Groups]) | Null] = js.native
   var toolbarCanCollapse: js.UndefOr[Boolean] = js.native
   var toolbarGroupCycling: js.UndefOr[Boolean] = js.native
   var toolbarGroups: js.UndefOr[js.Array[typingsSlinky.ckeditor.CKEDITOR.toolbarGroups | String]] = js.native
@@ -3094,7 +3094,7 @@ object config_ {
         ret
     }
     @scala.inline
-    def withToolbar(value: String | (js.Array[String | js.Array[String] | AnonGroups])): Self = {
+    def withToolbar(value: String | (js.Array[String | js.Array[String] | Groups])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(value.asInstanceOf[js.Any])
         ret

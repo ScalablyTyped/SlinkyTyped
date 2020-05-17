@@ -1,8 +1,7 @@
 package typingsSlinky.reactNativeChartsWrapper.mod
 
-import typingsSlinky.reactNativeChartsWrapper.AnonAxisDependency
-import typingsSlinky.reactNativeChartsWrapper.AnonRight
-import typingsSlinky.reactNativeChartsWrapper.AnonX
+import typingsSlinky.reactNativeChartsWrapper.anon.Right
+import typingsSlinky.reactNativeChartsWrapper.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,9 +31,9 @@ trait BarLineChartBase extends ChartBase {
   var syncX: js.UndefOr[Boolean] = js.native
   var syncY: js.UndefOr[Boolean] = js.native
   var viewPortOffsets: js.UndefOr[Offsets] = js.native
-  var visibleRange: js.UndefOr[AnonX] = js.native
-  var yAxis: js.UndefOr[AnonRight] = js.native
-  var zoom: js.UndefOr[AnonAxisDependency] = js.native
+  var visibleRange: js.UndefOr[X] = js.native
+  var yAxis: js.UndefOr[Right] = js.native
+  var zoom: js.UndefOr[typingsSlinky.reactNativeChartsWrapper.anon.AxisDependency] = js.native
 }
 
 object BarLineChartBase {
@@ -326,7 +325,7 @@ object BarLineChartBase {
         ret
     }
     @scala.inline
-    def withVisibleRange(value: AnonX): Self = {
+    def withVisibleRange(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("visibleRange")(value.asInstanceOf[js.Any])
         ret
@@ -338,7 +337,7 @@ object BarLineChartBase {
         ret
     }
     @scala.inline
-    def withYAxis(value: AnonRight): Self = {
+    def withYAxis(value: Right): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("yAxis")(value.asInstanceOf[js.Any])
         ret
@@ -350,7 +349,7 @@ object BarLineChartBase {
         ret
     }
     @scala.inline
-    def withZoom(value: AnonAxisDependency): Self = {
+    def withZoom(value: typingsSlinky.reactNativeChartsWrapper.anon.AxisDependency): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
         ret

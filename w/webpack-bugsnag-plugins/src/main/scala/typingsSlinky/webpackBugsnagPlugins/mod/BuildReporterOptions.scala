@@ -1,6 +1,6 @@
 package typingsSlinky.webpackBugsnagPlugins.mod
 
-import typingsSlinky.webpackBugsnagPlugins.AnonDebug
+import typingsSlinky.webpackBugsnagPlugins.anon.Debug
 import typingsSlinky.webpackBugsnagPlugins.webpackBugsnagPluginsStrings.debug
 import typingsSlinky.webpackBugsnagPlugins.webpackBugsnagPluginsStrings.error
 import typingsSlinky.webpackBugsnagPlugins.webpackBugsnagPluginsStrings.info
@@ -26,7 +26,7 @@ trait BuildReporterOptions extends js.Object {
   /**
     * Provide a different logger object
     */
-  var logger: js.UndefOr[AnonDebug] = js.native
+  var logger: js.UndefOr[Debug] = js.native
   /**
     * The path to search for source control info
     *
@@ -72,7 +72,7 @@ object BuildReporterOptions {
         ret
     }
     @scala.inline
-    def withLogger(value: AnonDebug): Self = {
+    def withLogger(value: Debug): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
         ret

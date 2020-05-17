@@ -1,8 +1,8 @@
 package typingsSlinky.officeUiFabricReact.calendarDayMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait IDayInfo extends js.Object {
   var isToday: Boolean = js.native
   var key: String = js.native
   var originalDate: js.Date = js.native
-  def onSelected(ev: SyntheticEvent[Event_, HTMLElement]): Unit = js.native
+  def onSelected(ev: SyntheticEvent[Event, HTMLElement]): Unit = js.native
 }
 
 object IDayInfo {
@@ -28,7 +28,7 @@ object IDayInfo {
     isSelected: Boolean,
     isToday: Boolean,
     key: String,
-    onSelected: SyntheticEvent[Event_, HTMLElement] => Unit,
+    onSelected: SyntheticEvent[Event, HTMLElement] => Unit,
     originalDate: js.Date
   ): IDayInfo = {
     val __obj = js.Dynamic.literal(date = date.asInstanceOf[js.Any], isInBounds = isInBounds.asInstanceOf[js.Any], isInMonth = isInMonth.asInstanceOf[js.Any], isSelected = isSelected.asInstanceOf[js.Any], isToday = isToday.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], onSelected = js.Any.fromFunction1(onSelected), originalDate = originalDate.asInstanceOf[js.Any])
@@ -77,7 +77,7 @@ object IDayInfo {
         ret
     }
     @scala.inline
-    def withOnSelected(value: SyntheticEvent[Event_, HTMLElement] => Unit): Self = {
+    def withOnSelected(value: SyntheticEvent[Event, HTMLElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelected")(js.Any.fromFunction1(value))
         ret

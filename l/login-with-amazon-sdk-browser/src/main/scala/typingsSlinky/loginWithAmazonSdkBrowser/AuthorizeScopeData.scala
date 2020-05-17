@@ -1,5 +1,6 @@
 package typingsSlinky.loginWithAmazonSdkBrowser
 
+import typingsSlinky.loginWithAmazonSdkBrowser.anon.Essential
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,10 +8,10 @@ import scala.scalajs.js.annotation._
 /* Inlined {[ scope in login-with-amazon-sdk-browser.AuthorizationScopeOptions ]:? {  essential  :boolean}} */
 @js.native
 trait AuthorizeScopeData extends js.Object {
-  var postal_code: js.UndefOr[AnonEssential] = js.native
-  var profile: js.UndefOr[AnonEssential] = js.native
+  var postal_code: js.UndefOr[Essential] = js.native
+  var profile: js.UndefOr[Essential] = js.native
   @JSName("profile:user_id")
-  var profileColonuser_id: js.UndefOr[AnonEssential] = js.native
+  var profileColonuser_id: js.UndefOr[Essential] = js.native
 }
 
 object AuthorizeScopeData {
@@ -26,7 +27,7 @@ object AuthorizeScopeData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPostal_code(value: AnonEssential): Self = {
+    def withPostal_code(value: Essential): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("postal_code")(value.asInstanceOf[js.Any])
         ret
@@ -38,7 +39,7 @@ object AuthorizeScopeData {
         ret
     }
     @scala.inline
-    def withProfile(value: AnonEssential): Self = {
+    def withProfile(value: Essential): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("profile")(value.asInstanceOf[js.Any])
         ret
@@ -50,7 +51,7 @@ object AuthorizeScopeData {
         ret
     }
     @scala.inline
-    def withProfileColonuser_id(value: AnonEssential): Self = {
+    def withProfileColonuser_id(value: Essential): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("profile:user_id")(value.asInstanceOf[js.Any])
         ret

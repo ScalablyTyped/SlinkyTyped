@@ -1,7 +1,7 @@
 package typingsSlinky.jsreportHtmlToXlsx.mod
 
 import typingsSlinky.jsreportCore.mod.ExtensionDefinition
-import typingsSlinky.jsreportHtmlToXlsx.PartialOptions
+import typingsSlinky.jsreportHtmlToXlsx.anon.PartialOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

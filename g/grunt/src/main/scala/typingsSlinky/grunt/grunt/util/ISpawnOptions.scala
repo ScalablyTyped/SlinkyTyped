@@ -1,6 +1,6 @@
 package typingsSlinky.grunt.grunt.util
 
-import typingsSlinky.grunt.AnonCustom
+import typingsSlinky.grunt.anon.Custom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +32,7 @@ trait ISpawnOptions extends js.Object {
   /**
     * Additional options for the Node.js child_process spawn method.
     */
-  var opts: js.UndefOr[AnonCustom] = js.native
+  var opts: js.UndefOr[Custom] = js.native
 }
 
 object ISpawnOptions {
@@ -96,7 +96,7 @@ object ISpawnOptions {
         ret
     }
     @scala.inline
-    def withOpts(value: AnonCustom): Self = {
+    def withOpts(value: Custom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("opts")(value.asInstanceOf[js.Any])
         ret

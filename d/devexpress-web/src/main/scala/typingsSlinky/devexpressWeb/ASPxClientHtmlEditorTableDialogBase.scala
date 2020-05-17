@@ -7,12 +7,38 @@ import scala.scalajs.js.annotation._
 /**
   * Provides base client functionality for the Table dialog within the ASPxHtmlEditor.
   */
-@JSGlobal("ASPxClientHtmlEditorTableDialogBase")
 @js.native
-class ASPxClientHtmlEditorTableDialogBase () extends ASPxClientHtmlEditorDialogBase {
+trait ASPxClientHtmlEditorTableDialogBase extends ASPxClientHtmlEditorDialogBase {
   /**
     * Provides access to the client object of the "Background color" color editor in the Html Editor's Table dialogs.
     */
   def GetBackgroundColorColorEdit(): ASPxClientColorEdit = js.native
+}
+
+object ASPxClientHtmlEditorTableDialogBase {
+  @scala.inline
+  def apply(
+    GetBackgroundColorColorEdit: () => ASPxClientColorEdit,
+    GetCancelButton: () => ASPxClientButton,
+    GetFormLayout: () => ASPxClientFormLayout,
+    GetOkButton: () => ASPxClientButton
+  ): ASPxClientHtmlEditorTableDialogBase = {
+    val __obj = js.Dynamic.literal(GetBackgroundColorColorEdit = js.Any.fromFunction0(GetBackgroundColorColorEdit), GetCancelButton = js.Any.fromFunction0(GetCancelButton), GetFormLayout = js.Any.fromFunction0(GetFormLayout), GetOkButton = js.Any.fromFunction0(GetOkButton))
+    __obj.asInstanceOf[ASPxClientHtmlEditorTableDialogBase]
+  }
+  @scala.inline
+  implicit class ASPxClientHtmlEditorTableDialogBaseOps[Self <: ASPxClientHtmlEditorTableDialogBase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetBackgroundColorColorEdit(value: () => ASPxClientColorEdit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetBackgroundColorColorEdit")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

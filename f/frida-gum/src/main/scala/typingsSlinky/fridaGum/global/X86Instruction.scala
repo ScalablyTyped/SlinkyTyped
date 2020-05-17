@@ -1,0 +1,11 @@
+package typingsSlinky.fridaGum.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("X86Instruction")
+@js.native
+class X86Instruction ()
+  extends typingsSlinky.fridaGum.X86Instruction
+

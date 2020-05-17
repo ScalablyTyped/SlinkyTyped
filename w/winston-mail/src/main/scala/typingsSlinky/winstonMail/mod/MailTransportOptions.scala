@@ -1,8 +1,8 @@
 package typingsSlinky.winstonMail.mod
 
-import typingsSlinky.winstonMail.AnonCa
-import typingsSlinky.winstonMail.AnonCiphers
-import typingsSlinky.winstonMail.AnonLevel
+import typingsSlinky.winstonMail.anon.Ca
+import typingsSlinky.winstonMail.anon.Ciphers
+import typingsSlinky.winstonMail.anon.Level
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,8 +10,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MailTransportOptions extends js.Object {
   var authentication: js.UndefOr[js.Array[String]] = js.native
-  var filter: js.UndefOr[js.Function1[/* obj */ AnonLevel, Boolean]] = js.native
-  var formatter: js.UndefOr[js.Function1[/* obj */ AnonLevel, String]] = js.native
+  var filter: js.UndefOr[js.Function1[/* obj */ Level, Boolean]] = js.native
+  var formatter: js.UndefOr[js.Function1[/* obj */ Level, String]] = js.native
   var from: js.UndefOr[String] = js.native
   var handleExceptions: js.UndefOr[Boolean] = js.native
   var host: js.UndefOr[String] = js.native
@@ -21,10 +21,10 @@ trait MailTransportOptions extends js.Object {
   var password: js.UndefOr[String] = js.native
   var port: js.UndefOr[Double] = js.native
   var silent: js.UndefOr[Boolean] = js.native
-  var ssl: js.UndefOr[Boolean | AnonCa] = js.native
+  var ssl: js.UndefOr[Boolean | Ca] = js.native
   var subject: js.UndefOr[String] = js.native
   var timeout: js.UndefOr[Double] = js.native
-  var tls: js.UndefOr[Boolean | AnonCiphers] = js.native
+  var tls: js.UndefOr[Boolean | Ciphers] = js.native
   var to: String = js.native
   var unique: js.UndefOr[Boolean] = js.native
   var username: js.UndefOr[String] = js.native
@@ -61,7 +61,7 @@ object MailTransportOptions {
         ret
     }
     @scala.inline
-    def withFilter(value: /* obj */ AnonLevel => Boolean): Self = {
+    def withFilter(value: /* obj */ Level => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(js.Any.fromFunction1(value))
         ret
@@ -73,7 +73,7 @@ object MailTransportOptions {
         ret
     }
     @scala.inline
-    def withFormatter(value: /* obj */ AnonLevel => String): Self = {
+    def withFormatter(value: /* obj */ Level => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.Any.fromFunction1(value))
         ret
@@ -193,7 +193,7 @@ object MailTransportOptions {
         ret
     }
     @scala.inline
-    def withSsl(value: Boolean | AnonCa): Self = {
+    def withSsl(value: Boolean | Ca): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ssl")(value.asInstanceOf[js.Any])
         ret
@@ -229,7 +229,7 @@ object MailTransportOptions {
         ret
     }
     @scala.inline
-    def withTls(value: Boolean | AnonCiphers): Self = {
+    def withTls(value: Boolean | Ciphers): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tls")(value.asInstanceOf[js.Any])
         ret

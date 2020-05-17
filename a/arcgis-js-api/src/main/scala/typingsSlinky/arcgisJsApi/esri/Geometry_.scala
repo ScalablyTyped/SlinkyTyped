@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.mesh
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.multipoint
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.point
@@ -14,8 +13,8 @@ import scala.scalajs.js.annotation._
 trait Geometry_
   extends Accessor
      with JSONSupport
-     with _GoToTarget2D
-     with _GoToTarget3D {
+     with GoToTarget2D
+     with GoToTarget3D {
   /**
     * The cache is used to store values computed from geometries that need to cleared or recomputed upon mutation. An example is the extent of a polygon.
     *
@@ -56,8 +55,4 @@ trait Geometry_
     */
   val `type`: point | multipoint | polyline | polygon | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.extent | mesh = js.native
 }
-
-@JSGlobal("__esri.Geometry")
-@js.native
-object Geometry_ extends TopLevel[GeometryConstructor]
 

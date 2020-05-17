@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeMaterialUi.mod
 
-import typingsSlinky.reactNativeMaterialUi.AnonContainerViewStyle
+import typingsSlinky.reactNativeMaterialUi.anon.ContainerViewStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DividerProps extends js.Object {
   var inset: js.UndefOr[Boolean] = js.native
-  var style: js.UndefOr[AnonContainerViewStyle] = js.native
+  var style: js.UndefOr[ContainerViewStyle] = js.native
 }
 
 object DividerProps {
@@ -36,7 +36,7 @@ object DividerProps {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonContainerViewStyle): Self = {
+    def withStyle(value: ContainerViewStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

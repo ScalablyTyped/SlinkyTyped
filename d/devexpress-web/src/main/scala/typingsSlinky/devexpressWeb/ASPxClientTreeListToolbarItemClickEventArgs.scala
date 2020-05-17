@@ -7,15 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxTreeList.ToolbarItemClick event.
   */
-@JSGlobal("ASPxClientTreeListToolbarItemClickEventArgs")
 @js.native
-class ASPxClientTreeListToolbarItemClickEventArgs protected () extends ASPxClientProcessingModeEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientTreeListToolbarItemClickEventArgs class.
-    * @param item An ASPxClientMenu object that should be clicked to fire the event.
-    * @param processOnServer true to process the event on the server side; false to completely handle it on the client side.
-    */
-  def this(item: ASPxClientMenuItem, processOnServer: Boolean) = this()
+trait ASPxClientTreeListToolbarItemClickEventArgs extends ASPxClientProcessingModeEventArgs {
   /**
     * Gets the clicked menu item
     */
@@ -32,5 +25,51 @@ class ASPxClientTreeListToolbarItemClickEventArgs protected () extends ASPxClien
     * Specifies whether a postback or a callback is used to finally process the event on the server side.
     */
   var usePostBack: Boolean = js.native
+}
+
+object ASPxClientTreeListToolbarItemClickEventArgs {
+  @scala.inline
+  def apply(
+    item: ASPxClientMenuItem,
+    processOnServer: Boolean,
+    toolbarIndex: Double,
+    toolbarName: String,
+    usePostBack: Boolean
+  ): ASPxClientTreeListToolbarItemClickEventArgs = {
+    val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any], processOnServer = processOnServer.asInstanceOf[js.Any], toolbarIndex = toolbarIndex.asInstanceOf[js.Any], toolbarName = toolbarName.asInstanceOf[js.Any], usePostBack = usePostBack.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientTreeListToolbarItemClickEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientTreeListToolbarItemClickEventArgsOps[Self <: ASPxClientTreeListToolbarItemClickEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItem(value: ASPxClientMenuItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToolbarIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToolbarName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUsePostBack(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usePostBack")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

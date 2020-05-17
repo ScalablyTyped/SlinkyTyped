@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait QueryWithModifiers[T] extends js.Object {
+trait QueryWithModifiers[T] extends Selector[T] {
   @JSName("$comment")
   var $comment: js.UndefOr[String] = js.native
   @JSName("$explain")

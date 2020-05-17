@@ -1,6 +1,6 @@
 package typingsSlinky.pubnub.mod
 
-import typingsSlinky.pubnub.AnonFreeSocketKeepAliveTimeout
+import typingsSlinky.pubnub.anon.FreeSocketKeepAliveTimeout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait PubnubConfig extends js.Object {
   var cipherKey: js.UndefOr[String] = js.native
   var heartbeatInterval: js.UndefOr[Double] = js.native
   var keepAlive: js.UndefOr[Boolean] = js.native
-  var keepAliveSettings: js.UndefOr[AnonFreeSocketKeepAliveTimeout] = js.native
+  var keepAliveSettings: js.UndefOr[FreeSocketKeepAliveTimeout] = js.native
   var listenToBrowserNetworkEvents: js.UndefOr[Boolean] = js.native
   var logVerbosity: js.UndefOr[Boolean] = js.native
   var origin: js.UndefOr[String] = js.native
@@ -106,7 +106,7 @@ object PubnubConfig {
         ret
     }
     @scala.inline
-    def withKeepAliveSettings(value: AnonFreeSocketKeepAliveTimeout): Self = {
+    def withKeepAliveSettings(value: FreeSocketKeepAliveTimeout): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keepAliveSettings")(value.asInstanceOf[js.Any])
         ret

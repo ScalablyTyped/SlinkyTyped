@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientCalendar.gapi.client.calendar
 
-import typingsSlinky.gapiClientCalendar.AnonDisplay
-import typingsSlinky.gapiClientCalendar.AnonDisplayName
-import typingsSlinky.gapiClientCalendar.AnonOverrides
-import typingsSlinky.gapiClientCalendar.AnonPrivate
-import typingsSlinky.gapiClientCalendar.AnonTitle
+import typingsSlinky.gapiClientCalendar.anon.Display
+import typingsSlinky.gapiClientCalendar.anon.DisplayName
+import typingsSlinky.gapiClientCalendar.anon.Overrides
+import typingsSlinky.gapiClientCalendar.anon.Private
+import typingsSlinky.gapiClientCalendar.anon.Title
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +36,7 @@ trait Event extends js.Object {
   /** Creation time of the event (as a RFC3339 timestamp). Read-only. */
   var created: js.UndefOr[String] = js.native
   /** The creator of the event. Read-only. */
-  var creator: js.UndefOr[AnonDisplayName] = js.native
+  var creator: js.UndefOr[DisplayName] = js.native
   /** Description of the event. Can contain HTML. Optional. */
   var description: js.UndefOr[String] = js.native
   /** The (exclusive) end time of the event. For a recurring event, this is the end time of the first instance. */
@@ -49,9 +49,9 @@ trait Event extends js.Object {
   /** ETag of the resource. */
   var etag: js.UndefOr[String] = js.native
   /** Extended properties of the event. */
-  var extendedProperties: js.UndefOr[AnonPrivate] = js.native
+  var extendedProperties: js.UndefOr[Private] = js.native
   /** A gadget that extends this event. */
-  var gadget: js.UndefOr[AnonDisplay] = js.native
+  var gadget: js.UndefOr[Display] = js.native
   /** Whether attendees other than the organizer can invite others to the event. Optional. The default is True. */
   var guestsCanInviteOthers: js.UndefOr[Boolean] = js.native
   /** Whether attendees other than the organizer can modify the event. Optional. The default is False. */
@@ -93,7 +93,7 @@ trait Event extends js.Object {
     * The organizer of the event. If the organizer is also an attendee, this is indicated with a separate entry in attendees with the organizer field set to
     * True. To change the organizer, use the move operation. Read-only, except when importing an event.
     */
-  var organizer: js.UndefOr[AnonDisplayName] = js.native
+  var organizer: js.UndefOr[DisplayName] = js.native
   /**
     * For an instance of a recurring event, this is the time at which this event would start according to the recurrence data in the recurring event
     * identified by recurringEventId. It uniquely identifies the instance within the recurring event series even if the instance was moved to a different
@@ -113,14 +113,14 @@ trait Event extends js.Object {
   /** For an instance of a recurring event, this is the id of the recurring event to which this instance belongs. Immutable. */
   var recurringEventId: js.UndefOr[String] = js.native
   /** Information about the event's reminders for the authenticated user. */
-  var reminders: js.UndefOr[AnonOverrides] = js.native
+  var reminders: js.UndefOr[Overrides] = js.native
   /** Sequence number as per iCalendar. */
   var sequence: js.UndefOr[Double] = js.native
   /**
     * Source from which the event was created. For example, a web page, an email message or any document identifiable by an URL with HTTP or HTTPS scheme.
     * Can only be seen or modified by the creator of the event.
     */
-  var source: js.UndefOr[AnonTitle] = js.native
+  var source: js.UndefOr[Title] = js.native
   /** The (inclusive) start time of the event. For a recurring event, this is the start time of the first instance. */
   var start: js.UndefOr[EventDateTime] = js.native
   /**
@@ -260,7 +260,7 @@ object Event {
         ret
     }
     @scala.inline
-    def withCreator(value: AnonDisplayName): Self = {
+    def withCreator(value: DisplayName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("creator")(value.asInstanceOf[js.Any])
         ret
@@ -320,7 +320,7 @@ object Event {
         ret
     }
     @scala.inline
-    def withExtendedProperties(value: AnonPrivate): Self = {
+    def withExtendedProperties(value: Private): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("extendedProperties")(value.asInstanceOf[js.Any])
         ret
@@ -332,7 +332,7 @@ object Event {
         ret
     }
     @scala.inline
-    def withGadget(value: AnonDisplay): Self = {
+    def withGadget(value: Display): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gadget")(value.asInstanceOf[js.Any])
         ret
@@ -464,7 +464,7 @@ object Event {
         ret
     }
     @scala.inline
-    def withOrganizer(value: AnonDisplayName): Self = {
+    def withOrganizer(value: DisplayName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("organizer")(value.asInstanceOf[js.Any])
         ret
@@ -524,7 +524,7 @@ object Event {
         ret
     }
     @scala.inline
-    def withReminders(value: AnonOverrides): Self = {
+    def withReminders(value: Overrides): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("reminders")(value.asInstanceOf[js.Any])
         ret
@@ -548,7 +548,7 @@ object Event {
         ret
     }
     @scala.inline
-    def withSource(value: AnonTitle): Self = {
+    def withSource(value: Title): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
         ret

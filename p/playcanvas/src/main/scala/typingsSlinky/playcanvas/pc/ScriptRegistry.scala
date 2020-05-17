@@ -13,10 +13,8 @@ import scala.scalajs.js.annotation._
   * Note: PlayCanvas scripts can access the Script Registry from inside the application with {@link pc.Application#scripts} {@link pc.ADDRESS_REPEAT}.
   * @param {pc.Application} app - Application to attach registry to.
   */
-@JSGlobal("pc.ScriptRegistry")
 @js.native
-class ScriptRegistry protected () extends EventHandler {
-  def this(app: Application) = this()
+trait ScriptRegistry extends EventHandler {
   /**
     * @function
     * @name pc.ScriptRegistry#add

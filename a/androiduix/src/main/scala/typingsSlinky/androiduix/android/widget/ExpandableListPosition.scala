@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.widget.ExpandableListPosition")
 @js.native
-class ExpandableListPosition () extends js.Object {
+trait ExpandableListPosition extends js.Object {
   var childPos: Double = js.native
   var flatListPos: Double = js.native
   var groupPos: Double = js.native
@@ -16,18 +15,70 @@ class ExpandableListPosition () extends js.Object {
   /* private */ def resetState(): js.Any = js.native
 }
 
-/* static members */
-@JSGlobal("android.widget.ExpandableListPosition")
-@js.native
-object ExpandableListPosition extends js.Object {
-  var CHILD: Double = js.native
-  var GROUP: Double = js.native
-  var MAX_POOL_SIZE: js.Any = js.native
-  var sPool: js.Any = js.native
-  /* private */ def getRecycledOrCreate(): js.Any = js.native
-  def obtain(`type`: Double, groupPos: Double, childPos: Double, flatListPos: Double): ExpandableListPosition = js.native
-  def obtainChildPosition(groupPosition: Double, childPosition: Double): ExpandableListPosition = js.native
-  def obtainGroupPosition(groupPosition: Double): ExpandableListPosition = js.native
-  def obtainPosition(packedPosition: Double): ExpandableListPosition = js.native
+object ExpandableListPosition {
+  @scala.inline
+  def apply(
+    childPos: Double,
+    flatListPos: Double,
+    getPackedPosition: () => Double,
+    groupPos: Double,
+    recycle: () => Unit,
+    resetState: () => js.Any,
+    `type`: Double
+  ): ExpandableListPosition = {
+    val __obj = js.Dynamic.literal(childPos = childPos.asInstanceOf[js.Any], flatListPos = flatListPos.asInstanceOf[js.Any], getPackedPosition = js.Any.fromFunction0(getPackedPosition), groupPos = groupPos.asInstanceOf[js.Any], recycle = js.Any.fromFunction0(recycle), resetState = js.Any.fromFunction0(resetState))
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ExpandableListPosition]
+  }
+  @scala.inline
+  implicit class ExpandableListPositionOps[Self <: ExpandableListPosition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildPos(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childPos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFlatListPos(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flatListPos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetPackedPosition(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPackedPosition")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGroupPos(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupPos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRecycle(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recycle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withResetState(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetState")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

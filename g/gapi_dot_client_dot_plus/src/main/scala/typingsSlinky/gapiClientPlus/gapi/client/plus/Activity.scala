@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientPlus.gapi.client.plus
 
-import typingsSlinky.gapiClientPlus.AnonActor
-import typingsSlinky.gapiClientPlus.AnonClientSpecificActorInfo
-import typingsSlinky.gapiClientPlus.AnonTitle
+import typingsSlinky.gapiClientPlus.anon.Actor
+import typingsSlinky.gapiClientPlus.anon.ClientSpecificActorInfo
+import typingsSlinky.gapiClientPlus.anon.Title
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait Activity extends js.Object {
   /** Identifies who has access to see this activity. */
   var access: js.UndefOr[Acl] = js.native
   /** The person who performed this activity. */
-  var actor: js.UndefOr[AnonClientSpecificActorInfo] = js.native
+  var actor: js.UndefOr[ClientSpecificActorInfo] = js.native
   /** Street address where this activity occurred. */
   var address: js.UndefOr[String] = js.native
   /** Additional content added by the person who shared this activity, applicable only when resharing an activity. */
@@ -30,13 +30,13 @@ trait Activity extends js.Object {
   /** The location where this activity occurred. */
   var location: js.UndefOr[Place] = js.native
   /** The object of this activity. */
-  var `object`: js.UndefOr[AnonActor] = js.native
+  var `object`: js.UndefOr[Actor] = js.native
   /** ID of the place where this activity occurred. */
   var placeId: js.UndefOr[String] = js.native
   /** Name of the place where this activity occurred. */
   var placeName: js.UndefOr[String] = js.native
   /** The service provider that initially published this activity. */
-  var provider: js.UndefOr[AnonTitle] = js.native
+  var provider: js.UndefOr[Title] = js.native
   /** The time at which this activity was initially published. Formatted as an RFC 3339 timestamp. */
   var published: js.UndefOr[String] = js.native
   /** Radius, in meters, of the region where this activity occurred, centered at the latitude and longitude identified in geocode. */
@@ -80,7 +80,7 @@ object Activity {
         ret
     }
     @scala.inline
-    def withActor(value: AnonClientSpecificActorInfo): Self = {
+    def withActor(value: ClientSpecificActorInfo): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("actor")(value.asInstanceOf[js.Any])
         ret
@@ -188,7 +188,7 @@ object Activity {
         ret
     }
     @scala.inline
-    def withObject(value: AnonActor): Self = {
+    def withObject(value: Actor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
         ret
@@ -224,7 +224,7 @@ object Activity {
         ret
     }
     @scala.inline
-    def withProvider(value: AnonTitle): Self = {
+    def withProvider(value: Title): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("provider")(value.asInstanceOf[js.Any])
         ret

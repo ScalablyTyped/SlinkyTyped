@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CountPatternTransform extends _Transforms {
+trait CountPatternTransform extends Transforms {
   var as: js.UndefOr[(Vector2[String | SignalRef]) | SignalRef] = js.native
   var `case`: js.UndefOr[String | SignalRef] = js.native
   var field: FieldRef = js.native

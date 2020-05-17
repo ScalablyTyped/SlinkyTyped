@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** ASN1 utilities class */
-@JSGlobal("jsrsasign.KJUR.asn1.ASN1Util")
 @js.native
-class ASN1Util () extends js.Object {
+trait ASN1Util extends js.Object {
   def bigIntToMinTwosComplementsHex(bigIntegerValue: BigInteger): String = js.native
   def integerToByteHex(i: Double): String = js.native
   /**
@@ -71,37 +70,48 @@ class ASN1Util () extends js.Object {
   def newObject(param: ASNObject): ASN1Object = js.native
 }
 
-/* static members */
-@JSGlobal("jsrsasign.KJUR.asn1.ASN1Util")
-@js.native
-object ASN1Util extends js.Object {
-  /**
-    * get PEM string from hexadecimal data and header string
-    * @param dataHex hexadecimal string of PEM body
-    * @param pemHeader PEM header string (ex. 'RSA PRIVATE KEY')
-    * @return PEM formatted string of input data
-    * @description
-    * This method converts a hexadecimal string to a PEM string with
-    * a specified header. Its line break will be CRLF("\r\n").
-    * @example
-    * var pem = KJUR.asn1.ASN1Util.getPEMStringFromHex('616161', 'RSA PRIVATE KEY');
-    * // value of pem will be:
-    * -----BEGIN PRIVATE KEY-----
-    * YWFh
-    * -----END PRIVATE KEY-----
-    */
-  def getPEMStringFromHex(dataHex: String, pemHeader: String): String = js.native
-  /**
-    * get dot noted oid number string from hexadecimal value of OID
-    *
-    * @param hex hexadecimal value of object identifier
-    * @return dot noted string of object identifier
-    * @description
-    * This static method converts from hexadecimal string representation of
-    * ASN.1 value of object identifier to oid number string.
-    * @example
-    * KJUR.asn1.ASN1Util.oidHexToInt('550406') → "2.5.4.6"
-    */
-  def oidHexToInt(hex: String): String = js.native
+object ASN1Util {
+  @scala.inline
+  def apply(
+    bigIntToMinTwosComplementsHex: BigInteger => String,
+    integerToByteHex: Double => String,
+    jsonToASN1HEX: ASNObject => String,
+    newObject: ASNObject => ASN1Object
+  ): ASN1Util = {
+    val __obj = js.Dynamic.literal(bigIntToMinTwosComplementsHex = js.Any.fromFunction1(bigIntToMinTwosComplementsHex), integerToByteHex = js.Any.fromFunction1(integerToByteHex), jsonToASN1HEX = js.Any.fromFunction1(jsonToASN1HEX), newObject = js.Any.fromFunction1(newObject))
+    __obj.asInstanceOf[ASN1Util]
+  }
+  @scala.inline
+  implicit class ASN1UtilOps[Self <: ASN1Util] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBigIntToMinTwosComplementsHex(value: BigInteger => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bigIntToMinTwosComplementsHex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIntegerToByteHex(value: Double => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("integerToByteHex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withJsonToASN1HEX(value: ASNObject => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("jsonToASN1HEX")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withNewObject(value: ASNObject => ASN1Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newObject")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

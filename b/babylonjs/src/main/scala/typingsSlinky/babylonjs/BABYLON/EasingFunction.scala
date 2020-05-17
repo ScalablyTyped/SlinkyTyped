@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.EasingFunction")
 @js.native
-class EasingFunction () extends IEasingFunction {
+trait EasingFunction extends IEasingFunction {
   var _easingMode: js.Any = js.native
   /**
     * @hidden
@@ -24,21 +23,49 @@ class EasingFunction () extends IEasingFunction {
   def setEasingMode(easingMode: Double): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("BABYLON.EasingFunction")
-@js.native
-object EasingFunction extends js.Object {
-  /**
-    * Interpolation follows the mathematical formula associated with the easing function.
-    */
-  val EASINGMODE_EASEIN: Double = js.native
-  /**
-    * Interpolation uses EaseIn for the first half of the animation and EaseOut for the second half.
-    */
-  val EASINGMODE_EASEINOUT: Double = js.native
-  /**
-    * Interpolation follows 100% interpolation minus the output of the formula associated with the easing function.
-    */
-  val EASINGMODE_EASEOUT: Double = js.native
+object EasingFunction {
+  @scala.inline
+  def apply(
+    _easingMode: js.Any,
+    ease: Double => Double,
+    easeInCore: Double => Double,
+    getEasingMode: () => Double,
+    setEasingMode: Double => Unit
+  ): EasingFunction = {
+    val __obj = js.Dynamic.literal(_easingMode = _easingMode.asInstanceOf[js.Any], ease = js.Any.fromFunction1(ease), easeInCore = js.Any.fromFunction1(easeInCore), getEasingMode = js.Any.fromFunction0(getEasingMode), setEasingMode = js.Any.fromFunction1(setEasingMode))
+    __obj.asInstanceOf[EasingFunction]
+  }
+  @scala.inline
+  implicit class EasingFunctionOps[Self <: EasingFunction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_easingMode(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_easingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEaseInCore(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("easeInCore")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetEasingMode(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getEasingMode")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetEasingMode(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setEasingMode")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

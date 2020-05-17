@@ -1,11 +1,11 @@
 package typingsSlinky.reactFileInput.components
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactFileInput.mod.FileInputProps
 import typingsSlinky.reactFileInput.mod.^
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ object ReactFileInput {
     accept: String,
     className: String,
     name: String,
-    onChange: SyntheticEvent[Event_, _] => Unit,
+    onChange: SyntheticEvent[Event, _] => Unit,
     placeholder: String
   ): Builder = {
     val __props = js.Dynamic.literal(accept = accept.asInstanceOf[js.Any], className = className.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), placeholder = placeholder.asInstanceOf[js.Any])

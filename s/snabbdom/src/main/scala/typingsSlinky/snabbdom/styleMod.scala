@@ -1,5 +1,6 @@
 package typingsSlinky.snabbdom
 
+import typingsSlinky.snabbdom.anon.Delayed
 import typingsSlinky.snabbdom.moduleMod.Module
 import typingsSlinky.std.Record
 import scala.scalajs.js
@@ -11,6 +12,6 @@ import scala.scalajs.js.annotation._
 object styleMod extends js.Object {
   val default: Module = js.native
   val styleModule: Module = js.native
-  type VNodeStyle = (Record[String, String]) with AnonDelayed
+  type VNodeStyle = (Record[String, String]) with Delayed
 }
 

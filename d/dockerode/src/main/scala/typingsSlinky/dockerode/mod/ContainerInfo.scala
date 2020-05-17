@@ -1,9 +1,9 @@
 package typingsSlinky.dockerode.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.dockerode.AnonDestination
-import typingsSlinky.dockerode.AnonNetworkMode
-import typingsSlinky.dockerode.AnonNetworks
+import typingsSlinky.dockerode.anon.Destination
+import typingsSlinky.dockerode.anon.NetworkMode
+import typingsSlinky.dockerode.anon.Networks
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,14 +12,14 @@ import scala.scalajs.js.annotation._
 trait ContainerInfo extends js.Object {
   var Command: String = js.native
   var Created: Double = js.native
-  var HostConfig: AnonNetworkMode = js.native
+  var HostConfig: NetworkMode = js.native
   var Id: String = js.native
   var Image: String = js.native
   var ImageID: String = js.native
   var Labels: StringDictionary[String] = js.native
-  var Mounts: js.Array[AnonDestination] = js.native
+  var Mounts: js.Array[Destination] = js.native
   var Names: js.Array[String] = js.native
-  var NetworkSettings: AnonNetworks = js.native
+  var NetworkSettings: Networks = js.native
   var Ports: js.Array[Port] = js.native
   var State: String = js.native
   var Status: String = js.native
@@ -30,14 +30,14 @@ object ContainerInfo {
   def apply(
     Command: String,
     Created: Double,
-    HostConfig: AnonNetworkMode,
+    HostConfig: NetworkMode,
     Id: String,
     Image: String,
     ImageID: String,
     Labels: StringDictionary[String],
-    Mounts: js.Array[AnonDestination],
+    Mounts: js.Array[Destination],
     Names: js.Array[String],
-    NetworkSettings: AnonNetworks,
+    NetworkSettings: Networks,
     Ports: js.Array[Port],
     State: String,
     Status: String
@@ -64,7 +64,7 @@ object ContainerInfo {
         ret
     }
     @scala.inline
-    def withHostConfig(value: AnonNetworkMode): Self = {
+    def withHostConfig(value: NetworkMode): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("HostConfig")(value.asInstanceOf[js.Any])
         ret
@@ -94,7 +94,7 @@ object ContainerInfo {
         ret
     }
     @scala.inline
-    def withMounts(value: js.Array[AnonDestination]): Self = {
+    def withMounts(value: js.Array[Destination]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Mounts")(value.asInstanceOf[js.Any])
         ret
@@ -106,7 +106,7 @@ object ContainerInfo {
         ret
     }
     @scala.inline
-    def withNetworkSettings(value: AnonNetworks): Self = {
+    def withNetworkSettings(value: Networks): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkSettings")(value.asInstanceOf[js.Any])
         ret

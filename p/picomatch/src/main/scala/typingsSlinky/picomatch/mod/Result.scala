@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
 trait Result extends js.Object {
   var glob: String = js.native
   var input: String = js.native
-  var isMatch: /* import warning: importer.ImportType#apply Failed type conversion: std.ReturnType<(input : string, regex : std.RegExp, options : picomatch.AnonFormat, test ? : {}): picomatch.AnonIsMatch>['isMatch'] */ js.Any = js.native
-  var `match`: /* import warning: importer.ImportType#apply Failed type conversion: std.ReturnType<(input : string, regex : std.RegExp, options : picomatch.AnonFormat, test ? : {}): picomatch.AnonIsMatch>['match'] */ js.Any = js.native
+  var isMatch: /* import warning: importer.ImportType#apply Failed type conversion: std.ReturnType<(input : string, regex : std.RegExp, options : picomatch.anon.Format, test ? : {}): picomatch.anon.IsMatch>['isMatch'] */ js.Any = js.native
+  var `match`: /* import warning: importer.ImportType#apply Failed type conversion: std.ReturnType<(input : string, regex : std.RegExp, options : picomatch.anon.Format, test ? : {}): picomatch.anon.IsMatch>['match'] */ js.Any = js.native
   var output: String = js.native
   var posix: Boolean = js.native
   var regex: js.RegExp = js.native
@@ -21,8 +21,8 @@ object Result {
   def apply(
     glob: String,
     input: String,
-    isMatch: /* import warning: importer.ImportType#apply Failed type conversion: std.ReturnType<(input : string, regex : std.RegExp, options : picomatch.AnonFormat, test ? : {}): picomatch.AnonIsMatch>['isMatch'] */ js.Any,
-    `match`: /* import warning: importer.ImportType#apply Failed type conversion: std.ReturnType<(input : string, regex : std.RegExp, options : picomatch.AnonFormat, test ? : {}): picomatch.AnonIsMatch>['match'] */ js.Any,
+    isMatch: /* import warning: importer.ImportType#apply Failed type conversion: std.ReturnType<(input : string, regex : std.RegExp, options : picomatch.anon.Format, test ? : {}): picomatch.anon.IsMatch>['isMatch'] */ js.Any,
+    `match`: /* import warning: importer.ImportType#apply Failed type conversion: std.ReturnType<(input : string, regex : std.RegExp, options : picomatch.anon.Format, test ? : {}): picomatch.anon.IsMatch>['match'] */ js.Any,
     output: String,
     posix: Boolean,
     regex: js.RegExp,
@@ -52,7 +52,7 @@ object Result {
     }
     @scala.inline
     def withIsMatch(
-      value: /* import warning: importer.ImportType#apply Failed type conversion: std.ReturnType<(input : string, regex : std.RegExp, options : picomatch.AnonFormat, test ? : {}): picomatch.AnonIsMatch>['isMatch'] */ js.Any
+      value: /* import warning: importer.ImportType#apply Failed type conversion: std.ReturnType<(input : string, regex : std.RegExp, options : picomatch.anon.Format, test ? : {}): picomatch.anon.IsMatch>['isMatch'] */ js.Any
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("isMatch")(value.asInstanceOf[js.Any])
@@ -60,7 +60,7 @@ object Result {
     }
     @scala.inline
     def withMatch(
-      value: /* import warning: importer.ImportType#apply Failed type conversion: std.ReturnType<(input : string, regex : std.RegExp, options : picomatch.AnonFormat, test ? : {}): picomatch.AnonIsMatch>['match'] */ js.Any
+      value: /* import warning: importer.ImportType#apply Failed type conversion: std.ReturnType<(input : string, regex : std.RegExp, options : picomatch.anon.Format, test ? : {}): picomatch.anon.IsMatch>['match'] */ js.Any
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("match")(value.asInstanceOf[js.Any])

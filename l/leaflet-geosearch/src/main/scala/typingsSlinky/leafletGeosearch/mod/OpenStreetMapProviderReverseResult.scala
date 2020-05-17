@@ -1,6 +1,6 @@
 package typingsSlinky.leafletGeosearch.mod
 
-import typingsSlinky.leafletGeosearch.AnonAddress
+import typingsSlinky.leafletGeosearch.anon.Address
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation._
 trait OpenStreetMapProviderReverseResult extends js.Object {
   var bounds: BoundsTuple = js.native
   var label: String = js.native
-  var raw: AnonAddress = js.native
+  var raw: Address = js.native
   var x: String = js.native
   var y: String = js.native
 }
 
 object OpenStreetMapProviderReverseResult {
   @scala.inline
-  def apply(bounds: BoundsTuple, label: String, raw: AnonAddress, x: String, y: String): OpenStreetMapProviderReverseResult = {
+  def apply(bounds: BoundsTuple, label: String, raw: Address, x: String, y: String): OpenStreetMapProviderReverseResult = {
     val __obj = js.Dynamic.literal(bounds = bounds.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenStreetMapProviderReverseResult]
   }
@@ -40,7 +40,7 @@ object OpenStreetMapProviderReverseResult {
         ret
     }
     @scala.inline
-    def withRaw(value: AnonAddress): Self = {
+    def withRaw(value: Address): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(value.asInstanceOf[js.Any])
         ret

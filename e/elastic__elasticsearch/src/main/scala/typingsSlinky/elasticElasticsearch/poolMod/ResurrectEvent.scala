@@ -1,6 +1,6 @@
 package typingsSlinky.elasticElasticsearch.poolMod
 
-import typingsSlinky.elasticElasticsearch.AnonIdAny
+import typingsSlinky.elasticElasticsearch.anon.IdAny
 import typingsSlinky.elasticElasticsearch.connectionMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,13 +11,13 @@ trait ResurrectEvent extends js.Object {
   var connection: default = js.native
   var isAlive: Boolean = js.native
   var name: String = js.native
-  var request: AnonIdAny = js.native
+  var request: IdAny = js.native
   var strategy: String = js.native
 }
 
 object ResurrectEvent {
   @scala.inline
-  def apply(connection: default, isAlive: Boolean, name: String, request: AnonIdAny, strategy: String): ResurrectEvent = {
+  def apply(connection: default, isAlive: Boolean, name: String, request: IdAny, strategy: String): ResurrectEvent = {
     val __obj = js.Dynamic.literal(connection = connection.asInstanceOf[js.Any], isAlive = isAlive.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], request = request.asInstanceOf[js.Any], strategy = strategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResurrectEvent]
   }
@@ -46,7 +46,7 @@ object ResurrectEvent {
         ret
     }
     @scala.inline
-    def withRequest(value: AnonIdAny): Self = {
+    def withRequest(value: IdAny): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
         ret

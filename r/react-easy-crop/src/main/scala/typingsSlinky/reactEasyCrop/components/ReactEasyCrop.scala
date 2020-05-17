@@ -2,8 +2,8 @@ package typingsSlinky.reactEasyCrop.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactEasyCrop.AnonContainerClassName
-import typingsSlinky.reactEasyCrop.AnonContainerStyle
+import typingsSlinky.reactEasyCrop.anon.ContainerClassName
+import typingsSlinky.reactEasyCrop.anon.ContainerStyle
 import typingsSlinky.reactEasyCrop.mod.Area
 import typingsSlinky.reactEasyCrop.mod.CropperProps
 import typingsSlinky.reactEasyCrop.mod.ImageSize
@@ -28,7 +28,7 @@ object ReactEasyCrop {
     @scala.inline
     def aspect(value: Double): this.type = set("aspect", value.asInstanceOf[js.Any])
     @scala.inline
-    def classes(value: AnonContainerClassName): this.type = set("classes", value.asInstanceOf[js.Any])
+    def classes(value: ContainerClassName): this.type = set("classes", value.asInstanceOf[js.Any])
     @scala.inline
     def cropShape(value: rect | round): this.type = set("cropShape", value.asInstanceOf[js.Any])
     @scala.inline
@@ -62,7 +62,7 @@ object ReactEasyCrop {
     @scala.inline
     def showGrid(value: Boolean): this.type = set("showGrid", value.asInstanceOf[js.Any])
     @scala.inline
-    def style(value: AnonContainerStyle): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: ContainerStyle): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def zoom(value: Double): this.type = set("zoom", value.asInstanceOf[js.Any])
     @scala.inline

@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 // API: http://vitaly-t.github.io/pg-promise/PreparedStatement.html
 @JSImport("pg-promise", "PreparedStatement")
 @js.native
-class PreparedStatement () extends _QueryParam {
+class PreparedStatement () extends QueryParam {
   def this(options: IPreparedStatement) = this()
   // advanced properties:
   var binary: Boolean = js.native

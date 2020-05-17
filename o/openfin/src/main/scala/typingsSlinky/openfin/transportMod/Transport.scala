@@ -1,7 +1,7 @@
 package typingsSlinky.openfin.transportMod
 
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.openfin.AnonReject
+import typingsSlinky.openfin.anon.Reject
 import typingsSlinky.openfin.entityTypeMod.EntityTypeHelpers
 import typingsSlinky.openfin.environmentMod.Environment
 import typingsSlinky.openfin.eventAggregatorMod.EventAggregator
@@ -30,7 +30,7 @@ trait Transport extends EventEmitter {
   var sendRaw_Original: js.Function1[/* data */ js.Any, js.Promise[_]] = js.native
   var topicRefMap: Map[String, Double] = js.native
   var uncorrelatedListener: js.Function = js.native
-  var wireListeners: Map[Double, AnonReject] = js.native
+  var wireListeners: Map[Double, Reject] = js.native
   /* protected */ def addWireListener(id: Double, resolve: js.Function, reject: js.Function, uncorrelated: Boolean): Unit = js.native
   def connect(config: InternalConnectConfig): js.Promise[String] = js.native
   def connectByPort(config: ExistingConnectConfig): js.Promise[String] = js.native

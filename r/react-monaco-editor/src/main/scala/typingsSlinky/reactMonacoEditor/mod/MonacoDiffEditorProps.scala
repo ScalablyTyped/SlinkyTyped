@@ -4,7 +4,7 @@ import typingsSlinky.monacoEditor.mod.editor.IDiffEditorConstructionOptions
 import typingsSlinky.monacoEditor.mod.editor.IEditorOverrideServices
 import typingsSlinky.monacoEditor.mod.editor.IModelContentChangedEvent
 import typingsSlinky.monacoEditor.mod.editor.IStandaloneDiffEditor
-import typingsSlinky.reactMonacoEditor.TypeofmonacoEditor
+import typingsSlinky.reactMonacoEditor.anon.TypeofmonacoEditor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

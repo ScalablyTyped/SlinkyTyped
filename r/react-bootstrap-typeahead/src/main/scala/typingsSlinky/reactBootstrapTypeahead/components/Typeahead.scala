@@ -1,5 +1,6 @@
 package typingsSlinky.reactBootstrapTypeahead.components
 
+import org.scalajs.dom.raw.Event
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -12,7 +13,6 @@ import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadMenuProps
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadProps
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadResult
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -99,15 +99,15 @@ object Typeahead {
     @scala.inline
     def newSelectionPrefix(value: String): this.type = set("newSelectionPrefix", value.asInstanceOf[js.Any])
     @scala.inline
-    def onBlur(value: /* e */ Event_ => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    def onBlur(value: /* e */ Event => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
     def onChange(value: /* selected */ js.Array[T] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onFocus(value: /* e */ Event_ => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    def onFocus(value: /* e */ Event => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
-    def onInputChange(value: (/* input */ String, /* e */ Event_) => Unit): this.type = set("onInputChange", js.Any.fromFunction2(value))
+    def onInputChange(value: (/* input */ String, /* e */ Event) => Unit): this.type = set("onInputChange", js.Any.fromFunction2(value))
     @scala.inline
-    def onKeyDown(value: /* e */ Event_ => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    def onKeyDown(value: /* e */ Event => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
     @scala.inline
     def onMenuHide(value: () => Unit): this.type = set("onMenuHide", js.Any.fromFunction0(value))
     @scala.inline
@@ -115,7 +115,7 @@ object Typeahead {
     @scala.inline
     def onMenuToggle(value: /* show */ Boolean => Unit): this.type = set("onMenuToggle", js.Any.fromFunction1(value))
     @scala.inline
-    def onPaginate(value: (/* e */ Event_, /* numResults */ Double) => Unit): this.type = set("onPaginate", js.Any.fromFunction2(value))
+    def onPaginate(value: (/* e */ Event, /* numResults */ Double) => Unit): this.type = set("onPaginate", js.Any.fromFunction2(value))
     @scala.inline
     def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
     @scala.inline

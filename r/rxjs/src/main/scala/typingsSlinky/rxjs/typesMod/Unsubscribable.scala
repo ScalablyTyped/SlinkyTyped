@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Unsubscribable extends js.Object {
+trait Unsubscribable extends TeardownLogic {
   def unsubscribe(): Unit = js.native
 }
 

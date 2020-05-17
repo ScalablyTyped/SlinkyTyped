@@ -1,6 +1,6 @@
 package typingsSlinky.fullcalendar.inputTypesMod
 
-import typingsSlinky.jquery.JQuery_.AjaxSettings
+import typingsSlinky.jquery.JQuery.AjaxSettings
 import typingsSlinky.moment.mod.Moment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait EventSourceExtendedInput
   extends AjaxSettings[js.Any]
-     with EventOptionsBase {
+     with EventOptionsBase
+     with EventSourceInput {
   var allDayDefault: js.UndefOr[Boolean] = js.native
   var endParam: js.UndefOr[String] = js.native
   var eventDataTransform: js.UndefOr[js.Function1[/* eventData */ js.Any, EventObjectInput]] = js.native

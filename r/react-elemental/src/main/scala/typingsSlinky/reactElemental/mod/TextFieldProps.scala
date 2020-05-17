@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -280,7 +280,7 @@ trait TextFieldProps extends js.Object {
   var contentEditable: js.UndefOr[Booleanish | inherit] = js.native
   var contextMenu: js.UndefOr[String] = js.native
   var crossOrigin: js.UndefOr[String] = js.native
-  var dangerouslySetInnerHTML: js.UndefOr[AnonHtml] = js.native
+  var dangerouslySetInnerHTML: js.UndefOr[Html] = js.native
   var datatype: js.UndefOr[String] = js.native
   // React-specific Attributes
   var defaultChecked: js.UndefOr[Boolean] = js.native
@@ -1310,7 +1310,7 @@ object TextFieldProps {
         ret
     }
     @scala.inline
-    def withDangerouslySetInnerHTML(value: AnonHtml): Self = {
+    def withDangerouslySetInnerHTML(value: Html): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetInnerHTML")(value.asInstanceOf[js.Any])
         ret

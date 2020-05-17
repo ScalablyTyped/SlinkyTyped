@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonOnlySunLighting
+import typingsSlinky.cesium.anon.OnlySunLighting
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "Moon")
 @js.native
 class Moon () extends js.Object {
-  def this(options: AnonOnlySunLighting) = this()
+  def this(options: OnlySunLighting) = this()
   var ellipsoid: Ellipsoid = js.native
   var onlySunLighting: Boolean = js.native
   var show: Boolean = js.native

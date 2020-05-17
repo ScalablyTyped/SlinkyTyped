@@ -1,7 +1,7 @@
 package typingsSlinky.pkijs.encryptedDataMod
 
-import typingsSlinky.pkijs.AnonContentEncryptionAlgorithm
-import typingsSlinky.pkijs.AnonPassword
+import typingsSlinky.pkijs.anon.ContentEncryptionAlgorithm
+import typingsSlinky.pkijs.anon.Password
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,13 +15,13 @@ trait EncryptedData extends js.Object {
     * Create a new CMS Encrypted Data content
     * @param {*} parameters Parameters neccessary for encryption
     */
-  def decrypt(parameters: AnonPassword): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def decrypt(parameters: Password): js.Thenable[js.typedarray.ArrayBuffer] = js.native
   /**
     * Create a new CMS Encrypted Data content
     * @param {*} parameters Parameters neccessary for encryption
     * @returns {Promise}
     */
-  def encrypt(parameters: AnonContentEncryptionAlgorithm): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def encrypt(parameters: ContentEncryptionAlgorithm): js.Thenable[js.typedarray.ArrayBuffer] = js.native
   def fromSchema(schema: js.Any): Unit = js.native
   def toJSON(): js.Any = js.native
   def toSchema(): js.Any = js.native
@@ -30,8 +30,8 @@ trait EncryptedData extends js.Object {
 object EncryptedData {
   @scala.inline
   def apply(
-    decrypt: AnonPassword => js.Thenable[js.typedarray.ArrayBuffer],
-    encrypt: AnonContentEncryptionAlgorithm => js.Thenable[js.typedarray.ArrayBuffer],
+    decrypt: Password => js.Thenable[js.typedarray.ArrayBuffer],
+    encrypt: ContentEncryptionAlgorithm => js.Thenable[js.typedarray.ArrayBuffer],
     encryptedContentInfo: typingsSlinky.pkijs.encryptedContentInfoMod.default,
     fromSchema: js.Any => Unit,
     toJSON: () => js.Any,
@@ -49,13 +49,13 @@ object EncryptedData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDecrypt(value: AnonPassword => js.Thenable[js.typedarray.ArrayBuffer]): Self = {
+    def withDecrypt(value: Password => js.Thenable[js.typedarray.ArrayBuffer]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("decrypt")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withEncrypt(value: AnonContentEncryptionAlgorithm => js.Thenable[js.typedarray.ArrayBuffer]): Self = {
+    def withEncrypt(value: ContentEncryptionAlgorithm => js.Thenable[js.typedarray.ArrayBuffer]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("encrypt")(js.Any.fromFunction1(value))
         ret

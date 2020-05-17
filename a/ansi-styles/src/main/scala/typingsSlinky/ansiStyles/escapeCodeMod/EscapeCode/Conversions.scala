@@ -23,7 +23,7 @@ trait Conversions extends js.Object {
     * color keyword in css to ansi code
     */
   def keyword(
-    keyword: /* keyof ansi-styles.TypeofcssKeywords */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 148 */ js.Any
+    keyword: /* keyof ansi-styles.anon.TypeofcssKeywords */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 148 */ js.Any
   ): String = js.native
   def lab(l: Double, a: Double, b: Double): String = js.native
   def lch(l: Double, c: Double, h: Double): String = js.native
@@ -44,7 +44,7 @@ object Conversions {
     hsl: (Double, Double, Double) => String,
     hsv: (Double, Double, Double) => String,
     hwb: (Double, Double, Double) => String,
-    keyword: /* keyof ansi-styles.TypeofcssKeywords */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 148 */ js.Any => String,
+    keyword: /* keyof ansi-styles.anon.TypeofcssKeywords */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 148 */ js.Any => String,
     lab: (Double, Double, Double) => String,
     lch: (Double, Double, Double) => String,
     rgb: (Double, Double, Double) => String,
@@ -121,7 +121,7 @@ object Conversions {
     }
     @scala.inline
     def withKeyword(
-      value: /* keyof ansi-styles.TypeofcssKeywords */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 148 */ js.Any => String
+      value: /* keyof ansi-styles.anon.TypeofcssKeywords */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 148 */ js.Any => String
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyword")(js.Any.fromFunction1(value))

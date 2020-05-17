@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.node.netMod.Socket
 import typingsSlinky.web3Core.mod.Extension
 import typingsSlinky.web3Core.mod.Providers
-import typingsSlinky.web3Core.mod.provider
 import typingsSlinky.web3Net.mod.Network
 import typingsSlinky.web3Shh.web3ShhStrings.messages
 import scala.scalajs.js
@@ -14,10 +13,10 @@ import scala.scalajs.js.annotation._
 @JSImport("web3-shh", "Shh")
 @js.native
 class Shh () extends js.Object {
-  def this(provider: provider) = this()
-  def this(provider: provider, net: Socket) = this()
+  def this(provider: typingsSlinky.web3Core.mod.provider) = this()
+  def this(provider: typingsSlinky.web3Core.mod.provider, net: Socket) = this()
   var BatchRequest: Instantiable0[typingsSlinky.web3Core.mod.BatchRequest] = js.native
-  val currentProvider: provider = js.native
+  val currentProvider: typingsSlinky.web3Core.mod.provider = js.native
   val givenProvider: js.Any = js.native
   var net: Network = js.native
   def addPrivateKey(privateKey: String): js.Promise[String] = js.native
@@ -69,7 +68,7 @@ class Shh () extends js.Object {
   def setMaxMessageSize(size: Double, callback: js.Function2[/* error */ js.Error, /* result */ Boolean, Unit]): js.Promise[Boolean] = js.native
   def setMinPoW(pow: Double): js.Promise[Boolean] = js.native
   def setMinPoW(pow: Double, callback: js.Function2[/* error */ js.Error, /* result */ Boolean, Unit]): js.Promise[Boolean] = js.native
-  def setProvider(provider: provider): Boolean = js.native
+  def setProvider(provider: typingsSlinky.web3Core.mod.provider): Boolean = js.native
   @JSName("subscribe")
   def subscribe_messages(string: messages, options: SubscriptionOptions): Subscribe = js.native
   @JSName("subscribe")

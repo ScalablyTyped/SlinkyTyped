@@ -2,7 +2,7 @@ package typingsSlinky.reactEasyChart.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactEasyChart.AnonColorString
+import typingsSlinky.reactEasyChart.anon.ColorString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LegendProps extends js.Object {
   /** Override the color of the items */
-  var config: js.UndefOr[js.Array[AnonColorString]] = js.native
+  var config: js.UndefOr[js.Array[ColorString]] = js.native
   var data: js.Array[_] = js.native
   var dataId: String = js.native
   /** change list items to inline-block (default block) */
@@ -44,7 +44,7 @@ object LegendProps {
         ret
     }
     @scala.inline
-    def withConfig(value: js.Array[AnonColorString]): Self = {
+    def withConfig(value: js.Array[ColorString]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
         ret

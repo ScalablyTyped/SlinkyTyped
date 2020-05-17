@@ -4,7 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactInstance
-import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameGetTarget
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameGetTarget
 import typingsSlinky.reactOnsenui.mod.AnimationOptions
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.default
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.none

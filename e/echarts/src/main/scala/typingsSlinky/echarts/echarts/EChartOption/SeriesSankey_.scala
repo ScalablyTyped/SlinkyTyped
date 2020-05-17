@@ -1,11 +1,11 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonBorderRadius
-import typingsSlinky.echarts.AnonBorderType
-import typingsSlinky.echarts.AnonCurvenessOpacity
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonItemStyleLabelLineStyle
-import typingsSlinky.echarts.AnonSource
+import typingsSlinky.echarts.anon.BorderRadius
+import typingsSlinky.echarts.anon.BorderType
+import typingsSlinky.echarts.anon.CurvenessOpacity
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.ItemStyleLabelLineStyle
+import typingsSlinky.echarts.anon.Source
 import typingsSlinky.echarts.echarts.EChartOption.SeriesSankey.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -215,7 +215,7 @@ trait SeriesSankey_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis
     */
-  var emphasis: js.UndefOr[AnonItemStyleLabelLineStyle] = js.native
+  var emphasis: js.UndefOr[ItemStyleLabelLineStyle] = js.native
   /**
     * Support when mouse hovering over a node or an edge, the adjacent
     * nodes and edges are also highlighted.
@@ -262,14 +262,14 @@ trait SeriesSankey_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBorderType] = js.native
+  var itemStyle: js.UndefOr[BorderType] = js.native
   /**
     * `label` describes the text label style in each rectangular node.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.label
     */
-  var label: js.UndefOr[AnonBorderRadius] = js.native
+  var label: js.UndefOr[BorderRadius] = js.native
   /**
     * The iterations of layout, which is used to continuously optimize
     * the positions of nodes in graph, decreasing the overlapping between
@@ -312,7 +312,7 @@ trait SeriesSankey_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.lineStyle
     */
-  var lineStyle: js.UndefOr[AnonCurvenessOpacity] = js.native
+  var lineStyle: js.UndefOr[CurvenessOpacity] = js.native
   /**
     * The links between nodes.
     * **Notes: The Sankey diagram theoretically only supports Directed
@@ -324,7 +324,7 @@ trait SeriesSankey_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.links
     */
-  var links: js.UndefOr[AnonSource] = js.native
+  var links: js.UndefOr[Source] = js.native
   /**
     * The gap between any two rectangles in each column from the graph.
     *
@@ -390,7 +390,7 @@ trait SeriesSankey_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * Distance between sankey component and the top side of the container.
     *
@@ -612,7 +612,7 @@ object SeriesSankey_ {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonItemStyleLabelLineStyle): Self = {
+    def withEmphasis(value: ItemStyleLabelLineStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -660,7 +660,7 @@ object SeriesSankey_ {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonBorderType): Self = {
+    def withItemStyle(value: BorderType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -672,7 +672,7 @@ object SeriesSankey_ {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonBorderRadius): Self = {
+    def withLabel(value: BorderRadius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -708,7 +708,7 @@ object SeriesSankey_ {
         ret
     }
     @scala.inline
-    def withLineStyle(value: AnonCurvenessOpacity): Self = {
+    def withLineStyle(value: CurvenessOpacity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
         ret
@@ -720,7 +720,7 @@ object SeriesSankey_ {
         ret
     }
     @scala.inline
-    def withLinks(value: AnonSource): Self = {
+    def withLinks(value: Source): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
         ret
@@ -804,7 +804,7 @@ object SeriesSankey_ {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.streamingJsonStringify.mod
 
-import typingsSlinky.node.AnonChunk
+import typingsSlinky.node.anon.Chunk
 import typingsSlinky.node.streamMod.Transform
 import typingsSlinky.node.streamMod.TransformCallback
 import scala.scalajs.js
@@ -69,7 +69,7 @@ trait Options extends js.Object {
   var writev: js.UndefOr[
     js.ThisFunction2[
       /* this */ Transform, 
-      /* chunks */ js.Array[AnonChunk], 
+      /* chunks */ js.Array[Chunk], 
       /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ]
@@ -421,7 +421,7 @@ object Options {
     def withWritev(
       value: js.ThisFunction2[
           /* this */ Transform, 
-          /* chunks */ js.Array[AnonChunk], 
+          /* chunks */ js.Array[Chunk], 
           /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
           Unit
         ]

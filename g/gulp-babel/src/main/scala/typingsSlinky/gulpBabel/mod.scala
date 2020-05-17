@@ -1,5 +1,6 @@
 package typingsSlinky.gulpBabel
 
+import typingsSlinky.gulpBabel.anon.Ast
 import typingsSlinky.node.NodeJS.ReadWriteStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,6 +10,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   def apply(): ReadWriteStream = js.native
-  def apply(options: AnonAst): ReadWriteStream = js.native
+  def apply(options: Ast): ReadWriteStream = js.native
 }
 

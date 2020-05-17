@@ -1,5 +1,6 @@
 package typingsSlinky.relayRuntime
 
+import typingsSlinky.relayRuntime.anon.GcReleaseBufferSize
 import typingsSlinky.relayRuntime.relayStoreTypesMod.MutableRecordSource
 import typingsSlinky.relayRuntime.relayStoreTypesMod.ReaderSelector
 import typingsSlinky.relayRuntime.relayStoreTypesMod.Snapshot
@@ -14,7 +15,7 @@ object relayModernStoreMod extends js.Object {
   @js.native
   class RelayModernStore protected () extends Store {
     def this(source: MutableRecordSource) = this()
-    def this(source: MutableRecordSource, options: AnonGcReleaseBufferSize) = this()
+    def this(source: MutableRecordSource, options: GcReleaseBufferSize) = this()
     def lookup(selector: ReaderSelector): Snapshot = js.native
     def toJSON(): js.Any = js.native
   }

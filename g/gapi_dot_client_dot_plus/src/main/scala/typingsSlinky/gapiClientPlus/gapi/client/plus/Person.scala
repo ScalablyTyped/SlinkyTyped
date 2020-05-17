@@ -1,13 +1,13 @@
 package typingsSlinky.gapiClientPlus.gapi.client.plus
 
-import typingsSlinky.gapiClientPlus.AnonCoverInfo
-import typingsSlinky.gapiClientPlus.AnonDepartment
-import typingsSlinky.gapiClientPlus.AnonFormatted
-import typingsSlinky.gapiClientPlus.AnonIsDefault
-import typingsSlinky.gapiClientPlus.AnonLabel
-import typingsSlinky.gapiClientPlus.AnonMax
-import typingsSlinky.gapiClientPlus.AnonPrimary
-import typingsSlinky.gapiClientPlus.AnonValue
+import typingsSlinky.gapiClientPlus.anon.CoverInfo
+import typingsSlinky.gapiClientPlus.anon.Department
+import typingsSlinky.gapiClientPlus.anon.Formatted
+import typingsSlinky.gapiClientPlus.anon.IsDefault
+import typingsSlinky.gapiClientPlus.anon.Label
+import typingsSlinky.gapiClientPlus.anon.Max
+import typingsSlinky.gapiClientPlus.anon.Primary
+import typingsSlinky.gapiClientPlus.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait Person extends js.Object {
     * The age range of the person. Valid ranges are 17 or younger, 18 to 20, and 21 or older. Age is determined from the user's birthday using Western age
     * reckoning.
     */
-  var ageRange: js.UndefOr[AnonMax] = js.native
+  var ageRange: js.UndefOr[Max] = js.native
   /** The person's date of birth, represented as YYYY-MM-DD. */
   var birthday: js.UndefOr[String] = js.native
   /** The "bragging rights" line of this person. */
@@ -28,7 +28,7 @@ trait Person extends js.Object {
   /** For followers who are visible, the number of people who have added this person or page to a circle. */
   var circledByCount: js.UndefOr[Double] = js.native
   /** The cover photo content. */
-  var cover: js.UndefOr[AnonCoverInfo] = js.native
+  var cover: js.UndefOr[CoverInfo] = js.native
   /** (this field is not currently used) */
   var currentLocation: js.UndefOr[String] = js.native
   /** The name of this person, which is suitable for display. */
@@ -43,7 +43,7 @@ trait Person extends js.Object {
     * profile. The plus.profile.emails.read scope is needed to retrieve these email addresses, or the email scope can be used to retrieve just the Google
     * account email address.
     */
-  var emails: js.UndefOr[js.Array[AnonValue]] = js.native
+  var emails: js.UndefOr[js.Array[Value]] = js.native
   /** ETag of this response for caching purposes. */
   var etag: js.UndefOr[String] = js.native
   /**
@@ -56,7 +56,7 @@ trait Person extends js.Object {
   /** The ID of this person. */
   var id: js.UndefOr[String] = js.native
   /** The representation of the person's profile photo. */
-  var image: js.UndefOr[AnonIsDefault] = js.native
+  var image: js.UndefOr[IsDefault] = js.native
   /** Whether this user has signed up for Google+. */
   var isPlusUser: js.UndefOr[Boolean] = js.native
   /** Identifies this resource as a person. Value: "plus#person". */
@@ -64,7 +64,7 @@ trait Person extends js.Object {
   /** The user's preferred language for rendering. */
   var language: js.UndefOr[String] = js.native
   /** An object representation of the individual components of a person's name. */
-  var name: js.UndefOr[AnonFormatted] = js.native
+  var name: js.UndefOr[Formatted] = js.native
   /** The nickname of this person. */
   var nickname: js.UndefOr[String] = js.native
   /**
@@ -76,9 +76,9 @@ trait Person extends js.Object {
   /** The occupation of this person. */
   var occupation: js.UndefOr[String] = js.native
   /** A list of current or past organizations with which this person is associated. */
-  var organizations: js.UndefOr[js.Array[AnonDepartment]] = js.native
+  var organizations: js.UndefOr[js.Array[Department]] = js.native
   /** A list of places where this person has lived. */
-  var placesLived: js.UndefOr[js.Array[AnonPrimary]] = js.native
+  var placesLived: js.UndefOr[js.Array[Primary]] = js.native
   /** If a Google+ Page, the number of people who have +1'd this page. */
   var plusOneCount: js.UndefOr[Double] = js.native
   /**
@@ -101,7 +101,7 @@ trait Person extends js.Object {
   /** The URL of this person's profile. */
   var url: js.UndefOr[String] = js.native
   /** A list of URLs for this person. */
-  var urls: js.UndefOr[js.Array[AnonLabel]] = js.native
+  var urls: js.UndefOr[js.Array[Label]] = js.native
   /** Whether the person or Google+ Page has been verified. */
   var verified: js.UndefOr[Boolean] = js.native
 }
@@ -131,7 +131,7 @@ object Person {
         ret
     }
     @scala.inline
-    def withAgeRange(value: AnonMax): Self = {
+    def withAgeRange(value: Max): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ageRange")(value.asInstanceOf[js.Any])
         ret
@@ -179,7 +179,7 @@ object Person {
         ret
     }
     @scala.inline
-    def withCover(value: AnonCoverInfo): Self = {
+    def withCover(value: CoverInfo): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cover")(value.asInstanceOf[js.Any])
         ret
@@ -227,7 +227,7 @@ object Person {
         ret
     }
     @scala.inline
-    def withEmails(value: js.Array[AnonValue]): Self = {
+    def withEmails(value: js.Array[Value]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emails")(value.asInstanceOf[js.Any])
         ret
@@ -275,7 +275,7 @@ object Person {
         ret
     }
     @scala.inline
-    def withImage(value: AnonIsDefault): Self = {
+    def withImage(value: IsDefault): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
         ret
@@ -323,7 +323,7 @@ object Person {
         ret
     }
     @scala.inline
-    def withName(value: AnonFormatted): Self = {
+    def withName(value: Formatted): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
         ret
@@ -371,7 +371,7 @@ object Person {
         ret
     }
     @scala.inline
-    def withOrganizations(value: js.Array[AnonDepartment]): Self = {
+    def withOrganizations(value: js.Array[Department]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("organizations")(value.asInstanceOf[js.Any])
         ret
@@ -383,7 +383,7 @@ object Person {
         ret
     }
     @scala.inline
-    def withPlacesLived(value: js.Array[AnonPrimary]): Self = {
+    def withPlacesLived(value: js.Array[Primary]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("placesLived")(value.asInstanceOf[js.Any])
         ret
@@ -455,7 +455,7 @@ object Person {
         ret
     }
     @scala.inline
-    def withUrls(value: js.Array[AnonLabel]): Self = {
+    def withUrls(value: js.Array[Label]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("urls")(value.asInstanceOf[js.Any])
         ret

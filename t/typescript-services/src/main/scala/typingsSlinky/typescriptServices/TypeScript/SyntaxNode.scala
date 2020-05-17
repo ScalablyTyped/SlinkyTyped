@@ -4,10 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("TypeScript.SyntaxNode")
 @js.native
-class SyntaxNode protected () extends ISyntaxNodeOrToken {
-  def this(parsedInStrictMode: Boolean) = this()
+trait SyntaxNode extends ISyntaxNodeOrToken {
   var _data: js.Any = js.native
   /* private */ def computeData(): js.Any = js.native
   /* private */ def data(): js.Any = js.native

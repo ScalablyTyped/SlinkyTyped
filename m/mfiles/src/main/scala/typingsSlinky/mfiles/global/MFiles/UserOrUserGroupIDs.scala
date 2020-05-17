@@ -1,0 +1,16 @@
+package typingsSlinky.mfiles.global.MFiles
+
+import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.IUserOrUserGroupIDs
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("MFiles.UserOrUserGroupIDs")
+@js.native
+class UserOrUserGroupIDs () extends IUserOrUserGroupIDs
+
+@JSGlobal("MFiles.UserOrUserGroupIDs")
+@js.native
+object UserOrUserGroupIDs extends Instantiable0[IUserOrUserGroupIDs]
+

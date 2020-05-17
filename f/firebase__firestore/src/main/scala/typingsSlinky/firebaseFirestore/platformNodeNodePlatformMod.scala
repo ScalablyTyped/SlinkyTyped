@@ -1,7 +1,7 @@
 package typingsSlinky.firebaseFirestore
 
+import org.scalajs.dom.raw.Window
 import typingsSlinky.firebaseFirestore.platformPlatformMod.Platform
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ object platformNodeNodePlatformMod extends js.Object {
     @JSName("document")
     val document_NodePlatform: Null = js.native
     @JSName("window")
-    def window_MNodePlatform: Window_ | Null = js.native
+    def window_MNodePlatform: Window | Null = js.native
   }
   
 }

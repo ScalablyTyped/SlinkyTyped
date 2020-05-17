@@ -1,8 +1,8 @@
 package typingsSlinky.babylonjs.legacyMod
 
-import typingsSlinky.babylonjs.AnonColorFilter
-import typingsSlinky.babylonjs.AnonSubdivisionsX
-import typingsSlinky.babylonjs.AnonXmax
+import typingsSlinky.babylonjs.anon.ColorFilter
+import typingsSlinky.babylonjs.anon.SubdivisionsX
+import typingsSlinky.babylonjs.anon.Xmax
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -28,7 +28,7 @@ object GroundBuilder extends js.Object {
     * @returns the ground mesh
     * @see https://doc.babylonjs.com/how_to/set_shapes#ground
     */
-  def CreateGround(name: String, options: AnonSubdivisionsX, scene: js.Any): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateGround(name: String, options: SubdivisionsX, scene: js.Any): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates a ground mesh from a height map
     * * The parameter `url` sets the URL of the height map image resource.
@@ -48,11 +48,11 @@ object GroundBuilder extends js.Object {
     * @see https://doc.babylonjs.com/babylon101/height_map
     * @see https://doc.babylonjs.com/how_to/set_shapes#ground-from-a-height-map
     */
-  def CreateGroundFromHeightMap(name: String, url: String, options: AnonColorFilter): typingsSlinky.babylonjs.groundMeshMod.GroundMesh = js.native
+  def CreateGroundFromHeightMap(name: String, url: String, options: ColorFilter): typingsSlinky.babylonjs.groundMeshMod.GroundMesh = js.native
   def CreateGroundFromHeightMap(
     name: String,
     url: String,
-    options: AnonColorFilter,
+    options: ColorFilter,
     scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]
   ): typingsSlinky.babylonjs.groundMeshMod.GroundMesh = js.native
   /**
@@ -68,7 +68,7 @@ object GroundBuilder extends js.Object {
     * @returns the tiled ground mesh
     * @see https://doc.babylonjs.com/how_to/set_shapes#tiled-ground
     */
-  def CreateTiledGround(name: String, options: AnonXmax): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateTiledGround(name: String, options: AnonXmax, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTiledGround(name: String, options: Xmax): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTiledGround(name: String, options: Xmax, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
 }
 

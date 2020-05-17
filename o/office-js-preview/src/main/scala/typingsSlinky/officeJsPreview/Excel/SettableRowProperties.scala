@@ -1,6 +1,6 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.CellPropertiesFormatrowHe
+import typingsSlinky.officeJsPreview.anon.CellPropertiesFormatrowHe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

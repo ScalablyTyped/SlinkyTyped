@@ -1,15 +1,15 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonActionType
-import typingsSlinky.devextreme.AnonAllowMouseWheel
-import typingsSlinky.devextreme.AnonArgument
-import typingsSlinky.devextreme.AnonAxis
-import typingsSlinky.devextreme.AnonCheckTypeForAllData
-import typingsSlinky.devextreme.AnonComponentDxChart
-import typingsSlinky.devextreme.AnonCustomizeSeries
-import typingsSlinky.devextreme.AnonEventJQueryEventModel
-import typingsSlinky.devextreme.AnonHorizontalLine
-import typingsSlinky.devextreme.AnonOffset
+import typingsSlinky.devextreme.anon.ActionType
+import typingsSlinky.devextreme.anon.AllowMouseWheel
+import typingsSlinky.devextreme.anon.Argument
+import typingsSlinky.devextreme.anon.Axis
+import typingsSlinky.devextreme.anon.CheckTypeForAllData
+import typingsSlinky.devextreme.anon.ComponentDxChart
+import typingsSlinky.devextreme.anon.CustomizeSeries
+import typingsSlinky.devextreme.anon.EventJQueryEventModel
+import typingsSlinky.devextreme.anon.HorizontalLine
+import typingsSlinky.devextreme.anon.Offset
 import typingsSlinky.devextreme.devextremeStrings.all
 import typingsSlinky.devextreme.devextremeStrings.hide
 import typingsSlinky.devextreme.devextremeStrings.mouse
@@ -50,13 +50,13 @@ trait dxChartOptions extends BaseChartOptions[dxChart] {
   /** Colors the background of the chart container. */
   var containerBackgroundColor: js.UndefOr[String] = js.native
   /** Configures the crosshair feature. */
-  var crosshair: js.UndefOr[AnonHorizontalLine] = js.native
+  var crosshair: js.UndefOr[HorizontalLine] = js.native
   /** Customizes an individual annotation. */
   var customizeAnnotation: js.UndefOr[
     js.Function1[/* annotation */ dxChartAnnotationConfig | js.Any, dxChartAnnotationConfig]
   ] = js.native
   /** Processes data before visualizing it. */
-  var dataPrepareSettings: js.UndefOr[AnonCheckTypeForAllData] = js.native
+  var dataPrepareSettings: js.UndefOr[CheckTypeForAllData] = js.native
   /** Specifies which pane should be used by default. */
   var defaultPane: js.UndefOr[String] = js.native
   /** @deprecated Use CommonSeries.ignoreEmptyPoints instead. */
@@ -72,19 +72,19 @@ trait dxChartOptions extends BaseChartOptions[dxChart] {
   /** Forces the widget to treat negative values as zeroes. Applies to stacked-like series only. */
   var negativesAsZeroes: js.UndefOr[Boolean] = js.native
   /** A function that is executed when a label on the argument axis is clicked or tapped. */
-  var onArgumentAxisClick: js.UndefOr[(js.Function1[/* e */ AnonArgument, _]) | String] = js.native
+  var onArgumentAxisClick: js.UndefOr[(js.Function1[/* e */ Argument, _]) | String] = js.native
   /** A function that is executed when a legend item is clicked or tapped. */
-  var onLegendClick: js.UndefOr[(js.Function1[/* e */ AnonEventJQueryEventModel, _]) | String] = js.native
+  var onLegendClick: js.UndefOr[(js.Function1[/* e */ EventJQueryEventModel, _]) | String] = js.native
   /** A function that is executed when a series is clicked or tapped. */
-  var onSeriesClick: js.UndefOr[(js.Function1[/* e */ AnonEventJQueryEventModel, _]) | String] = js.native
+  var onSeriesClick: js.UndefOr[(js.Function1[/* e */ EventJQueryEventModel, _]) | String] = js.native
   /** A function that is executed after the pointer enters or leaves a series. */
-  var onSeriesHoverChanged: js.UndefOr[js.Function1[/* e */ AnonComponentDxChart, _]] = js.native
+  var onSeriesHoverChanged: js.UndefOr[js.Function1[/* e */ ComponentDxChart, _]] = js.native
   /** A function that is executed when a series is selected or selection is canceled. */
-  var onSeriesSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonComponentDxChart, _]] = js.native
+  var onSeriesSelectionChanged: js.UndefOr[js.Function1[/* e */ ComponentDxChart, _]] = js.native
   /** A function that is executed when zooming or panning ends. */
-  var onZoomEnd: js.UndefOr[js.Function1[/* e */ AnonActionType, _]] = js.native
+  var onZoomEnd: js.UndefOr[js.Function1[/* e */ ActionType, _]] = js.native
   /** A function that is executed when zooming or panning begins. */
-  var onZoomStart: js.UndefOr[js.Function1[/* e */ AnonAxis, _]] = js.native
+  var onZoomStart: js.UndefOr[js.Function1[/* e */ Axis, _]] = js.native
   /** Declares a collection of panes. */
   var panes: js.UndefOr[dxChartPanes | js.Array[dxChartPanes]] = js.native
   /** Specifies whether panes can be resized if other chart elements require more space after zooming or panning. */
@@ -94,14 +94,14 @@ trait dxChartOptions extends BaseChartOptions[dxChart] {
   /** Swaps the axes around making the value axis horizontal and the argument axis vertical. */
   var rotated: js.UndefOr[Boolean] = js.native
   /** Specifies the settings of the scroll bar. */
-  var scrollBar: js.UndefOr[AnonOffset] = js.native
+  var scrollBar: js.UndefOr[Offset] = js.native
   /** @deprecated Use the zoomAndPan option instead. */
   /** Enables scrolling in your chart. */
   var scrollingMode: js.UndefOr[all | mouse | none | touch] = js.native
   /** Specifies whether a single series or multiple series can be selected in the chart. */
   var seriesSelectionMode: js.UndefOr[multiple | single_] = js.native
   /** Defines options for the series template. */
-  var seriesTemplate: js.UndefOr[AnonCustomizeSeries] = js.native
+  var seriesTemplate: js.UndefOr[CustomizeSeries] = js.native
   /** Specifies options for Chart widget series. */
   @JSName("series")
   var series_dxChartOptions: js.UndefOr[ChartSeries | js.Array[ChartSeries]] = js.native
@@ -118,7 +118,7 @@ trait dxChartOptions extends BaseChartOptions[dxChart] {
   /** Configures the value axis. */
   var valueAxis: js.UndefOr[dxChartValueAxis | js.Array[dxChartValueAxis]] = js.native
   /** Configures zooming and panning. */
-  var zoomAndPan: js.UndefOr[AnonAllowMouseWheel] = js.native
+  var zoomAndPan: js.UndefOr[AllowMouseWheel] = js.native
   /** @deprecated Use the zoomAndPan option instead. */
   /** Enables zooming in your chart. */
   var zoomingMode: js.UndefOr[all | mouse | none | touch] = js.native
@@ -281,7 +281,7 @@ object dxChartOptions {
         ret
     }
     @scala.inline
-    def withCrosshair(value: AnonHorizontalLine): Self = {
+    def withCrosshair(value: HorizontalLine): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("crosshair")(value.asInstanceOf[js.Any])
         ret
@@ -305,7 +305,7 @@ object dxChartOptions {
         ret
     }
     @scala.inline
-    def withDataPrepareSettings(value: AnonCheckTypeForAllData): Self = {
+    def withDataPrepareSettings(value: CheckTypeForAllData): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataPrepareSettings")(value.asInstanceOf[js.Any])
         ret
@@ -389,13 +389,13 @@ object dxChartOptions {
         ret
     }
     @scala.inline
-    def withOnArgumentAxisClickFunction1(value: /* e */ AnonArgument => _): Self = {
+    def withOnArgumentAxisClickFunction1(value: /* e */ Argument => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onArgumentAxisClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnArgumentAxisClick(value: (js.Function1[/* e */ AnonArgument, _]) | String): Self = {
+    def withOnArgumentAxisClick(value: (js.Function1[/* e */ Argument, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onArgumentAxisClick")(value.asInstanceOf[js.Any])
         ret
@@ -407,13 +407,13 @@ object dxChartOptions {
         ret
     }
     @scala.inline
-    def withOnLegendClickFunction1(value: /* e */ AnonEventJQueryEventModel => _): Self = {
+    def withOnLegendClickFunction1(value: /* e */ EventJQueryEventModel => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLegendClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnLegendClick(value: (js.Function1[/* e */ AnonEventJQueryEventModel, _]) | String): Self = {
+    def withOnLegendClick(value: (js.Function1[/* e */ EventJQueryEventModel, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLegendClick")(value.asInstanceOf[js.Any])
         ret
@@ -425,13 +425,13 @@ object dxChartOptions {
         ret
     }
     @scala.inline
-    def withOnSeriesClickFunction1(value: /* e */ AnonEventJQueryEventModel => _): Self = {
+    def withOnSeriesClickFunction1(value: /* e */ EventJQueryEventModel => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnSeriesClick(value: (js.Function1[/* e */ AnonEventJQueryEventModel, _]) | String): Self = {
+    def withOnSeriesClick(value: (js.Function1[/* e */ EventJQueryEventModel, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesClick")(value.asInstanceOf[js.Any])
         ret
@@ -443,7 +443,7 @@ object dxChartOptions {
         ret
     }
     @scala.inline
-    def withOnSeriesHoverChanged(value: /* e */ AnonComponentDxChart => _): Self = {
+    def withOnSeriesHoverChanged(value: /* e */ ComponentDxChart => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesHoverChanged")(js.Any.fromFunction1(value))
         ret
@@ -455,7 +455,7 @@ object dxChartOptions {
         ret
     }
     @scala.inline
-    def withOnSeriesSelectionChanged(value: /* e */ AnonComponentDxChart => _): Self = {
+    def withOnSeriesSelectionChanged(value: /* e */ ComponentDxChart => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesSelectionChanged")(js.Any.fromFunction1(value))
         ret
@@ -467,7 +467,7 @@ object dxChartOptions {
         ret
     }
     @scala.inline
-    def withOnZoomEnd(value: /* e */ AnonActionType => _): Self = {
+    def withOnZoomEnd(value: /* e */ ActionType => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onZoomEnd")(js.Any.fromFunction1(value))
         ret
@@ -479,7 +479,7 @@ object dxChartOptions {
         ret
     }
     @scala.inline
-    def withOnZoomStart(value: /* e */ AnonAxis => _): Self = {
+    def withOnZoomStart(value: /* e */ Axis => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onZoomStart")(js.Any.fromFunction1(value))
         ret
@@ -539,7 +539,7 @@ object dxChartOptions {
         ret
     }
     @scala.inline
-    def withScrollBar(value: AnonOffset): Self = {
+    def withScrollBar(value: Offset): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollBar")(value.asInstanceOf[js.Any])
         ret
@@ -587,7 +587,7 @@ object dxChartOptions {
         ret
     }
     @scala.inline
-    def withSeriesTemplate(value: AnonCustomizeSeries): Self = {
+    def withSeriesTemplate(value: CustomizeSeries): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seriesTemplate")(value.asInstanceOf[js.Any])
         ret
@@ -659,7 +659,7 @@ object dxChartOptions {
         ret
     }
     @scala.inline
-    def withZoomAndPan(value: AnonAllowMouseWheel): Self = {
+    def withZoomAndPan(value: AllowMouseWheel): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("zoomAndPan")(value.asInstanceOf[js.Any])
         ret

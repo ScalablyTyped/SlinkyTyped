@@ -1,6 +1,6 @@
 package typingsSlinky.fluxible.mod
 
-import typingsSlinky.fluxible.AnonInstantiable
+import typingsSlinky.fluxible.anon.Instantiable
 import typingsSlinky.fluxible.baseStoreMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -35,6 +35,6 @@ class ComponentContext () extends js.Object {
   /**
     * Getter for store from dispatcher
     */
-  def getStore[T /* <: ^[js.Object] */](store: AnonInstantiable[T]): T = js.native
+  def getStore[T /* <: ^[js.Object] */](store: Instantiable[T]): T = js.native
 }
 

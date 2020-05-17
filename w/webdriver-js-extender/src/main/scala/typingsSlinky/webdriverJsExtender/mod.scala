@@ -2,6 +2,7 @@ package typingsSlinky.webdriverJsExtender
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.seleniumWebdriver.mod.WebDriver
+import typingsSlinky.webdriverJsExtender.anon.Altitude
 import typingsSlinky.webdriverJsExtender.webdriverJsExtenderNumbers.`0`
 import typingsSlinky.webdriverJsExtender.webdriverJsExtenderNumbers.`1`
 import typingsSlinky.webdriverJsExtender.webdriverJsExtenderNumbers.`2`
@@ -35,7 +36,7 @@ object mod extends js.Object {
     def getCurrentContext(): js.Promise[String] = js.native
     def getCurrentDeviceActivity(): js.Promise[String] = js.native
     def getDeviceTime(): js.Promise[String] = js.native
-    def getGeolocation(): js.Promise[AnonAltitude] = js.native
+    def getGeolocation(): js.Promise[Altitude] = js.native
     def getNetworkConnection(): js.Promise[`0` | `1` | `2` | `3` | `4` | `5` | `6` | `7`] = js.native
     def getScreenOrientation(): js.Promise[LANDSCAPE | PORTRAIT] = js.native
     def hideSoftKeyboard(): js.Promise[Unit] = js.native

@@ -8,8 +8,8 @@ import typingsSlinky.reactNative.mod.TextProperties
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.TouchableHighlightProps
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeElements.PartialAvatarProps
-import typingsSlinky.reactNativeElements.PartialIconProps
+import typingsSlinky.reactNativeElements.anon.PartialAvatarProps
+import typingsSlinky.reactNativeElements.anon.PartialIconProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.blueprintjsCore.componentsMod
 
-import typingsSlinky.blueprintjsCore.PartialITooltipProps
+import typingsSlinky.blueprintjsCore.anon.PartialITooltipProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

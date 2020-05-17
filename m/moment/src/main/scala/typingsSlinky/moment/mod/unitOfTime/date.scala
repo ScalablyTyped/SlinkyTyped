@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.moment.momentStrings.dates
   - typingsSlinky.moment.momentStrings.D
 */
-trait date extends _StartOf
+trait date extends StartOf
 
 object date {
   @scala.inline

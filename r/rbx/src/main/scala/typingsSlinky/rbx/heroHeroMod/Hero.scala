@@ -1,10 +1,10 @@
 package typingsSlinky.rbx.heroHeroMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.rbx.Anon7
-import typingsSlinky.rbx.AnonAsElementType
-import typingsSlinky.rbx.PickBadgeHelpersPropsFloa
-import typingsSlinky.rbx.PreferHelpersPropsOverridBackgroundColor
+import typingsSlinky.rbx.anon.AsElementType
+import typingsSlinky.rbx.anon.PickBadgeHelpersPropsFloa
+import typingsSlinky.rbx.anon.PreferHelpersPropsOverridBackgroundColor
+import typingsSlinky.rbx.anon.`7`
 import typingsSlinky.rbx.exoticMod.ForwardRefAsExoticComponent
 import typingsSlinky.rbx.exoticMod.FromReactType
 import typingsSlinky.rbx.helpersMod.HelpersPropsOverrides
@@ -62,12 +62,12 @@ object Hero extends js.Object {
   var DollarDollartypeof: js.Symbol = js.native
   var Foot: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
   var Head: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-  var defaultProps: AnonAsElementType with (Partial[
+  var defaultProps: AsElementType with (Partial[
     HelpersPropsOverrides with PickBadgeHelpersPropsFloa with HeroModifierProps with (Pick[_, String | Double | js.Symbol])
   ]) = js.native
   var displayName: js.UndefOr[String] = js.native
   def apply[TAsComponent /* <: ReactElement */](
-    props: Anon7[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with HeroModifierProps with (Pick[
+    props: `7`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with HeroModifierProps with (Pick[
       ComponentProps[TAsComponent], 
       Exclude[
         /* keyof react.react.ComponentProps<TAsComponent> */ String, 

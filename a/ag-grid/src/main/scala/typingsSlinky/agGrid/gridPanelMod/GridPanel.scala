@@ -2,8 +2,8 @@ package typingsSlinky.agGrid.gridPanelMod
 
 import org.scalajs.dom.raw.ClientRect
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.agGrid.AnonBottom
-import typingsSlinky.agGrid.AnonLeft
+import typingsSlinky.agGrid.anon.Bottom
+import typingsSlinky.agGrid.anon.Left
 import typingsSlinky.agGrid.componentMod.Component
 import typingsSlinky.agGrid.headerRootCompMod.HeaderRootComp
 import scala.scalajs.js
@@ -118,10 +118,10 @@ class GridPanel () extends Component {
   def getDropTargetBodyContainers(): js.Array[HTMLElement] = js.native
   def getDropTargetLeftContainers(): js.Array[HTMLElement] = js.native
   def getDropTargetRightContainers(): js.Array[HTMLElement] = js.native
-  def getHScrollPosition(): AnonLeft = js.native
+  def getHScrollPosition(): Left = js.native
   def getRowContainers(): RowContainerComponents = js.native
   /* private */ def getRowForEvent(event: js.Any): js.Any = js.native
-  def getVScrollPosition(): AnonBottom = js.native
+  def getVScrollPosition(): Bottom = js.native
   /* private */ def getWidthForSizeColsToFit(): js.Any = js.native
   /* private */ def handleContextMenuMouseEvent(mouseEvent: js.Any, touchEvent: js.Any, rowComp: js.Any, cellComp: js.Any): js.Any = js.native
   /* private */ def hideFullWidthViewportScrollbars(): js.Any = js.native

@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A table view section is a container within a table used to organize table view rows.
 		 */
-@JSGlobal("Titanium.UI.TableViewSection")
 @js.native
-class TableViewSection () extends Proxy {
+trait TableViewSection extends Proxy {
   /**
   			 * Title of this section footer.
   			 */

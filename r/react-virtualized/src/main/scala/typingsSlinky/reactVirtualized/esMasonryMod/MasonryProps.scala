@@ -3,7 +3,7 @@ package typingsSlinky.reactVirtualized.esMasonryMod
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.TagMod
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactVirtualized.AnonClientHeight
+import typingsSlinky.reactVirtualized.anon.ClientHeight
 import typingsSlinky.reactVirtualized.esCellMeasurerMod.CellMeasurerCacheInterface
 import typingsSlinky.reactVirtualized.esCellMeasurerMod.KeyMapper
 import typingsSlinky.reactVirtualized.mod.IndexRange
@@ -151,7 +151,7 @@ object MasonryProps {
         ret
     }
     @scala.inline
-    def withOnScroll(value: /* params */ AnonClientHeight => Unit): Self = {
+    def withOnScroll(value: /* params */ ClientHeight => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.Any.fromFunction1(value))
         ret

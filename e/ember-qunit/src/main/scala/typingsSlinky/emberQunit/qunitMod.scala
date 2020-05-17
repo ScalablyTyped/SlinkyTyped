@@ -1,9 +1,7 @@
 package typingsSlinky.emberQunit
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.emberTestHelpers.mod.TestContext
 import typingsSlinky.qunit.Assert
-import typingsSlinky.qunit.QUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,8 +15,5 @@ object qunitMod extends js.Object {
   def skip(name: String, callback: js.ThisFunction1[/* this */ TestContext, /* assert */ Assert, Unit]): Unit = js.native
   def test(name: String, callback: js.ThisFunction1[/* this */ TestContext, /* assert */ Assert, Unit]): Unit = js.native
   def todo(name: String, callback: js.ThisFunction1[/* this */ TestContext, /* assert */ Assert, Unit]): Unit = js.native
-  @js.native
-  object default extends TopLevel[QUnit]
-  
 }
 

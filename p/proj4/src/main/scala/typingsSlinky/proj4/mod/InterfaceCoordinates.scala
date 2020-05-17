@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait InterfaceCoordinates extends js.Object {
+trait InterfaceCoordinates extends TemplateCoordinates {
   var m: js.UndefOr[Double] = js.native
   var x: Double = js.native
   var y: Double = js.native

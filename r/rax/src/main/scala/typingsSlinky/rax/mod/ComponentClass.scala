@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ComponentClass[P, S]
-  extends StaticLifecycle[P, S]
+  extends ComponentType[P]
+     with StaticLifecycle[P, S]
      with Instantiable1[/* props */ P, Component[P, S, js.Any]]
      with Instantiable2[/* props */ P, /* context */ js.Any, Component[P, S, js.Any]] {
   var childContextTypes: js.UndefOr[ValidationMap[_]] = js.native

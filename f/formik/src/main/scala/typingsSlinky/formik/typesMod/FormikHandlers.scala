@@ -1,11 +1,11 @@
 package typingsSlinky.formik.typesMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLFormElement
 import slinky.core.SyntheticEvent
 import slinky.web.SyntheticFocusEvent
 import typingsSlinky.react.mod.ChangeEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,6 +18,6 @@ trait FormikHandlers extends js.Object {
   def handleChange[T](field: T): (js.Function1[/* e */ js.Any | ChangeEvent[_], Unit]) | Unit = js.native
   def handleReset(): Unit = js.native
   def handleSubmit(): Unit = js.native
-  def handleSubmit(e: SyntheticEvent[EventTarget with HTMLFormElement, Event_]): Unit = js.native
+  def handleSubmit(e: SyntheticEvent[EventTarget with HTMLFormElement, Event]): Unit = js.native
 }
 

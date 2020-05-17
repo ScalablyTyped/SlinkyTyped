@@ -1,19 +1,19 @@
 package typingsSlinky.lyricist.mod
 
-import typingsSlinky.lyricist.AnonHeight
+import typingsSlinky.lyricist.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait AvatarConfig extends js.Object {
-  var bounding_box: AnonHeight = js.native
+  var bounding_box: Height = js.native
   var url: String = js.native
 }
 
 object AvatarConfig {
   @scala.inline
-  def apply(bounding_box: AnonHeight, url: String): AvatarConfig = {
+  def apply(bounding_box: Height, url: String): AvatarConfig = {
     val __obj = js.Dynamic.literal(bounding_box = bounding_box.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[AvatarConfig]
   }
@@ -24,7 +24,7 @@ object AvatarConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBounding_box(value: AnonHeight): Self = {
+    def withBounding_box(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bounding_box")(value.asInstanceOf[js.Any])
         ret

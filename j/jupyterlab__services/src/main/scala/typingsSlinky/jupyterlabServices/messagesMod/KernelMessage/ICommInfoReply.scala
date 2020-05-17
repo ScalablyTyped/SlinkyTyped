@@ -1,7 +1,7 @@
 package typingsSlinky.jupyterlabServices.messagesMod.KernelMessage
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.jupyterlabServices.AnonTargetname
+import typingsSlinky.jupyterlabServices.anon.Targetname
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.ok
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,12 +19,12 @@ trait ICommInfoReply extends IReplyOkContent {
   /**
     * Mapping of comm ids to target names.
     */
-  var comms: StringDictionary[AnonTargetname] = js.native
+  var comms: StringDictionary[Targetname] = js.native
 }
 
 object ICommInfoReply {
   @scala.inline
-  def apply(comms: StringDictionary[AnonTargetname], status: ok): ICommInfoReply = {
+  def apply(comms: StringDictionary[Targetname], status: ok): ICommInfoReply = {
     val __obj = js.Dynamic.literal(comms = comms.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICommInfoReply]
   }
@@ -35,7 +35,7 @@ object ICommInfoReply {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withComms(value: StringDictionary[AnonTargetname]): Self = {
+    def withComms(value: StringDictionary[Targetname]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("comms")(value.asInstanceOf[js.Any])
         ret

@@ -8,16 +8,6 @@ package object kinesisanalyticsMod {
   type ApplicationCode = java.lang.String
   type ApplicationDescription = java.lang.String
   type ApplicationName = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.DELETING
-    - typingsSlinky.awsSdk.awsSdkStrings.STARTING
-    - typingsSlinky.awsSdk.awsSdkStrings.STOPPING
-    - typingsSlinky.awsSdk.awsSdkStrings.READY
-    - typingsSlinky.awsSdk.awsSdkStrings.RUNNING
-    - typingsSlinky.awsSdk.awsSdkStrings.UPDATING
-    - java.lang.String
-  */
-  type ApplicationStatus = typingsSlinky.awsSdk.kinesisanalyticsMod._ApplicationStatus | java.lang.String
   type ApplicationSummaries = js.Array[typingsSlinky.awsSdk.kinesisanalyticsMod.ApplicationSummary]
   type ApplicationVersionId = scala.Double
   type BooleanObject = scala.Boolean
@@ -34,13 +24,6 @@ package object kinesisanalyticsMod {
   type InputConfigurations = js.Array[typingsSlinky.awsSdk.kinesisanalyticsMod.InputConfiguration]
   type InputDescriptions = js.Array[typingsSlinky.awsSdk.kinesisanalyticsMod.InputDescription]
   type InputParallelismCount = scala.Double
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.NOW
-    - typingsSlinky.awsSdk.awsSdkStrings.TRIM_HORIZON
-    - typingsSlinky.awsSdk.awsSdkStrings.LAST_STOPPED_POINT
-    - java.lang.String
-  */
-  type InputStartingPosition = typingsSlinky.awsSdk.kinesisanalyticsMod._InputStartingPosition | java.lang.String
   type InputUpdates = js.Array[typingsSlinky.awsSdk.kinesisanalyticsMod.InputUpdate]
   type Inputs = js.Array[typingsSlinky.awsSdk.kinesisanalyticsMod.Input]
   type KinesisAnalyticsARN = java.lang.String
@@ -62,12 +45,6 @@ package object kinesisanalyticsMod {
   type RecordColumnSqlType = java.lang.String
   type RecordColumns = js.Array[typingsSlinky.awsSdk.kinesisanalyticsMod.RecordColumn]
   type RecordEncoding = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.JSON
-    - typingsSlinky.awsSdk.awsSdkStrings.CSV
-    - java.lang.String
-  */
-  type RecordFormatType = typingsSlinky.awsSdk.kinesisanalyticsMod._RecordFormatType | java.lang.String
   type RecordRowDelimiter = java.lang.String
   type RecordRowPath = java.lang.String
   type ReferenceDataSourceDescriptions = js.Array[typingsSlinky.awsSdk.kinesisanalyticsMod.ReferenceDataSourceDescription]
@@ -79,10 +56,4 @@ package object kinesisanalyticsMod {
   type TagValue = java.lang.String
   type Tags = js.Array[typingsSlinky.awsSdk.kinesisanalyticsMod.Tag]
   type Timestamp = js.Date
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2015-08-14`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.kinesisanalyticsMod._apiVersion | java.lang.String
 }

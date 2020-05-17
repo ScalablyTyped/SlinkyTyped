@@ -1,6 +1,6 @@
 package typingsSlinky.spotifyWebApiJs.SpotifyApi
 
-import typingsSlinky.spotifyWebApiJs.AnonHref
+import typingsSlinky.spotifyWebApiJs.anon.Href
 import typingsSlinky.spotifyWebApiJs.spotifyWebApiJsStrings.playlist
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait PlaylistObjectSimplified extends PlaylistBaseObject {
-  var tracks: AnonHref = js.native
+  var tracks: Href = js.native
 }
 
 object PlaylistObjectSimplified {
@@ -27,7 +27,7 @@ object PlaylistObjectSimplified {
     owner: UserObjectPublic,
     public: Boolean,
     snapshot_id: String,
-    tracks: AnonHref,
+    tracks: Href,
     `type`: playlist,
     uri: String
   ): PlaylistObjectSimplified = {
@@ -42,7 +42,7 @@ object PlaylistObjectSimplified {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTracks(value: AnonHref): Self = {
+    def withTracks(value: Href): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tracks")(value.asInstanceOf[js.Any])
         ret

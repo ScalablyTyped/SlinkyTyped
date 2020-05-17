@@ -1,18 +1,33 @@
 package typingsSlinky.headroom
 
-import org.scalajs.dom.raw.Element
-import org.scalajs.dom.raw.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Headroom")
 @js.native
-class Headroom protected () extends js.Object {
-  def this(element: Element) = this()
-  def this(element: Node) = this()
-  def this(element: Element, options: HeadroomOptions) = this()
-  def this(element: Node, options: HeadroomOptions) = this()
+trait Headroom extends js.Object {
   def init(): Unit = js.native
+}
+
+object Headroom {
+  @scala.inline
+  def apply(init: () => Unit): Headroom = {
+    val __obj = js.Dynamic.literal(init = js.Any.fromFunction0(init))
+    __obj.asInstanceOf[Headroom]
+  }
+  @scala.inline
+  implicit class HeadroomOps[Self <: Headroom] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInit(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

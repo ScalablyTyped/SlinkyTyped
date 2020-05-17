@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientAnalyticsreporting.gapi.client.analyticsreporting
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAnalyticsreporting.AnonAccesstoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAnalyticsreporting.anon.Accesstoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ReportsResource extends js.Object {
   /** Returns the Analytics data. */
-  def batchGet(request: AnonAccesstoken): Request_[GetReportsResponse] = js.native
+  def batchGet(request: Accesstoken): Request[GetReportsResponse] = js.native
 }
 
 object ReportsResource {
   @scala.inline
-  def apply(batchGet: AnonAccesstoken => Request_[GetReportsResponse]): ReportsResource = {
+  def apply(batchGet: Accesstoken => Request[GetReportsResponse]): ReportsResource = {
     val __obj = js.Dynamic.literal(batchGet = js.Any.fromFunction1(batchGet))
     __obj.asInstanceOf[ReportsResource]
   }
@@ -25,7 +25,7 @@ object ReportsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBatchGet(value: AnonAccesstoken => Request_[GetReportsResponse]): Self = {
+    def withBatchGet(value: Accesstoken => Request[GetReportsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("batchGet")(js.Any.fromFunction1(value))
         ret

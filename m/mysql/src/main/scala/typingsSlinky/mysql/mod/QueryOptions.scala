@@ -1,6 +1,6 @@
 package typingsSlinky.mysql.mod
 
-import typingsSlinky.mysql.UntypedFieldInfotypestrin
+import typingsSlinky.mysql.anon.UntypedFieldInfotypestrin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

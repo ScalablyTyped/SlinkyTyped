@@ -18,11 +18,7 @@ object mod extends js.Object {
   @JSName("start")
   def start_false(args: js.Array[String], returnPromise: `false`): ChildProcess = js.native
   @JSName("start")
-  def start_true(args: js.UndefOr[scala.Nothing], returnPromise: `true`): js.Promise[ChildProcess] = js.native
-  @JSName("start")
-  def start_true(args: js.Array[String], returnPromise: `true`): js.Promise[ChildProcess] = js.native
-  @JSName("start")
-  def start_true(args: Null, returnPromise: `true`): js.Promise[ChildProcess] = js.native
+  def start_true(args: js.UndefOr[js.Array[String] | Null], returnPromise: `true`): js.Promise[ChildProcess] = js.native
   def stop(): Unit = js.native
 }
 

@@ -1,10 +1,10 @@
 package typingsSlinky.stormReactDiagrams.diagramModelMod
 
-import typingsSlinky.stormReactDiagrams.BaseEventDiagramModeloffs
-import typingsSlinky.stormReactDiagrams.BaseEventDiagramModelsize
-import typingsSlinky.stormReactDiagrams.BaseEventDiagramModelzoom
-import typingsSlinky.stormReactDiagrams.BaseEventanylinkLinkModel
-import typingsSlinky.stormReactDiagrams.BaseEventanynodeNodeModel
+import typingsSlinky.stormReactDiagrams.anon.BaseEventDiagramModeloffs
+import typingsSlinky.stormReactDiagrams.anon.BaseEventDiagramModelsize
+import typingsSlinky.stormReactDiagrams.anon.BaseEventDiagramModelzoom
+import typingsSlinky.stormReactDiagrams.anon.BaseEventanylinkLinkModel
+import typingsSlinky.stormReactDiagrams.anon.BaseEventanynodeNodeModel
 import typingsSlinky.stormReactDiagrams.baseEntityMod.BaseListener
 import scala.scalajs.js
 import scala.scalajs.js.`|`

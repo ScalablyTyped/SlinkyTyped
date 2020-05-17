@@ -1,7 +1,7 @@
 package typingsSlinky.when.mod
 
 import typingsSlinky.when.When.Descriptor
-import typingsSlinky.when.When.Promise_
+import typingsSlinky.when.When.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,6 +20,6 @@ object settle extends js.Object {
     * @param promisesOrValues array of anything, may contain a mix
     *      of {@link Promise}s and values
     */
-  def apply[T](promisesOrValues: js.Array[_]): Promise_[js.Array[Descriptor[T]]] = js.native
+  def apply[T](promisesOrValues: js.Array[_]): Promise[js.Array[Descriptor[T]]] = js.native
 }
 

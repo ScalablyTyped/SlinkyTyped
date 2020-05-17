@@ -1,7 +1,7 @@
 package typingsSlinky.nodal.mod
 
-import typingsSlinky.nodal.AnonJoins
-import typingsSlinky.nodal.TypeofModel
+import typingsSlinky.nodal.anon.Joins
+import typingsSlinky.nodal.anon.TypeofModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,7 +42,7 @@ object GraphQuery extends js.Object {
   /**
     * Fully parse a GraphQL query, get necessary joins to make in SQL
     */
-  def parse(str: String, max: Double): AnonJoins = js.native
+  def parse(str: String, max: Double): Joins = js.native
   /**
     * Parse syntax tree of a GraphQL query
     */

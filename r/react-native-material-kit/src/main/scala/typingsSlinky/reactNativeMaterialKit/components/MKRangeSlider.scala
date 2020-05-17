@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeMaterialKit.components
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -29,7 +29,7 @@ import typingsSlinky.reactNative.reactNativeStrings.polite
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.yes
-import typingsSlinky.reactNativeMaterialKit.AnonMax
+import typingsSlinky.reactNativeMaterialKit.anon.Max
 import typingsSlinky.reactNativeMaterialKit.mod.MKRangeSliderProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -103,9 +103,9 @@ object MKRangeSlider {
     @scala.inline
     def onAccessibilityTap(value: () => Unit): this.type = set("onAccessibilityTap", js.Any.fromFunction0(value))
     @scala.inline
-    def onChange(value: /* curValue */ AnonMax => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* curValue */ Max => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onConfirm(value: /* curValue */ AnonMax => Unit): this.type = set("onConfirm", js.Any.fromFunction1(value))
+    def onConfirm(value: /* curValue */ Max => Unit): this.type = set("onConfirm", js.Any.fromFunction1(value))
     @scala.inline
     def onLayout(value: /* event */ LayoutChangeEvent => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
     @scala.inline

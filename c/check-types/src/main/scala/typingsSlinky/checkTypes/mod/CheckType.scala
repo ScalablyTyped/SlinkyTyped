@@ -2,7 +2,7 @@ package typingsSlinky.checkTypes.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.checkTypes.AnonInstantiable
+import typingsSlinky.checkTypes.anon.Instantiable
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -44,7 +44,7 @@ trait CheckType extends js.Object {
   def arrayLike(a: js.Any): /* is std.ArrayLike<any> */ Boolean = js.native
   def assert[T](possibleFalsy: T): T = js.native
   def assert[T](possibleFalsy: T, message: String): T = js.native
-  def assert[T](possibleFalsy: T, message: String, errorType: AnonInstantiable): T = js.native
+  def assert[T](possibleFalsy: T, message: String, errorType: Instantiable): T = js.native
   def assigned(a: js.Any): Boolean = js.native
   /**
     * Excluding a and b. Any order of a, b

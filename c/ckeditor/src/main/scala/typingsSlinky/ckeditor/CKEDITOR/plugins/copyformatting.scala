@@ -1,6 +1,5 @@
 package typingsSlinky.ckeditor.CKEDITOR.plugins
 
-import typingsSlinky.ckeditor.CKEDITOR.editor
 import typingsSlinky.ckeditor.CKEDITOR.event
 import typingsSlinky.ckeditor.CKEDITOR.style
 import scala.scalajs.js
@@ -11,19 +10,12 @@ import scala.scalajs.js.annotation._
 @js.native
 object copyformatting extends js.Object {
   @js.native
-  class state protected () extends event {
-    def this(editor: editor) = this()
+  trait state extends event {
     var editor: typingsSlinky.ckeditor.CKEDITOR.editor = js.native
     var filter: typingsSlinky.ckeditor.CKEDITOR.filter = js.native
     var sticky: Boolean = js.native
     var styles: js.Array[style] = js.native
   }
   
-  var breakOnElements: js.Array[String] = js.native
-  var elementsForInlineTransform: js.Array[String] = js.native
-  var excludedAttributes: js.Array[String] = js.native
-  var excludedAttributesFromInlineTransform: js.Array[String] = js.native
-  var inlineBoundary: js.Array[String] = js.native
-  var preservedElements: js.Array[String] = js.native
 }
 

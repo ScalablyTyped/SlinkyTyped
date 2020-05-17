@@ -1,6 +1,6 @@
 package typingsSlinky.clearbladejsClient.CbClient
 
-import typingsSlinky.pahoMqtt.mod._Global_.Paho.MQTT.Client
+import typingsSlinky.pahoMqtt.mod.global.Paho.MQTT.Client
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

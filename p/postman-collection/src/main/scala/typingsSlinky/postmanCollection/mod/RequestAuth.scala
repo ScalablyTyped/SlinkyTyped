@@ -1,6 +1,6 @@
 package typingsSlinky.postmanCollection.mod
 
-import typingsSlinky.postmanCollection.AnonKey
+import typingsSlinky.postmanCollection.anon.Key
 import typingsSlinky.postmanCollection.postmanCollectionStrings.apikey
 import typingsSlinky.postmanCollection.postmanCollectionStrings.awsv4
 import typingsSlinky.postmanCollection.postmanCollectionStrings.basic
@@ -46,14 +46,14 @@ class RequestAuth protected () extends Property[RequestAuthDefinition] {
   def clear(`type`: String): Unit = js.native
   def current(): js.Any = js.native
   def parameters(): VariableList = js.native
-  def update(options: js.Array[AnonKey]): Unit = js.native
-  def update(options: js.Array[AnonKey], `type`: String): Unit = js.native
-  def update(options: AnonKey): Unit = js.native
-  def update(options: AnonKey, `type`: String): Unit = js.native
+  def update(options: js.Array[Key]): Unit = js.native
+  def update(options: js.Array[Key], `type`: String): Unit = js.native
+  def update(options: Key): Unit = js.native
+  def update(options: Key, `type`: String): Unit = js.native
   def update(options: VariableList): Unit = js.native
   def update(options: VariableList, `type`: String): Unit = js.native
-  def use(`type`: String, options: js.Array[AnonKey]): Unit = js.native
-  def use(`type`: String, options: AnonKey): Unit = js.native
+  def use(`type`: String, options: js.Array[Key]): Unit = js.native
+  def use(`type`: String, options: Key): Unit = js.native
   def use(`type`: String, options: VariableList): Unit = js.native
 }
 

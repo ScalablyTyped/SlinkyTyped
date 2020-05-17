@@ -7,16 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientWebDocumentViewer.DocumentReady  and ASPxClientReportDesigner.PreviewDocumentReady events.
   */
-@JSGlobal("ASPxClientWebDocumentViewerDocumentReadyEventArgs")
 @js.native
-class ASPxClientWebDocumentViewerDocumentReadyEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientWebDocumentViewerDocumentReadyEventArgs class with the specified settings.
-    * @param documentId A string that specifies the report document ID. This value is assigned to the ASPxClientWebDocumentViewerDocumentReadyEventArgs.DocumentId field.
-    * @param reportId A string that specifies the report ID. This value is assigned to the ASPxClientWebDocumentViewerDocumentReadyEventArgs.ReportId field.
-    * @param pageCount An integer value that specifies the total number of pages in a report document. This value is assigned to the ASPxClientWebDocumentViewerDocumentReadyEventArgs.PageCount field.
-    */
-  def this(documentId: String, reportId: String, pageCount: Double) = this()
+trait ASPxClientWebDocumentViewerDocumentReadyEventArgs extends ASPxClientEventArgs {
   /**
     * Specifies the report document ID.
     */
@@ -29,5 +21,39 @@ class ASPxClientWebDocumentViewerDocumentReadyEventArgs protected () extends ASP
     * Specifies the report ID.
     */
   var ReportId: String = js.native
+}
+
+object ASPxClientWebDocumentViewerDocumentReadyEventArgs {
+  @scala.inline
+  def apply(DocumentId: String, PageCount: Double, ReportId: String): ASPxClientWebDocumentViewerDocumentReadyEventArgs = {
+    val __obj = js.Dynamic.literal(DocumentId = DocumentId.asInstanceOf[js.Any], PageCount = PageCount.asInstanceOf[js.Any], ReportId = ReportId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientWebDocumentViewerDocumentReadyEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientWebDocumentViewerDocumentReadyEventArgsOps[Self <: ASPxClientWebDocumentViewerDocumentReadyEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDocumentId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPageCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PageCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReportId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReportId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -2,7 +2,7 @@ package typingsSlinky.wordpressCoreData
 
 import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.Record
-import typingsSlinky.wordpressApiFetch.AnonFormats
+import typingsSlinky.wordpressApiFetch.anon.Formats
 import typingsSlinky.wordpressApiFetch.mod.Schema.User
 import typingsSlinky.wordpressCoreData.mod.Autosave
 import typingsSlinky.wordpressCoreData.mod.Entity
@@ -38,7 +38,7 @@ object actionsMod extends js.Object {
     query: Record[String, _],
     invalidateCache: Boolean
   ): Unit = js.native
-  def receiveThemeSupports(themeSupports: AnonFormats): Unit = js.native
+  def receiveThemeSupports(themeSupports: Formats): Unit = js.native
   def receiveUploadPermissions(hasUploadPermissions: Boolean): Unit = js.native
   def receiveUserPermission(key: String, isAllowed: Boolean): Unit = js.native
   @JSName("receiveUserQuery")

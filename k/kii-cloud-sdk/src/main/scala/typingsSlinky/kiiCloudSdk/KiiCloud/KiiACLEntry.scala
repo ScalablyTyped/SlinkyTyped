@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a KiiACLEntry object
   */
-@JSGlobal("KiiCloud.KiiACLEntry")
 @js.native
-class KiiACLEntry () extends js.Object {
+trait KiiACLEntry extends js.Object {
   /**
     * Get the action that is being permitted/restricted in this entry
     *
@@ -60,26 +59,62 @@ class KiiACLEntry () extends js.Object {
   def setSubject(subject: KiiACLSubject): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("KiiCloud.KiiACLEntry")
-@js.native
-object KiiACLEntry extends js.Object {
-  /**
-    * Create a KiiACLEntry object with a subject and action
-    *
-    * The entry will not be applied on the server until the KiiACL object is
-    * explicitly saved. This method simply returns a working KiiACLEntry with
-    * a specified subject and action.
-    *
-    * @param Subject to which the action/grant is being applied
-    * @param action One of the specified KiiACLAction values the
-    *   permissions is being applied to
-    *
-    * @return A KiiACLEntry object with the specified attributes
-    *
-    * @throws If specified subject is invalid.
-    * @throws If the specified action is invalid.
-    */
-  def entryWithSubject(Subject: KiiACLSubject, action: KiiACLAction): KiiACLEntry = js.native
+object KiiACLEntry {
+  @scala.inline
+  def apply(
+    getAction: () => KiiACLAction,
+    getGrant: () => Boolean,
+    getSubject: () => js.Any,
+    setAction: KiiACLAction => Unit,
+    setGrant: Boolean => Unit,
+    setSubject: KiiACLSubject => Unit
+  ): KiiACLEntry = {
+    val __obj = js.Dynamic.literal(getAction = js.Any.fromFunction0(getAction), getGrant = js.Any.fromFunction0(getGrant), getSubject = js.Any.fromFunction0(getSubject), setAction = js.Any.fromFunction1(setAction), setGrant = js.Any.fromFunction1(setGrant), setSubject = js.Any.fromFunction1(setSubject))
+    __obj.asInstanceOf[KiiACLEntry]
+  }
+  @scala.inline
+  implicit class KiiACLEntryOps[Self <: KiiACLEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetAction(value: () => KiiACLAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAction")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetGrant(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getGrant")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSubject(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSubject")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetAction(value: KiiACLAction => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAction")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetGrant(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setGrant")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetSubject(value: KiiACLSubject => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSubject")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

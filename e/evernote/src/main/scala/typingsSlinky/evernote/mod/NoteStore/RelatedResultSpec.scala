@@ -1,6 +1,6 @@
 package typingsSlinky.evernote.mod.NoteStore
 
-import typingsSlinky.evernote.AnonIncludeContainingNotebooks
+import typingsSlinky.evernote.anon.IncludeContainingNotebooks
 import typingsSlinky.evernote.mod.Types.RelatedContentType
 import typingsSlinky.std.Set
 import scala.scalajs.js
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("evernote", "NoteStore.RelatedResultSpec")
 @js.native
 class RelatedResultSpec () extends js.Object {
-  def this(args: AnonIncludeContainingNotebooks) = this()
+  def this(args: IncludeContainingNotebooks) = this()
   var includeContainingNotebooks: js.UndefOr[Boolean] = js.native
   var includeDebugInfo: js.UndefOr[Boolean] = js.native
   var maxExperts: js.UndefOr[Double] = js.native

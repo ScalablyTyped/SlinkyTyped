@@ -3,7 +3,7 @@ package typingsSlinky.antDesignReactNative.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignReactNative.AnonHighlight
+import typingsSlinky.antDesignReactNative.anon.Highlight
 import typingsSlinky.antDesignReactNative.listViewMod.ListViewProps
 import typingsSlinky.antDesignReactNative.listViewMod.default
 import scala.scalajs.js
@@ -107,7 +107,7 @@ object ListView {
   @scala.inline
   def apply[T](
     onFetch: (Double, js.Function0[_], js.Function0[Unit]) => Unit,
-    renderItem: (T, Double, AnonHighlight) => ReactElement | Null
+    renderItem: (T, Double, Highlight) => ReactElement | Null
   ): Builder[T] = {
     val __props = js.Dynamic.literal(onFetch = js.Any.fromFunction3(onFetch), renderItem = js.Any.fromFunction3(renderItem))
     new Builder[T](js.Array(this.component, __props.asInstanceOf[ListViewProps[T]]))

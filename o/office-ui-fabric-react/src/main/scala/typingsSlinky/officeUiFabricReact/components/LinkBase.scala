@@ -1,5 +1,6 @@
 package typingsSlinky.officeUiFabricReact.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLAnchorElement
 import org.scalajs.dom.raw.HTMLButtonElement
@@ -25,7 +26,7 @@ import typingsSlinky.officeUiFabricReact.linkTypesMod.ILink
 import typingsSlinky.officeUiFabricReact.linkTypesMod.ILinkProps
 import typingsSlinky.officeUiFabricReact.linkTypesMod.ILinkStyleProps
 import typingsSlinky.officeUiFabricReact.linkTypesMod.ILinkStyles
-import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
@@ -74,7 +75,6 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
-import typingsSlinky.std.Event_
 import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -221,7 +221,7 @@ object LinkBase {
     @scala.inline
     def contextMenu(value: String): this.type = set("contextMenu", value.asInstanceOf[js.Any])
     @scala.inline
-    def dangerouslySetInnerHTML(value: AnonHtml): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
+    def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
     @scala.inline
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
@@ -283,7 +283,7 @@ object LinkBase {
     @scala.inline
     def onAbort(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onAbort", js.Any.fromFunction1(value))
@@ -315,7 +315,7 @@ object LinkBase {
     def onBeforeInput(
       value: SyntheticEvent[
           EventTarget with (HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase), 
-          Event_
+          Event
         ] => Unit
     ): this.type = set("onBeforeInput", js.Any.fromFunction1(value))
     @scala.inline
@@ -327,14 +327,14 @@ object LinkBase {
     @scala.inline
     def onCanPlay(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onCanPlay", js.Any.fromFunction1(value))
     @scala.inline
     def onCanPlayThrough(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
@@ -342,7 +342,7 @@ object LinkBase {
     def onChange(
       value: SyntheticEvent[
           EventTarget with (HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase), 
-          Event_
+          Event
         ] => Unit
     ): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
@@ -444,35 +444,35 @@ object LinkBase {
     @scala.inline
     def onDurationChange(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onDurationChange", js.Any.fromFunction1(value))
     @scala.inline
     def onEmptied(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onEmptied", js.Any.fromFunction1(value))
     @scala.inline
     def onEncrypted(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onEncrypted", js.Any.fromFunction1(value))
     @scala.inline
     def onEnded(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onEnded", js.Any.fromFunction1(value))
     @scala.inline
     def onError(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onError", js.Any.fromFunction1(value))
@@ -486,14 +486,14 @@ object LinkBase {
     def onInput(
       value: SyntheticEvent[
           EventTarget with (HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase), 
-          Event_
+          Event
         ] => Unit
     ): this.type = set("onInput", js.Any.fromFunction1(value))
     @scala.inline
     def onInvalid(
       value: SyntheticEvent[
           EventTarget with (HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase), 
-          Event_
+          Event
         ] => Unit
     ): this.type = set("onInvalid", js.Any.fromFunction1(value))
     @scala.inline
@@ -517,28 +517,28 @@ object LinkBase {
     @scala.inline
     def onLoad(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onLoad", js.Any.fromFunction1(value))
     @scala.inline
     def onLoadStart(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onLoadStart", js.Any.fromFunction1(value))
     @scala.inline
     def onLoadedData(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onLoadedData", js.Any.fromFunction1(value))
     @scala.inline
     def onLoadedMetadata(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onLoadedMetadata", js.Any.fromFunction1(value))
@@ -593,21 +593,21 @@ object LinkBase {
     @scala.inline
     def onPause(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onPause", js.Any.fromFunction1(value))
     @scala.inline
     def onPlay(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onPlay", js.Any.fromFunction1(value))
     @scala.inline
     def onPlaying(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onPlaying", js.Any.fromFunction1(value))
@@ -662,14 +662,14 @@ object LinkBase {
     @scala.inline
     def onProgress(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onProgress", js.Any.fromFunction1(value))
     @scala.inline
     def onRateChange(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onRateChange", js.Any.fromFunction1(value))
@@ -677,7 +677,7 @@ object LinkBase {
     def onReset(
       value: SyntheticEvent[
           EventTarget with (HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase), 
-          Event_
+          Event
         ] => Unit
     ): this.type = set("onReset", js.Any.fromFunction1(value))
     @scala.inline
@@ -689,28 +689,28 @@ object LinkBase {
     @scala.inline
     def onSeeked(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onSeeked", js.Any.fromFunction1(value))
     @scala.inline
     def onSeeking(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onSeeking", js.Any.fromFunction1(value))
     @scala.inline
     def onSelect(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline
     def onStalled(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onStalled", js.Any.fromFunction1(value))
@@ -718,20 +718,20 @@ object LinkBase {
     def onSubmit(
       value: SyntheticEvent[
           EventTarget with (HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase), 
-          Event_
+          Event
         ] => Unit
     ): this.type = set("onSubmit", js.Any.fromFunction1(value))
     @scala.inline
     def onSuspend(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onSuspend", js.Any.fromFunction1(value))
     @scala.inline
     def onTimeUpdate(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onTimeUpdate", js.Any.fromFunction1(value))
@@ -768,14 +768,14 @@ object LinkBase {
     @scala.inline
     def onVolumeChange(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
     @scala.inline
     def onWaiting(
       value: SyntheticEvent[
-          Event_, 
+          Event, 
           HTMLAnchorElement | HTMLButtonElement | HTMLElement | typingsSlinky.officeUiFabricReact.linkBaseMod.LinkBase
         ] => Unit
     ): this.type = set("onWaiting", js.Any.fromFunction1(value))

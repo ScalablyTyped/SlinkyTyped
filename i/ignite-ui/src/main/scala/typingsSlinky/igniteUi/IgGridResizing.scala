@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -90,7 +90,7 @@ object IgGridResizing {
         ret
     }
     @scala.inline
-    def withColumnResized(value: (/* event */ Event_, /* ui */ ColumnResizedEventUIParam) => Unit): Self = {
+    def withColumnResized(value: (/* event */ Event, /* ui */ ColumnResizedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnResized")(js.Any.fromFunction2(value))
         ret
@@ -102,7 +102,7 @@ object IgGridResizing {
         ret
     }
     @scala.inline
-    def withColumnResizing(value: (/* event */ Event_, /* ui */ ColumnResizingEventUIParam) => Unit): Self = {
+    def withColumnResizing(value: (/* event */ Event, /* ui */ ColumnResizingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnResizing")(js.Any.fromFunction2(value))
         ret
@@ -114,7 +114,7 @@ object IgGridResizing {
         ret
     }
     @scala.inline
-    def withColumnResizingRefused(value: (/* event */ Event_, /* ui */ ColumnResizingRefusedEventUIParam) => Unit): Self = {
+    def withColumnResizingRefused(value: (/* event */ Event, /* ui */ ColumnResizingRefusedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnResizingRefused")(js.Any.fromFunction2(value))
         ret

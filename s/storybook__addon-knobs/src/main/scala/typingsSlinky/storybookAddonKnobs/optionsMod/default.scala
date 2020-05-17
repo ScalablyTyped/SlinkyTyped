@@ -3,9 +3,9 @@ package typingsSlinky.storybookAddonKnobs.optionsMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap
-import typingsSlinky.storybookAddonKnobs.FnCall
-import typingsSlinky.storybookAddonKnobs.PartialOptionsTypePropsan
-import typingsSlinky.storybookAddonKnobs.WeakValidationMapOptionsT
+import typingsSlinky.storybookAddonKnobs.anon.FnCall
+import typingsSlinky.storybookAddonKnobs.anon.PartialOptionsTypePropsan
+import typingsSlinky.storybookAddonKnobs.anon.WeakValidationMapOptionsT
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

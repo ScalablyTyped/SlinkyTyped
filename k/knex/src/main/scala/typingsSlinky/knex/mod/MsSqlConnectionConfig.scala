@@ -1,7 +1,7 @@
 package typingsSlinky.knex.mod
 
-import typingsSlinky.knex.AnonAbortTransactionOnError
-import typingsSlinky.knex.AnonAcquireTimeoutMillis
+import typingsSlinky.knex.anon.AbortTransactionOnError
+import typingsSlinky.knex.anon.AcquireTimeoutMillis
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,10 +13,10 @@ trait MsSqlConnectionConfig extends js.Object {
   var database: String = js.native
   var domain: js.UndefOr[String] = js.native
   var driver: js.UndefOr[String] = js.native
-  var options: js.UndefOr[AnonAbortTransactionOnError] = js.native
+  var options: js.UndefOr[AbortTransactionOnError] = js.native
   var parseJSON: js.UndefOr[Boolean] = js.native
   var password: js.UndefOr[String] = js.native
-  var pool: js.UndefOr[AnonAcquireTimeoutMillis] = js.native
+  var pool: js.UndefOr[AcquireTimeoutMillis] = js.native
   var port: js.UndefOr[Double] = js.native
   var requestTimeout: js.UndefOr[Double] = js.native
   var server: String = js.native
@@ -85,7 +85,7 @@ object MsSqlConnectionConfig {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonAbortTransactionOnError): Self = {
+    def withOptions(value: AbortTransactionOnError): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret
@@ -121,7 +121,7 @@ object MsSqlConnectionConfig {
         ret
     }
     @scala.inline
-    def withPool(value: AnonAcquireTimeoutMillis): Self = {
+    def withPool(value: AcquireTimeoutMillis): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pool")(value.asInstanceOf[js.Any])
         ret

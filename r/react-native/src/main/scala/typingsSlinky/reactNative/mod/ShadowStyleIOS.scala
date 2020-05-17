@@ -1,6 +1,6 @@
 package typingsSlinky.reactNative.mod
 
-import typingsSlinky.reactNative.AnonHeight
+import typingsSlinky.reactNative.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ShadowStyleIOS extends js.Object {
   var shadowColor: js.UndefOr[String] = js.native
-  var shadowOffset: js.UndefOr[AnonHeight] = js.native
+  var shadowOffset: js.UndefOr[Height] = js.native
   var shadowOpacity: js.UndefOr[Double] = js.native
   var shadowRadius: js.UndefOr[Double] = js.native
 }
@@ -38,7 +38,7 @@ object ShadowStyleIOS {
         ret
     }
     @scala.inline
-    def withShadowOffset(value: AnonHeight): Self = {
+    def withShadowOffset(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffset")(value.asInstanceOf[js.Any])
         ret

@@ -2,7 +2,7 @@ package typingsSlinky.nextServer.renderMod
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
-import typingsSlinky.nextServer.AnonErrorError
+import typingsSlinky.nextServer.anon.ErrorError
 import typingsSlinky.nextServer.getPageFilesMod.BuildManifest
 import typingsSlinky.nextServer.libUtilsMod.AppType
 import typingsSlinky.nextServer.libUtilsMod.DocumentType
@@ -17,7 +17,7 @@ trait RenderOpts extends js.Object {
   var App: AppType = js.native
   var Component: ReactComponentClass[js.Object] = js.native
   var Document: DocumentType = js.native
-  var ErrorDebug: js.UndefOr[ReactComponentClass[AnonErrorError]] = js.native
+  var ErrorDebug: js.UndefOr[ReactComponentClass[ErrorError]] = js.native
   var ampBindInitData: Boolean = js.native
   var ampMode: js.UndefOr[js.Any] = js.native
   var ampPath: js.UndefOr[String] = js.native
@@ -147,19 +147,19 @@ object RenderOpts {
         ret
     }
     @scala.inline
-    def withErrorDebugFunctionComponent(value: ReactComponentClass[AnonErrorError]): Self = {
+    def withErrorDebugFunctionComponent(value: ReactComponentClass[ErrorError]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorDebug")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withErrorDebugComponentClass(value: ReactComponentClass[AnonErrorError]): Self = {
+    def withErrorDebugComponentClass(value: ReactComponentClass[ErrorError]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorDebug")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withErrorDebug(value: ReactComponentClass[AnonErrorError]): Self = {
+    def withErrorDebug(value: ReactComponentClass[ErrorError]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorDebug")(value.asInstanceOf[js.Any])
         ret

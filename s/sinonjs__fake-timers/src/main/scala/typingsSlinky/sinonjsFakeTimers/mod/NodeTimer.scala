@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait NodeTimer extends js.Object {
+trait NodeTimer extends TimerId {
   /**
     * Stub method call. Does nothing.
     */

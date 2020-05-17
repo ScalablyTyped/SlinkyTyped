@@ -12,7 +12,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.tabulatorTables.Tabulator._FormatterParams because Already inherited */ @js.native
+- typingsSlinky.tabulatorTables.Tabulator.FormatterParams because Already inherited */ @js.native
 trait DateTimeDifferenceParams extends DateTimeParams {
   // Date Time Difference
   var date: js.UndefOr[js.Any] = js.native

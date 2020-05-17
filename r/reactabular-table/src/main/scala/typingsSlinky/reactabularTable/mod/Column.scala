@@ -1,16 +1,16 @@
 package typingsSlinky.reactabularTable.mod
 
-import typingsSlinky.reactabularTable.AnonDraggable
-import typingsSlinky.reactabularTable.AnonFormatters
+import typingsSlinky.reactabularTable.anon.Draggable
+import typingsSlinky.reactabularTable.anon.Formatters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Column extends js.Object {
-  var cell: js.UndefOr[AnonFormatters] = js.native
+  var cell: js.UndefOr[Formatters] = js.native
   var children: js.UndefOr[js.Array[Column]] = js.native
-  var header: js.UndefOr[AnonDraggable] = js.native
+  var header: js.UndefOr[Draggable] = js.native
   var property: js.UndefOr[String] = js.native
 }
 
@@ -27,7 +27,7 @@ object Column {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCell(value: AnonFormatters): Self = {
+    def withCell(value: Formatters): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cell")(value.asInstanceOf[js.Any])
         ret
@@ -51,7 +51,7 @@ object Column {
         ret
     }
     @scala.inline
-    def withHeader(value: AnonDraggable): Self = {
+    def withHeader(value: Draggable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
         ret

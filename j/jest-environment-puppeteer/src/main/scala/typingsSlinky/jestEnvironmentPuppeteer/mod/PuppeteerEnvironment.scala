@@ -14,6 +14,6 @@ trait PuppeteerEnvironment extends JestEnvironment {
   @JSName("fakeTimers")
   var fakeTimers_PuppeteerEnvironment: JestFakeTimers[Timer] | Null = js.native
   @JSName("global")
-  var global_PuppeteerEnvironment: Global = js.native
+  var global_PuppeteerEnvironment: Global_ = js.native
 }
 

@@ -2,8 +2,8 @@ package typingsSlinky.baseui.popoverMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
-import typingsSlinky.baseui.AnonClose
-import typingsSlinky.baseui.PopoverPropschildrennever
+import typingsSlinky.baseui.anon.Close
+import typingsSlinky.baseui.anon.PopoverPropschildrennever
 import typingsSlinky.baseui.baseuiStrings.auto
 import typingsSlinky.baseui.baseuiStrings.bottom
 import typingsSlinky.baseui.baseuiStrings.bottomLeft
@@ -33,7 +33,7 @@ trait StatefulPopoverContainerProps extends js.Object {
   var animateOutTime: js.UndefOr[Double] = js.native
   var autoFocus: js.UndefOr[Boolean] = js.native
   var children: js.UndefOr[TagMod[Any]] = js.native
-  var content: js.UndefOr[TagMod[Any] | (js.Function1[/* args */ AnonClose, TagMod[Any]])] = js.native
+  var content: js.UndefOr[TagMod[Any] | (js.Function1[/* args */ Close, TagMod[Any]])] = js.native
   var `data-baseweb`: js.UndefOr[String] = js.native
   var dismissOnClickOutside: js.UndefOr[Boolean] = js.native
   var dismissOnEsc: js.UndefOr[Boolean] = js.native

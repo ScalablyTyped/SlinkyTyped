@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-sealed trait JSONSchemaType extends _JSONSchemaTypeValue
+sealed trait JSONSchemaType extends JSONSchemaTypeValue
 
 @JSImport("json-schema-typed", "JSONSchemaType")
 @js.native

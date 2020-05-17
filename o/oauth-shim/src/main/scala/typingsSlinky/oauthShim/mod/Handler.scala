@@ -5,7 +5,7 @@ import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.expressServeStaticCore.mod.RequestHandler
 import typingsSlinky.expressServeStaticCore.mod.Response
-import typingsSlinky.oauthShim.AnonGet
+import typingsSlinky.oauthShim.anon.Get
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Handler
   extends RequestHandler[ParamsDictionary, js.Any, js.Any, Query] {
-  var credentials: AnonGet = js.native
+  var credentials: Get = js.native
   @JSName("interpret")
   var interpret_Original: typingsSlinky.express.mod.RequestHandler[ParamsDictionary, _, _, Query] = js.native
   @JSName("proxy")

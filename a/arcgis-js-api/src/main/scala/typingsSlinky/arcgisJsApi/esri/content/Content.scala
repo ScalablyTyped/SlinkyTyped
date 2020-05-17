@@ -12,3 +12,14 @@ import scala.scalajs.js.annotation._
 */
 trait Content extends js.Object
 
+object Content {
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.AttachmentsContent): Content = value.asInstanceOf[Content]
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.FieldsContent): Content = value.asInstanceOf[Content]
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.MediaContent): Content = value.asInstanceOf[Content]
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.TextContent): Content = value.asInstanceOf[Content]
+}
+

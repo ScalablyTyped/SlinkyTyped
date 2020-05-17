@@ -1,7 +1,7 @@
 package typingsSlinky.parse.nodeMod
 
-import typingsSlinky.parse.mod._Global_.Parse.Push.PushData
-import typingsSlinky.parse.mod._Global_.Parse.Push.SendOptions
+import typingsSlinky.parse.mod.global.Parse.Push.PushData
+import typingsSlinky.parse.mod.global.Parse.Push.SendOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

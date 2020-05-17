@@ -1,6 +1,6 @@
 package typingsSlinky.echarts.echarts.VisualMap
 
-import typingsSlinky.echarts.AnonInRange
+import typingsSlinky.echarts.anon.InRange
 import typingsSlinky.echarts.echarts.EChartOption.BaseTextStyleWithRich
 import typingsSlinky.echarts.echartsStrings.auto
 import typingsSlinky.echarts.echartsStrings.bottom
@@ -24,7 +24,7 @@ trait Continuous
   var bottom: js.UndefOr[Double | String] = js.native
   var calculable: js.UndefOr[Boolean] = js.native
   var color: js.UndefOr[js.Array[String]] = js.native
-  var controller: js.UndefOr[AnonInRange] = js.native
+  var controller: js.UndefOr[InRange] = js.native
   var dimension: js.UndefOr[String | Double] = js.native
   var formatter: js.UndefOr[String | js.Function] = js.native
   var hoverLink: js.UndefOr[Boolean] = js.native
@@ -151,7 +151,7 @@ object Continuous {
         ret
     }
     @scala.inline
-    def withController(value: AnonInRange): Self = {
+    def withController(value: InRange): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("controller")(value.asInstanceOf[js.Any])
         ret

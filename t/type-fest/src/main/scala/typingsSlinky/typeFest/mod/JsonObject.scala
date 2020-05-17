@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait JsonObject
   extends /* key */ StringDictionary[JsonValue]
-     with _JsonValue
+     with JsonValue
 
 object JsonObject {
   @scala.inline

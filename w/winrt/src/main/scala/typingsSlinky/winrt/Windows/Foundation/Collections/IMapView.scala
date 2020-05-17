@@ -1,6 +1,6 @@
 package typingsSlinky.winrt.Windows.Foundation.Collections
 
-import typingsSlinky.winrt.AnonFirst
+import typingsSlinky.winrt.anon.First
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait IMapView[K, V] extends IIterable[IKeyValuePair[K, V]] {
   var size: Double = js.native
   def hasKey(key: K): Boolean = js.native
   def lookup(key: K): V = js.native
-  def split(): AnonFirst[K, V] = js.native
+  def split(): First[K, V] = js.native
 }
 
 object IMapView {
@@ -20,7 +20,7 @@ object IMapView {
     hasKey: K => Boolean,
     lookup: K => V,
     size: Double,
-    split: () => AnonFirst[K, V]
+    split: () => First[K, V]
   ): IMapView[K, V] = {
     val __obj = js.Dynamic.literal(first = js.Any.fromFunction0(first), hasKey = js.Any.fromFunction1(hasKey), lookup = js.Any.fromFunction1(lookup), size = size.asInstanceOf[js.Any], split = js.Any.fromFunction0(split))
     __obj.asInstanceOf[IMapView[K, V]]
@@ -50,7 +50,7 @@ object IMapView {
         ret
     }
     @scala.inline
-    def withSplit(value: () => AnonFirst[K, V]): Self[K, V] = {
+    def withSplit(value: () => First[K, V]): Self[K, V] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("split")(js.Any.fromFunction0(value))
         ret

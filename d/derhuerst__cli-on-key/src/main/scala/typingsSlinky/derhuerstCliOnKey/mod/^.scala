@@ -1,6 +1,6 @@
 package typingsSlinky.derhuerstCliOnKey.mod
 
-import typingsSlinky.node.processMod._Global_.NodeJS.ReadStream
+import typingsSlinky.node.processMod.global.NodeJS.ReadStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

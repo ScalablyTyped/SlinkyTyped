@@ -1,11 +1,11 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonAreaStyle
-import typingsSlinky.echarts.AnonBorderRadius
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonOpacity
-import typingsSlinky.echarts.AnonShadowBlur
-import typingsSlinky.echarts.AnonShadowOffsetY
+import typingsSlinky.echarts.anon.AreaStyle
+import typingsSlinky.echarts.anon.BorderRadius
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.Opacity
+import typingsSlinky.echarts.anon.ShadowBlur
+import typingsSlinky.echarts.anon.ShadowOffsetY
 import typingsSlinky.echarts.echarts.EChartOption.SeriesRadar.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -131,7 +131,7 @@ trait SeriesRadar_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-radar.areaStyle
     */
-  var areaStyle: js.UndefOr[AnonOpacity] = js.native
+  var areaStyle: js.UndefOr[Opacity] = js.native
   /**
     * The data in radar chart is multi-variable (dimension).
     * Here is an example:
@@ -150,7 +150,7 @@ trait SeriesRadar_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-radar.emphasis
     */
-  var emphasis: js.UndefOr[AnonAreaStyle] = js.native
+  var emphasis: js.UndefOr[AreaStyle] = js.native
   /**
     * Component ID, not specified by default.
     * If specified, it can be used to refer the component in option
@@ -166,7 +166,7 @@ trait SeriesRadar_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-radar.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonShadowOffsetY] = js.native
+  var itemStyle: js.UndefOr[ShadowOffsetY] = js.native
   /**
     * Text label of , to explain some data information about graphic
     * item like value, name and so on.
@@ -178,14 +178,14 @@ trait SeriesRadar_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-radar.label
     */
-  var label: js.UndefOr[AnonBorderRadius] = js.native
+  var label: js.UndefOr[BorderRadius] = js.native
   /**
     * Line style.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-radar.lineStyle
     */
-  var lineStyle: js.UndefOr[AnonShadowBlur] = js.native
+  var lineStyle: js.UndefOr[ShadowBlur] = js.native
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -326,7 +326,7 @@ trait SeriesRadar_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-radar.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * @default
     * "radar"
@@ -477,7 +477,7 @@ object SeriesRadar_ {
         ret
     }
     @scala.inline
-    def withAreaStyle(value: AnonOpacity): Self = {
+    def withAreaStyle(value: Opacity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("areaStyle")(value.asInstanceOf[js.Any])
         ret
@@ -501,7 +501,7 @@ object SeriesRadar_ {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonAreaStyle): Self = {
+    def withEmphasis(value: AreaStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -525,7 +525,7 @@ object SeriesRadar_ {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonShadowOffsetY): Self = {
+    def withItemStyle(value: ShadowOffsetY): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -537,7 +537,7 @@ object SeriesRadar_ {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonBorderRadius): Self = {
+    def withLabel(value: BorderRadius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -549,7 +549,7 @@ object SeriesRadar_ {
         ret
     }
     @scala.inline
-    def withLineStyle(value: AnonShadowBlur): Self = {
+    def withLineStyle(value: ShadowBlur): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
         ret
@@ -657,7 +657,7 @@ object SeriesRadar_ {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

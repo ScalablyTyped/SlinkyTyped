@@ -1,6 +1,6 @@
 package typingsSlinky.objection.mod
 
-import typingsSlinky.objection.TypeofModel
+import typingsSlinky.objection.anon.TypeofModel
 import typingsSlinky.std.InstanceType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,10 @@ import scala.scalajs.js.annotation._
 @js.native
 class QueryBuilder[QM /* <: Model */, RM, RV] ()
   extends QueryBuilderBase[QM, RM, RV]
-     with Executable[RV] {
+     with Executable[RV]
+     with ColumnRef
+     with QBOrCallback[QM]
+     with TableName {
   def castTo[T /* <: TypeofModel */](model: T): QueryBuilder[
     QM, 
     js.Array[InstanceType[T]], 

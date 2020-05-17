@@ -1,6 +1,5 @@
 package typingsSlinky.googleMapReact.mod
 
-import typingsSlinky.googleMapReact.AnonPosition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +17,7 @@ trait MapOptions extends js.Object {
   var draggableCursor: js.UndefOr[String] = js.native
   var draggingCursor: js.UndefOr[String] = js.native
   var fullscreenControl: js.UndefOr[Boolean] = js.native
-  var fullscreenControlOptions: js.UndefOr[AnonPosition] = js.native
+  var fullscreenControlOptions: js.UndefOr[typingsSlinky.googleMapReact.anon.Position] = js.native
   var gestureHandling: js.UndefOr[String] = js.native
   var heading: js.UndefOr[Double] = js.native
   var keyboardShortcuts: js.UndefOr[Boolean] = js.native
@@ -31,19 +30,19 @@ trait MapOptions extends js.Object {
   var noClear: js.UndefOr[Boolean] = js.native
   var options: js.UndefOr[js.Function1[/* maps */ Maps, Props]] = js.native
   var panControl: js.UndefOr[Boolean] = js.native
-  var panControlOptions: js.UndefOr[AnonPosition] = js.native
+  var panControlOptions: js.UndefOr[typingsSlinky.googleMapReact.anon.Position] = js.native
   var rotateControl: js.UndefOr[Boolean] = js.native
-  var rotateControlOptions: js.UndefOr[AnonPosition] = js.native
+  var rotateControlOptions: js.UndefOr[typingsSlinky.googleMapReact.anon.Position] = js.native
   var scaleControl: js.UndefOr[Boolean] = js.native
   var scaleControlOptions: js.UndefOr[js.Any] = js.native
   var scrollwheel: js.UndefOr[Boolean] = js.native
   var streetView: js.UndefOr[js.Any] = js.native
   var streetViewControl: js.UndefOr[Boolean] = js.native
-  var streetViewControlOptions: js.UndefOr[AnonPosition] = js.native
+  var streetViewControlOptions: js.UndefOr[typingsSlinky.googleMapReact.anon.Position] = js.native
   var styles: js.UndefOr[js.Array[MapTypeStyle]] = js.native
   var tilt: js.UndefOr[Double] = js.native
   var zoomControl: js.UndefOr[Boolean] = js.native
-  var zoomControlOptions: js.UndefOr[AnonPosition] = js.native
+  var zoomControlOptions: js.UndefOr[typingsSlinky.googleMapReact.anon.Position] = js.native
 }
 
 object MapOptions {
@@ -167,7 +166,7 @@ object MapOptions {
         ret
     }
     @scala.inline
-    def withFullscreenControlOptions(value: AnonPosition): Self = {
+    def withFullscreenControlOptions(value: typingsSlinky.googleMapReact.anon.Position): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreenControlOptions")(value.asInstanceOf[js.Any])
         ret
@@ -323,7 +322,7 @@ object MapOptions {
         ret
     }
     @scala.inline
-    def withPanControlOptions(value: AnonPosition): Self = {
+    def withPanControlOptions(value: typingsSlinky.googleMapReact.anon.Position): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("panControlOptions")(value.asInstanceOf[js.Any])
         ret
@@ -347,7 +346,7 @@ object MapOptions {
         ret
     }
     @scala.inline
-    def withRotateControlOptions(value: AnonPosition): Self = {
+    def withRotateControlOptions(value: typingsSlinky.googleMapReact.anon.Position): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rotateControlOptions")(value.asInstanceOf[js.Any])
         ret
@@ -419,7 +418,7 @@ object MapOptions {
         ret
     }
     @scala.inline
-    def withStreetViewControlOptions(value: AnonPosition): Self = {
+    def withStreetViewControlOptions(value: typingsSlinky.googleMapReact.anon.Position): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("streetViewControlOptions")(value.asInstanceOf[js.Any])
         ret
@@ -467,7 +466,7 @@ object MapOptions {
         ret
     }
     @scala.inline
-    def withZoomControlOptions(value: AnonPosition): Self = {
+    def withZoomControlOptions(value: typingsSlinky.googleMapReact.anon.Position): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("zoomControlOptions")(value.asInstanceOf[js.Any])
         ret

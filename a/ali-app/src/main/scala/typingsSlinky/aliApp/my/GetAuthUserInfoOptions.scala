@@ -1,6 +1,6 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonNickName
+import typingsSlinky.aliApp.anon.NickName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait GetAuthUserInfoOptions
   extends BaseOptions[js.Any, js.Any] {
   @JSName("success")
-  var success_GetAuthUserInfoOptions: js.UndefOr[js.Function1[/* res */ AnonNickName, Unit]] = js.native
+  var success_GetAuthUserInfoOptions: js.UndefOr[js.Function1[/* res */ NickName, Unit]] = js.native
 }
 
 object GetAuthUserInfoOptions {
@@ -27,7 +27,7 @@ object GetAuthUserInfoOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSuccess(value: /* res */ AnonNickName => Unit): Self = {
+    def withSuccess(value: /* res */ NickName => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

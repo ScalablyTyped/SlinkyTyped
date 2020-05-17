@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CellRichTextValue extends _CellValue {
+trait CellRichTextValue extends CellValue {
   var richText: js.Array[RichText] = js.native
 }
 

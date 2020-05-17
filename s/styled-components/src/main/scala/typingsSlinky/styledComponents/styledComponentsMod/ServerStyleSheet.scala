@@ -2,7 +2,7 @@ package typingsSlinky.styledComponents.styledComponentsMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.styledComponents.styledComponentsMod._Global_.NodeJS.ReadableStream
+import typingsSlinky.styledComponents.styledComponentsMod.global.NodeJS.ReadableStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

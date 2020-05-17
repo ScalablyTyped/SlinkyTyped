@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait DoStatement
-  extends _Statement
+  extends Statement
      with Base[typingsSlinky.luaparse.luaparseStrings.DoStatement] {
   var body: js.Array[Statement] = js.native
 }

@@ -2,11 +2,11 @@ package typingsSlinky.agGrid.colDefMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.agGrid.AnonInstantiableAny
-import typingsSlinky.agGrid.AnonInstantiableICellEditorComp
-import typingsSlinky.agGrid.AnonInstantiableICellRendererComp
-import typingsSlinky.agGrid.AnonInstantiableIFilterComp
-import typingsSlinky.agGrid.AnonInstantiableIFloatingFilterComp
+import typingsSlinky.agGrid.anon.InstantiableAny
+import typingsSlinky.agGrid.anon.InstantiableICellEditorComp
+import typingsSlinky.agGrid.anon.InstantiableICellRendererComp
+import typingsSlinky.agGrid.anon.InstantiableIFilterComp
+import typingsSlinky.agGrid.anon.InstantiableIFloatingFilterComp
 import typingsSlinky.agGrid.columnMod.Column
 import typingsSlinky.agGrid.componentResolverMod.ComponentHolder
 import typingsSlinky.agGrid.componentResolverMod.DynamicComponentDef
@@ -38,12 +38,12 @@ trait ColDef
   /** Rules for applying css classes */
   var cellClassRules: js.UndefOr[StringDictionary[js.Function | String]] = js.native
   /** Cell editor */
-  var cellEditor: js.UndefOr[AnonInstantiableICellEditorComp | String] = js.native
+  var cellEditor: js.UndefOr[InstantiableICellEditorComp | String] = js.native
   var cellEditorFramework: js.UndefOr[js.Any] = js.native
   var cellEditorParams: js.UndefOr[js.Any] = js.native
   var cellEditorSelector: js.UndefOr[js.Function1[/* params */ DynamicComponentParams, DynamicComponentDef]] = js.native
   /** A function for rendering a cell. */
-  var cellRenderer: js.UndefOr[AnonInstantiableICellRendererComp | ICellRendererFunc | String] = js.native
+  var cellRenderer: js.UndefOr[InstantiableICellRendererComp | ICellRendererFunc | String] = js.native
   var cellRendererFramework: js.UndefOr[js.Any] = js.native
   var cellRendererParams: js.UndefOr[js.Any] = js.native
   var cellRendererSelector: js.UndefOr[js.Function1[/* params */ DynamicComponentParams, DynamicComponentDef]] = js.native
@@ -83,15 +83,15 @@ trait ColDef
   /** The field of the row to get the cells data from */
   var field: js.UndefOr[String] = js.native
   /** one of the built in filter names: [set, number, text], or a filter function*/
-  var filter: js.UndefOr[String | AnonInstantiableIFilterComp] = js.native
+  var filter: js.UndefOr[String | InstantiableIFilterComp] = js.native
   var filterFramework: js.UndefOr[js.Any] = js.native
   /** The filter params are specific to each filter! */
   var filterParams: js.UndefOr[js.Any] = js.native
   /** Expression or function to get the cells value for filtering. */
   var filterValueGetter: js.UndefOr[(js.Function1[/* params */ ValueGetterParams, _]) | String] = js.native
   /** The custom header component to be used for rendering the floating filter. If none specified the default ag-Grid is used**/
-  var floatingFilterComponent: js.UndefOr[AnonInstantiableIFloatingFilterComp] = js.native
-  var floatingFilterComponentFramework: js.UndefOr[AnonInstantiableAny] = js.native
+  var floatingFilterComponent: js.UndefOr[InstantiableIFloatingFilterComp] = js.native
+  var floatingFilterComponentFramework: js.UndefOr[InstantiableAny] = js.native
   var floatingFilterComponentParams: js.UndefOr[js.Any] = js.native
   /** To create the quick filter text for this column, if toString is not good enough on the value. */
   var getQuickFilterText: js.UndefOr[js.Function1[/* params */ GetQuickFilterTextParams, String]] = js.native
@@ -100,9 +100,9 @@ trait ColDef
   /** If true, the header checkbox selection will work on filtered items*/
   var headerCheckboxSelectionFilteredOnly: js.UndefOr[Boolean] = js.native
   /** The custom header component to be used for rendering the component header. If none specified the default ag-Grid is used**/
-  var headerComponent: js.UndefOr[String | AnonInstantiableAny] = js.native
+  var headerComponent: js.UndefOr[String | InstantiableAny] = js.native
   /** The custom header component to be used for rendering the component header in the hosting framework (ie: React/Angular). If none specified the default ag-Grid is used**/
-  var headerComponentFramework: js.UndefOr[AnonInstantiableAny] = js.native
+  var headerComponentFramework: js.UndefOr[InstantiableAny] = js.native
   /** The custom header component parameters**/
   var headerComponentParams: js.UndefOr[js.Any] = js.native
   /** Set to true for this column to be hidden. Naturally you might think, it would make more sense to call this field 'visible' and mark it false to hide,
@@ -142,7 +142,7 @@ trait ColDef
   /** Whether this column is pinned or not. */
   var pinned: js.UndefOr[Boolean | String] = js.native
   /** A function for rendering a pinned row cell. */
-  var pinnedRowCellRenderer: js.UndefOr[AnonInstantiableICellRendererComp | ICellRendererFunc | String] = js.native
+  var pinnedRowCellRenderer: js.UndefOr[InstantiableICellRendererComp | ICellRendererFunc | String] = js.native
   var pinnedRowCellRendererFramework: js.UndefOr[js.Any] = js.native
   var pinnedRowCellRendererParams: js.UndefOr[js.Any] = js.native
   /** A function to format a pinned row value, should return a string. Not used for CSV export or copy to clipboard, only for UI cell rendering. */
@@ -307,7 +307,7 @@ object ColDef {
         ret
     }
     @scala.inline
-    def withCellEditor(value: AnonInstantiableICellEditorComp | String): Self = {
+    def withCellEditor(value: InstantiableICellEditorComp | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cellEditor")(value.asInstanceOf[js.Any])
         ret
@@ -361,7 +361,7 @@ object ColDef {
         ret
     }
     @scala.inline
-    def withCellRenderer(value: AnonInstantiableICellRendererComp | ICellRendererFunc | String): Self = {
+    def withCellRenderer(value: InstantiableICellRendererComp | ICellRendererFunc | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cellRenderer")(value.asInstanceOf[js.Any])
         ret
@@ -573,7 +573,7 @@ object ColDef {
         ret
     }
     @scala.inline
-    def withFilter(value: String | AnonInstantiableIFilterComp): Self = {
+    def withFilter(value: String | InstantiableIFilterComp): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
         ret
@@ -627,7 +627,7 @@ object ColDef {
         ret
     }
     @scala.inline
-    def withFloatingFilterComponent(value: AnonInstantiableIFloatingFilterComp): Self = {
+    def withFloatingFilterComponent(value: InstantiableIFloatingFilterComp): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("floatingFilterComponent")(value.asInstanceOf[js.Any])
         ret
@@ -639,7 +639,7 @@ object ColDef {
         ret
     }
     @scala.inline
-    def withFloatingFilterComponentFramework(value: AnonInstantiableAny): Self = {
+    def withFloatingFilterComponentFramework(value: InstantiableAny): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("floatingFilterComponentFramework")(value.asInstanceOf[js.Any])
         ret
@@ -705,7 +705,7 @@ object ColDef {
         ret
     }
     @scala.inline
-    def withHeaderComponent(value: String | AnonInstantiableAny): Self = {
+    def withHeaderComponent(value: String | InstantiableAny): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headerComponent")(value.asInstanceOf[js.Any])
         ret
@@ -717,7 +717,7 @@ object ColDef {
         ret
     }
     @scala.inline
-    def withHeaderComponentFramework(value: AnonInstantiableAny): Self = {
+    def withHeaderComponentFramework(value: InstantiableAny): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headerComponentFramework")(value.asInstanceOf[js.Any])
         ret
@@ -927,7 +927,7 @@ object ColDef {
         ret
     }
     @scala.inline
-    def withPinnedRowCellRenderer(value: AnonInstantiableICellRendererComp | ICellRendererFunc | String): Self = {
+    def withPinnedRowCellRenderer(value: InstantiableICellRendererComp | ICellRendererFunc | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pinnedRowCellRenderer")(value.asInstanceOf[js.Any])
         ret

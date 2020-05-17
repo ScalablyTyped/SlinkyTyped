@@ -1,6 +1,6 @@
 package typingsSlinky.weixinApp.wx
 
-import typingsSlinky.weixinApp.AnonStats
+import typingsSlinky.weixinApp.anon.Stats
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait StatOptions
   var recursive: js.UndefOr[Boolean] = js.native
    // 是否递归,默认false
   @JSName("success")
-  var success_StatOptions: js.UndefOr[js.Function1[/* res */ AnonStats, Unit]] = js.native
+  var success_StatOptions: js.UndefOr[js.Function1[/* res */ Stats, Unit]] = js.native
 }
 
 object StatOptions {
@@ -47,7 +47,7 @@ object StatOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonStats => Unit): Self = {
+    def withSuccess(value: /* res */ Stats => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

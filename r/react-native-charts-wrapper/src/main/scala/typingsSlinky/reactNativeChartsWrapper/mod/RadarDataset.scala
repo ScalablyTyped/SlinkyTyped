@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeChartsWrapper.mod
 
-import typingsSlinky.reactNativeChartsWrapper.AnonValue
+import typingsSlinky.reactNativeChartsWrapper.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait RadarDataset extends Dataset {
   var config: js.UndefOr[RadarDatasetConfig] = js.native
   @JSName("label")
   var label_RadarDataset: String = js.native
-  var values: js.UndefOr[js.Array[AnonValue | Double]] = js.native
+  var values: js.UndefOr[js.Array[Value | Double]] = js.native
 }
 
 object RadarDataset {
@@ -44,7 +44,7 @@ object RadarDataset {
         ret
     }
     @scala.inline
-    def withValues(value: js.Array[AnonValue | Double]): Self = {
+    def withValues(value: js.Array[Value | Double]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
         ret

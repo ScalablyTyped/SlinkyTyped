@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.OmitPageset
+import typingsSlinky.tabris.anon.OmitPageset
 import typingsSlinky.tabris.tabrisStrings.autoDispose
 import typingsSlinky.tabris.tabrisStrings.image
 import typingsSlinky.tabris.tabrisStrings.title

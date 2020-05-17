@@ -1,10 +1,10 @@
 package typingsSlinky.divaJs.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.divaJs.AnonHeight
-import typingsSlinky.divaJs.AnonIncludePadding
-import typingsSlinky.divaJs.AnonLeft
-import typingsSlinky.divaJs.PartialOptionsobjectDatas
+import typingsSlinky.divaJs.anon.Height
+import typingsSlinky.divaJs.anon.IncludePadding
+import typingsSlinky.divaJs.anon.Left
+import typingsSlinky.divaJs.anon.PartialOptionsobjectDatas
 import typingsSlinky.divaJs.interfacesMod.Dimensions
 import typingsSlinky.divaJs.interfacesMod.Options
 import typingsSlinky.divaJs.interfacesMod.Settings
@@ -102,7 +102,7 @@ class Diva protected () extends js.Object {
     * Returns the dimensions of the current page at the current
     * zoom level. Also works in grid view.
     */
-  def getCurrentPageDimensionsAtCurrentZoomLevel(): AnonHeight = js.native
+  def getCurrentPageDimensionsAtCurrentZoomLevel(): Height = js.native
   /**
     * Returns the current filename (deprecated).
     * @deprecated
@@ -116,7 +116,7 @@ class Diva protected () extends js.Object {
   /**
     * Shortcut to getPageOffset for current page.
     */
-  def getCurrentPageOffset(): AnonLeft = js.native
+  def getCurrentPageOffset(): Left = js.native
   /**
     * Returns the current URI for the visible page.
     */
@@ -197,8 +197,8 @@ class Diva protected () extends js.Object {
   /**
     * Returns the distance between the northwest corners of diva-inner and page index.
     */
-  def getPageOffset(pageIndex: Double): AnonLeft = js.native
-  def getPageOffset(pageIndex: Double, options: AnonIncludePadding): AnonLeft = js.native
+  def getPageOffset(pageIndex: Double): Left = js.native
+  def getPageOffset(pageIndex: Double, options: IncludePadding): Left = js.native
   /**
     * Get the instance settings.
     */

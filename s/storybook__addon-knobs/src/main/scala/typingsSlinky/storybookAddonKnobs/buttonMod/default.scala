@@ -3,8 +3,8 @@ package typingsSlinky.storybookAddonKnobs.buttonMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap
-import typingsSlinky.storybookAddonKnobs.PartialButtonTypeProps
-import typingsSlinky.storybookAddonKnobs.WeakValidationMapButtonTy
+import typingsSlinky.storybookAddonKnobs.anon.PartialButtonTypeProps
+import typingsSlinky.storybookAddonKnobs.anon.WeakValidationMapButtonTy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

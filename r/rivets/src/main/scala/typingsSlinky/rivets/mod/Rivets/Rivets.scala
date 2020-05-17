@@ -1,9 +1,9 @@
 package typingsSlinky.rivets.mod.Rivets
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery_
-import typingsSlinky.rivets.AnonHandler
-import typingsSlinky.std.Event_
+import typingsSlinky.jquery.JQuery
+import typingsSlinky.rivets.anon.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,12 +28,12 @@ trait Rivets extends js.Object {
   var templateDelimiters: js.Array[String] = js.native
   def bind(element: js.Array[HTMLElement], models: js.Object): View = js.native
   def bind(element: js.Array[HTMLElement], models: js.Object, options: js.Object): View = js.native
-  def bind(element: JQuery_[HTMLElement], models: js.Object): View = js.native
-  def bind(element: JQuery_[HTMLElement], models: js.Object, options: js.Object): View = js.native
+  def bind(element: JQuery[HTMLElement], models: js.Object): View = js.native
+  def bind(element: JQuery[HTMLElement], models: js.Object, options: js.Object): View = js.native
   def bind(element: HTMLElement, models: js.Object): View = js.native
   def bind(element: HTMLElement, models: js.Object, options: js.Object): View = js.native
   def configure(): Unit = js.native
-  def configure(options: AnonHandler): Unit = js.native
-  def handler(context: js.Any, ev: Event_, biding: js.Any): Unit = js.native
+  def configure(options: Handler): Unit = js.native
+  def handler(context: js.Any, ev: Event, biding: js.Any): Unit = js.native
 }
 

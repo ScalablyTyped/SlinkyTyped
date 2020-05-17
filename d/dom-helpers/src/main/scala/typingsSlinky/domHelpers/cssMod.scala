@@ -1,6 +1,7 @@
 package typingsSlinky.domHelpers
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.domHelpers.anon.PartialRecordPropertystri
 import typingsSlinky.domHelpers.typesMod.CamelProperty
 import typingsSlinky.domHelpers.typesMod.HyphenProperty
 import scala.scalajs.js

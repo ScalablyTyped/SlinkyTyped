@@ -24,9 +24,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * A Popover is used to manage the presentation of content in a popover.
 			 */
-@JSGlobal("Titanium.UI.iPad.Popover")
 @js.native
-class Popover () extends View {
+trait Popover extends View {
   /**
   				 * Indicates the arrow direction of the popover.
   				 */

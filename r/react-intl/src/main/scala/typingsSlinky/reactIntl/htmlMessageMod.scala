@@ -1,6 +1,7 @@
 package typingsSlinky.reactIntl
 
 import typingsSlinky.intlMessageformat.mod.PrimitiveType
+import typingsSlinky.reactIntl.anon.TagName
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +20,7 @@ object htmlMessageMod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var defaultProps: AnonTagName = js.native
+    var defaultProps: TagName = js.native
     var displayName: String = js.native
   }
   

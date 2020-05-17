@@ -1,7 +1,7 @@
 package typingsSlinky.pgPromise.mod
 
-import typingsSlinky.pgPromise.AnonFrom
-import typingsSlinky.pgPromise.AnonPrefix
+import typingsSlinky.pgPromise.anon.From
+import typingsSlinky.pgPromise.anon.Prefix
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 // API: http://vitaly-t.github.io/pg-promise/helpers.ColumnSet.html
 @JSImport("pg-promise", "ColumnSet")
 @js.native
-class ColumnSet protected () extends _QueryColumns {
+class ColumnSet protected () extends QueryColumns {
   def this(columns: js.Array[String | IColumnConfig | Column]) = this()
   def this(columns: js.Object) = this()
   def this(columns: Column) = this()
@@ -22,9 +22,9 @@ class ColumnSet protected () extends _QueryColumns {
   val table: TableName = js.native
   val variables: String = js.native
   def assign(): String = js.native
-  def assign(source: AnonPrefix): String = js.native
+  def assign(source: Prefix): String = js.native
   def assignColumns(): String = js.native
-  def assignColumns(options: AnonFrom): String = js.native
+  def assignColumns(options: From): String = js.native
   def extend(columns: js.Array[String | IColumnConfig | Column]): ColumnSet = js.native
   def extend(columns: Column): ColumnSet = js.native
   def extend(columns: ColumnSet): ColumnSet = js.native

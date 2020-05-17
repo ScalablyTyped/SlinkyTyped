@@ -1,6 +1,6 @@
 package typingsSlinky.openapiFramework.typesMod
 
-import typingsSlinky.openapiFramework.AnonCoercer
+import typingsSlinky.openapiFramework.anon.Coercer
 import typingsSlinky.openapiFramework.basePathMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +13,7 @@ trait OpenAPIFrameworkOperationContext extends js.Object {
   var apiDoc: js.Any = js.native
   var basePaths: js.Array[default] = js.native
   var consumes: js.Array[String] = js.native
-  var features: AnonCoercer = js.native
+  var features: Coercer = js.native
   var methodName: String = js.native
   var methodParameters: js.Array[_] = js.native
   var operationDoc: js.Any = js.native
@@ -29,7 +29,7 @@ object OpenAPIFrameworkOperationContext {
     apiDoc: js.Any,
     basePaths: js.Array[default],
     consumes: js.Array[String],
-    features: AnonCoercer,
+    features: Coercer,
     methodName: String,
     methodParameters: js.Array[_],
     operationDoc: js.Any,
@@ -76,7 +76,7 @@ object OpenAPIFrameworkOperationContext {
         ret
     }
     @scala.inline
-    def withFeatures(value: AnonCoercer): Self = {
+    def withFeatures(value: Coercer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("features")(value.asInstanceOf[js.Any])
         ret

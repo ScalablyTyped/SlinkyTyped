@@ -1,6 +1,6 @@
 package typingsSlinky.hapiJoi.mod
 
-import typingsSlinky.hapiJoi.AnonAlternatives
+import typingsSlinky.hapiJoi.anon.Alternatives
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -228,7 +228,7 @@ trait Root extends js.Object {
     * Useful for creating type shortcuts using deconstruction.
     * Note that the types are already formed and do not need to be called as functions (e.g. `string`, not `string()`).
     */
-  def types(): AnonAlternatives = js.native
+  def types(): Alternatives = js.native
   def untrace(args: js.Any*): js.Any = js.native
   /**
     * Adds the provided values into the allowed whitelist and marks them as the only valid values allowed.

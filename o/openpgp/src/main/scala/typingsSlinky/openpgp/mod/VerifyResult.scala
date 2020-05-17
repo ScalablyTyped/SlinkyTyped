@@ -1,6 +1,6 @@
 package typingsSlinky.openpgp.mod
 
-import typingsSlinky.openpgp.AnonValid
+import typingsSlinky.openpgp.anon.Valid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait VerifyResult extends js.Object {
   var data: String | (ReadableStream[String | js.typedarray.Uint8Array]) | NodeStream | js.typedarray.Uint8Array = js.native
-  var signatures: js.Array[AnonValid] = js.native
+  var signatures: js.Array[Valid] = js.native
 }
 
 object VerifyResult {
   @scala.inline
   def apply(
     data: String | (ReadableStream[String | js.typedarray.Uint8Array]) | NodeStream | js.typedarray.Uint8Array,
-    signatures: js.Array[AnonValid]
+    signatures: js.Array[Valid]
   ): VerifyResult = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], signatures = signatures.asInstanceOf[js.Any])
     __obj.asInstanceOf[VerifyResult]
@@ -41,7 +41,7 @@ object VerifyResult {
         ret
     }
     @scala.inline
-    def withSignatures(value: js.Array[AnonValid]): Self = {
+    def withSignatures(value: js.Array[Valid]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("signatures")(value.asInstanceOf[js.Any])
         ret

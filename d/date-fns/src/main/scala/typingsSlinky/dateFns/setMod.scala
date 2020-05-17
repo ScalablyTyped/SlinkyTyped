@@ -1,6 +1,7 @@
 package typingsSlinky.dateFns
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.dateFns.anon.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation._
 object setMod extends js.Object {
   @js.native
   object default
-    extends TopLevel[CurriedFn2[AnonDate, js.Date | Double, js.Date]]
+    extends TopLevel[CurriedFn2[Date, js.Date | Double, js.Date]]
   
 }
 

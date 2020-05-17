@@ -39,20 +39,14 @@ import typingsSlinky.androiduix.android.widget.AdapterView.OnItemSelectedListene
 import typingsSlinky.androiduix.androidui.attr.AttrBinder.ClassBinderMap
 import typingsSlinky.androiduix.java_.lang.Runnable
 import typingsSlinky.androiduix.java_.util.ArrayList
-import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.widget.Spinner")
 @js.native
-class Spinner_ protected ()
+trait Spinner_
   extends AbsSpinner
      with OnClickListener {
-  def this(context: Context) = this()
-  def this(context: Context, bindElement: HTMLElement) = this()
-  def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String]) = this()
-  def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String], mode: Double) = this()
   var mDisableChildrenWhenDisabled: js.Any = js.native
   var mDropDownWidth: Double = js.native
   var mGravity: js.Any = js.native
@@ -325,9 +319,13 @@ class Spinner_ protected ()
   /* InferMemberOverrides */
   override def getChildDrawingOrder(childCount: Double, i: Double): Double = js.native
   /* InferMemberOverrides */
+  override def getChildHeight(child: View): Double = js.native
+  /* InferMemberOverrides */
   /* protected */ override def getChildStaticTransformation(child: View, t: Transformation): Boolean = js.native
   /* InferMemberOverrides */
   override def getChildTransformation(): Transformation = js.native
+  /* InferMemberOverrides */
+  override def getChildWidth(child: View): Double = js.native
   /* InferMemberOverrides */
   override def getClipBounds(): Rect = js.native
   /* InferMemberOverrides */
@@ -587,6 +585,8 @@ class Spinner_ protected ()
   /* InferMemberOverrides */
   override def indexOfChild(child: View): Double = js.native
   /* InferMemberOverrides */
+  /* private */ override def initAbsSpinner(): js.Any = js.native
+  /* InferMemberOverrides */
   /* protected */ override def initBindAttr(): Unit = js.native
   /* InferMemberOverrides */
   /* protected */ override def initBindElement(): Unit = js.native
@@ -708,6 +708,8 @@ class Spinner_ protected ()
   override def jumpDrawablesToCurrentState(): Unit = js.native
   /* InferMemberOverrides */
   override def layout(l: Double, t: Double, r: Double, b: Double): Unit = js.native
+  /* InferMemberOverrides */
+  override def layoutSpinner(delta: Double, animate: Boolean): Unit = js.native
   /* InferMemberOverrides */
   override def lookForSelectablePosition(position: Double, lookDown: Boolean): Double = js.native
   /* private */ def makeView(position: js.Any, addChild: js.Any): js.Any = js.native
@@ -843,6 +845,8 @@ class Spinner_ protected ()
   /* InferMemberOverrides */
   override def pointInView(localX: Double, localY: Double, slop: Double): Boolean = js.native
   /* InferMemberOverrides */
+  override def pointToPosition(x: Double, y: Double): Double = js.native
+  /* InferMemberOverrides */
   override def post(action: Runnable): Boolean = js.native
   /* InferMemberOverrides */
   override def postDelayed(action: Runnable, delayMillis: Double): Boolean = js.native
@@ -880,6 +884,8 @@ class Spinner_ protected ()
   override def postOnAnimation(action: Runnable): Boolean = js.native
   /* InferMemberOverrides */
   override def postOnAnimationDelayed(action: Runnable, delayMillis: Double): Boolean = js.native
+  /* InferMemberOverrides */
+  override def recycleAllViews(): Unit = js.native
   /* InferMemberOverrides */
   override def refreshDrawableState(): Unit = js.native
   /* InferMemberOverrides */
@@ -946,6 +952,8 @@ class Spinner_ protected ()
   override def requestSyncBoundToElement(): Unit = js.native
   /* InferMemberOverrides */
   override def requestSyncBoundToElement(immediately: Boolean): Unit = js.native
+  /* InferMemberOverrides */
+  override def resetList(): Unit = js.native
   /* InferMemberOverrides */
   override def resetPressedState(): Unit = js.native
   /* InferMemberOverrides */
@@ -1171,6 +1179,10 @@ class Spinner_ protected ()
   override def setSelectedPositionInt(position: Double): Unit = js.native
   /* InferMemberOverrides */
   override def setSelection(position: Double): Unit = js.native
+  /* InferMemberOverrides */
+  override def setSelection(position: Double, animate: Boolean): Unit = js.native
+  /* InferMemberOverrides */
+  override def setSelectionInt(position: Double, animate: Boolean): Unit = js.native
   /* InferMemberOverrides */
   override def setShadowView(radius: Double, dx: Double, dy: Double, color: Double): Unit = js.native
   /* InferMemberOverrides */

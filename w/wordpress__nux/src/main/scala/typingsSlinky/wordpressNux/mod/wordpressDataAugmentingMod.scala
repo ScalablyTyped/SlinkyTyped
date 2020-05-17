@@ -1,7 +1,7 @@
 package typingsSlinky.wordpressNux.mod
 
-import typingsSlinky.wordpressNux.TypeofimportedActions
-import typingsSlinky.wordpressNux.TypeofimportedSelectors
+import typingsSlinky.wordpressNux.anon.TypeofimportedActions
+import typingsSlinky.wordpressNux.anon.TypeofimportedSelectors
 import typingsSlinky.wordpressNux.wordpressNuxStrings.coreSlashnux
 import scala.scalajs.js
 import scala.scalajs.js.`|`

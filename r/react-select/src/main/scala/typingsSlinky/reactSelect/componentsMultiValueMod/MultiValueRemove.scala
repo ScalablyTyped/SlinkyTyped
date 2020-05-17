@@ -1,7 +1,7 @@
 package typingsSlinky.reactSelect.componentsMultiValueMod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactSelect.AnonChildren
+import typingsSlinky.reactSelect.anon.Children
 import typingsSlinky.reactSelect.typesMod.OptionTypeBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,6 +16,6 @@ class MultiValueRemove[OptionType /* <: OptionTypeBase */] ()
 @JSImport("react-select/src/components/MultiValue", "MultiValueRemove")
 @js.native
 object MultiValueRemove extends js.Object {
-  var defaultProps: AnonChildren = js.native
+  var defaultProps: Children = js.native
 }
 

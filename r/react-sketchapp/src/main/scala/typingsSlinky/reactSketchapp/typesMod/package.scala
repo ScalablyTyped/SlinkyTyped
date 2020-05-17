@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object typesMod {
-  type Color = java.lang.String | scala.Double
   type LayerCreator = js.Function5[
     /* style */ typingsSlinky.reactSketchapp.typesMod.ViewStyle, 
     /* layout */ typingsSlinky.reactSketchapp.typesMod.LayoutInfo, 

@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.radioStyleMod
 
-import typingsSlinky.antDesignReactNative.AnonIcon
+import typingsSlinky.antDesignReactNative.anon.Icon
 import typingsSlinky.antDesignReactNative.libStyleMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@ant-design/react-native/lib/radio/style", JSImport.Default)
 @js.native
 object default extends js.Object {
-  def apply(theme: Theme): AnonIcon = js.native
+  def apply(theme: Theme): Icon = js.native
 }
 

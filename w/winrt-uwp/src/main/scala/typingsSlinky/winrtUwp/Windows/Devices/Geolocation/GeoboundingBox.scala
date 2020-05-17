@@ -1,44 +1,12 @@
 package typingsSlinky.winrtUwp.Windows.Devices.Geolocation
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a rectangle that defines a geographic area. */
-@JSGlobal("Windows.Devices.Geolocation.GeoboundingBox")
 @js.native
-class GeoboundingBox protected () extends js.Object {
-  /**
-    * Initializes a new instance of the GeoboundingBox class that has the specified corners.
-    * @param northwestCorner The northwest corner to use for the new GeoboundingBox . For more info, see the NorthwestCorner property.
-    * @param southeastCorner The southeast corner to use for the new GeoboundingBox . For more info, see the SoutheastCorner property.
-    */
-  def this(northwestCorner: BasicGeoposition, southeastCorner: BasicGeoposition) = this()
-  /**
-    * Initializes a new instance of the GeoboundingBox class that has the specified corners and uses the specified altitude reference system.
-    * @param northwestCorner The northwest corner to use for the new GeoboundingBox . For more info, see the NorthwestCorner property.
-    * @param southeastCorner The southeast corner to use for the new GeoboundingBox . For more info, see the SoutheastCorner property.
-    * @param altitudeReferenceSystem The altitude reference system to use for the new GeoboundingBox . For more info, see the AltitudeReferenceSystem property.
-    */
-  def this(
-    northwestCorner: BasicGeoposition,
-    southeastCorner: BasicGeoposition,
-    altitudeReferenceSystem: AltitudeReferenceSystem
-  ) = this()
-  /**
-    * Initializes a new instance of the GeoboundingBox class that has the specified corners and uses the specified altitude reference system and spatial reference ID (SRID).
-    * @param northwestCorner The northwest corner to use for the new GeoboundingBox . For more info, see the NorthwestCorner property.
-    * @param southeastCorner The southeast corner to use for the new GeoboundingBox . For more info, see the SoutheastCorner property.
-    * @param altitudeReferenceSystem The altitude reference system to use for the new GeoboundingBox . For more info, see the AltitudeReferenceSystem property.
-    * @param spatialReferenceId The spatial reference ID (SRID) to use for the new GeoboundingBox . For more info, see the SpatialReferenceId property.
-    */
-  def this(
-    northwestCorner: BasicGeoposition,
-    southeastCorner: BasicGeoposition,
-    altitudeReferenceSystem: AltitudeReferenceSystem,
-    spatialReferenceId: Double
-  ) = this()
+trait GeoboundingBox extends js.Object {
   /** Gets the altitude reference system used by the GeoboundingBox . */
   var altitudeReferenceSystem: AltitudeReferenceSystem = js.native
   /** Gets the center of the GeoboundingBox . */
@@ -57,34 +25,76 @@ class GeoboundingBox protected () extends js.Object {
   var spatialReferenceId: Double = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Devices.Geolocation.GeoboundingBox")
-@js.native
-object GeoboundingBox extends js.Object {
-  /**
-    * Calculates a GeoboundingBox that contains the specified set of geographic positions.
-    * @param positions A collection of geographic positions to include inside the GeoboundingBox .
-    * @return The calculated rectangle that contains the specified set of geographic positions.
-    */
-  def tryCompute(positions: IIterable[BasicGeoposition]): GeoboundingBox = js.native
-  /**
-    * Calculates a GeoboundingBox that contains the specified set of geographic positions and uses the specified altitude reference system.
-    * @param positions A collection of geographic positions to include inside the GeoboundingBox .
-    * @param altitudeRefSystem The altitude reference system to use for the GeoboundingBox . For more info, see the AltitudeReferenceSystem property.
-    * @return The calculated rectangle that contains the specified set of geographic positions.
-    */
-  def tryCompute(positions: IIterable[BasicGeoposition], altitudeRefSystem: AltitudeReferenceSystem): GeoboundingBox = js.native
-  /**
-    * Calculates a GeoboundingBox that contains the specified set of geographic positions and uses the specified altitude reference system and spatial reference ID (SRID).
-    * @param positions A collection of geographic positions to include inside the GeoboundingBox .
-    * @param altitudeRefSystem The altitude reference system to use for the GeoboundingBox . For more info, see the AltitudeReferenceSystem property.
-    * @param spatialReferenceId The spatial reference ID (SRID) to use for the GeoboundingBox . For more info, see the SpatialReferenceId property.
-    * @return The calculated rectangle that contains the specified set of geographic positions.
-    */
-  def tryCompute(
-    positions: IIterable[BasicGeoposition],
-    altitudeRefSystem: AltitudeReferenceSystem,
+object GeoboundingBox {
+  @scala.inline
+  def apply(
+    altitudeReferenceSystem: AltitudeReferenceSystem,
+    center: BasicGeoposition,
+    geoshapeType: GeoshapeType,
+    maxAltitude: Double,
+    minAltitude: Double,
+    northwestCorner: BasicGeoposition,
+    southeastCorner: BasicGeoposition,
     spatialReferenceId: Double
-  ): GeoboundingBox = js.native
+  ): GeoboundingBox = {
+    val __obj = js.Dynamic.literal(altitudeReferenceSystem = altitudeReferenceSystem.asInstanceOf[js.Any], center = center.asInstanceOf[js.Any], geoshapeType = geoshapeType.asInstanceOf[js.Any], maxAltitude = maxAltitude.asInstanceOf[js.Any], minAltitude = minAltitude.asInstanceOf[js.Any], northwestCorner = northwestCorner.asInstanceOf[js.Any], southeastCorner = southeastCorner.asInstanceOf[js.Any], spatialReferenceId = spatialReferenceId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GeoboundingBox]
+  }
+  @scala.inline
+  implicit class GeoboundingBoxOps[Self <: GeoboundingBox] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAltitudeReferenceSystem(value: AltitudeReferenceSystem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("altitudeReferenceSystem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCenter(value: BasicGeoposition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGeoshapeType(value: GeoshapeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geoshapeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxAltitude(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxAltitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinAltitude(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minAltitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNorthwestCorner(value: BasicGeoposition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("northwestCorner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSoutheastCorner(value: BasicGeoposition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("southeastCorner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpatialReferenceId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spatialReferenceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

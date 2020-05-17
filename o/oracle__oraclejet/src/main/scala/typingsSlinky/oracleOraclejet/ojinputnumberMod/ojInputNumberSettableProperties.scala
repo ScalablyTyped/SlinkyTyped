@@ -1,9 +1,9 @@
 package typingsSlinky.oracleOraclejet.ojinputnumberMod
 
-import typingsSlinky.oracleOraclejet.AnonConverterHint
-import typingsSlinky.oracleOraclejet.AnonDefinition
-import typingsSlinky.oracleOraclejet.AnonInstruction
-import typingsSlinky.oracleOraclejet.AnonNumberRange
+import typingsSlinky.oracleOraclejet.anon.ConverterHint
+import typingsSlinky.oracleOraclejet.anon.Definition
+import typingsSlinky.oracleOraclejet.anon.Instruction
+import typingsSlinky.oracleOraclejet.anon.NumberRange
 import typingsSlinky.oracleOraclejet.ojeditablevalueMod.editableValueSettableProperties
 import typingsSlinky.oracleOraclejet.ojmessagingMod.^
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.AsyncValidator
@@ -38,7 +38,7 @@ trait ojInputNumberSettableProperties extends editableValueSettableProperties[Do
   var required: Boolean = js.native
   var step: Double | Null = js.native
   @JSName("translations")
-  var translations_ojInputNumberSettableProperties: AnonNumberRange = js.native
+  var translations_ojInputNumberSettableProperties: NumberRange = js.native
   var validators: js.Array[Validator[Double] | RegisteredValidator] = js.native
   var virtualKeyboard: auto | number | text = js.native
 }
@@ -51,14 +51,14 @@ object ojInputNumberSettableProperties {
     autofocus: Boolean,
     converter: Converter[Double] | RegisteredConverter,
     disabled: Boolean,
-    displayOptions: AnonConverterHint,
-    help: AnonInstruction,
-    helpHints: AnonDefinition,
+    displayOptions: ConverterHint,
+    help: Instruction,
+    helpHints: Definition,
     labelHint: String,
     messagesCustom: js.Array[^],
     rawValue: String,
     required: Boolean,
-    translations: AnonNumberRange,
+    translations: NumberRange,
     valid: valid | pending | invalidHidden | invalidShown,
     validators: js.Array[Validator[Double] | RegisteredValidator],
     virtualKeyboard: auto | number | text
@@ -109,7 +109,7 @@ object ojInputNumberSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonNumberRange): Self = {
+    def withTranslations(value: NumberRange): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

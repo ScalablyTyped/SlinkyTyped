@@ -1,0 +1,11 @@
+package typingsSlinky.sharepoint.global.SP.JsGrid
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("SP.JsGrid.TableCache")
+@js.native
+class TableCache ()
+  extends typingsSlinky.sharepoint.SP.JsGrid.TableCache
+

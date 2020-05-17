@@ -4,14 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.DracoCompression")
 @js.native
-/**
-  * Constructor
-  * @param numWorkers The number of workers for async operations. Specify `0` to disable web workers and run synchronously in the current context.
-  */
-class DracoCompression () extends IDisposable {
-  def this(numWorkers: Double) = this()
+trait DracoCompression extends IDisposable {
   var _decoderModulePromise: js.UndefOr[js.Any] = js.native
   var _workerPoolPromise: js.UndefOr[js.Any] = js.native
   /**
@@ -32,32 +26,5 @@ class DracoCompression () extends IDisposable {
     * @returns a promise that resolves when ready
     */
   def whenReadyAsync(): js.Promise[Unit] = js.native
-}
-
-/* static members */
-@JSGlobal("BABYLON.DracoCompression")
-@js.native
-object DracoCompression extends js.Object {
-  /**
-    * The configuration. Defaults to the following urls:
-    * - wasmUrl: "https://preview.babylonjs.com/draco_wasm_wrapper_gltf.js"
-    * - wasmBinaryUrl: "https://preview.babylonjs.com/draco_decoder_gltf.wasm"
-    * - fallbackUrl: "https://preview.babylonjs.com/draco_decoder_gltf.js"
-    */
-  var Configuration: IDracoCompressionConfiguration = js.native
-  /**
-    * Default number of workers to create when creating the draco compression object.
-    */
-  var DefaultNumWorkers: Double = js.native
-  var GetDefaultNumWorkers: js.Any = js.native
-  var _Default: js.Any = js.native
-  /**
-    * Returns true if the decoder configuration is available.
-    */
-  def DecoderAvailable: Boolean = js.native
-  /**
-    * Default instance for the draco compression object.
-    */
-  def Default: DracoCompression = js.native
 }
 

@@ -1,24 +1,26 @@
 package typingsSlinky.wordpressApiFetch.mod.Schema
 
 import typingsSlinky.std.Record
-import typingsSlinky.wordpressApiFetch.AnonAddnew
-import typingsSlinky.wordpressApiFetch.AnonAuthor
-import typingsSlinky.wordpressApiFetch.AnonCreateposts
-import typingsSlinky.wordpressApiFetch.AnonDictk
+import typingsSlinky.wordpressApiFetch.anon.Addnew
+import typingsSlinky.wordpressApiFetch.anon.Author
+import typingsSlinky.wordpressApiFetch.anon.Createposts
+import typingsSlinky.wordpressApiFetch.anon.Dictk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait BaseType[T /* <: Context */] extends BaseResponse {
-  var capabilities: AnonCreateposts = js.native
+trait BaseType[T /* <: Context */]
+  extends BaseResponse
+     with Type[T] {
+  var capabilities: Createposts = js.native
   var description: String = js.native
   var hierarchical: Boolean = js.native
-  var labels: AnonAddnew = js.native
+  var labels: Addnew = js.native
   var name: String = js.native
   var rest_base: String = js.native
   var slug: String = js.native
-  var supports: AnonAuthor = js.native
+  var supports: Author = js.native
   var taxonomies: js.Array[TaxonomyKind] = js.native
   var viewable: Boolean = js.native
 }
@@ -26,15 +28,15 @@ trait BaseType[T /* <: Context */] extends BaseResponse {
 object BaseType {
   @scala.inline
   def apply[T](
-    _links: Record[String, js.Array[AnonDictk]],
-    capabilities: AnonCreateposts,
+    _links: Record[String, js.Array[Dictk]],
+    capabilities: Createposts,
     description: String,
     hierarchical: Boolean,
-    labels: AnonAddnew,
+    labels: Addnew,
     name: String,
     rest_base: String,
     slug: String,
-    supports: AnonAuthor,
+    supports: Author,
     taxonomies: js.Array[TaxonomyKind],
     viewable: Boolean
   ): BaseType[T] = {
@@ -48,7 +50,7 @@ object BaseType {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withCapabilities(value: AnonCreateposts): Self[T] = {
+    def withCapabilities(value: Createposts): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("capabilities")(value.asInstanceOf[js.Any])
         ret
@@ -66,7 +68,7 @@ object BaseType {
         ret
     }
     @scala.inline
-    def withLabels(value: AnonAddnew): Self[T] = {
+    def withLabels(value: Addnew): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
         ret
@@ -90,7 +92,7 @@ object BaseType {
         ret
     }
     @scala.inline
-    def withSupports(value: AnonAuthor): Self[T] = {
+    def withSupports(value: Author): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("supports")(value.asInstanceOf[js.Any])
         ret

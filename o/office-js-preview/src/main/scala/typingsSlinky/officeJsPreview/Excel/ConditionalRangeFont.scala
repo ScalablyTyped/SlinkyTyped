@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ConditionalRangeFontData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ConditionalRangeFontLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ConditionalRangeFontUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Double
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.None
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Single
@@ -19,9 +19,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.6]
   */
-@JSGlobal("Excel.ConditionalRangeFont")
 @js.native
-class ConditionalRangeFont () extends ClientObject {
+trait ConditionalRangeFont extends ClientObject {
   /**
     *
     * Represents the bold status of font.
@@ -73,7 +72,7 @@ class ConditionalRangeFont () extends ClientObject {
     */
   def load(): ConditionalRangeFont = js.native
   def load(options: ConditionalRangeFontLoadOptions): ConditionalRangeFont = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ConditionalRangeFont = js.native
+  def load(propertyNamesAndPaths: Expand): ConditionalRangeFont = js.native
   def load(propertyNames: String): ConditionalRangeFont = js.native
   def load(propertyNames: js.Array[String]): ConditionalRangeFont = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

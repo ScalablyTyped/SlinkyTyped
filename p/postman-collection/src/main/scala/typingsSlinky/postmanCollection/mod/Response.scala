@@ -1,9 +1,9 @@
 package typingsSlinky.postmanCollection.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.postmanCollection.AnonBody
-import typingsSlinky.postmanCollection.AnonCode
-import typingsSlinky.postmanCollection.AnonFormat
+import typingsSlinky.postmanCollection.anon.Body
+import typingsSlinky.postmanCollection.anon.Code
+import typingsSlinky.postmanCollection.anon.Format
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,8 +27,8 @@ class Response protected () extends Property[ResponseDefinition] {
   var status: String = js.native
   var stream: js.UndefOr[Buffer | js.typedarray.Uint8Array] = js.native
   def dataURI(): String = js.native
-  def details(): js.UndefOr[AnonCode] = js.native
-  def encoding(): AnonFormat = js.native
+  def details(): js.UndefOr[Code] = js.native
+  def encoding(): Format = js.native
   def json(): js.Any = js.native
   def json(reviver: js.Any): js.Any = js.native
   def json(reviver: js.Any, strict: Boolean): js.Any = js.native
@@ -42,7 +42,7 @@ class Response protected () extends Property[ResponseDefinition] {
 @JSImport("postman-collection", "Response")
 @js.native
 object Response extends js.Object {
-  def createFromNode(response: AnonBody, cookies: js.Array[CookieDefinition]): Response = js.native
+  def createFromNode(response: Body, cookies: js.Array[CookieDefinition]): Response = js.native
   def isResponse(obj: js.Any): Boolean = js.native
 }
 

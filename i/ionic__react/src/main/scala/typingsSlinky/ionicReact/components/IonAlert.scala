@@ -6,10 +6,10 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.ionicCore.alertInterfaceMod.AlertButton
 import typingsSlinky.ionicCore.alertInterfaceMod.AlertInput
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonAlertElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonAlertElement
 import typingsSlinky.ionicCore.mod.Mode
 import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation
-import typingsSlinky.ionicReact.AlertOptionsReactControll
+import typingsSlinky.ionicReact.anon.AlertOptionsReactControll
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +23,7 @@ object IonAlert {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, Ref[js.Any]] {
     @scala.inline
     def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
     @scala.inline

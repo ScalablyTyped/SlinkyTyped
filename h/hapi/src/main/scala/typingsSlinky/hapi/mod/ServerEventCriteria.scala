@@ -1,6 +1,6 @@
 package typingsSlinky.hapi.mod
 
-import typingsSlinky.hapi.AnonAll
+import typingsSlinky.hapi.anon.All
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +28,7 @@ trait ServerEventCriteria[T] extends js.Object {
     * * * tags - a tag string or array of tag strings.
     * * * all - if true, all tags must be present for the event update to match the subscription. Defaults to false (at least one matching tag).
     */
-  var filter: js.UndefOr[String | js.Array[String] | AnonAll] = js.native
+  var filter: js.UndefOr[String | js.Array[String] | All] = js.native
   /** (required) the event name string. */
   var name: T = js.native
   /**
@@ -98,7 +98,7 @@ object ServerEventCriteria {
         ret
     }
     @scala.inline
-    def withFilter(value: String | js.Array[String] | AnonAll): Self[T] = {
+    def withFilter(value: String | js.Array[String] | All): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
         ret

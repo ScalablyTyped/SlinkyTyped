@@ -1,6 +1,6 @@
 package typingsSlinky.bluebird.mod
 
-import typingsSlinky.bluebird.FnCall
+import typingsSlinky.bluebird.anon.FnCall
 import typingsSlinky.bluebird.bluebirdStrings.Object
 import typingsSlinky.std.Map
 import typingsSlinky.std.PromiseLike
@@ -72,7 +72,6 @@ trait Bluebird[R]
     * Cancel this `promise`. Will not do anything if this promise is already settled or if the cancellation feature has not been enabled
     */
   def cancel(): Unit = js.native
-  def `catch`[U](): Bluebird[U | R] = js.native
   /**
     * This is a catch-all exception handler, shortcut for calling `.then(null, handler)` on this promise.
     *
@@ -80,6 +79,7 @@ trait Bluebird[R]
     *
     * Alias `.caught();` for compatibility with earlier ECMAScript version.
     */
+  def `catch`[U](): Bluebird[U | R] = js.native
   def `catch`[U](onReject: js.Function1[/* error */ js.Any, Resolvable[U]]): Bluebird[U | R] = js.native
   def `catch`[U, E1](
     // tslint:disable-next-line:unified-signatures
@@ -687,7 +687,6 @@ trait Bluebird[R]
     * Same limitations apply as with `.catchReturn()`.
     */
   def catchThrow(reason: js.Error): Bluebird[R] = js.native
-  def caught[U](): Bluebird[U | R] = js.native
   /**
     * This is a catch-all exception handler, shortcut for calling `.then(null, handler)` on this promise.
     *
@@ -695,6 +694,7 @@ trait Bluebird[R]
     *
     * Alias `.caught();` for compatibility with earlier ECMAScript version.
     */
+  def caught[U](): Bluebird[U | R] = js.native
   def caught[U](onReject: js.Function1[/* error */ js.Any, Resolvable[U]]): Bluebird[U | R] = js.native
   def caught[U, E1](
     // tslint:disable-next-line:unified-signatures

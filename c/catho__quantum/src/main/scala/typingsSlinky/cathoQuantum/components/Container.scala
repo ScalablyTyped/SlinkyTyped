@@ -2,7 +2,7 @@ package typingsSlinky.cathoQuantum.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonBreakpointsComponents
+import typingsSlinky.cathoQuantum.anon.BreakpointsComponents
 import typingsSlinky.cathoQuantum.gridMod.BreakpointsType
 import typingsSlinky.cathoQuantum.gridMod.ContainerProps
 import scala.scalajs.js
@@ -25,7 +25,7 @@ object Container {
     @scala.inline
     def `no-gutters`(value: Boolean): this.type = set("no-gutters", value.asInstanceOf[js.Any])
     @scala.inline
-    def theme(value: AnonBreakpointsComponents): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: BreakpointsComponents): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
     def withBreakpoints(value: Boolean): this.type = set("withBreakpoints", value.asInstanceOf[js.Any])
   }

@@ -1,11 +1,11 @@
 package typingsSlinky.stripe.mod.sources
 
-import typingsSlinky.stripe.AnonAcceptance
-import typingsSlinky.stripe.AnonAddressEmail
-import typingsSlinky.stripe.AnonBank
-import typingsSlinky.stripe.AnonIban
-import typingsSlinky.stripe.AnonRefundattributesmethod
-import typingsSlinky.stripe.AnonReturnurlString
+import typingsSlinky.stripe.anon.Acceptance
+import typingsSlinky.stripe.anon.AddressEmail
+import typingsSlinky.stripe.anon.Bank
+import typingsSlinky.stripe.anon.Iban
+import typingsSlinky.stripe.anon.Refundattributesmethod
+import typingsSlinky.stripe.anon.ReturnurlString
 import typingsSlinky.stripe.mod.IDataOptionsWithMetadata
 import typingsSlinky.stripe.mod.IMetadata
 import typingsSlinky.stripe.stripeStrings.ach_credit_transfer
@@ -38,14 +38,14 @@ trait ISourceCreationOptions extends IDataOptionsWithMetadata {
   var amount: js.UndefOr[Double] = js.native
   var currency: js.UndefOr[String] = js.native
   var flow: js.UndefOr[redirect | receiver | code_verification | none] = js.native
-  var ideal: js.UndefOr[AnonBank] = js.native
-  var mandate: js.UndefOr[AnonAcceptance] = js.native
+  var ideal: js.UndefOr[Bank] = js.native
+  var mandate: js.UndefOr[Acceptance] = js.native
   @JSName("metadata")
   var metadata_ISourceCreationOptions: js.UndefOr[IMetadata] = js.native
-  var owner: js.UndefOr[AnonAddressEmail] = js.native
-  var receiver: js.UndefOr[AnonRefundattributesmethod] = js.native
-  var redirect: js.UndefOr[AnonReturnurlString] = js.native
-  var sepa_debit: js.UndefOr[AnonIban] = js.native
+  var owner: js.UndefOr[AddressEmail] = js.native
+  var receiver: js.UndefOr[Refundattributesmethod] = js.native
+  var redirect: js.UndefOr[ReturnurlString] = js.native
+  var sepa_debit: js.UndefOr[Iban] = js.native
   var statement_descriptor: js.UndefOr[String] = js.native
   var token: js.UndefOr[String] = js.native
   var `type`: ach_credit_transfer | ach_debit | alipay | bancontact | card | card_present | eps | giropay | ideal | multibanco | p24 | sepa_debit | sofort | three_d_secure | wechat = js.native
@@ -112,7 +112,7 @@ object ISourceCreationOptions {
         ret
     }
     @scala.inline
-    def withIdeal(value: AnonBank): Self = {
+    def withIdeal(value: Bank): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ideal")(value.asInstanceOf[js.Any])
         ret
@@ -124,7 +124,7 @@ object ISourceCreationOptions {
         ret
     }
     @scala.inline
-    def withMandate(value: AnonAcceptance): Self = {
+    def withMandate(value: Acceptance): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mandate")(value.asInstanceOf[js.Any])
         ret
@@ -148,7 +148,7 @@ object ISourceCreationOptions {
         ret
     }
     @scala.inline
-    def withOwner(value: AnonAddressEmail): Self = {
+    def withOwner(value: AddressEmail): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
         ret
@@ -160,7 +160,7 @@ object ISourceCreationOptions {
         ret
     }
     @scala.inline
-    def withReceiver(value: AnonRefundattributesmethod): Self = {
+    def withReceiver(value: Refundattributesmethod): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("receiver")(value.asInstanceOf[js.Any])
         ret
@@ -172,7 +172,7 @@ object ISourceCreationOptions {
         ret
     }
     @scala.inline
-    def withRedirect(value: AnonReturnurlString): Self = {
+    def withRedirect(value: ReturnurlString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("redirect")(value.asInstanceOf[js.Any])
         ret
@@ -184,7 +184,7 @@ object ISourceCreationOptions {
         ret
     }
     @scala.inline
-    def withSepa_debit(value: AnonIban): Self = {
+    def withSepa_debit(value: Iban): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sepa_debit")(value.asInstanceOf[js.Any])
         ret

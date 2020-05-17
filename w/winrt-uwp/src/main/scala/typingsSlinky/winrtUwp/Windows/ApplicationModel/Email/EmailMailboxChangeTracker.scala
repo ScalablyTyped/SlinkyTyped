@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** The functionality described in this topic is not available to all Windows and Windows Phone apps. For your code to call these APIs, Microsoft must approve your use of them and provision your developer account. Otherwise the calls will fail at runtime. */
-@JSGlobal("Windows.ApplicationModel.Email.EmailMailboxChangeTracker")
 @js.native
-abstract class EmailMailboxChangeTracker () extends js.Object {
+trait EmailMailboxChangeTracker extends js.Object {
   /** Gets a Boolean value indicating whether change tracking is active. */
   var isTracking: Boolean = js.native
   /** Enables change tracking on a mailbox. */
@@ -19,5 +18,50 @@ abstract class EmailMailboxChangeTracker () extends js.Object {
   def getChangeReader(): EmailMailboxChangeReader = js.native
   /** Moves the change tracking cursor to now. */
   def reset(): Unit = js.native
+}
+
+object EmailMailboxChangeTracker {
+  @scala.inline
+  def apply(
+    enable: () => Unit,
+    getChangeReader: () => EmailMailboxChangeReader,
+    isTracking: Boolean,
+    reset: () => Unit
+  ): EmailMailboxChangeTracker = {
+    val __obj = js.Dynamic.literal(enable = js.Any.fromFunction0(enable), getChangeReader = js.Any.fromFunction0(getChangeReader), isTracking = isTracking.asInstanceOf[js.Any], reset = js.Any.fromFunction0(reset))
+    __obj.asInstanceOf[EmailMailboxChangeTracker]
+  }
+  @scala.inline
+  implicit class EmailMailboxChangeTrackerOps[Self <: EmailMailboxChangeTracker] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnable(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetChangeReader(value: () => EmailMailboxChangeReader): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getChangeReader")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsTracking(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTracking")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReset(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

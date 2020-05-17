@@ -1,8 +1,5 @@
 package typingsSlinky.reactNative
 
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
-import org.scalablytyped.runtime.Instantiable3
 import org.scalajs.dom.raw.Blob
 import typingsSlinky.std.EventTarget
 import scala.scalajs.js
@@ -23,26 +20,5 @@ trait WebSocket extends EventTarget {
   def send(data: js.typedarray.ArrayBuffer): Unit = js.native
   def send(data: js.typedarray.ArrayBufferView): Unit = js.native
   def send(data: Blob): Unit = js.native
-}
-
-@JSGlobal("WebSocket")
-@js.native
-object WebSocket
-  extends Instantiable1[/* uri */ String, WebSocket]
-     with Instantiable2[
-      /* uri */ String, 
-      (/* protocols */ js.Array[String]) | (/* protocols */ String), 
-      WebSocket
-    ]
-     with Instantiable3[
-      /* uri */ String, 
-      (/* protocols */ js.Array[String]) | (/* protocols */ Null) | (/* protocols */ String), 
-      /* options */ AnonDictoptionName, 
-      WebSocket
-    ] {
-  val CLOSED: Double = js.native
-  val CLOSING: Double = js.native
-  val CONNECTING: Double = js.native
-  val OPEN: Double = js.native
 }
 

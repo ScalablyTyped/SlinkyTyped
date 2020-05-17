@@ -1,6 +1,6 @@
 package typingsSlinky.stripeV3.stripe
 
-import typingsSlinky.stripeV3.AnonBillingdetailsBillingDetails
+import typingsSlinky.stripeV3.anon.BillingdetailsBillingDetails
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait ConfirmCardSetupData extends js.Object {
     * additional data relevant to the PaymentMethod, such as billing
     * details:
     */
-  var payment_method: js.UndefOr[String | AnonBillingdetailsBillingDetails] = js.native
+  var payment_method: js.UndefOr[String | BillingdetailsBillingDetails] = js.native
 }
 
 object ConfirmCardSetupData {
@@ -29,7 +29,7 @@ object ConfirmCardSetupData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPayment_method(value: String | AnonBillingdetailsBillingDetails): Self = {
+    def withPayment_method(value: String | BillingdetailsBillingDetails): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("payment_method")(value.asInstanceOf[js.Any])
         ret

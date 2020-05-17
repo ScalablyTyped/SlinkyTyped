@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IHistoryReplyMsg
   extends IShellMessage[history_reply]
-     with _Message {
+     with Message {
   @JSName("content")
   var content_IHistoryReplyMsg: ReplyContent[IHistoryReply] = js.native
   @JSName("parent_header")

@@ -1,9 +1,9 @@
 package typingsSlinky.angularHotkeys.mod.angularAugmentingMod.hotkeys
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.angularHotkeys.angularHotkeysStrings.INPUT
 import typingsSlinky.angularHotkeys.angularHotkeysStrings.SELECT
 import typingsSlinky.angularHotkeys.angularHotkeysStrings.TEXTAREA
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,12 +36,12 @@ trait Hotkey extends js.Object {
   /**
     * The function to execute when the key(s) are pressed. Passes along two arguments, event and hotkey
     */
-  def callback(event: Event_, hotkey: Hotkey): Unit = js.native
+  def callback(event: Event, hotkey: Hotkey): Unit = js.native
 }
 
 object Hotkey {
   @scala.inline
-  def apply(callback: (Event_, Hotkey) => Unit, combo: String | js.Array[String]): Hotkey = {
+  def apply(callback: (Event, Hotkey) => Unit, combo: String | js.Array[String]): Hotkey = {
     val __obj = js.Dynamic.literal(callback = js.Any.fromFunction2(callback), combo = combo.asInstanceOf[js.Any])
     __obj.asInstanceOf[Hotkey]
   }
@@ -52,7 +52,7 @@ object Hotkey {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCallback(value: (Event_, Hotkey) => Unit): Self = {
+    def withCallback(value: (Event, Hotkey) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction2(value))
         ret

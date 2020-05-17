@@ -1,6 +1,6 @@
 package typingsSlinky.canvasjs.mod
 
-import typingsSlinky.canvasjs.AnonDataSeries
+import typingsSlinky.canvasjs.anon.DataSeries
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -76,7 +76,7 @@ trait ChartDataCommon extends js.Object {
     * A custom formatter function which returns the text to be displayed as indexLabel on dataPoints.
     * @param e event object
     */
-  var indexLabelFormatter: js.UndefOr[js.Function1[/* e */ AnonDataSeries, String]] = js.native
+  var indexLabelFormatter: js.UndefOr[js.Function1[/* e */ DataSeries, String]] = js.native
   /**
     * Sets the color of line connecting index labels with their dataPoint. It is only applicable for pie and doughnut chart when indexLabelPlacment is outside.
     * The value of indexLineColor can be a "HTML Color Name" or "Hex Code".
@@ -341,7 +341,7 @@ object ChartDataCommon {
         ret
     }
     @scala.inline
-    def withIndexLabelFormatter(value: /* e */ AnonDataSeries => String): Self = {
+    def withIndexLabelFormatter(value: /* e */ DataSeries => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("indexLabelFormatter")(js.Any.fromFunction1(value))
         ret

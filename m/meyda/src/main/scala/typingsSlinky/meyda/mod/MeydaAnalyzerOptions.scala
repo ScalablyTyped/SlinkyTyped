@@ -2,7 +2,7 @@ package typingsSlinky.meyda.mod
 
 import org.scalajs.dom.raw.AudioContext
 import org.scalajs.dom.raw.AudioNode
-import typingsSlinky.meyda.PartialMeydaFeaturesObjec
+import typingsSlinky.meyda.anon.PartialMeydaFeaturesObjec
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

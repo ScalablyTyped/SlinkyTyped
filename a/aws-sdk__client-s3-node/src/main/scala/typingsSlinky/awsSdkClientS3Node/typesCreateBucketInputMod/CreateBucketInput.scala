@@ -4,7 +4,7 @@ import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.`authenticated
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.`private`
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.`public-read-write`
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.`public-read`
-import typingsSlinky.awsSdkClientS3Node.inputTypesUnionMod._InputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientS3Node.typesCreateBucketConfigurationMod.CreateBucketConfiguration
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.httpMod.NodeHttpOptions
@@ -13,7 +13,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CreateBucketInput extends _InputTypesUnion {
+trait CreateBucketInput extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *

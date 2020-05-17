@@ -1,7 +1,7 @@
 package typingsSlinky.officeUiFabricReact.groupedListSectionMod
 
 import slinky.core.TagMod
-import typingsSlinky.officeUiFabricReact.AnonCallback
+import typingsSlinky.officeUiFabricReact.anon.Callback
 import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropEvents
 import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropHelper
 import typingsSlinky.officeUiFabricReact.groupFooterTypesMod.IGroupFooterProps
@@ -35,7 +35,7 @@ trait IGroupedListSectionProps extends ClassAttributes[GroupedListSection] {
   /** helper to manage drag/drop across item rows and groups */
   var dragDropHelper: js.UndefOr[IDragDropHelper] = js.native
   /** Event names and corresponding callbacks that will be registered to the group and the rendered elements */
-  var eventsToRegister: js.UndefOr[js.Array[AnonCallback]] = js.native
+  var eventsToRegister: js.UndefOr[js.Array[Callback]] = js.native
   /** Information to pass in to the group footer. */
   var footerProps: js.UndefOr[IGroupFooterProps] = js.native
   /** Grouping item limit. */

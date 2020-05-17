@@ -1,18 +1,18 @@
 package typingsSlinky.winrt.Windows.Networking.NetworkOperators
 
+import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Networking.NetworkOperators.UssdSession")
 @js.native
-class UssdSession () extends IUssdSession
+trait UssdSession extends IUssdSession
 
-/* static members */
-@JSGlobal("Windows.Networking.NetworkOperators.UssdSession")
-@js.native
-object UssdSession extends js.Object {
-  def createFromNetworkAccountId(networkAccountId: String): UssdSession = js.native
-  def createFromNetworkInterfaceId(networkInterfaceId: String): UssdSession = js.native
+object UssdSession {
+  @scala.inline
+  def apply(close: () => Unit, sendMessageAndGetReplyAsync: UssdMessage => IAsyncOperation[UssdReply]): UssdSession = {
+    val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), sendMessageAndGetReplyAsync = js.Any.fromFunction1(sendMessageAndGetReplyAsync))
+    __obj.asInstanceOf[UssdSession]
+  }
 }
 

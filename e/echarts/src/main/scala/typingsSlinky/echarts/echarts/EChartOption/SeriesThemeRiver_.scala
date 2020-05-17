@@ -1,9 +1,9 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonBorderType
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonLabelAnonTextShadowColor
-import typingsSlinky.echarts.AnonTextShadowBlur
+import typingsSlinky.echarts.anon.BorderType
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.LabelTextShadowColor
+import typingsSlinky.echarts.anon.TextShadowBlur
 import typingsSlinky.echarts.echarts.EChartOption.SeriesThemeRiver.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -207,7 +207,7 @@ trait SeriesThemeRiver_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis
     */
-  var emphasis: js.UndefOr[AnonLabelAnonTextShadowColor] = js.native
+  var emphasis: js.UndefOr[LabelTextShadowColor] = js.native
   /**
     * Height of thmemRiver component.
     *
@@ -234,7 +234,7 @@ trait SeriesThemeRiver_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBorderType] = js.native
+  var itemStyle: js.UndefOr[BorderType] = js.native
   /**
     * `label` describes style of text labels with which each ribbon-shape
     * river branch corresponds in theme river.
@@ -242,7 +242,7 @@ trait SeriesThemeRiver_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.label
     */
-  var label: js.UndefOr[AnonTextShadowBlur] = js.native
+  var label: js.UndefOr[TextShadowBlur] = js.native
   /**
     * Distance between thmemRiver component and the left side of the
     * container.
@@ -287,7 +287,7 @@ trait SeriesThemeRiver_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-themeRiver.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * Distance between thmemRiver component and the top side of the
     * container.
@@ -418,7 +418,7 @@ object SeriesThemeRiver_ {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonLabelAnonTextShadowColor): Self = {
+    def withEmphasis(value: LabelTextShadowColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -454,7 +454,7 @@ object SeriesThemeRiver_ {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonBorderType): Self = {
+    def withItemStyle(value: BorderType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -466,7 +466,7 @@ object SeriesThemeRiver_ {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonTextShadowBlur): Self = {
+    def withLabel(value: TextShadowBlur): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -514,7 +514,7 @@ object SeriesThemeRiver_ {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

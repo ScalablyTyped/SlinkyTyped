@@ -1,13 +1,13 @@
 package typingsSlinky.qrcode.mod
 
-import typingsSlinky.qrcode.AnonDark
+import typingsSlinky.qrcode.anon.Dark
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait QRCodeRenderersOptions extends QRCodeOptions {
-  var color: js.UndefOr[AnonDark] = js.native
+  var color: js.UndefOr[Dark] = js.native
   /**
     * Define how much wide the quiet zone should be.
     * Default: 4
@@ -39,7 +39,7 @@ object QRCodeRenderersOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withColor(value: AnonDark): Self = {
+    def withColor(value: Dark): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
         ret

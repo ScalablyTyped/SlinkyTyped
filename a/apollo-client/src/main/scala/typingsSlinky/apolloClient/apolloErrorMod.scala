@@ -1,5 +1,6 @@
 package typingsSlinky.apolloClient
 
+import typingsSlinky.apolloClient.anon.ErrorMessage
 import typingsSlinky.graphql.mod.GraphQLError
 import typingsSlinky.std.Error
 import scala.scalajs.js
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation._
 object apolloErrorMod extends js.Object {
   @js.native
   class ApolloError protected () extends Error {
-    def this(hasGraphQLErrorsNetworkErrorErrorMessageExtraInfo: AnonErrorMessage) = this()
+    def this(hasGraphQLErrorsNetworkErrorErrorMessageExtraInfo: ErrorMessage) = this()
     var extraInfo: js.Any = js.native
     var graphQLErrors: js.Array[GraphQLError] = js.native
     var networkError: js.Error | Null = js.native

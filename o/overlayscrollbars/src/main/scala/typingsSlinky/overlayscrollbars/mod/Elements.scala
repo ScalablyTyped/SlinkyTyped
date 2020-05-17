@@ -1,7 +1,7 @@
 package typingsSlinky.overlayscrollbars.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.overlayscrollbars.AnonHandle
+import typingsSlinky.overlayscrollbars.anon.Handle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +12,8 @@ trait Elements extends js.Object {
   var host: HTMLElement = js.native
   var padding: HTMLElement = js.native
   var scrollbarCorner: HTMLElement = js.native
-  var scrollbarHorizontal: AnonHandle = js.native
-  var scrollbarVertical: AnonHandle = js.native
+  var scrollbarHorizontal: Handle = js.native
+  var scrollbarVertical: Handle = js.native
   var target: HTMLElement = js.native
   var viewport: HTMLElement = js.native
 }
@@ -25,8 +25,8 @@ object Elements {
     host: HTMLElement,
     padding: HTMLElement,
     scrollbarCorner: HTMLElement,
-    scrollbarHorizontal: AnonHandle,
-    scrollbarVertical: AnonHandle,
+    scrollbarHorizontal: Handle,
+    scrollbarVertical: Handle,
     target: HTMLElement,
     viewport: HTMLElement
   ): Elements = {
@@ -64,13 +64,13 @@ object Elements {
         ret
     }
     @scala.inline
-    def withScrollbarHorizontal(value: AnonHandle): Self = {
+    def withScrollbarHorizontal(value: Handle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollbarHorizontal")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withScrollbarVertical(value: AnonHandle): Self = {
+    def withScrollbarVertical(value: Handle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollbarVertical")(value.asInstanceOf[js.Any])
         ret

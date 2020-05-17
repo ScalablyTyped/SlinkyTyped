@@ -1,5 +1,6 @@
 package typingsSlinky.rbx.navbarContainerMod
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.SVGElement
 import slinky.core.ReactComponentClass
@@ -17,7 +18,6 @@ import typingsSlinky.rbx.rbxStrings.top
 import typingsSlinky.rbx.rbxStrings.warning
 import typingsSlinky.rbx.rbxStrings.white
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ trait NavbarContainerModifierProps extends js.Object {
   var color: js.UndefOr[
     primary | success | info | warning | danger | light | dark | white | black | link
   ] = js.native
-  var document: js.UndefOr[Document_] = js.native
+  var document: js.UndefOr[Document] = js.native
   var fixed: js.UndefOr[top | bottom] = js.native
   var innerRef: js.UndefOr[Ref[HTMLElement | SVGElement | ReactComponentClass[js.Object]]] = js.native
   var managed: js.UndefOr[Boolean] = js.native
@@ -97,7 +97,7 @@ object NavbarContainerModifierProps {
         ret
     }
     @scala.inline
-    def withDocument(value: Document_): Self = {
+    def withDocument(value: Document): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
         ret

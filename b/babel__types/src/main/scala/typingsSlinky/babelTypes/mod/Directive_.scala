@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Directive_
   extends BaseNode
-     with _Node {
+     with Node {
   @JSName("type")
   var type_Directive_ : Directive = js.native
   var value: DirectiveLiteral_ = js.native

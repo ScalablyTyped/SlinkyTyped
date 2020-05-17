@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * The client-side equivalent of the ASPxTrackBar control.
   */
-@JSGlobal("ASPxClientTrackBar")
 @js.native
-class ASPxClientTrackBar () extends ASPxClientEdit {
+trait ASPxClientTrackBar extends ASPxClientEdit {
   /**
     * Fires after the editor's position has been changed.
     */
@@ -83,14 +82,166 @@ class ASPxClientTrackBar () extends ASPxClientEdit {
   def SetPositionStart(position: Double): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("ASPxClientTrackBar")
-@js.native
-object ASPxClientTrackBar extends js.Object {
-  /**
-    * Converts the specified object to the ASPxClientTrackBar type. The converted client object specified by the obj parameter.
-    * @param obj The client object to be type cast.
-    */
-  def Cast(obj: js.Any): ASPxClientTrackBar = js.native
+object ASPxClientTrackBar {
+  @scala.inline
+  def apply(
+    AdjustControl: () => Unit,
+    Focus: () => Unit,
+    GetCaption: () => String,
+    GetClientVisible: () => Boolean,
+    GetEnabled: () => Boolean,
+    GetErrorText: () => String,
+    GetHeight: () => Double,
+    GetInputElement: () => js.Any,
+    GetIsValid: () => Boolean,
+    GetItemCount: () => Double,
+    GetItemIndexByValue: js.Any => Double,
+    GetItemText: Double => String,
+    GetItemToolTip: Double => String,
+    GetItemValue: Double => js.Any,
+    GetMainElement: () => js.Any,
+    GetParentControl: () => js.Any,
+    GetPosition: () => Double,
+    GetPositionEnd: () => Double,
+    GetPositionStart: () => Double,
+    GetReadOnly: () => Boolean,
+    GetValue: () => js.Any,
+    GetVisible: () => Boolean,
+    GetWidth: () => Double,
+    GotFocus: ASPxClientEvent[ASPxClientEventHandler[ASPxClientEdit]],
+    InCallback: () => Boolean,
+    Init: ASPxClientEvent[ASPxClientEventHandler[ASPxClientControlBase]],
+    LostFocus: ASPxClientEvent[ASPxClientEventHandler[ASPxClientEdit]],
+    PositionChanged: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientTrackBar]],
+    PositionChanging: ASPxClientEvent[ASPxClientTrackBarPositionChangingEventHandler[ASPxClientTrackBar]],
+    SendMessageToAssistiveTechnology: String => Unit,
+    SetCaption: String => Unit,
+    SetClientVisible: Boolean => Unit,
+    SetEnabled: Boolean => Unit,
+    SetErrorText: String => Unit,
+    SetHeight: Double => Unit,
+    SetIsValid: Boolean => Unit,
+    SetPosition: Double => Unit,
+    SetPositionEnd: Double => Unit,
+    SetPositionStart: Double => Unit,
+    SetReadOnly: Boolean => Unit,
+    SetValue: js.Any => Unit,
+    SetVisible: Boolean => Unit,
+    SetWidth: Double => Unit,
+    Track: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientTrackBar]],
+    TrackEnd: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientTrackBar]],
+    TrackStart: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientTrackBar]],
+    Validate: () => Unit,
+    Validation: ASPxClientEvent[ASPxClientEditValidationEventHandler[ASPxClientEdit]],
+    ValueChanged: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientEdit]],
+    name: String
+  ): ASPxClientTrackBar = {
+    val __obj = js.Dynamic.literal(AdjustControl = js.Any.fromFunction0(AdjustControl), Focus = js.Any.fromFunction0(Focus), GetCaption = js.Any.fromFunction0(GetCaption), GetClientVisible = js.Any.fromFunction0(GetClientVisible), GetEnabled = js.Any.fromFunction0(GetEnabled), GetErrorText = js.Any.fromFunction0(GetErrorText), GetHeight = js.Any.fromFunction0(GetHeight), GetInputElement = js.Any.fromFunction0(GetInputElement), GetIsValid = js.Any.fromFunction0(GetIsValid), GetItemCount = js.Any.fromFunction0(GetItemCount), GetItemIndexByValue = js.Any.fromFunction1(GetItemIndexByValue), GetItemText = js.Any.fromFunction1(GetItemText), GetItemToolTip = js.Any.fromFunction1(GetItemToolTip), GetItemValue = js.Any.fromFunction1(GetItemValue), GetMainElement = js.Any.fromFunction0(GetMainElement), GetParentControl = js.Any.fromFunction0(GetParentControl), GetPosition = js.Any.fromFunction0(GetPosition), GetPositionEnd = js.Any.fromFunction0(GetPositionEnd), GetPositionStart = js.Any.fromFunction0(GetPositionStart), GetReadOnly = js.Any.fromFunction0(GetReadOnly), GetValue = js.Any.fromFunction0(GetValue), GetVisible = js.Any.fromFunction0(GetVisible), GetWidth = js.Any.fromFunction0(GetWidth), GotFocus = GotFocus.asInstanceOf[js.Any], InCallback = js.Any.fromFunction0(InCallback), Init = Init.asInstanceOf[js.Any], LostFocus = LostFocus.asInstanceOf[js.Any], PositionChanged = PositionChanged.asInstanceOf[js.Any], PositionChanging = PositionChanging.asInstanceOf[js.Any], SendMessageToAssistiveTechnology = js.Any.fromFunction1(SendMessageToAssistiveTechnology), SetCaption = js.Any.fromFunction1(SetCaption), SetClientVisible = js.Any.fromFunction1(SetClientVisible), SetEnabled = js.Any.fromFunction1(SetEnabled), SetErrorText = js.Any.fromFunction1(SetErrorText), SetHeight = js.Any.fromFunction1(SetHeight), SetIsValid = js.Any.fromFunction1(SetIsValid), SetPosition = js.Any.fromFunction1(SetPosition), SetPositionEnd = js.Any.fromFunction1(SetPositionEnd), SetPositionStart = js.Any.fromFunction1(SetPositionStart), SetReadOnly = js.Any.fromFunction1(SetReadOnly), SetValue = js.Any.fromFunction1(SetValue), SetVisible = js.Any.fromFunction1(SetVisible), SetWidth = js.Any.fromFunction1(SetWidth), Track = Track.asInstanceOf[js.Any], TrackEnd = TrackEnd.asInstanceOf[js.Any], TrackStart = TrackStart.asInstanceOf[js.Any], Validate = js.Any.fromFunction0(Validate), Validation = Validation.asInstanceOf[js.Any], ValueChanged = ValueChanged.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientTrackBar]
+  }
+  @scala.inline
+  implicit class ASPxClientTrackBarOps[Self <: ASPxClientTrackBar] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetItemCount(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetItemCount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetItemIndexByValue(value: js.Any => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetItemIndexByValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetItemText(value: Double => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetItemText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetItemToolTip(value: Double => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetItemToolTip")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetItemValue(value: Double => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetItemValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetPosition(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetPosition")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPositionEnd(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetPositionEnd")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPositionStart(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetPositionStart")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPositionChanged(value: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientTrackBar]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PositionChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPositionChanging(value: ASPxClientEvent[ASPxClientTrackBarPositionChangingEventHandler[ASPxClientTrackBar]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PositionChanging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetPosition(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetPosition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetPositionEnd(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetPositionEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetPositionStart(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetPositionStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTrack(value: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientTrackBar]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Track")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrackEnd(value: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientTrackBar]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrackEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrackStart(value: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientTrackBar]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TrackStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

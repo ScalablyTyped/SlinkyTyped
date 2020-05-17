@@ -52,7 +52,7 @@ trait TernOptions extends js.Object {
       /* request */ Document, 
       /* error */ js.UndefOr[js.Error], 
       /* data */ js.UndefOr[
-        RenameQueryResult | DocumentationQueryResult | FilesQueryResult | RefsQueryResult | TypeQueryResult | PropertiesQueryResult | DefinitionQueryResult | CompletionsQueryResult
+        RefsQueryResult | DefinitionQueryResult | DocumentationQueryResult | FilesQueryResult | PropertiesQueryResult | CompletionsQueryResult | TypeQueryResult | RenameQueryResult
       ], 
       _
     ]
@@ -157,7 +157,7 @@ object TernOptions {
     @scala.inline
     def withResponseFilter(
       value: (/* doc */ Doc, /* query */ Query, /* request */ Document, /* error */ js.UndefOr[js.Error], /* data */ js.UndefOr[
-          RenameQueryResult | DocumentationQueryResult | FilesQueryResult | RefsQueryResult | TypeQueryResult | PropertiesQueryResult | DefinitionQueryResult | CompletionsQueryResult
+          RefsQueryResult | DefinitionQueryResult | DocumentationQueryResult | FilesQueryResult | PropertiesQueryResult | CompletionsQueryResult | TypeQueryResult | RenameQueryResult
         ]) => _
     ): Self = {
         val ret = this.duplicate

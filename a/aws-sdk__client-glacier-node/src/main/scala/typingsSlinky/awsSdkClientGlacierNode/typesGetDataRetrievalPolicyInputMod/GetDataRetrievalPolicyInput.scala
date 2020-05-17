@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientGlacierNode.typesGetDataRetrievalPolicyInputMod
 
-import typingsSlinky.awsSdkClientGlacierNode.inputTypesUnionMod._InputTypesUnion
+import typingsSlinky.awsSdkClientGlacierNode.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.httpMod.NodeHttpOptions
 import scala.scalajs.js
@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait GetDataRetrievalPolicyInput extends _InputTypesUnion {
+trait GetDataRetrievalPolicyInput extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *

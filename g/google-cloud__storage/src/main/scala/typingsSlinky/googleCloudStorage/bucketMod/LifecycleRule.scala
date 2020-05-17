@@ -1,24 +1,21 @@
 package typingsSlinky.googleCloudStorage.bucketMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.googleCloudStorage.AnonStorageClass
+import typingsSlinky.googleCloudStorage.anon.StorageClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait LifecycleRule extends js.Object {
-  var action: AnonStorageClass | String = js.native
+  var action: StorageClass | String = js.native
   var condition: StringDictionary[Boolean | js.Date | Double | String] = js.native
   var storageClass: js.UndefOr[String] = js.native
 }
 
 object LifecycleRule {
   @scala.inline
-  def apply(
-    action: AnonStorageClass | String,
-    condition: StringDictionary[Boolean | js.Date | Double | String]
-  ): LifecycleRule = {
+  def apply(action: StorageClass | String, condition: StringDictionary[Boolean | js.Date | Double | String]): LifecycleRule = {
     val __obj = js.Dynamic.literal(action = action.asInstanceOf[js.Any], condition = condition.asInstanceOf[js.Any])
     __obj.asInstanceOf[LifecycleRule]
   }
@@ -29,7 +26,7 @@ object LifecycleRule {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAction(value: AnonStorageClass | String): Self = {
+    def withAction(value: StorageClass | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
         ret

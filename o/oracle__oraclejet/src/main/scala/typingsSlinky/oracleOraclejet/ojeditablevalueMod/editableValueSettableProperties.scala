@@ -1,8 +1,8 @@
 package typingsSlinky.oracleOraclejet.ojeditablevalueMod
 
-import typingsSlinky.oracleOraclejet.AnonConverterHint
-import typingsSlinky.oracleOraclejet.AnonDefinition
-import typingsSlinky.oracleOraclejet.AnonInstruction
+import typingsSlinky.oracleOraclejet.anon.ConverterHint
+import typingsSlinky.oracleOraclejet.anon.Definition
+import typingsSlinky.oracleOraclejet.anon.Instruction
 import typingsSlinky.oracleOraclejet.mod.baseComponentSettableProperties
 import typingsSlinky.oracleOraclejet.ojmessagingMod.^
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.invalidHidden
@@ -17,9 +17,9 @@ import scala.scalajs.js.annotation._
 trait editableValueSettableProperties[V, SV, RV] extends baseComponentSettableProperties {
   var describedBy: String | Null = js.native
   var disabled: Boolean = js.native
-  var displayOptions: AnonConverterHint = js.native
-  var help: AnonInstruction = js.native
-  var helpHints: AnonDefinition = js.native
+  var displayOptions: ConverterHint = js.native
+  var help: Instruction = js.native
+  var helpHints: Definition = js.native
   var labelHint: String = js.native
   var messagesCustom: js.Array[^] = js.native
   val valid: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valid | pending | invalidHidden | invalidShown = js.native
@@ -30,9 +30,9 @@ object editableValueSettableProperties {
   @scala.inline
   def apply[V, SV, RV](
     disabled: Boolean,
-    displayOptions: AnonConverterHint,
-    help: AnonInstruction,
-    helpHints: AnonDefinition,
+    displayOptions: ConverterHint,
+    help: Instruction,
+    helpHints: Definition,
     labelHint: String,
     messagesCustom: js.Array[^],
     valid: valid | pending | invalidHidden | invalidShown,
@@ -54,19 +54,19 @@ object editableValueSettableProperties {
         ret
     }
     @scala.inline
-    def withDisplayOptions(value: AnonConverterHint): Self[V, SV, RV] = {
+    def withDisplayOptions(value: ConverterHint): Self[V, SV, RV] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("displayOptions")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withHelp(value: AnonInstruction): Self[V, SV, RV] = {
+    def withHelp(value: Instruction): Self[V, SV, RV] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withHelpHints(value: AnonDefinition): Self[V, SV, RV] = {
+    def withHelpHints(value: Definition): Self[V, SV, RV] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("helpHints")(value.asInstanceOf[js.Any])
         ret

@@ -1,0 +1,20 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Provides data for the CustomCallback event.
+  */
+@JSGlobal("ASPxClientCustomDataCallbackEventArgs")
+@js.native
+class ASPxClientCustomDataCallbackEventArgs protected ()
+  extends typingsSlinky.devexpressWeb.ASPxClientCustomDataCallbackEventArgs {
+  /**
+    * Initializes a new object of the ASPxClientCustomDataCallbackEventArgs type with the specified settings.
+    * @param result A string value that represents the result of server-side processing.
+    */
+  def this(result: String) = this()
+}
+

@@ -1,7 +1,7 @@
 package typingsSlinky.antd
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +11,6 @@ import scala.scalajs.js.annotation._
 object getScrollMod extends js.Object {
   def default(target: Null, top: Boolean): Double = js.native
   def default(target: HTMLElement, top: Boolean): Double = js.native
-  def default(target: Window_, top: Boolean): Double = js.native
+  def default(target: Window, top: Boolean): Double = js.native
 }
 

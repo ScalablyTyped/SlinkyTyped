@@ -1,0 +1,41 @@
+package typingsSlinky.wepy.anon
+
+import typingsSlinky.wepy.wxEnhancedMod.LagLng
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Padding extends js.Object {
+  var padding: js.Array[Double] = js.native
+  var points: js.Array[LagLng] = js.native
+}
+
+object Padding {
+  @scala.inline
+  def apply(padding: js.Array[Double], points: js.Array[LagLng]): Padding = {
+    val __obj = js.Dynamic.literal(padding = padding.asInstanceOf[js.Any], points = points.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Padding]
+  }
+  @scala.inline
+  implicit class PaddingOps[Self <: Padding] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPadding(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPoints(value: js.Array[LagLng]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

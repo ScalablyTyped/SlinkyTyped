@@ -1,6 +1,6 @@
 package typingsSlinky.vegaTypings.sceneMod
 
-import typingsSlinky.vegaTypings.AnonRole
+import typingsSlinky.vegaTypings.anon.Role
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait SceneRect extends js.Object {
   var datum: js.UndefOr[js.Object] = js.native
   var fill: String = js.native
   var height: Double = js.native
-  var mark: AnonRole = js.native
+  var mark: Role = js.native
   var width: Double = js.native
   var x: Double = js.native
   var y: Double = js.native
@@ -20,7 +20,7 @@ trait SceneRect extends js.Object {
 
 object SceneRect {
   @scala.inline
-  def apply(bounds: Bounds, fill: String, height: Double, mark: AnonRole, width: Double, x: Double, y: Double): SceneRect = {
+  def apply(bounds: Bounds, fill: String, height: Double, mark: Role, width: Double, x: Double, y: Double): SceneRect = {
     val __obj = js.Dynamic.literal(bounds = bounds.asInstanceOf[js.Any], fill = fill.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], mark = mark.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
     __obj.asInstanceOf[SceneRect]
   }
@@ -49,7 +49,7 @@ object SceneRect {
         ret
     }
     @scala.inline
-    def withMark(value: AnonRole): Self = {
+    def withMark(value: Role): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mark")(value.asInstanceOf[js.Any])
         ret

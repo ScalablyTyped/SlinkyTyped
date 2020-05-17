@@ -8,11 +8,11 @@ import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactNative.mod.Animated.AnimatedInterpolation
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeGestureHandler.AnonBottom
-import typingsSlinky.reactNativeGestureHandler.AnonBottomHeight
-import typingsSlinky.reactNativeGestureHandler.AnonHeight
-import typingsSlinky.reactNativeGestureHandler.AnonLeft
-import typingsSlinky.reactNativeGestureHandler.AnonRight
+import typingsSlinky.reactNativeGestureHandler.anon.Bottom
+import typingsSlinky.reactNativeGestureHandler.anon.BottomHeight
+import typingsSlinky.reactNativeGestureHandler.anon.Height
+import typingsSlinky.reactNativeGestureHandler.anon.Left
+import typingsSlinky.reactNativeGestureHandler.anon.Right
 import typingsSlinky.reactNativeGestureHandler.swipeableMod.SwipeableProperties
 import typingsSlinky.reactNativeGestureHandler.swipeableMod.default
 import scala.scalajs.js
@@ -51,7 +51,7 @@ object Swipeable {
     @scala.inline
     def friction(value: Double): this.type = set("friction", value.asInstanceOf[js.Any])
     @scala.inline
-    def hitSlop(value: Double | AnonBottom | AnonLeft | AnonRight | AnonHeight | AnonBottomHeight): this.type = set("hitSlop", value.asInstanceOf[js.Any])
+    def hitSlop(value: Double | Bottom | Left | Right | Height | BottomHeight): this.type = set("hitSlop", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline

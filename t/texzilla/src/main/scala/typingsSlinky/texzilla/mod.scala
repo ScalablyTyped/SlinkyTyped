@@ -1,10 +1,10 @@
 package typingsSlinky.texzilla
 
 import org.scalajs.dom.raw.DOMParser
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.XMLSerializer
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ object mod extends js.Object {
   def toImage(str: String, rightToLeft: Boolean): HTMLImageElement = js.native
   def toImage(str: String, rightToLeft: Boolean, roundToPowerOfTwo: Boolean): HTMLImageElement = js.native
   def toImage(str: String, rightToLeft: Boolean, roundToPowerOfTwo: Boolean, size: Double): HTMLImageElement = js.native
-  def toImage(str: String, rightToLeft: Boolean, roundToPowerOfTwo: Boolean, size: Double, document: Document_): HTMLImageElement = js.native
+  def toImage(str: String, rightToLeft: Boolean, roundToPowerOfTwo: Boolean, size: Double, document: Document): HTMLImageElement = js.native
   def toMathML(str: String): Element = js.native
   def toMathML(str: String, displayMode: Boolean): Element = js.native
   def toMathML(str: String, displayMode: Boolean, rightToLeft: Boolean): Element = js.native

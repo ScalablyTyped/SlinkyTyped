@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait Scope extends js.Object
 
+object Scope {
+  @scala.inline
+  implicit def apply(value: Queryable): Scope = value.asInstanceOf[Scope]
+  @scala.inline
+  implicit def apply(value: WindowLike): Scope = value.asInstanceOf[Scope]
+}
+

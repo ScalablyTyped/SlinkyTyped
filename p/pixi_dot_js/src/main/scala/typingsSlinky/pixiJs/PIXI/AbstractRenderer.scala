@@ -1,7 +1,6 @@
 package typingsSlinky.pixiJs.PIXI
 
 import org.scalajs.dom.raw.HTMLCanvasElement
-import typingsSlinky.pixiJs.AnonAutoDensity
 import typingsSlinky.pixiJs.PIXI.utils.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,11 +15,8 @@ import scala.scalajs.js.annotation._
   * @extends PIXI.utils.EventEmitter
   * @memberof PIXI
   */
-@JSGlobal("PIXI.AbstractRenderer")
 @js.native
-class AbstractRenderer protected () extends EventEmitter {
-  def this(system: String) = this()
-  def this(system: String, options: AnonAutoDensity) = this()
+trait AbstractRenderer extends EventEmitter {
   /**
     * The background color as a number.
     *

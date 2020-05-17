@@ -2,7 +2,7 @@ package typingsSlinky.primereact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonTarget
+import typingsSlinky.primereact.anon.Target
 import typingsSlinky.primereact.pickListTransferControlsMod.PickListTransferControlsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,7 @@ object PickListTransferControls {
           typingsSlinky.primereact.pickListTransferControlsMod.PickListTransferControls
         ] {
     @scala.inline
-    def onTransfer(value: /* e */ AnonTarget => Unit): this.type = set("onTransfer", js.Any.fromFunction1(value))
+    def onTransfer(value: /* e */ Target => Unit): this.type = set("onTransfer", js.Any.fromFunction1(value))
     @scala.inline
     def source(value: js.Array[_]): this.type = set("source", value.asInstanceOf[js.Any])
     @scala.inline

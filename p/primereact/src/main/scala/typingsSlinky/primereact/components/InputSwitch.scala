@@ -1,11 +1,11 @@
 package typingsSlinky.primereact.components
 
+import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonValueBoolean
+import typingsSlinky.primereact.anon.ValueBoolean
 import typingsSlinky.primereact.inputSwitchMod.InputSwitchProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,11 +32,11 @@ object InputSwitch {
     @scala.inline
     def offLabel(value: String): this.type = set("offLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def onBlur(value: /* event */ Event_ => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    def onBlur(value: /* event */ Event => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: /* e */ AnonValueBoolean => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ ValueBoolean => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onFocus(value: /* event */ Event_ => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    def onFocus(value: /* event */ Event => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
     def onLabel(value: String): this.type = set("onLabel", value.asInstanceOf[js.Any])
     @scala.inline

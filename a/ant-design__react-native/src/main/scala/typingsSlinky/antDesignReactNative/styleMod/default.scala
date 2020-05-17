@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.styleMod
 
-import typingsSlinky.antDesignReactNative.AnonArrow
+import typingsSlinky.antDesignReactNative.anon.Arrow
 import typingsSlinky.antDesignReactNative.libStyleMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@ant-design/react-native/lib/accordion/style", JSImport.Default)
 @js.native
 object default extends js.Object {
-  def apply(theme: Theme): AnonArrow = js.native
+  def apply(theme: Theme): Arrow = js.native
 }
 

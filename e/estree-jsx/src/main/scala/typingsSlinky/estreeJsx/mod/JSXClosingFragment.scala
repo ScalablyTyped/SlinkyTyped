@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait JSXClosingFragment
   extends BaseNode
-     with _Node {
+     with Node {
   @JSName("type")
   var type_JSXClosingFragment: typingsSlinky.estreeJsx.estreeJsxStrings.JSXClosingFragment = js.native
 }

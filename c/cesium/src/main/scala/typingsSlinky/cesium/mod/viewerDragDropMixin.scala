@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonClearOnDrop
+import typingsSlinky.cesium.anon.ClearOnDrop
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object viewerDragDropMixin extends js.Object {
   def apply(viewer: Viewer): js.UndefOr[scala.Nothing] = js.native
-  def apply(viewer: Viewer, options: AnonClearOnDrop): js.UndefOr[scala.Nothing] = js.native
+  def apply(viewer: Viewer, options: ClearOnDrop): js.UndefOr[scala.Nothing] = js.native
 }
 

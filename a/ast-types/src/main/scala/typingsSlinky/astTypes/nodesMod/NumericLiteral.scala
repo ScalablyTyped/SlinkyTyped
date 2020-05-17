@@ -1,7 +1,7 @@
 package typingsSlinky.astTypes.nodesMod
 
-import typingsSlinky.astTypes.AnonFlags
-import typingsSlinky.astTypes.AnonRawRawValue
+import typingsSlinky.astTypes.anon.Flags
+import typingsSlinky.astTypes.anon.RawRawValue
 import typingsSlinky.astTypes.kindsMod.CommentKind
 import typingsSlinky.astTypes.kindsMod.SourceLocationKind
 import scala.scalajs.js
@@ -12,21 +12,17 @@ import scala.scalajs.js.annotation._
 @js.native
 trait NumericLiteral extends ASTNode {
   var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var extra: AnonRawRawValue = js.native
+  var extra: RawRawValue = js.native
   var loc: js.UndefOr[SourceLocationKind] = js.native
   var raw: String | Null = js.native
-  var regex: js.UndefOr[AnonFlags] = js.native
+  var regex: js.UndefOr[Flags] = js.native
   var `type`: typingsSlinky.astTypes.astTypesStrings.NumericLiteral = js.native
   var value: Double = js.native
 }
 
 object NumericLiteral {
   @scala.inline
-  def apply(
-    extra: AnonRawRawValue,
-    `type`: typingsSlinky.astTypes.astTypesStrings.NumericLiteral,
-    value: Double
-  ): NumericLiteral = {
+  def apply(extra: RawRawValue, `type`: typingsSlinky.astTypes.astTypesStrings.NumericLiteral, value: Double): NumericLiteral = {
     val __obj = js.Dynamic.literal(extra = extra.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[NumericLiteral]
@@ -38,7 +34,7 @@ object NumericLiteral {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withExtra(value: AnonRawRawValue): Self = {
+    def withExtra(value: RawRawValue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
         ret
@@ -92,7 +88,7 @@ object NumericLiteral {
         ret
     }
     @scala.inline
-    def withRegex(value: AnonFlags): Self = {
+    def withRegex(value: Flags): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("regex")(value.asInstanceOf[js.Any])
         ret

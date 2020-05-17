@@ -1,6 +1,6 @@
 package typingsSlinky.numbro.mod.numbro
 
-import typingsSlinky.numbro.AnonBillion
+import typingsSlinky.numbro.anon.Billion
 import typingsSlinky.numbro.numbroStrings.billion
 import typingsSlinky.numbro.numbroStrings.binary
 import typingsSlinky.numbro.numbroStrings.byte
@@ -26,7 +26,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Format extends js.Object {
-  var abbreviations: js.UndefOr[AnonBillion] = js.native
+  var abbreviations: js.UndefOr[Billion] = js.native
   var average: js.UndefOr[Boolean] = js.native
   var base: js.UndefOr[decimal | binary | general] = js.native
   var characteristic: js.UndefOr[Double] = js.native
@@ -63,7 +63,7 @@ object Format {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAbbreviations(value: AnonBillion): Self = {
+    def withAbbreviations(value: Billion): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("abbreviations")(value.asInstanceOf[js.Any])
         ret

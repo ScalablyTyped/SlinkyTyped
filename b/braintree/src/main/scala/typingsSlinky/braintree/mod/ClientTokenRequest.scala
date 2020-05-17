@@ -1,6 +1,6 @@
 package typingsSlinky.braintree.mod
 
-import typingsSlinky.braintree.AnonFailOnDuplicatePaymentMethod
+import typingsSlinky.braintree.anon.FailOnDuplicatePaymentMethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait ClientTokenRequest extends js.Object {
   var customerId: js.UndefOr[String] = js.native
   var merchantAccountId: js.UndefOr[String] = js.native
-  var options: js.UndefOr[AnonFailOnDuplicatePaymentMethod] = js.native
+  var options: js.UndefOr[FailOnDuplicatePaymentMethod] = js.native
   var version: js.UndefOr[String] = js.native
 }
 
@@ -50,7 +50,7 @@ object ClientTokenRequest {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonFailOnDuplicatePaymentMethod): Self = {
+    def withOptions(value: FailOnDuplicatePaymentMethod): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

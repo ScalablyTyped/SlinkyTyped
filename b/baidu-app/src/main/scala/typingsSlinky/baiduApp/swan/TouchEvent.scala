@@ -1,12 +1,12 @@
 package typingsSlinky.baiduApp.swan
 
-import typingsSlinky.baiduApp.AnonX
+import typingsSlinky.baiduApp.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TouchEvent[T /* <: TouchEventType */] extends BaseEvent[T, AnonX] {
+trait TouchEvent[T /* <: TouchEventType */] extends BaseEvent[T, X] {
   var changedTouches: js.Array[Touch] = js.native
   var touches: js.Array[Touch] = js.native
 }
@@ -16,7 +16,7 @@ object TouchEvent {
   def apply[T](
     changedTouches: js.Array[Touch],
     currentTarget: EventTarget,
-    detail: AnonX,
+    detail: X,
     target: EventTarget,
     timeStamp: Double,
     touches: js.Array[Touch],

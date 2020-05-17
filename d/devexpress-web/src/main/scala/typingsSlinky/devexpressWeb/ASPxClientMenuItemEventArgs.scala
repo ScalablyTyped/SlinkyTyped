@@ -7,17 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for events which concern manipulations on menu items.
   */
-@JSGlobal("ASPxClientMenuItemEventArgs")
 @js.native
-class ASPxClientMenuItemEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new object of the ASPxClientMenuItemEventArgs type with the specified value.
-    * @param item An ASPxClientMenuItem object representing the group related to the event.
-    */
-  def this(item: ASPxClientMenuItem) = this()
+trait ASPxClientMenuItemEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the menu item object related to the event.
     */
   var item: ASPxClientMenuItem = js.native
+}
+
+object ASPxClientMenuItemEventArgs {
+  @scala.inline
+  def apply(item: ASPxClientMenuItem): ASPxClientMenuItemEventArgs = {
+    val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientMenuItemEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientMenuItemEventArgsOps[Self <: ASPxClientMenuItemEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItem(value: ASPxClientMenuItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

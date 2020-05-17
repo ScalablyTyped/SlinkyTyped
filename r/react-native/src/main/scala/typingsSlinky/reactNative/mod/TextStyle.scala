@@ -1,6 +1,6 @@
 package typingsSlinky.reactNative.mod
 
-import typingsSlinky.reactNative.AnonHeight
+import typingsSlinky.reactNative.anon.Height
 import typingsSlinky.reactNative.reactNativeStrings.`100`
 import typingsSlinky.reactNative.reactNativeStrings.`200`
 import typingsSlinky.reactNative.reactNativeStrings.`300`
@@ -56,7 +56,7 @@ trait TextStyle extends TextStyleIOS {
   var textAlignVertical: js.UndefOr[auto | top | bottom | center] = js.native
   var textDecorationLine: js.UndefOr[none | underline | `line-through` | (`underline line-through`)] = js.native
   var textShadowColor: js.UndefOr[String] = js.native
-  var textShadowOffset: js.UndefOr[AnonHeight] = js.native
+  var textShadowOffset: js.UndefOr[Height] = js.native
   var textShadowRadius: js.UndefOr[Double] = js.native
   var textTransform: js.UndefOr[none | capitalize | uppercase | lowercase] = js.native
 }
@@ -206,7 +206,7 @@ object TextStyle {
         ret
     }
     @scala.inline
-    def withTextShadowOffset(value: AnonHeight): Self = {
+    def withTextShadowOffset(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("textShadowOffset")(value.asInstanceOf[js.Any])
         ret

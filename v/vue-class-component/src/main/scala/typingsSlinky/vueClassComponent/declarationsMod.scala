@@ -3,7 +3,7 @@ package typingsSlinky.vueClassComponent
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.std.Record
-import typingsSlinky.vue.AnonStaticRenderFns
+import typingsSlinky.vue.anon.StaticRenderFns
 import typingsSlinky.vue.optionsMod.AsyncComponent
 import typingsSlinky.vue.optionsMod.ComponentOptions
 import typingsSlinky.vue.optionsMod.DefaultComputed
@@ -66,7 +66,7 @@ object declarationsMod extends js.Object {
       ] = js.native
     var config: VueConfiguration = js.native
     var version: String = js.native
-    def compile(template: String): AnonStaticRenderFns = js.native
+    def compile(template: String): StaticRenderFns = js.native
     def component(id: String): ExtendedVue[Vue, js.Object, js.Object, js.Object, js.Object] = js.native
     def component(
       id: String,
@@ -176,7 +176,7 @@ object declarationsMod extends js.Object {
         ] {
     var config: VueConfiguration = js.native
     var version: String = js.native
-    def compile(template: String): AnonStaticRenderFns = js.native
+    def compile(template: String): StaticRenderFns = js.native
     def component(id: String): ExtendedVue[Vue, js.Object, js.Object, js.Object, js.Object] = js.native
     def component(
       id: String,

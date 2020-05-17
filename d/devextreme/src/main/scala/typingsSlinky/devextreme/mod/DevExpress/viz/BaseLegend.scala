@@ -1,8 +1,8 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonBottom
-import typingsSlinky.devextreme.AnonCornerRadius
-import typingsSlinky.devextreme.AnonHorizontalAlignment
+import typingsSlinky.devextreme.anon.Bottom
+import typingsSlinky.devextreme.anon.CornerRadius
+import typingsSlinky.devextreme.anon.HorizontalAlignment
 import typingsSlinky.devextreme.devextremeStrings.bottom
 import typingsSlinky.devextreme.devextremeStrings.center
 import typingsSlinky.devextreme.devextremeStrings.horizontal
@@ -19,7 +19,7 @@ trait BaseLegend extends js.Object {
   /** Colors the legend's background. */
   var backgroundColor: js.UndefOr[String] = js.native
   /** Configures the legend's border. */
-  var border: js.UndefOr[AnonCornerRadius] = js.native
+  var border: js.UndefOr[CornerRadius] = js.native
   /** Arranges legend items into several columns. */
   var columnCount: js.UndefOr[Double] = js.native
   /** Specifies an empty space between item columns in pixels. */
@@ -33,7 +33,7 @@ trait BaseLegend extends js.Object {
   /** Aligns items in the last column or row (depending on the legend's orientation). Applies when legend items are not divided into columns or rows equally. */
   var itemsAlignment: js.UndefOr[center | left | right] = js.native
   /** Generates an empty space, measured in pixels, around the legend. */
-  var margin: js.UndefOr[Double | AnonBottom] = js.native
+  var margin: js.UndefOr[Double | Bottom] = js.native
   /** Specifies the marker's size in a legend item in pixels. */
   var markerSize: js.UndefOr[Double] = js.native
   /** Arranges legend items vertically (in a column) or horizontally (in a row). The default value is "horizontal" if the legend.horizontalAlignment is "center". Otherwise, it is "vertical". */
@@ -47,7 +47,7 @@ trait BaseLegend extends js.Object {
   /** Specifies an empty space between item rows in pixels. */
   var rowItemSpacing: js.UndefOr[Double] = js.native
   /** Configures the legend title. */
-  var title: js.UndefOr[AnonHorizontalAlignment | String] = js.native
+  var title: js.UndefOr[HorizontalAlignment | String] = js.native
   /** Along with horizontalAlignment, specifies the legend's position. */
   var verticalAlignment: js.UndefOr[bottom | top] = js.native
   /** Specifies the legend's visibility. */
@@ -79,7 +79,7 @@ object BaseLegend {
         ret
     }
     @scala.inline
-    def withBorder(value: AnonCornerRadius): Self = {
+    def withBorder(value: CornerRadius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
         ret
@@ -163,7 +163,7 @@ object BaseLegend {
         ret
     }
     @scala.inline
-    def withMargin(value: Double | AnonBottom): Self = {
+    def withMargin(value: Double | Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
         ret
@@ -247,7 +247,7 @@ object BaseLegend {
         ret
     }
     @scala.inline
-    def withTitle(value: AnonHorizontalAlignment | String): Self = {
+    def withTitle(value: HorizontalAlignment | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
         ret

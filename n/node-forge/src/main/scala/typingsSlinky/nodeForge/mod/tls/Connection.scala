@@ -1,6 +1,6 @@
 package typingsSlinky.nodeForge.mod.tls
 
-import typingsSlinky.nodeForge.AnonCurrent
+import typingsSlinky.nodeForge.anon.Current
 import typingsSlinky.nodeForge.mod.Bytes
 import typingsSlinky.nodeForge.mod.pki.CAStore
 import typingsSlinky.nodeForge.mod.pki.Certificate
@@ -45,7 +45,7 @@ trait Connection extends js.Object {
   var session: Session | Null = js.native
   var sessionCache: SessionCache | Null = js.native
   var sessionId: Bytes | Null = js.native
-  var state: AnonCurrent = js.native
+  var state: Current = js.native
   var tlsData: ByteBuffer = js.native
   var verifyClient: Boolean = js.native
   var version: ProtocolVersion = js.native

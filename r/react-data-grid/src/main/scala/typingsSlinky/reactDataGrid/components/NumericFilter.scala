@@ -14,17 +14,17 @@ object NumericFilter {
   
   def apply(p: js.Any): Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Filters.NumericFilter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Filters.NumericFilter
   ] = new Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Filters.NumericFilter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Filters.NumericFilter
   ](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: NumericFilter.type): Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Filters.NumericFilter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Filters.NumericFilter
   ] = new Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Filters.NumericFilter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Filters.NumericFilter
   ](js.Array(this.component, js.Dictionary.empty))()
 }
 

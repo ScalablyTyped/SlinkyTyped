@@ -1,7 +1,6 @@
 package typingsSlinky.googlemaps.google.maps
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.googlemaps.google.maps.Data.DataOptions
 import typingsSlinky.googlemaps.google.maps.Data.Feature
 import typingsSlinky.googlemaps.google.maps.Data.FeatureOptions
 import typingsSlinky.googlemaps.google.maps.Data.GeoJsonOptions
@@ -12,10 +11,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /***** Data *****/
-@JSGlobal("google.maps.Data")
 @js.native
-class Data_ () extends MVCObject {
-  def this(options: DataOptions) = this()
+trait Data_ extends MVCObject {
   def add(feature: Feature): Feature = js.native
   def add(feature: FeatureOptions): Feature = js.native
   def addGeoJson(geoJson: js.Object): js.Array[Feature] = js.native

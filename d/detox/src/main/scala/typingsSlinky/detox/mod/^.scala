@@ -1,7 +1,7 @@
 package typingsSlinky.detox.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.detox.mod._Global_.Detox_.DetoxExport
+import typingsSlinky.detox.mod.global.Detox_.DetoxExport
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,18 +1,18 @@
 package typingsSlinky.datatablesNetKeytable.DataTables
 
-import typingsSlinky.datatablesNetKeytable.AnonDisable
+import typingsSlinky.datatablesNetKeytable.anon.Disable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Api extends js.Object {
-  var keys: AnonDisable = js.native
+  var keys: Disable = js.native
 }
 
 object Api {
   @scala.inline
-  def apply(keys: AnonDisable): Api = {
+  def apply(keys: Disable): Api = {
     val __obj = js.Dynamic.literal(keys = keys.asInstanceOf[js.Any])
     __obj.asInstanceOf[Api]
   }
@@ -23,7 +23,7 @@ object Api {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withKeys(value: AnonDisable): Self = {
+    def withKeys(value: Disable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.blueprintjsSelect.suggestMod
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.blueprintjsSelect.PartialISuggestPropsany
+import typingsSlinky.blueprintjsSelect.anon.PartialISuggestPropsany
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

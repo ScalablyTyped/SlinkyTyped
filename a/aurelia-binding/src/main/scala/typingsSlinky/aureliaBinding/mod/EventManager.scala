@@ -1,7 +1,7 @@
 package typingsSlinky.aureliaBinding.mod
 
 import org.scalajs.dom.raw.EventTarget
-import typingsSlinky.aureliaBinding.AnonProperties
+import typingsSlinky.aureliaBinding.anon.Properties
 import typingsSlinky.aureliaBinding.aureliaBindingBooleans.`true`
 import typingsSlinky.std.EventListenerOrEventListenerObject
 import scala.scalajs.js
@@ -36,6 +36,6 @@ class EventManager () extends js.Object {
     delegate: delegationStrategy,
     disposable: `true`
   ): Disposable = js.native
-  def registerElementConfig(config: AnonProperties): Unit = js.native
+  def registerElementConfig(config: Properties): Unit = js.native
 }
 

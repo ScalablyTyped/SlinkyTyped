@@ -1,12 +1,12 @@
 package typingsSlinky.reactAce.splitMod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Event
 import typingsSlinky.brace.mod.Annotation
 import typingsSlinky.reactAce.typesMod.IAceOptions
 import typingsSlinky.reactAce.typesMod.ICommand
 import typingsSlinky.reactAce.typesMod.IEditorProps
 import typingsSlinky.reactAce.typesMod.IMarker
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,11 +35,11 @@ trait ISplitEditorProps
   var mode: js.UndefOr[String] = js.native
   var name: js.UndefOr[String] = js.native
   var onBeforeLoad: js.UndefOr[js.Function1[/* ace */ js.Any, Unit]] = js.native
-  var onBlur: js.UndefOr[js.Function1[/* value */ Event_, Unit]] = js.native
+  var onBlur: js.UndefOr[js.Function1[/* value */ Event, Unit]] = js.native
   var onChange: js.UndefOr[js.Function2[/* value */ js.Array[String], /* event */ js.UndefOr[js.Any], Unit]] = js.native
   var onCopy: js.UndefOr[js.Function1[/* value */ String, Unit]] = js.native
   var onCursorChange: js.UndefOr[js.Function2[/* value */ js.Any, /* event */ js.UndefOr[js.Any], Unit]] = js.native
-  var onFocus: js.UndefOr[js.Function1[/* value */ Event_, Unit]] = js.native
+  var onFocus: js.UndefOr[js.Function1[/* value */ Event, Unit]] = js.native
   var onInput: js.UndefOr[js.Function1[/* event */ js.UndefOr[js.Any], Unit]] = js.native
   var onLoad: js.UndefOr[js.Function1[/* editor */ IEditorProps, Unit]] = js.native
   var onPaste: js.UndefOr[js.Function1[/* value */ String, Unit]] = js.native
@@ -327,7 +327,7 @@ object ISplitEditorProps {
         ret
     }
     @scala.inline
-    def withOnBlur(value: /* value */ Event_ => Unit): Self = {
+    def withOnBlur(value: /* value */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
         ret
@@ -375,7 +375,7 @@ object ISplitEditorProps {
         ret
     }
     @scala.inline
-    def withOnFocus(value: /* value */ Event_ => Unit): Self = {
+    def withOnFocus(value: /* value */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
         ret

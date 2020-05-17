@@ -1,6 +1,6 @@
 package typingsSlinky.jweixin.mod
 
-import typingsSlinky.jweixin.AnonNetworkType
+import typingsSlinky.jweixin.anon.NetworkType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IgetNetworkType extends BaseParams {
   @JSName("success")
-  def success_MIgetNetworkType(res: AnonNetworkType): Unit = js.native
+  def success_MIgetNetworkType(res: NetworkType): Unit = js.native
 }
 
 object IgetNetworkType {
   @scala.inline
-  def apply(success: AnonNetworkType => Unit): IgetNetworkType = {
+  def apply(success: NetworkType => Unit): IgetNetworkType = {
     val __obj = js.Dynamic.literal(success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[IgetNetworkType]
   }
@@ -24,7 +24,7 @@ object IgetNetworkType {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSuccess(value: AnonNetworkType => Unit): Self = {
+    def withSuccess(value: NetworkType => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

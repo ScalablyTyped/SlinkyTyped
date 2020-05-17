@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.std.stdStrings.message
 import typingsSlinky.std.stdStrings.messageerror
 import scala.scalajs.js
@@ -92,9 +91,4 @@ trait BroadcastChannel extends EventTarget {
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
-
-@JSGlobal("BroadcastChannel")
-@js.native
-object BroadcastChannel
-  extends Instantiable1[/* name */ java.lang.String, BroadcastChannel]
 

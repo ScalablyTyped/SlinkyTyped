@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait RawLocale
-  extends /* otherProp */ StringDictionary[js.Any] {
+  extends /* otherProp */ StringDictionary[js.Any]
+     with LocaleSingularArg {
   var code: String = js.native
 }
 

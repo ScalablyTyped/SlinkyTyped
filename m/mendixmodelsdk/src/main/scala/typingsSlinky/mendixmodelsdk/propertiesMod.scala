@@ -1,12 +1,14 @@
 package typingsSlinky.mendixmodelsdk
 
 import org.scalablytyped.runtime.Instantiable2
+import typingsSlinky.mendixmodelsdk.anon.ToRawChangeValue
 import typingsSlinky.mendixmodelsdk.elementsMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.elementsMod.Element
 import typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement
 import typingsSlinky.mendixmodelsdk.instancesMod.AbstractEnum
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.localByNameReferencePropertyMod.INamedElement
+import typingsSlinky.mendixmodelsdk.structuresMod.AbstractStructureProperty
 import typingsSlinky.mendixmodelsdk.structuresMod.IStructure
 import typingsSlinky.mendixmodelsdk.structuresMod.IStructureClass
 import typingsSlinky.mendixmodelsdk.structuresMod.Structure
@@ -119,10 +121,12 @@ object propertiesMod extends js.Object {
   @js.native
   class PartListProperty[T /* <: Element */] ()
     extends typingsSlinky.mendixmodelsdk.partListPropertyMod.PartListProperty[T]
+       with AbstractStructureProperty
   
   @js.native
   class PartProperty[T /* <: Element */] ()
     extends typingsSlinky.mendixmodelsdk.partPropertyMod.PartProperty[T]
+       with AbstractStructureProperty
   
   @js.native
   class PrimitiveListProperty[T] ()
@@ -134,7 +138,8 @@ object propertiesMod extends js.Object {
   
   @js.native
   class StructuralChildListProperty[T /* <: IStructuralUnit | IModelUnit */] protected ()
-    extends typingsSlinky.mendixmodelsdk.structuralMod.StructuralChildListProperty[T] {
+    extends typingsSlinky.mendixmodelsdk.structuralMod.StructuralChildListProperty[T]
+       with AbstractStructureProperty {
     def this(declaredOn: IStructureClass, parent: StructuralUnit, name: String, value: js.Array[T]) = this()
     def this(
       declaredOn: IStructureClass,
@@ -147,7 +152,8 @@ object propertiesMod extends js.Object {
   
   @js.native
   class StructuralChildProperty[T /* <: IStructuralUnit | IModelUnit */] protected ()
-    extends typingsSlinky.mendixmodelsdk.structuralMod.StructuralChildProperty[T] {
+    extends typingsSlinky.mendixmodelsdk.structuralMod.StructuralChildProperty[T]
+       with AbstractStructureProperty {
     def this(declaredOn: IStructureClass, parent: StructuralUnit, name: String) = this()
     def this(declaredOn: IStructureClass, parent: StructuralUnit, name: String, value: T) = this()
     def this(declaredOn: IStructureClass, parent: StructuralUnit, name: String, value: T, targetRefType: String) = this()
@@ -164,11 +170,11 @@ object propertiesMod extends js.Object {
   def instantiateChildElement(parent: AbstractElement, value: IAbstractElementJson): Element | Null = js.native
   def isNamedElement(element: IStructure): /* is mendixmodelsdk.mendixmodelsdk/dist/sdk/internal/properties/LocalByNameReferenceProperty.INamedElement */ Boolean = js.native
   def sendListChangeDeltas[T, P](
-    property: (typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty[js.Array[T], IList[P]]) with AnonToRawChangeValue[P],
+    property: (typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty[js.Array[T], IList[P]]) with ToRawChangeValue[P],
     change: IArrayWillChange[P]
   ): Unit = js.native
   def sendListChangeDeltas[T, P](
-    property: (typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty[js.Array[T], IList[P]]) with AnonToRawChangeValue[P],
+    property: (typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty[js.Array[T], IList[P]]) with ToRawChangeValue[P],
     change: IArrayWillSplice[P]
   ): Unit = js.native
   @js.native

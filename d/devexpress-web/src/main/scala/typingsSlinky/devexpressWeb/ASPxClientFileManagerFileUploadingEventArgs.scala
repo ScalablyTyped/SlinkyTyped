@@ -7,15 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientFileManager.FileUploading event.
   */
-@JSGlobal("ASPxClientFileManagerFileUploadingEventArgs")
 @js.native
-class ASPxClientFileManagerFileUploadingEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientFileManagerFileUploadingEventArgs object with the specified parameters.
-    * @param folder A string value specifying the path to which the file is being uploaded.
-    * @param fileName A string value that specifies the file name.
-    */
-  def this(folder: String, fileName: String) = this()
+trait ASPxClientFileManagerFileUploadingEventArgs extends ASPxClientEventArgs {
   /**
     * Gets or sets a value indicating whether the action which raised the event should be canceled.
     */
@@ -28,5 +21,39 @@ class ASPxClientFileManagerFileUploadingEventArgs protected () extends ASPxClien
     * Gets the path to the folder where a file is being uploaded.
     */
   var folder: String = js.native
+}
+
+object ASPxClientFileManagerFileUploadingEventArgs {
+  @scala.inline
+  def apply(cancel: Boolean, fileName: String, folder: String): ASPxClientFileManagerFileUploadingEventArgs = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], fileName = fileName.asInstanceOf[js.Any], folder = folder.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientFileManagerFileUploadingEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientFileManagerFileUploadingEventArgsOps[Self <: ASPxClientFileManagerFileUploadingEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCancel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFileName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFolder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("folder")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

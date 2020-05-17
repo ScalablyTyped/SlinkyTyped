@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.Security.Credentials
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Represents the results of the KeyCredential.GetAttestationAsync method. */
+@JSGlobal("Windows.Security.Credentials.KeyCredentialAttestationResult")
+@js.native
+abstract class KeyCredentialAttestationResult ()
+  extends typingsSlinky.winrtUwp.Windows.Security.Credentials.KeyCredentialAttestationResult
+

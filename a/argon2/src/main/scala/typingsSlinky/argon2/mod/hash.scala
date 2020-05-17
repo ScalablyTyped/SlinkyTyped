@@ -1,7 +1,7 @@
 package typingsSlinky.argon2.mod
 
-import typingsSlinky.argon2.Optionsrawfalse
-import typingsSlinky.argon2.Optionsrawtrue
+import typingsSlinky.argon2.anon.Optionsrawfalse
+import typingsSlinky.argon2.anon.Optionsrawtrue
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

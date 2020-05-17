@@ -6,6 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   type Hash = typingsSlinky.history.mod.History.Hash
+  type History[HistoryLocationState] = typingsSlinky.history.mod.History_[HistoryLocationState]
   type Href = typingsSlinky.history.mod.History.Href
   type LocationDescriptor[S] = typingsSlinky.history.mod.History.LocationDescriptor[S]
   type LocationKey = typingsSlinky.history.mod.History.LocationKey

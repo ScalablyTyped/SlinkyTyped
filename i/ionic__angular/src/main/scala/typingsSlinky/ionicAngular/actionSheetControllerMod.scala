@@ -2,7 +2,7 @@ package typingsSlinky.ionicAngular
 
 import typingsSlinky.ionicAngular.overlayMod.OverlayBaseController
 import typingsSlinky.ionicCore.actionSheetInterfaceMod.ActionSheetOptions
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonActionSheetElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonActionSheetElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

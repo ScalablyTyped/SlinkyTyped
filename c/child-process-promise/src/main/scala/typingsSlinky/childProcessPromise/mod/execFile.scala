@@ -1,8 +1,8 @@
 package typingsSlinky.childProcessPromise.mod
 
-import typingsSlinky.childProcessPromise.ReadonlyOptionsExecFileOp
-import typingsSlinky.childProcessPromise.ReadonlyOptionsExecFileOpCapture
-import typingsSlinky.childProcessPromise.ReadonlyOptionsExecFileOpCwd
+import typingsSlinky.childProcessPromise.anon.ReadonlyOptionsExecFileOp
+import typingsSlinky.childProcessPromise.anon.ReadonlyOptionsExecFileOpCapture
+import typingsSlinky.childProcessPromise.anon.ReadonlyOptionsExecFileOpCwd
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

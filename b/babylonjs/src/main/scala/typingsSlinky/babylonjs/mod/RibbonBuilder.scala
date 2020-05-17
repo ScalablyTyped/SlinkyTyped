@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.mod
 
-import typingsSlinky.babylonjs.AnonCloseArray
+import typingsSlinky.babylonjs.anon.CloseArray
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -38,7 +38,7 @@ object RibbonBuilder extends js.Object {
     * @see https://doc.babylonjs.com/how_to/ribbon_tutorial
     * @see https://doc.babylonjs.com/how_to/parametric_shapes
     */
-  def CreateRibbon(name: String, options: AnonCloseArray): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateRibbon(name: String, options: AnonCloseArray, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateRibbon(name: String, options: CloseArray): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateRibbon(name: String, options: CloseArray, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
 }
 

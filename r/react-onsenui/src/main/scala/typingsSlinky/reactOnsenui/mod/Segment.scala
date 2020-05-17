@@ -1,6 +1,6 @@
 package typingsSlinky.reactOnsenui.mod
 
-import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameIndex
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameIndex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.antd.skeletonButtonMod
 
-import typingsSlinky.antd.PartialSkeletonButtonProp
+import typingsSlinky.antd.anon.PartialSkeletonButtonProp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

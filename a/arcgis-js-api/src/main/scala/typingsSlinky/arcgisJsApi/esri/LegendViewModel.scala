@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.disabled
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ready
 import scala.scalajs.js
@@ -44,8 +43,4 @@ trait LegendViewModel extends Accessor {
     */
   var view: MapView | SceneView = js.native
 }
-
-@JSGlobal("__esri.LegendViewModel")
-@js.native
-object LegendViewModel extends TopLevel[LegendViewModelConstructor]
 

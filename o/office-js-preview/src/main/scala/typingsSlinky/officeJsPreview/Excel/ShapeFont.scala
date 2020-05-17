@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ShapeFontData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ShapeFontLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ShapeFontUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Dash
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.DashHeavy
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.DashLong
@@ -32,9 +32,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@JSGlobal("Excel.ShapeFont")
 @js.native
-class ShapeFont () extends ClientObject {
+trait ShapeFont extends ClientObject {
   /**
     *
     * Represents the bold status of font. Returns null the TextRange includes both bold and non-bold text fragments.
@@ -87,7 +86,7 @@ class ShapeFont () extends ClientObject {
     */
   def load(): ShapeFont = js.native
   def load(options: ShapeFontLoadOptions): ShapeFont = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ShapeFont = js.native
+  def load(propertyNamesAndPaths: Expand): ShapeFont = js.native
   def load(propertyNames: String): ShapeFont = js.native
   def load(propertyNames: js.Array[String]): ShapeFont = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

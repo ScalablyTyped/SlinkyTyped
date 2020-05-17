@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ResolveFilterTransform extends _Transforms {
+trait ResolveFilterTransform extends Transforms {
   var filter: SignalRef = js.native
   var ignore: Double | SignalRef = js.native
   var `type`: resolvefilter = js.native

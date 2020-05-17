@@ -1,28 +1,22 @@
 package typingsSlinky.oracleOraclejet.ojtableMod.ojTable
 
-import typingsSlinky.oracleOraclejet.Anon20
-import typingsSlinky.oracleOraclejet.Anon21
+import typingsSlinky.oracleOraclejet.anon.EndIndex
+import typingsSlinky.oracleOraclejet.anon.EndKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // tslint:disable-next-line interface-over-type-literal
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.oracleOraclejet.AnonEndIndex[K]
-  - typingsSlinky.oracleOraclejet.AnonEndKey[K]
+  - typingsSlinky.oracleOraclejet.anon.EndIndex[K]
+  - typingsSlinky.oracleOraclejet.anon.EndKey[K]
 */
 trait ColumnSelectionEnd[K] extends js.Object
 
 object ColumnSelectionEnd {
   @scala.inline
-  def AnonEndIndex[K](endIndex: Anon20): ColumnSelectionEnd[K] = {
-    val __obj = js.Dynamic.literal(endIndex = endIndex.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ColumnSelectionEnd[K]]
-  }
+  implicit def apply[K](value: EndIndex[K]): ColumnSelectionEnd[K] = value.asInstanceOf[ColumnSelectionEnd[K]]
   @scala.inline
-  def AnonEndKey[K](endKey: Anon21[K]): ColumnSelectionEnd[K] = {
-    val __obj = js.Dynamic.literal(endKey = endKey.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ColumnSelectionEnd[K]]
-  }
+  implicit def apply[K](value: EndKey[K]): ColumnSelectionEnd[K] = value.asInstanceOf[ColumnSelectionEnd[K]]
 }
 

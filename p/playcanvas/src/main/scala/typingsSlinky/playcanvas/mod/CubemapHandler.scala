@@ -1,5 +1,6 @@
 package typingsSlinky.playcanvas.mod
 
+import typingsSlinky.playcanvas.pc.ResourceHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,8 +16,7 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("playcanvas", "CubemapHandler")
 @js.native
-class CubemapHandler protected ()
-  extends typingsSlinky.playcanvas.pc.CubemapHandler {
+class CubemapHandler protected () extends ResourceHandler {
   def this(
     device: typingsSlinky.playcanvas.pc.GraphicsDevice,
     assets: typingsSlinky.playcanvas.pc.AssetRegistry,

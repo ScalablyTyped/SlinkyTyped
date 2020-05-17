@@ -1,6 +1,6 @@
 package typingsSlinky.exprEval.mod
 
-import typingsSlinky.exprEval.AnonAbs
+import typingsSlinky.exprEval.anon.Abs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ParserOptions extends js.Object {
   var allowMemberAccess: js.UndefOr[Boolean] = js.native
-  var operators: js.UndefOr[AnonAbs] = js.native
+  var operators: js.UndefOr[Abs] = js.native
 }
 
 object ParserOptions {
@@ -36,7 +36,7 @@ object ParserOptions {
         ret
     }
     @scala.inline
-    def withOperators(value: AnonAbs): Self = {
+    def withOperators(value: Abs): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("operators")(value.asInstanceOf[js.Any])
         ret

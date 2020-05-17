@@ -12,20 +12,8 @@ trait AssemblyExpression extends AssemblyItem
 
 object AssemblyExpression {
   @scala.inline
-  def AssemblyCall(
-    arguments: js.Array[AssemblyExpression],
-    functionName: String,
-    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.AssemblyCall
-  ): AssemblyExpression = {
-    val __obj = js.Dynamic.literal(arguments = arguments.asInstanceOf[js.Any], functionName = functionName.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AssemblyExpression]
-  }
+  implicit def apply(value: AssemblyCall): AssemblyExpression = value.asInstanceOf[AssemblyExpression]
   @scala.inline
-  def AssemblyLiteral(`type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.AssemblyLiteral): AssemblyExpression = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AssemblyExpression]
-  }
+  implicit def apply(value: AssemblyLiteral): AssemblyExpression = value.asInstanceOf[AssemblyExpression]
 }
 

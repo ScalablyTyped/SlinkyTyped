@@ -1,15 +1,14 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonEditorOptions
-import typingsSlinky.devextreme.AnonLocation
+import typingsSlinky.devextreme.anon.Location
 import typingsSlinky.devextreme.devextremeStrings.button
 import typingsSlinky.devextreme.devextremeStrings.empty
 import typingsSlinky.devextreme.devextremeStrings.group
 import typingsSlinky.devextreme.devextremeStrings.simple
 import typingsSlinky.devextreme.devextremeStrings.tabbed
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,12 +34,16 @@ trait dxFormSimpleItem extends js.Object {
   /** Specifies the item's type. Set it to "simple" to create a simple item. */
   var itemType: js.UndefOr[empty | group | simple | tabbed | button] = js.native
   /** Specifies options for the form item label. */
-  var label: js.UndefOr[AnonLocation] = js.native
+  var label: js.UndefOr[Location] = js.native
   /** Specifies a name that identifies the form item. */
   var name: js.UndefOr[String] = js.native
   /** A template to be used for rendering the form item. */
   var template: js.UndefOr[
-    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* data */ AnonEditorOptions, /* itemElement */ dxElement, String | Element | JQuery])
+    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
+      /* data */ typingsSlinky.devextreme.anon.EditorOptions, 
+      /* itemElement */ dxElement, 
+      String | Element | JQuery
+    ])
   ] = js.native
   /** An array of validation rules to be checked for the form item editor. */
   var validationRules: js.UndefOr[
@@ -165,7 +168,7 @@ object dxFormSimpleItem {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonLocation): Self = {
+    def withLabel(value: Location): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -189,7 +192,9 @@ object dxFormSimpleItem {
         ret
     }
     @scala.inline
-    def withTemplateFunction2(value: (/* data */ AnonEditorOptions, /* itemElement */ dxElement) => String | Element | JQuery): Self = {
+    def withTemplateFunction2(
+      value: (/* data */ typingsSlinky.devextreme.anon.EditorOptions, /* itemElement */ dxElement) => String | Element | JQuery
+    ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.Any.fromFunction2(value))
         ret
@@ -202,7 +207,11 @@ object dxFormSimpleItem {
     }
     @scala.inline
     def withTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* data */ AnonEditorOptions, /* itemElement */ dxElement, String | Element | JQuery])
+      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
+          /* data */ typingsSlinky.devextreme.anon.EditorOptions, 
+          /* itemElement */ dxElement, 
+          String | Element | JQuery
+        ])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])

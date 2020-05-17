@@ -1,8 +1,8 @@
 package typingsSlinky.relayRuntime.readerNodeMod
 
-import typingsSlinky.relayRuntime.AnonConnection
+import typingsSlinky.relayRuntime.anon.Connection
 import typingsSlinky.relayRuntime.relayConcreteNodeMod.GeneratedNode
-import typingsSlinky.relayRuntime.relayModernGraphQLTagMod._GraphQLTaggedNode
+import typingsSlinky.relayRuntime.relayModernGraphQLTagMod.GraphQLTaggedNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,11 +10,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ReaderFragment
   extends GeneratedNode
-     with ReaderSelectableNode
-     with _GraphQLTaggedNode {
+     with GraphQLTaggedNode
+     with ReaderSelectableNode {
   val argumentDefinitions: js.Array[ReaderArgumentDefinition] = js.native
   val kind: String = js.native
-  val metadata: js.UndefOr[AnonConnection | Null] = js.native
+  val metadata: js.UndefOr[Connection | Null] = js.native
    // 'Fragment';
   val name: String = js.native
   val selections: js.Array[ReaderSelection] = js.native
@@ -71,7 +71,7 @@ object ReaderFragment {
         ret
     }
     @scala.inline
-    def withMetadata(value: AnonConnection): Self = {
+    def withMetadata(value: Connection): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
         ret

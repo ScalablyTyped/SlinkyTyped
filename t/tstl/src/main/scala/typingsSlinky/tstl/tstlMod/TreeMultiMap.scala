@@ -1,7 +1,7 @@
 package typingsSlinky.tstl.tstlMod
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.tstl.Iteratoranyanyanyany
+import typingsSlinky.tstl.anon.Iteratoranyanyanyany
 import typingsSlinky.tstl.comparatorMod.Comparator
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import typingsSlinky.tstl.ipairMod.IPair

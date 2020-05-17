@@ -4,21 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("TypeScript.SwitchStatementSyntax")
 @js.native
-class SwitchStatementSyntax protected ()
+trait SwitchStatementSyntax
   extends SyntaxNode
      with IStatementSyntax {
-  def this(
-    switchKeyword: ISyntaxToken,
-    openParenToken: ISyntaxToken,
-    expression: IExpressionSyntax,
-    closeParenToken: ISyntaxToken,
-    openBraceToken: ISyntaxToken,
-    switchClauses: ISyntaxList,
-    closeBraceToken: ISyntaxToken,
-    parsedInStrictMode: Boolean
-  ) = this()
   var closeBraceToken: ISyntaxToken = js.native
   var closeParenToken: ISyntaxToken = js.native
   var expression: IExpressionSyntax = js.native
@@ -45,20 +34,5 @@ class SwitchStatementSyntax protected ()
   def withSwitchClause(switchClause: ISwitchClauseSyntax): SwitchStatementSyntax = js.native
   def withSwitchClauses(switchClauses: ISyntaxList): SwitchStatementSyntax = js.native
   def withSwitchKeyword(switchKeyword: ISyntaxToken): SwitchStatementSyntax = js.native
-}
-
-/* static members */
-@JSGlobal("TypeScript.SwitchStatementSyntax")
-@js.native
-object SwitchStatementSyntax extends js.Object {
-  def create(
-    switchKeyword: ISyntaxToken,
-    openParenToken: ISyntaxToken,
-    expression: IExpressionSyntax,
-    closeParenToken: ISyntaxToken,
-    openBraceToken: ISyntaxToken,
-    closeBraceToken: ISyntaxToken
-  ): SwitchStatementSyntax = js.native
-  def create1(expression: IExpressionSyntax): SwitchStatementSyntax = js.native
 }
 

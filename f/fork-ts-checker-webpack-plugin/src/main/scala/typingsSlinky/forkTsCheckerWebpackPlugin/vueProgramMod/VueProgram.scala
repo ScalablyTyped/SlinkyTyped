@@ -1,6 +1,6 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin.vueProgramMod
 
-import typingsSlinky.forkTsCheckerWebpackPlugin.Typeofts
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.Typeofts
 import typingsSlinky.forkTsCheckerWebpackPlugin.filesRegisterMod.FilesRegister
 import typingsSlinky.forkTsCheckerWebpackPlugin.filesWatcherMod.FilesWatcher
 import typingsSlinky.forkTsCheckerWebpackPlugin.resolutionMod.ResolveModuleName
@@ -28,16 +28,6 @@ object VueProgram extends js.Object {
     files: FilesRegister,
     watcher: FilesWatcher,
     oldProgram: Program
-  ): Program = js.native
-  def createProgram(
-    typescript: Typeofts,
-    programConfig: ParsedCommandLine,
-    basedir: String,
-    files: FilesRegister,
-    watcher: FilesWatcher,
-    oldProgram: Program,
-    userResolveModuleName: js.UndefOr[scala.Nothing],
-    userResolveTypeReferenceDirective: ResolveTypeReferenceDirective
   ): Program = js.native
   def createProgram(
     typescript: Typeofts,

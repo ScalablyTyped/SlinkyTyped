@@ -1,6 +1,6 @@
 package typingsSlinky.plotlyJs.mod
 
-import typingsSlinky.plotlyJs.PartialGaugeLine
+import typingsSlinky.plotlyJs.anon.PartialGaugeLine
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

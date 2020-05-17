@@ -3,14 +3,14 @@ package typingsSlinky.antdMobileRn.components
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antdMobileRn.AnonContainer
+import typingsSlinky.antdMobileRn.anon.Container
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.ghost
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.large
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.primary
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.small
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.warning
 import typingsSlinky.antdMobileRn.buttonIndexNativeMod.ButtonProps
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -135,7 +135,7 @@ object Button {
     @scala.inline
     def styleNull: this.type = set("style", null)
     @scala.inline
-    def styles(value: AnonContainer): this.type = set("styles", value.asInstanceOf[js.Any])
+    def styles(value: Container): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline
     def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,7 +1,6 @@
 package typingsSlinky.dockerode.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.dockerode.AnonEndpointsConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +21,7 @@ trait ContainerCreateOptions extends js.Object {
   var Labels: js.UndefOr[StringDictionary[String]] = js.native
   var MacAddress: js.UndefOr[Boolean] = js.native
   var NetworkDisabled: js.UndefOr[Boolean] = js.native
-  var NetworkingConfig: js.UndefOr[AnonEndpointsConfig] = js.native
+  var NetworkingConfig: js.UndefOr[typingsSlinky.dockerode.anon.EndpointsConfig] = js.native
   var OpenStdin: js.UndefOr[Boolean] = js.native
   var StdinOnce: js.UndefOr[Boolean] = js.native
   var StopSignal: js.UndefOr[String] = js.native
@@ -215,7 +214,7 @@ object ContainerCreateOptions {
         ret
     }
     @scala.inline
-    def withNetworkingConfig(value: AnonEndpointsConfig): Self = {
+    def withNetworkingConfig(value: typingsSlinky.dockerode.anon.EndpointsConfig): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkingConfig")(value.asInstanceOf[js.Any])
         ret

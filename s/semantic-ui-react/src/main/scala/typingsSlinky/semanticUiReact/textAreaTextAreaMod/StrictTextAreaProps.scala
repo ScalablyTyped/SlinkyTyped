@@ -1,10 +1,10 @@
 package typingsSlinky.semanticUiReact.textAreaTextAreaMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.SyntheticEvent
 import typingsSlinky.react.mod.TextareaHTMLAttributes
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ trait StrictTextAreaProps extends TextareaHTMLAttributes[HTMLTextAreaElement] {
   @JSName("onChange")
   var onChange_StrictTextAreaProps: js.UndefOr[
     js.Function2[
-      SyntheticEvent[EventTarget with HTMLTextAreaElement, Event_], 
+      SyntheticEvent[EventTarget with HTMLTextAreaElement, Event], 
       /* data */ TextAreaProps, 
       Unit
     ]
@@ -36,7 +36,7 @@ trait StrictTextAreaProps extends TextareaHTMLAttributes[HTMLTextAreaElement] {
   @JSName("onInput")
   var onInput_StrictTextAreaProps: js.UndefOr[
     js.Function2[
-      SyntheticEvent[EventTarget with HTMLTextAreaElement, Event_], 
+      SyntheticEvent[EventTarget with HTMLTextAreaElement, Event], 
       /* data */ TextAreaProps, 
       Unit
     ]
@@ -75,7 +75,7 @@ object StrictTextAreaProps {
     }
     @scala.inline
     def withOnChange(
-      value: (SyntheticEvent[EventTarget with HTMLTextAreaElement, Event_], /* data */ TextAreaProps) => Unit
+      value: (SyntheticEvent[EventTarget with HTMLTextAreaElement, Event], /* data */ TextAreaProps) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
@@ -89,7 +89,7 @@ object StrictTextAreaProps {
     }
     @scala.inline
     def withOnInput(
-      value: (SyntheticEvent[EventTarget with HTMLTextAreaElement, Event_], /* data */ TextAreaProps) => Unit
+      value: (SyntheticEvent[EventTarget with HTMLTextAreaElement, Event], /* data */ TextAreaProps) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInput")(js.Any.fromFunction2(value))

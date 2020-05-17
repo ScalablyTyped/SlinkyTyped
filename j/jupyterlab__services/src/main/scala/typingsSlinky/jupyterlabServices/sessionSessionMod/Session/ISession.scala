@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabServices.sessionSessionMod.Session
 
-import typingsSlinky.jupyterlabServices.PartialIModelId
+import typingsSlinky.jupyterlabServices.anon.PartialIModelId
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.`type`
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.name
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.path

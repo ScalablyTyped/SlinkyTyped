@@ -1,6 +1,8 @@
 package typingsSlinky.knockoutPaging
 
 import org.scalajs.dom.raw.Element
+import typingsSlinky.knockoutPaging.anon.AddDisposeCallback
+import typingsSlinky.knockoutPaging.anon.Clear
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,11 +17,11 @@ trait KnockoutUtils extends js.Object {
   //////////////////////////////////
   // utils.domData.js
   //////////////////////////////////
-  var domData: AnonClear = js.native
+  var domData: Clear = js.native
   //////////////////////////////////
   // utils.domNodeDisposal.js
   //////////////////////////////////
-  var domNodeDisposal: AnonAddDisposeCallback = js.native
+  var domNodeDisposal: AddDisposeCallback = js.native
   var fieldsIncludedWithJsonPost: js.Array[_] = js.native
   def addOrRemoveItem[T](array: js.Array[T], value: T, included: T): Unit = js.native
   def addOrRemoveItem[T](array: KnockoutObservable[T], value: T, included: T): Unit = js.native

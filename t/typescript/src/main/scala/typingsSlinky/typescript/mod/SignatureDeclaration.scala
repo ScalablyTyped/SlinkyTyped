@@ -23,3 +23,32 @@ trait SignatureDeclaration
   extends DeclarationWithTypeParameterChildren
      with HasType
 
+object SignatureDeclaration {
+  @scala.inline
+  implicit def apply(value: AccessorDeclaration): SignatureDeclaration = value.asInstanceOf[SignatureDeclaration]
+  @scala.inline
+  implicit def apply(value: ArrowFunction): SignatureDeclaration = value.asInstanceOf[SignatureDeclaration]
+  @scala.inline
+  implicit def apply(value: CallSignatureDeclaration): SignatureDeclaration = value.asInstanceOf[SignatureDeclaration]
+  @scala.inline
+  implicit def apply(value: ConstructSignatureDeclaration): SignatureDeclaration = value.asInstanceOf[SignatureDeclaration]
+  @scala.inline
+  implicit def apply(value: ConstructorDeclaration): SignatureDeclaration = value.asInstanceOf[SignatureDeclaration]
+  @scala.inline
+  implicit def apply(value: ConstructorTypeNode): SignatureDeclaration = value.asInstanceOf[SignatureDeclaration]
+  @scala.inline
+  implicit def apply(value: FunctionDeclaration): SignatureDeclaration = value.asInstanceOf[SignatureDeclaration]
+  @scala.inline
+  implicit def apply(value: FunctionExpression): SignatureDeclaration = value.asInstanceOf[SignatureDeclaration]
+  @scala.inline
+  implicit def apply(value: FunctionTypeNode): SignatureDeclaration = value.asInstanceOf[SignatureDeclaration]
+  @scala.inline
+  implicit def apply(value: IndexSignatureDeclaration): SignatureDeclaration = value.asInstanceOf[SignatureDeclaration]
+  @scala.inline
+  implicit def apply(value: JSDocFunctionType): SignatureDeclaration = value.asInstanceOf[SignatureDeclaration]
+  @scala.inline
+  implicit def apply(value: MethodDeclaration): SignatureDeclaration = value.asInstanceOf[SignatureDeclaration]
+  @scala.inline
+  implicit def apply(value: MethodSignature): SignatureDeclaration = value.asInstanceOf[SignatureDeclaration]
+}
+

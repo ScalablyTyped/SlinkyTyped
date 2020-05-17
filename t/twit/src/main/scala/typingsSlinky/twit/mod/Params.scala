@@ -1,7 +1,7 @@
 package typingsSlinky.twit.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.twit.AnonText
+import typingsSlinky.twit.anon.Text
 import typingsSlinky.twit.mod.Twitter.ResultType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Params extends js.Object {
-  var alt_text: js.UndefOr[AnonText] = js.native
+  var alt_text: js.UndefOr[Text] = js.native
   var count: js.UndefOr[Double] = js.native
   var cursor: js.UndefOr[Double | String] = js.native
   var exclude_replies: js.UndefOr[Boolean] = js.native
@@ -67,7 +67,7 @@ object Params {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAlt_text(value: AnonText): Self = {
+    def withAlt_text(value: Text): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("alt_text")(value.asInstanceOf[js.Any])
         ret

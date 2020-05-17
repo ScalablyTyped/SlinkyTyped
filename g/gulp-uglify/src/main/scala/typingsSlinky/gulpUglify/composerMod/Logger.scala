@@ -1,6 +1,6 @@
 package typingsSlinky.gulpUglify.composerMod
 
-import typingsSlinky.gulpUglify.FnCallMessageOptionalParams
+import typingsSlinky.gulpUglify.anon.FnCallMessageOptionalParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

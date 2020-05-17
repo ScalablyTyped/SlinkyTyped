@@ -11,9 +11,8 @@ import scala.scalajs.js.annotation._
   * XMLHttpRequest. It uses the same format a HTML form would use if the encoding type were set to
   * `multipart/form-data`.
   */
-@JSGlobal("FormData")
 @js.native
-class FormData () extends js.Object {
+trait FormData extends js.Object {
   @JSName(js.Symbol.iterator)
   var iterator: js.Function0[IterableIterator[js.Tuple2[String, String | File]]] = js.native
   /**

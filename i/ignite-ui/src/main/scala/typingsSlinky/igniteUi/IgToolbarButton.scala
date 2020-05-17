@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,7 +61,7 @@ object IgToolbarButton {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActivated(value: (/* event */ Event_, /* ui */ ActivatedEventUIParam) => Unit): Self = {
+    def withActivated(value: (/* event */ Event, /* ui */ ActivatedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("activated")(js.Any.fromFunction2(value))
         ret
@@ -73,7 +73,7 @@ object IgToolbarButton {
         ret
     }
     @scala.inline
-    def withActivating(value: (/* event */ Event_, /* ui */ ActivatingEventUIParam) => Unit): Self = {
+    def withActivating(value: (/* event */ Event, /* ui */ ActivatingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("activating")(js.Any.fromFunction2(value))
         ret
@@ -97,7 +97,7 @@ object IgToolbarButton {
         ret
     }
     @scala.inline
-    def withDeactivated(value: (/* event */ Event_, /* ui */ DeactivatedEventUIParam) => Unit): Self = {
+    def withDeactivated(value: (/* event */ Event, /* ui */ DeactivatedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("deactivated")(js.Any.fromFunction2(value))
         ret
@@ -109,7 +109,7 @@ object IgToolbarButton {
         ret
     }
     @scala.inline
-    def withDeactivating(value: (/* event */ Event_, /* ui */ DeactivatingEventUIParam) => Unit): Self = {
+    def withDeactivating(value: (/* event */ Event, /* ui */ DeactivatingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("deactivating")(js.Any.fromFunction2(value))
         ret

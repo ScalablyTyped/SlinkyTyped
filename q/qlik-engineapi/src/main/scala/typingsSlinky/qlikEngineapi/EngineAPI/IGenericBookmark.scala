@@ -1,7 +1,7 @@
 package typingsSlinky.qlikEngineapi.EngineAPI
 
-import typingsSlinky.qlikEngineapi.AnonQEndIndex
-import typingsSlinky.qlikEngineapi.AnonQFieldValues
+import typingsSlinky.qlikEngineapi.anon.QEndIndex
+import typingsSlinky.qlikEngineapi.anon.QFieldValues
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +35,7 @@ trait IGenericBookmark extends js.Object {
     * @param qDataPage - Start and End of DataPage
     * @returns - A promise of Array of FieldValues.
     */
-  def getFieldValues(qField: String, qGetExcludedValues: Boolean, qDataPage: AnonQEndIndex): js.Promise[AnonQFieldValues] = js.native
+  def getFieldValues(qField: String, qGetExcludedValues: Boolean, qDataPage: QEndIndex): js.Promise[QFieldValues] = js.native
   /**
     * Returns:
     *
@@ -84,7 +84,7 @@ object IGenericBookmark {
   def apply(
     apply: () => js.Promise[Boolean],
     applyPatches: js.Array[INxPatch] => js.Promise[Unit],
-    getFieldValues: (String, Boolean, AnonQEndIndex) => js.Promise[AnonQFieldValues],
+    getFieldValues: (String, Boolean, QEndIndex) => js.Promise[QFieldValues],
     getInfo: () => js.Promise[INxInfo],
     getLayout: () => js.Promise[IGenericBookmarkLayout],
     getProperties: () => js.Promise[IGenericBookmarkProperties],
@@ -114,7 +114,7 @@ object IGenericBookmark {
         ret
     }
     @scala.inline
-    def withGetFieldValues(value: (String, Boolean, AnonQEndIndex) => js.Promise[AnonQFieldValues]): Self = {
+    def withGetFieldValues(value: (String, Boolean, QEndIndex) => js.Promise[QFieldValues]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getFieldValues")(js.Any.fromFunction3(value))
         ret

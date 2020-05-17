@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LinearGradientLikeObject extends _LinearGradientValue {
+trait LinearGradientLikeObject extends LinearGradientValue {
   var colorStops: js.Array[ColorValue | (js.Tuple2[ColorValue, PercentValue])] = js.native
   var direction: js.UndefOr[Double | left | top | right | bottom] = js.native
 }

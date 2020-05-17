@@ -1,5 +1,6 @@
 package typingsSlinky.bootbox
 
+import typingsSlinky.bootbox.anon.Group
 import typingsSlinky.bootbox.bootboxStrings.checkbox
 import typingsSlinky.bootbox.bootboxStrings.date
 import typingsSlinky.bootbox.bootboxStrings.email
@@ -20,7 +21,7 @@ import scala.scalajs.js.annotation._
 trait BootboxPromptOptions extends BootboxBaseOptions[String] {
   @JSName("buttons")
   var buttons_BootboxPromptOptions: js.UndefOr[BootboxConfirmPromptButtonMap] = js.native
-  var inputOptions: js.UndefOr[js.Array[AnonGroup]] = js.native
+  var inputOptions: js.UndefOr[js.Array[Group]] = js.native
   var inputType: js.UndefOr[
     text | textarea | email | select | checkbox | date | time | number | password | radio | range
   ] = js.native
@@ -68,7 +69,7 @@ object BootboxPromptOptions {
         ret
     }
     @scala.inline
-    def withInputOptions(value: js.Array[AnonGroup]): Self = {
+    def withInputOptions(value: js.Array[Group]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("inputOptions")(value.asInstanceOf[js.Any])
         ret

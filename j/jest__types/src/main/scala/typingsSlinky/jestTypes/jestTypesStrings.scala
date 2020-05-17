@@ -1,9 +1,9 @@
 package typingsSlinky.jestTypes
 
+import typingsSlinky.jestTypes.circusMod.BlockMode
 import typingsSlinky.jestTypes.circusMod.HookType
 import typingsSlinky.jestTypes.circusMod.SharedHookType
 import typingsSlinky.jestTypes.circusMod.TestStatus
-import typingsSlinky.jestTypes.circusMod._BlockMode
 import typingsSlinky.jestTypes.configMod.DisplayNameColor
 import typingsSlinky.jestTypes.configMod.NotifyMode
 import typingsSlinky.jestTypes.configMod.SnapshotUpdateState
@@ -326,7 +326,7 @@ object jestTypesStrings {
   sealed trait none extends SnapshotUpdateState
   
   @js.native
-  sealed trait only extends _BlockMode
+  sealed trait only extends BlockMode
   
   @js.native
   sealed trait parseFloat extends js.Object
@@ -369,8 +369,8 @@ object jestTypesStrings {
   
   @js.native
   sealed trait skip
-    extends TestStatus
-       with _BlockMode
+    extends BlockMode
+       with TestStatus
   
   @js.native
   sealed trait start_describe_definition extends js.Object
@@ -422,8 +422,8 @@ object jestTypesStrings {
   
   @js.native
   sealed trait todo
-    extends TestStatus
-       with _BlockMode
+    extends BlockMode
+       with TestStatus
   
   @js.native
   sealed trait undefined extends js.Object

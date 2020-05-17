@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonCommentsLabel
+import typingsSlinky.astTypes.anon.CommentsLabel
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.BreakStatement
 import scala.scalajs.js
@@ -11,6 +11,6 @@ import scala.scalajs.js.annotation._
 trait BreakStatementBuilder extends js.Object {
   def apply(): BreakStatement = js.native
   def apply(label: IdentifierKind): BreakStatement = js.native
-  def from(params: AnonCommentsLabel): BreakStatement = js.native
+  def from(params: CommentsLabel): BreakStatement = js.native
 }
 

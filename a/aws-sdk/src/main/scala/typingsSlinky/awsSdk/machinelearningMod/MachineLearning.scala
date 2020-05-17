@@ -1,9 +1,9 @@
 package typingsSlinky.awsSdk.machinelearningMod
 
-import typingsSlinky.awsSdk.DescribeBatchPredictionsI
-import typingsSlinky.awsSdk.DescribeDataSourcesInputw
-import typingsSlinky.awsSdk.DescribeEvaluationsInputw
-import typingsSlinky.awsSdk.DescribeMLModelsInputwait
+import typingsSlinky.awsSdk.anon.DescribeBatchPredictionsI
+import typingsSlinky.awsSdk.anon.DescribeDataSourcesInputw
+import typingsSlinky.awsSdk.anon.DescribeEvaluationsInputw
+import typingsSlinky.awsSdk.anon.DescribeMLModelsInputwait
 import typingsSlinky.awsSdk.awsSdkStrings.batchPredictionAvailable
 import typingsSlinky.awsSdk.awsSdkStrings.dataSourceAvailable
 import typingsSlinky.awsSdk.awsSdkStrings.evaluationAvailable

@@ -1,7 +1,7 @@
 package typingsSlinky.jestUtil
 
+import org.scalajs.dom.raw.Window
 import typingsSlinky.node.NodeJS.Global
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object setGlobalMod extends js.Object {
   def default(globalToMutate: Global, key: String, value: js.Any): Unit = js.native
-  def default(globalToMutate: Window_, key: String, value: js.Any): Unit = js.native
+  def default(globalToMutate: Window, key: String, value: js.Any): Unit = js.native
 }
 

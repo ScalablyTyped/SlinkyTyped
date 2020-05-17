@@ -40,6 +40,8 @@ class SharedBuilder_CascaderProps300585724[R <: js.Object] (val args: js.Array[j
   @scala.inline
   def filedNames(value: CascaderFieldNames): this.type = set("filedNames", value.asInstanceOf[js.Any])
   @scala.inline
+  def getPopupContainer(value: js.Any): this.type = set("getPopupContainer", value.asInstanceOf[js.Any])
+  @scala.inline
   def loadData(value: /* selectOptions */ js.Array[CascaderOption] => Unit): this.type = set("loadData", js.Any.fromFunction1(value))
   @scala.inline
   def loadingIconReactElement(value: ReactElement): this.type = set("loadingIcon", value.asInstanceOf[js.Any])

@@ -1,6 +1,6 @@
 package typingsSlinky.leafletFullscreen.mod
 
-import typingsSlinky.leafletFullscreen.AnonPseudoFullscreen
+import typingsSlinky.leafletFullscreen.anon.PseudoFullscreen
 import typingsSlinky.leafletFullscreen.leafletFullscreenBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait MapOptions extends js.Object {
-  var fullscreenControl: js.UndefOr[`true` | AnonPseudoFullscreen] = js.native
+  var fullscreenControl: js.UndefOr[`true` | PseudoFullscreen] = js.native
 }
 
 object MapOptions {
@@ -24,7 +24,7 @@ object MapOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFullscreenControl(value: `true` | AnonPseudoFullscreen): Self = {
+    def withFullscreenControl(value: `true` | PseudoFullscreen): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreenControl")(value.asInstanceOf[js.Any])
         ret

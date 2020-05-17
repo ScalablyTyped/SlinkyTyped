@@ -3,19 +3,13 @@ package typingsSlinky.ckeditor.CKEDITOR.fileTools
 import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.FileReader
 import org.scalajs.dom.raw.XMLHttpRequest
-import typingsSlinky.ckeditor.CKEDITOR.editor
 import typingsSlinky.ckeditor.CKEDITOR.event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("CKEDITOR.fileTools.fileLoader")
 @js.native
-class fileLoader protected () extends event {
-  def this(editor: editor, fileOrData: String) = this()
-  def this(editor: editor, fileOrData: Blob) = this()
-  def this(editor: editor, fileOrData: String, fileName: String) = this()
-  def this(editor: editor, fileOrData: Blob, fileName: String) = this()
+trait fileLoader extends event {
   val data: String = js.native
   val file: Blob = js.native
   val fileName: String = js.native

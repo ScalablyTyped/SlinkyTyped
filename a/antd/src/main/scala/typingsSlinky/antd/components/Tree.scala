@@ -5,7 +5,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.AnonChecked
+import typingsSlinky.antd.anon.Checked
 import typingsSlinky.antd.treeMod.default
 import typingsSlinky.antd.treeTreeMod.AntTreeNodeProps
 import typingsSlinky.antd.treeTreeMod.AntdTreeNodeAttribute
@@ -46,7 +46,7 @@ object Tree {
     @scala.inline
     def checkable(value: Boolean): this.type = set("checkable", value.asInstanceOf[js.Any])
     @scala.inline
-    def checkedKeys(value: js.Array[String] | AnonChecked): this.type = set("checkedKeys", value.asInstanceOf[js.Any])
+    def checkedKeys(value: js.Array[String] | Checked): this.type = set("checkedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

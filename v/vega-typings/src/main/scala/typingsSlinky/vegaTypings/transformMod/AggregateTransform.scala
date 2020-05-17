@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait AggregateTransform extends _Transforms {
+trait AggregateTransform extends Transforms {
   var as: js.UndefOr[(js.Array[String | SignalRef | Null]) | SignalRef] = js.native
   var cross: js.UndefOr[Boolean | SignalRef] = js.native
   var drop: js.UndefOr[Boolean | SignalRef] = js.native

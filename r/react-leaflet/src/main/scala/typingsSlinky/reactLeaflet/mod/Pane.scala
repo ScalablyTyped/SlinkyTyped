@@ -2,7 +2,7 @@ package typingsSlinky.reactLeaflet.mod
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactLeaflet.AnonClassName
+import typingsSlinky.reactLeaflet.anon.ClassName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,6 +16,6 @@ class Pane[P /* <: PaneProps */, S /* <: PaneState */] ()
   def getPane(name: String): js.UndefOr[HTMLElement | Null] = js.native
   def getParentPane(): js.UndefOr[HTMLElement | Null] = js.native
   def removePane(): Unit = js.native
-  def setStyle(arg: AnonClassName): Unit = js.native
+  def setStyle(arg: ClassName): Unit = js.native
 }
 

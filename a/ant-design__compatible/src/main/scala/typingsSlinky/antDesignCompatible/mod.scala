@@ -1,5 +1,8 @@
 package typingsSlinky.antDesignCompatible
 
+import typingsSlinky.antDesignCompatible.anon.Colon
+import typingsSlinky.antDesignCompatible.anon.Loading
+import typingsSlinky.antDesignCompatible.anon.TypeofFormItem
 import typingsSlinky.antDesignCompatible.formFormMod.FormComponentProps
 import typingsSlinky.antDesignCompatible.formFormMod.FormCreateOption
 import typingsSlinky.antDesignCompatible.formFormMod.FormProps
@@ -32,7 +35,7 @@ object mod extends js.Object {
   object Form extends js.Object {
     var Item: TypeofFormItem = js.native
     var createFormField: js.Any = js.native
-    var defaultProps: AnonColon = js.native
+    var defaultProps: Colon = js.native
     def create[TOwnProps /* <: FormComponentProps[_] */](): FormWrappedProps[TOwnProps] = js.native
     def create[TOwnProps /* <: FormComponentProps[_] */](options: FormCreateOption[TOwnProps]): FormWrappedProps[TOwnProps] = js.native
   }
@@ -41,7 +44,7 @@ object mod extends js.Object {
   @js.native
   object Mention extends js.Object {
     var Nav: js.Any = js.native
-    var defaultProps: AnonLoading = js.native
+    var defaultProps: Loading = js.native
     var getMentions: js.Any = js.native
     var toContentState: js.Any = js.native
     @JSName("toString")

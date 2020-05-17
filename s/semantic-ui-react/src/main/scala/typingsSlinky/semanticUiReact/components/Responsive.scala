@@ -1,5 +1,6 @@
 package typingsSlinky.semanticUiReact.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
@@ -7,7 +8,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.responsiveMod.default
 import typingsSlinky.semanticUiReact.responsiveResponsiveMod.ResponsiveOnUpdateData
 import typingsSlinky.semanticUiReact.responsiveResponsiveMod.ResponsiveProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,9 +32,7 @@ object Responsive {
     @scala.inline
     def minWidth(value: Double | String): this.type = set("minWidth", value.asInstanceOf[js.Any])
     @scala.inline
-    def onUpdate(
-      value: (/* event */ SyntheticEvent[Event_, HTMLElement], /* data */ ResponsiveOnUpdateData) => Unit
-    ): this.type = set("onUpdate", js.Any.fromFunction2(value))
+    def onUpdate(value: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ ResponsiveOnUpdateData) => Unit): this.type = set("onUpdate", js.Any.fromFunction2(value))
   }
   
   def withProps(p: ResponsiveProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

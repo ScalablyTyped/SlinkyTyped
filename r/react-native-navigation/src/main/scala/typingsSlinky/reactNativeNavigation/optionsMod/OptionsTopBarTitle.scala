@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeNavigation.optionsMod
 
-import typingsSlinky.reactNativeNavigation.AnonAlignment
+import typingsSlinky.reactNativeNavigation.anon.Alignment
 import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.center
 import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.fill
 import scala.scalajs.js
@@ -21,7 +21,7 @@ trait OptionsTopBarTitle extends js.Object {
   /**
     * Custom component as the title view
     */
-  var component: js.UndefOr[AnonAlignment] = js.native
+  var component: js.UndefOr[Alignment] = js.native
   /**
     * Title font family
     *
@@ -85,7 +85,7 @@ object OptionsTopBarTitle {
         ret
     }
     @scala.inline
-    def withComponent(value: AnonAlignment): Self = {
+    def withComponent(value: Alignment): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
         ret

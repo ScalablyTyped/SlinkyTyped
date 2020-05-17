@@ -1,6 +1,6 @@
 package typingsSlinky.axeCore.mod
 
-import typingsSlinky.axeCore.AnonApplication
+import typingsSlinky.axeCore.anon.Application
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Spec extends js.Object {
   var axeVersion: js.UndefOr[String] = js.native
-  var branding: js.UndefOr[AnonApplication] = js.native
+  var branding: js.UndefOr[Application] = js.native
   var checks: js.UndefOr[js.Array[Check]] = js.native
   var locale: js.UndefOr[Locale] = js.native
   var reporter: js.UndefOr[ReporterVersion] = js.native
@@ -40,7 +40,7 @@ object Spec {
         ret
     }
     @scala.inline
-    def withBranding(value: AnonApplication): Self = {
+    def withBranding(value: Application): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("branding")(value.asInstanceOf[js.Any])
         ret

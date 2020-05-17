@@ -1,8 +1,8 @@
 package typingsSlinky.jupyterlabExtensionmanager.queryMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.jupyterlabExtensionmanager.AnonDeprecated
-import typingsSlinky.jupyterlabExtensionmanager.AnonDictkey
+import typingsSlinky.jupyterlabExtensionmanager.anon.Deprecated
+import typingsSlinky.jupyterlabExtensionmanager.anon.Dictkey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait IPackageMetadata extends js.Object {
   /**
     * A mapping of dist tags to the versions they point to.
     */
-  var `dist-tags`: AnonDictkey = js.native
+  var `dist-tags`: Dictkey = js.native
   /**
     * ISO string of the last time this package was modified.
     */
@@ -28,17 +28,17 @@ trait IPackageMetadata extends js.Object {
   /**
     * A mapping of semver-compliant version numbers to version data.
     */
-  var versions: StringDictionary[AnonDeprecated] = js.native
+  var versions: StringDictionary[Deprecated] = js.native
 }
 
 object IPackageMetadata {
   @scala.inline
   def apply(
     description: String,
-    `dist-tags`: AnonDictkey,
+    `dist-tags`: Dictkey,
     modified: String,
     name: String,
-    versions: StringDictionary[AnonDeprecated]
+    versions: StringDictionary[Deprecated]
   ): IPackageMetadata = {
     val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any], modified = modified.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], versions = versions.asInstanceOf[js.Any])
     __obj.updateDynamic("dist-tags")(`dist-tags`.asInstanceOf[js.Any])
@@ -57,7 +57,7 @@ object IPackageMetadata {
         ret
     }
     @scala.inline
-    def `withDist-tags`(value: AnonDictkey): Self = {
+    def `withDist-tags`(value: Dictkey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dist-tags")(value.asInstanceOf[js.Any])
         ret
@@ -75,7 +75,7 @@ object IPackageMetadata {
         ret
     }
     @scala.inline
-    def withVersions(value: StringDictionary[AnonDeprecated]): Self = {
+    def withVersions(value: StringDictionary[Deprecated]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("versions")(value.asInstanceOf[js.Any])
         ret

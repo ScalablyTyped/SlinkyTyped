@@ -1,5 +1,6 @@
 package typingsSlinky.rcSelect.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.Node
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
@@ -9,7 +10,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcSelect.mod.RcSelect.OptionProps
 import typingsSlinky.rcSelect.mod.RcSelect.SelectProps
 import typingsSlinky.rcSelect.mod.default
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -76,7 +76,7 @@ object RcSelect {
     @scala.inline
     def onFocus(value: () => Unit): this.type = set("onFocus", js.Any.fromFunction0(value))
     @scala.inline
-    def onInputKeyDown(value: /* e */ Event_ => Unit): this.type = set("onInputKeyDown", js.Any.fromFunction1(value))
+    def onInputKeyDown(value: /* e */ Event => Unit): this.type = set("onInputKeyDown", js.Any.fromFunction1(value))
     @scala.inline
     def onPopupScroll(value: () => Unit): this.type = set("onPopupScroll", js.Any.fromFunction0(value))
     @scala.inline

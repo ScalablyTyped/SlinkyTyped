@@ -1,6 +1,5 @@
 package typingsSlinky.playcanvas.pc
 
-import typingsSlinky.playcanvas.AnonFshader
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,15 +48,35 @@ import scala.scalajs.js.annotation._
   *
   * var shader = new pc.Shader(graphicsDevice, shaderDefinition);
   */
-@JSGlobal("pc.Shader")
 @js.native
-class Shader protected () extends js.Object {
-  def this(graphicsDevice: GraphicsDevice, definition: AnonFshader) = this()
+trait Shader extends js.Object {
   /**
     * @function
     * @name pc.Shader#destroy
     * @description Frees resources associated with this shader.
     */
   def destroy(): Unit = js.native
+}
+
+object Shader {
+  @scala.inline
+  def apply(destroy: () => Unit): Shader = {
+    val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy))
+    __obj.asInstanceOf[Shader]
+  }
+  @scala.inline
+  implicit class ShaderOps[Self <: Shader] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestroy(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

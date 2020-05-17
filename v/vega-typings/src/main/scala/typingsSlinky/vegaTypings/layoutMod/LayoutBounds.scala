@@ -1,5 +1,6 @@
 package typingsSlinky.vegaTypings.layoutMod
 
+import typingsSlinky.vegaTypings.signalMod.SignalRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,4 +11,13 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.vegaTypings.signalMod.SignalRef
 */
 trait LayoutBounds extends js.Object
+
+object LayoutBounds {
+  @scala.inline
+  def full: typingsSlinky.vegaTypings.vegaTypingsStrings.full = "full".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.full]
+  @scala.inline
+  def flush: typingsSlinky.vegaTypings.vegaTypingsStrings.flush = "flush".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.flush]
+  @scala.inline
+  implicit def apply(value: SignalRef): LayoutBounds = value.asInstanceOf[LayoutBounds]
+}
 

@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonElementDxElementModelAny
+import typingsSlinky.devextreme.anon.ElementDxElementModelAny
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation._
 @js.native
 trait BaseSparklineOptions[T] extends BaseWidgetOptions[T] {
   /** A function that is executed when a tooltip becomes hidden. */
-  var onTooltipHidden: js.UndefOr[js.Function1[/* e */ AnonElementDxElementModelAny[T], _]] = js.native
+  var onTooltipHidden: js.UndefOr[js.Function1[/* e */ ElementDxElementModelAny[T], _]] = js.native
   /** A function that is executed when a tooltip appears. */
-  var onTooltipShown: js.UndefOr[js.Function1[/* e */ AnonElementDxElementModelAny[T], _]] = js.native
+  var onTooltipShown: js.UndefOr[js.Function1[/* e */ ElementDxElementModelAny[T], _]] = js.native
   /** Configures the tooltip. */
   @JSName("tooltip")
   var tooltip_BaseSparklineOptions: js.UndefOr[BaseSparklineTooltip] = js.native
@@ -29,7 +29,7 @@ object BaseSparklineOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withOnTooltipHidden(value: /* e */ AnonElementDxElementModelAny[T] => _): Self[T] = {
+    def withOnTooltipHidden(value: /* e */ ElementDxElementModelAny[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTooltipHidden")(js.Any.fromFunction1(value))
         ret
@@ -41,7 +41,7 @@ object BaseSparklineOptions {
         ret
     }
     @scala.inline
-    def withOnTooltipShown(value: /* e */ AnonElementDxElementModelAny[T] => _): Self[T] = {
+    def withOnTooltipShown(value: /* e */ ElementDxElementModelAny[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTooltipShown")(js.Any.fromFunction1(value))
         ret

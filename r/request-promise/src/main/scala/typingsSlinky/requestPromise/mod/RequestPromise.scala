@@ -5,8 +5,8 @@ import typingsSlinky.bluebird.mod.CatchFilter
 import typingsSlinky.bluebird.mod.Constructor
 import typingsSlinky.bluebird.mod.Resolvable
 import typingsSlinky.request.mod.Request
-import typingsSlinky.requestPromise.FnCall
-import typingsSlinky.requestPromise.FnCallFilter1Filter2Filter3Filter4Filter5OnReject
+import typingsSlinky.requestPromise.anon.FnCall
+import typingsSlinky.requestPromise.anon.FnCallFilter1Filter2Filter3Filter4Filter5OnReject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -234,10 +234,6 @@ trait RequestPromise[T] extends Request {
     onFulfill: js.Function1[/* value */ T, Resolvable[U]],
     onReject: js.Function1[/* error */ js.Any, Resolvable[U]]
   ): Bluebird[U] = js.native
-  def `then`[TResult1, TResult2](
-    onfulfilled: js.UndefOr[scala.Nothing],
-    onrejected: js.Function1[/* reason */ js.Any, TResult2 | js.Thenable[TResult2]]
-  ): js.Thenable[TResult1 | TResult2] = js.native
   def `then`[TResult1, TResult2](onfulfilled: Null, onrejected: js.Function1[/* reason */ js.Any, TResult2 | js.Thenable[TResult2]]): js.Thenable[TResult1 | TResult2] = js.native
   @JSName("then")
   def then_TResult1TResult2[TResult1, TResult2](): Bluebird[TResult1 | TResult2] = js.native

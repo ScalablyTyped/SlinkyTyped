@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PercentLikeObject extends js.Object {
+trait PercentLikeObject extends PercentValue {
   var percent: Double = js.native
 }
 

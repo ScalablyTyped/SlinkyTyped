@@ -1,5 +1,6 @@
 package typingsSlinky.three
 
+import typingsSlinky.three.anon.PhiStart
 import typingsSlinky.three.bufferGeometryMod.BufferGeometry
 import typingsSlinky.three.geometryMod.Geometry
 import scala.scalajs.js
@@ -20,7 +21,7 @@ object sphereGeometryMod extends js.Object {
       thetaStart: js.UndefOr[Double],
       thetaLength: js.UndefOr[Double]
     ) = this()
-    var parameters: AnonPhiStart = js.native
+    var parameters: PhiStart = js.native
   }
   
   @js.native
@@ -45,7 +46,7 @@ object sphereGeometryMod extends js.Object {
       thetaStart: js.UndefOr[Double],
       thetaLength: js.UndefOr[Double]
     ) = this()
-    var parameters: AnonPhiStart = js.native
+    var parameters: PhiStart = js.native
   }
   
 }

@@ -4,17 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("sap.ui.model.analytics.odata4analytics.QueryResult")
 @js.native
-class QueryResult protected () extends js.Object {
-  /**
-    * Create a representation of an analytic query. Do not create your own instances.
-    * @param oModel The analytical model containing this query result entity           set
-    * @param oEntityType The OData entity type for this query
-    * @param oEntitySet The OData entity set for this query offered by the           OData service
-    * @param oParameterization The parameterization of this query, if any
-    */
-  def this(oModel: Model, oEntityType: EntityType, oEntitySet: EntitySet, oParameterization: Parameterization) = this()
+trait QueryResult extends js.Object {
   /**
     * Find dimension by name
     * @param sName Dimension name
@@ -101,5 +92,120 @@ class QueryResult protected () extends js.Object {
     * @returns The DataJS object representing this property
     */
   def getTotaledPropertiesListProperty(): js.Any = js.native
+}
+
+object QueryResult {
+  @scala.inline
+  def apply(
+    findDimensionByName: String => Dimension,
+    findDimensionByPropertyName: String => Dimension,
+    findMeasureByName: String => Measure,
+    findMeasureByPropertyName: String => Measure,
+    getAllDimensionNames: () => js.Array[String],
+    getAllDimensions: () => js.Any,
+    getAllMeasureNames: () => js.Array[String],
+    getAllMeasures: () => js.Any,
+    getEntitySet: () => EntitySet,
+    getEntityType: () => EntityType,
+    getModel: () => js.Any,
+    getName: () => String,
+    getParameterization: () => Parameterization,
+    getTotaledPropertiesListProperty: () => js.Any
+  ): QueryResult = {
+    val __obj = js.Dynamic.literal(findDimensionByName = js.Any.fromFunction1(findDimensionByName), findDimensionByPropertyName = js.Any.fromFunction1(findDimensionByPropertyName), findMeasureByName = js.Any.fromFunction1(findMeasureByName), findMeasureByPropertyName = js.Any.fromFunction1(findMeasureByPropertyName), getAllDimensionNames = js.Any.fromFunction0(getAllDimensionNames), getAllDimensions = js.Any.fromFunction0(getAllDimensions), getAllMeasureNames = js.Any.fromFunction0(getAllMeasureNames), getAllMeasures = js.Any.fromFunction0(getAllMeasures), getEntitySet = js.Any.fromFunction0(getEntitySet), getEntityType = js.Any.fromFunction0(getEntityType), getModel = js.Any.fromFunction0(getModel), getName = js.Any.fromFunction0(getName), getParameterization = js.Any.fromFunction0(getParameterization), getTotaledPropertiesListProperty = js.Any.fromFunction0(getTotaledPropertiesListProperty))
+    __obj.asInstanceOf[QueryResult]
+  }
+  @scala.inline
+  implicit class QueryResultOps[Self <: QueryResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFindDimensionByName(value: String => Dimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findDimensionByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFindDimensionByPropertyName(value: String => Dimension): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findDimensionByPropertyName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFindMeasureByName(value: String => Measure): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findMeasureByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFindMeasureByPropertyName(value: String => Measure): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findMeasureByPropertyName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetAllDimensionNames(value: () => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllDimensionNames")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetAllDimensions(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllDimensions")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetAllMeasureNames(value: () => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllMeasureNames")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetAllMeasures(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllMeasures")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetEntitySet(value: () => EntitySet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getEntitySet")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetEntityType(value: () => EntityType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getEntityType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetModel(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getModel")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetParameterization(value: () => Parameterization): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getParameterization")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetTotaledPropertiesListProperty(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTotaledPropertiesListProperty")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

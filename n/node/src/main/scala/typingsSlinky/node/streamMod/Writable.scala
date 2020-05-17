@@ -1,7 +1,7 @@
 package typingsSlinky.node.streamMod
 
-import typingsSlinky.node.AnonChunk
 import typingsSlinky.node.NodeJS.WritableStream
+import typingsSlinky.node.anon.Chunk
 import typingsSlinky.node.nodeStrings.close
 import typingsSlinky.node.nodeStrings.drain
 import typingsSlinky.node.nodeStrings.error
@@ -20,7 +20,7 @@ class Writable ()
   def this(opts: WritableOptions) = this()
   var _writev: js.UndefOr[
     js.Function2[
-      /* chunks */ js.Array[AnonChunk], 
+      /* chunks */ js.Array[Chunk], 
       /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ]

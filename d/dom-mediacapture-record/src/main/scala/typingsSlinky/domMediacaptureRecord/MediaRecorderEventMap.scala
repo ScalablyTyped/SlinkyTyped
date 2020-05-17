@@ -1,6 +1,6 @@
 package typingsSlinky.domMediacaptureRecord
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,10 +9,10 @@ import scala.scalajs.js.annotation._
 trait MediaRecorderEventMap extends js.Object {
   var dataavailable: BlobEvent = js.native
   var error: MediaRecorderErrorEvent = js.native
-  var pause: Event_ = js.native
-  var resume: Event_ = js.native
-  var start: Event_ = js.native
-  var stop: Event_ = js.native
+  var pause: Event = js.native
+  var resume: Event = js.native
+  var start: Event = js.native
+  var stop: Event = js.native
 }
 
 object MediaRecorderEventMap {
@@ -20,10 +20,10 @@ object MediaRecorderEventMap {
   def apply(
     dataavailable: BlobEvent,
     error: MediaRecorderErrorEvent,
-    pause: Event_,
-    resume: Event_,
-    start: Event_,
-    stop: Event_
+    pause: Event,
+    resume: Event,
+    start: Event,
+    stop: Event
   ): MediaRecorderEventMap = {
     val __obj = js.Dynamic.literal(dataavailable = dataavailable.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], pause = pause.asInstanceOf[js.Any], resume = resume.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], stop = stop.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaRecorderEventMap]
@@ -47,25 +47,25 @@ object MediaRecorderEventMap {
         ret
     }
     @scala.inline
-    def withPause(value: Event_): Self = {
+    def withPause(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pause")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withResume(value: Event_): Self = {
+    def withResume(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resume")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withStart(value: Event_): Self = {
+    def withStart(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withStop(value: Event_): Self = {
+    def withStop(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(value.asInstanceOf[js.Any])
         ret

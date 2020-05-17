@@ -1,7 +1,7 @@
 package typingsSlinky.reactFlagIconCss.mod
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.reactFlagIconCss.ReadonlyFlagIconOptions
+import typingsSlinky.reactFlagIconCss.anon.ReadonlyFlagIconOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

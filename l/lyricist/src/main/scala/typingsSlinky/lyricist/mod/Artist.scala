@@ -1,6 +1,6 @@
 package typingsSlinky.lyricist.mod
 
-import typingsSlinky.lyricist.AnonPermissions
+import typingsSlinky.lyricist.anon.Permissions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait Artist extends js.Object {
   var alternate_names: js.Array[_] = js.native
   var api_path: String = js.native
-  var current_user_metadata: AnonPermissions = js.native
+  var current_user_metadata: Permissions = js.native
   var description: Description = js.native
   var description_annotation: DescriptionAnnotation = js.native
   var facebook_name: String = js.native
@@ -33,7 +33,7 @@ object Artist {
   def apply(
     alternate_names: js.Array[_],
     api_path: String,
-    current_user_metadata: AnonPermissions,
+    current_user_metadata: Permissions,
     description: Description,
     description_annotation: DescriptionAnnotation,
     facebook_name: String,
@@ -71,7 +71,7 @@ object Artist {
         ret
     }
     @scala.inline
-    def withCurrent_user_metadata(value: AnonPermissions): Self = {
+    def withCurrent_user_metadata(value: Permissions): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("current_user_metadata")(value.asInstanceOf[js.Any])
         ret

@@ -3,7 +3,7 @@ package typingsSlinky.cathoQuantum.components
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonBaseFontSize
+import typingsSlinky.cathoQuantum.anon.BaseFontSize
 import typingsSlinky.cathoQuantum.checkboxMod.CheckboxProps
 import typingsSlinky.react.mod.ChangeEvent
 import scala.scalajs.js
@@ -32,7 +32,7 @@ object Checkbox {
     @scala.inline
     def onChange(value: ChangeEvent[HTMLInputElement] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def theme(value: AnonBaseFontSize): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: BaseFontSize): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
     def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }

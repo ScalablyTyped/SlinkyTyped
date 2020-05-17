@@ -88,13 +88,15 @@ trait OrgsUpdateParamsDeprecatedMembersAllowedRepositoryCreationType extends js.
     * The shorthand name of the company.
     */
   var name: js.UndefOr[String] = js.native
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
 }
 
 object OrgsUpdateParamsDeprecatedMembersAllowedRepositoryCreationType {
   @scala.inline
-  def apply(org: String): OrgsUpdateParamsDeprecatedMembersAllowedRepositoryCreationType = {
-    val __obj = js.Dynamic.literal(org = org.asInstanceOf[js.Any])
+  def apply(org_ : String): OrgsUpdateParamsDeprecatedMembersAllowedRepositoryCreationType = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrgsUpdateParamsDeprecatedMembersAllowedRepositoryCreationType]
   }
   @scala.inline
@@ -104,7 +106,7 @@ object OrgsUpdateParamsDeprecatedMembersAllowedRepositoryCreationType {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

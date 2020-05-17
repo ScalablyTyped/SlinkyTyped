@@ -1,6 +1,6 @@
 package typingsSlinky.firebaseFunctions.serviceMod
 
-import typingsSlinky.firebaseFunctions.AnonDetails
+import typingsSlinky.firebaseFunctions.anon.Details
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait HttpResponseBody extends js.Object {
   var data: js.UndefOr[js.Any] = js.native
-  var error: js.UndefOr[AnonDetails] = js.native
+  var error: js.UndefOr[Details] = js.native
   var result: js.UndefOr[js.Any] = js.native
 }
 
@@ -37,7 +37,7 @@ object HttpResponseBody {
         ret
     }
     @scala.inline
-    def withError(value: AnonDetails): Self = {
+    def withError(value: Details): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret

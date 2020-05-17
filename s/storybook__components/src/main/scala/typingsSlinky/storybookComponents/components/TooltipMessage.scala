@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.storybookComponents.AnonHref
+import typingsSlinky.storybookComponents.anon.Href
 import typingsSlinky.storybookComponents.tooltipMessageMod.TooltipMessageProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,7 +24,7 @@ object TooltipMessage {
     @scala.inline
     def desc(value: TagMod[Any]): this.type = set("desc", value.asInstanceOf[js.Any])
     @scala.inline
-    def links(value: js.Array[AnonHref]): this.type = set("links", value.asInstanceOf[js.Any])
+    def links(value: js.Array[Href]): this.type = set("links", value.asInstanceOf[js.Any])
     @scala.inline
     def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline

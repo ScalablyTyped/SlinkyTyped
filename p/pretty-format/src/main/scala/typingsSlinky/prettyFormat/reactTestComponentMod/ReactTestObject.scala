@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ReactTestObject extends js.Object {
+trait ReactTestObject extends ReactTestChild {
   @JSName("$$typeof")
   var DollarDollartypeof: js.Symbol = js.native
   var children: js.UndefOr[Null | js.Array[ReactTestChild]] = js.native

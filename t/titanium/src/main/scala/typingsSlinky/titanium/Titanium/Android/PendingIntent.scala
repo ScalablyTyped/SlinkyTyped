@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * The Titanium binding of an Android `PendingIntent`.
 		 */
-@JSGlobal("Titanium.Android.PendingIntent")
 @js.native
-class PendingIntent () extends Proxy {
+trait PendingIntent extends Proxy {
   /**
   			 * Flags used for creating the Pending Intent.
   			 */

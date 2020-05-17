@@ -7,15 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientRichEdit.ParagraphPropertiesChanged event.
   */
-@JSGlobal("ASPxClientRichEditParagraphPropertiesChangedEventArgs")
 @js.native
-class ASPxClientRichEditParagraphPropertiesChangedEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientRichEditParagraphPropertiesChangedEventArgs object. For internal use only.
-    * @param subDocumentId An identifier of a sub-document containing the changed paragraph.
-    * @param paragraphIndex The changed paragraph's index.
-    */
-  def this(subDocumentId: Double, paragraphIndex: Double) = this()
+trait ASPxClientRichEditParagraphPropertiesChangedEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the changed paragraph's index.
     */
@@ -24,5 +17,33 @@ class ASPxClientRichEditParagraphPropertiesChangedEventArgs protected () extends
     * Gets the active sub-document's identifier.
     */
   var subDocumentId: Double = js.native
+}
+
+object ASPxClientRichEditParagraphPropertiesChangedEventArgs {
+  @scala.inline
+  def apply(paragraphIndex: Double, subDocumentId: Double): ASPxClientRichEditParagraphPropertiesChangedEventArgs = {
+    val __obj = js.Dynamic.literal(paragraphIndex = paragraphIndex.asInstanceOf[js.Any], subDocumentId = subDocumentId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientRichEditParagraphPropertiesChangedEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientRichEditParagraphPropertiesChangedEventArgsOps[Self <: ASPxClientRichEditParagraphPropertiesChangedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withParagraphIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paragraphIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubDocumentId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subDocumentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

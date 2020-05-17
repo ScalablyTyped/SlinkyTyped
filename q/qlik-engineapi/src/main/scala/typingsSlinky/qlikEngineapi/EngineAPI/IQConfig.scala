@@ -1,22 +1,22 @@
 package typingsSlinky.qlikEngineapi.EngineAPI
 
-import typingsSlinky.qlikEngineapi.AnonQIsDesktop
-import typingsSlinky.qlikEngineapi.AnonQPathSeparator
-import typingsSlinky.qlikEngineapi.AnonQUrl
+import typingsSlinky.qlikEngineapi.anon.QIsDesktop
+import typingsSlinky.qlikEngineapi.anon.QPathSeparator
+import typingsSlinky.qlikEngineapi.anon.QUrl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IQConfig extends js.Object {
-  var qFeatures: AnonQIsDesktop = js.native
-  var qServices: js.Array[AnonQUrl] = js.native
-  var qSystemProperties: AnonQPathSeparator = js.native
+  var qFeatures: QIsDesktop = js.native
+  var qServices: js.Array[QUrl] = js.native
+  var qSystemProperties: QPathSeparator = js.native
 }
 
 object IQConfig {
   @scala.inline
-  def apply(qFeatures: AnonQIsDesktop, qServices: js.Array[AnonQUrl], qSystemProperties: AnonQPathSeparator): IQConfig = {
+  def apply(qFeatures: QIsDesktop, qServices: js.Array[QUrl], qSystemProperties: QPathSeparator): IQConfig = {
     val __obj = js.Dynamic.literal(qFeatures = qFeatures.asInstanceOf[js.Any], qServices = qServices.asInstanceOf[js.Any], qSystemProperties = qSystemProperties.asInstanceOf[js.Any])
     __obj.asInstanceOf[IQConfig]
   }
@@ -27,19 +27,19 @@ object IQConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withQFeatures(value: AnonQIsDesktop): Self = {
+    def withQFeatures(value: QIsDesktop): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("qFeatures")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withQServices(value: js.Array[AnonQUrl]): Self = {
+    def withQServices(value: js.Array[QUrl]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("qServices")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withQSystemProperties(value: AnonQPathSeparator): Self = {
+    def withQSystemProperties(value: QPathSeparator): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("qSystemProperties")(value.asInstanceOf[js.Any])
         ret

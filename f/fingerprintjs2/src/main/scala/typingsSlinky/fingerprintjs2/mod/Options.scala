@@ -1,11 +1,11 @@
 package typingsSlinky.fingerprintjs2.mod
 
-import typingsSlinky.fingerprintjs2.AnonAdBlock
-import typingsSlinky.fingerprintjs2.AnonDetectScreenOrientation
-import typingsSlinky.fingerprintjs2.AnonExcludeIE
-import typingsSlinky.fingerprintjs2.AnonExcludeIOS11
-import typingsSlinky.fingerprintjs2.AnonExtendedJsFonts
-import typingsSlinky.fingerprintjs2.AnonGetData
+import typingsSlinky.fingerprintjs2.anon.AdBlock
+import typingsSlinky.fingerprintjs2.anon.DetectScreenOrientation
+import typingsSlinky.fingerprintjs2.anon.ExcludeIE
+import typingsSlinky.fingerprintjs2.anon.ExcludeIOS11
+import typingsSlinky.fingerprintjs2.anon.ExtendedJsFonts
+import typingsSlinky.fingerprintjs2.anon.GetData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,13 +15,13 @@ trait Options extends js.Object {
   var ERROR: js.UndefOr[String] = js.native
   var EXCLUDED: js.UndefOr[String] = js.native
   var NOT_AVAILABLE: js.UndefOr[String] = js.native
-  var audio: js.UndefOr[AnonExcludeIOS11] = js.native
-  var excludes: js.UndefOr[AnonAdBlock] = js.native
-  var extraComponents: js.UndefOr[js.Array[AnonGetData]] = js.native
-  var fonts: js.UndefOr[AnonExtendedJsFonts] = js.native
-  var plugins: js.UndefOr[AnonExcludeIE] = js.native
+  var audio: js.UndefOr[ExcludeIOS11] = js.native
+  var excludes: js.UndefOr[AdBlock] = js.native
+  var extraComponents: js.UndefOr[js.Array[GetData]] = js.native
+  var fonts: js.UndefOr[ExtendedJsFonts] = js.native
+  var plugins: js.UndefOr[ExcludeIE] = js.native
   var preprocessor: js.UndefOr[js.Function2[/* key */ String, /* value */ js.Any, _]] = js.native
-  var screen: js.UndefOr[AnonDetectScreenOrientation] = js.native
+  var screen: js.UndefOr[DetectScreenOrientation] = js.native
 }
 
 object Options {
@@ -73,7 +73,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withAudio(value: AnonExcludeIOS11): Self = {
+    def withAudio(value: ExcludeIOS11): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(value.asInstanceOf[js.Any])
         ret
@@ -85,7 +85,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withExcludes(value: AnonAdBlock): Self = {
+    def withExcludes(value: AdBlock): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("excludes")(value.asInstanceOf[js.Any])
         ret
@@ -97,7 +97,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withExtraComponents(value: js.Array[AnonGetData]): Self = {
+    def withExtraComponents(value: js.Array[GetData]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("extraComponents")(value.asInstanceOf[js.Any])
         ret
@@ -109,7 +109,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withFonts(value: AnonExtendedJsFonts): Self = {
+    def withFonts(value: ExtendedJsFonts): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fonts")(value.asInstanceOf[js.Any])
         ret
@@ -121,7 +121,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withPlugins(value: AnonExcludeIE): Self = {
+    def withPlugins(value: ExcludeIE): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
         ret
@@ -145,7 +145,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withScreen(value: AnonDetectScreenOrientation): Self = {
+    def withScreen(value: DetectScreenOrientation): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("screen")(value.asInstanceOf[js.Any])
         ret

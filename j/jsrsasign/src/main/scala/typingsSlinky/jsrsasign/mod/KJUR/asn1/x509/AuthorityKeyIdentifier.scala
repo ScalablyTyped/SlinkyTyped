@@ -1,6 +1,6 @@
 package typingsSlinky.jsrsasign.mod.KJUR.asn1.x509
 
-import typingsSlinky.jsrsasign.AnonCritical
+import typingsSlinky.jsrsasign.anon.Critical
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,6 +29,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class AuthorityKeyIdentifier ()
   extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.x509.AuthorityKeyIdentifier {
-  def this(params: AnonCritical) = this()
+  def this(params: Critical) = this()
 }
 

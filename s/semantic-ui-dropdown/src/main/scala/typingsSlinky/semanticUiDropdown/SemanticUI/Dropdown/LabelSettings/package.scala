@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object LabelSettings {
-  type Param = (typingsSlinky.semanticUiDropdown.PickImpltransitionTransition | typingsSlinky.semanticUiDropdown.PickImplduration | typingsSlinky.semanticUiDropdown.PickImplvariation) with typingsSlinky.semanticUiDropdown.PartialPickImplkeyofImplDuration
+  type Param = (typingsSlinky.semanticUiDropdown.anon.PickImpltransitionTransition | typingsSlinky.semanticUiDropdown.anon.PickImplduration | typingsSlinky.semanticUiDropdown.anon.PickImplvariation) with typingsSlinky.semanticUiDropdown.anon.PartialPickImplkeyofImplDuration
 }

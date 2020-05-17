@@ -1,6 +1,6 @@
 package typingsSlinky.angularAnimations.mod
 
-import typingsSlinky.angularAnimations.AnonParams
+import typingsSlinky.angularAnimations.anon.Params
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait AnimationStateMetadata extends AnimationMetadata {
     * developer-defined parameters that provide styling defaults and
     * can be overridden on invocation.
     */
-  var options: js.UndefOr[AnonParams] = js.native
+  var options: js.UndefOr[Params] = js.native
   /**
     *  The CSS styles associated with this state.
     */
@@ -49,7 +49,7 @@ object AnimationStateMetadata {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonParams): Self = {
+    def withOptions(value: Params): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

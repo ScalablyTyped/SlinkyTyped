@@ -4,11 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Devices.I2c.Provider.ProviderI2cConnectionSettings")
 @js.native
-abstract class ProviderI2cConnectionSettings () extends js.Object {
+trait ProviderI2cConnectionSettings extends js.Object {
   var busSpeed: js.Any = js.native
    /* unmapped type */ var sharingMode: js.Any = js.native
    /* unmapped type */ var slaveAddress: js.Any = js.native
+}
+
+object ProviderI2cConnectionSettings {
+  @scala.inline
+  def apply(busSpeed: js.Any, sharingMode: js.Any, slaveAddress: js.Any): ProviderI2cConnectionSettings = {
+    val __obj = js.Dynamic.literal(busSpeed = busSpeed.asInstanceOf[js.Any], sharingMode = sharingMode.asInstanceOf[js.Any], slaveAddress = slaveAddress.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ProviderI2cConnectionSettings]
+  }
+  @scala.inline
+  implicit class ProviderI2cConnectionSettingsOps[Self <: ProviderI2cConnectionSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBusSpeed(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("busSpeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSharingMode(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sharingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSlaveAddress(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("slaveAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

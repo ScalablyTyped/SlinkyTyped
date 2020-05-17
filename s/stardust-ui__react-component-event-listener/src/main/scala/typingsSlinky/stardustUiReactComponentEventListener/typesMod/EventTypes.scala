@@ -14,3 +14,18 @@ import scala.scalajs.js.annotation._
 */
 trait EventTypes extends js.Object
 
+object EventTypes {
+  @scala.inline
+  def fullscreenchange: typingsSlinky.stardustUiReactComponentEventListener.stardustUiReactComponentEventListenerStrings.fullscreenchange = "fullscreenchange".asInstanceOf[typingsSlinky.stardustUiReactComponentEventListener.stardustUiReactComponentEventListenerStrings.fullscreenchange]
+  @scala.inline
+  def fullscreenerror: typingsSlinky.stardustUiReactComponentEventListener.stardustUiReactComponentEventListenerStrings.fullscreenerror = "fullscreenerror".asInstanceOf[typingsSlinky.stardustUiReactComponentEventListener.stardustUiReactComponentEventListenerStrings.fullscreenerror]
+  @scala.inline
+  def pointerlockchange: typingsSlinky.stardustUiReactComponentEventListener.stardustUiReactComponentEventListenerStrings.pointerlockchange = "pointerlockchange".asInstanceOf[typingsSlinky.stardustUiReactComponentEventListener.stardustUiReactComponentEventListenerStrings.pointerlockchange]
+  @scala.inline
+  def pointerlockerror: typingsSlinky.stardustUiReactComponentEventListener.stardustUiReactComponentEventListenerStrings.pointerlockerror = "pointerlockerror".asInstanceOf[typingsSlinky.stardustUiReactComponentEventListener.stardustUiReactComponentEventListenerStrings.pointerlockerror]
+  @scala.inline
+  def readystatechange: typingsSlinky.stardustUiReactComponentEventListener.stardustUiReactComponentEventListenerStrings.readystatechange = "readystatechange".asInstanceOf[typingsSlinky.stardustUiReactComponentEventListener.stardustUiReactComponentEventListenerStrings.readystatechange]
+  @scala.inline
+  def visibilitychange: typingsSlinky.stardustUiReactComponentEventListener.stardustUiReactComponentEventListenerStrings.visibilitychange = "visibilitychange".asInstanceOf[typingsSlinky.stardustUiReactComponentEventListener.stardustUiReactComponentEventListenerStrings.visibilitychange]
+}
+

@@ -1,6 +1,6 @@
 package typingsSlinky.exceljs.mod
 
-import typingsSlinky.exceljs.PartialsheetNamestringrow
+import typingsSlinky.exceljs.anon.PartialsheetNamestringrow
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

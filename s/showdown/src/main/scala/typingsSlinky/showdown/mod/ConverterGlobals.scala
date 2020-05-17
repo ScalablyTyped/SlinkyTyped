@@ -1,9 +1,9 @@
 package typingsSlinky.showdown.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.showdown.AnonCodeblock
-import typingsSlinky.showdown.AnonFormat
-import typingsSlinky.showdown.AnonHeight
+import typingsSlinky.showdown.anon.Codeblock
+import typingsSlinky.showdown.anon.Format
+import typingsSlinky.showdown.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,17 +11,17 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ConverterGlobals extends js.Object {
   var converter: js.UndefOr[Converter] = js.native
-  var gDimensions: js.UndefOr[AnonHeight] = js.native
+  var gDimensions: js.UndefOr[Height] = js.native
   var gHtmlBlocks: js.UndefOr[js.Array[String]] = js.native
   var gHtmlMdBlocks: js.UndefOr[js.Array[String]] = js.native
   var gHtmlSpans: js.UndefOr[js.Array[String]] = js.native
   var gListLevel: js.UndefOr[Double] = js.native
   var gTitles: js.UndefOr[StringDictionary[String]] = js.native
   var gUrls: js.UndefOr[StringDictionary[String]] = js.native
-  var ghCodeBlocks: js.UndefOr[js.Array[AnonCodeblock]] = js.native
+  var ghCodeBlocks: js.UndefOr[js.Array[Codeblock]] = js.native
   var hashLinkCounts: js.UndefOr[StringDictionary[Double]] = js.native
   var langExtensions: js.UndefOr[js.Array[ShowdownExtension]] = js.native
-  var metadata: js.UndefOr[AnonFormat] = js.native
+  var metadata: js.UndefOr[Format] = js.native
   var outputModifiers: js.UndefOr[js.Array[ShowdownExtension]] = js.native
 }
 
@@ -50,7 +50,7 @@ object ConverterGlobals {
         ret
     }
     @scala.inline
-    def withGDimensions(value: AnonHeight): Self = {
+    def withGDimensions(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gDimensions")(value.asInstanceOf[js.Any])
         ret
@@ -134,7 +134,7 @@ object ConverterGlobals {
         ret
     }
     @scala.inline
-    def withGhCodeBlocks(value: js.Array[AnonCodeblock]): Self = {
+    def withGhCodeBlocks(value: js.Array[Codeblock]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ghCodeBlocks")(value.asInstanceOf[js.Any])
         ret
@@ -170,7 +170,7 @@ object ConverterGlobals {
         ret
     }
     @scala.inline
-    def withMetadata(value: AnonFormat): Self = {
+    def withMetadata(value: Format): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
         ret

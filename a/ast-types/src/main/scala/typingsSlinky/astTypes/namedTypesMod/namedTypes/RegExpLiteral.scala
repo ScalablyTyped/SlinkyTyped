@@ -1,7 +1,7 @@
 package typingsSlinky.astTypes.namedTypesMod.namedTypes
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.astTypes.AnonFlags
+import typingsSlinky.astTypes.anon.Flags
 import typingsSlinky.astTypes.kindsMod.CommentKind
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.kindsMod.LiteralKind
@@ -25,7 +25,7 @@ trait RegExpLiteral
   var flags: String = js.native
   var loc: js.UndefOr[SourceLocationKind] = js.native
   var pattern: String = js.native
-  var regex: js.UndefOr[AnonFlags] = js.native
+  var regex: js.UndefOr[Flags] = js.native
   var `type`: typingsSlinky.astTypes.astTypesStrings.RegExpLiteral = js.native
   var value: js.UndefOr[js.RegExp] = js.native
 }

@@ -4,15 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.Gizmo")
 @js.native
-/**
-  * Creates a gizmo
-  * @param gizmoLayer The utility layer the gizmo will be added to
-  */
-class Gizmo () extends IDisposable {
-  def this(/** The utility layer the gizmo will be added to */
-  gizmoLayer: UtilityLayerRenderer) = this()
+trait Gizmo extends IDisposable {
   var _attachedMesh: js.Any = js.native
   var _beforeRenderObserver: js.Any = js.native
   /**

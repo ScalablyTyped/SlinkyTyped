@@ -13,18 +13,11 @@ package object mod {
   type ActionFunctionAny[R] = js.Function1[/* repeated */ js.Any, R]
   type ActionFunctions[Payload] = typingsSlinky.reduxActions.mod.BaseActionFunctions[typingsSlinky.reduxActions.mod.Action[Payload]]
   type ActionWithMetaFunctions[Payload, Meta] = typingsSlinky.reduxActions.mod.BaseActionFunctions[typingsSlinky.reduxActions.mod.ActionMeta[Payload, Meta]]
-  type BaseActionFunctions[TAction] = typingsSlinky.reduxActions.mod.ActionFunction0[TAction] | (typingsSlinky.reduxActions.mod.ActionFunction1[js.Any, TAction]) | (typingsSlinky.reduxActions.mod.ActionFunction2[js.Any, js.Any, TAction]) | (typingsSlinky.reduxActions.mod.ActionFunction3[js.Any, js.Any, js.Any, TAction]) | (typingsSlinky.reduxActions.mod.ActionFunction4[js.Any, js.Any, js.Any, js.Any, TAction]) | typingsSlinky.reduxActions.mod.ActionFunctionAny[TAction]
   type Reducer[State, Payload] = js.Function2[
     /* state */ State, 
     /* action */ typingsSlinky.reduxActions.mod.Action[Payload], 
     State
   ]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.reduxActions.mod.Reducer[State, Payload]
-    - typingsSlinky.reduxActions.mod.ReducerNextThrow[State, Payload]
-    - typingsSlinky.reduxActions.mod.ReducerMap[State, Payload]
-  */
-  type ReducerMapValue[State, Payload] = (typingsSlinky.reduxActions.mod._ReducerMapValue[State, Payload]) | (typingsSlinky.reduxActions.mod.Reducer[State, Payload])
   type ReducerMeta[State, Payload, Meta] = js.Function2[
     /* state */ State, 
     /* action */ typingsSlinky.reduxActions.mod.ActionMeta[Payload, Meta], 

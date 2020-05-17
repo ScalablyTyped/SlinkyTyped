@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides methods for taking a low lag media recording. */
-@JSGlobal("Windows.Media.Capture.LowLagMediaRecording")
 @js.native
-abstract class LowLagMediaRecording () extends js.Object {
+trait LowLagMediaRecording extends js.Object {
   /**
     * Asynchronously releases the LowLagMediaRecording object and resources used by the media recording operation.
     * @return Object that is used to control the asynchronous operation.
@@ -36,5 +35,57 @@ abstract class LowLagMediaRecording () extends js.Object {
     * @return Object that is used to control the asynchronous operation.
     */
   def stopAsync(): IPromiseWithIAsyncAction = js.native
+}
+
+object LowLagMediaRecording {
+  @scala.inline
+  def apply(
+    finishAsync: () => IPromiseWithIAsyncAction,
+    pauseAsync: MediaCapturePauseBehavior => IPromiseWithIAsyncAction,
+    resumeAsync: () => IPromiseWithIAsyncAction,
+    startAsync: () => IPromiseWithIAsyncAction,
+    stopAsync: () => IPromiseWithIAsyncAction
+  ): LowLagMediaRecording = {
+    val __obj = js.Dynamic.literal(finishAsync = js.Any.fromFunction0(finishAsync), pauseAsync = js.Any.fromFunction1(pauseAsync), resumeAsync = js.Any.fromFunction0(resumeAsync), startAsync = js.Any.fromFunction0(startAsync), stopAsync = js.Any.fromFunction0(stopAsync))
+    __obj.asInstanceOf[LowLagMediaRecording]
+  }
+  @scala.inline
+  implicit class LowLagMediaRecordingOps[Self <: LowLagMediaRecording] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFinishAsync(value: () => IPromiseWithIAsyncAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("finishAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPauseAsync(value: MediaCapturePauseBehavior => IPromiseWithIAsyncAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pauseAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withResumeAsync(value: () => IPromiseWithIAsyncAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStartAsync(value: () => IPromiseWithIAsyncAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStopAsync(value: () => IPromiseWithIAsyncAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

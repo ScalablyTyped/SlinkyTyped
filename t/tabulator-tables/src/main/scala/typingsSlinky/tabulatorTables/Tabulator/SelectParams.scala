@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait SelectParams
   extends SharedEditorParams
      with SharedSelectAutoCompleteEditorParams
-     with _EditorParams {
+     with EditorParams {
   var listItemFormatter: js.UndefOr[js.Function2[/* value */ String, /* text */ String, String]] = js.native
   var values: `true` | (js.Array[SelectParamsGroup | String]) | JSONRecord | String = js.native
   var verticalNavigation: js.UndefOr[editor | table | hybrid] = js.native

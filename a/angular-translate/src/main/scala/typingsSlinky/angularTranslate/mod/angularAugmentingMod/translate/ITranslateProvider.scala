@@ -1,7 +1,7 @@
 package typingsSlinky.angularTranslate.mod.angularAugmentingMod.translate
 
 import typingsSlinky.angular.mod.IServiceProvider
-import typingsSlinky.angularTranslate.AnonFiles
+import typingsSlinky.angularTranslate.anon.Files
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,7 +54,7 @@ trait ITranslateProvider extends IServiceProvider {
   def useMissingTranslationHandlerLog(): ITranslateProvider = js.native
   def usePostCompiling(value: Boolean): ITranslateProvider = js.native
   def useSanitizeValueStrategy(value: String): ITranslateProvider = js.native
-  def useStaticFilesLoader(options: AnonFiles): ITranslateProvider = js.native
+  def useStaticFilesLoader(options: Files): ITranslateProvider = js.native
   def useStaticFilesLoader(options: IStaticFilesLoaderOptions): ITranslateProvider = js.native
   def useStorage(storageFactory: js.Any): ITranslateProvider = js.native
   def useUrlLoader(url: String): ITranslateProvider = js.native

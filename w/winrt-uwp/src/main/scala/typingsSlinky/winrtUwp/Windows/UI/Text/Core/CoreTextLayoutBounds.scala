@@ -6,12 +6,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the bounding boxes—in screen coordinates—of a range of text, and of a text input control. */
-@JSGlobal("Windows.UI.Text.Core.CoreTextLayoutBounds")
 @js.native
-abstract class CoreTextLayoutBounds () extends js.Object {
+trait CoreTextLayoutBounds extends js.Object {
   /** Gets or sets the bounding box in screen coordinates of a text input control. */
   var controlBounds: Rect = js.native
   /** Gets or sets the bounding box in screen coordinates of a range of text. */
   var textBounds: Rect = js.native
+}
+
+object CoreTextLayoutBounds {
+  @scala.inline
+  def apply(controlBounds: Rect, textBounds: Rect): CoreTextLayoutBounds = {
+    val __obj = js.Dynamic.literal(controlBounds = controlBounds.asInstanceOf[js.Any], textBounds = textBounds.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CoreTextLayoutBounds]
+  }
+  @scala.inline
+  implicit class CoreTextLayoutBoundsOps[Self <: CoreTextLayoutBounds] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withControlBounds(value: Rect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("controlBounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextBounds(value: Rect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textBounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.zenObservable.mod
 
-import typingsSlinky.zenObservable.mod._Global_.ZenObservable.ObservableLike
-import typingsSlinky.zenObservable.mod._Global_.ZenObservable.Observer
-import typingsSlinky.zenObservable.mod._Global_.ZenObservable.Subscription
+import typingsSlinky.zenObservable.mod.global.ZenObservable.ObservableLike
+import typingsSlinky.zenObservable.mod.global.ZenObservable.Observer
+import typingsSlinky.zenObservable.mod.global.ZenObservable.Subscription
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

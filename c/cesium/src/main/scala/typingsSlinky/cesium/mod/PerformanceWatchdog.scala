@@ -1,7 +1,7 @@
 package typingsSlinky.cesium.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.cesium.AnonLowFrameRateMessage
+import typingsSlinky.cesium.anon.LowFrameRateMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "PerformanceWatchdog")
 @js.native
 class PerformanceWatchdog () extends js.Object {
-  def this(options: AnonLowFrameRateMessage) = this()
+  def this(options: LowFrameRateMessage) = this()
   var container: Element = js.native
   var viewModel: PerformanceWatchdogViewModel = js.native
   def destroy(): Unit = js.native

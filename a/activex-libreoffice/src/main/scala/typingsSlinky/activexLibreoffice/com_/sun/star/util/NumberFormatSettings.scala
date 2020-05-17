@@ -1,0 +1,84 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.util
+
+import typingsSlinky.activexLibreoffice.`type`
+import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertyChangeListener
+import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertySet
+import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertySetInfo
+import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XVetoableChangeListener
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** specifies the settings for number formatting. */
+@js.native
+trait NumberFormatSettings extends XPropertySet {
+  /** is set to indicate that a zero value should be formatted as an empty string. */
+  var NoZero: Boolean = js.native
+  /**
+    * specifies the date which is represented by the value 0.
+    *
+    * The most common value for this is 12/30/1899.
+    */
+  var NullDate: Date = js.native
+  /** specifies the maximum number of decimals used for the standard number format ("General"). */
+  var StandardDecimals: Double = js.native
+  /** specifies the first year to be generated from a two-digit year input. */
+  var TwoDigitDateStart: Double = js.native
+}
+
+object NumberFormatSettings {
+  @scala.inline
+  def apply(
+    NoZero: Boolean,
+    NullDate: Date,
+    PropertySetInfo: XPropertySetInfo,
+    StandardDecimals: Double,
+    TwoDigitDateStart: Double,
+    acquire: () => Unit,
+    addPropertyChangeListener: (String, XPropertyChangeListener) => Unit,
+    addVetoableChangeListener: (String, XVetoableChangeListener) => Unit,
+    getPropertySetInfo: () => XPropertySetInfo,
+    getPropertyValue: String => js.Any,
+    queryInterface: `type` => js.Any,
+    release: () => Unit,
+    removePropertyChangeListener: (String, XPropertyChangeListener) => Unit,
+    removeVetoableChangeListener: (String, XVetoableChangeListener) => Unit,
+    setPropertyValue: (String, js.Any) => Unit
+  ): NumberFormatSettings = {
+    val __obj = js.Dynamic.literal(NoZero = NoZero.asInstanceOf[js.Any], NullDate = NullDate.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], StandardDecimals = StandardDecimals.asInstanceOf[js.Any], TwoDigitDateStart = TwoDigitDateStart.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
+    __obj.asInstanceOf[NumberFormatSettings]
+  }
+  @scala.inline
+  implicit class NumberFormatSettingsOps[Self <: NumberFormatSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNoZero(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NoZero")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNullDate(value: Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NullDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStandardDecimals(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StandardDecimals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTwoDigitDateStart(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TwoDigitDateStart")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

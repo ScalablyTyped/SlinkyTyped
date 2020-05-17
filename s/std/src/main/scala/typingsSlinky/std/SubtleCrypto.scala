@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.std.stdStrings.jwk
 import typingsSlinky.std.stdStrings.pkcs8
 import typingsSlinky.std.stdStrings.raw
@@ -490,9 +489,4 @@ trait SubtleCrypto extends js.Object {
     wrapAlgorithm: org.scalajs.dom.crypto.Algorithm
   ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
 }
-
-@JSGlobal("SubtleCrypto")
-@js.native
-object SubtleCrypto
-  extends Instantiable0[org.scalajs.dom.crypto.SubtleCrypto]
 

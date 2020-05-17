@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientBooks.AnonPagesize
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientBooks.anon.Pagesize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MembershipResource extends js.Object {
   /** Returns Series membership data given the series id. */
-  def get(request: AnonPagesize): Request_[Seriesmembership] = js.native
+  def get(request: Pagesize): Request[Seriesmembership] = js.native
 }
 
 object MembershipResource {
   @scala.inline
-  def apply(get: AnonPagesize => Request_[Seriesmembership]): MembershipResource = {
+  def apply(get: Pagesize => Request[Seriesmembership]): MembershipResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get))
     __obj.asInstanceOf[MembershipResource]
   }
@@ -25,7 +25,7 @@ object MembershipResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonPagesize => Request_[Seriesmembership]): Self = {
+    def withGet(value: Pagesize => Request[Seriesmembership]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret

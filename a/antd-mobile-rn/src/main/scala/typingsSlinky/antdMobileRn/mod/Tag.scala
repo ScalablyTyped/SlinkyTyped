@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobileRn.mod
 
-import typingsSlinky.antdMobileRn.AnonAfterClose
+import typingsSlinky.antdMobileRn.anon.AfterClose
 import typingsSlinky.antdMobileRn.tagIndexNativeMod.TagNativeProps
 import typingsSlinky.antdMobileRn.tagIndexNativeMod.default
 import scala.scalajs.js
@@ -17,6 +17,6 @@ class Tag protected () extends default {
 @JSImport("antd-mobile-rn", "Tag")
 @js.native
 object Tag extends js.Object {
-  var defaultProps: AnonAfterClose = js.native
+  var defaultProps: AfterClose = js.native
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.antd.generateCalendarMod
 
 import slinky.core.TagMod
-import typingsSlinky.antd.AnonLang
-import typingsSlinky.antd.AnonOnChange
+import typingsSlinky.antd.anon.Lang
+import typingsSlinky.antd.anon.OnChange
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +17,7 @@ trait CalendarProps[DateType] extends js.Object {
   var disabledDate: js.UndefOr[js.Function1[/* date */ DateType, Boolean]] = js.native
   var fullscreen: js.UndefOr[Boolean] = js.native
   var headerRender: js.UndefOr[HeaderRender[DateType]] = js.native
-  var locale: js.UndefOr[AnonLang] = js.native
+  var locale: js.UndefOr[Lang] = js.native
   var mode: js.UndefOr[CalendarMode] = js.native
   var monthCellRender: js.UndefOr[js.Function1[/* date */ DateType, TagMod[Any]]] = js.native
   var monthFullCellRender: js.UndefOr[js.Function1[/* date */ DateType, TagMod[Any]]] = js.native
@@ -115,7 +115,7 @@ object CalendarProps {
         ret
     }
     @scala.inline
-    def withHeaderRender(value: /* config */ AnonOnChange[DateType] => TagMod[Any]): Self[DateType] = {
+    def withHeaderRender(value: /* config */ OnChange[DateType] => TagMod[Any]): Self[DateType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headerRender")(js.Any.fromFunction1(value))
         ret
@@ -127,7 +127,7 @@ object CalendarProps {
         ret
     }
     @scala.inline
-    def withLocale(value: AnonLang): Self[DateType] = {
+    def withLocale(value: Lang): Self[DateType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
         ret

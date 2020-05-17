@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait BitsRange extends _SingleQubitOperatorTargetQubits {
+trait BitsRange extends SingleQubitOperatorTargetQubits {
   var from: Double = js.native
   var to: Double = js.native
 }

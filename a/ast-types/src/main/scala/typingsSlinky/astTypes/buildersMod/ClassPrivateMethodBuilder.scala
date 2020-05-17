@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonAbstractAccess
+import typingsSlinky.astTypes.anon.AbstractAccess
 import typingsSlinky.astTypes.astTypesStrings.constructor
 import typingsSlinky.astTypes.astTypesStrings.get
 import typingsSlinky.astTypes.astTypesStrings.method
@@ -80,6 +80,6 @@ trait ClassPrivateMethodBuilder extends js.Object {
     computed: Boolean,
     staticParam: Boolean
   ): ClassPrivateMethod = js.native
-  def from(params: AnonAbstractAccess): ClassPrivateMethod = js.native
+  def from(params: AbstractAccess): ClassPrivateMethod = js.native
 }
 

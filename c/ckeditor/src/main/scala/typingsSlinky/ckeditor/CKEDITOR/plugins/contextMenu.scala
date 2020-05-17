@@ -1,16 +1,13 @@
 package typingsSlinky.ckeditor.CKEDITOR.plugins
 
 import typingsSlinky.ckeditor.CKEDITOR.dom.element
-import typingsSlinky.ckeditor.CKEDITOR.editor
 import typingsSlinky.ckeditor.CKEDITOR.menu
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("CKEDITOR.plugins.contextMenu")
 @js.native
-class contextMenu protected () extends menu {
-  def this(editor: editor) = this()
+trait contextMenu extends menu {
   def addTarget(element: element): Unit = js.native
   def addTarget(element: element, nativeContextMenuOnCtrl: Boolean): Unit = js.native
   def open(offsetParent: element): Unit = js.native

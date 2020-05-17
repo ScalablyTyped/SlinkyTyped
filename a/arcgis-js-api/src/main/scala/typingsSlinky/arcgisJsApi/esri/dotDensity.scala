@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,7 +42,25 @@ trait dotDensity extends js.Object {
   def createRenderer(params: dotDensityCreateRendererParams): js.Promise[RendererResult] = js.native
 }
 
-@JSGlobal("__esri.dotDensity")
-@js.native
-object dotDensity extends TopLevel[dotDensity]
+object dotDensity {
+  @scala.inline
+  def apply(createRenderer: dotDensityCreateRendererParams => js.Promise[RendererResult]): dotDensity = {
+    val __obj = js.Dynamic.literal(createRenderer = js.Any.fromFunction1(createRenderer))
+    __obj.asInstanceOf[dotDensity]
+  }
+  @scala.inline
+  implicit class dotDensityOps[Self <: dotDensity] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateRenderer(value: dotDensityCreateRendererParams => js.Promise[RendererResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

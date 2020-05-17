@@ -1,6 +1,6 @@
 package typingsSlinky.pollyjsCore.mod
 
-import typingsSlinky.pollyjsCore.TypeofPersister
+import typingsSlinky.pollyjsCore.anon.TypeofPersister
 import typingsSlinky.pollyjsPersister.mod.default
 import typingsSlinky.std.Map
 import scala.scalajs.js

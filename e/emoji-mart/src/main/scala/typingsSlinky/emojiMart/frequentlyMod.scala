@@ -1,5 +1,6 @@
 package typingsSlinky.emojiMart
 
+import typingsSlinky.emojiMart.anon.PickEmojiDataid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

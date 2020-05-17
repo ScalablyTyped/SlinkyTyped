@@ -1,19 +1,19 @@
 package typingsSlinky.restify
 
-import typingsSlinky.restify.mod.plugins._TMetricsCallback
+import typingsSlinky.restify.mod.plugins.TMetricsCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object restifyStrings {
   @js.native
-  sealed trait aborted extends _TMetricsCallback
+  sealed trait aborted extends TMetricsCallback
   
   @js.native
   sealed trait after extends js.Object
   
   @js.native
-  sealed trait close extends _TMetricsCallback
+  sealed trait close extends TMetricsCallback
   
   @js.native
   sealed trait pre extends js.Object

@@ -29,7 +29,7 @@ import typingsSlinky.joi.mod.ValidationOptions
 import typingsSlinky.joi.mod.ValidationResult
 import typingsSlinky.joi.mod.WhenOptions
 import typingsSlinky.joi.mod.WhenSchemaOptions
-import typingsSlinky.nodeFetch.AnonSize
+import typingsSlinky.nodeFetch.anon.Size
 import typingsSlinky.nodeFetch.mod.BlobOptions
 import typingsSlinky.nodeFetch.mod.BlobPart
 import typingsSlinky.nodeFetch.mod.BodyInit
@@ -213,7 +213,7 @@ object mod extends js.Object {
     class Body ()
       extends typingsSlinky.nodeFetch.mod.Body {
       def this(body: js.Any) = this()
-      def this(body: js.Any, opts: AnonSize) = this()
+      def this(body: js.Any, opts: Size) = this()
     }
     
     @js.native

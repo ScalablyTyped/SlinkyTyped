@@ -4,10 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("CKEDITOR.dom.iterator")
 @js.native
-class iterator protected () extends js.Object {
-  def this(range: typingsSlinky.ckeditor.CKEDITOR.dom.range) = this()
+trait iterator extends js.Object {
   val activeFilter: typingsSlinky.ckeditor.CKEDITOR.filter = js.native
   var enforceRealBlocks: Boolean = js.native
   var enlargeBr: Boolean = js.native

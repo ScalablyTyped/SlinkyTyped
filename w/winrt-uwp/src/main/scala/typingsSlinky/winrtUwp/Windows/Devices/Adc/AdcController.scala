@@ -1,16 +1,12 @@
 package typingsSlinky.winrtUwp.Windows.Devices.Adc
 
-import typingsSlinky.winrtUwp.Windows.Devices.Adc.Provider.IAdcProvider
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
-import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents an ADC controller on the system */
-@JSGlobal("Windows.Devices.Adc.AdcController")
 @js.native
-abstract class AdcController () extends js.Object {
+trait AdcController extends js.Object {
   /** The number of channels available on the ADC controller. */
   var channelCount: Double = js.native
   /** Gets or sets the channel mode for the ADC controller. */
@@ -35,20 +31,69 @@ abstract class AdcController () extends js.Object {
   def openChannel(channelNumber: Double): AdcChannel = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Devices.Adc.AdcController")
-@js.native
-object AdcController extends js.Object {
-  /**
-    * Gets all the controllers that are connected to the system asynchronously .
-    * @param provider The ADC provider for the controllers on the system.
-    * @return When the method completes successfully, it returns a list of values that represent the controllers available on the system.
-    */
-  def getControllersAsync(provider: IAdcProvider): IPromiseWithIAsyncOperation[IVectorView[_]] = js.native
-  /**
-    * Gets the default ADC controller on the system.
-    * @return The default ADC controller on the system, or null if the system has no ADC controller.
-    */
-  def getDefaultAsync(): IPromiseWithIAsyncOperation[AdcController] = js.native
+object AdcController {
+  @scala.inline
+  def apply(
+    channelCount: Double,
+    channelMode: AdcChannelMode,
+    isChannelModeSupported: AdcChannelMode => Boolean,
+    maxValue: Double,
+    minValue: Double,
+    openChannel: Double => AdcChannel,
+    resolutionInBits: Double
+  ): AdcController = {
+    val __obj = js.Dynamic.literal(channelCount = channelCount.asInstanceOf[js.Any], channelMode = channelMode.asInstanceOf[js.Any], isChannelModeSupported = js.Any.fromFunction1(isChannelModeSupported), maxValue = maxValue.asInstanceOf[js.Any], minValue = minValue.asInstanceOf[js.Any], openChannel = js.Any.fromFunction1(openChannel), resolutionInBits = resolutionInBits.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AdcController]
+  }
+  @scala.inline
+  implicit class AdcControllerOps[Self <: AdcController] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChannelCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChannelMode(value: AdcChannelMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsChannelModeSupported(value: AdcChannelMode => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isChannelModeSupported")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMaxValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOpenChannel(value: Double => AdcChannel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openChannel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withResolutionInBits(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolutionInBits")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

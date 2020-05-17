@@ -1,12 +1,12 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonAnimationDurationUpdate
-import typingsSlinky.echarts.AnonAnimationEasing
-import typingsSlinky.echarts.AnonAnimationEasingUpdate
-import typingsSlinky.echarts.AnonConstantSpeed
-import typingsSlinky.echarts.AnonFontStyle
-import typingsSlinky.echarts.AnonLabelAnonFontStyle
-import typingsSlinky.echarts.AnonShadowColor
+import typingsSlinky.echarts.anon.AnimationDurationUpdate
+import typingsSlinky.echarts.anon.AnimationEasing
+import typingsSlinky.echarts.anon.AnimationEasingUpdate
+import typingsSlinky.echarts.anon.ConstantSpeed
+import typingsSlinky.echarts.anon.FontStyle
+import typingsSlinky.echarts.anon.LabelFontStyle
+import typingsSlinky.echarts.anon.ShadowColor
 import typingsSlinky.echarts.echarts.EChartOption.SeriesLines.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -176,14 +176,14 @@ trait SeriesLines_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-lines.effect
     */
-  var effect: js.UndefOr[AnonConstantSpeed] = js.native
+  var effect: js.UndefOr[ConstantSpeed] = js.native
   /**
     * Emphasis style.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-lines.emphasis
     */
-  var emphasis: js.UndefOr[AnonLabelAnonFontStyle] = js.native
+  var emphasis: js.UndefOr[LabelFontStyle] = js.native
   /**
     * Index of
     * [geographic coordinate](https://echarts.apache.org/en/option.html#geo)
@@ -211,7 +211,7 @@ trait SeriesLines_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-lines.label
     */
-  var label: js.UndefOr[AnonFontStyle] = js.native
+  var label: js.UndefOr[FontStyle] = js.native
   /**
     * Whether to enable the optimization of large-scale lines graph.
     * It could be enabled when there is a particularly large number
@@ -242,7 +242,7 @@ trait SeriesLines_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-lines.lineStyle
     */
-  var lineStyle: js.UndefOr[AnonShadowColor] = js.native
+  var lineStyle: js.UndefOr[ShadowColor] = js.native
   /**
     * Used to mark an area in chart.
     * For example, mark a time interval.
@@ -250,21 +250,21 @@ trait SeriesLines_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-lines.markArea
     */
-  var markArea: js.UndefOr[AnonAnimationEasingUpdate] = js.native
+  var markArea: js.UndefOr[AnimationEasingUpdate] = js.native
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-lines.markLine
     */
-  var markLine: js.UndefOr[AnonAnimationEasing] = js.native
+  var markLine: js.UndefOr[AnimationEasing] = js.native
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-lines.markPoint
     */
-  var markPoint: js.UndefOr[AnonAnimationDurationUpdate] = js.native
+  var markPoint: js.UndefOr[AnimationDurationUpdate] = js.native
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -545,7 +545,7 @@ object SeriesLines_ {
         ret
     }
     @scala.inline
-    def withEffect(value: AnonConstantSpeed): Self = {
+    def withEffect(value: ConstantSpeed): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("effect")(value.asInstanceOf[js.Any])
         ret
@@ -557,7 +557,7 @@ object SeriesLines_ {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonLabelAnonFontStyle): Self = {
+    def withEmphasis(value: LabelFontStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -593,7 +593,7 @@ object SeriesLines_ {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonFontStyle): Self = {
+    def withLabel(value: FontStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -629,7 +629,7 @@ object SeriesLines_ {
         ret
     }
     @scala.inline
-    def withLineStyle(value: AnonShadowColor): Self = {
+    def withLineStyle(value: ShadowColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
         ret
@@ -641,7 +641,7 @@ object SeriesLines_ {
         ret
     }
     @scala.inline
-    def withMarkArea(value: AnonAnimationEasingUpdate): Self = {
+    def withMarkArea(value: AnimationEasingUpdate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(value.asInstanceOf[js.Any])
         ret
@@ -653,7 +653,7 @@ object SeriesLines_ {
         ret
     }
     @scala.inline
-    def withMarkLine(value: AnonAnimationEasing): Self = {
+    def withMarkLine(value: AnimationEasing): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(value.asInstanceOf[js.Any])
         ret
@@ -665,7 +665,7 @@ object SeriesLines_ {
         ret
     }
     @scala.inline
-    def withMarkPoint(value: AnonAnimationDurationUpdate): Self = {
+    def withMarkPoint(value: AnimationDurationUpdate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(value.asInstanceOf[js.Any])
         ret

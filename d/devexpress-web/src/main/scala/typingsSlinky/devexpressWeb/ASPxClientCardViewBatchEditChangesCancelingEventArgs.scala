@@ -7,16 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientCardView.BatchEditChangesCanceling event.
   */
-@JSGlobal("ASPxClientCardViewBatchEditChangesCancelingEventArgs")
 @js.native
-class ASPxClientCardViewBatchEditChangesCancelingEventArgs protected () extends ASPxClientCancelEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientCardViewBatchEditChangesCancelingEventArgs class.
-    * @param insertedValues A hashtable that stores information about inserted cells.
-    * @param deletedValues A hashtable that stores information about deleted cells.
-    * @param updatedValues A hashtable that stores information about updated cells.
-    */
-  def this(insertedValues: js.Any, deletedValues: js.Any, updatedValues: js.Any) = this()
+trait ASPxClientCardViewBatchEditChangesCancelingEventArgs extends ASPxClientCancelEventArgs {
   /**
     * Gets a hashtable that maintains information about deleted cells.
     */
@@ -29,5 +21,39 @@ class ASPxClientCardViewBatchEditChangesCancelingEventArgs protected () extends 
     * Gets a hashtable that maintains information about updated cells.
     */
   var updatedValues: js.Any = js.native
+}
+
+object ASPxClientCardViewBatchEditChangesCancelingEventArgs {
+  @scala.inline
+  def apply(cancel: Boolean, deletedValues: js.Any, insertedValues: js.Any, updatedValues: js.Any): ASPxClientCardViewBatchEditChangesCancelingEventArgs = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], deletedValues = deletedValues.asInstanceOf[js.Any], insertedValues = insertedValues.asInstanceOf[js.Any], updatedValues = updatedValues.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientCardViewBatchEditChangesCancelingEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientCardViewBatchEditChangesCancelingEventArgsOps[Self <: ASPxClientCardViewBatchEditChangesCancelingEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeletedValues(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deletedValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInsertedValues(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertedValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdatedValues(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updatedValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

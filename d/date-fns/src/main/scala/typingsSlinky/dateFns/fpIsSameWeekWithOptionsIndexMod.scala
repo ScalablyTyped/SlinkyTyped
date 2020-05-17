@@ -1,6 +1,7 @@
 package typingsSlinky.dateFns
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.dateFns.anon.LocaleWeekStartsOn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation._
 object fpIsSameWeekWithOptionsIndexMod extends js.Object {
   @js.native
   object default
-    extends TopLevel[CurriedFn3[AnonLocaleWeekStartsOn, js.Date | Double, js.Date | Double, Boolean]]
+    extends TopLevel[CurriedFn3[LocaleWeekStartsOn, js.Date | Double, js.Date | Double, Boolean]]
   
 }
 

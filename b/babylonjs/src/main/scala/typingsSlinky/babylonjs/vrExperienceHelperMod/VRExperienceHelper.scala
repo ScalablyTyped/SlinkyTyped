@@ -1,8 +1,8 @@
 package typingsSlinky.babylonjs.vrExperienceHelperMod
 
 import org.scalajs.dom.raw.HTMLButtonElement
-import typingsSlinky.babylonjs.AnonController
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
+import typingsSlinky.babylonjs.anon.Controller
 import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.deviceOrientationCameraMod.DeviceOrientationCamera
 import typingsSlinky.babylonjs.mathColorMod.Color3
@@ -155,7 +155,7 @@ class VRExperienceHelper protected () extends js.Object {
     * Observable raised when a new mesh is selected based on meshSelectionPredicate.
     * This observable will provide the mesh and the controller used to select the mesh
     */
-  var onMeshSelectedWithController: Observable[AnonController] = js.native
+  var onMeshSelectedWithController: Observable[Controller] = js.native
   /**
     * Observable raised when a new mesh is picked based on meshSelectionPredicate
     */

@@ -7,7 +7,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeElements.PartialTextProperties
+import typingsSlinky.reactNativeElements.anon.PartialTextProperties
 import typingsSlinky.reactNativeElements.mod.CheckBoxProps
 import typingsSlinky.reactNativeElements.mod.IconType
 import scala.scalajs.js

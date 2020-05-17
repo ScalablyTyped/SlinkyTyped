@@ -10,9 +10,4 @@ package object mod {
     /* x */ org.scalajs.dom.raw.XMLHttpRequest, 
     scala.Unit
   ]
-  type LoadPathOption = java.lang.String | (js.Function2[
-    /* lngs */ js.Array[java.lang.String], 
-    /* namespaces */ js.Array[java.lang.String], 
-    java.lang.String
-  ])
 }

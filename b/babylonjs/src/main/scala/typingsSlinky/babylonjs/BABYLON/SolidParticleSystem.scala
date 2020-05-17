@@ -1,34 +1,14 @@
 package typingsSlinky.babylonjs.BABYLON
 
-import typingsSlinky.babylonjs.AnonBSphereRadiusFactor
-import typingsSlinky.babylonjs.AnonDelta
-import typingsSlinky.babylonjs.AnonFaceId
-import typingsSlinky.babylonjs.AnonPositionFunction
+import typingsSlinky.babylonjs.anon.Delta
+import typingsSlinky.babylonjs.anon.FaceId
+import typingsSlinky.babylonjs.anon.PositionFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.SolidParticleSystem")
 @js.native
-class SolidParticleSystem protected () extends IDisposable {
-  /**
-    * Creates a SPS (Solid Particle System) object.
-    * @param name (String) is the SPS name, this will be the underlying mesh name.
-    * @param scene (Scene) is the scene in which the SPS is added.
-    * @param options defines the options of the sps e.g.
-    * * updatable (optional boolean, default true) : if the SPS must be updatable or immutable.
-    * * isPickable (optional boolean, default false) : if the solid particles must be pickable.
-    * * enableDepthSort (optional boolean, default false) : if the solid particles must be sorted in the geometry according to their distance to the camera.
-    * * useModelMaterial (optional boolean, defaut false) : if the model materials must be used to create the SPS multimaterial. This enables the multimaterial supports of the SPS.
-    * * enableMultiMaterial (optional boolean, default false) : if the solid particles can be given different materials.
-    * * expandable (optional boolean, default false) : if particles can still be added after the initial SPS mesh creation.
-    * * particleIntersection (optional boolean, default false) : if the solid particle intersections must be computed.
-    * * boundingSphereOnly (optional boolean, default false) : if the particle intersection must be computed only with the bounding sphere (no bounding box computation, so faster).
-    * * bSphereRadiusFactor (optional float, default 1.0) : a number to multiply the boundind sphere radius by in order to reduce it for instance.
-    * @example bSphereRadiusFactor = 1.0 / Math.sqrt(3.0) => the bounding sphere exactly matches a spherical mesh.
-    */
-  def this(name: String, scene: Scene) = this()
-  def this(name: String, scene: Scene, options: AnonBSphereRadiusFactor) = this()
+trait SolidParticleSystem extends IDisposable {
   /**
     * Adds a new particle object in the particles array
     * @param idx particle index in particles array
@@ -231,7 +211,7 @@ class SolidParticleSystem protected () extends IDisposable {
     * `faceId` is the picked face index counted within this particle.
     * Please read : http://doc.babylonjs.com/how_to/Solid_Particle_System#pickable-particles
     */
-  var pickedParticles: js.Array[AnonFaceId] = js.native
+  var pickedParticles: js.Array[FaceId] = js.native
   /**
     * Recompute normals when adding a shape
     */
@@ -252,7 +232,7 @@ class SolidParticleSystem protected () extends IDisposable {
     * @returns the number of shapes in the system
     */
   def addShape(mesh: Mesh, nb: Double): Double = js.native
-  def addShape(mesh: Mesh, nb: Double, options: AnonPositionFunction): Double = js.native
+  def addShape(mesh: Mesh, nb: Double, options: PositionFunction): Double = js.native
   /**
     * This will be called  by `setParticles()` after all the other treatments and just before the actual mesh update.
     * This will be passed three parameters.
@@ -368,7 +348,7 @@ class SolidParticleSystem protected () extends IDisposable {
     * @returns the current SPS
     */
   def digest(mesh: Mesh): SolidParticleSystem = js.native
-  def digest(mesh: Mesh, options: AnonDelta): SolidParticleSystem = js.native
+  def digest(mesh: Mesh, options: Delta): SolidParticleSystem = js.native
   /**
     * Gets if the SPS is created as expandable at construction time.
     * Default : `false`

@@ -1,16 +1,15 @@
 package typingsSlinky.fsPromise.mod
 
 import typingsSlinky.fsExtra.mod.ReadResult
-import typingsSlinky.mz.AnonBuffer
-import typingsSlinky.mz.AnonBufferBytesRead
-import typingsSlinky.mz.AnonBufferDataView
-import typingsSlinky.mz.AnonBufferFloat32Array
-import typingsSlinky.mz.AnonBufferFloat64Array
-import typingsSlinky.mz.AnonBufferInt16Array
-import typingsSlinky.mz.AnonBufferInt32Array
-import typingsSlinky.mz.AnonBufferInt8Array
-import typingsSlinky.mz.AnonBufferUint32Array
-import typingsSlinky.mz.AnonBytesRead
+import typingsSlinky.mz.anon.BufferBytesRead
+import typingsSlinky.mz.anon.BufferDataView
+import typingsSlinky.mz.anon.BufferFloat32Array
+import typingsSlinky.mz.anon.BufferFloat64Array
+import typingsSlinky.mz.anon.BufferInt16Array
+import typingsSlinky.mz.anon.BufferInt32Array
+import typingsSlinky.mz.anon.BufferInt8Array
+import typingsSlinky.mz.anon.BufferUint32Array
+import typingsSlinky.mz.anon.BytesRead
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ErrnoException
 import scala.scalajs.js
@@ -38,8 +37,8 @@ object read extends js.Object {
     position: Null,
     callback: js.Function3[/* err */ ErrnoException, /* bytesRead */ Double, /* buffer */ Buffer, Unit]
   ): Unit = js.native
-  def apply(fd: Double, buffer: js.typedarray.DataView, offset: Double, length: Double): js.Promise[AnonBufferDataView] = js.native
-  def apply(fd: Double, buffer: js.typedarray.DataView, offset: Double, length: Double, position: Double): js.Promise[AnonBufferDataView] = js.native
+  def apply(fd: Double, buffer: js.typedarray.DataView, offset: Double, length: Double): js.Promise[BufferDataView] = js.native
+  def apply(fd: Double, buffer: js.typedarray.DataView, offset: Double, length: Double, position: Double): js.Promise[BufferDataView] = js.native
   def apply(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -66,8 +65,8 @@ object read extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  def apply(fd: Double, buffer: js.typedarray.Float32Array, offset: Double, length: Double): js.Promise[AnonBufferFloat32Array] = js.native
-  def apply(fd: Double, buffer: js.typedarray.Float32Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferFloat32Array] = js.native
+  def apply(fd: Double, buffer: js.typedarray.Float32Array, offset: Double, length: Double): js.Promise[BufferFloat32Array] = js.native
+  def apply(fd: Double, buffer: js.typedarray.Float32Array, offset: Double, length: Double, position: Double): js.Promise[BufferFloat32Array] = js.native
   def apply(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -94,8 +93,8 @@ object read extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  def apply(fd: Double, buffer: js.typedarray.Float64Array, offset: Double, length: Double): js.Promise[AnonBufferFloat64Array] = js.native
-  def apply(fd: Double, buffer: js.typedarray.Float64Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferFloat64Array] = js.native
+  def apply(fd: Double, buffer: js.typedarray.Float64Array, offset: Double, length: Double): js.Promise[BufferFloat64Array] = js.native
+  def apply(fd: Double, buffer: js.typedarray.Float64Array, offset: Double, length: Double, position: Double): js.Promise[BufferFloat64Array] = js.native
   def apply(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -122,8 +121,8 @@ object read extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  def apply(fd: Double, buffer: js.typedarray.Int16Array, offset: Double, length: Double): js.Promise[AnonBufferInt16Array] = js.native
-  def apply(fd: Double, buffer: js.typedarray.Int16Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferInt16Array] = js.native
+  def apply(fd: Double, buffer: js.typedarray.Int16Array, offset: Double, length: Double): js.Promise[BufferInt16Array] = js.native
+  def apply(fd: Double, buffer: js.typedarray.Int16Array, offset: Double, length: Double, position: Double): js.Promise[BufferInt16Array] = js.native
   def apply(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -150,8 +149,8 @@ object read extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  def apply(fd: Double, buffer: js.typedarray.Int32Array, offset: Double, length: Double): js.Promise[AnonBufferInt32Array] = js.native
-  def apply(fd: Double, buffer: js.typedarray.Int32Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferInt32Array] = js.native
+  def apply(fd: Double, buffer: js.typedarray.Int32Array, offset: Double, length: Double): js.Promise[BufferInt32Array] = js.native
+  def apply(fd: Double, buffer: js.typedarray.Int32Array, offset: Double, length: Double, position: Double): js.Promise[BufferInt32Array] = js.native
   def apply(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -178,8 +177,8 @@ object read extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  def apply(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double): js.Promise[AnonBufferInt8Array] = js.native
-  def apply(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferInt8Array] = js.native
+  def apply(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double): js.Promise[BufferInt8Array] = js.native
+  def apply(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double, position: Double): js.Promise[BufferInt8Array] = js.native
   def apply(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -206,8 +205,8 @@ object read extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  def apply(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double): js.Promise[AnonBufferBytesRead] = js.native
-  def apply(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferBytesRead] = js.native
+  def apply(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double): js.Promise[BufferBytesRead] = js.native
+  def apply(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double, position: Double): js.Promise[BufferBytesRead] = js.native
   def apply(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -234,8 +233,8 @@ object read extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  def apply(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double): js.Promise[AnonBufferUint32Array] = js.native
-  def apply(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferUint32Array] = js.native
+  def apply(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double): js.Promise[BufferUint32Array] = js.native
+  def apply(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double, position: Double): js.Promise[BufferUint32Array] = js.native
   def apply(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -262,8 +261,8 @@ object read extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  def apply(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double): js.Promise[AnonBuffer] = js.native
-  def apply(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double, position: Double): js.Promise[AnonBuffer] = js.native
+  def apply(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double): js.Promise[typingsSlinky.mz.anon.Buffer] = js.native
+  def apply(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double, position: Double): js.Promise[typingsSlinky.mz.anon.Buffer] = js.native
   def apply(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -290,14 +289,14 @@ object read extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  def apply(fd: Double, buffer: js.typedarray.Uint8ClampedArray, offset: Double, length: Double): js.Promise[AnonBytesRead] = js.native
+  def apply(fd: Double, buffer: js.typedarray.Uint8ClampedArray, offset: Double, length: Double): js.Promise[BytesRead] = js.native
   def apply(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
     offset: Double,
     length: Double,
     position: Double
-  ): js.Promise[AnonBytesRead] = js.native
+  ): js.Promise[BytesRead] = js.native
   def apply(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,

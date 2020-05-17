@@ -1,14 +1,14 @@
 package typingsSlinky.oracleOraclejet.ojdatetimepickerMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonCancel
-import typingsSlinky.oracleOraclejet.AnonChangeMonth
-import typingsSlinky.oracleOraclejet.AnonClass
-import typingsSlinky.oracleOraclejet.AnonConverterHint
-import typingsSlinky.oracleOraclejet.AnonDefinition
-import typingsSlinky.oracleOraclejet.AnonDisabled
-import typingsSlinky.oracleOraclejet.AnonFooterLayout
-import typingsSlinky.oracleOraclejet.AnonInstruction
+import typingsSlinky.oracleOraclejet.anon.Cancel
+import typingsSlinky.oracleOraclejet.anon.ChangeMonth
+import typingsSlinky.oracleOraclejet.anon.Class
+import typingsSlinky.oracleOraclejet.anon.ConverterHint
+import typingsSlinky.oracleOraclejet.anon.Definition
+import typingsSlinky.oracleOraclejet.anon.Disabled
+import typingsSlinky.oracleOraclejet.anon.FooterLayout
+import typingsSlinky.oracleOraclejet.anon.Instruction
 import typingsSlinky.oracleOraclejet.ojdatetimepickerMod.ojInputDate.DayFormatterInput
 import typingsSlinky.oracleOraclejet.ojdatetimepickerMod.ojInputDate.DayFormatterOutput
 import typingsSlinky.oracleOraclejet.ojmessagingMod.^
@@ -32,9 +32,9 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ojInputDateTimeSettableProperties extends ojInputDateSettableProperties {
-  var timePicker: AnonFooterLayout = js.native
+  var timePicker: FooterLayout = js.native
   @JSName("translations")
-  var translations_ojInputDateTimeSettableProperties: AnonCancel = js.native
+  var translations_ojInputDateTimeSettableProperties: Cancel = js.native
 }
 
 object ojInputDateTimeSettableProperties {
@@ -44,24 +44,24 @@ object ojInputDateTimeSettableProperties {
     autocomplete: on | off | String,
     autofocus: Boolean,
     converter: Converter[String] | RegisteredConverter,
-    datePicker: AnonChangeMonth,
+    datePicker: ChangeMonth,
     dayFormatter: DayFormatterInput => Null | all | DayFormatterOutput,
-    dayMetaData: StringDictionary[StringDictionary[StringDictionary[AnonDisabled]]],
+    dayMetaData: StringDictionary[StringDictionary[StringDictionary[Disabled]]],
     disabled: Boolean,
-    displayOptions: AnonConverterHint,
-    help: AnonInstruction,
-    helpHints: AnonDefinition,
+    displayOptions: ConverterHint,
+    help: Instruction,
+    helpHints: Definition,
     keyboardEdit: enabled | disabled,
     labelHint: String,
     messagesCustom: js.Array[^],
-    pickerAttributes: AnonClass,
+    pickerAttributes: Class,
     placeholder: String,
     rawValue: String,
     readonly: Boolean,
     renderMode: jet | native,
     required: Boolean,
-    timePicker: AnonFooterLayout,
-    translations: AnonCancel,
+    timePicker: FooterLayout,
+    translations: Cancel,
     valid: valid | pending | invalidHidden | invalidShown,
     value: String
   ): ojInputDateTimeSettableProperties = {
@@ -75,13 +75,13 @@ object ojInputDateTimeSettableProperties {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTimePicker(value: AnonFooterLayout): Self = {
+    def withTimePicker(value: FooterLayout): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("timePicker")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonCancel): Self = {
+    def withTranslations(value: Cancel): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

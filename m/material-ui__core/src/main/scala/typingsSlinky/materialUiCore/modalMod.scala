@@ -2,6 +2,7 @@ package typingsSlinky.materialUiCore
 
 import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
+import typingsSlinky.materialUiCore.anon.HandleContainerOverflow
 import typingsSlinky.materialUiCore.modalModalMod.ModalProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -14,7 +15,7 @@ object modalMod extends js.Object {
   @js.native
   class ModalManager ()
     extends typingsSlinky.materialUiCore.modalManagerMod.default {
-    def this(opts: AnonHandleContainerOverflow) = this()
+    def this(opts: HandleContainerOverflow) = this()
   }
   
   @js.native

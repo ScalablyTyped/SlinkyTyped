@@ -1,16 +1,16 @@
 package typingsSlinky.kafkaNode.mod
 
-import typingsSlinky.kafkaNode.AnonName
-import typingsSlinky.kafkaNode.AnonPartition
+import typingsSlinky.kafkaNode.anon.Name
+import typingsSlinky.kafkaNode.anon.Partition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CreateTopicRequest extends js.Object {
-  var configEntries: js.UndefOr[js.Array[AnonName]] = js.native
+  var configEntries: js.UndefOr[js.Array[Name]] = js.native
   var partitions: Double = js.native
-  var replicaAssignment: js.UndefOr[js.Array[AnonPartition]] = js.native
+  var replicaAssignment: js.UndefOr[js.Array[Partition]] = js.native
   var replicationFactor: Double = js.native
   var topic: String = js.native
 }
@@ -46,7 +46,7 @@ object CreateTopicRequest {
         ret
     }
     @scala.inline
-    def withConfigEntries(value: js.Array[AnonName]): Self = {
+    def withConfigEntries(value: js.Array[Name]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("configEntries")(value.asInstanceOf[js.Any])
         ret
@@ -58,7 +58,7 @@ object CreateTopicRequest {
         ret
     }
     @scala.inline
-    def withReplicaAssignment(value: js.Array[AnonPartition]): Self = {
+    def withReplicaAssignment(value: js.Array[Partition]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("replicaAssignment")(value.asInstanceOf[js.Any])
         ret

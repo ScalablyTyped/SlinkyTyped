@@ -1,6 +1,6 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin.filesRegisterMod
 
-import typingsSlinky.forkTsCheckerWebpackPlugin.AnonData
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ class FilesRegister protected () extends js.Object {
   var files: js.Any = js.native
   def add(filePath: String): Unit = js.native
   def ensure(filePath: String): Unit = js.native
-  def get(filePath: String): AnonData = js.native
+  def get(filePath: String): Data = js.native
   def getData(filePath: String): DataShape = js.native
   def getMtime(filePath: String): js.UndefOr[Double] = js.native
   def has(filePath: String): Boolean = js.native

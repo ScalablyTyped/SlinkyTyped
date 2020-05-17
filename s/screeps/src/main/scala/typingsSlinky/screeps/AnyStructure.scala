@@ -16,3 +16,16 @@ import scala.scalajs.js.annotation._
 */
 trait AnyStructure extends js.Object
 
+object AnyStructure {
+  @scala.inline
+  implicit def apply(value: AnyOwnedStructure): AnyStructure = value.asInstanceOf[AnyStructure]
+  @scala.inline
+  implicit def apply(value: StructureContainer): AnyStructure = value.asInstanceOf[AnyStructure]
+  @scala.inline
+  implicit def apply(value: StructurePortal): AnyStructure = value.asInstanceOf[AnyStructure]
+  @scala.inline
+  implicit def apply(value: StructureRoad): AnyStructure = value.asInstanceOf[AnyStructure]
+  @scala.inline
+  implicit def apply(value: StructureWall): AnyStructure = value.asInstanceOf[AnyStructure]
+}
+

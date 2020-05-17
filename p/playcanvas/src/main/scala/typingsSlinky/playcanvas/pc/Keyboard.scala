@@ -1,8 +1,6 @@
 package typingsSlinky.playcanvas.pc
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.playcanvas.AnonPreventDefault
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,13 +20,8 @@ import scala.scalajs.js.annotation._
   * @example
   * var keyboard = new pc.Keyboard(window); // attach keyboard listeners to the window
   */
-@JSGlobal("pc.Keyboard")
 @js.native
-class Keyboard () extends EventHandler {
-  def this(element: Element) = this()
-  def this(element: Window_) = this()
-  def this(element: Element, options: AnonPreventDefault) = this()
-  def this(element: Window_, options: AnonPreventDefault) = this()
+trait Keyboard extends EventHandler {
   /**
     * @function
     * @name pc.Keyboard#attach

@@ -1,8 +1,8 @@
 package typingsSlinky.firebaseFirestore.specsSpecTestRunnerMod
 
 import org.scalablytyped.runtime.NumberDictionary
-import typingsSlinky.firebaseFirestore.AnonAcknowledgedDocs
-import typingsSlinky.firebaseFirestore.AnonResumeToken
+import typingsSlinky.firebaseFirestore.anon.AcknowledgedDocs
+import typingsSlinky.firebaseFirestore.anon.ResumeToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait StateExpectation extends js.Object {
   /**
     * Current expected active targets. Verified in each step until overwritten.
     */
-  var activeTargets: js.UndefOr[NumberDictionary[AnonResumeToken]] = js.native
+  var activeTargets: js.UndefOr[NumberDictionary[ResumeToken]] = js.native
   /**
     * Whether the instance holds the primary lease. Used in multi-client tests.
     */
@@ -28,7 +28,7 @@ trait StateExpectation extends js.Object {
   /**
     * Expected set of callbacks for previously written docs.
     */
-  var userCallbacks: js.UndefOr[AnonAcknowledgedDocs] = js.native
+  var userCallbacks: js.UndefOr[AcknowledgedDocs] = js.native
   /** Number of requests sent to the watch stream. */
   var watchStreamRequestCount: js.UndefOr[Double] = js.native
   /** Number of requests sent to the write stream. */
@@ -48,7 +48,7 @@ object StateExpectation {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActiveTargets(value: NumberDictionary[AnonResumeToken]): Self = {
+    def withActiveTargets(value: NumberDictionary[ResumeToken]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("activeTargets")(value.asInstanceOf[js.Any])
         ret
@@ -120,7 +120,7 @@ object StateExpectation {
         ret
     }
     @scala.inline
-    def withUserCallbacks(value: AnonAcknowledgedDocs): Self = {
+    def withUserCallbacks(value: AcknowledgedDocs): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("userCallbacks")(value.asInstanceOf[js.Any])
         ret

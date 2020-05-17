@@ -13,40 +13,40 @@ trait GlobalEventHandlersEventMap extends js.Object {
   var animationstart: org.scalajs.dom.raw.AnimationEvent = js.native
   var auxclick: org.scalajs.dom.raw.MouseEvent = js.native
   var blur: org.scalajs.dom.raw.FocusEvent = js.native
-  var cancel: Event_ = js.native
-  var canplay: Event_ = js.native
-  var canplaythrough: Event_ = js.native
-  var change: Event_ = js.native
+  var cancel: org.scalajs.dom.raw.Event = js.native
+  var canplay: org.scalajs.dom.raw.Event = js.native
+  var canplaythrough: org.scalajs.dom.raw.Event = js.native
+  var change: org.scalajs.dom.raw.Event = js.native
   var click: org.scalajs.dom.raw.MouseEvent = js.native
-  var close: Event_ = js.native
+  var close: org.scalajs.dom.raw.Event = js.native
   var contextmenu: org.scalajs.dom.raw.MouseEvent = js.native
-  var cuechange: Event_ = js.native
+  var cuechange: org.scalajs.dom.raw.Event = js.native
   var dblclick: org.scalajs.dom.raw.MouseEvent = js.native
   var drag: org.scalajs.dom.raw.DragEvent = js.native
   var dragend: org.scalajs.dom.raw.DragEvent = js.native
   var dragenter: org.scalajs.dom.raw.DragEvent = js.native
-  var dragexit: Event_ = js.native
+  var dragexit: org.scalajs.dom.raw.Event = js.native
   var dragleave: org.scalajs.dom.raw.DragEvent = js.native
   var dragover: org.scalajs.dom.raw.DragEvent = js.native
   var dragstart: org.scalajs.dom.raw.DragEvent = js.native
   var drop: org.scalajs.dom.raw.DragEvent = js.native
-  var durationchange: Event_ = js.native
-  var emptied: Event_ = js.native
-  var ended: Event_ = js.native
+  var durationchange: org.scalajs.dom.raw.Event = js.native
+  var emptied: org.scalajs.dom.raw.Event = js.native
+  var ended: org.scalajs.dom.raw.Event = js.native
   var error: org.scalajs.dom.raw.ErrorEvent = js.native
   var focus: org.scalajs.dom.raw.FocusEvent = js.native
   var focusin: org.scalajs.dom.raw.FocusEvent = js.native
   var focusout: org.scalajs.dom.raw.FocusEvent = js.native
   var gotpointercapture: org.scalajs.dom.raw.PointerEvent = js.native
-  var input: Event_ = js.native
-  var invalid: Event_ = js.native
+  var input: org.scalajs.dom.raw.Event = js.native
+  var invalid: org.scalajs.dom.raw.Event = js.native
   var keydown: org.scalajs.dom.raw.KeyboardEvent = js.native
   var keypress: org.scalajs.dom.raw.KeyboardEvent = js.native
   var keyup: org.scalajs.dom.raw.KeyboardEvent = js.native
-  var load: Event_ = js.native
-  var loadeddata: Event_ = js.native
-  var loadedmetadata: Event_ = js.native
-  var loadstart: Event_ = js.native
+  var load: org.scalajs.dom.raw.Event = js.native
+  var loadeddata: org.scalajs.dom.raw.Event = js.native
+  var loadedmetadata: org.scalajs.dom.raw.Event = js.native
+  var loadstart: org.scalajs.dom.raw.Event = js.native
   var lostpointercapture: org.scalajs.dom.raw.PointerEvent = js.native
   var mousedown: org.scalajs.dom.raw.MouseEvent = js.native
   var mouseenter: org.scalajs.dom.raw.MouseEvent = js.native
@@ -55,9 +55,9 @@ trait GlobalEventHandlersEventMap extends js.Object {
   var mouseout: org.scalajs.dom.raw.MouseEvent = js.native
   var mouseover: org.scalajs.dom.raw.MouseEvent = js.native
   var mouseup: org.scalajs.dom.raw.MouseEvent = js.native
-  var pause: Event_ = js.native
-  var play: Event_ = js.native
-  var playing: Event_ = js.native
+  var pause: org.scalajs.dom.raw.Event = js.native
+  var play: org.scalajs.dom.raw.Event = js.native
+  var playing: org.scalajs.dom.raw.Event = js.native
   var pointercancel: org.scalajs.dom.raw.PointerEvent = js.native
   var pointerdown: org.scalajs.dom.raw.PointerEvent = js.native
   var pointerenter: org.scalajs.dom.raw.PointerEvent = js.native
@@ -67,21 +67,21 @@ trait GlobalEventHandlersEventMap extends js.Object {
   var pointerover: org.scalajs.dom.raw.PointerEvent = js.native
   var pointerup: org.scalajs.dom.raw.PointerEvent = js.native
   var progress: org.scalajs.dom.raw.ProgressEvent = js.native
-  var ratechange: Event_ = js.native
-  var reset: Event_ = js.native
+  var ratechange: org.scalajs.dom.raw.Event = js.native
+  var reset: org.scalajs.dom.raw.Event = js.native
   var resize: org.scalajs.dom.raw.UIEvent = js.native
-  var scroll: Event_ = js.native
+  var scroll: org.scalajs.dom.raw.Event = js.native
   var securitypolicyviolation: SecurityPolicyViolationEvent = js.native
-  var seeked: Event_ = js.native
-  var seeking: Event_ = js.native
-  var select: Event_ = js.native
-  var selectionchange: Event_ = js.native
-  var selectstart: Event_ = js.native
-  var stalled: Event_ = js.native
-  var submit: Event_ = js.native
-  var suspend: Event_ = js.native
-  var timeupdate: Event_ = js.native
-  var toggle: Event_ = js.native
+  var seeked: org.scalajs.dom.raw.Event = js.native
+  var seeking: org.scalajs.dom.raw.Event = js.native
+  var select: org.scalajs.dom.raw.Event = js.native
+  var selectionchange: org.scalajs.dom.raw.Event = js.native
+  var selectstart: org.scalajs.dom.raw.Event = js.native
+  var stalled: org.scalajs.dom.raw.Event = js.native
+  var submit: org.scalajs.dom.raw.Event = js.native
+  var suspend: org.scalajs.dom.raw.Event = js.native
+  var timeupdate: org.scalajs.dom.raw.Event = js.native
+  var toggle: org.scalajs.dom.raw.Event = js.native
   var touchcancel: org.scalajs.dom.raw.TouchEvent = js.native
   var touchend: org.scalajs.dom.raw.TouchEvent = js.native
   var touchmove: org.scalajs.dom.raw.TouchEvent = js.native
@@ -90,8 +90,8 @@ trait GlobalEventHandlersEventMap extends js.Object {
   var transitionend: org.scalajs.dom.raw.TransitionEvent = js.native
   var transitionrun: org.scalajs.dom.raw.TransitionEvent = js.native
   var transitionstart: org.scalajs.dom.raw.TransitionEvent = js.native
-  var volumechange: Event_ = js.native
-  var waiting: Event_ = js.native
+  var volumechange: org.scalajs.dom.raw.Event = js.native
+  var waiting: org.scalajs.dom.raw.Event = js.native
   var wheel: org.scalajs.dom.raw.WheelEvent = js.native
 }
 
@@ -105,40 +105,40 @@ object GlobalEventHandlersEventMap {
     animationstart: org.scalajs.dom.raw.AnimationEvent,
     auxclick: org.scalajs.dom.raw.MouseEvent,
     blur: org.scalajs.dom.raw.FocusEvent,
-    cancel: Event_,
-    canplay: Event_,
-    canplaythrough: Event_,
-    change: Event_,
+    cancel: org.scalajs.dom.raw.Event,
+    canplay: org.scalajs.dom.raw.Event,
+    canplaythrough: org.scalajs.dom.raw.Event,
+    change: org.scalajs.dom.raw.Event,
     click: org.scalajs.dom.raw.MouseEvent,
-    close: Event_,
+    close: org.scalajs.dom.raw.Event,
     contextmenu: org.scalajs.dom.raw.MouseEvent,
-    cuechange: Event_,
+    cuechange: org.scalajs.dom.raw.Event,
     dblclick: org.scalajs.dom.raw.MouseEvent,
     drag: org.scalajs.dom.raw.DragEvent,
     dragend: org.scalajs.dom.raw.DragEvent,
     dragenter: org.scalajs.dom.raw.DragEvent,
-    dragexit: Event_,
+    dragexit: org.scalajs.dom.raw.Event,
     dragleave: org.scalajs.dom.raw.DragEvent,
     dragover: org.scalajs.dom.raw.DragEvent,
     dragstart: org.scalajs.dom.raw.DragEvent,
     drop: org.scalajs.dom.raw.DragEvent,
-    durationchange: Event_,
-    emptied: Event_,
-    ended: Event_,
+    durationchange: org.scalajs.dom.raw.Event,
+    emptied: org.scalajs.dom.raw.Event,
+    ended: org.scalajs.dom.raw.Event,
     error: org.scalajs.dom.raw.ErrorEvent,
     focus: org.scalajs.dom.raw.FocusEvent,
     focusin: org.scalajs.dom.raw.FocusEvent,
     focusout: org.scalajs.dom.raw.FocusEvent,
     gotpointercapture: org.scalajs.dom.raw.PointerEvent,
-    input: Event_,
-    invalid: Event_,
+    input: org.scalajs.dom.raw.Event,
+    invalid: org.scalajs.dom.raw.Event,
     keydown: org.scalajs.dom.raw.KeyboardEvent,
     keypress: org.scalajs.dom.raw.KeyboardEvent,
     keyup: org.scalajs.dom.raw.KeyboardEvent,
-    load: Event_,
-    loadeddata: Event_,
-    loadedmetadata: Event_,
-    loadstart: Event_,
+    load: org.scalajs.dom.raw.Event,
+    loadeddata: org.scalajs.dom.raw.Event,
+    loadedmetadata: org.scalajs.dom.raw.Event,
+    loadstart: org.scalajs.dom.raw.Event,
     lostpointercapture: org.scalajs.dom.raw.PointerEvent,
     mousedown: org.scalajs.dom.raw.MouseEvent,
     mouseenter: org.scalajs.dom.raw.MouseEvent,
@@ -147,9 +147,9 @@ object GlobalEventHandlersEventMap {
     mouseout: org.scalajs.dom.raw.MouseEvent,
     mouseover: org.scalajs.dom.raw.MouseEvent,
     mouseup: org.scalajs.dom.raw.MouseEvent,
-    pause: Event_,
-    play: Event_,
-    playing: Event_,
+    pause: org.scalajs.dom.raw.Event,
+    play: org.scalajs.dom.raw.Event,
+    playing: org.scalajs.dom.raw.Event,
     pointercancel: org.scalajs.dom.raw.PointerEvent,
     pointerdown: org.scalajs.dom.raw.PointerEvent,
     pointerenter: org.scalajs.dom.raw.PointerEvent,
@@ -159,21 +159,21 @@ object GlobalEventHandlersEventMap {
     pointerover: org.scalajs.dom.raw.PointerEvent,
     pointerup: org.scalajs.dom.raw.PointerEvent,
     progress: org.scalajs.dom.raw.ProgressEvent,
-    ratechange: Event_,
-    reset: Event_,
+    ratechange: org.scalajs.dom.raw.Event,
+    reset: org.scalajs.dom.raw.Event,
     resize: org.scalajs.dom.raw.UIEvent,
-    scroll: Event_,
+    scroll: org.scalajs.dom.raw.Event,
     securitypolicyviolation: SecurityPolicyViolationEvent,
-    seeked: Event_,
-    seeking: Event_,
-    select: Event_,
-    selectionchange: Event_,
-    selectstart: Event_,
-    stalled: Event_,
-    submit: Event_,
-    suspend: Event_,
-    timeupdate: Event_,
-    toggle: Event_,
+    seeked: org.scalajs.dom.raw.Event,
+    seeking: org.scalajs.dom.raw.Event,
+    select: org.scalajs.dom.raw.Event,
+    selectionchange: org.scalajs.dom.raw.Event,
+    selectstart: org.scalajs.dom.raw.Event,
+    stalled: org.scalajs.dom.raw.Event,
+    submit: org.scalajs.dom.raw.Event,
+    suspend: org.scalajs.dom.raw.Event,
+    timeupdate: org.scalajs.dom.raw.Event,
+    toggle: org.scalajs.dom.raw.Event,
     touchcancel: org.scalajs.dom.raw.TouchEvent,
     touchend: org.scalajs.dom.raw.TouchEvent,
     touchmove: org.scalajs.dom.raw.TouchEvent,
@@ -182,8 +182,8 @@ object GlobalEventHandlersEventMap {
     transitionend: org.scalajs.dom.raw.TransitionEvent,
     transitionrun: org.scalajs.dom.raw.TransitionEvent,
     transitionstart: org.scalajs.dom.raw.TransitionEvent,
-    volumechange: Event_,
-    waiting: Event_,
+    volumechange: org.scalajs.dom.raw.Event,
+    waiting: org.scalajs.dom.raw.Event,
     wheel: org.scalajs.dom.raw.WheelEvent
   ): GlobalEventHandlersEventMap = {
     val __obj = js.Dynamic.literal(abort = abort.asInstanceOf[js.Any], animationcancel = animationcancel.asInstanceOf[js.Any], animationend = animationend.asInstanceOf[js.Any], animationiteration = animationiteration.asInstanceOf[js.Any], animationstart = animationstart.asInstanceOf[js.Any], auxclick = auxclick.asInstanceOf[js.Any], blur = blur.asInstanceOf[js.Any], cancel = cancel.asInstanceOf[js.Any], canplay = canplay.asInstanceOf[js.Any], canplaythrough = canplaythrough.asInstanceOf[js.Any], change = change.asInstanceOf[js.Any], click = click.asInstanceOf[js.Any], close = close.asInstanceOf[js.Any], contextmenu = contextmenu.asInstanceOf[js.Any], cuechange = cuechange.asInstanceOf[js.Any], dblclick = dblclick.asInstanceOf[js.Any], drag = drag.asInstanceOf[js.Any], dragend = dragend.asInstanceOf[js.Any], dragenter = dragenter.asInstanceOf[js.Any], dragexit = dragexit.asInstanceOf[js.Any], dragleave = dragleave.asInstanceOf[js.Any], dragover = dragover.asInstanceOf[js.Any], dragstart = dragstart.asInstanceOf[js.Any], drop = drop.asInstanceOf[js.Any], durationchange = durationchange.asInstanceOf[js.Any], emptied = emptied.asInstanceOf[js.Any], ended = ended.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], focus = focus.asInstanceOf[js.Any], focusin = focusin.asInstanceOf[js.Any], focusout = focusout.asInstanceOf[js.Any], gotpointercapture = gotpointercapture.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], invalid = invalid.asInstanceOf[js.Any], keydown = keydown.asInstanceOf[js.Any], keypress = keypress.asInstanceOf[js.Any], keyup = keyup.asInstanceOf[js.Any], load = load.asInstanceOf[js.Any], loadeddata = loadeddata.asInstanceOf[js.Any], loadedmetadata = loadedmetadata.asInstanceOf[js.Any], loadstart = loadstart.asInstanceOf[js.Any], lostpointercapture = lostpointercapture.asInstanceOf[js.Any], mousedown = mousedown.asInstanceOf[js.Any], mouseenter = mouseenter.asInstanceOf[js.Any], mouseleave = mouseleave.asInstanceOf[js.Any], mousemove = mousemove.asInstanceOf[js.Any], mouseout = mouseout.asInstanceOf[js.Any], mouseover = mouseover.asInstanceOf[js.Any], mouseup = mouseup.asInstanceOf[js.Any], pause = pause.asInstanceOf[js.Any], play = play.asInstanceOf[js.Any], playing = playing.asInstanceOf[js.Any], pointercancel = pointercancel.asInstanceOf[js.Any], pointerdown = pointerdown.asInstanceOf[js.Any], pointerenter = pointerenter.asInstanceOf[js.Any], pointerleave = pointerleave.asInstanceOf[js.Any], pointermove = pointermove.asInstanceOf[js.Any], pointerout = pointerout.asInstanceOf[js.Any], pointerover = pointerover.asInstanceOf[js.Any], pointerup = pointerup.asInstanceOf[js.Any], progress = progress.asInstanceOf[js.Any], ratechange = ratechange.asInstanceOf[js.Any], reset = reset.asInstanceOf[js.Any], resize = resize.asInstanceOf[js.Any], scroll = scroll.asInstanceOf[js.Any], securitypolicyviolation = securitypolicyviolation.asInstanceOf[js.Any], seeked = seeked.asInstanceOf[js.Any], seeking = seeking.asInstanceOf[js.Any], select = select.asInstanceOf[js.Any], selectionchange = selectionchange.asInstanceOf[js.Any], selectstart = selectstart.asInstanceOf[js.Any], stalled = stalled.asInstanceOf[js.Any], submit = submit.asInstanceOf[js.Any], suspend = suspend.asInstanceOf[js.Any], timeupdate = timeupdate.asInstanceOf[js.Any], toggle = toggle.asInstanceOf[js.Any], touchcancel = touchcancel.asInstanceOf[js.Any], touchend = touchend.asInstanceOf[js.Any], touchmove = touchmove.asInstanceOf[js.Any], touchstart = touchstart.asInstanceOf[js.Any], transitioncancel = transitioncancel.asInstanceOf[js.Any], transitionend = transitionend.asInstanceOf[js.Any], transitionrun = transitionrun.asInstanceOf[js.Any], transitionstart = transitionstart.asInstanceOf[js.Any], volumechange = volumechange.asInstanceOf[js.Any], waiting = waiting.asInstanceOf[js.Any], wheel = wheel.asInstanceOf[js.Any])
@@ -238,25 +238,25 @@ object GlobalEventHandlersEventMap {
         ret
     }
     @scala.inline
-    def withCancel(value: Event_): Self = {
+    def withCancel(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withCanplay(value: Event_): Self = {
+    def withCanplay(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("canplay")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withCanplaythrough(value: Event_): Self = {
+    def withCanplaythrough(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("canplaythrough")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withChange(value: Event_): Self = {
+    def withChange(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("change")(value.asInstanceOf[js.Any])
         ret
@@ -268,7 +268,7 @@ object GlobalEventHandlersEventMap {
         ret
     }
     @scala.inline
-    def withClose(value: Event_): Self = {
+    def withClose(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("close")(value.asInstanceOf[js.Any])
         ret
@@ -280,7 +280,7 @@ object GlobalEventHandlersEventMap {
         ret
     }
     @scala.inline
-    def withCuechange(value: Event_): Self = {
+    def withCuechange(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cuechange")(value.asInstanceOf[js.Any])
         ret
@@ -310,7 +310,7 @@ object GlobalEventHandlersEventMap {
         ret
     }
     @scala.inline
-    def withDragexit(value: Event_): Self = {
+    def withDragexit(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragexit")(value.asInstanceOf[js.Any])
         ret
@@ -340,19 +340,19 @@ object GlobalEventHandlersEventMap {
         ret
     }
     @scala.inline
-    def withDurationchange(value: Event_): Self = {
+    def withDurationchange(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("durationchange")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withEmptied(value: Event_): Self = {
+    def withEmptied(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emptied")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withEnded(value: Event_): Self = {
+    def withEnded(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ended")(value.asInstanceOf[js.Any])
         ret
@@ -388,13 +388,13 @@ object GlobalEventHandlersEventMap {
         ret
     }
     @scala.inline
-    def withInput(value: Event_): Self = {
+    def withInput(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withInvalid(value: Event_): Self = {
+    def withInvalid(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("invalid")(value.asInstanceOf[js.Any])
         ret
@@ -418,25 +418,25 @@ object GlobalEventHandlersEventMap {
         ret
     }
     @scala.inline
-    def withLoad(value: Event_): Self = {
+    def withLoad(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("load")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withLoadeddata(value: Event_): Self = {
+    def withLoadeddata(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loadeddata")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withLoadedmetadata(value: Event_): Self = {
+    def withLoadedmetadata(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loadedmetadata")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withLoadstart(value: Event_): Self = {
+    def withLoadstart(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loadstart")(value.asInstanceOf[js.Any])
         ret
@@ -490,19 +490,19 @@ object GlobalEventHandlersEventMap {
         ret
     }
     @scala.inline
-    def withPause(value: Event_): Self = {
+    def withPause(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pause")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPlay(value: Event_): Self = {
+    def withPlay(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("play")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPlaying(value: Event_): Self = {
+    def withPlaying(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("playing")(value.asInstanceOf[js.Any])
         ret
@@ -562,13 +562,13 @@ object GlobalEventHandlersEventMap {
         ret
     }
     @scala.inline
-    def withRatechange(value: Event_): Self = {
+    def withRatechange(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ratechange")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withReset(value: Event_): Self = {
+    def withReset(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(value.asInstanceOf[js.Any])
         ret
@@ -580,7 +580,7 @@ object GlobalEventHandlersEventMap {
         ret
     }
     @scala.inline
-    def withScroll(value: Event_): Self = {
+    def withScroll(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scroll")(value.asInstanceOf[js.Any])
         ret
@@ -592,61 +592,61 @@ object GlobalEventHandlersEventMap {
         ret
     }
     @scala.inline
-    def withSeeked(value: Event_): Self = {
+    def withSeeked(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seeked")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSeeking(value: Event_): Self = {
+    def withSeeking(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seeking")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSelect(value: Event_): Self = {
+    def withSelect(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("select")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSelectionchange(value: Event_): Self = {
+    def withSelectionchange(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectionchange")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSelectstart(value: Event_): Self = {
+    def withSelectstart(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectstart")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withStalled(value: Event_): Self = {
+    def withStalled(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stalled")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSubmit(value: Event_): Self = {
+    def withSubmit(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("submit")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSuspend(value: Event_): Self = {
+    def withSuspend(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("suspend")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withTimeupdate(value: Event_): Self = {
+    def withTimeupdate(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("timeupdate")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withToggle(value: Event_): Self = {
+    def withToggle(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(value.asInstanceOf[js.Any])
         ret
@@ -700,13 +700,13 @@ object GlobalEventHandlersEventMap {
         ret
     }
     @scala.inline
-    def withVolumechange(value: Event_): Self = {
+    def withVolumechange(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("volumechange")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withWaiting(value: Event_): Self = {
+    def withWaiting(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("waiting")(value.asInstanceOf[js.Any])
         ret

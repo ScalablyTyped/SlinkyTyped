@@ -4,8 +4,8 @@ import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonBaseFontSizeBreakpoints
-import typingsSlinky.cathoQuantum.AnonCallbackFn
+import typingsSlinky.cathoQuantum.anon.BaseFontSizeBreakpoints
+import typingsSlinky.cathoQuantum.anon.CallbackFn
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.error
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.neutral
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.primary
@@ -27,7 +27,7 @@ object SnackBar {
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
     @scala.inline
-    def actionTrigger(value: AnonCallbackFn): this.type = set("actionTrigger", value.asInstanceOf[js.Any])
+    def actionTrigger(value: CallbackFn): this.type = set("actionTrigger", value.asInstanceOf[js.Any])
     @scala.inline
     def closeButtonAriaLabel(value: String): this.type = set("closeButtonAriaLabel", value.asInstanceOf[js.Any])
     @scala.inline
@@ -43,7 +43,7 @@ object SnackBar {
     @scala.inline
     def text(value: String): this.type = set("text", value.asInstanceOf[js.Any])
     @scala.inline
-    def theme(value: AnonBaseFontSizeBreakpoints): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: BaseFontSizeBreakpoints): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SnackBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

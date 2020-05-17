@@ -6,14 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a single frame of audio data. */
-@JSGlobal("Windows.Media.AudioFrame")
 @js.native
-class AudioFrame protected () extends js.Object {
-  /**
-    * Initializes a new instance of the AudioFrame class.
-    * @param capacity The maximum number of bytes that the buffer can hold.
-    */
-  def this(capacity: Double) = this()
+trait AudioFrame extends js.Object {
   /** Gets or sets the duration of the audio frame. */
   var duration: Double = js.native
   /** Gets the extended property set which enables getting and setting properties on the AudioFrame . */
@@ -36,5 +30,86 @@ class AudioFrame protected () extends js.Object {
     * @return The buffer containing pixel data.
     */
   def lockBuffer(mode: AudioBufferAccessMode): AudioBuffer = js.native
+}
+
+object AudioFrame {
+  @scala.inline
+  def apply(
+    close: () => Unit,
+    duration: Double,
+    extendedProperties: IPropertySet,
+    isDiscontinuous: Boolean,
+    isReadOnly: Boolean,
+    lockBuffer: AudioBufferAccessMode => AudioBuffer,
+    relativeTime: Double,
+    systemRelativeTime: Double,
+    `type`: String
+  ): AudioFrame = {
+    val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), duration = duration.asInstanceOf[js.Any], extendedProperties = extendedProperties.asInstanceOf[js.Any], isDiscontinuous = isDiscontinuous.asInstanceOf[js.Any], isReadOnly = isReadOnly.asInstanceOf[js.Any], lockBuffer = js.Any.fromFunction1(lockBuffer), relativeTime = relativeTime.asInstanceOf[js.Any], systemRelativeTime = systemRelativeTime.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AudioFrame]
+  }
+  @scala.inline
+  implicit class AudioFrameOps[Self <: AudioFrame] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtendedProperties(value: IPropertySet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsDiscontinuous(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDiscontinuous")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsReadOnly(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isReadOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLockBuffer(value: AudioBufferAccessMode => AudioBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lockBuffer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRelativeTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSystemRelativeTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("systemRelativeTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

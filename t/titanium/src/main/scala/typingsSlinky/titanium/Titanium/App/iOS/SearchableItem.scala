@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * Used to create a unique object containing all of the search information that will appear in the device search index.
 			 */
-@JSGlobal("Titanium.App.iOS.SearchableItem")
 @js.native
-class SearchableItem () extends Proxy {
+trait SearchableItem extends Proxy {
   /**
   				 * Set of metadata properties to display for the item.
   				 */

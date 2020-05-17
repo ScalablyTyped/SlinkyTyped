@@ -70,8 +70,8 @@ import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.yesExclude
 import typingsSlinky.antDesignReactNative.inputItemPropsTypeMod.InputItemPropsType
 import typingsSlinky.antDesignReactNative.inputItemStyleMod.InputItemStyle
 import typingsSlinky.antDesignReactNative.libStyleMod.WithThemeStyles
-import typingsSlinky.reactNative.AnonStart
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.Start
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -198,7 +198,7 @@ trait InputItemProps
   var scrollEnabled: js.UndefOr[Boolean] = js.native
   var secureTextEntry: js.UndefOr[Boolean] = js.native
   var selectTextOnFocus: js.UndefOr[Boolean] = js.native
-  var selection: js.UndefOr[AnonStart] = js.native
+  var selection: js.UndefOr[Start] = js.native
   var selectionColor: js.UndefOr[String] = js.native
   var selectionState: js.UndefOr[DocumentSelectionState] = js.native
   var shouldRasterizeIOS: js.UndefOr[Boolean] = js.native
@@ -1266,7 +1266,7 @@ object InputItemProps {
         ret
     }
     @scala.inline
-    def withSelection(value: AnonStart): Self = {
+    def withSelection(value: Start): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
         ret

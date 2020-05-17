@@ -1,7 +1,7 @@
 package typingsSlinky.wonderJs.mod
 
-import typingsSlinky.wonderJs.AnonCanvasId
-import typingsSlinky.wonderJs.TypeofMain
+import typingsSlinky.wonderJs.anon.CanvasId
+import typingsSlinky.wonderJs.anon.TypeofMain
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,6 +16,6 @@ class Main ()
 @js.native
 object Main extends js.Object {
   def init(): TypeofMain = js.native
-  def setConfig(hasCanvasIdIsTestScreenSizeUseDevicePixelRatioContextConfig: AnonCanvasId): TypeofMain = js.native
+  def setConfig(hasCanvasIdIsTestScreenSizeUseDevicePixelRatioContextConfig: CanvasId): TypeofMain = js.native
 }
 

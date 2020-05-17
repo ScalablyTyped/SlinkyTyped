@@ -1,9 +1,9 @@
 package typingsSlinky.oracleOraclejet.ojgaugeMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.Anon9
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
-import typingsSlinky.oracleOraclejet.AnonSource
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
+import typingsSlinky.oracleOraclejet.anon.Source
+import typingsSlinky.oracleOraclejet.anon.`9`
 import typingsSlinky.oracleOraclejet.ojgaugeMod.ojRatingGauge.Threshold
 import typingsSlinky.oracleOraclejet.oracleOraclejetNumbers.`0.5`
 import typingsSlinky.oracleOraclejet.oracleOraclejetNumbers.`1`
@@ -23,21 +23,21 @@ import scala.scalajs.js.annotation._
 trait ojRatingGaugeSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
   var changed: js.UndefOr[Boolean] = js.native
-  var changedState: js.UndefOr[AnonSource] = js.native
-  var hoverState: js.UndefOr[AnonSource] = js.native
+  var changedState: js.UndefOr[Source] = js.native
+  var hoverState: js.UndefOr[Source] = js.native
   var max: js.UndefOr[Double] = js.native
   var min: js.UndefOr[Double] = js.native
   var orientation: js.UndefOr[vertical | horizontal] = js.native
   var preserveAspectRatio: js.UndefOr[none | meet] = js.native
   var readonly: js.UndefOr[Boolean] = js.native
-  var selectedState: js.UndefOr[AnonSource] = js.native
+  var selectedState: js.UndefOr[Source] = js.native
   var step: js.UndefOr[`0.5` | `1`] = js.native
   var thresholds: js.UndefOr[js.Array[Threshold]] = js.native
-  var tooltip: js.UndefOr[Anon9] = js.native
+  var tooltip: js.UndefOr[`9`] = js.native
   var trackResize: js.UndefOr[on | off] = js.native
   var transientValue: js.UndefOr[Double] = js.native
-  var translations: js.UndefOr[AnonLabelAndValue] = js.native
-  var unselectedState: js.UndefOr[AnonSource] = js.native
+  var translations: js.UndefOr[LabelAndValue] = js.native
+  var unselectedState: js.UndefOr[Source] = js.native
   var value: js.UndefOr[Double] = js.native
   var visualEffects: js.UndefOr[none | auto] = js.native
 }
@@ -67,7 +67,7 @@ object ojRatingGaugeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withChangedState(value: AnonSource): Self = {
+    def withChangedState(value: Source): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("changedState")(value.asInstanceOf[js.Any])
         ret
@@ -79,7 +79,7 @@ object ojRatingGaugeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withHoverState(value: AnonSource): Self = {
+    def withHoverState(value: Source): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hoverState")(value.asInstanceOf[js.Any])
         ret
@@ -151,7 +151,7 @@ object ojRatingGaugeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withSelectedState(value: AnonSource): Self = {
+    def withSelectedState(value: Source): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectedState")(value.asInstanceOf[js.Any])
         ret
@@ -187,7 +187,7 @@ object ojRatingGaugeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTooltip(value: Anon9): Self = {
+    def withTooltip(value: `9`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
@@ -223,7 +223,7 @@ object ojRatingGaugeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelAndValue): Self = {
+    def withTranslations(value: LabelAndValue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret
@@ -235,7 +235,7 @@ object ojRatingGaugeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withUnselectedState(value: AnonSource): Self = {
+    def withUnselectedState(value: Source): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("unselectedState")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.reactGeosuggest.mod
 
 import typingsSlinky.googlemaps.google.maps.GeocoderResult
-import typingsSlinky.reactGeosuggest.AnonLat
+import typingsSlinky.reactGeosuggest.anon.Lat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,13 +10,13 @@ import scala.scalajs.js.annotation._
 trait Suggest extends js.Object {
   var gmaps: js.UndefOr[GeocoderResult] = js.native
   var label: String = js.native
-  var location: AnonLat = js.native
+  var location: Lat = js.native
   var placeId: String = js.native
 }
 
 object Suggest {
   @scala.inline
-  def apply(label: String, location: AnonLat, placeId: String): Suggest = {
+  def apply(label: String, location: Lat, placeId: String): Suggest = {
     val __obj = js.Dynamic.literal(label = label.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], placeId = placeId.asInstanceOf[js.Any])
     __obj.asInstanceOf[Suggest]
   }
@@ -33,7 +33,7 @@ object Suggest {
         ret
     }
     @scala.inline
-    def withLocation(value: AnonLat): Self = {
+    def withLocation(value: Lat): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
         ret

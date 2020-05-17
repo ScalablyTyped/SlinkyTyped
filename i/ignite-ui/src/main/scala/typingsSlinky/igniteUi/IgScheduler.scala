@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -219,7 +219,7 @@ object IgScheduler {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAgendaRangeChanged(value: (/* event */ Event_, /* ui */ AgendaRangeChangedEventUIParam) => Unit): Self = {
+    def withAgendaRangeChanged(value: (/* event */ Event, /* ui */ AgendaRangeChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("agendaRangeChanged")(js.Any.fromFunction2(value))
         ret
@@ -231,7 +231,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withAgendaRangeChanging(value: (/* event */ Event_, /* ui */ AgendaRangeChangingEventUIParam) => Unit): Self = {
+    def withAgendaRangeChanging(value: (/* event */ Event, /* ui */ AgendaRangeChangingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("agendaRangeChanging")(js.Any.fromFunction2(value))
         ret
@@ -255,7 +255,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withAppointmentCreated(value: (/* event */ Event_, /* ui */ AppointmentCreatedEventUIParam) => Unit): Self = {
+    def withAppointmentCreated(value: (/* event */ Event, /* ui */ AppointmentCreatedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentCreated")(js.Any.fromFunction2(value))
         ret
@@ -267,7 +267,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withAppointmentCreating(value: (/* event */ Event_, /* ui */ AppointmentCreatingEventUIParam) => Unit): Self = {
+    def withAppointmentCreating(value: (/* event */ Event, /* ui */ AppointmentCreatingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentCreating")(js.Any.fromFunction2(value))
         ret
@@ -279,7 +279,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withAppointmentDeleted(value: (/* event */ Event_, /* ui */ AppointmentDeletedEventUIParam) => Unit): Self = {
+    def withAppointmentDeleted(value: (/* event */ Event, /* ui */ AppointmentDeletedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentDeleted")(js.Any.fromFunction2(value))
         ret
@@ -291,7 +291,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withAppointmentDeleting(value: (/* event */ Event_, /* ui */ AppointmentDeletingEventUIParam) => Unit): Self = {
+    def withAppointmentDeleting(value: (/* event */ Event, /* ui */ AppointmentDeletingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentDeleting")(js.Any.fromFunction2(value))
         ret
@@ -303,7 +303,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withAppointmentDialogClosed(value: (/* event */ Event_, /* ui */ AppointmentDialogClosedEventUIParam) => Unit): Self = {
+    def withAppointmentDialogClosed(value: (/* event */ Event, /* ui */ AppointmentDialogClosedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentDialogClosed")(js.Any.fromFunction2(value))
         ret
@@ -315,7 +315,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withAppointmentDialogClosing(value: (/* event */ Event_, /* ui */ AppointmentDialogClosingEventUIParam) => Unit): Self = {
+    def withAppointmentDialogClosing(value: (/* event */ Event, /* ui */ AppointmentDialogClosingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentDialogClosing")(js.Any.fromFunction2(value))
         ret
@@ -327,7 +327,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withAppointmentDialogOpened(value: (/* event */ Event_, /* ui */ AppointmentDialogOpenedEventUIParam) => Unit): Self = {
+    def withAppointmentDialogOpened(value: (/* event */ Event, /* ui */ AppointmentDialogOpenedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentDialogOpened")(js.Any.fromFunction2(value))
         ret
@@ -339,7 +339,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withAppointmentDialogOpening(value: (/* event */ Event_, /* ui */ AppointmentDialogOpeningEventUIParam) => Unit): Self = {
+    def withAppointmentDialogOpening(value: (/* event */ Event, /* ui */ AppointmentDialogOpeningEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentDialogOpening")(js.Any.fromFunction2(value))
         ret
@@ -363,7 +363,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withAppointmentEdited(value: (/* event */ Event_, /* ui */ AppointmentEditedEventUIParam) => Unit): Self = {
+    def withAppointmentEdited(value: (/* event */ Event, /* ui */ AppointmentEditedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentEdited")(js.Any.fromFunction2(value))
         ret
@@ -375,7 +375,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withAppointmentEditing(value: (/* event */ Event_, /* ui */ AppointmentEditingEventUIParam) => Unit): Self = {
+    def withAppointmentEditing(value: (/* event */ Event, /* ui */ AppointmentEditingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentEditing")(js.Any.fromFunction2(value))
         ret
@@ -399,7 +399,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withDayChanged(value: (/* event */ Event_, /* ui */ DayChangedEventUIParam) => Unit): Self = {
+    def withDayChanged(value: (/* event */ Event, /* ui */ DayChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dayChanged")(js.Any.fromFunction2(value))
         ret
@@ -411,7 +411,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withDayChanging(value: (/* event */ Event_, /* ui */ DayChangingEventUIParam) => Unit): Self = {
+    def withDayChanging(value: (/* event */ Event, /* ui */ DayChangingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dayChanging")(js.Any.fromFunction2(value))
         ret
@@ -423,7 +423,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withDaySelected(value: (/* event */ Event_, /* ui */ DaySelectedEventUIParam) => Unit): Self = {
+    def withDaySelected(value: (/* event */ Event, /* ui */ DaySelectedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("daySelected")(js.Any.fromFunction2(value))
         ret
@@ -495,7 +495,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withMonthChanged(value: (/* event */ Event_, /* ui */ MonthChangedEventUIParam) => Unit): Self = {
+    def withMonthChanged(value: (/* event */ Event, /* ui */ MonthChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("monthChanged")(js.Any.fromFunction2(value))
         ret
@@ -507,7 +507,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withMonthChanging(value: (/* event */ Event_, /* ui */ MonthChangingEventUIParam) => Unit): Self = {
+    def withMonthChanging(value: (/* event */ Event, /* ui */ MonthChangingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("monthChanging")(js.Any.fromFunction2(value))
         ret
@@ -543,7 +543,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withRendered(value: (/* event */ Event_, /* ui */ RenderedEventUIParam) => Unit): Self = {
+    def withRendered(value: (/* event */ Event, /* ui */ RenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rendered")(js.Any.fromFunction2(value))
         ret
@@ -555,7 +555,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withRendering(value: (/* event */ Event_, /* ui */ RenderingEventUIParam) => Unit): Self = {
+    def withRendering(value: (/* event */ Event, /* ui */ RenderingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rendering")(js.Any.fromFunction2(value))
         ret
@@ -591,7 +591,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withViewChanged(value: (/* event */ Event_, /* ui */ ViewChangedEventUIParam) => Unit): Self = {
+    def withViewChanged(value: (/* event */ Event, /* ui */ ViewChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("viewChanged")(js.Any.fromFunction2(value))
         ret
@@ -603,7 +603,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withViewChanging(value: (/* event */ Event_, /* ui */ ViewChangingEventUIParam) => Unit): Self = {
+    def withViewChanging(value: (/* event */ Event, /* ui */ ViewChangingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("viewChanging")(js.Any.fromFunction2(value))
         ret
@@ -639,7 +639,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withWeekChanged(value: (/* event */ Event_, /* ui */ WeekChangedEventUIParam) => Unit): Self = {
+    def withWeekChanged(value: (/* event */ Event, /* ui */ WeekChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("weekChanged")(js.Any.fromFunction2(value))
         ret
@@ -651,7 +651,7 @@ object IgScheduler {
         ret
     }
     @scala.inline
-    def withWeekChanging(value: (/* event */ Event_, /* ui */ WeekChangingEventUIParam) => Unit): Self = {
+    def withWeekChanging(value: (/* event */ Event, /* ui */ WeekChangingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("weekChanging")(js.Any.fromFunction2(value))
         ret

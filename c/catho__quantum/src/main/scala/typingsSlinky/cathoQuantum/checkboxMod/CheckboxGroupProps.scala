@@ -2,7 +2,7 @@ package typingsSlinky.cathoQuantum.checkboxMod
 
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactElement
-import typingsSlinky.cathoQuantum.AnonColorsSpacing
+import typingsSlinky.cathoQuantum.anon.ColorsSpacing
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.button
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.checkbox
 import typingsSlinky.react.mod.ChangeEvent
@@ -23,7 +23,7 @@ trait CheckboxGroupProps extends js.Object {
     ]
   ] = js.native
   var options: js.UndefOr[Options] = js.native
-  var theme: js.UndefOr[AnonColorsSpacing] = js.native
+  var theme: js.UndefOr[ColorsSpacing] = js.native
   var `type`: checkbox | button = js.native
 }
 
@@ -115,7 +115,7 @@ object CheckboxGroupProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonColorsSpacing): Self = {
+    def withTheme(value: ColorsSpacing): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

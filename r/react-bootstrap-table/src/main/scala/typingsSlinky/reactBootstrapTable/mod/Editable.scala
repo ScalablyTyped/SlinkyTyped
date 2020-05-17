@@ -1,7 +1,7 @@
 package typingsSlinky.reactBootstrapTable.mod
 
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactBootstrapTable.AnonValues
+import typingsSlinky.reactBootstrapTable.anon.Values
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +32,7 @@ trait Editable[TRow /* <: js.Object */, K /* <: /* keyof TRow */ String */] exte
   	 * If the array is an array of objects, the fields 'text' can be used for the display text and 'value' to specify
   	 * the option's value.
   	 */
-  var options: js.UndefOr[AnonValues[TRow]] = js.native
+  var options: js.UndefOr[Values[TRow]] = js.native
   /**
   	 * @deprecated Use placeholder inside the attrs field instead.
   	 * Text to display as placeholder text in the editor component.
@@ -129,7 +129,7 @@ object Editable {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonValues[TRow]): Self[TRow, K] = {
+    def withOptions(value: Values[TRow]): Self[TRow, K] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

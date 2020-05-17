@@ -1,13 +1,13 @@
 package typingsSlinky.restangular.mod
 
-import typingsSlinky.restangular.AnonMethod
+import typingsSlinky.restangular.anon.Method
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IResponse extends js.Object {
-  var config: AnonMethod = js.native
+  var config: Method = js.native
   var data: js.Any = js.native
   var status: Double = js.native
   def headers(name: String): String = js.native
@@ -15,7 +15,7 @@ trait IResponse extends js.Object {
 
 object IResponse {
   @scala.inline
-  def apply(config: AnonMethod, data: js.Any, headers: String => String, status: Double): IResponse = {
+  def apply(config: Method, data: js.Any, headers: String => String, status: Double): IResponse = {
     val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], headers = js.Any.fromFunction1(headers), status = status.asInstanceOf[js.Any])
     __obj.asInstanceOf[IResponse]
   }
@@ -26,7 +26,7 @@ object IResponse {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withConfig(value: AnonMethod): Self = {
+    def withConfig(value: Method): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
         ret

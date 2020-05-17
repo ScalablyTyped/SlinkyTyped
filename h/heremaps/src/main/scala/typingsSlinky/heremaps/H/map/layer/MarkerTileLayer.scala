@@ -4,8 +4,6 @@ import typingsSlinky.heremaps.H.geo.Rect
 import typingsSlinky.heremaps.H.map.ICopyright
 import typingsSlinky.heremaps.H.map.layer.IMarkerLayer.Response
 import typingsSlinky.heremaps.H.map.layer.IMarkerLayer.TiledResponse
-import typingsSlinky.heremaps.H.map.layer.ITileLayer.Options
-import typingsSlinky.heremaps.H.map.provider.MarkerTileProvider
 import typingsSlinky.heremaps.H.math.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,18 +12,10 @@ import scala.scalajs.js.annotation._
 /**
   * ObjectTileLayer represents map objects which are requested on a tile basis
   */
-@JSGlobal("H.map.layer.MarkerTileLayer")
 @js.native
-class MarkerTileLayer protected ()
+trait MarkerTileLayer
   extends BaseTileLayer
      with IMarkerLayer {
-  /**
-    * Constructor
-    * @param provider {H.map.provider.MarkerTileProvider}
-    * @param opt_options {H.map.layer.ITileLayer.Options=}
-    */
-  def this(provider: MarkerTileProvider) = this()
-  def this(provider: MarkerTileProvider, opt_options: Options) = this()
   /* InferMemberOverrides */
   override def addOnDisposeCallback(callback: js.Function0[Unit], opt_scope: js.Object): Unit = js.native
   /**

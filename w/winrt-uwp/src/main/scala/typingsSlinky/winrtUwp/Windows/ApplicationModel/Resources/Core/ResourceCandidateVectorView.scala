@@ -1,17 +1,16 @@
 package typingsSlinky.winrtUwp.Windows.ApplicationModel.Resources.Core
 
 import typingsSlinky.std.Array
-import typingsSlinky.winrtUwp.AnonIndex
-import typingsSlinky.winrtUwp.AnonItemsResourceCandidate
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
+import typingsSlinky.winrtUwp.anon.Index
+import typingsSlinky.winrtUwp.anon.ItemsResourceCandidate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a collection of ResourceCandidate objects. */
-@JSGlobal("Windows.ApplicationModel.Resources.Core.ResourceCandidateVectorView")
 @js.native
-abstract class ResourceCandidateVectorView () extends Array[ResourceCandidate] {
+trait ResourceCandidateVectorView extends Array[ResourceCandidate] {
   /** Gets the number of ResourceCandidate objects in the set. */
   var size: Double = js.native
   /**
@@ -29,13 +28,13 @@ abstract class ResourceCandidateVectorView () extends Array[ResourceCandidate] {
     * Returns the ResourceCandidate objects that start at the specified index in the set.
     * @param startIndex The zero-based index of the start of the ResourceCandidate objects in the set to return.
     */
-  def getMany(startIndex: Double): AnonItemsResourceCandidate = js.native
-  def indexOf(value: ResourceCandidate, extra: js.Any*): AnonIndex = js.native
+  def getMany(startIndex: Double): ItemsResourceCandidate = js.native
+  def indexOf(value: ResourceCandidate, extra: js.Any*): Index = js.native
   /**
     * Returns the index of a specified ResourceCandidate in the set.
     * @param value The ResourceCandidate to find in the set.
     */
   @JSName("indexOf")
-  def indexOf_AnonIndex(value: ResourceCandidate): AnonIndex = js.native
+  def indexOf_Index(value: ResourceCandidate): Index = js.native
 }
 

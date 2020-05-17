@@ -8,12 +8,11 @@ package object mod {
   type Accessor[D /* <: js.Object */] = js.Function3[
     /* originalRow */ D, 
     /* index */ scala.Double, 
-    /* sub */ typingsSlinky.reactTable.AnonData[D], 
+    /* sub */ typingsSlinky.reactTable.anon.Data[D], 
     typingsSlinky.reactTable.mod.CellValue[js.Any]
   ]
-  type ActionType = typingsSlinky.reactTable.AnonType with (typingsSlinky.std.Record[java.lang.String, _])
+  type ActionType = typingsSlinky.reactTable.anon.Type with (typingsSlinky.std.Record[java.lang.String, _])
   type AggregatedValue = js.Any
-  type Aggregator[D /* <: js.Object */] = typingsSlinky.reactTable.mod.AggregatorFn[D] | typingsSlinky.reactTable.mod.DefaultAggregators | java.lang.String
   type AggregatorFn[D /* <: js.Object */] = js.Function3[
     /* columnValues */ js.Array[typingsSlinky.reactTable.mod.CellValue[js.Any]], 
     /* rows */ js.Array[typingsSlinky.reactTable.mod.Row[D]], 
@@ -24,14 +23,13 @@ package object mod {
   type CellPropGetter[D /* <: js.Object */] = typingsSlinky.reactTable.mod.PropGetter[
     D, 
     typingsSlinky.reactTable.mod.TableCellProps, 
-    typingsSlinky.reactTable.AnonCell[D], 
-    typingsSlinky.reactTable.PartialTableCellProps
+    typingsSlinky.reactTable.anon.Cell[D], 
+    typingsSlinky.reactTable.anon.PartialTableCellProps
   ]
   type CellValue[V] = V
-  type Column[D /* <: js.Object */] = typingsSlinky.reactTable.mod.ColumnGroup[D] | typingsSlinky.reactTable.mod.ColumnWithLooseAccessor[D] | typingsSlinky.reactTable.mod.ColumnWithStrictAccessor[D]
-  type ColumnGroup[D /* <: js.Object */] = typingsSlinky.reactTable.mod.ColumnInterface[D] with typingsSlinky.reactTable.mod.ColumnGroupInterface[D] with (typingsSlinky.reactTable.AnonHeader | typingsSlinky.reactTable.AnonId[D]) with typingsSlinky.reactTable.AnonAccessor[D]
+  type ColumnGroup[D /* <: js.Object */] = typingsSlinky.reactTable.mod.ColumnInterface[D] with typingsSlinky.reactTable.mod.ColumnGroupInterface[D] with (typingsSlinky.reactTable.anon.Header | typingsSlinky.reactTable.anon.Id[D]) with typingsSlinky.reactTable.anon.Accessor[D]
   type ColumnInterface[D /* <: js.Object */] = typingsSlinky.reactTable.mod.UseTableColumnOptions[D]
-  type ColumnWithLooseAccessor[D /* <: js.Object */] = typingsSlinky.reactTable.mod.ColumnInterface[D] with (typingsSlinky.reactTable.mod.ColumnInterfaceBasedOnValue[D, _]) with (typingsSlinky.reactTable.AnonHeader | typingsSlinky.reactTable.AnonIdIdType[D] | typingsSlinky.reactTable.Anon0[D]) with typingsSlinky.reactTable.Anon1[D]
+  type ColumnWithLooseAccessor[D /* <: js.Object */] = typingsSlinky.reactTable.mod.ColumnInterface[D] with (typingsSlinky.reactTable.mod.ColumnInterfaceBasedOnValue[D, _]) with (typingsSlinky.reactTable.anon.Header | typingsSlinky.reactTable.anon.IdIdType[D] | typingsSlinky.reactTable.anon.`0`[D]) with typingsSlinky.reactTable.anon.`1`[D]
   type ColumnWithStrictAccessor[D /* <: js.Object */] = typingsSlinky.reactTable.mod.ColumnInterface[D] with (typingsSlinky.reactTable.mod.ValueOf[
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof D ]: {  accessor  :K} & react-table.react-table.ColumnInterfaceBasedOnValue<D, D[K]>}
@@ -39,46 +37,38 @@ package object mod {
   ])
   type FilterTypes[D /* <: js.Object */] = typingsSlinky.std.Record[java.lang.String, typingsSlinky.reactTable.mod.FilterValue]
   type FilterValue = js.Any
-  type Filters[D /* <: js.Object */] = js.Array[typingsSlinky.reactTable.AnonValue[D]]
+  type Filters[D /* <: js.Object */] = js.Array[typingsSlinky.reactTable.anon.Value[D]]
   type FooterGroupPropGetter[D /* <: js.Object */] = typingsSlinky.reactTable.mod.PropGetter[
     D, 
     typingsSlinky.reactTable.mod.TableFooterGroupProps, 
-    typingsSlinky.reactTable.AnonColumn[D], 
-    typingsSlinky.reactTable.PartialTableFooterGroupPr
+    typingsSlinky.reactTable.anon.Column[D], 
+    typingsSlinky.reactTable.anon.PartialTableFooterGroupPr
   ]
   type FooterPropGetter[D /* <: js.Object */] = typingsSlinky.reactTable.mod.PropGetter[
     D, 
     typingsSlinky.reactTable.mod.TableFooterProps, 
-    typingsSlinky.reactTable.AnonColumn[D], 
-    typingsSlinky.reactTable.PartialTableFooterProps
+    typingsSlinky.reactTable.anon.Column[D], 
+    typingsSlinky.reactTable.anon.PartialTableFooterProps
   ]
   type HeaderGroupPropGetter[D /* <: js.Object */] = typingsSlinky.reactTable.mod.PropGetter[
     D, 
     typingsSlinky.reactTable.mod.TableHeaderGroupProps, 
-    typingsSlinky.reactTable.AnonColumn[D], 
-    typingsSlinky.reactTable.PartialTableHeaderGroupPr
+    typingsSlinky.reactTable.anon.Column[D], 
+    typingsSlinky.reactTable.anon.PartialTableHeaderGroupPr
   ]
   type HeaderPropGetter[D /* <: js.Object */] = typingsSlinky.reactTable.mod.PropGetter[
     D, 
     typingsSlinky.reactTable.mod.TableHeaderProps, 
-    typingsSlinky.reactTable.AnonColumn[D], 
-    typingsSlinky.reactTable.PartialTableHeaderProps
+    typingsSlinky.reactTable.anon.Column[D], 
+    typingsSlinky.reactTable.anon.PartialTableHeaderProps
   ]
   type Hooks[D /* <: js.Object */] = typingsSlinky.reactTable.mod.UseTableHooks[D]
-  type IdType[D] = typingsSlinky.reactTable.mod.StringKey[D] | java.lang.String
-  type Meta[D /* <: js.Object */, Extension, M] = (M with Extension) | M
-  type PropGetter[D /* <: js.Object */, Props, T /* <: js.Object */, P] = (js.Function2[
-    /* props */ P, 
-    /* meta */ typingsSlinky.reactTable.mod.Meta[D, T, typingsSlinky.reactTable.mod.MetaBase[D]], 
-    P | js.Array[P]
-  ]) | P | js.Array[P]
-  type Renderer[Props] = slinky.core.ReactComponentClass[Props] | slinky.core.facade.ReactElement | typingsSlinky.react.mod.ReactText | typingsSlinky.react.mod.ReactFragment
   type Row[D /* <: js.Object */] = typingsSlinky.reactTable.mod.UseTableRowProps[D]
   type RowPropGetter[D /* <: js.Object */] = typingsSlinky.reactTable.mod.PropGetter[
     D, 
     typingsSlinky.reactTable.mod.TableRowProps, 
-    typingsSlinky.reactTable.AnonRow[D], 
-    typingsSlinky.reactTable.PartialTableRowProps
+    typingsSlinky.reactTable.anon.Row[D], 
+    typingsSlinky.reactTable.anon.PartialTableRowProps
   ]
   type SortByFn[D /* <: js.Object */] = js.Function4[
     /* rowA */ typingsSlinky.reactTable.mod.Row[D], 
@@ -92,7 +82,7 @@ package object mod {
     D, 
     typingsSlinky.reactTable.mod.TableBodyProps, 
     scala.Nothing, 
-    typingsSlinky.reactTable.PartialTableBodyProps
+    typingsSlinky.reactTable.anon.PartialTableBodyProps
   ]
   type TableBodyProps = typingsSlinky.reactTable.mod.TableCommonProps
   type TableCellProps = typingsSlinky.reactTable.mod.TableKeyedProps
@@ -107,7 +97,7 @@ package object mod {
     D, 
     typingsSlinky.reactTable.mod.TableProps, 
     scala.Nothing, 
-    typingsSlinky.reactTable.PartialTableProps
+    typingsSlinky.reactTable.anon.PartialTableProps
   ]
   type TableProps = typingsSlinky.reactTable.mod.TableCommonProps
   type TableRowProps = typingsSlinky.reactTable.mod.TableKeyedProps
@@ -119,6 +109,5 @@ package object mod {
     js.Array[typingsSlinky.reactTable.mod.IdType[D]]
   ]
   type UseRowStateLocalState[D /* <: js.Object */, T] = typingsSlinky.std.Record[typingsSlinky.reactTable.mod.IdType[D], T]
-  type UseRowUpdater[T] = T | (js.Function1[/* prev */ T, T])
   type ValueOf[T] = /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
 }

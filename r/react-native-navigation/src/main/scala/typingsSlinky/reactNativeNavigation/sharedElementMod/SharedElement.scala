@@ -1,8 +1,8 @@
 package typingsSlinky.reactNativeNavigation.sharedElementMod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactNativeNavigation.AnonElementId
-import typingsSlinky.reactNativeNavigation.AnonResizeMode
+import typingsSlinky.reactNativeNavigation.anon.ElementId
+import typingsSlinky.reactNativeNavigation.anon.ResizeMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ class SharedElement ()
 @JSImport("react-native-navigation/lib/dist/adapters/SharedElement", "SharedElement")
 @js.native
 object SharedElement extends js.Object {
-  var defaultProps: AnonResizeMode = js.native
-  var propTypes: AnonElementId = js.native
+  var defaultProps: ResizeMode = js.native
+  var propTypes: ElementId = js.native
 }
 

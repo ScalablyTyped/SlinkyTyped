@@ -1,9 +1,9 @@
 package typingsSlinky.linkifyjs.mod
 
-import typingsSlinky.linkifyjs.PartialRecordLinkEntityTy
-import typingsSlinky.linkifyjs.PartialRecordLinkEntityTyEmail
-import typingsSlinky.linkifyjs.PartialRecordLinkEntityTyHashtag
-import typingsSlinky.linkifyjs.PartialRecordLinkEntityTyMention
+import typingsSlinky.linkifyjs.anon.PartialRecordLinkEntityTy
+import typingsSlinky.linkifyjs.anon.PartialRecordLinkEntityTyEmail
+import typingsSlinky.linkifyjs.anon.PartialRecordLinkEntityTyHashtag
+import typingsSlinky.linkifyjs.anon.PartialRecordLinkEntityTyMention
 import typingsSlinky.linkifyjs.linkifyjsStrings.ftp
 import typingsSlinky.linkifyjs.linkifyjsStrings.ftps
 import typingsSlinky.linkifyjs.linkifyjsStrings.http

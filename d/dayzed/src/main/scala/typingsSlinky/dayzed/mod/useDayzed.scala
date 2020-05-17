@@ -1,6 +1,6 @@
 package typingsSlinky.dayzed.mod
 
-import typingsSlinky.dayzed.OmitPropschildrenrender
+import typingsSlinky.dayzed.anon.OmitPropschildrenrender
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

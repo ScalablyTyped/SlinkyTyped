@@ -1,7 +1,7 @@
 package typingsSlinky.cypress.cypressMod
 
-import typingsSlinky.cypress.AnonAbsolute
-import typingsSlinky.cypress.AnonFailures
+import typingsSlinky.cypress.anon.Absolute
+import typingsSlinky.cypress.anon.Failures
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +27,11 @@ trait RunResult extends js.Object {
   /**
     * information about the spec test file.
     */
-  var spec: AnonAbsolute = js.native
+  var spec: Absolute = js.native
   /**
     * Accurate test results collected by Cypress.
     */
-  var stats: AnonFailures = js.native
+  var stats: Failures = js.native
   var tests: js.Array[TestResult] = js.native
   var video: String | Null = js.native
 }
@@ -44,8 +44,8 @@ object RunResult {
     reporterStats: js.Object,
     screenshots: js.Array[ScreenshotInformation],
     shouldUploadVideo: Boolean,
-    spec: AnonAbsolute,
-    stats: AnonFailures,
+    spec: Absolute,
+    stats: Failures,
     tests: js.Array[TestResult]
   ): RunResult = {
     val __obj = js.Dynamic.literal(hooks = hooks.asInstanceOf[js.Any], reporter = reporter.asInstanceOf[js.Any], reporterStats = reporterStats.asInstanceOf[js.Any], screenshots = screenshots.asInstanceOf[js.Any], shouldUploadVideo = shouldUploadVideo.asInstanceOf[js.Any], spec = spec.asInstanceOf[js.Any], stats = stats.asInstanceOf[js.Any], tests = tests.asInstanceOf[js.Any])
@@ -88,13 +88,13 @@ object RunResult {
         ret
     }
     @scala.inline
-    def withSpec(value: AnonAbsolute): Self = {
+    def withSpec(value: Absolute): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("spec")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withStats(value: AnonFailures): Self = {
+    def withStats(value: Failures): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
         ret

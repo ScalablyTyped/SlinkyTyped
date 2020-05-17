@@ -1,6 +1,6 @@
 package typingsSlinky.memjs.mod
 
-import typingsSlinky.memjs.AnonLog
+import typingsSlinky.memjs.anon.Log
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ trait ClientOptions extends js.Object {
     * A logger object that responds to `log(string)` method calls.
     * @default console
     */
-  var logger: js.UndefOr[AnonLog] = js.native
+  var logger: js.UndefOr[Log] = js.native
   /**
     * The number of times to retry an operation in lieu of failures.
     * @default 2
@@ -72,7 +72,7 @@ object ClientOptions {
         ret
     }
     @scala.inline
-    def withLogger(value: AnonLog): Self = {
+    def withLogger(value: Log): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
         ret

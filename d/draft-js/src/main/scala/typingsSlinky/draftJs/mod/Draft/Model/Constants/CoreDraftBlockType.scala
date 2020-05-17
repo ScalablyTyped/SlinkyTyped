@@ -22,7 +22,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.draftJs.draftJsStrings.`code-block`
   - typingsSlinky.draftJs.draftJsStrings.atomic
 */
-trait CoreDraftBlockType extends js.Object
+trait CoreDraftBlockType extends DraftBlockType
 
 object CoreDraftBlockType {
   @scala.inline

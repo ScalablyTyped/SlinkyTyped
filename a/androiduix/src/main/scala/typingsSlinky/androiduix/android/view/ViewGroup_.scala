@@ -29,19 +29,14 @@ import typingsSlinky.androiduix.android.view.animation.Transformation
 import typingsSlinky.androiduix.androidui.attr.AttrBinder.ClassBinderMap
 import typingsSlinky.androiduix.java_.lang.Runnable
 import typingsSlinky.androiduix.java_.util.ArrayList
-import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.view.ViewGroup")
 @js.native
-abstract class ViewGroup_ protected ()
+trait ViewGroup_
   extends View
      with ViewParent {
-  def this(context: Context) = this()
-  def this(context: Context, bindElement: HTMLElement) = this()
-  def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String]) = this()
   var mChildCountWithTransientState: js.Any = js.native
   var mChildTransformation: js.Any = js.native
   var mChildren: js.Array[View] = js.native

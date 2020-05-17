@@ -1,19 +1,19 @@
 package typingsSlinky.reactEmailEditor.mod
 
-import typingsSlinky.reactEmailEditor.AnonRows
+import typingsSlinky.reactEmailEditor.anon.Rows
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Design extends js.Object {
-  val body: AnonRows = js.native
+  val body: Rows = js.native
   val counters: js.UndefOr[js.Object] = js.native
 }
 
 object Design {
   @scala.inline
-  def apply(body: AnonRows): Design = {
+  def apply(body: Rows): Design = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any])
     __obj.asInstanceOf[Design]
   }
@@ -24,7 +24,7 @@ object Design {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBody(value: AnonRows): Self = {
+    def withBody(value: Rows): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
         ret

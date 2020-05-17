@@ -1,5 +1,6 @@
 package typingsSlinky.superstruct
 
+import typingsSlinky.superstruct.anon.Defaults
 import typingsSlinky.superstruct.structErrorMod.Branch
 import typingsSlinky.superstruct.structErrorMod.Failure
 import typingsSlinky.superstruct.structErrorMod.Path
@@ -78,7 +79,7 @@ object structMod extends js.Object {
       * const failure = Struct.fail({ value, branch, path })
       * ```
       */
-    def fail(obj: AnonBranch): Failure = js.native
+    def fail(obj: typingsSlinky.superstruct.anon.Branch): Failure = js.native
     /**
       * Validate a `value`, returning a boolean indicating whether it's valid.
       *
@@ -106,7 +107,7 @@ object structMod extends js.Object {
   
   @JSName("STRUCT")
   val STRUCT_ : js.Symbol = js.native
-  def createStruct(props: AnonDefaults): Struct = js.native
+  def createStruct(props: Defaults): Struct = js.native
   def isStruct(value: js.Any): /* is superstruct.superstruct/lib/struct.Struct */ Boolean = js.native
 }
 

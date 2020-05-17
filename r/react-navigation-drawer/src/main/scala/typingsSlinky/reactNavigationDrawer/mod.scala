@@ -7,6 +7,11 @@ import typingsSlinky.reactNavigation.mod.NavigationParams
 import typingsSlinky.reactNavigation.mod.NavigationRoute
 import typingsSlinky.reactNavigation.mod.NavigationRouteConfigMap
 import typingsSlinky.reactNavigation.mod.SupportedThemes
+import typingsSlinky.reactNavigationDrawer.anon.ActiveBackgroundColor
+import typingsSlinky.reactNavigationDrawer.anon.GetActionCreators
+import typingsSlinky.reactNavigationDrawer.anon.InitialRouteName
+import typingsSlinky.reactNavigationDrawer.anon.Lazy
+import typingsSlinky.reactNavigationDrawer.anon.Loaded
 import typingsSlinky.reactNavigationDrawer.drawerNavigatorItemsMod.default
 import typingsSlinky.reactNavigationDrawer.drawerViewMod.Props
 import typingsSlinky.reactNavigationDrawer.drawerViewMod.State
@@ -42,8 +47,8 @@ object mod extends js.Object {
   val DrawerProgressContext: Context[
     (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Animated.Node<number> */ js.Any) | Null
   ] = js.native
-  def DrawerRouter(routeConfigs: NavigationRouteConfigMap[_, _, _]): AnonGetActionCreators = js.native
-  def DrawerRouter(routeConfigs: NavigationRouteConfigMap[_, _, _], config: AnonInitialRouteName): AnonGetActionCreators = js.native
+  def DrawerRouter(routeConfigs: NavigationRouteConfigMap[_, _, _]): GetActionCreators = js.native
+  def DrawerRouter(routeConfigs: NavigationRouteConfigMap[_, _, _], config: InitialRouteName): GetActionCreators = js.native
   def createDrawerNavigator(
     routeConfigs: NavigationRouteConfigMap[
       NavigationDrawerOptions, 
@@ -86,22 +91,22 @@ object mod extends js.Object {
   @js.native
   object DrawerItems extends js.Object {
     var contextType: Context[SupportedThemes] = js.native
-    var defaultProps: AnonActiveBackgroundColor = js.native
+    var defaultProps: ActiveBackgroundColor = js.native
   }
   
   /* static members */
   @js.native
   object DrawerNavigatorItems extends js.Object {
     var contextType: Context[SupportedThemes] = js.native
-    var defaultProps: AnonActiveBackgroundColor = js.native
+    var defaultProps: ActiveBackgroundColor = js.native
   }
   
   /* static members */
   @js.native
   object DrawerView extends js.Object {
     var contextType: Context[SupportedThemes] = js.native
-    var defaultProps: AnonLazy = js.native
-    def getDerivedStateFromProps(nextProps: Props, prevState: State): AnonLoaded = js.native
+    var defaultProps: Lazy = js.native
+    def getDerivedStateFromProps(nextProps: Props, prevState: State): Loaded = js.native
   }
   
 }

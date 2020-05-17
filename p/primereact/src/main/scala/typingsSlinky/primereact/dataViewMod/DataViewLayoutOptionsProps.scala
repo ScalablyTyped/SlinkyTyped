@@ -1,6 +1,6 @@
 package typingsSlinky.primereact.dataViewMod
 
-import typingsSlinky.primereact.AnonValueString
+import typingsSlinky.primereact.anon.ValueString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,12 +11,12 @@ trait DataViewLayoutOptionsProps extends js.Object {
   var id: js.UndefOr[String] = js.native
   var layout: js.UndefOr[String] = js.native
   var style: js.UndefOr[String] = js.native
-  def onChange(e: AnonValueString): Unit = js.native
+  def onChange(e: ValueString): Unit = js.native
 }
 
 object DataViewLayoutOptionsProps {
   @scala.inline
-  def apply(onChange: AnonValueString => Unit): DataViewLayoutOptionsProps = {
+  def apply(onChange: ValueString => Unit): DataViewLayoutOptionsProps = {
     val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
     __obj.asInstanceOf[DataViewLayoutOptionsProps]
   }
@@ -27,7 +27,7 @@ object DataViewLayoutOptionsProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnChange(value: AnonValueString => Unit): Self = {
+    def withOnChange(value: ValueString => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

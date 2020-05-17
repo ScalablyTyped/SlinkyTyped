@@ -1,7 +1,7 @@
 package typingsSlinky.baseui.accordionMod
 
 import slinky.core.TagMod
-import typingsSlinky.baseui.AnonExpandedBoolean
+import typingsSlinky.baseui.anon.ExpandedBoolean
 import typingsSlinky.baseui.baseuiStrings.expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait StatefulPanelContainerProps extends js.Object {
   var children: TagMod[Any] = js.native
   var initialState: js.UndefOr[PanelState] = js.native
-  var onChange: js.UndefOr[js.Function1[/* args */ AnonExpandedBoolean, _]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* args */ ExpandedBoolean, _]] = js.native
   var stateReducer: js.UndefOr[StateReducer[PanelState]] = js.native
 }
 
@@ -53,7 +53,7 @@ object StatefulPanelContainerProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* args */ AnonExpandedBoolean => _): Self = {
+    def withOnChange(value: /* args */ ExpandedBoolean => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

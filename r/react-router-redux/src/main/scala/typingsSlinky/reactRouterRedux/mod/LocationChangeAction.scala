@@ -1,6 +1,6 @@
 package typingsSlinky.reactRouterRedux.mod
 
-import typingsSlinky.reactRouterRedux.LocationLocationStateprop
+import typingsSlinky.reactRouterRedux.anon.LocationLocationStateprop
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.gulpTypescript.projectMod
 
-import typingsSlinky.gulpTypescript.Typeofts
+import typingsSlinky.gulpTypescript.anon.Typeofts
 import typingsSlinky.gulpTypescript.typesMod.FinalTransformers
 import typingsSlinky.gulpTypescript.typesMod.TsConfig
 import typingsSlinky.typescript.mod.CompilerOptions

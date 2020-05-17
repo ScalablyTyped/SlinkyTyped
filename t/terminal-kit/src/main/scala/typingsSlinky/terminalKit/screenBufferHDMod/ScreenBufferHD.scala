@@ -1,7 +1,6 @@
 package typingsSlinky.terminalKit.screenBufferHDMod
 
-import typingsSlinky.terminalKit.AnonAttrChar
-import typingsSlinky.terminalKit.AnonBlending
+import typingsSlinky.terminalKit.anon.AttrChar
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,7 @@ trait ScreenBufferHD
   extends typingsSlinky.terminalKit.screenBufferMod.^ {
   @JSName("blending")
   val blending_ScreenBufferHD: IsBlending = js.native
-  def draw(options: AnonBlending): Unit = js.native
-  def fill(options: AnonAttrChar): Unit = js.native
+  def draw(options: typingsSlinky.terminalKit.anon.Blending): Unit = js.native
+  def fill(options: AttrChar): Unit = js.native
 }
 

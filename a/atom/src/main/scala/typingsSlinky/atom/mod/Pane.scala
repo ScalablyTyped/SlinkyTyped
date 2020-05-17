@@ -1,8 +1,8 @@
 package typingsSlinky.atom.mod
 
-import typingsSlinky.atom.AnonCopyActiveItem
-import typingsSlinky.atom.AnonIndex
-import typingsSlinky.atom.AnonPending
+import typingsSlinky.atom.anon.CopyActiveItem
+import typingsSlinky.atom.anon.Index
+import typingsSlinky.atom.anon.Pending
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait Pane extends js.Object {
   def activate(): Unit = js.native
   /** Make the given item active, causing it to be displayed by the pane's view. */
   def activateItem(item: js.Object): Unit = js.native
-  def activateItem(item: js.Object, options: AnonPending): Unit = js.native
+  def activateItem(item: js.Object, options: Pending): Unit = js.native
   /** Activate the item at the given index. */
   def activateItemAtIndex(index: Double): Unit = js.native
   /** Activate the first item that matches the given URI. */
@@ -24,7 +24,7 @@ trait Pane extends js.Object {
   def activatePreviousItem(): Unit = js.native
   /** Add the given item to the pane. */
   def addItem(item: js.Object): js.Object = js.native
-  def addItem(item: js.Object, options: AnonIndex): js.Object = js.native
+  def addItem(item: js.Object, options: Index): js.Object = js.native
   /** Add the given items to the pane. */
   def addItems(items: js.Array[js.Object]): js.Array[js.Object] = js.native
   def addItems(items: js.Array[js.Object], index: Double): js.Array[js.Object] = js.native
@@ -135,16 +135,16 @@ trait Pane extends js.Object {
   def saveItems(): Unit = js.native
   /** Creates a new pane below the receiver. */
   def splitDown(): Pane = js.native
-  def splitDown(params: AnonCopyActiveItem): Pane = js.native
+  def splitDown(params: CopyActiveItem): Pane = js.native
   // Splitting
   /** Create a new pane to the left of this pane. */
   def splitLeft(): Pane = js.native
-  def splitLeft(params: AnonCopyActiveItem): Pane = js.native
+  def splitLeft(params: CopyActiveItem): Pane = js.native
   /** Create a new pane to the right of this pane. */
   def splitRight(): Pane = js.native
-  def splitRight(params: AnonCopyActiveItem): Pane = js.native
+  def splitRight(params: CopyActiveItem): Pane = js.native
   /** Creates a new pane above the receiver. */
   def splitUp(): Pane = js.native
-  def splitUp(params: AnonCopyActiveItem): Pane = js.native
+  def splitUp(params: CopyActiveItem): Pane = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.stremioAddonSdk.mod
 
-import typingsSlinky.stremioAddonSdk.AnonAdult
+import typingsSlinky.stremioAddonSdk.anon.Adult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait Manifest extends js.Object {
     * URL to png/jpg, at least 1024x786 resolution.
     */
   var background: js.UndefOr[String] = js.native
-  var behaviorHints: js.UndefOr[AnonAdult] = js.native
+  var behaviorHints: js.UndefOr[Adult] = js.native
   /**
     * A list of the content catalogs your addon provides.
     *
@@ -159,7 +159,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withBehaviorHints(value: AnonAdult): Self = {
+    def withBehaviorHints(value: Adult): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("behaviorHints")(value.asInstanceOf[js.Any])
         ret

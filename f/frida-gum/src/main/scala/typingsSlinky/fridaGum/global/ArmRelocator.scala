@@ -1,0 +1,26 @@
+package typingsSlinky.fridaGum.global
+
+import typingsSlinky.fridaGum.NativePointerValue
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Relocates machine code for arm.
+  */
+@JSGlobal("ArmRelocator")
+@js.native
+class ArmRelocator protected ()
+  extends typingsSlinky.fridaGum.ArmRelocator {
+  /**
+    * Creates a new code relocator for copying ARM instructions
+    * from one memory location to another, taking care to adjust
+    * position-dependent instructions accordingly.
+    *
+    * @param inputCode Source address to copy instructions from.
+    * @param output ArmWriter pointed at the desired target memory
+    *               address.
+    */
+  def this(inputCode: NativePointerValue, output: typingsSlinky.fridaGum.ArmWriter) = this()
+}
+

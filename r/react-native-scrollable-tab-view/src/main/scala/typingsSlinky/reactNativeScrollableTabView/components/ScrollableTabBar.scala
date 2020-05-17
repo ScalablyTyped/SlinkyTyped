@@ -7,7 +7,7 @@ import typingsSlinky.reactNative.mod.Animated.Value
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeScrollableTabView.TabBarPropsScrollableTabB
+import typingsSlinky.reactNativeScrollableTabView.anon.TabBarPropsScrollableTabB
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

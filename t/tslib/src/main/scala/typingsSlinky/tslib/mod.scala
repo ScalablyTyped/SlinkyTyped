@@ -1,6 +1,7 @@
 package typingsSlinky.tslib
 
 import typingsSlinky.std.TemplateStringsArray
+import typingsSlinky.tslib.anon.Default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,7 +38,7 @@ object mod extends js.Object {
   @JSName("__generator")
   def generator(thisArg: js.Any, body: js.Function): js.Any = js.native
   @JSName("__importDefault")
-  def importDefault[T](mod: T): T | AnonDefault[T] = js.native
+  def importDefault[T](mod: T): T | Default[T] = js.native
   @JSName("__importStar")
   def importStar[T](mod: T): T = js.native
   @JSName("__makeTemplateObject")

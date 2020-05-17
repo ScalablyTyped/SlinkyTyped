@@ -1,5 +1,7 @@
 package typingsSlinky.shevyjs
 
+import typingsSlinky.shevyjs.anon.PartialOptions
+import typingsSlinky.shevyjs.anon.PickRhythmPropertiesExclu
 import typingsSlinky.shevyjs.typesMod.Factor
 import typingsSlinky.shevyjs.typesMod.RhythmProperties
 import typingsSlinky.shevyjs.typesMod.Scale

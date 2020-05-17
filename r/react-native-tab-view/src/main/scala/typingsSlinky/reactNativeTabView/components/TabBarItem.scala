@@ -7,7 +7,7 @@ import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeTabView.AnonFocused
+import typingsSlinky.reactNativeTabView.anon.Focused
 import typingsSlinky.reactNativeTabView.tabBarItemMod.Props
 import typingsSlinky.reactNativeTabView.tabBarItemMod.default
 import typingsSlinky.reactNativeTabView.typesMod.NavigationState
@@ -43,9 +43,9 @@ object TabBarItem {
     @scala.inline
     def renderBadge(value: /* scene */ Scene[T] => TagMod[Any]): this.type = set("renderBadge", js.Any.fromFunction1(value))
     @scala.inline
-    def renderIcon(value: /* scene */ AnonFocused[T] => TagMod[Any]): this.type = set("renderIcon", js.Any.fromFunction1(value))
+    def renderIcon(value: /* scene */ Focused[T] => TagMod[Any]): this.type = set("renderIcon", js.Any.fromFunction1(value))
     @scala.inline
-    def renderLabel(value: /* scene */ AnonFocused[T] => TagMod[Any]): this.type = set("renderLabel", js.Any.fromFunction1(value))
+    def renderLabel(value: /* scene */ Focused[T] => TagMod[Any]): this.type = set("renderLabel", js.Any.fromFunction1(value))
     @scala.inline
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

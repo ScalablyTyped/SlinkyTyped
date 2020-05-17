@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsCore.opsMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.tensorflowTfjsCore.AnonMean
+import typingsSlinky.tensorflowTfjsCore.anon.Mean
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
@@ -17,7 +17,7 @@ object moments
         /* x */ Tensor[Rank] | TensorLike, 
         /* axis */ js.UndefOr[Double | js.Array[Double]], 
         /* keepDims */ js.UndefOr[Boolean], 
-        AnonMean
+        Mean
       ]
     ]
 

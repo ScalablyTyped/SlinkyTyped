@@ -1,9 +1,9 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.AutoFilterData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.AutoFilterLoadOptions
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
+import typingsSlinky.officeJsPreview.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,9 +15,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@JSGlobal("Excel.AutoFilter")
 @js.native
-class AutoFilter () extends ClientObject {
+trait AutoFilter extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_AutoFilter: RequestContext = js.native
@@ -89,7 +88,7 @@ class AutoFilter () extends ClientObject {
     */
   def load(): AutoFilter = js.native
   def load(options: AutoFilterLoadOptions): AutoFilter = js.native
-  def load(propertyNamesAndPaths: AnonExpand): AutoFilter = js.native
+  def load(propertyNamesAndPaths: Expand): AutoFilter = js.native
   def load(propertyNames: String): AutoFilter = js.native
   def load(propertyNames: js.Array[String]): AutoFilter = js.native
   /**

@@ -1,12 +1,13 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin.messageMod
 
 import typingsSlinky.forkTsCheckerWebpackPlugin.normalizedMessageMod.NormalizedMessage
+import typingsSlinky.forkTsCheckerWebpackPlugin.rpcTypesMod.RunResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Message extends js.Object {
+trait Message extends RunResult {
   var diagnostics: js.Array[NormalizedMessage] = js.native
   var lints: js.Array[NormalizedMessage] = js.native
 }

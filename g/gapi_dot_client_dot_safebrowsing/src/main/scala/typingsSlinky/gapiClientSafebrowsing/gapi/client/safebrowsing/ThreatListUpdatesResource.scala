@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientSafebrowsing.gapi.client.safebrowsing
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientSafebrowsing.AnonAlt
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientSafebrowsing.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +12,12 @@ trait ThreatListUpdatesResource extends js.Object {
     * Fetches the most recent threat list updates. A client can request updates
     * for multiple lists at once.
     */
-  def fetch(request: AnonAlt): Request_[FetchThreatListUpdatesResponse] = js.native
+  def fetch(request: Alt): Request[FetchThreatListUpdatesResponse] = js.native
 }
 
 object ThreatListUpdatesResource {
   @scala.inline
-  def apply(fetch: AnonAlt => Request_[FetchThreatListUpdatesResponse]): ThreatListUpdatesResource = {
+  def apply(fetch: Alt => Request[FetchThreatListUpdatesResponse]): ThreatListUpdatesResource = {
     val __obj = js.Dynamic.literal(fetch = js.Any.fromFunction1(fetch))
     __obj.asInstanceOf[ThreatListUpdatesResource]
   }
@@ -28,7 +28,7 @@ object ThreatListUpdatesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFetch(value: AnonAlt => Request_[FetchThreatListUpdatesResponse]): Self = {
+    def withFetch(value: Alt => Request[FetchThreatListUpdatesResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fetch")(js.Any.fromFunction1(value))
         ret

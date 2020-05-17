@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientBooks.AnonNotificationid
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientBooks.anon.Notificationid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait NotificationResource extends js.Object {
   /** Returns notification details for a given notification id. */
-  def get(request: AnonNotificationid): Request_[Notification] = js.native
+  def get(request: Notificationid): Request[Notification] = js.native
 }
 
 object NotificationResource {
   @scala.inline
-  def apply(get: AnonNotificationid => Request_[Notification]): NotificationResource = {
+  def apply(get: Notificationid => Request[Notification]): NotificationResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get))
     __obj.asInstanceOf[NotificationResource]
   }
@@ -25,7 +25,7 @@ object NotificationResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonNotificationid => Request_[Notification]): Self = {
+    def withGet(value: Notificationid => Request[Notification]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret

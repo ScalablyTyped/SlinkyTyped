@@ -1,6 +1,6 @@
 package typingsSlinky.firebaseFirestoreTypes.mod
 
-import typingsSlinky.firebaseFirestoreTypes.AnonCompleteError
+import typingsSlinky.firebaseFirestoreTypes.anon.CompleteError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ class Query[T] protected () extends js.Object {
   def isEqual(other: Query[T]): Boolean = js.native
   def limit(limit: Double): Query[T] = js.native
   def limitToLast(limit: Double): Query[T] = js.native
-  def onSnapshot(observer: AnonCompleteError[T]): js.Function0[Unit] = js.native
+  def onSnapshot(observer: CompleteError[T]): js.Function0[Unit] = js.native
   def onSnapshot(onNext: js.Function1[/* snapshot */ QuerySnapshot[T], Unit]): js.Function0[Unit] = js.native
   def onSnapshot(
     onNext: js.Function1[/* snapshot */ QuerySnapshot[T], Unit],
@@ -29,7 +29,7 @@ class Query[T] protected () extends js.Object {
     onError: js.Function1[/* error */ js.Error, Unit],
     onCompletion: js.Function0[Unit]
   ): js.Function0[Unit] = js.native
-  def onSnapshot(options: SnapshotListenOptions, observer: AnonCompleteError[T]): js.Function0[Unit] = js.native
+  def onSnapshot(options: SnapshotListenOptions, observer: CompleteError[T]): js.Function0[Unit] = js.native
   def onSnapshot(options: SnapshotListenOptions, onNext: js.Function1[/* snapshot */ QuerySnapshot[T], Unit]): js.Function0[Unit] = js.native
   def onSnapshot(
     options: SnapshotListenOptions,

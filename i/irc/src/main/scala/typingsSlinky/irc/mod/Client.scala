@@ -1,8 +1,8 @@
 package typingsSlinky.irc.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.irc.AnonChannel
-import typingsSlinky.irc.AnonCreated
+import typingsSlinky.irc.anon.Channel
+import typingsSlinky.irc.anon.Created
 import typingsSlinky.irc.mod.handlers.IJoinChannel
 import typingsSlinky.irc.mod.handlers.IPartChannel
 import typingsSlinky.irc.mod.handlers.IRaw
@@ -30,7 +30,7 @@ class Client protected () extends EventEmitter {
     * Channels joined. Includes channel modes, user list, and topic
     * information. Only updated after the server recognizes the join.
     */
-  var chans: StringDictionary[AnonCreated] = js.native
+  var chans: StringDictionary[Created] = js.native
   /**
     * Socket to the server. Rarely, if ever needed. Use Client#send
     * instead.
@@ -49,7 +49,7 @@ class Client protected () extends EventEmitter {
   /** Bot options */
   var opt: IClientOpts = js.native
   /** Features supported by the server */
-  var supported: AnonChannel = js.native
+  var supported: Channel = js.native
   /**
     * Send an action to the specified target
     * @param target - target

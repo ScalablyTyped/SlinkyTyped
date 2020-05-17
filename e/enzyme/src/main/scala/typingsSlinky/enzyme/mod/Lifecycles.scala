@@ -1,19 +1,20 @@
 package typingsSlinky.enzyme.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.enzyme.AnonDictkey
-import typingsSlinky.enzyme.AnonHasShouldComponentUpdateBug
-import typingsSlinky.enzyme.AnonOnSetState
+import typingsSlinky.enzyme.anon.Dictkey
+import typingsSlinky.enzyme.anon.HasShouldComponentUpdateBug
+import typingsSlinky.enzyme.anon.OnSetState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Lifecycles
-  extends /* key */ StringDictionary[js.Any] {
-  var componentDidUpdate: js.UndefOr[AnonOnSetState] = js.native
-  var getChildContext: js.UndefOr[AnonDictkey] = js.native
-  var getDerivedStateFromProps: js.UndefOr[AnonHasShouldComponentUpdateBug | Boolean] = js.native
+  extends // TODO Maybe some life cycle are missing
+/* lifecycleName */ StringDictionary[js.Any] {
+  var componentDidUpdate: js.UndefOr[OnSetState] = js.native
+  var getChildContext: js.UndefOr[Dictkey] = js.native
+  var getDerivedStateFromProps: js.UndefOr[HasShouldComponentUpdateBug | Boolean] = js.native
   var setState: js.UndefOr[js.Any] = js.native
 }
 
@@ -30,7 +31,7 @@ object Lifecycles {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withComponentDidUpdate(value: AnonOnSetState): Self = {
+    def withComponentDidUpdate(value: OnSetState): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("componentDidUpdate")(value.asInstanceOf[js.Any])
         ret
@@ -42,7 +43,7 @@ object Lifecycles {
         ret
     }
     @scala.inline
-    def withGetChildContext(value: AnonDictkey): Self = {
+    def withGetChildContext(value: Dictkey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getChildContext")(value.asInstanceOf[js.Any])
         ret
@@ -54,7 +55,7 @@ object Lifecycles {
         ret
     }
     @scala.inline
-    def withGetDerivedStateFromProps(value: AnonHasShouldComponentUpdateBug | Boolean): Self = {
+    def withGetDerivedStateFromProps(value: HasShouldComponentUpdateBug | Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getDerivedStateFromProps")(value.asInstanceOf[js.Any])
         ret

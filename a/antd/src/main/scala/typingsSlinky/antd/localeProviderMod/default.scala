@@ -1,7 +1,7 @@
 package typingsSlinky.antd.localeProviderMod
 
-import typingsSlinky.antd.Anon1
-import typingsSlinky.antd.AnonAntLocale
+import typingsSlinky.antd.anon.AntLocale
+import typingsSlinky.antd.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ class default protected () extends LocaleProvider {
 @JSImport("antd/lib/locale-provider", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var childContextTypes: AnonAntLocale = js.native
-  var defaultProps: Anon1 = js.native
+  var childContextTypes: AntLocale = js.native
+  var defaultProps: `1` = js.native
 }
 

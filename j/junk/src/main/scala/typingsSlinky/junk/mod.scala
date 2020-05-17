@@ -1,5 +1,6 @@
 package typingsSlinky.junk
 
+import typingsSlinky.junk.anon.Default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   // TODO: Remove this for the next major release
-  var default: AnonDefault = js.native
+  var default: Default = js.native
   /**
   	Regex used for matching junk files.
   	*/

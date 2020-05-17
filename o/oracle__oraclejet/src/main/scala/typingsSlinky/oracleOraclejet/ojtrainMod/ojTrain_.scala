@@ -2,7 +2,7 @@ package typingsSlinky.oracleOraclejet.ojtrainMod
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.AnonMessageType
+import typingsSlinky.oracleOraclejet.anon.MessageType
 import typingsSlinky.oracleOraclejet.mod.baseComponent
 import typingsSlinky.oracleOraclejet.ojtrainMod.ojTrain.Step
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.ojBeforeDeselect
@@ -87,6 +87,6 @@ trait ojTrain_ extends baseComponent[ojTrainSettableProperties] {
   def setProperty_selectedStep(property: selectedStep, value: String): Unit = js.native
   @JSName("setProperty")
   def setProperty_steps(property: steps, value: js.Array[Step]): Unit = js.native
-  def updateStep(id: String, stepProperties: AnonMessageType): Unit = js.native
+  def updateStep(id: String, stepProperties: MessageType): Unit = js.native
 }
 

@@ -1,0 +1,16 @@
+package typingsSlinky.mfiles.global.MFiles
+
+import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.IVerifyVaultJob
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("MFiles.VerifyVaultJob")
+@js.native
+class VerifyVaultJob () extends IVerifyVaultJob
+
+@JSGlobal("MFiles.VerifyVaultJob")
+@js.native
+object VerifyVaultJob extends Instantiable0[IVerifyVaultJob]
+

@@ -15,7 +15,6 @@ import typingsSlinky.phaser.Phaser.GameObjects.Components.TextureCrop
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Tint
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Transform
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Visible
-import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -32,9 +31,8 @@ import scala.scalajs.js.annotation._
   * As such, Sprites take a fraction longer to process and have a larger API footprint due to the Animation
   * Component. If you do not require animation then you can safely use Images to replace Sprites in all cases.
   */
-@JSGlobal("Phaser.GameObjects.Sprite")
 @js.native
-class Sprite protected ()
+trait Sprite
   extends GameObject
      with Alpha
      with BlendMode
@@ -50,17 +48,6 @@ class Sprite protected ()
      with Tint
      with Transform
      with Visible {
-  /**
-    * 
-    * @param scene The Scene to which this Game Object belongs. A Game Object can only belong to one Scene at a time.
-    * @param x The horizontal position of this Game Object in the world.
-    * @param y The vertical position of this Game Object in the world.
-    * @param texture The key of the Texture this Game Object will use to render with, as stored in the Texture Manager.
-    * @param frame An optional frame from the Texture this Game Object is rendering with.
-    */
-  def this(scene: Scene, x: Double, y: Double, texture: String) = this()
-  def this(scene: Scene, x: Double, y: Double, texture: String, frame: String) = this()
-  def this(scene: Scene, x: Double, y: Double, texture: String, frame: integer) = this()
   /**
     * The Animation Controller of this Sprite.
     */

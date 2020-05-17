@@ -1,6 +1,5 @@
 package typingsSlinky.prosemirrorModel.mod
 
-import typingsSlinky.prosemirrorModel.AnonNode
 import typingsSlinky.prosemirrorModel.prosemirrorModelStrings.full
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +20,7 @@ trait ParseOptions[S /* <: Schema[_, _] */] extends js.Object {
     * that holds the document position. DOM positions that are not
     * in the parsed content will not be written to.
     */
-  var findPositions: js.UndefOr[js.Array[AnonNode] | Null] = js.native
+  var findPositions: js.UndefOr[js.Array[typingsSlinky.prosemirrorModel.anon.Node] | Null] = js.native
   /**
     * The child node index to start parsing from.
     */
@@ -81,7 +80,7 @@ object ParseOptions {
         ret
     }
     @scala.inline
-    def withFindPositions(value: js.Array[AnonNode]): Self[S] = {
+    def withFindPositions(value: js.Array[typingsSlinky.prosemirrorModel.anon.Node]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("findPositions")(value.asInstanceOf[js.Any])
         ret

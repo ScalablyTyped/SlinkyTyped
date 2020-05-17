@@ -11,9 +11,6 @@ import scala.scalajs.js.annotation._
   * @description Creates a new forward renderer object.
   * @param {pc.GraphicsDevice} graphicsDevice - The graphics device used by the renderer.
   */
-@JSGlobal("pc.ForwardRenderer")
 @js.native
-class ForwardRenderer protected () extends js.Object {
-  def this(graphicsDevice: GraphicsDevice) = this()
-}
+trait ForwardRenderer extends js.Object
 

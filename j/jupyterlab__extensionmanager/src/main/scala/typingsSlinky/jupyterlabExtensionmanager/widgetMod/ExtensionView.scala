@@ -1,12 +1,12 @@
 package typingsSlinky.jupyterlabExtensionmanager.widgetMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLInputElement
 import typingsSlinky.jupyterlabApputils.vdomMod.VDomRenderer
 import typingsSlinky.jupyterlabExtensionmanager.modelMod.Action
 import typingsSlinky.jupyterlabExtensionmanager.modelMod.IEntry
 import typingsSlinky.jupyterlabExtensionmanager.modelMod.ListModel
 import typingsSlinky.jupyterlabServices.mod.ServiceManager
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +33,7 @@ class ExtensionView protected () extends VDomRenderer[ListModel] {
     * called in response to events on the command palette's DOM node.
     * It should not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
   /**
     * Callback handler for when the user wants to perform an action on an extension.
     *

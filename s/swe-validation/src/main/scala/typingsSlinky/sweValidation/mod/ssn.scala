@@ -1,6 +1,6 @@
 package typingsSlinky.sweValidation.mod
 
-import typingsSlinky.sweValidation.AnonSex
+import typingsSlinky.sweValidation.anon.Sex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ssn extends js.Object {
   var isValid: Boolean = js.native
-  var person: js.UndefOr[AnonSex] = js.native
+  var person: js.UndefOr[Sex] = js.native
 }
 
 object ssn {
@@ -30,7 +30,7 @@ object ssn {
         ret
     }
     @scala.inline
-    def withPerson(value: AnonSex): Self = {
+    def withPerson(value: Sex): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("person")(value.asInstanceOf[js.Any])
         ret

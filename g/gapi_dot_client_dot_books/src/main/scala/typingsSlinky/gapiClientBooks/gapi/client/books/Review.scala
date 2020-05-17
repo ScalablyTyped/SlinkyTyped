@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClientBooks.AnonDescription
-import typingsSlinky.gapiClientBooks.AnonDisplayName
+import typingsSlinky.gapiClientBooks.anon.Description
+import typingsSlinky.gapiClientBooks.anon.DisplayName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Review extends js.Object {
   /** Author of this review. */
-  var author: js.UndefOr[AnonDisplayName] = js.native
+  var author: js.UndefOr[DisplayName] = js.native
   /** Review text. */
   var content: js.UndefOr[String] = js.native
   /** Date of this review. */
@@ -21,7 +21,7 @@ trait Review extends js.Object {
   /** Star rating for this review. Possible values are ONE, TWO, THREE, FOUR, FIVE or NOT_RATED. */
   var rating: js.UndefOr[String] = js.native
   /** Information regarding the source of this review, when the review is not from a Google Books user. */
-  var source: js.UndefOr[AnonDescription] = js.native
+  var source: js.UndefOr[Description] = js.native
   /** Title for this review. */
   var title: js.UndefOr[String] = js.native
   /** Source type for this review. Possible values are EDITORIAL, WEB_USER or GOOGLE_USER. */
@@ -43,7 +43,7 @@ object Review {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAuthor(value: AnonDisplayName): Self = {
+    def withAuthor(value: DisplayName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
         ret
@@ -115,7 +115,7 @@ object Review {
         ret
     }
     @scala.inline
-    def withSource(value: AnonDescription): Self = {
+    def withSource(value: Description): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
         ret

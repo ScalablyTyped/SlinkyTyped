@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** The DeviceEvent object describes an EventID that can be used when calling RegisterEvent or RegisterPersistentEvent on a DeviceManager object. */
-@JSGlobal("WIA.DeviceEvent")
 @js.native
-class DeviceEvent protected () extends js.Object {
+trait DeviceEvent extends js.Object {
   /** Returns the event Description */
   val Description: String = js.native
   /** Returns the EventID for this Event */
@@ -18,5 +17,58 @@ class DeviceEvent protected () extends js.Object {
   val Type: WiaEventFlag = js.native
   @JSName("WIA.DeviceEvent_typekey")
   var WIADotDeviceEvent_typekey: DeviceEvent = js.native
+}
+
+object DeviceEvent {
+  @scala.inline
+  def apply(
+    Description: String,
+    EventID: String,
+    Name: String,
+    Type: WiaEventFlag,
+    WIADotDeviceEvent_typekey: DeviceEvent
+  ): DeviceEvent = {
+    val __obj = js.Dynamic.literal(Description = Description.asInstanceOf[js.Any], EventID = EventID.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
+    __obj.updateDynamic("WIA.DeviceEvent_typekey")(WIADotDeviceEvent_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DeviceEvent]
+  }
+  @scala.inline
+  implicit class DeviceEventOps[Self <: DeviceEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEventID(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EventID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: WiaEventFlag): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWIADotDeviceEvent_typekey(value: DeviceEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WIA.DeviceEvent_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

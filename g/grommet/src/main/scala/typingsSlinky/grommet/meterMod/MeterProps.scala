@@ -1,7 +1,7 @@
 package typingsSlinky.grommet.meterMod
 
-import typingsSlinky.grommet.AnonColorOpacity
-import typingsSlinky.grommet.AnonHighlight
+import typingsSlinky.grommet.anon.ColorOpacity
+import typingsSlinky.grommet.anon.Highlight
 import typingsSlinky.grommet.grommetStrings.bar
 import typingsSlinky.grommet.grommetStrings.circle
 import typingsSlinky.grommet.grommetStrings.full
@@ -22,7 +22,7 @@ import scala.scalajs.js.annotation._
 trait MeterProps extends js.Object {
   var a11yTitle: js.UndefOr[A11yTitleType] = js.native
   var alignSelf: js.UndefOr[AlignSelfType] = js.native
-  var background: js.UndefOr[String | AnonColorOpacity] = js.native
+  var background: js.UndefOr[String | ColorOpacity] = js.native
   var gridArea: js.UndefOr[GridAreaType] = js.native
   var margin: js.UndefOr[MarginType] = js.native
   var max: js.UndefOr[Double] = js.native
@@ -30,7 +30,7 @@ trait MeterProps extends js.Object {
   var size: js.UndefOr[xsmall | small | medium | large | xlarge | full | String] = js.native
   var thickness: js.UndefOr[xsmall | small | medium | large | xlarge | String] = js.native
   var `type`: js.UndefOr[bar | circle] = js.native
-  var values: js.UndefOr[js.Array[AnonHighlight]] = js.native
+  var values: js.UndefOr[js.Array[Highlight]] = js.native
 }
 
 object MeterProps {
@@ -70,7 +70,7 @@ object MeterProps {
         ret
     }
     @scala.inline
-    def withBackground(value: String | AnonColorOpacity): Self = {
+    def withBackground(value: String | ColorOpacity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
         ret
@@ -166,7 +166,7 @@ object MeterProps {
         ret
     }
     @scala.inline
-    def withValues(value: js.Array[AnonHighlight]): Self = {
+    def withValues(value: js.Array[Highlight]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
         ret

@@ -13,13 +13,15 @@ trait InteractionsAddOrUpdateRestrictionsForOrgParams extends js.Object {
     * Specifies the group of GitHub users who can comment, open issues, or create pull requests in public repositories for the given organization. Must be one of: `existing_users`, `contributors_only`, or `collaborators_only`.
     */
   var limit: existing_users | contributors_only | collaborators_only = js.native
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
 }
 
 object InteractionsAddOrUpdateRestrictionsForOrgParams {
   @scala.inline
-  def apply(limit: existing_users | contributors_only | collaborators_only, org: String): InteractionsAddOrUpdateRestrictionsForOrgParams = {
-    val __obj = js.Dynamic.literal(limit = limit.asInstanceOf[js.Any], org = org.asInstanceOf[js.Any])
+  def apply(limit: existing_users | contributors_only | collaborators_only, org_ : String): InteractionsAddOrUpdateRestrictionsForOrgParams = {
+    val __obj = js.Dynamic.literal(limit = limit.asInstanceOf[js.Any])
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[InteractionsAddOrUpdateRestrictionsForOrgParams]
   }
   @scala.inline
@@ -35,7 +37,7 @@ object InteractionsAddOrUpdateRestrictionsForOrgParams {
         ret
     }
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

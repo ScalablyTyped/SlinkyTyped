@@ -6,7 +6,7 @@ import typingsSlinky.monacoEditor.mod.editor.IEditorConstructionOptions
 import typingsSlinky.monacoEditor.mod.editor.IEditorOverrideServices
 import typingsSlinky.monacoEditor.mod.editor.IModelContentChangedEvent
 import typingsSlinky.monacoEditor.mod.editor.IStandaloneCodeEditor
-import typingsSlinky.reactMonacoEditor.TypeofmonacoEditor
+import typingsSlinky.reactMonacoEditor.anon.TypeofmonacoEditor
 import typingsSlinky.reactMonacoEditor.mod.MonacoEditorProps
 import typingsSlinky.reactMonacoEditor.mod.default
 import scala.scalajs.js

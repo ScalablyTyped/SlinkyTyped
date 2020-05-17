@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object navInterfaceMod {
-  type NavComponent = typingsSlinky.ionicCore.mod.ComponentRef | typingsSlinky.ionicCore.viewControllerMod.ViewController
   type Page = org.scalablytyped.runtime.Instantiable1[/* args (repeated) */ js.Any, js.Any]
   type TransitionDoneFn = js.Function5[
     /* hasCompleted */ scala.Boolean, 

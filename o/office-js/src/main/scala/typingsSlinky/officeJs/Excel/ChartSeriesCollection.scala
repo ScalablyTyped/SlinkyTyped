@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.ChartSeriesCollection")
 @js.native
-class ChartSeriesCollection () extends ClientObject {
+trait ChartSeriesCollection extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_ChartSeriesCollection: RequestContext = js.native

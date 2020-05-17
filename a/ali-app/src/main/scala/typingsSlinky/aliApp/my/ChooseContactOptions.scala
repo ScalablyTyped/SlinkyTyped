@@ -1,11 +1,11 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonContactsDicArray
 import typingsSlinky.aliApp.aliAppStrings.all
 import typingsSlinky.aliApp.aliAppStrings.known
 import typingsSlinky.aliApp.aliAppStrings.multi
 import typingsSlinky.aliApp.aliAppStrings.none
 import typingsSlinky.aliApp.aliAppStrings.single
+import typingsSlinky.aliApp.anon.ContactsDicArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,12 +24,12 @@ trait ChooseContactOptions
   /** 多选达到上限的文案，仅 chooseType 为 multi 时才有效 */
   var multiChooseMaxTips: js.UndefOr[String] = js.native
   @JSName("success")
-  def success_MChooseContactOptions(result: AnonContactsDicArray): Unit = js.native
+  def success_MChooseContactOptions(result: ContactsDicArray): Unit = js.native
 }
 
 object ChooseContactOptions {
   @scala.inline
-  def apply(chooseType: single | multi | String, success: AnonContactsDicArray => Unit): ChooseContactOptions = {
+  def apply(chooseType: single | multi | String, success: ContactsDicArray => Unit): ChooseContactOptions = {
     val __obj = js.Dynamic.literal(chooseType = chooseType.asInstanceOf[js.Any], success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[ChooseContactOptions]
   }
@@ -46,7 +46,7 @@ object ChooseContactOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: AnonContactsDicArray => Unit): Self = {
+    def withSuccess(value: ContactsDicArray => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

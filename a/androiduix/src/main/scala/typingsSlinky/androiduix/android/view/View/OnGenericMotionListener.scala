@@ -10,11 +10,25 @@ trait OnGenericMotionListener extends js.Object {
   def onGenericMotion(v: typingsSlinky.androiduix.android.view.View, event: MotionEvent): js.Any = js.native
 }
 
-@JSGlobal("android.view.View.OnGenericMotionListener")
-@js.native
-object OnGenericMotionListener extends js.Object {
-  def fromFunction(
-    func: js.Function2[/* v */ typingsSlinky.androiduix.android.view.View, /* event */ MotionEvent, Unit]
-  ): OnGenericMotionListener = js.native
+object OnGenericMotionListener {
+  @scala.inline
+  def apply(onGenericMotion: (typingsSlinky.androiduix.android.view.View, MotionEvent) => js.Any): OnGenericMotionListener = {
+    val __obj = js.Dynamic.literal(onGenericMotion = js.Any.fromFunction2(onGenericMotion))
+    __obj.asInstanceOf[OnGenericMotionListener]
+  }
+  @scala.inline
+  implicit class OnGenericMotionListenerOps[Self <: OnGenericMotionListener] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnGenericMotion(value: (typingsSlinky.androiduix.android.view.View, MotionEvent) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onGenericMotion")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

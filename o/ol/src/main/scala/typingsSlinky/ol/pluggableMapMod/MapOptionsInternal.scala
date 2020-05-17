@@ -1,8 +1,8 @@
 package typingsSlinky.ol.pluggableMapMod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait MapOptionsInternal extends js.Object {
   var interactions: js.UndefOr[
     typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.interactionInteractionMod.default]
   ] = js.native
-  var keyboardEventTarget: HTMLElement | Document_ = js.native
+  var keyboardEventTarget: HTMLElement | Document = js.native
   var overlays: typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.overlayMod.default] = js.native
   var values: StringDictionary[js.Any] = js.native
 }
@@ -23,7 +23,7 @@ trait MapOptionsInternal extends js.Object {
 object MapOptionsInternal {
   @scala.inline
   def apply(
-    keyboardEventTarget: HTMLElement | Document_,
+    keyboardEventTarget: HTMLElement | Document,
     overlays: typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.overlayMod.default],
     values: StringDictionary[js.Any]
   ): MapOptionsInternal = {
@@ -37,13 +37,19 @@ object MapOptionsInternal {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
+    def withKeyboardEventTargetDocument(value: Document): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardEventTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
     def withKeyboardEventTargetHTMLElement(value: HTMLElement): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardEventTarget")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withKeyboardEventTarget(value: HTMLElement | Document_): Self = {
+    def withKeyboardEventTarget(value: HTMLElement | Document): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardEventTarget")(value.asInstanceOf[js.Any])
         ret

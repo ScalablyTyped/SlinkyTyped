@@ -1,6 +1,8 @@
 package typingsSlinky.smoothScrollbar
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.smoothScrollbar.anon.PartialScrollbarOptions
+import typingsSlinky.smoothScrollbar.anon.TypeofScrollbarPlugin
 import typingsSlinky.smoothScrollbar.smoothScrollbarScrollbarMod.Scrollbar
 import scala.scalajs.js
 import scala.scalajs.js.`|`

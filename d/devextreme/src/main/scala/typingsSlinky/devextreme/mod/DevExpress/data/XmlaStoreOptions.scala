@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.data
 
-import typingsSlinky.devextreme.AnonData
+import typingsSlinky.devextreme.anon.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait XmlaStoreOptions extends js.Object {
   /** Specifies a function that customizes the request before it is sent to the server. */
-  var beforeSend: js.UndefOr[js.Function1[/* options */ AnonData, _]] = js.native
+  var beforeSend: js.UndefOr[js.Function1[/* options */ Data, _]] = js.native
   /** Specifies the database (or initial catalog) that contains the OLAP cube to use. */
   var catalog: js.UndefOr[String] = js.native
   /** Specifies the name of the OLAP cube to use from the catalog. */
@@ -30,7 +30,7 @@ object XmlaStoreOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBeforeSend(value: /* options */ AnonData => _): Self = {
+    def withBeforeSend(value: /* options */ Data => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeSend")(js.Any.fromFunction1(value))
         ret

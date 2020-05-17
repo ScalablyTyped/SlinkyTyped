@@ -1,25 +1,25 @@
 package typingsSlinky.yup.mod
 
-import typingsSlinky.yup.AnonLength
-import typingsSlinky.yup.AnonMax
-import typingsSlinky.yup.AnonMin
-import typingsSlinky.yup.AnonRegex
-import typingsSlinky.yup.PartialTestMessageParams
+import typingsSlinky.yup.anon.Length
+import typingsSlinky.yup.anon.Max
+import typingsSlinky.yup.anon.Min
+import typingsSlinky.yup.anon.PartialTestMessageParams
+import typingsSlinky.yup.anon.Regex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait StringLocale extends js.Object {
-  var email: js.UndefOr[TestOptionsMessage[AnonRegex, _]] = js.native
-  var length: js.UndefOr[TestOptionsMessage[AnonLength, _]] = js.native
+  var email: js.UndefOr[TestOptionsMessage[Regex, _]] = js.native
+  var length: js.UndefOr[TestOptionsMessage[Length, _]] = js.native
   var lowercase: js.UndefOr[TestOptionsMessage[js.Object, _]] = js.native
-  var matches: js.UndefOr[TestOptionsMessage[AnonRegex, _]] = js.native
-  var max: js.UndefOr[TestOptionsMessage[AnonMax, _]] = js.native
-  var min: js.UndefOr[TestOptionsMessage[AnonMin, _]] = js.native
+  var matches: js.UndefOr[TestOptionsMessage[Regex, _]] = js.native
+  var max: js.UndefOr[TestOptionsMessage[Max, _]] = js.native
+  var min: js.UndefOr[TestOptionsMessage[Min, _]] = js.native
   var trim: js.UndefOr[TestOptionsMessage[js.Object, _]] = js.native
   var uppercase: js.UndefOr[TestOptionsMessage[js.Object, _]] = js.native
-  var url: js.UndefOr[TestOptionsMessage[AnonRegex, _]] = js.native
+  var url: js.UndefOr[TestOptionsMessage[Regex, _]] = js.native
 }
 
 object StringLocale {
@@ -35,13 +35,13 @@ object StringLocale {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEmailFunction1(value: /* params */ AnonRegex with PartialTestMessageParams => _): Self = {
+    def withEmailFunction1(value: /* params */ Regex with PartialTestMessageParams => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("email")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withEmail(value: TestOptionsMessage[AnonRegex, _]): Self = {
+    def withEmail(value: TestOptionsMessage[Regex, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("email")(value.asInstanceOf[js.Any])
         ret
@@ -53,13 +53,13 @@ object StringLocale {
         ret
     }
     @scala.inline
-    def withLengthFunction1(value: /* params */ AnonLength with PartialTestMessageParams => _): Self = {
+    def withLengthFunction1(value: /* params */ Length with PartialTestMessageParams => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withLength(value: TestOptionsMessage[AnonLength, _]): Self = {
+    def withLength(value: TestOptionsMessage[Length, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
         ret
@@ -89,13 +89,13 @@ object StringLocale {
         ret
     }
     @scala.inline
-    def withMatchesFunction1(value: /* params */ AnonRegex with PartialTestMessageParams => _): Self = {
+    def withMatchesFunction1(value: /* params */ Regex with PartialTestMessageParams => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("matches")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withMatches(value: TestOptionsMessage[AnonRegex, _]): Self = {
+    def withMatches(value: TestOptionsMessage[Regex, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("matches")(value.asInstanceOf[js.Any])
         ret
@@ -107,13 +107,13 @@ object StringLocale {
         ret
     }
     @scala.inline
-    def withMaxFunction1(value: /* params */ AnonMax with PartialTestMessageParams => _): Self = {
+    def withMaxFunction1(value: /* params */ Max with PartialTestMessageParams => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withMax(value: TestOptionsMessage[AnonMax, _]): Self = {
+    def withMax(value: TestOptionsMessage[Max, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
         ret
@@ -125,13 +125,13 @@ object StringLocale {
         ret
     }
     @scala.inline
-    def withMinFunction1(value: /* params */ AnonMin with PartialTestMessageParams => _): Self = {
+    def withMinFunction1(value: /* params */ Min with PartialTestMessageParams => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withMin(value: TestOptionsMessage[AnonMin, _]): Self = {
+    def withMin(value: TestOptionsMessage[Min, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
         ret
@@ -179,13 +179,13 @@ object StringLocale {
         ret
     }
     @scala.inline
-    def withUrlFunction1(value: /* params */ AnonRegex with PartialTestMessageParams => _): Self = {
+    def withUrlFunction1(value: /* params */ Regex with PartialTestMessageParams => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUrl(value: TestOptionsMessage[AnonRegex, _]): Self = {
+    def withUrl(value: TestOptionsMessage[Regex, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
         ret

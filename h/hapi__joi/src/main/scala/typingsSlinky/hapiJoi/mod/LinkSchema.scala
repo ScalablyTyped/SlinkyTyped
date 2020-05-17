@@ -5,7 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.hapiJoi.mod._Schema because Already inherited */ @js.native
+- typingsSlinky.hapiJoi.mod.SchemaLike because Already inherited
+- typingsSlinky.hapiJoi.mod.Schema because Already inherited */ @js.native
 trait LinkSchema extends AnySchema {
   /**
     * Same as `any.concat()` but the schema is merged after the link is resolved which allows merging with schemas of the same type as the resolved link.

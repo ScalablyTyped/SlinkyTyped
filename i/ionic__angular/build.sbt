@@ -1,27 +1,27 @@
 organization := "org.scalablytyped.slinky"
 name := "ionic__angular"
-version := "4.11.10-8f9ce1"
-scalaVersion := "2.13.1"
+version := "4.11.10-a91d0d"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "angular__common" % "8.2.14-bd40cd",
-  "org.scalablytyped.slinky" %%% "angular__compiler" % "8.2.14-d3d8bb",
-  "org.scalablytyped.slinky" %%% "angular__core" % "8.2.14-655360",
-  "org.scalablytyped.slinky" %%% "angular__forms" % "8.2.14-d85ffa",
-  "org.scalablytyped.slinky" %%% "angular__router" % "8.2.14-bbdeaa",
-  "org.scalablytyped.slinky" %%% "inquirer" % "6.5-dt-20200226Z-18490c",
-  "org.scalablytyped.slinky" %%% "ionic__core" % "4.11.10-3dd437",
-  "org.scalablytyped.slinky" %%% "ionicons" % "4.6.3-027617",
-  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-6c3110",
-  "org.scalablytyped.slinky" %%% "rxjs" % "6.5.4-f7a9ee",
-  "org.scalablytyped.slinky" %%% "rxjs-compat" % "6.5.4-484a39",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e",
-  "org.scalablytyped.slinky" %%% "through" % "0.0-unknown-dt-20200225Z-2cdc6d",
-  "org.scalablytyped.slinky" %%% "typescript" % "3.8.3-961b8f")
+  "org.scalablytyped.slinky" %%% "angular__common" % "8.2.14-068fa9",
+  "org.scalablytyped.slinky" %%% "angular__compiler" % "8.2.14-479697",
+  "org.scalablytyped.slinky" %%% "angular__core" % "8.2.14-06fd0b",
+  "org.scalablytyped.slinky" %%% "angular__forms" % "8.2.14-73420c",
+  "org.scalablytyped.slinky" %%% "angular__router" % "8.2.14-242eec",
+  "org.scalablytyped.slinky" %%% "inquirer" % "6.5-dt-20200226Z-0a5fbb",
+  "org.scalablytyped.slinky" %%% "ionic__core" % "4.11.10-be339f",
+  "org.scalablytyped.slinky" %%% "ionicons" % "4.6.3-b5940b",
+  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-9e8213",
+  "org.scalablytyped.slinky" %%% "rxjs" % "6.5.4-e2a094",
+  "org.scalablytyped.slinky" %%% "rxjs-compat" % "6.5.4-86bf9e",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb",
+  "org.scalablytyped.slinky" %%% "through" % "0.0-unknown-dt-20200225Z-7a8959",
+  "org.scalablytyped.slinky" %%% "typescript" % "3.8.3-472acc")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

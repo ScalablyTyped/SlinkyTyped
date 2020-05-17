@@ -1,12 +1,12 @@
 package typingsSlinky.prosemirrorMenu.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.Node
 import typingsSlinky.prosemirrorModel.mod.Schema
 import typingsSlinky.prosemirrorState.mod.EditorState
 import typingsSlinky.prosemirrorState.mod.Transaction
 import typingsSlinky.prosemirrorView.mod.EditorView
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -74,7 +74,7 @@ trait MenuItemSpec[S /* <: Schema[_, _] */] extends js.Object {
   /**
     * The function to execute when the menu item is activated.
     */
-  def run(p1: EditorState[S], p2: js.Function1[/* p */ Transaction[S], Unit], p3: EditorView[S], p4: Event_): Unit = js.native
+  def run(p1: EditorState[S], p2: js.Function1[/* p */ Transaction[S], Unit], p3: EditorView[S], p4: Event): Unit = js.native
 }
 
 object MenuItemSpec {
@@ -83,7 +83,7 @@ object MenuItemSpec {
     `class`: String,
     css: String,
     execEvent: String,
-    run: (EditorState[S], js.Function1[/* p */ Transaction[S], Unit], EditorView[S], Event_) => Unit
+    run: (EditorState[S], js.Function1[/* p */ Transaction[S], Unit], EditorView[S], Event) => Unit
   ): MenuItemSpec[S] = {
     val __obj = js.Dynamic.literal(css = css.asInstanceOf[js.Any], execEvent = execEvent.asInstanceOf[js.Any], run = js.Any.fromFunction4(run))
     __obj.updateDynamic("class")(`class`.asInstanceOf[js.Any])
@@ -114,7 +114,7 @@ object MenuItemSpec {
         ret
     }
     @scala.inline
-    def withRun(value: (EditorState[S], js.Function1[/* p */ Transaction[S], Unit], EditorView[S], Event_) => Unit): Self[S] = {
+    def withRun(value: (EditorState[S], js.Function1[/* p */ Transaction[S], Unit], EditorView[S], Event) => Unit): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("run")(js.Any.fromFunction4(value))
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojaccordionMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonId
+import typingsSlinky.oracleOraclejet.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ojAccordionSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
-  var expanded: js.UndefOr[js.Array[AnonId | Double | String]] = js.native
+  var expanded: js.UndefOr[js.Array[Double | Id | String]] = js.native
   var multiple: js.UndefOr[Boolean] = js.native
   var translations: js.UndefOr[js.Object] = js.native
 }
@@ -28,7 +28,7 @@ object ojAccordionSettablePropertiesLenient {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withExpanded(value: js.Array[AnonId | Double | String]): Self = {
+    def withExpanded(value: js.Array[Double | Id | String]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(value.asInstanceOf[js.Any])
         ret

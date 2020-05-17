@@ -3,7 +3,7 @@ package typingsSlinky.baseui.modalMod
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.KeyboardEvent
 import slinky.core.TagMod
-import typingsSlinky.baseui.SharedStylePropsArgchildrAnimate
+import typingsSlinky.baseui.anon.SharedStylePropsArgchildrAnimate
 import typingsSlinky.baseui.baseuiStrings.backdrop
 import typingsSlinky.baseui.baseuiStrings.closeButton
 import typingsSlinky.baseui.baseuiStrings.escape_

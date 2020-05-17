@@ -1,7 +1,7 @@
 package typingsSlinky.feathersjsFeathers.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.feathersjsFeathers.PickPaginationOptionsmax
+import typingsSlinky.feathersjsFeathers.anon.PickPaginationOptionsmax
 import typingsSlinky.feathersjsFeathers.feathersjsFeathersBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonEndValue
+import typingsSlinky.devextreme.anon.EndValue
 import typingsSlinky.devextreme.devextremeStrings.Bright
 import typingsSlinky.devextreme.devextremeStrings.Carmine
 import typingsSlinky.devextreme.devextremeStrings.Default
@@ -38,7 +38,7 @@ trait BaseGaugeRangeContainer extends js.Object {
   /** Specifies what to do with colors in the palette when their number is less than the number of ranges in the range container. */
   var paletteExtensionMode: js.UndefOr[alternate | blend | extrapolate] = js.native
   /** An array of objects representing ranges contained in the range container. */
-  var ranges: js.UndefOr[js.Array[AnonEndValue]] = js.native
+  var ranges: js.UndefOr[js.Array[EndValue]] = js.native
 }
 
 object BaseGaugeRangeContainer {
@@ -104,7 +104,7 @@ object BaseGaugeRangeContainer {
         ret
     }
     @scala.inline
-    def withRanges(value: js.Array[AnonEndValue]): Self = {
+    def withRanges(value: js.Array[EndValue]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(value.asInstanceOf[js.Any])
         ret

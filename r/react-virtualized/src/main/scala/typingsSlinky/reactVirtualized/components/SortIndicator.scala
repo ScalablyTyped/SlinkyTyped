@@ -2,7 +2,7 @@ package typingsSlinky.reactVirtualized.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactVirtualized.AnonSortDirection
+import typingsSlinky.reactVirtualized.anon.SortDirection
 import typingsSlinky.reactVirtualized.esTableMod.SortDirectionType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,7 @@ object SortIndicator {
     def sortDirection(value: SortDirectionType): this.type = set("sortDirection", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AnonSortDirection): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: SortDirection): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: SortIndicator.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

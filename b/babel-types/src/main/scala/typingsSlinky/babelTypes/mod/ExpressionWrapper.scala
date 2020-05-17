@@ -1,8 +1,5 @@
 package typingsSlinky.babelTypes.mod
 
-import typingsSlinky.babelTypes.babelTypesStrings.ExpressionStatement
-import typingsSlinky.babelTypes.babelTypesStrings.ParenthesizedExpression
-import typingsSlinky.babelTypes.babelTypesStrings.TypeCastExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,41 +13,10 @@ trait ExpressionWrapper extends js.Object
 
 object ExpressionWrapper {
   @scala.inline
-  def ExpressionStatement_(
-    end: Double,
-    expression: Expression,
-    loc: SourceLocation,
-    start: Double,
-    `type`: ExpressionStatement
-  ): ExpressionWrapper = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], expression = expression.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ExpressionWrapper]
-  }
+  implicit def apply(value: ExpressionStatement_): ExpressionWrapper = value.asInstanceOf[ExpressionWrapper]
   @scala.inline
-  def TypeCastExpression_(
-    end: Double,
-    expression: Expression,
-    loc: SourceLocation,
-    start: Double,
-    `type`: TypeCastExpression,
-    typeAnnotation: FlowTypeAnnotation
-  ): ExpressionWrapper = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], expression = expression.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], typeAnnotation = typeAnnotation.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ExpressionWrapper]
-  }
+  implicit def apply(value: ParenthesizedExpression_): ExpressionWrapper = value.asInstanceOf[ExpressionWrapper]
   @scala.inline
-  def ParenthesizedExpression_(
-    end: Double,
-    expression: Expression,
-    loc: SourceLocation,
-    start: Double,
-    `type`: ParenthesizedExpression
-  ): ExpressionWrapper = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], expression = expression.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ExpressionWrapper]
-  }
+  implicit def apply(value: TypeCastExpression_): ExpressionWrapper = value.asInstanceOf[ExpressionWrapper]
 }
 

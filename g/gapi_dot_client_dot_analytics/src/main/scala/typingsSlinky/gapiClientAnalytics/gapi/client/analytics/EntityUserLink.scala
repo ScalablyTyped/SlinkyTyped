@@ -1,7 +1,6 @@
 package typingsSlinky.gapiClientAnalytics.gapi.client.analytics
 
-import typingsSlinky.gapiClientAnalytics.AnonAccountRef
-import typingsSlinky.gapiClientAnalytics.AnonLocal
+import typingsSlinky.gapiClientAnalytics.anon.Local
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,13 +8,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait EntityUserLink extends js.Object {
   /** Entity for this link. It can be an account, a web property, or a view (profile). */
-  var entity: js.UndefOr[AnonAccountRef] = js.native
+  var entity: js.UndefOr[typingsSlinky.gapiClientAnalytics.anon.AccountRef] = js.native
   /** Entity user link ID */
   var id: js.UndefOr[String] = js.native
   /** Resource type for entity user link. */
   var kind: js.UndefOr[String] = js.native
   /** Permissions the user has for this entity. */
-  var permissions: js.UndefOr[AnonLocal] = js.native
+  var permissions: js.UndefOr[Local] = js.native
   /** Self link for this resource. */
   var selfLink: js.UndefOr[String] = js.native
   /** User reference. */
@@ -35,7 +34,7 @@ object EntityUserLink {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEntity(value: AnonAccountRef): Self = {
+    def withEntity(value: typingsSlinky.gapiClientAnalytics.anon.AccountRef): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("entity")(value.asInstanceOf[js.Any])
         ret
@@ -71,7 +70,7 @@ object EntityUserLink {
         ret
     }
     @scala.inline
-    def withPermissions(value: AnonLocal): Self = {
+    def withPermissions(value: Local): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
         ret

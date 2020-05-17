@@ -1,11 +1,11 @@
 package typingsSlinky.gapiClientCloudiot.gapi.client.cloudiot
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientCloudiot.AnonBearertoken
-import typingsSlinky.gapiClientCloudiot.AnonCallback
-import typingsSlinky.gapiClientCloudiot.AnonFields
-import typingsSlinky.gapiClientCloudiot.AnonKey
-import typingsSlinky.gapiClientCloudiot.AnonOauthtoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientCloudiot.anon.Bearertoken
+import typingsSlinky.gapiClientCloudiot.anon.Callback
+import typingsSlinky.gapiClientCloudiot.anon.Fields
+import typingsSlinky.gapiClientCloudiot.anon.Key
+import typingsSlinky.gapiClientCloudiot.anon.Oauthtoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,46 +14,46 @@ import scala.scalajs.js.annotation._
 trait RegistriesResource extends js.Object {
   var devices: DevicesResource = js.native
   /** Creates a device registry that contains devices. */
-  def create(request: AnonBearertoken): Request_[DeviceRegistry] = js.native
+  def create(request: Bearertoken): Request[DeviceRegistry] = js.native
   /** Deletes a device registry configuration. */
-  def delete(request: AnonCallback): Request_[js.Object] = js.native
+  def delete(request: Callback): Request[js.Object] = js.native
   /** Gets a device registry configuration. */
-  def get(request: AnonCallback): Request_[DeviceRegistry] = js.native
+  def get(request: Callback): Request[DeviceRegistry] = js.native
   /**
     * Gets the access control policy for a resource.
     * Returns an empty policy if the resource exists and does not have a policy
     * set.
     */
-  def getIamPolicy(request: AnonKey): Request_[Policy] = js.native
+  def getIamPolicy(request: Key): Request[Policy] = js.native
   /** Lists device registries. */
-  def list(request: AnonOauthtoken): Request_[ListDeviceRegistriesResponse] = js.native
+  def list(request: Oauthtoken): Request[ListDeviceRegistriesResponse] = js.native
   /** Updates a device registry configuration. */
-  def patch(request: AnonFields): Request_[DeviceRegistry] = js.native
+  def patch(request: Fields): Request[DeviceRegistry] = js.native
   /**
     * Sets the access control policy on the specified resource. Replaces any
     * existing policy.
     */
-  def setIamPolicy(request: AnonKey): Request_[Policy] = js.native
+  def setIamPolicy(request: Key): Request[Policy] = js.native
   /**
     * Returns permissions that a caller has on the specified resource.
     * If the resource does not exist, this will return an empty set of
     * permissions, not a NOT_FOUND error.
     */
-  def testIamPermissions(request: AnonKey): Request_[TestIamPermissionsResponse] = js.native
+  def testIamPermissions(request: Key): Request[TestIamPermissionsResponse] = js.native
 }
 
 object RegistriesResource {
   @scala.inline
   def apply(
-    create: AnonBearertoken => Request_[DeviceRegistry],
-    delete: AnonCallback => Request_[js.Object],
+    create: Bearertoken => Request[DeviceRegistry],
+    delete: Callback => Request[js.Object],
     devices: DevicesResource,
-    get: AnonCallback => Request_[DeviceRegistry],
-    getIamPolicy: AnonKey => Request_[Policy],
-    list: AnonOauthtoken => Request_[ListDeviceRegistriesResponse],
-    patch: AnonFields => Request_[DeviceRegistry],
-    setIamPolicy: AnonKey => Request_[Policy],
-    testIamPermissions: AnonKey => Request_[TestIamPermissionsResponse]
+    get: Callback => Request[DeviceRegistry],
+    getIamPolicy: Key => Request[Policy],
+    list: Oauthtoken => Request[ListDeviceRegistriesResponse],
+    patch: Fields => Request[DeviceRegistry],
+    setIamPolicy: Key => Request[Policy],
+    testIamPermissions: Key => Request[TestIamPermissionsResponse]
   ): RegistriesResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), devices = devices.asInstanceOf[js.Any], get = js.Any.fromFunction1(get), getIamPolicy = js.Any.fromFunction1(getIamPolicy), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), setIamPolicy = js.Any.fromFunction1(setIamPolicy), testIamPermissions = js.Any.fromFunction1(testIamPermissions))
     __obj.asInstanceOf[RegistriesResource]
@@ -65,13 +65,13 @@ object RegistriesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: AnonBearertoken => Request_[DeviceRegistry]): Self = {
+    def withCreate(value: Bearertoken => Request[DeviceRegistry]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonCallback => Request_[js.Object]): Self = {
+    def withDelete(value: Callback => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
@@ -83,37 +83,37 @@ object RegistriesResource {
         ret
     }
     @scala.inline
-    def withGet(value: AnonCallback => Request_[DeviceRegistry]): Self = {
+    def withGet(value: Callback => Request[DeviceRegistry]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGetIamPolicy(value: AnonKey => Request_[Policy]): Self = {
+    def withGetIamPolicy(value: Key => Request[Policy]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getIamPolicy")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonOauthtoken => Request_[ListDeviceRegistriesResponse]): Self = {
+    def withList(value: Oauthtoken => Request[ListDeviceRegistriesResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPatch(value: AnonFields => Request_[DeviceRegistry]): Self = {
+    def withPatch(value: Fields => Request[DeviceRegistry]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withSetIamPolicy(value: AnonKey => Request_[Policy]): Self = {
+    def withSetIamPolicy(value: Key => Request[Policy]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("setIamPolicy")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withTestIamPermissions(value: AnonKey => Request_[TestIamPermissionsResponse]): Self = {
+    def withTestIamPermissions(value: Key => Request[TestIamPermissionsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("testIamPermissions")(js.Any.fromFunction1(value))
         ret

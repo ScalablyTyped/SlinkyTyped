@@ -56,24 +56,6 @@ object MultiDragOptions {
         ret
     }
     @scala.inline
-    def withMultiDragKey(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiDragKey")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMultiDragKey: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiDragKey")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMultiDragKeyNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("multiDragKey")(null)
-        ret
-    }
-    @scala.inline
     def withOnDeselect(value: /* event */ SortableEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDeselect")(js.Any.fromFunction1(value))

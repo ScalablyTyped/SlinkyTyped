@@ -1,6 +1,6 @@
 package typingsSlinky.mongodb.mod
 
-import typingsSlinky.mongodb.AnonPassword
+import typingsSlinky.mongodb.anon.Password
 import typingsSlinky.mongodb.mongodbStrings.DEFAULT
 import typingsSlinky.mongodb.mongodbStrings.GSSAPI
 import typingsSlinky.mongodb.mongodbStrings.PLAIN
@@ -33,7 +33,7 @@ trait MongoClientOptions
   /**
     * Authentication credentials
     */
-  var auth: js.UndefOr[AnonPassword] = js.native
+  var auth: js.UndefOr[Password] = js.native
   /**
     * Mechanism for authentication: DEFAULT, GSSAPI, PLAIN, MONGODB-X509, 'MONGODB-CR', SCRAM-SHA-1 or SCRAM-SHA-256
     */
@@ -132,7 +132,7 @@ object MongoClientOptions {
         ret
     }
     @scala.inline
-    def withAuth(value: AnonPassword): Self = {
+    def withAuth(value: Password): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
         ret

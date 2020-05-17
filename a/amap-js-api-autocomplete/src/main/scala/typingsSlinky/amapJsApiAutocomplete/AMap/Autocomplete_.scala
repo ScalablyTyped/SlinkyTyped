@@ -2,21 +2,14 @@ package typingsSlinky.amapJsApiAutocomplete.AMap
 
 import typingsSlinky.amapJsApi.AMap.EventEmitter
 import typingsSlinky.amapJsApi.AMap.Lang
-import typingsSlinky.amapJsApiAutocomplete.AMap.Autocomplete.Options
 import typingsSlinky.amapJsApiAutocomplete.AMap.Autocomplete.SearchResult
 import typingsSlinky.amapJsApiAutocomplete.AMap.Autocomplete.SearchStatus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("AMap.Autocomplete")
 @js.native
-/**
-  * 输入提示，根据输入关键字提示匹配信息
-  * @param options 选项
-  */
-class Autocomplete_ () extends EventEmitter {
-  def this(options: Options) = this()
+trait Autocomplete_ extends EventEmitter {
   /**
     * 返回查询语言
     */

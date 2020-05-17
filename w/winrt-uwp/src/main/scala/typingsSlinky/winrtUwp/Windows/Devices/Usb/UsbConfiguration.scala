@@ -6,14 +6,51 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides information about a USB configuration, its descriptors and the interfaces defined within that configuration. For an explanation of a USB configuration, see Section 9.6.3 in the Universal Serial Bus (USB) specification. */
-@JSGlobal("Windows.Devices.Usb.UsbConfiguration")
 @js.native
-abstract class UsbConfiguration () extends js.Object {
+trait UsbConfiguration extends js.Object {
   /** Gets the object that contains the first 9 bytes of the descriptor associated with the USB configuration. */
   var configurationDescriptor: UsbConfigurationDescriptor = js.native
   /** Gets an array of objects that represent the full set of descriptors associated with a USB configuration. */
   var descriptors: IVectorView[UsbDescriptor] = js.native
   /** Gets an array of USB interfaces available in the USB configuration. */
   var usbInterfaces: IVectorView[UsbInterface] = js.native
+}
+
+object UsbConfiguration {
+  @scala.inline
+  def apply(
+    configurationDescriptor: UsbConfigurationDescriptor,
+    descriptors: IVectorView[UsbDescriptor],
+    usbInterfaces: IVectorView[UsbInterface]
+  ): UsbConfiguration = {
+    val __obj = js.Dynamic.literal(configurationDescriptor = configurationDescriptor.asInstanceOf[js.Any], descriptors = descriptors.asInstanceOf[js.Any], usbInterfaces = usbInterfaces.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UsbConfiguration]
+  }
+  @scala.inline
+  implicit class UsbConfigurationOps[Self <: UsbConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigurationDescriptor(value: UsbConfigurationDescriptor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configurationDescriptor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescriptors(value: IVectorView[UsbDescriptor]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("descriptors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUsbInterfaces(value: IVectorView[UsbInterface]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usbInterfaces")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ClassBody_
   extends BaseNode
-     with _Node {
+     with Node {
   var body: js.Array[
     ClassMethod_ | ClassPrivateMethod_ | ClassProperty_ | ClassPrivateProperty_ | TSDeclareMethod_ | TSIndexSignature_
   ] = js.native

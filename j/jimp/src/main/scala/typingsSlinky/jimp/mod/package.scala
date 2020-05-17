@@ -10,8 +10,7 @@ package object mod {
     /* this */ typingsSlinky.jimp.mod.DepreciatedJimp, 
     /* err */ js.Error | scala.Null, 
     /* value */ typingsSlinky.jimp.mod.DepreciatedJimp, 
-    /* coords */ typingsSlinky.jimp.AnonX, 
+    /* coords */ typingsSlinky.jimp.anon.X, 
     U
   ]
-  type PrintableText = js.Any | typingsSlinky.jimp.AnonAlignmentX
 }

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.selection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,8 +16,4 @@ trait FeatureReductionSelection
     */
   var `type`: selection = js.native
 }
-
-@JSGlobal("__esri.FeatureReductionSelection")
-@js.native
-object FeatureReductionSelection extends TopLevel[FeatureReductionSelectionConstructor]
 

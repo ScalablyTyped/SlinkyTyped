@@ -1,18 +1,18 @@
 package typingsSlinky.node.vmMod
 
-import typingsSlinky.node.AnonJsMemoryEstimate
+import typingsSlinky.node.anon.JsMemoryEstimate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait MemoryMeasurement extends js.Object {
-  var total: AnonJsMemoryEstimate = js.native
+  var total: JsMemoryEstimate = js.native
 }
 
 object MemoryMeasurement {
   @scala.inline
-  def apply(total: AnonJsMemoryEstimate): MemoryMeasurement = {
+  def apply(total: JsMemoryEstimate): MemoryMeasurement = {
     val __obj = js.Dynamic.literal(total = total.asInstanceOf[js.Any])
     __obj.asInstanceOf[MemoryMeasurement]
   }
@@ -23,7 +23,7 @@ object MemoryMeasurement {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTotal(value: AnonJsMemoryEstimate): Self = {
+    def withTotal(value: JsMemoryEstimate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
         ret

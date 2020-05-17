@@ -1,12 +1,12 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonAnimationDurationUpdate
-import typingsSlinky.echarts.AnonAnimationEasing
-import typingsSlinky.echarts.AnonAnimationEasingUpdate
-import typingsSlinky.echarts.AnonBorderType
-import typingsSlinky.echarts.AnonDistance
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonItemStyleAnonBorderTypeLabelAnonDistance
+import typingsSlinky.echarts.anon.AnimationDurationUpdate
+import typingsSlinky.echarts.anon.AnimationEasing
+import typingsSlinky.echarts.anon.AnimationEasingUpdate
+import typingsSlinky.echarts.anon.BorderType
+import typingsSlinky.echarts.anon.Distance
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.ItemStyleBorderTypeLabelDistance
 import typingsSlinky.echarts.echarts.EChartOption.SeriesHeatmap.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -229,7 +229,7 @@ trait SeriesHeatmap_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-heatmap.emphasis
     */
-  var emphasis: js.UndefOr[AnonItemStyleAnonBorderTypeLabelAnonDistance] = js.native
+  var emphasis: js.UndefOr[ItemStyleBorderTypeLabelDistance] = js.native
   /**
     * Index of
     * [geographic coordinate](https://echarts.apache.org/en/option.html#geo)
@@ -257,7 +257,7 @@ trait SeriesHeatmap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-heatmap.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBorderType] = js.native
+  var itemStyle: js.UndefOr[BorderType] = js.native
   /**
     * Work for
     * [coordinateSystem](https://echarts.apache.org/en/option.html#series-heatmap.coordinateSystem)
@@ -266,7 +266,7 @@ trait SeriesHeatmap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-heatmap.label
     */
-  var label: js.UndefOr[AnonDistance] = js.native
+  var label: js.UndefOr[Distance] = js.native
   /**
     * Used to mark an area in chart.
     * For example, mark a time interval.
@@ -274,21 +274,21 @@ trait SeriesHeatmap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-heatmap.markArea
     */
-  var markArea: js.UndefOr[AnonAnimationEasingUpdate] = js.native
+  var markArea: js.UndefOr[AnimationEasingUpdate] = js.native
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-heatmap.markLine
     */
-  var markLine: js.UndefOr[AnonAnimationEasing] = js.native
+  var markLine: js.UndefOr[AnimationEasing] = js.native
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-heatmap.markPoint
     */
-  var markPoint: js.UndefOr[AnonAnimationDurationUpdate] = js.native
+  var markPoint: js.UndefOr[AnimationDurationUpdate] = js.native
   /**
     * Maximum opacity. It is valid with
     * [coordinateSystem](https://echarts.apache.org/en/option.html#series-heatmap.coordinateSystem)
@@ -335,7 +335,7 @@ trait SeriesHeatmap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-heatmap.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * @default
     * "heatmap"
@@ -460,7 +460,7 @@ object SeriesHeatmap_ {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonItemStyleAnonBorderTypeLabelAnonDistance): Self = {
+    def withEmphasis(value: ItemStyleBorderTypeLabelDistance): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -496,7 +496,7 @@ object SeriesHeatmap_ {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonBorderType): Self = {
+    def withItemStyle(value: BorderType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -508,7 +508,7 @@ object SeriesHeatmap_ {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonDistance): Self = {
+    def withLabel(value: Distance): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -520,7 +520,7 @@ object SeriesHeatmap_ {
         ret
     }
     @scala.inline
-    def withMarkArea(value: AnonAnimationEasingUpdate): Self = {
+    def withMarkArea(value: AnimationEasingUpdate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(value.asInstanceOf[js.Any])
         ret
@@ -532,7 +532,7 @@ object SeriesHeatmap_ {
         ret
     }
     @scala.inline
-    def withMarkLine(value: AnonAnimationEasing): Self = {
+    def withMarkLine(value: AnimationEasing): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(value.asInstanceOf[js.Any])
         ret
@@ -544,7 +544,7 @@ object SeriesHeatmap_ {
         ret
     }
     @scala.inline
-    def withMarkPoint(value: AnonAnimationDurationUpdate): Self = {
+    def withMarkPoint(value: AnimationDurationUpdate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(value.asInstanceOf[js.Any])
         ret
@@ -604,7 +604,7 @@ object SeriesHeatmap_ {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

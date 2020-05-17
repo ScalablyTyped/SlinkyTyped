@@ -26,5 +26,4 @@ package object mod {
     /* h */ typingsSlinky.reactNativeBackgroundDownloader.mod.DownloadHeaders, 
     scala.Unit
   ]
-  type TaskInfo = java.lang.String | typingsSlinky.reactNativeBackgroundDownloader.mod.TaskInfoObject
 }

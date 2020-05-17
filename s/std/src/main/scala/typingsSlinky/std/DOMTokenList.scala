@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.NumberDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -84,9 +83,4 @@ trait DOMTokenList
   def toggle(token: java.lang.String, force: scala.Boolean): scala.Boolean = js.native
   def values(): IterableIterator[java.lang.String] = js.native
 }
-
-@JSGlobal("DOMTokenList")
-@js.native
-object DOMTokenList
-  extends Instantiable0[org.scalajs.dom.raw.DOMTokenList]
 

@@ -1,6 +1,6 @@
 package typingsSlinky.antd.buttonButtonMod
 
-import typingsSlinky.antd.AnonDelay
+import typingsSlinky.antd.anon.Delay
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ButtonState extends js.Object {
   var hasTwoCNChar: Boolean = js.native
-  var loading: js.UndefOr[Boolean | AnonDelay] = js.native
+  var loading: js.UndefOr[Boolean | Delay] = js.native
 }
 
 object ButtonState {
@@ -30,7 +30,7 @@ object ButtonState {
         ret
     }
     @scala.inline
-    def withLoading(value: Boolean | AnonDelay): Self = {
+    def withLoading(value: Boolean | Delay): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
         ret

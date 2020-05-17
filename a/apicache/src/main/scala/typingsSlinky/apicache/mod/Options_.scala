@@ -1,7 +1,7 @@
 package typingsSlinky.apicache.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.apicache.AnonExclude
+import typingsSlinky.apicache.anon.Exclude
 import typingsSlinky.redis.mod.RedisClient
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,7 +27,7 @@ trait Options_ extends js.Object {
     * if provided, uses the [node-redis](https://github.com/NodeRedis/node_redis) client instead of [memory-cache](https://github.com/ptarjan/node-cache)
     */
   var redisClient: js.UndefOr[RedisClient] = js.native
-  var statusCodes: js.UndefOr[AnonExclude] = js.native
+  var statusCodes: js.UndefOr[Exclude] = js.native
   /**
     * enable/disable performance tracking... WARNING: super cool feature, but may cause memory overhead issues
     */
@@ -131,7 +131,7 @@ object Options_ {
         ret
     }
     @scala.inline
-    def withStatusCodes(value: AnonExclude): Self = {
+    def withStatusCodes(value: Exclude): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("statusCodes")(value.asInstanceOf[js.Any])
         ret

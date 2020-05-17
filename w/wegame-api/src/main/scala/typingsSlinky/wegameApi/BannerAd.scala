@@ -1,5 +1,7 @@
 package typingsSlinky.wegameApi
 
+import typingsSlinky.wegameApi.anon.ErrMsg
+import typingsSlinky.wegameApi.anon.Width
 import typingsSlinky.wegameApi.wx.types.AdStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,9 +10,8 @@ import scala.scalajs.js.annotation._
 /**
   * banner 广告组件。banner 广告组件是一个原生组件，层级比上屏 Canvas 高，会覆盖在上屏 Canvas 上。banner 广告组件默认是隐藏的，需要调用 BannerAd.show() 将其显示。banner 广告会根据开发者设置的宽度进行等比缩放，缩放后的尺寸将通过 BannerAd.onResize() 事件中提供。
   */
-@JSGlobal("BannerAd")
 @js.native
-class BannerAd () extends js.Object {
+trait BannerAd extends js.Object {
   /**
     * 广告单元 id
     */
@@ -30,7 +31,7 @@ class BannerAd () extends js.Object {
   /**
     * 取消监听banner 广告错误事件
     */
-  def offError(callback: js.Function1[/* res */ AnonErrMsg, Unit]): Unit = js.native
+  def offError(callback: js.Function1[/* res */ ErrMsg, Unit]): Unit = js.native
   /**
     * 取消监听banner 广告加载事件
     */
@@ -38,11 +39,11 @@ class BannerAd () extends js.Object {
   /**
     * 取消监听隐藏 banner 广告缩放
     */
-  def offResize(callback: js.Function1[/* res */ AnonWidth, Unit]): Unit = js.native
+  def offResize(callback: js.Function1[/* res */ Width, Unit]): Unit = js.native
   /**
     * 监听banner 广告错误事件
     */
-  def onError(callback: js.Function1[/* res */ AnonErrMsg, Unit]): Unit = js.native
+  def onError(callback: js.Function1[/* res */ ErrMsg, Unit]): Unit = js.native
   /**
     * 监听banner 广告加载事件
     */
@@ -50,10 +51,104 @@ class BannerAd () extends js.Object {
   /**
     * 监听 banner 广告缩放
     */
-  def onResize(callback: js.Function1[/* res */ AnonWidth, Unit]): Unit = js.native
+  def onResize(callback: js.Function1[/* res */ Width, Unit]): Unit = js.native
   /**
     * 显示 banner 广告。
     */
   def show(): js.Promise[Unit] = js.native
+}
+
+object BannerAd {
+  @scala.inline
+  def apply(
+    adUnitId: String,
+    destroy: () => Unit,
+    hide: () => Unit,
+    offError: js.Function1[/* res */ ErrMsg, Unit] => Unit,
+    offLoad: js.Function0[Unit] => Unit,
+    offResize: js.Function1[/* res */ Width, Unit] => Unit,
+    onError: js.Function1[/* res */ ErrMsg, Unit] => Unit,
+    onLoad: js.Function0[Unit] => Unit,
+    onResize: js.Function1[/* res */ Width, Unit] => Unit,
+    show: () => js.Promise[Unit],
+    style: AdStyle
+  ): BannerAd = {
+    val __obj = js.Dynamic.literal(adUnitId = adUnitId.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), hide = js.Any.fromFunction0(hide), offError = js.Any.fromFunction1(offError), offLoad = js.Any.fromFunction1(offLoad), offResize = js.Any.fromFunction1(offResize), onError = js.Any.fromFunction1(onError), onLoad = js.Any.fromFunction1(onLoad), onResize = js.Any.fromFunction1(onResize), show = js.Any.fromFunction0(show), style = style.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BannerAd]
+  }
+  @scala.inline
+  implicit class BannerAdOps[Self <: BannerAd] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdUnitId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adUnitId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestroy(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHide(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOffError(value: js.Function1[/* res */ ErrMsg, Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offError")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOffLoad(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offLoad")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOffResize(value: js.Function1[/* res */ Width, Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offResize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnError(value: js.Function1[/* res */ ErrMsg, Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnLoad(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnResize(value: js.Function1[/* res */ Width, Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onResize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withShow(value: () => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStyle(value: AdStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

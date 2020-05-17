@@ -1,18 +1,18 @@
 package typingsSlinky.mocha.mod
 
-import typingsSlinky.mocha.Mocha_
-import typingsSlinky.mocha.Mocha_.HookFunction
-import typingsSlinky.mocha.Mocha_.MochaOptions
-import typingsSlinky.mocha.Mocha_.PendingTestFunction
-import typingsSlinky.mocha.Mocha_.SuiteFunction
-import typingsSlinky.mocha.Mocha_.TestFunction
+import typingsSlinky.mocha.Mocha
+import typingsSlinky.mocha.Mocha.HookFunction
+import typingsSlinky.mocha.Mocha.MochaOptions
+import typingsSlinky.mocha.Mocha.PendingTestFunction
+import typingsSlinky.mocha.Mocha.SuiteFunction
+import typingsSlinky.mocha.Mocha.TestFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("mocha", JSImport.Namespace)
 @js.native
-class ^ () extends Mocha_ {
+class ^ () extends Mocha {
   def this(options: MochaOptions) = this()
 }
 

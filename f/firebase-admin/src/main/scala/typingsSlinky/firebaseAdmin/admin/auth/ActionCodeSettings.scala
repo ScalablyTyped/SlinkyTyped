@@ -1,7 +1,7 @@
 package typingsSlinky.firebaseAdmin.admin.auth
 
-import typingsSlinky.firebaseAdmin.AnonBundleId
-import typingsSlinky.firebaseAdmin.AnonInstallApp
+import typingsSlinky.firebaseAdmin.anon.BundleId
+import typingsSlinky.firebaseAdmin.anon.InstallApp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ trait ActionCodeSettings extends js.Object {
     * version of the app is installed, the user is taken to the Play Store to
     * upgrade the app.
     */
-  var android: js.UndefOr[AnonInstallApp] = js.native
+  var android: js.UndefOr[InstallApp] = js.native
   /**
     * Defines the dynamic link domain to use for the current link if it is to be
     * opened using Firebase Dynamic Links, as multiple dynamic link domains can be
@@ -43,7 +43,7 @@ trait ActionCodeSettings extends js.Object {
     * Defines the iOS bundle ID. This will try to open the link in an iOS app if it
     * is installed.
     */
-  var iOS: js.UndefOr[AnonBundleId] = js.native
+  var iOS: js.UndefOr[BundleId] = js.native
   /**
     * Defines the link continue/state URL, which has different meanings in
     * different contexts:
@@ -76,7 +76,7 @@ object ActionCodeSettings {
         ret
     }
     @scala.inline
-    def withAndroid(value: AnonInstallApp): Self = {
+    def withAndroid(value: InstallApp): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("android")(value.asInstanceOf[js.Any])
         ret
@@ -112,7 +112,7 @@ object ActionCodeSettings {
         ret
     }
     @scala.inline
-    def withIOS(value: AnonBundleId): Self = {
+    def withIOS(value: BundleId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("iOS")(value.asInstanceOf[js.Any])
         ret

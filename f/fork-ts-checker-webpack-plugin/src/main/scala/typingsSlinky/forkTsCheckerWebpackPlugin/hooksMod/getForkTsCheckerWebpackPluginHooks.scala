@@ -1,6 +1,6 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin.hooksMod
 
-import typingsSlinky.forkTsCheckerWebpackPlugin.RecordForkTsCheckerHooksS
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.RecordForkTsCheckerHooksS
 import typingsSlinky.webpack.mod.Compiler_
 import scala.scalajs.js
 import scala.scalajs.js.`|`

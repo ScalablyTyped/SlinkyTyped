@@ -1,7 +1,7 @@
 package typingsSlinky.chromeApps.chrome.app
 
-import typingsSlinky.chromeApps.AnonFULLSCREEN
-import typingsSlinky.chromeApps.AnonPANEL
+import typingsSlinky.chromeApps.anon.FULLSCREEN
+import typingsSlinky.chromeApps.anon.PANEL
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +12,8 @@ trait ChromeAppWindow extends AppWindow {
     * @enum
     * Window state enum
     */
-  val State: AnonFULLSCREEN = js.native
-  val WindowType: AnonPANEL = js.native
+  val State: FULLSCREEN = js.native
+  val WindowType: PANEL = js.native
   /**
     * Whether the current platform supports windows being visible on all workspaces.
     */

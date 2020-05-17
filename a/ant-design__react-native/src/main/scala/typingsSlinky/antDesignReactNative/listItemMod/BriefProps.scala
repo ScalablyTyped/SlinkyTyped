@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.listItemMod
 
-import typingsSlinky.antDesignReactNative.PickListStyleBriefBriefTe
+import typingsSlinky.antDesignReactNative.anon.PickListStyleBriefBriefTe
 import typingsSlinky.antDesignReactNative.libStyleMod.WithThemeStyles
 import scala.scalajs.js
 import scala.scalajs.js.`|`

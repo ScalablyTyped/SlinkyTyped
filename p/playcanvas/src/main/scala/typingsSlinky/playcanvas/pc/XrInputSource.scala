@@ -34,10 +34,8 @@ import scala.scalajs.js.annotation._
   * @property {Gamepad|null} gamepad If input source has buttons, triggers, thumbstick or touchpad, then this object provides access to its states.
   * @property {boolean} selecting True if input source is in active primary action between selectstart and selectend events.
   */
-@JSGlobal("pc.XrInputSource")
 @js.native
-class XrInputSource protected () extends EventHandler {
-  def this(manager: XrManager, xrInputSource: js.Any) = this()
+trait XrInputSource extends EventHandler {
   /**
     * If input source has buttons, triggers, thumbstick or touchpad, then this object provides access to its states.
     */

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Unit extends _MathType {
+trait Unit extends MathType {
   def abs(unit: Unit): Unit = js.native
   def divide(unit: Unit): Unit = js.native
   def equalBase(unit: Unit): Boolean = js.native

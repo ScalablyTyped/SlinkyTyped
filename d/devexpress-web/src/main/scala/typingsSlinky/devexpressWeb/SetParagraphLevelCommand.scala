@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * A command to apply a paragraph level to the selected text
   */
-@JSGlobal("SetParagraphLevelCommand")
 @js.native
-class SetParagraphLevelCommand () extends CommandBase {
+trait SetParagraphLevelCommand extends CommandBase {
   /**
     * Executes the SetParagraphLevelCommand command with the specified parameter. true if the command has been successfully executed; false if the command execution has failed.
     * @param level An integer value specifying the applied style. The value should be in the range from 0 to 9.
@@ -19,5 +18,33 @@ class SetParagraphLevelCommand () extends CommandBase {
     * Gets information about the command's state.
     */
   def getState(): CommandState[Double] = js.native
+}
+
+object SetParagraphLevelCommand {
+  @scala.inline
+  def apply(execute: Double => Boolean, getState: () => CommandState[Double]): SetParagraphLevelCommand = {
+    val __obj = js.Dynamic.literal(execute = js.Any.fromFunction1(execute), getState = js.Any.fromFunction0(getState))
+    __obj.asInstanceOf[SetParagraphLevelCommand]
+  }
+  @scala.inline
+  implicit class SetParagraphLevelCommandOps[Self <: SetParagraphLevelCommand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExecute(value: Double => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetState(value: () => CommandState[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getState")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.officeUiFabricReact.checkboxBaseMod
 
-import typingsSlinky.officeUiFabricReact.ReadonlyICheckboxProps
-import typingsSlinky.officeUiFabricReact.ReadonlyICheckboxState
+import typingsSlinky.officeUiFabricReact.anon.ReadonlyICheckboxProps
+import typingsSlinky.officeUiFabricReact.anon.ReadonlyICheckboxState
 import typingsSlinky.officeUiFabricReact.checkboxTypesMod.ICheckbox
 import typingsSlinky.officeUiFabricReact.checkboxTypesMod.ICheckboxProps
 import typingsSlinky.react.mod.Component

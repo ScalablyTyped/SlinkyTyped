@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a request from the MediaStreamSource.Starting event for the application to start accumulating MediaStreamSample objects from a specific position in the media. */
-@JSGlobal("Windows.Media.Core.MediaStreamSourceStartingRequest")
 @js.native
-abstract class MediaStreamSourceStartingRequest () extends js.Object {
+trait MediaStreamSourceStartingRequest extends js.Object {
   /** Specifies a reference to a TimeSpan object which represents a time position in the media time-line from which the application should return MediaStreamSample objects. */
   var startPosition: Double = js.native
   /**
@@ -20,5 +19,43 @@ abstract class MediaStreamSourceStartingRequest () extends js.Object {
     * @param position The actual starting point in the media time-line chosen by the application.
     */
   def setActualStartPosition(position: Double): Unit = js.native
+}
+
+object MediaStreamSourceStartingRequest {
+  @scala.inline
+  def apply(
+    getDeferral: () => MediaStreamSourceStartingRequestDeferral,
+    setActualStartPosition: Double => Unit,
+    startPosition: Double
+  ): MediaStreamSourceStartingRequest = {
+    val __obj = js.Dynamic.literal(getDeferral = js.Any.fromFunction0(getDeferral), setActualStartPosition = js.Any.fromFunction1(setActualStartPosition), startPosition = startPosition.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MediaStreamSourceStartingRequest]
+  }
+  @scala.inline
+  implicit class MediaStreamSourceStartingRequestOps[Self <: MediaStreamSourceStartingRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetDeferral(value: () => MediaStreamSourceStartingRequestDeferral): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDeferral")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetActualStartPosition(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setActualStartPosition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withStartPosition(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

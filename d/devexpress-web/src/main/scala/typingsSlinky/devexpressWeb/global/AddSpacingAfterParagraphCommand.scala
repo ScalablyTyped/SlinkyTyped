@@ -1,0 +1,14 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * A command to add spacing after a paragraph.
+  */
+@JSGlobal("AddSpacingAfterParagraphCommand")
+@js.native
+class AddSpacingAfterParagraphCommand ()
+  extends typingsSlinky.devexpressWeb.AddSpacingAfterParagraphCommand
+

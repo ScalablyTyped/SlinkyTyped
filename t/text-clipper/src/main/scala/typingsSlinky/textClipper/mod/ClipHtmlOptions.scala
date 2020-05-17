@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ClipHtmlOptions extends CommonClipOptions {
+trait ClipHtmlOptions
+  extends CommonClipOptions
+     with ClipOptions {
   /**
     * Set to true if the string is HTML-encoded. If so, this method will take extra care to make
     * sure the HTML-encoding is correctly maintained.

@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Location extends js.Object {
+trait Location extends Definition {
   /**
     * The document range of this locations.
     */

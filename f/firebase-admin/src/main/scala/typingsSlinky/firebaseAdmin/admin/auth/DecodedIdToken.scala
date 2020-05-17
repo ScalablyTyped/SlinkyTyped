@@ -1,7 +1,7 @@
 package typingsSlinky.firebaseAdmin.admin.auth
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.firebaseAdmin.AnonDictkey
+import typingsSlinky.firebaseAdmin.anon.Dictkey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait DecodedIdToken
-  extends /* key */ StringDictionary[js.Any] {
+  extends /* customData */ StringDictionary[js.Any] {
   /**
     * The audience for which this token is intended.
     *
@@ -51,7 +51,7 @@ trait DecodedIdToken
     * This data is provided by the Firebase Authentication service and is a
     * reserved claim in the ID token.
     */
-  var firebase: AnonDictkey = js.native
+  var firebase: Dictkey = js.native
   /**
     * The ID token's issued-at time, in seconds since the Unix epoch. That is, the
     * time at which this ID token was issued and should start to be considered
@@ -92,7 +92,7 @@ object DecodedIdToken {
     aud: String,
     auth_time: Double,
     exp: Double,
-    firebase: AnonDictkey,
+    firebase: Dictkey,
     iat: Double,
     iss: String,
     sub: String,
@@ -126,7 +126,7 @@ object DecodedIdToken {
         ret
     }
     @scala.inline
-    def withFirebase(value: AnonDictkey): Self = {
+    def withFirebase(value: Dictkey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("firebase")(value.asInstanceOf[js.Any])
         ret

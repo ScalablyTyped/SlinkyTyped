@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactLazylog.AnonText
+import typingsSlinky.reactLazylog.anon.Text
 import typingsSlinky.reactLazylog.lineContentMod.LineContentProps
 import typingsSlinky.reactLazylog.lineContentMod.default
 import scala.scalajs.js
@@ -28,7 +28,7 @@ object LineContent {
   
   def withProps(p: LineContentProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(data: js.Array[AnonText], number: Double): Builder = {
+  def apply(data: js.Array[Text], number: Double): Builder = {
     val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[LineContentProps]))
   }

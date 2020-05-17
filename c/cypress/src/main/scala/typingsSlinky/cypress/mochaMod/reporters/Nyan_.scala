@@ -1,5 +1,6 @@
 package typingsSlinky.cypress.mochaMod.reporters
 
+import typingsSlinky.cypress.Mocha.reporters.Nyan
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +12,5 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("mocha", "reporters.Nyan")
 @js.native
-class Nyan_ ()
-  extends typingsSlinky.cypress.Mocha_.reporters.Nyan_
+class Nyan_ () extends Nyan
 

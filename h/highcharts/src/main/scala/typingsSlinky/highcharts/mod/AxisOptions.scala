@@ -13,19 +13,10 @@ trait AxisOptions extends js.Object
 
 object AxisOptions {
   @scala.inline
-  def XAxisOptions(): AxisOptions = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AxisOptions]
-  }
+  implicit def apply(value: XAxisOptions): AxisOptions = value.asInstanceOf[AxisOptions]
   @scala.inline
-  def YAxisOptions(): AxisOptions = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AxisOptions]
-  }
+  implicit def apply(value: YAxisOptions): AxisOptions = value.asInstanceOf[AxisOptions]
   @scala.inline
-  def ZAxisOptions(): AxisOptions = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AxisOptions]
-  }
+  implicit def apply(value: ZAxisOptions): AxisOptions = value.asInstanceOf[AxisOptions]
 }
 

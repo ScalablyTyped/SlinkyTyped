@@ -1,21 +1,22 @@
 package typingsSlinky.codemirror.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.codemirror.AnonAnchor
-import typingsSlinky.codemirror.AnonBgClass
-import typingsSlinky.codemirror.AnonBottom
-import typingsSlinky.codemirror.AnonCh
-import typingsSlinky.codemirror.AnonDelay
-import typingsSlinky.codemirror.AnonFrom
-import typingsSlinky.codemirror.AnonLeft
-import typingsSlinky.codemirror.AnonLine
-import typingsSlinky.codemirror.AnonRight
-import typingsSlinky.codemirror.AnonTo
-import typingsSlinky.codemirror.AnonTop
+import typingsSlinky.codemirror.anon.Anchor
+import typingsSlinky.codemirror.anon.BgClass
+import typingsSlinky.codemirror.anon.Bottom
+import typingsSlinky.codemirror.anon.Ch
+import typingsSlinky.codemirror.anon.Delay
+import typingsSlinky.codemirror.anon.From
+import typingsSlinky.codemirror.anon.Left
+import typingsSlinky.codemirror.anon.Line
+import typingsSlinky.codemirror.anon.Right
+import typingsSlinky.codemirror.anon.To
+import typingsSlinky.codemirror.anon.Top
 import typingsSlinky.codemirror.codemirrorStrings.addModeClass
 import typingsSlinky.codemirror.codemirrorStrings.allowDropFileTypes
 import typingsSlinky.codemirror.codemirrorStrings.autoCloseBrackets
@@ -92,7 +93,6 @@ import typingsSlinky.codemirror.codemirrorStrings.viewportChange
 import typingsSlinky.codemirror.codemirrorStrings.viewportMargin
 import typingsSlinky.codemirror.codemirrorStrings.workDelay
 import typingsSlinky.codemirror.codemirrorStrings.workTime
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -143,25 +143,25 @@ trait Editor extends Doc {
     If it is "page" or not given, they are relative to the top-left corner of the page.
     This differs from cursorCoords in that it'll give the size of the whole character,
     rather than just the position that the cursor would have when it would sit at that position. */
-  def charCoords(pos: Position): AnonRight = js.native
-  def charCoords(pos: Position, mode: CoordsMode): AnonRight = js.native
+  def charCoords(pos: Position): Right = js.native
+  def charCoords(pos: Position, mode: CoordsMode): Right = js.native
   /** Remove all gutter markers in the gutter with the given ID. */
   def clearGutter(gutterID: String): Unit = js.native
   /** Given an { left , top } object , returns the { line , ch } position that corresponds to it.
     The optional mode parameter determines relative to what the coordinates are interpreted.
     It may be "window", "page" (the default), or "local". */
-  def coordsChar(`object`: AnonTop): Position = js.native
-  def coordsChar(`object`: AnonTop, mode: CoordsMode): Position = js.native
+  def coordsChar(`object`: Top): Position = js.native
+  def coordsChar(`object`: Top, mode: CoordsMode): Position = js.native
   /** Returns an { left , top , bottom } object containing the coordinates of the cursor position.
     If mode is "local", they will be relative to the top-left corner of the editable document.
     If it is "page" or not given, they are relative to the top-left corner of the page.
     where is a boolean indicating whether you want the start(true) or the end(false) of the selection. */
-  def cursorCoords(): AnonLeft = js.native
-  def cursorCoords(where: Boolean): AnonLeft = js.native
-  def cursorCoords(where: Boolean, mode: CoordsMode): AnonLeft = js.native
-  def cursorCoords(where: Null, mode: CoordsMode): AnonLeft = js.native
-  def cursorCoords(where: Position): AnonLeft = js.native
-  def cursorCoords(where: Position, mode: CoordsMode): AnonLeft = js.native
+  def cursorCoords(): Left = js.native
+  def cursorCoords(where: Boolean): Left = js.native
+  def cursorCoords(where: Boolean, mode: CoordsMode): Left = js.native
+  def cursorCoords(where: Null, mode: CoordsMode): Left = js.native
+  def cursorCoords(where: Position): Left = js.native
+  def cursorCoords(where: Position, mode: CoordsMode): Left = js.native
   /** Returns the pixel width of an 'x' in the default font for the editor.
     (Note that for non - monospace fonts , this is mostly useless, and even for monospace fonts, non - ascii characters might have a different width). */
   def defaultCharWidth(): Double = js.native
@@ -175,10 +175,10 @@ trait Editor extends Doc {
     Will return a position that is produced by moving amount times the distance specified by unit.
     When visually is true , motion in right - to - left text will be visual rather than logical.
     When the motion was clipped by hitting the end or start of the document, the returned value will have a hitSide property set to true. */
-  def findPosH(start: Position, amount: Double, unit: String, visually: Boolean): AnonCh = js.native
+  def findPosH(start: Position, amount: Double, unit: String, visually: Boolean): Ch = js.native
   /** Similar to findPosH , but used for vertical motion.unit may be "line" or "page".
     The other arguments and the returned value have the same interpretation as they have in findPosH. */
-  def findPosV(start: Position, amount: Double, unit: String): AnonCh = js.native
+  def findPosV(start: Position, amount: Double, unit: String): Ch = js.native
   /** Returns the start and end of the 'word' (the stretch of letters, whitespace, or punctuation) at the given position. */
   def findWordAt(pos: Position): Range = js.native
   /** Give the editor focus. */
@@ -203,7 +203,7 @@ trait Editor extends Doc {
   @JSName("getOption")
   def getOption_autoCloseTags(option: autoCloseTags): AutoCloseTags | Boolean = js.native
   @JSName("getOption")
-  def getOption_autoRefresh(option: autoRefresh): Boolean | AnonDelay = js.native
+  def getOption_autoRefresh(option: autoRefresh): Boolean | Delay = js.native
   @JSName("getOption")
   def getOption_autocapitalize(option: autocapitalize): Boolean = js.native
   @JSName("getOption")
@@ -325,7 +325,7 @@ trait Editor extends Doc {
   /** Returns a { from , to } object indicating the start (inclusive) and end (exclusive) of the currently rendered part of the document.
     In big documents, when most content is scrolled out of view, CodeMirror will only render the visible part, and a margin around it.
     See also the viewportChange event. */
-  def getViewport(): AnonTo = js.native
+  def getViewport(): To = js.native
   /** Returns the DOM node that represents the editor, and controls its size. Remove this from your tree to delete an editor instance. */
   def getWrapperElement(): HTMLElement = js.native
   /** Tells you whether the editor currently has focus. */
@@ -355,7 +355,7 @@ trait Editor extends Doc {
   def lineComment(from: Position, to: Position): Unit = js.native
   def lineComment(from: Position, to: Position, options: CommentOptions): Unit = js.native
   /** Returns the line number, text content, and marker status of the given line, which can be either a number or a line handle. */
-  def lineInfo(line: js.Any): AnonBgClass = js.native
+  def lineInfo(line: js.Any): BgClass = js.native
   def off(eventName: String, handler: js.Function1[/* instance */ this.type, Unit]): Unit = js.native
   def off(eventName: String, handler: js.Function2[/* doc */ Doc, /* event */ js.Any, Unit]): Unit = js.native
   def off[K /* <: DOMEvent with (/* import warning: LimitUnionLength.leaveTypeRef Was union type with length 87 */ js.Any) */](
@@ -374,7 +374,7 @@ trait Editor extends Doc {
   @JSName("off")
   def off_beforeSelectionChange(
     eventName: beforeSelectionChange,
-    handler: js.Function2[/* instance */ this.type, /* selection */ AnonAnchor, Unit]
+    handler: js.Function2[/* instance */ this.type, /* selection */ Anchor, Unit]
   ): Unit = js.native
   @JSName("off")
   def off_blur(eventName: blur, handler: js.Function2[/* instance */ this.type, /* event */ FocusEvent, Unit]): Unit = js.native
@@ -443,7 +443,7 @@ trait Editor extends Doc {
   @JSName("off")
   def off_scrollCursorIntoView(
     eventName: scrollCursorIntoView,
-    handler: js.Function2[/* instance */ this.type, /* event */ Event_, Unit]
+    handler: js.Function2[/* instance */ this.type, /* event */ Event, Unit]
   ): Unit = js.native
   @JSName("off")
   def off_swapDoc(eventName: swapDoc, handler: js.Function2[/* instance */ this.type, /* oldDoc */ Doc, Unit]): Unit = js.native
@@ -484,7 +484,7 @@ trait Editor extends Doc {
   @JSName("on")
   def on_beforeSelectionChange(
     eventName: beforeSelectionChange,
-    handler: js.Function2[/* instance */ this.type, /* selection */ AnonAnchor, Unit]
+    handler: js.Function2[/* instance */ this.type, /* selection */ Anchor, Unit]
   ): Unit = js.native
   /** Fires whenever the editor is unfocused. */
   @JSName("on")
@@ -583,7 +583,7 @@ trait Editor extends Doc {
   @JSName("on")
   def on_scrollCursorIntoView(
     eventName: scrollCursorIntoView,
-    handler: js.Function2[/* instance */ this.type, /* event */ Event_, Unit]
+    handler: js.Function2[/* instance */ this.type, /* event */ Event, Unit]
   ): Unit = js.native
   /** This is signalled when the editor's document is replaced using the swapDoc method. */
   @JSName("on")
@@ -621,16 +621,16 @@ trait Editor extends Doc {
   def scrollIntoView(pos: Null, margin: Double): Unit = js.native
   /** Scrolls the given element into view. pos is a { left , top , right , bottom } object, in editor-local coordinates.
     The margin parameter is optional. When given, it indicates the amount of pixels around the given area that should be made visible as well. */
-  def scrollIntoView(pos: AnonBottom): Unit = js.native
-  def scrollIntoView(pos: AnonBottom, margin: Double): Unit = js.native
+  def scrollIntoView(pos: Bottom): Unit = js.native
+  def scrollIntoView(pos: Bottom, margin: Double): Unit = js.native
   /** Scrolls the given element into view. pos is a { from, to } object, in editor-local coordinates.
     The margin parameter is optional. When given, it indicates the amount of pixels around the given area that should be made visible as well. */
-  def scrollIntoView(pos: AnonFrom): Unit = js.native
-  def scrollIntoView(pos: AnonFrom, margin: Double): Unit = js.native
+  def scrollIntoView(pos: From): Unit = js.native
+  def scrollIntoView(pos: From, margin: Double): Unit = js.native
   /** Scrolls the given element into view. pos is a { line, ch } object, in editor-local coordinates.
     The margin parameter is optional. When given, it indicates the amount of pixels around the given area that should be made visible as well. */
-  def scrollIntoView(pos: AnonLine): Unit = js.native
-  def scrollIntoView(pos: AnonLine, margin: Double): Unit = js.native
+  def scrollIntoView(pos: Line): Unit = js.native
+  def scrollIntoView(pos: Line, margin: Double): Unit = js.native
   /** Scrolls the given element into view. pos is a { line , ch } position, referring to a given character, null, to refer to the cursor.
     The margin parameter is optional. When given, it indicates the amount of pixels around the given area that should be made visible as well. */
   def scrollIntoView(pos: Position): Unit = js.native
@@ -661,7 +661,7 @@ trait Editor extends Doc {
   @JSName("setOption")
   def setOption_autoRefresh(option: autoRefresh, value: Boolean): Unit = js.native
   @JSName("setOption")
-  def setOption_autoRefresh(option: autoRefresh, value: AnonDelay): Unit = js.native
+  def setOption_autoRefresh(option: autoRefresh, value: Delay): Unit = js.native
   @JSName("setOption")
   def setOption_autocapitalize(option: autocapitalize, value: Boolean): Unit = js.native
   @JSName("setOption")

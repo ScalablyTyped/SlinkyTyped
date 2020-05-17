@@ -21,15 +21,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.app.Dialog")
 @js.native
-class Dialog protected ()
+trait Dialog
   extends DialogInterface
      with Callback
      with typingsSlinky.androiduix.android.view.KeyEvent.Callback {
-  def this(context: Context) = this()
-  def this(context: Context, cancelable: Boolean) = this()
-  def this(context: Context, cancelable: Boolean, cancelListener: OnCancelListener) = this()
   var mCancelAndDismissTaken: js.Any = js.native
   var mCancelMessage: js.Any = js.native
   var mCancelable: Boolean = js.native
@@ -86,21 +82,13 @@ class Dialog protected ()
   def takeKeyEvents(get: Boolean): Unit = js.native
 }
 
-/* static members */
 @JSGlobal("android.app.Dialog")
 @js.native
 object Dialog extends js.Object {
   @js.native
-  class ListenersHandler protected () extends Handler {
-    def this(dialog: Dialog) = this()
+  trait ListenersHandler extends Handler {
     var mDialog: js.Any = js.native
   }
   
-  var CANCEL: js.Any = js.native
-  var DIALOG_HIERARCHY_TAG: js.Any = js.native
-  var DIALOG_SHOWING_TAG: js.Any = js.native
-  var DISMISS: js.Any = js.native
-  var SHOW: js.Any = js.native
-  var TAG: js.Any = js.native
 }
 

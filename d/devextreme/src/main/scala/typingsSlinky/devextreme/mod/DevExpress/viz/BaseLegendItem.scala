@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonFill
+import typingsSlinky.devextreme.anon.Fill
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait BaseLegendItem extends js.Object {
   /** A legend item marker. */
-  var marker: js.UndefOr[AnonFill] = js.native
+  var marker: js.UndefOr[Fill] = js.native
   /** The text that the legend item displays. */
   var text: js.UndefOr[String] = js.native
   /** Indicates and specifies whether the legend item is visible. */
@@ -28,7 +28,7 @@ object BaseLegendItem {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMarker(value: AnonFill): Self = {
+    def withMarker(value: Fill): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
         ret

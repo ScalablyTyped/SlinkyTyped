@@ -12,14 +12,8 @@ trait TooltipProps extends js.Object
 
 object TooltipProps {
   @scala.inline
-  def TooltipPropsWithTitle(): TooltipProps = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[TooltipProps]
-  }
+  implicit def apply(value: TooltipPropsWithOverlay): TooltipProps = value.asInstanceOf[TooltipProps]
   @scala.inline
-  def TooltipPropsWithOverlay(): TooltipProps = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[TooltipProps]
-  }
+  implicit def apply(value: TooltipPropsWithTitle): TooltipProps = value.asInstanceOf[TooltipProps]
 }
 

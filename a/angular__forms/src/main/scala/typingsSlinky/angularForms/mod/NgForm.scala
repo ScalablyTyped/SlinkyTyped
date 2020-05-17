@@ -1,10 +1,10 @@
 package typingsSlinky.angularForms.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Event
 import typingsSlinky.angularCore.mod.AfterViewInit
 import typingsSlinky.angularCore.mod.EventEmitter
-import typingsSlinky.angularForms.AnonUpdateOn
-import typingsSlinky.std.Event_
+import typingsSlinky.angularForms.anon.UpdateOn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,7 +54,7 @@ class NgForm protected ()
     * Possible values: `'change'` | `'blur'` | `'submit'`.
     *
     */
-  var options: AnonUpdateOn = js.native
+  var options: UpdateOn = js.native
   /**
     * @description
     * Returns an array representing the path to this group. Because this directive
@@ -108,7 +108,7 @@ class NgForm protected ()
     *
     * @param $event The "submit" event object
     */
-  def onSubmit($event: Event_): Boolean = js.native
+  def onSubmit($event: Event): Boolean = js.native
   /**
     * @description
     * Removes the `NgModel` instance from the internal list of directives

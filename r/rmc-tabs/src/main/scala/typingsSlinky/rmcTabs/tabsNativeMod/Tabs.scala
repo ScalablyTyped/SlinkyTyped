@@ -4,8 +4,8 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.ScrollView
-import typingsSlinky.rmcTabs.AnonComponent
-import typingsSlinky.rmcTabs.TypeofDefaultTabBar
+import typingsSlinky.rmcTabs.anon.Component
+import typingsSlinky.rmcTabs.anon.TypeofDefaultTabBar
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ class Tabs protected ()
   extends typingsSlinky.rmcTabs.tabsBaseMod.Tabs[PropsType, StateType] {
   def this(props: PropsType) = this()
   var AnimatedScrollView: ScrollView = js.native
-  var scrollView: AnonComponent = js.native
+  var scrollView: Component = js.native
   def goToTab(index: Double, force: Boolean, animated: Boolean): Boolean = js.native
   def handleLayout(
     e: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RN.LayoutChangeEvent */ js.Any

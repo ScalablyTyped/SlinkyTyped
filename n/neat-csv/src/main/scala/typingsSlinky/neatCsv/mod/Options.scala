@@ -1,7 +1,7 @@
 package typingsSlinky.neatCsv.mod
 
-import typingsSlinky.neatCsv.AnonHeader
-import typingsSlinky.neatCsv.AnonIndex
+import typingsSlinky.neatCsv.anon.Header
+import typingsSlinky.neatCsv.anon.Index
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
 trait Options extends js.Object {
   var escape: js.UndefOr[String] = js.native
   var headers: js.UndefOr[js.Array[String] | Boolean] = js.native
-  var mapHeaders: js.UndefOr[js.Function1[/* args */ AnonHeader, String | Null]] = js.native
-  var mapValues: js.UndefOr[js.Function1[/* args */ AnonIndex, _]] = js.native
+  var mapHeaders: js.UndefOr[js.Function1[/* args */ Header, String | Null]] = js.native
+  var mapValues: js.UndefOr[js.Function1[/* args */ Index, _]] = js.native
   var maxRowBytes: js.UndefOr[Double] = js.native
   var newline: js.UndefOr[String] = js.native
   var quote: js.UndefOr[String] = js.native
@@ -59,7 +59,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withMapHeaders(value: /* args */ AnonHeader => String | Null): Self = {
+    def withMapHeaders(value: /* args */ Header => String | Null): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mapHeaders")(js.Any.fromFunction1(value))
         ret
@@ -71,7 +71,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withMapValues(value: /* args */ AnonIndex => _): Self = {
+    def withMapValues(value: /* args */ Index => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mapValues")(js.Any.fromFunction1(value))
         ret

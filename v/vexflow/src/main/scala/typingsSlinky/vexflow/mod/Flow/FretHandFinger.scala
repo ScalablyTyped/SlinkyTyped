@@ -1,6 +1,6 @@
 package typingsSlinky.vexflow.mod.Flow
 
-import typingsSlinky.vexflow.AnonLeftshift
+import typingsSlinky.vexflow.anon.Leftshift
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,6 +18,6 @@ class FretHandFinger protected ()
 @js.native
 object FretHandFinger extends js.Object {
   val CATEGORY: String = js.native
-  def format(nums: js.Array[typingsSlinky.vexflow.Vex.Flow.FretHandFinger], state: AnonLeftshift): Unit = js.native
+  def format(nums: js.Array[typingsSlinky.vexflow.Vex.Flow.FretHandFinger], state: Leftshift): Unit = js.native
 }
 

@@ -1,8 +1,9 @@
 package typingsSlinky.fabric.fabricImplMod
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLCanvasElement
-import typingsSlinky.fabric.AnonX
+import typingsSlinky.fabric.anon.X
 import typingsSlinky.fabric.fabricStrings.equally
 import typingsSlinky.fabric.fabricStrings.getImageData
 import typingsSlinky.fabric.fabricStrings.setLineDash
@@ -10,7 +11,6 @@ import typingsSlinky.fabric.fabricStrings.toDataURL
 import typingsSlinky.fabric.fabricStrings.toDataURLWithQuality
 import typingsSlinky.fabric.fabricStrings.x
 import typingsSlinky.fabric.fabricStrings.y
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -233,7 +233,7 @@ class Canvas protected () extends StaticCanvas {
   	 * @param {fabric.Object} obj old activeObject
   	 */
   def _fireSelectionEvents(oldObjects: js.Array[Object]): Unit = js.native
-  def _fireSelectionEvents(oldObjects: js.Array[Object], e: Event_): Unit = js.native
+  def _fireSelectionEvents(oldObjects: js.Array[Object], e: Event): Unit = js.native
   /**
   	 * @private
   	 * @param {fabric.Object} obj Object that was added
@@ -272,7 +272,7 @@ class Canvas protected () extends StaticCanvas {
   	 * @return {fabric.Object} object that contains pointer
   	 * @private
   	 */
-  def _searchPossibleTargets(objects: js.Array[Object], pointer: AnonX): Object = js.native
+  def _searchPossibleTargets(objects: js.Array[Object], pointer: X): Object = js.native
   /**
   	 * @private
   	 * @param {Object} object to set as active
@@ -280,23 +280,14 @@ class Canvas protected () extends StaticCanvas {
   	 * @return {Boolean} true if the selection happened
   	 */
   def _setActiveObject(`object`: Object): Boolean = js.native
-  def _setActiveObject(`object`: Object, e: Event_): Boolean = js.native
-  def _setObjectScale(
-    localMouse: Point,
-    transform: js.Any,
-    lockScalingX: Boolean,
-    lockScalingY: Boolean,
-    by: js.UndefOr[scala.Nothing],
-    lockScalingFlip: Boolean,
-    _dim: Point
-  ): Boolean = js.native
+  def _setActiveObject(`object`: Object, e: Event): Boolean = js.native
   @JSName("_setObjectScale")
   def _setObjectScale_equally(
     localMouse: Point,
     transform: js.Any,
     lockScalingX: Boolean,
     lockScalingY: Boolean,
-    by: equally,
+    by: js.UndefOr[equally],
     lockScalingFlip: Boolean,
     _dim: Point
   ): Boolean = js.native
@@ -310,7 +301,7 @@ class Canvas protected () extends StaticCanvas {
     transform: js.Any,
     lockScalingX: Boolean,
     lockScalingY: Boolean,
-    by: x,
+    by: js.UndefOr[x],
     lockScalingFlip: Boolean,
     _dim: Point
   ): Boolean = js.native
@@ -320,7 +311,7 @@ class Canvas protected () extends StaticCanvas {
     transform: js.Any,
     lockScalingX: Boolean,
     lockScalingY: Boolean,
-    by: y,
+    by: js.UndefOr[y],
     lockScalingFlip: Boolean,
     _dim: Point
   ): Boolean = js.native
@@ -331,8 +322,8 @@ class Canvas protected () extends StaticCanvas {
   	 * @param {Object} [point] x,y object of point coordinates we want to check.
   	 * @return {Boolean} true if point is contained within an area of given object
   	 */
-  def containsPoint(e: Event_, target: Object): Boolean = js.native
-  def containsPoint(e: Event_, target: Object, point: AnonX): Boolean = js.native
+  def containsPoint(e: Event, target: Object): Boolean = js.native
+  def containsPoint(e: Event, target: Object, point: X): Boolean = js.native
   /**
   	 * Discards currently active object and fire events. If the function is called by fabric
   	 * as a consequence of a mouse event, the event is passed as a parameter and
@@ -343,7 +334,7 @@ class Canvas protected () extends StaticCanvas {
   	 * @chainable
   	 */
   def discardActiveObject(): Canvas = js.native
-  def discardActiveObject(e: Event_): Canvas = js.native
+  def discardActiveObject(e: Event): Canvas = js.native
   /**
   	 * Draws objects' controls (borders/controls)
   	 * @param {CanvasRenderingContext2D} ctx Context to render controls on
@@ -358,7 +349,7 @@ class Canvas protected () extends StaticCanvas {
   	 * @param {Boolean} skipGroup when true, activeGroup is skipped and only objects are traversed through
   	 * @return {fabric.Object} the target found
   	 */
-  def findTarget(e: Event_, skipGroup: Boolean): js.UndefOr[Object] = js.native
+  def findTarget(e: Event, skipGroup: Boolean): js.UndefOr[Object] = js.native
   def fire(eventName: String, options: js.Any): Unit = js.native
   /**
   	 * Returns currently active object
@@ -388,8 +379,8 @@ class Canvas protected () extends StaticCanvas {
   	 * @param {Boolean} ignoreZoom
   	 * @return {Object} object with "x" and "y" number values
   	 */
-  def getPointer(e: Event_): AnonX = js.native
-  def getPointer(e: Event_, ignoreZoom: Boolean): AnonX = js.native
+  def getPointer(e: Event): X = js.native
+  def getPointer(e: Event, ignoreZoom: Boolean): X = js.native
   /**
   	 * Returns context of canvas where object selection is drawn
   	 * @return {CanvasRenderingContext2D}
@@ -433,7 +424,7 @@ class Canvas protected () extends StaticCanvas {
   	 * @chainable
   	 */
   def setActiveObject(`object`: Object): Canvas = js.native
-  def setActiveObject(`object`: Object, e: Event_): Canvas = js.native
+  def setActiveObject(`object`: Object, e: Event): Canvas = js.native
   /**
   	 * Set the cursor type of the canvas element
   	 * @param {String} value Cursor type of the canvas element.

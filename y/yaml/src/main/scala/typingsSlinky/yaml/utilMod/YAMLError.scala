@@ -1,7 +1,7 @@
 package typingsSlinky.yaml.utilMod
 
 import typingsSlinky.std.Error
-import typingsSlinky.yaml.AnonEnd
+import typingsSlinky.yaml.anon.End
 import typingsSlinky.yaml.parseCstMod.CST.Node
 import typingsSlinky.yaml.parseCstMod.CST.Range
 import scala.scalajs.js
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @JSImport("yaml/util", "YAMLError")
 @js.native
 class YAMLError () extends Error {
-  var linePos: js.UndefOr[AnonEnd] = js.native
+  var linePos: js.UndefOr[End] = js.native
   @JSName("name")
   var name_YAMLError: typingsSlinky.yaml.yamlStrings.YAMLReferenceError | typingsSlinky.yaml.yamlStrings.YAMLSemanticError | typingsSlinky.yaml.yamlStrings.YAMLSyntaxError | typingsSlinky.yaml.yamlStrings.YAMLWarning = js.native
   var nodeType: js.UndefOr[Type] = js.native

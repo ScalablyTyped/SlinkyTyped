@@ -1,9 +1,9 @@
 package typingsSlinky.angularRouter.mod
 
-import typingsSlinky.angularRouter.AnonDictk
 import typingsSlinky.angularRouter.angularRouterStrings.hashchange
 import typingsSlinky.angularRouter.angularRouterStrings.imperative
 import typingsSlinky.angularRouter.angularRouterStrings.popstate
+import typingsSlinky.angularRouter.anon.Dictk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,7 +46,7 @@ class NavigationStart protected () extends RouterEvent {
     /** @docsNotRequired */
   navigationTrigger: hashchange,
     /** @docsNotRequired */
-  restoredState: AnonDictk
+  restoredState: Dictk
   ) = this()
   def this(
     /** @docsNotRequired */
@@ -56,7 +56,7 @@ class NavigationStart protected () extends RouterEvent {
     /** @docsNotRequired */
   navigationTrigger: imperative,
     /** @docsNotRequired */
-  restoredState: AnonDictk
+  restoredState: Dictk
   ) = this()
   def this(
     /** @docsNotRequired */
@@ -66,7 +66,7 @@ class NavigationStart protected () extends RouterEvent {
     /** @docsNotRequired */
   navigationTrigger: popstate,
     /** @docsNotRequired */
-  restoredState: AnonDictk
+  restoredState: Dictk
   ) = this()
   /**
     * Identifies the call or event that triggered the navigation.
@@ -91,6 +91,6 @@ class NavigationStart protected () extends RouterEvent {
     * remembered state, such as scroll position.
     *
     */
-  var restoredState: js.UndefOr[AnonDictk | Null] = js.native
+  var restoredState: js.UndefOr[Dictk | Null] = js.native
 }
 

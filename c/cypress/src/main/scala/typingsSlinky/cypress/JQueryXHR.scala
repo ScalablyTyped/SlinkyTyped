@@ -1,19 +1,19 @@
 package typingsSlinky.cypress
 
-import typingsSlinky.cypress.JQuery_.Ajax.ErrorTextStatus
-import typingsSlinky.cypress.JQuery_.Ajax.StatusCodeCallbacks
-import typingsSlinky.cypress.JQuery_.Ajax.SuccessTextStatus
-import typingsSlinky.cypress.JQuery_.Deferred.CallbackBase
-import typingsSlinky.cypress.JQuery_.PromiseBase
-import typingsSlinky.cypress.JQuery_.Thenable
-import typingsSlinky.cypress.JQuery_.TypeOrArray
-import typingsSlinky.cypress.JQuery_._Promise
-import typingsSlinky.cypress.JQuery_.jqXHR
+import org.scalajs.dom.raw.Document
+import typingsSlinky.cypress.JQuery.Ajax.ErrorTextStatus
+import typingsSlinky.cypress.JQuery.Ajax.StatusCodeCallbacks
+import typingsSlinky.cypress.JQuery.Ajax.SuccessTextStatus
+import typingsSlinky.cypress.JQuery.Deferred.CallbackBase
+import typingsSlinky.cypress.JQuery.PromiseBase
+import typingsSlinky.cypress.JQuery.Thenable
+import typingsSlinky.cypress.JQuery.TypeOrArray
+import typingsSlinky.cypress.JQuery._Promise
+import typingsSlinky.cypress.JQuery.jqXHR
 import typingsSlinky.cypress.cypressStrings.Promise
 import typingsSlinky.cypress.cypressStrings.pending
 import typingsSlinky.cypress.cypressStrings.rejected
 import typingsSlinky.cypress.cypressStrings.resolved
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +33,7 @@ trait JQueryXHR extends js.Object {
   var readyState: Double = js.native
   var responseJSON: js.UndefOr[js.Any] = js.native
   var responseText: String = js.native
-  var responseXML: js.UndefOr[Document_] = js.native
+  var responseXML: js.UndefOr[Document] = js.native
   @JSName("setRequestHeader")
   var setRequestHeader_Original: js.Function2[/* name */ String, /* value */ String, Unit] = js.native
   var status: Double = js.native
@@ -717,10 +717,6 @@ trait JQueryXHR extends js.Object {
     * @returns A Promise for the completion of which ever callback is executed.
     */
   def `then`[TResult1, TResult2](): js.Thenable[TResult1 | TResult2] = js.native
-  def `then`[TResult1, TResult2](
-    onfulfilled: js.UndefOr[scala.Nothing],
-    onrejected: js.Function1[/* reason */ js.Any, TResult2 | js.Thenable[TResult2]]
-  ): js.Thenable[TResult1 | TResult2] = js.native
   def `then`[TResult1, TResult2](onfulfilled: js.Function1[/* value */ js.Any, TResult1 | js.Thenable[TResult1]]): js.Thenable[TResult1 | TResult2] = js.native
   def `then`[TResult1, TResult2](
     onfulfilled: js.Function1[/* value */ js.Any, TResult1 | js.Thenable[TResult1]],

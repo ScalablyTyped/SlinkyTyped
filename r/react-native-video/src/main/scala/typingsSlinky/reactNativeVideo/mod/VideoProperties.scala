@@ -1,11 +1,11 @@
 package typingsSlinky.reactNativeVideo.mod
 
 import typingsSlinky.reactNative.mod.ViewProps
-import typingsSlinky.reactNativeVideo.AnonBufferForPlaybackAfterRebufferMs
-import typingsSlinky.reactNativeVideo.AnonLanguage
-import typingsSlinky.reactNativeVideo.AnonType
-import typingsSlinky.reactNativeVideo.AnonUri
-import typingsSlinky.reactNativeVideo.AnonValue
+import typingsSlinky.reactNativeVideo.anon.BufferForPlaybackAfterRebufferMs
+import typingsSlinky.reactNativeVideo.anon.Language
+import typingsSlinky.reactNativeVideo.anon.Type
+import typingsSlinky.reactNativeVideo.anon.Uri
+import typingsSlinky.reactNativeVideo.anon.Value
 import typingsSlinky.reactNativeVideo.reactNativeVideoStrings.all
 import typingsSlinky.reactNativeVideo.reactNativeVideoStrings.contain
 import typingsSlinky.reactNativeVideo.reactNativeVideoStrings.cover
@@ -24,7 +24,7 @@ trait VideoProperties extends ViewProps {
   var allowsExternalPlayback: js.UndefOr[Boolean] = js.native
   var audioOnly: js.UndefOr[Boolean] = js.native
   var automaticallyWaitsToMinimizeStalling: js.UndefOr[Boolean] = js.native
-  var bufferConfig: js.UndefOr[AnonBufferForPlaybackAfterRebufferMs] = js.native
+  var bufferConfig: js.UndefOr[BufferForPlaybackAfterRebufferMs] = js.native
   var controls: js.UndefOr[Boolean] = js.native
   var currentTime: js.UndefOr[Double] = js.native
   var disableFocus: js.UndefOr[Boolean] = js.native
@@ -89,16 +89,16 @@ trait VideoProperties extends ViewProps {
   var scaleX: js.UndefOr[Double] = js.native
   var scaleY: js.UndefOr[Double] = js.native
   var seek: js.UndefOr[Double] = js.native
-  var selectedAudioTrack: js.UndefOr[AnonType] = js.native
-  var selectedTextTrack: js.UndefOr[AnonType] = js.native
-  var selectedVideoTrack: js.UndefOr[AnonValue] = js.native
+  var selectedAudioTrack: js.UndefOr[Type] = js.native
+  var selectedTextTrack: js.UndefOr[Type] = js.native
+  var selectedVideoTrack: js.UndefOr[Value] = js.native
   /* Wrapper component */
   // Opaque type returned by require('./video.mp4')
-  var source: AnonUri | Double = js.native
+  var source: Uri | Double = js.native
   /* Native only */
   var src: js.UndefOr[js.Any] = js.native
   var stereoPan: js.UndefOr[Double] = js.native
-  var textTracks: js.UndefOr[js.Array[AnonLanguage]] = js.native
+  var textTracks: js.UndefOr[js.Array[Language]] = js.native
   var translateX: js.UndefOr[Double] = js.native
   var translateY: js.UndefOr[Double] = js.native
   var useTextureView: js.UndefOr[Boolean] = js.native
@@ -107,7 +107,7 @@ trait VideoProperties extends ViewProps {
 
 object VideoProperties {
   @scala.inline
-  def apply(source: AnonUri | Double): VideoProperties = {
+  def apply(source: Uri | Double): VideoProperties = {
     val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoProperties]
   }
@@ -118,7 +118,7 @@ object VideoProperties {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSource(value: AnonUri | Double): Self = {
+    def withSource(value: Uri | Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
         ret
@@ -160,7 +160,7 @@ object VideoProperties {
         ret
     }
     @scala.inline
-    def withBufferConfig(value: AnonBufferForPlaybackAfterRebufferMs): Self = {
+    def withBufferConfig(value: BufferForPlaybackAfterRebufferMs): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bufferConfig")(value.asInstanceOf[js.Any])
         ret
@@ -904,7 +904,7 @@ object VideoProperties {
         ret
     }
     @scala.inline
-    def withSelectedAudioTrack(value: AnonType): Self = {
+    def withSelectedAudioTrack(value: Type): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectedAudioTrack")(value.asInstanceOf[js.Any])
         ret
@@ -916,7 +916,7 @@ object VideoProperties {
         ret
     }
     @scala.inline
-    def withSelectedTextTrack(value: AnonType): Self = {
+    def withSelectedTextTrack(value: Type): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectedTextTrack")(value.asInstanceOf[js.Any])
         ret
@@ -928,7 +928,7 @@ object VideoProperties {
         ret
     }
     @scala.inline
-    def withSelectedVideoTrack(value: AnonValue): Self = {
+    def withSelectedVideoTrack(value: Value): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectedVideoTrack")(value.asInstanceOf[js.Any])
         ret
@@ -964,7 +964,7 @@ object VideoProperties {
         ret
     }
     @scala.inline
-    def withTextTracks(value: js.Array[AnonLanguage]): Self = {
+    def withTextTracks(value: js.Array[Language]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("textTracks")(value.asInstanceOf[js.Any])
         ret

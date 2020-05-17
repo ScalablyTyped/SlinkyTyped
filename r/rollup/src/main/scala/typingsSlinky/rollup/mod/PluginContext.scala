@@ -3,10 +3,9 @@ package typingsSlinky.rollup.mod
 import typingsSlinky.estree.mod.Program
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.rollup.AnonHasModuleSideEffects
-import typingsSlinky.rollup.AnonLine
-import typingsSlinky.rollup.AnonName
-import typingsSlinky.rollup.AnonSkipSelf
+import typingsSlinky.rollup.anon.Line
+import typingsSlinky.rollup.anon.Name
+import typingsSlinky.rollup.anon.SkipSelf
 import typingsSlinky.std.IterableIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -36,34 +35,34 @@ trait PluginContext extends MinimalPluginContext {
   def emitAsset(name: String, source: Buffer): String = js.native
   /** @deprecated Use `this.emitFile` instead */
   def emitChunk(id: String): String = js.native
-  def emitChunk(id: String, options: AnonName): String = js.native
+  def emitChunk(id: String, options: Name): String = js.native
   def emitFile(emittedFile: EmittedFile): String = js.native
   def error(err: String): scala.Nothing = js.native
   def error(err: String, pos: Double): scala.Nothing = js.native
-  def error(err: String, pos: AnonLine): scala.Nothing = js.native
+  def error(err: String, pos: Line): scala.Nothing = js.native
   def error(err: RollupError): scala.Nothing = js.native
   def error(err: RollupError, pos: Double): scala.Nothing = js.native
-  def error(err: RollupError, pos: AnonLine): scala.Nothing = js.native
+  def error(err: RollupError, pos: Line): scala.Nothing = js.native
   /** @deprecated Use `this.getFileName` instead */
   def getAssetFileName(assetReferenceId: String): String = js.native
   /** @deprecated Use `this.getFileName` instead */
   def getChunkFileName(chunkReferenceId: String): String = js.native
   def getFileName(fileReferenceId: String): String = js.native
-  def getModuleInfo(moduleId: String): AnonHasModuleSideEffects = js.native
+  def getModuleInfo(moduleId: String): typingsSlinky.rollup.anon.HasModuleSideEffects = js.native
   /** @deprecated Use `this.resolve` instead */
   def isExternal(source: String, importer: String, isResolved: Boolean): js.UndefOr[Boolean | Null] = js.native
   def parse(input: String, options: js.Any): Program = js.native
   def resolve(source: String, importer: String): js.Promise[ResolvedId | Null] = js.native
-  def resolve(source: String, importer: String, options: AnonSkipSelf): js.Promise[ResolvedId | Null] = js.native
+  def resolve(source: String, importer: String, options: SkipSelf): js.Promise[ResolvedId | Null] = js.native
   /** @deprecated Use `this.resolve` instead */
   def resolveId(source: String, importer: String): js.Promise[String | Null] = js.native
   def setAssetSource(assetReferenceId: String, source: String): Unit = js.native
   def setAssetSource(assetReferenceId: String, source: Buffer): Unit = js.native
   def warn(warning: String): Unit = js.native
   def warn(warning: String, pos: Double): Unit = js.native
-  def warn(warning: String, pos: AnonLine): Unit = js.native
+  def warn(warning: String, pos: Line): Unit = js.native
   def warn(warning: RollupWarning): Unit = js.native
   def warn(warning: RollupWarning, pos: Double): Unit = js.native
-  def warn(warning: RollupWarning, pos: AnonLine): Unit = js.native
+  def warn(warning: RollupWarning, pos: Line): Unit = js.native
 }
 

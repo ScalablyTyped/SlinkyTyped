@@ -1,6 +1,6 @@
 package typingsSlinky.inboxsdk.mod.NavMenu
 
-import typingsSlinky.inboxsdk.AnonPreventDefault
+import typingsSlinky.inboxsdk.anon.PreventDefault
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait NavItemDescriptorBase extends js.Object {
   var backgroundColor: js.UndefOr[String] = js.native
   var expanderForegroundColor: js.UndefOr[String] = js.native
   var name: String = js.native
-  var onClick: js.UndefOr[js.Function1[/* event */ AnonPreventDefault, Unit]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* event */ PreventDefault, Unit]] = js.native
   var orderHint: js.UndefOr[Double] = js.native
   var routeID: js.UndefOr[String] = js.native
   var routeParams: js.UndefOr[js.Object] = js.native
@@ -77,7 +77,7 @@ object NavItemDescriptorBase {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* event */ AnonPreventDefault => Unit): Self = {
+    def withOnClick(value: /* event */ PreventDefault => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret

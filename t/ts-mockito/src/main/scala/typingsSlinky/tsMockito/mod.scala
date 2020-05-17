@@ -1,6 +1,13 @@
 package typingsSlinky.tsMockito
 
 import org.scalablytyped.runtime.Instantiable1
+import typingsSlinky.tsMockito.anon.Fn0
+import typingsSlinky.tsMockito.anon.Fn1
+import typingsSlinky.tsMockito.anon.FnCall
+import typingsSlinky.tsMockito.anon.FnCallClazz
+import typingsSlinky.tsMockito.anon.FnCallExpectedClass
+import typingsSlinky.tsMockito.anon.FnCallMethod
+import typingsSlinky.tsMockito.anon.FnCallMockedValue
 import typingsSlinky.tsMockito.argCaptorMod.ArgCaptor1
 import typingsSlinky.tsMockito.argCaptorMod.ArgCaptor10
 import typingsSlinky.tsMockito.argCaptorMod.ArgCaptor2

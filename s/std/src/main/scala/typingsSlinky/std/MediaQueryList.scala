@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.std.stdStrings.change
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -47,9 +46,4 @@ trait MediaQueryList extends EventTarget {
   /** @deprecated */
   def removeListener(listener: js.ThisFunction1[/* this */ this.type, /* ev */ MediaQueryListEvent, _]): Unit = js.native
 }
-
-@JSGlobal("MediaQueryList")
-@js.native
-object MediaQueryList
-  extends Instantiable0[org.scalajs.dom.raw.MediaQueryList]
 

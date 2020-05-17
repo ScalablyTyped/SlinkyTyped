@@ -1,6 +1,6 @@
 package typingsSlinky.xstate.interpreterMod
 
-import typingsSlinky.xstate.PartialInterpreterOptions
+import typingsSlinky.xstate.anon.PartialInterpreterOptions
 import typingsSlinky.xstate.typesMod.EventObject
 import typingsSlinky.xstate.typesMod.StateMachine
 import typingsSlinky.xstate.typesMod.StateSchema

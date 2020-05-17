@@ -12,10 +12,8 @@ import scala.scalajs.js.annotation._
   * @param {pc.Entity} root - The entity under which batched models are added.
   * @param {pc.Scene} scene - The scene that the batch manager affects.
   */
-@JSGlobal("pc.BatchManager")
 @js.native
-class BatchManager protected () extends js.Object {
-  def this(device: GraphicsDevice, root: Entity, scene: Scene) = this()
+trait BatchManager extends js.Object {
   /**
     * @function
     * @name pc.BatchManager#addGroup

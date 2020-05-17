@@ -1,9 +1,9 @@
 package typingsSlinky.segmentAnalytics.SegmentAnalytics
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.segmentAnalytics.AnonAnonymousId
-import typingsSlinky.segmentAnalytics.AnonId
 import typingsSlinky.segmentAnalytics.JQuery
+import typingsSlinky.segmentAnalytics.anon.AnonymousId
+import typingsSlinky.segmentAnalytics.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +31,7 @@ trait AnalyticsJS extends js.Object {
     console. */
   def debug(): Unit = js.native
   def debug(state: Boolean): Unit = js.native
-  def group(): AnonId = js.native
+  def group(): Id = js.native
   /* The group method associates an individual user with a group. The group
     can a company, organization, account, project, team or any other name
     you came up with for the same concept. */
@@ -184,6 +184,6 @@ trait AnalyticsJS extends js.Object {
   def use(plugin: js.Function1[/* analytics */ this.type, Unit]): this.type = js.native
   /* Once Analytics.js loaded, you can retrieve information about the
     currently identified user or group like their id and traits. */
-  def user(): AnonAnonymousId = js.native
+  def user(): AnonymousId = js.native
 }
 

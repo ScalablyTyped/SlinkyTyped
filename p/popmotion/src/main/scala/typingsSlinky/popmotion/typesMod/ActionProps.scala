@@ -1,6 +1,6 @@
 package typingsSlinky.popmotion.typesMod
 
-import typingsSlinky.popmotion.PartialColdSubscription
+import typingsSlinky.popmotion.anon.PartialColdSubscription
 import typingsSlinky.popmotion.observerTypesMod.Complete
 import typingsSlinky.popmotion.observerTypesMod.Error
 import typingsSlinky.popmotion.observerTypesMod.IObserver

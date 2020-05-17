@@ -1,6 +1,6 @@
 package typingsSlinky.oktaOktaVue.mod.OktaVuePlugin
 
-import typingsSlinky.oktaOktaVue.AnonAutoRenew
+import typingsSlinky.oktaOktaVue.anon.AutoRenew
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait OktaAuthJsOptions extends OktaOpenIDOptions {
   var maxClockSkew: js.UndefOr[Double] = js.native
   var pkce: js.UndefOr[Boolean] = js.native
   var postLogoutRedirectUri: js.UndefOr[String] = js.native
-  var tokenManager: js.UndefOr[AnonAutoRenew] = js.native
+  var tokenManager: js.UndefOr[AutoRenew] = js.native
   var tokenUrl: js.UndefOr[String] = js.native
   var userinfoUrl: js.UndefOr[String] = js.native
 }
@@ -90,7 +90,7 @@ object OktaAuthJsOptions {
         ret
     }
     @scala.inline
-    def withTokenManager(value: AnonAutoRenew): Self = {
+    def withTokenManager(value: AutoRenew): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tokenManager")(value.asInstanceOf[js.Any])
         ret

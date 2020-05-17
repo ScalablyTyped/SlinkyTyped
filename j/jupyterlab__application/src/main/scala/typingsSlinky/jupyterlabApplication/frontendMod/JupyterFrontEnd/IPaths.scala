@@ -1,8 +1,8 @@
 package typingsSlinky.jupyterlabApplication.frontendMod.JupyterFrontEnd
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.jupyterlabApplication.AnonApp
-import typingsSlinky.jupyterlabApplication.AnonAppSettings
+import typingsSlinky.jupyterlabApplication.anon.App
+import typingsSlinky.jupyterlabApplication.anon.AppSettings
 import typingsSlinky.phosphorCoreutils.mod.Token
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,11 +29,11 @@ trait IPaths extends js.Object {
     * these paths in a request to the server (it would be better to write a
     * server extension to handle these cases).
     */
-  val directories: AnonAppSettings = js.native
+  val directories: AppSettings = js.native
   /**
     * The urls used by the application.
     */
-  val urls: AnonApp = js.native
+  val urls: App = js.native
 }
 
 /**

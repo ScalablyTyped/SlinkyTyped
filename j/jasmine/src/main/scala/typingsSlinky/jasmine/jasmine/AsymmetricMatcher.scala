@@ -5,7 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait AsymmetricMatcher[TValue] extends js.Object {
+trait AsymmetricMatcher[TValue]
+  extends Expected[js.Any]
+     with ExpectedRecursive[js.Any] {
   var jasmineToString: js.UndefOr[js.Function0[String]] = js.native
   def asymmetricMatch(other: TValue, customTesters: js.Array[CustomEqualityTester]): Boolean = js.native
 }

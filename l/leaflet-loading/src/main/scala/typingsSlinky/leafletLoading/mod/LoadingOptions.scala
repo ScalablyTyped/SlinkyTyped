@@ -2,7 +2,7 @@ package typingsSlinky.leafletLoading.mod
 
 import typingsSlinky.leaflet.mod.ControlOptions
 import typingsSlinky.leaflet.mod.Control_.Zoom
-import typingsSlinky.leafletLoading.AnonLength
+import typingsSlinky.leafletLoading.anon.Length
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait LoadingOptions extends ControlOptions {
   var delayIndicator: js.UndefOr[Double] = js.native
   var separate: js.UndefOr[Boolean] = js.native
-  var spin: js.UndefOr[AnonLength] = js.native
+  var spin: js.UndefOr[Length] = js.native
   var spinjs: js.UndefOr[Boolean] = js.native
   var zoomControl: js.UndefOr[Zoom] = js.native
 }
@@ -53,7 +53,7 @@ object LoadingOptions {
         ret
     }
     @scala.inline
-    def withSpin(value: AnonLength): Self = {
+    def withSpin(value: Length): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("spin")(value.asInstanceOf[js.Any])
         ret

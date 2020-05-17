@@ -1,6 +1,6 @@
 package typingsSlinky.koaJoiRouter.mod
 
-import typingsSlinky.koaJoiRouter.TypeofJoi
+import typingsSlinky.koaJoiRouter.anon.TypeofJoi
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

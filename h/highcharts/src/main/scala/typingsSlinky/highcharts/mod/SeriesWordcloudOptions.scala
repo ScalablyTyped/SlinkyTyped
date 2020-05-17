@@ -145,30 +145,6 @@ object SeriesWordcloudOptions {
         ret
     }
     @scala.inline
-    def withCrisp(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crisp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrisp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crisp")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCropTreshold(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cropTreshold")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCropTreshold: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("cropTreshold")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withData(value: js.Array[(js.Tuple2[String, Double]) | SeriesWordcloudDataOptions]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
@@ -178,66 +154,6 @@ object SeriesWordcloudOptions {
     def withoutData: Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDepth(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDepth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeColor(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupPadding(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupPadding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupPadding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupZPadding(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupZPadding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupZPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupZPadding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrouping(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grouping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrouping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grouping")(js.undefined)
         ret
     }
     @scala.inline
@@ -289,30 +205,6 @@ object SeriesWordcloudOptions {
         ret
     }
     @scala.inline
-    def withMaxPointWidth(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPointWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxPointWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPointWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withMinPointLength(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minPointLength")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMinPointLength: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("minPointLength")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withName(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
@@ -322,30 +214,6 @@ object SeriesWordcloudOptions {
     def withoutName: Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointPadding(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointPadding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointPadding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointWidth(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointWidth")(js.undefined)
         ret
     }
     @scala.inline

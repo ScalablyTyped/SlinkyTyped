@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IBlock extends _IMinecraftObject {
+trait IBlock extends IMinecraftObject {
   /**
     * The identifier of the block
     */

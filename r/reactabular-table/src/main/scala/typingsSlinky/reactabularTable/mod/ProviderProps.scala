@@ -1,6 +1,6 @@
 package typingsSlinky.reactabularTable.mod
 
-import typingsSlinky.reactabularTable.PartialCSSStyleDeclaratio
+import typingsSlinky.reactabularTable.anon.PartialCSSStyleDeclaratio
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IExpandedMonarchLanguageAction extends js.Object {
+trait IExpandedMonarchLanguageAction extends IMonarchLanguageAction {
   /**
     * @open or @close
     */

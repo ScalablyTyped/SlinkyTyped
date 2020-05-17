@@ -2,7 +2,7 @@ package typingsSlinky.gestalt.mod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.gestalt.AnonZIndex
+import typingsSlinky.gestalt.anon.ZIndex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait StickyProps extends js.Object {
   var bottom: js.UndefOr[Double | String] = js.native
   var children: js.UndefOr[TagMod[Any]] = js.native
-  var dangerouslySetZIndex: js.UndefOr[AnonZIndex] = js.native
+  var dangerouslySetZIndex: js.UndefOr[ZIndex] = js.native
   var left: js.UndefOr[Double | String] = js.native
   var right: js.UndefOr[Double | String] = js.native
   var top: js.UndefOr[Double | String] = js.native
@@ -60,7 +60,7 @@ object StickyProps {
         ret
     }
     @scala.inline
-    def withDangerouslySetZIndex(value: AnonZIndex): Self = {
+    def withDangerouslySetZIndex(value: ZIndex): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetZIndex")(value.asInstanceOf[js.Any])
         ret

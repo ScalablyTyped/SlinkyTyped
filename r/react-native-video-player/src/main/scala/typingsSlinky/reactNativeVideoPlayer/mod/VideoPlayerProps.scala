@@ -3,8 +3,8 @@ package typingsSlinky.reactNativeVideoPlayer.mod
 import typingsSlinky.reactNative.mod.ImageSourcePropType
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeVideoPlayer.AnonControlButton
-import typingsSlinky.reactNativeVideoPlayer.AnonUri
+import typingsSlinky.reactNativeVideoPlayer.anon.ControlButton
+import typingsSlinky.reactNativeVideoPlayer.anon.Uri
 import typingsSlinky.reactNativeVideoPlayer.reactNativeVideoPlayerStrings.contain
 import typingsSlinky.reactNativeVideoPlayer.reactNativeVideoPlayerStrings.cover
 import typingsSlinky.reactNativeVideoPlayer.reactNativeVideoPlayerStrings.none
@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation._
 trait VideoPlayerProps extends js.Object {
   var autoplay: js.UndefOr[Boolean] = js.native
   var controlsTimeout: js.UndefOr[Double] = js.native
-  var customStyles: js.UndefOr[AnonControlButton] = js.native
+  var customStyles: js.UndefOr[ControlButton] = js.native
   var defaultMuted: js.UndefOr[Boolean] = js.native
   var disableControlsAutoHide: js.UndefOr[Boolean] = js.native
   var disableFullscreen: js.UndefOr[Boolean] = js.native
@@ -42,7 +42,7 @@ trait VideoPlayerProps extends js.Object {
   var resizeMode: js.UndefOr[stretch | contain | cover | none] = js.native
   var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
   var thumbnail: js.UndefOr[ImageSourcePropType] = js.native
-  var video: js.UndefOr[AnonUri | Double] = js.native
+  var video: js.UndefOr[Uri | Double] = js.native
   var videoHeight: js.UndefOr[Double] = js.native
   var videoWidth: js.UndefOr[Double] = js.native
 }
@@ -84,7 +84,7 @@ object VideoPlayerProps {
         ret
     }
     @scala.inline
-    def withCustomStyles(value: AnonControlButton): Self = {
+    def withCustomStyles(value: ControlButton): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customStyles")(value.asInstanceOf[js.Any])
         ret
@@ -390,7 +390,7 @@ object VideoPlayerProps {
         ret
     }
     @scala.inline
-    def withVideo(value: AnonUri | Double): Self = {
+    def withVideo(value: Uri | Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
         ret

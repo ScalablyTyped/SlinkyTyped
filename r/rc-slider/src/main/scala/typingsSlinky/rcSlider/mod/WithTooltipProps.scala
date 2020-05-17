@@ -1,7 +1,7 @@
 package typingsSlinky.rcSlider.mod
 
 import slinky.core.TagMod
-import typingsSlinky.rcSlider.PartialProps
+import typingsSlinky.rcSlider.anon.PartialProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

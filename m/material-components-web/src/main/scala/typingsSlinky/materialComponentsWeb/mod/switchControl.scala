@@ -1,10 +1,10 @@
 package typingsSlinky.materialComponentsWeb.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.materialSwitch.AnonCHECKED
-import typingsSlinky.materialSwitch.AnonNATIVECONTROLSELECTOR
-import typingsSlinky.materialSwitch.PartialMDCSwitchAdapter
 import typingsSlinky.materialSwitch.adapterMod.MDCSwitchAdapter
+import typingsSlinky.materialSwitch.anon.CHECKED
+import typingsSlinky.materialSwitch.anon.NATIVECONTROLSELECTOR
+import typingsSlinky.materialSwitch.anon.PartialMDCSwitchAdapter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,11 +32,11 @@ object switchControl extends js.Object {
   @js.native
   object MDCSwitchFoundation extends js.Object {
     /** The CSS classes used by the switch. */
-    val cssClasses: AnonCHECKED = js.native
+    val cssClasses: CHECKED = js.native
     /** The default Adapter for the switch. */
     val defaultAdapter: MDCSwitchAdapter = js.native
     /** The string constants used by the switch. */
-    val strings: AnonNATIVECONTROLSELECTOR = js.native
+    val strings: NATIVECONTROLSELECTOR = js.native
   }
   
   /** CSS classes used by the switch. */

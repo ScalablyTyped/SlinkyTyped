@@ -11,5 +11,5 @@ package object withStylesMod {
     /* theme */ typingsSlinky.materialUiCore.createMuiThemeMod.Theme, 
     typingsSlinky.materialUiCore.withStylesMod.StyleRules[ClassKey]
   ]
-  type WithStyles[T /* <: java.lang.String | typingsSlinky.materialUiCore.withStylesMod.StyleRules[java.lang.String] | typingsSlinky.materialUiCore.withStylesMod.StyleRulesCallback[java.lang.String] */, IncludeTheme /* <: js.UndefOr[scala.Boolean] */] = (js.Object | typingsSlinky.materialUiCore.AnonTheme) with typingsSlinky.materialUiCore.AnonClasses[T]
+  type WithStyles[T /* <: java.lang.String | typingsSlinky.materialUiCore.withStylesMod.StyleRules[java.lang.String] | typingsSlinky.materialUiCore.withStylesMod.StyleRulesCallback[java.lang.String] */, IncludeTheme /* <: js.UndefOr[scala.Boolean] */] = (js.Object | typingsSlinky.materialUiCore.anon.Theme) with typingsSlinky.materialUiCore.anon.Classes[T]
 }

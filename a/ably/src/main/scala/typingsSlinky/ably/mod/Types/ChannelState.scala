@@ -11,6 +11,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.ably.mod.Types.ChannelState.FAILED
+  - typingsSlinky.ably.mod.Types.ChannelState.INITIALIZED
+  - typingsSlinky.ably.mod.Types.ChannelState.SUSPENDED
+  - typingsSlinky.ably.mod.Types.ChannelState.ATTACHED
+  - typingsSlinky.ably.mod.Types.ChannelState.ATTACHING
+  - typingsSlinky.ably.mod.Types.ChannelState.DETACHED
+  - typingsSlinky.ably.mod.Types.ChannelState.DETACHING
+*/
+trait ChannelState extends js.Object
+
 @JSImport("ably", "Types.ChannelState")
 @js.native
 object ChannelState extends js.Object {

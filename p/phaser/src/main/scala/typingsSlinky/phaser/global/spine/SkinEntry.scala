@@ -1,0 +1,13 @@
+package typingsSlinky.phaser.global.spine
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("spine.SkinEntry")
+@js.native
+class SkinEntry protected ()
+  extends typingsSlinky.phaser.spine.SkinEntry {
+  def this(slotIndex: Double, name: String, attachment: typingsSlinky.phaser.spine.Attachment) = this()
+}
+

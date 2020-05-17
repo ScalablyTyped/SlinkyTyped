@@ -1,6 +1,6 @@
 package typingsSlinky.terminalKit.rectMod
 
-import typingsSlinky.terminalKit.AnonDstRect
+import typingsSlinky.terminalKit.anon.DstRect
 import typingsSlinky.terminalKit.terminalMod.Terminal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,6 +21,6 @@ class ^ protected () extends Rect {
 @JSImport("terminal-kit/Rect", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
-  def wrappingRect(params: AnonDstRect): Unit = js.native
+  def wrappingRect(params: DstRect): Unit = js.native
 }
 

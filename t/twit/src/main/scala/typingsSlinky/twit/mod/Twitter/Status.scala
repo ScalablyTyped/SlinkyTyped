@@ -1,7 +1,7 @@
 package typingsSlinky.twit.mod.Twitter
 
 import typingsSlinky.geojson.mod.Point
-import typingsSlinky.twit.AnonId
+import typingsSlinky.twit.anon.Id
 import typingsSlinky.twit.twitStrings.low
 import typingsSlinky.twit.twitStrings.medium
 import typingsSlinky.twit.twitStrings.none
@@ -15,7 +15,7 @@ trait Status extends js.Object {
   var contributors: js.UndefOr[js.Array[Contributors]] = js.native
   var coordinates: js.UndefOr[Point] = js.native
   var created_at: String = js.native
-  var current_user_retweet: js.UndefOr[AnonId] = js.native
+  var current_user_retweet: js.UndefOr[Id] = js.native
   var display_text_range: js.UndefOr[js.Tuple2[Double, Double]] = js.native
   var entities: Entities = js.native
   var favorite_count: js.UndefOr[Double] = js.native
@@ -162,7 +162,7 @@ object Status {
         ret
     }
     @scala.inline
-    def withCurrent_user_retweet(value: AnonId): Self = {
+    def withCurrent_user_retweet(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("current_user_retweet")(value.asInstanceOf[js.Any])
         ret

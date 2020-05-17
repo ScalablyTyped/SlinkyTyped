@@ -11,7 +11,7 @@ import typingsSlinky.nivoCore.mod.Box
 import typingsSlinky.nivoCore.mod.CssMixBlendMode
 import typingsSlinky.nivoCore.mod.Theme
 import typingsSlinky.nivoLegends.mod.LegendProps
-import typingsSlinky.nivoSankey.AnonLinks
+import typingsSlinky.nivoSankey.anon.Links
 import typingsSlinky.nivoSankey.mod.AccessorFunc
 import typingsSlinky.nivoSankey.mod.Data
 import typingsSlinky.nivoSankey.mod.Dimensions
@@ -130,7 +130,7 @@ object Sankey {
   
   def withProps(p: Data with SankeyProps with Dimensions): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(data: AnonLinks, height: Double, width: Double): Builder = {
+  def apply(data: Links, height: Double, width: Double): Builder = {
     val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[Data with SankeyProps with Dimensions]))
   }

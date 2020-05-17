@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonQualifier
+import typingsSlinky.astTypes.anon.Qualifier
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.kindsMod.StringLiteralKind
 import typingsSlinky.astTypes.kindsMod.TSQualifiedNameKind
@@ -13,11 +13,6 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TSImportTypeBuilder extends js.Object {
   def apply(argument: StringLiteralKind): TSImportType = js.native
-  def apply(
-    argument: StringLiteralKind,
-    qualifier: js.UndefOr[scala.Nothing],
-    typeParameters: TSTypeParameterInstantiationKind
-  ): TSImportType = js.native
   def apply(argument: StringLiteralKind, qualifier: IdentifierKind): TSImportType = js.native
   def apply(
     argument: StringLiteralKind,
@@ -30,6 +25,6 @@ trait TSImportTypeBuilder extends js.Object {
     qualifier: TSQualifiedNameKind,
     typeParameters: TSTypeParameterInstantiationKind
   ): TSImportType = js.native
-  def from(params: AnonQualifier): TSImportType = js.native
+  def from(params: Qualifier): TSImportType = js.native
 }
 

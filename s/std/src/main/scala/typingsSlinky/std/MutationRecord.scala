@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,8 +45,109 @@ trait MutationRecord extends js.Object {
   val `type`: MutationRecordType = js.native
 }
 
-@JSGlobal("MutationRecord")
-@js.native
-object MutationRecord
-  extends Instantiable0[org.scalajs.dom.raw.MutationRecord]
+object MutationRecord {
+  @scala.inline
+  def apply(
+    addedNodes: org.scalajs.dom.raw.NodeList,
+    removedNodes: org.scalajs.dom.raw.NodeList,
+    target: org.scalajs.dom.raw.Node,
+    `type`: MutationRecordType
+  ): MutationRecord = {
+    val __obj = js.Dynamic.literal(addedNodes = addedNodes.asInstanceOf[js.Any], removedNodes = removedNodes.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MutationRecord]
+  }
+  @scala.inline
+  implicit class MutationRecordOps[Self <: org.scalajs.dom.raw.MutationRecord] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddedNodes(value: org.scalajs.dom.raw.NodeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addedNodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemovedNodes(value: org.scalajs.dom.raw.NodeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removedNodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTarget(value: org.scalajs.dom.raw.Node): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: MutationRecordType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributeName(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributeNameNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeName")(null)
+        ret
+    }
+    @scala.inline
+    def withAttributeNamespace(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeNamespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributeNamespaceNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeNamespace")(null)
+        ret
+    }
+    @scala.inline
+    def withNextSibling(value: org.scalajs.dom.raw.Node): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextSibling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNextSiblingNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextSibling")(null)
+        ret
+    }
+    @scala.inline
+    def withOldValue(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOldValueNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(null)
+        ret
+    }
+    @scala.inline
+    def withPreviousSibling(value: org.scalajs.dom.raw.Node): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousSibling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreviousSiblingNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousSibling")(null)
+        ret
+    }
+  }
+  
+}
 

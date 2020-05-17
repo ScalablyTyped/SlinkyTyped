@@ -1,8 +1,7 @@
 package typingsSlinky.plotlyJs.mod
 
-import typingsSlinky.plotlyJs.AnonFont
-import typingsSlinky.plotlyJs.PartialPadding
-import typingsSlinky.plotlyJs.PartialSliderStep
+import typingsSlinky.plotlyJs.anon.PartialPadding
+import typingsSlinky.plotlyJs.anon.PartialSliderStep
 import typingsSlinky.plotlyJs.plotlyJsStrings.auto
 import typingsSlinky.plotlyJs.plotlyJsStrings.bottom
 import typingsSlinky.plotlyJs.plotlyJsStrings.center
@@ -40,7 +39,7 @@ trait Slider extends js.Object {
   	 * Sets the width (in px) of the border enclosing the slider.
   	 */
   var borderwidth: Double = js.native
-  var currentvalue: AnonFont = js.native
+  var currentvalue: typingsSlinky.plotlyJs.anon.Font = js.native
   /**
   	 * Sets the font of the slider step labels.
   	 */
@@ -114,7 +113,7 @@ object Slider {
     bgcolor: Color,
     bordercolor: Color,
     borderwidth: Double,
-    currentvalue: AnonFont,
+    currentvalue: typingsSlinky.plotlyJs.anon.Font,
     font: Font,
     len: Double,
     lenmode: fraction | pixels,
@@ -171,7 +170,7 @@ object Slider {
         ret
     }
     @scala.inline
-    def withCurrentvalue(value: AnonFont): Self = {
+    def withCurrentvalue(value: typingsSlinky.plotlyJs.anon.Font): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("currentvalue")(value.asInstanceOf[js.Any])
         ret

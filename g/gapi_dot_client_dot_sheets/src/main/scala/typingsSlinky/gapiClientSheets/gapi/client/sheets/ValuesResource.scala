@@ -1,20 +1,19 @@
 package typingsSlinky.gapiClientSheets.gapi.client.sheets
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientSheets.AnonCallback
-import typingsSlinky.gapiClientSheets.AnonDateTimeRenderOption
-import typingsSlinky.gapiClientSheets.AnonIncludeValuesInResponse
-import typingsSlinky.gapiClientSheets.AnonInsertDataOption
-import typingsSlinky.gapiClientSheets.AnonMajorDimension
-import typingsSlinky.gapiClientSheets.AnonOauthtoken
-import typingsSlinky.gapiClientSheets.AnonPrettyPrint
-import typingsSlinky.gapiClientSheets.AnonQuotaUser
-import typingsSlinky.gapiClientSheets.AnonRange
-import typingsSlinky.gapiClientSheets.AnonResource
-import typingsSlinky.gapiClientSheets.AnonResponseDateTimeRenderOption
-import typingsSlinky.gapiClientSheets.AnonResponseValueRenderOption
-import typingsSlinky.gapiClientSheets.AnonSpreadsheetId
-import typingsSlinky.gapiClientSheets.AnonUploadType
+import typingsSlinky.gapiClientSheets.anon.Callback
+import typingsSlinky.gapiClientSheets.anon.DateTimeRenderOption
+import typingsSlinky.gapiClientSheets.anon.IncludeValuesInResponse
+import typingsSlinky.gapiClientSheets.anon.InsertDataOption
+import typingsSlinky.gapiClientSheets.anon.MajorDimension
+import typingsSlinky.gapiClientSheets.anon.Oauthtoken
+import typingsSlinky.gapiClientSheets.anon.PrettyPrint
+import typingsSlinky.gapiClientSheets.anon.QuotaUser
+import typingsSlinky.gapiClientSheets.anon.Range
+import typingsSlinky.gapiClientSheets.anon.Resource
+import typingsSlinky.gapiClientSheets.anon.ResponseDateTimeRenderOption
+import typingsSlinky.gapiClientSheets.anon.ResponseValueRenderOption
+import typingsSlinky.gapiClientSheets.anon.SpreadsheetId
+import typingsSlinky.gapiClientSheets.anon.UploadType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,17 +36,17 @@ trait ValuesResource extends js.Object {
     * row-wise), it does not influence what cell the data starts being written
     * to.
     */
-  def append(request: AnonIncludeValuesInResponse): Request_[AppendValuesResponse] = js.native
-  def append(request: AnonInsertDataOption, body: ValueRange): Request_[AppendValuesResponse] = js.native
-  def batchClear(request: AnonCallback, body: BatchClearValuesRequest): Request_[BatchClearValuesResponse] = js.native
+  def append(request: IncludeValuesInResponse): typingsSlinky.gapiClient.gapi.client.Request[AppendValuesResponse] = js.native
+  def append(request: InsertDataOption, body: ValueRange): typingsSlinky.gapiClient.gapi.client.Request[AppendValuesResponse] = js.native
+  def batchClear(request: Callback, body: BatchClearValuesRequest): typingsSlinky.gapiClient.gapi.client.Request[BatchClearValuesResponse] = js.native
   /**
     * Clears one or more ranges of values from a spreadsheet.
     * The caller must specify the spreadsheet ID and one or more ranges.
     * Only values are cleared -- all other properties of the cell (such as
     * formatting, data validation, etc..) are kept.
     */
-  def batchClear(request: AnonOauthtoken): Request_[BatchClearValuesResponse] = js.native
-  def batchClearByDataFilter(request: AnonCallback, body: BatchClearValuesByDataFilterRequest): Request_[BatchClearValuesByDataFilterResponse] = js.native
+  def batchClear(request: Oauthtoken): typingsSlinky.gapiClient.gapi.client.Request[BatchClearValuesResponse] = js.native
+  def batchClearByDataFilter(request: Callback, body: BatchClearValuesByDataFilterRequest): typingsSlinky.gapiClient.gapi.client.Request[BatchClearValuesByDataFilterResponse] = js.native
   /**
     * Clears one or more ranges of values from a spreadsheet.
     * The caller must specify the spreadsheet ID and one or more
@@ -55,57 +54,57 @@ trait ValuesResource extends js.Object {
     * filters will be cleared.  Only values are cleared -- all other properties
     * of the cell (such as formatting, data validation, etc..) are kept.
     */
-  def batchClearByDataFilter(request: AnonPrettyPrint): Request_[BatchClearValuesByDataFilterResponse] = js.native
+  def batchClearByDataFilter(request: PrettyPrint): typingsSlinky.gapiClient.gapi.client.Request[BatchClearValuesByDataFilterResponse] = js.native
   /**
     * Returns one or more ranges of values from a spreadsheet.
     * The caller must specify the spreadsheet ID and one or more ranges.
     */
-  def batchGet(): Request_[BatchGetValuesResponse] = js.native
-  def batchGet(request: AnonDateTimeRenderOption): Request_[BatchGetValuesResponse] = js.native
-  def batchGetByDataFilter(request: AnonCallback, body: BatchGetValuesByDataFilterRequest): Request_[BatchGetValuesByDataFilterResponse] = js.native
+  def batchGet(): typingsSlinky.gapiClient.gapi.client.Request[BatchGetValuesResponse] = js.native
+  def batchGet(request: DateTimeRenderOption): typingsSlinky.gapiClient.gapi.client.Request[BatchGetValuesResponse] = js.native
+  def batchGetByDataFilter(request: Callback, body: BatchGetValuesByDataFilterRequest): typingsSlinky.gapiClient.gapi.client.Request[BatchGetValuesByDataFilterResponse] = js.native
   /**
     * Returns one or more ranges of values that match the specified data filters.
     * The caller must specify the spreadsheet ID and one or more
     * DataFilters.  Ranges that match any of the data filters in
     * the request will be returned.
     */
-  def batchGetByDataFilter(request: AnonQuotaUser): Request_[BatchGetValuesByDataFilterResponse] = js.native
-  def batchUpdate(request: AnonCallback, body: BatchUpdateValuesRequest): Request_[BatchUpdateValuesResponse] = js.native
+  def batchGetByDataFilter(request: QuotaUser): typingsSlinky.gapiClient.gapi.client.Request[BatchGetValuesByDataFilterResponse] = js.native
+  def batchUpdate(request: Callback, body: BatchUpdateValuesRequest): typingsSlinky.gapiClient.gapi.client.Request[BatchUpdateValuesResponse] = js.native
   /**
     * Sets values in one or more ranges of a spreadsheet.
     * The caller must specify the spreadsheet ID,
     * a valueInputOption, and one or more
     * ValueRanges.
     */
-  def batchUpdate(request: AnonResource): Request_[BatchUpdateValuesResponse] = js.native
-  def batchUpdateByDataFilter(request: AnonCallback, body: BatchUpdateValuesByDataFilterRequest): Request_[BatchUpdateValuesByDataFilterResponse] = js.native
+  def batchUpdate(request: Resource): typingsSlinky.gapiClient.gapi.client.Request[BatchUpdateValuesResponse] = js.native
+  def batchUpdateByDataFilter(request: Callback, body: BatchUpdateValuesByDataFilterRequest): typingsSlinky.gapiClient.gapi.client.Request[BatchUpdateValuesByDataFilterResponse] = js.native
   /**
     * Sets values in one or more ranges of a spreadsheet.
     * The caller must specify the spreadsheet ID,
     * a valueInputOption, and one or more
     * DataFilterValueRanges.
     */
-  def batchUpdateByDataFilter(request: AnonSpreadsheetId): Request_[BatchUpdateValuesByDataFilterResponse] = js.native
+  def batchUpdateByDataFilter(request: SpreadsheetId): typingsSlinky.gapiClient.gapi.client.Request[BatchUpdateValuesByDataFilterResponse] = js.native
   /**
     * Clears values from a spreadsheet.
     * The caller must specify the spreadsheet ID and range.
     * Only values are cleared -- all other properties of the cell (such as
     * formatting, data validation, etc..) are kept.
     */
-  def clear(request: AnonRange): Request_[ClearValuesResponse] = js.native
-  def clear(request: AnonUploadType, body: ClearValuesRequest): Request_[ClearValuesResponse] = js.native
+  def clear(request: Range): typingsSlinky.gapiClient.gapi.client.Request[ClearValuesResponse] = js.native
+  def clear(request: UploadType, body: ClearValuesRequest): typingsSlinky.gapiClient.gapi.client.Request[ClearValuesResponse] = js.native
   /**
     * Returns a range of values from a spreadsheet.
     * The caller must specify the spreadsheet ID and a range.
     */
-  def get(): Request_[ValueRange] = js.native
-  def get(request: AnonMajorDimension): Request_[ValueRange] = js.native
+  def get(): typingsSlinky.gapiClient.gapi.client.Request[ValueRange] = js.native
+  def get(request: MajorDimension): typingsSlinky.gapiClient.gapi.client.Request[ValueRange] = js.native
   /**
     * Sets values in a range of a spreadsheet.
     * The caller must specify the spreadsheet ID, range, and
     * a valueInputOption.
     */
-  def update(request: AnonResponseDateTimeRenderOption): Request_[UpdateValuesResponse] = js.native
-  def update(request: AnonResponseValueRenderOption, body: ValueRange): Request_[UpdateValuesResponse] = js.native
+  def update(request: ResponseDateTimeRenderOption): typingsSlinky.gapiClient.gapi.client.Request[UpdateValuesResponse] = js.native
+  def update(request: ResponseValueRenderOption, body: ValueRange): typingsSlinky.gapiClient.gapi.client.Request[UpdateValuesResponse] = js.native
 }
 

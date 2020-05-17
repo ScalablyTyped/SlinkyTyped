@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.CustomPropertyData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.CustomPropertyLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.CustomPropertyUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Boolean
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Date
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Float
@@ -20,9 +20,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.7]
   */
-@JSGlobal("Excel.CustomProperty")
 @js.native
-class CustomProperty () extends ClientObject {
+trait CustomProperty extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_CustomProperty: RequestContext = js.native
@@ -60,7 +59,7 @@ class CustomProperty () extends ClientObject {
     */
   def load(): CustomProperty = js.native
   def load(options: CustomPropertyLoadOptions): CustomProperty = js.native
-  def load(propertyNamesAndPaths: AnonExpand): CustomProperty = js.native
+  def load(propertyNamesAndPaths: Expand): CustomProperty = js.native
   def load(propertyNames: String): CustomProperty = js.native
   def load(propertyNames: js.Array[String]): CustomProperty = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

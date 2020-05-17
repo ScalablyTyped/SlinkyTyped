@@ -1,6 +1,6 @@
 package typingsSlinky.kramed.mod
 
-import typingsSlinky.kramed.AnonAlign
+import typingsSlinky.kramed.anon.Align
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ trait KramedRenderer extends js.Object {
   def paragraph(text: String): String = js.native
   def strong(text: String): String = js.native
   def table(header: String, body: String): String = js.native
-  def tablecell(content: String, flags: AnonAlign): String = js.native
+  def tablecell(content: String, flags: Align): String = js.native
   def tablerow(content: String): String = js.native
   def text(text: String): String = js.native
 }
@@ -47,7 +47,7 @@ object KramedRenderer {
     paragraph: String => String,
     strong: String => String,
     table: (String, String) => String,
-    tablecell: (String, AnonAlign) => String,
+    tablecell: (String, Align) => String,
     tablerow: String => String,
     text: String => String
   ): KramedRenderer = {
@@ -157,7 +157,7 @@ object KramedRenderer {
         ret
     }
     @scala.inline
-    def withTablecell(value: (String, AnonAlign) => String): Self = {
+    def withTablecell(value: (String, Align) => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tablecell")(js.Any.fromFunction2(value))
         ret

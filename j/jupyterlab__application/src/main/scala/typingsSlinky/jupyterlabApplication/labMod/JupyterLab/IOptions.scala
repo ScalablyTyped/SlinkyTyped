@@ -1,7 +1,7 @@
 package typingsSlinky.jupyterlabApplication.labMod.JupyterLab
 
-import typingsSlinky.jupyterlabApplication.AnonMatches
-import typingsSlinky.jupyterlabApplication.PartialIPaths
+import typingsSlinky.jupyterlabApplication.anon.Matches
+import typingsSlinky.jupyterlabApplication.anon.PartialIPaths
 import typingsSlinky.jupyterlabApplication.shellMod.LabShell
 import typingsSlinky.jupyterlabApputils.mod.CommandLinker
 import typingsSlinky.jupyterlabDocregistry.mod.DocumentRegistry
@@ -27,9 +27,9 @@ trait IOptions extends js.Object {
     * A custom renderer for the context menu.
     */
   var contextMenuRenderer: js.UndefOr[IRenderer] = js.native
-  var deferred: js.UndefOr[AnonMatches] = js.native
+  var deferred: js.UndefOr[Matches] = js.native
   var devMode: js.UndefOr[Boolean] = js.native
-  var disabled: js.UndefOr[AnonMatches] = js.native
+  var disabled: js.UndefOr[Matches] = js.native
   /**
     * The document registry instance used by the application.
     */
@@ -99,7 +99,7 @@ object IOptions {
         ret
     }
     @scala.inline
-    def withDeferred(value: AnonMatches): Self = {
+    def withDeferred(value: Matches): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("deferred")(value.asInstanceOf[js.Any])
         ret
@@ -123,7 +123,7 @@ object IOptions {
         ret
     }
     @scala.inline
-    def withDisabled(value: AnonMatches): Self = {
+    def withDisabled(value: Matches): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("disabled")(value.asInstanceOf[js.Any])
         ret

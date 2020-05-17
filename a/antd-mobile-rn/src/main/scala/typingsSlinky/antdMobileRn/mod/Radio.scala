@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobileRn.mod
 
-import typingsSlinky.antdMobileRn.Anon0
+import typingsSlinky.antdMobileRn.anon.`0`
 import typingsSlinky.antdMobileRn.radioIndexNativeMod.default
 import typingsSlinky.antdMobileRn.radioNativeMod.RadioNativeProps
 import scala.scalajs.js
@@ -18,6 +18,6 @@ class Radio protected () extends default {
 @js.native
 object Radio extends js.Object {
   var RadioItem: js.Any = js.native
-  var defaultProps: Anon0 = js.native
+  var defaultProps: `0` = js.native
 }
 

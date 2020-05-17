@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.themePageTypesMod
 
-import typingsSlinky.officeUiFabricReact.AnonIndex
+import typingsSlinky.officeUiFabricReact.anon.Index
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IThemePageState extends js.Object {
   var activeList: js.UndefOr[String] = js.native
-  var colorPickerProps: js.UndefOr[AnonIndex] = js.native
+  var colorPickerProps: js.UndefOr[Index] = js.native
   var palette: js.Array[IThemePagePalette] = js.native
   var semanticColors: js.Array[IThemePagePalette] = js.native
 }
@@ -50,7 +50,7 @@ object IThemePageState {
         ret
     }
     @scala.inline
-    def withColorPickerProps(value: AnonIndex): Self = {
+    def withColorPickerProps(value: Index): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("colorPickerProps")(value.asInstanceOf[js.Any])
         ret

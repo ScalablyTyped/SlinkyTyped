@@ -1,7 +1,7 @@
 package typingsSlinky.dogapi.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.dogapi.AnonHost
+import typingsSlinky.dogapi.anon.Host
 import typingsSlinky.dogapi.dogapiStrings.ok
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +19,7 @@ trait metric extends js.Object {
   def send_ok(
     metric: String,
     points: js.Array[Double],
-    extra: AnonHost,
+    extra: Host,
     callback: js.Function2[/* err */ js.Error | Null, ok, Unit]
   ): Unit = js.native
   @JSName("send")
@@ -28,7 +28,7 @@ trait metric extends js.Object {
   def send_ok(
     metric: String,
     points: Double,
-    extra: AnonHost,
+    extra: Host,
     callback: js.Function2[/* err */ js.Error | Null, ok, Unit]
   ): Unit = js.native
 }

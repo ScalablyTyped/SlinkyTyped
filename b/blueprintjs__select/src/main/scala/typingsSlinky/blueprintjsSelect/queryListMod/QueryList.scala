@@ -2,8 +2,8 @@ package typingsSlinky.blueprintjsSelect.queryListMod
 
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.blueprintjsCore.mod.AbstractComponent2
-import typingsSlinky.blueprintjsSelect.AnonDisabled
-import typingsSlinky.blueprintjsSelect.ReadonlychildrenReactNode
+import typingsSlinky.blueprintjsSelect.anon.Disabled
+import typingsSlinky.blueprintjsSelect.anon.ReadonlychildrenReactNode
 import typingsSlinky.blueprintjsSelect.listItemsUtilsMod.ICreateNewItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -60,11 +60,6 @@ class QueryList[T] protected ()
   def setActiveItem(activeItem: T): Unit = js.native
   def setActiveItem(activeItem: ICreateNewItem): Unit = js.native
   def setQuery(query: String): Unit = js.native
-  def setQuery(
-    query: String,
-    resetActiveItem: js.UndefOr[scala.Nothing],
-    props: IQueryListProps[T] with ReadonlychildrenReactNode
-  ): Unit = js.native
   def setQuery(query: String, resetActiveItem: Boolean): Unit = js.native
   def setQuery(query: String, resetActiveItem: Boolean, props: IQueryListProps[T] with ReadonlychildrenReactNode): Unit = js.native
 }
@@ -73,7 +68,7 @@ class QueryList[T] protected ()
 @JSImport("@blueprintjs/select/lib/esm/components/query-list/queryList", "QueryList")
 @js.native
 object QueryList extends js.Object {
-  var defaultProps: AnonDisabled = js.native
+  var defaultProps: Disabled = js.native
   var displayName: String = js.native
   def ofType[T](): Instantiable1[/* props */ IQueryListProps[T], QueryList[T]] = js.native
 }

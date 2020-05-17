@@ -98,10 +98,8 @@ import scala.scalajs.js.annotation._
   * Layer IDs are stored inside {@link pc.ModelComponent#layers}, {@link pc.CameraComponent#layers}, {@link pc.LightComponent#layers} and {@link pc.ElementComponent#layers} instead of names.
   * Can be used in {@link pc.LayerComposition#getLayerById}.
   */
-@JSGlobal("pc.Layer")
 @js.native
-class Layer protected () extends js.Object {
-  def this(options: js.Any) = this()
+trait Layer extends js.Object {
   /**
     * The color used to clear the canvas to before each camera starts to render.
     */

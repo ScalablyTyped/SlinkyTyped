@@ -4,14 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.EffectLayerSceneComponent")
 @js.native
-class EffectLayerSceneComponent protected () extends ISceneSerializableComponent {
-  /**
-    * Creates a new instance of the component for the given scene
-    * @param scene Defines the scene to register the component in
-    */
-  def this(scene: Scene) = this()
+trait EffectLayerSceneComponent extends ISceneSerializableComponent {
   var _draw: js.Any = js.native
   var _drawCamera: js.Any = js.native
   var _drawRenderingGroup: js.Any = js.native

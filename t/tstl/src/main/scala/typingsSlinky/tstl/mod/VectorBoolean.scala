@@ -1,7 +1,7 @@
 package typingsSlinky.tstl.mod
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.tstl.ReadonlyIForwardIteratorb
+import typingsSlinky.tstl.anon.ReadonlyIForwardIteratorb
 import typingsSlinky.tstl.arrayContainerMod.ArrayContainer
 import typingsSlinky.tstl.arrayIteratorMod.ArrayIterator
 import typingsSlinky.tstl.arrayReverseIteratorMod.ArrayReverseIterator

@@ -1,6 +1,6 @@
 package typingsSlinky.handsontable.mod.Handsontable.ganttChart
 
-import typingsSlinky.handsontable.AnonLabel
+import typingsSlinky.handsontable.anon.Label
 import typingsSlinky.handsontable.mod.Handsontable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait HandsontableBindingInformation extends js.Object {
-  var additionalData: AnonLabel = js.native
+  var additionalData: Label = js.native
   var asyncUpdates: js.UndefOr[Boolean] = js.native
   var endDateColumn: Double = js.native
   var instance: Handsontable = js.native
@@ -17,7 +17,7 @@ trait HandsontableBindingInformation extends js.Object {
 
 object HandsontableBindingInformation {
   @scala.inline
-  def apply(additionalData: AnonLabel, endDateColumn: Double, instance: Handsontable, startDateColumn: Double): HandsontableBindingInformation = {
+  def apply(additionalData: Label, endDateColumn: Double, instance: Handsontable, startDateColumn: Double): HandsontableBindingInformation = {
     val __obj = js.Dynamic.literal(additionalData = additionalData.asInstanceOf[js.Any], endDateColumn = endDateColumn.asInstanceOf[js.Any], instance = instance.asInstanceOf[js.Any], startDateColumn = startDateColumn.asInstanceOf[js.Any])
     __obj.asInstanceOf[HandsontableBindingInformation]
   }
@@ -28,7 +28,7 @@ object HandsontableBindingInformation {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAdditionalData(value: AnonLabel): Self = {
+    def withAdditionalData(value: Label): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("additionalData")(value.asInstanceOf[js.Any])
         ret

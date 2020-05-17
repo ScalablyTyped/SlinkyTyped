@@ -1,7 +1,7 @@
 package typingsSlinky.cliTable3.mod
 
-import typingsSlinky.cliTable3.AnonBorder
-import typingsSlinky.cliTable3.PartialRecordCharNamestri
+import typingsSlinky.cliTable3.anon.Border
+import typingsSlinky.cliTable3.anon.PartialRecordCharNamestri
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ trait TableConstructorOptions extends js.Object {
   var head: js.UndefOr[js.Array[String]] = js.native
   var rowAligns: js.UndefOr[js.Array[VerticalAlignment]] = js.native
   var rowHeights: js.UndefOr[js.Array[Double | Null]] = js.native
-  var style: js.UndefOr[Partial[AnonBorder]] = js.native
+  var style: js.UndefOr[Partial[Border]] = js.native
   var truncate: js.UndefOr[String] = js.native
   var wordWrap: js.UndefOr[Boolean] = js.native
 }
@@ -106,7 +106,7 @@ object TableConstructorOptions {
         ret
     }
     @scala.inline
-    def withStyle(value: Partial[AnonBorder]): Self = {
+    def withStyle(value: Partial[Border]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

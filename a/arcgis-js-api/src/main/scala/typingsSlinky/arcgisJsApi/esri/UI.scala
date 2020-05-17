@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`bottom-leading`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`bottom-left`
@@ -156,8 +155,4 @@ trait UI extends Accessor {
   def remove(component: Widget_): Unit = js.native
   def remove(component: HTMLElement): Unit = js.native
 }
-
-@JSGlobal("__esri.UI")
-@js.native
-object UI extends TopLevel[UIConstructor]
 

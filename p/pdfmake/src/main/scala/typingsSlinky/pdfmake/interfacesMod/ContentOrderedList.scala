@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ContentOrderedList
   extends ContentBase
-     with _Content {
+     with Content {
   var ol: js.Array[OrderedListElement] = js.native
   var reversed: js.UndefOr[Boolean] = js.native
   var separator: js.UndefOr[String | (js.Tuple2[String, String])] = js.native

@@ -1,17 +1,18 @@
 package typingsSlinky.knockstrap
 
+import typingsSlinky.knockstrap.anon.Instance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait KnockoutStatic extends js.Object {
-  var stringTemplateEngine: AnonInstance = js.native
+  var stringTemplateEngine: Instance = js.native
 }
 
 object KnockoutStatic {
   @scala.inline
-  def apply(stringTemplateEngine: AnonInstance): KnockoutStatic = {
+  def apply(stringTemplateEngine: Instance): KnockoutStatic = {
     val __obj = js.Dynamic.literal(stringTemplateEngine = stringTemplateEngine.asInstanceOf[js.Any])
     __obj.asInstanceOf[KnockoutStatic]
   }
@@ -22,7 +23,7 @@ object KnockoutStatic {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withStringTemplateEngine(value: AnonInstance): Self = {
+    def withStringTemplateEngine(value: Instance): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stringTemplateEngine")(value.asInstanceOf[js.Any])
         ret

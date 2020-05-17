@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientBooks.AnonMaxResults
-import typingsSlinky.gapiClientBooks.AnonSummaryId
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientBooks.anon.MaxResults
+import typingsSlinky.gapiClientBooks.anon.SummaryId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,17 +12,17 @@ trait LayersResource extends js.Object {
   var annotationData: AnnotationDataResource = js.native
   var volumeAnnotations: VolumeAnnotationsResource = js.native
   /** Gets the layer summary for a volume. */
-  def get(request: AnonSummaryId): Request_[Layersummary] = js.native
+  def get(request: SummaryId): Request[Layersummary] = js.native
   /** List the layer summaries for a volume. */
-  def list(request: AnonMaxResults): Request_[Layersummaries] = js.native
+  def list(request: MaxResults): Request[Layersummaries] = js.native
 }
 
 object LayersResource {
   @scala.inline
   def apply(
     annotationData: AnnotationDataResource,
-    get: AnonSummaryId => Request_[Layersummary],
-    list: AnonMaxResults => Request_[Layersummaries],
+    get: SummaryId => Request[Layersummary],
+    list: MaxResults => Request[Layersummaries],
     volumeAnnotations: VolumeAnnotationsResource
   ): LayersResource = {
     val __obj = js.Dynamic.literal(annotationData = annotationData.asInstanceOf[js.Any], get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), volumeAnnotations = volumeAnnotations.asInstanceOf[js.Any])
@@ -41,13 +41,13 @@ object LayersResource {
         ret
     }
     @scala.inline
-    def withGet(value: AnonSummaryId => Request_[Layersummary]): Self = {
+    def withGet(value: SummaryId => Request[Layersummary]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonMaxResults => Request_[Layersummaries]): Self = {
+    def withList(value: MaxResults => Request[Layersummaries]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

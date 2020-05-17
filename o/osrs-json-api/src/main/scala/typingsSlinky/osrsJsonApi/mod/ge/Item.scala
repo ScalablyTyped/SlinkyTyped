@@ -1,18 +1,18 @@
 package typingsSlinky.osrsJsonApi.mod.ge
 
-import typingsSlinky.osrsJsonApi.AnonCurrent
+import typingsSlinky.osrsJsonApi.anon.Current
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Item extends js.Object {
-  var item: AnonCurrent = js.native
+  var item: Current = js.native
 }
 
 object Item {
   @scala.inline
-  def apply(item: AnonCurrent): Item = {
+  def apply(item: Current): Item = {
     val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any])
     __obj.asInstanceOf[Item]
   }
@@ -23,7 +23,7 @@ object Item {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withItem(value: AnonCurrent): Self = {
+    def withItem(value: Current): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
         ret

@@ -1,18 +1,18 @@
 package typingsSlinky.awsSdkRoute53IdNormalizerMiddleware.mod
 
-import typingsSlinky.awsSdkRoute53IdNormalizerMiddleware.AnonAliasTarget
+import typingsSlinky.awsSdkRoute53IdNormalizerMiddleware.anon.AliasTarget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Change extends js.Object {
-  var ResourceRecordSet: AnonAliasTarget = js.native
+  var ResourceRecordSet: AliasTarget = js.native
 }
 
 object Change {
   @scala.inline
-  def apply(ResourceRecordSet: AnonAliasTarget): Change = {
+  def apply(ResourceRecordSet: AliasTarget): Change = {
     val __obj = js.Dynamic.literal(ResourceRecordSet = ResourceRecordSet.asInstanceOf[js.Any])
     __obj.asInstanceOf[Change]
   }
@@ -23,7 +23,7 @@ object Change {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withResourceRecordSet(value: AnonAliasTarget): Self = {
+    def withResourceRecordSet(value: AliasTarget): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceRecordSet")(value.asInstanceOf[js.Any])
         ret

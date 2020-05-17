@@ -1,6 +1,6 @@
 package typingsSlinky.postmanCollection.mod
 
-import typingsSlinky.postmanCollection.AnonPattern
+import typingsSlinky.postmanCollection.anon.Pattern
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 class ProxyConfig () extends Property[ProxyConfigDefinition] {
   def this(options: ProxyConfigDefinition) = this()
   var host: js.UndefOr[String] = js.native
-  var `match`: js.UndefOr[AnonPattern | String | UrlMatchPattern] = js.native
+  var `match`: js.UndefOr[Pattern | String | UrlMatchPattern] = js.native
   var port: js.UndefOr[Double] = js.native
   var tunnel: js.UndefOr[Boolean] = js.native
   def getProtocols(): js.Array[String] = js.native

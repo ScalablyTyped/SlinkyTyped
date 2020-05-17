@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DatastoreInt extends js.Object {
+trait DatastoreInt extends PathElement {
   var value: String = js.native
 }
 

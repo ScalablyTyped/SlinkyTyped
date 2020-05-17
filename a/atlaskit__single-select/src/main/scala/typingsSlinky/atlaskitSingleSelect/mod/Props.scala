@@ -2,7 +2,7 @@ package typingsSlinky.atlaskitSingleSelect.mod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.atlaskitSingleSelect.AnonEvent
+import typingsSlinky.atlaskitSingleSelect.anon.Event
 import typingsSlinky.atlaskitSingleSelect.atlaskitSingleSelectStrings.subtle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -64,7 +64,7 @@ trait Props extends js.Object {
     * Handler called when the select is opened or closed. Called with an object
     * that has both the event, and the new isOpen state.
     */
-  var onOpenChange: js.UndefOr[js.Function1[/* change */ AnonEvent, Unit]] = js.native
+  var onOpenChange: js.UndefOr[js.Function1[/* change */ Event, Unit]] = js.native
   /**
     * Handler to be called when an item is selected. Called with an object that
     * has the item selected as a property on the object.
@@ -305,7 +305,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withOnOpenChange(value: /* change */ AnonEvent => Unit): Self = {
+    def withOnOpenChange(value: /* change */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenChange")(js.Any.fromFunction1(value))
         ret

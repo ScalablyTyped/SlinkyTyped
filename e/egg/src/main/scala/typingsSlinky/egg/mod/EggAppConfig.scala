@@ -1,12 +1,12 @@
 package typingsSlinky.egg.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.egg.AnonCallback
-import typingsSlinky.egg.AnonCookieField
-import typingsSlinky.egg.AnonCsp
-import typingsSlinky.egg.AnonEnable
-import typingsSlinky.egg.AnonFastReady
-import typingsSlinky.egg.AnonIgnore
+import typingsSlinky.egg.anon.Callback
+import typingsSlinky.egg.anon.CookieField
+import typingsSlinky.egg.anon.Csp
+import typingsSlinky.egg.anon.Enable
+import typingsSlinky.egg.anon.FastReady
+import typingsSlinky.egg.anon.Ignore
 import typingsSlinky.eggLogger.mod.EggLoggerOptions
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.netMod.Socket
@@ -39,18 +39,18 @@ trait EggAppConfig
     * @property {string[]} enableTypes - parser will only parse when request type hits enableTypes, default is ['json', 'form']
     * @property {any} extendTypes - support extend types
     */
-  var bodyParser: AnonEnable = js.native
+  var bodyParser: Enable = js.native
   /**
     * customLoader config
     */
   var customLoader: StringDictionary[CustomLoaderConfig] = js.native
   /** custom logger of egg */
   var customLogger: StringDictionary[EggLoggerOptions] = js.native
-  var development: AnonFastReady = js.native
+  var development: FastReady = js.native
   /**
     * It will ignore special keys when dumpConfig
     */
-  var dump: AnonIgnore = js.native
+  var dump: Ignore = js.native
   /**
     * The environment of egg
     */
@@ -61,7 +61,7 @@ trait EggAppConfig
   /**
     * I18n options
     */
-  var i18n: AnonCookieField = js.native
+  var i18n: CookieField = js.native
   /**
     * Detect request' ip from specified headers, not case-sensitive. Only worked when config.proxy set to true.
     */
@@ -74,7 +74,7 @@ trait EggAppConfig
     * @property {Boolean} csrf - enable csrf check or not. default to false
     * @property {String|RegExp|Array} whiteList - referrer white list
     */
-  var jsonp: AnonCallback = js.native
+  var jsonp: Callback = js.native
   /**
     * The key that signing cookies. It can contain multiple keys seperated by .
     */
@@ -106,7 +106,7 @@ trait EggAppConfig
     */
   var pkg: js.Any = js.native
   var rundir: String = js.native
-  var security: AnonCsp = js.native
+  var security: Csp = js.native
   /**
     * server timeout in milliseconds, default to 2 minutes.
     *
@@ -126,17 +126,17 @@ object EggAppConfig {
   def apply(
     HOME: String,
     baseDir: String,
-    bodyParser: AnonEnable,
+    bodyParser: Enable,
     customLoader: StringDictionary[CustomLoaderConfig],
     customLogger: StringDictionary[EggLoggerOptions],
-    development: AnonFastReady,
-    dump: AnonIgnore,
+    development: FastReady,
+    dump: Ignore,
     env: EggEnvType,
     hostHeaders: String,
     httpclient: HttpClientConfig,
-    i18n: AnonCookieField,
+    i18n: CookieField,
     ipHeaders: String,
-    jsonp: AnonCallback,
+    jsonp: Callback,
     keys: String,
     logger: EggLoggerConfig,
     middleware: js.Array[String],
@@ -144,7 +144,7 @@ object EggAppConfig {
     onClientError: (js.Error, Socket, EggApplication) => ClientErrorResponse | js.Promise[ClientErrorResponse],
     pkg: js.Any,
     rundir: String,
-    security: AnonCsp,
+    security: Csp,
     siteFile: PlainObject[String | Buffer],
     watcher: PlainObject[_],
     workerStartTimeout: Double
@@ -171,7 +171,7 @@ object EggAppConfig {
         ret
     }
     @scala.inline
-    def withBodyParser(value: AnonEnable): Self = {
+    def withBodyParser(value: Enable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bodyParser")(value.asInstanceOf[js.Any])
         ret
@@ -189,13 +189,13 @@ object EggAppConfig {
         ret
     }
     @scala.inline
-    def withDevelopment(value: AnonFastReady): Self = {
+    def withDevelopment(value: FastReady): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("development")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withDump(value: AnonIgnore): Self = {
+    def withDump(value: Ignore): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dump")(value.asInstanceOf[js.Any])
         ret
@@ -219,7 +219,7 @@ object EggAppConfig {
         ret
     }
     @scala.inline
-    def withI18n(value: AnonCookieField): Self = {
+    def withI18n(value: CookieField): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("i18n")(value.asInstanceOf[js.Any])
         ret
@@ -231,7 +231,7 @@ object EggAppConfig {
         ret
     }
     @scala.inline
-    def withJsonp(value: AnonCallback): Self = {
+    def withJsonp(value: Callback): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("jsonp")(value.asInstanceOf[js.Any])
         ret
@@ -279,7 +279,7 @@ object EggAppConfig {
         ret
     }
     @scala.inline
-    def withSecurity(value: AnonCsp): Self = {
+    def withSecurity(value: Csp): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("security")(value.asInstanceOf[js.Any])
         ret

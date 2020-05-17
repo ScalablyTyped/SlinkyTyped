@@ -5,11 +5,10 @@ import org.scalajs.dom.raw.Node
 import slinky.core.facade.ReactRef
 import typingsSlinky.antvG2.mod.EventParams
 import typingsSlinky.antvG2.mod.Styles.background
-import typingsSlinky.bizcharts.AnonBottom
-import typingsSlinky.bizcharts.AnonData
-import typingsSlinky.bizcharts.AnonItems
-import typingsSlinky.bizcharts.AnonTooltip
-import typingsSlinky.bizcharts.AnonTooltipAny
+import typingsSlinky.bizcharts.anon.Bottom
+import typingsSlinky.bizcharts.anon.Data
+import typingsSlinky.bizcharts.anon.Items
+import typingsSlinky.bizcharts.anon.TooltipAny
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DOMAttributes
 import typingsSlinky.react.mod.Key
@@ -34,18 +33,18 @@ trait ChartProps
   // 事件属性
   var onGetG2Instance: js.UndefOr[js.Function1[/* chart */ typingsSlinky.antvG2.mod.Chart, Unit]] = js.native
   var onItemSelected: js.UndefOr[js.Function1[/* ev */ EventParams, Unit]] = js.native
-  var onItemSelectedChange: js.UndefOr[js.Function1[/* ev */ AnonData, Unit]] = js.native
+  var onItemSelectedChange: js.UndefOr[js.Function1[/* ev */ Data, Unit]] = js.native
   var onItemUnselected: js.UndefOr[js.Function1[/* ev */ EventParams, Unit]] = js.native
   var onPlotClick: js.UndefOr[js.Function1[/* ev */ EventParams, Unit]] = js.native
   var onPlotDblClick: js.UndefOr[js.Function1[/* ev */ EventParams, Unit]] = js.native
   var onPlotEnter: js.UndefOr[js.Function1[/* ev */ EventParams, Unit]] = js.native
   var onPlotLeave: js.UndefOr[js.Function1[/* ev */ EventParams, Unit]] = js.native
   var onPlotMove: js.UndefOr[js.Function1[/* ev */ EventParams, Unit]] = js.native
-  var onTooltipChange: js.UndefOr[js.Function1[/* ev */ AnonItems, Unit]] = js.native
-  var onTooltipHide: js.UndefOr[js.Function1[/* ev */ AnonTooltipAny, Unit]] = js.native
-  var onTooltipShow: js.UndefOr[js.Function1[/* ev */ AnonTooltip, Unit]] = js.native
+  var onTooltipChange: js.UndefOr[js.Function1[/* ev */ Items, Unit]] = js.native
+  var onTooltipHide: js.UndefOr[js.Function1[/* ev */ TooltipAny, Unit]] = js.native
+  var onTooltipShow: js.UndefOr[js.Function1[/* ev */ typingsSlinky.bizcharts.anon.Tooltip, Unit]] = js.native
   var padding: js.UndefOr[
-    String | AnonBottom | Double | (js.Tuple4[Double, Double, Double, Double]) | (js.Tuple2[String, String])
+    String | Bottom | Double | (js.Tuple4[Double, Double, Double, Double]) | (js.Tuple2[String, String])
   ] = js.native
   var pixelRatio: js.UndefOr[Double] = js.native
   var placeholder: js.UndefOr[Node | String | Boolean] = js.native
@@ -183,7 +182,7 @@ object ChartProps {
         ret
     }
     @scala.inline
-    def withOnItemSelectedChange(value: /* ev */ AnonData => Unit): Self = {
+    def withOnItemSelectedChange(value: /* ev */ Data => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemSelectedChange")(js.Any.fromFunction1(value))
         ret
@@ -267,7 +266,7 @@ object ChartProps {
         ret
     }
     @scala.inline
-    def withOnTooltipChange(value: /* ev */ AnonItems => Unit): Self = {
+    def withOnTooltipChange(value: /* ev */ Items => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTooltipChange")(js.Any.fromFunction1(value))
         ret
@@ -279,7 +278,7 @@ object ChartProps {
         ret
     }
     @scala.inline
-    def withOnTooltipHide(value: /* ev */ AnonTooltipAny => Unit): Self = {
+    def withOnTooltipHide(value: /* ev */ TooltipAny => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTooltipHide")(js.Any.fromFunction1(value))
         ret
@@ -291,7 +290,7 @@ object ChartProps {
         ret
     }
     @scala.inline
-    def withOnTooltipShow(value: /* ev */ AnonTooltip => Unit): Self = {
+    def withOnTooltipShow(value: /* ev */ typingsSlinky.bizcharts.anon.Tooltip => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTooltipShow")(js.Any.fromFunction1(value))
         ret
@@ -304,7 +303,7 @@ object ChartProps {
     }
     @scala.inline
     def withPadding(
-      value: String | AnonBottom | Double | (js.Tuple4[Double, Double, Double, Double]) | (js.Tuple2[String, String])
+      value: String | Bottom | Double | (js.Tuple4[Double, Double, Double, Double]) | (js.Tuple2[String, String])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])

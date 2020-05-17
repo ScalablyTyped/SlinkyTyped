@@ -1,6 +1,6 @@
 package typingsSlinky.apolloClient.storeMod
 
-import typingsSlinky.apolloClient.AnonMutationResult
+import typingsSlinky.apolloClient.anon.MutationResult
 import typingsSlinky.apolloClient.queriesMod.QueryStoreValue
 import typingsSlinky.apolloClient.typesMod.MutationQueryReducer
 import typingsSlinky.std.Record
@@ -18,7 +18,7 @@ object QueryWithUpdater {
   @scala.inline
   def apply(
     query: QueryStoreValue,
-    updater: (/* previousResult */ Record[String, js.Any], /* options */ AnonMutationResult[js.Object]) => Record[String, js.Any]
+    updater: (/* previousResult */ Record[String, js.Any], /* options */ MutationResult[js.Object]) => Record[String, js.Any]
   ): QueryWithUpdater = {
     val __obj = js.Dynamic.literal(query = query.asInstanceOf[js.Any], updater = js.Any.fromFunction2(updater))
     __obj.asInstanceOf[QueryWithUpdater]
@@ -37,7 +37,7 @@ object QueryWithUpdater {
     }
     @scala.inline
     def withUpdater(
-      value: (/* previousResult */ Record[String, js.Any], /* options */ AnonMutationResult[js.Object]) => Record[String, js.Any]
+      value: (/* previousResult */ Record[String, js.Any], /* options */ MutationResult[js.Object]) => Record[String, js.Any]
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("updater")(js.Any.fromFunction2(value))

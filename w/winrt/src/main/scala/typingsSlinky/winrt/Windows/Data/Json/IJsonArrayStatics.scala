@@ -1,6 +1,6 @@
 package typingsSlinky.winrt.Windows.Data.Json
 
-import typingsSlinky.winrt.AnonResult
+import typingsSlinky.winrt.anon.ResultSucceeded
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IJsonArrayStatics extends js.Object {
   def parse(input: String): JsonArray = js.native
-  def tryParse(input: String): AnonResult = js.native
+  def tryParse(input: String): ResultSucceeded = js.native
 }
 
 object IJsonArrayStatics {
   @scala.inline
-  def apply(parse: String => JsonArray, tryParse: String => AnonResult): IJsonArrayStatics = {
+  def apply(parse: String => JsonArray, tryParse: String => ResultSucceeded): IJsonArrayStatics = {
     val __obj = js.Dynamic.literal(parse = js.Any.fromFunction1(parse), tryParse = js.Any.fromFunction1(tryParse))
     __obj.asInstanceOf[IJsonArrayStatics]
   }
@@ -30,7 +30,7 @@ object IJsonArrayStatics {
         ret
     }
     @scala.inline
-    def withTryParse(value: String => AnonResult): Self = {
+    def withTryParse(value: String => ResultSucceeded): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tryParse")(js.Any.fromFunction1(value))
         ret

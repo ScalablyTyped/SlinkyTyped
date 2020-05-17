@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DataSourceItemObject extends js.Object {
+trait DataSourceItemObject extends DataSourceItemType {
   var text: String = js.native
   var value: String = js.native
 }

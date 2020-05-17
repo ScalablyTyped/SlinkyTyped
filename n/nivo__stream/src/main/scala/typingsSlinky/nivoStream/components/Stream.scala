@@ -6,8 +6,8 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoAxes.mod.AxisProps
 import typingsSlinky.nivoColors.mod.InheritedColorProp
 import typingsSlinky.nivoColors.mod.OrdinalColorsInstruction
-import typingsSlinky.nivoCore.AnonDictkey
-import typingsSlinky.nivoCore.AnonId
+import typingsSlinky.nivoCore.anon.Dictkey
+import typingsSlinky.nivoCore.anon.Id
 import typingsSlinky.nivoCore.mod.AreaCurve
 import typingsSlinky.nivoCore.mod.Box
 import typingsSlinky.nivoCore.mod.Dimensions
@@ -16,7 +16,7 @@ import typingsSlinky.nivoCore.mod.StackOrder
 import typingsSlinky.nivoCore.mod.Theme
 import typingsSlinky.nivoLegends.mod.LegendProps
 import typingsSlinky.nivoScales.mod.Scale
-import typingsSlinky.nivoStream.Anon0
+import typingsSlinky.nivoStream.anon.`0`
 import typingsSlinky.nivoStream.mod.Datum
 import typingsSlinky.nivoStream.mod.DatumToNumber
 import typingsSlinky.nivoStream.mod.StreamProps
@@ -60,7 +60,7 @@ object Stream {
     @scala.inline
     def curve(value: AreaCurve): this.type = set("curve", value.asInstanceOf[js.Any])
     @scala.inline
-    def defs(value: js.Array[AnonDictkey]): this.type = set("defs", value.asInstanceOf[js.Any])
+    def defs(value: js.Array[Dictkey]): this.type = set("defs", value.asInstanceOf[js.Any])
     @scala.inline
     def dotBorderColorFunction1(value: _ => String): this.type = set("dotBorderColor", js.Any.fromFunction1(value))
     @scala.inline
@@ -88,7 +88,7 @@ object Stream {
     @scala.inline
     def enableStackTooltip(value: Boolean): this.type = set("enableStackTooltip", value.asInstanceOf[js.Any])
     @scala.inline
-    def fill(value: js.Array[AnonId[T]]): this.type = set("fill", value.asInstanceOf[js.Any])
+    def fill(value: js.Array[Id[T]]): this.type = set("fill", value.asInstanceOf[js.Any])
     @scala.inline
     def fillOpacity(value: Double): this.type = set("fillOpacity", value.asInstanceOf[js.Any])
     @scala.inline
@@ -108,7 +108,7 @@ object Stream {
     @scala.inline
     def renderDot(value: typingsSlinky.nivoStream.mod.StreamDotsItem): this.type = set("renderDot", value.asInstanceOf[js.Any])
     @scala.inline
-    def stack(value: /* data */ js.Array[T] => js.Array[js.Array[Anon0[T]]]): this.type = set("stack", js.Any.fromFunction1(value))
+    def stack(value: /* data */ js.Array[T] => js.Array[js.Array[`0`[T]]]): this.type = set("stack", js.Any.fromFunction1(value))
     @scala.inline
     def theme(value: Theme): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline

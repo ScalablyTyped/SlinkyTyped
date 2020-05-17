@@ -1,6 +1,6 @@
 package typingsSlinky.whyDidYouUpdate.mod
 
-import typingsSlinky.whyDidYouUpdate.Typeofreact
+import typingsSlinky.whyDidYouUpdate.anon.Typeofreact
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.rrule.cacheMod
 
-import typingsSlinky.rrule.PartialIterArgs
+import typingsSlinky.rrule.anon.PartialIterArgs
 import typingsSlinky.rrule.iterresultMod.IterArgs
 import typingsSlinky.rrule.rruleBooleans.`false`
 import typingsSlinky.rrule.rruleStrings.all

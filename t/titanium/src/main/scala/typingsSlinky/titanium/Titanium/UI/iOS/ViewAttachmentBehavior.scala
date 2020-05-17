@@ -10,9 +10,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * Dynamic behavior to support connections between two items.
 			 */
-@JSGlobal("Titanium.UI.iOS.ViewAttachmentBehavior")
 @js.native
-class ViewAttachmentBehavior () extends Proxy {
+trait ViewAttachmentBehavior extends Proxy {
   /**
   				 * Item to use as the anchor in this behavior.
   				 */

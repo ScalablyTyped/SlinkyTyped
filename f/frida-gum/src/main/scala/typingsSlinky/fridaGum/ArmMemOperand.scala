@@ -1,5 +1,6 @@
 package typingsSlinky.fridaGum
 
+import typingsSlinky.fridaGum.anon.Disp
 import typingsSlinky.fridaGum.fridaGumStrings.mem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,12 +11,12 @@ trait ArmMemOperand
   extends ArmBaseOperand
      with ArmOperand {
   var `type`: mem = js.native
-  var value: AnonDisp = js.native
+  var value: Disp = js.native
 }
 
 object ArmMemOperand {
   @scala.inline
-  def apply(subtracted: Boolean, `type`: mem, value: AnonDisp): ArmMemOperand = {
+  def apply(subtracted: Boolean, `type`: mem, value: Disp): ArmMemOperand = {
     val __obj = js.Dynamic.literal(subtracted = subtracted.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArmMemOperand]
@@ -33,7 +34,7 @@ object ArmMemOperand {
         ret
     }
     @scala.inline
-    def withValue(value: AnonDisp): Self = {
+    def withValue(value: Disp): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
         ret

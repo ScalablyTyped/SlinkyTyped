@@ -1,6 +1,6 @@
 package typingsSlinky.reactTable.mod
 
-import typingsSlinky.reactTable.PartialTableCommonProps
+import typingsSlinky.reactTable.anon.PartialTableCommonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

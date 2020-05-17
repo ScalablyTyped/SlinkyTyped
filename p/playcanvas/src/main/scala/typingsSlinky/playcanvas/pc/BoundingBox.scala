@@ -14,11 +14,8 @@ import scala.scalajs.js.annotation._
   * @property {pc.Vec3} center Center of box.
   * @property {pc.Vec3} halfExtents Half the distance across the box in each axis.
   */
-@JSGlobal("pc.BoundingBox")
 @js.native
-class BoundingBox () extends js.Object {
-  def this(center: Vec3) = this()
-  def this(center: Vec3, halfExtents: Vec3) = this()
+trait BoundingBox extends js.Object {
   /**
     * Center of box.
     */

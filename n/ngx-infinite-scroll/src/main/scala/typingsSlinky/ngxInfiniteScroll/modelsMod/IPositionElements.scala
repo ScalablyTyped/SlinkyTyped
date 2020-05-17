@@ -1,5 +1,6 @@
 package typingsSlinky.ngxInfiniteScroll.modelsMod
 
+import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,6 +27,12 @@ object IPositionElements {
     def withAxis(value: js.Any): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWindowElementWindow(value: Window): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("windowElement")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline

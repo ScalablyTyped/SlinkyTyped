@@ -1,6 +1,6 @@
 package typingsSlinky.changelogParser.mod
 
-import typingsSlinky.changelogParser.PartialOptions
+import typingsSlinky.changelogParser.anon.PartialOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

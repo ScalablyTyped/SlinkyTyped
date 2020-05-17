@@ -1,5 +1,6 @@
 package typingsSlinky.jsforce
 
+import typingsSlinky.jsforce.anon.Id
 import typingsSlinky.jsforce.connectionMod.Connection
 import typingsSlinky.jsforce.recordResultMod.RecordResult
 import typingsSlinky.jsforce.salesforceIdMod.SalesforceId
@@ -37,6 +38,6 @@ object recordMod extends js.Object {
     ): js.Promise[RecordResult] = js.native
   }
   
-  type Record[T] = AnonId with T
+  type Record[T] = Id with T
 }
 

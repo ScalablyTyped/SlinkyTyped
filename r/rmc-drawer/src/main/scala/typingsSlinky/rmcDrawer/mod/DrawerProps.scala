@@ -3,7 +3,7 @@ package typingsSlinky.rmcDrawer.mod
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.rmcDrawer.AnonOverlayClicked
+import typingsSlinky.rmcDrawer.anon.OverlayClicked
 import typingsSlinky.rmcDrawer.rmcDrawerStrings.bottom
 import typingsSlinky.rmcDrawer.rmcDrawerStrings.left
 import typingsSlinky.rmcDrawer.rmcDrawerStrings.right
@@ -21,9 +21,7 @@ trait DrawerProps extends js.Object {
   var dragHandleStyle: js.UndefOr[CSSProperties] = js.native
   var dragToggleDistance: js.UndefOr[Double] = js.native
   var enableDragHandle: js.UndefOr[Boolean] = js.native
-  var onOpenChange: js.UndefOr[
-    js.Function2[/* open */ Boolean, /* overlay */ js.UndefOr[AnonOverlayClicked], Unit]
-  ] = js.native
+  var onOpenChange: js.UndefOr[js.Function2[/* open */ Boolean, /* overlay */ js.UndefOr[OverlayClicked], Unit]] = js.native
   var open: js.UndefOr[Boolean] = js.native
   var overlayStyle: js.UndefOr[CSSProperties] = js.native
   var position: js.UndefOr[left | right | top | bottom] = js.native
@@ -138,7 +136,7 @@ object DrawerProps {
         ret
     }
     @scala.inline
-    def withOnOpenChange(value: (/* open */ Boolean, /* overlay */ js.UndefOr[AnonOverlayClicked]) => Unit): Self = {
+    def withOnOpenChange(value: (/* open */ Boolean, /* overlay */ js.UndefOr[OverlayClicked]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenChange")(js.Any.fromFunction2(value))
         ret

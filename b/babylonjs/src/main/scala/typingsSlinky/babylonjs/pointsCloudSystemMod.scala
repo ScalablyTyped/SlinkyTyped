@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.babylonjs.anon.UpdatableBoolean
 import typingsSlinky.babylonjs.cloudPointMod.CloudPoint
 import typingsSlinky.babylonjs.mathMod.Color4
 import typingsSlinky.babylonjs.meshMod.Mesh
@@ -27,7 +28,7 @@ object pointsCloudSystemMod extends js.Object {
       * * updatable (optional boolean, default true) : if the PCS must be updatable or immutable
       */
     def this(name: String, pointSize: Double, scene: Scene) = this()
-    def this(name: String, pointSize: Double, scene: Scene, options: AnonUpdatableBoolean) = this()
+    def this(name: String, pointSize: Double, scene: Scene, options: UpdatableBoolean) = this()
     var _addParticle: js.Any = js.native
     var _alwaysVisible: js.Any = js.native
     /**

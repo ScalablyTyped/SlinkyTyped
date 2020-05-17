@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,15 +18,5 @@ trait HTMLTrackElement extends HTMLElement {
   var src: java.lang.String = js.native
   var srclang: java.lang.String = js.native
   val track: org.scalajs.dom.raw.TextTrack = js.native
-}
-
-@JSGlobal("HTMLTrackElement")
-@js.native
-object HTMLTrackElement
-  extends Instantiable0[org.scalajs.dom.raw.HTMLTrackElement] {
-  val ERROR: Double = js.native
-  val LOADED: Double = js.native
-  val LOADING: Double = js.native
-  val NONE: Double = js.native
 }
 

@@ -1,12 +1,11 @@
 package typingsSlinky.stremioAddonSdk.mod
 
-import typingsSlinky.stremioAddonSdk.AnonExtra
-import typingsSlinky.stremioAddonSdk.AnonId
-import typingsSlinky.stremioAddonSdk.addonsArrayAddonCatalogCa
-import typingsSlinky.stremioAddonSdk.metaMetaDetailCache
-import typingsSlinky.stremioAddonSdk.metasArrayMetaPreviewCach
-import typingsSlinky.stremioAddonSdk.streamsArrayStreamCache
-import typingsSlinky.stremioAddonSdk.subtitlesArraySubtitleCac
+import typingsSlinky.stremioAddonSdk.anon.Id
+import typingsSlinky.stremioAddonSdk.anon.addonsArrayAddonCatalogCa
+import typingsSlinky.stremioAddonSdk.anon.metaMetaDetailCache
+import typingsSlinky.stremioAddonSdk.anon.metasArrayMetaPreviewCach
+import typingsSlinky.stremioAddonSdk.anon.streamsArrayStreamCache
+import typingsSlinky.stremioAddonSdk.anon.subtitlesArraySubtitleCac
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +28,7 @@ class addonBuilder protected () extends js.Object {
     *
     * Docs: https://github.com/Stremio/stremio-addon-sdk/blob/master/docs/api/requests/defineMetaHandler.md
     */
-  def defineMetaHandler(handler: js.Function1[/* args */ AnonId, js.Promise[metaMetaDetailCache]]): Unit = js.native
+  def defineMetaHandler(handler: js.Function1[/* args */ Id, js.Promise[metaMetaDetailCache]]): Unit = js.native
   /**
     * Handles addon catalog requests
     *
@@ -38,7 +37,7 @@ class addonBuilder protected () extends js.Object {
     *
     * Docs: https://github.com/Stremio/stremio-addon-sdk/blob/master/docs/api/requests/defineResourceHandler.md
     */
-  def defineResourceHandler(args: AnonId): js.Promise[addonsArrayAddonCatalogCa] = js.native
+  def defineResourceHandler(args: Id): js.Promise[addonsArrayAddonCatalogCa] = js.native
   /**
     * Handles stream requests.
     *
@@ -46,13 +45,18 @@ class addonBuilder protected () extends js.Object {
     *
     * Docs: https://github.com/Stremio/stremio-addon-sdk/blob/master/docs/api/requests/defineStreamHandler.md
     */
-  def defineStreamHandler(handler: js.Function1[/* args */ AnonId, js.Promise[streamsArrayStreamCache]]): Unit = js.native
+  def defineStreamHandler(handler: js.Function1[/* args */ Id, js.Promise[streamsArrayStreamCache]]): Unit = js.native
   /**
     * Handles subtitle requests.
     *
     * Docs: https://github.com/Stremio/stremio-addon-sdk/blob/master/docs/api/requests/defineSubtitlesHandler.md
     */
-  def defineSubtitlesHandler(handler: js.Function1[/* args */ AnonExtra, js.Promise[subtitlesArraySubtitleCac]]): Unit = js.native
+  def defineSubtitlesHandler(
+    handler: js.Function1[
+      /* args */ typingsSlinky.stremioAddonSdk.anon.Extra, 
+      js.Promise[subtitlesArraySubtitleCac]
+    ]
+  ): Unit = js.native
   /**
     * Turns the addon into an addonInterface, which is an immutable (frozen) object that has {manifest, get} where:
     *

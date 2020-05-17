@@ -2,15 +2,14 @@ package typingsSlinky.minappEnv.DB
 
 import typingsSlinky.minappEnv.OQ
 import typingsSlinky.minappEnv.Promise
-import typingsSlinky.minappEnv.RQICountDocumentOptions
-import typingsSlinky.minappEnv.RQIGetDocumentOptions
+import typingsSlinky.minappEnv.anon.RQICountDocumentOptions
+import typingsSlinky.minappEnv.anon.RQIGetDocumentOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("DB.Query")
 @js.native
-class Query () extends js.Object {
+trait Query extends js.Object {
   // update(options?: IUpdateDocumentOptions): Promise<IUpdateResult> | void
   // remove(options?: IRemoveDocumentOptions): Promise<IRemoveResult> | void
   // count(options?: ICountDocumentOptions): Promise<ICountResult> | void

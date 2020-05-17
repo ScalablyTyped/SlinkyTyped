@@ -1,10 +1,26 @@
 package typingsSlinky.winrt.Windows.Graphics.Printing.OptionDetails
 
+import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Graphics.Printing.OptionDetails.PrintQualityOptionDetails")
 @js.native
-class PrintQualityOptionDetails () extends IPrintItemListOptionDetails
+trait PrintQualityOptionDetails extends IPrintItemListOptionDetails
+
+object PrintQualityOptionDetails {
+  @scala.inline
+  def apply(
+    errorText: String,
+    items: IVectorView[_],
+    optionId: String,
+    optionType: PrintOptionType,
+    state: PrintOptionStates,
+    trySetValue: js.Any => Boolean,
+    value: js.Any
+  ): PrintQualityOptionDetails = {
+    val __obj = js.Dynamic.literal(errorText = errorText.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], optionId = optionId.asInstanceOf[js.Any], optionType = optionType.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any], trySetValue = js.Any.fromFunction1(trySetValue), value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PrintQualityOptionDetails]
+  }
+}
 

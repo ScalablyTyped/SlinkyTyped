@@ -1,7 +1,7 @@
 package typingsSlinky.packageJson.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.packageJson.AnonIntegrity
+import typingsSlinky.packageJson.anon.Integrity
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait AbbreviatedVersion
   val deprecated: js.UndefOr[String] = js.native
   val devDependencies: js.UndefOr[StringDictionary[String]] = js.native
   val directories: js.UndefOr[js.Array[String]] = js.native
-  val dist: AnonIntegrity = js.native
+  val dist: Integrity = js.native
   val engines: js.UndefOr[StringDictionary[String]] = js.native
   val name: String = js.native
   val optionalDependencies: js.UndefOr[StringDictionary[String]] = js.native
@@ -26,7 +26,7 @@ trait AbbreviatedVersion
 
 object AbbreviatedVersion {
   @scala.inline
-  def apply(dist: AnonIntegrity, name: String, version: String): AbbreviatedVersion = {
+  def apply(dist: Integrity, name: String, version: String): AbbreviatedVersion = {
     val __obj = js.Dynamic.literal(dist = dist.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
     __obj.asInstanceOf[AbbreviatedVersion]
   }
@@ -37,7 +37,7 @@ object AbbreviatedVersion {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDist(value: AnonIntegrity): Self = {
+    def withDist(value: Integrity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dist")(value.asInstanceOf[js.Any])
         ret

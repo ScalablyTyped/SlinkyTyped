@@ -1,6 +1,6 @@
 package typingsSlinky.nano.mod
 
-import typingsSlinky.nano.AnonRev
+import typingsSlinky.nano.anon.Rev
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DatabaseChangesResultItem extends js.Object {
   // List of document’s leaves with single field rev.
-  var changes: js.Array[AnonRev] = js.native
+  var changes: js.Array[Rev] = js.native
   // true if the document is deleted.
   var deleted: Boolean = js.native
   // Document ID.
@@ -20,7 +20,7 @@ trait DatabaseChangesResultItem extends js.Object {
 
 object DatabaseChangesResultItem {
   @scala.inline
-  def apply(changes: js.Array[AnonRev], deleted: Boolean, id: String, seq: js.Any): DatabaseChangesResultItem = {
+  def apply(changes: js.Array[Rev], deleted: Boolean, id: String, seq: js.Any): DatabaseChangesResultItem = {
     val __obj = js.Dynamic.literal(changes = changes.asInstanceOf[js.Any], deleted = deleted.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], seq = seq.asInstanceOf[js.Any])
     __obj.asInstanceOf[DatabaseChangesResultItem]
   }
@@ -31,7 +31,7 @@ object DatabaseChangesResultItem {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withChanges(value: js.Array[AnonRev]): Self = {
+    def withChanges(value: js.Array[Rev]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("changes")(value.asInstanceOf[js.Any])
         ret

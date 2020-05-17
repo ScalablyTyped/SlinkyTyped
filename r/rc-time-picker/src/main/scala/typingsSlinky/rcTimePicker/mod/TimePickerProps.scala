@@ -3,7 +3,7 @@ package typingsSlinky.rcTimePicker.mod
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.moment.mod.Moment
-import typingsSlinky.rcTimePicker.AnonOpen
+import typingsSlinky.rcTimePicker.anon.Open
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,8 +42,8 @@ trait TimePickerProps extends js.Object {
   def disabledMinutes(hour: Double): js.Array[Double] = js.native
   def disabledSeconds(hour: Double, minute: Double): js.Array[Double] = js.native
   def onChange(value: Moment): Unit = js.native
-  def onClose(state: AnonOpen): Unit = js.native
-  def onOpen(state: AnonOpen): Unit = js.native
+  def onClose(state: Open): Unit = js.native
+  def onOpen(state: Open): Unit = js.native
 }
 
 object TimePickerProps {
@@ -67,8 +67,8 @@ object TimePickerProps {
     inputReadOnly: Boolean,
     minuteStep: Double,
     onChange: Moment => Unit,
-    onClose: AnonOpen => Unit,
-    onOpen: AnonOpen => Unit,
+    onClose: Open => Unit,
+    onOpen: Open => Unit,
     open: Boolean,
     placeholder: String,
     placement: String,
@@ -200,13 +200,13 @@ object TimePickerProps {
         ret
     }
     @scala.inline
-    def withOnClose(value: AnonOpen => Unit): Self = {
+    def withOnClose(value: Open => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnOpen(value: AnonOpen => Unit): Self = {
+    def withOnOpen(value: Open => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.Any.fromFunction1(value))
         ret

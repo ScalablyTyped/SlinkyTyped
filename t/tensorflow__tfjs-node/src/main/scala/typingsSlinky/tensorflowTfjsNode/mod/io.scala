@@ -3,7 +3,7 @@ package typingsSlinky.tensorflowTfjsNode.mod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.raw.File
-import typingsSlinky.tensorflowTfjsCore.AnonData
+import typingsSlinky.tensorflowTfjsCore.anon.Data
 import typingsSlinky.tensorflowTfjsCore.routerRegistryMod.IORouter
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensor
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensorMap
@@ -16,10 +16,10 @@ import typingsSlinky.tensorflowTfjsCore.typesMod.TrainingConfig
 import typingsSlinky.tensorflowTfjsCore.typesMod.WeightGroup
 import typingsSlinky.tensorflowTfjsCore.typesMod.WeightsManifestConfig
 import typingsSlinky.tensorflowTfjsCore.typesMod.WeightsManifestEntry
-import typingsSlinky.tensorflowTfjsNode.FnCall
-import typingsSlinky.tensorflowTfjsNode.FnCallManifestFilePathPrefixWeightNamesRequestInit
-import typingsSlinky.tensorflowTfjsNode.FnCallModelArtifactsWeightSpecsWeightDataTrainingConfig
-import typingsSlinky.tensorflowTfjsNode.FnCallTensorsGroup
+import typingsSlinky.tensorflowTfjsNode.anon.FnCall
+import typingsSlinky.tensorflowTfjsNode.anon.FnCallManifestFilePathPrefixWeightNamesRequestInit
+import typingsSlinky.tensorflowTfjsNode.anon.FnCallModelArtifactsWeightSpecsWeightDataTrainingConfig
+import typingsSlinky.tensorflowTfjsNode.anon.FnCallTensorsGroup
 import typingsSlinky.tensorflowTfjsNode.fileSystemMod.NodeFileSystem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -90,10 +90,10 @@ object io extends js.Object {
   def concatenateArrayBuffers(buffers: js.Array[js.typedarray.ArrayBuffer]): js.typedarray.ArrayBuffer = js.native
   def copyModel(sourceURL: String, destURL: String): js.Promise[ModelArtifactsInfo] = js.native
   def decodeWeights(buffer: js.typedarray.ArrayBuffer, specs: js.Array[WeightsManifestEntry]): NamedTensorMap = js.native
-  def encodeWeights(tensors: js.Array[NamedTensor]): js.Promise[AnonData] = js.native
-  def encodeWeights(tensors: js.Array[NamedTensor], group: WeightGroup): js.Promise[AnonData] = js.native
-  def encodeWeights(tensors: NamedTensorMap): js.Promise[AnonData] = js.native
-  def encodeWeights(tensors: NamedTensorMap, group: WeightGroup): js.Promise[AnonData] = js.native
+  def encodeWeights(tensors: js.Array[NamedTensor]): js.Promise[Data] = js.native
+  def encodeWeights(tensors: js.Array[NamedTensor], group: WeightGroup): js.Promise[Data] = js.native
+  def encodeWeights(tensors: NamedTensorMap): js.Promise[Data] = js.native
+  def encodeWeights(tensors: NamedTensorMap, group: WeightGroup): js.Promise[Data] = js.native
   def fileSystem(path: String): NodeFileSystem = js.native
   def fileSystem(path: js.Array[String]): NodeFileSystem = js.native
   def fromMemory(modelArtifacts: js.Object): IOHandler = js.native

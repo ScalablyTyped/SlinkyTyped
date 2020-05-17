@@ -5,15 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Exposes information about the sender of a message being processed. */
-@JSGlobal("Windows.Devices.AllJoyn.AllJoynMessageInfo")
 @js.native
-class AllJoynMessageInfo protected () extends js.Object {
-  /**
-    * Generates an AllJoynMessageInfo object that contains the unique name of the sender that sent the message being processed.
-    * @param senderUniqueName The unique name of the sender.
-    */
-  def this(senderUniqueName: String) = this()
+trait AllJoynMessageInfo extends js.Object {
   /** The unique bus name of the message sender. */
   var senderUniqueName: String = js.native
+}
+
+object AllJoynMessageInfo {
+  @scala.inline
+  def apply(senderUniqueName: String): AllJoynMessageInfo = {
+    val __obj = js.Dynamic.literal(senderUniqueName = senderUniqueName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AllJoynMessageInfo]
+  }
+  @scala.inline
+  implicit class AllJoynMessageInfoOps[Self <: AllJoynMessageInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSenderUniqueName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("senderUniqueName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

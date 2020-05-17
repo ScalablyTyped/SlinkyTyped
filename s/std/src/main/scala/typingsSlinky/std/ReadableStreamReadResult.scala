@@ -1,7 +1,5 @@
 package typingsSlinky.std
 
-import typingsSlinky.std.stdBooleans.`false`
-import typingsSlinky.std.stdBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,14 +12,8 @@ trait ReadableStreamReadResult[T] extends js.Object
 
 object ReadableStreamReadResult {
   @scala.inline
-  def ReadableStreamReadValueResult[T](done: `false`, value: T): ReadableStreamReadResult[T] = {
-    val __obj = js.Dynamic.literal(done = done.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ReadableStreamReadResult[T]]
-  }
+  implicit def apply[T](value: ReadableStreamReadDoneResult[T]): ReadableStreamReadResult[T] = value.asInstanceOf[ReadableStreamReadResult[T]]
   @scala.inline
-  def ReadableStreamReadDoneResult[T](done: `true`): ReadableStreamReadResult[T] = {
-    val __obj = js.Dynamic.literal(done = done.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ReadableStreamReadResult[T]]
-  }
+  implicit def apply[T](value: ReadableStreamReadValueResult[T]): ReadableStreamReadResult[T] = value.asInstanceOf[ReadableStreamReadResult[T]]
 }
 

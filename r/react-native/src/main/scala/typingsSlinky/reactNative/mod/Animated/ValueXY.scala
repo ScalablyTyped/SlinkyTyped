@@ -1,8 +1,8 @@
 package typingsSlinky.reactNative.mod.Animated
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.reactNative.AnonX
-import typingsSlinky.reactNative.AnonY
+import typingsSlinky.reactNative.anon.X
+import typingsSlinky.reactNative.anon.Y
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class ValueXY ()
   extends typingsSlinky.reactNative.mod.Animated.Animated {
-  def this(valueIn: AnonY) = this()
+  def this(valueIn: Y) = this()
   var x: AnimatedValue = js.native
   var y: AnimatedValue = js.native
   def addListener(callback: ValueXYListenerCallback): String = js.native
@@ -36,9 +36,9 @@ class ValueXY ()
     */
   def getTranslateTransform(): js.Array[StringDictionary[AnimatedValue]] = js.native
   def removeListener(id: String): Unit = js.native
-  def setOffset(offset: AnonX): Unit = js.native
-  def setValue(value: AnonX): Unit = js.native
+  def setOffset(offset: X): Unit = js.native
+  def setValue(value: X): Unit = js.native
   def stopAnimation(): Unit = js.native
-  def stopAnimation(callback: js.Function1[/* value */ AnonX, Unit]): Unit = js.native
+  def stopAnimation(callback: js.Function1[/* value */ X, Unit]): Unit = js.native
 }
 

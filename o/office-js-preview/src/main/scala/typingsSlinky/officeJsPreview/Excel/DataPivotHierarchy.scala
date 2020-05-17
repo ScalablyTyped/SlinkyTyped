@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.DataPivotHierarchyData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.DataPivotHierarchyLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.DataPivotHierarchyUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Automatic
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Average
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Count
@@ -29,9 +29,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.8]
   */
-@JSGlobal("Excel.DataPivotHierarchy")
 @js.native
-class DataPivotHierarchy () extends ClientObject {
+trait DataPivotHierarchy extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_DataPivotHierarchy: RequestContext = js.native
@@ -91,7 +90,7 @@ class DataPivotHierarchy () extends ClientObject {
     */
   def load(): DataPivotHierarchy = js.native
   def load(options: DataPivotHierarchyLoadOptions): DataPivotHierarchy = js.native
-  def load(propertyNamesAndPaths: AnonExpand): DataPivotHierarchy = js.native
+  def load(propertyNamesAndPaths: Expand): DataPivotHierarchy = js.native
   def load(propertyNames: String): DataPivotHierarchy = js.native
   def load(propertyNames: js.Array[String]): DataPivotHierarchy = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

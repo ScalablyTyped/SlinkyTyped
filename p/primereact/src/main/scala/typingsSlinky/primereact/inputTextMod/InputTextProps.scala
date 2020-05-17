@@ -1,6 +1,7 @@
 package typingsSlinky.primereact.inputTextMod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
@@ -8,7 +9,6 @@ import slinky.web.SyntheticKeyboardEvent
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import typingsSlinky.react.mod.AllHTMLAttributes
 import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait InputTextProps
      with /* key */ StringDictionary[js.Any] {
   var keyfilter: js.UndefOr[js.Any] = js.native
   @JSName("onInput")
-  var onInput_InputTextProps: js.UndefOr[js.Function1[SyntheticEvent[EventTarget with HTMLInputElement, Event_], Unit]] = js.native
+  var onInput_InputTextProps: js.UndefOr[js.Function1[SyntheticEvent[EventTarget with HTMLInputElement, Event], Unit]] = js.native
   @JSName("onKeyPress")
   var onKeyPress_InputTextProps: js.UndefOr[js.Function1[/* event */ SyntheticKeyboardEvent[HTMLInputElement], Unit]] = js.native
   var tooltip: js.UndefOr[js.Any] = js.native
@@ -53,7 +53,7 @@ object InputTextProps {
         ret
     }
     @scala.inline
-    def withOnInput(value: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit): Self = {
+    def withOnInput(value: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInput")(js.Any.fromFunction1(value))
         ret

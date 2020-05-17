@@ -1,8 +1,8 @@
 package typingsSlinky.angularCore
 
-import typingsSlinky.inquirer.AnonBottomBar
-import typingsSlinky.inquirer.AnonUi
-import typingsSlinky.inquirer.TypeofSeparator
+import typingsSlinky.inquirer.anon.BottomBar
+import typingsSlinky.inquirer.anon.TypeofSeparator
+import typingsSlinky.inquirer.anon.Ui
 import typingsSlinky.inquirer.mod.PromptModule
 import typingsSlinky.inquirer.mod.QuestionCollection
 import typingsSlinky.inquirer.mod.StreamOptions
@@ -32,7 +32,7 @@ object schematicsPromptMod extends js.Object {
     /**
       * Provides components for the ui.
       */
-    var ui: AnonBottomBar = js.native
+    var ui: BottomBar = js.native
     /**
       * Creates a prompt-module.
       *
@@ -50,7 +50,7 @@ object schematicsPromptMod extends js.Object {
     /**
       * The default prompt-module.
       */
-    def prompt[T](questions: QuestionCollection[T]): js.Promise[T] with AnonUi = js.native
+    def prompt[T](questions: QuestionCollection[T]): js.Promise[T] with Ui = js.native
     /**
       * Registers a new prompt-type.
       *

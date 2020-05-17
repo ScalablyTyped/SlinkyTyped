@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,13 +33,25 @@ trait summaryStatistics extends js.Object {
   def summaryStatistics(params: summaryStatisticsSummaryStatisticsParams): js.Promise[SummaryStatisticsResult] = js.native
 }
 
-@JSGlobal("__esri.summaryStatistics")
-@js.native
-object summaryStatistics
-  extends TopLevel[
-      js.Function1[
-        /* params */ summaryStatisticsSummaryStatisticsParams, 
-        js.Promise[SummaryStatisticsResult]
-      ]
-    ]
+object summaryStatistics {
+  @scala.inline
+  def apply(summaryStatistics: summaryStatisticsSummaryStatisticsParams => js.Promise[SummaryStatisticsResult]): summaryStatistics = {
+    val __obj = js.Dynamic.literal(summaryStatistics = js.Any.fromFunction1(summaryStatistics))
+    __obj.asInstanceOf[summaryStatistics]
+  }
+  @scala.inline
+  implicit class summaryStatisticsOps[Self <: summaryStatistics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSummaryStatistics(value: summaryStatisticsSummaryStatisticsParams => js.Promise[SummaryStatisticsResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summaryStatistics")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

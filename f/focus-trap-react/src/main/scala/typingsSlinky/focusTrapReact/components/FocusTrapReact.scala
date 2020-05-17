@@ -1,5 +1,6 @@
 package typingsSlinky.focusTrapReact.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
 import slinky.web.SyntheticAnimationEvent
@@ -18,7 +19,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.focusTrap.mod.Options
 import typingsSlinky.focusTrapReact.mod.Props
 import typingsSlinky.focusTrapReact.mod.^
-import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
@@ -67,7 +68,6 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -248,7 +248,7 @@ object FocusTrapReact {
     @scala.inline
     def crossOrigin(value: String): this.type = set("crossOrigin", value.asInstanceOf[js.Any])
     @scala.inline
-    def dangerouslySetInnerHTML(value: AnonHtml): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
+    def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
     @scala.inline
     def data(value: String): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
@@ -372,7 +372,7 @@ object FocusTrapReact {
     @scala.inline
     def nonce(value: String): this.type = set("nonce", value.asInstanceOf[js.Any])
     @scala.inline
-    def onAbort(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
+    def onAbort(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
     @scala.inline
     def onAnimationEnd(value: SyntheticAnimationEvent[js.Any] => Unit): this.type = set("onAnimationEnd", js.Any.fromFunction1(value))
     @scala.inline
@@ -382,15 +382,15 @@ object FocusTrapReact {
     @scala.inline
     def onAuxClick(value: SyntheticMouseEvent[js.Any] => Unit): this.type = set("onAuxClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onBeforeInput(value: SyntheticEvent[EventTarget with js.Any, Event_] => Unit): this.type = set("onBeforeInput", js.Any.fromFunction1(value))
+    def onBeforeInput(value: SyntheticEvent[EventTarget with js.Any, Event] => Unit): this.type = set("onBeforeInput", js.Any.fromFunction1(value))
     @scala.inline
     def onBlur(value: SyntheticFocusEvent[js.Any] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onCanPlay(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onCanPlay", js.Any.fromFunction1(value))
+    def onCanPlay(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onCanPlay", js.Any.fromFunction1(value))
     @scala.inline
-    def onCanPlayThrough(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
+    def onCanPlayThrough(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: SyntheticEvent[EventTarget with js.Any, Event_] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: SyntheticEvent[EventTarget with js.Any, Event] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def onClick(value: SyntheticMouseEvent[js.Any] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
@@ -424,21 +424,21 @@ object FocusTrapReact {
     @scala.inline
     def onDrop(value: DragEvent[js.Any] => Unit): this.type = set("onDrop", js.Any.fromFunction1(value))
     @scala.inline
-    def onDurationChange(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onDurationChange", js.Any.fromFunction1(value))
+    def onDurationChange(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onDurationChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onEmptied(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onEmptied", js.Any.fromFunction1(value))
+    def onEmptied(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onEmptied", js.Any.fromFunction1(value))
     @scala.inline
-    def onEncrypted(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onEncrypted", js.Any.fromFunction1(value))
+    def onEncrypted(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onEncrypted", js.Any.fromFunction1(value))
     @scala.inline
-    def onEnded(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onEnded", js.Any.fromFunction1(value))
+    def onEnded(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onEnded", js.Any.fromFunction1(value))
     @scala.inline
-    def onError(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onError", js.Any.fromFunction1(value))
+    def onError(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onError", js.Any.fromFunction1(value))
     @scala.inline
     def onFocus(value: SyntheticFocusEvent[js.Any] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
-    def onInput(value: SyntheticEvent[EventTarget with js.Any, Event_] => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
+    def onInput(value: SyntheticEvent[EventTarget with js.Any, Event] => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
     @scala.inline
-    def onInvalid(value: SyntheticEvent[EventTarget with js.Any, Event_] => Unit): this.type = set("onInvalid", js.Any.fromFunction1(value))
+    def onInvalid(value: SyntheticEvent[EventTarget with js.Any, Event] => Unit): this.type = set("onInvalid", js.Any.fromFunction1(value))
     @scala.inline
     def onKeyDown(value: SyntheticKeyboardEvent[js.Any] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
     @scala.inline
@@ -446,13 +446,13 @@ object FocusTrapReact {
     @scala.inline
     def onKeyUp(value: SyntheticKeyboardEvent[js.Any] => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoad(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
+    def onLoad(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoadStart(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onLoadStart", js.Any.fromFunction1(value))
+    def onLoadStart(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onLoadStart", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoadedData(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onLoadedData", js.Any.fromFunction1(value))
+    def onLoadedData(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onLoadedData", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoadedMetadata(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onLoadedMetadata", js.Any.fromFunction1(value))
+    def onLoadedMetadata(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onLoadedMetadata", js.Any.fromFunction1(value))
     @scala.inline
     def onMouseDown(value: SyntheticMouseEvent[js.Any] => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
     @scala.inline
@@ -470,11 +470,11 @@ object FocusTrapReact {
     @scala.inline
     def onPaste(value: SyntheticClipboardEvent[js.Any] => Unit): this.type = set("onPaste", js.Any.fromFunction1(value))
     @scala.inline
-    def onPause(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onPause", js.Any.fromFunction1(value))
+    def onPause(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onPause", js.Any.fromFunction1(value))
     @scala.inline
-    def onPlay(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onPlay", js.Any.fromFunction1(value))
+    def onPlay(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onPlay", js.Any.fromFunction1(value))
     @scala.inline
-    def onPlaying(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onPlaying", js.Any.fromFunction1(value))
+    def onPlaying(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onPlaying", js.Any.fromFunction1(value))
     @scala.inline
     def onPointerCancel(value: SyntheticPointerEvent[js.Any] => Unit): this.type = set("onPointerCancel", js.Any.fromFunction1(value))
     @scala.inline
@@ -492,27 +492,27 @@ object FocusTrapReact {
     @scala.inline
     def onPointerUp(value: SyntheticPointerEvent[js.Any] => Unit): this.type = set("onPointerUp", js.Any.fromFunction1(value))
     @scala.inline
-    def onProgress(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
+    def onProgress(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
     @scala.inline
-    def onRateChange(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onRateChange", js.Any.fromFunction1(value))
+    def onRateChange(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onRateChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onReset(value: SyntheticEvent[EventTarget with js.Any, Event_] => Unit): this.type = set("onReset", js.Any.fromFunction1(value))
+    def onReset(value: SyntheticEvent[EventTarget with js.Any, Event] => Unit): this.type = set("onReset", js.Any.fromFunction1(value))
     @scala.inline
     def onScroll(value: SyntheticUIEvent[js.Any] => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
     @scala.inline
-    def onSeeked(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onSeeked", js.Any.fromFunction1(value))
+    def onSeeked(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onSeeked", js.Any.fromFunction1(value))
     @scala.inline
-    def onSeeking(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onSeeking", js.Any.fromFunction1(value))
+    def onSeeking(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onSeeking", js.Any.fromFunction1(value))
     @scala.inline
-    def onSelect(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    def onSelect(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline
-    def onStalled(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onStalled", js.Any.fromFunction1(value))
+    def onStalled(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onStalled", js.Any.fromFunction1(value))
     @scala.inline
-    def onSubmit(value: SyntheticEvent[EventTarget with js.Any, Event_] => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))
+    def onSubmit(value: SyntheticEvent[EventTarget with js.Any, Event] => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))
     @scala.inline
-    def onSuspend(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onSuspend", js.Any.fromFunction1(value))
+    def onSuspend(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onSuspend", js.Any.fromFunction1(value))
     @scala.inline
-    def onTimeUpdate(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onTimeUpdate", js.Any.fromFunction1(value))
+    def onTimeUpdate(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onTimeUpdate", js.Any.fromFunction1(value))
     @scala.inline
     def onTouchCancel(value: SyntheticTouchEvent[js.Any] => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))
     @scala.inline
@@ -524,9 +524,9 @@ object FocusTrapReact {
     @scala.inline
     def onTransitionEnd(value: SyntheticTransitionEvent[js.Any] => Unit): this.type = set("onTransitionEnd", js.Any.fromFunction1(value))
     @scala.inline
-    def onVolumeChange(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
+    def onVolumeChange(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onWaiting(value: SyntheticEvent[Event_, js.Any] => Unit): this.type = set("onWaiting", js.Any.fromFunction1(value))
+    def onWaiting(value: SyntheticEvent[Event, js.Any] => Unit): this.type = set("onWaiting", js.Any.fromFunction1(value))
     @scala.inline
     def onWheel(value: SyntheticWheelEvent[js.Any] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     @scala.inline

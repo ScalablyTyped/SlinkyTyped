@@ -1,6 +1,6 @@
 package typingsSlinky.clownface.mod
 
-import typingsSlinky.clownface.AnonToString
+import typingsSlinky.clownface.anon.ToString
 import typingsSlinky.clownface.clownfaceStrings.BlankNode
 import typingsSlinky.clownface.clownfaceStrings.Literal
 import typingsSlinky.clownface.clownfaceStrings.NamedNode
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait NodeOptions extends js.Object {
-  var datatype: js.UndefOr[Term | AnonToString] = js.native
+  var datatype: js.UndefOr[Term | ToString] = js.native
   var language: js.UndefOr[String] = js.native
   var `type`: js.UndefOr[BlankNode | Literal | NamedNode] = js.native
 }
@@ -29,7 +29,7 @@ object NodeOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDatatype(value: Term | AnonToString): Self = {
+    def withDatatype(value: Term | ToString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("datatype")(value.asInstanceOf[js.Any])
         ret

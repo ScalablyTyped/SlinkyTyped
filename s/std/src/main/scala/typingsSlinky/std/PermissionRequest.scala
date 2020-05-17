@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,40 @@ trait PermissionRequest extends DeferredPermissionRequest {
   def defer(): Unit = js.native
 }
 
-@JSGlobal("PermissionRequest")
-@js.native
-object PermissionRequest extends Instantiable0[PermissionRequest]
+object PermissionRequest {
+  @scala.inline
+  def apply(
+    allow: () => Unit,
+    defer: () => Unit,
+    deny: () => Unit,
+    id: Double,
+    state: MSWebViewPermissionState,
+    `type`: MSWebViewPermissionType,
+    uri: java.lang.String
+  ): PermissionRequest = {
+    val __obj = js.Dynamic.literal(allow = js.Any.fromFunction0(allow), defer = js.Any.fromFunction0(defer), deny = js.Any.fromFunction0(deny), id = id.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any], uri = uri.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PermissionRequest]
+  }
+  @scala.inline
+  implicit class PermissionRequestOps[Self <: PermissionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefer(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defer")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withState(value: MSWebViewPermissionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

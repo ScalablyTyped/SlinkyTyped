@@ -1,5 +1,6 @@
 package typingsSlinky.lokijs
 
+import typingsSlinky.lokijs.anon.Created
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait LokiObj extends js.Object {
   @JSName("$loki")
   var $loki: Double = js.native
-  var meta: AnonCreated = js.native
+  var meta: Created = js.native
 }
 
 object LokiObj {
   @scala.inline
-  def apply($loki: Double, meta: AnonCreated): LokiObj = {
+  def apply($loki: Double, meta: Created): LokiObj = {
     val __obj = js.Dynamic.literal($loki = $loki.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any])
     __obj.asInstanceOf[LokiObj]
   }
@@ -30,7 +31,7 @@ object LokiObj {
         ret
     }
     @scala.inline
-    def withMeta(value: AnonCreated): Self = {
+    def withMeta(value: Created): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
         ret

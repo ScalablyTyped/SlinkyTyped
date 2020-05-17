@@ -9,9 +9,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Performs an asynchronous upload operation. For an overview of Background Transfer capabilities, see Transferring data in the background. Download the Background Transfer sample for examples in JavaScript, C#, and C++. */
-@JSGlobal("Windows.Networking.BackgroundTransfer.UploadOperation")
 @js.native
-abstract class UploadOperation () extends js.Object {
+trait UploadOperation extends js.Object {
   /** Gets and sets the cost policy for the upload. */
   var costPolicy: BackgroundTransferCostPolicy = js.native
   /** Gets a string value indicating the group the upload belongs to. */
@@ -51,5 +50,113 @@ abstract class UploadOperation () extends js.Object {
     * @return An asynchronous upload operation that includes progress updates.
     */
   def startAsync(): IPromiseWithIAsyncOperationWithProgress[UploadOperation, UploadOperation] = js.native
+}
+
+object UploadOperation {
+  @scala.inline
+  def apply(
+    attachAsync: () => IPromiseWithIAsyncOperationWithProgress[UploadOperation, UploadOperation],
+    costPolicy: BackgroundTransferCostPolicy,
+    getResponseInformation: () => ResponseInformation,
+    getResultStreamAt: Double => IInputStream,
+    group: String,
+    guid: String,
+    method: String,
+    priority: BackgroundTransferPriority,
+    progress: BackgroundUploadProgress,
+    requestedUri: Uri,
+    sourceFile: IStorageFile,
+    startAsync: () => IPromiseWithIAsyncOperationWithProgress[UploadOperation, UploadOperation],
+    transferGroup: BackgroundTransferGroup
+  ): UploadOperation = {
+    val __obj = js.Dynamic.literal(attachAsync = js.Any.fromFunction0(attachAsync), costPolicy = costPolicy.asInstanceOf[js.Any], getResponseInformation = js.Any.fromFunction0(getResponseInformation), getResultStreamAt = js.Any.fromFunction1(getResultStreamAt), group = group.asInstanceOf[js.Any], guid = guid.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], priority = priority.asInstanceOf[js.Any], progress = progress.asInstanceOf[js.Any], requestedUri = requestedUri.asInstanceOf[js.Any], sourceFile = sourceFile.asInstanceOf[js.Any], startAsync = js.Any.fromFunction0(startAsync), transferGroup = transferGroup.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UploadOperation]
+  }
+  @scala.inline
+  implicit class UploadOperationOps[Self <: UploadOperation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttachAsync(value: () => IPromiseWithIAsyncOperationWithProgress[UploadOperation, UploadOperation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withCostPolicy(value: BackgroundTransferCostPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("costPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetResponseInformation(value: () => ResponseInformation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getResponseInformation")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetResultStreamAt(value: Double => IInputStream): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getResultStreamAt")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGuid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPriority(value: BackgroundTransferPriority): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProgress(value: BackgroundUploadProgress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRequestedUri(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestedUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceFile(value: IStorageFile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartAsync(value: () => IPromiseWithIAsyncOperationWithProgress[UploadOperation, UploadOperation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withTransferGroup(value: BackgroundTransferGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transferGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

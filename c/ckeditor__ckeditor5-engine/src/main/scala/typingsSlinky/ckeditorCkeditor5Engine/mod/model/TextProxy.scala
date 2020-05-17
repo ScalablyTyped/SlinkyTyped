@@ -1,6 +1,6 @@
 package typingsSlinky.ckeditorCkeditor5Engine.mod.model
 
-import typingsSlinky.ckeditorCkeditor5Engine.AnonParentFirst
+import typingsSlinky.ckeditorCkeditor5Engine.anon.ParentFirst
 import typingsSlinky.ckeditorCkeditor5Engine.ckeditorCkeditor5EngineStrings.textProxy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class TextProxy protected ()
   extends Item
-     with _NodeSet {
+     with NodeSet {
   protected def this(textNode: Text, offsetInText: Double, length: Double) = this()
   val data: String = js.native
   val document: Document | Null = js.native
@@ -23,7 +23,7 @@ class TextProxy protected ()
   val root: Node | DocumentFragment = js.native
   val startOffset: Double = js.native
   val textNode: Text = js.native
-  def getAncestors(options: AnonParentFirst): js.Array[TextProxy | Element | DocumentFragment] = js.native
+  def getAncestors(options: ParentFirst): js.Array[TextProxy | Element | DocumentFragment] = js.native
   def getAttribute(key: String): js.Any = js.native
   def getAttributeKeys(): js.Iterable[String] = js.native
   def getAttributes(): js.Iterable[_] = js.native

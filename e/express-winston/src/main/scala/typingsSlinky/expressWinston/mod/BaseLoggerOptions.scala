@@ -4,7 +4,7 @@ import typingsSlinky.express.mod.Request_
 import typingsSlinky.express.mod.Response_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
-import typingsSlinky.expressWinston.AnonError
+import typingsSlinky.expressWinston.anon.Error
 import typingsSlinky.logform.mod.Format_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -33,7 +33,7 @@ trait BaseLoggerOptions extends js.Object {
   var responseFilter: js.UndefOr[ResponseFilter] = js.native
   var responseWhitelist: js.UndefOr[js.Array[String]] = js.native
   var skip: js.UndefOr[RouteFilter] = js.native
-  var statusLevels: js.UndefOr[AnonError] = js.native
+  var statusLevels: js.UndefOr[Error] = js.native
 }
 
 object BaseLoggerOptions {
@@ -323,7 +323,7 @@ object BaseLoggerOptions {
         ret
     }
     @scala.inline
-    def withStatusLevels(value: AnonError): Self = {
+    def withStatusLevels(value: Error): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("statusLevels")(value.asInstanceOf[js.Any])
         ret

@@ -3,6 +3,7 @@ package typingsSlinky.reactDataGrid.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactDataGrid.AdazzleReactDataGrid.EditorBaseProps
+import typingsSlinky.reactDataGrid.mod.editors.EditorBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +17,7 @@ object EditorsEditorBase {
   @scala.inline
   class Builder[P, S] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactDataGrid.mod.editors.EditorBase[js.Any, js.Any]]
+       with StBuildingComponent[tag.type, EditorBase[js.Any, js.Any]]
   
   def apply[P, S](p: P with EditorBaseProps): Builder[P, S] = new Builder[P, S](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make[P, S](companion: EditorsEditorBase.type): Builder[P, S] = new Builder[P, S](js.Array(this.component, js.Dictionary.empty))()

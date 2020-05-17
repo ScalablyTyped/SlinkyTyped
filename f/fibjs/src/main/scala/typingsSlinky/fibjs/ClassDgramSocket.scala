@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Class_DgramSocket")
 @js.native
-class ClassDgramSocket () extends ClassEventEmitter {
+trait ClassDgramSocket extends ClassEventEmitter {
   /**
   	 * 
   	 * @brief 返回一个包含 socket 地址信息的对象。对于 UDP socket，该对象将包含 address、family 和 port 属性。

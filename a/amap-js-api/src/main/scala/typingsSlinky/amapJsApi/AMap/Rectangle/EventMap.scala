@@ -2,7 +2,6 @@ package typingsSlinky.amapJsApi.AMap.Rectangle
 
 import typingsSlinky.amapJsApi.AMap.Event_
 import typingsSlinky.amapJsApi.AMap.MapsEvent
-import typingsSlinky.amapJsApi.AnonTargetI
 import typingsSlinky.amapJsApi.amapJsApiStrings.change
 import typingsSlinky.amapJsApi.amapJsApiStrings.click
 import typingsSlinky.amapJsApi.amapJsApiStrings.dblclick
@@ -18,6 +17,7 @@ import typingsSlinky.amapJsApi.amapJsApiStrings.show
 import typingsSlinky.amapJsApi.amapJsApiStrings.touchend
 import typingsSlinky.amapJsApi.amapJsApiStrings.touchmove
 import typingsSlinky.amapJsApi.amapJsApiStrings.touchstart
+import typingsSlinky.amapJsApi.anon.TargetI
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,10 +31,10 @@ trait EventMap[I]
 object EventMap {
   @scala.inline
   def apply[I](
-    change: Event_[change, AnonTargetI[I]],
+    change: Event_[change, TargetI[I]],
     click: MapsEvent[click, I],
     dblclick: MapsEvent[dblclick, I],
-    hide: Event_[hide, AnonTargetI[I]],
+    hide: Event_[hide, TargetI[I]],
     mousedown: MapsEvent[mousedown, I],
     mousemove: MapsEvent[mousemove, I],
     mouseover: MapsEvent[mouseover, I],
@@ -42,7 +42,7 @@ object EventMap {
     options: Event_[options, js.UndefOr[scala.Nothing]],
     rightclick: MapsEvent[rightclick, I],
     setBounds: Event_[setBounds, js.UndefOr[scala.Nothing]],
-    show: Event_[show, AnonTargetI[I]],
+    show: Event_[show, TargetI[I]],
     touchend: MapsEvent[touchend, I],
     touchmove: MapsEvent[touchmove, I],
     touchstart: MapsEvent[touchstart, I]

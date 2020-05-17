@@ -1,7 +1,7 @@
 package typingsSlinky.reactOwlCarousel.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactOwlCarousel.optionsMod.Options
 import scala.scalajs.js
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait ReactOwlCarousel
   extends Component[OwlCarouselProps, js.Object, js.Any] {
   @JSName("$ele")
-  var $ele: js.UndefOr[JQuery_[HTMLElement]] = js.native
+  var $ele: js.UndefOr[JQuery[HTMLElement]] = js.native
   var container: js.UndefOr[js.Any] = js.native
   var containerRef: js.Any = js.native
   var options: js.Any = js.native

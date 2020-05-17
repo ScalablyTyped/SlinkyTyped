@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Used by a source app's deferral delegate to notify a DataPackage object that the source app will produce data from another asynchronous function. */
-@JSGlobal("Windows.ApplicationModel.DataTransfer.DataProviderDeferral")
 @js.native
-abstract class DataProviderDeferral () extends js.Object {
+trait DataProviderDeferral extends js.Object {
   /** Informs a DataPackage that it is ready for processing. */
   def complete(): Unit = js.native
+}
+
+object DataProviderDeferral {
+  @scala.inline
+  def apply(complete: () => Unit): DataProviderDeferral = {
+    val __obj = js.Dynamic.literal(complete = js.Any.fromFunction0(complete))
+    __obj.asInstanceOf[DataProviderDeferral]
+  }
+  @scala.inline
+  implicit class DataProviderDeferralOps[Self <: DataProviderDeferral] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComplete(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -10,10 +10,8 @@ import scala.scalajs.js.annotation._
   * @class
   * @memberof PIXI
   */
-@JSGlobal("PIXI.BatchShaderGenerator")
 @js.native
-class BatchShaderGenerator protected () extends js.Object {
-  def this(vertexSrc: String, fragTemplate: String) = this()
+trait BatchShaderGenerator extends js.Object {
   /**
     * Reference to the fragement shader template. Must contain "%count%" and "%forloop%".
     *
@@ -26,5 +24,33 @@ class BatchShaderGenerator protected () extends js.Object {
     * @member {string} PIXI.BatchShaderGenerator#vertexSrc
     */
   var vertexSrc: String = js.native
+}
+
+object BatchShaderGenerator {
+  @scala.inline
+  def apply(fragTemplate: String, vertexSrc: String): BatchShaderGenerator = {
+    val __obj = js.Dynamic.literal(fragTemplate = fragTemplate.asInstanceOf[js.Any], vertexSrc = vertexSrc.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BatchShaderGenerator]
+  }
+  @scala.inline
+  implicit class BatchShaderGeneratorOps[Self <: BatchShaderGenerator] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFragTemplate(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fragTemplate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVertexSrc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexSrc")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

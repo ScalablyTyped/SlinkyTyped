@@ -1,27 +1,27 @@
 package typingsSlinky.antDesignReactNative.localeProviderMod
 
-import typingsSlinky.antDesignReactNative.AnonBackspaceLabel
-import typingsSlinky.antDesignReactNative.AnonButtonText
-import typingsSlinky.antDesignReactNative.AnonCancelText
-import typingsSlinky.antDesignReactNative.AnonDay
-import typingsSlinky.antDesignReactNative.AnonDismissText
-import typingsSlinky.antDesignReactNative.AnonDone
-import typingsSlinky.antDesignReactNative.AnonExtra
-import typingsSlinky.antDesignReactNative.AnonNextText
+import typingsSlinky.antDesignReactNative.anon.BackspaceLabel
+import typingsSlinky.antDesignReactNative.anon.ButtonText
+import typingsSlinky.antDesignReactNative.anon.CancelText
+import typingsSlinky.antDesignReactNative.anon.Day
+import typingsSlinky.antDesignReactNative.anon.DismissText
+import typingsSlinky.antDesignReactNative.anon.Done
+import typingsSlinky.antDesignReactNative.anon.Extra
+import typingsSlinky.antDesignReactNative.anon.NextText
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Locale extends js.Object {
-  var DatePicker: AnonDismissText = js.native
-  var DatePickerView: AnonDay = js.native
-  var InputItem: AnonBackspaceLabel = js.native
-  var ListView: AnonDone = js.native
-  var Modal: AnonButtonText = js.native
-  var Pagination: AnonNextText = js.native
-  var Picker: AnonExtra = js.native
-  var SearchBar: AnonCancelText = js.native
+  var DatePicker: DismissText = js.native
+  var DatePickerView: Day = js.native
+  var InputItem: BackspaceLabel = js.native
+  var ListView: Done = js.native
+  var Modal: ButtonText = js.native
+  var Pagination: NextText = js.native
+  var Picker: Extra = js.native
+  var SearchBar: CancelText = js.native
   /** zh_CN */
   var locale: String = js.native
 }
@@ -29,14 +29,14 @@ trait Locale extends js.Object {
 object Locale {
   @scala.inline
   def apply(
-    DatePicker: AnonDismissText,
-    DatePickerView: AnonDay,
-    InputItem: AnonBackspaceLabel,
-    ListView: AnonDone,
-    Modal: AnonButtonText,
-    Pagination: AnonNextText,
-    Picker: AnonExtra,
-    SearchBar: AnonCancelText,
+    DatePicker: DismissText,
+    DatePickerView: Day,
+    InputItem: BackspaceLabel,
+    ListView: Done,
+    Modal: ButtonText,
+    Pagination: NextText,
+    Picker: Extra,
+    SearchBar: CancelText,
     locale: String
   ): Locale = {
     val __obj = js.Dynamic.literal(DatePicker = DatePicker.asInstanceOf[js.Any], DatePickerView = DatePickerView.asInstanceOf[js.Any], InputItem = InputItem.asInstanceOf[js.Any], ListView = ListView.asInstanceOf[js.Any], Modal = Modal.asInstanceOf[js.Any], Pagination = Pagination.asInstanceOf[js.Any], Picker = Picker.asInstanceOf[js.Any], SearchBar = SearchBar.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any])
@@ -49,49 +49,49 @@ object Locale {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDatePicker(value: AnonDismissText): Self = {
+    def withDatePicker(value: DismissText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DatePicker")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withDatePickerView(value: AnonDay): Self = {
+    def withDatePickerView(value: Day): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DatePickerView")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withInputItem(value: AnonBackspaceLabel): Self = {
+    def withInputItem(value: BackspaceLabel): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("InputItem")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withListView(value: AnonDone): Self = {
+    def withListView(value: Done): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ListView")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withModal(value: AnonButtonText): Self = {
+    def withModal(value: ButtonText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Modal")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPagination(value: AnonNextText): Self = {
+    def withPagination(value: NextText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Pagination")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPicker(value: AnonExtra): Self = {
+    def withPicker(value: Extra): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Picker")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSearchBar(value: AnonCancelText): Self = {
+    def withSearchBar(value: CancelText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("SearchBar")(value.asInstanceOf[js.Any])
         ret

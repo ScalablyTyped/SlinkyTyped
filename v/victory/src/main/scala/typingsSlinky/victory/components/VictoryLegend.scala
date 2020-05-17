@@ -3,12 +3,12 @@ package typingsSlinky.victory.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.victory.Anon1
-import typingsSlinky.victory.AnonLeft
-import typingsSlinky.victory.AnonName
-import typingsSlinky.victory.AnonXBoolean
-import typingsSlinky.victory.AnonY
-import typingsSlinky.victory.OmitBlockPropsleftright
+import typingsSlinky.victory.anon.Left
+import typingsSlinky.victory.anon.Name
+import typingsSlinky.victory.anon.OmitBlockPropsleftright
+import typingsSlinky.victory.anon.XBoolean
+import typingsSlinky.victory.anon.Y
+import typingsSlinky.victory.anon.`1`
 import typingsSlinky.victory.mod.AnimatePropTypeInterface
 import typingsSlinky.victory.mod.CallbackArgs
 import typingsSlinky.victory.mod.CategoryPropType
@@ -57,7 +57,7 @@ object VictoryLegend {
     @scala.inline
     def containerComponent(value: ReactElement): this.type = set("containerComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def data(value: js.Array[AnonName]): this.type = set("data", value.asInstanceOf[js.Any])
+    def data(value: js.Array[Name]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def dataComponent(value: ReactElement): this.type = set("dataComponent", value.asInstanceOf[js.Any])
     @scala.inline
@@ -73,7 +73,7 @@ object VictoryLegend {
     @scala.inline
     def groupComponent(value: ReactElement): this.type = set("groupComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def gutter(value: Double | AnonLeft): this.type = set("gutter", value.asInstanceOf[js.Any])
+    def gutter(value: Double | Left): this.type = set("gutter", value.asInstanceOf[js.Any])
     @scala.inline
     def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
     @scala.inline
@@ -87,9 +87,9 @@ object VictoryLegend {
     @scala.inline
     def labelComponent(value: ReactElement): this.type = set("labelComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def maxDomain(value: Double | AnonY): this.type = set("maxDomain", value.asInstanceOf[js.Any])
+    def maxDomain(value: Double | Y): this.type = set("maxDomain", value.asInstanceOf[js.Any])
     @scala.inline
-    def minDomain(value: Double | AnonY): this.type = set("minDomain", value.asInstanceOf[js.Any])
+    def minDomain(value: Double | Y): this.type = set("minDomain", value.asInstanceOf[js.Any])
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
@@ -99,9 +99,9 @@ object VictoryLegend {
     @scala.inline
     def rowGutter(value: Double | OmitBlockPropsleftright): this.type = set("rowGutter", value.asInstanceOf[js.Any])
     @scala.inline
-    def scale(value: ScalePropType | D3Scale | Anon1): this.type = set("scale", value.asInstanceOf[js.Any])
+    def scale(value: ScalePropType | D3Scale | `1`): this.type = set("scale", value.asInstanceOf[js.Any])
     @scala.inline
-    def singleQuadrantDomainPadding(value: Boolean | AnonXBoolean): this.type = set("singleQuadrantDomainPadding", value.asInstanceOf[js.Any])
+    def singleQuadrantDomainPadding(value: Boolean | XBoolean): this.type = set("singleQuadrantDomainPadding", value.asInstanceOf[js.Any])
     @scala.inline
     def standalone(value: Boolean): this.type = set("standalone", value.asInstanceOf[js.Any])
     @scala.inline

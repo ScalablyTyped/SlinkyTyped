@@ -11,10 +11,9 @@ import org.scalajs.dom.raw.Text
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactRef
-import typingsSlinky.bandagedbdBdapi.TypeofComponent
+import typingsSlinky.bandagedbdBdapi.anon.TypeofComponent
 import typingsSlinky.bandagedbdBdapi.bandagedbdBdapiStrings.input
-import typingsSlinky.react.AnonChildren
-import typingsSlinky.react.AnonDefault
+import typingsSlinky.react.anon.Default
 import typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseConfig
 import typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListProps
 import typingsSlinky.react.experimentalMod.reactAugmentingMod.TimeoutConfig
@@ -179,9 +178,9 @@ object BdApiModule extends js.Object {
     // Base component for plain JS classes
     // tslint:disable-next-line:no-empty-interface
     var Component: TypeofComponent = js.native
-    val Fragment: ReactComponentClass[AnonChildren] = js.native
+    val Fragment: ReactComponentClass[typingsSlinky.react.anon.Children] = js.native
     val Profiler: ReactComponentClass[ProfilerProps] = js.native
-    val StrictMode: ReactComponentClass[AnonChildren] = js.native
+    val StrictMode: ReactComponentClass[typingsSlinky.react.anon.Children] = js.native
     /**
       * This feature is not yet available for server-side rendering.
       * Suspense support will be added in a later release.
@@ -305,7 +304,7 @@ object BdApiModule extends js.Object {
     def forwardRef[T, P](render: ForwardRefRenderFunction[T, P]): ForwardRefExoticComponent[PropsWithoutRef[P] with RefAttributes[T]] = js.native
     def isValidElement[P](): /* is react.react.ReactElement */ Boolean = js.native
     def isValidElement[P](`object`: js.Object): /* is react.react.ReactElement */ Boolean = js.native
-    def `lazy`[T /* <: ReactComponentClass[_] */](factory: js.Function0[js.Promise[AnonDefault[T]]]): ReactComponentClass[T] = js.native
+    def `lazy`[T /* <: ReactComponentClass[_] */](factory: js.Function0[js.Promise[Default[T]]]): ReactComponentClass[T] = js.native
     def memo[T /* <: ReactComponentClass[_] */](Component: T): ReactComponentClass[T] = js.native
     def memo[T /* <: ReactComponentClass[_] */](
       Component: T,
@@ -391,7 +390,6 @@ object BdApiModule extends js.Object {
       */
     def useLayoutEffect(effect: EffectCallback): Unit = js.native
     def useLayoutEffect(effect: EffectCallback, deps: DependencyList): Unit = js.native
-    def useMemo[T](factory: js.Function0[T]): T = js.native
     /**
       * `useMemo` will only recompute the memoized value when one of the `deps` has changed.
       *
@@ -411,6 +409,7 @@ object BdApiModule extends js.Object {
       * @see https://reactjs.org/docs/hooks-reference.html#usememo
       */
     // allow undefined, but don't make it optional as that is very likely a mistake
+    def useMemo[T](factory: js.Function0[T]): T = js.native
     def useMemo[T](factory: js.Function0[T], deps: DependencyList): T = js.native
     /**
       * An alternative to `useState`.

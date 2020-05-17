@@ -1,9 +1,9 @@
 package typingsSlinky.terminalKit.textBufferMod
 
-import typingsSlinky.terminalKit.Anon2
-import typingsSlinky.terminalKit.AnonFinalCall
-import typingsSlinky.terminalKit.AnonHeight
-import typingsSlinky.terminalKit.AnonMisc
+import typingsSlinky.terminalKit.anon.FinalCall
+import typingsSlinky.terminalKit.anon.Height
+import typingsSlinky.terminalKit.anon.Misc
+import typingsSlinky.terminalKit.anon.`2`
 import typingsSlinky.terminalKit.rectMod.Region
 import typingsSlinky.terminalKit.screenBufferMod.Attributes
 import typingsSlinky.terminalKit.screenBufferMod.DrawOptions
@@ -22,8 +22,8 @@ trait TextBuffer extends js.Object {
   def draw(): Unit = js.native
   def draw(options: DrawOptions): Unit = js.native
   def drawCursor(): Unit = js.native
-  def drawCursor(options: Anon2): Unit = js.native
-  def getContentSize(): AnonHeight = js.native
+  def drawCursor(options: `2`): Unit = js.native
+  def getContentSize(): Height = js.native
   def getHidden(): Boolean = js.native
   def getMisc(): js.Any = js.native
   def getMiscAt(x: Double, y: Double): js.Any = js.native
@@ -31,7 +31,7 @@ trait TextBuffer extends js.Object {
   def insert(text: String): Unit = js.native
   def insert(text: String, attr: Double): Unit = js.native
   def insert(text: String, attr: Attributes): Unit = js.native
-  def iterate(options: AnonFinalCall, callback: js.Function1[/* cellData */ AnonMisc, Unit]): Unit = js.native
+  def iterate(options: FinalCall, callback: js.Function1[/* cellData */ Misc, Unit]): Unit = js.native
   def joinLine(): Unit = js.native
   def load(filepath: String, callback: js.Function1[/* error */ js.UndefOr[js.Any], Unit]): Unit = js.native
   def move(x: Double, y: Double): Unit = js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.uifabricUtilities
 
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 object initializeFocusRectsMod extends js.Object {
   val IsFocusVisibleClassName: /* "ms-Fabric--isFocusVisible" */ String = js.native
   def initializeFocusRects(): Unit = js.native
-  def initializeFocusRects(window: Window_): Unit = js.native
+  def initializeFocusRects(window: Window): Unit = js.native
 }
 

@@ -60,7 +60,7 @@ trait RequireDefine extends js.Object {
   	**/
   def apply(
     ready: js.Function3[
-      /* require */ Require_, 
+      /* require */ Require, 
       /* exports */ StringDictionary[js.Any], 
       /* module */ RequireModule, 
       _

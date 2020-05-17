@@ -1,27 +1,27 @@
 package typingsSlinky.chromeApps.chrome.runtime
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.chromeApps.Anon3D
-import typingsSlinky.chromeApps.AnonAccepttlschannelid
-import typingsSlinky.chromeApps.AnonActions
-import typingsSlinky.chromeApps.AnonBackground
-import typingsSlinky.chromeApps.AnonClientid
-import typingsSlinky.chromeApps.AnonConfigurable
-import typingsSlinky.chromeApps.AnonContentsecuritypolicy
-import typingsSlinky.chromeApps.AnonDefaulticon
-import typingsSlinky.chromeApps.AnonDescription
-import typingsSlinky.chromeApps.AnonEmail
-import typingsSlinky.chromeApps.AnonExtensions
-import typingsSlinky.chromeApps.AnonFilters
-import typingsSlinky.chromeApps.AnonId
-import typingsSlinky.chromeApps.AnonLowenergy
-import typingsSlinky.chromeApps.AnonManagedschema
-import typingsSlinky.chromeApps.AnonMatches
-import typingsSlinky.chromeApps.AnonMimetype
-import typingsSlinky.chromeApps.AnonNEWNOTE
-import typingsSlinky.chromeApps.AnonNaclarch
-import typingsSlinky.chromeApps.AnonPartitions
-import typingsSlinky.chromeApps.AnonTcp
+import typingsSlinky.chromeApps.anon.Accepttlschannelid
+import typingsSlinky.chromeApps.anon.Actions
+import typingsSlinky.chromeApps.anon.Background
+import typingsSlinky.chromeApps.anon.Clientid
+import typingsSlinky.chromeApps.anon.Configurable
+import typingsSlinky.chromeApps.anon.Contentsecuritypolicy
+import typingsSlinky.chromeApps.anon.Defaulticon
+import typingsSlinky.chromeApps.anon.Email
+import typingsSlinky.chromeApps.anon.Extensions
+import typingsSlinky.chromeApps.anon.FiltersArray
+import typingsSlinky.chromeApps.anon.Global
+import typingsSlinky.chromeApps.anon.Id
+import typingsSlinky.chromeApps.anon.Lowenergy
+import typingsSlinky.chromeApps.anon.Managedschema
+import typingsSlinky.chromeApps.anon.Matches
+import typingsSlinky.chromeApps.anon.Mimetype
+import typingsSlinky.chromeApps.anon.NEWNOTE
+import typingsSlinky.chromeApps.anon.Naclarch
+import typingsSlinky.chromeApps.anon.Partitions
+import typingsSlinky.chromeApps.anon.Tcp
+import typingsSlinky.chromeApps.anon.`3D`
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chromeAppsNumbers.`2`
 import typingsSlinky.chromeApps.chromeAppsStrings.NEW_NOTE
@@ -46,7 +46,7 @@ trait PartialManifest extends js.Object {
     * @example
     * 'action_handlers': ['new_note']
     */
-  var action_handlers: js.UndefOr[js.Array[ToStringLiteral[AnonNEWNOTE, NEW_NOTE, Exclude[NEW_NOTE, new_note_]]]] = js.native
+  var action_handlers: js.UndefOr[js.Array[ToStringLiteral[NEWNOTE, NEW_NOTE, Exclude[NEW_NOTE, new_note_]]]] = js.native
   //////////////
   // REQUIRED //
   //////////////
@@ -55,12 +55,12 @@ trait PartialManifest extends js.Object {
     * Also used by hosted apps to specify the URLs that the app uses.
     * @required
     */
-  var app: AnonBackground = js.native
+  var app: Background = js.native
   /**
     * App author information
     * @see[Not implemented anywhere in code]{@link https://github.com/chromium/chromium/blob/master/chrome/browser/chromeos/extensions/device_local_account_management_policy_provider.cc#L46}
     */
-  var author: js.UndefOr[AnonEmail | js.Any] = js.native
+  var author: js.UndefOr[Email | js.Any] = js.native
   /**
     * Allows inspection of page contents, not enabled on stable anyways except for whitelist.
     * @see[Docs]{@link https://github.com/chromium/chromium/blob/master/extensions/common/manifest_handlers/automation.cc}
@@ -72,12 +72,12 @@ trait PartialManifest extends js.Object {
     * chrome.bluetoothLowEnergy APIs.
     * @requires Platforms: Chrome OS, Windows and Mac
     */
-  var bluetooth: js.UndefOr[AnonLowenergy] = js.native
+  var bluetooth: js.UndefOr[Lowenergy] = js.native
   /**
     * Use the commands API to add keyboard shortcuts that trigger actions in your app.
     * E.g. an action to open the browser action or send a command to the app.
     */
-  var commands: js.UndefOr[StringDictionary[AnonDescription]] = js.native
+  var commands: js.UndefOr[StringDictionary[Global]] = js.native
   /**
     * An implementation detail (actually written by Chrome, not the app author).
     */
@@ -111,26 +111,26 @@ trait PartialManifest extends js.Object {
     * to read the page's content using **declarativeContent**.
     * @see[event_rules docs]{@link https://developer.chrome.com/extensions/manifest/event_rules}
     */
-  var event_rules: js.UndefOr[js.Array[AnonActions]] = js.native
+  var event_rules: js.UndefOr[js.Array[Actions]] = js.native
   /**
     * Declares which extensions, apps, and web pages can connect
     * to your extension via runtime.connect and runtime.sendMessage.
     */
-  var externally_connectable: AnonAccepttlschannelid = js.native
+  var externally_connectable: Accepttlschannelid = js.native
   /**
     * @requires Permissions: 'fileBrowserHandle'
     * @requires Location': 'component'
     * You can specify locale-specific strings for the value of 'default_title'
     */
-  var file_browser_handlers: js.UndefOr[js.Array[AnonDefaulticon]] = js.native
+  var file_browser_handlers: js.UndefOr[js.Array[Defaulticon]] = js.native
   /**
     * Triggers a launch of the app when one of these files are handled.
     */
-  var file_handlers: js.UndefOr[StringDictionary[AnonExtensions]] = js.native
+  var file_handlers: js.UndefOr[StringDictionary[Extensions]] = js.native
   /**
     * Files app uses above information in order to render related UI elements approprietly.
     */
-  var file_system_provider_capabilities: js.UndefOr[AnonConfigurable] = js.native
+  var file_system_provider_capabilities: js.UndefOr[Configurable] = js.native
   /**
     * One or more icons that represent the extension, app, or theme.
     * You should always provide a 128x128 icon; it's used during
@@ -157,7 +157,7 @@ trait PartialManifest extends js.Object {
     * Import resources from another extension / app.
     * @see[Shared modules]{@link https://developer.chrome.com/apps/shared_modules}
     */
-  var `import`: js.UndefOr[js.Array[AnonId]] = js.native
+  var `import`: js.UndefOr[js.Array[Id]] = js.native
   /** This value can be used to control the unique ID of an app when it is loaded during development. */
   var key: js.UndefOr[String] = js.native
   /**
@@ -174,7 +174,7 @@ trait PartialManifest extends js.Object {
     */
   var minimum_chrome_version: js.UndefOr[String] = js.native
   /** One or more mappings from MIME types to the Native Client module that handles each type. */
-  var nacl_modules: js.UndefOr[js.Array[AnonMimetype]] = js.native
+  var nacl_modules: js.UndefOr[js.Array[Mimetype]] = js.native
   /**
     * The *name* (maximum of 45 characters) is the primary identifier
     * of the app and is a required field.
@@ -194,7 +194,7 @@ trait PartialManifest extends js.Object {
     * the getAuthToken for users logged into their Google Account
     * and the launchWebAuthFlow for users logged into a non-Google account.
     */
-  var oauth2: js.UndefOr[AnonClientid] = js.native
+  var oauth2: js.UndefOr[Clientid] = js.native
   /**
     * Whether the app is expected to work offline.
     * When Chrome detects that it is offline, apps with this field set to true will be highlighted on the New Tab page.
@@ -217,7 +217,7 @@ trait PartialManifest extends js.Object {
     * @see[NDK Docs]{@link https://github.com/crosswalk-project/chromium-crosswalk/blob/af36cc3ce3f5fcb8033f16236725718f8012abfe/native_client_sdk/src/doc/devguide/distributing.rst}
     * @see[Chromium Source]{@link https://github.com/crosswalk-project/chromium-crosswalk/blob/af36cc3ce3f5fcb8033f16236725718f8012abfe/native_client_sdk/src/tools/fix_manifest.py}
     */
-  var platforms: js.UndefOr[js.Array[AnonNaclarch]] = js.native
+  var platforms: js.UndefOr[js.Array[Naclarch]] = js.native
   /**
     * Technologies required by the app. Hosting sites such
     * as the Chrome Web Store may use this list to dissuade
@@ -226,14 +226,14 @@ trait PartialManifest extends js.Object {
     * include '3D' and 'plugins'; additional requirements checks
     * may be added in the future.
     */
-  var requirements: js.UndefOr[Anon3D] = js.native
+  var requirements: js.UndefOr[`3D`] = js.native
   /**
     * @deprecated
     * Warning: Starting in version 57, Chrome will no longer allow external web content
     * (including embedded frames and scripts) inside sandboxed pages.
     * Please use a webview instead.
     */
-  var sandbox: js.UndefOr[AnonContentsecuritypolicy] = js.native
+  var sandbox: js.UndefOr[Contentsecuritypolicy] = js.native
   /**
     * The short_name (maximum of 12 characters recommended) is
     * a short version of the app's name. It is an optional field
@@ -253,7 +253,7 @@ trait PartialManifest extends js.Object {
     * The sockets manifest property declares which permissions are available
     * for the sockets.udp, sockets.tcp and sockets.tcpServer APIs.
     */
-  var sockets: js.UndefOr[AnonTcp] = js.native
+  var sockets: js.UndefOr[Tcp] = js.native
   /**
     * Unlike the local and sync storage areas,
     * the managed storage area requires its structure
@@ -267,7 +267,7 @@ trait PartialManifest extends js.Object {
     * After declaring the policies they can be read from the storage.managed API.
     * It's up to the app to enforce the policies configured by the administrator.
     */
-  var storage: js.UndefOr[AnonManagedschema] = js.native
+  var storage: js.UndefOr[Managedschema] = js.native
   // system_indicator?: any; // Deprecated / removed: https://bugs.chromium.org/p/chromium/issues/detail?id=142450
   /**
     * If you publish using the Chrome Developer Dashboard, ignore this field.
@@ -295,9 +295,9 @@ trait PartialManifest extends js.Object {
     * @see[Documentation]{@link https://developer.chrome.com/apps/manifest/url_handlers}
     *
     */
-  var url_handlers: js.UndefOr[StringDictionary[AnonMatches]] = js.native
+  var url_handlers: js.UndefOr[StringDictionary[Matches]] = js.native
   /** The usbPrinters manifest property declares which USB printers are supported by an app using the printerProvider API. */
-  var usb_printers: js.UndefOr[AnonFilters] = js.native
+  var usb_printers: js.UndefOr[FiltersArray] = js.native
   /**
     * One to four dot-separated integers identifying the version of this app.
     * A couple of rules apply to the integers: they must be between 0 and 65535, inclusive,
@@ -324,14 +324,14 @@ trait PartialManifest extends js.Object {
     * contain the * wildcard.
     * @see[Accessing packaged resources]{@link https://developer.chrome.com/apps/tags/webview#local_resources}
     */
-  var webview: js.UndefOr[AnonPartitions] = js.native
+  var webview: js.UndefOr[Partitions] = js.native
 }
 
 object PartialManifest {
   @scala.inline
   def apply(
-    app: AnonBackground,
-    externally_connectable: AnonAccepttlschannelid,
+    app: Background,
+    externally_connectable: Accepttlschannelid,
     manifest_version: `2`,
     name: String,
     version: String
@@ -346,13 +346,13 @@ object PartialManifest {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withApp(value: AnonBackground): Self = {
+    def withApp(value: Background): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("app")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withExternally_connectable(value: AnonAccepttlschannelid): Self = {
+    def withExternally_connectable(value: Accepttlschannelid): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("externally_connectable")(value.asInstanceOf[js.Any])
         ret
@@ -376,7 +376,7 @@ object PartialManifest {
         ret
     }
     @scala.inline
-    def withAction_handlers(value: js.Array[ToStringLiteral[AnonNEWNOTE, NEW_NOTE, Exclude[NEW_NOTE, new_note_]]]): Self = {
+    def withAction_handlers(value: js.Array[ToStringLiteral[NEWNOTE, NEW_NOTE, Exclude[NEW_NOTE, new_note_]]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("action_handlers")(value.asInstanceOf[js.Any])
         ret
@@ -388,7 +388,7 @@ object PartialManifest {
         ret
     }
     @scala.inline
-    def withAuthor(value: AnonEmail | js.Any): Self = {
+    def withAuthor(value: Email | js.Any): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
         ret
@@ -412,7 +412,7 @@ object PartialManifest {
         ret
     }
     @scala.inline
-    def withBluetooth(value: AnonLowenergy): Self = {
+    def withBluetooth(value: Lowenergy): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bluetooth")(value.asInstanceOf[js.Any])
         ret
@@ -424,7 +424,7 @@ object PartialManifest {
         ret
     }
     @scala.inline
-    def withCommands(value: StringDictionary[AnonDescription]): Self = {
+    def withCommands(value: StringDictionary[Global]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(value.asInstanceOf[js.Any])
         ret
@@ -496,7 +496,7 @@ object PartialManifest {
         ret
     }
     @scala.inline
-    def withEvent_rules(value: js.Array[AnonActions]): Self = {
+    def withEvent_rules(value: js.Array[Actions]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("event_rules")(value.asInstanceOf[js.Any])
         ret
@@ -508,7 +508,7 @@ object PartialManifest {
         ret
     }
     @scala.inline
-    def withFile_browser_handlers(value: js.Array[AnonDefaulticon]): Self = {
+    def withFile_browser_handlers(value: js.Array[Defaulticon]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("file_browser_handlers")(value.asInstanceOf[js.Any])
         ret
@@ -520,7 +520,7 @@ object PartialManifest {
         ret
     }
     @scala.inline
-    def withFile_handlers(value: StringDictionary[AnonExtensions]): Self = {
+    def withFile_handlers(value: StringDictionary[Extensions]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("file_handlers")(value.asInstanceOf[js.Any])
         ret
@@ -532,7 +532,7 @@ object PartialManifest {
         ret
     }
     @scala.inline
-    def withFile_system_provider_capabilities(value: AnonConfigurable): Self = {
+    def withFile_system_provider_capabilities(value: Configurable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("file_system_provider_capabilities")(value.asInstanceOf[js.Any])
         ret
@@ -556,7 +556,7 @@ object PartialManifest {
         ret
     }
     @scala.inline
-    def withImport(value: js.Array[AnonId]): Self = {
+    def withImport(value: js.Array[Id]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("import")(value.asInstanceOf[js.Any])
         ret
@@ -592,7 +592,7 @@ object PartialManifest {
         ret
     }
     @scala.inline
-    def withNacl_modules(value: js.Array[AnonMimetype]): Self = {
+    def withNacl_modules(value: js.Array[Mimetype]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nacl_modules")(value.asInstanceOf[js.Any])
         ret
@@ -604,7 +604,7 @@ object PartialManifest {
         ret
     }
     @scala.inline
-    def withOauth2(value: AnonClientid): Self = {
+    def withOauth2(value: Clientid): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oauth2")(value.asInstanceOf[js.Any])
         ret
@@ -652,7 +652,7 @@ object PartialManifest {
         ret
     }
     @scala.inline
-    def withPlatforms(value: js.Array[AnonNaclarch]): Self = {
+    def withPlatforms(value: js.Array[Naclarch]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("platforms")(value.asInstanceOf[js.Any])
         ret
@@ -664,7 +664,7 @@ object PartialManifest {
         ret
     }
     @scala.inline
-    def withRequirements(value: Anon3D): Self = {
+    def withRequirements(value: `3D`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("requirements")(value.asInstanceOf[js.Any])
         ret
@@ -676,7 +676,7 @@ object PartialManifest {
         ret
     }
     @scala.inline
-    def withSandbox(value: AnonContentsecuritypolicy): Self = {
+    def withSandbox(value: Contentsecuritypolicy): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sandbox")(value.asInstanceOf[js.Any])
         ret
@@ -712,7 +712,7 @@ object PartialManifest {
         ret
     }
     @scala.inline
-    def withSockets(value: AnonTcp): Self = {
+    def withSockets(value: Tcp): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sockets")(value.asInstanceOf[js.Any])
         ret
@@ -724,7 +724,7 @@ object PartialManifest {
         ret
     }
     @scala.inline
-    def withStorage(value: AnonManagedschema): Self = {
+    def withStorage(value: Managedschema): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(value.asInstanceOf[js.Any])
         ret
@@ -748,7 +748,7 @@ object PartialManifest {
         ret
     }
     @scala.inline
-    def withUrl_handlers(value: StringDictionary[AnonMatches]): Self = {
+    def withUrl_handlers(value: StringDictionary[Matches]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("url_handlers")(value.asInstanceOf[js.Any])
         ret
@@ -760,7 +760,7 @@ object PartialManifest {
         ret
     }
     @scala.inline
-    def withUsb_printers(value: AnonFilters): Self = {
+    def withUsb_printers(value: FiltersArray): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("usb_printers")(value.asInstanceOf[js.Any])
         ret
@@ -784,7 +784,7 @@ object PartialManifest {
         ret
     }
     @scala.inline
-    def withWebview(value: AnonPartitions): Self = {
+    def withWebview(value: Partitions): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("webview")(value.asInstanceOf[js.Any])
         ret

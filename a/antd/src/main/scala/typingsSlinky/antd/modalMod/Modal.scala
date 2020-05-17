@@ -1,7 +1,7 @@
 package typingsSlinky.antd.modalMod
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.antd.AnonConfirmLoading
+import typingsSlinky.antd.anon.ConfirmLoading
 import typingsSlinky.antd.confirmMod.ModalFunc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait Modal
   extends Instantiable0[typingsSlinky.antd.modalModalMod.default] {
   var confirm: ModalFunc = js.native
-  var defaultProps: AnonConfirmLoading = js.native
+  var defaultProps: ConfirmLoading = js.native
   var error: ModalFunc = js.native
   var info: ModalFunc = js.native
   var success: ModalFunc = js.native

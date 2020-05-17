@@ -7,14 +7,16 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TeamsGetDiscussionInOrgParams extends js.Object {
   var discussion_number: Double = js.native
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
   var team_slug: String = js.native
 }
 
 object TeamsGetDiscussionInOrgParams {
   @scala.inline
-  def apply(discussion_number: Double, org: String, team_slug: String): TeamsGetDiscussionInOrgParams = {
-    val __obj = js.Dynamic.literal(discussion_number = discussion_number.asInstanceOf[js.Any], org = org.asInstanceOf[js.Any], team_slug = team_slug.asInstanceOf[js.Any])
+  def apply(discussion_number: Double, org_ : String, team_slug: String): TeamsGetDiscussionInOrgParams = {
+    val __obj = js.Dynamic.literal(discussion_number = discussion_number.asInstanceOf[js.Any], team_slug = team_slug.asInstanceOf[js.Any])
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[TeamsGetDiscussionInOrgParams]
   }
   @scala.inline
@@ -30,7 +32,7 @@ object TeamsGetDiscussionInOrgParams {
         ret
     }
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

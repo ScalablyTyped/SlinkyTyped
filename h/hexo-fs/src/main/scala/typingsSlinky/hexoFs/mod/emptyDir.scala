@@ -1,6 +1,6 @@
 package typingsSlinky.hexoFs.mod
 
-import typingsSlinky.hexoFs.DirectoryOptionsexcludeAr
+import typingsSlinky.hexoFs.anon.DirectoryOptionsexcludeAr
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

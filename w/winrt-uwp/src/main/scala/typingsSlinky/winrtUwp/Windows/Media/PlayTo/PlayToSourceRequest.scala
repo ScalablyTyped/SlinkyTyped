@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a request to connect a media element with a Play To target. */
-@JSGlobal("Windows.Media.PlayTo.PlayToSourceRequest")
 @js.native
-abstract class PlayToSourceRequest () extends js.Object {
+trait PlayToSourceRequest extends js.Object {
   /** Gets the time limit to supply the Play To source element. */
   var deadline: js.Date = js.native
   /**
@@ -25,5 +24,50 @@ abstract class PlayToSourceRequest () extends js.Object {
     * @param value The source element to connect to the Play To target.
     */
   def setSource(value: PlayToSource): Unit = js.native
+}
+
+object PlayToSourceRequest {
+  @scala.inline
+  def apply(
+    deadline: js.Date,
+    displayErrorString: String => Unit,
+    getDeferral: () => PlayToSourceDeferral,
+    setSource: PlayToSource => Unit
+  ): PlayToSourceRequest = {
+    val __obj = js.Dynamic.literal(deadline = deadline.asInstanceOf[js.Any], displayErrorString = js.Any.fromFunction1(displayErrorString), getDeferral = js.Any.fromFunction0(getDeferral), setSource = js.Any.fromFunction1(setSource))
+    __obj.asInstanceOf[PlayToSourceRequest]
+  }
+  @scala.inline
+  implicit class PlayToSourceRequestOps[Self <: PlayToSourceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeadline(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deadline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisplayErrorString(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayErrorString")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetDeferral(value: () => PlayToSourceDeferral): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDeferral")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetSource(value: PlayToSource => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSource")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

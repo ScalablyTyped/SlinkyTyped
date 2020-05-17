@@ -1,8 +1,8 @@
 package typingsSlinky.fundamentalReact.actionBarMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.fundamentalReact.PartialActionBarProps
-import typingsSlinky.fundamentalReact.WeakValidationMapActionBa
+import typingsSlinky.fundamentalReact.anon.PartialActionBarProps
+import typingsSlinky.fundamentalReact.anon.WeakValidationMapActionBa
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap
 import scala.scalajs.js

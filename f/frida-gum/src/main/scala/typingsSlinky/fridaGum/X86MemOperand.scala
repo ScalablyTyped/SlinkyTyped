@@ -1,5 +1,6 @@
 package typingsSlinky.fridaGum
 
+import typingsSlinky.fridaGum.anon.Base
 import typingsSlinky.fridaGum.fridaGumStrings.mem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,12 +11,12 @@ trait X86MemOperand
   extends X86BaseOperand
      with X86Operand {
   var `type`: mem = js.native
-  var value: AnonBase = js.native
+  var value: Base = js.native
 }
 
 object X86MemOperand {
   @scala.inline
-  def apply(size: Double, `type`: mem, value: AnonBase): X86MemOperand = {
+  def apply(size: Double, `type`: mem, value: Base): X86MemOperand = {
     val __obj = js.Dynamic.literal(size = size.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[X86MemOperand]
@@ -33,7 +34,7 @@ object X86MemOperand {
         ret
     }
     @scala.inline
-    def withValue(value: AnonBase): Self = {
+    def withValue(value: Base): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
         ret

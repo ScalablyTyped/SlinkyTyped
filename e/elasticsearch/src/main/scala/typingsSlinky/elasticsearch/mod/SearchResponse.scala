@@ -1,6 +1,6 @@
 package typingsSlinky.elasticsearch.mod
 
-import typingsSlinky.elasticsearch.AnonHits
+import typingsSlinky.elasticsearch.anon.Hits
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,14 +10,14 @@ trait SearchResponse[T] extends js.Object {
   var _scroll_id: js.UndefOr[String] = js.native
   var _shards: ShardsResponse = js.native
   var aggregations: js.UndefOr[js.Any] = js.native
-  var hits: AnonHits[T] = js.native
+  var hits: Hits[T] = js.native
   var timed_out: Boolean = js.native
   var took: Double = js.native
 }
 
 object SearchResponse {
   @scala.inline
-  def apply[T](_shards: ShardsResponse, hits: AnonHits[T], timed_out: Boolean, took: Double): SearchResponse[T] = {
+  def apply[T](_shards: ShardsResponse, hits: Hits[T], timed_out: Boolean, took: Double): SearchResponse[T] = {
     val __obj = js.Dynamic.literal(_shards = _shards.asInstanceOf[js.Any], hits = hits.asInstanceOf[js.Any], timed_out = timed_out.asInstanceOf[js.Any], took = took.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchResponse[T]]
   }
@@ -34,7 +34,7 @@ object SearchResponse {
         ret
     }
     @scala.inline
-    def withHits(value: AnonHits[T]): Self[T] = {
+    def withHits(value: Hits[T]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hits")(value.asInstanceOf[js.Any])
         ret

@@ -1,8 +1,5 @@
 package typingsSlinky.babelTypes.mod
 
-import typingsSlinky.babelTypes.babelTypesStrings.ClassPrivateProperty
-import typingsSlinky.babelTypes.babelTypesStrings.ClassProperty
-import typingsSlinky.babelTypes.babelTypesStrings.ObjectProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,37 +9,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.ClassProperty_
   - typingsSlinky.babelTypes.mod.ClassPrivateProperty_
 */
-trait Property extends _Node
+trait Property extends Node
 
 object Property {
   @scala.inline
-  def ObjectProperty_(
-    computed: Boolean,
-    key: js.Any,
-    shorthand: js.Any,
-    `type`: ObjectProperty,
-    value: Expression | PatternLike
-  ): Property = {
-    val __obj = js.Dynamic.literal(computed = computed.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], shorthand = shorthand.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Property]
-  }
+  implicit def apply(value: ClassPrivateProperty_): Property = value.asInstanceOf[Property]
   @scala.inline
-  def ClassProperty_(
-    computed: Boolean,
-    key: Identifier_ | StringLiteral_ | NumericLiteral_ | Expression,
-    static: Boolean,
-    `type`: ClassProperty
-  ): Property = {
-    val __obj = js.Dynamic.literal(computed = computed.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], static = static.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Property]
-  }
+  implicit def apply(value: ClassProperty_): Property = value.asInstanceOf[Property]
   @scala.inline
-  def ClassPrivateProperty_(key: PrivateName_, `type`: ClassPrivateProperty): Property = {
-    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Property]
-  }
+  implicit def apply(value: ObjectProperty_): Property = value.asInstanceOf[Property]
 }
 

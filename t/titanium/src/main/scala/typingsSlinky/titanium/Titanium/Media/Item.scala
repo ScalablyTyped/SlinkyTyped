@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A representation of a media item returned by [openMusicLibrary](Titanium.Media.openMusicLibrary) or [queryMusicLibrary](Titanium.Media.queryMusicLibrary).
 		 */
-@JSGlobal("Titanium.Media.Item")
 @js.native
-class Item () extends Proxy {
+trait Item extends Proxy {
   /**
   			 * Artist credited for the album containing this item.
   			 */

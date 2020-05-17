@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.mod
 
-import typingsSlinky.officeUiFabricReact.AnonEnableAutofillOnKeyPress
+import typingsSlinky.officeUiFabricReact.anon.EnableAutofillOnKeyPress
 import typingsSlinky.officeUiFabricReact.autofillTypesMod.IAutofillProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.react.mod.DeprecatedLifecycle because Already inherited
 - typingsSlinky.react.mod.NewLifecycle because Already inherited
+- typingsSlinky.react.mod.ReactInstance because Already inherited
 - typingsSlinky.react.mod.ComponentLifecycle because Already inherited
 - typingsSlinky.officeUiFabricReact.autofillTypesMod.IAutofill because Already inherited
 - typingsSlinky.react.mod.Component because Already inherited
@@ -26,6 +27,6 @@ class Autofill protected ()
 @JSImport("office-ui-fabric-react", "Autofill")
 @js.native
 object Autofill extends js.Object {
-  var defaultProps: AnonEnableAutofillOnKeyPress = js.native
+  var defaultProps: EnableAutofillOnKeyPress = js.native
 }
 

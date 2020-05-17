@@ -1,18 +1,18 @@
 package typingsSlinky.tryghostContentApi.mod
 
-import typingsSlinky.tryghostContentApi.AnonErrorType
+import typingsSlinky.tryghostContentApi.anon.ErrorType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait GhostError extends js.Object {
-  var errors: js.Array[AnonErrorType] = js.native
+  var errors: js.Array[ErrorType] = js.native
 }
 
 object GhostError {
   @scala.inline
-  def apply(errors: js.Array[AnonErrorType]): GhostError = {
+  def apply(errors: js.Array[ErrorType]): GhostError = {
     val __obj = js.Dynamic.literal(errors = errors.asInstanceOf[js.Any])
     __obj.asInstanceOf[GhostError]
   }
@@ -23,7 +23,7 @@ object GhostError {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withErrors(value: js.Array[AnonErrorType]): Self = {
+    def withErrors(value: js.Array[ErrorType]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
         ret

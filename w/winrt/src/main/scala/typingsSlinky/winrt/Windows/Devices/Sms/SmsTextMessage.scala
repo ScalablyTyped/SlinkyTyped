@@ -1,18 +1,30 @@
 package typingsSlinky.winrt.Windows.Devices.Sms
 
+import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Devices.Sms.SmsTextMessage")
 @js.native
-class SmsTextMessage () extends ISmsTextMessage
+trait SmsTextMessage extends ISmsTextMessage
 
-/* static members */
-@JSGlobal("Windows.Devices.Sms.SmsTextMessage")
-@js.native
-object SmsTextMessage extends js.Object {
-  def fromBinaryData(format: SmsDataFormat, value: js.typedarray.Uint8Array): SmsTextMessage = js.native
-  def fromBinaryMessage(binaryMessage: SmsBinaryMessage): SmsTextMessage = js.native
+object SmsTextMessage {
+  @scala.inline
+  def apply(
+    body: String,
+    encoding: SmsEncoding,
+    from: String,
+    id: Double,
+    messageClass: SmsMessageClass,
+    partCount: Double,
+    partNumber: Double,
+    partReferenceId: Double,
+    timestamp: js.Date,
+    to: String,
+    toBinaryMessages: SmsDataFormat => IVectorView[ISmsBinaryMessage]
+  ): SmsTextMessage = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], encoding = encoding.asInstanceOf[js.Any], from = from.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], messageClass = messageClass.asInstanceOf[js.Any], partCount = partCount.asInstanceOf[js.Any], partNumber = partNumber.asInstanceOf[js.Any], partReferenceId = partReferenceId.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any], toBinaryMessages = js.Any.fromFunction1(toBinaryMessages))
+    __obj.asInstanceOf[SmsTextMessage]
+  }
 }
 

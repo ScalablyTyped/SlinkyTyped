@@ -2,12 +2,17 @@ package typingsSlinky.jestJasmine2
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.expect.AnonExpected
+import typingsSlinky.expect.anon.Expected
 import typingsSlinky.expect.typesMod.AsymmetricMatcher
 import typingsSlinky.expect.typesMod.Expect
 import typingsSlinky.expect.typesMod.MatcherState
 import typingsSlinky.expect.typesMod.Matchers
 import typingsSlinky.jestEnvironment.mod.JestEnvironment
+import typingsSlinky.jestJasmine2.anon.CurrentSpies
+import typingsSlinky.jestJasmine2.anon.Instantiable
+import typingsSlinky.jestJasmine2.anon.Now
+import typingsSlinky.jestJasmine2.anon.Timer
+import typingsSlinky.jestJasmine2.anon.TypeofSpec
 import typingsSlinky.jestJasmine2.createSpyMod.Fn
 import typingsSlinky.jestJasmine2.jestJasmine2Strings.jasmineDone
 import typingsSlinky.jestJasmine2.jestJasmine2Strings.jasmineStarted
@@ -36,8 +41,8 @@ object mod extends js.Object {
   @js.native
   trait Jasmine extends /* id */ StringDictionary[AsymmetricMatcher] {
     var DEFAULT_TIMEOUT_INTERVAL: Double = js.native
-    var Env: ReturnType[js.Function1[/* j$ */ this.type, AnonInstantiable]] = js.native
-    var JsApiReporter: Instantiable1[/* options */ AnonTimer, default] = js.native
+    var Env: ReturnType[js.Function1[/* j$ */ this.type, Instantiable]] = js.native
+    var JsApiReporter: Instantiable1[/* options */ Timer, default] = js.native
     var ReportDispatcher: Instantiable1[
         /* methods */ js.Array[
           /* keyof jest-jasmine2.jest-jasmine2/build/types.Reporter */ jasmineDone | jasmineStarted | specDone | specStarted | suiteDone | suiteStarted
@@ -46,15 +51,15 @@ object mod extends js.Object {
       ] = js.native
     var Spec: TypeofSpec = js.native
     var SpyRegistry: Instantiable1[
-        js.UndefOr[/* hasCurrentSpies */ AnonCurrentSpies], 
+        js.UndefOr[/* hasCurrentSpies */ CurrentSpies], 
         typingsSlinky.jestJasmine2.spyRegistryMod.default
       ] = js.native
     var Suite: Instantiable1[/* attrs */ Attributes, typingsSlinky.jestJasmine2.suiteMod.default] = js.native
-    var Timer: Instantiable1[js.UndefOr[/* options */ AnonNow], typingsSlinky.jestJasmine2.timerMod.default] = js.native
+    var Timer: Instantiable1[js.UndefOr[/* options */ Now], typingsSlinky.jestJasmine2.timerMod.default] = js.native
     var _DEFAULT_TIMEOUT_INTERVAL: Double = js.native
     var addMatchers: js.Function = js.native
     var createSpy: js.Function2[/* name */ String, /* originalFn */ Fn, Spy] = js.native
-    var currentEnv_ : /* import warning: importer.ImportType#apply Failed type conversion: std.ReturnType<(j$ : jest-jasmine2.jest-jasmine2/build/types.Jasmine): jest-jasmine2.AnonInstantiable>['prototype'] */ js.Any = js.native
+    var currentEnv_ : /* import warning: importer.ImportType#apply Failed type conversion: std.ReturnType<(j$ : jest-jasmine2.jest-jasmine2/build/types.Jasmine): jest-jasmine2.anon.Instantiable>['prototype'] */ js.Any = js.native
     var expect: Expect = js.native
     var not: StringDictionary[AsymmetricMatcher] = js.native
     var testPath: Path = js.native
@@ -66,9 +71,9 @@ object mod extends js.Object {
     def arrayContaining(sample: js.Array[_]): AsymmetricMatcher = js.native
     def assertions(arg0: Double): Unit = js.native
     def extend(arg0: js.Any): Unit = js.native
-    def extractExpectedAssertionsErrors(): js.Array[AnonExpected] = js.native
-    def getEnv(): /* import warning: importer.ImportType#apply Failed type conversion: std.ReturnType<(j$ : jest-jasmine2.jest-jasmine2/build/types.Jasmine): jest-jasmine2.AnonInstantiable>['prototype'] */ js.Any = js.native
-    def getEnv(options: js.Object): /* import warning: importer.ImportType#apply Failed type conversion: std.ReturnType<(j$ : jest-jasmine2.jest-jasmine2/build/types.Jasmine): jest-jasmine2.AnonInstantiable>['prototype'] */ js.Any = js.native
+    def extractExpectedAssertionsErrors(): js.Array[Expected] = js.native
+    def getEnv(): /* import warning: importer.ImportType#apply Failed type conversion: std.ReturnType<(j$ : jest-jasmine2.jest-jasmine2/build/types.Jasmine): jest-jasmine2.anon.Instantiable>['prototype'] */ js.Any = js.native
+    def getEnv(options: js.Object): /* import warning: importer.ImportType#apply Failed type conversion: std.ReturnType<(j$ : jest-jasmine2.jest-jasmine2/build/types.Jasmine): jest-jasmine2.anon.Instantiable>['prototype'] */ js.Any = js.native
     def getState(): MatcherState = js.native
     def hasAssertions(): Unit = js.native
     def objectContaining(sample: Record[String, _]): AsymmetricMatcher = js.native

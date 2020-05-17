@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait BinTransform
   extends BaseBin
-     with _Transforms {
+     with Transforms {
   var anchor: js.UndefOr[Double | SignalRef] = js.native
   var as: js.UndefOr[(Vector2[String | SignalRef]) | SignalRef] = js.native
   var extent: (Vector2[Double | SignalRef]) | SignalRef = js.native

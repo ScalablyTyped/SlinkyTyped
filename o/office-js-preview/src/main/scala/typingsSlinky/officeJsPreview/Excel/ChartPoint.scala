@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartPointData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartPointLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartPointUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Automatic
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Circle
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Dash
@@ -29,9 +29,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.ChartPoint")
 @js.native
-class ChartPoint () extends ClientObject {
+trait ChartPoint extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_ChartPoint: RequestContext = js.native
@@ -98,7 +97,7 @@ class ChartPoint () extends ClientObject {
     */
   def load(): ChartPoint = js.native
   def load(options: ChartPointLoadOptions): ChartPoint = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartPoint = js.native
+  def load(propertyNamesAndPaths: Expand): ChartPoint = js.native
   def load(propertyNames: String): ChartPoint = js.native
   def load(propertyNames: js.Array[String]): ChartPoint = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

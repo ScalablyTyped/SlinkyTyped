@@ -1,10 +1,10 @@
 package typingsSlinky.hapiPino.mod
 
 import typingsSlinky.hapiHapi.mod.Request
-import typingsSlinky.hapiPino.AnonDictkey
+import typingsSlinky.hapiPino.anon.Dictkey
+import typingsSlinky.hapiPino.anon.keyinLevelstring
 import typingsSlinky.hapiPino.hapiPinoBooleans.`false`
-import typingsSlinky.hapiPino.keyinLevelstring
-import typingsSlinky.node.processMod._Global_.NodeJS.WriteStream
+import typingsSlinky.node.processMod.global.NodeJS.WriteStream
 import typingsSlinky.pino.mod.Level
 import typingsSlinky.pino.mod.Logger
 import typingsSlinky.pino.mod.PrettyOptions
@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Options extends js.Object {
   var allTags: js.UndefOr[Level] = js.native
-  var getChildBindings: js.UndefOr[js.Function1[/* req */ Request, AnonDictkey]] = js.native
+  var getChildBindings: js.UndefOr[js.Function1[/* req */ Request, Dictkey]] = js.native
   var ignorePaths: js.UndefOr[js.Array[String]] = js.native
   var instance: js.UndefOr[Logger] = js.native
   var level: js.UndefOr[Level] = js.native
@@ -58,7 +58,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withGetChildBindings(value: /* req */ Request => AnonDictkey): Self = {
+    def withGetChildBindings(value: /* req */ Request => Dictkey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getChildBindings")(js.Any.fromFunction1(value))
         ret

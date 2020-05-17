@@ -1,9 +1,11 @@
 package typingsSlinky.sinon.mod
 
-import typingsSlinky.sinonjsFakeTimers.AnonNow
+import org.scalablytyped.runtime.Instantiable1
+import typingsSlinky.sinonjsFakeTimers.anon.Now
 import typingsSlinky.sinonjsFakeTimers.mod.FakeMethod
 import typingsSlinky.sinonjsFakeTimers.mod.NodeTimer
 import typingsSlinky.std.DateConstructor
+import typingsSlinky.std.global.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +17,7 @@ trait SinonFakeTimers extends js.Object {
     * Implements the Date object but using this clock to provide the correct time.
     */
   @JSName("Date")
-  var Date_Original: DateConstructor = js.native
+  var Date_Original: DateConstructor with (Instantiable1[/* value */ Double, Date]) = js.native
   /**
     * Maximum number of timers that will be run when calling runAll().
     */
@@ -28,7 +30,7 @@ trait SinonFakeTimers extends js.Object {
   /**
     * Mimics performance.now().
     */
-  var performance: AnonNow = js.native
+  var performance: Now = js.native
   /**
     * Implements the Date object but using this clock to provide the correct time.
     */

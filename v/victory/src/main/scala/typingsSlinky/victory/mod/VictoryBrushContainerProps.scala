@@ -147,7 +147,7 @@ object VictoryBrushContainerProps {
         ret
     }
     @scala.inline
-    def withBrushDimension(value: x | y): Self = {
+    def withBrushDimension(value: typingsSlinky.victory.victoryStrings.x | y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("brushDimension")(value.asInstanceOf[js.Any])
         ret

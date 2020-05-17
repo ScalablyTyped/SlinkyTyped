@@ -1,7 +1,7 @@
 package typingsSlinky.reactImageMagnify.mod
 
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactImageMagnify.AnonHeight
+import typingsSlinky.reactImageMagnify.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ trait ReactImageMagnifyProps extends js.Object {
     * Percentage is based on small image dimension. Number is pixels.
     * Not applied when enlargedImagePosition is set to 'over', the default for touch input.
     */
-  var enlargedImageContainerDimensions: js.UndefOr[AnonHeight] = js.native
+  var enlargedImageContainerDimensions: js.UndefOr[Height] = js.native
   /**
     * Style applied to enlarged image container element.
     */
@@ -215,7 +215,7 @@ object ReactImageMagnifyProps {
         ret
     }
     @scala.inline
-    def withEnlargedImageContainerDimensions(value: AnonHeight): Self = {
+    def withEnlargedImageContainerDimensions(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("enlargedImageContainerDimensions")(value.asInstanceOf[js.Any])
         ret

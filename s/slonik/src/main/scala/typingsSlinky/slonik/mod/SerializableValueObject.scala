@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SerializableValueObject
   extends /* x */ StringDictionary[SerializableValueType]
-     with _SerializableValueType
+     with SerializableValueType
 
 object SerializableValueObject {
   @scala.inline

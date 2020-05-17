@@ -2,7 +2,7 @@ package typingsSlinky.reactSortableTree.mod
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactSortableTree.PartialListProps
+import typingsSlinky.reactSortableTree.anon.PartialListProps
 import typingsSlinky.reactVirtualized.mod.Index
 import scala.scalajs.js
 import scala.scalajs.js.`|`

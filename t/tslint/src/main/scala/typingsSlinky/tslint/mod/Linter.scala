@@ -1,7 +1,7 @@
 package typingsSlinky.tslint.mod
 
-import typingsSlinky.tslint.FnCall
-import typingsSlinky.tslint.FnCallSuppliedConfigFilePathInputFilePath
+import typingsSlinky.tslint.anon.FnCall
+import typingsSlinky.tslint.anon.FnCallSuppliedConfigFilePathInputFilePath
 import typingsSlinky.tslint.configurationMod.IConfigurationFile
 import typingsSlinky.tslint.configurationMod.IConfigurationLoadResult
 import typingsSlinky.typescript.mod.Program

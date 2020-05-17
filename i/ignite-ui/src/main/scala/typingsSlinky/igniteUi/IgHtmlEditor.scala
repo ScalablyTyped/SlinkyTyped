@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -148,7 +148,7 @@ object IgHtmlEditor {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActionExecuted(value: (/* event */ Event_, /* ui */ ActionExecutedEventUIParam) => Unit): Self = {
+    def withActionExecuted(value: (/* event */ Event, /* ui */ ActionExecutedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("actionExecuted")(js.Any.fromFunction2(value))
         ret
@@ -160,7 +160,7 @@ object IgHtmlEditor {
         ret
     }
     @scala.inline
-    def withActionExecuting(value: (/* event */ Event_, /* ui */ ActionExecutingEventUIParam) => Unit): Self = {
+    def withActionExecuting(value: (/* event */ Event, /* ui */ ActionExecutingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("actionExecuting")(js.Any.fromFunction2(value))
         ret
@@ -172,7 +172,7 @@ object IgHtmlEditor {
         ret
     }
     @scala.inline
-    def withCopy(value: (/* event */ Event_, /* ui */ CopyEventUIParam) => Unit): Self = {
+    def withCopy(value: (/* event */ Event, /* ui */ CopyEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.Any.fromFunction2(value))
         ret
@@ -196,7 +196,7 @@ object IgHtmlEditor {
         ret
     }
     @scala.inline
-    def withCut(value: (/* event */ Event_, /* ui */ CutEventUIParam) => Unit): Self = {
+    def withCut(value: (/* event */ Event, /* ui */ CutEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cut")(js.Any.fromFunction2(value))
         ret
@@ -256,7 +256,7 @@ object IgHtmlEditor {
         ret
     }
     @scala.inline
-    def withPaste(value: (/* event */ Event_, /* ui */ PasteEventUIParam) => Unit): Self = {
+    def withPaste(value: (/* event */ Event, /* ui */ PasteEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("paste")(js.Any.fromFunction2(value))
         ret
@@ -268,7 +268,7 @@ object IgHtmlEditor {
         ret
     }
     @scala.inline
-    def withRedo(value: (/* event */ Event_, /* ui */ RedoEventUIParam) => Unit): Self = {
+    def withRedo(value: (/* event */ Event, /* ui */ RedoEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("redo")(js.Any.fromFunction2(value))
         ret
@@ -292,7 +292,7 @@ object IgHtmlEditor {
         ret
     }
     @scala.inline
-    def withRendered(value: (/* event */ Event_, /* ui */ RenderedEventUIParam) => Unit): Self = {
+    def withRendered(value: (/* event */ Event, /* ui */ RenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rendered")(js.Any.fromFunction2(value))
         ret
@@ -304,7 +304,7 @@ object IgHtmlEditor {
         ret
     }
     @scala.inline
-    def withRendering(value: (/* event */ Event_, /* ui */ RenderingEventUIParam) => Unit): Self = {
+    def withRendering(value: (/* event */ Event, /* ui */ RenderingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rendering")(js.Any.fromFunction2(value))
         ret
@@ -364,7 +364,7 @@ object IgHtmlEditor {
         ret
     }
     @scala.inline
-    def withToolbarCollapsed(value: (/* event */ Event_, /* ui */ ToolbarCollapsedEventUIParam) => Unit): Self = {
+    def withToolbarCollapsed(value: (/* event */ Event, /* ui */ ToolbarCollapsedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarCollapsed")(js.Any.fromFunction2(value))
         ret
@@ -376,7 +376,7 @@ object IgHtmlEditor {
         ret
     }
     @scala.inline
-    def withToolbarCollapsing(value: (/* event */ Event_, /* ui */ ToolbarCollapsingEventUIParam) => Unit): Self = {
+    def withToolbarCollapsing(value: (/* event */ Event, /* ui */ ToolbarCollapsingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarCollapsing")(js.Any.fromFunction2(value))
         ret
@@ -388,7 +388,7 @@ object IgHtmlEditor {
         ret
     }
     @scala.inline
-    def withToolbarExpanded(value: (/* event */ Event_, /* ui */ ToolbarExpandedEventUIParam) => Unit): Self = {
+    def withToolbarExpanded(value: (/* event */ Event, /* ui */ ToolbarExpandedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarExpanded")(js.Any.fromFunction2(value))
         ret
@@ -400,7 +400,7 @@ object IgHtmlEditor {
         ret
     }
     @scala.inline
-    def withToolbarExpanding(value: (/* event */ Event_, /* ui */ ToolbarExpandingEventUIParam) => Unit): Self = {
+    def withToolbarExpanding(value: (/* event */ Event, /* ui */ ToolbarExpandingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarExpanding")(js.Any.fromFunction2(value))
         ret
@@ -424,7 +424,7 @@ object IgHtmlEditor {
         ret
     }
     @scala.inline
-    def withUndo(value: (/* event */ Event_, /* ui */ UndoEventUIParam) => Unit): Self = {
+    def withUndo(value: (/* event */ Event, /* ui */ UndoEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("undo")(js.Any.fromFunction2(value))
         ret
@@ -460,7 +460,7 @@ object IgHtmlEditor {
         ret
     }
     @scala.inline
-    def withWorkspaceResized(value: (/* event */ Event_, /* ui */ WorkspaceResizedEventUIParam) => Unit): Self = {
+    def withWorkspaceResized(value: (/* event */ Event, /* ui */ WorkspaceResizedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("workspaceResized")(js.Any.fromFunction2(value))
         ret

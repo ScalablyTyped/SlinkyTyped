@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ExternalConfig
   extends BaseConfig
-     with _ConnectConfig {
+     with ConnectConfig {
   @JSName("manifestUrl")
   var manifestUrl_ExternalConfig: String = js.native
 }

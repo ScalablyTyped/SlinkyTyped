@@ -1,0 +1,41 @@
+package typingsSlinky.awsSdkClientCodecommitNode.deleteRepositoryExceptionsUnionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+*/
+trait DeleteRepositoryExceptionsUnion extends js.Object
+
+object DeleteRepositoryExceptionsUnion {
+  @scala.inline
+  implicit def apply(value: EncryptionIntegrityChecksFailedException): DeleteRepositoryExceptionsUnion = value.asInstanceOf[DeleteRepositoryExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyAccessDeniedException): DeleteRepositoryExceptionsUnion = value.asInstanceOf[DeleteRepositoryExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyDisabledException): DeleteRepositoryExceptionsUnion = value.asInstanceOf[DeleteRepositoryExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyNotFoundException): DeleteRepositoryExceptionsUnion = value.asInstanceOf[DeleteRepositoryExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyUnavailableException): DeleteRepositoryExceptionsUnion = value.asInstanceOf[DeleteRepositoryExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidRepositoryNameException): DeleteRepositoryExceptionsUnion = value.asInstanceOf[DeleteRepositoryExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryNameRequiredException): DeleteRepositoryExceptionsUnion = value.asInstanceOf[DeleteRepositoryExceptionsUnion]
+}
+

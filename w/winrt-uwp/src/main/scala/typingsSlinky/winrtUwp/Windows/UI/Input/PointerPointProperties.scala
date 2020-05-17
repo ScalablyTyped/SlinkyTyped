@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides extended properties for a PointerPoint object. */
-@JSGlobal("Windows.UI.Input.PointerPointProperties")
 @js.native
-abstract class PointerPointProperties () extends js.Object {
+trait PointerPointProperties extends js.Object {
   /** Gets the bounding rectangle of the contact area (typically from touch input). */
   var contactRect: Rect = js.native
   /** Gets the bounding rectangle of the raw input (typically from touch input). */
@@ -68,5 +67,197 @@ abstract class PointerPointProperties () extends js.Object {
     * @return True if the input data includes usage information; otherwise false.
     */
   def hasUsage(usagePage: Double, usageId: Double): Boolean = js.native
+}
+
+object PointerPointProperties {
+  @scala.inline
+  def apply(
+    contactRect: Rect,
+    contactRectRaw: Rect,
+    getUsageValue: (Double, Double) => Double,
+    hasUsage: (Double, Double) => Boolean,
+    isBarrelButtonPressed: Boolean,
+    isCanceled: Boolean,
+    isEraser: Boolean,
+    isHorizontalMouseWheel: Boolean,
+    isInRange: Boolean,
+    isInverted: Boolean,
+    isLeftButtonPressed: Boolean,
+    isMiddleButtonPressed: Boolean,
+    isPrimary: Boolean,
+    isRightButtonPressed: Boolean,
+    isXButton1Pressed: Boolean,
+    isXButton2Pressed: Boolean,
+    mouseWheelDelta: Double,
+    orientation: Double,
+    pointerUpdateKind: PointerUpdateKind,
+    pressure: Double,
+    touchConfidence: Boolean,
+    twist: Double,
+    xtilt: Double,
+    ytilt: Double,
+    zdistance: js.Any
+  ): PointerPointProperties = {
+    val __obj = js.Dynamic.literal(contactRect = contactRect.asInstanceOf[js.Any], contactRectRaw = contactRectRaw.asInstanceOf[js.Any], getUsageValue = js.Any.fromFunction2(getUsageValue), hasUsage = js.Any.fromFunction2(hasUsage), isBarrelButtonPressed = isBarrelButtonPressed.asInstanceOf[js.Any], isCanceled = isCanceled.asInstanceOf[js.Any], isEraser = isEraser.asInstanceOf[js.Any], isHorizontalMouseWheel = isHorizontalMouseWheel.asInstanceOf[js.Any], isInRange = isInRange.asInstanceOf[js.Any], isInverted = isInverted.asInstanceOf[js.Any], isLeftButtonPressed = isLeftButtonPressed.asInstanceOf[js.Any], isMiddleButtonPressed = isMiddleButtonPressed.asInstanceOf[js.Any], isPrimary = isPrimary.asInstanceOf[js.Any], isRightButtonPressed = isRightButtonPressed.asInstanceOf[js.Any], isXButton1Pressed = isXButton1Pressed.asInstanceOf[js.Any], isXButton2Pressed = isXButton2Pressed.asInstanceOf[js.Any], mouseWheelDelta = mouseWheelDelta.asInstanceOf[js.Any], orientation = orientation.asInstanceOf[js.Any], pointerUpdateKind = pointerUpdateKind.asInstanceOf[js.Any], pressure = pressure.asInstanceOf[js.Any], touchConfidence = touchConfidence.asInstanceOf[js.Any], twist = twist.asInstanceOf[js.Any], xtilt = xtilt.asInstanceOf[js.Any], ytilt = ytilt.asInstanceOf[js.Any], zdistance = zdistance.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PointerPointProperties]
+  }
+  @scala.inline
+  implicit class PointerPointPropertiesOps[Self <: PointerPointProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContactRect(value: Rect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contactRect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContactRectRaw(value: Rect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contactRectRaw")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetUsageValue(value: (Double, Double) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getUsageValue")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withHasUsage(value: (Double, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasUsage")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withIsBarrelButtonPressed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isBarrelButtonPressed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsCanceled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCanceled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsEraser(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEraser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsHorizontalMouseWheel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isHorizontalMouseWheel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsInRange(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsInverted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInverted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsLeftButtonPressed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLeftButtonPressed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsMiddleButtonPressed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isMiddleButtonPressed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsPrimary(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPrimary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsRightButtonPressed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRightButtonPressed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsXButton1Pressed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isXButton1Pressed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsXButton2Pressed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isXButton2Pressed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMouseWheelDelta(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mouseWheelDelta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrientation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPointerUpdateKind(value: PointerUpdateKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointerUpdateKind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPressure(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pressure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTouchConfidence(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("touchConfidence")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTwist(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("twist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withXtilt(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xtilt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withYtilt(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ytilt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withZdistance(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zdistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

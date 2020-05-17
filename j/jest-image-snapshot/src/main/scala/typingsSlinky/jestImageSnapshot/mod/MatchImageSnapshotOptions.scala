@@ -1,6 +1,6 @@
 package typingsSlinky.jestImageSnapshot.mod
 
-import typingsSlinky.jestImageSnapshot.AnonCounter
+import typingsSlinky.jestImageSnapshot.anon.Counter
 import typingsSlinky.jestImageSnapshot.jestImageSnapshotStrings.horizontal
 import typingsSlinky.jestImageSnapshot.jestImageSnapshotStrings.percent
 import typingsSlinky.jestImageSnapshot.jestImageSnapshotStrings.pixel
@@ -31,7 +31,7 @@ trait MatchImageSnapshotOptions extends js.Object {
     * it is called with an object containing testPath, currentTestName, counter and defaultIdentifier as its first
     * argument. The function must return an identifier to use for the snapshot.
     */
-  var customSnapshotIdentifier: js.UndefOr[(js.Function1[/* parameters */ AnonCounter, String]) | String] = js.native
+  var customSnapshotIdentifier: js.UndefOr[(js.Function1[/* parameters */ Counter, String]) | String] = js.native
   /**
     * Custom snapshots directory.
     * Absolute path of a directory to keep the snapshot in.
@@ -124,13 +124,13 @@ object MatchImageSnapshotOptions {
         ret
     }
     @scala.inline
-    def withCustomSnapshotIdentifierFunction1(value: /* parameters */ AnonCounter => String): Self = {
+    def withCustomSnapshotIdentifierFunction1(value: /* parameters */ Counter => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customSnapshotIdentifier")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withCustomSnapshotIdentifier(value: (js.Function1[/* parameters */ AnonCounter, String]) | String): Self = {
+    def withCustomSnapshotIdentifier(value: (js.Function1[/* parameters */ Counter, String]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customSnapshotIdentifier")(value.asInstanceOf[js.Any])
         ret

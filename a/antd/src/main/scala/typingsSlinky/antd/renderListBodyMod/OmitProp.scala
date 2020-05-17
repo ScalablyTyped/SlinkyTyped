@@ -11,3 +11,12 @@ import scala.scalajs.js.annotation._
 */
 trait OmitProp extends js.Object
 
+object OmitProp {
+  @scala.inline
+  def handleFilter: typingsSlinky.antd.antdStrings.handleFilter = "handleFilter".asInstanceOf[typingsSlinky.antd.antdStrings.handleFilter]
+  @scala.inline
+  def handleClear: typingsSlinky.antd.antdStrings.handleClear = "handleClear".asInstanceOf[typingsSlinky.antd.antdStrings.handleClear]
+  @scala.inline
+  def checkedKeys: typingsSlinky.antd.antdStrings.checkedKeys = "checkedKeys".asInstanceOf[typingsSlinky.antd.antdStrings.checkedKeys]
+}
+

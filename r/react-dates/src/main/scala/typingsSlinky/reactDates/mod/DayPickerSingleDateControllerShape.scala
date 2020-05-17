@@ -1,7 +1,7 @@
 package typingsSlinky.reactDates.mod
 
-import typingsSlinky.reactDates.AnonDate
-import typingsSlinky.reactDates.AnonFocused
+import typingsSlinky.reactDates.anon.Date
+import typingsSlinky.reactDates.anon.Focused
 import typingsSlinky.reactDates.mod.momentPropTypes.momentObj
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,9 +16,9 @@ trait DayPickerSingleDateControllerShape extends DayPickerShape {
   var isDayHighlighted: js.UndefOr[js.Function1[/* day */ js.Any, Boolean]] = js.native
   var isOutsideRange: js.UndefOr[js.Function1[/* day */ js.Any, Boolean]] = js.native
   var keepOpenOnDateSelect: js.UndefOr[Boolean] = js.native
-  var onClose: js.UndefOr[js.Function1[/* final */ AnonDate, Unit]] = js.native
+  var onClose: js.UndefOr[js.Function1[/* final */ Date, Unit]] = js.native
   def onDateChange(): Unit = js.native
   def onDateChange(date: momentObj): Unit = js.native
-  def onFocusChange(arg: AnonFocused): Unit = js.native
+  def onFocusChange(arg: Focused): Unit = js.native
 }
 

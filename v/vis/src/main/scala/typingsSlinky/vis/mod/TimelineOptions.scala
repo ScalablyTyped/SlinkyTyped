@@ -3,7 +3,7 @@ package typingsSlinky.vis.mod
 import typingsSlinky.moment.mod.Moment
 import typingsSlinky.moment.mod.MomentFormatSpecification
 import typingsSlinky.moment.mod.MomentInput
-import typingsSlinky.vis.AnonTemplate
+import typingsSlinky.vis.anon.Template
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -65,7 +65,7 @@ trait TimelineOptions extends js.Object {
   var throttleRedraw: js.UndefOr[Double] = js.native
   var timeAxis: js.UndefOr[TimelineTimeAxisOption] = js.native
   var tooltip: js.UndefOr[TimelineTooltipOption] = js.native
-  var tooltipOnItemUpdateTime: js.UndefOr[Boolean | AnonTemplate] = js.native
+  var tooltipOnItemUpdateTime: js.UndefOr[Boolean | Template] = js.native
   var `type`: js.UndefOr[String] = js.native
   var verticalScroll: js.UndefOr[Boolean] = js.native
   var visibleFrameTemplate: js.UndefOr[TimelineOptionsTemplateFunction] = js.native
@@ -809,7 +809,7 @@ object TimelineOptions {
         ret
     }
     @scala.inline
-    def withTooltipOnItemUpdateTime(value: Boolean | AnonTemplate): Self = {
+    def withTooltipOnItemUpdateTime(value: Boolean | Template): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipOnItemUpdateTime")(value.asInstanceOf[js.Any])
         ret

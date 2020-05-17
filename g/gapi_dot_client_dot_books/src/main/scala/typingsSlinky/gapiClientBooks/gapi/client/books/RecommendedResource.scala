@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientBooks.AnonMaxAllowedMaturityRating
-import typingsSlinky.gapiClientBooks.AnonRating
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientBooks.anon.MaxAllowedMaturityRating
+import typingsSlinky.gapiClientBooks.anon.Rating
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,16 +10,16 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RecommendedResource extends js.Object {
   /** Return a list of recommended books for the current user. */
-  def list(request: AnonMaxAllowedMaturityRating): Request_[Volumes] = js.native
+  def list(request: MaxAllowedMaturityRating): Request[Volumes] = js.native
   /** Rate a recommended book for the current user. */
-  def rate(request: AnonRating): Request_[BooksVolumesRecommendedRateResponse] = js.native
+  def rate(request: Rating): Request[BooksVolumesRecommendedRateResponse] = js.native
 }
 
 object RecommendedResource {
   @scala.inline
   def apply(
-    list: AnonMaxAllowedMaturityRating => Request_[Volumes],
-    rate: AnonRating => Request_[BooksVolumesRecommendedRateResponse]
+    list: MaxAllowedMaturityRating => Request[Volumes],
+    rate: Rating => Request[BooksVolumesRecommendedRateResponse]
   ): RecommendedResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list), rate = js.Any.fromFunction1(rate))
     __obj.asInstanceOf[RecommendedResource]
@@ -31,13 +31,13 @@ object RecommendedResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withList(value: AnonMaxAllowedMaturityRating => Request_[Volumes]): Self = {
+    def withList(value: MaxAllowedMaturityRating => Request[Volumes]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withRate(value: AnonRating => Request_[BooksVolumesRecommendedRateResponse]): Self = {
+    def withRate(value: Rating => Request[BooksVolumesRecommendedRateResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rate")(js.Any.fromFunction1(value))
         ret

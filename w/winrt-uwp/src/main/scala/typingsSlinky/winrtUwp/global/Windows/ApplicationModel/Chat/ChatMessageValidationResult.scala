@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Chat
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Provides results for validation of chat messages. */
+@JSGlobal("Windows.ApplicationModel.Chat.ChatMessageValidationResult")
+@js.native
+abstract class ChatMessageValidationResult ()
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Chat.ChatMessageValidationResult
+

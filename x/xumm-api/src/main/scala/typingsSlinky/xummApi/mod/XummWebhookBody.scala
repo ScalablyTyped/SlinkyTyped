@@ -1,8 +1,8 @@
 package typingsSlinky.xummApi.mod
 
-import typingsSlinky.xummApi.AnonApplicationuuidv4
-import typingsSlinky.xummApi.AnonPayloaduuidv4
-import typingsSlinky.xummApi.AnonTokenexpiration
+import typingsSlinky.xummApi.anon.Applicationuuidv4
+import typingsSlinky.xummApi.anon.Payloaduuidv4
+import typingsSlinky.xummApi.anon.Tokenexpiration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait XummWebhookBody extends js.Object {
   var custom_meta: XummCustomMeta = js.native
-  var meta: AnonApplicationuuidv4 = js.native
-  var payloadResponse: AnonPayloaduuidv4 = js.native
-  var userToken: AnonTokenexpiration | Null = js.native
+  var meta: Applicationuuidv4 = js.native
+  var payloadResponse: Payloaduuidv4 = js.native
+  var userToken: Tokenexpiration | Null = js.native
 }
 
 object XummWebhookBody {
   @scala.inline
-  def apply(custom_meta: XummCustomMeta, meta: AnonApplicationuuidv4, payloadResponse: AnonPayloaduuidv4): XummWebhookBody = {
+  def apply(custom_meta: XummCustomMeta, meta: Applicationuuidv4, payloadResponse: Payloaduuidv4): XummWebhookBody = {
     val __obj = js.Dynamic.literal(custom_meta = custom_meta.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any], payloadResponse = payloadResponse.asInstanceOf[js.Any])
     __obj.asInstanceOf[XummWebhookBody]
   }
@@ -34,19 +34,19 @@ object XummWebhookBody {
         ret
     }
     @scala.inline
-    def withMeta(value: AnonApplicationuuidv4): Self = {
+    def withMeta(value: Applicationuuidv4): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPayloadResponse(value: AnonPayloaduuidv4): Self = {
+    def withPayloadResponse(value: Payloaduuidv4): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("payloadResponse")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withUserToken(value: AnonTokenexpiration): Self = {
+    def withUserToken(value: Tokenexpiration): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("userToken")(value.asInstanceOf[js.Any])
         ret

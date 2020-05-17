@@ -1,6 +1,6 @@
 package typingsSlinky.wxJsSdkDt.wx
 
-import typingsSlinky.wxJsSdkDt.AnonCheckResult
+import typingsSlinky.wxJsSdkDt.anon.CheckResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,12 +19,12 @@ trait CheckApiConfig extends WxBaseRequestConfig {
     * 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
     */
   @JSName("success")
-  def success_MCheckApiConfig(res: AnonCheckResult): Unit = js.native
+  def success_MCheckApiConfig(res: CheckResult): Unit = js.native
 }
 
 object CheckApiConfig {
   @scala.inline
-  def apply(jsApiList: js.Array[String], success: AnonCheckResult => Unit): CheckApiConfig = {
+  def apply(jsApiList: js.Array[String], success: CheckResult => Unit): CheckApiConfig = {
     val __obj = js.Dynamic.literal(jsApiList = jsApiList.asInstanceOf[js.Any], success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[CheckApiConfig]
   }
@@ -41,7 +41,7 @@ object CheckApiConfig {
         ret
     }
     @scala.inline
-    def withSuccess(value: AnonCheckResult => Unit): Self = {
+    def withSuccess(value: CheckResult => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

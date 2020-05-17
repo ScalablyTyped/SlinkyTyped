@@ -1,9 +1,9 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesMap
 
-import typingsSlinky.echarts.AnonAreaColorAnonBorderType
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonItemStyleAnonAreaColor
-import typingsSlinky.echarts.AnonRotate
+import typingsSlinky.echarts.anon.AreaColorBorderType
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.ItemStyleAreaColor
+import typingsSlinky.echarts.anon.Rotate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,14 +13,14 @@ trait DataObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-map.data.emphasis
     */
-  var emphasis: js.UndefOr[AnonItemStyleAnonAreaColor] = js.native
+  var emphasis: js.UndefOr[ItemStyleAreaColor] = js.native
   /**
     * Style of item polygon
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-map.data.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonAreaColorAnonBorderType] = js.native
+  var itemStyle: js.UndefOr[AreaColorBorderType] = js.native
   /**
     * Text label of , to explain some data information about graphic
     * item like value, name and so on.
@@ -32,7 +32,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.data.label
     */
-  var label: js.UndefOr[AnonRotate] = js.native
+  var label: js.UndefOr[Rotate] = js.native
   /**
     * The name of the map area where the data belongs to, such
     * as `'China'` or `'United Kingdom'` .
@@ -54,7 +54,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.data.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * The numerical value of this area.
     *
@@ -77,7 +77,7 @@ object DataObject {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEmphasis(value: AnonItemStyleAnonAreaColor): Self = {
+    def withEmphasis(value: ItemStyleAreaColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -89,7 +89,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonAreaColorAnonBorderType): Self = {
+    def withItemStyle(value: AreaColorBorderType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -101,7 +101,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonRotate): Self = {
+    def withLabel(value: Rotate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -137,7 +137,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

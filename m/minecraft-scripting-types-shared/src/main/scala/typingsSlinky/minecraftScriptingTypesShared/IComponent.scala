@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IComponent[T] extends js.Object {
+trait IComponent[T] extends IMinecraftObject {
   /**
     * The identifier of the component, e.g., "minecraft:position", or "minecraft:nameable"
     */

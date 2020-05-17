@@ -1,6 +1,6 @@
 package typingsSlinky.wegameApi.wx.types
 
-import typingsSlinky.wegameApi.AnonDataAny
+import typingsSlinky.wegameApi.anon.DataAny
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait GetStorageParams extends js.Object {
   var complete: js.UndefOr[js.Function0[Unit]] = js.native
   var fail: js.UndefOr[js.Function0[Unit]] = js.native
   var key: String = js.native
-  var success: js.UndefOr[js.Function1[/* res */ AnonDataAny, Unit]] = js.native
+  var success: js.UndefOr[js.Function1[/* res */ DataAny, Unit]] = js.native
 }
 
 object GetStorageParams {
@@ -56,7 +56,7 @@ object GetStorageParams {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonDataAny => Unit): Self = {
+    def withSuccess(value: /* res */ DataAny => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

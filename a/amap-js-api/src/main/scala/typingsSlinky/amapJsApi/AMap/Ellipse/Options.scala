@@ -5,7 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.amapJsApi.ReferOverlayOptions because Already inherited */ @js.native
 trait Options[ExtraData]
   extends typingsSlinky.amapJsApi.AMap.Polygon.Options[ExtraData] {
   /**

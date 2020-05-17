@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -121,7 +121,7 @@ object IgGridModalDialog {
         ret
     }
     @scala.inline
-    def withButtonCancelClick(value: (/* event */ Event_, /* ui */ ButtonCancelClickEventUIParam) => Unit): Self = {
+    def withButtonCancelClick(value: (/* event */ Event, /* ui */ ButtonCancelClickEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("buttonCancelClick")(js.Any.fromFunction2(value))
         ret
@@ -133,7 +133,7 @@ object IgGridModalDialog {
         ret
     }
     @scala.inline
-    def withButtonOKClick(value: (/* event */ Event_, /* ui */ ButtonOKClickEventUIParam) => Unit): Self = {
+    def withButtonOKClick(value: (/* event */ Event, /* ui */ ButtonOKClickEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("buttonOKClick")(js.Any.fromFunction2(value))
         ret
@@ -181,7 +181,7 @@ object IgGridModalDialog {
         ret
     }
     @scala.inline
-    def withModalDialogClosed(value: (/* event */ Event_, /* ui */ ModalDialogClosedEventUIParam) => Unit): Self = {
+    def withModalDialogClosed(value: (/* event */ Event, /* ui */ ModalDialogClosedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogClosed")(js.Any.fromFunction2(value))
         ret
@@ -193,7 +193,7 @@ object IgGridModalDialog {
         ret
     }
     @scala.inline
-    def withModalDialogClosing(value: (/* event */ Event_, /* ui */ ModalDialogClosingEventUIParam) => Unit): Self = {
+    def withModalDialogClosing(value: (/* event */ Event, /* ui */ ModalDialogClosingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogClosing")(js.Any.fromFunction2(value))
         ret
@@ -205,7 +205,7 @@ object IgGridModalDialog {
         ret
     }
     @scala.inline
-    def withModalDialogContentsRendered(value: (/* event */ Event_, /* ui */ ModalDialogContentsRenderedEventUIParam) => Unit): Self = {
+    def withModalDialogContentsRendered(value: (/* event */ Event, /* ui */ ModalDialogContentsRenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogContentsRendered")(js.Any.fromFunction2(value))
         ret
@@ -217,7 +217,7 @@ object IgGridModalDialog {
         ret
     }
     @scala.inline
-    def withModalDialogContentsRendering(value: (/* event */ Event_, /* ui */ ModalDialogContentsRenderingEventUIParam) => Unit): Self = {
+    def withModalDialogContentsRendering(value: (/* event */ Event, /* ui */ ModalDialogContentsRenderingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogContentsRendering")(js.Any.fromFunction2(value))
         ret
@@ -241,7 +241,7 @@ object IgGridModalDialog {
         ret
     }
     @scala.inline
-    def withModalDialogMoving(value: (/* event */ Event_, /* ui */ ModalDialogMovingEventUIParam) => Unit): Self = {
+    def withModalDialogMoving(value: (/* event */ Event, /* ui */ ModalDialogMovingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogMoving")(js.Any.fromFunction2(value))
         ret
@@ -253,7 +253,7 @@ object IgGridModalDialog {
         ret
     }
     @scala.inline
-    def withModalDialogOpened(value: (/* event */ Event_, /* ui */ ModalDialogOpenedEventUIParam) => Unit): Self = {
+    def withModalDialogOpened(value: (/* event */ Event, /* ui */ ModalDialogOpenedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogOpened")(js.Any.fromFunction2(value))
         ret
@@ -265,7 +265,7 @@ object IgGridModalDialog {
         ret
     }
     @scala.inline
-    def withModalDialogOpening(value: (/* event */ Event_, /* ui */ ModalDialogOpeningEventUIParam) => Unit): Self = {
+    def withModalDialogOpening(value: (/* event */ Event, /* ui */ ModalDialogOpeningEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogOpening")(js.Any.fromFunction2(value))
         ret

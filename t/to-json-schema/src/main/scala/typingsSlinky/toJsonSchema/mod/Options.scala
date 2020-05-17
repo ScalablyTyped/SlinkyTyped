@@ -1,17 +1,17 @@
 package typingsSlinky.toJsonSchema.mod
 
 import typingsSlinky.jsonSchema.mod.JSONSchema4TypeName
-import typingsSlinky.toJsonSchema.AnonAdditionalProperties
-import typingsSlinky.toJsonSchema.AnonDetectFormat
-import typingsSlinky.toJsonSchema.AnonMode
+import typingsSlinky.toJsonSchema.anon.AdditionalProperties
+import typingsSlinky.toJsonSchema.anon.DetectFormat
+import typingsSlinky.toJsonSchema.anon.Mode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Options extends js.Object {
-  var arrays: js.UndefOr[AnonMode] = js.native
-  var objects: js.UndefOr[AnonAdditionalProperties] = js.native
+  var arrays: js.UndefOr[Mode] = js.native
+  var objects: js.UndefOr[AdditionalProperties] = js.native
   /**
     * By providing `postProcessFnc`, you can modify or replace generated
     * schema. This function will be called recursively for all the properties
@@ -52,7 +52,7 @@ trait Options extends js.Object {
     * // { type: "integer", "required": true }
     */
   var required: js.UndefOr[Boolean] = js.native
-  var strings: js.UndefOr[AnonDetectFormat] = js.native
+  var strings: js.UndefOr[DetectFormat] = js.native
 }
 
 object Options {
@@ -68,7 +68,7 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withArrays(value: AnonMode): Self = {
+    def withArrays(value: Mode): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("arrays")(value.asInstanceOf[js.Any])
         ret
@@ -80,7 +80,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withObjects(value: AnonAdditionalProperties): Self = {
+    def withObjects(value: AdditionalProperties): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("objects")(value.asInstanceOf[js.Any])
         ret
@@ -123,7 +123,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withStrings(value: AnonDetectFormat): Self = {
+    def withStrings(value: DetectFormat): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("strings")(value.asInstanceOf[js.Any])
         ret

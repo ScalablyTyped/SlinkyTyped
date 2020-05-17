@@ -6,12 +6,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("MakerJs.models.Dome")
 @js.native
-class Dome protected () extends IModel {
-  def this(width: Double, height: Double) = this()
-  def this(width: Double, height: Double, radius: Double) = this()
+trait Dome extends IModel {
   @JSName("paths")
   var paths_Dome: IPathMap = js.native
+}
+
+object Dome {
+  @scala.inline
+  def apply(paths: IPathMap): Dome = {
+    val __obj = js.Dynamic.literal(paths = paths.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Dome]
+  }
+  @scala.inline
+  implicit class DomeOps[Self <: Dome] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPaths(value: IPathMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.three.shaderMaterialMod
 
-import typingsSlinky.three.AnonDerivatives
+import typingsSlinky.three.anon.Derivatives
 import typingsSlinky.three.materialMod.MaterialParameters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait ShaderMaterialParameters extends MaterialParameters {
   var clipping: js.UndefOr[Boolean] = js.native
   var defines: js.UndefOr[js.Any] = js.native
-  var extensions: js.UndefOr[AnonDerivatives] = js.native
+  var extensions: js.UndefOr[Derivatives] = js.native
   var fragmentShader: js.UndefOr[String] = js.native
   var lights: js.UndefOr[Boolean] = js.native
   var linewidth: js.UndefOr[Double] = js.native
@@ -60,7 +60,7 @@ object ShaderMaterialParameters {
         ret
     }
     @scala.inline
-    def withExtensions(value: AnonDerivatives): Self = {
+    def withExtensions(value: Derivatives): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
         ret

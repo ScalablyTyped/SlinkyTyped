@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonExtrudedHeight
+import typingsSlinky.cesium.anon.ExtrudedHeight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "CircleOutlineGeometry")
 @js.native
 class CircleOutlineGeometry protected () extends Packable {
-  def this(options: AnonExtrudedHeight) = this()
+  def this(options: ExtrudedHeight) = this()
 }
 
 /* static members */

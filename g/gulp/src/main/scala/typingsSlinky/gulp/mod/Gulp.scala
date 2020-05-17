@@ -1,6 +1,6 @@
 package typingsSlinky.gulp.mod
 
-import typingsSlinky.gulp.FnCall
+import typingsSlinky.gulp.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

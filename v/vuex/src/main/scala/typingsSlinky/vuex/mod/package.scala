@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type Action[S, R] = (typingsSlinky.vuex.mod.ActionHandler[S, R]) | (typingsSlinky.vuex.mod.ActionObject[S, R])
   type ActionHandler[S, R] = js.ThisFunction2[
     /* this */ typingsSlinky.vuex.mod.Store[R], 
     /* injectee */ typingsSlinky.vuex.mod.ActionContext[S, R], 
@@ -20,5 +19,4 @@ package object mod {
   type Mutation[S] = js.Function2[/* state */ S, /* payload */ js.UndefOr[js.Any], js.Any]
   type MutationTree[S] = org.scalablytyped.runtime.StringDictionary[typingsSlinky.vuex.mod.Mutation[S]]
   type Plugin[S] = js.Function1[/* store */ typingsSlinky.vuex.mod.Store[S], js.Any]
-  type SubscribeActionOptions[P, S] = (typingsSlinky.vuex.mod.ActionSubscriber[P, S]) | (typingsSlinky.vuex.mod.ActionSubscribersObject[P, S])
 }

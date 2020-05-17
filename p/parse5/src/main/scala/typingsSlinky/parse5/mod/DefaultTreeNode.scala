@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DefaultTreeNode extends js.Object {
+trait DefaultTreeNode extends Node {
   /**
     * The name of the node. E.g. {@link Document} will have `nodeName` equal to '#document'`.
     */

@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Box2D.Dynamics.b2BodyDef")
 @js.native
-class b2BodyDef () extends js.Object {
+trait b2BodyDef extends js.Object {
   /**
   		* Does this body start out active?
   		**/
@@ -67,5 +66,121 @@ class b2BodyDef () extends js.Object {
   		* Use this to store application specific body data.
   		**/
   var userData: js.Any = js.native
+}
+
+object b2BodyDef {
+  @scala.inline
+  def apply(
+    active: Boolean,
+    allowSleep: Boolean,
+    angle: Double,
+    angularDamping: Double,
+    angularVelocity: Double,
+    awake: Boolean,
+    bullet: Boolean,
+    fixedRotation: Boolean,
+    inertiaScale: Double,
+    linearDamping: Double,
+    linearVelocity: b2Vec2,
+    position: b2Vec2,
+    `type`: Double,
+    userData: js.Any
+  ): b2BodyDef = {
+    val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], allowSleep = allowSleep.asInstanceOf[js.Any], angle = angle.asInstanceOf[js.Any], angularDamping = angularDamping.asInstanceOf[js.Any], angularVelocity = angularVelocity.asInstanceOf[js.Any], awake = awake.asInstanceOf[js.Any], bullet = bullet.asInstanceOf[js.Any], fixedRotation = fixedRotation.asInstanceOf[js.Any], inertiaScale = inertiaScale.asInstanceOf[js.Any], linearDamping = linearDamping.asInstanceOf[js.Any], linearVelocity = linearVelocity.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], userData = userData.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[b2BodyDef]
+  }
+  @scala.inline
+  implicit class b2BodyDefOps[Self <: b2BodyDef] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllowSleep(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowSleep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAngularDamping(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("angularDamping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAngularVelocity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("angularVelocity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAwake(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("awake")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBullet(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bullet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFixedRotation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fixedRotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInertiaScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inertiaScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinearDamping(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linearDamping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinearVelocity(value: b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linearVelocity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPosition(value: b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userData")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

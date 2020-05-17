@@ -10,11 +10,25 @@ trait SVGZoomAndPan extends js.Object {
   val zoomAndPan: Double = js.native
 }
 
-@JSGlobal("SVGZoomAndPan")
-@js.native
-object SVGZoomAndPan extends js.Object {
-  val SVG_ZOOMANDPAN_DISABLE: Double = js.native
-  val SVG_ZOOMANDPAN_MAGNIFY: Double = js.native
-  val SVG_ZOOMANDPAN_UNKNOWN: Double = js.native
+object SVGZoomAndPan {
+  @scala.inline
+  def apply(zoomAndPan: Double): SVGZoomAndPan = {
+    val __obj = js.Dynamic.literal(zoomAndPan = zoomAndPan.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SVGZoomAndPan]
+  }
+  @scala.inline
+  implicit class SVGZoomAndPanOps[Self <: org.scalajs.dom.raw.SVGZoomAndPan] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withZoomAndPan(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zoomAndPan")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

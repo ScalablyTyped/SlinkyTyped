@@ -2,16 +2,16 @@ package typingsSlinky.spectrogram.mod
 
 import org.scalajs.dom.raw.CanvasGradient
 import org.scalajs.dom.raw.CanvasPattern
-import typingsSlinky.spectrogram.AnonEnable
-import typingsSlinky.spectrogram.AnonHeight
+import typingsSlinky.spectrogram.anon.Enable
+import typingsSlinky.spectrogram.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SpectrogramOptions extends js.Object {
-  var audio: js.UndefOr[AnonEnable] = js.native
-  var canvas: js.UndefOr[AnonHeight] = js.native
+  var audio: js.UndefOr[Enable] = js.native
+  var canvas: js.UndefOr[Height] = js.native
   var colors: js.UndefOr[
     js.Function1[/* steps */ Double, js.Array[String | CanvasGradient | CanvasPattern]]
   ] = js.native
@@ -30,7 +30,7 @@ object SpectrogramOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAudio(value: AnonEnable): Self = {
+    def withAudio(value: Enable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(value.asInstanceOf[js.Any])
         ret
@@ -42,7 +42,7 @@ object SpectrogramOptions {
         ret
     }
     @scala.inline
-    def withCanvas(value: AnonHeight): Self = {
+    def withCanvas(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("canvas")(value.asInstanceOf[js.Any])
         ret

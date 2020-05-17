@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a client-side equivalent of the RecurrenceRangeControl.
   */
-@JSGlobal("ASPxClientRecurrenceRangeControl")
 @js.native
-class ASPxClientRecurrenceRangeControl () extends ASPxClientControl {
+trait ASPxClientRecurrenceRangeControl extends ASPxClientControl {
   /**
     * Gets the recurrence end date.
     */
@@ -37,5 +36,79 @@ class ASPxClientRecurrenceRangeControl () extends ASPxClientControl {
     * @param range An ASPxClientRecurrenceRangeenumeration value that specifies the recurrence range type.
     */
   def SetRange(range: ASPxClientRecurrenceRange): Unit = js.native
+}
+
+object ASPxClientRecurrenceRangeControl {
+  @scala.inline
+  def apply(
+    AdjustControl: () => Unit,
+    GetClientVisible: () => Boolean,
+    GetEndDate: () => js.Date,
+    GetHeight: () => Double,
+    GetMainElement: () => js.Any,
+    GetOccurrenceCount: () => Double,
+    GetParentControl: () => js.Any,
+    GetRange: () => ASPxClientRecurrenceRange,
+    GetVisible: () => Boolean,
+    GetWidth: () => Double,
+    InCallback: () => Boolean,
+    Init: ASPxClientEvent[ASPxClientEventHandler[ASPxClientControlBase]],
+    SendMessageToAssistiveTechnology: String => Unit,
+    SetClientVisible: Boolean => Unit,
+    SetEndDate: js.Date => Unit,
+    SetHeight: Double => Unit,
+    SetOccurrenceCount: Double => Unit,
+    SetRange: ASPxClientRecurrenceRange => Unit,
+    SetVisible: Boolean => Unit,
+    SetWidth: Double => Unit,
+    name: String
+  ): ASPxClientRecurrenceRangeControl = {
+    val __obj = js.Dynamic.literal(AdjustControl = js.Any.fromFunction0(AdjustControl), GetClientVisible = js.Any.fromFunction0(GetClientVisible), GetEndDate = js.Any.fromFunction0(GetEndDate), GetHeight = js.Any.fromFunction0(GetHeight), GetMainElement = js.Any.fromFunction0(GetMainElement), GetOccurrenceCount = js.Any.fromFunction0(GetOccurrenceCount), GetParentControl = js.Any.fromFunction0(GetParentControl), GetRange = js.Any.fromFunction0(GetRange), GetVisible = js.Any.fromFunction0(GetVisible), GetWidth = js.Any.fromFunction0(GetWidth), InCallback = js.Any.fromFunction0(InCallback), Init = Init.asInstanceOf[js.Any], SendMessageToAssistiveTechnology = js.Any.fromFunction1(SendMessageToAssistiveTechnology), SetClientVisible = js.Any.fromFunction1(SetClientVisible), SetEndDate = js.Any.fromFunction1(SetEndDate), SetHeight = js.Any.fromFunction1(SetHeight), SetOccurrenceCount = js.Any.fromFunction1(SetOccurrenceCount), SetRange = js.Any.fromFunction1(SetRange), SetVisible = js.Any.fromFunction1(SetVisible), SetWidth = js.Any.fromFunction1(SetWidth), name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientRecurrenceRangeControl]
+  }
+  @scala.inline
+  implicit class ASPxClientRecurrenceRangeControlOps[Self <: ASPxClientRecurrenceRangeControl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetEndDate(value: () => js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetEndDate")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetOccurrenceCount(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetOccurrenceCount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRange(value: () => ASPxClientRecurrenceRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetRange")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetEndDate(value: js.Date => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetEndDate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetOccurrenceCount(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetOccurrenceCount")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetRange(value: ASPxClientRecurrenceRange => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetRange")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

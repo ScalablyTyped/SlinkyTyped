@@ -2,9 +2,9 @@ package typingsSlinky.reactPopperTooltip.typesMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +12,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetTooltipPropsArg
   extends /* key */ StringDictionary[js.Any] {
-  var onMouseEnter: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, Element], Unit]] = js.native
-  var onMouseLeave: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, Element], Unit]] = js.native
+  var onMouseEnter: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, Element], Unit]] = js.native
+  var onMouseLeave: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, Element], Unit]] = js.native
   var style: js.UndefOr[CSSProperties] = js.native
 }
 
@@ -30,7 +30,7 @@ object GetTooltipPropsArg {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnMouseEnter(value: /* event */ SyntheticEvent[Event_, Element] => Unit): Self = {
+    def withOnMouseEnter(value: /* event */ SyntheticEvent[Event, Element] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction1(value))
         ret
@@ -42,7 +42,7 @@ object GetTooltipPropsArg {
         ret
     }
     @scala.inline
-    def withOnMouseLeave(value: /* event */ SyntheticEvent[Event_, Element] => Unit): Self = {
+    def withOnMouseLeave(value: /* event */ SyntheticEvent[Event, Element] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.Any.fromFunction1(value))
         ret

@@ -4,17 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("TypeScript.PostfixUnaryExpressionSyntax")
 @js.native
-class PostfixUnaryExpressionSyntax protected ()
-  extends SyntaxNode
-     with IPostfixExpressionSyntax {
-  def this(
-    kind: SyntaxKind,
-    operand: IMemberExpressionSyntax,
-    operatorToken: ISyntaxToken,
-    parsedInStrictMode: Boolean
-  ) = this()
+trait PostfixUnaryExpressionSyntax
+  extends IPostfixExpressionSyntax
+     with SyntaxNode {
   var _kind: js.Any = js.native
   var operand: IMemberExpressionSyntax = js.native
   var operatorToken: ISyntaxToken = js.native

@@ -1,7 +1,7 @@
 package typingsSlinky.jqueryPjax
 
 import org.scalajs.dom.raw.EventTarget
-import typingsSlinky.jquery.JQuery_.AjaxSettings
+import typingsSlinky.jquery.JQuery.AjaxSettings
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

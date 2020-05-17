@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.exporter
 
-import typingsSlinky.devextreme.AnonNameValue
+import typingsSlinky.devextreme.anon.NameValue
 import typingsSlinky.devextreme.mod.DevExpress.ui.dxDataGridColumn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,7 @@ trait ExcelDataGridCell extends js.Object {
   /** The group index of the cell's row. Available when the rowType is "group". */
   var groupIndex: js.UndefOr[Double] = js.native
   /** Information about group summary items the cell represents. */
-  var groupSummaryItems: js.UndefOr[js.Array[AnonNameValue]] = js.native
+  var groupSummaryItems: js.UndefOr[js.Array[NameValue]] = js.native
   /** The type of the cell's row. */
   var rowType: js.UndefOr[String] = js.native
   /** The identifier of the total summary item that the cell represents. */
@@ -73,7 +73,7 @@ object ExcelDataGridCell {
         ret
     }
     @scala.inline
-    def withGroupSummaryItems(value: js.Array[AnonNameValue]): Self = {
+    def withGroupSummaryItems(value: js.Array[NameValue]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("groupSummaryItems")(value.asInstanceOf[js.Any])
         ret

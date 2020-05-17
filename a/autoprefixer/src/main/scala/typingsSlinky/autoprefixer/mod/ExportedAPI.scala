@@ -1,6 +1,6 @@
 package typingsSlinky.autoprefixer.mod
 
-import typingsSlinky.autoprefixer.AnonBrowsers
+import typingsSlinky.autoprefixer.anon.Browsers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ExportedAPI extends js.Object {
   /** Autoprefixer data */
-  var data: AnonBrowsers = js.native
+  var data: Browsers = js.native
   /** Autoprefixer default browsers */
   var defaults: js.Any = js.native
   /** Inspect with default Autoprefixer */
@@ -17,7 +17,7 @@ trait ExportedAPI extends js.Object {
 
 object ExportedAPI {
   @scala.inline
-  def apply(data: AnonBrowsers, defaults: js.Any, info: () => Unit): ExportedAPI = {
+  def apply(data: Browsers, defaults: js.Any, info: () => Unit): ExportedAPI = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], defaults = defaults.asInstanceOf[js.Any], info = js.Any.fromFunction0(info))
     __obj.asInstanceOf[ExportedAPI]
   }
@@ -28,7 +28,7 @@ object ExportedAPI {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withData(value: AnonBrowsers): Self = {
+    def withData(value: Browsers): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs
 
 import org.scalajs.dom.raw.PointerEvent
+import typingsSlinky.babylonjs.anon.OffsetX
 import typingsSlinky.babylonjs.cameraInputsManagerMod.ICameraInput
 import typingsSlinky.babylonjs.freeCameraMod.FreeCamera
 import typingsSlinky.babylonjs.observableMod.Observable
@@ -46,7 +47,7 @@ object freeCameraMouseInputMod extends js.Object {
     /**
       * Observable for when a pointer move event occurs containing the move offset
       */
-    var onPointerMovedObservable: Observable[AnonOffsetX] = js.native
+    var onPointerMovedObservable: Observable[OffsetX] = js.native
     var previousPosition: js.Any = js.native
     /**
       * Define if touch is enabled in the mouse input

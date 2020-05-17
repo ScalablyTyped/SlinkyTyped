@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCore
 
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonToastElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonToastElement
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayController
 import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
 import typingsSlinky.ionicCore.toastInterfaceMod.ToastOptions

@@ -1,10 +1,10 @@
 package typingsSlinky.primereact.components
 
+import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonValueBoolean
+import typingsSlinky.primereact.anon.ValueBoolean
 import typingsSlinky.primereact.inplaceMod.InplaceProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,11 +27,11 @@ object Inplace {
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def onClose(value: /* event */ Event_ => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
+    def onClose(value: /* event */ Event => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
     @scala.inline
-    def onOpen(value: /* event */ Event_ => Unit): this.type = set("onOpen", js.Any.fromFunction1(value))
+    def onOpen(value: /* event */ Event => Unit): this.type = set("onOpen", js.Any.fromFunction1(value))
     @scala.inline
-    def onToggle(value: /* e */ AnonValueBoolean => Unit): this.type = set("onToggle", js.Any.fromFunction1(value))
+    def onToggle(value: /* e */ ValueBoolean => Unit): this.type = set("onToggle", js.Any.fromFunction1(value))
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

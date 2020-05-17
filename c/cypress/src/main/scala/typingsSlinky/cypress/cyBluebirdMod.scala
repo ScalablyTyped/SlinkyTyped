@@ -2,6 +2,7 @@ package typingsSlinky.cypress
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
+import typingsSlinky.cypress.anon.Cancellation
 import typingsSlinky.cypress.bluebirdMod.Bluebird
 import typingsSlinky.cypress.bluebirdMod.ConcurrencyOption
 import typingsSlinky.cypress.bluebirdMod.CoroutineOptions
@@ -13,6 +14,7 @@ import typingsSlinky.cypress.bluebirdMod.PromisifyOptions
 import typingsSlinky.cypress.bluebirdMod.Resolvable
 import typingsSlinky.cypress.bluebirdMod.ResolvableProps
 import typingsSlinky.cypress.bluebirdMod.Resolver
+import typingsSlinky.cypress.bluebirdMod.^
 import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.Map
 import scala.scalajs.js
@@ -34,7 +36,7 @@ object cyBluebirdMod extends js.Object {
             /* onCancel */ js.UndefOr[js.Function1[/* callback */ js.Function0[Unit], Unit]], 
             Unit
           ], 
-          typingsSlinky.cypress.bluebirdMod.^[js.Object]
+          ^[js.Object]
         ] {
     /**
       * A collection of errors. `AggregateError` is an array-like object, with numeric indices and a `.length` property.
@@ -107,7 +109,7 @@ object cyBluebirdMod extends js.Object {
       * Note that even though false is the default here, a development environment might be detected which automatically
       *  enables long stack traces and warnings.
       */
-    def config(options: AnonCancellation): Unit = js.native
+    def config(options: Cancellation): Unit = js.native
     /**
       * Returns a function that can use `yield` to run asynchronous code synchronously.
       *

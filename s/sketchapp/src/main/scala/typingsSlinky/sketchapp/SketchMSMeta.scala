@@ -1,5 +1,6 @@
 package typingsSlinky.sketchapp
 
+import typingsSlinky.sketchapp.anon.App
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +13,7 @@ trait SketchMSMeta extends js.Object {
   var build: Double = js.native
   var commit: String = js.native
   var compatibilityVersion: Double = js.native
-  var created: AnonApp = js.native
+  var created: App = js.native
   var fonts: js.Array[String] = js.native
   var pagesAndArtboards: SketchMSPagesAndArtboards = js.native
   var saveHistory: js.Array[String] = js.native
@@ -29,7 +30,7 @@ object SketchMSMeta {
     build: Double,
     commit: String,
     compatibilityVersion: Double,
-    created: AnonApp,
+    created: App,
     fonts: js.Array[String],
     pagesAndArtboards: SketchMSPagesAndArtboards,
     saveHistory: js.Array[String],
@@ -82,7 +83,7 @@ object SketchMSMeta {
         ret
     }
     @scala.inline
-    def withCreated(value: AnonApp): Self = {
+    def withCreated(value: App): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("created")(value.asInstanceOf[js.Any])
         ret

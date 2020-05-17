@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.accounts
 
-import typingsSlinky.stripe.AnonDocument
+import typingsSlinky.stripe.anon.Document
 import typingsSlinky.stripe.mod.IOptionsMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -32,7 +32,7 @@ trait IPersonCreateUpdateOptions extends IPersonShared {
   /**
     * The person’s verification document information.
     */
-  var verification: js.UndefOr[AnonDocument] = js.native
+  var verification: js.UndefOr[Document] = js.native
 }
 
 object IPersonCreateUpdateOptions {
@@ -96,7 +96,7 @@ object IPersonCreateUpdateOptions {
         ret
     }
     @scala.inline
-    def withVerification(value: AnonDocument): Self = {
+    def withVerification(value: Document): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("verification")(value.asInstanceOf[js.Any])
         ret

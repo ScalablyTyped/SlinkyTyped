@@ -1,7 +1,7 @@
 package typingsSlinky.jqueryDynatree
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.jquery.JQueryAjaxSettings
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -56,25 +56,25 @@ trait DynatreeOptions extends js.Object {
   // Callback(isReloading, isError) when tree was (re)loaded.
   var onActivate: js.UndefOr[js.Function1[/* dtnode */ DynaTreeNode, Unit]] = js.native
    // null: set focus to node.
-  var onBlur: js.UndefOr[js.Function2[/* dtnode */ DynaTreeNode, /* event */ Event_, Boolean]] = js.native
+  var onBlur: js.UndefOr[js.Function2[/* dtnode */ DynaTreeNode, /* event */ Event, Boolean]] = js.native
   // Low level event handlers: onEvent(dtnode, event): return false, to stop default processing
-  var onClick: js.UndefOr[js.Function2[/* dtnode */ DynaTreeNode, /* event */ Event_, Boolean]] = js.native
+  var onClick: js.UndefOr[js.Function2[/* dtnode */ DynaTreeNode, /* event */ Event, Boolean]] = js.native
    // Callback(dtnode) before a node is rendered. Return a HTML string to override.
   var onCreate: js.UndefOr[js.Function2[/* dtnode */ DynaTreeNode, /* nodeSpan */ js.Any, Unit]] = js.native
    // Callback(dtnode) when a lazy node is expanded for the first time.
   var onCustomRender: js.UndefOr[js.Function1[/* dtnode */ DynaTreeNode, Unit]] = js.native
    // null: generate focus, expand, activate, select events.
-  var onDblClick: js.UndefOr[js.Function2[/* dtnode */ DynaTreeNode, /* event */ Event_, Boolean]] = js.native
+  var onDblClick: js.UndefOr[js.Function2[/* dtnode */ DynaTreeNode, /* event */ Event, Boolean]] = js.native
    // Callback(dtnode) when a node is activated.
   var onDeactivate: js.UndefOr[js.Function1[/* dtnode */ DynaTreeNode, Unit]] = js.native
    // Callback(flag, dtnode) when a node is (de)selected.
   var onExpand: js.UndefOr[js.Function2[/* flag */ String, /* dtnode */ DynaTreeNode, Unit]] = js.native
    // (No default actions.)
-  var onFocus: js.UndefOr[js.Function2[/* dtnode */ DynaTreeNode, /* event */ Event_, Boolean]] = js.native
+  var onFocus: js.UndefOr[js.Function2[/* dtnode */ DynaTreeNode, /* event */ Event, Boolean]] = js.native
    // (No default actions.)
-  var onKeydown: js.UndefOr[js.Function2[/* dtnode */ DynaTreeNode, /* event */ Event_, Boolean]] = js.native
+  var onKeydown: js.UndefOr[js.Function2[/* dtnode */ DynaTreeNode, /* event */ Event, Boolean]] = js.native
    // null: generate keyboard navigation (focus, expand, activate).
-  var onKeypress: js.UndefOr[js.Function2[/* dtnode */ DynaTreeNode, /* event */ Event_, Boolean]] = js.native
+  var onKeypress: js.UndefOr[js.Function2[/* dtnode */ DynaTreeNode, /* event */ Event, Boolean]] = js.native
    // Callback(flag, dtnode) when a node is expanded/collapsed.
   var onLazyRead: js.UndefOr[js.Function1[/* dtnode */ DynaTreeNode, Unit]] = js.native
   // Callback(flag, dtnode) before a node is expanded/collpsed.
@@ -391,7 +391,7 @@ object DynatreeOptions {
         ret
     }
     @scala.inline
-    def withOnBlur(value: (/* dtnode */ DynaTreeNode, /* event */ Event_) => Boolean): Self = {
+    def withOnBlur(value: (/* dtnode */ DynaTreeNode, /* event */ Event) => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction2(value))
         ret
@@ -403,7 +403,7 @@ object DynatreeOptions {
         ret
     }
     @scala.inline
-    def withOnClick(value: (/* dtnode */ DynaTreeNode, /* event */ Event_) => Boolean): Self = {
+    def withOnClick(value: (/* dtnode */ DynaTreeNode, /* event */ Event) => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction2(value))
         ret
@@ -439,7 +439,7 @@ object DynatreeOptions {
         ret
     }
     @scala.inline
-    def withOnDblClick(value: (/* dtnode */ DynaTreeNode, /* event */ Event_) => Boolean): Self = {
+    def withOnDblClick(value: (/* dtnode */ DynaTreeNode, /* event */ Event) => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDblClick")(js.Any.fromFunction2(value))
         ret
@@ -475,7 +475,7 @@ object DynatreeOptions {
         ret
     }
     @scala.inline
-    def withOnFocus(value: (/* dtnode */ DynaTreeNode, /* event */ Event_) => Boolean): Self = {
+    def withOnFocus(value: (/* dtnode */ DynaTreeNode, /* event */ Event) => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction2(value))
         ret
@@ -487,7 +487,7 @@ object DynatreeOptions {
         ret
     }
     @scala.inline
-    def withOnKeydown(value: (/* dtnode */ DynaTreeNode, /* event */ Event_) => Boolean): Self = {
+    def withOnKeydown(value: (/* dtnode */ DynaTreeNode, /* event */ Event) => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onKeydown")(js.Any.fromFunction2(value))
         ret
@@ -499,7 +499,7 @@ object DynatreeOptions {
         ret
     }
     @scala.inline
-    def withOnKeypress(value: (/* dtnode */ DynaTreeNode, /* event */ Event_) => Boolean): Self = {
+    def withOnKeypress(value: (/* dtnode */ DynaTreeNode, /* event */ Event) => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onKeypress")(js.Any.fromFunction2(value))
         ret

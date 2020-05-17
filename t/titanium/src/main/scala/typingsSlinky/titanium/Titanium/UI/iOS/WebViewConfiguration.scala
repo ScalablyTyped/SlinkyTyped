@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * A collection of properties used to initialize a web view.
 			 */
-@JSGlobal("Titanium.UI.iOS.WebViewConfiguration")
 @js.native
-class WebViewConfiguration () extends Proxy {
+trait WebViewConfiguration extends Proxy {
   /**
   				 * A Boolean value indicating whether AirPlay is allowed.
   				 */

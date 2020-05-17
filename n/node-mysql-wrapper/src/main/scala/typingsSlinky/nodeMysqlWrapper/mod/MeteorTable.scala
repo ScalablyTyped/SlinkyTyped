@@ -1,7 +1,7 @@
 package typingsSlinky.nodeMysqlWrapper.mod
 
-import typingsSlinky.nodeMysqlWrapper.AnonMulti
 import typingsSlinky.nodeMysqlWrapper.Mongo.Collection
+import typingsSlinky.nodeMysqlWrapper.anon.Multi
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ class MeteorTable[T] protected () extends js.Object {
   def remove(selector: js.Any): DeleteAnswer = js.native
   def remove(selector: js.Any, callback: js.Function0[DeleteAnswer]): DeleteAnswer = js.native
   def update(selector: js.Any, modifier: js.Any): Double = js.native
-  def update(selector: js.Any, modifier: js.Any, options: AnonMulti): Double = js.native
-  def update(selector: js.Any, modifier: js.Any, options: AnonMulti, callback: js.Function1[/* result */ T, _]): Double = js.native
+  def update(selector: js.Any, modifier: js.Any, options: Multi): Double = js.native
+  def update(selector: js.Any, modifier: js.Any, options: Multi, callback: js.Function1[/* result */ T, _]): Double = js.native
 }
 

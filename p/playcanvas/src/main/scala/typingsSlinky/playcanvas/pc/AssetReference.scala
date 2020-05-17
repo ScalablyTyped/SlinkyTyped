@@ -1,6 +1,5 @@
 package typingsSlinky.playcanvas.pc
 
-import typingsSlinky.playcanvas.AnonAdd
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,13 +28,8 @@ import scala.scalajs.js.annotation._
   * }, this);
   * reference.id = this.textureAsset.id;
   */
-@JSGlobal("pc.AssetReference")
 @js.native
-class AssetReference protected () extends js.Object {
-  def this(propertyName: String, parent: js.Any, registry: AssetRegistry, callbacks: AnonAdd) = this()
-  def this(propertyName: String, parent: Asset, registry: AssetRegistry, callbacks: AnonAdd) = this()
-  def this(propertyName: String, parent: js.Any, registry: AssetRegistry, callbacks: AnonAdd, scope: js.Any) = this()
-  def this(propertyName: String, parent: Asset, registry: AssetRegistry, callbacks: AnonAdd, scope: js.Any) = this()
+trait AssetReference extends js.Object {
   /**
     * Get or set the asset id which this references. One of either id or url must be set to initialize an asset reference.
     */
@@ -44,5 +38,33 @@ class AssetReference protected () extends js.Object {
     * Get or set the asset url which this references. One of either id or url must be called to initialize an asset reference.
     */
   var url: String = js.native
+}
+
+object AssetReference {
+  @scala.inline
+  def apply(id: Double, url: String): AssetReference = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AssetReference]
+  }
+  @scala.inline
+  implicit class AssetReferenceOps[Self <: AssetReference] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

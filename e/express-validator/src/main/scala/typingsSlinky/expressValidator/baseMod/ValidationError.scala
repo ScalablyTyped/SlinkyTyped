@@ -1,32 +1,20 @@
 package typingsSlinky.expressValidator.baseMod
 
-import typingsSlinky.expressValidator.expressValidatorStrings._error
+import typingsSlinky.expressValidator.anon.Msg
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.expressValidator.AnonLocation
-  - typingsSlinky.expressValidator.AnonMsg
+  - typingsSlinky.expressValidator.anon.Location
+  - typingsSlinky.expressValidator.anon.Msg
 */
 trait ValidationError extends js.Object
 
 object ValidationError {
   @scala.inline
-  def AnonLocation(
-    msg: js.Any,
-    nestedErrors: js.Array[
-      /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias express-validator.express-validator/src/base.ValidationError */ js.Object
-    ],
-    param: _error
-  ): ValidationError = {
-    val __obj = js.Dynamic.literal(msg = msg.asInstanceOf[js.Any], nestedErrors = nestedErrors.asInstanceOf[js.Any], param = param.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ValidationError]
-  }
+  implicit def apply(value: typingsSlinky.expressValidator.anon.Location): ValidationError = value.asInstanceOf[ValidationError]
   @scala.inline
-  def AnonMsg(location: Location, msg: js.Any, param: String, value: js.Any): ValidationError = {
-    val __obj = js.Dynamic.literal(location = location.asInstanceOf[js.Any], msg = msg.asInstanceOf[js.Any], param = param.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ValidationError]
-  }
+  implicit def apply(value: Msg): ValidationError = value.asInstanceOf[ValidationError]
 }
 

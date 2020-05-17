@@ -1,18 +1,18 @@
 package typingsSlinky.ipp.mod
 
-import typingsSlinky.ipp.AnonAttributescharset
+import typingsSlinky.ipp.anon.Attributescharset
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SimpleRequest extends js.Object {
-  var `operation-attributes-tag`: AnonAttributescharset = js.native
+  var `operation-attributes-tag`: Attributescharset = js.native
 }
 
 object SimpleRequest {
   @scala.inline
-  def apply(`operation-attributes-tag`: AnonAttributescharset): SimpleRequest = {
+  def apply(`operation-attributes-tag`: Attributescharset): SimpleRequest = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("operation-attributes-tag")(`operation-attributes-tag`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SimpleRequest]
@@ -24,7 +24,7 @@ object SimpleRequest {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def `withOperation-attributes-tag`(value: AnonAttributescharset): Self = {
+    def `withOperation-attributes-tag`(value: Attributescharset): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("operation-attributes-tag")(value.asInstanceOf[js.Any])
         ret

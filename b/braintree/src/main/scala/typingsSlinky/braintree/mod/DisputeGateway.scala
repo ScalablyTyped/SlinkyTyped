@@ -1,7 +1,7 @@
 package typingsSlinky.braintree.mod
 
-import typingsSlinky.braintree.AnonCategory
-import typingsSlinky.braintree.AnonContent
+import typingsSlinky.braintree.anon.Category
+import typingsSlinky.braintree.anon.Content
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,8 +10,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DisputeGateway extends js.Object {
   def accept(disputeId: String): js.Promise[ValidatedResponse[Dispute]] = js.native
-  def addFileEvidence(disputeId: String, evidence: AnonCategory): js.Promise[ValidatedResponse[Evidence]] = js.native
-  def addTextEvidence(disputeId: String, evidence: AnonContent): js.Promise[ValidatedResponse[Evidence]] = js.native
+  def addFileEvidence(disputeId: String, evidence: Category): js.Promise[ValidatedResponse[Evidence]] = js.native
+  def addTextEvidence(disputeId: String, evidence: Content): js.Promise[ValidatedResponse[Evidence]] = js.native
   def finalize(disputeId: String): js.Promise[ValidatedResponse[Dispute]] = js.native
   def find(disputeId: String): js.Promise[Dispute] = js.native
   def removeEvidence(disputeId: String, evidenceId: String): js.Promise[ValidatedResponse[Dispute]] = js.native
@@ -22,8 +22,8 @@ object DisputeGateway {
   @scala.inline
   def apply(
     accept: String => js.Promise[ValidatedResponse[Dispute]],
-    addFileEvidence: (String, AnonCategory) => js.Promise[ValidatedResponse[Evidence]],
-    addTextEvidence: (String, AnonContent) => js.Promise[ValidatedResponse[Evidence]],
+    addFileEvidence: (String, Category) => js.Promise[ValidatedResponse[Evidence]],
+    addTextEvidence: (String, Content) => js.Promise[ValidatedResponse[Evidence]],
     finalize: String => js.Promise[ValidatedResponse[Dispute]],
     find: String => js.Promise[Dispute],
     removeEvidence: (String, String) => js.Promise[ValidatedResponse[Dispute]],
@@ -45,13 +45,13 @@ object DisputeGateway {
         ret
     }
     @scala.inline
-    def withAddFileEvidence(value: (String, AnonCategory) => js.Promise[ValidatedResponse[Evidence]]): Self = {
+    def withAddFileEvidence(value: (String, Category) => js.Promise[ValidatedResponse[Evidence]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addFileEvidence")(js.Any.fromFunction2(value))
         ret
     }
     @scala.inline
-    def withAddTextEvidence(value: (String, AnonContent) => js.Promise[ValidatedResponse[Evidence]]): Self = {
+    def withAddTextEvidence(value: (String, Content) => js.Promise[ValidatedResponse[Evidence]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addTextEvidence")(js.Any.fromFunction2(value))
         ret

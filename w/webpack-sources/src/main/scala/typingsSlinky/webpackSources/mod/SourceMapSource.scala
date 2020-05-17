@@ -3,7 +3,7 @@ package typingsSlinky.webpackSources.mod
 import typingsSlinky.sourceListMap.mod.SourceListMap
 import typingsSlinky.sourceMap.mod.RawSourceMap
 import typingsSlinky.sourceMap.mod.SourceMapGenerator
-import typingsSlinky.webpackSources.AnonModule
+import typingsSlinky.webpackSources.anon.Module
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,6 +52,6 @@ class SourceMapSource protected ()
   var _originalSource: String = js.native
   var _sourceMap: SourceMapGenerator | RawSourceMap = js.native
   var _value: String = js.native
-  def listMap(options: AnonModule): SourceListMap = js.native
+  def listMap(options: Module): SourceListMap = js.native
 }
 

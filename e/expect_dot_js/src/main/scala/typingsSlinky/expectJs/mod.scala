@@ -1,6 +1,6 @@
 package typingsSlinky.expectJs
 
-import typingsSlinky.expectJs.Expect_.Root
+import typingsSlinky.expectJs.Expect.Root
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

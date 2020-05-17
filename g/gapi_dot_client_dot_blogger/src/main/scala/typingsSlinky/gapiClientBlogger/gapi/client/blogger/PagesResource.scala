@@ -1,11 +1,11 @@
 package typingsSlinky.gapiClientBlogger.gapi.client.blogger
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientBlogger.AnonIsDraft
-import typingsSlinky.gapiClientBlogger.AnonMaxResults
-import typingsSlinky.gapiClientBlogger.AnonPageId
-import typingsSlinky.gapiClientBlogger.AnonPrettyPrint
-import typingsSlinky.gapiClientBlogger.AnonPublish
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientBlogger.anon.IsDraft
+import typingsSlinky.gapiClientBlogger.anon.MaxResults
+import typingsSlinky.gapiClientBlogger.anon.PageId
+import typingsSlinky.gapiClientBlogger.anon.PrettyPrint
+import typingsSlinky.gapiClientBlogger.anon.Publish
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,34 +13,34 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PagesResource extends js.Object {
   /** Delete a page by ID. */
-  def delete(request: AnonPageId): Request_[Unit] = js.native
+  def delete(request: PageId): Request[Unit] = js.native
   /** Gets one blog page by ID. */
-  def get(request: AnonPrettyPrint): Request_[Page] = js.native
+  def get(request: PrettyPrint): Request[Page] = js.native
   /** Add a page. */
-  def insert(request: AnonIsDraft): Request_[Page] = js.native
+  def insert(request: IsDraft): Request[Page] = js.native
   /** Retrieves the pages for a blog, optionally including non-LIVE statuses. */
-  def list(request: AnonMaxResults): Request_[PageList] = js.native
+  def list(request: MaxResults): Request[PageList] = js.native
   /** Update a page. This method supports patch semantics. */
-  def patch(request: AnonPublish): Request_[Page] = js.native
+  def patch(request: Publish): Request[Page] = js.native
   /** Publishes a draft page. */
-  def publish(request: AnonPageId): Request_[Page] = js.native
+  def publish(request: PageId): Request[Page] = js.native
   /** Revert a published or scheduled page to draft state. */
-  def revert(request: AnonPageId): Request_[Page] = js.native
+  def revert(request: PageId): Request[Page] = js.native
   /** Update a page. */
-  def update(request: AnonPublish): Request_[Page] = js.native
+  def update(request: Publish): Request[Page] = js.native
 }
 
 object PagesResource {
   @scala.inline
   def apply(
-    delete: AnonPageId => Request_[Unit],
-    get: AnonPrettyPrint => Request_[Page],
-    insert: AnonIsDraft => Request_[Page],
-    list: AnonMaxResults => Request_[PageList],
-    patch: AnonPublish => Request_[Page],
-    publish: AnonPageId => Request_[Page],
-    revert: AnonPageId => Request_[Page],
-    update: AnonPublish => Request_[Page]
+    delete: PageId => Request[Unit],
+    get: PrettyPrint => Request[Page],
+    insert: IsDraft => Request[Page],
+    list: MaxResults => Request[PageList],
+    patch: Publish => Request[Page],
+    publish: PageId => Request[Page],
+    revert: PageId => Request[Page],
+    update: Publish => Request[Page]
   ): PagesResource = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), publish = js.Any.fromFunction1(publish), revert = js.Any.fromFunction1(revert), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[PagesResource]
@@ -52,49 +52,49 @@ object PagesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDelete(value: AnonPageId => Request_[Unit]): Self = {
+    def withDelete(value: PageId => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonPrettyPrint => Request_[Page]): Self = {
+    def withGet(value: PrettyPrint => Request[Page]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withInsert(value: AnonIsDraft => Request_[Page]): Self = {
+    def withInsert(value: IsDraft => Request[Page]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonMaxResults => Request_[PageList]): Self = {
+    def withList(value: MaxResults => Request[PageList]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPatch(value: AnonPublish => Request_[Page]): Self = {
+    def withPatch(value: Publish => Request[Page]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPublish(value: AnonPageId => Request_[Page]): Self = {
+    def withPublish(value: PageId => Request[Page]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("publish")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withRevert(value: AnonPageId => Request_[Page]): Self = {
+    def withRevert(value: PageId => Request[Page]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("revert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonPublish => Request_[Page]): Self = {
+    def withUpdate(value: Publish => Request[Page]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

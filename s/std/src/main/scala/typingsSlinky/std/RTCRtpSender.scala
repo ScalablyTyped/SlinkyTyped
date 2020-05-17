@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,11 +17,5 @@ trait RTCRtpSender extends js.Object {
   def replaceTrack(withTrack: org.scalajs.dom.experimental.mediastream.MediaStreamTrack): js.Promise[Unit] = js.native
   def setParameters(parameters: RTCRtpSendParameters): js.Promise[Unit] = js.native
   def setStreams(streams: org.scalajs.dom.experimental.mediastream.MediaStream*): Unit = js.native
-}
-
-@JSGlobal("RTCRtpSender")
-@js.native
-object RTCRtpSender extends Instantiable0[RTCRtpSender] {
-  def getCapabilities(kind: java.lang.String): RTCRtpCapabilities | Null = js.native
 }
 

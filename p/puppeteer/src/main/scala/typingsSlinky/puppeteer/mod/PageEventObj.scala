@@ -1,6 +1,5 @@
 package typingsSlinky.puppeteer.mod
 
-import typingsSlinky.puppeteer.AnonMetrics
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +32,7 @@ trait PageEventObj extends js.Object {
     * Emitted when the JavaScript code makes a call to `console.timeStamp`.
     * For the list of metrics see `page.metrics`.
     */
-  var metrics: AnonMetrics = js.native
+  var metrics: typingsSlinky.puppeteer.anon.Metrics = js.native
   /** Emitted when an uncaught exception happens within the page. */
   var pageerror: js.Error = js.native
   /** Emitted when the page opens a new tab or window. */
@@ -64,7 +63,7 @@ object PageEventObj {
     frameattached: Frame,
     framedetached: Frame,
     framenavigated: Frame,
-    metrics: AnonMetrics,
+    metrics: typingsSlinky.puppeteer.anon.Metrics,
     pageerror: js.Error,
     popup: Page,
     request: Request,
@@ -120,7 +119,7 @@ object PageEventObj {
         ret
     }
     @scala.inline
-    def withMetrics(value: AnonMetrics): Self = {
+    def withMetrics(value: typingsSlinky.puppeteer.anon.Metrics): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(value.asInstanceOf[js.Any])
         ret
@@ -171,30 +170,6 @@ object PageEventObj {
     def withWorkerdestroyed(value: Worker): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("workerdestroyed")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withClose(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutClose: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoad(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoad: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.undefined)
         ret
     }
   }

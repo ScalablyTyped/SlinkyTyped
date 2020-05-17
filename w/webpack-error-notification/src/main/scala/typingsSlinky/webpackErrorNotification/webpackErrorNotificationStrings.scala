@@ -1,16 +1,16 @@
 package typingsSlinky.webpackErrorNotification
 
-import typingsSlinky.webpackErrorNotification.mod._Strategy
+import typingsSlinky.webpackErrorNotification.mod.Strategy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object webpackErrorNotificationStrings {
   @js.native
-  sealed trait darwin extends _Strategy
+  sealed trait darwin extends Strategy
   
   @js.native
-  sealed trait linux extends _Strategy
+  sealed trait linux extends Strategy
   
   @scala.inline
   def darwin: darwin = "darwin".asInstanceOf[darwin]

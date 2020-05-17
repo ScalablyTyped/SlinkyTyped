@@ -1,7 +1,6 @@
 package typingsSlinky.sipJs.outgoingRequestMessageMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.sipJs.AnonBody
 import typingsSlinky.sipJs.bodyMod.Body
 import typingsSlinky.sipJs.nameAddrHeaderMod.NameAddrHeader
 import typingsSlinky.sipJs.uriMod.URI
@@ -31,7 +30,7 @@ class OutgoingRequestMessage protected () extends js.Object {
     extraHeaders: js.Array[String],
     body: Body
   ) = this()
-  var body: js.UndefOr[AnonBody] = js.native
+  var body: js.UndefOr[typingsSlinky.sipJs.anon.Body] = js.native
   var branch: js.UndefOr[String] = js.native
   val callId: String = js.native
   var cseq: Double = js.native

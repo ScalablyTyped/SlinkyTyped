@@ -1,7 +1,7 @@
 package typingsSlinky.shopifyPrime.priceRuleMod
 
-import typingsSlinky.shopifyPrime.AnonGreaterthanorequalto
-import typingsSlinky.shopifyPrime.AnonLessthanorequalto
+import typingsSlinky.shopifyPrime.anon.Greaterthanorequalto
+import typingsSlinky.shopifyPrime.anon.Lessthanorequalto
 import typingsSlinky.shopifyPrime.baseMod.ShopifyObject
 import typingsSlinky.shopifyPrime.shopifyPrimeStrings.across
 import typingsSlinky.shopifyPrime.shopifyPrimeStrings.all
@@ -72,11 +72,11 @@ trait PriceRule extends ShopifyObject {
   /**
     * Prerequisite shipping cost range.Can only be used when target_type is shipping_line.
     */
-  var prerequisite_shipping_price_range: js.UndefOr[AnonLessthanorequalto] = js.native
+  var prerequisite_shipping_price_range: js.UndefOr[Lessthanorequalto] = js.native
   /**
     * Prerequisite cart subtotal range.
     */
-  var prerequisite_subtotal_range: js.UndefOr[AnonGreaterthanorequalto] = js.native
+  var prerequisite_subtotal_range: js.UndefOr[Greaterthanorequalto] = js.native
   /**
     * The date and time when the price rule starts.
     */
@@ -274,7 +274,7 @@ object PriceRule {
         ret
     }
     @scala.inline
-    def withPrerequisite_shipping_price_range(value: AnonLessthanorequalto): Self = {
+    def withPrerequisite_shipping_price_range(value: Lessthanorequalto): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("prerequisite_shipping_price_range")(value.asInstanceOf[js.Any])
         ret
@@ -286,7 +286,7 @@ object PriceRule {
         ret
     }
     @scala.inline
-    def withPrerequisite_subtotal_range(value: AnonGreaterthanorequalto): Self = {
+    def withPrerequisite_subtotal_range(value: Greaterthanorequalto): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("prerequisite_subtotal_range")(value.asInstanceOf[js.Any])
         ret

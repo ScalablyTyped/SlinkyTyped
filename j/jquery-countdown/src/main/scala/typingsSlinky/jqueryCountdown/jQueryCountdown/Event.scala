@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Event
-  extends typingsSlinky.jquery.JQuery_.Event {
+  extends typingsSlinky.jquery.JQuery.Event {
   /**
     * Passed away the final date?
     */

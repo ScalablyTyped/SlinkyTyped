@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TSInterfaceBody_
   extends BaseNode
-     with _Node {
+     with Node {
   var body: js.Array[TSTypeElement] = js.native
   @JSName("type")
   var type_TSInterfaceBody_ : TSInterfaceBody = js.native

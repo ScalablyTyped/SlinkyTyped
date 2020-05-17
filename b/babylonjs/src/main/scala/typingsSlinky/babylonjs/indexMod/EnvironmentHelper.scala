@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.indexMod
 
-import typingsSlinky.babylonjs.PartialIEnvironmentHelper
+import typingsSlinky.babylonjs.anon.PartialIEnvironmentHelper
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

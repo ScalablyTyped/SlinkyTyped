@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents the client-side equivalent of the FinancialIndicatorPoint class.
   */
-@JSGlobal("ASPxClientFinancialIndicatorPoint")
 @js.native
-class ASPxClientFinancialIndicatorPoint () extends ASPxClientWebChartElement {
+trait ASPxClientFinancialIndicatorPoint extends ASPxClientWebChartElement {
   /**
     * Gets the argument of the financial indicator's point.
     */
@@ -22,5 +21,44 @@ class ASPxClientFinancialIndicatorPoint () extends ASPxClientWebChartElement {
     * Gets a value, indicating how the value of a financial indicator's point is obtained.
     */
   var valueLevel: String = js.native
+}
+
+object ASPxClientFinancialIndicatorPoint {
+  @scala.inline
+  def apply(
+    argument: js.Any,
+    chart: ASPxClientWebChart,
+    financialIndicator: ASPxClientFinancialIndicator,
+    valueLevel: String
+  ): ASPxClientFinancialIndicatorPoint = {
+    val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any], chart = chart.asInstanceOf[js.Any], financialIndicator = financialIndicator.asInstanceOf[js.Any], valueLevel = valueLevel.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientFinancialIndicatorPoint]
+  }
+  @scala.inline
+  implicit class ASPxClientFinancialIndicatorPointOps[Self <: ASPxClientFinancialIndicatorPoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArgument(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("argument")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFinancialIndicator(value: ASPxClientFinancialIndicator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("financialIndicator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValueLevel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

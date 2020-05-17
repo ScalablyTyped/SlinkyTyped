@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientPlusdomains.gapi.client.plusdomains
 
-import typingsSlinky.gapiClientPlusdomains.AnonTotalItems
+import typingsSlinky.gapiClientPlusdomains.anon.TotalItems
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait Circle extends js.Object {
   /** Identifies this resource as a circle. Value: "plus#circle". */
   var kind: js.UndefOr[String] = js.native
   /** The people in this circle. */
-  var people: js.UndefOr[AnonTotalItems] = js.native
+  var people: js.UndefOr[TotalItems] = js.native
   /** Link to this circle resource */
   var selfLink: js.UndefOr[String] = js.native
 }
@@ -96,7 +96,7 @@ object Circle {
         ret
     }
     @scala.inline
-    def withPeople(value: AnonTotalItems): Self = {
+    def withPeople(value: TotalItems): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("people")(value.asInstanceOf[js.Any])
         ret

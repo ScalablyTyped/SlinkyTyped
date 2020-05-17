@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientTaskqueue.gapi.client.taskqueue
 
-import typingsSlinky.gapiClientTaskqueue.AnonAdminEmails
-import typingsSlinky.gapiClientTaskqueue.AnonLeasedLastHour
+import typingsSlinky.gapiClientTaskqueue.anon.AdminEmails
+import typingsSlinky.gapiClientTaskqueue.anon.LeasedLastHour
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TaskQueue extends js.Object {
   /** ACLs that are applicable to this TaskQueue object. */
-  var acl: js.UndefOr[AnonAdminEmails] = js.native
+  var acl: js.UndefOr[AdminEmails] = js.native
   /** Name of the taskqueue. */
   var id: js.UndefOr[String] = js.native
   /** The kind of REST object returned, in this case taskqueue. */
@@ -17,7 +17,7 @@ trait TaskQueue extends js.Object {
   /** The number of times we should lease out tasks before giving up on them. If unset we lease them out forever until a worker deletes the task. */
   var maxLeases: js.UndefOr[Double] = js.native
   /** Statistics for the TaskQueue object in question. */
-  var stats: js.UndefOr[AnonLeasedLastHour] = js.native
+  var stats: js.UndefOr[LeasedLastHour] = js.native
 }
 
 object TaskQueue {
@@ -33,7 +33,7 @@ object TaskQueue {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAcl(value: AnonAdminEmails): Self = {
+    def withAcl(value: AdminEmails): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("acl")(value.asInstanceOf[js.Any])
         ret
@@ -81,7 +81,7 @@ object TaskQueue {
         ret
     }
     @scala.inline
-    def withStats(value: AnonLeasedLastHour): Self = {
+    def withStats(value: LeasedLastHour): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
         ret

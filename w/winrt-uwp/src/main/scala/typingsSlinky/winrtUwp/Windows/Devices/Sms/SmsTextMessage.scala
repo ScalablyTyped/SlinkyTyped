@@ -6,10 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Manages a decoded SMS text message, providing direct access to the plain text body of the message, as well as key header properties, such as time stamp. */
-@JSGlobal("Windows.Devices.Sms.SmsTextMessage")
 @js.native
-/** Creates an instance of the SmsTextMessage class. */
-class SmsTextMessage () extends js.Object {
+trait SmsTextMessage extends js.Object {
   /** Specifies the plain text body of the message. */
   var body: String = js.native
   /** Specifies the encoding type that has been set to use when sending this message. */
@@ -38,22 +36,97 @@ class SmsTextMessage () extends js.Object {
   def toBinaryMessages(format: SmsDataFormat): IVectorView[ISmsBinaryMessage] = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Devices.Sms.SmsTextMessage")
-@js.native
-object SmsTextMessage extends js.Object {
-  /**
-    * Decodes a binary message and places the results in a new instance of a text message. This method represents the binary message as a reference to a buffer of bytes and a selection of how the buffer is encoded. Therefore, it can be used when the message did not originate directly from the device or as an instance of an SmsBinaryMessage class.
-    * @param format An SmsDataFormat enumerated value that identifies the format of a particular protocol description unit (PDU) buffer.
-    * @param value An array of bytes containing the binary data to decode.
-    * @return A new SmsTextMessage object if the decoding was successful.
-    */
-  def fromBinaryData(format: SmsDataFormat, value: js.Array[Double]): SmsTextMessage = js.native
-  /**
-    * Reads a binary message and decodes it. The results are placed in a new instance of a text message.
-    * @param binaryMessage An instance of a binary message to decode.
-    * @return A new SmsTextMessage object.
-    */
-  def fromBinaryMessage(binaryMessage: SmsBinaryMessage): SmsTextMessage = js.native
+object SmsTextMessage {
+  @scala.inline
+  def apply(
+    body: String,
+    encoding: SmsEncoding,
+    from: String,
+    id: Double,
+    messageClass: SmsMessageClass,
+    partCount: Double,
+    partNumber: Double,
+    partReferenceId: Double,
+    timestamp: js.Date,
+    to: String,
+    toBinaryMessages: SmsDataFormat => IVectorView[ISmsBinaryMessage]
+  ): SmsTextMessage = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], encoding = encoding.asInstanceOf[js.Any], from = from.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], messageClass = messageClass.asInstanceOf[js.Any], partCount = partCount.asInstanceOf[js.Any], partNumber = partNumber.asInstanceOf[js.Any], partReferenceId = partReferenceId.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any], toBinaryMessages = js.Any.fromFunction1(toBinaryMessages))
+    __obj.asInstanceOf[SmsTextMessage]
+  }
+  @scala.inline
+  implicit class SmsTextMessageOps[Self <: SmsTextMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBody(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEncoding(value: SmsEncoding): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFrom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessageClass(value: SmsMessageClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPartCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPartNumber(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPartReferenceId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partReferenceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTo(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToBinaryMessages(value: SmsDataFormat => IVectorView[ISmsBinaryMessage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toBinaryMessages")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

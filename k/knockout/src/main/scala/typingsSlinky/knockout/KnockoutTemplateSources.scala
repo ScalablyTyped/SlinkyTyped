@@ -1,18 +1,20 @@
 package typingsSlinky.knockout
 
+import typingsSlinky.knockout.anon.Instantiable
+import typingsSlinky.knockout.anon.InstantiableKnockoutTemplateAnonymous
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait KnockoutTemplateSources extends js.Object {
-  var anonymousTemplate: AnonInstantiableKnockoutTemplateAnonymous = js.native
-  var domElement: AnonInstantiable = js.native
+  var anonymousTemplate: InstantiableKnockoutTemplateAnonymous = js.native
+  var domElement: Instantiable = js.native
 }
 
 object KnockoutTemplateSources {
   @scala.inline
-  def apply(anonymousTemplate: AnonInstantiableKnockoutTemplateAnonymous, domElement: AnonInstantiable): KnockoutTemplateSources = {
+  def apply(anonymousTemplate: InstantiableKnockoutTemplateAnonymous, domElement: Instantiable): KnockoutTemplateSources = {
     val __obj = js.Dynamic.literal(anonymousTemplate = anonymousTemplate.asInstanceOf[js.Any], domElement = domElement.asInstanceOf[js.Any])
     __obj.asInstanceOf[KnockoutTemplateSources]
   }
@@ -23,13 +25,13 @@ object KnockoutTemplateSources {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAnonymousTemplate(value: AnonInstantiableKnockoutTemplateAnonymous): Self = {
+    def withAnonymousTemplate(value: InstantiableKnockoutTemplateAnonymous): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("anonymousTemplate")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withDomElement(value: AnonInstantiable): Self = {
+    def withDomElement(value: Instantiable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("domElement")(value.asInstanceOf[js.Any])
         ret

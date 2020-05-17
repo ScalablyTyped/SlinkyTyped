@@ -1,19 +1,19 @@
 package typingsSlinky.raygun.mod.raygun
 
-import typingsSlinky.raygun.AnonClient
+import typingsSlinky.raygun.anon.Client
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait RaygunPayload extends js.Object {
-  var details: AnonClient = js.native
+  var details: Client = js.native
   var occurredOn: js.Date = js.native
 }
 
 object RaygunPayload {
   @scala.inline
-  def apply(details: AnonClient, occurredOn: js.Date): RaygunPayload = {
+  def apply(details: Client, occurredOn: js.Date): RaygunPayload = {
     val __obj = js.Dynamic.literal(details = details.asInstanceOf[js.Any], occurredOn = occurredOn.asInstanceOf[js.Any])
     __obj.asInstanceOf[RaygunPayload]
   }
@@ -24,7 +24,7 @@ object RaygunPayload {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDetails(value: AnonClient): Self = {
+    def withDetails(value: Client): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
         ret

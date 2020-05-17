@@ -1,6 +1,5 @@
 package typingsSlinky.estree.mod
 
-import typingsSlinky.estree.AnonFlags
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,16 +13,8 @@ import scala.scalajs.js.annotation._
 
 object Literal {
   @scala.inline
-  def SimpleLiteral(`type`: typingsSlinky.estree.estreeStrings.Literal): Literal = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Literal]
-  }
+  implicit def apply(value: RegExpLiteral): Literal = value.asInstanceOf[Literal]
   @scala.inline
-  def RegExpLiteral(regex: AnonFlags, `type`: typingsSlinky.estree.estreeStrings.Literal): Literal = {
-    val __obj = js.Dynamic.literal(regex = regex.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Literal]
-  }
+  implicit def apply(value: SimpleLiteral): Literal = value.asInstanceOf[Literal]
 }
 

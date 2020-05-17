@@ -1,7 +1,7 @@
 package typingsSlinky.cassandraDriver.metadataMod.metadata
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.cassandraDriver.AnonDictoption
+import typingsSlinky.cassandraDriver.anon.Dictoption
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ object MaterializedView {
     comment: String,
     compactionClass: String,
     compactionOptions: StringDictionary[js.Any],
-    compression: AnonDictoption,
+    compression: Dictoption,
     defaultTtl: Double,
     extensions: StringDictionary[js.Any],
     gcGraceSeconds: Double,

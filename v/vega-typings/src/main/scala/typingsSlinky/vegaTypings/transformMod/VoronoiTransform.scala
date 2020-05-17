@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait VoronoiTransform extends _Transforms {
+trait VoronoiTransform extends Transforms {
   var as: js.UndefOr[String | SignalRef] = js.native
   var extent: js.UndefOr[(Vector2[(Vector2[Double | SignalRef]) | SignalRef]) | SignalRef] = js.native
   var size: js.UndefOr[(Vector2[Double | SignalRef]) | SignalRef] = js.native

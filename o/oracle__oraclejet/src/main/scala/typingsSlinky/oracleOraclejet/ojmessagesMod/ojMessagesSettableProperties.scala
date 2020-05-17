@@ -1,6 +1,6 @@
 package typingsSlinky.oracleOraclejet.ojmessagesMod
 
-import typingsSlinky.oracleOraclejet.AnonAriaLiveRegion
+import typingsSlinky.oracleOraclejet.anon.AriaLiveRegion
 import typingsSlinky.oracleOraclejet.mod.JetSettableProperties
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojmessageMod.ojMessage.DisplayOptions
@@ -18,12 +18,12 @@ trait ojMessagesSettableProperties extends JetSettableProperties {
   var displayOptions: DisplayOptions = js.native
   var messages: js.Array[Message] | Null | (DataProvider[_, Message]) = js.native
   var position: Position | Null = js.native
-  var translations: AnonAriaLiveRegion = js.native
+  var translations: AriaLiveRegion = js.native
 }
 
 object ojMessagesSettableProperties {
   @scala.inline
-  def apply(display: general | notification, displayOptions: DisplayOptions, translations: AnonAriaLiveRegion): ojMessagesSettableProperties = {
+  def apply(display: general | notification, displayOptions: DisplayOptions, translations: AriaLiveRegion): ojMessagesSettableProperties = {
     val __obj = js.Dynamic.literal(display = display.asInstanceOf[js.Any], displayOptions = displayOptions.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojMessagesSettableProperties]
   }
@@ -46,7 +46,7 @@ object ojMessagesSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonAriaLiveRegion): Self = {
+    def withTranslations(value: AriaLiveRegion): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

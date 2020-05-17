@@ -1,9 +1,9 @@
 package typingsSlinky.findPackageJson.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.findPackageJson.AnonEmail
-import typingsSlinky.findPackageJson.AnonType
-import typingsSlinky.findPackageJson.AnonUrl
+import typingsSlinky.findPackageJson.anon.Email
+import typingsSlinky.findPackageJson.anon.Type
+import typingsSlinky.findPackageJson.anon.Url
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait Package
   extends /* k */ StringDictionary[js.Any] {
   var author: js.UndefOr[Person] = js.native
   var bin: js.UndefOr[StringDictionary[String]] = js.native
-  var bugs: js.UndefOr[AnonEmail | AnonUrl] = js.native
+  var bugs: js.UndefOr[Email | Url] = js.native
   var bundleDependencies: js.UndefOr[StringDictionary[String]] = js.native
   var contributors: js.UndefOr[js.Array[Person]] = js.native
   var dependencies: js.UndefOr[StringDictionary[String]] = js.native
@@ -29,7 +29,7 @@ trait Package
   var name: js.UndefOr[String] = js.native
   var optionalDependencies: js.UndefOr[StringDictionary[String]] = js.native
   var readme: js.UndefOr[String] = js.native
-  var repository: js.UndefOr[AnonType] = js.native
+  var repository: js.UndefOr[Type] = js.native
   var scripts: js.UndefOr[StringDictionary[String]] = js.native
   var version: js.UndefOr[String] = js.native
 }
@@ -71,7 +71,7 @@ object Package {
         ret
     }
     @scala.inline
-    def withBugs(value: AnonEmail | AnonUrl): Self = {
+    def withBugs(value: Email | Url): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bugs")(value.asInstanceOf[js.Any])
         ret
@@ -263,7 +263,7 @@ object Package {
         ret
     }
     @scala.inline
-    def withRepository(value: AnonType): Self = {
+    def withRepository(value: Type): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(value.asInstanceOf[js.Any])
         ret

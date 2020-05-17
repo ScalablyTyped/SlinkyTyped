@@ -7,38 +7,38 @@ import scala.scalajs.js.annotation._
 object html5plusNumbers {
   @js.native
   sealed trait `-1`
-    extends _PlusDownloaderDownloadState
-       with _PlusUploaderUploadState
+    extends PlusDownloaderDownloadState
+       with PlusUploaderUploadState
   
   @js.native
   sealed trait `0`
-    extends _PlusDownloaderDownloadState
-       with _PlusUploaderUploadState
+    extends PlusDownloaderDownloadState
+       with PlusUploaderUploadState
   
   @js.native
   sealed trait `1`
-    extends _PlusDownloaderDownloadState
-       with _PlusUploaderUploadState
+    extends PlusDownloaderDownloadState
+       with PlusUploaderUploadState
   
   @js.native
   sealed trait `2`
-    extends _PlusDownloaderDownloadState
-       with _PlusUploaderUploadState
+    extends PlusDownloaderDownloadState
+       with PlusUploaderUploadState
   
   @js.native
   sealed trait `3`
-    extends _PlusDownloaderDownloadState
-       with _PlusUploaderUploadState
+    extends PlusDownloaderDownloadState
+       with PlusUploaderUploadState
   
   @js.native
   sealed trait `4`
-    extends _PlusDownloaderDownloadState
-       with _PlusUploaderUploadState
+    extends PlusDownloaderDownloadState
+       with PlusUploaderUploadState
   
   @js.native
   sealed trait `5`
-    extends _PlusDownloaderDownloadState
-       with _PlusUploaderUploadState
+    extends PlusDownloaderDownloadState
+       with PlusUploaderUploadState
   
   @scala.inline
   def `-1`: `-1` = -1.asInstanceOf[`-1`]

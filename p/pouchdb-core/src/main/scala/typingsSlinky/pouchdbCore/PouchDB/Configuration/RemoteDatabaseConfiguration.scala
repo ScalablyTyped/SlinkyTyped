@@ -3,8 +3,8 @@ package typingsSlinky.pouchdbCore.PouchDB.Configuration
 import org.scalajs.dom.experimental.Request
 import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.experimental.Response
-import typingsSlinky.pouchdbCore.AnonPassword
 import typingsSlinky.pouchdbCore.Fetch
+import typingsSlinky.pouchdbCore.anon.Password
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 trait RemoteDatabaseConfiguration
   extends CommonDatabaseConfiguration
      with DatabaseConfiguration {
-  var auth: js.UndefOr[AnonPassword] = js.native
+  var auth: js.UndefOr[Password] = js.native
   var fetch: js.UndefOr[Fetch] = js.native
   /**
     * Disables automatic creation of databases.
@@ -34,7 +34,7 @@ object RemoteDatabaseConfiguration {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAuth(value: AnonPassword): Self = {
+    def withAuth(value: Password): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
         ret

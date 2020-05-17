@@ -3,8 +3,8 @@ package typingsSlinky.primereact.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonSource
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.Source
+import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.pickListMod.PickListProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -28,19 +28,19 @@ object PickList {
     @scala.inline
     def metaKeySelection(value: Boolean): this.type = set("metaKeySelection", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* e */ AnonSource => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ Source => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onMoveAllToSource(value: /* e */ AnonValue => Unit): this.type = set("onMoveAllToSource", js.Any.fromFunction1(value))
+    def onMoveAllToSource(value: /* e */ Value => Unit): this.type = set("onMoveAllToSource", js.Any.fromFunction1(value))
     @scala.inline
-    def onMoveAllToTarget(value: /* e */ AnonValue => Unit): this.type = set("onMoveAllToTarget", js.Any.fromFunction1(value))
+    def onMoveAllToTarget(value: /* e */ Value => Unit): this.type = set("onMoveAllToTarget", js.Any.fromFunction1(value))
     @scala.inline
-    def onMoveToSource(value: /* e */ AnonValue => Unit): this.type = set("onMoveToSource", js.Any.fromFunction1(value))
+    def onMoveToSource(value: /* e */ Value => Unit): this.type = set("onMoveToSource", js.Any.fromFunction1(value))
     @scala.inline
-    def onMoveToTarget(value: /* e */ AnonValue => Unit): this.type = set("onMoveToTarget", js.Any.fromFunction1(value))
+    def onMoveToTarget(value: /* e */ Value => Unit): this.type = set("onMoveToTarget", js.Any.fromFunction1(value))
     @scala.inline
-    def onSourceSelect(value: /* e */ AnonValue => Unit): this.type = set("onSourceSelect", js.Any.fromFunction1(value))
+    def onSourceSelect(value: /* e */ Value => Unit): this.type = set("onSourceSelect", js.Any.fromFunction1(value))
     @scala.inline
-    def onTargetSelect(value: /* e */ AnonValue => Unit): this.type = set("onTargetSelect", js.Any.fromFunction1(value))
+    def onTargetSelect(value: /* e */ Value => Unit): this.type = set("onTargetSelect", js.Any.fromFunction1(value))
     @scala.inline
     def responsive(value: Boolean): this.type = set("responsive", value.asInstanceOf[js.Any])
     @scala.inline

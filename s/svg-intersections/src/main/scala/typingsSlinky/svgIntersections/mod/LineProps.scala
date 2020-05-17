@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait LineProps
-  extends _SvgProperties[js.Any] {
+  extends SvgProperties[js.Any] {
   var x1: Double = js.native
   var x2: Double = js.native
   var y1: Double = js.native

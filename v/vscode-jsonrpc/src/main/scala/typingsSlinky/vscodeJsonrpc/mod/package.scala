@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 package object mod {
   type GenericNotificationHandler = js.Function1[/* repeated */ js.Any, scala.Unit]
   type GenericRequestHandler[R, E] = js.Function1[/* repeated */ js.Any, typingsSlinky.vscodeJsonrpc.mod.HandlerResult[R, E]]
-  type HandlerResult[R, E] = R | typingsSlinky.vscodeJsonrpc.messagesMod.ResponseError[E] | (typingsSlinky.vscodeJsonrpc.Thenable[R | typingsSlinky.vscodeJsonrpc.messagesMod.ResponseError[E]])
   type MessageQueue = typingsSlinky.vscodeJsonrpc.linkedMapMod.LinkedMap[java.lang.String, typingsSlinky.vscodeJsonrpc.messagesMod.Message]
   type NotificationHandler[P] = js.Function1[/* params */ P, scala.Unit]
   type NotificationHandler0 = js.Function0[scala.Unit]

@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.OmitTabset
+import typingsSlinky.tabris.anon.OmitTabset
 import typingsSlinky.tabris.tabrisStrings.badge
 import typingsSlinky.tabris.tabrisStrings.badgeColor
 import typingsSlinky.tabris.tabrisStrings.image

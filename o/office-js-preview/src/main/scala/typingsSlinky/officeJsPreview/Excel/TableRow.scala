@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.TableRowData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.TableRowLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.TableRowUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,9 +21,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.TableRow")
 @js.native
-class TableRow () extends ClientObject {
+trait TableRow extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_TableRow: RequestContext = js.native
@@ -60,7 +59,7 @@ class TableRow () extends ClientObject {
     */
   def load(): TableRow = js.native
   def load(options: TableRowLoadOptions): TableRow = js.native
-  def load(propertyNamesAndPaths: AnonExpand): TableRow = js.native
+  def load(propertyNamesAndPaths: Expand): TableRow = js.native
   def load(propertyNames: String): TableRow = js.native
   def load(propertyNames: js.Array[String]): TableRow = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

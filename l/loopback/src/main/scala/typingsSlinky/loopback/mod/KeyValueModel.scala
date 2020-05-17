@@ -1,6 +1,6 @@
 package typingsSlinky.loopback.mod
 
-import typingsSlinky.loopback.AnonMatch
+import typingsSlinky.loopback.anon.Match
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -89,7 +89,7 @@ object KeyValueModel extends js.Object {
     * @param {any} filter.options
     * @return {any} result AsyncIterator An Object implementing next(cb) -> Promise function that can be used to iterate all keys.
     */
-  def iterateKeys(filter: AnonMatch): js.Any = js.native
+  def iterateKeys(filter: Match): js.Any = js.native
   /**
     * Return all keys in the database.
     * WARNING: This method is not suitable for large data sets as all key-values pairs
@@ -108,7 +108,7 @@ object KeyValueModel extends js.Object {
     * @param {() => void} callback
     * @return {PromiseLike<any>}
     */
-  def keys(filter: AnonMatch, callback: js.Function0[Unit]): js.Thenable[_] = js.native
+  def keys(filter: Match, callback: js.Function0[Unit]): js.Thenable[_] = js.native
   /**
     * Persist a value and associate it with the given key.
     *

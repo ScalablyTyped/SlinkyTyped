@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCore
 
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonColElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonColElement
 import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`

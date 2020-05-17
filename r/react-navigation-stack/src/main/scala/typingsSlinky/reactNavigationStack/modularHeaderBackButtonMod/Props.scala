@@ -4,7 +4,7 @@ import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
-import typingsSlinky.reactNavigationStack.AnonTintColor
+import typingsSlinky.reactNavigationStack.anon.TintColor
 import typingsSlinky.reactNavigationStack.typesMod.HeaderLayoutPreset
 import typingsSlinky.reactNavigationStack.typesMod.Scene
 import scala.scalajs.js
@@ -17,7 +17,7 @@ trait Props extends js.Object {
   var ButtonContainerComponent: ReactComponentClass[js.Object] = js.native
   var LabelContainerComponent: ReactComponentClass[js.Object] = js.native
   var allowFontScaling: js.UndefOr[Boolean] = js.native
-  var backImage: js.UndefOr[js.Function1[/* props */ AnonTintColor, TagMod[Any]]] = js.native
+  var backImage: js.UndefOr[js.Function1[/* props */ TintColor, TagMod[Any]]] = js.native
   var backTitleVisible: js.UndefOr[Boolean] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
   var layoutPreset: HeaderLayoutPreset = js.native
@@ -92,7 +92,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withBackImage(value: /* props */ AnonTintColor => TagMod[Any]): Self = {
+    def withBackImage(value: /* props */ TintColor => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("backImage")(js.Any.fromFunction1(value))
         ret

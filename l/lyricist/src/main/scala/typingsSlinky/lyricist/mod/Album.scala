@@ -1,6 +1,6 @@
 package typingsSlinky.lyricist.mod
 
-import typingsSlinky.lyricist.AnonExcludedpermissionsInteractions
+import typingsSlinky.lyricist.anon.ExcludedpermissionsInteractions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait Album extends js.Object {
   var comment_count: Double = js.native
   var cover_art_url: String = js.native
   var cover_arts: js.Array[_] = js.native
-  var current_user_metadata: AnonExcludedpermissionsInteractions = js.native
+  var current_user_metadata: ExcludedpermissionsInteractions = js.native
   var custom_header_image_url: js.UndefOr[js.Any] = js.native
   var description_annotation: DescriptionAnnotation = js.native
   var full_title: String = js.native
@@ -38,7 +38,7 @@ object Album {
     comment_count: Double,
     cover_art_url: String,
     cover_arts: js.Array[_],
-    current_user_metadata: AnonExcludedpermissionsInteractions,
+    current_user_metadata: ExcludedpermissionsInteractions,
     description_annotation: DescriptionAnnotation,
     full_title: String,
     header_image_url: String,
@@ -91,7 +91,7 @@ object Album {
         ret
     }
     @scala.inline
-    def withCurrent_user_metadata(value: AnonExcludedpermissionsInteractions): Self = {
+    def withCurrent_user_metadata(value: ExcludedpermissionsInteractions): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("current_user_metadata")(value.asInstanceOf[js.Any])
         ret

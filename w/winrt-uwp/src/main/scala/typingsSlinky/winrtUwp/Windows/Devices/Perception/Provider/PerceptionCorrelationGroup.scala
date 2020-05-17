@@ -1,21 +1,36 @@
 package typingsSlinky.winrtUwp.Windows.Devices.Perception.Provider
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterable
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A collection of PerceptionCorrelations describing multiple unique providers in a common coordinate frame. */
-@JSGlobal("Windows.Devices.Perception.Provider.PerceptionCorrelationGroup")
 @js.native
-class PerceptionCorrelationGroup protected () extends js.Object {
-  /**
-    * Initializes a new PerceptionCorrelationGroup from a collection of one or more PerceptionCorrelation objects describing multiple providers in a common coordinate frame.
-    * @param relativeLocations The collection of PerceptionCorrelations describing multiple providers in a common coordinate frame.
-    */
-  def this(relativeLocations: IIterable[PerceptionCorrelation]) = this()
+trait PerceptionCorrelationGroup extends js.Object {
   /** The collection of PerceptionCorrelations describing multiple unique providers in a common coordinate frame. */
   var relativeLocations: IVectorView[PerceptionCorrelation] = js.native
+}
+
+object PerceptionCorrelationGroup {
+  @scala.inline
+  def apply(relativeLocations: IVectorView[PerceptionCorrelation]): PerceptionCorrelationGroup = {
+    val __obj = js.Dynamic.literal(relativeLocations = relativeLocations.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PerceptionCorrelationGroup]
+  }
+  @scala.inline
+  implicit class PerceptionCorrelationGroupOps[Self <: PerceptionCorrelationGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRelativeLocations(value: IVectorView[PerceptionCorrelation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("relativeLocations")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

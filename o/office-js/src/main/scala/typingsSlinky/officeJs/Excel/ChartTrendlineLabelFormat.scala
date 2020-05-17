@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.ChartTrendlineLabelFormatData
 import typingsSlinky.officeJs.Excel.Interfaces.ChartTrendlineLabelFormatLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.ChartTrendlineLabelFormatUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.8]
   */
-@JSGlobal("Excel.ChartTrendlineLabelFormat")
 @js.native
-class ChartTrendlineLabelFormat () extends ClientObject {
+trait ChartTrendlineLabelFormat extends ClientObject {
   /**
     *
     * Represents the border format, which includes color, linestyle, and weight.
@@ -50,7 +49,7 @@ class ChartTrendlineLabelFormat () extends ClientObject {
     */
   def load(): ChartTrendlineLabelFormat = js.native
   def load(options: ChartTrendlineLabelFormatLoadOptions): ChartTrendlineLabelFormat = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartTrendlineLabelFormat = js.native
+  def load(propertyNamesAndPaths: Expand): ChartTrendlineLabelFormat = js.native
   def load(propertyNames: String): ChartTrendlineLabelFormat = js.native
   def load(propertyNames: js.Array[String]): ChartTrendlineLabelFormat = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

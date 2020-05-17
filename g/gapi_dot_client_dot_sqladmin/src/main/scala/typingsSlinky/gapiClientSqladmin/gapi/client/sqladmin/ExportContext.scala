@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientSqladmin.gapi.client.sqladmin
 
-import typingsSlinky.gapiClientSqladmin.AnonSchemaOnly
-import typingsSlinky.gapiClientSqladmin.AnonSelectQuery
+import typingsSlinky.gapiClientSqladmin.anon.SchemaOnly
+import typingsSlinky.gapiClientSqladmin.anon.SelectQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ExportContext extends js.Object {
   /** Options for exporting data as CSV. */
-  var csvExportOptions: js.UndefOr[AnonSelectQuery] = js.native
+  var csvExportOptions: js.UndefOr[SelectQuery] = js.native
   /**
     * Databases (for example, guestbook) from which the export is made. If fileType is SQL and no database is specified, all databases are exported. If
     * fileType is CSV, you can optionally specify at most one database to export. If csvExportOptions.selectQuery also specifies the database, this field
@@ -25,7 +25,7 @@ trait ExportContext extends js.Object {
   /** This is always sql#exportContext. */
   var kind: js.UndefOr[String] = js.native
   /** Options for exporting data as SQL statements. */
-  var sqlExportOptions: js.UndefOr[AnonSchemaOnly] = js.native
+  var sqlExportOptions: js.UndefOr[SchemaOnly] = js.native
   /**
     * The path to the file in Google Cloud Storage where the export will be stored. The URI is in the form gs://bucketName/fileName. If the file already
     * exists, the operation fails. If fileType is SQL and the filename ends with .gz, the contents are compressed.
@@ -46,7 +46,7 @@ object ExportContext {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCsvExportOptions(value: AnonSelectQuery): Self = {
+    def withCsvExportOptions(value: SelectQuery): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("csvExportOptions")(value.asInstanceOf[js.Any])
         ret
@@ -94,7 +94,7 @@ object ExportContext {
         ret
     }
     @scala.inline
-    def withSqlExportOptions(value: AnonSchemaOnly): Self = {
+    def withSqlExportOptions(value: SchemaOnly): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sqlExportOptions")(value.asInstanceOf[js.Any])
         ret

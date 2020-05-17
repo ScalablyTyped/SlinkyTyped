@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.HTMLDivElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.semanticUiReact.AnonMenuItem
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.left
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.right
 import typingsSlinky.semanticUiReact.tabMod.default
@@ -37,7 +36,7 @@ object Tab {
     @scala.inline
     def onTabChange(value: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ TabProps) => Unit): this.type = set("onTabChange", js.Any.fromFunction2(value))
     @scala.inline
-    def panes(value: js.Array[AnonMenuItem]): this.type = set("panes", value.asInstanceOf[js.Any])
+    def panes(value: js.Array[typingsSlinky.semanticUiReact.anon.MenuItem]): this.type = set("panes", value.asInstanceOf[js.Any])
     @scala.inline
     def renderActiveOnly(value: Boolean): this.type = set("renderActiveOnly", value.asInstanceOf[js.Any])
   }

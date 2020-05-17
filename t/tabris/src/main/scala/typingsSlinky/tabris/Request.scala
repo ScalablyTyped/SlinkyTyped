@@ -17,6 +17,7 @@ import typingsSlinky.tabris.tabrisStrings.download
 import typingsSlinky.tabris.tabrisStrings.embed
 import typingsSlinky.tabris.tabrisStrings.eventsource
 import typingsSlinky.tabris.tabrisStrings.favicon
+import typingsSlinky.tabris.tabrisStrings.fetch
 import typingsSlinky.tabris.tabrisStrings.font
 import typingsSlinky.tabris.tabrisStrings.form
 import typingsSlinky.tabris.tabrisStrings.frame
@@ -51,16 +52,11 @@ import scala.scalajs.js.annotation._
 /**
   * Represents an HTTP Request as used by `fetch()`.
   */
-@JSGlobal("Request")
 @js.native
-class Request protected () extends js.Object {
-  def this(input: String) = this()
-  def this(input: Request) = this()
-  def this(input: String, init: RequestInit) = this()
-  def this(input: Request, init: RequestInit) = this()
+trait Request extends js.Object {
   val bodyUsed: Boolean = js.native
   val cash: default | `force-cache` | `no-cache` | `no-store` | `only-if-cached` | reload = js.native
-  val context: audio | beacon | cspreport | download | embed | eventsource | favicon | typingsSlinky.tabris.tabrisStrings.fetch | font | form | frame | hyperlink | iframe | image | imageset | `import` | internal | location | manifest | `object` | ping | plugin | prefetch | script | serviceworker | sharedworker | style | subresource | track | video | worker | xmlhttprequest | xslt = js.native
+  val context: audio | beacon | cspreport | download | embed | eventsource | favicon | fetch | font | form | frame | hyperlink | iframe | image | imageset | `import` | internal | location | manifest | `object` | ping | plugin | prefetch | script | serviceworker | sharedworker | style | subresource | track | video | worker | xmlhttprequest | xslt = js.native
   val credentials: include | omit | `same-origin` = js.native
   val headers: Headers = js.native
   val method: String = js.native

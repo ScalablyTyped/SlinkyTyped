@@ -1,0 +1,14 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Declares client constants that specify the task title position.
+  */
+@JSGlobal("ASPxClientGanttTaskTitlePosition")
+@js.native
+class ASPxClientGanttTaskTitlePosition ()
+  extends typingsSlinky.devexpressWeb.ASPxClientGanttTaskTitlePosition
+

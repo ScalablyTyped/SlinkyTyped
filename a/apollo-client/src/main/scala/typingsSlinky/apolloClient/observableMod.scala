@@ -11,7 +11,7 @@ object observableMod extends js.Object {
   class Observable[T] ()
     extends typingsSlinky.zenObservableTs.zenObservableMod.Observable[T]
   
-  type Observer[T] = typingsSlinky.zenObservable.mod._Global_.ZenObservable.Observer[T]
-  type Subscription = typingsSlinky.zenObservable.mod._Global_.ZenObservable.Subscription
+  type Observer[T] = typingsSlinky.zenObservable.mod.global.ZenObservable.Observer[T]
+  type Subscription = typingsSlinky.zenObservable.mod.global.ZenObservable.Subscription
 }
 

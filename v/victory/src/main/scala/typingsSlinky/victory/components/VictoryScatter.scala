@@ -3,9 +3,9 @@ package typingsSlinky.victory.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.victory.Anon1
-import typingsSlinky.victory.AnonXBoolean
-import typingsSlinky.victory.AnonY
+import typingsSlinky.victory.anon.XBoolean
+import typingsSlinky.victory.anon.Y
+import typingsSlinky.victory.anon.`1`
 import typingsSlinky.victory.mod.AnimatePropTypeInterface
 import typingsSlinky.victory.mod.CallbackArgs
 import typingsSlinky.victory.mod.CategoryPropType
@@ -71,9 +71,9 @@ object VictoryScatter {
     @scala.inline
     def maxBubbleSize(value: Double): this.type = set("maxBubbleSize", value.asInstanceOf[js.Any])
     @scala.inline
-    def maxDomain(value: Double | AnonY): this.type = set("maxDomain", value.asInstanceOf[js.Any])
+    def maxDomain(value: Double | Y): this.type = set("maxDomain", value.asInstanceOf[js.Any])
     @scala.inline
-    def minDomain(value: Double | AnonY): this.type = set("minDomain", value.asInstanceOf[js.Any])
+    def minDomain(value: Double | Y): this.type = set("minDomain", value.asInstanceOf[js.Any])
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
@@ -81,9 +81,9 @@ object VictoryScatter {
     @scala.inline
     def samples(value: Double): this.type = set("samples", value.asInstanceOf[js.Any])
     @scala.inline
-    def scale(value: ScalePropType | D3Scale | Anon1): this.type = set("scale", value.asInstanceOf[js.Any])
+    def scale(value: ScalePropType | D3Scale | `1`): this.type = set("scale", value.asInstanceOf[js.Any])
     @scala.inline
-    def singleQuadrantDomainPadding(value: Boolean | AnonXBoolean): this.type = set("singleQuadrantDomainPadding", value.asInstanceOf[js.Any])
+    def singleQuadrantDomainPadding(value: Boolean | XBoolean): this.type = set("singleQuadrantDomainPadding", value.asInstanceOf[js.Any])
     @scala.inline
     def sizeFunction1(value: /* data */ js.Any => Double): this.type = set("size", js.Any.fromFunction1(value))
     @scala.inline

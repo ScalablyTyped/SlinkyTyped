@@ -1,7 +1,7 @@
 package typingsSlinky.typescriptServices.TypeScript
 
 import typingsSlinky.std.ITextWriter
-import typingsSlinky.typescriptServices.AnonRecursive
+import typingsSlinky.typescriptServices.anon.Recursive
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait IEnvironment extends js.Object {
   def fileExists(path: String): Boolean = js.native
   def listFiles(path: String): js.Array[String] = js.native
   def listFiles(path: String, re: js.RegExp): js.Array[String] = js.native
-  def listFiles(path: String, re: js.RegExp, options: AnonRecursive): js.Array[String] = js.native
+  def listFiles(path: String, re: js.RegExp, options: Recursive): js.Array[String] = js.native
   def readFile(path: String, codepage: Double): FileInformation = js.native
   def supportsCodePage(): Boolean = js.native
   def writeFile(path: String, contents: String, writeByteOrderMark: Boolean): Unit = js.native

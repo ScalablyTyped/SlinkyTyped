@@ -1,12 +1,12 @@
 package typingsSlinky.webmidi.WebMidi
 
-import typingsSlinky.std.Event_
+import typingsSlinky.std.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait MIDIConnectionEvent extends Event_ {
+trait MIDIConnectionEvent extends Event {
   /**
     * The port that has been connected or disconnected.
     */

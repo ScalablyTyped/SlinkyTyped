@@ -1,7 +1,7 @@
 package typingsSlinky.antDesignReactNative.textareaItemMod
 
 import slinky.core.SyntheticEvent
-import typingsSlinky.antDesignReactNative.AnonNativeEventAnonContentSize
+import typingsSlinky.antDesignReactNative.anon.NativeEventContentSize
 import typingsSlinky.antDesignReactNative.libStyleMod.Theme
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactNative.mod.NodeHandle
@@ -17,6 +17,6 @@ trait TextAreaItem
   var textAreaRef: TextInput | Null = js.native
   def getHeight(theme: Theme): js.Any = js.native
   def onChange(event: SyntheticEvent[NodeHandle, TextInputChangeEventData]): Unit = js.native
-  def onContentSizeChange(theme: Theme): js.Function1[/* event */ AnonNativeEventAnonContentSize, Unit] = js.native
+  def onContentSizeChange(theme: Theme): js.Function1[/* event */ NativeEventContentSize, Unit] = js.native
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin
 
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.Typeofts
 import typingsSlinky.forkTsCheckerWebpackPlugin.incrementalCheckerInterfaceMod.IncrementalCheckerInterface
 import typingsSlinky.forkTsCheckerWebpackPlugin.incrementalCheckerInterfaceMod.IncrementalCheckerParams
 import typingsSlinky.minimatch.mod.IMinimatch

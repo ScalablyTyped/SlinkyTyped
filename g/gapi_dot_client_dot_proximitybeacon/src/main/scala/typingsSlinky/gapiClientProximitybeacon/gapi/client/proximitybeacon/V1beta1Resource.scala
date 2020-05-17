@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientProximitybeacon.gapi.client.proximitybeacon
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientProximitybeacon.AnonAccesstoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientProximitybeacon.anon.Accesstoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,12 +17,12 @@ trait V1beta1Resource extends js.Object {
     * prepared to refresh this key when they encounter an error registering an
     * Eddystone-EID beacon.
     */
-  def getEidparams(request: AnonAccesstoken): Request_[EphemeralIdRegistrationParams] = js.native
+  def getEidparams(request: Accesstoken): Request[EphemeralIdRegistrationParams] = js.native
 }
 
 object V1beta1Resource {
   @scala.inline
-  def apply(getEidparams: AnonAccesstoken => Request_[EphemeralIdRegistrationParams]): V1beta1Resource = {
+  def apply(getEidparams: Accesstoken => Request[EphemeralIdRegistrationParams]): V1beta1Resource = {
     val __obj = js.Dynamic.literal(getEidparams = js.Any.fromFunction1(getEidparams))
     __obj.asInstanceOf[V1beta1Resource]
   }
@@ -33,7 +33,7 @@ object V1beta1Resource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetEidparams(value: AnonAccesstoken => Request_[EphemeralIdRegistrationParams]): Self = {
+    def withGetEidparams(value: Accesstoken => Request[EphemeralIdRegistrationParams]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getEidparams")(js.Any.fromFunction1(value))
         ret

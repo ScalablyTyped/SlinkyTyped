@@ -1,6 +1,6 @@
 package typingsSlinky.emojiMart.sharedPropsMod
 
-import typingsSlinky.emojiMart.RecordCategoryNameReactNo
+import typingsSlinky.emojiMart.anon.RecordCategoryNameReactNo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

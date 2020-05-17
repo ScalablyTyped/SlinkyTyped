@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 // ghost module
 @js.native
-trait Transform extends _Value {
+trait Transform extends Value {
   def apply(node: Node, value: String): Value = js.native
 }
 

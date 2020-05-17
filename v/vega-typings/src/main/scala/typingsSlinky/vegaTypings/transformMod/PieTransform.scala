@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PieTransform extends _Transforms {
+trait PieTransform extends Transforms {
   var as: js.UndefOr[(Vector2[String | SignalRef]) | SignalRef] = js.native
   var endAngle: js.UndefOr[Double | SignalRef] = js.native
   var field: js.UndefOr[FieldRef] = js.native

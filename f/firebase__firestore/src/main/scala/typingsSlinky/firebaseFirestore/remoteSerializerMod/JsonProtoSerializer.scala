@@ -104,10 +104,10 @@ class JsonProtoSerializer protected () extends js.Object {
   var toTimestamp: js.Any = js.native
   var toWatchTargetChangeState: js.Any = js.native
   def encodedDatabaseId: String = js.native
-  def fromBytes(): ByteString = js.native
   /**
     * Returns a ByteString based on the proto string value.
     */
+  def fromBytes(): ByteString = js.native
   def fromBytes(value: String): ByteString = js.native
   def fromBytes(value: js.typedarray.Uint8Array): ByteString = js.native
   def fromDirection(): js.UndefOr[Direction] = js.native
@@ -134,7 +134,6 @@ class JsonProtoSerializer protected () extends js.Object {
   def fromWatchChange(change: ListenResponse): WatchChange = js.native
   def fromWatchTargetChangeState(state: TargetChangeTargetChangeType): WatchTargetChangeState = js.native
   def fromWriteResults(): js.Array[MutationResult] = js.native
-  def fromWriteResults(protos: js.UndefOr[scala.Nothing], commitTime: String): js.Array[MutationResult] = js.native
   def fromWriteResults(protos: js.Array[WriteResult]): js.Array[MutationResult] = js.native
   def fromWriteResults(protos: js.Array[WriteResult], commitTime: String): js.Array[MutationResult] = js.native
   def toArrayValue(array: ArrayValue): typingsSlinky.firebaseFirestore.firestoreProtoApiMod.ArrayValue = js.native

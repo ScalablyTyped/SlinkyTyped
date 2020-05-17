@@ -1,7 +1,7 @@
 package typingsSlinky.flickity.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.flickity.AnonX0
+import typingsSlinky.flickity.anon.X0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ trait Options extends js.Object {
     * Draws the shape of the arrows in the previous & next buttons.
     * javascript dictionary of points or path to SVG file
     */
-  var arrowShape: js.UndefOr[String | AnonX0] = js.native
+  var arrowShape: js.UndefOr[String | X0] = js.native
   /**
     * Use one Flickity gallery as navigation for another.
     *
@@ -223,7 +223,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withArrowShape(value: String | AnonX0): Self = {
+    def withArrowShape(value: String | X0): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("arrowShape")(value.asInstanceOf[js.Any])
         ret

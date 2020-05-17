@@ -1,12 +1,12 @@
 package typingsSlinky.monk.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.monk.AnonAvgObjSize
-import typingsSlinky.monk.AnonDeletedCount
-import typingsSlinky.monk.AnonEach
-import typingsSlinky.monk.AnonMsg
-import typingsSlinky.monk.AnonNIndexesWas
-import typingsSlinky.monk.AnonNModified
+import typingsSlinky.monk.anon.AvgObjSize
+import typingsSlinky.monk.anon.DeletedCount
+import typingsSlinky.monk.anon.Each
+import typingsSlinky.monk.anon.Msg
+import typingsSlinky.monk.anon.NIndexesWas
+import typingsSlinky.monk.anon.NModified
 import typingsSlinky.monk.monkBooleans.`true`
 import typingsSlinky.monk.monkNumbers.`-1`
 import typingsSlinky.monk.monkNumbers.`1`
@@ -106,18 +106,18 @@ class ICollection[T] () extends js.Object {
   def dropIndex(
     fields: TFields,
     options: js.Object,
-    callback: js.Function2[/* err */ js.Error | Null, /* data */ AnonNIndexesWas, Unit]
+    callback: js.Function2[/* err */ js.Error | Null, /* data */ NIndexesWas, Unit]
   ): Unit = js.native
   @JSName("dropIndex")
-  def dropIndex_Promise(): js.Promise[AnonNIndexesWas] = js.native
+  def dropIndex_Promise(): js.Promise[NIndexesWas] = js.native
   @JSName("dropIndex")
-  def dropIndex_Promise(fields: TFields): js.Promise[AnonNIndexesWas] = js.native
+  def dropIndex_Promise(fields: TFields): js.Promise[NIndexesWas] = js.native
   @JSName("dropIndex")
-  def dropIndex_Promise(fields: TFields, options: js.Object): js.Promise[AnonNIndexesWas] = js.native
+  def dropIndex_Promise(fields: TFields, options: js.Object): js.Promise[NIndexesWas] = js.native
   def dropIndexes(): Unit = js.native
-  def dropIndexes(callback: js.Function2[/* err */ js.Error | Null, /* data */ AnonMsg, Unit]): Unit = js.native
+  def dropIndexes(callback: js.Function2[/* err */ js.Error | Null, /* data */ Msg, Unit]): Unit = js.native
   @JSName("dropIndexes")
-  def dropIndexes_Promise(): js.Promise[AnonMsg] = js.native
+  def dropIndexes_Promise(): js.Promise[Msg] = js.native
   @JSName("drop")
   def drop_Promise(): js.Promise[(`ns not found`) | `true`] = js.native
   def find[U](): Unit = js.native
@@ -126,7 +126,7 @@ class ICollection[T] () extends js.Object {
   def find[U](
     query: TQuery,
     options: js.Object,
-    callback: js.Function2[/* err */ js.Error | Null, /* data */ js.Array[U] with AnonEach[U], Unit]
+    callback: js.Function2[/* err */ js.Error | Null, /* data */ js.Array[U] with Each[U], Unit]
   ): Unit = js.native
   def findOne[U](): js.Promise[js.UndefOr[U]] = js.native
   def findOne[U](query: TQuery): js.Promise[js.UndefOr[U]] = js.native
@@ -169,11 +169,11 @@ class ICollection[T] () extends js.Object {
   @JSName("findOne")
   def findOne_U_Unit[U](query: TQuery, options: js.Object): Unit = js.native
   @JSName("find")
-  def find_U_Intersection[U](): js.Promise[js.Array[U]] with AnonEach[U] = js.native
+  def find_U_Intersection[U](): js.Promise[js.Array[U]] with Each[U] = js.native
   @JSName("find")
-  def find_U_Intersection[U](query: TQuery): js.Promise[js.Array[U]] with AnonEach[U] = js.native
+  def find_U_Intersection[U](query: TQuery): js.Promise[js.Array[U]] with Each[U] = js.native
   @JSName("find")
-  def find_U_Intersection[U](query: TQuery, options: js.Object): js.Promise[js.Array[U]] with AnonEach[U] = js.native
+  def find_U_Intersection[U](query: TQuery, options: js.Object): js.Promise[js.Array[U]] with Each[U] = js.native
   def geoHaystackSearch[U](x: Double, y: Double, options: js.Object): js.Promise[js.Array[U]] = js.native
   def geoHaystackSearch[U](
     x: Double,
@@ -284,35 +284,32 @@ class ICollection[T] () extends js.Object {
   def remove(
     query: TQuery,
     options: js.Object,
-    callback: js.Function2[/* err */ js.Error | Null, /* data */ AnonDeletedCount, Unit]
+    callback: js.Function2[/* err */ js.Error | Null, /* data */ DeletedCount, Unit]
   ): Unit = js.native
   @JSName("remove")
-  def remove_Promise(): js.Promise[AnonDeletedCount] = js.native
+  def remove_Promise(): js.Promise[DeletedCount] = js.native
   @JSName("remove")
-  def remove_Promise(query: TQuery): js.Promise[AnonDeletedCount] = js.native
+  def remove_Promise(query: TQuery): js.Promise[DeletedCount] = js.native
   @JSName("remove")
-  def remove_Promise(query: TQuery, options: js.Object): js.Promise[AnonDeletedCount] = js.native
+  def remove_Promise(query: TQuery, options: js.Object): js.Promise[DeletedCount] = js.native
   def stats(): Unit = js.native
   def stats(options: js.Object): Unit = js.native
-  def stats(
-    options: js.Object,
-    callback: js.Function2[/* err */ js.Error | Null, /* data */ AnonAvgObjSize, Unit]
-  ): Unit = js.native
+  def stats(options: js.Object, callback: js.Function2[/* err */ js.Error | Null, /* data */ AvgObjSize, Unit]): Unit = js.native
   @JSName("stats")
-  def stats_Promise(): js.Promise[AnonAvgObjSize] = js.native
+  def stats_Promise(): js.Promise[AvgObjSize] = js.native
   @JSName("stats")
-  def stats_Promise(options: js.Object): js.Promise[AnonAvgObjSize] = js.native
+  def stats_Promise(options: js.Object): js.Promise[AvgObjSize] = js.native
   def update(query: TQuery, update: js.Object): Unit = js.native
   def update(query: TQuery, update: js.Object, options: js.Object): Unit = js.native
   def update(
     query: TQuery,
     update: js.Object,
     options: js.Object,
-    callback: js.Function2[/* err */ js.Error | Null, /* data */ AnonNModified, Unit]
+    callback: js.Function2[/* err */ js.Error | Null, /* data */ NModified, Unit]
   ): Unit = js.native
   @JSName("update")
-  def update_Promise(query: TQuery, update: js.Object): js.Promise[AnonNModified] = js.native
+  def update_Promise(query: TQuery, update: js.Object): js.Promise[NModified] = js.native
   @JSName("update")
-  def update_Promise(query: TQuery, update: js.Object, options: js.Object): js.Promise[AnonNModified] = js.native
+  def update_Promise(query: TQuery, update: js.Object, options: js.Object): js.Promise[NModified] = js.native
 }
 

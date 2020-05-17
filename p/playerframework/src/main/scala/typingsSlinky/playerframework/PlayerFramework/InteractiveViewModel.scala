@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
 	*
 	**/
-@JSGlobal("PlayerFramework.InteractiveViewModel")
 @js.native
-class InteractiveViewModel () extends js.Object {
+trait InteractiveViewModel extends js.Object {
   /**
   		* TODO
   		**/

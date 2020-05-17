@@ -1,0 +1,20 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Provides data for a splitter control's cancelable client events concerning manipulations with a pane.
+  */
+@JSGlobal("ASPxClientSplitterPaneCancelEventArgs")
+@js.native
+class ASPxClientSplitterPaneCancelEventArgs protected ()
+  extends typingsSlinky.devexpressWeb.ASPxClientSplitterPaneCancelEventArgs {
+  /**
+    * Initializes a new instance of the ASPxClientSplitterPaneCancelEventArgs class.
+    * @param pane A ASPxClientSplitterPane object representing a splitter pane related to the generated event.
+    */
+  def this(pane: typingsSlinky.devexpressWeb.ASPxClientSplitterPane) = this()
+}
+

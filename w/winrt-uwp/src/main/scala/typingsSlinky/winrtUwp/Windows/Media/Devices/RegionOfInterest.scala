@@ -6,10 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a region of interest which is a rectangular region on the image which is used for functions such as focus and exposure. */
-@JSGlobal("Windows.Media.Devices.RegionOfInterest")
 @js.native
-/** Creates a new instance of the RegionOfInterest control. */
-class RegionOfInterest () extends js.Object {
+trait RegionOfInterest extends js.Object {
   /** Gets or sets a value that specifies if auto exposure is enabled. */
   var autoExposureEnabled: Boolean = js.native
   /** Gets or sets a value that specifies if auto focus is enabled. */
@@ -24,5 +22,72 @@ class RegionOfInterest () extends js.Object {
   var `type`: RegionOfInterestType = js.native
   /** Gets or sets the weight of the region of interest. */
   var weight: Double = js.native
+}
+
+object RegionOfInterest {
+  @scala.inline
+  def apply(
+    autoExposureEnabled: Boolean,
+    autoFocusEnabled: Boolean,
+    autoWhiteBalanceEnabled: Boolean,
+    bounds: Rect,
+    boundsNormalized: Boolean,
+    `type`: RegionOfInterestType,
+    weight: Double
+  ): RegionOfInterest = {
+    val __obj = js.Dynamic.literal(autoExposureEnabled = autoExposureEnabled.asInstanceOf[js.Any], autoFocusEnabled = autoFocusEnabled.asInstanceOf[js.Any], autoWhiteBalanceEnabled = autoWhiteBalanceEnabled.asInstanceOf[js.Any], bounds = bounds.asInstanceOf[js.Any], boundsNormalized = boundsNormalized.asInstanceOf[js.Any], weight = weight.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RegionOfInterest]
+  }
+  @scala.inline
+  implicit class RegionOfInterestOps[Self <: RegionOfInterest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoExposureEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoExposureEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutoFocusEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocusEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutoWhiteBalanceEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoWhiteBalanceEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBounds(value: Rect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBoundsNormalized(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundsNormalized")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: RegionOfInterestType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("weight")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

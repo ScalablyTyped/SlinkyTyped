@@ -1,20 +1,20 @@
 package typingsSlinky.angularCore.mod
 
-import typingsSlinky.angularCore.AnonDirectives
+import typingsSlinky.angularCore.anon.Directives
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ɵNgModuleTransitiveScopes extends js.Object {
-  var compilation: AnonDirectives = js.native
-  var exported: AnonDirectives = js.native
+  var compilation: Directives = js.native
+  var exported: Directives = js.native
   var schemas: js.Array[SchemaMetadata] | Null = js.native
 }
 
 object ɵNgModuleTransitiveScopes {
   @scala.inline
-  def apply(compilation: AnonDirectives, exported: AnonDirectives): ɵNgModuleTransitiveScopes = {
+  def apply(compilation: Directives, exported: Directives): ɵNgModuleTransitiveScopes = {
     val __obj = js.Dynamic.literal(compilation = compilation.asInstanceOf[js.Any], exported = exported.asInstanceOf[js.Any])
     __obj.asInstanceOf[ɵNgModuleTransitiveScopes]
   }
@@ -25,13 +25,13 @@ object ɵNgModuleTransitiveScopes {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCompilation(value: AnonDirectives): Self = {
+    def withCompilation(value: Directives): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("compilation")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withExported(value: AnonDirectives): Self = {
+    def withExported(value: Directives): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("exported")(value.asInstanceOf[js.Any])
         ret

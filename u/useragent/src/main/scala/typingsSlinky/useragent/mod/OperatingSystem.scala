@@ -1,6 +1,6 @@
 package typingsSlinky.useragent.mod
 
-import typingsSlinky.useragent.AnonFamily
+import typingsSlinky.useragent.anon.Family
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ class OperatingSystem () extends js.Object {
   /**
     * Outputs a JSON string of the OS, values are defaulted to undefined so they are not outputed in the stringify.
     */
-  def toJSON(): AnonFamily = js.native
+  def toJSON(): Family = js.native
   /**
     * Generates the version of the Operating System.
     */

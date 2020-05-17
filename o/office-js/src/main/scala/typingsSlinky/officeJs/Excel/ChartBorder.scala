@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.ChartBorderData
 import typingsSlinky.officeJs.Excel.Interfaces.ChartBorderLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.ChartBorderUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.Automatic
 import typingsSlinky.officeJs.officeJsStrings.Continuous
 import typingsSlinky.officeJs.officeJsStrings.Dash
@@ -27,9 +27,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.7]
   */
-@JSGlobal("Excel.ChartBorder")
 @js.native
-class ChartBorder () extends ClientObject {
+trait ChartBorder extends ClientObject {
   /**
     *
     * HTML color code representing the color of borders in the chart.
@@ -67,7 +66,7 @@ class ChartBorder () extends ClientObject {
     */
   def load(): ChartBorder = js.native
   def load(options: ChartBorderLoadOptions): ChartBorder = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartBorder = js.native
+  def load(propertyNamesAndPaths: Expand): ChartBorder = js.native
   def load(propertyNames: String): ChartBorder = js.native
   def load(propertyNames: js.Array[String]): ChartBorder = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

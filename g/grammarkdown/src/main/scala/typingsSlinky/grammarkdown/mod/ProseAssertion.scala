@@ -18,11 +18,6 @@ class ProseAssertion protected ()
   ) = this()
   def this(
     openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketGreaterThanToken],
-    fragments: js.UndefOr[scala.Nothing],
-    closeBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[CloseBracketToken]
-  ) = this()
-  def this(
-    openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketGreaterThanToken],
     fragments: js.Array[ProseFragment],
     closeBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[CloseBracketToken]
   ) = this()

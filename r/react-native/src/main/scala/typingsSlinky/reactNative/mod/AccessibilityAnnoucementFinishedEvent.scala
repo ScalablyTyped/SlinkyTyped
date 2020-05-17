@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait AccessibilityAnnoucementFinishedEvent extends js.Object {
+trait AccessibilityAnnoucementFinishedEvent extends AccessibilityEvent {
   var announcement: String = js.native
   var success: Boolean = js.native
 }

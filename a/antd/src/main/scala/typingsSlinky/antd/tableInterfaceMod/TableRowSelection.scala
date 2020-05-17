@@ -1,9 +1,9 @@
 package typingsSlinky.antd.tableInterfaceMod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.PartialOmitCheckboxPropsc
-import typingsSlinky.std.Event_
+import typingsSlinky.antd.anon.PartialOmitCheckboxPropsc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -135,7 +135,7 @@ object TableRowSelection {
     }
     @scala.inline
     def withOnSelect(
-      value: (T, /* selected */ Boolean, /* selectedRows */ js.Array[js.Object], /* nativeEvent */ Event_) => Unit
+      value: (T, /* selected */ Boolean, /* selectedRows */ js.Array[js.Object], /* nativeEvent */ Event) => Unit
     ): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction4(value))

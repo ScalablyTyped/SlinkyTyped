@@ -1,7 +1,7 @@
 package typingsSlinky.protonNative.mod
 
-import typingsSlinky.protonNative.AnonH
-import typingsSlinky.protonNative.AnonX
+import typingsSlinky.protonNative.anon.H
+import typingsSlinky.protonNative.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait GridChildrenProps extends js.Object {
   /**
     * Whether the component is aligned with the other components in the column/row.
     */
-  var align: js.UndefOr[AnonH] = js.native
+  var align: js.UndefOr[H] = js.native
   /**
     * What column the component resides in.
     */
@@ -19,7 +19,7 @@ trait GridChildrenProps extends js.Object {
   /**
     * Whether the component can expand in the direction.
     */
-  var expand: js.UndefOr[AnonH] = js.native
+  var expand: js.UndefOr[H] = js.native
   /**
     * What row the component resides in.
     */
@@ -27,7 +27,7 @@ trait GridChildrenProps extends js.Object {
   /**
     * How many rows/columns the component takes off.
     */
-  var span: js.UndefOr[AnonX] = js.native
+  var span: js.UndefOr[X] = js.native
 }
 
 object GridChildrenProps {
@@ -43,7 +43,7 @@ object GridChildrenProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAlign(value: AnonH): Self = {
+    def withAlign(value: H): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
         ret
@@ -67,7 +67,7 @@ object GridChildrenProps {
         ret
     }
     @scala.inline
-    def withExpand(value: AnonH): Self = {
+    def withExpand(value: H): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("expand")(value.asInstanceOf[js.Any])
         ret
@@ -91,7 +91,7 @@ object GridChildrenProps {
         ret
     }
     @scala.inline
-    def withSpan(value: AnonX): Self = {
+    def withSpan(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("span")(value.asInstanceOf[js.Any])
         ret

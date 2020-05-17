@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Stats")
 @js.native
-class Stats () extends js.Object {
+trait Stats extends js.Object {
   /**
     * 文件最近一次被存取或被执行的时间，UNIX 时间戳，对应 POSIX stat.st_atime
     */
@@ -31,5 +30,64 @@ class Stats () extends js.Object {
     * 判断当前文件是否一个普通文件
     */
   def isFile(): Boolean = js.native
+}
+
+object Stats {
+  @scala.inline
+  def apply(
+    isDirectory: () => Boolean,
+    isFile: () => Boolean,
+    lastAccessedTime: Double,
+    lastModifiedTime: Double,
+    mode: String,
+    size: Double
+  ): Stats = {
+    val __obj = js.Dynamic.literal(isDirectory = js.Any.fromFunction0(isDirectory), isFile = js.Any.fromFunction0(isFile), lastAccessedTime = lastAccessedTime.asInstanceOf[js.Any], lastModifiedTime = lastModifiedTime.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Stats]
+  }
+  @scala.inline
+  implicit class StatsOps[Self <: Stats] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsDirectory(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDirectory")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsFile(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFile")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withLastAccessedTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastAccessedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLastModifiedTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.reactBootstrapTable.mod
 
-import typingsSlinky.reactBootstrapTable.AnonCloseInsertModal
-import typingsSlinky.reactBootstrapTable.ButtonGroupPropssearchPan
+import typingsSlinky.reactBootstrapTable.anon.ButtonGroupPropssearchPan
+import typingsSlinky.reactBootstrapTable.anon.CloseInsertModal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,12 +15,12 @@ trait ToolBarProps extends js.Object {
   /**
   	 * Event callbacks to use with a custom toolbar.
   	 */
-  var event: AnonCloseInsertModal = js.native
+  var event: CloseInsertModal = js.native
 }
 
 object ToolBarProps {
   @scala.inline
-  def apply(components: ButtonGroupPropssearchPan, event: AnonCloseInsertModal): ToolBarProps = {
+  def apply(components: ButtonGroupPropssearchPan, event: CloseInsertModal): ToolBarProps = {
     val __obj = js.Dynamic.literal(components = components.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any])
     __obj.asInstanceOf[ToolBarProps]
   }
@@ -37,7 +37,7 @@ object ToolBarProps {
         ret
     }
     @scala.inline
-    def withEvent(value: AnonCloseInsertModal): Self = {
+    def withEvent(value: CloseInsertModal): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`above-after`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`above-along`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`above-before`
@@ -106,8 +105,4 @@ trait LabelClass
     */
   var where: String = js.native
 }
-
-@JSGlobal("__esri.LabelClass")
-@js.native
-object LabelClass extends TopLevel[LabelClassConstructor]
 

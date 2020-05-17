@@ -1,6 +1,6 @@
 package typingsSlinky.stremioAddonSdk.mod
 
-import typingsSlinky.stremioAddonSdk.AnonDefaultVideo
+import typingsSlinky.stremioAddonSdk.anon.DefaultVideo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait MetaDetail extends MetaPreview {
     * Human-readable that describes all the significant awards.
     */
   var awards: js.UndefOr[String] = js.native
-  var behaviourHints: js.UndefOr[AnonDefaultVideo] = js.native
+  var behaviourHints: js.UndefOr[DefaultVideo] = js.native
   /**
     * Array of members of the cast.
     *
@@ -112,7 +112,7 @@ object MetaDetail {
         ret
     }
     @scala.inline
-    def withBehaviourHints(value: AnonDefaultVideo): Self = {
+    def withBehaviourHints(value: DefaultVideo): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("behaviourHints")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.koaRatelimitLru.mod
 
-import typingsSlinky.koaRatelimitLru.AnonRemaining
+import typingsSlinky.koaRatelimitLru.anon.Remaining
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait Options extends js.Object {
   val duration: js.UndefOr[Double] = js.native
   val errorMessage: js.UndefOr[String] = js.native
-  val headers: js.UndefOr[AnonRemaining] = js.native
+  val headers: js.UndefOr[Remaining] = js.native
   val id: js.UndefOr[String] = js.native
   val max: js.UndefOr[Double] = js.native
   val prefix: js.UndefOr[String] = js.native
@@ -55,7 +55,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withHeaders(value: AnonRemaining): Self = {
+    def withHeaders(value: Remaining): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
         ret

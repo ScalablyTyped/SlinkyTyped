@@ -1,28 +1,22 @@
 package typingsSlinky.oracleOraclejet.ojtableMod.ojTable
 
-import typingsSlinky.oracleOraclejet.Anon23
-import typingsSlinky.oracleOraclejet.AnonRowNumber
+import typingsSlinky.oracleOraclejet.anon.StartIndexRowNumber
+import typingsSlinky.oracleOraclejet.anon.StartKey23
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // tslint:disable-next-line interface-over-type-literal
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.oracleOraclejet.AnonStartIndexAnonRowNumber[K]
-  - typingsSlinky.oracleOraclejet.AnonStartKeyAnon23[K]
+  - typingsSlinky.oracleOraclejet.anon.StartIndexRowNumber[K]
+  - typingsSlinky.oracleOraclejet.anon.StartKey23[K]
 */
 trait RowSelectionStart[K] extends js.Object
 
 object RowSelectionStart {
   @scala.inline
-  def AnonStartIndexAnonRowNumber[K](startIndex: AnonRowNumber): RowSelectionStart[K] = {
-    val __obj = js.Dynamic.literal(startIndex = startIndex.asInstanceOf[js.Any])
-    __obj.asInstanceOf[RowSelectionStart[K]]
-  }
+  implicit def apply[K](value: StartIndexRowNumber[K]): RowSelectionStart[K] = value.asInstanceOf[RowSelectionStart[K]]
   @scala.inline
-  def AnonStartKeyAnon23[K](startKey: Anon23[K]): RowSelectionStart[K] = {
-    val __obj = js.Dynamic.literal(startKey = startKey.asInstanceOf[js.Any])
-    __obj.asInstanceOf[RowSelectionStart[K]]
-  }
+  implicit def apply[K](value: StartKey23[K]): RowSelectionStart[K] = value.asInstanceOf[RowSelectionStart[K]]
 }
 

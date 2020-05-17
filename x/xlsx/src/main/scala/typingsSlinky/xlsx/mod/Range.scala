@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Range extends _RangeSpec {
+trait Range extends RangeSpec {
   /** Ending cell */
   var e: CellAddress = js.native
   /** Starting cell */

@@ -1,5 +1,8 @@
 package typingsSlinky.formstate
 
+import typingsSlinky.formstate.anon.HasError
+import typingsSlinky.formstate.anon.NewValue
+import typingsSlinky.formstate.anon.Value
 import typingsSlinky.formstate.typesMod.ComposibleValidatable
 import typingsSlinky.formstate.typesMod.Validator
 import scala.scalajs.js
@@ -40,15 +43,15 @@ object fieldStateMod extends js.Object {
     /**
       * Allows you to take actions in your code based on `value` changes caused by user interactions
       */
-    /* protected */ def _onDidChange(config: AnonNewValue[TValue]): js.Any = js.native
+    /* protected */ def _onDidChange(config: NewValue[TValue]): js.Any = js.native
     /* protected */ def _onUpdate(state: FieldState[TValue]): js.Any = js.native
-    def enableAutoValidationAndValidate(): js.Promise[AnonHasError | AnonValue[TValue]] = js.native
-    /* protected */ def executeOnDidChange(config: AnonNewValue[TValue]): Unit = js.native
+    def enableAutoValidationAndValidate(): js.Promise[HasError | Value[TValue]] = js.native
+    /* protected */ def executeOnDidChange(config: NewValue[TValue]): Unit = js.native
     /* protected */ def executeOnUpdate(): Unit = js.native
     def getAutoValidationDefault(): Boolean = js.native
     /** On change on the component side */
     def onChange(value: TValue): Unit = js.native
-    def onDidChange(handler: js.Function1[/* config */ AnonNewValue[TValue], _]): this.type = js.native
+    def onDidChange(handler: js.Function1[/* config */ NewValue[TValue], _]): this.type = js.native
     /**
       * onUpdate is called whenever we change something in our local state that is significant
       * - value

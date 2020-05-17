@@ -1,9 +1,8 @@
 package typingsSlinky.chromeApps.chrome.fileSystemProvider
 
-import typingsSlinky.chromeApps.AnonCHANGED
+import typingsSlinky.chromeApps.anon.DELETED
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chromeAppsStrings.CHANGED
-import typingsSlinky.chromeApps.chromeAppsStrings.DELETED
 import typingsSlinky.std.Exclude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,9 +15,12 @@ trait NotificationChange extends js.Object {
     * @see ChangeType
     */
   var changeType: ToStringLiteral[
-    AnonCHANGED, 
-    /* keyof chrome-apps.AnonCHANGED */ CHANGED | DELETED, 
-    Exclude[/* keyof chrome-apps.AnonCHANGED */ CHANGED | DELETED, CHANGED | DELETED]
+    DELETED, 
+    /* keyof chrome-apps.anon.DELETED */ CHANGED | typingsSlinky.chromeApps.chromeAppsStrings.DELETED, 
+    Exclude[
+      /* keyof chrome-apps.anon.DELETED */ CHANGED | typingsSlinky.chromeApps.chromeAppsStrings.DELETED, 
+      CHANGED | typingsSlinky.chromeApps.chromeAppsStrings.DELETED
+    ]
   ] = js.native
   /** The path of the changed entry. */
   var entryPath: String = js.native
@@ -28,9 +30,12 @@ object NotificationChange {
   @scala.inline
   def apply(
     changeType: ToStringLiteral[
-      AnonCHANGED, 
-      /* keyof chrome-apps.AnonCHANGED */ CHANGED | DELETED, 
-      Exclude[/* keyof chrome-apps.AnonCHANGED */ CHANGED | DELETED, CHANGED | DELETED]
+      DELETED, 
+      /* keyof chrome-apps.anon.DELETED */ CHANGED | typingsSlinky.chromeApps.chromeAppsStrings.DELETED, 
+      Exclude[
+        /* keyof chrome-apps.anon.DELETED */ CHANGED | typingsSlinky.chromeApps.chromeAppsStrings.DELETED, 
+        CHANGED | typingsSlinky.chromeApps.chromeAppsStrings.DELETED
+      ]
     ],
     entryPath: String
   ): NotificationChange = {
@@ -46,9 +51,12 @@ object NotificationChange {
     @scala.inline
     def withChangeType(
       value: ToStringLiteral[
-          AnonCHANGED, 
-          /* keyof chrome-apps.AnonCHANGED */ CHANGED | DELETED, 
-          Exclude[/* keyof chrome-apps.AnonCHANGED */ CHANGED | DELETED, CHANGED | DELETED]
+          DELETED, 
+          /* keyof chrome-apps.anon.DELETED */ CHANGED | typingsSlinky.chromeApps.chromeAppsStrings.DELETED, 
+          Exclude[
+            /* keyof chrome-apps.anon.DELETED */ CHANGED | typingsSlinky.chromeApps.chromeAppsStrings.DELETED, 
+            CHANGED | typingsSlinky.chromeApps.chromeAppsStrings.DELETED
+          ]
         ]
     ): Self = {
         val ret = this.duplicate

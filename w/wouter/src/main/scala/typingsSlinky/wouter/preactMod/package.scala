@@ -6,13 +6,12 @@ import scala.scalajs.js.annotation._
 
 package object preactMod {
   type DefaultParams = org.scalablytyped.runtime.StringDictionary[java.lang.String]
-  type LinkProps = typingsSlinky.wouter.OmitHTMLAttributesEventTa with typingsSlinky.wouter.preactMod.NavigationalProps
+  type LinkProps = typingsSlinky.wouter.anon.OmitHTMLAttributesEventTa with typingsSlinky.wouter.preactMod.NavigationalProps
   type LocationHook = js.Function1[
     /* options */ js.UndefOr[typingsSlinky.wouter.preactMod.LocationHookOptions], 
     typingsSlinky.wouter.preactMod.LocationTuple
   ]
   type LocationTuple = js.Tuple2[typingsSlinky.wouter.preactMod.Path, typingsSlinky.wouter.preactMod.PushCallback]
-  type Match[T /* <: typingsSlinky.wouter.preactMod.DefaultParams */] = typingsSlinky.wouter.preactMod.MatchWithParams[T] | typingsSlinky.wouter.preactMod.NoMatch
   type MatchWithParams[T /* <: typingsSlinky.wouter.preactMod.DefaultParams */] = js.Tuple2[
     typingsSlinky.wouter.wouterBooleans.`true`, 
     typingsSlinky.wouter.preactMod.Params[T]

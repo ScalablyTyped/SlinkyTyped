@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Defines the scaling settings.
   */
-@JSGlobal("Scale")
 @js.native
-class Scale () extends js.Object {
+trait Scale extends js.Object {
   /**
     * Specifies the image's x-scale factor as a percent.
     */
@@ -18,5 +17,33 @@ class Scale () extends js.Object {
     * Specifies the image's y-scale factor as a percent.
     */
   var y: Double = js.native
+}
+
+object Scale {
+  @scala.inline
+  def apply(x: Double, y: Double): Scale = {
+    val __obj = js.Dynamic.literal(x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Scale]
+  }
+  @scala.inline
+  implicit class ScaleOps[Self <: Scale] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

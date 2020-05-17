@@ -1,11 +1,5 @@
 package typingsSlinky.babelTypes.mod
 
-import typingsSlinky.babelTypes.babelTypesStrings.AwaitExpression
-import typingsSlinky.babelTypes.babelTypesStrings.BreakStatement
-import typingsSlinky.babelTypes.babelTypesStrings.ContinueStatement
-import typingsSlinky.babelTypes.babelTypesStrings.ReturnStatement
-import typingsSlinky.babelTypes.babelTypesStrings.ThrowStatement
-import typingsSlinky.babelTypes.babelTypesStrings.YieldExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,44 +12,20 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.YieldExpression_
   - typingsSlinky.babelTypes.mod.AwaitExpression_
 */
-trait Terminatorless extends _Node
+trait Terminatorless extends Node
 
 object Terminatorless {
   @scala.inline
-  def YieldExpression_(delegate: js.Any, `type`: YieldExpression): Terminatorless = {
-    val __obj = js.Dynamic.literal(delegate = delegate.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Terminatorless]
-  }
+  implicit def apply(value: AwaitExpression_): Terminatorless = value.asInstanceOf[Terminatorless]
   @scala.inline
-  def ContinueStatement_(`type`: ContinueStatement): Terminatorless = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Terminatorless]
-  }
+  implicit def apply(value: BreakStatement_): Terminatorless = value.asInstanceOf[Terminatorless]
   @scala.inline
-  def BreakStatement_(`type`: BreakStatement): Terminatorless = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Terminatorless]
-  }
+  implicit def apply(value: ContinueStatement_): Terminatorless = value.asInstanceOf[Terminatorless]
   @scala.inline
-  def AwaitExpression_(argument: Expression, `type`: AwaitExpression): Terminatorless = {
-    val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Terminatorless]
-  }
+  implicit def apply(value: ReturnStatement_): Terminatorless = value.asInstanceOf[Terminatorless]
   @scala.inline
-  def ThrowStatement_(argument: Expression, `type`: ThrowStatement): Terminatorless = {
-    val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Terminatorless]
-  }
+  implicit def apply(value: ThrowStatement_): Terminatorless = value.asInstanceOf[Terminatorless]
   @scala.inline
-  def ReturnStatement_(`type`: ReturnStatement): Terminatorless = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Terminatorless]
-  }
+  implicit def apply(value: YieldExpression_): Terminatorless = value.asInstanceOf[Terminatorless]
 }
 

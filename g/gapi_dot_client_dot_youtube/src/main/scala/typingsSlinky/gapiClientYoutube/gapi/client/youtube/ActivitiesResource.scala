@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientYoutube.gapi.client.youtube
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientYoutube.AnonAlt
-import typingsSlinky.gapiClientYoutube.AnonChannelId
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientYoutube.anon.Alt
+import typingsSlinky.gapiClientYoutube.anon.ChannelId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,17 +16,17 @@ trait ActivitiesResource extends js.Object {
     * use other API methods to generate those activity resources. For example, you would use the API's videos.rate() method to rate a video and the
     * playlistItems.insert() method to mark a video as a favorite.
     */
-  def insert(request: AnonAlt): Request_[Activity] = js.native
+  def insert(request: Alt): Request[Activity] = js.native
   /**
     * Returns a list of channel activity events that match the request criteria. For example, you can retrieve events associated with a particular channel,
     * events associated with the user's subscriptions and Google+ friends, or the YouTube home page feed, which is customized for each user.
     */
-  def list(request: AnonChannelId): Request_[ActivityListResponse] = js.native
+  def list(request: ChannelId): Request[ActivityListResponse] = js.native
 }
 
 object ActivitiesResource {
   @scala.inline
-  def apply(insert: AnonAlt => Request_[Activity], list: AnonChannelId => Request_[ActivityListResponse]): ActivitiesResource = {
+  def apply(insert: Alt => Request[Activity], list: ChannelId => Request[ActivityListResponse]): ActivitiesResource = {
     val __obj = js.Dynamic.literal(insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[ActivitiesResource]
   }
@@ -37,13 +37,13 @@ object ActivitiesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withInsert(value: AnonAlt => Request_[Activity]): Self = {
+    def withInsert(value: Alt => Request[Activity]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonChannelId => Request_[ActivityListResponse]): Self = {
+    def withList(value: ChannelId => Request[ActivityListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

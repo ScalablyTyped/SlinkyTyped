@@ -1,5 +1,7 @@
 package typingsSlinky.jqueryPnotify
 
+import typingsSlinky.jqueryPnotify.anon.Close
+import typingsSlinky.jqueryPnotify.anon.Closer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +11,7 @@ trait PNotifyButtons extends js.Object {
   /**
     * The classes to use for button icons. Leave them null to use the classes from the styling you're using.
     */
-  var classes: js.UndefOr[AnonCloser] = js.native
+  var classes: js.UndefOr[Closer] = js.native
   /**
     * Provide a button for the user to manually close the notice.
     */
@@ -21,7 +23,7 @@ trait PNotifyButtons extends js.Object {
   /**
     * The various displayed text, helps facilitating internationalization.
     */
-  var labels: js.UndefOr[AnonClose] = js.native
+  var labels: js.UndefOr[Close] = js.native
   /**
     * Show the buttons even when the nonblock module is in use.
     */
@@ -49,7 +51,7 @@ object PNotifyButtons {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClasses(value: AnonCloser): Self = {
+    def withClasses(value: Closer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
         ret
@@ -85,7 +87,7 @@ object PNotifyButtons {
         ret
     }
     @scala.inline
-    def withLabels(value: AnonClose): Self = {
+    def withLabels(value: Close): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
         ret

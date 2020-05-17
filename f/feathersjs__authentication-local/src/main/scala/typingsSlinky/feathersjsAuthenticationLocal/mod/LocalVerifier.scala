@@ -3,7 +3,7 @@ package typingsSlinky.feathersjsAuthenticationLocal.mod
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
-import typingsSlinky.feathersjsAuthenticationLocal.AnonMessage
+import typingsSlinky.feathersjsAuthenticationLocal.anon.Message
 import typingsSlinky.feathersjsFeathers.mod.Application
 import typingsSlinky.feathersjsFeathers.mod.Paginated
 import scala.scalajs.js
@@ -26,7 +26,7 @@ class LocalVerifier protected () extends js.Object {
     done: js.Function3[
       /* error */ js.Any, 
       /* user */ js.UndefOr[js.Any], 
-      /* options */ js.UndefOr[AnonMessage], 
+      /* options */ js.UndefOr[Message], 
       Unit
     ]
   ): Unit = js.native

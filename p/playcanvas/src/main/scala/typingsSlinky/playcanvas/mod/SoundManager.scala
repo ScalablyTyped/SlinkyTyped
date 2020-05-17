@@ -1,6 +1,6 @@
 package typingsSlinky.playcanvas.mod
 
-import typingsSlinky.playcanvas.AnonForceWebAudioApi
+import typingsSlinky.playcanvas.anon.ForceWebAudioApi
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,6 +20,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class SoundManager ()
   extends typingsSlinky.playcanvas.pc.SoundManager {
-  def this(options: AnonForceWebAudioApi) = this()
+  def this(options: ForceWebAudioApi) = this()
 }
 

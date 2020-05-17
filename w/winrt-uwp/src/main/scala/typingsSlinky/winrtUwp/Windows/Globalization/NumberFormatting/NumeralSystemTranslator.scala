@@ -1,21 +1,13 @@
 package typingsSlinky.winrtUwp.Windows.Globalization.NumberFormatting
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterable
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Translates digits of the Latin numerical system into digits of another numerical system. */
-@JSGlobal("Windows.Globalization.NumberFormatting.NumeralSystemTranslator")
 @js.native
-/** Creates a NumeralSystemTranslator object initialized by the list of current runtime language values preferred by the user. */
-class NumeralSystemTranslator () extends js.Object {
-  /**
-    * Creates a NumeralSystemTranslator object initialized by a language list.
-    * @param languages A list of BCP-47 language tags, in priority order, representing the choice of languages. They must all be well-formed according to Windows.Globalization.Language.isWellFormed .
-    */
-  def this(languages: IIterable[String]) = this()
+trait NumeralSystemTranslator extends js.Object {
   /** Gets the BCP-47 language tag(s) used to initialize this NumeralSystemTranslator object. */
   var languages: IVectorView[String] = js.native
   /** Gets or sets the numeral system that Latin digits will be converted to on calls to TranslateNumerals . */
@@ -28,5 +20,50 @@ class NumeralSystemTranslator () extends js.Object {
     * @return A string containing the converted digits. This string may be a different length than value.
     */
   def translateNumerals(value: String): String = js.native
+}
+
+object NumeralSystemTranslator {
+  @scala.inline
+  def apply(
+    languages: IVectorView[String],
+    numeralSystem: String,
+    resolvedLanguage: String,
+    translateNumerals: String => String
+  ): NumeralSystemTranslator = {
+    val __obj = js.Dynamic.literal(languages = languages.asInstanceOf[js.Any], numeralSystem = numeralSystem.asInstanceOf[js.Any], resolvedLanguage = resolvedLanguage.asInstanceOf[js.Any], translateNumerals = js.Any.fromFunction1(translateNumerals))
+    __obj.asInstanceOf[NumeralSystemTranslator]
+  }
+  @scala.inline
+  implicit class NumeralSystemTranslatorOps[Self <: NumeralSystemTranslator] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLanguages(value: IVectorView[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNumeralSystem(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numeralSystem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResolvedLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvedLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTranslateNumerals(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translateNumerals")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

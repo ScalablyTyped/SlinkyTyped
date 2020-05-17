@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientAdsensehost.gapi.client.adsensehost
 
-import typingsSlinky.gapiClientAdsensehost.AnonBackupOption
-import typingsSlinky.gapiClientAdsensehost.AnonMarkupLanguage
+import typingsSlinky.gapiClientAdsensehost.anon.BackupOption
+import typingsSlinky.gapiClientAdsensehost.anon.MarkupLanguage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait AdUnit extends js.Object {
   /** Identity code of this ad unit, not necessarily unique across ad clients. */
   var code: js.UndefOr[String] = js.native
   /** Settings specific to content ads (AFC) and highend mobile content ads (AFMC - deprecated). */
-  var contentAdsSettings: js.UndefOr[AnonBackupOption] = js.native
+  var contentAdsSettings: js.UndefOr[BackupOption] = js.native
   /** Custom style information specific to this ad unit. */
   var customStyle: js.UndefOr[AdStyle] = js.native
   /** Unique identifier of this ad unit. This should be considered an opaque identifier; it is not safe to rely on it being in any particular format. */
@@ -19,7 +19,7 @@ trait AdUnit extends js.Object {
   /** Kind of resource this is, in this case adsensehost#adUnit. */
   var kind: js.UndefOr[String] = js.native
   /** Settings specific to WAP mobile content ads (AFMC - deprecated). */
-  var mobileContentAdsSettings: js.UndefOr[AnonMarkupLanguage] = js.native
+  var mobileContentAdsSettings: js.UndefOr[MarkupLanguage] = js.native
   /** Name of this ad unit. */
   var name: js.UndefOr[String] = js.native
   /**
@@ -58,7 +58,7 @@ object AdUnit {
         ret
     }
     @scala.inline
-    def withContentAdsSettings(value: AnonBackupOption): Self = {
+    def withContentAdsSettings(value: BackupOption): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentAdsSettings")(value.asInstanceOf[js.Any])
         ret
@@ -106,7 +106,7 @@ object AdUnit {
         ret
     }
     @scala.inline
-    def withMobileContentAdsSettings(value: AnonMarkupLanguage): Self = {
+    def withMobileContentAdsSettings(value: MarkupLanguage): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mobileContentAdsSettings")(value.asInstanceOf[js.Any])
         ret

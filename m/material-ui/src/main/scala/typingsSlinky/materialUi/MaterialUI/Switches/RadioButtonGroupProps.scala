@@ -1,11 +1,11 @@
 package typingsSlinky.materialUi.MaterialUI.Switches
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
 import typingsSlinky.materialUi.materialUiStrings.left
 import typingsSlinky.materialUi.materialUiStrings.right
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait RadioButtonGroupProps extends js.Object {
   var labelPosition: js.UndefOr[left | right] = js.native
   var name: String = js.native
   var onChange: js.UndefOr[
-    js.Function2[SyntheticEvent[EventTarget with js.Object, Event_], /* selected */ String, Unit]
+    js.Function2[SyntheticEvent[EventTarget with js.Object, Event], /* selected */ String, Unit]
   ] = js.native
   var style: js.UndefOr[CSSProperties] = js.native
   var valueSelected: js.UndefOr[js.Any] = js.native
@@ -78,7 +78,7 @@ object RadioButtonGroupProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: (SyntheticEvent[EventTarget with js.Object, Event_], /* selected */ String) => Unit): Self = {
+    def withOnChange(value: (SyntheticEvent[EventTarget with js.Object, Event], /* selected */ String) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
         ret

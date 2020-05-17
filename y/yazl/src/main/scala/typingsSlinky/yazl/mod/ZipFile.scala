@@ -2,9 +2,9 @@ package typingsSlinky.yazl.mod
 
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.bufferMod.Buffer
-import typingsSlinky.yazl.PartialDirectoryOptions
-import typingsSlinky.yazl.PartialOptions
-import typingsSlinky.yazl.PartialReadStreamOptions
+import typingsSlinky.yazl.anon.PartialDirectoryOptions
+import typingsSlinky.yazl.anon.PartialOptions
+import typingsSlinky.yazl.anon.PartialReadStreamOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,14 +1,14 @@
 package typingsSlinky.auth0Js
 
 import typingsSlinky.auth0Js.mod.LibErrorCodes
-import typingsSlinky.auth0Js.mod._SpecErrorCodes
+import typingsSlinky.auth0Js.mod.SpecErrorCodes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object auth0JsStrings {
   @js.native
-  sealed trait account_selection_required extends _SpecErrorCodes
+  sealed trait account_selection_required extends SpecErrorCodes
   
   @js.native
   sealed trait code extends js.Object
@@ -29,10 +29,10 @@ object auth0JsStrings {
   sealed trait interaction_required extends js.Object
   
   @js.native
-  sealed trait invalid_request_object extends _SpecErrorCodes
+  sealed trait invalid_request_object extends SpecErrorCodes
   
   @js.native
-  sealed trait invalid_request_uri extends _SpecErrorCodes
+  sealed trait invalid_request_uri extends SpecErrorCodes
   
   @js.native
   sealed trait invalid_token extends LibErrorCodes
@@ -47,16 +47,16 @@ object auth0JsStrings {
   sealed trait query extends js.Object
   
   @js.native
-  sealed trait registration_not_supported extends _SpecErrorCodes
+  sealed trait registration_not_supported extends SpecErrorCodes
   
   @js.native
   sealed trait request_error extends LibErrorCodes
   
   @js.native
-  sealed trait request_not_supported extends _SpecErrorCodes
+  sealed trait request_not_supported extends SpecErrorCodes
   
   @js.native
-  sealed trait request_uri_not_supported extends _SpecErrorCodes
+  sealed trait request_uri_not_supported extends SpecErrorCodes
   
   @js.native
   sealed trait signUp extends js.Object

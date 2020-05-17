@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * A command to change borders and shading of the selected table elements.
   */
-@JSGlobal("ChangeTableBordersAndShadingCommand")
 @js.native
-class ChangeTableBordersAndShadingCommand () extends js.Object {
+trait ChangeTableBordersAndShadingCommand extends js.Object {
   /**
     * Executes the ChangeTableBordersAndShadingCommand command with the specified parameters. true if the command has been successfully executed; false if the command execution has failed.
     * @param settings A TableBorderSettings object with settings specifying table borders.
@@ -20,5 +19,36 @@ class ChangeTableBordersAndShadingCommand () extends js.Object {
     * Gets information about the command's state.
     */
   def getState(): CommandState[TableBordersSettings] = js.native
+}
+
+object ChangeTableBordersAndShadingCommand {
+  @scala.inline
+  def apply(
+    execute: (TableBordersSettings, Boolean) => Boolean,
+    getState: () => CommandState[TableBordersSettings]
+  ): ChangeTableBordersAndShadingCommand = {
+    val __obj = js.Dynamic.literal(execute = js.Any.fromFunction2(execute), getState = js.Any.fromFunction0(getState))
+    __obj.asInstanceOf[ChangeTableBordersAndShadingCommand]
+  }
+  @scala.inline
+  implicit class ChangeTableBordersAndShadingCommandOps[Self <: ChangeTableBordersAndShadingCommand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExecute(value: (TableBordersSettings, Boolean) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetState(value: () => CommandState[TableBordersSettings]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getState")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdkClientS3Browser.typesHeadObjectInputMod
 
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.requester_
-import typingsSlinky.awsSdkClientS3Browser.inputTypesUnionMod._InputTypesUnion
+import typingsSlinky.awsSdkClientS3Browser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.cryptoMod.SourceData
 import typingsSlinky.awsSdkTypes.httpMod.BrowserHttpOptions
@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait HeadObjectInput extends _InputTypesUnion {
+trait HeadObjectInput extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *

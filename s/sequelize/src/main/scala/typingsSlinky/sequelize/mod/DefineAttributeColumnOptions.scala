@@ -1,6 +1,6 @@
 package typingsSlinky.sequelize.mod
 
-import typingsSlinky.sequelize.AnonMsg
+import typingsSlinky.sequelize.anon.Msg
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -57,7 +57,7 @@ trait DefineAttributeColumnOptions extends ColumnOptions {
     * composite unique index. If multiple columns have the same string, they will be part of the same unique
     * index
     */
-  var unique: js.UndefOr[Boolean | String | AnonMsg] = js.native
+  var unique: js.UndefOr[Boolean | String | Msg] = js.native
   /**
     * An object of validations to execute for this column every time the model is saved. Can be either the
     * name of a validation provided by validator.js, a validation function provided by extending validator.js
@@ -199,7 +199,7 @@ object DefineAttributeColumnOptions {
         ret
     }
     @scala.inline
-    def withUnique(value: Boolean | String | AnonMsg): Self = {
+    def withUnique(value: Boolean | String | Msg): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("unique")(value.asInstanceOf[js.Any])
         ret

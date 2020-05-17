@@ -1,7 +1,7 @@
 package typingsSlinky.reactMapGl.mod
 
-import typingsSlinky.reactMapGl.AnonHeight
-import typingsSlinky.reactMapGl.AnonMaxPitch
+import typingsSlinky.reactMapGl.anon.Height
+import typingsSlinky.reactMapGl.anon.MaxPitch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,10 +10,10 @@ import scala.scalajs.js.annotation._
 trait StaticMapProps extends MapboxProps {
   var className: js.UndefOr[String] = js.native
   var disableTokenWarning: js.UndefOr[Boolean] = js.native
-  var onResize: js.UndefOr[js.Function1[/* dimensions */ AnonHeight, Unit]] = js.native
+  var onResize: js.UndefOr[js.Function1[/* dimensions */ Height, Unit]] = js.native
   var preventStyleDiffing: js.UndefOr[Boolean] = js.native
   var style: js.UndefOr[js.Object] = js.native
-  var visibilityConstraints: js.UndefOr[AnonMaxPitch] = js.native
+  var visibilityConstraints: js.UndefOr[MaxPitch] = js.native
 }
 
 object StaticMapProps {
@@ -53,7 +53,7 @@ object StaticMapProps {
         ret
     }
     @scala.inline
-    def withOnResize(value: /* dimensions */ AnonHeight => Unit): Self = {
+    def withOnResize(value: /* dimensions */ Height => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onResize")(js.Any.fromFunction1(value))
         ret
@@ -89,7 +89,7 @@ object StaticMapProps {
         ret
     }
     @scala.inline
-    def withVisibilityConstraints(value: AnonMaxPitch): Self = {
+    def withVisibilityConstraints(value: MaxPitch): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("visibilityConstraints")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCliFramework.loggerMod
 
-import typingsSlinky.ionicCliFramework.PartialStreamHandlerOptio
+import typingsSlinky.ionicCliFramework.anon.PartialStreamHandlerOptio
 import typingsSlinky.node.NodeJS.WritableStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`

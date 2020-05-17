@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait VNode extends js.Object {
+trait VNode extends Content {
   val content: js.Array[VNode] = js.native
   val isSVG: Boolean = js.native
   val key: Key | Null = js.native

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RangeLike extends js.Object {
+trait RangeLike extends RangeCompatible {
   /** A Point representing the end of the Range. */
   var end: PointLike = js.native
   /** A Point representing the start of the Range. */

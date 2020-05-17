@@ -14,7 +14,8 @@ trait OrgsListOutsideCollaboratorsParams extends js.Object {
     * \* `all`: All outside collaborators.
     */
   var filter: js.UndefOr[`2fa_disabled` | all] = js.native
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
   /**
     * Page number of the results to fetch.
     */
@@ -27,8 +28,9 @@ trait OrgsListOutsideCollaboratorsParams extends js.Object {
 
 object OrgsListOutsideCollaboratorsParams {
   @scala.inline
-  def apply(org: String): OrgsListOutsideCollaboratorsParams = {
-    val __obj = js.Dynamic.literal(org = org.asInstanceOf[js.Any])
+  def apply(org_ : String): OrgsListOutsideCollaboratorsParams = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrgsListOutsideCollaboratorsParams]
   }
   @scala.inline
@@ -38,7 +40,7 @@ object OrgsListOutsideCollaboratorsParams {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +26,34 @@ trait colorUtils extends js.Object {
   def getBackgroundColorTheme(view: MapView): js.Promise[String] = js.native
 }
 
-@JSGlobal("__esri.colorUtils")
-@js.native
-object colorUtils extends TopLevel[colorUtils]
+object colorUtils {
+  @scala.inline
+  def apply(
+    getBackgroundColor: MapView => js.Promise[Color_],
+    getBackgroundColorTheme: MapView => js.Promise[String]
+  ): colorUtils = {
+    val __obj = js.Dynamic.literal(getBackgroundColor = js.Any.fromFunction1(getBackgroundColor), getBackgroundColorTheme = js.Any.fromFunction1(getBackgroundColorTheme))
+    __obj.asInstanceOf[colorUtils]
+  }
+  @scala.inline
+  implicit class colorUtilsOps[Self <: colorUtils] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetBackgroundColor(value: MapView => js.Promise[Color_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBackgroundColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetBackgroundColorTheme(value: MapView => js.Promise[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBackgroundColorTheme")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

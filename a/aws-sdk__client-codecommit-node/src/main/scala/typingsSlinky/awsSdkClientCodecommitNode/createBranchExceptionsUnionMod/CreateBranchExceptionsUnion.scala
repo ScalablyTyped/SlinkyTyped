@@ -1,0 +1,69 @@
+package typingsSlinky.awsSdkClientCodecommitNode.createBranchExceptionsUnionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.typesBranchNameExistsExceptionMod.BranchNameExistsException
+import typingsSlinky.awsSdkClientCodecommitNode.typesBranchNameRequiredExceptionMod.BranchNameRequiredException
+import typingsSlinky.awsSdkClientCodecommitNode.typesCommitDoesNotExistExceptionMod.CommitDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesCommitIdRequiredExceptionMod.CommitIdRequiredException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidBranchNameExceptionMod.InvalidBranchNameException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidCommitIdExceptionMod.InvalidCommitIdException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesBranchNameRequiredExceptionMod.BranchNameRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesBranchNameExistsExceptionMod.BranchNameExistsException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidBranchNameExceptionMod.InvalidBranchNameException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesCommitIdRequiredExceptionMod.CommitIdRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesCommitDoesNotExistExceptionMod.CommitDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidCommitIdExceptionMod.InvalidCommitIdException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+*/
+trait CreateBranchExceptionsUnion extends js.Object
+
+object CreateBranchExceptionsUnion {
+  @scala.inline
+  implicit def apply(value: BranchNameExistsException): CreateBranchExceptionsUnion = value.asInstanceOf[CreateBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: BranchNameRequiredException): CreateBranchExceptionsUnion = value.asInstanceOf[CreateBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: CommitDoesNotExistException): CreateBranchExceptionsUnion = value.asInstanceOf[CreateBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: CommitIdRequiredException): CreateBranchExceptionsUnion = value.asInstanceOf[CreateBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionIntegrityChecksFailedException): CreateBranchExceptionsUnion = value.asInstanceOf[CreateBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyAccessDeniedException): CreateBranchExceptionsUnion = value.asInstanceOf[CreateBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyDisabledException): CreateBranchExceptionsUnion = value.asInstanceOf[CreateBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyNotFoundException): CreateBranchExceptionsUnion = value.asInstanceOf[CreateBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyUnavailableException): CreateBranchExceptionsUnion = value.asInstanceOf[CreateBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidBranchNameException): CreateBranchExceptionsUnion = value.asInstanceOf[CreateBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidCommitIdException): CreateBranchExceptionsUnion = value.asInstanceOf[CreateBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidRepositoryNameException): CreateBranchExceptionsUnion = value.asInstanceOf[CreateBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryDoesNotExistException): CreateBranchExceptionsUnion = value.asInstanceOf[CreateBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryNameRequiredException): CreateBranchExceptionsUnion = value.asInstanceOf[CreateBranchExceptionsUnion]
+}
+

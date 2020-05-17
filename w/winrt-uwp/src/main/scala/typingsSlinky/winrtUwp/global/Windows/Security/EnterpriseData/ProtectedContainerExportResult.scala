@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.Security.EnterpriseData
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Represents the result of an enterprise protected file that has been exported to a container file. */
+@JSGlobal("Windows.Security.EnterpriseData.ProtectedContainerExportResult")
+@js.native
+abstract class ProtectedContainerExportResult ()
+  extends typingsSlinky.winrtUwp.Windows.Security.EnterpriseData.ProtectedContainerExportResult
+

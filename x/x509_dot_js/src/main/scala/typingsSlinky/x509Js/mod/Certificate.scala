@@ -1,6 +1,6 @@
 package typingsSlinky.x509Js.mod
 
-import typingsSlinky.x509Js.AnonCommonName
+import typingsSlinky.x509Js.anon.CommonName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,28 +8,28 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Certificate extends js.Object {
   var altNames: js.Array[String] = js.native
-  var issuer: AnonCommonName = js.native
+  var issuer: CommonName = js.native
   var notAfter: String = js.native
   var notBefore: String = js.native
   var ocspList: js.Array[String] = js.native
   var publicExponent: String = js.native
   var publicModulus: String = js.native
   var serial: String = js.native
-  var subject: AnonCommonName = js.native
+  var subject: CommonName = js.native
 }
 
 object Certificate {
   @scala.inline
   def apply(
     altNames: js.Array[String],
-    issuer: AnonCommonName,
+    issuer: CommonName,
     notAfter: String,
     notBefore: String,
     ocspList: js.Array[String],
     publicExponent: String,
     publicModulus: String,
     serial: String,
-    subject: AnonCommonName
+    subject: CommonName
   ): Certificate = {
     val __obj = js.Dynamic.literal(altNames = altNames.asInstanceOf[js.Any], issuer = issuer.asInstanceOf[js.Any], notAfter = notAfter.asInstanceOf[js.Any], notBefore = notBefore.asInstanceOf[js.Any], ocspList = ocspList.asInstanceOf[js.Any], publicExponent = publicExponent.asInstanceOf[js.Any], publicModulus = publicModulus.asInstanceOf[js.Any], serial = serial.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any])
     __obj.asInstanceOf[Certificate]
@@ -47,7 +47,7 @@ object Certificate {
         ret
     }
     @scala.inline
-    def withIssuer(value: AnonCommonName): Self = {
+    def withIssuer(value: CommonName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("issuer")(value.asInstanceOf[js.Any])
         ret
@@ -89,7 +89,7 @@ object Certificate {
         ret
     }
     @scala.inline
-    def withSubject(value: AnonCommonName): Self = {
+    def withSubject(value: CommonName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
         ret

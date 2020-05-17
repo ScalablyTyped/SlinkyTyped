@@ -1,6 +1,6 @@
 package typingsSlinky.cassandraDriver.metadataMod.metadata
 
-import typingsSlinky.cassandraDriver.AnonCode
+import typingsSlinky.cassandraDriver.anon.Code
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SchemaFunction extends js.Object {
   var argumentNames: js.Array[String] = js.native
-  var argumentTypes: js.Array[AnonCode] = js.native
+  var argumentTypes: js.Array[Code] = js.native
   var body: String = js.native
   var calledOnNullInput: Boolean = js.native
   var keyspaceName: String = js.native
@@ -22,7 +22,7 @@ object SchemaFunction {
   @scala.inline
   def apply(
     argumentNames: js.Array[String],
-    argumentTypes: js.Array[AnonCode],
+    argumentTypes: js.Array[Code],
     body: String,
     calledOnNullInput: Boolean,
     keyspaceName: String,
@@ -47,7 +47,7 @@ object SchemaFunction {
         ret
     }
     @scala.inline
-    def withArgumentTypes(value: js.Array[AnonCode]): Self = {
+    def withArgumentTypes(value: js.Array[Code]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("argumentTypes")(value.asInstanceOf[js.Any])
         ret

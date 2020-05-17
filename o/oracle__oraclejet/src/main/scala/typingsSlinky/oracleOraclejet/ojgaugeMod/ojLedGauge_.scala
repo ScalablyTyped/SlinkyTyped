@@ -2,9 +2,9 @@ package typingsSlinky.oracleOraclejet.ojgaugeMod
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.Anon8
-import typingsSlinky.oracleOraclejet.AnonText
-import typingsSlinky.oracleOraclejet.AnonTextType
+import typingsSlinky.oracleOraclejet.anon.Text
+import typingsSlinky.oracleOraclejet.anon.TextType
+import typingsSlinky.oracleOraclejet.anon.`8`
 import typingsSlinky.oracleOraclejet.ojgaugeMod.ojLedGauge.Threshold
 import typingsSlinky.oracleOraclejet.oracleOraclejetNumbers.`0`
 import typingsSlinky.oracleOraclejet.oracleOraclejetNumbers.`180`
@@ -58,9 +58,9 @@ import scala.scalajs.js.annotation._
 trait ojLedGauge_ extends dvtBaseGauge[ojLedGaugeSettableProperties] {
   var borderColor: String = js.native
   var color: String = js.native
-  var label: AnonText = js.native
+  var label: Text = js.native
   var max: Double = js.native
-  var metricLabel: AnonTextType = js.native
+  var metricLabel: TextType = js.native
   var min: Double = js.native
   var onBorderColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var onColorChanged: (js.Function1[CustomEvent, _]) | Null = js.native
@@ -82,7 +82,7 @@ trait ojLedGauge_ extends dvtBaseGauge[ojLedGaugeSettableProperties] {
   var svgClassName: String = js.native
   var svgStyle: js.Object = js.native
   var thresholds: js.Array[Threshold] = js.native
-  var tooltip: Anon8 = js.native
+  var tooltip: `8` = js.native
   var `type`: arrow | diamond | square | rectangle | triangle | star | human | circle = js.native
   var value: Double | Null = js.native
   var visualEffects: none | auto = js.native
@@ -204,11 +204,11 @@ trait ojLedGauge_ extends dvtBaseGauge[ojLedGaugeSettableProperties] {
   @JSName("getProperty")
   def getProperty_color(property: color): String = js.native
   @JSName("getProperty")
-  def getProperty_label(property: label): AnonText = js.native
+  def getProperty_label(property: label): Text = js.native
   @JSName("getProperty")
   def getProperty_max(property: max): Double = js.native
   @JSName("getProperty")
-  def getProperty_metricLabel(property: metricLabel): AnonTextType = js.native
+  def getProperty_metricLabel(property: metricLabel): TextType = js.native
   @JSName("getProperty")
   def getProperty_min(property: min): Double = js.native
   @JSName("getProperty")
@@ -222,7 +222,7 @@ trait ojLedGauge_ extends dvtBaseGauge[ojLedGaugeSettableProperties] {
   @JSName("getProperty")
   def getProperty_thresholds(property: thresholds): js.Array[Threshold] = js.native
   @JSName("getProperty")
-  def getProperty_tooltip(property: tooltip): Anon8 = js.native
+  def getProperty_tooltip(property: tooltip): `8` = js.native
   @JSName("getProperty")
   def getProperty_type(property: `type`): arrow | diamond | square | rectangle | triangle | star | human | circle = js.native
   @JSName("getProperty")
@@ -249,11 +249,11 @@ trait ojLedGauge_ extends dvtBaseGauge[ojLedGaugeSettableProperties] {
   @JSName("setProperty")
   def setProperty_color(property: color, value: String): Unit = js.native
   @JSName("setProperty")
-  def setProperty_label(property: label, value: AnonText): Unit = js.native
+  def setProperty_label(property: label, value: Text): Unit = js.native
   @JSName("setProperty")
   def setProperty_max(property: max, value: Double): Unit = js.native
   @JSName("setProperty")
-  def setProperty_metricLabel(property: metricLabel, value: AnonTextType): Unit = js.native
+  def setProperty_metricLabel(property: metricLabel, value: TextType): Unit = js.native
   @JSName("setProperty")
   def setProperty_min(property: min, value: Double): Unit = js.native
   @JSName("setProperty")
@@ -265,7 +265,7 @@ trait ojLedGauge_ extends dvtBaseGauge[ojLedGaugeSettableProperties] {
   @JSName("setProperty")
   def setProperty_thresholds(property: thresholds, value: js.Array[Threshold]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_tooltip(property: tooltip, value: Anon8): Unit = js.native
+  def setProperty_tooltip(property: tooltip, value: `8`): Unit = js.native
   @JSName("setProperty")
   def setProperty_value(property: value): Unit = js.native
   @JSName("setProperty")

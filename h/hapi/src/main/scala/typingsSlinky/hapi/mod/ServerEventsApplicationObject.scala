@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ServerEventsApplicationObject extends js.Object {
+trait ServerEventsApplicationObject extends ServerEventsApplication {
   /** a string or array of strings specifying the event channels available. Defaults to no channel restrictions (event updates can specify a channel or not). */
   var channels: js.UndefOr[String | js.Array[String]] = js.native
   /**

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Word.TableOfFigures")
 @js.native
-class TableOfFigures protected () extends js.Object {
+trait TableOfFigures extends js.Object {
   val Application: typingsSlinky.activexWord.Word.Application = js.native
   var Caption: String = js.native
   val Creator: Double = js.native
@@ -29,5 +28,170 @@ class TableOfFigures protected () extends js.Object {
   def Delete(): Unit = js.native
   def Update(): Unit = js.native
   def UpdatePageNumbers(): Unit = js.native
+}
+
+object TableOfFigures {
+  @scala.inline
+  def apply(
+    Application: Application,
+    Caption: String,
+    Creator: Double,
+    Delete: () => Unit,
+    HeadingStyles: HeadingStyles,
+    HidePageNumbersInWeb: Boolean,
+    IncludeLabel: Boolean,
+    IncludePageNumbers: Boolean,
+    LowerHeadingLevel: Double,
+    Parent: js.Any,
+    Range: Range,
+    RightAlignPageNumbers: Boolean,
+    TabLeader: WdTabLeader,
+    TableID: String,
+    Update: () => Unit,
+    UpdatePageNumbers: () => Unit,
+    UpperHeadingLevel: Double,
+    UseFields: Boolean,
+    UseHeadingStyles: Boolean,
+    UseHyperlinks: Boolean,
+    WordDotTableOfFigures_typekey: TableOfFigures
+  ): TableOfFigures = {
+    val __obj = js.Dynamic.literal(Application = Application.asInstanceOf[js.Any], Caption = Caption.asInstanceOf[js.Any], Creator = Creator.asInstanceOf[js.Any], Delete = js.Any.fromFunction0(Delete), HeadingStyles = HeadingStyles.asInstanceOf[js.Any], HidePageNumbersInWeb = HidePageNumbersInWeb.asInstanceOf[js.Any], IncludeLabel = IncludeLabel.asInstanceOf[js.Any], IncludePageNumbers = IncludePageNumbers.asInstanceOf[js.Any], LowerHeadingLevel = LowerHeadingLevel.asInstanceOf[js.Any], Parent = Parent.asInstanceOf[js.Any], Range = Range.asInstanceOf[js.Any], RightAlignPageNumbers = RightAlignPageNumbers.asInstanceOf[js.Any], TabLeader = TabLeader.asInstanceOf[js.Any], TableID = TableID.asInstanceOf[js.Any], Update = js.Any.fromFunction0(Update), UpdatePageNumbers = js.Any.fromFunction0(UpdatePageNumbers), UpperHeadingLevel = UpperHeadingLevel.asInstanceOf[js.Any], UseFields = UseFields.asInstanceOf[js.Any], UseHeadingStyles = UseHeadingStyles.asInstanceOf[js.Any], UseHyperlinks = UseHyperlinks.asInstanceOf[js.Any])
+    __obj.updateDynamic("Word.TableOfFigures_typekey")(WordDotTableOfFigures_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TableOfFigures]
+  }
+  @scala.inline
+  implicit class TableOfFiguresOps[Self <: TableOfFigures] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplication(value: Application): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCaption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Caption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreator(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDelete(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHeadingStyles(value: HeadingStyles): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HeadingStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHidePageNumbersInWeb(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HidePageNumbersInWeb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIncludeLabel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIncludePageNumbers(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludePageNumbers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLowerHeadingLevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LowerHeadingLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRange(value: Range): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRightAlignPageNumbers(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RightAlignPageNumbers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTabLeader(value: WdTabLeader): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TabLeader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTableID(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TableID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Update")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUpdatePageNumbers(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdatePageNumbers")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUpperHeadingLevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpperHeadingLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUseFields(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UseFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUseHeadingStyles(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UseHeadingStyles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUseHyperlinks(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UseHyperlinks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWordDotTableOfFigures_typekey(value: TableOfFigures): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.TableOfFigures_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

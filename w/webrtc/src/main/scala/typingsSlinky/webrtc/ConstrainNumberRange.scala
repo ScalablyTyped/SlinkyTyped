@@ -1,11 +1,14 @@
 package typingsSlinky.webrtc
 
+import typingsSlinky.webrtc.W3C.ConstrainNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ConstrainNumberRange extends NumberRange {
+trait ConstrainNumberRange
+  extends NumberRange
+     with ConstrainNumber {
   var exact: js.UndefOr[Double] = js.native
   var ideal: js.UndefOr[Double] = js.native
 }

@@ -6,16 +6,22 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait SourceBufferEventMap extends js.Object {
-  var abort: Event_ = js.native
-  var error: Event_ = js.native
-  var update: Event_ = js.native
-  var updateend: Event_ = js.native
-  var updatestart: Event_ = js.native
+  var abort: org.scalajs.dom.raw.Event = js.native
+  var error: org.scalajs.dom.raw.Event = js.native
+  var update: org.scalajs.dom.raw.Event = js.native
+  var updateend: org.scalajs.dom.raw.Event = js.native
+  var updatestart: org.scalajs.dom.raw.Event = js.native
 }
 
 object SourceBufferEventMap {
   @scala.inline
-  def apply(abort: Event_, error: Event_, update: Event_, updateend: Event_, updatestart: Event_): SourceBufferEventMap = {
+  def apply(
+    abort: org.scalajs.dom.raw.Event,
+    error: org.scalajs.dom.raw.Event,
+    update: org.scalajs.dom.raw.Event,
+    updateend: org.scalajs.dom.raw.Event,
+    updatestart: org.scalajs.dom.raw.Event
+  ): SourceBufferEventMap = {
     val __obj = js.Dynamic.literal(abort = abort.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], update = update.asInstanceOf[js.Any], updateend = updateend.asInstanceOf[js.Any], updatestart = updatestart.asInstanceOf[js.Any])
     __obj.asInstanceOf[SourceBufferEventMap]
   }
@@ -26,31 +32,31 @@ object SourceBufferEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAbort(value: Event_): Self = {
+    def withAbort(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("abort")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withError(value: Event_): Self = {
+    def withError(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withUpdate(value: Event_): Self = {
+    def withUpdate(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withUpdateend(value: Event_): Self = {
+    def withUpdateend(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("updateend")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withUpdatestart(value: Event_): Self = {
+    def withUpdatestart(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("updatestart")(value.asInstanceOf[js.Any])
         ret

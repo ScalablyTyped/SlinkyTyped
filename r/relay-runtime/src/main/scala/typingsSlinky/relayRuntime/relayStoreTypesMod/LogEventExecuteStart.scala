@@ -1,6 +1,6 @@
 package typingsSlinky.relayRuntime.relayStoreTypesMod
 
-import typingsSlinky.relayRuntime.AnonName
+import typingsSlinky.relayRuntime.anon.Name
 import typingsSlinky.relayRuntime.relayRuntimeStrings.executeDotstart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,14 +9,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LogEventExecuteStart extends LogEvent {
   val name: executeDotstart = js.native
-  val params: AnonName = js.native
+  val params: Name = js.native
   val transactionID: Double = js.native
   val variables: js.Object = js.native
 }
 
 object LogEventExecuteStart {
   @scala.inline
-  def apply(name: executeDotstart, params: AnonName, transactionID: Double, variables: js.Object): LogEventExecuteStart = {
+  def apply(name: executeDotstart, params: Name, transactionID: Double, variables: js.Object): LogEventExecuteStart = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any], transactionID = transactionID.asInstanceOf[js.Any], variables = variables.asInstanceOf[js.Any])
     __obj.asInstanceOf[LogEventExecuteStart]
   }
@@ -33,7 +33,7 @@ object LogEventExecuteStart {
         ret
     }
     @scala.inline
-    def withParams(value: AnonName): Self = {
+    def withParams(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
         ret

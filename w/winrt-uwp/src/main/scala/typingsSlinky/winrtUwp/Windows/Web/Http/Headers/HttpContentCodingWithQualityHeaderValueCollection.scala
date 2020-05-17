@@ -1,18 +1,17 @@
 package typingsSlinky.winrtUwp.Windows.Web.Http.Headers
 
 import typingsSlinky.std.Array
-import typingsSlinky.winrtUwp.AnonIndex
-import typingsSlinky.winrtUwp.AnonItemsHttpContentCodingWithQualityHeaderValue
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
+import typingsSlinky.winrtUwp.anon.Index
+import typingsSlinky.winrtUwp.anon.ItemsHttpContentCodingWithQualityHeaderValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the value of the Accept-Encoding HTTP header on an HTTP request. */
-@JSGlobal("Windows.Web.Http.Headers.HttpContentCodingWithQualityHeaderValueCollection")
 @js.native
-abstract class HttpContentCodingWithQualityHeaderValueCollection () extends Array[HttpContentCodingWithQualityHeaderValue] {
+trait HttpContentCodingWithQualityHeaderValueCollection extends Array[HttpContentCodingWithQualityHeaderValue] {
   /** Gets the number of HttpContentCodingWithQualityHeaderValue objects in the collection. */
   var size: Double = js.native
   /**
@@ -37,19 +36,19 @@ abstract class HttpContentCodingWithQualityHeaderValueCollection () extends Arra
     * Retrieves the HttpContentCodingWithQualityHeaderValue items that start at the specified index in the collection.
     * @param startIndex The zero-based index of the start of the HttpContentCodingWithQualityHeaderValue items in the HttpContentCodingWithQualityHeaderValueCollection .
     */
-  def getMany(startIndex: Double): AnonItemsHttpContentCodingWithQualityHeaderValue = js.native
+  def getMany(startIndex: Double): ItemsHttpContentCodingWithQualityHeaderValue = js.native
   /**
     * Returns an immutable view of the HttpContentCodingWithQualityHeaderValueCollection .
     * @return The view of the HttpContentCodingWithQualityHeaderValueCollection .
     */
   def getView(): IVectorView[HttpContentCodingWithQualityHeaderValue] = js.native
-  def indexOf(value: HttpContentCodingWithQualityHeaderValue, extra: js.Any*): AnonIndex = js.native
+  def indexOf(value: HttpContentCodingWithQualityHeaderValue, extra: js.Any*): Index = js.native
   /**
     * Retrieves the index of an HttpContentCodingWithQualityHeaderValue in the collection.
     * @param value The HttpContentCodingWithQualityHeaderValue to find in the HttpContentCodingWithQualityHeaderValueCollection .
     */
   @JSName("indexOf")
-  def indexOf_AnonIndex(value: HttpContentCodingWithQualityHeaderValue): AnonIndex = js.native
+  def indexOf_Index(value: HttpContentCodingWithQualityHeaderValue): Index = js.native
   /**
     * Inserts an HttpContentCodingWithQualityHeaderValue into the collection at the specified index.
     * @param index The zero-based index at which value should be inserted.

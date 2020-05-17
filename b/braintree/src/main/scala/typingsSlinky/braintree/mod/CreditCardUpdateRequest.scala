@@ -1,13 +1,13 @@
 package typingsSlinky.braintree.mod
 
-import typingsSlinky.braintree.AnonCountryCodeAlpha2
+import typingsSlinky.braintree.anon.CountryCodeAlpha2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CreditCardUpdateRequest extends js.Object {
-  var billingAddress: js.UndefOr[AnonCountryCodeAlpha2] = js.native
+  var billingAddress: js.UndefOr[CountryCodeAlpha2] = js.native
   var cardholderName: js.UndefOr[String] = js.native
   var cvv: js.UndefOr[String] = js.native
   var expirationDate: js.UndefOr[String] = js.native
@@ -29,7 +29,7 @@ object CreditCardUpdateRequest {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBillingAddress(value: AnonCountryCodeAlpha2): Self = {
+    def withBillingAddress(value: CountryCodeAlpha2): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("billingAddress")(value.asInstanceOf[js.Any])
         ret

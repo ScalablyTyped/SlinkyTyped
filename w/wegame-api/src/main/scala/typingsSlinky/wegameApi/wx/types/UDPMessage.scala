@@ -1,6 +1,6 @@
 package typingsSlinky.wegameApi.wx.types
 
-import typingsSlinky.wegameApi.AnonAddress
+import typingsSlinky.wegameApi.anon.Address
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +14,12 @@ trait UDPMessage extends js.Object {
   /**
     * 消息来源的结构化信息
     */
-  var remoteInfo: AnonAddress = js.native
+  var remoteInfo: Address = js.native
 }
 
 object UDPMessage {
   @scala.inline
-  def apply(message: js.typedarray.ArrayBuffer, remoteInfo: AnonAddress): UDPMessage = {
+  def apply(message: js.typedarray.ArrayBuffer, remoteInfo: Address): UDPMessage = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], remoteInfo = remoteInfo.asInstanceOf[js.Any])
     __obj.asInstanceOf[UDPMessage]
   }
@@ -36,7 +36,7 @@ object UDPMessage {
         ret
     }
     @scala.inline
-    def withRemoteInfo(value: AnonAddress): Self = {
+    def withRemoteInfo(value: Address): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("remoteInfo")(value.asInstanceOf[js.Any])
         ret

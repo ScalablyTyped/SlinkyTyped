@@ -4,14 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.SmartArray")
 @js.native
-class SmartArray[T] protected () extends ISmartArrayLike[T] {
-  /**
-    * Instantiates a Smart Array.
-    * @param capacity defines the default capacity of the array.
-    */
-  def this(capacity: Double) = this()
+trait SmartArray[T] extends ISmartArrayLike[T] {
   var _id: Double = js.native
   /**
     * Concats the active data with a given array.
@@ -55,10 +49,85 @@ class SmartArray[T] protected () extends ISmartArrayLike[T] {
   def sort(compareFn: js.Function2[/* a */ T, /* b */ T, Double]): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("BABYLON.SmartArray")
-@js.native
-object SmartArray extends js.Object {
-  var _GlobalId: js.Any = js.native
+object SmartArray {
+  @scala.inline
+  def apply[T](
+    _id: Double,
+    concat: js.Any => Unit,
+    contains: T => Boolean,
+    data: js.Array[T],
+    dispose: () => Unit,
+    forEach: js.Function1[/* content */ T, Unit] => Unit,
+    indexOf: T => Double,
+    length: Double,
+    push: T => Unit,
+    reset: () => Unit,
+    sort: js.Function2[/* a */ T, /* b */ T, Double] => Unit
+  ): SmartArray[T] = {
+    val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], concat = js.Any.fromFunction1(concat), contains = js.Any.fromFunction1(contains), data = data.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), forEach = js.Any.fromFunction1(forEach), indexOf = js.Any.fromFunction1(indexOf), length = length.asInstanceOf[js.Any], push = js.Any.fromFunction1(push), reset = js.Any.fromFunction0(reset), sort = js.Any.fromFunction1(sort))
+    __obj.asInstanceOf[SmartArray[T]]
+  }
+  @scala.inline
+  implicit class SmartArrayOps[Self[t] <: SmartArray[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def with_id(value: Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConcat(value: js.Any => Unit): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("concat")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withContains(value: T => Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDispose(value: () => Unit): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispose")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withForEach(value: js.Function1[/* content */ T, Unit] => Unit): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forEach")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIndexOf(value: T => Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexOf")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPush(value: T => Unit): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("push")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withReset(value: () => Unit): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSort(value: js.Function2[/* a */ T, /* b */ T, Double] => Unit): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

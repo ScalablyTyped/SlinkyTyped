@@ -1,6 +1,6 @@
 package typingsSlinky.actionsOnGoogle.apiV1Mod
 
-import typingsSlinky.actionsOnGoogle.AnonTypeChallengeType
+import typingsSlinky.actionsOnGoogle.anon.TypeChallengeType
 import typingsSlinky.actionsOnGoogle.commonMod.ApiClientObjectMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait SmartHomeV1ExecuteResponseCommands extends js.Object {
-  var challengeNeeded: js.UndefOr[AnonTypeChallengeType] = js.native
+  var challengeNeeded: js.UndefOr[TypeChallengeType] = js.native
   var debugString: js.UndefOr[String] = js.native
   var errorCode: js.UndefOr[SmartHomeV1ExecuteErrors] = js.native
   var ids: js.Array[String] = js.native
@@ -41,7 +41,7 @@ object SmartHomeV1ExecuteResponseCommands {
         ret
     }
     @scala.inline
-    def withChallengeNeeded(value: AnonTypeChallengeType): Self = {
+    def withChallengeNeeded(value: TypeChallengeType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("challengeNeeded")(value.asInstanceOf[js.Any])
         ret

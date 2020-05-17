@@ -1,6 +1,6 @@
 package typingsSlinky.tensorflowTfjsCore.backendMod
 
-import typingsSlinky.tensorflowTfjsCore.AnonUnreliable
+import typingsSlinky.tensorflowTfjsCore.anon.Unreliable
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.BackendValues
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.tensorMod.DataId
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TensorStorage extends js.Object {
   def disposeData(dataId: DataId): Unit = js.native
-  def memory(): AnonUnreliable = js.native
+  def memory(): Unreliable = js.native
   def move(dataId: DataId, values: BackendValues, shape: js.Array[Double], dtype: DataType): Unit = js.native
   /** Returns number of data ids currently in the storage. */
   def numDataIds(): Double = js.native
@@ -24,7 +24,7 @@ object TensorStorage {
   @scala.inline
   def apply(
     disposeData: DataId => Unit,
-    memory: () => AnonUnreliable,
+    memory: () => Unreliable,
     move: (DataId, BackendValues, js.Array[Double], DataType) => Unit,
     numDataIds: () => Double,
     read: DataId => js.Promise[BackendValues],
@@ -47,7 +47,7 @@ object TensorStorage {
         ret
     }
     @scala.inline
-    def withMemory(value: () => AnonUnreliable): Self = {
+    def withMemory(value: () => Unreliable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("memory")(js.Any.fromFunction0(value))
         ret

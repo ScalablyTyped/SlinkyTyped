@@ -3,6 +3,7 @@ package typingsSlinky.popmotionPopcorn
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.popmotionEasing.mod.Easing
 import typingsSlinky.popmotionEasing.mod.EasingModifier
+import typingsSlinky.popmotionPopcorn.anon.X
 import typingsSlinky.popmotionPopcorn.conditionalMod.Apply
 import typingsSlinky.popmotionPopcorn.conditionalMod.Check
 import typingsSlinky.popmotionPopcorn.interpolateMod.InterpolateOptions
@@ -69,7 +70,7 @@ object mod extends js.Object {
   def mixComplex(origin: String, target: String): MixComplex_ = js.native
   def mixObject(origin: BlendableObject, target: BlendableObject): js.Function1[/* v */ Double, StringDictionary[String | Double | RGBA | HSLA]] = js.native
   def pipe(transformers: js.Function*): js.Function = js.native
-  def pointFromVector(origin: Point2D, angle: Double, distance: Double): AnonX = js.native
+  def pointFromVector(origin: Point2D, angle: Double, distance: Double): X = js.native
   def progress(from: Double, to: Double, value: Double): Double = js.native
   def radiansToDegrees(radians: Double): Double = js.native
   def smooth(): js.Function1[/* v */ Double, Double] = js.native

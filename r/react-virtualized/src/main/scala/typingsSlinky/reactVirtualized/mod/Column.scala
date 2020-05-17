@@ -1,7 +1,7 @@
 package typingsSlinky.reactVirtualized.mod
 
-import typingsSlinky.reactVirtualized.AnonCellDataGetter
-import typingsSlinky.reactVirtualized.AnonCellRenderer
+import typingsSlinky.reactVirtualized.anon.CellDataGetter
+import typingsSlinky.reactVirtualized.anon.CellRenderer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ class Column ()
 @JSImport("react-virtualized", "Column")
 @js.native
 object Column extends js.Object {
-  var defaultProps: AnonCellRenderer = js.native
-  var propTypes: AnonCellDataGetter = js.native
+  var defaultProps: CellRenderer = js.native
+  var propTypes: CellDataGetter = js.native
 }
 

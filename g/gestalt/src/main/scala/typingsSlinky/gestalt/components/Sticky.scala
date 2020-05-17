@@ -2,7 +2,7 @@ package typingsSlinky.gestalt.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.AnonZIndex
+import typingsSlinky.gestalt.anon.ZIndex
 import typingsSlinky.gestalt.mod.StickyProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,7 +20,7 @@ object Sticky {
     @scala.inline
     def bottom(value: Double | String): this.type = set("bottom", value.asInstanceOf[js.Any])
     @scala.inline
-    def dangerouslySetZIndex(value: AnonZIndex): this.type = set("dangerouslySetZIndex", value.asInstanceOf[js.Any])
+    def dangerouslySetZIndex(value: ZIndex): this.type = set("dangerouslySetZIndex", value.asInstanceOf[js.Any])
     @scala.inline
     def left(value: Double | String): this.type = set("left", value.asInstanceOf[js.Any])
     @scala.inline

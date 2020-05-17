@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonTileHeight
+import typingsSlinky.cesium.anon.TileHeight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "TileCoordinatesImageryProvider")
 @js.native
 class TileCoordinatesImageryProvider () extends ImageryProvider {
-  def this(options: AnonTileHeight) = this()
+  def this(options: TileHeight) = this()
 }
 

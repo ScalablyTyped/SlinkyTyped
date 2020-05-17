@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait UnionOrIntersectionTypeNode extends js.Object
 
+object UnionOrIntersectionTypeNode {
+  @scala.inline
+  implicit def apply(value: IntersectionTypeNode): UnionOrIntersectionTypeNode = value.asInstanceOf[UnionOrIntersectionTypeNode]
+  @scala.inline
+  implicit def apply(value: UnionTypeNode): UnionOrIntersectionTypeNode = value.asInstanceOf[UnionOrIntersectionTypeNode]
+}
+

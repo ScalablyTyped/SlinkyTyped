@@ -1,6 +1,6 @@
 package typingsSlinky.reactResponsive.mod
 
-import typingsSlinky.reactResponsive.PartialMediaQueryAllQueryAll
+import typingsSlinky.reactResponsive.anon.PartialMediaQueryAllQueryAll
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

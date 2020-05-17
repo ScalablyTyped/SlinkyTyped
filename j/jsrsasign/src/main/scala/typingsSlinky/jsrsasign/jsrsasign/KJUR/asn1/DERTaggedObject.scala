@@ -25,12 +25,8 @@ import scala.scalajs.js.annotation._
   * d2 = new KJUR.asn1.DERTaggedObject({'obj': d1});
   * hex = d2.getEncodedHex();
   */
-@JSGlobal("jsrsasign.KJUR.asn1.DERTaggedObject")
 @js.native
-class DERTaggedObject () extends ASN1Object {
-  def this(params: ASN1ObjectParam) = this()
-  def this(params: ExplicitParam) = this()
-  def this(params: TagParam) = this()
+trait DERTaggedObject extends ASN1Object {
   /**
     * set value by an ASN1Object
     * @param isExplicitFlag flag for explicit/implicit tag
@@ -38,5 +34,38 @@ class DERTaggedObject () extends ASN1Object {
     * @param asn1Object ASN.1 to encapsulate
     */
   def setASN1Object(isExplicitFlag: Boolean, tagNoHex: String, asn1Object: ASN1Object): Unit = js.native
+}
+
+object DERTaggedObject {
+  @scala.inline
+  def apply(
+    getEncodedHex: () => String,
+    getFreshValueHex: () => String,
+    getLengthHexFromValue: () => String,
+    getValueHex: () => String,
+    hL: String,
+    hT: String,
+    hTLV: String,
+    hV: String,
+    isModified: String,
+    setASN1Object: (Boolean, String, ASN1Object) => Unit
+  ): DERTaggedObject = {
+    val __obj = js.Dynamic.literal(getEncodedHex = js.Any.fromFunction0(getEncodedHex), getFreshValueHex = js.Any.fromFunction0(getFreshValueHex), getLengthHexFromValue = js.Any.fromFunction0(getLengthHexFromValue), getValueHex = js.Any.fromFunction0(getValueHex), hL = hL.asInstanceOf[js.Any], hT = hT.asInstanceOf[js.Any], hTLV = hTLV.asInstanceOf[js.Any], hV = hV.asInstanceOf[js.Any], isModified = isModified.asInstanceOf[js.Any], setASN1Object = js.Any.fromFunction3(setASN1Object))
+    __obj.asInstanceOf[DERTaggedObject]
+  }
+  @scala.inline
+  implicit class DERTaggedObjectOps[Self <: DERTaggedObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSetASN1Object(value: (Boolean, String, ASN1Object) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setASN1Object")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

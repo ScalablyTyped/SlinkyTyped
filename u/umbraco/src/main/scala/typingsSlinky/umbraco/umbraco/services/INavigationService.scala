@@ -1,6 +1,6 @@
 package typingsSlinky.umbraco.umbraco.services
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -155,7 +155,7 @@ trait INavigationService extends js.Object {
     *
     * @param {Event} event the click event triggering the method, passed from the DOM element
     */
-  def showMenu(event: Event_, args: js.Any*): Unit = js.native
+  def showMenu(event: Event, args: js.Any*): Unit = js.native
   /**
     * @ngdoc method
     * @name umbraco.services.navigationService#showSearch
@@ -228,7 +228,7 @@ object INavigationService {
     setupTreeEvents: js.Any => Unit,
     showDialog: IShowDialogArgs => Unit,
     showHelpDialog: () => Unit,
-    showMenu: (Event_, /* repeated */ js.Any) => Unit,
+    showMenu: (Event, /* repeated */ js.Any) => Unit,
     showSearch: () => Unit,
     showTray: () => Unit,
     showTree: (String, ISyncTreeArgs) => Unit,
@@ -341,7 +341,7 @@ object INavigationService {
         ret
     }
     @scala.inline
-    def withShowMenu(value: (Event_, /* repeated */ js.Any) => Unit): Self = {
+    def withShowMenu(value: (Event, /* repeated */ js.Any) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("showMenu")(js.Any.fromFunction2(value))
         ret

@@ -1,12 +1,9 @@
 package typingsSlinky.phaser.Phaser.Loader
 
-import org.scalajs.dom.raw.Blob
-import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.ProgressEvent
 import org.scalajs.dom.raw.XMLHttpRequest
 import typingsSlinky.phaser.Phaser.Cache.BaseCache
 import typingsSlinky.phaser.Phaser.Textures.TextureManager
-import typingsSlinky.phaser.Phaser.Types.Loader.FileConfig
 import typingsSlinky.phaser.Phaser.Types.Loader.XHRSettingsObject
 import typingsSlinky.phaser.integer
 import scala.scalajs.js
@@ -17,15 +14,8 @@ import scala.scalajs.js.annotation._
   * The base File class used by all File Types that the Loader can support.
   * You shouldn't create an instance of a File directly, but should extend it with your own class, setting a custom type and processing methods.
   */
-@JSGlobal("Phaser.Loader.File")
 @js.native
-class File protected () extends js.Object {
-  /**
-    * 
-    * @param loader The Loader that is going to load this File.
-    * @param fileConfig The file configuration object, as created by the file type.
-    */
-  def this(loader: LoaderPlugin, fileConfig: FileConfig) = this()
+trait File extends js.Object {
   /**
     * Updated as the file loads.
     * Only set if loading via XHR.
@@ -172,23 +162,236 @@ class File protected () extends js.Object {
   def setLink(fileB: File): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("Phaser.Loader.File")
-@js.native
-object File extends js.Object {
-  /**
-    * Static method for creating object URL using URL API and setting it as image 'src' attribute.
-    * If URL API is not supported (usually on old browsers) it falls back to creating Base64 encoded url using FileReader.
-    * @param image Image object which 'src' attribute should be set to object URL.
-    * @param blob A Blob object to create an object URL for.
-    * @param defaultType Default mime type used if blob type is not available.
-    */
-  def createObjectURL(image: HTMLImageElement, blob: Blob, defaultType: String): Unit = js.native
-  /**
-    * Static method for releasing an existing object URL which was previously created
-    * by calling {@link File#createObjectURL} method.
-    * @param image Image object which 'src' attribute should be revoked.
-    */
-  def revokeObjectURL(image: HTMLImageElement): Unit = js.native
+object File {
+  @scala.inline
+  def apply(
+    addToCache: () => Unit,
+    bytesLoaded: Double,
+    bytesTotal: Double,
+    cache: BaseCache | TextureManager,
+    config: js.Any,
+    data: js.Any,
+    destroy: () => Unit,
+    hasCacheConflict: () => Boolean,
+    key: String,
+    linkFile: File,
+    load: () => Unit,
+    loader: LoaderPlugin,
+    multiFile: MultiFile,
+    onError: (XMLHttpRequest, ProgressEvent) => Unit,
+    onLoad: (XMLHttpRequest, ProgressEvent) => Unit,
+    onProcess: () => Unit,
+    onProcessComplete: () => Unit,
+    onProcessError: () => Unit,
+    onProgress: ProgressEvent => Unit,
+    pendingDestroy: () => Unit,
+    percentComplete: Double,
+    resetXHR: () => Unit,
+    setLink: File => Unit,
+    src: String,
+    state: integer,
+    `type`: String,
+    url: String,
+    xhrLoader: XMLHttpRequest,
+    xhrSettings: XHRSettingsObject
+  ): File = {
+    val __obj = js.Dynamic.literal(addToCache = js.Any.fromFunction0(addToCache), bytesLoaded = bytesLoaded.asInstanceOf[js.Any], bytesTotal = bytesTotal.asInstanceOf[js.Any], cache = cache.asInstanceOf[js.Any], config = config.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), hasCacheConflict = js.Any.fromFunction0(hasCacheConflict), key = key.asInstanceOf[js.Any], linkFile = linkFile.asInstanceOf[js.Any], load = js.Any.fromFunction0(load), loader = loader.asInstanceOf[js.Any], multiFile = multiFile.asInstanceOf[js.Any], onError = js.Any.fromFunction2(onError), onLoad = js.Any.fromFunction2(onLoad), onProcess = js.Any.fromFunction0(onProcess), onProcessComplete = js.Any.fromFunction0(onProcessComplete), onProcessError = js.Any.fromFunction0(onProcessError), onProgress = js.Any.fromFunction1(onProgress), pendingDestroy = js.Any.fromFunction0(pendingDestroy), percentComplete = percentComplete.asInstanceOf[js.Any], resetXHR = js.Any.fromFunction0(resetXHR), setLink = js.Any.fromFunction1(setLink), src = src.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], xhrLoader = xhrLoader.asInstanceOf[js.Any], xhrSettings = xhrSettings.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[File]
+  }
+  @scala.inline
+  implicit class FileOps[Self <: File] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddToCache(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addToCache")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withBytesLoaded(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesLoaded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBytesTotal(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesTotal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCache(value: BaseCache | TextureManager): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConfig(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withData(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestroy(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHasCacheConflict(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasCacheConflict")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinkFile(value: File): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linkFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoad(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withLoader(value: LoaderPlugin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMultiFile(value: MultiFile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnError(value: (XMLHttpRequest, ProgressEvent) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withOnLoad(value: (XMLHttpRequest, ProgressEvent) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withOnProcess(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onProcess")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnProcessComplete(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onProcessComplete")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnProcessError(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onProcessError")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnProgress(value: ProgressEvent => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPendingDestroy(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pendingDestroy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPercentComplete(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("percentComplete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResetXHR(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetXHR")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetLink(value: File => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setLink")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSrc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("src")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withState(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withXhrLoader(value: XMLHttpRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xhrLoader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withXhrSettings(value: XHRSettingsObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("xhrSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCrossOrigin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOrigin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCrossOrigin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crossOrigin")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.tar.mod
 
-import typingsSlinky.tar.CreateOptionsFileOptionss
+import typingsSlinky.tar.anon.CreateOptionsFileOptionss
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

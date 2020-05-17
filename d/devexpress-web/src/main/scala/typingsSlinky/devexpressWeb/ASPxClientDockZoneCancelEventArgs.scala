@@ -7,18 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientDockZone.BeforeDock event.
   */
-@JSGlobal("ASPxClientDockZoneCancelEventArgs")
 @js.native
-class ASPxClientDockZoneCancelEventArgs protected () extends ASPxClientProcessingModeCancelEventArgs {
-  /**
-    * Initializes a new object of the ASPxClientDockZoneCancelEventArgs type with the specified settings.
-    * @param processOnServer true to process the event on the server side; false to completely handle it on the client side.
-    * @param panel An ASPxClientDockPanel object that is a panel related to the event.
-    */
-  def this(processOnServer: Boolean, panel: ASPxClientDockPanel) = this()
+trait ASPxClientDockZoneCancelEventArgs extends ASPxClientProcessingModeCancelEventArgs {
   /**
     * Gets the panel currently being processed.
     */
   var panel: ASPxClientDockPanel = js.native
+}
+
+object ASPxClientDockZoneCancelEventArgs {
+  @scala.inline
+  def apply(cancel: Boolean, panel: ASPxClientDockPanel, processOnServer: Boolean): ASPxClientDockZoneCancelEventArgs = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], panel = panel.asInstanceOf[js.Any], processOnServer = processOnServer.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientDockZoneCancelEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientDockZoneCancelEventArgsOps[Self <: ASPxClientDockZoneCancelEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPanel(value: ASPxClientDockPanel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panel")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

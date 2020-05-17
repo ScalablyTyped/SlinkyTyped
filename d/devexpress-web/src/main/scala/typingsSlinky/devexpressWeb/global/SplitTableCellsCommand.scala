@@ -1,0 +1,14 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * A command to split the selected table cells based on the specified options.
+  */
+@JSGlobal("SplitTableCellsCommand")
+@js.native
+class SplitTableCellsCommand ()
+  extends typingsSlinky.devexpressWeb.SplitTableCellsCommand
+

@@ -1,7 +1,7 @@
 package typingsSlinky.reactOnclickoutside.mod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod._Global_.JSX.LibraryManagedAttributes
+import typingsSlinky.react.mod.global.JSX.LibraryManagedAttributes
 import typingsSlinky.std.InstanceType
 import scala.scalajs.js
 import scala.scalajs.js.`|`

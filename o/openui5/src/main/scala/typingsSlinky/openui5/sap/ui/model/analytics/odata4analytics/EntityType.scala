@@ -4,17 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("sap.ui.model.analytics.odata4analytics.EntityType")
 @js.native
-class EntityType protected () extends js.Object {
-  /**
-    * Create a representation of an OData entity type in the context of an analyticquery. Do not create
-    * your own instances.
-    * @param oModel DataJS object for the OData model containing this entity           type
-    * @param oSchema DataJS object for the schema containing this entity type
-    * @param oEntityType DataJS object for the entity type
-    */
-  def this(oModel: js.Any, oSchema: js.Any, oEntityType: js.Any) = this()
+trait EntityType extends js.Object {
   /**
     * Find property by name
     * @param sPropertyName Property name
@@ -111,5 +102,134 @@ class EntityType protected () extends js.Object {
     * @returns The DataJS object representing the entity type
     */
   def getTypeDescription(): js.Any = js.native
+}
+
+object EntityType {
+  @scala.inline
+  def apply(
+    findPropertyByName: String => js.Any,
+    getAllHierarchyPropertyNames: () => js.Array[String],
+    getFilterablePropertyNames: () => js.Array[String],
+    getHeadingOfProperty: String => String,
+    getHierarchy: String => RecursiveHierarchy,
+    getKeyProperties: () => js.Array[String],
+    getLabelOfProperty: String => String,
+    getProperties: () => js.Any,
+    getPropertiesWithFilterRestrictions: () => js.Any,
+    getQName: () => String,
+    getQuickInfoOfProperty: String => String,
+    getRequiredFilterPropertyNames: () => js.Array[String],
+    getSortablePropertyNames: () => js.Array[String],
+    getSuperOrdinatePropertyOfProperty: String => js.Any,
+    getTextPropertyOfProperty: String => js.Any,
+    getTypeDescription: () => js.Any
+  ): EntityType = {
+    val __obj = js.Dynamic.literal(findPropertyByName = js.Any.fromFunction1(findPropertyByName), getAllHierarchyPropertyNames = js.Any.fromFunction0(getAllHierarchyPropertyNames), getFilterablePropertyNames = js.Any.fromFunction0(getFilterablePropertyNames), getHeadingOfProperty = js.Any.fromFunction1(getHeadingOfProperty), getHierarchy = js.Any.fromFunction1(getHierarchy), getKeyProperties = js.Any.fromFunction0(getKeyProperties), getLabelOfProperty = js.Any.fromFunction1(getLabelOfProperty), getProperties = js.Any.fromFunction0(getProperties), getPropertiesWithFilterRestrictions = js.Any.fromFunction0(getPropertiesWithFilterRestrictions), getQName = js.Any.fromFunction0(getQName), getQuickInfoOfProperty = js.Any.fromFunction1(getQuickInfoOfProperty), getRequiredFilterPropertyNames = js.Any.fromFunction0(getRequiredFilterPropertyNames), getSortablePropertyNames = js.Any.fromFunction0(getSortablePropertyNames), getSuperOrdinatePropertyOfProperty = js.Any.fromFunction1(getSuperOrdinatePropertyOfProperty), getTextPropertyOfProperty = js.Any.fromFunction1(getTextPropertyOfProperty), getTypeDescription = js.Any.fromFunction0(getTypeDescription))
+    __obj.asInstanceOf[EntityType]
+  }
+  @scala.inline
+  implicit class EntityTypeOps[Self <: EntityType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFindPropertyByName(value: String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findPropertyByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetAllHierarchyPropertyNames(value: () => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllHierarchyPropertyNames")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetFilterablePropertyNames(value: () => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilterablePropertyNames")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetHeadingOfProperty(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getHeadingOfProperty")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetHierarchy(value: String => RecursiveHierarchy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getHierarchy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetKeyProperties(value: () => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getKeyProperties")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLabelOfProperty(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLabelOfProperty")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetProperties(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getProperties")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPropertiesWithFilterRestrictions(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPropertiesWithFilterRestrictions")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetQName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getQName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetQuickInfoOfProperty(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getQuickInfoOfProperty")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetRequiredFilterPropertyNames(value: () => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRequiredFilterPropertyNames")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSortablePropertyNames(value: () => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSortablePropertyNames")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSuperOrdinatePropertyOfProperty(value: String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSuperOrdinatePropertyOfProperty")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetTextPropertyOfProperty(value: String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTextPropertyOfProperty")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetTypeDescription(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTypeDescription")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

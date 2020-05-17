@@ -40,7 +40,7 @@ package object mod {
     ], 
     /* accessToken */ java.lang.String, 
     /* refreshToken */ java.lang.String, 
-    /* params */ typingsSlinky.passportGoogleOauth2.AnonAccesstoken, 
+    /* params */ typingsSlinky.passportGoogleOauth2.anon.Accesstoken, 
     /* profile */ js.Any, 
     /* done */ typingsSlinky.passportGoogleOauth2.mod.VerifyCallback, 
     scala.Unit

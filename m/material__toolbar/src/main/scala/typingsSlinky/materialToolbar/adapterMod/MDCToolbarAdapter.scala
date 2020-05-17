@@ -1,6 +1,6 @@
 package typingsSlinky.materialToolbar.adapterMod
 
-import typingsSlinky.materialToolbar.AnonFlexibleExpansionRatio
+import typingsSlinky.materialToolbar.anon.FlexibleExpansionRatio
 import typingsSlinky.std.EventListener
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ trait MDCToolbarAdapter extends js.Object {
   def getViewportScrollY(): Double = js.native
   def getViewportWidth(): Double = js.native
   def hasClass(className: String): Boolean = js.native
-  def notifyChange(evtData: AnonFlexibleExpansionRatio): Unit = js.native
+  def notifyChange(evtData: FlexibleExpansionRatio): Unit = js.native
   def registerResizeHandler(handler: EventListener): Unit = js.native
   def registerScrollHandler(handler: EventListener): Unit = js.native
   def removeClass(className: String): Unit = js.native
@@ -37,7 +37,7 @@ object MDCToolbarAdapter {
     getViewportScrollY: () => Double,
     getViewportWidth: () => Double,
     hasClass: String => Boolean,
-    notifyChange: AnonFlexibleExpansionRatio => Unit,
+    notifyChange: FlexibleExpansionRatio => Unit,
     registerResizeHandler: EventListener => Unit,
     registerScrollHandler: EventListener => Unit,
     removeClass: String => Unit,
@@ -104,7 +104,7 @@ object MDCToolbarAdapter {
         ret
     }
     @scala.inline
-    def withNotifyChange(value: AnonFlexibleExpansionRatio => Unit): Self = {
+    def withNotifyChange(value: FlexibleExpansionRatio => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notifyChange")(js.Any.fromFunction1(value))
         ret

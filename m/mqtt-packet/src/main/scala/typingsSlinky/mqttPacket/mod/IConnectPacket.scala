@@ -1,7 +1,7 @@
 package typingsSlinky.mqttPacket.mod
 
-import typingsSlinky.mqttPacket.AnonAuthenticationData
-import typingsSlinky.mqttPacket.AnonPayload
+import typingsSlinky.mqttPacket.anon.AuthenticationData
+import typingsSlinky.mqttPacket.anon.Payload
 import typingsSlinky.mqttPacket.mqttPacketNumbers.`3`
 import typingsSlinky.mqttPacket.mqttPacketNumbers.`4`
 import typingsSlinky.mqttPacket.mqttPacketNumbers.`5`
@@ -23,11 +23,11 @@ trait IConnectPacket
   var cmd_IConnectPacket: connect = js.native
   var keepalive: js.UndefOr[Double] = js.native
   var password: js.UndefOr[Buffer] = js.native
-  var properties: js.UndefOr[AnonAuthenticationData] = js.native
+  var properties: js.UndefOr[AuthenticationData] = js.native
   var protocolId: js.UndefOr[MQTT | MQIsdp] = js.native
   var protocolVersion: js.UndefOr[`4` | `5` | `3`] = js.native
   var username: js.UndefOr[String] = js.native
-  var will: js.UndefOr[AnonPayload] = js.native
+  var will: js.UndefOr[Payload] = js.native
 }
 
 object IConnectPacket {
@@ -91,7 +91,7 @@ object IConnectPacket {
         ret
     }
     @scala.inline
-    def withProperties(value: AnonAuthenticationData): Self = {
+    def withProperties(value: AuthenticationData): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
         ret
@@ -139,7 +139,7 @@ object IConnectPacket {
         ret
     }
     @scala.inline
-    def withWill(value: AnonPayload): Self = {
+    def withWill(value: Payload): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("will")(value.asInstanceOf[js.Any])
         ret

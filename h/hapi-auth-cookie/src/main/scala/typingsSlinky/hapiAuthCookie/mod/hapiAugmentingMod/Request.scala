@@ -1,18 +1,18 @@
 package typingsSlinky.hapiAuthCookie.mod.hapiAugmentingMod
 
-import typingsSlinky.hapiAuthCookie.AnonClear
+import typingsSlinky.hapiAuthCookie.anon.Clear
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Request extends js.Object {
-  var cookieAuth: AnonClear = js.native
+  var cookieAuth: Clear = js.native
 }
 
 object Request {
   @scala.inline
-  def apply(cookieAuth: AnonClear): Request = {
+  def apply(cookieAuth: Clear): Request = {
     val __obj = js.Dynamic.literal(cookieAuth = cookieAuth.asInstanceOf[js.Any])
     __obj.asInstanceOf[Request]
   }
@@ -23,7 +23,7 @@ object Request {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCookieAuth(value: AnonClear): Self = {
+    def withCookieAuth(value: Clear): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cookieAuth")(value.asInstanceOf[js.Any])
         ret

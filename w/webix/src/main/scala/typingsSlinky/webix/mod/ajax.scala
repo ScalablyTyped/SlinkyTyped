@@ -1,5 +1,6 @@
 package typingsSlinky.webix.mod
 
+import typingsSlinky.webix.webix.Ajax
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,8 +8,8 @@ import scala.scalajs.js.annotation._
 @JSImport("webix", "ajax")
 @js.native
 object ajax extends js.Object {
-  def apply(): typingsSlinky.webix.webix.Ajax_ | js.Promise[_] = js.native
-  def apply(url: String): typingsSlinky.webix.webix.Ajax_ | js.Promise[_] = js.native
-  def apply(url: String, params: js.Any): typingsSlinky.webix.webix.Ajax_ | js.Promise[_] = js.native
+  def apply(): Ajax | js.Promise[_] = js.native
+  def apply(url: String): Ajax | js.Promise[_] = js.native
+  def apply(url: String, params: js.Any): Ajax | js.Promise[_] = js.native
 }
 

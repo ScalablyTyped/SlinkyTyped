@@ -20,17 +20,11 @@ package object mod {
   type AliasDict = typingsSlinky.knex.mod.Dict[java.lang.String]
   type AlterColumnBuilder = typingsSlinky.knex.mod.ColumnBuilder
   type AlterTableBuilder = typingsSlinky.knex.mod.TableBuilder
-  type AnyToUnknown[T] = T | js.Any
-  type ArrayIfAlready[T1, T2] = T2 | js.Array[T2]
   // If T is an array, get the type of member, else fall back to never
   type ArrayMember[T] = js.Any
-  // Intersection conditionally applied only when TParams is non-empty
-  // This is primarily to keep the signatures more intuitive.
-  type AugmentParams[TTarget, TParams] = TTarget | (js.Object with TTarget with TParams)
   // # Type-aliases for common type combinations
   type Callback = js.Function
   type Client = js.Function
-  type ColumnDescriptor[TRecord, TResult] = java.lang.String | typingsSlinky.knex.mod.Raw[js.Any] | (typingsSlinky.knex.mod.QueryBuilder[TRecord, TResult]) | typingsSlinky.knex.mod.Dict[java.lang.String]
   type CreateTableBuilder = typingsSlinky.knex.mod.TableBuilder
   // Convenience alias and associated companion namespace for working
   // with DeferredSelection having TSingle=true.
@@ -47,11 +41,21 @@ package object mod {
     js.Object, 
     scala.Nothing
   ]
+  type DeferredKeySelection[// The base of selection. In intermediate stages this may be unknown.
+  // If it remains unknown at the point of resolution, the selection will fall back to any
+  TBase, // Union of keys to be selected
+  // In intermediate stages this may be never.
+  TKeys /* <: java.lang.String */, // Changes how the resolution should behave if TKeys is never.
+  // If true, then we assume that some keys were selected, and if TKeys is never, we will fall back to any.
+  // If false, and TKeys is never, then we select TBase in its entirity
+  THasSelect /* <: typingsSlinky.knex.knexBooleans.`true` | typingsSlinky.knex.knexBooleans.`false` */, // Mapping of aliases <key in result> -> <key in TBase>
+  TAliasMapping /* <: js.Object */, // If enabled, then instead of extracting a partial, during resolution
+  // we will pick just a single property.
+  TSingle /* <: scala.Boolean */, // Extra props which will be intersected with the result
+  TIntersectProps /* <: js.Object */, // Extra props which will be unioned with the result
+  TUnionProps] = typingsSlinky.knex.mod.DeferredKeySelection_[TBase, TKeys, THasSelect, TAliasMapping, TSingle, TIntersectProps, TUnionProps]
   type Dict[T] = org.scalablytyped.runtime.StringDictionary[T]
   type Distinct[TRecord /* <: js.Object */, TResult] = typingsSlinky.knex.mod.ColumnNameQueryBuilder[TRecord, TResult]
-  // If T can't be assigned to TBase fallback to an alternate type TAlt
-  type IncompatibleToAlt[T, TBase, TAlt] = TAlt | T
-  type InferrableColumnDescriptor[TRecord /* <: js.Object */] = (/* keyof TRecord */ java.lang.String) | (typingsSlinky.knex.mod.Ref[js.Any, js.Any]) | (typingsSlinky.knex.mod.Dict[/* keyof TRecord */ java.lang.String])
   type IntersectAliases[AliasUT] = typingsSlinky.knex.mod.UnionToIntersection[
     typingsSlinky.knex.mod.IncompatibleToAlt[js.Any, typingsSlinky.knex.mod.Dict[js.Any], js.Object]
   ]
@@ -66,15 +70,10 @@ package object mod {
     typingsSlinky.knex.mod.QueryBuilder[TRecord, TResult]
   ]
   type LogFn = js.Function1[/* message */ java.lang.String, scala.Unit]
-  type Lookup[TRegistry /* <: js.Object */, TKey /* <: java.lang.String */, TDefault] = TDefault | (/* import warning: importer.ImportType#apply Failed type conversion: TRegistry[TKey] */ js.Any)
   // Retain the association of original keys with aliased keys at type level
   // to facilitates type-safe aliasing for object syntax
   type MappedAliasType[TBase, TAliasMapping] = js.Object with typingsSlinky.knex.knexStrings.MappedAliasType with org.scalablytyped.runtime.TopLevel[js.Any]
-  type MaybeArray[T] = T | js.Array[T]
   type MySqlAlterTableBuilder = typingsSlinky.knex.mod.AlterTableBuilder
-  // Boxing is necessary to prevent distribution of conditional types:
-  // https://lorefnon.tech/2019/05/02/using-boxing-to-prevent-distribution-of-conditional-types/
-  type PartialOrAny[TBase, TKeys] = (typingsSlinky.knex.mod.SafePick[TBase, TKeys with (/* keyof TBase */ java.lang.String)]) | js.Object
   type PostgreSqlAlterTableBuilder = typingsSlinky.knex.mod.AlterTableBuilder
   //
   // QueryBuilder
@@ -90,7 +89,6 @@ package object mod {
     /* repeated */ js.Any, 
     scala.Unit
   ]
-  type RawBinding = typingsSlinky.knex.mod.Value | (typingsSlinky.knex.mod.QueryBuilder[js.Any, js.Any])
   type RefBuilder = js.Function1[
     /* src */ java.lang.String, 
     typingsSlinky.knex.mod.Ref[
@@ -111,7 +109,6 @@ package object mod {
   type SafePartial[T] = typingsSlinky.std.Partial[T]
   type SafePick[T, K /* <: /* keyof T */ java.lang.String */] = typingsSlinky.std.Pick[T, K]
   type StrKey[T] = java.lang.String
-  type TableDescriptor = java.lang.String | typingsSlinky.knex.mod.Raw[js.Any] | (typingsSlinky.knex.mod.QueryBuilder[js.Any, js.Array[typingsSlinky.knex.mod.SafePartial[js.Any]]])
   type Union[TRecord, TResult] = typingsSlinky.knex.mod.Intersect[TRecord, TResult]
   // https://stackoverflow.com/a/50375286/476712
   type UnionToIntersection[U] = js.Any
@@ -119,10 +116,6 @@ package object mod {
   type UnknownToAny[T] = T
   // If T is an array, get the type of member, else retain original
   type UnwrapArrayMember[T] = T
-  //
-  // Utility Types
-  //
-  type Value = java.lang.String | scala.Double | scala.Boolean | js.Date | (js.Array[scala.Boolean | js.Date | scala.Double | java.lang.String]) | typingsSlinky.node.Buffer | typingsSlinky.knex.mod.Raw[js.Any]
   type ValueDict = typingsSlinky.knex.mod.Dict[
     typingsSlinky.knex.mod.Value | (typingsSlinky.knex.mod.QueryBuilder[js.Any, js.Array[typingsSlinky.knex.mod.SafePartial[js.Any]]])
   ]

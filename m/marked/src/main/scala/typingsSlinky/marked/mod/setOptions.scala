@@ -1,6 +1,6 @@
 package typingsSlinky.marked.mod
 
-import typingsSlinky.marked.Typeofmarked
+import typingsSlinky.marked.anon.Typeofmarked
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

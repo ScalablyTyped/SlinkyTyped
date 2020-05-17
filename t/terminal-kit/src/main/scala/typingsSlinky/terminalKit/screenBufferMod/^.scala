@@ -1,7 +1,7 @@
 package typingsSlinky.terminalKit.screenBufferMod
 
-import typingsSlinky.terminalKit.AnonShrink
-import typingsSlinky.terminalKit.AnonTransparencyChar
+import typingsSlinky.terminalKit.anon.Shrink
+import typingsSlinky.terminalKit.anon.TransparencyChar
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,14 +17,14 @@ class ^ protected () extends ScreenBuffer {
 object ^ extends js.Object {
   def attr2object(attrFlags: Double): Unit = js.native
   def create(options: Options): ScreenBuffer = js.native
-  def createFromString(options: AnonTransparencyChar, str: String): ScreenBuffer = js.native
+  def createFromString(options: TransparencyChar, str: String): ScreenBuffer = js.native
   def loadImage(
     url: String,
     calback: js.Function2[/* error */ js.UndefOr[js.Any], /* image */ js.UndefOr[this.type], Unit]
   ): Unit = js.native
   def loadImage(
     url: String,
-    options: AnonShrink,
+    options: Shrink,
     calback: js.Function2[/* error */ js.Any, /* image */ this.type, Unit]
   ): Unit = js.native
   def loadSync(filepath: String): ScreenBuffer = js.native

@@ -3,7 +3,7 @@ package typingsSlinky.antd.treeTreeMod
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.AnonChecked
+import typingsSlinky.antd.anon.Checked
 import typingsSlinky.rcTree.mod.CheckData
 import typingsSlinky.rcTree.mod.ExpandData
 import typingsSlinky.rcTree.mod.InternalTreeNodeProps
@@ -33,7 +33,7 @@ trait TreeProps extends js.Object {
   /** 是否支持选中 */
   var checkable: js.UndefOr[Boolean] = js.native
   /** （受控）选中复选框的树节点 */
-  var checkedKeys: js.UndefOr[js.Array[String] | AnonChecked] = js.native
+  var checkedKeys: js.UndefOr[js.Array[String] | Checked] = js.native
   var children: js.UndefOr[TagMod[Any]] = js.native
   var className: js.UndefOr[String] = js.native
   /** 默认选中复选框的树节点 */
@@ -143,7 +143,7 @@ object TreeProps {
         ret
     }
     @scala.inline
-    def withCheckedKeys(value: js.Array[String] | AnonChecked): Self = {
+    def withCheckedKeys(value: js.Array[String] | Checked): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("checkedKeys")(value.asInstanceOf[js.Any])
         ret

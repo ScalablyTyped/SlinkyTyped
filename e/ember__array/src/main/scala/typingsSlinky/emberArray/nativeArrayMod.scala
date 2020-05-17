@@ -4,8 +4,8 @@ import org.scalablytyped.runtime.NumberDictionary
 import typingsSlinky.emberArray.mutableMod.MutableArray
 import typingsSlinky.emberObject.copyableMod.Copyable
 import typingsSlinky.emberObject.observableMod.Observable
-import typingsSlinky.std.AnonCopyWithin
 import typingsSlinky.std.IterableIterator
+import typingsSlinky.std.anon.CopyWithin
 import typingsSlinky.std.stdNumbers.`0`
 import typingsSlinky.std.stdNumbers.`1`
 import typingsSlinky.std.stdNumbers.`2`
@@ -48,7 +48,7 @@ object nativeArrayMod extends js.Object {
       * when they will be absent when used in a 'with' statement.
       */
     @JSName(js.Symbol.unscopables)
-    var unscopables: js.Function0[AnonCopyWithin] = js.native
+    var unscopables: js.Function0[CopyWithin] = js.native
     /**
       * Combines two or more arrays.
       * @param items Additional items to add to the end of array1.

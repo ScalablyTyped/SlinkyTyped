@@ -1,6 +1,7 @@
 package typingsSlinky.instagramPrivateApi
 
 import typingsSlinky.bluebird.mod.^
+import typingsSlinky.instagramPrivateApi.anon.Duration
 import typingsSlinky.instagramPrivateApi.mediaRepositoryConfigureResponseMod.MediaRepositoryConfigureResponseRootObject
 import typingsSlinky.instagramPrivateApi.postingAlbumOptionsMod.PostingAlbumOptions
 import typingsSlinky.instagramPrivateApi.postingIgtvOptionsMod.PostingIgtvOptions
@@ -41,7 +42,7 @@ object publishServiceMod extends js.Object {
     var read32: js.Any = js.native
     def catchTranscodeError(videoInfo: js.Any, transcodeDelayInMs: Double): js.Function1[/* error */ js.Any, ^[Unit]] = js.native
     def getMP4Duration(buffer: Buffer): Double = js.native
-    def getVideoInfo(buffer: Buffer): AnonDuration = js.native
+    def getVideoInfo(buffer: Buffer): Duration = js.native
   }
   
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientS3Node.typesListBucketInventoryConfigurationsOutputMod
 
-import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientS3Node.typesInventoryConfigurationMod.UnmarshalledInventoryConfiguration
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ListBucketInventoryConfigurationsOutput
   extends MetadataBearer
-     with _OutputTypesUnion {
+     with OutputTypesUnion {
   /**
     * <p>If sent in the request, the marker that is used as a starting point for this inventory configuration list response.</p>
     */

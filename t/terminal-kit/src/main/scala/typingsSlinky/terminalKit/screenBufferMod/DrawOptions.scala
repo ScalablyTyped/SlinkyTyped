@@ -105,7 +105,7 @@ object DrawOptions {
         ret
     }
     @scala.inline
-    def withWrap(value: Boolean | x | y): Self = {
+    def withWrap(value: Boolean | typingsSlinky.terminalKit.terminalKitStrings.x | y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(value.asInstanceOf[js.Any])
         ret

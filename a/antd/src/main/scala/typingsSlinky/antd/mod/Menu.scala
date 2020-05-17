@@ -1,8 +1,8 @@
 package typingsSlinky.antd.mod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.antd.TypeofItemInstantiable
-import typingsSlinky.antd.TypeofSubMenu
+import typingsSlinky.antd.anon.TypeofItemInstantiable
+import typingsSlinky.antd.anon.TypeofSubMenu
 import typingsSlinky.antd.menuMod.default
 import typingsSlinky.rcMenu.dividerMod.DividerProps
 import scala.scalajs.js

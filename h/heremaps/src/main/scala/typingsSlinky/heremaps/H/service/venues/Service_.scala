@@ -4,8 +4,8 @@ import typingsSlinky.heremaps.H.map.layer.TileLayer
 import typingsSlinky.heremaps.H.service.IConfigurable
 import typingsSlinky.heremaps.H.service.ServiceParameters
 import typingsSlinky.heremaps.H.service.ServiceResult
-import typingsSlinky.heremaps.H.service.venues.Service.Options
 import typingsSlinky.heremaps.H.service.venues.Service.State
+import typingsSlinky.heremaps.H.service.venues.TileProvider.Options
 import typingsSlinky.heremaps.H.util.EventTarget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,16 +14,10 @@ import scala.scalajs.js.annotation._
 /**
   * This class encapsulates methods to call Venue Maps API endpoints.
   */
-@JSGlobal("H.service.venues.Service")
 @js.native
-/**
-  * Constructor
-  * @param opt_options {H.service.venues.Service.Options=} - additional service parameters
-  */
-class Service_ ()
+trait Service_
   extends EventTarget
      with IConfigurable {
-  def this(opt_options: Options) = this()
   /**
     * This method creates a tile layer which can be added to the map in order to see the venues. It uses Interaction Tile endpoint of the Venue Maps API, more at
     * http://developer.here.com/rest-apis/documentation/venue-maps/topics/quick-start-get-interaction-tile.html.
@@ -31,7 +25,7 @@ class Service_ ()
     * @returns {H.map.layer.TileLayer} - the tile layer
     */
   def createTileLayer(): TileLayer = js.native
-  def createTileLayer(opt_options: typingsSlinky.heremaps.H.service.venues.TileProvider.Options): TileLayer = js.native
+  def createTileLayer(opt_options: Options): TileLayer = js.native
   /**
     * This method sends a discovery request to the Venue Maps API and calls the onResult callback function once the service response was received - providing a H.service.ServiceResult
     * object, or the onError callback if a communication error occured.

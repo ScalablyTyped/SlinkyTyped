@@ -1,6 +1,6 @@
 package typingsSlinky.phosphorWidgets.mod
 
-import typingsSlinky.phosphorWidgets.PartialICellConfig
+import typingsSlinky.phosphorWidgets.anon.PartialICellConfig
 import typingsSlinky.phosphorWidgets.gridlayoutMod.GridLayout.ICellConfig
 import typingsSlinky.phosphorWidgets.gridlayoutMod.GridLayout.IOptions
 import scala.scalajs.js

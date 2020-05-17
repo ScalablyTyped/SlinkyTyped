@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientProximitybeacon.gapi.client.proximitybeacon
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientProximitybeacon.AnonAlt
-import typingsSlinky.gapiClientProximitybeacon.AnonAttachmentName
-import typingsSlinky.gapiClientProximitybeacon.AnonBeaconName
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientProximitybeacon.anon.Alt
+import typingsSlinky.gapiClientProximitybeacon.anon.AttachmentName
+import typingsSlinky.gapiClientProximitybeacon.anon.BeaconName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ trait AttachmentsResource extends js.Object {
     * from a signed-in user with &#42;&#42;Is owner&#42;&#42; or &#42;&#42;Can edit&#42;&#42; permissions in the
     * Google Developers Console project.
     */
-  def batchDelete(request: AnonAlt): Request_[DeleteAttachmentsResponse] = js.native
+  def batchDelete(request: Alt): Request[DeleteAttachmentsResponse] = js.native
   /**
     * Associates the given data with the specified beacon. Attachment data must
     * contain two parts:
@@ -42,7 +42,7 @@ trait AttachmentsResource extends js.Object {
     * from a signed-in user with &#42;&#42;Is owner&#42;&#42; or &#42;&#42;Can edit&#42;&#42; permissions in the
     * Google Developers Console project.
     */
-  def create(request: AnonBeaconName): Request_[BeaconAttachment] = js.native
+  def create(request: BeaconName): Request[BeaconAttachment] = js.native
   /**
     * Deletes the specified attachment for the given beacon. Each attachment has
     * a unique attachment name (`attachmentName`) which is returned when you
@@ -54,7 +54,7 @@ trait AttachmentsResource extends js.Object {
     * from a signed-in user with &#42;&#42;Is owner&#42;&#42; or &#42;&#42;Can edit&#42;&#42; permissions in the
     * Google Developers Console project.
     */
-  def delete(request: AnonAttachmentName): Request_[js.Object] = js.native
+  def delete(request: AttachmentName): Request[js.Object] = js.native
   /**
     * Returns the attachments for the specified beacon that match the specified
     * namespaced-type pattern.
@@ -68,16 +68,16 @@ trait AttachmentsResource extends js.Object {
     * from a signed-in user with &#42;&#42;viewer&#42;&#42;, &#42;&#42;Is owner&#42;&#42; or &#42;&#42;Can edit&#42;&#42;
     * permissions in the Google Developers Console project.
     */
-  def list(request: AnonAlt): Request_[ListBeaconAttachmentsResponse] = js.native
+  def list(request: Alt): Request[ListBeaconAttachmentsResponse] = js.native
 }
 
 object AttachmentsResource {
   @scala.inline
   def apply(
-    batchDelete: AnonAlt => Request_[DeleteAttachmentsResponse],
-    create: AnonBeaconName => Request_[BeaconAttachment],
-    delete: AnonAttachmentName => Request_[js.Object],
-    list: AnonAlt => Request_[ListBeaconAttachmentsResponse]
+    batchDelete: Alt => Request[DeleteAttachmentsResponse],
+    create: BeaconName => Request[BeaconAttachment],
+    delete: AttachmentName => Request[js.Object],
+    list: Alt => Request[ListBeaconAttachmentsResponse]
   ): AttachmentsResource = {
     val __obj = js.Dynamic.literal(batchDelete = js.Any.fromFunction1(batchDelete), create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[AttachmentsResource]
@@ -89,25 +89,25 @@ object AttachmentsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBatchDelete(value: AnonAlt => Request_[DeleteAttachmentsResponse]): Self = {
+    def withBatchDelete(value: Alt => Request[DeleteAttachmentsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("batchDelete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withCreate(value: AnonBeaconName => Request_[BeaconAttachment]): Self = {
+    def withCreate(value: BeaconName => Request[BeaconAttachment]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonAttachmentName => Request_[js.Object]): Self = {
+    def withDelete(value: AttachmentName => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonAlt => Request_[ListBeaconAttachmentsResponse]): Self = {
+    def withList(value: Alt => Request[ListBeaconAttachmentsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

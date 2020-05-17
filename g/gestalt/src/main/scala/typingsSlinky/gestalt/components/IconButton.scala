@@ -2,8 +2,8 @@ package typingsSlinky.gestalt.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.AnonEvent
-import typingsSlinky.gestalt.AnonPath
+import typingsSlinky.gestalt.anon.Event
+import typingsSlinky.gestalt.anon.Path
 import typingsSlinky.gestalt.gestaltStrings.blue
 import typingsSlinky.gestalt.gestaltStrings.darkGray
 import typingsSlinky.gestalt.gestaltStrings.gray
@@ -40,7 +40,7 @@ object IconButton {
     @scala.inline
     def bgColor(value: transparent | transparentDarkGray | gray | lightGray | white | blue): this.type = set("bgColor", value.asInstanceOf[js.Any])
     @scala.inline
-    def dangerouslySetSvgPath(value: AnonPath): this.type = set("dangerouslySetSvgPath", value.asInstanceOf[js.Any])
+    def dangerouslySetSvgPath(value: Path): this.type = set("dangerouslySetSvgPath", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
@@ -48,7 +48,7 @@ object IconButton {
     @scala.inline
     def iconColor(value: blue | darkGray | gray | red | white | orange): this.type = set("iconColor", value.asInstanceOf[js.Any])
     @scala.inline
-    def onClick(value: /* args */ AnonEvent => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    def onClick(value: /* args */ Event => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
     def selected(value: Boolean): this.type = set("selected", value.asInstanceOf[js.Any])
     @scala.inline

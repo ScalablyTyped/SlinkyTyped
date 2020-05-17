@@ -1,0 +1,109 @@
+package typingsSlinky.domHelpers.anon
+
+import typingsSlinky.domHelpers.addEventListenerMod.EventHandler
+import typingsSlinky.domHelpers.domHelpersStrings.abort
+import typingsSlinky.domHelpers.domHelpersStrings.animationcancel
+import typingsSlinky.domHelpers.domHelpersStrings.animationend
+import typingsSlinky.domHelpers.domHelpersStrings.animationiteration
+import typingsSlinky.domHelpers.domHelpersStrings.animationstart
+import typingsSlinky.domHelpers.domHelpersStrings.auxclick
+import typingsSlinky.domHelpers.domHelpersStrings.blur
+import typingsSlinky.domHelpers.domHelpersStrings.cancel
+import typingsSlinky.domHelpers.domHelpersStrings.canplay
+import typingsSlinky.domHelpers.domHelpersStrings.canplaythrough
+import typingsSlinky.domHelpers.domHelpersStrings.change
+import typingsSlinky.domHelpers.domHelpersStrings.click
+import typingsSlinky.domHelpers.domHelpersStrings.close
+import typingsSlinky.domHelpers.domHelpersStrings.contextmenu
+import typingsSlinky.domHelpers.domHelpersStrings.copy
+import typingsSlinky.domHelpers.domHelpersStrings.cuechange
+import typingsSlinky.domHelpers.domHelpersStrings.cut
+import typingsSlinky.domHelpers.domHelpersStrings.dblclick
+import typingsSlinky.domHelpers.domHelpersStrings.drag
+import typingsSlinky.domHelpers.domHelpersStrings.dragend
+import typingsSlinky.domHelpers.domHelpersStrings.dragenter
+import typingsSlinky.domHelpers.domHelpersStrings.dragexit
+import typingsSlinky.domHelpers.domHelpersStrings.dragleave
+import typingsSlinky.domHelpers.domHelpersStrings.dragover
+import typingsSlinky.domHelpers.domHelpersStrings.dragstart
+import typingsSlinky.domHelpers.domHelpersStrings.drop
+import typingsSlinky.domHelpers.domHelpersStrings.durationchange
+import typingsSlinky.domHelpers.domHelpersStrings.emptied
+import typingsSlinky.domHelpers.domHelpersStrings.ended
+import typingsSlinky.domHelpers.domHelpersStrings.error
+import typingsSlinky.domHelpers.domHelpersStrings.focus
+import typingsSlinky.domHelpers.domHelpersStrings.focusin
+import typingsSlinky.domHelpers.domHelpersStrings.focusout
+import typingsSlinky.domHelpers.domHelpersStrings.fullscreenchange
+import typingsSlinky.domHelpers.domHelpersStrings.fullscreenerror
+import typingsSlinky.domHelpers.domHelpersStrings.gotpointercapture
+import typingsSlinky.domHelpers.domHelpersStrings.input
+import typingsSlinky.domHelpers.domHelpersStrings.invalid
+import typingsSlinky.domHelpers.domHelpersStrings.keydown
+import typingsSlinky.domHelpers.domHelpersStrings.keypress
+import typingsSlinky.domHelpers.domHelpersStrings.keyup
+import typingsSlinky.domHelpers.domHelpersStrings.load
+import typingsSlinky.domHelpers.domHelpersStrings.loadeddata
+import typingsSlinky.domHelpers.domHelpersStrings.loadedmetadata
+import typingsSlinky.domHelpers.domHelpersStrings.loadstart
+import typingsSlinky.domHelpers.domHelpersStrings.lostpointercapture
+import typingsSlinky.domHelpers.domHelpersStrings.mousedown
+import typingsSlinky.domHelpers.domHelpersStrings.mouseenter
+import typingsSlinky.domHelpers.domHelpersStrings.mouseleave
+import typingsSlinky.domHelpers.domHelpersStrings.mousemove
+import typingsSlinky.domHelpers.domHelpersStrings.mouseout
+import typingsSlinky.domHelpers.domHelpersStrings.mouseover
+import typingsSlinky.domHelpers.domHelpersStrings.mouseup
+import typingsSlinky.domHelpers.domHelpersStrings.paste
+import typingsSlinky.domHelpers.domHelpersStrings.pause
+import typingsSlinky.domHelpers.domHelpersStrings.play
+import typingsSlinky.domHelpers.domHelpersStrings.playing
+import typingsSlinky.domHelpers.domHelpersStrings.pointercancel
+import typingsSlinky.domHelpers.domHelpersStrings.pointerdown
+import typingsSlinky.domHelpers.domHelpersStrings.pointerenter
+import typingsSlinky.domHelpers.domHelpersStrings.pointerleave
+import typingsSlinky.domHelpers.domHelpersStrings.pointermove
+import typingsSlinky.domHelpers.domHelpersStrings.pointerout
+import typingsSlinky.domHelpers.domHelpersStrings.pointerover
+import typingsSlinky.domHelpers.domHelpersStrings.pointerup
+import typingsSlinky.domHelpers.domHelpersStrings.progress
+import typingsSlinky.domHelpers.domHelpersStrings.ratechange
+import typingsSlinky.domHelpers.domHelpersStrings.reset
+import typingsSlinky.domHelpers.domHelpersStrings.resize
+import typingsSlinky.domHelpers.domHelpersStrings.scroll
+import typingsSlinky.domHelpers.domHelpersStrings.securitypolicyviolation
+import typingsSlinky.domHelpers.domHelpersStrings.seeked
+import typingsSlinky.domHelpers.domHelpersStrings.seeking
+import typingsSlinky.domHelpers.domHelpersStrings.select
+import typingsSlinky.domHelpers.domHelpersStrings.selectionchange
+import typingsSlinky.domHelpers.domHelpersStrings.selectstart
+import typingsSlinky.domHelpers.domHelpersStrings.stalled
+import typingsSlinky.domHelpers.domHelpersStrings.submit
+import typingsSlinky.domHelpers.domHelpersStrings.suspend
+import typingsSlinky.domHelpers.domHelpersStrings.timeupdate
+import typingsSlinky.domHelpers.domHelpersStrings.toggle
+import typingsSlinky.domHelpers.domHelpersStrings.touchcancel
+import typingsSlinky.domHelpers.domHelpersStrings.touchend
+import typingsSlinky.domHelpers.domHelpersStrings.touchmove
+import typingsSlinky.domHelpers.domHelpersStrings.touchstart
+import typingsSlinky.domHelpers.domHelpersStrings.transitioncancel
+import typingsSlinky.domHelpers.domHelpersStrings.transitionend
+import typingsSlinky.domHelpers.domHelpersStrings.transitionrun
+import typingsSlinky.domHelpers.domHelpersStrings.transitionstart
+import typingsSlinky.domHelpers.domHelpersStrings.volumechange
+import typingsSlinky.domHelpers.domHelpersStrings.waiting
+import typingsSlinky.domHelpers.domHelpersStrings.wheel
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait FnCallSelectorHandler extends js.Object {
+  def apply(
+    selector: String,
+    handler: EventHandler[
+      abort | animationcancel | animationend | animationiteration | animationstart | auxclick | blur | cancel | canplay | canplaythrough | change | click | close | contextmenu | copy | cuechange | cut | dblclick | drag | dragend | dragenter | dragexit | dragleave | dragover | dragstart | drop | durationchange | emptied | ended | error | focus | focusin | focusout | fullscreenchange | fullscreenerror | gotpointercapture | input | invalid | keydown | keypress | keyup | load | loadeddata | loadedmetadata | loadstart | lostpointercapture | mousedown | mouseenter | mouseleave | mousemove | mouseout | mouseover | mouseup | paste | pause | play | playing | pointercancel | pointerdown | pointerenter | pointerleave | pointermove | pointerout | pointerover | pointerup | progress | ratechange | reset | resize | scroll | securitypolicyviolation | seeked | seeking | select | selectionchange | selectstart | stalled | submit | suspend | timeupdate | toggle | touchcancel | touchend | touchmove | touchstart | transitioncancel | transitionend | transitionrun | transitionstart | volumechange | waiting | wheel
+    ]
+  ): EventHandler[fullscreenchange] = js.native
+}
+

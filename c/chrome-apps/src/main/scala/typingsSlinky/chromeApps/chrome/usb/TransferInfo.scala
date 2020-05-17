@@ -1,14 +1,11 @@
 package typingsSlinky.chromeApps.chrome.usb
 
-import typingsSlinky.chromeApps.AnonCLASS
-import typingsSlinky.chromeApps.AnonDEVICE
-import typingsSlinky.chromeApps.AnonIN
+import typingsSlinky.chromeApps.anon.CLASS
+import typingsSlinky.chromeApps.anon.DEVICE
+import typingsSlinky.chromeApps.anon.IN
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chrome.integer
-import typingsSlinky.chromeApps.chromeAppsStrings.CLASS
-import typingsSlinky.chromeApps.chromeAppsStrings.DEVICE
 import typingsSlinky.chromeApps.chromeAppsStrings.ENDPOINT
-import typingsSlinky.chromeApps.chromeAppsStrings.IN
 import typingsSlinky.chromeApps.chromeAppsStrings.INTERFACE
 import typingsSlinky.chromeApps.chromeAppsStrings.OTHER
 import typingsSlinky.chromeApps.chromeAppsStrings.OUT
@@ -39,9 +36,12 @@ trait TransferInfo extends js.Object {
     * @see Direction
     */
   var direction: ToStringLiteral[
-    AnonIN, 
-    /* keyof chrome-apps.AnonIN */ IN | OUT, 
-    Exclude[/* keyof chrome-apps.AnonIN */ IN | OUT, in_ | out_]
+    IN, 
+    /* keyof chrome-apps.anon.IN */ typingsSlinky.chromeApps.chromeAppsStrings.IN | OUT, 
+    Exclude[
+      /* keyof chrome-apps.anon.IN */ typingsSlinky.chromeApps.chromeAppsStrings.IN | OUT, 
+      in_ | out_
+    ]
   ] = js.native
   /** The wIndex field, see *Ibid*. */
   var index: integer = js.native
@@ -53,10 +53,10 @@ trait TransferInfo extends js.Object {
     * @see Recipient
     */
   var recipient: ToStringLiteral[
-    AnonDEVICE, 
-    /* keyof chrome-apps.AnonDEVICE */ DEVICE | INTERFACE | ENDPOINT | OTHER, 
+    DEVICE, 
+    /* keyof chrome-apps.anon.DEVICE */ typingsSlinky.chromeApps.chromeAppsStrings.DEVICE | INTERFACE | ENDPOINT | OTHER, 
     Exclude[
-      /* keyof chrome-apps.AnonDEVICE */ DEVICE | INTERFACE | ENDPOINT | OTHER, 
+      /* keyof chrome-apps.anon.DEVICE */ typingsSlinky.chromeApps.chromeAppsStrings.DEVICE | INTERFACE | ENDPOINT | OTHER, 
       device__ | interface_ | endpoint_ | other_
     ]
   ] = js.native
@@ -67,10 +67,10 @@ trait TransferInfo extends js.Object {
     * @see RequestType
     */
   var requestType: ToStringLiteral[
-    AnonCLASS, 
-    /* keyof chrome-apps.AnonCLASS */ STANDARD | CLASS | VENDOR | RESERVED, 
+    CLASS, 
+    /* keyof chrome-apps.anon.CLASS */ STANDARD | typingsSlinky.chromeApps.chromeAppsStrings.CLASS | VENDOR | RESERVED, 
     Exclude[
-      /* keyof chrome-apps.AnonCLASS */ STANDARD | CLASS | VENDOR | RESERVED, 
+      /* keyof chrome-apps.anon.CLASS */ STANDARD | typingsSlinky.chromeApps.chromeAppsStrings.CLASS | VENDOR | RESERVED, 
       standard_ | class_ | vendor_ | reserved_
     ]
   ] = js.native
@@ -89,25 +89,28 @@ object TransferInfo {
   @scala.inline
   def apply(
     direction: ToStringLiteral[
-      AnonIN, 
-      /* keyof chrome-apps.AnonIN */ IN | OUT, 
-      Exclude[/* keyof chrome-apps.AnonIN */ IN | OUT, in_ | out_]
+      IN, 
+      /* keyof chrome-apps.anon.IN */ typingsSlinky.chromeApps.chromeAppsStrings.IN | OUT, 
+      Exclude[
+        /* keyof chrome-apps.anon.IN */ typingsSlinky.chromeApps.chromeAppsStrings.IN | OUT, 
+        in_ | out_
+      ]
     ],
     index: integer,
     recipient: ToStringLiteral[
-      AnonDEVICE, 
-      /* keyof chrome-apps.AnonDEVICE */ DEVICE | INTERFACE | ENDPOINT | OTHER, 
+      DEVICE, 
+      /* keyof chrome-apps.anon.DEVICE */ typingsSlinky.chromeApps.chromeAppsStrings.DEVICE | INTERFACE | ENDPOINT | OTHER, 
       Exclude[
-        /* keyof chrome-apps.AnonDEVICE */ DEVICE | INTERFACE | ENDPOINT | OTHER, 
+        /* keyof chrome-apps.anon.DEVICE */ typingsSlinky.chromeApps.chromeAppsStrings.DEVICE | INTERFACE | ENDPOINT | OTHER, 
         device__ | interface_ | endpoint_ | other_
       ]
     ],
     request: integer,
     requestType: ToStringLiteral[
-      AnonCLASS, 
-      /* keyof chrome-apps.AnonCLASS */ STANDARD | CLASS | VENDOR | RESERVED, 
+      CLASS, 
+      /* keyof chrome-apps.anon.CLASS */ STANDARD | typingsSlinky.chromeApps.chromeAppsStrings.CLASS | VENDOR | RESERVED, 
       Exclude[
-        /* keyof chrome-apps.AnonCLASS */ STANDARD | CLASS | VENDOR | RESERVED, 
+        /* keyof chrome-apps.anon.CLASS */ STANDARD | typingsSlinky.chromeApps.chromeAppsStrings.CLASS | VENDOR | RESERVED, 
         standard_ | class_ | vendor_ | reserved_
       ]
     ],
@@ -125,9 +128,12 @@ object TransferInfo {
     @scala.inline
     def withDirection(
       value: ToStringLiteral[
-          AnonIN, 
-          /* keyof chrome-apps.AnonIN */ IN | OUT, 
-          Exclude[/* keyof chrome-apps.AnonIN */ IN | OUT, in_ | out_]
+          IN, 
+          /* keyof chrome-apps.anon.IN */ typingsSlinky.chromeApps.chromeAppsStrings.IN | OUT, 
+          Exclude[
+            /* keyof chrome-apps.anon.IN */ typingsSlinky.chromeApps.chromeAppsStrings.IN | OUT, 
+            in_ | out_
+          ]
         ]
     ): Self = {
         val ret = this.duplicate
@@ -143,10 +149,10 @@ object TransferInfo {
     @scala.inline
     def withRecipient(
       value: ToStringLiteral[
-          AnonDEVICE, 
-          /* keyof chrome-apps.AnonDEVICE */ DEVICE | INTERFACE | ENDPOINT | OTHER, 
+          DEVICE, 
+          /* keyof chrome-apps.anon.DEVICE */ typingsSlinky.chromeApps.chromeAppsStrings.DEVICE | INTERFACE | ENDPOINT | OTHER, 
           Exclude[
-            /* keyof chrome-apps.AnonDEVICE */ DEVICE | INTERFACE | ENDPOINT | OTHER, 
+            /* keyof chrome-apps.anon.DEVICE */ typingsSlinky.chromeApps.chromeAppsStrings.DEVICE | INTERFACE | ENDPOINT | OTHER, 
             device__ | interface_ | endpoint_ | other_
           ]
         ]
@@ -164,10 +170,10 @@ object TransferInfo {
     @scala.inline
     def withRequestType(
       value: ToStringLiteral[
-          AnonCLASS, 
-          /* keyof chrome-apps.AnonCLASS */ STANDARD | CLASS | VENDOR | RESERVED, 
+          CLASS, 
+          /* keyof chrome-apps.anon.CLASS */ STANDARD | typingsSlinky.chromeApps.chromeAppsStrings.CLASS | VENDOR | RESERVED, 
           Exclude[
-            /* keyof chrome-apps.AnonCLASS */ STANDARD | CLASS | VENDOR | RESERVED, 
+            /* keyof chrome-apps.anon.CLASS */ STANDARD | typingsSlinky.chromeApps.chromeAppsStrings.CLASS | VENDOR | RESERVED, 
             standard_ | class_ | vendor_ | reserved_
           ]
         ]

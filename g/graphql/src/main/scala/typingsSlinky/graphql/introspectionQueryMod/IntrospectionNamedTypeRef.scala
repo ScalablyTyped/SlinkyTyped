@@ -5,7 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IntrospectionNamedTypeRef[T /* <: IntrospectionType */] extends js.Object {
+trait IntrospectionNamedTypeRef[T /* <: IntrospectionType */]
+  extends IntrospectionInputTypeRef
+     with IntrospectionOutputTypeRef
+     with IntrospectionTypeRef {
   val kind: /* import warning: importer.ImportType#apply Failed type conversion: T['kind'] */ js.Any = js.native
   val name: String = js.native
 }

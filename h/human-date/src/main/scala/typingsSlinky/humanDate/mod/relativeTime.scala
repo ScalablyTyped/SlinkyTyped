@@ -1,7 +1,7 @@
 package typingsSlinky.humanDate.mod
 
-import typingsSlinky.humanDate.RelativeTimeOptionsreturn
-import typingsSlinky.humanDate.RelativeTimeOptionsreturnAllUnits
+import typingsSlinky.humanDate.anon.RelativeTimeOptionsreturn
+import typingsSlinky.humanDate.anon.RelativeTimeOptionsreturnAllUnits
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

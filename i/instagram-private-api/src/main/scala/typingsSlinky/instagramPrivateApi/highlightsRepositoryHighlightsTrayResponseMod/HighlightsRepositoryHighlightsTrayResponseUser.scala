@@ -130,24 +130,6 @@ object HighlightsRepositoryHighlightsTrayResponseUser {
         ret.asInstanceOf[js.Dynamic].updateDynamic("is_unpublished")(js.undefined)
         ret
     }
-    @scala.inline
-    def withLatest_reel_media(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latest_reel_media")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLatest_reel_media: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latest_reel_media")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLatest_reel_mediaNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("latest_reel_media")(null)
-        ret
-    }
   }
   
 }

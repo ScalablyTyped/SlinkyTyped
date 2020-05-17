@@ -12,14 +12,16 @@ trait TeamsUpdateDiscussionCommentInOrgParams extends js.Object {
   var body: String = js.native
   var comment_number: Double = js.native
   var discussion_number: Double = js.native
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
   var team_slug: String = js.native
 }
 
 object TeamsUpdateDiscussionCommentInOrgParams {
   @scala.inline
-  def apply(body: String, comment_number: Double, discussion_number: Double, org: String, team_slug: String): TeamsUpdateDiscussionCommentInOrgParams = {
-    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], comment_number = comment_number.asInstanceOf[js.Any], discussion_number = discussion_number.asInstanceOf[js.Any], org = org.asInstanceOf[js.Any], team_slug = team_slug.asInstanceOf[js.Any])
+  def apply(body: String, comment_number: Double, discussion_number: Double, org_ : String, team_slug: String): TeamsUpdateDiscussionCommentInOrgParams = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], comment_number = comment_number.asInstanceOf[js.Any], discussion_number = discussion_number.asInstanceOf[js.Any], team_slug = team_slug.asInstanceOf[js.Any])
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[TeamsUpdateDiscussionCommentInOrgParams]
   }
   @scala.inline
@@ -47,7 +49,7 @@ object TeamsUpdateDiscussionCommentInOrgParams {
         ret
     }
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.AnonContentType
+import typingsSlinky.tabris.anon.ContentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,6 +18,6 @@ class Printer_ protected () extends NativeObject {
     * @param options An optional set of configuration parameters.
     */
   def print(data: js.Any): js.Promise[Unit] = js.native
-  def print(data: js.Any, options: AnonContentType): js.Promise[Unit] = js.native
+  def print(data: js.Any, options: ContentType): js.Promise[Unit] = js.native
 }
 

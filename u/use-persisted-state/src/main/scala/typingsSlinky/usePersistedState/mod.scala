@@ -1,5 +1,7 @@
 package typingsSlinky.usePersistedState
 
+import typingsSlinky.usePersistedState.anon.FnCall
+import typingsSlinky.usePersistedState.anon.PickStoragegetItemsetItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

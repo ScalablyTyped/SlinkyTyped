@@ -1,6 +1,6 @@
 package typingsSlinky.jsBase64.mod
 
-import typingsSlinky.jsBase64.TypeofBase64
+import typingsSlinky.jsBase64.anon.TypeofBase64
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

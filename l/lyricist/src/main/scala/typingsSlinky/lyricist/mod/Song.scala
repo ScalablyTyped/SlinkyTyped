@@ -1,8 +1,8 @@
 package typingsSlinky.lyricist.mod
 
-import typingsSlinky.lyricist.AnonAcceptedannotations
-import typingsSlinky.lyricist.AnonExcludedpermissions
-import typingsSlinky.lyricist.AnonSongs
+import typingsSlinky.lyricist.anon.Acceptedannotations
+import typingsSlinky.lyricist.anon.Excludedpermissions
+import typingsSlinky.lyricist.anon.Songs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait Song extends js.Object {
   var api_path: String = js.native
   var apple_music_id: js.UndefOr[js.Any] = js.native
   var apple_music_player_url: String = js.native
-  var current_user_metadata: AnonExcludedpermissions = js.native
+  var current_user_metadata: Excludedpermissions = js.native
   var custom_performances: js.Array[_] = js.native
   var description: Description = js.native
   var description_annotation: DescriptionAnnotation = js.native
@@ -39,8 +39,8 @@ trait Song extends js.Object {
   var release_date: String = js.native
   var song_art_image_thumbnail_url: String = js.native
   var song_art_image_url: String = js.native
-  var song_relationships: js.Array[AnonSongs] = js.native
-  var stats: AnonAcceptedannotations = js.native
+  var song_relationships: js.Array[Songs] = js.native
+  var stats: Acceptedannotations = js.native
   var title: String = js.native
   var title_with_featured: String = js.native
   var url: String = js.native
@@ -56,7 +56,7 @@ object Song {
     annotation_count: Double,
     api_path: String,
     apple_music_player_url: String,
-    current_user_metadata: AnonExcludedpermissions,
+    current_user_metadata: Excludedpermissions,
     custom_performances: js.Array[_],
     description: Description,
     description_annotation: DescriptionAnnotation,
@@ -77,8 +77,8 @@ object Song {
     release_date: String,
     song_art_image_thumbnail_url: String,
     song_art_image_url: String,
-    song_relationships: js.Array[AnonSongs],
-    stats: AnonAcceptedannotations,
+    song_relationships: js.Array[Songs],
+    stats: Acceptedannotations,
     title: String,
     title_with_featured: String,
     url: String,
@@ -115,7 +115,7 @@ object Song {
         ret
     }
     @scala.inline
-    def withCurrent_user_metadata(value: AnonExcludedpermissions): Self = {
+    def withCurrent_user_metadata(value: Excludedpermissions): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("current_user_metadata")(value.asInstanceOf[js.Any])
         ret
@@ -241,13 +241,13 @@ object Song {
         ret
     }
     @scala.inline
-    def withSong_relationships(value: js.Array[AnonSongs]): Self = {
+    def withSong_relationships(value: js.Array[Songs]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("song_relationships")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withStats(value: AnonAcceptedannotations): Self = {
+    def withStats(value: Acceptedannotations): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
         ret

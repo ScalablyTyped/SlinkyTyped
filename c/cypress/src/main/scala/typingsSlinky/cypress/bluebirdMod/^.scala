@@ -1,7 +1,7 @@
 package typingsSlinky.cypress.bluebirdMod
 
-import typingsSlinky.cypress.AnonCancellation
-import typingsSlinky.cypress.TypeofBluebird
+import typingsSlinky.cypress.anon.Cancellation
+import typingsSlinky.cypress.anon.TypeofBluebird
 import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.Map
 import scala.scalajs.js
@@ -75,7 +75,7 @@ object ^ extends js.Object {
     * Note that even though false is the default here, a development environment might be detected which automatically
     *  enables long stack traces and warnings.
     */
-  def config(options: AnonCancellation): Unit = js.native
+  def config(options: Cancellation): Unit = js.native
   /**
     * Returns a function that can use `yield` to run asynchronous code synchronously.
     *

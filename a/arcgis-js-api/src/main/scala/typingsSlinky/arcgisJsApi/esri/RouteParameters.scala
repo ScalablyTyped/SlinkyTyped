@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`allow-backtrack`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`at-dead-ends-and-intersections`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`at-dead-ends-only`
@@ -289,8 +288,4 @@ trait RouteParameters
     */
   var useTimeWindows: Boolean = js.native
 }
-
-@JSGlobal("__esri.RouteParameters")
-@js.native
-object RouteParameters extends TopLevel[RouteParametersConstructor]
 

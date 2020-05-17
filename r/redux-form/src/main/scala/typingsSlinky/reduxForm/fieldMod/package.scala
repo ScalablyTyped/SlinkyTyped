@@ -14,7 +14,6 @@ package object fieldMod {
     scala.Unit
   ]
   type Formatter = js.Function2[/* value */ js.Any, /* name */ java.lang.String, js.Any]
-  type GenericFieldHTMLAttributes = typingsSlinky.react.mod.InputHTMLAttributes[org.scalajs.dom.raw.HTMLInputElement] | typingsSlinky.react.mod.SelectHTMLAttributes[org.scalajs.dom.raw.HTMLSelectElement] | typingsSlinky.react.mod.TextareaHTMLAttributes[org.scalajs.dom.raw.HTMLTextAreaElement]
   type Normalizer = js.Function4[
     /* value */ js.Any, 
     /* previousValue */ js.UndefOr[js.Any], 

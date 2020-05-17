@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.data
 
-import typingsSlinky.devextreme.AnonType
+import typingsSlinky.devextreme.anon.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +27,7 @@ trait PivotGridDataSourceOptions extends js.Object {
   var retrieveFields: js.UndefOr[Boolean] = js.native
   /** Configures the DataSource's underlying store. */
   var store: js.UndefOr[
-    Store | StoreOptions[Store] | XmlaStore | XmlaStoreOptions | js.Array[AnonType] | AnonType
+    Store | StoreOptions[Store] | XmlaStore | XmlaStoreOptions | js.Array[Type] | Type
   ] = js.native
 }
 
@@ -152,7 +152,7 @@ object PivotGridDataSourceOptions {
         ret
     }
     @scala.inline
-    def withStore(value: Store | StoreOptions[Store] | XmlaStore | XmlaStoreOptions | js.Array[AnonType] | AnonType): Self = {
+    def withStore(value: Store | StoreOptions[Store] | XmlaStore | XmlaStoreOptions | js.Array[Type] | Type): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("store")(value.asInstanceOf[js.Any])
         ret

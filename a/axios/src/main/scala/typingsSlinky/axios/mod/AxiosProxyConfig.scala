@@ -1,13 +1,13 @@
 package typingsSlinky.axios.mod
 
-import typingsSlinky.axios.AnonPassword
+import typingsSlinky.axios.anon.Password
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait AxiosProxyConfig extends js.Object {
-  var auth: js.UndefOr[AnonPassword] = js.native
+  var auth: js.UndefOr[Password] = js.native
   var host: String = js.native
   var port: Double = js.native
   var protocol: js.UndefOr[String] = js.native
@@ -38,7 +38,7 @@ object AxiosProxyConfig {
         ret
     }
     @scala.inline
-    def withAuth(value: AnonPassword): Self = {
+    def withAuth(value: Password): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
         ret

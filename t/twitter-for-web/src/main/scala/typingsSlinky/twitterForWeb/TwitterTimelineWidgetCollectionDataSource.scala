@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TwitterTimelineWidgetCollectionDataSource extends _TwitterTimelineWidgetDataSource {
+trait TwitterTimelineWidgetCollectionDataSource extends TwitterTimelineWidgetDataSource {
   var id: String = js.native
   var sourceType: collection = js.native
 }

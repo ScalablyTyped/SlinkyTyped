@@ -12,14 +12,8 @@ trait SocketConnectOpts extends js.Object
 
 object SocketConnectOpts {
   @scala.inline
-  def TcpSocketConnectOpts(port: Double): SocketConnectOpts = {
-    val __obj = js.Dynamic.literal(port = port.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SocketConnectOpts]
-  }
+  implicit def apply(value: IpcSocketConnectOpts): SocketConnectOpts = value.asInstanceOf[SocketConnectOpts]
   @scala.inline
-  def IpcSocketConnectOpts(path: String): SocketConnectOpts = {
-    val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SocketConnectOpts]
-  }
+  implicit def apply(value: TcpSocketConnectOpts): SocketConnectOpts = value.asInstanceOf[SocketConnectOpts]
 }
 

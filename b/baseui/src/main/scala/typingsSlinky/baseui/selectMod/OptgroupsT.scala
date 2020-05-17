@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait OptgroupsT extends /* key */ StringDictionary[Value] {
+trait OptgroupsT
+  extends /* key */ StringDictionary[Value]
+     with OptionsT {
   var __ungrouped: Value = js.native
 }
 

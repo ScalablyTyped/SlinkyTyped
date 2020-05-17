@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.DocumentFragment
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Text
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,14 +13,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait BootboxDialogOptions[T] extends BootboxBaseOptions[T] {
   var centerVertical: js.UndefOr[Boolean] = js.native
-  var message: JQuery_[HTMLElement] | js.Array[_] | Element | DocumentFragment | Text | String | (js.Function2[/* index */ Double, /* html */ String, String | Element | JQuery_[HTMLElement]]) = js.native
+  var message: JQuery[HTMLElement] | js.Array[_] | Element | DocumentFragment | Text | String | (js.Function2[/* index */ Double, /* html */ String, String | Element | JQuery[HTMLElement]]) = js.native
   var swapButtonOrder: js.UndefOr[Boolean] = js.native
 }
 
 object BootboxDialogOptions {
   @scala.inline
   def apply[T](
-    message: JQuery_[HTMLElement] | js.Array[_] | Element | DocumentFragment | Text | String | (js.Function2[/* index */ Double, /* html */ String, String | Element | JQuery_[HTMLElement]])
+    message: JQuery[HTMLElement] | js.Array[_] | Element | DocumentFragment | Text | String | (js.Function2[/* index */ Double, /* html */ String, String | Element | JQuery[HTMLElement]])
   ): BootboxDialogOptions[T] = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
     __obj.asInstanceOf[BootboxDialogOptions[T]]
@@ -39,7 +39,7 @@ object BootboxDialogOptions {
     }
     @scala.inline
     def withMessage(
-      value: JQuery_[HTMLElement] | js.Array[_] | Element | DocumentFragment | Text | String | (js.Function2[/* index */ Double, /* html */ String, String | Element | JQuery_[HTMLElement]])
+      value: JQuery[HTMLElement] | js.Array[_] | Element | DocumentFragment | Text | String | (js.Function2[/* index */ Double, /* html */ String, String | Element | JQuery[HTMLElement]])
     ): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
@@ -58,7 +58,7 @@ object BootboxDialogOptions {
         ret
     }
     @scala.inline
-    def withMessageFunction2(value: (/* index */ Double, /* html */ String) => String | Element | JQuery_[HTMLElement]): Self[T] = {
+    def withMessageFunction2(value: (/* index */ Double, /* html */ String) => String | Element | JQuery[HTMLElement]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.Any.fromFunction2(value))
         ret

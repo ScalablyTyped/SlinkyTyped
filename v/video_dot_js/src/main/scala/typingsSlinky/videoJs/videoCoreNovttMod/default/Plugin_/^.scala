@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.videoJs.TypeofPlugin
+import typingsSlinky.videoJs.anon.TypeofPlugin
 import typingsSlinky.videoJs.mod.videojs.Player
 import typingsSlinky.videoJs.mod.videojs.Plugin
 import scala.scalajs.js

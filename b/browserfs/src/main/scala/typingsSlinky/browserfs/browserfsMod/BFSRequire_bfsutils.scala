@@ -1,6 +1,6 @@
 package typingsSlinky.browserfs.browserfsMod
 
-import typingsSlinky.browserfs.TypeofBFSUtils
+import typingsSlinky.browserfs.anon.TypeofBFSUtils
 import typingsSlinky.browserfs.browserfsStrings.bfs_utils
 import scala.scalajs.js
 import scala.scalajs.js.`|`

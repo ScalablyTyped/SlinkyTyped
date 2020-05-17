@@ -1,6 +1,6 @@
 package typingsSlinky.victory.mod
 
-import typingsSlinky.victory.PickVictoryStyleInterface
+import typingsSlinky.victory.anon.PickVictoryStyleInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

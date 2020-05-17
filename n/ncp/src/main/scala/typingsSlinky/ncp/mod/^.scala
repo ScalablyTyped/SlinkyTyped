@@ -1,8 +1,8 @@
 package typingsSlinky.ncp.mod
 
-import typingsSlinky.ncp.OptionserrsPathLike
-import typingsSlinky.ncp.Optionserrsundefined
-import typingsSlinky.ncp.OptionsstopOnErrtrue
+import typingsSlinky.ncp.anon.OptionserrsPathLike
+import typingsSlinky.ncp.anon.Optionserrsundefined
+import typingsSlinky.ncp.anon.OptionsstopOnErrtrue
 import typingsSlinky.node.fsMod.WriteStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`

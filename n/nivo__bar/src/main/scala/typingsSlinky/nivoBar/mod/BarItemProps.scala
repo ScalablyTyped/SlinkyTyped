@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLCanvasElement
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.nivoBar.AnonId
+import typingsSlinky.nivoBar.anon.Id
 import typingsSlinky.nivoCore.mod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ trait BarItemProps extends js.Object {
   var borderRadius: Double = js.native
   var borderWidth: Double = js.native
   var color: String = js.native
-  var data: AnonId = js.native
+  var data: Id = js.native
   var height: Double = js.native
   var label: String = js.native
   var labelColor: String = js.native
@@ -39,7 +39,7 @@ object BarItemProps {
     borderRadius: Double,
     borderWidth: Double,
     color: String,
-    data: AnonId,
+    data: Id,
     height: Double,
     hideTooltip: () => Unit,
     label: String,
@@ -88,7 +88,7 @@ object BarItemProps {
         ret
     }
     @scala.inline
-    def withData(value: AnonId): Self = {
+    def withData(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

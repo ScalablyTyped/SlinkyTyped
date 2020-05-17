@@ -6,10 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Creates the PlayReady ITA-specific serialized initialization data. */
-@JSGlobal("Windows.Media.Protection.PlayReady.PlayReadyITADataGenerator")
 @js.native
-/** Initializes a new instance of the PlayReadyITADataGenerator class. */
-class PlayReadyITADataGenerator () extends js.Object {
+trait PlayReadyITADataGenerator extends js.Object {
   /**
     * Returns a serialized blob of the specified IPropertySet data that the PlayReady ITA can consume if wrapped in a content protection instantiation format.
     * @param guidCPSystemId The content protection system GUID.
@@ -24,5 +22,27 @@ class PlayReadyITADataGenerator () extends js.Object {
     configuration: IPropertySet,
     format: PlayReadyITADataFormat
   ): js.Array[Double] = js.native
+}
+
+object PlayReadyITADataGenerator {
+  @scala.inline
+  def apply(generateData: (String, Double, IPropertySet, PlayReadyITADataFormat) => js.Array[Double]): PlayReadyITADataGenerator = {
+    val __obj = js.Dynamic.literal(generateData = js.Any.fromFunction4(generateData))
+    __obj.asInstanceOf[PlayReadyITADataGenerator]
+  }
+  @scala.inline
+  implicit class PlayReadyITADataGeneratorOps[Self <: PlayReadyITADataGenerator] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGenerateData(value: (String, Double, IPropertySet, PlayReadyITADataFormat) => js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generateData")(js.Any.fromFunction4(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.phaser.Phaser.GameObjects
 
 import org.scalajs.dom.raw.HTMLCanvasElement
-import typingsSlinky.phaser.Phaser.Cameras.Scene2D.Camera
 import typingsSlinky.phaser.Phaser.GameObjects.Components.AlphaSingle
 import typingsSlinky.phaser.Phaser.GameObjects.Components.BlendMode
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Depth
@@ -13,8 +12,6 @@ import typingsSlinky.phaser.Phaser.GameObjects.Components.Visible
 import typingsSlinky.phaser.Phaser.Geom.Circle
 import typingsSlinky.phaser.Phaser.Geom.Point
 import typingsSlinky.phaser.Phaser.Math.Vector2
-import typingsSlinky.phaser.Phaser.Scene
-import typingsSlinky.phaser.Phaser.Types.GameObjects.Graphics.Options
 import typingsSlinky.phaser.Phaser.Types.GameObjects.Graphics.RoundedRectRadius
 import typingsSlinky.phaser.Phaser.Types.GameObjects.Graphics.Styles
 import typingsSlinky.phaser.integer
@@ -62,9 +59,8 @@ import scala.scalajs.js.annotation._
   * As you can tell, Graphics objects are a bit of a trade-off. While they are extremely useful, you need to be careful
   * in their complexity and quantity of them in your game.
   */
-@JSGlobal("Phaser.GameObjects.Graphics")
 @js.native
-class Graphics protected ()
+trait Graphics
   extends GameObject
      with AlphaSingle
      with BlendMode
@@ -74,13 +70,6 @@ class Graphics protected ()
      with Transform
      with Visible
      with ScrollFactor {
-  /**
-    * 
-    * @param scene The Scene to which this Graphics object belongs.
-    * @param options Options that set the position and default style of this Graphics object.
-    */
-  def this(scene: Scene) = this()
-  def this(scene: Scene, options: Options) = this()
   /**
     * The array of commands used to render the Graphics.
     */
@@ -588,15 +577,5 @@ class Graphics protected ()
     * @param y The vertical translation to apply.
     */
   def translateCanvas(x: Double, y: Double): Graphics = js.native
-}
-
-/* static members */
-@JSGlobal("Phaser.GameObjects.Graphics")
-@js.native
-object Graphics extends js.Object {
-  /**
-    * A Camera used specifically by the Graphics system for rendering to textures.
-    */
-  var TargetCamera: Camera = js.native
 }
 

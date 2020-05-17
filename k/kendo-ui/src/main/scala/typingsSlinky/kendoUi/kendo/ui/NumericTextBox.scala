@@ -1,16 +1,12 @@
 package typingsSlinky.kendoUi.kendo.ui
 
-import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.ui.NumericTextBox")
 @js.native
-class NumericTextBox protected () extends Widget {
-  def this(element: Element) = this()
-  def this(element: Element, options: NumericTextBoxOptions) = this()
+trait NumericTextBox extends Widget {
   @JSName("options")
   var options_NumericTextBox: NumericTextBoxOptions = js.native
   var wrapper: JQuery = js.native
@@ -29,13 +25,5 @@ class NumericTextBox protected () extends Widget {
   def value(): Double = js.native
   def value(value: String): Unit = js.native
   def value(value: Double): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("kendo.ui.NumericTextBox")
-@js.native
-object NumericTextBox extends js.Object {
-  var fn: NumericTextBox = js.native
-  def extend(proto: js.Object): NumericTextBox = js.native
 }
 

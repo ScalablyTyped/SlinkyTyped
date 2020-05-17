@@ -5,15 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("AMap.OverlayGroup")
 @js.native
-/**
-  * 覆盖物集合
-  * @param overlays 覆盖物
-  */
-class OverlayGroup[O /* <: Overlay[_] */, ExtraData] () extends Overlay[ExtraData] {
-  def this(overlays: O) = this()
-  def this(overlays: js.Array[O]) = this()
+trait OverlayGroup[O /* <: Overlay[_] */, ExtraData] extends Overlay[ExtraData] {
   /**
     * 添加单个覆盖物到集合中，不支持添加重复的覆盖物
     * @param overlay 覆盖物

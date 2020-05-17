@@ -14,17 +14,17 @@ object AutoCompleteFilter {
   
   def apply(p: js.Any): Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Filters.AutoCompleteFilter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Filters.AutoCompleteFilter
   ] = new Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Filters.AutoCompleteFilter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Filters.AutoCompleteFilter
   ](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: AutoCompleteFilter.type): Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Filters.AutoCompleteFilter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Filters.AutoCompleteFilter
   ] = new Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Filters.AutoCompleteFilter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Filters.AutoCompleteFilter
   ](js.Array(this.component, js.Dictionary.empty))()
 }
 

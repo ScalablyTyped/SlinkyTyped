@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TagToken extends _Token {
+trait TagToken extends Token {
   /**
     * The nesting level of the associated markdown structure in the source.
     */

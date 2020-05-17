@@ -1,7 +1,7 @@
 package typingsSlinky.graphql.definitionMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.graphql.GraphQLEnumTypeConfigexte
+import typingsSlinky.graphql.anon.GraphQLEnumTypeConfigexte
 import typingsSlinky.graphql.astMod.EnumTypeDefinitionNode
 import typingsSlinky.graphql.astMod.EnumTypeExtensionNode
 import typingsSlinky.graphql.astMod.ValueNode
@@ -14,12 +14,12 @@ import scala.scalajs.js.annotation._
 @JSImport("graphql/type/definition", "GraphQLEnumType")
 @js.native
 class GraphQLEnumType protected ()
-  extends GraphQLLeafType
-     with _GraphQLInputType
-     with _GraphQLNamedType
-     with _GraphQLNullableType
-     with _GraphQLOutputType
-     with _GraphQLType {
+  extends GraphQLInputType
+     with GraphQLLeafType
+     with GraphQLNamedType
+     with GraphQLNullableType
+     with GraphQLOutputType
+     with GraphQLType {
   def this(config: GraphQLEnumTypeConfig) = this()
   var astNode: Maybe[EnumTypeDefinitionNode] = js.native
   var description: Maybe[String] = js.native

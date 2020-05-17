@@ -1,18 +1,11 @@
 package typingsSlinky.ejWebAll.ej
 
-import org.scalajs.dom.raw.Element
-import typingsSlinky.ejWebAll.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("ej.WaitingPopup")
 @js.native
-class WaitingPopup_ protected () extends Widget_ {
-  def this(element: JQuery) = this()
-  def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.WaitingPopup.Model) = this()
-  def this(element: Element, options: typingsSlinky.ejWebAll.ej.WaitingPopup.Model) = this()
+trait WaitingPopup_ extends Widget_ {
   var defaults: typingsSlinky.ejWebAll.ej.WaitingPopup.Model = js.native
   @JSName("model")
   var model_WaitingPopup_ : typingsSlinky.ejWebAll.ej.WaitingPopup.Model = js.native

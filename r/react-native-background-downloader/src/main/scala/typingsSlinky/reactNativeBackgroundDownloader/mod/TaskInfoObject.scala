@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TaskInfoObject extends js.Object {
+trait TaskInfoObject extends TaskInfo {
   var bytesWritten: Double = js.native
   var id: String = js.native
   var percent: Double = js.native

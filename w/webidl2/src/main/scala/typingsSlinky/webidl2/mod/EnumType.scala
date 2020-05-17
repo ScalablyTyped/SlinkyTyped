@@ -1,6 +1,6 @@
 package typingsSlinky.webidl2.mod
 
-import typingsSlinky.webidl2.AnonType
+import typingsSlinky.webidl2.anon.Type
 import typingsSlinky.webidl2.webidl2Strings.enum
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,12 +14,12 @@ trait EnumType extends IDLRootType {
   var name: String = js.native
   var `type`: enum = js.native
   /** An array of values (strings). */
-  var values: js.Array[AnonType] = js.native
+  var values: js.Array[Type] = js.native
 }
 
 object EnumType {
   @scala.inline
-  def apply(extAttrs: js.Array[ExtendedAttribute], name: String, `type`: enum, values: js.Array[AnonType]): EnumType = {
+  def apply(extAttrs: js.Array[ExtendedAttribute], name: String, `type`: enum, values: js.Array[Type]): EnumType = {
     val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnumType]
@@ -49,7 +49,7 @@ object EnumType {
         ret
     }
     @scala.inline
-    def withValues(value: js.Array[AnonType]): Self = {
+    def withValues(value: js.Array[Type]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
         ret

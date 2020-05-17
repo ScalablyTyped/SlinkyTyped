@@ -1,6 +1,6 @@
 package typingsSlinky.itPushable.mod
 
-import typingsSlinky.itPushable.Optionswritevtrue
+import typingsSlinky.itPushable.anon.Optionswritevtrue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

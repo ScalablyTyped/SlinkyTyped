@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("gsap", "Expo")
 @js.native
 class Expo ()
-  extends typingsSlinky.gsap.gsap.Expo
+  extends typingsSlinky.gsap.gsap.Ease
 
 /* static members */
 @JSImport("gsap", "Expo")

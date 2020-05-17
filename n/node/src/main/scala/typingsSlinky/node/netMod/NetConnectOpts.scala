@@ -12,14 +12,8 @@ trait NetConnectOpts extends js.Object
 
 object NetConnectOpts {
   @scala.inline
-  def TcpNetConnectOpts(port: Double): NetConnectOpts = {
-    val __obj = js.Dynamic.literal(port = port.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NetConnectOpts]
-  }
+  implicit def apply(value: IpcNetConnectOpts): NetConnectOpts = value.asInstanceOf[NetConnectOpts]
   @scala.inline
-  def IpcNetConnectOpts(path: String): NetConnectOpts = {
-    val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NetConnectOpts]
-  }
+  implicit def apply(value: TcpNetConnectOpts): NetConnectOpts = value.asInstanceOf[NetConnectOpts]
 }
 

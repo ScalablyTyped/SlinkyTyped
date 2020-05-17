@@ -1,0 +1,20 @@
+package typingsSlinky.pixiJs.global.PIXI
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * TimeLimiter limits the number of items handled by a {@link PIXI.BasePrepare} to a specified
+  * number of milliseconds per frame.
+  *
+  * @class
+  * @memberof PIXI
+  */
+@JSGlobal("PIXI.TimeLimiter")
+@js.native
+class TimeLimiter protected ()
+  extends typingsSlinky.pixiJs.PIXI.TimeLimiter {
+  def this(maxMilliseconds: Double) = this()
+}
+

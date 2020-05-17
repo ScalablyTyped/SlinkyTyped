@@ -5,10 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains settings that are used during loading and parsing of XML documents. The default settings are chosen for the highest security. This class can be instantiated and is accepted by LoadXml , LoadFromUriAsync , and LoadFromFileAsync . */
-@JSGlobal("Windows.Data.Xml.Dom.XmlLoadSettings")
 @js.native
-/** Creates a new XmlLoadSettings object. */
-class XmlLoadSettings () extends js.Object {
+trait XmlLoadSettings extends js.Object {
   /** Specifies whether default handling preserves white space. */
   var elementContentWhiteSpace: Boolean = js.native
   /** Gets and sets the limits of the element depth of an XML document to be loaded into a DOM object. */
@@ -19,5 +17,57 @@ class XmlLoadSettings () extends js.Object {
   var resolveExternals: Boolean = js.native
   /** Gets or sets a value that specifies whether the XML parser should validate this document against the document type definition (DTD) on loading. */
   var validateOnParse: Boolean = js.native
+}
+
+object XmlLoadSettings {
+  @scala.inline
+  def apply(
+    elementContentWhiteSpace: Boolean,
+    maxElementDepth: Double,
+    prohibitDtd: Boolean,
+    resolveExternals: Boolean,
+    validateOnParse: Boolean
+  ): XmlLoadSettings = {
+    val __obj = js.Dynamic.literal(elementContentWhiteSpace = elementContentWhiteSpace.asInstanceOf[js.Any], maxElementDepth = maxElementDepth.asInstanceOf[js.Any], prohibitDtd = prohibitDtd.asInstanceOf[js.Any], resolveExternals = resolveExternals.asInstanceOf[js.Any], validateOnParse = validateOnParse.asInstanceOf[js.Any])
+    __obj.asInstanceOf[XmlLoadSettings]
+  }
+  @scala.inline
+  implicit class XmlLoadSettingsOps[Self <: XmlLoadSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withElementContentWhiteSpace(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elementContentWhiteSpace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxElementDepth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxElementDepth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProhibitDtd(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prohibitDtd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResolveExternals(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolveExternals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValidateOnParse(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validateOnParse")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

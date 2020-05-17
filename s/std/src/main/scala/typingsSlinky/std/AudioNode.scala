@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,9 +26,4 @@ trait AudioNode extends EventTarget {
   def disconnect(destinationParam: org.scalajs.dom.raw.AudioParam, output: Double): Unit = js.native
   def disconnect(output: Double): Unit = js.native
 }
-
-@JSGlobal("AudioNode")
-@js.native
-object AudioNode
-  extends Instantiable0[org.scalajs.dom.raw.AudioNode]
 

@@ -1,11 +1,12 @@
 package typingsSlinky.reactInstantsearchCore.mod
 
-import typingsSlinky.reactInstantsearchCore.AnonHighlightProperty
-import typingsSlinky.reactInstantsearchCore.AnonIsHighlighted
+import typingsSlinky.reactInstantsearchCore.anon.HighlightProperty
+import typingsSlinky.reactInstantsearchCore.anon.IsHighlighted
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait HighlightProvided[TDoc] extends js.Object {
   /**
     * function to retrieve and parse an attribute from a hit. It takes a configuration object with 3 attributes:
@@ -23,15 +24,28 @@ trait HighlightProvided[TDoc] extends js.Object {
     * }) as Array<Array<{value: string, isHighlighted: boolean}>>
     * ```
     */
-  def highlight(configuration: AnonHighlightProperty[TDoc]): js.Array[AnonIsHighlighted]
+  def highlight(configuration: HighlightProperty[TDoc]): js.Array[IsHighlighted] = js.native
 }
 
 object HighlightProvided {
   @scala.inline
-  def apply[TDoc](highlight: AnonHighlightProperty[TDoc] => js.Array[AnonIsHighlighted]): HighlightProvided[TDoc] = {
+  def apply[TDoc](highlight: HighlightProperty[TDoc] => js.Array[IsHighlighted]): HighlightProvided[TDoc] = {
     val __obj = js.Dynamic.literal(highlight = js.Any.fromFunction1(highlight))
-  
     __obj.asInstanceOf[HighlightProvided[TDoc]]
   }
+  @scala.inline
+  implicit class HighlightProvidedOps[Self[tdoc] <: HighlightProvided[tdoc], TDoc] (val x: Self[TDoc]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[TDoc] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[TDoc]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[TDoc] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TDoc] with Other]
+    @scala.inline
+    def withHighlight(value: HighlightProperty[TDoc] => js.Array[IsHighlighted]): Self[TDoc] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

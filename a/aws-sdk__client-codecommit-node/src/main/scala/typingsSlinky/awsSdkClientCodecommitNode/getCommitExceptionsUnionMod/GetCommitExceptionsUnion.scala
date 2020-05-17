@@ -1,0 +1,57 @@
+package typingsSlinky.awsSdkClientCodecommitNode.getCommitExceptionsUnionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.typesCommitIdDoesNotExistExceptionMod.CommitIdDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesCommitIdRequiredExceptionMod.CommitIdRequiredException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidCommitIdExceptionMod.InvalidCommitIdException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesCommitIdRequiredExceptionMod.CommitIdRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidCommitIdExceptionMod.InvalidCommitIdException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesCommitIdDoesNotExistExceptionMod.CommitIdDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+*/
+trait GetCommitExceptionsUnion extends js.Object
+
+object GetCommitExceptionsUnion {
+  @scala.inline
+  implicit def apply(value: CommitIdDoesNotExistException): GetCommitExceptionsUnion = value.asInstanceOf[GetCommitExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: CommitIdRequiredException): GetCommitExceptionsUnion = value.asInstanceOf[GetCommitExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionIntegrityChecksFailedException): GetCommitExceptionsUnion = value.asInstanceOf[GetCommitExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyAccessDeniedException): GetCommitExceptionsUnion = value.asInstanceOf[GetCommitExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyDisabledException): GetCommitExceptionsUnion = value.asInstanceOf[GetCommitExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyNotFoundException): GetCommitExceptionsUnion = value.asInstanceOf[GetCommitExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyUnavailableException): GetCommitExceptionsUnion = value.asInstanceOf[GetCommitExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidCommitIdException): GetCommitExceptionsUnion = value.asInstanceOf[GetCommitExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidRepositoryNameException): GetCommitExceptionsUnion = value.asInstanceOf[GetCommitExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryDoesNotExistException): GetCommitExceptionsUnion = value.asInstanceOf[GetCommitExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryNameRequiredException): GetCommitExceptionsUnion = value.asInstanceOf[GetCommitExceptionsUnion]
+}
+

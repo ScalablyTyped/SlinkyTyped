@@ -1,7 +1,7 @@
 package typingsSlinky.grammarkdown.diagnosticsMod
 
-import typingsSlinky.grammarkdown.AnonDetailed
-import typingsSlinky.grammarkdown.AnonDetailedMessage
+import typingsSlinky.grammarkdown.anon.Detailed
+import typingsSlinky.grammarkdown.anon.DetailedMessage
 import typingsSlinky.grammarkdown.coreMod.Range
 import typingsSlinky.grammarkdown.nodesMod.Node
 import typingsSlinky.grammarkdown.nodesMod.SourceFile
@@ -42,19 +42,18 @@ class DiagnosticMessages () extends js.Object {
   def getDiagnostic(diagnosticIndex: Double): js.UndefOr[Diagnostic] = js.native
   def getDiagnosticArguments(diagnosticIndex: Double): js.UndefOr[js.Array[_]] = js.native
   def getDiagnosticInfo(diagnosticIndex: Double): js.UndefOr[DiagnosticInfo] = js.native
-  def getDiagnosticInfo(diagnosticIndex: Double, options: AnonDetailedMessage): js.UndefOr[DiagnosticInfo] = js.native
+  def getDiagnosticInfo(diagnosticIndex: Double, options: DetailedMessage): js.UndefOr[DiagnosticInfo] = js.native
   def getDiagnosticInfos(): js.Array[DiagnosticInfo] = js.native
-  def getDiagnosticInfos(options: AnonDetailedMessage): js.Array[DiagnosticInfo] = js.native
+  def getDiagnosticInfos(options: DetailedMessage): js.Array[DiagnosticInfo] = js.native
   def getDiagnosticInfosForSourceFile(sourceFile: SourceFile): js.Array[DiagnosticInfo] = js.native
-  def getDiagnosticInfosForSourceFile(sourceFile: SourceFile, options: AnonDetailedMessage): js.Array[DiagnosticInfo] = js.native
+  def getDiagnosticInfosForSourceFile(sourceFile: SourceFile, options: DetailedMessage): js.Array[DiagnosticInfo] = js.native
   def getDiagnosticNode(diagnosticIndex: Double): js.UndefOr[Node[SyntaxKind]] = js.native
   def getDiagnosticRange(diagnosticIndex: Double): js.UndefOr[Range] = js.native
   def getDiagnosticSourceFile(diagnosticIndex: Double): js.UndefOr[SourceFile] = js.native
   def getMessage(diagnosticIndex: Double): String = js.native
-  def getMessage(diagnosticIndex: Double, options: AnonDetailed): String = js.native
+  def getMessage(diagnosticIndex: Double, options: Detailed): String = js.native
   def report(pos: Double, message: Diagnostic, args: js.Any*): Unit = js.native
-  def reportNode(sourceFile: js.UndefOr[scala.Nothing], node: Node[SyntaxKind], message: Diagnostic, args: js.Any*): Unit = js.native
-  def reportNode(sourceFile: SourceFile, node: Node[SyntaxKind], message: Diagnostic, args: js.Any*): Unit = js.native
+  def reportNode(sourceFile: js.UndefOr[SourceFile], node: Node[SyntaxKind], message: Diagnostic, args: js.Any*): Unit = js.native
   def setSourceFile(sourceFile: SourceFile): Unit = js.native
   def values(): IterableIterator[js.UndefOr[DiagnosticInfo]] = js.native
 }

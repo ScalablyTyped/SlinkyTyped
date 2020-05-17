@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents the client-side equivalent of the BollingerBands class.
   */
-@JSGlobal("ASPxClientBollingerBands")
 @js.native
-class ASPxClientBollingerBands () extends ASPxClientIndicator {
+trait ASPxClientBollingerBands extends ASPxClientIndicator {
   /**
     * Gets the number of data points used to calculate the indicator values.
     */
@@ -18,5 +17,39 @@ class ASPxClientBollingerBands () extends ASPxClientIndicator {
     * Gets a value, indicating whose series point values are used to calculate the indicator's values.
     */
   var valueLevel: String = js.native
+}
+
+object ASPxClientBollingerBands {
+  @scala.inline
+  def apply(
+    chart: ASPxClientWebChart,
+    name: String,
+    pointsCount: Double,
+    series: ASPxClientSeries,
+    valueLevel: String
+  ): ASPxClientBollingerBands = {
+    val __obj = js.Dynamic.literal(chart = chart.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], pointsCount = pointsCount.asInstanceOf[js.Any], series = series.asInstanceOf[js.Any], valueLevel = valueLevel.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientBollingerBands]
+  }
+  @scala.inline
+  implicit class ASPxClientBollingerBandsOps[Self <: ASPxClientBollingerBands] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPointsCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointsCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValueLevel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

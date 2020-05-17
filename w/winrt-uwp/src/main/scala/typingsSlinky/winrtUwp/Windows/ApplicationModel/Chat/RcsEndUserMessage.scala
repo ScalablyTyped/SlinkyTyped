@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a Rich Communication Services (RCS) end user message. */
-@JSGlobal("Windows.ApplicationModel.Chat.RcsEndUserMessage")
 @js.native
-abstract class RcsEndUserMessage () extends js.Object {
+trait RcsEndUserMessage extends js.Object {
   /** Gets the actions to which the user can respond. */
   var actions: IVectorView[RcsEndUserMessageAction] = js.native
   /** Gets a Boolean value that specifies whether a PIN is required to be sent back with the response. */
@@ -33,5 +32,71 @@ abstract class RcsEndUserMessage () extends js.Object {
     * @return An async action indicating that the operation has completed.
     */
   def sendResponseWithPinAsync(action: RcsEndUserMessageAction, pin: String): IPromiseWithIAsyncAction = js.native
+}
+
+object RcsEndUserMessage {
+  @scala.inline
+  def apply(
+    actions: IVectorView[RcsEndUserMessageAction],
+    isPinRequired: Boolean,
+    sendResponseAsync: RcsEndUserMessageAction => IPromiseWithIAsyncAction,
+    sendResponseWithPinAsync: (RcsEndUserMessageAction, String) => IPromiseWithIAsyncAction,
+    text: String,
+    title: String,
+    transportId: String
+  ): RcsEndUserMessage = {
+    val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], isPinRequired = isPinRequired.asInstanceOf[js.Any], sendResponseAsync = js.Any.fromFunction1(sendResponseAsync), sendResponseWithPinAsync = js.Any.fromFunction2(sendResponseWithPinAsync), text = text.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], transportId = transportId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RcsEndUserMessage]
+  }
+  @scala.inline
+  implicit class RcsEndUserMessageOps[Self <: RcsEndUserMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActions(value: IVectorView[RcsEndUserMessageAction]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsPinRequired(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPinRequired")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSendResponseAsync(value: RcsEndUserMessageAction => IPromiseWithIAsyncAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendResponseAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSendResponseWithPinAsync(value: (RcsEndUserMessageAction, String) => IPromiseWithIAsyncAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendResponseWithPinAsync")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTransportId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transportId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

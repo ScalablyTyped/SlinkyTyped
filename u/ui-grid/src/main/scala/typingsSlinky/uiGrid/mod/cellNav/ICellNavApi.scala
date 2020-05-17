@@ -1,7 +1,7 @@
 package typingsSlinky.uiGrid.mod.cellNav
 
 import typingsSlinky.angular.mod.IPromise
-import typingsSlinky.uiGrid.AnonNavigate
+import typingsSlinky.uiGrid.anon.Navigate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ICellNavApi[TEntity] extends js.Object {
   // Events
-  var on: AnonNavigate[TEntity] = js.native
+  var on: Navigate[TEntity] = js.native
   // Methods
   /**
     * Gets the currently selected rows and columns.  array is empty if no selection has occurred
@@ -40,7 +40,7 @@ object ICellNavApi {
   def apply[TEntity](
     getCurrentSelection: () => js.Array[IRowCol[TEntity]],
     getFocusedCell: () => IRowCol[TEntity],
-    on: AnonNavigate[TEntity],
+    on: Navigate[TEntity],
     rowColSelectIndex: IRowCol[TEntity] => Double,
     scrollToFocus: (TEntity, IColumnDef) => IPromise[_]
   ): ICellNavApi[TEntity] = {
@@ -66,7 +66,7 @@ object ICellNavApi {
         ret
     }
     @scala.inline
-    def withOn(value: AnonNavigate[TEntity]): Self[TEntity] = {
+    def withOn(value: Navigate[TEntity]): Self[TEntity] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
         ret

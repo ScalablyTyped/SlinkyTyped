@@ -1,9 +1,7 @@
 package typingsSlinky.appleMapkitJs.mapkit
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.appleMapkitJs.AnonCircle
-import typingsSlinky.appleMapkitJs.AnonHeight
-import typingsSlinky.appleMapkitJs.AnonHigh
+import typingsSlinky.appleMapkitJs.anon.Height
 import typingsSlinky.std.DOMPoint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,26 +10,8 @@ import scala.scalajs.js.annotation._
 /**
   * The base annotation object, used for creating custom annotations.
   */
-@JSGlobal("mapkit.Annotation")
 @js.native
-class Annotation protected () extends js.Object {
-  /**
-    * Creates a new annotation given its location and initialization options.
-    *
-    * @param coordinate The coordinate at which this annotation should appear.
-    * @param factory A factory function that returns a DOM element used to
-    * represent this annotation.
-    * @param options A hash of properties with which to initialize the annotation.
-    */
-  def this(
-    coordinate: Coordinate,
-    factory: js.Function2[/* coordinate */ Coordinate, /* options */ AnnotationConstructorOptions, Element]
-  ) = this()
-  def this(
-    coordinate: Coordinate,
-    factory: js.Function2[/* coordinate */ Coordinate, /* options */ AnnotationConstructorOptions, Element],
-    options: AnnotationConstructorOptions
-  ) = this()
+trait Annotation extends js.Object {
   /**
     * An offset that changes the annotation's default anchor point.
     */
@@ -104,7 +84,7 @@ class Annotation protected () extends js.Object {
   /**
     * The desired dimensions of the annotation, in CSS pixels.
     */
-  var size: AnonHeight = js.native
+  var size: Height = js.native
   /**
     * The text to display as a subtitle, on the second line of an annotation's
     * callout.
@@ -155,21 +135,5 @@ class Annotation protected () extends js.Object {
     listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[Map], Unit],
     thisObject: T
   ): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("mapkit.Annotation")
-@js.native
-object Annotation extends js.Object {
-  /**
-    * Constants indicating how to interpret the collision frame rectangle of
-    * an annotation view.
-    */
-  val CollisionMode: AnonCircle = js.native
-  /**
-    * Constant values used to provide a hint the map uses to prioritize
-    * displaying annotations.
-    */
-  val DisplayPriority: AnonHigh = js.native
 }
 

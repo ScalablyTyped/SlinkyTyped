@@ -1,7 +1,7 @@
 package typingsSlinky.feathersjsAuthenticationClient.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.feathersjsAuthenticationClient.Typeofself
+import typingsSlinky.feathersjsAuthenticationClient.anon.Typeofself
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

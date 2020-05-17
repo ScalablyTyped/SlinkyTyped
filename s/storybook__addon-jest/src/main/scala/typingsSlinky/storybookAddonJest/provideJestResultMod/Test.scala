@@ -1,6 +1,6 @@
 package typingsSlinky.storybookAddonJest.provideJestResultMod
 
-import typingsSlinky.storybookAddonJest.AnonAssertionResults
+import typingsSlinky.storybookAddonJest.anon.AssertionResults
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Test extends js.Object {
   var name: String = js.native
-  var result: AnonAssertionResults = js.native
+  var result: AssertionResults = js.native
 }
 
 object Test {
   @scala.inline
-  def apply(name: String, result: AnonAssertionResults): Test = {
+  def apply(name: String, result: AssertionResults): Test = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any])
     __obj.asInstanceOf[Test]
   }
@@ -30,7 +30,7 @@ object Test {
         ret
     }
     @scala.inline
-    def withResult(value: AnonAssertionResults): Self = {
+    def withResult(value: AssertionResults): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
         ret

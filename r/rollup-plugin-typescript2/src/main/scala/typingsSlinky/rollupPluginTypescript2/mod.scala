@@ -1,6 +1,7 @@
 package typingsSlinky.rollupPluginTypescript2
 
 import typingsSlinky.rollup.mod.PluginImpl
+import typingsSlinky.rollupPluginTypescript2.anon.PartialIOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

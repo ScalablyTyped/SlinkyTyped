@@ -14,9 +14,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * HTTP client object that (mostly) implements the XMLHttpRequest specification.
 		 */
-@JSGlobal("Titanium.Network.HTTPClient")
 @js.native
-class HTTPClient () extends Proxy {
+trait HTTPClient extends Proxy {
   /**
   			 * Ready state constant indicating that the request is complete.
   			 */

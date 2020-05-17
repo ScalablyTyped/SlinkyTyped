@@ -5,13 +5,15 @@ import typingsSlinky.amapJsApi.AMap.Map
 import typingsSlinky.amapJsApi.AMap.StrokeLineCap
 import typingsSlinky.amapJsApi.AMap.StrokeLineJoin
 import typingsSlinky.amapJsApi.AMap.StrokeStyle
+import typingsSlinky.amapJsApi.ReferOverlayOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined amap-js-api.AMap.Merge<amap-js-api.AMap.Polyline.Options<ExtraData>, {  path  :std.Array<std.Array<number | string | std.Array<string | number>>>,   tolerance ? :number,   interpolateNumLimit ? :[number]}> */
 @js.native
-trait Options[ExtraData] extends js.Object {
+trait Options[ExtraData]
+  extends ReferOverlayOptions[js.Any] {
   /**
     * 描边的宽度
     */

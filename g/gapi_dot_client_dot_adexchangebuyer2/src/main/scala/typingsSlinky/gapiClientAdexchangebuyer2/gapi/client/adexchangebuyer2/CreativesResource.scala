@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientAdexchangebuyer2.gapi.client.adexchangebuyer2
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAdexchangebuyer2.AnonCreativeId
-import typingsSlinky.gapiClientAdexchangebuyer2.AnonCreativeStatusId
-import typingsSlinky.gapiClientAdexchangebuyer2.AnonDuplicateIdMode
-import typingsSlinky.gapiClientAdexchangebuyer2.AnonOauthtoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAdexchangebuyer2.anon.CreativeId
+import typingsSlinky.gapiClientAdexchangebuyer2.anon.CreativeStatusId
+import typingsSlinky.gapiClientAdexchangebuyer2.anon.DuplicateIdMode
+import typingsSlinky.gapiClientAdexchangebuyer2.anon.Oauthtoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,27 +13,27 @@ import scala.scalajs.js.annotation._
 trait CreativesResource extends js.Object {
   var dealAssociations: DealAssociationsResource = js.native
   /** Creates a creative. */
-  def create(request: AnonDuplicateIdMode): Request_[Creative] = js.native
+  def create(request: DuplicateIdMode): Request[Creative] = js.native
   /** Gets a creative. */
-  def get(request: AnonCreativeId): Request_[Creative] = js.native
+  def get(request: CreativeId): Request[Creative] = js.native
   /**
     * List all creatives associated with a specific reason for which bids were
     * filtered, with the number of bids filtered for each creative.
     */
-  def list(request: AnonCreativeStatusId): Request_[ListCreativeStatusBreakdownByCreativeResponse] = js.native
+  def list(request: CreativeStatusId): Request[ListCreativeStatusBreakdownByCreativeResponse] = js.native
   /** Lists creatives. */
-  def list(request: AnonOauthtoken): Request_[ListCreativesResponse] = js.native
+  def list(request: Oauthtoken): Request[ListCreativesResponse] = js.native
   /**
     * Stops watching a creative. Will stop push notifications being sent to the
     * topics when the creative changes status.
     */
-  def stopWatching(request: AnonCreativeId): Request_[js.Object] = js.native
+  def stopWatching(request: CreativeId): Request[js.Object] = js.native
   /** Updates a creative. */
-  def update(request: AnonCreativeId): Request_[Creative] = js.native
+  def update(request: CreativeId): Request[Creative] = js.native
   /**
     * Watches a creative. Will result in push notifications being sent to the
     * topic when the creative changes status.
     */
-  def watch(request: AnonCreativeId): Request_[js.Object] = js.native
+  def watch(request: CreativeId): Request[js.Object] = js.native
 }
 

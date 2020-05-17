@@ -3,7 +3,7 @@ package typingsSlinky.reactBootstrapTable2Paginator.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactBootstrapTableNext.AnonText
+import typingsSlinky.reactBootstrapTableNext.anon.Text
 import typingsSlinky.reactBootstrapTableNext.mod.PageButtonRendererOptions
 import typingsSlinky.reactBootstrapTableNext.mod.PageListRendererOptions
 import typingsSlinky.reactBootstrapTableNext.mod.SizePerPageOptionRendererOptions
@@ -63,7 +63,7 @@ class SharedBuilder_PaginationChildProps_1899556761 (val args: js.Array[js.Any])
   @scala.inline
   def sizePerPage(value: Double): this.type = set("sizePerPage", value.asInstanceOf[js.Any])
   @scala.inline
-  def sizePerPageList(value: js.Array[AnonText | Double]): this.type = set("sizePerPageList", value.asInstanceOf[js.Any])
+  def sizePerPageList(value: js.Array[Double | Text]): this.type = set("sizePerPageList", value.asInstanceOf[js.Any])
   @scala.inline
   def sizePerPageOptionRenderer(value: /* options */ SizePerPageOptionRendererOptions => ReactElement): this.type = set("sizePerPageOptionRenderer", js.Any.fromFunction1(value))
   @scala.inline

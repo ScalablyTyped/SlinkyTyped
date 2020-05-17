@@ -2,7 +2,7 @@ package typingsSlinky.cathoQuantum.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonComponents
+import typingsSlinky.cathoQuantum.anon.Components
 import typingsSlinky.cathoQuantum.badgeMod.BadgeProps
 import typingsSlinky.cathoQuantum.badgeMod.default
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.error
@@ -30,7 +30,7 @@ object Badge {
     @scala.inline
     def skin(value: primary | secondary | success | error | neutral): this.type = set("skin", value.asInstanceOf[js.Any])
     @scala.inline
-    def theme(value: AnonComponents): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: Components): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: BadgeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

@@ -2,7 +2,7 @@ package typingsSlinky.cathoQuantum.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonComponentsSpacing
+import typingsSlinky.cathoQuantum.anon.ComponentsSpacing
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.neutral
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.primary
 import typingsSlinky.cathoQuantum.tabbedViewMod.TabbedViewProps
@@ -26,7 +26,7 @@ object TabbedView {
     @scala.inline
     def skin(value: neutral | primary): this.type = set("skin", value.asInstanceOf[js.Any])
     @scala.inline
-    def theme(value: AnonComponentsSpacing): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: ComponentsSpacing): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: TabbedViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

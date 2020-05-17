@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Networking.NetworkOperators.MobileBroadbandAccountUpdatedEventArgs")
 @js.native
-class MobileBroadbandAccountUpdatedEventArgs () extends IMobileBroadbandAccountUpdatedEventArgs
+trait MobileBroadbandAccountUpdatedEventArgs extends IMobileBroadbandAccountUpdatedEventArgs
+
+object MobileBroadbandAccountUpdatedEventArgs {
+  @scala.inline
+  def apply(hasDeviceInformationChanged: Boolean, hasNetworkChanged: Boolean, networkAccountId: String): MobileBroadbandAccountUpdatedEventArgs = {
+    val __obj = js.Dynamic.literal(hasDeviceInformationChanged = hasDeviceInformationChanged.asInstanceOf[js.Any], hasNetworkChanged = hasNetworkChanged.asInstanceOf[js.Any], networkAccountId = networkAccountId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MobileBroadbandAccountUpdatedEventArgs]
+  }
+}
 

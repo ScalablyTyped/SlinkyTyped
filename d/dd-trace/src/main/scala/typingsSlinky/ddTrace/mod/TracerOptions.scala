@@ -1,9 +1,9 @@
 package typingsSlinky.ddTrace.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.ddTrace.AnonB3
-import typingsSlinky.ddTrace.AnonDebug
-import typingsSlinky.ddTrace.AnonPort
+import typingsSlinky.ddTrace.anon.B3
+import typingsSlinky.ddTrace.anon.Debug
+import typingsSlinky.ddTrace.anon.Port
 import typingsSlinky.ddTrace.ddTraceStrings.async_hooks
 import typingsSlinky.ddTrace.ddTraceStrings.noop
 import scala.scalajs.js
@@ -25,7 +25,7 @@ trait TracerOptions extends js.Object {
   /**
     * Options specific for the Dogstatsd agent.
     */
-  var dogstatsd: js.UndefOr[AnonPort] = js.native
+  var dogstatsd: js.UndefOr[Port] = js.native
   /**
     * Whether to enable the tracer.
     * @default true
@@ -39,7 +39,7 @@ trait TracerOptions extends js.Object {
     * Experimental features can be enabled all at once by using true or individually using key / value pairs.
     * @default {}
     */
-  var experimental: js.UndefOr[Boolean | AnonB3] = js.native
+  var experimental: js.UndefOr[Boolean | B3] = js.native
   /**
     * Interval in milliseconds at which the tracer will submit traces to the agent.
     * @default 2000
@@ -61,7 +61,7 @@ trait TracerOptions extends js.Object {
     * should support debug() and error() methods
     * see https://datadog.github.io/dd-trace-js/#custom-logging
     */
-  var logger: js.UndefOr[AnonDebug] = js.native
+  var logger: js.UndefOr[Debug] = js.native
   /**
     * Whether to load all built-in plugins.
     * @default true
@@ -146,7 +146,7 @@ object TracerOptions {
         ret
     }
     @scala.inline
-    def withDogstatsd(value: AnonPort): Self = {
+    def withDogstatsd(value: Port): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dogstatsd")(value.asInstanceOf[js.Any])
         ret
@@ -182,7 +182,7 @@ object TracerOptions {
         ret
     }
     @scala.inline
-    def withExperimental(value: Boolean | AnonB3): Self = {
+    def withExperimental(value: Boolean | B3): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("experimental")(value.asInstanceOf[js.Any])
         ret
@@ -230,7 +230,7 @@ object TracerOptions {
         ret
     }
     @scala.inline
-    def withLogger(value: AnonDebug): Self = {
+    def withLogger(value: Debug): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
         ret

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.UI.ViewManagement.ApplicationView")
 @js.native
-class ApplicationView () extends js.Object {
+trait ApplicationView extends js.Object {
   /**
   			 * Gets whether the current window (app view) is adjacent to the left edge of the screen.
   			**/
@@ -45,25 +44,85 @@ class ApplicationView () extends js.Object {
   var titleBar: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ApplicationViewTitleBar */ js.Any = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.UI.ViewManagement.ApplicationView")
-@js.native
-object ApplicationView extends js.Object {
-  /**
-  			 * Indicates whether the app terminates when the last window is closed.
-  			**/
-  var terminateAppOnFinalViewClose: Boolean = js.native
-  /**
-  			 * Gets the state of the current app view.
-  			**/
-  var value: ApplicationViewState = js.native
-  /**
-  			 * Gets the window (app view) for the current app.
-  			**/
-  def getForCurrentView(): ApplicationView = js.native
-  /**
-  			 * Attempts to unsnap a previously snapped app. This call will only succeed when the app is running in the foreground.
-  			**/
-  def tryUnsnap(): Boolean = js.native
+object ApplicationView {
+  @scala.inline
+  def apply(
+    adjacentToLeftDisplayEdge: Double,
+    adjacentToRightDisplayEdge: Boolean,
+    id: Double,
+    isFullScreen: Boolean,
+    isOnLockScreen: Boolean,
+    isScreenCaptureEnabled: Boolean,
+    orientation: ApplicationViewOrientation,
+    title: String,
+    titleBar: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ApplicationViewTitleBar */ js.Any
+  ): ApplicationView = {
+    val __obj = js.Dynamic.literal(adjacentToLeftDisplayEdge = adjacentToLeftDisplayEdge.asInstanceOf[js.Any], adjacentToRightDisplayEdge = adjacentToRightDisplayEdge.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isFullScreen = isFullScreen.asInstanceOf[js.Any], isOnLockScreen = isOnLockScreen.asInstanceOf[js.Any], isScreenCaptureEnabled = isScreenCaptureEnabled.asInstanceOf[js.Any], orientation = orientation.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], titleBar = titleBar.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ApplicationView]
+  }
+  @scala.inline
+  implicit class ApplicationViewOps[Self <: ApplicationView] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdjacentToLeftDisplayEdge(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adjacentToLeftDisplayEdge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdjacentToRightDisplayEdge(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adjacentToRightDisplayEdge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsFullScreen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFullScreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsOnLockScreen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isOnLockScreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsScreenCaptureEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isScreenCaptureEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrientation(value: ApplicationViewOrientation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitleBar(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ApplicationViewTitleBar */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleBar")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

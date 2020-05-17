@@ -1,7 +1,7 @@
 package typingsSlinky.swiper.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.swiper.AnonCurrentX
+import typingsSlinky.swiper.anon.CurrentX
 import typingsSlinky.swiper.swiperBooleans.`true`
 import typingsSlinky.swiper.swiperEsmMod.A11y
 import typingsSlinky.swiper.swiperEsmMod.Autoplay
@@ -196,7 +196,7 @@ trait Swiper extends js.Object {
   /**
     * Object with the following touch event properties:
     */
-  var touches: AnonCurrentX = js.native
+  var touches: CurrentX = js.native
   /**
     * Current value of wrapper translate
     */

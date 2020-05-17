@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents the client-side equivalent of the Series class.
   */
-@JSGlobal("ASPxClientSeries")
 @js.native
-class ASPxClientSeries () extends ASPxClientWebChartElementNamed {
+trait ASPxClientSeries extends ASPxClientWebChartElementNamed {
   /**
     * Gets a value indicating whether a crosshair cursor is enabled.
     */
@@ -109,5 +108,192 @@ class ASPxClientSeries () extends ASPxClientWebChartElementNamed {
     * Gets a value indicating whether the series is visible.
     */
   var visible: Boolean = js.native
+}
+
+object ASPxClientSeries {
+  @scala.inline
+  def apply(
+    actualCrosshairEnabled: Boolean,
+    actualCrosshairLabelVisibility: Boolean,
+    argumentScaleType: String,
+    axisX: String,
+    axisY: String,
+    chart: ASPxClientWebChart,
+    color: String,
+    crosshairLabelPattern: String,
+    crosshairValueItems: js.Array[ASPxClientCrosshairValueItem],
+    fibonacciIndicators: js.Array[ASPxClientFibonacciIndicator],
+    groupedElementsPattern: String,
+    indicators: js.Array[ASPxClientIndicator],
+    label: ASPxClientSeriesLabel,
+    name: String,
+    pane: String,
+    points: js.Array[ASPxClientSeriesPoint],
+    regressionLines: js.Array[ASPxClientRegressionLine],
+    stackedGroup: String,
+    titles: js.Array[ASPxClientSeriesTitle],
+    toolTipEnabled: Boolean,
+    toolTipImage: String,
+    toolTipText: String,
+    trendLines: js.Array[ASPxClientTrendLine],
+    valueScaleType: String,
+    viewType: String,
+    visible: Boolean
+  ): ASPxClientSeries = {
+    val __obj = js.Dynamic.literal(actualCrosshairEnabled = actualCrosshairEnabled.asInstanceOf[js.Any], actualCrosshairLabelVisibility = actualCrosshairLabelVisibility.asInstanceOf[js.Any], argumentScaleType = argumentScaleType.asInstanceOf[js.Any], axisX = axisX.asInstanceOf[js.Any], axisY = axisY.asInstanceOf[js.Any], chart = chart.asInstanceOf[js.Any], color = color.asInstanceOf[js.Any], crosshairLabelPattern = crosshairLabelPattern.asInstanceOf[js.Any], crosshairValueItems = crosshairValueItems.asInstanceOf[js.Any], fibonacciIndicators = fibonacciIndicators.asInstanceOf[js.Any], groupedElementsPattern = groupedElementsPattern.asInstanceOf[js.Any], indicators = indicators.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], pane = pane.asInstanceOf[js.Any], points = points.asInstanceOf[js.Any], regressionLines = regressionLines.asInstanceOf[js.Any], stackedGroup = stackedGroup.asInstanceOf[js.Any], titles = titles.asInstanceOf[js.Any], toolTipEnabled = toolTipEnabled.asInstanceOf[js.Any], toolTipImage = toolTipImage.asInstanceOf[js.Any], toolTipText = toolTipText.asInstanceOf[js.Any], trendLines = trendLines.asInstanceOf[js.Any], valueScaleType = valueScaleType.asInstanceOf[js.Any], viewType = viewType.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientSeries]
+  }
+  @scala.inline
+  implicit class ASPxClientSeriesOps[Self <: ASPxClientSeries] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActualCrosshairEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actualCrosshairEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActualCrosshairLabelVisibility(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actualCrosshairLabelVisibility")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArgumentScaleType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("argumentScaleType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAxisX(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAxisY(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCrosshairLabelPattern(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crosshairLabelPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCrosshairValueItems(value: js.Array[ASPxClientCrosshairValueItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("crosshairValueItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFibonacciIndicators(value: js.Array[ASPxClientFibonacciIndicator]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fibonacciIndicators")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGroupedElementsPattern(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupedElementsPattern")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIndicators(value: js.Array[ASPxClientIndicator]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indicators")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabel(value: ASPxClientSeriesLabel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPane(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pane")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPoints(value: js.Array[ASPxClientSeriesPoint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("points")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRegressionLines(value: js.Array[ASPxClientRegressionLine]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("regressionLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStackedGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stackedGroup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitles(value: js.Array[ASPxClientSeriesTitle]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToolTipEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolTipEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToolTipImage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolTipImage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToolTipText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolTipText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrendLines(value: js.Array[ASPxClientTrendLine]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trendLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValueScaleType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueScaleType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withViewType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

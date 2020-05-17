@@ -1,6 +1,6 @@
 package typingsSlinky.typedGithubApi.webHooksMod
 
-import typingsSlinky.typedGithubApi.AnonBody
+import typingsSlinky.typedGithubApi.anon.Body
 import typingsSlinky.typedGithubApi.issueMod.Issue
 import typingsSlinky.typedGithubApi.typedGithubApiStrings.edited
 import scala.scalajs.js
@@ -11,12 +11,12 @@ import scala.scalajs.js.annotation._
 trait IssueEditedEvent extends IssueEvent {
   @JSName("action")
   var action_IssueEditedEvent: edited = js.native
-  var changes: AnonBody = js.native
+  var changes: Body = js.native
 }
 
 object IssueEditedEvent {
   @scala.inline
-  def apply(action: edited, changes: AnonBody, issue: Issue): IssueEditedEvent = {
+  def apply(action: edited, changes: Body, issue: Issue): IssueEditedEvent = {
     val __obj = js.Dynamic.literal(action = action.asInstanceOf[js.Any], changes = changes.asInstanceOf[js.Any], issue = issue.asInstanceOf[js.Any])
     __obj.asInstanceOf[IssueEditedEvent]
   }
@@ -33,7 +33,7 @@ object IssueEditedEvent {
         ret
     }
     @scala.inline
-    def withChanges(value: AnonBody): Self = {
+    def withChanges(value: Body): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("changes")(value.asInstanceOf[js.Any])
         ret

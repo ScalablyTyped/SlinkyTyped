@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IContextInfoStruct extends js.Object {
+trait IContextInfoStruct extends IContextInfo {
   var name: String = js.native
   var `object`: js.Object = js.native
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.baiduApp.swan
 
-import typingsSlinky.baiduApp.AnonErrCode
+import typingsSlinky.baiduApp.anon.ErrCode
 import typingsSlinky.baiduApp.baiduAppStrings.DELETE
 import typingsSlinky.baiduApp.baiduAppStrings.GET
 import typingsSlinky.baiduApp.baiduAppStrings.HEAD
@@ -19,7 +19,7 @@ trait RequestOptions
   /** 如果设为json，会尝试对返回的数据做一次 JSON.parse  默认值为json */
   var dataType: js.UndefOr[String] = js.native
   @JSName("fail")
-  var fail_RequestOptions: js.UndefOr[js.Function1[/* err */ AnonErrCode, Unit]] = js.native
+  var fail_RequestOptions: js.UndefOr[js.Function1[/* err */ ErrCode, Unit]] = js.native
   /** 设置请求的 header , header 中不能设置 Referer */
   var header: js.UndefOr[RequestHeader] = js.native
   /** 默认为 GET，有效值：OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT */
@@ -76,7 +76,7 @@ object RequestOptions {
         ret
     }
     @scala.inline
-    def withFail(value: /* err */ AnonErrCode => Unit): Self = {
+    def withFail(value: /* err */ ErrCode => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction1(value))
         ret

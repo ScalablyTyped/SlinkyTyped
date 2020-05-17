@@ -1,7 +1,7 @@
 package typingsSlinky.ionic.definitionsMod
 
-import typingsSlinky.ionic.AnonReq
-import typingsSlinky.ionic.PartialPaginatorState
+import typingsSlinky.ionic.anon.PartialPaginatorState
+import typingsSlinky.ionic.anon.Req
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,6 +16,6 @@ trait PaginateArgs[T /* <: Response[js.Array[js.Object]] */] extends js.Object {
   var reqgen_Original: PaginatorRequestGenerator = js.native
   var state: js.UndefOr[PartialPaginatorState] = js.native
   def guard(res: APIResponseSuccess): /* is T */ Boolean = js.native
-  def reqgen(): js.Promise[AnonReq] = js.native
+  def reqgen(): js.Promise[Req] = js.native
 }
 

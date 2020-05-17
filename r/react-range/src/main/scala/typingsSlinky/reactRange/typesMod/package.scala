@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object typesMod {
-  type TThumbOffsets = js.Array[typingsSlinky.reactRange.AnonX]
+  type TThumbOffsets = js.Array[typingsSlinky.reactRange.anon.X]
 }

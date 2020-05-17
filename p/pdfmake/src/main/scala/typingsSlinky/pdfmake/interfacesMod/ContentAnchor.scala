@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ContentAnchor
   extends ContentBase
-     with _Content {
+     with Content {
   var id: String = js.native
   var text: String | ContentAnchor = js.native
 }

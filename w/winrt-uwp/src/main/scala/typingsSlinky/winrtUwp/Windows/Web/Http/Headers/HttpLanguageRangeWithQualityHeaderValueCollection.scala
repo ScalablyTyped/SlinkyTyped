@@ -1,18 +1,17 @@
 package typingsSlinky.winrtUwp.Windows.Web.Http.Headers
 
 import typingsSlinky.std.Array
-import typingsSlinky.winrtUwp.AnonIndex
-import typingsSlinky.winrtUwp.AnonItemsHttpLanguageRangeWithQualityHeaderValue
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
+import typingsSlinky.winrtUwp.anon.Index
+import typingsSlinky.winrtUwp.anon.ItemsHttpLanguageRangeWithQualityHeaderValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the value of the Accept-Language HTTP header on an HTTP request. */
-@JSGlobal("Windows.Web.Http.Headers.HttpLanguageRangeWithQualityHeaderValueCollection")
 @js.native
-abstract class HttpLanguageRangeWithQualityHeaderValueCollection () extends Array[HttpLanguageRangeWithQualityHeaderValue] {
+trait HttpLanguageRangeWithQualityHeaderValueCollection extends Array[HttpLanguageRangeWithQualityHeaderValue] {
   /** Gets the number of HttpLanguageRangeWithQualityHeaderValue objects in the collection. */
   var size: Double = js.native
   /**
@@ -37,19 +36,19 @@ abstract class HttpLanguageRangeWithQualityHeaderValueCollection () extends Arra
     * Retrieves the HttpLanguageRangeWithQualityHeaderValue items that start at the specified index in the collection.
     * @param startIndex The zero-based index of the start of the HttpLanguageRangeWithQualityHeaderValue items in the HttpLanguageRangeWithQualityHeaderValueCollection .
     */
-  def getMany(startIndex: Double): AnonItemsHttpLanguageRangeWithQualityHeaderValue = js.native
+  def getMany(startIndex: Double): ItemsHttpLanguageRangeWithQualityHeaderValue = js.native
   /**
     * Returns an immutable view of the HttpLanguageRangeWithQualityHeaderValueCollection .
     * @return The view of the HttpLanguageRangeWithQualityHeaderValueCollection .
     */
   def getView(): IVectorView[HttpLanguageRangeWithQualityHeaderValue] = js.native
-  def indexOf(value: HttpLanguageRangeWithQualityHeaderValue, extra: js.Any*): AnonIndex = js.native
+  def indexOf(value: HttpLanguageRangeWithQualityHeaderValue, extra: js.Any*): Index = js.native
   /**
     * Retrieves the index of an HttpLanguageRangeWithQualityHeaderValue in the collection.
     * @param value The HttpLanguageRangeWithQualityHeaderValue to find in the HttpLanguageRangeWithQualityHeaderValueCollection .
     */
   @JSName("indexOf")
-  def indexOf_AnonIndex(value: HttpLanguageRangeWithQualityHeaderValue): AnonIndex = js.native
+  def indexOf_Index(value: HttpLanguageRangeWithQualityHeaderValue): Index = js.native
   /**
     * Inserts an HttpLanguageRangeWithQualityHeaderValue into the collection at the specified index.
     * @param index The zero-based index at which value should be inserted.

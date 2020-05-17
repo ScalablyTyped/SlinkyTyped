@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.native_only
   - typingsSlinky.reactNativeFbsdk.reactNativeFbsdkStrings.web_only
 */
-trait LoginBehaviorAndroid extends js.Object
+trait LoginBehaviorAndroid extends LoginBehavior
 
 object LoginBehaviorAndroid {
   @scala.inline

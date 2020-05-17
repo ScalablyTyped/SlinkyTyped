@@ -2,7 +2,7 @@ package typingsSlinky.nivoGeo.mod
 
 import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.nivoGeo.AnonFeatureChoroplethBoundFeature
+import typingsSlinky.nivoGeo.anon.FeatureChoroplethBoundFeature
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait ChoroplethCommonProps extends CommonProps {
   var onMouseEnter: js.UndefOr[ChoroplethEventHandler] = js.native
   var onMouseLeave: js.UndefOr[ChoroplethEventHandler] = js.native
   var onMouseMove: js.UndefOr[ChoroplethEventHandler] = js.native
-  var tooltip: js.UndefOr[ReactComponentClass[AnonFeatureChoroplethBoundFeature]] = js.native
+  var tooltip: js.UndefOr[ReactComponentClass[FeatureChoroplethBoundFeature]] = js.native
   var unknownColor: js.UndefOr[String] = js.native
   var value: js.UndefOr[String | (FeatureAccessor[_, Double])] = js.native
   var valueFormat: js.UndefOr[String | (FeatureAccessor[_, String | Double])] = js.native
@@ -208,7 +208,7 @@ object ChoroplethCommonProps {
         ret
     }
     @scala.inline
-    def withTooltip(value: ReactComponentClass[AnonFeatureChoroplethBoundFeature]): Self = {
+    def withTooltip(value: ReactComponentClass[FeatureChoroplethBoundFeature]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

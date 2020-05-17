@@ -1,0 +1,30 @@
+package typingsSlinky.gulpUglify
+
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.uglifyJs.mod.MinifyOptions
+import typingsSlinky.uglifyJs.mod.MinifyOutput
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobalScope
+@js.native
+object anon extends js.Object {
+  @js.native
+  trait FnCall extends js.Object {
+    def apply(files: String): MinifyOutput = js.native
+    def apply(files: String, options: MinifyOptions): MinifyOutput = js.native
+    def apply(files: js.Array[String]): MinifyOutput = js.native
+    def apply(files: js.Array[String], options: MinifyOptions): MinifyOutput = js.native
+    def apply(files: StringDictionary[String]): MinifyOutput = js.native
+    def apply(files: StringDictionary[String], options: MinifyOptions): MinifyOutput = js.native
+  }
+  
+  @js.native
+  trait FnCallMessageOptionalParams extends js.Object {
+    def apply(): Unit = js.native
+    def apply(message: js.Any, optionalParams: js.Any*): Unit = js.native
+  }
+  
+}
+

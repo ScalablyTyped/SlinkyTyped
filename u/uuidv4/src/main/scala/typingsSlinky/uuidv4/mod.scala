@@ -1,5 +1,6 @@
 package typingsSlinky.uuidv4
 
+import typingsSlinky.uuidv4.anon.V4
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation._
 object mod extends js.Object {
   @js.native
   object default extends js.Object {
-    var regex: AnonV4 = js.native
+    var regex: V4 = js.native
     def apply(): String = js.native
     def empty(): String = js.native
     def fromString(text: String): String = js.native

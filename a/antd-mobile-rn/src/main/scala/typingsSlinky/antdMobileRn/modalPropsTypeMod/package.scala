@@ -10,5 +10,4 @@ package object modalPropsTypeMod {
     /* password */ js.UndefOr[java.lang.String], 
     scala.Unit
   ]
-  type CallbackOrActions[T] = typingsSlinky.antdMobileRn.modalPropsTypeMod.Callback | js.Array[typingsSlinky.antdMobileRn.modalPropsTypeMod.Action[T]]
 }

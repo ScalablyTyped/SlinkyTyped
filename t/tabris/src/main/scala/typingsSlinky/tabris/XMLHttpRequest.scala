@@ -1,6 +1,6 @@
 package typingsSlinky.tabris
 
-import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.tabris.tabrisStrings._empty
 import typingsSlinky.tabris.tabrisStrings.arraybuffer
 import typingsSlinky.tabris.tabrisStrings.readystatechange
 import typingsSlinky.tabris.tabrisStrings.text
@@ -20,7 +20,7 @@ trait XMLHttpRequest
   val readyState: Double = js.native
   val response: js.Any = js.native
   val responseText: String = js.native
-  var responseType: text | arraybuffer | typingsSlinky.tabris.tabrisStrings._empty = js.native
+  var responseType: text | arraybuffer | _empty = js.native
   val status: Double = js.native
   val statusText: String = js.native
   var timeout: Double = js.native
@@ -52,15 +52,5 @@ trait XMLHttpRequest
   def send(data: Blob): Unit = js.native
   def send(data: FormData): Unit = js.native
   def setRequestHeader(header: String, value: String): Unit = js.native
-}
-
-@JSGlobal("XMLHttpRequest")
-@js.native
-object XMLHttpRequest extends Instantiable0[XMLHttpRequest] {
-  val DONE: Double = js.native
-  val HEADERS_RECEIVED: Double = js.native
-  val LOADING: Double = js.native
-  val OPENED: Double = js.native
-  val UNSENT: Double = js.native
 }
 

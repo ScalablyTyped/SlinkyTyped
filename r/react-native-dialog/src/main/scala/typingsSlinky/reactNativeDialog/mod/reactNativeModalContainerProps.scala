@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeDialog.mod
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState

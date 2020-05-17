@@ -1,6 +1,7 @@
 package typingsSlinky.jupyterlabTerminal
 
 import typingsSlinky.jupyterlabServices.terminalTerminalMod.TerminalSession.ISession
+import typingsSlinky.jupyterlabTerminal.anon.PartialIOptions
 import typingsSlinky.jupyterlabTerminal.tokensMod.ITerminal.ITerminal
 import typingsSlinky.phosphorWidgets.mod.Widget.ResizeMessage
 import scala.scalajs.js

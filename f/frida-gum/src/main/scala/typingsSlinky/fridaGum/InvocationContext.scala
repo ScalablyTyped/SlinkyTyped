@@ -13,31 +13,10 @@ trait InvocationContext extends js.Object
 
 object InvocationContext {
   @scala.inline
-  def PortableInvocationContext(context: CpuContext, depth: Double, returnAddress: NativePointer, threadId: ThreadId): InvocationContext = {
-    val __obj = js.Dynamic.literal(context = context.asInstanceOf[js.Any], depth = depth.asInstanceOf[js.Any], returnAddress = returnAddress.asInstanceOf[js.Any], threadId = threadId.asInstanceOf[js.Any])
-    __obj.asInstanceOf[InvocationContext]
-  }
+  implicit def apply(value: PortableInvocationContext): InvocationContext = value.asInstanceOf[InvocationContext]
   @scala.inline
-  def WindowsInvocationContext(
-    context: CpuContext,
-    depth: Double,
-    lastError: Double,
-    returnAddress: NativePointer,
-    threadId: ThreadId
-  ): InvocationContext = {
-    val __obj = js.Dynamic.literal(context = context.asInstanceOf[js.Any], depth = depth.asInstanceOf[js.Any], lastError = lastError.asInstanceOf[js.Any], returnAddress = returnAddress.asInstanceOf[js.Any], threadId = threadId.asInstanceOf[js.Any])
-    __obj.asInstanceOf[InvocationContext]
-  }
+  implicit def apply(value: UnixInvocationContext): InvocationContext = value.asInstanceOf[InvocationContext]
   @scala.inline
-  def UnixInvocationContext(
-    context: CpuContext,
-    depth: Double,
-    errno: Double,
-    returnAddress: NativePointer,
-    threadId: ThreadId
-  ): InvocationContext = {
-    val __obj = js.Dynamic.literal(context = context.asInstanceOf[js.Any], depth = depth.asInstanceOf[js.Any], errno = errno.asInstanceOf[js.Any], returnAddress = returnAddress.asInstanceOf[js.Any], threadId = threadId.asInstanceOf[js.Any])
-    __obj.asInstanceOf[InvocationContext]
-  }
+  implicit def apply(value: WindowsInvocationContext): InvocationContext = value.asInstanceOf[InvocationContext]
 }
 

@@ -3,9 +3,9 @@ package typingsSlinky.reactDates.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactDates.AnonEndDate
-import typingsSlinky.reactDates.AnonIsVisible
-import typingsSlinky.reactDates.AnonStartDate
+import typingsSlinky.reactDates.anon.EndDate
+import typingsSlinky.reactDates.anon.IsVisible
+import typingsSlinky.reactDates.anon.StartDate
 import typingsSlinky.reactDates.mod.CalendarInfoPositionShape
 import typingsSlinky.reactDates.mod.DayPickerRangeControllerCls
 import typingsSlinky.reactDates.mod.DayPickerRangeControllerShape
@@ -89,7 +89,7 @@ object DayPickerRangeController {
     @scala.inline
     def onBlur(value: () => Unit): this.type = set("onBlur", js.Any.fromFunction0(value))
     @scala.inline
-    def onClose(value: /* final */ AnonStartDate => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
+    def onClose(value: /* final */ StartDate => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
     @scala.inline
     def onNextMonthClick(value: /* newCurrentMonth */ momentObj => Unit): this.type = set("onNextMonthClick", js.Any.fromFunction1(value))
     @scala.inline
@@ -107,7 +107,7 @@ object DayPickerRangeController {
     @scala.inline
     def renderDayContents(value: /* day */ momentObj => String | ReactElement): this.type = set("renderDayContents", js.Any.fromFunction1(value))
     @scala.inline
-    def renderMonthElement(value: /* props */ AnonIsVisible => String | ReactElement): this.type = set("renderMonthElement", js.Any.fromFunction1(value))
+    def renderMonthElement(value: /* props */ IsVisible => String | ReactElement): this.type = set("renderMonthElement", js.Any.fromFunction1(value))
     @scala.inline
     def renderMonthText(value: /* day */ momentObj => String | ReactElement): this.type = set("renderMonthText", js.Any.fromFunction1(value))
     @scala.inline
@@ -132,7 +132,7 @@ object DayPickerRangeController {
   @scala.inline
   def apply(
     focusedInput: FocusedInputShape,
-    onDatesChange: AnonEndDate => Unit,
+    onDatesChange: EndDate => Unit,
     onFocusChange: js.UndefOr[FocusedInputShape] => Unit
   ): Builder = {
     val __props = js.Dynamic.literal(focusedInput = focusedInput.asInstanceOf[js.Any], onDatesChange = js.Any.fromFunction1(onDatesChange), onFocusChange = js.Any.fromFunction1(onFocusChange))

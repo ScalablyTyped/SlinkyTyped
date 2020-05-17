@@ -1,7 +1,7 @@
 package typingsSlinky.openapiFramework.basePathMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.openapiFramework.AnonEnum
+import typingsSlinky.openapiFramework.anon.Enum
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,13 +9,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait BasePath extends js.Object {
   val path: String = js.native
-  val variables: StringDictionary[AnonEnum] = js.native
+  val variables: StringDictionary[Enum] = js.native
   def hasVariables(): Boolean = js.native
 }
 
 object BasePath {
   @scala.inline
-  def apply(hasVariables: () => Boolean, path: String, variables: StringDictionary[AnonEnum]): BasePath = {
+  def apply(hasVariables: () => Boolean, path: String, variables: StringDictionary[Enum]): BasePath = {
     val __obj = js.Dynamic.literal(hasVariables = js.Any.fromFunction0(hasVariables), path = path.asInstanceOf[js.Any], variables = variables.asInstanceOf[js.Any])
     __obj.asInstanceOf[BasePath]
   }
@@ -38,7 +38,7 @@ object BasePath {
         ret
     }
     @scala.inline
-    def withVariables(value: StringDictionary[AnonEnum]): Self = {
+    def withVariables(value: StringDictionary[Enum]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("variables")(value.asInstanceOf[js.Any])
         ret

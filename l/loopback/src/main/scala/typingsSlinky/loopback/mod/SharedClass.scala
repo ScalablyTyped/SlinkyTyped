@@ -1,6 +1,6 @@
 package typingsSlinky.loopback.mod
 
-import typingsSlinky.loopback.AnonIncludeDisabled
+import typingsSlinky.loopback.anon.IncludeDisabled
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -64,7 +64,7 @@ class SharedClass protected () extends js.Object {
     * @param {any} options
     * @return {any[]} An array of shared methods SharedMethod[]
     */
-  def methods(options: AnonIncludeDisabled): js.Array[_] = js.native
+  def methods(options: IncludeDisabled): js.Array[_] = js.native
   /**
     * Define a shared method resolver for dynamically defining methods.
     * ```

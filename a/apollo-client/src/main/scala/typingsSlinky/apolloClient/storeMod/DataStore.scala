@@ -1,9 +1,9 @@
 package typingsSlinky.apolloClient.storeMod
 
 import typingsSlinky.apolloCache.mod.ApolloCache
-import typingsSlinky.apolloClient.AnonMutationId
-import typingsSlinky.apolloClient.AnonOptimisticResponse
-import typingsSlinky.apolloClient.AnonResult
+import typingsSlinky.apolloClient.anon.MutationId
+import typingsSlinky.apolloClient.anon.OptimisticResponse
+import typingsSlinky.apolloClient.anon.Result
 import typingsSlinky.graphql.astMod.DocumentNode
 import typingsSlinky.graphql.executeMod.ExecutionResult
 import typingsSlinky.graphql.executeMod.ExecutionResultDataDefault
@@ -17,17 +17,10 @@ class DataStore[TSerialized] protected () extends js.Object {
   def this(initialCache: ApolloCache[TSerialized]) = this()
   var cache: js.Any = js.native
   def getCache(): ApolloCache[TSerialized] = js.native
-  def markMutationComplete(hasMutationIdOptimisticResponse: AnonOptimisticResponse): Unit = js.native
-  def markMutationInit(mutation: AnonMutationId): Unit = js.native
-  def markMutationResult(mutation: AnonResult): Unit = js.native
+  def markMutationComplete(hasMutationIdOptimisticResponse: OptimisticResponse): Unit = js.native
+  def markMutationInit(mutation: MutationId): Unit = js.native
+  def markMutationResult(mutation: Result): Unit = js.native
   def markQueryResult(result: ExecutionResult[ExecutionResultDataDefault], document: DocumentNode, variables: js.Any): Unit = js.native
-  def markQueryResult(
-    result: ExecutionResult[ExecutionResultDataDefault],
-    document: DocumentNode,
-    variables: js.Any,
-    fetchMoreForQueryId: js.UndefOr[scala.Nothing],
-    ignoreErrors: Boolean
-  ): Unit = js.native
   def markQueryResult(
     result: ExecutionResult[ExecutionResultDataDefault],
     document: DocumentNode,

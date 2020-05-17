@@ -1,5 +1,6 @@
 package typingsSlinky.base64Stream
 
+import typingsSlinky.base64Stream.anon.TransformOptionslineLengt
 import typingsSlinky.node.streamMod.Transform
 import scala.scalajs.js
 import scala.scalajs.js.`|`

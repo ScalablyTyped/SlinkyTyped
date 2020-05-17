@@ -1,5 +1,6 @@
 package typingsSlinky.blueprintjsCore.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
@@ -7,7 +8,6 @@ import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.overlayMod.IOverlayProps
 import typingsSlinky.react.mod.HTMLProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,7 +40,7 @@ object Overlay {
     @scala.inline
     def `lazy`(value: Boolean): this.type = set("lazy", value.asInstanceOf[js.Any])
     @scala.inline
-    def onClose(value: /* event */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
+    def onClose(value: /* event */ js.UndefOr[SyntheticEvent[Event, HTMLElement]] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
     @scala.inline
     def onClosed(value: /* node */ HTMLElement => Unit): this.type = set("onClosed", js.Any.fromFunction1(value))
     @scala.inline

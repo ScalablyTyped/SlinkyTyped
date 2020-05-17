@@ -1,8 +1,9 @@
 package typingsSlinky.materializeCss.mod
 
 import org.scalajs.dom.raw.Element
+import typingsSlinky.materializeCss.M.ScrollSpyOptions
 import typingsSlinky.materializeCss.MElements
-import typingsSlinky.materializeCss.PartialScrollSpyOptions
+import typingsSlinky.materializeCss.anon.PartialScrollSpyOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation._
 @JSImport("materialize-css", "ScrollSpy")
 @js.native
 class ScrollSpy ()
-  extends typingsSlinky.materializeCss.M.ScrollSpy
+  extends typingsSlinky.materializeCss.M.Component[ScrollSpyOptions]
 
 /* static members */
 @JSImport("materialize-css", "ScrollSpy")

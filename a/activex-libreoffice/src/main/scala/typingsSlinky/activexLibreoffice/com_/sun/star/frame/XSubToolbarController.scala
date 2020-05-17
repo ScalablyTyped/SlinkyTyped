@@ -1,0 +1,102 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.frame
+
+import typingsSlinky.activexLibreoffice.`type`
+import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * special interface to support sub-toolbars in a controller implementation.
+  *
+  * This interface is normally used to implement the toolbar button/sub- toolbar function feature. It exchanges the function of the toolbar button, that
+  * opened the sub-toolbar, with the one that has been selected on the sub-toolbar.
+  * @see com.sun.star.frame.ToolbarController
+  * @since OOo 2.0
+  */
+@js.native
+trait XSubToolbarController extends XInterface {
+  /**
+    * provides the resource URL of the sub-toolbar this controller opens.
+    * @returns name of the sub-toolbar this controller offers. A empty string will be interpreted as if this controller offers no sub-toolbar.
+    */
+  val SubToolbarName: String = js.native
+  /**
+    * gets called to notify a controller that a sub-toolbar function has been selected.
+    * @param aCommand a string which identifies the function that has been selected by a user.
+    */
+  def functionSelected(aCommand: String): Unit = js.native
+  /**
+    * provides the resource URL of the sub-toolbar this controller opens.
+    * @returns name of the sub-toolbar this controller offers. A empty string will be interpreted as if this controller offers no sub-toolbar.
+    */
+  def getSubToolbarName(): String = js.native
+  /**
+    * if the controller features a sub-toolbar.
+    * @returns `TRUE` if the controller offers a sub toolbar, otherwise `FALSE` .  Enables implementations to dynamically decide to support sub-toolbars or not.
+    */
+  def opensSubToolbar(): Boolean = js.native
+  /**
+    * gets called to notify a controller that it should set an image which represents the current selected function.
+    *
+    * Only the controller instance is able to set the correct image for the current function. A toolbar implementation will ask sub-toolbar controllers to
+    * update their image whenever it has to update the images of all its buttons.
+    */
+  def updateImage(): Unit = js.native
+}
+
+object XSubToolbarController {
+  @scala.inline
+  def apply(
+    SubToolbarName: String,
+    acquire: () => Unit,
+    functionSelected: String => Unit,
+    getSubToolbarName: () => String,
+    opensSubToolbar: () => Boolean,
+    queryInterface: `type` => js.Any,
+    release: () => Unit,
+    updateImage: () => Unit
+  ): XSubToolbarController = {
+    val __obj = js.Dynamic.literal(SubToolbarName = SubToolbarName.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), functionSelected = js.Any.fromFunction1(functionSelected), getSubToolbarName = js.Any.fromFunction0(getSubToolbarName), opensSubToolbar = js.Any.fromFunction0(opensSubToolbar), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), updateImage = js.Any.fromFunction0(updateImage))
+    __obj.asInstanceOf[XSubToolbarController]
+  }
+  @scala.inline
+  implicit class XSubToolbarControllerOps[Self <: XSubToolbarController] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSubToolbarName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SubToolbarName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFunctionSelected(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("functionSelected")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetSubToolbarName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSubToolbarName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOpensSubToolbar(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opensSubToolbar")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateImage(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateImage")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
+}
+

@@ -3,7 +3,9 @@ package typingsSlinky.reactEventListener.components
 import org.scalajs.dom.experimental.deviceorientation.DeviceMotionEvent
 import org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent
 import org.scalajs.dom.raw.BeforeUnloadEvent
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.DragEvent
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.HashChangeEvent
 import org.scalajs.dom.raw.KeyboardEvent
@@ -15,16 +17,14 @@ import org.scalajs.dom.raw.ProgressEvent
 import org.scalajs.dom.raw.StorageEvent
 import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
+import org.scalajs.dom.raw.Window
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactEventListener.mod.EventListenerProps
 import typingsSlinky.reactEventListener.mod.default
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Event_
 import typingsSlinky.std.MSGestureEvent
 import typingsSlinky.std.MSPointerEvent
 import typingsSlinky.std.PageTransitionEvent
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,17 +43,17 @@ object ReactEventListener {
     @scala.inline
     def oNmsPointerUpCapture(value: /* ev */ MSPointerEvent => _): this.type = set("oNmsPointerUpCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onAbort(value: /* ev */ Event_ => _): this.type = set("onAbort", js.Any.fromFunction1(value))
+    def onAbort(value: /* ev */ Event => _): this.type = set("onAbort", js.Any.fromFunction1(value))
     @scala.inline
-    def onAbortCapture(value: /* ev */ Event_ => _): this.type = set("onAbortCapture", js.Any.fromFunction1(value))
+    def onAbortCapture(value: /* ev */ Event => _): this.type = set("onAbortCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onAfterPrint(value: /* ev */ Event_ => _): this.type = set("onAfterPrint", js.Any.fromFunction1(value))
+    def onAfterPrint(value: /* ev */ Event => _): this.type = set("onAfterPrint", js.Any.fromFunction1(value))
     @scala.inline
-    def onAfterPrintCapture(value: /* ev */ Event_ => _): this.type = set("onAfterPrintCapture", js.Any.fromFunction1(value))
+    def onAfterPrintCapture(value: /* ev */ Event => _): this.type = set("onAfterPrintCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onBeforePrint(value: /* ev */ Event_ => _): this.type = set("onBeforePrint", js.Any.fromFunction1(value))
+    def onBeforePrint(value: /* ev */ Event => _): this.type = set("onBeforePrint", js.Any.fromFunction1(value))
     @scala.inline
-    def onBeforePrintCapture(value: /* ev */ Event_ => _): this.type = set("onBeforePrintCapture", js.Any.fromFunction1(value))
+    def onBeforePrintCapture(value: /* ev */ Event => _): this.type = set("onBeforePrintCapture", js.Any.fromFunction1(value))
     @scala.inline
     def onBeforeUnload(value: /* ev */ BeforeUnloadEvent => _): this.type = set("onBeforeUnload", js.Any.fromFunction1(value))
     @scala.inline
@@ -63,25 +63,25 @@ object ReactEventListener {
     @scala.inline
     def onBlurCapture(value: /* ev */ FocusEvent => _): this.type = set("onBlurCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onCanPlay(value: /* ev */ Event_ => _): this.type = set("onCanPlay", js.Any.fromFunction1(value))
+    def onCanPlay(value: /* ev */ Event => _): this.type = set("onCanPlay", js.Any.fromFunction1(value))
     @scala.inline
-    def onCanPlayCapture(value: /* ev */ Event_ => _): this.type = set("onCanPlayCapture", js.Any.fromFunction1(value))
+    def onCanPlayCapture(value: /* ev */ Event => _): this.type = set("onCanPlayCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onCanPlayThrough(value: /* ev */ Event_ => _): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
+    def onCanPlayThrough(value: /* ev */ Event => _): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
     @scala.inline
-    def onCanPlayThroughCapture(value: /* ev */ Event_ => _): this.type = set("onCanPlayThroughCapture", js.Any.fromFunction1(value))
+    def onCanPlayThroughCapture(value: /* ev */ Event => _): this.type = set("onCanPlayThroughCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: /* ev */ Event_ => _): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* ev */ Event => _): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onChangeCapture(value: /* ev */ Event_ => _): this.type = set("onChangeCapture", js.Any.fromFunction1(value))
+    def onChangeCapture(value: /* ev */ Event => _): this.type = set("onChangeCapture", js.Any.fromFunction1(value))
     @scala.inline
     def onClick(value: /* ev */ MouseEvent => _): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
     def onClickCapture(value: /* ev */ MouseEvent => _): this.type = set("onClickCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onCompassNeedsCalibration(value: /* ev */ Event_ => _): this.type = set("onCompassNeedsCalibration", js.Any.fromFunction1(value))
+    def onCompassNeedsCalibration(value: /* ev */ Event => _): this.type = set("onCompassNeedsCalibration", js.Any.fromFunction1(value))
     @scala.inline
-    def onCompassNeedsCalibrationCapture(value: /* ev */ Event_ => _): this.type = set("onCompassNeedsCalibrationCapture", js.Any.fromFunction1(value))
+    def onCompassNeedsCalibrationCapture(value: /* ev */ Event => _): this.type = set("onCompassNeedsCalibrationCapture", js.Any.fromFunction1(value))
     @scala.inline
     def onContextMenu(value: /* ev */ PointerEvent => _): this.type = set("onContextMenu", js.Any.fromFunction1(value))
     @scala.inline
@@ -127,17 +127,17 @@ object ReactEventListener {
     @scala.inline
     def onDropCapture(value: /* ev */ DragEvent => _): this.type = set("onDropCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onDurationChange(value: /* ev */ Event_ => _): this.type = set("onDurationChange", js.Any.fromFunction1(value))
+    def onDurationChange(value: /* ev */ Event => _): this.type = set("onDurationChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onDurationChangeCapture(value: /* ev */ Event_ => _): this.type = set("onDurationChangeCapture", js.Any.fromFunction1(value))
+    def onDurationChangeCapture(value: /* ev */ Event => _): this.type = set("onDurationChangeCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onEmptied(value: /* ev */ Event_ => _): this.type = set("onEmptied", js.Any.fromFunction1(value))
+    def onEmptied(value: /* ev */ Event => _): this.type = set("onEmptied", js.Any.fromFunction1(value))
     @scala.inline
-    def onEmptiedCapture(value: /* ev */ Event_ => _): this.type = set("onEmptiedCapture", js.Any.fromFunction1(value))
+    def onEmptiedCapture(value: /* ev */ Event => _): this.type = set("onEmptiedCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onEnded(value: /* ev */ Event_ => _): this.type = set("onEnded", js.Any.fromFunction1(value))
+    def onEnded(value: /* ev */ Event => _): this.type = set("onEnded", js.Any.fromFunction1(value))
     @scala.inline
-    def onEndedCapture(value: /* ev */ Event_ => _): this.type = set("onEndedCapture", js.Any.fromFunction1(value))
+    def onEndedCapture(value: /* ev */ Event => _): this.type = set("onEndedCapture", js.Any.fromFunction1(value))
     @scala.inline
     def onError(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ErrorEventHandler */ js.Any
@@ -155,9 +155,9 @@ object ReactEventListener {
     @scala.inline
     def onHashChangeCapture(value: /* ev */ HashChangeEvent => _): this.type = set("onHashChangeCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onInput(value: /* ev */ Event_ => _): this.type = set("onInput", js.Any.fromFunction1(value))
+    def onInput(value: /* ev */ Event => _): this.type = set("onInput", js.Any.fromFunction1(value))
     @scala.inline
-    def onInputCapture(value: /* ev */ Event_ => _): this.type = set("onInputCapture", js.Any.fromFunction1(value))
+    def onInputCapture(value: /* ev */ Event => _): this.type = set("onInputCapture", js.Any.fromFunction1(value))
     @scala.inline
     def onKeyDown(value: /* ev */ KeyboardEvent => _): this.type = set("onKeyDown", js.Any.fromFunction1(value))
     @scala.inline
@@ -171,21 +171,21 @@ object ReactEventListener {
     @scala.inline
     def onKeyUpCapture(value: /* ev */ KeyboardEvent => _): this.type = set("onKeyUpCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoad(value: /* ev */ Event_ => _): this.type = set("onLoad", js.Any.fromFunction1(value))
+    def onLoad(value: /* ev */ Event => _): this.type = set("onLoad", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoadCapture(value: /* ev */ Event_ => _): this.type = set("onLoadCapture", js.Any.fromFunction1(value))
+    def onLoadCapture(value: /* ev */ Event => _): this.type = set("onLoadCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoadStart(value: /* ev */ Event_ => _): this.type = set("onLoadStart", js.Any.fromFunction1(value))
+    def onLoadStart(value: /* ev */ Event => _): this.type = set("onLoadStart", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoadStartCapture(value: /* ev */ Event_ => _): this.type = set("onLoadStartCapture", js.Any.fromFunction1(value))
+    def onLoadStartCapture(value: /* ev */ Event => _): this.type = set("onLoadStartCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoadedData(value: /* ev */ Event_ => _): this.type = set("onLoadedData", js.Any.fromFunction1(value))
+    def onLoadedData(value: /* ev */ Event => _): this.type = set("onLoadedData", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoadedDataCapture(value: /* ev */ Event_ => _): this.type = set("onLoadedDataCapture", js.Any.fromFunction1(value))
+    def onLoadedDataCapture(value: /* ev */ Event => _): this.type = set("onLoadedDataCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoadedMetadata(value: /* ev */ Event_ => _): this.type = set("onLoadedMetadata", js.Any.fromFunction1(value))
+    def onLoadedMetadata(value: /* ev */ Event => _): this.type = set("onLoadedMetadata", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoadedMetadataCapture(value: /* ev */ Event_ => _): this.type = set("onLoadedMetadataCapture", js.Any.fromFunction1(value))
+    def onLoadedMetadataCapture(value: /* ev */ Event => _): this.type = set("onLoadedMetadataCapture", js.Any.fromFunction1(value))
     @scala.inline
     def onMessage(value: /* ev */ MessageEvent => _): this.type = set("onMessage", js.Any.fromFunction1(value))
     @scala.inline
@@ -279,17 +279,17 @@ object ReactEventListener {
     @scala.inline
     def onMsPointerOverCapture(value: /* ev */ MSPointerEvent => _): this.type = set("onMsPointerOverCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onOffline(value: /* ev */ Event_ => _): this.type = set("onOffline", js.Any.fromFunction1(value))
+    def onOffline(value: /* ev */ Event => _): this.type = set("onOffline", js.Any.fromFunction1(value))
     @scala.inline
-    def onOfflineCapture(value: /* ev */ Event_ => _): this.type = set("onOfflineCapture", js.Any.fromFunction1(value))
+    def onOfflineCapture(value: /* ev */ Event => _): this.type = set("onOfflineCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onOnline(value: /* ev */ Event_ => _): this.type = set("onOnline", js.Any.fromFunction1(value))
+    def onOnline(value: /* ev */ Event => _): this.type = set("onOnline", js.Any.fromFunction1(value))
     @scala.inline
-    def onOnlineCapture(value: /* ev */ Event_ => _): this.type = set("onOnlineCapture", js.Any.fromFunction1(value))
+    def onOnlineCapture(value: /* ev */ Event => _): this.type = set("onOnlineCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onOrientationChange(value: /* ev */ Event_ => _): this.type = set("onOrientationChange", js.Any.fromFunction1(value))
+    def onOrientationChange(value: /* ev */ Event => _): this.type = set("onOrientationChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onOrientationChangeCapture(value: /* ev */ Event_ => _): this.type = set("onOrientationChangeCapture", js.Any.fromFunction1(value))
+    def onOrientationChangeCapture(value: /* ev */ Event => _): this.type = set("onOrientationChangeCapture", js.Any.fromFunction1(value))
     @scala.inline
     def onPageHide(value: /* ev */ PageTransitionEvent => _): this.type = set("onPageHide", js.Any.fromFunction1(value))
     @scala.inline
@@ -299,17 +299,17 @@ object ReactEventListener {
     @scala.inline
     def onPageShowCapture(value: /* ev */ PageTransitionEvent => _): this.type = set("onPageShowCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onPause(value: /* ev */ Event_ => _): this.type = set("onPause", js.Any.fromFunction1(value))
+    def onPause(value: /* ev */ Event => _): this.type = set("onPause", js.Any.fromFunction1(value))
     @scala.inline
-    def onPauseCapture(value: /* ev */ Event_ => _): this.type = set("onPauseCapture", js.Any.fromFunction1(value))
+    def onPauseCapture(value: /* ev */ Event => _): this.type = set("onPauseCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onPlay(value: /* ev */ Event_ => _): this.type = set("onPlay", js.Any.fromFunction1(value))
+    def onPlay(value: /* ev */ Event => _): this.type = set("onPlay", js.Any.fromFunction1(value))
     @scala.inline
-    def onPlayCapture(value: /* ev */ Event_ => _): this.type = set("onPlayCapture", js.Any.fromFunction1(value))
+    def onPlayCapture(value: /* ev */ Event => _): this.type = set("onPlayCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onPlaying(value: /* ev */ Event_ => _): this.type = set("onPlaying", js.Any.fromFunction1(value))
+    def onPlaying(value: /* ev */ Event => _): this.type = set("onPlaying", js.Any.fromFunction1(value))
     @scala.inline
-    def onPlayingCapture(value: /* ev */ Event_ => _): this.type = set("onPlayingCapture", js.Any.fromFunction1(value))
+    def onPlayingCapture(value: /* ev */ Event => _): this.type = set("onPlayingCapture", js.Any.fromFunction1(value))
     @scala.inline
     def onPointerCancel(value: /* ev */ PointerEvent => _): this.type = set("onPointerCancel", js.Any.fromFunction1(value))
     @scala.inline
@@ -351,17 +351,17 @@ object ReactEventListener {
     @scala.inline
     def onProgressCapture(value: /* ev */ ProgressEvent => _): this.type = set("onProgressCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onRateChange(value: /* ev */ Event_ => _): this.type = set("onRateChange", js.Any.fromFunction1(value))
+    def onRateChange(value: /* ev */ Event => _): this.type = set("onRateChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onRateChangeCapture(value: /* ev */ Event_ => _): this.type = set("onRateChangeCapture", js.Any.fromFunction1(value))
+    def onRateChangeCapture(value: /* ev */ Event => _): this.type = set("onRateChangeCapture", js.Any.fromFunction1(value))
     @scala.inline
     def onReadyStateChange(value: /* ev */ ProgressEvent => _): this.type = set("onReadyStateChange", js.Any.fromFunction1(value))
     @scala.inline
     def onReadyStateChangeCapture(value: /* ev */ ProgressEvent => _): this.type = set("onReadyStateChangeCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onReset(value: /* ev */ Event_ => _): this.type = set("onReset", js.Any.fromFunction1(value))
+    def onReset(value: /* ev */ Event => _): this.type = set("onReset", js.Any.fromFunction1(value))
     @scala.inline
-    def onResetCapture(value: /* ev */ Event_ => _): this.type = set("onResetCapture", js.Any.fromFunction1(value))
+    def onResetCapture(value: /* ev */ Event => _): this.type = set("onResetCapture", js.Any.fromFunction1(value))
     @scala.inline
     def onResize(value: /* ev */ UIEvent => _): this.type = set("onResize", js.Any.fromFunction1(value))
     @scala.inline
@@ -371,41 +371,41 @@ object ReactEventListener {
     @scala.inline
     def onScrollCapture(value: /* ev */ UIEvent => _): this.type = set("onScrollCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onSeeked(value: /* ev */ Event_ => _): this.type = set("onSeeked", js.Any.fromFunction1(value))
+    def onSeeked(value: /* ev */ Event => _): this.type = set("onSeeked", js.Any.fromFunction1(value))
     @scala.inline
-    def onSeekedCapture(value: /* ev */ Event_ => _): this.type = set("onSeekedCapture", js.Any.fromFunction1(value))
+    def onSeekedCapture(value: /* ev */ Event => _): this.type = set("onSeekedCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onSeeking(value: /* ev */ Event_ => _): this.type = set("onSeeking", js.Any.fromFunction1(value))
+    def onSeeking(value: /* ev */ Event => _): this.type = set("onSeeking", js.Any.fromFunction1(value))
     @scala.inline
-    def onSeekingCapture(value: /* ev */ Event_ => _): this.type = set("onSeekingCapture", js.Any.fromFunction1(value))
+    def onSeekingCapture(value: /* ev */ Event => _): this.type = set("onSeekingCapture", js.Any.fromFunction1(value))
     @scala.inline
     def onSelect(value: /* ev */ UIEvent => _): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline
     def onSelectCapture(value: /* ev */ UIEvent => _): this.type = set("onSelectCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onSelectionChange(value: /* ev */ Event_ => _): this.type = set("onSelectionChange", js.Any.fromFunction1(value))
+    def onSelectionChange(value: /* ev */ Event => _): this.type = set("onSelectionChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onSelectionChangeCapture(value: /* ev */ Event_ => _): this.type = set("onSelectionChangeCapture", js.Any.fromFunction1(value))
+    def onSelectionChangeCapture(value: /* ev */ Event => _): this.type = set("onSelectionChangeCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onStalled(value: /* ev */ Event_ => _): this.type = set("onStalled", js.Any.fromFunction1(value))
+    def onStalled(value: /* ev */ Event => _): this.type = set("onStalled", js.Any.fromFunction1(value))
     @scala.inline
-    def onStalledCapture(value: /* ev */ Event_ => _): this.type = set("onStalledCapture", js.Any.fromFunction1(value))
+    def onStalledCapture(value: /* ev */ Event => _): this.type = set("onStalledCapture", js.Any.fromFunction1(value))
     @scala.inline
     def onStorage(value: /* ev */ StorageEvent => _): this.type = set("onStorage", js.Any.fromFunction1(value))
     @scala.inline
     def onStorageCapture(value: /* ev */ StorageEvent => _): this.type = set("onStorageCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onSubmit(value: /* ev */ Event_ => _): this.type = set("onSubmit", js.Any.fromFunction1(value))
+    def onSubmit(value: /* ev */ Event => _): this.type = set("onSubmit", js.Any.fromFunction1(value))
     @scala.inline
-    def onSubmitCapture(value: /* ev */ Event_ => _): this.type = set("onSubmitCapture", js.Any.fromFunction1(value))
+    def onSubmitCapture(value: /* ev */ Event => _): this.type = set("onSubmitCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onSuspend(value: /* ev */ Event_ => _): this.type = set("onSuspend", js.Any.fromFunction1(value))
+    def onSuspend(value: /* ev */ Event => _): this.type = set("onSuspend", js.Any.fromFunction1(value))
     @scala.inline
-    def onSuspendCapture(value: /* ev */ Event_ => _): this.type = set("onSuspendCapture", js.Any.fromFunction1(value))
+    def onSuspendCapture(value: /* ev */ Event => _): this.type = set("onSuspendCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onTimeUpdate(value: /* ev */ Event_ => _): this.type = set("onTimeUpdate", js.Any.fromFunction1(value))
+    def onTimeUpdate(value: /* ev */ Event => _): this.type = set("onTimeUpdate", js.Any.fromFunction1(value))
     @scala.inline
-    def onTimeUpdateCapture(value: /* ev */ Event_ => _): this.type = set("onTimeUpdateCapture", js.Any.fromFunction1(value))
+    def onTimeUpdateCapture(value: /* ev */ Event => _): this.type = set("onTimeUpdateCapture", js.Any.fromFunction1(value))
     @scala.inline
     def onTouchCancel(value: js.Any): this.type = set("onTouchCancel", value.asInstanceOf[js.Any])
     @scala.inline
@@ -423,17 +423,17 @@ object ReactEventListener {
     @scala.inline
     def onTouchStartCapture(value: js.Any): this.type = set("onTouchStartCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onUnload(value: /* ev */ Event_ => _): this.type = set("onUnload", js.Any.fromFunction1(value))
+    def onUnload(value: /* ev */ Event => _): this.type = set("onUnload", js.Any.fromFunction1(value))
     @scala.inline
-    def onUnloadCapture(value: /* ev */ Event_ => _): this.type = set("onUnloadCapture", js.Any.fromFunction1(value))
+    def onUnloadCapture(value: /* ev */ Event => _): this.type = set("onUnloadCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onVolumeChange(value: /* ev */ Event_ => _): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
+    def onVolumeChange(value: /* ev */ Event => _): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onVolumeChangeCapture(value: /* ev */ Event_ => _): this.type = set("onVolumeChangeCapture", js.Any.fromFunction1(value))
+    def onVolumeChangeCapture(value: /* ev */ Event => _): this.type = set("onVolumeChangeCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onWaiting(value: /* ev */ Event_ => _): this.type = set("onWaiting", js.Any.fromFunction1(value))
+    def onWaiting(value: /* ev */ Event => _): this.type = set("onWaiting", js.Any.fromFunction1(value))
     @scala.inline
-    def onWaitingCapture(value: /* ev */ Event_ => _): this.type = set("onWaitingCapture", js.Any.fromFunction1(value))
+    def onWaitingCapture(value: /* ev */ Event => _): this.type = set("onWaitingCapture", js.Any.fromFunction1(value))
     @scala.inline
     def onWheel(value: /* ev */ WheelEvent => _): this.type = set("onWheel", js.Any.fromFunction1(value))
     @scala.inline
@@ -442,7 +442,7 @@ object ReactEventListener {
   
   def withProps(p: EventListenerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(target: Window_ | Document_ | String): Builder = {
+  def apply(target: Window | Document | String): Builder = {
     val __props = js.Dynamic.literal(target = target.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[EventListenerProps]))
   }

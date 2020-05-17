@@ -1,11 +1,11 @@
 package typingsSlinky.fundamentalReact.mod
 
-import typingsSlinky.fundamentalReact.ComponentClassComponentSt
-import typingsSlinky.fundamentalReact.ComponentClassComponentStInstantiable
-import typingsSlinky.fundamentalReact.ComponentClassTreeColProp
-import typingsSlinky.fundamentalReact.ComponentClassTreeHeadPro
-import typingsSlinky.fundamentalReact.ComponentClassTreeItemPro
-import typingsSlinky.fundamentalReact.ComponentClassTreeRowProp
+import typingsSlinky.fundamentalReact.anon.ComponentClassComponentSt
+import typingsSlinky.fundamentalReact.anon.ComponentClassComponentStInstantiable
+import typingsSlinky.fundamentalReact.anon.ComponentClassTreeColProp
+import typingsSlinky.fundamentalReact.anon.ComponentClassTreeHeadPro
+import typingsSlinky.fundamentalReact.anon.ComponentClassTreeItemPro
+import typingsSlinky.fundamentalReact.anon.ComponentClassTreeRowProp
 import typingsSlinky.fundamentalReact.treeViewMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`

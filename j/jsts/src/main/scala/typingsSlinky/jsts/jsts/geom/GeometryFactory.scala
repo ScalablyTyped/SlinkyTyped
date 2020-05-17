@@ -4,13 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("jsts.geom.GeometryFactory")
 @js.native
-/**
-  * Constructs a GeometryFactory that generates Geometries having a floating PrecisionModel and a spatial-reference ID of 0.
-  */
-class GeometryFactory () extends js.Object {
-  def this(precisionModel: PrecisionModel) = this()
+trait GeometryFactory extends js.Object {
   /**
     * Creates a LineString using the given Coordinates; a null or empty array will
     * create an empty LineString. Consecutive points must not be equal.
@@ -47,5 +42,50 @@ class GeometryFactory () extends js.Object {
     * @return {Polygon} A new Polygon.
     */
   def createPolygon(shell: LinearRing, holes: js.Array[LinearRing]): Polygon = js.native
+}
+
+object GeometryFactory {
+  @scala.inline
+  def apply(
+    createLineString: js.Array[Coordinate] => LineString,
+    createLinearRing: js.Array[Coordinate] => LinearRing,
+    createPoint: Coordinate => Point,
+    createPolygon: (LinearRing, js.Array[LinearRing]) => Polygon
+  ): GeometryFactory = {
+    val __obj = js.Dynamic.literal(createLineString = js.Any.fromFunction1(createLineString), createLinearRing = js.Any.fromFunction1(createLinearRing), createPoint = js.Any.fromFunction1(createPoint), createPolygon = js.Any.fromFunction2(createPolygon))
+    __obj.asInstanceOf[GeometryFactory]
+  }
+  @scala.inline
+  implicit class GeometryFactoryOps[Self <: GeometryFactory] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateLineString(value: js.Array[Coordinate] => LineString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createLineString")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateLinearRing(value: js.Array[Coordinate] => LinearRing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createLinearRing")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreatePoint(value: Coordinate => Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createPoint")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreatePolygon(value: (LinearRing, js.Array[LinearRing]) => Polygon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createPolygon")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

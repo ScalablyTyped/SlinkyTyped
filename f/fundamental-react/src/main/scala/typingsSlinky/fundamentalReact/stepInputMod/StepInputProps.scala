@@ -1,6 +1,6 @@
 package typingsSlinky.fundamentalReact.stepInputMod
 
-import typingsSlinky.fundamentalReact.AnonState
+import typingsSlinky.fundamentalReact.anon.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait StepInputProps extends js.Object {
   var localizedText: js.UndefOr[js.Any] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var readOnly: js.UndefOr[Boolean] = js.native
-  var validationState: js.UndefOr[AnonState] = js.native
+  var validationState: js.UndefOr[State] = js.native
   var value: js.UndefOr[Double] = js.native
 }
 
@@ -102,7 +102,7 @@ object StepInputProps {
         ret
     }
     @scala.inline
-    def withValidationState(value: AnonState): Self = {
+    def withValidationState(value: State): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validationState")(value.asInstanceOf[js.Any])
         ret

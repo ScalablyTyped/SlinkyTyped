@@ -7,12 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * A command to fit the specified table to its contents.
   */
-@JSGlobal("ToggleTableAutoFitContentsCommand")
 @js.native
-class ToggleTableAutoFitContentsCommand () extends CommandWithSimpleStateBase {
+trait ToggleTableAutoFitContentsCommand extends CommandWithSimpleStateBase {
   /**
     * Executes the ToggleTableAutoFitContentsCommand command.
     */
   def execute(): Boolean = js.native
+}
+
+object ToggleTableAutoFitContentsCommand {
+  @scala.inline
+  def apply(execute: () => Boolean, getState: () => SimpleCommandState): ToggleTableAutoFitContentsCommand = {
+    val __obj = js.Dynamic.literal(execute = js.Any.fromFunction0(execute), getState = js.Any.fromFunction0(getState))
+    __obj.asInstanceOf[ToggleTableAutoFitContentsCommand]
+  }
+  @scala.inline
+  implicit class ToggleTableAutoFitContentsCommandOps[Self <: ToggleTableAutoFitContentsCommand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExecute(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

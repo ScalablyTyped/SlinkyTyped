@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.c128
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.c64
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.f32
@@ -50,8 +49,4 @@ trait RasterFunction
     */
   var variableName: String = js.native
 }
-
-@JSGlobal("__esri.RasterFunction")
-@js.native
-object RasterFunction extends TopLevel[RasterFunctionConstructor]
 

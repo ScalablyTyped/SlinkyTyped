@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.arcgisJsApi.IHandle
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`2d`
@@ -141,8 +140,4 @@ trait MapView
     */
   def toScreen(point: Point): ScreenPoint = js.native
 }
-
-@JSGlobal("__esri.MapView")
-@js.native
-object MapView extends TopLevel[MapViewConstructor]
 

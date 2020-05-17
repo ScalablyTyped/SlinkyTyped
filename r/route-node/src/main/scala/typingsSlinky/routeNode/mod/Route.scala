@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait Route extends js.Object
 
+object Route {
+  @scala.inline
+  implicit def apply(value: RouteDefinition): Route = value.asInstanceOf[Route]
+  @scala.inline
+  implicit def apply(value: RouteNode): Route = value.asInstanceOf[Route]
+}
+

@@ -1,7 +1,7 @@
 package typingsSlinky.emberObject.mod
 
-import typingsSlinky.emberObject.AnonId
-import typingsSlinky.emberObject.AnonUntil
+import typingsSlinky.emberObject.anon.Id
+import typingsSlinky.emberObject.anon.Until
 import typingsSlinky.emberObject.computedMod.ComputedProperty
 import typingsSlinky.emberObject.typesMod.ComputedPropertyCallback
 import typingsSlinky.std.MethodDecorator
@@ -81,8 +81,8 @@ object computed extends js.Object {
   @js.native
   object deprecatingAlias extends js.Object {
     def apply(dependentKey: String): ComputedProperty[_, _] = js.native
-    def apply(dependentKey: String, options: AnonId): ComputedProperty[_, _] = js.native
-    def apply(dependentKey: String, options: AnonUntil): ComputedProperty[_, _] = js.native
+    def apply(dependentKey: String, options: Id): ComputedProperty[_, _] = js.native
+    def apply(dependentKey: String, options: Until): ComputedProperty[_, _] = js.native
   }
   
   @js.native

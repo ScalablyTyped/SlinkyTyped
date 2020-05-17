@@ -2,7 +2,7 @@ package typingsSlinky.antDesignPro.pieMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antDesignPro.AnonX
+import typingsSlinky.antDesignPro.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait IPieProps extends js.Object {
   var animate: js.UndefOr[Boolean] = js.native
   var color: js.UndefOr[String] = js.native
   var colors: js.UndefOr[js.Array[String]] = js.native
-  var data: js.UndefOr[js.Array[AnonX]] = js.native
+  var data: js.UndefOr[js.Array[X]] = js.native
   var hasLegend: js.UndefOr[Boolean] = js.native
   var height: Double = js.native
   var padding: js.UndefOr[js.Tuple4[Double, Double, Double, Double]] = js.native
@@ -79,7 +79,7 @@ object IPieProps {
         ret
     }
     @scala.inline
-    def withData(value: js.Array[AnonX]): Self = {
+    def withData(value: js.Array[X]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

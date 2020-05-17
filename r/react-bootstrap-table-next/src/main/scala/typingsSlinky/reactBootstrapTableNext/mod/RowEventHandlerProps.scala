@@ -1,8 +1,8 @@
 package typingsSlinky.reactBootstrapTableNext.mod
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +30,7 @@ object RowEventHandlerProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withOnClick(value: (/* e */ SyntheticEvent[Event_, Element], T, /* rowIndex */ Double) => Unit): Self[T] = {
+    def withOnClick(value: (/* e */ SyntheticEvent[Event, Element], T, /* rowIndex */ Double) => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction3(value))
         ret
@@ -42,7 +42,7 @@ object RowEventHandlerProps {
         ret
     }
     @scala.inline
-    def withOnContextMenu(value: (/* e */ SyntheticEvent[Event_, Element], T, /* rowIndex */ Double) => Unit): Self[T] = {
+    def withOnContextMenu(value: (/* e */ SyntheticEvent[Event, Element], T, /* rowIndex */ Double) => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(js.Any.fromFunction3(value))
         ret
@@ -54,7 +54,7 @@ object RowEventHandlerProps {
         ret
     }
     @scala.inline
-    def withOnDoubleClick(value: (/* e */ SyntheticEvent[Event_, Element], T, /* rowIndex */ Double) => Unit): Self[T] = {
+    def withOnDoubleClick(value: (/* e */ SyntheticEvent[Event, Element], T, /* rowIndex */ Double) => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDoubleClick")(js.Any.fromFunction3(value))
         ret
@@ -66,7 +66,7 @@ object RowEventHandlerProps {
         ret
     }
     @scala.inline
-    def withOnMouseEnter(value: (/* e */ SyntheticEvent[Event_, Element], T, /* rowIndex */ Double) => Unit): Self[T] = {
+    def withOnMouseEnter(value: (/* e */ SyntheticEvent[Event, Element], T, /* rowIndex */ Double) => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction3(value))
         ret
@@ -78,7 +78,7 @@ object RowEventHandlerProps {
         ret
     }
     @scala.inline
-    def withOnMouseLeave(value: (/* e */ SyntheticEvent[Event_, Element], T, /* rowIndex */ Double) => Unit): Self[T] = {
+    def withOnMouseLeave(value: (/* e */ SyntheticEvent[Event, Element], T, /* rowIndex */ Double) => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.Any.fromFunction3(value))
         ret

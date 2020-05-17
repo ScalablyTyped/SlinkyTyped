@@ -1,17 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "jsuite"
-version := "0.0-unknown-dt-20200226Z-b0f7af"
-scalaVersion := "2.13.1"
+version := "0.0-unknown-dt-20200226Z-308b59"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "jquery" % "3.3-dt-20200427Z-d88135",
-  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20181006Z-1b2bf8",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e",
-  "org.scalablytyped.slinky" %%% "suitescript" % "0.0-unknown-dt-20200227Z-510e7d")
+  "org.scalablytyped.slinky" %%% "jquery" % "3.3-dt-20200427Z-6ecf75",
+  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20181006Z-61c165",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb",
+  "org.scalablytyped.slinky" %%% "suitescript" % "0.0-unknown-dt-20200227Z-eb12d5")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

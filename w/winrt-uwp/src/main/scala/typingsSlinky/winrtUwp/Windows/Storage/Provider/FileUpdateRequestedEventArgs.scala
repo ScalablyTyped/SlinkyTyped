@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides information about a FileUpdateRequested event. */
-@JSGlobal("Windows.Storage.Provider.FileUpdateRequestedEventArgs")
 @js.native
-abstract class FileUpdateRequestedEventArgs () extends js.Object {
+trait FileUpdateRequestedEventArgs extends js.Object {
   /** Gets the details of the requested file update. */
   var request: FileUpdateRequest = js.native
+}
+
+object FileUpdateRequestedEventArgs {
+  @scala.inline
+  def apply(request: FileUpdateRequest): FileUpdateRequestedEventArgs = {
+    val __obj = js.Dynamic.literal(request = request.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FileUpdateRequestedEventArgs]
+  }
+  @scala.inline
+  implicit class FileUpdateRequestedEventArgsOps[Self <: FileUpdateRequestedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRequest(value: FileUpdateRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

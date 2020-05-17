@@ -1,7 +1,7 @@
 package typingsSlinky.gestalt.mod
 
-import typingsSlinky.gestalt.Anon0
-import typingsSlinky.gestalt.AnonSyntheticEvent
+import typingsSlinky.gestalt.anon.SyntheticEvent
+import typingsSlinky.gestalt.anon.`0`
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
 import typingsSlinky.gestalt.gestaltStrings.name
@@ -17,17 +17,17 @@ trait SearchFieldProps extends js.Object {
   var accessibilityLabel: String = js.native
   var autoComplete: js.UndefOr[on | off | username | name] = js.native
   var id: String = js.native
-  var onBlur: js.UndefOr[js.Function1[/* args */ Anon0, Unit]] = js.native
-  var onFocus: js.UndefOr[js.Function1[/* args */ AnonSyntheticEvent, Unit]] = js.native
+  var onBlur: js.UndefOr[js.Function1[/* args */ `0`, Unit]] = js.native
+  var onFocus: js.UndefOr[js.Function1[/* args */ SyntheticEvent, Unit]] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var size: js.UndefOr[md | lg] = js.native
   var value: js.UndefOr[String] = js.native
-  def onChange(args: AnonSyntheticEvent): Unit = js.native
+  def onChange(args: SyntheticEvent): Unit = js.native
 }
 
 object SearchFieldProps {
   @scala.inline
-  def apply(accessibilityLabel: String, id: String, onChange: AnonSyntheticEvent => Unit): SearchFieldProps = {
+  def apply(accessibilityLabel: String, id: String, onChange: SyntheticEvent => Unit): SearchFieldProps = {
     val __obj = js.Dynamic.literal(accessibilityLabel = accessibilityLabel.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
     __obj.asInstanceOf[SearchFieldProps]
   }
@@ -50,7 +50,7 @@ object SearchFieldProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: AnonSyntheticEvent => Unit): Self = {
+    def withOnChange(value: SyntheticEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -68,7 +68,7 @@ object SearchFieldProps {
         ret
     }
     @scala.inline
-    def withOnBlur(value: /* args */ Anon0 => Unit): Self = {
+    def withOnBlur(value: /* args */ `0` => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
         ret
@@ -80,7 +80,7 @@ object SearchFieldProps {
         ret
     }
     @scala.inline
-    def withOnFocus(value: /* args */ AnonSyntheticEvent => Unit): Self = {
+    def withOnFocus(value: /* args */ SyntheticEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
         ret

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DetailedChooseSpecifier extends js.Object {
+trait DetailedChooseSpecifier extends ChooseSpecifier {
   /**
     * Which class to look for instances of. E.g.: `ObjC.classes.UIButton`.
     */

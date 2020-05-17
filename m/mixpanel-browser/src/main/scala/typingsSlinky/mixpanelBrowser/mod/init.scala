@@ -1,6 +1,6 @@
 package typingsSlinky.mixpanelBrowser.mod
 
-import typingsSlinky.mixpanelBrowser.PartialConfigApihost
+import typingsSlinky.mixpanelBrowser.anon.PartialConfigApihost
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

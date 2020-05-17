@@ -1,0 +1,29 @@
+package typingsSlinky.awsSdkClientGlacierNode.purchaseProvisionedCapacityExceptionsUnionMod
+
+import typingsSlinky.awsSdkClientGlacierNode.typesInvalidParameterValueExceptionMod.InvalidParameterValueException
+import typingsSlinky.awsSdkClientGlacierNode.typesLimitExceededExceptionMod.LimitExceededException
+import typingsSlinky.awsSdkClientGlacierNode.typesMissingParameterValueExceptionMod.MissingParameterValueException
+import typingsSlinky.awsSdkClientGlacierNode.typesServiceUnavailableExceptionMod.ServiceUnavailableException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.awsSdkClientGlacierNode.typesInvalidParameterValueExceptionMod.InvalidParameterValueException
+  - typingsSlinky.awsSdkClientGlacierNode.typesMissingParameterValueExceptionMod.MissingParameterValueException
+  - typingsSlinky.awsSdkClientGlacierNode.typesLimitExceededExceptionMod.LimitExceededException
+  - typingsSlinky.awsSdkClientGlacierNode.typesServiceUnavailableExceptionMod.ServiceUnavailableException
+*/
+trait PurchaseProvisionedCapacityExceptionsUnion extends js.Object
+
+object PurchaseProvisionedCapacityExceptionsUnion {
+  @scala.inline
+  implicit def apply(value: InvalidParameterValueException): PurchaseProvisionedCapacityExceptionsUnion = value.asInstanceOf[PurchaseProvisionedCapacityExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: LimitExceededException): PurchaseProvisionedCapacityExceptionsUnion = value.asInstanceOf[PurchaseProvisionedCapacityExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: MissingParameterValueException): PurchaseProvisionedCapacityExceptionsUnion = value.asInstanceOf[PurchaseProvisionedCapacityExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: ServiceUnavailableException): PurchaseProvisionedCapacityExceptionsUnion = value.asInstanceOf[PurchaseProvisionedCapacityExceptionsUnion]
+}
+

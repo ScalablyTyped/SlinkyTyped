@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait NodeModule extends _ServerOptions {
+trait NodeModule extends ServerOptions {
   var args: js.UndefOr[js.Array[String]] = js.native
   var module: String = js.native
   var options: js.UndefOr[ForkOptions] = js.native

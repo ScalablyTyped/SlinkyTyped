@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.peoplePickerMod
 
-import typingsSlinky.officeUiFabricReact.AnonCreateGenericItem
+import typingsSlinky.officeUiFabricReact.anon.CreateGenericItem
 import typingsSlinky.officeUiFabricReact.basePickerMod.BasePickerListBelow
 import typingsSlinky.officeUiFabricReact.personaTypesMod.IPersonaProps
 import scala.scalajs.js
@@ -16,6 +16,6 @@ class ListPeoplePickerBase () extends BasePickerListBelow[IPersonaProps, IPeople
 @js.native
 object ListPeoplePickerBase extends js.Object {
   /** Default props for ListPeoplePicker. */
-  var defaultProps: AnonCreateGenericItem = js.native
+  var defaultProps: CreateGenericItem = js.native
 }
 

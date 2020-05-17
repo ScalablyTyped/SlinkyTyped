@@ -1,6 +1,6 @@
 package typingsSlinky.reactBootstrapTable.mod
 
-import typingsSlinky.reactBootstrapTable.AnonColIndex
+import typingsSlinky.reactBootstrapTable.anon.ColIndex
 import typingsSlinky.reactBootstrapTable.reactBootstrapTableNumbers.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,7 @@ trait CellEdit[TRow /* <: js.Object */] extends js.Object {
       /* row */ TRow, 
       /* keyof TRow */ /* cellName */ String, 
       /* import warning: importer.ImportType#apply Failed type conversion: TRow[keyof TRow] */ /* cellValue */ js.Any, 
-      /* props */ AnonColIndex, 
+      /* props */ ColIndex, 
       Unit
     ]
   ] = js.native
@@ -44,7 +44,7 @@ trait CellEdit[TRow /* <: js.Object */] extends js.Object {
       /* keyof TRow */ /* cellName */ String, 
       /* import warning: importer.ImportType#apply Failed type conversion: TRow[keyof TRow] */ /* cellValue */ js.Any, 
       /* done */ js.Function1[/* isValid */ Boolean, Unit], 
-      /* props */ AnonColIndex, 
+      /* props */ ColIndex, 
       Boolean | `1`
     ]
   ] = js.native
@@ -90,7 +90,7 @@ object CellEdit {
     }
     @scala.inline
     def withAfterSaveCell(
-      value: (/* row */ TRow, /* keyof TRow */ /* cellName */ String, /* import warning: importer.ImportType#apply Failed type conversion: TRow[keyof TRow] */ /* cellValue */ js.Any, /* props */ AnonColIndex) => Unit
+      value: (/* row */ TRow, /* keyof TRow */ /* cellName */ String, /* import warning: importer.ImportType#apply Failed type conversion: TRow[keyof TRow] */ /* cellValue */ js.Any, /* props */ ColIndex) => Unit
     ): Self[TRow] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterSaveCell")(js.Any.fromFunction4(value))
@@ -104,7 +104,7 @@ object CellEdit {
     }
     @scala.inline
     def withBeforeSaveCell(
-      value: (/* row */ TRow, /* keyof TRow */ /* cellName */ String, /* import warning: importer.ImportType#apply Failed type conversion: TRow[keyof TRow] */ /* cellValue */ js.Any, /* done */ js.Function1[/* isValid */ Boolean, Unit], /* props */ AnonColIndex) => Boolean | `1`
+      value: (/* row */ TRow, /* keyof TRow */ /* cellName */ String, /* import warning: importer.ImportType#apply Failed type conversion: TRow[keyof TRow] */ /* cellValue */ js.Any, /* done */ js.Function1[/* isValid */ Boolean, Unit], /* props */ ColIndex) => Boolean | `1`
     ): Self[TRow] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeSaveCell")(js.Any.fromFunction5(value))

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("jsts", "geom.GeometryCollection")
 @js.native
 class GeometryCollection ()
-  extends typingsSlinky.jsts.jsts.geom.GeometryCollection {
+  extends typingsSlinky.jsts.jsts.geom.Geometry {
   def this(geometries: js.Array[typingsSlinky.jsts.jsts.geom.Geometry]) = this()
   def this(
     geometries: js.Array[typingsSlinky.jsts.jsts.geom.Geometry],

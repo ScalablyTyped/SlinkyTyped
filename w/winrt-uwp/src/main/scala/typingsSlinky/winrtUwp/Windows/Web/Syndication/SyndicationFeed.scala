@@ -8,17 +8,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains information about a feed. This class encapsulates the information in the /rss/channel element in RSS 2.0 or the atom:feed element in Atom 1.0. */
-@JSGlobal("Windows.Web.Syndication.SyndicationFeed")
 @js.native
-/** Creates a new SyndicationFeed object. */
-class SyndicationFeed () extends js.Object {
-  /**
-    * Creates a new SyndicationFeed object with a Title, Subtitle, and Uri.
-    * @param title The Title of the syndication feed.
-    * @param subtitle The Subtitle of the syndication feed.
-    * @param uri The Uri value.
-    */
-  def this(title: String, subtitle: String, uri: Uri) = this()
+trait SyndicationFeed extends js.Object {
   /** Gets the list of custom attributes of the element. */
   var attributeExtensions: IVector[SyndicationAttribute] = js.native
   /** Gets the authors of an item. This property represents the collection of all the atom:author elements under atom:entry. */
@@ -85,5 +76,218 @@ class SyndicationFeed () extends js.Object {
     * @param feedDocument The DOM object which contains XML content in either RSS 2.0 or Atom 1.0 format.
     */
   def loadFromXml(feedDocument: XmlDocument): Unit = js.native
+}
+
+object SyndicationFeed {
+  @scala.inline
+  def apply(
+    attributeExtensions: IVector[SyndicationAttribute],
+    authors: IVector[SyndicationPerson],
+    baseUri: Uri,
+    categories: IVector[SyndicationCategory],
+    contributors: IVector[SyndicationPerson],
+    elementExtensions: IVector[ISyndicationNode],
+    firstUri: Uri,
+    generator: SyndicationGenerator,
+    getXmlDocument: SyndicationFormat => XmlDocument,
+    iconUri: Uri,
+    id: String,
+    imageUri: Uri,
+    items: IVector[SyndicationItem],
+    language: String,
+    lastUpdatedTime: js.Date,
+    lastUri: Uri,
+    links: IVector[SyndicationLink],
+    load: String => Unit,
+    loadFromXml: XmlDocument => Unit,
+    nextUri: Uri,
+    nodeName: String,
+    nodeNamespace: String,
+    nodeValue: String,
+    previousUri: Uri,
+    rights: ISyndicationText,
+    sourceFormat: SyndicationFormat,
+    subtitle: ISyndicationText,
+    title: ISyndicationText
+  ): SyndicationFeed = {
+    val __obj = js.Dynamic.literal(attributeExtensions = attributeExtensions.asInstanceOf[js.Any], authors = authors.asInstanceOf[js.Any], baseUri = baseUri.asInstanceOf[js.Any], categories = categories.asInstanceOf[js.Any], contributors = contributors.asInstanceOf[js.Any], elementExtensions = elementExtensions.asInstanceOf[js.Any], firstUri = firstUri.asInstanceOf[js.Any], generator = generator.asInstanceOf[js.Any], getXmlDocument = js.Any.fromFunction1(getXmlDocument), iconUri = iconUri.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], imageUri = imageUri.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], language = language.asInstanceOf[js.Any], lastUpdatedTime = lastUpdatedTime.asInstanceOf[js.Any], lastUri = lastUri.asInstanceOf[js.Any], links = links.asInstanceOf[js.Any], load = js.Any.fromFunction1(load), loadFromXml = js.Any.fromFunction1(loadFromXml), nextUri = nextUri.asInstanceOf[js.Any], nodeName = nodeName.asInstanceOf[js.Any], nodeNamespace = nodeNamespace.asInstanceOf[js.Any], nodeValue = nodeValue.asInstanceOf[js.Any], previousUri = previousUri.asInstanceOf[js.Any], rights = rights.asInstanceOf[js.Any], sourceFormat = sourceFormat.asInstanceOf[js.Any], subtitle = subtitle.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SyndicationFeed]
+  }
+  @scala.inline
+  implicit class SyndicationFeedOps[Self <: SyndicationFeed] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributeExtensions(value: IVector[SyndicationAttribute]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeExtensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthors(value: IVector[SyndicationPerson]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBaseUri(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCategories(value: IVector[SyndicationCategory]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContributors(value: IVector[SyndicationPerson]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contributors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withElementExtensions(value: IVector[ISyndicationNode]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elementExtensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFirstUri(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGenerator(value: SyndicationGenerator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetXmlDocument(value: SyndicationFormat => XmlDocument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getXmlDocument")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIconUri(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iconUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImageUri(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItems(value: IVector[SyndicationItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLanguage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("language")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLastUpdatedTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUpdatedTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLastUri(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinks(value: IVector[SyndicationLink]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoad(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLoadFromXml(value: XmlDocument => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadFromXml")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withNextUri(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNodeName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNodeNamespace(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeNamespace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNodeValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreviousUri(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRights(value: ISyndicationText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rights")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceFormat(value: SyndicationFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubtitle(value: ISyndicationText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: ISyndicationText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

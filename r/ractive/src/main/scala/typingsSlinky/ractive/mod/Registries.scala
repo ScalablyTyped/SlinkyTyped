@@ -1,6 +1,6 @@
 package typingsSlinky.ractive.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait Registries[T /* <: Ractive[T] */] extends js.Object {
   var components: Registry[Component] = js.native
   var decorators: Registry[Decorator[T]] = js.native
   var easings: Registry[Easing] = js.native
-  var events: Registry[Event_] = js.native
+  var events: Registry[Event] = js.native
   var helpers: Registry[Helper] = js.native
   var interpolators: Registry[Interpolator] = js.native
   var partials: Registry[Partial] = js.native
@@ -24,7 +24,7 @@ object Registries {
     components: Registry[Component],
     decorators: Registry[Decorator[T]],
     easings: Registry[Easing],
-    events: Registry[Event_],
+    events: Registry[Event],
     helpers: Registry[Helper],
     interpolators: Registry[Interpolator],
     partials: Registry[Partial]
@@ -63,7 +63,7 @@ object Registries {
         ret
     }
     @scala.inline
-    def withEvents(value: Registry[Event_]): Self[T] = {
+    def withEvents(value: Registry[Event]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
         ret

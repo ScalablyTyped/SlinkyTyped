@@ -10,6 +10,7 @@ import typingsSlinky.ngTable.groupingFuncMod.Grouping
 import typingsSlinky.ngTable.groupingFuncMod.IGroupValues
 import typingsSlinky.ngTable.groupingFuncMod.IGroupingFunc
 import typingsSlinky.ngTable.ngTableDefaultsMod.IDefaults
+import typingsSlinky.ngTable.ngTableEventsChannelMod.EventSelector
 import typingsSlinky.ngTable.ngTableEventsChannelMod.NgTableEventsChannel
 import typingsSlinky.ngTable.ngTableSettingsMod.ISettings
 import typingsSlinky.ngTable.ngTableSettingsMod.NgTableSettings
@@ -22,7 +23,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("ng-table/src/core/ngTableParams", "NgTableParams")
 @js.native
-class NgTableParams[T] () extends js.Object {
+class NgTableParams[T] () extends EventSelector[T] {
   def this(baseParameters: Boolean) = this()
   def this(baseParameters: IParamValues[T]) = this()
   def this(baseParameters: Boolean, baseSettings: ISettings[T]) = this()

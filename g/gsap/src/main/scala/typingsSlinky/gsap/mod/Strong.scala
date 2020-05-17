@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("gsap", "Strong")
 @js.native
 class Strong ()
-  extends typingsSlinky.gsap.gsap.Quint
+  extends typingsSlinky.gsap.gsap.Ease
 
 @JSImport("gsap", "Strong")
 @js.native

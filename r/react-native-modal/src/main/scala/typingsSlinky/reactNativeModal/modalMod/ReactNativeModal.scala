@@ -3,9 +3,9 @@ package typingsSlinky.reactNativeModal.modalMod
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactNative.mod.PanResponderGestureState
 import typingsSlinky.reactNative.mod.PanResponderInstance
-import typingsSlinky.reactNativeModal.AnonAnimationIn
-import typingsSlinky.reactNativeModal.AnonAnimationInTiming
-import typingsSlinky.reactNativeModal.AnonIsVisible
+import typingsSlinky.reactNativeModal.anon.AnimationIn
+import typingsSlinky.reactNativeModal.anon.AnimationInTiming
+import typingsSlinky.reactNativeModal.anon.IsVisible
 import typingsSlinky.reactNativeModal.reactNativeModalStrings.down
 import typingsSlinky.reactNativeModal.reactNativeModalStrings.left
 import typingsSlinky.reactNativeModal.reactNativeModalStrings.right
@@ -51,8 +51,8 @@ class ReactNativeModal protected ()
 @JSImport("react-native-modal/dist/modal", "ReactNativeModal")
 @js.native
 object ReactNativeModal extends js.Object {
-  var defaultProps: AnonAnimationInTiming = js.native
-  var propTypes: AnonAnimationIn = js.native
-  def getDerivedStateFromProps(nextProps: ModalProps, state: State): AnonIsVisible | Null = js.native
+  var defaultProps: AnimationInTiming = js.native
+  var propTypes: AnimationIn = js.native
+  def getDerivedStateFromProps(nextProps: ModalProps, state: State): IsVisible | Null = js.native
 }
 

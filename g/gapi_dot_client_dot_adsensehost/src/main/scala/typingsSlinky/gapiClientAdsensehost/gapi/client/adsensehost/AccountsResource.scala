@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientAdsensehost.gapi.client.adsensehost
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAdsensehost.AnonFilterAdClientId
-import typingsSlinky.gapiClientAdsensehost.AnonKey
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAdsensehost.anon.FilterAdClientId
+import typingsSlinky.gapiClientAdsensehost.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,9 +13,9 @@ trait AccountsResource extends js.Object {
   var adunits: AdunitsResource = js.native
   var reports: ReportsResource = js.native
   /** Get information about the selected associated AdSense account. */
-  def get(request: AnonKey): Request_[Account] = js.native
+  def get(request: Key): Request[Account] = js.native
   /** List hosted accounts associated with this AdSense account by ad client id. */
-  def list(request: AnonFilterAdClientId): Request_[Accounts] = js.native
+  def list(request: FilterAdClientId): Request[Accounts] = js.native
 }
 
 object AccountsResource {
@@ -23,8 +23,8 @@ object AccountsResource {
   def apply(
     adclients: AdclientsResource,
     adunits: AdunitsResource,
-    get: AnonKey => Request_[Account],
-    list: AnonFilterAdClientId => Request_[Accounts],
+    get: Key => Request[Account],
+    list: FilterAdClientId => Request[Accounts],
     reports: ReportsResource
   ): AccountsResource = {
     val __obj = js.Dynamic.literal(adclients = adclients.asInstanceOf[js.Any], adunits = adunits.asInstanceOf[js.Any], get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), reports = reports.asInstanceOf[js.Any])
@@ -49,13 +49,13 @@ object AccountsResource {
         ret
     }
     @scala.inline
-    def withGet(value: AnonKey => Request_[Account]): Self = {
+    def withGet(value: Key => Request[Account]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonFilterAdClientId => Request_[Accounts]): Self = {
+    def withList(value: FilterAdClientId => Request[Accounts]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

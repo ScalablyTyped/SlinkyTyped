@@ -1,6 +1,6 @@
 package typingsSlinky.playcanvas.pc
 
-import typingsSlinky.playcanvas.AnonArray
+import typingsSlinky.playcanvas.anon.Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,10 +12,8 @@ import scala.scalajs.js.annotation._
   * Note: An instance of pc.ScriptAttributes is created automatically by each {@link pc.ScriptType}.
   * @param {pc.ScriptType} scriptType - Script Type that attributes relate to.
   */
-@JSGlobal("pc.ScriptAttributes")
 @js.native
-class ScriptAttributes protected () extends js.Object {
-  def this(scriptType: ScriptType) = this()
+trait ScriptAttributes extends js.Object {
   /**
     * @function
     * @name pc.ScriptAttributes#add
@@ -61,7 +59,7 @@ class ScriptAttributes protected () extends js.Object {
     *     ]
     * });
     */
-  def add(name: String, args: AnonArray): Unit = js.native
+  def add(name: String, args: Array): Unit = js.native
   /**
     * @function
     * @name pc.ScriptAttributes#get
@@ -97,5 +95,50 @@ class ScriptAttributes protected () extends js.Object {
     * PlayerController.attributes.remove('fullName');
     */
   def remove(name: String): Boolean = js.native
+}
+
+object ScriptAttributes {
+  @scala.inline
+  def apply(
+    add: (String, Array) => Unit,
+    get: String => js.Any,
+    has: String => Boolean,
+    remove: String => Boolean
+  ): ScriptAttributes = {
+    val __obj = js.Dynamic.literal(add = js.Any.fromFunction2(add), get = js.Any.fromFunction1(get), has = js.Any.fromFunction1(has), remove = js.Any.fromFunction1(remove))
+    __obj.asInstanceOf[ScriptAttributes]
+  }
+  @scala.inline
+  implicit class ScriptAttributesOps[Self <: ScriptAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdd(value: (String, Array) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHas(value: String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("has")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemove(value: String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

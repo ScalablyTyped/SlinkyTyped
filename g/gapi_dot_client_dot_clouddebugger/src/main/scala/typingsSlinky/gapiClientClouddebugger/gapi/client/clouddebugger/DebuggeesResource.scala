@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientClouddebugger.gapi.client.clouddebugger
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientClouddebugger.AnonClientVersion
-import typingsSlinky.gapiClientClouddebugger.AnonFields
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientClouddebugger.anon.ClientVersion
+import typingsSlinky.gapiClientClouddebugger.anon.Fields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait DebuggeesResource extends js.Object {
   var breakpoints: BreakpointsResource = js.native
   /** Lists all the debuggees that the user has access to. */
-  def list(request: AnonClientVersion): Request_[ListDebuggeesResponse] = js.native
+  def list(request: ClientVersion): Request[ListDebuggeesResponse] = js.native
   /**
     * Registers the debuggee with the controller service.
     *
@@ -24,15 +24,15 @@ trait DebuggeesResource extends js.Object {
     * from data loss, or change the `debuggee_id` format. Agents must handle
     * `debuggee_id` value changing upon re-registration.
     */
-  def register(request: AnonFields): Request_[RegisterDebuggeeResponse] = js.native
+  def register(request: Fields): Request[RegisterDebuggeeResponse] = js.native
 }
 
 object DebuggeesResource {
   @scala.inline
   def apply(
     breakpoints: BreakpointsResource,
-    list: AnonClientVersion => Request_[ListDebuggeesResponse],
-    register: AnonFields => Request_[RegisterDebuggeeResponse]
+    list: ClientVersion => Request[ListDebuggeesResponse],
+    register: Fields => Request[RegisterDebuggeeResponse]
   ): DebuggeesResource = {
     val __obj = js.Dynamic.literal(breakpoints = breakpoints.asInstanceOf[js.Any], list = js.Any.fromFunction1(list), register = js.Any.fromFunction1(register))
     __obj.asInstanceOf[DebuggeesResource]
@@ -50,13 +50,13 @@ object DebuggeesResource {
         ret
     }
     @scala.inline
-    def withList(value: AnonClientVersion => Request_[ListDebuggeesResponse]): Self = {
+    def withList(value: ClientVersion => Request[ListDebuggeesResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withRegister(value: AnonFields => Request_[RegisterDebuggeeResponse]): Self = {
+    def withRegister(value: Fields => Request[RegisterDebuggeeResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("register")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.gulpCoffeeify.mod
 
-import typingsSlinky.gulpCoffeeify.AnonDebug
+import typingsSlinky.gulpCoffeeify.anon.Debug
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait Option extends js.Object {
     * [DEPRECATED]: You should use a 'paths' options of browserify.
     */
   var aliases: js.UndefOr[Aliases] = js.native
-  var options: js.UndefOr[AnonDebug] = js.native
+  var options: js.UndefOr[Debug] = js.native
   /**
     * [DEPRECATED]
     */
@@ -43,7 +43,7 @@ object Option {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonDebug): Self = {
+    def withOptions(value: Debug): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

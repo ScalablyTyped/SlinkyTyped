@@ -2,7 +2,7 @@ package typingsSlinky.cathoQuantum.badgeMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.cathoQuantum.AnonComponents
+import typingsSlinky.cathoQuantum.anon.Components
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.error
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.neutral
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.primary
@@ -18,7 +18,7 @@ trait BadgeProps extends js.Object {
   var inverted: js.UndefOr[Boolean] = js.native
   var number: js.UndefOr[Double] = js.native
   var skin: js.UndefOr[primary | secondary | success | error | neutral] = js.native
-  var theme: js.UndefOr[AnonComponents] = js.native
+  var theme: js.UndefOr[Components] = js.native
 }
 
 object BadgeProps {
@@ -88,7 +88,7 @@ object BadgeProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonComponents): Self = {
+    def withTheme(value: Components): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

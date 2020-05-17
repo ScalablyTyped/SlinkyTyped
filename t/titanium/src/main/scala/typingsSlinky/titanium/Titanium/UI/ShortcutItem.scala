@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * An application shortcut.
 		 */
-@JSGlobal("Titanium.UI.ShortcutItem")
 @js.native
-class ShortcutItem () extends Proxy {
+trait ShortcutItem extends Proxy {
   /**
   			 * Description of the shortcut.
   			 */

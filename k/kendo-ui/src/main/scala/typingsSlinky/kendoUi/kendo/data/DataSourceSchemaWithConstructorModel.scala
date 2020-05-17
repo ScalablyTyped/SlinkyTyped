@@ -1,6 +1,6 @@
 package typingsSlinky.kendoUi.kendo.data
 
-import typingsSlinky.kendoUi.TypeofModel
+import typingsSlinky.kendoUi.anon.TypeofModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

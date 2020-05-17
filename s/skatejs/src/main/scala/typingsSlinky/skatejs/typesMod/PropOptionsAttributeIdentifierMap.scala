@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PropOptionsAttributeIdentifierMap extends js.Object {
+trait PropOptionsAttributeIdentifierMap extends PropOptionsAttribute {
   var source: js.UndefOr[PropOptionsAttributeIdentifier] = js.native
   var target: js.UndefOr[PropOptionsAttributeIdentifier] = js.native
 }

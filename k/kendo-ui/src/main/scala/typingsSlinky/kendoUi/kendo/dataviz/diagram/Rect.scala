@@ -1,14 +1,12 @@
 package typingsSlinky.kendoUi.kendo.dataviz.diagram
 
-import typingsSlinky.kendoUi.kendo.Observable_
+import typingsSlinky.kendoUi.kendo.Observable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.dataviz.diagram.Rect")
 @js.native
-class Rect () extends Observable_ {
-  def this(options: RectOptions) = this()
+trait Rect extends Observable {
   var options: RectOptions = js.native
   def position(): Unit = js.native
   def position(offset: Point): Unit = js.native

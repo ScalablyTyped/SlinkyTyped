@@ -2,26 +2,35 @@ package typingsSlinky.makerJs.MakerJs.models
 
 import typingsSlinky.makerJs.MakerJs.IModel
 import typingsSlinky.makerJs.MakerJs.IModelMap
-import typingsSlinky.opentypeJs.mod.Font
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("MakerJs.models.Text")
 @js.native
-class Text protected () extends IModel {
-  def this(font: Font, text: String, fontSize: Double) = this()
-  def this(font: Font, text: String, fontSize: Double, combine: Boolean) = this()
-  def this(font: Font, text: String, fontSize: Double, combine: Boolean, centerCharacterOrigin: Boolean) = this()
-  def this(
-    font: Font,
-    text: String,
-    fontSize: Double,
-    combine: Boolean,
-    centerCharacterOrigin: Boolean,
-    bezierAccuracy: Double
-  ) = this()
+trait Text extends IModel {
   @JSName("models")
   var models_Text: IModelMap = js.native
+}
+
+object Text {
+  @scala.inline
+  def apply(models: IModelMap): Text = {
+    val __obj = js.Dynamic.literal(models = models.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Text]
+  }
+  @scala.inline
+  implicit class TextOps[Self <: Text] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withModels(value: IModelMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("models")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

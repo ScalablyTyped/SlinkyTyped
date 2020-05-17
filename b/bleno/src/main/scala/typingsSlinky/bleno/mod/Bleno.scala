@@ -1,7 +1,7 @@
 package typingsSlinky.bleno.mod
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.bleno.TypeofCharacteristic
+import typingsSlinky.bleno.anon.TypeofCharacteristic
 import typingsSlinky.bleno.blenoStrings.accept
 import typingsSlinky.bleno.blenoStrings.advertisingStart
 import typingsSlinky.bleno.blenoStrings.advertisingStartError

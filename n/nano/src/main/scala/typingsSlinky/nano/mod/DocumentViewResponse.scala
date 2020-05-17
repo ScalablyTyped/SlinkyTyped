@@ -1,6 +1,6 @@
 package typingsSlinky.nano.mod
 
-import typingsSlinky.nano.AnonId
+import typingsSlinky.nano.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait DocumentViewResponse[V, D] extends js.Object {
   // Offset where the document list started.
   var offset: Double = js.native
   //  Array of view row objects. By default the information returned contains only the document ID and revision.
-  var rows: js.Array[AnonId[V, D]] = js.native
+  var rows: js.Array[Id[V, D]] = js.native
   // Number of documents in the database/view.
   var total_rows: Double = js.native
   // Current update sequence for the database
@@ -20,7 +20,7 @@ trait DocumentViewResponse[V, D] extends js.Object {
 
 object DocumentViewResponse {
   @scala.inline
-  def apply[V, D](offset: Double, rows: js.Array[AnonId[V, D]], total_rows: Double, update_seq: js.Any): DocumentViewResponse[V, D] = {
+  def apply[V, D](offset: Double, rows: js.Array[Id[V, D]], total_rows: Double, update_seq: js.Any): DocumentViewResponse[V, D] = {
     val __obj = js.Dynamic.literal(offset = offset.asInstanceOf[js.Any], rows = rows.asInstanceOf[js.Any], total_rows = total_rows.asInstanceOf[js.Any], update_seq = update_seq.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentViewResponse[V, D]]
   }
@@ -37,7 +37,7 @@ object DocumentViewResponse {
         ret
     }
     @scala.inline
-    def withRows(value: js.Array[AnonId[V, D]]): Self[V, D] = {
+    def withRows(value: js.Array[Id[V, D]]): Self[V, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
         ret

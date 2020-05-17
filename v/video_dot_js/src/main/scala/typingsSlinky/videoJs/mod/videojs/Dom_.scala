@@ -2,6 +2,7 @@ package typingsSlinky.videoJs.mod.videojs
 
 import org.scalajs.dom.raw.ClientRect
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLFormElement
 import org.scalajs.dom.raw.HTMLImageElement
@@ -11,10 +12,8 @@ import org.scalajs.dom.raw.HTMLSelectElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import org.scalajs.dom.raw.NodeList
 import org.scalajs.dom.raw.Position
-import typingsSlinky.std.Event_
 import typingsSlinky.videoJs.mod.videojs.Dom.Coordinates
 import typingsSlinky.videoJs.mod.videojs.Dom.Predicate
-import typingsSlinky.videoJs.mod.videojs.EventTarget.Event
 import typingsSlinky.videoJs.videoJsStrings.canvas
 import typingsSlinky.videoJs.videoJsStrings.form
 import typingsSlinky.videoJs.videoJsStrings.img
@@ -258,7 +257,7 @@ trait Dom_ extends js.Object {
     * @return A Coordinates object corresponding to the mouse position.
     *
     */
-  def getPointerPosition(el: Element, event: Event_): Coordinates = js.native
+  def getPointerPosition(el: Element, event: Event): Coordinates = js.native
   /**
     * Check if an element has a CSS class
     *
@@ -322,7 +321,7 @@ trait Dom_ extends js.Object {
     * @return - True if a left click
     *         - False if not a left click
     */
-  def isSingleLeftClick(event: Event): Boolean = js.native
+  def isSingleLeftClick(event: typingsSlinky.videoJs.mod.videojs.EventTarget.Event): Boolean = js.native
   /**
     * Determines, via duck typing, whether or not a value is a text node.
     *

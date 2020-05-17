@@ -1,6 +1,6 @@
 package typingsSlinky.actionsOnGoogle.responseMediaMod
 
-import typingsSlinky.actionsOnGoogle.richMod._RichResponseItem
+import typingsSlinky.actionsOnGoogle.richMod.RichResponseItem
 import typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsV2MediaResponse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("actions-on-google/dist/service/actionssdk/conversation/response/media", "MediaResponse")
 @js.native
 class MediaResponse protected ()
-  extends _RichResponseItem
+  extends RichResponseItem
      with GoogleActionsV2MediaResponse {
   /**
     * @param objects MediaObjects

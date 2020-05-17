@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientAdexchangebuyer2.gapi.client.adexchangebuyer2
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAdexchangebuyer2.AnonFilterSetId
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAdexchangebuyer2.anon.FilterSetId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +12,12 @@ trait LosingBidsResource extends js.Object {
     * List all reasons for which bids lost in the auction, with the number of
     * bids that lost for each reason.
     */
-  def list(request: AnonFilterSetId): Request_[ListLosingBidsResponse] = js.native
+  def list(request: FilterSetId): Request[ListLosingBidsResponse] = js.native
 }
 
 object LosingBidsResource {
   @scala.inline
-  def apply(list: AnonFilterSetId => Request_[ListLosingBidsResponse]): LosingBidsResource = {
+  def apply(list: FilterSetId => Request[ListLosingBidsResponse]): LosingBidsResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[LosingBidsResource]
   }
@@ -28,7 +28,7 @@ object LosingBidsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withList(value: AnonFilterSetId => Request_[ListLosingBidsResponse]): Self = {
+    def withList(value: FilterSetId => Request[ListLosingBidsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

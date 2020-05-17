@@ -1,6 +1,6 @@
 package typingsSlinky.c3.mod
 
-import typingsSlinky.c3.AnonMaxNumber
+import typingsSlinky.c3.anon.MaxNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait XTickConfiguration extends TickConfiguration {
     * If `true` is set, the ticks will be culled, then only limitted tick text will be shown.
     * This option does not hide the tick lines. If `false` is set, all of ticks will be shown.
     */
-  var culling: js.UndefOr[Boolean | AnonMaxNumber] = js.native
+  var culling: js.UndefOr[Boolean | MaxNumber] = js.native
   /**
     * Fit x axis ticks.
     * If `true` set, the ticks will be positioned nicely. If `false` set, the ticks will be positioned
@@ -60,7 +60,7 @@ object XTickConfiguration {
         ret
     }
     @scala.inline
-    def withCulling(value: Boolean | AnonMaxNumber): Self = {
+    def withCulling(value: Boolean | MaxNumber): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("culling")(value.asInstanceOf[js.Any])
         ret

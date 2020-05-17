@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.Devices.Sms
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Enables start, track, and end an asynchronous message delete operation for a single message. */
+@JSGlobal("Windows.Devices.Sms.DeleteSmsMessageOperation")
+@js.native
+abstract class DeleteSmsMessageOperation ()
+  extends typingsSlinky.winrtUwp.Windows.Devices.Sms.DeleteSmsMessageOperation
+

@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.ConditionalRangeFormatData
 import typingsSlinky.officeJs.Excel.Interfaces.ConditionalRangeFormatLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.ConditionalRangeFormatUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.6]
   */
-@JSGlobal("Excel.ConditionalRangeFormat")
 @js.native
-class ConditionalRangeFormat () extends ClientObject {
+trait ConditionalRangeFormat extends ClientObject {
   /**
     *
     * Collection of border objects that apply to the overall conditional format range. Read-only.
@@ -57,7 +56,7 @@ class ConditionalRangeFormat () extends ClientObject {
     */
   def load(): ConditionalRangeFormat = js.native
   def load(options: ConditionalRangeFormatLoadOptions): ConditionalRangeFormat = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ConditionalRangeFormat = js.native
+  def load(propertyNamesAndPaths: Expand): ConditionalRangeFormat = js.native
   def load(propertyNames: String): ConditionalRangeFormat = js.native
   def load(propertyNames: js.Array[String]): ConditionalRangeFormat = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

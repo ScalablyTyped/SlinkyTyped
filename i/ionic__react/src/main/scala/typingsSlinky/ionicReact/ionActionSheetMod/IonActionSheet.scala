@@ -1,7 +1,7 @@
 package typingsSlinky.ionicReact.ionActionSheetMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.ionicReact.ActionSheetOptionsReactOv
+import typingsSlinky.ionicReact.anon.ActionSheetOptionsReactOv
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`

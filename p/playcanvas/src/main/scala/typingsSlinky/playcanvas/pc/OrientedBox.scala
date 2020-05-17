@@ -13,11 +13,8 @@ import scala.scalajs.js.annotation._
   * @param {pc.Mat4} [worldTransform] - Transform that has the orientation and position of the box. Scale is assumed to be one.
   * @param {pc.Vec3} [halfExtents] - Half the distance across the box in each local axis. The constructor takes a reference of this parameter.
   */
-@JSGlobal("pc.OrientedBox")
 @js.native
-class OrientedBox () extends js.Object {
-  def this(worldTransform: Mat4) = this()
-  def this(worldTransform: Mat4, halfExtents: Vec3) = this()
+trait OrientedBox extends js.Object {
   /**
     * The world transform of the OBB.
     */

@@ -2,8 +2,8 @@ package typingsSlinky.reactNative.mod
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactNative.AnonIndex
-import typingsSlinky.reactNative.AnonSection
+import typingsSlinky.reactNative.anon.Index
+import typingsSlinky.reactNative.anon.Section
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +30,7 @@ trait SectionListProps[ItemT] extends VirtualizedListWithoutRenderItemProps[Item
     */
   @JSName("getItemLayout")
   var getItemLayout_SectionListProps: js.UndefOr[
-    js.Function2[/* data */ js.Array[SectionListData[ItemT]] | Null, /* index */ Double, AnonIndex]
+    js.Function2[/* data */ js.Array[SectionListData[ItemT]] | Null, /* index */ Double, Index]
   ] = js.native
   /**
     * Uses legacy MetroListView instead of default VirtualizedSectionList
@@ -43,11 +43,11 @@ trait SectionListProps[ItemT] extends VirtualizedListWithoutRenderItemProps[Item
   /**
     * Rendered at the bottom of each section.
     */
-  var renderSectionFooter: js.UndefOr[js.Function1[/* info */ AnonSection[ItemT], ReactElement | Null]] = js.native
+  var renderSectionFooter: js.UndefOr[js.Function1[/* info */ Section[ItemT], ReactElement | Null]] = js.native
   /**
     * Rendered at the top of each section. Sticky headers are not yet supported.
     */
-  var renderSectionHeader: js.UndefOr[js.Function1[/* info */ AnonSection[ItemT], ReactElement | Null]] = js.native
+  var renderSectionHeader: js.UndefOr[js.Function1[/* info */ Section[ItemT], ReactElement | Null]] = js.native
   /**
     * An array of objects with data for each section.
     */
@@ -144,7 +144,7 @@ object SectionListProps {
         ret
     }
     @scala.inline
-    def withGetItemLayout(value: (/* data */ js.Array[SectionListData[ItemT]] | Null, /* index */ Double) => AnonIndex): Self[ItemT] = {
+    def withGetItemLayout(value: (/* data */ js.Array[SectionListData[ItemT]] | Null, /* index */ Double) => Index): Self[ItemT] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getItemLayout")(js.Any.fromFunction2(value))
         ret
@@ -180,7 +180,7 @@ object SectionListProps {
         ret
     }
     @scala.inline
-    def withRenderSectionFooter(value: /* info */ AnonSection[ItemT] => ReactElement | Null): Self[ItemT] = {
+    def withRenderSectionFooter(value: /* info */ Section[ItemT] => ReactElement | Null): Self[ItemT] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderSectionFooter")(js.Any.fromFunction1(value))
         ret
@@ -192,7 +192,7 @@ object SectionListProps {
         ret
     }
     @scala.inline
-    def withRenderSectionHeader(value: /* info */ AnonSection[ItemT] => ReactElement | Null): Self[ItemT] = {
+    def withRenderSectionHeader(value: /* info */ Section[ItemT] => ReactElement | Null): Self[ItemT] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderSectionHeader")(js.Any.fromFunction1(value))
         ret

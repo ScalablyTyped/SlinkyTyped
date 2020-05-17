@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientProximitybeacon.gapi.client.proximitybeacon
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientProximitybeacon.AnonAccesstoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientProximitybeacon.anon.Accesstoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +14,12 @@ trait BeaconinfoResource extends js.Object {
     * [API key](https://developers.google.com/beacons/proximity/get-started#request_a_browser_api_key)
     * for the application.
     */
-  def getforobserved(request: AnonAccesstoken): Request_[GetInfoForObservedBeaconsResponse] = js.native
+  def getforobserved(request: Accesstoken): Request[GetInfoForObservedBeaconsResponse] = js.native
 }
 
 object BeaconinfoResource {
   @scala.inline
-  def apply(getforobserved: AnonAccesstoken => Request_[GetInfoForObservedBeaconsResponse]): BeaconinfoResource = {
+  def apply(getforobserved: Accesstoken => Request[GetInfoForObservedBeaconsResponse]): BeaconinfoResource = {
     val __obj = js.Dynamic.literal(getforobserved = js.Any.fromFunction1(getforobserved))
     __obj.asInstanceOf[BeaconinfoResource]
   }
@@ -30,7 +30,7 @@ object BeaconinfoResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetforobserved(value: AnonAccesstoken => Request_[GetInfoForObservedBeaconsResponse]): Self = {
+    def withGetforobserved(value: Accesstoken => Request[GetInfoForObservedBeaconsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getforobserved")(js.Any.fromFunction1(value))
         ret

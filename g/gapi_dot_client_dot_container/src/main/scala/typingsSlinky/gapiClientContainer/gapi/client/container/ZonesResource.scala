@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientContainer.gapi.client.container
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientContainer.AnonBearertoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientContainer.anon.Bearertoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,14 +11,14 @@ trait ZonesResource extends js.Object {
   var clusters: ClustersResource = js.native
   var operations: OperationsResource = js.native
   /** Returns configuration info about the Container Engine service. */
-  def getServerconfig(request: AnonBearertoken): Request_[ServerConfig] = js.native
+  def getServerconfig(request: Bearertoken): Request[ServerConfig] = js.native
 }
 
 object ZonesResource {
   @scala.inline
   def apply(
     clusters: ClustersResource,
-    getServerconfig: AnonBearertoken => Request_[ServerConfig],
+    getServerconfig: Bearertoken => Request[ServerConfig],
     operations: OperationsResource
   ): ZonesResource = {
     val __obj = js.Dynamic.literal(clusters = clusters.asInstanceOf[js.Any], getServerconfig = js.Any.fromFunction1(getServerconfig), operations = operations.asInstanceOf[js.Any])
@@ -37,7 +37,7 @@ object ZonesResource {
         ret
     }
     @scala.inline
-    def withGetServerconfig(value: AnonBearertoken => Request_[ServerConfig]): Self = {
+    def withGetServerconfig(value: Bearertoken => Request[ServerConfig]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getServerconfig")(js.Any.fromFunction1(value))
         ret

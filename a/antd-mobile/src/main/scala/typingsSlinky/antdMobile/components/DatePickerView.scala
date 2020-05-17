@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antdMobile.AnonDatePickerLocale
+import typingsSlinky.antdMobile.anon.DatePickerLocale
 import typingsSlinky.antdMobile.antdMobileStrings.date
 import typingsSlinky.antdMobile.antdMobileStrings.datetime
 import typingsSlinky.antdMobile.antdMobileStrings.month
@@ -40,7 +40,7 @@ object DatePickerView {
     @scala.inline
     def format(value: String | (js.Function1[/* value */ js.Date, String])): this.type = set("format", value.asInstanceOf[js.Any])
     @scala.inline
-    def locale(value: AnonDatePickerLocale): this.type = set("locale", value.asInstanceOf[js.Any])
+    def locale(value: DatePickerLocale): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline
     def maxDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
     @scala.inline

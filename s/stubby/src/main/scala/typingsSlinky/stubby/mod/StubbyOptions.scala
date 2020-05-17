@@ -1,6 +1,5 @@
 package typingsSlinky.stubby.mod
 
-import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,17 +12,8 @@ trait StubbyOptions extends js.Object
 
 object StubbyOptions {
   @scala.inline
-  def StubbyWithKeyCertOptions(
-    cert: String | Buffer | (js.Array[String | Buffer]),
-    key: String | Buffer | (js.Array[Buffer | js.Object])
-  ): StubbyOptions = {
-    val __obj = js.Dynamic.literal(cert = cert.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any])
-    __obj.asInstanceOf[StubbyOptions]
-  }
+  implicit def apply(value: StubbyWithKeyCertOptions): StubbyOptions = value.asInstanceOf[StubbyOptions]
   @scala.inline
-  def StubbyWithPfxOptions(): StubbyOptions = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[StubbyOptions]
-  }
+  implicit def apply(value: StubbyWithPfxOptions): StubbyOptions = value.asInstanceOf[StubbyOptions]
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.cassandraDriver.mod.policies
 
-import typingsSlinky.cassandraDriver.AnonFilter
+import typingsSlinky.cassandraDriver.anon.Filter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ object loadBalancing extends js.Object {
   @js.native
   class DefaultLoadBalancingPolicy ()
     extends typingsSlinky.cassandraDriver.policiesMod.policies.loadBalancing.DefaultLoadBalancingPolicy {
-    def this(options: AnonFilter) = this()
+    def this(options: Filter) = this()
   }
   
   @js.native

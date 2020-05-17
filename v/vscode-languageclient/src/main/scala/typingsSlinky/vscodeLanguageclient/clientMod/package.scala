@@ -22,7 +22,7 @@ package object clientMod {
     /* position */ typingsSlinky.vscode.mod.Position, 
     /* token */ typingsSlinky.vscode.mod.CancellationToken, 
     typingsSlinky.vscode.mod.ProviderResult[
-      typingsSlinky.vscode.mod.Range | typingsSlinky.vscodeLanguageclient.AnonPlaceholder
+      typingsSlinky.vscode.mod.Range | typingsSlinky.vscodeLanguageclient.anon.Placeholder
     ]
   ]
   type ProvideCodeActionsSignature = js.Function4[
@@ -104,7 +104,7 @@ package object clientMod {
   type ProvideReferencesSignature = js.Function4[
     /* document */ typingsSlinky.vscode.mod.TextDocument, 
     /* position */ typingsSlinky.vscode.mod.Position, 
-    /* options */ typingsSlinky.vscodeLanguageclient.AnonIncludeDeclaration, 
+    /* options */ typingsSlinky.vscodeLanguageclient.anon.IncludeDeclaration, 
     /* token */ typingsSlinky.vscode.mod.CancellationToken, 
     typingsSlinky.vscode.mod.ProviderResult[js.Array[typingsSlinky.vscode.mod.Location]]
   ]

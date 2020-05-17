@@ -60,11 +60,4 @@ package object EngineAPI {
     typingsSlinky.qlikEngineapi.EngineAPI.IGenericVariableListProperties, 
     typingsSlinky.qlikEngineapi.EngineAPI.IGenericVariableListLayout
   ]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.qlikEngineapi.qlikEngineapiStrings.N
-    - typingsSlinky.qlikEngineapi.qlikEngineapiStrings.H
-    - typingsSlinky.qlikEngineapi.qlikEngineapiStrings.C
-    - java.lang.String
-  */
-  type NxGrpType = typingsSlinky.qlikEngineapi.EngineAPI._NxGrpType | java.lang.String
 }

@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Word
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJs.Word.Interfaces.ListItemData
 import typingsSlinky.officeJs.Word.Interfaces.ListItemLoadOptions
 import typingsSlinky.officeJs.Word.Interfaces.ListItemUpdateData
+import typingsSlinky.officeJs.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: WordApi 1.3]
   */
-@JSGlobal("Word.ListItem")
 @js.native
-class ListItem () extends ClientObject {
+trait ListItem extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_ListItem: RequestContext = js.native
@@ -91,8 +90,8 @@ class ListItem () extends ClientObject {
   def load(): ListItem = js.native
   def load(option: String): ListItem = js.native
   def load(option: js.Array[String]): ListItem = js.native
-  def load(option: AnonExpand): ListItem = js.native
   def load(option: ListItemLoadOptions): ListItem = js.native
+  def load(option: Expand): ListItem = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.
     *
     * @remarks

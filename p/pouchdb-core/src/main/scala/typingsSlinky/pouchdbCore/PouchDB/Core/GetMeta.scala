@@ -1,6 +1,6 @@
 package typingsSlinky.pouchdbCore.PouchDB.Core
 
-import typingsSlinky.pouchdbCore.AnonIds
+import typingsSlinky.pouchdbCore.anon.Ids
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait GetMeta extends js.Object {
   var _conflicts: js.UndefOr[js.Array[RevisionId]] = js.native
   var _rev: RevisionId = js.native
   /** Only present if `GetOptions.revs_info` is `true` */
-  var _revisions: js.UndefOr[AnonIds] = js.native
+  var _revisions: js.UndefOr[Ids] = js.native
   /** Only present if `GetOptions.revs` is `true` */
   var _revs_info: js.UndefOr[js.Array[RevisionInfo]] = js.native
 }
@@ -65,7 +65,7 @@ object GetMeta {
         ret
     }
     @scala.inline
-    def with_revisions(value: AnonIds): Self = {
+    def with_revisions(value: Ids): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("_revisions")(value.asInstanceOf[js.Any])
         ret

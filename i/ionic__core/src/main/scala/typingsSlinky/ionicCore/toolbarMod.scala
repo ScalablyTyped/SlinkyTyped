@@ -1,7 +1,7 @@
 package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.CustomEvent
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonToolbarElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonToolbarElement
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
 import scala.scalajs.js

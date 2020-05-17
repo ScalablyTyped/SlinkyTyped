@@ -1,8 +1,6 @@
 package typingsSlinky.ckeditor.CKEDITOR
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.ckeditor.AnonCallback
-import typingsSlinky.ckeditor.AnonTitle
 import typingsSlinky.ckeditor.CKEDITOR.dom.documentFragment
 import typingsSlinky.ckeditor.CKEDITOR.dom.node
 import typingsSlinky.ckeditor.CKEDITOR.dom.range
@@ -12,25 +10,16 @@ import typingsSlinky.ckeditor.CKEDITOR.plugins.notification
 import typingsSlinky.ckeditor.CKEDITOR.plugins.notification.`type`
 import typingsSlinky.ckeditor.CKEDITOR.plugins.widget.repository
 import typingsSlinky.ckeditor.CKEDITOR.style.definition
+import typingsSlinky.ckeditor.anon.Callback
+import typingsSlinky.ckeditor.anon.Title
 import typingsSlinky.ckeditor.ckeditorBooleans.`false`
 import typingsSlinky.ckeditor.ckeditorBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("CKEDITOR.editor")
 @js.native
-class editor_ () extends event {
-  def this(instanceConfig: typingsSlinky.ckeditor.CKEDITOR.config) = this()
-  def this(
-    instanceConfig: typingsSlinky.ckeditor.CKEDITOR.config,
-    element: typingsSlinky.ckeditor.CKEDITOR.dom.element
-  ) = this()
-  def this(
-    instanceConfig: typingsSlinky.ckeditor.CKEDITOR.config,
-    element: typingsSlinky.ckeditor.CKEDITOR.dom.element,
-    mode: Double
-  ) = this()
+trait editor_ extends event {
   val activeEnterMode: Double = js.native
   val activeFilter: typingsSlinky.ckeditor.CKEDITOR.filter = js.native
   val activeShiftEnterMode: Double = js.native
@@ -108,7 +97,7 @@ class editor_ () extends event {
     callbackOrOptions: js.Function1[/* data */ js.Any, Unit],
     callback: js.Function1[/* data */ js.Any, Unit]
   ): Unit = js.native
-  def getClipboardData(callbackOrOptions: AnonTitle, callback: js.Function1[/* data */ js.Any, Unit]): Unit = js.native
+  def getClipboardData(callbackOrOptions: Title, callback: js.Function1[/* data */ js.Any, Unit]): Unit = js.native
   def getColorFromDialog(callback: js.Function1[/* color */ String, Unit]): Unit = js.native
   def getColorFromDialog(callback: js.Function1[/* color */ String, Unit], scope: StringDictionary[js.Any]): Unit = js.native
   def getCommand(commandName: String): command = js.native
@@ -173,7 +162,7 @@ class editor_ () extends event {
   def setActiveEnterMode(enterMode: Double, shiftEnterMode: Double): Unit = js.native
   def setActiveFilter(filter: typingsSlinky.ckeditor.CKEDITOR.filter): Unit = js.native
   def setData(data: String): Unit = js.native
-  def setData(data: String, options: AnonCallback): Unit = js.native
+  def setData(data: String, options: Callback): Unit = js.native
   def setKeystroke(keystroke: js.Array[js.Tuple2[Double, String | Boolean]]): Unit = js.native
   def setKeystroke(keystroke: Double, behavior: String): Unit = js.native
   def setKeystroke(keystroke: Double, behavior: Boolean): Unit = js.native

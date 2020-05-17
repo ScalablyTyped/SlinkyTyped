@@ -9,18 +9,8 @@ import scala.scalajs.js.annotation._
 	* @brief 流解码对象
 	* @detail 
 	*/
-@JSGlobal("Class_StringDecoder")
 @js.native
-/**
-	 * 
-	 * @brief 解码器构造函数
-	 * @param encoding 解码编码. 默认 'utf8'.
-	 * 
-	 * 
-	 * 
-	 */
-class ClassStringDecoder () extends ClassObject {
-  def this(encoding: String) = this()
+trait ClassStringDecoder extends ClassObject {
   /**
   	 * class prop 
   	 *

@@ -1,0 +1,33 @@
+package typingsSlinky.officeUiFabricReact.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait EnableAutofillOnKeyPress extends js.Object {
+  var enableAutofillOnKeyPress: js.Array[Double] = js.native
+}
+
+object EnableAutofillOnKeyPress {
+  @scala.inline
+  def apply(enableAutofillOnKeyPress: js.Array[Double]): EnableAutofillOnKeyPress = {
+    val __obj = js.Dynamic.literal(enableAutofillOnKeyPress = enableAutofillOnKeyPress.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EnableAutofillOnKeyPress]
+  }
+  @scala.inline
+  implicit class EnableAutofillOnKeyPressOps[Self <: EnableAutofillOnKeyPress] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnableAutofillOnKeyPress(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableAutofillOnKeyPress")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

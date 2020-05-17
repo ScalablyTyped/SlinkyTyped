@@ -2,7 +2,7 @@ package typingsSlinky.awsSdkClientS3Node.typesGetBucketRequestPaymentOutputMod
 
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.BucketOwner
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.Requester
-import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetBucketRequestPaymentOutput
   extends MetadataBearer
-     with _OutputTypesUnion {
+     with OutputTypesUnion {
   /**
     * <p>Specifies who pays for the download and request fees.</p>
     */

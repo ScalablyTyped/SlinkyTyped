@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`absolute-value`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`high-four-bit`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`low-four-bit`
@@ -50,8 +49,4 @@ trait PointCloudStretchRenderer
   @JSName("type")
   val type_PointCloudStretchRenderer: `point-cloud-stretch` = js.native
 }
-
-@JSGlobal("__esri.PointCloudStretchRenderer")
-@js.native
-object PointCloudStretchRenderer extends TopLevel[PointCloudStretchRendererConstructor]
 

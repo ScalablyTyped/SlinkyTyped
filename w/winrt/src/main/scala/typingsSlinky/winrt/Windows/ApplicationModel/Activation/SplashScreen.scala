@@ -1,10 +1,18 @@
 package typingsSlinky.winrt.Windows.ApplicationModel.Activation
 
+import typingsSlinky.winrt.Windows.Foundation.Rect
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.ApplicationModel.Activation.SplashScreen")
 @js.native
-class SplashScreen () extends ISplashScreen
+trait SplashScreen extends ISplashScreen
+
+object SplashScreen {
+  @scala.inline
+  def apply(imageLocation: Rect, ondismissed: js.Any): SplashScreen = {
+    val __obj = js.Dynamic.literal(imageLocation = imageLocation.asInstanceOf[js.Any], ondismissed = ondismissed.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SplashScreen]
+  }
+}
 

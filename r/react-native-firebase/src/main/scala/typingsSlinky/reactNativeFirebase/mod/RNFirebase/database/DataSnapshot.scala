@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeFirebase.mod.RNFirebase.database
 
-import typingsSlinky.reactNativeFirebase.AnonPriority
+import typingsSlinky.reactNativeFirebase.anon.Priority
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait DataSnapshot extends js.Object {
   var ref: Reference = js.native
   def child(path: String): DataSnapshot = js.native
   def exists(): Boolean = js.native
-  def exportVal(): AnonPriority = js.native
+  def exportVal(): Priority = js.native
   def forEach(action: js.Function1[/* a */ this.type, Boolean]): Boolean = js.native
   def getPriority(): String | Double | Null = js.native
   def hasChild(path: String): Boolean = js.native
@@ -26,7 +26,7 @@ object DataSnapshot {
   def apply(
     child: String => DataSnapshot,
     exists: () => Boolean,
-    exportVal: () => AnonPriority,
+    exportVal: () => Priority,
     forEach: js.Function1[DataSnapshot, Boolean] => Boolean,
     getPriority: () => String | Double | Null,
     hasChild: String => Boolean,
@@ -59,7 +59,7 @@ object DataSnapshot {
         ret
     }
     @scala.inline
-    def withExportVal(value: () => AnonPriority): Self = {
+    def withExportVal(value: () => Priority): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("exportVal")(js.Any.fromFunction0(value))
         ret

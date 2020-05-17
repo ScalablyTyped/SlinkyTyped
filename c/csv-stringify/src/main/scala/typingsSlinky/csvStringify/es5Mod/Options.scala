@@ -1,6 +1,6 @@
 package typingsSlinky.csvStringify.es5Mod
 
-import typingsSlinky.csvStringify.AnonBoolean
+import typingsSlinky.csvStringify.anon.Boolean
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ trait Options extends js.Object {
   /**
     * Key-value object which defines custom cast for certain data types
     */
-  var cast: js.UndefOr[AnonBoolean] = js.native
+  var cast: js.UndefOr[Boolean] = js.native
   /**
     * List of fields, applied when `transform` returns an object
     * order matters
@@ -28,7 +28,7 @@ trait Options extends js.Object {
   /**
     * Add the value of "options.RecordDelimiter" on the last line, default to true.
     */
-  var eof: js.UndefOr[Boolean] = js.native
+  var eof: js.UndefOr[scala.Boolean] = js.native
   /**
     * Defaults to the escape read option.
     */
@@ -36,19 +36,19 @@ trait Options extends js.Object {
   /**
     * Display the column names on the first line if the columns option is provided or discovered.
     */
-  var header: js.UndefOr[Boolean] = js.native
+  var header: js.UndefOr[scala.Boolean] = js.native
   /**
     * The quote characters, defaults to the ", an empty quote value will preserve the original field.
     */
-  var quote: js.UndefOr[String | Buffer | Boolean] = js.native
+  var quote: js.UndefOr[String | Buffer | scala.Boolean] = js.native
   /**
     * Boolean, default to false, quote all the non-empty fields even if not required.
     */
-  var quoted: js.UndefOr[Boolean] = js.native
+  var quoted: js.UndefOr[scala.Boolean] = js.native
   /**
     * Boolean, no default, quote empty fields and overrides `quoted_string` on empty strings when defined.
     */
-  var quoted_empty: js.UndefOr[Boolean] = js.native
+  var quoted_empty: js.UndefOr[scala.Boolean] = js.native
   /**
     * String or RegExp, no default, quote all fields matching a regular expression.
     */
@@ -56,7 +56,7 @@ trait Options extends js.Object {
   /**
     * Boolean, default to false, quote all fields of type string even if not required.
     */
-  var quoted_string: js.UndefOr[Boolean] = js.native
+  var quoted_string: js.UndefOr[scala.Boolean] = js.native
   /**
     * String used to delimit record rows or a special value
     * special values are 'auto', 'unix', 'mac', 'windows', 'ascii', 'unicode'
@@ -78,7 +78,7 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCast(value: AnonBoolean): Self = {
+    def withCast(value: Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cast")(value.asInstanceOf[js.Any])
         ret
@@ -114,7 +114,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withEof(value: Boolean): Self = {
+    def withEof(value: scala.Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("eof")(value.asInstanceOf[js.Any])
         ret
@@ -138,7 +138,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withHeader(value: Boolean): Self = {
+    def withHeader(value: scala.Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
         ret
@@ -150,7 +150,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withQuote(value: String | Buffer | Boolean): Self = {
+    def withQuote(value: String | Buffer | scala.Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("quote")(value.asInstanceOf[js.Any])
         ret
@@ -162,7 +162,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withQuoted(value: Boolean): Self = {
+    def withQuoted(value: scala.Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("quoted")(value.asInstanceOf[js.Any])
         ret
@@ -174,7 +174,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withQuoted_empty(value: Boolean): Self = {
+    def withQuoted_empty(value: scala.Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("quoted_empty")(value.asInstanceOf[js.Any])
         ret
@@ -204,7 +204,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withQuoted_string(value: Boolean): Self = {
+    def withQuoted_string(value: scala.Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("quoted_string")(value.asInstanceOf[js.Any])
         ret

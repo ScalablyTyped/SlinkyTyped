@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait MoneyParams extends _FormatterParams {
+trait MoneyParams extends FormatterParams {
   // Money
   var decimal: js.UndefOr[String] = js.native
   var precision: js.UndefOr[Boolean | Double] = js.native

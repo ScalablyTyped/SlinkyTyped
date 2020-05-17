@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Infragistics.OlapTableViewHeaderCell")
 @js.native
-class OlapTableViewHeaderCell () extends js.Object {
+trait OlapTableViewHeaderCell extends js.Object {
   /**
   	 * Returns the name of the axis this header cell is related to.
   	 */
@@ -47,5 +46,92 @@ class OlapTableViewHeaderCell () extends js.Object {
   	 * Returns the index of tuple in the axis this header cell is related to.
   	 */
   def tupleIndex(): Double = js.native
+}
+
+object OlapTableViewHeaderCell {
+  @scala.inline
+  def apply(
+    axisName: () => String,
+    caption: () => String,
+    columnIndex: () => Double,
+    columnSpan: () => Double,
+    isExpanable: () => Boolean,
+    isExpanded: () => Boolean,
+    memberIndex: () => Double,
+    rowIndex: () => Double,
+    rowSpan: () => Double,
+    tupleIndex: () => Double
+  ): OlapTableViewHeaderCell = {
+    val __obj = js.Dynamic.literal(axisName = js.Any.fromFunction0(axisName), caption = js.Any.fromFunction0(caption), columnIndex = js.Any.fromFunction0(columnIndex), columnSpan = js.Any.fromFunction0(columnSpan), isExpanable = js.Any.fromFunction0(isExpanable), isExpanded = js.Any.fromFunction0(isExpanded), memberIndex = js.Any.fromFunction0(memberIndex), rowIndex = js.Any.fromFunction0(rowIndex), rowSpan = js.Any.fromFunction0(rowSpan), tupleIndex = js.Any.fromFunction0(tupleIndex))
+    __obj.asInstanceOf[OlapTableViewHeaderCell]
+  }
+  @scala.inline
+  implicit class OlapTableViewHeaderCellOps[Self <: OlapTableViewHeaderCell] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAxisName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("axisName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withCaption(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withColumnIndex(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnIndex")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withColumnSpan(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnSpan")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsExpanable(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpanable")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsExpanded(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isExpanded")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withMemberIndex(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("memberIndex")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRowIndex(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIndex")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRowSpan(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowSpan")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withTupleIndex(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tupleIndex")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

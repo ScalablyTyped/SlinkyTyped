@@ -1,13 +1,13 @@
 package typingsSlinky.officeJsPreview.Word
 
-import typingsSlinky.officeJsPreview.AnonExpand
-import typingsSlinky.officeJsPreview.AnonIgnorePunct
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientResult
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJsPreview.Word.Interfaces.RangeData
 import typingsSlinky.officeJsPreview.Word.Interfaces.RangeLoadOptions
 import typingsSlinky.officeJsPreview.Word.Interfaces.RangeUpdateData
+import typingsSlinky.officeJsPreview.anon.Expand
+import typingsSlinky.officeJsPreview.anon.IgnorePunct
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.After
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Before
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Content
@@ -33,9 +33,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: WordApi 1.1]
   */
-@JSGlobal("Word.Range")
 @js.native
-class Range () extends ClientObject {
+trait Range extends ClientObject {
   /**
     *
     * Gets the collection of content control objects in the range. Read-only.
@@ -594,8 +593,8 @@ class Range () extends ClientObject {
   def load(): Range = js.native
   def load(option: String): Range = js.native
   def load(option: js.Array[String]): Range = js.native
-  def load(option: AnonExpand): Range = js.native
   def load(option: RangeLoadOptions): Range = js.native
+  def load(option: Expand): Range = js.native
   /**
     *
     * Performs a search with the specified SearchOptions on the scope of the range object. The search results are a collection of range objects.
@@ -606,8 +605,8 @@ class Range () extends ClientObject {
     * @param searchOptions Optional. Options for the search.
     */
   def search(searchText: String): RangeCollection = js.native
-  def search(searchText: String, searchOptions: AnonIgnorePunct): RangeCollection = js.native
   def search(searchText: String, searchOptions: SearchOptions): RangeCollection = js.native
+  def search(searchText: String, searchOptions: IgnorePunct): RangeCollection = js.native
   /**
     *
     * Selects and navigates the Word UI to the range.

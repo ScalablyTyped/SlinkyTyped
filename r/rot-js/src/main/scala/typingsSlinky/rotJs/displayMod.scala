@@ -5,6 +5,9 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
+import typingsSlinky.rotJs.anon.PartialDisplayOptions
+import typingsSlinky.rotJs.anon.TypeofRect
+import typingsSlinky.rotJs.anon.TypeofTileGL
 import typingsSlinky.rotJs.typesMod.DisplayData
 import typingsSlinky.rotJs.typesMod.DisplayOptions
 import scala.scalajs.js

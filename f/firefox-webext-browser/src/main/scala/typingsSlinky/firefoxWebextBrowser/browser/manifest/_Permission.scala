@@ -31,7 +31,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.sessions
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.urlbar
 */
-trait _Permission extends js.Object
+trait _Permission extends Permission
 
 object _Permission {
   @scala.inline

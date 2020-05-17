@@ -1,0 +1,16 @@
+package typingsSlinky.mfiles.global.MFiles
+
+import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.IFolderContentItems
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("MFiles.FolderContentItems")
+@js.native
+class FolderContentItems () extends IFolderContentItems
+
+@JSGlobal("MFiles.FolderContentItems")
+@js.native
+object FolderContentItems extends Instantiable0[IFolderContentItems]
+

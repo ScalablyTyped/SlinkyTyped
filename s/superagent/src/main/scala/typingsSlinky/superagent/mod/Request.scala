@@ -5,11 +5,11 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.node.streamMod.Writable
 import typingsSlinky.std.Promise
-import typingsSlinky.superagent.Anon0
-import typingsSlinky.superagent.AnonContentType
-import typingsSlinky.superagent.AnonDeadline
-import typingsSlinky.superagent.AnonPassphrase
-import typingsSlinky.superagent.AnonType
+import typingsSlinky.superagent.anon.ContentType
+import typingsSlinky.superagent.anon.Deadline
+import typingsSlinky.superagent.anon.Passphrase
+import typingsSlinky.superagent.anon.Type
+import typingsSlinky.superagent.anon.`0`
 import typingsSlinky.superagent.superagentStrings.Cookie
 import typingsSlinky.superagent.superagentStrings.error
 import typingsSlinky.superagent.superagentStrings.progress
@@ -24,10 +24,10 @@ trait Request extends Promise[Response] {
   def accept(`type`: String): this.type = js.native
   def attach(field: String, file: MultipartValueSingle): this.type = js.native
   def attach(field: String, file: MultipartValueSingle, options: String): this.type = js.native
-  def attach(field: String, file: MultipartValueSingle, options: AnonContentType): this.type = js.native
-  def auth(token: String, options: Anon0): this.type = js.native
+  def attach(field: String, file: MultipartValueSingle, options: ContentType): this.type = js.native
+  def auth(token: String, options: `0`): this.type = js.native
   def auth(user: String, pass: String): this.type = js.native
-  def auth(user: String, pass: String, options: AnonType): this.type = js.native
+  def auth(user: String, pass: String, options: Type): this.type = js.native
   def buffer(): this.type = js.native
   def buffer(`val`: Boolean): this.type = js.native
   def ca(cert: String): this.type = js.native
@@ -60,7 +60,7 @@ trait Request extends Promise[Response] {
   def pfx(cert: String): this.type = js.native
   def pfx(cert: js.Array[Buffer | String]): this.type = js.native
   def pfx(cert: Buffer): this.type = js.native
-  def pfx(cert: AnonPassphrase): this.type = js.native
+  def pfx(cert: Passphrase): this.type = js.native
   def pipe(stream: WritableStream): Writable = js.native
   def pipe(stream: WritableStream, options: js.Object): Writable = js.native
   def query(`val`: String): this.type = js.native
@@ -79,7 +79,7 @@ trait Request extends Promise[Response] {
   @JSName("set")
   def set_Cookie(field: Cookie, `val`: js.Array[String]): this.type = js.native
   def timeout(ms: Double): this.type = js.native
-  def timeout(ms: AnonDeadline): this.type = js.native
+  def timeout(ms: Deadline): this.type = js.native
   def trustLocalhost(): this.type = js.native
   def trustLocalhost(enabled: Boolean): this.type = js.native
   def `type`(`val`: String): this.type = js.native

@@ -10,11 +10,8 @@ import scala.scalajs.js.annotation._
   * @class
   * @memberof PIXI
   */
-@JSGlobal("PIXI.Shader")
 @js.native
-class Shader () extends js.Object {
-  def this(program: Program) = this()
-  def this(program: Program, uniforms: js.Any) = this()
+trait Shader extends js.Object {
   /**
     * Program that the shader uses
     *
@@ -29,22 +26,31 @@ class Shader () extends js.Object {
   val uniforms: js.Any = js.native
 }
 
-/* static members */
-@JSGlobal("PIXI.Shader")
-@js.native
-object Shader extends js.Object {
-  /**
-    * A short hand function to create a shader based of a vertex and fragment shader
-    *
-    * @param {string} [vertexSrc] - The source of the vertex shader.
-    * @param {string} [fragmentSrc] - The source of the fragment shader.
-    * @param {object} [uniforms] - Custom uniforms to use to augment the built-in ones.
-    *
-    * @returns {PIXI.Shader} an shiny new Pixi shader!
-    */
-  def from(): Shader = js.native
-  def from(vertexSrc: String): Shader = js.native
-  def from(vertexSrc: String, fragmentSrc: String): Shader = js.native
-  def from(vertexSrc: String, fragmentSrc: String, uniforms: js.Any): Shader = js.native
+object Shader {
+  @scala.inline
+  def apply(program: Program, uniforms: js.Any): Shader = {
+    val __obj = js.Dynamic.literal(program = program.asInstanceOf[js.Any], uniforms = uniforms.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Shader]
+  }
+  @scala.inline
+  implicit class ShaderOps[Self <: Shader] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withProgram(value: Program): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("program")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUniforms(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniforms")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

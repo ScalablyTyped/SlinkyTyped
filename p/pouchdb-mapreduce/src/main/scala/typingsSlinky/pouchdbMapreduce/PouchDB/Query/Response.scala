@@ -1,6 +1,6 @@
 package typingsSlinky.pouchdbMapreduce.PouchDB.Query
 
-import typingsSlinky.pouchdbMapreduce.AnonDoc
+import typingsSlinky.pouchdbMapreduce.anon.Doc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Response[Content /* <: js.Object */] extends js.Object {
   var offset: Double = js.native
-  var rows: js.Array[AnonDoc[Content]] = js.native
+  var rows: js.Array[Doc[Content]] = js.native
   var total_rows: Double = js.native
 }
 
 object Response {
   @scala.inline
-  def apply[Content](offset: Double, rows: js.Array[AnonDoc[Content]], total_rows: Double): Response[Content] = {
+  def apply[Content](offset: Double, rows: js.Array[Doc[Content]], total_rows: Double): Response[Content] = {
     val __obj = js.Dynamic.literal(offset = offset.asInstanceOf[js.Any], rows = rows.asInstanceOf[js.Any], total_rows = total_rows.asInstanceOf[js.Any])
     __obj.asInstanceOf[Response[Content]]
   }
@@ -31,7 +31,7 @@ object Response {
         ret
     }
     @scala.inline
-    def withRows(value: js.Array[AnonDoc[Content]]): Self[Content] = {
+    def withRows(value: js.Array[Doc[Content]]): Self[Content] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
         ret

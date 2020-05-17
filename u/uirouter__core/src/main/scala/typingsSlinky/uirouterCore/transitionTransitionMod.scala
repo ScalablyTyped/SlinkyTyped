@@ -1,6 +1,8 @@
 package typingsSlinky.uirouterCore
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.uirouterCore.anon.To
+import typingsSlinky.uirouterCore.anon.TypeofTransition
 import typingsSlinky.uirouterCore.interfaceMod.UIInjector
 import typingsSlinky.uirouterCore.pathNodeMod.PathNode
 import typingsSlinky.uirouterCore.rejectFactoryMod.Rejection
@@ -287,7 +289,7 @@ object transitionTransitionMod extends js.Object {
     def injector(): UIInjector = js.native
     def injector(state: StateOrName): UIInjector = js.native
     def injector(state: StateOrName, pathName: String): UIInjector = js.native
-    def is(compare: AnonTo): Boolean = js.native
+    def is(compare: To): Boolean = js.native
     /**
       * Determines whether two transitions are equivalent.
       * @deprecated

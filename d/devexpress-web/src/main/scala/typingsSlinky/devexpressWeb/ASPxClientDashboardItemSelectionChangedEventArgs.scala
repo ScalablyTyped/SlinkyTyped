@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientDashboard.ItemSelectionChanged event.
   */
-@JSGlobal("ASPxClientDashboardItemSelectionChangedEventArgs")
 @js.native
-class ASPxClientDashboardItemSelectionChangedEventArgs () extends ASPxClientEventArgs {
+trait ASPxClientDashboardItemSelectionChangedEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the component name of the dashboard item for which the event was raised.
     */
@@ -18,5 +17,33 @@ class ASPxClientDashboardItemSelectionChangedEventArgs () extends ASPxClientEven
     * Gets currently selected elements.
     */
   def GetCurrentSelection(): js.Array[ASPxClientDashboardItemDataAxisPointTuple] = js.native
+}
+
+object ASPxClientDashboardItemSelectionChangedEventArgs {
+  @scala.inline
+  def apply(GetCurrentSelection: () => js.Array[ASPxClientDashboardItemDataAxisPointTuple], ItemName: String): ASPxClientDashboardItemSelectionChangedEventArgs = {
+    val __obj = js.Dynamic.literal(GetCurrentSelection = js.Any.fromFunction0(GetCurrentSelection), ItemName = ItemName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientDashboardItemSelectionChangedEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientDashboardItemSelectionChangedEventArgsOps[Self <: ASPxClientDashboardItemSelectionChangedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetCurrentSelection(value: () => js.Array[ASPxClientDashboardItemDataAxisPointTuple]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetCurrentSelection")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withItemName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

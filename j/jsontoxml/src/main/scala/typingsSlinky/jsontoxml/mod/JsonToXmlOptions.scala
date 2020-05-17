@@ -1,6 +1,6 @@
 package typingsSlinky.jsontoxml.mod
 
-import typingsSlinky.jsontoxml.AnonStandalone
+import typingsSlinky.jsontoxml.anon.Standalone
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait JsonToXmlOptions extends js.Object {
   var indent: js.UndefOr[String] = js.native
   var prettyPrint: js.UndefOr[Boolean] = js.native
   var removeIllegalNameCharacters: js.UndefOr[Boolean] = js.native
-  var xmlHeader: js.UndefOr[Boolean | AnonStandalone] = js.native
+  var xmlHeader: js.UndefOr[Boolean | Standalone] = js.native
 }
 
 object JsonToXmlOptions {
@@ -101,7 +101,7 @@ object JsonToXmlOptions {
         ret
     }
     @scala.inline
-    def withXmlHeader(value: Boolean | AnonStandalone): Self = {
+    def withXmlHeader(value: Boolean | Standalone): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("xmlHeader")(value.asInstanceOf[js.Any])
         ret

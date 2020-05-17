@@ -1,0 +1,134 @@
+package typingsSlinky.devextreme.anon
+
+import typingsSlinky.devextreme.devextremeStrings.`left bottom`
+import typingsSlinky.devextreme.devextremeStrings.`left top`
+import typingsSlinky.devextreme.devextremeStrings.`right bottom`
+import typingsSlinky.devextreme.devextremeStrings.`right top`
+import typingsSlinky.devextreme.devextremeStrings.auto
+import typingsSlinky.devextreme.devextremeStrings.bottom
+import typingsSlinky.devextreme.devextremeStrings.center
+import typingsSlinky.devextreme.devextremeStrings.down
+import typingsSlinky.devextreme.devextremeStrings.left
+import typingsSlinky.devextreme.devextremeStrings.right
+import typingsSlinky.devextreme.devextremeStrings.top
+import typingsSlinky.devextreme.devextremeStrings.up
+import typingsSlinky.devextreme.mod.DevExpress.positionConfig
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait CloseIcon extends js.Object {
+  var closeIcon: js.UndefOr[String] = js.native
+  var direction: js.UndefOr[auto | up | down] = js.native
+  var icon: js.UndefOr[String] = js.native
+  var label: js.UndefOr[String] = js.native
+  var maxSpeedDialActionCount: js.UndefOr[Double] = js.native
+  var position: js.UndefOr[
+    bottom | center | left | (`left bottom`) | (`left top`) | right | (`right bottom`) | (`right top`) | top | positionConfig | js.Function
+  ] = js.native
+  var shading: js.UndefOr[Boolean] = js.native
+}
+
+object CloseIcon {
+  @scala.inline
+  def apply(): CloseIcon = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[CloseIcon]
+  }
+  @scala.inline
+  implicit class CloseIconOps[Self <: CloseIcon] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloseIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeIcon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCloseIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeIcon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withDirection(value: auto | up | down): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirection: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIcon(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIcon: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabel: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxSpeedDialActionCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSpeedDialActionCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxSpeedDialActionCount: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSpeedDialActionCount")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPosition(
+      value: bottom | center | left | (`left bottom`) | (`left top`) | right | (`right bottom`) | (`right top`) | top | positionConfig | js.Function
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPosition: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withShading(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutShading: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shading")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

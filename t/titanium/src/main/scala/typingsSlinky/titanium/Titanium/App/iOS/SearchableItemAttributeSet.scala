@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * The SearchableItemAttributeSet module defines metadata properties for SearchItem and UserActivity objects.
 			 */
-@JSGlobal("Titanium.App.iOS.SearchableItemAttributeSet")
 @js.native
-class SearchableItemAttributeSet () extends Proxy {
+trait SearchableItemAttributeSet extends Proxy {
   /**
   				 * The date that the item was moved into the current location.
   				 */

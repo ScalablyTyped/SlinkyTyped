@@ -1,6 +1,6 @@
 package typingsSlinky.vis.mod
 
-import typingsSlinky.vis.AnonBackground
+import typingsSlinky.vis.anon.Background
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
 trait Color extends js.Object {
   var background: js.UndefOr[String] = js.native
   var border: js.UndefOr[String] = js.native
-  var highlight: js.UndefOr[String | AnonBackground] = js.native
-  var hover: js.UndefOr[String | AnonBackground] = js.native
+  var highlight: js.UndefOr[String | Background] = js.native
+  var hover: js.UndefOr[String | Background] = js.native
 }
 
 object Color {
@@ -50,7 +50,7 @@ object Color {
         ret
     }
     @scala.inline
-    def withHighlight(value: String | AnonBackground): Self = {
+    def withHighlight(value: String | Background): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(value.asInstanceOf[js.Any])
         ret
@@ -62,7 +62,7 @@ object Color {
         ret
     }
     @scala.inline
-    def withHover(value: String | AnonBackground): Self = {
+    def withHover(value: String | Background): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hover")(value.asInstanceOf[js.Any])
         ret

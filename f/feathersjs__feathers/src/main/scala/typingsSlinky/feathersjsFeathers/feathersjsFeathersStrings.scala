@@ -1,12 +1,13 @@
 package typingsSlinky.feathersjsFeathers
 
+import typingsSlinky.feathersjsFeathers.mod.SkipSymbol
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object feathersjsFeathersStrings {
   @js.native
-  sealed trait __feathersSkipHooks extends js.Object
+  sealed trait __feathersSkipHooks extends SkipSymbol
   
   @js.native
   sealed trait after extends js.Object

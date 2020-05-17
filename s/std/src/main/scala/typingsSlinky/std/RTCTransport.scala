@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait RTCTransport extends js.Object
 
+object RTCTransport {
+  @scala.inline
+  implicit def apply(value: RTCDtlsTransport): RTCTransport = value.asInstanceOf[RTCTransport]
+  @scala.inline
+  implicit def apply(value: RTCSrtpSdesTransport): RTCTransport = value.asInstanceOf[RTCTransport]
+}
+

@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignPro.mod
 
-import typingsSlinky.antDesignPro.TypeofAuthorized
+import typingsSlinky.antDesignPro.anon.TypeofAuthorized
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

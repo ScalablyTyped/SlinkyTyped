@@ -1,6 +1,6 @@
 package typingsSlinky.rbx.navbarContainerMod
 
-import typingsSlinky.rbx.AnonTransparent
+import typingsSlinky.rbx.anon.Transparent
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +22,7 @@ class NavbarContainer protected ()
 @JSImport("rbx/components/navbar/navbar-container", "NavbarContainer")
 @js.native
 object NavbarContainer extends js.Object {
-  var defaultProps: AnonTransparent = js.native
+  var defaultProps: Transparent = js.native
   var displayName: String = js.native
 }
 

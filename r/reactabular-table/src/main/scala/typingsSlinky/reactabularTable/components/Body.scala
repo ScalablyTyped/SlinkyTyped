@@ -2,8 +2,8 @@ package typingsSlinky.reactabularTable.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactabularTable.AnonRowIndexNumber
-import typingsSlinky.reactabularTable.PartialCSSStyleDeclaratio
+import typingsSlinky.reactabularTable.anon.PartialCSSStyleDeclaratio
+import typingsSlinky.reactabularTable.anon.RowIndexNumber
 import typingsSlinky.reactabularTable.mod.BodyProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,7 @@ object Body {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def onRow(value: (/* row */ js.Any, /* props */ AnonRowIndexNumber) => _): this.type = set("onRow", js.Any.fromFunction2(value))
+    def onRow(value: (/* row */ js.Any, /* props */ RowIndexNumber) => _): this.type = set("onRow", js.Any.fromFunction2(value))
     @scala.inline
     def style(value: PartialCSSStyleDeclaratio): this.type = set("style", value.asInstanceOf[js.Any])
   }

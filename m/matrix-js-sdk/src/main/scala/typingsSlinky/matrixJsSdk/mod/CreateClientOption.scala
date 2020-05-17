@@ -1,7 +1,7 @@
 package typingsSlinky.matrixJsSdk.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.matrixJsSdk.AnonGetAccessToken
+import typingsSlinky.matrixJsSdk.anon.GetAccessToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait CreateClientOption extends js.Object {
   var fallbackICEServerAllowed: js.UndefOr[Boolean] = js.native
   var forceTURN: js.UndefOr[Boolean] = js.native
   var idBaseUrl: js.UndefOr[String] = js.native
-  var identityServer: js.UndefOr[AnonGetAccessToken] = js.native
+  var identityServer: js.UndefOr[GetAccessToken] = js.native
   var localTimeoutMs: js.UndefOr[Double] = js.native
   var queryParams: js.UndefOr[js.Any] = js.native
   var request: js.UndefOr[js.Any] = js.native
@@ -151,7 +151,7 @@ object CreateClientOption {
         ret
     }
     @scala.inline
-    def withIdentityServer(value: AnonGetAccessToken): Self = {
+    def withIdentityServer(value: GetAccessToken): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("identityServer")(value.asInstanceOf[js.Any])
         ret

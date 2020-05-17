@@ -1,6 +1,6 @@
 package typingsSlinky.rotJs.astarMod
 
-import typingsSlinky.rotJs.PartialOptions
+import typingsSlinky.rotJs.anon.PartialOptions
 import typingsSlinky.rotJs.pathPathMod.PassableCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`

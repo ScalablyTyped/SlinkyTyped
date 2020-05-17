@@ -1,7 +1,7 @@
 package typingsSlinky.babylonjs.BABYLON
 
-import typingsSlinky.babylonjs.AnonCOMPLETIONSTATUSKHR
 import typingsSlinky.babylonjs.EXTDisjointTimerQuery
+import typingsSlinky.babylonjs.anon.COMPLETIONSTATUSKHR
 import typingsSlinky.std.EXTTextureFilterAnisotropic
 import typingsSlinky.std.WEBGLCompressedTextureS3tc
 import scala.scalajs.js
@@ -63,7 +63,7 @@ trait EngineCapabilities extends js.Object {
   /** Defines if oculus multiview is supported (https://developer.oculus.com/documentation/oculus-browser/latest/concepts/browser-multiview/) */
   var oculusMultiview: js.UndefOr[js.Any] = js.native
   /** Function used to let the system compiles shaders in background */
-  var parallelShaderCompile: js.UndefOr[AnonCOMPLETIONSTATUSKHR] = js.native
+  var parallelShaderCompile: js.UndefOr[COMPLETIONSTATUSKHR] = js.native
   /** Defines if pvrtc texture compression is supported */
   var pvrtc: js.Any = js.native
   /** Defines if s3tc texture compression is supported */
@@ -382,7 +382,7 @@ object EngineCapabilities {
         ret
     }
     @scala.inline
-    def withParallelShaderCompile(value: AnonCOMPLETIONSTATUSKHR): Self = {
+    def withParallelShaderCompile(value: COMPLETIONSTATUSKHR): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parallelShaderCompile")(value.asInstanceOf[js.Any])
         ret

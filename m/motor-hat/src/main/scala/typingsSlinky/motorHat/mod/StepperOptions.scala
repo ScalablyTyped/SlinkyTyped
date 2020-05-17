@@ -1,6 +1,6 @@
 package typingsSlinky.motorHat.mod
 
-import typingsSlinky.motorHat.AnonW1
+import typingsSlinky.motorHat.anon.W1
 import typingsSlinky.motorHat.motorHatNumbers.`16`
 import typingsSlinky.motorHat.motorHatNumbers.`8`
 import typingsSlinky.motorHat.motorHatStrings.double
@@ -25,7 +25,7 @@ trait StepperOptions extends js.Object {
   /**
     * Pin definition for the motor
     */
-  var pins: AnonW1 = js.native
+  var pins: W1 = js.native
   /**
     * Pulses per second
     */
@@ -54,7 +54,7 @@ trait StepperOptions extends js.Object {
 
 object StepperOptions {
   @scala.inline
-  def apply(pins: AnonW1, pwm: js.Object): StepperOptions = {
+  def apply(pins: W1, pwm: js.Object): StepperOptions = {
     val __obj = js.Dynamic.literal(pins = pins.asInstanceOf[js.Any], pwm = pwm.asInstanceOf[js.Any])
     __obj.asInstanceOf[StepperOptions]
   }
@@ -65,7 +65,7 @@ object StepperOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPins(value: AnonW1): Self = {
+    def withPins(value: W1): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pins")(value.asInstanceOf[js.Any])
         ret

@@ -1,13 +1,13 @@
 package typingsSlinky.mediumEditor.MediumEditor
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.mediumEditor.AnonProp
+import typingsSlinky.mediumEditor.anon.Prop
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ButtonOptions extends js.Object {
+trait ButtonOptions extends Button {
   var action: js.UndefOr[String] = js.native
   var aria: js.UndefOr[String] = js.native
   var attrs: js.UndefOr[StringDictionary[String]] = js.native
@@ -15,7 +15,7 @@ trait ButtonOptions extends js.Object {
   var contentDefault: js.UndefOr[String] = js.native
   var contentFA: js.UndefOr[String] = js.native
   var name: js.UndefOr[String] = js.native
-  var style: js.UndefOr[AnonProp] = js.native
+  var style: js.UndefOr[Prop] = js.native
   var tagNames: js.UndefOr[js.Array[String]] = js.native
   var useQueryState: js.UndefOr[Boolean] = js.native
 }
@@ -117,7 +117,7 @@ object ButtonOptions {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonProp): Self = {
+    def withStyle(value: Prop): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

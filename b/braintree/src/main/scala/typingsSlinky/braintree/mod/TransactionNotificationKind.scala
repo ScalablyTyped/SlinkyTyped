@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.braintree.braintreeStrings.transaction_settled
   - typingsSlinky.braintree.braintreeStrings.transaction_settlement_declined
 */
-trait TransactionNotificationKind extends _WebhookNotificationKind
+trait TransactionNotificationKind extends WebhookNotificationKind
 
 object TransactionNotificationKind {
   @scala.inline

@@ -1,5 +1,7 @@
 package typingsSlinky.tslint
 
+import typingsSlinky.tslint.anon.FnCall
+import typingsSlinky.tslint.anon.FnCallSuppliedConfigFilePathInputFilePath
 import typingsSlinky.tslint.configurationMod.IConfigurationFile
 import typingsSlinky.tslint.configurationMod.IConfigurationLoadResult
 import typingsSlinky.tslint.mod.ILinterOptions

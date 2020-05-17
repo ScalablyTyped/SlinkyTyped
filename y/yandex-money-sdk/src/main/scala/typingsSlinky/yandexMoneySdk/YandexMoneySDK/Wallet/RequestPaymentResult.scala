@@ -1,6 +1,6 @@
 package typingsSlinky.yandexMoneySdk.YandexMoneySDK.Wallet
 
-import typingsSlinky.yandexMoneySdk.AnonCards
+import typingsSlinky.yandexMoneySdk.anon.Cards
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait RequestPaymentResult extends js.Object {
   var contract_amount: js.UndefOr[Double] = js.native
   var error: js.UndefOr[String] = js.native
   var ext_action_uri: js.UndefOr[String] = js.native
-  var money_source: js.UndefOr[AnonCards] = js.native
+  var money_source: js.UndefOr[Cards] = js.native
   var protection_code: js.UndefOr[String] = js.native
   var recipient_account_status: js.UndefOr[String] = js.native
   var recipient_account_type: js.UndefOr[String] = js.native
@@ -99,7 +99,7 @@ object RequestPaymentResult {
         ret
     }
     @scala.inline
-    def withMoney_source(value: AnonCards): Self = {
+    def withMoney_source(value: Cards): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("money_source")(value.asInstanceOf[js.Any])
         ret

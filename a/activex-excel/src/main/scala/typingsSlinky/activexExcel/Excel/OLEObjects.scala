@@ -6,9 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Excel.OLEObjects")
 @js.native
-class OLEObjects protected () extends js.Object {
+trait OLEObjects extends js.Object {
   val Application: typingsSlinky.activexExcel.Excel.Application = js.native
   var AutoLoad: Boolean = js.native
   val Border: typingsSlinky.activexExcel.Excel.Border = js.native

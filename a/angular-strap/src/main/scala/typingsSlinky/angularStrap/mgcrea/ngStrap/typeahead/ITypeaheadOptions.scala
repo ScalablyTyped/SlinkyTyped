@@ -1,6 +1,6 @@
 package typingsSlinky.angularStrap.mgcrea.ngStrap.typeahead
 
-import typingsSlinky.angularStrap.AnonHide
+import typingsSlinky.angularStrap.anon.Hide
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait ITypeaheadOptions extends js.Object {
   var autoSelect: js.UndefOr[Boolean] = js.native
   var comparator: js.UndefOr[String] = js.native
   var container: js.UndefOr[String | Boolean] = js.native
-  var delay: js.UndefOr[Double | AnonHide] = js.native
+  var delay: js.UndefOr[Double | Hide] = js.native
   var html: js.UndefOr[Boolean] = js.native
   var id: js.UndefOr[String] = js.native
   var limit: js.UndefOr[Double] = js.native
@@ -89,7 +89,7 @@ object ITypeaheadOptions {
         ret
     }
     @scala.inline
-    def withDelay(value: Double | AnonHide): Self = {
+    def withDelay(value: Double | Hide): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
         ret

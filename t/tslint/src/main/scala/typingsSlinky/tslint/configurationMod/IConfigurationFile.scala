@@ -1,8 +1,8 @@
 package typingsSlinky.tslint.configurationMod
 
 import typingsSlinky.std.Map
-import typingsSlinky.tslint.PartialIOptions
-import typingsSlinky.tslint.PartialexcludeArraystring
+import typingsSlinky.tslint.anon.PartialIOptions
+import typingsSlinky.tslint.anon.PartialexcludeArraystring
 import typingsSlinky.tslint.ruleMod.RuleSeverity
 import scala.scalajs.js
 import scala.scalajs.js.`|`

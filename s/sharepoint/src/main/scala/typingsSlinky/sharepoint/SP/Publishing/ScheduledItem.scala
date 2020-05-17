@@ -6,9 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("SP.Publishing.ScheduledItem")
 @js.native
-class ScheduledItem () extends ClientObject {
+trait ScheduledItem extends ClientObject {
   def get_endDate(): js.Date = js.native
   def get_listItem(): ListItem[_] = js.native
   def get_startDate(): js.Date = js.native

@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -561,7 +561,7 @@ object IgZoomSlider {
         ret
     }
     @scala.inline
-    def withPropertyChanged(value: (/* event */ Event_, /* ui */ PropertyChangedEventUIParam) => Unit): Self = {
+    def withPropertyChanged(value: (/* event */ Event, /* ui */ PropertyChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("propertyChanged")(js.Any.fromFunction2(value))
         ret
@@ -621,7 +621,7 @@ object IgZoomSlider {
         ret
     }
     @scala.inline
-    def withResolvingAxisValue(value: (/* event */ Event_, /* ui */ ResolvingAxisValueEventUIParam) => Unit): Self = {
+    def withResolvingAxisValue(value: (/* event */ Event, /* ui */ ResolvingAxisValueEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resolvingAxisValue")(js.Any.fromFunction2(value))
         ret
@@ -705,7 +705,7 @@ object IgZoomSlider {
         ret
     }
     @scala.inline
-    def withWindowRectChanged(value: (/* event */ Event_, /* ui */ WindowRectChangedEventUIParam) => Unit): Self = {
+    def withWindowRectChanged(value: (/* event */ Event, /* ui */ WindowRectChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("windowRectChanged")(js.Any.fromFunction2(value))
         ret

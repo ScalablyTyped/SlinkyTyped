@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Class_HandlerEx")
 @js.native
-class ClassHandlerEx () extends ClassHandler {
+trait ClassHandlerEx extends ClassHandler {
   /**
   	 * class prop 
   	 *

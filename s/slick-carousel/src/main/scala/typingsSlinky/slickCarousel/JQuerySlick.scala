@@ -1,6 +1,7 @@
 package typingsSlinky.slickCarousel
 
 import org.scalablytyped.runtime.NumberDictionary
+import typingsSlinky.slickCarousel.anon.CurX
 import typingsSlinky.slickCarousel.slickCarouselBooleans.`false`
 import typingsSlinky.slickCarousel.slickCarouselStrings.MozTransform
 import typingsSlinky.slickCarousel.slickCarouselStrings.MozTransition
@@ -154,7 +155,7 @@ object JQuerySlick {
     slideOffset: Double,
     sliding: Boolean,
     swiping: Boolean,
-    touchObject: AnonCurX,
+    touchObject: CurX,
     transformsEnabled: Boolean,
     unslicked: Boolean,
     visibilityChange: visibilitychange | mozvisibilitychange | webkitvisibilitychange,

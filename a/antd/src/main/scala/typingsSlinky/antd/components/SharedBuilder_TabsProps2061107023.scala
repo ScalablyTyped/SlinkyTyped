@@ -7,7 +7,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.AnonInkBar
+import typingsSlinky.antd.anon.InkBar
 import typingsSlinky.antd.antdStrings.add
 import typingsSlinky.antd.antdStrings.default
 import typingsSlinky.antd.antdStrings.large
@@ -28,7 +28,7 @@ class SharedBuilder_TabsProps2061107023[R <: js.Object] (val args: js.Array[js.A
   @scala.inline
   def activeKey(value: String): this.type = set("activeKey", value.asInstanceOf[js.Any])
   @scala.inline
-  def animated(value: Boolean | AnonInkBar): this.type = set("animated", value.asInstanceOf[js.Any])
+  def animated(value: Boolean | InkBar): this.type = set("animated", value.asInstanceOf[js.Any])
   @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   @scala.inline

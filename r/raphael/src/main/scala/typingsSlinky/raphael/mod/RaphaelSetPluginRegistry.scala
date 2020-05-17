@@ -2,8 +2,9 @@ package typingsSlinky.raphael.mod
 
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
-import typingsSlinky.raphael.PartialRaphaelAttributes
-import typingsSlinky.raphael.PartialRaphaelGlowSetting
+import org.scalajs.dom.raw.Window
+import typingsSlinky.raphael.anon.PartialRaphaelAttributes
+import typingsSlinky.raphael.anon.PartialRaphaelGlowSetting
 import typingsSlinky.raphael.raphaelStrings.`arrow-end`
 import typingsSlinky.raphael.raphaelStrings.`clip-rect`
 import typingsSlinky.raphael.raphaelStrings.`fill-opacity`
@@ -40,7 +41,6 @@ import typingsSlinky.raphael.raphaelStrings.x
 import typingsSlinky.raphael.raphaelStrings.y
 import typingsSlinky.std.Parameters
 import typingsSlinky.std.ReturnType
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -214,28 +214,28 @@ trait RaphaelSetPluginRegistry[TTechnology /* <: RaphaelTechnology */] extends j
     Parameters[
       js.Function2[
         /* callback */ js.ThisFunction1[
-          /* this */ Window_, 
+          /* this */ Window, 
           /* element */ RaphaelElement[
             TTechnology, 
             /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
           ], 
           Boolean | Unit
         ], 
-        /* thisArg */ js.UndefOr[Window_], 
+        /* thisArg */ js.UndefOr[Window], 
         this.type
       ]
     ], 
     ReturnType[
       js.Function2[
         /* callback */ js.ThisFunction1[
-          /* this */ Window_, 
+          /* this */ Window, 
           /* element */ RaphaelElement[
             TTechnology, 
             /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
           ], 
           Boolean | Unit
         ], 
-        /* thisArg */ js.UndefOr[Window_], 
+        /* thisArg */ js.UndefOr[Window], 
         this.type
       ]
     ]
@@ -998,28 +998,28 @@ object RaphaelSetPluginRegistry {
       Parameters[
         js.Function2[
           /* callback */ js.ThisFunction1[
-            /* this */ Window_, 
+            /* this */ Window, 
             /* element */ RaphaelElement[
               TTechnology, 
               /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
             ], 
             Boolean | Unit
           ], 
-          /* thisArg */ js.UndefOr[Window_], 
+          /* thisArg */ js.UndefOr[Window], 
           RaphaelSetPluginRegistry[TTechnology]
         ]
       ], 
       ReturnType[
         js.Function2[
           /* callback */ js.ThisFunction1[
-            /* this */ Window_, 
+            /* this */ Window, 
             /* element */ RaphaelElement[
               TTechnology, 
               /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
             ], 
             Boolean | Unit
           ], 
-          /* thisArg */ js.UndefOr[Window_], 
+          /* thisArg */ js.UndefOr[Window], 
           RaphaelSetPluginRegistry[TTechnology]
         ]
       ]
@@ -1868,7 +1868,7 @@ object RaphaelSetPluginRegistry {
           TTechnology, 
           Parameters[
             js.Function2[
-              /* attributeName */ `arrow-end` | `clip-rect` | cursor | cx | cy | fill | `fill-opacity` | font | `font-family` | `font-size` | `font-weight` | height | href | opacity | path | r_ | rx | ry | src | stroke | `stroke-dasharray` | `stroke-linecap` | `stroke-linejoin` | `stroke-miterlimit` | `stroke-opacity` | `stroke-width` | target | text | `text-anchor` | title | transform | width | x | y, 
+              /* attributeName */ `arrow-end` | `clip-rect` | cursor | cx | cy | fill | `fill-opacity` | font | `font-family` | `font-size` | `font-weight` | height | href | opacity | path | r_ | rx | ry | src | stroke | `stroke-dasharray` | `stroke-linecap` | `stroke-linejoin` | `stroke-miterlimit` | `stroke-opacity` | `stroke-width` | target | text | `text-anchor` | title | transform | width | typingsSlinky.raphael.raphaelStrings.x | y, 
               /* attributeValue */ js.UndefOr[
                 /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelAttributes['arrow-end' | 'clip-rect' | 'cursor' | 'cx' | 'cy' | 'fill' | 'fill-opacity' | 'font' | 'font-family' | 'font-size' | 'font-weight' | 'height' | 'href' | 'opacity' | 'path' | 'r' | 'rx' | 'ry' | 'src' | 'stroke' | 'stroke-dasharray' | 'stroke-linecap' | 'stroke-linejoin' | 'stroke-miterlimit' | 'stroke-opacity' | 'stroke-width' | 'target' | 'text' | 'text-anchor' | 'title' | 'transform' | 'width' | 'x' | 'y'] */ js.Any
               ], 
@@ -1877,7 +1877,7 @@ object RaphaelSetPluginRegistry {
           ], 
           ReturnType[
             js.Function2[
-              /* attributeName */ `arrow-end` | `clip-rect` | cursor | cx | cy | fill | `fill-opacity` | font | `font-family` | `font-size` | `font-weight` | height | href | opacity | path | r_ | rx | ry | src | stroke | `stroke-dasharray` | `stroke-linecap` | `stroke-linejoin` | `stroke-miterlimit` | `stroke-opacity` | `stroke-width` | target | text | `text-anchor` | title | transform | width | x | y, 
+              /* attributeName */ `arrow-end` | `clip-rect` | cursor | cx | cy | fill | `fill-opacity` | font | `font-family` | `font-size` | `font-weight` | height | href | opacity | path | r_ | rx | ry | src | stroke | `stroke-dasharray` | `stroke-linecap` | `stroke-linejoin` | `stroke-miterlimit` | `stroke-opacity` | `stroke-width` | target | text | `text-anchor` | title | transform | width | typingsSlinky.raphael.raphaelStrings.x | y, 
               /* attributeValue */ js.UndefOr[
                 /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelAttributes['arrow-end' | 'clip-rect' | 'cursor' | 'cx' | 'cy' | 'fill' | 'fill-opacity' | 'font' | 'font-family' | 'font-size' | 'font-weight' | 'height' | 'href' | 'opacity' | 'path' | 'r' | 'rx' | 'ry' | 'src' | 'stroke' | 'stroke-dasharray' | 'stroke-linecap' | 'stroke-linejoin' | 'stroke-miterlimit' | 'stroke-opacity' | 'stroke-width' | 'target' | 'text' | 'text-anchor' | 'title' | 'transform' | 'width' | 'x' | 'y'] */ js.Any
               ], 
@@ -2045,28 +2045,28 @@ object RaphaelSetPluginRegistry {
           Parameters[
             js.Function2[
               /* callback */ js.ThisFunction1[
-                /* this */ Window_, 
+                /* this */ Window, 
                 /* element */ RaphaelElement[
                   TTechnology, 
                   /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
                 ], 
                 Boolean | Unit
               ], 
-              /* thisArg */ js.UndefOr[Window_], 
+              /* thisArg */ js.UndefOr[Window], 
               RaphaelSetPluginRegistry[TTechnology]
             ]
           ], 
           ReturnType[
             js.Function2[
               /* callback */ js.ThisFunction1[
-                /* this */ Window_, 
+                /* this */ Window, 
                 /* element */ RaphaelElement[
                   TTechnology, 
                   /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
                 ], 
                 Boolean | Unit
               ], 
-              /* thisArg */ js.UndefOr[Window_], 
+              /* thisArg */ js.UndefOr[Window], 
               RaphaelSetPluginRegistry[TTechnology]
             ]
           ]

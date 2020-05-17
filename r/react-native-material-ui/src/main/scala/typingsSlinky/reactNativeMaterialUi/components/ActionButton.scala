@@ -3,8 +3,7 @@ package typingsSlinky.reactNativeMaterialUi.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNativeMaterialUi.AnonContainer
-import typingsSlinky.reactNativeMaterialUi.AnonIcon
+import typingsSlinky.reactNativeMaterialUi.anon.Container
 import typingsSlinky.reactNativeMaterialUi.mod.ActionButtonProps
 import typingsSlinky.reactNativeMaterialUi.reactNativeMaterialUiStrings.speedDial
 import typingsSlinky.reactNativeMaterialUi.reactNativeMaterialUiStrings.toolbar
@@ -22,7 +21,7 @@ object ActionButton {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeMaterialUi.mod.ActionButton] {
     @scala.inline
-    def actions(value: js.Array[AnonIcon | ReactElement | String]): this.type = set("actions", value.asInstanceOf[js.Any])
+    def actions(value: js.Array[ReactElement | typingsSlinky.reactNativeMaterialUi.anon.Icon | String]): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     @scala.inline
@@ -32,7 +31,7 @@ object ActionButton {
     @scala.inline
     def onPress(value: () => Unit): this.type = set("onPress", js.Any.fromFunction0(value))
     @scala.inline
-    def style(value: AnonContainer): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: Container): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def transition(value: toolbar | speedDial): this.type = set("transition", value.asInstanceOf[js.Any])
   }

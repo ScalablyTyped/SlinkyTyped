@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ReactTestRendererJSON extends js.Object {
+trait ReactTestRendererJSON extends ReactTestRendererNode {
   var children: Null | js.Array[ReactTestRendererNode] = js.native
   var props: StringDictionary[js.Any] = js.native
   var `type`: String = js.native

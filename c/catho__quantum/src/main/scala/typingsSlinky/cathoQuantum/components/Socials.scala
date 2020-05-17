@@ -2,8 +2,8 @@ package typingsSlinky.cathoQuantum.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonName
-import typingsSlinky.cathoQuantum.AnonSpacingObject
+import typingsSlinky.cathoQuantum.anon.Name
+import typingsSlinky.cathoQuantum.anon.SpacingObject
 import typingsSlinky.cathoQuantum.socialsMod.NonEmptyArray
 import typingsSlinky.cathoQuantum.socialsMod.SocialsProps
 import typingsSlinky.cathoQuantum.socialsMod.default
@@ -23,14 +23,14 @@ object Socials {
     @scala.inline
     def size(value: String): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline
-    def theme(value: AnonSpacingObject): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: SpacingObject): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
     def withBox(value: Boolean): this.type = set("withBox", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SocialsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(items: NonEmptyArray[AnonName]): Builder = {
+  def apply(items: NonEmptyArray[Name]): Builder = {
     val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[SocialsProps]))
   }

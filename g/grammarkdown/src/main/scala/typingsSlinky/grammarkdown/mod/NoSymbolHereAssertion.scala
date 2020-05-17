@@ -25,35 +25,8 @@ class NoSymbolHereAssertion protected ()
   def this(
     openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],
     noKeyword: typingsSlinky.grammarkdown.nodesMod.Token[NoKeyword],
-    symbols: js.UndefOr[scala.Nothing],
-    hereKeyword: typingsSlinky.grammarkdown.nodesMod.Token[HereKeyword]
-  ) = this()
-  def this(
-    openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],
-    noKeyword: typingsSlinky.grammarkdown.nodesMod.Token[NoKeyword],
     symbols: js.Array[PrimarySymbol],
     hereKeyword: typingsSlinky.grammarkdown.nodesMod.Token[HereKeyword]
-  ) = this()
-  def this(
-    openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],
-    noKeyword: typingsSlinky.grammarkdown.nodesMod.Token[NoKeyword],
-    symbols: js.UndefOr[scala.Nothing],
-    hereKeyword: js.UndefOr[scala.Nothing],
-    closeBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[CloseBracketToken]
-  ) = this()
-  def this(
-    openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],
-    noKeyword: typingsSlinky.grammarkdown.nodesMod.Token[NoKeyword],
-    symbols: js.UndefOr[scala.Nothing],
-    hereKeyword: typingsSlinky.grammarkdown.nodesMod.Token[HereKeyword],
-    closeBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[CloseBracketToken]
-  ) = this()
-  def this(
-    openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],
-    noKeyword: typingsSlinky.grammarkdown.nodesMod.Token[NoKeyword],
-    symbols: js.Array[PrimarySymbol],
-    hereKeyword: js.UndefOr[scala.Nothing],
-    closeBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[CloseBracketToken]
   ) = this()
   def this(
     openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],

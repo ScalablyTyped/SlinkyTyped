@@ -1,14 +1,14 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonAddedItems
-import typingsSlinky.devextreme.AnonEvent
-import typingsSlinky.devextreme.AnonItemData
-import typingsSlinky.devextreme.AnonItemElement
+import typingsSlinky.devextreme.anon.AddedItems
+import typingsSlinky.devextreme.anon.Event
+import typingsSlinky.devextreme.anon.ItemData
+import typingsSlinky.devextreme.anon.ItemElement
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,15 +37,15 @@ trait CollectionWidgetOptions[T] extends WidgetOptions[T] {
   /** The text or HTML markup displayed by the widget if the item collection is empty. */
   var noDataText: js.UndefOr[String] = js.native
   /** A function that is executed when a collection item is clicked or tapped. */
-  var onItemClick: js.UndefOr[(js.Function1[/* e */ AnonEvent[T], _]) | String] = js.native
+  var onItemClick: js.UndefOr[(js.Function1[/* e */ Event[T], _]) | String] = js.native
   /** A function that is executed when a collection item is right-clicked or pressed. */
-  var onItemContextMenu: js.UndefOr[js.Function1[/* e */ AnonEvent[T], _]] = js.native
+  var onItemContextMenu: js.UndefOr[js.Function1[/* e */ Event[T], _]] = js.native
   /** A function that is executed when a collection item has been held for a specified period. */
-  var onItemHold: js.UndefOr[js.Function1[/* e */ AnonItemData[T], _]] = js.native
+  var onItemHold: js.UndefOr[js.Function1[/* e */ ItemData[T], _]] = js.native
   /** A function that is executed after a collection item is rendered. */
-  var onItemRendered: js.UndefOr[js.Function1[/* e */ AnonItemElement[T], _]] = js.native
+  var onItemRendered: js.UndefOr[js.Function1[/* e */ ItemElement[T], _]] = js.native
   /** A function that is executed when a collection item is selected or selection is canceled. */
-  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonAddedItems[T], _]] = js.native
+  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ AddedItems[T], _]] = js.native
   /** The index of the currently selected widget item. */
   var selectedIndex: js.UndefOr[Double] = js.native
   /** The selected item object. */
@@ -162,13 +162,13 @@ object CollectionWidgetOptions {
         ret
     }
     @scala.inline
-    def withOnItemClickFunction1(value: /* e */ AnonEvent[T] => _): Self[T] = {
+    def withOnItemClickFunction1(value: /* e */ Event[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnItemClick(value: (js.Function1[/* e */ AnonEvent[T], _]) | String): Self[T] = {
+    def withOnItemClick(value: (js.Function1[/* e */ Event[T], _]) | String): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(value.asInstanceOf[js.Any])
         ret
@@ -180,7 +180,7 @@ object CollectionWidgetOptions {
         ret
     }
     @scala.inline
-    def withOnItemContextMenu(value: /* e */ AnonEvent[T] => _): Self[T] = {
+    def withOnItemContextMenu(value: /* e */ Event[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemContextMenu")(js.Any.fromFunction1(value))
         ret
@@ -192,7 +192,7 @@ object CollectionWidgetOptions {
         ret
     }
     @scala.inline
-    def withOnItemHold(value: /* e */ AnonItemData[T] => _): Self[T] = {
+    def withOnItemHold(value: /* e */ ItemData[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemHold")(js.Any.fromFunction1(value))
         ret
@@ -204,7 +204,7 @@ object CollectionWidgetOptions {
         ret
     }
     @scala.inline
-    def withOnItemRendered(value: /* e */ AnonItemElement[T] => _): Self[T] = {
+    def withOnItemRendered(value: /* e */ ItemElement[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemRendered")(js.Any.fromFunction1(value))
         ret
@@ -216,7 +216,7 @@ object CollectionWidgetOptions {
         ret
     }
     @scala.inline
-    def withOnSelectionChanged(value: /* e */ AnonAddedItems[T] => _): Self[T] = {
+    def withOnSelectionChanged(value: /* e */ AddedItems[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.Any.fromFunction1(value))
         ret

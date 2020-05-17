@@ -1,6 +1,7 @@
 package typingsSlinky.sharepoint
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.sharepoint.anon.Department
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +13,7 @@ trait ISPClientPeoplePickerEntity
   var Description: js.UndefOr[String] = js.native
   var DisplayText: js.UndefOr[String] = js.native
   var DomainText: js.UndefOr[String] = js.native
-  var EntityData: js.UndefOr[AnonDepartment] = js.native
+  var EntityData: js.UndefOr[Department] = js.native
   var EntityType: js.UndefOr[String] = js.native
   var IsResolved: js.UndefOr[Boolean] = js.native
   var Key: js.UndefOr[String] = js.native
@@ -76,7 +77,7 @@ object ISPClientPeoplePickerEntity {
         ret
     }
     @scala.inline
-    def withEntityData(value: AnonDepartment): Self = {
+    def withEntityData(value: Department): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("EntityData")(value.asInstanceOf[js.Any])
         ret

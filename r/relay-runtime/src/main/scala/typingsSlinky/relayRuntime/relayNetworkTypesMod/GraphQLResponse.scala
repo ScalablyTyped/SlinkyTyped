@@ -12,14 +12,8 @@ trait GraphQLResponse extends js.Object
 
 object GraphQLResponse {
   @scala.inline
-  def GraphQLResponseWithData(data: PayloadData): GraphQLResponse = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    __obj.asInstanceOf[GraphQLResponse]
-  }
+  implicit def apply(value: GraphQLResponseWithData): GraphQLResponse = value.asInstanceOf[GraphQLResponse]
   @scala.inline
-  def GraphQLResponseWithoutData(errors: js.Array[PayloadError]): GraphQLResponse = {
-    val __obj = js.Dynamic.literal(errors = errors.asInstanceOf[js.Any])
-    __obj.asInstanceOf[GraphQLResponse]
-  }
+  implicit def apply(value: GraphQLResponseWithoutData): GraphQLResponse = value.asInstanceOf[GraphQLResponse]
 }
 

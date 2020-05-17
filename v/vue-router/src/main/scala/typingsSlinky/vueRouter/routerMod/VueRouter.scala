@@ -3,7 +3,7 @@ package typingsSlinky.vueRouter.routerMod
 import typingsSlinky.vue.pluginMod.PluginFunction
 import typingsSlinky.vue.vueMod.Vue
 import typingsSlinky.vue.vueMod.VueConstructor
-import typingsSlinky.vueRouter.AnonHref
+import typingsSlinky.vueRouter.anon.Href
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,9 +38,9 @@ class VueRouter () extends js.Object {
   def replace(location: RawLocation, onComplete: js.Function, onAbort: ErrorHandler): Unit = js.native
   @JSName("replace")
   def replace_Promise(location: RawLocation): js.Promise[Route] = js.native
-  def resolve(to: RawLocation): AnonHref = js.native
-  def resolve(to: RawLocation, current: Route): AnonHref = js.native
-  def resolve(to: RawLocation, current: Route, append: Boolean): AnonHref = js.native
+  def resolve(to: RawLocation): Href = js.native
+  def resolve(to: RawLocation, current: Route): Href = js.native
+  def resolve(to: RawLocation, current: Route, append: Boolean): Href = js.native
 }
 
 /* static members */

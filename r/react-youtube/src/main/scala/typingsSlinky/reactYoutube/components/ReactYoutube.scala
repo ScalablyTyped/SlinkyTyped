@@ -2,9 +2,9 @@ package typingsSlinky.reactYoutube.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactYoutube.AnonData
-import typingsSlinky.reactYoutube.AnonDataTarget
-import typingsSlinky.reactYoutube.AnonTarget
+import typingsSlinky.reactYoutube.anon.Data
+import typingsSlinky.reactYoutube.anon.DataTarget
+import typingsSlinky.reactYoutube.anon.Target
 import typingsSlinky.reactYoutube.mod.Options
 import typingsSlinky.reactYoutube.mod.YouTubeProps
 import typingsSlinky.reactYoutube.mod.default
@@ -28,21 +28,21 @@ object ReactYoutube {
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
-    def onEnd(value: /* event */ AnonData => Unit): this.type = set("onEnd", js.Any.fromFunction1(value))
+    def onEnd(value: /* event */ Data => Unit): this.type = set("onEnd", js.Any.fromFunction1(value))
     @scala.inline
-    def onError(value: /* event */ AnonData => Unit): this.type = set("onError", js.Any.fromFunction1(value))
+    def onError(value: /* event */ Data => Unit): this.type = set("onError", js.Any.fromFunction1(value))
     @scala.inline
-    def onPause(value: /* event */ AnonData => Unit): this.type = set("onPause", js.Any.fromFunction1(value))
+    def onPause(value: /* event */ Data => Unit): this.type = set("onPause", js.Any.fromFunction1(value))
     @scala.inline
-    def onPlay(value: /* event */ AnonData => Unit): this.type = set("onPlay", js.Any.fromFunction1(value))
+    def onPlay(value: /* event */ Data => Unit): this.type = set("onPlay", js.Any.fromFunction1(value))
     @scala.inline
-    def onPlaybackQualityChange(value: /* event */ AnonDataTarget => Unit): this.type = set("onPlaybackQualityChange", js.Any.fromFunction1(value))
+    def onPlaybackQualityChange(value: /* event */ DataTarget => Unit): this.type = set("onPlaybackQualityChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onPlaybackRateChange(value: /* event */ AnonData => Unit): this.type = set("onPlaybackRateChange", js.Any.fromFunction1(value))
+    def onPlaybackRateChange(value: /* event */ Data => Unit): this.type = set("onPlaybackRateChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onReady(value: /* event */ AnonTarget => Unit): this.type = set("onReady", js.Any.fromFunction1(value))
+    def onReady(value: /* event */ Target => Unit): this.type = set("onReady", js.Any.fromFunction1(value))
     @scala.inline
-    def onStateChange(value: /* event */ AnonData => Unit): this.type = set("onStateChange", js.Any.fromFunction1(value))
+    def onStateChange(value: /* event */ Data => Unit): this.type = set("onStateChange", js.Any.fromFunction1(value))
     @scala.inline
     def opts(value: Options): this.type = set("opts", value.asInstanceOf[js.Any])
     @scala.inline

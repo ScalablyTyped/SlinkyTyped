@@ -1,6 +1,6 @@
 package typingsSlinky.baseui.sideNavigationMod
 
-import typingsSlinky.baseui.AnonItemAny
+import typingsSlinky.baseui.anon.ItemAny
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait NavItemProps extends js.Object {
   @JSName("$selectable")
   var $selectable: js.UndefOr[Boolean] = js.native
   var item: Item = js.native
-  var onSelect: js.UndefOr[js.Function1[/* args */ AnonItemAny, _]] = js.native
+  var onSelect: js.UndefOr[js.Function1[/* args */ ItemAny, _]] = js.native
   var overrides: js.UndefOr[NavItemOverrides] = js.native
 }
 
@@ -73,7 +73,7 @@ object NavItemProps {
         ret
     }
     @scala.inline
-    def withOnSelect(value: /* args */ AnonItemAny => _): Self = {
+    def withOnSelect(value: /* args */ ItemAny => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
         ret

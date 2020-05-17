@@ -1,7 +1,7 @@
 package typingsSlinky.firebase.mod.firestore
 
-import typingsSlinky.firebase.AnonComplete
-import typingsSlinky.firebase.AnonDelete
+import typingsSlinky.firebase.anon.Complete
+import typingsSlinky.firebase.anon.Delete
 import typingsSlinky.firebase.mod.app.App
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +13,7 @@ class Firestore protected () extends js.Object {
   /**
     * @hidden
     */
-  var INTERNAL: AnonDelete = js.native
+  var INTERNAL: Delete = js.native
   /**
     * The {@link firebase.app.App app} associated with this `Firestore` service
     * instance.
@@ -135,7 +135,7 @@ class Firestore protected () extends js.Object {
     * @return An unsubscribe function that can be called to cancel the snapshot
     * listener.
     */
-  def onSnapshotsInSync(observer: AnonComplete): js.Function0[Unit] = js.native
+  def onSnapshotsInSync(observer: Complete): js.Function0[Unit] = js.native
   /**
     * Attaches a listener for a snapshots-in-sync event. The snapshots-in-sync
     * event indicates that all listeners affected by a given change have fired,

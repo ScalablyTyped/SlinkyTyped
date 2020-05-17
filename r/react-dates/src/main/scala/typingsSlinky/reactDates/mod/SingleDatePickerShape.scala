@@ -1,9 +1,9 @@
 package typingsSlinky.reactDates.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactDates.AnonDate
-import typingsSlinky.reactDates.AnonFocused
-import typingsSlinky.reactDates.AnonIsVisible
+import typingsSlinky.reactDates.anon.Date
+import typingsSlinky.reactDates.anon.Focused
+import typingsSlinky.reactDates.anon.IsVisible
 import typingsSlinky.reactDates.mod.momentPropTypes.momentObj
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -47,7 +47,7 @@ trait SingleDatePickerShape extends js.Object {
   var navPrev: js.UndefOr[String | ReactElement] = js.native
   var noBorder: js.UndefOr[Boolean] = js.native
   var numberOfMonths: js.UndefOr[Double] = js.native
-  var onClose: js.UndefOr[js.Function1[/* final */ AnonDate, Unit]] = js.native
+  var onClose: js.UndefOr[js.Function1[/* final */ Date, Unit]] = js.native
   var onNextMonthClick: js.UndefOr[js.Function1[/* newCurrentMonth */ momentObj, Unit]] = js.native
   var onPrevMonthClick: js.UndefOr[js.Function1[/* newCurrentMonth */ momentObj, Unit]] = js.native
   var openDirection: js.UndefOr[OpenDirectionShape] = js.native
@@ -61,7 +61,7 @@ trait SingleDatePickerShape extends js.Object {
   var renderCalendarDay: js.UndefOr[js.Function1[/* day */ momentObj, String | ReactElement]] = js.native
   var renderCalendarInfo: js.UndefOr[js.Function0[String | ReactElement]] = js.native
   var renderDayContents: js.UndefOr[js.Function1[/* day */ momentObj, String | ReactElement]] = js.native
-  var renderMonthElement: js.UndefOr[js.Function1[/* props */ AnonIsVisible, String | ReactElement]] = js.native
+  var renderMonthElement: js.UndefOr[js.Function1[/* props */ IsVisible, String | ReactElement]] = js.native
   // calendar presentation and interaction related props
   var renderMonthText: js.UndefOr[js.Function1[/* day */ momentObj, String | ReactElement]] = js.native
   var reopenPickerOnClearDates: js.UndefOr[Boolean] = js.native
@@ -78,6 +78,6 @@ trait SingleDatePickerShape extends js.Object {
   var withPortal: js.UndefOr[Boolean] = js.native
   def onDateChange(): Unit = js.native
   def onDateChange(date: momentObj): Unit = js.native
-  def onFocusChange(arg: AnonFocused): Unit = js.native
+  def onFocusChange(arg: Focused): Unit = js.native
 }
 

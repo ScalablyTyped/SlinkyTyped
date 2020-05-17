@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactPaginate.AnonSelected
+import typingsSlinky.reactPaginate.anon.Selected
 import typingsSlinky.reactPaginate.mod.ReactPaginateProps
 import typingsSlinky.reactPaginate.mod.default
 import scala.scalajs.js
@@ -55,7 +55,7 @@ object ReactPaginate {
     @scala.inline
     def nextLinkClassName(value: String): this.type = set("nextLinkClassName", value.asInstanceOf[js.Any])
     @scala.inline
-    def onPageChange(value: /* selectedItem */ AnonSelected => Unit): this.type = set("onPageChange", js.Any.fromFunction1(value))
+    def onPageChange(value: /* selectedItem */ Selected => Unit): this.type = set("onPageChange", js.Any.fromFunction1(value))
     @scala.inline
     def pageClassName(value: String): this.type = set("pageClassName", value.asInstanceOf[js.Any])
     @scala.inline

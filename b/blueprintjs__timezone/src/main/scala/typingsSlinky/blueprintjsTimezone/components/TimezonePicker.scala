@@ -4,8 +4,8 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.inputGroupMod.IInputGroupProps
 import typingsSlinky.blueprintjsCore.propsMod.HTMLInputProps
-import typingsSlinky.blueprintjsTimezone.PartialIButtonProps
-import typingsSlinky.blueprintjsTimezone.PartialIPopoverProps
+import typingsSlinky.blueprintjsTimezone.anon.PartialIButtonProps
+import typingsSlinky.blueprintjsTimezone.anon.PartialIPopoverProps
 import typingsSlinky.blueprintjsTimezone.timezoneDisplayFormatMod.TimezoneDisplayFormat
 import typingsSlinky.blueprintjsTimezone.timezonePickerMod.ITimezonePickerProps
 import scala.scalajs.js

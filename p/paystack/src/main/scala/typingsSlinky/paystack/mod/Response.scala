@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 // Transactions initialization success object
 @js.native
 trait Response
-  extends /* key */ StringDictionary[js.Any] {
+  extends /* others */ StringDictionary[js.Any] {
   var data: js.UndefOr[js.Any] = js.native
   var message: String = js.native
   var status: Boolean = js.native

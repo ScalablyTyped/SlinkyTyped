@@ -1,9 +1,9 @@
 package typingsSlinky.reactImgpro.mod.ReactImgpro
 
-import typingsSlinky.reactImgpro.AnonBlue
-import typingsSlinky.reactImgpro.AnonDegree
-import typingsSlinky.reactImgpro.AnonHeight
-import typingsSlinky.reactImgpro.AnonHorizontal
+import typingsSlinky.reactImgpro.anon.Blue
+import typingsSlinky.reactImgpro.anon.Degree
+import typingsSlinky.reactImgpro.anon.Height
+import typingsSlinky.reactImgpro.anon.Horizontal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait ProcessImageProps extends js.Object {
    /* should be 0 - 1 */ var blur: js.UndefOr[Double] = js.native
   var brightness: js.UndefOr[Double] = js.native
-  var colors: js.UndefOr[AnonBlue] = js.native
+  var colors: js.UndefOr[Blue] = js.native
   var contain: js.UndefOr[Size] = js.native
    /* should be -1 to 1 */ var contrast: js.UndefOr[Double] = js.native
    /* should be 0 - 100 */ var cover: js.UndefOr[Size] = js.native
@@ -21,7 +21,7 @@ trait ProcessImageProps extends js.Object {
   var disableWebWorker: js.UndefOr[Boolean] = js.native
   var dither565: js.UndefOr[Boolean] = js.native
    /* should be -1 to 1 */ var fade: js.UndefOr[Double] = js.native
-  var flip: js.UndefOr[AnonHorizontal] = js.native
+  var flip: js.UndefOr[Horizontal] = js.native
   var greyscale: js.UndefOr[Boolean] = js.native
   var image: String = js.native
   var invert: js.UndefOr[Boolean] = js.native
@@ -31,9 +31,9 @@ trait ProcessImageProps extends js.Object {
    /* should be 0 - 100 */ var posterize: js.UndefOr[Double] = js.native
   var quality: js.UndefOr[Double] = js.native
   var resize: js.UndefOr[Shape] = js.native
-  var rotate: js.UndefOr[AnonDegree] = js.native
+  var rotate: js.UndefOr[Degree] = js.native
   var scale: js.UndefOr[Boolean] = js.native
-  var scaleToFitImage: js.UndefOr[AnonHeight] = js.native
+  var scaleToFitImage: js.UndefOr[Height] = js.native
   var sepia: js.UndefOr[Boolean] = js.native
   var storage: js.UndefOr[Boolean] = js.native
   def onProcessFinish(): Unit = js.native
@@ -88,7 +88,7 @@ object ProcessImageProps {
         ret
     }
     @scala.inline
-    def withColors(value: AnonBlue): Self = {
+    def withColors(value: Blue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
         ret
@@ -196,7 +196,7 @@ object ProcessImageProps {
         ret
     }
     @scala.inline
-    def withFlip(value: AnonHorizontal): Self = {
+    def withFlip(value: Horizontal): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("flip")(value.asInstanceOf[js.Any])
         ret
@@ -304,7 +304,7 @@ object ProcessImageProps {
         ret
     }
     @scala.inline
-    def withRotate(value: AnonDegree): Self = {
+    def withRotate(value: Degree): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rotate")(value.asInstanceOf[js.Any])
         ret
@@ -328,7 +328,7 @@ object ProcessImageProps {
         ret
     }
     @scala.inline
-    def withScaleToFitImage(value: AnonHeight): Self = {
+    def withScaleToFitImage(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scaleToFitImage")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.puppeteer.mod
 
-import typingsSlinky.puppeteer.AnonBottom
+import typingsSlinky.puppeteer.anon.Bottom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,7 +43,7 @@ trait PDFOptions extends js.Object {
     */
   var landscape: js.UndefOr[Boolean] = js.native
   /** Paper margins, defaults to none. */
-  var margin: js.UndefOr[AnonBottom] = js.native
+  var margin: js.UndefOr[Bottom] = js.native
   /**
     * Paper ranges to print, e.g., '1-5, 8, 11-13'.
     * @default '' which means print all pages.
@@ -160,7 +160,7 @@ object PDFOptions {
         ret
     }
     @scala.inline
-    def withMargin(value: AnonBottom): Self = {
+    def withMargin(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
         ret

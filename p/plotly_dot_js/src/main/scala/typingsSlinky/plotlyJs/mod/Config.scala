@@ -1,7 +1,7 @@
 package typingsSlinky.plotlyJs.mod
 
-import typingsSlinky.plotlyJs.PartialEdits
-import typingsSlinky.plotlyJs.Partialfilenamestringscal
+import typingsSlinky.plotlyJs.anon.PartialEdits
+import typingsSlinky.plotlyJs.anon.Partialfilenamestringscal
 import typingsSlinky.plotlyJs.plotlyJsBooleans.`false`
 import typingsSlinky.plotlyJs.plotlyJsNumbers.`0`
 import typingsSlinky.plotlyJs.plotlyJsNumbers.`1`

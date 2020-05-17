@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobile.radioItemMod
 
-import typingsSlinky.antdMobile.AnonRadioProps
+import typingsSlinky.antdMobile.anon.RadioProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ class default () extends RadioItem
 @JSImport("antd-mobile/lib/radio/RadioItem", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonRadioProps = js.native
+  var defaultProps: RadioProps = js.native
 }
 

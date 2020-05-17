@@ -1,0 +1,23 @@
+package typingsSlinky.knuddelsUserappsApi.mod.global
+
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.knuddelsUserappsApi.mod.JsonData
+import typingsSlinky.knuddelsUserappsApi.mod.KnuddelsEvent
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Json
+  extends /* x */ StringDictionary[js.UndefOr[JsonData]]
+     with JsonData
+     with KnuddelsEvent
+
+object Json {
+  @scala.inline
+  def apply(): Json = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[Json]
+  }
+}
+

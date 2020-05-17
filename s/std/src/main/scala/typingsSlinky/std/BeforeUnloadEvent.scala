@@ -1,16 +1,10 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** The beforeunload event is fired when the window, the document and its resources are about to be unloaded. */
 @js.native
-trait BeforeUnloadEvent extends Event_
-
-@JSGlobal("BeforeUnloadEvent")
-@js.native
-object BeforeUnloadEvent
-  extends Instantiable0[org.scalajs.dom.raw.BeforeUnloadEvent]
+trait BeforeUnloadEvent extends Event
 

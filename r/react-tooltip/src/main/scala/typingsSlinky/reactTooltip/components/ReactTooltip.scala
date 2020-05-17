@@ -1,12 +1,13 @@
 package typingsSlinky.reactTooltip.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLSpanElement
 import slinky.core.TagMod
 import slinky.web.html.span.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactTooltip.AnonLeft
+import typingsSlinky.reactTooltip.anon.Left
 import typingsSlinky.reactTooltip.mod.Effect
 import typingsSlinky.reactTooltip.mod.GetContent
 import typingsSlinky.reactTooltip.mod.Offset
@@ -16,7 +17,6 @@ import typingsSlinky.reactTooltip.mod.Type
 import typingsSlinky.reactTooltip.mod.default
 import typingsSlinky.reactTooltip.reactTooltipStrings.div
 import typingsSlinky.reactTooltip.reactTooltipStrings.span
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -84,7 +84,7 @@ object ReactTooltip {
     def offset(value: Offset): this.type = set("offset", value.asInstanceOf[js.Any])
     @scala.inline
     def overridePosition(
-      value: (/* position */ AnonLeft, /* currentEvent */ Event_, /* currentTarget */ EventTarget, /* refNode */ Null | HTMLDivElement | HTMLSpanElement, /* place */ Place, /* desiredPlace */ Place, /* effect */ Effect, /* offset */ Offset) => AnonLeft
+      value: (/* position */ Left, /* currentEvent */ Event, /* currentTarget */ EventTarget, /* refNode */ Null | HTMLDivElement | HTMLSpanElement, /* place */ Place, /* desiredPlace */ Place, /* effect */ Effect, /* offset */ Offset) => Left
     ): this.type = set("overridePosition", js.Any.fromFunction8(value))
     @scala.inline
     def place(value: Place): this.type = set("place", value.asInstanceOf[js.Any])

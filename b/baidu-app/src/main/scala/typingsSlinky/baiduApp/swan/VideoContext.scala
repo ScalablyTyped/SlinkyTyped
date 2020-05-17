@@ -1,6 +1,6 @@
 package typingsSlinky.baiduApp.swan
 
-import typingsSlinky.baiduApp.AnonColor
+import typingsSlinky.baiduApp.anon.Color
 import typingsSlinky.baiduApp.baiduAppNumbers.`0.5`
 import typingsSlinky.baiduApp.baiduAppNumbers.`0.8`
 import typingsSlinky.baiduApp.baiduAppNumbers.`1.0`
@@ -55,7 +55,7 @@ trait VideoContext extends js.Object {
   /**
   		 * 发送弹幕，danmu 包含两个属性 text, color。
   		 */
-  def sendDanmu(danmu: AnonColor): Unit = js.native
+  def sendDanmu(danmu: Color): Unit = js.native
    // 退出全屏;
   /**
   		 * 显示状态栏，仅在iOS全屏下有效

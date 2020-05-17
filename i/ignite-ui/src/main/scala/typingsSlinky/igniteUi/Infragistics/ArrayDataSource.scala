@@ -1,15 +1,12 @@
 package typingsSlinky.igniteUi.Infragistics
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.igniteUi.DataSourceSettings
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Infragistics.ArrayDataSource")
 @js.native
-class ArrayDataSource protected () extends js.Object {
-  def this(settings: DataSourceSettings) = this()
+trait ArrayDataSource extends js.Object {
   /**
   	 * Adds a new node to the tree data source. Creates a transaction that can be committed / rolled back
   	 *

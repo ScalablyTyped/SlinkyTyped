@@ -1,0 +1,66 @@
+package typingsSlinky.firebaseFirestore.anon
+
+import typingsSlinky.firebaseFirestore.asyncQueueMod.AsyncQueue
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait DontPurgeData extends js.Object {
+  var dontPurgeData: js.UndefOr[Boolean] = js.native
+  var queue: js.UndefOr[AsyncQueue] = js.native
+  var synchronizeTabs: js.UndefOr[Boolean] = js.native
+}
+
+object DontPurgeData {
+  @scala.inline
+  def apply(): DontPurgeData = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[DontPurgeData]
+  }
+  @scala.inline
+  implicit class DontPurgeDataOps[Self <: DontPurgeData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDontPurgeData(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dontPurgeData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDontPurgeData: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dontPurgeData")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQueue(value: AsyncQueue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQueue: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queue")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSynchronizeTabs(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synchronizeTabs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSynchronizeTabs: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synchronizeTabs")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents the client-side equivalent of the TripleExponentialMovingAverageTrix class.
   */
-@JSGlobal("ASPxClientTripleExponentialMovingAverageTrix")
 @js.native
-class ASPxClientTripleExponentialMovingAverageTrix () extends ASPxSeparatePaneIndicator {
+trait ASPxClientTripleExponentialMovingAverageTrix extends ASPxSeparatePaneIndicator {
   /**
     * Gets the number of data points used to calculate the indicator values.
     */
@@ -18,5 +17,41 @@ class ASPxClientTripleExponentialMovingAverageTrix () extends ASPxSeparatePaneIn
     * Gets a value, indicating whose series point values are used to calculate the indicator's values.
     */
   var valueLevel: String = js.native
+}
+
+object ASPxClientTripleExponentialMovingAverageTrix {
+  @scala.inline
+  def apply(
+    axisY: String,
+    chart: ASPxClientWebChart,
+    name: String,
+    pane: String,
+    pointsCount: Double,
+    series: ASPxClientSeries,
+    valueLevel: String
+  ): ASPxClientTripleExponentialMovingAverageTrix = {
+    val __obj = js.Dynamic.literal(axisY = axisY.asInstanceOf[js.Any], chart = chart.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], pane = pane.asInstanceOf[js.Any], pointsCount = pointsCount.asInstanceOf[js.Any], series = series.asInstanceOf[js.Any], valueLevel = valueLevel.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientTripleExponentialMovingAverageTrix]
+  }
+  @scala.inline
+  implicit class ASPxClientTripleExponentialMovingAverageTrixOps[Self <: ASPxClientTripleExponentialMovingAverageTrix] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPointsCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointsCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValueLevel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

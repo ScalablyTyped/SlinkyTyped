@@ -7,12 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientTreeList.StartDragNode event.
   */
-@JSGlobal("ASPxClientTreeListStartDragNodeEventArgs")
 @js.native
-class ASPxClientTreeListStartDragNodeEventArgs () extends ASPxClientTreeListNodeEventArgs {
+trait ASPxClientTreeListStartDragNodeEventArgs extends ASPxClientTreeListNodeEventArgs {
   /**
     * Gets an array of targets where a node can be dragged.
     */
   var targets: js.Array[_] = js.native
+}
+
+object ASPxClientTreeListStartDragNodeEventArgs {
+  @scala.inline
+  def apply(cancel: Boolean, htmlEvent: js.Any, nodeKey: String, targets: js.Array[_]): ASPxClientTreeListStartDragNodeEventArgs = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], htmlEvent = htmlEvent.asInstanceOf[js.Any], nodeKey = nodeKey.asInstanceOf[js.Any], targets = targets.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientTreeListStartDragNodeEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientTreeListStartDragNodeEventArgsOps[Self <: ASPxClientTreeListStartDragNodeEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTargets(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targets")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

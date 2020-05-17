@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("rdflib", "Node")
 @js.native
-class Node () extends js.Object {
+class Node () extends ValueType {
   /**
     * The class order for this node
     */

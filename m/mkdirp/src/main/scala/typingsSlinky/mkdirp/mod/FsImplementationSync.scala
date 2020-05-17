@@ -1,8 +1,8 @@
 package typingsSlinky.mkdirp.mod
 
-import typingsSlinky.mkdirp.FnCall
-import typingsSlinky.node.MakeDirectoryOptionsrecur
-import typingsSlinky.node.MakeDirectoryOptionsrecurMode
+import typingsSlinky.mkdirp.anon.FnCall
+import typingsSlinky.node.anon.MakeDirectoryOptionsrecur
+import typingsSlinky.node.anon.MakeDirectoryOptionsrecurMode
 import typingsSlinky.node.fsMod.MakeDirectoryOptions
 import typingsSlinky.node.fsMod.PathLike
 import typingsSlinky.node.fsMod.Stats

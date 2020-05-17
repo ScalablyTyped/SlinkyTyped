@@ -2,7 +2,6 @@ package typingsSlinky.web3.mod
 
 import typingsSlinky.node.netMod.Socket
 import typingsSlinky.web3Core.mod.Providers
-import typingsSlinky.web3Core.mod.provider
 import typingsSlinky.web3Utils.mod.Utils
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,8 +10,8 @@ import scala.scalajs.js.annotation._
 @JSImport("web3", JSImport.Default)
 @js.native
 class default () extends Web3 {
-  def this(provider: provider) = this()
-  def this(provider: provider, net: Socket) = this()
+  def this(provider: typingsSlinky.web3Core.mod.provider) = this()
+  def this(provider: typingsSlinky.web3Core.mod.provider, net: Socket) = this()
 }
 
 /* static members */

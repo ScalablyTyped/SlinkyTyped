@@ -1,7 +1,7 @@
 package typingsSlinky.officeUiFabricReact.dragdropInterfacesMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.officeUiFabricReact.AnonDispose
+import typingsSlinky.officeUiFabricReact.anon.Dispose
 import typingsSlinky.officeUiFabricReact.utilitiesMod.EventGroup
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ trait IDragDropHelper extends js.Object {
   /**
     * Subscribe to events on a DOM node with drag and drop configuration.
     */
-  def subscribe(root: HTMLElement, events: EventGroup, options: IDragDropOptions): AnonDispose = js.native
+  def subscribe(root: HTMLElement, events: EventGroup, options: IDragDropOptions): Dispose = js.native
   /**
     * Unsubscribe to events registered on a DOM node with key.
     */
@@ -27,7 +27,7 @@ object IDragDropHelper {
   @scala.inline
   def apply(
     dispose: () => Unit,
-    subscribe: (HTMLElement, EventGroup, IDragDropOptions) => AnonDispose,
+    subscribe: (HTMLElement, EventGroup, IDragDropOptions) => Dispose,
     unsubscribe: (HTMLElement, String) => Unit
   ): IDragDropHelper = {
     val __obj = js.Dynamic.literal(dispose = js.Any.fromFunction0(dispose), subscribe = js.Any.fromFunction3(subscribe), unsubscribe = js.Any.fromFunction2(unsubscribe))
@@ -46,7 +46,7 @@ object IDragDropHelper {
         ret
     }
     @scala.inline
-    def withSubscribe(value: (HTMLElement, EventGroup, IDragDropOptions) => AnonDispose): Self = {
+    def withSubscribe(value: (HTMLElement, EventGroup, IDragDropOptions) => Dispose): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("subscribe")(js.Any.fromFunction3(value))
         ret

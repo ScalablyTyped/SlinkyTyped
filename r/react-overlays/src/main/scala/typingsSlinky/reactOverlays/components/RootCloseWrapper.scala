@@ -1,12 +1,12 @@
 package typingsSlinky.reactOverlays.components
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactOverlays.reactOverlaysStrings.click
 import typingsSlinky.reactOverlays.reactOverlaysStrings.mousedown
 import typingsSlinky.reactOverlays.rootCloseWrapperMod.RootCloseWrapperProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ object RootCloseWrapper {
     @scala.inline
     def event(value: click | mousedown): this.type = set("event", value.asInstanceOf[js.Any])
     @scala.inline
-    def onRootClose(value: /* e */ SyntheticEvent[Event_, _] => Unit): this.type = set("onRootClose", js.Any.fromFunction1(value))
+    def onRootClose(value: /* e */ SyntheticEvent[Event, _] => Unit): this.type = set("onRootClose", js.Any.fromFunction1(value))
   }
   
   def withProps(p: RootCloseWrapperProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

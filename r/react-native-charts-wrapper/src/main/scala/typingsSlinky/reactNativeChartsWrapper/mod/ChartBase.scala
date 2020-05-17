@@ -3,30 +3,30 @@ package typingsSlinky.reactNativeChartsWrapper.mod
 import slinky.core.SyntheticEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.ViewProps
-import typingsSlinky.reactNativeChartsWrapper.AnonAction
-import typingsSlinky.reactNativeChartsWrapper.AnonDataIndex
-import typingsSlinky.reactNativeChartsWrapper.AnonDigits
-import typingsSlinky.reactNativeChartsWrapper.AnonDurationX
-import typingsSlinky.reactNativeChartsWrapper.AnonY
+import typingsSlinky.reactNativeChartsWrapper.anon.Action
+import typingsSlinky.reactNativeChartsWrapper.anon.DataIndex
+import typingsSlinky.reactNativeChartsWrapper.anon.Digits
+import typingsSlinky.reactNativeChartsWrapper.anon.DurationX
+import typingsSlinky.reactNativeChartsWrapper.anon.Y
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ChartBase extends ViewProps {
-  var animation: js.UndefOr[AnonDurationX] = js.native
+  var animation: js.UndefOr[DurationX] = js.native
   var chartBackgroundColor: js.UndefOr[Color] = js.native
   var chartDescription: js.UndefOr[ChartDescription] = js.native
   var dragDecelerationEnabled: js.UndefOr[Boolean] = js.native
   var dragDecelerationFrictionCoef: js.UndefOr[Double] = js.native
   var highlightPerTapEnabled: js.UndefOr[Boolean] = js.native
-  var highlights: js.UndefOr[js.Array[AnonDataIndex]] = js.native
+  var highlights: js.UndefOr[js.Array[DataIndex]] = js.native
   var legend: js.UndefOr[ChartLegend] = js.native
   var logEnabled: js.UndefOr[Boolean] = js.native
-  var marker: js.UndefOr[AnonDigits] = js.native
+  var marker: js.UndefOr[Digits] = js.native
   var noDataText: js.UndefOr[String] = js.native
-  var onChange: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, AnonAction], Unit]] = js.native
-  var onSelect: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, AnonY | Null], Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Action], Unit]] = js.native
+  var onSelect: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Y | Null], Unit]] = js.native
   var touchEnabled: js.UndefOr[Boolean] = js.native
   var xAxis: js.UndefOr[typingsSlinky.reactNativeChartsWrapper.mod.xAxis] = js.native
 }
@@ -44,7 +44,7 @@ object ChartBase {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAnimation(value: AnonDurationX): Self = {
+    def withAnimation(value: DurationX): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
         ret
@@ -116,7 +116,7 @@ object ChartBase {
         ret
     }
     @scala.inline
-    def withHighlights(value: js.Array[AnonDataIndex]): Self = {
+    def withHighlights(value: js.Array[DataIndex]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("highlights")(value.asInstanceOf[js.Any])
         ret
@@ -152,7 +152,7 @@ object ChartBase {
         ret
     }
     @scala.inline
-    def withMarker(value: AnonDigits): Self = {
+    def withMarker(value: Digits): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
         ret
@@ -176,7 +176,7 @@ object ChartBase {
         ret
     }
     @scala.inline
-    def withOnChange(value: SyntheticEvent[NodeHandle, AnonAction] => Unit): Self = {
+    def withOnChange(value: SyntheticEvent[NodeHandle, Action] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -188,7 +188,7 @@ object ChartBase {
         ret
     }
     @scala.inline
-    def withOnSelect(value: SyntheticEvent[NodeHandle, AnonY | Null] => Unit): Self = {
+    def withOnSelect(value: SyntheticEvent[NodeHandle, Y | Null] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
         ret

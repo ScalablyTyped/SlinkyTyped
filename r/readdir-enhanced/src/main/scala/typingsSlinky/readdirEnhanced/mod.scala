@@ -1,6 +1,12 @@
 package typingsSlinky.readdirEnhanced
 
 import typingsSlinky.node.streamMod.Readable
+import typingsSlinky.readdirEnhanced.anon.Fn0
+import typingsSlinky.readdirEnhanced.anon.FnCall
+import typingsSlinky.readdirEnhanced.anon.FnCallDirOptions
+import typingsSlinky.readdirEnhanced.anon.FnCallDirOptionsCallback
+import typingsSlinky.readdirEnhanced.anon.Optionsstatsfalse
+import typingsSlinky.readdirEnhanced.anon.Optionsstatstrue
 import typingsSlinky.readdirEnhanced.typesPublicMod.Callback
 import typingsSlinky.readdirEnhanced.typesPublicMod.Stats
 import typingsSlinky.std.AsyncIterableIterator

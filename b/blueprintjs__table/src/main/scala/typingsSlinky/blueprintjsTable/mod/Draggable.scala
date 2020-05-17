@@ -1,6 +1,6 @@
 package typingsSlinky.blueprintjsTable.mod
 
-import typingsSlinky.blueprintjsTable.AnonPreventDefault
+import typingsSlinky.blueprintjsTable.anon.PreventDefault
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +14,6 @@ class Draggable ()
 @JSImport("@blueprintjs/table", "Draggable")
 @js.native
 object Draggable extends js.Object {
-  var defaultProps: AnonPreventDefault = js.native
+  var defaultProps: PreventDefault = js.native
 }
 

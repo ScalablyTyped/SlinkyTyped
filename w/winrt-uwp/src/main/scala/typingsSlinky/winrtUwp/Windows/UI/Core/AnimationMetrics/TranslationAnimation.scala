@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides methods that enable you to retrieve the parameters for a translation (move to a new location) animation. */
-@JSGlobal("Windows.UI.Core.AnimationMetrics.TranslationAnimation")
 @js.native
-abstract class TranslationAnimation () extends js.Object {
+trait TranslationAnimation extends js.Object {
   /** Gets the location of the first control point for the cubic Bézier curve that describes how the translation should animate over time. */
   var control1: Point = js.native
   /** Gets the location of the second control point for the cubic Bézier curve that describes how the translation should animate over time. */
@@ -19,5 +18,52 @@ abstract class TranslationAnimation () extends js.Object {
   var duration: Double = js.native
   /** Gets the type of animation represented by this object. */
   var `type`: PropertyAnimationType = js.native
+}
+
+object TranslationAnimation {
+  @scala.inline
+  def apply(control1: Point, control2: Point, delay: Double, duration: Double, `type`: PropertyAnimationType): TranslationAnimation = {
+    val __obj = js.Dynamic.literal(control1 = control1.asInstanceOf[js.Any], control2 = control2.asInstanceOf[js.Any], delay = delay.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TranslationAnimation]
+  }
+  @scala.inline
+  implicit class TranslationAnimationOps[Self <: TranslationAnimation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withControl1(value: Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withControl2(value: Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("control2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: PropertyAnimationType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

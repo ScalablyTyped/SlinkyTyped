@@ -1,8 +1,10 @@
 package typingsSlinky.agGrid
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
+import typingsSlinky.agGrid.anon.ForceRefresh
 import typingsSlinky.agGrid.beansMod.Beans
 import typingsSlinky.agGrid.columnMod.Column
 import typingsSlinky.agGrid.componentMod.Component
@@ -11,7 +13,6 @@ import typingsSlinky.agGrid.iCellEditorMod.ICellEditorComp
 import typingsSlinky.agGrid.iCellRendererMod.ICellRendererComp
 import typingsSlinky.agGrid.rowCompMod.RowComp
 import typingsSlinky.agGrid.rowNodeMod.RowNode
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -82,7 +83,7 @@ object cellCompMod extends js.Object {
     /* private */ def createEvent(domEvent: js.Any, eventType: js.Any): js.Any = js.native
     /* private */ def createGridCellVo(): js.Any = js.native
     def detach(): Unit = js.native
-    def dispatchCellContextMenuEvent(event: Event_): Unit = js.native
+    def dispatchCellContextMenuEvent(event: Event): Unit = js.native
     /* private */ def doIeFocusHack(): js.Any = js.native
     def doesUserWantToCancelKeyboardEvent(event: KeyboardEvent): Boolean = js.native
     def flashCell(): Unit = js.native
@@ -155,7 +156,7 @@ object cellCompMod extends js.Object {
     /* private */ def processStylesFromColDef(): js.Any = js.native
     /* private */ def putDataIntoCellAfterRefresh(): js.Any = js.native
     def refreshCell(): Unit = js.native
-    def refreshCell(params: AnonForceRefresh): Unit = js.native
+    def refreshCell(params: ForceRefresh): Unit = js.native
     /* private */ def refreshToolTip(): js.Any = js.native
     /* private */ def replaceContentsAfterRefresh(): js.Any = js.native
     def setFocusInOnEditor(): Unit = js.native

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GroupPattern
   extends BlockPattern
-     with _Expression {
+     with Expression {
   @JSName("type")
   var type_GroupPattern: group = js.native
 }

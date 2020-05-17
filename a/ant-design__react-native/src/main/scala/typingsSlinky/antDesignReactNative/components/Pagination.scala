@@ -2,7 +2,7 @@ package typingsSlinky.antDesignReactNative.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignReactNative.AnonNextText
+import typingsSlinky.antDesignReactNative.anon.NextText
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.button
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.number
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.pointer
@@ -30,7 +30,7 @@ object Pagination {
     @scala.inline
     def indicatorStyleNull: this.type = set("indicatorStyle", null)
     @scala.inline
-    def locale(value: AnonNextText): this.type = set("locale", value.asInstanceOf[js.Any])
+    def locale(value: NextText): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline
     def mode(value: button | number | pointer): this.type = set("mode", value.asInstanceOf[js.Any])
     @scala.inline

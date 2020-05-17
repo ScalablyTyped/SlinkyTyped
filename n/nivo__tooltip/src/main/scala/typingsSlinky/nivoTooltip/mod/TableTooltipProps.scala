@@ -2,7 +2,7 @@ package typingsSlinky.nivoTooltip.mod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.nivoTooltip.Pickanytooltip
+import typingsSlinky.nivoTooltip.anon.Pickanytooltip
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

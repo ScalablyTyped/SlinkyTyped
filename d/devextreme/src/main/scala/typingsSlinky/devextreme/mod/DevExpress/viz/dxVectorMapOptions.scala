@@ -1,12 +1,12 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonBorderColorColor
-import typingsSlinky.devextreme.AnonBorderWidth
-import typingsSlinky.devextreme.AnonCenter
-import typingsSlinky.devextreme.AnonComponentDxVectorMap
-import typingsSlinky.devextreme.AnonComponentElementEventJQueryEvent
-import typingsSlinky.devextreme.AnonMargin
-import typingsSlinky.devextreme.AnonZoomFactor
+import typingsSlinky.devextreme.anon.BorderColorColor
+import typingsSlinky.devextreme.anon.BorderWidth
+import typingsSlinky.devextreme.anon.Center
+import typingsSlinky.devextreme.anon.ComponentDxVectorMap
+import typingsSlinky.devextreme.anon.ComponentElementEventJQueryEvent
+import typingsSlinky.devextreme.anon.Margin
+import typingsSlinky.devextreme.anon.ZoomFactor
 import typingsSlinky.devextreme.devextremeStrings.equirectangular
 import typingsSlinky.devextreme.devextremeStrings.lambert
 import typingsSlinky.devextreme.devextremeStrings.mercator
@@ -18,31 +18,31 @@ import scala.scalajs.js.annotation._
 @js.native
 trait dxVectorMapOptions extends BaseWidgetOptions[dxVectorMap] {
   /** Specifies the options for the map background. */
-  var background: js.UndefOr[AnonBorderColorColor] = js.native
+  var background: js.UndefOr[BorderColorColor] = js.native
   /** Specifies the positioning of a map in geographical coordinates. */
   var bounds: js.UndefOr[js.Array[Double]] = js.native
   /** Specifies the geographical coordinates of the center for a map. */
   var center: js.UndefOr[js.Array[Double]] = js.native
   /** Configures the control bar. */
-  var controlBar: js.UndefOr[AnonMargin] = js.native
+  var controlBar: js.UndefOr[Margin] = js.native
   /** Specifies options for VectorMap widget layers. */
-  var layers: js.UndefOr[js.Array[AnonBorderWidth] | AnonBorderWidth] = js.native
+  var layers: js.UndefOr[js.Array[BorderWidth] | BorderWidth] = js.native
   /** Configures map legends. */
   var legends: js.UndefOr[js.Array[dxVectorMapLegends]] = js.native
   /** Specifies a map's maximum zoom factor. */
   var maxZoomFactor: js.UndefOr[Double] = js.native
   /** A function that is executed each time the center coordinates are changed. */
-  var onCenterChanged: js.UndefOr[js.Function1[/* e */ AnonCenter, _]] = js.native
+  var onCenterChanged: js.UndefOr[js.Function1[/* e */ Center, _]] = js.native
   /** A function that is executed when any location on the map is clicked or tapped. */
-  var onClick: js.UndefOr[(js.Function1[/* e */ AnonComponentElementEventJQueryEvent, _]) | String] = js.native
+  var onClick: js.UndefOr[(js.Function1[/* e */ ComponentElementEventJQueryEvent, _]) | String] = js.native
   /** A function that is executed when a layer element is selected or selection is canceled. */
-  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonComponentDxVectorMap, _]] = js.native
+  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ ComponentDxVectorMap, _]] = js.native
   /** A function that is executed when a tooltip becomes hidden. */
-  var onTooltipHidden: js.UndefOr[js.Function1[/* e */ AnonComponentDxVectorMap, _]] = js.native
+  var onTooltipHidden: js.UndefOr[js.Function1[/* e */ ComponentDxVectorMap, _]] = js.native
   /** A function that is executed when a tooltip appears. */
-  var onTooltipShown: js.UndefOr[js.Function1[/* e */ AnonComponentDxVectorMap, _]] = js.native
+  var onTooltipShown: js.UndefOr[js.Function1[/* e */ ComponentDxVectorMap, _]] = js.native
   /** A function that is executed each time the zoom factor is changed. */
-  var onZoomFactorChanged: js.UndefOr[js.Function1[/* e */ AnonZoomFactor, _]] = js.native
+  var onZoomFactorChanged: js.UndefOr[js.Function1[/* e */ ZoomFactor, _]] = js.native
   /** Disables the panning capability. */
   var panningEnabled: js.UndefOr[Boolean] = js.native
   /** Specifies the map projection. */
@@ -75,7 +75,7 @@ object dxVectorMapOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBackground(value: AnonBorderColorColor): Self = {
+    def withBackground(value: BorderColorColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
         ret
@@ -111,7 +111,7 @@ object dxVectorMapOptions {
         ret
     }
     @scala.inline
-    def withControlBar(value: AnonMargin): Self = {
+    def withControlBar(value: Margin): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("controlBar")(value.asInstanceOf[js.Any])
         ret
@@ -123,7 +123,7 @@ object dxVectorMapOptions {
         ret
     }
     @scala.inline
-    def withLayers(value: js.Array[AnonBorderWidth] | AnonBorderWidth): Self = {
+    def withLayers(value: js.Array[BorderWidth] | BorderWidth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(value.asInstanceOf[js.Any])
         ret
@@ -159,7 +159,7 @@ object dxVectorMapOptions {
         ret
     }
     @scala.inline
-    def withOnCenterChanged(value: /* e */ AnonCenter => _): Self = {
+    def withOnCenterChanged(value: /* e */ Center => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCenterChanged")(js.Any.fromFunction1(value))
         ret
@@ -171,13 +171,13 @@ object dxVectorMapOptions {
         ret
     }
     @scala.inline
-    def withOnClickFunction1(value: /* e */ AnonComponentElementEventJQueryEvent => _): Self = {
+    def withOnClickFunction1(value: /* e */ ComponentElementEventJQueryEvent => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnClick(value: (js.Function1[/* e */ AnonComponentElementEventJQueryEvent, _]) | String): Self = {
+    def withOnClick(value: (js.Function1[/* e */ ComponentElementEventJQueryEvent, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(value.asInstanceOf[js.Any])
         ret
@@ -189,7 +189,7 @@ object dxVectorMapOptions {
         ret
     }
     @scala.inline
-    def withOnSelectionChanged(value: /* e */ AnonComponentDxVectorMap => _): Self = {
+    def withOnSelectionChanged(value: /* e */ ComponentDxVectorMap => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.Any.fromFunction1(value))
         ret
@@ -201,7 +201,7 @@ object dxVectorMapOptions {
         ret
     }
     @scala.inline
-    def withOnTooltipHidden(value: /* e */ AnonComponentDxVectorMap => _): Self = {
+    def withOnTooltipHidden(value: /* e */ ComponentDxVectorMap => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTooltipHidden")(js.Any.fromFunction1(value))
         ret
@@ -213,7 +213,7 @@ object dxVectorMapOptions {
         ret
     }
     @scala.inline
-    def withOnTooltipShown(value: /* e */ AnonComponentDxVectorMap => _): Self = {
+    def withOnTooltipShown(value: /* e */ ComponentDxVectorMap => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTooltipShown")(js.Any.fromFunction1(value))
         ret
@@ -225,7 +225,7 @@ object dxVectorMapOptions {
         ret
     }
     @scala.inline
-    def withOnZoomFactorChanged(value: /* e */ AnonZoomFactor => _): Self = {
+    def withOnZoomFactorChanged(value: /* e */ ZoomFactor => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onZoomFactorChanged")(js.Any.fromFunction1(value))
         ret

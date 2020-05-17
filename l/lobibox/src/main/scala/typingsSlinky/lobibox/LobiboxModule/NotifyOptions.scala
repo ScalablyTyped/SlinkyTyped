@@ -1,8 +1,8 @@
 package typingsSlinky.lobibox.LobiboxModule
 
-import typingsSlinky.lobibox.AnonClassString
-import typingsSlinky.lobibox.AnonIcon
-import typingsSlinky.lobibox.AnonWidth
+import typingsSlinky.lobibox.anon.ClassString
+import typingsSlinky.lobibox.anon.Icon
+import typingsSlinky.lobibox.anon.Width
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,15 +12,15 @@ trait NotifyOptions
   extends NotifyDefault
      with NotifyMethods {
   var `class`: js.UndefOr[String] = js.native
-  var error: js.UndefOr[AnonIcon] = js.native
-  var info: js.UndefOr[AnonIcon] = js.native
+  var error: js.UndefOr[Icon] = js.native
+  var info: js.UndefOr[Icon] = js.native
    //You can override options for large notifications from here
-  var large: js.UndefOr[AnonWidth] = js.native
+  var large: js.UndefOr[Width] = js.native
     //You can override options for small notifications from here
-  var mini: js.UndefOr[AnonClassString] = js.native
+  var mini: js.UndefOr[ClassString] = js.native
      //Default options of different style notifications
-  var success: js.UndefOr[AnonIcon] = js.native
-  var warning: js.UndefOr[AnonIcon] = js.native
+  var success: js.UndefOr[Icon] = js.native
+  var warning: js.UndefOr[Icon] = js.native
 }
 
 object NotifyOptions {
@@ -48,7 +48,7 @@ object NotifyOptions {
         ret
     }
     @scala.inline
-    def withError(value: AnonIcon): Self = {
+    def withError(value: Icon): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret
@@ -60,7 +60,7 @@ object NotifyOptions {
         ret
     }
     @scala.inline
-    def withInfo(value: AnonIcon): Self = {
+    def withInfo(value: Icon): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
         ret
@@ -72,7 +72,7 @@ object NotifyOptions {
         ret
     }
     @scala.inline
-    def withLarge(value: AnonWidth): Self = {
+    def withLarge(value: Width): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("large")(value.asInstanceOf[js.Any])
         ret
@@ -84,7 +84,7 @@ object NotifyOptions {
         ret
     }
     @scala.inline
-    def withMini(value: AnonClassString): Self = {
+    def withMini(value: ClassString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mini")(value.asInstanceOf[js.Any])
         ret
@@ -96,7 +96,7 @@ object NotifyOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: AnonIcon): Self = {
+    def withSuccess(value: Icon): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(value.asInstanceOf[js.Any])
         ret
@@ -108,7 +108,7 @@ object NotifyOptions {
         ret
     }
     @scala.inline
-    def withWarning(value: AnonIcon): Self = {
+    def withWarning(value: Icon): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
         ret

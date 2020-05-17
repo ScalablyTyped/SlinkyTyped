@@ -1,6 +1,6 @@
 package typingsSlinky.typedGithubApi.commitMod
 
-import typingsSlinky.typedGithubApi.AnonPayload
+import typingsSlinky.typedGithubApi.anon.Payload
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait GitCommitSummary extends js.Object {
   var message: String = js.native
   var tree: GitRef = js.native
   var url: String = js.native
-  var verification: js.UndefOr[AnonPayload] = js.native
+  var verification: js.UndefOr[Payload] = js.native
 }
 
 object GitCommitSummary {
@@ -72,7 +72,7 @@ object GitCommitSummary {
         ret
     }
     @scala.inline
-    def withVerification(value: AnonPayload): Self = {
+    def withVerification(value: Payload): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("verification")(value.asInstanceOf[js.Any])
         ret

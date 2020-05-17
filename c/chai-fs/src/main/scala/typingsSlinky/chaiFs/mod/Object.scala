@@ -1,6 +1,6 @@
 package typingsSlinky.chaiFs.mod
 
-import typingsSlinky.chaiFs.mod._Global_.Chai.Assertion
+import typingsSlinky.chaiFs.mod.global.Chai.Assertion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

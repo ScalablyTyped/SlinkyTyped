@@ -1,8 +1,8 @@
 package typingsSlinky.antDesignProLayout.getBreadcrumbPropsMod
 
-import typingsSlinky.antDesignProLayout.AnonDefaultOpenAll
-import typingsSlinky.antDesignProLayout.AnonHref
-import typingsSlinky.antDesignProLayout.AnonPathname
+import typingsSlinky.antDesignProLayout.anon.DefaultOpenAll
+import typingsSlinky.antDesignProLayout.anon.Href
+import typingsSlinky.antDesignProLayout.anon.Pathname
 import typingsSlinky.antDesignProLayout.typingsMod.MenuDataItem
 import typingsSlinky.antDesignProLayout.typingsMod.MessageDescriptor
 import typingsSlinky.history.mod.Location
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait BreadcrumbProps extends js.Object {
-  var breadcrumbList: js.UndefOr[js.Array[AnonHref]] = js.native
+  var breadcrumbList: js.UndefOr[js.Array[Href]] = js.native
   var breadcrumbMap: js.UndefOr[Map[String, MenuDataItem]] = js.native
   var breadcrumbRender: js.UndefOr[
     js.Function1[
@@ -27,8 +27,8 @@ trait BreadcrumbProps extends js.Object {
   var itemRender: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AntdBreadcrumbProps * / any['itemRender'] */ js.Any
   ] = js.native
-  var location: js.UndefOr[Location[LocationState] | AnonPathname] = js.native
-  var menu: js.UndefOr[AnonDefaultOpenAll] = js.native
+  var location: js.UndefOr[Location[LocationState] | Pathname] = js.native
+  var menu: js.UndefOr[DefaultOpenAll] = js.native
 }
 
 object BreadcrumbProps {
@@ -44,7 +44,7 @@ object BreadcrumbProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBreadcrumbList(value: js.Array[AnonHref]): Self = {
+    def withBreadcrumbList(value: js.Array[Href]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("breadcrumbList")(value.asInstanceOf[js.Any])
         ret
@@ -120,7 +120,7 @@ object BreadcrumbProps {
         ret
     }
     @scala.inline
-    def withLocation(value: Location[LocationState] | AnonPathname): Self = {
+    def withLocation(value: Location[LocationState] | Pathname): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
         ret
@@ -132,7 +132,7 @@ object BreadcrumbProps {
         ret
     }
     @scala.inline
-    def withMenu(value: AnonDefaultOpenAll): Self = {
+    def withMenu(value: DefaultOpenAll): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
         ret

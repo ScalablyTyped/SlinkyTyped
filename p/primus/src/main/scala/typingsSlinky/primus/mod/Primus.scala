@@ -2,9 +2,9 @@ package typingsSlinky.primus.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.primus.AnonClose
-import typingsSlinky.primus.AnonName
-import typingsSlinky.primus.AnonReconnect
+import typingsSlinky.primus.anon.Close
+import typingsSlinky.primus.anon.Name
+import typingsSlinky.primus.anon.Reconnect
 import typingsSlinky.primus.mod.emits.fn
 import typingsSlinky.primus.mod.emits.parser
 import typingsSlinky.primus.primusStrings.connection
@@ -23,7 +23,7 @@ trait Primus extends EventEmitter {
   @JSName("emits")
   var emits_Original: typingsSlinky.primus.mod.emits.emits = js.native
   def authorize(fn: AuthorizationHandler): this.type = js.native
-  def destroy(options: AnonClose, fn: js.Function0[Unit]): this.type = js.native
+  def destroy(options: Close, fn: js.Function0[Unit]): this.type = js.native
   def disable(name: String): this.type = js.native
   def emits(event: String, arg1: js.Any, parser: parser): fn = js.native
   def emits(event: String, args: js.Any*): fn = js.native
@@ -31,7 +31,7 @@ trait Primus extends EventEmitter {
   def enable(name: String): this.type = js.native
   def end(): Unit = js.native
   def end(data: js.Any): Unit = js.native
-  def end(data: js.Any, options: AnonReconnect): Unit = js.native
+  def end(data: js.Any, options: Reconnect): Unit = js.native
   def forEach(cb: js.Function1[/* spark */ Spark, Boolean]): this.type = js.native
   def forEach(
     cb: js.Function2[
@@ -51,10 +51,10 @@ trait Primus extends EventEmitter {
   @JSName("on")
   def on_plugout(event: plugout, cb: js.Function2[/* name */ String, /* energon */ js.Any, Unit]): this.type = js.native
   def plugin(): js.Any = js.native
-  def plugin(energon: AnonName): this.type = js.native
+  def plugin(energon: Name): this.type = js.native
   def plugin(name: String): js.Any = js.native
   def plugin(name: String, energon: String): this.type = js.native
-  def plugin(name: String, energon: AnonName): this.type = js.native
+  def plugin(name: String, energon: Name): this.type = js.native
   // This has a lot of variations and can be improved
   @JSName("plugin")
   def plugin_StringDictionary(): StringDictionary[js.Any] = js.native

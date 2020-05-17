@@ -1,8 +1,8 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonLineStyleAnonShadowBlur
-import typingsSlinky.echarts.AnonShadowBlur
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.LineStyleShadowBlur
+import typingsSlinky.echarts.anon.ShadowBlur
 import typingsSlinky.echarts.echarts.EChartOption.SeriesParallel.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -268,7 +268,7 @@ trait SeriesParallel_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-parallel.emphasis
     */
-  var emphasis: js.UndefOr[AnonLineStyleAnonShadowBlur] = js.native
+  var emphasis: js.UndefOr[LineStyleShadowBlur] = js.native
   /**
     * Component ID, not specified by default.
     * If specified, it can be used to refer the component in option
@@ -294,7 +294,7 @@ trait SeriesParallel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-parallel.lineStyle
     */
-  var lineStyle: js.UndefOr[AnonShadowBlur] = js.native
+  var lineStyle: js.UndefOr[ShadowBlur] = js.native
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -390,7 +390,7 @@ trait SeriesParallel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-parallel.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * @default
     * "parallel"
@@ -577,7 +577,7 @@ object SeriesParallel_ {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonLineStyleAnonShadowBlur): Self = {
+    def withEmphasis(value: LineStyleShadowBlur): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -613,7 +613,7 @@ object SeriesParallel_ {
         ret
     }
     @scala.inline
-    def withLineStyle(value: AnonShadowBlur): Self = {
+    def withLineStyle(value: ShadowBlur): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
         ret
@@ -721,7 +721,7 @@ object SeriesParallel_ {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

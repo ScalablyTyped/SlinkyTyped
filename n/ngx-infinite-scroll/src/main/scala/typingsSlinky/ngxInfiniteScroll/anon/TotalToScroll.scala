@@ -1,0 +1,33 @@
+package typingsSlinky.ngxInfiniteScroll.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait TotalToScroll extends js.Object {
+  var totalToScroll: js.Any = js.native
+}
+
+object TotalToScroll {
+  @scala.inline
+  def apply(totalToScroll: js.Any): TotalToScroll = {
+    val __obj = js.Dynamic.literal(totalToScroll = totalToScroll.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TotalToScroll]
+  }
+  @scala.inline
+  implicit class TotalToScrollOps[Self <: TotalToScroll] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTotalToScroll(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalToScroll")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IEntry extends StatsBase[Double] {
+trait IEntry
+  extends StatsBase[Double]
+     with EntryItem {
   var depth: Double = js.native
   var path: String = js.native
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.jupyterlabOutputarea.widgetMod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.jupyterlabOutputarea.widgetMod.Stdin.IOptions
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,6 +27,6 @@ class Stdin_ protected () extends IStdin {
     * called in response to events on the dock panel's node. It should
     * not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
 }
 

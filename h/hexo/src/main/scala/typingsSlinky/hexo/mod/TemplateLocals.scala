@@ -1,6 +1,6 @@
 package typingsSlinky.hexo.mod
 
-import typingsSlinky.hexo.AnonArgs
+import typingsSlinky.hexo.anon.Args
 import typingsSlinky.hexo.mod.Locals.Category
 import typingsSlinky.hexo.mod.Locals.Page
 import typingsSlinky.hexo.mod.Locals.Tag
@@ -24,7 +24,7 @@ trait TemplateLocals extends js.Object {
     * Site settings in `_config.yml`
     */
   var config: HexoConfig = js.native
-  var env: AnonArgs = js.native
+  var env: Args = js.native
   var layout: String = js.native
   var page: typingsSlinky.hexo.mod.Locals.Post | Page | Category | Tag | IndexPage | ArchivePage | CategoryPage | TagPage = js.native
   var path: String = js.native

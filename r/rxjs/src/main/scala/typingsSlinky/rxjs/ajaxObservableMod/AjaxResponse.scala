@@ -1,7 +1,7 @@
 package typingsSlinky.rxjs.ajaxObservableMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.XMLHttpRequest
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
 @JSImport("rxjs/internal/observable/dom/AjaxObservable", "AjaxResponse")
 @js.native
 class AjaxResponse protected () extends js.Object {
-  def this(originalEvent: Event_, xhr: XMLHttpRequest, request: AjaxRequest) = this()
-  var originalEvent: Event_ = js.native
+  def this(originalEvent: Event, xhr: XMLHttpRequest, request: AjaxRequest) = this()
+  var originalEvent: Event = js.native
   var request: AjaxRequest = js.native
   /** @type {string|ArrayBuffer|Document|object|any} The response data */
   var response: js.Any = js.native

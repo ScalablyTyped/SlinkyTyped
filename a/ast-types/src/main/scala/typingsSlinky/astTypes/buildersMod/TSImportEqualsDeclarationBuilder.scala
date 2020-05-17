@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonIsExport
+import typingsSlinky.astTypes.anon.IsExport
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.kindsMod.TSExternalModuleReferenceKind
 import typingsSlinky.astTypes.kindsMod.TSQualifiedNameKind
@@ -14,6 +14,6 @@ trait TSImportEqualsDeclarationBuilder extends js.Object {
   def apply(id: IdentifierKind, moduleReference: IdentifierKind): TSImportEqualsDeclaration = js.native
   def apply(id: IdentifierKind, moduleReference: TSExternalModuleReferenceKind): TSImportEqualsDeclaration = js.native
   def apply(id: IdentifierKind, moduleReference: TSQualifiedNameKind): TSImportEqualsDeclaration = js.native
-  def from(params: AnonIsExport): TSImportEqualsDeclaration = js.native
+  def from(params: IsExport): TSImportEqualsDeclaration = js.native
 }
 

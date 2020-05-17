@@ -1,6 +1,6 @@
 package typingsSlinky.exceljs.mod
 
-import typingsSlinky.exceljs.PartialAddWorksheetOption
+import typingsSlinky.exceljs.anon.PartialAddWorksheetOption
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

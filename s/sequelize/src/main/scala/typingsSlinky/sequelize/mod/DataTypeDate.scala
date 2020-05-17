@@ -1,6 +1,6 @@
 package typingsSlinky.sequelize.mod
 
-import typingsSlinky.sequelize.AnonLengthNumber
+import typingsSlinky.sequelize.anon.LengthNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,6 +12,6 @@ trait DataTypeDate extends DataTypeAbstract {
     */
   def apply(): DataTypeDate = js.native
   def apply(length: Double): DataTypeDate = js.native
-  def apply(options: AnonLengthNumber): DataTypeDate = js.native
+  def apply(options: LengthNumber): DataTypeDate = js.native
 }
 

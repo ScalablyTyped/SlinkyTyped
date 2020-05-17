@@ -7,8 +7,8 @@ import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.reactFocusLock.AnonChildren
-import typingsSlinky.reactFocusLock.ReactFocusLockPropsReactN
+import typingsSlinky.reactFocusLock.anon.Children
+import typingsSlinky.reactFocusLock.anon.ReactFocusLockPropsReactN
 import typingsSlinky.reactFocusLock.reactFocusLockStrings.tail
 import typingsSlinky.std.FocusOptions
 import typingsSlinky.std.Record
@@ -24,13 +24,13 @@ object UI {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, Ref[js.Any]] {
     @scala.inline
     def allowTextSelection(value: Boolean): this.type = set("allowTextSelection", value.asInstanceOf[js.Any])
     @scala.inline
-    def asFunctionComponent(value: ReactComponentClass[(Record[String, _]) with AnonChildren]): this.type = set("as", value.asInstanceOf[js.Any])
+    def asFunctionComponent(value: ReactComponentClass[(Record[String, _]) with Children]): this.type = set("as", value.asInstanceOf[js.Any])
     @scala.inline
-    def asComponentClass(value: ReactComponentClass[(Record[String, _]) with AnonChildren]): this.type = set("as", value.asInstanceOf[js.Any])
+    def asComponentClass(value: ReactComponentClass[(Record[String, _]) with Children]): this.type = set("as", value.asInstanceOf[js.Any])
     @scala.inline
     def as(value: String | ReactElement): this.type = set("as", value.asInstanceOf[js.Any])
     @scala.inline

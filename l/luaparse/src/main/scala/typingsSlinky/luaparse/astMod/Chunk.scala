@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Chunk
   extends Base[typingsSlinky.luaparse.luaparseStrings.Chunk]
-     with _Node {
+     with Node {
   var body: js.Array[Statement] = js.native
   var comments: js.UndefOr[js.Array[String]] = js.native
 }

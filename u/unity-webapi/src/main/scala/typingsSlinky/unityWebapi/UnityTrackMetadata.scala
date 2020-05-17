@@ -4,13 +4,52 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("UnityTrackMetadata")
 @js.native
-class UnityTrackMetadata () extends js.Object {
+trait UnityTrackMetadata extends js.Object {
   // Optionals
   var album: String = js.native
   var artLocation: String = js.native
   var artist: String = js.native
   var title: String = js.native
+}
+
+object UnityTrackMetadata {
+  @scala.inline
+  def apply(album: String, artLocation: String, artist: String, title: String): UnityTrackMetadata = {
+    val __obj = js.Dynamic.literal(album = album.asInstanceOf[js.Any], artLocation = artLocation.asInstanceOf[js.Any], artist = artist.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UnityTrackMetadata]
+  }
+  @scala.inline
+  implicit class UnityTrackMetadataOps[Self <: UnityTrackMetadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlbum(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("album")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArtLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArtist(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artist")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

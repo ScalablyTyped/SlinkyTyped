@@ -1,7 +1,7 @@
 package typingsSlinky.antdMobileRn.paginationIndexNativeMod
 
-import typingsSlinky.antdMobileRn.AnonAntLocale
-import typingsSlinky.antdMobileRn.AnonCurrent
+import typingsSlinky.antdMobileRn.anon.AntLocale
+import typingsSlinky.antdMobileRn.anon.Current
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ class default protected () extends Pagination {
 @JSImport("antd-mobile-rn/lib/pagination/index.native", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var contextTypes: AnonAntLocale = js.native
-  var defaultProps: AnonCurrent = js.native
+  var contextTypes: AntLocale = js.native
+  var defaultProps: Current = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.vue2Editor.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait VueEditorMethods extends js.Object {
   def checkForCustomImageHandler(): Unit = js.native
   def customImageHandler(image: js.Any, callback: js.Any): Unit = js.native
-  def emitImageInfo($event: Event_): Unit = js.native
+  def emitImageInfo($event: Event): Unit = js.native
   def handleInitialContent(): Unit = js.native
   def handleSelectionChange(range: js.Any, oldRange: js.Any): Unit = js.native
   def handleTextChange(): Unit = js.native
@@ -28,7 +28,7 @@ object VueEditorMethods {
   def apply(
     checkForCustomImageHandler: () => Unit,
     customImageHandler: (js.Any, js.Any) => Unit,
-    emitImageInfo: Event_ => Unit,
+    emitImageInfo: Event => Unit,
     handleInitialContent: () => Unit,
     handleSelectionChange: (js.Any, js.Any) => Unit,
     handleTextChange: () => Unit,
@@ -63,7 +63,7 @@ object VueEditorMethods {
         ret
     }
     @scala.inline
-    def withEmitImageInfo(value: Event_ => Unit): Self = {
+    def withEmitImageInfo(value: Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emitImageInfo")(js.Any.fromFunction1(value))
         ret

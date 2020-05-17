@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeMaterialKit.mod
 
-import typingsSlinky.reactNativeMaterialKit.AnonAmber
+import typingsSlinky.reactNativeMaterialKit.anon.Amber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +32,7 @@ trait MKColorStatic extends js.Object {
   var Teal: String = js.native
   var Transparent: String = js.native
   var Yellow: String = js.native
-  var default: AnonAmber = js.native
+  var default: Amber = js.native
   var palette_blue_400: String = js.native
   var palette_green_500: String = js.native
   var palette_red_500: String = js.native
@@ -67,7 +67,7 @@ object MKColorStatic {
     Teal: String,
     Transparent: String,
     Yellow: String,
-    default: AnonAmber,
+    default: Amber,
     palette_blue_400: String,
     palette_green_500: String,
     palette_red_500: String,
@@ -233,7 +233,7 @@ object MKColorStatic {
         ret
     }
     @scala.inline
-    def withDefault(value: AnonAmber): Self = {
+    def withDefault(value: Amber): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
         ret

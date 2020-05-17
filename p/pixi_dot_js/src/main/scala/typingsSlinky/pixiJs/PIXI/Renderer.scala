@@ -1,8 +1,6 @@
 package typingsSlinky.pixiJs.PIXI
 
 import org.scalajs.dom.raw.WebGLRenderingContext
-import typingsSlinky.pixiJs.AnonAccessibility
-import typingsSlinky.pixiJs.AnonBackgroundColor
 import typingsSlinky.pixiJs.PIXI.systems.BatchSystem
 import typingsSlinky.pixiJs.PIXI.systems.ContextSystem
 import typingsSlinky.pixiJs.PIXI.systems.FilterSystem
@@ -17,6 +15,7 @@ import typingsSlinky.pixiJs.PIXI.systems.StateSystem
 import typingsSlinky.pixiJs.PIXI.systems.StencilSystem
 import typingsSlinky.pixiJs.PIXI.systems.TextureGCSystem
 import typingsSlinky.pixiJs.PIXI.systems.TextureSystem
+import typingsSlinky.pixiJs.anon.Accessibility
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,10 +32,8 @@ import scala.scalajs.js.annotation._
   * @memberof PIXI
   * @extends PIXI.AbstractRenderer
   */
-@JSGlobal("PIXI.Renderer")
 @js.native
-class Renderer () extends AbstractRenderer {
-  def this(options: AnonBackgroundColor) = this()
+trait Renderer extends AbstractRenderer {
   /**
     * Batch system instance
     * @member {PIXI.systems.BatchSystem} batch
@@ -112,7 +109,7 @@ class Renderer () extends AbstractRenderer {
     * @property {PIXI.Prepare} prepare Pre-render display objects.
     */
   @JSName("plugins")
-  val plugins_Renderer: AnonAccessibility = js.native
+  val plugins_Renderer: Accessibility = js.native
   /**
     * Projection system instance
     * @member {PIXI.systems.ProjectionSystem} projection
@@ -217,19 +214,5 @@ class Renderer () extends AbstractRenderer {
     * @return {PIXI.Renderer} Returns itself.
     */
   def reset(): Renderer = js.native
-}
-
-/* static members */
-@JSGlobal("PIXI.Renderer")
-@js.native
-object Renderer extends js.Object {
-  /**
-    * Adds a plugin to the renderer.
-    *
-    * @method
-    * @param {string} pluginName - The name of the plugin.
-    * @param {Function} ctor - The constructor function or class for the plugin.
-    */
-  def registerPlugin(pluginName: String, ctor: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
 }
 

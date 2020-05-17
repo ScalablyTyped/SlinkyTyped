@@ -1,7 +1,7 @@
 package typingsSlinky.foundation.Foundation
 
-import typingsSlinky.foundation.AnonBottom
-import typingsSlinky.foundation.AnonButton
+import typingsSlinky.foundation.anon.Bottom
+import typingsSlinky.foundation.anon.Button
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,13 +31,13 @@ trait JoyrideOptions extends js.Object {
   var scroll_speed: js.UndefOr[Double] = js.native
   var start_offset: js.UndefOr[Double] = js.native
   var start_timer_on_click: js.UndefOr[Boolean] = js.native
-  var template: js.UndefOr[AnonButton] = js.native
+  var template: js.UndefOr[Button] = js.native
   var timer: js.UndefOr[Double] = js.native
   var tip_animation: js.UndefOr[String] = js.native
   var tip_animation_fade_speed: js.UndefOr[Double] = js.native
   var tip_container: js.UndefOr[String] = js.native
   var tip_location: js.UndefOr[String] = js.native
-  var tip_location_patterns: js.UndefOr[AnonBottom] = js.native
+  var tip_location_patterns: js.UndefOr[Bottom] = js.native
 }
 
 object JoyrideOptions {
@@ -317,7 +317,7 @@ object JoyrideOptions {
         ret
     }
     @scala.inline
-    def withTemplate(value: AnonButton): Self = {
+    def withTemplate(value: Button): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
         ret
@@ -389,7 +389,7 @@ object JoyrideOptions {
         ret
     }
     @scala.inline
-    def withTip_location_patterns(value: AnonBottom): Self = {
+    def withTip_location_patterns(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tip_location_patterns")(value.asInstanceOf[js.Any])
         ret

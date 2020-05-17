@@ -1,8 +1,8 @@
 package typingsSlinky.chromeApps.chrome.networking.onc.internal
 
-import typingsSlinky.chromeApps.AnonAuthentication
-import typingsSlinky.chromeApps.AnonSignalStrength
-import typingsSlinky.chromeApps.AnonType
+import typingsSlinky.chromeApps.anon.Authentication
+import typingsSlinky.chromeApps.anon.SignalStrength
+import typingsSlinky.chromeApps.anon.Type
 import typingsSlinky.chromeApps.chrome.integer
 import typingsSlinky.chromeApps.chrome.networking.onc.CellularBase
 import typingsSlinky.chromeApps.chrome.networking.onc.CellularProperties
@@ -29,7 +29,7 @@ trait NetworkConfigBase[M /* <: ManagedObject */, IF /* <: InterfaceType */, OF 
   /** For cellular networks, cellular network properties. */
   var Cellular: js.UndefOr[CellularProperties[M] | CellularBase] = js.native
   /** For Ethernet networks, the Ethernet network properties. */
-  var Ethernet: js.UndefOr[EthernetProperties[M] | AnonAuthentication] = js.native
+  var Ethernet: js.UndefOr[EthernetProperties[M] | Authentication] = js.native
   /** The network GUID. */
   var GUID: js.UndefOr[String] = js.native
   /** The network's IP address configuration type. */
@@ -43,15 +43,13 @@ trait NetworkConfigBase[M /* <: ManagedObject */, IF /* <: InterfaceType */, OF 
   /** The network type. */
   var Type: js.UndefOr[NetworkType] = js.native
   /** For VPN networks, the network VPN properties. */
-  var VPN: js.UndefOr[
-    (VPNProperties[M, Boolean | ManagedBoolean, String | ManagedDOMString]) | AnonType
-  ] = js.native
+  var VPN: js.UndefOr[(VPNProperties[M, Boolean | ManagedBoolean, String | ManagedDOMString]) | Type] = js.native
   /** For WiFi networks, the network WiFi properties. */
   var WiFi: js.UndefOr[
     (WiFiProperties[M, OF, Boolean | ManagedBoolean, String | ManagedDOMString, integer | ManagedLong]) | (WiFiPropertiesBase[unmanaged, String | ManagedDOMString])
   ] = js.native
   /** For WiMAX networks, the network WiMAX properties. */
-  var WiMAX: js.UndefOr[(WiMAXProperties[M, Boolean | ManagedBoolean]) | AnonSignalStrength] = js.native
+  var WiMAX: js.UndefOr[(WiMAXProperties[M, Boolean | ManagedBoolean]) | SignalStrength] = js.native
 }
 
 object NetworkConfigBase {
@@ -79,7 +77,7 @@ object NetworkConfigBase {
         ret
     }
     @scala.inline
-    def withEthernet(value: EthernetProperties[M] | AnonAuthentication): Self[M, IF, OF] = {
+    def withEthernet(value: EthernetProperties[M] | Authentication): Self[M, IF, OF] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Ethernet")(value.asInstanceOf[js.Any])
         ret
@@ -163,7 +161,7 @@ object NetworkConfigBase {
         ret
     }
     @scala.inline
-    def withVPN(value: (VPNProperties[M, Boolean | ManagedBoolean, String | ManagedDOMString]) | AnonType): Self[M, IF, OF] = {
+    def withVPN(value: (VPNProperties[M, Boolean | ManagedBoolean, String | ManagedDOMString]) | Type): Self[M, IF, OF] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("VPN")(value.asInstanceOf[js.Any])
         ret
@@ -189,7 +187,7 @@ object NetworkConfigBase {
         ret
     }
     @scala.inline
-    def withWiMAX(value: (WiMAXProperties[M, Boolean | ManagedBoolean]) | AnonSignalStrength): Self[M, IF, OF] = {
+    def withWiMAX(value: (WiMAXProperties[M, Boolean | ManagedBoolean]) | SignalStrength): Self[M, IF, OF] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("WiMAX")(value.asInstanceOf[js.Any])
         ret

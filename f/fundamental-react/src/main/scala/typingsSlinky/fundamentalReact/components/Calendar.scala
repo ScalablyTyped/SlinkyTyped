@@ -2,7 +2,7 @@ package typingsSlinky.fundamentalReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.fundamentalReact.AnonNextMonth
+import typingsSlinky.fundamentalReact.anon.NextMonth
 import typingsSlinky.fundamentalReact.calendarMod.CalendarProps
 import typingsSlinky.fundamentalReact.calendarMod.default
 import scala.scalajs.js
@@ -37,7 +37,7 @@ object Calendar {
     @scala.inline
     def disabledDates(value: js.Array[js.Date]): this.type = set("disabledDates", value.asInstanceOf[js.Any])
     @scala.inline
-    def localizedText(value: AnonNextMonth): this.type = set("localizedText", value.asInstanceOf[js.Any])
+    def localizedText(value: NextMonth): this.type = set("localizedText", value.asInstanceOf[js.Any])
     @scala.inline
     def onChange(value: /* date */ js.Date => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
   }

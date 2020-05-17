@@ -1,6 +1,6 @@
 package typingsSlinky.angularCore.r3SymbolsMod
 
-import typingsSlinky.angularCore.AnonPropName
+import typingsSlinky.angularCore.anon.PropName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ trait ComponentFactory[C] extends js.Object {
   /**
     * The inputs of the component.
     */
-  val inputs: js.Array[AnonPropName] = js.native
+  val inputs: js.Array[PropName] = js.native
   /**
     * Selector for all <ng-content> elements in the component.
     */
@@ -31,7 +31,7 @@ trait ComponentFactory[C] extends js.Object {
   /**
     * The outputs of the component.
     */
-  val outputs: js.Array[AnonPropName] = js.native
+  val outputs: js.Array[PropName] = js.native
   /**
     * The component's HTML selector.
     */

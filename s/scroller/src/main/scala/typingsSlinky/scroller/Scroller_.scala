@@ -1,18 +1,14 @@
 package typingsSlinky.scroller
 
-import typingsSlinky.scroller.Scroller.Options
+import typingsSlinky.scroller.anon.Left
+import typingsSlinky.scroller.anon.PageX
+import typingsSlinky.scroller.anon.Top
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Scroller")
 @js.native
-class Scroller_ protected () extends js.Object {
-  def this(callback: js.Function3[/* left */ Double, /* top */ Double, /* zoom */ Double, Unit]) = this()
-  def this(
-    callback: js.Function3[/* left */ Double, /* top */ Double, /* zoom */ Double, Unit],
-    options: Options
-  ) = this()
+trait Scroller_ extends js.Object {
   def activatePullToRefresh(
     height: Double,
     activate: js.Function0[Unit],
@@ -21,12 +17,12 @@ class Scroller_ protected () extends js.Object {
   ): Unit = js.native
   def doMouseZoom(wheelData: Double, timeStamp: Double, pageX: Double, pageY: Double): Unit = js.native
   def doTouchEnd(timeStamp: Double): Unit = js.native
-  def doTouchMove(touches: js.Array[AnonPageX], timeStamp: Double): Unit = js.native
-  def doTouchMove(touches: js.Array[AnonPageX], timeStamp: Double, scale: Double): Unit = js.native
-  def doTouchStart(touches: js.Array[AnonPageX], timeStamp: Double): Unit = js.native
+  def doTouchMove(touches: js.Array[PageX], timeStamp: Double): Unit = js.native
+  def doTouchMove(touches: js.Array[PageX], timeStamp: Double, scale: Double): Unit = js.native
+  def doTouchStart(touches: js.Array[PageX], timeStamp: Double): Unit = js.native
   def finishPullToRefresh(): Unit = js.native
-  def getScrollMax(): AnonTop = js.native
-  def getValues(): AnonLeft = js.native
+  def getScrollMax(): Top = js.native
+  def getValues(): Left = js.native
   def scrollBy(leftOffset: Double, topOffset: Double): Unit = js.native
   def scrollBy(leftOffset: Double, topOffset: Double, animate: Boolean): Unit = js.native
   def scrollTo(left: Double, top: Double): Unit = js.native

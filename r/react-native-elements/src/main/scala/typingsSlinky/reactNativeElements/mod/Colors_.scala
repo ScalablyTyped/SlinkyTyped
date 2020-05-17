@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeElements.mod
 
-import typingsSlinky.reactNativeElements.AnonAndroid
+import typingsSlinky.reactNativeElements.anon.Android
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait Colors_ extends js.Object {
   val grey4: String = js.native
   val grey5: String = js.native
   val greyOutline: String = js.native
-  val platform: AnonAndroid = js.native
+  val platform: Android = js.native
   val primary: String = js.native
   val searchBg: String = js.native
   val secondary: String = js.native
@@ -38,7 +38,7 @@ object Colors_ {
     grey4: String,
     grey5: String,
     greyOutline: String,
-    platform: AnonAndroid,
+    platform: Android,
     primary: String,
     searchBg: String,
     secondary: String,
@@ -115,7 +115,7 @@ object Colors_ {
         ret
     }
     @scala.inline
-    def withPlatform(value: AnonAndroid): Self = {
+    def withPlatform(value: Android): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
         ret

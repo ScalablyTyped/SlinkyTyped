@@ -32,9 +32,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A tabbed group of windows.
 		 */
-@JSGlobal("Titanium.UI.TabGroup")
 @js.native
-class TabGroup () extends Window {
+trait TabGroup extends Window {
   /**
   			 * Active tab.
   			 */

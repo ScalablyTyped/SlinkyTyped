@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -202,8 +201,4 @@ trait externalRenderers extends js.Object {
     count: Double
   ): js.Array[Double] | js.typedarray.Float32Array = js.native
 }
-
-@JSGlobal("__esri.externalRenderers")
-@js.native
-object externalRenderers extends TopLevel[externalRenderers]
 

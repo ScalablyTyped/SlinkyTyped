@@ -1,14 +1,14 @@
 package typingsSlinky.typedRestClient.interfacesMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.typedRestClient.AnonArrayFormat
+import typingsSlinky.typedRestClient.anon.ArrayFormat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IRequestQueryParams extends js.Object {
-  var options: js.UndefOr[AnonArrayFormat] = js.native
+  var options: js.UndefOr[ArrayFormat] = js.native
   var params: StringDictionary[String | Double | (js.Array[String | Double])] = js.native
 }
 
@@ -31,7 +31,7 @@ object IRequestQueryParams {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonArrayFormat): Self = {
+    def withOptions(value: ArrayFormat): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

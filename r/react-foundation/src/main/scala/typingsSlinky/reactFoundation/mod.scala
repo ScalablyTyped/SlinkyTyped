@@ -6,6 +6,8 @@ import typingsSlinky.reactFoundation.accordionMod.AccordianContentProps
 import typingsSlinky.reactFoundation.accordionMod.AccordianItemProps
 import typingsSlinky.reactFoundation.accordionMod.AccordianProps
 import typingsSlinky.reactFoundation.accordionMod.AccordionTitleProps
+import typingsSlinky.reactFoundation.anon.AlignX
+import typingsSlinky.reactFoundation.anon.Breakpoint
 import typingsSlinky.reactFoundation.badgeMod.BadgeProps
 import typingsSlinky.reactFoundation.breadcrumbsMod.BreadcrumbItemProps
 import typingsSlinky.reactFoundation.breadcrumbsMod.BreadcrumbsProps
@@ -198,8 +200,8 @@ object mod extends js.Object {
   /* static members */
   @js.native
   object ResponsiveNavigation extends js.Object {
-    var defaultProps: AnonBreakpoint = js.native
-    var propTypes: AnonAlignX = js.native
+    var defaultProps: Breakpoint = js.native
+    var propTypes: AlignX = js.native
   }
   
   @js.native

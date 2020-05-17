@@ -1,15 +1,15 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClientBooks.AnonBoundary
-import typingsSlinky.gapiClientBooks.AnonLang
+import typingsSlinky.gapiClientBooks.anon.Boundary
+import typingsSlinky.gapiClientBooks.anon.Lang
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Geolayerdata extends js.Object {
-  var common: js.UndefOr[AnonLang] = js.native
-  var geo: js.UndefOr[AnonBoundary] = js.native
+  var common: js.UndefOr[Lang] = js.native
+  var geo: js.UndefOr[Boundary] = js.native
   var kind: js.UndefOr[String] = js.native
 }
 
@@ -26,7 +26,7 @@ object Geolayerdata {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCommon(value: AnonLang): Self = {
+    def withCommon(value: Lang): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("common")(value.asInstanceOf[js.Any])
         ret
@@ -38,7 +38,7 @@ object Geolayerdata {
         ret
     }
     @scala.inline
-    def withGeo(value: AnonBoundary): Self = {
+    def withGeo(value: Boundary): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("geo")(value.asInstanceOf[js.Any])
         ret

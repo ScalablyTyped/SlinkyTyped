@@ -1,7 +1,7 @@
 package typingsSlinky.antd.scrollToMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait ScrollToOptions extends js.Object {
   /** Animation duration, default as 450 */
   var duration: js.UndefOr[Double] = js.native
   /** Scroll container, default as window */
-  var getContainer: js.UndefOr[js.Function0[HTMLElement | Window_]] = js.native
+  var getContainer: js.UndefOr[js.Function0[HTMLElement | Window]] = js.native
 }
 
 object ScrollToOptions {
@@ -53,7 +53,7 @@ object ScrollToOptions {
         ret
     }
     @scala.inline
-    def withGetContainer(value: () => HTMLElement | Window_): Self = {
+    def withGetContainer(value: () => HTMLElement | Window): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getContainer")(js.Any.fromFunction0(value))
         ret

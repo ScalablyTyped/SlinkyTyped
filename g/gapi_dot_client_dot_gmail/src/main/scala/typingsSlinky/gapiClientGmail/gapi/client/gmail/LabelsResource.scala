@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientGmail.gapi.client.gmail
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientGmail.AnonAlt
-import typingsSlinky.gapiClientGmail.AnonFields
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientGmail.anon.Alt
+import typingsSlinky.gapiClientGmail.anon.Fields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,28 +10,28 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LabelsResource extends js.Object {
   /** Creates a new label. */
-  def create(request: AnonAlt): Request_[Label] = js.native
+  def create(request: Alt): Request[Label] = js.native
   /** Immediately and permanently deletes the specified label and removes it from any messages and threads that it is applied to. */
-  def delete(request: AnonFields): Request_[Unit] = js.native
+  def delete(request: Fields): Request[Unit] = js.native
   /** Gets the specified label. */
-  def get(request: AnonFields): Request_[Label] = js.native
+  def get(request: Fields): Request[Label] = js.native
   /** Lists all labels in the user's mailbox. */
-  def list(request: AnonAlt): Request_[ListLabelsResponse] = js.native
+  def list(request: Alt): Request[ListLabelsResponse] = js.native
   /** Updates the specified label. This method supports patch semantics. */
-  def patch(request: AnonFields): Request_[Label] = js.native
+  def patch(request: Fields): Request[Label] = js.native
   /** Updates the specified label. */
-  def update(request: AnonFields): Request_[Label] = js.native
+  def update(request: Fields): Request[Label] = js.native
 }
 
 object LabelsResource {
   @scala.inline
   def apply(
-    create: AnonAlt => Request_[Label],
-    delete: AnonFields => Request_[Unit],
-    get: AnonFields => Request_[Label],
-    list: AnonAlt => Request_[ListLabelsResponse],
-    patch: AnonFields => Request_[Label],
-    update: AnonFields => Request_[Label]
+    create: Alt => Request[Label],
+    delete: Fields => Request[Unit],
+    get: Fields => Request[Label],
+    list: Alt => Request[ListLabelsResponse],
+    patch: Fields => Request[Label],
+    update: Fields => Request[Label]
   ): LabelsResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[LabelsResource]
@@ -43,37 +43,37 @@ object LabelsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: AnonAlt => Request_[Label]): Self = {
+    def withCreate(value: Alt => Request[Label]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonFields => Request_[Unit]): Self = {
+    def withDelete(value: Fields => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonFields => Request_[Label]): Self = {
+    def withGet(value: Fields => Request[Label]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonAlt => Request_[ListLabelsResponse]): Self = {
+    def withList(value: Alt => Request[ListLabelsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPatch(value: AnonFields => Request_[Label]): Self = {
+    def withPatch(value: Fields => Request[Label]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonFields => Request_[Label]): Self = {
+    def withUpdate(value: Fields => Request[Label]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

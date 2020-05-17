@@ -1,6 +1,5 @@
 package typingsSlinky.kendoUi.kendo.dataviz.ui
 
-import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.JQuery
 import typingsSlinky.kendoUi.JQueryPromise
 import typingsSlinky.kendoUi.kendo.data.DataSource
@@ -14,11 +13,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.dataviz.ui.Diagram")
 @js.native
-class Diagram protected () extends Widget {
-  def this(element: Element) = this()
-  def this(element: Element, options: DiagramOptions) = this()
+trait Diagram extends Widget {
   var connections: js.Array[Connection] = js.native
   var connectionsDataSource: DataSource = js.native
   var dataSource: DataSource = js.native
@@ -85,13 +81,5 @@ class Diagram protected () extends Widget {
   def viewport(): Rect = js.native
   def zoom(): Double = js.native
   def zoom(zoom: Double, point: Point): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("kendo.dataviz.ui.Diagram")
-@js.native
-object Diagram extends js.Object {
-  var fn: Diagram = js.native
-  def extend(proto: js.Object): Diagram = js.native
 }
 

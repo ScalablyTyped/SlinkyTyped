@@ -1,13 +1,13 @@
 package typingsSlinky.awsSdk.remoteCredentialsMod
 
-import typingsSlinky.awsSdk.AnonTimeout
+import typingsSlinky.awsSdk.anon.Timeout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait RemoteCredentialsOptions extends js.Object {
-  var httpOptions: js.UndefOr[AnonTimeout] = js.native
+  var httpOptions: js.UndefOr[Timeout] = js.native
   var maxRetries: js.UndefOr[Double] = js.native
 }
 
@@ -24,7 +24,7 @@ object RemoteCredentialsOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withHttpOptions(value: AnonTimeout): Self = {
+    def withHttpOptions(value: Timeout): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("httpOptions")(value.asInstanceOf[js.Any])
         ret

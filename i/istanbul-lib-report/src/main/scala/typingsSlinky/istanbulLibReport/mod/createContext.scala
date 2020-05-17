@@ -1,6 +1,6 @@
 package typingsSlinky.istanbulLibReport.mod
 
-import typingsSlinky.istanbulLibReport.PartialContextOptions
+import typingsSlinky.istanbulLibReport.anon.PartialContextOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

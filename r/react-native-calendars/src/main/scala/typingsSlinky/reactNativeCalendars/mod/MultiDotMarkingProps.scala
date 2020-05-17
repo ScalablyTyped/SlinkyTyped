@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait MultiDotMarkingProps extends _CalendarMarkingProps {
+trait MultiDotMarkingProps extends CalendarMarkingProps {
   var markedDates: StringDictionary[MultiDotMarking] = js.native
   var markingType: `multi-dot` = js.native
 }

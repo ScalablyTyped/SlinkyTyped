@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Avvio[I]
   extends EventEmitter
-     with Server[I] {
+     with Server[I]
+     with context[I] {
   var booted: Boolean = js.native
   var started: Boolean = js.native
   @JSName("on")

@@ -1,17 +1,17 @@
 package typingsSlinky.firefoxWebextBrowser.browser.manifest
 
-import typingsSlinky.firefoxWebextBrowser.AnonAccentcolor
-import typingsSlinky.firefoxWebextBrowser.AnonAdditionalbackgrounds
-import typingsSlinky.firefoxWebextBrowser.AnonAdditionalbackgroundsalignment
+import typingsSlinky.firefoxWebextBrowser.anon.Accentcolor
+import typingsSlinky.firefoxWebextBrowser.anon.Additionalbackgrounds
+import typingsSlinky.firefoxWebextBrowser.anon.Additionalbackgroundsalignment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ThemeType extends js.Object {
-  var colors: js.UndefOr[AnonAccentcolor] = js.native
-  var images: js.UndefOr[AnonAdditionalbackgrounds] = js.native
-  var properties: js.UndefOr[AnonAdditionalbackgroundsalignment] = js.native
+  var colors: js.UndefOr[Accentcolor] = js.native
+  var images: js.UndefOr[Additionalbackgrounds] = js.native
+  var properties: js.UndefOr[Additionalbackgroundsalignment] = js.native
 }
 
 object ThemeType {
@@ -27,7 +27,7 @@ object ThemeType {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withColors(value: AnonAccentcolor): Self = {
+    def withColors(value: Accentcolor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
         ret
@@ -39,7 +39,7 @@ object ThemeType {
         ret
     }
     @scala.inline
-    def withImages(value: AnonAdditionalbackgrounds): Self = {
+    def withImages(value: Additionalbackgrounds): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("images")(value.asInstanceOf[js.Any])
         ret
@@ -51,7 +51,7 @@ object ThemeType {
         ret
     }
     @scala.inline
-    def withProperties(value: AnonAdditionalbackgroundsalignment): Self = {
+    def withProperties(value: Additionalbackgroundsalignment): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
         ret

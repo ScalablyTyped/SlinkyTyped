@@ -2,8 +2,8 @@ package typingsSlinky.xrm
 
 import typingsSlinky.xrm.Xrm.Attributes.AttributeFormat
 import typingsSlinky.xrm.Xrm.Attributes.RequirementLevel
+import typingsSlinky.xrm.Xrm.Controls.ControlType
 import typingsSlinky.xrm.Xrm.Controls.NotificationLevel
-import typingsSlinky.xrm.Xrm.Controls._ControlType
 import typingsSlinky.xrm.Xrm.Device.PickFileTypes
 import typingsSlinky.xrm.XrmEnum.AdvancedConfigSettingOption
 import typingsSlinky.xrm.XrmEnum.AttributeRequirementLevel
@@ -218,8 +218,8 @@ object xrmStrings {
   
   @js.native
   sealed trait iframe
-    extends StandardControlType
-       with _ControlType
+    extends ControlType
+       with StandardControlType
   
   @js.native
   sealed trait image
@@ -238,8 +238,8 @@ object xrmStrings {
   
   @js.native
   sealed trait kbsearch
-    extends StandardControlType
-       with _ControlType
+    extends ControlType
+       with StandardControlType
   
   @js.native
   sealed trait language
@@ -251,8 +251,8 @@ object xrmStrings {
   sealed trait lookup
     extends AttributeType
        with typingsSlinky.xrm.Xrm.Attributes.AttributeType
+       with ControlType
        with StandardControlType
-       with _ControlType
   
   @js.native
   sealed trait memo
@@ -287,8 +287,8 @@ object xrmStrings {
   
   @js.native
   sealed trait notes
-    extends StandardControlType
-       with _ControlType
+    extends ControlType
+       with StandardControlType
   
   @js.native
   sealed trait off
@@ -304,8 +304,8 @@ object xrmStrings {
   sealed trait optionset
     extends AttributeType
        with typingsSlinky.xrm.Xrm.Attributes.AttributeType
+       with ControlType
        with StandardControlType
-       with _ControlType
   
   @js.native
   sealed trait phone
@@ -349,8 +349,8 @@ object xrmStrings {
   
   @js.native
   sealed trait standard
-    extends StandardControlType
-       with _ControlType
+    extends ControlType
+       with StandardControlType
   
   @js.native
   sealed trait string
@@ -359,8 +359,8 @@ object xrmStrings {
   
   @js.native
   sealed trait subgrid
-    extends StandardControlType
-       with _ControlType
+    extends ControlType
+       with StandardControlType
   
   @js.native
   sealed trait text
@@ -382,13 +382,13 @@ object xrmStrings {
   
   @js.native
   sealed trait timelinewall
-    extends StandardControlType
-       with _ControlType
+    extends ControlType
+       with StandardControlType
   
   @js.native
   sealed trait timercontrol
-    extends StandardControlType
-       with _ControlType
+    extends ControlType
+       with StandardControlType
   
   @js.native
   sealed trait timezone
@@ -417,8 +417,8 @@ object xrmStrings {
   
   @js.native
   sealed trait webresource
-    extends StandardControlType
-       with _ControlType
+    extends ControlType
+       with StandardControlType
   
   @scala.inline
   def ERROR: ERROR = "ERROR".asInstanceOf[ERROR]

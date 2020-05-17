@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DatastorePayload[T] extends js.Object {
+trait DatastorePayload[T] extends ObjOrPayload[T] {
   // TODO Include possibility of 'raw data' with indexing options, etc
   var data: T | js.Object = js.native
   var excludeFromIndexes: js.UndefOr[js.Array[String]] = js.native

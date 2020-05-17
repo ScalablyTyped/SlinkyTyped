@@ -1,6 +1,6 @@
 package typingsSlinky.arangodb.ArangoDB
 
-import typingsSlinky.arangodb.AnonIncrement
+import typingsSlinky.arangodb.anon.Increment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait CollectionProperties extends js.Object {
   var isSystem: Boolean = js.native
   var isVolatile: Boolean = js.native
   var journalSize: Double = js.native
-  var keyOptions: js.UndefOr[AnonIncrement] = js.native
+  var keyOptions: js.UndefOr[Increment] = js.native
   var numberOfShards: js.UndefOr[Double] = js.native
   var replicationFactor: js.UndefOr[Double] = js.native
   var shardKeys: js.UndefOr[js.Array[String]] = js.native
@@ -67,7 +67,7 @@ object CollectionProperties {
         ret
     }
     @scala.inline
-    def withKeyOptions(value: AnonIncrement): Self = {
+    def withKeyOptions(value: Increment): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyOptions")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`waiting-for-target`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.finished
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.running
@@ -44,8 +43,4 @@ trait ViewAnimation
     */
   def stop(): Unit = js.native
 }
-
-@JSGlobal("__esri.ViewAnimation")
-@js.native
-object ViewAnimation extends TopLevel[ViewAnimationConstructor]
 

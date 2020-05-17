@@ -1,6 +1,6 @@
 package typingsSlinky.gatsbyImage.mod
 
-import typingsSlinky.gatsbyImage.AnonWasCached
+import typingsSlinky.gatsbyImage.anon.WasCached
 import typingsSlinky.gatsbyImage.gatsbyImageStrings.`lazy`
 import typingsSlinky.gatsbyImage.gatsbyImageStrings.auto
 import typingsSlinky.gatsbyImage.gatsbyImageStrings.eager
@@ -26,7 +26,7 @@ trait GatsbyImageProps extends js.Object {
   var loading: js.UndefOr[auto | `lazy` | eager] = js.native
   var onError: js.UndefOr[js.Function1[/* event */ js.Any, Unit]] = js.native
   var onLoad: js.UndefOr[js.Function0[Unit]] = js.native
-  var onStartLoad: js.UndefOr[js.Function1[/* param */ AnonWasCached, Unit]] = js.native
+  var onStartLoad: js.UndefOr[js.Function1[/* param */ WasCached, Unit]] = js.native
   var placeholderClassName: js.UndefOr[String] = js.native
   var placeholderStyle: js.UndefOr[js.Object] = js.native
   var resolutions: js.UndefOr[FixedObject] = js.native
@@ -240,7 +240,7 @@ object GatsbyImageProps {
         ret
     }
     @scala.inline
-    def withOnStartLoad(value: /* param */ AnonWasCached => Unit): Self = {
+    def withOnStartLoad(value: /* param */ WasCached => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onStartLoad")(js.Any.fromFunction1(value))
         ret

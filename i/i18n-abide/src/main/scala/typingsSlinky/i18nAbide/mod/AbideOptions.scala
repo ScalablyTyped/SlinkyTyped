@@ -1,6 +1,6 @@
 package typingsSlinky.i18nAbide.mod
 
-import typingsSlinky.i18nAbide.AnonError
+import typingsSlinky.i18nAbide.anon.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait AbideOptions extends js.Object {
   var default_lang: js.UndefOr[String] = js.native
   var disable_locale_check: js.UndefOr[Boolean] = js.native
   var gettext_alias: js.UndefOr[String] = js.native
-  var logger: js.UndefOr[AnonError] = js.native
+  var logger: js.UndefOr[Error] = js.native
   var supported_languages: js.UndefOr[js.Array[String]] = js.native
   var translation_directory: js.UndefOr[String] = js.native
 }
@@ -77,7 +77,7 @@ object AbideOptions {
         ret
     }
     @scala.inline
-    def withLogger(value: AnonError): Self = {
+    def withLogger(value: Error): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,8 @@
 package typingsSlinky.stellarSdk
 
 import typingsSlinky.std.Error
+import typingsSlinky.stellarSdk.anon.Data
+import typingsSlinky.stellarSdk.anon.Status
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,8 +30,8 @@ object errorsMod extends js.Object {
   class NetworkError protected () extends Error {
     def this(message: String, response: js.Any) = this()
     var __proto__ : NetworkError = js.native
-    var response: AnonData = js.native
-    def getResponse(): AnonStatus = js.native
+    var response: Data = js.native
+    def getResponse(): Status = js.native
   }
   
   @js.native

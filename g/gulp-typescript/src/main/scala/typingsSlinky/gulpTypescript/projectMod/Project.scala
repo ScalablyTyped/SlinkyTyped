@@ -1,6 +1,6 @@
 package typingsSlinky.gulpTypescript.projectMod
 
-import typingsSlinky.gulpTypescript.Typeofts
+import typingsSlinky.gulpTypescript.anon.Typeofts
 import typingsSlinky.gulpTypescript.reporterMod.Reporter
 import typingsSlinky.gulpTypescript.typesMod.TsConfig
 import typingsSlinky.node.NodeJS.ReadWriteStream

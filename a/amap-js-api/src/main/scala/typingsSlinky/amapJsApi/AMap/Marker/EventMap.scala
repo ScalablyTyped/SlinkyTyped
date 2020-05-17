@@ -2,7 +2,6 @@ package typingsSlinky.amapJsApi.AMap.Marker
 
 import typingsSlinky.amapJsApi.AMap.Event_
 import typingsSlinky.amapJsApi.AMap.MapsEvent
-import typingsSlinky.amapJsApi.AnonPassedPath
 import typingsSlinky.amapJsApi.amapJsApiStrings.click
 import typingsSlinky.amapJsApi.amapJsApiStrings.dblclick
 import typingsSlinky.amapJsApi.amapJsApiStrings.dragend
@@ -20,6 +19,7 @@ import typingsSlinky.amapJsApi.amapJsApiStrings.rightclick
 import typingsSlinky.amapJsApi.amapJsApiStrings.touchend
 import typingsSlinky.amapJsApi.amapJsApiStrings.touchmove
 import typingsSlinky.amapJsApi.amapJsApiStrings.touchstart
+import typingsSlinky.amapJsApi.anon.PassedPath
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,7 +38,7 @@ trait EventMap[I] extends js.Object {
   var mouseup: MapsEvent[typingsSlinky.amapJsApi.amapJsApiStrings.mouseup, I] = js.native
   var movealong: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.movealong, js.UndefOr[scala.Nothing]] = js.native
   var moveend: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.moveend, js.UndefOr[scala.Nothing]] = js.native
-  var moving: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.moving, AnonPassedPath] = js.native
+  var moving: Event_[typingsSlinky.amapJsApi.amapJsApiStrings.moving, PassedPath] = js.native
   var rightclick: MapsEvent[typingsSlinky.amapJsApi.amapJsApiStrings.rightclick, I] = js.native
   var touchend: MapsEvent[typingsSlinky.amapJsApi.amapJsApiStrings.touchend, I] = js.native
   var touchmove: MapsEvent[typingsSlinky.amapJsApi.amapJsApiStrings.touchmove, I] = js.native
@@ -60,7 +60,7 @@ object EventMap {
     mouseup: MapsEvent[mouseup, I],
     movealong: Event_[movealong, js.UndefOr[scala.Nothing]],
     moveend: Event_[moveend, js.UndefOr[scala.Nothing]],
-    moving: Event_[moving, AnonPassedPath],
+    moving: Event_[moving, PassedPath],
     rightclick: MapsEvent[rightclick, I],
     touchend: MapsEvent[touchend, I],
     touchmove: MapsEvent[touchmove, I],
@@ -148,7 +148,7 @@ object EventMap {
         ret
     }
     @scala.inline
-    def withMoving(value: Event_[moving, AnonPassedPath]): Self[I] = {
+    def withMoving(value: Event_[moving, PassedPath]): Self[I] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("moving")(value.asInstanceOf[js.Any])
         ret

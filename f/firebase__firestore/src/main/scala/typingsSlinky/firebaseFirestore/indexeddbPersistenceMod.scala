@@ -1,5 +1,6 @@
 package typingsSlinky.firebaseFirestore
 
+import typingsSlinky.firebaseFirestore.anon.AllowTabSynchronization
 import typingsSlinky.firebaseFirestore.databaseInfoMod.DatabaseInfo
 import typingsSlinky.firebaseFirestore.lruGarbageCollectorMod.LruDelegate
 import typingsSlinky.firebaseFirestore.lruGarbageCollectorMod.LruParams
@@ -181,7 +182,7 @@ object indexeddbPersistenceMod extends js.Object {
       */
     def buildStoragePrefix(databaseInfo: DatabaseInfo): String = js.native
     def clearPersistence(persistenceKey: String): js.Promise[Unit] = js.native
-    def createIndexedDbPersistence(options: AnonAllowTabSynchronization): js.Promise[IndexedDbPersistence] = js.native
+    def createIndexedDbPersistence(options: AllowTabSynchronization): js.Promise[IndexedDbPersistence] = js.native
     def getStore[Key /* <: IDBValidKey */, Value](txn: PersistenceTransaction, store: String): SimpleDbStore[Key, Value] = js.native
     def isAvailable(): Boolean = js.native
   }

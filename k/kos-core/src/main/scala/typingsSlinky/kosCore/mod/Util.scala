@@ -1,19 +1,19 @@
 package typingsSlinky.kosCore.mod
 
-import typingsSlinky.kosCore.AnonNamespace
+import typingsSlinky.kosCore.anon.Namespace
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Util extends js.Object {
-  def getActionType(action: String): AnonNamespace = js.native
+  def getActionType(action: String): Namespace = js.native
   def getParam(): js.Any = js.native
 }
 
 object Util {
   @scala.inline
-  def apply(getActionType: String => AnonNamespace, getParam: () => js.Any): Util = {
+  def apply(getActionType: String => Namespace, getParam: () => js.Any): Util = {
     val __obj = js.Dynamic.literal(getActionType = js.Any.fromFunction1(getActionType), getParam = js.Any.fromFunction0(getParam))
     __obj.asInstanceOf[Util]
   }
@@ -24,7 +24,7 @@ object Util {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetActionType(value: String => AnonNamespace): Self = {
+    def withGetActionType(value: String => Namespace): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getActionType")(js.Any.fromFunction1(value))
         ret

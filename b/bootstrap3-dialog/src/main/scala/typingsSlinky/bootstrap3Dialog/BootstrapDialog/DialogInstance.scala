@@ -1,7 +1,7 @@
 package typingsSlinky.bootstrap3Dialog.BootstrapDialog
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,17 +9,17 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DialogInstance extends js.Object {
   @JSName("$modal")
-  var $modal: JQuery_[HTMLElement] = js.native
+  var $modal: JQuery[HTMLElement] = js.native
   @JSName("$modalBody")
-  var $modalBody: JQuery_[HTMLElement] = js.native
+  var $modalBody: JQuery[HTMLElement] = js.native
   @JSName("$modalContent")
-  var $modalContent: JQuery_[HTMLElement] = js.native
+  var $modalContent: JQuery[HTMLElement] = js.native
   @JSName("$modalDialog")
-  var $modalDialog: JQuery_[HTMLElement] = js.native
+  var $modalDialog: JQuery[HTMLElement] = js.native
   @JSName("$modalFooter")
-  var $modalFooter: JQuery_[HTMLElement] = js.native
+  var $modalFooter: JQuery[HTMLElement] = js.native
   @JSName("$modalHeader")
-  var $modalHeader: JQuery_[HTMLElement] = js.native
+  var $modalHeader: JQuery[HTMLElement] = js.native
   var opened: Boolean = js.native
   var options: DialogOptions = js.native
 }
@@ -27,12 +27,12 @@ trait DialogInstance extends js.Object {
 object DialogInstance {
   @scala.inline
   def apply(
-    $modal: JQuery_[HTMLElement],
-    $modalBody: JQuery_[HTMLElement],
-    $modalContent: JQuery_[HTMLElement],
-    $modalDialog: JQuery_[HTMLElement],
-    $modalFooter: JQuery_[HTMLElement],
-    $modalHeader: JQuery_[HTMLElement],
+    $modal: JQuery[HTMLElement],
+    $modalBody: JQuery[HTMLElement],
+    $modalContent: JQuery[HTMLElement],
+    $modalDialog: JQuery[HTMLElement],
+    $modalFooter: JQuery[HTMLElement],
+    $modalHeader: JQuery[HTMLElement],
     opened: Boolean,
     options: DialogOptions
   ): DialogInstance = {
@@ -46,37 +46,37 @@ object DialogInstance {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with$modal(value: JQuery_[HTMLElement]): Self = {
+    def with$modal(value: JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("$modal")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def with$modalBody(value: JQuery_[HTMLElement]): Self = {
+    def with$modalBody(value: JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("$modalBody")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def with$modalContent(value: JQuery_[HTMLElement]): Self = {
+    def with$modalContent(value: JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("$modalContent")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def with$modalDialog(value: JQuery_[HTMLElement]): Self = {
+    def with$modalDialog(value: JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("$modalDialog")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def with$modalFooter(value: JQuery_[HTMLElement]): Self = {
+    def with$modalFooter(value: JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("$modalFooter")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def with$modalHeader(value: JQuery_[HTMLElement]): Self = {
+    def with$modalHeader(value: JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("$modalHeader")(value.asInstanceOf[js.Any])
         ret

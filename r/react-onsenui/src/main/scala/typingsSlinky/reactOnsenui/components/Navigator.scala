@@ -4,7 +4,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameAnimationOptions
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameAnimationOptions
 import typingsSlinky.reactOnsenui.mod.AnimationOptions
 import typingsSlinky.reactOnsenui.mod.NavigatorAnimationTypes
 import scala.scalajs.js

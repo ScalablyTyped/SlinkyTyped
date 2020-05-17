@@ -1,7 +1,7 @@
 package typingsSlinky.plotlyJs.mod
 
-import typingsSlinky.plotlyJs.PartialFont
-import typingsSlinky.plotlyJs.PartialHoverLabel
+import typingsSlinky.plotlyJs.anon.PartialFont
+import typingsSlinky.plotlyJs.anon.PartialHoverLabel
 import typingsSlinky.plotlyJs.plotlyJsBooleans.`false`
 import typingsSlinky.plotlyJs.plotlyJsStrings.auto
 import typingsSlinky.plotlyJs.plotlyJsStrings.bottom
@@ -484,7 +484,7 @@ object Annotations {
         ret
     }
     @scala.inline
-    def withXref(value: paper | x): Self = {
+    def withXref(value: paper | typingsSlinky.plotlyJs.plotlyJsStrings.x): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("xref")(value.asInstanceOf[js.Any])
         ret

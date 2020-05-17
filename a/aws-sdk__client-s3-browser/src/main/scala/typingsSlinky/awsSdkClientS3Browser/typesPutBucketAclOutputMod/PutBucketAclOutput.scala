@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientS3Browser.typesPutBucketAclOutputMod
 
-import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PutBucketAclOutput
   extends MetadataBearer
-     with _OutputTypesUnion
+     with OutputTypesUnion
 
 object PutBucketAclOutput {
   @scala.inline

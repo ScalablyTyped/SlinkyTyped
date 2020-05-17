@@ -1,6 +1,6 @@
 package typingsSlinky.frctlFractal.mod.fractal.core
 
-import typingsSlinky.frctlFractal.AnonRegister
+import typingsSlinky.frctlFractal.anon.Register
 import typingsSlinky.frctlFractal.frctlFractalBooleans.`true`
 import typingsSlinky.frctlFractal.mod.Adapter
 import typingsSlinky.frctlFractal.mod.fractal.core.mixins.Collection
@@ -39,8 +39,8 @@ object entities extends js.Object {
   trait EntitySource[T /* <: Entity */, TConfig] extends Source[T, TConfig] {
     def engine[TEngine](): Adapter[TEngine] = js.native
     def engine[TEngine](adapterFactory: String): Adapter[TEngine] = js.native
-    def engine[TEngine](adapterFactory: js.Function0[AnonRegister[T, TEngine]]): Adapter[TEngine] = js.native
-    def engine[TEngine](adapterFactory: AnonRegister[T, TEngine]): Adapter[TEngine] = js.native
+    def engine[TEngine](adapterFactory: js.Function0[Register[T, TEngine]]): Adapter[TEngine] = js.native
+    def engine[TEngine](adapterFactory: Register[T, TEngine]): Adapter[TEngine] = js.native
     def entities(): js.Array[T] = js.native
     def getProp(key: String): String | js.Object = js.native
     def statusInfo(handle: String): StatusInfo | Null = js.native

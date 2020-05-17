@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +14,55 @@ trait SpeechSynthesisVoice extends js.Object {
   val voiceURI: java.lang.String = js.native
 }
 
-@JSGlobal("SpeechSynthesisVoice")
-@js.native
-object SpeechSynthesisVoice extends Instantiable0[SpeechSynthesisVoice]
+object SpeechSynthesisVoice {
+  @scala.inline
+  def apply(
+    default: scala.Boolean,
+    lang: java.lang.String,
+    localService: scala.Boolean,
+    name: java.lang.String,
+    voiceURI: java.lang.String
+  ): SpeechSynthesisVoice = {
+    val __obj = js.Dynamic.literal(default = default.asInstanceOf[js.Any], lang = lang.asInstanceOf[js.Any], localService = localService.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], voiceURI = voiceURI.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SpeechSynthesisVoice]
+  }
+  @scala.inline
+  implicit class SpeechSynthesisVoiceOps[Self <: SpeechSynthesisVoice] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefault(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("default")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLang(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lang")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocalService(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localService")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVoiceURI(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("voiceURI")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

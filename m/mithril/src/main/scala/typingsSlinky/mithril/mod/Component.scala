@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Component[Attrs, State /* <: Lifecycle[Attrs, State] */]
   extends Lifecycle[Attrs, State]
-     with _ComponentTypes[Attrs, State] {
+     with ComponentTypes[Attrs, State] {
   /** Creates a view out of virtual elements. */
   def view(vnode: Vnode[Attrs, State]): Children | Null | Unit = js.native
 }

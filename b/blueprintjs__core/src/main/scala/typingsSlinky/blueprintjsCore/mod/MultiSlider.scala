@@ -1,7 +1,7 @@
 package typingsSlinky.blueprintjsCore.mod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.blueprintjsCore.AnonLabelPrecision
+import typingsSlinky.blueprintjsCore.anon.LabelPrecision
 import typingsSlinky.blueprintjsCore.handlePropsMod.IHandleProps
 import typingsSlinky.blueprintjsCore.multiSliderMod.IMultiSliderProps
 import typingsSlinky.blueprintjsCore.multiSliderMod.ISliderBaseProps
@@ -23,6 +23,6 @@ object MultiSlider extends js.Object {
   var defaultSliderProps: ISliderBaseProps = js.native
   var displayName: String = js.native
   var getLabelPrecision: js.Any = js.native
-  def getDerivedStateFromProps(props: IMultiSliderProps): AnonLabelPrecision = js.native
+  def getDerivedStateFromProps(props: IMultiSliderProps): LabelPrecision = js.native
 }
 

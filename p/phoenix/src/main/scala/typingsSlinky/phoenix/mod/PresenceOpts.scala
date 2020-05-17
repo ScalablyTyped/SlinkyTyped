@@ -1,13 +1,13 @@
 package typingsSlinky.phoenix.mod
 
-import typingsSlinky.phoenix.AnonDiff
+import typingsSlinky.phoenix.anon.Diff
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait PresenceOpts extends js.Object {
-  var events: js.UndefOr[AnonDiff] = js.native
+  var events: js.UndefOr[Diff] = js.native
 }
 
 object PresenceOpts {
@@ -23,7 +23,7 @@ object PresenceOpts {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEvents(value: AnonDiff): Self = {
+    def withEvents(value: Diff): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
         ret

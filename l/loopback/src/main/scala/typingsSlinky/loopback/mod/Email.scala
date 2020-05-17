@@ -1,6 +1,6 @@
 package typingsSlinky.loopback.mod
 
-import typingsSlinky.loopback.AnonFrom
+import typingsSlinky.loopback.anon.From
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -60,6 +60,6 @@ object Email extends js.Object {
     * @prop {string} html Body HTML (optional)
     * @param {() => void} callback Called after the e-mail is sent or the sending faile
     */
-  def send(callback: js.Function0[Unit], options: AnonFrom): Unit = js.native
+  def send(callback: js.Function0[Unit], options: From): Unit = js.native
 }
 

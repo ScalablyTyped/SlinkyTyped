@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.experimental.ReadableStream
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.httpMod.Agent
-import typingsSlinky.zapierPlatformCore.AnonBody
+import typingsSlinky.zapierPlatformCore.anon.Body
 import typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.error
 import typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.follow
 import typingsSlinky.zapierPlatformCore.zapierPlatformCoreStrings.manual
@@ -25,7 +25,7 @@ trait HttpRequestOptions extends js.Object {
   var params: js.UndefOr[js.Object] = js.native
   var raw: js.UndefOr[Boolean] = js.native
   var redirect: js.UndefOr[manual | error | follow] = js.native
-  var removeMissingValuesFrom: js.UndefOr[AnonBody] = js.native
+  var removeMissingValuesFrom: js.UndefOr[Body] = js.native
   var size: js.UndefOr[Double] = js.native
   var timeout: js.UndefOr[Double] = js.native
   var url: js.UndefOr[String] = js.native
@@ -182,7 +182,7 @@ object HttpRequestOptions {
         ret
     }
     @scala.inline
-    def withRemoveMissingValuesFrom(value: AnonBody): Self = {
+    def withRemoveMissingValuesFrom(value: Body): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("removeMissingValuesFrom")(value.asInstanceOf[js.Any])
         ret

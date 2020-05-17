@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Media.PlayTo.PlayToManager")
 @js.native
-class PlayToManager () extends IPlayToManager
+trait PlayToManager extends IPlayToManager
 
-/* static members */
-@JSGlobal("Windows.Media.PlayTo.PlayToManager")
-@js.native
-object PlayToManager extends js.Object {
-  def getForCurrentView(): PlayToManager = js.native
-  def showPlayToUI(): Unit = js.native
+object PlayToManager {
+  @scala.inline
+  def apply(defaultSourceSelection: Boolean, onsourcerequested: js.Any, onsourceselected: js.Any): PlayToManager = {
+    val __obj = js.Dynamic.literal(defaultSourceSelection = defaultSourceSelection.asInstanceOf[js.Any], onsourcerequested = onsourcerequested.asInstanceOf[js.Any], onsourceselected = onsourceselected.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PlayToManager]
+  }
 }
 

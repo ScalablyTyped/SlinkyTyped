@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides access to property values containing information on current usage of the attributed network connection. */
-@JSGlobal("Windows.Networking.Connectivity.AttributedNetworkUsage")
 @js.native
-abstract class AttributedNetworkUsage () extends js.Object {
+trait AttributedNetworkUsage extends js.Object {
   /** Gets the Id of the of the app. */
   var attributionId: String = js.native
   /** Gets the name of the app. */
@@ -19,5 +18,57 @@ abstract class AttributedNetworkUsage () extends js.Object {
   var bytesReceived: Double = js.native
   /** Gets the number of bytes sent by the app over the network. */
   var bytesSent: Double = js.native
+}
+
+object AttributedNetworkUsage {
+  @scala.inline
+  def apply(
+    attributionId: String,
+    attributionName: String,
+    attributionThumbnail: IRandomAccessStreamReference,
+    bytesReceived: Double,
+    bytesSent: Double
+  ): AttributedNetworkUsage = {
+    val __obj = js.Dynamic.literal(attributionId = attributionId.asInstanceOf[js.Any], attributionName = attributionName.asInstanceOf[js.Any], attributionThumbnail = attributionThumbnail.asInstanceOf[js.Any], bytesReceived = bytesReceived.asInstanceOf[js.Any], bytesSent = bytesSent.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AttributedNetworkUsage]
+  }
+  @scala.inline
+  implicit class AttributedNetworkUsageOps[Self <: AttributedNetworkUsage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributionName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributionName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributionThumbnail(value: IRandomAccessStreamReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributionThumbnail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBytesReceived(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesReceived")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBytesSent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytesSent")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

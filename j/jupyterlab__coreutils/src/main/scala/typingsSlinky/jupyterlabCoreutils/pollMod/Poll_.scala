@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabCoreutils.pollMod
 
-import typingsSlinky.jupyterlabCoreutils.AnonCancel
+import typingsSlinky.jupyterlabCoreutils.anon.Cancel
 import typingsSlinky.jupyterlabCoreutils.interfacesMod.IPoll
 import typingsSlinky.jupyterlabCoreutils.interfacesMod.IPoll.State
 import typingsSlinky.jupyterlabCoreutils.pollMod.Poll.IOptions
@@ -84,7 +84,7 @@ class Poll_[T, U, V /* <: String */] protected ()
     * to allow poll instances to be composed into classes that schedule ticks.
     */
   def schedule(): js.Promise[Unit] = js.native
-  def schedule(next: Partial[(State[T, U, V]) with (AnonCancel[T, U, V])]): js.Promise[Unit] = js.native
+  def schedule(next: Partial[(State[T, U, V]) with (Cancel[T, U, V])]): js.Promise[Unit] = js.native
   /**
     * Starts the poll. Schedules `started` tick if necessary.
     *

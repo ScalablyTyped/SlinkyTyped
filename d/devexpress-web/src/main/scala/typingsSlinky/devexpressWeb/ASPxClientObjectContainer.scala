@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a client-side equivalent of the ASPxObjectContainer control.
   */
-@JSGlobal("ASPxClientObjectContainer")
 @js.native
-class ASPxClientObjectContainer () extends ASPxClientControl {
+trait ASPxClientObjectContainer extends ASPxClientControl {
   /**
     * Occurs on the client side when the FSCommand action is called within the associated flash object's action script.
     */
@@ -107,14 +106,175 @@ class ASPxClientObjectContainer () extends ASPxClientControl {
   def Zoom(percent: Double): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("ASPxClientObjectContainer")
-@js.native
-object ASPxClientObjectContainer extends js.Object {
-  /**
-    * Converts the specified object to the ASPxClientObjectContainer type. The converted client object specified by the obj parameter.
-    * @param obj The client object to be type cast.
-    */
-  def Cast(obj: js.Any): ASPxClientObjectContainer = js.native
+object ASPxClientObjectContainer {
+  @scala.inline
+  def apply(
+    AdjustControl: () => Unit,
+    Back: () => Unit,
+    FlashScriptCommand: ASPxClientEvent[ASPxClientFlashScriptCommandEventHandler[ASPxClientObjectContainer]],
+    Forward: () => Unit,
+    GetClientVisible: () => Boolean,
+    GetHeight: () => Double,
+    GetMainElement: () => js.Any,
+    GetParentControl: () => js.Any,
+    GetVariable: String => String,
+    GetVisible: () => Boolean,
+    GetWidth: () => Double,
+    GotoFrame: Double => Unit,
+    InCallback: () => Boolean,
+    Init: ASPxClientEvent[ASPxClientEventHandler[ASPxClientControlBase]],
+    IsPlaying: () => Boolean,
+    LoadMovie: (Double, String) => Unit,
+    Pan: (Double, Double, Double) => Unit,
+    PercentLoaded: () => String,
+    Play: () => Unit,
+    QTPlay: () => Unit,
+    QTRewind: () => Unit,
+    QTStep: Double => Unit,
+    QTStopPlay: () => Unit,
+    Rewind: () => Unit,
+    SendMessageToAssistiveTechnology: String => Unit,
+    SetClientVisible: Boolean => Unit,
+    SetHeight: Double => Unit,
+    SetVariable: (String, String) => Unit,
+    SetVisible: Boolean => Unit,
+    SetWidth: Double => Unit,
+    SetZoomRect: (Double, Double, Double, Double) => Unit,
+    StopPlay: () => Unit,
+    TotalFrames: () => Double,
+    Zoom: Double => Unit,
+    name: String
+  ): ASPxClientObjectContainer = {
+    val __obj = js.Dynamic.literal(AdjustControl = js.Any.fromFunction0(AdjustControl), Back = js.Any.fromFunction0(Back), FlashScriptCommand = FlashScriptCommand.asInstanceOf[js.Any], Forward = js.Any.fromFunction0(Forward), GetClientVisible = js.Any.fromFunction0(GetClientVisible), GetHeight = js.Any.fromFunction0(GetHeight), GetMainElement = js.Any.fromFunction0(GetMainElement), GetParentControl = js.Any.fromFunction0(GetParentControl), GetVariable = js.Any.fromFunction1(GetVariable), GetVisible = js.Any.fromFunction0(GetVisible), GetWidth = js.Any.fromFunction0(GetWidth), GotoFrame = js.Any.fromFunction1(GotoFrame), InCallback = js.Any.fromFunction0(InCallback), Init = Init.asInstanceOf[js.Any], IsPlaying = js.Any.fromFunction0(IsPlaying), LoadMovie = js.Any.fromFunction2(LoadMovie), Pan = js.Any.fromFunction3(Pan), PercentLoaded = js.Any.fromFunction0(PercentLoaded), Play = js.Any.fromFunction0(Play), QTPlay = js.Any.fromFunction0(QTPlay), QTRewind = js.Any.fromFunction0(QTRewind), QTStep = js.Any.fromFunction1(QTStep), QTStopPlay = js.Any.fromFunction0(QTStopPlay), Rewind = js.Any.fromFunction0(Rewind), SendMessageToAssistiveTechnology = js.Any.fromFunction1(SendMessageToAssistiveTechnology), SetClientVisible = js.Any.fromFunction1(SetClientVisible), SetHeight = js.Any.fromFunction1(SetHeight), SetVariable = js.Any.fromFunction2(SetVariable), SetVisible = js.Any.fromFunction1(SetVisible), SetWidth = js.Any.fromFunction1(SetWidth), SetZoomRect = js.Any.fromFunction4(SetZoomRect), StopPlay = js.Any.fromFunction0(StopPlay), TotalFrames = js.Any.fromFunction0(TotalFrames), Zoom = js.Any.fromFunction1(Zoom), name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientObjectContainer]
+  }
+  @scala.inline
+  implicit class ASPxClientObjectContainerOps[Self <: ASPxClientObjectContainer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBack(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Back")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withFlashScriptCommand(value: ASPxClientEvent[ASPxClientFlashScriptCommandEventHandler[ASPxClientObjectContainer]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FlashScriptCommand")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForward(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Forward")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetVariable(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetVariable")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGotoFrame(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GotoFrame")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsPlaying(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsPlaying")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withLoadMovie(value: (Double, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadMovie")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withPan(value: (Double, Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Pan")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withPercentLoaded(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PercentLoaded")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPlay(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Play")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withQTPlay(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QTPlay")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withQTRewind(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QTRewind")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withQTStep(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QTStep")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withQTStopPlay(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QTStopPlay")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRewind(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rewind")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetVariable(value: (String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetVariable")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetZoomRect(value: (Double, Double, Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetZoomRect")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withStopPlay(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("StopPlay")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withTotalFrames(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TotalFrames")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withZoom(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Zoom")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

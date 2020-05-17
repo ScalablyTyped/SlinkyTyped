@@ -1,6 +1,7 @@
 package typingsSlinky.antd
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.antd.anon.Animated
 import typingsSlinky.antd.contextMod.ConfigConsumerProps
 import typingsSlinky.antd.tabsMod.TabsProps
 import typingsSlinky.react.mod.Component
@@ -23,7 +24,7 @@ object tabBarMod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var defaultProps: AnonAnimated = js.native
+    var defaultProps: Animated = js.native
   }
   
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.reactToastNotifications.mod
 
 import slinky.core.TagMod
-import typingsSlinky.reactToastNotifications.AnonToast
+import typingsSlinky.reactToastNotifications.anon.Toast
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait ToastProviderProps extends js.Object {
   var autoDismiss: js.UndefOr[Boolean | Double] = js.native
   var autoDismissTimeout: js.UndefOr[Double] = js.native
   var children: TagMod[Any] = js.native
-  var components: js.UndefOr[AnonToast] = js.native
+  var components: js.UndefOr[Toast] = js.native
   var placement: js.UndefOr[Placement] = js.native
   var transitionDuration: js.UndefOr[Double] = js.native
 }
@@ -65,7 +65,7 @@ object ToastProviderProps {
         ret
     }
     @scala.inline
-    def withComponents(value: AnonToast): Self = {
+    def withComponents(value: Toast): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("components")(value.asInstanceOf[js.Any])
         ret

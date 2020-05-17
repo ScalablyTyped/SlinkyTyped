@@ -9,22 +9,8 @@ import scala.scalajs.js.annotation._
   * This reference describes the JavaScript client methods to use to
   * implement the Google Pay API in your web applications.
   */
-@JSGlobal("google.payments.api.PaymentsClient")
 @js.native
-class PaymentsClient protected () extends js.Object {
-  /**
-    * Initializes the [[PaymentsClient|`PaymentsClient`]] object. You must
-    * call this constructor before calling member methods.
-    *
-    * @param paymentOptions An object containing key-value pairs of Google
-    *     Pay API configuration data.
-    *
-    * Example: `{environment:'PRODUCTION'}`
-    *
-    * @throws `Error` The passed environment property value isn't
-    *     supported.
-    */
-  def this(paymentOptions: PaymentOptions) = this()
+trait PaymentsClient extends js.Object {
   /**
     * The convenience method is used to generate a Google Pay payment
     * button styled with the latest Google Pay branding for insertion into
@@ -128,5 +114,50 @@ class PaymentsClient protected () extends js.Object {
     *     doesn't affect the cached prefetch value.
     */
   def prefetchPaymentData(request: PaymentDataRequest): Unit = js.native
+}
+
+object PaymentsClient {
+  @scala.inline
+  def apply(
+    createButton: ButtonOptions => HTMLElement,
+    isReadyToPay: IsReadyToPayRequest => js.Promise[IsReadyToPayResponse],
+    loadPaymentData: PaymentDataRequest => js.Promise[PaymentData],
+    prefetchPaymentData: PaymentDataRequest => Unit
+  ): PaymentsClient = {
+    val __obj = js.Dynamic.literal(createButton = js.Any.fromFunction1(createButton), isReadyToPay = js.Any.fromFunction1(isReadyToPay), loadPaymentData = js.Any.fromFunction1(loadPaymentData), prefetchPaymentData = js.Any.fromFunction1(prefetchPaymentData))
+    __obj.asInstanceOf[PaymentsClient]
+  }
+  @scala.inline
+  implicit class PaymentsClientOps[Self <: PaymentsClient] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateButton(value: ButtonOptions => HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createButton")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsReadyToPay(value: IsReadyToPayRequest => js.Promise[IsReadyToPayResponse]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isReadyToPay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLoadPaymentData(value: PaymentDataRequest => js.Promise[PaymentData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadPaymentData")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPrefetchPaymentData(value: PaymentDataRequest => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefetchPaymentData")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.trezorConnect.mod
 
-import typingsSlinky.trezorConnect.AnonAddress
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +20,7 @@ trait AccountInfo extends js.Object {
   var serializedPath: String = js.native
   var transactions: Double = js.native
   var unusedAddresses: js.Array[String] = js.native
-  var usedAddresses: js.Array[AnonAddress] = js.native
+  var usedAddresses: js.Array[typingsSlinky.trezorConnect.anon.Address] = js.native
   var utxo: js.Array[Utxo] = js.native
   var xpub: String = js.native
 }
@@ -40,7 +39,7 @@ object AccountInfo {
     serializedPath: String,
     transactions: Double,
     unusedAddresses: js.Array[String],
-    usedAddresses: js.Array[AnonAddress],
+    usedAddresses: js.Array[typingsSlinky.trezorConnect.anon.Address],
     utxo: js.Array[Utxo],
     xpub: String
   ): AccountInfo = {
@@ -120,7 +119,7 @@ object AccountInfo {
         ret
     }
     @scala.inline
-    def withUsedAddresses(value: js.Array[AnonAddress]): Self = {
+    def withUsedAddresses(value: js.Array[typingsSlinky.trezorConnect.anon.Address]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("usedAddresses")(value.asInstanceOf[js.Any])
         ret

@@ -1,8 +1,8 @@
 package typingsSlinky.antd.mod
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.antd.AnonClosable
-import typingsSlinky.antd.AnonVisible
+import typingsSlinky.antd.anon.Closable
+import typingsSlinky.antd.anon.Visible
 import typingsSlinky.antd.tagMod.TagProps
 import typingsSlinky.antd.tagMod.default
 import scala.scalajs.js
@@ -18,7 +18,7 @@ class Tag () extends default
 @js.native
 object Tag extends js.Object {
   var CheckableTag: Instantiable0[typingsSlinky.antd.checkableTagMod.default] = js.native
-  var defaultProps: AnonClosable = js.native
-  def getDerivedStateFromProps(nextProps: TagProps): AnonVisible | Null = js.native
+  var defaultProps: Closable = js.native
+  def getDerivedStateFromProps(nextProps: TagProps): Visible | Null = js.native
 }
 

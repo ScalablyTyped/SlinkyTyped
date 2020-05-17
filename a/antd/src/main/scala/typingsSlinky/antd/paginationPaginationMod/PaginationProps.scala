@@ -2,7 +2,7 @@ package typingsSlinky.antd.paginationPaginationMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.AnonGoButton
+import typingsSlinky.antd.anon.GoButton
 import typingsSlinky.antd.antdStrings.`jump-next`
 import typingsSlinky.antd.antdStrings.`jump-prev`
 import typingsSlinky.antd.antdStrings.next
@@ -38,7 +38,7 @@ trait PaginationProps extends js.Object {
   var role: js.UndefOr[String] = js.native
   var selectPrefixCls: js.UndefOr[String] = js.native
   var showLessItems: js.UndefOr[Boolean] = js.native
-  var showQuickJumper: js.UndefOr[Boolean | AnonGoButton] = js.native
+  var showQuickJumper: js.UndefOr[Boolean | GoButton] = js.native
   var showSizeChanger: js.UndefOr[Boolean] = js.native
   var showTotal: js.UndefOr[
     js.Function2[/* total */ Double, /* range */ js.Tuple2[Double, Double], TagMod[Any]]
@@ -256,7 +256,7 @@ object PaginationProps {
         ret
     }
     @scala.inline
-    def withShowQuickJumper(value: Boolean | AnonGoButton): Self = {
+    def withShowQuickJumper(value: Boolean | GoButton): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("showQuickJumper")(value.asInstanceOf[js.Any])
         ret

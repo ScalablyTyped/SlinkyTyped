@@ -1,9 +1,9 @@
 package typingsSlinky.senchaTouch.Ext.chart.interactions
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.senchaTouch.Ext.Array
 import typingsSlinky.senchaTouch.Ext.chart.IAbstractChart
 import typingsSlinky.senchaTouch.Ext.mixin.IObservable
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,12 +32,12 @@ trait IAbstract extends IObservable {
   		* @param e Event
   		* @returns Object the item object or null if none found.
   		*/
-  var getItemForEvent: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event_], _]] = js.native
+  var getItemForEvent: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event], _]] = js.native
   /** [Method] Find and return all series items corresponding to the given event
   		* @param e Event
   		* @returns Array array of matching item objects
   		*/
-  var getItemsForEvent: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event_], Array]] = js.native
+  var getItemsForEvent: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event], Array]] = js.native
   /** [Method] A method to be implemented by subclasses where all event attachment should occur  */
   var initialize: js.UndefOr[js.Function0[Unit]] = js.native
   /** [Method] Placeholder method  */
@@ -152,7 +152,7 @@ object IAbstract {
         ret
     }
     @scala.inline
-    def withGetItemForEvent(value: /* e */ js.UndefOr[Event_] => _): Self = {
+    def withGetItemForEvent(value: /* e */ js.UndefOr[Event] => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getItemForEvent")(js.Any.fromFunction1(value))
         ret
@@ -164,7 +164,7 @@ object IAbstract {
         ret
     }
     @scala.inline
-    def withGetItemsForEvent(value: /* e */ js.UndefOr[Event_] => Array): Self = {
+    def withGetItemsForEvent(value: /* e */ js.UndefOr[Event] => Array): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getItemsForEvent")(js.Any.fromFunction1(value))
         ret

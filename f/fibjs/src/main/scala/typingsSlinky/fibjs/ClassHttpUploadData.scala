@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 	* @brief 包含 multipart 的一个条目数据
 	* @detail 
 	*/
-@JSGlobal("Class_HttpUploadData")
 @js.native
-class ClassHttpUploadData () extends ClassObject {
+trait ClassHttpUploadData extends ClassObject {
   /**
   	 * class prop 
   	 *

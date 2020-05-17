@@ -1,6 +1,6 @@
 package typingsSlinky.wavesurferJs.mod
 
-import typingsSlinky.wavesurferJs.AnonInstantiableWaveSurferPlugin
+import typingsSlinky.wavesurferJs.anon.InstantiableWaveSurferPlugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PluginDefinition extends js.Object {
   var deferInit: js.UndefOr[Boolean] = js.native
-  var instance: AnonInstantiableWaveSurferPlugin = js.native
+  var instance: InstantiableWaveSurferPlugin = js.native
   var name: String = js.native
   var params: js.Object = js.native
   var staticProps: js.UndefOr[js.Object] = js.native
@@ -16,7 +16,7 @@ trait PluginDefinition extends js.Object {
 
 object PluginDefinition {
   @scala.inline
-  def apply(instance: AnonInstantiableWaveSurferPlugin, name: String, params: js.Object): PluginDefinition = {
+  def apply(instance: InstantiableWaveSurferPlugin, name: String, params: js.Object): PluginDefinition = {
     val __obj = js.Dynamic.literal(instance = instance.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any])
     __obj.asInstanceOf[PluginDefinition]
   }
@@ -27,7 +27,7 @@ object PluginDefinition {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withInstance(value: AnonInstantiableWaveSurferPlugin): Self = {
+    def withInstance(value: InstantiableWaveSurferPlugin): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(value.asInstanceOf[js.Any])
         ret

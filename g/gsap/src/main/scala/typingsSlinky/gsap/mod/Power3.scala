@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("gsap", "Power3")
 @js.native
 class Power3 ()
-  extends typingsSlinky.gsap.gsap.Quart
+  extends typingsSlinky.gsap.gsap.Ease
 
 @JSImport("gsap", "Power3")
 @js.native

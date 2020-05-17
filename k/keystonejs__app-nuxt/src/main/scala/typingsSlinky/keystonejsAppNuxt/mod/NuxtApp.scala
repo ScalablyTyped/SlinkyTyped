@@ -1,6 +1,6 @@
 package typingsSlinky.keystonejsAppNuxt.mod
 
-import typingsSlinky.keystonejsAppNuxt.AnonDev
+import typingsSlinky.keystonejsAppNuxt.anon.Dev
 import typingsSlinky.keystonejsKeystone.mod.BaseApp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class NuxtApp () extends BaseApp {
   def this(options: NuxtOptions) = this()
-  def prepareMiddleware(hasDev: AnonDev): js.Promise[Unit] = js.native
+  def prepareMiddleware(hasDev: Dev): js.Promise[Unit] = js.native
 }
 

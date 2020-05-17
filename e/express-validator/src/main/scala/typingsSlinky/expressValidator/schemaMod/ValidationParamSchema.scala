@@ -1,6 +1,6 @@
 package typingsSlinky.expressValidator.schemaMod
 
-import typingsSlinky.expressValidator.AnonOptions
+import typingsSlinky.expressValidator.anon.Options
 import typingsSlinky.expressValidator.baseMod.DynamicMessageCreator
 import typingsSlinky.expressValidator.baseMod.Location
 import typingsSlinky.expressValidator.baseMod.Meta
@@ -320,7 +320,7 @@ trait ValidationParamSchema extends js.Object {
   var notEmpty: js.UndefOr[
     ValidatorSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.notEmpty]
   ] = js.native
-  var optional: js.UndefOr[`true` | AnonOptions] = js.native
+  var optional: js.UndefOr[`true` | Options] = js.native
   var rtrim: js.UndefOr[
     SanitizerSchemaOptions[typingsSlinky.expressValidator.expressValidatorStrings.rtrim]
   ] = js.native
@@ -1287,7 +1287,7 @@ object ValidationParamSchema {
         ret
     }
     @scala.inline
-    def withOptional(value: `true` | AnonOptions): Self = {
+    def withOptional(value: `true` | Options): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("optional")(value.asInstanceOf[js.Any])
         ret

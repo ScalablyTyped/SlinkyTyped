@@ -1,0 +1,25 @@
+package typingsSlinky.awsSdk.mediaconvertMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
+  - typingsSlinky.awsSdk.awsSdkStrings.ENABLED
+  - typingsSlinky.awsSdk.awsSdkStrings.TRANSITION_DETECTION
+  - java.lang.String
+*/
+trait H264SceneChangeDetect extends js.Object
+
+object H264SceneChangeDetect {
+  @scala.inline
+  def DISABLED: typingsSlinky.awsSdk.awsSdkStrings.DISABLED = "DISABLED".asInstanceOf[typingsSlinky.awsSdk.awsSdkStrings.DISABLED]
+  @scala.inline
+  def ENABLED: typingsSlinky.awsSdk.awsSdkStrings.ENABLED = "ENABLED".asInstanceOf[typingsSlinky.awsSdk.awsSdkStrings.ENABLED]
+  @scala.inline
+  def TRANSITION_DETECTION: typingsSlinky.awsSdk.awsSdkStrings.TRANSITION_DETECTION = "TRANSITION_DETECTION".asInstanceOf[typingsSlinky.awsSdk.awsSdkStrings.TRANSITION_DETECTION]
+  @scala.inline
+  implicit def apply(value: String): H264SceneChangeDetect = value.asInstanceOf[H264SceneChangeDetect]
+}
+

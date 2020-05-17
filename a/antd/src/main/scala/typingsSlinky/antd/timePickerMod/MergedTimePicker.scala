@@ -1,8 +1,8 @@
 package typingsSlinky.antd.timePickerMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.PartialTimePickerPropsRef
-import typingsSlinky.antd.WeakValidationMapTimePick
+import typingsSlinky.antd.anon.PartialTimePickerPropsRef
+import typingsSlinky.antd.anon.WeakValidationMapTimePick
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js

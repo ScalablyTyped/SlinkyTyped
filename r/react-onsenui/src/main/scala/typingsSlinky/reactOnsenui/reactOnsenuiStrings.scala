@@ -1,8 +1,8 @@
 package typingsSlinky.reactOnsenui
 
+import typingsSlinky.reactOnsenui.mod.NavigatorAnimationTypes
 import typingsSlinky.reactOnsenui.mod.SpeedDialDirection
 import typingsSlinky.reactOnsenui.mod.SpeedDialPosition
-import typingsSlinky.reactOnsenui.mod._NavigatorAnimationTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -255,7 +255,7 @@ object reactOnsenuiStrings {
   sealed trait draggable extends js.Object
   
   @js.native
-  sealed trait fade extends _NavigatorAnimationTypes
+  sealed trait fade extends NavigatorAnimationTypes
   
   @js.native
   sealed trait fall extends js.Object
@@ -329,7 +329,7 @@ object reactOnsenuiStrings {
        with SpeedDialPosition
   
   @js.native
-  sealed trait lift extends _NavigatorAnimationTypes
+  sealed trait lift extends NavigatorAnimationTypes
   
   @js.native
   sealed trait list extends js.Object
@@ -353,7 +353,7 @@ object reactOnsenuiStrings {
   sealed trait name extends js.Object
   
   @js.native
-  sealed trait none extends _NavigatorAnimationTypes
+  sealed trait none extends NavigatorAnimationTypes
   
   @js.native
   sealed trait onAbort extends js.Object
@@ -643,7 +643,7 @@ object reactOnsenuiStrings {
   sealed trait size extends js.Object
   
   @js.native
-  sealed trait slide extends _NavigatorAnimationTypes
+  sealed trait slide extends NavigatorAnimationTypes
   
   @js.native
   sealed trait slot extends js.Object

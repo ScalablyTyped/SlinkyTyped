@@ -1,6 +1,6 @@
 package typingsSlinky.vexflow.mod.Flow
 
-import typingsSlinky.vexflow.AnonStemdirection
+import typingsSlinky.vexflow.anon.Stemdirection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Stem protected ()
   extends typingsSlinky.vexflow.Vex.Flow.Stem {
-  def this(options: AnonStemdirection) = this()
+  def this(options: Stemdirection) = this()
 }
 
 /* static members */

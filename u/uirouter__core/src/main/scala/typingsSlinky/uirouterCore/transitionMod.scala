@@ -1,5 +1,6 @@
 package typingsSlinky.uirouterCore
 
+import typingsSlinky.uirouterCore.anon.TypeofTransition
 import typingsSlinky.uirouterCore.pathNodeMod.PathNode
 import typingsSlinky.uirouterCore.routerMod.UIRouter
 import typingsSlinky.uirouterCore.stateInterfaceMod.StateDeclaration

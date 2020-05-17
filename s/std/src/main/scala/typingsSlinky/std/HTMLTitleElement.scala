@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,9 +12,4 @@ trait HTMLTitleElement extends HTMLElement {
     */
   var text: java.lang.String = js.native
 }
-
-@JSGlobal("HTMLTitleElement")
-@js.native
-object HTMLTitleElement
-  extends Instantiable0[org.scalajs.dom.raw.HTMLTitleElement]
 

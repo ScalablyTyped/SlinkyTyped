@@ -1,6 +1,6 @@
 package typingsSlinky.tensorflowTfjsCore.tensorMod
 
-import typingsSlinky.tensorflowTfjsCore.AnonIndices
+import typingsSlinky.tensorflowTfjsCore.anon.Indices
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank.R2
@@ -9,6 +9,7 @@ import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike1D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike3D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike4D
+import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.TensorContainer
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NCHW
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NCW
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NHWC
@@ -29,7 +30,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("@tensorflow/tfjs-core/dist/tensor", "Tensor")
 @js.native
-class Tensor[R /* <: Rank */] protected () extends js.Object {
+class Tensor[R /* <: Rank */] protected () extends TensorContainer {
   def this(
     shape: /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/types.ShapeMap[R] */ js.Any,
     dtype: DataType,
@@ -714,9 +715,9 @@ class Tensor[R /* <: Rank */] protected () extends js.Object {
   /** @doc {heading: 'Tensors', subheading: 'Classes'} */
   def toInt(): this.type = js.native
   def toString(verbose: Boolean): String = js.native
-  def topk[T /* <: Tensor[Rank] */](): AnonIndices[T] = js.native
-  def topk[T /* <: Tensor[Rank] */](k: Double): AnonIndices[T] = js.native
-  def topk[T /* <: Tensor[Rank] */](k: Double, sorted: Boolean): AnonIndices[T] = js.native
+  def topk[T /* <: Tensor[Rank] */](): Indices[T] = js.native
+  def topk[T /* <: Tensor[Rank] */](k: Double): Indices[T] = js.native
+  def topk[T /* <: Tensor[Rank] */](k: Double, sorted: Boolean): Indices[T] = js.native
   def transpose[T /* <: Tensor[Rank] */](): T = js.native
   def transpose[T /* <: Tensor[Rank] */](perm: js.Array[Double]): T = js.native
   def unsortedSegmentSum[T /* <: Tensor[Rank] */](segmentIds: TensorLike1D, numSegments: Double): T = js.native

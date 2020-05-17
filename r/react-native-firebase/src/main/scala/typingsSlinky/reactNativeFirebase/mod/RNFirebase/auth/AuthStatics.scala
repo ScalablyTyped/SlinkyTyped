@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeFirebase.mod.RNFirebase.auth
 
-import typingsSlinky.reactNativeFirebase.AnonAUTOVERIFIED
+import typingsSlinky.reactNativeFirebase.anon.AUTOVERIFIED
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait AuthStatics extends js.Object {
   var GoogleAuthProvider: AuthProvider = js.native
   var OAuthProvider: AuthProvider = js.native
   var PhoneAuthProvider: AuthProvider = js.native
-  var PhoneAuthState: AnonAUTOVERIFIED = js.native
+  var PhoneAuthState: AUTOVERIFIED = js.native
   var TwitterAuthProvider: AuthProvider = js.native
 }
 
@@ -28,7 +28,7 @@ object AuthStatics {
     GoogleAuthProvider: AuthProvider,
     OAuthProvider: AuthProvider,
     PhoneAuthProvider: AuthProvider,
-    PhoneAuthState: AnonAUTOVERIFIED,
+    PhoneAuthState: AUTOVERIFIED,
     TwitterAuthProvider: AuthProvider
   ): AuthStatics = {
     val __obj = js.Dynamic.literal(AppleAuthProvider = AppleAuthProvider.asInstanceOf[js.Any], EmailAuthProvider = EmailAuthProvider.asInstanceOf[js.Any], FacebookAuthProvider = FacebookAuthProvider.asInstanceOf[js.Any], GithubAuthProvider = GithubAuthProvider.asInstanceOf[js.Any], GoogleAuthProvider = GoogleAuthProvider.asInstanceOf[js.Any], OAuthProvider = OAuthProvider.asInstanceOf[js.Any], PhoneAuthProvider = PhoneAuthProvider.asInstanceOf[js.Any], PhoneAuthState = PhoneAuthState.asInstanceOf[js.Any], TwitterAuthProvider = TwitterAuthProvider.asInstanceOf[js.Any])
@@ -83,7 +83,7 @@ object AuthStatics {
         ret
     }
     @scala.inline
-    def withPhoneAuthState(value: AnonAUTOVERIFIED): Self = {
+    def withPhoneAuthState(value: AUTOVERIFIED): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("PhoneAuthState")(value.asInstanceOf[js.Any])
         ret

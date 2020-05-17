@@ -1,7 +1,7 @@
 package typingsSlinky.reactDom.testUtilsMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait OptionalEventProperties extends js.Object {
   var defaultPrevented: js.UndefOr[Boolean] = js.native
   var eventPhase: js.UndefOr[Double] = js.native
   var isTrusted: js.UndefOr[Boolean] = js.native
-  var nativeEvent: js.UndefOr[Event_] = js.native
+  var nativeEvent: js.UndefOr[Event] = js.native
   var preventDefault: js.UndefOr[js.Function0[Unit]] = js.native
   var stopPropagation: js.UndefOr[js.Function0[Unit]] = js.native
   var target: js.UndefOr[EventTarget] = js.native
@@ -107,7 +107,7 @@ object OptionalEventProperties {
         ret
     }
     @scala.inline
-    def withNativeEvent(value: Event_): Self = {
+    def withNativeEvent(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nativeEvent")(value.asInstanceOf[js.Any])
         ret

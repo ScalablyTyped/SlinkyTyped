@@ -1,6 +1,6 @@
 package typingsSlinky.vue2Datepicker.mod.Datepicker
 
-import typingsSlinky.vue2Datepicker.AnonFirstDayOfWeek
+import typingsSlinky.vue2Datepicker.anon.FirstDayOfWeek
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Lang extends js.Object {
   var days: js.UndefOr[js.Array[String]] = js.native
-  var formatLocale: AnonFirstDayOfWeek = js.native
+  var formatLocale: FirstDayOfWeek = js.native
   var monthBeforeYear: Boolean = js.native
   var monthFormat: String = js.native
   var months: js.UndefOr[js.Array[String]] = js.native
@@ -17,12 +17,7 @@ trait Lang extends js.Object {
 
 object Lang {
   @scala.inline
-  def apply(
-    formatLocale: AnonFirstDayOfWeek,
-    monthBeforeYear: Boolean,
-    monthFormat: String,
-    yearFormat: String
-  ): Lang = {
+  def apply(formatLocale: FirstDayOfWeek, monthBeforeYear: Boolean, monthFormat: String, yearFormat: String): Lang = {
     val __obj = js.Dynamic.literal(formatLocale = formatLocale.asInstanceOf[js.Any], monthBeforeYear = monthBeforeYear.asInstanceOf[js.Any], monthFormat = monthFormat.asInstanceOf[js.Any], yearFormat = yearFormat.asInstanceOf[js.Any])
     __obj.asInstanceOf[Lang]
   }
@@ -33,7 +28,7 @@ object Lang {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFormatLocale(value: AnonFirstDayOfWeek): Self = {
+    def withFormatLocale(value: FirstDayOfWeek): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formatLocale")(value.asInstanceOf[js.Any])
         ret

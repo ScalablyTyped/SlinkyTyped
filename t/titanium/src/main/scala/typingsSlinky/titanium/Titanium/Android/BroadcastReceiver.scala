@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * Monitor and handle Android system broadcasts.
 		 */
-@JSGlobal("Titanium.Android.BroadcastReceiver")
 @js.native
-class BroadcastReceiver () extends Proxy {
+trait BroadcastReceiver extends Proxy {
   /**
   			 * URL of the JavaScript file to handle the broadcast.
   			 */

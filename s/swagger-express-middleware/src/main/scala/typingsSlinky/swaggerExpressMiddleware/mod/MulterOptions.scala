@@ -3,7 +3,7 @@ package typingsSlinky.swaggerExpressMiddleware.mod
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
-import typingsSlinky.swaggerExpressMiddleware.AnonFieldNameSize
+import typingsSlinky.swaggerExpressMiddleware.anon.FieldNameSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ trait MulterOptions extends js.Object {
     ]
   ] = js.native
   /** An object specifying the size limits of the following optional properties. This object is passed to busboy directly, and the details of properties can be found on https://github.com/mscdex/busboy#busboy-methods */
-  var limits: js.UndefOr[AnonFieldNameSize] = js.native
+  var limits: js.UndefOr[FieldNameSize] = js.native
   /** The storage engine to use for uploaded files. */
   var storage: js.UndefOr[StorageEngine] = js.native
 }
@@ -66,7 +66,7 @@ object MulterOptions {
         ret
     }
     @scala.inline
-    def withLimits(value: AnonFieldNameSize): Self = {
+    def withLimits(value: FieldNameSize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("limits")(value.asInstanceOf[js.Any])
         ret

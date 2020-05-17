@@ -4,7 +4,7 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactNative.mod.ImageRequireSource
-import typingsSlinky.reactNativePhoneInput.TypeofTextInput
+import typingsSlinky.reactNativePhoneInput.anon.TypeofTextInput
 import typingsSlinky.std.ThisType
 import scala.scalajs.js
 import scala.scalajs.js.`|`

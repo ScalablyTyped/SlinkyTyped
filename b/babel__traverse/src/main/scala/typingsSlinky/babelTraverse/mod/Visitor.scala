@@ -1,242 +1,242 @@
 package typingsSlinky.babelTraverse.mod
 
-import typingsSlinky.babelTraverse.Anon0
-import typingsSlinky.babelTraverse.Anon1
-import typingsSlinky.babelTraverse.Anon10
-import typingsSlinky.babelTraverse.Anon100
-import typingsSlinky.babelTraverse.Anon101
-import typingsSlinky.babelTraverse.Anon102
-import typingsSlinky.babelTraverse.Anon103
-import typingsSlinky.babelTraverse.Anon104
-import typingsSlinky.babelTraverse.Anon105
-import typingsSlinky.babelTraverse.Anon106
-import typingsSlinky.babelTraverse.Anon107
-import typingsSlinky.babelTraverse.Anon108
-import typingsSlinky.babelTraverse.Anon109
-import typingsSlinky.babelTraverse.Anon11
-import typingsSlinky.babelTraverse.Anon110
-import typingsSlinky.babelTraverse.Anon111
-import typingsSlinky.babelTraverse.Anon112
-import typingsSlinky.babelTraverse.Anon113
-import typingsSlinky.babelTraverse.Anon114
-import typingsSlinky.babelTraverse.Anon115
-import typingsSlinky.babelTraverse.Anon116
-import typingsSlinky.babelTraverse.Anon117
-import typingsSlinky.babelTraverse.Anon118
-import typingsSlinky.babelTraverse.Anon119
-import typingsSlinky.babelTraverse.Anon12
-import typingsSlinky.babelTraverse.Anon120
-import typingsSlinky.babelTraverse.Anon121
-import typingsSlinky.babelTraverse.Anon122
-import typingsSlinky.babelTraverse.Anon123
-import typingsSlinky.babelTraverse.Anon124
-import typingsSlinky.babelTraverse.Anon125
-import typingsSlinky.babelTraverse.Anon126
-import typingsSlinky.babelTraverse.Anon127
-import typingsSlinky.babelTraverse.Anon128
-import typingsSlinky.babelTraverse.Anon129
-import typingsSlinky.babelTraverse.Anon13
-import typingsSlinky.babelTraverse.Anon130
-import typingsSlinky.babelTraverse.Anon131
-import typingsSlinky.babelTraverse.Anon132
-import typingsSlinky.babelTraverse.Anon133
-import typingsSlinky.babelTraverse.Anon134
-import typingsSlinky.babelTraverse.Anon135
-import typingsSlinky.babelTraverse.Anon136
-import typingsSlinky.babelTraverse.Anon137
-import typingsSlinky.babelTraverse.Anon138
-import typingsSlinky.babelTraverse.Anon139
-import typingsSlinky.babelTraverse.Anon14
-import typingsSlinky.babelTraverse.Anon140
-import typingsSlinky.babelTraverse.Anon141
-import typingsSlinky.babelTraverse.Anon142
-import typingsSlinky.babelTraverse.Anon143
-import typingsSlinky.babelTraverse.Anon144
-import typingsSlinky.babelTraverse.Anon145
-import typingsSlinky.babelTraverse.Anon146
-import typingsSlinky.babelTraverse.Anon147
-import typingsSlinky.babelTraverse.Anon148
-import typingsSlinky.babelTraverse.Anon149
-import typingsSlinky.babelTraverse.Anon15
-import typingsSlinky.babelTraverse.Anon150
-import typingsSlinky.babelTraverse.Anon151
-import typingsSlinky.babelTraverse.Anon152
-import typingsSlinky.babelTraverse.Anon153
-import typingsSlinky.babelTraverse.Anon154
-import typingsSlinky.babelTraverse.Anon155
-import typingsSlinky.babelTraverse.Anon156
-import typingsSlinky.babelTraverse.Anon157
-import typingsSlinky.babelTraverse.Anon158
-import typingsSlinky.babelTraverse.Anon159
-import typingsSlinky.babelTraverse.Anon16
-import typingsSlinky.babelTraverse.Anon160
-import typingsSlinky.babelTraverse.Anon161
-import typingsSlinky.babelTraverse.Anon162
-import typingsSlinky.babelTraverse.Anon163
-import typingsSlinky.babelTraverse.Anon164
-import typingsSlinky.babelTraverse.Anon165
-import typingsSlinky.babelTraverse.Anon166
-import typingsSlinky.babelTraverse.Anon167
-import typingsSlinky.babelTraverse.Anon168
-import typingsSlinky.babelTraverse.Anon169
-import typingsSlinky.babelTraverse.Anon17
-import typingsSlinky.babelTraverse.Anon170
-import typingsSlinky.babelTraverse.Anon171
-import typingsSlinky.babelTraverse.Anon172
-import typingsSlinky.babelTraverse.Anon173
-import typingsSlinky.babelTraverse.Anon174
-import typingsSlinky.babelTraverse.Anon175
-import typingsSlinky.babelTraverse.Anon176
-import typingsSlinky.babelTraverse.Anon177
-import typingsSlinky.babelTraverse.Anon178
-import typingsSlinky.babelTraverse.Anon179
-import typingsSlinky.babelTraverse.Anon18
-import typingsSlinky.babelTraverse.Anon180
-import typingsSlinky.babelTraverse.Anon181
-import typingsSlinky.babelTraverse.Anon182
-import typingsSlinky.babelTraverse.Anon183
-import typingsSlinky.babelTraverse.Anon184
-import typingsSlinky.babelTraverse.Anon185
-import typingsSlinky.babelTraverse.Anon186
-import typingsSlinky.babelTraverse.Anon187
-import typingsSlinky.babelTraverse.Anon188
-import typingsSlinky.babelTraverse.Anon189
-import typingsSlinky.babelTraverse.Anon19
-import typingsSlinky.babelTraverse.Anon190
-import typingsSlinky.babelTraverse.Anon191
-import typingsSlinky.babelTraverse.Anon192
-import typingsSlinky.babelTraverse.Anon193
-import typingsSlinky.babelTraverse.Anon194
-import typingsSlinky.babelTraverse.Anon195
-import typingsSlinky.babelTraverse.Anon196
-import typingsSlinky.babelTraverse.Anon197
-import typingsSlinky.babelTraverse.Anon198
-import typingsSlinky.babelTraverse.Anon199
-import typingsSlinky.babelTraverse.Anon2
-import typingsSlinky.babelTraverse.Anon20
-import typingsSlinky.babelTraverse.Anon200
-import typingsSlinky.babelTraverse.Anon201
-import typingsSlinky.babelTraverse.Anon202
-import typingsSlinky.babelTraverse.Anon203
-import typingsSlinky.babelTraverse.Anon204
-import typingsSlinky.babelTraverse.Anon205
-import typingsSlinky.babelTraverse.Anon206
-import typingsSlinky.babelTraverse.Anon207
-import typingsSlinky.babelTraverse.Anon208
-import typingsSlinky.babelTraverse.Anon209
-import typingsSlinky.babelTraverse.Anon21
-import typingsSlinky.babelTraverse.Anon210
-import typingsSlinky.babelTraverse.Anon211
-import typingsSlinky.babelTraverse.Anon212
-import typingsSlinky.babelTraverse.Anon213
-import typingsSlinky.babelTraverse.Anon214
-import typingsSlinky.babelTraverse.Anon215
-import typingsSlinky.babelTraverse.Anon216
-import typingsSlinky.babelTraverse.Anon217
-import typingsSlinky.babelTraverse.Anon218
-import typingsSlinky.babelTraverse.Anon219
-import typingsSlinky.babelTraverse.Anon22
-import typingsSlinky.babelTraverse.Anon220
-import typingsSlinky.babelTraverse.Anon221
-import typingsSlinky.babelTraverse.Anon222
-import typingsSlinky.babelTraverse.Anon223
-import typingsSlinky.babelTraverse.Anon224
-import typingsSlinky.babelTraverse.Anon225
-import typingsSlinky.babelTraverse.Anon226
-import typingsSlinky.babelTraverse.Anon227
-import typingsSlinky.babelTraverse.Anon228
-import typingsSlinky.babelTraverse.Anon229
-import typingsSlinky.babelTraverse.Anon23
-import typingsSlinky.babelTraverse.Anon230
-import typingsSlinky.babelTraverse.Anon231
-import typingsSlinky.babelTraverse.Anon232
-import typingsSlinky.babelTraverse.Anon233
-import typingsSlinky.babelTraverse.Anon234
-import typingsSlinky.babelTraverse.Anon235
-import typingsSlinky.babelTraverse.Anon24
-import typingsSlinky.babelTraverse.Anon25
-import typingsSlinky.babelTraverse.Anon26
-import typingsSlinky.babelTraverse.Anon27
-import typingsSlinky.babelTraverse.Anon28
-import typingsSlinky.babelTraverse.Anon29
-import typingsSlinky.babelTraverse.Anon3
-import typingsSlinky.babelTraverse.Anon30
-import typingsSlinky.babelTraverse.Anon31
-import typingsSlinky.babelTraverse.Anon32
-import typingsSlinky.babelTraverse.Anon33
-import typingsSlinky.babelTraverse.Anon34
-import typingsSlinky.babelTraverse.Anon35
-import typingsSlinky.babelTraverse.Anon36
-import typingsSlinky.babelTraverse.Anon37
-import typingsSlinky.babelTraverse.Anon38
-import typingsSlinky.babelTraverse.Anon39
-import typingsSlinky.babelTraverse.Anon4
-import typingsSlinky.babelTraverse.Anon40
-import typingsSlinky.babelTraverse.Anon41
-import typingsSlinky.babelTraverse.Anon42
-import typingsSlinky.babelTraverse.Anon43
-import typingsSlinky.babelTraverse.Anon44
-import typingsSlinky.babelTraverse.Anon45
-import typingsSlinky.babelTraverse.Anon46
-import typingsSlinky.babelTraverse.Anon47
-import typingsSlinky.babelTraverse.Anon48
-import typingsSlinky.babelTraverse.Anon49
-import typingsSlinky.babelTraverse.Anon5
-import typingsSlinky.babelTraverse.Anon50
-import typingsSlinky.babelTraverse.Anon51
-import typingsSlinky.babelTraverse.Anon52
-import typingsSlinky.babelTraverse.Anon53
-import typingsSlinky.babelTraverse.Anon54
-import typingsSlinky.babelTraverse.Anon55
-import typingsSlinky.babelTraverse.Anon56
-import typingsSlinky.babelTraverse.Anon57
-import typingsSlinky.babelTraverse.Anon58
-import typingsSlinky.babelTraverse.Anon59
-import typingsSlinky.babelTraverse.Anon6
-import typingsSlinky.babelTraverse.Anon60
-import typingsSlinky.babelTraverse.Anon61
-import typingsSlinky.babelTraverse.Anon62
-import typingsSlinky.babelTraverse.Anon63
-import typingsSlinky.babelTraverse.Anon64
-import typingsSlinky.babelTraverse.Anon65
-import typingsSlinky.babelTraverse.Anon66
-import typingsSlinky.babelTraverse.Anon67
-import typingsSlinky.babelTraverse.Anon68
-import typingsSlinky.babelTraverse.Anon69
-import typingsSlinky.babelTraverse.Anon7
-import typingsSlinky.babelTraverse.Anon70
-import typingsSlinky.babelTraverse.Anon71
-import typingsSlinky.babelTraverse.Anon72
-import typingsSlinky.babelTraverse.Anon73
-import typingsSlinky.babelTraverse.Anon74
-import typingsSlinky.babelTraverse.Anon75
-import typingsSlinky.babelTraverse.Anon76
-import typingsSlinky.babelTraverse.Anon77
-import typingsSlinky.babelTraverse.Anon78
-import typingsSlinky.babelTraverse.Anon79
-import typingsSlinky.babelTraverse.Anon8
-import typingsSlinky.babelTraverse.Anon80
-import typingsSlinky.babelTraverse.Anon81
-import typingsSlinky.babelTraverse.Anon82
-import typingsSlinky.babelTraverse.Anon83
-import typingsSlinky.babelTraverse.Anon84
-import typingsSlinky.babelTraverse.Anon85
-import typingsSlinky.babelTraverse.Anon86
-import typingsSlinky.babelTraverse.Anon87
-import typingsSlinky.babelTraverse.Anon88
-import typingsSlinky.babelTraverse.Anon89
-import typingsSlinky.babelTraverse.Anon9
-import typingsSlinky.babelTraverse.Anon90
-import typingsSlinky.babelTraverse.Anon91
-import typingsSlinky.babelTraverse.Anon92
-import typingsSlinky.babelTraverse.Anon93
-import typingsSlinky.babelTraverse.Anon94
-import typingsSlinky.babelTraverse.Anon95
-import typingsSlinky.babelTraverse.Anon96
-import typingsSlinky.babelTraverse.Anon97
-import typingsSlinky.babelTraverse.Anon98
-import typingsSlinky.babelTraverse.Anon99
-import typingsSlinky.babelTraverse.AnonType
+import typingsSlinky.babelTraverse.anon.Type
+import typingsSlinky.babelTraverse.anon.`0`
+import typingsSlinky.babelTraverse.anon.`100`
+import typingsSlinky.babelTraverse.anon.`101`
+import typingsSlinky.babelTraverse.anon.`102`
+import typingsSlinky.babelTraverse.anon.`103`
+import typingsSlinky.babelTraverse.anon.`104`
+import typingsSlinky.babelTraverse.anon.`105`
+import typingsSlinky.babelTraverse.anon.`106`
+import typingsSlinky.babelTraverse.anon.`107`
+import typingsSlinky.babelTraverse.anon.`108`
+import typingsSlinky.babelTraverse.anon.`109`
+import typingsSlinky.babelTraverse.anon.`10`
+import typingsSlinky.babelTraverse.anon.`110`
+import typingsSlinky.babelTraverse.anon.`111`
+import typingsSlinky.babelTraverse.anon.`112`
+import typingsSlinky.babelTraverse.anon.`113`
+import typingsSlinky.babelTraverse.anon.`114`
+import typingsSlinky.babelTraverse.anon.`115`
+import typingsSlinky.babelTraverse.anon.`116`
+import typingsSlinky.babelTraverse.anon.`117`
+import typingsSlinky.babelTraverse.anon.`118`
+import typingsSlinky.babelTraverse.anon.`119`
+import typingsSlinky.babelTraverse.anon.`11`
+import typingsSlinky.babelTraverse.anon.`120`
+import typingsSlinky.babelTraverse.anon.`121`
+import typingsSlinky.babelTraverse.anon.`122`
+import typingsSlinky.babelTraverse.anon.`123`
+import typingsSlinky.babelTraverse.anon.`124`
+import typingsSlinky.babelTraverse.anon.`125`
+import typingsSlinky.babelTraverse.anon.`126`
+import typingsSlinky.babelTraverse.anon.`127`
+import typingsSlinky.babelTraverse.anon.`128`
+import typingsSlinky.babelTraverse.anon.`129`
+import typingsSlinky.babelTraverse.anon.`12`
+import typingsSlinky.babelTraverse.anon.`130`
+import typingsSlinky.babelTraverse.anon.`131`
+import typingsSlinky.babelTraverse.anon.`132`
+import typingsSlinky.babelTraverse.anon.`133`
+import typingsSlinky.babelTraverse.anon.`134`
+import typingsSlinky.babelTraverse.anon.`135`
+import typingsSlinky.babelTraverse.anon.`136`
+import typingsSlinky.babelTraverse.anon.`137`
+import typingsSlinky.babelTraverse.anon.`138`
+import typingsSlinky.babelTraverse.anon.`139`
+import typingsSlinky.babelTraverse.anon.`13`
+import typingsSlinky.babelTraverse.anon.`140`
+import typingsSlinky.babelTraverse.anon.`141`
+import typingsSlinky.babelTraverse.anon.`142`
+import typingsSlinky.babelTraverse.anon.`143`
+import typingsSlinky.babelTraverse.anon.`144`
+import typingsSlinky.babelTraverse.anon.`145`
+import typingsSlinky.babelTraverse.anon.`146`
+import typingsSlinky.babelTraverse.anon.`147`
+import typingsSlinky.babelTraverse.anon.`148`
+import typingsSlinky.babelTraverse.anon.`149`
+import typingsSlinky.babelTraverse.anon.`14`
+import typingsSlinky.babelTraverse.anon.`150`
+import typingsSlinky.babelTraverse.anon.`151`
+import typingsSlinky.babelTraverse.anon.`152`
+import typingsSlinky.babelTraverse.anon.`153`
+import typingsSlinky.babelTraverse.anon.`154`
+import typingsSlinky.babelTraverse.anon.`155`
+import typingsSlinky.babelTraverse.anon.`156`
+import typingsSlinky.babelTraverse.anon.`157`
+import typingsSlinky.babelTraverse.anon.`158`
+import typingsSlinky.babelTraverse.anon.`159`
+import typingsSlinky.babelTraverse.anon.`15`
+import typingsSlinky.babelTraverse.anon.`160`
+import typingsSlinky.babelTraverse.anon.`161`
+import typingsSlinky.babelTraverse.anon.`162`
+import typingsSlinky.babelTraverse.anon.`163`
+import typingsSlinky.babelTraverse.anon.`164`
+import typingsSlinky.babelTraverse.anon.`165`
+import typingsSlinky.babelTraverse.anon.`166`
+import typingsSlinky.babelTraverse.anon.`167`
+import typingsSlinky.babelTraverse.anon.`168`
+import typingsSlinky.babelTraverse.anon.`169`
+import typingsSlinky.babelTraverse.anon.`16`
+import typingsSlinky.babelTraverse.anon.`170`
+import typingsSlinky.babelTraverse.anon.`171`
+import typingsSlinky.babelTraverse.anon.`172`
+import typingsSlinky.babelTraverse.anon.`173`
+import typingsSlinky.babelTraverse.anon.`174`
+import typingsSlinky.babelTraverse.anon.`175`
+import typingsSlinky.babelTraverse.anon.`176`
+import typingsSlinky.babelTraverse.anon.`177`
+import typingsSlinky.babelTraverse.anon.`178`
+import typingsSlinky.babelTraverse.anon.`179`
+import typingsSlinky.babelTraverse.anon.`17`
+import typingsSlinky.babelTraverse.anon.`180`
+import typingsSlinky.babelTraverse.anon.`181`
+import typingsSlinky.babelTraverse.anon.`182`
+import typingsSlinky.babelTraverse.anon.`183`
+import typingsSlinky.babelTraverse.anon.`184`
+import typingsSlinky.babelTraverse.anon.`185`
+import typingsSlinky.babelTraverse.anon.`186`
+import typingsSlinky.babelTraverse.anon.`187`
+import typingsSlinky.babelTraverse.anon.`188`
+import typingsSlinky.babelTraverse.anon.`189`
+import typingsSlinky.babelTraverse.anon.`18`
+import typingsSlinky.babelTraverse.anon.`190`
+import typingsSlinky.babelTraverse.anon.`191`
+import typingsSlinky.babelTraverse.anon.`192`
+import typingsSlinky.babelTraverse.anon.`193`
+import typingsSlinky.babelTraverse.anon.`194`
+import typingsSlinky.babelTraverse.anon.`195`
+import typingsSlinky.babelTraverse.anon.`196`
+import typingsSlinky.babelTraverse.anon.`197`
+import typingsSlinky.babelTraverse.anon.`198`
+import typingsSlinky.babelTraverse.anon.`199`
+import typingsSlinky.babelTraverse.anon.`19`
+import typingsSlinky.babelTraverse.anon.`1`
+import typingsSlinky.babelTraverse.anon.`200`
+import typingsSlinky.babelTraverse.anon.`201`
+import typingsSlinky.babelTraverse.anon.`202`
+import typingsSlinky.babelTraverse.anon.`203`
+import typingsSlinky.babelTraverse.anon.`204`
+import typingsSlinky.babelTraverse.anon.`205`
+import typingsSlinky.babelTraverse.anon.`206`
+import typingsSlinky.babelTraverse.anon.`207`
+import typingsSlinky.babelTraverse.anon.`208`
+import typingsSlinky.babelTraverse.anon.`209`
+import typingsSlinky.babelTraverse.anon.`20`
+import typingsSlinky.babelTraverse.anon.`210`
+import typingsSlinky.babelTraverse.anon.`211`
+import typingsSlinky.babelTraverse.anon.`212`
+import typingsSlinky.babelTraverse.anon.`213`
+import typingsSlinky.babelTraverse.anon.`214`
+import typingsSlinky.babelTraverse.anon.`215`
+import typingsSlinky.babelTraverse.anon.`216`
+import typingsSlinky.babelTraverse.anon.`217`
+import typingsSlinky.babelTraverse.anon.`218`
+import typingsSlinky.babelTraverse.anon.`219`
+import typingsSlinky.babelTraverse.anon.`21`
+import typingsSlinky.babelTraverse.anon.`220`
+import typingsSlinky.babelTraverse.anon.`221`
+import typingsSlinky.babelTraverse.anon.`222`
+import typingsSlinky.babelTraverse.anon.`223`
+import typingsSlinky.babelTraverse.anon.`224`
+import typingsSlinky.babelTraverse.anon.`225`
+import typingsSlinky.babelTraverse.anon.`226`
+import typingsSlinky.babelTraverse.anon.`227`
+import typingsSlinky.babelTraverse.anon.`228`
+import typingsSlinky.babelTraverse.anon.`229`
+import typingsSlinky.babelTraverse.anon.`22`
+import typingsSlinky.babelTraverse.anon.`230`
+import typingsSlinky.babelTraverse.anon.`231`
+import typingsSlinky.babelTraverse.anon.`232`
+import typingsSlinky.babelTraverse.anon.`233`
+import typingsSlinky.babelTraverse.anon.`234`
+import typingsSlinky.babelTraverse.anon.`235`
+import typingsSlinky.babelTraverse.anon.`23`
+import typingsSlinky.babelTraverse.anon.`24`
+import typingsSlinky.babelTraverse.anon.`25`
+import typingsSlinky.babelTraverse.anon.`26`
+import typingsSlinky.babelTraverse.anon.`27`
+import typingsSlinky.babelTraverse.anon.`28`
+import typingsSlinky.babelTraverse.anon.`29`
+import typingsSlinky.babelTraverse.anon.`2`
+import typingsSlinky.babelTraverse.anon.`30`
+import typingsSlinky.babelTraverse.anon.`31`
+import typingsSlinky.babelTraverse.anon.`32`
+import typingsSlinky.babelTraverse.anon.`33`
+import typingsSlinky.babelTraverse.anon.`34`
+import typingsSlinky.babelTraverse.anon.`35`
+import typingsSlinky.babelTraverse.anon.`36`
+import typingsSlinky.babelTraverse.anon.`37`
+import typingsSlinky.babelTraverse.anon.`38`
+import typingsSlinky.babelTraverse.anon.`39`
+import typingsSlinky.babelTraverse.anon.`3`
+import typingsSlinky.babelTraverse.anon.`40`
+import typingsSlinky.babelTraverse.anon.`41`
+import typingsSlinky.babelTraverse.anon.`42`
+import typingsSlinky.babelTraverse.anon.`43`
+import typingsSlinky.babelTraverse.anon.`44`
+import typingsSlinky.babelTraverse.anon.`45`
+import typingsSlinky.babelTraverse.anon.`46`
+import typingsSlinky.babelTraverse.anon.`47`
+import typingsSlinky.babelTraverse.anon.`48`
+import typingsSlinky.babelTraverse.anon.`49`
+import typingsSlinky.babelTraverse.anon.`4`
+import typingsSlinky.babelTraverse.anon.`50`
+import typingsSlinky.babelTraverse.anon.`51`
+import typingsSlinky.babelTraverse.anon.`52`
+import typingsSlinky.babelTraverse.anon.`53`
+import typingsSlinky.babelTraverse.anon.`54`
+import typingsSlinky.babelTraverse.anon.`55`
+import typingsSlinky.babelTraverse.anon.`56`
+import typingsSlinky.babelTraverse.anon.`57`
+import typingsSlinky.babelTraverse.anon.`58`
+import typingsSlinky.babelTraverse.anon.`59`
+import typingsSlinky.babelTraverse.anon.`5`
+import typingsSlinky.babelTraverse.anon.`60`
+import typingsSlinky.babelTraverse.anon.`61`
+import typingsSlinky.babelTraverse.anon.`62`
+import typingsSlinky.babelTraverse.anon.`63`
+import typingsSlinky.babelTraverse.anon.`64`
+import typingsSlinky.babelTraverse.anon.`65`
+import typingsSlinky.babelTraverse.anon.`66`
+import typingsSlinky.babelTraverse.anon.`67`
+import typingsSlinky.babelTraverse.anon.`68`
+import typingsSlinky.babelTraverse.anon.`69`
+import typingsSlinky.babelTraverse.anon.`6`
+import typingsSlinky.babelTraverse.anon.`70`
+import typingsSlinky.babelTraverse.anon.`71`
+import typingsSlinky.babelTraverse.anon.`72`
+import typingsSlinky.babelTraverse.anon.`73`
+import typingsSlinky.babelTraverse.anon.`74`
+import typingsSlinky.babelTraverse.anon.`75`
+import typingsSlinky.babelTraverse.anon.`76`
+import typingsSlinky.babelTraverse.anon.`77`
+import typingsSlinky.babelTraverse.anon.`78`
+import typingsSlinky.babelTraverse.anon.`79`
+import typingsSlinky.babelTraverse.anon.`7`
+import typingsSlinky.babelTraverse.anon.`80`
+import typingsSlinky.babelTraverse.anon.`81`
+import typingsSlinky.babelTraverse.anon.`82`
+import typingsSlinky.babelTraverse.anon.`83`
+import typingsSlinky.babelTraverse.anon.`84`
+import typingsSlinky.babelTraverse.anon.`85`
+import typingsSlinky.babelTraverse.anon.`86`
+import typingsSlinky.babelTraverse.anon.`87`
+import typingsSlinky.babelTraverse.anon.`88`
+import typingsSlinky.babelTraverse.anon.`89`
+import typingsSlinky.babelTraverse.anon.`8`
+import typingsSlinky.babelTraverse.anon.`90`
+import typingsSlinky.babelTraverse.anon.`91`
+import typingsSlinky.babelTraverse.anon.`92`
+import typingsSlinky.babelTraverse.anon.`93`
+import typingsSlinky.babelTraverse.anon.`94`
+import typingsSlinky.babelTraverse.anon.`95`
+import typingsSlinky.babelTraverse.anon.`96`
+import typingsSlinky.babelTraverse.anon.`97`
+import typingsSlinky.babelTraverse.anon.`98`
+import typingsSlinky.babelTraverse.anon.`99`
+import typingsSlinky.babelTraverse.anon.`9`
 import typingsSlinky.babelTypes.mod.Binary
 import typingsSlinky.babelTypes.mod.Block
 import typingsSlinky.babelTypes.mod.BlockParent
@@ -286,287 +286,287 @@ import scala.scalajs.js.annotation._
 /* Inlined @babel/traverse.@babel/traverse.VisitNodeObject<S, @babel/traverse.@babel/traverse.Node> & {[ Type in @babel/traverse.@babel/traverse.Node['type'] ]:? @babel/traverse.@babel/traverse.VisitNode<S, std.Extract<@babel/traverse.@babel/traverse.Node, {  type  :Type}>>} & {[ K in keyof @babel/types.@babel/types.Aliases ]:? @babel/traverse.@babel/traverse.VisitNode<S, @babel/types.@babel/types.Aliases[K]>} */
 @js.native
 trait Visitor[S] extends js.Object {
-  var AnyTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon185]]] = js.native
-  var ArgumentPlaceholder: js.UndefOr[VisitNode[S, Extract[Node, Anon64]]] = js.native
-  var ArrayExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon51]]] = js.native
-  var ArrayPattern: js.UndefOr[VisitNode[S, Extract[Node, Anon126]]] = js.native
-  var ArrayTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon10]]] = js.native
-  var ArrowFunctionExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon7]]] = js.native
-  var AssignmentExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon77]]] = js.native
-  var AssignmentPattern: js.UndefOr[VisitNode[S, Extract[Node, Anon88]]] = js.native
-  var AwaitExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon20]]] = js.native
-  var BigIntLiteral: js.UndefOr[VisitNode[S, Extract[Node, Anon174]]] = js.native
+  var AnyTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `185`]]] = js.native
+  var ArgumentPlaceholder: js.UndefOr[VisitNode[S, Extract[Node, `64`]]] = js.native
+  var ArrayExpression: js.UndefOr[VisitNode[S, Extract[Node, `51`]]] = js.native
+  var ArrayPattern: js.UndefOr[VisitNode[S, Extract[Node, `126`]]] = js.native
+  var ArrayTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `10`]]] = js.native
+  var ArrowFunctionExpression: js.UndefOr[VisitNode[S, Extract[Node, `7`]]] = js.native
+  var AssignmentExpression: js.UndefOr[VisitNode[S, Extract[Node, `77`]]] = js.native
+  var AssignmentPattern: js.UndefOr[VisitNode[S, Extract[Node, `88`]]] = js.native
+  var AwaitExpression: js.UndefOr[VisitNode[S, Extract[Node, `20`]]] = js.native
+  var BigIntLiteral: js.UndefOr[VisitNode[S, Extract[Node, `174`]]] = js.native
   var Binary: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Binary]] = js.native
-  var BinaryExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon86]]] = js.native
-  var BindExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon65]]] = js.native
+  var BinaryExpression: js.UndefOr[VisitNode[S, Extract[Node, `86`]]] = js.native
+  var BindExpression: js.UndefOr[VisitNode[S, Extract[Node, `65`]]] = js.native
   var Block: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Block]] = js.native
   var BlockParent: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.BlockParent]] = js.native
-  var BlockStatement: js.UndefOr[VisitNode[S, Extract[Node, Anon120]]] = js.native
-  var BooleanLiteral: js.UndefOr[VisitNode[S, Extract[Node, Anon150]]] = js.native
-  var BooleanLiteralTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon184]]] = js.native
-  var BooleanTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon21]]] = js.native
-  var BreakStatement: js.UndefOr[VisitNode[S, Extract[Node, Anon4]]] = js.native
-  var CallExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon136]]] = js.native
-  var CatchClause: js.UndefOr[VisitNode[S, Extract[Node, Anon8]]] = js.native
+  var BlockStatement: js.UndefOr[VisitNode[S, Extract[Node, `120`]]] = js.native
+  var BooleanLiteral: js.UndefOr[VisitNode[S, Extract[Node, `150`]]] = js.native
+  var BooleanLiteralTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `184`]]] = js.native
+  var BooleanTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `21`]]] = js.native
+  var BreakStatement: js.UndefOr[VisitNode[S, Extract[Node, `4`]]] = js.native
+  var CallExpression: js.UndefOr[VisitNode[S, Extract[Node, `136`]]] = js.native
+  var CatchClause: js.UndefOr[VisitNode[S, Extract[Node, `8`]]] = js.native
   var Class: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Class]] = js.native
-  var ClassBody: js.UndefOr[VisitNode[S, Extract[Node, Anon32]]] = js.native
-  var ClassDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon106]]] = js.native
-  var ClassExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon22]]] = js.native
-  var ClassImplements: js.UndefOr[VisitNode[S, Extract[Node, Anon35]]] = js.native
-  var ClassMethod: js.UndefOr[VisitNode[S, Extract[Node, Anon177]]] = js.native
-  var ClassPrivateMethod: js.UndefOr[VisitNode[S, Extract[Node, Anon162]]] = js.native
-  var ClassPrivateProperty: js.UndefOr[VisitNode[S, Extract[Node, Anon142]]] = js.native
-  var ClassProperty: js.UndefOr[VisitNode[S, Extract[Node, Anon154]]] = js.native
+  var ClassBody: js.UndefOr[VisitNode[S, Extract[Node, `32`]]] = js.native
+  var ClassDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `106`]]] = js.native
+  var ClassExpression: js.UndefOr[VisitNode[S, Extract[Node, `22`]]] = js.native
+  var ClassImplements: js.UndefOr[VisitNode[S, Extract[Node, `35`]]] = js.native
+  var ClassMethod: js.UndefOr[VisitNode[S, Extract[Node, `177`]]] = js.native
+  var ClassPrivateMethod: js.UndefOr[VisitNode[S, Extract[Node, `162`]]] = js.native
+  var ClassPrivateProperty: js.UndefOr[VisitNode[S, Extract[Node, `142`]]] = js.native
+  var ClassProperty: js.UndefOr[VisitNode[S, Extract[Node, `154`]]] = js.native
   var CompletionStatement: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.CompletionStatement]] = js.native
   var Conditional: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Conditional]] = js.native
-  var ConditionalExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon85]]] = js.native
-  var ContinueStatement: js.UndefOr[VisitNode[S, Extract[Node, Anon171]]] = js.native
-  var DebuggerStatement: js.UndefOr[VisitNode[S, Extract[Node, Anon71]]] = js.native
+  var ConditionalExpression: js.UndefOr[VisitNode[S, Extract[Node, `85`]]] = js.native
+  var ContinueStatement: js.UndefOr[VisitNode[S, Extract[Node, `171`]]] = js.native
+  var DebuggerStatement: js.UndefOr[VisitNode[S, Extract[Node, `71`]]] = js.native
   var Declaration: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Declaration]] = js.native
-  var DeclareClass: js.UndefOr[VisitNode[S, Extract[Node, Anon42]]] = js.native
-  var DeclareExportAllDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon70]]] = js.native
-  var DeclareExportDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon131]]] = js.native
-  var DeclareFunction: js.UndefOr[VisitNode[S, Extract[Node, Anon187]]] = js.native
-  var DeclareInterface: js.UndefOr[VisitNode[S, Extract[Node, Anon129]]] = js.native
-  var DeclareModule: js.UndefOr[VisitNode[S, Extract[Node, Anon163]]] = js.native
-  var DeclareModuleExports: js.UndefOr[VisitNode[S, Extract[Node, Anon29]]] = js.native
-  var DeclareOpaqueType: js.UndefOr[VisitNode[S, Extract[Node, Anon31]]] = js.native
-  var DeclareTypeAlias: js.UndefOr[VisitNode[S, Extract[Node, Anon138]]] = js.native
-  var DeclareVariable: js.UndefOr[VisitNode[S, Extract[Node, Anon195]]] = js.native
-  var DeclaredPredicate: js.UndefOr[VisitNode[S, Extract[Node, Anon160]]] = js.native
-  var Decorator: js.UndefOr[VisitNode[S, Extract[Node, Anon49]]] = js.native
-  var Directive: js.UndefOr[VisitNode[S, Extract[Node, Anon14]]] = js.native
-  var DirectiveLiteral: js.UndefOr[VisitNode[S, Extract[Node, Anon67]]] = js.native
-  var DoExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon103]]] = js.native
-  var DoWhileStatement: js.UndefOr[VisitNode[S, Extract[Node, Anon107]]] = js.native
-  var EmptyStatement: js.UndefOr[VisitNode[S, Extract[Node, Anon209]]] = js.native
-  var EmptyTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon97]]] = js.native
+  var DeclareClass: js.UndefOr[VisitNode[S, Extract[Node, `42`]]] = js.native
+  var DeclareExportAllDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `70`]]] = js.native
+  var DeclareExportDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `131`]]] = js.native
+  var DeclareFunction: js.UndefOr[VisitNode[S, Extract[Node, `187`]]] = js.native
+  var DeclareInterface: js.UndefOr[VisitNode[S, Extract[Node, `129`]]] = js.native
+  var DeclareModule: js.UndefOr[VisitNode[S, Extract[Node, `163`]]] = js.native
+  var DeclareModuleExports: js.UndefOr[VisitNode[S, Extract[Node, `29`]]] = js.native
+  var DeclareOpaqueType: js.UndefOr[VisitNode[S, Extract[Node, `31`]]] = js.native
+  var DeclareTypeAlias: js.UndefOr[VisitNode[S, Extract[Node, `138`]]] = js.native
+  var DeclareVariable: js.UndefOr[VisitNode[S, Extract[Node, `195`]]] = js.native
+  var DeclaredPredicate: js.UndefOr[VisitNode[S, Extract[Node, `160`]]] = js.native
+  var Decorator: js.UndefOr[VisitNode[S, Extract[Node, `49`]]] = js.native
+  var Directive: js.UndefOr[VisitNode[S, Extract[Node, `14`]]] = js.native
+  var DirectiveLiteral: js.UndefOr[VisitNode[S, Extract[Node, `67`]]] = js.native
+  var DoExpression: js.UndefOr[VisitNode[S, Extract[Node, `103`]]] = js.native
+  var DoWhileStatement: js.UndefOr[VisitNode[S, Extract[Node, `107`]]] = js.native
+  var EmptyStatement: js.UndefOr[VisitNode[S, Extract[Node, `209`]]] = js.native
+  var EmptyTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `97`]]] = js.native
   var EnumBody: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.EnumBody]] = js.native
-  var EnumBooleanBody: js.UndefOr[VisitNode[S, Extract[Node, Anon55]]] = js.native
-  var EnumBooleanMember: js.UndefOr[VisitNode[S, Extract[Node, Anon199]]] = js.native
-  var EnumDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon45]]] = js.native
-  var EnumDefaultedMember: js.UndefOr[VisitNode[S, Extract[Node, Anon116]]] = js.native
+  var EnumBooleanBody: js.UndefOr[VisitNode[S, Extract[Node, `55`]]] = js.native
+  var EnumBooleanMember: js.UndefOr[VisitNode[S, Extract[Node, `199`]]] = js.native
+  var EnumDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `45`]]] = js.native
+  var EnumDefaultedMember: js.UndefOr[VisitNode[S, Extract[Node, `116`]]] = js.native
   var EnumMember: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.EnumMember]] = js.native
-  var EnumNumberBody: js.UndefOr[VisitNode[S, Extract[Node, Anon25]]] = js.native
-  var EnumNumberMember: js.UndefOr[VisitNode[S, Extract[Node, Anon197]]] = js.native
-  var EnumStringBody: js.UndefOr[VisitNode[S, Extract[Node, Anon128]]] = js.native
-  var EnumStringMember: js.UndefOr[VisitNode[S, Extract[Node, Anon173]]] = js.native
-  var EnumSymbolBody: js.UndefOr[VisitNode[S, Extract[Node, Anon53]]] = js.native
-  var ExistsTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon208]]] = js.native
-  var ExportAllDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon44]]] = js.native
+  var EnumNumberBody: js.UndefOr[VisitNode[S, Extract[Node, `25`]]] = js.native
+  var EnumNumberMember: js.UndefOr[VisitNode[S, Extract[Node, `197`]]] = js.native
+  var EnumStringBody: js.UndefOr[VisitNode[S, Extract[Node, `128`]]] = js.native
+  var EnumStringMember: js.UndefOr[VisitNode[S, Extract[Node, `173`]]] = js.native
+  var EnumSymbolBody: js.UndefOr[VisitNode[S, Extract[Node, `53`]]] = js.native
+  var ExistsTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `208`]]] = js.native
+  var ExportAllDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `44`]]] = js.native
   var ExportDeclaration: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.ExportDeclaration]] = js.native
-  var ExportDefaultDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon83]]] = js.native
-  var ExportDefaultSpecifier: js.UndefOr[VisitNode[S, Extract[Node, Anon23]]] = js.native
-  var ExportNamedDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon112]]] = js.native
-  var ExportNamespaceSpecifier: js.UndefOr[VisitNode[S, Extract[Node, Anon30]]] = js.native
-  var ExportSpecifier: js.UndefOr[VisitNode[S, Extract[Node, Anon39]]] = js.native
+  var ExportDefaultDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `83`]]] = js.native
+  var ExportDefaultSpecifier: js.UndefOr[VisitNode[S, Extract[Node, `23`]]] = js.native
+  var ExportNamedDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `112`]]] = js.native
+  var ExportNamespaceSpecifier: js.UndefOr[VisitNode[S, Extract[Node, `30`]]] = js.native
+  var ExportSpecifier: js.UndefOr[VisitNode[S, Extract[Node, `39`]]] = js.native
   var Expression: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Expression]] = js.native
-  var ExpressionStatement: js.UndefOr[VisitNode[S, Extract[Node, Anon216]]] = js.native
+  var ExpressionStatement: js.UndefOr[VisitNode[S, Extract[Node, `216`]]] = js.native
   var ExpressionWrapper: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.ExpressionWrapper]] = js.native
-  var File: js.UndefOr[VisitNode[S, Extract[Node, Anon54]]] = js.native
+  var File: js.UndefOr[VisitNode[S, Extract[Node, `54`]]] = js.native
   var Flow: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Flow]] = js.native
   var FlowBaseAnnotation: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.FlowBaseAnnotation]] = js.native
   var FlowDeclaration: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.FlowDeclaration]] = js.native
   var FlowPredicate: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.FlowPredicate]] = js.native
   var FlowType: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.FlowType]] = js.native
   var For: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.For]] = js.native
-  var ForInStatement: js.UndefOr[VisitNode[S, Extract[Node, Anon190]]] = js.native
-  var ForOfStatement: js.UndefOr[VisitNode[S, Extract[Node, Anon73]]] = js.native
-  var ForStatement: js.UndefOr[VisitNode[S, Extract[Node, Anon222]]] = js.native
+  var ForInStatement: js.UndefOr[VisitNode[S, Extract[Node, `190`]]] = js.native
+  var ForOfStatement: js.UndefOr[VisitNode[S, Extract[Node, `73`]]] = js.native
+  var ForStatement: js.UndefOr[VisitNode[S, Extract[Node, `222`]]] = js.native
   var ForXStatement: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.ForXStatement]] = js.native
   var Function: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Function]] = js.native
-  var FunctionDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon210]]] = js.native
-  var FunctionExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon164]]] = js.native
+  var FunctionDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `210`]]] = js.native
+  var FunctionExpression: js.UndefOr[VisitNode[S, Extract[Node, `164`]]] = js.native
   var FunctionParent: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.FunctionParent]] = js.native
-  var FunctionTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon124]]] = js.native
-  var FunctionTypeParam: js.UndefOr[VisitNode[S, Extract[Node, Anon186]]] = js.native
-  var GenericTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon148]]] = js.native
-  var Identifier: js.UndefOr[VisitNode[S, Extract[Node, Anon218]]] = js.native
-  var IfStatement: js.UndefOr[VisitNode[S, Extract[Node, Anon117]]] = js.native
+  var FunctionTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `124`]]] = js.native
+  var FunctionTypeParam: js.UndefOr[VisitNode[S, Extract[Node, `186`]]] = js.native
+  var GenericTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `148`]]] = js.native
+  var Identifier: js.UndefOr[VisitNode[S, Extract[Node, `218`]]] = js.native
+  var IfStatement: js.UndefOr[VisitNode[S, Extract[Node, `117`]]] = js.native
   var Immutable: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Immutable]] = js.native
-  var Import: js.UndefOr[VisitNode[S, Extract[Node, Anon96]]] = js.native
-  var ImportDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon13]]] = js.native
-  var ImportDefaultSpecifier: js.UndefOr[VisitNode[S, Extract[Node, Anon101]]] = js.native
-  var ImportNamespaceSpecifier: js.UndefOr[VisitNode[S, Extract[Node, Anon202]]] = js.native
-  var ImportSpecifier: js.UndefOr[VisitNode[S, Extract[Node, Anon46]]] = js.native
-  var InferredPredicate: js.UndefOr[VisitNode[S, Extract[Node, Anon176]]] = js.native
-  var InterfaceDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon40]]] = js.native
-  var InterfaceExtends: js.UndefOr[VisitNode[S, Extract[Node, Anon134]]] = js.native
-  var InterfaceTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon9]]] = js.native
-  var InterpreterDirective: js.UndefOr[VisitNode[S, Extract[Node, Anon227]]] = js.native
-  var IntersectionTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon213]]] = js.native
+  var Import: js.UndefOr[VisitNode[S, Extract[Node, `96`]]] = js.native
+  var ImportDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `13`]]] = js.native
+  var ImportDefaultSpecifier: js.UndefOr[VisitNode[S, Extract[Node, `101`]]] = js.native
+  var ImportNamespaceSpecifier: js.UndefOr[VisitNode[S, Extract[Node, `202`]]] = js.native
+  var ImportSpecifier: js.UndefOr[VisitNode[S, Extract[Node, `46`]]] = js.native
+  var InferredPredicate: js.UndefOr[VisitNode[S, Extract[Node, `176`]]] = js.native
+  var InterfaceDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `40`]]] = js.native
+  var InterfaceExtends: js.UndefOr[VisitNode[S, Extract[Node, `134`]]] = js.native
+  var InterfaceTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `9`]]] = js.native
+  var InterpreterDirective: js.UndefOr[VisitNode[S, Extract[Node, `227`]]] = js.native
+  var IntersectionTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `213`]]] = js.native
   var JSX: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.JSX]] = js.native
-  var JSXAttribute: js.UndefOr[VisitNode[S, Extract[Node, Anon200]]] = js.native
-  var JSXClosingElement: js.UndefOr[VisitNode[S, Extract[Node, Anon231]]] = js.native
-  var JSXClosingFragment: js.UndefOr[VisitNode[S, Extract[Node, Anon81]]] = js.native
-  var JSXElement: js.UndefOr[VisitNode[S, Extract[Node, Anon119]]] = js.native
-  var JSXEmptyExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon37]]] = js.native
-  var JSXExpressionContainer: js.UndefOr[VisitNode[S, Extract[Node, Anon198]]] = js.native
-  var JSXFragment: js.UndefOr[VisitNode[S, Extract[Node, Anon232]]] = js.native
-  var JSXIdentifier: js.UndefOr[VisitNode[S, Extract[Node, Anon169]]] = js.native
-  var JSXMemberExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon33]]] = js.native
-  var JSXNamespacedName: js.UndefOr[VisitNode[S, Extract[Node, Anon228]]] = js.native
-  var JSXOpeningElement: js.UndefOr[VisitNode[S, Extract[Node, Anon233]]] = js.native
-  var JSXOpeningFragment: js.UndefOr[VisitNode[S, Extract[Node, Anon19]]] = js.native
-  var JSXSpreadAttribute: js.UndefOr[VisitNode[S, Extract[Node, Anon151]]] = js.native
-  var JSXSpreadChild: js.UndefOr[VisitNode[S, Extract[Node, Anon80]]] = js.native
-  var JSXText: js.UndefOr[VisitNode[S, Extract[Node, Anon5]]] = js.native
+  var JSXAttribute: js.UndefOr[VisitNode[S, Extract[Node, `200`]]] = js.native
+  var JSXClosingElement: js.UndefOr[VisitNode[S, Extract[Node, `231`]]] = js.native
+  var JSXClosingFragment: js.UndefOr[VisitNode[S, Extract[Node, `81`]]] = js.native
+  var JSXElement: js.UndefOr[VisitNode[S, Extract[Node, `119`]]] = js.native
+  var JSXEmptyExpression: js.UndefOr[VisitNode[S, Extract[Node, `37`]]] = js.native
+  var JSXExpressionContainer: js.UndefOr[VisitNode[S, Extract[Node, `198`]]] = js.native
+  var JSXFragment: js.UndefOr[VisitNode[S, Extract[Node, `232`]]] = js.native
+  var JSXIdentifier: js.UndefOr[VisitNode[S, Extract[Node, `169`]]] = js.native
+  var JSXMemberExpression: js.UndefOr[VisitNode[S, Extract[Node, `33`]]] = js.native
+  var JSXNamespacedName: js.UndefOr[VisitNode[S, Extract[Node, `228`]]] = js.native
+  var JSXOpeningElement: js.UndefOr[VisitNode[S, Extract[Node, `233`]]] = js.native
+  var JSXOpeningFragment: js.UndefOr[VisitNode[S, Extract[Node, `19`]]] = js.native
+  var JSXSpreadAttribute: js.UndefOr[VisitNode[S, Extract[Node, `151`]]] = js.native
+  var JSXSpreadChild: js.UndefOr[VisitNode[S, Extract[Node, `80`]]] = js.native
+  var JSXText: js.UndefOr[VisitNode[S, Extract[Node, `5`]]] = js.native
   var LVal: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.LVal]] = js.native
-  var LabeledStatement: js.UndefOr[VisitNode[S, Extract[Node, Anon144]]] = js.native
+  var LabeledStatement: js.UndefOr[VisitNode[S, Extract[Node, `144`]]] = js.native
   var Literal: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Literal]] = js.native
-  var LogicalExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon229]]] = js.native
+  var LogicalExpression: js.UndefOr[VisitNode[S, Extract[Node, `229`]]] = js.native
   var Loop: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Loop]] = js.native
-  var MemberExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon132]]] = js.native
-  var MetaProperty: js.UndefOr[VisitNode[S, Extract[Node, Anon215]]] = js.native
+  var MemberExpression: js.UndefOr[VisitNode[S, Extract[Node, `132`]]] = js.native
+  var MetaProperty: js.UndefOr[VisitNode[S, Extract[Node, `215`]]] = js.native
   var Method: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Method]] = js.native
-  var MixedTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon3]]] = js.native
+  var MixedTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `3`]]] = js.native
   var ModuleDeclaration: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.ModuleDeclaration]] = js.native
   var ModuleSpecifier: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.ModuleSpecifier]] = js.native
-  var NewExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon146]]] = js.native
-  var Noop: js.UndefOr[VisitNode[S, Extract[Node, Anon16]]] = js.native
-  var NullLiteral: js.UndefOr[VisitNode[S, Extract[Node, Anon28]]] = js.native
-  var NullLiteralTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon203]]] = js.native
-  var NullableTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon41]]] = js.native
-  var NumberLiteralTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon224]]] = js.native
-  var NumberTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon122]]] = js.native
-  var NumericLiteral: js.UndefOr[VisitNode[S, Extract[Node, Anon127]]] = js.native
-  var ObjectExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon62]]] = js.native
+  var NewExpression: js.UndefOr[VisitNode[S, Extract[Node, `146`]]] = js.native
+  var Noop: js.UndefOr[VisitNode[S, Extract[Node, `16`]]] = js.native
+  var NullLiteral: js.UndefOr[VisitNode[S, Extract[Node, `28`]]] = js.native
+  var NullLiteralTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `203`]]] = js.native
+  var NullableTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `41`]]] = js.native
+  var NumberLiteralTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `224`]]] = js.native
+  var NumberTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `122`]]] = js.native
+  var NumericLiteral: js.UndefOr[VisitNode[S, Extract[Node, `127`]]] = js.native
+  var ObjectExpression: js.UndefOr[VisitNode[S, Extract[Node, `62`]]] = js.native
   var ObjectMember: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.ObjectMember]] = js.native
-  var ObjectMethod: js.UndefOr[VisitNode[S, Extract[Node, Anon0]]] = js.native
-  var ObjectPattern: js.UndefOr[VisitNode[S, Extract[Node, Anon110]]] = js.native
-  var ObjectProperty: js.UndefOr[VisitNode[S, Extract[Node, Anon191]]] = js.native
-  var ObjectTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon234]]] = js.native
-  var ObjectTypeCallProperty: js.UndefOr[VisitNode[S, Extract[Node, Anon84]]] = js.native
-  var ObjectTypeIndexer: js.UndefOr[VisitNode[S, Extract[Node, Anon111]]] = js.native
-  var ObjectTypeInternalSlot: js.UndefOr[VisitNode[S, Extract[Node, Anon182]]] = js.native
-  var ObjectTypeProperty: js.UndefOr[VisitNode[S, Extract[Node, Anon223]]] = js.native
-  var ObjectTypeSpreadProperty: js.UndefOr[VisitNode[S, Extract[Node, Anon221]]] = js.native
-  var OpaqueType: js.UndefOr[VisitNode[S, Extract[Node, Anon90]]] = js.native
-  var OptionalCallExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon219]]] = js.native
-  var OptionalMemberExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon99]]] = js.native
-  var ParenthesizedExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon168]]] = js.native
+  var ObjectMethod: js.UndefOr[VisitNode[S, Extract[Node, `0`]]] = js.native
+  var ObjectPattern: js.UndefOr[VisitNode[S, Extract[Node, `110`]]] = js.native
+  var ObjectProperty: js.UndefOr[VisitNode[S, Extract[Node, `191`]]] = js.native
+  var ObjectTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `234`]]] = js.native
+  var ObjectTypeCallProperty: js.UndefOr[VisitNode[S, Extract[Node, `84`]]] = js.native
+  var ObjectTypeIndexer: js.UndefOr[VisitNode[S, Extract[Node, `111`]]] = js.native
+  var ObjectTypeInternalSlot: js.UndefOr[VisitNode[S, Extract[Node, `182`]]] = js.native
+  var ObjectTypeProperty: js.UndefOr[VisitNode[S, Extract[Node, `223`]]] = js.native
+  var ObjectTypeSpreadProperty: js.UndefOr[VisitNode[S, Extract[Node, `221`]]] = js.native
+  var OpaqueType: js.UndefOr[VisitNode[S, Extract[Node, `90`]]] = js.native
+  var OptionalCallExpression: js.UndefOr[VisitNode[S, Extract[Node, `219`]]] = js.native
+  var OptionalMemberExpression: js.UndefOr[VisitNode[S, Extract[Node, `99`]]] = js.native
+  var ParenthesizedExpression: js.UndefOr[VisitNode[S, Extract[Node, `168`]]] = js.native
   var Pattern: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Pattern]] = js.native
   var PatternLike: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.PatternLike]] = js.native
-  var PipelineBareFunction: js.UndefOr[VisitNode[S, Extract[Node, Anon166]]] = js.native
-  var PipelinePrimaryTopicReference: js.UndefOr[VisitNode[S, Extract[Node, Anon194]]] = js.native
-  var PipelineTopicExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon193]]] = js.native
-  var Placeholder: js.UndefOr[VisitNode[S, Extract[Node, Anon170]]] = js.native
+  var PipelineBareFunction: js.UndefOr[VisitNode[S, Extract[Node, `166`]]] = js.native
+  var PipelinePrimaryTopicReference: js.UndefOr[VisitNode[S, Extract[Node, `194`]]] = js.native
+  var PipelineTopicExpression: js.UndefOr[VisitNode[S, Extract[Node, `193`]]] = js.native
+  var Placeholder: js.UndefOr[VisitNode[S, Extract[Node, `170`]]] = js.native
   var Private: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Private]] = js.native
-  var PrivateName: js.UndefOr[VisitNode[S, Extract[Node, Anon6]]] = js.native
-  var Program: js.UndefOr[VisitNode[S, Extract[Node, Anon206]]] = js.native
+  var PrivateName: js.UndefOr[VisitNode[S, Extract[Node, `6`]]] = js.native
+  var Program: js.UndefOr[VisitNode[S, Extract[Node, `206`]]] = js.native
   var Property: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Property]] = js.native
   var Pureish: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Pureish]] = js.native
-  var QualifiedTypeIdentifier: js.UndefOr[VisitNode[S, Extract[Node, Anon167]]] = js.native
-  var RecordExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon133]]] = js.native
-  var RegExpLiteral: js.UndefOr[VisitNode[S, Extract[Node, Anon153]]] = js.native
-  var RestElement: js.UndefOr[VisitNode[S, Extract[Node, Anon157]]] = js.native
-  var ReturnStatement: js.UndefOr[VisitNode[S, Extract[Node, Anon15]]] = js.native
+  var QualifiedTypeIdentifier: js.UndefOr[VisitNode[S, Extract[Node, `167`]]] = js.native
+  var RecordExpression: js.UndefOr[VisitNode[S, Extract[Node, `133`]]] = js.native
+  var RegExpLiteral: js.UndefOr[VisitNode[S, Extract[Node, `153`]]] = js.native
+  var RestElement: js.UndefOr[VisitNode[S, Extract[Node, `157`]]] = js.native
+  var ReturnStatement: js.UndefOr[VisitNode[S, Extract[Node, `15`]]] = js.native
   var Scopable: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Scopable]] = js.native
-  var SequenceExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon235]]] = js.native
-  var SpreadElement: js.UndefOr[VisitNode[S, Extract[Node, Anon181]]] = js.native
+  var SequenceExpression: js.UndefOr[VisitNode[S, Extract[Node, `235`]]] = js.native
+  var SpreadElement: js.UndefOr[VisitNode[S, Extract[Node, `181`]]] = js.native
   var Statement: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Statement]] = js.native
-  var StringLiteral: js.UndefOr[VisitNode[S, Extract[Node, Anon38]]] = js.native
-  var StringLiteralTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon225]]] = js.native
-  var StringTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon82]]] = js.native
-  var Super: js.UndefOr[VisitNode[S, Extract[Node, Anon137]]] = js.native
-  var SwitchCase: js.UndefOr[VisitNode[S, Extract[Node, Anon183]]] = js.native
-  var SwitchStatement: js.UndefOr[VisitNode[S, Extract[Node, Anon217]]] = js.native
-  var SymbolTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon59]]] = js.native
-  var TSAnyKeyword: js.UndefOr[VisitNode[S, Extract[Node, Anon11]]] = js.native
-  var TSArrayType: js.UndefOr[VisitNode[S, Extract[Node, Anon115]]] = js.native
-  var TSAsExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon47]]] = js.native
-  var TSBigIntKeyword: js.UndefOr[VisitNode[S, Extract[Node, Anon104]]] = js.native
-  var TSBooleanKeyword: js.UndefOr[VisitNode[S, Extract[Node, Anon135]]] = js.native
-  var TSCallSignatureDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon61]]] = js.native
-  var TSConditionalType: js.UndefOr[VisitNode[S, Extract[Node, Anon102]]] = js.native
-  var TSConstructSignatureDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon205]]] = js.native
-  var TSConstructorType: js.UndefOr[VisitNode[S, Extract[Node, Anon69]]] = js.native
-  var TSDeclareFunction: js.UndefOr[VisitNode[S, Extract[Node, Anon18]]] = js.native
-  var TSDeclareMethod: js.UndefOr[VisitNode[S, Extract[Node, Anon130]]] = js.native
+  var StringLiteral: js.UndefOr[VisitNode[S, Extract[Node, `38`]]] = js.native
+  var StringLiteralTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `225`]]] = js.native
+  var StringTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `82`]]] = js.native
+  var Super: js.UndefOr[VisitNode[S, Extract[Node, `137`]]] = js.native
+  var SwitchCase: js.UndefOr[VisitNode[S, Extract[Node, `183`]]] = js.native
+  var SwitchStatement: js.UndefOr[VisitNode[S, Extract[Node, `217`]]] = js.native
+  var SymbolTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `59`]]] = js.native
+  var TSAnyKeyword: js.UndefOr[VisitNode[S, Extract[Node, `11`]]] = js.native
+  var TSArrayType: js.UndefOr[VisitNode[S, Extract[Node, `115`]]] = js.native
+  var TSAsExpression: js.UndefOr[VisitNode[S, Extract[Node, `47`]]] = js.native
+  var TSBigIntKeyword: js.UndefOr[VisitNode[S, Extract[Node, `104`]]] = js.native
+  var TSBooleanKeyword: js.UndefOr[VisitNode[S, Extract[Node, `135`]]] = js.native
+  var TSCallSignatureDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `61`]]] = js.native
+  var TSConditionalType: js.UndefOr[VisitNode[S, Extract[Node, `102`]]] = js.native
+  var TSConstructSignatureDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `205`]]] = js.native
+  var TSConstructorType: js.UndefOr[VisitNode[S, Extract[Node, `69`]]] = js.native
+  var TSDeclareFunction: js.UndefOr[VisitNode[S, Extract[Node, `18`]]] = js.native
+  var TSDeclareMethod: js.UndefOr[VisitNode[S, Extract[Node, `130`]]] = js.native
   var TSEntityName: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.TSEntityName]] = js.native
-  var TSEnumDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon212]]] = js.native
-  var TSEnumMember: js.UndefOr[VisitNode[S, Extract[Node, Anon34]]] = js.native
-  var TSExportAssignment: js.UndefOr[VisitNode[S, Extract[Node, Anon165]]] = js.native
-  var TSExpressionWithTypeArguments: js.UndefOr[VisitNode[S, Extract[Node, Anon58]]] = js.native
-  var TSExternalModuleReference: js.UndefOr[VisitNode[S, Extract[Node, Anon50]]] = js.native
-  var TSFunctionType: js.UndefOr[VisitNode[S, Extract[Node, Anon155]]] = js.native
-  var TSImportEqualsDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon159]]] = js.native
-  var TSImportType: js.UndefOr[VisitNode[S, Extract[Node, Anon48]]] = js.native
-  var TSIndexSignature: js.UndefOr[VisitNode[S, Extract[Node, Anon175]]] = js.native
-  var TSIndexedAccessType: js.UndefOr[VisitNode[S, Extract[Node, Anon114]]] = js.native
-  var TSInferType: js.UndefOr[VisitNode[S, Extract[Node, AnonType]]] = js.native
-  var TSInterfaceBody: js.UndefOr[VisitNode[S, Extract[Node, Anon78]]] = js.native
-  var TSInterfaceDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon98]]] = js.native
-  var TSIntersectionType: js.UndefOr[VisitNode[S, Extract[Node, Anon207]]] = js.native
-  var TSLiteralType: js.UndefOr[VisitNode[S, Extract[Node, Anon179]]] = js.native
-  var TSMappedType: js.UndefOr[VisitNode[S, Extract[Node, Anon204]]] = js.native
-  var TSMethodSignature: js.UndefOr[VisitNode[S, Extract[Node, Anon12]]] = js.native
-  var TSModuleBlock: js.UndefOr[VisitNode[S, Extract[Node, Anon24]]] = js.native
-  var TSModuleDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon89]]] = js.native
-  var TSNamespaceExportDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon156]]] = js.native
-  var TSNeverKeyword: js.UndefOr[VisitNode[S, Extract[Node, Anon113]]] = js.native
-  var TSNonNullExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon2]]] = js.native
-  var TSNullKeyword: js.UndefOr[VisitNode[S, Extract[Node, Anon152]]] = js.native
-  var TSNumberKeyword: js.UndefOr[VisitNode[S, Extract[Node, Anon109]]] = js.native
-  var TSObjectKeyword: js.UndefOr[VisitNode[S, Extract[Node, Anon43]]] = js.native
-  var TSOptionalType: js.UndefOr[VisitNode[S, Extract[Node, Anon56]]] = js.native
-  var TSParameterProperty: js.UndefOr[VisitNode[S, Extract[Node, Anon149]]] = js.native
-  var TSParenthesizedType: js.UndefOr[VisitNode[S, Extract[Node, Anon63]]] = js.native
-  var TSPropertySignature: js.UndefOr[VisitNode[S, Extract[Node, Anon68]]] = js.native
-  var TSQualifiedName: js.UndefOr[VisitNode[S, Extract[Node, Anon87]]] = js.native
-  var TSRestType: js.UndefOr[VisitNode[S, Extract[Node, Anon26]]] = js.native
-  var TSStringKeyword: js.UndefOr[VisitNode[S, Extract[Node, Anon211]]] = js.native
-  var TSSymbolKeyword: js.UndefOr[VisitNode[S, Extract[Node, Anon27]]] = js.native
-  var TSThisType: js.UndefOr[VisitNode[S, Extract[Node, Anon100]]] = js.native
-  var TSTupleType: js.UndefOr[VisitNode[S, Extract[Node, Anon201]]] = js.native
+  var TSEnumDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `212`]]] = js.native
+  var TSEnumMember: js.UndefOr[VisitNode[S, Extract[Node, `34`]]] = js.native
+  var TSExportAssignment: js.UndefOr[VisitNode[S, Extract[Node, `165`]]] = js.native
+  var TSExpressionWithTypeArguments: js.UndefOr[VisitNode[S, Extract[Node, `58`]]] = js.native
+  var TSExternalModuleReference: js.UndefOr[VisitNode[S, Extract[Node, `50`]]] = js.native
+  var TSFunctionType: js.UndefOr[VisitNode[S, Extract[Node, `155`]]] = js.native
+  var TSImportEqualsDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `159`]]] = js.native
+  var TSImportType: js.UndefOr[VisitNode[S, Extract[Node, `48`]]] = js.native
+  var TSIndexSignature: js.UndefOr[VisitNode[S, Extract[Node, `175`]]] = js.native
+  var TSIndexedAccessType: js.UndefOr[VisitNode[S, Extract[Node, `114`]]] = js.native
+  var TSInferType: js.UndefOr[VisitNode[S, Extract[Node, Type]]] = js.native
+  var TSInterfaceBody: js.UndefOr[VisitNode[S, Extract[Node, `78`]]] = js.native
+  var TSInterfaceDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `98`]]] = js.native
+  var TSIntersectionType: js.UndefOr[VisitNode[S, Extract[Node, `207`]]] = js.native
+  var TSLiteralType: js.UndefOr[VisitNode[S, Extract[Node, `179`]]] = js.native
+  var TSMappedType: js.UndefOr[VisitNode[S, Extract[Node, `204`]]] = js.native
+  var TSMethodSignature: js.UndefOr[VisitNode[S, Extract[Node, `12`]]] = js.native
+  var TSModuleBlock: js.UndefOr[VisitNode[S, Extract[Node, `24`]]] = js.native
+  var TSModuleDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `89`]]] = js.native
+  var TSNamespaceExportDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `156`]]] = js.native
+  var TSNeverKeyword: js.UndefOr[VisitNode[S, Extract[Node, `113`]]] = js.native
+  var TSNonNullExpression: js.UndefOr[VisitNode[S, Extract[Node, `2`]]] = js.native
+  var TSNullKeyword: js.UndefOr[VisitNode[S, Extract[Node, `152`]]] = js.native
+  var TSNumberKeyword: js.UndefOr[VisitNode[S, Extract[Node, `109`]]] = js.native
+  var TSObjectKeyword: js.UndefOr[VisitNode[S, Extract[Node, `43`]]] = js.native
+  var TSOptionalType: js.UndefOr[VisitNode[S, Extract[Node, `56`]]] = js.native
+  var TSParameterProperty: js.UndefOr[VisitNode[S, Extract[Node, `149`]]] = js.native
+  var TSParenthesizedType: js.UndefOr[VisitNode[S, Extract[Node, `63`]]] = js.native
+  var TSPropertySignature: js.UndefOr[VisitNode[S, Extract[Node, `68`]]] = js.native
+  var TSQualifiedName: js.UndefOr[VisitNode[S, Extract[Node, `87`]]] = js.native
+  var TSRestType: js.UndefOr[VisitNode[S, Extract[Node, `26`]]] = js.native
+  var TSStringKeyword: js.UndefOr[VisitNode[S, Extract[Node, `211`]]] = js.native
+  var TSSymbolKeyword: js.UndefOr[VisitNode[S, Extract[Node, `27`]]] = js.native
+  var TSThisType: js.UndefOr[VisitNode[S, Extract[Node, `100`]]] = js.native
+  var TSTupleType: js.UndefOr[VisitNode[S, Extract[Node, `201`]]] = js.native
   var TSType: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.TSType]] = js.native
-  var TSTypeAliasDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon214]]] = js.native
-  var TSTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon76]]] = js.native
-  var TSTypeAssertion: js.UndefOr[VisitNode[S, Extract[Node, Anon1]]] = js.native
+  var TSTypeAliasDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `214`]]] = js.native
+  var TSTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `76`]]] = js.native
+  var TSTypeAssertion: js.UndefOr[VisitNode[S, Extract[Node, `1`]]] = js.native
   var TSTypeElement: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.TSTypeElement]] = js.native
-  var TSTypeLiteral: js.UndefOr[VisitNode[S, Extract[Node, Anon141]]] = js.native
-  var TSTypeOperator: js.UndefOr[VisitNode[S, Extract[Node, Anon95]]] = js.native
-  var TSTypeParameter: js.UndefOr[VisitNode[S, Extract[Node, Anon60]]] = js.native
-  var TSTypeParameterDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon196]]] = js.native
-  var TSTypeParameterInstantiation: js.UndefOr[VisitNode[S, Extract[Node, Anon105]]] = js.native
-  var TSTypePredicate: js.UndefOr[VisitNode[S, Extract[Node, Anon139]]] = js.native
-  var TSTypeQuery: js.UndefOr[VisitNode[S, Extract[Node, Anon118]]] = js.native
-  var TSTypeReference: js.UndefOr[VisitNode[S, Extract[Node, Anon52]]] = js.native
-  var TSUndefinedKeyword: js.UndefOr[VisitNode[S, Extract[Node, Anon189]]] = js.native
-  var TSUnionType: js.UndefOr[VisitNode[S, Extract[Node, Anon36]]] = js.native
-  var TSUnknownKeyword: js.UndefOr[VisitNode[S, Extract[Node, Anon75]]] = js.native
-  var TSVoidKeyword: js.UndefOr[VisitNode[S, Extract[Node, Anon94]]] = js.native
-  var TaggedTemplateExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon188]]] = js.native
-  var TemplateElement: js.UndefOr[VisitNode[S, Extract[Node, Anon93]]] = js.native
-  var TemplateLiteral: js.UndefOr[VisitNode[S, Extract[Node, Anon158]]] = js.native
+  var TSTypeLiteral: js.UndefOr[VisitNode[S, Extract[Node, `141`]]] = js.native
+  var TSTypeOperator: js.UndefOr[VisitNode[S, Extract[Node, `95`]]] = js.native
+  var TSTypeParameter: js.UndefOr[VisitNode[S, Extract[Node, `60`]]] = js.native
+  var TSTypeParameterDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `196`]]] = js.native
+  var TSTypeParameterInstantiation: js.UndefOr[VisitNode[S, Extract[Node, `105`]]] = js.native
+  var TSTypePredicate: js.UndefOr[VisitNode[S, Extract[Node, `139`]]] = js.native
+  var TSTypeQuery: js.UndefOr[VisitNode[S, Extract[Node, `118`]]] = js.native
+  var TSTypeReference: js.UndefOr[VisitNode[S, Extract[Node, `52`]]] = js.native
+  var TSUndefinedKeyword: js.UndefOr[VisitNode[S, Extract[Node, `189`]]] = js.native
+  var TSUnionType: js.UndefOr[VisitNode[S, Extract[Node, `36`]]] = js.native
+  var TSUnknownKeyword: js.UndefOr[VisitNode[S, Extract[Node, `75`]]] = js.native
+  var TSVoidKeyword: js.UndefOr[VisitNode[S, Extract[Node, `94`]]] = js.native
+  var TaggedTemplateExpression: js.UndefOr[VisitNode[S, Extract[Node, `188`]]] = js.native
+  var TemplateElement: js.UndefOr[VisitNode[S, Extract[Node, `93`]]] = js.native
+  var TemplateLiteral: js.UndefOr[VisitNode[S, Extract[Node, `158`]]] = js.native
   var Terminatorless: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Terminatorless]] = js.native
-  var ThisExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon143]]] = js.native
-  var ThisTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon220]]] = js.native
-  var ThrowStatement: js.UndefOr[VisitNode[S, Extract[Node, Anon92]]] = js.native
-  var TryStatement: js.UndefOr[VisitNode[S, Extract[Node, Anon180]]] = js.native
-  var TupleExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon72]]] = js.native
-  var TupleTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon121]]] = js.native
-  var TypeAlias: js.UndefOr[VisitNode[S, Extract[Node, Anon140]]] = js.native
-  var TypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon145]]] = js.native
-  var TypeCastExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon226]]] = js.native
-  var TypeParameter: js.UndefOr[VisitNode[S, Extract[Node, Anon230]]] = js.native
-  var TypeParameterDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon123]]] = js.native
-  var TypeParameterInstantiation: js.UndefOr[VisitNode[S, Extract[Node, Anon161]]] = js.native
-  var TypeofTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon91]]] = js.native
-  var UnaryExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon74]]] = js.native
+  var ThisExpression: js.UndefOr[VisitNode[S, Extract[Node, `143`]]] = js.native
+  var ThisTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `220`]]] = js.native
+  var ThrowStatement: js.UndefOr[VisitNode[S, Extract[Node, `92`]]] = js.native
+  var TryStatement: js.UndefOr[VisitNode[S, Extract[Node, `180`]]] = js.native
+  var TupleExpression: js.UndefOr[VisitNode[S, Extract[Node, `72`]]] = js.native
+  var TupleTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `121`]]] = js.native
+  var TypeAlias: js.UndefOr[VisitNode[S, Extract[Node, `140`]]] = js.native
+  var TypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `145`]]] = js.native
+  var TypeCastExpression: js.UndefOr[VisitNode[S, Extract[Node, `226`]]] = js.native
+  var TypeParameter: js.UndefOr[VisitNode[S, Extract[Node, `230`]]] = js.native
+  var TypeParameterDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `123`]]] = js.native
+  var TypeParameterInstantiation: js.UndefOr[VisitNode[S, Extract[Node, `161`]]] = js.native
+  var TypeofTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `91`]]] = js.native
+  var UnaryExpression: js.UndefOr[VisitNode[S, Extract[Node, `74`]]] = js.native
   var UnaryLike: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.UnaryLike]] = js.native
-  var UnionTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon192]]] = js.native
-  var UpdateExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon108]]] = js.native
+  var UnionTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `192`]]] = js.native
+  var UpdateExpression: js.UndefOr[VisitNode[S, Extract[Node, `108`]]] = js.native
   var UserWhitespacable: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.UserWhitespacable]] = js.native
-  var V8IntrinsicIdentifier: js.UndefOr[VisitNode[S, Extract[Node, Anon172]]] = js.native
-  var VariableDeclaration: js.UndefOr[VisitNode[S, Extract[Node, Anon79]]] = js.native
-  var VariableDeclarator: js.UndefOr[VisitNode[S, Extract[Node, Anon57]]] = js.native
-  var Variance: js.UndefOr[VisitNode[S, Extract[Node, Anon125]]] = js.native
-  var VoidTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, Anon147]]] = js.native
+  var V8IntrinsicIdentifier: js.UndefOr[VisitNode[S, Extract[Node, `172`]]] = js.native
+  var VariableDeclaration: js.UndefOr[VisitNode[S, Extract[Node, `79`]]] = js.native
+  var VariableDeclarator: js.UndefOr[VisitNode[S, Extract[Node, `57`]]] = js.native
+  var Variance: js.UndefOr[VisitNode[S, Extract[Node, `125`]]] = js.native
+  var VoidTypeAnnotation: js.UndefOr[VisitNode[S, Extract[Node, `147`]]] = js.native
   var While: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.While]] = js.native
-  var WhileStatement: js.UndefOr[VisitNode[S, Extract[Node, Anon66]]] = js.native
-  var WithStatement: js.UndefOr[VisitNode[S, Extract[Node, Anon17]]] = js.native
-  var YieldExpression: js.UndefOr[VisitNode[S, Extract[Node, Anon178]]] = js.native
+  var WhileStatement: js.UndefOr[VisitNode[S, Extract[Node, `66`]]] = js.native
+  var WithStatement: js.UndefOr[VisitNode[S, Extract[Node, `17`]]] = js.native
+  var YieldExpression: js.UndefOr[VisitNode[S, Extract[Node, `178`]]] = js.native
   var enter: js.UndefOr[VisitNodeFunction[S, Node]] = js.native
   var exit: js.UndefOr[VisitNodeFunction[S, Node]] = js.native
 }
@@ -584,7 +584,7 @@ object Visitor {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[S] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[S] with Other]
     @scala.inline
-    def withAnyTypeAnnotation(value: VisitNode[S, Extract[Node, Anon185]]): Self[S] = {
+    def withAnyTypeAnnotation(value: VisitNode[S, Extract[Node, `185`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("AnyTypeAnnotation")(value.asInstanceOf[js.Any])
         ret
@@ -596,7 +596,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withArgumentPlaceholder(value: VisitNode[S, Extract[Node, Anon64]]): Self[S] = {
+    def withArgumentPlaceholder(value: VisitNode[S, Extract[Node, `64`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ArgumentPlaceholder")(value.asInstanceOf[js.Any])
         ret
@@ -608,7 +608,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withArrayExpression(value: VisitNode[S, Extract[Node, Anon51]]): Self[S] = {
+    def withArrayExpression(value: VisitNode[S, Extract[Node, `51`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ArrayExpression")(value.asInstanceOf[js.Any])
         ret
@@ -620,7 +620,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withArrayPattern(value: VisitNode[S, Extract[Node, Anon126]]): Self[S] = {
+    def withArrayPattern(value: VisitNode[S, Extract[Node, `126`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ArrayPattern")(value.asInstanceOf[js.Any])
         ret
@@ -632,7 +632,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withArrayTypeAnnotation(value: VisitNode[S, Extract[Node, Anon10]]): Self[S] = {
+    def withArrayTypeAnnotation(value: VisitNode[S, Extract[Node, `10`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ArrayTypeAnnotation")(value.asInstanceOf[js.Any])
         ret
@@ -644,7 +644,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withArrowFunctionExpression(value: VisitNode[S, Extract[Node, Anon7]]): Self[S] = {
+    def withArrowFunctionExpression(value: VisitNode[S, Extract[Node, `7`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ArrowFunctionExpression")(value.asInstanceOf[js.Any])
         ret
@@ -656,7 +656,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withAssignmentExpression(value: VisitNode[S, Extract[Node, Anon77]]): Self[S] = {
+    def withAssignmentExpression(value: VisitNode[S, Extract[Node, `77`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentExpression")(value.asInstanceOf[js.Any])
         ret
@@ -668,7 +668,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withAssignmentPattern(value: VisitNode[S, Extract[Node, Anon88]]): Self[S] = {
+    def withAssignmentPattern(value: VisitNode[S, Extract[Node, `88`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("AssignmentPattern")(value.asInstanceOf[js.Any])
         ret
@@ -680,7 +680,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withAwaitExpression(value: VisitNode[S, Extract[Node, Anon20]]): Self[S] = {
+    def withAwaitExpression(value: VisitNode[S, Extract[Node, `20`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("AwaitExpression")(value.asInstanceOf[js.Any])
         ret
@@ -692,7 +692,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withBigIntLiteral(value: VisitNode[S, Extract[Node, Anon174]]): Self[S] = {
+    def withBigIntLiteral(value: VisitNode[S, Extract[Node, `174`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("BigIntLiteral")(value.asInstanceOf[js.Any])
         ret
@@ -716,7 +716,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withBinaryExpression(value: VisitNode[S, Extract[Node, Anon86]]): Self[S] = {
+    def withBinaryExpression(value: VisitNode[S, Extract[Node, `86`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("BinaryExpression")(value.asInstanceOf[js.Any])
         ret
@@ -728,7 +728,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withBindExpression(value: VisitNode[S, Extract[Node, Anon65]]): Self[S] = {
+    def withBindExpression(value: VisitNode[S, Extract[Node, `65`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("BindExpression")(value.asInstanceOf[js.Any])
         ret
@@ -764,7 +764,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withBlockStatement(value: VisitNode[S, Extract[Node, Anon120]]): Self[S] = {
+    def withBlockStatement(value: VisitNode[S, Extract[Node, `120`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("BlockStatement")(value.asInstanceOf[js.Any])
         ret
@@ -776,7 +776,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withBooleanLiteral(value: VisitNode[S, Extract[Node, Anon150]]): Self[S] = {
+    def withBooleanLiteral(value: VisitNode[S, Extract[Node, `150`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("BooleanLiteral")(value.asInstanceOf[js.Any])
         ret
@@ -788,7 +788,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withBooleanLiteralTypeAnnotation(value: VisitNode[S, Extract[Node, Anon184]]): Self[S] = {
+    def withBooleanLiteralTypeAnnotation(value: VisitNode[S, Extract[Node, `184`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("BooleanLiteralTypeAnnotation")(value.asInstanceOf[js.Any])
         ret
@@ -800,7 +800,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withBooleanTypeAnnotation(value: VisitNode[S, Extract[Node, Anon21]]): Self[S] = {
+    def withBooleanTypeAnnotation(value: VisitNode[S, Extract[Node, `21`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("BooleanTypeAnnotation")(value.asInstanceOf[js.Any])
         ret
@@ -812,7 +812,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withBreakStatement(value: VisitNode[S, Extract[Node, Anon4]]): Self[S] = {
+    def withBreakStatement(value: VisitNode[S, Extract[Node, `4`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("BreakStatement")(value.asInstanceOf[js.Any])
         ret
@@ -824,7 +824,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withCallExpression(value: VisitNode[S, Extract[Node, Anon136]]): Self[S] = {
+    def withCallExpression(value: VisitNode[S, Extract[Node, `136`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("CallExpression")(value.asInstanceOf[js.Any])
         ret
@@ -836,7 +836,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withCatchClause(value: VisitNode[S, Extract[Node, Anon8]]): Self[S] = {
+    def withCatchClause(value: VisitNode[S, Extract[Node, `8`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("CatchClause")(value.asInstanceOf[js.Any])
         ret
@@ -860,7 +860,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withClassBody(value: VisitNode[S, Extract[Node, Anon32]]): Self[S] = {
+    def withClassBody(value: VisitNode[S, Extract[Node, `32`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ClassBody")(value.asInstanceOf[js.Any])
         ret
@@ -872,7 +872,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withClassDeclaration(value: VisitNode[S, Extract[Node, Anon106]]): Self[S] = {
+    def withClassDeclaration(value: VisitNode[S, Extract[Node, `106`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ClassDeclaration")(value.asInstanceOf[js.Any])
         ret
@@ -884,7 +884,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withClassExpression(value: VisitNode[S, Extract[Node, Anon22]]): Self[S] = {
+    def withClassExpression(value: VisitNode[S, Extract[Node, `22`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ClassExpression")(value.asInstanceOf[js.Any])
         ret
@@ -896,7 +896,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withClassImplements(value: VisitNode[S, Extract[Node, Anon35]]): Self[S] = {
+    def withClassImplements(value: VisitNode[S, Extract[Node, `35`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ClassImplements")(value.asInstanceOf[js.Any])
         ret
@@ -908,7 +908,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withClassMethod(value: VisitNode[S, Extract[Node, Anon177]]): Self[S] = {
+    def withClassMethod(value: VisitNode[S, Extract[Node, `177`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ClassMethod")(value.asInstanceOf[js.Any])
         ret
@@ -920,7 +920,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withClassPrivateMethod(value: VisitNode[S, Extract[Node, Anon162]]): Self[S] = {
+    def withClassPrivateMethod(value: VisitNode[S, Extract[Node, `162`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ClassPrivateMethod")(value.asInstanceOf[js.Any])
         ret
@@ -932,7 +932,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withClassPrivateProperty(value: VisitNode[S, Extract[Node, Anon142]]): Self[S] = {
+    def withClassPrivateProperty(value: VisitNode[S, Extract[Node, `142`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ClassPrivateProperty")(value.asInstanceOf[js.Any])
         ret
@@ -944,7 +944,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withClassProperty(value: VisitNode[S, Extract[Node, Anon154]]): Self[S] = {
+    def withClassProperty(value: VisitNode[S, Extract[Node, `154`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ClassProperty")(value.asInstanceOf[js.Any])
         ret
@@ -980,7 +980,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withConditionalExpression(value: VisitNode[S, Extract[Node, Anon85]]): Self[S] = {
+    def withConditionalExpression(value: VisitNode[S, Extract[Node, `85`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ConditionalExpression")(value.asInstanceOf[js.Any])
         ret
@@ -992,7 +992,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withContinueStatement(value: VisitNode[S, Extract[Node, Anon171]]): Self[S] = {
+    def withContinueStatement(value: VisitNode[S, Extract[Node, `171`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ContinueStatement")(value.asInstanceOf[js.Any])
         ret
@@ -1004,7 +1004,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withDebuggerStatement(value: VisitNode[S, Extract[Node, Anon71]]): Self[S] = {
+    def withDebuggerStatement(value: VisitNode[S, Extract[Node, `71`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DebuggerStatement")(value.asInstanceOf[js.Any])
         ret
@@ -1028,7 +1028,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withDeclareClass(value: VisitNode[S, Extract[Node, Anon42]]): Self[S] = {
+    def withDeclareClass(value: VisitNode[S, Extract[Node, `42`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DeclareClass")(value.asInstanceOf[js.Any])
         ret
@@ -1040,7 +1040,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withDeclareExportAllDeclaration(value: VisitNode[S, Extract[Node, Anon70]]): Self[S] = {
+    def withDeclareExportAllDeclaration(value: VisitNode[S, Extract[Node, `70`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DeclareExportAllDeclaration")(value.asInstanceOf[js.Any])
         ret
@@ -1052,7 +1052,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withDeclareExportDeclaration(value: VisitNode[S, Extract[Node, Anon131]]): Self[S] = {
+    def withDeclareExportDeclaration(value: VisitNode[S, Extract[Node, `131`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DeclareExportDeclaration")(value.asInstanceOf[js.Any])
         ret
@@ -1064,7 +1064,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withDeclareFunction(value: VisitNode[S, Extract[Node, Anon187]]): Self[S] = {
+    def withDeclareFunction(value: VisitNode[S, Extract[Node, `187`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DeclareFunction")(value.asInstanceOf[js.Any])
         ret
@@ -1076,7 +1076,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withDeclareInterface(value: VisitNode[S, Extract[Node, Anon129]]): Self[S] = {
+    def withDeclareInterface(value: VisitNode[S, Extract[Node, `129`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DeclareInterface")(value.asInstanceOf[js.Any])
         ret
@@ -1088,7 +1088,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withDeclareModule(value: VisitNode[S, Extract[Node, Anon163]]): Self[S] = {
+    def withDeclareModule(value: VisitNode[S, Extract[Node, `163`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DeclareModule")(value.asInstanceOf[js.Any])
         ret
@@ -1100,7 +1100,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withDeclareModuleExports(value: VisitNode[S, Extract[Node, Anon29]]): Self[S] = {
+    def withDeclareModuleExports(value: VisitNode[S, Extract[Node, `29`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DeclareModuleExports")(value.asInstanceOf[js.Any])
         ret
@@ -1112,7 +1112,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withDeclareOpaqueType(value: VisitNode[S, Extract[Node, Anon31]]): Self[S] = {
+    def withDeclareOpaqueType(value: VisitNode[S, Extract[Node, `31`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DeclareOpaqueType")(value.asInstanceOf[js.Any])
         ret
@@ -1124,7 +1124,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withDeclareTypeAlias(value: VisitNode[S, Extract[Node, Anon138]]): Self[S] = {
+    def withDeclareTypeAlias(value: VisitNode[S, Extract[Node, `138`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DeclareTypeAlias")(value.asInstanceOf[js.Any])
         ret
@@ -1136,7 +1136,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withDeclareVariable(value: VisitNode[S, Extract[Node, Anon195]]): Self[S] = {
+    def withDeclareVariable(value: VisitNode[S, Extract[Node, `195`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DeclareVariable")(value.asInstanceOf[js.Any])
         ret
@@ -1148,7 +1148,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withDeclaredPredicate(value: VisitNode[S, Extract[Node, Anon160]]): Self[S] = {
+    def withDeclaredPredicate(value: VisitNode[S, Extract[Node, `160`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DeclaredPredicate")(value.asInstanceOf[js.Any])
         ret
@@ -1160,7 +1160,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withDecorator(value: VisitNode[S, Extract[Node, Anon49]]): Self[S] = {
+    def withDecorator(value: VisitNode[S, Extract[Node, `49`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Decorator")(value.asInstanceOf[js.Any])
         ret
@@ -1172,7 +1172,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withDirective(value: VisitNode[S, Extract[Node, Anon14]]): Self[S] = {
+    def withDirective(value: VisitNode[S, Extract[Node, `14`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Directive")(value.asInstanceOf[js.Any])
         ret
@@ -1184,7 +1184,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withDirectiveLiteral(value: VisitNode[S, Extract[Node, Anon67]]): Self[S] = {
+    def withDirectiveLiteral(value: VisitNode[S, Extract[Node, `67`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DirectiveLiteral")(value.asInstanceOf[js.Any])
         ret
@@ -1196,7 +1196,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withDoExpression(value: VisitNode[S, Extract[Node, Anon103]]): Self[S] = {
+    def withDoExpression(value: VisitNode[S, Extract[Node, `103`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DoExpression")(value.asInstanceOf[js.Any])
         ret
@@ -1208,7 +1208,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withDoWhileStatement(value: VisitNode[S, Extract[Node, Anon107]]): Self[S] = {
+    def withDoWhileStatement(value: VisitNode[S, Extract[Node, `107`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DoWhileStatement")(value.asInstanceOf[js.Any])
         ret
@@ -1220,7 +1220,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withEmptyStatement(value: VisitNode[S, Extract[Node, Anon209]]): Self[S] = {
+    def withEmptyStatement(value: VisitNode[S, Extract[Node, `209`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("EmptyStatement")(value.asInstanceOf[js.Any])
         ret
@@ -1232,7 +1232,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withEmptyTypeAnnotation(value: VisitNode[S, Extract[Node, Anon97]]): Self[S] = {
+    def withEmptyTypeAnnotation(value: VisitNode[S, Extract[Node, `97`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("EmptyTypeAnnotation")(value.asInstanceOf[js.Any])
         ret
@@ -1256,7 +1256,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withEnumBooleanBody(value: VisitNode[S, Extract[Node, Anon55]]): Self[S] = {
+    def withEnumBooleanBody(value: VisitNode[S, Extract[Node, `55`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("EnumBooleanBody")(value.asInstanceOf[js.Any])
         ret
@@ -1268,7 +1268,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withEnumBooleanMember(value: VisitNode[S, Extract[Node, Anon199]]): Self[S] = {
+    def withEnumBooleanMember(value: VisitNode[S, Extract[Node, `199`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("EnumBooleanMember")(value.asInstanceOf[js.Any])
         ret
@@ -1280,7 +1280,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withEnumDeclaration(value: VisitNode[S, Extract[Node, Anon45]]): Self[S] = {
+    def withEnumDeclaration(value: VisitNode[S, Extract[Node, `45`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("EnumDeclaration")(value.asInstanceOf[js.Any])
         ret
@@ -1292,7 +1292,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withEnumDefaultedMember(value: VisitNode[S, Extract[Node, Anon116]]): Self[S] = {
+    def withEnumDefaultedMember(value: VisitNode[S, Extract[Node, `116`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("EnumDefaultedMember")(value.asInstanceOf[js.Any])
         ret
@@ -1316,7 +1316,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withEnumNumberBody(value: VisitNode[S, Extract[Node, Anon25]]): Self[S] = {
+    def withEnumNumberBody(value: VisitNode[S, Extract[Node, `25`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("EnumNumberBody")(value.asInstanceOf[js.Any])
         ret
@@ -1328,7 +1328,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withEnumNumberMember(value: VisitNode[S, Extract[Node, Anon197]]): Self[S] = {
+    def withEnumNumberMember(value: VisitNode[S, Extract[Node, `197`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("EnumNumberMember")(value.asInstanceOf[js.Any])
         ret
@@ -1340,7 +1340,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withEnumStringBody(value: VisitNode[S, Extract[Node, Anon128]]): Self[S] = {
+    def withEnumStringBody(value: VisitNode[S, Extract[Node, `128`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("EnumStringBody")(value.asInstanceOf[js.Any])
         ret
@@ -1352,7 +1352,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withEnumStringMember(value: VisitNode[S, Extract[Node, Anon173]]): Self[S] = {
+    def withEnumStringMember(value: VisitNode[S, Extract[Node, `173`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("EnumStringMember")(value.asInstanceOf[js.Any])
         ret
@@ -1364,7 +1364,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withEnumSymbolBody(value: VisitNode[S, Extract[Node, Anon53]]): Self[S] = {
+    def withEnumSymbolBody(value: VisitNode[S, Extract[Node, `53`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("EnumSymbolBody")(value.asInstanceOf[js.Any])
         ret
@@ -1376,7 +1376,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withExistsTypeAnnotation(value: VisitNode[S, Extract[Node, Anon208]]): Self[S] = {
+    def withExistsTypeAnnotation(value: VisitNode[S, Extract[Node, `208`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ExistsTypeAnnotation")(value.asInstanceOf[js.Any])
         ret
@@ -1388,7 +1388,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withExportAllDeclaration(value: VisitNode[S, Extract[Node, Anon44]]): Self[S] = {
+    def withExportAllDeclaration(value: VisitNode[S, Extract[Node, `44`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ExportAllDeclaration")(value.asInstanceOf[js.Any])
         ret
@@ -1412,7 +1412,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withExportDefaultDeclaration(value: VisitNode[S, Extract[Node, Anon83]]): Self[S] = {
+    def withExportDefaultDeclaration(value: VisitNode[S, Extract[Node, `83`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ExportDefaultDeclaration")(value.asInstanceOf[js.Any])
         ret
@@ -1424,7 +1424,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withExportDefaultSpecifier(value: VisitNode[S, Extract[Node, Anon23]]): Self[S] = {
+    def withExportDefaultSpecifier(value: VisitNode[S, Extract[Node, `23`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ExportDefaultSpecifier")(value.asInstanceOf[js.Any])
         ret
@@ -1436,7 +1436,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withExportNamedDeclaration(value: VisitNode[S, Extract[Node, Anon112]]): Self[S] = {
+    def withExportNamedDeclaration(value: VisitNode[S, Extract[Node, `112`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ExportNamedDeclaration")(value.asInstanceOf[js.Any])
         ret
@@ -1448,7 +1448,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withExportNamespaceSpecifier(value: VisitNode[S, Extract[Node, Anon30]]): Self[S] = {
+    def withExportNamespaceSpecifier(value: VisitNode[S, Extract[Node, `30`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ExportNamespaceSpecifier")(value.asInstanceOf[js.Any])
         ret
@@ -1460,7 +1460,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withExportSpecifier(value: VisitNode[S, Extract[Node, Anon39]]): Self[S] = {
+    def withExportSpecifier(value: VisitNode[S, Extract[Node, `39`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ExportSpecifier")(value.asInstanceOf[js.Any])
         ret
@@ -1484,7 +1484,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withExpressionStatement(value: VisitNode[S, Extract[Node, Anon216]]): Self[S] = {
+    def withExpressionStatement(value: VisitNode[S, Extract[Node, `216`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ExpressionStatement")(value.asInstanceOf[js.Any])
         ret
@@ -1508,7 +1508,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withFile(value: VisitNode[S, Extract[Node, Anon54]]): Self[S] = {
+    def withFile(value: VisitNode[S, Extract[Node, `54`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("File")(value.asInstanceOf[js.Any])
         ret
@@ -1592,7 +1592,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withForInStatement(value: VisitNode[S, Extract[Node, Anon190]]): Self[S] = {
+    def withForInStatement(value: VisitNode[S, Extract[Node, `190`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ForInStatement")(value.asInstanceOf[js.Any])
         ret
@@ -1604,7 +1604,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withForOfStatement(value: VisitNode[S, Extract[Node, Anon73]]): Self[S] = {
+    def withForOfStatement(value: VisitNode[S, Extract[Node, `73`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ForOfStatement")(value.asInstanceOf[js.Any])
         ret
@@ -1616,7 +1616,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withForStatement(value: VisitNode[S, Extract[Node, Anon222]]): Self[S] = {
+    def withForStatement(value: VisitNode[S, Extract[Node, `222`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ForStatement")(value.asInstanceOf[js.Any])
         ret
@@ -1652,7 +1652,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withFunctionDeclaration(value: VisitNode[S, Extract[Node, Anon210]]): Self[S] = {
+    def withFunctionDeclaration(value: VisitNode[S, Extract[Node, `210`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionDeclaration")(value.asInstanceOf[js.Any])
         ret
@@ -1664,7 +1664,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withFunctionExpression(value: VisitNode[S, Extract[Node, Anon164]]): Self[S] = {
+    def withFunctionExpression(value: VisitNode[S, Extract[Node, `164`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionExpression")(value.asInstanceOf[js.Any])
         ret
@@ -1688,7 +1688,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withFunctionTypeAnnotation(value: VisitNode[S, Extract[Node, Anon124]]): Self[S] = {
+    def withFunctionTypeAnnotation(value: VisitNode[S, Extract[Node, `124`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionTypeAnnotation")(value.asInstanceOf[js.Any])
         ret
@@ -1700,7 +1700,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withFunctionTypeParam(value: VisitNode[S, Extract[Node, Anon186]]): Self[S] = {
+    def withFunctionTypeParam(value: VisitNode[S, Extract[Node, `186`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("FunctionTypeParam")(value.asInstanceOf[js.Any])
         ret
@@ -1712,7 +1712,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withGenericTypeAnnotation(value: VisitNode[S, Extract[Node, Anon148]]): Self[S] = {
+    def withGenericTypeAnnotation(value: VisitNode[S, Extract[Node, `148`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("GenericTypeAnnotation")(value.asInstanceOf[js.Any])
         ret
@@ -1724,7 +1724,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withIdentifier(value: VisitNode[S, Extract[Node, Anon218]]): Self[S] = {
+    def withIdentifier(value: VisitNode[S, Extract[Node, `218`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Identifier")(value.asInstanceOf[js.Any])
         ret
@@ -1736,7 +1736,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withIfStatement(value: VisitNode[S, Extract[Node, Anon117]]): Self[S] = {
+    def withIfStatement(value: VisitNode[S, Extract[Node, `117`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("IfStatement")(value.asInstanceOf[js.Any])
         ret
@@ -1760,7 +1760,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withImport(value: VisitNode[S, Extract[Node, Anon96]]): Self[S] = {
+    def withImport(value: VisitNode[S, Extract[Node, `96`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Import")(value.asInstanceOf[js.Any])
         ret
@@ -1772,7 +1772,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withImportDeclaration(value: VisitNode[S, Extract[Node, Anon13]]): Self[S] = {
+    def withImportDeclaration(value: VisitNode[S, Extract[Node, `13`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ImportDeclaration")(value.asInstanceOf[js.Any])
         ret
@@ -1784,7 +1784,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withImportDefaultSpecifier(value: VisitNode[S, Extract[Node, Anon101]]): Self[S] = {
+    def withImportDefaultSpecifier(value: VisitNode[S, Extract[Node, `101`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ImportDefaultSpecifier")(value.asInstanceOf[js.Any])
         ret
@@ -1796,7 +1796,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withImportNamespaceSpecifier(value: VisitNode[S, Extract[Node, Anon202]]): Self[S] = {
+    def withImportNamespaceSpecifier(value: VisitNode[S, Extract[Node, `202`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ImportNamespaceSpecifier")(value.asInstanceOf[js.Any])
         ret
@@ -1808,7 +1808,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withImportSpecifier(value: VisitNode[S, Extract[Node, Anon46]]): Self[S] = {
+    def withImportSpecifier(value: VisitNode[S, Extract[Node, `46`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ImportSpecifier")(value.asInstanceOf[js.Any])
         ret
@@ -1820,7 +1820,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withInferredPredicate(value: VisitNode[S, Extract[Node, Anon176]]): Self[S] = {
+    def withInferredPredicate(value: VisitNode[S, Extract[Node, `176`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("InferredPredicate")(value.asInstanceOf[js.Any])
         ret
@@ -1832,7 +1832,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withInterfaceDeclaration(value: VisitNode[S, Extract[Node, Anon40]]): Self[S] = {
+    def withInterfaceDeclaration(value: VisitNode[S, Extract[Node, `40`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("InterfaceDeclaration")(value.asInstanceOf[js.Any])
         ret
@@ -1844,7 +1844,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withInterfaceExtends(value: VisitNode[S, Extract[Node, Anon134]]): Self[S] = {
+    def withInterfaceExtends(value: VisitNode[S, Extract[Node, `134`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("InterfaceExtends")(value.asInstanceOf[js.Any])
         ret
@@ -1856,7 +1856,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withInterfaceTypeAnnotation(value: VisitNode[S, Extract[Node, Anon9]]): Self[S] = {
+    def withInterfaceTypeAnnotation(value: VisitNode[S, Extract[Node, `9`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("InterfaceTypeAnnotation")(value.asInstanceOf[js.Any])
         ret
@@ -1868,7 +1868,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withInterpreterDirective(value: VisitNode[S, Extract[Node, Anon227]]): Self[S] = {
+    def withInterpreterDirective(value: VisitNode[S, Extract[Node, `227`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("InterpreterDirective")(value.asInstanceOf[js.Any])
         ret
@@ -1880,7 +1880,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withIntersectionTypeAnnotation(value: VisitNode[S, Extract[Node, Anon213]]): Self[S] = {
+    def withIntersectionTypeAnnotation(value: VisitNode[S, Extract[Node, `213`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("IntersectionTypeAnnotation")(value.asInstanceOf[js.Any])
         ret
@@ -1904,7 +1904,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withJSXAttribute(value: VisitNode[S, Extract[Node, Anon200]]): Self[S] = {
+    def withJSXAttribute(value: VisitNode[S, Extract[Node, `200`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("JSXAttribute")(value.asInstanceOf[js.Any])
         ret
@@ -1916,7 +1916,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withJSXClosingElement(value: VisitNode[S, Extract[Node, Anon231]]): Self[S] = {
+    def withJSXClosingElement(value: VisitNode[S, Extract[Node, `231`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("JSXClosingElement")(value.asInstanceOf[js.Any])
         ret
@@ -1928,7 +1928,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withJSXClosingFragment(value: VisitNode[S, Extract[Node, Anon81]]): Self[S] = {
+    def withJSXClosingFragment(value: VisitNode[S, Extract[Node, `81`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("JSXClosingFragment")(value.asInstanceOf[js.Any])
         ret
@@ -1940,7 +1940,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withJSXElement(value: VisitNode[S, Extract[Node, Anon119]]): Self[S] = {
+    def withJSXElement(value: VisitNode[S, Extract[Node, `119`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("JSXElement")(value.asInstanceOf[js.Any])
         ret
@@ -1952,7 +1952,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withJSXEmptyExpression(value: VisitNode[S, Extract[Node, Anon37]]): Self[S] = {
+    def withJSXEmptyExpression(value: VisitNode[S, Extract[Node, `37`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("JSXEmptyExpression")(value.asInstanceOf[js.Any])
         ret
@@ -1964,7 +1964,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withJSXExpressionContainer(value: VisitNode[S, Extract[Node, Anon198]]): Self[S] = {
+    def withJSXExpressionContainer(value: VisitNode[S, Extract[Node, `198`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("JSXExpressionContainer")(value.asInstanceOf[js.Any])
         ret
@@ -1976,7 +1976,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withJSXFragment(value: VisitNode[S, Extract[Node, Anon232]]): Self[S] = {
+    def withJSXFragment(value: VisitNode[S, Extract[Node, `232`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("JSXFragment")(value.asInstanceOf[js.Any])
         ret
@@ -1988,7 +1988,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withJSXIdentifier(value: VisitNode[S, Extract[Node, Anon169]]): Self[S] = {
+    def withJSXIdentifier(value: VisitNode[S, Extract[Node, `169`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("JSXIdentifier")(value.asInstanceOf[js.Any])
         ret
@@ -2000,7 +2000,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withJSXMemberExpression(value: VisitNode[S, Extract[Node, Anon33]]): Self[S] = {
+    def withJSXMemberExpression(value: VisitNode[S, Extract[Node, `33`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("JSXMemberExpression")(value.asInstanceOf[js.Any])
         ret
@@ -2012,7 +2012,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withJSXNamespacedName(value: VisitNode[S, Extract[Node, Anon228]]): Self[S] = {
+    def withJSXNamespacedName(value: VisitNode[S, Extract[Node, `228`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("JSXNamespacedName")(value.asInstanceOf[js.Any])
         ret
@@ -2024,7 +2024,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withJSXOpeningElement(value: VisitNode[S, Extract[Node, Anon233]]): Self[S] = {
+    def withJSXOpeningElement(value: VisitNode[S, Extract[Node, `233`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("JSXOpeningElement")(value.asInstanceOf[js.Any])
         ret
@@ -2036,7 +2036,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withJSXOpeningFragment(value: VisitNode[S, Extract[Node, Anon19]]): Self[S] = {
+    def withJSXOpeningFragment(value: VisitNode[S, Extract[Node, `19`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("JSXOpeningFragment")(value.asInstanceOf[js.Any])
         ret
@@ -2048,7 +2048,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withJSXSpreadAttribute(value: VisitNode[S, Extract[Node, Anon151]]): Self[S] = {
+    def withJSXSpreadAttribute(value: VisitNode[S, Extract[Node, `151`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("JSXSpreadAttribute")(value.asInstanceOf[js.Any])
         ret
@@ -2060,7 +2060,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withJSXSpreadChild(value: VisitNode[S, Extract[Node, Anon80]]): Self[S] = {
+    def withJSXSpreadChild(value: VisitNode[S, Extract[Node, `80`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("JSXSpreadChild")(value.asInstanceOf[js.Any])
         ret
@@ -2072,7 +2072,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withJSXText(value: VisitNode[S, Extract[Node, Anon5]]): Self[S] = {
+    def withJSXText(value: VisitNode[S, Extract[Node, `5`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("JSXText")(value.asInstanceOf[js.Any])
         ret
@@ -2096,7 +2096,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withLabeledStatement(value: VisitNode[S, Extract[Node, Anon144]]): Self[S] = {
+    def withLabeledStatement(value: VisitNode[S, Extract[Node, `144`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("LabeledStatement")(value.asInstanceOf[js.Any])
         ret
@@ -2120,7 +2120,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withLogicalExpression(value: VisitNode[S, Extract[Node, Anon229]]): Self[S] = {
+    def withLogicalExpression(value: VisitNode[S, Extract[Node, `229`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("LogicalExpression")(value.asInstanceOf[js.Any])
         ret
@@ -2144,7 +2144,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withMemberExpression(value: VisitNode[S, Extract[Node, Anon132]]): Self[S] = {
+    def withMemberExpression(value: VisitNode[S, Extract[Node, `132`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("MemberExpression")(value.asInstanceOf[js.Any])
         ret
@@ -2156,7 +2156,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withMetaProperty(value: VisitNode[S, Extract[Node, Anon215]]): Self[S] = {
+    def withMetaProperty(value: VisitNode[S, Extract[Node, `215`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("MetaProperty")(value.asInstanceOf[js.Any])
         ret
@@ -2180,7 +2180,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withMixedTypeAnnotation(value: VisitNode[S, Extract[Node, Anon3]]): Self[S] = {
+    def withMixedTypeAnnotation(value: VisitNode[S, Extract[Node, `3`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("MixedTypeAnnotation")(value.asInstanceOf[js.Any])
         ret
@@ -2216,7 +2216,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withNewExpression(value: VisitNode[S, Extract[Node, Anon146]]): Self[S] = {
+    def withNewExpression(value: VisitNode[S, Extract[Node, `146`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("NewExpression")(value.asInstanceOf[js.Any])
         ret
@@ -2228,7 +2228,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withNoop(value: VisitNode[S, Extract[Node, Anon16]]): Self[S] = {
+    def withNoop(value: VisitNode[S, Extract[Node, `16`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Noop")(value.asInstanceOf[js.Any])
         ret
@@ -2240,7 +2240,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withNullLiteral(value: VisitNode[S, Extract[Node, Anon28]]): Self[S] = {
+    def withNullLiteral(value: VisitNode[S, Extract[Node, `28`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("NullLiteral")(value.asInstanceOf[js.Any])
         ret
@@ -2252,7 +2252,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withNullLiteralTypeAnnotation(value: VisitNode[S, Extract[Node, Anon203]]): Self[S] = {
+    def withNullLiteralTypeAnnotation(value: VisitNode[S, Extract[Node, `203`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("NullLiteralTypeAnnotation")(value.asInstanceOf[js.Any])
         ret
@@ -2264,7 +2264,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withNullableTypeAnnotation(value: VisitNode[S, Extract[Node, Anon41]]): Self[S] = {
+    def withNullableTypeAnnotation(value: VisitNode[S, Extract[Node, `41`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("NullableTypeAnnotation")(value.asInstanceOf[js.Any])
         ret
@@ -2276,7 +2276,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withNumberLiteralTypeAnnotation(value: VisitNode[S, Extract[Node, Anon224]]): Self[S] = {
+    def withNumberLiteralTypeAnnotation(value: VisitNode[S, Extract[Node, `224`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("NumberLiteralTypeAnnotation")(value.asInstanceOf[js.Any])
         ret
@@ -2288,7 +2288,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withNumberTypeAnnotation(value: VisitNode[S, Extract[Node, Anon122]]): Self[S] = {
+    def withNumberTypeAnnotation(value: VisitNode[S, Extract[Node, `122`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("NumberTypeAnnotation")(value.asInstanceOf[js.Any])
         ret
@@ -2300,7 +2300,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withNumericLiteral(value: VisitNode[S, Extract[Node, Anon127]]): Self[S] = {
+    def withNumericLiteral(value: VisitNode[S, Extract[Node, `127`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("NumericLiteral")(value.asInstanceOf[js.Any])
         ret
@@ -2312,7 +2312,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withObjectExpression(value: VisitNode[S, Extract[Node, Anon62]]): Self[S] = {
+    def withObjectExpression(value: VisitNode[S, Extract[Node, `62`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectExpression")(value.asInstanceOf[js.Any])
         ret
@@ -2336,7 +2336,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withObjectMethod(value: VisitNode[S, Extract[Node, Anon0]]): Self[S] = {
+    def withObjectMethod(value: VisitNode[S, Extract[Node, `0`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectMethod")(value.asInstanceOf[js.Any])
         ret
@@ -2348,7 +2348,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withObjectPattern(value: VisitNode[S, Extract[Node, Anon110]]): Self[S] = {
+    def withObjectPattern(value: VisitNode[S, Extract[Node, `110`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectPattern")(value.asInstanceOf[js.Any])
         ret
@@ -2360,7 +2360,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withObjectProperty(value: VisitNode[S, Extract[Node, Anon191]]): Self[S] = {
+    def withObjectProperty(value: VisitNode[S, Extract[Node, `191`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectProperty")(value.asInstanceOf[js.Any])
         ret
@@ -2372,7 +2372,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withObjectTypeAnnotation(value: VisitNode[S, Extract[Node, Anon234]]): Self[S] = {
+    def withObjectTypeAnnotation(value: VisitNode[S, Extract[Node, `234`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectTypeAnnotation")(value.asInstanceOf[js.Any])
         ret
@@ -2384,7 +2384,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withObjectTypeCallProperty(value: VisitNode[S, Extract[Node, Anon84]]): Self[S] = {
+    def withObjectTypeCallProperty(value: VisitNode[S, Extract[Node, `84`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectTypeCallProperty")(value.asInstanceOf[js.Any])
         ret
@@ -2396,7 +2396,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withObjectTypeIndexer(value: VisitNode[S, Extract[Node, Anon111]]): Self[S] = {
+    def withObjectTypeIndexer(value: VisitNode[S, Extract[Node, `111`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectTypeIndexer")(value.asInstanceOf[js.Any])
         ret
@@ -2408,7 +2408,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withObjectTypeInternalSlot(value: VisitNode[S, Extract[Node, Anon182]]): Self[S] = {
+    def withObjectTypeInternalSlot(value: VisitNode[S, Extract[Node, `182`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectTypeInternalSlot")(value.asInstanceOf[js.Any])
         ret
@@ -2420,7 +2420,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withObjectTypeProperty(value: VisitNode[S, Extract[Node, Anon223]]): Self[S] = {
+    def withObjectTypeProperty(value: VisitNode[S, Extract[Node, `223`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectTypeProperty")(value.asInstanceOf[js.Any])
         ret
@@ -2432,7 +2432,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withObjectTypeSpreadProperty(value: VisitNode[S, Extract[Node, Anon221]]): Self[S] = {
+    def withObjectTypeSpreadProperty(value: VisitNode[S, Extract[Node, `221`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ObjectTypeSpreadProperty")(value.asInstanceOf[js.Any])
         ret
@@ -2444,7 +2444,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withOpaqueType(value: VisitNode[S, Extract[Node, Anon90]]): Self[S] = {
+    def withOpaqueType(value: VisitNode[S, Extract[Node, `90`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("OpaqueType")(value.asInstanceOf[js.Any])
         ret
@@ -2456,7 +2456,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withOptionalCallExpression(value: VisitNode[S, Extract[Node, Anon219]]): Self[S] = {
+    def withOptionalCallExpression(value: VisitNode[S, Extract[Node, `219`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("OptionalCallExpression")(value.asInstanceOf[js.Any])
         ret
@@ -2468,7 +2468,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withOptionalMemberExpression(value: VisitNode[S, Extract[Node, Anon99]]): Self[S] = {
+    def withOptionalMemberExpression(value: VisitNode[S, Extract[Node, `99`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("OptionalMemberExpression")(value.asInstanceOf[js.Any])
         ret
@@ -2480,7 +2480,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withParenthesizedExpression(value: VisitNode[S, Extract[Node, Anon168]]): Self[S] = {
+    def withParenthesizedExpression(value: VisitNode[S, Extract[Node, `168`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ParenthesizedExpression")(value.asInstanceOf[js.Any])
         ret
@@ -2516,7 +2516,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withPipelineBareFunction(value: VisitNode[S, Extract[Node, Anon166]]): Self[S] = {
+    def withPipelineBareFunction(value: VisitNode[S, Extract[Node, `166`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("PipelineBareFunction")(value.asInstanceOf[js.Any])
         ret
@@ -2528,7 +2528,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withPipelinePrimaryTopicReference(value: VisitNode[S, Extract[Node, Anon194]]): Self[S] = {
+    def withPipelinePrimaryTopicReference(value: VisitNode[S, Extract[Node, `194`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("PipelinePrimaryTopicReference")(value.asInstanceOf[js.Any])
         ret
@@ -2540,7 +2540,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withPipelineTopicExpression(value: VisitNode[S, Extract[Node, Anon193]]): Self[S] = {
+    def withPipelineTopicExpression(value: VisitNode[S, Extract[Node, `193`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("PipelineTopicExpression")(value.asInstanceOf[js.Any])
         ret
@@ -2552,7 +2552,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withPlaceholder(value: VisitNode[S, Extract[Node, Anon170]]): Self[S] = {
+    def withPlaceholder(value: VisitNode[S, Extract[Node, `170`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Placeholder")(value.asInstanceOf[js.Any])
         ret
@@ -2576,7 +2576,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withPrivateName(value: VisitNode[S, Extract[Node, Anon6]]): Self[S] = {
+    def withPrivateName(value: VisitNode[S, Extract[Node, `6`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("PrivateName")(value.asInstanceOf[js.Any])
         ret
@@ -2588,7 +2588,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withProgram(value: VisitNode[S, Extract[Node, Anon206]]): Self[S] = {
+    def withProgram(value: VisitNode[S, Extract[Node, `206`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Program")(value.asInstanceOf[js.Any])
         ret
@@ -2624,7 +2624,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withQualifiedTypeIdentifier(value: VisitNode[S, Extract[Node, Anon167]]): Self[S] = {
+    def withQualifiedTypeIdentifier(value: VisitNode[S, Extract[Node, `167`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("QualifiedTypeIdentifier")(value.asInstanceOf[js.Any])
         ret
@@ -2636,7 +2636,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withRecordExpression(value: VisitNode[S, Extract[Node, Anon133]]): Self[S] = {
+    def withRecordExpression(value: VisitNode[S, Extract[Node, `133`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("RecordExpression")(value.asInstanceOf[js.Any])
         ret
@@ -2648,7 +2648,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withRegExpLiteral(value: VisitNode[S, Extract[Node, Anon153]]): Self[S] = {
+    def withRegExpLiteral(value: VisitNode[S, Extract[Node, `153`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("RegExpLiteral")(value.asInstanceOf[js.Any])
         ret
@@ -2660,7 +2660,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withRestElement(value: VisitNode[S, Extract[Node, Anon157]]): Self[S] = {
+    def withRestElement(value: VisitNode[S, Extract[Node, `157`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("RestElement")(value.asInstanceOf[js.Any])
         ret
@@ -2672,7 +2672,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withReturnStatement(value: VisitNode[S, Extract[Node, Anon15]]): Self[S] = {
+    def withReturnStatement(value: VisitNode[S, Extract[Node, `15`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ReturnStatement")(value.asInstanceOf[js.Any])
         ret
@@ -2696,7 +2696,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withSequenceExpression(value: VisitNode[S, Extract[Node, Anon235]]): Self[S] = {
+    def withSequenceExpression(value: VisitNode[S, Extract[Node, `235`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("SequenceExpression")(value.asInstanceOf[js.Any])
         ret
@@ -2708,7 +2708,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withSpreadElement(value: VisitNode[S, Extract[Node, Anon181]]): Self[S] = {
+    def withSpreadElement(value: VisitNode[S, Extract[Node, `181`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("SpreadElement")(value.asInstanceOf[js.Any])
         ret
@@ -2732,7 +2732,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withStringLiteral(value: VisitNode[S, Extract[Node, Anon38]]): Self[S] = {
+    def withStringLiteral(value: VisitNode[S, Extract[Node, `38`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("StringLiteral")(value.asInstanceOf[js.Any])
         ret
@@ -2744,7 +2744,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withStringLiteralTypeAnnotation(value: VisitNode[S, Extract[Node, Anon225]]): Self[S] = {
+    def withStringLiteralTypeAnnotation(value: VisitNode[S, Extract[Node, `225`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("StringLiteralTypeAnnotation")(value.asInstanceOf[js.Any])
         ret
@@ -2756,7 +2756,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withStringTypeAnnotation(value: VisitNode[S, Extract[Node, Anon82]]): Self[S] = {
+    def withStringTypeAnnotation(value: VisitNode[S, Extract[Node, `82`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("StringTypeAnnotation")(value.asInstanceOf[js.Any])
         ret
@@ -2768,7 +2768,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withSuper(value: VisitNode[S, Extract[Node, Anon137]]): Self[S] = {
+    def withSuper(value: VisitNode[S, Extract[Node, `137`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Super")(value.asInstanceOf[js.Any])
         ret
@@ -2780,7 +2780,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withSwitchCase(value: VisitNode[S, Extract[Node, Anon183]]): Self[S] = {
+    def withSwitchCase(value: VisitNode[S, Extract[Node, `183`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("SwitchCase")(value.asInstanceOf[js.Any])
         ret
@@ -2792,7 +2792,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withSwitchStatement(value: VisitNode[S, Extract[Node, Anon217]]): Self[S] = {
+    def withSwitchStatement(value: VisitNode[S, Extract[Node, `217`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("SwitchStatement")(value.asInstanceOf[js.Any])
         ret
@@ -2804,7 +2804,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withSymbolTypeAnnotation(value: VisitNode[S, Extract[Node, Anon59]]): Self[S] = {
+    def withSymbolTypeAnnotation(value: VisitNode[S, Extract[Node, `59`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("SymbolTypeAnnotation")(value.asInstanceOf[js.Any])
         ret
@@ -2816,7 +2816,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSAnyKeyword(value: VisitNode[S, Extract[Node, Anon11]]): Self[S] = {
+    def withTSAnyKeyword(value: VisitNode[S, Extract[Node, `11`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSAnyKeyword")(value.asInstanceOf[js.Any])
         ret
@@ -2828,7 +2828,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSArrayType(value: VisitNode[S, Extract[Node, Anon115]]): Self[S] = {
+    def withTSArrayType(value: VisitNode[S, Extract[Node, `115`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSArrayType")(value.asInstanceOf[js.Any])
         ret
@@ -2840,7 +2840,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSAsExpression(value: VisitNode[S, Extract[Node, Anon47]]): Self[S] = {
+    def withTSAsExpression(value: VisitNode[S, Extract[Node, `47`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSAsExpression")(value.asInstanceOf[js.Any])
         ret
@@ -2852,7 +2852,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSBigIntKeyword(value: VisitNode[S, Extract[Node, Anon104]]): Self[S] = {
+    def withTSBigIntKeyword(value: VisitNode[S, Extract[Node, `104`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSBigIntKeyword")(value.asInstanceOf[js.Any])
         ret
@@ -2864,7 +2864,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSBooleanKeyword(value: VisitNode[S, Extract[Node, Anon135]]): Self[S] = {
+    def withTSBooleanKeyword(value: VisitNode[S, Extract[Node, `135`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSBooleanKeyword")(value.asInstanceOf[js.Any])
         ret
@@ -2876,7 +2876,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSCallSignatureDeclaration(value: VisitNode[S, Extract[Node, Anon61]]): Self[S] = {
+    def withTSCallSignatureDeclaration(value: VisitNode[S, Extract[Node, `61`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSCallSignatureDeclaration")(value.asInstanceOf[js.Any])
         ret
@@ -2888,7 +2888,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSConditionalType(value: VisitNode[S, Extract[Node, Anon102]]): Self[S] = {
+    def withTSConditionalType(value: VisitNode[S, Extract[Node, `102`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSConditionalType")(value.asInstanceOf[js.Any])
         ret
@@ -2900,7 +2900,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSConstructSignatureDeclaration(value: VisitNode[S, Extract[Node, Anon205]]): Self[S] = {
+    def withTSConstructSignatureDeclaration(value: VisitNode[S, Extract[Node, `205`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSConstructSignatureDeclaration")(value.asInstanceOf[js.Any])
         ret
@@ -2912,7 +2912,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSConstructorType(value: VisitNode[S, Extract[Node, Anon69]]): Self[S] = {
+    def withTSConstructorType(value: VisitNode[S, Extract[Node, `69`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSConstructorType")(value.asInstanceOf[js.Any])
         ret
@@ -2924,7 +2924,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSDeclareFunction(value: VisitNode[S, Extract[Node, Anon18]]): Self[S] = {
+    def withTSDeclareFunction(value: VisitNode[S, Extract[Node, `18`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSDeclareFunction")(value.asInstanceOf[js.Any])
         ret
@@ -2936,7 +2936,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSDeclareMethod(value: VisitNode[S, Extract[Node, Anon130]]): Self[S] = {
+    def withTSDeclareMethod(value: VisitNode[S, Extract[Node, `130`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSDeclareMethod")(value.asInstanceOf[js.Any])
         ret
@@ -2960,7 +2960,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSEnumDeclaration(value: VisitNode[S, Extract[Node, Anon212]]): Self[S] = {
+    def withTSEnumDeclaration(value: VisitNode[S, Extract[Node, `212`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSEnumDeclaration")(value.asInstanceOf[js.Any])
         ret
@@ -2972,7 +2972,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSEnumMember(value: VisitNode[S, Extract[Node, Anon34]]): Self[S] = {
+    def withTSEnumMember(value: VisitNode[S, Extract[Node, `34`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSEnumMember")(value.asInstanceOf[js.Any])
         ret
@@ -2984,7 +2984,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSExportAssignment(value: VisitNode[S, Extract[Node, Anon165]]): Self[S] = {
+    def withTSExportAssignment(value: VisitNode[S, Extract[Node, `165`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSExportAssignment")(value.asInstanceOf[js.Any])
         ret
@@ -2996,7 +2996,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSExpressionWithTypeArguments(value: VisitNode[S, Extract[Node, Anon58]]): Self[S] = {
+    def withTSExpressionWithTypeArguments(value: VisitNode[S, Extract[Node, `58`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSExpressionWithTypeArguments")(value.asInstanceOf[js.Any])
         ret
@@ -3008,7 +3008,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSExternalModuleReference(value: VisitNode[S, Extract[Node, Anon50]]): Self[S] = {
+    def withTSExternalModuleReference(value: VisitNode[S, Extract[Node, `50`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSExternalModuleReference")(value.asInstanceOf[js.Any])
         ret
@@ -3020,7 +3020,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSFunctionType(value: VisitNode[S, Extract[Node, Anon155]]): Self[S] = {
+    def withTSFunctionType(value: VisitNode[S, Extract[Node, `155`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSFunctionType")(value.asInstanceOf[js.Any])
         ret
@@ -3032,7 +3032,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSImportEqualsDeclaration(value: VisitNode[S, Extract[Node, Anon159]]): Self[S] = {
+    def withTSImportEqualsDeclaration(value: VisitNode[S, Extract[Node, `159`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSImportEqualsDeclaration")(value.asInstanceOf[js.Any])
         ret
@@ -3044,7 +3044,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSImportType(value: VisitNode[S, Extract[Node, Anon48]]): Self[S] = {
+    def withTSImportType(value: VisitNode[S, Extract[Node, `48`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSImportType")(value.asInstanceOf[js.Any])
         ret
@@ -3056,7 +3056,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSIndexSignature(value: VisitNode[S, Extract[Node, Anon175]]): Self[S] = {
+    def withTSIndexSignature(value: VisitNode[S, Extract[Node, `175`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSIndexSignature")(value.asInstanceOf[js.Any])
         ret
@@ -3068,7 +3068,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSIndexedAccessType(value: VisitNode[S, Extract[Node, Anon114]]): Self[S] = {
+    def withTSIndexedAccessType(value: VisitNode[S, Extract[Node, `114`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSIndexedAccessType")(value.asInstanceOf[js.Any])
         ret
@@ -3080,7 +3080,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSInferType(value: VisitNode[S, Extract[Node, AnonType]]): Self[S] = {
+    def withTSInferType(value: VisitNode[S, Extract[Node, Type]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSInferType")(value.asInstanceOf[js.Any])
         ret
@@ -3092,7 +3092,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSInterfaceBody(value: VisitNode[S, Extract[Node, Anon78]]): Self[S] = {
+    def withTSInterfaceBody(value: VisitNode[S, Extract[Node, `78`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSInterfaceBody")(value.asInstanceOf[js.Any])
         ret
@@ -3104,7 +3104,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSInterfaceDeclaration(value: VisitNode[S, Extract[Node, Anon98]]): Self[S] = {
+    def withTSInterfaceDeclaration(value: VisitNode[S, Extract[Node, `98`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSInterfaceDeclaration")(value.asInstanceOf[js.Any])
         ret
@@ -3116,7 +3116,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSIntersectionType(value: VisitNode[S, Extract[Node, Anon207]]): Self[S] = {
+    def withTSIntersectionType(value: VisitNode[S, Extract[Node, `207`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSIntersectionType")(value.asInstanceOf[js.Any])
         ret
@@ -3128,7 +3128,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSLiteralType(value: VisitNode[S, Extract[Node, Anon179]]): Self[S] = {
+    def withTSLiteralType(value: VisitNode[S, Extract[Node, `179`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSLiteralType")(value.asInstanceOf[js.Any])
         ret
@@ -3140,7 +3140,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSMappedType(value: VisitNode[S, Extract[Node, Anon204]]): Self[S] = {
+    def withTSMappedType(value: VisitNode[S, Extract[Node, `204`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSMappedType")(value.asInstanceOf[js.Any])
         ret
@@ -3152,7 +3152,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSMethodSignature(value: VisitNode[S, Extract[Node, Anon12]]): Self[S] = {
+    def withTSMethodSignature(value: VisitNode[S, Extract[Node, `12`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSMethodSignature")(value.asInstanceOf[js.Any])
         ret
@@ -3164,7 +3164,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSModuleBlock(value: VisitNode[S, Extract[Node, Anon24]]): Self[S] = {
+    def withTSModuleBlock(value: VisitNode[S, Extract[Node, `24`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSModuleBlock")(value.asInstanceOf[js.Any])
         ret
@@ -3176,7 +3176,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSModuleDeclaration(value: VisitNode[S, Extract[Node, Anon89]]): Self[S] = {
+    def withTSModuleDeclaration(value: VisitNode[S, Extract[Node, `89`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSModuleDeclaration")(value.asInstanceOf[js.Any])
         ret
@@ -3188,7 +3188,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSNamespaceExportDeclaration(value: VisitNode[S, Extract[Node, Anon156]]): Self[S] = {
+    def withTSNamespaceExportDeclaration(value: VisitNode[S, Extract[Node, `156`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSNamespaceExportDeclaration")(value.asInstanceOf[js.Any])
         ret
@@ -3200,7 +3200,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSNeverKeyword(value: VisitNode[S, Extract[Node, Anon113]]): Self[S] = {
+    def withTSNeverKeyword(value: VisitNode[S, Extract[Node, `113`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSNeverKeyword")(value.asInstanceOf[js.Any])
         ret
@@ -3212,7 +3212,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSNonNullExpression(value: VisitNode[S, Extract[Node, Anon2]]): Self[S] = {
+    def withTSNonNullExpression(value: VisitNode[S, Extract[Node, `2`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSNonNullExpression")(value.asInstanceOf[js.Any])
         ret
@@ -3224,7 +3224,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSNullKeyword(value: VisitNode[S, Extract[Node, Anon152]]): Self[S] = {
+    def withTSNullKeyword(value: VisitNode[S, Extract[Node, `152`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSNullKeyword")(value.asInstanceOf[js.Any])
         ret
@@ -3236,7 +3236,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSNumberKeyword(value: VisitNode[S, Extract[Node, Anon109]]): Self[S] = {
+    def withTSNumberKeyword(value: VisitNode[S, Extract[Node, `109`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSNumberKeyword")(value.asInstanceOf[js.Any])
         ret
@@ -3248,7 +3248,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSObjectKeyword(value: VisitNode[S, Extract[Node, Anon43]]): Self[S] = {
+    def withTSObjectKeyword(value: VisitNode[S, Extract[Node, `43`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSObjectKeyword")(value.asInstanceOf[js.Any])
         ret
@@ -3260,7 +3260,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSOptionalType(value: VisitNode[S, Extract[Node, Anon56]]): Self[S] = {
+    def withTSOptionalType(value: VisitNode[S, Extract[Node, `56`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSOptionalType")(value.asInstanceOf[js.Any])
         ret
@@ -3272,7 +3272,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSParameterProperty(value: VisitNode[S, Extract[Node, Anon149]]): Self[S] = {
+    def withTSParameterProperty(value: VisitNode[S, Extract[Node, `149`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSParameterProperty")(value.asInstanceOf[js.Any])
         ret
@@ -3284,7 +3284,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSParenthesizedType(value: VisitNode[S, Extract[Node, Anon63]]): Self[S] = {
+    def withTSParenthesizedType(value: VisitNode[S, Extract[Node, `63`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSParenthesizedType")(value.asInstanceOf[js.Any])
         ret
@@ -3296,7 +3296,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSPropertySignature(value: VisitNode[S, Extract[Node, Anon68]]): Self[S] = {
+    def withTSPropertySignature(value: VisitNode[S, Extract[Node, `68`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSPropertySignature")(value.asInstanceOf[js.Any])
         ret
@@ -3308,7 +3308,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSQualifiedName(value: VisitNode[S, Extract[Node, Anon87]]): Self[S] = {
+    def withTSQualifiedName(value: VisitNode[S, Extract[Node, `87`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSQualifiedName")(value.asInstanceOf[js.Any])
         ret
@@ -3320,7 +3320,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSRestType(value: VisitNode[S, Extract[Node, Anon26]]): Self[S] = {
+    def withTSRestType(value: VisitNode[S, Extract[Node, `26`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSRestType")(value.asInstanceOf[js.Any])
         ret
@@ -3332,7 +3332,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSStringKeyword(value: VisitNode[S, Extract[Node, Anon211]]): Self[S] = {
+    def withTSStringKeyword(value: VisitNode[S, Extract[Node, `211`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSStringKeyword")(value.asInstanceOf[js.Any])
         ret
@@ -3344,7 +3344,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSSymbolKeyword(value: VisitNode[S, Extract[Node, Anon27]]): Self[S] = {
+    def withTSSymbolKeyword(value: VisitNode[S, Extract[Node, `27`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSSymbolKeyword")(value.asInstanceOf[js.Any])
         ret
@@ -3356,7 +3356,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSThisType(value: VisitNode[S, Extract[Node, Anon100]]): Self[S] = {
+    def withTSThisType(value: VisitNode[S, Extract[Node, `100`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSThisType")(value.asInstanceOf[js.Any])
         ret
@@ -3368,7 +3368,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSTupleType(value: VisitNode[S, Extract[Node, Anon201]]): Self[S] = {
+    def withTSTupleType(value: VisitNode[S, Extract[Node, `201`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSTupleType")(value.asInstanceOf[js.Any])
         ret
@@ -3392,7 +3392,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSTypeAliasDeclaration(value: VisitNode[S, Extract[Node, Anon214]]): Self[S] = {
+    def withTSTypeAliasDeclaration(value: VisitNode[S, Extract[Node, `214`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypeAliasDeclaration")(value.asInstanceOf[js.Any])
         ret
@@ -3404,7 +3404,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSTypeAnnotation(value: VisitNode[S, Extract[Node, Anon76]]): Self[S] = {
+    def withTSTypeAnnotation(value: VisitNode[S, Extract[Node, `76`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypeAnnotation")(value.asInstanceOf[js.Any])
         ret
@@ -3416,7 +3416,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSTypeAssertion(value: VisitNode[S, Extract[Node, Anon1]]): Self[S] = {
+    def withTSTypeAssertion(value: VisitNode[S, Extract[Node, `1`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypeAssertion")(value.asInstanceOf[js.Any])
         ret
@@ -3440,7 +3440,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSTypeLiteral(value: VisitNode[S, Extract[Node, Anon141]]): Self[S] = {
+    def withTSTypeLiteral(value: VisitNode[S, Extract[Node, `141`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypeLiteral")(value.asInstanceOf[js.Any])
         ret
@@ -3452,7 +3452,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSTypeOperator(value: VisitNode[S, Extract[Node, Anon95]]): Self[S] = {
+    def withTSTypeOperator(value: VisitNode[S, Extract[Node, `95`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypeOperator")(value.asInstanceOf[js.Any])
         ret
@@ -3464,7 +3464,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSTypeParameter(value: VisitNode[S, Extract[Node, Anon60]]): Self[S] = {
+    def withTSTypeParameter(value: VisitNode[S, Extract[Node, `60`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypeParameter")(value.asInstanceOf[js.Any])
         ret
@@ -3476,7 +3476,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSTypeParameterDeclaration(value: VisitNode[S, Extract[Node, Anon196]]): Self[S] = {
+    def withTSTypeParameterDeclaration(value: VisitNode[S, Extract[Node, `196`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypeParameterDeclaration")(value.asInstanceOf[js.Any])
         ret
@@ -3488,7 +3488,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSTypeParameterInstantiation(value: VisitNode[S, Extract[Node, Anon105]]): Self[S] = {
+    def withTSTypeParameterInstantiation(value: VisitNode[S, Extract[Node, `105`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypeParameterInstantiation")(value.asInstanceOf[js.Any])
         ret
@@ -3500,7 +3500,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSTypePredicate(value: VisitNode[S, Extract[Node, Anon139]]): Self[S] = {
+    def withTSTypePredicate(value: VisitNode[S, Extract[Node, `139`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypePredicate")(value.asInstanceOf[js.Any])
         ret
@@ -3512,7 +3512,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSTypeQuery(value: VisitNode[S, Extract[Node, Anon118]]): Self[S] = {
+    def withTSTypeQuery(value: VisitNode[S, Extract[Node, `118`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypeQuery")(value.asInstanceOf[js.Any])
         ret
@@ -3524,7 +3524,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSTypeReference(value: VisitNode[S, Extract[Node, Anon52]]): Self[S] = {
+    def withTSTypeReference(value: VisitNode[S, Extract[Node, `52`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSTypeReference")(value.asInstanceOf[js.Any])
         ret
@@ -3536,7 +3536,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSUndefinedKeyword(value: VisitNode[S, Extract[Node, Anon189]]): Self[S] = {
+    def withTSUndefinedKeyword(value: VisitNode[S, Extract[Node, `189`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSUndefinedKeyword")(value.asInstanceOf[js.Any])
         ret
@@ -3548,7 +3548,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSUnionType(value: VisitNode[S, Extract[Node, Anon36]]): Self[S] = {
+    def withTSUnionType(value: VisitNode[S, Extract[Node, `36`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSUnionType")(value.asInstanceOf[js.Any])
         ret
@@ -3560,7 +3560,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSUnknownKeyword(value: VisitNode[S, Extract[Node, Anon75]]): Self[S] = {
+    def withTSUnknownKeyword(value: VisitNode[S, Extract[Node, `75`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSUnknownKeyword")(value.asInstanceOf[js.Any])
         ret
@@ -3572,7 +3572,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTSVoidKeyword(value: VisitNode[S, Extract[Node, Anon94]]): Self[S] = {
+    def withTSVoidKeyword(value: VisitNode[S, Extract[Node, `94`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TSVoidKeyword")(value.asInstanceOf[js.Any])
         ret
@@ -3584,7 +3584,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTaggedTemplateExpression(value: VisitNode[S, Extract[Node, Anon188]]): Self[S] = {
+    def withTaggedTemplateExpression(value: VisitNode[S, Extract[Node, `188`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TaggedTemplateExpression")(value.asInstanceOf[js.Any])
         ret
@@ -3596,7 +3596,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTemplateElement(value: VisitNode[S, Extract[Node, Anon93]]): Self[S] = {
+    def withTemplateElement(value: VisitNode[S, Extract[Node, `93`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateElement")(value.asInstanceOf[js.Any])
         ret
@@ -3608,7 +3608,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withTemplateLiteral(value: VisitNode[S, Extract[Node, Anon158]]): Self[S] = {
+    def withTemplateLiteral(value: VisitNode[S, Extract[Node, `158`]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TemplateLiteral")(value.asInstanceOf[js.Any])
         ret

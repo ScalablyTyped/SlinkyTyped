@@ -1,7 +1,7 @@
 package typingsSlinky.skatejs.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.skatejs.TypeofWithComponent
+import typingsSlinky.skatejs.anon.TypeofWithComponent
 import typingsSlinky.skatejs.typesMod.Constructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`

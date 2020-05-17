@@ -1,6 +1,6 @@
 package typingsSlinky.vscodeUri.mod
 
-import typingsSlinky.vscodeUri.AnonFragment
+import typingsSlinky.vscodeUri.anon.Fragment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,6 +34,6 @@ trait URI extends UriComponents {
   val fsPath: String = js.native
   def toJSON(): UriComponents = js.native
   def toString(skipEncoding: Boolean): String = js.native
-  def `with`(change: AnonFragment): URI = js.native
+  def `with`(change: Fragment): URI = js.native
 }
 

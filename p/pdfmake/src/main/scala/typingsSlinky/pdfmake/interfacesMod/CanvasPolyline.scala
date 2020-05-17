@@ -1,6 +1,6 @@
 package typingsSlinky.pdfmake.interfacesMod
 
-import typingsSlinky.pdfmake.AnonX
+import typingsSlinky.pdfmake.anon.X
 import typingsSlinky.pdfmake.pdfmakeStrings.polyline
 import typingsSlinky.pdfmake.pdfmakeStrings.round
 import typingsSlinky.pdfmake.pdfmakeStrings.square
@@ -15,13 +15,13 @@ trait CanvasPolyline
      with CanvasElement {
   var closePath: js.UndefOr[Boolean] = js.native
   var lineCap: js.UndefOr[round | square] = js.native
-  var points: js.Array[AnonX] = js.native
+  var points: js.Array[X] = js.native
   var `type`: polyline = js.native
 }
 
 object CanvasPolyline {
   @scala.inline
-  def apply(points: js.Array[AnonX], `type`: polyline): CanvasPolyline = {
+  def apply(points: js.Array[X], `type`: polyline): CanvasPolyline = {
     val __obj = js.Dynamic.literal(points = points.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CanvasPolyline]
@@ -33,7 +33,7 @@ object CanvasPolyline {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPoints(value: js.Array[AnonX]): Self = {
+    def withPoints(value: js.Array[X]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("points")(value.asInstanceOf[js.Any])
         ret

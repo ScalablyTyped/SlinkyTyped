@@ -1,17 +1,16 @@
 package typingsSlinky.winrtUwp.Windows.Devices.Enumeration
 
 import typingsSlinky.std.Array
-import typingsSlinky.winrtUwp.AnonIndex
-import typingsSlinky.winrtUwp.AnonItemsDeviceInformation
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
+import typingsSlinky.winrtUwp.anon.Index
+import typingsSlinky.winrtUwp.anon.ItemsDeviceInformation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a collection of DeviceInformation objects. */
-@JSGlobal("Windows.Devices.Enumeration.DeviceInformationCollection")
 @js.native
-abstract class DeviceInformationCollection () extends Array[DeviceInformation] {
+trait DeviceInformationCollection extends Array[DeviceInformation] {
   /** The number of DeviceInformation objects in the collection. */
   var size: Double = js.native
   /**
@@ -29,13 +28,13 @@ abstract class DeviceInformationCollection () extends Array[DeviceInformation] {
     * Gets a range of DeviceInformation objects.
     * @param startIndex The index at which to start retrieving DeviceInformation objects.
     */
-  def getMany(startIndex: Double): AnonItemsDeviceInformation = js.native
-  def indexOf(value: DeviceInformation, extra: js.Any*): AnonIndex = js.native
+  def getMany(startIndex: Double): ItemsDeviceInformation = js.native
+  def indexOf(value: DeviceInformation, extra: js.Any*): Index = js.native
   /**
     * Returns the index of the specified DeviceInformation object in the collection.
     * @param value The DeviceInformation object in the collection.
     */
   @JSName("indexOf")
-  def indexOf_AnonIndex(value: DeviceInformation): AnonIndex = js.native
+  def indexOf_Index(value: DeviceInformation): Index = js.native
 }
 

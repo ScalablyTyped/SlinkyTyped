@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,10 +20,41 @@ trait Object extends js.Object {
   def propertyIsEnumerable(v: PropertyKey): scala.Boolean = js.native
 }
 
-/**
-  * Provides functionality common to all JavaScript objects.
-  */
-@JSGlobal("Object")
-@js.native
-object Object extends TopLevel[ObjectConstructor]
+object Object {
+  @scala.inline
+  def apply(
+    constructor: js.Function,
+    hasOwnProperty: PropertyKey => scala.Boolean,
+    propertyIsEnumerable: PropertyKey => scala.Boolean
+  ): Object = {
+    val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any], hasOwnProperty = js.Any.fromFunction1(hasOwnProperty), propertyIsEnumerable = js.Any.fromFunction1(propertyIsEnumerable))
+    __obj.asInstanceOf[Object]
+  }
+  @scala.inline
+  implicit class ObjectOps[Self <: js.Object] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConstructor(value: js.Function): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constructor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHasOwnProperty(value: PropertyKey => scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasOwnProperty")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPropertyIsEnumerable(value: PropertyKey => scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propertyIsEnumerable")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

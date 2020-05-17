@@ -1,6 +1,6 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonText
+import typingsSlinky.aliApp.anon.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait RsaOptions
   		 */
   var key: String = js.native
   @JSName("success")
-  var success_RsaOptions: js.UndefOr[js.Function1[/* res */ AnonText, Unit]] = js.native
+  var success_RsaOptions: js.UndefOr[js.Function1[/* res */ Text, Unit]] = js.native
   /**
   		 * 要处理的文本，加密为原始文本，解密为Base64编码格式文本
   		 */
@@ -56,7 +56,7 @@ object RsaOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonText => Unit): Self = {
+    def withSuccess(value: /* res */ Text => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

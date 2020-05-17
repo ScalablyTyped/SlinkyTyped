@@ -1,15 +1,12 @@
 package typingsSlinky.igniteUi.Infragistics
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.igniteUi.HtmlTableDataSourceSettings
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Infragistics.HtmlTableDataSource")
 @js.native
-class HtmlTableDataSource protected () extends js.Object {
-  def this(settings: HtmlTableDataSourceSettings) = this()
+trait HtmlTableDataSource extends js.Object {
   /**
   	 * Adds a new node to the tree data source. Creates a transaction that can be committed / rolled back
   	 *

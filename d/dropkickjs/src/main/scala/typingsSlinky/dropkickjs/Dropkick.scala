@@ -1,18 +1,12 @@
 package typingsSlinky.dropkickjs
 
-import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Dropkick")
 @js.native
-class Dropkick protected () extends js.Object {
-  def this(id: String) = this()
-  def this(id: HTMLElement) = this()
-  def this(id: String, options: DropkickOptions) = this()
-  def this(id: HTMLElement, options: DropkickOptions) = this()
+trait Dropkick extends js.Object {
   var disabled: Boolean = js.native
   var form: Node = js.native
   var length: Double = js.native

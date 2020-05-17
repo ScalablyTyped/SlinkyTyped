@@ -1,6 +1,6 @@
 package typingsSlinky.tinySliderReact.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TinySliderProps extends js.Object {
   var onClick: js.UndefOr[
-    js.Function3[/* slideClicked */ Double, /* info */ String, /* event */ Event_, Unit]
+    js.Function3[/* slideClicked */ Double, /* info */ String, /* event */ Event, Unit]
   ] = js.native
   var onIndexChanged: js.UndefOr[js.Function1[/* info */ TinySliderInfo, Unit]] = js.native
   var onTouchEnd: js.UndefOr[js.Function1[/* info */ TinySliderInfo, Unit]] = js.native
@@ -33,7 +33,7 @@ object TinySliderProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnClick(value: (/* slideClicked */ Double, /* info */ String, /* event */ Event_) => Unit): Self = {
+    def withOnClick(value: (/* slideClicked */ Double, /* info */ String, /* event */ Event) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction3(value))
         ret

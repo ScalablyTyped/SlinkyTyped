@@ -1,14 +1,14 @@
 package typingsSlinky.c3.mod
 
-import typingsSlinky.c3.AnonHeightNumber
-import typingsSlinky.c3.AnonXAnonShowBoolean
+import typingsSlinky.c3.anon.HeightNumber
+import typingsSlinky.c3.anon.XShowBoolean
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SubchartOptions extends js.Object {
-  var axis: js.UndefOr[AnonXAnonShowBoolean] = js.native
+  var axis: js.UndefOr[XShowBoolean] = js.native
   /**
     * Set callback for brush event.
     * Specified function receives the current zoomed x domain.
@@ -19,7 +19,7 @@ trait SubchartOptions extends js.Object {
     * Defaults to `false`.
     */
   var show: js.UndefOr[Boolean] = js.native
-  var size: js.UndefOr[AnonHeightNumber] = js.native
+  var size: js.UndefOr[HeightNumber] = js.native
 }
 
 object SubchartOptions {
@@ -35,7 +35,7 @@ object SubchartOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAxis(value: AnonXAnonShowBoolean): Self = {
+    def withAxis(value: XShowBoolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
         ret
@@ -71,7 +71,7 @@ object SubchartOptions {
         ret
     }
     @scala.inline
-    def withSize(value: AnonHeightNumber): Self = {
+    def withSize(value: HeightNumber): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
         ret

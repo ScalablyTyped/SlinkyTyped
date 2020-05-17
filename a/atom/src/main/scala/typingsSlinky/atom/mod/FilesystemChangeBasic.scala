@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait FilesystemChangeBasic[Action /* <: created | modified | deleted | renamed */] extends js.Object {
+trait FilesystemChangeBasic[Action /* <: created | modified | deleted | renamed */] extends FilesystemChange {
   /** A string describing the filesystem action that occurred. */
   var action: Action = js.native
   /** The absolute path to the filesystem entry that was acted upon. */

@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonRight
+import typingsSlinky.astTypes.anon.Right
 import typingsSlinky.astTypes.astTypesStrings.Ampersand
 import typingsSlinky.astTypes.astTypesStrings.Asterisk
 import typingsSlinky.astTypes.astTypesStrings.AsteriskAsterisk
@@ -36,6 +36,6 @@ trait BinaryExpressionBuilder extends js.Object {
     left: ExpressionKind,
     right: ExpressionKind
   ): BinaryExpression = js.native
-  def from(params: AnonRight): BinaryExpression = js.native
+  def from(params: Right): BinaryExpression = js.native
 }
 

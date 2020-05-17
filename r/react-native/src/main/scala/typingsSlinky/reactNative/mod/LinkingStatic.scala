@@ -1,7 +1,7 @@
 package typingsSlinky.reactNative.mod
 
-import typingsSlinky.reactNative.AnonKey
-import typingsSlinky.reactNative.AnonUrlString
+import typingsSlinky.reactNative.anon.Key
+import typingsSlinky.reactNative.anon.UrlString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait LinkingStatic extends NativeEventEmitter {
     * Add a handler to Linking changes by listening to the `url` event type
     * and providing the handler
     */
-  def addEventListener(`type`: String, handler: js.Function1[/* event */ AnonUrlString, Unit]): Unit = js.native
+  def addEventListener(`type`: String, handler: js.Function1[/* event */ UrlString, Unit]): Unit = js.native
   /**
     * Determine whether or not an installed app can handle a given URL.
     * NOTE: For web URLs, the protocol ("http://", "https://") must be set accordingly!
@@ -39,12 +39,12 @@ trait LinkingStatic extends NativeEventEmitter {
   /**
     * Remove a handler by passing the `url` event type and the handler
     */
-  def removeEventListener(`type`: String, handler: js.Function1[/* event */ AnonUrlString, Unit]): Unit = js.native
+  def removeEventListener(`type`: String, handler: js.Function1[/* event */ UrlString, Unit]): Unit = js.native
   /**
     * Sends an Android Intent - a broad surface to express Android functions.  Useful for deep-linking to settings pages,
     * opening an SMS app with a message draft in place, and more.  See https://developer.android.com/reference/kotlin/android/content/Intent?hl=en
     */
   def sendIntent(action: String): js.Promise[Unit] = js.native
-  def sendIntent(action: String, extras: js.Array[AnonKey]): js.Promise[Unit] = js.native
+  def sendIntent(action: String, extras: js.Array[Key]): js.Promise[Unit] = js.native
 }
 

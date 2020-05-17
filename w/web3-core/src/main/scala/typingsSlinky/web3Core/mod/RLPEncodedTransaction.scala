@@ -1,6 +1,6 @@
 package typingsSlinky.web3Core.mod
 
-import typingsSlinky.web3Core.AnonGas
+import typingsSlinky.web3Core.anon.Gas
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RLPEncodedTransaction extends js.Object {
   var raw: String = js.native
-  var tx: AnonGas = js.native
+  var tx: Gas = js.native
 }
 
 object RLPEncodedTransaction {
   @scala.inline
-  def apply(raw: String, tx: AnonGas): RLPEncodedTransaction = {
+  def apply(raw: String, tx: Gas): RLPEncodedTransaction = {
     val __obj = js.Dynamic.literal(raw = raw.asInstanceOf[js.Any], tx = tx.asInstanceOf[js.Any])
     __obj.asInstanceOf[RLPEncodedTransaction]
   }
@@ -30,7 +30,7 @@ object RLPEncodedTransaction {
         ret
     }
     @scala.inline
-    def withTx(value: AnonGas): Self = {
+    def withTx(value: Gas): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tx")(value.asInstanceOf[js.Any])
         ret

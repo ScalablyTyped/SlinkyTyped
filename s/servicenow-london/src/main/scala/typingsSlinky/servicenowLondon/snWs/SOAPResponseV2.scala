@@ -1,16 +1,16 @@
 package typingsSlinky.servicenowLondon.snWs
 
-import typingsSlinky.servicenowLondon.AnonGet
-import typingsSlinky.servicenowLondon.AnonName
+import typingsSlinky.servicenowLondon.anon.Get
+import typingsSlinky.servicenowLondon.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SOAPResponseV2 extends js.Object {
-  def getAllHeaders(): js.Array[AnonName] = js.native
+  def getAllHeaders(): js.Array[Name] = js.native
   def getBody(): String = js.native
-  def getCookies(): AnonGet = js.native
+  def getCookies(): Get = js.native
   def getErrorCode(): Double = js.native
   def getErrorMessage(): String = js.native
   def getHeader(name: String): String = js.native
@@ -23,9 +23,9 @@ trait SOAPResponseV2 extends js.Object {
 object SOAPResponseV2 {
   @scala.inline
   def apply(
-    getAllHeaders: () => js.Array[AnonName],
+    getAllHeaders: () => js.Array[Name],
     getBody: () => String,
-    getCookies: () => AnonGet,
+    getCookies: () => Get,
     getErrorCode: () => Double,
     getErrorMessage: () => String,
     getHeader: String => String,
@@ -44,7 +44,7 @@ object SOAPResponseV2 {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetAllHeaders(value: () => js.Array[AnonName]): Self = {
+    def withGetAllHeaders(value: () => js.Array[Name]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getAllHeaders")(js.Any.fromFunction0(value))
         ret
@@ -56,7 +56,7 @@ object SOAPResponseV2 {
         ret
     }
     @scala.inline
-    def withGetCookies(value: () => AnonGet): Self = {
+    def withGetCookies(value: () => Get): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getCookies")(js.Any.fromFunction0(value))
         ret

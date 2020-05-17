@@ -2,8 +2,8 @@ package typingsSlinky.gestalt.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.Anon0
-import typingsSlinky.gestalt.AnonSyntheticEvent
+import typingsSlinky.gestalt.anon.SyntheticEvent
+import typingsSlinky.gestalt.anon.`0`
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
 import typingsSlinky.gestalt.gestaltStrings.name
@@ -27,9 +27,9 @@ object SearchField {
     @scala.inline
     def autoComplete(value: on | off | username | name): this.type = set("autoComplete", value.asInstanceOf[js.Any])
     @scala.inline
-    def onBlur(value: /* args */ Anon0 => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    def onBlur(value: /* args */ `0` => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onFocus(value: /* args */ AnonSyntheticEvent => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    def onFocus(value: /* args */ SyntheticEvent => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
@@ -40,7 +40,7 @@ object SearchField {
   
   def withProps(p: SearchFieldProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(accessibilityLabel: String, id: String, onChange: AnonSyntheticEvent => Unit): Builder = {
+  def apply(accessibilityLabel: String, id: String, onChange: SyntheticEvent => Unit): Builder = {
     val __props = js.Dynamic.literal(accessibilityLabel = accessibilityLabel.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
     new Builder(js.Array(this.component, __props.asInstanceOf[SearchFieldProps]))
   }

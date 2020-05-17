@@ -1,11 +1,11 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonEventFromData
-import typingsSlinky.devextreme.AnonItemDataItemElement
-import typingsSlinky.devextreme.AnonToComponent
+import typingsSlinky.devextreme.anon.EventFromData
+import typingsSlinky.devextreme.anon.ItemDataItemElement
+import typingsSlinky.devextreme.anon.ToComponent
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,17 +18,17 @@ trait dxDraggableOptions extends DraggableBaseOptions[dxDraggable] {
   /** Specifies custom markup to be shown instead of the item being dragged. */
   var dragTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
-      /* dragInfo */ AnonItemDataItemElement, 
+      /* dragInfo */ ItemDataItemElement, 
       /* containerElement */ dxElement, 
       String | Element | JQuery
     ])
   ] = js.native
   /** A function that is called when drag gesture is finished. */
-  var onDragEnd: js.UndefOr[js.Function1[/* e */ AnonToComponent, _]] = js.native
+  var onDragEnd: js.UndefOr[js.Function1[/* e */ ToComponent, _]] = js.native
   /** A function that is called every time a draggable item is moved. */
-  var onDragMove: js.UndefOr[js.Function1[/* e */ AnonToComponent, _]] = js.native
+  var onDragMove: js.UndefOr[js.Function1[/* e */ ToComponent, _]] = js.native
   /** A function that is called when the drag gesture is initialized. */
-  var onDragStart: js.UndefOr[js.Function1[/* e */ AnonEventFromData, _]] = js.native
+  var onDragStart: js.UndefOr[js.Function1[/* e */ EventFromData, _]] = js.native
 }
 
 object dxDraggableOptions {
@@ -57,7 +57,7 @@ object dxDraggableOptions {
     }
     @scala.inline
     def withDragTemplateFunction2(
-      value: (/* dragInfo */ AnonItemDataItemElement, /* containerElement */ dxElement) => String | Element | JQuery
+      value: (/* dragInfo */ ItemDataItemElement, /* containerElement */ dxElement) => String | Element | JQuery
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragTemplate")(js.Any.fromFunction2(value))
@@ -72,7 +72,7 @@ object dxDraggableOptions {
     @scala.inline
     def withDragTemplate(
       value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
-          /* dragInfo */ AnonItemDataItemElement, 
+          /* dragInfo */ ItemDataItemElement, 
           /* containerElement */ dxElement, 
           String | Element | JQuery
         ])
@@ -88,7 +88,7 @@ object dxDraggableOptions {
         ret
     }
     @scala.inline
-    def withOnDragEnd(value: /* e */ AnonToComponent => _): Self = {
+    def withOnDragEnd(value: /* e */ ToComponent => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnd")(js.Any.fromFunction1(value))
         ret
@@ -100,7 +100,7 @@ object dxDraggableOptions {
         ret
     }
     @scala.inline
-    def withOnDragMove(value: /* e */ AnonToComponent => _): Self = {
+    def withOnDragMove(value: /* e */ ToComponent => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDragMove")(js.Any.fromFunction1(value))
         ret
@@ -112,7 +112,7 @@ object dxDraggableOptions {
         ret
     }
     @scala.inline
-    def withOnDragStart(value: /* e */ AnonEventFromData => _): Self = {
+    def withOnDragStart(value: /* e */ EventFromData => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.Any.fromFunction1(value))
         ret

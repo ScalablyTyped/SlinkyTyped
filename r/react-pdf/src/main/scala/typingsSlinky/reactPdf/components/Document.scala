@@ -7,7 +7,7 @@ import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.pdfjsDist.mod.PDFDocumentProxy
 import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.reactPdf.AnonPageNumber
+import typingsSlinky.reactPdf.anon.PageNumber
 import typingsSlinky.reactPdf.documentMod.Props
 import typingsSlinky.reactPdf.documentMod.RenderFunction
 import typingsSlinky.reactPdf.documentMod.default
@@ -62,7 +62,7 @@ object Document {
     @scala.inline
     def noData(value: String | ReactElement | RenderFunction): this.type = set("noData", value.asInstanceOf[js.Any])
     @scala.inline
-    def onItemClick(value: /* hasPageNumber */ AnonPageNumber => Unit): this.type = set("onItemClick", js.Any.fromFunction1(value))
+    def onItemClick(value: /* hasPageNumber */ PageNumber => Unit): this.type = set("onItemClick", js.Any.fromFunction1(value))
     @scala.inline
     def onLoadError(value: /* error */ js.Error => Unit): this.type = set("onLoadError", js.Any.fromFunction1(value))
     @scala.inline

@@ -1,6 +1,6 @@
 package typingsSlinky.instagramPrivateApi.postingAlbumOptionsMod
 
-import typingsSlinky.instagramPrivateApi.AnonDuration
+import typingsSlinky.instagramPrivateApi.anon.Duration
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ trait PostingAlbumVideoItem extends PostingAlbumItem {
   var coverImage: Buffer = js.native
   var transcodeDelay: js.UndefOr[Double] = js.native
   var video: Buffer = js.native
-  var videoInfo: js.UndefOr[AnonDuration] = js.native
+  var videoInfo: js.UndefOr[Duration] = js.native
 }
 
 object PostingAlbumVideoItem {
@@ -51,7 +51,7 @@ object PostingAlbumVideoItem {
         ret
     }
     @scala.inline
-    def withVideoInfo(value: AnonDuration): Self = {
+    def withVideoInfo(value: Duration): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("videoInfo")(value.asInstanceOf[js.Any])
         ret

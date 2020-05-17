@@ -1,6 +1,6 @@
 package typingsSlinky.stringPlaceholder.mod
 
-import typingsSlinky.stringPlaceholder.ReadonlyOptions
+import typingsSlinky.stringPlaceholder.anon.ReadonlyOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

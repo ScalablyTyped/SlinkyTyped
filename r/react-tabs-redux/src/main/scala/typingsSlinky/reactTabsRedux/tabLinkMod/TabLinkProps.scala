@@ -1,8 +1,8 @@
 package typingsSlinky.reactTabsRedux.tabLinkMod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait TabLinkProps extends js.Object {
   var handleSelect: js.UndefOr[js.Function2[/* tab */ String, /* name */ String, Unit]] = js.native
   var isActive: js.UndefOr[Boolean] = js.native
   var namespace: js.UndefOr[String] = js.native
-  var onClick: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   var style: js.UndefOr[js.Object] = js.native
   var to: Double | String = js.native
 }
@@ -169,7 +169,7 @@ object TabLinkProps {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* event */ Event_ => Unit): Self = {
+    def withOnClick(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret

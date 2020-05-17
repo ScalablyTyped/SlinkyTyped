@@ -6,10 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Exposes properties for customizing the appearance of the rendering area of a TimedTextCue . */
-@JSGlobal("Windows.Media.Core.TimedTextRegion")
 @js.native
-/** Initializes a new instance of the TimedTextRegion class. */
-class TimedTextRegion () extends js.Object {
+trait TimedTextRegion extends js.Object {
   /** Gets or sets the background color of the TimedTextRegion . */
   var background: Color = js.native
   /** Gets or sets the display alignment of the TimedTextRegion . */
@@ -34,5 +32,106 @@ class TimedTextRegion () extends js.Object {
   var writingMode: TimedTextWritingMode = js.native
   /** Gets or sets the Z-order of the TimedTextRegion , relative to other active regions on the screen, in case they overlap. */
   var zindex: Double = js.native
+}
+
+object TimedTextRegion {
+  @scala.inline
+  def apply(
+    background: Color,
+    displayAlignment: TimedTextDisplayAlignment,
+    extent: TimedTextSize,
+    isOverflowClipped: Boolean,
+    lineHeight: TimedTextDouble,
+    name: String,
+    padding: TimedTextPadding,
+    position: TimedTextPoint,
+    scrollMode: TimedTextScrollMode,
+    textWrapping: TimedTextWrapping,
+    writingMode: TimedTextWritingMode,
+    zindex: Double
+  ): TimedTextRegion = {
+    val __obj = js.Dynamic.literal(background = background.asInstanceOf[js.Any], displayAlignment = displayAlignment.asInstanceOf[js.Any], extent = extent.asInstanceOf[js.Any], isOverflowClipped = isOverflowClipped.asInstanceOf[js.Any], lineHeight = lineHeight.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], padding = padding.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], scrollMode = scrollMode.asInstanceOf[js.Any], textWrapping = textWrapping.asInstanceOf[js.Any], writingMode = writingMode.asInstanceOf[js.Any], zindex = zindex.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TimedTextRegion]
+  }
+  @scala.inline
+  implicit class TimedTextRegionOps[Self <: TimedTextRegion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBackground(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisplayAlignment(value: TimedTextDisplayAlignment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayAlignment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtent(value: TimedTextSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsOverflowClipped(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isOverflowClipped")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLineHeight(value: TimedTextDouble): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPadding(value: TimedTextPadding): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPosition(value: TimedTextPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScrollMode(value: TimedTextScrollMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextWrapping(value: TimedTextWrapping): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textWrapping")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWritingMode(value: TimedTextWritingMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writingMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withZindex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zindex")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

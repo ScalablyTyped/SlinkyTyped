@@ -1,11 +1,11 @@
 package typingsSlinky.jupyterlabCompleter.widgetMod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.IEditor
 import typingsSlinky.jupyterlabCompleter.widgetMod.Completer.IModel
 import typingsSlinky.jupyterlabCompleter.widgetMod.Completer.IOptions
 import typingsSlinky.phosphorSignaling.mod.ISignal
 import typingsSlinky.phosphorWidgets.mod.Widget
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -85,7 +85,7 @@ class Completer_ protected () extends Widget {
     * called in response to events on the dock panel's node. It should
     * not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
   /**
     * Handle model state changes.
     */

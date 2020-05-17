@@ -1,6 +1,6 @@
 package typingsSlinky.monacoEditor.mod.editor
 
-import typingsSlinky.monacoEditor.AnonComments
+import typingsSlinky.monacoEditor.anon.Comments
 import typingsSlinky.monacoEditor.monacoEditorStrings.always
 import typingsSlinky.monacoEditor.monacoEditorStrings.auto
 import typingsSlinky.monacoEditor.monacoEditorStrings.first
@@ -37,7 +37,7 @@ trait EditorContribOptions extends js.Object {
   val matchBrackets: Boolean = js.native
   val occurrencesHighlight: Boolean = js.native
   val parameterHints: InternalParameterHintOptions = js.native
-  val quickSuggestions: Boolean | AnonComments = js.native
+  val quickSuggestions: Boolean | Comments = js.native
   val quickSuggestionsDelay: Double = js.native
   val selectionClipboard: Boolean = js.native
   val selectionHighlight: Boolean = js.native
@@ -73,7 +73,7 @@ object EditorContribOptions {
     matchBrackets: Boolean,
     occurrencesHighlight: Boolean,
     parameterHints: InternalParameterHintOptions,
-    quickSuggestions: Boolean | AnonComments,
+    quickSuggestions: Boolean | Comments,
     quickSuggestionsDelay: Double,
     selectionClipboard: Boolean,
     selectionHighlight: Boolean,
@@ -210,7 +210,7 @@ object EditorContribOptions {
         ret
     }
     @scala.inline
-    def withQuickSuggestions(value: Boolean | AnonComments): Self = {
+    def withQuickSuggestions(value: Boolean | Comments): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("quickSuggestions")(value.asInstanceOf[js.Any])
         ret

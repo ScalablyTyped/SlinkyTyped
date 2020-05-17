@@ -8,12 +8,12 @@ import typingsSlinky.nextServer.nextServerStrings.error
 import typingsSlinky.nextServer.nextServerStrings.pause
 import typingsSlinky.nextServer.nextServerStrings.readable
 import typingsSlinky.nextServer.nextServerStrings.resume
-import typingsSlinky.node.AnonEnd
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.Dict
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.NodeJS.WritableStream
+import typingsSlinky.node.anon.End
 import typingsSlinky.node.eventsMod.EventEmitterOptions
 import typingsSlinky.node.httpMod.IncomingHttpHeaders
 import typingsSlinky.node.netMod.Socket
@@ -160,7 +160,7 @@ trait NextApiRequest extends js.Object {
   def once_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
   def pause(): this.type = js.native
   def pipe[T /* <: WritableStream */](destination: T): T = js.native
-  def pipe[T /* <: WritableStream */](destination: T, options: AnonEnd): T = js.native
+  def pipe[T /* <: WritableStream */](destination: T, options: End): T = js.native
   def prependListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("prependListener")

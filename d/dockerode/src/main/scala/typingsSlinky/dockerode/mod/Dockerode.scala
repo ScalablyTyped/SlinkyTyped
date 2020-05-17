@@ -1,6 +1,6 @@
 package typingsSlinky.dockerode.mod
 
-import typingsSlinky.dockerode.AnonVolumes
+import typingsSlinky.dockerode.anon.Volumes
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.node.eventsMod.EventEmitter
@@ -106,10 +106,10 @@ trait Dockerode extends js.Object {
   def listTasks(callback: Callback[js.Array[_]]): Unit = js.native
   def listTasks(options: js.Object): js.Promise[js.Array[_]] = js.native
   def listTasks(options: js.Object, callback: Callback[js.Array[_]]): Unit = js.native
-  def listVolumes(): js.Promise[AnonVolumes] = js.native
-  def listVolumes(callback: Callback[AnonVolumes]): Unit = js.native
-  def listVolumes(options: js.Object): js.Promise[AnonVolumes] = js.native
-  def listVolumes(options: js.Object, callback: Callback[AnonVolumes]): Unit = js.native
+  def listVolumes(): js.Promise[Volumes] = js.native
+  def listVolumes(callback: Callback[Volumes]): Unit = js.native
+  def listVolumes(options: js.Object): js.Promise[Volumes] = js.native
+  def listVolumes(options: js.Object, callback: Callback[Volumes]): Unit = js.native
   def loadImage(file: String): js.Promise[ReadableStream] = js.native
   def loadImage(file: String, callback: Callback[ReadableStream]): Unit = js.native
   def loadImage(file: String, options: js.Object): js.Promise[ReadableStream] = js.native

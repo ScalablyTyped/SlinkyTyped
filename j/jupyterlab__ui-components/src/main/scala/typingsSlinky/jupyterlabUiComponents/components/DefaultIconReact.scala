@@ -492,7 +492,7 @@ import typingsSlinky.csstype.mod.WordWrapProperty
 import typingsSlinky.csstype.mod.WritingModeProperty
 import typingsSlinky.csstype.mod.ZIndexProperty
 import typingsSlinky.csstype.mod.ZoomProperty
-import typingsSlinky.jupyterlabUiComponents.INodeOptionstagspandiv
+import typingsSlinky.jupyterlabUiComponents.anon.INodeOptionstagspandiv
 import typingsSlinky.jupyterlabUiComponents.jupyterlabUiComponentsStrings.div
 import typingsSlinky.jupyterlabUiComponents.jupyterlabUiComponentsStrings.span
 import typingsSlinky.jupyterlabUiComponents.styleIconMod.IconKindType

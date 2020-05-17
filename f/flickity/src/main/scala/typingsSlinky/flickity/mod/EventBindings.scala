@@ -1,9 +1,9 @@
 package typingsSlinky.flickity.mod
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.Touch
-import typingsSlinky.flickity.AnonX
-import typingsSlinky.std.Event_
+import typingsSlinky.flickity.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait EventBindings extends js.Object {
     * Triggered after a background image has been loaded with bgLazyLoad.
     */
   var bgLazyLoad: js.UndefOr[
-    js.Function2[/* event */ js.UndefOr[Event_], /* element */ js.UndefOr[Element], Unit]
+    js.Function2[/* event */ js.UndefOr[Event], /* element */ js.UndefOr[Element], Unit]
   ] = js.native
   var cellSelect: js.UndefOr[js.Function1[/* index */ js.UndefOr[Double], Unit]] = js.native
   /**
@@ -24,17 +24,15 @@ trait EventBindings extends js.Object {
   /**
     * Triggered when dragging ends.
     */
-  var dragEnd: js.UndefOr[
-    js.Function2[/* event */ Event_, /* pointer */ js.UndefOr[Element | Touch], Unit]
-  ] = js.native
+  var dragEnd: js.UndefOr[js.Function2[/* event */ Event, /* pointer */ js.UndefOr[Element | Touch], Unit]] = js.native
   /**
     * Triggered when dragging moves and the slider moves.
     */
   var dragMove: js.UndefOr[
     js.Function3[
-      /* event */ js.UndefOr[Event_], 
+      /* event */ js.UndefOr[Event], 
       /* pointer */ js.UndefOr[Element | Touch], 
-      /* moveVector */ js.UndefOr[AnonX], 
+      /* moveVector */ js.UndefOr[X], 
       Unit
     ]
   ] = js.native
@@ -42,7 +40,7 @@ trait EventBindings extends js.Object {
     * Triggered when dragging starts and the slider starts moving.
     */
   var dragStart: js.UndefOr[
-    js.Function2[/* event */ js.UndefOr[Event_], /* pointer */ js.UndefOr[Element | Touch], Unit]
+    js.Function2[/* event */ js.UndefOr[Event], /* pointer */ js.UndefOr[Element | Touch], Unit]
   ] = js.native
   /**
     * Triggered after entering or exiting fullscreen view.
@@ -52,22 +50,20 @@ trait EventBindings extends js.Object {
     * Triggered after an image has been loaded with lazyLoad.
     */
   var lazyLoad: js.UndefOr[
-    js.Function2[/* event */ js.UndefOr[Event_], /* cellElement */ js.UndefOr[Element], Unit]
+    js.Function2[/* event */ js.UndefOr[Event], /* cellElement */ js.UndefOr[Element], Unit]
   ] = js.native
   /**
     * Triggered when the user's pointer (mouse, touch, pointer) presses down.
     */
-  var pointerDown: js.UndefOr[
-    js.Function2[/* event */ Event_, /* pointer */ js.UndefOr[Element | Touch], Unit]
-  ] = js.native
+  var pointerDown: js.UndefOr[js.Function2[/* event */ Event, /* pointer */ js.UndefOr[Element | Touch], Unit]] = js.native
   /**
     * Triggered when the user's pointer moves.
     */
   var pointerMove: js.UndefOr[
     js.Function3[
-      /* event */ js.UndefOr[Event_], 
+      /* event */ js.UndefOr[Event], 
       /* pointer */ js.UndefOr[Element | Touch], 
-      /* moveVector */ js.UndefOr[AnonX], 
+      /* moveVector */ js.UndefOr[X], 
       Unit
     ]
   ] = js.native
@@ -75,7 +71,7 @@ trait EventBindings extends js.Object {
     * Triggered when the user's pointer unpresses.
     */
   var pointerUp: js.UndefOr[
-    js.Function2[/* event */ js.UndefOr[Event_], /* pointer */ js.UndefOr[Element | Touch], Unit]
+    js.Function2[/* event */ js.UndefOr[Event], /* pointer */ js.UndefOr[Element | Touch], Unit]
   ] = js.native
   /**
     * Triggered after Flickity has been activated.
@@ -102,7 +98,7 @@ trait EventBindings extends js.Object {
     */
   var staticClick: js.UndefOr[
     js.Function4[
-      /* event */ js.UndefOr[Event_], 
+      /* event */ js.UndefOr[Event], 
       /* pointer */ js.UndefOr[Element | Touch], 
       /* cellElement */ js.UndefOr[Element], 
       /* cellIndex */ js.UndefOr[Double], 
@@ -124,7 +120,7 @@ object EventBindings {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBgLazyLoad(value: (/* event */ js.UndefOr[Event_], /* element */ js.UndefOr[Element]) => Unit): Self = {
+    def withBgLazyLoad(value: (/* event */ js.UndefOr[Event], /* element */ js.UndefOr[Element]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bgLazyLoad")(js.Any.fromFunction2(value))
         ret
@@ -160,7 +156,7 @@ object EventBindings {
         ret
     }
     @scala.inline
-    def withDragEnd(value: (/* event */ Event_, /* pointer */ js.UndefOr[Element | Touch]) => Unit): Self = {
+    def withDragEnd(value: (/* event */ Event, /* pointer */ js.UndefOr[Element | Touch]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragEnd")(js.Any.fromFunction2(value))
         ret
@@ -173,7 +169,7 @@ object EventBindings {
     }
     @scala.inline
     def withDragMove(
-      value: (/* event */ js.UndefOr[Event_], /* pointer */ js.UndefOr[Element | Touch], /* moveVector */ js.UndefOr[AnonX]) => Unit
+      value: (/* event */ js.UndefOr[Event], /* pointer */ js.UndefOr[Element | Touch], /* moveVector */ js.UndefOr[X]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragMove")(js.Any.fromFunction3(value))
@@ -186,7 +182,7 @@ object EventBindings {
         ret
     }
     @scala.inline
-    def withDragStart(value: (/* event */ js.UndefOr[Event_], /* pointer */ js.UndefOr[Element | Touch]) => Unit): Self = {
+    def withDragStart(value: (/* event */ js.UndefOr[Event], /* pointer */ js.UndefOr[Element | Touch]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragStart")(js.Any.fromFunction2(value))
         ret
@@ -210,7 +206,7 @@ object EventBindings {
         ret
     }
     @scala.inline
-    def withLazyLoad(value: (/* event */ js.UndefOr[Event_], /* cellElement */ js.UndefOr[Element]) => Unit): Self = {
+    def withLazyLoad(value: (/* event */ js.UndefOr[Event], /* cellElement */ js.UndefOr[Element]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lazyLoad")(js.Any.fromFunction2(value))
         ret
@@ -222,7 +218,7 @@ object EventBindings {
         ret
     }
     @scala.inline
-    def withPointerDown(value: (/* event */ Event_, /* pointer */ js.UndefOr[Element | Touch]) => Unit): Self = {
+    def withPointerDown(value: (/* event */ Event, /* pointer */ js.UndefOr[Element | Touch]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointerDown")(js.Any.fromFunction2(value))
         ret
@@ -235,7 +231,7 @@ object EventBindings {
     }
     @scala.inline
     def withPointerMove(
-      value: (/* event */ js.UndefOr[Event_], /* pointer */ js.UndefOr[Element | Touch], /* moveVector */ js.UndefOr[AnonX]) => Unit
+      value: (/* event */ js.UndefOr[Event], /* pointer */ js.UndefOr[Element | Touch], /* moveVector */ js.UndefOr[X]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointerMove")(js.Any.fromFunction3(value))
@@ -248,7 +244,7 @@ object EventBindings {
         ret
     }
     @scala.inline
-    def withPointerUp(value: (/* event */ js.UndefOr[Event_], /* pointer */ js.UndefOr[Element | Touch]) => Unit): Self = {
+    def withPointerUp(value: (/* event */ js.UndefOr[Event], /* pointer */ js.UndefOr[Element | Touch]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointerUp")(js.Any.fromFunction2(value))
         ret
@@ -309,7 +305,7 @@ object EventBindings {
     }
     @scala.inline
     def withStaticClick(
-      value: (/* event */ js.UndefOr[Event_], /* pointer */ js.UndefOr[Element | Touch], /* cellElement */ js.UndefOr[Element], /* cellIndex */ js.UndefOr[Double]) => Unit
+      value: (/* event */ js.UndefOr[Event], /* pointer */ js.UndefOr[Element | Touch], /* cellElement */ js.UndefOr[Element], /* cellIndex */ js.UndefOr[Double]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("staticClick")(js.Any.fromFunction4(value))

@@ -6,14 +6,18 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait EventSourceEventMap extends js.Object {
-  var error: Event_ = js.native
+  var error: org.scalajs.dom.raw.Event = js.native
   var message: org.scalajs.dom.raw.MessageEvent = js.native
-  var open: Event_ = js.native
+  var open: org.scalajs.dom.raw.Event = js.native
 }
 
 object EventSourceEventMap {
   @scala.inline
-  def apply(error: Event_, message: org.scalajs.dom.raw.MessageEvent, open: Event_): EventSourceEventMap = {
+  def apply(
+    error: org.scalajs.dom.raw.Event,
+    message: org.scalajs.dom.raw.MessageEvent,
+    open: org.scalajs.dom.raw.Event
+  ): EventSourceEventMap = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], open = open.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventSourceEventMap]
   }
@@ -24,7 +28,7 @@ object EventSourceEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withError(value: Event_): Self = {
+    def withError(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret
@@ -36,7 +40,7 @@ object EventSourceEventMap {
         ret
     }
     @scala.inline
-    def withOpen(value: Event_): Self = {
+    def withOpen(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
         ret

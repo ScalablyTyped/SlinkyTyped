@@ -1,19 +1,18 @@
 package typingsSlinky.webix.webix.ui
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Event_
 import typingsSlinky.webix.webix.WebixCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("webix.ui.portlet")
 @js.native
-class portlet () extends baseview {
+trait portlet extends baseview {
   @JSName("config")
   var config_portlet: portletConfig = js.native
   @JSName("$drag")
-  def $drag(source: HTMLElement, ev: Event_): String = js.native
+  def $drag(source: HTMLElement, ev: Event): String = js.native
   def addView(view: js.Any): String | Double = js.native
   def addView(view: js.Any, index: Double): String | Double = js.native
   def attachEvent(`type`: portletEventName, functor: WebixCallback): String | Double = js.native

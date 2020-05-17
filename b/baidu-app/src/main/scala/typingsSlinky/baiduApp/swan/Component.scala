@@ -1,7 +1,7 @@
 package typingsSlinky.baiduApp.swan
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.baiduApp.Partialbubblesbooleancomp
+import typingsSlinky.baiduApp.anon.Partialbubblesbooleancomp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

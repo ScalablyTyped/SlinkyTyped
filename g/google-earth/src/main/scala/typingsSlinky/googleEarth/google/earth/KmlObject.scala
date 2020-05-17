@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("google.earth.KmlObject")
 @js.native
-class KmlObject () extends GEEventEmitter {
+trait KmlObject extends GEEventEmitter {
   /**
     * Test whether this object is the same as another object.
     * Useful for Chrome and Safari, where the comparison a==b sometimes fails for plugin objects.
@@ -40,5 +39,78 @@ class KmlObject () extends GEEventEmitter {
     * Attempting to access the object once it is released will result in an error.
     */
   def release(): Unit = js.native
+}
+
+object KmlObject {
+  @scala.inline
+  def apply(
+    click: KmlMouseEvent => Unit,
+    dblclick: KmlMouseEvent => Unit,
+    equals: KmlObject => Boolean,
+    getId: () => String,
+    getOwnerDocument: () => KmlDocument,
+    getParentNode: () => KmlObject,
+    getType: () => String,
+    getUrl: () => String,
+    mousedown: KmlMouseEvent => Unit,
+    mousemove: KmlMouseEvent => Unit,
+    mouseout: KmlMouseEvent => Unit,
+    mouseover: KmlMouseEvent => Unit,
+    mouseup: KmlMouseEvent => Unit,
+    release: () => Unit
+  ): KmlObject = {
+    val __obj = js.Dynamic.literal(click = js.Any.fromFunction1(click), dblclick = js.Any.fromFunction1(dblclick), equals = js.Any.fromFunction1(equals), getId = js.Any.fromFunction0(getId), getOwnerDocument = js.Any.fromFunction0(getOwnerDocument), getParentNode = js.Any.fromFunction0(getParentNode), getType = js.Any.fromFunction0(getType), getUrl = js.Any.fromFunction0(getUrl), mousedown = js.Any.fromFunction1(mousedown), mousemove = js.Any.fromFunction1(mousemove), mouseout = js.Any.fromFunction1(mouseout), mouseover = js.Any.fromFunction1(mouseover), mouseup = js.Any.fromFunction1(mouseup), release = js.Any.fromFunction0(release))
+    __obj.asInstanceOf[KmlObject]
+  }
+  @scala.inline
+  implicit class KmlObjectOps[Self <: KmlObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEquals(value: KmlObject => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetId(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getId")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetOwnerDocument(value: () => KmlDocument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getOwnerDocument")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetParentNode(value: () => KmlObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getParentNode")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetType(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetUrl(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getUrl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRelease(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("release")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

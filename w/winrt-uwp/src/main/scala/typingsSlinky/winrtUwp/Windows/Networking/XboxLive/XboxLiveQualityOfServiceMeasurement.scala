@@ -3,16 +3,13 @@ package typingsSlinky.winrtUwp.Windows.Networking.XboxLive
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVector
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncAction
-import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
-@JSGlobal("Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement")
 @js.native
-/** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
-class XboxLiveQualityOfServiceMeasurement () extends js.Object {
+trait XboxLiveQualityOfServiceMeasurement extends js.Object {
   /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
   var deviceAddresses: IVector[XboxLiveDeviceAddress] = js.native
   /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
@@ -61,26 +58,113 @@ class XboxLiveQualityOfServiceMeasurement () extends js.Object {
   def measureAsync(): IPromiseWithIAsyncAction = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Networking.XboxLive.XboxLiveQualityOfServiceMeasurement")
-@js.native
-object XboxLiveQualityOfServiceMeasurement extends js.Object {
-  /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
-  var isSystemInboundBandwidthConstrained: Boolean = js.native
-  /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
-  var isSystemOutboundBandwidthConstrained: Boolean = js.native
-  /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
-  var maxPrivatePayloadSize: Double = js.native
-  /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
-  var maxSimultaneousProbeConnections: Double = js.native
-  /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
-  var publishedPrivatePayload: IBuffer = js.native
-  /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
-  def clearPrivatePayload(): Unit = js.native
-  /**
-    * This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
-    * @param payload This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime.
-    */
-  def publishPrivatePayloadBytes(payload: js.Array[Double]): Unit = js.native
+object XboxLiveQualityOfServiceMeasurement {
+  @scala.inline
+  def apply(
+    deviceAddresses: IVector[XboxLiveDeviceAddress],
+    getMetricResult: (XboxLiveDeviceAddress, XboxLiveQualityOfServiceMetric) => XboxLiveQualityOfServiceMetricResult,
+    getMetricResultsForDevice: XboxLiveDeviceAddress => IVectorView[XboxLiveQualityOfServiceMetricResult],
+    getMetricResultsForMetric: XboxLiveQualityOfServiceMetric => IVectorView[XboxLiveQualityOfServiceMetricResult],
+    getPrivatePayloadResult: XboxLiveDeviceAddress => XboxLiveQualityOfServicePrivatePayloadResult,
+    measureAsync: () => IPromiseWithIAsyncAction,
+    metricResults: IVectorView[XboxLiveQualityOfServiceMetricResult],
+    metrics: IVector[XboxLiveQualityOfServiceMetric],
+    numberOfProbesToAttempt: Double,
+    numberOfResultsPending: Double,
+    privatePayloadResults: IVectorView[XboxLiveQualityOfServicePrivatePayloadResult],
+    shouldRequestPrivatePayloads: Boolean,
+    timeoutInMilliseconds: Double
+  ): XboxLiveQualityOfServiceMeasurement = {
+    val __obj = js.Dynamic.literal(deviceAddresses = deviceAddresses.asInstanceOf[js.Any], getMetricResult = js.Any.fromFunction2(getMetricResult), getMetricResultsForDevice = js.Any.fromFunction1(getMetricResultsForDevice), getMetricResultsForMetric = js.Any.fromFunction1(getMetricResultsForMetric), getPrivatePayloadResult = js.Any.fromFunction1(getPrivatePayloadResult), measureAsync = js.Any.fromFunction0(measureAsync), metricResults = metricResults.asInstanceOf[js.Any], metrics = metrics.asInstanceOf[js.Any], numberOfProbesToAttempt = numberOfProbesToAttempt.asInstanceOf[js.Any], numberOfResultsPending = numberOfResultsPending.asInstanceOf[js.Any], privatePayloadResults = privatePayloadResults.asInstanceOf[js.Any], shouldRequestPrivatePayloads = shouldRequestPrivatePayloads.asInstanceOf[js.Any], timeoutInMilliseconds = timeoutInMilliseconds.asInstanceOf[js.Any])
+    __obj.asInstanceOf[XboxLiveQualityOfServiceMeasurement]
+  }
+  @scala.inline
+  implicit class XboxLiveQualityOfServiceMeasurementOps[Self <: XboxLiveQualityOfServiceMeasurement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceAddresses(value: IVector[XboxLiveDeviceAddress]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceAddresses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetMetricResult(
+      value: (XboxLiveDeviceAddress, XboxLiveQualityOfServiceMetric) => XboxLiveQualityOfServiceMetricResult
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMetricResult")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetMetricResultsForDevice(value: XboxLiveDeviceAddress => IVectorView[XboxLiveQualityOfServiceMetricResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMetricResultsForDevice")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetMetricResultsForMetric(value: XboxLiveQualityOfServiceMetric => IVectorView[XboxLiveQualityOfServiceMetricResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMetricResultsForMetric")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetPrivatePayloadResult(value: XboxLiveDeviceAddress => XboxLiveQualityOfServicePrivatePayloadResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPrivatePayloadResult")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMeasureAsync(value: () => IPromiseWithIAsyncAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("measureAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withMetricResults(value: IVectorView[XboxLiveQualityOfServiceMetricResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metricResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetrics(value: IVector[XboxLiveQualityOfServiceMetric]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metrics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNumberOfProbesToAttempt(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfProbesToAttempt")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNumberOfResultsPending(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfResultsPending")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrivatePayloadResults(value: IVectorView[XboxLiveQualityOfServicePrivatePayloadResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("privatePayloadResults")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShouldRequestPrivatePayloads(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldRequestPrivatePayloads")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimeoutInMilliseconds(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeoutInMilliseconds")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

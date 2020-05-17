@@ -1,5 +1,6 @@
 package typingsSlinky.blueprintjsSelect.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
@@ -9,7 +10,7 @@ import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.inputGroupMod.IInputGroupProps
 import typingsSlinky.blueprintjsCore.propsMod.HTMLInputProps
-import typingsSlinky.blueprintjsSelect.PartialIOverlayProps
+import typingsSlinky.blueprintjsSelect.anon.PartialIOverlayProps
 import typingsSlinky.blueprintjsSelect.itemListRendererMod.IItemListRendererProps
 import typingsSlinky.blueprintjsSelect.itemRendererMod.IItemRendererProps
 import typingsSlinky.blueprintjsSelect.listItemsPropsMod.ItemsEqualProp
@@ -17,7 +18,6 @@ import typingsSlinky.blueprintjsSelect.listItemsUtilsMod.ICreateNewItem
 import typingsSlinky.blueprintjsSelect.omnibarMod.IOmnibarProps
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.MouseEventHandler
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -74,7 +74,7 @@ object Omnibar {
     @scala.inline
     def onActiveItemChange(value: (/* activeItem */ T | Null, /* isCreateNewItem */ Boolean) => Unit): this.type = set("onActiveItemChange", js.Any.fromFunction2(value))
     @scala.inline
-    def onClose(value: /* event */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
+    def onClose(value: /* event */ js.UndefOr[SyntheticEvent[Event, HTMLElement]] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
     @scala.inline
     def onItemsPaste(value: /* items */ js.Array[T] => Unit): this.type = set("onItemsPaste", js.Any.fromFunction1(value))
     @scala.inline
@@ -97,7 +97,7 @@ object Omnibar {
     isOpen: Boolean,
     itemRenderer: (T, /* itemProps */ IItemRendererProps) => ReactElement | Null,
     items: js.Array[T],
-    onItemSelect: (T, js.UndefOr[SyntheticEvent[Event_, HTMLElement]]) => Unit
+    onItemSelect: (T, js.UndefOr[SyntheticEvent[Event, HTMLElement]]) => Unit
   ): Builder[T] = {
     val __props = js.Dynamic.literal(isOpen = isOpen.asInstanceOf[js.Any], itemRenderer = js.Any.fromFunction2(itemRenderer), items = items.asInstanceOf[js.Any], onItemSelect = js.Any.fromFunction2(onItemSelect))
     new Builder[T](js.Array(this.component, __props.asInstanceOf[IOmnibarProps[T]]))

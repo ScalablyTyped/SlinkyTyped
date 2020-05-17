@@ -1,19 +1,19 @@
 package typingsSlinky.expoFileSystem.fileSystemTypesMod
 
-import typingsSlinky.expoFileSystem.AnonTotalBytesExpectedToWrite
+import typingsSlinky.expoFileSystem.anon.TotalBytesExpectedToWrite
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ProgressEvent extends js.Object {
-  var data: AnonTotalBytesExpectedToWrite = js.native
+  var data: TotalBytesExpectedToWrite = js.native
   var uuid: String = js.native
 }
 
 object ProgressEvent {
   @scala.inline
-  def apply(data: AnonTotalBytesExpectedToWrite, uuid: String): ProgressEvent = {
+  def apply(data: TotalBytesExpectedToWrite, uuid: String): ProgressEvent = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], uuid = uuid.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProgressEvent]
   }
@@ -24,7 +24,7 @@ object ProgressEvent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withData(value: AnonTotalBytesExpectedToWrite): Self = {
+    def withData(value: TotalBytesExpectedToWrite): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

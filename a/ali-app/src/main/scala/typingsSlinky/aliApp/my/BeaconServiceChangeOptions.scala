@@ -1,6 +1,6 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonAvailable
+import typingsSlinky.aliApp.anon.Available
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait BeaconServiceChangeOptions
   extends BaseOptions[js.Any, js.Any] {
   @JSName("success")
-  var success_BeaconServiceChangeOptions: js.UndefOr[js.Function1[/* res */ AnonAvailable, Unit]] = js.native
+  var success_BeaconServiceChangeOptions: js.UndefOr[js.Function1[/* res */ Available, Unit]] = js.native
 }
 
 object BeaconServiceChangeOptions {
@@ -25,7 +25,7 @@ object BeaconServiceChangeOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSuccess(value: /* res */ AnonAvailable => Unit): Self = {
+    def withSuccess(value: /* res */ Available => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

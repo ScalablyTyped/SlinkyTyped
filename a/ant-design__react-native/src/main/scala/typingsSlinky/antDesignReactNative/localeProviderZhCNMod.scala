@@ -1,5 +1,13 @@
 package typingsSlinky.antDesignReactNative
 
+import typingsSlinky.antDesignReactNative.anon.BackspaceLabel
+import typingsSlinky.antDesignReactNative.anon.ButtonText
+import typingsSlinky.antDesignReactNative.anon.CancelText
+import typingsSlinky.antDesignReactNative.anon.Day
+import typingsSlinky.antDesignReactNative.anon.DismissText
+import typingsSlinky.antDesignReactNative.anon.Done
+import typingsSlinky.antDesignReactNative.anon.Extra
+import typingsSlinky.antDesignReactNative.anon.NextText
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,14 +17,14 @@ import scala.scalajs.js.annotation._
 object localeProviderZhCNMod extends js.Object {
   @js.native
   object default extends js.Object {
-    var DatePicker: AnonDismissText = js.native
-    var DatePickerView: AnonDay = js.native
-    var InputItem: AnonBackspaceLabel = js.native
-    var ListView: AnonDone = js.native
-    var Modal: AnonButtonText = js.native
-    var Pagination: AnonNextText = js.native
-    var Picker: AnonExtra = js.native
-    var SearchBar: AnonCancelText = js.native
+    var DatePicker: DismissText = js.native
+    var DatePickerView: Day = js.native
+    var InputItem: BackspaceLabel = js.native
+    var ListView: Done = js.native
+    var Modal: ButtonText = js.native
+    var Pagination: NextText = js.native
+    var Picker: Extra = js.native
+    var SearchBar: CancelText = js.native
     var locale: String = js.native
   }
   

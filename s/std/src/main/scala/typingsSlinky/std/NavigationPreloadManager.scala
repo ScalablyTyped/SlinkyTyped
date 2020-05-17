@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +12,48 @@ trait NavigationPreloadManager extends js.Object {
   def setHeaderValue(value: java.lang.String): js.Promise[Unit] = js.native
 }
 
-@JSGlobal("NavigationPreloadManager")
-@js.native
-object NavigationPreloadManager extends Instantiable0[NavigationPreloadManager]
+object NavigationPreloadManager {
+  @scala.inline
+  def apply(
+    disable: () => js.Promise[Unit],
+    enable: () => js.Promise[Unit],
+    getState: () => js.Promise[NavigationPreloadState],
+    setHeaderValue: java.lang.String => js.Promise[Unit]
+  ): NavigationPreloadManager = {
+    val __obj = js.Dynamic.literal(disable = js.Any.fromFunction0(disable), enable = js.Any.fromFunction0(enable), getState = js.Any.fromFunction0(getState), setHeaderValue = js.Any.fromFunction1(setHeaderValue))
+    __obj.asInstanceOf[NavigationPreloadManager]
+  }
+  @scala.inline
+  implicit class NavigationPreloadManagerOps[Self <: NavigationPreloadManager] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisable(value: () => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withEnable(value: () => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetState(value: () => js.Promise[NavigationPreloadState]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getState")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetHeaderValue(value: java.lang.String => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setHeaderValue")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

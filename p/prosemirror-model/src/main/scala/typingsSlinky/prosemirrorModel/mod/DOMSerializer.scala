@@ -1,9 +1,9 @@
 package typingsSlinky.prosemirrorModel.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.DocumentFragment
-import typingsSlinky.prosemirrorModel.AnonContentDOM
-import typingsSlinky.std.Document_
+import typingsSlinky.prosemirrorModel.anon.ContentDOM
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -65,6 +65,6 @@ object DOMSerializer extends js.Object {
     * the spec has a hole (zero) in it, `contentDOM` will point at the
     * node with the hole.
     */
-  def renderSpec(doc: Document_, structure: DOMOutputSpec): AnonContentDOM = js.native
+  def renderSpec(doc: Document, structure: DOMOutputSpec): ContentDOM = js.native
 }
 

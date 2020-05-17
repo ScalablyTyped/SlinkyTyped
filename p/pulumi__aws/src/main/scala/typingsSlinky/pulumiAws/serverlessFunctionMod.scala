@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws
 
+import typingsSlinky.pulumiAws.anon.ExcludePackages
 import typingsSlinky.pulumiAws.iamMod.Role
 import typingsSlinky.pulumiAws.lambdaMixinsMod.Callback
 import typingsSlinky.pulumiAws.lambdaMixinsMod.CallbackFunctionArgs
@@ -28,7 +29,7 @@ object serverlessFunctionMod extends js.Object {
   }
   
   type Context = typingsSlinky.pulumiAws.lambdaMixinsMod.Context
-  type FunctionOptions = Overwrite[CallbackFunctionArgs[js.Any, js.Any], AnonExcludePackages]
+  type FunctionOptions = Overwrite[CallbackFunctionArgs[js.Any, js.Any], ExcludePackages]
   type Handler = Callback[js.Any, js.Any]
   type HandlerFactory = js.Function0[Handler]
 }

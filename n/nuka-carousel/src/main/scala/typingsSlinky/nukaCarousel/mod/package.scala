@@ -10,8 +10,6 @@ package object mod {
     /* props */ typingsSlinky.nukaCarousel.mod.CarouselSlideRenderControlProps, 
     slinky.core.TagMod[scala.Any]
   ]
-  type CarouselSlideWidthProp = java.lang.String | scala.Double
-  type CarouselSlidesToScrollProp = scala.Double | typingsSlinky.nukaCarousel.nukaCarouselStrings.auto
   type NextButtonProps = typingsSlinky.nukaCarousel.mod.CarouselSlideRenderControlProps
   type PagingDotsProps = typingsSlinky.nukaCarousel.mod.CarouselSlideRenderControlProps
   type PreviousButtonProps = typingsSlinky.nukaCarousel.mod.CarouselSlideRenderControlProps

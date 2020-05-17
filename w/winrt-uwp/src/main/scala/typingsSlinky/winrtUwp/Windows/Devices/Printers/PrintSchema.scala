@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides APIs to access a 3D printer's capabilities and print tickets. */
-@JSGlobal("Windows.Devices.Printers.PrintSchema")
 @js.native
-abstract class PrintSchema () extends js.Object {
+trait PrintSchema extends js.Object {
   /**
     * Gets the 3D printer capabilities.
     * @param constrainTicket The print ticket.
@@ -27,5 +26,47 @@ abstract class PrintSchema () extends js.Object {
     * @return An XML PrintTicket document containing the suggested print ticket.
     */
   def mergeAndValidateWithDefaultPrintTicketAsync(deltaTicket: IRandomAccessStreamWithContentType): IPromiseWithIAsyncOperation[IRandomAccessStreamWithContentType] = js.native
+}
+
+object PrintSchema {
+  @scala.inline
+  def apply(
+    getCapabilitiesAsync: IRandomAccessStreamWithContentType => IPromiseWithIAsyncOperation[IRandomAccessStreamWithContentType],
+    getDefaultPrintTicketAsync: () => IPromiseWithIAsyncOperation[IRandomAccessStreamWithContentType],
+    mergeAndValidateWithDefaultPrintTicketAsync: IRandomAccessStreamWithContentType => IPromiseWithIAsyncOperation[IRandomAccessStreamWithContentType]
+  ): PrintSchema = {
+    val __obj = js.Dynamic.literal(getCapabilitiesAsync = js.Any.fromFunction1(getCapabilitiesAsync), getDefaultPrintTicketAsync = js.Any.fromFunction0(getDefaultPrintTicketAsync), mergeAndValidateWithDefaultPrintTicketAsync = js.Any.fromFunction1(mergeAndValidateWithDefaultPrintTicketAsync))
+    __obj.asInstanceOf[PrintSchema]
+  }
+  @scala.inline
+  implicit class PrintSchemaOps[Self <: PrintSchema] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetCapabilitiesAsync(
+      value: IRandomAccessStreamWithContentType => IPromiseWithIAsyncOperation[IRandomAccessStreamWithContentType]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCapabilitiesAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetDefaultPrintTicketAsync(value: () => IPromiseWithIAsyncOperation[IRandomAccessStreamWithContentType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDefaultPrintTicketAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withMergeAndValidateWithDefaultPrintTicketAsync(
+      value: IRandomAccessStreamWithContentType => IPromiseWithIAsyncOperation[IRandomAccessStreamWithContentType]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mergeAndValidateWithDefaultPrintTicketAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

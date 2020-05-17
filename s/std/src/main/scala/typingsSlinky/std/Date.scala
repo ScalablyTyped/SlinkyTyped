@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.std.Intl.DateTimeFormatOptions
 import typingsSlinky.std.stdStrings.default
 import typingsSlinky.std.stdStrings.number
@@ -11,7 +10,7 @@ import scala.scalajs.js.annotation._
 
 /** Enables basic storage and retrieval of dates and times. */
 @js.native
-trait Date extends _IDBValidKey {
+trait Date extends IDBValidKey {
   /**
     * Converts a Date object to a string.
     */
@@ -204,8 +203,4 @@ trait Date extends _IDBValidKey {
   /** Returns a date converted to a string using Universal Coordinated Time (UTC). */
   def toUTCString(): java.lang.String = js.native
 }
-
-@JSGlobal("Date")
-@js.native
-object Date extends TopLevel[DateConstructor]
 

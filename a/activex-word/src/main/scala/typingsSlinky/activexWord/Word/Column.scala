@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Word.Column")
 @js.native
-class Column protected () extends js.Object {
+trait Column extends js.Object {
   val Application: typingsSlinky.activexWord.Word.Application = js.native
   var Borders: typingsSlinky.activexWord.Word.Borders = js.native
   val Cells: typingsSlinky.activexWord.Word.Cells = js.native

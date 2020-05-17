@@ -1,18 +1,18 @@
 package typingsSlinky.xstate.invokeMod
 
-import typingsSlinky.xstate.AnonPending
+import typingsSlinky.xstate.anon.Pending
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait PromiseMachineSchema extends js.Object {
-  var states: AnonPending = js.native
+  var states: Pending = js.native
 }
 
 object PromiseMachineSchema {
   @scala.inline
-  def apply(states: AnonPending): PromiseMachineSchema = {
+  def apply(states: Pending): PromiseMachineSchema = {
     val __obj = js.Dynamic.literal(states = states.asInstanceOf[js.Any])
     __obj.asInstanceOf[PromiseMachineSchema]
   }
@@ -23,7 +23,7 @@ object PromiseMachineSchema {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withStates(value: AnonPending): Self = {
+    def withStates(value: Pending): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("states")(value.asInstanceOf[js.Any])
         ret

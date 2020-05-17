@@ -3,7 +3,7 @@ package typingsSlinky.cathoQuantum.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonBaseFontSize
+import typingsSlinky.cathoQuantum.anon.BaseFontSize
 import typingsSlinky.cathoQuantum.dropdownMod.DropdownProps
 import typingsSlinky.cathoQuantum.dropdownMod.ItemPropType
 import typingsSlinky.cathoQuantum.dropdownMod.default
@@ -47,7 +47,7 @@ object Dropdown {
     @scala.inline
     def selectedItem(value: ItemPropType): this.type = set("selectedItem", value.asInstanceOf[js.Any])
     @scala.inline
-    def theme(value: AnonBaseFontSize): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: BaseFontSize): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: DropdownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

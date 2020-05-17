@@ -6,12 +6,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains data that can be retrieved from encrypted and authenticated data. Authenticated encryption algorithms are opened by using the SymmetricKeyAlgorithmProvider class. */
-@JSGlobal("Windows.Security.Cryptography.Core.EncryptedAndAuthenticatedData")
 @js.native
-abstract class EncryptedAndAuthenticatedData () extends js.Object {
+trait EncryptedAndAuthenticatedData extends js.Object {
   /** Gets the authentication tag. */
   var authenticationTag: IBuffer = js.native
   /** Gets the encrypted data. */
   var encryptedData: IBuffer = js.native
+}
+
+object EncryptedAndAuthenticatedData {
+  @scala.inline
+  def apply(authenticationTag: IBuffer, encryptedData: IBuffer): EncryptedAndAuthenticatedData = {
+    val __obj = js.Dynamic.literal(authenticationTag = authenticationTag.asInstanceOf[js.Any], encryptedData = encryptedData.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EncryptedAndAuthenticatedData]
+  }
+  @scala.inline
+  implicit class EncryptedAndAuthenticatedDataOps[Self <: EncryptedAndAuthenticatedData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthenticationTag(value: IBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationTag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEncryptedData(value: IBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptedData")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

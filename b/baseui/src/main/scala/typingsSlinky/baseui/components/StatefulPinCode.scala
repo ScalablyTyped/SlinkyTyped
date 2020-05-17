@@ -8,7 +8,7 @@ import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonValues
+import typingsSlinky.baseui.anon.Values
 import typingsSlinky.baseui.baseuiStrings.both
 import typingsSlinky.baseui.baseuiStrings.change_
 import typingsSlinky.baseui.baseuiStrings.compact
@@ -88,7 +88,7 @@ object StatefulPinCode {
     @scala.inline
     def onBlur(value: SyntheticFocusEvent[HTMLInputElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: /* args */ AnonValues => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* args */ Values => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def onFocus(value: SyntheticFocusEvent[HTMLInputElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline

@@ -1,6 +1,5 @@
 package typingsSlinky.ipp.mod
 
-import typingsSlinky.ipp.AnonCompression
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait PrintJobRequest extends js.Object {
   var data: Buffer = js.native
   var `job-attributes-tag`: js.UndefOr[JobTemplateAttributes] = js.native
-  var `operation-attributes-tag`: AnonCompression = js.native
+  var `operation-attributes-tag`: typingsSlinky.ipp.anon.Compression = js.native
 }
 
 object PrintJobRequest {
   @scala.inline
-  def apply(data: Buffer, `operation-attributes-tag`: AnonCompression): PrintJobRequest = {
+  def apply(data: Buffer, `operation-attributes-tag`: typingsSlinky.ipp.anon.Compression): PrintJobRequest = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     __obj.updateDynamic("operation-attributes-tag")(`operation-attributes-tag`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrintJobRequest]
@@ -33,7 +32,7 @@ object PrintJobRequest {
         ret
     }
     @scala.inline
-    def `withOperation-attributes-tag`(value: AnonCompression): Self = {
+    def `withOperation-attributes-tag`(value: typingsSlinky.ipp.anon.Compression): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("operation-attributes-tag")(value.asInstanceOf[js.Any])
         ret

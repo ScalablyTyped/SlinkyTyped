@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartTrendlineLabelData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartTrendlineLabelLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartTrendlineLabelUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Bottom
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Center
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Distributed
@@ -23,9 +23,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.8]
   */
-@JSGlobal("Excel.ChartTrendlineLabel")
 @js.native
-class ChartTrendlineLabel () extends ClientObject {
+trait ChartTrendlineLabel extends ClientObject {
   /**
     *
     * Boolean value representing if trendline label automatically generates appropriate text based on context.
@@ -129,7 +128,7 @@ class ChartTrendlineLabel () extends ClientObject {
     */
   def load(): ChartTrendlineLabel = js.native
   def load(options: ChartTrendlineLabelLoadOptions): ChartTrendlineLabel = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartTrendlineLabel = js.native
+  def load(propertyNamesAndPaths: Expand): ChartTrendlineLabel = js.native
   def load(propertyNames: String): ChartTrendlineLabel = js.native
   def load(propertyNames: js.Array[String]): ChartTrendlineLabel = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

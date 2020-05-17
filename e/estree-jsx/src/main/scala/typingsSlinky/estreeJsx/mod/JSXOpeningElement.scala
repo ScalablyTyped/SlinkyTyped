@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait JSXOpeningElement
   extends JSXBoundaryElement
-     with _Node {
+     with Node {
   var attributes: js.Array[JSXAttribute | JSXSpreadAttribute] = js.native
   var selfClosing: Boolean = js.native
   @JSName("type")

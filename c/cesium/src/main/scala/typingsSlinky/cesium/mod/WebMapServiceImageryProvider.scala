@@ -1,8 +1,8 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonCrs
-import typingsSlinky.cesium.AnonFormat
-import typingsSlinky.cesium.AnonRequest
+import typingsSlinky.cesium.anon.Crs
+import typingsSlinky.cesium.anon.Format
+import typingsSlinky.cesium.anon.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "WebMapServiceImageryProvider")
 @js.native
 class WebMapServiceImageryProvider protected () extends ImageryProvider {
-  def this(options: AnonCrs) = this()
+  def this(options: Crs) = this()
   val url: String = js.native
 }
 
@@ -18,7 +18,7 @@ class WebMapServiceImageryProvider protected () extends ImageryProvider {
 @JSImport("cesium", "WebMapServiceImageryProvider")
 @js.native
 object WebMapServiceImageryProvider extends js.Object {
-  var DefaultParameters: AnonFormat = js.native
-  var GetFeatureInfoDefaultParameters: AnonRequest = js.native
+  var DefaultParameters: Format = js.native
+  var GetFeatureInfoDefaultParameters: Request = js.native
 }
 

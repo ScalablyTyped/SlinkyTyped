@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait OptionsObject extends js.Object {
+trait OptionsObject extends Options {
   var chars: js.UndefOr[String] = js.native
   var length: js.UndefOr[Double] = js.native
 }

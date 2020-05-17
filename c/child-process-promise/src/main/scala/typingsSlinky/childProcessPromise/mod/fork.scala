@@ -1,6 +1,6 @@
 package typingsSlinky.childProcessPromise.mod
 
-import typingsSlinky.childProcessPromise.ReadonlyOptionsForkOption
+import typingsSlinky.childProcessPromise.anon.ReadonlyOptionsForkOption
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.commonErrors.mod
 
-import typingsSlinky.commonErrors.AnonArgs
+import typingsSlinky.commonErrors.anon.Args
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,6 +24,6 @@ object helpers extends js.Object {
     *                                message.
     */
   def generateClass(name: String): ErrorConstructor = js.native
-  def generateClass(name: String, options: AnonArgs): ErrorConstructor = js.native
+  def generateClass(name: String, options: Args): ErrorConstructor = js.native
 }
 

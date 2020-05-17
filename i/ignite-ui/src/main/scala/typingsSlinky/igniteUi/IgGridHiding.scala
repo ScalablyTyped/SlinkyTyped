@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -211,7 +211,7 @@ object IgGridHiding {
         ret
     }
     @scala.inline
-    def withColumnChooserButtonApplyClick(value: (/* event */ Event_, /* ui */ ColumnChooserButtonApplyClickEventUIParam) => Unit): Self = {
+    def withColumnChooserButtonApplyClick(value: (/* event */ Event, /* ui */ ColumnChooserButtonApplyClickEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserButtonApplyClick")(js.Any.fromFunction2(value))
         ret
@@ -247,7 +247,7 @@ object IgGridHiding {
         ret
     }
     @scala.inline
-    def withColumnChooserButtonResetClick(value: (/* event */ Event_, /* ui */ ColumnChooserButtonResetClickEventUIParam) => Unit): Self = {
+    def withColumnChooserButtonResetClick(value: (/* event */ Event, /* ui */ ColumnChooserButtonResetClickEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserButtonResetClick")(js.Any.fromFunction2(value))
         ret
@@ -271,7 +271,7 @@ object IgGridHiding {
         ret
     }
     @scala.inline
-    def withColumnChooserClosed(value: (/* event */ Event_, /* ui */ ColumnChooserClosedEventUIParam) => Unit): Self = {
+    def withColumnChooserClosed(value: (/* event */ Event, /* ui */ ColumnChooserClosedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserClosed")(js.Any.fromFunction2(value))
         ret
@@ -283,7 +283,7 @@ object IgGridHiding {
         ret
     }
     @scala.inline
-    def withColumnChooserClosing(value: (/* event */ Event_, /* ui */ ColumnChooserClosingEventUIParam) => Unit): Self = {
+    def withColumnChooserClosing(value: (/* event */ Event, /* ui */ ColumnChooserClosingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserClosing")(js.Any.fromFunction2(value))
         ret
@@ -307,7 +307,7 @@ object IgGridHiding {
         ret
     }
     @scala.inline
-    def withColumnChooserContentsRendered(value: (/* event */ Event_, /* ui */ ColumnChooserContentsRenderedEventUIParam) => Unit): Self = {
+    def withColumnChooserContentsRendered(value: (/* event */ Event, /* ui */ ColumnChooserContentsRenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserContentsRendered")(js.Any.fromFunction2(value))
         ret
@@ -319,7 +319,7 @@ object IgGridHiding {
         ret
     }
     @scala.inline
-    def withColumnChooserContentsRendering(value: (/* event */ Event_, /* ui */ ColumnChooserContentsRenderingEventUIParam) => Unit): Self = {
+    def withColumnChooserContentsRendering(value: (/* event */ Event, /* ui */ ColumnChooserContentsRenderingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserContentsRendering")(js.Any.fromFunction2(value))
         ret
@@ -379,7 +379,7 @@ object IgGridHiding {
         ret
     }
     @scala.inline
-    def withColumnChooserMoving(value: (/* event */ Event_, /* ui */ ColumnChooserMovingEventUIParam) => Unit): Self = {
+    def withColumnChooserMoving(value: (/* event */ Event, /* ui */ ColumnChooserMovingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserMoving")(js.Any.fromFunction2(value))
         ret
@@ -391,7 +391,7 @@ object IgGridHiding {
         ret
     }
     @scala.inline
-    def withColumnChooserOpened(value: (/* event */ Event_, /* ui */ ColumnChooserOpenedEventUIParam) => Unit): Self = {
+    def withColumnChooserOpened(value: (/* event */ Event, /* ui */ ColumnChooserOpenedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserOpened")(js.Any.fromFunction2(value))
         ret
@@ -403,7 +403,7 @@ object IgGridHiding {
         ret
     }
     @scala.inline
-    def withColumnChooserOpening(value: (/* event */ Event_, /* ui */ ColumnChooserOpeningEventUIParam) => Unit): Self = {
+    def withColumnChooserOpening(value: (/* event */ Event, /* ui */ ColumnChooserOpeningEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnChooserOpening")(js.Any.fromFunction2(value))
         ret
@@ -451,7 +451,7 @@ object IgGridHiding {
         ret
     }
     @scala.inline
-    def withColumnHidden(value: (/* event */ Event_, /* ui */ ColumnHiddenEventUIParam) => Unit): Self = {
+    def withColumnHidden(value: (/* event */ Event, /* ui */ ColumnHiddenEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnHidden")(js.Any.fromFunction2(value))
         ret
@@ -475,7 +475,7 @@ object IgGridHiding {
         ret
     }
     @scala.inline
-    def withColumnHiding(value: (/* event */ Event_, /* ui */ ColumnHidingEventUIParam) => Unit): Self = {
+    def withColumnHiding(value: (/* event */ Event, /* ui */ ColumnHidingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnHiding")(js.Any.fromFunction2(value))
         ret
@@ -487,7 +487,7 @@ object IgGridHiding {
         ret
     }
     @scala.inline
-    def withColumnHidingRefused(value: (/* event */ Event_, /* ui */ ColumnHidingRefusedEventUIParam) => Unit): Self = {
+    def withColumnHidingRefused(value: (/* event */ Event, /* ui */ ColumnHidingRefusedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnHidingRefused")(js.Any.fromFunction2(value))
         ret
@@ -511,7 +511,7 @@ object IgGridHiding {
         ret
     }
     @scala.inline
-    def withColumnShowing(value: (/* event */ Event_, /* ui */ ColumnShowingEventUIParam) => Unit): Self = {
+    def withColumnShowing(value: (/* event */ Event, /* ui */ ColumnShowingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnShowing")(js.Any.fromFunction2(value))
         ret
@@ -523,7 +523,7 @@ object IgGridHiding {
         ret
     }
     @scala.inline
-    def withColumnShowingRefused(value: (/* event */ Event_, /* ui */ ColumnShowingRefusedEventUIParam) => Unit): Self = {
+    def withColumnShowingRefused(value: (/* event */ Event, /* ui */ ColumnShowingRefusedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnShowingRefused")(js.Any.fromFunction2(value))
         ret
@@ -535,7 +535,7 @@ object IgGridHiding {
         ret
     }
     @scala.inline
-    def withColumnShown(value: (/* event */ Event_, /* ui */ ColumnShownEventUIParam) => Unit): Self = {
+    def withColumnShown(value: (/* event */ Event, /* ui */ ColumnShownEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnShown")(js.Any.fromFunction2(value))
         ret
@@ -631,7 +631,7 @@ object IgGridHiding {
         ret
     }
     @scala.inline
-    def withMultiColumnHiding(value: (/* event */ Event_, /* ui */ MultiColumnHidingEventUIParam) => Unit): Self = {
+    def withMultiColumnHiding(value: (/* event */ Event, /* ui */ MultiColumnHidingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("multiColumnHiding")(js.Any.fromFunction2(value))
         ret

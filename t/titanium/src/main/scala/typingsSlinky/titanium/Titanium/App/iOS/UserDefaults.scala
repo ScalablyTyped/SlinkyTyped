@@ -1,6 +1,6 @@
 package typingsSlinky.titanium.Titanium.App.iOS
 
-import typingsSlinky.titanium.Titanium.App.Properties
+import typingsSlinky.titanium.Titanium.Proxy
 import typingsSlinky.titanium.titaniumStrings.change
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 			 * of the UserDefaults to be specified at creation time.
 			 */
 @js.native
-trait UserDefaults extends Properties {
+trait UserDefaults extends Proxy {
   /**
   				 * Sets the name of the suite to be used to access UserDefaults.
   				 */

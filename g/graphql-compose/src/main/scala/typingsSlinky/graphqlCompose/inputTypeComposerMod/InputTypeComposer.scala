@@ -9,10 +9,11 @@ import typingsSlinky.graphqlCompose.definitionsMod.Extensions
 import typingsSlinky.graphqlCompose.definitionsMod.ExtensionsDirective
 import typingsSlinky.graphqlCompose.enumTypeComposerMod.EnumTypeComposer
 import typingsSlinky.graphqlCompose.graphqlMod.GraphQLInputObjectType
+import typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeArgumentType
 import typingsSlinky.graphqlCompose.scalarTypeComposerMod.ScalarTypeComposer
+import typingsSlinky.graphqlCompose.schemaComposerMod.AnyComposeType
+import typingsSlinky.graphqlCompose.schemaComposerMod.AnyType
 import typingsSlinky.graphqlCompose.schemaComposerMod.SchemaComposer
-import typingsSlinky.graphqlCompose.schemaComposerMod._AnyComposeType
-import typingsSlinky.graphqlCompose.schemaComposerMod._AnyType
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,8 +22,10 @@ import scala.scalajs.js.annotation._
 @JSImport("graphql-compose/lib/InputTypeComposer", "InputTypeComposer")
 @js.native
 class InputTypeComposer[TContext] protected ()
-  extends _AnyComposeType[TContext]
-     with _AnyType[TContext] {
+  extends ComposeArgumentType
+     with AnyComposeType[TContext]
+     with AnyType[TContext]
+     with ComposeInputType {
   def this(gqType: GraphQLInputObjectType, schemaComposer: SchemaComposer[TContext]) = this()
   var gqType: GraphQLInputObjectTypeExtended = js.native
   var schemaComposer: SchemaComposer[TContext] = js.native

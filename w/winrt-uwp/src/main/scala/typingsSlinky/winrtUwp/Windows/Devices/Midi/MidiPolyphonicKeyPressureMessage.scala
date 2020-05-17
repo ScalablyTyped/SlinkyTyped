@@ -6,16 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a MIDI message that specifies the polyphonic key pressure. */
-@JSGlobal("Windows.Devices.Midi.MidiPolyphonicKeyPressureMessage")
 @js.native
-class MidiPolyphonicKeyPressureMessage protected () extends js.Object {
-  /**
-    * Creates a new MidiPolyphonicKeyPressureMessage object.
-    * @param channel The channel from 0-15 that this message applies to.
-    * @param note The note which is specified as a value from 0-127.
-    * @param pressure The polyphonic key pressure which is specified as a value from 0-127.
-    */
-  def this(channel: Double, note: Double, pressure: Double) = this()
+trait MidiPolyphonicKeyPressureMessage extends js.Object {
   /** Gets the channel from 0-15 that this message applies to. */
   var channel: Double = js.native
   /** Gets the note which is specified as a value from 0-127. */
@@ -28,5 +20,65 @@ class MidiPolyphonicKeyPressureMessage protected () extends js.Object {
   var timestamp: Double = js.native
   /** Gets the type of this MIDI message. */
   var `type`: MidiMessageType = js.native
+}
+
+object MidiPolyphonicKeyPressureMessage {
+  @scala.inline
+  def apply(
+    channel: Double,
+    note: Double,
+    pressure: Double,
+    rawData: IBuffer,
+    timestamp: Double,
+    `type`: MidiMessageType
+  ): MidiPolyphonicKeyPressureMessage = {
+    val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], note = note.asInstanceOf[js.Any], pressure = pressure.asInstanceOf[js.Any], rawData = rawData.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MidiPolyphonicKeyPressureMessage]
+  }
+  @scala.inline
+  implicit class MidiPolyphonicKeyPressureMessageOps[Self <: MidiPolyphonicKeyPressureMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChannel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNote(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPressure(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pressure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRawData(value: IBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: MidiMessageType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

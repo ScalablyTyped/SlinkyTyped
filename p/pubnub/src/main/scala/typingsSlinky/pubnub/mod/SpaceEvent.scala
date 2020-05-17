@@ -1,6 +1,6 @@
 package typingsSlinky.pubnub.mod
 
-import typingsSlinky.pubnub.AnonEvent
+import typingsSlinky.pubnub.anon.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SpaceEvent extends js.Object {
   var channel: String = js.native
-  var message: AnonEvent = js.native
+  var message: Event = js.native
   var publisher: String = js.native
   var subscription: String = js.native
   var timetoken: String = js.native
@@ -16,7 +16,7 @@ trait SpaceEvent extends js.Object {
 
 object SpaceEvent {
   @scala.inline
-  def apply(channel: String, message: AnonEvent, publisher: String, subscription: String, timetoken: String): SpaceEvent = {
+  def apply(channel: String, message: Event, publisher: String, subscription: String, timetoken: String): SpaceEvent = {
     val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], publisher = publisher.asInstanceOf[js.Any], subscription = subscription.asInstanceOf[js.Any], timetoken = timetoken.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpaceEvent]
   }
@@ -33,7 +33,7 @@ object SpaceEvent {
         ret
     }
     @scala.inline
-    def withMessage(value: AnonEvent): Self = {
+    def withMessage(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
         ret

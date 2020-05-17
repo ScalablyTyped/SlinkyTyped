@@ -22,7 +22,7 @@ package object mod {
     scala.Unit
   ]
   type OnSuggestionSelected[TSuggestion] = js.Function2[
-    slinky.core.SyntheticEvent[org.scalajs.dom.raw.EventTarget with js.Any, typingsSlinky.std.Event_], 
+    slinky.core.SyntheticEvent[org.scalajs.dom.raw.EventTarget with js.Any, org.scalajs.dom.raw.Event], 
     /* data */ typingsSlinky.reactAutosuggest.mod.SuggestionSelectedEventData[TSuggestion], 
     scala.Unit
   ]
@@ -46,5 +46,4 @@ package object mod {
     /* request */ typingsSlinky.reactAutosuggest.mod.SuggestionsFetchRequestedParams, 
     scala.Unit
   ]
-  type Theme = (typingsSlinky.std.Record[java.lang.String, java.lang.String | typingsSlinky.react.mod.CSSProperties]) | typingsSlinky.reactAutosuggest.PartialRecordThemeKeystri
 }

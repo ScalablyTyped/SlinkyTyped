@@ -1,8 +1,8 @@
 package typingsSlinky.babylonjs.physicsImpostorMod
 
-import typingsSlinky.babylonjs.AnonBody
-import typingsSlinky.babylonjs.AnonCallback
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
+import typingsSlinky.babylonjs.anon.Body
+import typingsSlinky.babylonjs.anon.Callback
 import typingsSlinky.babylonjs.boneMod.Bone
 import typingsSlinky.babylonjs.mathVectorMod.Quaternion
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
@@ -69,7 +69,7 @@ class PhysicsImpostor protected () extends js.Object {
   var _onAfterPhysicsStepCallbacks: js.Any = js.native
   var _onBeforePhysicsStepCallbacks: js.Any = js.native
   /** @hidden */
-  var _onPhysicsCollideCallbacks: js.Array[AnonCallback] = js.native
+  var _onPhysicsCollideCallbacks: js.Array[Callback] = js.native
   var _options: js.Any = js.native
   var _parent: js.Any = js.native
   var _physicsBody: js.Any = js.native
@@ -267,7 +267,7 @@ class PhysicsImpostor protected () extends js.Object {
   /**
     * event and body object due to cannon's event-based architecture.
     */
-  def onCollide(e: AnonBody): Unit = js.native
+  def onCollide(e: Body): Unit = js.native
   /**
     * Get the parent of the physics imposter
     * @returns Physics imposter or null

@@ -1,9 +1,9 @@
 package typingsSlinky.backstopjs.mod
 
-import typingsSlinky.backstopjs.AnonArgs
-import typingsSlinky.backstopjs.AnonBitmapsreference
-import typingsSlinky.backstopjs.AnonErrorColor
-import typingsSlinky.backstopjs.AnonFormat
+import typingsSlinky.backstopjs.anon.Args
+import typingsSlinky.backstopjs.anon.Bitmapsreference
+import typingsSlinky.backstopjs.anon.ErrorColor
+import typingsSlinky.backstopjs.anon.Format
 import typingsSlinky.backstopjs.backstopjsStrings.CI
 import typingsSlinky.backstopjs.backstopjsStrings.browser
 import typingsSlinky.backstopjs.backstopjsStrings.chromy
@@ -18,18 +18,18 @@ trait Config extends js.Object {
   var asyncCaptureLimit: js.UndefOr[Double] = js.native
   var asyncCompareLimit: js.UndefOr[Double] = js.native
   var baseUrl: js.UndefOr[String] = js.native
-  var ci: js.UndefOr[AnonFormat] = js.native
+  var ci: js.UndefOr[Format] = js.native
   var debug: js.UndefOr[Boolean] = js.native
   var debugWindow: js.UndefOr[Boolean] = js.native
   var dockerCommandTemplate: js.UndefOr[String] = js.native
   var engine: js.UndefOr[chromy | puppeteer] = js.native
-  var engineOptions: js.UndefOr[AnonArgs] = js.native
+  var engineOptions: js.UndefOr[Args] = js.native
   var id: String = js.native
   var onBeforeScript: js.UndefOr[String] = js.native
   var onReadyScript: js.UndefOr[String] = js.native
-  var paths: js.UndefOr[AnonBitmapsreference] = js.native
+  var paths: js.UndefOr[Bitmapsreference] = js.native
   var report: js.UndefOr[js.Array[browser | CI | json]] = js.native
-  var resembleOutputOptions: js.UndefOr[AnonErrorColor] = js.native
+  var resembleOutputOptions: js.UndefOr[ErrorColor] = js.native
   var scenarios: js.Array[Scenario] = js.native
   var viewports: js.Array[Viewport] = js.native
 }
@@ -101,7 +101,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withCi(value: AnonFormat): Self = {
+    def withCi(value: Format): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ci")(value.asInstanceOf[js.Any])
         ret
@@ -161,7 +161,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withEngineOptions(value: AnonArgs): Self = {
+    def withEngineOptions(value: Args): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("engineOptions")(value.asInstanceOf[js.Any])
         ret
@@ -197,7 +197,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withPaths(value: AnonBitmapsreference): Self = {
+    def withPaths(value: Bitmapsreference): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
         ret
@@ -221,7 +221,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withResembleOutputOptions(value: AnonErrorColor): Self = {
+    def withResembleOutputOptions(value: ErrorColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resembleOutputOptions")(value.asInstanceOf[js.Any])
         ret

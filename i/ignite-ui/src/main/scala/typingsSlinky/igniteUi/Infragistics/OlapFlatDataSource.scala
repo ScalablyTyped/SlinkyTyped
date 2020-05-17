@@ -1,14 +1,11 @@
 package typingsSlinky.igniteUi.Infragistics
 
-import typingsSlinky.igniteUi.OlapFlatDataSourceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Infragistics.OlapFlatDataSource")
 @js.native
-class OlapFlatDataSource protected () extends js.Object {
-  def this(options: OlapFlatDataSourceOptions) = this()
+trait OlapFlatDataSource extends js.Object {
   /**
   	 * Adds a hierarchy to the columns of the pivot grid.
   	 *
@@ -238,5 +235,309 @@ class OlapFlatDataSource protected () extends js.Object {
   	 * Performs an update with the list of pending changes and updates the data source result.
   	 */
   def update(): js.Object = js.native
+}
+
+object OlapFlatDataSource {
+  @scala.inline
+  def apply(
+    addColumnItem: js.Object => Unit,
+    addFilterItem: js.Object => Unit,
+    addFilterMember: (String, String) => Unit,
+    addMeasureItem: js.Object => Unit,
+    addRowItem: js.Object => Unit,
+    clearPendingChanges: () => Unit,
+    collapseTupleMember: (String, Double, Double) => Unit,
+    columnAxis: () => js.Array[_],
+    cube: () => js.Object,
+    cubes: () => js.Array[_],
+    expandTupleMember: (String, Double, Double) => Unit,
+    filters: () => js.Array[_],
+    getCoreElement: (js.Function, js.Object) => js.Object,
+    getCoreElements: (js.Function, js.Object) => js.Object,
+    getDimension: String => js.Object,
+    getFilterMemberNames: String => js.Array[_],
+    getHierarchy: String => js.Object,
+    getLevel: String => js.Object,
+    getMeasure: String => js.Object,
+    getMeasureList: () => js.Object,
+    getMembersOfHierarchy: String => Unit,
+    getMembersOfLevel: String => Unit,
+    getMembersOfMember: String => Unit,
+    initialize: () => js.Object,
+    isInitialized: () => Boolean,
+    isModified: () => Boolean,
+    isUpdating: () => Boolean,
+    measures: () => js.Array[_],
+    metadataTree: () => js.Object,
+    removeAllFilterMembers: String => Unit,
+    removeColumnItem: js.Object => Unit,
+    removeFilterItem: js.Object => Unit,
+    removeFilterMember: (String, String) => Unit,
+    removeMeasureItem: js.Object => Unit,
+    removeRowItem: js.Object => Unit,
+    result: () => js.Object,
+    rowAxis: () => js.Array[_],
+    setCube: String => js.Object,
+    setMeasureListIndex: Double => Unit,
+    setMeasureListLocation: js.Object => Unit,
+    update: () => js.Object
+  ): OlapFlatDataSource = {
+    val __obj = js.Dynamic.literal(addColumnItem = js.Any.fromFunction1(addColumnItem), addFilterItem = js.Any.fromFunction1(addFilterItem), addFilterMember = js.Any.fromFunction2(addFilterMember), addMeasureItem = js.Any.fromFunction1(addMeasureItem), addRowItem = js.Any.fromFunction1(addRowItem), clearPendingChanges = js.Any.fromFunction0(clearPendingChanges), collapseTupleMember = js.Any.fromFunction3(collapseTupleMember), columnAxis = js.Any.fromFunction0(columnAxis), cube = js.Any.fromFunction0(cube), cubes = js.Any.fromFunction0(cubes), expandTupleMember = js.Any.fromFunction3(expandTupleMember), filters = js.Any.fromFunction0(filters), getCoreElement = js.Any.fromFunction2(getCoreElement), getCoreElements = js.Any.fromFunction2(getCoreElements), getDimension = js.Any.fromFunction1(getDimension), getFilterMemberNames = js.Any.fromFunction1(getFilterMemberNames), getHierarchy = js.Any.fromFunction1(getHierarchy), getLevel = js.Any.fromFunction1(getLevel), getMeasure = js.Any.fromFunction1(getMeasure), getMeasureList = js.Any.fromFunction0(getMeasureList), getMembersOfHierarchy = js.Any.fromFunction1(getMembersOfHierarchy), getMembersOfLevel = js.Any.fromFunction1(getMembersOfLevel), getMembersOfMember = js.Any.fromFunction1(getMembersOfMember), initialize = js.Any.fromFunction0(initialize), isInitialized = js.Any.fromFunction0(isInitialized), isModified = js.Any.fromFunction0(isModified), isUpdating = js.Any.fromFunction0(isUpdating), measures = js.Any.fromFunction0(measures), metadataTree = js.Any.fromFunction0(metadataTree), removeAllFilterMembers = js.Any.fromFunction1(removeAllFilterMembers), removeColumnItem = js.Any.fromFunction1(removeColumnItem), removeFilterItem = js.Any.fromFunction1(removeFilterItem), removeFilterMember = js.Any.fromFunction2(removeFilterMember), removeMeasureItem = js.Any.fromFunction1(removeMeasureItem), removeRowItem = js.Any.fromFunction1(removeRowItem), result = js.Any.fromFunction0(result), rowAxis = js.Any.fromFunction0(rowAxis), setCube = js.Any.fromFunction1(setCube), setMeasureListIndex = js.Any.fromFunction1(setMeasureListIndex), setMeasureListLocation = js.Any.fromFunction1(setMeasureListLocation), update = js.Any.fromFunction0(update))
+    __obj.asInstanceOf[OlapFlatDataSource]
+  }
+  @scala.inline
+  implicit class OlapFlatDataSourceOps[Self <: OlapFlatDataSource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddColumnItem(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addColumnItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAddFilterItem(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addFilterItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAddFilterMember(value: (String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addFilterMember")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withAddMeasureItem(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addMeasureItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAddRowItem(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addRowItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withClearPendingChanges(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearPendingChanges")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withCollapseTupleMember(value: (String, Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseTupleMember")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withColumnAxis(value: () => js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnAxis")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withCube(value: () => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cube")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withCubes(value: () => js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cubes")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withExpandTupleMember(value: (String, Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expandTupleMember")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withFilters(value: () => js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetCoreElement(value: (js.Function, js.Object) => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCoreElement")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetCoreElements(value: (js.Function, js.Object) => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCoreElements")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetDimension(value: String => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDimension")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetFilterMemberNames(value: String => js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilterMemberNames")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetHierarchy(value: String => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getHierarchy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetLevel(value: String => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLevel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetMeasure(value: String => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMeasure")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetMeasureList(value: () => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMeasureList")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMembersOfHierarchy(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMembersOfHierarchy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetMembersOfLevel(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMembersOfLevel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetMembersOfMember(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMembersOfMember")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInitialize(value: () => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsInitialized(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInitialized")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsModified(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isModified")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsUpdating(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isUpdating")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withMeasures(value: () => js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("measures")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withMetadataTree(value: () => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadataTree")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveAllFilterMembers(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAllFilterMembers")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveColumnItem(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeColumnItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveFilterItem(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFilterItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveFilterMember(value: (String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFilterMember")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveMeasureItem(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeMeasureItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveRowItem(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeRowItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withResult(value: () => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRowAxis(value: () => js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowAxis")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetCube(value: String => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setCube")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetMeasureListIndex(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMeasureListIndex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetMeasureListLocation(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMeasureListLocation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: () => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

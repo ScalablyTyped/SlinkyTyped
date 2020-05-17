@@ -10,13 +10,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait BasicLayoutContext extends js.Object {
   var breadcrumb: StringDictionary[MenuDataItem] = js.native
-  var location: js.Any = js.native
+  var location: js.UndefOr[js.Any] = js.native
 }
 
 object BasicLayoutContext {
   @scala.inline
-  def apply(breadcrumb: StringDictionary[MenuDataItem], location: js.Any): BasicLayoutContext = {
-    val __obj = js.Dynamic.literal(breadcrumb = breadcrumb.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any])
+  def apply(breadcrumb: StringDictionary[MenuDataItem]): BasicLayoutContext = {
+    val __obj = js.Dynamic.literal(breadcrumb = breadcrumb.asInstanceOf[js.Any])
     __obj.asInstanceOf[BasicLayoutContext]
   }
   @scala.inline
@@ -35,6 +35,12 @@ object BasicLayoutContext {
     def withLocation(value: js.Any): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocation: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(js.undefined)
         ret
     }
   }

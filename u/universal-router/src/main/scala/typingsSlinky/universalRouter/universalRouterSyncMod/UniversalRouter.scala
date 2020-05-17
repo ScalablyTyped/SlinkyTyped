@@ -1,7 +1,7 @@
 package typingsSlinky.universalRouter.universalRouterSyncMod
 
 import typingsSlinky.std.Map
-import typingsSlinky.universalRouter.AnonRouterUniversalRouter
+import typingsSlinky.universalRouter.anon.RouterUniversalRouter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UniversalRouter[C /* <: Context */, R] extends js.Object {
   var baseUrl: String = js.native
-  var context: C with (AnonRouterUniversalRouter[C, R]) = js.native
+  var context: C with (RouterUniversalRouter[C, R]) = js.native
   var errorHandler: js.UndefOr[ErrorHandler[C, R]] = js.native
   @JSName("resolveRoute")
   var resolveRoute_Original: ResolveRoute[C, R] = js.native

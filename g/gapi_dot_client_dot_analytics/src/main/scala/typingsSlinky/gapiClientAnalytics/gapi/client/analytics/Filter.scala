@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientAnalytics.gapi.client.analytics
 
-import typingsSlinky.gapiClientAnalytics.AnonCaseSensitive
-import typingsSlinky.gapiClientAnalytics.AnonField
-import typingsSlinky.gapiClientAnalytics.AnonFieldIndex
-import typingsSlinky.gapiClientAnalytics.AnonHref
+import typingsSlinky.gapiClientAnalytics.anon.CaseSensitive
+import typingsSlinky.gapiClientAnalytics.anon.Field
+import typingsSlinky.gapiClientAnalytics.anon.FieldIndex
+import typingsSlinky.gapiClientAnalytics.anon.Href
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait Filter extends js.Object {
   /** Account ID to which this filter belongs. */
   var accountId: js.UndefOr[String] = js.native
   /** Details for the filter of the type ADVANCED. */
-  var advancedDetails: js.UndefOr[AnonCaseSensitive] = js.native
+  var advancedDetails: js.UndefOr[CaseSensitive] = js.native
   /** Time this filter was created. */
   var created: js.UndefOr[String] = js.native
   /** Details for the filter of the type EXCLUDE. */
@@ -25,13 +25,13 @@ trait Filter extends js.Object {
   /** Resource type for Analytics filter. */
   var kind: js.UndefOr[String] = js.native
   /** Details for the filter of the type LOWER. */
-  var lowercaseDetails: js.UndefOr[AnonField] = js.native
+  var lowercaseDetails: js.UndefOr[Field] = js.native
   /** Name of this filter. */
   var name: js.UndefOr[String] = js.native
   /** Parent link for this filter. Points to the account to which this filter belongs. */
-  var parentLink: js.UndefOr[AnonHref] = js.native
+  var parentLink: js.UndefOr[Href] = js.native
   /** Details for the filter of the type SEARCH_AND_REPLACE. */
-  var searchAndReplaceDetails: js.UndefOr[AnonFieldIndex] = js.native
+  var searchAndReplaceDetails: js.UndefOr[FieldIndex] = js.native
   /** Link for this filter. */
   var selfLink: js.UndefOr[String] = js.native
   /** Type of this filter. Possible values are INCLUDE, EXCLUDE, LOWERCASE, UPPERCASE, SEARCH_AND_REPLACE and ADVANCED. */
@@ -39,7 +39,7 @@ trait Filter extends js.Object {
   /** Time this filter was last modified. */
   var updated: js.UndefOr[String] = js.native
   /** Details for the filter of the type UPPER. */
-  var uppercaseDetails: js.UndefOr[AnonField] = js.native
+  var uppercaseDetails: js.UndefOr[Field] = js.native
 }
 
 object Filter {
@@ -67,7 +67,7 @@ object Filter {
         ret
     }
     @scala.inline
-    def withAdvancedDetails(value: AnonCaseSensitive): Self = {
+    def withAdvancedDetails(value: CaseSensitive): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("advancedDetails")(value.asInstanceOf[js.Any])
         ret
@@ -139,7 +139,7 @@ object Filter {
         ret
     }
     @scala.inline
-    def withLowercaseDetails(value: AnonField): Self = {
+    def withLowercaseDetails(value: Field): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lowercaseDetails")(value.asInstanceOf[js.Any])
         ret
@@ -163,7 +163,7 @@ object Filter {
         ret
     }
     @scala.inline
-    def withParentLink(value: AnonHref): Self = {
+    def withParentLink(value: Href): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parentLink")(value.asInstanceOf[js.Any])
         ret
@@ -175,7 +175,7 @@ object Filter {
         ret
     }
     @scala.inline
-    def withSearchAndReplaceDetails(value: AnonFieldIndex): Self = {
+    def withSearchAndReplaceDetails(value: FieldIndex): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("searchAndReplaceDetails")(value.asInstanceOf[js.Any])
         ret
@@ -223,7 +223,7 @@ object Filter {
         ret
     }
     @scala.inline
-    def withUppercaseDetails(value: AnonField): Self = {
+    def withUppercaseDetails(value: Field): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("uppercaseDetails")(value.asInstanceOf[js.Any])
         ret

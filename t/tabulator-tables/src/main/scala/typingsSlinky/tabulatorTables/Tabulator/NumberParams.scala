@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait NumberParams
   extends SharedEditorParams
-     with _EditorParams {
+     with EditorParams {
   var max: js.UndefOr[Double] = js.native
   // range,number
   var min: js.UndefOr[Double] = js.native

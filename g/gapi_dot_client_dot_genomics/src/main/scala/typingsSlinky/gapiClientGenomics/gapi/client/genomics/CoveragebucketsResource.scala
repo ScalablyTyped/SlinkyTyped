@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientGenomics.gapi.client.genomics
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientGenomics.AnonEnd
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientGenomics.anon.End
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,12 +23,12 @@ trait CoveragebucketsResource extends js.Object {
     * levels'. The caller must have READ permissions for the target read group
     * set.
     */
-  def list(request: AnonEnd): Request_[ListCoverageBucketsResponse] = js.native
+  def list(request: End): Request[ListCoverageBucketsResponse] = js.native
 }
 
 object CoveragebucketsResource {
   @scala.inline
-  def apply(list: AnonEnd => Request_[ListCoverageBucketsResponse]): CoveragebucketsResource = {
+  def apply(list: End => Request[ListCoverageBucketsResponse]): CoveragebucketsResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[CoveragebucketsResource]
   }
@@ -39,7 +39,7 @@ object CoveragebucketsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withList(value: AnonEnd => Request_[ListCoverageBucketsResponse]): Self = {
+    def withList(value: End => Request[ListCoverageBucketsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

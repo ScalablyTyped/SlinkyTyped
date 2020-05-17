@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 			 * The feedback generator API is introduced in iOS 10 to handle the haptic feedback when using an iPhone 7 or
 			 * later devices.
 			 */
-@JSGlobal("Titanium.UI.iOS.FeedbackGenerator")
 @js.native
-class FeedbackGenerator () extends Proxy {
+trait FeedbackGenerator extends Proxy {
   /**
   				 * The style of the feedback generator you want to create. This property is only required when using <Titanium.UI.iOS.FEEDBACK_GENERATOR_TYPE_IMPACT>.
   				 */

@@ -1,10 +1,10 @@
 package typingsSlinky.openfin.nodeEnvMod
 
+import org.scalajs.dom.raw.Window
 import typingsSlinky.openfin.environmentMod.Environment
 import typingsSlinky.openfin.frameFrameMod.EntityType
 import typingsSlinky.openfin.identityMod.Identity
 import typingsSlinky.openfin.wireMod.NewConnectConfig
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ object NodeEnvironment {
     getCurrentEntityType: () => EntityType,
     getNextMessageId: () => js.Any,
     getRandomId: () => String,
-    getWebWindow: Identity => Window_,
+    getWebWindow: Identity => Window,
     isWindowExists: (String, String) => Boolean,
     messageCounter: js.Any,
     retrievePort: NewConnectConfig => js.Promise[Double],

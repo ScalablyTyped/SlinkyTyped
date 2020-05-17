@@ -1,11 +1,11 @@
 package typingsSlinky.hapiHapi.mod
 
 import typingsSlinky.hapiCatbox.mod.ClientOptions
-import typingsSlinky.hapiHapi.AnonEncoding
-import typingsSlinky.hapiHapi.AnonIsCaseSensitive
-import typingsSlinky.hapiHapi.AnonLog
-import typingsSlinky.hapiHapi.AnonMaxEventLoopDelay
-import typingsSlinky.hapiHapi.AnonParser
+import typingsSlinky.hapiHapi.anon.Encoding
+import typingsSlinky.hapiHapi.anon.IsCaseSensitive
+import typingsSlinky.hapiHapi.anon.Log
+import typingsSlinky.hapiHapi.anon.MaxEventLoopDelay
+import typingsSlinky.hapiHapi.anon.Parser
 import typingsSlinky.hapiHapi.hapiHapiBooleans.`false`
 import typingsSlinky.hapiMimos.mod.MimosOptions
 import typingsSlinky.node.httpMod.Server
@@ -71,7 +71,7 @@ trait ServerOptions extends js.Object {
     * or request to ['error']. To turn off all output set the log or request to false. To display all server logs, set the log or request to '*'. To disable all debug information, set debug to
     * false.
     */
-  var debug: js.UndefOr[`false` | AnonLog] = js.native
+  var debug: js.UndefOr[`false` | Log] = js.native
   /**
     * @default the operating system hostname and if not available, to 'localhost'.
     * The public hostname or IP address. Used to set server.info.host and server.info.uri and as address is none provided.
@@ -92,7 +92,7 @@ trait ServerOptions extends js.Object {
     * * maxRssBytes - maximum process RSS size over which incoming requests are rejected with an HTTP Server Timeout (503) response. Defaults to 0 (no limit).
     * * maxEventLoopDelay - maximum event loop delay duration in milliseconds over which incoming requests are rejected with an HTTP Server Timeout (503) response. Defaults to 0 (no limit).
     */
-  var load: js.UndefOr[AnonMaxEventLoopDelay] = js.native
+  var load: js.UndefOr[MaxEventLoopDelay] = js.native
   /**
     * @default none.
     * Options passed to the mimos module when generating the mime database used by the server (and accessed via server.mime):
@@ -119,14 +119,14 @@ trait ServerOptions extends js.Object {
   /**
     * Query parameter configuration.
     */
-  var query: js.UndefOr[AnonParser] = js.native
+  var query: js.UndefOr[Parser] = js.native
   /**
     * @default { isCaseSensitive: true, stripTrailingSlash: false }.
     * Controls how incoming request URIs are matched against the routing table:
     * * isCaseSensitive - determines whether the paths '/example' and '/EXAMPLE' are considered different resources. Defaults to true.
     * * stripTrailingSlash - removes trailing slashes on incoming paths. Defaults to false.
     */
-  var router: js.UndefOr[AnonIsCaseSensitive] = js.native
+  var router: js.UndefOr[IsCaseSensitive] = js.native
   /**
     * @default none.
     * A route options object used as the default configuration for every route.
@@ -146,7 +146,7 @@ trait ServerOptions extends js.Object {
     */
   // TODO I am not sure if I need to use all the server.state() definition (like the default value) OR only the options below. The v16 use "any" here.
   // state?: ServerStateCookieOptions;
-  var state: js.UndefOr[AnonEncoding] = js.native
+  var state: js.UndefOr[Encoding] = js.native
   /**
     * @default none.
     * Used to create an HTTPS connection. The tls object is passed unchanged to the node HTTPS server as described in the node HTTPS documentation.
@@ -232,7 +232,7 @@ object ServerOptions {
         ret
     }
     @scala.inline
-    def withDebug(value: `false` | AnonLog): Self = {
+    def withDebug(value: `false` | Log): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
         ret
@@ -268,7 +268,7 @@ object ServerOptions {
         ret
     }
     @scala.inline
-    def withLoad(value: AnonMaxEventLoopDelay): Self = {
+    def withLoad(value: MaxEventLoopDelay): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("load")(value.asInstanceOf[js.Any])
         ret
@@ -316,7 +316,7 @@ object ServerOptions {
         ret
     }
     @scala.inline
-    def withQuery(value: AnonParser): Self = {
+    def withQuery(value: Parser): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
         ret
@@ -328,7 +328,7 @@ object ServerOptions {
         ret
     }
     @scala.inline
-    def withRouter(value: AnonIsCaseSensitive): Self = {
+    def withRouter(value: IsCaseSensitive): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("router")(value.asInstanceOf[js.Any])
         ret
@@ -352,7 +352,7 @@ object ServerOptions {
         ret
     }
     @scala.inline
-    def withState(value: AnonEncoding): Self = {
+    def withState(value: Encoding): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
         ret

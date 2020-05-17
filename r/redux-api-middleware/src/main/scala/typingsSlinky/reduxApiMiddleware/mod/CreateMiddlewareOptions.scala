@@ -1,7 +1,7 @@
 package typingsSlinky.reduxApiMiddleware.mod
 
 import org.scalajs.dom.experimental.Response
-import typingsSlinky.reduxApiMiddleware.FnCall
+import typingsSlinky.reduxApiMiddleware.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

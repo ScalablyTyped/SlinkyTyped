@@ -1,18 +1,18 @@
 package typingsSlinky.gapiClientYoutubeanalytics.gapi.client.youtubeanalytics
 
-import typingsSlinky.gapiClientYoutubeanalytics.AnonItemCount
-import typingsSlinky.gapiClientYoutubeanalytics.AnonPublishedAt
+import typingsSlinky.gapiClientYoutubeanalytics.anon.ItemCount
+import typingsSlinky.gapiClientYoutubeanalytics.anon.PublishedAt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Group extends js.Object {
-  var contentDetails: js.UndefOr[AnonItemCount] = js.native
+  var contentDetails: js.UndefOr[ItemCount] = js.native
   var etag: js.UndefOr[String] = js.native
   var id: js.UndefOr[String] = js.native
   var kind: js.UndefOr[String] = js.native
-  var snippet: js.UndefOr[AnonPublishedAt] = js.native
+  var snippet: js.UndefOr[PublishedAt] = js.native
 }
 
 object Group {
@@ -28,7 +28,7 @@ object Group {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContentDetails(value: AnonItemCount): Self = {
+    def withContentDetails(value: ItemCount): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentDetails")(value.asInstanceOf[js.Any])
         ret
@@ -76,7 +76,7 @@ object Group {
         ret
     }
     @scala.inline
-    def withSnippet(value: AnonPublishedAt): Self = {
+    def withSnippet(value: PublishedAt): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("snippet")(value.asInstanceOf[js.Any])
         ret

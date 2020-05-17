@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -173,7 +173,7 @@ object IgBaseEditor {
         ret
     }
     @scala.inline
-    def withBlur(value: (/* event */ Event_, /* ui */ BlurEventUIParam) => Unit): Self = {
+    def withBlur(value: (/* event */ Event, /* ui */ BlurEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("blur")(js.Any.fromFunction2(value))
         ret
@@ -197,7 +197,7 @@ object IgBaseEditor {
         ret
     }
     @scala.inline
-    def withFocus(value: (/* event */ Event_, /* ui */ IgFocusEventUIParam) => Unit): Self = {
+    def withFocus(value: (/* event */ Event, /* ui */ IgFocusEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.Any.fromFunction2(value))
         ret
@@ -233,7 +233,7 @@ object IgBaseEditor {
         ret
     }
     @scala.inline
-    def withKeydown(value: (/* event */ Event_, /* ui */ KeydownEventUIParam) => Unit): Self = {
+    def withKeydown(value: (/* event */ Event, /* ui */ KeydownEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keydown")(js.Any.fromFunction2(value))
         ret
@@ -245,7 +245,7 @@ object IgBaseEditor {
         ret
     }
     @scala.inline
-    def withKeypress(value: (/* event */ Event_, /* ui */ KeypressEventUIParam) => Unit): Self = {
+    def withKeypress(value: (/* event */ Event, /* ui */ KeypressEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keypress")(js.Any.fromFunction2(value))
         ret
@@ -257,7 +257,7 @@ object IgBaseEditor {
         ret
     }
     @scala.inline
-    def withKeyup(value: (/* event */ Event_, /* ui */ KeyupEventUIParam) => Unit): Self = {
+    def withKeyup(value: (/* event */ Event, /* ui */ KeyupEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyup")(js.Any.fromFunction2(value))
         ret
@@ -293,7 +293,7 @@ object IgBaseEditor {
         ret
     }
     @scala.inline
-    def withMousedown(value: (/* event */ Event_, /* ui */ MousedownEventUIParam) => Unit): Self = {
+    def withMousedown(value: (/* event */ Event, /* ui */ MousedownEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mousedown")(js.Any.fromFunction2(value))
         ret
@@ -305,7 +305,7 @@ object IgBaseEditor {
         ret
     }
     @scala.inline
-    def withMousemove(value: (/* event */ Event_, /* ui */ MousemoveEventUIParam) => Unit): Self = {
+    def withMousemove(value: (/* event */ Event, /* ui */ MousemoveEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mousemove")(js.Any.fromFunction2(value))
         ret
@@ -317,7 +317,7 @@ object IgBaseEditor {
         ret
     }
     @scala.inline
-    def withMouseout(value: (/* event */ Event_, /* ui */ MouseoutEventUIParam) => Unit): Self = {
+    def withMouseout(value: (/* event */ Event, /* ui */ MouseoutEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mouseout")(js.Any.fromFunction2(value))
         ret
@@ -329,7 +329,7 @@ object IgBaseEditor {
         ret
     }
     @scala.inline
-    def withMouseover(value: (/* event */ Event_, /* ui */ MouseoverEventUIParam) => Unit): Self = {
+    def withMouseover(value: (/* event */ Event, /* ui */ MouseoverEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mouseover")(js.Any.fromFunction2(value))
         ret
@@ -341,7 +341,7 @@ object IgBaseEditor {
         ret
     }
     @scala.inline
-    def withMouseup(value: (/* event */ Event_, /* ui */ MouseupEventUIParam) => Unit): Self = {
+    def withMouseup(value: (/* event */ Event, /* ui */ MouseupEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mouseup")(js.Any.fromFunction2(value))
         ret
@@ -389,7 +389,7 @@ object IgBaseEditor {
         ret
     }
     @scala.inline
-    def withRendered(value: (/* event */ Event_, /* ui */ RenderedEventUIParam) => Unit): Self = {
+    def withRendered(value: (/* event */ Event, /* ui */ RenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rendered")(js.Any.fromFunction2(value))
         ret
@@ -401,7 +401,7 @@ object IgBaseEditor {
         ret
     }
     @scala.inline
-    def withRendering(value: (/* event */ Event_, /* ui */ RenderingEventUIParam) => Unit): Self = {
+    def withRendering(value: (/* event */ Event, /* ui */ RenderingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rendering")(js.Any.fromFunction2(value))
         ret
@@ -449,7 +449,7 @@ object IgBaseEditor {
         ret
     }
     @scala.inline
-    def withValueChanged(value: (/* event */ Event_, /* ui */ ValueChangedEventUIParam) => Unit): Self = {
+    def withValueChanged(value: (/* event */ Event, /* ui */ ValueChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("valueChanged")(js.Any.fromFunction2(value))
         ret
@@ -461,7 +461,7 @@ object IgBaseEditor {
         ret
     }
     @scala.inline
-    def withValueChanging(value: (/* event */ Event_, /* ui */ ValueChangingEventUIParam) => Unit): Self = {
+    def withValueChanging(value: (/* event */ Event, /* ui */ ValueChangingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("valueChanging")(js.Any.fromFunction2(value))
         ret

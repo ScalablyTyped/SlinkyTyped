@@ -1,7 +1,7 @@
 package typingsSlinky.simplSchema.mod
 
-import typingsSlinky.simplSchema.AnonEndPointsOnly
-import typingsSlinky.simplSchema.AnonKeepArrays
+import typingsSlinky.simplSchema.anon.EndPointsOnly
+import typingsSlinky.simplSchema.anon.KeepArrays
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,9 +14,9 @@ trait MongoObjectStatic extends js.Object {
   def affectsKey(key: String): js.Any = js.native
   def filterGenericKeys(test: js.Function0[Boolean]): Unit = js.native
   def forEachNode(func: js.Function0[Unit]): Unit = js.native
-  def forEachNode(func: js.Function0[Unit], options: AnonEndPointsOnly): Unit = js.native
+  def forEachNode(func: js.Function0[Unit], options: EndPointsOnly): Unit = js.native
   def getFlatObject(): js.Any = js.native
-  def getFlatObject(options: AnonKeepArrays): js.Any = js.native
+  def getFlatObject(options: KeepArrays): js.Any = js.native
   def getGenericKeyForPosition(position: String): js.Any = js.native
   def getInfoForKey(key: String): js.Any = js.native
   def getKeyForPosition(position: String): js.Any = js.native

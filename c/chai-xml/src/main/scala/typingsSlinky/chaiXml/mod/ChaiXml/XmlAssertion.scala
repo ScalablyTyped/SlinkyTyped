@@ -1,6 +1,6 @@
 package typingsSlinky.chaiXml.mod.ChaiXml
 
-import typingsSlinky.chaiXml.mod._Global_.Chai.Assertion
+import typingsSlinky.chaiXml.mod.global.Chai.Assertion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,7 @@
 package typingsSlinky.primereact.inplaceMod
 
-import typingsSlinky.primereact.AnonValueBoolean
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
+import typingsSlinky.primereact.anon.ValueBoolean
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,9 +12,9 @@ trait InplaceProps extends js.Object {
   var className: js.UndefOr[String] = js.native
   var closable: js.UndefOr[Boolean] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
-  var onClose: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onOpen: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onToggle: js.UndefOr[js.Function1[/* e */ AnonValueBoolean, Unit]] = js.native
+  var onClose: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onOpen: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onToggle: js.UndefOr[js.Function1[/* e */ ValueBoolean, Unit]] = js.native
   var style: js.UndefOr[js.Object] = js.native
   var tabIndex: js.UndefOr[String] = js.native
 }
@@ -80,7 +80,7 @@ object InplaceProps {
         ret
     }
     @scala.inline
-    def withOnClose(value: /* event */ Event_ => Unit): Self = {
+    def withOnClose(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction1(value))
         ret
@@ -92,7 +92,7 @@ object InplaceProps {
         ret
     }
     @scala.inline
-    def withOnOpen(value: /* event */ Event_ => Unit): Self = {
+    def withOnOpen(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.Any.fromFunction1(value))
         ret
@@ -104,7 +104,7 @@ object InplaceProps {
         ret
     }
     @scala.inline
-    def withOnToggle(value: /* e */ AnonValueBoolean => Unit): Self = {
+    def withOnToggle(value: /* e */ ValueBoolean => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onToggle")(js.Any.fromFunction1(value))
         ret

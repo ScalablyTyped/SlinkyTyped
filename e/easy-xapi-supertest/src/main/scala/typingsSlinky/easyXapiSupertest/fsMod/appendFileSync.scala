@@ -1,7 +1,7 @@
 package typingsSlinky.easyXapiSupertest.fsMod
 
-import typingsSlinky.easyXapiSupertest.AnonEncodingFlag
-import typingsSlinky.easyXapiSupertest.AnonMode
+import typingsSlinky.easyXapiSupertest.anon.EncodingFlag
+import typingsSlinky.easyXapiSupertest.anon.Mode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object appendFileSync extends js.Object {
   def apply(filename: String, data: js.Any): Unit = js.native
-  def apply(filename: String, data: js.Any, options: AnonEncodingFlag): Unit = js.native
-  def apply(filename: String, data: js.Any, options: AnonMode): Unit = js.native
+  def apply(filename: String, data: js.Any, options: EncodingFlag): Unit = js.native
+  def apply(filename: String, data: js.Any, options: Mode): Unit = js.native
 }
 

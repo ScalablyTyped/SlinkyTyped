@@ -1,7 +1,7 @@
 package typingsSlinky.reactIntl.mod
 
 import typingsSlinky.intlMessageformat.mod.PrimitiveType
-import typingsSlinky.reactIntl.AnonTagName
+import typingsSlinky.reactIntl.anon.TagName
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,7 @@ class FormattedHTMLMessage () extends FormattedMessage[Record[String, PrimitiveT
 @JSImport("react-intl", "FormattedHTMLMessage")
 @js.native
 object FormattedHTMLMessage extends js.Object {
-  var defaultProps: AnonTagName = js.native
+  var defaultProps: TagName = js.native
   var displayName: String = js.native
 }
 

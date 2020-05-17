@@ -1,11 +1,11 @@
 package typingsSlinky.phin.mod
 
-import typingsSlinky.phin.IWithDataIJSONResponseOpt
-import typingsSlinky.phin.IWithDataIOptions
-import typingsSlinky.phin.IWithDataIStreamResponseO
-import typingsSlinky.phin.IWithFormIJSONResponseOpt
-import typingsSlinky.phin.IWithFormIOptions
-import typingsSlinky.phin.IWithFormIStreamResponseO
+import typingsSlinky.phin.anon.IWithDataIJSONResponseOpt
+import typingsSlinky.phin.anon.IWithDataIOptions
+import typingsSlinky.phin.anon.IWithDataIStreamResponseO
+import typingsSlinky.phin.anon.IWithFormIJSONResponseOpt
+import typingsSlinky.phin.anon.IWithFormIOptions
+import typingsSlinky.phin.anon.IWithFormIStreamResponseO
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

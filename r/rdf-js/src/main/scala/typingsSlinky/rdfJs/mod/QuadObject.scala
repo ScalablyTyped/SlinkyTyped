@@ -12,3 +12,14 @@ import scala.scalajs.js.annotation._
 */
 trait QuadObject extends js.Object
 
+object QuadObject {
+  @scala.inline
+  implicit def apply(value: BlankNode): QuadObject = value.asInstanceOf[QuadObject]
+  @scala.inline
+  implicit def apply(value: Literal): QuadObject = value.asInstanceOf[QuadObject]
+  @scala.inline
+  implicit def apply(value: NamedNode): QuadObject = value.asInstanceOf[QuadObject]
+  @scala.inline
+  implicit def apply(value: Variable): QuadObject = value.asInstanceOf[QuadObject]
+}
+

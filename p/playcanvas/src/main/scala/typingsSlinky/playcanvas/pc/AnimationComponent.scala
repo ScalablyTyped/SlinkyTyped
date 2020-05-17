@@ -20,10 +20,8 @@ import scala.scalajs.js.annotation._
   * @property {number} currentTime Get or Set the current time position (in seconds) of the animation.
   * @property {number} duration Get the duration in seconds of the current animation.
   */
-@JSGlobal("pc.AnimationComponent")
 @js.native
-class AnimationComponent protected () extends Component {
-  def this(system: AnimationComponentSystem, entity: Entity) = this()
+trait AnimationComponent extends Component {
   /**
     * If true the first animation asset will begin playing when the scene is loaded.
     */

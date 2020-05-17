@@ -2,7 +2,7 @@ package typingsSlinky.gestalt.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.AnonEvent
+import typingsSlinky.gestalt.anon.Event
 import typingsSlinky.gestalt.gestaltStrings.blue
 import typingsSlinky.gestalt.gestaltStrings.button
 import typingsSlinky.gestalt.gestaltStrings.darkGray
@@ -43,7 +43,7 @@ object Button {
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def onClick(value: /* args */ AnonEvent => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    def onClick(value: /* args */ Event => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
     def size(value: sm | md | lg): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,6 +1,6 @@
 package typingsSlinky.playcanvas.pc
 
-import typingsSlinky.playcanvas.AnonAttributes
+import typingsSlinky.playcanvas.anon.Enabled
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,10 +16,8 @@ import scala.scalajs.js.annotation._
   * @param {pc.Entity} entity - The Entity that this Component is attached to.
   * @property {pc.ScriptType[]} scripts An array of all script instances attached to an entity. This Array shall not be modified by developer.
   */
-@JSGlobal("pc.ScriptComponent")
 @js.native
-class ScriptComponent protected () extends Component {
-  def this(system: ScriptComponentSystem, entity: Entity) = this()
+trait ScriptComponent extends Component {
   /**
     * An array of all script instances attached to an entity. This Array shall not be modified by developer.
     */
@@ -45,9 +43,9 @@ class ScriptComponent protected () extends Component {
     * });
     */
   def create(name: String): ScriptType = js.native
-  def create(name: String, args: AnonAttributes): ScriptType = js.native
+  def create(name: String, args: Enabled): ScriptType = js.native
   def create(name: ScriptType): ScriptType = js.native
-  def create(name: ScriptType, args: AnonAttributes): ScriptType = js.native
+  def create(name: ScriptType, args: Enabled): ScriptType = js.native
   /**
     * @function
     * @name pc.ScriptComponent#destroy

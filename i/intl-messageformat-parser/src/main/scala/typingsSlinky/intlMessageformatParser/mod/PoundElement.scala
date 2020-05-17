@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PoundElement extends _MessageFormatElement {
+trait PoundElement extends MessageFormatElement {
   var location: js.UndefOr[Location] = js.native
   var `type`: pound = js.native
 }

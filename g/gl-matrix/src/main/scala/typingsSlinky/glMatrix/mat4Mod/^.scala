@@ -1,6 +1,6 @@
 package typingsSlinky.glMatrix.mat4Mod
 
-import typingsSlinky.glMatrix.AnonDownDegrees
+import typingsSlinky.glMatrix.anon.DownDegrees
 import typingsSlinky.glMatrix.mod.mat4
 import typingsSlinky.glMatrix.mod.quat
 import typingsSlinky.glMatrix.mod.vec3
@@ -420,7 +420,7 @@ object ^ extends js.Object {
     * @param {number} far Far bound of the frustum
     * @returns {mat4} out
     */
-  def perspectiveFromFieldOfView(out: mat4, fov: AnonDownDegrees, near: Double, far: Double): mat4 = js.native
+  def perspectiveFromFieldOfView(out: mat4, fov: DownDegrees, near: Double, far: Double): mat4 = js.native
   def rotate(out: mat4, a: mat4, rad: Double, axis: js.Array[Double]): mat4 = js.native
   /**
     * Rotates a mat4 by the given angle

@@ -1,0 +1,19 @@
+package typingsSlinky.officeJsPreview.global.Excel
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+  * @beta
+  */
+@JSGlobal("Excel.RowHiddenChangeType")
+@js.native
+object RowHiddenChangeType extends js.Object {
+  /* "Hidden" */ val hidden: typingsSlinky.officeJsPreview.Excel.RowHiddenChangeType.hidden with String = js.native
+  /* "Unhidden" */ val unhidden: typingsSlinky.officeJsPreview.Excel.RowHiddenChangeType.unhidden with String = js.native
+  @JSBracketAccess
+  def apply(value: String): js.UndefOr[typingsSlinky.officeJsPreview.Excel.RowHiddenChangeType with String] = js.native
+}
+

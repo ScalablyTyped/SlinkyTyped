@@ -1,7 +1,7 @@
 package typingsSlinky.baseui.datepickerMod
 
 import slinky.core.TagMod
-import typingsSlinky.baseui.AnonDate
+import typingsSlinky.baseui.anon.Date
 import typingsSlinky.baseui.baseuiStrings.change_
 import typingsSlinky.baseui.baseuiStrings.mouseLeave
 import typingsSlinky.baseui.baseuiStrings.mouseOver
@@ -59,7 +59,7 @@ object StatefulContainerProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* args */ AnonDate => js.Any): Self[T] = {
+    def withOnChange(value: /* args */ Date => js.Any): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

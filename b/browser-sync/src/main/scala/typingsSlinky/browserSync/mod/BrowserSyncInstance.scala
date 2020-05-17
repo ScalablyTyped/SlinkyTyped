@@ -1,7 +1,7 @@
 package typingsSlinky.browserSync.mod
 
-import typingsSlinky.browserSync.AnonPlugin
-import typingsSlinky.browserSync.AnonStream
+import typingsSlinky.browserSync.anon.Plugin
+import typingsSlinky.browserSync.anon.Stream
 import typingsSlinky.chokidar.mod.WatchOptions
 import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.node.NodeJS.EventEmitter
@@ -82,7 +82,7 @@ trait BrowserSyncInstance extends js.Object {
     * The reload method will inform all browsers about changed files and will either cause the browser
     * to refresh, or inject the files where possible.
     */
-  def reload(options: AnonStream): ReadWriteStream = js.native
+  def reload(options: Stream): ReadWriteStream = js.native
   /**
     * Method to resume paused watchers
     */
@@ -103,9 +103,9 @@ trait BrowserSyncInstance extends js.Object {
     * @param {object} options The
     * @param {any} cb A callback function that will return any errors.
     */
-  def use(module: AnonPlugin): Unit = js.native
-  def use(module: AnonPlugin, options: js.Object): Unit = js.native
-  def use(module: AnonPlugin, options: js.Object, cb: js.Any): Unit = js.native
+  def use(module: Plugin): Unit = js.native
+  def use(module: Plugin, options: js.Object): Unit = js.native
+  def use(module: Plugin, options: js.Object, cb: js.Any): Unit = js.native
   /**
     * Stand alone file-watcher. Use this along with Browsersync to create your own, minimal build system
     */

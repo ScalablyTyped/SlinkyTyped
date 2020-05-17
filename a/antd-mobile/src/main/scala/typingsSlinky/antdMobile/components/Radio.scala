@@ -2,7 +2,7 @@ package typingsSlinky.antdMobile.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antdMobile.AnonTarget
+import typingsSlinky.antdMobile.anon.Target
 import typingsSlinky.antdMobile.radioMod.default
 import typingsSlinky.antdMobile.radioRadioMod.RadioProps
 import typingsSlinky.react.mod.CSSProperties
@@ -32,7 +32,7 @@ object Radio {
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* e */ AnonTarget => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ Target => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline

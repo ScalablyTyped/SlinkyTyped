@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.reactBootstrapTypeahead.PickCSSPropertiesboxSizin
+import typingsSlinky.reactBootstrapTypeahead.anon.PickCSSPropertiesboxSizin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

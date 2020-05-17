@@ -1,0 +1,41 @@
+package typingsSlinky.bugsnagJs.anon
+
+import typingsSlinky.bugsnagJs.clientMod.NotifiableError
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ErrorClass extends NotifiableError {
+  var errorClass: String = js.native
+  var errorMessage: String = js.native
+}
+
+object ErrorClass {
+  @scala.inline
+  def apply(errorClass: String, errorMessage: String): ErrorClass = {
+    val __obj = js.Dynamic.literal(errorClass = errorClass.asInstanceOf[js.Any], errorMessage = errorMessage.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ErrorClass]
+  }
+  @scala.inline
+  implicit class ErrorClassOps[Self <: ErrorClass] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorClass(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withErrorMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

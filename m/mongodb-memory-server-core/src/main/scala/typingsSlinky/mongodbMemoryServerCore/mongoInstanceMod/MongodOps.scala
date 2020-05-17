@@ -1,6 +1,6 @@
 package typingsSlinky.mongodbMemoryServerCore.mongoInstanceMod
 
-import typingsSlinky.mongodbMemoryServerCore.AnonArgs
+import typingsSlinky.mongodbMemoryServerCore.anon.Args
 import typingsSlinky.mongodbMemoryServerCore.mongoBinaryMod.MongoBinaryOpts
 import typingsSlinky.node.childProcessMod.SpawnOptions
 import scala.scalajs.js
@@ -10,13 +10,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MongodOps extends js.Object {
   var binary: js.UndefOr[MongoBinaryOpts] = js.native
-  var instance: AnonArgs = js.native
+  var instance: Args = js.native
   var spawn: js.UndefOr[SpawnOptions] = js.native
 }
 
 object MongodOps {
   @scala.inline
-  def apply(instance: AnonArgs): MongodOps = {
+  def apply(instance: Args): MongodOps = {
     val __obj = js.Dynamic.literal(instance = instance.asInstanceOf[js.Any])
     __obj.asInstanceOf[MongodOps]
   }
@@ -27,7 +27,7 @@ object MongodOps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withInstance(value: AnonArgs): Self = {
+    def withInstance(value: Args): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(value.asInstanceOf[js.Any])
         ret

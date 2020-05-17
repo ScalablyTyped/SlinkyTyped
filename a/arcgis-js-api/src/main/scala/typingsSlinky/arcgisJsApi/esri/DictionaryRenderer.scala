@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.HashMap
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.dictionary
 import scala.scalajs.js
@@ -52,8 +51,4 @@ trait DictionaryRenderer
     */
   def getSymbolAsync(graphic: Graphic): js.Promise[CIMSymbol] = js.native
 }
-
-@JSGlobal("__esri.DictionaryRenderer")
-@js.native
-object DictionaryRenderer extends TopLevel[DictionaryRendererConstructor]
 

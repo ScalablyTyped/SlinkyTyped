@@ -1,6 +1,6 @@
 package typingsSlinky.antd.tooltipMod
 
-import typingsSlinky.antd.AnonAdjustY
+import typingsSlinky.antd.anon.AdjustY
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TooltipAlignConfig extends js.Object {
   var offset: js.UndefOr[js.Tuple2[Double | String, Double | String]] = js.native
-  var overflow: js.UndefOr[AnonAdjustY] = js.native
+  var overflow: js.UndefOr[AdjustY] = js.native
   var points: js.UndefOr[js.Tuple2[String, String]] = js.native
   var targetOffset: js.UndefOr[js.Tuple2[Double | String, Double | String]] = js.native
   var useCssBottom: js.UndefOr[Boolean] = js.native
@@ -41,7 +41,7 @@ object TooltipAlignConfig {
         ret
     }
     @scala.inline
-    def withOverflow(value: AnonAdjustY): Self = {
+    def withOverflow(value: AdjustY): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(value.asInstanceOf[js.Any])
         ret

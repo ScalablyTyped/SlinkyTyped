@@ -1,7 +1,7 @@
 package typingsSlinky.firebase.mod.firestore
 
-import typingsSlinky.firebase.AnonError
-import typingsSlinky.firebase.AnonNext
+import typingsSlinky.firebase.anon.Error
+import typingsSlinky.firebase.anon.Next
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -76,7 +76,7 @@ class DocumentReference[T] protected () extends js.Object {
     * @return An unsubscribe function that can be called to cancel
     * the snapshot listener.
     */
-  def onSnapshot(observer: AnonError[T]): js.Function0[Unit] = js.native
+  def onSnapshot(observer: Error[T]): js.Function0[Unit] = js.native
   /**
     * Attaches a listener for DocumentSnapshot events. You may either pass
     * individual `onNext` and `onError` callbacks or pass a single observer
@@ -115,7 +115,7 @@ class DocumentReference[T] protected () extends js.Object {
     * @return An unsubscribe function that can be called to cancel
     * the snapshot listener.
     */
-  def onSnapshot(options: SnapshotListenOptions, observer: AnonNext[T]): js.Function0[Unit] = js.native
+  def onSnapshot(options: SnapshotListenOptions, observer: Next[T]): js.Function0[Unit] = js.native
   /**
     * Attaches a listener for DocumentSnapshot events. You may either pass
     * individual `onNext` and `onError` callbacks or pass a single observer

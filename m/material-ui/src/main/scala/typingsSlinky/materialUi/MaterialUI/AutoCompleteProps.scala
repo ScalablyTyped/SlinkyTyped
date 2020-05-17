@@ -1,10 +1,10 @@
 package typingsSlinky.materialUi.MaterialUI
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.materialUi.AnonText
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.origin
+import typingsSlinky.materialUi.anon.Text
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ trait AutoCompleteProps[DataItem] extends TextFieldProps {
   var animated: js.UndefOr[Boolean] = js.native
   var animation: js.UndefOr[ReactComponentClass[PopoverAnimationProps]] = js.native
   var dataSource: js.Array[DataItem] = js.native
-  var dataSourceConfig: js.UndefOr[AnonText] = js.native
+  var dataSourceConfig: js.UndefOr[Text] = js.native
   var disableFocusRipple: js.UndefOr[Boolean] = js.native
   var filter: js.UndefOr[
     js.Function3[/* searchText */ String, /* key */ String, /* item */ DataItem, Boolean]
@@ -91,7 +91,7 @@ object AutoCompleteProps {
         ret
     }
     @scala.inline
-    def withDataSourceConfig(value: AnonText): Self[DataItem] = {
+    def withDataSourceConfig(value: Text): Self[DataItem] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceConfig")(value.asInstanceOf[js.Any])
         ret

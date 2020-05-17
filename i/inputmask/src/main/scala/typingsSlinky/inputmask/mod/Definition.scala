@@ -1,6 +1,6 @@
 package typingsSlinky.inputmask.mod
 
-import typingsSlinky.inputmask.AnonC
+import typingsSlinky.inputmask.anon.C
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +28,7 @@ object Definition {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
     def withValidatorFunction5(
-      value: (/* chrs */ String, /* buffer */ js.Array[String], /* pos */ Double, /* strict */ Boolean, /* opts */ Options) => Boolean | AnonC
+      value: (/* chrs */ String, /* buffer */ js.Array[String], /* pos */ Double, /* strict */ Boolean, /* opts */ Options) => Boolean | C
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validator")(js.Any.fromFunction5(value))

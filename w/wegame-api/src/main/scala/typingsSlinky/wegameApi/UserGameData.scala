@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("UserGameData")
 @js.native
-class UserGameData () extends js.Object {
+trait UserGameData extends js.Object {
   /**
     * 用户的托管 KV 数据列表
     */
@@ -23,5 +22,45 @@ class UserGameData () extends js.Object {
     * 用户的openid
     */
   var openid: String = js.native
+}
+
+object UserGameData {
+  @scala.inline
+  def apply(KVDataList: js.Array[KVData], avatarUrl: String, nickname: String, openid: String): UserGameData = {
+    val __obj = js.Dynamic.literal(KVDataList = KVDataList.asInstanceOf[js.Any], avatarUrl = avatarUrl.asInstanceOf[js.Any], nickname = nickname.asInstanceOf[js.Any], openid = openid.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UserGameData]
+  }
+  @scala.inline
+  implicit class UserGameDataOps[Self <: UserGameData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKVDataList(value: js.Array[KVData]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KVDataList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAvatarUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("avatarUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNickname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nickname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOpenid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openid")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

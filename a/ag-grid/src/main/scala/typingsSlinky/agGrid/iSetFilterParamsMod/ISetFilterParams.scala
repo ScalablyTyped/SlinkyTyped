@@ -1,7 +1,7 @@
 package typingsSlinky.agGrid.iSetFilterParamsMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.agGrid.AnonInstantiableICellRendererComp
+import typingsSlinky.agGrid.anon.InstantiableICellRendererComp
 import typingsSlinky.agGrid.colDefMod.ColDef
 import typingsSlinky.agGrid.columnMod.Column
 import typingsSlinky.agGrid.componentResolverMod.ComponentHolder
@@ -20,7 +20,7 @@ trait ISetFilterParams
   @JSName("apply")
   var apply: Boolean = js.native
   var cellHeight: Double = js.native
-  var cellRenderer: AnonInstantiableICellRendererComp | ICellRendererFunc | String = js.native
+  var cellRenderer: InstantiableICellRendererComp | ICellRendererFunc | String = js.native
   var comparator: js.UndefOr[js.Function2[/* a */ js.Any, /* b */ js.Any, Double]] = js.native
   var debounceMs: js.UndefOr[Double] = js.native
   var miniFilterSearchByRefDataKey: js.UndefOr[Boolean] = js.native
@@ -39,7 +39,7 @@ object ISetFilterParams {
     $scope: js.Any,
     apply: Boolean,
     cellHeight: Double,
-    cellRenderer: AnonInstantiableICellRendererComp | ICellRendererFunc | String,
+    cellRenderer: InstantiableICellRendererComp | ICellRendererFunc | String,
     colDef: ColDef,
     column: Column,
     context: js.Any,
@@ -81,7 +81,7 @@ object ISetFilterParams {
         ret
     }
     @scala.inline
-    def withCellRenderer(value: AnonInstantiableICellRendererComp | ICellRendererFunc | String): Self = {
+    def withCellRenderer(value: InstantiableICellRendererComp | ICellRendererFunc | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cellRenderer")(value.asInstanceOf[js.Any])
         ret

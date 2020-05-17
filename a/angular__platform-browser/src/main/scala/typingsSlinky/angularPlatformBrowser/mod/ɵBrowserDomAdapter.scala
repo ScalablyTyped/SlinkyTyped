@@ -1,7 +1,9 @@
 package typingsSlinky.angularPlatformBrowser.mod
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.DocumentFragment
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLScriptElement
@@ -9,8 +11,6 @@ import org.scalajs.dom.raw.HTMLStyleElement
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.Text
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,14 +23,14 @@ class ɵBrowserDomAdapter () extends ɵangularPackagesPlatformBrowserPlatformBro
   def clearNodes(el: Node): Unit = js.native
   def content(node: Node): Node = js.native
   def createElement(tagName: String): HTMLElement = js.native
-  def createElement(tagName: String, doc: Document_): HTMLElement = js.native
-  def createElementNS(ns: String, tagName: String, doc: Document_): Element = js.native
-  def createEvent(eventType: js.Any): Event_ = js.native
+  def createElement(tagName: String, doc: Document): HTMLElement = js.native
+  def createElementNS(ns: String, tagName: String, doc: Document): Element = js.native
+  def createEvent(eventType: js.Any): Event = js.native
   def createMouseEvent(eventType: String): MouseEvent = js.native
-  def createScriptTag(attrName: String, attrValue: String, doc: Document_): HTMLScriptElement = js.native
+  def createScriptTag(attrName: String, attrValue: String, doc: Document): HTMLScriptElement = js.native
   def createShadowRoot(el: HTMLElement): DocumentFragment = js.native
-  def createStyleElement(css: String, doc: Document_): HTMLStyleElement = js.native
-  def createTextNode(text: String, doc: Document_): Text = js.native
+  def createStyleElement(css: String, doc: Document): HTMLStyleElement = js.native
+  def createTextNode(text: String, doc: Document): Text = js.native
   def dispatchEvent(el: Node, evt: js.Any): Unit = js.native
   def firstChild(el: Node): Node | Null = js.native
   def getAttribute(element: Element, attribute: String): String | Null = js.native
@@ -54,7 +54,7 @@ class ɵBrowserDomAdapter () extends ɵangularPackagesPlatformBrowserPlatformBro
   def invoke(el: Node, methodName: String, args: js.Array[_]): js.Any = js.native
   def isCommentNode(node: Node): Boolean = js.native
   def isElementNode(node: Node): Boolean = js.native
-  def isPrevented(evt: Event_): Boolean = js.native
+  def isPrevented(evt: Event): Boolean = js.native
   def isTemplateElement(el: Node): Boolean = js.native
   def isTextNode(node: Node): Boolean = js.native
   def log(error: String): Unit = js.native
@@ -66,7 +66,7 @@ class ɵBrowserDomAdapter () extends ɵangularPackagesPlatformBrowserPlatformBro
   def on(el: Node, evt: js.Any, listener: js.Any): Unit = js.native
   def onAndCancel(el: Node, evt: js.Any, listener: js.Any): js.Function = js.native
   def parentElement(el: Node): Node | Null = js.native
-  def preventDefault(evt: Event_): Unit = js.native
+  def preventDefault(evt: Event): Unit = js.native
   def querySelector(el: HTMLElement, selector: String): js.Any = js.native
   def remove(node: Node): Node = js.native
   def removeAttribute(element: Element, attribute: String): Unit = js.native

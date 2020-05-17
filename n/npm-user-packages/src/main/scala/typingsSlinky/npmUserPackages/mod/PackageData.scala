@@ -1,22 +1,22 @@
 package typingsSlinky.npmUserPackages.mod
 
-import typingsSlinky.npmUserPackages.AnonBugs
-import typingsSlinky.npmUserPackages.AnonEmail
-import typingsSlinky.npmUserPackages.AnonUsername
+import typingsSlinky.npmUserPackages.anon.Bugs
+import typingsSlinky.npmUserPackages.anon.Email
+import typingsSlinky.npmUserPackages.anon.Username
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait PackageData extends js.Object {
-  var author: AnonEmail = js.native
+  var author: Email = js.native
   var date: String = js.native
   var description: String = js.native
   var keywords: js.Array[String] = js.native
-  var links: AnonBugs = js.native
-  var maintainers: js.Array[AnonUsername] = js.native
+  var links: Bugs = js.native
+  var maintainers: js.Array[Username] = js.native
   var name: String = js.native
-  var publisher: AnonUsername = js.native
+  var publisher: Username = js.native
   var scope: String = js.native
   var version: String = js.native
 }
@@ -24,14 +24,14 @@ trait PackageData extends js.Object {
 object PackageData {
   @scala.inline
   def apply(
-    author: AnonEmail,
+    author: Email,
     date: String,
     description: String,
     keywords: js.Array[String],
-    links: AnonBugs,
-    maintainers: js.Array[AnonUsername],
+    links: Bugs,
+    maintainers: js.Array[Username],
     name: String,
-    publisher: AnonUsername,
+    publisher: Username,
     scope: String,
     version: String
   ): PackageData = {
@@ -45,7 +45,7 @@ object PackageData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAuthor(value: AnonEmail): Self = {
+    def withAuthor(value: Email): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
         ret
@@ -69,13 +69,13 @@ object PackageData {
         ret
     }
     @scala.inline
-    def withLinks(value: AnonBugs): Self = {
+    def withLinks(value: Bugs): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withMaintainers(value: js.Array[AnonUsername]): Self = {
+    def withMaintainers(value: js.Array[Username]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("maintainers")(value.asInstanceOf[js.Any])
         ret
@@ -87,7 +87,7 @@ object PackageData {
         ret
     }
     @scala.inline
-    def withPublisher(value: AnonUsername): Self = {
+    def withPublisher(value: Username): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("publisher")(value.asInstanceOf[js.Any])
         ret

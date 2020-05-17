@@ -3,8 +3,8 @@ package typingsSlinky.primereact.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonHtmlValue
-import typingsSlinky.primereact.AnonOldRange
+import typingsSlinky.primereact.anon.HtmlValue
+import typingsSlinky.primereact.anon.OldRange
 import typingsSlinky.primereact.editorMod.EditorProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -30,9 +30,9 @@ object Editor {
     @scala.inline
     def modules(value: js.Any): this.type = set("modules", value.asInstanceOf[js.Any])
     @scala.inline
-    def onSelectionChange(value: /* e */ AnonOldRange => Unit): this.type = set("onSelectionChange", js.Any.fromFunction1(value))
+    def onSelectionChange(value: /* e */ OldRange => Unit): this.type = set("onSelectionChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onTextChange(value: /* e */ AnonHtmlValue => Unit): this.type = set("onTextChange", js.Any.fromFunction1(value))
+    def onTextChange(value: /* e */ HtmlValue => Unit): this.type = set("onTextChange", js.Any.fromFunction1(value))
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline

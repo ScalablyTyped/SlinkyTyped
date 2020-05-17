@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
   * Mock response object
   */
 @js.native
-trait MockResponseObject extends js.Object {
+trait MockResponseObject extends MockResponse {
   /**
     * Set the response body
     */

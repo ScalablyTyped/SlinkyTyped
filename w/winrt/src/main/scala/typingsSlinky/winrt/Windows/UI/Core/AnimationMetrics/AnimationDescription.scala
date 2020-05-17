@@ -1,12 +1,24 @@
 package typingsSlinky.winrt.Windows.UI.Core.AnimationMetrics
 
+import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.UI.Core.AnimationMetrics.AnimationDescription")
 @js.native
-class AnimationDescription protected () extends IAnimationDescription {
-  def this(effect: AnimationEffect, target: AnimationEffectTarget) = this()
+trait AnimationDescription extends IAnimationDescription
+
+object AnimationDescription {
+  @scala.inline
+  def apply(
+    animations: IVectorView[IPropertyAnimation],
+    delayLimit: Double,
+    staggerDelay: Double,
+    staggerDelayFactor: Double,
+    zOrder: Double
+  ): AnimationDescription = {
+    val __obj = js.Dynamic.literal(animations = animations.asInstanceOf[js.Any], delayLimit = delayLimit.asInstanceOf[js.Any], staggerDelay = staggerDelay.asInstanceOf[js.Any], staggerDelayFactor = staggerDelayFactor.asInstanceOf[js.Any], zOrder = zOrder.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AnimationDescription]
+  }
 }
 

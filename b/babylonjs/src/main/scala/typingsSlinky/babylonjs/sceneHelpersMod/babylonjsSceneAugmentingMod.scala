@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.sceneHelpersMod
 
-import typingsSlinky.babylonjs.PartialIEnvironmentHelper
+import typingsSlinky.babylonjs.anon.PartialIEnvironmentHelper
 import typingsSlinky.babylonjs.baseTextureMod.BaseTexture
 import typingsSlinky.babylonjs.environmentHelperMod.EnvironmentHelper
 import typingsSlinky.babylonjs.meshMod.Mesh

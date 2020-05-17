@@ -17,5 +17,7 @@ package object geo {
     * A Geographic coordinate that specifies the east-west position of a point on the Earth's surface in the range from -180 to 180 degrees, inclusive.
     */
   type Longitude = scala.Double
+  type MultiPoint = typingsSlinky.heremaps.H.geo.MultiGeometry[typingsSlinky.heremaps.H.geo.Point]
+  type MultiPolygon = typingsSlinky.heremaps.H.geo.MultiGeometry[typingsSlinky.heremaps.H.geo.Polygon]
   type Polygon = typingsSlinky.heremaps.H.geo.Polygon_
 }

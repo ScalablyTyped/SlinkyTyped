@@ -1,5 +1,6 @@
 package typingsSlinky.eggMultipart
 
+import typingsSlinky.eggMultipart.anon.CurrentDate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ScheduleOptions extends js.Object {
   var cron: js.UndefOr[String] = js.native
-  var cronOptions: js.UndefOr[AnonCurrentDate] = js.native
+  var cronOptions: js.UndefOr[CurrentDate] = js.native
   var disable: js.UndefOr[Boolean] = js.native
   var env: js.UndefOr[js.Array[String]] = js.native
   var immediate: js.UndefOr[Boolean] = js.native
@@ -40,7 +41,7 @@ object ScheduleOptions {
         ret
     }
     @scala.inline
-    def withCronOptions(value: AnonCurrentDate): Self = {
+    def withCronOptions(value: CurrentDate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cronOptions")(value.asInstanceOf[js.Any])
         ret

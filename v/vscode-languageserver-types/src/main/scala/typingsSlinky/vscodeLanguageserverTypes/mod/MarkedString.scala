@@ -4,6 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+/* Rewritten from type alias, can be one of: 
+  - java.lang.String
+  - typingsSlinky.vscodeLanguageserverTypes.anon.Language
+*/
+trait MarkedString extends js.Object
+
 @JSImport("vscode-languageserver-types", "MarkedString")
 @js.native
 object MarkedString extends js.Object {

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CurrentGitBranchOptionsObject extends js.Object {
+trait CurrentGitBranchOptionsObject extends CurrentGitBranchOptions {
   var altPath: js.UndefOr[String] = js.native
   var branchOptions: js.UndefOr[String] = js.native
 }

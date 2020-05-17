@@ -1,19 +1,19 @@
 package typingsSlinky.proxyAddr
 
-import typingsSlinky.proxyAddr.mod._Address
+import typingsSlinky.proxyAddr.mod.Address
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object proxyAddrStrings {
   @js.native
-  sealed trait linklocal extends _Address
+  sealed trait linklocal extends Address
   
   @js.native
-  sealed trait loopback extends _Address
+  sealed trait loopback extends Address
   
   @js.native
-  sealed trait uniquelocal extends _Address
+  sealed trait uniquelocal extends Address
   
   @scala.inline
   def linklocal: linklocal = "linklocal".asInstanceOf[linklocal]

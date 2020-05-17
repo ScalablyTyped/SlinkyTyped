@@ -1,10 +1,10 @@
 package typingsSlinky.wepy.wxEnhancedMod
 
-import typingsSlinky.wepy.AnonAnimationEnd
-import typingsSlinky.wepy.AnonComplete
-import typingsSlinky.wepy.AnonNortheast
-import typingsSlinky.wepy.AnonPadding
-import typingsSlinky.wepy.AnonScale
+import typingsSlinky.wepy.anon.AnimationEnd
+import typingsSlinky.wepy.anon.Complete
+import typingsSlinky.wepy.anon.Northeast
+import typingsSlinky.wepy.anon.Padding
+import typingsSlinky.wepy.anon.Scale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,14 +14,14 @@ trait MapContext extends js.Object {
   @JSName("getCenterLocation")
   var getCenterLocation_Original: CallbackFunction[LagLng] = js.native
   @JSName("getRegion")
-  var getRegion_Original: CallbackFunction[AnonNortheast] = js.native
+  var getRegion_Original: CallbackFunction[Northeast] = js.native
   @JSName("getScale")
-  var getScale_Original: CallbackFunction[AnonScale] = js.native
-  def getCenterLocation(callbacks: AnonComplete[LagLng]): Unit = js.native
-  def getRegion(callbacks: AnonComplete[AnonNortheast]): Unit = js.native
-  def getScale(callbacks: AnonComplete[AnonScale]): Unit = js.native
-  def includePoints(params: AnonPadding): Unit = js.native
+  var getScale_Original: CallbackFunction[Scale] = js.native
+  def getCenterLocation(callbacks: Complete[LagLng]): Unit = js.native
+  def getRegion(callbacks: Complete[Northeast]): Unit = js.native
+  def getScale(callbacks: Complete[Scale]): Unit = js.native
+  def includePoints(params: Padding): Unit = js.native
   def moveToLocation(): Unit = js.native
-  def translateMarker(params: AnonAnimationEnd): Unit = js.native
+  def translateMarker(params: AnimationEnd): Unit = js.native
 }
 

@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait FormulaTransform extends _Transforms {
+trait FormulaTransform extends Transforms {
   var as: String | SignalRef = js.native
   var expr: ExprString = js.native
   var initonly: js.UndefOr[Boolean] = js.native

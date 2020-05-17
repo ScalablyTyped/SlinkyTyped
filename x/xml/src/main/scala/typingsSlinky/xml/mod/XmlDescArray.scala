@@ -1,15 +1,15 @@
 package typingsSlinky.xml.mod
 
 import org.scalablytyped.runtime.NumberDictionary
-import typingsSlinky.xml.AnonAttr
+import typingsSlinky.xml.anon.Attr
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait XmlDescArray
-  extends /* index */ NumberDictionary[AnonAttr | XmlObject]
-     with _XmlDesc
+  extends XmlDesc
+     with /* index */ NumberDictionary[Attr | XmlObject]
 
 object XmlDescArray {
   @scala.inline

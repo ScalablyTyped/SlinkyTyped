@@ -5,19 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Storage.Streams.DataReader")
 @js.native
-class DataReader protected ()
+trait DataReader
   extends IDataReader
      with IClosable {
-  def this(inputStream: IInputStream) = this()
   def dispose(): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("Windows.Storage.Streams.DataReader")
-@js.native
-object DataReader extends js.Object {
-  def fromBuffer(buffer: IBuffer): DataReader = js.native
 }
 

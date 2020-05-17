@@ -1,6 +1,6 @@
 package typingsSlinky.bytebuffer.mod
 
-import typingsSlinky.bytebuffer.AnonLength
+import typingsSlinky.bytebuffer.anon.Length
 import typingsSlinky.long.mod.Long
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
@@ -210,8 +210,8 @@ trait ByteBuffer extends js.Object {
   /**
     * Reads a length as uint32 prefixed UTF8 encoded string.
     */
-  def readIString(): String | AnonLength = js.native
-  def readIString(offset: Double): String | AnonLength = js.native
+  def readIString(): String | Length = js.native
+  def readIString(offset: Double): String | Length = js.native
   /**
     * Reads a 32bit signed integer.This is an alias of ByteBuffer#readInt32.
     */
@@ -256,9 +256,9 @@ trait ByteBuffer extends js.Object {
   /**
     * Reads an UTF8 encoded string.
     */
-  def readUTF8String(chars: Double): String | AnonLength = js.native
-  def readUTF8String(chars: Double, metrics: Double): String | AnonLength = js.native
-  def readUTF8String(chars: Double, metrics: Double, offset: Double): String | AnonLength = js.native
+  def readUTF8String(chars: Double): String | Length = js.native
+  def readUTF8String(chars: Double, metrics: Double): String | Length = js.native
+  def readUTF8String(chars: Double, metrics: Double, offset: Double): String | Length = js.native
   /**
     * Reads a 16bit unsigned integer.
     */

@@ -1,7 +1,7 @@
 package typingsSlinky.handsontable.mod.Handsontable.plugins
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Document_
 import typingsSlinky.std.WeakSet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ trait FocusableWrapper extends js.Object {
   var eventManager: EventManager = js.native
   var listenersCount: WeakSet[HTMLElement] = js.native
   var mainElement: HTMLElement = js.native
-  var rootDocument: Document_ = js.native
+  var rootDocument: Document = js.native
   def focus(): Unit = js.native
   def getFocusableElement(): HTMLElement = js.native
   def setFocusableElement(element: HTMLElement): Unit = js.native
@@ -27,7 +27,7 @@ object FocusableWrapper {
     getFocusableElement: () => HTMLElement,
     listenersCount: WeakSet[HTMLElement],
     mainElement: HTMLElement,
-    rootDocument: Document_,
+    rootDocument: Document,
     setFocusableElement: HTMLElement => Unit,
     useSecondaryElement: () => Unit
   ): FocusableWrapper = {
@@ -71,7 +71,7 @@ object FocusableWrapper {
         ret
     }
     @scala.inline
-    def withRootDocument(value: Document_): Self = {
+    def withRootDocument(value: Document): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rootDocument")(value.asInstanceOf[js.Any])
         ret

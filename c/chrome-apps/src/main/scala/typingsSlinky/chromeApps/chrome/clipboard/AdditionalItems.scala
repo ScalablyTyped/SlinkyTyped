@@ -1,6 +1,6 @@
 package typingsSlinky.chromeApps.chrome.clipboard
 
-import typingsSlinky.chromeApps.AnonTEXTHTML
+import typingsSlinky.chromeApps.anon.TEXTHTML
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chromeAppsStrings.TEXT_HTML
 import typingsSlinky.chromeApps.chromeAppsStrings.TEXT_PLAIN
@@ -25,9 +25,9 @@ trait AdditionalItems extends js.Object {
     * @see DataItemType
     */
   var `type`: ToStringLiteral[
-    AnonTEXTHTML, 
-    /* keyof chrome-apps.AnonTEXTHTML */ TEXT_PLAIN | TEXT_HTML, 
-    Exclude[/* keyof chrome-apps.AnonTEXTHTML */ TEXT_PLAIN | TEXT_HTML, textPlain | textHtml]
+    TEXTHTML, 
+    /* keyof chrome-apps.anon.TEXTHTML */ TEXT_PLAIN | TEXT_HTML, 
+    Exclude[/* keyof chrome-apps.anon.TEXTHTML */ TEXT_PLAIN | TEXT_HTML, textPlain | textHtml]
   ] = js.native
 }
 
@@ -36,9 +36,9 @@ object AdditionalItems {
   def apply(
     data: String,
     `type`: ToStringLiteral[
-      AnonTEXTHTML, 
-      /* keyof chrome-apps.AnonTEXTHTML */ TEXT_PLAIN | TEXT_HTML, 
-      Exclude[/* keyof chrome-apps.AnonTEXTHTML */ TEXT_PLAIN | TEXT_HTML, textPlain | textHtml]
+      TEXTHTML, 
+      /* keyof chrome-apps.anon.TEXTHTML */ TEXT_PLAIN | TEXT_HTML, 
+      Exclude[/* keyof chrome-apps.anon.TEXTHTML */ TEXT_PLAIN | TEXT_HTML, textPlain | textHtml]
     ]
   ): AdditionalItems = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
@@ -60,9 +60,9 @@ object AdditionalItems {
     @scala.inline
     def withType(
       value: ToStringLiteral[
-          AnonTEXTHTML, 
-          /* keyof chrome-apps.AnonTEXTHTML */ TEXT_PLAIN | TEXT_HTML, 
-          Exclude[/* keyof chrome-apps.AnonTEXTHTML */ TEXT_PLAIN | TEXT_HTML, textPlain | textHtml]
+          TEXTHTML, 
+          /* keyof chrome-apps.anon.TEXTHTML */ TEXT_PLAIN | TEXT_HTML, 
+          Exclude[/* keyof chrome-apps.anon.TEXTHTML */ TEXT_PLAIN | TEXT_HTML, textPlain | textHtml]
         ]
     ): Self = {
         val ret = this.duplicate

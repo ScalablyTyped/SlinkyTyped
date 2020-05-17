@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DefaultImportedComponent[P] extends js.Object {
+trait DefaultImportedComponent[P] extends DefaultComponent[P] {
   var default: ReactComponentClass[P] = js.native
 }
 

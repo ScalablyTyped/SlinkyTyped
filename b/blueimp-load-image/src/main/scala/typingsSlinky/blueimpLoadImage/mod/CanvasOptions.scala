@@ -1,6 +1,5 @@
 package typingsSlinky.blueimpLoadImage.mod
 
-import typingsSlinky.blueimpLoadImage.blueimpLoadImageBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,14 +12,8 @@ trait CanvasOptions extends js.Object
 
 object CanvasOptions {
   @scala.inline
-  def CanvasTrueOptions(canvas: `true`): CanvasOptions = {
-    val __obj = js.Dynamic.literal(canvas = canvas.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CanvasOptions]
-  }
+  implicit def apply(value: CanvasFalseOptions): CanvasOptions = value.asInstanceOf[CanvasOptions]
   @scala.inline
-  def CanvasFalseOptions(): CanvasOptions = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[CanvasOptions]
-  }
+  implicit def apply(value: CanvasTrueOptions): CanvasOptions = value.asInstanceOf[CanvasOptions]
 }
 

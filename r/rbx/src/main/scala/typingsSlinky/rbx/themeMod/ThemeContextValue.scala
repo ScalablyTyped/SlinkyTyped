@@ -1,6 +1,6 @@
 package typingsSlinky.rbx.themeMod
 
-import typingsSlinky.rbx.AnonClassName
+import typingsSlinky.rbx.anon.ClassName
 import typingsSlinky.rbx.factoryMod.TransformFunction
 import typingsSlinky.rbx.factoryMod.ValidatingTransformFunction
 import typingsSlinky.std.Partial
@@ -17,7 +17,7 @@ trait ThemeContextValue[TTransformProps /* <: js.Object */, TNewProps /* <: js.O
 object ThemeContextValue {
   @scala.inline
   def apply[TTransformProps, TNewProps](
-    transform: (/* props */ AnonClassName with Partial[TTransformProps], /* componentName */ String, /* location */ js.UndefOr[String]) => ReturnType[TransformFunction[TTransformProps, TNewProps]]
+    transform: (/* props */ ClassName with Partial[TTransformProps], /* componentName */ String, /* location */ js.UndefOr[String]) => ReturnType[TransformFunction[TTransformProps, TNewProps]]
   ): ThemeContextValue[TTransformProps, TNewProps] = {
     val __obj = js.Dynamic.literal(transform = js.Any.fromFunction3(transform))
     __obj.asInstanceOf[ThemeContextValue[TTransformProps, TNewProps]]
@@ -30,7 +30,7 @@ object ThemeContextValue {
     def combineWith[Other <: js.Any](other: Other): (Self[TTransformProps, TNewProps]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[TTransformProps, TNewProps]) with Other]
     @scala.inline
     def withTransform(
-      value: (/* props */ AnonClassName with Partial[TTransformProps], /* componentName */ String, /* location */ js.UndefOr[String]) => ReturnType[TransformFunction[TTransformProps, TNewProps]]
+      value: (/* props */ ClassName with Partial[TTransformProps], /* componentName */ String, /* location */ js.UndefOr[String]) => ReturnType[TransformFunction[TTransformProps, TNewProps]]
     ): Self[TTransformProps, TNewProps] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.Any.fromFunction3(value))

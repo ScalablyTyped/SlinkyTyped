@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.BABYLON
 
-import typingsSlinky.babylonjs.AnonDisableLighting
+import typingsSlinky.babylonjs.anon.DisableLighting
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait IWebXRTeleportationOptions extends js.Object {
   /**
     * Values to configure the default target mesh
     */
-  var defaultTargetMeshOptions: js.UndefOr[AnonDisableLighting] = js.native
+  var defaultTargetMeshOptions: js.UndefOr[DisableLighting] = js.native
   /**
     * A list of meshes to use as floor meshes.
     * Meshes can be added and removed after initializing the feature using the
@@ -97,7 +97,7 @@ object IWebXRTeleportationOptions {
         ret
     }
     @scala.inline
-    def withDefaultTargetMeshOptions(value: AnonDisableLighting): Self = {
+    def withDefaultTargetMeshOptions(value: DisableLighting): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defaultTargetMeshOptions")(value.asInstanceOf[js.Any])
         ret

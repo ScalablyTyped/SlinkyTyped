@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiPulumi
 
+import typingsSlinky.pulumiPulumi.anon.Init
 import typingsSlinky.pulumiPulumi.outputMod.Inputs
 import typingsSlinky.pulumiPulumi.outputMod.Output_
 import typingsSlinky.pulumiPulumi.resourceMod.ComponentResource
@@ -27,7 +28,7 @@ object stackMod extends js.Object {
       *
       * @param init The callback to run in the context of this Pulumi stack
       */
-    def initialize(args: AnonInit): js.Promise[Inputs] = js.native
+    def initialize(args: Init): js.Promise[Inputs] = js.native
   }
   
   val rootPulumiStackTypeName: /* "pulumi:pulumi:Stack" */ String = js.native

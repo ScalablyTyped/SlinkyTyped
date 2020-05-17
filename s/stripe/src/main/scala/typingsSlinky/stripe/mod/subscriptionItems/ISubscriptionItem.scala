@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.subscriptionItems
 
-import typingsSlinky.stripe.AnonUsagegte
+import typingsSlinky.stripe.anon.Usagegte
 import typingsSlinky.stripe.mod.IMetadata
 import typingsSlinky.stripe.mod.IResourceObject
 import typingsSlinky.stripe.mod.plans.IPlan
@@ -18,7 +18,7 @@ trait ISubscriptionItem extends IResourceObject {
   /**
     * Define thresholds at which an invoice will be sent, and the related subscription advanced to a new billing period.
     */
-  var billing_thresholds: Null | AnonUsagegte = js.native
+  var billing_thresholds: Null | Usagegte = js.native
   /**
     * Time at which the object was created. Measured in seconds since the Unix epoch.
     */
@@ -98,7 +98,7 @@ object ISubscriptionItem {
         ret
     }
     @scala.inline
-    def withBilling_thresholds(value: AnonUsagegte): Self = {
+    def withBilling_thresholds(value: Usagegte): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("billing_thresholds")(value.asInstanceOf[js.Any])
         ret

@@ -1,5 +1,6 @@
 package typingsSlinky.pgEars
 
+import typingsSlinky.pgEars.anon.ClientConfigmaxAttemptsnu
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

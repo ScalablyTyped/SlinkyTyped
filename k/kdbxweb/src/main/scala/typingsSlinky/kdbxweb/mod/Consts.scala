@@ -1,14 +1,14 @@
 package typingsSlinky.kdbxweb.mod
 
-import typingsSlinky.kdbxweb.AnonAes
-import typingsSlinky.kdbxweb.AnonApple
-import typingsSlinky.kdbxweb.AnonArcFourVariant
-import typingsSlinky.kdbxweb.AnonArgon2
-import typingsSlinky.kdbxweb.AnonBadSignature
-import typingsSlinky.kdbxweb.AnonFileMagic
-import typingsSlinky.kdbxweb.AnonGZip
-import typingsSlinky.kdbxweb.AnonHistoryMaxItems
-import typingsSlinky.kdbxweb.AnonNone
+import typingsSlinky.kdbxweb.anon.Aes
+import typingsSlinky.kdbxweb.anon.Apple
+import typingsSlinky.kdbxweb.anon.ArcFourVariant
+import typingsSlinky.kdbxweb.anon.Argon2
+import typingsSlinky.kdbxweb.anon.BadSignature
+import typingsSlinky.kdbxweb.anon.FileMagic
+import typingsSlinky.kdbxweb.anon.GZip
+import typingsSlinky.kdbxweb.anon.HistoryMaxItems
+import typingsSlinky.kdbxweb.anon.None
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,14 +16,14 @@ import scala.scalajs.js.annotation._
 @JSImport("kdbxweb", "Consts")
 @js.native
 object Consts extends js.Object {
-  var AutoTypeObfuscationOptions: AnonNone = js.native
-  var CipherId: AnonAes = js.native
-  var CompressionAlgorithm: AnonGZip = js.native
-  var CrsAlgorithm: AnonArcFourVariant = js.native
-  var Defaults: AnonHistoryMaxItems = js.native
-  var ErrorCodes: AnonBadSignature = js.native
-  var Icons: AnonApple = js.native
-  var KdfId: AnonArgon2 = js.native
-  var Signatures: AnonFileMagic = js.native
+  var AutoTypeObfuscationOptions: None = js.native
+  var CipherId: Aes = js.native
+  var CompressionAlgorithm: GZip = js.native
+  var CrsAlgorithm: ArcFourVariant = js.native
+  var Defaults: HistoryMaxItems = js.native
+  var ErrorCodes: BadSignature = js.native
+  var Icons: Apple = js.native
+  var KdfId: Argon2 = js.native
+  var Signatures: FileMagic = js.native
 }
 

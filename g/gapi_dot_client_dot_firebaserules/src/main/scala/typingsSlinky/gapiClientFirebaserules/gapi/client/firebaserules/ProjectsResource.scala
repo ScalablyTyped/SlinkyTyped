@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientFirebaserules.gapi.client.firebaserules
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientFirebaserules.AnonAccesstoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientFirebaserules.anon.Accesstoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,7 +34,7 @@ trait ProjectsResource extends js.Object {
     * }
     * }
     */
-  def test(request: AnonAccesstoken): Request_[TestRulesetResponse] = js.native
+  def test(request: Accesstoken): Request[TestRulesetResponse] = js.native
 }
 
 object ProjectsResource {
@@ -42,7 +42,7 @@ object ProjectsResource {
   def apply(
     releases: ReleasesResource,
     rulesets: RulesetsResource,
-    test: AnonAccesstoken => Request_[TestRulesetResponse]
+    test: Accesstoken => Request[TestRulesetResponse]
   ): ProjectsResource = {
     val __obj = js.Dynamic.literal(releases = releases.asInstanceOf[js.Any], rulesets = rulesets.asInstanceOf[js.Any], test = js.Any.fromFunction1(test))
     __obj.asInstanceOf[ProjectsResource]
@@ -66,7 +66,7 @@ object ProjectsResource {
         ret
     }
     @scala.inline
-    def withTest(value: AnonAccesstoken => Request_[TestRulesetResponse]): Self = {
+    def withTest(value: Accesstoken => Request[TestRulesetResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("test")(js.Any.fromFunction1(value))
         ret

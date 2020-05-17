@@ -2,7 +2,7 @@ package typingsSlinky.reactNativeMaterialUi.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNativeMaterialUi.AnonMessage
+import typingsSlinky.reactNativeMaterialUi.anon.Message
 import typingsSlinky.reactNativeMaterialUi.mod.ButtonProps
 import typingsSlinky.reactNativeMaterialUi.mod.SnackbarProps
 import scala.scalajs.js
@@ -25,7 +25,7 @@ object Snackbar {
     @scala.inline
     def onActionPress(value: () => Unit): this.type = set("onActionPress", js.Any.fromFunction0(value))
     @scala.inline
-    def style(value: AnonMessage): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: Message): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SnackbarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

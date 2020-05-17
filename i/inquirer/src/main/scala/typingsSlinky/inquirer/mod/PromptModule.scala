@@ -1,6 +1,6 @@
 package typingsSlinky.inquirer.mod
 
-import typingsSlinky.inquirer.AnonUi
+import typingsSlinky.inquirer.anon.Ui
 import typingsSlinky.inquirer.mod.prompts.PromptCollection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,6 +18,6 @@ trait PromptModule extends PromptModuleBase {
   /**
     * Prompts the questions to the user.
     */
-  def apply[T](questions: QuestionCollection[T]): js.Promise[T] with AnonUi = js.native
+  def apply[T](questions: QuestionCollection[T]): js.Promise[T] with Ui = js.native
 }
 

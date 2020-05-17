@@ -1,38 +1,18 @@
 package typingsSlinky.winrtUwp.Windows.Web.Http
 
-import typingsSlinky.winrtUwp.AnonLength
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperationWithProgress
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IInputStream
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IOutputStream
-import typingsSlinky.winrtUwp.Windows.Storage.Streams.UnicodeEncoding
 import typingsSlinky.winrtUwp.Windows.Web.Http.Headers.HttpContentHeaderCollection
+import typingsSlinky.winrtUwp.anon.Length
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides HTTP content that uses a string. */
-@JSGlobal("Windows.Web.Http.HttpStringContent")
 @js.native
-class HttpStringContent protected () extends js.Object {
-  /**
-    * Initializes a new instance of the HttpStringContent class with the specified content.
-    * @param content The content used to initialize the HttpStringContent .
-    */
-  def this(content: String) = this()
-  /**
-    * Initializes a new instance of the HttpStringContent class with the specified content and encoding.
-    * @param content The content used to initialize the HttpStringContent .
-    * @param encoding The encoding to use for the content.
-    */
-  def this(content: String, encoding: UnicodeEncoding) = this()
-  /**
-    * Initializes a new instance of the HttpStringContent class with the specified content, encoding, and media type.
-    * @param content The content used to initialize the HttpStringContent .
-    * @param encoding The encoding to use for the content.
-    * @param mediaType The media type to use for the content.
-    */
-  def this(content: String, encoding: UnicodeEncoding, mediaType: String) = this()
+trait HttpStringContent extends js.Object {
   /** Get a collection of content headers set on the HttpStringContent . */
   var headers: HttpContentHeaderCollection = js.native
   /**
@@ -60,12 +40,85 @@ class HttpStringContent protected () extends js.Object {
   /**
     * Compute the HttpStringContent length in bytes.
     */
-  def tryComputeLength(): AnonLength = js.native
+  def tryComputeLength(): Length = js.native
   /**
     * Write the HttpStringContent to an output stream as an asynchronous operation.
     * @param outputStream The output stream to write to.
     * @return The object that represents the asynchronous operation.
     */
   def writeToStreamAsync(outputStream: IOutputStream): IPromiseWithIAsyncOperationWithProgress[Double, Double] = js.native
+}
+
+object HttpStringContent {
+  @scala.inline
+  def apply(
+    bufferAllAsync: () => IPromiseWithIAsyncOperationWithProgress[Double, Double],
+    close: () => Unit,
+    headers: HttpContentHeaderCollection,
+    readAsBufferAsync: () => IPromiseWithIAsyncOperationWithProgress[IBuffer, Double],
+    readAsInputStreamAsync: () => IPromiseWithIAsyncOperationWithProgress[IInputStream, Double],
+    readAsStringAsync: () => IPromiseWithIAsyncOperationWithProgress[String, Double],
+    tryComputeLength: () => Length,
+    writeToStreamAsync: IOutputStream => IPromiseWithIAsyncOperationWithProgress[Double, Double]
+  ): HttpStringContent = {
+    val __obj = js.Dynamic.literal(bufferAllAsync = js.Any.fromFunction0(bufferAllAsync), close = js.Any.fromFunction0(close), headers = headers.asInstanceOf[js.Any], readAsBufferAsync = js.Any.fromFunction0(readAsBufferAsync), readAsInputStreamAsync = js.Any.fromFunction0(readAsInputStreamAsync), readAsStringAsync = js.Any.fromFunction0(readAsStringAsync), tryComputeLength = js.Any.fromFunction0(tryComputeLength), writeToStreamAsync = js.Any.fromFunction1(writeToStreamAsync))
+    __obj.asInstanceOf[HttpStringContent]
+  }
+  @scala.inline
+  implicit class HttpStringContentOps[Self <: HttpStringContent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBufferAllAsync(value: () => IPromiseWithIAsyncOperationWithProgress[Double, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bufferAllAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: HttpContentHeaderCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReadAsBufferAsync(value: () => IPromiseWithIAsyncOperationWithProgress[IBuffer, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readAsBufferAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withReadAsInputStreamAsync(value: () => IPromiseWithIAsyncOperationWithProgress[IInputStream, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readAsInputStreamAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withReadAsStringAsync(value: () => IPromiseWithIAsyncOperationWithProgress[String, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readAsStringAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withTryComputeLength(value: () => Length): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tryComputeLength")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withWriteToStreamAsync(value: IOutputStream => IPromiseWithIAsyncOperationWithProgress[Double, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeToStreamAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientSiteverification.gapi.client.siteverification
 
-import typingsSlinky.gapiClientSiteverification.AnonIdentifier
+import typingsSlinky.gapiClientSiteverification.anon.Identifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait SiteVerificationWebResourceResource extends js.Object {
   /** The email addresses of all verified owners. */
   var owners: js.UndefOr[js.Array[String]] = js.native
   /** The address and type of a site that is verified or will be verified. */
-  var site: js.UndefOr[AnonIdentifier] = js.native
+  var site: js.UndefOr[Identifier] = js.native
 }
 
 object SiteVerificationWebResourceResource {
@@ -52,7 +52,7 @@ object SiteVerificationWebResourceResource {
         ret
     }
     @scala.inline
-    def withSite(value: AnonIdentifier): Self = {
+    def withSite(value: Identifier): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("site")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.swPrecacheWebpackPlugin.mod
 
-import typingsSlinky.swPrecacheWebpackPlugin.AnonChunkName
+import typingsSlinky.swPrecacheWebpackPlugin.anon.ChunkName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait Options extends _Options {
   var filepath: js.UndefOr[String] = js.native
   // override sw-precache options
   @JSName("importScripts")
-  var importScripts_Options: js.UndefOr[js.Array[String | AnonChunkName]] = js.native
+  var importScripts_Options: js.UndefOr[js.Array[String | ChunkName]] = js.native
   var mergeStaticsConfig: js.UndefOr[Boolean] = js.native
   var minify: js.UndefOr[Boolean] = js.native
   var staticFileGlobsIgnorePatterns: js.UndefOr[js.Array[js.RegExp]] = js.native
@@ -54,7 +54,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withImportScripts(value: js.Array[String | AnonChunkName]): Self = {
+    def withImportScripts(value: js.Array[String | ChunkName]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("importScripts")(value.asInstanceOf[js.Any])
         ret

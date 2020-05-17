@@ -208,7 +208,7 @@ object VictoryVoronoiContainerProps {
         ret
     }
     @scala.inline
-    def withVoronoiDimension(value: x | y): Self = {
+    def withVoronoiDimension(value: typingsSlinky.victory.victoryStrings.x | y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("voronoiDimension")(value.asInstanceOf[js.Any])
         ret

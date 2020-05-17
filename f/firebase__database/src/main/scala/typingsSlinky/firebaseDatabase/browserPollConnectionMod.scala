@@ -1,10 +1,11 @@
 package typingsSlinky.firebaseDatabase
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLIFrameElement
+import typingsSlinky.firebaseDatabase.anon.D
 import typingsSlinky.firebaseDatabase.packetReceiverMod.PacketReceiver
 import typingsSlinky.firebaseDatabase.repoInfoMod.RepoInfo
 import typingsSlinky.firebaseDatabase.transportMod.Transport
-import typingsSlinky.std.Document_
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -103,7 +104,7 @@ object browserPollConnectionMod extends js.Object {
       */
     var newRequest_ : js.Any = js.native
     var outstandingRequests: Set[Double] = js.native
-    var pendingSegs: js.Array[AnonD] = js.native
+    var pendingSegs: js.Array[D] = js.native
     var sendNewPolls: Boolean = js.native
     var uniqueCallbackIdentifier: Double = js.native
     /**
@@ -138,7 +139,7 @@ object browserPollConnectionMod extends js.Object {
   @js.native
   trait IFrameElement
     extends typingsSlinky.std.HTMLIFrameElement {
-    var doc: Document_ = js.native
+    var doc: Document = js.native
   }
   
   val FIREBASE_LONGPOLL_CALLBACK_ID_PARAM: /* "cb" */ String = js.native

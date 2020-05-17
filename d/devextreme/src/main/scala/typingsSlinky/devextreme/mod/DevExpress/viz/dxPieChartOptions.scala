@@ -3,8 +3,8 @@ package typingsSlinky.devextreme.mod.DevExpress.viz
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.SVGElement
 import org.scalajs.dom.raw.SVGGElement
-import typingsSlinky.devextreme.AnonNameField
-import typingsSlinky.devextreme.AnonPoints
+import typingsSlinky.devextreme.anon.NameField
+import typingsSlinky.devextreme.anon.Points
 import typingsSlinky.devextreme.devextremeStrings.anticlockwise
 import typingsSlinky.devextreme.devextremeStrings.clockwise
 import typingsSlinky.devextreme.devextremeStrings.donut
@@ -14,7 +14,7 @@ import typingsSlinky.devextreme.devextremeStrings.none
 import typingsSlinky.devextreme.devextremeStrings.pie
 import typingsSlinky.devextreme.devextremeStrings.shift
 import typingsSlinky.devextreme.mod.DevExpress.core.template
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,13 +40,13 @@ trait dxPieChartOptions extends BaseChartOptions[dxPieChart] {
   /** Specifies the minimum diameter of the pie. */
   var minDiameter: js.UndefOr[Double] = js.native
   /** A function that is executed when a legend item is clicked or tapped. */
-  var onLegendClick: js.UndefOr[(js.Function1[/* e */ AnonPoints, _]) | String] = js.native
+  var onLegendClick: js.UndefOr[(js.Function1[/* e */ Points, _]) | String] = js.native
   /** Specifies how a chart must behave when point labels overlap. */
   var resolveLabelOverlapping: js.UndefOr[hide | none | shift] = js.native
   /** Specifies the direction that the pie chart segments will occupy. */
   var segmentsDirection: js.UndefOr[anticlockwise | clockwise] = js.native
   /** Defines options for the series template. */
-  var seriesTemplate: js.UndefOr[AnonNameField] = js.native
+  var seriesTemplate: js.UndefOr[NameField] = js.native
   /** Specifies options for the series of the PieChart widget. */
   @JSName("series")
   var series_dxPieChartOptions: js.UndefOr[PieChartSeries | js.Array[PieChartSeries]] = js.native
@@ -169,13 +169,13 @@ object dxPieChartOptions {
         ret
     }
     @scala.inline
-    def withOnLegendClickFunction1(value: /* e */ AnonPoints => _): Self = {
+    def withOnLegendClickFunction1(value: /* e */ Points => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLegendClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnLegendClick(value: (js.Function1[/* e */ AnonPoints, _]) | String): Self = {
+    def withOnLegendClick(value: (js.Function1[/* e */ Points, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLegendClick")(value.asInstanceOf[js.Any])
         ret
@@ -223,7 +223,7 @@ object dxPieChartOptions {
         ret
     }
     @scala.inline
-    def withSeriesTemplate(value: AnonNameField): Self = {
+    def withSeriesTemplate(value: NameField): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seriesTemplate")(value.asInstanceOf[js.Any])
         ret

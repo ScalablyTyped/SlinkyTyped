@@ -10,8 +10,7 @@ import scala.scalajs.js.annotation._
 object errorWithStackMod extends js.Object {
   @js.native
   class default protected () extends Error {
-    def this(message: js.UndefOr[scala.Nothing], callsite: js.Function) = this()
-    def this(message: String, callsite: js.Function) = this()
+    def this(message: js.UndefOr[String], callsite: js.Function) = this()
   }
   
   type ErrorWithStack = js.Error

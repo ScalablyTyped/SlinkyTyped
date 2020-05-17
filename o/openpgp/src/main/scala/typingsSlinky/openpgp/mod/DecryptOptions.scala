@@ -1,6 +1,6 @@
 package typingsSlinky.openpgp.mod
 
-import typingsSlinky.openpgp.AnonAlgorithm
+import typingsSlinky.openpgp.anon.Algorithm
 import typingsSlinky.openpgp.mod.key.Key
 import typingsSlinky.openpgp.mod.message.Message
 import typingsSlinky.openpgp.mod.signature.Signature
@@ -42,7 +42,7 @@ trait DecryptOptions extends js.Object {
   /**
     * (optional) session keys in the form: { data:Uint8Array, algorithm:String }
     */
-  var sessionKeys: js.UndefOr[AnonAlgorithm | js.Array[AnonAlgorithm]] = js.native
+  var sessionKeys: js.UndefOr[Algorithm | js.Array[Algorithm]] = js.native
   /**
     * (optional) detached signature for verification
     */
@@ -132,7 +132,7 @@ object DecryptOptions {
         ret
     }
     @scala.inline
-    def withSessionKeys(value: AnonAlgorithm | js.Array[AnonAlgorithm]): Self = {
+    def withSessionKeys(value: Algorithm | js.Array[Algorithm]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sessionKeys")(value.asInstanceOf[js.Any])
         ret

@@ -16,7 +16,8 @@ trait TeamsUpdateInOrgParams extends js.Object {
     * The name of the team.
     */
   var name: String = js.native
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
   /**
     * The ID of a team to set as the parent team.
     */
@@ -35,8 +36,9 @@ trait TeamsUpdateInOrgParams extends js.Object {
 
 object TeamsUpdateInOrgParams {
   @scala.inline
-  def apply(name: String, org: String, team_slug: String): TeamsUpdateInOrgParams = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], org = org.asInstanceOf[js.Any], team_slug = team_slug.asInstanceOf[js.Any])
+  def apply(name: String, org_ : String, team_slug: String): TeamsUpdateInOrgParams = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], team_slug = team_slug.asInstanceOf[js.Any])
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[TeamsUpdateInOrgParams]
   }
   @scala.inline
@@ -52,7 +54,7 @@ object TeamsUpdateInOrgParams {
         ret
     }
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

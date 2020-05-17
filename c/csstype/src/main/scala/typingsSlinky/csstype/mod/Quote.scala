@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.`no-open-quote`
   - typingsSlinky.csstype.csstypeStrings.`open-quote`
 */
-trait Quote extends _ContentList
+trait Quote extends ContentList
 
 object Quote {
   @scala.inline

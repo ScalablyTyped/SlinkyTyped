@@ -3,7 +3,7 @@ package typingsSlinky.materialUiCore.gridListTileBarGridListTileBarMod
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
-import typingsSlinky.materialUiCore.PartialClassNameMapGridLiActionIcon
+import typingsSlinky.materialUiCore.anon.PartialClassNameMapGridLiActionIcon
 import typingsSlinky.materialUiCore.materialUiCoreStrings.bottom
 import typingsSlinky.materialUiCore.materialUiCoreStrings.left
 import typingsSlinky.materialUiCore.materialUiCoreStrings.right

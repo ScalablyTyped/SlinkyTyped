@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientCalendar.gapi.client.calendar
 
-import typingsSlinky.gapiClientCalendar.AnonType
+import typingsSlinky.gapiClientCalendar.anon.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ trait AclRule extends js.Object {
     */
   var role: js.UndefOr[String] = js.native
   /** The scope of the rule. */
-  var scope: js.UndefOr[AnonType] = js.native
+  var scope: js.UndefOr[Type] = js.native
 }
 
 object AclRule {
@@ -89,7 +89,7 @@ object AclRule {
         ret
     }
     @scala.inline
-    def withScope(value: AnonType): Self = {
+    def withScope(value: Type): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
         ret

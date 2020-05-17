@@ -1,6 +1,6 @@
 package typingsSlinky.saslDigestMd5.mod
 
-import typingsSlinky.saslDigestMd5.TypeofDigestMd5Mechanism
+import typingsSlinky.saslDigestMd5.anon.TypeofDigestMd5Mechanism
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

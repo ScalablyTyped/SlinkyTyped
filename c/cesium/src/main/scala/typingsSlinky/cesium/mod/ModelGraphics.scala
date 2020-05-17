@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonArticulations
+import typingsSlinky.cesium.anon.Articulations
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "ModelGraphics")
 @js.native
 class ModelGraphics () extends js.Object {
-  def this(options: AnonArticulations) = this()
+  def this(options: Articulations) = this()
   var articulations: PropertyBag = js.native
   var clampAnimations: Property | Boolean = js.native
   var clippingPlanes: Property | ClippingPlaneCollection = js.native

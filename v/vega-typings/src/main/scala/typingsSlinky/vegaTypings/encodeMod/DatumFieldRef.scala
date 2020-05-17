@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DatumFieldRef extends _Field {
+trait DatumFieldRef extends Field {
   var datum: Field = js.native
 }
 

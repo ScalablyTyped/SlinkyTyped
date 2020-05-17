@@ -7,15 +7,15 @@ import org.scalablytyped.runtime.Instantiable3
 import org.scalablytyped.runtime.Instantiable6
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
-import typingsSlinky.paper.TypeofColor
-import typingsSlinky.paper.TypeofKey
-import typingsSlinky.paper.TypeofPaperScope
-import typingsSlinky.paper.TypeofPaperScript
-import typingsSlinky.paper.TypeofPath
-import typingsSlinky.paper.TypeofPathItem
-import typingsSlinky.paper.TypeofPoint
-import typingsSlinky.paper.TypeofShape
-import typingsSlinky.paper.TypeofSize
+import typingsSlinky.paper.anon.TypeofColor
+import typingsSlinky.paper.anon.TypeofKey
+import typingsSlinky.paper.anon.TypeofPaperScope
+import typingsSlinky.paper.anon.TypeofPaperScript
+import typingsSlinky.paper.anon.TypeofPath
+import typingsSlinky.paper.anon.TypeofPathItem
+import typingsSlinky.paper.anon.TypeofPoint
+import typingsSlinky.paper.anon.TypeofShape
+import typingsSlinky.paper.anon.TypeofSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,12 +40,8 @@ import scala.scalajs.js.annotation._
   * The global {@link paper} object is simply a reference to the currently active
   * `PaperScope`.
   */
-@JSGlobal("paper.PaperScope")
 @js.native
-/** 
-  * Creates a PaperScope object.
-  */
-class PaperScope () extends js.Object {
+trait PaperScope extends js.Object {
   var Color: TypeofColor = js.native
   var CompoundPath: Instantiable1[/* pathData */ String, typingsSlinky.paper.paper.CompoundPath] = js.native
   var Curve: Instantiable2[/* segment1 */ Segment, /* segment2 */ Segment, typingsSlinky.paper.paper.Curve] = js.native
@@ -200,15 +196,5 @@ class PaperScope () extends js.Object {
     * worker.
     */
   def setup(element: HTMLCanvasElement): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("paper.PaperScope")
-@js.native
-object PaperScope extends js.Object {
-  /** 
-    * Retrieves a PaperScope object with the given scope id.
-    */
-  def get(id: js.Any): PaperScope = js.native
 }
 

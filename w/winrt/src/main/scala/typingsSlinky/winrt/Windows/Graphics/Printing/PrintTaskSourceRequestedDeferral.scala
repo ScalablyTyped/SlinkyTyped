@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Graphics.Printing.PrintTaskSourceRequestedDeferral")
 @js.native
-class PrintTaskSourceRequestedDeferral () extends IPrintTaskSourceRequestedDeferral
+trait PrintTaskSourceRequestedDeferral extends IPrintTaskSourceRequestedDeferral
+
+object PrintTaskSourceRequestedDeferral {
+  @scala.inline
+  def apply(complete: () => Unit): PrintTaskSourceRequestedDeferral = {
+    val __obj = js.Dynamic.literal(complete = js.Any.fromFunction0(complete))
+    __obj.asInstanceOf[PrintTaskSourceRequestedDeferral]
+  }
+}
 

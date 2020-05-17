@@ -1,10 +1,10 @@
 package typingsSlinky.officeUiFabricReact.colorPickerTypesMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactRef
 import typingsSlinky.officeUiFabricReact.interfacesMod.IColor
-import typingsSlinky.std.Event_
 import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -60,7 +60,7 @@ trait IColorPickerProps extends js.Object {
     * (Not called when the color is changed via props.)
     */
   var onChange: js.UndefOr[
-    js.Function2[/* ev */ SyntheticEvent[Event_, HTMLElement], /* color */ IColor, Unit]
+    js.Function2[/* ev */ SyntheticEvent[Event, HTMLElement], /* color */ IColor, Unit]
   ] = js.native
   /**
     * Label for the red text field.
@@ -202,7 +202,7 @@ object IColorPickerProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: (/* ev */ SyntheticEvent[Event_, HTMLElement], /* color */ IColor) => Unit): Self = {
+    def withOnChange(value: (/* ev */ SyntheticEvent[Event, HTMLElement], /* color */ IColor) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonImpltype
+import typingsSlinky.astTypes.anon.Impltype
 import typingsSlinky.astTypes.kindsMod.FlowTypeKind
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.kindsMod.TypeParameterDeclarationKind
@@ -18,6 +18,6 @@ trait OpaqueTypeBuilder extends js.Object {
     impltype: FlowTypeKind,
     supertype: FlowTypeKind
   ): OpaqueType = js.native
-  def from(params: AnonImpltype): OpaqueType = js.native
+  def from(params: Impltype): OpaqueType = js.native
 }
 

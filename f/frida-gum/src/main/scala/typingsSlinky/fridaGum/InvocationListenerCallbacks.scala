@@ -15,14 +15,8 @@ trait InvocationListenerCallbacks extends js.Object
 
 object InvocationListenerCallbacks {
   @scala.inline
-  def ScriptInvocationListenerCallbacks(): InvocationListenerCallbacks = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[InvocationListenerCallbacks]
-  }
+  implicit def apply(value: NativeInvocationListenerCallbacks): InvocationListenerCallbacks = value.asInstanceOf[InvocationListenerCallbacks]
   @scala.inline
-  def NativeInvocationListenerCallbacks(): InvocationListenerCallbacks = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[InvocationListenerCallbacks]
-  }
+  implicit def apply(value: ScriptInvocationListenerCallbacks): InvocationListenerCallbacks = value.asInstanceOf[InvocationListenerCallbacks]
 }
 

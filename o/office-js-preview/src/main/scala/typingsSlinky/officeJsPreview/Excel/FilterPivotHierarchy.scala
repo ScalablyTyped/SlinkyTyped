@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.FilterPivotHierarchyData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.FilterPivotHierarchyLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.FilterPivotHierarchyUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.8]
   */
-@JSGlobal("Excel.FilterPivotHierarchy")
 @js.native
-class FilterPivotHierarchy () extends ClientObject {
+trait FilterPivotHierarchy extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_FilterPivotHierarchy: RequestContext = js.native
@@ -64,7 +63,7 @@ class FilterPivotHierarchy () extends ClientObject {
     */
   def load(): FilterPivotHierarchy = js.native
   def load(options: FilterPivotHierarchyLoadOptions): FilterPivotHierarchy = js.native
-  def load(propertyNamesAndPaths: AnonExpand): FilterPivotHierarchy = js.native
+  def load(propertyNamesAndPaths: Expand): FilterPivotHierarchy = js.native
   def load(propertyNames: String): FilterPivotHierarchy = js.native
   def load(propertyNames: js.Array[String]): FilterPivotHierarchy = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

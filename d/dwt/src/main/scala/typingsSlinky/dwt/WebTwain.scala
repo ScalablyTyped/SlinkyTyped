@@ -1,5 +1,6 @@
 package typingsSlinky.dwt
 
+import typingsSlinky.dwt.anon.Detail
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -1395,7 +1396,7 @@ trait WebTwain extends js.Object {
     * Return the runtime license info.
     * @method WebTwain#GetLicenseInfo
     */
-  def GetLicenseInfo(): AnonDetail = js.native
+  def GetLicenseInfo(): Detail = js.native
   /**
     * Returns the index of the selected image.
     * @method WebTwain#GetSelectedImageIndex

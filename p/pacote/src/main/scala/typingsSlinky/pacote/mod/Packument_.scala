@@ -1,8 +1,8 @@
 package typingsSlinky.pacote.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.pacote.AnonCreated
-import typingsSlinky.pacote.AnonLatest
+import typingsSlinky.pacote.anon.Created
+import typingsSlinky.pacote.anon.Latest
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,13 +17,13 @@ trait Packument_
     * An object mapping dist-tags to version numbers. This is how `foo@latest`
     * gets turned into `foo@1.2.3`.
     */
-  var `dist-tags`: AnonLatest with (Record[String, String]) = js.native
+  var `dist-tags`: Latest with (Record[String, String]) = js.native
   var name: String = js.native
   /**
     * In the full packument, an object mapping version numbers to publication
     * times, for the `opts.before` functionality.
     */
-  var time: js.UndefOr[(Record[String, String]) with AnonCreated] = js.native
+  var time: js.UndefOr[(Record[String, String]) with Created] = js.native
   /**
     * An object where each key is a version, and each value is the manifest for
     * that version.
@@ -34,7 +34,7 @@ trait Packument_
 object Packument_ {
   @scala.inline
   def apply(
-    `dist-tags`: AnonLatest with (Record[String, String]),
+    `dist-tags`: Latest with (Record[String, String]),
     name: String,
     versions: Record[String, Manifest_]
   ): Packument_ = {
@@ -49,7 +49,7 @@ object Packument_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def `withDist-tags`(value: AnonLatest with (Record[String, String])): Self = {
+    def `withDist-tags`(value: Latest with (Record[String, String])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dist-tags")(value.asInstanceOf[js.Any])
         ret
@@ -67,7 +67,7 @@ object Packument_ {
         ret
     }
     @scala.inline
-    def withTime(value: (Record[String, String]) with AnonCreated): Self = {
+    def withTime(value: (Record[String, String]) with Created): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
         ret

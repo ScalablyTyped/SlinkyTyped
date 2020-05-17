@@ -2,7 +2,7 @@ package typingsSlinky.baseui.cardMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.baseui.AnonThumbnail
+import typingsSlinky.baseui.anon.Thumbnail
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait CardProps extends js.Object {
   val action: js.UndefOr[TagMod[Any]] = js.native
   val children: js.UndefOr[TagMod[Any]] = js.native
-  val hasThumbnail: js.UndefOr[js.Function1[/* props */ AnonThumbnail, Boolean]] = js.native
+  val hasThumbnail: js.UndefOr[js.Function1[/* props */ Thumbnail, Boolean]] = js.native
   val headerImage: js.UndefOr[
     String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ImagePropsT */ js.Any)
   ] = js.native
@@ -69,7 +69,7 @@ object CardProps {
         ret
     }
     @scala.inline
-    def withHasThumbnail(value: /* props */ AnonThumbnail => Boolean): Self = {
+    def withHasThumbnail(value: /* props */ Thumbnail => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hasThumbnail")(js.Any.fromFunction1(value))
         ret

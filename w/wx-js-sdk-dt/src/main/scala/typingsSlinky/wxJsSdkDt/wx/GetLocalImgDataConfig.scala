@@ -1,6 +1,6 @@
 package typingsSlinky.wxJsSdkDt.wx
 
-import typingsSlinky.wxJsSdkDt.AnonLocalData
+import typingsSlinky.wxJsSdkDt.anon.LocalData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,12 +15,12 @@ trait GetLocalImgDataConfig extends WxBaseRequestConfig {
     * 成功后的回调, localData是图片的base64数据，可以用img标签显示
     */
   @JSName("success")
-  def success_MGetLocalImgDataConfig(res: AnonLocalData): Unit = js.native
+  def success_MGetLocalImgDataConfig(res: LocalData): Unit = js.native
 }
 
 object GetLocalImgDataConfig {
   @scala.inline
-  def apply(localId: String, success: AnonLocalData => Unit): GetLocalImgDataConfig = {
+  def apply(localId: String, success: LocalData => Unit): GetLocalImgDataConfig = {
     val __obj = js.Dynamic.literal(localId = localId.asInstanceOf[js.Any], success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[GetLocalImgDataConfig]
   }
@@ -37,7 +37,7 @@ object GetLocalImgDataConfig {
         ret
     }
     @scala.inline
-    def withSuccess(value: AnonLocalData => Unit): Self = {
+    def withSuccess(value: LocalData => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

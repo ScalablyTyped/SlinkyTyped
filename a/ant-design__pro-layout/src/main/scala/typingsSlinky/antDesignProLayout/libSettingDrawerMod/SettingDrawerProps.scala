@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignProLayout.libSettingDrawerMod
 
-import typingsSlinky.antDesignProLayout.MergerSettingsTypeSetting
+import typingsSlinky.antDesignProLayout.anon.MergerSettingsTypeSetting
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

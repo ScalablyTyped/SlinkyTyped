@@ -1,6 +1,6 @@
 package typingsSlinky.fsPlus.mod
 
-import typingsSlinky.fsPlus.AnonEncoding
+import typingsSlinky.fsPlus.anon.Encoding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 object writeFileSync extends js.Object {
   def apply(filePath: String, content: String): Unit = js.native
   def apply(filePath: String, content: String, options: String): Unit = js.native
-  def apply(filePath: String, content: String, options: AnonEncoding): Unit = js.native
+  def apply(filePath: String, content: String, options: Encoding): Unit = js.native
 }
 

@@ -1,6 +1,8 @@
 package typingsSlinky.sipJs
 
 import typingsSlinky.events.mod.EventEmitter
+import typingsSlinky.sipJs.anon.Msg
+import typingsSlinky.sipJs.anon.Scheme
 import typingsSlinky.sipJs.coreMod.Logger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,7 +28,7 @@ object libTransportMod extends js.Object {
       * Some transport configuration which is controlling core behavior.
       * @internal
       */
-    var server: js.UndefOr[AnonScheme] = js.native
+    var server: js.UndefOr[Scheme] = js.native
     def afterConnected(callback: js.Function0[Unit]): Unit = js.native
     /**
       * Returns the promise designated by the child layer then emits a connected event.
@@ -72,8 +74,8 @@ object libTransportMod extends js.Object {
       * @param message - Message.
       * @param options - Options bucket.
       */
-    /* protected */ def sendPromise(message: String): js.Promise[AnonMsg] = js.native
-    /* protected */ def sendPromise(message: String, options: js.Any): js.Promise[AnonMsg] = js.native
+    /* protected */ def sendPromise(message: String): js.Promise[Msg] = js.native
+    /* protected */ def sendPromise(message: String, options: js.Any): js.Promise[Msg] = js.native
     /**
       * Returns a promise which resolves once the UA is connected. DEPRECATION WARNING: just use afterConnected()
       */

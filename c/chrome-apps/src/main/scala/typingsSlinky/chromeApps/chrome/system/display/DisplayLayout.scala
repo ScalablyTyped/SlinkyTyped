@@ -1,9 +1,8 @@
 package typingsSlinky.chromeApps.chrome.system.display
 
-import typingsSlinky.chromeApps.AnonBOTTOM
+import typingsSlinky.chromeApps.anon.BOTTOM
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chrome.integer
-import typingsSlinky.chromeApps.chromeAppsStrings.BOTTOM
 import typingsSlinky.chromeApps.chromeAppsStrings.LEFT
 import typingsSlinky.chromeApps.chromeAppsStrings.RIGHT
 import typingsSlinky.chromeApps.chromeAppsStrings.TOP
@@ -33,10 +32,10 @@ trait DisplayLayout extends js.Object {
     * @see enum DisplayPosition
     */
   var position: ToStringLiteral[
-    AnonBOTTOM, 
-    /* keyof chrome-apps.AnonBOTTOM */ TOP | RIGHT | BOTTOM | LEFT, 
+    BOTTOM, 
+    /* keyof chrome-apps.anon.BOTTOM */ TOP | RIGHT | typingsSlinky.chromeApps.chromeAppsStrings.BOTTOM | LEFT, 
     Exclude[
-      /* keyof chrome-apps.AnonBOTTOM */ TOP | RIGHT | BOTTOM | LEFT, 
+      /* keyof chrome-apps.anon.BOTTOM */ TOP | RIGHT | typingsSlinky.chromeApps.chromeAppsStrings.BOTTOM | LEFT, 
       top_ | right_ | bottom_ | left_
     ]
   ] = js.native
@@ -49,10 +48,10 @@ object DisplayLayout {
     offset: integer,
     parentId: String,
     position: ToStringLiteral[
-      AnonBOTTOM, 
-      /* keyof chrome-apps.AnonBOTTOM */ TOP | RIGHT | BOTTOM | LEFT, 
+      BOTTOM, 
+      /* keyof chrome-apps.anon.BOTTOM */ TOP | RIGHT | typingsSlinky.chromeApps.chromeAppsStrings.BOTTOM | LEFT, 
       Exclude[
-        /* keyof chrome-apps.AnonBOTTOM */ TOP | RIGHT | BOTTOM | LEFT, 
+        /* keyof chrome-apps.anon.BOTTOM */ TOP | RIGHT | typingsSlinky.chromeApps.chromeAppsStrings.BOTTOM | LEFT, 
         top_ | right_ | bottom_ | left_
       ]
     ]
@@ -87,10 +86,10 @@ object DisplayLayout {
     @scala.inline
     def withPosition(
       value: ToStringLiteral[
-          AnonBOTTOM, 
-          /* keyof chrome-apps.AnonBOTTOM */ TOP | RIGHT | BOTTOM | LEFT, 
+          BOTTOM, 
+          /* keyof chrome-apps.anon.BOTTOM */ TOP | RIGHT | typingsSlinky.chromeApps.chromeAppsStrings.BOTTOM | LEFT, 
           Exclude[
-            /* keyof chrome-apps.AnonBOTTOM */ TOP | RIGHT | BOTTOM | LEFT, 
+            /* keyof chrome-apps.anon.BOTTOM */ TOP | RIGHT | typingsSlinky.chromeApps.chromeAppsStrings.BOTTOM | LEFT, 
             top_ | right_ | bottom_ | left_
           ]
         ]

@@ -1,7 +1,7 @@
 package typingsSlinky.jestTypes.configMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.jestTypes.AnonGlobal
+import typingsSlinky.jestTypes.anon.Global
 import typingsSlinky.jestTypes.jestTypesStrings.fake
 import typingsSlinky.jestTypes.jestTypesStrings.real
 import typingsSlinky.std.Record
@@ -25,7 +25,7 @@ trait InitialOptions extends js.Object {
   var coverageDirectory: js.UndefOr[String] = js.native
   var coveragePathIgnorePatterns: js.UndefOr[js.Array[String]] = js.native
   var coverageReporters: js.UndefOr[js.Array[String]] = js.native
-  var coverageThreshold: js.UndefOr[AnonGlobal] = js.native
+  var coverageThreshold: js.UndefOr[Global] = js.native
   var dependencyExtractor: js.UndefOr[String] = js.native
   var detectLeaks: js.UndefOr[Boolean] = js.native
   var detectOpenHandles: js.UndefOr[Boolean] = js.native
@@ -306,7 +306,7 @@ object InitialOptions {
         ret
     }
     @scala.inline
-    def withCoverageThreshold(value: AnonGlobal): Self = {
+    def withCoverageThreshold(value: Global): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("coverageThreshold")(value.asInstanceOf[js.Any])
         ret

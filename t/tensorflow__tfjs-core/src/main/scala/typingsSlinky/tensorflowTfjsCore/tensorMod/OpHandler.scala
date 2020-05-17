@@ -1,8 +1,8 @@
 package typingsSlinky.tensorflowTfjsCore.tensorMod
 
-import typingsSlinky.tensorflowTfjsCore.AnonFft
-import typingsSlinky.tensorflowTfjsCore.AnonIndices
-import typingsSlinky.tensorflowTfjsCore.AnonResizeBilinear
+import typingsSlinky.tensorflowTfjsCore.anon.Fft
+import typingsSlinky.tensorflowTfjsCore.anon.Indices
+import typingsSlinky.tensorflowTfjsCore.anon.ResizeBilinear
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank.R2
@@ -36,8 +36,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait OpHandler extends js.Object {
-  var image: AnonResizeBilinear = js.native
-  var spectral: AnonFft = js.native
+  var image: ResizeBilinear = js.native
+  var spectral: Fft = js.native
   def abs[T /* <: Tensor[Rank] */](x: T): T = js.native
   def acos[T /* <: Tensor[Rank] */](x: T): T = js.native
   def acosh[T /* <: Tensor[Rank] */](x: T): T = js.native
@@ -436,7 +436,7 @@ trait OpHandler extends js.Object {
   def tan[T /* <: Tensor[Rank] */](x: T): T = js.native
   def tanh[T /* <: Tensor[Rank] */](x: T): T = js.native
   def tile[T /* <: Tensor[Rank] */](x: T, reps: js.Array[Double]): T = js.native
-  def topk[T /* <: Tensor[Rank] */](x: T, k: Double, sorted: Boolean): AnonIndices[T] = js.native
+  def topk[T /* <: Tensor[Rank] */](x: T, k: Double, sorted: Boolean): Indices[T] = js.native
   def transpose[T /* <: Tensor[Rank] */](x: T): T = js.native
   def transpose[T /* <: Tensor[Rank] */](x: T, perm: js.Array[Double]): T = js.native
   def unsortedSegmentSum[T /* <: Tensor[Rank] */](x: T, segmentIds: TensorLike1D, numSegments: Double): T = js.native

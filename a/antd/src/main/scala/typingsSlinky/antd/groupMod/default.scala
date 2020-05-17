@@ -1,8 +1,8 @@
 package typingsSlinky.antd.groupMod
 
-import typingsSlinky.antd.AnonDefaultValue
-import typingsSlinky.antd.AnonOptions
-import typingsSlinky.antd.AnonValue
+import typingsSlinky.antd.anon.DefaultValue
+import typingsSlinky.antd.anon.Options
+import typingsSlinky.antd.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,8 +17,8 @@ class default protected () extends CheckboxGroup {
 @JSImport("antd/lib/checkbox/Group", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonOptions = js.native
-  var propTypes: AnonDefaultValue = js.native
-  def getDerivedStateFromProps(nextProps: CheckboxGroupProps): AnonValue | Null = js.native
+  var defaultProps: Options = js.native
+  var propTypes: DefaultValue = js.native
+  def getDerivedStateFromProps(nextProps: CheckboxGroupProps): Value | Null = js.native
 }
 

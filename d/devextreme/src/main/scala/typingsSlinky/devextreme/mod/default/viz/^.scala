@@ -1,8 +1,8 @@
 package typingsSlinky.devextreme.mod.default.viz
 
-import typingsSlinky.devextreme.AnonBackgroundColor
-import typingsSlinky.devextreme.AnonBaseColorSet
-import typingsSlinky.devextreme.AnonFileName
+import typingsSlinky.devextreme.anon.BackgroundColor
+import typingsSlinky.devextreme.anon.BaseColorSet
+import typingsSlinky.devextreme.anon.FileName
 import typingsSlinky.devextreme.devextremeStrings.Bright
 import typingsSlinky.devextreme.devextremeStrings.Carmine
 import typingsSlinky.devextreme.devextremeStrings.Default
@@ -38,16 +38,16 @@ object ^ extends js.Object {
   /** Changes the current theme for all data visualization widgets on the page. */
   def currentTheme(theme: String): Unit = js.native
   /** Allows you to export widgets using their SVG markup. */
-  def exportFromMarkup(markup: String, options: AnonBackgroundColor): Unit = js.native
+  def exportFromMarkup(markup: String, options: BackgroundColor): Unit = js.native
   /** Exports one or several widgets to PNG. */
   def exportWidgets(widgetInstances: js.Array[js.Array[DOMComponent]]): Unit = js.native
   /** Exports one or several widgets. */
-  def exportWidgets(widgetInstances: js.Array[js.Array[DOMComponent]], options: AnonFileName): Unit = js.native
+  def exportWidgets(widgetInstances: js.Array[js.Array[DOMComponent]], options: FileName): Unit = js.native
   /** Returns a subset of palette colors. */
   def generateColors(
     palette: Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office | js.Array[String],
     count: Double,
-    options: AnonBaseColorSet
+    options: BaseColorSet
   ): js.Array[String] = js.native
   /** Gets the SVG markup of specific widgets for their subsequent export. */
   def getMarkup(widgetInstances: js.Array[DOMComponent]): String = js.native

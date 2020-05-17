@@ -1,6 +1,6 @@
 package typingsSlinky.workboxWindow.workboxEventMapMod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import typingsSlinky.workboxWindow.workboxEventMod.WorkboxEvent
 import typingsSlinky.workboxWindow.workboxMod.Workbox
 import scala.scalajs.js
@@ -14,7 +14,7 @@ trait WorkboxMessageEvent extends WorkboxEvent {
 
 object WorkboxMessageEvent {
   @scala.inline
-  def apply(data: js.Any, originalEvent: Event_, target: Workbox, `type`: String): WorkboxMessageEvent = {
+  def apply(data: js.Any, originalEvent: Event, target: Workbox, `type`: String): WorkboxMessageEvent = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], originalEvent = originalEvent.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkboxMessageEvent]

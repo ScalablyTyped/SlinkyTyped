@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientPagespeedonline.gapi.client.pagespeedonline
 
-import typingsSlinky.gapiClientPagespeedonline.AnonCssResponseBytes
-import typingsSlinky.gapiClientPagespeedonline.AnonLocale
-import typingsSlinky.gapiClientPagespeedonline.AnonMajor
-import typingsSlinky.gapiClientPagespeedonline.AnonScore
+import typingsSlinky.gapiClientPagespeedonline.anon.CssResponseBytes
+import typingsSlinky.gapiClientPagespeedonline.anon.Locale
+import typingsSlinky.gapiClientPagespeedonline.anon.Major
+import typingsSlinky.gapiClientPagespeedonline.anon.Score
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Result extends js.Object {
   /** Localized PageSpeed results. Contains a ruleResults entry for each PageSpeed rule instantiated and run by the server. */
-  var formattedResults: js.UndefOr[AnonLocale] = js.native
+  var formattedResults: js.UndefOr[Locale] = js.native
   /** Canonicalized and final URL for the document, after following page redirects (if any). */
   var id: js.UndefOr[String] = js.native
   /** List of rules that were specified in the request, but which the server did not know how to instantiate. */
@@ -20,17 +20,17 @@ trait Result extends js.Object {
   /** Kind of result. */
   var kind: js.UndefOr[String] = js.native
   /** Summary statistics for the page, such as number of JavaScript bytes, number of HTML bytes, etc. */
-  var pageStats: js.UndefOr[AnonCssResponseBytes] = js.native
+  var pageStats: js.UndefOr[CssResponseBytes] = js.native
   /** Response code for the document. 200 indicates a normal page load. 4xx/5xx indicates an error. */
   var responseCode: js.UndefOr[Double] = js.native
   /** A map with one entry for each rule group in these results. */
-  var ruleGroups: js.UndefOr[Record[String, AnonScore]] = js.native
+  var ruleGroups: js.UndefOr[Record[String, Score]] = js.native
   /** Base64-encoded screenshot of the page that was analyzed. */
   var screenshot: js.UndefOr[PagespeedApiImageV2] = js.native
   /** Title of the page, as displayed in the browser's title bar. */
   var title: js.UndefOr[String] = js.native
   /** The version of PageSpeed used to generate these results. */
-  var version: js.UndefOr[AnonMajor] = js.native
+  var version: js.UndefOr[Major] = js.native
 }
 
 object Result {
@@ -46,7 +46,7 @@ object Result {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFormattedResults(value: AnonLocale): Self = {
+    def withFormattedResults(value: Locale): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formattedResults")(value.asInstanceOf[js.Any])
         ret
@@ -94,7 +94,7 @@ object Result {
         ret
     }
     @scala.inline
-    def withPageStats(value: AnonCssResponseBytes): Self = {
+    def withPageStats(value: CssResponseBytes): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pageStats")(value.asInstanceOf[js.Any])
         ret
@@ -118,7 +118,7 @@ object Result {
         ret
     }
     @scala.inline
-    def withRuleGroups(value: Record[String, AnonScore]): Self = {
+    def withRuleGroups(value: Record[String, Score]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ruleGroups")(value.asInstanceOf[js.Any])
         ret
@@ -154,7 +154,7 @@ object Result {
         ret
     }
     @scala.inline
-    def withVersion(value: AnonMajor): Self = {
+    def withVersion(value: Major): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
         ret

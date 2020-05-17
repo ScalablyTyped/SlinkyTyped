@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait UnparsedSourceText extends UnparsedNode
 
+object UnparsedSourceText {
+  @scala.inline
+  implicit def apply(value: UnparsedPrepend): UnparsedSourceText = value.asInstanceOf[UnparsedSourceText]
+  @scala.inline
+  implicit def apply(value: UnparsedTextLike): UnparsedSourceText = value.asInstanceOf[UnparsedSourceText]
+}
+

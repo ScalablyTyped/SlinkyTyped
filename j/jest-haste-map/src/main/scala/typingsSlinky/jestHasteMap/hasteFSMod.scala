@@ -1,5 +1,6 @@
 package typingsSlinky.jestHasteMap
 
+import typingsSlinky.jestHasteMap.anon.Files
 import typingsSlinky.jestTypes.configMod.Glob
 import typingsSlinky.jestTypes.configMod.Path
 import typingsSlinky.std.Set
@@ -31,7 +32,7 @@ object hasteFSMod extends js.Object {
   
   @js.native
   class default protected () extends HasteFS {
-    def this(hasRootDirFiles: AnonFiles) = this()
+    def this(hasRootDirFiles: Files) = this()
   }
   
 }

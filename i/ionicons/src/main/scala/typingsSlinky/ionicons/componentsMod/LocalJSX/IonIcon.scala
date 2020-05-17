@@ -1,6 +1,6 @@
 package typingsSlinky.ionicons.componentsMod.LocalJSX
 
-import typingsSlinky.ionicons.componentsMod._Global_.HTMLIonIconElement
+import typingsSlinky.ionicons.componentsMod.global.HTMLIonIconElement
 import typingsSlinky.ionicons.ioniconsStrings.ios
 import typingsSlinky.ionicons.ioniconsStrings.md
 import typingsSlinky.ionicons.stencilCoreMod.JSXBase.HTMLAttributes

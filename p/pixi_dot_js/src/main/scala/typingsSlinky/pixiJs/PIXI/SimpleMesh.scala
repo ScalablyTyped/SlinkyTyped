@@ -12,25 +12,8 @@ import scala.scalajs.js.annotation._
   * @extends PIXI.Mesh
   * @memberof PIXI
   */
-@JSGlobal("PIXI.SimpleMesh")
 @js.native
-class SimpleMesh () extends Mesh {
-  def this(texture: Texture) = this()
-  def this(texture: Texture, vertices: js.typedarray.Float32Array) = this()
-  def this(texture: Texture, vertices: js.typedarray.Float32Array, uvs: js.typedarray.Float32Array) = this()
-  def this(
-    texture: Texture,
-    vertices: js.typedarray.Float32Array,
-    uvs: js.typedarray.Float32Array,
-    indices: js.typedarray.Uint16Array
-  ) = this()
-  def this(
-    texture: Texture,
-    vertices: js.typedarray.Float32Array,
-    uvs: js.typedarray.Float32Array,
-    indices: js.typedarray.Uint16Array,
-    drawMode: Double
-  ) = this()
+trait SimpleMesh extends Mesh {
   /**
     * upload vertices buffer each frame
     * @member {boolean} PIXI.SimpleMesh#autoUpdate

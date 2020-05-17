@@ -3,8 +3,8 @@ package typingsSlinky.atom.mod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.Node
-import typingsSlinky.atom.AnonDisplayName
-import typingsSlinky.atom.AnonTarget
+import typingsSlinky.atom.anon.DisplayName
+import typingsSlinky.atom.anon.Target
 import typingsSlinky.atom.atomStrings.`atom-text-editor`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -33,7 +33,7 @@ trait CommandRegistry extends js.Object {
     */
   def dispatch(target: Node, commandName: String): js.Promise[Unit] | Null = js.native
   /** Find all registered commands matching a query. */
-  def findCommands(params: AnonTarget): js.Array[AnonDisplayName] = js.native
+  def findCommands(params: Target): js.Array[DisplayName] = js.native
   /** Invoke the given callback after dispatching a command event. */
   def onDidDispatch(callback: js.Function1[/* event */ CommandEvent[EventTarget], Unit]): Disposable = js.native
   /** Invoke the given callback before dispatching a command event. */

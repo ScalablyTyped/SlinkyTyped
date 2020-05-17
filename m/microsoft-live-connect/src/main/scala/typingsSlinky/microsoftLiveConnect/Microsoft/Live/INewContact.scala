@@ -1,7 +1,7 @@
 package typingsSlinky.microsoftLiveConnect.Microsoft.Live
 
-import typingsSlinky.microsoftLiveConnect.AnonBusiness
-import typingsSlinky.microsoftLiveConnect.AnonEmployer
+import typingsSlinky.microsoftLiveConnect.anon.Business
+import typingsSlinky.microsoftLiveConnect.anon.Employer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait INewContact extends js.Object {
   /**
     * The contact's email addresses.
     */
-  var emails: js.UndefOr[AnonBusiness] = js.native
+  var emails: js.UndefOr[Business] = js.native
   /**
     * The contact's first name.
     */
@@ -26,7 +26,7 @@ trait INewContact extends js.Object {
   /**
     * An array that contains the contact's work info.
     */
-  var work: js.UndefOr[js.Array[AnonEmployer]] = js.native
+  var work: js.UndefOr[js.Array[Employer]] = js.native
 }
 
 object INewContact {
@@ -42,7 +42,7 @@ object INewContact {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEmails(value: AnonBusiness): Self = {
+    def withEmails(value: Business): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emails")(value.asInstanceOf[js.Any])
         ret
@@ -78,7 +78,7 @@ object INewContact {
         ret
     }
     @scala.inline
-    def withWork(value: js.Array[AnonEmployer]): Self = {
+    def withWork(value: js.Array[Employer]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("work")(value.asInstanceOf[js.Any])
         ret

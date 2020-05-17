@@ -3,7 +3,7 @@ package typingsSlinky.antDesignProLayout.components
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignProLayout.MenuDataItemisUrlboolean
+import typingsSlinky.antDesignProLayout.anon.MenuDataItemisUrlboolean
 import typingsSlinky.antDesignProLayout.baseMenuMod.BaseMenuProps
 import typingsSlinky.antDesignProLayout.typingsMod.MenuDataItem
 import typingsSlinky.antDesignProLayout.typingsMod.MessageDescriptor

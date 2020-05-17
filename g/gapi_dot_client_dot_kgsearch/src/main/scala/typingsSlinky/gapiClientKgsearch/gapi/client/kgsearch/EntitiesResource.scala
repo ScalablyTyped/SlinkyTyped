@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientKgsearch.gapi.client.kgsearch
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientKgsearch.AnonAccesstoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientKgsearch.anon.Accesstoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,12 +13,12 @@ trait EntitiesResource extends js.Object {
     * A list of matched entities will be returned in response, which will be in
     * JSON-LD format and compatible with http://schema.org
     */
-  def search(request: AnonAccesstoken): Request_[SearchResponse] = js.native
+  def search(request: Accesstoken): Request[SearchResponse] = js.native
 }
 
 object EntitiesResource {
   @scala.inline
-  def apply(search: AnonAccesstoken => Request_[SearchResponse]): EntitiesResource = {
+  def apply(search: Accesstoken => Request[SearchResponse]): EntitiesResource = {
     val __obj = js.Dynamic.literal(search = js.Any.fromFunction1(search))
     __obj.asInstanceOf[EntitiesResource]
   }
@@ -29,7 +29,7 @@ object EntitiesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSearch(value: AnonAccesstoken => Request_[SearchResponse]): Self = {
+    def withSearch(value: Accesstoken => Request[SearchResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("search")(js.Any.fromFunction1(value))
         ret

@@ -2,7 +2,7 @@ package typingsSlinky.baseui.toastMod
 
 import org.scalablytyped.runtime.Instantiable0
 import slinky.core.TagMod
-import typingsSlinky.baseui.ReadonlyToastProps
+import typingsSlinky.baseui.anon.ReadonlyToastProps
 import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js

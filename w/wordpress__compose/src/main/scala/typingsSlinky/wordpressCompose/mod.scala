@@ -1,6 +1,7 @@
 package typingsSlinky.wordpressCompose
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.wordpressCompose.anon.kinkeyofWindowEventMapstr
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

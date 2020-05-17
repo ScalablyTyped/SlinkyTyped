@@ -1,15 +1,12 @@
 package typingsSlinky.kendoUi.kendo.dataviz.geometry
 
-import typingsSlinky.kendoUi.kendo.Observable_
+import typingsSlinky.kendoUi.kendo.Observable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.dataviz.geometry.Circle")
 @js.native
-class Circle protected () extends Observable_ {
-  def this(center: js.Any, radius: Double) = this()
-  def this(center: typingsSlinky.kendoUi.kendo.geometry.Point, radius: Double) = this()
+trait Circle extends Observable {
   var center: typingsSlinky.kendoUi.kendo.geometry.Point = js.native
   var options: CircleOptions = js.native
   var radius: Double = js.native

@@ -6,10 +6,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides details about the device updates that invoked the trigger. */
-@JSGlobal("Windows.Devices.Enumeration.DeviceWatcherTriggerDetails")
 @js.native
-abstract class DeviceWatcherTriggerDetails () extends js.Object {
+trait DeviceWatcherTriggerDetails extends js.Object {
   /** Gets the events that activated the trigger. */
   var deviceWatcherEvents: IVectorView[DeviceWatcherEvent] = js.native
+}
+
+object DeviceWatcherTriggerDetails {
+  @scala.inline
+  def apply(deviceWatcherEvents: IVectorView[DeviceWatcherEvent]): DeviceWatcherTriggerDetails = {
+    val __obj = js.Dynamic.literal(deviceWatcherEvents = deviceWatcherEvents.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DeviceWatcherTriggerDetails]
+  }
+  @scala.inline
+  implicit class DeviceWatcherTriggerDetailsOps[Self <: DeviceWatcherTriggerDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceWatcherEvents(value: IVectorView[DeviceWatcherEvent]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceWatcherEvents")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

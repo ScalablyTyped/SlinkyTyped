@@ -1,7 +1,7 @@
 package typingsSlinky.select2.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.select2.mod._Global_.JQuery
+import typingsSlinky.select2.mod.global.JQuery
 import typingsSlinky.select2.select2Strings.ltr
 import typingsSlinky.select2.select2Strings.rtl
 import scala.scalajs.js

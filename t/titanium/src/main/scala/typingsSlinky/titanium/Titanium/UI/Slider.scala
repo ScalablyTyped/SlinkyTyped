@@ -28,9 +28,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A slider component with a draggable thumb.
 		 */
-@JSGlobal("Titanium.UI.Slider")
 @js.native
-class Slider () extends View {
+trait Slider extends View {
   /**
   			 * Image URL of the slider left track when in the disabled state.
   			 */

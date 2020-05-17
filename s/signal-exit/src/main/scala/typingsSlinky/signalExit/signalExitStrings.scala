@@ -1,25 +1,25 @@
 package typingsSlinky.signalExit
 
-import typingsSlinky.signalExit.mod._Signal
+import typingsSlinky.signalExit.mod.Signal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object signalExitStrings {
   @js.native
-  sealed trait SIGABRT extends _Signal
+  sealed trait SIGABRT extends Signal
   
   @js.native
-  sealed trait SIGALRM extends _Signal
+  sealed trait SIGALRM extends Signal
   
   @js.native
-  sealed trait SIGHUP extends _Signal
+  sealed trait SIGHUP extends Signal
   
   @js.native
-  sealed trait SIGINT extends _Signal
+  sealed trait SIGINT extends Signal
   
   @js.native
-  sealed trait SIGTERM extends _Signal
+  sealed trait SIGTERM extends Signal
   
   @scala.inline
   def SIGABRT: SIGABRT = "SIGABRT".asInstanceOf[SIGABRT]

@@ -1,7 +1,7 @@
 package typingsSlinky.firebaseAuthTypes.mod
 
-import typingsSlinky.firebaseAuthTypes.AnonEMAILSIGNIN
-import typingsSlinky.firebaseAuthTypes.AnonEmail
+import typingsSlinky.firebaseAuthTypes.anon.EMAILSIGNIN
+import typingsSlinky.firebaseAuthTypes.anon.Email
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@firebase/auth-types", "ActionCodeInfo")
 @js.native
 class ActionCodeInfo protected () extends js.Object {
-  var data: AnonEmail = js.native
+  var data: Email = js.native
   var operation: String = js.native
 }
 
@@ -17,6 +17,6 @@ class ActionCodeInfo protected () extends js.Object {
 @JSImport("@firebase/auth-types", "ActionCodeInfo")
 @js.native
 object ActionCodeInfo extends js.Object {
-  var Operation: AnonEMAILSIGNIN = js.native
+  var Operation: EMAILSIGNIN = js.native
 }
 

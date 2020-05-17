@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.list
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.preview
 import scala.scalajs.js
@@ -30,8 +29,4 @@ trait Attachments extends Widget_ {
     */
   var viewModel: AttachmentsViewModel = js.native
 }
-
-@JSGlobal("__esri.Attachments")
-@js.native
-object Attachments extends TopLevel[AttachmentsConstructor]
 

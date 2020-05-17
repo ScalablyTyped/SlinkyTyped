@@ -1,14 +1,14 @@
 package typingsSlinky.ltx.elementMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.ltx.FnCall
+import typingsSlinky.ltx.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("ltx/lib/Element", "Element")
 @js.native
-class Element protected () extends js.Object {
+class Element protected () extends Node {
   def this(name: String) = this()
   def this(name: String, attrs: String) = this()
   def this(name: String, attrs: StringDictionary[js.Any]) = this()

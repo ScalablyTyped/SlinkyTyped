@@ -1,13 +1,13 @@
 package typingsSlinky.divaJs.interfacesMod
 
-import typingsSlinky.divaJs.AnonAhei
+import typingsSlinky.divaJs.anon.Ahei
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ManifestData extends js.Object {
-  var dims: AnonAhei = js.native
+  var dims: Ahei = js.native
   var item_title: String = js.native
   var max_zoom: Double = js.native
   var metadata: js.Object = js.native
@@ -19,7 +19,7 @@ trait ManifestData extends js.Object {
 object ManifestData {
   @scala.inline
   def apply(
-    dims: AnonAhei,
+    dims: Ahei,
     item_title: String,
     max_zoom: Double,
     metadata: js.Object,
@@ -36,7 +36,7 @@ object ManifestData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDims(value: AnonAhei): Self = {
+    def withDims(value: Ahei): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dims")(value.asInstanceOf[js.Any])
         ret

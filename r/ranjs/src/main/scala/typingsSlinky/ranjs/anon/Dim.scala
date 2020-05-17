@@ -1,0 +1,52 @@
+package typingsSlinky.ranjs.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Dim extends js.Object {
+  var dim: js.UndefOr[Double] = js.native
+  var maxHistory: js.UndefOr[Double] = js.native
+}
+
+object Dim {
+  @scala.inline
+  def apply(): Dim = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[Dim]
+  }
+  @scala.inline
+  implicit class DimOps[Self <: Dim] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDim(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dim")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDim: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dim")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMaxHistory(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHistory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMaxHistory: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxHistory")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

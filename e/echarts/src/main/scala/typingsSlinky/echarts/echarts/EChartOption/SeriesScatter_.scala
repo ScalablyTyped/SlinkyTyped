@@ -1,12 +1,12 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonAnimationDelay
-import typingsSlinky.echarts.AnonAnimationDelayUpdate
-import typingsSlinky.echarts.AnonAnimationDuration
-import typingsSlinky.echarts.AnonBorderRadius
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonLabelAnonBorderRadius
-import typingsSlinky.echarts.AnonShadowOffsetY
+import typingsSlinky.echarts.anon.AnimationDelay
+import typingsSlinky.echarts.anon.AnimationDelayUpdate
+import typingsSlinky.echarts.anon.AnimationDuration
+import typingsSlinky.echarts.anon.BorderRadius
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.LabelBorderRadius
+import typingsSlinky.echarts.anon.ShadowOffsetY
 import typingsSlinky.echarts.echarts.EChartOption.SeriesScatter.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -386,7 +386,7 @@ trait SeriesScatter_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-scatter.emphasis
     */
-  var emphasis: js.UndefOr[AnonLabelAnonBorderRadius] = js.native
+  var emphasis: js.UndefOr[LabelBorderRadius] = js.native
   /**
     * Define what is encoded to for each dimension of `data`.
     * For example:
@@ -457,7 +457,7 @@ trait SeriesScatter_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonShadowOffsetY] = js.native
+  var itemStyle: js.UndefOr[ShadowOffsetY] = js.native
   /**
     * Text label of , to explain some data information about graphic
     * item like value, name and so on.
@@ -469,7 +469,7 @@ trait SeriesScatter_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.label
     */
-  var label: js.UndefOr[AnonBorderRadius] = js.native
+  var label: js.UndefOr[BorderRadius] = js.native
   /**
     * Whether to enable the optimization of large-scale data.
     * It could be set when large data causes performance problem.
@@ -511,21 +511,21 @@ trait SeriesScatter_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markArea
     */
-  var markArea: js.UndefOr[AnonAnimationDelayUpdate] = js.native
+  var markArea: js.UndefOr[AnimationDelayUpdate] = js.native
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine
     */
-  var markLine: js.UndefOr[AnonAnimationDelay] = js.native
+  var markLine: js.UndefOr[AnimationDelay] = js.native
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markPoint
     */
-  var markPoint: js.UndefOr[AnonAnimationDuration] = js.native
+  var markPoint: js.UndefOr[AnimationDuration] = js.native
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -716,7 +716,7 @@ trait SeriesScatter_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * @default
     * "scatter"
@@ -961,7 +961,7 @@ object SeriesScatter_ {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonLabelAnonBorderRadius): Self = {
+    def withEmphasis(value: LabelBorderRadius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -1021,7 +1021,7 @@ object SeriesScatter_ {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonShadowOffsetY): Self = {
+    def withItemStyle(value: ShadowOffsetY): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -1033,7 +1033,7 @@ object SeriesScatter_ {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonBorderRadius): Self = {
+    def withLabel(value: BorderRadius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -1081,7 +1081,7 @@ object SeriesScatter_ {
         ret
     }
     @scala.inline
-    def withMarkArea(value: AnonAnimationDelayUpdate): Self = {
+    def withMarkArea(value: AnimationDelayUpdate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(value.asInstanceOf[js.Any])
         ret
@@ -1093,7 +1093,7 @@ object SeriesScatter_ {
         ret
     }
     @scala.inline
-    def withMarkLine(value: AnonAnimationDelay): Self = {
+    def withMarkLine(value: AnimationDelay): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(value.asInstanceOf[js.Any])
         ret
@@ -1105,7 +1105,7 @@ object SeriesScatter_ {
         ret
     }
     @scala.inline
-    def withMarkPoint(value: AnonAnimationDuration): Self = {
+    def withMarkPoint(value: AnimationDuration): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(value.asInstanceOf[js.Any])
         ret
@@ -1249,7 +1249,7 @@ object SeriesScatter_ {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

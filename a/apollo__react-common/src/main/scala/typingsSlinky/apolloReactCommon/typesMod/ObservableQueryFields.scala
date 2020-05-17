@@ -5,7 +5,7 @@ import typingsSlinky.apolloClient.observableQueryMod.UpdateQueryOptions
 import typingsSlinky.apolloClient.typesMod.ApolloQueryResult
 import typingsSlinky.apolloClient.watchQueryOptionsMod.FetchMoreQueryOptions
 import typingsSlinky.apolloClient.watchQueryOptionsMod.SubscribeToMoreOptions
-import typingsSlinky.apolloReactCommon.AnonQuery
+import typingsSlinky.apolloReactCommon.anon.Query
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait ObservableQueryFields[TData, TVariables] extends js.Object {
     /* fetchMoreOptions */ (FetchMoreQueryOptions[TVariables, /* keyof TVariables */ String]) with (FetchMoreOptions[TData, TVariables]), 
     js.Promise[ApolloQueryResult[TData]]
   ]) with (js.Function1[
-    /* fetchMoreOptions */ AnonQuery with (FetchMoreQueryOptions[_, /* keyof any */ String]) with (FetchMoreOptions[_, _]), 
+    /* fetchMoreOptions */ Query with (FetchMoreQueryOptions[_, /* keyof any */ String]) with (FetchMoreOptions[_, _]), 
     js.Promise[ApolloQueryResult[_]]
   ]) = js.native
   var refetch: js.Function0[js.Promise[ApolloQueryResult[TData]]] = js.native
@@ -38,7 +38,7 @@ object ObservableQueryFields {
       /* fetchMoreOptions */ (FetchMoreQueryOptions[TVariables, /* keyof TVariables */ String]) with (FetchMoreOptions[TData, TVariables]), 
       js.Promise[ApolloQueryResult[TData]]
     ]) with (js.Function1[
-      /* fetchMoreOptions */ AnonQuery with (FetchMoreQueryOptions[_, /* keyof any */ String]) with (FetchMoreOptions[_, _]), 
+      /* fetchMoreOptions */ Query with (FetchMoreQueryOptions[_, /* keyof any */ String]) with (FetchMoreOptions[_, _]), 
       js.Promise[ApolloQueryResult[_]]
     ]),
     refetch: () => js.Promise[ApolloQueryResult[TData]],
@@ -63,7 +63,7 @@ object ObservableQueryFields {
           /* fetchMoreOptions */ (FetchMoreQueryOptions[TVariables, /* keyof TVariables */ String]) with (FetchMoreOptions[TData, TVariables]), 
           js.Promise[ApolloQueryResult[TData]]
         ]) with (js.Function1[
-          /* fetchMoreOptions */ AnonQuery with (FetchMoreQueryOptions[_, /* keyof any */ String]) with (FetchMoreOptions[_, _]), 
+          /* fetchMoreOptions */ Query with (FetchMoreQueryOptions[_, /* keyof any */ String]) with (FetchMoreOptions[_, _]), 
           js.Promise[ApolloQueryResult[_]]
         ])
     ): Self[TData, TVariables] = {

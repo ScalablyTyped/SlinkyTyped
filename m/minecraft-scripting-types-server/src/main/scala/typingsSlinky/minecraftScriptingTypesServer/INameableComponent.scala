@@ -1,5 +1,6 @@
 package typingsSlinky.minecraftScriptingTypesServer
 
+import typingsSlinky.minecraftScriptingTypesServer.anon.Namefilter
 import typingsSlinky.minecraftScriptingTypesShared.MinecraftTrigger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -31,7 +32,7 @@ trait INameableComponent extends js.Object {
   /**
     * Describes the special names for this entity and the events to call when the entity acquires those names
     */
-  var name_actions: js.Array[AnonNamefilter] = js.native
+  var name_actions: js.Array[Namefilter] = js.native
 }
 
 object INameableComponent {
@@ -41,7 +42,7 @@ object INameableComponent {
     alwaysShow: Boolean,
     default_trigger: MinecraftTrigger | String,
     name: String,
-    name_actions: js.Array[AnonNamefilter]
+    name_actions: js.Array[Namefilter]
   ): INameableComponent = {
     val __obj = js.Dynamic.literal(allowNameTagRenaming = allowNameTagRenaming.asInstanceOf[js.Any], alwaysShow = alwaysShow.asInstanceOf[js.Any], default_trigger = default_trigger.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], name_actions = name_actions.asInstanceOf[js.Any])
     __obj.asInstanceOf[INameableComponent]
@@ -77,7 +78,7 @@ object INameableComponent {
         ret
     }
     @scala.inline
-    def withName_actions(value: js.Array[AnonNamefilter]): Self = {
+    def withName_actions(value: js.Array[Namefilter]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("name_actions")(value.asInstanceOf[js.Any])
         ret

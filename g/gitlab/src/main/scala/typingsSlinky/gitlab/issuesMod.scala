@@ -1,5 +1,7 @@
 package typingsSlinky.gitlab
 
+import typingsSlinky.gitlab.anon.GroupId
+import typingsSlinky.gitlab.anon.ProjectId
 import typingsSlinky.gitlab.infrastructureMod.BaseService
 import typingsSlinky.gitlab.requestHelperMod.BaseRequestOptions
 import typingsSlinky.gitlab.requestHelperMod.GetResponse
@@ -23,7 +25,7 @@ object issuesMod extends js.Object {
     def addTimeEstimate(projectId: Double, issueId: Double, duration: String): js.Promise[js.Object] = js.native
     def addTimeEstimate(projectId: Double, issueId: Double, duration: String, options: Sudo): js.Promise[js.Object] = js.native
     def all(): js.Promise[GetResponse] = js.native
-    def all(hasProjectIdGroupIdOptions: (AnonProjectId | AnonGroupId | js.Object) with PaginatedRequestOptions): js.Promise[GetResponse] = js.native
+    def all(hasProjectIdGroupIdOptions: (ProjectId | GroupId | js.Object) with PaginatedRequestOptions): js.Promise[GetResponse] = js.native
     def create(projectId: String): js.Promise[js.Object] = js.native
     def create(projectId: String, options: BaseRequestOptions): js.Promise[js.Object] = js.native
     def create(projectId: Double): js.Promise[js.Object] = js.native

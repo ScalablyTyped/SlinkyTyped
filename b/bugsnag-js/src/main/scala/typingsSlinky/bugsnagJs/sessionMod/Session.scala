@@ -1,13 +1,13 @@
 package typingsSlinky.bugsnagJs.sessionMod
 
-import typingsSlinky.bugsnagJs.AnonHandled
+import typingsSlinky.bugsnagJs.anon.Handled
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Session extends js.Object {
-  var events: AnonHandled = js.native
+  var events: Handled = js.native
   var id: String = js.native
   var startedAt: String = js.native
   def trackError(report: typingsSlinky.bugsnagJs.reportMod.default): Unit = js.native
@@ -16,7 +16,7 @@ trait Session extends js.Object {
 object Session {
   @scala.inline
   def apply(
-    events: AnonHandled,
+    events: Handled,
     id: String,
     startedAt: String,
     trackError: typingsSlinky.bugsnagJs.reportMod.default => Unit
@@ -31,7 +31,7 @@ object Session {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEvents(value: AnonHandled): Self = {
+    def withEvents(value: Handled): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
         ret

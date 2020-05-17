@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientDashboard.ItemClick event.
   */
-@JSGlobal("ASPxClientDashboardItemClickEventArgs")
 @js.native
-class ASPxClientDashboardItemClickEventArgs () extends ASPxClientEventArgs {
+trait ASPxClientDashboardItemClickEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the name of the dashboard item for which the event has been raised.
     */
@@ -42,5 +41,71 @@ class ASPxClientDashboardItemClickEventArgs () extends ASPxClientEventArgs {
     * @param dataMembers (Optional) An array of string values that specify data members used to obtain underlying data. If this parameter is not specified, underlying data for all available data members will be requested.
     */
   def RequestUnderlyingData(onCompleted: ASPxClientDashboardItemRequestUnderlyingDataCompleted, dataMembers: js.Array[String]): Unit = js.native
+}
+
+object ASPxClientDashboardItemClickEventArgs {
+  @scala.inline
+  def apply(
+    GetAxisPoint: String => ASPxClientDashboardItemDataAxisPoint,
+    GetData: () => ASPxClientDashboardItemData,
+    GetDeltas: () => js.Array[ASPxClientDashboardItemDataDelta],
+    GetDimensions: String => js.Array[ASPxClientDashboardItemDataDimension],
+    GetMeasures: () => js.Array[ASPxClientDashboardItemDataMeasure],
+    ItemName: String,
+    RequestUnderlyingData: (ASPxClientDashboardItemRequestUnderlyingDataCompleted, js.Array[String]) => Unit
+  ): ASPxClientDashboardItemClickEventArgs = {
+    val __obj = js.Dynamic.literal(GetAxisPoint = js.Any.fromFunction1(GetAxisPoint), GetData = js.Any.fromFunction0(GetData), GetDeltas = js.Any.fromFunction0(GetDeltas), GetDimensions = js.Any.fromFunction1(GetDimensions), GetMeasures = js.Any.fromFunction0(GetMeasures), ItemName = ItemName.asInstanceOf[js.Any], RequestUnderlyingData = js.Any.fromFunction2(RequestUnderlyingData))
+    __obj.asInstanceOf[ASPxClientDashboardItemClickEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientDashboardItemClickEventArgsOps[Self <: ASPxClientDashboardItemClickEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetAxisPoint(value: String => ASPxClientDashboardItemDataAxisPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetAxisPoint")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetData(value: () => ASPxClientDashboardItemData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetData")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDeltas(value: () => js.Array[ASPxClientDashboardItemDataDelta]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetDeltas")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDimensions(value: String => js.Array[ASPxClientDashboardItemDataDimension]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetDimensions")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetMeasures(value: () => js.Array[ASPxClientDashboardItemDataMeasure]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetMeasures")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withItemName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRequestUnderlyingData(value: (ASPxClientDashboardItemRequestUnderlyingDataCompleted, js.Array[String]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RequestUnderlyingData")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

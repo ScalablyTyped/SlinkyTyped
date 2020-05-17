@@ -1,6 +1,6 @@
 package typingsSlinky.juiCore.mod
 
-import typingsSlinky.juiCore.AnonMozilla
+import typingsSlinky.juiCore.anon.Mozilla
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UtilBase extends js.Object {
   /** check browser agent */
-  var browser: AnonMozilla = js.native
+  var browser: Mozilla = js.native
   var isTouch: Boolean = js.native
   def ajax(data: js.Any): Unit = js.native
   /**

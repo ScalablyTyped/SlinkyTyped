@@ -1,7 +1,10 @@
 package typingsSlinky.stardustUiReactComponentEventListener
 
 import org.scalajs.dom.raw.Node
+import org.scalajs.dom.raw.Window
 import slinky.core.facade.ReactRef
+import typingsSlinky.stardustUiReactComponentEventListener.anon.Capture
+import typingsSlinky.stardustUiReactComponentEventListener.anon.Listener
 import typingsSlinky.stardustUiReactComponentEventListener.stardustUiReactComponentEventListenerStrings.abort
 import typingsSlinky.stardustUiReactComponentEventListener.stardustUiReactComponentEventListenerStrings.animationcancel
 import typingsSlinky.stardustUiReactComponentEventListener.stardustUiReactComponentEventListenerStrings.animationend
@@ -99,7 +102,6 @@ import typingsSlinky.stardustUiReactComponentEventListener.stardustUiReactCompon
 import typingsSlinky.stardustUiReactComponentEventListener.stardustUiReactComponentEventListenerStrings.waiting
 import typingsSlinky.stardustUiReactComponentEventListener.stardustUiReactComponentEventListenerStrings.wheel
 import typingsSlinky.stardustUiReactComponentEventListener.typesMod.EventListenerOptions
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -107,13 +109,13 @@ import scala.scalajs.js.annotation._
 @JSImport("@stardust-ui/react-component-event-listener", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
-  val documentRef: ReactRef[Node | Window_] = js.native
-  val windowRef: ReactRef[Node | Window_] = js.native
+  val documentRef: ReactRef[Node | Window] = js.native
+  val windowRef: ReactRef[Node | Window] = js.native
   def useEventListener[T /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 91 */ js.Any */](options: EventListenerOptions[T]): Unit = js.native
   @js.native
   object EventListener extends js.Object {
     var displayName: String = js.native
-    var propTypes: AnonCapture | AnonListener = js.native
+    var propTypes: Capture | Listener = js.native
     def apply(
       props: EventListenerOptions[
           abort | animationcancel | animationend | animationiteration | animationstart | auxclick | blur | cancel | canplay | canplaythrough | change | click | close | contextmenu | copy | cuechange | cut | dblclick | drag | dragend | dragenter | dragexit | dragleave | dragover | dragstart | drop | durationchange | emptied | ended | error | focus | focusin | focusout | fullscreenchange | fullscreenerror | gotpointercapture | input | invalid | keydown | keypress | keyup | load | loadeddata | loadedmetadata | loadstart | lostpointercapture | mousedown | mouseenter | mouseleave | mousemove | mouseout | mouseover | mouseup | paste | pause | play | playing | pointercancel | pointerdown | pointerenter | pointerleave | pointerlockchange | pointerlockerror | pointermove | pointerout | pointerover | pointerup | progress | ratechange | readystatechange | reset | resize | scroll | securitypolicyviolation | seeked | seeking | select | selectionchange | selectstart | stalled | submit | suspend | timeupdate | toggle | touchcancel | touchend | touchmove | touchstart | transitioncancel | transitionend | transitionrun | transitionstart | visibilitychange | volumechange | waiting | wheel

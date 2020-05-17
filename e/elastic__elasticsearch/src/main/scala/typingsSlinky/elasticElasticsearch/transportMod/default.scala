@@ -1,6 +1,6 @@
 package typingsSlinky.elasticElasticsearch.transportMod
 
-import typingsSlinky.elasticElasticsearch.AnonDEFAULT
+import typingsSlinky.elasticElasticsearch.anon.DEFAULT
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +15,6 @@ class default protected () extends Transport {
 @JSImport("@elastic/elasticsearch/lib/Transport", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var sniffReasons: AnonDEFAULT = js.native
+  var sniffReasons: DEFAULT = js.native
 }
 

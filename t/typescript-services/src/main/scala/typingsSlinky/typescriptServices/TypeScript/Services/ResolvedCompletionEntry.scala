@@ -4,16 +4,23 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("TypeScript.Services.ResolvedCompletionEntry")
 @js.native
-class ResolvedCompletionEntry protected () extends CachedCompletionEntryDetails {
-  def this(
-    name: String,
+trait ResolvedCompletionEntry extends CachedCompletionEntryDetails
+
+object ResolvedCompletionEntry {
+  @scala.inline
+  def apply(
+    docComment: String,
+    fullSymbolName: String,
+    isResolved: () => Boolean,
     kind: String,
     kindModifiers: String,
-    `type`: String,
-    fullSymbolName: String,
-    docComment: String
-  ) = this()
+    name: String,
+    `type`: String
+  ): ResolvedCompletionEntry = {
+    val __obj = js.Dynamic.literal(docComment = docComment.asInstanceOf[js.Any], fullSymbolName = fullSymbolName.asInstanceOf[js.Any], isResolved = js.Any.fromFunction0(isResolved), kind = kind.asInstanceOf[js.Any], kindModifiers = kindModifiers.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ResolvedCompletionEntry]
+  }
 }
 

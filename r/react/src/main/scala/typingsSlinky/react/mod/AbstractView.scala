@@ -1,7 +1,7 @@
 package typingsSlinky.react.mod
 
-import typingsSlinky.std.Document_
-import typingsSlinky.std.StyleMedia_
+import org.scalajs.dom.raw.Document
+import org.scalajs.dom.raw.StyleMedia
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,13 +12,13 @@ import scala.scalajs.js.annotation._
 // ----------------------------------------------------------------------
 @js.native
 trait AbstractView extends js.Object {
-  var document: Document_ = js.native
-  var styleMedia: StyleMedia_ = js.native
+  var document: Document = js.native
+  var styleMedia: StyleMedia = js.native
 }
 
 object AbstractView {
   @scala.inline
-  def apply(document: Document_, styleMedia: StyleMedia_): AbstractView = {
+  def apply(document: Document, styleMedia: StyleMedia): AbstractView = {
     val __obj = js.Dynamic.literal(document = document.asInstanceOf[js.Any], styleMedia = styleMedia.asInstanceOf[js.Any])
     __obj.asInstanceOf[AbstractView]
   }
@@ -29,13 +29,13 @@ object AbstractView {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDocument(value: Document_): Self = {
+    def withDocument(value: Document): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withStyleMedia(value: StyleMedia_): Self = {
+    def withStyleMedia(value: StyleMedia): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styleMedia")(value.asInstanceOf[js.Any])
         ret

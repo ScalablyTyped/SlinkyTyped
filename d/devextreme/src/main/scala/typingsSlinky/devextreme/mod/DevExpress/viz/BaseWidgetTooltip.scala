@@ -1,10 +1,10 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonBlur
-import typingsSlinky.devextreme.AnonDashStyleOpacity
+import typingsSlinky.devextreme.anon.Blur
+import typingsSlinky.devextreme.anon.DashStyleOpacity
 import typingsSlinky.devextreme.mod.DevExpress.ui.format
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait BaseWidgetTooltip extends js.Object {
   /** Specifies the length of a tooltip's arrow in pixels. */
   var arrowLength: js.UndefOr[Double] = js.native
   /** Configures a tooltip's border. */
-  var border: js.UndefOr[AnonDashStyleOpacity] = js.native
+  var border: js.UndefOr[DashStyleOpacity] = js.native
   /** Colors all tooltips. */
   var color: js.UndefOr[String] = js.native
   /** Specifies the container in which to draw tooltips. The default container is the HTML DOM `` element. */
@@ -35,7 +35,7 @@ trait BaseWidgetTooltip extends js.Object {
   /** Generates an empty space, measured in pixels, between a tooltip's top/bottom border and its text. */
   var paddingTopBottom: js.UndefOr[Double] = js.native
   /** Configures a tooltip's shadow. */
-  var shadow: js.UndefOr[AnonBlur] = js.native
+  var shadow: js.UndefOr[Blur] = js.native
   /** Specifies a tooltip's z-index. */
   var zIndex: js.UndefOr[Double] = js.native
 }
@@ -65,7 +65,7 @@ object BaseWidgetTooltip {
         ret
     }
     @scala.inline
-    def withBorder(value: AnonDashStyleOpacity): Self = {
+    def withBorder(value: DashStyleOpacity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
         ret
@@ -197,7 +197,7 @@ object BaseWidgetTooltip {
         ret
     }
     @scala.inline
-    def withShadow(value: AnonBlur): Self = {
+    def withShadow(value: Blur): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(value.asInstanceOf[js.Any])
         ret

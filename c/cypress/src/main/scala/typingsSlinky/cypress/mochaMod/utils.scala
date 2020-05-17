@@ -28,12 +28,12 @@ object utils extends js.Object {
     * @see https://mochajs.org/api/module-utils.html#.clean
     */
   def clean(str: String): String = js.native
-  def getError(): js.Error = js.native
   /**
     * Generate an undefined error if `err` is not defined.
     *
     * @see https://mochajs.org/api/module-utils.html#.getError
     */
+  def getError(): js.Error = js.native
   def getError(err: js.Error): js.Error = js.native
   /**
     * Highlight the given string of `js`.

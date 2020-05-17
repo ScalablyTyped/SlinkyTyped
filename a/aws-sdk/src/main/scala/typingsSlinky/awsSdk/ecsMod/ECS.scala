@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdk.ecsMod
 
-import typingsSlinky.awsSdk.DescribeServicesRequestwa
-import typingsSlinky.awsSdk.DescribeTasksRequestwaite
+import typingsSlinky.awsSdk.anon.DescribeServicesRequestwa
+import typingsSlinky.awsSdk.anon.DescribeTasksRequestwaite
 import typingsSlinky.awsSdk.awsSdkStrings.servicesInactive
 import typingsSlinky.awsSdk.awsSdkStrings.servicesStable
 import typingsSlinky.awsSdk.awsSdkStrings.tasksRunning

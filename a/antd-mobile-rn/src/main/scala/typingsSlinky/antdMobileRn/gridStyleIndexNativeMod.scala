@@ -1,5 +1,8 @@
 package typingsSlinky.antdMobileRn
 
+import typingsSlinky.antdMobileRn.anon.BorderColorString
+import typingsSlinky.antdMobileRn.anon.HeightWidth
+import typingsSlinky.antdMobileRn.anon.MarginTop
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,9 +12,9 @@ import scala.scalajs.js.annotation._
 object gridStyleIndexNativeMod extends js.Object {
   @js.native
   object default extends js.Object {
-    var grayBorderBox: AnonBorderColorString = js.native
-    var icon: AnonHeightWidth = js.native
-    var text: AnonMarginTop = js.native
+    var grayBorderBox: BorderColorString = js.native
+    var icon: HeightWidth = js.native
+    var text: MarginTop = js.native
   }
   
 }

@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
+import typingsSlinky.babylonjs.anon.Position
 import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
@@ -52,7 +53,7 @@ object volumetricLightScatteringPostProcessMod extends js.Object {
     /**
       * If not undefined, the mesh position is computed from the attached node position
       */
-    var attachedNode: AnonPosition = js.native
+    var attachedNode: Position = js.native
     /**
       * Custom position of the mesh. Used if "useCustomMeshPosition" is set to "true"
       */

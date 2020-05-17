@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ToStringOptionsObject
   extends ToJsonOptionsObject
-     with _ToStringOptions {
+     with ToStringOptions {
   /** `webpack --colors` equivalent */
   var colors: js.UndefOr[Boolean | String] = js.native
   /**

@@ -1,6 +1,6 @@
 package typingsSlinky.yandexMaps.mod.control
 
-import typingsSlinky.yandexMaps.AnonBottom
+import typingsSlinky.yandexMaps.anon.Bottom
 import typingsSlinky.yandexMaps.mod.IClassConstructor
 import typingsSlinky.yandexMaps.mod.ISelectableControlLayout
 import typingsSlinky.yandexMaps.yandexMapsStrings.left
@@ -17,7 +17,7 @@ trait IBaseButtonParametersOptions extends js.Object {
   var floatIndex: js.UndefOr[Double] = js.native
   var layout: js.UndefOr[IClassConstructor[ISelectableControlLayout] | String] = js.native
   var maxWidth: js.UndefOr[(js.Array[js.Array[Double] | Double]) | Double] = js.native
-  var position: js.UndefOr[AnonBottom] = js.native
+  var position: js.UndefOr[Bottom] = js.native
   var visible: js.UndefOr[Boolean] = js.native
 }
 
@@ -94,7 +94,7 @@ object IBaseButtonParametersOptions {
         ret
     }
     @scala.inline
-    def withPosition(value: AnonBottom): Self = {
+    def withPosition(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
         ret

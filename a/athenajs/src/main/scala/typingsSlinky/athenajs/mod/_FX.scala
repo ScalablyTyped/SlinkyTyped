@@ -1,6 +1,6 @@
 package typingsSlinky.athenajs.mod
 
-import typingsSlinky.athenajs.Anon0
+import typingsSlinky.athenajs.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ class _FX () extends js.Object {
   /**
     * Add a new Effect
     */
-  def addFX(fxName: String, FxClass: Anon0): Unit = js.native
+  def addFX(fxName: String, FxClass: `0`): Unit = js.native
   /**
     * Retrieves an easing function
     *

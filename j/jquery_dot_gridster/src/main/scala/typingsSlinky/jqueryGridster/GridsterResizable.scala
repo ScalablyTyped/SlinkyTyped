@@ -1,6 +1,7 @@
 package typingsSlinky.jqueryGridster
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
+import typingsSlinky.jqueryGridster.anon.Helper
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,9 +14,9 @@ trait GridsterResizable extends js.Object {
   var handle_class: js.UndefOr[String] = js.native
   var max_size: js.UndefOr[js.Array[Double]] = js.native
   var min_size: js.UndefOr[js.Array[Double]] = js.native
-  var resize: js.UndefOr[js.Function3[/* event */ Event_, /* ui */ GridsterUi, /* $el */ JQuery, Unit]] = js.native
-  var start: js.UndefOr[js.Function3[/* event */ Event_, /* ui */ AnonHelper, /* $el */ JQuery, Unit]] = js.native
-  var stop: js.UndefOr[js.Function3[/* event */ Event_, /* ui */ AnonHelper, /* $el */ JQuery, Unit]] = js.native
+  var resize: js.UndefOr[js.Function3[/* event */ Event, /* ui */ GridsterUi, /* $el */ JQuery, Unit]] = js.native
+  var start: js.UndefOr[js.Function3[/* event */ Event, /* ui */ Helper, /* $el */ JQuery, Unit]] = js.native
+  var stop: js.UndefOr[js.Function3[/* event */ Event, /* ui */ Helper, /* $el */ JQuery, Unit]] = js.native
 }
 
 object GridsterResizable {
@@ -103,7 +104,7 @@ object GridsterResizable {
         ret
     }
     @scala.inline
-    def withResize(value: (/* event */ Event_, /* ui */ GridsterUi, /* $el */ JQuery) => Unit): Self = {
+    def withResize(value: (/* event */ Event, /* ui */ GridsterUi, /* $el */ JQuery) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resize")(js.Any.fromFunction3(value))
         ret
@@ -115,7 +116,7 @@ object GridsterResizable {
         ret
     }
     @scala.inline
-    def withStart(value: (/* event */ Event_, /* ui */ AnonHelper, /* $el */ JQuery) => Unit): Self = {
+    def withStart(value: (/* event */ Event, /* ui */ Helper, /* $el */ JQuery) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction3(value))
         ret
@@ -127,7 +128,7 @@ object GridsterResizable {
         ret
     }
     @scala.inline
-    def withStop(value: (/* event */ Event_, /* ui */ AnonHelper, /* $el */ JQuery) => Unit): Self = {
+    def withStop(value: (/* event */ Event, /* ui */ Helper, /* $el */ JQuery) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction3(value))
         ret

@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientCloudtasks.gapi.client.cloudtasks
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientCloudtasks.AnonAccesstoken
-import typingsSlinky.gapiClientCloudtasks.AnonAlt
-import typingsSlinky.gapiClientCloudtasks.AnonBearertoken
-import typingsSlinky.gapiClientCloudtasks.AnonCallback
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientCloudtasks.anon.Accesstoken
+import typingsSlinky.gapiClientCloudtasks.anon.Alt
+import typingsSlinky.gapiClientCloudtasks.anon.Bearertoken
+import typingsSlinky.gapiClientCloudtasks.anon.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ trait TasksResource extends js.Object {
     * not be returned by a later CloudTasks.PullTasks,
     * CloudTasks.GetTask, or CloudTasks.ListTasks.
     */
-  def acknowledge(request: AnonAccesstoken): Request_[js.Object] = js.native
+  def acknowledge(request: Accesstoken): Request[js.Object] = js.native
   /**
     * Cancel a pull task's lease.
     *
@@ -33,7 +33,7 @@ trait TasksResource extends js.Object {
     * by setting Task.schedule_time to now. This will make the task
     * available to be leased to the next caller of CloudTasks.PullTasks.
     */
-  def cancelLease(request: AnonAccesstoken): Request_[Task] = js.native
+  def cancelLease(request: Accesstoken): Request[Task] = js.native
   /**
     * Creates a task and adds it to a queue.
     *
@@ -49,7 +49,7 @@ trait TasksResource extends js.Object {
     * &#42; For [pull queues](google.cloud.tasks.v2beta2.PullTarget), this
     * the maximum task size is 1MB.
     */
-  def create(request: AnonAlt): Request_[Task] = js.native
+  def create(request: Alt): Request[Task] = js.native
   /**
     * Deletes a task.
     *
@@ -57,9 +57,9 @@ trait TasksResource extends js.Object {
     * cannot be deleted if it has completed successfully or permanently
     * failed.
     */
-  def delete(request: AnonAccesstoken): Request_[js.Object] = js.native
+  def delete(request: Accesstoken): Request[js.Object] = js.native
   /** Gets a task. */
-  def get(request: AnonBearertoken): Request_[Task] = js.native
+  def get(request: Bearertoken): Request[Task] = js.native
   /**
     * Lists the tasks in a queue.
     *
@@ -68,7 +68,7 @@ trait TasksResource extends js.Object {
     * considerations; ListTasksRequest.response_view controls the
     * subset of information which is returned.
     */
-  def list(request: AnonCallback): Request_[ListTasksResponse] = js.native
+  def list(request: Callback): Request[ListTasksResponse] = js.native
   /**
     * Pulls tasks from a pull queue and acquires a lease on them for a
     * specified PullTasksRequest.lease_duration.
@@ -88,7 +88,7 @@ trait TasksResource extends js.Object {
     * is exceeded. google.rpc.Code.RESOURCE_EXHAUSTED is also returned when
     * RateLimits.max_tasks_dispatched_per_second is exceeded.
     */
-  def pull(request: AnonAccesstoken): Request_[PullTasksResponse] = js.native
+  def pull(request: Accesstoken): Request[PullTasksResponse] = js.native
   /**
     * Renew the current lease of a pull task.
     *
@@ -96,7 +96,7 @@ trait TasksResource extends js.Object {
     * duration, starting from now. The new task lease will be
     * returned in Task.schedule_time.
     */
-  def renewLease(request: AnonAccesstoken): Request_[Task] = js.native
+  def renewLease(request: Accesstoken): Request[Task] = js.native
   /**
     * Forces a task to run now.
     *
@@ -124,21 +124,21 @@ trait TasksResource extends js.Object {
     * CloudTasks.RunTask is called on task that is dispatched or
     * already running.
     */
-  def run(request: AnonAccesstoken): Request_[Task] = js.native
+  def run(request: Accesstoken): Request[Task] = js.native
 }
 
 object TasksResource {
   @scala.inline
   def apply(
-    acknowledge: AnonAccesstoken => Request_[js.Object],
-    cancelLease: AnonAccesstoken => Request_[Task],
-    create: AnonAlt => Request_[Task],
-    delete: AnonAccesstoken => Request_[js.Object],
-    get: AnonBearertoken => Request_[Task],
-    list: AnonCallback => Request_[ListTasksResponse],
-    pull: AnonAccesstoken => Request_[PullTasksResponse],
-    renewLease: AnonAccesstoken => Request_[Task],
-    run: AnonAccesstoken => Request_[Task]
+    acknowledge: Accesstoken => Request[js.Object],
+    cancelLease: Accesstoken => Request[Task],
+    create: Alt => Request[Task],
+    delete: Accesstoken => Request[js.Object],
+    get: Bearertoken => Request[Task],
+    list: Callback => Request[ListTasksResponse],
+    pull: Accesstoken => Request[PullTasksResponse],
+    renewLease: Accesstoken => Request[Task],
+    run: Accesstoken => Request[Task]
   ): TasksResource = {
     val __obj = js.Dynamic.literal(acknowledge = js.Any.fromFunction1(acknowledge), cancelLease = js.Any.fromFunction1(cancelLease), create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), pull = js.Any.fromFunction1(pull), renewLease = js.Any.fromFunction1(renewLease), run = js.Any.fromFunction1(run))
     __obj.asInstanceOf[TasksResource]
@@ -150,55 +150,55 @@ object TasksResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAcknowledge(value: AnonAccesstoken => Request_[js.Object]): Self = {
+    def withAcknowledge(value: Accesstoken => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("acknowledge")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withCancelLease(value: AnonAccesstoken => Request_[Task]): Self = {
+    def withCancelLease(value: Accesstoken => Request[Task]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cancelLease")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withCreate(value: AnonAlt => Request_[Task]): Self = {
+    def withCreate(value: Alt => Request[Task]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonAccesstoken => Request_[js.Object]): Self = {
+    def withDelete(value: Accesstoken => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonBearertoken => Request_[Task]): Self = {
+    def withGet(value: Bearertoken => Request[Task]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonCallback => Request_[ListTasksResponse]): Self = {
+    def withList(value: Callback => Request[ListTasksResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPull(value: AnonAccesstoken => Request_[PullTasksResponse]): Self = {
+    def withPull(value: Accesstoken => Request[PullTasksResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pull")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withRenewLease(value: AnonAccesstoken => Request_[Task]): Self = {
+    def withRenewLease(value: Accesstoken => Request[Task]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renewLease")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withRun(value: AnonAccesstoken => Request_[Task]): Self = {
+    def withRun(value: Accesstoken => Request[Task]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("run")(js.Any.fromFunction1(value))
         ret

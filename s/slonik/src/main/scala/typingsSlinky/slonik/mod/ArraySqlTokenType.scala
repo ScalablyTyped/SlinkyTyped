@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ArraySqlTokenType extends _SqlTokenType {
+trait ArraySqlTokenType extends SqlTokenType {
   var memberType: TypeNameIdentifierType | SqlTokenType = js.native
   var `type`: js.Symbol = js.native
   var values: js.Array[ValueExpressionType] = js.native

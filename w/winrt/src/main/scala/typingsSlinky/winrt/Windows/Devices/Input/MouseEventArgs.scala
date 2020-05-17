@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Devices.Input.MouseEventArgs")
 @js.native
-class MouseEventArgs () extends IMouseEventArgs
+trait MouseEventArgs extends IMouseEventArgs
+
+object MouseEventArgs {
+  @scala.inline
+  def apply(mouseDelta: MouseDelta): MouseEventArgs = {
+    val __obj = js.Dynamic.literal(mouseDelta = mouseDelta.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MouseEventArgs]
+  }
+}
 

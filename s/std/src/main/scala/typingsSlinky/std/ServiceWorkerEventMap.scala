@@ -6,12 +6,12 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ServiceWorkerEventMap extends AbstractWorkerEventMap {
-  var statechange: Event_ = js.native
+  var statechange: org.scalajs.dom.raw.Event = js.native
 }
 
 object ServiceWorkerEventMap {
   @scala.inline
-  def apply(error: org.scalajs.dom.raw.ErrorEvent, statechange: Event_): ServiceWorkerEventMap = {
+  def apply(error: org.scalajs.dom.raw.ErrorEvent, statechange: org.scalajs.dom.raw.Event): ServiceWorkerEventMap = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], statechange = statechange.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceWorkerEventMap]
   }
@@ -22,7 +22,7 @@ object ServiceWorkerEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withStatechange(value: Event_): Self = {
+    def withStatechange(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("statechange")(value.asInstanceOf[js.Any])
         ret

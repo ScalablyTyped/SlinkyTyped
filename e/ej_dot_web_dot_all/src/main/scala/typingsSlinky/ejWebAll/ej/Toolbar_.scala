@@ -1,18 +1,11 @@
 package typingsSlinky.ejWebAll.ej
 
-import org.scalajs.dom.raw.Element
-import typingsSlinky.ejWebAll.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("ej.Toolbar")
 @js.native
-class Toolbar_ protected () extends Widget_ {
-  def this(element: JQuery) = this()
-  def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.Toolbar.Model) = this()
-  def this(element: Element, options: typingsSlinky.ejWebAll.ej.Toolbar.Model) = this()
+trait Toolbar_ extends Widget_ {
   var defaults: typingsSlinky.ejWebAll.ej.Toolbar.Model = js.native
   @JSName("model")
   var model_Toolbar_ : typingsSlinky.ejWebAll.ej.Toolbar.Model = js.native

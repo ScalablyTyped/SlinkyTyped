@@ -1,7 +1,7 @@
 package typingsSlinky.yayson.mod
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.yayson.TypeofPresenter
+import typingsSlinky.yayson.anon.TypeofPresenter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

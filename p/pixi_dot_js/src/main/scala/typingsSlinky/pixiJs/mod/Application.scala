@@ -1,7 +1,7 @@
 package typingsSlinky.pixiJs.mod
 
-import typingsSlinky.pixiJs.AnonAntialias
 import typingsSlinky.pixiJs.PIXI.Application.Plugin
+import typingsSlinky.pixiJs.anon.Antialias
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +28,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Application ()
   extends typingsSlinky.pixiJs.PIXI.Application {
-  def this(options: AnonAntialias) = this()
+  def this(options: Antialias) = this()
 }
 
 /* static members */

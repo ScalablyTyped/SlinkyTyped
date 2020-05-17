@@ -142,6 +142,7 @@ import typingsSlinky.std.stdStrings.slot
 import typingsSlinky.std.stdStrings.small
 import typingsSlinky.std.stdStrings.source
 import typingsSlinky.std.stdStrings.span
+import typingsSlinky.std.stdStrings.stop
 import typingsSlinky.std.stdStrings.strong
 import typingsSlinky.std.stdStrings.style
 import typingsSlinky.std.stdStrings.sub
@@ -490,7 +491,7 @@ trait ParentNode extends js.Object {
   @JSName("querySelectorAll")
   def querySelectorAll_span(selectors: span): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLSpanElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_stop(selectors: typingsSlinky.std.stdStrings.stop): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.SVGStopElement with org.scalajs.dom.raw.Node] = js.native
+  def querySelectorAll_stop(selectors: stop): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.SVGStopElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
   def querySelectorAll_strong(selectors: strong): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
@@ -837,7 +838,7 @@ trait ParentNode extends js.Object {
   @JSName("querySelector")
   def querySelector_span(selectors: span): org.scalajs.dom.raw.HTMLSpanElement | Null = js.native
   @JSName("querySelector")
-  def querySelector_stop(selectors: typingsSlinky.std.stdStrings.stop): org.scalajs.dom.raw.SVGStopElement | Null = js.native
+  def querySelector_stop(selectors: stop): org.scalajs.dom.raw.SVGStopElement | Null = js.native
   @JSName("querySelector")
   def querySelector_strong(selectors: strong): org.scalajs.dom.raw.HTMLElement | Null = js.native
   @JSName("querySelector")

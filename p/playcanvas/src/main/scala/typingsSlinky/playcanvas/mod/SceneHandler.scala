@@ -1,5 +1,6 @@
 package typingsSlinky.playcanvas.mod
 
+import typingsSlinky.playcanvas.pc.ResourceHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +14,7 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("playcanvas", "SceneHandler")
 @js.native
-class SceneHandler protected ()
-  extends typingsSlinky.playcanvas.pc.SceneHandler {
+class SceneHandler protected () extends ResourceHandler {
   def this(app: typingsSlinky.playcanvas.pc.Application) = this()
 }
 

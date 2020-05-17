@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeMaterialUi.mod
 
-import typingsSlinky.reactNativeMaterialUi.AnonItem
+import typingsSlinky.reactNativeMaterialUi.anon.Item
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait DrawerSectionProps extends js.Object {
   var divider: js.UndefOr[Boolean] = js.native
   var items: js.Array[DrawerSectionItem] = js.native
-  var style: js.UndefOr[AnonItem] = js.native
+  var style: js.UndefOr[Item] = js.native
   var title: js.UndefOr[String] = js.native
 }
 
@@ -44,7 +44,7 @@ object DrawerSectionProps {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonItem): Self = {
+    def withStyle(value: Item): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

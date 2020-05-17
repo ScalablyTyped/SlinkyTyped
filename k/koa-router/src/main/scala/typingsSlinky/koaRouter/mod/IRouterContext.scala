@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.accepts.mod.Accepts
 import typingsSlinky.contentDisposition.mod.Options
 import typingsSlinky.cookies.mod.Cookies
-import typingsSlinky.koa.AnonCall
+import typingsSlinky.koa.anon.Call
 import typingsSlinky.koa.mod.Application
 import typingsSlinky.koa.mod.DefaultContext
 import typingsSlinky.koa.mod.DefaultState
@@ -40,7 +40,7 @@ trait IRouterContext extends js.Object {
     * See: https://github.com/jshttp/http-assert
     */
   @JSName("assert")
-  var assert_Original: AnonCall = js.native
+  var assert_Original: Call = js.native
   /**
     * Get/Set response body.
     */

@@ -1,11 +1,11 @@
 package typingsSlinky.rbx.modalPortalMod
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.SVGElement
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,14 +17,14 @@ trait ModalPortalModifierProps extends js.Object {
   var clipped: js.UndefOr[Boolean] = js.native
   var closeOnBlur: js.UndefOr[Boolean] = js.native
   var closeOnEsc: js.UndefOr[Boolean] = js.native
-  var document: Document_ = js.native
+  var document: Document = js.native
   var innerRef: js.UndefOr[Ref[HTMLElement | SVGElement | ReactComponentClass[js.Object]]] = js.native
   var onClose: js.UndefOr[js.Function0[Unit]] = js.native
 }
 
 object ModalPortalModifierProps {
   @scala.inline
-  def apply(document: Document_): ModalPortalModifierProps = {
+  def apply(document: Document): ModalPortalModifierProps = {
     val __obj = js.Dynamic.literal(document = document.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModalPortalModifierProps]
   }
@@ -35,7 +35,7 @@ object ModalPortalModifierProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDocument(value: Document_): Self = {
+    def withDocument(value: Document): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
         ret

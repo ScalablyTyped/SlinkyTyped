@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ProjectTransform extends _Transforms {
+trait ProjectTransform extends Transforms {
   var as: js.UndefOr[(js.Array[String | SignalRef | Null]) | SignalRef] = js.native
   var fields: js.UndefOr[js.Array[FieldRef] | SignalRef] = js.native
   var `type`: project = js.native

@@ -28,10 +28,8 @@ import scala.scalajs.js.annotation._
   * @property {pc.Asset} inactiveSpriteAsset Sprite to be used as the button image when the button is not interactive.
   * @property {number} inactiveSpriteFrame Frame to be used from the inactive sprite.
   */
-@JSGlobal("pc.ButtonComponent")
 @js.native
-class ButtonComponent protected () extends Component {
-  def this(system: ButtonComponentSystem, entity: Entity) = this()
+trait ButtonComponent extends Component {
   /**
     * If set to false, the button will be visible but will not respond to hover or touch interactions.
     */

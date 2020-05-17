@@ -9,7 +9,7 @@ import typingsSlinky.phaser.Phaser.Types.GameObjects.JSONGameObject
 import typingsSlinky.phaser.Phaser.Types.Input.HitAreaCallback
 import typingsSlinky.phaser.Phaser.Types.Input.InputConfiguration
 import typingsSlinky.phaser.Phaser.Types.Input.InteractiveObject
-import typingsSlinky.phaser.Phaser.Types.Physics.Arcade._ArcadeColliderType
+import typingsSlinky.phaser.Phaser.Types.Physics.Arcade.ArcadeColliderType
 import typingsSlinky.phaser.Phaser.Types.Physics.Matter.MatterBody
 import typingsSlinky.phaser.integer
 import scala.scalajs.js
@@ -21,18 +21,11 @@ import scala.scalajs.js.annotation._
   * You don't create GameObjects directly and they cannot be added to the display list.
   * Instead, use them as the base for your own custom classes.
   */
-@JSGlobal("Phaser.GameObjects.GameObject")
 @js.native
-class GameObject protected ()
+trait GameObject
   extends EventEmitter
-     with MatterBody
-     with _ArcadeColliderType {
-  /**
-    * 
-    * @param scene The Scene to which this Game Object belongs.
-    * @param type A textual representation of the type of Game Object, i.e. `sprite`.
-    */
-  def this(scene: Scene, `type`: String) = this()
+     with ArcadeColliderType
+     with MatterBody {
   /**
     * The active state of this Game Object.
     * A Game Object with an active state of `true` is processed by the Scenes UpdateList, if added to it.
@@ -287,15 +280,5 @@ class GameObject protected ()
     * @param camera The Camera to check against this Game Object.
     */
   def willRender(camera: Camera): Boolean = js.native
-}
-
-/* static members */
-@JSGlobal("Phaser.GameObjects.GameObject")
-@js.native
-object GameObject extends js.Object {
-  /**
-    * The bitmask that `GameObject.renderFlags` is compared against to determine if the Game Object will render or not.
-    */
-  val RENDER_MASK: integer = js.native
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientDfareporting.gapi.client.dfareporting
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientDfareporting.AnonId
-import typingsSlinky.gapiClientDfareporting.AnonProjectId
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientDfareporting.anon.Id
+import typingsSlinky.gapiClientDfareporting.anon.ProjectId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait OrdersResource extends js.Object {
   /** Gets one order by ID. */
-  def get(request: AnonId): Request_[Order] = js.native
+  def get(request: Id): Request[Order] = js.native
   /** Retrieves a list of orders, possibly filtered. This method supports paging. */
-  def list(request: AnonProjectId): Request_[OrdersListResponse] = js.native
+  def list(request: ProjectId): Request[OrdersListResponse] = js.native
 }
 
 object OrdersResource {
   @scala.inline
-  def apply(get: AnonId => Request_[Order], list: AnonProjectId => Request_[OrdersListResponse]): OrdersResource = {
+  def apply(get: Id => Request[Order], list: ProjectId => Request[OrdersListResponse]): OrdersResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[OrdersResource]
   }
@@ -28,13 +28,13 @@ object OrdersResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonId => Request_[Order]): Self = {
+    def withGet(value: Id => Request[Order]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonProjectId => Request_[OrdersListResponse]): Self = {
+    def withList(value: ProjectId => Request[OrdersListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

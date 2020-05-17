@@ -1,18 +1,18 @@
 package typingsSlinky.storybookAddonInfo.mod
 
-import typingsSlinky.storybookAddonInfo.AnonDefaultValue
+import typingsSlinky.storybookAddonInfo.anon.DefaultValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait TableComponentOptionProps extends js.Object {
-  var propDefinitions: js.Array[AnonDefaultValue] = js.native
+  var propDefinitions: js.Array[DefaultValue] = js.native
 }
 
 object TableComponentOptionProps {
   @scala.inline
-  def apply(propDefinitions: js.Array[AnonDefaultValue]): TableComponentOptionProps = {
+  def apply(propDefinitions: js.Array[DefaultValue]): TableComponentOptionProps = {
     val __obj = js.Dynamic.literal(propDefinitions = propDefinitions.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableComponentOptionProps]
   }
@@ -23,7 +23,7 @@ object TableComponentOptionProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPropDefinitions(value: js.Array[AnonDefaultValue]): Self = {
+    def withPropDefinitions(value: js.Array[DefaultValue]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("propDefinitions")(value.asInstanceOf[js.Any])
         ret

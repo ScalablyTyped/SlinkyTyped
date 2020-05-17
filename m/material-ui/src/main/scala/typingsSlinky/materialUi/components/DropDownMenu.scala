@@ -11,7 +11,6 @@ import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.origin
 import typingsSlinky.materialUi.dropDownMenuMod.default
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,10 +54,10 @@ object DropDownMenu {
     def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
     @scala.inline
     def onChange(
-      value: (/* e */ SyntheticEvent[Event_, js.Object], /* index */ Double, /* menuItemValue */ js.Any) => Unit
+      value: (/* e */ SyntheticEvent[org.scalajs.dom.raw.Event, js.Object], /* index */ Double, /* menuItemValue */ js.Any) => Unit
     ): this.type = set("onChange", js.Any.fromFunction3(value))
     @scala.inline
-    def onClose(value: /* e */ SyntheticEvent[Event_, js.Object] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
+    def onClose(value: /* e */ SyntheticEvent[org.scalajs.dom.raw.Event, js.Object] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
     @scala.inline
     def openImmediately(value: Boolean): this.type = set("openImmediately", value.asInstanceOf[js.Any])
     @scala.inline

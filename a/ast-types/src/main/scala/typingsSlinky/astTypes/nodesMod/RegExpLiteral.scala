@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.nodesMod
 
-import typingsSlinky.astTypes.AnonFlags
+import typingsSlinky.astTypes.anon.Flags
 import typingsSlinky.astTypes.kindsMod.CommentKind
 import typingsSlinky.astTypes.kindsMod.SourceLocationKind
 import scala.scalajs.js
@@ -14,7 +14,7 @@ trait RegExpLiteral extends ASTNode {
   var flags: String = js.native
   var loc: js.UndefOr[SourceLocationKind] = js.native
   var pattern: String = js.native
-  var regex: js.UndefOr[AnonFlags] = js.native
+  var regex: js.UndefOr[Flags] = js.native
   var `type`: typingsSlinky.astTypes.astTypesStrings.RegExpLiteral = js.native
   var value: js.RegExp = js.native
 }
@@ -86,7 +86,7 @@ object RegExpLiteral {
         ret
     }
     @scala.inline
-    def withRegex(value: AnonFlags): Self = {
+    def withRegex(value: Flags): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("regex")(value.asInstanceOf[js.Any])
         ret

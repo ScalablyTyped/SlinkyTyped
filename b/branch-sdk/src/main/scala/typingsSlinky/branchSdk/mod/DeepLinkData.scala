@@ -1,6 +1,6 @@
 package typingsSlinky.branchSdk.mod
 
-import typingsSlinky.branchSdk.AnonDictcustomkey
+import typingsSlinky.branchSdk.anon.Dictcustomkey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DeepLinkData extends js.Object {
   var channel: js.UndefOr[String] = js.native
-  var data: js.UndefOr[AnonDictcustomkey] = js.native
+  var data: js.UndefOr[Dictcustomkey] = js.native
   var feature: js.UndefOr[String] = js.native
   var stage: js.UndefOr[String] = js.native
   var tags: js.UndefOr[js.Array[String]] = js.native
@@ -39,7 +39,7 @@ object DeepLinkData {
         ret
     }
     @scala.inline
-    def withData(value: AnonDictcustomkey): Self = {
+    def withData(value: Dictcustomkey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

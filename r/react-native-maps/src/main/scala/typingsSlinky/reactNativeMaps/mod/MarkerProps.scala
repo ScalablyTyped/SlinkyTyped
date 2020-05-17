@@ -5,11 +5,10 @@ import typingsSlinky.reactNative.mod.ImageRequireSource
 import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.ViewProps
-import typingsSlinky.reactNativeMaps.Anon0
-import typingsSlinky.reactNativeMaps.AnonAction
-import typingsSlinky.reactNativeMaps.AnonActionId
-import typingsSlinky.reactNativeMaps.AnonCoordinate
-import typingsSlinky.reactNativeMaps.AnonId
+import typingsSlinky.reactNativeMaps.anon.Action
+import typingsSlinky.reactNativeMaps.anon.ActionId
+import typingsSlinky.reactNativeMaps.anon.Id
+import typingsSlinky.reactNativeMaps.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,13 +26,48 @@ trait MarkerProps extends ViewProps {
   var icon: js.UndefOr[ImageURISource | ImageRequireSource] = js.native
   var identifier: js.UndefOr[String] = js.native
   var image: js.UndefOr[ImageURISource | ImageRequireSource] = js.native
-  var onCalloutPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Anon0 with AnonCoordinate], Unit]] = js.native
-  var onDeselect: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, AnonActionId with AnonCoordinate], Unit]] = js.native
-  var onDrag: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, js.Object with AnonCoordinate], Unit]] = js.native
-  var onDragEnd: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, js.Object with AnonCoordinate], Unit]] = js.native
-  var onDragStart: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, js.Object with AnonCoordinate], Unit]] = js.native
-  var onPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, AnonAction with AnonCoordinate], Unit]] = js.native
-  var onSelect: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, AnonId with AnonCoordinate], Unit]] = js.native
+  var onCalloutPress: js.UndefOr[
+    js.Function1[
+      SyntheticEvent[NodeHandle, `0` with typingsSlinky.reactNativeMaps.anon.Coordinate], 
+      Unit
+    ]
+  ] = js.native
+  var onDeselect: js.UndefOr[
+    js.Function1[
+      SyntheticEvent[NodeHandle, ActionId with typingsSlinky.reactNativeMaps.anon.Coordinate], 
+      Unit
+    ]
+  ] = js.native
+  var onDrag: js.UndefOr[
+    js.Function1[
+      SyntheticEvent[NodeHandle, js.Object with typingsSlinky.reactNativeMaps.anon.Coordinate], 
+      Unit
+    ]
+  ] = js.native
+  var onDragEnd: js.UndefOr[
+    js.Function1[
+      SyntheticEvent[NodeHandle, js.Object with typingsSlinky.reactNativeMaps.anon.Coordinate], 
+      Unit
+    ]
+  ] = js.native
+  var onDragStart: js.UndefOr[
+    js.Function1[
+      SyntheticEvent[NodeHandle, js.Object with typingsSlinky.reactNativeMaps.anon.Coordinate], 
+      Unit
+    ]
+  ] = js.native
+  var onPress: js.UndefOr[
+    js.Function1[
+      SyntheticEvent[NodeHandle, Action with typingsSlinky.reactNativeMaps.anon.Coordinate], 
+      Unit
+    ]
+  ] = js.native
+  var onSelect: js.UndefOr[
+    js.Function1[
+      SyntheticEvent[NodeHandle, Id with typingsSlinky.reactNativeMaps.anon.Coordinate], 
+      Unit
+    ]
+  ] = js.native
   var opacity: js.UndefOr[Double] = js.native
   var pinColor: js.UndefOr[String] = js.native
   var reuseIdentifier: js.UndefOr[String] = js.native
@@ -184,7 +218,7 @@ object MarkerProps {
         ret
     }
     @scala.inline
-    def withOnCalloutPress(value: SyntheticEvent[NodeHandle, Anon0 with AnonCoordinate] => Unit): Self = {
+    def withOnCalloutPress(value: SyntheticEvent[NodeHandle, `0` with typingsSlinky.reactNativeMaps.anon.Coordinate] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCalloutPress")(js.Any.fromFunction1(value))
         ret
@@ -196,7 +230,9 @@ object MarkerProps {
         ret
     }
     @scala.inline
-    def withOnDeselect(value: SyntheticEvent[NodeHandle, AnonActionId with AnonCoordinate] => Unit): Self = {
+    def withOnDeselect(
+      value: SyntheticEvent[NodeHandle, ActionId with typingsSlinky.reactNativeMaps.anon.Coordinate] => Unit
+    ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDeselect")(js.Any.fromFunction1(value))
         ret
@@ -208,7 +244,9 @@ object MarkerProps {
         ret
     }
     @scala.inline
-    def withOnDrag(value: SyntheticEvent[NodeHandle, js.Object with AnonCoordinate] => Unit): Self = {
+    def withOnDrag(
+      value: SyntheticEvent[NodeHandle, js.Object with typingsSlinky.reactNativeMaps.anon.Coordinate] => Unit
+    ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDrag")(js.Any.fromFunction1(value))
         ret
@@ -220,7 +258,9 @@ object MarkerProps {
         ret
     }
     @scala.inline
-    def withOnDragEnd(value: SyntheticEvent[NodeHandle, js.Object with AnonCoordinate] => Unit): Self = {
+    def withOnDragEnd(
+      value: SyntheticEvent[NodeHandle, js.Object with typingsSlinky.reactNativeMaps.anon.Coordinate] => Unit
+    ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnd")(js.Any.fromFunction1(value))
         ret
@@ -232,7 +272,9 @@ object MarkerProps {
         ret
     }
     @scala.inline
-    def withOnDragStart(value: SyntheticEvent[NodeHandle, js.Object with AnonCoordinate] => Unit): Self = {
+    def withOnDragStart(
+      value: SyntheticEvent[NodeHandle, js.Object with typingsSlinky.reactNativeMaps.anon.Coordinate] => Unit
+    ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.Any.fromFunction1(value))
         ret
@@ -244,7 +286,9 @@ object MarkerProps {
         ret
     }
     @scala.inline
-    def withOnPress(value: SyntheticEvent[NodeHandle, AnonAction with AnonCoordinate] => Unit): Self = {
+    def withOnPress(
+      value: SyntheticEvent[NodeHandle, Action with typingsSlinky.reactNativeMaps.anon.Coordinate] => Unit
+    ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.Any.fromFunction1(value))
         ret
@@ -256,7 +300,7 @@ object MarkerProps {
         ret
     }
     @scala.inline
-    def withOnSelect(value: SyntheticEvent[NodeHandle, AnonId with AnonCoordinate] => Unit): Self = {
+    def withOnSelect(value: SyntheticEvent[NodeHandle, Id with typingsSlinky.reactNativeMaps.anon.Coordinate] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
         ret

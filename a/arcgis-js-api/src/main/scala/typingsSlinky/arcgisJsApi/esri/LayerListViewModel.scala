@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.IHandle
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`trigger-action`
 import scala.scalajs.js
@@ -49,8 +48,4 @@ trait LayerListViewModel extends Accessor {
   def triggerAction(action: ActionButton, item: ListItem): Unit = js.native
   def triggerAction(action: ActionToggle, item: ListItem): Unit = js.native
 }
-
-@JSGlobal("__esri.LayerListViewModel")
-@js.native
-object LayerListViewModel extends TopLevel[LayerListViewModelConstructor]
 

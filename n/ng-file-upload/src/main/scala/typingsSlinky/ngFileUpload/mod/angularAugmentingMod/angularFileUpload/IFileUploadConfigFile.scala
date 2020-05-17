@@ -1,7 +1,7 @@
 package typingsSlinky.ngFileUpload.mod.angularAugmentingMod.angularFileUpload
 
 import typingsSlinky.angular.mod.IRequestConfig
-import typingsSlinky.angular.mod._Global_.Function
+import typingsSlinky.angular.mod.global.Function
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,5 @@
 package typingsSlinky.forms.mod
 
-import typingsSlinky.forms.AnonField
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +9,7 @@ trait FieldParameters extends js.Object {
   /** A list of options, used for multiple choice fields. */
   var choices: js.UndefOr[FieldObjectChoice | FieldArrayChoice] = js.native
   /** A list of CSS classes for label and field wrapper. */
-  var cssClasses: js.UndefOr[AnonField] = js.native
+  var cssClasses: js.UndefOr[typingsSlinky.forms.anon.Field] = js.native
   /** If true, the error message will be displayed after the field, rather than before. */
   var errorAfterField: js.UndefOr[Boolean] = js.native
   /** For widgets with a fieldset (multipleRadio and multipleCheckbox), set classes for the fieldset. */
@@ -58,7 +57,7 @@ object FieldParameters {
         ret
     }
     @scala.inline
-    def withCssClasses(value: AnonField): Self = {
+    def withCssClasses(value: typingsSlinky.forms.anon.Field): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cssClasses")(value.asInstanceOf[js.Any])
         ret

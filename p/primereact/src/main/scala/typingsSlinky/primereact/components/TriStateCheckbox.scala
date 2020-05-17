@@ -2,7 +2,7 @@ package typingsSlinky.primereact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonValueBoolean
+import typingsSlinky.primereact.anon.ValueBoolean
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import typingsSlinky.primereact.triStateCheckboxMod.TriStateCheckboxProps
 import scala.scalajs.js
@@ -29,7 +29,7 @@ object TriStateCheckbox {
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* e */ AnonValueBoolean => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ ValueBoolean => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

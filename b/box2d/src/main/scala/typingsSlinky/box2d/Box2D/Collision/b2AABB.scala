@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Box2D.Collision.b2AABB")
 @js.native
-class b2AABB () extends js.Object {
+trait b2AABB extends js.Object {
   /**
   		* Lower bound.
   		**/
@@ -58,16 +57,83 @@ class b2AABB () extends js.Object {
   def TestOverlap(other: b2AABB): Boolean = js.native
 }
 
-/* static members */
-@JSGlobal("Box2D.Collision.b2AABB")
-@js.native
-object b2AABB extends js.Object {
-  /**
-  		* Combines two AABBs into one with max values for upper bound and min values for lower bound.
-  		* @param aabb1 First AABB to combine.
-  		* @param aabb2 Second AABB to combine.
-  		* @return New AABB with max values from aabb1 and aabb2.
-  		**/
-  def Combine(aabb1: b2AABB, aabb2: b2AABB): b2AABB = js.native
+object b2AABB {
+  @scala.inline
+  def apply(
+    Combine: (b2AABB, b2AABB) => Unit,
+    Contains: b2AABB => Boolean,
+    GetCenter: () => b2Vec2,
+    GetExtents: () => b2Vec2,
+    IsValid: () => Boolean,
+    RayCast: (b2RayCastOutput, b2RayCastInput) => Boolean,
+    TestOverlap: b2AABB => Boolean,
+    lowerBound: b2Vec2,
+    upperBound: b2Vec2
+  ): b2AABB = {
+    val __obj = js.Dynamic.literal(Combine = js.Any.fromFunction2(Combine), Contains = js.Any.fromFunction1(Contains), GetCenter = js.Any.fromFunction0(GetCenter), GetExtents = js.Any.fromFunction0(GetExtents), IsValid = js.Any.fromFunction0(IsValid), RayCast = js.Any.fromFunction2(RayCast), TestOverlap = js.Any.fromFunction1(TestOverlap), lowerBound = lowerBound.asInstanceOf[js.Any], upperBound = upperBound.asInstanceOf[js.Any])
+    __obj.asInstanceOf[b2AABB]
+  }
+  @scala.inline
+  implicit class b2AABBOps[Self <: b2AABB] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCombine(value: (b2AABB, b2AABB) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Combine")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withContains(value: b2AABB => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Contains")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetCenter(value: () => b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetCenter")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetExtents(value: () => b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetExtents")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsValid(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsValid")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRayCast(value: (b2RayCastOutput, b2RayCastInput) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RayCast")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withTestOverlap(value: b2AABB => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TestOverlap")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLowerBound(value: b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerBound")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpperBound(value: b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upperBound")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

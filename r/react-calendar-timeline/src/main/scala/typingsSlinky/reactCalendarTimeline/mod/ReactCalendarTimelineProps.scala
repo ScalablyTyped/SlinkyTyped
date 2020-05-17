@@ -1,6 +1,7 @@
 package typingsSlinky.reactCalendarTimeline.mod
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
@@ -14,7 +15,6 @@ import typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.left
 import typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.move
 import typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.resize
 import typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.right
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -60,7 +60,7 @@ trait ReactCalendarTimelineProps[CustomItem /* <: TimelineItemBase[_] */, Custom
     js.Function3[
       /* groupId */ Id, 
       /* time */ Double, 
-      /* e */ SyntheticEvent[Event_, Element], 
+      /* e */ SyntheticEvent[Event, Element], 
       scala.Unit
     ]
   ] = js.native
@@ -68,7 +68,7 @@ trait ReactCalendarTimelineProps[CustomItem /* <: TimelineItemBase[_] */, Custom
     js.Function3[
       /* groupId */ Id, 
       /* time */ Double, 
-      /* e */ SyntheticEvent[Event_, Element], 
+      /* e */ SyntheticEvent[Event, Element], 
       scala.Unit
     ]
   ] = js.native
@@ -76,34 +76,19 @@ trait ReactCalendarTimelineProps[CustomItem /* <: TimelineItemBase[_] */, Custom
     js.Function3[
       /* groupId */ Id, 
       /* time */ Double, 
-      /* e */ SyntheticEvent[Event_, Element], 
+      /* e */ SyntheticEvent[Event, Element], 
       scala.Unit
     ]
   ] = js.native
   var onItemClick: js.UndefOr[
-    js.Function3[
-      /* itemId */ Id, 
-      /* e */ SyntheticEvent[Event_, Element], 
-      /* time */ Double, 
-      scala.Unit
-    ]
+    js.Function3[/* itemId */ Id, /* e */ SyntheticEvent[Event, Element], /* time */ Double, scala.Unit]
   ] = js.native
   var onItemContextMenu: js.UndefOr[
-    js.Function3[
-      /* itemId */ Id, 
-      /* e */ SyntheticEvent[Event_, Element], 
-      /* time */ Double, 
-      scala.Unit
-    ]
+    js.Function3[/* itemId */ Id, /* e */ SyntheticEvent[Event, Element], /* time */ Double, scala.Unit]
   ] = js.native
-  var onItemDeselect: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event_, Element], scala.Unit]] = js.native
+  var onItemDeselect: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event, Element], scala.Unit]] = js.native
   var onItemDoubleClick: js.UndefOr[
-    js.Function3[
-      /* itemId */ Id, 
-      /* e */ SyntheticEvent[Event_, Element], 
-      /* time */ Double, 
-      scala.Unit
-    ]
+    js.Function3[/* itemId */ Id, /* e */ SyntheticEvent[Event, Element], /* time */ Double, scala.Unit]
   ] = js.native
   var onItemDrag: js.UndefOr[
     js.Function1[/* itemDragObject */ OnItemDragObjectMove | OnItemDragObjectResize, scala.Unit]
@@ -437,9 +422,7 @@ object ReactCalendarTimelineProps {
         ret
     }
     @scala.inline
-    def withOnCanvasClick(
-      value: (/* groupId */ Id, /* time */ Double, /* e */ SyntheticEvent[Event_, Element]) => scala.Unit
-    ): Self[CustomItem, CustomGroup] = {
+    def withOnCanvasClick(value: (/* groupId */ Id, /* time */ Double, /* e */ SyntheticEvent[Event, Element]) => scala.Unit): Self[CustomItem, CustomGroup] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanvasClick")(js.Any.fromFunction3(value))
         ret
@@ -451,9 +434,7 @@ object ReactCalendarTimelineProps {
         ret
     }
     @scala.inline
-    def withOnCanvasContextMenu(
-      value: (/* groupId */ Id, /* time */ Double, /* e */ SyntheticEvent[Event_, Element]) => scala.Unit
-    ): Self[CustomItem, CustomGroup] = {
+    def withOnCanvasContextMenu(value: (/* groupId */ Id, /* time */ Double, /* e */ SyntheticEvent[Event, Element]) => scala.Unit): Self[CustomItem, CustomGroup] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanvasContextMenu")(js.Any.fromFunction3(value))
         ret
@@ -465,9 +446,7 @@ object ReactCalendarTimelineProps {
         ret
     }
     @scala.inline
-    def withOnCanvasDoubleClick(
-      value: (/* groupId */ Id, /* time */ Double, /* e */ SyntheticEvent[Event_, Element]) => scala.Unit
-    ): Self[CustomItem, CustomGroup] = {
+    def withOnCanvasDoubleClick(value: (/* groupId */ Id, /* time */ Double, /* e */ SyntheticEvent[Event, Element]) => scala.Unit): Self[CustomItem, CustomGroup] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanvasDoubleClick")(js.Any.fromFunction3(value))
         ret
@@ -479,7 +458,7 @@ object ReactCalendarTimelineProps {
         ret
     }
     @scala.inline
-    def withOnItemClick(value: (/* itemId */ Id, /* e */ SyntheticEvent[Event_, Element], /* time */ Double) => scala.Unit): Self[CustomItem, CustomGroup] = {
+    def withOnItemClick(value: (/* itemId */ Id, /* e */ SyntheticEvent[Event, Element], /* time */ Double) => scala.Unit): Self[CustomItem, CustomGroup] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction3(value))
         ret
@@ -491,7 +470,7 @@ object ReactCalendarTimelineProps {
         ret
     }
     @scala.inline
-    def withOnItemContextMenu(value: (/* itemId */ Id, /* e */ SyntheticEvent[Event_, Element], /* time */ Double) => scala.Unit): Self[CustomItem, CustomGroup] = {
+    def withOnItemContextMenu(value: (/* itemId */ Id, /* e */ SyntheticEvent[Event, Element], /* time */ Double) => scala.Unit): Self[CustomItem, CustomGroup] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemContextMenu")(js.Any.fromFunction3(value))
         ret
@@ -503,7 +482,7 @@ object ReactCalendarTimelineProps {
         ret
     }
     @scala.inline
-    def withOnItemDeselect(value: /* e */ SyntheticEvent[Event_, Element] => scala.Unit): Self[CustomItem, CustomGroup] = {
+    def withOnItemDeselect(value: /* e */ SyntheticEvent[Event, Element] => scala.Unit): Self[CustomItem, CustomGroup] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemDeselect")(js.Any.fromFunction1(value))
         ret
@@ -515,7 +494,7 @@ object ReactCalendarTimelineProps {
         ret
     }
     @scala.inline
-    def withOnItemDoubleClick(value: (/* itemId */ Id, /* e */ SyntheticEvent[Event_, Element], /* time */ Double) => scala.Unit): Self[CustomItem, CustomGroup] = {
+    def withOnItemDoubleClick(value: (/* itemId */ Id, /* e */ SyntheticEvent[Event, Element], /* time */ Double) => scala.Unit): Self[CustomItem, CustomGroup] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemDoubleClick")(js.Any.fromFunction3(value))
         ret

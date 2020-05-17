@@ -7,15 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientVerticalGrid.BatchEditRecordDeleting event.
   */
-@JSGlobal("ASPxClientVerticalGridBatchEditRecordDeletingEventArgs")
 @js.native
-class ASPxClientVerticalGridBatchEditRecordDeletingEventArgs protected () extends ASPxClientCancelEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientVerticalGridBatchEditRecordDeletingEventArgs class.
-    * @param visibleIndex An integer value that specifies the processed record's visible index.
-    * @param recordValues A hashtable that stores information about the processed record's cells.
-    */
-  def this(visibleIndex: Double, recordValues: js.Any) = this()
+trait ASPxClientVerticalGridBatchEditRecordDeletingEventArgs extends ASPxClientCancelEventArgs {
   /**
     * Gets a hashtable that maintains information about deleted cells.
     */
@@ -24,5 +17,33 @@ class ASPxClientVerticalGridBatchEditRecordDeletingEventArgs protected () extend
     * Gets the processed record's visible index.
     */
   var visibleIndex: Double = js.native
+}
+
+object ASPxClientVerticalGridBatchEditRecordDeletingEventArgs {
+  @scala.inline
+  def apply(cancel: Boolean, recordValues: js.Any, visibleIndex: Double): ASPxClientVerticalGridBatchEditRecordDeletingEventArgs = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], recordValues = recordValues.asInstanceOf[js.Any], visibleIndex = visibleIndex.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientVerticalGridBatchEditRecordDeletingEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientVerticalGridBatchEditRecordDeletingEventArgsOps[Self <: ASPxClientVerticalGridBatchEditRecordDeletingEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRecordValues(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recordValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVisibleIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

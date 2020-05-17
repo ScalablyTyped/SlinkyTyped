@@ -1,7 +1,7 @@
 package typingsSlinky.graphqlCompose.interfaceTypeComposerMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.graphql.GraphQLInterfaceTypeConfi
+import typingsSlinky.graphql.anon.GraphQLInterfaceTypeConfi
 import typingsSlinky.graphql.astMod.InterfaceTypeDefinitionNode
 import typingsSlinky.graphql.astMod.InterfaceTypeExtensionNode
 import typingsSlinky.graphql.definitionMod.GraphQLAbstractType

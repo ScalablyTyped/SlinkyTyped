@@ -1,6 +1,6 @@
 package typingsSlinky.agenda.mod
 
-import typingsSlinky.agenda.AnonAddress
+import typingsSlinky.agenda.anon.Address
 import typingsSlinky.mongodb.mod.Db
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ trait AgendaConfiguration extends js.Object {
   /**
     * Specifies that Agenda should connect to MongoDB.
     */
-  var db: js.UndefOr[AnonAddress] = js.native
+  var db: js.UndefOr[Address] = js.native
   /**
     * Takes a number which specifies the default number of a specific job that can be running at any given moment.
     * By default it is 5.
@@ -63,7 +63,7 @@ object AgendaConfiguration {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDb(value: AnonAddress): Self = {
+    def withDb(value: Address): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("db")(value.asInstanceOf[js.Any])
         ret

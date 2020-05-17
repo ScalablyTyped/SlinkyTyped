@@ -1,13 +1,13 @@
 package typingsSlinky.awsServerlessExpress.middlewareMod.httpAugmentingMod
 
-import typingsSlinky.awsServerlessExpress.AnonContext
+import typingsSlinky.awsServerlessExpress.anon.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IncomingMessage extends js.Object {
-  var apiGateway: js.UndefOr[AnonContext] = js.native
+  var apiGateway: js.UndefOr[Context] = js.native
 }
 
 object IncomingMessage {
@@ -23,7 +23,7 @@ object IncomingMessage {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withApiGateway(value: AnonContext): Self = {
+    def withApiGateway(value: Context): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("apiGateway")(value.asInstanceOf[js.Any])
         ret

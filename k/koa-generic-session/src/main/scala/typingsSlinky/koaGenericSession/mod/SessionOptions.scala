@@ -1,7 +1,7 @@
 package typingsSlinky.koaGenericSession.mod
 
 import typingsSlinky.koa.mod.Context
-import typingsSlinky.koaGenericSession.AnonHttpOnly
+import typingsSlinky.koaGenericSession.anon.HttpOnly
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait SessionOptions extends js.Object {
   var allowEmpty: js.UndefOr[Boolean] = js.native
   var beforeSave: js.UndefOr[js.Function2[/* ctx */ Context, /* session */ Session, Unit]] = js.native
-  var cookie: js.UndefOr[AnonHttpOnly] = js.native
+  var cookie: js.UndefOr[HttpOnly] = js.native
   var defer: js.UndefOr[Boolean] = js.native
   var errorHandler: js.UndefOr[js.Function3[/* error */ js.Error, /* type */ String, /* ctx */ Context, Unit]] = js.native
   var genSid: js.UndefOr[js.Function1[/* length */ Double, String]] = js.native
@@ -61,7 +61,7 @@ object SessionOptions {
         ret
     }
     @scala.inline
-    def withCookie(value: AnonHttpOnly): Self = {
+    def withCookie(value: HttpOnly): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cookie")(value.asInstanceOf[js.Any])
         ret

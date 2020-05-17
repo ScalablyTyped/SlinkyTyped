@@ -1,6 +1,10 @@
 package typingsSlinky.instagramPrivateApi
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.instagramPrivateApi.anon.CaptionText
+import typingsSlinky.instagramPrivateApi.anon.MediaId
+import typingsSlinky.instagramPrivateApi.anon.Module
+import typingsSlinky.instagramPrivateApi.anon.Sourcetype
 import typingsSlinky.instagramPrivateApi.commonTypesMod.IgAppModule
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.`0`
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.`1`
@@ -39,7 +43,7 @@ object mediaRepositoryMod extends js.Object {
     def blocked(): js.Promise[js.Array[String]] = js.native
     def checkOffensiveComment(commentText: String): js.Promise[MediaRepositoryCheckOffensiveCommentResponseRootObject] = js.native
     def checkOffensiveComment(commentText: String, mediaId: String): js.Promise[MediaRepositoryCheckOffensiveCommentResponseRootObject] = js.native
-    def comment(hasMediaIdTextReplyToCommentIdModule: AnonModule): js.Promise[MediaRepositoryCommentResponseComment] = js.native
+    def comment(hasMediaIdTextReplyToCommentIdModule: Module): js.Promise[MediaRepositoryCommentResponseComment] = js.native
     def commentsBulkDelete(mediaId: String, commentIds: js.Array[String]): js.Promise[StatusResponse] = js.native
     def commentsDisable(mediaId: js.Any): js.Promise[_] = js.native
     def commentsEnable(mediaId: js.Any): js.Promise[_] = js.native
@@ -49,8 +53,8 @@ object mediaRepositoryMod extends js.Object {
     def configureToStory(options: MediaConfigureStoryPhotoOptions): js.Promise[_] = js.native
     def configureToStoryVideo(options: MediaConfigureStoryVideoOptions): js.Promise[_] = js.native
     def configureVideo(options: MediaConfigureTimelineVideoOptions): js.Promise[MediaRepositoryConfigureResponseRootObject] = js.native
-    def delete(hasMediaIdMediaType: AnonMediaId): js.Promise[_] = js.native
-    def editMedia(hasMediaIdCaptionText: AnonCaptionText): js.Promise[MediaEditResponseRootObject] = js.native
+    def delete(hasMediaIdMediaType: MediaId): js.Promise[_] = js.native
+    def editMedia(hasMediaIdCaptionText: CaptionText): js.Promise[MediaEditResponseRootObject] = js.native
     def info(mediaId: String): js.Promise[MediaInfoResponseRootObject] = js.native
     def like(options: LikeRequestOptions): js.Promise[_] = js.native
     def likers(id: String): js.Promise[MediaRepositoryLikersResponseRootObject] = js.native
@@ -93,7 +97,7 @@ object mediaRepositoryMod extends js.Object {
     def undoOnlyMe(mediaId: String): js.Promise[StatusResponse] = js.native
     def unlike(options: UnlikeRequestOptions): js.Promise[_] = js.native
     def unsave(mediaId: String): js.Promise[_] = js.native
-    def uploadFinish(options: AnonSourcetype): js.Promise[_] = js.native
+    def uploadFinish(options: Sourcetype): js.Promise[_] = js.native
   }
   
   /* static members */

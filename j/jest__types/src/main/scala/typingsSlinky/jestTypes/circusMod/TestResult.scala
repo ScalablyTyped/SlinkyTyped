@@ -1,6 +1,6 @@
 package typingsSlinky.jestTypes.circusMod
 
-import typingsSlinky.jestTypes.AnonColumn
+import typingsSlinky.jestTypes.anon.Column
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait TestResult extends js.Object {
   var duration: js.UndefOr[Double | Null] = js.native
   var errors: js.Array[FormattedError] = js.native
   var invocations: Double = js.native
-  var location: js.UndefOr[AnonColumn | Null] = js.native
+  var location: js.UndefOr[Column | Null] = js.native
   var status: TestStatus = js.native
   var testPath: js.Array[TestName | BlockName] = js.native
 }
@@ -75,7 +75,7 @@ object TestResult {
         ret
     }
     @scala.inline
-    def withLocation(value: AnonColumn): Self = {
+    def withLocation(value: Column): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
         ret

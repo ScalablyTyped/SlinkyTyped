@@ -1,6 +1,8 @@
 package typingsSlinky.reselect
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.reselect.anon.FnCall
+import typingsSlinky.reselect.anon.Recomputations
 import typingsSlinky.reselect.reselectStrings.createStructuredSelector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -2474,8 +2476,8 @@ object mod extends js.Object {
   ): ParametricSelector[S, P, T] = js.native
   def defaultMemoize[F /* <: js.Function */](func: F): F = js.native
   def defaultMemoize[F /* <: js.Function */](func: F, equalityCheck: js.Function3[/* a */ js.Any, /* b */ js.Any, /* index */ Double, Boolean]): F = js.native
-  type OutputParametricSelector[S, P, R, C] = (ParametricSelector[S, P, R]) with AnonRecomputations[C]
-  type OutputSelector[S, R, C] = (Selector[S, R]) with AnonRecomputations[C]
+  type OutputParametricSelector[S, P, R, C] = (ParametricSelector[S, P, R]) with Recomputations[C]
+  type OutputSelector[S, R, C] = (Selector[S, R]) with Recomputations[C]
   type ParametricSelector[S, P, R] = js.Function3[/* state */ S, /* props */ P, /* repeated */ js.Any, R]
   type Selector[S, R] = js.Function1[/* state */ S, R]
 }

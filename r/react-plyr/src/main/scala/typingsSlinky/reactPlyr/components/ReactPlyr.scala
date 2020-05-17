@@ -2,15 +2,15 @@ package typingsSlinky.reactPlyr.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactPlyr.AnonActive
-import typingsSlinky.reactPlyr.AnonControls
-import typingsSlinky.reactPlyr.AnonDefault
-import typingsSlinky.reactPlyr.AnonEnabled
-import typingsSlinky.reactPlyr.AnonFocused
-import typingsSlinky.reactPlyr.AnonKey
-import typingsSlinky.reactPlyr.AnonKind
-import typingsSlinky.reactPlyr.AnonOptions
-import typingsSlinky.reactPlyr.AnonSize
+import typingsSlinky.reactPlyr.anon.Active
+import typingsSlinky.reactPlyr.anon.Controls
+import typingsSlinky.reactPlyr.anon.Default
+import typingsSlinky.reactPlyr.anon.Enabled
+import typingsSlinky.reactPlyr.anon.Focused
+import typingsSlinky.reactPlyr.anon.Key
+import typingsSlinky.reactPlyr.anon.Kind
+import typingsSlinky.reactPlyr.anon.Options
+import typingsSlinky.reactPlyr.anon.Size
 import typingsSlinky.reactPlyr.mod.OnVolumeChangeParam
 import typingsSlinky.reactPlyr.mod.Props
 import typingsSlinky.reactPlyr.mod.default
@@ -38,7 +38,7 @@ object ReactPlyr {
     @scala.inline
     def blankVideo(value: String): this.type = set("blankVideo", value.asInstanceOf[js.Any])
     @scala.inline
-    def captions(value: js.Array[AnonKind]): this.type = set("captions", value.asInstanceOf[js.Any])
+    def captions(value: js.Array[Kind]): this.type = set("captions", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -56,7 +56,7 @@ object ReactPlyr {
     @scala.inline
     def enabled(value: Boolean): this.type = set("enabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def fullscreen(value: AnonEnabled): this.type = set("fullscreen", value.asInstanceOf[js.Any])
+    def fullscreen(value: Enabled): this.type = set("fullscreen", value.asInstanceOf[js.Any])
     @scala.inline
     def hideControls(value: Boolean): this.type = set("hideControls", value.asInstanceOf[js.Any])
     @scala.inline
@@ -66,11 +66,11 @@ object ReactPlyr {
     @scala.inline
     def invertTime(value: Boolean): this.type = set("invertTime", value.asInstanceOf[js.Any])
     @scala.inline
-    def keyboard(value: AnonFocused): this.type = set("keyboard", value.asInstanceOf[js.Any])
+    def keyboard(value: Focused): this.type = set("keyboard", value.asInstanceOf[js.Any])
     @scala.inline
     def loadSprite(value: Boolean): this.type = set("loadSprite", value.asInstanceOf[js.Any])
     @scala.inline
-    def loop(value: AnonActive): this.type = set("loop", value.asInstanceOf[js.Any])
+    def loop(value: Active): this.type = set("loop", value.asInstanceOf[js.Any])
     @scala.inline
     def muted(value: Boolean): this.type = set("muted", value.asInstanceOf[js.Any])
     @scala.inline
@@ -100,7 +100,7 @@ object ReactPlyr {
     @scala.inline
     def poster(value: String): this.type = set("poster", value.asInstanceOf[js.Any])
     @scala.inline
-    def quality(value: AnonDefault): this.type = set("quality", value.asInstanceOf[js.Any])
+    def quality(value: Default): this.type = set("quality", value.asInstanceOf[js.Any])
     @scala.inline
     def ratio(value: String): this.type = set("ratio", value.asInstanceOf[js.Any])
     @scala.inline
@@ -110,17 +110,17 @@ object ReactPlyr {
     @scala.inline
     def settings(value: js.Array[String]): this.type = set("settings", value.asInstanceOf[js.Any])
     @scala.inline
-    def sources(value: js.Array[AnonSize]): this.type = set("sources", value.asInstanceOf[js.Any])
+    def sources(value: js.Array[Size]): this.type = set("sources", value.asInstanceOf[js.Any])
     @scala.inline
-    def speed(value: AnonOptions): this.type = set("speed", value.asInstanceOf[js.Any])
+    def speed(value: Options): this.type = set("speed", value.asInstanceOf[js.Any])
     @scala.inline
-    def storage(value: AnonKey): this.type = set("storage", value.asInstanceOf[js.Any])
+    def storage(value: Key): this.type = set("storage", value.asInstanceOf[js.Any])
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def toggleInvert(value: Boolean): this.type = set("toggleInvert", value.asInstanceOf[js.Any])
     @scala.inline
-    def tooltips(value: AnonControls): this.type = set("tooltips", value.asInstanceOf[js.Any])
+    def tooltips(value: Controls): this.type = set("tooltips", value.asInstanceOf[js.Any])
     @scala.inline
     def `type`(value: youtube | vimeo | video | audio): this.type = set("type", value.asInstanceOf[js.Any])
     @scala.inline

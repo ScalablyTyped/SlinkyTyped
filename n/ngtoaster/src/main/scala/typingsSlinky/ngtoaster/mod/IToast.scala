@@ -1,7 +1,7 @@
 package typingsSlinky.ngtoaster.mod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.std.EventListener
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -72,7 +72,7 @@ object IToast {
         ret
     }
     @scala.inline
-    def withClickHandler(value: /* evt */ Event_ => Unit): Self = {
+    def withClickHandler(value: /* evt */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("clickHandler")(js.Any.fromFunction1(value))
         ret

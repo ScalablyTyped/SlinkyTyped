@@ -1,7 +1,7 @@
 package typingsSlinky.expressJwt.mod
 
 import typingsSlinky.express.mod.Request_
-import typingsSlinky.expressJwt.FnCall
+import typingsSlinky.expressJwt.anon.FnCall
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
 import scala.scalajs.js

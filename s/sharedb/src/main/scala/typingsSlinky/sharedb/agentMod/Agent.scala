@@ -1,6 +1,6 @@
 package typingsSlinky.sharedb.agentMod
 
-import typingsSlinky.sharedb.DuplexisServerboolean
+import typingsSlinky.sharedb.anon.DuplexisServerboolean
 import typingsSlinky.sharedb.sharedbMod.JSONObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

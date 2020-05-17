@@ -1,6 +1,6 @@
 package typingsSlinky.chromeApps.chrome.certificateProvider
 
-import typingsSlinky.chromeApps.AnonINVALIDPIN
+import typingsSlinky.chromeApps.anon.INVALIDPIN
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chromeAppsStrings.INVALID_PIN
 import typingsSlinky.chromeApps.chromeAppsStrings.INVALID_PUK
@@ -21,10 +21,10 @@ trait StopRequestPinDetails extends js.Object {
     */
   var errorType: js.UndefOr[
     ToStringLiteral[
-      AnonINVALIDPIN, 
-      /* keyof chrome-apps.AnonINVALIDPIN */ INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR, 
+      INVALIDPIN, 
+      /* keyof chrome-apps.anon.INVALIDPIN */ INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR, 
       Exclude[
-        /* keyof chrome-apps.AnonINVALIDPIN */ INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR, 
+        /* keyof chrome-apps.anon.INVALIDPIN */ INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR, 
         INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR
       ]
     ]
@@ -56,10 +56,10 @@ object StopRequestPinDetails {
     @scala.inline
     def withErrorType(
       value: ToStringLiteral[
-          AnonINVALIDPIN, 
-          /* keyof chrome-apps.AnonINVALIDPIN */ INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR, 
+          INVALIDPIN, 
+          /* keyof chrome-apps.anon.INVALIDPIN */ INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR, 
           Exclude[
-            /* keyof chrome-apps.AnonINVALIDPIN */ INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR, 
+            /* keyof chrome-apps.anon.INVALIDPIN */ INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR, 
             INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR
           ]
         ]

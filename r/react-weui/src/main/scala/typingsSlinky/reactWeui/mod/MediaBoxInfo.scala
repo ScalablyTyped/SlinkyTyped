@@ -1,6 +1,6 @@
 package typingsSlinky.reactWeui.mod
 
-import typingsSlinky.reactWeui.AnonDataArray
+import typingsSlinky.reactWeui.anon.DataArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ class MediaBoxInfo protected () extends js.Object {
 @JSImport("react-weui", "MediaBoxInfo")
 @js.native
 object MediaBoxInfo extends js.Object {
-  var defaultProps: AnonDataArray = js.native
+  var defaultProps: DataArray = js.native
   @js.native
   object propTypes extends js.Object {
     @js.native

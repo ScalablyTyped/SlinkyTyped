@@ -4,20 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("TypeScript.FunctionDeclarationSyntax")
 @js.native
-class FunctionDeclarationSyntax protected ()
+trait FunctionDeclarationSyntax
   extends SyntaxNode
      with IStatementSyntax {
-  def this(
-    modifiers: ISyntaxList,
-    functionKeyword: ISyntaxToken,
-    identifier: ISyntaxToken,
-    callSignature: CallSignatureSyntax,
-    block: BlockSyntax,
-    semicolonToken: ISyntaxToken,
-    parsedInStrictMode: Boolean
-  ) = this()
   var block: BlockSyntax = js.native
   var callSignature: CallSignatureSyntax = js.native
   var functionKeyword: ISyntaxToken = js.native
@@ -41,13 +31,5 @@ class FunctionDeclarationSyntax protected ()
   def withModifier(modifier: ISyntaxToken): FunctionDeclarationSyntax = js.native
   def withModifiers(modifiers: ISyntaxList): FunctionDeclarationSyntax = js.native
   def withSemicolonToken(semicolonToken: ISyntaxToken): FunctionDeclarationSyntax = js.native
-}
-
-/* static members */
-@JSGlobal("TypeScript.FunctionDeclarationSyntax")
-@js.native
-object FunctionDeclarationSyntax extends js.Object {
-  def create(functionKeyword: ISyntaxToken, identifier: ISyntaxToken, callSignature: CallSignatureSyntax): FunctionDeclarationSyntax = js.native
-  def create1(identifier: ISyntaxToken): FunctionDeclarationSyntax = js.native
 }
 

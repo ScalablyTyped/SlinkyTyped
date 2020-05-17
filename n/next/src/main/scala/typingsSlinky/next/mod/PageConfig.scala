@@ -1,6 +1,6 @@
 package typingsSlinky.next.mod
 
-import typingsSlinky.next.AnonBodyParser
+import typingsSlinky.next.anon.BodyParser
 import typingsSlinky.next.nextStrings.hybrid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PageConfig extends js.Object {
   var amp: js.UndefOr[Boolean | hybrid] = js.native
-  var api: js.UndefOr[AnonBodyParser] = js.native
+  var api: js.UndefOr[BodyParser] = js.native
 }
 
 object PageConfig {
@@ -37,7 +37,7 @@ object PageConfig {
         ret
     }
     @scala.inline
-    def withApi(value: AnonBodyParser): Self = {
+    def withApi(value: BodyParser): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("api")(value.asInstanceOf[js.Any])
         ret

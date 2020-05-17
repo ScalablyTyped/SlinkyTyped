@@ -1,9 +1,9 @@
 package typingsSlinky.formol.mod
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.Event
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait FormolProps[V] extends js.Object {
   var i18n: js.UndefOr[js.Any] = js.native
   var item: js.UndefOr[V] = js.native
   var noCancel: js.UndefOr[js.Any] = js.native
-  var onSubmit: js.UndefOr[js.Function1[/* e */ Event_, Unit]] = js.native
+  var onSubmit: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
   var readOnly: js.UndefOr[Boolean] = js.native
   var submitText: js.UndefOr[js.Any] = js.native
   var types: js.UndefOr[js.Array[String]] = js.native
@@ -147,7 +147,7 @@ object FormolProps {
         ret
     }
     @scala.inline
-    def withOnSubmit(value: /* e */ Event_ => Unit): Self[V] = {
+    def withOnSubmit(value: /* e */ Event => Unit): Self[V] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(js.Any.fromFunction1(value))
         ret

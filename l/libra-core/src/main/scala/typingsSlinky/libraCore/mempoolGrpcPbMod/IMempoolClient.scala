@@ -3,7 +3,7 @@ package typingsSlinky.libraCore.mempoolGrpcPbMod
 import typingsSlinky.grpc.mod.ClientUnaryCall
 import typingsSlinky.grpc.mod.Metadata
 import typingsSlinky.grpc.mod.ServiceError
-import typingsSlinky.libraCore.PartialCallOptions
+import typingsSlinky.libraCore.anon.PartialCallOptions
 import typingsSlinky.libraCore.mempoolPbMod.AddTransactionWithValidationRequest
 import typingsSlinky.libraCore.mempoolPbMod.AddTransactionWithValidationResponse
 import typingsSlinky.libraCore.mempoolPbMod.CommitTransactionsRequest

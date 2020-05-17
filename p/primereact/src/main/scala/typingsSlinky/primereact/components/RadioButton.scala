@@ -2,7 +2,7 @@ package typingsSlinky.primereact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonChecked
+import typingsSlinky.primereact.anon.Checked
 import typingsSlinky.primereact.radioButtonMod.RadioButtonProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
@@ -48,7 +48,7 @@ object RadioButton {
   
   def withProps(p: RadioButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(onChange: AnonChecked => Unit): Builder = {
+  def apply(onChange: Checked => Unit): Builder = {
     val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
     new Builder(js.Array(this.component, __props.asInstanceOf[RadioButtonProps]))
   }

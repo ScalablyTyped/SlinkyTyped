@@ -2,7 +2,7 @@ package typingsSlinky.reactAriaLive.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactAriaLive.AnonArialive
+import typingsSlinky.reactAriaLive.anon.Arialive
 import typingsSlinky.reactAriaLive.reactAriaLiveStrings.assertive
 import typingsSlinky.reactAriaLive.reactAriaLiveStrings.polite
 import scala.scalajs.js
@@ -22,12 +22,12 @@ object LiveMessage {
     def clearOnUnmount(value: Boolean): this.type = set("clearOnUnmount", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AnonArialive): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: Arialive): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(`aria-live`: assertive | polite, message: String): Builder = {
     val __props = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
     __props.updateDynamic("aria-live")(`aria-live`.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[AnonArialive]))
+    new Builder(js.Array(this.component, __props.asInstanceOf[Arialive]))
   }
 }
 

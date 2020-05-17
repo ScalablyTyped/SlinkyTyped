@@ -19,7 +19,7 @@ import scala.scalajs.js.annotation._
   * ```
   */
 @js.native
-trait StructuredHeader extends _HeaderValue {
+trait StructuredHeader extends HeaderValue {
   /**
   	 * Additional arguments.
   	 */

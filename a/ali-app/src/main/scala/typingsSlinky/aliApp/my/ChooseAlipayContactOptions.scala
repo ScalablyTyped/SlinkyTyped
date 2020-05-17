@@ -1,8 +1,8 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonAvatar
 import typingsSlinky.aliApp.aliAppNumbers.`10`
 import typingsSlinky.aliApp.aliAppNumbers.`11`
+import typingsSlinky.aliApp.anon.Avatar
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,12 +19,12 @@ trait ChooseAlipayContactOptions
   @JSName("fail")
   var fail_ChooseAlipayContactOptions: js.UndefOr[js.Function1[/* error */ `10` | `11`, Unit]] = js.native
   @JSName("success")
-  def success_MChooseAlipayContactOptions(result: AnonAvatar): Unit = js.native
+  def success_MChooseAlipayContactOptions(result: Avatar): Unit = js.native
 }
 
 object ChooseAlipayContactOptions {
   @scala.inline
-  def apply(count: Double, success: AnonAvatar => Unit): ChooseAlipayContactOptions = {
+  def apply(count: Double, success: Avatar => Unit): ChooseAlipayContactOptions = {
     val __obj = js.Dynamic.literal(count = count.asInstanceOf[js.Any], success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[ChooseAlipayContactOptions]
   }
@@ -41,7 +41,7 @@ object ChooseAlipayContactOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: AnonAvatar => Unit): Self = {
+    def withSuccess(value: Avatar => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

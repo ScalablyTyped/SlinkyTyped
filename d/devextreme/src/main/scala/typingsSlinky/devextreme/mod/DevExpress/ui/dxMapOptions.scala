@@ -1,13 +1,13 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonBing
-import typingsSlinky.devextreme.AnonColor
-import typingsSlinky.devextreme.AnonIconSrc
-import typingsSlinky.devextreme.AnonJQueryEventLocation
-import typingsSlinky.devextreme.AnonModelOptions
-import typingsSlinky.devextreme.AnonOptions
-import typingsSlinky.devextreme.AnonOriginalMap
-import typingsSlinky.devextreme.AnonOriginalRoute
+import typingsSlinky.devextreme.anon.Bing
+import typingsSlinky.devextreme.anon.Color
+import typingsSlinky.devextreme.anon.IconSrc
+import typingsSlinky.devextreme.anon.JQueryEventLocation
+import typingsSlinky.devextreme.anon.ModelOptions
+import typingsSlinky.devextreme.anon.Options
+import typingsSlinky.devextreme.anon.OriginalMap
+import typingsSlinky.devextreme.anon.OriginalRoute
 import typingsSlinky.devextreme.devextremeStrings.bing
 import typingsSlinky.devextreme.devextremeStrings.google
 import typingsSlinky.devextreme.devextremeStrings.googleStatic
@@ -27,27 +27,27 @@ trait dxMapOptions extends WidgetOptions[dxMap] {
   /** Specifies whether or not map widget controls are available. */
   var controls: js.UndefOr[Boolean] = js.native
   /** A key used to authenticate the application within the required map provider. */
-  var key: js.UndefOr[String | AnonBing] = js.native
+  var key: js.UndefOr[String | Bing] = js.native
   /** A URL pointing to the custom icon to be used for map markers. */
   var markerIconSrc: js.UndefOr[String] = js.native
   /** An array of markers displayed on a map. */
-  var markers: js.UndefOr[js.Array[AnonIconSrc]] = js.native
+  var markers: js.UndefOr[js.Array[IconSrc]] = js.native
   /** A function that is executed when any location on the map is clicked or tapped. */
-  var onClick: js.UndefOr[(js.Function1[/* e */ AnonJQueryEventLocation, _]) | String] = js.native
+  var onClick: js.UndefOr[(js.Function1[/* e */ JQueryEventLocation, _]) | String] = js.native
   /** A function that is executed when a marker is created on the map. */
-  var onMarkerAdded: js.UndefOr[js.Function1[/* e */ AnonOptions, _]] = js.native
+  var onMarkerAdded: js.UndefOr[js.Function1[/* e */ Options, _]] = js.native
   /** A function that is executed when a marker is removed from the map. */
-  var onMarkerRemoved: js.UndefOr[js.Function1[/* e */ AnonModelOptions, _]] = js.native
+  var onMarkerRemoved: js.UndefOr[js.Function1[/* e */ ModelOptions, _]] = js.native
   /** A function that is executed when the map is ready. */
-  var onReady: js.UndefOr[js.Function1[/* e */ AnonOriginalMap, _]] = js.native
+  var onReady: js.UndefOr[js.Function1[/* e */ OriginalMap, _]] = js.native
   /** A function that is executed when a route is created on the map. */
-  var onRouteAdded: js.UndefOr[js.Function1[/* e */ AnonOriginalRoute, _]] = js.native
+  var onRouteAdded: js.UndefOr[js.Function1[/* e */ OriginalRoute, _]] = js.native
   /** A function that is executed when a route is removed from the map. */
-  var onRouteRemoved: js.UndefOr[js.Function1[/* e */ AnonModelOptions, _]] = js.native
+  var onRouteRemoved: js.UndefOr[js.Function1[/* e */ ModelOptions, _]] = js.native
   /** The name of the current map data provider. */
   var provider: js.UndefOr[bing | google | googleStatic] = js.native
   /** An array of routes shown on the map. */
-  var routes: js.UndefOr[js.Array[AnonColor]] = js.native
+  var routes: js.UndefOr[js.Array[Color]] = js.native
   /** The type of a map to display. */
   var `type`: js.UndefOr[hybrid | roadmap | satellite] = js.native
   /** The map's zoom level. The widget can change this value if autoAdjust is enabled. */
@@ -103,7 +103,7 @@ object dxMapOptions {
         ret
     }
     @scala.inline
-    def withKey(value: String | AnonBing): Self = {
+    def withKey(value: String | Bing): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
         ret
@@ -127,7 +127,7 @@ object dxMapOptions {
         ret
     }
     @scala.inline
-    def withMarkers(value: js.Array[AnonIconSrc]): Self = {
+    def withMarkers(value: js.Array[IconSrc]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markers")(value.asInstanceOf[js.Any])
         ret
@@ -139,13 +139,13 @@ object dxMapOptions {
         ret
     }
     @scala.inline
-    def withOnClickFunction1(value: /* e */ AnonJQueryEventLocation => _): Self = {
+    def withOnClickFunction1(value: /* e */ JQueryEventLocation => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnClick(value: (js.Function1[/* e */ AnonJQueryEventLocation, _]) | String): Self = {
+    def withOnClick(value: (js.Function1[/* e */ JQueryEventLocation, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(value.asInstanceOf[js.Any])
         ret
@@ -157,7 +157,7 @@ object dxMapOptions {
         ret
     }
     @scala.inline
-    def withOnMarkerAdded(value: /* e */ AnonOptions => _): Self = {
+    def withOnMarkerAdded(value: /* e */ Options => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMarkerAdded")(js.Any.fromFunction1(value))
         ret
@@ -169,7 +169,7 @@ object dxMapOptions {
         ret
     }
     @scala.inline
-    def withOnMarkerRemoved(value: /* e */ AnonModelOptions => _): Self = {
+    def withOnMarkerRemoved(value: /* e */ ModelOptions => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMarkerRemoved")(js.Any.fromFunction1(value))
         ret
@@ -181,7 +181,7 @@ object dxMapOptions {
         ret
     }
     @scala.inline
-    def withOnReady(value: /* e */ AnonOriginalMap => _): Self = {
+    def withOnReady(value: /* e */ OriginalMap => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onReady")(js.Any.fromFunction1(value))
         ret
@@ -193,7 +193,7 @@ object dxMapOptions {
         ret
     }
     @scala.inline
-    def withOnRouteAdded(value: /* e */ AnonOriginalRoute => _): Self = {
+    def withOnRouteAdded(value: /* e */ OriginalRoute => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRouteAdded")(js.Any.fromFunction1(value))
         ret
@@ -205,7 +205,7 @@ object dxMapOptions {
         ret
     }
     @scala.inline
-    def withOnRouteRemoved(value: /* e */ AnonModelOptions => _): Self = {
+    def withOnRouteRemoved(value: /* e */ ModelOptions => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRouteRemoved")(js.Any.fromFunction1(value))
         ret
@@ -229,7 +229,7 @@ object dxMapOptions {
         ret
     }
     @scala.inline
-    def withRoutes(value: js.Array[AnonColor]): Self = {
+    def withRoutes(value: js.Array[Color]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("routes")(value.asInstanceOf[js.Any])
         ret

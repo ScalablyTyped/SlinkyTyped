@@ -1,0 +1,35 @@
+package typingsSlinky.babelTraverse.anon
+
+import typingsSlinky.babelTraverse.babelTraverseStrings.JSXClosingElement
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait `231` extends js.Object {
+  var `type`: JSXClosingElement = js.native
+}
+
+object `231` {
+  @scala.inline
+  def apply(`type`: JSXClosingElement): `231` = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[`231`]
+  }
+  @scala.inline
+  implicit class `231Ops`[Self <: `231`] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: JSXClosingElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

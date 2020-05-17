@@ -1,14 +1,14 @@
 package typingsSlinky.reactCalendarTimeline.mod
 
-import typingsSlinky.reactCalendarTimeline.AnonClassName
+import typingsSlinky.reactCalendarTimeline.anon.ClassName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ItemRendererGetResizePropsReturnType extends js.Object {
-  var left: js.UndefOr[AnonClassName] = js.native
-  var right: js.UndefOr[AnonClassName] = js.native
+  var left: js.UndefOr[ClassName] = js.native
+  var right: js.UndefOr[ClassName] = js.native
 }
 
 object ItemRendererGetResizePropsReturnType {
@@ -24,7 +24,7 @@ object ItemRendererGetResizePropsReturnType {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withLeft(value: AnonClassName): Self = {
+    def withLeft(value: ClassName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
         ret
@@ -36,7 +36,7 @@ object ItemRendererGetResizePropsReturnType {
         ret
     }
     @scala.inline
-    def withRight(value: AnonClassName): Self = {
+    def withRight(value: ClassName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
         ret

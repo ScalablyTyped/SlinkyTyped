@@ -12,6 +12,7 @@ import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.STANDARD
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.STANDARD_IA
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.awsColonkms
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.requester_
+import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
@@ -19,7 +20,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait GetObjectOutput[StreamType] extends MetadataBearer {
+trait GetObjectOutput[StreamType]
+  extends MetadataBearer
+     with OutputTypesUnion {
   /**
     * _AcceptRanges shape
     */

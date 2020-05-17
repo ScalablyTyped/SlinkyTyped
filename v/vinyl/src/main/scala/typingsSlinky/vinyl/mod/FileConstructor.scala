@@ -2,9 +2,9 @@ package typingsSlinky.vinyl.mod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.vinyl.ConstructorOptionscontent
-import typingsSlinky.vinyl.ConstructorOptionscontentBase
-import typingsSlinky.vinyl.ConstructorOptionscontentDictcustomOption
+import typingsSlinky.vinyl.anon.ConstructorOptionscontent
+import typingsSlinky.vinyl.anon.ConstructorOptionscontentBase
+import typingsSlinky.vinyl.anon.ConstructorOptionscontentDictcustomOption
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -4,8 +4,8 @@ import typingsSlinky.express.mod.Request_
 import typingsSlinky.express.mod.Response_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
-import typingsSlinky.shrinkRay.AnonLgblock
-import typingsSlinky.shrinkRay.PartialflushnumberfinishF
+import typingsSlinky.shrinkRay.anon.Lgblock
+import typingsSlinky.shrinkRay.anon.PartialflushnumberfinishF
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 /* Inlined std.Partial<{  cacheSize  :number,   threshold  :number,   zlib  :std.Partial<{  flush ? :number,   finishFlush ? :number,   chunkSize ? :number,   windowBits ? :number,   strategy ? :number,   dictionary ? :any,   level  :-1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9,   memLevel  :1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9}>,   brotli  :{  lgblock  :number,   lgwin  :number,   mode  :0 | 1 | 2,   quality  :0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11},   filter  :shrink-ray.shrink-ray.FilterFunction, cache (req : express.express.Request<express-serve-static-core.express-serve-static-core.ParamsDictionary, any, any, express-serve-static-core.express-serve-static-core.Query>, res : express.express.Response<any>): boolean}> */
 @js.native
 trait Options extends js.Object {
-  var brotli: js.UndefOr[AnonLgblock] = js.native
+  var brotli: js.UndefOr[Lgblock] = js.native
   var cache: js.UndefOr[
     js.Function2[/* req */ Request_[ParamsDictionary, _, _, Query], /* res */ Response_[_], Boolean]
   ] = js.native
@@ -36,7 +36,7 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBrotli(value: AnonLgblock): Self = {
+    def withBrotli(value: Lgblock): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("brotli")(value.asInstanceOf[js.Any])
         ret

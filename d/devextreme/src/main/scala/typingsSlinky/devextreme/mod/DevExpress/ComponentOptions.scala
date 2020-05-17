@@ -1,8 +1,7 @@
 package typingsSlinky.devextreme.mod.DevExpress
 
-import typingsSlinky.devextreme.AnonComponent
-import typingsSlinky.devextreme.AnonElement
-import typingsSlinky.devextreme.AnonFullName
+import typingsSlinky.devextreme.anon.Element
+import typingsSlinky.devextreme.anon.FullName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,11 +9,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ComponentOptions[T] extends js.Object {
   /** A function that is executed before the widget is disposed of. */
-  var onDisposing: js.UndefOr[js.Function1[/* e */ AnonComponent[T], _]] = js.native
+  var onDisposing: js.UndefOr[js.Function1[/* e */ typingsSlinky.devextreme.anon.Component[T], _]] = js.native
   /** A function used in JavaScript frameworks to save the widget instance. */
-  var onInitialized: js.UndefOr[js.Function1[/* e */ AnonElement[T], _]] = js.native
+  var onInitialized: js.UndefOr[js.Function1[/* e */ Element[T], _]] = js.native
   /** A function that is executed after a widget option is changed. */
-  var onOptionChanged: js.UndefOr[js.Function1[/* e */ AnonFullName[T], _]] = js.native
+  var onOptionChanged: js.UndefOr[js.Function1[/* e */ FullName[T], _]] = js.native
 }
 
 object ComponentOptions {
@@ -30,7 +29,7 @@ object ComponentOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withOnDisposing(value: /* e */ AnonComponent[T] => _): Self[T] = {
+    def withOnDisposing(value: /* e */ typingsSlinky.devextreme.anon.Component[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDisposing")(js.Any.fromFunction1(value))
         ret
@@ -42,7 +41,7 @@ object ComponentOptions {
         ret
     }
     @scala.inline
-    def withOnInitialized(value: /* e */ AnonElement[T] => _): Self[T] = {
+    def withOnInitialized(value: /* e */ Element[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInitialized")(js.Any.fromFunction1(value))
         ret
@@ -54,7 +53,7 @@ object ComponentOptions {
         ret
     }
     @scala.inline
-    def withOnOptionChanged(value: /* e */ AnonFullName[T] => _): Self[T] = {
+    def withOnOptionChanged(value: /* e */ FullName[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOptionChanged")(js.Any.fromFunction1(value))
         ret

@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait OrgsListInvitationTeamsParams extends js.Object {
   var invitation_id: Double = js.native
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
   /**
     * Page number of the results to fetch.
     */
@@ -20,8 +21,9 @@ trait OrgsListInvitationTeamsParams extends js.Object {
 
 object OrgsListInvitationTeamsParams {
   @scala.inline
-  def apply(invitation_id: Double, org: String): OrgsListInvitationTeamsParams = {
-    val __obj = js.Dynamic.literal(invitation_id = invitation_id.asInstanceOf[js.Any], org = org.asInstanceOf[js.Any])
+  def apply(invitation_id: Double, org_ : String): OrgsListInvitationTeamsParams = {
+    val __obj = js.Dynamic.literal(invitation_id = invitation_id.asInstanceOf[js.Any])
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrgsListInvitationTeamsParams]
   }
   @scala.inline
@@ -37,7 +39,7 @@ object OrgsListInvitationTeamsParams {
         ret
     }
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

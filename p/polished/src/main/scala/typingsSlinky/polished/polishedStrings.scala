@@ -1,7 +1,7 @@
 package typingsSlinky.polished
 
-import typingsSlinky.polished.interactionStateMod._InteractionState
-import typingsSlinky.polished.modularScaleRatioMod._ModularScaleRatio
+import typingsSlinky.polished.interactionStateMod.InteractionState
+import typingsSlinky.polished.modularScaleRatioMod.ModularScaleRatio
 import typingsSlinky.polished.sideKeywordMod.SideKeyword
 import typingsSlinky.polished.timingFunctionMod.TimingFunction
 import scala.scalajs.js
@@ -52,10 +52,10 @@ object polishedStrings {
   sealed trait ^ extends js.Object
   
   @js.native
-  sealed trait active extends _InteractionState
+  sealed trait active extends InteractionState
   
   @js.native
-  sealed trait augFourth extends _ModularScaleRatio
+  sealed trait augFourth extends ModularScaleRatio
   
   @js.native
   sealed trait bottom extends SideKeyword
@@ -67,7 +67,7 @@ object polishedStrings {
   sealed trait bottomRight extends SideKeyword
   
   @js.native
-  sealed trait doubleOctave extends _ModularScaleRatio
+  sealed trait doubleOctave extends ModularScaleRatio
   
   @js.native
   sealed trait easeInBack extends TimingFunction
@@ -142,16 +142,16 @@ object polishedStrings {
   sealed trait easeOutSine extends TimingFunction
   
   @js.native
-  sealed trait focus extends _InteractionState
+  sealed trait focus extends InteractionState
   
   @js.native
   sealed trait func extends js.Object
   
   @js.native
-  sealed trait goldenSection extends _ModularScaleRatio
+  sealed trait goldenSection extends ModularScaleRatio
   
   @js.native
-  sealed trait hover extends _InteractionState
+  sealed trait hover extends InteractionState
   
   @js.native
   sealed trait infix extends js.Object
@@ -160,25 +160,25 @@ object polishedStrings {
   sealed trait left extends SideKeyword
   
   @js.native
-  sealed trait majorEleventh extends _ModularScaleRatio
+  sealed trait majorEleventh extends ModularScaleRatio
   
   @js.native
-  sealed trait majorSecond extends _ModularScaleRatio
+  sealed trait majorSecond extends ModularScaleRatio
   
   @js.native
-  sealed trait majorSeventh extends _ModularScaleRatio
+  sealed trait majorSeventh extends ModularScaleRatio
   
   @js.native
-  sealed trait majorSixth extends _ModularScaleRatio
+  sealed trait majorSixth extends ModularScaleRatio
   
   @js.native
-  sealed trait majorTenth extends _ModularScaleRatio
+  sealed trait majorTenth extends ModularScaleRatio
   
   @js.native
-  sealed trait majorThird extends _ModularScaleRatio
+  sealed trait majorThird extends ModularScaleRatio
   
   @js.native
-  sealed trait majorTwelfth extends _ModularScaleRatio
+  sealed trait majorTwelfth extends ModularScaleRatio
   
   @js.native
   sealed trait max extends js.Object
@@ -193,25 +193,25 @@ object polishedStrings {
   sealed trait minBackslashb extends js.Object
   
   @js.native
-  sealed trait minorSecond extends _ModularScaleRatio
+  sealed trait minorSecond extends ModularScaleRatio
   
   @js.native
-  sealed trait minorSeventh extends _ModularScaleRatio
+  sealed trait minorSeventh extends ModularScaleRatio
   
   @js.native
-  sealed trait minorSixth extends _ModularScaleRatio
+  sealed trait minorSixth extends ModularScaleRatio
   
   @js.native
-  sealed trait minorThird extends _ModularScaleRatio
+  sealed trait minorThird extends ModularScaleRatio
   
   @js.native
-  sealed trait octave extends _ModularScaleRatio
+  sealed trait octave extends ModularScaleRatio
   
   @js.native
-  sealed trait perfectFifth extends _ModularScaleRatio
+  sealed trait perfectFifth extends ModularScaleRatio
   
   @js.native
-  sealed trait perfectFourth extends _ModularScaleRatio
+  sealed trait perfectFourth extends ModularScaleRatio
   
   @js.native
   sealed trait postfix extends js.Object

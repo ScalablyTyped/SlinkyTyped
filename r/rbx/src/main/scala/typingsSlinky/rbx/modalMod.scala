@@ -1,6 +1,14 @@
 package typingsSlinky.rbx
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.rbx.anon.Active
+import typingsSlinky.rbx.anon.AsElementType
+import typingsSlinky.rbx.anon.NoneTAsComponentextendsElBody
+import typingsSlinky.rbx.anon.PickModalContainerPropsac
+import typingsSlinky.rbx.anon.PreferHelpersPropsOverridBackgroundColor
+import typingsSlinky.rbx.anon.TypeofModalContainer
+import typingsSlinky.rbx.anon.TypeofModalPortal
+import typingsSlinky.rbx.anon.`7`
 import typingsSlinky.rbx.exoticMod.ForwardRefAsExoticComponent
 import typingsSlinky.rbx.exoticMod.FromReactType
 import typingsSlinky.rbx.modalBackgroundMod.ModalBackgroundProps
@@ -38,11 +46,11 @@ object modalMod extends js.Object {
     @JSName("$$typeof")
     var DollarDollartypeof: js.Symbol = js.native
     var Portal: TypeofModalPortal = js.native
-    var defaultProps: AnonAsElementType with (Partial[PickModalContainerPropsac with (Pick[_, String | Double | js.Symbol])]) = js.native
+    var defaultProps: AsElementType with (Partial[PickModalContainerPropsac with (Pick[_, String | Double | js.Symbol])]) = js.native
     var displayName: js.UndefOr[String] = js.native
-    var propTypes: AnonActive = js.native
+    var propTypes: Active = js.native
     def apply[TAsComponent /* <: ReactElement */](
-      props: Anon7[TAsComponent] with PickModalContainerPropsac with (Pick[
+      props: `7`[TAsComponent] with PickModalContainerPropsac with (Pick[
           ComponentProps[TAsComponent], 
           Exclude[
             /* keyof react.react.ComponentProps<TAsComponent> */ String, 

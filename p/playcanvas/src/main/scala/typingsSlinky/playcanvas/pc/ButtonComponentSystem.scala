@@ -12,9 +12,6 @@ import scala.scalajs.js.annotation._
   * @description Create a new ButtonComponentSystem.
   * @param {pc.Application} app - The application.
   */
-@JSGlobal("pc.ButtonComponentSystem")
 @js.native
-class ButtonComponentSystem protected () extends ComponentSystem {
-  def this(app: Application) = this()
-}
+trait ButtonComponentSystem extends ComponentSystem
 

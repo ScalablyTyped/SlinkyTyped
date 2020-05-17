@@ -1,6 +1,6 @@
 package typingsSlinky.pdfkit.PDFKit
 
-import typingsSlinky.pdfkit.AnonBottom
+import typingsSlinky.pdfkit.anon.Bottom
 import typingsSlinky.pdfkit.pdfkitStrings.`1Dot3`
 import typingsSlinky.pdfkit.pdfkitStrings.`1Dot4`
 import typingsSlinky.pdfkit.pdfkitStrings.`1Dot5`
@@ -21,7 +21,7 @@ trait PDFDocumentOptions extends js.Object {
   var info: js.UndefOr[DocumentInfo] = js.native
   var layout: js.UndefOr[portrait | landscape] = js.native
   var margin: js.UndefOr[Double] = js.native
-  var margins: js.UndefOr[AnonBottom] = js.native
+  var margins: js.UndefOr[Bottom] = js.native
   var ownerPassword: js.UndefOr[String] = js.native
   var pdfVersion: js.UndefOr[`1Dot3` | `1Dot4` | `1Dot5` | `1Dot6` | `1Dot7` | `1Dot7ext3`] = js.native
   var permissions: js.UndefOr[DocumentPermissions] = js.native
@@ -114,7 +114,7 @@ object PDFDocumentOptions {
         ret
     }
     @scala.inline
-    def withMargins(value: AnonBottom): Self = {
+    def withMargins(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("margins")(value.asInstanceOf[js.Any])
         ret

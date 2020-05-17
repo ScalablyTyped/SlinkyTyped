@@ -1,6 +1,6 @@
 package typingsSlinky.unusedFilesWebpackPlugin.mod
 
-import typingsSlinky.unusedFilesWebpackPlugin.AnonIgnore
+import typingsSlinky.unusedFilesWebpackPlugin.anon.Ignore
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait Options extends js.Object {
   var cwd: js.UndefOr[String] = js.native
   var failOnUnused: Boolean = js.native
-  var globOptions: js.UndefOr[AnonIgnore] = js.native
+  var globOptions: js.UndefOr[Ignore] = js.native
   var ignore: js.UndefOr[String | js.Array[String]] = js.native
   var patterns: js.UndefOr[js.Array[String]] = js.native
 }
@@ -45,7 +45,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withGlobOptions(value: AnonIgnore): Self = {
+    def withGlobOptions(value: Ignore): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("globOptions")(value.asInstanceOf[js.Any])
         ret

@@ -12,7 +12,7 @@ import typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.nodejs
 import typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.nodejs8Dot10
 import typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.python2Dot7
 import typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.python3Dot6
-import typingsSlinky.awsSdkClientLambdaNode.inputTypesUnionMod._InputTypesUnion
+import typingsSlinky.awsSdkClientLambdaNode.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientLambdaNode.typesDeadLetterConfigMod.DeadLetterConfig
 import typingsSlinky.awsSdkClientLambdaNode.typesEnvironmentMod.Environment
 import typingsSlinky.awsSdkClientLambdaNode.typesTracingConfigMod.TracingConfig
@@ -24,7 +24,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait UpdateFunctionConfigurationInput extends _InputTypesUnion {
+trait UpdateFunctionConfigurationInput extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *

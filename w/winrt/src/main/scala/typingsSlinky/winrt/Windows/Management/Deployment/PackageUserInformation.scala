@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Management.Deployment.PackageUserInformation")
 @js.native
-class PackageUserInformation () extends IPackageUserInformation
+trait PackageUserInformation extends IPackageUserInformation
+
+object PackageUserInformation {
+  @scala.inline
+  def apply(installState: PackageInstallState, userSecurityId: String): PackageUserInformation = {
+    val __obj = js.Dynamic.literal(installState = installState.asInstanceOf[js.Any], userSecurityId = userSecurityId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PackageUserInformation]
+  }
+}
 

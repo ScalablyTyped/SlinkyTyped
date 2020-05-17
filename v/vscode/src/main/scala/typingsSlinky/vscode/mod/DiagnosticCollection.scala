@@ -69,7 +69,6 @@ trait DiagnosticCollection extends js.Object {
   		 * @param entries An array of tuples, like `[[file1, [d1, d2]], [file2, [d3, d4, d5]]]`, or `undefined`.
   		 */
   def set(entries: js.Array[js.Tuple2[Uri, js.UndefOr[js.Array[Diagnostic]]]]): Unit = js.native
-  def set(uri: Uri): Unit = js.native
   /**
   		 * Assign diagnostics for given resource. Will replace
   		 * existing diagnostics for that resource.
@@ -77,6 +76,7 @@ trait DiagnosticCollection extends js.Object {
   		 * @param uri A resource identifier.
   		 * @param diagnostics Array of diagnostics or `undefined`
   		 */
+  def set(uri: Uri): Unit = js.native
   def set(uri: Uri, diagnostics: js.Array[Diagnostic]): Unit = js.native
 }
 

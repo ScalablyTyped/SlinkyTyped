@@ -1,23 +1,18 @@
 package typingsSlinky.androiduix.android.app
 
-import typingsSlinky.androiduix.android.content.Context
-import typingsSlinky.androiduix.android.content.DialogInterface
 import typingsSlinky.androiduix.android.graphics.drawable.Drawable
 import typingsSlinky.androiduix.android.os.Message
 import typingsSlinky.androiduix.android.view.KeyEvent
 import typingsSlinky.androiduix.android.view.View
 import typingsSlinky.androiduix.android.view.View.OnClickListener
-import typingsSlinky.androiduix.android.view.Window
 import typingsSlinky.androiduix.android.widget.Button
 import typingsSlinky.androiduix.android.widget.ListView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.app.AlertController")
 @js.native
-class AlertController_ protected () extends js.Object {
-  def this(context: Context, di: DialogInterface, window: Window) = this()
+trait AlertController_ extends js.Object {
   var mAdapter: js.Any = js.native
   var mAlertDialogLayout: js.Any = js.native
   var mButtonHandler: OnClickListener = js.native

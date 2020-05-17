@@ -3,8 +3,8 @@ package typingsSlinky.rcMenu.subPopupMenuMod
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import slinky.core.ReactComponentClass
-import typingsSlinky.rcMenu.PartialSubPopupMenuProps
-import typingsSlinky.rcMenu.WeakValidationMapSubPopup
+import typingsSlinky.rcMenu.anon.PartialSubPopupMenuProps
+import typingsSlinky.rcMenu.anon.WeakValidationMapSubPopup
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.Context
 import typingsSlinky.react.mod.GetDerivedStateFromError

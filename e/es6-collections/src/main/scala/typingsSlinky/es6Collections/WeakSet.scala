@@ -1,6 +1,5 @@
 package typingsSlinky.es6Collections
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +12,43 @@ trait WeakSet[T] extends js.Object {
   def has(value: T): Boolean = js.native
 }
 
-@JSGlobal("WeakSet")
-@js.native
-object WeakSet extends TopLevel[WeakSetConstructor]
+object WeakSet {
+  @scala.inline
+  def apply[T](add: T => WeakSet[T], clear: () => Unit, delete: T => Boolean, has: T => Boolean): WeakSet[T] = {
+    val __obj = js.Dynamic.literal(add = js.Any.fromFunction1(add), clear = js.Any.fromFunction0(clear), delete = js.Any.fromFunction1(delete), has = js.Any.fromFunction1(has))
+    __obj.asInstanceOf[WeakSet[T]]
+  }
+  @scala.inline
+  implicit class WeakSetOps[Self[t] <: WeakSet[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withAdd(value: T => WeakSet[T]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withClear(value: () => Unit): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDelete(value: T => Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHas(value: T => Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("has")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

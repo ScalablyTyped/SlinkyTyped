@@ -1,6 +1,6 @@
 package typingsSlinky.ionic.definitionsMod
 
-import typingsSlinky.ionic.AnonPlatforms
+import typingsSlinky.ionic.anon.Platforms
 import typingsSlinky.ionicCliFramework.definitionsMod.PackageJson
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait CordovaPackageJson extends PackageJson {
-  var cordova: AnonPlatforms = js.native
+  var cordova: Platforms = js.native
 }
 
 object CordovaPackageJson {
   @scala.inline
-  def apply(cordova: AnonPlatforms, name: String, version: String): CordovaPackageJson = {
+  def apply(cordova: Platforms, name: String, version: String): CordovaPackageJson = {
     val __obj = js.Dynamic.literal(cordova = cordova.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
     __obj.asInstanceOf[CordovaPackageJson]
   }
@@ -24,7 +24,7 @@ object CordovaPackageJson {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCordova(value: AnonPlatforms): Self = {
+    def withCordova(value: Platforms): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cordova")(value.asInstanceOf[js.Any])
         ret

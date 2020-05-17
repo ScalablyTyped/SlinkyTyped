@@ -154,7 +154,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.vegaTypings.vegaTypingsStrings.yellowgreen
   - typingsSlinky.vegaTypings.vegaTypingsStrings.rebeccapurple
 */
-trait ColorName extends js.Object
+trait ColorName extends Color
 
 object ColorName {
   @scala.inline

@@ -18,23 +18,20 @@ package object wx {
   type CompassChangeCallback = js.Function1[/* res */ typingsSlinky.weixinApp.wx.CompassData, scala.Unit]
   type CompassOptions = typingsSlinky.weixinApp.wx.BaseOptions[js.Any, js.Any]
   type CustomEvent[T /* <: java.lang.String */, Detail] = typingsSlinky.weixinApp.wx.BaseEvent[T, Detail]
-  // #endregion
-  // #region Compontent组件
-  type DefaultData[V] = js.Object | (js.ThisFunction0[/* this */ V, js.Object])
   type DefaultMethods[V] = org.scalablytyped.runtime.StringDictionary[js.ThisFunction1[/* this */ V, /* repeated */ js.Any, js.Any]]
-  type DefaultProps = js.Object | (typingsSlinky.std.Record[java.lang.String, js.Any])
-  type FormEvent = typingsSlinky.weixinApp.wx.BuiltInEvent[typingsSlinky.weixinApp.weixinAppStrings.form, typingsSlinky.weixinApp.AnonValue]
+  type FormEvent = typingsSlinky.weixinApp.wx.BuiltInEvent[typingsSlinky.weixinApp.weixinAppStrings.form, typingsSlinky.weixinApp.anon.Value]
   /**
   	 * 指定focus时的光标位置
   	 * @version 1.5.0
   	 */
-  type InputEvent = typingsSlinky.weixinApp.wx.BuiltInEvent[typingsSlinky.weixinApp.weixinAppStrings.input, typingsSlinky.weixinApp.AnonCursor]
+  type InputEvent = typingsSlinky.weixinApp.wx.BuiltInEvent[
+    typingsSlinky.weixinApp.weixinAppStrings.input, 
+    typingsSlinky.weixinApp.anon.Cursor
+  ]
   /**
   	 * https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/observer.html
   	 */
   type ObserversDefs[V] = org.scalablytyped.runtime.StringDictionary[js.ThisFunction1[/* this */ V, /* repeated */ js.Any, js.Any]]
-  type Prop[T] = js.Function0[T] | typingsSlinky.weixinApp.AnonInstantiable[T]
-  type PropValidator[T] = typingsSlinky.weixinApp.wx.PropOptions[T] | typingsSlinky.weixinApp.wx.Prop[T] | js.Array[typingsSlinky.weixinApp.wx.Prop[T]]
   /**
   	 * There are two valid ways to define the type of data / properties:
   	 *
@@ -47,7 +44,6 @@ package object wx {
   	 * whereas this type is for call-site.
   	 */
   type PropValueType[Def] = js.Any
-  type PropsDefinition[T] = typingsSlinky.weixinApp.wx.ArrayPropsDefinition[T] | typingsSlinky.weixinApp.wx.RecordPropsDefinition[T]
   type RecordPropsDefinition[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]: weixin-app.wx.PropValidator<T[K]>}
     */ typingsSlinky.weixinApp.weixinAppStrings.RecordPropsDefinition with org.scalablytyped.runtime.TopLevel[T]
@@ -57,81 +53,6 @@ package object wx {
   // 发起请求
   type RequestHeader = org.scalablytyped.runtime.StringDictionary[java.lang.String]
   type RmdirOptions = typingsSlinky.weixinApp.wx.MkdirOptions
-  // #endregion
-  // #region App里的onLaunch、onShow回调参数
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1001`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1005`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1006`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1007`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1008`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1011`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1012`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1013`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1014`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1017`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1019`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1020`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1022`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1023`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1024`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1025`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1026`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1027`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1028`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1029`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1030`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1031`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1032`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1034`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1035`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1036`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1037`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1038`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1039`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1042`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1043`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1044`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1045`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1046`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1047`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1048`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1049`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1052`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1053`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1054`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1056`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1057`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1058`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1059`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1064`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1067`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1068`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1069`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1071`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1072`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1073`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1074`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1077`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1078`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1079`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1081`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1082`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1084`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1089`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1090`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1091`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1092`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1095`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1096`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1097`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1099`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1102`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1103`
-    - typingsSlinky.weixinApp.weixinAppNumbers.`1104`
-    - scala.Double
-  */
-  type SceneValues = typingsSlinky.weixinApp.wx._SceneValues | scala.Double
   type ScrollEvent = typingsSlinky.weixinApp.wx.BuiltInEvent[typingsSlinky.weixinApp.weixinAppStrings.scroll, js.Object]
   type TapEvent = typingsSlinky.weixinApp.wx.TouchEvent[typingsSlinky.weixinApp.weixinAppStrings.tap]
   type ThisTypedComponentOptionsWithRecordProps[V /* <: typingsSlinky.weixinApp.wx.Component[Data, Props, Behaviors] */, Data, Methods, Props, Behaviors /* <: js.Array[
@@ -142,9 +63,6 @@ package object wx {
   type TouchForceChangeEvent = typingsSlinky.weixinApp.wx.TouchEvent[typingsSlinky.weixinApp.weixinAppStrings.touchforcechange]
   type TouchMoveEvent = typingsSlinky.weixinApp.wx.TouchEvent[typingsSlinky.weixinApp.weixinAppStrings.touchmove]
   type TouchStartEvent = typingsSlinky.weixinApp.wx.TouchEvent[typingsSlinky.weixinApp.weixinAppStrings.touchstart]
-  type UnboxBehaviorData[T] = js.Object | (/* import warning: importer.ImportType#apply Failed type conversion: T['__DO_NOT_USE_INTERNAL_FIELD_DATA'] */ js.Any)
-  type UnboxBehaviorMethods[T] = js.Object | (/* import warning: importer.ImportType#apply Failed type conversion: T['__DO_NOT_USE_INTERNAL_FIELD_METHODS'] */ js.Any)
-  type UnboxBehaviorProps[T] = js.Object | (/* import warning: importer.ImportType#apply Failed type conversion: T['__DO_NOT_USE_INTERNAL_FIELD_PROPS'] */ js.Any)
   type UnboxBehaviorsData[Behaviors /* <: js.Array[
     (typingsSlinky.weixinApp.wx.Behavior[js.Object, js.Object, js.Object]) | java.lang.String
   ] */] = typingsSlinky.weixinApp.wx.UnboxBehaviorData[

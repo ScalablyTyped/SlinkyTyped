@@ -2,8 +2,8 @@ package typingsSlinky.request.mod
 
 import typingsSlinky.caseless.mod.Caseless
 import typingsSlinky.node.httpMod.IncomingMessage
-import typingsSlinky.request.AnonConnect
-import typingsSlinky.request.AnonDns
+import typingsSlinky.request.anon.Connect
+import typingsSlinky.request.anon.Dns
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +19,9 @@ trait Response extends IncomingMessage {
   var statusCode_Response: Double = js.native
   @JSName("statusMessage")
   var statusMessage_Response: String = js.native
-  var timingPhases: js.UndefOr[AnonDns] = js.native
+  var timingPhases: js.UndefOr[Dns] = js.native
   var timingStart: js.UndefOr[Double] = js.native
-  var timings: js.UndefOr[AnonConnect] = js.native
+  var timings: js.UndefOr[Connect] = js.native
    // case-insensitive access to headers
   def toJSON(): ResponseAsJSON = js.native
 }

@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.`xx-small`
 */
 trait AbsoluteSize
-  extends _FontSizeProperty[js.Any]
+  extends FontSizeProperty[js.Any]
 
 object AbsoluteSize {
   @scala.inline

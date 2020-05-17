@@ -2,8 +2,8 @@ package typingsSlinky.yog2Kernel.mod
 
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
-import typingsSlinky.yog2Kernel.TypeofRAL
-import typingsSlinky.yog2Kernel.TypeofRALPromise
+import typingsSlinky.yog2Kernel.anon.TypeofRAL
+import typingsSlinky.yog2Kernel.anon.TypeofRALPromise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

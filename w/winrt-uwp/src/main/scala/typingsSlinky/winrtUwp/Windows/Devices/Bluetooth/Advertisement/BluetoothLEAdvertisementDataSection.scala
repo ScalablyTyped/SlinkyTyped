@@ -6,19 +6,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A Bluetooth LE advertisement section. */
-@JSGlobal("Windows.Devices.Bluetooth.Advertisement.BluetoothLEAdvertisementDataSection")
 @js.native
-/** Creates a new BluetoothLEAdvertisementDataSection object. */
-class BluetoothLEAdvertisementDataSection () extends js.Object {
-  /**
-    * Creates a new BluetoothLEAdvertisementDataSection object with the Bluetooth LE advertisement data type and the payload.
-    * @param dataType The Bluetooth LE advertisement data type as defined by the Bluetooth Special Interest Group (SIG).
-    * @param data The Bluetooth LE advertisement data payload.
-    */
-  def this(dataType: Double, data: IBuffer) = this()
+trait BluetoothLEAdvertisementDataSection extends js.Object {
   /** The Bluetooth LE advertisement data payload. */
   var data: IBuffer = js.native
   /** The Bluetooth LE advertisement data type as defined by the Bluetooth Special Interest Group (SIG). */
   var dataType: Double = js.native
+}
+
+object BluetoothLEAdvertisementDataSection {
+  @scala.inline
+  def apply(data: IBuffer, dataType: Double): BluetoothLEAdvertisementDataSection = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], dataType = dataType.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BluetoothLEAdvertisementDataSection]
+  }
+  @scala.inline
+  implicit class BluetoothLEAdvertisementDataSectionOps[Self <: BluetoothLEAdvertisementDataSection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withData(value: IBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDataType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dataType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.mkdirp.mod
 
-import typingsSlinky.mkdirp.Typeofmkdir
-import typingsSlinky.mkdirp.Typeofstat
+import typingsSlinky.mkdirp.anon.Typeofmkdir
+import typingsSlinky.mkdirp.anon.Typeofstat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

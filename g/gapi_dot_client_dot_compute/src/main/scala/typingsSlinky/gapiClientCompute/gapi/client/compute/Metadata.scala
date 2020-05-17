@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientCompute.gapi.client.compute
 
-import typingsSlinky.gapiClientCompute.AnonKey
+import typingsSlinky.gapiClientCompute.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait Metadata extends js.Object {
     */
   var fingerprint: js.UndefOr[String] = js.native
   /** Array of key/value pairs. The total size of all keys and values must be less than 512 KB. */
-  var items: js.UndefOr[js.Array[AnonKey]] = js.native
+  var items: js.UndefOr[js.Array[Key]] = js.native
   /** [Output Only] Type of the resource. Always compute#metadata for metadata. */
   var kind: js.UndefOr[String] = js.native
 }
@@ -44,7 +44,7 @@ object Metadata {
         ret
     }
     @scala.inline
-    def withItems(value: js.Array[AnonKey]): Self = {
+    def withItems(value: js.Array[Key]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
         ret

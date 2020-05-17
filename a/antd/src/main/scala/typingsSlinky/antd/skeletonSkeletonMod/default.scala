@@ -1,9 +1,9 @@
 package typingsSlinky.antd.skeletonSkeletonMod
 
-import typingsSlinky.antd.PartialSkeletonProps
-import typingsSlinky.antd.TypeofSkeletonAvatar
-import typingsSlinky.antd.TypeofSkeletonButton
-import typingsSlinky.antd.TypeofSkeletonInput
+import typingsSlinky.antd.anon.PartialSkeletonProps
+import typingsSlinky.antd.anon.TypeofSkeletonAvatar
+import typingsSlinky.antd.anon.TypeofSkeletonButton
+import typingsSlinky.antd.anon.TypeofSkeletonInput
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

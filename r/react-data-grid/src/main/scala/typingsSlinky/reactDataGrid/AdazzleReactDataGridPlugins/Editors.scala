@@ -1,6 +1,6 @@
 package typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins
 
-import typingsSlinky.react.mod.Component
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,25 +8,10 @@ import scala.scalajs.js.annotation._
 @JSGlobal("AdazzleReactDataGridPlugins.Editors")
 @js.native
 object Editors extends js.Object {
-  @js.native
-  class AutoComplete ()
-    extends Component[AutoCompleteEditorProps, js.Object, js.Any]
-  
-  @js.native
-  class AutoCompleteTokensEditor ()
-    extends Component[AutoCompleteTokensEditorProps, js.Object, js.Any]
-  
-  @js.native
-  class CheckboxEditor ()
-    extends Component[js.Any, js.Object, js.Any]
-  
-  @js.native
-  class DropDownEditor ()
-    extends Component[DropDownEditorProps, js.Object, js.Any]
-  
-  @js.native
-  class SimpleTextEditor ()
-    extends Component[js.Any, js.Object, js.Any]
-  
+  type AutoComplete = ReactComponentClass[AutoCompleteEditorProps]
+  type AutoCompleteTokensEditor = ReactComponentClass[AutoCompleteTokensEditorProps]
+  type CheckboxEditor = ReactComponentClass[js.Any]
+  type DropDownEditor = ReactComponentClass[DropDownEditorProps]
+  type SimpleTextEditor = ReactComponentClass[js.Any]
 }
 

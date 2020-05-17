@@ -3,7 +3,7 @@ package typingsSlinky.reactPlayer.components
 import org.scalajs.dom.experimental.mediastream.MediaStream
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactPlayer.AnonLoaded
+import typingsSlinky.reactPlayer.anon.Loaded
 import typingsSlinky.reactPlayer.mod.Config
 import typingsSlinky.reactPlayer.mod.DailyMotionConfig
 import typingsSlinky.reactPlayer.mod.FacebookConfig
@@ -67,7 +67,7 @@ object ReactPlayer {
     @scala.inline
     def onPlay(value: () => Unit): this.type = set("onPlay", js.Any.fromFunction0(value))
     @scala.inline
-    def onProgress(value: /* state */ AnonLoaded => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
+    def onProgress(value: /* state */ Loaded => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
     @scala.inline
     def onReady(value: () => Unit): this.type = set("onReady", js.Any.fromFunction0(value))
     @scala.inline

@@ -3,7 +3,7 @@ package typingsSlinky.awsSdkClientS3Node.typesUploadPartOutputMod
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.AES256
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.awsColonkms
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.requester_
-import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UploadPartOutput
   extends MetadataBearer
-     with _OutputTypesUnion {
+     with OutputTypesUnion {
   /**
     * <p>Entity tag for the uploaded object.</p>
     */

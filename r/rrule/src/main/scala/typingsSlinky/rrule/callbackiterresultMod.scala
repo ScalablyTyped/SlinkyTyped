@@ -1,5 +1,6 @@
 package typingsSlinky.rrule
 
+import typingsSlinky.rrule.anon.PartialIterArgs
 import typingsSlinky.rrule.rruleStrings.all
 import typingsSlinky.rrule.rruleStrings.between
 import scala.scalajs.js

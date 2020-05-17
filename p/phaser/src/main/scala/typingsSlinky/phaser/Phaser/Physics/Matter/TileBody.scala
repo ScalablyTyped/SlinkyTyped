@@ -12,7 +12,6 @@ import typingsSlinky.phaser.Phaser.Physics.Matter.Components.Static
 import typingsSlinky.phaser.Phaser.Tilemaps.Tile
 import typingsSlinky.phaser.Phaser.Types.Physics.Matter.MatterBody
 import typingsSlinky.phaser.Phaser.Types.Physics.Matter.MatterBodyTileOptions
-import typingsSlinky.phaser.Phaser.Types.Physics.Matter.MatterTileOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,9 +28,8 @@ import scala.scalajs.js.annotation._
   * Note: not all Tiled collision shapes are supported. See
   * Phaser.Physics.Matter.TileBody#setFromTileCollision for more information.
   */
-@JSGlobal("Phaser.Physics.Matter.TileBody")
 @js.native
-class TileBody protected ()
+trait TileBody
   extends Bounce
      with Collision
      with Friction
@@ -41,14 +39,6 @@ class TileBody protected ()
      with Sleep
      with Static
      with MatterBody {
-  /**
-    * 
-    * @param world The Matter world instance this body belongs to.
-    * @param tile The target tile that should have a Matter body.
-    * @param options Options to be used when creating the Matter body.
-    */
-  def this(world: World, tile: Tile) = this()
-  def this(world: World, tile: Tile, options: MatterTileOptions) = this()
   /**
     * The tile object the body is associated with.
     */

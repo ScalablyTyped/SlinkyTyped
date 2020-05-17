@@ -1,6 +1,6 @@
 package typingsSlinky.rrule.rrulestrMod
 
-import typingsSlinky.rrule.PartialRRuleStrOptions
+import typingsSlinky.rrule.anon.PartialRRuleStrOptions
 import typingsSlinky.rrule.rruleMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`

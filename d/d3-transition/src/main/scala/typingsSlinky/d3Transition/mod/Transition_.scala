@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, PDatum] extends js.Object {
+trait Transition_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, PDatum] extends SelectionOrTransition[GElement, Datum, PElement, PDatum] {
   // Modifying -------------------------------
   /**
     * For each selected element, the attribute with the specified name will be cleared at the start of the transition.

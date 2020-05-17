@@ -1,7 +1,7 @@
 package typingsSlinky.antd.mod
 
-import typingsSlinky.antd.AnonDisabled
-import typingsSlinky.antd.AnonVisible
+import typingsSlinky.antd.anon.Disabled
+import typingsSlinky.antd.anon.Visible
 import typingsSlinky.antd.popconfirmMod.PopconfirmProps
 import typingsSlinky.antd.popconfirmMod.default
 import scala.scalajs.js
@@ -18,7 +18,7 @@ class Popconfirm protected () extends default {
 @JSImport("antd", "Popconfirm")
 @js.native
 object Popconfirm extends js.Object {
-  var defaultProps: AnonDisabled = js.native
-  def getDerivedStateFromProps(nextProps: PopconfirmProps): AnonVisible | Null = js.native
+  var defaultProps: Disabled = js.native
+  def getDerivedStateFromProps(nextProps: PopconfirmProps): Visible | Null = js.native
 }
 

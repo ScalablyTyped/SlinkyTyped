@@ -18,9 +18,9 @@ import typingsSlinky.puppeteerCore.puppeteerCoreNumbers.`4`
 import typingsSlinky.puppeteerCore.puppeteerCoreNumbers.`5`
 import typingsSlinky.puppeteerCore.puppeteerCoreNumbers.`6`
 import typingsSlinky.puppeteerCore.puppeteerCoreNumbers.`7`
-import typingsSlinky.std.AnonCopyWithin
 import typingsSlinky.std.Error
 import typingsSlinky.std.IterableIterator
+import typingsSlinky.std.anon.CopyWithin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -51,7 +51,7 @@ object mod extends js.Object {
       * when they will be absent when used in a 'with' statement.
       */
     @JSName(js.Symbol.unscopables)
-    var unscopables: js.Function0[AnonCopyWithin] = js.native
+    var unscopables: js.Function0[CopyWithin] = js.native
     /**
       * Combines two or more arrays.
       * @param items Additional items to add to the end of array1.

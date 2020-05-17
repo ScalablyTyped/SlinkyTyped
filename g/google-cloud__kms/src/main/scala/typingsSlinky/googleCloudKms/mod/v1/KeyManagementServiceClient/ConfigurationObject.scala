@@ -1,13 +1,13 @@
 package typingsSlinky.googleCloudKms.mod.v1.KeyManagementServiceClient
 
-import typingsSlinky.googleCloudKms.AnonClientemail
+import typingsSlinky.googleCloudKms.anon.Clientemail
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ConfigurationObject extends js.Object {
-  var credentials: js.UndefOr[AnonClientemail] = js.native
+  var credentials: js.UndefOr[Clientemail] = js.native
   var email: js.UndefOr[String] = js.native
   var keyFilename: js.UndefOr[String] = js.native
   var port: js.UndefOr[Double] = js.native
@@ -29,7 +29,7 @@ object ConfigurationObject {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCredentials(value: AnonClientemail): Self = {
+    def withCredentials(value: Clientemail): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(value.asInstanceOf[js.Any])
         ret

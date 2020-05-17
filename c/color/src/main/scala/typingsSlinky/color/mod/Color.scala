@@ -1,7 +1,7 @@
 package typingsSlinky.color.mod
 
-import typingsSlinky.color.AnonAlpha
-import typingsSlinky.color.AnonDictkey
+import typingsSlinky.color.anon.Alpha
+import typingsSlinky.color.anon.Dictkey
 import typingsSlinky.color.colorStrings.AA
 import typingsSlinky.color.colorStrings.AAA
 import typingsSlinky.color.colorStrings._empty
@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Color[T /* <: ColorParam */] extends js.Object {
+trait Color[T /* <: ColorParam */] extends ColorParam {
   def a(): Double = js.native
   def a(`val`: Double): Color[ColorParam] = js.native
   def alpha(): Double = js.native
@@ -66,7 +66,7 @@ trait Color[T /* <: ColorParam */] extends js.Object {
   def mix(mixinColor: Color[ColorParam]): Color[ColorParam] = js.native
   def mix(mixinColor: Color[ColorParam], weight: Double): Color[ColorParam] = js.native
   def negate(): Color[ColorParam] = js.native
-  def `object`(): AnonDictkey = js.native
+  def `object`(): Dictkey = js.native
   def opaquer(ratio: Double): Color[ColorParam] = js.native
   def percentString(): String = js.native
   def percentString(places: Double): String = js.native
@@ -86,7 +86,7 @@ trait Color[T /* <: ColorParam */] extends js.Object {
   def string(places: Double): String = js.native
   def toJSON(): Color[T] = js.native
   def unitArray(): js.Array[Double] = js.native
-  def unitObject(): AnonAlpha = js.native
+  def unitObject(): Alpha = js.native
   def value(): Double = js.native
   def value(`val`: Double): Color[ColorParam] = js.native
   def wblack(): Double = js.native

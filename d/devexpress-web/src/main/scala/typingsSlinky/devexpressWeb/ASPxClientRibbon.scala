@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents the client-side equivalent of the ASPxRibbon control.
   */
-@JSGlobal("ASPxClientRibbon")
 @js.native
-class ASPxClientRibbon () extends ASPxClientControl {
+trait ASPxClientRibbon extends ASPxClientControl {
   /**
     * Fires on the client side after the active tab has been changed within a ribbon control.
     */
@@ -108,14 +107,182 @@ class ASPxClientRibbon () extends ASPxClientControl {
   def ShowKeyTips(): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("ASPxClientRibbon")
-@js.native
-object ASPxClientRibbon extends js.Object {
-  /**
-    * Converts the specified object to the ASPxClientRibbon type. The converted client object specified by the obj parameter.
-    * @param obj The client object to be type cast.
-    */
-  def Cast(obj: js.Any): ASPxClientRibbon = js.native
+object ASPxClientRibbon {
+  @scala.inline
+  def apply(
+    ActiveTabChanged: ASPxClientEvent[ASPxClientRibbonTabEventHandler[ASPxClientRibbon]],
+    AdjustControl: () => Unit,
+    CommandExecuted: ASPxClientEvent[ASPxClientRibbonCommandExecutedEventHandler[ASPxClientRibbon]],
+    DialogBoxLauncherClicked: ASPxClientEvent[ASPxClientRibbonDialogBoxLauncherClickedEventHandler[ASPxClientRibbon]],
+    FileTabClicked: ASPxClientEvent[ASPxClientEventHandler[ASPxClientRibbon]],
+    GetActiveTab: () => ASPxClientRibbonTab,
+    GetClientVisible: () => Boolean,
+    GetEnabled: () => Boolean,
+    GetHeight: () => Double,
+    GetItemByName: String => ASPxClientRibbonItem,
+    GetItemValueByName: String => js.Any,
+    GetMainElement: () => js.Any,
+    GetMinimized: () => Boolean,
+    GetParentControl: () => js.Any,
+    GetTab: Double => ASPxClientRibbonTab,
+    GetTabByName: String => ASPxClientRibbonTab,
+    GetTabCount: () => Double,
+    GetVisible: () => Boolean,
+    GetWidth: () => Double,
+    InCallback: () => Boolean,
+    Init: ASPxClientEvent[ASPxClientEventHandler[ASPxClientControlBase]],
+    KeyTipsClosedOnEscape: ASPxClientEvent[ASPxClientEventHandler[ASPxClientRibbon]],
+    MinimizationStateChanged: ASPxClientEvent[ASPxClientRibbonMinimizationStateEventHandler[ASPxClientRibbon]],
+    SendMessageToAssistiveTechnology: String => Unit,
+    SetActiveTab: ASPxClientRibbonTab => Unit,
+    SetActiveTabIndex: Double => Unit,
+    SetClientVisible: Boolean => Unit,
+    SetContextTabCategoryVisible: (String, Boolean) => Unit,
+    SetEnabled: Boolean => Unit,
+    SetHeight: Double => Unit,
+    SetItemValueByName: (String, js.Any) => Unit,
+    SetMinimized: Boolean => Unit,
+    SetVisible: Boolean => Unit,
+    SetWidth: Double => Unit,
+    ShowKeyTips: () => Unit,
+    name: String
+  ): ASPxClientRibbon = {
+    val __obj = js.Dynamic.literal(ActiveTabChanged = ActiveTabChanged.asInstanceOf[js.Any], AdjustControl = js.Any.fromFunction0(AdjustControl), CommandExecuted = CommandExecuted.asInstanceOf[js.Any], DialogBoxLauncherClicked = DialogBoxLauncherClicked.asInstanceOf[js.Any], FileTabClicked = FileTabClicked.asInstanceOf[js.Any], GetActiveTab = js.Any.fromFunction0(GetActiveTab), GetClientVisible = js.Any.fromFunction0(GetClientVisible), GetEnabled = js.Any.fromFunction0(GetEnabled), GetHeight = js.Any.fromFunction0(GetHeight), GetItemByName = js.Any.fromFunction1(GetItemByName), GetItemValueByName = js.Any.fromFunction1(GetItemValueByName), GetMainElement = js.Any.fromFunction0(GetMainElement), GetMinimized = js.Any.fromFunction0(GetMinimized), GetParentControl = js.Any.fromFunction0(GetParentControl), GetTab = js.Any.fromFunction1(GetTab), GetTabByName = js.Any.fromFunction1(GetTabByName), GetTabCount = js.Any.fromFunction0(GetTabCount), GetVisible = js.Any.fromFunction0(GetVisible), GetWidth = js.Any.fromFunction0(GetWidth), InCallback = js.Any.fromFunction0(InCallback), Init = Init.asInstanceOf[js.Any], KeyTipsClosedOnEscape = KeyTipsClosedOnEscape.asInstanceOf[js.Any], MinimizationStateChanged = MinimizationStateChanged.asInstanceOf[js.Any], SendMessageToAssistiveTechnology = js.Any.fromFunction1(SendMessageToAssistiveTechnology), SetActiveTab = js.Any.fromFunction1(SetActiveTab), SetActiveTabIndex = js.Any.fromFunction1(SetActiveTabIndex), SetClientVisible = js.Any.fromFunction1(SetClientVisible), SetContextTabCategoryVisible = js.Any.fromFunction2(SetContextTabCategoryVisible), SetEnabled = js.Any.fromFunction1(SetEnabled), SetHeight = js.Any.fromFunction1(SetHeight), SetItemValueByName = js.Any.fromFunction2(SetItemValueByName), SetMinimized = js.Any.fromFunction1(SetMinimized), SetVisible = js.Any.fromFunction1(SetVisible), SetWidth = js.Any.fromFunction1(SetWidth), ShowKeyTips = js.Any.fromFunction0(ShowKeyTips), name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientRibbon]
+  }
+  @scala.inline
+  implicit class ASPxClientRibbonOps[Self <: ASPxClientRibbon] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActiveTabChanged(value: ASPxClientEvent[ASPxClientRibbonTabEventHandler[ASPxClientRibbon]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveTabChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCommandExecuted(value: ASPxClientEvent[ASPxClientRibbonCommandExecutedEventHandler[ASPxClientRibbon]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommandExecuted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDialogBoxLauncherClicked(value: ASPxClientEvent[ASPxClientRibbonDialogBoxLauncherClickedEventHandler[ASPxClientRibbon]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DialogBoxLauncherClicked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFileTabClicked(value: ASPxClientEvent[ASPxClientEventHandler[ASPxClientRibbon]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FileTabClicked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetActiveTab(value: () => ASPxClientRibbonTab): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetActiveTab")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetEnabled(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetEnabled")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetItemByName(value: String => ASPxClientRibbonItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetItemByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetItemValueByName(value: String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetItemValueByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetMinimized(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetMinimized")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetTab(value: Double => ASPxClientRibbonTab): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetTab")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetTabByName(value: String => ASPxClientRibbonTab): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetTabByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetTabCount(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetTabCount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withKeyTipsClosedOnEscape(value: ASPxClientEvent[ASPxClientEventHandler[ASPxClientRibbon]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyTipsClosedOnEscape")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinimizationStateChanged(value: ASPxClientEvent[ASPxClientRibbonMinimizationStateEventHandler[ASPxClientRibbon]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MinimizationStateChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetActiveTab(value: ASPxClientRibbonTab => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetActiveTab")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetActiveTabIndex(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetActiveTabIndex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetContextTabCategoryVisible(value: (String, Boolean) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetContextTabCategoryVisible")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetEnabled(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetEnabled")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetItemValueByName(value: (String, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetItemValueByName")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetMinimized(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetMinimized")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withShowKeyTips(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowKeyTips")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

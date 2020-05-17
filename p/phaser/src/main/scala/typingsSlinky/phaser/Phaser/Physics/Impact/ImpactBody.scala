@@ -19,9 +19,8 @@ import scala.scalajs.js.annotation._
 /**
   * [description]
   */
-@JSGlobal("Phaser.Physics.Impact.ImpactBody")
 @js.native
-class ImpactBody protected ()
+trait ImpactBody
   extends Acceleration
      with BodyScale
      with BodyType
@@ -34,15 +33,6 @@ class ImpactBody protected ()
      with Offset
      with SetGameObject
      with Velocity {
-  /**
-    * 
-    * @param world [description]
-    * @param x x - The horizontal position of this physics body in the world.
-    * @param y y - The vertical position of this physics body in the world.
-    * @param width The width of the physics body in the world.
-    * @param height [description]
-    */
-  def this(world: World, x: Double, y: Double, width: Double, height: Double) = this()
   /**
     * [description]
     */

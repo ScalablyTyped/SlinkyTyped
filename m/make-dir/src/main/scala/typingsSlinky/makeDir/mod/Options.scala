@@ -1,6 +1,6 @@
 package typingsSlinky.makeDir.mod
 
-import typingsSlinky.makeDir.Typeoffs
+import typingsSlinky.makeDir.anon.Typeoffs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

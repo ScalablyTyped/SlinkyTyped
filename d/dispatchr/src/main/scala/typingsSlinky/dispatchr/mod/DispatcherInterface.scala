@@ -1,6 +1,6 @@
 package typingsSlinky.dispatchr.mod
 
-import typingsSlinky.dispatchr.FnCall
+import typingsSlinky.dispatchr.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

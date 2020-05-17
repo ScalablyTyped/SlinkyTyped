@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait KernelInfo extends js.Object {
+trait KernelInfo extends TimerNode {
   var name: String = js.native
   var query: js.Promise[Double] = js.native
 }

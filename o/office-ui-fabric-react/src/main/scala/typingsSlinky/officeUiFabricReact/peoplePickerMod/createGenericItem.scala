@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.peoplePickerMod
 
-import typingsSlinky.officeUiFabricReact.IGenericItemkeyKey
+import typingsSlinky.officeUiFabricReact.anon.IGenericItemkeyKey
 import typingsSlinky.officeUiFabricReact.basePickerTypesMod.ValidationState
 import scala.scalajs.js
 import scala.scalajs.js.`|`

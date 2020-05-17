@@ -1,6 +1,6 @@
 package typingsSlinky.evernote.mod.Types
 
-import typingsSlinky.evernote.AnonNotebookDescription
+import typingsSlinky.evernote.anon.NotebookDescription
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("evernote", "Types.BusinessNotebook")
 @js.native
 class BusinessNotebook () extends js.Object {
-  def this(args: AnonNotebookDescription) = this()
+  def this(args: NotebookDescription) = this()
   var notebookDescription: js.UndefOr[String] = js.native
   var privilege: js.UndefOr[SharedNotebookPrivilegeLevel] = js.native
   var recommended: js.UndefOr[Boolean] = js.native

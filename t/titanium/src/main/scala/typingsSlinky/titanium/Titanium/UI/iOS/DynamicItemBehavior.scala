@@ -10,9 +10,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * Base dynamic configuration for an item.
 			 */
-@JSGlobal("Titanium.UI.iOS.DynamicItemBehavior")
 @js.native
-class DynamicItemBehavior () extends Proxy {
+trait DynamicItemBehavior extends Proxy {
   /**
   				 * Specifies if this item can rotate.
   				 */

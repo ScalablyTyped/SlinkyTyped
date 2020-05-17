@@ -1,7 +1,5 @@
 package typingsSlinky.androiduix.android.app
 
-import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.androiduix.android.content.Context
 import typingsSlinky.androiduix.android.graphics.drawable.Drawable
 import typingsSlinky.androiduix.android.view.View
 import typingsSlinky.androiduix.android.view.View.OnClickListener
@@ -11,12 +9,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.app.ActionBar")
 @js.native
-class ActionBar protected () extends FrameLayout {
-  def this(context: Context) = this()
-  def this(context: Context, bindElement: HTMLElement) = this()
-  def this(context: Context, bindElement: HTMLElement, defStyle: js.Any) = this()
+trait ActionBar extends FrameLayout {
   var mActionLeft: js.Any = js.native
   var mActionRight: js.Any = js.native
   var mCenterLayout: js.Any = js.native

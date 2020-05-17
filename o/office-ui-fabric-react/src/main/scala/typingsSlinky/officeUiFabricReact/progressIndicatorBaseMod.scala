@@ -1,5 +1,6 @@
 package typingsSlinky.officeUiFabricReact
 
+import typingsSlinky.officeUiFabricReact.anon.Description
 import typingsSlinky.officeUiFabricReact.progressIndicatorTypesMod.IProgressIndicatorProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -18,7 +19,7 @@ object progressIndicatorBaseMod extends js.Object {
   /* static members */
   @js.native
   object ProgressIndicatorBase extends js.Object {
-    var defaultProps: AnonDescription = js.native
+    var defaultProps: Description = js.native
   }
   
 }

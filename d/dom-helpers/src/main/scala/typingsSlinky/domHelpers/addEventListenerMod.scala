@@ -1,6 +1,7 @@
 package typingsSlinky.domHelpers
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.domHelpers.anon.Once
 import typingsSlinky.domHelpers.domHelpersStrings.abort
 import typingsSlinky.domHelpers.domHelpersStrings.animationcancel
 import typingsSlinky.domHelpers.domHelpersStrings.animationend
@@ -1297,6 +1298,6 @@ object addEventListenerMod extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: std.HTMLElementEventMap[K] */ /* event */ js.Any, 
     js.Any
   ]
-  type TaggedEventHandler[K /* <: /* keyof std.HTMLElementEventMap */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 92 */ js.Any */] = EventHandler[K] with AnonOnce[K]
+  type TaggedEventHandler[K /* <: /* keyof std.HTMLElementEventMap */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 92 */ js.Any */] = EventHandler[K] with Once[K]
 }
 

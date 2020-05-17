@@ -1,25 +1,21 @@
 package typingsSlinky.wouter.mod
 
+import typingsSlinky.wouter.anon.Href
+import typingsSlinky.wouter.anon.To
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.wouter.AnonTo
-  - typingsSlinky.wouter.AnonHref
+  - typingsSlinky.wouter.anon.To
+  - typingsSlinky.wouter.anon.Href
 */
 trait NavigationalProps extends js.Object
 
 object NavigationalProps {
   @scala.inline
-  def AnonTo(to: Path): NavigationalProps = {
-    val __obj = js.Dynamic.literal(to = to.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NavigationalProps]
-  }
+  implicit def apply(value: Href): NavigationalProps = value.asInstanceOf[NavigationalProps]
   @scala.inline
-  def AnonHref(href: Path): NavigationalProps = {
-    val __obj = js.Dynamic.literal(href = href.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NavigationalProps]
-  }
+  implicit def apply(value: To): NavigationalProps = value.asInstanceOf[NavigationalProps]
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobile.mod
 
-import typingsSlinky.antdMobile.AnonOnChange
+import typingsSlinky.antdMobile.anon.OnChange
 import typingsSlinky.antdMobile.segmentedControlMod.SegmentedControlProps
 import typingsSlinky.antdMobile.segmentedControlMod.default
 import scala.scalajs.js
@@ -17,6 +17,6 @@ class SegmentedControl protected () extends default {
 @JSImport("antd-mobile", "SegmentedControl")
 @js.native
 object SegmentedControl extends js.Object {
-  var defaultProps: AnonOnChange = js.native
+  var defaultProps: OnChange = js.native
 }
 

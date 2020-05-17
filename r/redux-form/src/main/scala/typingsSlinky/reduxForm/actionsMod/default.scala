@@ -1,8 +1,8 @@
 package typingsSlinky.reduxForm.actionsMod
 
-import typingsSlinky.reduxForm.FnCall
-import typingsSlinky.reduxForm.FnCallFormSyncWarningsWarning
-import typingsSlinky.reduxForm.FnCallFromSyncErrorsError
+import typingsSlinky.reduxForm.anon.FnCall
+import typingsSlinky.reduxForm.anon.FnCallFormSyncWarningsWarning
+import typingsSlinky.reduxForm.anon.FnCallFromSyncErrorsError
 import typingsSlinky.reduxForm.mod.FieldType
 import typingsSlinky.reduxForm.mod.FormErrors
 import scala.scalajs.js

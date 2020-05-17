@@ -2,7 +2,7 @@ package typingsSlinky.recharts.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.recharts.AnonErrorVal
+import typingsSlinky.recharts.anon.ErrorVal
 import typingsSlinky.recharts.mod.DataKey
 import typingsSlinky.recharts.mod.ErrorBarProps
 import scala.scalajs.js
@@ -21,7 +21,7 @@ object ErrorBar {
     @scala.inline
     def data(value: js.Array[_]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
-    def dataPointFormatter(value: (/* entry */ js.Any, /* dataKey */ DataKey) => AnonErrorVal): this.type = set("dataPointFormatter", js.Any.fromFunction2(value))
+    def dataPointFormatter(value: (/* entry */ js.Any, /* dataKey */ DataKey) => ErrorVal): this.type = set("dataPointFormatter", js.Any.fromFunction2(value))
     @scala.inline
     def layout(value: String): this.type = set("layout", value.asInstanceOf[js.Any])
     @scala.inline

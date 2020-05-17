@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Excel.ChartObject")
 @js.native
-class ChartObject protected () extends js.Object {
+trait ChartObject extends js.Object {
   val Application: typingsSlinky.activexExcel.Excel.Application = js.native
   val Border: typingsSlinky.activexExcel.Excel.Border = js.native
   @JSName("BottomRightCell")

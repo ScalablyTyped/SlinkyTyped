@@ -1,12 +1,12 @@
 package typingsSlinky.officeJsPreview.Visio
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientResult
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJsPreview.Visio.Interfaces.ShapeData
 import typingsSlinky.officeJsPreview.Visio.Interfaces.ShapeLoadOptions
 import typingsSlinky.officeJsPreview.Visio.Interfaces.ShapeUpdateData
+import typingsSlinky.officeJsPreview.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,9 +17,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set:  1.1]
   */
-@JSGlobal("Visio.Shape")
 @js.native
-class Shape () extends ClientObject {
+trait Shape extends ClientObject {
   /**
     *
     * Returns the Comments Collection. Read-only.
@@ -111,8 +110,8 @@ class Shape () extends ClientObject {
   def load(): Shape = js.native
   def load(option: String): Shape = js.native
   def load(option: js.Array[String]): Shape = js.native
-  def load(option: AnonExpand): Shape = js.native
   def load(option: ShapeLoadOptions): Shape = js.native
+  def load(option: Expand): Shape = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.
     *
     * @remarks

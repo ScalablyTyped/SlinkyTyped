@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonLeftLoc
+import typingsSlinky.astTypes.anon.LeftLoc
 import typingsSlinky.astTypes.astTypesStrings.AmpersandAmpersand
 import typingsSlinky.astTypes.astTypesStrings.QuestionmarkQuestionmark
 import typingsSlinky.astTypes.astTypesStrings.VerticallineVerticalline
@@ -15,6 +15,6 @@ trait LogicalExpressionBuilder extends js.Object {
   def apply(operator: AmpersandAmpersand, left: ExpressionKind, right: ExpressionKind): LogicalExpression = js.native
   def apply(operator: QuestionmarkQuestionmark, left: ExpressionKind, right: ExpressionKind): LogicalExpression = js.native
   def apply(operator: VerticallineVerticalline, left: ExpressionKind, right: ExpressionKind): LogicalExpression = js.native
-  def from(params: AnonLeftLoc): LogicalExpression = js.native
+  def from(params: LeftLoc): LogicalExpression = js.native
 }
 

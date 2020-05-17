@@ -3,7 +3,7 @@ package typingsSlinky.formatjsIntlUnifiedNumberformat.mod
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.formatjsIntlUnifiedNumberformat.PickUnifiedNumberFormatOp
+import typingsSlinky.formatjsIntlUnifiedNumberformat.anon.PickUnifiedNumberFormatOp
 import typingsSlinky.formatjsIntlUtils.numberTypesMod.NumberLocaleInternalData
 import typingsSlinky.formatjsIntlUtils.numberTypesMod.RawNumberLocaleData
 import typingsSlinky.std.Record

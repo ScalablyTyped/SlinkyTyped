@@ -1,16 +1,12 @@
 package typingsSlinky.kendoUi.kendo.ui
 
-import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.ui.Notification")
 @js.native
-class Notification protected () extends Widget {
-  def this(element: Element) = this()
-  def this(element: Element, options: NotificationOptions) = this()
+trait Notification extends Widget {
   @JSName("options")
   var options_Notification: NotificationOptions = js.native
   var wrapper: JQuery = js.native
@@ -34,13 +30,5 @@ class Notification protected () extends Widget {
   def warning(data: String): Unit = js.native
   def warning(data: js.Any): Unit = js.native
   def warning(data: js.Function): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("kendo.ui.Notification")
-@js.native
-object Notification extends js.Object {
-  var fn: Notification = js.native
-  def extend(proto: js.Object): Notification = js.native
 }
 

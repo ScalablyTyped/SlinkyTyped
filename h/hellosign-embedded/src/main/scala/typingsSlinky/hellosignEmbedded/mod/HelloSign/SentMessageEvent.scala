@@ -1,6 +1,6 @@
 package typingsSlinky.hellosignEmbedded.mod.HelloSign
 
-import typingsSlinky.hellosignEmbedded.AnonCcemailaddresses
+import typingsSlinky.hellosignEmbedded.anon.Ccemailaddresses
 import typingsSlinky.hellosignEmbedded.hellosignEmbeddedStrings.signature_request_sent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait SentMessageEvent extends MessageEvent {
   var event: signature_request_sent = js.native
   var signature_request_id: String = js.native
-  var signature_request_info: AnonCcemailaddresses = js.native
+  var signature_request_info: Ccemailaddresses = js.native
 }
 
 object SentMessageEvent {
@@ -18,7 +18,7 @@ object SentMessageEvent {
   def apply(
     event: signature_request_sent,
     signature_request_id: String,
-    signature_request_info: AnonCcemailaddresses
+    signature_request_info: Ccemailaddresses
   ): SentMessageEvent = {
     val __obj = js.Dynamic.literal(event = event.asInstanceOf[js.Any], signature_request_id = signature_request_id.asInstanceOf[js.Any], signature_request_info = signature_request_info.asInstanceOf[js.Any])
     __obj.asInstanceOf[SentMessageEvent]
@@ -42,7 +42,7 @@ object SentMessageEvent {
         ret
     }
     @scala.inline
-    def withSignature_request_info(value: AnonCcemailaddresses): Self = {
+    def withSignature_request_info(value: Ccemailaddresses): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("signature_request_info")(value.asInstanceOf[js.Any])
         ret

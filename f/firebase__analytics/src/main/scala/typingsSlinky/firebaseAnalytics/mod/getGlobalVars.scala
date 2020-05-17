@@ -1,6 +1,6 @@
 package typingsSlinky.firebaseAnalytics.mod
 
-import typingsSlinky.firebaseAnalytics.AnonInitializedIdPromisesMap
+import typingsSlinky.firebaseAnalytics.anon.InitializedIdPromisesMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@firebase/analytics", "getGlobalVars")
 @js.native
 object getGlobalVars extends js.Object {
-  def apply(): AnonInitializedIdPromisesMap = js.native
+  def apply(): InitializedIdPromisesMap = js.native
 }
 

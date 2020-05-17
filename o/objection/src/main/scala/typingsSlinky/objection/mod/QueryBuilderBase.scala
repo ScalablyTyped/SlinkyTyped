@@ -2,7 +2,7 @@ package typingsSlinky.objection.mod
 
 import typingsSlinky.knex.mod.ColumnInfo
 import typingsSlinky.knex.mod.SafePartial
-import typingsSlinky.objection.TypeofModel
+import typingsSlinky.objection.anon.TypeofModel
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`

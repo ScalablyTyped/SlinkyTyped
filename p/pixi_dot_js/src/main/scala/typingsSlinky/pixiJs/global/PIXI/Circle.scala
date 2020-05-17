@@ -1,0 +1,21 @@
+package typingsSlinky.pixiJs.global.PIXI
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * The Circle object is used to help draw graphics and can also be used to specify a hit area for displayObjects.
+  *
+  * @class
+  * @memberof PIXI
+  */
+@JSGlobal("PIXI.Circle")
+@js.native
+class Circle ()
+  extends typingsSlinky.pixiJs.PIXI.Circle {
+  def this(x: Double) = this()
+  def this(x: Double, y: Double) = this()
+  def this(x: Double, y: Double, radius: Double) = this()
+}
+

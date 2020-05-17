@@ -1,5 +1,6 @@
 package typingsSlinky.reactQrReader.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLImageElement
 import slinky.core.SyntheticEvent
 import slinky.web.html.img.tag
@@ -9,7 +10,6 @@ import typingsSlinky.reactQrReader.mod.props
 import typingsSlinky.reactQrReader.reactQrReaderBooleans.`false`
 import typingsSlinky.reactQrReader.reactQrReaderStrings.environment
 import typingsSlinky.reactQrReader.reactQrReaderStrings.user
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +32,7 @@ object ReactQrReader {
     @scala.inline
     def legacyMode(value: Boolean): this.type = set("legacyMode", value.asInstanceOf[js.Any])
     @scala.inline
-    def onImageLoad(value: /* event */ SyntheticEvent[Event_, HTMLImageElement] => Unit): this.type = set("onImageLoad", js.Any.fromFunction1(value))
+    def onImageLoad(value: /* event */ SyntheticEvent[Event, HTMLImageElement] => Unit): this.type = set("onImageLoad", js.Any.fromFunction1(value))
     @scala.inline
     def onLoad(value: () => Unit): this.type = set("onLoad", js.Any.fromFunction0(value))
     @scala.inline

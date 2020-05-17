@@ -1,7 +1,7 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonCharacter
-import typingsSlinky.vscode.AnonCharacterDelta
+import typingsSlinky.vscode.anon.Character
+import typingsSlinky.vscode.anon.CharacterDelta
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -87,7 +87,7 @@ class Position protected () extends js.Object {
   		 * @return A position that reflects the given delta. Will return `this` position if the change
   		 * is not changing anything.
   		 */
-  def translate(change: AnonCharacterDelta): Position = js.native
+  def translate(change: CharacterDelta): Position = js.native
   def translate(lineDelta: Double): Position = js.native
   def translate(lineDelta: Double, characterDelta: Double): Position = js.native
   /**
@@ -105,7 +105,7 @@ class Position protected () extends js.Object {
   		 * @return A position that reflects the given change. Will return `this` position if the change
   		 * is not changing anything.
   		 */
-  def `with`(change: AnonCharacter): Position = js.native
+  def `with`(change: Character): Position = js.native
   def `with`(line: Double): Position = js.native
   def `with`(line: Double, character: Double): Position = js.native
 }

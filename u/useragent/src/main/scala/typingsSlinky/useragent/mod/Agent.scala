@@ -1,6 +1,5 @@
 package typingsSlinky.useragent.mod
 
-import typingsSlinky.useragent.AnonDevice
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +34,7 @@ class Agent () extends js.Object {
   /**
     * The representation of a parsed Operating System.
     */
-  def toJSON(): AnonDevice = js.native
+  def toJSON(): typingsSlinky.useragent.anon.Device = js.native
   /**
     * Outputs a compiled veersion number of the user agent.
     */

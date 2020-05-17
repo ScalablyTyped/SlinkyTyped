@@ -3,7 +3,7 @@ package typingsSlinky.reactElemental.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactElemental.AnonLabelValue
+import typingsSlinky.reactElemental.anon.LabelValue
 import typingsSlinky.reactElemental.mod.TabsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,7 +25,7 @@ object Tabs {
     @scala.inline
     def onChange(value: /* value */ String => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def options(value: js.Array[AnonLabelValue]): this.type = set("options", value.asInstanceOf[js.Any])
+    def options(value: js.Array[LabelValue]): this.type = set("options", value.asInstanceOf[js.Any])
     @scala.inline
     def secondary(value: Boolean): this.type = set("secondary", value.asInstanceOf[js.Any])
     @scala.inline

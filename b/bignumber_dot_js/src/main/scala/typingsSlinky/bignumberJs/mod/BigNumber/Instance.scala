@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Instance
-  extends /* key */ StringDictionary[js.Any] {
+  extends /* key */ StringDictionary[js.Any]
+     with Value {
   /** The coefficient of the value of this BigNumber, an array of base 1e14 integer numbers, or null. */
   val c: js.Array[Double] | Null = js.native
   /** The exponent of the value of this BigNumber, an integer number, -1000000000 to 1000000000, or null. */

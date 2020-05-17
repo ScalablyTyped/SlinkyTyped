@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 trait SetWifiListOptions
   extends BaseOptions[js.Any, js.Any] {
   /** 提供预设的 Wi-Fi 信息列表 */
-  var wifiList: js.Array[SetWifiList_] = js.native
+  var wifiList: js.Array[SetWifiList] = js.native
 }
 
 object SetWifiListOptions {
   @scala.inline
-  def apply(wifiList: js.Array[SetWifiList_]): SetWifiListOptions = {
+  def apply(wifiList: js.Array[SetWifiList]): SetWifiListOptions = {
     val __obj = js.Dynamic.literal(wifiList = wifiList.asInstanceOf[js.Any])
     __obj.asInstanceOf[SetWifiListOptions]
   }
@@ -24,7 +24,7 @@ object SetWifiListOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withWifiList(value: js.Array[SetWifiList_]): Self = {
+    def withWifiList(value: js.Array[SetWifiList]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("wifiList")(value.asInstanceOf[js.Any])
         ret

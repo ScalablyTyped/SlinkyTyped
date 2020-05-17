@@ -1,8 +1,8 @@
 package typingsSlinky.oracleOraclejet.ojchartMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.Anon0
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
+import typingsSlinky.oracleOraclejet.anon.`0`
 import typingsSlinky.oracleOraclejet.ojchartMod.ojSparkChart.ReferenceObject
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.area
@@ -67,9 +67,9 @@ trait ojSparkChartSettablePropertiesLenient[K, D]
   var referenceObjects: js.UndefOr[js.Array[ReferenceObject]] = js.native
   var svgClassName: js.UndefOr[String] = js.native
   var svgStyle: js.UndefOr[js.Object] = js.native
-  var tooltip: js.UndefOr[Anon0] = js.native
+  var tooltip: js.UndefOr[`0`] = js.native
   var trackResize: js.UndefOr[on | off] = js.native
-  var translations: js.UndefOr[AnonLabelAndValue] = js.native
+  var translations: js.UndefOr[LabelAndValue] = js.native
   var `type`: js.UndefOr[area | lineWithArea | bar | line] = js.native
   var visualEffects: js.UndefOr[none | auto] = js.native
 }
@@ -363,7 +363,7 @@ object ojSparkChartSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTooltip(value: Anon0): Self[K, D] = {
+    def withTooltip(value: `0`): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
@@ -387,7 +387,7 @@ object ojSparkChartSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelAndValue): Self[K, D] = {
+    def withTranslations(value: LabelAndValue): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

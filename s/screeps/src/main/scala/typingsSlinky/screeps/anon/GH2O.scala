@@ -1,0 +1,116 @@
+package typingsSlinky.screeps.anon
+
+import typingsSlinky.screeps.screepsStrings.XGH2O
+import typingsSlinky.screeps.screepsStrings.XGHO2
+import typingsSlinky.screeps.screepsStrings.XKH2O
+import typingsSlinky.screeps.screepsStrings.XKHO2
+import typingsSlinky.screeps.screepsStrings.XLH2O
+import typingsSlinky.screeps.screepsStrings.XLHO2
+import typingsSlinky.screeps.screepsStrings.XUH2O
+import typingsSlinky.screeps.screepsStrings.XUHO2
+import typingsSlinky.screeps.screepsStrings.XZH2O
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait GH2O extends js.Object {
+  var GH2O: XGH2O = js.native
+  var GHO2: XGHO2 = js.native
+  var KH2O: XKH2O = js.native
+  var KHO2: XKHO2 = js.native
+  var LH2O: XLH2O = js.native
+  var LHO2: XLHO2 = js.native
+  var UH2O: XUH2O = js.native
+  var UHO2: XUHO2 = js.native
+  var ZH2O: XZH2O = js.native
+  var ZHO2: typingsSlinky.screeps.screepsStrings.XZHO2 = js.native
+}
+
+object GH2O {
+  @scala.inline
+  def apply(
+    GH2O: XGH2O,
+    GHO2: XGHO2,
+    KH2O: XKH2O,
+    KHO2: XKHO2,
+    LH2O: XLH2O,
+    LHO2: XLHO2,
+    UH2O: XUH2O,
+    UHO2: XUHO2,
+    ZH2O: XZH2O,
+    ZHO2: typingsSlinky.screeps.screepsStrings.XZHO2
+  ): GH2O = {
+    val __obj = js.Dynamic.literal(GH2O = GH2O.asInstanceOf[js.Any], GHO2 = GHO2.asInstanceOf[js.Any], KH2O = KH2O.asInstanceOf[js.Any], KHO2 = KHO2.asInstanceOf[js.Any], LH2O = LH2O.asInstanceOf[js.Any], LHO2 = LHO2.asInstanceOf[js.Any], UH2O = UH2O.asInstanceOf[js.Any], UHO2 = UHO2.asInstanceOf[js.Any], ZH2O = ZH2O.asInstanceOf[js.Any], ZHO2 = ZHO2.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GH2O]
+  }
+  @scala.inline
+  implicit class GH2OOps[Self <: GH2O] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGH2O(value: XGH2O): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GH2O")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGHO2(value: XGHO2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GHO2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKH2O(value: XKH2O): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KH2O")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKHO2(value: XKHO2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KHO2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLH2O(value: XLH2O): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LH2O")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLHO2(value: XLHO2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LHO2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUH2O(value: XUH2O): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UH2O")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUHO2(value: XUHO2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UHO2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withZH2O(value: XZH2O): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZH2O")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withZHO2(value: typingsSlinky.screeps.screepsStrings.XZHO2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZHO2")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

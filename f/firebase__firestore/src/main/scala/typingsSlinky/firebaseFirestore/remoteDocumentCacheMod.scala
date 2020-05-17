@@ -1,5 +1,7 @@
 package typingsSlinky.firebaseFirestore
 
+import typingsSlinky.firebaseFirestore.anon.ChangedDocs
+import typingsSlinky.firebaseFirestore.anon.TrackRemovals
 import typingsSlinky.firebaseFirestore.collectionsMod.DocumentKeySet_
 import typingsSlinky.firebaseFirestore.collectionsMod.DocumentMap_
 import typingsSlinky.firebaseFirestore.collectionsMod.NullableMaybeDocumentMap_
@@ -58,7 +60,7 @@ object remoteDocumentCacheMod extends js.Object {
       * Returns the set of documents that have changed since the specified read
       * time.
       */
-    def getNewDocumentChanges(transaction: PersistenceTransaction, sinceReadTime: SnapshotVersion): PersistencePromise[AnonChangedDocs] = js.native
+    def getNewDocumentChanges(transaction: PersistenceTransaction, sinceReadTime: SnapshotVersion): PersistencePromise[ChangedDocs] = js.native
     /**
       * Get an estimate of the size of the document cache. Note that for eager
       * garbage collection, we don't track sizes so this will return 0.
@@ -75,7 +77,7 @@ object remoteDocumentCacheMod extends js.Object {
       * `getNewDocumentChanges()`.
       */
     def newChangeBuffer(): RemoteDocumentChangeBuffer = js.native
-    def newChangeBuffer(options: AnonTrackRemovals): RemoteDocumentChangeBuffer = js.native
+    def newChangeBuffer(options: TrackRemovals): RemoteDocumentChangeBuffer = js.native
   }
   
 }

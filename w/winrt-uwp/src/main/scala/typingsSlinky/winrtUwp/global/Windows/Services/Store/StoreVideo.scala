@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.Services.Store
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Represents a video that is associated with a product listing in the Windows Store. */
+@JSGlobal("Windows.Services.Store.StoreVideo")
+@js.native
+abstract class StoreVideo ()
+  extends typingsSlinky.winrtUwp.Windows.Services.Store.StoreVideo
+

@@ -1,6 +1,6 @@
 package typingsSlinky.antd.searchMod
 
-import typingsSlinky.antd.AnonEnterButton
+import typingsSlinky.antd.anon.EnterButton
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ class default () extends Search
 @JSImport("antd/lib/input/Search", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonEnterButton = js.native
+  var defaultProps: EnterButton = js.native
 }
 

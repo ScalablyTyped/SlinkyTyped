@@ -1,6 +1,6 @@
 package typingsSlinky.ejWebAll.ej.TagCloud
 
-import typingsSlinky.ejWebAll.ej.Format_
+import typingsSlinky.ejWebAll.ej.Format
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,7 +34,7 @@ trait Model extends js.Object {
   /** Defines the format for the TagCloud to display the tag items.See Format
     * @Default {ej.Format.Cloud}
     */
-  var format: js.UndefOr[String | Format_] = js.native
+  var format: js.UndefOr[String | Format] = js.native
   /** Specifies the list of HTML attributes to be added to TagCloud control.
     * @Default {{}}
     */
@@ -168,7 +168,7 @@ object Model {
         ret
     }
     @scala.inline
-    def withFormat(value: String | Format_): Self = {
+    def withFormat(value: String | Format): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
         ret

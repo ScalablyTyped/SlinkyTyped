@@ -2,7 +2,7 @@ package typingsSlinky.rcSteps.mod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.rcSteps.AnonError
+import typingsSlinky.rcSteps.anon.Error
 import typingsSlinky.rcSteps.rcStepsStrings.error
 import typingsSlinky.rcSteps.rcStepsStrings.finish
 import typingsSlinky.rcSteps.rcStepsStrings.horizontal
@@ -23,7 +23,7 @@ trait StepsProps extends js.Object {
   var current: js.UndefOr[Double] = js.native
   var direction: js.UndefOr[horizontal | vertical] = js.native
   var iconPrefix: js.UndefOr[String] = js.native
-  var icons: js.UndefOr[AnonError] = js.native
+  var icons: js.UndefOr[Error] = js.native
   var initial: js.UndefOr[Double] = js.native
   var labelPlacement: js.UndefOr[vertical] = js.native
   var onChange: js.UndefOr[js.Function1[/* current */ Double, Unit]] = js.native
@@ -115,7 +115,7 @@ object StepsProps {
         ret
     }
     @scala.inline
-    def withIcons(value: AnonError): Self = {
+    def withIcons(value: Error): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
         ret

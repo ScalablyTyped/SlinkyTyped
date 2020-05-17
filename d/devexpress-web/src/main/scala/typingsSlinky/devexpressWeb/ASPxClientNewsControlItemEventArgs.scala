@@ -7,17 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for events which concern tail clicking within the control's items.
   */
-@JSGlobal("ASPxClientNewsControlItemEventArgs")
 @js.native
-class ASPxClientNewsControlItemEventArgs protected () extends ASPxClientProcessingModeEventArgs {
-  /**
-    * Initializes a new object of the ASPxClientNewsControlItemEventArgs type with the specified settings.
-    * @param processOnServer true to process the event on the server side; false to completely handle it on the client side.
-    * @param name A string value that represents the unique identifier name of an item related to the event.
-    * @param htmlElement An HTML object that contains the processed item.
-    * @param htmlEvent A DHTML event object that relates to the processed event.
-    */
-  def this(processOnServer: Boolean, name: String, htmlElement: js.Any, htmlEvent: js.Any) = this()
+trait ASPxClientNewsControlItemEventArgs extends ASPxClientProcessingModeEventArgs {
   /**
     * Gets the HTML object that contains the processed item.
     */
@@ -30,5 +21,39 @@ class ASPxClientNewsControlItemEventArgs protected () extends ASPxClientProcessi
     * Gets the name that uniquely identifies the processed item.
     */
   var name: js.Any = js.native
+}
+
+object ASPxClientNewsControlItemEventArgs {
+  @scala.inline
+  def apply(htmlElement: js.Any, htmlEvent: js.Any, name: js.Any, processOnServer: Boolean): ASPxClientNewsControlItemEventArgs = {
+    val __obj = js.Dynamic.literal(htmlElement = htmlElement.asInstanceOf[js.Any], htmlEvent = htmlEvent.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], processOnServer = processOnServer.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientNewsControlItemEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientNewsControlItemEventArgsOps[Self <: ASPxClientNewsControlItemEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHtmlElement(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtmlEvent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

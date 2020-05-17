@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`imagery-tile`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.bilinear
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.cubic
@@ -90,8 +89,4 @@ trait TileImageryLayer
   def identify(pint: js.Any): js.Promise[_] = js.native
   def identify(pint: js.Any, options: js.Any): js.Promise[_] = js.native
 }
-
-@JSGlobal("__esri.TileImageryLayer")
-@js.native
-object TileImageryLayer extends TopLevel[TileImageryLayerConstructor]
 

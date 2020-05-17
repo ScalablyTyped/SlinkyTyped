@@ -1,6 +1,6 @@
 package typingsSlinky.nextNprogress.componentMod
 
-import typingsSlinky.nextNprogress.PartialNProgressOptions
+import typingsSlinky.nextNprogress.anon.PartialNProgressOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

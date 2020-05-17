@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,8 +42,4 @@ trait HTMLOptionsCollection
     */
   def remove(index: Double): Unit = js.native
 }
-
-@JSGlobal("HTMLOptionsCollection")
-@js.native
-object HTMLOptionsCollection extends Instantiable0[HTMLOptionsCollection]
 

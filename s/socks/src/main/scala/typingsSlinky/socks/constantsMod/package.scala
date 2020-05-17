@@ -10,7 +10,7 @@ package object constantsMod {
     * Represents a SocksProxy
     */
   type SocksProxy = typingsSlinky.socks.utilMod.RequireOnlyOne[
-    typingsSlinky.socks.AnonHost, 
+    typingsSlinky.socks.anon.Host, 
     typingsSlinky.socks.socksStrings.host | typingsSlinky.socks.socksStrings.ipaddress
   ]
 }

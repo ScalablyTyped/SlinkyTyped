@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Visio
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJs.Visio.Interfaces.DocumentViewData
 import typingsSlinky.officeJs.Visio.Interfaces.DocumentViewLoadOptions
 import typingsSlinky.officeJs.Visio.Interfaces.DocumentViewUpdateData
+import typingsSlinky.officeJs.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set:  1.1]
   */
-@JSGlobal("Visio.DocumentView")
 @js.native
-class DocumentView () extends ClientObject {
+trait DocumentView extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_DocumentView: RequestContext = js.native
@@ -75,8 +74,8 @@ class DocumentView () extends ClientObject {
   def load(): DocumentView = js.native
   def load(option: String): DocumentView = js.native
   def load(option: js.Array[String]): DocumentView = js.native
-  def load(option: AnonExpand): DocumentView = js.native
   def load(option: DocumentViewLoadOptions): DocumentView = js.native
+  def load(option: Expand): DocumentView = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */
   def set(properties: DocumentView): Unit = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

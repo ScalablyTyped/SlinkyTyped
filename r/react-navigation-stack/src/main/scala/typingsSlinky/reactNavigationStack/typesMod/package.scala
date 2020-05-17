@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object typesMod {
   type NavigationStackScreenComponent[Params, ScreenProps] = (slinky.core.ReactComponentClass[
     typingsSlinky.reactNavigationStack.typesMod.NavigationStackScreenProps[Params, ScreenProps]
-  ]) with (typingsSlinky.reactNavigationStack.AnonNavigationOptions[Params, ScreenProps])
+  ]) with (typingsSlinky.reactNavigationStack.anon.NavigationOptions[Params, ScreenProps])
   type NavigationStackState = typingsSlinky.reactNavigation.mod.NavigationState
   type SceneDescriptorMap = org.scalablytyped.runtime.StringDictionary[
     typingsSlinky.reactNavigation.mod.NavigationDescriptor[

@@ -2,7 +2,7 @@ package typingsSlinky.protonNative.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.protonNative.AnonBackgroundColor
+import typingsSlinky.protonNative.anon.BackgroundColor
 import typingsSlinky.protonNative.mod.StyledTextProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ object StyledText {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.protonNative.mod.StyledText] {
     @scala.inline
-    def style(value: AnonBackgroundColor): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: BackgroundColor): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def x(value: Double | String): this.type = set("x", value.asInstanceOf[js.Any])
     @scala.inline

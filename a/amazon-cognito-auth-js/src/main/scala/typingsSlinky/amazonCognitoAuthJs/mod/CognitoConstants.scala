@@ -1,6 +1,6 @@
 package typingsSlinky.amazonCognitoAuthJs.mod
 
-import typingsSlinky.amazonCognitoAuthJs.AnonContentType
+import typingsSlinky.amazonCognitoAuthJs.anon.ContentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +27,7 @@ trait CognitoConstants extends js.Object {
   var EQUALSIGN: String = js.native
   var ERROR: String = js.native
   var ERROR_DESCRIPTION: String = js.native
-  var HEADER: AnonContentType = js.native
+  var HEADER: ContentType = js.native
   var HOSTNAMEREGEX: js.RegExp = js.native
   var IDTOKEN: String = js.native
   var PARAMETERERROR: String = js.native
@@ -74,7 +74,7 @@ object CognitoConstants {
     EQUALSIGN: String,
     ERROR: String,
     ERROR_DESCRIPTION: String,
-    HEADER: AnonContentType,
+    HEADER: ContentType,
     HOSTNAMEREGEX: js.RegExp,
     IDTOKEN: String,
     PARAMETERERROR: String,
@@ -227,7 +227,7 @@ object CognitoConstants {
         ret
     }
     @scala.inline
-    def withHEADER(value: AnonContentType): Self = {
+    def withHEADER(value: ContentType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("HEADER")(value.asInstanceOf[js.Any])
         ret

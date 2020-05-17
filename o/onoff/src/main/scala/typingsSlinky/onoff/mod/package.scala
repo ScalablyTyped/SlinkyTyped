@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type BinaryValue = typingsSlinky.onoff.mod.High | typingsSlinky.onoff.mod.Low
   type High = typingsSlinky.onoff.onoffNumbers.`1`
   type Low = typingsSlinky.onoff.onoffNumbers.`0`
   type ValueCallback = js.Function2[

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AudioTrackListEventMap extends js.Object {
   var addtrack: org.scalajs.dom.raw.TrackEvent = js.native
-  var change: Event_ = js.native
+  var change: org.scalajs.dom.raw.Event = js.native
   var removetrack: org.scalajs.dom.raw.TrackEvent = js.native
 }
 
@@ -15,7 +15,7 @@ object AudioTrackListEventMap {
   @scala.inline
   def apply(
     addtrack: org.scalajs.dom.raw.TrackEvent,
-    change: Event_,
+    change: org.scalajs.dom.raw.Event,
     removetrack: org.scalajs.dom.raw.TrackEvent
   ): AudioTrackListEventMap = {
     val __obj = js.Dynamic.literal(addtrack = addtrack.asInstanceOf[js.Any], change = change.asInstanceOf[js.Any], removetrack = removetrack.asInstanceOf[js.Any])
@@ -34,7 +34,7 @@ object AudioTrackListEventMap {
         ret
     }
     @scala.inline
-    def withChange(value: Event_): Self = {
+    def withChange(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("change")(value.asInstanceOf[js.Any])
         ret

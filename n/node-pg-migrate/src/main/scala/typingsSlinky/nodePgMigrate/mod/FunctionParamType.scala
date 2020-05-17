@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait FunctionParamType extends js.Object {
+trait FunctionParamType extends FunctionParam {
   var default: js.UndefOr[Value] = js.native
   var mode: js.UndefOr[IN | OUT | INOUT | VARIADIC] = js.native
   var name: js.UndefOr[String] = js.native

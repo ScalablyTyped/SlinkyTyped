@@ -17,10 +17,8 @@ import scala.scalajs.js.annotation._
   * @param {pc.Mat4} projectionMatrix - The projection matrix describing the shape of the frustum.
   * @param {pc.Mat4} viewMatrix - The inverse of the world transformation matrix for the frustum.
   */
-@JSGlobal("pc.Frustum")
 @js.native
-class Frustum protected () extends js.Object {
-  def this(projectionMatrix: Mat4, viewMatrix: Mat4) = this()
+trait Frustum extends js.Object {
   /**
     * @function
     * @name pc.Frustum#containsPoint
@@ -50,5 +48,43 @@ class Frustum protected () extends js.Object {
     * @param {pc.Mat4} viewMatrix - The inverse of the world transformation matrix for the frustum.
     */
   def update(projectionMatrix: Mat4, viewMatrix: Mat4): Unit = js.native
+}
+
+object Frustum {
+  @scala.inline
+  def apply(
+    containsPoint: Vec3 => Boolean,
+    containsSphere: BoundingSphere => Double,
+    update: (Mat4, Mat4) => Unit
+  ): Frustum = {
+    val __obj = js.Dynamic.literal(containsPoint = js.Any.fromFunction1(containsPoint), containsSphere = js.Any.fromFunction1(containsSphere), update = js.Any.fromFunction2(update))
+    __obj.asInstanceOf[Frustum]
+  }
+  @scala.inline
+  implicit class FrustumOps[Self <: Frustum] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainsPoint(value: Vec3 => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containsPoint")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withContainsSphere(value: BoundingSphere => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containsSphere")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: (Mat4, Mat4) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,11 +1,11 @@
 package typingsSlinky.fundamentalReact.menuMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.fundamentalReact.FunctionComponentMenuGrou
-import typingsSlinky.fundamentalReact.FunctionComponentMenuItem
-import typingsSlinky.fundamentalReact.FunctionComponentMenuList
-import typingsSlinky.fundamentalReact.PartialMenuProps
-import typingsSlinky.fundamentalReact.WeakValidationMapMenuProp
+import typingsSlinky.fundamentalReact.anon.FunctionComponentMenuGrou
+import typingsSlinky.fundamentalReact.anon.FunctionComponentMenuItem
+import typingsSlinky.fundamentalReact.anon.FunctionComponentMenuList
+import typingsSlinky.fundamentalReact.anon.PartialMenuProps
+import typingsSlinky.fundamentalReact.anon.WeakValidationMapMenuProp
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.Menu
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap

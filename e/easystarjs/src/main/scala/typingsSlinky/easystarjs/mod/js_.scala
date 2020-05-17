@@ -1,6 +1,6 @@
 package typingsSlinky.easystarjs.mod
 
-import typingsSlinky.easystarjs.AnonX
+import typingsSlinky.easystarjs.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -73,7 +73,7 @@ class js_ () extends js.Object {
     startY: Double,
     endX: Double,
     endY: Double,
-    callback: js.Function1[/* path */ js.Array[AnonX], Unit]
+    callback: js.Function1[/* path */ js.Array[X], Unit]
   ): Double = js.native
   /**
     * Remove the additional cost for a particular point.

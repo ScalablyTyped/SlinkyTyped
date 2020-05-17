@@ -6,15 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Defines the visual content and timing for a single, non-recurring scheduled update to a tile. */
-@JSGlobal("Windows.UI.Notifications.ScheduledTileNotification")
 @js.native
-class ScheduledTileNotification protected () extends js.Object {
-  /**
-    * Creates and initializes a new instance of the ScheduledTileNotification object for use with a TileUpdater .
-    * @param content The object that provides the content for the tile notification.
-    * @param deliveryTime The time at which the tile should be updated with the notification information.
-    */
-  def this(content: XmlDocument, deliveryTime: js.Date) = this()
+trait ScheduledTileNotification extends js.Object {
   /** Gets the XML description of the content of the scheduled tile update. */
   var content: XmlDocument = js.native
   /** Gets the time at which the tile is scheduled to be updated. */
@@ -25,5 +18,51 @@ class ScheduledTileNotification protected () extends js.Object {
   var id: String = js.native
   /** Gets or sets a string that Windows can use to prevent duplicate notification content from appearing in the queue. */
   var tag: String = js.native
+}
+
+object ScheduledTileNotification {
+  @scala.inline
+  def apply(content: XmlDocument, deliveryTime: js.Date, expirationTime: js.Date, id: String, tag: String): ScheduledTileNotification = {
+    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], deliveryTime = deliveryTime.asInstanceOf[js.Any], expirationTime = expirationTime.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], tag = tag.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ScheduledTileNotification]
+  }
+  @scala.inline
+  implicit class ScheduledTileNotificationOps[Self <: ScheduledTileNotification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContent(value: XmlDocument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeliveryTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExpirationTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("expirationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

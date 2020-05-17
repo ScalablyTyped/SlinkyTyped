@@ -1,6 +1,6 @@
 package typingsSlinky.storybookClientApi
 
-import typingsSlinky.storybookAddons.AnonCurrent
+import typingsSlinky.storybookAddons.anon.Current
 import typingsSlinky.storybookAddons.hooksMod.Decorator
 import typingsSlinky.storybookAddons.hooksMod.EventMap
 import typingsSlinky.storybookAddons.typesMod.DecoratorFunction
@@ -8,6 +8,8 @@ import typingsSlinky.storybookAddons.typesMod.Parameters
 import typingsSlinky.storybookAddons.typesMod.StoryContext
 import typingsSlinky.storybookAddons.typesMod.StoryFn
 import typingsSlinky.storybookAddons.typesMod.StoryGetter
+import typingsSlinky.storybookClientApi.anon.Channel
+import typingsSlinky.storybookClientApi.anon.ChannelChannel
 import typingsSlinky.storybookClientApi.clientApiMod.default
 import typingsSlinky.storybookClientApi.typesMod.ClientApiParams
 import scala.scalajs.js
@@ -25,7 +27,7 @@ object mod extends js.Object {
   @js.native
   class ConfigApi protected ()
     extends typingsSlinky.storybookClientApi.configApiMod.default {
-    def this(hasChannelStoryStoreClientApiClearDecorators: AnonChannel) = this()
+    def this(hasChannelStoryStoreClientApiClearDecorators: Channel) = this()
   }
   
   @js.native
@@ -35,7 +37,7 @@ object mod extends js.Object {
   @js.native
   class StoryStore protected ()
     extends typingsSlinky.storybookClientApi.storyStoreMod.default {
-    def this(params: AnonChannelChannel) = this()
+    def this(params: ChannelChannel) = this()
   }
   
   def addDecorator(decoratorFn: DecoratorFunction[_]): Unit = js.native
@@ -67,7 +69,7 @@ object mod extends js.Object {
     initialArg: I,
     init: js.Function1[/* initialArg */ I, S]
   ): js.Tuple2[S, js.Function1[/* action */ A, Unit]] = js.native
-  def useRef[T](initialValue: T): AnonCurrent[T] = js.native
+  def useRef[T](initialValue: T): Current[T] = js.native
   def useState[S](initialState: S): js.Tuple2[S, js.Function1[/* update */ (js.Function1[/* prevState */ S, S]) | S, Unit]] = js.native
   def useState[S](initialState: js.Function0[S]): js.Tuple2[S, js.Function1[/* update */ (js.Function1[/* prevState */ S, S]) | S, Unit]] = js.native
   def useStoryContext(): StoryContext = js.native

@@ -1,7 +1,7 @@
 package typingsSlinky.expressSession.mod
 
-import typingsSlinky.expressSession.mod._Global_.Express.Session
-import typingsSlinky.expressSession.mod._Global_.Express.SessionData
+import typingsSlinky.expressSession.mod.global.Express.Session
+import typingsSlinky.expressSession.mod.global.Express.SessionData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

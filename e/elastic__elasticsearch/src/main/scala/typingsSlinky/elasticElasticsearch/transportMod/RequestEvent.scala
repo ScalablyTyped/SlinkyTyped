@@ -1,6 +1,6 @@
 package typingsSlinky.elasticElasticsearch.transportMod
 
-import typingsSlinky.elasticElasticsearch.AnonAborted
+import typingsSlinky.elasticElasticsearch.anon.Aborted
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,14 +9,14 @@ import scala.scalajs.js.annotation._
 trait RequestEvent[T, C] extends js.Object {
   var body: T = js.native
   var headers: anyObject | Null = js.native
-  var meta: AnonAborted[C] = js.native
+  var meta: Aborted[C] = js.native
   var statusCode: Double | Null = js.native
   var warnings: js.Array[String] | Null = js.native
 }
 
 object RequestEvent {
   @scala.inline
-  def apply[T, C](body: T, meta: AnonAborted[C]): RequestEvent[T, C] = {
+  def apply[T, C](body: T, meta: Aborted[C]): RequestEvent[T, C] = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestEvent[T, C]]
   }
@@ -33,7 +33,7 @@ object RequestEvent {
         ret
     }
     @scala.inline
-    def withMeta(value: AnonAborted[C]): Self[T, C] = {
+    def withMeta(value: Aborted[C]): Self[T, C] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
         ret

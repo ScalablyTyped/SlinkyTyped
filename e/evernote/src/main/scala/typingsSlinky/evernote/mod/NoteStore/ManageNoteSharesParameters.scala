@@ -1,6 +1,6 @@
 package typingsSlinky.evernote.mod.NoteStore
 
-import typingsSlinky.evernote.AnonInvitationsToUnshare
+import typingsSlinky.evernote.anon.InvitationsToUnshare
 import typingsSlinky.evernote.mod.Types.IdentityID
 import typingsSlinky.evernote.mod.Types.UserID
 import scala.scalajs.js
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("evernote", "NoteStore.ManageNoteSharesParameters")
 @js.native
 class ManageNoteSharesParameters () extends js.Object {
-  def this(args: AnonInvitationsToUnshare) = this()
+  def this(args: InvitationsToUnshare) = this()
   var invitationsToUnshare: js.UndefOr[js.Array[IdentityID]] = js.native
   var invitationsToUpdate: js.UndefOr[js.Array[NoteInvitationShareRelationship]] = js.native
   var membershipsToUnshare: js.UndefOr[js.Array[UserID]] = js.native

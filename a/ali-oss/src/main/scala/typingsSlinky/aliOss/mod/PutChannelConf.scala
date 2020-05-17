@@ -1,6 +1,6 @@
 package typingsSlinky.aliOss.mod
 
-import typingsSlinky.aliOss.AnonFragCount
+import typingsSlinky.aliOss.anon.FragCount
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait PutChannelConf extends js.Object {
   var Description: js.UndefOr[String] = js.native
   var Status: js.UndefOr[String] = js.native
-  var Target: js.UndefOr[AnonFragCount] = js.native
+  var Target: js.UndefOr[FragCount] = js.native
 }
 
 object PutChannelConf {
@@ -49,7 +49,7 @@ object PutChannelConf {
         ret
     }
     @scala.inline
-    def withTarget(value: AnonFragCount): Self = {
+    def withTarget(value: FragCount): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Target")(value.asInstanceOf[js.Any])
         ret

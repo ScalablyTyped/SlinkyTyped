@@ -1,0 +1,40 @@
+package typingsSlinky.formatjsIntlUtils.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait LongShort extends js.Object {
+  var long: RecordDecimalFormatNumLDM = js.native
+  var short: RecordDecimalFormatNumLDM = js.native
+}
+
+object LongShort {
+  @scala.inline
+  def apply(long: RecordDecimalFormatNumLDM, short: RecordDecimalFormatNumLDM): LongShort = {
+    val __obj = js.Dynamic.literal(long = long.asInstanceOf[js.Any], short = short.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LongShort]
+  }
+  @scala.inline
+  implicit class LongShortOps[Self <: LongShort] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLong(value: RecordDecimalFormatNumLDM): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("long")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShort(value: RecordDecimalFormatNumLDM): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("short")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

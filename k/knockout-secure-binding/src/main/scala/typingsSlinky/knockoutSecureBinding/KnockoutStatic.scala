@@ -1,17 +1,18 @@
 package typingsSlinky.knockoutSecureBinding
 
+import typingsSlinky.knockoutSecureBinding.anon.Instantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait KnockoutStatic extends js.Object {
-  var secureBindingsProvider: AnonInstantiable = js.native
+  var secureBindingsProvider: Instantiable = js.native
 }
 
 object KnockoutStatic {
   @scala.inline
-  def apply(secureBindingsProvider: AnonInstantiable): KnockoutStatic = {
+  def apply(secureBindingsProvider: Instantiable): KnockoutStatic = {
     val __obj = js.Dynamic.literal(secureBindingsProvider = secureBindingsProvider.asInstanceOf[js.Any])
     __obj.asInstanceOf[KnockoutStatic]
   }
@@ -22,7 +23,7 @@ object KnockoutStatic {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSecureBindingsProvider(value: AnonInstantiable): Self = {
+    def withSecureBindingsProvider(value: Instantiable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("secureBindingsProvider")(value.asInstanceOf[js.Any])
         ret

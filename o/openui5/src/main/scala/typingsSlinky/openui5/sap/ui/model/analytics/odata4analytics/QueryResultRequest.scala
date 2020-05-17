@@ -5,17 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("sap.ui.model.analytics.odata4analytics.QueryResultRequest")
 @js.native
-class QueryResultRequest protected () extends js.Object {
-  /**
-    * Create a request object for interaction with a query result.
-    * @param oQueryResult Description of a query parameterization
-    * @param oParameterizationRequest Request object for           interactions with the parameterization
-    * of this query. Only           required if the query service includes parameters.
-    */
-  def this(oQueryResult: QueryResult) = this()
-  def this(oQueryResult: QueryResult, oParameterizationRequest: ParameterizationRequest) = this()
+trait QueryResultRequest extends js.Object {
   /**
     * Add one or more dimensions to the aggregation level
     * @param aDimensionName Array of dimension names to be added to the already defined          
@@ -198,5 +189,183 @@ class QueryResultRequest protected () extends js.Object {
     * @param oSorter The sort object to be associated with this request.
     */
   def setSortExpression(oSorter: SortExpression): Unit = js.native
+}
+
+object QueryResultRequest {
+  @scala.inline
+  def apply(
+    addToAggregationLevel: js.Any => Unit,
+    getAggregationLevel: () => js.Array[_],
+    getAggregationLevelDetails: js.Any => js.Any,
+    getFilterExpression: () => FilterExpression,
+    getMeasureNames: () => js.Array[_],
+    getParameterizationRequest: () => js.Any,
+    getQueryResult: () => QueryResult,
+    getResultPageBoundaries: () => js.Any,
+    getSortExpression: () => SortExpression,
+    getURIQueryOptionValue: String => String,
+    getURIToQueryResultEntitySet: String => String,
+    getURIToQueryResultEntries: (String, String) => String,
+    includeDimensionKeyTextAttributes: (js.Any, js.Any, js.Any, js.Any) => Unit,
+    includeMeasureRawFormattedValueUnit: (js.Any, js.Any, js.Any, js.Any) => Unit,
+    removeFromAggregationLevel: js.Any => Unit,
+    setAggregationLevel: js.Any => Unit,
+    setFilterExpression: FilterExpression => Unit,
+    setMeasures: js.Any => Unit,
+    setParameterizationRequest: js.Any => Unit,
+    setRequestOptions: (Boolean, Boolean, Boolean) => Unit,
+    setResourcePath: js.Any => Unit,
+    setResultPageBoundaries: (Number, Number) => Unit,
+    setSortExpression: SortExpression => Unit
+  ): QueryResultRequest = {
+    val __obj = js.Dynamic.literal(addToAggregationLevel = js.Any.fromFunction1(addToAggregationLevel), getAggregationLevel = js.Any.fromFunction0(getAggregationLevel), getAggregationLevelDetails = js.Any.fromFunction1(getAggregationLevelDetails), getFilterExpression = js.Any.fromFunction0(getFilterExpression), getMeasureNames = js.Any.fromFunction0(getMeasureNames), getParameterizationRequest = js.Any.fromFunction0(getParameterizationRequest), getQueryResult = js.Any.fromFunction0(getQueryResult), getResultPageBoundaries = js.Any.fromFunction0(getResultPageBoundaries), getSortExpression = js.Any.fromFunction0(getSortExpression), getURIQueryOptionValue = js.Any.fromFunction1(getURIQueryOptionValue), getURIToQueryResultEntitySet = js.Any.fromFunction1(getURIToQueryResultEntitySet), getURIToQueryResultEntries = js.Any.fromFunction2(getURIToQueryResultEntries), includeDimensionKeyTextAttributes = js.Any.fromFunction4(includeDimensionKeyTextAttributes), includeMeasureRawFormattedValueUnit = js.Any.fromFunction4(includeMeasureRawFormattedValueUnit), removeFromAggregationLevel = js.Any.fromFunction1(removeFromAggregationLevel), setAggregationLevel = js.Any.fromFunction1(setAggregationLevel), setFilterExpression = js.Any.fromFunction1(setFilterExpression), setMeasures = js.Any.fromFunction1(setMeasures), setParameterizationRequest = js.Any.fromFunction1(setParameterizationRequest), setRequestOptions = js.Any.fromFunction3(setRequestOptions), setResourcePath = js.Any.fromFunction1(setResourcePath), setResultPageBoundaries = js.Any.fromFunction2(setResultPageBoundaries), setSortExpression = js.Any.fromFunction1(setSortExpression))
+    __obj.asInstanceOf[QueryResultRequest]
+  }
+  @scala.inline
+  implicit class QueryResultRequestOps[Self <: QueryResultRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddToAggregationLevel(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addToAggregationLevel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetAggregationLevel(value: () => js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAggregationLevel")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetAggregationLevelDetails(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAggregationLevelDetails")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetFilterExpression(value: () => FilterExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilterExpression")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMeasureNames(value: () => js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMeasureNames")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetParameterizationRequest(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getParameterizationRequest")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetQueryResult(value: () => QueryResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getQueryResult")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetResultPageBoundaries(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getResultPageBoundaries")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSortExpression(value: () => SortExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSortExpression")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetURIQueryOptionValue(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getURIQueryOptionValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetURIToQueryResultEntitySet(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getURIToQueryResultEntitySet")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetURIToQueryResultEntries(value: (String, String) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getURIToQueryResultEntries")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withIncludeDimensionKeyTextAttributes(value: (js.Any, js.Any, js.Any, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeDimensionKeyTextAttributes")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withIncludeMeasureRawFormattedValueUnit(value: (js.Any, js.Any, js.Any, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("includeMeasureRawFormattedValueUnit")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveFromAggregationLevel(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFromAggregationLevel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetAggregationLevel(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAggregationLevel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetFilterExpression(value: FilterExpression => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFilterExpression")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetMeasures(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMeasures")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetParameterizationRequest(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setParameterizationRequest")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetRequestOptions(value: (Boolean, Boolean, Boolean) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setRequestOptions")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withSetResourcePath(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setResourcePath")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetResultPageBoundaries(value: (Number, Number) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setResultPageBoundaries")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetSortExpression(value: SortExpression => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSortExpression")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -6,23 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents an email attachment. */
-@JSGlobal("Windows.ApplicationModel.Email.EmailAttachment")
 @js.native
-/** Initializes a new instance of the EmailAttachment class. */
-class EmailAttachment () extends js.Object {
-  /**
-    * Initializes a new instance of the EmailAttachment class with the specified random access stream.
-    * @param filename The file name to use for the attachment.
-    * @param data A random access stream containing the data for the attachment.
-    */
-  def this(filename: String, data: IRandomAccessStreamReference) = this()
-  /**
-    * Initializes a new instance of the EmailAttachment class.
-    * @param fileName The filename of the attachment.
-    * @param data The stream to use to download the attachment.
-    * @param mimeType The MIME type of the attachment.
-    */
-  def this(fileName: String, data: IRandomAccessStreamReference, mimeType: String) = this()
+trait EmailAttachment extends js.Object {
   /** Gets or sets a value that identifies the content of the attachment on a remote system. */
   var contentId: String = js.native
   /** Gets or sets the location of an email attachment as a Uniform Resource Identifier (URI). */
@@ -43,5 +28,92 @@ class EmailAttachment () extends js.Object {
   var isInline: Boolean = js.native
   /** Gets or sets the MIME type of the attachment. */
   var mimeType: String = js.native
+}
+
+object EmailAttachment {
+  @scala.inline
+  def apply(
+    contentId: String,
+    contentLocation: String,
+    data: IRandomAccessStreamReference,
+    downloadState: EmailAttachmentDownloadState,
+    estimatedDownloadSizeInBytes: Double,
+    fileName: String,
+    id: String,
+    isFromBaseMessage: Boolean,
+    isInline: Boolean,
+    mimeType: String
+  ): EmailAttachment = {
+    val __obj = js.Dynamic.literal(contentId = contentId.asInstanceOf[js.Any], contentLocation = contentLocation.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], downloadState = downloadState.asInstanceOf[js.Any], estimatedDownloadSizeInBytes = estimatedDownloadSizeInBytes.asInstanceOf[js.Any], fileName = fileName.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isFromBaseMessage = isFromBaseMessage.asInstanceOf[js.Any], isInline = isInline.asInstanceOf[js.Any], mimeType = mimeType.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EmailAttachment]
+  }
+  @scala.inline
+  implicit class EmailAttachmentOps[Self <: EmailAttachment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withData(value: IRandomAccessStreamReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDownloadState(value: EmailAttachmentDownloadState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downloadState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEstimatedDownloadSizeInBytes(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedDownloadSizeInBytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFileName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsFromBaseMessage(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFromBaseMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsInline(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInline")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMimeType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mimeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

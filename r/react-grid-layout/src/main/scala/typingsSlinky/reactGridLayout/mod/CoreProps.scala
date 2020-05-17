@@ -3,8 +3,8 @@ package typingsSlinky.reactGridLayout.mod
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactGridLayout.AnonE
-import typingsSlinky.reactGridLayout.AnonH
+import typingsSlinky.reactGridLayout.anon.E
+import typingsSlinky.reactGridLayout.anon.H
 import typingsSlinky.reactGridLayout.reactGridLayoutStrings.horizontal
 import typingsSlinky.reactGridLayout.reactGridLayoutStrings.vertical
 import scala.scalajs.js
@@ -45,7 +45,7 @@ trait CoreProps extends js.Object {
     * Configuration of a dropping element. Dropping element is a "virtual" element
     * which appears when you drag over some element from outside.
     */
-  var droppingItem: js.UndefOr[AnonH] = js.native
+  var droppingItem: js.UndefOr[H] = js.native
   /**
     * If set to false it will disable dragging on all children.
     */
@@ -81,7 +81,7 @@ trait CoreProps extends js.Object {
   /**
     * Calls when some element has been dropped
     */
-  var onDrop: js.UndefOr[js.Function1[/* elemParams */ AnonE, Unit]] = js.native
+  var onDrop: js.UndefOr[js.Function1[/* elemParams */ E, Unit]] = js.native
   /**
     * Calls when resize movement happens.
     */
@@ -205,7 +205,7 @@ object CoreProps {
         ret
     }
     @scala.inline
-    def withDroppingItem(value: AnonH): Self = {
+    def withDroppingItem(value: H): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("droppingItem")(value.asInstanceOf[js.Any])
         ret
@@ -307,7 +307,7 @@ object CoreProps {
         ret
     }
     @scala.inline
-    def withOnDrop(value: /* elemParams */ AnonE => Unit): Self = {
+    def withOnDrop(value: /* elemParams */ E => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDrop")(js.Any.fromFunction1(value))
         ret

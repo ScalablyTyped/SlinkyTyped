@@ -1,0 +1,33 @@
+package typingsSlinky.activexOutlook.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Folder extends js.Object {
+  val Folder: typingsSlinky.activexOutlook.Outlook.Folder = js.native
+}
+
+object Folder {
+  @scala.inline
+  def apply(Folder: typingsSlinky.activexOutlook.Outlook.Folder): Folder = {
+    val __obj = js.Dynamic.literal(Folder = Folder.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Folder]
+  }
+  @scala.inline
+  implicit class FolderOps[Self <: Folder] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFolder(value: typingsSlinky.activexOutlook.Outlook.Folder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Folder")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

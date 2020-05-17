@@ -1,6 +1,6 @@
 package typingsSlinky.prettier.mod
 
-import typingsSlinky.prettier.AnonEndOfLine
+import typingsSlinky.prettier.anon.EndOfLine
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait Printer extends js.Object {
       Doc_ | Null
     ]
   ] = js.native
-  var handleComments: js.UndefOr[AnonEndOfLine] = js.native
+  var handleComments: js.UndefOr[EndOfLine] = js.native
   var hasPrettierIgnore: js.UndefOr[js.Function1[/* path */ FastPath[_], Boolean]] = js.native
   var insertPragma: js.UndefOr[js.Function1[/* text */ String, String]] = js.native
   /**
@@ -84,7 +84,7 @@ object Printer {
         ret
     }
     @scala.inline
-    def withHandleComments(value: AnonEndOfLine): Self = {
+    def withHandleComments(value: EndOfLine): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("handleComments")(value.asInstanceOf[js.Any])
         ret

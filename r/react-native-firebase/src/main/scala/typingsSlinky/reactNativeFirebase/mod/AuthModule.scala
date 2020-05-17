@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeFirebase.mod
 
-import typingsSlinky.reactNativeFirebase.AnonAUTOVERIFIED
+import typingsSlinky.reactNativeFirebase.anon.AUTOVERIFIED
 import typingsSlinky.reactNativeFirebase.mod.RNFirebase.auth.Auth
 import typingsSlinky.reactNativeFirebase.mod.RNFirebase.auth.AuthProvider
 import scala.scalajs.js
@@ -17,7 +17,7 @@ trait AuthModule extends js.Object {
   var GoogleAuthProvider: AuthProvider = js.native
   var OAuthProvider: AuthProvider = js.native
   var PhoneAuthProvider: AuthProvider = js.native
-  var PhoneAuthState: AnonAUTOVERIFIED = js.native
+  var PhoneAuthState: AUTOVERIFIED = js.native
   var TwitterAuthProvider: AuthProvider = js.native
   var nativeModuleExists: Boolean = js.native
   def apply(): Auth = js.native

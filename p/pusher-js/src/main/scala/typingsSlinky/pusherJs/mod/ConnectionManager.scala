@@ -1,8 +1,8 @@
 package typingsSlinky.pusherJs.mod
 
-import typingsSlinky.pusherJs.AnonActivity
-import typingsSlinky.pusherJs.AnonBackoff
-import typingsSlinky.pusherJs.AnonConnected
+import typingsSlinky.pusherJs.anon.Activity
+import typingsSlinky.pusherJs.anon.Backoff
+import typingsSlinky.pusherJs.anon.Connected
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,11 +11,11 @@ import scala.scalajs.js.annotation._
 trait ConnectionManager extends EventsDispatcher {
   var connection: js.Any = js.native
    // TODO: Type this
-  var connectionCallbacks: AnonActivity = js.native
+  var connectionCallbacks: Activity = js.native
    // TODO: Type this
   var encrypted: Boolean = js.native
-  var errorCallbacks: AnonBackoff = js.native
-  var handshakeCallbacks: AnonConnected = js.native
+  var errorCallbacks: Backoff = js.native
+  var handshakeCallbacks: Connected = js.native
   var key: String = js.native
   var options: js.Any = js.native
   var socket_id: String = js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.oracleOraclejet.ojtreemapMod
 
-import typingsSlinky.oracleOraclejet.AnonIsolate
+import typingsSlinky.oracleOraclejet.anon.Isolate
 import typingsSlinky.oracleOraclejet.mod.JetSettableProperties
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.auto
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.bottom
@@ -36,7 +36,7 @@ trait ojTreemapNodeSettableProperties extends JetSettableProperties {
   var color: js.UndefOr[String] = js.native
   var drilling: js.UndefOr[on | off | inherit] = js.native
   var groupLabelDisplay: js.UndefOr[node | off | header] = js.native
-  var header: js.UndefOr[AnonIsolate] = js.native
+  var header: js.UndefOr[Isolate] = js.native
   var label: js.UndefOr[String] = js.native
   var labelDisplay: js.UndefOr[off | node] = js.native
   var labelHalign: js.UndefOr[start | end | center] = js.native
@@ -119,7 +119,7 @@ object ojTreemapNodeSettableProperties {
         ret
     }
     @scala.inline
-    def withHeader(value: AnonIsolate): Self = {
+    def withHeader(value: Isolate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
         ret

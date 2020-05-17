@@ -1,17 +1,17 @@
 package typingsSlinky.feathersjsAuthentication.mod
 
-import typingsSlinky.feathersjsAuthentication.AnonAlgorithm
-import typingsSlinky.feathersjsAuthentication.AnonEnabled
+import typingsSlinky.feathersjsAuthentication.anon.Algorithm
+import typingsSlinky.feathersjsAuthentication.anon.Enabled
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait FeathersAuthenticationOptions extends js.Object {
-  var cookie: js.UndefOr[AnonEnabled] = js.native
+  var cookie: js.UndefOr[Enabled] = js.native
   var entity: js.UndefOr[String] = js.native
   var header: js.UndefOr[String] = js.native
-  var jwt: js.UndefOr[AnonAlgorithm] = js.native
+  var jwt: js.UndefOr[Algorithm] = js.native
   var passReqToCallback: js.UndefOr[Boolean] = js.native
   var path: js.UndefOr[String] = js.native
   var service: js.UndefOr[String] = js.native
@@ -31,7 +31,7 @@ object FeathersAuthenticationOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCookie(value: AnonEnabled): Self = {
+    def withCookie(value: Enabled): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cookie")(value.asInstanceOf[js.Any])
         ret
@@ -67,7 +67,7 @@ object FeathersAuthenticationOptions {
         ret
     }
     @scala.inline
-    def withJwt(value: AnonAlgorithm): Self = {
+    def withJwt(value: Algorithm): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("jwt")(value.asInstanceOf[js.Any])
         ret

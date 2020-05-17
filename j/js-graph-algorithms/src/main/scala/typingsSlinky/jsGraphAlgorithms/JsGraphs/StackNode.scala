@@ -4,11 +4,43 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("JsGraphs.StackNode")
 @js.native
-class StackNode[T] protected () extends js.Object {
-  def this(value: T) = this()
+trait StackNode[T] extends js.Object {
   var next: StackNode[T] | Null = js.native
   var value: T = js.native
+}
+
+object StackNode {
+  @scala.inline
+  def apply[T](value: T): StackNode[T] = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[StackNode[T]]
+  }
+  @scala.inline
+  implicit class StackNodeOps[Self[t] <: StackNode[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withValue(value: T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNext(value: StackNode[T]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNextNull: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(null)
+        ret
+    }
+  }
+  
 }
 

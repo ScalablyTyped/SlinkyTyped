@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PropOptions[T] extends js.Object {
+trait PropOptions[T] extends PropValidator[T] {
   var default: js.UndefOr[T | Null | (js.Function0[js.UndefOr[T | Null]])] = js.native
   var required: js.UndefOr[Boolean] = js.native
   var `type`: js.UndefOr[PropType[T]] = js.native

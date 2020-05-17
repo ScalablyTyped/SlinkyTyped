@@ -1,9 +1,9 @@
 package typingsSlinky.plotlyJs.mod
 
-import typingsSlinky.plotlyJs.AnonColorsrc
-import typingsSlinky.plotlyJs.PartialColorBar
-import typingsSlinky.plotlyJs.PartialPadding
-import typingsSlinky.plotlyJs.PartialScatterMarkerLine
+import typingsSlinky.plotlyJs.anon.Colorsrc
+import typingsSlinky.plotlyJs.anon.PartialColorBar
+import typingsSlinky.plotlyJs.anon.PartialPadding
+import typingsSlinky.plotlyJs.anon.PartialScatterMarkerLine
 import typingsSlinky.plotlyJs.plotlyJsStrings.area
 import typingsSlinky.plotlyJs.plotlyJsStrings.diameter
 import scala.scalajs.js
@@ -20,7 +20,7 @@ trait PlotMarker extends js.Object {
   var colorbar: PartialColorBar = js.native
   var colors: js.Array[Color] = js.native
   var colorscale: ColorScale = js.native
-  var gradient: AnonColorsrc = js.native
+  var gradient: Colorsrc = js.native
   var line: PartialScatterMarkerLine = js.native
   var maxdisplayed: Double = js.native
   var opacity: Double | js.Array[Double] = js.native
@@ -47,7 +47,7 @@ object PlotMarker {
     colorbar: PartialColorBar,
     colors: js.Array[Color],
     colorscale: ColorScale,
-    gradient: AnonColorsrc,
+    gradient: Colorsrc,
     line: PartialScatterMarkerLine,
     maxdisplayed: Double,
     opacity: Double | js.Array[Double],
@@ -120,7 +120,7 @@ object PlotMarker {
         ret
     }
     @scala.inline
-    def withGradient(value: AnonColorsrc): Self = {
+    def withGradient(value: Colorsrc): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gradient")(value.asInstanceOf[js.Any])
         ret

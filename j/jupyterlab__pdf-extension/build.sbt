@@ -1,23 +1,23 @@
 organization := "org.scalablytyped.slinky"
 name := "jupyterlab__pdf-extension"
-version := "1.2.0-7a9536"
-scalaVersion := "2.13.1"
+version := "1.2.0-4ecd9a"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "jupyterlab__rendermime-interfaces" % "1.5.0-707413",
-  "org.scalablytyped.slinky" %%% "phosphor__algorithm" % "1.2.0-7a2ed3",
-  "org.scalablytyped.slinky" %%% "phosphor__commands" % "1.7.2-53dd61",
-  "org.scalablytyped.slinky" %%% "phosphor__coreutils" % "1.3.1-bc46b6",
-  "org.scalablytyped.slinky" %%% "phosphor__disposable" % "1.3.1-3c499a",
-  "org.scalablytyped.slinky" %%% "phosphor__messaging" % "1.3.0-8ca4e4",
-  "org.scalablytyped.slinky" %%% "phosphor__signaling" % "1.3.1-64f758",
-  "org.scalablytyped.slinky" %%% "phosphor__virtualdom" % "1.2.0-fc7f51",
-  "org.scalablytyped.slinky" %%% "phosphor__widgets" % "1.9.3-aa2951",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
+  "org.scalablytyped.slinky" %%% "jupyterlab__rendermime-interfaces" % "1.5.0-be5068",
+  "org.scalablytyped.slinky" %%% "phosphor__algorithm" % "1.2.0-cf55da",
+  "org.scalablytyped.slinky" %%% "phosphor__commands" % "1.7.2-549aa2",
+  "org.scalablytyped.slinky" %%% "phosphor__coreutils" % "1.3.1-c22335",
+  "org.scalablytyped.slinky" %%% "phosphor__disposable" % "1.3.1-0f9af2",
+  "org.scalablytyped.slinky" %%% "phosphor__messaging" % "1.3.0-5a4500",
+  "org.scalablytyped.slinky" %%% "phosphor__signaling" % "1.3.1-0ac0f6",
+  "org.scalablytyped.slinky" %%% "phosphor__virtualdom" % "1.2.0-a128a2",
+  "org.scalablytyped.slinky" %%% "phosphor__widgets" % "1.9.3-d66dd5",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

@@ -9,10 +9,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.view.Window")
 @js.native
-class Window_ protected () extends js.Object {
-  def this(context: Context) = this()
+trait Window_ extends js.Object {
   var mAttachInfo: js.Any = js.native
   var mCallback: js.Any = js.native
   var mChildWindowManager: js.Any = js.native

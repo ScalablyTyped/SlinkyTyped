@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.std.Event_ because var conflicts: bubbles, cancelable, currentTarget, defaultPrevented, eventPhase, isTrusted, target, timeStamp, `type`. Inlined AT_TARGET, BUBBLING_PHASE, CAPTURING_PHASE, NONE, cancelBubble, composed, returnValue, srcElement, composedPath, initEvent, initEvent, initEvent, stopImmediatePropagation */ @js.native
+- typingsSlinky.std.Event because var conflicts: bubbles, cancelable, currentTarget, defaultPrevented, eventPhase, isTrusted, target, timeStamp, `type`. Inlined AT_TARGET, BUBBLING_PHASE, CAPTURING_PHASE, NONE, cancelBubble, composed, returnValue, srcElement, composedPath, initEvent, initEvent, initEvent, stopImmediatePropagation */ @js.native
 trait CompositionEvent[T]
   extends BaseSyntheticEvent[org.scalajs.dom.raw.CompositionEvent, EventTarget with T, EventTarget] {
   val AT_TARGET: Double = js.native

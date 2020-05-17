@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PlainJSONObject
   extends /* key */ StringDictionary[PlainJSONValue]
-     with _PlainJSONValue
+     with PlainJSONValue
 
 object PlainJSONObject {
   @scala.inline

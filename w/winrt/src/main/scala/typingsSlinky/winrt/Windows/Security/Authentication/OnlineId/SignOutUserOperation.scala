@@ -1,15 +1,14 @@
 package typingsSlinky.winrt.Windows.Security.Authentication.OnlineId
 
-import typingsSlinky.winrt.AnonCompletedGetResults
 import typingsSlinky.winrt.Windows.Foundation.IAsyncAction
+import typingsSlinky.winrt.anon.CompletedGetResults
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Security.Authentication.OnlineId.SignOutUserOperation")
 @js.native
-class SignOutUserOperation () extends IAsyncAction {
-  var operation: AnonCompletedGetResults = js.native
+trait SignOutUserOperation extends IAsyncAction {
+  var operation: CompletedGetResults = js.native
   @JSName("done")
   def done_MSignOutUserOperation[U](): Unit = js.native
   @JSName("done")

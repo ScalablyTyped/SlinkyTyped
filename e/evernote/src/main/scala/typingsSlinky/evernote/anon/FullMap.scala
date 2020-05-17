@@ -1,0 +1,54 @@
+package typingsSlinky.evernote.anon
+
+import typingsSlinky.std.Map
+import typingsSlinky.std.Set
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait FullMap extends js.Object {
+  var fullMap: js.UndefOr[Map[String, String]] = js.native
+  var keysOnly: js.UndefOr[Set[String]] = js.native
+}
+
+object FullMap {
+  @scala.inline
+  def apply(): FullMap = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[FullMap]
+  }
+  @scala.inline
+  implicit class FullMapOps[Self <: FullMap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFullMap(value: Map[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFullMap: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullMap")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withKeysOnly(value: Set[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keysOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutKeysOnly: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keysOnly")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

@@ -1,6 +1,6 @@
 package typingsSlinky.reactRelay.entryPointTypesMod
 
-import typingsSlinky.react.mod._Global_.JSX.LibraryManagedAttributes
+import typingsSlinky.react.mod.global.JSX.LibraryManagedAttributes
 import typingsSlinky.reactRelay.reactRelayStrings.entryPoints
 import typingsSlinky.reactRelay.reactRelayStrings.extraProps
 import typingsSlinky.reactRelay.reactRelayStrings.queries
@@ -8,7 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Readonly<{  entryPoints  :react.react._Global_.JSX.LibraryManagedAttributes<TEntryPointComponent, 'entryPoints'>,   extraProps  :react.react._Global_.JSX.LibraryManagedAttributes<TEntryPointComponent, 'extraProps'>, getComponent (): TEntryPointComponent,   queries  :react.react._Global_.JSX.LibraryManagedAttributes<TEntryPointComponent, 'queries'>}> */
+/* Inlined std.Readonly<{  entryPoints  :react.react.<global>.JSX.LibraryManagedAttributes<TEntryPointComponent, 'entryPoints'>,   extraProps  :react.react.<global>.JSX.LibraryManagedAttributes<TEntryPointComponent, 'extraProps'>, getComponent (): TEntryPointComponent,   queries  :react.react.<global>.JSX.LibraryManagedAttributes<TEntryPointComponent, 'queries'>}> */
 @js.native
 trait PreloadedEntryPoint[TEntryPointComponent] extends js.Object {
   val entryPoints: LibraryManagedAttributes[TEntryPointComponent, typingsSlinky.reactRelay.reactRelayStrings.entryPoints] = js.native

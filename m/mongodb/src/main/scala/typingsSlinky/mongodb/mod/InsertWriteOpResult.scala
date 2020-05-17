@@ -1,21 +1,21 @@
 package typingsSlinky.mongodb.mod
 
 import org.scalablytyped.runtime.NumberDictionary
-import typingsSlinky.mongodb.Anon2
-import typingsSlinky.mongodb.AnonOk
+import typingsSlinky.mongodb.anon.Ok
+import typingsSlinky.mongodb.anon.`2`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait InsertWriteOpResult[TSchema /* <: Anon2 */] extends js.Object {
+trait InsertWriteOpResult[TSchema /* <: `2` */] extends js.Object {
   var connection: js.Any = js.native
   var insertedCount: scala.Double = js.native
   var insertedIds: NumberDictionary[
     /* import warning: importer.ImportType#apply Failed type conversion: TSchema['_id'] */ js.Any
   ] = js.native
   var ops: js.Array[TSchema] = js.native
-  var result: AnonOk = js.native
+  var result: Ok = js.native
 }
 
 object InsertWriteOpResult {
@@ -27,7 +27,7 @@ object InsertWriteOpResult {
       /* import warning: importer.ImportType#apply Failed type conversion: TSchema['_id'] */ js.Any
     ],
     ops: js.Array[TSchema],
-    result: AnonOk
+    result: Ok
   ): InsertWriteOpResult[TSchema] = {
     val __obj = js.Dynamic.literal(connection = connection.asInstanceOf[js.Any], insertedCount = insertedCount.asInstanceOf[js.Any], insertedIds = insertedIds.asInstanceOf[js.Any], ops = ops.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any])
     __obj.asInstanceOf[InsertWriteOpResult[TSchema]]
@@ -67,7 +67,7 @@ object InsertWriteOpResult {
         ret
     }
     @scala.inline
-    def withResult(value: AnonOk): Self[TSchema] = {
+    def withResult(value: Ok): Self[TSchema] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
         ret

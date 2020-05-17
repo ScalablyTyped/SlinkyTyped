@@ -1,11 +1,11 @@
 package typingsSlinky.jqueryAnimateScroll.mod
 
-import typingsSlinky.jqueryAnimateScroll.mod._Global_.JQuery
+import typingsSlinky.jqueryAnimateScroll.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Partial<{  $container  :jquery-animate-scroll.jquery-animate-scroll._Global_.JQuery,   speed  :number,   offset  :number}> */
+/* Inlined std.Partial<{  $container  :jquery-animate-scroll.jquery-animate-scroll.<global>.JQuery,   speed  :number,   offset  :number}> */
 @js.native
 trait Options extends js.Object {
   @JSName("$container")

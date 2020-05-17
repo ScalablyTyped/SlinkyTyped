@@ -1,6 +1,6 @@
 package typingsSlinky.exceljs.mod
 
-import typingsSlinky.exceljs.PartialStyle
+import typingsSlinky.exceljs.anon.PartialStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

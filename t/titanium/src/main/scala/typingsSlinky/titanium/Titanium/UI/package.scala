@@ -18,6 +18,10 @@ package object UI {
   		 */
   type ActivityIndicatorPostlayoutEvent = typingsSlinky.titanium.Titanium.UI.ActivityIndicatorBaseEvent
   /**
+  		 * A set of constants for the styles available for <Titanium.UI.ActivityIndicator> objects.
+  		 */
+  type ActivityIndicatorStyle = typingsSlinky.titanium.Titanium.Module
+  /**
   		 * Fired when the view element gains focus.
   		 */
   type AlertDialogFocusEvent = typingsSlinky.titanium.Titanium.UI.AlertDialogBaseEvent
@@ -29,7 +33,11 @@ package object UI {
   		 * Fired when a layout cycle is finished.
   		 */
   type AlertDialogPostlayoutEvent = typingsSlinky.titanium.Titanium.UI.AlertDialogBaseEvent
-  type Android = typingsSlinky.titanium.Titanium.UI.Android_
+  /**
+  		 * The Android-specific UI capabilities. All properties, methods and events in this namespace will
+  		 * only work on Android systems.
+  		 */
+  type Android = typingsSlinky.titanium.Titanium.Module
   /**
   		 * Fired when the animation completes.
   		 */
@@ -54,6 +62,10 @@ package object UI {
   		 * Fired when a layout cycle is finished.
   		 */
   type ButtonPostlayoutEvent = typingsSlinky.titanium.Titanium.UI.ButtonBaseEvent
+  /**
+  		 * A module used for accessing clipboard data.
+  		 */
+  type Clipboard = typingsSlinky.titanium.Titanium.Module
   /**
   		 * Fired when edit mode ends.
   		 */
@@ -498,6 +510,13 @@ package object UI {
   		 * Fired when a layout cycle is finished.
   		 */
   type WindowPostlayoutEvent = typingsSlinky.titanium.Titanium.UI.WindowBaseEvent
-  type iOS = typingsSlinky.titanium.Titanium.UI.iOS_
-  type iPad = typingsSlinky.titanium.Titanium.UI.iPad_
+  /**
+  		 * Apple iOS specific UI capabilities.  All properties, methods and events in this namespace will
+  		 * only work on Apple iOS devices.
+  		 */
+  type iOS = typingsSlinky.titanium.Titanium.Module
+  /**
+  		 * iPad specific UI capabilities.
+  		 */
+  type iPad = typingsSlinky.titanium.Titanium.Module
 }

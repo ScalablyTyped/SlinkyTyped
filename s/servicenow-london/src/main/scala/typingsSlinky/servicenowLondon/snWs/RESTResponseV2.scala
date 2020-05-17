@@ -1,7 +1,7 @@
 package typingsSlinky.servicenowLondon.snWs
 
-import typingsSlinky.servicenowLondon.AnonGet
-import typingsSlinky.servicenowLondon.AnonName
+import typingsSlinky.servicenowLondon.anon.Get
+import typingsSlinky.servicenowLondon.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,9 +10,8 @@ import scala.scalajs.js.annotation._
   * The RESTResponseV2 API allows you to use the data returned by an outbound REST message
   * in JavaScript code.
   */
-@JSGlobal("sn_ws.RESTResponseV2")
 @js.native
-class RESTResponseV2 () extends js.Object {
+trait RESTResponseV2 extends js.Object {
   /**
     * Returns all headers contained in the response, including any duplicate headers.
     *
@@ -27,7 +26,7 @@ class RESTResponseV2 () extends js.Object {
     *   gs.info(headers[i].name + ': ' + headers[i].value);
     * }
     */
-  def getAllHeaders(): js.Array[AnonName] = js.native
+  def getAllHeaders(): js.Array[Name] = js.native
   /**
     * Get the content of the REST response body.
     *
@@ -59,7 +58,7 @@ class RESTResponseV2 () extends js.Object {
     *   gs.info('cookie: ' + cookies.get(i));
     * }
     */
-  def getCookies(): AnonGet = js.native
+  def getCookies(): Get = js.native
   /**
     * Get the numeric error code if there was an error during the REST transaction.
     *
@@ -182,5 +181,106 @@ class RESTResponseV2 () extends js.Object {
     * response.waitForResponse(60);
     */
   def waitForResponse(timeoutSecs: Double): Unit = js.native
+}
+
+object RESTResponseV2 {
+  @scala.inline
+  def apply(
+    getAllHeaders: () => js.Array[Name],
+    getBody: () => String,
+    getCookies: () => Get,
+    getErrorCode: () => Double,
+    getErrorMessage: () => String,
+    getHeader: String => String,
+    getHeaders: () => js.Object,
+    getQueryString: () => String,
+    getResponseAttachmentSysid: () => String,
+    getStatusCode: () => Double,
+    haveError: () => Boolean,
+    waitForResponse: Double => Unit
+  ): RESTResponseV2 = {
+    val __obj = js.Dynamic.literal(getAllHeaders = js.Any.fromFunction0(getAllHeaders), getBody = js.Any.fromFunction0(getBody), getCookies = js.Any.fromFunction0(getCookies), getErrorCode = js.Any.fromFunction0(getErrorCode), getErrorMessage = js.Any.fromFunction0(getErrorMessage), getHeader = js.Any.fromFunction1(getHeader), getHeaders = js.Any.fromFunction0(getHeaders), getQueryString = js.Any.fromFunction0(getQueryString), getResponseAttachmentSysid = js.Any.fromFunction0(getResponseAttachmentSysid), getStatusCode = js.Any.fromFunction0(getStatusCode), haveError = js.Any.fromFunction0(haveError), waitForResponse = js.Any.fromFunction1(waitForResponse))
+    __obj.asInstanceOf[RESTResponseV2]
+  }
+  @scala.inline
+  implicit class RESTResponseV2Ops[Self <: RESTResponseV2] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetAllHeaders(value: () => js.Array[Name]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllHeaders")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetBody(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBody")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetCookies(value: () => Get): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCookies")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetErrorCode(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getErrorCode")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetErrorMessage(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getErrorMessage")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetHeader(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getHeader")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetHeaders(value: () => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getHeaders")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetQueryString(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getQueryString")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetResponseAttachmentSysid(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getResponseAttachmentSysid")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetStatusCode(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStatusCode")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHaveError(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("haveError")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withWaitForResponse(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("waitForResponse")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

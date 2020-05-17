@@ -1,5 +1,6 @@
 package typingsSlinky.materialUi.components
 
+import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
@@ -37,9 +38,9 @@ object Chip {
     @scala.inline
     def labelStyle(value: CSSProperties): this.type = set("labelStyle", value.asInstanceOf[js.Any])
     @scala.inline
-    def onClick(value: SyntheticMouseEvent[typingsSlinky.materialUi.MaterialUI.Chip] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    def onClick(value: SyntheticMouseEvent[ReactComponentClass[ChipProps]] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onRequestDelete(value: SyntheticTouchEvent[typingsSlinky.materialUi.MaterialUI.Chip] => Unit): this.type = set("onRequestDelete", js.Any.fromFunction1(value))
+    def onRequestDelete(value: SyntheticTouchEvent[ReactComponentClass[ChipProps]] => Unit): this.type = set("onRequestDelete", js.Any.fromFunction1(value))
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }

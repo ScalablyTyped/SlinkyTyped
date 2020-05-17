@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.experimental.AbortSignal
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.all
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.any
@@ -260,8 +259,4 @@ trait ArcGISImageService extends js.Object {
   def getCatalogItemRasterInfo(rasterId: Double): js.Promise[RasterInfo] = js.native
   def getCatalogItemRasterInfo(rasterId: Double, abortOptions: AbortSignal): js.Promise[RasterInfo] = js.native
 }
-
-@JSGlobal("__esri.ArcGISImageService")
-@js.native
-object ArcGISImageService extends TopLevel[ArcGISImageServiceConstructor]
 

@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonAlignItemLabels
+import typingsSlinky.devextreme.anon.AlignItemLabels
 import typingsSlinky.devextreme.devextremeStrings.button
 import typingsSlinky.devextreme.devextremeStrings.empty
 import typingsSlinky.devextreme.devextremeStrings.group
@@ -23,7 +23,7 @@ trait dxFormTabbedItem extends js.Object {
   /** Holds a configuration object for the TabPanel widget used to display the current form item. */
   var tabPanelOptions: js.UndefOr[dxTabPanelOptions] = js.native
   /** An array of tab configuration objects. */
-  var tabs: js.UndefOr[js.Array[AnonAlignItemLabels]] = js.native
+  var tabs: js.UndefOr[js.Array[AlignItemLabels]] = js.native
   /** Specifies whether or not the current form item is visible. */
   var visible: js.UndefOr[Boolean] = js.native
   /** Specifies the sequence number of the item in a form, group or tab. */
@@ -103,7 +103,7 @@ object dxFormTabbedItem {
         ret
     }
     @scala.inline
-    def withTabs(value: js.Array[AnonAlignItemLabels]): Self = {
+    def withTabs(value: js.Array[AlignItemLabels]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tabs")(value.asInstanceOf[js.Any])
         ret

@@ -4,7 +4,7 @@ import typingsSlinky.reactNativeChartsWrapper.mod.AxisDependency
 import typingsSlinky.reactNativeChartsWrapper.mod.CandleStickPaintStyle
 import typingsSlinky.reactNativeChartsWrapper.mod.EasingType
 import typingsSlinky.reactNativeChartsWrapper.mod.PieValuePosition
-import typingsSlinky.reactNativeChartsWrapper.mod._ValueFormatter
+import typingsSlinky.reactNativeChartsWrapper.mod.ValueFormatter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -254,13 +254,13 @@ object reactNativeChartsWrapperStrings {
   sealed trait X extends js.Object
   
   @js.native
-  sealed trait date extends _ValueFormatter
+  sealed trait date extends ValueFormatter
   
   @js.native
-  sealed trait largeValue extends _ValueFormatter
+  sealed trait largeValue extends ValueFormatter
   
   @js.native
-  sealed trait percent extends _ValueFormatter
+  sealed trait percent extends ValueFormatter
   
   @scala.inline
   def BAR: BAR = "BAR".asInstanceOf[BAR]

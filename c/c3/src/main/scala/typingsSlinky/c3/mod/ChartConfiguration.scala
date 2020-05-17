@@ -1,20 +1,19 @@
 package typingsSlinky.c3.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.c3.AnonArcs
-import typingsSlinky.c3.AnonAuto
-import typingsSlinky.c3.AnonBrighten
-import typingsSlinky.c3.AnonClassname
-import typingsSlinky.c3.AnonColors
-import typingsSlinky.c3.AnonDuration
-import typingsSlinky.c3.AnonExpand
-import typingsSlinky.c3.AnonHeight
-import typingsSlinky.c3.AnonInterpolation
-import typingsSlinky.c3.AnonLabel
-import typingsSlinky.c3.AnonPadding
-import typingsSlinky.c3.AnonPattern
-import typingsSlinky.c3.AnonSpace
-import typingsSlinky.c3.AnonZerobased
+import typingsSlinky.c3.anon.Arcs
+import typingsSlinky.c3.anon.Auto
+import typingsSlinky.c3.anon.Brighten
+import typingsSlinky.c3.anon.Classname
+import typingsSlinky.c3.anon.Colors
+import typingsSlinky.c3.anon.Duration
+import typingsSlinky.c3.anon.Expand
+import typingsSlinky.c3.anon.Height
+import typingsSlinky.c3.anon.Interpolation
+import typingsSlinky.c3.anon.Label
+import typingsSlinky.c3.anon.Pattern
+import typingsSlinky.c3.anon.Space
+import typingsSlinky.c3.anon.Zerobased
 import typingsSlinky.d3Selection.mod.Selection_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,9 +21,9 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ChartConfiguration extends js.Object {
-  var area: js.UndefOr[AnonZerobased] = js.native
+  var area: js.UndefOr[Zerobased] = js.native
   var axis: js.UndefOr[AxesOptions] = js.native
-  var bar: js.UndefOr[AnonSpace] = js.native
+  var bar: js.UndefOr[Space] = js.native
   /**
     * The CSS selector or the element which the chart will be set to. D3 selection object can be specified. If other chart is set already, it will be replaced with the new one (only one chart
     * can be set in one element).
@@ -33,12 +32,12 @@ trait ChartConfiguration extends js.Object {
     * MutationObserver. On the other hand, if chart always will be binded, polyfill will not be required because MutationObserver will never be called.
     */
   var bindto: js.UndefOr[String | HTMLElement | (Selection_[_, _, _, _]) | Null] = js.native
-  var color: js.UndefOr[AnonPattern] = js.native
+  var color: js.UndefOr[Pattern] = js.native
   var data: Data = js.native
-  var donut: js.UndefOr[AnonLabel] = js.native
-  var gauge: js.UndefOr[AnonArcs] = js.native
+  var donut: js.UndefOr[Label] = js.native
+  var gauge: js.UndefOr[Arcs] = js.native
   var grid: js.UndefOr[GridOptions] = js.native
-  var interaction: js.UndefOr[AnonBrighten] = js.native
+  var interaction: js.UndefOr[Brighten] = js.native
   var legend: js.UndefOr[LegendOptions] = js.native
   var line: js.UndefOr[LineOptions] = js.native
   /**
@@ -66,7 +65,7 @@ trait ChartConfiguration extends js.Object {
     */
   var onresized: js.UndefOr[js.ThisFunction0[/* this */ ChartInternal, Unit]] = js.native
   var padding: js.UndefOr[Padding] = js.native
-  var pie: js.UndefOr[AnonExpand] = js.native
+  var pie: js.UndefOr[Expand] = js.native
   var point: js.UndefOr[PointOptions] = js.native
   /**
     * Show rectangles inside the chart.
@@ -75,15 +74,15 @@ trait ChartConfiguration extends js.Object {
     * unixtime integer can be used. If class is set, the region element will have it as class.
     */
   var regions: js.UndefOr[js.Array[RegionOptions]] = js.native
-  var resize: js.UndefOr[AnonAuto] = js.native
-  var size: js.UndefOr[AnonHeight] = js.native
-  var spline: js.UndefOr[AnonInterpolation] = js.native
-  var stanford: js.UndefOr[AnonColors] = js.native
+  var resize: js.UndefOr[Auto] = js.native
+  var size: js.UndefOr[Height] = js.native
+  var spline: js.UndefOr[Interpolation] = js.native
+  var stanford: js.UndefOr[Colors] = js.native
   var subchart: js.UndefOr[SubchartOptions] = js.native
-  var svg: js.UndefOr[AnonClassname] = js.native
-  var title: js.UndefOr[AnonPadding] = js.native
+  var svg: js.UndefOr[Classname] = js.native
+  var title: js.UndefOr[typingsSlinky.c3.anon.Padding] = js.native
   var tooltip: js.UndefOr[TooltipOptions] = js.native
-  var transition: js.UndefOr[AnonDuration] = js.native
+  var transition: js.UndefOr[Duration] = js.native
   var zoom: js.UndefOr[ZoomOptions] = js.native
 }
 
@@ -106,7 +105,7 @@ object ChartConfiguration {
         ret
     }
     @scala.inline
-    def withArea(value: AnonZerobased): Self = {
+    def withArea(value: Zerobased): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("area")(value.asInstanceOf[js.Any])
         ret
@@ -130,7 +129,7 @@ object ChartConfiguration {
         ret
     }
     @scala.inline
-    def withBar(value: AnonSpace): Self = {
+    def withBar(value: Space): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bar")(value.asInstanceOf[js.Any])
         ret
@@ -166,7 +165,7 @@ object ChartConfiguration {
         ret
     }
     @scala.inline
-    def withColor(value: AnonPattern): Self = {
+    def withColor(value: Pattern): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
         ret
@@ -178,7 +177,7 @@ object ChartConfiguration {
         ret
     }
     @scala.inline
-    def withDonut(value: AnonLabel): Self = {
+    def withDonut(value: Label): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("donut")(value.asInstanceOf[js.Any])
         ret
@@ -190,7 +189,7 @@ object ChartConfiguration {
         ret
     }
     @scala.inline
-    def withGauge(value: AnonArcs): Self = {
+    def withGauge(value: Arcs): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gauge")(value.asInstanceOf[js.Any])
         ret
@@ -214,7 +213,7 @@ object ChartConfiguration {
         ret
     }
     @scala.inline
-    def withInteraction(value: AnonBrighten): Self = {
+    def withInteraction(value: Brighten): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("interaction")(value.asInstanceOf[js.Any])
         ret
@@ -334,7 +333,7 @@ object ChartConfiguration {
         ret
     }
     @scala.inline
-    def withPie(value: AnonExpand): Self = {
+    def withPie(value: Expand): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pie")(value.asInstanceOf[js.Any])
         ret
@@ -370,7 +369,7 @@ object ChartConfiguration {
         ret
     }
     @scala.inline
-    def withResize(value: AnonAuto): Self = {
+    def withResize(value: Auto): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resize")(value.asInstanceOf[js.Any])
         ret
@@ -382,7 +381,7 @@ object ChartConfiguration {
         ret
     }
     @scala.inline
-    def withSize(value: AnonHeight): Self = {
+    def withSize(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
         ret
@@ -394,7 +393,7 @@ object ChartConfiguration {
         ret
     }
     @scala.inline
-    def withSpline(value: AnonInterpolation): Self = {
+    def withSpline(value: Interpolation): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("spline")(value.asInstanceOf[js.Any])
         ret
@@ -406,7 +405,7 @@ object ChartConfiguration {
         ret
     }
     @scala.inline
-    def withStanford(value: AnonColors): Self = {
+    def withStanford(value: Colors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stanford")(value.asInstanceOf[js.Any])
         ret
@@ -430,7 +429,7 @@ object ChartConfiguration {
         ret
     }
     @scala.inline
-    def withSvg(value: AnonClassname): Self = {
+    def withSvg(value: Classname): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("svg")(value.asInstanceOf[js.Any])
         ret
@@ -442,7 +441,7 @@ object ChartConfiguration {
         ret
     }
     @scala.inline
-    def withTitle(value: AnonPadding): Self = {
+    def withTitle(value: typingsSlinky.c3.anon.Padding): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
         ret
@@ -466,7 +465,7 @@ object ChartConfiguration {
         ret
     }
     @scala.inline
-    def withTransition(value: AnonDuration): Self = {
+    def withTransition(value: Duration): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("transition")(value.asInstanceOf[js.Any])
         ret

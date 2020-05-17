@@ -5,7 +5,7 @@ import typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.Event
 import typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.None
 import typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.RequestResponse
 import typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.Tail
-import typingsSlinky.awsSdkClientLambdaNode.inputTypesUnionMod._InputTypesUnion
+import typingsSlinky.awsSdkClientLambdaNode.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.httpMod.NodeHttpOptions
 import scala.scalajs.js
@@ -13,7 +13,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait InvokeInput extends _InputTypesUnion {
+trait InvokeInput extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *

@@ -1,5 +1,6 @@
 package typingsSlinky.blueprintjsCore.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
@@ -13,7 +14,6 @@ import typingsSlinky.popperJs.mod.Boundary
 import typingsSlinky.popperJs.mod.Modifiers
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.HTMLProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -70,14 +70,14 @@ object Popover {
     @scala.inline
     def modifiers(value: Modifiers): this.type = set("modifiers", value.asInstanceOf[js.Any])
     @scala.inline
-    def onClose(value: /* event */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
+    def onClose(value: /* event */ js.UndefOr[SyntheticEvent[Event, HTMLElement]] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
     @scala.inline
     def onClosed(value: /* node */ HTMLElement => Unit): this.type = set("onClosed", js.Any.fromFunction1(value))
     @scala.inline
     def onClosing(value: /* node */ HTMLElement => Unit): this.type = set("onClosing", js.Any.fromFunction1(value))
     @scala.inline
     def onInteraction(
-      value: (/* nextOpenState */ Boolean, /* e */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]]) => Unit
+      value: (/* nextOpenState */ Boolean, /* e */ js.UndefOr[SyntheticEvent[Event, HTMLElement]]) => Unit
     ): this.type = set("onInteraction", js.Any.fromFunction2(value))
     @scala.inline
     def onOpened(value: /* node */ HTMLElement => Unit): this.type = set("onOpened", js.Any.fromFunction1(value))

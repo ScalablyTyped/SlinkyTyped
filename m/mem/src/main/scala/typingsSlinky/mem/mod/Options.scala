@@ -1,6 +1,6 @@
 package typingsSlinky.mem.mod
 
-import typingsSlinky.mem.AnonData
+import typingsSlinky.mem.anon.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait Options[ArgumentsType /* <: js.Array[_] */, CacheKeyType, ReturnType] exte
   		Use a different cache storage. You could for example use a `WeakMap` instead or [`quick-lru`](https://github.com/sindresorhus/quick-lru) for a LRU cache.
   		@default new Map()
   		*/
-  val cache: js.UndefOr[CacheStorage[CacheKeyType, AnonData[ReturnType]]] = js.native
+  val cache: js.UndefOr[CacheStorage[CacheKeyType, Data[ReturnType]]] = js.native
   /**
   		Determines the cache key for storing the result based on the function arguments. By default, if there's only one argument and it's a [primitive](https://developer.mozilla.org/en-US/docs/Glossary/Primitive), it's used directly as a key (if it's a `function`, its reference will be used as key), otherwise it's all the function arguments JSON stringified as an array.
   		You could for example change it to only cache on the first argument `x => JSON.stringify(x)`.
@@ -42,7 +42,7 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): (Self[ArgumentsType, CacheKeyType, ReturnType]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[ArgumentsType, CacheKeyType, ReturnType]) with Other]
     @scala.inline
-    def withCache(value: CacheStorage[CacheKeyType, AnonData[ReturnType]]): Self[ArgumentsType, CacheKeyType, ReturnType] = {
+    def withCache(value: CacheStorage[CacheKeyType, Data[ReturnType]]): Self[ArgumentsType, CacheKeyType, ReturnType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
         ret

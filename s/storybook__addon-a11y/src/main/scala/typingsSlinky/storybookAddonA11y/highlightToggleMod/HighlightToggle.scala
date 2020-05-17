@@ -2,7 +2,7 @@ package typingsSlinky.storybookAddonA11y.highlightToggleMod
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.react.mod.Component
-import typingsSlinky.storybookAddonA11y.ReadonlyToggleProps
+import typingsSlinky.storybookAddonA11y.anon.ReadonlyToggleProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,7 @@
 package typingsSlinky.expo.aRMod
 
-import typingsSlinky.expo.AnonLength
 import typingsSlinky.expo.aRMod.AnchorType.Plane
+import typingsSlinky.expo.anon.Length
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PlaneAnchor extends Anchor {
   var center: Vector3 = js.native
-  var extent: AnonLength = js.native
+  var extent: Length = js.native
   var id: String = js.native
   var transform: Matrix = js.native
   var `type`: AnchorType with Plane = js.native
@@ -18,7 +18,7 @@ trait PlaneAnchor extends Anchor {
 
 object PlaneAnchor {
   @scala.inline
-  def apply(center: Vector3, extent: AnonLength, id: String, transform: Matrix, `type`: AnchorType with Plane): PlaneAnchor = {
+  def apply(center: Vector3, extent: Length, id: String, transform: Matrix, `type`: AnchorType with Plane): PlaneAnchor = {
     val __obj = js.Dynamic.literal(center = center.asInstanceOf[js.Any], extent = extent.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], transform = transform.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlaneAnchor]
@@ -36,7 +36,7 @@ object PlaneAnchor {
         ret
     }
     @scala.inline
-    def withExtent(value: AnonLength): Self = {
+    def withExtent(value: Length): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(value.asInstanceOf[js.Any])
         ret

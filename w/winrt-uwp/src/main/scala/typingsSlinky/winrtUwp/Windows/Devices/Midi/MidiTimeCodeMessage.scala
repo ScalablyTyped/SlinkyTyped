@@ -6,15 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a MIDI message that specifies a time code. */
-@JSGlobal("Windows.Devices.Midi.MidiTimeCodeMessage")
 @js.native
-class MidiTimeCodeMessage protected () extends js.Object {
-  /**
-    * Creates a new MidiTimeCodeMessage object.
-    * @param frameType The frame type from 0-7.
-    * @param values The time code from 0-32.
-    */
-  def this(frameType: Double, values: Double) = this()
+trait MidiTimeCodeMessage extends js.Object {
   /** Gets the value of the frame type from 0-7. */
   var frameType: Double = js.native
   /** Gets the array of bytes associated with the MIDI message, including status byte. */
@@ -25,5 +18,52 @@ class MidiTimeCodeMessage protected () extends js.Object {
   var `type`: MidiMessageType = js.native
   /** Gets the time code value from 0-32. */
   var values: Double = js.native
+}
+
+object MidiTimeCodeMessage {
+  @scala.inline
+  def apply(frameType: Double, rawData: IBuffer, timestamp: Double, `type`: MidiMessageType, values: Double): MidiTimeCodeMessage = {
+    val __obj = js.Dynamic.literal(frameType = frameType.asInstanceOf[js.Any], rawData = rawData.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MidiTimeCodeMessage]
+  }
+  @scala.inline
+  implicit class MidiTimeCodeMessageOps[Self <: MidiTimeCodeMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFrameType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRawData(value: IBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: MidiMessageType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValues(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

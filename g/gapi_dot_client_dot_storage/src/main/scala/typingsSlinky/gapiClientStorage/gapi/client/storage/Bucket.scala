@@ -1,13 +1,13 @@
 package typingsSlinky.gapiClientStorage.gapi.client.storage
 
-import typingsSlinky.gapiClientStorage.AnonDefaultKmsKeyName
-import typingsSlinky.gapiClientStorage.AnonEnabled
-import typingsSlinky.gapiClientStorage.AnonEntity
-import typingsSlinky.gapiClientStorage.AnonLogBucket
-import typingsSlinky.gapiClientStorage.AnonMainPageSuffix
-import typingsSlinky.gapiClientStorage.AnonMaxAgeSeconds
-import typingsSlinky.gapiClientStorage.AnonRequesterPays
-import typingsSlinky.gapiClientStorage.AnonRule
+import typingsSlinky.gapiClientStorage.anon.DefaultKmsKeyName
+import typingsSlinky.gapiClientStorage.anon.Enabled
+import typingsSlinky.gapiClientStorage.anon.Entity
+import typingsSlinky.gapiClientStorage.anon.LogBucket
+import typingsSlinky.gapiClientStorage.anon.MainPageSuffix
+import typingsSlinky.gapiClientStorage.anon.MaxAgeSeconds
+import typingsSlinky.gapiClientStorage.anon.RequesterPays
+import typingsSlinky.gapiClientStorage.anon.Rule
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,13 +18,13 @@ trait Bucket extends js.Object {
   /** Access controls on the bucket. */
   var acl: js.UndefOr[js.Array[BucketAccessControl]] = js.native
   /** The bucket's billing configuration. */
-  var billing: js.UndefOr[AnonRequesterPays] = js.native
+  var billing: js.UndefOr[RequesterPays] = js.native
   /** The bucket's Cross-Origin Resource Sharing (CORS) configuration. */
-  var cors: js.UndefOr[js.Array[AnonMaxAgeSeconds]] = js.native
+  var cors: js.UndefOr[js.Array[MaxAgeSeconds]] = js.native
   /** Default access controls to apply to new objects when no ACL is provided. */
   var defaultObjectAcl: js.UndefOr[js.Array[ObjectAccessControl]] = js.native
   /** Encryption configuration used by default for newly inserted objects, when no encryption config is specified. */
-  var encryption: js.UndefOr[AnonDefaultKmsKeyName] = js.native
+  var encryption: js.UndefOr[DefaultKmsKeyName] = js.native
   /** HTTP 1.1 Entity tag for the bucket. */
   var etag: js.UndefOr[String] = js.native
   /** The ID of the bucket. For buckets, the id and name properities are the same. */
@@ -34,20 +34,20 @@ trait Bucket extends js.Object {
   /** User-provided labels, in key/value pairs. */
   var labels: js.UndefOr[Record[String, String]] = js.native
   /** The bucket's lifecycle configuration. See lifecycle management for more information. */
-  var lifecycle: js.UndefOr[AnonRule] = js.native
+  var lifecycle: js.UndefOr[Rule] = js.native
   /**
     * The location of the bucket. Object data for objects in the bucket resides in physical storage within this region. Defaults to US. See the developer's
     * guide for the authoritative list.
     */
   var location: js.UndefOr[String] = js.native
   /** The bucket's logging configuration, which defines the destination bucket and optional name prefix for the current bucket's logs. */
-  var logging: js.UndefOr[AnonLogBucket] = js.native
+  var logging: js.UndefOr[LogBucket] = js.native
   /** The metadata generation of this bucket. */
   var metageneration: js.UndefOr[String] = js.native
   /** The name of the bucket. */
   var name: js.UndefOr[String] = js.native
   /** The owner of the bucket. This is always the project team's owner group. */
-  var owner: js.UndefOr[AnonEntity] = js.native
+  var owner: js.UndefOr[Entity] = js.native
   /** The project number of the project the bucket belongs to. */
   var projectNumber: js.UndefOr[String] = js.native
   /** The URI of this bucket. */
@@ -64,12 +64,12 @@ trait Bucket extends js.Object {
   /** The modification time of the bucket in RFC 3339 format. */
   var updated: js.UndefOr[String] = js.native
   /** The bucket's versioning configuration. */
-  var versioning: js.UndefOr[AnonEnabled] = js.native
+  var versioning: js.UndefOr[Enabled] = js.native
   /**
     * The bucket's website configuration, controlling how the service behaves when accessing bucket contents as a web site. See the Static Website Examples
     * for more information.
     */
-  var website: js.UndefOr[AnonMainPageSuffix] = js.native
+  var website: js.UndefOr[MainPageSuffix] = js.native
 }
 
 object Bucket {
@@ -97,7 +97,7 @@ object Bucket {
         ret
     }
     @scala.inline
-    def withBilling(value: AnonRequesterPays): Self = {
+    def withBilling(value: RequesterPays): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("billing")(value.asInstanceOf[js.Any])
         ret
@@ -109,7 +109,7 @@ object Bucket {
         ret
     }
     @scala.inline
-    def withCors(value: js.Array[AnonMaxAgeSeconds]): Self = {
+    def withCors(value: js.Array[MaxAgeSeconds]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cors")(value.asInstanceOf[js.Any])
         ret
@@ -133,7 +133,7 @@ object Bucket {
         ret
     }
     @scala.inline
-    def withEncryption(value: AnonDefaultKmsKeyName): Self = {
+    def withEncryption(value: DefaultKmsKeyName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("encryption")(value.asInstanceOf[js.Any])
         ret
@@ -193,7 +193,7 @@ object Bucket {
         ret
     }
     @scala.inline
-    def withLifecycle(value: AnonRule): Self = {
+    def withLifecycle(value: Rule): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycle")(value.asInstanceOf[js.Any])
         ret
@@ -217,7 +217,7 @@ object Bucket {
         ret
     }
     @scala.inline
-    def withLogging(value: AnonLogBucket): Self = {
+    def withLogging(value: LogBucket): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("logging")(value.asInstanceOf[js.Any])
         ret
@@ -253,7 +253,7 @@ object Bucket {
         ret
     }
     @scala.inline
-    def withOwner(value: AnonEntity): Self = {
+    def withOwner(value: Entity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
         ret
@@ -325,7 +325,7 @@ object Bucket {
         ret
     }
     @scala.inline
-    def withVersioning(value: AnonEnabled): Self = {
+    def withVersioning(value: Enabled): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("versioning")(value.asInstanceOf[js.Any])
         ret
@@ -337,7 +337,7 @@ object Bucket {
         ret
     }
     @scala.inline
-    def withWebsite(value: AnonMainPageSuffix): Self = {
+    def withWebsite(value: MainPageSuffix): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("website")(value.asInstanceOf[js.Any])
         ret

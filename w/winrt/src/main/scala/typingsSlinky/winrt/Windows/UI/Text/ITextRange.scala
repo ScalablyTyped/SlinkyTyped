@@ -1,8 +1,8 @@
 package typingsSlinky.winrt.Windows.UI.Text
 
-import typingsSlinky.winrt.AnonHit
 import typingsSlinky.winrt.Windows.Foundation.Point
 import typingsSlinky.winrt.Windows.Storage.Streams.IRandomAccessStream
+import typingsSlinky.winrt.anon.Hit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,7 +37,7 @@ trait ITextRange extends js.Object {
     verticalAlign: VerticalCharacterAlignment,
     options: PointOptions
   ): Point = js.native
-  def getRect(options: PointOptions): AnonHit = js.native
+  def getRect(options: PointOptions): Hit = js.native
   def getText(options: TextGetOptions): String = js.native
   def getTextViaStream(options: TextGetOptions, value: IRandomAccessStream): Unit = js.native
   def inRange(range: ITextRange): Boolean = js.native
@@ -85,7 +85,7 @@ object ITextRange {
     getClone: () => ITextRange,
     getIndex: TextRangeUnit => Double,
     getPoint: (HorizontalCharacterAlignment, VerticalCharacterAlignment, PointOptions) => Point,
-    getRect: PointOptions => AnonHit,
+    getRect: PointOptions => Hit,
     getText: TextGetOptions => String,
     getTextViaStream: (TextGetOptions, IRandomAccessStream) => Unit,
     gravity: RangeGravity,
@@ -224,7 +224,7 @@ object ITextRange {
         ret
     }
     @scala.inline
-    def withGetRect(value: PointOptions => AnonHit): Self = {
+    def withGetRect(value: PointOptions => Hit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getRect")(js.Any.fromFunction1(value))
         ret

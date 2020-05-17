@@ -1,13 +1,12 @@
 package typingsSlinky.kendoUi.kendo.spreadsheet
 
-import typingsSlinky.kendoUi.kendo.Observable_
+import typingsSlinky.kendoUi.kendo.Observable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.spreadsheet.Range")
 @js.native
-class Range () extends Observable_ {
+trait Range extends Observable {
   var options: RangeOptions = js.native
   def background(): String = js.native
   def background(value: String): Unit = js.native

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`class-breaks-color`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`class-breaks-size`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`classed-color`
@@ -109,8 +108,4 @@ trait AuthoringInfo
     */
   var visualVariables: js.Array[AuthoringInfoVisualVariable] = js.native
 }
-
-@JSGlobal("__esri.AuthoringInfo")
-@js.native
-object AuthoringInfo extends TopLevel[AuthoringInfoConstructor]
 

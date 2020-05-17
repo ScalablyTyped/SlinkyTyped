@@ -1,8 +1,8 @@
 package typingsSlinky.yargsParser.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.yargsParser.AnonBoolean
-import typingsSlinky.yargsParser.PartialConfiguration
+import typingsSlinky.yargsParser.anon.Boolean
+import typingsSlinky.yargsParser.anon.PartialConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait Options extends js.Object {
     * Indicate that keys should be parsed as an array and coerced to booleans / numbers:
     * { array: [ { key: 'foo', boolean: true }, {key: 'bar', number: true} ] }`.
     */
-  var array: js.UndefOr[js.Array[AnonBoolean | String]] = js.native
+  var array: js.UndefOr[js.Array[Boolean | String]] = js.native
   /** Arguments should be parsed as booleans: `{ boolean: ['x', 'y'] }`. */
   var boolean: js.UndefOr[js.Array[String]] = js.native
   /**
@@ -25,7 +25,7 @@ trait Options extends js.Object {
     */
   var coerce: js.UndefOr[StringDictionary[js.Function1[/* arg */ js.Any, _]]] = js.native
   /** Indicate a key that represents a path to a configuration file (this file will be loaded and parsed). */
-  var config: js.UndefOr[String | js.Array[String] | StringDictionary[Boolean]] = js.native
+  var config: js.UndefOr[String | js.Array[String] | StringDictionary[scala.Boolean]] = js.native
   /** Provide configuration options to the yargs-parser. */
   var configuration: js.UndefOr[PartialConfiguration] = js.native
   /** Indicate a key that should be used as a counter, e.g., `-vvv = {v: 3}`. */
@@ -69,7 +69,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withArray(value: js.Array[AnonBoolean | String]): Self = {
+    def withArray(value: js.Array[Boolean | String]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("array")(value.asInstanceOf[js.Any])
         ret
@@ -105,7 +105,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withConfig(value: String | js.Array[String] | StringDictionary[Boolean]): Self = {
+    def withConfig(value: String | js.Array[String] | StringDictionary[scala.Boolean]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -195,7 +195,7 @@ object IgPivotDataSelector {
         ret
     }
     @scala.inline
-    def withDataSelectorRendered(value: (/* event */ Event_, /* ui */ DataSelectorRenderedEventUIParam) => Unit): Self = {
+    def withDataSelectorRendered(value: (/* event */ Event, /* ui */ DataSelectorRenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataSelectorRendered")(js.Any.fromFunction2(value))
         ret
@@ -219,7 +219,7 @@ object IgPivotDataSelector {
         ret
     }
     @scala.inline
-    def withDataSourceInitialized(value: (/* event */ Event_, /* ui */ DataSourceInitializedEventUIParam) => Unit): Self = {
+    def withDataSourceInitialized(value: (/* event */ Event, /* ui */ DataSourceInitializedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceInitialized")(js.Any.fromFunction2(value))
         ret
@@ -243,7 +243,7 @@ object IgPivotDataSelector {
         ret
     }
     @scala.inline
-    def withDataSourceUpdated(value: (/* event */ Event_, /* ui */ DataSourceUpdatedEventUIParam) => Unit): Self = {
+    def withDataSourceUpdated(value: (/* event */ Event, /* ui */ DataSourceUpdatedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataSourceUpdated")(js.Any.fromFunction2(value))
         ret
@@ -267,7 +267,7 @@ object IgPivotDataSelector {
         ret
     }
     @scala.inline
-    def withDeferUpdateChanged(value: (/* event */ Event_, /* ui */ DeferUpdateChangedEventUIParam) => Unit): Self = {
+    def withDeferUpdateChanged(value: (/* event */ Event, /* ui */ DeferUpdateChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("deferUpdateChanged")(js.Any.fromFunction2(value))
         ret
@@ -327,7 +327,7 @@ object IgPivotDataSelector {
         ret
     }
     @scala.inline
-    def withDrag(value: (/* event */ Event_, /* ui */ DragEventUIParam) => Unit): Self = {
+    def withDrag(value: (/* event */ Event, /* ui */ DragEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(js.Any.fromFunction2(value))
         ret
@@ -351,7 +351,7 @@ object IgPivotDataSelector {
         ret
     }
     @scala.inline
-    def withDragStart(value: (/* event */ Event_, /* ui */ DragStartEventUIParam) => Unit): Self = {
+    def withDragStart(value: (/* event */ Event, /* ui */ DragStartEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragStart")(js.Any.fromFunction2(value))
         ret
@@ -363,7 +363,7 @@ object IgPivotDataSelector {
         ret
     }
     @scala.inline
-    def withDragStop(value: (/* event */ Event_, /* ui */ DragStopEventUIParam) => Unit): Self = {
+    def withDragStop(value: (/* event */ Event, /* ui */ DragStopEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragStop")(js.Any.fromFunction2(value))
         ret
@@ -387,7 +387,7 @@ object IgPivotDataSelector {
         ret
     }
     @scala.inline
-    def withFilterDropDownClosed(value: (/* event */ Event_, /* ui */ FilterDropDownClosedEventUIParam) => Unit): Self = {
+    def withFilterDropDownClosed(value: (/* event */ Event, /* ui */ FilterDropDownClosedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filterDropDownClosed")(js.Any.fromFunction2(value))
         ret
@@ -399,7 +399,7 @@ object IgPivotDataSelector {
         ret
     }
     @scala.inline
-    def withFilterDropDownClosing(value: (/* event */ Event_, /* ui */ FilterDropDownClosingEventUIParam) => Unit): Self = {
+    def withFilterDropDownClosing(value: (/* event */ Event, /* ui */ FilterDropDownClosingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filterDropDownClosing")(js.Any.fromFunction2(value))
         ret
@@ -411,7 +411,7 @@ object IgPivotDataSelector {
         ret
     }
     @scala.inline
-    def withFilterDropDownOk(value: (/* event */ Event_, /* ui */ FilterDropDownOkEventUIParam) => Unit): Self = {
+    def withFilterDropDownOk(value: (/* event */ Event, /* ui */ FilterDropDownOkEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filterDropDownOk")(js.Any.fromFunction2(value))
         ret
@@ -423,7 +423,7 @@ object IgPivotDataSelector {
         ret
     }
     @scala.inline
-    def withFilterDropDownOpened(value: (/* event */ Event_, /* ui */ FilterDropDownOpenedEventUIParam) => Unit): Self = {
+    def withFilterDropDownOpened(value: (/* event */ Event, /* ui */ FilterDropDownOpenedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filterDropDownOpened")(js.Any.fromFunction2(value))
         ret
@@ -435,7 +435,7 @@ object IgPivotDataSelector {
         ret
     }
     @scala.inline
-    def withFilterDropDownOpening(value: (/* event */ Event_, /* ui */ FilterDropDownOpeningEventUIParam) => Unit): Self = {
+    def withFilterDropDownOpening(value: (/* event */ Event, /* ui */ FilterDropDownOpeningEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filterDropDownOpening")(js.Any.fromFunction2(value))
         ret
@@ -447,7 +447,7 @@ object IgPivotDataSelector {
         ret
     }
     @scala.inline
-    def withFilterMembersLoaded(value: (/* event */ Event_, /* ui */ FilterMembersLoadedEventUIParam) => Unit): Self = {
+    def withFilterMembersLoaded(value: (/* event */ Event, /* ui */ FilterMembersLoadedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filterMembersLoaded")(js.Any.fromFunction2(value))
         ret
@@ -495,7 +495,7 @@ object IgPivotDataSelector {
         ret
     }
     @scala.inline
-    def withMetadataDropped(value: (/* event */ Event_, /* ui */ MetadataDroppedEventUIParam) => Unit): Self = {
+    def withMetadataDropped(value: (/* event */ Event, /* ui */ MetadataDroppedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metadataDropped")(js.Any.fromFunction2(value))
         ret
@@ -507,7 +507,7 @@ object IgPivotDataSelector {
         ret
     }
     @scala.inline
-    def withMetadataDropping(value: (/* event */ Event_, /* ui */ MetadataDroppingEventUIParam) => Unit): Self = {
+    def withMetadataDropping(value: (/* event */ Event, /* ui */ MetadataDroppingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metadataDropping")(js.Any.fromFunction2(value))
         ret
@@ -519,7 +519,7 @@ object IgPivotDataSelector {
         ret
     }
     @scala.inline
-    def withMetadataRemoved(value: (/* event */ Event_, /* ui */ MetadataRemovedEventUIParam) => Unit): Self = {
+    def withMetadataRemoved(value: (/* event */ Event, /* ui */ MetadataRemovedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metadataRemoved")(js.Any.fromFunction2(value))
         ret
@@ -531,7 +531,7 @@ object IgPivotDataSelector {
         ret
     }
     @scala.inline
-    def withMetadataRemoving(value: (/* event */ Event_, /* ui */ MetadataRemovingEventUIParam) => Unit): Self = {
+    def withMetadataRemoving(value: (/* event */ Event, /* ui */ MetadataRemovingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metadataRemoving")(js.Any.fromFunction2(value))
         ret

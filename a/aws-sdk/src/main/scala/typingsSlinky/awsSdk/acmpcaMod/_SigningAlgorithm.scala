@@ -1,8 +1,0 @@
-package typingsSlinky.awsSdk.acmpcaMod
-
-import scala.scalajs.js
-import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
-
-trait _SigningAlgorithm extends js.Object
-

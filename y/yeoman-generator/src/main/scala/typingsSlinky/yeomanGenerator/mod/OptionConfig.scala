@@ -1,8 +1,10 @@
 package typingsSlinky.yeomanGenerator.mod
 
+import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.std.BooleanConstructor
 import typingsSlinky.std.NumberConstructor
 import typingsSlinky.std.StringConstructor
+import typingsSlinky.std.global.Number
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +15,9 @@ trait OptionConfig extends js.Object {
   var default: js.UndefOr[js.Any] = js.native
   var description: js.UndefOr[String] = js.native
   var hide: js.UndefOr[Boolean] = js.native
-  var `type`: js.UndefOr[BooleanConstructor | StringConstructor | NumberConstructor] = js.native
+  var `type`: js.UndefOr[
+    (BooleanConstructor with Instantiable0[typingsSlinky.std.global.Boolean]) | (StringConstructor with Instantiable0[typingsSlinky.std.global.String]) | (NumberConstructor with Instantiable0[Number])
+  ] = js.native
 }
 
 object OptionConfig {
@@ -77,7 +81,9 @@ object OptionConfig {
         ret
     }
     @scala.inline
-    def withType(value: BooleanConstructor | StringConstructor | NumberConstructor): Self = {
+    def withType(
+      value: (BooleanConstructor with Instantiable0[typingsSlinky.std.global.Boolean]) | (StringConstructor with Instantiable0[typingsSlinky.std.global.String]) | (NumberConstructor with Instantiable0[Number])
+    ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
         ret

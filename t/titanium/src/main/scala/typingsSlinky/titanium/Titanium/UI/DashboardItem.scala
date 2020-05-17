@@ -12,9 +12,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A dashboard item is a view that is displayed as an icon in a <Titanium.UI.DashboardView>.
 		 */
-@JSGlobal("Titanium.UI.DashboardItem")
 @js.native
-class DashboardItem () extends Proxy {
+trait DashboardItem extends Proxy {
   /**
   			 * Integer value displayed in a badge.
   			 */

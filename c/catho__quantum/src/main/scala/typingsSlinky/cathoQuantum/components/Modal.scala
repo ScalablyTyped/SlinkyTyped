@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonBreakpointsColors
+import typingsSlinky.cathoQuantum.anon.BreakpointsColors
 import typingsSlinky.cathoQuantum.modalMod.ModalProps
 import typingsSlinky.cathoQuantum.modalMod.default
 import scala.scalajs.js
@@ -25,7 +25,7 @@ object Modal {
     @scala.inline
     def onClose(value: SyntheticMouseEvent[HTMLButtonElement] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
     @scala.inline
-    def theme(value: AnonBreakpointsColors): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: BreakpointsColors): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ModalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

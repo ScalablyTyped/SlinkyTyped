@@ -1,19 +1,19 @@
 package typingsSlinky.nivoScatterplot.mod
 
-import typingsSlinky.nivoScatterplot.AnonColor
-import typingsSlinky.nivoScatterplot.AnonFormattedX
+import typingsSlinky.nivoScatterplot.anon.Color
+import typingsSlinky.nivoScatterplot.anon.FormattedX
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Node extends js.Object {
-  var data: AnonFormattedX = js.native
+  var data: FormattedX = js.native
   var id: String = js.native
   var index: Double = js.native
   var serieId: String = js.native
   var size: Double = js.native
-  var style: AnonColor = js.native
+  var style: Color = js.native
   var x: Double = js.native
   var y: Double = js.native
 }
@@ -21,12 +21,12 @@ trait Node extends js.Object {
 object Node {
   @scala.inline
   def apply(
-    data: AnonFormattedX,
+    data: FormattedX,
     id: String,
     index: Double,
     serieId: String,
     size: Double,
-    style: AnonColor,
+    style: Color,
     x: Double,
     y: Double
   ): Node = {
@@ -40,7 +40,7 @@ object Node {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withData(value: AnonFormattedX): Self = {
+    def withData(value: FormattedX): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret
@@ -70,7 +70,7 @@ object Node {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonColor): Self = {
+    def withStyle(value: Color): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

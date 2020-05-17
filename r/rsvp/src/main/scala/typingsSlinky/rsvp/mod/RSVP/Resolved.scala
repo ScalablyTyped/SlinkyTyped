@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Resolved[T] extends _PromiseState[T] {
+trait Resolved[T] extends PromiseState[T] {
   var state: fulfilled = js.native
   var value: T = js.native
 }

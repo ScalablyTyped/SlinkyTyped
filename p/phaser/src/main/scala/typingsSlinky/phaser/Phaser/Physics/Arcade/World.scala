@@ -14,7 +14,6 @@ import typingsSlinky.phaser.Phaser.Tilemaps.DynamicTilemapLayer
 import typingsSlinky.phaser.Phaser.Tilemaps.StaticTilemapLayer
 import typingsSlinky.phaser.Phaser.Tilemaps.Tile
 import typingsSlinky.phaser.Phaser.Types.Physics.Arcade.ArcadeColliderType
-import typingsSlinky.phaser.Phaser.Types.Physics.Arcade.ArcadeWorldConfig
 import typingsSlinky.phaser.Phaser.Types.Physics.Arcade.ArcadeWorldDefaults
 import typingsSlinky.phaser.Phaser.Types.Physics.Arcade.ArcadeWorldTreeMinMax
 import typingsSlinky.phaser.Phaser.Types.Physics.Arcade.CheckCollisionObject
@@ -30,15 +29,8 @@ import scala.scalajs.js.annotation._
   * 
   * An instance of the World belongs to a Phaser.Scene and is accessed via the property `physics.world`.
   */
-@JSGlobal("Phaser.Physics.Arcade.World")
 @js.native
-class World protected () extends EventEmitter {
-  /**
-    * 
-    * @param scene The Scene to which this World instance belongs.
-    * @param config An Arcade Physics Configuration object.
-    */
-  def this(scene: Scene, config: ArcadeWorldConfig) = this()
+trait World extends EventEmitter {
   /**
     * The maximum absolute difference of a Body's per-step velocity and its overlap with another Body that will result in separation on *each axis*.
     * Larger values favor separation.

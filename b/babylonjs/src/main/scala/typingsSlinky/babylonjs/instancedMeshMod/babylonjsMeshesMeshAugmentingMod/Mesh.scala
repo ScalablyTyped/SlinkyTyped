@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.instancedMeshMod.babylonjsMeshesMeshAugmentingMod
 
-import typingsSlinky.babylonjs.AnonData
+import typingsSlinky.babylonjs.anon.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Mesh extends js.Object {
   /** @hidden */
-  var _userInstancedBuffersStorage: AnonData = js.native
+  var _userInstancedBuffersStorage: Data = js.native
   /**
     * Register a custom buffer that will be instanced
     * @see https://doc.babylonjs.com/how_to/how_to_use_instances#custom-buffers
@@ -20,7 +20,7 @@ trait Mesh extends js.Object {
 
 object Mesh {
   @scala.inline
-  def apply(_userInstancedBuffersStorage: AnonData, registerInstancedBuffer: (String, Double) => Unit): Mesh = {
+  def apply(_userInstancedBuffersStorage: Data, registerInstancedBuffer: (String, Double) => Unit): Mesh = {
     val __obj = js.Dynamic.literal(_userInstancedBuffersStorage = _userInstancedBuffersStorage.asInstanceOf[js.Any], registerInstancedBuffer = js.Any.fromFunction2(registerInstancedBuffer))
     __obj.asInstanceOf[Mesh]
   }
@@ -31,7 +31,7 @@ object Mesh {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_userInstancedBuffersStorage(value: AnonData): Self = {
+    def with_userInstancedBuffersStorage(value: Data): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("_userInstancedBuffersStorage")(value.asInstanceOf[js.Any])
         ret

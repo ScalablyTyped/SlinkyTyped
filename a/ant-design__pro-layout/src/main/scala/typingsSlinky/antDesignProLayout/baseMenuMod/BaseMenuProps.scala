@@ -1,7 +1,7 @@
 package typingsSlinky.antDesignProLayout.baseMenuMod
 
 import slinky.core.TagMod
-import typingsSlinky.antDesignProLayout.MenuDataItemisUrlboolean
+import typingsSlinky.antDesignProLayout.anon.MenuDataItemisUrlboolean
 import typingsSlinky.antDesignProLayout.typingsMod.MenuDataItem
 import typingsSlinky.antDesignProLayout.typingsMod.MessageDescriptor
 import typingsSlinky.antDesignProLayout.typingsMod.WithFalse

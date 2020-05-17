@@ -1,7 +1,7 @@
 package typingsSlinky.googleCloudCommon.utilMod
 
-import typingsSlinky.googleCloudCommon.AnonContentType
-import typingsSlinky.googleCloudCommon.AnonOnAuthenticated
+import typingsSlinky.googleCloudCommon.anon.ContentType
+import typingsSlinky.googleCloudCommon.anon.OnAuthenticated
 import typingsSlinky.teenyRequest.mod.Options
 import typingsSlinky.teenyRequest.mod.OptionsWithUri
 import scala.scalajs.js
@@ -18,17 +18,17 @@ trait MakeWritableStreamOptions extends js.Object {
   /**
     * Metadata to send at the head of the request.
     */
-  var metadata: js.UndefOr[AnonContentType] = js.native
+  var metadata: js.UndefOr[ContentType] = js.native
   /**
     * Request object, in the format of a standard Node.js http.request() object.
     */
   var request: js.UndefOr[Options] = js.native
-  def makeAuthenticatedRequest(reqOpts: OptionsWithUri, fnobj: AnonOnAuthenticated): Unit = js.native
+  def makeAuthenticatedRequest(reqOpts: OptionsWithUri, fnobj: OnAuthenticated): Unit = js.native
 }
 
 object MakeWritableStreamOptions {
   @scala.inline
-  def apply(makeAuthenticatedRequest: (OptionsWithUri, AnonOnAuthenticated) => Unit): MakeWritableStreamOptions = {
+  def apply(makeAuthenticatedRequest: (OptionsWithUri, OnAuthenticated) => Unit): MakeWritableStreamOptions = {
     val __obj = js.Dynamic.literal(makeAuthenticatedRequest = js.Any.fromFunction2(makeAuthenticatedRequest))
     __obj.asInstanceOf[MakeWritableStreamOptions]
   }
@@ -39,7 +39,7 @@ object MakeWritableStreamOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMakeAuthenticatedRequest(value: (OptionsWithUri, AnonOnAuthenticated) => Unit): Self = {
+    def withMakeAuthenticatedRequest(value: (OptionsWithUri, OnAuthenticated) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("makeAuthenticatedRequest")(js.Any.fromFunction2(value))
         ret
@@ -57,7 +57,7 @@ object MakeWritableStreamOptions {
         ret
     }
     @scala.inline
-    def withMetadata(value: AnonContentType): Self = {
+    def withMetadata(value: ContentType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
         ret

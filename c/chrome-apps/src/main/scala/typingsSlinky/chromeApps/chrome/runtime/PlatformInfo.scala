@@ -1,10 +1,8 @@
 package typingsSlinky.chromeApps.chrome.runtime
 
-import typingsSlinky.chromeApps.AnonANDROID
-import typingsSlinky.chromeApps.AnonARM
+import typingsSlinky.chromeApps.anon.ANDROID
+import typingsSlinky.chromeApps.anon.ARM
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
-import typingsSlinky.chromeApps.chromeAppsStrings.ANDROID
-import typingsSlinky.chromeApps.chromeAppsStrings.ARM
 import typingsSlinky.chromeApps.chromeAppsStrings.CROS
 import typingsSlinky.chromeApps.chromeAppsStrings.LINUX
 import typingsSlinky.chromeApps.chromeAppsStrings.MAC
@@ -41,10 +39,10 @@ trait PlatformInfo extends js.Object {
     * @see enum PlatformArch
     */
   var arch: ToStringLiteral[
-    AnonARM, 
-    /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+    ARM, 
+    /* keyof chrome-apps.anon.ARM */ typingsSlinky.chromeApps.chromeAppsStrings.ARM | X86_32 | X86_64 | MIPS | MIPS64, 
     Exclude[
-      /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+      /* keyof chrome-apps.anon.ARM */ typingsSlinky.chromeApps.chromeAppsStrings.ARM | X86_32 | X86_64 | MIPS | MIPS64, 
       mips64_ | arm_ | `x86-64` | `x86-32` | mips_
     ]
   ] = js.native
@@ -53,10 +51,10 @@ trait PlatformInfo extends js.Object {
     * @see enum PlatformNaclArch
     */
   var nacl_arch: ToStringLiteral[
-    AnonARM, 
-    /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+    ARM, 
+    /* keyof chrome-apps.anon.ARM */ typingsSlinky.chromeApps.chromeAppsStrings.ARM | X86_32 | X86_64 | MIPS | MIPS64, 
     Exclude[
-      /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+      /* keyof chrome-apps.anon.ARM */ typingsSlinky.chromeApps.chromeAppsStrings.ARM | X86_32 | X86_64 | MIPS | MIPS64, 
       mips64_ | arm_ | `x86-64` | `x86-32` | mips_
     ]
   ] = js.native
@@ -65,10 +63,10 @@ trait PlatformInfo extends js.Object {
     * @see enum PlatformOs
     */
   var os: ToStringLiteral[
-    AnonANDROID, 
-    /* keyof chrome-apps.AnonANDROID */ ANDROID | CROS | LINUX | MAC | OPENBSD | WIN, 
+    ANDROID, 
+    /* keyof chrome-apps.anon.ANDROID */ typingsSlinky.chromeApps.chromeAppsStrings.ANDROID | CROS | LINUX | MAC | OPENBSD | WIN, 
     Exclude[
-      /* keyof chrome-apps.AnonANDROID */ ANDROID | CROS | LINUX | MAC | OPENBSD | WIN, 
+      /* keyof chrome-apps.anon.ANDROID */ typingsSlinky.chromeApps.chromeAppsStrings.ANDROID | CROS | LINUX | MAC | OPENBSD | WIN, 
       linux_ | openbsd_ | android_ | win_ | cros_ | mac_
     ]
   ] = js.native
@@ -78,26 +76,26 @@ object PlatformInfo {
   @scala.inline
   def apply(
     arch: ToStringLiteral[
-      AnonARM, 
-      /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+      ARM, 
+      /* keyof chrome-apps.anon.ARM */ typingsSlinky.chromeApps.chromeAppsStrings.ARM | X86_32 | X86_64 | MIPS | MIPS64, 
       Exclude[
-        /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+        /* keyof chrome-apps.anon.ARM */ typingsSlinky.chromeApps.chromeAppsStrings.ARM | X86_32 | X86_64 | MIPS | MIPS64, 
         mips64_ | arm_ | `x86-64` | `x86-32` | mips_
       ]
     ],
     nacl_arch: ToStringLiteral[
-      AnonARM, 
-      /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+      ARM, 
+      /* keyof chrome-apps.anon.ARM */ typingsSlinky.chromeApps.chromeAppsStrings.ARM | X86_32 | X86_64 | MIPS | MIPS64, 
       Exclude[
-        /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+        /* keyof chrome-apps.anon.ARM */ typingsSlinky.chromeApps.chromeAppsStrings.ARM | X86_32 | X86_64 | MIPS | MIPS64, 
         mips64_ | arm_ | `x86-64` | `x86-32` | mips_
       ]
     ],
     os: ToStringLiteral[
-      AnonANDROID, 
-      /* keyof chrome-apps.AnonANDROID */ ANDROID | CROS | LINUX | MAC | OPENBSD | WIN, 
+      ANDROID, 
+      /* keyof chrome-apps.anon.ANDROID */ typingsSlinky.chromeApps.chromeAppsStrings.ANDROID | CROS | LINUX | MAC | OPENBSD | WIN, 
       Exclude[
-        /* keyof chrome-apps.AnonANDROID */ ANDROID | CROS | LINUX | MAC | OPENBSD | WIN, 
+        /* keyof chrome-apps.anon.ANDROID */ typingsSlinky.chromeApps.chromeAppsStrings.ANDROID | CROS | LINUX | MAC | OPENBSD | WIN, 
         linux_ | openbsd_ | android_ | win_ | cros_ | mac_
       ]
     ]
@@ -114,10 +112,10 @@ object PlatformInfo {
     @scala.inline
     def withArch(
       value: ToStringLiteral[
-          AnonARM, 
-          /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+          ARM, 
+          /* keyof chrome-apps.anon.ARM */ typingsSlinky.chromeApps.chromeAppsStrings.ARM | X86_32 | X86_64 | MIPS | MIPS64, 
           Exclude[
-            /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+            /* keyof chrome-apps.anon.ARM */ typingsSlinky.chromeApps.chromeAppsStrings.ARM | X86_32 | X86_64 | MIPS | MIPS64, 
             mips64_ | arm_ | `x86-64` | `x86-32` | mips_
           ]
         ]
@@ -129,10 +127,10 @@ object PlatformInfo {
     @scala.inline
     def withNacl_arch(
       value: ToStringLiteral[
-          AnonARM, 
-          /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+          ARM, 
+          /* keyof chrome-apps.anon.ARM */ typingsSlinky.chromeApps.chromeAppsStrings.ARM | X86_32 | X86_64 | MIPS | MIPS64, 
           Exclude[
-            /* keyof chrome-apps.AnonARM */ ARM | X86_32 | X86_64 | MIPS | MIPS64, 
+            /* keyof chrome-apps.anon.ARM */ typingsSlinky.chromeApps.chromeAppsStrings.ARM | X86_32 | X86_64 | MIPS | MIPS64, 
             mips64_ | arm_ | `x86-64` | `x86-32` | mips_
           ]
         ]
@@ -144,10 +142,10 @@ object PlatformInfo {
     @scala.inline
     def withOs(
       value: ToStringLiteral[
-          AnonANDROID, 
-          /* keyof chrome-apps.AnonANDROID */ ANDROID | CROS | LINUX | MAC | OPENBSD | WIN, 
+          ANDROID, 
+          /* keyof chrome-apps.anon.ANDROID */ typingsSlinky.chromeApps.chromeAppsStrings.ANDROID | CROS | LINUX | MAC | OPENBSD | WIN, 
           Exclude[
-            /* keyof chrome-apps.AnonANDROID */ ANDROID | CROS | LINUX | MAC | OPENBSD | WIN, 
+            /* keyof chrome-apps.anon.ANDROID */ typingsSlinky.chromeApps.chromeAppsStrings.ANDROID | CROS | LINUX | MAC | OPENBSD | WIN, 
             linux_ | openbsd_ | android_ | win_ | cros_ | mac_
           ]
         ]

@@ -1,5 +1,6 @@
 package typingsSlinky.bitcoinjsLib
 
+import typingsSlinky.bitcoinjsLib.anon.Typeofcheck
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

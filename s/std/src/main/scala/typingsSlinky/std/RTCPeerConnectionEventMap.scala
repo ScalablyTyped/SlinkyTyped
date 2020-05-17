@@ -6,14 +6,14 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait RTCPeerConnectionEventMap extends js.Object {
-  var connectionstatechange: Event_ = js.native
+  var connectionstatechange: org.scalajs.dom.raw.Event = js.native
   var datachannel: org.scalajs.dom.experimental.webrtc.RTCDataChannelEvent = js.native
   var icecandidate: org.scalajs.dom.experimental.webrtc.RTCPeerConnectionIceEvent = js.native
   var icecandidateerror: RTCPeerConnectionIceErrorEvent = js.native
-  var iceconnectionstatechange: Event_ = js.native
-  var icegatheringstatechange: Event_ = js.native
-  var negotiationneeded: Event_ = js.native
-  var signalingstatechange: Event_ = js.native
+  var iceconnectionstatechange: org.scalajs.dom.raw.Event = js.native
+  var icegatheringstatechange: org.scalajs.dom.raw.Event = js.native
+  var negotiationneeded: org.scalajs.dom.raw.Event = js.native
+  var signalingstatechange: org.scalajs.dom.raw.Event = js.native
   var statsended: RTCStatsEvent = js.native
   var track: RTCTrackEvent = js.native
 }
@@ -21,14 +21,14 @@ trait RTCPeerConnectionEventMap extends js.Object {
 object RTCPeerConnectionEventMap {
   @scala.inline
   def apply(
-    connectionstatechange: Event_,
+    connectionstatechange: org.scalajs.dom.raw.Event,
     datachannel: org.scalajs.dom.experimental.webrtc.RTCDataChannelEvent,
     icecandidate: org.scalajs.dom.experimental.webrtc.RTCPeerConnectionIceEvent,
     icecandidateerror: RTCPeerConnectionIceErrorEvent,
-    iceconnectionstatechange: Event_,
-    icegatheringstatechange: Event_,
-    negotiationneeded: Event_,
-    signalingstatechange: Event_,
+    iceconnectionstatechange: org.scalajs.dom.raw.Event,
+    icegatheringstatechange: org.scalajs.dom.raw.Event,
+    negotiationneeded: org.scalajs.dom.raw.Event,
+    signalingstatechange: org.scalajs.dom.raw.Event,
     statsended: RTCStatsEvent,
     track: RTCTrackEvent
   ): RTCPeerConnectionEventMap = {
@@ -42,7 +42,7 @@ object RTCPeerConnectionEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withConnectionstatechange(value: Event_): Self = {
+    def withConnectionstatechange(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("connectionstatechange")(value.asInstanceOf[js.Any])
         ret
@@ -66,25 +66,25 @@ object RTCPeerConnectionEventMap {
         ret
     }
     @scala.inline
-    def withIceconnectionstatechange(value: Event_): Self = {
+    def withIceconnectionstatechange(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("iceconnectionstatechange")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withIcegatheringstatechange(value: Event_): Self = {
+    def withIcegatheringstatechange(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("icegatheringstatechange")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withNegotiationneeded(value: Event_): Self = {
+    def withNegotiationneeded(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("negotiationneeded")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSignalingstatechange(value: Event_): Self = {
+    def withSignalingstatechange(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("signalingstatechange")(value.asInstanceOf[js.Any])
         ret

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("google.earth.KmlStyle")
 @js.native
-class KmlStyle () extends KmlObject {
+trait KmlStyle extends KmlObject {
   /**
     * Specifies the drawing style for balloons.
     */
@@ -33,5 +32,78 @@ class KmlStyle () extends KmlObject {
     * Specifies the drawing style for polygons, including polygon extrusions (which look like the walls of buildings) and line extrusions (which look like solid fences).
     */
   def getPolyStyle(): KmlPolyStyle = js.native
+}
+
+object KmlStyle {
+  @scala.inline
+  def apply(
+    click: KmlMouseEvent => Unit,
+    dblclick: KmlMouseEvent => Unit,
+    equals: KmlObject => Boolean,
+    getBalloonStyle: () => KmlBalloonStyle,
+    getIconStyle: () => KmlIconStyle,
+    getId: () => String,
+    getLabelStyle: () => KmlLabelStyle,
+    getLineStyle: () => KmlLineStyle,
+    getListStyle: () => KmlListStyle,
+    getOwnerDocument: () => KmlDocument,
+    getParentNode: () => KmlObject,
+    getPolyStyle: () => KmlPolyStyle,
+    getType: () => String,
+    getUrl: () => String,
+    mousedown: KmlMouseEvent => Unit,
+    mousemove: KmlMouseEvent => Unit,
+    mouseout: KmlMouseEvent => Unit,
+    mouseover: KmlMouseEvent => Unit,
+    mouseup: KmlMouseEvent => Unit,
+    release: () => Unit
+  ): KmlStyle = {
+    val __obj = js.Dynamic.literal(click = js.Any.fromFunction1(click), dblclick = js.Any.fromFunction1(dblclick), equals = js.Any.fromFunction1(equals), getBalloonStyle = js.Any.fromFunction0(getBalloonStyle), getIconStyle = js.Any.fromFunction0(getIconStyle), getId = js.Any.fromFunction0(getId), getLabelStyle = js.Any.fromFunction0(getLabelStyle), getLineStyle = js.Any.fromFunction0(getLineStyle), getListStyle = js.Any.fromFunction0(getListStyle), getOwnerDocument = js.Any.fromFunction0(getOwnerDocument), getParentNode = js.Any.fromFunction0(getParentNode), getPolyStyle = js.Any.fromFunction0(getPolyStyle), getType = js.Any.fromFunction0(getType), getUrl = js.Any.fromFunction0(getUrl), mousedown = js.Any.fromFunction1(mousedown), mousemove = js.Any.fromFunction1(mousemove), mouseout = js.Any.fromFunction1(mouseout), mouseover = js.Any.fromFunction1(mouseover), mouseup = js.Any.fromFunction1(mouseup), release = js.Any.fromFunction0(release))
+    __obj.asInstanceOf[KmlStyle]
+  }
+  @scala.inline
+  implicit class KmlStyleOps[Self <: KmlStyle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetBalloonStyle(value: () => KmlBalloonStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBalloonStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetIconStyle(value: () => KmlIconStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getIconStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLabelStyle(value: () => KmlLabelStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLabelStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLineStyle(value: () => KmlLineStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLineStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetListStyle(value: () => KmlListStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getListStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPolyStyle(value: () => KmlPolyStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPolyStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

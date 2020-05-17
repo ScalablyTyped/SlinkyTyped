@@ -1,9 +1,9 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonArguments
-import typingsSlinky.echarts.AnonBorderType
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonItemStyleAnonBorderType
+import typingsSlinky.echarts.anon.Arguments
+import typingsSlinky.echarts.anon.BorderType
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.ItemStyleBorderType
 import typingsSlinky.echarts.echarts.EChartOption.SeriesCustom.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -489,7 +489,7 @@ trait SeriesCustom_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-custom.emphasis
     */
-  var emphasis: js.UndefOr[AnonItemStyleAnonBorderType] = js.native
+  var emphasis: js.UndefOr[ItemStyleBorderType] = js.native
   /**
     * Define what is encoded to for each dimension of `data`.
     * For example:
@@ -553,7 +553,7 @@ trait SeriesCustom_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBorderType] = js.native
+  var itemStyle: js.UndefOr[BorderType] = js.native
   /**
     * Whether to enable highlighting chart when
     * [legend](https://echarts.apache.org/en/option.html#legend)
@@ -648,7 +648,7 @@ trait SeriesCustom_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem
     */
-  var renderItem: js.UndefOr[AnonArguments] = js.native
+  var renderItem: js.UndefOr[Arguments] = js.native
   /**
     * When
     * [dataset](https://echarts.apache.org/en/option.html#dataset)
@@ -686,7 +686,7 @@ trait SeriesCustom_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * @default
     * "custom"
@@ -919,7 +919,7 @@ object SeriesCustom_ {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonItemStyleAnonBorderType): Self = {
+    def withEmphasis(value: ItemStyleBorderType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -967,7 +967,7 @@ object SeriesCustom_ {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonBorderType): Self = {
+    def withItemStyle(value: BorderType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -1015,7 +1015,7 @@ object SeriesCustom_ {
         ret
     }
     @scala.inline
-    def withRenderItem(value: AnonArguments): Self = {
+    def withRenderItem(value: Arguments): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderItem")(value.asInstanceOf[js.Any])
         ret
@@ -1051,7 +1051,7 @@ object SeriesCustom_ {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

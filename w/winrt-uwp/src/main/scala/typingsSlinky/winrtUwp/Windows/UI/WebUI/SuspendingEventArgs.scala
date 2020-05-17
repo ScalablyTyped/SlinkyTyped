@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data for an app suspension event. */
-@JSGlobal("Windows.UI.WebUI.SuspendingEventArgs")
 @js.native
-abstract class SuspendingEventArgs () extends js.Object {
+trait SuspendingEventArgs extends js.Object {
   /** Gets the app suspension operation. */
   var suspendingOperation: typingsSlinky.winrtUwp.Windows.ApplicationModel.SuspendingOperation = js.native
+}
+
+object SuspendingEventArgs {
+  @scala.inline
+  def apply(suspendingOperation: typingsSlinky.winrtUwp.Windows.ApplicationModel.SuspendingOperation): SuspendingEventArgs = {
+    val __obj = js.Dynamic.literal(suspendingOperation = suspendingOperation.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SuspendingEventArgs]
+  }
+  @scala.inline
+  implicit class SuspendingEventArgsOps[Self <: SuspendingEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSuspendingOperation(value: typingsSlinky.winrtUwp.Windows.ApplicationModel.SuspendingOperation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suspendingOperation")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
+import typingsSlinky.babylonjs.anon.Distance
 import typingsSlinky.babylonjs.arcRotateCameraInputsManagerMod.ArcRotateCameraInputsManager
 import typingsSlinky.babylonjs.autoRotationBehaviorMod.AutoRotationBehavior
 import typingsSlinky.babylonjs.bouncingBehaviorMod.BouncingBehavior
@@ -237,8 +238,8 @@ object arcRotateCameraMod extends js.Object {
       */
     def focusOn(meshesOrMinMaxVectorAndDistance: js.Array[AbstractMesh]): Unit = js.native
     def focusOn(meshesOrMinMaxVectorAndDistance: js.Array[AbstractMesh], doNotUpdateMaxZ: Boolean): Unit = js.native
-    def focusOn(meshesOrMinMaxVectorAndDistance: AnonDistance): Unit = js.native
-    def focusOn(meshesOrMinMaxVectorAndDistance: AnonDistance, doNotUpdateMaxZ: Boolean): Unit = js.native
+    def focusOn(meshesOrMinMaxVectorAndDistance: Distance): Unit = js.native
+    def focusOn(meshesOrMinMaxVectorAndDistance: Distance, doNotUpdateMaxZ: Boolean): Unit = js.native
     /**
       * Gets the framing behavior of the camera if it has been enabled.
       * @see http://doc.babylonjs.com/how_to/camera_behaviors#framing-behavior

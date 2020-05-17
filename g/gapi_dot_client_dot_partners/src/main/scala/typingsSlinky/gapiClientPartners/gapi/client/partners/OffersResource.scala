@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientPartners.gapi.client.partners
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientPartners.AnonFields
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientPartners.anon.Fields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation._
 trait OffersResource extends js.Object {
   var history: HistoryResource = js.native
   /** Lists the Offers available for the current user */
-  def list(request: AnonFields): Request_[ListOffersResponse] = js.native
+  def list(request: Fields): Request[ListOffersResponse] = js.native
 }
 
 object OffersResource {
   @scala.inline
-  def apply(history: HistoryResource, list: AnonFields => Request_[ListOffersResponse]): OffersResource = {
+  def apply(history: HistoryResource, list: Fields => Request[ListOffersResponse]): OffersResource = {
     val __obj = js.Dynamic.literal(history = history.asInstanceOf[js.Any], list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[OffersResource]
   }
@@ -32,7 +32,7 @@ object OffersResource {
         ret
     }
     @scala.inline
-    def withList(value: AnonFields => Request_[ListOffersResponse]): Self = {
+    def withList(value: Fields => Request[ListOffersResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

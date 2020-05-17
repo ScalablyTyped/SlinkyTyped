@@ -3,8 +3,8 @@ package typingsSlinky.jupyterlabUiComponents.interfacesMod
 import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
-import typingsSlinky.jupyterlabUiComponents.INodeOptionscontainerHTMLAlignContent
-import typingsSlinky.jupyterlabUiComponents.INodeOptionstagdivspan
+import typingsSlinky.jupyterlabUiComponents.anon.INodeOptionscontainerHTMLAlignContent
+import typingsSlinky.jupyterlabUiComponents.anon.INodeOptionstagdivspan
 import typingsSlinky.jupyterlabUiComponents.interfacesMod.Icon.IModel
 import typingsSlinky.phosphorCoreutils.mod.Token
 import scala.scalajs.js

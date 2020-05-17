@@ -1,0 +1,53 @@
+package typingsSlinky.muiDatatables.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Inlined std.Partial<mui-datatables.mui-datatables.MUIDataTableTextLabelsBody> */
+@js.native
+trait PartialMUIDataTableTextLa extends js.Object {
+  var noMatch: js.UndefOr[String] = js.native
+  var toolTip: js.UndefOr[String] = js.native
+}
+
+object PartialMUIDataTableTextLa {
+  @scala.inline
+  def apply(): PartialMUIDataTableTextLa = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[PartialMUIDataTableTextLa]
+  }
+  @scala.inline
+  implicit class PartialMUIDataTableTextLaOps[Self <: PartialMUIDataTableTextLa] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNoMatch(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noMatch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutNoMatch: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("noMatch")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToolTip(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolTip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToolTip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolTip")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

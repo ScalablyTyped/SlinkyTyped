@@ -6,7 +6,7 @@ import typingsSlinky.angularCore.mod.OnChanges
 import typingsSlinky.angularCore.mod.OnDestroy
 import typingsSlinky.angularCore.mod.QueryList
 import typingsSlinky.angularCore.mod.Renderer2
-import typingsSlinky.angularRouter.AnonExact
+import typingsSlinky.angularRouter.anon.Exact
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,13 +19,6 @@ class RouterLinkActive protected ()
      with AfterContentInit {
   def this(router: Router, element: ElementRef[_], renderer: Renderer2) = this()
   def this(router: Router, element: ElementRef[_], renderer: Renderer2, link: RouterLink) = this()
-  def this(
-    router: Router,
-    element: ElementRef[_],
-    renderer: Renderer2,
-    link: js.UndefOr[scala.Nothing],
-    linkWithHref: RouterLinkWithHref
-  ) = this()
   def this(
     router: Router,
     element: ElementRef[_],
@@ -45,7 +38,7 @@ class RouterLinkActive protected ()
   var renderer: js.Any = js.native
   var router: js.Any = js.native
   var routerLinkActive: js.Array[String] | String = js.native
-  var routerLinkActiveOptions: AnonExact = js.native
+  var routerLinkActiveOptions: Exact = js.native
   var subscription: js.Any = js.native
   var update: js.Any = js.native
 }

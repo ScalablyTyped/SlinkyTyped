@@ -4,18 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Class_BufferedStream")
 @js.native
-class ClassBufferedStream protected () extends ClassStream {
-  /**
-  	 * 
-  	 * @brief BufferedStream 构造函数
-  	 * @param stm BufferedStream 的二进制基础流对象
-  	 * 
-  	 * 
-  	 * 
-  	 */
-  def this(stm: ClassStream) = this()
+trait ClassBufferedStream extends ClassStream {
   /**
   	 * class prop 
   	 *

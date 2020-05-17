@@ -1,0 +1,21 @@
+package typingsSlinky.heremaps.global.H.service
+
+import typingsSlinky.heremaps.H.service.MapTileService.Options
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * This class encapsulates a map tile end point of the HERE Map Tile API.
+  */
+@JSGlobal("H.service.MapTileService")
+@js.native
+/**
+  * Constructor
+  * @param opt_options {H.service.MapTileService.Options=}
+  */
+class MapTileService ()
+  extends typingsSlinky.heremaps.H.service.MapTileService {
+  def this(opt_options: Options) = this()
+}
+

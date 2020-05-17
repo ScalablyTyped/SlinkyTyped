@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientCivicinfo.gapi.client.civicinfo
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientCivicinfo.AnonAlt
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientCivicinfo.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DivisionsResource extends js.Object {
   /** Searches for political divisions by their natural name or OCD ID. */
-  def search(request: AnonAlt): Request_[DivisionSearchResponse] = js.native
+  def search(request: Alt): Request[DivisionSearchResponse] = js.native
 }
 
 object DivisionsResource {
   @scala.inline
-  def apply(search: AnonAlt => Request_[DivisionSearchResponse]): DivisionsResource = {
+  def apply(search: Alt => Request[DivisionSearchResponse]): DivisionsResource = {
     val __obj = js.Dynamic.literal(search = js.Any.fromFunction1(search))
     __obj.asInstanceOf[DivisionsResource]
   }
@@ -25,7 +25,7 @@ object DivisionsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSearch(value: AnonAlt => Request_[DivisionSearchResponse]): Self = {
+    def withSearch(value: Alt => Request[DivisionSearchResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("search")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.notifyjs.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,11 +15,11 @@ trait Notify extends js.Object {
     * Remove all event listener.
     */
   def destroy(): Unit = js.native
-  def handleEvent(e: Event_): Unit = js.native
+  def handleEvent(e: Event): Unit = js.native
   def onClickNotification(): Unit = js.native
   def onCloseNotification(): Unit = js.native
   def onErrorNotification(): Unit = js.native
-  def onShowNotification(e: Event_): Unit = js.native
+  def onShowNotification(e: Event): Unit = js.native
   /**
     * Show the notification.
     */
@@ -31,11 +31,11 @@ object Notify {
   def apply(
     close: () => Unit,
     destroy: () => Unit,
-    handleEvent: Event_ => Unit,
+    handleEvent: Event => Unit,
     onClickNotification: () => Unit,
     onCloseNotification: () => Unit,
     onErrorNotification: () => Unit,
-    onShowNotification: Event_ => Unit,
+    onShowNotification: Event => Unit,
     show: () => Unit
   ): Notify = {
     val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), destroy = js.Any.fromFunction0(destroy), handleEvent = js.Any.fromFunction1(handleEvent), onClickNotification = js.Any.fromFunction0(onClickNotification), onCloseNotification = js.Any.fromFunction0(onCloseNotification), onErrorNotification = js.Any.fromFunction0(onErrorNotification), onShowNotification = js.Any.fromFunction1(onShowNotification), show = js.Any.fromFunction0(show))
@@ -60,7 +60,7 @@ object Notify {
         ret
     }
     @scala.inline
-    def withHandleEvent(value: Event_ => Unit): Self = {
+    def withHandleEvent(value: Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("handleEvent")(js.Any.fromFunction1(value))
         ret
@@ -84,7 +84,7 @@ object Notify {
         ret
     }
     @scala.inline
-    def withOnShowNotification(value: Event_ => Unit): Self = {
+    def withOnShowNotification(value: Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onShowNotification")(js.Any.fromFunction1(value))
         ret

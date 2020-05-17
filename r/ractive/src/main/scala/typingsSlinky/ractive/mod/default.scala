@@ -2,7 +2,7 @@ package typingsSlinky.ractive.mod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.ractive.AnonInstantiable
+import typingsSlinky.ractive.anon.Instantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ object default extends js.Object {
   /** The parent constructor used to create this constructor. */
   var Parent: Static[Ractive[Ractive[_]]] = js.native
   /** The Ractive constructor used to create this constructor. */
-  var Ractive: AnonInstantiable = js.native
+  var Ractive: Instantiable = js.native
   val VERSION: String = js.native
   var adaptors: Registry[Adaptor] = js.native
   var components: Registry[Component] = js.native

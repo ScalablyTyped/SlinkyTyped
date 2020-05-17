@@ -1,7 +1,7 @@
 package typingsSlinky.stripe.mod.events
 
-import typingsSlinky.stripe.AnonId
-import typingsSlinky.stripe.AnonPreviousattributes
+import typingsSlinky.stripe.anon.Id
+import typingsSlinky.stripe.anon.Previousattributes
 import typingsSlinky.stripe.mod.IResourceObject
 import typingsSlinky.stripe.stripeStrings.event
 import scala.scalajs.js
@@ -24,7 +24,7 @@ trait IEvent extends IResourceObject {
   /**
     * Hash containing data associated with the event.
     */
-  var data: AnonPreviousattributes = js.native
+  var data: Previousattributes = js.native
   var livemode: Boolean = js.native
   /**
     * Value is "event"
@@ -40,7 +40,7 @@ trait IEvent extends IResourceObject {
   /**
     * Information on the API request that instigated the event.
     */
-  var request: AnonId = js.native
+  var request: Id = js.native
   /**
     * Description of the event: e.g. invoice.created, charge.refunded, etc.
     */
@@ -52,12 +52,12 @@ object IEvent {
   def apply(
     api_version: String,
     created: Double,
-    data: AnonPreviousattributes,
+    data: Previousattributes,
     id: String,
     livemode: Boolean,
     `object`: event,
     pending_webhooks: Double,
-    request: AnonId,
+    request: Id,
     `type`: String
   ): IEvent = {
     val __obj = js.Dynamic.literal(api_version = api_version.asInstanceOf[js.Any], created = created.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], livemode = livemode.asInstanceOf[js.Any], pending_webhooks = pending_webhooks.asInstanceOf[js.Any], request = request.asInstanceOf[js.Any])
@@ -84,7 +84,7 @@ object IEvent {
         ret
     }
     @scala.inline
-    def withData(value: AnonPreviousattributes): Self = {
+    def withData(value: Previousattributes): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret
@@ -108,7 +108,7 @@ object IEvent {
         ret
     }
     @scala.inline
-    def withRequest(value: AnonId): Self = {
+    def withRequest(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
         ret

@@ -9,9 +9,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents an audio device output node. */
-@JSGlobal("Windows.Media.Audio.AudioDeviceOutputNode")
 @js.native
-abstract class AudioDeviceOutputNode () extends js.Object {
+trait AudioDeviceOutputNode extends js.Object {
   /** Gets or sets a value indicating if the audio device output node consumes input. */
   var consumeInput: Boolean = js.native
   /** Gets information about the audio device. */
@@ -40,5 +39,99 @@ abstract class AudioDeviceOutputNode () extends js.Object {
   def start(): Unit = js.native
   /** Stops the audio device output node. */
   def stop(): Unit = js.native
+}
+
+object AudioDeviceOutputNode {
+  @scala.inline
+  def apply(
+    close: () => Unit,
+    consumeInput: Boolean,
+    device: DeviceInformation,
+    disableEffectsByDefinition: IAudioEffectDefinition => Unit,
+    effectDefinitions: IVector[IAudioEffectDefinition],
+    enableEffectsByDefinition: IAudioEffectDefinition => Unit,
+    encodingProperties: AudioEncodingProperties,
+    outgoingGain: Double,
+    reset: () => Unit,
+    start: () => Unit,
+    stop: () => Unit
+  ): AudioDeviceOutputNode = {
+    val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), consumeInput = consumeInput.asInstanceOf[js.Any], device = device.asInstanceOf[js.Any], disableEffectsByDefinition = js.Any.fromFunction1(disableEffectsByDefinition), effectDefinitions = effectDefinitions.asInstanceOf[js.Any], enableEffectsByDefinition = js.Any.fromFunction1(enableEffectsByDefinition), encodingProperties = encodingProperties.asInstanceOf[js.Any], outgoingGain = outgoingGain.asInstanceOf[js.Any], reset = js.Any.fromFunction0(reset), start = js.Any.fromFunction0(start), stop = js.Any.fromFunction0(stop))
+    __obj.asInstanceOf[AudioDeviceOutputNode]
+  }
+  @scala.inline
+  implicit class AudioDeviceOutputNodeOps[Self <: AudioDeviceOutputNode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withConsumeInput(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("consumeInput")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDevice(value: DeviceInformation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("device")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisableEffectsByDefinition(value: IAudioEffectDefinition => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableEffectsByDefinition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEffectDefinitions(value: IVector[IAudioEffectDefinition]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("effectDefinitions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnableEffectsByDefinition(value: IAudioEffectDefinition => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableEffectsByDefinition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEncodingProperties(value: AudioEncodingProperties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encodingProperties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOutgoingGain(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outgoingGain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReset(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStart(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStop(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

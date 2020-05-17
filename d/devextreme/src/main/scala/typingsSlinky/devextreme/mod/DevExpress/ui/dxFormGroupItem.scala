@@ -1,14 +1,14 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonFormData
+import typingsSlinky.devextreme.anon.FormData
 import typingsSlinky.devextreme.devextremeStrings.button
 import typingsSlinky.devextreme.devextremeStrings.empty
 import typingsSlinky.devextreme.devextremeStrings.group
 import typingsSlinky.devextreme.devextremeStrings.simple
 import typingsSlinky.devextreme.devextremeStrings.tabbed
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +39,7 @@ trait dxFormGroupItem extends js.Object {
   var name: js.UndefOr[String] = js.native
   /** A template to be used for rendering a group item. */
   var template: js.UndefOr[
-    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* data */ AnonFormData, /* itemElement */ dxElement, String | Element | JQuery])
+    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* data */ FormData, /* itemElement */ dxElement, String | Element | JQuery])
   ] = js.native
   /** Specifies whether or not the current form item is visible. */
   var visible: js.UndefOr[Boolean] = js.native
@@ -172,7 +172,7 @@ object dxFormGroupItem {
         ret
     }
     @scala.inline
-    def withTemplateFunction2(value: (/* data */ AnonFormData, /* itemElement */ dxElement) => String | Element | JQuery): Self = {
+    def withTemplateFunction2(value: (/* data */ FormData, /* itemElement */ dxElement) => String | Element | JQuery): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.Any.fromFunction2(value))
         ret
@@ -185,7 +185,7 @@ object dxFormGroupItem {
     }
     @scala.inline
     def withTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* data */ AnonFormData, /* itemElement */ dxElement, String | Element | JQuery])
+      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* data */ FormData, /* itemElement */ dxElement, String | Element | JQuery])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])

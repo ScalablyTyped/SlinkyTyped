@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeMaps.components
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -29,13 +29,13 @@ import typingsSlinky.reactNative.reactNativeStrings.polite
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.yes
-import typingsSlinky.reactNativeMaps.Anon0
-import typingsSlinky.reactNativeMaps.AnonAction
-import typingsSlinky.reactNativeMaps.AnonActionId
-import typingsSlinky.reactNativeMaps.AnonCoordinate
-import typingsSlinky.reactNativeMaps.AnonId
-import typingsSlinky.reactNativeMaps.AnonMarkers
-import typingsSlinky.reactNativeMaps.AnonName
+import typingsSlinky.reactNativeMaps.anon.Action
+import typingsSlinky.reactNativeMaps.anon.ActionId
+import typingsSlinky.reactNativeMaps.anon.Coordinate
+import typingsSlinky.reactNativeMaps.anon.Id
+import typingsSlinky.reactNativeMaps.anon.Markers
+import typingsSlinky.reactNativeMaps.anon.Name
+import typingsSlinky.reactNativeMaps.anon.`0`
 import typingsSlinky.reactNativeMaps.mod.Camera
 import typingsSlinky.reactNativeMaps.mod.EdgeInsets
 import typingsSlinky.reactNativeMaps.mod.EdgePadding
@@ -144,39 +144,39 @@ class SharedBuilder_MapViewProps_1186437086[R <: js.Object] (val args: js.Array[
   @scala.inline
   def onAccessibilityTap(value: () => Unit): this.type = set("onAccessibilityTap", js.Any.fromFunction0(value))
   @scala.inline
-  def onCalloutPress(value: SyntheticEvent[NodeHandle, Anon0 with AnonCoordinate] => Unit): this.type = set("onCalloutPress", js.Any.fromFunction1(value))
+  def onCalloutPress(value: SyntheticEvent[NodeHandle, `0` with Coordinate] => Unit): this.type = set("onCalloutPress", js.Any.fromFunction1(value))
   @scala.inline
-  def onKmlReady(value: SyntheticEvent[NodeHandle, AnonMarkers] => Unit): this.type = set("onKmlReady", js.Any.fromFunction1(value))
+  def onKmlReady(value: SyntheticEvent[NodeHandle, Markers] => Unit): this.type = set("onKmlReady", js.Any.fromFunction1(value))
   @scala.inline
   def onLayout(value: /* event */ LayoutChangeEvent => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
   @scala.inline
-  def onLongPress(value: SyntheticEvent[NodeHandle, js.Object with AnonCoordinate] => Unit): this.type = set("onLongPress", js.Any.fromFunction1(value))
+  def onLongPress(value: SyntheticEvent[NodeHandle, js.Object with Coordinate] => Unit): this.type = set("onLongPress", js.Any.fromFunction1(value))
   @scala.inline
   def onMagicTap(value: () => Unit): this.type = set("onMagicTap", js.Any.fromFunction0(value))
   @scala.inline
   def onMapReady(value: () => Unit): this.type = set("onMapReady", js.Any.fromFunction0(value))
   @scala.inline
-  def onMarkerDeselect(value: SyntheticEvent[NodeHandle, AnonActionId with AnonCoordinate] => Unit): this.type = set("onMarkerDeselect", js.Any.fromFunction1(value))
+  def onMarkerDeselect(value: SyntheticEvent[NodeHandle, ActionId with Coordinate] => Unit): this.type = set("onMarkerDeselect", js.Any.fromFunction1(value))
   @scala.inline
-  def onMarkerDrag(value: SyntheticEvent[NodeHandle, js.Object with AnonCoordinate] => Unit): this.type = set("onMarkerDrag", js.Any.fromFunction1(value))
+  def onMarkerDrag(value: SyntheticEvent[NodeHandle, js.Object with Coordinate] => Unit): this.type = set("onMarkerDrag", js.Any.fromFunction1(value))
   @scala.inline
-  def onMarkerDragEnd(value: SyntheticEvent[NodeHandle, js.Object with AnonCoordinate] => Unit): this.type = set("onMarkerDragEnd", js.Any.fromFunction1(value))
+  def onMarkerDragEnd(value: SyntheticEvent[NodeHandle, js.Object with Coordinate] => Unit): this.type = set("onMarkerDragEnd", js.Any.fromFunction1(value))
   @scala.inline
-  def onMarkerDragStart(value: SyntheticEvent[NodeHandle, js.Object with AnonCoordinate] => Unit): this.type = set("onMarkerDragStart", js.Any.fromFunction1(value))
+  def onMarkerDragStart(value: SyntheticEvent[NodeHandle, js.Object with Coordinate] => Unit): this.type = set("onMarkerDragStart", js.Any.fromFunction1(value))
   @scala.inline
-  def onMarkerPress(value: SyntheticEvent[NodeHandle, AnonAction with AnonCoordinate] => Unit): this.type = set("onMarkerPress", js.Any.fromFunction1(value))
+  def onMarkerPress(value: SyntheticEvent[NodeHandle, Action with Coordinate] => Unit): this.type = set("onMarkerPress", js.Any.fromFunction1(value))
   @scala.inline
-  def onMarkerSelect(value: SyntheticEvent[NodeHandle, AnonId with AnonCoordinate] => Unit): this.type = set("onMarkerSelect", js.Any.fromFunction1(value))
+  def onMarkerSelect(value: SyntheticEvent[NodeHandle, Id with Coordinate] => Unit): this.type = set("onMarkerSelect", js.Any.fromFunction1(value))
   @scala.inline
   def onMoveShouldSetResponder(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onMoveShouldSetResponder", js.Any.fromFunction1(value))
   @scala.inline
   def onMoveShouldSetResponderCapture(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onMoveShouldSetResponderCapture", js.Any.fromFunction1(value))
   @scala.inline
-  def onPanDrag(value: SyntheticEvent[NodeHandle, js.Object with AnonCoordinate] => Unit): this.type = set("onPanDrag", js.Any.fromFunction1(value))
+  def onPanDrag(value: SyntheticEvent[NodeHandle, js.Object with Coordinate] => Unit): this.type = set("onPanDrag", js.Any.fromFunction1(value))
   @scala.inline
-  def onPoiClick(value: SyntheticEvent[NodeHandle, AnonName with AnonCoordinate] => Unit): this.type = set("onPoiClick", js.Any.fromFunction1(value))
+  def onPoiClick(value: SyntheticEvent[NodeHandle, Name with Coordinate] => Unit): this.type = set("onPoiClick", js.Any.fromFunction1(value))
   @scala.inline
-  def onPress(value: SyntheticEvent[NodeHandle, js.Object with AnonCoordinate] => Unit): this.type = set("onPress", js.Any.fromFunction1(value))
+  def onPress(value: SyntheticEvent[NodeHandle, js.Object with Coordinate] => Unit): this.type = set("onPress", js.Any.fromFunction1(value))
   @scala.inline
   def onRegionChange(value: /* region */ Region => Unit): this.type = set("onRegionChange", js.Any.fromFunction1(value))
   @scala.inline

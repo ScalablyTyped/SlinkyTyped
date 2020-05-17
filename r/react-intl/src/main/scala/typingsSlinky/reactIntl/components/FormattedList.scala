@@ -3,7 +3,7 @@ package typingsSlinky.reactIntl.components
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactIntl.IntlListFormatOptionsvalu
+import typingsSlinky.reactIntl.anon.IntlListFormatOptionsvalu
 import typingsSlinky.reactIntl.reactIntlStrings.`best fit`
 import typingsSlinky.reactIntl.reactIntlStrings.conjunction
 import typingsSlinky.reactIntl.reactIntlStrings.disjunction

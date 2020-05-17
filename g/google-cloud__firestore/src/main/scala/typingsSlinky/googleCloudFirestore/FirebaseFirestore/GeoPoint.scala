@@ -4,16 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("FirebaseFirestore.GeoPoint")
 @js.native
-class GeoPoint protected () extends js.Object {
-  /**
-    * Creates a new immutable GeoPoint object with the provided latitude and
-    * longitude values.
-    * @param latitude The latitude as number between -90 and 90.
-    * @param longitude The longitude as number between -180 and 180.
-    */
-  def this(latitude: Double, longitude: Double) = this()
+trait GeoPoint extends js.Object {
   val latitude: Double = js.native
   val longitude: Double = js.native
   /**
@@ -23,5 +15,39 @@ class GeoPoint protected () extends js.Object {
     * @return true if this `GeoPoint` is equal to the provided one.
     */
   def isEqual(other: GeoPoint): Boolean = js.native
+}
+
+object GeoPoint {
+  @scala.inline
+  def apply(isEqual: GeoPoint => Boolean, latitude: Double, longitude: Double): GeoPoint = {
+    val __obj = js.Dynamic.literal(isEqual = js.Any.fromFunction1(isEqual), latitude = latitude.asInstanceOf[js.Any], longitude = longitude.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GeoPoint]
+  }
+  @scala.inline
+  implicit class GeoPointOps[Self <: GeoPoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsEqual(value: GeoPoint => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEqual")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLatitude(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("latitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLongitude(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("longitude")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

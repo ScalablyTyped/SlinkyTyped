@@ -1,16 +1,16 @@
 package typingsSlinky.pollyjsCore.mod
 
-import typingsSlinky.pollyjsCore.AnonBody
-import typingsSlinky.pollyjsCore.AnonDictkey
-import typingsSlinky.pollyjsCore.AnonFs
-import typingsSlinky.pollyjsCore.TypeofPersister
+import typingsSlinky.pollyjsCore.anon.Body
+import typingsSlinky.pollyjsCore.anon.Dictkey
+import typingsSlinky.pollyjsCore.anon.Fs
+import typingsSlinky.pollyjsCore.anon.TypeofPersister
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait PollyConfig extends js.Object {
-  var adapterOptions: js.UndefOr[AnonDictkey] = js.native
+  var adapterOptions: js.UndefOr[Dictkey] = js.native
   var adapters: js.UndefOr[
     js.Array[
       String | (/* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Adapter */ _)
@@ -19,10 +19,10 @@ trait PollyConfig extends js.Object {
   var expiresIn: js.UndefOr[String | Null] = js.native
   var expiryStrategy: js.UndefOr[EXPIRY_STRATEGY] = js.native
   var logging: js.UndefOr[Boolean] = js.native
-  var matchRequestsBy: js.UndefOr[AnonBody] = js.native
+  var matchRequestsBy: js.UndefOr[Body] = js.native
   var mode: js.UndefOr[MODE] = js.native
   var persister: js.UndefOr[String | TypeofPersister] = js.native
-  var persisterOptions: js.UndefOr[AnonFs] = js.native
+  var persisterOptions: js.UndefOr[Fs] = js.native
   var recordFailedRequests: js.UndefOr[Boolean] = js.native
   var recordIfMissing: js.UndefOr[Boolean] = js.native
   var timing: js.UndefOr[
@@ -43,7 +43,7 @@ object PollyConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAdapterOptions(value: AnonDictkey): Self = {
+    def withAdapterOptions(value: Dictkey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("adapterOptions")(value.asInstanceOf[js.Any])
         ret
@@ -113,7 +113,7 @@ object PollyConfig {
         ret
     }
     @scala.inline
-    def withMatchRequestsBy(value: AnonBody): Self = {
+    def withMatchRequestsBy(value: Body): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("matchRequestsBy")(value.asInstanceOf[js.Any])
         ret
@@ -149,7 +149,7 @@ object PollyConfig {
         ret
     }
     @scala.inline
-    def withPersisterOptions(value: AnonFs): Self = {
+    def withPersisterOptions(value: Fs): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("persisterOptions")(value.asInstanceOf[js.Any])
         ret

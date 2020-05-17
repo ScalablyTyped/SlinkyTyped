@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.OmitActivityIndicatorset
+import typingsSlinky.tabris.anon.OmitActivityIndicatorset
 import typingsSlinky.tabris.tabrisStrings.set
 import typingsSlinky.tabris.tabrisStrings.tintColor
 import scala.scalajs.js

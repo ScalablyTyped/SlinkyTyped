@@ -2,7 +2,7 @@ package typingsSlinky.antDesignPro.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignPro.AnonY
+import typingsSlinky.antDesignPro.anon.Y
 import typingsSlinky.antDesignPro.miniAreaMod.IAxis
 import typingsSlinky.antDesignPro.miniAreaMod.IMiniAreaProps
 import typingsSlinky.antDesignPro.miniAreaMod.default
@@ -35,7 +35,7 @@ object MiniArea {
   
   def withProps(p: IMiniAreaProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(data: js.Array[AnonY], height: Double): Builder = {
+  def apply(data: js.Array[Y], height: Double): Builder = {
     val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[IMiniAreaProps]))
   }

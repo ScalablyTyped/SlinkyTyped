@@ -5,7 +5,7 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.reactFocusLock.AnonChildrenChildrenType
+import typingsSlinky.reactFocusLock.anon.ChildrenChildrenType
 import typingsSlinky.reactFocusLock.reactFocusLockStrings.tail
 import typingsSlinky.std.FocusOptions
 import scala.scalajs.js
@@ -102,13 +102,13 @@ object ReactFocusLockProps {
         ret
     }
     @scala.inline
-    def withAsFunctionComponent(value: ReactComponentClass[LockProps with AnonChildrenChildrenType[ChildrenType]]): Self[ChildrenType, LockProps] = {
+    def withAsFunctionComponent(value: ReactComponentClass[LockProps with ChildrenChildrenType[ChildrenType]]): Self[ChildrenType, LockProps] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withAsComponentClass(value: ReactComponentClass[LockProps with AnonChildrenChildrenType[ChildrenType]]): Self[ChildrenType, LockProps] = {
+    def withAsComponentClass(value: ReactComponentClass[LockProps with ChildrenChildrenType[ChildrenType]]): Self[ChildrenType, LockProps] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
         ret

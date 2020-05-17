@@ -10,8 +10,8 @@ import typingsSlinky.flatpickr.flatpickrStrings.range
 import typingsSlinky.flatpickr.flatpickrStrings.single
 import typingsSlinky.flatpickr.flatpickrStrings.static
 import typingsSlinky.flatpickr.flatpickrStrings.time
-import typingsSlinky.flatpickr.globalsMod._Global_.Date
-import typingsSlinky.flatpickr.globalsMod._Global_.HTMLElement
+import typingsSlinky.flatpickr.globalsMod.global.Date
+import typingsSlinky.flatpickr.globalsMod.global.HTMLElement
 import typingsSlinky.flatpickr.instanceMod.Instance
 import typingsSlinky.flatpickr.localeMod.CustomLocale
 import typingsSlinky.flatpickr.localeMod.Locale

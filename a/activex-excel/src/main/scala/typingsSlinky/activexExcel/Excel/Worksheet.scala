@@ -11,9 +11,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.activexExcel.Excel.AddSheetResult because Already inherited */ @JSGlobal("Excel.Worksheet")
-@js.native
-class Worksheet protected () extends Sheet {
+- typingsSlinky.activexExcel.Excel.AddSheetResult because Already inherited */ @js.native
+trait Worksheet extends Sheet {
   val Application: typingsSlinky.activexExcel.Excel.Application = js.native
   val AutoFilter: typingsSlinky.activexExcel.Excel.AutoFilter = js.native
   var AutoFilterMode: Boolean = js.native
@@ -198,26 +197,21 @@ class Worksheet protected () extends Sheet {
     NoHTMLFormatting: js.UndefOr[Boolean]
   ): Unit = js.native
   @JSName("PasteSpecial")
-  def PasteSpecial_true(Format: js.UndefOr[scala.Nothing], Link: js.UndefOr[scala.Nothing], DisplayAsIcon: `true`): Unit = js.native
+  def PasteSpecial_true(Format: js.UndefOr[String], Link: js.UndefOr[Boolean], DisplayAsIcon: `true`): Unit = js.native
+  @JSName("PasteSpecial")
+  def PasteSpecial_true(Format: js.UndefOr[String], Link: js.UndefOr[Boolean], DisplayAsIcon: `true`, IconFileName: String): Unit = js.native
   @JSName("PasteSpecial")
   def PasteSpecial_true(
-    Format: js.UndefOr[scala.Nothing],
-    Link: js.UndefOr[scala.Nothing],
-    DisplayAsIcon: `true`,
-    IconFileName: String
-  ): Unit = js.native
-  @JSName("PasteSpecial")
-  def PasteSpecial_true(
-    Format: js.UndefOr[scala.Nothing],
-    Link: js.UndefOr[scala.Nothing],
+    Format: js.UndefOr[String],
+    Link: js.UndefOr[Boolean],
     DisplayAsIcon: `true`,
     IconFileName: String,
     IconIndex: Double
   ): Unit = js.native
   @JSName("PasteSpecial")
   def PasteSpecial_true(
-    Format: js.UndefOr[scala.Nothing],
-    Link: js.UndefOr[scala.Nothing],
+    Format: js.UndefOr[String],
+    Link: js.UndefOr[Boolean],
     DisplayAsIcon: `true`,
     IconFileName: String,
     IconIndex: Double,
@@ -225,95 +219,8 @@ class Worksheet protected () extends Sheet {
   ): Unit = js.native
   @JSName("PasteSpecial")
   def PasteSpecial_true(
-    Format: js.UndefOr[scala.Nothing],
-    Link: js.UndefOr[scala.Nothing],
-    DisplayAsIcon: `true`,
-    IconFileName: String,
-    IconIndex: Double,
-    IconLabel: String,
-    NoHTMLFormatting: Boolean
-  ): Unit = js.native
-  @JSName("PasteSpecial")
-  def PasteSpecial_true(Format: js.UndefOr[scala.Nothing], Link: Boolean, DisplayAsIcon: `true`): Unit = js.native
-  @JSName("PasteSpecial")
-  def PasteSpecial_true(Format: js.UndefOr[scala.Nothing], Link: Boolean, DisplayAsIcon: `true`, IconFileName: String): Unit = js.native
-  @JSName("PasteSpecial")
-  def PasteSpecial_true(
-    Format: js.UndefOr[scala.Nothing],
-    Link: Boolean,
-    DisplayAsIcon: `true`,
-    IconFileName: String,
-    IconIndex: Double
-  ): Unit = js.native
-  @JSName("PasteSpecial")
-  def PasteSpecial_true(
-    Format: js.UndefOr[scala.Nothing],
-    Link: Boolean,
-    DisplayAsIcon: `true`,
-    IconFileName: String,
-    IconIndex: Double,
-    IconLabel: String
-  ): Unit = js.native
-  @JSName("PasteSpecial")
-  def PasteSpecial_true(
-    Format: js.UndefOr[scala.Nothing],
-    Link: Boolean,
-    DisplayAsIcon: `true`,
-    IconFileName: String,
-    IconIndex: Double,
-    IconLabel: String,
-    NoHTMLFormatting: Boolean
-  ): Unit = js.native
-  @JSName("PasteSpecial")
-  def PasteSpecial_true(Format: String, Link: js.UndefOr[scala.Nothing], DisplayAsIcon: `true`): Unit = js.native
-  @JSName("PasteSpecial")
-  def PasteSpecial_true(Format: String, Link: js.UndefOr[scala.Nothing], DisplayAsIcon: `true`, IconFileName: String): Unit = js.native
-  @JSName("PasteSpecial")
-  def PasteSpecial_true(
-    Format: String,
-    Link: js.UndefOr[scala.Nothing],
-    DisplayAsIcon: `true`,
-    IconFileName: String,
-    IconIndex: Double
-  ): Unit = js.native
-  @JSName("PasteSpecial")
-  def PasteSpecial_true(
-    Format: String,
-    Link: js.UndefOr[scala.Nothing],
-    DisplayAsIcon: `true`,
-    IconFileName: String,
-    IconIndex: Double,
-    IconLabel: String
-  ): Unit = js.native
-  @JSName("PasteSpecial")
-  def PasteSpecial_true(
-    Format: String,
-    Link: js.UndefOr[scala.Nothing],
-    DisplayAsIcon: `true`,
-    IconFileName: String,
-    IconIndex: Double,
-    IconLabel: String,
-    NoHTMLFormatting: Boolean
-  ): Unit = js.native
-  @JSName("PasteSpecial")
-  def PasteSpecial_true(Format: String, Link: Boolean, DisplayAsIcon: `true`): Unit = js.native
-  @JSName("PasteSpecial")
-  def PasteSpecial_true(Format: String, Link: Boolean, DisplayAsIcon: `true`, IconFileName: String): Unit = js.native
-  @JSName("PasteSpecial")
-  def PasteSpecial_true(Format: String, Link: Boolean, DisplayAsIcon: `true`, IconFileName: String, IconIndex: Double): Unit = js.native
-  @JSName("PasteSpecial")
-  def PasteSpecial_true(
-    Format: String,
-    Link: Boolean,
-    DisplayAsIcon: `true`,
-    IconFileName: String,
-    IconIndex: Double,
-    IconLabel: String
-  ): Unit = js.native
-  @JSName("PasteSpecial")
-  def PasteSpecial_true(
-    Format: String,
-    Link: Boolean,
+    Format: js.UndefOr[String],
+    Link: js.UndefOr[Boolean],
     DisplayAsIcon: `true`,
     IconFileName: String,
     IconIndex: Double,

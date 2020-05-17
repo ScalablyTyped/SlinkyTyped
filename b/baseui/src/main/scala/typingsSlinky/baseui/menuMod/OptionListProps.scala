@@ -2,7 +2,7 @@ package typingsSlinky.baseui.menuMod
 
 import org.scalajs.dom.raw.MouseEvent
 import slinky.core.TagMod
-import typingsSlinky.baseui.AnonListItem
+import typingsSlinky.baseui.anon.ListItem
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import scala.scalajs.js
@@ -18,7 +18,7 @@ trait OptionListProps extends BaseMenuPropsT {
   var getChildMenu: js.UndefOr[js.Function1[/* item */ js.Any, TagMod[Any]]] = js.native
   var item: js.Any = js.native
   var onMouseEnter: js.UndefOr[js.Function1[/* event */ MouseEvent, _]] = js.native
-  var overrides: js.UndefOr[AnonListItem] = js.native
+  var overrides: js.UndefOr[ListItem] = js.native
   var resetMenu: js.UndefOr[js.Function0[Unit]] = js.native
   var size: js.UndefOr[default_ | compact] = js.native
   def getItemLabel(item: js.Any): TagMod[Any] = js.native
@@ -97,7 +97,7 @@ object OptionListProps {
         ret
     }
     @scala.inline
-    def withOverrides(value: AnonListItem): Self = {
+    def withOverrides(value: ListItem): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
         ret

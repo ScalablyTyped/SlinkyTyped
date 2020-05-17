@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Infragistics.EditorProviderBoolean")
 @js.native
-class EditorProviderBoolean () extends js.Object {
+trait EditorProviderBoolean extends js.Object {
   def createEditor(
     callbacks: js.Object,
     key: js.Object,
@@ -27,5 +26,113 @@ class EditorProviderBoolean () extends js.Object {
   def textChanged(evt: js.Object, ui: js.Object): Unit = js.native
   def validator(): Unit = js.native
   def valueChanged(evt: js.Object, ui: js.Object): Unit = js.native
+}
+
+object EditorProviderBoolean {
+  @scala.inline
+  def apply(
+    createEditor: (js.Object, js.Object, js.Object, js.Object, js.Object, js.Object) => Unit,
+    destroy: () => Unit,
+    getValue: () => Unit,
+    isValid: () => Unit,
+    keyDown: (js.Object, js.Object) => Unit,
+    refreshValue: () => Unit,
+    removeFromParent: () => Unit,
+    setFocus: () => Unit,
+    setSize: (js.Object, js.Object) => Unit,
+    setValue: js.Object => Unit,
+    textChanged: (js.Object, js.Object) => Unit,
+    validator: () => Unit,
+    valueChanged: (js.Object, js.Object) => Unit
+  ): EditorProviderBoolean = {
+    val __obj = js.Dynamic.literal(createEditor = js.Any.fromFunction6(createEditor), destroy = js.Any.fromFunction0(destroy), getValue = js.Any.fromFunction0(getValue), isValid = js.Any.fromFunction0(isValid), keyDown = js.Any.fromFunction2(keyDown), refreshValue = js.Any.fromFunction0(refreshValue), removeFromParent = js.Any.fromFunction0(removeFromParent), setFocus = js.Any.fromFunction0(setFocus), setSize = js.Any.fromFunction2(setSize), setValue = js.Any.fromFunction1(setValue), textChanged = js.Any.fromFunction2(textChanged), validator = js.Any.fromFunction0(validator), valueChanged = js.Any.fromFunction2(valueChanged))
+    __obj.asInstanceOf[EditorProviderBoolean]
+  }
+  @scala.inline
+  implicit class EditorProviderBooleanOps[Self <: EditorProviderBoolean] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateEditor(value: (js.Object, js.Object, js.Object, js.Object, js.Object, js.Object) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createEditor")(js.Any.fromFunction6(value))
+        ret
+    }
+    @scala.inline
+    def withDestroy(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetValue(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsValid(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isValid")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withKeyDown(value: (js.Object, js.Object) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyDown")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRefreshValue(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveFromParent(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFromParent")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetFocus(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFocus")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetSize(value: (js.Object, js.Object) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSize")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetValue(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTextChanged(value: (js.Object, js.Object) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textChanged")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withValidator(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validator")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withValueChanged(value: (js.Object, js.Object) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueChanged")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

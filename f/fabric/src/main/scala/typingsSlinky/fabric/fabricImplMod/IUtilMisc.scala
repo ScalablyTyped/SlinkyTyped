@@ -3,9 +3,9 @@ package typingsSlinky.fabric.fabricImplMod
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
-import typingsSlinky.fabric.AnonAngle
-import typingsSlinky.fabric.AnonFlipX
-import typingsSlinky.fabric.AnonX
+import typingsSlinky.fabric.anon.Angle
+import typingsSlinky.fabric.anon.FlipX
+import typingsSlinky.fabric.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -160,7 +160,7 @@ trait IUtilMisc extends js.Object {
   	 * Decomposes standard 2x2 matrix into transform componentes
   	 * @param a transformMatrix
   	 */
-  def qrDecompose(a: js.Array[Double]): AnonAngle = js.native
+  def qrDecompose(a: js.Array[Double]): Angle = js.native
   /**
   	 * Transforms radians to degrees.
   	 * @param radians value in radians
@@ -195,13 +195,13 @@ trait IUtilMisc extends js.Object {
   	 * @param vector The vector to rotate (x and y)
   	 * @param radians The radians of the angle for the rotation
   	 */
-  def rotateVector(vector: AnonX, radians: Double): AnonX = js.native
+  def rotateVector(vector: X, radians: Double): X = js.native
   /**
   	 * Extract Object transform values
   	 * @param  {fabric.Object} target object to read from
   	 * @return {Object} Components of transform
   	 */
-  def saveObjectTransform(target: Object): AnonFlipX = js.native
+  def saveObjectTransform(target: Object): FlipX = js.native
   /**
   	 * A wrapper around Number#toFixed, which contrary to native method returns number, not string.
   	 * @param number number to operate on

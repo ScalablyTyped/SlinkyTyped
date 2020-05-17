@@ -1,8 +1,8 @@
 package typingsSlinky.signalr.SignalR
 
+import org.scalajs.dom.raw.Location
 import typingsSlinky.jquery.JQueryPromise
 import typingsSlinky.std.JSON
-import typingsSlinky.std.Location_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,7 +61,7 @@ trait Connection extends js.Object {
     */
   def isCrossDomain(url: String): Boolean = js.native
   def isCrossDomain(url: String, against: SimplifyLocation): Boolean = js.native
-  def isCrossDomain(url: String, against: Location_): Boolean = js.native
+  def isCrossDomain(url: String, against: Location): Boolean = js.native
   def log(msg: String): Connection = js.native
   /**
     * Adds a callback that will be invoked after anything is received over the connection

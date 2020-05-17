@@ -1,10 +1,10 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonNodeValue
+import typingsSlinky.devextreme.anon.NodeValue
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.core.template
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,10 +13,10 @@ import scala.scalajs.js.annotation._
 trait dxTreeMapTooltip extends BaseWidgetTooltip {
   /** Specifies a custom template for a tooltip. */
   var contentTemplate: js.UndefOr[
-    template | (js.Function2[/* info */ AnonNodeValue, /* element */ dxElement, String | Element | JQuery])
+    template | (js.Function2[/* info */ NodeValue, /* element */ dxElement, String | Element | JQuery])
   ] = js.native
   /** Allows you to change tooltip appearance. */
-  var customizeTooltip: js.UndefOr[js.Function1[/* info */ AnonNodeValue, _]] = js.native
+  var customizeTooltip: js.UndefOr[js.Function1[/* info */ NodeValue, _]] = js.native
 }
 
 object dxTreeMapTooltip {
@@ -32,7 +32,7 @@ object dxTreeMapTooltip {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContentTemplateFunction2(value: (/* info */ AnonNodeValue, /* element */ dxElement) => String | Element | JQuery): Self = {
+    def withContentTemplateFunction2(value: (/* info */ NodeValue, /* element */ dxElement) => String | Element | JQuery): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentTemplate")(js.Any.fromFunction2(value))
         ret
@@ -45,7 +45,7 @@ object dxTreeMapTooltip {
     }
     @scala.inline
     def withContentTemplate(
-      value: template | (js.Function2[/* info */ AnonNodeValue, /* element */ dxElement, String | Element | JQuery])
+      value: template | (js.Function2[/* info */ NodeValue, /* element */ dxElement, String | Element | JQuery])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentTemplate")(value.asInstanceOf[js.Any])
@@ -58,7 +58,7 @@ object dxTreeMapTooltip {
         ret
     }
     @scala.inline
-    def withCustomizeTooltip(value: /* info */ AnonNodeValue => _): Self = {
+    def withCustomizeTooltip(value: /* info */ NodeValue => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customizeTooltip")(js.Any.fromFunction1(value))
         ret

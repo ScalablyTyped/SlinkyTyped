@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.Media.Devices
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Provides functionality for managing the low shutter lag photo capture mode on the capture device. */
+@JSGlobal("Windows.Media.Devices.LowLagPhotoControl")
+@js.native
+abstract class LowLagPhotoControl ()
+  extends typingsSlinky.winrtUwp.Windows.Media.Devices.LowLagPhotoControl
+

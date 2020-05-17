@@ -3,6 +3,7 @@ package typingsSlinky.agGrid.mod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.DocumentFragment
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.KeyboardEvent
@@ -12,7 +13,6 @@ import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.NodeList
 import org.scalajs.dom.raw.Touch
 import typingsSlinky.std.EventListener
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,7 +38,7 @@ object Utils extends js.Object {
   var isIPad: js.Any = js.native
   var isSafari: js.Any = js.native
   var passiveEvents: js.Array[String] = js.native
-  def addAgGridEventPath(event: Event_): Unit = js.native
+  def addAgGridEventPath(event: Event): Unit = js.native
   def addChangeListener(element: HTMLElement, listener: EventListener): Unit = js.native
   def addCssClass(element: HTMLElement, className: String): Unit = js.native
   def addOrRemoveCssClass(element: HTMLElement, className: String, addOrRemove: Boolean): Unit = js.native
@@ -60,7 +60,7 @@ object Utils extends js.Object {
   def containsClass(element: js.Any, className: String): Boolean = js.native
   def copyNodeList(nodeList: NodeList): js.Array[Node] = js.native
   def createArrayOfNumbers(first: Double, last: Double): js.Array[Double] = js.native
-  def createEventPath(event: Event_): js.Array[EventTarget] = js.native
+  def createEventPath(event: Event): js.Array[EventTarget] = js.native
   /**
     * If icon provided, use this (either a string, or a function callback).
     * if not, then use the default icon from the theme
@@ -119,13 +119,13 @@ object Utils extends js.Object {
   def getBodyHeight(): Double = js.native
   def getBodyWidth(): Double = js.native
   def getElementAttribute(element: js.Any, attributeName: String): String = js.native
-  def getEventPath(event: Event_): js.Array[EventTarget] = js.native
+  def getEventPath(event: Event): js.Array[EventTarget] = js.native
   def getFunctionParameters(func: js.Any): js.Any = js.native
   def getMaxDivHeight(): Double = js.native
   def getNameOfClass(TheClass: js.Any): String = js.native
   def getScrollLeft(element: HTMLElement, rtl: Boolean): Double = js.native
   def getScrollbarWidth(): Double = js.native
-  def getTarget(event: Event_): Element = js.native
+  def getTarget(event: Event): Element = js.native
   def getValueUsingField(data: js.Any, field: String, fieldContainsDots: Boolean): js.Any = js.native
   def get_bigrams(from: String): js.Array[_] = js.native
   def hyphenToCamelCase(str: String): String = js.native
@@ -139,7 +139,7 @@ object Utils extends js.Object {
   def isBrowserIE(): Boolean = js.native
   def isBrowserSafari(): Boolean = js.native
   def isElement(o: js.Any): Boolean = js.native
-  def isElementInEventPath(element: HTMLElement, event: Event_): Boolean = js.native
+  def isElementInEventPath(element: HTMLElement, event: Event): Boolean = js.native
   def isEventFromPrintableCharacter(event: KeyboardEvent): Boolean = js.native
   def isHorizontalScrollShowing(element: HTMLElement): Boolean = js.native
   def isKeyPressed(event: KeyboardEvent, keyToCheck: Double): Boolean = js.native
@@ -150,7 +150,7 @@ object Utils extends js.Object {
     */
   def isNumeric(value: js.Any): Boolean = js.native
   /* private */ def isNumpadDelWithNumlockOnForEdgeOrIe(event: js.Any): js.Any = js.native
-  def isStopPropagationForAgGrid(event: Event_): Boolean = js.native
+  def isStopPropagationForAgGrid(event: Event): Boolean = js.native
   def isUserAgentIPad(): Boolean = js.native
   def isVerticalScrollShowing(element: HTMLElement): Boolean = js.native
   def isVisible(element: HTMLElement): Boolean = js.native
@@ -299,7 +299,7 @@ object Utils extends js.Object {
     rowNodes: js.Array[typingsSlinky.agGrid.rowNodeMod.RowNode],
     rowNodeOrder: StringDictionary[Double]
   ): Unit = js.native
-  def stopPropagationForAgGrid(event: Event_): Unit = js.native
+  def stopPropagationForAgGrid(event: Event): Unit = js.native
   def string_similarity(str1: String, str2: String): Double = js.native
   def toStringOrNull(value: js.Any): String = js.native
   def toStrings[T](array: js.Array[T]): js.Array[String] = js.native

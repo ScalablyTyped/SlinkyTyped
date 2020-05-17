@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`dash-dot`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`long-dash-dot-dot`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`long-dash-dot`
@@ -26,9 +25,9 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.arcgisJsApi.esri.Symbol2D3D because Already inherited
 - typingsSlinky.arcgisJsApi.esri.symbols.Symbol2D3D because Already inherited */ @js.native
 trait SimpleLineSymbol
-  extends LineSymbol
-     with typingsSlinky.arcgisJsApi.esri.symbols.Symbol2D
-     with Symbol2D {
+  extends Symbol2D
+     with LineSymbol
+     with typingsSlinky.arcgisJsApi.esri.symbols.Symbol2D {
   /**
     * Specifies the cap style. The cap is the end node of a polyline, or the end of a line segment that does not connect with another segment of the same polyline.  See the table below for possible values.
     *
@@ -96,8 +95,4 @@ trait SimpleLineSymbol
     */
   var style: dash | `dash-dot` | dot | `long-dash` | `long-dash-dot` | `long-dash-dot-dot` | none | `short-dash` | `short-dash-dot` | `short-dash-dot-dot` | `short-dot` | solid = js.native
 }
-
-@JSGlobal("__esri.SimpleLineSymbol")
-@js.native
-object SimpleLineSymbol extends TopLevel[SimpleLineSymbolConstructor]
 

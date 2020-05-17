@@ -1,13 +1,15 @@
 package typingsSlinky.amapJsApi.AMap.Polyline
 
 import typingsSlinky.amapJsApi.AMap.LocationValue
+import typingsSlinky.amapJsApi.ReferOverlayOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Options[ExtraData]
-  extends typingsSlinky.amapJsApi.AMap.PathOverlay.Options[ExtraData] {
+  extends typingsSlinky.amapJsApi.AMap.PathOverlay.Options[ExtraData]
+     with ReferOverlayOptions[js.Any] {
   /**
     * 描边的宽度
     */

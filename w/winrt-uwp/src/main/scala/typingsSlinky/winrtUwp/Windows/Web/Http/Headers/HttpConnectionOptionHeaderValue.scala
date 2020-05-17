@@ -1,37 +1,35 @@
 package typingsSlinky.winrtUwp.Windows.Web.Http.Headers
 
-import typingsSlinky.winrtUwp.AnonConnectionOptionHeaderValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents connection information used in the Connection HTTP header on an HTTP request. */
-@JSGlobal("Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue")
 @js.native
-class HttpConnectionOptionHeaderValue protected () extends js.Object {
-  /**
-    * Initializes a new instance of the HttpConnectionOptionHeaderValue class.
-    * @param token The value of the connection-token to use.
-    */
-  def this(token: String) = this()
+trait HttpConnectionOptionHeaderValue extends js.Object {
   /** Gets the value of the connection-token in the Connection HTTP header. */
   var token: String = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Web.Http.Headers.HttpConnectionOptionHeaderValue")
-@js.native
-object HttpConnectionOptionHeaderValue extends js.Object {
-  /**
-    * Converts a string to an HttpConnectionOptionHeaderValue instance.
-    * @param input A string that represents the connection information in the Connection HTTP header.
-    * @return An HttpConnectionOptionHeaderValue instance.
-    */
-  def parse(input: String): HttpConnectionOptionHeaderValue = js.native
-  /**
-    * Determines whether a string is valid HttpConnectionOptionHeaderValue information.
-    * @param input The string to validate.
-    */
-  def tryParse(input: String): AnonConnectionOptionHeaderValue = js.native
+object HttpConnectionOptionHeaderValue {
+  @scala.inline
+  def apply(token: String): HttpConnectionOptionHeaderValue = {
+    val __obj = js.Dynamic.literal(token = token.asInstanceOf[js.Any])
+    __obj.asInstanceOf[HttpConnectionOptionHeaderValue]
+  }
+  @scala.inline
+  implicit class HttpConnectionOptionHeaderValueOps[Self <: HttpConnectionOptionHeaderValue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withToken(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("token")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

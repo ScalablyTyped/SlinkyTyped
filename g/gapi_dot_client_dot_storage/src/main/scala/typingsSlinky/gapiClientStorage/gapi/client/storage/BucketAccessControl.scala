@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientStorage.gapi.client.storage
 
-import typingsSlinky.gapiClientStorage.AnonProjectNumber
+import typingsSlinky.gapiClientStorage.anon.ProjectNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,7 +37,7 @@ trait BucketAccessControl extends js.Object {
   /** The kind of item this is. For bucket access control entries, this is always storage#bucketAccessControl. */
   var kind: js.UndefOr[String] = js.native
   /** The project team associated with the entity, if any. */
-  var projectTeam: js.UndefOr[AnonProjectNumber] = js.native
+  var projectTeam: js.UndefOr[ProjectNumber] = js.native
   /** The access permission for the entity. */
   var role: js.UndefOr[String] = js.native
   /** The link to this access-control entry. */
@@ -153,7 +153,7 @@ object BucketAccessControl {
         ret
     }
     @scala.inline
-    def withProjectTeam(value: AnonProjectNumber): Self = {
+    def withProjectTeam(value: ProjectNumber): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("projectTeam")(value.asInstanceOf[js.Any])
         ret

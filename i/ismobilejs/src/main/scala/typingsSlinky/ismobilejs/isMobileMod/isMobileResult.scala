@@ -1,35 +1,35 @@
 package typingsSlinky.ismobilejs.isMobileMod
 
-import typingsSlinky.ismobilejs.AnonBlackberry
-import typingsSlinky.ismobilejs.AnonDevice
-import typingsSlinky.ismobilejs.AnonPhone
+import typingsSlinky.ismobilejs.anon.Blackberry
+import typingsSlinky.ismobilejs.anon.Device
+import typingsSlinky.ismobilejs.anon.Phone
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait isMobileResult extends js.Object {
-  var amazon: AnonPhone = js.native
-  var android: AnonPhone = js.native
+  var amazon: Phone = js.native
+  var android: Phone = js.native
   var any: Boolean = js.native
-  var apple: AnonDevice = js.native
-  var other: AnonBlackberry = js.native
+  var apple: Device = js.native
+  var other: Blackberry = js.native
   var phone: Boolean = js.native
   var tablet: Boolean = js.native
-  var windows: AnonPhone = js.native
+  var windows: Phone = js.native
 }
 
 object isMobileResult {
   @scala.inline
   def apply(
-    amazon: AnonPhone,
-    android: AnonPhone,
+    amazon: Phone,
+    android: Phone,
     any: Boolean,
-    apple: AnonDevice,
-    other: AnonBlackberry,
+    apple: Device,
+    other: Blackberry,
     phone: Boolean,
     tablet: Boolean,
-    windows: AnonPhone
+    windows: Phone
   ): isMobileResult = {
     val __obj = js.Dynamic.literal(amazon = amazon.asInstanceOf[js.Any], android = android.asInstanceOf[js.Any], any = any.asInstanceOf[js.Any], apple = apple.asInstanceOf[js.Any], other = other.asInstanceOf[js.Any], phone = phone.asInstanceOf[js.Any], tablet = tablet.asInstanceOf[js.Any], windows = windows.asInstanceOf[js.Any])
     __obj.asInstanceOf[isMobileResult]
@@ -41,13 +41,13 @@ object isMobileResult {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAmazon(value: AnonPhone): Self = {
+    def withAmazon(value: Phone): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("amazon")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withAndroid(value: AnonPhone): Self = {
+    def withAndroid(value: Phone): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("android")(value.asInstanceOf[js.Any])
         ret
@@ -59,13 +59,13 @@ object isMobileResult {
         ret
     }
     @scala.inline
-    def withApple(value: AnonDevice): Self = {
+    def withApple(value: Device): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("apple")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOther(value: AnonBlackberry): Self = {
+    def withOther(value: Blackberry): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("other")(value.asInstanceOf[js.Any])
         ret
@@ -83,7 +83,7 @@ object isMobileResult {
         ret
     }
     @scala.inline
-    def withWindows(value: AnonPhone): Self = {
+    def withWindows(value: Phone): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("windows")(value.asInstanceOf[js.Any])
         ret

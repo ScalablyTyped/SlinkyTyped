@@ -1,8 +1,8 @@
 package typingsSlinky.antvG2.mod
 
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.antvG2.AnonFill
-import typingsSlinky.antvG2.AnonMarker
+import typingsSlinky.antvG2.anon.Fill
+import typingsSlinky.antvG2.anon.Marker
 import typingsSlinky.antvG2.antvG2Strings.`bottom-center`
 import typingsSlinky.antvG2.antvG2Strings.`bottom-left`
 import typingsSlinky.antvG2.antvG2Strings.`bottom-right`
@@ -31,7 +31,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LegendConfig extends js.Object {
   var allowAllCanceled: js.UndefOr[Double] = js.native
-  var background: js.UndefOr[AnonFill] = js.native
+  var background: js.UndefOr[Fill] = js.native
   var clickable: js.UndefOr[Boolean] = js.native
   var container: js.UndefOr[String] = js.native
   var containerTpl: js.UndefOr[String] = js.native
@@ -44,7 +44,7 @@ trait LegendConfig extends js.Object {
   var itemMarginBottom: js.UndefOr[Double] = js.native
   var itemTpl: js.UndefOr[String] = js.native
   var itemWidth: js.UndefOr[Double] = js.native
-  var items: js.UndefOr[js.Array[AnonMarker]] = js.native
+  var items: js.UndefOr[js.Array[Marker]] = js.native
   var layout: js.UndefOr[vertica | horizontal] = js.native
   var marker: js.UndefOr[String | js.Function] = js.native
   var offsetX: js.UndefOr[Double] = js.native
@@ -88,7 +88,7 @@ object LegendConfig {
         ret
     }
     @scala.inline
-    def withBackground(value: AnonFill): Self = {
+    def withBackground(value: Fill): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
         ret
@@ -244,7 +244,7 @@ object LegendConfig {
         ret
     }
     @scala.inline
-    def withItems(value: js.Array[AnonMarker]): Self = {
+    def withItems(value: js.Array[Marker]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
         ret

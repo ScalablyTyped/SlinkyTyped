@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * UI notifications that can be sent while the application is in the background.
 		 */
-@JSGlobal("Titanium.Android.Notification")
 @js.native
-class Notification () extends Proxy {
+trait Notification extends Proxy {
   /**
   			 * The audio stream type to use when playing the sound.
   			 */

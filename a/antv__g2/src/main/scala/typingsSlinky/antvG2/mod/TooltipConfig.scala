@@ -1,7 +1,5 @@
 package typingsSlinky.antvG2.mod
 
-import typingsSlinky.antvG2.antvG2Booleans.`false`
-import typingsSlinky.antvG2.antvG2Strings.mini
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,20 +13,10 @@ trait TooltipConfig extends js.Object
 
 object TooltipConfig {
   @scala.inline
-  def HtmlTooltipConfig(): TooltipConfig = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[TooltipConfig]
-  }
+  implicit def apply(value: CanvasTooltipConfig): TooltipConfig = value.asInstanceOf[TooltipConfig]
   @scala.inline
-  def CanvasTooltipConfig(useHtml: `false`): TooltipConfig = {
-    val __obj = js.Dynamic.literal(useHtml = useHtml.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TooltipConfig]
-  }
+  implicit def apply(value: HtmlTooltipConfig): TooltipConfig = value.asInstanceOf[TooltipConfig]
   @scala.inline
-  def MiniTooltipConfig(`type`: mini): TooltipConfig = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TooltipConfig]
-  }
+  implicit def apply(value: MiniTooltipConfig): TooltipConfig = value.asInstanceOf[TooltipConfig]
 }
 

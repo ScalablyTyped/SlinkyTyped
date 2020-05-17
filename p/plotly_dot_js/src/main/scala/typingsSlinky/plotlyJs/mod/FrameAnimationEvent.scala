@@ -1,20 +1,19 @@
 package typingsSlinky.plotlyJs.mod
 
-import typingsSlinky.plotlyJs.AnonFrame
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait FrameAnimationEvent extends js.Object {
-  var animation: AnonFrame = js.native
+  var animation: typingsSlinky.plotlyJs.anon.Frame = js.native
   var frame: Frame = js.native
   var name: String = js.native
 }
 
 object FrameAnimationEvent {
   @scala.inline
-  def apply(animation: AnonFrame, frame: Frame, name: String): FrameAnimationEvent = {
+  def apply(animation: typingsSlinky.plotlyJs.anon.Frame, frame: Frame, name: String): FrameAnimationEvent = {
     val __obj = js.Dynamic.literal(animation = animation.asInstanceOf[js.Any], frame = frame.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[FrameAnimationEvent]
   }
@@ -25,7 +24,7 @@ object FrameAnimationEvent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAnimation(value: AnonFrame): Self = {
+    def withAnimation(value: typingsSlinky.plotlyJs.anon.Frame): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
         ret

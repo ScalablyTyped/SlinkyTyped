@@ -1,7 +1,7 @@
 package typingsSlinky.nodemailer.sesTransportMod
 
-import typingsSlinky.nodemailer.AnonData
-import typingsSlinky.nodemailer.AnonName
+import typingsSlinky.nodemailer.anon.Data
+import typingsSlinky.nodemailer.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ trait MailSesOptions extends js.Object {
   /**
     * The raw email message itself. The message has to meet the following criteria:   The message has to contain a header and a body, separated by a blank line.   All of the required header fields must be present in the message.   Each part of a multipart MIME message must be formatted properly.   Attachments must be of a content type that Amazon SES supports. For a list on unsupported content types, see Unsupported Attachment Types in the Amazon SES Developer Guide.   The entire message must be base64-encoded.   If any of the MIME parts in your message contain content that is outside of the 7-bit ASCII character range, we highly recommend that you encode that content. For more information, see Sending Raw Email in the Amazon SES Developer Guide.   Per RFC 5321, the maximum length of each line of text, including the &lt;CRLF&gt;, must not exceed 1,000 characters.
     */
-  var RawMessage: js.UndefOr[AnonData] = js.native
+  var RawMessage: js.UndefOr[Data] = js.native
   /**
     * This parameter is used only for sending authorization. It is the ARN of the identity that is associated with the sending authorization policy that permits you to use the email address specified in the ReturnPath parameter. For example, if the owner of example.com (which has ARN arn:aws:ses:us-east-1:123456789012:identity/example.com) attaches a policy to it that authorizes you to use feedback@example.com, then you would specify the ReturnPathArn to be arn:aws:ses:us-east-1:123456789012:identity/example.com, and the ReturnPath to be feedback@example.com. Instead of using this parameter, you can use the X-header X-SES-RETURN-PATH-ARN in the raw message of the email. If you use both the ReturnPathArn parameter and the corresponding X-header, Amazon SES uses the value of the ReturnPathArn parameter.  For information about when to use this parameter, see the description of SendRawEmail in this guide, or see the Amazon SES Developer Guide.
     */
@@ -39,7 +39,7 @@ trait MailSesOptions extends js.Object {
   /**
     * A list of tags, in the form of name/value pairs, to apply to an email that you send using SendRawEmail. Tags correspond to characteristics of the email that you define, so that you can publish email sending events.
     */
-  var Tags: js.UndefOr[js.Array[AnonName]] = js.native
+  var Tags: js.UndefOr[js.Array[Name]] = js.native
 }
 
 object MailSesOptions {
@@ -91,7 +91,7 @@ object MailSesOptions {
         ret
     }
     @scala.inline
-    def withRawMessage(value: AnonData): Self = {
+    def withRawMessage(value: Data): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("RawMessage")(value.asInstanceOf[js.Any])
         ret
@@ -139,7 +139,7 @@ object MailSesOptions {
         ret
     }
     @scala.inline
-    def withTags(value: js.Array[AnonName]): Self = {
+    def withTags(value: js.Array[Name]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Tags")(value.asInstanceOf[js.Any])
         ret

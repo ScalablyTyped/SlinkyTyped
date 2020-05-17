@@ -1,6 +1,14 @@
 package typingsSlinky.firebaseFirestore
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.firebaseFirestore.anon.Acknowledged
+import typingsSlinky.firebaseFirestore.anon.Added
+import typingsSlinky.firebaseFirestore.anon.Affects
+import typingsSlinky.firebaseFirestore.anon.Config
+import typingsSlinky.firebaseFirestore.anon.ExpectUserCallback
+import typingsSlinky.firebaseFirestore.anon.Queries
+import typingsSlinky.firebaseFirestore.anon.Query
+import typingsSlinky.firebaseFirestore.anon.RunBackoffTimer
 import typingsSlinky.firebaseFirestore.asyncQueueMod.TimerId
 import typingsSlinky.firebaseFirestore.documentKeyMod.DocumentKey
 import typingsSlinky.firebaseFirestore.documentMod.Document
@@ -9,7 +17,6 @@ import typingsSlinky.firebaseFirestore.documentMod.NoDocument
 import typingsSlinky.firebaseFirestore.errorMod.Code
 import typingsSlinky.firebaseFirestore.modelFieldValueMod.JsonObject
 import typingsSlinky.firebaseFirestore.objMapMod.ObjectMap
-import typingsSlinky.firebaseFirestore.queryMod.Query
 import typingsSlinky.firebaseFirestore.specRpcErrorMod.RpcError
 import typingsSlinky.firebaseFirestore.specTestRunnerMod.SpecConfig
 import typingsSlinky.firebaseFirestore.specTestRunnerMod.SpecStep
@@ -82,8 +89,8 @@ object specBuilderMod extends js.Object {
     def disableNetwork(): this.type = js.native
     def enableNetwork(): this.type = js.native
     /** Overrides the currently expected set of active targets. */
-    def expectActiveTargets(targets: AnonQuery*): this.type = js.native
-    def expectEvents(query: Query, events: AnonAdded): this.type = js.native
+    def expectActiveTargets(targets: Query*): this.type = js.native
+    def expectEvents(query: typingsSlinky.firebaseFirestore.queryMod.Query, events: Added): this.type = js.native
     def expectIsShutdown(): this.type = js.native
     /**
       * Expects a document to be in limbo. A targetId is assigned if it's not in
@@ -91,16 +98,16 @@ object specBuilderMod extends js.Object {
       */
     def expectLimboDocs(keys: DocumentKey*): this.type = js.native
     /** Registers a query that is active in another tab. */
-    def expectListen(query: Query): this.type = js.native
-    def expectListen(query: Query, resumeToken: String): this.type = js.native
+    def expectListen(query: typingsSlinky.firebaseFirestore.queryMod.Query): this.type = js.native
+    def expectListen(query: typingsSlinky.firebaseFirestore.queryMod.Query, resumeToken: String): this.type = js.native
     def expectNumActiveClients(num: Double): this.type = js.native
     def expectNumOutstandingWrites(num: Double): this.type = js.native
     def expectPrimaryState(isPrimary: Boolean): this.type = js.native
     def expectSnapshotsInSyncEvent(): this.type = js.native
     def expectSnapshotsInSyncEvent(count: Double): this.type = js.native
     /** Removes a query that is no longer active in any tab. */
-    def expectUnlisten(query: Query): this.type = js.native
-    def expectUserCallbacks(docs: AnonAcknowledged): this.type = js.native
+    def expectUnlisten(query: typingsSlinky.firebaseFirestore.queryMod.Query): this.type = js.native
+    def expectUserCallbacks(docs: Acknowledged): this.type = js.native
     /**
       * Verifies the total number of requests sent to the watch backend since test
       * initialization.
@@ -117,7 +124,7 @@ object specBuilderMod extends js.Object {
       * expectUserCallback defaults to true if omitted.
       */
     def failWrite(doc: String, error: RpcError): this.type = js.native
-    def failWrite(doc: String, error: RpcError, options: AnonExpectUserCallback): this.type = js.native
+    def failWrite(doc: String, error: RpcError, options: ExpectUserCallback): this.type = js.native
     /* private */ def limboIdGenerator: js.Any = js.native
     /* private */ def limboMapping: js.Any = js.native
     /* protected */ def nextStep(): Unit = js.native
@@ -127,7 +134,7 @@ object specBuilderMod extends js.Object {
       * Registers a previously active target with the test expectations after a
       * stream disconnect.
       */
-    def restoreListen(query: Query, resumeToken: String): this.type = js.native
+    def restoreListen(query: typingsSlinky.firebaseFirestore.queryMod.Query, resumeToken: String): this.type = js.native
     /**
       * Run the spec as a test. If persistence is available it will run it with and
       * without persistence enabled.
@@ -138,22 +145,26 @@ object specBuilderMod extends js.Object {
     /**
       * Exports the spec steps as a JSON object that be used in the spec runner.
       */
-    def toJSON(): AnonConfig = js.native
+    def toJSON(): Config = js.native
     def userAddsSnapshotsInSyncListener(): this.type = js.native
     def userDeletes(key: String): this.type = js.native
-    def userListens(query: Query): this.type = js.native
-    def userListens(query: Query, resumeToken: String): this.type = js.native
+    def userListens(query: typingsSlinky.firebaseFirestore.queryMod.Query): this.type = js.native
+    def userListens(query: typingsSlinky.firebaseFirestore.queryMod.Query, resumeToken: String): this.type = js.native
     def userPatches(key: String, value: JsonObject[_]): this.type = js.native
     def userRemovesSnapshotsInSyncListener(): this.type = js.native
     def userSets(key: String, value: JsonObject[_]): this.type = js.native
-    def userUnlistens(query: Query): this.type = js.native
-    def watchAcks(query: Query): this.type = js.native
-    def watchAcksFull(query: Query, version: TestSnapshotVersion, docs: Document*): this.type = js.native
-    def watchCurrents(query: Query, resumeToken: String): this.type = js.native
-    def watchFilters(queries: js.Array[Query], docs: DocumentKey*): this.type = js.native
-    def watchRemoves(query: Query): this.type = js.native
-    def watchRemoves(query: Query, cause: RpcError): this.type = js.native
-    def watchRemovesDoc(key: DocumentKey, targets: Query*): this.type = js.native
+    def userUnlistens(query: typingsSlinky.firebaseFirestore.queryMod.Query): this.type = js.native
+    def watchAcks(query: typingsSlinky.firebaseFirestore.queryMod.Query): this.type = js.native
+    def watchAcksFull(
+      query: typingsSlinky.firebaseFirestore.queryMod.Query,
+      version: TestSnapshotVersion,
+      docs: Document*
+    ): this.type = js.native
+    def watchCurrents(query: typingsSlinky.firebaseFirestore.queryMod.Query, resumeToken: String): this.type = js.native
+    def watchFilters(queries: js.Array[typingsSlinky.firebaseFirestore.queryMod.Query], docs: DocumentKey*): this.type = js.native
+    def watchRemoves(query: typingsSlinky.firebaseFirestore.queryMod.Query): this.type = js.native
+    def watchRemoves(query: typingsSlinky.firebaseFirestore.queryMod.Query, cause: RpcError): this.type = js.native
+    def watchRemovesDoc(key: DocumentKey, targets: typingsSlinky.firebaseFirestore.queryMod.Query*): this.type = js.native
     /**
       * Special helper for limbo documents that acks an unlisten for a limbo doc
       * with either a document or with no document for NoDocument. This is
@@ -161,13 +172,17 @@ object specBuilderMod extends js.Object {
       */
     def watchRemovesLimboTarget(doc: Document): this.type = js.native
     def watchRemovesLimboTarget(doc: NoDocument): this.type = js.native
-    def watchResets(queries: Query*): this.type = js.native
-    def watchSends(targets: AnonAffects, docs: MaybeDocument*): this.type = js.native
+    def watchResets(queries: typingsSlinky.firebaseFirestore.queryMod.Query*): this.type = js.native
+    def watchSends(targets: Affects, docs: MaybeDocument*): this.type = js.native
     def watchSnapshots(version: TestSnapshotVersion): this.type = js.native
-    def watchSnapshots(version: TestSnapshotVersion, targets: js.Array[Query]): this.type = js.native
-    def watchSnapshots(version: TestSnapshotVersion, targets: js.Array[Query], resumeToken: String): this.type = js.native
+    def watchSnapshots(version: TestSnapshotVersion, targets: js.Array[typingsSlinky.firebaseFirestore.queryMod.Query]): this.type = js.native
+    def watchSnapshots(
+      version: TestSnapshotVersion,
+      targets: js.Array[typingsSlinky.firebaseFirestore.queryMod.Query],
+      resumeToken: String
+    ): this.type = js.native
     def watchStreamCloses(error: Code): this.type = js.native
-    def watchStreamCloses(error: Code, opts: AnonRunBackoffTimer): this.type = js.native
+    def watchStreamCloses(error: Code, opts: RunBackoffTimer): this.type = js.native
     def withGCEnabled(gcEnabled: Boolean): this.type = js.native
     /**
       * Acks a write with a version and optional additional options.
@@ -175,7 +190,7 @@ object specBuilderMod extends js.Object {
       * expectUserCallback defaults to true if omitted.
       */
     def writeAcks(doc: String, version: TestSnapshotVersion): this.type = js.native
-    def writeAcks(doc: String, version: TestSnapshotVersion, options: AnonExpectUserCallback): this.type = js.native
+    def writeAcks(doc: String, version: TestSnapshotVersion, options: ExpectUserCallback): this.type = js.native
   }
   
   def client(num: Double): MultiClientSpecBuilder = js.native
@@ -189,7 +204,7 @@ object specBuilderMod extends js.Object {
     var queryToSpec: js.Any = js.native
   }
   
-  type ActiveTargetMap = StringDictionary[AnonQueries]
+  type ActiveTargetMap = StringDictionary[Queries]
   type LimboMap = StringDictionary[TargetId]
 }
 

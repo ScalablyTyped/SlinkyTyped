@@ -1,15 +1,12 @@
 package typingsSlinky.igniteUi.Infragistics
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.igniteUi.TreeHierarchicalDataSourceSettings
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Infragistics.TreeHierarchicalDataSource")
 @js.native
-class TreeHierarchicalDataSource protected () extends js.Object {
-  def this(settings: TreeHierarchicalDataSourceSettings) = this()
+trait TreeHierarchicalDataSource extends js.Object {
   /**
   	 * Adds a new node to the tree data source. Creates a transaction that can be committed / rolled back
   	 *

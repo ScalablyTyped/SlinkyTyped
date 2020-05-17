@@ -1,6 +1,5 @@
 package typingsSlinky.hapiAuthJwt2.mod
 
-import typingsSlinky.hapiAuthJwt2.AnonExtraInfo
 import typingsSlinky.hapiHapi.mod.Request
 import typingsSlinky.hapiHapi.mod.ResponseObject
 import typingsSlinky.hapiHapi.mod.ResponseToolkit
@@ -58,7 +57,7 @@ trait Options extends js.Object {
     * The secret key used to check the signature of the token *or* a *key lookup function*
     */
   var key: js.UndefOr[
-    String | js.Array[String] | (js.Function1[/* decodedToken */ js.Any, js.Promise[AnonExtraInfo]])
+    String | js.Array[String] | (js.Function1[/* decodedToken */ js.Any, js.Promise[typingsSlinky.hapiAuthJwt2.anon.ExtraInfo]])
   ] = js.native
   /**
     * If you want to set a custom key for your payload token use the
@@ -196,14 +195,14 @@ object Options {
         ret
     }
     @scala.inline
-    def withKeyFunction1(value: /* decodedToken */ js.Any => js.Promise[AnonExtraInfo]): Self = {
+    def withKeyFunction1(value: /* decodedToken */ js.Any => js.Promise[typingsSlinky.hapiAuthJwt2.anon.ExtraInfo]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
     def withKey(
-      value: String | js.Array[String] | (js.Function1[/* decodedToken */ js.Any, js.Promise[AnonExtraInfo]])
+      value: String | js.Array[String] | (js.Function1[/* decodedToken */ js.Any, js.Promise[typingsSlinky.hapiAuthJwt2.anon.ExtraInfo]])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])

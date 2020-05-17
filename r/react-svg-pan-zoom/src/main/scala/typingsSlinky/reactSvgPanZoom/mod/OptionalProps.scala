@@ -2,8 +2,8 @@ package typingsSlinky.reactSvgPanZoom.mod
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactSvgPanZoom.AnonBackground
-import typingsSlinky.reactSvgPanZoom.AnonPosition
+import typingsSlinky.reactSvgPanZoom.anon.Background
+import typingsSlinky.reactSvgPanZoom.anon.Position
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +27,7 @@ trait OptionalProps extends js.Object {
   var detectWheel: Boolean = js.native
   // Turn off zoom on double click
   var disableDoubleClickZoomWithToolAuto: Boolean = js.native
-  var miniatureProps: AnonBackground = js.native
+  var miniatureProps: Background = js.native
   // modifier keys //https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/getModifierState
   var modifierKeys: js.Array[String] = js.native
   // if disabled the user can move the image outside the viewer
@@ -42,7 +42,7 @@ trait OptionalProps extends js.Object {
   var scaleFactorOnWheel: Double = js.native
   // CSS style of the Viewer
   var style: js.Object = js.native
-  var toolbarProps: AnonPosition = js.native
+  var toolbarProps: Position = js.native
   // Note: The `T` type parameter is the type of the `target` of the event:
   // handler click
   def onClick[T](event: ViewerMouseEvent[T]): Unit = js.native
@@ -72,7 +72,7 @@ object OptionalProps {
     detectPinchGesture: Boolean,
     detectWheel: Boolean,
     disableDoubleClickZoomWithToolAuto: Boolean,
-    miniatureProps: AnonBackground,
+    miniatureProps: Background,
     modifierKeys: js.Array[String],
     onClick: ViewerMouseEvent[js.Any] => Unit,
     onDoubleClick: ViewerMouseEvent[js.Any] => Unit,
@@ -87,7 +87,7 @@ object OptionalProps {
     scaleFactorMin: Double,
     scaleFactorOnWheel: Double,
     style: js.Object,
-    toolbarProps: AnonPosition
+    toolbarProps: Position
   ): OptionalProps = {
     val __obj = js.Dynamic.literal(SVGBackground = SVGBackground.asInstanceOf[js.Any], background = background.asInstanceOf[js.Any], className = className.asInstanceOf[js.Any], customMiniature = customMiniature.asInstanceOf[js.Any], customToolbar = customToolbar.asInstanceOf[js.Any], detectAutoPan = detectAutoPan.asInstanceOf[js.Any], detectPinchGesture = detectPinchGesture.asInstanceOf[js.Any], detectWheel = detectWheel.asInstanceOf[js.Any], disableDoubleClickZoomWithToolAuto = disableDoubleClickZoomWithToolAuto.asInstanceOf[js.Any], miniatureProps = miniatureProps.asInstanceOf[js.Any], modifierKeys = modifierKeys.asInstanceOf[js.Any], onClick = js.Any.fromFunction1(onClick), onDoubleClick = js.Any.fromFunction1(onDoubleClick), onMouseDown = js.Any.fromFunction1(onMouseDown), onMouseMove = js.Any.fromFunction1(onMouseMove), onMouseUp = js.Any.fromFunction1(onMouseUp), onPan = js.Any.fromFunction1(onPan), onZoom = js.Any.fromFunction1(onZoom), preventPanOutside = preventPanOutside.asInstanceOf[js.Any], scaleFactor = scaleFactor.asInstanceOf[js.Any], scaleFactorMax = scaleFactorMax.asInstanceOf[js.Any], scaleFactorMin = scaleFactorMin.asInstanceOf[js.Any], scaleFactorOnWheel = scaleFactorOnWheel.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any], toolbarProps = toolbarProps.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionalProps]
@@ -183,7 +183,7 @@ object OptionalProps {
         ret
     }
     @scala.inline
-    def withMiniatureProps(value: AnonBackground): Self = {
+    def withMiniatureProps(value: Background): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("miniatureProps")(value.asInstanceOf[js.Any])
         ret
@@ -273,7 +273,7 @@ object OptionalProps {
         ret
     }
     @scala.inline
-    def withToolbarProps(value: AnonPosition): Self = {
+    def withToolbarProps(value: Position): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarProps")(value.asInstanceOf[js.Any])
         ret

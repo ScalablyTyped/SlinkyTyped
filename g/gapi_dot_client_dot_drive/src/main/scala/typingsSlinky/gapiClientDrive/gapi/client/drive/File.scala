@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientDrive.gapi.client.drive
 
-import typingsSlinky.gapiClientDrive.AnonAperture
-import typingsSlinky.gapiClientDrive.AnonCanAddChildren
-import typingsSlinky.gapiClientDrive.AnonDurationMillis
-import typingsSlinky.gapiClientDrive.AnonIndexableText
+import typingsSlinky.gapiClientDrive.anon.Aperture
+import typingsSlinky.gapiClientDrive.anon.CanAddChildren
+import typingsSlinky.gapiClientDrive.anon.DurationMillis
+import typingsSlinky.gapiClientDrive.anon.IndexableText
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,9 +17,9 @@ trait File extends js.Object {
     */
   var appProperties: js.UndefOr[Record[String, String]] = js.native
   /** Capabilities the current user has on this file. Each capability corresponds to a fine-grained action that a user may take. */
-  var capabilities: js.UndefOr[AnonCanAddChildren] = js.native
+  var capabilities: js.UndefOr[CanAddChildren] = js.native
   /** Additional information about the content of the file. These fields are never populated in responses. */
-  var contentHints: js.UndefOr[AnonIndexableText] = js.native
+  var contentHints: js.UndefOr[IndexableText] = js.native
   /** The time at which the file was created (RFC 3339 date-time). */
   var createdTime: js.UndefOr[String] = js.native
   /** A short description of the file. */
@@ -53,7 +53,7 @@ trait File extends js.Object {
   /** The ID of the file. */
   var id: js.UndefOr[String] = js.native
   /** Additional metadata about image media, if available. */
-  var imageMediaMetadata: js.UndefOr[AnonAperture] = js.native
+  var imageMediaMetadata: js.UndefOr[Aperture] = js.native
   /** Whether the file was created or opened by the requesting app. */
   var isAppAuthorized: js.UndefOr[Boolean] = js.native
   /** Identifies what kind of resource this is. Value: the fixed string "drive#file". */
@@ -144,7 +144,7 @@ trait File extends js.Object {
   /** A monotonically increasing version number for the file. This reflects every change made to the file on the server, even those not visible to the user. */
   var version: js.UndefOr[String] = js.native
   /** Additional metadata about video media. This may not be available immediately upon upload. */
-  var videoMediaMetadata: js.UndefOr[AnonDurationMillis] = js.native
+  var videoMediaMetadata: js.UndefOr[DurationMillis] = js.native
   /** Whether the file has been viewed by this user. */
   var viewedByMe: js.UndefOr[Boolean] = js.native
   /** The last time the file was viewed by the user (RFC 3339 date-time). */
@@ -184,7 +184,7 @@ object File {
         ret
     }
     @scala.inline
-    def withCapabilities(value: AnonCanAddChildren): Self = {
+    def withCapabilities(value: CanAddChildren): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("capabilities")(value.asInstanceOf[js.Any])
         ret
@@ -196,7 +196,7 @@ object File {
         ret
     }
     @scala.inline
-    def withContentHints(value: AnonIndexableText): Self = {
+    def withContentHints(value: IndexableText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentHints")(value.asInstanceOf[js.Any])
         ret
@@ -340,7 +340,7 @@ object File {
         ret
     }
     @scala.inline
-    def withImageMediaMetadata(value: AnonAperture): Self = {
+    def withImageMediaMetadata(value: Aperture): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("imageMediaMetadata")(value.asInstanceOf[js.Any])
         ret
@@ -712,7 +712,7 @@ object File {
         ret
     }
     @scala.inline
-    def withVideoMediaMetadata(value: AnonDurationMillis): Self = {
+    def withVideoMediaMetadata(value: DurationMillis): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("videoMediaMetadata")(value.asInstanceOf[js.Any])
         ret

@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeTabView.AnonColor
+import typingsSlinky.reactNativeTabView.anon.Color
 import typingsSlinky.reactNativeTabView.typesMod.Event
 import typingsSlinky.reactNativeTabView.typesMod.Layout
 import typingsSlinky.reactNativeTabView.typesMod.NavigationState
@@ -32,8 +32,8 @@ trait Props[T /* <: Route */] extends js.Object {
   var pressColor: js.UndefOr[String] = js.native
   var pressOpacity: js.UndefOr[Double] = js.native
   var renderBadge: js.UndefOr[js.Function1[/* scene */ Scene[T], TagMod[Any]]] = js.native
-  var renderIcon: js.UndefOr[js.Function1[/* scene */ Scene[T] with AnonColor, TagMod[Any]]] = js.native
-  var renderLabel: js.UndefOr[js.Function1[/* scene */ Scene[T] with AnonColor, TagMod[Any]]] = js.native
+  var renderIcon: js.UndefOr[js.Function1[/* scene */ Scene[T] with Color, TagMod[Any]]] = js.native
+  var renderLabel: js.UndefOr[js.Function1[/* scene */ Scene[T] with Color, TagMod[Any]]] = js.native
   var scrollEnabled: js.UndefOr[Boolean] = js.native
   var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
   var tabStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
@@ -292,7 +292,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withRenderIcon(value: /* scene */ Scene[T] with AnonColor => TagMod[Any]): Self[T] = {
+    def withRenderIcon(value: /* scene */ Scene[T] with Color => TagMod[Any]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderIcon")(js.Any.fromFunction1(value))
         ret
@@ -304,7 +304,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withRenderLabel(value: /* scene */ Scene[T] with AnonColor => TagMod[Any]): Self[T] = {
+    def withRenderLabel(value: /* scene */ Scene[T] with Color => TagMod[Any]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderLabel")(js.Any.fromFunction1(value))
         ret

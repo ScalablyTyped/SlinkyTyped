@@ -1,25 +1,21 @@
 package typingsSlinky.socketIoEmitter.mod
 
+import typingsSlinky.socketIoEmitter.anon.Host
+import typingsSlinky.socketIoEmitter.anon.Socket
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.socketIoEmitter.AnonHost
-  - typingsSlinky.socketIoEmitter.AnonSocket
+  - typingsSlinky.socketIoEmitter.anon.Host
+  - typingsSlinky.socketIoEmitter.anon.Socket
 */
 trait SocketIORedisOptions extends js.Object
 
 object SocketIORedisOptions {
   @scala.inline
-  def AnonHost(host: String, port: Double): SocketIORedisOptions = {
-    val __obj = js.Dynamic.literal(host = host.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SocketIORedisOptions]
-  }
+  implicit def apply(value: Host): SocketIORedisOptions = value.asInstanceOf[SocketIORedisOptions]
   @scala.inline
-  def AnonSocket(socket: String): SocketIORedisOptions = {
-    val __obj = js.Dynamic.literal(socket = socket.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SocketIORedisOptions]
-  }
+  implicit def apply(value: Socket): SocketIORedisOptions = value.asInstanceOf[SocketIORedisOptions]
 }
 

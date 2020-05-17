@@ -1,13 +1,13 @@
 package typingsSlinky.next.nextServerMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.next.AnonAssetPrefix
-import typingsSlinky.next.AnonCatchAllRoute
-import typingsSlinky.next.AnonHeaders
-import typingsSlinky.next.AnonMatch
+import typingsSlinky.next.anon.AssetPrefix
+import typingsSlinky.next.anon.CatchAllRoute
+import typingsSlinky.next.anon.Headers
+import typingsSlinky.next.anon.Match
+import typingsSlinky.next.anon.defaultloadStaticPathsdis
 import typingsSlinky.next.apiUtilsMod.ApiPreviewProps
 import typingsSlinky.next.buildMod.PrerenderManifest
-import typingsSlinky.next.defaultloadStaticPathsdis
 import typingsSlinky.next.serverRouterMod.DynamicRoutes
 import typingsSlinky.next.serverRouterMod.Params
 import typingsSlinky.next.serverRouterMod.Route_
@@ -24,7 +24,7 @@ trait Server extends js.Object {
   var _cachedPreviewManifest: js.Any = js.native
   var buildId: String = js.native
   var compression: js.UndefOr[js.Any] = js.native
-  var customRoutes: js.UndefOr[AnonHeaders] = js.native
+  var customRoutes: js.UndefOr[Headers] = js.native
   var dir: String = js.native
   var distDir: String = js.native
   var dynamicRoutes: js.UndefOr[DynamicRoutes] = js.native
@@ -49,7 +49,7 @@ trait Server extends js.Object {
   var pagesManifest: js.UndefOr[StringDictionary[String]] = js.native
   var publicDir: String = js.native
   var quiet: Boolean = js.native
-  var renderOpts: AnonAssetPrefix = js.native
+  var renderOpts: AssetPrefix = js.native
   var renderToHTMLWithComponents: js.Any = js.native
   var router: typingsSlinky.next.serverRouterMod.default = js.native
   var serverBuildDir: String = js.native
@@ -60,9 +60,9 @@ trait Server extends js.Object {
   /* protected */ def currentPhase(): String = js.native
   /* protected */ def ensureApiPage(pathname: String): js.Promise[Unit] = js.native
   /* protected */ def generatePublicRoutes(): js.Array[Route_] = js.native
-  /* protected */ def generateRoutes(): AnonCatchAllRoute = js.native
+  /* protected */ def generateRoutes(): CatchAllRoute = js.native
   /* protected */ def getCustomRoutes(): js.Any = js.native
-  /* protected */ def getDynamicRoutes(): js.Array[AnonMatch] = js.native
+  /* protected */ def getDynamicRoutes(): js.Array[Match] = js.native
   /* protected */ def getPrerenderManifest(): PrerenderManifest = js.native
   /* protected */ def getPreviewProps(): ApiPreviewProps = js.native
   def getRequestHandler(): js.Function3[

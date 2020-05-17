@@ -1,6 +1,6 @@
 package typingsSlinky.preact.mod
 
-import typingsSlinky.preact.AnonHtml
+import typingsSlinky.preact.anon.Html
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PreactDOMAttributes extends js.Object {
   var children: js.UndefOr[ComponentChildren] = js.native
-  var dangerouslySetInnerHTML: js.UndefOr[AnonHtml] = js.native
+  var dangerouslySetInnerHTML: js.UndefOr[Html] = js.native
 }
 
 object PreactDOMAttributes {
@@ -42,7 +42,7 @@ object PreactDOMAttributes {
         ret
     }
     @scala.inline
-    def withDangerouslySetInnerHTML(value: AnonHtml): Self = {
+    def withDangerouslySetInnerHTML(value: Html): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetInnerHTML")(value.asInstanceOf[js.Any])
         ret

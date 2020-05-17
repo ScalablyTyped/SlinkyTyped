@@ -1,6 +1,5 @@
 package typingsSlinky.inboxsdk.mod.ButterBar
 
-import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,19 +13,10 @@ trait LoadingMessageDescriptor extends js.Object
 
 object LoadingMessageDescriptor {
   @scala.inline
-  def LoadingMessageDescriptorText(text: String): LoadingMessageDescriptor = {
-    val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LoadingMessageDescriptor]
-  }
+  implicit def apply(value: LoadingMessageDescriptorHtml): LoadingMessageDescriptor = value.asInstanceOf[LoadingMessageDescriptor]
   @scala.inline
-  def LoadingMessageDescriptorHtml(html: String): LoadingMessageDescriptor = {
-    val __obj = js.Dynamic.literal(html = html.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LoadingMessageDescriptor]
-  }
+  implicit def apply(value: LoadingMessageDescriptorHtmlElement): LoadingMessageDescriptor = value.asInstanceOf[LoadingMessageDescriptor]
   @scala.inline
-  def LoadingMessageDescriptorHtmlElement(el: HTMLElement): LoadingMessageDescriptor = {
-    val __obj = js.Dynamic.literal(el = el.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LoadingMessageDescriptor]
-  }
+  implicit def apply(value: LoadingMessageDescriptorText): LoadingMessageDescriptor = value.asInstanceOf[LoadingMessageDescriptor]
 }
 

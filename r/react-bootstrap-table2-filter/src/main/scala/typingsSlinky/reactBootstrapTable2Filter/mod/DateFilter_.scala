@@ -1,7 +1,7 @@
 package typingsSlinky.reactBootstrapTable2Filter.mod
 
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactBootstrapTable2Filter.AnonDate
+import typingsSlinky.reactBootstrapTable2Filter.anon.Date
 import typingsSlinky.reactBootstrapTableNext.mod.TableColumnFilterProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ trait DateFilter_[T /* <: js.Object */]
   var dateClassName: js.UndefOr[String] = js.native
   var dateStyle: js.UndefOr[CSSProperties] = js.native
   @JSName("defaultValue")
-  var defaultValue_DateFilter_ : js.UndefOr[AnonDate] = js.native
+  var defaultValue_DateFilter_ : js.UndefOr[Date] = js.native
   var withoutEmptyComparatorOption: js.UndefOr[Boolean] = js.native
 }
 
@@ -93,7 +93,7 @@ object DateFilter_ {
         ret
     }
     @scala.inline
-    def withDefaultValue(value: AnonDate): Self[T] = {
+    def withDefaultValue(value: Date): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
         ret

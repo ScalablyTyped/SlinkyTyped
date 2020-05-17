@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.route53Mod
 
-import typingsSlinky.awsSdk.GetChangeRequestwaiterWai
+import typingsSlinky.awsSdk.anon.GetChangeRequestwaiterWai
 import typingsSlinky.awsSdk.awsSdkStrings.resourceRecordSetsChanged
 import typingsSlinky.awsSdk.configMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError

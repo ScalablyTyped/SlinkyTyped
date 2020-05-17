@@ -1,15 +1,12 @@
 package typingsSlinky.igniteUi.Infragistics
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.igniteUi.JSONDataSourceSettings
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Infragistics.JSONDataSource")
 @js.native
-class JSONDataSource protected () extends js.Object {
-  def this(settings: JSONDataSourceSettings) = this()
+trait JSONDataSource extends js.Object {
   /**
   	 * Adds a new node to the tree data source. Creates a transaction that can be committed / rolled back
   	 *

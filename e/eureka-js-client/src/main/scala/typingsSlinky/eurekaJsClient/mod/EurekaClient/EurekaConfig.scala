@@ -1,6 +1,6 @@
 package typingsSlinky.eurekaJsClient.mod.EurekaClient
 
-import typingsSlinky.eurekaJsClient.AnonDebug
+import typingsSlinky.eurekaJsClient.anon.Debug
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait EurekaConfig extends js.Object {
   var eureka: EurekaClientConfig = js.native
   var instance: EurekaInstanceConfig = js.native
-  var logger: js.UndefOr[AnonDebug] = js.native
+  var logger: js.UndefOr[Debug] = js.native
   var requestMiddleware: js.UndefOr[
     js.Function2[/* requestOpts */ js.Any, /* done */ js.Function1[/* opts */ js.Any, Unit], Unit]
   ] = js.native
@@ -41,7 +41,7 @@ object EurekaConfig {
         ret
     }
     @scala.inline
-    def withLogger(value: AnonDebug): Self = {
+    def withLogger(value: Debug): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
         ret

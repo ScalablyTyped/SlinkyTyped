@@ -6,7 +6,7 @@ import typingsSlinky.reactNative.mod.TouchableHighlight
 import typingsSlinky.reactNative.mod.TouchableNativeFeedback
 import typingsSlinky.reactNative.mod.TouchableOpacity
 import typingsSlinky.reactNative.mod.TouchableWithoutFeedback
-import typingsSlinky.reactNativeNavigation.AnonReactTag
+import typingsSlinky.reactNativeNavigation.anon.ReactTag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait Props extends js.Object {
   var onPeekIn: js.UndefOr[js.Function0[Unit]] = js.native
   var onPeekOut: js.UndefOr[js.Function0[Unit]] = js.native
   var onPress: js.UndefOr[js.Function0[Unit]] = js.native
-  var onPressIn: js.UndefOr[js.Function1[/* payload */ AnonReactTag, Unit]] = js.native
+  var onPressIn: js.UndefOr[js.Function1[/* payload */ ReactTag, Unit]] = js.native
   var touchableComponent: js.UndefOr[
     TouchableHighlight | TouchableOpacity | TouchableNativeFeedback | TouchableWithoutFeedback | TagMod[Any]
   ] = js.native
@@ -84,7 +84,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withOnPressIn(value: /* payload */ AnonReactTag => Unit): Self = {
+    def withOnPressIn(value: /* payload */ ReactTag => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPressIn")(js.Any.fromFunction1(value))
         ret

@@ -1,8 +1,8 @@
 package typingsSlinky.tabris.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.tabris.AnonOpacity
-import typingsSlinky.tabris.OmitWidgetsetCid
+import typingsSlinky.tabris.anon.OmitWidgetsetCid
+import typingsSlinky.tabris.anon.Opacity
 import typingsSlinky.tabris.tabrisBooleans.`true`
 import typingsSlinky.tabris.tabrisStrings.`class`
 import typingsSlinky.tabris.tabrisStrings.auto
@@ -33,7 +33,10 @@ import scala.scalajs.js.annotation._
 
 @JSImport("tabris", "Widget")
 @js.native
-class Widget protected () extends NativeObject {
+class Widget protected ()
+  extends NativeObject
+     with SiblingReference
+     with SiblingReferenceValue {
   protected def this(properties: Properties[Widget, OmitWidgetsetCid]) = this()
   /**
     * The actual location and size of the widget, relative to contentView.
@@ -360,7 +363,7 @@ class Widget protected () extends NativeObject {
     * @param properties The properties and target values to animate.
     * @param options Configures the animation itself.
     */
-  def animate(properties: AnonOpacity, options: AnimationOptions): js.Promise[Unit] = js.native
+  def animate(properties: Opacity, options: AnimationOptions): js.Promise[Unit] = js.native
   /**
     * Appends this widget to the given parent. The parent widget must support children (extending
     * *Composite*). If the widget already has a parent, it is removed from the old parent.

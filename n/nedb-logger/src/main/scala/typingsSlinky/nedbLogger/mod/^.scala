@@ -1,6 +1,6 @@
 package typingsSlinky.nedbLogger.mod
 
-import typingsSlinky.nedbLogger.AnonFilename
+import typingsSlinky.nedbLogger.anon.Filename
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class ^ () extends NeDBLoggerDataStore {
   def this(path: String) = this()
-  def this(path: AnonFilename) = this()
+  def this(path: Filename) = this()
 }
 

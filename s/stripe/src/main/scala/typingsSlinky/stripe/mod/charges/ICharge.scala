@@ -1,8 +1,8 @@
 package typingsSlinky.stripe.mod.charges
 
-import typingsSlinky.stripe.AnonAddress
-import typingsSlinky.stripe.AnonDestination
-import typingsSlinky.stripe.AnonStripereport
+import typingsSlinky.stripe.anon.Address
+import typingsSlinky.stripe.anon.Destination
+import typingsSlinky.stripe.anon.Stripereport
 import typingsSlinky.stripe.mod.IMetadata
 import typingsSlinky.stripe.mod.IResourceObject
 import typingsSlinky.stripe.mod.IShippingInformation
@@ -62,7 +62,7 @@ trait ICharge extends IResourceObject {
   /**
     * Billing information associated with the payment method at the time of the transaction.
     */
-  var billing_details: js.UndefOr[AnonAddress | Null] = js.native
+  var billing_details: js.UndefOr[Address | Null] = js.native
   /**
     * If the charge was created without capturing, this boolean represents whether or not it is
     * still uncaptured or has since been captured.
@@ -102,7 +102,7 @@ trait ICharge extends IResourceObject {
   /**
     * Hash with information on fraud assessments for the charge.
     */
-  var fraud_details: AnonStripereport = js.native
+  var fraud_details: Stripereport = js.native
   /**
     * ID of the invoice this charge is for if one exists. [Expandable]
     */
@@ -214,7 +214,7 @@ trait ICharge extends IResourceObject {
     * An optional dictionary including the account to automatically transfer
     * to as part of a destination charge. See the Connect documentation for details.
     */
-  var transfer_data: js.UndefOr[AnonDestination | Null] = js.native
+  var transfer_data: js.UndefOr[Destination | Null] = js.native
   /**
     * A string that identifies this transaction as part of a group.
     * See the [Connect documentation]
@@ -233,7 +233,7 @@ object ICharge {
     captured: Boolean,
     created: Double,
     currency: String,
-    fraud_details: AnonStripereport,
+    fraud_details: Stripereport,
     id: String,
     livemode: Boolean,
     metadata: IMetadata,
@@ -291,7 +291,7 @@ object ICharge {
         ret
     }
     @scala.inline
-    def withFraud_details(value: AnonStripereport): Self = {
+    def withFraud_details(value: Stripereport): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fraud_details")(value.asInstanceOf[js.Any])
         ret
@@ -399,7 +399,7 @@ object ICharge {
         ret
     }
     @scala.inline
-    def withBilling_details(value: AnonAddress): Self = {
+    def withBilling_details(value: Address): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("billing_details")(value.asInstanceOf[js.Any])
         ret
@@ -717,7 +717,7 @@ object ICharge {
         ret
     }
     @scala.inline
-    def withTransfer_data(value: AnonDestination): Self = {
+    def withTransfer_data(value: Destination): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("transfer_data")(value.asInstanceOf[js.Any])
         ret

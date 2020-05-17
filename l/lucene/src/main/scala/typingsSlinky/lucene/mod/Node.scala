@@ -1,6 +1,6 @@
 package typingsSlinky.lucene.mod
 
-import typingsSlinky.lucene.AnonEnd
+import typingsSlinky.lucene.anon.End
 import typingsSlinky.lucene.luceneStrings.LessthansignimplicitGreaterthansign
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ trait Node extends js.Object {
   var regex: Boolean = js.native
   var similarity: Null = js.native
   var term: String = js.native
-  var termLocation: AnonEnd = js.native
+  var termLocation: End = js.native
 }
 
 object Node {
@@ -28,7 +28,7 @@ object Node {
     regex: Boolean,
     similarity: Null,
     term: String,
-    termLocation: AnonEnd
+    termLocation: End
   ): Node = {
     val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any], fieldLocation = fieldLocation.asInstanceOf[js.Any], quoted = quoted.asInstanceOf[js.Any], regex = regex.asInstanceOf[js.Any], similarity = similarity.asInstanceOf[js.Any], term = term.asInstanceOf[js.Any], termLocation = termLocation.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
@@ -76,7 +76,7 @@ object Node {
         ret
     }
     @scala.inline
-    def withTermLocation(value: AnonEnd): Self = {
+    def withTermLocation(value: End): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("termLocation")(value.asInstanceOf[js.Any])
         ret

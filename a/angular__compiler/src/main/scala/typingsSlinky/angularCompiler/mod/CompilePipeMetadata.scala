@@ -1,6 +1,6 @@
 package typingsSlinky.angularCompiler.mod
 
-import typingsSlinky.angularCompiler.AnonName
+import typingsSlinky.angularCompiler.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class CompilePipeMetadata protected ()
   extends typingsSlinky.angularCompiler.publicApiMod.CompilePipeMetadata {
-  def this(hasTypeNamePure: AnonName) = this()
+  def this(hasTypeNamePure: Name) = this()
 }
 

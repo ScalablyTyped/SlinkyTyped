@@ -1,6 +1,6 @@
 package typingsSlinky.sendgrid.mod.SendGrid.Helpers.Mail
 
-import typingsSlinky.sendgrid.AnonClicktracking
+import typingsSlinky.sendgrid.anon.Clicktracking
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait TrackingSettings extends js.Object {
   def setGanalytics(value: Ganalytics): Unit = js.native
   def setOpenTracking(value: OpenTracking): Unit = js.native
   def setSubscriptionTracking(value: SubscriptionTracking): Unit = js.native
-  def toJSON(): AnonClicktracking = js.native
+  def toJSON(): Clicktracking = js.native
 }
 
 object TrackingSettings {
@@ -29,7 +29,7 @@ object TrackingSettings {
     setGanalytics: Ganalytics => Unit,
     setOpenTracking: OpenTracking => Unit,
     setSubscriptionTracking: SubscriptionTracking => Unit,
-    toJSON: () => AnonClicktracking
+    toJSON: () => Clicktracking
   ): TrackingSettings = {
     val __obj = js.Dynamic.literal(getClickTracking = js.Any.fromFunction0(getClickTracking), getGanalytics = js.Any.fromFunction0(getGanalytics), getOpenTracking = js.Any.fromFunction0(getOpenTracking), getSubscriptionTracking = js.Any.fromFunction0(getSubscriptionTracking), setClickTracking = js.Any.fromFunction1(setClickTracking), setGanalytics = js.Any.fromFunction1(setGanalytics), setOpenTracking = js.Any.fromFunction1(setOpenTracking), setSubscriptionTracking = js.Any.fromFunction1(setSubscriptionTracking), toJSON = js.Any.fromFunction0(toJSON))
     __obj.asInstanceOf[TrackingSettings]
@@ -89,7 +89,7 @@ object TrackingSettings {
         ret
     }
     @scala.inline
-    def withToJSON(value: () => AnonClicktracking): Self = {
+    def withToJSON(value: () => Clicktracking): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
         ret

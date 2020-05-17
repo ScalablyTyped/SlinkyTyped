@@ -2,7 +2,7 @@ package typingsSlinky.rcTree.mod
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
-import typingsSlinky.rcTree.AnonChecked
+import typingsSlinky.rcTree.anon.Checked
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ trait TreeProps extends js.Object {
     * Note: parent and children nodes are associated, if the parent node's key exists, it all children node will be checked, and vice versa.
     * When set checkable and checkStrictly, it should be an object, which contains checked array and halfChecked array.
     */
-  var checkedKeys: js.UndefOr[js.Array[String] | AnonChecked] = js.native
+  var checkedKeys: js.UndefOr[js.Array[String] | Checked] = js.native
   /**
     * additional css class of root dom node
     */
@@ -204,7 +204,7 @@ object TreeProps {
         ret
     }
     @scala.inline
-    def withCheckedKeys(value: js.Array[String] | AnonChecked): Self = {
+    def withCheckedKeys(value: js.Array[String] | Checked): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("checkedKeys")(value.asInstanceOf[js.Any])
         ret

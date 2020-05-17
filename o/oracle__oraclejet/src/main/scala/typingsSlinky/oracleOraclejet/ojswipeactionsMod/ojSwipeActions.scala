@@ -2,7 +2,7 @@ package typingsSlinky.oracleOraclejet.ojswipeactionsMod
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.AnonAriaHideActionsDescription
+import typingsSlinky.oracleOraclejet.anon.AriaHideActionsDescription
 import typingsSlinky.oracleOraclejet.mod.baseComponent
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.ojAction
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.translations
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 trait ojSwipeActions extends baseComponent[ojSwipeActionsSettableProperties] {
   var onOjAction: (js.Function1[CustomEvent, _]) | Null = js.native
   @JSName("translations")
-  var translations_ojSwipeActions: AnonAriaHideActionsDescription = js.native
+  var translations_ojSwipeActions: AriaHideActionsDescription = js.native
   @JSName("addEventListener")
   def addEventListener_ojAction(`type`: ojAction, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
@@ -25,7 +25,7 @@ trait ojSwipeActions extends baseComponent[ojSwipeActionsSettableProperties] {
   ): Unit = js.native
   def setProperties(properties: ojSwipeActionsSettablePropertiesLenient): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonAriaHideActionsDescription): Unit = js.native
+  def setProperty_translations(property: translations, value: AriaHideActionsDescription): Unit = js.native
 }
 
 @JSImport("@oracle/oraclejet/ojswipeactions", "ojSwipeActions")

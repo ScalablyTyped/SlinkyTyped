@@ -1,13 +1,13 @@
 package typingsSlinky.webdriverio.WebdriverIO
 
-import typingsSlinky.webdriverio.AnonAlpha
+import typingsSlinky.webdriverio.anon.Alpha
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CSSProperty extends js.Object {
-  var parsed: js.UndefOr[AnonAlpha] = js.native
+  var parsed: js.UndefOr[Alpha] = js.native
   var property: String = js.native
   var value: js.Any = js.native
 }
@@ -37,7 +37,7 @@ object CSSProperty {
         ret
     }
     @scala.inline
-    def withParsed(value: AnonAlpha): Self = {
+    def withParsed(value: Alpha): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parsed")(value.asInstanceOf[js.Any])
         ret

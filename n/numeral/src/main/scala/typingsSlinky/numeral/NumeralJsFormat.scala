@@ -1,5 +1,6 @@
 package typingsSlinky.numeral
 
+import typingsSlinky.numeral.anon.Format
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,18 +8,14 @@ import scala.scalajs.js.annotation._
 // http://numeraljs.com/#custom-formats
 @js.native
 trait NumeralJsFormat extends js.Object {
-  var regexps: AnonFormat = js.native
+  var regexps: Format = js.native
   def format(value: js.Any, format: String, roundingFunction: RoundingFunction): String = js.native
   def unformat(value: String): Double = js.native
 }
 
 object NumeralJsFormat {
   @scala.inline
-  def apply(
-    format: (js.Any, String, RoundingFunction) => String,
-    regexps: AnonFormat,
-    unformat: String => Double
-  ): NumeralJsFormat = {
+  def apply(format: (js.Any, String, RoundingFunction) => String, regexps: Format, unformat: String => Double): NumeralJsFormat = {
     val __obj = js.Dynamic.literal(format = js.Any.fromFunction3(format), regexps = regexps.asInstanceOf[js.Any], unformat = js.Any.fromFunction1(unformat))
     __obj.asInstanceOf[NumeralJsFormat]
   }
@@ -35,7 +32,7 @@ object NumeralJsFormat {
         ret
     }
     @scala.inline
-    def withRegexps(value: AnonFormat): Self = {
+    def withRegexps(value: Format): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("regexps")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.pouchdbCore.PouchDB.Core
 
-import typingsSlinky.pouchdbCore.AnonDoc
+import typingsSlinky.pouchdbCore.anon.Doc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,14 +9,14 @@ import scala.scalajs.js.annotation._
 trait AllDocsResponse[Content /* <: js.Object */] extends js.Object {
   /** The `skip` if provided, or in CouchDB the actual offset */
   var offset: Double = js.native
-  var rows: js.Array[AnonDoc[Content]] = js.native
+  var rows: js.Array[Doc[Content]] = js.native
   var total_rows: Double = js.native
   var update_seq: js.UndefOr[Double | String] = js.native
 }
 
 object AllDocsResponse {
   @scala.inline
-  def apply[Content](offset: Double, rows: js.Array[AnonDoc[Content]], total_rows: Double): AllDocsResponse[Content] = {
+  def apply[Content](offset: Double, rows: js.Array[Doc[Content]], total_rows: Double): AllDocsResponse[Content] = {
     val __obj = js.Dynamic.literal(offset = offset.asInstanceOf[js.Any], rows = rows.asInstanceOf[js.Any], total_rows = total_rows.asInstanceOf[js.Any])
     __obj.asInstanceOf[AllDocsResponse[Content]]
   }
@@ -33,7 +33,7 @@ object AllDocsResponse {
         ret
     }
     @scala.inline
-    def withRows(value: js.Array[AnonDoc[Content]]): Self[Content] = {
+    def withRows(value: js.Array[Doc[Content]]): Self[Content] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
         ret

@@ -2,7 +2,7 @@ package typingsSlinky.primereact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonCheckedData
+import typingsSlinky.primereact.anon.CheckedData
 import typingsSlinky.primereact.rowCheckboxMod.RowCheckboxProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ object RowCheckbox {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.primereact.rowCheckboxMod.RowCheckbox] {
     @scala.inline
-    def onClick(value: /* e */ AnonCheckedData => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    def onClick(value: /* e */ CheckedData => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
     def rowData(value: js.Object): this.type = set("rowData", value.asInstanceOf[js.Any])
   }

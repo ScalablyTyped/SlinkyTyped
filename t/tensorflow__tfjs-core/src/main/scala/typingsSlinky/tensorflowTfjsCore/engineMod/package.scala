@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object engineMod {
   type CustomGradientFunc[T /* <: typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] */] = js.Function1[
     /* repeated */ typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] | typingsSlinky.tensorflowTfjsCore.tensorTypesMod.GradSaveFunc, 
-    typingsSlinky.tensorflowTfjsCore.AnonGradFunc[T]
+    typingsSlinky.tensorflowTfjsCore.anon.GradFunc[T]
   ]
   type ForwardFunc[T] = js.Function2[
     /* backend */ typingsSlinky.tensorflowTfjsCore.backendMod.KernelBackend, 

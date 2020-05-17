@@ -15,3 +15,20 @@ import scala.scalajs.js.annotation._
 */
 trait GraphQLOutputType extends js.Object
 
+object GraphQLOutputType {
+  @scala.inline
+  implicit def apply(value: GraphQLEnumType): GraphQLOutputType = value.asInstanceOf[GraphQLOutputType]
+  @scala.inline
+  implicit def apply(value: GraphQLInterfaceType): GraphQLOutputType = value.asInstanceOf[GraphQLOutputType]
+  @scala.inline
+  implicit def apply(value: GraphQLList): GraphQLOutputType = value.asInstanceOf[GraphQLOutputType]
+  @scala.inline
+  implicit def apply(value: GraphQLNonNull): GraphQLOutputType = value.asInstanceOf[GraphQLOutputType]
+  @scala.inline
+  implicit def apply(value: GraphQLObjectType): GraphQLOutputType = value.asInstanceOf[GraphQLOutputType]
+  @scala.inline
+  implicit def apply(value: GraphQLScalarType): GraphQLOutputType = value.asInstanceOf[GraphQLOutputType]
+  @scala.inline
+  implicit def apply(value: GraphQLUnionType): GraphQLOutputType = value.asInstanceOf[GraphQLOutputType]
+}
+

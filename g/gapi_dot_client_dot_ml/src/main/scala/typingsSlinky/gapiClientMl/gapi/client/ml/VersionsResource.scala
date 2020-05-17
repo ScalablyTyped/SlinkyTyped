@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientMl.gapi.client.ml
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientMl.AnonAccesstoken
-import typingsSlinky.gapiClientMl.AnonAlt
-import typingsSlinky.gapiClientMl.AnonFields
-import typingsSlinky.gapiClientMl.AnonKey
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientMl.anon.Accesstoken
+import typingsSlinky.gapiClientMl.anon.Alt
+import typingsSlinky.gapiClientMl.anon.Fields
+import typingsSlinky.gapiClientMl.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait VersionsResource extends js.Object {
     * new version to be the default, you must call
     * [projects.models.versions.setDefault](/ml-engine/reference/rest/v1/projects.models.versions/setDefault).
     */
-  def create(request: AnonAlt): Request_[GoogleLongrunningOperation] = js.native
+  def create(request: Alt): Request[GoogleLongrunningOperation] = js.native
   /**
     * Deletes a model version.
     *
@@ -31,7 +31,7 @@ trait VersionsResource extends js.Object {
     * Note: You cannot delete the version that is set as the default version
     * of the model unless it is the only remaining version.
     */
-  def delete(request: AnonAccesstoken): Request_[GoogleLongrunningOperation] = js.native
+  def delete(request: Accesstoken): Request[GoogleLongrunningOperation] = js.native
   /**
     * Gets information about a model version.
     *
@@ -40,7 +40,7 @@ trait VersionsResource extends js.Object {
     * to get the same information that this method returns for all of the
     * versions of a model.
     */
-  def get(request: AnonAccesstoken): Request_[GoogleCloudMlV1Version] = js.native
+  def get(request: Accesstoken): Request[GoogleCloudMlV1Version] = js.native
   /**
     * Gets basic information about all the versions of a model.
     *
@@ -48,13 +48,13 @@ trait VersionsResource extends js.Object {
     * only a limited number of results at a time, you can request that the list
     * be retrieved in batches (called pages):
     */
-  def list(request: AnonFields): Request_[GoogleCloudMlV1ListVersionsResponse] = js.native
+  def list(request: Fields): Request[GoogleCloudMlV1ListVersionsResponse] = js.native
   /**
     * Updates the specified Version resource.
     *
     * Currently the only supported field to update is `description`.
     */
-  def patch(request: AnonKey): Request_[GoogleLongrunningOperation] = js.native
+  def patch(request: Key): Request[GoogleLongrunningOperation] = js.native
   /**
     * Designates a version to be the default for the model.
     *
@@ -65,18 +65,18 @@ trait VersionsResource extends js.Object {
     * default. You must make any subsequent changes to the default version
     * setting manually using this method.
     */
-  def setDefault(request: AnonAccesstoken): Request_[GoogleCloudMlV1Version] = js.native
+  def setDefault(request: Accesstoken): Request[GoogleCloudMlV1Version] = js.native
 }
 
 object VersionsResource {
   @scala.inline
   def apply(
-    create: AnonAlt => Request_[GoogleLongrunningOperation],
-    delete: AnonAccesstoken => Request_[GoogleLongrunningOperation],
-    get: AnonAccesstoken => Request_[GoogleCloudMlV1Version],
-    list: AnonFields => Request_[GoogleCloudMlV1ListVersionsResponse],
-    patch: AnonKey => Request_[GoogleLongrunningOperation],
-    setDefault: AnonAccesstoken => Request_[GoogleCloudMlV1Version]
+    create: Alt => Request[GoogleLongrunningOperation],
+    delete: Accesstoken => Request[GoogleLongrunningOperation],
+    get: Accesstoken => Request[GoogleCloudMlV1Version],
+    list: Fields => Request[GoogleCloudMlV1ListVersionsResponse],
+    patch: Key => Request[GoogleLongrunningOperation],
+    setDefault: Accesstoken => Request[GoogleCloudMlV1Version]
   ): VersionsResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), setDefault = js.Any.fromFunction1(setDefault))
     __obj.asInstanceOf[VersionsResource]
@@ -88,37 +88,37 @@ object VersionsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: AnonAlt => Request_[GoogleLongrunningOperation]): Self = {
+    def withCreate(value: Alt => Request[GoogleLongrunningOperation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonAccesstoken => Request_[GoogleLongrunningOperation]): Self = {
+    def withDelete(value: Accesstoken => Request[GoogleLongrunningOperation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonAccesstoken => Request_[GoogleCloudMlV1Version]): Self = {
+    def withGet(value: Accesstoken => Request[GoogleCloudMlV1Version]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonFields => Request_[GoogleCloudMlV1ListVersionsResponse]): Self = {
+    def withList(value: Fields => Request[GoogleCloudMlV1ListVersionsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPatch(value: AnonKey => Request_[GoogleLongrunningOperation]): Self = {
+    def withPatch(value: Key => Request[GoogleLongrunningOperation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withSetDefault(value: AnonAccesstoken => Request_[GoogleCloudMlV1Version]): Self = {
+    def withSetDefault(value: Accesstoken => Request[GoogleCloudMlV1Version]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("setDefault")(js.Any.fromFunction1(value))
         ret

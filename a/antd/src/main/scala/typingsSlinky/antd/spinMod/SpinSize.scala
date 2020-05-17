@@ -11,3 +11,12 @@ import scala.scalajs.js.annotation._
 */
 trait SpinSize extends js.Object
 
+object SpinSize {
+  @scala.inline
+  def small: typingsSlinky.antd.antdStrings.small = "small".asInstanceOf[typingsSlinky.antd.antdStrings.small]
+  @scala.inline
+  def default: typingsSlinky.antd.antdStrings.default = "default".asInstanceOf[typingsSlinky.antd.antdStrings.default]
+  @scala.inline
+  def large: typingsSlinky.antd.antdStrings.large = "large".asInstanceOf[typingsSlinky.antd.antdStrings.large]
+}
+

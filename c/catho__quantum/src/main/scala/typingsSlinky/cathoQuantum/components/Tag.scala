@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonColorsComponentsSpacing
+import typingsSlinky.cathoQuantum.anon.ColorsComponentsSpacing
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.error
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.large
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.medium
@@ -43,7 +43,7 @@ object Tag {
     @scala.inline
     def text(value: String): this.type = set("text", value.asInstanceOf[js.Any])
     @scala.inline
-    def theme(value: AnonColorsComponentsSpacing): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: ColorsComponentsSpacing): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: TagProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

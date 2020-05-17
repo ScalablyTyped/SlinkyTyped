@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.BABYLON
 
-import typingsSlinky.babylonjs.AnonTouchPointNodeName
+import typingsSlinky.babylonjs.anon.TouchPointNodeName
 import typingsSlinky.babylonjs.babylonjsStrings._empty
 import typingsSlinky.babylonjs.babylonjsStrings.`xr-standard`
 import scala.scalajs.js
@@ -19,7 +19,7 @@ trait IMotionControllerLayout extends js.Object {
   var components: /**
     * A map of component Ids
     */
-  org.scalablytyped.runtime.StringDictionary[AnonTouchPointNodeName] = js.native
+  org.scalablytyped.runtime.StringDictionary[TouchPointNodeName] = js.native
   /**
     * Is it xr standard mapping or not
     */
@@ -41,7 +41,7 @@ object IMotionControllerLayout {
     components: /**
     * A map of component Ids
     */
-  org.scalablytyped.runtime.StringDictionary[AnonTouchPointNodeName],
+  org.scalablytyped.runtime.StringDictionary[TouchPointNodeName],
     gamepadMapping: _empty | `xr-standard`,
     rootNodeName: String,
     selectComponentId: String
@@ -66,7 +66,7 @@ object IMotionControllerLayout {
       value: /**
       * A map of component Ids
       */
-    org.scalablytyped.runtime.StringDictionary[AnonTouchPointNodeName]
+    org.scalablytyped.runtime.StringDictionary[TouchPointNodeName]
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("components")(value.asInstanceOf[js.Any])

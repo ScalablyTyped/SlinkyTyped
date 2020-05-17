@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -309,7 +309,7 @@ object IgGridUpdating {
         ret
     }
     @scala.inline
-    def withDataDirty(value: (/* event */ Event_, /* ui */ DataDirtyEventUIParam) => Unit): Self = {
+    def withDataDirty(value: (/* event */ Event, /* ui */ DataDirtyEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataDirty")(js.Any.fromFunction2(value))
         ret
@@ -381,7 +381,7 @@ object IgGridUpdating {
         ret
     }
     @scala.inline
-    def withEditCellEnded(value: (/* event */ Event_, /* ui */ EditCellEndedEventUIParam) => Unit): Self = {
+    def withEditCellEnded(value: (/* event */ Event, /* ui */ EditCellEndedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editCellEnded")(js.Any.fromFunction2(value))
         ret
@@ -393,7 +393,7 @@ object IgGridUpdating {
         ret
     }
     @scala.inline
-    def withEditCellEnding(value: (/* event */ Event_, /* ui */ EditCellEndingEventUIParam) => Unit): Self = {
+    def withEditCellEnding(value: (/* event */ Event, /* ui */ EditCellEndingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editCellEnding")(js.Any.fromFunction2(value))
         ret
@@ -405,7 +405,7 @@ object IgGridUpdating {
         ret
     }
     @scala.inline
-    def withEditCellStarted(value: (/* event */ Event_, /* ui */ EditCellStartedEventUIParam) => Unit): Self = {
+    def withEditCellStarted(value: (/* event */ Event, /* ui */ EditCellStartedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editCellStarted")(js.Any.fromFunction2(value))
         ret
@@ -417,7 +417,7 @@ object IgGridUpdating {
         ret
     }
     @scala.inline
-    def withEditCellStarting(value: (/* event */ Event_, /* ui */ EditCellStartingEventUIParam) => Unit): Self = {
+    def withEditCellStarting(value: (/* event */ Event, /* ui */ EditCellStartingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editCellStarting")(js.Any.fromFunction2(value))
         ret
@@ -441,7 +441,7 @@ object IgGridUpdating {
         ret
     }
     @scala.inline
-    def withEditRowEnded(value: (/* event */ Event_, /* ui */ EditRowEndedEventUIParam) => Unit): Self = {
+    def withEditRowEnded(value: (/* event */ Event, /* ui */ EditRowEndedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editRowEnded")(js.Any.fromFunction2(value))
         ret
@@ -453,7 +453,7 @@ object IgGridUpdating {
         ret
     }
     @scala.inline
-    def withEditRowEnding(value: (/* event */ Event_, /* ui */ EditRowEndingEventUIParam) => Unit): Self = {
+    def withEditRowEnding(value: (/* event */ Event, /* ui */ EditRowEndingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editRowEnding")(js.Any.fromFunction2(value))
         ret
@@ -465,7 +465,7 @@ object IgGridUpdating {
         ret
     }
     @scala.inline
-    def withEditRowStarted(value: (/* event */ Event_, /* ui */ EditRowStartedEventUIParam) => Unit): Self = {
+    def withEditRowStarted(value: (/* event */ Event, /* ui */ EditRowStartedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editRowStarted")(js.Any.fromFunction2(value))
         ret
@@ -477,7 +477,7 @@ object IgGridUpdating {
         ret
     }
     @scala.inline
-    def withEditRowStarting(value: (/* event */ Event_, /* ui */ EditRowStartingEventUIParam) => Unit): Self = {
+    def withEditRowStarting(value: (/* event */ Event, /* ui */ EditRowStartingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editRowStarting")(js.Any.fromFunction2(value))
         ret
@@ -537,7 +537,7 @@ object IgGridUpdating {
         ret
     }
     @scala.inline
-    def withGeneratePrimaryKeyValue(value: (/* event */ Event_, /* ui */ GeneratePrimaryKeyValueEventUIParam) => Unit): Self = {
+    def withGeneratePrimaryKeyValue(value: (/* event */ Event, /* ui */ GeneratePrimaryKeyValueEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("generatePrimaryKeyValue")(js.Any.fromFunction2(value))
         ret
@@ -585,7 +585,7 @@ object IgGridUpdating {
         ret
     }
     @scala.inline
-    def withRowAdded(value: (/* event */ Event_, /* ui */ RowAddedEventUIParam) => Unit): Self = {
+    def withRowAdded(value: (/* event */ Event, /* ui */ RowAddedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowAdded")(js.Any.fromFunction2(value))
         ret
@@ -597,7 +597,7 @@ object IgGridUpdating {
         ret
     }
     @scala.inline
-    def withRowAdding(value: (/* event */ Event_, /* ui */ RowAddingEventUIParam) => Unit): Self = {
+    def withRowAdding(value: (/* event */ Event, /* ui */ RowAddingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowAdding")(js.Any.fromFunction2(value))
         ret
@@ -609,7 +609,7 @@ object IgGridUpdating {
         ret
     }
     @scala.inline
-    def withRowDeleted(value: (/* event */ Event_, /* ui */ RowDeletedEventUIParam) => Unit): Self = {
+    def withRowDeleted(value: (/* event */ Event, /* ui */ RowDeletedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowDeleted")(js.Any.fromFunction2(value))
         ret
@@ -621,7 +621,7 @@ object IgGridUpdating {
         ret
     }
     @scala.inline
-    def withRowDeleting(value: (/* event */ Event_, /* ui */ RowDeletingEventUIParam) => Unit): Self = {
+    def withRowDeleting(value: (/* event */ Event, /* ui */ RowDeletingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowDeleting")(js.Any.fromFunction2(value))
         ret
@@ -633,7 +633,7 @@ object IgGridUpdating {
         ret
     }
     @scala.inline
-    def withRowEditDialogAfterClose(value: (/* event */ Event_, /* ui */ RowEditDialogAfterCloseEventUIParam) => Unit): Self = {
+    def withRowEditDialogAfterClose(value: (/* event */ Event, /* ui */ RowEditDialogAfterCloseEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowEditDialogAfterClose")(js.Any.fromFunction2(value))
         ret
@@ -645,7 +645,7 @@ object IgGridUpdating {
         ret
     }
     @scala.inline
-    def withRowEditDialogAfterOpen(value: (/* event */ Event_, /* ui */ RowEditDialogAfterOpenEventUIParam) => Unit): Self = {
+    def withRowEditDialogAfterOpen(value: (/* event */ Event, /* ui */ RowEditDialogAfterOpenEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowEditDialogAfterOpen")(js.Any.fromFunction2(value))
         ret
@@ -657,7 +657,7 @@ object IgGridUpdating {
         ret
     }
     @scala.inline
-    def withRowEditDialogBeforeClose(value: (/* event */ Event_, /* ui */ RowEditDialogBeforeCloseEventUIParam) => Unit): Self = {
+    def withRowEditDialogBeforeClose(value: (/* event */ Event, /* ui */ RowEditDialogBeforeCloseEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowEditDialogBeforeClose")(js.Any.fromFunction2(value))
         ret
@@ -669,7 +669,7 @@ object IgGridUpdating {
         ret
     }
     @scala.inline
-    def withRowEditDialogBeforeOpen(value: (/* event */ Event_, /* ui */ RowEditDialogBeforeOpenEventUIParam) => Unit): Self = {
+    def withRowEditDialogBeforeOpen(value: (/* event */ Event, /* ui */ RowEditDialogBeforeOpenEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowEditDialogBeforeOpen")(js.Any.fromFunction2(value))
         ret
@@ -681,7 +681,7 @@ object IgGridUpdating {
         ret
     }
     @scala.inline
-    def withRowEditDialogContentsRendered(value: (/* event */ Event_, /* ui */ RowEditDialogContentsRenderedEventUIParam) => Unit): Self = {
+    def withRowEditDialogContentsRendered(value: (/* event */ Event, /* ui */ RowEditDialogContentsRenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowEditDialogContentsRendered")(js.Any.fromFunction2(value))
         ret

@@ -13,7 +13,7 @@ import typingsSlinky.nivoCore.mod.SvgDefsAndFill
 import typingsSlinky.nivoCore.mod.Theme
 import typingsSlinky.nivoLegends.mod.LegendProps
 import typingsSlinky.nivoScales.mod.Scale
-import typingsSlinky.nivoStream.Anon0
+import typingsSlinky.nivoStream.anon.`0`
 import typingsSlinky.nivoStream.nivoStreamStrings.center
 import typingsSlinky.nivoStream.nivoStreamStrings.end
 import typingsSlinky.nivoStream.nivoStreamStrings.start
@@ -80,7 +80,7 @@ object OptionalStreamProps {
     offsetType: StackOffset,
     order: StackOrder,
     renderDot: StreamDotsItem,
-    stack: /* data */ js.Array[T] => js.Array[js.Array[Anon0[T]]],
+    stack: /* data */ js.Array[T] => js.Array[js.Array[`0`[T]]],
     theme: Theme,
     tooltipFormat: TooltipFormatter[T] | String,
     tooltipLabel: T => String,
@@ -253,7 +253,7 @@ object OptionalStreamProps {
         ret
     }
     @scala.inline
-    def withStack(value: /* data */ js.Array[T] => js.Array[js.Array[Anon0[T]]]): Self[T] = {
+    def withStack(value: /* data */ js.Array[T] => js.Array[js.Array[`0`[T]]]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(js.Any.fromFunction1(value))
         ret

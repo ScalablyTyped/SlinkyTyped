@@ -2,7 +2,7 @@ package typingsSlinky.reactIntl.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactIntl.DisplayNamesOptionsvalues
+import typingsSlinky.reactIntl.anon.DisplayNamesOptionsvalues
 import typingsSlinky.reactIntl.reactIntlStrings.`best fit`
 import typingsSlinky.reactIntl.reactIntlStrings.code
 import typingsSlinky.reactIntl.reactIntlStrings.currency

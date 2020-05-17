@@ -1,7 +1,7 @@
 package typingsSlinky.stripe.mod.accounts
 
-import typingsSlinky.stripe.AnonCardpayments
-import typingsSlinky.stripe.AnonDisabledreason
+import typingsSlinky.stripe.anon.Cardpayments
+import typingsSlinky.stripe.anon.Disabledreason
 import typingsSlinky.stripe.mod.IList
 import typingsSlinky.stripe.mod.IMetadata
 import typingsSlinky.stripe.mod.IResourceObject
@@ -22,7 +22,7 @@ trait IAccount
     * account and their associatedstates. Keys are names of capabilities.
     * You can see the full list here. Values may be active, inactive, or pending.
     */
-  var capabilities: js.UndefOr[AnonCardpayments] = js.native
+  var capabilities: js.UndefOr[Cardpayments] = js.native
   /**
     * Whether or not the account can create live charges
     */
@@ -90,7 +90,7 @@ trait IAccount
     * information is needed and by when it must be provided.
     * @deprecated
     */
-  var verification: js.UndefOr[AnonDisabledreason] = js.native
+  var verification: js.UndefOr[Disabledreason] = js.native
 }
 
 object IAccount {
@@ -159,7 +159,7 @@ object IAccount {
         ret
     }
     @scala.inline
-    def withCapabilities(value: AnonCardpayments): Self = {
+    def withCapabilities(value: Cardpayments): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("capabilities")(value.asInstanceOf[js.Any])
         ret
@@ -243,7 +243,7 @@ object IAccount {
         ret
     }
     @scala.inline
-    def withVerification(value: AnonDisabledreason): Self = {
+    def withVerification(value: Disabledreason): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("verification")(value.asInstanceOf[js.Any])
         ret

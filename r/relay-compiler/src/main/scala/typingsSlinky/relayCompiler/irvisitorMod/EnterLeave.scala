@@ -5,7 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait EnterLeave[T] extends js.Object {
+trait EnterLeave[T]
+  extends NodeVisitor
+     with NodeVisitorObject[js.Any] {
   val enter: js.UndefOr[T] = js.native
   val leave: js.UndefOr[T] = js.native
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.sailthruClient.mod
 
-import typingsSlinky.sailthruClient.AnonFull
+import typingsSlinky.sailthruClient.anon.Full
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PurchaseItem extends js.Object {
   var id: String | Double = js.native
-  var images: js.UndefOr[AnonFull] = js.native
+  var images: js.UndefOr[Full] = js.native
   var price: Double = js.native
   var qty: Double = js.native
   var tags: js.UndefOr[js.Array[String]] = js.native
@@ -60,7 +60,7 @@ object PurchaseItem {
         ret
     }
     @scala.inline
-    def withImages(value: AnonFull): Self = {
+    def withImages(value: Full): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("images")(value.asInstanceOf[js.Any])
         ret

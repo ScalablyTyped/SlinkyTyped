@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a mobile broadband account and related information about the network provider for the account. */
-@JSGlobal("Windows.Networking.NetworkOperators.MobileBroadbandAccount")
 @js.native
-abstract class MobileBroadbandAccount () extends js.Object {
+trait MobileBroadbandAccount extends js.Object {
   /** Gets the mobile broadband device information associated with this account. */
   var currentDeviceInformation: MobileBroadbandDeviceInformation = js.native
   /** Gets the Mobile Broadband network object for this account. */
@@ -27,17 +26,62 @@ abstract class MobileBroadbandAccount () extends js.Object {
   def getConnectionProfiles(): IVectorView[ConnectionProfile] = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Networking.NetworkOperators.MobileBroadbandAccount")
-@js.native
-object MobileBroadbandAccount extends js.Object {
-  /** A list of all network account IDs for the network service provider. */
-  var availableNetworkAccountIds: IVectorView[String] = js.native
-  /**
-    * Creates a mobile broadband account for the mobile device associated with the supplied network account ID.
-    * @param networkAccountId The network account ID to use to select the corresponding mobile broadband device to use for the account.
-    * @return A mobile broadband account for the mobile device associated with the supplied network account ID.
-    */
-  def createFromNetworkAccountId(networkAccountId: String): MobileBroadbandAccount = js.native
+object MobileBroadbandAccount {
+  @scala.inline
+  def apply(
+    currentDeviceInformation: MobileBroadbandDeviceInformation,
+    currentNetwork: MobileBroadbandNetwork,
+    getConnectionProfiles: () => IVectorView[ConnectionProfile],
+    networkAccountId: String,
+    serviceProviderGuid: String,
+    serviceProviderName: String
+  ): MobileBroadbandAccount = {
+    val __obj = js.Dynamic.literal(currentDeviceInformation = currentDeviceInformation.asInstanceOf[js.Any], currentNetwork = currentNetwork.asInstanceOf[js.Any], getConnectionProfiles = js.Any.fromFunction0(getConnectionProfiles), networkAccountId = networkAccountId.asInstanceOf[js.Any], serviceProviderGuid = serviceProviderGuid.asInstanceOf[js.Any], serviceProviderName = serviceProviderName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MobileBroadbandAccount]
+  }
+  @scala.inline
+  implicit class MobileBroadbandAccountOps[Self <: MobileBroadbandAccount] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrentDeviceInformation(value: MobileBroadbandDeviceInformation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentDeviceInformation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentNetwork(value: MobileBroadbandNetwork): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentNetwork")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetConnectionProfiles(value: () => IVectorView[ConnectionProfile]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getConnectionProfiles")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNetworkAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServiceProviderGuid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceProviderGuid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withServiceProviderName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serviceProviderName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

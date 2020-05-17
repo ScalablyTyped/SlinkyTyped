@@ -16,6 +16,7 @@ import typingsSlinky.vscode.mod.TextDocumentChangeEvent
 import typingsSlinky.vscode.mod.TextDocumentWillSaveEvent
 import typingsSlinky.vscode.mod.TextEdit
 import typingsSlinky.vscode.mod.Uri
+import typingsSlinky.vscodeLanguageclient.anon.IncludeDeclaration
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.CodeLensParams
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.CompletionParams
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.DidChangeTextDocumentParams
@@ -66,7 +67,7 @@ object codeConverterMod extends js.Object {
     def asRange_Range(value: Range): typingsSlinky.vscodeLanguageserverTypes.mod.Range = js.native
     @JSName("asRange")
     def asRange_Union(): js.UndefOr[scala.Nothing] = js.native
-    def asReferenceParams(textDocument: TextDocument, position: Position, options: AnonIncludeDeclaration): ReferenceParams = js.native
+    def asReferenceParams(textDocument: TextDocument, position: Position, options: IncludeDeclaration): ReferenceParams = js.native
     def asSaveTextDocumentParams(textDocument: TextDocument): DidSaveTextDocumentParams = js.native
     def asSaveTextDocumentParams(textDocument: TextDocument, includeContent: Boolean): DidSaveTextDocumentParams = js.native
     def asTextDocumentIdentifier(textDocument: TextDocument): TextDocumentIdentifier = js.native

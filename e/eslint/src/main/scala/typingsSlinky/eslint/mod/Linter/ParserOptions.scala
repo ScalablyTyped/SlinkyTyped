@@ -1,7 +1,7 @@
 package typingsSlinky.eslint.mod.Linter
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.eslint.AnonDictkey
+import typingsSlinky.eslint.anon.Dictkey
 import typingsSlinky.eslint.eslintNumbers.`10`
 import typingsSlinky.eslint.eslintNumbers.`11`
 import typingsSlinky.eslint.eslintNumbers.`2015`
@@ -25,7 +25,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ParserOptions
   extends /* key */ StringDictionary[js.Any] {
-  var ecmaFeatures: js.UndefOr[AnonDictkey] = js.native
+  var ecmaFeatures: js.UndefOr[Dictkey] = js.native
   var ecmaVersion: js.UndefOr[
     `3` | `5` | `6` | `7` | `8` | `9` | `10` | `11` | `2015` | `2016` | `2017` | `2018` | `2019` | `2020`
   ] = js.native
@@ -45,7 +45,7 @@ object ParserOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEcmaFeatures(value: AnonDictkey): Self = {
+    def withEcmaFeatures(value: Dictkey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ecmaFeatures")(value.asInstanceOf[js.Any])
         ret

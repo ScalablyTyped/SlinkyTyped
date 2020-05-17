@@ -1,48 +1,28 @@
 package typingsSlinky.rcFieldForm.interfaceMod
 
-import typingsSlinky.rcFieldForm.rcFieldFormStrings.dependenciesUpdate
-import typingsSlinky.rcFieldForm.rcFieldFormStrings.external
-import typingsSlinky.rcFieldForm.rcFieldFormStrings.internal
-import typingsSlinky.rcFieldForm.rcFieldFormStrings.reset
-import typingsSlinky.rcFieldForm.rcFieldFormStrings.setField
-import typingsSlinky.rcFieldForm.rcFieldFormStrings.validateFinish
-import typingsSlinky.rcFieldForm.rcFieldFormStrings.valueUpdate
+import typingsSlinky.rcFieldForm.anon.Data
+import typingsSlinky.rcFieldForm.anon.RelatedFields
+import typingsSlinky.rcFieldForm.anon.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.rcFieldForm.interfaceMod.ValueUpdateInfo
-  - typingsSlinky.rcFieldForm.AnonType
-  - typingsSlinky.rcFieldForm.AnonData
-  - typingsSlinky.rcFieldForm.AnonRelatedFields
+  - typingsSlinky.rcFieldForm.anon.Type
+  - typingsSlinky.rcFieldForm.anon.Data
+  - typingsSlinky.rcFieldForm.anon.RelatedFields
 */
 trait NotifyInfo extends js.Object
 
 object NotifyInfo {
   @scala.inline
-  def ValueUpdateInfo(source: internal | external, `type`: valueUpdate): NotifyInfo = {
-    val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NotifyInfo]
-  }
+  implicit def apply(value: Data): NotifyInfo = value.asInstanceOf[NotifyInfo]
   @scala.inline
-  def AnonType(`type`: validateFinish | reset): NotifyInfo = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NotifyInfo]
-  }
+  implicit def apply(value: RelatedFields): NotifyInfo = value.asInstanceOf[NotifyInfo]
   @scala.inline
-  def AnonData(data: FieldData, `type`: setField): NotifyInfo = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NotifyInfo]
-  }
+  implicit def apply(value: Type): NotifyInfo = value.asInstanceOf[NotifyInfo]
   @scala.inline
-  def AnonRelatedFields(relatedFields: js.Array[InternalNamePath], `type`: dependenciesUpdate): NotifyInfo = {
-    val __obj = js.Dynamic.literal(relatedFields = relatedFields.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NotifyInfo]
-  }
+  implicit def apply(value: ValueUpdateInfo): NotifyInfo = value.asInstanceOf[NotifyInfo]
 }
 

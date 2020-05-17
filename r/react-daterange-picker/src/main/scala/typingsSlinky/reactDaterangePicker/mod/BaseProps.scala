@@ -3,7 +3,7 @@ package typingsSlinky.reactDaterangePicker.mod
 import slinky.core.ReactComponentClass
 import typingsSlinky.moment.mod.Moment
 import typingsSlinky.momentRange.mod.DateRange
-import typingsSlinky.reactDaterangePicker.MomentRangeNoneinpMomentI
+import typingsSlinky.reactDaterangePicker.anon.MomentRangeNoneinpMomentI
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

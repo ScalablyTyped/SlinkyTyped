@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientAdexchangebuyer2.gapi.client.adexchangebuyer2
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAdexchangebuyer2.AnonFields
-import typingsSlinky.gapiClientAdexchangebuyer2.AnonIsTransient
-import typingsSlinky.gapiClientAdexchangebuyer2.AnonPp
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAdexchangebuyer2.anon.Fields
+import typingsSlinky.gapiClientAdexchangebuyer2.anon.IsTransient
+import typingsSlinky.gapiClientAdexchangebuyer2.anon.Pp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,19 +19,19 @@ trait FilterSetsResource extends js.Object {
   var losingBids: LosingBidsResource = js.native
   var nonBillableWinningBids: NonBillableWinningBidsResource = js.native
   /** Creates the specified filter set for the account with the given account ID. */
-  def create(request: AnonIsTransient): Request_[FilterSet] = js.native
+  def create(request: IsTransient): Request[FilterSet] = js.native
   /**
     * Deletes the requested filter set from the account with the given account
     * ID.
     */
-  def delete(request: AnonPp): Request_[js.Object] = js.native
+  def delete(request: Pp): Request[js.Object] = js.native
   /**
     * Retrieves the requested filter set for the account with the given account
     * ID.
     */
-  def get(request: AnonPp): Request_[FilterSet] = js.native
+  def get(request: Pp): Request[FilterSet] = js.native
   /** Lists all filter sets for the account with the given account ID. */
-  def list(request: AnonFields): Request_[ListFilterSetsResponse] = js.native
+  def list(request: Fields): Request[ListFilterSetsResponse] = js.native
 }
 
 object FilterSetsResource {
@@ -40,13 +40,13 @@ object FilterSetsResource {
     bidMetrics: BidMetricsResource,
     bidResponseErrors: BidResponseErrorsResource,
     bidResponsesWithoutBids: BidResponsesWithoutBidsResource,
-    create: AnonIsTransient => Request_[FilterSet],
-    delete: AnonPp => Request_[js.Object],
+    create: IsTransient => Request[FilterSet],
+    delete: Pp => Request[js.Object],
     filteredBidRequests: FilteredBidRequestsResource,
     filteredBids: FilteredBidsResource,
-    get: AnonPp => Request_[FilterSet],
+    get: Pp => Request[FilterSet],
     impressionMetrics: ImpressionMetricsResource,
-    list: AnonFields => Request_[ListFilterSetsResponse],
+    list: Fields => Request[ListFilterSetsResponse],
     losingBids: LosingBidsResource,
     nonBillableWinningBids: NonBillableWinningBidsResource
   ): FilterSetsResource = {
@@ -78,13 +78,13 @@ object FilterSetsResource {
         ret
     }
     @scala.inline
-    def withCreate(value: AnonIsTransient => Request_[FilterSet]): Self = {
+    def withCreate(value: IsTransient => Request[FilterSet]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonPp => Request_[js.Object]): Self = {
+    def withDelete(value: Pp => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
@@ -102,7 +102,7 @@ object FilterSetsResource {
         ret
     }
     @scala.inline
-    def withGet(value: AnonPp => Request_[FilterSet]): Self = {
+    def withGet(value: Pp => Request[FilterSet]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
@@ -114,7 +114,7 @@ object FilterSetsResource {
         ret
     }
     @scala.inline
-    def withList(value: AnonFields => Request_[ListFilterSetsResponse]): Self = {
+    def withList(value: Fields => Request[ListFilterSetsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

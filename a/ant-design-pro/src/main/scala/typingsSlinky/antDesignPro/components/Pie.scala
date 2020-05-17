@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignPro.AnonX
+import typingsSlinky.antDesignPro.anon.X
 import typingsSlinky.antDesignPro.pieMod.IPieProps
 import typingsSlinky.antDesignPro.pieMod.default
 import scala.scalajs.js
@@ -27,7 +27,7 @@ object Pie {
     @scala.inline
     def colors(value: js.Array[String]): this.type = set("colors", value.asInstanceOf[js.Any])
     @scala.inline
-    def data(value: js.Array[AnonX]): this.type = set("data", value.asInstanceOf[js.Any])
+    def data(value: js.Array[X]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def hasLegend(value: Boolean): this.type = set("hasLegend", value.asInstanceOf[js.Any])
     @scala.inline

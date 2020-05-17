@@ -13,10 +13,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides properties and methods to store and manage the collection of InkStroke objects rendered by the InkPresenter . */
-@JSGlobal("Windows.UI.Input.Inking.InkStrokeContainer")
 @js.native
-/** Creates a new InkStrokeContainer object that is used to manage InkStroke objects. */
-class InkStrokeContainer () extends js.Object {
+trait InkStrokeContainer extends js.Object {
   /** Gets the bounding rectangle of the InkStroke collection managed by the InkStrokeContainer . */
   var boundingRect: Rect = js.native
   /**
@@ -95,5 +93,134 @@ class InkStrokeContainer () extends js.Object {
     * @param recognitionResults The updated collection of InkRecognitionResult objects.
     */
   def updateRecognitionResults(recognitionResults: IVectorView[InkRecognitionResult]): Unit = js.native
+}
+
+object InkStrokeContainer {
+  @scala.inline
+  def apply(
+    addStroke: InkStroke => Unit,
+    addStrokes: IIterable[InkStroke] => Unit,
+    boundingRect: Rect,
+    canPasteFromClipboard: () => Boolean,
+    clear: () => Unit,
+    copySelectedToClipboard: () => Unit,
+    deleteSelected: () => Rect,
+    getRecognitionResults: () => IVectorView[InkRecognitionResult],
+    getStrokes: () => IVectorView[InkStroke],
+    loadAsync: IInputStream => IPromiseWithIAsyncActionWithProgress[Double],
+    moveSelected: Point => Rect,
+    pasteFromClipboard: Point => Rect,
+    saveAsync: IOutputStream => IPromiseWithIAsyncOperationWithProgress[Double, Double],
+    selectWithLine: (Point, Point) => Rect,
+    selectWithPolyLine: IIterable[Point] => Rect,
+    updateRecognitionResults: IVectorView[InkRecognitionResult] => Unit
+  ): InkStrokeContainer = {
+    val __obj = js.Dynamic.literal(addStroke = js.Any.fromFunction1(addStroke), addStrokes = js.Any.fromFunction1(addStrokes), boundingRect = boundingRect.asInstanceOf[js.Any], canPasteFromClipboard = js.Any.fromFunction0(canPasteFromClipboard), clear = js.Any.fromFunction0(clear), copySelectedToClipboard = js.Any.fromFunction0(copySelectedToClipboard), deleteSelected = js.Any.fromFunction0(deleteSelected), getRecognitionResults = js.Any.fromFunction0(getRecognitionResults), getStrokes = js.Any.fromFunction0(getStrokes), loadAsync = js.Any.fromFunction1(loadAsync), moveSelected = js.Any.fromFunction1(moveSelected), pasteFromClipboard = js.Any.fromFunction1(pasteFromClipboard), saveAsync = js.Any.fromFunction1(saveAsync), selectWithLine = js.Any.fromFunction2(selectWithLine), selectWithPolyLine = js.Any.fromFunction1(selectWithPolyLine), updateRecognitionResults = js.Any.fromFunction1(updateRecognitionResults))
+    __obj.asInstanceOf[InkStrokeContainer]
+  }
+  @scala.inline
+  implicit class InkStrokeContainerOps[Self <: InkStrokeContainer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddStroke(value: InkStroke => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addStroke")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAddStrokes(value: IIterable[InkStroke] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addStrokes")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withBoundingRect(value: Rect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundingRect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCanPasteFromClipboard(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canPasteFromClipboard")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withClear(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withCopySelectedToClipboard(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copySelectedToClipboard")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDeleteSelected(value: () => Rect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteSelected")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRecognitionResults(value: () => IVectorView[InkRecognitionResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRecognitionResults")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetStrokes(value: () => IVectorView[InkStroke]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStrokes")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withLoadAsync(value: IInputStream => IPromiseWithIAsyncActionWithProgress[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMoveSelected(value: Point => Rect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveSelected")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPasteFromClipboard(value: Point => Rect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pasteFromClipboard")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSaveAsync(value: IOutputStream => IPromiseWithIAsyncOperationWithProgress[Double, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("saveAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSelectWithLine(value: (Point, Point) => Rect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectWithLine")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSelectWithPolyLine(value: IIterable[Point] => Rect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectWithPolyLine")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateRecognitionResults(value: IVectorView[InkRecognitionResult] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateRecognitionResults")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

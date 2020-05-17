@@ -7,18 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientButton.Click event.
   */
-@JSGlobal("ASPxClientButtonClickEventArgs")
 @js.native
-class ASPxClientButtonClickEventArgs protected () extends ASPxClientProcessingModeEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientButtonClickEventArgs class with the specified settings.
-    * @param processOnServer true to process the event on the server side; false to handle it completely on the client side. Initializes the ASPxClientProcessingModeEventArgs.processOnServer property.
-    * @param cancelEventAndBubble true to cancel both the event's default action and the event's bubbling upon the hierarchy of event handlers; otherwise, false. Initializes the ASPxClientButtonClickEventArgs.cancelEventAndBubble property.
-    */
-  def this(processOnServer: Boolean, cancelEventAndBubble: Boolean) = this()
+trait ASPxClientButtonClickEventArgs extends ASPxClientProcessingModeEventArgs {
   /**
     * Specifies whether both the event's default action and the event's bubbling upon the hierarchy of event handlers should be canceled.
     */
   var cancelEventAndBubble: Boolean = js.native
+}
+
+object ASPxClientButtonClickEventArgs {
+  @scala.inline
+  def apply(cancelEventAndBubble: Boolean, processOnServer: Boolean): ASPxClientButtonClickEventArgs = {
+    val __obj = js.Dynamic.literal(cancelEventAndBubble = cancelEventAndBubble.asInstanceOf[js.Any], processOnServer = processOnServer.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientButtonClickEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientButtonClickEventArgsOps[Self <: ASPxClientButtonClickEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCancelEventAndBubble(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelEventAndBubble")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CustomFilter[FParams /* <: js.Object */, FElement /* <: CustomFilterElement */] extends js.Object {
+trait CustomFilter[FParams /* <: js.Object */, FElement /* <: CustomFilterElement */] extends Filter {
   /**
   	 * Custom filter parameters to be passed to the generator function
   	 */

@@ -1,8 +1,8 @@
 package typingsSlinky.fundamentalReact.timeMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.fundamentalReact.AnonHour
-import typingsSlinky.fundamentalReact.AnonMeridiemAM
+import typingsSlinky.fundamentalReact.anon.Hour
+import typingsSlinky.fundamentalReact.anon.MeridiemAM
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,14 +18,14 @@ trait TimeProps
   var hoursInputProps: js.UndefOr[js.Any] = js.native
   var hoursUpButtonProps: js.UndefOr[js.Any] = js.native
   var id: js.UndefOr[String] = js.native
-  var localizedText: js.UndefOr[AnonMeridiemAM] = js.native
+  var localizedText: js.UndefOr[MeridiemAM] = js.native
   var meridiemDownButtonProps: js.UndefOr[js.Any] = js.native
   var meridiemInputProps: js.UndefOr[js.Any] = js.native
   var meridiemUpButtonProps: js.UndefOr[js.Any] = js.native
   var minutesDownButtonProps: js.UndefOr[js.Any] = js.native
   var minutesInputProps: js.UndefOr[js.Any] = js.native
   var minutesUpButtonProps: js.UndefOr[js.Any] = js.native
-  var onChange: js.UndefOr[js.Function1[/* time */ AnonHour, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* time */ Hour, Unit]] = js.native
   var secondsDownButtonProps: js.UndefOr[js.Any] = js.native
   var secondsInputProps: js.UndefOr[js.Any] = js.native
   var secondsUpButtonProps: js.UndefOr[js.Any] = js.native
@@ -33,7 +33,7 @@ trait TimeProps
   var showMinute: js.UndefOr[Boolean] = js.native
   var showSecond: js.UndefOr[Boolean] = js.native
   var spinners: js.UndefOr[Boolean] = js.native
-  var time: js.UndefOr[AnonHour] = js.native
+  var time: js.UndefOr[Hour] = js.native
 }
 
 object TimeProps {
@@ -133,7 +133,7 @@ object TimeProps {
         ret
     }
     @scala.inline
-    def withLocalizedText(value: AnonMeridiemAM): Self = {
+    def withLocalizedText(value: MeridiemAM): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("localizedText")(value.asInstanceOf[js.Any])
         ret
@@ -217,7 +217,7 @@ object TimeProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* time */ AnonHour => Unit): Self = {
+    def withOnChange(value: /* time */ Hour => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -313,7 +313,7 @@ object TimeProps {
         ret
     }
     @scala.inline
-    def withTime(value: AnonHour): Self = {
+    def withTime(value: Hour): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
         ret

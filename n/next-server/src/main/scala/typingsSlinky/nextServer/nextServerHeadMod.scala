@@ -1,6 +1,7 @@
 package typingsSlinky.nextServer
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.nextServer.anon.Children
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +18,7 @@ object nextServerHeadMod extends js.Object {
       * This component injects elements to `<head>` of your page.
       * To avoid duplicated `tags` in `<head>` you can use the `key` property, which will make sure every tag is only rendered once.
       */
-    def apply(hasChildren: AnonChildren): ReactElement = js.native
+    def apply(hasChildren: Children): ReactElement = js.native
   }
   
 }

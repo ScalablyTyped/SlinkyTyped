@@ -7,17 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientVerticalGrid.RowExpandedChanged event.
   */
-@JSGlobal("ASPxClientVerticalGridRowExpandedEventArgs")
 @js.native
-class ASPxClientVerticalGridRowExpandedEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientVerticalGridRowExpandedEventArgs class with specified settings.
-    * @param row A ASPxClientVerticalGridRow object that uniquely identifies the expanded row. This value is assigned to the ASPxClientVerticalGridRowExpandedEventArgs.row property.
-    */
-  def this(row: ASPxClientVerticalGridRow) = this()
+trait ASPxClientVerticalGridRowExpandedEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the expanded row.
     */
   var row: ASPxClientVerticalGridRow = js.native
+}
+
+object ASPxClientVerticalGridRowExpandedEventArgs {
+  @scala.inline
+  def apply(row: ASPxClientVerticalGridRow): ASPxClientVerticalGridRowExpandedEventArgs = {
+    val __obj = js.Dynamic.literal(row = row.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientVerticalGridRowExpandedEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientVerticalGridRowExpandedEventArgsOps[Self <: ASPxClientVerticalGridRowExpandedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRow(value: ASPxClientVerticalGridRow): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("row")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

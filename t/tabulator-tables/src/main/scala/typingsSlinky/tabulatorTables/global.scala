@@ -1,0 +1,23 @@
+package typingsSlinky.tabulatorTables
+
+import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.tabulatorTables.Tabulator.Options
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobalScope
+@js.native
+object global extends js.Object {
+  // Tabulator.prototype.(?!registerModule|helpers|_)\w+
+  @js.native
+  class Tabulator protected ()
+    extends typingsSlinky.tabulatorTables.Tabulator {
+    def this(selector: String) = this()
+    def this(selector: HTMLElement) = this()
+    def this(selector: String, options: Options) = this()
+    def this(selector: HTMLElement, options: Options) = this()
+  }
+  
+}
+

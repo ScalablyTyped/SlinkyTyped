@@ -2,7 +2,7 @@ package typingsSlinky.trtcJsSdk.mod
 
 import org.scalajs.dom.experimental.mediastream.MediaStreamTrack
 import org.scalajs.dom.raw.HTMLDivElement
-import typingsSlinky.trtcJsSdk.AnonState
+import typingsSlinky.trtcJsSdk.anon.State
 import typingsSlinky.trtcJsSdk.trtcJsSdkStrings.`player-state-changed`
 import typingsSlinky.trtcJsSdk.trtcJsSdkStrings.`screen-sharing-stopped`
 import scala.scalajs.js
@@ -60,7 +60,7 @@ trait Stream extends js.Object {
   def muteVideo(): Boolean = js.native
   /** 监听Stream事件 */
   @JSName("on")
-  def on_playerstatechanged(event: `player-state-changed`, handler: Callback[AnonState]): Unit = js.native
+  def on_playerstatechanged(event: `player-state-changed`, handler: Callback[State]): Unit = js.native
   @JSName("on")
   def on_screensharingstopped(event: `screen-sharing-stopped`, handler: Callback[js.UndefOr[scala.Nothing]]): Unit = js.native
   /**

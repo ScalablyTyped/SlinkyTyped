@@ -7,7 +7,7 @@ import typingsSlinky.jss.mod.Jss
 import typingsSlinky.jss.mod.Rule
 import typingsSlinky.jss.mod.SheetsRegistry
 import typingsSlinky.jss.mod.StyleSheet
-import typingsSlinky.reactJss.AnonChildren
+import typingsSlinky.reactJss.anon.Children
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +35,7 @@ object JssProvider {
     def registry(value: SheetsRegistry): this.type = set("registry", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AnonChildren): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: Children): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: JssProvider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

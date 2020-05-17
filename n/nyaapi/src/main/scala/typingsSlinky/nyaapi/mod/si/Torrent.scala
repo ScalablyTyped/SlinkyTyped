@@ -1,17 +1,17 @@
 package typingsSlinky.nyaapi.mod.si
 
-import typingsSlinky.nyaapi.AnonCode
-import typingsSlinky.nyaapi.AnonFile
+import typingsSlinky.nyaapi.anon.Code
+import typingsSlinky.nyaapi.anon.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Torrent extends js.Object {
-  var category: AnonCode = js.native
+  var category: Code = js.native
   var fileSize: String = js.native
   var leechers: String = js.native
-  var links: AnonFile = js.native
+  var links: File = js.native
   var name: String = js.native
   var nbDownload: String = js.native
   var seeders: String = js.native
@@ -21,10 +21,10 @@ trait Torrent extends js.Object {
 object Torrent {
   @scala.inline
   def apply(
-    category: AnonCode,
+    category: Code,
     fileSize: String,
     leechers: String,
-    links: AnonFile,
+    links: File,
     name: String,
     nbDownload: String,
     seeders: String,
@@ -40,7 +40,7 @@ object Torrent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCategory(value: AnonCode): Self = {
+    def withCategory(value: Code): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("category")(value.asInstanceOf[js.Any])
         ret
@@ -58,7 +58,7 @@ object Torrent {
         ret
     }
     @scala.inline
-    def withLinks(value: AnonFile): Self = {
+    def withLinks(value: File): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
         ret

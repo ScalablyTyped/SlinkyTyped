@@ -1,15 +1,15 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClientBooks.AnonTitle
-import typingsSlinky.gapiClientBooks.AnonWords
+import typingsSlinky.gapiClientBooks.anon.Title
+import typingsSlinky.gapiClientBooks.anon.Words
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Dictlayerdata extends js.Object {
-  var common: js.UndefOr[AnonTitle] = js.native
-  var dict: js.UndefOr[AnonWords] = js.native
+  var common: js.UndefOr[Title] = js.native
+  var dict: js.UndefOr[Words] = js.native
   var kind: js.UndefOr[String] = js.native
 }
 
@@ -26,7 +26,7 @@ object Dictlayerdata {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCommon(value: AnonTitle): Self = {
+    def withCommon(value: Title): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("common")(value.asInstanceOf[js.Any])
         ret
@@ -38,7 +38,7 @@ object Dictlayerdata {
         ret
     }
     @scala.inline
-    def withDict(value: AnonWords): Self = {
+    def withDict(value: Words): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dict")(value.asInstanceOf[js.Any])
         ret

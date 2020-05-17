@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonGlobal
+import typingsSlinky.astTypes.anon.Global
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.kindsMod.StringLiteralKind
 import typingsSlinky.astTypes.kindsMod.TSModuleBlockKind
@@ -22,6 +22,6 @@ trait TSModuleDeclarationBuilder extends js.Object {
   def apply(id: TSQualifiedNameKind): TSModuleDeclaration = js.native
   def apply(id: TSQualifiedNameKind, body: TSModuleBlockKind): TSModuleDeclaration = js.native
   def apply(id: TSQualifiedNameKind, body: TSModuleDeclarationKind): TSModuleDeclaration = js.native
-  def from(params: AnonGlobal): TSModuleDeclaration = js.native
+  def from(params: Global): TSModuleDeclaration = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.AnonSpacing
+import typingsSlinky.tabris.anon.Spacing
 import typingsSlinky.tabris.tabrisStrings.centerX
 import typingsSlinky.tabris.tabrisStrings.left
 import typingsSlinky.tabris.tabrisStrings.right
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @JSImport("tabris", "StackLayout")
 @js.native
 class StackLayout () extends Layout {
-  def this(options: AnonSpacing) = this()
+  def this(options: Spacing) = this()
   /**
     * Determines the horizontal placement of the children. For the `stretchX` value to work correctly the
     * composite needs to be given a width either by setting `width` or by setting `left` and `right`.

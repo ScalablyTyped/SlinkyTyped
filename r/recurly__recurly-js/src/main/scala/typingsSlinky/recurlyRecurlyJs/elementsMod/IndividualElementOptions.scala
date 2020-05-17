@@ -1,6 +1,6 @@
 package typingsSlinky.recurlyRecurlyJs.elementsMod
 
-import typingsSlinky.recurlyRecurlyJs.CommonElementStyleinvalidFontColor
+import typingsSlinky.recurlyRecurlyJs.anon.CommonElementStyleinvalidFontColor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

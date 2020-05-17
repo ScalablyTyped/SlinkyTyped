@@ -2,7 +2,7 @@ package typingsSlinky.cathoQuantum.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonColorsObject
+import typingsSlinky.cathoQuantum.anon.ColorsObject
 import typingsSlinky.cathoQuantum.cardMod.Props
 import typingsSlinky.cathoQuantum.cardMod.default
 import scala.scalajs.js
@@ -19,7 +19,7 @@ object Card {
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
     @scala.inline
-    def theme(value: AnonColorsObject): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: ColorsObject): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

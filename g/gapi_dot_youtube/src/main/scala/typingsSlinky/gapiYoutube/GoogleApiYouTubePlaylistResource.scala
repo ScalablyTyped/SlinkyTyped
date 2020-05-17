@@ -1,5 +1,9 @@
 package typingsSlinky.gapiYoutube
 
+import typingsSlinky.gapiYoutube.anon.EmbedHtml
+import typingsSlinky.gapiYoutube.anon.ItemCount
+import typingsSlinky.gapiYoutube.anon.PrivacyStatus
+import typingsSlinky.gapiYoutube.anon.PublishedAt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +13,7 @@ trait GoogleApiYouTubePlaylistResource extends js.Object {
   /**
     * The contentDetails object contains information about the playlist content, including the number of videos in the playlist.
     */
-  var contentDetails: AnonItemCount = js.native
+  var contentDetails: ItemCount = js.native
   /**
     * The ETag for the playlist resource.
     */
@@ -25,27 +29,27 @@ trait GoogleApiYouTubePlaylistResource extends js.Object {
   /**
     * The player object contains information that you would use to play the playlist in an embedded player.
     */
-  var player: AnonEmbedHtml = js.native
+  var player: EmbedHtml = js.native
   /**
     * The snippet object contains basic details about the playlist, such as its title and description.
     */
-  var snippet: AnonPublishedAt = js.native
+  var snippet: PublishedAt = js.native
   /**
     * The status object contains status information for the playlist.
     */
-  var status: AnonPrivacyStatus = js.native
+  var status: PrivacyStatus = js.native
 }
 
 object GoogleApiYouTubePlaylistResource {
   @scala.inline
   def apply(
-    contentDetails: AnonItemCount,
+    contentDetails: ItemCount,
     etag: String,
     id: String,
     kind: String,
-    player: AnonEmbedHtml,
-    snippet: AnonPublishedAt,
-    status: AnonPrivacyStatus
+    player: EmbedHtml,
+    snippet: PublishedAt,
+    status: PrivacyStatus
   ): GoogleApiYouTubePlaylistResource = {
     val __obj = js.Dynamic.literal(contentDetails = contentDetails.asInstanceOf[js.Any], etag = etag.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], player = player.asInstanceOf[js.Any], snippet = snippet.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleApiYouTubePlaylistResource]
@@ -57,7 +61,7 @@ object GoogleApiYouTubePlaylistResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContentDetails(value: AnonItemCount): Self = {
+    def withContentDetails(value: ItemCount): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentDetails")(value.asInstanceOf[js.Any])
         ret
@@ -81,19 +85,19 @@ object GoogleApiYouTubePlaylistResource {
         ret
     }
     @scala.inline
-    def withPlayer(value: AnonEmbedHtml): Self = {
+    def withPlayer(value: EmbedHtml): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("player")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSnippet(value: AnonPublishedAt): Self = {
+    def withSnippet(value: PublishedAt): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("snippet")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withStatus(value: AnonPrivacyStatus): Self = {
+    def withStatus(value: PrivacyStatus): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
         ret

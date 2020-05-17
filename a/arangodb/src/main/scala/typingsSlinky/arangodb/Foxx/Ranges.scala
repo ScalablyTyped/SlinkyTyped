@@ -1,7 +1,7 @@
 package typingsSlinky.arangodb.Foxx
 
 import org.scalablytyped.runtime.NumberDictionary
-import typingsSlinky.arangodb.AnonEnd
+import typingsSlinky.arangodb.anon.End
 import typingsSlinky.arangodb.arangodbNumbers.`0`
 import typingsSlinky.arangodb.arangodbNumbers.`1`
 import typingsSlinky.arangodb.arangodbNumbers.`2`
@@ -10,18 +10,18 @@ import typingsSlinky.arangodb.arangodbNumbers.`4`
 import typingsSlinky.arangodb.arangodbNumbers.`5`
 import typingsSlinky.arangodb.arangodbNumbers.`6`
 import typingsSlinky.arangodb.arangodbNumbers.`7`
-import typingsSlinky.std.AnonCopyWithin
 import typingsSlinky.std.IterableIterator
+import typingsSlinky.std.anon.CopyWithin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined std.Array<{  start  :number,   end  :number}> & {  type  :string} */
 @js.native
-trait Ranges extends /* n */ NumberDictionary[AnonEnd] {
+trait Ranges extends /* n */ NumberDictionary[End] {
   /** Iterator */
   @JSName(js.Symbol.iterator)
-  var iterator: js.Function0[IterableIterator[AnonEnd]] = js.native
+  var iterator: js.Function0[IterableIterator[End]] = js.native
   /**
     * Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
     */
@@ -32,12 +32,12 @@ trait Ranges extends /* n */ NumberDictionary[AnonEnd] {
     * when they will be absent when used in a 'with' statement.
     */
   @JSName(js.Symbol.unscopables)
-  var unscopables: js.Function0[AnonCopyWithin] = js.native
+  var unscopables: js.Function0[CopyWithin] = js.native
   /**
     * Combines two or more arrays.
     * @param items Additional items to add to the end of array1.
     */
-  def concat(items: (AnonEnd | js.Array[AnonEnd])*): js.Array[AnonEnd] = js.native
+  def concat(items: (js.Array[End] | End)*): js.Array[End] = js.native
   /**
     * Returns the this object after copying a section of the array identified by start and end
     * to the same array starting at position target
@@ -52,7 +52,7 @@ trait Ranges extends /* n */ NumberDictionary[AnonEnd] {
   /**
     * Returns an iterable of key, value pairs for every entry in the array
     */
-  def entries(): IterableIterator[js.Tuple2[Double, AnonEnd]] = js.native
+  def entries(): IterableIterator[js.Tuple2[Double, End]] = js.native
   /**
     * Determines whether all the members of an array satisfy the specified test.
     * @param callbackfn A function that accepts up to three arguments. The every method calls
@@ -61,11 +61,9 @@ trait Ranges extends /* n */ NumberDictionary[AnonEnd] {
     * @param thisArg An object to which the this keyword can refer in the callbackfn function.
     * If thisArg is omitted, undefined is used as the this value.
     */
+  def every(callbackfn: js.Function3[/* value */ End, /* index */ Double, /* array */ js.Array[End], _]): Boolean = js.native
   def every(
-    callbackfn: js.Function3[/* value */ AnonEnd, /* index */ Double, /* array */ js.Array[AnonEnd], _]
-  ): Boolean = js.native
-  def every(
-    callbackfn: js.Function3[/* value */ AnonEnd, /* index */ Double, /* array */ js.Array[AnonEnd], _],
+    callbackfn: js.Function3[/* value */ End, /* index */ Double, /* array */ js.Array[End], _],
     thisArg: js.Any
   ): Boolean = js.native
   /**
@@ -76,50 +74,38 @@ trait Ranges extends /* n */ NumberDictionary[AnonEnd] {
     * @param end index to stop filling the array at. If end is negative, it is treated as
     * length+end.
     */
-  def fill(value: AnonEnd): this.type = js.native
-  def fill(value: AnonEnd, start: Double): this.type = js.native
-  def fill(value: AnonEnd, start: Double, end: Double): this.type = js.native
+  def fill(value: End): this.type = js.native
+  def fill(value: End, start: Double): this.type = js.native
+  def fill(value: End, start: Double, end: Double): this.type = js.native
   /**
     * Returns the elements of an array that meet the condition specified in a callback function.
     * @param callbackfn A function that accepts up to three arguments. The filter method calls the callbackfn function one time for each element in the array.
     * @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
     */
+  def filter(callbackfn: js.Function3[/* value */ End, /* index */ Double, /* array */ js.Array[End], _]): js.Array[End] = js.native
   def filter(
-    callbackfn: js.Function3[/* value */ AnonEnd, /* index */ Double, /* array */ js.Array[AnonEnd], _]
-  ): js.Array[AnonEnd] = js.native
-  def filter(
-    callbackfn: js.Function3[/* value */ AnonEnd, /* index */ Double, /* array */ js.Array[AnonEnd], _],
+    callbackfn: js.Function3[/* value */ End, /* index */ Double, /* array */ js.Array[End], _],
     thisArg: js.Any
-  ): js.Array[AnonEnd] = js.native
+  ): js.Array[End] = js.native
   /**
     * Returns the elements of an array that meet the condition specified in a callback function.
     * @param callbackfn A function that accepts up to three arguments. The filter method calls the callbackfn function one time for each element in the array.
     * @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
     */
   @JSName("filter")
-  def filter_S_AnonEnd[S /* <: AnonEnd */](
-    callbackfn: js.Function3[
-      /* value */ AnonEnd, 
-      /* index */ Double, 
-      /* array */ js.Array[AnonEnd], 
-      /* is S */ Boolean
-    ]
+  def filter_S_End[S /* <: End */](
+    callbackfn: js.Function3[/* value */ End, /* index */ Double, /* array */ js.Array[End], /* is S */ Boolean]
   ): js.Array[S] = js.native
   @JSName("filter")
-  def filter_S_AnonEnd[S /* <: AnonEnd */](
-    callbackfn: js.Function3[
-      /* value */ AnonEnd, 
-      /* index */ Double, 
-      /* array */ js.Array[AnonEnd], 
-      /* is S */ Boolean
-    ],
+  def filter_S_End[S /* <: End */](
+    callbackfn: js.Function3[/* value */ End, /* index */ Double, /* array */ js.Array[End], /* is S */ Boolean],
     thisArg: js.Any
   ): js.Array[S] = js.native
-  def find(predicate: js.Function3[/* value */ AnonEnd, /* index */ Double, /* obj */ js.Array[AnonEnd], _]): js.UndefOr[AnonEnd] = js.native
+  def find(predicate: js.Function3[/* value */ End, /* index */ Double, /* obj */ js.Array[End], _]): js.UndefOr[End] = js.native
   def find(
-    predicate: js.Function3[/* value */ AnonEnd, /* index */ Double, /* obj */ js.Array[AnonEnd], _],
+    predicate: js.Function3[/* value */ End, /* index */ Double, /* obj */ js.Array[End], _],
     thisArg: js.Any
-  ): js.UndefOr[AnonEnd] = js.native
+  ): js.UndefOr[End] = js.native
   /**
     * Returns the value of the first element in the array where predicate is true, and undefined
     * otherwise.
@@ -129,21 +115,21 @@ trait Ranges extends /* n */ NumberDictionary[AnonEnd] {
     * @param thisArg If provided, it will be used as the this value for each invocation of
     * predicate. If it is not provided, undefined is used instead.
     */
-  def find[S /* <: AnonEnd */](
+  def find[S /* <: End */](
     predicate: js.ThisFunction3[
       /* this */ Unit, 
-      /* value */ AnonEnd, 
+      /* value */ End, 
       /* index */ Double, 
-      /* obj */ js.Array[AnonEnd], 
+      /* obj */ js.Array[End], 
       /* is S */ Boolean
     ]
   ): js.UndefOr[S] = js.native
-  def find[S /* <: AnonEnd */](
+  def find[S /* <: End */](
     predicate: js.ThisFunction3[
       /* this */ Unit, 
-      /* value */ AnonEnd, 
+      /* value */ End, 
       /* index */ Double, 
-      /* obj */ js.Array[AnonEnd], 
+      /* obj */ js.Array[End], 
       /* is S */ Boolean
     ],
     thisArg: js.Any
@@ -157,9 +143,9 @@ trait Ranges extends /* n */ NumberDictionary[AnonEnd] {
     * @param thisArg If provided, it will be used as the this value for each invocation of
     * predicate. If it is not provided, undefined is used instead.
     */
-  def findIndex(predicate: js.Function3[/* value */ AnonEnd, /* index */ Double, /* obj */ js.Array[AnonEnd], _]): Double = js.native
+  def findIndex(predicate: js.Function3[/* value */ End, /* index */ Double, /* obj */ js.Array[End], _]): Double = js.native
   def findIndex(
-    predicate: js.Function3[/* value */ AnonEnd, /* index */ Double, /* obj */ js.Array[AnonEnd], _],
+    predicate: js.Function3[/* value */ End, /* index */ Double, /* obj */ js.Array[End], _],
     thisArg: js.Any
   ): Double = js.native
   /**
@@ -189,18 +175,18 @@ trait Ranges extends /* n */ NumberDictionary[AnonEnd] {
   def flatMap[U, This](
     callback: js.ThisFunction3[
       /* this */ This, 
-      /* value */ AnonEnd, 
+      /* value */ End, 
       /* index */ Double, 
-      /* array */ js.Array[AnonEnd], 
+      /* array */ js.Array[End], 
       U | js.Array[U]
     ]
   ): js.Array[U] = js.native
   def flatMap[U, This](
     callback: js.ThisFunction3[
       /* this */ This, 
-      /* value */ AnonEnd, 
+      /* value */ End, 
       /* index */ Double, 
-      /* array */ js.Array[AnonEnd], 
+      /* array */ js.Array[End], 
       U | js.Array[U]
     ],
     thisArg: This
@@ -268,11 +254,9 @@ trait Ranges extends /* n */ NumberDictionary[AnonEnd] {
     * @param callbackfn  A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array.
     * @param thisArg  An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
     */
+  def forEach(callbackfn: js.Function3[/* value */ End, /* index */ Double, /* array */ js.Array[End], Unit]): Unit = js.native
   def forEach(
-    callbackfn: js.Function3[/* value */ AnonEnd, /* index */ Double, /* array */ js.Array[AnonEnd], Unit]
-  ): Unit = js.native
-  def forEach(
-    callbackfn: js.Function3[/* value */ AnonEnd, /* index */ Double, /* array */ js.Array[AnonEnd], Unit],
+    callbackfn: js.Function3[/* value */ End, /* index */ Double, /* array */ js.Array[End], Unit],
     thisArg: js.Any
   ): Unit = js.native
   /**
@@ -280,15 +264,15 @@ trait Ranges extends /* n */ NumberDictionary[AnonEnd] {
     * @param searchElement The element to search for.
     * @param fromIndex The position in this array at which to begin searching for searchElement.
     */
-  def includes(searchElement: AnonEnd): Boolean = js.native
-  def includes(searchElement: AnonEnd, fromIndex: Double): Boolean = js.native
+  def includes(searchElement: End): Boolean = js.native
+  def includes(searchElement: End, fromIndex: Double): Boolean = js.native
   /**
     * Returns the index of the first occurrence of a value in an array.
     * @param searchElement The value to locate in the array.
     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the search starts at index 0.
     */
-  def indexOf(searchElement: AnonEnd): Double = js.native
-  def indexOf(searchElement: AnonEnd, fromIndex: Double): Double = js.native
+  def indexOf(searchElement: End): Double = js.native
+  def indexOf(searchElement: End, fromIndex: Double): Double = js.native
   /**
     * Adds all the elements of an array separated by the specified separator string.
     * @param separator A string used to separate one element of an array from the next in the resulting String. If omitted, the array elements are separated with a comma.
@@ -304,29 +288,27 @@ trait Ranges extends /* n */ NumberDictionary[AnonEnd] {
     * @param searchElement The value to locate in the array.
     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the search starts at the last index in the array.
     */
-  def lastIndexOf(searchElement: AnonEnd): Double = js.native
-  def lastIndexOf(searchElement: AnonEnd, fromIndex: Double): Double = js.native
+  def lastIndexOf(searchElement: End): Double = js.native
+  def lastIndexOf(searchElement: End, fromIndex: Double): Double = js.native
   /**
     * Calls a defined callback function on each element of an array, and returns an array that contains the results.
     * @param callbackfn A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array.
     * @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
     */
+  def map[U](callbackfn: js.Function3[/* value */ End, /* index */ Double, /* array */ js.Array[End], U]): js.Array[U] = js.native
   def map[U](
-    callbackfn: js.Function3[/* value */ AnonEnd, /* index */ Double, /* array */ js.Array[AnonEnd], U]
-  ): js.Array[U] = js.native
-  def map[U](
-    callbackfn: js.Function3[/* value */ AnonEnd, /* index */ Double, /* array */ js.Array[AnonEnd], U],
+    callbackfn: js.Function3[/* value */ End, /* index */ Double, /* array */ js.Array[End], U],
     thisArg: js.Any
   ): js.Array[U] = js.native
   /**
     * Removes the last element from an array and returns it.
     */
-  def pop(): js.UndefOr[AnonEnd] = js.native
+  def pop(): js.UndefOr[End] = js.native
   /**
     * Appends new elements to an array, and returns the new length of the array.
     * @param items New elements of the Array.
     */
-  def push(items: AnonEnd*): Double = js.native
+  def push(items: End*): Double = js.native
   /**
     * Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
@@ -334,23 +316,23 @@ trait Ranges extends /* n */ NumberDictionary[AnonEnd] {
     */
   def reduce(
     callbackfn: js.Function4[
-      /* previousValue */ AnonEnd, 
-      /* currentValue */ AnonEnd, 
+      /* previousValue */ End, 
+      /* currentValue */ End, 
       /* currentIndex */ Double, 
-      /* array */ js.Array[AnonEnd], 
-      AnonEnd
+      /* array */ js.Array[End], 
+      End
     ]
-  ): AnonEnd = js.native
+  ): End = js.native
   def reduce(
     callbackfn: js.Function4[
-      /* previousValue */ AnonEnd, 
-      /* currentValue */ AnonEnd, 
+      /* previousValue */ End, 
+      /* currentValue */ End, 
       /* currentIndex */ Double, 
-      /* array */ js.Array[AnonEnd], 
-      AnonEnd
+      /* array */ js.Array[End], 
+      End
     ],
-    initialValue: AnonEnd
-  ): AnonEnd = js.native
+    initialValue: End
+  ): End = js.native
   /**
     * Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
@@ -359,9 +341,9 @@ trait Ranges extends /* n */ NumberDictionary[AnonEnd] {
   def reduce[U](
     callbackfn: js.Function4[
       /* previousValue */ U, 
-      /* currentValue */ AnonEnd, 
+      /* currentValue */ End, 
       /* currentIndex */ Double, 
-      /* array */ js.Array[AnonEnd], 
+      /* array */ js.Array[End], 
       U
     ],
     initialValue: U
@@ -373,23 +355,23 @@ trait Ranges extends /* n */ NumberDictionary[AnonEnd] {
     */
   def reduceRight(
     callbackfn: js.Function4[
-      /* previousValue */ AnonEnd, 
-      /* currentValue */ AnonEnd, 
+      /* previousValue */ End, 
+      /* currentValue */ End, 
       /* currentIndex */ Double, 
-      /* array */ js.Array[AnonEnd], 
-      AnonEnd
+      /* array */ js.Array[End], 
+      End
     ]
-  ): AnonEnd = js.native
+  ): End = js.native
   def reduceRight(
     callbackfn: js.Function4[
-      /* previousValue */ AnonEnd, 
-      /* currentValue */ AnonEnd, 
+      /* previousValue */ End, 
+      /* currentValue */ End, 
       /* currentIndex */ Double, 
-      /* array */ js.Array[AnonEnd], 
-      AnonEnd
+      /* array */ js.Array[End], 
+      End
     ],
-    initialValue: AnonEnd
-  ): AnonEnd = js.native
+    initialValue: End
+  ): End = js.native
   /**
     * Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
@@ -398,9 +380,9 @@ trait Ranges extends /* n */ NumberDictionary[AnonEnd] {
   def reduceRight[U](
     callbackfn: js.Function4[
       /* previousValue */ U, 
-      /* currentValue */ AnonEnd, 
+      /* currentValue */ End, 
       /* currentIndex */ Double, 
-      /* array */ js.Array[AnonEnd], 
+      /* array */ js.Array[End], 
       U
     ],
     initialValue: U
@@ -408,19 +390,19 @@ trait Ranges extends /* n */ NumberDictionary[AnonEnd] {
   /**
     * Reverses the elements in an Array.
     */
-  def reverse(): js.Array[AnonEnd] = js.native
+  def reverse(): js.Array[End] = js.native
   /**
     * Removes the first element from an array and returns it.
     */
-  def shift(): js.UndefOr[AnonEnd] = js.native
+  def shift(): js.UndefOr[End] = js.native
   /**
     * Returns a section of an array.
     * @param start The beginning of the specified portion of the array.
     * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
     */
-  def slice(): js.Array[AnonEnd] = js.native
-  def slice(start: Double): js.Array[AnonEnd] = js.native
-  def slice(start: Double, end: Double): js.Array[AnonEnd] = js.native
+  def slice(): js.Array[End] = js.native
+  def slice(start: Double): js.Array[End] = js.native
+  def slice(start: Double, end: Double): js.Array[End] = js.native
   /**
     * Determines whether the specified callback function returns true for any element of an array.
     * @param callbackfn A function that accepts up to three arguments. The some method calls
@@ -429,11 +411,9 @@ trait Ranges extends /* n */ NumberDictionary[AnonEnd] {
     * @param thisArg An object to which the this keyword can refer in the callbackfn function.
     * If thisArg is omitted, undefined is used as the this value.
     */
+  def some(callbackfn: js.Function3[/* value */ End, /* index */ Double, /* array */ js.Array[End], _]): Boolean = js.native
   def some(
-    callbackfn: js.Function3[/* value */ AnonEnd, /* index */ Double, /* array */ js.Array[AnonEnd], _]
-  ): Boolean = js.native
-  def some(
-    callbackfn: js.Function3[/* value */ AnonEnd, /* index */ Double, /* array */ js.Array[AnonEnd], _],
+    callbackfn: js.Function3[/* value */ End, /* index */ Double, /* array */ js.Array[End], _],
     thisArg: js.Any
   ): Boolean = js.native
   /**
@@ -446,29 +426,29 @@ trait Ranges extends /* n */ NumberDictionary[AnonEnd] {
     * ```
     */
   def sort(): this.type = js.native
-  def sort(compareFn: js.Function2[/* a */ AnonEnd, /* b */ AnonEnd, Double]): this.type = js.native
+  def sort(compareFn: js.Function2[/* a */ End, /* b */ End, Double]): this.type = js.native
   /**
     * Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
     * @param start The zero-based location in the array from which to start removing elements.
     * @param deleteCount The number of elements to remove.
     */
-  def splice(start: Double): js.Array[AnonEnd] = js.native
-  def splice(start: Double, deleteCount: Double): js.Array[AnonEnd] = js.native
+  def splice(start: Double): js.Array[End] = js.native
+  def splice(start: Double, deleteCount: Double): js.Array[End] = js.native
   /**
     * Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
     * @param start The zero-based location in the array from which to start removing elements.
     * @param deleteCount The number of elements to remove.
     * @param items Elements to insert into the array in place of the deleted elements.
     */
-  def splice(start: Double, deleteCount: Double, items: AnonEnd*): js.Array[AnonEnd] = js.native
+  def splice(start: Double, deleteCount: Double, items: End*): js.Array[End] = js.native
   /**
     * Inserts new elements at the start of an array.
     * @param items  Elements to insert at the start of the Array.
     */
-  def unshift(items: AnonEnd*): Double = js.native
+  def unshift(items: End*): Double = js.native
   /**
     * Returns an iterable of values in the array
     */
-  def values(): IterableIterator[AnonEnd] = js.native
+  def values(): IterableIterator[End] = js.native
 }
 

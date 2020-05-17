@@ -1,0 +1,33 @@
+package typingsSlinky.ariClient.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait OperationString extends js.Object {
+  var operation: String = js.native
+}
+
+object OperationString {
+  @scala.inline
+  def apply(operation: String): OperationString = {
+    val __obj = js.Dynamic.literal(operation = operation.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OperationString]
+  }
+  @scala.inline
+  implicit class OperationStringOps[Self <: OperationString] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOperation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

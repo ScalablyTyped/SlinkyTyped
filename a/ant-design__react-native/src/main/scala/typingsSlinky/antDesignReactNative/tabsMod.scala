@@ -1,5 +1,6 @@
 package typingsSlinky.antDesignReactNative
 
+import typingsSlinky.antDesignReactNative.anon.TypeofDefaultTabBar
 import typingsSlinky.antDesignReactNative.tabsPropsTypeMod.PropsType
 import typingsSlinky.antDesignReactNative.tabsTabsMod.Tabs
 import scala.scalajs.js

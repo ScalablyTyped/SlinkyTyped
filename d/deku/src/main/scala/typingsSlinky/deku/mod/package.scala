@@ -11,8 +11,4 @@ package object mod {
     /* context */ js.UndefOr[js.Any], 
     scala.Unit
   ]
-  /**
-    * Thunk object passed to `element`
-    */
-  type Thunk = typingsSlinky.deku.mod.Component | (js.Function1[/* model */ typingsSlinky.deku.mod.Model, typingsSlinky.deku.mod.VirtualElement])
 }

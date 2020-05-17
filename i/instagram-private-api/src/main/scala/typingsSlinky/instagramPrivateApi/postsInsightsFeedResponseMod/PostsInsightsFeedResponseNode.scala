@@ -210,24 +210,6 @@ object PostsInsightsFeedResponseNode {
         ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
         ret
     }
-    @scala.inline
-    def withVideo_view_count(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video_view_count")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideo_view_count: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video_view_count")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideo_view_countNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video_view_count")(null)
-        ret
-    }
   }
   
 }

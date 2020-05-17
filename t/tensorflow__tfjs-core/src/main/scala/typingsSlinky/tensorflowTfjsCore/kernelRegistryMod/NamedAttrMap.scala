@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait NamedAttrMap extends /* name */ StringDictionary[Attribute]
+trait NamedAttrMap
+  extends AttributeValue
+     with /* name */ StringDictionary[Attribute]
 
 object NamedAttrMap {
   @scala.inline

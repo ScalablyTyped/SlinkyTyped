@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait EnumTypeDefinition
   extends ProtobufTypeDefinition
-     with _AnyDefinition {
+     with AnyDefinition {
   @JSName("format")
   var format_EnumTypeDefinition: `Protocol Buffer 3 EnumDescriptorProto` = js.native
 }

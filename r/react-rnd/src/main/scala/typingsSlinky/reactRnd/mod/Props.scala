@@ -12,12 +12,12 @@ import typingsSlinky.reResizable.mod.ResizeDirection
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactDraggable.mod.DraggableEvent
 import typingsSlinky.reactDraggable.reactDraggableBooleans.`false`
-import typingsSlinky.reactRnd.AnonX
+import typingsSlinky.reactRnd.anon.X
+import typingsSlinky.reactRnd.anon.xnumberynumberSize
 import typingsSlinky.reactRnd.reactRndStrings.both
 import typingsSlinky.reactRnd.reactRndStrings.none
 import typingsSlinky.reactRnd.reactRndStrings.x
 import typingsSlinky.reactRnd.reactRndStrings.y
-import typingsSlinky.reactRnd.xnumberynumberSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -51,7 +51,7 @@ trait Props
   var onResize: js.UndefOr[RndResizeCallback] = js.native
   var onResizeStart: js.UndefOr[RndResizeStartCallback] = js.native
   var onResizeStop: js.UndefOr[RndResizeCallback] = js.native
-  var position: js.UndefOr[AnonX] = js.native
+  var position: js.UndefOr[X] = js.native
   var resizeGrid: js.UndefOr[Grid] = js.native
   var resizeHandleClasses: js.UndefOr[HandleClasses] = js.native
   var resizeHandleComponent: js.UndefOr[HandleComponent] = js.native
@@ -154,7 +154,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withDragAxis(value: x | y | both | none): Self = {
+    def withDragAxis(value: typingsSlinky.reactRnd.reactRndStrings.x | y | both | none): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragAxis")(value.asInstanceOf[js.Any])
         ret
@@ -406,7 +406,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withPosition(value: AnonX): Self = {
+    def withPosition(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
         ret

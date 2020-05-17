@@ -1,7 +1,7 @@
 package typingsSlinky.squareConnect.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.squareConnect.AnonOauth2
+import typingsSlinky.squareConnect.anon.Oauth2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ class ApiClient () extends js.Object {
   /**
     * The authentication methods to be included for all API calls.
     */
-  var authentications: AnonOauth2 = js.native
+  var authentications: Oauth2 = js.native
   /**
     * The base URL against which to resolve every API call's (relative) path.
     */

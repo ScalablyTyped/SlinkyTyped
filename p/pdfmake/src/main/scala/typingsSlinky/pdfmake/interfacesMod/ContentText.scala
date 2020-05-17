@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 trait ContentText
   extends ContentBase
      with ContentLink
-     with _Content {
+     with Content {
   var text: Content = js.native
 }
 

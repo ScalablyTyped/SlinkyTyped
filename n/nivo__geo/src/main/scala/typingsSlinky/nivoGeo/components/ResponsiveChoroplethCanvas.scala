@@ -4,9 +4,9 @@ import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.nivoGeo.AnonFeatureChoroplethBoundFeature
-import typingsSlinky.nivoGeo.PartialBox
-import typingsSlinky.nivoGeo.PartialTheme
+import typingsSlinky.nivoGeo.anon.FeatureChoroplethBoundFeature
+import typingsSlinky.nivoGeo.anon.PartialBox
+import typingsSlinky.nivoGeo.anon.PartialTheme
 import typingsSlinky.nivoGeo.mod.ChoroplethBoundFeature
 import typingsSlinky.nivoGeo.mod.ChoroplethCanvasProps
 import typingsSlinky.nivoGeo.mod.DatumMatcher
@@ -80,7 +80,7 @@ object ResponsiveChoroplethCanvas {
     @scala.inline
     def theme(value: PartialTheme): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
-    def tooltip(value: ReactComponentClass[AnonFeatureChoroplethBoundFeature]): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    def tooltip(value: ReactComponentClass[FeatureChoroplethBoundFeature]): this.type = set("tooltip", value.asInstanceOf[js.Any])
     @scala.inline
     def unknownColor(value: String): this.type = set("unknownColor", value.asInstanceOf[js.Any])
     @scala.inline

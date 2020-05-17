@@ -58,15 +58,7 @@ package object interfaces {
     typingsSlinky.inversify.interfacesMod.interfaces.BindingToSyntax[js.Any]
   ]
   type ReflectResult = org.scalablytyped.runtime.StringDictionary[js.Array[typingsSlinky.inversify.interfacesMod.interfaces.Metadata]]
-  type RequestScope = (typingsSlinky.std.Map[js.Any, js.Any]) | scala.Null
   type ResolveRequestHandler = js.Function1[/* request */ typingsSlinky.inversify.interfacesMod.interfaces.Request, js.Any]
-  /* Rewritten from type alias, can be one of: 
-    - java.lang.String
-    - js.Symbol
-    - typingsSlinky.inversify.interfacesMod.interfaces.Newable[T]
-    - typingsSlinky.inversify.interfacesMod.interfaces.Abstract[T]
-  */
-  type ServiceIdentifier[T] = typingsSlinky.inversify.interfacesMod.interfaces._ServiceIdentifier[T] | java.lang.String | js.Symbol
   type Unbind = js.Function1[
     /* serviceIdentifier */ typingsSlinky.inversify.interfacesMod.interfaces.ServiceIdentifier[js.Any], 
     scala.Unit

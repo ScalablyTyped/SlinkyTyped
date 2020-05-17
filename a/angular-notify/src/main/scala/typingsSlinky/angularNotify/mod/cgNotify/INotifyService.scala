@@ -1,7 +1,7 @@
 package typingsSlinky.angularNotify.mod.cgNotify
 
-import typingsSlinky.angularNotify.AnonClasses
-import typingsSlinky.angularNotify.AnonContainer
+import typingsSlinky.angularNotify.anon.Classes
+import typingsSlinky.angularNotify.anon.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait INotifyService extends js.Object {
     * When passing an object, the object parameters can be:
     * @param option
     */
-  def apply(option: AnonClasses): INotify = js.native
+  def apply(option: Classes): INotify = js.native
   /**
     * Closes all currently open notifications.
     */
@@ -28,6 +28,6 @@ trait INotifyService extends js.Object {
     * The following options may be specified in the given object:
     * @param option
     */
-  def config(option: AnonContainer): Unit = js.native
+  def config(option: Container): Unit = js.native
 }
 

@@ -11,7 +11,7 @@ import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.xxs
 import typingsSlinky.antDesignReactNative.iconMod.IconNames
 import typingsSlinky.antDesignReactNative.iconMod.IconProps
 import typingsSlinky.antDesignReactNative.iconMod.default
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait UrlsConfigObj extends js.Object {
+trait UrlsConfigObj extends UrlsConfig {
   var schemeMatches: js.UndefOr[Boolean] = js.native
   var tldMatches: js.UndefOr[Boolean] = js.native
   var wwwMatches: js.UndefOr[Boolean] = js.native

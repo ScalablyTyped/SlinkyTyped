@@ -1,6 +1,6 @@
 package typingsSlinky.blueprintjsTable.mod
 
-import typingsSlinky.blueprintjsTable.AnonTruncated
+import typingsSlinky.blueprintjsTable.anon.Truncated
 import typingsSlinky.blueprintjsTable.editableCellMod.IEditableCellProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ class EditableCell protected ()
 @JSImport("@blueprintjs/table", "EditableCell")
 @js.native
 object EditableCell extends js.Object {
-  var defaultProps: AnonTruncated = js.native
+  var defaultProps: Truncated = js.native
   var displayName: String = js.native
 }
 

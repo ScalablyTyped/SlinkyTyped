@@ -1,6 +1,7 @@
 package typingsSlinky.stormReactDiagrams
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.stormReactDiagrams.anon.Width
 import typingsSlinky.stormReactDiagrams.baseModelMod.BaseModel
 import typingsSlinky.stormReactDiagrams.baseModelMod.BaseModelListener
 import typingsSlinky.stormReactDiagrams.diagramModelMod.DiagramModel
@@ -29,7 +30,7 @@ object nodeModelMod extends js.Object {
     def getPorts(): StringDictionary[PortModel] = js.native
     def removePort(port: PortModel): Unit = js.native
     def setPosition(x: js.Any, y: js.Any): Unit = js.native
-    def updateDimensions(hasWidthHeight: AnonWidth): Unit = js.native
+    def updateDimensions(hasWidthHeight: Width): Unit = js.native
   }
   
 }

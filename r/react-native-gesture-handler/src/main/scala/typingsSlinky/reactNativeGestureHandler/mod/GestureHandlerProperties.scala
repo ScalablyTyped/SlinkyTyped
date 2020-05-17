@@ -2,11 +2,11 @@ package typingsSlinky.reactNativeGestureHandler.mod
 
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.reactNativeGestureHandler.AnonBottom
-import typingsSlinky.reactNativeGestureHandler.AnonBottomHeight
-import typingsSlinky.reactNativeGestureHandler.AnonHeight
-import typingsSlinky.reactNativeGestureHandler.AnonLeft
-import typingsSlinky.reactNativeGestureHandler.AnonRight
+import typingsSlinky.reactNativeGestureHandler.anon.Bottom
+import typingsSlinky.reactNativeGestureHandler.anon.BottomHeight
+import typingsSlinky.reactNativeGestureHandler.anon.Height
+import typingsSlinky.reactNativeGestureHandler.anon.Left
+import typingsSlinky.reactNativeGestureHandler.anon.Right
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GestureHandlerProperties extends js.Object {
   var enabled: js.UndefOr[Boolean] = js.native
-  var hitSlop: js.UndefOr[Double | AnonBottom | AnonLeft | AnonRight | AnonHeight | AnonBottomHeight] = js.native
+  var hitSlop: js.UndefOr[Double | Bottom | Left | Right | Height | BottomHeight] = js.native
   var id: js.UndefOr[String] = js.native
   var shouldCancelWhenOutside: js.UndefOr[Boolean] = js.native
   var simultaneousHandlers: js.UndefOr[Ref[_] | js.Array[Ref[_]]] = js.native
@@ -46,7 +46,7 @@ object GestureHandlerProperties {
         ret
     }
     @scala.inline
-    def withHitSlop(value: Double | AnonBottom | AnonLeft | AnonRight | AnonHeight | AnonBottomHeight): Self = {
+    def withHitSlop(value: Double | Bottom | Left | Right | Height | BottomHeight): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hitSlop")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.luaparse.mod
 
-import typingsSlinky.luaparse.PartialOptions
-import typingsSlinky.luaparse.PartialOptionswaittrue
+import typingsSlinky.luaparse.anon.PartialOptions
+import typingsSlinky.luaparse.anon.PartialOptionswaittrue
 import typingsSlinky.luaparse.astMod.Chunk
 import scala.scalajs.js
 import scala.scalajs.js.`|`

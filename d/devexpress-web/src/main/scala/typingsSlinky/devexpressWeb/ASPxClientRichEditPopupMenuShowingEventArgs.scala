@@ -7,17 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientRichEdit.PopupMenuShowing event.
   */
-@JSGlobal("ASPxClientRichEditPopupMenuShowingEventArgs")
 @js.native
-class ASPxClientRichEditPopupMenuShowingEventArgs protected () extends ASPxClientCancelEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientRichEditPopupMenuShowingEventArgs object. For internal use only.
-    * @param menuItems Provides access to the context menu's item collection.
-    */
-  def this(menuItems: ASPxClientRichEditPopupMenuItemCollection) = this()
+trait ASPxClientRichEditPopupMenuShowingEventArgs extends ASPxClientCancelEventArgs {
   /**
     * Provides access to a collection of menu items in the context menu being invoked.
     */
   var menuItems: ASPxClientRichEditPopupMenuItemCollection = js.native
+}
+
+object ASPxClientRichEditPopupMenuShowingEventArgs {
+  @scala.inline
+  def apply(cancel: Boolean, menuItems: ASPxClientRichEditPopupMenuItemCollection): ASPxClientRichEditPopupMenuShowingEventArgs = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], menuItems = menuItems.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientRichEditPopupMenuShowingEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientRichEditPopupMenuShowingEventArgsOps[Self <: ASPxClientRichEditPopupMenuShowingEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMenuItems(value: ASPxClientRichEditPopupMenuItemCollection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menuItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

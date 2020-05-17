@@ -1,0 +1,20 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Lists the header/footer types.
+  */
+@JSGlobal("HeaderFooterType")
+@js.native
+object HeaderFooterType extends js.Object {
+  /* 2 */ val Even: typingsSlinky.devexpressWeb.HeaderFooterType.Even with Double = js.native
+  /* 0 */ val First: typingsSlinky.devexpressWeb.HeaderFooterType.First with Double = js.native
+  /* 1 */ val Odd: typingsSlinky.devexpressWeb.HeaderFooterType.Odd with Double = js.native
+  /* 1 */ val Primary: typingsSlinky.devexpressWeb.HeaderFooterType.Primary with Double = js.native
+  @JSBracketAccess
+  def apply(value: Double): js.UndefOr[typingsSlinky.devexpressWeb.HeaderFooterType with Double] = js.native
+}
+

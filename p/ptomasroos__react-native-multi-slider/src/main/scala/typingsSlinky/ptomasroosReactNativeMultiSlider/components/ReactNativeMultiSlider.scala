@@ -3,7 +3,7 @@ package typingsSlinky.ptomasroosReactNativeMultiSlider.components
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.ptomasroosReactNativeMultiSlider.AnonBorderRadius
+import typingsSlinky.ptomasroosReactNativeMultiSlider.anon.BorderRadius
 import typingsSlinky.ptomasroosReactNativeMultiSlider.mod.MarkerProps
 import typingsSlinky.ptomasroosReactNativeMultiSlider.mod.MultiSliderProps
 import typingsSlinky.ptomasroosReactNativeMultiSlider.mod.default
@@ -84,7 +84,7 @@ object ReactNativeMultiSlider {
     @scala.inline
     def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
     @scala.inline
-    def touchDimensions(value: AnonBorderRadius): this.type = set("touchDimensions", value.asInstanceOf[js.Any])
+    def touchDimensions(value: BorderRadius): this.type = set("touchDimensions", value.asInstanceOf[js.Any])
     @scala.inline
     def trackStyle(value: ViewStyle): this.type = set("trackStyle", value.asInstanceOf[js.Any])
     @scala.inline

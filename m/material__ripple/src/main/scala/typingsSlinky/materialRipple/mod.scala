@@ -2,10 +2,13 @@ package typingsSlinky.materialRipple
 
 import org.scalajs.dom.raw.ClientRect
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
+import org.scalajs.dom.raw.Window
 import typingsSlinky.materialRipple.adapterMod.MDCRippleAdapter
+import typingsSlinky.materialRipple.anon.IsUnbounded
+import typingsSlinky.materialRipple.anon.Passive
+import typingsSlinky.materialRipple.anon.X
 import typingsSlinky.materialRipple.foundationMod.default
-import typingsSlinky.std.Event_
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,7 +45,7 @@ object mod extends js.Object {
   @js.native
   object MDCRipple extends js.Object {
     def attachTo(root: Element): MDCRipple = js.native
-    def attachTo(root: Element, options: AnonIsUnbounded): MDCRipple = js.native
+    def attachTo(root: Element, options: IsUnbounded): MDCRipple = js.native
     def createAdapter(instance: RippleCapableSurface): MDCRippleAdapter = js.native
   }
   
@@ -57,13 +60,13 @@ object mod extends js.Object {
   
   @js.native
   object util extends js.Object {
-    def applyPassive(): Boolean | AnonPassive = js.native
-    def applyPassive(globalObj: Window_): Boolean | AnonPassive = js.native
-    def applyPassive(globalObj: Window_, forceRefresh: Boolean): Boolean | AnonPassive = js.native
+    def applyPassive(): Boolean | Passive = js.native
+    def applyPassive(globalObj: Window): Boolean | Passive = js.native
+    def applyPassive(globalObj: Window, forceRefresh: Boolean): Boolean | Passive = js.native
     def getMatchesProperty(HTMLElementPrototype: js.Object): js.Array[String] = js.native
-    def getNormalizedEventCoords(ev: Event_, pageOffset: AnonX, clientRect: ClientRect): AnonX = js.native
-    def supportsCssVariables(windowObj: Window_): js.UndefOr[Boolean] = js.native
-    def supportsCssVariables(windowObj: Window_, forceRefresh: Boolean): js.UndefOr[Boolean] = js.native
+    def getNormalizedEventCoords(ev: Event, pageOffset: X, clientRect: ClientRect): X = js.native
+    def supportsCssVariables(windowObj: Window): js.UndefOr[Boolean] = js.native
+    def supportsCssVariables(windowObj: Window, forceRefresh: Boolean): js.UndefOr[Boolean] = js.native
   }
   
 }

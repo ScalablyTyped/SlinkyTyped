@@ -1,6 +1,6 @@
 package typingsSlinky.blessed.mod.Widgets
 
-import typingsSlinky.blessed.AnonX
+import typingsSlinky.blessed.anon.X
 import typingsSlinky.blessed.mod.Widgets.Types.TPosition
 import typingsSlinky.blessed.mod.Widgets.Types.TTopLeft
 import scala.scalajs.js
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Coords extends js.Object {
-  var _contentEnd: AnonX = js.native
+  var _contentEnd: X = js.native
   var base: Double = js.native
   var nobot: TPosition = js.native
   var noleft: TTopLeft = js.native
@@ -24,7 +24,7 @@ trait Coords extends js.Object {
 object Coords {
   @scala.inline
   def apply(
-    _contentEnd: AnonX,
+    _contentEnd: X,
     base: Double,
     nobot: TPosition,
     noleft: TTopLeft,
@@ -45,7 +45,7 @@ object Coords {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_contentEnd(value: AnonX): Self = {
+    def with_contentEnd(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("_contentEnd")(value.asInstanceOf[js.Any])
         ret

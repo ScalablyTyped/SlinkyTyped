@@ -2,8 +2,8 @@ package typingsSlinky.mapsjs.mod
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.SVGElement
-import typingsSlinky.mapsjs.AnonDownAction
-import typingsSlinky.mapsjs.AnonH
+import typingsSlinky.mapsjs.anon.DownAction
+import typingsSlinky.mapsjs.anon.H
 import typingsSlinky.mapsjs.mod.tile.layer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -39,7 +39,7 @@ trait mapsjsWidget extends js.Object {
     mapUnitsX: Double,
     mapUnitsY: Double,
     addAction: js.Function1[/* ele */ HTMLElement, Unit],
-    dragOptions: AnonDownAction
+    dragOptions: DownAction
   ): Unit = js.native
   /**
   	 * Add a styled path geometry to the content area which resides at a z-level 
@@ -172,7 +172,7 @@ trait mapsjsWidget extends js.Object {
   	 * the current extents' width in pixels and h is the current extents'
   	 * height in pixels.
   	 */
-  def getViewExtentsInPix(): AnonH = js.native
+  def getViewExtentsInPix(): H = js.native
   /**
   	 * Gets the current zoom level.
   	 * @returns {number} The current zoom level.

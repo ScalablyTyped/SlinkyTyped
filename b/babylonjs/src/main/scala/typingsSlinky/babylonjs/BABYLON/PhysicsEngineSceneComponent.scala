@@ -4,13 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.PhysicsEngineSceneComponent")
 @js.native
-class PhysicsEngineSceneComponent protected () extends ISceneComponent {
-  /**
-    * Creates a new instance of the component for the given scene
-    * @param scene Defines the scene to register the component in
-    */
-  def this(scene: Scene) = this()
+trait PhysicsEngineSceneComponent extends ISceneComponent
+
+object PhysicsEngineSceneComponent {
+  @scala.inline
+  def apply(dispose: () => Unit, name: String, rebuild: () => Unit, register: () => Unit, scene: Scene): PhysicsEngineSceneComponent = {
+    val __obj = js.Dynamic.literal(dispose = js.Any.fromFunction0(dispose), name = name.asInstanceOf[js.Any], rebuild = js.Any.fromFunction0(rebuild), register = js.Any.fromFunction0(register), scene = scene.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PhysicsEngineSceneComponent]
+  }
 }
 

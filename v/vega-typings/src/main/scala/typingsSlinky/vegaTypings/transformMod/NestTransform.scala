@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait NestTransform extends _Transforms {
+trait NestTransform extends Transforms {
   var generate: js.UndefOr[Boolean | SignalRef] = js.native
   var keys: js.UndefOr[js.Array[FieldRef] | SignalRef] = js.native
   var `type`: nest = js.native

@@ -1,7 +1,7 @@
 package typingsSlinky.primereact.organizationChartMod
 
 import slinky.core.TagMod
-import typingsSlinky.primereact.AnonNode
+import typingsSlinky.primereact.anon.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,8 +11,8 @@ trait OrganizationChartProps extends js.Object {
   var className: js.UndefOr[String] = js.native
   var id: js.UndefOr[String] = js.native
   var nodeTemplate: js.UndefOr[js.Function1[/* node */ OrganizationChartNodeData, TagMod[Any]]] = js.native
-  var onNodeSelect: js.UndefOr[js.Function1[/* e */ AnonNode, Unit]] = js.native
-  var onNodeUnselect: js.UndefOr[js.Function1[/* e */ AnonNode, Unit]] = js.native
+  var onNodeSelect: js.UndefOr[js.Function1[/* e */ Node, Unit]] = js.native
+  var onNodeUnselect: js.UndefOr[js.Function1[/* e */ Node, Unit]] = js.native
   var selection: js.UndefOr[js.Any] = js.native
   var selectionChange: js.UndefOr[js.Function1[/* data */ js.Any, Unit]] = js.native
   var selectionMode: js.UndefOr[String] = js.native
@@ -69,7 +69,7 @@ object OrganizationChartProps {
         ret
     }
     @scala.inline
-    def withOnNodeSelect(value: /* e */ AnonNode => Unit): Self = {
+    def withOnNodeSelect(value: /* e */ Node => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeSelect")(js.Any.fromFunction1(value))
         ret
@@ -81,7 +81,7 @@ object OrganizationChartProps {
         ret
     }
     @scala.inline
-    def withOnNodeUnselect(value: /* e */ AnonNode => Unit): Self = {
+    def withOnNodeUnselect(value: /* e */ Node => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeUnselect")(js.Any.fromFunction1(value))
         ret

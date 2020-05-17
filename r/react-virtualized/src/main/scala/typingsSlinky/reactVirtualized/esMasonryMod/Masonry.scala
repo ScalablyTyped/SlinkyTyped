@@ -1,8 +1,8 @@
 package typingsSlinky.reactVirtualized.esMasonryMod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactVirtualized.AnonKeyMapper
-import typingsSlinky.reactVirtualized.AnonRowIndexNumber
+import typingsSlinky.reactVirtualized.anon.KeyMapper
+import typingsSlinky.reactVirtualized.anon.RowIndexNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ class Masonry ()
   extends Component[MasonryProps, MasonryState, js.Any] {
   def clearCellPositions(): Unit = js.native
   // HACK This method signature was intended for Grid
-  def invalidateCellSizeAfterRender(params: AnonRowIndexNumber): Unit = js.native
+  def invalidateCellSizeAfterRender(params: RowIndexNumber): Unit = js.native
   def recomputeCellPositions(): Unit = js.native
 }
 
@@ -21,7 +21,7 @@ class Masonry ()
 @JSImport("react-virtualized/dist/es/Masonry", "Masonry")
 @js.native
 object Masonry extends js.Object {
-  var defaultProps: AnonKeyMapper = js.native
+  var defaultProps: KeyMapper = js.native
   def getDerivedStateFromProps(nextProps: MasonryProps, prevState: MasonryState): MasonryState | Null = js.native
 }
 

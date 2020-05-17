@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides the reason that a toast notification is no longer displayed on-screen. */
-@JSGlobal("Windows.UI.Notifications.ToastDismissedEventArgs")
 @js.native
-abstract class ToastDismissedEventArgs () extends js.Object {
+trait ToastDismissedEventArgs extends js.Object {
   /** Gets the reason that a toast notification is no longer displayed on-screen. */
   var reason: ToastDismissalReason = js.native
+}
+
+object ToastDismissedEventArgs {
+  @scala.inline
+  def apply(reason: ToastDismissalReason): ToastDismissedEventArgs = {
+    val __obj = js.Dynamic.literal(reason = reason.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ToastDismissedEventArgs]
+  }
+  @scala.inline
+  implicit class ToastDismissedEventArgsOps[Self <: ToastDismissedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReason(value: ToastDismissalReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reason")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

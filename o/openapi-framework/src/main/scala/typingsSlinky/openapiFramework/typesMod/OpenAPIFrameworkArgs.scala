@@ -1,7 +1,6 @@
 package typingsSlinky.openapiFramework.typesMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.openapiFramework.AnonString
 import typingsSlinky.openapiSecurityHandler.mod.SecurityHandlers
 import typingsSlinky.openapiTypes.mod.OpenAPIV2.Document
 import typingsSlinky.tsLog.mod.Logger
@@ -16,7 +15,7 @@ trait OpenAPIFrameworkArgs extends js.Object {
   var dependencies: js.UndefOr[StringDictionary[js.Any]] = js.native
   var enableObjectCoercion: js.UndefOr[Boolean] = js.native
   var errorTransformer: js.UndefOr[OpenAPIErrorTransformer] = js.native
-  var externalSchemas: js.UndefOr[AnonString] = js.native
+  var externalSchemas: js.UndefOr[typingsSlinky.openapiFramework.anon.String] = js.native
   var logger: js.UndefOr[Logger] = js.native
   var operations: js.UndefOr[StringDictionary[js.Function1[/* repeated */ js.Any, _]]] = js.native
   var pathSecurity: js.UndefOr[js.Array[PathSecurityTuple]] = js.native
@@ -95,7 +94,7 @@ object OpenAPIFrameworkArgs {
         ret
     }
     @scala.inline
-    def withExternalSchemas(value: AnonString): Self = {
+    def withExternalSchemas(value: typingsSlinky.openapiFramework.anon.String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("externalSchemas")(value.asInstanceOf[js.Any])
         ret

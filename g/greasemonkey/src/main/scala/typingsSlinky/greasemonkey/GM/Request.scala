@@ -1,7 +1,7 @@
 package typingsSlinky.greasemonkey.GM
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.greasemonkey.AnonOnabort
+import typingsSlinky.greasemonkey.anon.Onabort
 import typingsSlinky.greasemonkey.greasemonkeyStrings.CONNECT
 import typingsSlinky.greasemonkey.greasemonkeyStrings.DELETE
 import typingsSlinky.greasemonkey.greasemonkeyStrings.GET
@@ -74,7 +74,7 @@ trait Request[TContext] extends js.Object {
     * Object containing optional function callbacks to monitor the upload
     * of data.
     */
-  var upload: js.UndefOr[AnonOnabort[TContext]] = js.native
+  var upload: js.UndefOr[Onabort[TContext]] = js.native
   // Fields
   /**
     * The URL to make the request to. Must be an absolute URL, beginning
@@ -278,7 +278,7 @@ object Request {
         ret
     }
     @scala.inline
-    def withUpload(value: AnonOnabort[TContext]): Self[TContext] = {
+    def withUpload(value: Onabort[TContext]): Self[TContext] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(value.asInstanceOf[js.Any])
         ret

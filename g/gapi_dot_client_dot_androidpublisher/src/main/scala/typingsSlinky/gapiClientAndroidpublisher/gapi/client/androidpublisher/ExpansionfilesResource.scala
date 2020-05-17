@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientAndroidpublisher.gapi.client.androidpublisher
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAndroidpublisher.AnonExpansionFileType
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAndroidpublisher.anon.ExpansionFileType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,25 +9,25 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ExpansionfilesResource extends js.Object {
   /** Fetches the Expansion File configuration for the APK specified. */
-  def get(request: AnonExpansionFileType): Request_[ExpansionFile] = js.native
+  def get(request: ExpansionFileType): Request[ExpansionFile] = js.native
   /**
     * Updates the APK's Expansion File configuration to reference another APK's Expansion Files. To add a new Expansion File use the Upload method. This
     * method supports patch semantics.
     */
-  def patch(request: AnonExpansionFileType): Request_[ExpansionFile] = js.native
+  def patch(request: ExpansionFileType): Request[ExpansionFile] = js.native
   /** Updates the APK's Expansion File configuration to reference another APK's Expansion Files. To add a new Expansion File use the Upload method. */
-  def update(request: AnonExpansionFileType): Request_[ExpansionFile] = js.native
+  def update(request: ExpansionFileType): Request[ExpansionFile] = js.native
   /** Uploads and attaches a new Expansion File to the APK specified. */
-  def upload(request: AnonExpansionFileType): Request_[ExpansionFilesUploadResponse] = js.native
+  def upload(request: ExpansionFileType): Request[ExpansionFilesUploadResponse] = js.native
 }
 
 object ExpansionfilesResource {
   @scala.inline
   def apply(
-    get: AnonExpansionFileType => Request_[ExpansionFile],
-    patch: AnonExpansionFileType => Request_[ExpansionFile],
-    update: AnonExpansionFileType => Request_[ExpansionFile],
-    upload: AnonExpansionFileType => Request_[ExpansionFilesUploadResponse]
+    get: ExpansionFileType => Request[ExpansionFile],
+    patch: ExpansionFileType => Request[ExpansionFile],
+    update: ExpansionFileType => Request[ExpansionFile],
+    upload: ExpansionFileType => Request[ExpansionFilesUploadResponse]
   ): ExpansionfilesResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update), upload = js.Any.fromFunction1(upload))
     __obj.asInstanceOf[ExpansionfilesResource]
@@ -39,25 +39,25 @@ object ExpansionfilesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonExpansionFileType => Request_[ExpansionFile]): Self = {
+    def withGet(value: ExpansionFileType => Request[ExpansionFile]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPatch(value: AnonExpansionFileType => Request_[ExpansionFile]): Self = {
+    def withPatch(value: ExpansionFileType => Request[ExpansionFile]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonExpansionFileType => Request_[ExpansionFile]): Self = {
+    def withUpdate(value: ExpansionFileType => Request[ExpansionFile]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpload(value: AnonExpansionFileType => Request_[ExpansionFilesUploadResponse]): Self = {
+    def withUpload(value: ExpansionFileType => Request[ExpansionFilesUploadResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("upload")(js.Any.fromFunction1(value))
         ret

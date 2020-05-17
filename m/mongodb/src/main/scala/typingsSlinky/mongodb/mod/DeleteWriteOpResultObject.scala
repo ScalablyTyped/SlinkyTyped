@@ -1,6 +1,6 @@
 package typingsSlinky.mongodb.mod
 
-import typingsSlinky.mongodb.AnonN
+import typingsSlinky.mongodb.anon.N
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +12,12 @@ trait DeleteWriteOpResultObject extends js.Object {
   //The number of documents deleted.
   var deletedCount: js.UndefOr[scala.Double] = js.native
   //The raw result returned from MongoDB, field will vary depending on server version.
-  var result: AnonN = js.native
+  var result: N = js.native
 }
 
 object DeleteWriteOpResultObject {
   @scala.inline
-  def apply(result: AnonN): DeleteWriteOpResultObject = {
+  def apply(result: N): DeleteWriteOpResultObject = {
     val __obj = js.Dynamic.literal(result = result.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteWriteOpResultObject]
   }
@@ -28,7 +28,7 @@ object DeleteWriteOpResultObject {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withResult(value: AnonN): Self = {
+    def withResult(value: N): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
         ret

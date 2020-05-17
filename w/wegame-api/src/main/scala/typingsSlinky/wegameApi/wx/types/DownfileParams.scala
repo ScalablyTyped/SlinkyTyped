@@ -1,8 +1,8 @@
 package typingsSlinky.wegameApi.wx.types
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.wegameApi.AnonErrMsg
-import typingsSlinky.wegameApi.AnonStatusCode
+import typingsSlinky.wegameApi.anon.ErrMsg
+import typingsSlinky.wegameApi.anon.StatusCode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DownfileParams extends js.Object {
   var complete: js.UndefOr[js.Function0[Unit]] = js.native
-  var fail: js.UndefOr[js.Function1[/* res */ AnonErrMsg, Unit]] = js.native
+  var fail: js.UndefOr[js.Function1[/* res */ ErrMsg, Unit]] = js.native
   /**
     * 在指定filePath之后success回调中将不会有res.tempFilePath路径值，下载的文件会直接写入filePath指定的路径（有写入权限的情况下，根目录请使用wx.env.USER_DATA_PATH，路径文件夹必须存在，否则写入失败）
     */
@@ -23,7 +23,7 @@ trait DownfileParams extends js.Object {
     * res.tempFilePath 临时文件路径。如果没传入 filePath 指定文件存储路径，则下载后的文件会存储到一个临时文件
     * res.statusCode 开发者服务器返回的 HTTP 状态码
     */
-  var success: js.UndefOr[js.Function1[/* res */ AnonStatusCode, Unit]] = js.native
+  var success: js.UndefOr[js.Function1[/* res */ StatusCode, Unit]] = js.native
   var url: String = js.native
 }
 
@@ -58,7 +58,7 @@ object DownfileParams {
         ret
     }
     @scala.inline
-    def withFail(value: /* res */ AnonErrMsg => Unit): Self = {
+    def withFail(value: /* res */ ErrMsg => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction1(value))
         ret
@@ -94,7 +94,7 @@ object DownfileParams {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonStatusCode => Unit): Self = {
+    def withSuccess(value: /* res */ StatusCode => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

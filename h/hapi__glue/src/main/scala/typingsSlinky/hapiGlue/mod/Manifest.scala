@@ -1,6 +1,6 @@
 package typingsSlinky.hapiGlue.mod
 
-import typingsSlinky.hapiGlue.AnonPlugins
+import typingsSlinky.hapiGlue.anon.Plugins
 import typingsSlinky.hapiHapi.mod.ServerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Manifest extends js.Object {
-  var register: js.UndefOr[AnonPlugins] = js.native
+  var register: js.UndefOr[Plugins] = js.native
   var server: ServerOptions = js.native
 }
 
@@ -31,7 +31,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withRegister(value: AnonPlugins): Self = {
+    def withRegister(value: Plugins): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("register")(value.asInstanceOf[js.Any])
         ret

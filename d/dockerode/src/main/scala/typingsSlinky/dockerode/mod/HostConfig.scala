@@ -1,7 +1,6 @@
 package typingsSlinky.dockerode.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.dockerode.AnonConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,7 +39,7 @@ trait HostConfig extends js.Object {
   var Isolation: js.UndefOr[String] = js.native
   var KernelMemory: js.UndefOr[Double] = js.native
   var Links: js.UndefOr[js.Any] = js.native
-  var LogConfig: js.UndefOr[AnonConfig] = js.native
+  var LogConfig: js.UndefOr[typingsSlinky.dockerode.anon.Config] = js.native
   var MaskedPaths: js.UndefOr[js.Array[String]] = js.native
   var Memory: js.UndefOr[Double] = js.native
   var MemoryReservation: js.UndefOr[Double] = js.native
@@ -468,7 +467,7 @@ object HostConfig {
         ret
     }
     @scala.inline
-    def withLogConfig(value: AnonConfig): Self = {
+    def withLogConfig(value: typingsSlinky.dockerode.anon.Config): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("LogConfig")(value.asInstanceOf[js.Any])
         ret

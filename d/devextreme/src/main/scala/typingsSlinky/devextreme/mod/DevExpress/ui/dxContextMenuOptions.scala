@@ -1,10 +1,10 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonCancelComponentElement
-import typingsSlinky.devextreme.AnonComponentElementModel
-import typingsSlinky.devextreme.AnonDelay
-import typingsSlinky.devextreme.AnonPosition
+import typingsSlinky.devextreme.anon.CancelComponentElement
+import typingsSlinky.devextreme.anon.ComponentElementModel
+import typingsSlinky.devextreme.anon.Delay
+import typingsSlinky.devextreme.anon.Position
 import typingsSlinky.devextreme.devextremeStrings.auto
 import typingsSlinky.devextreme.devextremeStrings.left
 import typingsSlinky.devextreme.devextremeStrings.right
@@ -12,7 +12,7 @@ import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
 import typingsSlinky.devextreme.mod.DevExpress.event
 import typingsSlinky.devextreme.mod.DevExpress.positionConfig
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,19 +28,19 @@ trait dxContextMenuOptions extends dxMenuBaseOptions[dxContextMenu] {
   @JSName("items")
   var items_dxContextMenuOptions: js.UndefOr[js.Array[dxContextMenuItem]] = js.native
   /** A function that is executed after the ContextMenu is hidden. */
-  var onHidden: js.UndefOr[js.Function1[/* e */ AnonComponentElementModel, _]] = js.native
+  var onHidden: js.UndefOr[js.Function1[/* e */ ComponentElementModel, _]] = js.native
   /** A function that is executed before the ContextMenu is hidden. */
-  var onHiding: js.UndefOr[js.Function1[/* e */ AnonCancelComponentElement, _]] = js.native
+  var onHiding: js.UndefOr[js.Function1[/* e */ CancelComponentElement, _]] = js.native
   /** A function that is executed before the ContextMenu is positioned. */
-  var onPositioning: js.UndefOr[js.Function1[/* e */ AnonPosition, _]] = js.native
+  var onPositioning: js.UndefOr[js.Function1[/* e */ Position, _]] = js.native
   /** A function that is executed before the ContextMenu is shown. */
-  var onShowing: js.UndefOr[js.Function1[/* e */ AnonCancelComponentElement, _]] = js.native
+  var onShowing: js.UndefOr[js.Function1[/* e */ CancelComponentElement, _]] = js.native
   /** A function that is executed after the ContextMenu is shown. */
-  var onShown: js.UndefOr[js.Function1[/* e */ AnonComponentElementModel, _]] = js.native
+  var onShown: js.UndefOr[js.Function1[/* e */ ComponentElementModel, _]] = js.native
   /** An object defining widget positioning options. */
   var position: js.UndefOr[positionConfig] = js.native
   /** Specifies options for displaying the widget. */
-  var showEvent: js.UndefOr[AnonDelay | String] = js.native
+  var showEvent: js.UndefOr[Delay | String] = js.native
   /** Specifies the direction at which submenus are displayed. */
   var submenuDirection: js.UndefOr[auto | left | right] = js.native
   /** The target element associated with the context menu. */
@@ -102,7 +102,7 @@ object dxContextMenuOptions {
         ret
     }
     @scala.inline
-    def withOnHidden(value: /* e */ AnonComponentElementModel => _): Self = {
+    def withOnHidden(value: /* e */ ComponentElementModel => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onHidden")(js.Any.fromFunction1(value))
         ret
@@ -114,7 +114,7 @@ object dxContextMenuOptions {
         ret
     }
     @scala.inline
-    def withOnHiding(value: /* e */ AnonCancelComponentElement => _): Self = {
+    def withOnHiding(value: /* e */ CancelComponentElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onHiding")(js.Any.fromFunction1(value))
         ret
@@ -126,7 +126,7 @@ object dxContextMenuOptions {
         ret
     }
     @scala.inline
-    def withOnPositioning(value: /* e */ AnonPosition => _): Self = {
+    def withOnPositioning(value: /* e */ Position => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPositioning")(js.Any.fromFunction1(value))
         ret
@@ -138,7 +138,7 @@ object dxContextMenuOptions {
         ret
     }
     @scala.inline
-    def withOnShowing(value: /* e */ AnonCancelComponentElement => _): Self = {
+    def withOnShowing(value: /* e */ CancelComponentElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onShowing")(js.Any.fromFunction1(value))
         ret
@@ -150,7 +150,7 @@ object dxContextMenuOptions {
         ret
     }
     @scala.inline
-    def withOnShown(value: /* e */ AnonComponentElementModel => _): Self = {
+    def withOnShown(value: /* e */ ComponentElementModel => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onShown")(js.Any.fromFunction1(value))
         ret
@@ -174,7 +174,7 @@ object dxContextMenuOptions {
         ret
     }
     @scala.inline
-    def withShowEvent(value: AnonDelay | String): Self = {
+    def withShowEvent(value: Delay | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("showEvent")(value.asInstanceOf[js.Any])
         ret

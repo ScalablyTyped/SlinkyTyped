@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.BindingData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.BindingLoadOptions
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientResult
 import typingsSlinky.officeJsPreview.OfficeExtension.EventHandlers
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,9 +17,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.Binding")
 @js.native
-class Binding () extends ClientObject {
+trait Binding extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_Binding: RequestContext = js.native
@@ -90,7 +89,7 @@ class Binding () extends ClientObject {
     */
   def load(): Binding = js.native
   def load(options: BindingLoadOptions): Binding = js.native
-  def load(propertyNamesAndPaths: AnonExpand): Binding = js.native
+  def load(propertyNamesAndPaths: Expand): Binding = js.native
   def load(propertyNames: String): Binding = js.native
   def load(propertyNames: js.Array[String]): Binding = js.native
   /**

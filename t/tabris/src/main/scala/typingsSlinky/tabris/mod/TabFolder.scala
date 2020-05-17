@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.OmitTabFolderTabset
+import typingsSlinky.tabris.anon.OmitTabFolderTabset
 import typingsSlinky.tabris.tabrisStrings.auto
 import typingsSlinky.tabris.tabrisStrings.bottom
 import typingsSlinky.tabris.tabrisStrings.fixed

@@ -3,9 +3,9 @@ package typingsSlinky.cathoQuantum.components
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonBaseFontSizeColors
-import typingsSlinky.cathoQuantum.AnonFrom
-import typingsSlinky.cathoQuantum.AnonLabelValue
+import typingsSlinky.cathoQuantum.anon.BaseFontSizeColors
+import typingsSlinky.cathoQuantum.anon.From
+import typingsSlinky.cathoQuantum.anon.LabelValue
 import typingsSlinky.cathoQuantum.cathoQuantumBooleans.`false`
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.auto
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.inverted
@@ -31,11 +31,11 @@ object RangeSlider {
     @scala.inline
     def `aria-labelledby`(value: String): this.type = set("aria-labelledby", value.asInstanceOf[js.Any])
     @scala.inline
-    def defaultValue(value: Double | AnonFrom): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValue(value: Double | From): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def marks(value: js.Array[AnonLabelValue]): this.type = set("marks", value.asInstanceOf[js.Any])
+    def marks(value: js.Array[LabelValue]): this.type = set("marks", value.asInstanceOf[js.Any])
     @scala.inline
     def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
     @scala.inline
@@ -47,13 +47,13 @@ object RangeSlider {
     @scala.inline
     def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
     @scala.inline
-    def theme(value: AnonBaseFontSizeColors): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: BaseFontSizeColors): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
     def tipFormatter(value: (/* value */ js.UndefOr[Double], /* index */ js.UndefOr[Double]) => String): this.type = set("tipFormatter", js.Any.fromFunction2(value))
     @scala.inline
     def track(value: normal | `false` | inverted): this.type = set("track", value.asInstanceOf[js.Any])
     @scala.inline
-    def value(value: Double | AnonFrom): this.type = set("value", value.asInstanceOf[js.Any])
+    def value(value: Double | From): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def valueLabelDisplay(value: auto | on | off): this.type = set("valueLabelDisplay", value.asInstanceOf[js.Any])
   }

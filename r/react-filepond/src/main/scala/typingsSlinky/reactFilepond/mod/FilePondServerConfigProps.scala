@@ -1,6 +1,6 @@
 package typingsSlinky.reactFilepond.mod
 
-import typingsSlinky.reactFilepond.AnonFetch
+import typingsSlinky.reactFilepond.anon.Fetch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait FilePondServerConfigProps extends js.Object {
   var instantUpload: js.UndefOr[Boolean] = js.native
-  var server: js.UndefOr[String | AnonFetch] = js.native
+  var server: js.UndefOr[String | Fetch] = js.native
 }
 
 object FilePondServerConfigProps {
@@ -36,7 +36,7 @@ object FilePondServerConfigProps {
         ret
     }
     @scala.inline
-    def withServer(value: String | AnonFetch): Self = {
+    def withServer(value: String | Fetch): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("server")(value.asInstanceOf[js.Any])
         ret

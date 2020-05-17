@@ -1,5 +1,6 @@
 package typingsSlinky.minecraftScriptingTypesServer
 
+import typingsSlinky.minecraftScriptingTypesServer.anon.Rangemax
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +13,12 @@ trait IAttackComponent extends js.Object {
   /**
     * Range of the random amount of damage the melee attack deals. A negative value can heal the entity instead of hurting it
     */
-  var damage: AnonRangemax = js.native
+  var damage: Rangemax = js.native
 }
 
 object IAttackComponent {
   @scala.inline
-  def apply(damage: AnonRangemax): IAttackComponent = {
+  def apply(damage: Rangemax): IAttackComponent = {
     val __obj = js.Dynamic.literal(damage = damage.asInstanceOf[js.Any])
     __obj.asInstanceOf[IAttackComponent]
   }
@@ -28,7 +29,7 @@ object IAttackComponent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDamage(value: AnonRangemax): Self = {
+    def withDamage(value: Rangemax): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("damage")(value.asInstanceOf[js.Any])
         ret

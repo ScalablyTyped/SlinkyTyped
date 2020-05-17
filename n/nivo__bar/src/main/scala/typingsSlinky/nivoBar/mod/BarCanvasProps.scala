@@ -3,7 +3,7 @@ package typingsSlinky.nivoBar.mod
 import org.scalajs.dom.raw.HTMLCanvasElement
 import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.nivoBar.dataFromindexeskeysLegend
+import typingsSlinky.nivoBar.anon.dataFromindexeskeysLegend
 import typingsSlinky.nivoBar.nivoBarStrings.auto
 import typingsSlinky.nivoBar.nivoBarStrings.grouped
 import typingsSlinky.nivoBar.nivoBarStrings.horizontal

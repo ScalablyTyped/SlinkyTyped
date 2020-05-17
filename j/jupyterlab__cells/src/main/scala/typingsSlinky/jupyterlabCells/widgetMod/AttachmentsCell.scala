@@ -1,7 +1,7 @@
 package typingsSlinky.jupyterlabCells.widgetMod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.jupyterlabCells.modelMod.IAttachmentsCellModel
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,7 +47,7 @@ abstract class AttachmentsCell () extends Cell {
     * called in response to events on the notebook panel's node. It should
     * not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
   /**
     * Modify the cell source to include a reference to the attachment.
     */

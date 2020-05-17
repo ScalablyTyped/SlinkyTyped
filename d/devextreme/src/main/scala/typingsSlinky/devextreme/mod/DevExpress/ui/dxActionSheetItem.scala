@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonElementEvent
+import typingsSlinky.devextreme.anon.ElementEvent
 import typingsSlinky.devextreme.devextremeStrings.back
 import typingsSlinky.devextreme.devextremeStrings.danger
 import typingsSlinky.devextreme.devextremeStrings.default_
@@ -15,7 +15,7 @@ trait dxActionSheetItem extends CollectionWidgetItem {
   /** Specifies the icon to be displayed on the action sheet button. */
   var icon: js.UndefOr[String] = js.native
   /** A handler for the click event raised for the button representing the given action sheet button. */
-  var onClick: js.UndefOr[(js.Function1[/* e */ AnonElementEvent, _]) | String] = js.native
+  var onClick: js.UndefOr[(js.Function1[/* e */ ElementEvent, _]) | String] = js.native
   /** Specifies the type of the button that represents an action sheet item. */
   var `type`: js.UndefOr[back | danger | default_ | normal | success] = js.native
 }
@@ -45,13 +45,13 @@ object dxActionSheetItem {
         ret
     }
     @scala.inline
-    def withOnClickFunction1(value: /* e */ AnonElementEvent => _): Self = {
+    def withOnClickFunction1(value: /* e */ ElementEvent => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnClick(value: (js.Function1[/* e */ AnonElementEvent, _]) | String): Self = {
+    def withOnClick(value: (js.Function1[/* e */ ElementEvent, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(value.asInstanceOf[js.Any])
         ret

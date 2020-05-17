@@ -2,8 +2,8 @@ package typingsSlinky.xhrMock
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.EventTarget
+import typingsSlinky.std.Event
 import typingsSlinky.std.EventInit
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object mockEventMod extends js.Object {
   @js.native
-  trait MockEvent extends Event_ {
+  trait MockEvent extends Event {
     @JSName("currentTarget")
     val currentTarget_MockEvent: EventTarget = js.native
     val scoped: Boolean = js.native

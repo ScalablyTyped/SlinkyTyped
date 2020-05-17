@@ -2,7 +2,7 @@ package typingsSlinky.wouter.preactMod
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.preact.mod.FunctionComponent
-import typingsSlinky.wouter.PartialRouterPropschildreBase
+import typingsSlinky.wouter.anon.PartialRouterPropschildreBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

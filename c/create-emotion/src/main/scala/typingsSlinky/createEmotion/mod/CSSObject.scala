@@ -45,7 +45,7 @@ trait CSSObject
      with VendorShorthandPropertiesFallback[Double | String]
      with ObsoletePropertiesFallback[Double | String]
      with CSSPseudoObject
-     with _Interpolation {
+     with Interpolation {
   var alignmentBaseline: js.UndefOr[AlignmentBaselineProperty | js.Array[AlignmentBaselineProperty]] = js.native
   var baselineShift: js.UndefOr[
     (BaselineShiftProperty[Double | String]) | (js.Array[BaselineShiftProperty[Double | String]])

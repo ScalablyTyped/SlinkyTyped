@@ -1,7 +1,7 @@
 package typingsSlinky.antd.mod
 
-import typingsSlinky.antd.AnonMouseEnterDelay
-import typingsSlinky.antd.TypeofDropdownButton
+import typingsSlinky.antd.anon.MouseEnterDelay
+import typingsSlinky.antd.anon.TypeofDropdownButton
 import typingsSlinky.antd.dropdownMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,6 +16,6 @@ class Dropdown () extends default
 @js.native
 object Dropdown extends js.Object {
   var Button: TypeofDropdownButton = js.native
-  var defaultProps: AnonMouseEnterDelay = js.native
+  var defaultProps: MouseEnterDelay = js.native
 }
 

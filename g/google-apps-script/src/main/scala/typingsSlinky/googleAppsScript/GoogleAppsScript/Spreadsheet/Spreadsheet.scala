@@ -1,12 +1,12 @@
 package typingsSlinky.googleAppsScript.GoogleAppsScript.Spreadsheet
 
-import typingsSlinky.googleAppsScript.AnonFunctionName
-import typingsSlinky.googleAppsScript.AnonTemplate
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Base.Blob
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Base.BlobSource
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Base.User
 import typingsSlinky.googleAppsScript.GoogleAppsScript.HTML.HtmlOutput
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Integer
+import typingsSlinky.googleAppsScript.anon.FunctionName
+import typingsSlinky.googleAppsScript.anon.Template
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +24,7 @@ trait Spreadsheet extends js.Object {
   def addEditor(emailAddress: String): typingsSlinky.googleAppsScript.GoogleAppsScript.Spreadsheet.Spreadsheet = js.native
   def addEditor(user: User): typingsSlinky.googleAppsScript.GoogleAppsScript.Spreadsheet.Spreadsheet = js.native
   def addEditors(emailAddresses: js.Array[String]): typingsSlinky.googleAppsScript.GoogleAppsScript.Spreadsheet.Spreadsheet = js.native
-  def addMenu(name: String, subMenus: js.Array[AnonFunctionName | Null]): Unit = js.native
+  def addMenu(name: String, subMenus: js.Array[FunctionName | Null]): Unit = js.native
   def addViewer(emailAddress: String): typingsSlinky.googleAppsScript.GoogleAppsScript.Spreadsheet.Spreadsheet = js.native
   def addViewer(user: User): typingsSlinky.googleAppsScript.GoogleAppsScript.Spreadsheet.Spreadsheet = js.native
   def addViewers(emailAddresses: js.Array[String]): typingsSlinky.googleAppsScript.GoogleAppsScript.Spreadsheet.Spreadsheet = js.native
@@ -100,13 +100,13 @@ trait Spreadsheet extends js.Object {
   def insertRowsAfter(afterPosition: Integer, howMany: Integer): Sheet = js.native
   def insertRowsBefore(beforePosition: Integer, howMany: Integer): Sheet = js.native
   def insertSheet(): Sheet = js.native
-  def insertSheet(options: AnonTemplate): Sheet = js.native
+  def insertSheet(options: Template): Sheet = js.native
   def insertSheet(sheetIndex: Integer): Sheet = js.native
-  def insertSheet(sheetIndex: Integer, options: AnonTemplate): Sheet = js.native
+  def insertSheet(sheetIndex: Integer, options: Template): Sheet = js.native
   def insertSheet(sheetName: String): Sheet = js.native
-  def insertSheet(sheetName: String, options: AnonTemplate): Sheet = js.native
+  def insertSheet(sheetName: String, options: Template): Sheet = js.native
   def insertSheet(sheetName: String, sheetIndex: Integer): Sheet = js.native
-  def insertSheet(sheetName: String, sheetIndex: Integer, options: AnonTemplate): Sheet = js.native
+  def insertSheet(sheetName: String, sheetIndex: Integer, options: Template): Sheet = js.native
   def insertSheetWithDataSourceTable(spec: DataSourceSpec): Sheet = js.native
   /** @deprecated DO NOT USE */ def isAnonymousView(): Boolean = js.native
   /** @deprecated DO NOT USE */ def isAnonymousWrite(): Boolean = js.native
@@ -154,6 +154,6 @@ trait Spreadsheet extends js.Object {
   def toast(msg: String, title: String, timeoutSeconds: Double): Unit = js.native
   def unhideColumn(column: Range): Unit = js.native
   def unhideRow(row: Range): Unit = js.native
-  def updateMenu(name: String, subMenus: js.Array[AnonFunctionName]): Unit = js.native
+  def updateMenu(name: String, subMenus: js.Array[FunctionName]): Unit = js.native
 }
 

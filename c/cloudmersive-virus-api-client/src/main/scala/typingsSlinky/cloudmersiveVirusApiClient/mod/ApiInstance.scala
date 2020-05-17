@@ -1,6 +1,6 @@
 package typingsSlinky.cloudmersiveVirusApiClient.mod
 
-import typingsSlinky.cloudmersiveVirusApiClient.AnonApikey
+import typingsSlinky.cloudmersiveVirusApiClient.anon.Apikey
 import typingsSlinky.node.httpMod.Agent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ trait ApiInstance extends js.Object {
   /**
     * @param authentications object - The authentication methods to be included for all API calls.
     */
-  var authentications: AnonApikey = js.native
+  var authentications: Apikey = js.native
   /**
     * @param basePath string - The base URL against which to resolve every API
     * call's (relative) path.
@@ -57,7 +57,7 @@ object ApiInstance {
   @scala.inline
   def apply(
     agent: Agent,
-    authentications: AnonApikey,
+    authentications: Apikey,
     basePath: String,
     cache: Boolean,
     defaultHeaders: js.Array[String],
@@ -80,7 +80,7 @@ object ApiInstance {
         ret
     }
     @scala.inline
-    def withAuthentications(value: AnonApikey): Self = {
+    def withAuthentications(value: Apikey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("authentications")(value.asInstanceOf[js.Any])
         ret

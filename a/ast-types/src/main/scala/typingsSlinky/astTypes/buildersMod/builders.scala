@@ -1,7 +1,7 @@
 package typingsSlinky.astTypes.buildersMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.astTypes.AnonCooked
+import typingsSlinky.astTypes.anon.Cooked
 import typingsSlinky.astTypes.astTypesStrings.Ampersand
 import typingsSlinky.astTypes.astTypesStrings.AmpersandAmpersand
 import typingsSlinky.astTypes.astTypesStrings.AmpersandEqualssign
@@ -932,15 +932,11 @@ trait builders
   def breakStatement(): BreakStatement = js.native
   def breakStatement(label: IdentifierKind): BreakStatement = js.native
   def callExpression(callee: ExpressionKind, argumentsParam: js.Array[ExpressionKind | SpreadElementKind]): CallExpression = js.native
-  def catchClause(param: js.UndefOr[scala.Nothing], guard: js.UndefOr[scala.Nothing], body: BlockStatementKind): CatchClause = js.native
-  def catchClause(param: js.UndefOr[scala.Nothing], guard: Null, body: BlockStatementKind): CatchClause = js.native
-  def catchClause(param: js.UndefOr[scala.Nothing], guard: ExpressionKind, body: BlockStatementKind): CatchClause = js.native
-  def catchClause(param: Null, guard: js.UndefOr[scala.Nothing], body: BlockStatementKind): CatchClause = js.native
-  def catchClause(param: Null, guard: Null, body: BlockStatementKind): CatchClause = js.native
-  def catchClause(param: Null, guard: ExpressionKind, body: BlockStatementKind): CatchClause = js.native
-  def catchClause(param: PatternKind, guard: js.UndefOr[scala.Nothing], body: BlockStatementKind): CatchClause = js.native
-  def catchClause(param: PatternKind, guard: Null, body: BlockStatementKind): CatchClause = js.native
-  def catchClause(param: PatternKind, guard: ExpressionKind, body: BlockStatementKind): CatchClause = js.native
+  def catchClause(
+    param: js.UndefOr[Null | PatternKind],
+    guard: js.UndefOr[ExpressionKind | Null],
+    body: BlockStatementKind
+  ): CatchClause = js.native
   def classBody(
     body: js.Array[
       MethodDefinitionKind | VariableDeclaratorKind | ClassPropertyDefinitionKind | ClassPropertyKind | ClassPrivatePropertyKind | ClassMethodKind | ClassPrivateMethodKind | TSDeclareMethodKind | TSCallSignatureDeclarationKind | TSConstructSignatureDeclarationKind | TSIndexSignatureKind | TSMethodSignatureKind | TSPropertySignatureKind
@@ -950,12 +946,8 @@ trait builders
   def classDeclaration(id: Null, body: ClassBodyKind, superClass: ExpressionKind): ClassDeclaration = js.native
   def classDeclaration(id: IdentifierKind, body: ClassBodyKind): ClassDeclaration = js.native
   def classDeclaration(id: IdentifierKind, body: ClassBodyKind, superClass: ExpressionKind): ClassDeclaration = js.native
-  def classExpression(id: js.UndefOr[scala.Nothing], body: ClassBodyKind): ClassExpression = js.native
-  def classExpression(id: js.UndefOr[scala.Nothing], body: ClassBodyKind, superClass: ExpressionKind): ClassExpression = js.native
-  def classExpression(id: Null, body: ClassBodyKind): ClassExpression = js.native
-  def classExpression(id: Null, body: ClassBodyKind, superClass: ExpressionKind): ClassExpression = js.native
-  def classExpression(id: IdentifierKind, body: ClassBodyKind): ClassExpression = js.native
-  def classExpression(id: IdentifierKind, body: ClassBodyKind, superClass: ExpressionKind): ClassExpression = js.native
+  def classExpression(id: js.UndefOr[IdentifierKind | Null], body: ClassBodyKind): ClassExpression = js.native
+  def classExpression(id: js.UndefOr[IdentifierKind | Null], body: ClassBodyKind, superClass: ExpressionKind): ClassExpression = js.native
   def classImplements(id: IdentifierKind): ClassImplements = js.native
   def classMethod(
     kind: js.UndefOr[get | set | method | constructor],
@@ -1268,9 +1260,7 @@ trait builders
   def exportNamedDeclaration(declaration: DeclarationKind, specifiers: js.Array[ExportSpecifierKind]): ExportNamedDeclaration = js.native
   def exportNamedDeclaration(declaration: DeclarationKind, specifiers: js.Array[ExportSpecifierKind], source: LiteralKind): ExportNamedDeclaration = js.native
   def exportNamespaceSpecifier(exported: IdentifierKind): ExportNamespaceSpecifier = js.native
-  def exportSpecifier(local: js.UndefOr[scala.Nothing], exported: IdentifierKind): ExportSpecifier = js.native
-  def exportSpecifier(local: Null, exported: IdentifierKind): ExportSpecifier = js.native
-  def exportSpecifier(local: IdentifierKind, exported: IdentifierKind): ExportSpecifier = js.native
+  def exportSpecifier(local: js.UndefOr[IdentifierKind | Null], exported: IdentifierKind): ExportSpecifier = js.native
   def expressionStatement(expression: ExpressionKind): ExpressionStatement = js.native
   def file(program: ProgramKind): File = js.native
   def file(program: ProgramKind, name: String): File = js.native
@@ -1301,33 +1291,15 @@ trait builders
     generator: Boolean,
     expression: Boolean
   ): FunctionDeclaration = js.native
-  def functionExpression(id: js.UndefOr[scala.Nothing], params: js.Array[PatternKind], body: BlockStatementKind): FunctionExpression = js.native
+  def functionExpression(id: js.UndefOr[IdentifierKind | Null], params: js.Array[PatternKind], body: BlockStatementKind): FunctionExpression = js.native
   def functionExpression(
-    id: js.UndefOr[scala.Nothing],
+    id: js.UndefOr[IdentifierKind | Null],
     params: js.Array[PatternKind],
     body: BlockStatementKind,
     generator: Boolean
   ): FunctionExpression = js.native
   def functionExpression(
-    id: js.UndefOr[scala.Nothing],
-    params: js.Array[PatternKind],
-    body: BlockStatementKind,
-    generator: Boolean,
-    expression: Boolean
-  ): FunctionExpression = js.native
-  def functionExpression(id: Null, params: js.Array[PatternKind], body: BlockStatementKind): FunctionExpression = js.native
-  def functionExpression(id: Null, params: js.Array[PatternKind], body: BlockStatementKind, generator: Boolean): FunctionExpression = js.native
-  def functionExpression(
-    id: Null,
-    params: js.Array[PatternKind],
-    body: BlockStatementKind,
-    generator: Boolean,
-    expression: Boolean
-  ): FunctionExpression = js.native
-  def functionExpression(id: IdentifierKind, params: js.Array[PatternKind], body: BlockStatementKind): FunctionExpression = js.native
-  def functionExpression(id: IdentifierKind, params: js.Array[PatternKind], body: BlockStatementKind, generator: Boolean): FunctionExpression = js.native
-  def functionExpression(
-    id: IdentifierKind,
+    id: js.UndefOr[IdentifierKind | Null],
     params: js.Array[PatternKind],
     body: BlockStatementKind,
     generator: Boolean,
@@ -1358,24 +1330,25 @@ trait builders
   def ifStatement(test: ExpressionKind, consequent: StatementKind): IfStatement = js.native
   def ifStatement(test: ExpressionKind, consequent: StatementKind, alternate: StatementKind): IfStatement = js.native
   def `import`(): Import = js.native
-  def importDeclaration(specifiers: js.UndefOr[scala.Nothing], source: LiteralKind): ImportDeclaration = js.native
   def importDeclaration(
-    specifiers: js.Array[ImportSpecifierKind | ImportNamespaceSpecifierKind | ImportDefaultSpecifierKind],
+    specifiers: js.UndefOr[
+      js.Array[ImportSpecifierKind | ImportNamespaceSpecifierKind | ImportDefaultSpecifierKind]
+    ],
     source: LiteralKind
   ): ImportDeclaration = js.native
   @JSName("importDeclaration")
-  def importDeclaration_type(specifiers: js.UndefOr[scala.Nothing], source: LiteralKind, importKind: `type`): ImportDeclaration = js.native
-  @JSName("importDeclaration")
   def importDeclaration_type(
-    specifiers: js.Array[ImportSpecifierKind | ImportNamespaceSpecifierKind | ImportDefaultSpecifierKind],
+    specifiers: js.UndefOr[
+      js.Array[ImportSpecifierKind | ImportNamespaceSpecifierKind | ImportDefaultSpecifierKind]
+    ],
     source: LiteralKind,
     importKind: `type`
   ): ImportDeclaration = js.native
   @JSName("importDeclaration")
-  def importDeclaration_value(specifiers: js.UndefOr[scala.Nothing], source: LiteralKind, importKind: value): ImportDeclaration = js.native
-  @JSName("importDeclaration")
   def importDeclaration_value(
-    specifiers: js.Array[ImportSpecifierKind | ImportNamespaceSpecifierKind | ImportDefaultSpecifierKind],
+    specifiers: js.UndefOr[
+      js.Array[ImportSpecifierKind | ImportNamespaceSpecifierKind | ImportDefaultSpecifierKind]
+    ],
     source: LiteralKind,
     importKind: value
   ): ImportDeclaration = js.native
@@ -1707,7 +1680,7 @@ trait builders
   def switchStatement(discriminant: ExpressionKind, cases: js.Array[SwitchCaseKind]): SwitchStatement = js.native
   def switchStatement(discriminant: ExpressionKind, cases: js.Array[SwitchCaseKind], lexical: Boolean): SwitchStatement = js.native
   def taggedTemplateExpression(tag: ExpressionKind, quasi: TemplateLiteralKind): TaggedTemplateExpression = js.native
-  def templateElement(value: AnonCooked, tail: Boolean): TemplateElement = js.native
+  def templateElement(value: Cooked, tail: Boolean): TemplateElement = js.native
   def templateLiteral(quasis: js.Array[TemplateElementKind], expressions: js.Array[ExpressionKind]): TemplateLiteral = js.native
   def thisExpression(): ThisExpression = js.native
   def thisTypeAnnotation(): ThisTypeAnnotation = js.native
@@ -1733,15 +1706,13 @@ trait builders
     typeAnnotation: TSTypeAnnotationKind
   ): TSConstructSignatureDeclaration = js.native
   def tsConstructorType(parameters: js.Array[IdentifierKind | RestElementKind | ArrayPatternKind | ObjectPatternKind]): TSConstructorType = js.native
-  def tsDeclareFunction(id: js.UndefOr[scala.Nothing], params: js.Array[PatternKind]): TSDeclareFunction = js.native
-  def tsDeclareFunction(id: js.UndefOr[scala.Nothing], params: js.Array[PatternKind], returnType: NoopKind): TSDeclareFunction = js.native
-  def tsDeclareFunction(id: js.UndefOr[scala.Nothing], params: js.Array[PatternKind], returnType: TSTypeAnnotationKind): TSDeclareFunction = js.native
-  def tsDeclareFunction(id: Null, params: js.Array[PatternKind]): TSDeclareFunction = js.native
-  def tsDeclareFunction(id: Null, params: js.Array[PatternKind], returnType: NoopKind): TSDeclareFunction = js.native
-  def tsDeclareFunction(id: Null, params: js.Array[PatternKind], returnType: TSTypeAnnotationKind): TSDeclareFunction = js.native
-  def tsDeclareFunction(id: IdentifierKind, params: js.Array[PatternKind]): TSDeclareFunction = js.native
-  def tsDeclareFunction(id: IdentifierKind, params: js.Array[PatternKind], returnType: NoopKind): TSDeclareFunction = js.native
-  def tsDeclareFunction(id: IdentifierKind, params: js.Array[PatternKind], returnType: TSTypeAnnotationKind): TSDeclareFunction = js.native
+  def tsDeclareFunction(id: js.UndefOr[IdentifierKind | Null], params: js.Array[PatternKind]): TSDeclareFunction = js.native
+  def tsDeclareFunction(id: js.UndefOr[IdentifierKind | Null], params: js.Array[PatternKind], returnType: NoopKind): TSDeclareFunction = js.native
+  def tsDeclareFunction(
+    id: js.UndefOr[IdentifierKind | Null],
+    params: js.Array[PatternKind],
+    returnType: TSTypeAnnotationKind
+  ): TSDeclareFunction = js.native
   def tsDeclareMethod(key: ExpressionKind, params: js.Array[PatternKind]): TSDeclareMethod = js.native
   def tsDeclareMethod(key: ExpressionKind, params: js.Array[PatternKind], returnType: NoopKind): TSDeclareMethod = js.native
   def tsDeclareMethod(key: ExpressionKind, params: js.Array[PatternKind], returnType: TSTypeAnnotationKind): TSDeclareMethod = js.native
@@ -1770,11 +1741,6 @@ trait builders
   def tsImportEqualsDeclaration(id: IdentifierKind, moduleReference: TSExternalModuleReferenceKind): TSImportEqualsDeclaration = js.native
   def tsImportEqualsDeclaration(id: IdentifierKind, moduleReference: TSQualifiedNameKind): TSImportEqualsDeclaration = js.native
   def tsImportType(argument: StringLiteralKind): TSImportType = js.native
-  def tsImportType(
-    argument: StringLiteralKind,
-    qualifier: js.UndefOr[scala.Nothing],
-    typeParameters: TSTypeParameterInstantiationKind
-  ): TSImportType = js.native
   def tsImportType(argument: StringLiteralKind, qualifier: IdentifierKind): TSImportType = js.native
   def tsImportType(
     argument: StringLiteralKind,
@@ -1859,7 +1825,6 @@ trait builders
   ): TSTypeLiteral = js.native
   def tsTypeOperator(operator: String): TSTypeOperator = js.native
   def tsTypeParameter(name: String): TSTypeParameter = js.native
-  def tsTypeParameter(name: String, constraint: js.UndefOr[scala.Nothing], defaultParam: TSTypeKind): TSTypeParameter = js.native
   def tsTypeParameter(name: String, constraint: TSTypeKind): TSTypeParameter = js.native
   def tsTypeParameter(name: String, constraint: TSTypeKind, defaultParam: TSTypeKind): TSTypeParameter = js.native
   def tsTypeParameterDeclaration(params: js.Array[TSTypeParameterKind]): TSTypeParameterDeclaration = js.native

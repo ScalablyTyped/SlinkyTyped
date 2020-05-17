@@ -1,7 +1,7 @@
 package typingsSlinky.antd.mod
 
-import typingsSlinky.antd.AnonIndeterminate
-import typingsSlinky.antd.TypeofCheckboxGroup
+import typingsSlinky.antd.anon.Indeterminate
+import typingsSlinky.antd.anon.TypeofCheckboxGroup
 import typingsSlinky.antd.checkboxMod.default
 import typingsSlinky.antd.groupMod.CheckboxGroupContext
 import typingsSlinky.react.mod.Context
@@ -20,6 +20,6 @@ object Checkbox extends js.Object {
   var Group: TypeofCheckboxGroup = js.native
   var __ANT_CHECKBOX: Boolean = js.native
   var contextType: Context[CheckboxGroupContext | Null] = js.native
-  var defaultProps: AnonIndeterminate = js.native
+  var defaultProps: Indeterminate = js.native
 }
 

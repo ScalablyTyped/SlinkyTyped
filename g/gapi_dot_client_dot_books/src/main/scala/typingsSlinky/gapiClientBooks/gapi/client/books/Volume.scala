@@ -1,12 +1,12 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClientBooks.AnonAccessViewStatus
-import typingsSlinky.gapiClientBooks.AnonAcquiredTime
-import typingsSlinky.gapiClientBooks.AnonAllowAnonLogging
-import typingsSlinky.gapiClientBooks.AnonBuyLink
-import typingsSlinky.gapiClientBooks.AnonExplanation
-import typingsSlinky.gapiClientBooks.AnonLayers
-import typingsSlinky.gapiClientBooks.AnonTextSnippet
+import typingsSlinky.gapiClientBooks.anon.AccessViewStatus
+import typingsSlinky.gapiClientBooks.anon.AcquiredTime
+import typingsSlinky.gapiClientBooks.anon.AllowAnonLogging
+import typingsSlinky.gapiClientBooks.anon.BuyLink
+import typingsSlinky.gapiClientBooks.anon.Explanation
+import typingsSlinky.gapiClientBooks.anon.Layers
+import typingsSlinky.gapiClientBooks.anon.TextSnippet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait Volume extends js.Object {
     * Any information about a volume related to reading or obtaining that volume text. This information can depend on country (books may be public domain in
     * one country but not in another, e.g.).
     */
-  var accessInfo: js.UndefOr[AnonAccessViewStatus] = js.native
+  var accessInfo: js.UndefOr[AccessViewStatus] = js.native
   /** Opaque identifier for a specific version of a volume resource. (In LITE projection) */
   var etag: js.UndefOr[String] = js.native
   /** Unique identifier for a volume. (In LITE projection.) */
@@ -25,22 +25,22 @@ trait Volume extends js.Object {
   /** Resource type for a volume. (In LITE projection.) */
   var kind: js.UndefOr[String] = js.native
   /** What layers exist in this volume and high level information about them. */
-  var layerInfo: js.UndefOr[AnonLayers] = js.native
+  var layerInfo: js.UndefOr[Layers] = js.native
   /** Recommendation related information for this volume. */
-  var recommendedInfo: js.UndefOr[AnonExplanation] = js.native
+  var recommendedInfo: js.UndefOr[Explanation] = js.native
   /**
     * Any information about a volume related to the eBookstore and/or purchaseability. This information can depend on the country where the request
     * originates from (i.e. books may not be for sale in certain countries).
     */
-  var saleInfo: js.UndefOr[AnonBuyLink] = js.native
+  var saleInfo: js.UndefOr[BuyLink] = js.native
   /** Search result information related to this volume. */
-  var searchInfo: js.UndefOr[AnonTextSnippet] = js.native
+  var searchInfo: js.UndefOr[TextSnippet] = js.native
   /** URL to this resource. (In LITE projection.) */
   var selfLink: js.UndefOr[String] = js.native
   /** User specific information related to this volume. (e.g. page this user last read or whether they purchased this book) */
-  var userInfo: js.UndefOr[AnonAcquiredTime] = js.native
+  var userInfo: js.UndefOr[AcquiredTime] = js.native
   /** General volume information. */
-  var volumeInfo: js.UndefOr[AnonAllowAnonLogging] = js.native
+  var volumeInfo: js.UndefOr[AllowAnonLogging] = js.native
 }
 
 object Volume {
@@ -56,7 +56,7 @@ object Volume {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAccessInfo(value: AnonAccessViewStatus): Self = {
+    def withAccessInfo(value: AccessViewStatus): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("accessInfo")(value.asInstanceOf[js.Any])
         ret
@@ -104,7 +104,7 @@ object Volume {
         ret
     }
     @scala.inline
-    def withLayerInfo(value: AnonLayers): Self = {
+    def withLayerInfo(value: Layers): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("layerInfo")(value.asInstanceOf[js.Any])
         ret
@@ -116,7 +116,7 @@ object Volume {
         ret
     }
     @scala.inline
-    def withRecommendedInfo(value: AnonExplanation): Self = {
+    def withRecommendedInfo(value: Explanation): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("recommendedInfo")(value.asInstanceOf[js.Any])
         ret
@@ -128,7 +128,7 @@ object Volume {
         ret
     }
     @scala.inline
-    def withSaleInfo(value: AnonBuyLink): Self = {
+    def withSaleInfo(value: BuyLink): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("saleInfo")(value.asInstanceOf[js.Any])
         ret
@@ -140,7 +140,7 @@ object Volume {
         ret
     }
     @scala.inline
-    def withSearchInfo(value: AnonTextSnippet): Self = {
+    def withSearchInfo(value: TextSnippet): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("searchInfo")(value.asInstanceOf[js.Any])
         ret
@@ -164,7 +164,7 @@ object Volume {
         ret
     }
     @scala.inline
-    def withUserInfo(value: AnonAcquiredTime): Self = {
+    def withUserInfo(value: AcquiredTime): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("userInfo")(value.asInstanceOf[js.Any])
         ret
@@ -176,7 +176,7 @@ object Volume {
         ret
     }
     @scala.inline
-    def withVolumeInfo(value: AnonAllowAnonLogging): Self = {
+    def withVolumeInfo(value: AllowAnonLogging): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("volumeInfo")(value.asInstanceOf[js.Any])
         ret

@@ -7,7 +7,7 @@ import org.scalajs.dom.raw.FormData
 import org.scalajs.dom.raw.XMLHttpRequest
 import typingsSlinky.dropzone.dropzoneStrings.contain
 import typingsSlinky.dropzone.dropzoneStrings.crop
-import typingsSlinky.dropzone.mod._Global_.HTMLElement
+import typingsSlinky.dropzone.mod.global.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

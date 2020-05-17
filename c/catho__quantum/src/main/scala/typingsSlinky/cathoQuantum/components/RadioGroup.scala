@@ -3,8 +3,8 @@ package typingsSlinky.cathoQuantum.components
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonColorsSpacing
-import typingsSlinky.cathoQuantum.AnonDisabled
+import typingsSlinky.cathoQuantum.anon.ColorsSpacing
+import typingsSlinky.cathoQuantum.anon.Disabled
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.button
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.radio
 import typingsSlinky.cathoQuantum.radioGroupMod.RadioGroupProps
@@ -30,9 +30,9 @@ object RadioGroup {
     @scala.inline
     def onChange(value: ChangeEvent[HTMLInputElement] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def options(value: js.Array[AnonDisabled]): this.type = set("options", value.asInstanceOf[js.Any])
+    def options(value: js.Array[Disabled]): this.type = set("options", value.asInstanceOf[js.Any])
     @scala.inline
-    def theme(value: AnonColorsSpacing): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: ColorsSpacing): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
     def `type`(value: radio | button): this.type = set("type", value.asInstanceOf[js.Any])
     @scala.inline

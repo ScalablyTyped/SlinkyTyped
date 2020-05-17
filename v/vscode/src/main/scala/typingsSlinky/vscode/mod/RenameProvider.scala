@@ -1,6 +1,6 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonPlaceholder
+import typingsSlinky.vscode.anon.Placeholder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ trait RenameProvider extends js.Object {
       /* document */ TextDocument, 
       /* position */ Position, 
       /* token */ CancellationToken, 
-      ProviderResult[Range | AnonPlaceholder]
+      ProviderResult[Range | Placeholder]
     ]
   ] = js.native
   /**
@@ -64,7 +64,7 @@ object RenameProvider {
     }
     @scala.inline
     def withPrepareRename(
-      value: (/* document */ TextDocument, /* position */ Position, /* token */ CancellationToken) => ProviderResult[Range | AnonPlaceholder]
+      value: (/* document */ TextDocument, /* position */ Position, /* token */ CancellationToken) => ProviderResult[Range | Placeholder]
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("prepareRename")(js.Any.fromFunction3(value))

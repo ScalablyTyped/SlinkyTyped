@@ -1,6 +1,6 @@
 package typingsSlinky.wxJsSdkDt.wx
 
-import typingsSlinky.wxJsSdkDt.AnonLocalId
+import typingsSlinky.wxJsSdkDt.anon.LocalId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait DownLoadImageConfig extends WxBaseRequestConfig {
     * var localId = res.localId;  返回图片下载后的本地 ID
     */
   @JSName("success")
-  var success_DownLoadImageConfig: js.UndefOr[js.Function1[/* res */ AnonLocalId, Unit]] = js.native
+  var success_DownLoadImageConfig: js.UndefOr[js.Function1[/* res */ LocalId, Unit]] = js.native
 }
 
 object DownLoadImageConfig {
@@ -50,7 +50,7 @@ object DownLoadImageConfig {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonLocalId => Unit): Self = {
+    def withSuccess(value: /* res */ LocalId => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

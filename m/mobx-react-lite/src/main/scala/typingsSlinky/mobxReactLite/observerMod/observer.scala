@@ -1,7 +1,7 @@
 package typingsSlinky.mobxReactLite.observerMod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.mobxReactLite.IObserverOptionsforwardRe
+import typingsSlinky.mobxReactLite.anon.IObserverOptionsforwardRe
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.FunctionComponent
 import typingsSlinky.react.mod.PropsWithoutRef

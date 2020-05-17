@@ -1,6 +1,5 @@
 package typingsSlinky.meteor
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,8 +21,4 @@ trait ReactiveDict extends js.Object {
   def setDefault(key: String, value: EJSONableProperty): Unit = js.native
   def setDefault(`object`: EJSONable): Unit = js.native
 }
-
-@JSGlobal("ReactiveDict")
-@js.native
-object ReactiveDict extends TopLevel[ReactiveDictStatic]
 

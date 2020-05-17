@@ -36,30 +36,6 @@ object LoadingData {
         ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
         ret
     }
-    @scala.inline
-    def withElement(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutElement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withId(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
   }
   
 }

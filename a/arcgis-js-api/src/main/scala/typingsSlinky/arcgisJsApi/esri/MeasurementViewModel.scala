@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`direct-line`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`nautical-miles`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`square-feet`
@@ -83,8 +82,4 @@ trait MeasurementViewModel extends Accessor {
     */
   var view: MapView | SceneView = js.native
 }
-
-@JSGlobal("__esri.MeasurementViewModel")
-@js.native
-object MeasurementViewModel extends TopLevel[MeasurementViewModelConstructor]
 

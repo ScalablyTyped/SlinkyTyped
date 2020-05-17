@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 package object mod {
   type ErrorCallback = js.Function2[/* err */ js.Error, /* result */ js.Any, scala.Unit]
   type Logger = js.Function2[/* message */ js.UndefOr[js.Any], /* repeated */ js.Any, scala.Unit]
-  type OTerm = typingsSlinky.rdfJs.mod.Term | java.lang.String | scala.Null
   type ParseCallback[Q /* <: typingsSlinky.n3.mod.BaseQuad */] = js.Function3[
     /* error */ js.Error, 
     /* quad */ Q, 

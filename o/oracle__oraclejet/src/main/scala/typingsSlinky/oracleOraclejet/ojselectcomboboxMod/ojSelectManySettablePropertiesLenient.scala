@@ -2,13 +2,13 @@ package typingsSlinky.oracleOraclejet.ojselectcomboboxMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
-import typingsSlinky.oracleOraclejet.AnonChildrenLabel
-import typingsSlinky.oracleOraclejet.AnonClass
-import typingsSlinky.oracleOraclejet.AnonConverterHint
-import typingsSlinky.oracleOraclejet.AnonDefinition
-import typingsSlinky.oracleOraclejet.AnonInstruction
-import typingsSlinky.oracleOraclejet.AnonLabelValue
-import typingsSlinky.oracleOraclejet.AnonMoreMatchesFound
+import typingsSlinky.oracleOraclejet.anon.ChildrenLabel
+import typingsSlinky.oracleOraclejet.anon.Class
+import typingsSlinky.oracleOraclejet.anon.ConverterHint
+import typingsSlinky.oracleOraclejet.anon.Definition
+import typingsSlinky.oracleOraclejet.anon.Instruction
+import typingsSlinky.oracleOraclejet.anon.LabelValue
+import typingsSlinky.oracleOraclejet.anon.MoreMatchesFound
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojmessagingMod.^
 import typingsSlinky.oracleOraclejet.ojselectcomboboxMod.ojSelect.OptionContext
@@ -28,9 +28,9 @@ trait ojSelectManySettablePropertiesLenient[K, D]
   extends /* key */ StringDictionary[js.Any] {
   var describedBy: js.UndefOr[String] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
-  var displayOptions: js.UndefOr[AnonConverterHint] = js.native
-  var help: js.UndefOr[AnonInstruction] = js.native
-  var helpHints: js.UndefOr[AnonDefinition] = js.native
+  var displayOptions: js.UndefOr[ConverterHint] = js.native
+  var help: js.UndefOr[Instruction] = js.native
+  var helpHints: js.UndefOr[Definition] = js.native
   var labelHint: js.UndefOr[String] = js.native
   var messagesCustom: js.UndefOr[js.Array[^]] = js.native
   var minimumResultsForSearch: js.UndefOr[Double] = js.native
@@ -40,18 +40,18 @@ trait ojSelectManySettablePropertiesLenient[K, D]
       typingsSlinky.oracleOraclejet.ojselectcomboboxMod.ojSelect.Option | typingsSlinky.oracleOraclejet.ojselectcomboboxMod.ojSelect.Optgroup
     ]) | (DataProvider[K, D])
   ] = js.native
-  var optionsKeys: js.UndefOr[AnonChildrenLabel] = js.native
-  var pickerAttributes: js.UndefOr[AnonClass] = js.native
+  var optionsKeys: js.UndefOr[ChildrenLabel] = js.native
+  var pickerAttributes: js.UndefOr[Class] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var readOnly: js.UndefOr[Boolean] = js.native
   var renderMode: js.UndefOr[jet | native] = js.native
   var required: js.UndefOr[Boolean] = js.native
-  var translations: js.UndefOr[AnonMoreMatchesFound] = js.native
+  var translations: js.UndefOr[MoreMatchesFound] = js.native
   var valid: js.UndefOr[
     typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valid | pending | invalidHidden | invalidShown
   ] = js.native
   var value: js.UndefOr[js.Array[_]] = js.native
-  var valueOptions: js.UndefOr[js.Array[AnonLabelValue]] = js.native
+  var valueOptions: js.UndefOr[js.Array[LabelValue]] = js.native
 }
 
 object ojSelectManySettablePropertiesLenient {
@@ -91,7 +91,7 @@ object ojSelectManySettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withDisplayOptions(value: AnonConverterHint): Self[K, D] = {
+    def withDisplayOptions(value: ConverterHint): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("displayOptions")(value.asInstanceOf[js.Any])
         ret
@@ -103,7 +103,7 @@ object ojSelectManySettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withHelp(value: AnonInstruction): Self[K, D] = {
+    def withHelp(value: Instruction): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
         ret
@@ -115,7 +115,7 @@ object ojSelectManySettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withHelpHints(value: AnonDefinition): Self[K, D] = {
+    def withHelpHints(value: Definition): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("helpHints")(value.asInstanceOf[js.Any])
         ret
@@ -191,7 +191,7 @@ object ojSelectManySettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withOptionsKeys(value: AnonChildrenLabel): Self[K, D] = {
+    def withOptionsKeys(value: ChildrenLabel): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("optionsKeys")(value.asInstanceOf[js.Any])
         ret
@@ -203,7 +203,7 @@ object ojSelectManySettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withPickerAttributes(value: AnonClass): Self[K, D] = {
+    def withPickerAttributes(value: Class): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pickerAttributes")(value.asInstanceOf[js.Any])
         ret
@@ -263,7 +263,7 @@ object ojSelectManySettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonMoreMatchesFound): Self[K, D] = {
+    def withTranslations(value: MoreMatchesFound): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret
@@ -299,7 +299,7 @@ object ojSelectManySettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withValueOptions(value: js.Array[AnonLabelValue]): Self[K, D] = {
+    def withValueOptions(value: js.Array[LabelValue]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("valueOptions")(value.asInstanceOf[js.Any])
         ret

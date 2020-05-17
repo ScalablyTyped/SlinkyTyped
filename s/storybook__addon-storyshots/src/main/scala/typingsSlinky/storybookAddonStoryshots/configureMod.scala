@@ -1,5 +1,6 @@
 package typingsSlinky.storybookAddonStoryshots
 
+import typingsSlinky.storybookAddonStoryshots.anon.storybookClientApiStorysh
 import typingsSlinky.storybookAddonStoryshots.storybookAddonStoryshotsBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`

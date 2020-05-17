@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeNavigation.optionsMod
 
-import typingsSlinky.reactNativeNavigation.AnonName
+import typingsSlinky.reactNativeNavigation.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +24,7 @@ trait OptionsTopBarBackground extends js.Object {
   /**
     * Set a custom component for the Top Bar background
     */
-  var component: js.UndefOr[AnonName] = js.native
+  var component: js.UndefOr[Name] = js.native
   /**
     * Allows the NavBar to be translucent (blurred)
     * #### (iOS specific)
@@ -81,7 +81,7 @@ object OptionsTopBarBackground {
         ret
     }
     @scala.inline
-    def withComponent(value: AnonName): Self = {
+    def withComponent(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
         ret

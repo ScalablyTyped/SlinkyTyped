@@ -1,0 +1,14 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Provides client functionality for Html Editor dialogs operated with its elements.
+  */
+@JSGlobal("ASPxClientHtmlEditorEditElementDialog")
+@js.native
+class ASPxClientHtmlEditorEditElementDialog ()
+  extends typingsSlinky.devexpressWeb.ASPxClientHtmlEditorEditElementDialog
+

@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a base for client-side objects which allow single-line text input.
   */
-@JSGlobal("ASPxClientTextEdit")
 @js.native
-class ASPxClientTextEdit () extends ASPxClientEdit {
+trait ASPxClientTextEdit extends ASPxClientEdit {
   /**
     * Occurs on the client-side when an end-user presses a key while the editor has focus.
     */
@@ -59,5 +58,133 @@ class ASPxClientTextEdit () extends ASPxClientEdit {
     * @param text A string value specifying the text to be displayed within the editor.
     */
   def SetText(text: String): Unit = js.native
+}
+
+object ASPxClientTextEdit {
+  @scala.inline
+  def apply(
+    AdjustControl: () => Unit,
+    Focus: () => Unit,
+    GetCaption: () => String,
+    GetCaretPosition: () => Double,
+    GetClientVisible: () => Boolean,
+    GetEnabled: () => Boolean,
+    GetErrorText: () => String,
+    GetHeight: () => Double,
+    GetInputElement: () => js.Any,
+    GetIsValid: () => Boolean,
+    GetMainElement: () => js.Any,
+    GetParentControl: () => js.Any,
+    GetReadOnly: () => Boolean,
+    GetText: () => String,
+    GetValue: () => js.Any,
+    GetVisible: () => Boolean,
+    GetWidth: () => Double,
+    GotFocus: ASPxClientEvent[ASPxClientEventHandler[ASPxClientEdit]],
+    InCallback: () => Boolean,
+    Init: ASPxClientEvent[ASPxClientEventHandler[ASPxClientControlBase]],
+    KeyDown: ASPxClientEvent[ASPxClientEditKeyEventHandler[ASPxClientTextEdit]],
+    KeyPress: ASPxClientEvent[ASPxClientEditKeyEventHandler[ASPxClientTextEdit]],
+    KeyUp: ASPxClientEvent[ASPxClientEditKeyEventHandler[ASPxClientTextEdit]],
+    LostFocus: ASPxClientEvent[ASPxClientEventHandler[ASPxClientEdit]],
+    SelectAll: () => Unit,
+    SendMessageToAssistiveTechnology: String => Unit,
+    SetCaption: String => Unit,
+    SetCaretPosition: Double => Unit,
+    SetClientVisible: Boolean => Unit,
+    SetEnabled: Boolean => Unit,
+    SetErrorText: String => Unit,
+    SetHeight: Double => Unit,
+    SetIsValid: Boolean => Unit,
+    SetReadOnly: Boolean => Unit,
+    SetSelection: (Double, Double, Boolean) => Unit,
+    SetText: String => Unit,
+    SetValue: js.Any => Unit,
+    SetVisible: Boolean => Unit,
+    SetWidth: Double => Unit,
+    TextChanged: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientTextEdit]],
+    UserInput: ASPxClientEvent[ASPxClientEventHandler[ASPxClientTextEdit]],
+    Validate: () => Unit,
+    Validation: ASPxClientEvent[ASPxClientEditValidationEventHandler[ASPxClientEdit]],
+    ValueChanged: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientEdit]],
+    name: String
+  ): ASPxClientTextEdit = {
+    val __obj = js.Dynamic.literal(AdjustControl = js.Any.fromFunction0(AdjustControl), Focus = js.Any.fromFunction0(Focus), GetCaption = js.Any.fromFunction0(GetCaption), GetCaretPosition = js.Any.fromFunction0(GetCaretPosition), GetClientVisible = js.Any.fromFunction0(GetClientVisible), GetEnabled = js.Any.fromFunction0(GetEnabled), GetErrorText = js.Any.fromFunction0(GetErrorText), GetHeight = js.Any.fromFunction0(GetHeight), GetInputElement = js.Any.fromFunction0(GetInputElement), GetIsValid = js.Any.fromFunction0(GetIsValid), GetMainElement = js.Any.fromFunction0(GetMainElement), GetParentControl = js.Any.fromFunction0(GetParentControl), GetReadOnly = js.Any.fromFunction0(GetReadOnly), GetText = js.Any.fromFunction0(GetText), GetValue = js.Any.fromFunction0(GetValue), GetVisible = js.Any.fromFunction0(GetVisible), GetWidth = js.Any.fromFunction0(GetWidth), GotFocus = GotFocus.asInstanceOf[js.Any], InCallback = js.Any.fromFunction0(InCallback), Init = Init.asInstanceOf[js.Any], KeyDown = KeyDown.asInstanceOf[js.Any], KeyPress = KeyPress.asInstanceOf[js.Any], KeyUp = KeyUp.asInstanceOf[js.Any], LostFocus = LostFocus.asInstanceOf[js.Any], SelectAll = js.Any.fromFunction0(SelectAll), SendMessageToAssistiveTechnology = js.Any.fromFunction1(SendMessageToAssistiveTechnology), SetCaption = js.Any.fromFunction1(SetCaption), SetCaretPosition = js.Any.fromFunction1(SetCaretPosition), SetClientVisible = js.Any.fromFunction1(SetClientVisible), SetEnabled = js.Any.fromFunction1(SetEnabled), SetErrorText = js.Any.fromFunction1(SetErrorText), SetHeight = js.Any.fromFunction1(SetHeight), SetIsValid = js.Any.fromFunction1(SetIsValid), SetReadOnly = js.Any.fromFunction1(SetReadOnly), SetSelection = js.Any.fromFunction3(SetSelection), SetText = js.Any.fromFunction1(SetText), SetValue = js.Any.fromFunction1(SetValue), SetVisible = js.Any.fromFunction1(SetVisible), SetWidth = js.Any.fromFunction1(SetWidth), TextChanged = TextChanged.asInstanceOf[js.Any], UserInput = UserInput.asInstanceOf[js.Any], Validate = js.Any.fromFunction0(Validate), Validation = Validation.asInstanceOf[js.Any], ValueChanged = ValueChanged.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientTextEdit]
+  }
+  @scala.inline
+  implicit class ASPxClientTextEditOps[Self <: ASPxClientTextEdit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetCaretPosition(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetCaretPosition")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetText(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetText")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withKeyDown(value: ASPxClientEvent[ASPxClientEditKeyEventHandler[ASPxClientTextEdit]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyDown")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeyPress(value: ASPxClientEvent[ASPxClientEditKeyEventHandler[ASPxClientTextEdit]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyPress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeyUp(value: ASPxClientEvent[ASPxClientEditKeyEventHandler[ASPxClientTextEdit]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("KeyUp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSelectAll(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SelectAll")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetCaretPosition(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetCaretPosition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetSelection(value: (Double, Double, Boolean) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetSelection")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withSetText(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTextChanged(value: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientTextEdit]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TextChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserInput(value: ASPxClientEvent[ASPxClientEventHandler[ASPxClientTextEdit]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserInput")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

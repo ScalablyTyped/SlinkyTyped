@@ -1,6 +1,6 @@
 package typingsSlinky.rollup.mod
 
-import typingsSlinky.rollup.AnonDefine
+import typingsSlinky.rollup.anon.Define
 import typingsSlinky.rollup.rollupStrings.`inline`
 import typingsSlinky.rollup.rollupStrings.auto
 import typingsSlinky.rollup.rollupStrings.default
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait OutputOptions extends js.Object {
-  var amd: js.UndefOr[AnonDefine] = js.native
+  var amd: js.UndefOr[Define] = js.native
   var assetFileNames: js.UndefOr[String] = js.native
   var banner: js.UndefOr[String | (js.Function0[String | js.Promise[String]])] = js.native
   var chunkFileNames: js.UndefOr[String] = js.native
@@ -65,7 +65,7 @@ object OutputOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAmd(value: AnonDefine): Self = {
+    def withAmd(value: Define): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("amd")(value.asInstanceOf[js.Any])
         ret

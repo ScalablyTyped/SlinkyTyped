@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs
 
+import typingsSlinky.babylonjs.anon.Partialcapacitynumberrand
 import typingsSlinky.babylonjs.baseParticleSystemMod.BaseParticleSystem
 import typingsSlinky.babylonjs.gradientsMod.Color3Gradient
 import typingsSlinky.babylonjs.gradientsMod.IValueGradient

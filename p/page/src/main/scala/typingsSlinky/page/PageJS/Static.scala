@@ -1,6 +1,6 @@
 package typingsSlinky.page.PageJS
 
-import typingsSlinky.page.PartialOptions
+import typingsSlinky.page.anon.PartialOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

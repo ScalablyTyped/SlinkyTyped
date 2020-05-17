@@ -1,19 +1,19 @@
 package typingsSlinky.handsontable.mod.Handsontable.plugins.FiltersPlugin
 
-import typingsSlinky.handsontable.AnonCol
+import typingsSlinky.handsontable.anon.Col
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CellLikeData extends js.Object {
-  var meta: AnonCol = js.native
+  var meta: Col = js.native
   var value: String = js.native
 }
 
 object CellLikeData {
   @scala.inline
-  def apply(meta: AnonCol, value: String): CellLikeData = {
+  def apply(meta: Col, value: String): CellLikeData = {
     val __obj = js.Dynamic.literal(meta = meta.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellLikeData]
   }
@@ -24,7 +24,7 @@ object CellLikeData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMeta(value: AnonCol): Self = {
+    def withMeta(value: Col): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
         ret

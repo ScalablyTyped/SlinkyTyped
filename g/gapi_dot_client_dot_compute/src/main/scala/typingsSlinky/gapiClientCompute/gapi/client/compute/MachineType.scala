@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientCompute.gapi.client.compute
 
-import typingsSlinky.gapiClientCompute.AnonDiskGb
+import typingsSlinky.gapiClientCompute.anon.DiskGb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +32,7 @@ trait MachineType extends js.Object {
   /** [Output Only] Name of the resource. */
   var name: js.UndefOr[String] = js.native
   /** [Output Only] List of extended scratch disks assigned to the instance. */
-  var scratchDisks: js.UndefOr[js.Array[AnonDiskGb]] = js.native
+  var scratchDisks: js.UndefOr[js.Array[DiskGb]] = js.native
   /** [Output Only] Server-defined URL for the resource. */
   var selfLink: js.UndefOr[String] = js.native
   /** [Output Only] The name of the zone where the machine type resides, such as us-central1-a. */
@@ -196,7 +196,7 @@ object MachineType {
         ret
     }
     @scala.inline
-    def withScratchDisks(value: js.Array[AnonDiskGb]): Self = {
+    def withScratchDisks(value: js.Array[DiskGb]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scratchDisks")(value.asInstanceOf[js.Any])
         ret

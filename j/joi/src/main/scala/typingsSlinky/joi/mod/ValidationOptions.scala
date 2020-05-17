@@ -1,6 +1,6 @@
 package typingsSlinky.joi.mod
 
-import typingsSlinky.joi.AnonArrays
+import typingsSlinky.joi.anon.Arrays
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,7 +47,7 @@ trait ValidationOptions extends js.Object {
     * - when an object:
     *      - objects - set to true to remove unknown keys from objects
     */
-  var stripUnknown: js.UndefOr[Boolean | AnonArrays] = js.native
+  var stripUnknown: js.UndefOr[Boolean | Arrays] = js.native
 }
 
 object ValidationOptions {
@@ -161,7 +161,7 @@ object ValidationOptions {
         ret
     }
     @scala.inline
-    def withStripUnknown(value: Boolean | AnonArrays): Self = {
+    def withStripUnknown(value: Boolean | Arrays): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stripUnknown")(value.asInstanceOf[js.Any])
         ret

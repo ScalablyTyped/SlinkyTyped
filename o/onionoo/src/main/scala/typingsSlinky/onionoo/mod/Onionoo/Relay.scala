@@ -1,6 +1,6 @@
 package typingsSlinky.onionoo.mod.Onionoo
 
-import typingsSlinky.onionoo.AnonAccept
+import typingsSlinky.onionoo.anon.Accept
 import typingsSlinky.onionoo.onionooStrings.`new in series`
 import typingsSlinky.onionoo.onionooStrings.experimental
 import typingsSlinky.onionoo.onionooStrings.obsolete
@@ -109,7 +109,7 @@ trait Relay extends js.Object {
     * `exit_policy` field in a rare edge case: this happens when the relay changes its exit policy after
     * the directory authorities summarized the previous exit policy.
     */
-  var exit_policy_summary: js.UndefOr[AnonAccept] = js.native
+  var exit_policy_summary: js.UndefOr[Accept] = js.native
   /**
     * Summary version of the relay's IPv6 exit policy containing a dictionary with either an `accept` or a `reject`
     * element. If there is an `accept` (`reject`) element, the relay accepts (rejects) all TCP ports or port ranges
@@ -118,7 +118,7 @@ trait Relay extends js.Object {
     * this happens when the relay changes its exit policy after the directory authorities summarized the previous
     * exit policy.
     */
-  var exit_policy_v6_summary: js.UndefOr[AnonAccept] = js.native
+  var exit_policy_v6_summary: js.UndefOr[Accept] = js.native
   /**
     * Probability of this relay to be selected for the exit position. This probability is calculated based on
     * consensus weights, relay flags, and bandwidth weights in the consensus. Path selection depends on more
@@ -539,7 +539,7 @@ object Relay {
         ret
     }
     @scala.inline
-    def withExit_policy_summary(value: AnonAccept): Self = {
+    def withExit_policy_summary(value: Accept): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("exit_policy_summary")(value.asInstanceOf[js.Any])
         ret
@@ -551,7 +551,7 @@ object Relay {
         ret
     }
     @scala.inline
-    def withExit_policy_v6_summary(value: AnonAccept): Self = {
+    def withExit_policy_v6_summary(value: Accept): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("exit_policy_v6_summary")(value.asInstanceOf[js.Any])
         ret

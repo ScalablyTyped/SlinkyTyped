@@ -1,9 +1,8 @@
 package typingsSlinky.stripeV3.stripe
 
-import typingsSlinky.stripeV3.AnonCard
-import typingsSlinky.stripeV3.AnonCountry
-import typingsSlinky.stripeV3.AnonIban
-import typingsSlinky.stripeV3.AnonReturnurl
+import typingsSlinky.stripeV3.anon.Country
+import typingsSlinky.stripeV3.anon.Iban
+import typingsSlinky.stripeV3.anon.Returnurl
 import typingsSlinky.stripeV3.stripeV3Strings.code_verification
 import typingsSlinky.stripeV3.stripeV3Strings.none
 import typingsSlinky.stripeV3.stripeV3Strings.receiver
@@ -22,11 +21,11 @@ trait SourceOptions extends js.Object {
   var mandate: js.UndefOr[SourceMandate] = js.native
   var metadata: js.UndefOr[js.Object] = js.native
   var owner: js.UndefOr[OwnerInfo] = js.native
-  var redirect: js.UndefOr[AnonReturnurl] = js.native
-  var sepa_debit: js.UndefOr[AnonIban] = js.native
-  var sofort: js.UndefOr[AnonCountry] = js.native
+  var redirect: js.UndefOr[Returnurl] = js.native
+  var sepa_debit: js.UndefOr[Iban] = js.native
+  var sofort: js.UndefOr[Country] = js.native
   var statement_descriptor: js.UndefOr[String] = js.native
-  var three_d_secure: js.UndefOr[AnonCard] = js.native
+  var three_d_secure: js.UndefOr[typingsSlinky.stripeV3.anon.Card] = js.native
   var token: js.UndefOr[String] = js.native
   var `type`: String = js.native
   var usage: js.UndefOr[reusable | single_use] = js.native
@@ -124,7 +123,7 @@ object SourceOptions {
         ret
     }
     @scala.inline
-    def withRedirect(value: AnonReturnurl): Self = {
+    def withRedirect(value: Returnurl): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("redirect")(value.asInstanceOf[js.Any])
         ret
@@ -136,7 +135,7 @@ object SourceOptions {
         ret
     }
     @scala.inline
-    def withSepa_debit(value: AnonIban): Self = {
+    def withSepa_debit(value: Iban): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sepa_debit")(value.asInstanceOf[js.Any])
         ret
@@ -148,7 +147,7 @@ object SourceOptions {
         ret
     }
     @scala.inline
-    def withSofort(value: AnonCountry): Self = {
+    def withSofort(value: Country): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sofort")(value.asInstanceOf[js.Any])
         ret
@@ -172,7 +171,7 @@ object SourceOptions {
         ret
     }
     @scala.inline
-    def withThree_d_secure(value: AnonCard): Self = {
+    def withThree_d_secure(value: typingsSlinky.stripeV3.anon.Card): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("three_d_secure")(value.asInstanceOf[js.Any])
         ret

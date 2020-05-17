@@ -2,7 +2,7 @@ package typingsSlinky.reduxOrm.modelMod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable3
-import typingsSlinky.reduxOrm.TypeofQuerySet
+import typingsSlinky.reduxOrm.anon.TypeofQuerySet
 import typingsSlinky.reduxOrm.databaseMod.QueryClause
 import typingsSlinky.reduxOrm.fieldsMod.AttributeWithDefault
 import typingsSlinky.reduxOrm.fieldsMod.FieldSpecMap

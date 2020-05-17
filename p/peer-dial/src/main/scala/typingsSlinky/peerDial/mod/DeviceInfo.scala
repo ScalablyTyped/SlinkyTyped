@@ -1,6 +1,6 @@
 package typingsSlinky.peerDial.mod
 
-import typingsSlinky.peerDial.AnonIcon
+import typingsSlinky.peerDial.anon.Icon
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait DeviceInfo extends js.Object {
   var descriptionUrl: String = js.native
   var deviceType: String = js.native
   var friendlyName: String = js.native
-  var iconList: js.Array[js.Object] | AnonIcon = js.native
+  var iconList: js.Array[js.Object] | Icon = js.native
   var manufacturer: String = js.native
   var modelName: String = js.native
 }
@@ -25,7 +25,7 @@ object DeviceInfo {
     descriptionUrl: String,
     deviceType: String,
     friendlyName: String,
-    iconList: js.Array[js.Object] | AnonIcon,
+    iconList: js.Array[js.Object] | Icon,
     manufacturer: String,
     modelName: String
   ): DeviceInfo = {
@@ -69,7 +69,7 @@ object DeviceInfo {
         ret
     }
     @scala.inline
-    def withIconList(value: js.Array[js.Object] | AnonIcon): Self = {
+    def withIconList(value: js.Array[js.Object] | Icon): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("iconList")(value.asInstanceOf[js.Any])
         ret

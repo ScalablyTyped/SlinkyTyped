@@ -1,6 +1,6 @@
 package typingsSlinky.sequelize.mod
 
-import typingsSlinky.sequelize.AnonExclude
+import typingsSlinky.sequelize.anon.Exclude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +24,7 @@ trait IncludeOptions extends js.Object {
   /**
     * A list of attributes to select from the child model
     */
-  var attributes: js.UndefOr[FindOptionsAttributesArray | AnonExclude] = js.native
+  var attributes: js.UndefOr[FindOptionsAttributesArray | Exclude] = js.native
   /**
     * Load further nested related models
     */
@@ -111,7 +111,7 @@ object IncludeOptions {
         ret
     }
     @scala.inline
-    def withAttributes(value: FindOptionsAttributesArray | AnonExclude): Self = {
+    def withAttributes(value: FindOptionsAttributesArray | Exclude): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
         ret

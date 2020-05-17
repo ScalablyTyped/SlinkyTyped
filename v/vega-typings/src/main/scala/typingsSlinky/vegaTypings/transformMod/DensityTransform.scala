@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DensityTransform extends _Transforms {
+trait DensityTransform extends Transforms {
   var as: js.UndefOr[(Vector2[String | SignalRef]) | SignalRef] = js.native
   var distribution: js.UndefOr[Distribution | SignalRef] = js.native
   var extent: js.UndefOr[(Vector2[Double | SignalRef]) | SignalRef] = js.native

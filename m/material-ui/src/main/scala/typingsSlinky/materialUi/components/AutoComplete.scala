@@ -9,14 +9,13 @@ import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.materialUi.AnonText
 import typingsSlinky.materialUi.MaterialUI.AutoCompleteProps
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.origin
+import typingsSlinky.materialUi.anon.Text
 import typingsSlinky.materialUi.autoCompleteMod.default
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,7 +42,7 @@ object AutoComplete {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def dataSourceConfig(value: AnonText): this.type = set("dataSourceConfig", value.asInstanceOf[js.Any])
+    def dataSourceConfig(value: Text): this.type = set("dataSourceConfig", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultValue(value: String | Double): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -107,7 +106,9 @@ object AutoComplete {
     @scala.inline
     def onBlur(value: SyntheticFocusEvent[js.Object] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: (SyntheticEvent[EventTarget with js.Object, Event_], /* newValue */ String) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    def onChange(
+      value: (SyntheticEvent[EventTarget with js.Object, org.scalajs.dom.raw.Event], /* newValue */ String) => Unit
+    ): this.type = set("onChange", js.Any.fromFunction2(value))
     @scala.inline
     def onFocus(value: SyntheticFocusEvent[js.Object] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline

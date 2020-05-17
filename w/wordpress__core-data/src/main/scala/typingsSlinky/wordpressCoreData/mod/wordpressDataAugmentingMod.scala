@@ -1,7 +1,7 @@
 package typingsSlinky.wordpressCoreData.mod
 
-import typingsSlinky.wordpressCoreData.TypeofimportedActions
-import typingsSlinky.wordpressCoreData.TypeofimportedSelectors
+import typingsSlinky.wordpressCoreData.anon.TypeofimportedActions
+import typingsSlinky.wordpressCoreData.anon.TypeofimportedSelectors
 import typingsSlinky.wordpressCoreData.wordpressCoreDataStrings.core
 import scala.scalajs.js
 import scala.scalajs.js.`|`

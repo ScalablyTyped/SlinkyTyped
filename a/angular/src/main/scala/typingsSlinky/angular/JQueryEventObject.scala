@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.std.Event_ because Already inherited
+- typingsSlinky.std.Event because Already inherited
 - typingsSlinky.angular.BaseJQueryEventObject because Already inherited
-- typingsSlinky.std.Event_ because Already inherited
+- typingsSlinky.std.Event because Already inherited
 - typingsSlinky.angular.JQueryInputEventObject because Already inherited
 - typingsSlinky.angular.BaseJQueryEventObject because Already inherited
 - typingsSlinky.angular.JQueryKeyEventObject because var conflicts: altKey, cancelBubble, ctrlKey, currentTarget, data, delegateTarget, metaKey, namespace, originalEvent, pageX, pageY, relatedTarget, result, returnValue, shiftKey, target, which. Inlined char, charCode, key, keyCode

@@ -1,7 +1,7 @@
 package typingsSlinky.wegameApi.wx.types
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.wegameApi.AnonHeader
+import typingsSlinky.wegameApi.anon.Header
 import typingsSlinky.wegameApi.wegameApiStrings.arraybuffer
 import typingsSlinky.wegameApi.wegameApiStrings.json
 import scala.scalajs.js
@@ -31,7 +31,7 @@ trait RequestParams extends js.Object {
   /**
     * res.data usually can be string or ArrayBuffer
     */
-  var success: js.UndefOr[js.Function1[/* res */ AnonHeader, Unit]] = js.native
+  var success: js.UndefOr[js.Function1[/* res */ Header, Unit]] = js.native
   /**
     * 开发者服务器接口地址
     */
@@ -129,7 +129,7 @@ object RequestParams {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonHeader => Unit): Self = {
+    def withSuccess(value: /* res */ Header => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

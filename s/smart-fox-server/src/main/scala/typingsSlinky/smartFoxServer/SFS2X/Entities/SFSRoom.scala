@@ -6,17 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("SFS2X.Entities.SFSRoom")
 @js.native
-class SFSRoom protected () extends js.Object {
-  /**
-    * Creates a new SFSRoom instance.
-    * @param {number} id      The Room id.
-    * @param {string} name    The Room name.
-    * @param {string} [groupId="default"] The id of the Group to which the Room belongs.
-    */
-  def this(id: Double, name: String) = this()
-  def this(id: Double, name: String, groupId: String) = this()
+trait SFSRoom extends js.Object {
   /** @type {string} Returns the Room Group name. */
   var groupId: String = js.native
   /** @type {number} Indicates the id of this Room. */
@@ -107,5 +98,183 @@ class SFSRoom protected () extends js.Object {
     * @return {Variables.SFSRoomVariable[]} Returns: The list of SFSRoomVariable objects associated with this Room.
     */
   def getVariables(): js.Array[SFSRoomVariable] = js.native
+}
+
+object SFSRoom {
+  @scala.inline
+  def apply(
+    containsUser: SFSUser => Boolean,
+    containsVariable: String => Boolean,
+    getCapacity: () => Double,
+    getPlayerList: () => js.Array[SFSUser],
+    getRoomManager: () => RoomManager,
+    getSpectatorCount: () => Double,
+    getSpectatorList: () => js.Array[SFSUser],
+    getUserById: Double => SFSUser,
+    getUserByName: String => SFSUser,
+    getUserCount: () => Double,
+    getUserList: () => js.Array[SFSUser],
+    getVariable: String => SFSRoomVariable,
+    getVariables: () => js.Array[SFSRoomVariable],
+    groupId: String,
+    id: Double,
+    isGame: Boolean,
+    isHidden: Boolean,
+    isJoined: Boolean,
+    isPasswordProtected: Boolean,
+    maxSpectators: Double,
+    maxUsers: Double,
+    name: String,
+    properties: js.Object
+  ): SFSRoom = {
+    val __obj = js.Dynamic.literal(containsUser = js.Any.fromFunction1(containsUser), containsVariable = js.Any.fromFunction1(containsVariable), getCapacity = js.Any.fromFunction0(getCapacity), getPlayerList = js.Any.fromFunction0(getPlayerList), getRoomManager = js.Any.fromFunction0(getRoomManager), getSpectatorCount = js.Any.fromFunction0(getSpectatorCount), getSpectatorList = js.Any.fromFunction0(getSpectatorList), getUserById = js.Any.fromFunction1(getUserById), getUserByName = js.Any.fromFunction1(getUserByName), getUserCount = js.Any.fromFunction0(getUserCount), getUserList = js.Any.fromFunction0(getUserList), getVariable = js.Any.fromFunction1(getVariable), getVariables = js.Any.fromFunction0(getVariables), groupId = groupId.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isGame = isGame.asInstanceOf[js.Any], isHidden = isHidden.asInstanceOf[js.Any], isJoined = isJoined.asInstanceOf[js.Any], isPasswordProtected = isPasswordProtected.asInstanceOf[js.Any], maxSpectators = maxSpectators.asInstanceOf[js.Any], maxUsers = maxUsers.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SFSRoom]
+  }
+  @scala.inline
+  implicit class SFSRoomOps[Self <: SFSRoom] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainsUser(value: SFSUser => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containsUser")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withContainsVariable(value: String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containsVariable")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetCapacity(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCapacity")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPlayerList(value: () => js.Array[SFSUser]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPlayerList")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRoomManager(value: () => RoomManager): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRoomManager")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSpectatorCount(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSpectatorCount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSpectatorList(value: () => js.Array[SFSUser]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSpectatorList")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetUserById(value: Double => SFSUser): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getUserById")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetUserByName(value: String => SFSUser): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getUserByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetUserCount(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getUserCount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetUserList(value: () => js.Array[SFSUser]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getUserList")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetVariable(value: String => SFSRoomVariable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getVariable")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetVariables(value: () => js.Array[SFSRoomVariable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getVariables")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGroupId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsGame(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isGame")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsHidden(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isHidden")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsJoined(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isJoined")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsPasswordProtected(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPasswordProtected")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxSpectators(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxSpectators")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxUsers(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxUsers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProperties(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

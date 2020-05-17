@@ -1,12 +1,12 @@
 package typingsSlinky.flickity.mod
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.NodeList
 import org.scalajs.dom.raw.Touch
-import typingsSlinky.flickity.AnonX
-import typingsSlinky.flickity.mod._Global_.JQuery
-import typingsSlinky.std.Event_
+import typingsSlinky.flickity.anon.X
+import typingsSlinky.flickity.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -91,7 +91,7 @@ trait Flickity extends js.Object {
     */
   def off(
     eventname: FlickityEvents,
-    callback: js.Function2[js.UndefOr[Event_], js.UndefOr[Element | Touch], _]
+    callback: js.Function2[js.UndefOr[Event], js.UndefOr[Element | Touch], _]
   ): Unit = js.native
   /**
     * Remove event listener
@@ -101,7 +101,7 @@ trait Flickity extends js.Object {
   def off(
     eventname: FlickityEvents,
     callback: js.Function3[
-      /* event */ js.UndefOr[Event_], 
+      /* event */ js.UndefOr[Event], 
       /* pointer */ js.UndefOr[Element | Touch], 
       /* moveVector */ js.UndefOr[js.Object], 
       _
@@ -115,7 +115,7 @@ trait Flickity extends js.Object {
   def off(
     eventname: FlickityEvents,
     callback: js.Function4[
-      /* event */ js.UndefOr[Event_], 
+      /* event */ js.UndefOr[Event], 
       /* pointer */ js.UndefOr[Element | Touch], 
       /* cellElement */ js.UndefOr[Element], 
       /* cellIndex */ js.UndefOr[Double], 
@@ -135,7 +135,7 @@ trait Flickity extends js.Object {
     */
   def on(
     eventname: FlickityEvents,
-    callback: js.Function2[js.UndefOr[Event_], js.UndefOr[Element | Touch], _]
+    callback: js.Function2[js.UndefOr[Event], js.UndefOr[Element | Touch], _]
   ): Unit = js.native
   /**
     * bind event listener
@@ -145,9 +145,9 @@ trait Flickity extends js.Object {
   def on(
     eventname: FlickityEvents,
     callback: js.Function3[
-      /* event */ js.UndefOr[Event_], 
+      /* event */ js.UndefOr[Event], 
       /* pointer */ js.UndefOr[Element | Touch], 
-      /* moveVector */ js.UndefOr[AnonX], 
+      /* moveVector */ js.UndefOr[X], 
       _
     ]
   ): Unit = js.native
@@ -159,7 +159,7 @@ trait Flickity extends js.Object {
   def on(
     eventname: FlickityEvents,
     callback: js.Function4[
-      /* event */ js.UndefOr[Event_], 
+      /* event */ js.UndefOr[Event], 
       /* pointer */ js.UndefOr[Element | Touch], 
       /* cellElement */ js.UndefOr[Element], 
       /* cellIndex */ js.UndefOr[Double], 
@@ -171,7 +171,7 @@ trait Flickity extends js.Object {
     * @param eventName name of event  (@see Flickity.FlickityEvents class for filckity supported events)
     * @param callback callback funtion to execute when event fires
     */
-  def once(eventname: String, callback: js.Function2[js.UndefOr[Event_], js.UndefOr[Element | Touch], _]): Unit = js.native
+  def once(eventname: String, callback: js.Function2[js.UndefOr[Event], js.UndefOr[Element | Touch], _]): Unit = js.native
   /**
     * one time event handl`er
     * @param eventName name of event  (@see Flickity.FlickityEvents class for filckity supported events)
@@ -180,7 +180,7 @@ trait Flickity extends js.Object {
   def once(
     eventname: String,
     callback: js.Function3[
-      /* event */ js.UndefOr[Event_], 
+      /* event */ js.UndefOr[Event], 
       /* pointer */ js.UndefOr[Element | Touch], 
       /* moveVector */ js.UndefOr[js.Object], 
       _
@@ -194,7 +194,7 @@ trait Flickity extends js.Object {
   def once(
     eventname: String,
     callback: js.Function4[
-      /* event */ js.UndefOr[Event_], 
+      /* event */ js.UndefOr[Event], 
       /* pointer */ js.UndefOr[Element | Touch], 
       /* cellElement */ js.UndefOr[Element], 
       /* cellIndex */ js.UndefOr[Double], 

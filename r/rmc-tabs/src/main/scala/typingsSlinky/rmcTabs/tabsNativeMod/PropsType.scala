@@ -1,6 +1,6 @@
 package typingsSlinky.rmcTabs.tabsNativeMod
 
-import typingsSlinky.rmcTabs.AnonTabBar
+import typingsSlinky.rmcTabs.anon.TabBar
 import typingsSlinky.rmcTabs.modelsMod.Models.TabData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ trait PropsType
   var style: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RN.ViewStyle */ js.Any
   ] = js.native
-  var styles: js.UndefOr[AnonTabBar] = js.native
+  var styles: js.UndefOr[TabBar] = js.native
 }
 
 object PropsType {
@@ -68,7 +68,7 @@ object PropsType {
         ret
     }
     @scala.inline
-    def withStyles(value: AnonTabBar): Self = {
+    def withStyles(value: TabBar): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
         ret

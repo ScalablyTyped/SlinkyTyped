@@ -1,6 +1,7 @@
 package typingsSlinky.dygraphs
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.dygraphs.anon.ErrorPlotter
 import typingsSlinky.dygraphs.dygraphs.Data
 import typingsSlinky.dygraphs.dygraphs.Options
 import scala.scalajs.js
@@ -39,7 +40,7 @@ object mod extends js.Object {
     var MINUTELY: Double = js.native
     var MONTHLY: Double = js.native
     var NUM_GRANULARITIES: Double = js.native
-    var Plotters: AnonErrorPlotter = js.native
+    var Plotters: ErrorPlotter = js.native
     var QUARTERLY: Double = js.native
     // Tick granularities (passed to ticker).
     var SECONDLY: Double = js.native

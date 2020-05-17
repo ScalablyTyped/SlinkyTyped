@@ -1,13 +1,18 @@
 package typingsSlinky.sharepoint.SP
 
+import typingsSlinky.microsoftAjax.Sys.Net.WebRequestExecutor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("SP.ProxyWebRequestExecutorFactory")
 @js.native
-class ProxyWebRequestExecutorFactory protected () extends IWebRequestExecutorFactory {
-  def this(url: String) = this()
-  def this(url: String, options: js.Any) = this()
+trait ProxyWebRequestExecutorFactory extends IWebRequestExecutorFactory
+
+object ProxyWebRequestExecutorFactory {
+  @scala.inline
+  def apply(createWebRequestExecutor: () => WebRequestExecutor): ProxyWebRequestExecutorFactory = {
+    val __obj = js.Dynamic.literal(createWebRequestExecutor = js.Any.fromFunction0(createWebRequestExecutor))
+    __obj.asInstanceOf[ProxyWebRequestExecutorFactory]
+  }
 }
 

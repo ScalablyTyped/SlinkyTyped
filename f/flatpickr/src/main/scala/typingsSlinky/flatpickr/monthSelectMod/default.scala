@@ -1,6 +1,6 @@
 package typingsSlinky.flatpickr.monthSelectMod
 
-import typingsSlinky.flatpickr.PartialConfig
+import typingsSlinky.flatpickr.anon.PartialConfig
 import typingsSlinky.flatpickr.optionsMod.Plugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`

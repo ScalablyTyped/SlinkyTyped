@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdk.elasticacheMod
 
-import typingsSlinky.awsSdk.DescribeCacheClustersMess
-import typingsSlinky.awsSdk.DescribeReplicationGroups
+import typingsSlinky.awsSdk.anon.DescribeCacheClustersMess
+import typingsSlinky.awsSdk.anon.DescribeReplicationGroups
 import typingsSlinky.awsSdk.awsSdkStrings.cacheClusterAvailable
 import typingsSlinky.awsSdk.awsSdkStrings.cacheClusterDeleted
 import typingsSlinky.awsSdk.awsSdkStrings.replicationGroupAvailable

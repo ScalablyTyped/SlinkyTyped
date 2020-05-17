@@ -7,15 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents the client-side equivalent of the TimeInterval class.
   */
-@JSGlobal("ASPxClientTimeInterval")
 @js.native
-class ASPxClientTimeInterval protected () extends js.Object {
-  /**
-    * Initializes a new instance of the ASPxClientTimeInterval class with the specified start time and duration.
-    * @param start A DateTime object, representing the beginning of the period.
-    * @param duration A TimeSpan structure, representing a time interval.
-    */
-  def this(start: js.Date, duration: js.Any) = this()
+trait ASPxClientTimeInterval extends js.Object {
   /**
     * Client-side function that determines whether the specified interval is contained within the current one. true if the specified interval is located within the current one; otherwise, false.
     * @param interval An ASPxClientTimeInterval object, representing the time interval to check.
@@ -74,15 +67,104 @@ class ASPxClientTimeInterval protected () extends js.Object {
   def SetStart(value: js.Date): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("ASPxClientTimeInterval")
-@js.native
-object ASPxClientTimeInterval extends js.Object {
-  /**
-    * Calculates the time interval duration. An integer value specifying the interval duration in milliseconds.
-    * @param start A DateTime value that specifies the start date time value.
-    * @param end A DateTime value that specifies the end date time value.
-    */
-  def CalculateDuration(start: js.Date, end: js.Date): Double = js.native
+object ASPxClientTimeInterval {
+  @scala.inline
+  def apply(
+    Contains: ASPxClientTimeInterval => Boolean,
+    Equals: ASPxClientTimeInterval => Boolean,
+    GetAllDay: () => Boolean,
+    GetDuration: () => Double,
+    GetEnd: () => js.Date,
+    GetStart: () => js.Date,
+    IntersectsWith: ASPxClientTimeInterval => Boolean,
+    IntersectsWithExcludingBounds: ASPxClientTimeInterval => Boolean,
+    SetAllDay: Boolean => Unit,
+    SetDuration: js.Any => Unit,
+    SetEnd: js.Date => Unit,
+    SetStart: js.Date => Unit
+  ): ASPxClientTimeInterval = {
+    val __obj = js.Dynamic.literal(Contains = js.Any.fromFunction1(Contains), Equals = js.Any.fromFunction1(Equals), GetAllDay = js.Any.fromFunction0(GetAllDay), GetDuration = js.Any.fromFunction0(GetDuration), GetEnd = js.Any.fromFunction0(GetEnd), GetStart = js.Any.fromFunction0(GetStart), IntersectsWith = js.Any.fromFunction1(IntersectsWith), IntersectsWithExcludingBounds = js.Any.fromFunction1(IntersectsWithExcludingBounds), SetAllDay = js.Any.fromFunction1(SetAllDay), SetDuration = js.Any.fromFunction1(SetDuration), SetEnd = js.Any.fromFunction1(SetEnd), SetStart = js.Any.fromFunction1(SetStart))
+    __obj.asInstanceOf[ASPxClientTimeInterval]
+  }
+  @scala.inline
+  implicit class ASPxClientTimeIntervalOps[Self <: ASPxClientTimeInterval] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContains(value: ASPxClientTimeInterval => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Contains")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEquals(value: ASPxClientTimeInterval => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Equals")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetAllDay(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetAllDay")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDuration(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetDuration")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetEnd(value: () => js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetEnd")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetStart(value: () => js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetStart")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIntersectsWith(value: ASPxClientTimeInterval => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IntersectsWith")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIntersectsWithExcludingBounds(value: ASPxClientTimeInterval => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IntersectsWithExcludingBounds")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetAllDay(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetAllDay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetDuration(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetDuration")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetEnd(value: js.Date => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetStart(value: js.Date => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetStart")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.istanbulLibInstrument.mod
 
-import typingsSlinky.istanbulLibInstrument.PartialVisitorOptions
-import typingsSlinky.istanbulLibInstrument.TypeofbabelTypes
+import typingsSlinky.istanbulLibInstrument.anon.PartialVisitorOptions
+import typingsSlinky.istanbulLibInstrument.anon.TypeofbabelTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

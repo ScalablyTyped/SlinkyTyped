@@ -1,7 +1,7 @@
 package typingsSlinky.i18next.mod
 
-import typingsSlinky.i18next.AnonAllowedHosts
-import typingsSlinky.i18next.AnonAutoOpen
+import typingsSlinky.i18next.anon.AllowedHosts
+import typingsSlinky.i18next.anon.AutoOpen
 import typingsSlinky.i18next.i18nextBooleans.`false`
 import typingsSlinky.i18next.i18nextStrings.all
 import typingsSlinky.i18next.i18nextStrings.current
@@ -71,7 +71,7 @@ trait InitOptions extends js.Object {
     * Options for https://github.com/locize/locize-editor
     * @default undefined
     */
-  var editor: js.UndefOr[AnonAutoOpen] = js.native
+  var editor: js.UndefOr[AutoOpen] = js.native
   /**
     * Language to use if translations in user language are not available.
     * @default 'dev'
@@ -125,7 +125,7 @@ trait InitOptions extends js.Object {
     * Options for https://github.com/locize/locize-lastused
     * @default undefined
     */
-  var locizeLastUsed: js.UndefOr[AnonAllowedHosts] = js.native
+  var locizeLastUsed: js.UndefOr[AllowedHosts] = js.native
   /**
     * Language will be lowercased eg. en-US --> en-us
     * @default false
@@ -393,7 +393,7 @@ object InitOptions {
         ret
     }
     @scala.inline
-    def withEditor(value: AnonAutoOpen): Self = {
+    def withEditor(value: AutoOpen): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editor")(value.asInstanceOf[js.Any])
         ret
@@ -513,7 +513,7 @@ object InitOptions {
         ret
     }
     @scala.inline
-    def withLocizeLastUsed(value: AnonAllowedHosts): Self = {
+    def withLocizeLastUsed(value: AllowedHosts): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("locizeLastUsed")(value.asInstanceOf[js.Any])
         ret

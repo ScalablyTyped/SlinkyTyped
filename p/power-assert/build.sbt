@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "power-assert"
-version := "1.5.3-dt-20200225Z-c47183"
-scalaVersion := "2.13.1"
+version := "1.5.3-dt-20200225Z-d81142"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "empower" % "1.2.1-dt-20200226Z-2f7b0d",
-  "org.scalablytyped.slinky" %%% "power-assert-formatter" % "1.4.1-dt-20200226Z-db04fc",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
+  "org.scalablytyped.slinky" %%% "empower" % "1.2.1-dt-20200226Z-410531",
+  "org.scalablytyped.slinky" %%% "power-assert-formatter" % "1.4.1-dt-20200226Z-a1f2df",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

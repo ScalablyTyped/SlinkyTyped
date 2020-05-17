@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait File_
   extends BaseNode
-     with _Node {
+     with Node {
   var comments: js.Any = js.native
   var program: Program_ = js.native
   var tokens: js.Any = js.native

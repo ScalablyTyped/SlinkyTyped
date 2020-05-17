@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeFabric.mod
 
-import typingsSlinky.reactNativeFabric.AnonCrash
-import typingsSlinky.reactNativeFabric.AnonLogAddToCart
+import typingsSlinky.reactNativeFabric.anon.Crash
+import typingsSlinky.reactNativeFabric.anon.LogAddToCart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,18 +13,18 @@ trait Fabric extends js.Object {
     *
     * https://docs.fabric.io/ios/answers/index.html
     */
-  var Answers: AnonLogAddToCart = js.native
+  var Answers: LogAddToCart = js.native
   /**
     * API for interacting with the Crashlytics kit.
     *
     * https://docs.fabric.io/ios/crashlytics/index.html
     */        
-  var Crashlytics: AnonCrash = js.native
+  var Crashlytics: Crash = js.native
 }
 
 object Fabric {
   @scala.inline
-  def apply(Answers: AnonLogAddToCart, Crashlytics: AnonCrash): Fabric = {
+  def apply(Answers: LogAddToCart, Crashlytics: Crash): Fabric = {
     val __obj = js.Dynamic.literal(Answers = Answers.asInstanceOf[js.Any], Crashlytics = Crashlytics.asInstanceOf[js.Any])
     __obj.asInstanceOf[Fabric]
   }
@@ -35,13 +35,13 @@ object Fabric {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAnswers(value: AnonLogAddToCart): Self = {
+    def withAnswers(value: LogAddToCart): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Answers")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withCrashlytics(value: AnonCrash): Self = {
+    def withCrashlytics(value: Crash): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Crashlytics")(value.asInstanceOf[js.Any])
         ret

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DisabledParameter extends _Parameters {
+trait DisabledParameter extends Parameters {
   var disable: Boolean = js.native
 }
 

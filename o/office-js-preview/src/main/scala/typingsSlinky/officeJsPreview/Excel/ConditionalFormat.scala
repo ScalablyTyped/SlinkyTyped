@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ConditionalFormatData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ConditionalFormatLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ConditionalFormatUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.CellValue
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.ColorScale
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.ContainsText
@@ -24,9 +24,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.6]
   */
-@JSGlobal("Excel.ConditionalFormat")
 @js.native
-class ConditionalFormat () extends ClientObject {
+trait ConditionalFormat extends ClientObject {
   /**
     *
     * Returns the cell value conditional format properties if the current conditional format is a CellValue type.
@@ -212,7 +211,7 @@ class ConditionalFormat () extends ClientObject {
     */
   def load(): ConditionalFormat = js.native
   def load(options: ConditionalFormatLoadOptions): ConditionalFormat = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ConditionalFormat = js.native
+  def load(propertyNamesAndPaths: Expand): ConditionalFormat = js.native
   def load(propertyNames: String): ConditionalFormat = js.native
   def load(propertyNames: js.Array[String]): ConditionalFormat = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

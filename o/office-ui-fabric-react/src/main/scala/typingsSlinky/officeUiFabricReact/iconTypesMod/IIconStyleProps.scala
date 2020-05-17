@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.iconTypesMod
 
-import typingsSlinky.officeUiFabricReact.PartialIIconStyles
+import typingsSlinky.officeUiFabricReact.anon.PartialIIconStyles
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`

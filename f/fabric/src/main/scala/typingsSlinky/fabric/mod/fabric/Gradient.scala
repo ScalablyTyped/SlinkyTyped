@@ -1,7 +1,7 @@
 package typingsSlinky.fabric.mod.fabric
 
 import org.scalajs.dom.raw.SVGGradientElement
-import typingsSlinky.fabric.AnonColorStops
+import typingsSlinky.fabric.anon.ColorStops
 import typingsSlinky.fabric.fabricImplMod.IGradientOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -28,7 +28,7 @@ class Gradient protected ()
     * @param {Number} [options.coords.r2] only for radial gradient, radius of the external circle
     * @return {fabric.Gradient} thisArg
     */
-  def this(options: AnonColorStops) = this()
+  def this(options: ColorStops) = this()
 }
 
 /* static members */

@@ -1,25 +1,25 @@
 package typingsSlinky.xmlCore
 
-import typingsSlinky.xmlCore.mod._XmlBufferEncoding
+import typingsSlinky.xmlCore.mod.XmlBufferEncoding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object xmlCoreStrings {
   @js.native
-  sealed trait base64 extends _XmlBufferEncoding
+  sealed trait base64 extends XmlBufferEncoding
   
   @js.native
-  sealed trait base64url extends _XmlBufferEncoding
+  sealed trait base64url extends XmlBufferEncoding
   
   @js.native
-  sealed trait binary extends _XmlBufferEncoding
+  sealed trait binary extends XmlBufferEncoding
   
   @js.native
-  sealed trait hex extends _XmlBufferEncoding
+  sealed trait hex extends XmlBufferEncoding
   
   @js.native
-  sealed trait utf8 extends _XmlBufferEncoding
+  sealed trait utf8 extends XmlBufferEncoding
   
   @scala.inline
   def base64: base64 = "base64".asInstanceOf[base64]

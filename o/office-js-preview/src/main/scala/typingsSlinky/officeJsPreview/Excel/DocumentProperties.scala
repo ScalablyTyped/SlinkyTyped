@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.DocumentPropertiesData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.DocumentPropertiesLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.DocumentPropertiesUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.7]
   */
-@JSGlobal("Excel.DocumentProperties")
 @js.native
-class DocumentProperties () extends ClientObject {
+trait DocumentProperties extends ClientObject {
   /**
     *
     * Gets or sets the author of the workbook.
@@ -113,7 +112,7 @@ class DocumentProperties () extends ClientObject {
     */
   def load(): DocumentProperties = js.native
   def load(options: DocumentPropertiesLoadOptions): DocumentProperties = js.native
-  def load(propertyNamesAndPaths: AnonExpand): DocumentProperties = js.native
+  def load(propertyNamesAndPaths: Expand): DocumentProperties = js.native
   def load(propertyNames: String): DocumentProperties = js.native
   def load(propertyNames: js.Array[String]): DocumentProperties = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

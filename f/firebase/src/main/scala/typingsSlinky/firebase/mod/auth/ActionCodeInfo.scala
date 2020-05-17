@@ -1,6 +1,6 @@
 package typingsSlinky.firebase.mod.auth
 
-import typingsSlinky.firebase.AnonEmail
+import typingsSlinky.firebase.anon.Email
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +33,7 @@ trait ActionCodeInfo extends js.Object {
     * `multiFactorInfo` is a {@link firebase.auth.Auth.PhoneMultiFactorInfo} object,
     * which contains the phone number.
     */
-  var data: AnonEmail = js.native
+  var data: Email = js.native
   /**
     * The type of operation that generated the action code. This could be:
     * <ul>

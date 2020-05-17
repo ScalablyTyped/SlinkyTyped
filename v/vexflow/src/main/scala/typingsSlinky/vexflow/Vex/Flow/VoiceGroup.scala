@@ -4,11 +4,48 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Vex.Flow.VoiceGroup")
 @js.native
-class VoiceGroup () extends js.Object {
+trait VoiceGroup extends js.Object {
   def addVoice(voice: Voice): Unit = js.native
   def getModifierContexts(): js.Array[ModifierContext] = js.native
   def getVoices(): js.Array[Voice] = js.native
+}
+
+object VoiceGroup {
+  @scala.inline
+  def apply(
+    addVoice: Voice => Unit,
+    getModifierContexts: () => js.Array[ModifierContext],
+    getVoices: () => js.Array[Voice]
+  ): VoiceGroup = {
+    val __obj = js.Dynamic.literal(addVoice = js.Any.fromFunction1(addVoice), getModifierContexts = js.Any.fromFunction0(getModifierContexts), getVoices = js.Any.fromFunction0(getVoices))
+    __obj.asInstanceOf[VoiceGroup]
+  }
+  @scala.inline
+  implicit class VoiceGroupOps[Self <: VoiceGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddVoice(value: Voice => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addVoice")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetModifierContexts(value: () => js.Array[ModifierContext]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getModifierContexts")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetVoices(value: () => js.Array[Voice]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getVoices")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

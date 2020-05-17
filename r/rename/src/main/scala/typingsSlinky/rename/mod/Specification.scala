@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Specification extends js.Object {
+trait Specification extends FilePath {
   var basename: js.UndefOr[String] = js.native
   var dirname: js.UndefOr[String] = js.native
   var extname: js.UndefOr[String] = js.native

@@ -1,0 +1,69 @@
+package typingsSlinky.awsSdkClientCodecommitNode.getFileExceptionsUnionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.typesCommitDoesNotExistExceptionMod.CommitDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+import typingsSlinky.awsSdkClientCodecommitNode.typesFileDoesNotExistExceptionMod.FileDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesFileTooLargeExceptionMod.FileTooLargeException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidCommitExceptionMod.InvalidCommitException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidPathExceptionMod.InvalidPathException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+import typingsSlinky.awsSdkClientCodecommitNode.typesPathRequiredExceptionMod.PathRequiredException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidCommitExceptionMod.InvalidCommitException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesCommitDoesNotExistExceptionMod.CommitDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesPathRequiredExceptionMod.PathRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidPathExceptionMod.InvalidPathException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesFileDoesNotExistExceptionMod.FileDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesFileTooLargeExceptionMod.FileTooLargeException
+*/
+trait GetFileExceptionsUnion extends js.Object
+
+object GetFileExceptionsUnion {
+  @scala.inline
+  implicit def apply(value: CommitDoesNotExistException): GetFileExceptionsUnion = value.asInstanceOf[GetFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionIntegrityChecksFailedException): GetFileExceptionsUnion = value.asInstanceOf[GetFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyAccessDeniedException): GetFileExceptionsUnion = value.asInstanceOf[GetFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyDisabledException): GetFileExceptionsUnion = value.asInstanceOf[GetFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyNotFoundException): GetFileExceptionsUnion = value.asInstanceOf[GetFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyUnavailableException): GetFileExceptionsUnion = value.asInstanceOf[GetFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: FileDoesNotExistException): GetFileExceptionsUnion = value.asInstanceOf[GetFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: FileTooLargeException): GetFileExceptionsUnion = value.asInstanceOf[GetFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidCommitException): GetFileExceptionsUnion = value.asInstanceOf[GetFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidPathException): GetFileExceptionsUnion = value.asInstanceOf[GetFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidRepositoryNameException): GetFileExceptionsUnion = value.asInstanceOf[GetFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: PathRequiredException): GetFileExceptionsUnion = value.asInstanceOf[GetFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryDoesNotExistException): GetFileExceptionsUnion = value.asInstanceOf[GetFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryNameRequiredException): GetFileExceptionsUnion = value.asInstanceOf[GetFileExceptionsUnion]
+}
+

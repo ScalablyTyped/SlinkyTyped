@@ -5,7 +5,7 @@ import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.TargetedEvent
-import typingsSlinky.reactNativeMaterialKit.AnonChecked
+import typingsSlinky.reactNativeMaterialKit.anon.Checked
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,7 +45,7 @@ trait MKRadioButtonProperties extends MKRippleProperties {
     * Some platforms may not have the concept of blur.
     */
   var onBlur: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, TargetedEvent], Unit]] = js.native
-  var onCheckedChange: js.UndefOr[js.Function1[/* opts */ AnonChecked, Unit]] = js.native
+  var onCheckedChange: js.UndefOr[js.Function1[/* opts */ Checked, Unit]] = js.native
   /**
     * When `accessible` is true (which is the default) this may be called when
     * the OS-specific concept of "focus" occurs. Some platforms may not have
@@ -216,7 +216,7 @@ object MKRadioButtonProperties {
         ret
     }
     @scala.inline
-    def withOnCheckedChange(value: /* opts */ AnonChecked => Unit): Self = {
+    def withOnCheckedChange(value: /* opts */ Checked => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCheckedChange")(js.Any.fromFunction1(value))
         ret

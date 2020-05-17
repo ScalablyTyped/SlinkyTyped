@@ -1,6 +1,6 @@
 package typingsSlinky.sweetalert.optionsMod
 
-import typingsSlinky.sweetalert.PartialSwalOptions
+import typingsSlinky.sweetalert.anon.PartialSwalOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,5 @@
 package typingsSlinky.jsonRulesEngine.mod
 
-import typingsSlinky.jsonRulesEngine.AnonFact
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,12 +12,12 @@ trait ConditionProperties extends NestedCondition {
   var params: js.UndefOr[Record[String, _]] = js.native
   var path: js.UndefOr[String] = js.native
   var priority: js.UndefOr[Double] = js.native
-  var value: AnonFact | js.Any = js.native
+  var value: typingsSlinky.jsonRulesEngine.anon.Fact | js.Any = js.native
 }
 
 object ConditionProperties {
   @scala.inline
-  def apply(fact: String, operator: String, value: AnonFact | js.Any): ConditionProperties = {
+  def apply(fact: String, operator: String, value: typingsSlinky.jsonRulesEngine.anon.Fact | js.Any): ConditionProperties = {
     val __obj = js.Dynamic.literal(fact = fact.asInstanceOf[js.Any], operator = operator.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConditionProperties]
   }
@@ -41,7 +40,7 @@ object ConditionProperties {
         ret
     }
     @scala.inline
-    def withValue(value: AnonFact | js.Any): Self = {
+    def withValue(value: typingsSlinky.jsonRulesEngine.anon.Fact | js.Any): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
         ret

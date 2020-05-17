@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClientBooks.AnonBadgeUrl
+import typingsSlinky.gapiClientBooks.anon.BadgeUrl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Category extends js.Object {
   /** A list of onboarding categories. */
-  var items: js.UndefOr[js.Array[AnonBadgeUrl]] = js.native
+  var items: js.UndefOr[js.Array[BadgeUrl]] = js.native
   /** Resource type. */
   var kind: js.UndefOr[String] = js.native
 }
@@ -26,7 +26,7 @@ object Category {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withItems(value: js.Array[AnonBadgeUrl]): Self = {
+    def withItems(value: js.Array[BadgeUrl]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
         ret

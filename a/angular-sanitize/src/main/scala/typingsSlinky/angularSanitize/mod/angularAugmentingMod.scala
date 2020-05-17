@@ -1,8 +1,8 @@
 package typingsSlinky.angularSanitize.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.angularSanitize.AnonHtmlElements
 import typingsSlinky.angularSanitize.angularSanitizeStrings.linky
+import typingsSlinky.angularSanitize.anon.HtmlElements
 import typingsSlinky.angularSanitize.mod.angularAugmentingMod.sanitize.filter.ILinky
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -43,7 +43,7 @@ object angularAugmentingMod extends js.Object {
         * @param elements A list of valid HTML elements or an object with one or more of the following properties: htmlElements, htmlVoidElements, svgElements
         */
       def addValidElements(elements: js.Array[String]): ISanitizeProvider = js.native
-      def addValidElements(elements: AnonHtmlElements): ISanitizeProvider = js.native
+      def addValidElements(elements: HtmlElements): ISanitizeProvider = js.native
       def enableSvg(): Boolean | ISanitizeProvider = js.native
       def enableSvg(flag: Boolean): Boolean | ISanitizeProvider = js.native
       /**

@@ -6,17 +6,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a group of color materials used in the 3D model. */
-@JSGlobal("Windows.Graphics.Printing3D.Printing3DColorMaterialGroup")
 @js.native
-class Printing3DColorMaterialGroup protected () extends js.Object {
-  /**
-    * Creates an instance of the Printing3DColorMaterialGroup class.
-    * @param MaterialGroupId The identifier for the group of color materials used in the 3D model; a value greater than zero.
-    */
-  def this(MaterialGroupId: Double) = this()
+trait Printing3DColorMaterialGroup extends js.Object {
   /** Gets a group of color materials used in the 3D model. */
   var colors: IVector[Printing3DColorMaterial] = js.native
   /** Gets the identifier (ID) for the color material group. */
   var materialGroupId: Double = js.native
+}
+
+object Printing3DColorMaterialGroup {
+  @scala.inline
+  def apply(colors: IVector[Printing3DColorMaterial], materialGroupId: Double): Printing3DColorMaterialGroup = {
+    val __obj = js.Dynamic.literal(colors = colors.asInstanceOf[js.Any], materialGroupId = materialGroupId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Printing3DColorMaterialGroup]
+  }
+  @scala.inline
+  implicit class Printing3DColorMaterialGroupOps[Self <: Printing3DColorMaterialGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColors(value: IVector[Printing3DColorMaterial]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaterialGroupId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("materialGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

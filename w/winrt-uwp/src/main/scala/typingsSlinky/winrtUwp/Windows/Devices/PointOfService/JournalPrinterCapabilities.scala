@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the capabilities of journal station of a point-of-service printer. */
-@JSGlobal("Windows.Devices.PointOfService.JournalPrinterCapabilities")
 @js.native
-abstract class JournalPrinterCapabilities () extends js.Object {
+trait JournalPrinterCapabilities extends js.Object {
   /** Gets information about the sensors that the journal printer station has available to report the status of the printer cartridge. */
   var cartridgeSensors: PosPrinterCartridgeSensors = js.native
   /** Gets the color cartridges that the journal printer station can use to print in color. */
@@ -35,5 +34,113 @@ abstract class JournalPrinterCapabilities () extends js.Object {
   var isUnderlineSupported: Boolean = js.native
   /** Gets a collection of the line widths in characters per line that the journal printer station supports. */
   var supportedCharactersPerLine: IVectorView[Double] = js.native
+}
+
+object JournalPrinterCapabilities {
+  @scala.inline
+  def apply(
+    cartridgeSensors: PosPrinterCartridgeSensors,
+    colorCartridgeCapabilities: PosPrinterColorCapabilities,
+    isBoldSupported: Boolean,
+    isDoubleHighDoubleWidePrintSupported: Boolean,
+    isDoubleHighPrintSupported: Boolean,
+    isDoubleWidePrintSupported: Boolean,
+    isDualColorSupported: Boolean,
+    isItalicSupported: Boolean,
+    isPaperEmptySensorSupported: Boolean,
+    isPaperNearEndSensorSupported: Boolean,
+    isPrinterPresent: Boolean,
+    isUnderlineSupported: Boolean,
+    supportedCharactersPerLine: IVectorView[Double]
+  ): JournalPrinterCapabilities = {
+    val __obj = js.Dynamic.literal(cartridgeSensors = cartridgeSensors.asInstanceOf[js.Any], colorCartridgeCapabilities = colorCartridgeCapabilities.asInstanceOf[js.Any], isBoldSupported = isBoldSupported.asInstanceOf[js.Any], isDoubleHighDoubleWidePrintSupported = isDoubleHighDoubleWidePrintSupported.asInstanceOf[js.Any], isDoubleHighPrintSupported = isDoubleHighPrintSupported.asInstanceOf[js.Any], isDoubleWidePrintSupported = isDoubleWidePrintSupported.asInstanceOf[js.Any], isDualColorSupported = isDualColorSupported.asInstanceOf[js.Any], isItalicSupported = isItalicSupported.asInstanceOf[js.Any], isPaperEmptySensorSupported = isPaperEmptySensorSupported.asInstanceOf[js.Any], isPaperNearEndSensorSupported = isPaperNearEndSensorSupported.asInstanceOf[js.Any], isPrinterPresent = isPrinterPresent.asInstanceOf[js.Any], isUnderlineSupported = isUnderlineSupported.asInstanceOf[js.Any], supportedCharactersPerLine = supportedCharactersPerLine.asInstanceOf[js.Any])
+    __obj.asInstanceOf[JournalPrinterCapabilities]
+  }
+  @scala.inline
+  implicit class JournalPrinterCapabilitiesOps[Self <: JournalPrinterCapabilities] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCartridgeSensors(value: PosPrinterCartridgeSensors): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cartridgeSensors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColorCartridgeCapabilities(value: PosPrinterColorCapabilities): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorCartridgeCapabilities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsBoldSupported(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isBoldSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsDoubleHighDoubleWidePrintSupported(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDoubleHighDoubleWidePrintSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsDoubleHighPrintSupported(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDoubleHighPrintSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsDoubleWidePrintSupported(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDoubleWidePrintSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsDualColorSupported(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDualColorSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsItalicSupported(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isItalicSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsPaperEmptySensorSupported(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPaperEmptySensorSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsPaperNearEndSensorSupported(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPaperNearEndSensorSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsPrinterPresent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPrinterPresent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsUnderlineSupported(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isUnderlineSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSupportedCharactersPerLine(value: IVectorView[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedCharactersPerLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

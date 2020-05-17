@@ -1,6 +1,6 @@
 package typingsSlinky.parse.mod
 
-import typingsSlinky.parse.AnonLatitude
+import typingsSlinky.parse.anon.Latitude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,9 +30,9 @@ import scala.scalajs.js.annotation._
 @JSImport("parse", "GeoPoint")
 @js.native
 class GeoPoint ()
-  extends typingsSlinky.parse.mod._Global_.Parse.GeoPoint {
+  extends typingsSlinky.parse.mod.global.Parse.GeoPoint {
   def this(coords: js.Tuple2[Double, Double]) = this()
-  def this(coords: AnonLatitude) = this()
+  def this(coords: Latitude) = this()
   def this(latitude: Double, longitude: Double) = this()
 }
 

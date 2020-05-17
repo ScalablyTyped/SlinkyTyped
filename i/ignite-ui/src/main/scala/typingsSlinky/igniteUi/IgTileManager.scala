@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -375,7 +375,7 @@ object IgTileManager {
         ret
     }
     @scala.inline
-    def withDataBinding(value: (/* event */ Event_, /* ui */ DataBindingEventUIParam) => Unit): Self = {
+    def withDataBinding(value: (/* event */ Event, /* ui */ DataBindingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataBinding")(js.Any.fromFunction2(value))
         ret
@@ -387,7 +387,7 @@ object IgTileManager {
         ret
     }
     @scala.inline
-    def withDataBound(value: (/* event */ Event_, /* ui */ DataBoundEventUIParam) => Unit): Self = {
+    def withDataBound(value: (/* event */ Event, /* ui */ DataBoundEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataBound")(js.Any.fromFunction2(value))
         ret
@@ -579,7 +579,7 @@ object IgTileManager {
         ret
     }
     @scala.inline
-    def withRendered(value: (/* event */ Event_, /* ui */ RenderedEventUIParam) => Unit): Self = {
+    def withRendered(value: (/* event */ Event, /* ui */ RenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rendered")(js.Any.fromFunction2(value))
         ret
@@ -591,7 +591,7 @@ object IgTileManager {
         ret
     }
     @scala.inline
-    def withRendering(value: (/* event */ Event_, /* ui */ RenderingEventUIParam) => Unit): Self = {
+    def withRendering(value: (/* event */ Event, /* ui */ RenderingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rendering")(js.Any.fromFunction2(value))
         ret
@@ -723,7 +723,7 @@ object IgTileManager {
         ret
     }
     @scala.inline
-    def withTileMaximized(value: (/* event */ Event_, /* ui */ TileMaximizedEventUIParam) => Unit): Self = {
+    def withTileMaximized(value: (/* event */ Event, /* ui */ TileMaximizedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tileMaximized")(js.Any.fromFunction2(value))
         ret
@@ -735,7 +735,7 @@ object IgTileManager {
         ret
     }
     @scala.inline
-    def withTileMaximizing(value: (/* event */ Event_, /* ui */ TileMaximizingEventUIParam) => Unit): Self = {
+    def withTileMaximizing(value: (/* event */ Event, /* ui */ TileMaximizingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tileMaximizing")(js.Any.fromFunction2(value))
         ret
@@ -747,7 +747,7 @@ object IgTileManager {
         ret
     }
     @scala.inline
-    def withTileMinimized(value: (/* event */ Event_, /* ui */ TileMinimizedEventUIParam) => Unit): Self = {
+    def withTileMinimized(value: (/* event */ Event, /* ui */ TileMinimizedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tileMinimized")(js.Any.fromFunction2(value))
         ret
@@ -759,7 +759,7 @@ object IgTileManager {
         ret
     }
     @scala.inline
-    def withTileMinimizing(value: (/* event */ Event_, /* ui */ TileMinimizingEventUIParam) => Unit): Self = {
+    def withTileMinimizing(value: (/* event */ Event, /* ui */ TileMinimizingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tileMinimizing")(js.Any.fromFunction2(value))
         ret
@@ -771,7 +771,7 @@ object IgTileManager {
         ret
     }
     @scala.inline
-    def withTileRendered(value: (/* event */ Event_, /* ui */ TileRenderedEventUIParam) => Unit): Self = {
+    def withTileRendered(value: (/* event */ Event, /* ui */ TileRenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tileRendered")(js.Any.fromFunction2(value))
         ret
@@ -783,7 +783,7 @@ object IgTileManager {
         ret
     }
     @scala.inline
-    def withTileRendering(value: (/* event */ Event_, /* ui */ TileRenderingEventUIParam) => Unit): Self = {
+    def withTileRendering(value: (/* event */ Event, /* ui */ TileRenderingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tileRendering")(js.Any.fromFunction2(value))
         ret

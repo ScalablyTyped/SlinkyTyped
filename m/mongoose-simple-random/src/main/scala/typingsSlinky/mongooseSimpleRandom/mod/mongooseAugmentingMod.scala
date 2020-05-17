@@ -1,8 +1,8 @@
 package typingsSlinky.mongooseSimpleRandom.mod
 
+import org.scalajs.dom.raw.Document
 import typingsSlinky.mongoose.mod.ModelProperties
 import typingsSlinky.node.NodeJS.EventEmitter
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object mongooseAugmentingMod extends js.Object {
   @js.native
-  trait Model[T /* <: Document_ */]
+  trait Model[T /* <: Document */]
     extends EventEmitter
        with ModelProperties {
     def findRandom(conditions: js.Object): Unit = js.native

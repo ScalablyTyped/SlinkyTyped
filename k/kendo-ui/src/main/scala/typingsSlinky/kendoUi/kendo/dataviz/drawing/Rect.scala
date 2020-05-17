@@ -4,12 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.dataviz.drawing.Rect")
 @js.native
-class Rect protected ()
+trait Rect
   extends typingsSlinky.kendoUi.kendo.drawing.Element {
-  def this(geometry: typingsSlinky.kendoUi.kendo.geometry.Rect) = this()
-  def this(geometry: typingsSlinky.kendoUi.kendo.geometry.Rect, options: RectOptions) = this()
   @JSName("options")
   var options_Rect: RectOptions = js.native
   def fill(color: String): typingsSlinky.kendoUi.kendo.drawing.Rect = js.native

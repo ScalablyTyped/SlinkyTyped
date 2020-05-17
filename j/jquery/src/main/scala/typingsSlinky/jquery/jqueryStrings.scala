@@ -1,10 +1,10 @@
 package typingsSlinky.jquery
 
-import typingsSlinky.jquery.JQuery_.Ajax.ErrorTextStatus
-import typingsSlinky.jquery.JQuery_.Ajax.SuccessTextStatus
-import typingsSlinky.jquery.JQuery_.Ajax.TextStatus
-import typingsSlinky.jquery.JQuery_._Duration
-import typingsSlinky.jquery.JQuery_._Falsy
+import typingsSlinky.jquery.JQuery.Ajax.ErrorTextStatus
+import typingsSlinky.jquery.JQuery.Ajax.SuccessTextStatus
+import typingsSlinky.jquery.JQuery.Ajax.TextStatus
+import typingsSlinky.jquery.JQuery.Duration
+import typingsSlinky.jquery.JQuery.Falsy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ object jqueryStrings {
   sealed trait Promise extends js.Object
   
   @js.native
-  sealed trait _empty extends _Falsy
+  sealed trait _empty extends Falsy
   
   @js.native
   sealed trait a extends js.Object
@@ -201,7 +201,7 @@ object jqueryStrings {
        with TextStatus
   
   @js.native
-  sealed trait fast extends _Duration
+  sealed trait fast extends Duration
   
   @js.native
   sealed trait feBlend extends js.Object
@@ -591,7 +591,7 @@ object jqueryStrings {
   sealed trait slot extends js.Object
   
   @js.native
-  sealed trait slow extends _Duration
+  sealed trait slow extends Duration
   
   @js.native
   sealed trait small extends js.Object

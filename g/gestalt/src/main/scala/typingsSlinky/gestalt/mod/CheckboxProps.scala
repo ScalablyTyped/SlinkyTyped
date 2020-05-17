@@ -1,7 +1,7 @@
 package typingsSlinky.gestalt.mod
 
-import typingsSlinky.gestalt.AnonChecked
-import typingsSlinky.gestalt.AnonCheckedEvent
+import typingsSlinky.gestalt.anon.Checked
+import typingsSlinky.gestalt.anon.CheckedEvent
 import typingsSlinky.gestalt.gestaltStrings.md
 import typingsSlinky.gestalt.gestaltStrings.sm
 import scala.scalajs.js
@@ -16,14 +16,14 @@ trait CheckboxProps extends js.Object {
   var id: String = js.native
   var indeterminate: js.UndefOr[Boolean] = js.native
   var name: js.UndefOr[String] = js.native
-  var onClick: js.UndefOr[js.Function1[/* args */ AnonCheckedEvent, Unit]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* args */ CheckedEvent, Unit]] = js.native
   var size: js.UndefOr[sm | md] = js.native
-  def onChange(args: AnonChecked): Unit = js.native
+  def onChange(args: Checked): Unit = js.native
 }
 
 object CheckboxProps {
   @scala.inline
-  def apply(id: String, onChange: AnonChecked => Unit): CheckboxProps = {
+  def apply(id: String, onChange: Checked => Unit): CheckboxProps = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
     __obj.asInstanceOf[CheckboxProps]
   }
@@ -40,7 +40,7 @@ object CheckboxProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: AnonChecked => Unit): Self = {
+    def withOnChange(value: Checked => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -106,7 +106,7 @@ object CheckboxProps {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* args */ AnonCheckedEvent => Unit): Self = {
+    def withOnClick(value: /* args */ CheckedEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret

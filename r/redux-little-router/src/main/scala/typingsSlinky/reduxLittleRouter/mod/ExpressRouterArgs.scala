@@ -1,19 +1,19 @@
 package typingsSlinky.reduxLittleRouter.mod
 
-import typingsSlinky.reduxLittleRouter.AnonBaseUrl
+import typingsSlinky.reduxLittleRouter.anon.BaseUrl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ExpressRouterArgs extends js.Object {
-  var request: AnonBaseUrl = js.native
+  var request: BaseUrl = js.native
   var routes: Routes = js.native
 }
 
 object ExpressRouterArgs {
   @scala.inline
-  def apply(request: AnonBaseUrl, routes: Routes): ExpressRouterArgs = {
+  def apply(request: BaseUrl, routes: Routes): ExpressRouterArgs = {
     val __obj = js.Dynamic.literal(request = request.asInstanceOf[js.Any], routes = routes.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExpressRouterArgs]
   }
@@ -24,7 +24,7 @@ object ExpressRouterArgs {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withRequest(value: AnonBaseUrl): Self = {
+    def withRequest(value: BaseUrl): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
         ret

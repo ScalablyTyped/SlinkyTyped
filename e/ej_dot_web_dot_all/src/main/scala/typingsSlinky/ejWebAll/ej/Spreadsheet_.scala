@@ -1,8 +1,6 @@
 package typingsSlinky.ejWebAll.ej
 
-import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.ejWebAll.JQuery
 import typingsSlinky.ejWebAll.ej.Spreadsheet.BorderOptions
 import typingsSlinky.ejWebAll.ej.Spreadsheet.CellIndex
 import typingsSlinky.ejWebAll.ej.Spreadsheet.DataOptions
@@ -38,13 +36,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("ej.Spreadsheet")
 @js.native
-class Spreadsheet_ protected () extends Widget_ {
-  def this(element: JQuery) = this()
-  def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.Spreadsheet.Model) = this()
-  def this(element: Element, options: typingsSlinky.ejWebAll.ej.Spreadsheet.Model) = this()
+trait Spreadsheet_ extends Widget_ {
   var XLCFormat: XLCFormat = js.native
   var XLCMenu: XLCMenu = js.native
   var XLCellType: XLCellType = js.native

@@ -3,7 +3,7 @@ package typingsSlinky.antd.transferListMod
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.AnonFilteredItems
+import typingsSlinky.antd.anon.FilteredItems
 import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.none
@@ -38,7 +38,7 @@ trait TransferList
     disabled: Boolean
   ): `false` | ReactElement = js.native
   def getCheckStatus(filteredItems: js.Array[TransferItem]): none | all | part = js.native
-  def getFilteredItems(dataSource: js.Array[TransferItem], filterValue: String): AnonFilteredItems = js.native
+  def getFilteredItems(dataSource: js.Array[TransferItem], filterValue: String): FilteredItems = js.native
   def getListBody(
     prefixCls: String,
     searchPlaceholder: String,

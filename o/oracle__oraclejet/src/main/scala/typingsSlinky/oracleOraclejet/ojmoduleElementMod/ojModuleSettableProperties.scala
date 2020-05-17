@@ -1,6 +1,6 @@
 package typingsSlinky.oracleOraclejet.ojmoduleElementMod
 
-import typingsSlinky.oracleOraclejet.AnonCleanupMode
+import typingsSlinky.oracleOraclejet.anon.CleanupMode
 import typingsSlinky.oracleOraclejet.mod.JetSettableProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ojModuleSettableProperties extends JetSettableProperties {
   var animation: js.Object = js.native
-  var config: AnonCleanupMode = js.native
+  var config: CleanupMode = js.native
 }
 
 object ojModuleSettableProperties {
   @scala.inline
-  def apply(animation: js.Object, config: AnonCleanupMode): ojModuleSettableProperties = {
+  def apply(animation: js.Object, config: CleanupMode): ojModuleSettableProperties = {
     val __obj = js.Dynamic.literal(animation = animation.asInstanceOf[js.Any], config = config.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojModuleSettableProperties]
   }
@@ -31,7 +31,7 @@ object ojModuleSettableProperties {
         ret
     }
     @scala.inline
-    def withConfig(value: AnonCleanupMode): Self = {
+    def withConfig(value: CleanupMode): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
         ret

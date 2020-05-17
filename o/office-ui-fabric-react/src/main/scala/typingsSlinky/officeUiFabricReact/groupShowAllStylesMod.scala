@@ -1,5 +1,6 @@
 package typingsSlinky.officeUiFabricReact
 
+import typingsSlinky.officeUiFabricReact.anon.RequiredPickIGroupShowAll
 import typingsSlinky.officeUiFabricReact.groupShowAllTypesMod.IGroupShowAllStyles
 import scala.scalajs.js
 import scala.scalajs.js.`|`

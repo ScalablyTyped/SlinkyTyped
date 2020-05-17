@@ -1,6 +1,6 @@
 package typingsSlinky.csurf.mod
 
-import typingsSlinky.csurf.AnonCookie
+import typingsSlinky.csurf.anon.Cookie
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.expressServeStaticCore.mod.RequestHandler
@@ -12,6 +12,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object ^ extends js.Object {
   def apply(): RequestHandler[ParamsDictionary, _, _, Query] = js.native
-  def apply(options: AnonCookie): RequestHandler[ParamsDictionary, _, _, Query] = js.native
+  def apply(options: Cookie): RequestHandler[ParamsDictionary, _, _, Query] = js.native
 }
 

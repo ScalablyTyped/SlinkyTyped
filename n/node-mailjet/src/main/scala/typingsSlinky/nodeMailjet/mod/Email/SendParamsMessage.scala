@@ -1,6 +1,5 @@
 package typingsSlinky.nodeMailjet.mod.Email
 
-import typingsSlinky.nodeMailjet.AnonEmail
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,13 +13,13 @@ trait SendParamsMessage extends js.Object {
   var CustomID: js.UndefOr[String] = js.native
   var DeduplicateCampaign: js.UndefOr[Boolean] = js.native
   var EventPayload: js.UndefOr[String] = js.native
-  var From: AnonEmail = js.native
+  var From: typingsSlinky.nodeMailjet.anon.Email = js.native
   var HTMLPart: js.UndefOr[String] = js.native
   var Headers: js.UndefOr[js.Object] = js.native
   var InlinedAttachments: js.UndefOr[js.Array[InlinedAttachment]] = js.native
   var MonitoringCategory: js.UndefOr[String] = js.native
   var ReplyTo: js.UndefOr[SendParamsRecipient] = js.native
-  var Sender: js.UndefOr[AnonEmail] = js.native
+  var Sender: js.UndefOr[typingsSlinky.nodeMailjet.anon.Email] = js.native
   var Subject: String = js.native
   var TemplateID: js.UndefOr[Double] = js.native
   var TemplateLanguage: js.UndefOr[Boolean] = js.native
@@ -32,7 +31,7 @@ trait SendParamsMessage extends js.Object {
 
 object SendParamsMessage {
   @scala.inline
-  def apply(From: AnonEmail, Subject: String, To: js.Array[SendParamsRecipient]): SendParamsMessage = {
+  def apply(From: typingsSlinky.nodeMailjet.anon.Email, Subject: String, To: js.Array[SendParamsRecipient]): SendParamsMessage = {
     val __obj = js.Dynamic.literal(From = From.asInstanceOf[js.Any], Subject = Subject.asInstanceOf[js.Any], To = To.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendParamsMessage]
   }
@@ -43,7 +42,7 @@ object SendParamsMessage {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFrom(value: AnonEmail): Self = {
+    def withFrom(value: typingsSlinky.nodeMailjet.anon.Email): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("From")(value.asInstanceOf[js.Any])
         ret
@@ -205,7 +204,7 @@ object SendParamsMessage {
         ret
     }
     @scala.inline
-    def withSender(value: AnonEmail): Self = {
+    def withSender(value: typingsSlinky.nodeMailjet.anon.Email): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Sender")(value.asInstanceOf[js.Any])
         ret

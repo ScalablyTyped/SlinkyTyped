@@ -7,10 +7,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the result of a scan job. */
-@JSGlobal("Windows.Devices.Scanners.ImageScannerScanResult")
 @js.native
-abstract class ImageScannerScanResult () extends js.Object {
+trait ImageScannerScanResult extends js.Object {
   /** Gets the list of scanned image files that was produced by the completed scan job. */
   var scannedFiles: IVectorView[StorageFile] = js.native
+}
+
+object ImageScannerScanResult {
+  @scala.inline
+  def apply(scannedFiles: IVectorView[StorageFile]): ImageScannerScanResult = {
+    val __obj = js.Dynamic.literal(scannedFiles = scannedFiles.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ImageScannerScanResult]
+  }
+  @scala.inline
+  implicit class ImageScannerScanResultOps[Self <: ImageScannerScanResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withScannedFiles(value: IVectorView[StorageFile]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scannedFiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

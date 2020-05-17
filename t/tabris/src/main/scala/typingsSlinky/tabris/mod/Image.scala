@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("tabris", "Image")
 @js.native
-class Image protected () extends _ImageValue {
+class Image protected () extends ImageValue {
   def this(imageLike: ImageLikeObject) = this()
   /**
     * Image height in dip. Extracted from the image file when 'auto'.

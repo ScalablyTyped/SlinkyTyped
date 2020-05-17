@@ -1,6 +1,6 @@
 package typingsSlinky.fuzzaldrinPlus.mod
 
-import typingsSlinky.fuzzaldrinPlus.AnonTagClass
+import typingsSlinky.fuzzaldrinPlus.anon.TagClass
 import typingsSlinky.fuzzaldrinPlus.fuzzaldrinPlusStrings.Backslash
 import typingsSlinky.fuzzaldrinPlus.fuzzaldrinPlusStrings.Slash
 import scala.scalajs.js
@@ -19,7 +19,7 @@ trait IFilterOptions extends js.Object {
   var preparedQuery: js.UndefOr[Query] = js.native
   var useExtensionBonus: js.UndefOr[Boolean] = js.native
   var usePathScoring: js.UndefOr[Boolean] = js.native
-  var wrap: js.UndefOr[AnonTagClass] = js.native
+  var wrap: js.UndefOr[TagClass] = js.native
 }
 
 object IFilterOptions {
@@ -143,7 +143,7 @@ object IFilterOptions {
         ret
     }
     @scala.inline
-    def withWrap(value: AnonTagClass): Self = {
+    def withWrap(value: TagClass): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("wrap")(value.asInstanceOf[js.Any])
         ret

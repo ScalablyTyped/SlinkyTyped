@@ -3,20 +3,13 @@ package typingsSlinky.amapJsApi.AMap
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.amapJsApi.AMap.Marker.Anchor
 import typingsSlinky.amapJsApi.AMap.Marker.Label
-import typingsSlinky.amapJsApi.AMap.Marker.Options
-import typingsSlinky.amapJsApi.AnonName
+import typingsSlinky.amapJsApi.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("AMap.Marker")
 @js.native
-/**
-  * 点标记
-  * @param options 选项
-  */
-class Marker_[ExtraData] () extends Overlay[ExtraData] {
-  def this(options: Options[ExtraData]) = this()
+trait Marker_[ExtraData] extends Overlay[ExtraData] {
   /**
     * 获取锚点
     */
@@ -82,7 +75,7 @@ class Marker_[ExtraData] () extends Overlay[ExtraData] {
     * @param obj 唤起参数
     */
   def markOnAMAP(): Unit = js.native
-  def markOnAMAP(obj: AnonName): Unit = js.native
+  def markOnAMAP(obj: Name): Unit = js.native
   /**
     * 以指定的速度，点标记沿指定的路径移动
     * @param path 移动轨迹

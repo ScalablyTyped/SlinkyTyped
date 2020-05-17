@@ -1,6 +1,7 @@
 package typingsSlinky.alloy
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.alloy.anon.PartialProxy
 import typingsSlinky.backbone.mod.EventsMixin
 import typingsSlinky.std.Partial
 import typingsSlinky.titanium.Titanium.Proxy

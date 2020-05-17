@@ -1,6 +1,6 @@
 package typingsSlinky.cssFontLoadingModule.mod
 
-import typingsSlinky.cssFontLoadingModule.mod._Global_.FontFace
+import typingsSlinky.cssFontLoadingModule.mod.global.FontFace
 import typingsSlinky.std.EventInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`

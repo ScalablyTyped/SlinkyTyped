@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IError
   extends IBaseOutput
-     with _IOutput {
+     with IOutput {
   /**
     * The name of the error.
     */

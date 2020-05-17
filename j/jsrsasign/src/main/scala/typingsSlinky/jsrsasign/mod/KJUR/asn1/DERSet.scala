@@ -21,7 +21,7 @@ import scala.scalajs.js.annotation._
 @JSImport("jsrsasign", "KJUR.asn1.DERSet")
 @js.native
 class DERSet ()
-  extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.DERSet {
+  extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.DERAbstractStructured {
   def this(params: ArrayParam[typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ASN1Object]) = this()
 }
 

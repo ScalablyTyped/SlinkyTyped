@@ -14,24 +14,12 @@ trait GhostData extends js.Object
 
 object GhostData {
   @scala.inline
-  def PostOrPage(id: String, slug: String): GhostData = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], slug = slug.asInstanceOf[js.Any])
-    __obj.asInstanceOf[GhostData]
-  }
+  implicit def apply(value: Author): GhostData = value.asInstanceOf[GhostData]
   @scala.inline
-  def Author(id: String, slug: String): GhostData = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], slug = slug.asInstanceOf[js.Any])
-    __obj.asInstanceOf[GhostData]
-  }
+  implicit def apply(value: PostOrPage): GhostData = value.asInstanceOf[GhostData]
   @scala.inline
-  def Tag(id: String, slug: String): GhostData = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], slug = slug.asInstanceOf[js.Any])
-    __obj.asInstanceOf[GhostData]
-  }
+  implicit def apply(value: Settings): GhostData = value.asInstanceOf[GhostData]
   @scala.inline
-  def Settings(): GhostData = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[GhostData]
-  }
+  implicit def apply(value: Tag): GhostData = value.asInstanceOf[GhostData]
 }
 

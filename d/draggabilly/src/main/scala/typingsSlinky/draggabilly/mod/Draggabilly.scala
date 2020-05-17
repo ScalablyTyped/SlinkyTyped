@@ -1,8 +1,8 @@
 package typingsSlinky.draggabilly.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.Touch
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,27 +15,27 @@ trait Draggabilly extends js.Object {
   def enable(): Unit = js.native
   def off(
     eventName: DraggabillyClickEventName,
-    listener: js.Function2[/* event */ Event_, /* pointer */ MouseEvent | Touch, Unit]
+    listener: js.Function2[/* event */ Event, /* pointer */ MouseEvent | Touch, Unit]
   ): Draggabilly = js.native
   def off(
     eventName: DraggabillyMoveEventName,
-    listener: js.Function3[/* event */ Event_, /* pointer */ MouseEvent | Touch, /* moveVector */ Position, Unit]
+    listener: js.Function3[/* event */ Event, /* pointer */ MouseEvent | Touch, /* moveVector */ Position, Unit]
   ): Draggabilly = js.native
   def on(
     eventName: DraggabillyClickEventName,
-    listener: js.Function2[/* event */ Event_, /* pointer */ MouseEvent | Touch, Unit]
+    listener: js.Function2[/* event */ Event, /* pointer */ MouseEvent | Touch, Unit]
   ): Draggabilly = js.native
   def on(
     eventName: DraggabillyMoveEventName,
-    listener: js.Function3[/* event */ Event_, /* pointer */ MouseEvent | Touch, /* moveVector */ Position, Unit]
+    listener: js.Function3[/* event */ Event, /* pointer */ MouseEvent | Touch, /* moveVector */ Position, Unit]
   ): Draggabilly = js.native
   def once(
     eventName: DraggabillyClickEventName,
-    listener: js.Function2[/* event */ Event_, /* pointer */ MouseEvent | Touch, Unit]
+    listener: js.Function2[/* event */ Event, /* pointer */ MouseEvent | Touch, Unit]
   ): Draggabilly = js.native
   def once(
     eventName: DraggabillyMoveEventName,
-    listener: js.Function3[/* event */ Event_, /* pointer */ MouseEvent | Touch, /* moveVector */ Position, Unit]
+    listener: js.Function3[/* event */ Event, /* pointer */ MouseEvent | Touch, /* moveVector */ Position, Unit]
   ): Draggabilly = js.native
 }
 

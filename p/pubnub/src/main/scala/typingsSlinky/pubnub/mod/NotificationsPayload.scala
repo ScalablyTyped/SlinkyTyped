@@ -1,6 +1,6 @@
 package typingsSlinky.pubnub.mod
 
-import typingsSlinky.pubnub.AnonApns
+import typingsSlinky.pubnub.anon.Apns
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait NotificationsPayload extends js.Object {
   var debugging: Boolean = js.native
   var fcm: FCMNotificationPayload = js.native
   var mpns: MPNSNotificationPayload = js.native
-  var payload: AnonApns = js.native
+  var payload: Apns = js.native
   var sound: js.UndefOr[String] = js.native
   var subtitle: js.UndefOr[String] = js.native
   var title: js.UndefOr[String] = js.native
@@ -28,7 +28,7 @@ object NotificationsPayload {
     debugging: Boolean,
     fcm: FCMNotificationPayload,
     mpns: MPNSNotificationPayload,
-    payload: AnonApns
+    payload: Apns
   ): NotificationsPayload = {
     val __obj = js.Dynamic.literal(apns = apns.asInstanceOf[js.Any], buildPayload = js.Any.fromFunction1(buildPayload), debugging = debugging.asInstanceOf[js.Any], fcm = fcm.asInstanceOf[js.Any], mpns = mpns.asInstanceOf[js.Any], payload = payload.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotificationsPayload]
@@ -70,7 +70,7 @@ object NotificationsPayload {
         ret
     }
     @scala.inline
-    def withPayload(value: AnonApns): Self = {
+    def withPayload(value: Apns): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
         ret

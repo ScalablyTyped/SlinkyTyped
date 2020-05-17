@@ -6,7 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBootstrapTable2Paginator.mod.SizePerPageDropdownStandaloneProps
 import typingsSlinky.reactBootstrapTable2Paginator.reactBootstrapTable2PaginatorStrings.dropdown
 import typingsSlinky.reactBootstrapTable2Paginator.reactBootstrapTable2PaginatorStrings.dropup
-import typingsSlinky.reactBootstrapTableNext.AnonText
+import typingsSlinky.reactBootstrapTableNext.anon.Text
 import typingsSlinky.reactBootstrapTableNext.mod.PageButtonRendererOptions
 import typingsSlinky.reactBootstrapTableNext.mod.PageListRendererOptions
 import typingsSlinky.reactBootstrapTableNext.mod.SizePerPageOptionRendererOptions
@@ -79,7 +79,7 @@ object SizePerPageDropdownStandalone {
     @scala.inline
     def sizePerPage(value: Double): this.type = set("sizePerPage", value.asInstanceOf[js.Any])
     @scala.inline
-    def sizePerPageList(value: js.Array[AnonText | Double]): this.type = set("sizePerPageList", value.asInstanceOf[js.Any])
+    def sizePerPageList(value: js.Array[Double | Text]): this.type = set("sizePerPageList", value.asInstanceOf[js.Any])
     @scala.inline
     def sizePerPageOptionRenderer(value: /* options */ SizePerPageOptionRendererOptions => ReactElement): this.type = set("sizePerPageOptionRenderer", js.Any.fromFunction1(value))
     @scala.inline

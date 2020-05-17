@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientDeploymentmanager.gapi.client.deploymentmanager
 
-import typingsSlinky.gapiClientDeploymentmanager.AnonData
+import typingsSlinky.gapiClientDeploymentmanager.anon.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +30,7 @@ trait Resource extends js.Object {
   /** Output only. The URL of the actual resource. */
   var url: js.UndefOr[String] = js.native
   /** Output only. If warning messages are generated during processing of this resource, this field will be populated. */
-  var warnings: js.UndefOr[js.Array[AnonData]] = js.native
+  var warnings: js.UndefOr[js.Array[Data]] = js.native
 }
 
 object Resource {
@@ -178,7 +178,7 @@ object Resource {
         ret
     }
     @scala.inline
-    def withWarnings(value: js.Array[AnonData]): Self = {
+    def withWarnings(value: js.Array[Data]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(value.asInstanceOf[js.Any])
         ret

@@ -21,5 +21,4 @@ package object styleStyleMod {
     /* p1 */ scala.Double, 
     typingsSlinky.ol.styleStyleMod.Style | js.Array[typingsSlinky.ol.styleStyleMod.Style] | scala.Unit
   ]
-  type StyleLike = typingsSlinky.ol.styleStyleMod.Style | js.Array[typingsSlinky.ol.styleStyleMod.Style] | typingsSlinky.ol.styleStyleMod.StyleFunction
 }

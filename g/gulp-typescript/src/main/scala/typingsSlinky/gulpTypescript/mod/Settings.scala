@@ -1,7 +1,7 @@
 package typingsSlinky.gulpTypescript.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.gulpTypescript.Typeofts
+import typingsSlinky.gulpTypescript.anon.Typeofts
 import typingsSlinky.gulpTypescript.typesMod.GetCustomTransformers
 import typingsSlinky.typescript.mod.CustomTransformers
 import typingsSlinky.typescript.mod.ModuleKind

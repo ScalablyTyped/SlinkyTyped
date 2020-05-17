@@ -1,6 +1,6 @@
 package typingsSlinky.purifycssWebpack.mod
 
-import typingsSlinky.purifycssWebpack.AnonInfo
+import typingsSlinky.purifycssWebpack.anon.Info
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait PurifyOptions extends js.Object {
   var minimize: js.UndefOr[Boolean] = js.native
   var moduleExtensions: js.UndefOr[js.Array[String]] = js.native
   var paths: js.UndefOr[js.Object | js.Array[String]] = js.native
-  var purifyOptions: js.UndefOr[AnonInfo] = js.native
+  var purifyOptions: js.UndefOr[Info] = js.native
   var styleExtensions: js.UndefOr[js.Array[String]] = js.native
   var verbose: js.UndefOr[Boolean] = js.native
 }
@@ -64,7 +64,7 @@ object PurifyOptions {
         ret
     }
     @scala.inline
-    def withPurifyOptions(value: AnonInfo): Self = {
+    def withPurifyOptions(value: Info): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("purifyOptions")(value.asInstanceOf[js.Any])
         ret

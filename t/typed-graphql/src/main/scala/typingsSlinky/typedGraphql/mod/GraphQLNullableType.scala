@@ -15,3 +15,20 @@ import scala.scalajs.js.annotation._
 */
 trait GraphQLNullableType extends js.Object
 
+object GraphQLNullableType {
+  @scala.inline
+  implicit def apply(value: GraphQLEnumType): GraphQLNullableType = value.asInstanceOf[GraphQLNullableType]
+  @scala.inline
+  implicit def apply(value: GraphQLInputObjectType): GraphQLNullableType = value.asInstanceOf[GraphQLNullableType]
+  @scala.inline
+  implicit def apply(value: GraphQLInterfaceType): GraphQLNullableType = value.asInstanceOf[GraphQLNullableType]
+  @scala.inline
+  implicit def apply(value: GraphQLList): GraphQLNullableType = value.asInstanceOf[GraphQLNullableType]
+  @scala.inline
+  implicit def apply(value: GraphQLObjectType): GraphQLNullableType = value.asInstanceOf[GraphQLNullableType]
+  @scala.inline
+  implicit def apply(value: GraphQLScalarType): GraphQLNullableType = value.asInstanceOf[GraphQLNullableType]
+  @scala.inline
+  implicit def apply(value: GraphQLUnionType): GraphQLNullableType = value.asInstanceOf[GraphQLNullableType]
+}
+

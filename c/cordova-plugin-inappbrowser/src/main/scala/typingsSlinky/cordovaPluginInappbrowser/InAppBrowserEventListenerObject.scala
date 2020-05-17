@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait InAppBrowserEventListenerObject extends js.Object {
+trait InAppBrowserEventListenerObject extends InAppBrowserEventListenerOrEventListenerObject {
   def handleEvent(evt: InAppBrowserEvent): Unit = js.native
 }
 

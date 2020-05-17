@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,9 +13,4 @@ trait HTMLPreElement extends HTMLElement {
   /** @deprecated */
   var width: Double = js.native
 }
-
-@JSGlobal("HTMLPreElement")
-@js.native
-object HTMLPreElement
-  extends Instantiable0[org.scalajs.dom.raw.HTMLPreElement]
 

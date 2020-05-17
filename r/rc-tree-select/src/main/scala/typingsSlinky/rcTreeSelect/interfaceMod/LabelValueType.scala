@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LabelValueType extends js.Object {
+trait LabelValueType extends DefaultValueType {
   /** Only works on `treeCheckStrictly` */
   var halfChecked: js.UndefOr[Boolean] = js.native
   var key: js.UndefOr[Key] = js.native

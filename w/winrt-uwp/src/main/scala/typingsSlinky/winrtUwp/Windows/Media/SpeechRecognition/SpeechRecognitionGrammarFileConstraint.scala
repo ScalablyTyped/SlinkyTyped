@@ -6,20 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A constraint for a SpeechRecognizer object based on a Speech Recognition Grammar Specification (SRGS) file. */
-@JSGlobal("Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint")
 @js.native
-class SpeechRecognitionGrammarFileConstraint protected () extends js.Object {
-  /**
-    * Creates an instance of the SpeechRecognitionGrammarFileConstraint class from a file object.
-    * @param file An object representing a SRGS grammar file.
-    */
-  def this(file: StorageFile) = this()
-  /**
-    * Creates an instance of the SpeechRecognitionGrammarFileConstraint class from a file object and a tag.
-    * @param file An object representing a SRGS grammar file.
-    * @param tag The tag to assign to the constraint.
-    */
-  def this(file: StorageFile, tag: String) = this()
+trait SpeechRecognitionGrammarFileConstraint extends js.Object {
   /** Gets the StorageFile object representing the Speech Recognition Grammar Specification (SRGS) grammar file. */
   var grammarFile: StorageFile = js.native
   /** Gets or sets whether the constraint can be used by the speech recognizer to perform recognition. */
@@ -30,5 +18,58 @@ class SpeechRecognitionGrammarFileConstraint protected () extends js.Object {
   var tag: String = js.native
   /** Gets the type of the constraint. */
   var `type`: SpeechRecognitionConstraintType = js.native
+}
+
+object SpeechRecognitionGrammarFileConstraint {
+  @scala.inline
+  def apply(
+    grammarFile: StorageFile,
+    isEnabled: Boolean,
+    probability: SpeechRecognitionConstraintProbability,
+    tag: String,
+    `type`: SpeechRecognitionConstraintType
+  ): SpeechRecognitionGrammarFileConstraint = {
+    val __obj = js.Dynamic.literal(grammarFile = grammarFile.asInstanceOf[js.Any], isEnabled = isEnabled.asInstanceOf[js.Any], probability = probability.asInstanceOf[js.Any], tag = tag.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SpeechRecognitionGrammarFileConstraint]
+  }
+  @scala.inline
+  implicit class SpeechRecognitionGrammarFileConstraintOps[Self <: SpeechRecognitionGrammarFileConstraint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGrammarFile(value: StorageFile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("grammarFile")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProbability(value: SpeechRecognitionConstraintProbability): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("probability")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: SpeechRecognitionConstraintType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

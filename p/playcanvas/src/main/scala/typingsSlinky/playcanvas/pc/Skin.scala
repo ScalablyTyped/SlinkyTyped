@@ -14,9 +14,6 @@ import scala.scalajs.js.annotation._
   * @param {pc.Mat4[]} ibp - The array of inverse bind matrices.
   * @param {string[]} boneNames - The array of bone names for the bones referenced by this skin.
   */
-@JSGlobal("pc.Skin")
 @js.native
-class Skin protected () extends js.Object {
-  def this(graphicsDevice: GraphicsDevice, ibp: js.Array[Mat4], boneNames: js.Array[String]) = this()
-}
+trait Skin extends js.Object
 

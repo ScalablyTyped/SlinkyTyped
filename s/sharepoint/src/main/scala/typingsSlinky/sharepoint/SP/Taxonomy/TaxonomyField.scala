@@ -1,7 +1,5 @@
 package typingsSlinky.sharepoint.SP.Taxonomy
 
-import typingsSlinky.sharepoint.SP.ClientContext
-import typingsSlinky.sharepoint.SP.FieldCollection
 import typingsSlinky.sharepoint.SP.FieldLookup
 import typingsSlinky.sharepoint.SP.Guid
 import typingsSlinky.sharepoint.SP.ListItem
@@ -10,10 +8,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("SP.Taxonomy.TaxonomyField")
 @js.native
-class TaxonomyField protected () extends FieldLookup {
-  def this(context: ClientContext, fields: FieldCollection, filedName: String) = this()
+trait TaxonomyField extends FieldLookup {
   def getFieldValueAsHtml(value: TaxonomyFieldValue): StringResult = js.native
   def getFieldValueAsTaxonomyFieldValue(value: String): TaxonomyFieldValue = js.native
   def getFieldValueAsTaxonomyFieldValueCollection(value: String): TaxonomyFieldValueCollection = js.native

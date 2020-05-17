@@ -2,7 +2,7 @@ package typingsSlinky.gestalt.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.AnonValueString
+import typingsSlinky.gestalt.anon.ValueString
 import typingsSlinky.gestalt.mod.TextAreaProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -28,11 +28,11 @@ object TextArea {
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def onBlur(value: /* args */ AnonValueString => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    def onBlur(value: /* args */ ValueString => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onFocus(value: /* args */ AnonValueString => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    def onFocus(value: /* args */ ValueString => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
-    def onKeyDown(value: /* args */ AnonValueString => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    def onKeyDown(value: /* args */ ValueString => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
@@ -43,7 +43,7 @@ object TextArea {
   
   def withProps(p: TextAreaProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(id: String, onChange: AnonValueString => Unit): Builder = {
+  def apply(id: String, onChange: ValueString => Unit): Builder = {
     val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
     new Builder(js.Array(this.component, __props.asInstanceOf[TextAreaProps]))
   }

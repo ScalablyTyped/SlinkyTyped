@@ -2,8 +2,8 @@ package typingsSlinky.gun.mod.Gun
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.gun.AnonDecrypt
-import typingsSlinky.gun.AnonIfy
+import typingsSlinky.gun.anon.Decrypt
+import typingsSlinky.gun.anon.Ify
 import typingsSlinky.gun.gunStrings.pre_root
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,8 +17,8 @@ trait Constructor
       ChainReference[js.Object, js.Any, pre_root]
     ] {
   /** @see https://gun.eco/docs/SEA */
-  var SEA: AnonDecrypt = js.native
-  var node: AnonIfy = js.native
+  var SEA: Decrypt = js.native
+  var node: Ify = js.native
   /**
     * @description
     * no parameters creates a local datastore using the default persistence layer, either localStorage or Radisk.

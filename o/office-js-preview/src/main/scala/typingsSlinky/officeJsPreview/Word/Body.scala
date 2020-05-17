@@ -1,13 +1,13 @@
 package typingsSlinky.officeJsPreview.Word
 
-import typingsSlinky.officeJsPreview.AnonExpand
-import typingsSlinky.officeJsPreview.AnonIgnorePunct
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientResult
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJsPreview.Word.Interfaces.BodyData
 import typingsSlinky.officeJsPreview.Word.Interfaces.BodyLoadOptions
 import typingsSlinky.officeJsPreview.Word.Interfaces.BodyUpdateData
+import typingsSlinky.officeJsPreview.anon.Expand
+import typingsSlinky.officeJsPreview.anon.IgnorePunct
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.After
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Before
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Content
@@ -37,9 +37,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: WordApi 1.1]
   */
-@JSGlobal("Word.Body")
 @js.native
-class Body () extends ClientObject {
+trait Body extends ClientObject {
   /**
     *
     * Gets the collection of rich text content control objects in the body. Read-only.
@@ -469,8 +468,8 @@ class Body () extends ClientObject {
   def load(): Body = js.native
   def load(option: String): Body = js.native
   def load(option: js.Array[String]): Body = js.native
-  def load(option: AnonExpand): Body = js.native
   def load(option: BodyLoadOptions): Body = js.native
+  def load(option: Expand): Body = js.native
   /**
     *
     * Performs a search with the specified SearchOptions on the scope of the body object. The search results are a collection of range objects.
@@ -481,8 +480,8 @@ class Body () extends ClientObject {
     * @param searchOptions Optional. Options for the search.
     */
   def search(searchText: String): RangeCollection = js.native
-  def search(searchText: String, searchOptions: AnonIgnorePunct): RangeCollection = js.native
   def search(searchText: String, searchOptions: SearchOptions): RangeCollection = js.native
+  def search(searchText: String, searchOptions: IgnorePunct): RangeCollection = js.native
   /**
     *
     * Selects the body and navigates the Word UI to it.

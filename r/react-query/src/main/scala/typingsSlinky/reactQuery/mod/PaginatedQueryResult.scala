@@ -11,3 +11,12 @@ import scala.scalajs.js.annotation._
 */
 trait PaginatedQueryResult[TResult] extends js.Object
 
+object PaginatedQueryResult {
+  @scala.inline
+  implicit def apply[TResult](value: PaginatedQueryErrorResult[TResult]): PaginatedQueryResult[TResult] = value.asInstanceOf[PaginatedQueryResult[TResult]]
+  @scala.inline
+  implicit def apply[TResult](value: PaginatedQueryLoadingResult[TResult]): PaginatedQueryResult[TResult] = value.asInstanceOf[PaginatedQueryResult[TResult]]
+  @scala.inline
+  implicit def apply[TResult](value: PaginatedQuerySuccessResult[TResult]): PaginatedQueryResult[TResult] = value.asInstanceOf[PaginatedQueryResult[TResult]]
+}
+

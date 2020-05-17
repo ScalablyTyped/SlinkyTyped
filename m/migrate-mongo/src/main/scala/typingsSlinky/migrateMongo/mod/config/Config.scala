@@ -1,6 +1,6 @@
 package typingsSlinky.migrateMongo.mod.config
 
-import typingsSlinky.migrateMongo.AnonDatabaseName
+import typingsSlinky.migrateMongo.anon.DatabaseName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,12 +15,12 @@ trait Config extends js.Object {
     * The migrations dir, can be an relative or absolute path.
     */
   var migrationsDir: js.UndefOr[String] = js.native
-  var mongodb: AnonDatabaseName = js.native
+  var mongodb: DatabaseName = js.native
 }
 
 object Config {
   @scala.inline
-  def apply(changelogCollectionName: String, mongodb: AnonDatabaseName): Config = {
+  def apply(changelogCollectionName: String, mongodb: DatabaseName): Config = {
     val __obj = js.Dynamic.literal(changelogCollectionName = changelogCollectionName.asInstanceOf[js.Any], mongodb = mongodb.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config]
   }
@@ -37,7 +37,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withMongodb(value: AnonDatabaseName): Self = {
+    def withMongodb(value: DatabaseName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mongodb")(value.asInstanceOf[js.Any])
         ret

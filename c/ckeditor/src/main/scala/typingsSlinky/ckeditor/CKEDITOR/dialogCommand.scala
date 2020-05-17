@@ -1,15 +1,33 @@
 package typingsSlinky.ckeditor.CKEDITOR
 
-import typingsSlinky.ckeditor.AnonTabId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("CKEDITOR.dialogCommand")
 @js.native
-class dialogCommand protected () extends js.Object {
-  def this(dialogName: String) = this()
-  def this(dialogName: String, ext: AnonTabId) = this()
+trait dialogCommand extends js.Object {
   var value: js.Any = js.native
+}
+
+object dialogCommand {
+  @scala.inline
+  def apply(value: js.Any): dialogCommand = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[dialogCommand]
+  }
+  @scala.inline
+  implicit class dialogCommandOps[Self <: dialogCommand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

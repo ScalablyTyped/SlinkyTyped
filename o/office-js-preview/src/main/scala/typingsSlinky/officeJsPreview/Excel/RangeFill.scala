@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.RangeFillData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.RangeFillLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.RangeFillUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Checker
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.CrissCross
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Down
@@ -37,9 +37,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.RangeFill")
 @js.native
-class RangeFill () extends ClientObject {
+trait RangeFill extends ClientObject {
   /**
     *
     * HTML color code representing the color of the background, of the form #RRGGBB (e.g. "FFA500") or as a named HTML color (e.g. "orange")
@@ -95,7 +94,7 @@ class RangeFill () extends ClientObject {
     */
   def load(): RangeFill = js.native
   def load(options: RangeFillLoadOptions): RangeFill = js.native
-  def load(propertyNamesAndPaths: AnonExpand): RangeFill = js.native
+  def load(propertyNamesAndPaths: Expand): RangeFill = js.native
   def load(propertyNames: String): RangeFill = js.native
   def load(propertyNames: js.Array[String]): RangeFill = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

@@ -2,9 +2,9 @@ package typingsSlinky.swaggerStats.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Record
-import typingsSlinky.swaggerStats.AnonDeprecated
-import typingsSlinky.swaggerStats.AnonHostname
-import typingsSlinky.swaggerStats.AnonRequest
+import typingsSlinky.swaggerStats.anon.Deprecated
+import typingsSlinky.swaggerStats.anon.Hostname
+import typingsSlinky.swaggerStats.anon.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,14 +13,14 @@ import scala.scalajs.js.annotation._
 trait RequestResponseRecord
   extends /* field */ StringDictionary[js.Any] {
   var `@timestamp`: String = js.native
-  var api: AnonDeprecated = js.native
+  var api: Deprecated = js.native
   var attrs: js.UndefOr[Record[String, String]] = js.native
   var attrsint: js.UndefOr[Record[String, Double]] = js.native
   var endts: Double = js.native
-  var http: AnonRequest = js.native
+  var http: Request = js.native
   var ip: String = js.native
   var method: String = js.native
-  var node: AnonHostname = js.native
+  var node: Hostname = js.native
   var path: String = js.native
   var port: String = js.native
   var query: String = js.native
@@ -33,12 +33,12 @@ object RequestResponseRecord {
   @scala.inline
   def apply(
     `@timestamp`: String,
-    api: AnonDeprecated,
+    api: Deprecated,
     endts: Double,
-    http: AnonRequest,
+    http: Request,
     ip: String,
     method: String,
-    node: AnonHostname,
+    node: Hostname,
     path: String,
     port: String,
     query: String,
@@ -63,7 +63,7 @@ object RequestResponseRecord {
         ret
     }
     @scala.inline
-    def withApi(value: AnonDeprecated): Self = {
+    def withApi(value: Deprecated): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("api")(value.asInstanceOf[js.Any])
         ret
@@ -75,7 +75,7 @@ object RequestResponseRecord {
         ret
     }
     @scala.inline
-    def withHttp(value: AnonRequest): Self = {
+    def withHttp(value: Request): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("http")(value.asInstanceOf[js.Any])
         ret
@@ -93,7 +93,7 @@ object RequestResponseRecord {
         ret
     }
     @scala.inline
-    def withNode(value: AnonHostname): Self = {
+    def withNode(value: Hostname): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
         ret

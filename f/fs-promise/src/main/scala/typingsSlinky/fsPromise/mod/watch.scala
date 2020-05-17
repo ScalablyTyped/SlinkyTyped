@@ -1,8 +1,8 @@
 package typingsSlinky.fsPromise.mod
 
-import typingsSlinky.mz.AnonEncodingPersistent
-import typingsSlinky.mz.AnonPersistent
-import typingsSlinky.mz.AnonRecursive
+import typingsSlinky.mz.anon.EncodingPersistent
+import typingsSlinky.mz.anon.Persistent
+import typingsSlinky.mz.anon.Recursive
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.fsMod.FSWatcher
@@ -16,11 +16,6 @@ import scala.scalajs.js.annotation._
 object watch extends js.Object {
   def apply(filename: PathLike): FSWatcher = js.native
   def apply(filename: PathLike, listener: js.Function2[/* event */ String, /* filename */ String, _]): FSWatcher = js.native
-  def apply(
-    filename: PathLike,
-    options: js.UndefOr[scala.Nothing],
-    listener: js.Function2[/* event */ String, /* filename */ String, Unit]
-  ): FSWatcher = js.native
   def apply(filename: PathLike, options: String): FSWatcher = js.native
   def apply(
     filename: PathLike,
@@ -32,67 +27,22 @@ object watch extends js.Object {
     options: Null,
     listener: js.Function2[/* event */ String, Buffer | (/* filename */ String), Unit]
   ): FSWatcher = js.native
-  def apply(filename: PathLike, options: AnonEncodingPersistent): FSWatcher = js.native
+  def apply(filename: PathLike, options: EncodingPersistent): FSWatcher = js.native
   def apply(
     filename: PathLike,
-    options: AnonEncodingPersistent,
+    options: EncodingPersistent,
     listener: js.Function2[/* event */ String, /* filename */ String | Buffer, Unit]
   ): FSWatcher = js.native
-  def apply(filename: PathLike, options: AnonPersistent): FSWatcher = js.native
+  def apply(filename: PathLike, options: Persistent): FSWatcher = js.native
   def apply(
     filename: PathLike,
-    options: AnonPersistent,
+    options: Persistent,
     listener: js.Function2[/* event */ String, /* filename */ String, Unit]
   ): FSWatcher = js.native
-  def apply(filename: PathLike, options: AnonRecursive): FSWatcher = js.native
+  def apply(filename: PathLike, options: Recursive): FSWatcher = js.native
   def apply(
     filename: PathLike,
-    options: AnonRecursive,
-    listener: js.Function2[/* event */ String, /* filename */ Buffer, Unit]
-  ): FSWatcher = js.native
-  /**
-    * Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`.
-    * @param filename A path to a file or directory. If a URL is provided, it must use the `file:` protocol.
-    * URL support is _experimental_.
-    * @param options Either the encoding for the filename provided to the listener, or an object optionally specifying encoding, persistent, and recursive options.
-    * If `encoding` is not supplied, the default of `'utf8'` is used.
-    * If `persistent` is not supplied, the default of `true` is used.
-    * If `recursive` is not supplied, the default of `false` is used.
-    */
-  def apply(filename: PathLike, options: typingsSlinky.node.AnonEncodingPersistent): FSWatcher = js.native
-  def apply(
-    filename: PathLike,
-    options: typingsSlinky.node.AnonEncodingPersistent,
-    listener: js.Function2[/* event */ String, /* filename */ String | Buffer, Unit]
-  ): FSWatcher = js.native
-  /**
-    * Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`.
-    * @param filename A path to a file or directory. If a URL is provided, it must use the `file:` protocol.
-    * URL support is _experimental_.
-    * @param options Either the encoding for the filename provided to the listener, or an object optionally specifying encoding, persistent, and recursive options.
-    * If `encoding` is not supplied, the default of `'utf8'` is used.
-    * If `persistent` is not supplied, the default of `true` is used.
-    * If `recursive` is not supplied, the default of `false` is used.
-    */
-  def apply(filename: PathLike, options: typingsSlinky.node.AnonPersistent): FSWatcher = js.native
-  def apply(
-    filename: PathLike,
-    options: typingsSlinky.node.AnonPersistent,
-    listener: js.Function2[/* event */ String, /* filename */ String, Unit]
-  ): FSWatcher = js.native
-  /**
-    * Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`.
-    * @param filename A path to a file or directory. If a URL is provided, it must use the `file:` protocol.
-    * URL support is _experimental_.
-    * @param options Either the encoding for the filename provided to the listener, or an object optionally specifying encoding, persistent, and recursive options.
-    * If `encoding` is not supplied, the default of `'utf8'` is used.
-    * If `persistent` is not supplied, the default of `true` is used.
-    * If `recursive` is not supplied, the default of `false` is used.
-    */
-  def apply(filename: PathLike, options: typingsSlinky.node.AnonRecursive): FSWatcher = js.native
-  def apply(
-    filename: PathLike,
-    options: typingsSlinky.node.AnonRecursive,
+    options: Recursive,
     listener: js.Function2[/* event */ String, /* filename */ Buffer, Unit]
   ): FSWatcher = js.native
   def apply(filename: PathLike, options: BufferEncoding): FSWatcher = js.native
@@ -100,6 +50,42 @@ object watch extends js.Object {
     filename: PathLike,
     options: BufferEncoding,
     listener: js.Function2[/* event */ String, /* filename */ String, Unit]
+  ): FSWatcher = js.native
+  /**
+    * Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`.
+    * @param filename A path to a file or directory. If a URL is provided, it must use the `file:` protocol.
+    * URL support is _experimental_.
+    * @param options Either the encoding for the filename provided to the listener, or an object optionally specifying encoding, persistent, and recursive options.
+    * If `encoding` is not supplied, the default of `'utf8'` is used.
+    * If `persistent` is not supplied, the default of `true` is used.
+    * If `recursive` is not supplied, the default of `false` is used.
+    */
+  def apply(filename: PathLike, options: typingsSlinky.node.anon.EncodingPersistent): FSWatcher = js.native
+  def apply(
+    filename: PathLike,
+    options: typingsSlinky.node.anon.EncodingPersistent,
+    listener: js.Function2[/* event */ String, /* filename */ String | Buffer, Unit]
+  ): FSWatcher = js.native
+  def apply(filename: PathLike, options: typingsSlinky.node.anon.Persistent): FSWatcher = js.native
+  def apply(
+    filename: PathLike,
+    options: typingsSlinky.node.anon.Persistent,
+    listener: js.Function2[/* event */ String, /* filename */ String, Unit]
+  ): FSWatcher = js.native
+  /**
+    * Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`.
+    * @param filename A path to a file or directory. If a URL is provided, it must use the `file:` protocol.
+    * URL support is _experimental_.
+    * @param options Either the encoding for the filename provided to the listener, or an object optionally specifying encoding, persistent, and recursive options.
+    * If `encoding` is not supplied, the default of `'utf8'` is used.
+    * If `persistent` is not supplied, the default of `true` is used.
+    * If `recursive` is not supplied, the default of `false` is used.
+    */
+  def apply(filename: PathLike, options: typingsSlinky.node.anon.Recursive): FSWatcher = js.native
+  def apply(
+    filename: PathLike,
+    options: typingsSlinky.node.anon.Recursive,
+    listener: js.Function2[/* event */ String, /* filename */ Buffer, Unit]
   ): FSWatcher = js.native
 }
 

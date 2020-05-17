@@ -8,9 +8,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a sequential-access output stream that indicates a request for the data stream of a StorageFile that was created by calling CreateStreamedFileAsync or ReplaceWithStreamedFileAsync . */
-@JSGlobal("Windows.Storage.StreamedFileDataRequest")
 @js.native
-abstract class StreamedFileDataRequest () extends js.Object {
+trait StreamedFileDataRequest extends js.Object {
   /** Releases system resources that are exposed by the current stream indicating that the data request is complete. */
   def close(): Unit = js.native
   /**
@@ -29,5 +28,50 @@ abstract class StreamedFileDataRequest () extends js.Object {
     * @return When this method completes, it returns the number of bytes (type UInt32 ) that were written to the stream. If the app specifies a function to monitor progress, that function receives the number of bytes (type UInt32) written so far.
     */
   def writeAsync(buffer: IBuffer): IPromiseWithIAsyncOperationWithProgress[Double, Double] = js.native
+}
+
+object StreamedFileDataRequest {
+  @scala.inline
+  def apply(
+    close: () => Unit,
+    failAndClose: StreamedFileFailureMode => Unit,
+    flushAsync: () => IPromiseWithIAsyncOperation[Boolean],
+    writeAsync: IBuffer => IPromiseWithIAsyncOperationWithProgress[Double, Double]
+  ): StreamedFileDataRequest = {
+    val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), failAndClose = js.Any.fromFunction1(failAndClose), flushAsync = js.Any.fromFunction0(flushAsync), writeAsync = js.Any.fromFunction1(writeAsync))
+    __obj.asInstanceOf[StreamedFileDataRequest]
+  }
+  @scala.inline
+  implicit class StreamedFileDataRequestOps[Self <: StreamedFileDataRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withFailAndClose(value: StreamedFileFailureMode => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failAndClose")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFlushAsync(value: () => IPromiseWithIAsyncOperation[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flushAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withWriteAsync(value: IBuffer => IPromiseWithIAsyncOperationWithProgress[Double, Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

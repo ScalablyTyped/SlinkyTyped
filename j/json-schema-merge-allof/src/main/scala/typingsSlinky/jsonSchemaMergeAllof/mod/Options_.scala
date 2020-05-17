@@ -1,6 +1,6 @@
 package typingsSlinky.jsonSchemaMergeAllof.mod
 
-import typingsSlinky.jsonSchemaMergeAllof.AnonDefaultResolver
+import typingsSlinky.jsonSchemaMergeAllof.anon.DefaultResolver
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -49,7 +49,7 @@ trait Options_[Schema /* <: JSONSchema */] extends js.Object {
     *   schemas
     * - **options** the options mergeAllOf was called with
     */
-  var resolvers: js.UndefOr[Partial[Resolvers[Schema]] with AnonDefaultResolver[Schema]] = js.native
+  var resolvers: js.UndefOr[Partial[Resolvers[Schema]] with DefaultResolver[Schema]] = js.native
 }
 
 object Options_ {
@@ -77,7 +77,7 @@ object Options_ {
         ret
     }
     @scala.inline
-    def withResolvers(value: Partial[Resolvers[Schema]] with AnonDefaultResolver[Schema]): Self[Schema] = {
+    def withResolvers(value: Partial[Resolvers[Schema]] with DefaultResolver[Schema]): Self[Schema] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resolvers")(value.asInstanceOf[js.Any])
         ret

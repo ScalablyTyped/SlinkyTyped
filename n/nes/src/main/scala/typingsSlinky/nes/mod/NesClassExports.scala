@@ -1,18 +1,18 @@
 package typingsSlinky.nes.mod
 
-import typingsSlinky.nes.AnonInstantiable
+import typingsSlinky.nes.anon.Instantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait NesClassExports extends js.Object {
-  var Client: AnonInstantiable = js.native
+  var Client: Instantiable = js.native
 }
 
 object NesClassExports {
   @scala.inline
-  def apply(Client: AnonInstantiable): NesClassExports = {
+  def apply(Client: Instantiable): NesClassExports = {
     val __obj = js.Dynamic.literal(Client = Client.asInstanceOf[js.Any])
     __obj.asInstanceOf[NesClassExports]
   }
@@ -23,7 +23,7 @@ object NesClassExports {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClient(value: AnonInstantiable): Self = {
+    def withClient(value: Instantiable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Client")(value.asInstanceOf[js.Any])
         ret

@@ -3,7 +3,7 @@ package typingsSlinky.idyllDocument.mod
 import slinky.core.ReactComponentClass
 import typingsSlinky.idyllCompiler.mod.AST
 import typingsSlinky.idyllCompiler.mod.Options
-import typingsSlinky.idyllDocument.AnonChildren
+import typingsSlinky.idyllDocument.anon.Children
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +32,7 @@ trait IdyllDocumentProps extends js.Object {
   /**
     * The React component rendered when an error occurs
     */
-  var errorComponent: js.UndefOr[ReactComponentClass[AnonChildren]] = js.native
+  var errorComponent: js.UndefOr[ReactComponentClass[Children]] = js.native
   var initialState: js.UndefOr[js.Any] = js.native
   /**
     * The layout for idyll document
@@ -121,19 +121,19 @@ object IdyllDocumentProps {
         ret
     }
     @scala.inline
-    def withErrorComponentFunctionComponent(value: ReactComponentClass[AnonChildren]): Self = {
+    def withErrorComponentFunctionComponent(value: ReactComponentClass[Children]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("errorComponent")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withErrorComponentComponentClass(value: ReactComponentClass[AnonChildren]): Self = {
+    def withErrorComponentComponentClass(value: ReactComponentClass[Children]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("errorComponent")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withErrorComponent(value: ReactComponentClass[AnonChildren]): Self = {
+    def withErrorComponent(value: ReactComponentClass[Children]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("errorComponent")(value.asInstanceOf[js.Any])
         ret

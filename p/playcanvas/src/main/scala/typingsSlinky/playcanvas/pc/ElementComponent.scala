@@ -81,10 +81,8 @@ import scala.scalajs.js.annotation._
   * @property {number} rangeStart Index of the first character to render. Only works for {@link pc.ELEMENTTYPE_TEXT} types.
   * @property {number} rangeEnd Index of the last character to render. Only works for {@link pc.ELEMENTTYPE_TEXT} types.
   */
-@JSGlobal("pc.ElementComponent")
 @js.native
-class ElementComponent protected () extends Component {
-  def this(system: ElementComponentSystem, entity: Entity) = this()
+trait ElementComponent extends Component {
   /**
     * The horizontal and vertical alignment of the text. Values range from 0 to 1 where [0,0] is the bottom left and [1,1] is the top right.  Only works for {@link pc.ELEMENTTYPE_TEXT} types.
     */

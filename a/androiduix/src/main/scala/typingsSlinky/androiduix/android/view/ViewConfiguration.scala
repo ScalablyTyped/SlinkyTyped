@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.view.ViewConfiguration")
 @js.native
-class ViewConfiguration () extends js.Object {
+trait ViewConfiguration extends js.Object {
   var density: js.Any = js.native
   var mDoubleTapSlop: Double = js.native
   var mDoubleTapTouchSlop: Double = js.native
@@ -37,48 +36,216 @@ class ViewConfiguration () extends js.Object {
   def getScaledWindowTouchSlop(): Double = js.native
 }
 
-/* static members */
-@JSGlobal("android.view.ViewConfiguration")
-@js.native
-object ViewConfiguration extends js.Object {
-  var DEFAULT_LONG_PRESS_TIMEOUT: js.Any = js.native
-  var DOUBLE_TAP_MIN_TIME: js.Any = js.native
-  var DOUBLE_TAP_SLOP: js.Any = js.native
-  var DOUBLE_TAP_TIMEOUT: js.Any = js.native
-  var DOUBLE_TAP_TOUCH_SLOP: js.Any = js.native
-  var EDGE_SLOP: Double = js.native
-  var FADING_EDGE_LENGTH: js.Any = js.native
-  var GLOBAL_ACTIONS_KEY_TIMEOUT: js.Any = js.native
-  var HOVER_TAP_SLOP: js.Any = js.native
-  var HOVER_TAP_TIMEOUT: js.Any = js.native
-  var JUMP_TAP_TIMEOUT: js.Any = js.native
-  var KEY_REPEAT_DELAY: js.Any = js.native
-  var MAXIMUM_FLING_VELOCITY: js.Any = js.native
-  var MINIMUM_FLING_VELOCITY: js.Any = js.native
-  var OVERFLING_DISTANCE: js.Any = js.native
-  var OVERSCROLL_DISTANCE: js.Any = js.native
-  var PAGING_TOUCH_SLOP: js.Any = js.native
-  var PRESSED_STATE_DURATION: js.Any = js.native
-  var SCROLL_BAR_DEFAULT_DELAY: js.Any = js.native
-  var SCROLL_BAR_FADE_DURATION: js.Any = js.native
-  var SCROLL_BAR_SIZE: js.Any = js.native
-  var SCROLL_FRICTION: js.Any = js.native
-  var TAP_TIMEOUT: js.Any = js.native
-  var TOUCH_SLOP: js.Any = js.native
-  var WINDOW_TOUCH_SLOP: js.Any = js.native
-  var ZOOM_CONTROLS_TIMEOUT: js.Any = js.native
-  var instance: ViewConfiguration = js.native
-  def get(): ViewConfiguration = js.native
-  def get(arg: js.Any): ViewConfiguration = js.native
-  def getDoubleTapMinTime(): Double = js.native
-  def getDoubleTapTimeout(): Double = js.native
-  def getJumpTapTimeout(): Double = js.native
-  def getKeyRepeatDelay(): Double = js.native
-  def getLongPressTimeout(): Double = js.native
-  def getPressedStateDuration(): Double = js.native
-  def getScrollBarFadeDuration(): Double = js.native
-  def getScrollDefaultDelay(): Double = js.native
-  def getScrollFriction(): Double = js.native
-  def getTapTimeout(): Double = js.native
+object ViewConfiguration {
+  @scala.inline
+  def apply(
+    density: js.Any,
+    getScaledDoubleTapSlop: () => Double,
+    getScaledDoubleTapTouchSlop: () => Double,
+    getScaledEdgeSlop: () => Double,
+    getScaledFadingEdgeLength: () => Double,
+    getScaledMaximumDrawingCacheSize: () => Double,
+    getScaledMaximumFlingVelocity: () => Double,
+    getScaledMinimumFlingVelocity: () => Double,
+    getScaledOverflingDistance: () => Double,
+    getScaledOverscrollDistance: () => Double,
+    getScaledPagingTouchSlop: () => Double,
+    getScaledScrollBarSize: () => Double,
+    getScaledTouchSlop: () => Double,
+    getScaledWindowTouchSlop: () => Double,
+    mDoubleTapSlop: Double,
+    mDoubleTapTouchSlop: Double,
+    mEdgeSlop: Double,
+    mFadingEdgeLength: Double,
+    mMaximumDrawingCacheSize: Double,
+    mMaximumFlingVelocity: Double,
+    mMinimumFlingVelocity: Double,
+    mOverflingDistance: Double,
+    mOverscrollDistance: Double,
+    mPagingTouchSlop: Double,
+    mScrollbarSize: Double,
+    mTouchSlop: Double,
+    mWindowTouchSlop: Double,
+    sizeAndDensity: js.Any
+  ): ViewConfiguration = {
+    val __obj = js.Dynamic.literal(density = density.asInstanceOf[js.Any], getScaledDoubleTapSlop = js.Any.fromFunction0(getScaledDoubleTapSlop), getScaledDoubleTapTouchSlop = js.Any.fromFunction0(getScaledDoubleTapTouchSlop), getScaledEdgeSlop = js.Any.fromFunction0(getScaledEdgeSlop), getScaledFadingEdgeLength = js.Any.fromFunction0(getScaledFadingEdgeLength), getScaledMaximumDrawingCacheSize = js.Any.fromFunction0(getScaledMaximumDrawingCacheSize), getScaledMaximumFlingVelocity = js.Any.fromFunction0(getScaledMaximumFlingVelocity), getScaledMinimumFlingVelocity = js.Any.fromFunction0(getScaledMinimumFlingVelocity), getScaledOverflingDistance = js.Any.fromFunction0(getScaledOverflingDistance), getScaledOverscrollDistance = js.Any.fromFunction0(getScaledOverscrollDistance), getScaledPagingTouchSlop = js.Any.fromFunction0(getScaledPagingTouchSlop), getScaledScrollBarSize = js.Any.fromFunction0(getScaledScrollBarSize), getScaledTouchSlop = js.Any.fromFunction0(getScaledTouchSlop), getScaledWindowTouchSlop = js.Any.fromFunction0(getScaledWindowTouchSlop), mDoubleTapSlop = mDoubleTapSlop.asInstanceOf[js.Any], mDoubleTapTouchSlop = mDoubleTapTouchSlop.asInstanceOf[js.Any], mEdgeSlop = mEdgeSlop.asInstanceOf[js.Any], mFadingEdgeLength = mFadingEdgeLength.asInstanceOf[js.Any], mMaximumDrawingCacheSize = mMaximumDrawingCacheSize.asInstanceOf[js.Any], mMaximumFlingVelocity = mMaximumFlingVelocity.asInstanceOf[js.Any], mMinimumFlingVelocity = mMinimumFlingVelocity.asInstanceOf[js.Any], mOverflingDistance = mOverflingDistance.asInstanceOf[js.Any], mOverscrollDistance = mOverscrollDistance.asInstanceOf[js.Any], mPagingTouchSlop = mPagingTouchSlop.asInstanceOf[js.Any], mScrollbarSize = mScrollbarSize.asInstanceOf[js.Any], mTouchSlop = mTouchSlop.asInstanceOf[js.Any], mWindowTouchSlop = mWindowTouchSlop.asInstanceOf[js.Any], sizeAndDensity = sizeAndDensity.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ViewConfiguration]
+  }
+  @scala.inline
+  implicit class ViewConfigurationOps[Self <: ViewConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDensity(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("density")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetScaledDoubleTapSlop(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledDoubleTapSlop")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetScaledDoubleTapTouchSlop(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledDoubleTapTouchSlop")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetScaledEdgeSlop(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledEdgeSlop")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetScaledFadingEdgeLength(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledFadingEdgeLength")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetScaledMaximumDrawingCacheSize(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledMaximumDrawingCacheSize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetScaledMaximumFlingVelocity(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledMaximumFlingVelocity")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetScaledMinimumFlingVelocity(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledMinimumFlingVelocity")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetScaledOverflingDistance(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledOverflingDistance")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetScaledOverscrollDistance(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledOverscrollDistance")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetScaledPagingTouchSlop(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledPagingTouchSlop")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetScaledScrollBarSize(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledScrollBarSize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetScaledTouchSlop(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledTouchSlop")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetScaledWindowTouchSlop(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaledWindowTouchSlop")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withMDoubleTapSlop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mDoubleTapSlop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMDoubleTapTouchSlop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mDoubleTapTouchSlop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMEdgeSlop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mEdgeSlop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMFadingEdgeLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mFadingEdgeLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMMaximumDrawingCacheSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mMaximumDrawingCacheSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMMaximumFlingVelocity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mMaximumFlingVelocity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMMinimumFlingVelocity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mMinimumFlingVelocity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMOverflingDistance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mOverflingDistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMOverscrollDistance(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mOverscrollDistance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMPagingTouchSlop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mPagingTouchSlop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMScrollbarSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mScrollbarSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMTouchSlop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mTouchSlop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMWindowTouchSlop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mWindowTouchSlop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSizeAndDensity(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeAndDensity")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

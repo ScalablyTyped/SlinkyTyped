@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientLicensing.gapi.client.licensing
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientLicensing.AnonAlt
-import typingsSlinky.gapiClientLicensing.AnonCustomerId
-import typingsSlinky.gapiClientLicensing.AnonFields
-import typingsSlinky.gapiClientLicensing.AnonKey
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientLicensing.anon.Alt
+import typingsSlinky.gapiClientLicensing.anon.CustomerId
+import typingsSlinky.gapiClientLicensing.anon.Fields
+import typingsSlinky.gapiClientLicensing.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,31 +12,31 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LicenseAssignmentsResource extends js.Object {
   /** Revoke License. */
-  def delete(request: AnonAlt): Request_[Unit] = js.native
+  def delete(request: Alt): Request[Unit] = js.native
   /** Get license assignment of a particular product and sku for a user */
-  def get(request: AnonAlt): Request_[LicenseAssignment] = js.native
+  def get(request: Alt): Request[LicenseAssignment] = js.native
   /** Assign License. */
-  def insert(request: AnonFields): Request_[LicenseAssignment] = js.native
+  def insert(request: Fields): Request[LicenseAssignment] = js.native
   /** List license assignments for given product of the customer. */
-  def listForProduct(request: AnonCustomerId): Request_[LicenseAssignmentList] = js.native
+  def listForProduct(request: CustomerId): Request[LicenseAssignmentList] = js.native
   /** List license assignments for given product and sku of the customer. */
-  def listForProductAndSku(request: AnonKey): Request_[LicenseAssignmentList] = js.native
+  def listForProductAndSku(request: Key): Request[LicenseAssignmentList] = js.native
   /** Assign License. This method supports patch semantics. */
-  def patch(request: AnonAlt): Request_[LicenseAssignment] = js.native
+  def patch(request: Alt): Request[LicenseAssignment] = js.native
   /** Assign License. */
-  def update(request: AnonAlt): Request_[LicenseAssignment] = js.native
+  def update(request: Alt): Request[LicenseAssignment] = js.native
 }
 
 object LicenseAssignmentsResource {
   @scala.inline
   def apply(
-    delete: AnonAlt => Request_[Unit],
-    get: AnonAlt => Request_[LicenseAssignment],
-    insert: AnonFields => Request_[LicenseAssignment],
-    listForProduct: AnonCustomerId => Request_[LicenseAssignmentList],
-    listForProductAndSku: AnonKey => Request_[LicenseAssignmentList],
-    patch: AnonAlt => Request_[LicenseAssignment],
-    update: AnonAlt => Request_[LicenseAssignment]
+    delete: Alt => Request[Unit],
+    get: Alt => Request[LicenseAssignment],
+    insert: Fields => Request[LicenseAssignment],
+    listForProduct: CustomerId => Request[LicenseAssignmentList],
+    listForProductAndSku: Key => Request[LicenseAssignmentList],
+    patch: Alt => Request[LicenseAssignment],
+    update: Alt => Request[LicenseAssignment]
   ): LicenseAssignmentsResource = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), listForProduct = js.Any.fromFunction1(listForProduct), listForProductAndSku = js.Any.fromFunction1(listForProductAndSku), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[LicenseAssignmentsResource]
@@ -48,43 +48,43 @@ object LicenseAssignmentsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDelete(value: AnonAlt => Request_[Unit]): Self = {
+    def withDelete(value: Alt => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonAlt => Request_[LicenseAssignment]): Self = {
+    def withGet(value: Alt => Request[LicenseAssignment]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withInsert(value: AnonFields => Request_[LicenseAssignment]): Self = {
+    def withInsert(value: Fields => Request[LicenseAssignment]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withListForProduct(value: AnonCustomerId => Request_[LicenseAssignmentList]): Self = {
+    def withListForProduct(value: CustomerId => Request[LicenseAssignmentList]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("listForProduct")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withListForProductAndSku(value: AnonKey => Request_[LicenseAssignmentList]): Self = {
+    def withListForProductAndSku(value: Key => Request[LicenseAssignmentList]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("listForProductAndSku")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPatch(value: AnonAlt => Request_[LicenseAssignment]): Self = {
+    def withPatch(value: Alt => Request[LicenseAssignment]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonAlt => Request_[LicenseAssignment]): Self = {
+    def withUpdate(value: Alt => Request[LicenseAssignment]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

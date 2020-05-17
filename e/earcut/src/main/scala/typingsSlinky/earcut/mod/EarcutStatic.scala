@@ -1,6 +1,6 @@
 package typingsSlinky.earcut.mod
 
-import typingsSlinky.earcut.AnonDimensions
+import typingsSlinky.earcut.anon.Dimensions
 import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -38,12 +38,6 @@ trait EarcutStatic extends js.Object {
   def default(vertices: ArrayLike[Double]): js.Array[Double] = js.native
   def default(vertices: ArrayLike[Double], holes: ArrayLike[Double]): js.Array[Double] = js.native
   def default(vertices: ArrayLike[Double], holes: ArrayLike[Double], dimensions: Double): js.Array[Double] = js.native
-  def deviation(
-    vertices: ArrayLike[Double],
-    holes: js.UndefOr[scala.Nothing],
-    dimensions: Double,
-    triangles: ArrayLike[Double]
-  ): Double = js.native
   /**
   	 * Returns the relative difference between the total area of triangles and the area of the input polygon. 0 means the triangulation is fully correct.
   	 * @param vertices same as earcut
@@ -56,7 +50,7 @@ trait EarcutStatic extends js.Object {
   	 */
   def deviation(
     vertices: ArrayLike[Double],
-    holes: ArrayLike[Double],
+    holes: js.UndefOr[ArrayLike[Double]],
     dimensions: Double,
     triangles: ArrayLike[Double]
   ): Double = js.native
@@ -70,6 +64,6 @@ trait EarcutStatic extends js.Object {
   	 * 	const triangles = earcut(data.vertices, data.holes, data.dimensions);
   	 * @param data Arrays of rings, with the first being the outline and the rest holes. A ring is an array points, each point being an array of numbers.
   	 */
-  def flatten(data: ArrayLike[ArrayLike[ArrayLike[Double]]]): AnonDimensions = js.native
+  def flatten(data: ArrayLike[ArrayLike[ArrayLike[Double]]]): Dimensions = js.native
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.vscodeLanguageserverProtocol.protocolMod
 
-import typingsSlinky.vscodeLanguageserverProtocol.AnonDocumentChanges
-import typingsSlinky.vscodeLanguageserverProtocol.AnonDynamicRegistration
-import typingsSlinky.vscodeLanguageserverProtocol.AnonSymbolKind
+import typingsSlinky.vscodeLanguageserverProtocol.anon.DocumentChanges
+import typingsSlinky.vscodeLanguageserverProtocol.anon.DynamicRegistration
+import typingsSlinky.vscodeLanguageserverProtocol.anon.SymbolKind
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,23 +18,23 @@ trait WorkspaceClientCapabilities extends js.Object {
   /**
     * Capabilities specific to the `workspace/didChangeConfiguration` notification.
     */
-  var didChangeConfiguration: js.UndefOr[AnonDynamicRegistration] = js.native
+  var didChangeConfiguration: js.UndefOr[DynamicRegistration] = js.native
   /**
     * Capabilities specific to the `workspace/didChangeWatchedFiles` notification.
     */
-  var didChangeWatchedFiles: js.UndefOr[AnonDynamicRegistration] = js.native
+  var didChangeWatchedFiles: js.UndefOr[DynamicRegistration] = js.native
   /**
     * Capabilities specific to the `workspace/executeCommand` request.
     */
-  var executeCommand: js.UndefOr[AnonDynamicRegistration] = js.native
+  var executeCommand: js.UndefOr[DynamicRegistration] = js.native
   /**
     * Capabilities specific to the `workspace/symbol` request.
     */
-  var symbol: js.UndefOr[AnonSymbolKind] = js.native
+  var symbol: js.UndefOr[SymbolKind] = js.native
   /**
     * Capabilities specific to `WorkspaceEdit`s
     */
-  var workspaceEdit: js.UndefOr[AnonDocumentChanges] = js.native
+  var workspaceEdit: js.UndefOr[DocumentChanges] = js.native
 }
 
 object WorkspaceClientCapabilities {
@@ -62,7 +62,7 @@ object WorkspaceClientCapabilities {
         ret
     }
     @scala.inline
-    def withDidChangeConfiguration(value: AnonDynamicRegistration): Self = {
+    def withDidChangeConfiguration(value: DynamicRegistration): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("didChangeConfiguration")(value.asInstanceOf[js.Any])
         ret
@@ -74,7 +74,7 @@ object WorkspaceClientCapabilities {
         ret
     }
     @scala.inline
-    def withDidChangeWatchedFiles(value: AnonDynamicRegistration): Self = {
+    def withDidChangeWatchedFiles(value: DynamicRegistration): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("didChangeWatchedFiles")(value.asInstanceOf[js.Any])
         ret
@@ -86,7 +86,7 @@ object WorkspaceClientCapabilities {
         ret
     }
     @scala.inline
-    def withExecuteCommand(value: AnonDynamicRegistration): Self = {
+    def withExecuteCommand(value: DynamicRegistration): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("executeCommand")(value.asInstanceOf[js.Any])
         ret
@@ -98,7 +98,7 @@ object WorkspaceClientCapabilities {
         ret
     }
     @scala.inline
-    def withSymbol(value: AnonSymbolKind): Self = {
+    def withSymbol(value: SymbolKind): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("symbol")(value.asInstanceOf[js.Any])
         ret
@@ -110,7 +110,7 @@ object WorkspaceClientCapabilities {
         ret
     }
     @scala.inline
-    def withWorkspaceEdit(value: AnonDocumentChanges): Self = {
+    def withWorkspaceEdit(value: DocumentChanges): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("workspaceEdit")(value.asInstanceOf[js.Any])
         ret

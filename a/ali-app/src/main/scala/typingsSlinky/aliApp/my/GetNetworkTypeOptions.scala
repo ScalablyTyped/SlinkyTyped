@@ -1,6 +1,6 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonNetworkAvailable
+import typingsSlinky.aliApp.anon.NetworkAvailable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait GetNetworkTypeOptions
   extends BaseOptions[js.Any, js.Any] {
   @JSName("success")
-  var success_GetNetworkTypeOptions: js.UndefOr[js.Function1[/* res */ AnonNetworkAvailable, Unit]] = js.native
+  var success_GetNetworkTypeOptions: js.UndefOr[js.Function1[/* res */ NetworkAvailable, Unit]] = js.native
 }
 
 object GetNetworkTypeOptions {
@@ -27,7 +27,7 @@ object GetNetworkTypeOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSuccess(value: /* res */ AnonNetworkAvailable => Unit): Self = {
+    def withSuccess(value: /* res */ NetworkAvailable => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

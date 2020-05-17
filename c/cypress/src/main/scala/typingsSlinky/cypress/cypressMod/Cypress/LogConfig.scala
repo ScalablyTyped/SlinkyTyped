@@ -1,7 +1,7 @@
 package typingsSlinky.cypress.cypressMod.Cypress
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.cypress.JQuery_
+import typingsSlinky.cypress.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait LogConfig extends js.Object {
   /** The JQuery element for the command. This will highlight the command in the main window when debugging */
   @JSName("$el")
-  var $el: JQuery_[HTMLElement] = js.native
+  var $el: JQuery[HTMLElement] = js.native
   /** Override *name* for display purposes only */
   var displayName: String = js.native
   var message: js.Array[_] = js.native
@@ -23,7 +23,7 @@ trait LogConfig extends js.Object {
 object LogConfig {
   @scala.inline
   def apply(
-    $el: JQuery_[HTMLElement],
+    $el: JQuery[HTMLElement],
     consoleProps: () => ObjectLike,
     displayName: String,
     message: js.Array[_],
@@ -39,7 +39,7 @@ object LogConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with$el(value: JQuery_[HTMLElement]): Self = {
+    def with$el(value: JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("$el")(value.asInstanceOf[js.Any])
         ret

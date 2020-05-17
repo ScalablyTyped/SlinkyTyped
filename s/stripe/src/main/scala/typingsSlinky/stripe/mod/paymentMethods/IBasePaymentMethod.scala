@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.paymentMethods
 
-import typingsSlinky.stripe.AnonEmail
+import typingsSlinky.stripe.anon.Email
 import typingsSlinky.stripe.mod.IMetadata
 import typingsSlinky.stripe.mod.IResourceObject
 import typingsSlinky.stripe.mod.customers.ICustomer
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IBasePaymentMethod extends IResourceObject {
   /** Billing information associated with the PaymentMethod that may be used or required by particular types of payment methods. */
-  var billing_details: Null | AnonEmail = js.native
+  var billing_details: Null | Email = js.native
   /** Time at which the object was created. Measured in seconds since the Unix epoch. */
   var created: Double = js.native
   /** The ID of the Customer to which this PaymentMethod is saved. This will not be set when the PaymentMethod has not been saved to a Customer. [Expandable] */
@@ -63,7 +63,7 @@ object IBasePaymentMethod {
         ret
     }
     @scala.inline
-    def withBilling_details(value: AnonEmail): Self = {
+    def withBilling_details(value: Email): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("billing_details")(value.asInstanceOf[js.Any])
         ret

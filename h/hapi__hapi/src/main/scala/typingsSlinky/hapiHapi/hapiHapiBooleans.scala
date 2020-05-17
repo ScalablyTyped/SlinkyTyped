@@ -1,5 +1,6 @@
 package typingsSlinky.hapiHapi
 
+import typingsSlinky.hapiHapi.mod.RouteOptionsAccessScope
 import typingsSlinky.hapiHapi.mod.SameSitePolicy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -7,7 +8,9 @@ import scala.scalajs.js.annotation._
 
 object hapiHapiBooleans {
   @js.native
-  sealed trait `false` extends SameSitePolicy
+  sealed trait `false`
+    extends RouteOptionsAccessScope
+       with SameSitePolicy
   
   @js.native
   sealed trait `true` extends js.Object

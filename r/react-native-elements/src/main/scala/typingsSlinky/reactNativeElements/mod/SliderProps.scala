@@ -4,7 +4,7 @@ import typingsSlinky.reactNative.mod.Animated.SpringAnimationConfig
 import typingsSlinky.reactNative.mod.Animated.TimingAnimationConfig
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeElements.AnonHeight
+import typingsSlinky.reactNativeElements.anon.Height
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.horizontal
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.spring
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.timing
@@ -113,7 +113,7 @@ trait SliderProps extends js.Object {
     *
     * @default "{width: 40, height: 40}"
     */
-  var thumbTouchSize: js.UndefOr[AnonHeight] = js.native
+  var thumbTouchSize: js.UndefOr[Height] = js.native
   /**
     * The style applied to the track
     */
@@ -355,7 +355,7 @@ object SliderProps {
         ret
     }
     @scala.inline
-    def withThumbTouchSize(value: AnonHeight): Self = {
+    def withThumbTouchSize(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("thumbTouchSize")(value.asInstanceOf[js.Any])
         ret

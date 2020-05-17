@@ -1,7 +1,7 @@
 package typingsSlinky.node.cryptoMod
 
-import typingsSlinky.node.AnonPrivateKey
 import typingsSlinky.node.Buffer
+import typingsSlinky.node.anon.PrivateKey
 import typingsSlinky.node.nodeStrings.der
 import typingsSlinky.node.nodeStrings.dsa
 import typingsSlinky.node.nodeStrings.ec
@@ -60,11 +60,11 @@ object generateKeyPair extends js.Object {
     ]
   ): Unit = js.native
   @JSName("__promisify__")
-  def promisify(`type`: dsa, options: DSAKeyPairOptions[der | pem, der | pem]): js.Promise[AnonPrivateKey] = js.native
+  def promisify(`type`: dsa, options: DSAKeyPairOptions[der | pem, der | pem]): js.Promise[PrivateKey] = js.native
   @JSName("__promisify__")
-  def promisify(`type`: ec, options: ECKeyPairOptions[der | pem, der | pem]): js.Promise[AnonPrivateKey] = js.native
+  def promisify(`type`: ec, options: ECKeyPairOptions[der | pem, der | pem]): js.Promise[PrivateKey] = js.native
   @JSName("__promisify__")
-  def promisify(`type`: rsa, options: RSAKeyPairOptions[der | pem, der | pem]): js.Promise[AnonPrivateKey] = js.native
+  def promisify(`type`: rsa, options: RSAKeyPairOptions[der | pem, der | pem]): js.Promise[PrivateKey] = js.native
   @JSName("__promisify__")
   def promisify_dsa(`type`: dsa, options: DSAKeyPairKeyObjectOptions): js.Promise[KeyPairKeyObjectResult] = js.native
   @JSName("__promisify__")

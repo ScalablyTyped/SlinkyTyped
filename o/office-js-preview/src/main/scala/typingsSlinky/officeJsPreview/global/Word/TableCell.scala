@@ -1,0 +1,17 @@
+package typingsSlinky.officeJsPreview.global.Word
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  *
+  * Represents a table cell in a Word document.
+  *
+  * [Api set: WordApi 1.3]
+  */
+@JSGlobal("Word.TableCell")
+@js.native
+class TableCell ()
+  extends typingsSlinky.officeJsPreview.Word.TableCell
+

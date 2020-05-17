@@ -1,8 +1,8 @@
 package typingsSlinky.multerS3.mod
 
 import typingsSlinky.awsSdk.mod.S3
-import typingsSlinky.expressServeStaticCore.mod._Global_.Express.Request
-import typingsSlinky.multer.mod._Global_.Express.Multer.File
+import typingsSlinky.expressServeStaticCore.mod.global.Express.Request
+import typingsSlinky.multer.mod.global.Express.Multer.File
 import typingsSlinky.node.NodeJS.ReadableStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`

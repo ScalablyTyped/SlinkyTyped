@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents the client ASPxFilterControl.
   */
-@JSGlobal("ASPxClientFilterControl")
 @js.native
-class ASPxClientFilterControl () extends ASPxClientControl {
+trait ASPxClientFilterControl extends ASPxClientControl {
   /**
     * Occurs after a new filter expression has been applied.
     */
@@ -53,14 +52,105 @@ class ASPxClientFilterControl () extends ASPxClientControl {
   def Reset(): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("ASPxClientFilterControl")
-@js.native
-object ASPxClientFilterControl extends js.Object {
-  /**
-    * Converts the specified object to the ASPxClientFilterControl type. The converted client object specified by the obj parameter.
-    * @param obj The client object to be type cast.
-    */
-  def Cast(obj: js.Any): ASPxClientFilterControl = js.native
+object ASPxClientFilterControl {
+  @scala.inline
+  def apply(
+    AdjustControl: () => Unit,
+    Applied: ASPxClientEvent[ASPxClientFilterAppliedEventHandler[ASPxClientFilterControl]],
+    Apply: () => Unit,
+    BeginCallback: ASPxClientEvent[ASPxClientBeginCallbackEventHandler[ASPxClientFilterControl]],
+    CallbackError: ASPxClientEvent[ASPxClientCallbackErrorEventHandler[ASPxClientFilterControl]],
+    EndCallback: ASPxClientEvent[ASPxClientEndCallbackEventHandler[ASPxClientFilterControl]],
+    GetAppliedFilterExpression: () => String,
+    GetClientVisible: () => Boolean,
+    GetEditor: Double => ASPxClientEditBase,
+    GetFilterExpression: () => String,
+    GetHeight: () => Double,
+    GetMainElement: () => js.Any,
+    GetParentControl: () => js.Any,
+    GetVisible: () => Boolean,
+    GetWidth: () => Double,
+    InCallback: () => Boolean,
+    Init: ASPxClientEvent[ASPxClientEventHandler[ASPxClientControlBase]],
+    IsFilterExpressionValid: () => Boolean,
+    Reset: () => Unit,
+    SendMessageToAssistiveTechnology: String => Unit,
+    SetClientVisible: Boolean => Unit,
+    SetHeight: Double => Unit,
+    SetVisible: Boolean => Unit,
+    SetWidth: Double => Unit,
+    name: String
+  ): ASPxClientFilterControl = {
+    val __obj = js.Dynamic.literal(AdjustControl = js.Any.fromFunction0(AdjustControl), Applied = Applied.asInstanceOf[js.Any], Apply = js.Any.fromFunction0(Apply), BeginCallback = BeginCallback.asInstanceOf[js.Any], CallbackError = CallbackError.asInstanceOf[js.Any], EndCallback = EndCallback.asInstanceOf[js.Any], GetAppliedFilterExpression = js.Any.fromFunction0(GetAppliedFilterExpression), GetClientVisible = js.Any.fromFunction0(GetClientVisible), GetEditor = js.Any.fromFunction1(GetEditor), GetFilterExpression = js.Any.fromFunction0(GetFilterExpression), GetHeight = js.Any.fromFunction0(GetHeight), GetMainElement = js.Any.fromFunction0(GetMainElement), GetParentControl = js.Any.fromFunction0(GetParentControl), GetVisible = js.Any.fromFunction0(GetVisible), GetWidth = js.Any.fromFunction0(GetWidth), InCallback = js.Any.fromFunction0(InCallback), Init = Init.asInstanceOf[js.Any], IsFilterExpressionValid = js.Any.fromFunction0(IsFilterExpressionValid), Reset = js.Any.fromFunction0(Reset), SendMessageToAssistiveTechnology = js.Any.fromFunction1(SendMessageToAssistiveTechnology), SetClientVisible = js.Any.fromFunction1(SetClientVisible), SetHeight = js.Any.fromFunction1(SetHeight), SetVisible = js.Any.fromFunction1(SetVisible), SetWidth = js.Any.fromFunction1(SetWidth), name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientFilterControl]
+  }
+  @scala.inline
+  implicit class ASPxClientFilterControlOps[Self <: ASPxClientFilterControl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplied(value: ASPxClientEvent[ASPxClientFilterAppliedEventHandler[ASPxClientFilterControl]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Applied")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withApply(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Apply")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withBeginCallback(value: ASPxClientEvent[ASPxClientBeginCallbackEventHandler[ASPxClientFilterControl]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCallbackError(value: ASPxClientEvent[ASPxClientCallbackErrorEventHandler[ASPxClientFilterControl]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CallbackError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndCallback(value: ASPxClientEvent[ASPxClientEndCallbackEventHandler[ASPxClientFilterControl]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetAppliedFilterExpression(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetAppliedFilterExpression")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetEditor(value: Double => ASPxClientEditBase): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetEditor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetFilterExpression(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetFilterExpression")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsFilterExpressionValid(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsFilterExpressionValid")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withReset(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reset")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.ionicReact.ionTabsMod
 
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonRouterOutletElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonRouterOutletElement
 import typingsSlinky.ionicReact.navContextMod.NavContextState
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.Context

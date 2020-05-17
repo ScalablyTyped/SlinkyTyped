@@ -21,7 +21,7 @@ import typingsSlinky.reactContentLoader.reactContentLoaderStrings.uri
 import typingsSlinky.reactContentLoader.reactContentLoaderStrings.yes
 import typingsSlinky.reactContentLoader.svgMod.RequiredIContentLoaderProps
 import typingsSlinky.reactContentLoader.svgMod.default
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState

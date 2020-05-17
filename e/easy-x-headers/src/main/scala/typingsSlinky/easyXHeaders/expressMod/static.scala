@@ -1,8 +1,8 @@
 package typingsSlinky.easyXHeaders.expressMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.easyXHeaders.AnonDotfiles
-import typingsSlinky.easyXHeaders.TypeofserveStatic
+import typingsSlinky.easyXHeaders.anon.Dotfiles
+import typingsSlinky.easyXHeaders.anon.TypeofserveStatic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +11,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object static
   extends TopLevel[
-      (js.Function2[/* root */ String, /* options */ js.UndefOr[AnonDotfiles], Handler]) with TypeofserveStatic
+      (js.Function2[/* root */ String, /* options */ js.UndefOr[Dotfiles], Handler]) with TypeofserveStatic
     ]
 

@@ -1,6 +1,6 @@
 package typingsSlinky.baseui.spinnerMod
 
-import typingsSlinky.baseui.AnonActivePath
+import typingsSlinky.baseui.anon.ActivePath
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait SpinnerProps extends js.Object {
   var `aria-label`: js.UndefOr[String] = js.native
   var color: js.UndefOr[String] = js.native
-  var overrides: js.UndefOr[AnonActivePath] = js.native
+  var overrides: js.UndefOr[ActivePath] = js.native
   var size: js.UndefOr[Double | String] = js.native
   var title: js.UndefOr[String] = js.native
 }
@@ -51,7 +51,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOverrides(value: AnonActivePath): Self = {
+    def withOverrides(value: ActivePath): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
         ret

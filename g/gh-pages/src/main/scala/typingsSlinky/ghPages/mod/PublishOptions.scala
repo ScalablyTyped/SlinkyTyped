@@ -1,6 +1,6 @@
 package typingsSlinky.ghPages.mod
 
-import typingsSlinky.ghPages.AnonEmail
+import typingsSlinky.ghPages.anon.Email
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +31,7 @@ trait PublishOptions extends js.Object {
   var silent: js.UndefOr[Boolean] = js.native
   var src: js.UndefOr[String | js.Array[String]] = js.native
   var tag: js.UndefOr[String] = js.native
-  var user: js.UndefOr[Null | AnonEmail] = js.native
+  var user: js.UndefOr[Null | Email] = js.native
 }
 
 object PublishOptions {
@@ -227,7 +227,7 @@ object PublishOptions {
         ret
     }
     @scala.inline
-    def withUser(value: AnonEmail): Self = {
+    def withUser(value: Email): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
         ret

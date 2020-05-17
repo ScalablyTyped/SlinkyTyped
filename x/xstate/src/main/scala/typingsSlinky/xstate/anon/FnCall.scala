@@ -1,0 +1,14 @@
+package typingsSlinky.xstate.anon
+
+import typingsSlinky.xstate.typesMod.EventObject
+import typingsSlinky.xstate.typesMod.RaiseAction
+import typingsSlinky.xstate.typesMod.SendAction
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait FnCall extends js.Object {
+  def apply[TContext, TEvent /* <: EventObject */](event: typingsSlinky.xstate.typesMod.Event[TEvent]): RaiseAction[TEvent] | (SendAction[TContext, TEvent]) = js.native
+}
+

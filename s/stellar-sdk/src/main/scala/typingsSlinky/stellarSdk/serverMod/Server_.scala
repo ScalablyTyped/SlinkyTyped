@@ -5,8 +5,8 @@ import typingsSlinky.stellarBase.mod.Memo
 import typingsSlinky.stellarBase.mod.MemoType
 import typingsSlinky.stellarBase.mod.Operation
 import typingsSlinky.stellarBase.mod.Transaction
-import typingsSlinky.stellarSdk.AccountResponse
 import typingsSlinky.stellarSdk.accountCallBuilderMod.AccountCallBuilder
+import typingsSlinky.stellarSdk.anon.AccountResponse
 import typingsSlinky.stellarSdk.assetsCallBuilderMod.AssetsCallBuilder
 import typingsSlinky.stellarSdk.effectCallBuilderMod.EffectCallBuilder
 import typingsSlinky.stellarSdk.friendbotBuilderMod.FriendbotBuilder

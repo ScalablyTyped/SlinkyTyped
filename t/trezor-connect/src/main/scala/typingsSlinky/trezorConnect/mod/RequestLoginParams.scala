@@ -1,25 +1,20 @@
 package typingsSlinky.trezorConnect.mod
 
+import typingsSlinky.trezorConnect.anon.CommonParamscallbackLogin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.trezorConnect.CommonParamscallbackLogin
+  - typingsSlinky.trezorConnect.anon.CommonParamscallbackLogin
   - typingsSlinky.trezorConnect.mod.LoginChallenge
 */
 trait RequestLoginParams extends js.Object
 
 object RequestLoginParams {
   @scala.inline
-  def CommonParamscallbackLogin(callback: () => LoginChallenge): RequestLoginParams = {
-    val __obj = js.Dynamic.literal(callback = js.Any.fromFunction0(callback))
-    __obj.asInstanceOf[RequestLoginParams]
-  }
+  implicit def apply(value: CommonParamscallbackLogin): RequestLoginParams = value.asInstanceOf[RequestLoginParams]
   @scala.inline
-  def LoginChallenge(challengeHidden: String, challengeVisual: String): RequestLoginParams = {
-    val __obj = js.Dynamic.literal(challengeHidden = challengeHidden.asInstanceOf[js.Any], challengeVisual = challengeVisual.asInstanceOf[js.Any])
-    __obj.asInstanceOf[RequestLoginParams]
-  }
+  implicit def apply(value: LoginChallenge): RequestLoginParams = value.asInstanceOf[RequestLoginParams]
 }
 

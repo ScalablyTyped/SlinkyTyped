@@ -98,10 +98,10 @@ object mod extends js.Object {
       Start (or resume) executing enqueued tasks within concurrency limit. No need to call this if queue is not paused (via `options.autoStart = false` or by `.pause()` method.)
       */
     def start(): this.type = js.native
-    def timeout(): js.Any = js.native
     /**
       Set the timeout for future operations.
       */
+    def timeout(): js.Any = js.native
     def timeout(milliseconds: Double): js.Any = js.native
     @JSName("timeout")
     def timeout_Union: js.UndefOr[Double] = js.native

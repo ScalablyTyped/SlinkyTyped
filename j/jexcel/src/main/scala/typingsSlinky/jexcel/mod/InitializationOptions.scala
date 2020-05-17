@@ -2,7 +2,7 @@ package typingsSlinky.jexcel.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.jexcel.AnonColspan
+import typingsSlinky.jexcel.anon.Colspan
 import typingsSlinky.jexcel.jexcelStrings.center
 import typingsSlinky.jexcel.jexcelStrings.left
 import typingsSlinky.jexcel.jexcelStrings.right
@@ -87,7 +87,7 @@ trait InitializationOptions extends js.Object {
   /** Minimum number of spare rows: [integer] */
   var minSpareRows: js.UndefOr[js.Array[Double]] = js.native
   /** Define the nested headers, including title, colspan, etc: object */
-  var nestedHeaders: js.UndefOr[js.Array[js.Array[AnonColspan]]] = js.native
+  var nestedHeaders: js.UndefOr[js.Array[js.Array[Colspan]]] = js.native
   /** Break the table by pages */
   var pagination: js.UndefOr[Double] = js.native
   /** Number of records per page: 25,50,75,100 for example. */
@@ -554,7 +554,7 @@ object InitializationOptions {
         ret
     }
     @scala.inline
-    def withNestedHeaders(value: js.Array[js.Array[AnonColspan]]): Self = {
+    def withNestedHeaders(value: js.Array[js.Array[Colspan]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nestedHeaders")(value.asInstanceOf[js.Any])
         ret

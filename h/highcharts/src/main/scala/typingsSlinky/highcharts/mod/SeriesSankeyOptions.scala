@@ -156,30 +156,6 @@ object SeriesSankeyOptions {
         ret
     }
     @scala.inline
-    def withBorderRadius(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutBorderRadius: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("borderRadius")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withCrisp(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crisp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrisp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crisp")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withData(value: js.Array[SeriesSankeyDataOptions]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
@@ -189,102 +165,6 @@ object SeriesSankeyOptions {
     def withoutData: Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataParser(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataParser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataParser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataParser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataURL(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataURL")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDepth(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDepth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeColor(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeWidth(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupPadding(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupPadding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupPadding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupZPadding(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupZPadding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupZPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupZPadding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGrouping(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grouping")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGrouping: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("grouping")(js.undefined)
         ret
     }
     @scala.inline
@@ -336,18 +216,6 @@ object SeriesSankeyOptions {
         ret
     }
     @scala.inline
-    def withMaxPointWidth(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPointWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutMaxPointWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPointWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withName(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
@@ -369,30 +237,6 @@ object SeriesSankeyOptions {
     def withoutNodes: Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointPadding(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointPadding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointPadding")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPointWidth(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPointWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pointWidth")(js.undefined)
         ret
     }
     @scala.inline

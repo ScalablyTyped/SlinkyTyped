@@ -1,6 +1,6 @@
 package typingsSlinky.webcomponentsJs.mod
 
-import typingsSlinky.webcomponentsJs.mod._Global_.Document
+import typingsSlinky.webcomponentsJs.mod.global.Document
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

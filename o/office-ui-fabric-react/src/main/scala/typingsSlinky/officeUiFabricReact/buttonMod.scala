@@ -1,6 +1,7 @@
 package typingsSlinky.officeUiFabricReact
 
 import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.officeUiFabricReact.anon.PartialIBaseButtonProps
 import typingsSlinky.officeUiFabricReact.baseButtonMod.IBaseButtonProps
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonProps
 import scala.scalajs.js

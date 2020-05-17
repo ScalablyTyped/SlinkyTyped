@@ -2,6 +2,7 @@ package typingsSlinky.tstl
 
 import typingsSlinky.tstl.icomparableMod.IComparable
 import typingsSlinky.tstl.ipairMod.IPair
+import typingsSlinky.tstl.mapContainerMod.MapContainer.InsertRet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +13,9 @@ object pairMod extends js.Object {
   @js.native
   class Pair[First, Second] protected ()
     extends IPair[First, Second]
-       with IComparable[Pair[First, Second]] {
+       with IComparable[Pair[First, Second]]
+       with InsertRet[js.Any, js.Any, js.Any, js.Any, First, js.Any]
+       with typingsSlinky.tstl.setContainerMod.SetContainer.InsertRet[js.Any, js.Any, js.Any, First, js.Any] {
     /**
       * Initializer Constructor.
       *

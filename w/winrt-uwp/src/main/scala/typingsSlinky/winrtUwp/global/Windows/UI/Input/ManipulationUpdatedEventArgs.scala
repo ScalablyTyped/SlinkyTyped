@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.UI.Input
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Contains event data for the ManipulationUpdated event. */
+@JSGlobal("Windows.UI.Input.ManipulationUpdatedEventArgs")
+@js.native
+abstract class ManipulationUpdatedEventArgs ()
+  extends typingsSlinky.winrtUwp.Windows.UI.Input.ManipulationUpdatedEventArgs
+

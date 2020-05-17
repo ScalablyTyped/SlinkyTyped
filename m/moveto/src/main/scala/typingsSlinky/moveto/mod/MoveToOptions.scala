@@ -1,7 +1,7 @@
 package typingsSlinky.moveto.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait MoveToOptions extends js.Object {
   /**
     * The container been computed and scrolled
     */
-  var container: js.UndefOr[Window_ | HTMLElement] = js.native
+  var container: js.UndefOr[Window | HTMLElement] = js.native
   /**
     * Duration of scrolling, in milliseconds
     */
@@ -61,7 +61,13 @@ object MoveToOptions {
         ret
     }
     @scala.inline
-    def withContainer(value: Window_ | HTMLElement): Self = {
+    def withContainerWindow(value: Window): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContainer(value: Window | HTMLElement): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
         ret

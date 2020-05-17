@@ -1,18 +1,18 @@
 package typingsSlinky.awsLambda.albMod
 
-import typingsSlinky.awsLambda.AnonTargetGroupArn
+import typingsSlinky.awsLambda.anon.TargetGroupArn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ALBEventRequestContext extends js.Object {
-  var elb: AnonTargetGroupArn = js.native
+  var elb: TargetGroupArn = js.native
 }
 
 object ALBEventRequestContext {
   @scala.inline
-  def apply(elb: AnonTargetGroupArn): ALBEventRequestContext = {
+  def apply(elb: TargetGroupArn): ALBEventRequestContext = {
     val __obj = js.Dynamic.literal(elb = elb.asInstanceOf[js.Any])
     __obj.asInstanceOf[ALBEventRequestContext]
   }
@@ -23,7 +23,7 @@ object ALBEventRequestContext {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withElb(value: AnonTargetGroupArn): Self = {
+    def withElb(value: TargetGroupArn): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("elb")(value.asInstanceOf[js.Any])
         ret

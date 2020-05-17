@@ -1,6 +1,6 @@
 package typingsSlinky.vis.mod
 
-import typingsSlinky.vis.AnonDrawThreshold
+import typingsSlinky.vis.anon.DrawThreshold
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait OptionsScaling extends js.Object {
       Double
     ]
   ] = js.native
-  var label: js.UndefOr[Boolean | AnonDrawThreshold] = js.native
+  var label: js.UndefOr[Boolean | DrawThreshold] = js.native
   var max: js.UndefOr[Double] = js.native
   var min: js.UndefOr[Double] = js.native
 }
@@ -48,7 +48,7 @@ object OptionsScaling {
         ret
     }
     @scala.inline
-    def withLabel(value: Boolean | AnonDrawThreshold): Self = {
+    def withLabel(value: Boolean | DrawThreshold): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret

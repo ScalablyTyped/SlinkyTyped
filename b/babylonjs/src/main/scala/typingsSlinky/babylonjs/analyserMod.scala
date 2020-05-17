@@ -1,6 +1,8 @@
 package typingsSlinky.babylonjs
 
 import org.scalajs.dom.raw.AudioNode
+import typingsSlinky.babylonjs.anon.Width
+import typingsSlinky.babylonjs.anon.Y
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,12 +27,12 @@ object analyserMod extends js.Object {
       * Gets or sets the position of the debug canvas
       * @ignorenaming
       */
-    var DEBUGCANVASPOS: AnonY = js.native
+    var DEBUGCANVASPOS: Y = js.native
     /**
       * Gets or sets the debug canvas size
       * @ignorenaming
       */
-    var DEBUGCANVASSIZE: AnonWidth = js.native
+    var DEBUGCANVASSIZE: Width = js.native
     /**
       * Gets or sets the FFT table size
       * @ignorenaming

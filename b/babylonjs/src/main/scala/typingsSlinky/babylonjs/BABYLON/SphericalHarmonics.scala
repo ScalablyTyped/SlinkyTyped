@@ -1,13 +1,11 @@
 package typingsSlinky.babylonjs.BABYLON
 
-import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.SphericalHarmonics")
 @js.native
-class SphericalHarmonics () extends js.Object {
+trait SphericalHarmonics extends js.Object {
   /**
     * The l0,0 coefficients of the spherical harmonics
     */
@@ -92,21 +90,125 @@ class SphericalHarmonics () extends js.Object {
   def scaleInPlace(scale: Double): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("BABYLON.SphericalHarmonics")
-@js.native
-object SphericalHarmonics extends js.Object {
-  /**
-    * Constructs a spherical harmonics from an array.
-    * @param data defines the 9x3 coefficients (l00, l1-1, l10, l11, l2-2, l2-1, l20, l21, l22)
-    * @returns the spherical harmonics
-    */
-  def FromArray(data: ArrayLike[ArrayLike[Double]]): SphericalHarmonics = js.native
-  /**
-    * Gets the spherical harmonics from polynomial
-    * @param polynomial the spherical polynomial
-    * @returns the spherical harmonics
-    */
-  def FromPolynomial(polynomial: SphericalPolynomial): SphericalHarmonics = js.native
+object SphericalHarmonics {
+  @scala.inline
+  def apply(
+    addLight: (Vector3, Color3, Double) => Unit,
+    convertIncidentRadianceToIrradiance: () => Unit,
+    convertIrradianceToLambertianRadiance: () => Unit,
+    l00: Vector3,
+    l10: Vector3,
+    l11: Vector3,
+    l1_1: Vector3,
+    l20: Vector3,
+    l21: Vector3,
+    l22: Vector3,
+    l2_1: Vector3,
+    l2_2: Vector3,
+    preScaleForRendering: () => Unit,
+    preScaled: Boolean,
+    scaleInPlace: Double => Unit
+  ): SphericalHarmonics = {
+    val __obj = js.Dynamic.literal(addLight = js.Any.fromFunction3(addLight), convertIncidentRadianceToIrradiance = js.Any.fromFunction0(convertIncidentRadianceToIrradiance), convertIrradianceToLambertianRadiance = js.Any.fromFunction0(convertIrradianceToLambertianRadiance), l00 = l00.asInstanceOf[js.Any], l10 = l10.asInstanceOf[js.Any], l11 = l11.asInstanceOf[js.Any], l1_1 = l1_1.asInstanceOf[js.Any], l20 = l20.asInstanceOf[js.Any], l21 = l21.asInstanceOf[js.Any], l22 = l22.asInstanceOf[js.Any], l2_1 = l2_1.asInstanceOf[js.Any], l2_2 = l2_2.asInstanceOf[js.Any], preScaleForRendering = js.Any.fromFunction0(preScaleForRendering), preScaled = preScaled.asInstanceOf[js.Any], scaleInPlace = js.Any.fromFunction1(scaleInPlace))
+    __obj.asInstanceOf[SphericalHarmonics]
+  }
+  @scala.inline
+  implicit class SphericalHarmonicsOps[Self <: SphericalHarmonics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddLight(value: (Vector3, Color3, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addLight")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withConvertIncidentRadianceToIrradiance(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convertIncidentRadianceToIrradiance")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withConvertIrradianceToLambertianRadiance(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convertIrradianceToLambertianRadiance")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withL00(value: Vector3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("l00")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withL10(value: Vector3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("l10")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withL11(value: Vector3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("l11")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withL1_1(value: Vector3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("l1_1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withL20(value: Vector3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("l20")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withL21(value: Vector3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("l21")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withL22(value: Vector3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("l22")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withL2_1(value: Vector3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("l2_1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withL2_2(value: Vector3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("l2_2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreScaleForRendering(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preScaleForRendering")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPreScaled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preScaled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScaleInPlace(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleInPlace")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

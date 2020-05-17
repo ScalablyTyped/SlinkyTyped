@@ -1,6 +1,6 @@
 package typingsSlinky.antd.sliderMod
 
-import typingsSlinky.antd.AnonTipFormatter
+import typingsSlinky.antd.anon.TipFormatter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +15,6 @@ class default protected () extends Slider {
 @JSImport("antd/lib/slider", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonTipFormatter = js.native
+  var defaultProps: TipFormatter = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.sipJs.clientContextMod.ClientContext
 
-import typingsSlinky.sipJs.AnonFromUri
+import typingsSlinky.sipJs.anon.FromUri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait Options extends js.Object {
   var body: js.UndefOr[String] = js.native
   var contentType: js.UndefOr[String] = js.native
   var extraHeaders: js.UndefOr[js.Array[String]] = js.native
-  var params: js.UndefOr[AnonFromUri] = js.native
+  var params: js.UndefOr[FromUri] = js.native
 }
 
 object Options {
@@ -62,7 +62,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withParams(value: AnonFromUri): Self = {
+    def withParams(value: FromUri): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
         ret

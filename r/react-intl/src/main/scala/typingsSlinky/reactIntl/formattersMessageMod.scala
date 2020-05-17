@@ -3,6 +3,7 @@ package typingsSlinky.reactIntl
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.intlMessageformat.mod.PrimitiveType
+import typingsSlinky.reactIntl.anon.PickIntlConfiglocaleformaDefaultFormats
 import typingsSlinky.reactIntl.typesMod.Formatters
 import typingsSlinky.reactIntl.typesMod.MessageDescriptor
 import typingsSlinky.std.Record

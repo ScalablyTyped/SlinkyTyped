@@ -1,6 +1,6 @@
 package typingsSlinky.cannon.mod
 
-import typingsSlinky.cannon.AnonBOX
+import typingsSlinky.cannon.anon.BOX
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +14,6 @@ class Shape ()
 @JSImport("cannon", "Shape")
 @js.native
 object Shape extends js.Object {
-  var types: AnonBOX = js.native
+  var types: BOX = js.native
 }
 

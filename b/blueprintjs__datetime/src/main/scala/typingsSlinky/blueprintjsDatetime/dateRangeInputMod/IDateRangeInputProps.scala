@@ -3,7 +3,7 @@ package typingsSlinky.blueprintjsDatetime.dateRangeInputMod
 import typingsSlinky.blueprintjsCore.inputGroupMod.IInputGroupProps
 import typingsSlinky.blueprintjsCore.propsMod.HTMLInputProps
 import typingsSlinky.blueprintjsCore.propsMod.IProps
-import typingsSlinky.blueprintjsDatetime.PartialIPopoverProps
+import typingsSlinky.blueprintjsDatetime.anon.PartialIPopoverProps
 import typingsSlinky.blueprintjsDatetime.blueprintjsDatetimeBooleans.`false`
 import typingsSlinky.blueprintjsDatetime.datePickerCoreMod.IDatePickerBaseProps
 import typingsSlinky.blueprintjsDatetime.dateUtilsMod.DateRange

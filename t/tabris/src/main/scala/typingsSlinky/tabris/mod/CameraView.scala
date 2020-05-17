@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.OmitCameraViewset
+import typingsSlinky.tabris.anon.OmitCameraViewset
 import typingsSlinky.tabris.tabrisStrings.camera
 import typingsSlinky.tabris.tabrisStrings.fill
 import typingsSlinky.tabris.tabrisStrings.fit

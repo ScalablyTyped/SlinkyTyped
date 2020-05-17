@@ -2,7 +2,7 @@ package typingsSlinky.antDesignProLayout.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignProLayout.MergerSettingsTypeSetting
+import typingsSlinky.antDesignProLayout.anon.MergerSettingsTypeSetting
 import typingsSlinky.antDesignProLayout.libSettingDrawerMod.SettingDrawerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

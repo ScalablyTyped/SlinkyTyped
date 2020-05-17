@@ -1,5 +1,6 @@
 package typingsSlinky.internalIp
 
+import typingsSlinky.internalIp.anon.Default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,7 +53,7 @@ object mod extends js.Object {
   }
   
   // TODO: Remove this for the next major release
-  var default: AnonDefault = js.native
+  var default: Default = js.native
   @JSName("v4")
   var v4_Original: v4 = js.native
   @JSName("v6")

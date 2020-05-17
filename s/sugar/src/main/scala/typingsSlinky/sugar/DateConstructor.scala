@@ -2,14 +2,14 @@ package typingsSlinky.sugar
 
 import typingsSlinky.sugar.sugarjs.Date.DateCreateOptions
 import typingsSlinky.sugar.sugarjs.Locale
+import typingsSlinky.sugar.sugarjs.NativeConstructor
 import typingsSlinky.sugar.sugarjs.Range
-import typingsSlinky.sugar.sugarjs._NativeConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DateConstructor extends _NativeConstructor {
+trait DateConstructor extends NativeConstructor {
   def addLocale(localeCode: java.lang.String, `def`: js.Object): Locale = js.native
   def create(): Date = js.native
   def create(d: java.lang.String): Date = js.native

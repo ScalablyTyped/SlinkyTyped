@@ -1,10 +1,10 @@
 package typingsSlinky.firefoxWebextBrowser.browser.manifest
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.firefoxWebextBrowser.AnonBasepath
-import typingsSlinky.firefoxWebextBrowser.AnonChromeresources
-import typingsSlinky.firefoxWebextBrowser.AnonEdge
-import typingsSlinky.firefoxWebextBrowser.AnonGecko
+import typingsSlinky.firefoxWebextBrowser.anon.Basepath
+import typingsSlinky.firefoxWebextBrowser.anon.Chromeresources
+import typingsSlinky.firefoxWebextBrowser.anon.Edge
+import typingsSlinky.firefoxWebextBrowser.anon.Gecko
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,17 +12,17 @@ import scala.scalajs.js.annotation._
 /** Represents a WebExtension language pack manifest.json file */
 @js.native
 trait WebExtensionLangpackManifest extends js.Object {
-  var applications: js.UndefOr[AnonGecko] = js.native
+  var applications: js.UndefOr[Gecko] = js.native
   var author: js.UndefOr[String] = js.native
-  var browser_specific_settings: js.UndefOr[AnonEdge] = js.native
+  var browser_specific_settings: js.UndefOr[Edge] = js.native
   var description: js.UndefOr[String] = js.native
   var homepage_url: js.UndefOr[String] = js.native
   var langpack_id: String = js.native
-  var languages: StringDictionary[AnonChromeresources] = js.native
+  var languages: StringDictionary[Chromeresources] = js.native
   var manifest_version: Double = js.native
   var name: String = js.native
   var short_name: js.UndefOr[String] = js.native
-  var sources: js.UndefOr[StringDictionary[AnonBasepath]] = js.native
+  var sources: js.UndefOr[StringDictionary[Basepath]] = js.native
   var version: String = js.native
 }
 
@@ -30,7 +30,7 @@ object WebExtensionLangpackManifest {
   @scala.inline
   def apply(
     langpack_id: String,
-    languages: StringDictionary[AnonChromeresources],
+    languages: StringDictionary[Chromeresources],
     manifest_version: Double,
     name: String,
     version: String
@@ -51,7 +51,7 @@ object WebExtensionLangpackManifest {
         ret
     }
     @scala.inline
-    def withLanguages(value: StringDictionary[AnonChromeresources]): Self = {
+    def withLanguages(value: StringDictionary[Chromeresources]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("languages")(value.asInstanceOf[js.Any])
         ret
@@ -75,7 +75,7 @@ object WebExtensionLangpackManifest {
         ret
     }
     @scala.inline
-    def withApplications(value: AnonGecko): Self = {
+    def withApplications(value: Gecko): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("applications")(value.asInstanceOf[js.Any])
         ret
@@ -99,7 +99,7 @@ object WebExtensionLangpackManifest {
         ret
     }
     @scala.inline
-    def withBrowser_specific_settings(value: AnonEdge): Self = {
+    def withBrowser_specific_settings(value: Edge): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("browser_specific_settings")(value.asInstanceOf[js.Any])
         ret
@@ -147,7 +147,7 @@ object WebExtensionLangpackManifest {
         ret
     }
     @scala.inline
-    def withSources(value: StringDictionary[AnonBasepath]): Self = {
+    def withSources(value: StringDictionary[Basepath]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sources")(value.asInstanceOf[js.Any])
         ret

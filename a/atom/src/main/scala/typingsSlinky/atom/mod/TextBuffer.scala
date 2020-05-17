@@ -1,12 +1,12 @@
 package typingsSlinky.atom.mod
 
-import typingsSlinky.atom.AnonExclusiveBoolean
-import typingsSlinky.atom.AnonExclusiveInvalidate
-import typingsSlinky.atom.AnonHistory
-import typingsSlinky.atom.AnonNewExtent
-import typingsSlinky.atom.AnonRole
-import typingsSlinky.atom.AnonShouldDestroyOnFileDelete
-import typingsSlinky.atom.groupingIntervalnumberHis
+import typingsSlinky.atom.anon.ExclusiveBoolean
+import typingsSlinky.atom.anon.ExclusiveInvalidate
+import typingsSlinky.atom.anon.History
+import typingsSlinky.atom.anon.NewExtent
+import typingsSlinky.atom.anon.Role
+import typingsSlinky.atom.anon.ShouldDestroyOnFileDelete
+import typingsSlinky.atom.anon.groupingIntervalnumberHis
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 @js.native
 /** Create a new buffer with the given params. */
 class TextBuffer () extends js.Object {
-  def this(params: AnonShouldDestroyOnFileDelete) = this()
+  def this(params: ShouldDestroyOnFileDelete) = this()
   /** Create a new buffer with the given starting text. */
   def this(text: String) = this()
   /** Whether or not the bufffer has been destroyed. */
@@ -33,7 +33,7 @@ class TextBuffer () extends js.Object {
   // Markers
   /** Create a layer to contain a set of related markers. */
   def addMarkerLayer(): MarkerLayer = js.native
-  def addMarkerLayer(options: AnonRole): MarkerLayer = js.native
+  def addMarkerLayer(options: Role): MarkerLayer = js.native
   /** Append text to the end of the buffer. */
   def append(text: String): Range = js.native
   def append(text: String, options: TextEditOptions): Range = js.native
@@ -111,7 +111,7 @@ class TextBuffer () extends js.Object {
     *  If the given checkpoint is no longer present in the undo history, this method
     *  will return an empty Array.
     */
-  def getChangesSinceCheckpoint(checkpoint: Double): js.Array[AnonNewExtent] = js.native
+  def getChangesSinceCheckpoint(checkpoint: Double): js.Array[NewExtent] = js.native
   /** Get the default MarkerLayer. */
   def getDefaultMarkerLayer(): MarkerLayer = js.native
   /** Returns the string encoding of this buffer. */
@@ -226,10 +226,10 @@ class TextBuffer () extends js.Object {
   def lineLengthForRow(row: Double): Double = js.native
   /** Create a marker at the given position with no tail in the default marker layer. */
   def markPosition(position: PointCompatible): Marker = js.native
-  def markPosition(position: PointCompatible, options: AnonExclusiveBoolean): Marker = js.native
+  def markPosition(position: PointCompatible, options: ExclusiveBoolean): Marker = js.native
   /** Create a marker with the given range in the default marker layer. */
   def markRange(range: RangeCompatible): Marker = js.native
-  def markRange(range: RangeCompatible, properties: AnonExclusiveInvalidate): Marker = js.native
+  def markRange(range: RangeCompatible, properties: ExclusiveInvalidate): Marker = js.native
   /**
     *  Given a row, find the next row that's not blank.
     *  Returns a number or null if there's no next non-blank row.
@@ -383,7 +383,7 @@ class TextBuffer () extends js.Object {
   ): Unit = js.native
   /** Returns a plain javascript object representation of the TextBuffer. */
   def serialize(): js.Object = js.native
-  def serialize(options: AnonHistory): js.Object = js.native
+  def serialize(options: History): js.Object = js.native
   /** Sets the character set encoding for this buffer. */
   def setEncoding(encoding: String): Unit = js.native
   /** Experimental: Set a custom {TextBufferFileBackend} object as the buffer's backing store. */

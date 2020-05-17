@@ -1,6 +1,6 @@
 package typingsSlinky.gapiCalendar.gapi.client.calendar
 
-import typingsSlinky.gapiCalendar.AnonType
+import typingsSlinky.gapiCalendar.anon.Type
 import typingsSlinky.gapiCalendar.gapiCalendarStrings.calendarNumbersignaclRule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,12 +12,12 @@ trait Acl_ extends js.Object {
   var id: String = js.native
   var kind: calendarNumbersignaclRule = js.native
   var role: AccessRole = js.native
-  var scope: AnonType = js.native
+  var scope: Type = js.native
 }
 
 object Acl_ {
   @scala.inline
-  def apply(etag: etag, id: String, kind: calendarNumbersignaclRule, role: AccessRole, scope: AnonType): Acl_ = {
+  def apply(etag: etag, id: String, kind: calendarNumbersignaclRule, role: AccessRole, scope: Type): Acl_ = {
     val __obj = js.Dynamic.literal(etag = etag.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], role = role.asInstanceOf[js.Any], scope = scope.asInstanceOf[js.Any])
     __obj.asInstanceOf[Acl_]
   }
@@ -52,7 +52,7 @@ object Acl_ {
         ret
     }
     @scala.inline
-    def withScope(value: AnonType): Self = {
+    def withScope(value: Type): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
         ret

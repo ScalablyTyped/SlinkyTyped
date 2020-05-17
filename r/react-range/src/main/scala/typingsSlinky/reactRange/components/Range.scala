@@ -3,8 +3,8 @@ package typingsSlinky.reactRange.components
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactRange.AnonChildren
-import typingsSlinky.reactRange.AnonIndex
+import typingsSlinky.reactRange.anon.Children
+import typingsSlinky.reactRange.anon.Index
 import typingsSlinky.reactRange.rangeMod.default
 import typingsSlinky.reactRange.typesMod.Direction
 import typingsSlinky.reactRange.typesMod.IProps
@@ -34,8 +34,8 @@ object Range {
     max: Double,
     min: Double,
     onChange: js.Array[Double] => Unit,
-    renderThumb: AnonIndex => TagMod[Any],
-    renderTrack: AnonChildren => TagMod[Any],
+    renderThumb: Index => TagMod[Any],
+    renderTrack: Children => TagMod[Any],
     rtl: Boolean,
     step: Double,
     values: js.Array[Double]

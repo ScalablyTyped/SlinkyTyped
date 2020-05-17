@@ -1,8 +1,8 @@
 package typingsSlinky.winrtUwp.Windows.Foundation.Collections
 
 import typingsSlinky.std.Array
-import typingsSlinky.winrtUwp.AnonIndex
-import typingsSlinky.winrtUwp.AnonItems
+import typingsSlinky.winrtUwp.anon.Index
+import typingsSlinky.winrtUwp.anon.Items
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,19 +31,19 @@ trait IVector[T]
     * Retrieves the items that start at the specified index in the vector.
     * @param startIndex The zero-based index of the start of the items in the vector.
     */
-  def getMany(startIndex: Double): AnonItems[T] = js.native
+  def getMany(startIndex: Double): Items[T] = js.native
   /**
     * Returns an immutable view of the vector.
     * @return The view of the vector.
     */
   def getView(): IVectorView[T] = js.native
-  def indexOf(value: T, extra: js.Any*): AnonIndex = js.native
+  def indexOf(value: T, extra: js.Any*): Index = js.native
   /**
     * Retrieves the index of a specified item in the vector.
     * @param value The item to find in the vector.
     */
   @JSName("indexOf")
-  def indexOf_AnonIndex(value: T): AnonIndex = js.native
+  def indexOf_Index(value: T): Index = js.native
   /**
     * Inserts an item at a specified index in the vector.
     * @param index The zero-based index.

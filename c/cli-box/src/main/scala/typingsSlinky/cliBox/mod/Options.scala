@@ -1,6 +1,6 @@
 package typingsSlinky.cliBox.mod
 
-import typingsSlinky.cliBox.PartialMarks
+import typingsSlinky.cliBox.anon.PartialMarks
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

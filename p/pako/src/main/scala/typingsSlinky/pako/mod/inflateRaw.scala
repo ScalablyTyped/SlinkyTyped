@@ -1,6 +1,6 @@
 package typingsSlinky.pako.mod
 
-import typingsSlinky.pako.InflateFunctionOptionstos
+import typingsSlinky.pako.anon.InflateFunctionOptionstos
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

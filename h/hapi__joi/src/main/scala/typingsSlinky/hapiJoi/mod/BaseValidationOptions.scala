@@ -1,6 +1,6 @@
 package typingsSlinky.hapiJoi.mod
 
-import typingsSlinky.hapiJoi.AnonArrays
+import typingsSlinky.hapiJoi.anon.Arrays
 import typingsSlinky.hapiJoi.hapiJoiStrings.date
 import typingsSlinky.hapiJoi.hapiJoiStrings.iso
 import typingsSlinky.hapiJoi.hapiJoiStrings.string
@@ -94,7 +94,7 @@ trait BaseValidationOptions extends js.Object {
     *
     * @default false
     */
-  var stripUnknown: js.UndefOr[Boolean | AnonArrays] = js.native
+  var stripUnknown: js.UndefOr[Boolean | Arrays] = js.native
 }
 
 object BaseValidationOptions {
@@ -266,7 +266,7 @@ object BaseValidationOptions {
         ret
     }
     @scala.inline
-    def withStripUnknown(value: Boolean | AnonArrays): Self = {
+    def withStripUnknown(value: Boolean | Arrays): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stripUnknown")(value.asInstanceOf[js.Any])
         ret

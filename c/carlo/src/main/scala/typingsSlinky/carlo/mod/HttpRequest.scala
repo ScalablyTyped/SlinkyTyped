@@ -1,6 +1,6 @@
 package typingsSlinky.carlo.mod
 
-import typingsSlinky.carlo.AnonBody
+import typingsSlinky.carlo.anon.Body
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ trait HttpRequest extends js.Object {
   /**
     * Fulfills the network request with the given data. 'Content-Length' header is generated in case it is not listed in the headers.
     */
-  def fulfill(options: AnonBody): js.Promise[Unit] = js.native
+  def fulfill(options: Body): js.Promise[Unit] = js.native
   /**
     * Network request headers
     */
@@ -46,7 +46,7 @@ object HttpRequest {
     abort: () => js.Promise[Unit],
     continue: () => js.Promise[Unit],
     fail: () => js.Promise[Unit],
-    fulfill: AnonBody => js.Promise[Unit],
+    fulfill: Body => js.Promise[Unit],
     headers: () => js.Object,
     method: () => String,
     url: () => String
@@ -79,7 +79,7 @@ object HttpRequest {
         ret
     }
     @scala.inline
-    def withFulfill(value: AnonBody => js.Promise[Unit]): Self = {
+    def withFulfill(value: Body => js.Promise[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fulfill")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.webpack.mod.Stats
 
-import typingsSlinky.webpack.AnonId
+import typingsSlinky.webpack.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ trait FnModules extends js.Object {
   var issuer: js.UndefOr[String] = js.native
   var issuerId: js.UndefOr[Double | String] = js.native
   var issuerName: js.UndefOr[String] = js.native
-  var issuerPath: js.Array[AnonId] = js.native
+  var issuerPath: js.Array[Id] = js.native
   var modules: js.Array[FnModules] = js.native
   var name: String = js.native
   var optimizationBailout: js.UndefOr[String] = js.native
@@ -51,7 +51,7 @@ object FnModules {
     identifier: String,
     index: Double,
     index2: Double,
-    issuerPath: js.Array[AnonId],
+    issuerPath: js.Array[Id],
     modules: js.Array[FnModules],
     name: String,
     optional: Boolean,
@@ -125,7 +125,7 @@ object FnModules {
         ret
     }
     @scala.inline
-    def withIssuerPath(value: js.Array[AnonId]): Self = {
+    def withIssuerPath(value: js.Array[Id]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("issuerPath")(value.asInstanceOf[js.Any])
         ret

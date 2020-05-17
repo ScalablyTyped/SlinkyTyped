@@ -5,7 +5,7 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.ReadableOptions
 import typingsSlinky.node.streamMod.Transform
-import typingsSlinky.nodemailer.AnonValue
+import typingsSlinky.nodemailer.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait MimeNode extends js.Object {
-  def addHeader(headers: js.Array[AnonValue]): this.type = js.native
+  def addHeader(headers: js.Array[Value]): this.type = js.native
   def addHeader(headers: StringDictionary[String]): this.type = js.native
   /**
     * Adds a header value. If the value for selected key exists, the value is appended
@@ -72,7 +72,7 @@ trait MimeNode extends js.Object {
   def setContent(content: Readable): this.type = js.native
   /** Sets envelope to be used instead of the generated one */
   def setEnvelope(envelope: typingsSlinky.nodemailer.mailerMod.Envelope): this.type = js.native
-  def setHeader(headers: js.Array[AnonValue]): this.type = js.native
+  def setHeader(headers: js.Array[Value]): this.type = js.native
   def setHeader(headers: StringDictionary[String]): this.type = js.native
   /**
     * Sets a header value. If the value for selected key exists, it is overwritten.

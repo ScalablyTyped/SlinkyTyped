@@ -2,7 +2,7 @@ package typingsSlinky.cathoQuantum.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonBaseFontSize
+import typingsSlinky.cathoQuantum.anon.BaseFontSize
 import typingsSlinky.cathoQuantum.toggleMod.ToggleProps
 import typingsSlinky.cathoQuantum.toggleMod.default
 import scala.scalajs.js
@@ -23,7 +23,7 @@ object Toggle {
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
-    def theme(value: AnonBaseFontSize): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: BaseFontSize): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ToggleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

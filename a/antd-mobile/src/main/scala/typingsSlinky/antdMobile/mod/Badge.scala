@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobile.mod
 
-import typingsSlinky.antdMobile.AnonCorner
+import typingsSlinky.antdMobile.anon.Corner
 import typingsSlinky.antdMobile.badgeMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +14,6 @@ class Badge () extends default
 @JSImport("antd-mobile", "Badge")
 @js.native
 object Badge extends js.Object {
-  var defaultProps: AnonCorner = js.native
+  var defaultProps: Corner = js.native
 }
 

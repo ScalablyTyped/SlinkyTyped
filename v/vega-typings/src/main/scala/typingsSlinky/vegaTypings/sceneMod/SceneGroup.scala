@@ -1,6 +1,6 @@
 package typingsSlinky.vegaTypings.sceneMod
 
-import typingsSlinky.vegaTypings.AnonRole
+import typingsSlinky.vegaTypings.anon.Role
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait SceneGroup extends js.Object {
   var datum: js.UndefOr[js.Object] = js.native
   var height: Double = js.native
   var items: js.Array[SceneItem] = js.native
-  var mark: AnonRole = js.native
+  var mark: Role = js.native
   var stroke: js.UndefOr[String] = js.native
   var width: Double = js.native
   var x: Double = js.native
@@ -27,7 +27,7 @@ object SceneGroup {
     context: SceneContext,
     height: Double,
     items: js.Array[SceneItem],
-    mark: AnonRole,
+    mark: Role,
     width: Double,
     x: Double,
     y: Double
@@ -66,7 +66,7 @@ object SceneGroup {
         ret
     }
     @scala.inline
-    def withMark(value: AnonRole): Self = {
+    def withMark(value: Role): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mark")(value.asInstanceOf[js.Any])
         ret

@@ -2,7 +2,7 @@ package typingsSlinky.ionicCore.pointerEventsMod
 
 import org.scalajs.dom.raw.EventListenerOptions
 import org.scalajs.dom.raw.Node
-import typingsSlinky.ionicCore.AnonDestroy
+import typingsSlinky.ionicCore.anon.Destroy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,6 +16,6 @@ object createPointerEvents extends js.Object {
     pointerMove: js.Any,
     pointerUp: js.Any,
     options: EventListenerOptions
-  ): AnonDestroy = js.native
+  ): Destroy = js.native
 }
 

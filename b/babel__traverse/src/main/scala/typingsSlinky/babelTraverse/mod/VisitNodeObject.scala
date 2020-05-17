@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait VisitNodeObject[S, P] extends js.Object {
+trait VisitNodeObject[S, P] extends VisitNode[S, P] {
   var enter: js.UndefOr[VisitNodeFunction[S, P]] = js.native
   var exit: js.UndefOr[VisitNodeFunction[S, P]] = js.native
 }

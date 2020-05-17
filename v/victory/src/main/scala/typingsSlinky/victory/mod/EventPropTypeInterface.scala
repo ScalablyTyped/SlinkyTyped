@@ -1,8 +1,8 @@
 package typingsSlinky.victory.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait EventPropTypeInterface[TTarget, TEventKey] extends js.Object {
     */
   var eventHandlers: StringDictionary[
     js.Function1[
-      /* event */ SyntheticEvent[Event_, _], 
+      /* event */ SyntheticEvent[Event, _], 
       (js.Array[EventCallbackInterface[TTarget, TEventKey]]) | (EventCallbackInterface[TTarget, TEventKey])
     ]
   ] = js.native
@@ -36,7 +36,7 @@ object EventPropTypeInterface {
   def apply[TTarget, TEventKey](
     eventHandlers: StringDictionary[
       js.Function1[
-        /* event */ SyntheticEvent[Event_, _], 
+        /* event */ SyntheticEvent[Event, _], 
         (js.Array[EventCallbackInterface[TTarget, TEventKey]]) | (EventCallbackInterface[TTarget, TEventKey])
       ]
     ],
@@ -55,7 +55,7 @@ object EventPropTypeInterface {
     def withEventHandlers(
       value: StringDictionary[
           js.Function1[
-            /* event */ SyntheticEvent[Event_, _], 
+            /* event */ SyntheticEvent[Event, _], 
             (js.Array[EventCallbackInterface[TTarget, TEventKey]]) | (EventCallbackInterface[TTarget, TEventKey])
           ]
         ]

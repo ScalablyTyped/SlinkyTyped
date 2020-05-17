@@ -1,0 +1,33 @@
+package typingsSlinky.pulumiAws.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait TypeofMediaConnect extends js.Object {
+  val Types: this.type = js.native
+}
+
+object TypeofMediaConnect {
+  @scala.inline
+  def apply(Types: TypeofMediaConnect): TypeofMediaConnect = {
+    val __obj = js.Dynamic.literal(Types = Types.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypeofMediaConnect]
+  }
+  @scala.inline
+  implicit class TypeofMediaConnectOps[Self <: TypeofMediaConnect] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTypes(value: TypeofMediaConnect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Types")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

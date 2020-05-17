@@ -1,5 +1,6 @@
 package typingsSlinky.cypress.cypressMod.Cypress
 
+import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.cypress.cypressStrings.`match`
 import typingsSlinky.cypress.cypressStrings.`throw`
 import typingsSlinky.cypress.cypressStrings.alwaysDotreturned
@@ -184,6 +185,7 @@ import typingsSlinky.cypress.cypressStrings.returned
 import typingsSlinky.cypress.cypressStrings.satisfy
 import typingsSlinky.cypress.sinonMod.SinonSpy
 import typingsSlinky.std.ErrorConstructor
+import typingsSlinky.std.global.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -728,9 +730,9 @@ trait Chainer[Subject] extends js.Object {
     * @see https://on.cypress.io/assertions
     */
   def apply(chainer: haveDotalwaysDotthrown): Chainable[Subject] = js.native
+  def apply(chainer: haveDotalwaysDotthrown, value: ErrorConstructor with Instantiable0[Error]): Chainable[Subject] = js.native
   def apply(chainer: haveDotalwaysDotthrown, value: String): Chainable[Subject] = js.native
   def apply(chainer: haveDotalwaysDotthrown, value: js.Error): Chainable[Subject] = js.native
-  def apply(chainer: haveDotalwaysDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
     * Causes all `.keys` assertions that follow in the chain to only require that the target have at least one of the given keys. This is the opposite of `.all`, which requires that the target have all of the given keys.
     * @example
@@ -954,9 +956,9 @@ trait Chainer[Subject] extends js.Object {
     * @see https://on.cypress.io/assertions
     */
   def apply(chainer: haveDotthrown): Chainable[Subject] = js.native
+  def apply(chainer: haveDotthrown, value: ErrorConstructor with Instantiable0[Error]): Chainable[Subject] = js.native
   def apply(chainer: haveDotthrown, value: String): Chainable[Subject] = js.native
   def apply(chainer: haveDotthrown, value: js.Error): Chainable[Subject] = js.native
-  def apply(chainer: haveDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection has the given value, using `.val()`.
     * @example
@@ -1492,9 +1494,9 @@ trait Chainer[Subject] extends js.Object {
     * @see https://on.cypress.io/assertions
     */
   def apply(chainer: notDothaveDotalwaysDotthrown): Chainable[Subject] = js.native
+  def apply(chainer: notDothaveDotalwaysDotthrown, value: ErrorConstructor with Instantiable0[Error]): Chainable[Subject] = js.native
   def apply(chainer: notDothaveDotalwaysDotthrown, value: String): Chainable[Subject] = js.native
   def apply(chainer: notDothaveDotalwaysDotthrown, value: js.Error): Chainable[Subject] = js.native
-  def apply(chainer: notDothaveDotalwaysDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
     * Causes all `.keys` assertions that follow in the chain to only require that the target not have at least one of the given keys. This is the opposite of `.all`, which requires that the target have all of the given keys.
     * @example
@@ -1709,9 +1711,9 @@ trait Chainer[Subject] extends js.Object {
     * @see https://on.cypress.io/assertions
     */
   def apply(chainer: notDothaveDotthrown): Chainable[Subject] = js.native
+  def apply(chainer: notDothaveDotthrown, value: ErrorConstructor with Instantiable0[Error]): Chainable[Subject] = js.native
   def apply(chainer: notDothaveDotthrown, value: String): Chainable[Subject] = js.native
   def apply(chainer: notDothaveDotthrown, value: js.Error): Chainable[Subject] = js.native
-  def apply(chainer: notDothaveDotthrown, value: ErrorConstructor): Chainable[Subject] = js.native
   /**
     * Assert that the first element of the selection does not have the given value, using `.val()`.
     * @example

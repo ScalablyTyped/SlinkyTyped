@@ -1,6 +1,6 @@
 package typingsSlinky.postmanCollection.mod
 
-import typingsSlinky.postmanCollection.AnonKey
+import typingsSlinky.postmanCollection.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait CookieDefinition extends js.Object {
   var domain: String = js.native
   var expires: js.UndefOr[String | js.Date | Double] = js.native
-  var extensions: js.UndefOr[js.Array[AnonKey]] = js.native
+  var extensions: js.UndefOr[js.Array[Key]] = js.native
   var hostOnly: js.UndefOr[Boolean] = js.native
   var httpOnly: js.UndefOr[Boolean] = js.native
   var key: js.UndefOr[String] = js.native
@@ -63,7 +63,7 @@ object CookieDefinition {
         ret
     }
     @scala.inline
-    def withExtensions(value: js.Array[AnonKey]): Self = {
+    def withExtensions(value: js.Array[Key]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("extensions")(value.asInstanceOf[js.Any])
         ret

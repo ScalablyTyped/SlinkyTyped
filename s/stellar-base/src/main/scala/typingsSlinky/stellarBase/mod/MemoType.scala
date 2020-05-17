@@ -4,6 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.stellarBase.mod.MemoType.None
+  - typingsSlinky.stellarBase.mod.MemoType.ID
+  - typingsSlinky.stellarBase.mod.MemoType.Text
+  - typingsSlinky.stellarBase.mod.MemoType.Hash
+  - typingsSlinky.stellarBase.mod.MemoType.Return
+*/
+trait MemoType extends js.Object
+
 @JSImport("stellar-base", "MemoType")
 @js.native
 object MemoType extends js.Object {

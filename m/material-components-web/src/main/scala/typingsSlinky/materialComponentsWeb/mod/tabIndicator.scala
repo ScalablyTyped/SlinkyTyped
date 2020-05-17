@@ -1,10 +1,10 @@
 package typingsSlinky.materialComponentsWeb.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.materialTabIndicator.AnonACTIVE
-import typingsSlinky.materialTabIndicator.AnonCONTENTSELECTOR
-import typingsSlinky.materialTabIndicator.PartialMDCTabIndicatorAda
 import typingsSlinky.materialTabIndicator.adapterMod.MDCTabIndicatorAdapter
+import typingsSlinky.materialTabIndicator.anon.ACTIVE
+import typingsSlinky.materialTabIndicator.anon.CONTENTSELECTOR
+import typingsSlinky.materialTabIndicator.anon.PartialMDCTabIndicatorAda
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,9 +39,9 @@ object tabIndicator extends js.Object {
   /* static members */
   @js.native
   object MDCTabIndicatorFoundation extends js.Object {
-    val cssClasses: AnonACTIVE = js.native
+    val cssClasses: ACTIVE = js.native
     val defaultAdapter: MDCTabIndicatorAdapter = js.native
-    val strings: AnonCONTENTSELECTOR = js.native
+    val strings: CONTENTSELECTOR = js.native
   }
   
   /**

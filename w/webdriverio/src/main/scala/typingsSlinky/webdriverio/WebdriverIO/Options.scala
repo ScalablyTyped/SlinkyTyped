@@ -1,7 +1,7 @@
 package typingsSlinky.webdriverio.WebdriverIO
 
 import typingsSlinky.webdriver.WebDriver.DesiredCapabilities
-import typingsSlinky.webdriverio.AnonSpecFiltering
+import typingsSlinky.webdriverio.anon.SpecFiltering
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait Options extends js.Object {
   var capabilities: js.UndefOr[js.Array[DesiredCapabilities] | MultiRemoteCapabilities] = js.native
   var exclude: js.UndefOr[js.Array[String]] = js.native
   var execArgv: js.UndefOr[js.Array[String]] = js.native
-  var featureFlags: js.UndefOr[AnonSpecFiltering] = js.native
+  var featureFlags: js.UndefOr[SpecFiltering] = js.native
   var framework: js.UndefOr[String] = js.native
   var jasmineNodeOpts: js.UndefOr[js.Object] = js.native
   var maxInstances: js.UndefOr[Double] = js.native
@@ -104,7 +104,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withFeatureFlags(value: AnonSpecFiltering): Self = {
+    def withFeatureFlags(value: SpecFiltering): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("featureFlags")(value.asInstanceOf[js.Any])
         ret

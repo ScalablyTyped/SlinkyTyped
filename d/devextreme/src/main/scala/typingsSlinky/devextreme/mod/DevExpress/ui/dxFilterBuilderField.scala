@@ -1,9 +1,9 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonDisplayExpr
-import typingsSlinky.devextreme.AnonFilterOperation
-import typingsSlinky.devextreme.AnonValue
+import typingsSlinky.devextreme.anon.DisplayExpr
+import typingsSlinky.devextreme.anon.FilterOperation
+import typingsSlinky.devextreme.anon.Value
 import typingsSlinky.devextreme.devextremeStrings.Equalssign
 import typingsSlinky.devextreme.devextremeStrings.Greaterthansign
 import typingsSlinky.devextreme.devextremeStrings.GreaterthansignEqualssign
@@ -24,7 +24,7 @@ import typingsSlinky.devextreme.devextremeStrings.number
 import typingsSlinky.devextreme.devextremeStrings.startswith
 import typingsSlinky.devextreme.devextremeStrings.string_
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,7 +42,7 @@ trait dxFilterBuilderField extends js.Object {
   /** Specifies the data field's caption. */
   var caption: js.UndefOr[String] = js.native
   /** Customizes the input value's display text. */
-  var customizeText: js.UndefOr[js.Function1[/* fieldInfo */ AnonValue, String]] = js.native
+  var customizeText: js.UndefOr[js.Function1[/* fieldInfo */ Value, String]] = js.native
   /** Specifies the name of a field to be filtered. */
   var dataField: js.UndefOr[String] = js.native
   /** Casts field values to a specific data type. */
@@ -52,7 +52,7 @@ trait dxFilterBuilderField extends js.Object {
   /** Specifies the editor's custom template. */
   var editorTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
-      /* conditionInfo */ AnonFilterOperation, 
+      /* conditionInfo */ FilterOperation, 
       /* container */ dxElement, 
       String | Element | JQuery
     ])
@@ -68,7 +68,7 @@ trait dxFilterBuilderField extends js.Object {
   /** Formats a value before it is displayed. */
   var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.native
   /** Configures the lookup field. */
-  var lookup: js.UndefOr[AnonDisplayExpr] = js.native
+  var lookup: js.UndefOr[DisplayExpr] = js.native
   /** Specifies the field's name. Use it to distinguish the field from other fields when they have identical dataField values. */
   var name: js.UndefOr[String] = js.native
   /** Specifies the true value text. Applies only if dataType is "boolean". */
@@ -114,7 +114,7 @@ object dxFilterBuilderField {
         ret
     }
     @scala.inline
-    def withCustomizeText(value: /* fieldInfo */ AnonValue => String): Self = {
+    def withCustomizeText(value: /* fieldInfo */ Value => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customizeText")(js.Any.fromFunction1(value))
         ret
@@ -163,7 +163,7 @@ object dxFilterBuilderField {
     }
     @scala.inline
     def withEditorTemplateFunction2(
-      value: (/* conditionInfo */ AnonFilterOperation, /* container */ dxElement) => String | Element | JQuery
+      value: (/* conditionInfo */ FilterOperation, /* container */ dxElement) => String | Element | JQuery
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editorTemplate")(js.Any.fromFunction2(value))
@@ -178,7 +178,7 @@ object dxFilterBuilderField {
     @scala.inline
     def withEditorTemplate(
       value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
-          /* conditionInfo */ AnonFilterOperation, 
+          /* conditionInfo */ FilterOperation, 
           /* container */ dxElement, 
           String | Element | JQuery
         ])
@@ -240,7 +240,7 @@ object dxFilterBuilderField {
         ret
     }
     @scala.inline
-    def withLookup(value: AnonDisplayExpr): Self = {
+    def withLookup(value: DisplayExpr): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lookup")(value.asInstanceOf[js.Any])
         ret

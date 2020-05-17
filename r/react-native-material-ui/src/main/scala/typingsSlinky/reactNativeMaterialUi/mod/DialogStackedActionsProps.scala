@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeMaterialUi.mod
 
-import typingsSlinky.reactNativeMaterialUi.AnonStackedActionsContainer
+import typingsSlinky.reactNativeMaterialUi.anon.StackedActionsContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DialogStackedActionsProps extends js.Object {
   var actions: js.Array[String] = js.native
-  var style: js.UndefOr[AnonStackedActionsContainer] = js.native
+  var style: js.UndefOr[StackedActionsContainer] = js.native
   def onActionPress(action: String): Unit = js.native
 }
 
@@ -37,7 +37,7 @@ object DialogStackedActionsProps {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonStackedActionsContainer): Self = {
+    def withStyle(value: StackedActionsContainer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

@@ -1,19 +1,19 @@
 package typingsSlinky.babelTypes.mod
 
-import typingsSlinky.babelTypes.AnonColumn
+import typingsSlinky.babelTypes.anon.Column
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SourceLocation extends js.Object {
-  var end: AnonColumn = js.native
-  var start: AnonColumn = js.native
+  var end: Column = js.native
+  var start: Column = js.native
 }
 
 object SourceLocation {
   @scala.inline
-  def apply(end: AnonColumn, start: AnonColumn): SourceLocation = {
+  def apply(end: Column, start: Column): SourceLocation = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.asInstanceOf[SourceLocation]
   }
@@ -24,13 +24,13 @@ object SourceLocation {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEnd(value: AnonColumn): Self = {
+    def withEnd(value: Column): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withStart(value: AnonColumn): Self = {
+    def withStart(value: Column): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
         ret

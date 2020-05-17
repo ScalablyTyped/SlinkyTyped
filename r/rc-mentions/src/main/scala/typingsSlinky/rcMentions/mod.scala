@@ -1,6 +1,8 @@
 package typingsSlinky.rcMentions
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.rcMentions.anon.FilterOption
+import typingsSlinky.rcMentions.anon.PartialMentionsState
 import typingsSlinky.rcMentions.mentionsMod.MentionsProps
 import typingsSlinky.rcMentions.mentionsMod.MentionsState
 import typingsSlinky.rcMentions.optionMod.OptionProps
@@ -21,7 +23,7 @@ object mod extends js.Object {
   @js.native
   object default extends js.Object {
     var Option: ReactComponentClass[OptionProps] = js.native
-    var defaultProps: AnonFilterOption = js.native
+    var defaultProps: FilterOption = js.native
     def getDerivedStateFromProps(props: MentionsProps, prevState: MentionsState): PartialMentionsState = js.native
   }
   

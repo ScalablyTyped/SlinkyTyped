@@ -1,8 +1,8 @@
 package typingsSlinky.microsoftLiveConnect.Microsoft.Live
 
-import typingsSlinky.microsoftLiveConnect.AnonAccount
-import typingsSlinky.microsoftLiveConnect.AnonMobile
-import typingsSlinky.microsoftLiveConnect.AnonPersonal
+import typingsSlinky.microsoftLiveConnect.anon.Account
+import typingsSlinky.microsoftLiveConnect.anon.Mobile
+import typingsSlinky.microsoftLiveConnect.anon.Personal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait IUser extends js.Object {
   /**
     * The user's postal addresses.
     */
-  var addresses: AnonPersonal = js.native
+  var addresses: Personal = js.native
   /**
     * The day of the user's birth date, or null if no birth date is
     * specified.
@@ -35,7 +35,7 @@ trait IUser extends js.Object {
   /**
     * The user's email addresses.
     */
-  var emails: AnonAccount = js.native
+  var emails: Account = js.native
   /**
     * The user's first name.
     */
@@ -67,7 +67,7 @@ trait IUser extends js.Object {
   /**
     * The user's phone numbers.
     */
-  var phones: AnonMobile = js.native
+  var phones: Mobile = js.native
   /**
     * The time, in ISO 8601 format, at which the user last updated the
     * object.
@@ -82,11 +82,11 @@ trait IUser extends js.Object {
 object IUser {
   @scala.inline
   def apply(
-    addresses: AnonPersonal,
+    addresses: Personal,
     birth_day: Double,
     birth_month: Double,
     birth_year: Double,
-    emails: AnonAccount,
+    emails: Account,
     first_name: String,
     gender: String,
     id: String,
@@ -94,7 +94,7 @@ object IUser {
     link: String,
     locale: String,
     name: String,
-    phones: AnonMobile,
+    phones: Mobile,
     updated_time: String,
     work: js.Array[IWorkInfo]
   ): IUser = {
@@ -108,7 +108,7 @@ object IUser {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddresses(value: AnonPersonal): Self = {
+    def withAddresses(value: Personal): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addresses")(value.asInstanceOf[js.Any])
         ret
@@ -132,7 +132,7 @@ object IUser {
         ret
     }
     @scala.inline
-    def withEmails(value: AnonAccount): Self = {
+    def withEmails(value: Account): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emails")(value.asInstanceOf[js.Any])
         ret
@@ -180,7 +180,7 @@ object IUser {
         ret
     }
     @scala.inline
-    def withPhones(value: AnonMobile): Self = {
+    def withPhones(value: Mobile): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("phones")(value.asInstanceOf[js.Any])
         ret

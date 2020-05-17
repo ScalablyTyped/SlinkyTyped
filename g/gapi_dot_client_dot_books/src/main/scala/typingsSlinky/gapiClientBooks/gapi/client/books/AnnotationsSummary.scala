@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClientBooks.AnonLayerId
+import typingsSlinky.gapiClientBooks.anon.LayerId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AnnotationsSummary extends js.Object {
   var kind: js.UndefOr[String] = js.native
-  var layers: js.UndefOr[js.Array[AnonLayerId]] = js.native
+  var layers: js.UndefOr[js.Array[LayerId]] = js.native
 }
 
 object AnnotationsSummary {
@@ -36,7 +36,7 @@ object AnnotationsSummary {
         ret
     }
     @scala.inline
-    def withLayers(value: js.Array[AnonLayerId]): Self = {
+    def withLayers(value: js.Array[LayerId]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(value.asInstanceOf[js.Any])
         ret

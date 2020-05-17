@@ -1,20 +1,20 @@
 package typingsSlinky.reactNative.mod
 
-import typingsSlinky.reactNative.AnonHasnextpage
-import typingsSlinky.reactNative.AnonNode
+import typingsSlinky.reactNative.anon.Hasnextpage
+import typingsSlinky.reactNative.anon.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait GetPhotosReturnType extends js.Object {
-  var edges: js.Array[AnonNode] = js.native
-  var page_info: AnonHasnextpage = js.native
+  var edges: js.Array[Node] = js.native
+  var page_info: Hasnextpage = js.native
 }
 
 object GetPhotosReturnType {
   @scala.inline
-  def apply(edges: js.Array[AnonNode], page_info: AnonHasnextpage): GetPhotosReturnType = {
+  def apply(edges: js.Array[Node], page_info: Hasnextpage): GetPhotosReturnType = {
     val __obj = js.Dynamic.literal(edges = edges.asInstanceOf[js.Any], page_info = page_info.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetPhotosReturnType]
   }
@@ -25,13 +25,13 @@ object GetPhotosReturnType {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEdges(value: js.Array[AnonNode]): Self = {
+    def withEdges(value: js.Array[Node]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("edges")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPage_info(value: AnonHasnextpage): Self = {
+    def withPage_info(value: Hasnextpage): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("page_info")(value.asInstanceOf[js.Any])
         ret

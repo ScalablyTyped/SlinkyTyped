@@ -1,8 +1,8 @@
 package typingsSlinky.phonegapPluginPush.PhonegapPluginPush
 
-import typingsSlinky.phonegapPluginPush.AnonAlert
-import typingsSlinky.phonegapPluginPush.AnonApplicationServerKey
-import typingsSlinky.phonegapPluginPush.AnonClearBadge
+import typingsSlinky.phonegapPluginPush.anon.Alert
+import typingsSlinky.phonegapPluginPush.anon.ApplicationServerKey
+import typingsSlinky.phonegapPluginPush.anon.ClearBadge
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,15 +15,15 @@ trait InitOptions extends js.Object {
   /**
   		 * Android specific initialization options.
   		 */
-  var android: js.UndefOr[AnonClearBadge] = js.native
+  var android: js.UndefOr[ClearBadge] = js.native
   /**
   		 * Browser specific initialization options.
   		 */
-  var browser: js.UndefOr[AnonApplicationServerKey] = js.native
+  var browser: js.UndefOr[ApplicationServerKey] = js.native
   /**
   		 * iOS specific initialization options.
   		 */
-  var ios: js.UndefOr[AnonAlert] = js.native
+  var ios: js.UndefOr[Alert] = js.native
   /**
   		 * Windows specific initialization options.
   		 */
@@ -43,7 +43,7 @@ object InitOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAndroid(value: AnonClearBadge): Self = {
+    def withAndroid(value: ClearBadge): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("android")(value.asInstanceOf[js.Any])
         ret
@@ -55,7 +55,7 @@ object InitOptions {
         ret
     }
     @scala.inline
-    def withBrowser(value: AnonApplicationServerKey): Self = {
+    def withBrowser(value: ApplicationServerKey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("browser")(value.asInstanceOf[js.Any])
         ret
@@ -67,7 +67,7 @@ object InitOptions {
         ret
     }
     @scala.inline
-    def withIos(value: AnonAlert): Self = {
+    def withIos(value: Alert): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ios")(value.asInstanceOf[js.Any])
         ret

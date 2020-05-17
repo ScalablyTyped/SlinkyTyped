@@ -1,6 +1,6 @@
 package typingsSlinky.atlassianCrowdClient.userMod
 
-import typingsSlinky.atlassianCrowdClient.AnonValue
+import typingsSlinky.atlassianCrowdClient.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait UserObj extends js.Object {
   val `first-name`: String = js.native
   val `last-name`: String = js.native
   val name: String = js.native
-  val password: js.UndefOr[AnonValue] = js.native
+  val password: js.UndefOr[Value] = js.native
 }
 
 object UserObj {
@@ -75,7 +75,7 @@ object UserObj {
         ret
     }
     @scala.inline
-    def withPassword(value: AnonValue): Self = {
+    def withPassword(value: Value): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
         ret

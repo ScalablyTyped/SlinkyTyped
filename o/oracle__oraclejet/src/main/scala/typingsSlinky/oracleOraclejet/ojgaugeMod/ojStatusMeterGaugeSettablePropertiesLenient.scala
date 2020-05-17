@@ -1,12 +1,12 @@
 package typingsSlinky.oracleOraclejet.ojgaugeMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.Anon10
-import typingsSlinky.oracleOraclejet.Anon11
-import typingsSlinky.oracleOraclejet.AnonBorderColorBorderRadius
-import typingsSlinky.oracleOraclejet.AnonConverterPosition
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
-import typingsSlinky.oracleOraclejet.AnonPositionStyle
+import typingsSlinky.oracleOraclejet.anon.BorderColorBorderRadius
+import typingsSlinky.oracleOraclejet.anon.ConverterPosition
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
+import typingsSlinky.oracleOraclejet.anon.PositionStyle
+import typingsSlinky.oracleOraclejet.anon.`10`
+import typingsSlinky.oracleOraclejet.anon.`11`
 import typingsSlinky.oracleOraclejet.ojgaugeMod.ojStatusMeterGauge.ReferenceLine
 import typingsSlinky.oracleOraclejet.ojgaugeMod.ojStatusMeterGauge.Threshold
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.all
@@ -33,16 +33,16 @@ trait ojStatusMeterGaugeSettablePropertiesLenient
   var animationOnDisplay: js.UndefOr[auto | none] = js.native
   var borderColor: js.UndefOr[String] = js.native
   var borderRadius: js.UndefOr[String] = js.native
-  var center: js.UndefOr[Anon10] = js.native
+  var center: js.UndefOr[`10`] = js.native
   var color: js.UndefOr[String] = js.native
   var indicatorSize: js.UndefOr[Double] = js.native
   var innerRadius: js.UndefOr[Double] = js.native
-  var label: js.UndefOr[AnonPositionStyle] = js.native
+  var label: js.UndefOr[PositionStyle] = js.native
   var max: js.UndefOr[Double] = js.native
-  var metricLabel: js.UndefOr[AnonConverterPosition] = js.native
+  var metricLabel: js.UndefOr[ConverterPosition] = js.native
   var min: js.UndefOr[Double] = js.native
   var orientation: js.UndefOr[circular | vertical | horizontal] = js.native
-  var plotArea: js.UndefOr[AnonBorderColorBorderRadius] = js.native
+  var plotArea: js.UndefOr[BorderColorBorderRadius] = js.native
   var readonly: js.UndefOr[Boolean] = js.native
   var referenceLines: js.UndefOr[js.Array[ReferenceLine]] = js.native
   var startAngle: js.UndefOr[Double] = js.native
@@ -51,10 +51,10 @@ trait ojStatusMeterGaugeSettablePropertiesLenient
   var svgStyle: js.UndefOr[js.Object] = js.native
   var thresholdDisplay: js.UndefOr[currentOnly | all | onIndicator] = js.native
   var thresholds: js.UndefOr[js.Array[Threshold]] = js.native
-  var tooltip: js.UndefOr[Anon11] = js.native
+  var tooltip: js.UndefOr[`11`] = js.native
   var trackResize: js.UndefOr[on | off] = js.native
   var transientValue: js.UndefOr[Double] = js.native
-  var translations: js.UndefOr[AnonLabelAndValue] = js.native
+  var translations: js.UndefOr[LabelAndValue] = js.native
   var value: js.UndefOr[Double] = js.native
   var visualEffects: js.UndefOr[none | auto] = js.native
 }
@@ -144,7 +144,7 @@ object ojStatusMeterGaugeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withCenter(value: Anon10): Self = {
+    def withCenter(value: `10`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
         ret
@@ -192,7 +192,7 @@ object ojStatusMeterGaugeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonPositionStyle): Self = {
+    def withLabel(value: PositionStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -216,7 +216,7 @@ object ojStatusMeterGaugeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withMetricLabel(value: AnonConverterPosition): Self = {
+    def withMetricLabel(value: ConverterPosition): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metricLabel")(value.asInstanceOf[js.Any])
         ret
@@ -252,7 +252,7 @@ object ojStatusMeterGaugeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withPlotArea(value: AnonBorderColorBorderRadius): Self = {
+    def withPlotArea(value: BorderColorBorderRadius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("plotArea")(value.asInstanceOf[js.Any])
         ret
@@ -360,7 +360,7 @@ object ojStatusMeterGaugeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTooltip(value: Anon11): Self = {
+    def withTooltip(value: `11`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
@@ -396,7 +396,7 @@ object ojStatusMeterGaugeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelAndValue): Self = {
+    def withTranslations(value: LabelAndValue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

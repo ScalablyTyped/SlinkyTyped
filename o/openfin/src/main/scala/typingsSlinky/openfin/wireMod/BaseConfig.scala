@@ -1,6 +1,6 @@
 package typingsSlinky.openfin.wireMod
 
-import typingsSlinky.openfin.AnonAlias
+import typingsSlinky.openfin.anon.Alias
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait BaseConfig extends js.Object {
   var address: js.UndefOr[String] = js.native
-  var appAssets: js.UndefOr[js.Array[AnonAlias]] = js.native
+  var appAssets: js.UndefOr[js.Array[Alias]] = js.native
   var assetsUrl: js.UndefOr[String] = js.native
   var client: js.UndefOr[js.Any] = js.native
   var customItems: js.UndefOr[js.Array[_]] = js.native
@@ -52,7 +52,7 @@ object BaseConfig {
         ret
     }
     @scala.inline
-    def withAppAssets(value: js.Array[AnonAlias]): Self = {
+    def withAppAssets(value: js.Array[Alias]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("appAssets")(value.asInstanceOf[js.Any])
         ret

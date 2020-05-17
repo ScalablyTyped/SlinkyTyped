@@ -3,7 +3,7 @@ package typingsSlinky.rcMenu.menuItemMod
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLLIElement
 import slinky.web.SyntheticKeyboardEvent
-import typingsSlinky.rcMenu.AnonManualRef
+import typingsSlinky.rcMenu.anon.ManualRef
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.MouseEventHandler
 import scala.scalajs.js
@@ -37,7 +37,7 @@ class MenuItem ()
 @JSImport("rc-menu/lib/MenuItem", "MenuItem")
 @js.native
 object MenuItem extends js.Object {
-  var defaultProps: AnonManualRef = js.native
+  var defaultProps: ManualRef = js.native
   var isMenuItem: Boolean = js.native
 }
 

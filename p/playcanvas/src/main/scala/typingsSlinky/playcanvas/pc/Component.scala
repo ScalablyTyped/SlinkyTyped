@@ -17,10 +17,8 @@ import scala.scalajs.js.annotation._
   * @property {pc.Entity} entity The Entity that this Component is attached to.
   * @property {boolean} enabled Enables or disables the component.
   */
-@JSGlobal("pc.Component")
 @js.native
-class Component protected () extends EventHandler {
-  def this(system: ComponentSystem, entity: Entity) = this()
+trait Component extends EventHandler {
   /**
     * Enables or disables the component.
     */

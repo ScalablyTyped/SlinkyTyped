@@ -1,6 +1,7 @@
 package typingsSlinky.reactSketchapp
 
 import typingsSlinky.react.mod.Component
+import typingsSlinky.reactSketchapp.anon.IsInAParentText
 import typingsSlinky.reactSketchapp.propsMod.TextProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +13,7 @@ object tspanMod extends js.Object {
   @js.native
   trait TSpan
     extends Component[TextProps, js.Object, js.Any] {
-    def getChildContext(): AnonIsInAParentText = js.native
+    def getChildContext(): IsInAParentText = js.native
   }
   
   @js.native

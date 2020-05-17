@@ -1,6 +1,7 @@
 package typingsSlinky.blueprintjsCore
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.blueprintjsCore.anon.DisplayName
 import typingsSlinky.blueprintjsCore.constructorMod.IConstructor
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -20,6 +21,6 @@ object hotkeysTargetMod extends js.Object {
     def renderHotkeys(): ReactElement = js.native
   }
   
-  def HotkeysTarget[T /* <: IConstructor[IHotkeysTargetComponent] */](WrappedComponent: T): AnonDisplayName with T = js.native
+  def HotkeysTarget[T /* <: IConstructor[IHotkeysTargetComponent] */](WrappedComponent: T): DisplayName with T = js.native
 }
 

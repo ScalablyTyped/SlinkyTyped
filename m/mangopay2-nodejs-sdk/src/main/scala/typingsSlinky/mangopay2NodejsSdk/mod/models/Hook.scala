@@ -1,6 +1,6 @@
 package typingsSlinky.mangopay2NodejsSdk.mod.models
 
-import typingsSlinky.mangopay2NodejsSdk.PartialHookData
+import typingsSlinky.mangopay2NodejsSdk.anon.PartialHookData
 import typingsSlinky.mangopay2NodejsSdk.mod.hook.HookData
 import scala.scalajs.js
 import scala.scalajs.js.`|`

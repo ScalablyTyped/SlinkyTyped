@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientTagmanager.gapi.client.tagmanager
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientTagmanager.AnonAlt
-import typingsSlinky.gapiClientTagmanager.AnonFields
-import typingsSlinky.gapiClientTagmanager.AnonFingerprint
-import typingsSlinky.gapiClientTagmanager.AnonKey
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientTagmanager.anon.Alt
+import typingsSlinky.gapiClientTagmanager.anon.Fields
+import typingsSlinky.gapiClientTagmanager.anon.Fingerprint
+import typingsSlinky.gapiClientTagmanager.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,54 +18,54 @@ trait WorkspacesResource extends js.Object {
   var triggers: TriggersResource = js.native
   var variables: VariablesResource = js.native
   /** Creates a Workspace. */
-  def create(request: AnonAlt): Request_[Workspace] = js.native
+  def create(request: Alt): Request[Workspace] = js.native
   /**
     * Creates a Container Version from the entities present in the workspace, deletes the workspace, and sets the base container version to the newly created
     * version.
     */
-  def create_version(request: AnonFields): Request_[CreateContainerVersionResponse] = js.native
+  def create_version(request: Fields): Request[CreateContainerVersionResponse] = js.native
   /** Deletes a Workspace. */
-  def delete(request: AnonFields): Request_[Unit] = js.native
+  def delete(request: Fields): Request[Unit] = js.native
   /** Gets a Workspace. */
-  def get(request: AnonFields): Request_[Workspace] = js.native
+  def get(request: Fields): Request[Workspace] = js.native
   /** Gets a GTM Workspace Proposal. */
-  def getProposal(request: AnonFields): Request_[WorkspaceProposal] = js.native
+  def getProposal(request: Fields): Request[WorkspaceProposal] = js.native
   /** Finds conflicting and modified entities in the workspace. */
-  def getStatus(request: AnonFields): Request_[GetWorkspaceStatusResponse] = js.native
+  def getStatus(request: Fields): Request[GetWorkspaceStatusResponse] = js.native
   /** Lists all Workspaces that belong to a GTM Container. */
-  def list(request: AnonKey): Request_[ListWorkspacesResponse] = js.native
+  def list(request: Key): Request[ListWorkspacesResponse] = js.native
   /** Quick previews a workspace by creating a fake container version from all entities in the provided workspace. */
-  def quick_preview(request: AnonFields): Request_[QuickPreviewResponse] = js.native
+  def quick_preview(request: Fields): Request[QuickPreviewResponse] = js.native
   /** Resolves a merge conflict for a workspace entity by updating it to the resolved entity passed in the request. */
-  def resolve_conflict(request: AnonFingerprint): Request_[Unit] = js.native
+  def resolve_conflict(request: Fingerprint): Request[Unit] = js.native
   /** Syncs a workspace to the latest container version by updating all unmodified workspace entities and displaying conflicts for modified entities. */
-  def sync(request: AnonFields): Request_[SyncWorkspaceResponse] = js.native
+  def sync(request: Fields): Request[SyncWorkspaceResponse] = js.native
   /** Updates a Workspace. */
-  def update(request: AnonFingerprint): Request_[Workspace] = js.native
+  def update(request: Fingerprint): Request[Workspace] = js.native
   /** Updates a GTM Workspace Proposal. */
-  def updateProposal(request: AnonFields): Request_[WorkspaceProposal] = js.native
+  def updateProposal(request: Fields): Request[WorkspaceProposal] = js.native
 }
 
 object WorkspacesResource {
   @scala.inline
   def apply(
     built_in_variables: BuiltInVariablesResource,
-    create: AnonAlt => Request_[Workspace],
-    create_version: AnonFields => Request_[CreateContainerVersionResponse],
-    delete: AnonFields => Request_[Unit],
+    create: Alt => Request[Workspace],
+    create_version: Fields => Request[CreateContainerVersionResponse],
+    delete: Fields => Request[Unit],
     folders: FoldersResource,
-    get: AnonFields => Request_[Workspace],
-    getProposal: AnonFields => Request_[WorkspaceProposal],
-    getStatus: AnonFields => Request_[GetWorkspaceStatusResponse],
-    list: AnonKey => Request_[ListWorkspacesResponse],
+    get: Fields => Request[Workspace],
+    getProposal: Fields => Request[WorkspaceProposal],
+    getStatus: Fields => Request[GetWorkspaceStatusResponse],
+    list: Key => Request[ListWorkspacesResponse],
     proposal: ProposalResource,
-    quick_preview: AnonFields => Request_[QuickPreviewResponse],
-    resolve_conflict: AnonFingerprint => Request_[Unit],
-    sync: AnonFields => Request_[SyncWorkspaceResponse],
+    quick_preview: Fields => Request[QuickPreviewResponse],
+    resolve_conflict: Fingerprint => Request[Unit],
+    sync: Fields => Request[SyncWorkspaceResponse],
     tags: TagsResource,
     triggers: TriggersResource,
-    update: AnonFingerprint => Request_[Workspace],
-    updateProposal: AnonFields => Request_[WorkspaceProposal],
+    update: Fingerprint => Request[Workspace],
+    updateProposal: Fields => Request[WorkspaceProposal],
     variables: VariablesResource
   ): WorkspacesResource = {
     val __obj = js.Dynamic.literal(built_in_variables = built_in_variables.asInstanceOf[js.Any], create = js.Any.fromFunction1(create), create_version = js.Any.fromFunction1(create_version), delete = js.Any.fromFunction1(delete), folders = folders.asInstanceOf[js.Any], get = js.Any.fromFunction1(get), getProposal = js.Any.fromFunction1(getProposal), getStatus = js.Any.fromFunction1(getStatus), list = js.Any.fromFunction1(list), proposal = proposal.asInstanceOf[js.Any], quick_preview = js.Any.fromFunction1(quick_preview), resolve_conflict = js.Any.fromFunction1(resolve_conflict), sync = js.Any.fromFunction1(sync), tags = tags.asInstanceOf[js.Any], triggers = triggers.asInstanceOf[js.Any], update = js.Any.fromFunction1(update), updateProposal = js.Any.fromFunction1(updateProposal), variables = variables.asInstanceOf[js.Any])
@@ -84,19 +84,19 @@ object WorkspacesResource {
         ret
     }
     @scala.inline
-    def withCreate(value: AnonAlt => Request_[Workspace]): Self = {
+    def withCreate(value: Alt => Request[Workspace]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withCreate_version(value: AnonFields => Request_[CreateContainerVersionResponse]): Self = {
+    def withCreate_version(value: Fields => Request[CreateContainerVersionResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create_version")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonFields => Request_[Unit]): Self = {
+    def withDelete(value: Fields => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
@@ -108,25 +108,25 @@ object WorkspacesResource {
         ret
     }
     @scala.inline
-    def withGet(value: AnonFields => Request_[Workspace]): Self = {
+    def withGet(value: Fields => Request[Workspace]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGetProposal(value: AnonFields => Request_[WorkspaceProposal]): Self = {
+    def withGetProposal(value: Fields => Request[WorkspaceProposal]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getProposal")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGetStatus(value: AnonFields => Request_[GetWorkspaceStatusResponse]): Self = {
+    def withGetStatus(value: Fields => Request[GetWorkspaceStatusResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getStatus")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonKey => Request_[ListWorkspacesResponse]): Self = {
+    def withList(value: Key => Request[ListWorkspacesResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
@@ -138,19 +138,19 @@ object WorkspacesResource {
         ret
     }
     @scala.inline
-    def withQuick_preview(value: AnonFields => Request_[QuickPreviewResponse]): Self = {
+    def withQuick_preview(value: Fields => Request[QuickPreviewResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("quick_preview")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withResolve_conflict(value: AnonFingerprint => Request_[Unit]): Self = {
+    def withResolve_conflict(value: Fingerprint => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resolve_conflict")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withSync(value: AnonFields => Request_[SyncWorkspaceResponse]): Self = {
+    def withSync(value: Fields => Request[SyncWorkspaceResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sync")(js.Any.fromFunction1(value))
         ret
@@ -168,13 +168,13 @@ object WorkspacesResource {
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonFingerprint => Request_[Workspace]): Self = {
+    def withUpdate(value: Fingerprint => Request[Workspace]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdateProposal(value: AnonFields => Request_[WorkspaceProposal]): Self = {
+    def withUpdateProposal(value: Fields => Request[WorkspaceProposal]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("updateProposal")(js.Any.fromFunction1(value))
         ret

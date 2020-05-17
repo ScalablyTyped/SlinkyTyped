@@ -2,6 +2,13 @@ package typingsSlinky.knockoutPreRendered
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Node
+import typingsSlinky.knockoutPreRendered.anon.AddTemplate
+import typingsSlinky.knockoutPreRendered.anon.ApplyMemoizedBindingsToNextSibling
+import typingsSlinky.knockoutPreRendered.anon.BindingRewriteValidators
+import typingsSlinky.knockoutPreRendered.anon.Instance
+import typingsSlinky.knockoutPreRendered.anon.InstantiableInstance
+import typingsSlinky.knockoutPreRendered.anon.InstantiableKnockoutTemplateEngine
+import typingsSlinky.knockoutPreRendered.anon.ReadValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,22 +18,22 @@ import scala.scalajs.js.annotation._
 trait KnockoutStatic extends js.Object {
   var bindingHandlers: KnockoutBindingHandlers = js.native
   /////////////////////////////////
-  var bindingProvider: AnonInstantiableInstance = js.native
+  var bindingProvider: InstantiableInstance = js.native
   var components: KnockoutComponents = js.native
   var computedContext: KnockoutComputedContext = js.native
   @JSName("computed")
   var computed_Original: KnockoutComputedStatic = js.native
-  var expressionRewriting: AnonBindingRewriteValidators = js.native
+  var expressionRewriting: BindingRewriteValidators = js.native
   var extenders: KnockoutExtenders = js.native
   //////////////////////////////////
   // jqueryTmplTemplateEngine.js
   //////////////////////////////////
-  var jqueryTmplTemplateEngine: AnonAddTemplate = js.native
+  var jqueryTmplTemplateEngine: AddTemplate = js.native
   var memoization: KnockoutMemoization = js.native
   //////////////////////////////////
   // nativeTemplateEngine.js
   //////////////////////////////////
-  var nativeTemplateEngine: AnonInstance = js.native
+  var nativeTemplateEngine: Instance = js.native
   @JSName("observableArray")
   var observableArray_Original: KnockoutObservableArrayStatic = js.native
   @JSName("observable")
@@ -34,16 +41,16 @@ trait KnockoutStatic extends js.Object {
   /////////////////////////////////
   // selectExtensions.js
   /////////////////////////////////
-  var selectExtensions: AnonReadValue = js.native
+  var selectExtensions: ReadValue = js.native
   var subscribable: KnockoutSubscribableStatic = js.native
   //////////////////////////////////
   // templateEngine.js
   //////////////////////////////////
-  var templateEngine: AnonInstantiableKnockoutTemplateEngine = js.native
+  var templateEngine: InstantiableKnockoutTemplateEngine = js.native
   //////////////////////////////////
   // templateRewriting.js
   //////////////////////////////////
-  var templateRewriting: AnonApplyMemoizedBindingsToNextSibling = js.native
+  var templateRewriting: ApplyMemoizedBindingsToNextSibling = js.native
   //////////////////////////////////
   // templateSources.js
   //////////////////////////////////

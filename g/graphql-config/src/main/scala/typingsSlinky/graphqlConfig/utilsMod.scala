@@ -2,6 +2,7 @@ package typingsSlinky.graphqlConfig
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.graphql.mod.GraphQLSchema
+import typingsSlinky.graphqlConfig.anon.IntrospectionQueryerrorsu
 import typingsSlinky.graphqlConfig.typesMod.GraphQLConfigData
 import typingsSlinky.graphqlConfig.typesMod.IntrospectionResult
 import scala.scalajs.js

@@ -1,8 +1,8 @@
 package typingsSlinky.passportSamlMetadata.readerMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.passportSamlMetadata.AnonCamelCase
-import typingsSlinky.passportSamlMetadata.PartialMetadataConstructo
+import typingsSlinky.passportSamlMetadata.anon.CamelCase
+import typingsSlinky.passportSamlMetadata.anon.PartialMetadataConstructo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 class MetadataReader protected () extends js.Object {
   def this(metadata: String) = this()
   def this(metadata: String, options: PartialMetadataConstructo) = this()
-  def claimSchema: StringDictionary[AnonCamelCase] = js.native
+  def claimSchema: StringDictionary[CamelCase] = js.native
   def encryptionCert: js.UndefOr[String] = js.native
   def encryptionCerts: js.Array[String] = js.native
   def identifierFormat: js.UndefOr[String] = js.native

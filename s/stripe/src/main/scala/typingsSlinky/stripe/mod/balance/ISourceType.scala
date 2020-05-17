@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.balance
 
-import typingsSlinky.stripe.AnonAlipayaccount
+import typingsSlinky.stripe.anon.Alipayaccount
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait ISourceType extends js.Object {
   var amount: Double = js.native
   var currency: String = js.native
-  var source_types: AnonAlipayaccount = js.native
+  var source_types: Alipayaccount = js.native
 }
 
 object ISourceType {
   @scala.inline
-  def apply(amount: Double, currency: String, source_types: AnonAlipayaccount): ISourceType = {
+  def apply(amount: Double, currency: String, source_types: Alipayaccount): ISourceType = {
     val __obj = js.Dynamic.literal(amount = amount.asInstanceOf[js.Any], currency = currency.asInstanceOf[js.Any], source_types = source_types.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISourceType]
   }
@@ -37,7 +37,7 @@ object ISourceType {
         ret
     }
     @scala.inline
-    def withSource_types(value: AnonAlipayaccount): Self = {
+    def withSource_types(value: Alipayaccount): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("source_types")(value.asInstanceOf[js.Any])
         ret

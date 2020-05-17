@@ -1,6 +1,6 @@
 package typingsSlinky.oracleOraclejet.ojgaugeMod
 
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponentSettableProperties
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.off
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.on
@@ -11,12 +11,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait dvtBaseGaugeSettableProperties extends dvtBaseComponentSettableProperties {
   @JSName("translations")
-  var translations_dvtBaseGaugeSettableProperties: AnonLabelAndValue = js.native
+  var translations_dvtBaseGaugeSettableProperties: LabelAndValue = js.native
 }
 
 object dvtBaseGaugeSettableProperties {
   @scala.inline
-  def apply(trackResize: on | off, translations: AnonLabelAndValue): dvtBaseGaugeSettableProperties = {
+  def apply(trackResize: on | off, translations: LabelAndValue): dvtBaseGaugeSettableProperties = {
     val __obj = js.Dynamic.literal(trackResize = trackResize.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[dvtBaseGaugeSettableProperties]
   }
@@ -27,7 +27,7 @@ object dvtBaseGaugeSettableProperties {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTranslations(value: AnonLabelAndValue): Self = {
+    def withTranslations(value: LabelAndValue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

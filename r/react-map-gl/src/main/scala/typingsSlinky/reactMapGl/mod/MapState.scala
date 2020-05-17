@@ -1,8 +1,8 @@
 package typingsSlinky.reactMapGl.mod
 
-import typingsSlinky.reactMapGl.AnonDeltaScaleX
-import typingsSlinky.reactMapGl.PositionInputscalenumbers
-import typingsSlinky.reactMapGl.PositionInputstartPosnumb
+import typingsSlinky.reactMapGl.anon.DeltaScaleX
+import typingsSlinky.reactMapGl.anon.PositionInputscalenumbers
+import typingsSlinky.reactMapGl.anon.PositionInputstartPosnumb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ class MapState protected () extends js.Object {
   def pan(input: PositionInputstartPosnumb): MapState = js.native
   def panEnd(): MapState = js.native
   def panStart(input: PositionInput): MapState = js.native
-  def rotate(input: AnonDeltaScaleX): MapState = js.native
+  def rotate(input: DeltaScaleX): MapState = js.native
   def rotateEnd(): MapState = js.native
   def rotateStart(input: PositionInput): MapState = js.native
   def zoom(input: PositionInputscalenumbers): MapState = js.native

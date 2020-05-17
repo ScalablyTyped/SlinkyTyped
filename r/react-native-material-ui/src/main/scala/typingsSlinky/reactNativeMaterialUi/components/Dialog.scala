@@ -2,7 +2,7 @@ package typingsSlinky.reactNativeMaterialUi.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNativeMaterialUi.AnonContainerViewStyle
+import typingsSlinky.reactNativeMaterialUi.anon.ContainerViewStyle
 import typingsSlinky.reactNativeMaterialUi.mod.DialogProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,7 +20,7 @@ object Dialog {
     @scala.inline
     def onPress(value: () => Unit): this.type = set("onPress", js.Any.fromFunction0(value))
     @scala.inline
-    def style(value: AnonContainerViewStyle): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: ContainerViewStyle): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: DialogProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

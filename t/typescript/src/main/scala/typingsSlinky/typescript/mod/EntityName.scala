@@ -12,3 +12,10 @@ trait EntityName
   extends EntityNameOrEntityNameExpression
      with ModuleReference
 
+object EntityName {
+  @scala.inline
+  implicit def apply(value: Identifier): EntityName = value.asInstanceOf[EntityName]
+  @scala.inline
+  implicit def apply(value: QualifiedName): EntityName = value.asInstanceOf[EntityName]
+}
+

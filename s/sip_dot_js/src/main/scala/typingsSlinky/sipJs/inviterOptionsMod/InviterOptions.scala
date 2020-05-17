@@ -1,6 +1,6 @@
 package typingsSlinky.sipJs.inviterOptionsMod
 
-import typingsSlinky.sipJs.AnonFromDisplayName
+import typingsSlinky.sipJs.anon.FromDisplayName
 import typingsSlinky.sipJs.apiSessionDescriptionHandlerMod.SessionDescriptionHandlerModifier
 import typingsSlinky.sipJs.apiSessionDescriptionHandlerMod.SessionDescriptionHandlerOptions
 import typingsSlinky.sipJs.sessionOptionsMod.SessionOptions
@@ -24,7 +24,7 @@ trait InviterOptions extends SessionOptions {
   /** If true, send INVITE without SDP. Default is false. */
   var inviteWithoutSdp: js.UndefOr[Boolean] = js.native
   /** @deprecated TODO: provide alternative. */
-  var params: js.UndefOr[AnonFromDisplayName] = js.native
+  var params: js.UndefOr[FromDisplayName] = js.native
   /** @deprecated TODO: provide alternative. */
   var renderbody: js.UndefOr[String] = js.native
   /** @deprecated TODO: provide alternative. */
@@ -96,7 +96,7 @@ object InviterOptions {
         ret
     }
     @scala.inline
-    def withParams(value: AnonFromDisplayName): Self = {
+    def withParams(value: FromDisplayName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
         ret

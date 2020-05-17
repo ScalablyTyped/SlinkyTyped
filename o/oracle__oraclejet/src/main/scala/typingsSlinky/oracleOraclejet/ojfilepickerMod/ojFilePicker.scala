@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.ClipboardEvent
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.ErrorEvent
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.KeyboardEvent
@@ -120,7 +121,6 @@ import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.transitionstart
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.volumechange
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.waiting
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.wheel
-import typingsSlinky.std.Event_
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -224,35 +224,35 @@ trait ojFilePicker extends JetElement[ojFilePickerSettableProperties] {
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_cancel(`type`: cancel, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_cancel(`type`: cancel, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_cancel(
     `type`: cancel,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_canplay(`type`: canplay, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_canplay(`type`: canplay, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_canplay(
     `type`: canplay,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_canplaythrough(`type`: canplaythrough, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_canplaythrough(`type`: canplaythrough, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_canplaythrough(
     `type`: canplaythrough,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_change(`type`: change, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_change(`type`: change, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_change(
     `type`: change,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
@@ -264,11 +264,11 @@ trait ojFilePicker extends JetElement[ojFilePickerSettableProperties] {
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_close(`type`: close, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_close(`type`: close, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_close(
     `type`: close,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
@@ -288,11 +288,11 @@ trait ojFilePicker extends JetElement[ojFilePickerSettableProperties] {
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_cuechange(`type`: cuechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_cuechange(`type`: cuechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_cuechange(
     `type`: cuechange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
@@ -336,11 +336,11 @@ trait ojFilePicker extends JetElement[ojFilePickerSettableProperties] {
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_dragexit(`type`: dragexit, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_dragexit(`type`: dragexit, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dragexit(
     `type`: dragexit,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
@@ -376,27 +376,27 @@ trait ojFilePicker extends JetElement[ojFilePickerSettableProperties] {
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_durationchange(`type`: durationchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_durationchange(`type`: durationchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_durationchange(
     `type`: durationchange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_emptied(`type`: emptied, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_emptied(`type`: emptied, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_emptied(
     `type`: emptied,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_ended(`type`: ended, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_ended(`type`: ended, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ended(
     `type`: ended,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
@@ -432,19 +432,19 @@ trait ojFilePicker extends JetElement[ojFilePickerSettableProperties] {
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_fullscreenchange(`type`: fullscreenchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_fullscreenchange(`type`: fullscreenchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenchange(
     `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_fullscreenerror(`type`: fullscreenerror, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_fullscreenerror(`type`: fullscreenerror, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenerror(
     `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
@@ -459,19 +459,19 @@ trait ojFilePicker extends JetElement[ojFilePickerSettableProperties] {
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_input(`type`: input, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_input(`type`: input, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_input(
     `type`: input,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_invalid(`type`: invalid, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_invalid(`type`: invalid, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_invalid(
     `type`: invalid,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
@@ -499,35 +499,35 @@ trait ojFilePicker extends JetElement[ojFilePickerSettableProperties] {
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_load(`type`: load, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_load(`type`: load, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_load(
     `type`: load,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_loadeddata(`type`: loadeddata, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_loadeddata(`type`: loadeddata, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadeddata(
     `type`: loadeddata,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_loadedmetadata(`type`: loadedmetadata, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_loadedmetadata(`type`: loadedmetadata, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadedmetadata(
     `type`: loadedmetadata,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_loadstart(`type`: loadstart, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_loadstart(`type`: loadstart, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadstart(
     `type`: loadstart,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
@@ -614,27 +614,27 @@ trait ojFilePicker extends JetElement[ojFilePickerSettableProperties] {
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_pause(`type`: pause, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_pause(`type`: pause, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pause(
     `type`: pause,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_play(`type`: play, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_play(`type`: play, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_play(
     `type`: play,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_playing(`type`: playing, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_playing(`type`: playing, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_playing(
     `type`: playing,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
@@ -713,19 +713,19 @@ trait ojFilePicker extends JetElement[ojFilePickerSettableProperties] {
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_ratechange(`type`: ratechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_ratechange(`type`: ratechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ratechange(
     `type`: ratechange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_reset(`type`: reset, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_reset(`type`: reset, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_reset(
     `type`: reset,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
@@ -737,11 +737,11 @@ trait ojFilePicker extends JetElement[ojFilePickerSettableProperties] {
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_scroll(`type`: scroll, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_scroll(`type`: scroll, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_scroll(
     `type`: scroll,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
@@ -756,83 +756,83 @@ trait ojFilePicker extends JetElement[ojFilePickerSettableProperties] {
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_seeked(`type`: seeked, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_seeked(`type`: seeked, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_seeked(
     `type`: seeked,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_seeking(`type`: seeking, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_seeking(`type`: seeking, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_seeking(
     `type`: seeking,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_select(`type`: select, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_select(`type`: select, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_select(
     `type`: select,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_selectionchange(`type`: selectionchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_selectionchange(`type`: selectionchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_selectionchange(
     `type`: selectionchange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_selectstart(`type`: selectstart, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_selectstart(`type`: selectstart, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_selectstart(
     `type`: selectstart,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_stalled(`type`: stalled, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_stalled(`type`: stalled, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_stalled(
     `type`: stalled,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_submit(`type`: submit, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_submit(`type`: submit, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_submit(
     `type`: submit,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_suspend(`type`: suspend, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_suspend(`type`: suspend, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_suspend(
     `type`: suspend,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_timeupdate(`type`: timeupdate, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_timeupdate(`type`: timeupdate, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_timeupdate(
     `type`: timeupdate,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_toggle(`type`: toggle, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_toggle(`type`: toggle, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_toggle(
     `type`: toggle,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
@@ -912,19 +912,19 @@ trait ojFilePicker extends JetElement[ojFilePickerSettableProperties] {
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_volumechange(`type`: volumechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_volumechange(`type`: volumechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_volumechange(
     `type`: volumechange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_waiting(`type`: waiting, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_waiting(`type`: waiting, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_waiting(
     `type`: waiting,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")

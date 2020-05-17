@@ -1,8 +1,8 @@
 package typingsSlinky.atom.toolBarMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.atom.AnonClass
-import typingsSlinky.atom.AnonItem
+import typingsSlinky.atom.anon.Class
+import typingsSlinky.atom.anon.Item
 import typingsSlinky.atom.atomStrings.devicon
 import typingsSlinky.atom.atomStrings.fa
 import typingsSlinky.atom.atomStrings.fab
@@ -125,7 +125,7 @@ trait ButtonOptions extends js.Object {
   /** (optional)
     * The tooltip option may be a string or an object that is passed to Atom's TooltipManager
     */
-  var tooltip: js.UndefOr[String | AnonItem | AnonClass] = js.native
+  var tooltip: js.UndefOr[String | Item | Class] = js.native
 }
 
 object ButtonOptions {
@@ -265,7 +265,7 @@ object ButtonOptions {
         ret
     }
     @scala.inline
-    def withTooltip(value: String | AnonItem | AnonClass): Self = {
+    def withTooltip(value: String | Item | Class): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

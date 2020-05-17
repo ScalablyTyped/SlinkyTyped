@@ -2,7 +2,7 @@ package typingsSlinky.reactMdl.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactMdl.AnonRecursive
+import typingsSlinky.reactMdl.anon.Recursive
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ object MDLComponent {
     def recursive(value: Boolean): this.type = set("recursive", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AnonRecursive): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: Recursive): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: MDLComponent.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

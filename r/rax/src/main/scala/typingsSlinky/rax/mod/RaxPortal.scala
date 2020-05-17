@@ -4,7 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@js.native
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.rax.mod.RaxNode because Already inherited */ @js.native
 trait RaxPortal
   extends RaxElement[js.Any, String | JSXElementConstructor[js.Any]] {
   var children: RaxNode = js.native

@@ -1,18 +1,18 @@
 package typingsSlinky.webpackBlocksCore.mod
 
-import typingsSlinky.webpackBlocksCore.AnonTest
+import typingsSlinky.webpackBlocksCore.anon.Test
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Context extends js.Object {
-  var `match`: AnonTest = js.native
+  var `match`: Test = js.native
 }
 
 object Context {
   @scala.inline
-  def apply(`match`: AnonTest): Context = {
+  def apply(`match`: Test): Context = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("match")(`match`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Context]
@@ -24,7 +24,7 @@ object Context {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMatch(value: AnonTest): Self = {
+    def withMatch(value: Test): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("match")(value.asInstanceOf[js.Any])
         ret

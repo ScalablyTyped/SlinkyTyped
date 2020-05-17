@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation._
   * @classdesc Store, access and delete instances of the various ComponentSystems.
   * @description Create a new ComponentSystemRegistry.
   */
-@JSGlobal("pc.ComponentSystemRegistry")
 @js.native
-class ComponentSystemRegistry () extends js.Object
+trait ComponentSystemRegistry extends js.Object
 

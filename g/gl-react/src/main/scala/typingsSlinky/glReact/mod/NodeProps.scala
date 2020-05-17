@@ -1,8 +1,8 @@
 package typingsSlinky.glReact.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.glReact.AnonColor
-import typingsSlinky.glReact.AnonDst
+import typingsSlinky.glReact.anon.Color
+import typingsSlinky.glReact.anon.Dst
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,9 +10,9 @@ import scala.scalajs.js.annotation._
 @js.native
 trait NodeProps extends js.Object {
   var backbuffering: js.UndefOr[Boolean] = js.native
-  var blendFunc: js.UndefOr[AnonDst] = js.native
+  var blendFunc: js.UndefOr[Dst] = js.native
   var children: js.UndefOr[js.Any] = js.native
-  var clear: js.UndefOr[AnonColor] = js.native
+  var clear: js.UndefOr[Color] = js.native
   var height: js.UndefOr[Double] = js.native
   var ignoreUnusedUniforms: js.UndefOr[js.Array[String] | Boolean] = js.native
   var onDraw: js.UndefOr[js.Function0[Unit]] = js.native
@@ -54,7 +54,7 @@ object NodeProps {
         ret
     }
     @scala.inline
-    def withBlendFunc(value: AnonDst): Self = {
+    def withBlendFunc(value: Dst): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("blendFunc")(value.asInstanceOf[js.Any])
         ret
@@ -78,7 +78,7 @@ object NodeProps {
         ret
     }
     @scala.inline
-    def withClear(value: AnonColor): Self = {
+    def withClear(value: Color): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(value.asInstanceOf[js.Any])
         ret

@@ -1,11 +1,10 @@
 package typingsSlinky.jsrsasign.mod.KJUR
 
-import typingsSlinky.jsrsasign.Anon0
-import typingsSlinky.jsrsasign.AnonAud
-import typingsSlinky.jsrsasign.AnonB64
-import typingsSlinky.jsrsasign.AnonHeaderObj
-import typingsSlinky.jsrsasign.AnonHex
-import typingsSlinky.jsrsasign.AnonUtf8
+import typingsSlinky.jsrsasign.anon.Aud
+import typingsSlinky.jsrsasign.anon.B64
+import typingsSlinky.jsrsasign.anon.HeaderObj
+import typingsSlinky.jsrsasign.anon.Hex
+import typingsSlinky.jsrsasign.anon.Utf8
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.jws.JWS.JsonWebKey
 import typingsSlinky.jsrsasign.jsrsasignNumbers.`0`
 import typingsSlinky.jsrsasign.jsrsasignNumbers.`1`
@@ -268,7 +267,7 @@ object jws extends js.Object {
       *   sigHex: "91f3cd..."
       * }
       */
-    def parse(sJWS: String): AnonHeaderObj = js.native
+    def parse(sJWS: String): HeaderObj = js.native
     /**
       * parse JWS string and set public property 'parsedJWS' dictionary.
       * @param sJWS JWS signature string to be parsed.
@@ -346,14 +345,14 @@ object jws extends js.Object {
       * // header and payload can be passed by both string and object
       * sJWS = KJUR.jws.JWS.sign(null, '{alg:"HS256",cty:"JWT"}', '{age:21}', "aaa");
       */
-    def sign(alg: String, spHead: Anon0, spPayload: String): String = js.native
-    def sign(alg: String, spHead: Anon0, spPayload: String, pass: String): String = js.native
-    def sign(alg: String, spHead: Anon0, spPayload: js.Object): String = js.native
-    def sign(alg: String, spHead: Anon0, spPayload: js.Object, pass: String): String = js.native
-    def sign(alg: Null, spHead: Anon0, spPayload: String): String = js.native
-    def sign(alg: Null, spHead: Anon0, spPayload: String, pass: String): String = js.native
-    def sign(alg: Null, spHead: Anon0, spPayload: js.Object): String = js.native
-    def sign(alg: Null, spHead: Anon0, spPayload: js.Object, pass: String): String = js.native
+    def sign(alg: String, spHead: typingsSlinky.jsrsasign.anon.`0`, spPayload: String): String = js.native
+    def sign(alg: String, spHead: typingsSlinky.jsrsasign.anon.`0`, spPayload: String, pass: String): String = js.native
+    def sign(alg: String, spHead: typingsSlinky.jsrsasign.anon.`0`, spPayload: js.Object): String = js.native
+    def sign(alg: String, spHead: typingsSlinky.jsrsasign.anon.`0`, spPayload: js.Object, pass: String): String = js.native
+    def sign(alg: Null, spHead: typingsSlinky.jsrsasign.anon.`0`, spPayload: String): String = js.native
+    def sign(alg: Null, spHead: typingsSlinky.jsrsasign.anon.`0`, spPayload: String, pass: String): String = js.native
+    def sign(alg: Null, spHead: typingsSlinky.jsrsasign.anon.`0`, spPayload: js.Object): String = js.native
+    def sign(alg: Null, spHead: typingsSlinky.jsrsasign.anon.`0`, spPayload: js.Object, pass: String): String = js.native
     /**
       * verify JWS signature by specified key or certificate
       * @param sJWS string of JWS signature to verify
@@ -416,9 +415,9 @@ object jws extends js.Object {
       */
     def verify(sJWS: String, key: String): Boolean = js.native
     def verify(sJWS: String, key: String, acceptAlgs: js.Array[String]): Boolean = js.native
-    def verify(sJWS: String, key: String, acceptAlgs: AnonB64): Boolean = js.native
-    def verify(sJWS: String, key: String, acceptAlgs: AnonHex): Boolean = js.native
-    def verify(sJWS: String, key: String, acceptAlgs: AnonUtf8): Boolean = js.native
+    def verify(sJWS: String, key: String, acceptAlgs: B64): Boolean = js.native
+    def verify(sJWS: String, key: String, acceptAlgs: Hex): Boolean = js.native
+    def verify(sJWS: String, key: String, acceptAlgs: Utf8): Boolean = js.native
     /**
       * @param sJWT string of JSON Web Token(JWT) to verify
       * @param key string of public key, certificate or key object to verify
@@ -500,7 +499,7 @@ object jws extends js.Object {
       * });
       */
     def verifyJWT(sJWT: String, key: String): Boolean = js.native
-    def verifyJWT(sJWT: String, key: String, acceptField: AnonAud): Boolean = js.native
+    def verifyJWT(sJWT: String, key: String, acceptField: Aud): Boolean = js.native
     /** static associative array of general signature algorithm name from JWS algorithm name */
     @js.native
     object jwsalg2sigalg extends js.Object {

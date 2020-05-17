@@ -3,12 +3,11 @@ package typingsSlinky.phaser.Phaser.GameObjects
 import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.Phaser.Structs.Set
 import typingsSlinky.phaser.Phaser.Types.GameObjects.Group.GroupCallback
-import typingsSlinky.phaser.Phaser.Types.GameObjects.Group.GroupConfig
 import typingsSlinky.phaser.Phaser.Types.GameObjects.Group.GroupCreateConfig
 import typingsSlinky.phaser.Phaser.Types.GameObjects.Group.GroupMultipleCreateCallback
 import typingsSlinky.phaser.Phaser.Types.Input.HitAreaCallback
 import typingsSlinky.phaser.Phaser.Types.Math.Vector2Like
-import typingsSlinky.phaser.Phaser.Types.Physics.Arcade._ArcadeColliderType
+import typingsSlinky.phaser.Phaser.Types.Physics.Arcade.ArcadeColliderType
 import typingsSlinky.phaser.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,25 +20,8 @@ import scala.scalajs.js.annotation._
   * 
   * Groups themselves aren't displayable, and can't be positioned, rotated, scaled, or hidden.
   */
-@JSGlobal("Phaser.GameObjects.Group")
 @js.native
-class Group protected () extends _ArcadeColliderType {
-  /**
-    * 
-    * @param scene The scene this group belongs to.
-    * @param children Game Objects to add to this group; or the `config` argument.
-    * @param config Settings for this group. If `key` is set, Phaser.GameObjects.Group#createMultiple is also called with these settings.
-    */
-  def this(scene: Scene) = this()
-  def this(scene: Scene, children: js.Array[GameObject]) = this()
-  def this(scene: Scene, children: GroupConfig) = this()
-  def this(scene: Scene, children: GroupCreateConfig) = this()
-  def this(scene: Scene, children: js.Array[GameObject], config: GroupConfig) = this()
-  def this(scene: Scene, children: js.Array[GameObject], config: GroupCreateConfig) = this()
-  def this(scene: Scene, children: GroupConfig, config: GroupConfig) = this()
-  def this(scene: Scene, children: GroupConfig, config: GroupCreateConfig) = this()
-  def this(scene: Scene, children: GroupCreateConfig, config: GroupConfig) = this()
-  def this(scene: Scene, children: GroupCreateConfig, config: GroupCreateConfig) = this()
+trait Group extends ArcadeColliderType {
   /**
     * Whether this group runs its {@link Phaser.GameObjects.Group#preUpdate} method
     * (which may update any members).

@@ -1,7 +1,7 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.OmitPickerset
-import typingsSlinky.tabris.PartialPickPickeritemText
+import typingsSlinky.tabris.anon.OmitPickerset
+import typingsSlinky.tabris.anon.PartialPickPickeritemText
 import typingsSlinky.tabris.tabrisStrings.borderColor
 import typingsSlinky.tabris.tabrisStrings.default
 import typingsSlinky.tabris.tabrisStrings.fill

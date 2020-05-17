@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojlegendMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojkeysetMod.KeySet
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.asNeeded
@@ -41,7 +41,7 @@ trait ojLegendSettablePropertiesLenient[K, D]
   var symbolWidth: js.UndefOr[Double] = js.native
   var textStyle: js.UndefOr[js.Object] = js.native
   var trackResize: js.UndefOr[on | off] = js.native
-  var translations: js.UndefOr[AnonLabelAndValue] = js.native
+  var translations: js.UndefOr[LabelAndValue] = js.native
   var valign: js.UndefOr[middle | bottom | top] = js.native
 }
 
@@ -250,7 +250,7 @@ object ojLegendSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelAndValue): Self[K, D] = {
+    def withTranslations(value: LabelAndValue): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

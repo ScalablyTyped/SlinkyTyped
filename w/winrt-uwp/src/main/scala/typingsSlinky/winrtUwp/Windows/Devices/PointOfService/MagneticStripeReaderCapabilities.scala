@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides capabilities information for the magnetic stripe reader. */
-@JSGlobal("Windows.Devices.PointOfService.MagneticStripeReaderCapabilities")
 @js.native
-abstract class MagneticStripeReaderCapabilities () extends js.Object {
+trait MagneticStripeReaderCapabilities extends js.Object {
   /** Gets the authentication level supported by the device. */
   var authenticationLevel: MagneticStripeReaderAuthenticationLevel = js.native
   /** Gets the type of card authentication data that is supported by the device. */
@@ -30,5 +29,99 @@ abstract class MagneticStripeReaderCapabilities () extends js.Object {
   var powerReportingType: UnifiedPosPowerReportingType = js.native
   /** Gets the supported encryption algorithm. */
   var supportedEncryptionAlgorithms: Double = js.native
+}
+
+object MagneticStripeReaderCapabilities {
+  @scala.inline
+  def apply(
+    authenticationLevel: MagneticStripeReaderAuthenticationLevel,
+    cardAuthentication: String,
+    isIsoSupported: Boolean,
+    isJisOneSupported: Boolean,
+    isJisTwoSupported: Boolean,
+    isStatisticsReportingSupported: Boolean,
+    isStatisticsUpdatingSupported: Boolean,
+    isTrackDataMaskingSupported: Boolean,
+    isTransmitSentinelsSupported: Boolean,
+    powerReportingType: UnifiedPosPowerReportingType,
+    supportedEncryptionAlgorithms: Double
+  ): MagneticStripeReaderCapabilities = {
+    val __obj = js.Dynamic.literal(authenticationLevel = authenticationLevel.asInstanceOf[js.Any], cardAuthentication = cardAuthentication.asInstanceOf[js.Any], isIsoSupported = isIsoSupported.asInstanceOf[js.Any], isJisOneSupported = isJisOneSupported.asInstanceOf[js.Any], isJisTwoSupported = isJisTwoSupported.asInstanceOf[js.Any], isStatisticsReportingSupported = isStatisticsReportingSupported.asInstanceOf[js.Any], isStatisticsUpdatingSupported = isStatisticsUpdatingSupported.asInstanceOf[js.Any], isTrackDataMaskingSupported = isTrackDataMaskingSupported.asInstanceOf[js.Any], isTransmitSentinelsSupported = isTransmitSentinelsSupported.asInstanceOf[js.Any], powerReportingType = powerReportingType.asInstanceOf[js.Any], supportedEncryptionAlgorithms = supportedEncryptionAlgorithms.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MagneticStripeReaderCapabilities]
+  }
+  @scala.inline
+  implicit class MagneticStripeReaderCapabilitiesOps[Self <: MagneticStripeReaderCapabilities] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAuthenticationLevel(value: MagneticStripeReaderAuthenticationLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCardAuthentication(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cardAuthentication")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsIsoSupported(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isIsoSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsJisOneSupported(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isJisOneSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsJisTwoSupported(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isJisTwoSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsStatisticsReportingSupported(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isStatisticsReportingSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsStatisticsUpdatingSupported(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isStatisticsUpdatingSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsTrackDataMaskingSupported(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTrackDataMaskingSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsTransmitSentinelsSupported(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTransmitSentinelsSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPowerReportingType(value: UnifiedPosPowerReportingType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("powerReportingType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSupportedEncryptionAlgorithms(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedEncryptionAlgorithms")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

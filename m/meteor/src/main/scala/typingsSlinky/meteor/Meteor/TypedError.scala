@@ -1,6 +1,5 @@
 package typingsSlinky.meteor.Meteor
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,25 @@ trait TypedError
   var errorType: String = js.native
 }
 
-@JSGlobal("Meteor.TypedError")
-@js.native
-object TypedError extends TopLevel[TypedErrorStatic]
+object TypedError {
+  @scala.inline
+  def apply(errorType: String, message: String, name: String): TypedError = {
+    val __obj = js.Dynamic.literal(errorType = errorType.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypedError]
+  }
+  @scala.inline
+  implicit class TypedErrorOps[Self <: TypedError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

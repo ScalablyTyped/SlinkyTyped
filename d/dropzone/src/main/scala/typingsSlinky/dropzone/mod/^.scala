@@ -2,7 +2,7 @@ package typingsSlinky.dropzone.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.dropzone.dropzoneBooleans.`false`
-import typingsSlinky.dropzone.mod._Global_.HTMLElement
+import typingsSlinky.dropzone.mod.global.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

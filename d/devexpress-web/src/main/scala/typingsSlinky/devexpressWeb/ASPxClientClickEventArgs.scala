@@ -7,34 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientPivotGrid.CellClick and ASPxClientPivotGrid.CellDblClick client events.
   */
-@JSGlobal("ASPxClientClickEventArgs")
 @js.native
-class ASPxClientClickEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientClickEventArgs class.
-    * @param value An object that represents the processed cell's value. This value is assigned to the ASPxClientClickEventArgs.Value property.
-    * @param columnIndex An integer value that identifies a column. This value is assigned to the ASPxClientClickEventArgs.ColumnIndex property.
-    * @param rowIndex An integer value that identifies a row. This value is assigned to the ASPxClientClickEventArgs.RowIndex property.
-    * @param columnValue An object that represents a column field value. This value is assigned to the ASPxClientClickEventArgs.ColumnValue property.
-    * @param rowValue An object that represents a row field value. This value is assigned to the ASPxClientClickEventArgs.RowValue property.
-    * @param columnFieldName A String value that represents a column field name. This value is assigned to the ASPxClientClickEventArgs.ColumnFieldName property.
-    * @param rowFieldName A String value that represents a row field name. This value is assigned to the ASPxClientClickEventArgs.RowFieldName property.
-    * @param columnValueType A String value that represents a column value type. This value is assigned to the ASPxClientClickEventArgs.ColumnValueType property.
-    * @param rowValueType A String value that represents a row value type. This value is assigned to the ASPxClientClickEventArgs.RowValueType property.
-    * @param dataIndex An integer value that identifies the data field by its index. This value is assigned to the ASPxClientClickEventArgs.DataIndex property.
-    */
-  def this(
-    value: js.Any,
-    columnIndex: Double,
-    rowIndex: Double,
-    columnValue: js.Any,
-    rowValue: js.Any,
-    columnFieldName: String,
-    rowFieldName: String,
-    columnValueType: String,
-    rowValueType: String,
-    dataIndex: Double
-  ) = this()
+trait ASPxClientClickEventArgs extends ASPxClientEventArgs {
   /**
     * Gets a column field name.
     */
@@ -79,5 +53,99 @@ class ASPxClientClickEventArgs protected () extends ASPxClientEventArgs {
     * Gets the processed cell's value.
     */
   var Value: js.Any = js.native
+}
+
+object ASPxClientClickEventArgs {
+  @scala.inline
+  def apply(
+    ColumnFieldName: String,
+    ColumnIndex: Double,
+    ColumnValue: js.Any,
+    ColumnValueType: String,
+    DataIndex: Double,
+    HtmlEvent: js.Any,
+    RowFieldName: String,
+    RowIndex: Double,
+    RowValue: js.Any,
+    RowValueType: String,
+    Value: js.Any
+  ): ASPxClientClickEventArgs = {
+    val __obj = js.Dynamic.literal(ColumnFieldName = ColumnFieldName.asInstanceOf[js.Any], ColumnIndex = ColumnIndex.asInstanceOf[js.Any], ColumnValue = ColumnValue.asInstanceOf[js.Any], ColumnValueType = ColumnValueType.asInstanceOf[js.Any], DataIndex = DataIndex.asInstanceOf[js.Any], HtmlEvent = HtmlEvent.asInstanceOf[js.Any], RowFieldName = RowFieldName.asInstanceOf[js.Any], RowIndex = RowIndex.asInstanceOf[js.Any], RowValue = RowValue.asInstanceOf[js.Any], RowValueType = RowValueType.asInstanceOf[js.Any], Value = Value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientClickEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientClickEventArgsOps[Self <: ASPxClientClickEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumnFieldName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnFieldName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColumnIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColumnValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColumnValueType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnValueType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDataIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DataIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtmlEvent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HtmlEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRowFieldName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RowFieldName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRowIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RowIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRowValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RowValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRowValueType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RowValueType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

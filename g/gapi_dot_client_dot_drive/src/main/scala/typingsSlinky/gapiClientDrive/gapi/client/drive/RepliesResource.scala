@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientDrive.gapi.client.drive
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientDrive.AnonCommentId
-import typingsSlinky.gapiClientDrive.AnonPageToken
-import typingsSlinky.gapiClientDrive.AnonReplyId
-import typingsSlinky.gapiClientDrive.AnonUserIp
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientDrive.anon.CommentId
+import typingsSlinky.gapiClientDrive.anon.PageToken
+import typingsSlinky.gapiClientDrive.anon.ReplyId
+import typingsSlinky.gapiClientDrive.anon.UserIp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,25 +12,25 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RepliesResource extends js.Object {
   /** Creates a new reply to a comment. */
-  def create(request: AnonCommentId): Request_[Reply] = js.native
+  def create(request: CommentId): Request[Reply] = js.native
   /** Deletes a reply. */
-  def delete(request: AnonReplyId): Request_[Unit] = js.native
+  def delete(request: ReplyId): Request[Unit] = js.native
   /** Gets a reply by ID. */
-  def get(request: AnonUserIp): Request_[Reply] = js.native
+  def get(request: UserIp): Request[Reply] = js.native
   /** Lists a comment's replies. */
-  def list(request: AnonPageToken): Request_[ReplyList] = js.native
+  def list(request: PageToken): Request[ReplyList] = js.native
   /** Updates a reply with patch semantics. */
-  def update(request: AnonReplyId): Request_[Reply] = js.native
+  def update(request: ReplyId): Request[Reply] = js.native
 }
 
 object RepliesResource {
   @scala.inline
   def apply(
-    create: AnonCommentId => Request_[Reply],
-    delete: AnonReplyId => Request_[Unit],
-    get: AnonUserIp => Request_[Reply],
-    list: AnonPageToken => Request_[ReplyList],
-    update: AnonReplyId => Request_[Reply]
+    create: CommentId => Request[Reply],
+    delete: ReplyId => Request[Unit],
+    get: UserIp => Request[Reply],
+    list: PageToken => Request[ReplyList],
+    update: ReplyId => Request[Reply]
   ): RepliesResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[RepliesResource]
@@ -42,31 +42,31 @@ object RepliesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: AnonCommentId => Request_[Reply]): Self = {
+    def withCreate(value: CommentId => Request[Reply]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonReplyId => Request_[Unit]): Self = {
+    def withDelete(value: ReplyId => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonUserIp => Request_[Reply]): Self = {
+    def withGet(value: UserIp => Request[Reply]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonPageToken => Request_[ReplyList]): Self = {
+    def withList(value: PageToken => Request[ReplyList]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonReplyId => Request_[Reply]): Self = {
+    def withUpdate(value: ReplyId => Request[Reply]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

@@ -1,17 +1,17 @@
 package typingsSlinky.yandexMaps.mod.control
 
-import typingsSlinky.yandexMaps.AnonExpanded
-import typingsSlinky.yandexMaps.AnonTitle
-import typingsSlinky.yandexMaps.IBaseButtonParametersOptiAdjustMapMargin
+import typingsSlinky.yandexMaps.anon.Expanded
+import typingsSlinky.yandexMaps.anon.IBaseButtonParametersOptiAdjustMapMargin
+import typingsSlinky.yandexMaps.anon.Title
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IFullscreenControlParameters extends js.Object {
-  var data: js.UndefOr[AnonTitle] = js.native
+  var data: js.UndefOr[Title] = js.native
   var options: js.UndefOr[IBaseButtonParametersOptiAdjustMapMargin] = js.native
-  var state: js.UndefOr[AnonExpanded] = js.native
+  var state: js.UndefOr[Expanded] = js.native
 }
 
 object IFullscreenControlParameters {
@@ -27,7 +27,7 @@ object IFullscreenControlParameters {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withData(value: AnonTitle): Self = {
+    def withData(value: Title): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret
@@ -51,7 +51,7 @@ object IFullscreenControlParameters {
         ret
     }
     @scala.inline
-    def withState(value: AnonExpanded): Self = {
+    def withState(value: Expanded): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
         ret

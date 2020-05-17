@@ -1,6 +1,5 @@
 package typingsSlinky.playcanvas.pc
 
-import typingsSlinky.playcanvas.AnonLoop
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,10 +23,8 @@ import scala.scalajs.js.annotation._
   * @property {boolean} isPlaying Whether the animation is currently playing.
   * @property {boolean} isPaused Whether the animation is currently paused.
   */
-@JSGlobal("pc.SpriteAnimationClip")
 @js.native
-class SpriteAnimationClip protected () extends EventHandler {
-  def this(component: SpriteComponent, data: AnonLoop) = this()
+trait SpriteAnimationClip extends EventHandler {
   /**
     * The total duration of the animation in seconds.
     */

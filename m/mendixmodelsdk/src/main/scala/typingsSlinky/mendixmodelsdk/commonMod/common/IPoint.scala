@@ -1,6 +1,6 @@
 package typingsSlinky.mendixmodelsdk.commonMod.common
 
-import typingsSlinky.mendixmodelsdk.deltasDeltasMod._PrimitiveValue
+import typingsSlinky.mendixmodelsdk.deltasDeltasMod.PrimitiveValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
   * Representation of a point.
   */
 @js.native
-trait IPoint extends _PrimitiveValue {
+trait IPoint extends PrimitiveValue {
   var x: Double = js.native
   var y: Double = js.native
 }

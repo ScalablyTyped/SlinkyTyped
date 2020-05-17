@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait NumberFilterValue extends _FilterValueData {
+trait NumberFilterValue extends FilterValueData {
   var comparator: FilterComparator = js.native
   var number: Double | String = js.native
 }

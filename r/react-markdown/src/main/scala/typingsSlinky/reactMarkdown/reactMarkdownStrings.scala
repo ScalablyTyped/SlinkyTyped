@@ -1,8 +1,8 @@
 package typingsSlinky.reactMarkdown
 
+import typingsSlinky.reactMarkdown.mod.AlignType
 import typingsSlinky.reactMarkdown.mod.NodeType
 import typingsSlinky.reactMarkdown.mod.ReferenceType
-import typingsSlinky.reactMarkdown.mod._AlignType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ object reactMarkdownStrings {
   sealed trait break extends NodeType
   
   @js.native
-  sealed trait center extends _AlignType
+  sealed trait center extends AlignType
   
   @js.native
   sealed trait code extends NodeType
@@ -51,7 +51,7 @@ object reactMarkdownStrings {
   sealed trait inlineCode extends NodeType
   
   @js.native
-  sealed trait left extends _AlignType
+  sealed trait left extends AlignType
   
   @js.native
   sealed trait link extends NodeType
@@ -69,7 +69,7 @@ object reactMarkdownStrings {
   sealed trait paragraph extends NodeType
   
   @js.native
-  sealed trait right extends _AlignType
+  sealed trait right extends AlignType
   
   @js.native
   sealed trait root extends NodeType

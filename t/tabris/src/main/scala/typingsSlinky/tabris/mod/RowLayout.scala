@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.AnonAlignment
+import typingsSlinky.tabris.anon.Alignment
 import typingsSlinky.tabris.tabrisStrings.baseline
 import typingsSlinky.tabris.tabrisStrings.bottom
 import typingsSlinky.tabris.tabrisStrings.centerY
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @JSImport("tabris", "RowLayout")
 @js.native
 class RowLayout () extends Layout {
-  def this(options: AnonAlignment) = this()
+  def this(options: Alignment) = this()
   /**
     * Determines the vertical placement of the children. For the `stretchY` value to work correctly the
     * composite needs to be given a width either by setting `width` or by setting `top` and `bottom`.

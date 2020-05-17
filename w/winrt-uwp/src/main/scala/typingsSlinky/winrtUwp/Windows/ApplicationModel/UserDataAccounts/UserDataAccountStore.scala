@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a data store that contains user accounts. */
-@JSGlobal("Windows.ApplicationModel.UserDataAccounts.UserDataAccountStore")
 @js.native
-abstract class UserDataAccountStore () extends js.Object {
+trait UserDataAccountStore extends js.Object {
   /**
     * Asynchronously creates a user data account.
     * @param userDisplayName A string containing the user name that is suitable for display.
@@ -27,5 +26,43 @@ abstract class UserDataAccountStore () extends js.Object {
     * @return Returns the UserDataAccount identified by the id parameter.
     */
   def getAccountAsync(id: String): IPromiseWithIAsyncOperation[UserDataAccount] = js.native
+}
+
+object UserDataAccountStore {
+  @scala.inline
+  def apply(
+    createAccountAsync: String => IPromiseWithIAsyncOperation[UserDataAccount],
+    findAccountsAsync: () => IPromiseWithIAsyncOperation[IVectorView[_]],
+    getAccountAsync: String => IPromiseWithIAsyncOperation[UserDataAccount]
+  ): UserDataAccountStore = {
+    val __obj = js.Dynamic.literal(createAccountAsync = js.Any.fromFunction1(createAccountAsync), findAccountsAsync = js.Any.fromFunction0(findAccountsAsync), getAccountAsync = js.Any.fromFunction1(getAccountAsync))
+    __obj.asInstanceOf[UserDataAccountStore]
+  }
+  @scala.inline
+  implicit class UserDataAccountStoreOps[Self <: UserDataAccountStore] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateAccountAsync(value: String => IPromiseWithIAsyncOperation[UserDataAccount]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createAccountAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFindAccountsAsync(value: () => IPromiseWithIAsyncOperation[IVectorView[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findAccountsAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetAccountAsync(value: String => IPromiseWithIAsyncOperation[UserDataAccount]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAccountAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

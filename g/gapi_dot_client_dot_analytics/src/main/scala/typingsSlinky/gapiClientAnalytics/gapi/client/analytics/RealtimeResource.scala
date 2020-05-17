@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientAnalytics.gapi.client.analytics
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAnalytics.AnonFields
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAnalytics.anon.Fields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RealtimeResource extends js.Object {
   /** Returns real time data for a view (profile). */
-  def get(request: AnonFields): Request_[RealtimeData] = js.native
+  def get(request: Fields): Request[RealtimeData] = js.native
 }
 
 object RealtimeResource {
   @scala.inline
-  def apply(get: AnonFields => Request_[RealtimeData]): RealtimeResource = {
+  def apply(get: Fields => Request[RealtimeData]): RealtimeResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get))
     __obj.asInstanceOf[RealtimeResource]
   }
@@ -25,7 +25,7 @@ object RealtimeResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonFields => Request_[RealtimeData]): Self = {
+    def withGet(value: Fields => Request[RealtimeData]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret

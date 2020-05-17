@@ -31,9 +31,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A multiline text field that supports editing and scrolling.
 		 */
-@JSGlobal("Titanium.UI.TextArea")
 @js.native
-class TextArea () extends View {
+trait TextArea extends View {
   /**
   			 * Hint text attributed string.
   			 */

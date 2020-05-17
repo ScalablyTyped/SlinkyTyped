@@ -1,6 +1,6 @@
 package typingsSlinky.nodelibFsWalk.settingsMod
 
-import typingsSlinky.nodelibFsWalk.PartialFileSystemAdapter
+import typingsSlinky.nodelibFsWalk.anon.PartialFileSystemAdapter
 import typingsSlinky.nodelibFsWalk.typesMod.Entry
 import typingsSlinky.nodelibFsWalk.typesMod.Errno
 import scala.scalajs.js

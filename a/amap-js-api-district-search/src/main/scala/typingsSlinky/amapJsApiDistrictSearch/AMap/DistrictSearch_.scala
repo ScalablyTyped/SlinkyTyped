@@ -2,7 +2,6 @@ package typingsSlinky.amapJsApiDistrictSearch.AMap
 
 import typingsSlinky.amapJsApi.AMap.EventEmitter
 import typingsSlinky.amapJsApiDistrictSearch.AMap.DistrictSearch.Level
-import typingsSlinky.amapJsApiDistrictSearch.AMap.DistrictSearch.Options
 import typingsSlinky.amapJsApiDistrictSearch.AMap.DistrictSearch.SearchResult
 import typingsSlinky.amapJsApiDistrictSearch.AMap.DistrictSearch.SearchStatus
 import typingsSlinky.amapJsApiDistrictSearch.amapJsApiDistrictSearchNumbers.`0`
@@ -13,14 +12,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("AMap.DistrictSearch")
 @js.native
-/**
-  * 行政区查询
-  * @param options 选项
-  */
-class DistrictSearch_ () extends EventEmitter {
-  def this(options: Options) = this()
+trait DistrictSearch_ extends EventEmitter {
   /**
     * 根据关键字查询行政区或商圈信息
     * @param keyword 关键词

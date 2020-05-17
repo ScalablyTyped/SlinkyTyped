@@ -1,7 +1,7 @@
 package typingsSlinky.expressSession.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.expressSession.mod._Global_.Express.SessionData
+import typingsSlinky.expressSession.mod.global.Express.SessionData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

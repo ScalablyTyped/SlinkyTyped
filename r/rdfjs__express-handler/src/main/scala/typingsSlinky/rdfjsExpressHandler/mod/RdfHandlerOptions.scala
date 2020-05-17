@@ -3,7 +3,7 @@ package typingsSlinky.rdfjsExpressHandler.mod
 import typingsSlinky.rdfJs.mod.DatasetCore
 import typingsSlinky.rdfJs.mod.DatasetCoreFactory
 import typingsSlinky.rdfJs.mod.Quad
-import typingsSlinky.rdfjsExpressHandler.AnonParsers
+import typingsSlinky.rdfjsExpressHandler.anon.Parsers
 import typingsSlinky.rdfjsExpressHandler.mod.expressAugmentingMod.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ trait RdfHandlerOptions extends js.Object {
   var baseIriFromRequest: js.UndefOr[Boolean | BaseIriFromRequest] = js.native
   var defaultMediaType: js.UndefOr[String] = js.native
   var factory: js.UndefOr[DatasetCoreFactory[Quad, Quad, DatasetCore[Quad, Quad]]] = js.native
-  var formats: js.UndefOr[AnonParsers] = js.native
+  var formats: js.UndefOr[Parsers] = js.native
 }
 
 object RdfHandlerOptions {
@@ -72,7 +72,7 @@ object RdfHandlerOptions {
         ret
     }
     @scala.inline
-    def withFormats(value: AnonParsers): Self = {
+    def withFormats(value: Parsers): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formats")(value.asInstanceOf[js.Any])
         ret

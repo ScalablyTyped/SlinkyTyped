@@ -12,14 +12,8 @@ trait CropOptions extends js.Object
 
 object CropOptions {
   @scala.inline
-  def CropTrueOptions(): CropOptions = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[CropOptions]
-  }
+  implicit def apply(value: CropFalseOptions): CropOptions = value.asInstanceOf[CropOptions]
   @scala.inline
-  def CropFalseOptions(): CropOptions = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[CropOptions]
-  }
+  implicit def apply(value: CropTrueOptions): CropOptions = value.asInstanceOf[CropOptions]
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs
 
+import typingsSlinky.babylonjs.anon.AutoPlay
 import typingsSlinky.babylonjs.backgroundMaterialMod.BackgroundMaterial
 import typingsSlinky.babylonjs.meshMod.Mesh
 import typingsSlinky.babylonjs.sceneMod.Scene
@@ -20,9 +21,9 @@ object videoDomeMod extends js.Object {
       * @param urlsOrVideo defines the url(s) or the video element to use
       * @param options An object containing optional or exposed sub element properties
       */
-    def this(name: String, urlsOrVideo: String, options: AnonAutoPlay, scene: Scene) = this()
-    def this(name: String, urlsOrVideo: js.Array[String], options: AnonAutoPlay, scene: Scene) = this()
-    def this(name: String, urlsOrVideo: HTMLVideoElement, options: AnonAutoPlay, scene: Scene) = this()
+    def this(name: String, urlsOrVideo: String, options: AutoPlay, scene: Scene) = this()
+    def this(name: String, urlsOrVideo: js.Array[String], options: AutoPlay, scene: Scene) = this()
+    def this(name: String, urlsOrVideo: HTMLVideoElement, options: AutoPlay, scene: Scene) = this()
     var _changeVideoMode: js.Any = js.native
     var _halfDome: js.Any = js.native
     /**

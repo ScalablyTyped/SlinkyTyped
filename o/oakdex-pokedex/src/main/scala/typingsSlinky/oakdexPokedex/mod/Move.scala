@@ -1,7 +1,7 @@
 package typingsSlinky.oakdexPokedex.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oakdexPokedex.AnonIncreasedcriticalhitratio
+import typingsSlinky.oakdexPokedex.anon.Increasedcriticalhitratio
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait Move extends js.Object {
   var category: String = js.native
   var contests: js.Array[MoveContest] = js.native
   var critical_hit: Double = js.native
-  var in_battle_properties: js.UndefOr[AnonIncreasedcriticalhitratio] = js.native
+  var in_battle_properties: js.UndefOr[Increasedcriticalhitratio] = js.native
   var index_number: Double = js.native
   var makes_contact: Boolean = js.native
   var max_pp: Double = js.native
@@ -179,7 +179,7 @@ object Move {
         ret
     }
     @scala.inline
-    def withIn_battle_properties(value: AnonIncreasedcriticalhitratio): Self = {
+    def withIn_battle_properties(value: Increasedcriticalhitratio): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("in_battle_properties")(value.asInstanceOf[js.Any])
         ret

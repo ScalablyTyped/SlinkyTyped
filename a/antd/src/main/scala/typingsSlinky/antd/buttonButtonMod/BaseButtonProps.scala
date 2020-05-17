@@ -2,7 +2,7 @@ package typingsSlinky.antd.buttonButtonMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.AnonDelay
+import typingsSlinky.antd.anon.Delay
 import typingsSlinky.antd.sizeContextMod.SizeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ trait BaseButtonProps extends js.Object {
   var danger: js.UndefOr[Boolean] = js.native
   var ghost: js.UndefOr[Boolean] = js.native
   var icon: js.UndefOr[TagMod[Any]] = js.native
-  var loading: js.UndefOr[Boolean | AnonDelay] = js.native
+  var loading: js.UndefOr[Boolean | Delay] = js.native
   var prefixCls: js.UndefOr[String] = js.native
   var shape: js.UndefOr[ButtonShape] = js.native
   var size: js.UndefOr[SizeType] = js.native
@@ -120,7 +120,7 @@ object BaseButtonProps {
         ret
     }
     @scala.inline
-    def withLoading(value: Boolean | AnonDelay): Self = {
+    def withLoading(value: Boolean | Delay): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
         ret

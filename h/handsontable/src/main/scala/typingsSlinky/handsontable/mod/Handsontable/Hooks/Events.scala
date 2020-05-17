@@ -4,10 +4,10 @@ import org.scalablytyped.runtime.NumberDictionary
 import org.scalajs.dom.raw.HTMLTableCellElement
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.handsontable.AnonSkipRender
-import typingsSlinky.handsontable.AnonValue
-import typingsSlinky.handsontable.AnonValueAny
-import typingsSlinky.handsontable.AnonValueCellValue
+import typingsSlinky.handsontable.anon.SkipRender
+import typingsSlinky.handsontable.anon.Value
+import typingsSlinky.handsontable.anon.ValueAny
+import typingsSlinky.handsontable.anon.ValueCellValue
 import typingsSlinky.handsontable.handsontableNumbers.`-1`
 import typingsSlinky.handsontable.handsontableNumbers.`0`
 import typingsSlinky.handsontable.handsontableStrings.area
@@ -258,7 +258,7 @@ trait Events extends js.Object {
       /* column */ Double, 
       /* row2 */ Double, 
       /* column2 */ Double, 
-      /* preventScrolling */ AnonValue, 
+      /* preventScrolling */ Value, 
       /* selectionLayerLevel */ Double, 
       Unit
     ]
@@ -269,7 +269,7 @@ trait Events extends js.Object {
       /* prop */ String, 
       /* row2 */ Double, 
       /* prop2 */ String, 
-      /* preventScrolling */ AnonValue, 
+      /* preventScrolling */ Value, 
       /* selectionLayerLevel */ Double, 
       Unit
     ]
@@ -546,7 +546,7 @@ trait Events extends js.Object {
       Unit
     ]
   ] = js.native
-  var beforeRender: js.UndefOr[js.Function2[/* isForced */ Boolean, /* skipRender */ AnonSkipRender, Unit]] = js.native
+  var beforeRender: js.UndefOr[js.Function2[/* isForced */ Boolean, /* skipRender */ SkipRender, Unit]] = js.native
   var beforeRenderer: js.UndefOr[
     js.Function6[
       /* TD */ HTMLTableCellElement, 
@@ -636,7 +636,7 @@ trait Events extends js.Object {
     js.Function4[
       /* row */ Double, 
       /* column */ Double, 
-      /* valueHolder */ AnonValueCellValue, 
+      /* valueHolder */ ValueCellValue, 
       /* ioMode */ get | set, 
       Unit
     ]
@@ -657,7 +657,7 @@ trait Events extends js.Object {
   var modifyRowSourceData: js.UndefOr[js.Function1[/* row */ Double, Unit]] = js.native
   var modifyTransformEnd: js.UndefOr[js.Function1[/* delta */ CellCoords, Unit]] = js.native
   var modifyTransformStart: js.UndefOr[js.Function1[/* delta */ CellCoords, Unit]] = js.native
-  var persistentStateLoad: js.UndefOr[js.Function2[/* key */ String, /* valuePlaceholder */ AnonValueAny, Unit]] = js.native
+  var persistentStateLoad: js.UndefOr[js.Function2[/* key */ String, /* valuePlaceholder */ ValueAny, Unit]] = js.native
   var persistentStateReset: js.UndefOr[js.Function1[/* key */ String, Unit]] = js.native
   var persistentStateSave: js.UndefOr[js.Function2[/* key */ String, /* value */ js.Any, Unit]] = js.native
   var skipLengthCache: js.UndefOr[js.Function1[/* delay */ Double, Unit]] = js.native
@@ -1425,7 +1425,7 @@ object Events {
     }
     @scala.inline
     def withAfterSelection(
-      value: (/* row */ Double, /* column */ Double, /* row2 */ Double, /* column2 */ Double, /* preventScrolling */ AnonValue, /* selectionLayerLevel */ Double) => Unit
+      value: (/* row */ Double, /* column */ Double, /* row2 */ Double, /* column2 */ Double, /* preventScrolling */ Value, /* selectionLayerLevel */ Double) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterSelection")(js.Any.fromFunction6(value))
@@ -1439,7 +1439,7 @@ object Events {
     }
     @scala.inline
     def withAfterSelectionByProp(
-      value: (/* row */ Double, /* prop */ String, /* row2 */ Double, /* prop2 */ String, /* preventScrolling */ AnonValue, /* selectionLayerLevel */ Double) => Unit
+      value: (/* row */ Double, /* prop */ String, /* row2 */ Double, /* prop2 */ String, /* preventScrolling */ Value, /* selectionLayerLevel */ Double) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterSelectionByProp")(js.Any.fromFunction6(value))
@@ -2174,7 +2174,7 @@ object Events {
         ret
     }
     @scala.inline
-    def withBeforeRender(value: (/* isForced */ Boolean, /* skipRender */ AnonSkipRender) => Unit): Self = {
+    def withBeforeRender(value: (/* isForced */ Boolean, /* skipRender */ SkipRender) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeRender")(js.Any.fromFunction2(value))
         ret
@@ -2515,7 +2515,7 @@ object Events {
     }
     @scala.inline
     def withModifyData(
-      value: (/* row */ Double, /* column */ Double, /* valueHolder */ AnonValueCellValue, /* ioMode */ get | set) => Unit
+      value: (/* row */ Double, /* column */ Double, /* valueHolder */ ValueCellValue, /* ioMode */ get | set) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modifyData")(js.Any.fromFunction4(value))
@@ -2638,7 +2638,7 @@ object Events {
         ret
     }
     @scala.inline
-    def withPersistentStateLoad(value: (/* key */ String, /* valuePlaceholder */ AnonValueAny) => Unit): Self = {
+    def withPersistentStateLoad(value: (/* key */ String, /* valuePlaceholder */ ValueAny) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("persistentStateLoad")(js.Any.fromFunction2(value))
         ret

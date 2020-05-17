@@ -22,12 +22,12 @@ trait KernelMemoryScanCallbacks extends js.Object {
     * @param address Memory address where a match was found.
     * @param size Size of this match.
     */
-  def onMatch(address: UInt64_, size: Double): Unit | EnumerateAction = js.native
+  def onMatch(address: UInt64, size: Double): Unit | EnumerateAction = js.native
 }
 
 object KernelMemoryScanCallbacks {
   @scala.inline
-  def apply(onComplete: () => Unit, onMatch: (UInt64_, Double) => Unit | EnumerateAction): KernelMemoryScanCallbacks = {
+  def apply(onComplete: () => Unit, onMatch: (UInt64, Double) => Unit | EnumerateAction): KernelMemoryScanCallbacks = {
     val __obj = js.Dynamic.literal(onComplete = js.Any.fromFunction0(onComplete), onMatch = js.Any.fromFunction2(onMatch))
     __obj.asInstanceOf[KernelMemoryScanCallbacks]
   }
@@ -44,7 +44,7 @@ object KernelMemoryScanCallbacks {
         ret
     }
     @scala.inline
-    def withOnMatch(value: (UInt64_, Double) => Unit | EnumerateAction): Self = {
+    def withOnMatch(value: (UInt64, Double) => Unit | EnumerateAction): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMatch")(js.Any.fromFunction2(value))
         ret

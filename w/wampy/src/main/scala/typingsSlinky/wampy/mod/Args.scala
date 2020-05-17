@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Args extends js.Object {
+trait Args extends Payload {
   var argsDict: Dict = js.native
   var argsList: js.Array[_] = js.native
 }

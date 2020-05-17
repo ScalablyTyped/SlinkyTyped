@@ -1,6 +1,5 @@
 package typingsSlinky.vueRouter.routerMod
 
-import typingsSlinky.vue.AnonComponent
 import typingsSlinky.vue.optionsMod.DefaultComputed
 import typingsSlinky.vue.optionsMod.DefaultData
 import typingsSlinky.vue.optionsMod.DefaultMethods
@@ -124,7 +123,7 @@ object RouteConfig {
     }
     @scala.inline
     def withComponentFunction0(
-      value: () => AnonComponent[
+      value: () => typingsSlinky.vue.anon.Component[
           DefaultData[scala.Nothing], 
           DefaultMethods[scala.Nothing], 
           DefaultComputed, 

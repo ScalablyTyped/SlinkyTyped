@@ -1,6 +1,6 @@
 package typingsSlinky.oauth2Server.mod
 
-import typingsSlinky.oauth2Server.PickAuthorizationCodeauth
+import typingsSlinky.oauth2Server.anon.PickAuthorizationCodeauth
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

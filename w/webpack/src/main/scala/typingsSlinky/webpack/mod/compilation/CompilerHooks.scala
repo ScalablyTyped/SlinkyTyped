@@ -4,7 +4,7 @@ import typingsSlinky.tapable.mod.AsyncParallelHook
 import typingsSlinky.tapable.mod.AsyncSeriesHook
 import typingsSlinky.tapable.mod.SyncBailHook
 import typingsSlinky.tapable.mod.SyncHook
-import typingsSlinky.webpack.AnonNormalModuleFactory
+import typingsSlinky.webpack.anon.NormalModuleFactory
 import typingsSlinky.webpack.mod.Compiler_
 import typingsSlinky.webpack.mod.Stats
 import scala.scalajs.js
@@ -21,7 +21,7 @@ trait CompilerHooks extends js.Object {
   var afterResolvers: SyncHook[Compiler_, _, _] = js.native
   var beforeCompile: AsyncSeriesHook[js.Object, _, _] = js.native
   var beforeRun: AsyncSeriesHook[Compiler_, _, _] = js.native
-  var compilation: SyncHook[Compilation, AnonNormalModuleFactory, _] = js.native
+  var compilation: SyncHook[Compilation, NormalModuleFactory, _] = js.native
   var compile: SyncHook[js.Object, _, _] = js.native
   var contextModuleFactory: SyncHook[ContextModuleFactory, _, _] = js.native
   var done: AsyncSeriesHook[Stats, _, _] = js.native
@@ -34,7 +34,7 @@ trait CompilerHooks extends js.Object {
   var normalModuleFactory: SyncHook[NormalModuleFactory_, _, _] = js.native
   var run: AsyncSeriesHook[Compiler_, _, _] = js.native
   var shouldEmit: SyncBailHook[Compilation, _, _, _] = js.native
-  var thisCompilation: SyncHook[Compilation, AnonNormalModuleFactory, _] = js.native
+  var thisCompilation: SyncHook[Compilation, NormalModuleFactory, _] = js.native
   var watchClose: SyncHook[_, _, _] = js.native
   var watchRun: AsyncSeriesHook[Compiler_, _, _] = js.native
 }
@@ -50,7 +50,7 @@ object CompilerHooks {
     afterResolvers: SyncHook[Compiler_, _, _],
     beforeCompile: AsyncSeriesHook[js.Object, _, _],
     beforeRun: AsyncSeriesHook[Compiler_, _, _],
-    compilation: SyncHook[Compilation, AnonNormalModuleFactory, _],
+    compilation: SyncHook[Compilation, NormalModuleFactory, _],
     compile: SyncHook[js.Object, _, _],
     contextModuleFactory: SyncHook[ContextModuleFactory, _, _],
     done: AsyncSeriesHook[Stats, _, _],
@@ -63,7 +63,7 @@ object CompilerHooks {
     normalModuleFactory: SyncHook[NormalModuleFactory_, _, _],
     run: AsyncSeriesHook[Compiler_, _, _],
     shouldEmit: SyncBailHook[Compilation, _, _, _],
-    thisCompilation: SyncHook[Compilation, AnonNormalModuleFactory, _],
+    thisCompilation: SyncHook[Compilation, NormalModuleFactory, _],
     watchClose: SyncHook[_, _, _],
     watchRun: AsyncSeriesHook[Compiler_, _, _]
   ): CompilerHooks = {
@@ -125,7 +125,7 @@ object CompilerHooks {
         ret
     }
     @scala.inline
-    def withCompilation(value: SyncHook[Compilation, AnonNormalModuleFactory, _]): Self = {
+    def withCompilation(value: SyncHook[Compilation, NormalModuleFactory, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("compilation")(value.asInstanceOf[js.Any])
         ret
@@ -203,7 +203,7 @@ object CompilerHooks {
         ret
     }
     @scala.inline
-    def withThisCompilation(value: SyncHook[Compilation, AnonNormalModuleFactory, _]): Self = {
+    def withThisCompilation(value: SyncHook[Compilation, NormalModuleFactory, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("thisCompilation")(value.asInstanceOf[js.Any])
         ret

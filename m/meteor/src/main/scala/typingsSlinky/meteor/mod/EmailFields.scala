@@ -1,6 +1,6 @@
 package typingsSlinky.meteor.mod
 
-import typingsSlinky.meteor.Meteor.User_
+import typingsSlinky.meteor.Meteor.User
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation._
 @js.native
 trait EmailFields extends js.Object {
   var from: js.UndefOr[js.Function0[String]] = js.native
-  var html: js.UndefOr[js.Function2[/* user */ User_, /* url */ String, String]] = js.native
-  var subject: js.UndefOr[js.Function1[/* user */ User_, String]] = js.native
-  var text: js.UndefOr[js.Function2[/* user */ User_, /* url */ String, String]] = js.native
+  var html: js.UndefOr[js.Function2[/* user */ User, /* url */ String, String]] = js.native
+  var subject: js.UndefOr[js.Function1[/* user */ User, String]] = js.native
+  var text: js.UndefOr[js.Function2[/* user */ User, /* url */ String, String]] = js.native
 }
 
 object EmailFields {
@@ -38,7 +38,7 @@ object EmailFields {
         ret
     }
     @scala.inline
-    def withHtml(value: (/* user */ User_, /* url */ String) => String): Self = {
+    def withHtml(value: (/* user */ User, /* url */ String) => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("html")(js.Any.fromFunction2(value))
         ret
@@ -50,7 +50,7 @@ object EmailFields {
         ret
     }
     @scala.inline
-    def withSubject(value: /* user */ User_ => String): Self = {
+    def withSubject(value: /* user */ User => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(js.Any.fromFunction1(value))
         ret
@@ -62,7 +62,7 @@ object EmailFields {
         ret
     }
     @scala.inline
-    def withText(value: (/* user */ User_, /* url */ String) => String): Self = {
+    def withText(value: (/* user */ User, /* url */ String) => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.Any.fromFunction2(value))
         ret

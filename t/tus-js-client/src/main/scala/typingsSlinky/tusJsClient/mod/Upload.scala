@@ -2,7 +2,7 @@ package typingsSlinky.tusJsClient.mod
 
 import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.File
-import typingsSlinky.tusJsClient.PickReadableStreamDefault
+import typingsSlinky.tusJsClient.anon.PickReadableStreamDefault
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

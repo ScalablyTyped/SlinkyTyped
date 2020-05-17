@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SequenceTransform extends _Transforms {
+trait SequenceTransform extends Transforms {
   var as: js.UndefOr[String | SignalRef] = js.native
   var start: Double | SignalRef = js.native
   var step: js.UndefOr[Double | SignalRef] = js.native

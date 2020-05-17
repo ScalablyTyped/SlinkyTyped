@@ -1,7 +1,7 @@
 package typingsSlinky.ionicCore.componentsMod.Components
 
 import typingsSlinky.ionicCore.alertInterfaceMod.AlertOptions
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonAlertElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonAlertElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,6 @@ trait IonAlertController extends js.Object {
     */
   def dismiss(): js.Promise[Boolean] = js.native
   def dismiss(data: js.Any): js.Promise[Boolean] = js.native
-  def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
   def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
   def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
   /**

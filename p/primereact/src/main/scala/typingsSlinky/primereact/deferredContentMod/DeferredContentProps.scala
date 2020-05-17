@@ -1,13 +1,13 @@
 package typingsSlinky.primereact.deferredContentMod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait DeferredContentProps extends js.Object {
-  var onLoad: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onLoad: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
 }
 
 object DeferredContentProps {
@@ -23,7 +23,7 @@ object DeferredContentProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnLoad(value: /* event */ Event_ => Unit): Self = {
+    def withOnLoad(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction1(value))
         ret

@@ -15,34 +15,34 @@ import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLVideoElement
 import org.scalajs.dom.raw.ImageData
 import org.scalajs.dom.raw.WebGLRenderingContext
-import typingsSlinky.aframe.AnonAlphamapfragment
-import typingsSlinky.aframe.AnonAomap
-import typingsSlinky.aframe.AnonDictname
-import typingsSlinky.aframe.TypeofAnimationClip
-import typingsSlinky.aframe.TypeofAnimationUtils
-import typingsSlinky.aframe.TypeofBufferGeometry
-import typingsSlinky.aframe.TypeofBufferGeometryUtils
-import typingsSlinky.aframe.TypeofCache
-import typingsSlinky.aframe.TypeofCurve
-import typingsSlinky.aframe.TypeofCurveUtils
-import typingsSlinky.aframe.TypeofEuler
-import typingsSlinky.aframe.TypeofExtrudeBufferGeomet
-import typingsSlinky.aframe.TypeofExtrudeGeometry
-import typingsSlinky.aframe.TypeofGeometryUtils
-import typingsSlinky.aframe.TypeofImageUtils
-import typingsSlinky.aframe.TypeofKeyframeTrack
-import typingsSlinky.aframe.TypeofLoaderUtils
-import typingsSlinky.aframe.TypeofMath
-import typingsSlinky.aframe.TypeofObject3D
-import typingsSlinky.aframe.TypeofPropertyBinding
-import typingsSlinky.aframe.TypeofPropertyBindingComposite
-import typingsSlinky.aframe.TypeofQuaternion
-import typingsSlinky.aframe.TypeofSceneUtils
-import typingsSlinky.aframe.TypeofShapeUtils
-import typingsSlinky.aframe.TypeofSphericalHarmonics3
-import typingsSlinky.aframe.TypeofTexture
-import typingsSlinky.aframe.TypeofTriangle
-import typingsSlinky.aframe.TypeofWebGLUniforms
+import typingsSlinky.aframe.anon.Alphamapfragment
+import typingsSlinky.aframe.anon.Aomap
+import typingsSlinky.aframe.anon.Dictname
+import typingsSlinky.aframe.anon.TypeofAnimationClip
+import typingsSlinky.aframe.anon.TypeofAnimationUtils
+import typingsSlinky.aframe.anon.TypeofBufferGeometry
+import typingsSlinky.aframe.anon.TypeofBufferGeometryUtils
+import typingsSlinky.aframe.anon.TypeofCache
+import typingsSlinky.aframe.anon.TypeofCurve
+import typingsSlinky.aframe.anon.TypeofCurveUtils
+import typingsSlinky.aframe.anon.TypeofEuler
+import typingsSlinky.aframe.anon.TypeofExtrudeBufferGeomet
+import typingsSlinky.aframe.anon.TypeofExtrudeGeometry
+import typingsSlinky.aframe.anon.TypeofGeometryUtils
+import typingsSlinky.aframe.anon.TypeofImageUtils
+import typingsSlinky.aframe.anon.TypeofKeyframeTrack
+import typingsSlinky.aframe.anon.TypeofLoaderUtils
+import typingsSlinky.aframe.anon.TypeofMath
+import typingsSlinky.aframe.anon.TypeofObject3D
+import typingsSlinky.aframe.anon.TypeofPropertyBinding
+import typingsSlinky.aframe.anon.TypeofPropertyBindingComposite
+import typingsSlinky.aframe.anon.TypeofQuaternion
+import typingsSlinky.aframe.anon.TypeofSceneUtils
+import typingsSlinky.aframe.anon.TypeofShapeUtils
+import typingsSlinky.aframe.anon.TypeofSphericalHarmonics3
+import typingsSlinky.aframe.anon.TypeofTexture
+import typingsSlinky.aframe.anon.TypeofTriangle
+import typingsSlinky.aframe.anon.TypeofWebGLUniforms
 import typingsSlinky.std.ArrayLike
 import typingsSlinky.three.audioListenerMod.AudioListener
 import typingsSlinky.three.boneMod.Bone
@@ -637,13 +637,11 @@ trait ThreeLib extends js.Object {
   var PointLightShadow: Instantiable0[typingsSlinky.three.mod.PointLightShadow] = js.native
   var Points: Instantiable0[typingsSlinky.three.mod.Points] = js.native
   var PointsMaterial: Instantiable0[typingsSlinky.three.mod.PointsMaterial] = js.native
-  var PolarGridHelper: Instantiable6[
+  var PolarGridHelper: Instantiable4[
     /* radius */ Double, 
     /* radials */ Double, 
     /* circles */ Double, 
     /* divisions */ Double, 
-    /* color1 */ Color, 
-    /* color2 */ Color, 
     typingsSlinky.three.mod.PolarGridHelper
   ] = js.native
   var PolyhedronBufferGeometry: Instantiable2[
@@ -752,8 +750,8 @@ trait ThreeLib extends js.Object {
   ] = js.native
   var Scene: Instantiable0[typingsSlinky.three.mod.Scene] = js.native
   val SceneUtils: TypeofSceneUtils = js.native
-  var ShaderChunk: AnonAlphamapfragment = js.native
-  var ShaderLib: AnonDictname = js.native
+  var ShaderChunk: Alphamapfragment = js.native
+  var ShaderLib: Dictname = js.native
   var ShaderMaterial: Instantiable0[typingsSlinky.three.mod.ShaderMaterial] = js.native
   var ShadowMaterial: Instantiable0[typingsSlinky.three.mod.ShadowMaterial] = js.native
   var Shape: Instantiable0[typingsSlinky.three.mod.Shape] = js.native
@@ -881,7 +879,7 @@ trait ThreeLib extends js.Object {
   ] = js.native
   val Uncharted2ToneMapping: ToneMapping = js.native
   var Uniform: Instantiable1[/* value */ js.Any, typingsSlinky.three.mod.Uniform] = js.native
-  var UniformsLib: AnonAomap = js.native
+  var UniformsLib: Aomap = js.native
   val UniformsUtils: js.Any = js.native
   val UnsignedByteType: TextureDataType = js.native
   val UnsignedInt248Type: PixelType = js.native

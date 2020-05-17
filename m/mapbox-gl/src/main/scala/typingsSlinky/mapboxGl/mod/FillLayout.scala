@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait FillLayout
   extends Layout
-     with _AnyLayout {
+     with AnyLayout {
   var `fill-sort-key`: js.UndefOr[Double] = js.native
 }
 

@@ -2,7 +2,7 @@ package typingsSlinky.oracleOraclejet.ojaccordionMod
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.AnonId
+import typingsSlinky.oracleOraclejet.anon.Id
 import typingsSlinky.oracleOraclejet.mod.baseComponent
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.expanded
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.expandedChanged
@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ojAccordion extends baseComponent[ojAccordionSettableProperties] {
-  var expanded: js.Array[AnonId] | Null = js.native
+  var expanded: js.Array[Id] | Null = js.native
   var multiple: Boolean = js.native
   var onExpandedChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var onMultipleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
@@ -75,14 +75,14 @@ trait ojAccordion extends baseComponent[ojAccordionSettableProperties] {
     useCapture: Boolean
   ): Unit = js.native
   @JSName("getProperty")
-  def getProperty_expanded(property: expanded): js.Array[AnonId] | Null = js.native
+  def getProperty_expanded(property: expanded): js.Array[Id] | Null = js.native
   @JSName("getProperty")
   def getProperty_multiple(property: multiple): Boolean = js.native
   def setProperties(properties: ojAccordionSettablePropertiesLenient): Unit = js.native
   @JSName("setProperty")
   def setProperty_expanded(property: expanded): Unit = js.native
   @JSName("setProperty")
-  def setProperty_expanded(property: expanded, value: js.Array[AnonId | Double | String]): Unit = js.native
+  def setProperty_expanded(property: expanded, value: js.Array[Double | Id | String]): Unit = js.native
   @JSName("setProperty")
   def setProperty_multiple(property: multiple, value: Boolean): Unit = js.native
 }

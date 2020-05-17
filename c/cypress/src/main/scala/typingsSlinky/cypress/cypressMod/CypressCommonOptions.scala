@@ -1,6 +1,6 @@
 package typingsSlinky.cypress.cypressMod
 
-import typingsSlinky.cypress.PartialCypressConfigurati
+import typingsSlinky.cypress.anon.PartialCypressConfigurati
 import typingsSlinky.cypress.cypressBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`

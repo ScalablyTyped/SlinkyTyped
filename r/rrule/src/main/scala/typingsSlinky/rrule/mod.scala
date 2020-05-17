@@ -1,5 +1,7 @@
 package typingsSlinky.rrule
 
+import typingsSlinky.rrule.anon.PartialOptions
+import typingsSlinky.rrule.anon.PartialRRuleStrOptions
 import typingsSlinky.rrule.i18nMod.Language
 import typingsSlinky.rrule.weekdayMod.WeekdayStr
 import scala.scalajs.js

@@ -1,25 +1,21 @@
 package typingsSlinky.kiiCloudSdk.KiiCloud
 
+import typingsSlinky.kiiCloudSdk.anon.Accesstoken
+import typingsSlinky.kiiCloudSdk.anon.Oauthtoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.kiiCloudSdk.AnonAccesstoken
-  - typingsSlinky.kiiCloudSdk.AnonOauthtoken
+  - typingsSlinky.kiiCloudSdk.anon.Accesstoken
+  - typingsSlinky.kiiCloudSdk.anon.Oauthtoken
 */
 trait KiiSocialConnectOptions extends js.Object
 
 object KiiSocialConnectOptions {
   @scala.inline
-  def AnonAccesstoken(access_token: String): KiiSocialConnectOptions = {
-    val __obj = js.Dynamic.literal(access_token = access_token.asInstanceOf[js.Any])
-    __obj.asInstanceOf[KiiSocialConnectOptions]
-  }
+  implicit def apply(value: Accesstoken): KiiSocialConnectOptions = value.asInstanceOf[KiiSocialConnectOptions]
   @scala.inline
-  def AnonOauthtoken(oauth_token: String, oauth_token_secret: String): KiiSocialConnectOptions = {
-    val __obj = js.Dynamic.literal(oauth_token = oauth_token.asInstanceOf[js.Any], oauth_token_secret = oauth_token_secret.asInstanceOf[js.Any])
-    __obj.asInstanceOf[KiiSocialConnectOptions]
-  }
+  implicit def apply(value: Oauthtoken): KiiSocialConnectOptions = value.asInstanceOf[KiiSocialConnectOptions]
 }
 

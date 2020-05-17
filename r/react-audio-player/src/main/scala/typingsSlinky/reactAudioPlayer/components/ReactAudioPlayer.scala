@@ -1,5 +1,6 @@
 package typingsSlinky.reactAudioPlayer.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLAudioElement
 import slinky.core.SyntheticEvent
 import slinky.web.html.audio.tag
@@ -8,7 +9,6 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactAudioPlayer.mod.Preload
 import typingsSlinky.reactAudioPlayer.mod.ReactAudioPlayerProps
 import typingsSlinky.reactAudioPlayer.mod.default
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,27 +41,27 @@ object ReactAudioPlayer {
     @scala.inline
     def muted(value: Boolean): this.type = set("muted", value.asInstanceOf[js.Any])
     @scala.inline
-    def onAbort(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
+    def onAbort(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
     @scala.inline
-    def onCanPlay(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): this.type = set("onCanPlay", js.Any.fromFunction1(value))
+    def onCanPlay(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): this.type = set("onCanPlay", js.Any.fromFunction1(value))
     @scala.inline
-    def onCanPlayThrough(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
+    def onCanPlayThrough(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
     @scala.inline
-    def onEnded(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): this.type = set("onEnded", js.Any.fromFunction1(value))
+    def onEnded(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): this.type = set("onEnded", js.Any.fromFunction1(value))
     @scala.inline
-    def onError(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): this.type = set("onError", js.Any.fromFunction1(value))
+    def onError(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): this.type = set("onError", js.Any.fromFunction1(value))
     @scala.inline
-    def onListen(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): this.type = set("onListen", js.Any.fromFunction1(value))
+    def onListen(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): this.type = set("onListen", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoadedMetadata(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): this.type = set("onLoadedMetadata", js.Any.fromFunction1(value))
+    def onLoadedMetadata(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): this.type = set("onLoadedMetadata", js.Any.fromFunction1(value))
     @scala.inline
-    def onPause(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): this.type = set("onPause", js.Any.fromFunction1(value))
+    def onPause(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): this.type = set("onPause", js.Any.fromFunction1(value))
     @scala.inline
-    def onPlay(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): this.type = set("onPlay", js.Any.fromFunction1(value))
+    def onPlay(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): this.type = set("onPlay", js.Any.fromFunction1(value))
     @scala.inline
-    def onSeeked(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): this.type = set("onSeeked", js.Any.fromFunction1(value))
+    def onSeeked(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): this.type = set("onSeeked", js.Any.fromFunction1(value))
     @scala.inline
-    def onVolumeChanged(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): this.type = set("onVolumeChanged", js.Any.fromFunction1(value))
+    def onVolumeChanged(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): this.type = set("onVolumeChanged", js.Any.fromFunction1(value))
     @scala.inline
     def preload(value: Preload): this.type = set("preload", value.asInstanceOf[js.Any])
     @scala.inline

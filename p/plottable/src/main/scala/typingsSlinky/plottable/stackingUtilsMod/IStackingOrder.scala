@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* keyof plottable.AnonBottomup */ /* Rewritten from type alias, can be one of: 
+/* keyof plottable.anon.Bottomup */ /* Rewritten from type alias, can be one of: 
   - typingsSlinky.plottable.plottableStrings.topdown
   - typingsSlinky.plottable.plottableStrings.bottomup
 */

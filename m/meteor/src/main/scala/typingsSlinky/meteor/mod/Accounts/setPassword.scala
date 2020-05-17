@@ -1,6 +1,6 @@
 package typingsSlinky.meteor.mod.Accounts
 
-import typingsSlinky.meteor.AnonLogout
+import typingsSlinky.meteor.anon.Logout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object setPassword extends js.Object {
   def apply(userId: String, newPassword: String): Unit = js.native
-  def apply(userId: String, newPassword: String, options: AnonLogout): Unit = js.native
+  def apply(userId: String, newPassword: String, options: Logout): Unit = js.native
 }
 

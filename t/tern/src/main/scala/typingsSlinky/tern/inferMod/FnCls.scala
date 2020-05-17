@@ -8,12 +8,11 @@ import scala.scalajs.js.annotation._
 @js.native
 class FnCls protected () extends Fn {
   def this(
-    name: js.UndefOr[scala.Nothing],
+    name: js.UndefOr[String],
     self: AVal,
     args: js.Array[AVal],
     argNames: js.Array[String],
     retval: AVal
   ) = this()
-  def this(name: String, self: AVal, args: js.Array[AVal], argNames: js.Array[String], retval: AVal) = this()
 }
 

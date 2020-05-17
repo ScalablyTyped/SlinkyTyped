@@ -1,6 +1,6 @@
 package typingsSlinky.twilsock.upstreamMod
 
-import typingsSlinky.twilsock.AnonCode
+import typingsSlinky.twilsock.anon.Code
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait Result extends js.Object {
   var body: js.UndefOr[js.Any] = js.native
   var headers: Headers = js.native
-  var status: AnonCode = js.native
+  var status: Code = js.native
 }
 
 object Result {
   @scala.inline
-  def apply(headers: Headers, status: AnonCode): Result = {
+  def apply(headers: Headers, status: Code): Result = {
     val __obj = js.Dynamic.literal(headers = headers.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
     __obj.asInstanceOf[Result]
   }
@@ -31,7 +31,7 @@ object Result {
         ret
     }
     @scala.inline
-    def withStatus(value: AnonCode): Self = {
+    def withStatus(value: Code): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
         ret

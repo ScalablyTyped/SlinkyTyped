@@ -2,7 +2,7 @@ package typingsSlinky.cathoQuantum.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonBaseFontSizeColors
+import typingsSlinky.cathoQuantum.anon.BaseFontSizeColors
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.bottom
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.left
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.right
@@ -25,7 +25,7 @@ object Tooltip {
     @scala.inline
     def placement(value: top | right | bottom | left): this.type = set("placement", value.asInstanceOf[js.Any])
     @scala.inline
-    def theme(value: AnonBaseFontSizeColors): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: BaseFontSizeColors): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   }

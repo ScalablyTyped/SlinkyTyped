@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ClassInterpolation
   extends js.Function
-     with _Interpolation {
+     with Interpolation {
   var __emotion_base: ClassInterpolation = js.native
   var __emotion_forwardProp: js.UndefOr[Null | (js.Function1[/* arg */ String, Boolean])] = js.native
   var __emotion_real: js.Any = js.native

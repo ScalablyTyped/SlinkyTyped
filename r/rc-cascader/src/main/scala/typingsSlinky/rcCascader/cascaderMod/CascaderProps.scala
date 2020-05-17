@@ -24,7 +24,7 @@ trait CascaderProps extends js.Object {
   var expandTrigger: js.UndefOr[String] = js.native
   var fieldNames: js.UndefOr[CascaderFieldNames] = js.native
   var filedNames: js.UndefOr[CascaderFieldNames] = js.native
-  var getPopupContainer: js.Any = js.native
+  var getPopupContainer: js.UndefOr[js.Any] = js.native
   var loadData: js.UndefOr[js.Function1[/* selectOptions */ js.Array[CascaderOption], Unit]] = js.native
   var loadingIcon: js.UndefOr[TagMod[Any]] = js.native
   var onChange: js.UndefOr[
@@ -43,8 +43,8 @@ trait CascaderProps extends js.Object {
 
 object CascaderProps {
   @scala.inline
-  def apply(getPopupContainer: js.Any): CascaderProps = {
-    val __obj = js.Dynamic.literal(getPopupContainer = getPopupContainer.asInstanceOf[js.Any])
+  def apply(): CascaderProps = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[CascaderProps]
   }
   @scala.inline
@@ -53,12 +53,6 @@ object CascaderProps {
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withGetPopupContainer(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPopupContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
     @scala.inline
     def withBuiltinPlacements(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BuildInPlacements */ js.Any
@@ -185,6 +179,18 @@ object CascaderProps {
     def withoutFiledNames: Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filedNames")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetPopupContainer(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPopupContainer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGetPopupContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPopupContainer")(js.undefined)
         ret
     }
     @scala.inline

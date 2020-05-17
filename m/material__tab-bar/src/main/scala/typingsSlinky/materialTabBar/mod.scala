@@ -2,6 +2,9 @@ package typingsSlinky.materialTabBar
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.materialTabBar.adapterMod.MDCTabBarAdapter
+import typingsSlinky.materialTabBar.anon.ARROWLEFTKEY
+import typingsSlinky.materialTabBar.anon.ARROWLEFTKEYCODE
+import typingsSlinky.materialTabBar.anon.PartialMDCTabBarAdapter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,8 +32,8 @@ object mod extends js.Object {
   @js.native
   object MDCTabBarFoundation extends js.Object {
     val defaultAdapter: MDCTabBarAdapter = js.native
-    val numbers: AnonARROWLEFTKEYCODE = js.native
-    val strings: AnonARROWLEFTKEY = js.native
+    val numbers: ARROWLEFTKEYCODE = js.native
+    val strings: ARROWLEFTKEY = js.native
   }
   
   @js.native

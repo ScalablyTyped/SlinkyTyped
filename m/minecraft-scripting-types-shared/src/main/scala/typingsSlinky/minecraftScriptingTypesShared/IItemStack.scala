@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IItemStack extends _IMinecraftObject {
+trait IItemStack extends IMinecraftObject {
   /**
     * The identifier of the item stack
     */

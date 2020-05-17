@@ -4,7 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNavigationStack.PickPropsmodeheaderModehe
+import typingsSlinky.reactNavigationStack.anon.PickPropsmodeheaderModehe
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.card
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.modal
 import typingsSlinky.reactNavigationStack.stackViewLayoutMod.default

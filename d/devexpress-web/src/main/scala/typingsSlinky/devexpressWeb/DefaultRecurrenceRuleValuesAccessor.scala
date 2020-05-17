@@ -7,13 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * An object providing access to an ASPxClientRecurrenceControlBase control's editor values.
   */
-@JSGlobal("DefaultRecurrenceRuleValuesAccessor")
 @js.native
-class DefaultRecurrenceRuleValuesAccessor protected () extends js.Object {
-  /**
-    * Initializes a new instance of the DefaultRecurrenceRuleValuesAccessor object. For internal use only.
-    */
-  def this(recurrenceControl: ASPxClientRecurrenceControlBase) = this()
+trait DefaultRecurrenceRuleValuesAccessor extends js.Object {
   /**
     * Gets the number of the month's day in which the appointment is scheduled.
     */
@@ -34,5 +29,57 @@ class DefaultRecurrenceRuleValuesAccessor protected () extends js.Object {
     * Gets the number of the week in a month when an appointment is scheduled.
     */
   def GetWeekOfMonth(): ASPxClientWeekOfMonth = js.native
+}
+
+object DefaultRecurrenceRuleValuesAccessor {
+  @scala.inline
+  def apply(
+    GetDayNumber: () => Double,
+    GetMonth: () => Double,
+    GetPeriodicity: () => Double,
+    GetWeekDays: () => ASPxClientWeekDays,
+    GetWeekOfMonth: () => ASPxClientWeekOfMonth
+  ): DefaultRecurrenceRuleValuesAccessor = {
+    val __obj = js.Dynamic.literal(GetDayNumber = js.Any.fromFunction0(GetDayNumber), GetMonth = js.Any.fromFunction0(GetMonth), GetPeriodicity = js.Any.fromFunction0(GetPeriodicity), GetWeekDays = js.Any.fromFunction0(GetWeekDays), GetWeekOfMonth = js.Any.fromFunction0(GetWeekOfMonth))
+    __obj.asInstanceOf[DefaultRecurrenceRuleValuesAccessor]
+  }
+  @scala.inline
+  implicit class DefaultRecurrenceRuleValuesAccessorOps[Self <: DefaultRecurrenceRuleValuesAccessor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetDayNumber(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetDayNumber")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMonth(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetMonth")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPeriodicity(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetPeriodicity")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetWeekDays(value: () => ASPxClientWeekDays): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetWeekDays")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetWeekOfMonth(value: () => ASPxClientWeekOfMonth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetWeekOfMonth")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

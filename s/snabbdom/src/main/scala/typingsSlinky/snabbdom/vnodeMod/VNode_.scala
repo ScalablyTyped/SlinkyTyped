@@ -1,12 +1,13 @@
 package typingsSlinky.snabbdom.vnodeMod
 
 import org.scalajs.dom.raw.Node
+import typingsSlinky.snabbdom.hMod.VNodeChildElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait VNode_ extends js.Object {
+trait VNode_ extends VNodeChildElement {
   var children: js.UndefOr[js.Array[VNode_ | String]] = js.native
   var data: js.UndefOr[VNodeData] = js.native
   var elm: js.UndefOr[Node] = js.native

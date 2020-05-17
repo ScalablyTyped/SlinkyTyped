@@ -1,7 +1,7 @@
 package typingsSlinky.reactDataGrid.AdazzleReactDataGrid
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait DragHandleDoubleClickEvent[T] extends js.Object {
   /**
     * The double click event.
     */
-  var e: SyntheticEvent[Event_, _] = js.native
+  var e: SyntheticEvent[Event, _] = js.native
   /**
     * The column where the double click occurred.
     */
@@ -32,7 +32,7 @@ trait DragHandleDoubleClickEvent[T] extends js.Object {
 
 object DragHandleDoubleClickEvent {
   @scala.inline
-  def apply[T](e: SyntheticEvent[Event_, _], idx: Double, rowData: T, rowIdx: Double): DragHandleDoubleClickEvent[T] = {
+  def apply[T](e: SyntheticEvent[Event, _], idx: Double, rowData: T, rowIdx: Double): DragHandleDoubleClickEvent[T] = {
     val __obj = js.Dynamic.literal(e = e.asInstanceOf[js.Any], idx = idx.asInstanceOf[js.Any], rowData = rowData.asInstanceOf[js.Any], rowIdx = rowIdx.asInstanceOf[js.Any])
     __obj.asInstanceOf[DragHandleDoubleClickEvent[T]]
   }
@@ -43,7 +43,7 @@ object DragHandleDoubleClickEvent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withE(value: SyntheticEvent[Event_, _]): Self[T] = {
+    def withE(value: SyntheticEvent[Event, _]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("e")(value.asInstanceOf[js.Any])
         ret

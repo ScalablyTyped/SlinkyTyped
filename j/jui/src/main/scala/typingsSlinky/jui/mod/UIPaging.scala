@@ -1,6 +1,6 @@
 package typingsSlinky.jui.mod
 
-import typingsSlinky.jui.AnonCount
+import typingsSlinky.jui.anon.Count
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UIPaging extends js.Object {
   def apply(selector: js.Any): this.type = js.native
-  def apply(selector: js.Any, options: AnonCount): this.type = js.native
+  def apply(selector: js.Any, options: Count): this.type = js.native
   def first(): Unit = js.native
   def last(): Unit = js.native
   def next(): Unit = js.native

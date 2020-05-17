@@ -1,6 +1,6 @@
 package typingsSlinky.xummApi.mod
 
-import typingsSlinky.xummApi.AnonExpire
+import typingsSlinky.xummApi.anon.Expire
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait XummPayloadBodyBase extends js.Object {
   var custom_meta: js.UndefOr[XummCustomMeta] = js.native
-  var options: js.UndefOr[AnonExpire] = js.native
+  var options: js.UndefOr[Expire] = js.native
   var user_token: js.UndefOr[String] = js.native
 }
 
@@ -37,7 +37,7 @@ object XummPayloadBodyBase {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonExpire): Self = {
+    def withOptions(value: Expire): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

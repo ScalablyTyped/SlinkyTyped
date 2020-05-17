@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Key extends js.Object {
+trait Key extends Token {
   var delimiter: String = js.native
   var name: String | Double = js.native
   var optional: Boolean = js.native

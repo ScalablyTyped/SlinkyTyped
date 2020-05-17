@@ -19,9 +19,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@JSGlobal("Excel.ShapeCollection")
 @js.native
-class ShapeCollection () extends ClientObject {
+trait ShapeCollection extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_ShapeCollection: RequestContext = js.native

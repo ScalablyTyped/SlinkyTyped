@@ -1,6 +1,6 @@
 package typingsSlinky.stropheJs.mod.Strophe
 
-import typingsSlinky.std.Document_
+import org.scalajs.dom.raw.Document
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,6 +17,6 @@ object xmlHtmlNode extends js.Object {
     *  Returns:
     *    A new XML DOM text node.
     */
-  def apply(html: String): Document_ = js.native
+  def apply(html: String): Document = js.native
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.gapiYoutubeanalytics.gapi.client.youtubeAnalytics
 
 import typingsSlinky.gapi.gapi.client.HttpRequest
-import typingsSlinky.gapiYoutubeanalytics.AnonDimensions
+import typingsSlinky.gapiYoutubeanalytics.anon.Dimensions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,12 +11,12 @@ trait reports extends js.Object {
   /**
     * Retrieve your YouTube Analytics reports.
     */
-  def query(`object`: AnonDimensions): HttpRequest[_] = js.native
+  def query(`object`: Dimensions): HttpRequest[_] = js.native
 }
 
 object reports {
   @scala.inline
-  def apply(query: AnonDimensions => HttpRequest[_]): reports = {
+  def apply(query: Dimensions => HttpRequest[_]): reports = {
     val __obj = js.Dynamic.literal(query = js.Any.fromFunction1(query))
     __obj.asInstanceOf[reports]
   }
@@ -27,7 +27,7 @@ object reports {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withQuery(value: AnonDimensions => HttpRequest[_]): Self = {
+    def withQuery(value: Dimensions => HttpRequest[_]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.Any.fromFunction1(value))
         ret

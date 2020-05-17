@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonElementEventJQueryEvent
+import typingsSlinky.devextreme.anon.ElementEventJQueryEvent
 import typingsSlinky.devextreme.devextremeStrings.always
 import typingsSlinky.devextreme.devextremeStrings.clear
 import typingsSlinky.devextreme.devextremeStrings.filled
@@ -28,27 +28,27 @@ trait dxTextEditorOptions[T] extends EditorOptions[T] {
   /** The value to be assigned to the `name` attribute of the underlying HTML element. */
   var name: js.UndefOr[String] = js.native
   /** A function that is executed when the widget loses focus after the text field's content was changed using the keyboard. */
-  var onChange: js.UndefOr[js.Function1[/* e */ AnonElementEventJQueryEvent[T], _]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* e */ ElementEventJQueryEvent[T], _]] = js.native
   /** A function that is executed when the widget's input has been copied. */
-  var onCopy: js.UndefOr[js.Function1[/* e */ AnonElementEventJQueryEvent[T], _]] = js.native
+  var onCopy: js.UndefOr[js.Function1[/* e */ ElementEventJQueryEvent[T], _]] = js.native
   /** A function that is executed when the widget's input has been cut. */
-  var onCut: js.UndefOr[js.Function1[/* e */ AnonElementEventJQueryEvent[T], _]] = js.native
+  var onCut: js.UndefOr[js.Function1[/* e */ ElementEventJQueryEvent[T], _]] = js.native
   /** A function that is executed when the Enter key has been pressed while the widget is focused. */
-  var onEnterKey: js.UndefOr[js.Function1[/* e */ AnonElementEventJQueryEvent[T], _]] = js.native
+  var onEnterKey: js.UndefOr[js.Function1[/* e */ ElementEventJQueryEvent[T], _]] = js.native
   /** A function that is executed when the widget gets focus. */
-  var onFocusIn: js.UndefOr[js.Function1[/* e */ AnonElementEventJQueryEvent[T], _]] = js.native
+  var onFocusIn: js.UndefOr[js.Function1[/* e */ ElementEventJQueryEvent[T], _]] = js.native
   /** A function that is executed when the widget loses focus. */
-  var onFocusOut: js.UndefOr[js.Function1[/* e */ AnonElementEventJQueryEvent[T], _]] = js.native
+  var onFocusOut: js.UndefOr[js.Function1[/* e */ ElementEventJQueryEvent[T], _]] = js.native
   /** A function that is executed each time the widget's input is changed while the widget is focused. */
-  var onInput: js.UndefOr[js.Function1[/* e */ AnonElementEventJQueryEvent[T], _]] = js.native
+  var onInput: js.UndefOr[js.Function1[/* e */ ElementEventJQueryEvent[T], _]] = js.native
   /** A function that is executed when a user is pressing a key on the keyboard. */
-  var onKeyDown: js.UndefOr[js.Function1[/* e */ AnonElementEventJQueryEvent[T], _]] = js.native
+  var onKeyDown: js.UndefOr[js.Function1[/* e */ ElementEventJQueryEvent[T], _]] = js.native
   /** A function that is executed when a user presses a key on the keyboard. */
-  var onKeyPress: js.UndefOr[js.Function1[/* e */ AnonElementEventJQueryEvent[T], _]] = js.native
+  var onKeyPress: js.UndefOr[js.Function1[/* e */ ElementEventJQueryEvent[T], _]] = js.native
   /** A function that is executed when a user releases a key on the keyboard. */
-  var onKeyUp: js.UndefOr[js.Function1[/* e */ AnonElementEventJQueryEvent[T], _]] = js.native
+  var onKeyUp: js.UndefOr[js.Function1[/* e */ ElementEventJQueryEvent[T], _]] = js.native
   /** A function that is executed when the widget's input has been pasted. */
-  var onPaste: js.UndefOr[js.Function1[/* e */ AnonElementEventJQueryEvent[T], _]] = js.native
+  var onPaste: js.UndefOr[js.Function1[/* e */ ElementEventJQueryEvent[T], _]] = js.native
   /** The text displayed by the widget when the widget value is empty. */
   var placeholder: js.UndefOr[String] = js.native
   /** Specifies whether to display the Clear button in the widget. */
@@ -164,7 +164,7 @@ object dxTextEditorOptions {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* e */ AnonElementEventJQueryEvent[T] => _): Self[T] = {
+    def withOnChange(value: /* e */ ElementEventJQueryEvent[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -176,7 +176,7 @@ object dxTextEditorOptions {
         ret
     }
     @scala.inline
-    def withOnCopy(value: /* e */ AnonElementEventJQueryEvent[T] => _): Self[T] = {
+    def withOnCopy(value: /* e */ ElementEventJQueryEvent[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCopy")(js.Any.fromFunction1(value))
         ret
@@ -188,7 +188,7 @@ object dxTextEditorOptions {
         ret
     }
     @scala.inline
-    def withOnCut(value: /* e */ AnonElementEventJQueryEvent[T] => _): Self[T] = {
+    def withOnCut(value: /* e */ ElementEventJQueryEvent[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCut")(js.Any.fromFunction1(value))
         ret
@@ -200,7 +200,7 @@ object dxTextEditorOptions {
         ret
     }
     @scala.inline
-    def withOnEnterKey(value: /* e */ AnonElementEventJQueryEvent[T] => _): Self[T] = {
+    def withOnEnterKey(value: /* e */ ElementEventJQueryEvent[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEnterKey")(js.Any.fromFunction1(value))
         ret
@@ -212,7 +212,7 @@ object dxTextEditorOptions {
         ret
     }
     @scala.inline
-    def withOnFocusIn(value: /* e */ AnonElementEventJQueryEvent[T] => _): Self[T] = {
+    def withOnFocusIn(value: /* e */ ElementEventJQueryEvent[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusIn")(js.Any.fromFunction1(value))
         ret
@@ -224,7 +224,7 @@ object dxTextEditorOptions {
         ret
     }
     @scala.inline
-    def withOnFocusOut(value: /* e */ AnonElementEventJQueryEvent[T] => _): Self[T] = {
+    def withOnFocusOut(value: /* e */ ElementEventJQueryEvent[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusOut")(js.Any.fromFunction1(value))
         ret
@@ -236,7 +236,7 @@ object dxTextEditorOptions {
         ret
     }
     @scala.inline
-    def withOnInput(value: /* e */ AnonElementEventJQueryEvent[T] => _): Self[T] = {
+    def withOnInput(value: /* e */ ElementEventJQueryEvent[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInput")(js.Any.fromFunction1(value))
         ret
@@ -248,7 +248,7 @@ object dxTextEditorOptions {
         ret
     }
     @scala.inline
-    def withOnKeyDown(value: /* e */ AnonElementEventJQueryEvent[T] => _): Self[T] = {
+    def withOnKeyDown(value: /* e */ ElementEventJQueryEvent[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction1(value))
         ret
@@ -260,7 +260,7 @@ object dxTextEditorOptions {
         ret
     }
     @scala.inline
-    def withOnKeyPress(value: /* e */ AnonElementEventJQueryEvent[T] => _): Self[T] = {
+    def withOnKeyPress(value: /* e */ ElementEventJQueryEvent[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyPress")(js.Any.fromFunction1(value))
         ret
@@ -272,7 +272,7 @@ object dxTextEditorOptions {
         ret
     }
     @scala.inline
-    def withOnKeyUp(value: /* e */ AnonElementEventJQueryEvent[T] => _): Self[T] = {
+    def withOnKeyUp(value: /* e */ ElementEventJQueryEvent[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyUp")(js.Any.fromFunction1(value))
         ret
@@ -284,7 +284,7 @@ object dxTextEditorOptions {
         ret
     }
     @scala.inline
-    def withOnPaste(value: /* e */ AnonElementEventJQueryEvent[T] => _): Self[T] = {
+    def withOnPaste(value: /* e */ ElementEventJQueryEvent[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPaste")(js.Any.fromFunction1(value))
         ret

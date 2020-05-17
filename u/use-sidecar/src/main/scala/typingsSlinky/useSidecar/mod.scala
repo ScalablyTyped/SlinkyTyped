@@ -3,6 +3,8 @@ package typingsSlinky.useSidecar
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
+import typingsSlinky.useSidecar.anon.PartialIConfig
+import typingsSlinky.useSidecar.anon.ReadonlySideCarMedium
 import typingsSlinky.useSidecar.renderPropMod.CombinedProps
 import typingsSlinky.useSidecar.renderPropMod.Options
 import typingsSlinky.useSidecar.renderPropMod.RenderPropComponent

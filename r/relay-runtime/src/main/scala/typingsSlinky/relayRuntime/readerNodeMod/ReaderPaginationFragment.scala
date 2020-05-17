@@ -1,6 +1,6 @@
 package typingsSlinky.relayRuntime.readerNodeMod
 
-import typingsSlinky.relayRuntime.AnonConnectionRefetch
+import typingsSlinky.relayRuntime.anon.ConnectionRefetch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ReaderPaginationFragment extends ReaderFragment {
   @JSName("metadata")
-  val metadata_ReaderPaginationFragment: AnonConnectionRefetch = js.native
+  val metadata_ReaderPaginationFragment: ConnectionRefetch = js.native
 }
 
 object ReaderPaginationFragment {
@@ -16,7 +16,7 @@ object ReaderPaginationFragment {
   def apply(
     argumentDefinitions: js.Array[ReaderArgumentDefinition],
     kind: String,
-    metadata: AnonConnectionRefetch,
+    metadata: ConnectionRefetch,
     name: String,
     selections: js.Array[ReaderSelection],
     `type`: String
@@ -32,7 +32,7 @@ object ReaderPaginationFragment {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMetadata(value: AnonConnectionRefetch): Self = {
+    def withMetadata(value: ConnectionRefetch): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
         ret

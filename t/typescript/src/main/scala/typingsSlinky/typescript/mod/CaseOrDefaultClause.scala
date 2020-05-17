@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait CaseOrDefaultClause extends BlockLike
 
+object CaseOrDefaultClause {
+  @scala.inline
+  implicit def apply(value: CaseClause): CaseOrDefaultClause = value.asInstanceOf[CaseOrDefaultClause]
+  @scala.inline
+  implicit def apply(value: DefaultClause): CaseOrDefaultClause = value.asInstanceOf[CaseOrDefaultClause]
+}
+

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Class_XmlCharacterData")
 @js.native
-class ClassXmlCharacterData () extends ClassXmlNode {
+trait ClassXmlCharacterData extends ClassXmlNode {
   /**
   	 * class prop 
   	 *

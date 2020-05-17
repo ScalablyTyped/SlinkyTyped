@@ -20,7 +20,7 @@ package object routerMod {
     /* routes */ js.UndefOr[
       js.Array[typingsSlinky.router5.routerMod.Route] | typingsSlinky.routeNode.mod.default
     ], 
-    /* options */ js.UndefOr[typingsSlinky.router5.PartialOptions], 
+    /* options */ js.UndefOr[typingsSlinky.router5.anon.PartialOptions], 
     /* dependencies */ js.UndefOr[typingsSlinky.router5.routerMod.Dependencies], 
     typingsSlinky.router5.routerMod.Router
   ]

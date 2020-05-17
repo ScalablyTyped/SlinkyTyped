@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data for a message received event on a MessageWebSocket . */
-@JSGlobal("Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs")
 @js.native
-abstract class MessageWebSocketMessageReceivedEventArgs () extends js.Object {
+trait MessageWebSocketMessageReceivedEventArgs extends js.Object {
   /** Gets the type of the message received by a MessageWebSocket object. */
   var messageType: SocketMessageType = js.native
   /**
@@ -22,5 +21,39 @@ abstract class MessageWebSocketMessageReceivedEventArgs () extends js.Object {
     * @return A message represented as a sequential stream of bytes.
     */
   def getDataStream(): IInputStream = js.native
+}
+
+object MessageWebSocketMessageReceivedEventArgs {
+  @scala.inline
+  def apply(getDataReader: () => DataReader, getDataStream: () => IInputStream, messageType: SocketMessageType): MessageWebSocketMessageReceivedEventArgs = {
+    val __obj = js.Dynamic.literal(getDataReader = js.Any.fromFunction0(getDataReader), getDataStream = js.Any.fromFunction0(getDataStream), messageType = messageType.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MessageWebSocketMessageReceivedEventArgs]
+  }
+  @scala.inline
+  implicit class MessageWebSocketMessageReceivedEventArgsOps[Self <: MessageWebSocketMessageReceivedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetDataReader(value: () => DataReader): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDataReader")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDataStream(value: () => IInputStream): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDataStream")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withMessageType(value: SocketMessageType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

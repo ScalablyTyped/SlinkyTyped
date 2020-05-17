@@ -1,10 +1,10 @@
 package typingsSlinky.fixedDataTable.components
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.fixedDataTable.mod.TableProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,23 +36,23 @@ object Table {
     def onContentHeightChange(value: /* newHeight */ Double => Unit): this.type = set("onContentHeightChange", js.Any.fromFunction1(value))
     @scala.inline
     def onRowClick(
-      value: (/* event */ SyntheticEvent[Event_, typingsSlinky.fixedDataTable.mod.Table], /* rowIndex */ Double) => Unit
+      value: (/* event */ SyntheticEvent[Event, typingsSlinky.fixedDataTable.mod.Table], /* rowIndex */ Double) => Unit
     ): this.type = set("onRowClick", js.Any.fromFunction2(value))
     @scala.inline
     def onRowDoubleClick(
-      value: (/* event */ SyntheticEvent[Event_, typingsSlinky.fixedDataTable.mod.Table], /* rowIndex */ Double) => Unit
+      value: (/* event */ SyntheticEvent[Event, typingsSlinky.fixedDataTable.mod.Table], /* rowIndex */ Double) => Unit
     ): this.type = set("onRowDoubleClick", js.Any.fromFunction2(value))
     @scala.inline
     def onRowMouseDown(
-      value: (/* event */ SyntheticEvent[Event_, typingsSlinky.fixedDataTable.mod.Table], /* rowIndex */ Double) => Unit
+      value: (/* event */ SyntheticEvent[Event, typingsSlinky.fixedDataTable.mod.Table], /* rowIndex */ Double) => Unit
     ): this.type = set("onRowMouseDown", js.Any.fromFunction2(value))
     @scala.inline
     def onRowMouseEnter(
-      value: (/* event */ SyntheticEvent[Event_, typingsSlinky.fixedDataTable.mod.Table], /* rowIndex */ Double) => Unit
+      value: (/* event */ SyntheticEvent[Event, typingsSlinky.fixedDataTable.mod.Table], /* rowIndex */ Double) => Unit
     ): this.type = set("onRowMouseEnter", js.Any.fromFunction2(value))
     @scala.inline
     def onRowMouseLeave(
-      value: (/* event */ SyntheticEvent[Event_, typingsSlinky.fixedDataTable.mod.Table], /* rowIndex */ Double) => Unit
+      value: (/* event */ SyntheticEvent[Event, typingsSlinky.fixedDataTable.mod.Table], /* rowIndex */ Double) => Unit
     ): this.type = set("onRowMouseLeave", js.Any.fromFunction2(value))
     @scala.inline
     def onScrollEnd(value: (/* x */ Double, /* y */ Double) => Unit): this.type = set("onScrollEnd", js.Any.fromFunction2(value))

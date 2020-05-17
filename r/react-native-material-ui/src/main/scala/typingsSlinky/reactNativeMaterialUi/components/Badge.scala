@@ -2,8 +2,8 @@ package typingsSlinky.reactNativeMaterialUi.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNativeMaterialUi.AnonColor
-import typingsSlinky.reactNativeMaterialUi.AnonStrokeContainer
+import typingsSlinky.reactNativeMaterialUi.anon.Color
+import typingsSlinky.reactNativeMaterialUi.anon.StrokeContainer
 import typingsSlinky.reactNativeMaterialUi.mod.BadgeProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,13 +21,13 @@ object Badge {
     @scala.inline
     def accent(value: Boolean): this.type = set("accent", value.asInstanceOf[js.Any])
     @scala.inline
-    def icon(value: String | AnonColor): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: String | Color): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline
     def stroke(value: Double): this.type = set("stroke", value.asInstanceOf[js.Any])
     @scala.inline
-    def style(value: AnonStrokeContainer): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: StrokeContainer): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def text(value: String): this.type = set("text", value.asInstanceOf[js.Any])
   }

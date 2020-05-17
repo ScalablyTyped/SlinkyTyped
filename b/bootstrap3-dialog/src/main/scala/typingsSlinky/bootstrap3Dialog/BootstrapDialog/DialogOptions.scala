@@ -1,7 +1,7 @@
 package typingsSlinky.bootstrap3Dialog.BootstrapDialog
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -53,7 +53,7 @@ trait DialogOptions extends js.Object {
   var draggable: js.UndefOr[Boolean] = js.native
   /** Dialog message. Either string, JQuery element, or function that returns either string or JQuery element. */
   var message: js.UndefOr[
-    String | JQuery_[HTMLElement] | (js.Function1[/* dialog */ js.UndefOr[DialogContext], String | JQuery_[HTMLElement]])
+    String | JQuery[HTMLElement] | (js.Function1[/* dialog */ js.UndefOr[DialogContext], String | JQuery[HTMLElement]])
   ] = js.native
   /**
     * Automatically convert line breaking character to <br /> if it's set to true,
@@ -76,7 +76,7 @@ trait DialogOptions extends js.Object {
   /** Icon class name, for example 'glyphicon glyphicon-check'. */
   var spinicon: js.UndefOr[String] = js.native
   /** Dialog title. Either string or JQuery element. */
-  var title: js.UndefOr[String | JQuery_[HTMLElement]] = js.native
+  var title: js.UndefOr[String | JQuery[HTMLElement]] = js.native
   /** Dialog header type. See BootstrapDialog.TYPE_xxx constants. */
   var `type`: js.UndefOr[String] = js.native
 }
@@ -274,14 +274,14 @@ object DialogOptions {
         ret
     }
     @scala.inline
-    def withMessageFunction1(value: /* dialog */ js.UndefOr[DialogContext] => String | JQuery_[HTMLElement]): Self = {
+    def withMessageFunction1(value: /* dialog */ js.UndefOr[DialogContext] => String | JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("message")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
     def withMessage(
-      value: String | JQuery_[HTMLElement] | (js.Function1[/* dialog */ js.UndefOr[DialogContext], String | JQuery_[HTMLElement]])
+      value: String | JQuery[HTMLElement] | (js.Function1[/* dialog */ js.UndefOr[DialogContext], String | JQuery[HTMLElement]])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
@@ -378,7 +378,7 @@ object DialogOptions {
         ret
     }
     @scala.inline
-    def withTitle(value: String | JQuery_[HTMLElement]): Self = {
+    def withTitle(value: String | JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
         ret

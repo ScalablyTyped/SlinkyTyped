@@ -1,7 +1,7 @@
 package typingsSlinky.vueResource.optionsMod
 
 import typingsSlinky.vue.vueMod.Vue
-import typingsSlinky.vueResource.AnonDictkey
+import typingsSlinky.vueResource.anon.Dictkey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ComponentOptions[V /* <: Vue */] extends js.Object {
   var http: js.UndefOr[
-    AnonDictkey with (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HttpOptions */ js.Any)
+    Dictkey with (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HttpOptions */ js.Any)
   ] = js.native
 }
 
@@ -27,7 +27,7 @@ object ComponentOptions {
     def combineWith[Other <: js.Any](other: Other): Self[V] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[V] with Other]
     @scala.inline
     def withHttp(
-      value: AnonDictkey with (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HttpOptions */ js.Any)
+      value: Dictkey with (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HttpOptions */ js.Any)
     ): Self[V] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("http")(value.asInstanceOf[js.Any])

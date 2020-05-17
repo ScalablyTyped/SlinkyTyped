@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data when an app is activated from another app by using the DIAL protocol. */
-@JSGlobal("Windows.ApplicationModel.Activation.DialReceiverActivatedEventArgs")
 @js.native
-abstract class DialReceiverActivatedEventArgs () extends js.Object {
+trait DialReceiverActivatedEventArgs extends js.Object {
   /** Gets the name of the app that invoked the dial receiver app. */
   var appName: String = js.native
   /** Gets the arguments passed by the calling app. */
@@ -25,5 +24,78 @@ abstract class DialReceiverActivatedEventArgs () extends js.Object {
   var tileId: String = js.native
   /** Gets the view switcher object that allows you to set the view for the application. */
   var viewSwitcher: ActivationViewSwitcher = js.native
+}
+
+object DialReceiverActivatedEventArgs {
+  @scala.inline
+  def apply(
+    appName: String,
+    arguments: String,
+    currentlyShownApplicationViewId: Double,
+    kind: ActivationKind,
+    previousExecutionState: ApplicationExecutionState,
+    splashScreen: SplashScreen,
+    tileId: String,
+    viewSwitcher: ActivationViewSwitcher
+  ): DialReceiverActivatedEventArgs = {
+    val __obj = js.Dynamic.literal(appName = appName.asInstanceOf[js.Any], arguments = arguments.asInstanceOf[js.Any], currentlyShownApplicationViewId = currentlyShownApplicationViewId.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], previousExecutionState = previousExecutionState.asInstanceOf[js.Any], splashScreen = splashScreen.asInstanceOf[js.Any], tileId = tileId.asInstanceOf[js.Any], viewSwitcher = viewSwitcher.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DialReceiverActivatedEventArgs]
+  }
+  @scala.inline
+  implicit class DialReceiverActivatedEventArgsOps[Self <: DialReceiverActivatedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArguments(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentlyShownApplicationViewId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentlyShownApplicationViewId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKind(value: ActivationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreviousExecutionState(value: ApplicationExecutionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousExecutionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSplashScreen(value: SplashScreen): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splashScreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTileId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withViewSwitcher(value: ActivationViewSwitcher): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewSwitcher")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

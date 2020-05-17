@@ -1,6 +1,6 @@
 package typingsSlinky.vsoNodeApi.galleryInterfacesMod
 
-import typingsSlinky.vsoNodeApi.AnonKeyValue
+import typingsSlinky.vsoNodeApi.anon.KeyValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait ExtensionPayload extends js.Object {
   var installationTargets: js.Array[InstallationTarget] = js.native
   var isSignedByMicrosoft: Boolean = js.native
   var isValid: Boolean = js.native
-  var metadata: js.Array[AnonKeyValue] = js.native
+  var metadata: js.Array[KeyValue] = js.native
   var `type`: ExtensionDeploymentTechnology = js.native
 }
 
@@ -26,7 +26,7 @@ object ExtensionPayload {
     installationTargets: js.Array[InstallationTarget],
     isSignedByMicrosoft: Boolean,
     isValid: Boolean,
-    metadata: js.Array[AnonKeyValue],
+    metadata: js.Array[KeyValue],
     `type`: ExtensionDeploymentTechnology
   ): ExtensionPayload = {
     val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any], displayName = displayName.asInstanceOf[js.Any], fileName = fileName.asInstanceOf[js.Any], installationTargets = installationTargets.asInstanceOf[js.Any], isSignedByMicrosoft = isSignedByMicrosoft.asInstanceOf[js.Any], isValid = isValid.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any])
@@ -76,7 +76,7 @@ object ExtensionPayload {
         ret
     }
     @scala.inline
-    def withMetadata(value: js.Array[AnonKeyValue]): Self = {
+    def withMetadata(value: js.Array[KeyValue]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
         ret

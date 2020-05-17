@@ -1,7 +1,7 @@
 package typingsSlinky.ionicCore
 
 import typingsSlinky.ionicCore.alertInterfaceMod.AlertOptions
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonAlertElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonAlertElement
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayController
 import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
 import scala.scalajs.js

@@ -1,6 +1,6 @@
 package typingsSlinky.mongodb.mod
 
-import typingsSlinky.mongodb.AnonDictindex
+import typingsSlinky.mongodb.anon.Dictindex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ trait CollStats extends js.Object {
   /**
     * Size of specific indexes in bytes.
     */
-  var indexSizes: AnonDictindex = js.native
+  var indexSizes: Dictindex = js.native
   /**
     * Size of the most recently created extent in bytes.
     */
@@ -78,7 +78,7 @@ object CollStats {
     avgObjSize: scala.Double,
     capped: Boolean,
     count: scala.Double,
-    indexSizes: AnonDictindex,
+    indexSizes: Dictindex,
     lastExtentSize: scala.Double,
     max: scala.Double,
     maxSize: scala.Double,
@@ -119,7 +119,7 @@ object CollStats {
         ret
     }
     @scala.inline
-    def withIndexSizes(value: AnonDictindex): Self = {
+    def withIndexSizes(value: Dictindex): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("indexSizes")(value.asInstanceOf[js.Any])
         ret

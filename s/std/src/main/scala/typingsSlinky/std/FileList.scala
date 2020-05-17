@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.NumberDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,9 +14,4 @@ trait FileList
   val length: Double = js.native
   def item(index: Double): org.scalajs.dom.raw.File | Null = js.native
 }
-
-@JSGlobal("FileList")
-@js.native
-object FileList
-  extends Instantiable0[org.scalajs.dom.raw.FileList]
 

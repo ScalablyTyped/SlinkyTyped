@@ -1,13 +1,13 @@
 package typingsSlinky.nodeHueApi.mod
 
-import typingsSlinky.nodeHueApi.AnonBri
+import typingsSlinky.nodeHueApi.anon.Bri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ILightGroup extends js.Object {
-  var action: js.UndefOr[AnonBri] = js.native
+  var action: js.UndefOr[Bri] = js.native
   var `class`: js.UndefOr[RoomType] = js.native
   var id: String = js.native
   var lights: js.UndefOr[js.Array[String]] = js.native
@@ -47,7 +47,7 @@ object ILightGroup {
         ret
     }
     @scala.inline
-    def withAction(value: AnonBri): Self = {
+    def withAction(value: Bri): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
         ret

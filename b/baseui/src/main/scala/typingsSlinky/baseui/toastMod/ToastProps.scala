@@ -1,8 +1,9 @@
 package typingsSlinky.baseui.toastMod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.baseui.AnonDismiss
+import typingsSlinky.baseui.anon.Dismiss
 import typingsSlinky.baseui.baseuiStrings.`inline`
 import typingsSlinky.baseui.baseuiStrings.info
 import typingsSlinky.baseui.baseuiStrings.negative
@@ -10,7 +11,6 @@ import typingsSlinky.baseui.baseuiStrings.positive
 import typingsSlinky.baseui.baseuiStrings.toast
 import typingsSlinky.baseui.baseuiStrings.warning
 import typingsSlinky.react.mod.Key
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,17 +18,17 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ToastProps extends js.Object {
   var autoHideDuration: js.UndefOr[Double] = js.native
-  var children: js.UndefOr[(js.Function1[/* args */ AnonDismiss, TagMod[Any]]) | TagMod[Any]] = js.native
+  var children: js.UndefOr[(js.Function1[/* args */ Dismiss, TagMod[Any]]) | TagMod[Any]] = js.native
   var closeable: js.UndefOr[Boolean] = js.native
   var `data-baseweb`: js.UndefOr[String] = js.native
   var key: js.UndefOr[Key] = js.native
   var kind: js.UndefOr[info | positive | warning | negative] = js.native
   var notificationType: js.UndefOr[`inline` | toast] = js.native
-  var onBlur: js.UndefOr[js.Function1[/* e */ Event_, _]] = js.native
+  var onBlur: js.UndefOr[js.Function1[/* e */ Event, _]] = js.native
   var onClose: js.UndefOr[js.Function0[_]] = js.native
-  var onFocus: js.UndefOr[js.Function1[/* e */ Event_, _]] = js.native
-  var onMouseEnter: js.UndefOr[js.Function1[/* e */ Event_, _]] = js.native
-  var onMouseLeave: js.UndefOr[js.Function1[/* e */ Event_, _]] = js.native
+  var onFocus: js.UndefOr[js.Function1[/* e */ Event, _]] = js.native
+  var onMouseEnter: js.UndefOr[js.Function1[/* e */ Event, _]] = js.native
+  var onMouseLeave: js.UndefOr[js.Function1[/* e */ Event, _]] = js.native
   var overrides: js.UndefOr[ToastOverrides] = js.native
 }
 
@@ -63,13 +63,13 @@ object ToastProps {
         ret
     }
     @scala.inline
-    def withChildrenFunction1(value: /* args */ AnonDismiss => TagMod[Any]): Self = {
+    def withChildrenFunction1(value: /* args */ Dismiss => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withChildren(value: (js.Function1[/* args */ AnonDismiss, TagMod[Any]]) | TagMod[Any]): Self = {
+    def withChildren(value: (js.Function1[/* args */ Dismiss, TagMod[Any]]) | TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
         ret
@@ -141,7 +141,7 @@ object ToastProps {
         ret
     }
     @scala.inline
-    def withOnBlur(value: /* e */ Event_ => _): Self = {
+    def withOnBlur(value: /* e */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
         ret
@@ -165,7 +165,7 @@ object ToastProps {
         ret
     }
     @scala.inline
-    def withOnFocus(value: /* e */ Event_ => _): Self = {
+    def withOnFocus(value: /* e */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
         ret
@@ -177,7 +177,7 @@ object ToastProps {
         ret
     }
     @scala.inline
-    def withOnMouseEnter(value: /* e */ Event_ => _): Self = {
+    def withOnMouseEnter(value: /* e */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction1(value))
         ret
@@ -189,7 +189,7 @@ object ToastProps {
         ret
     }
     @scala.inline
-    def withOnMouseLeave(value: /* e */ Event_ => _): Self = {
+    def withOnMouseLeave(value: /* e */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.Any.fromFunction1(value))
         ret

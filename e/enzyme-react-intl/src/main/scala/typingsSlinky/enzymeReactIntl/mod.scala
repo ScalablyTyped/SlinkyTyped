@@ -2,7 +2,7 @@ package typingsSlinky.enzymeReactIntl
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
-import typingsSlinky.cheerio.Cheerio_
+import typingsSlinky.cheerio.Cheerio
 import typingsSlinky.enzyme.mod.MountRendererProps
 import typingsSlinky.enzyme.mod.ReactWrapper
 import typingsSlinky.enzyme.mod.ShallowRendererProps
@@ -26,8 +26,8 @@ object mod extends js.Object {
   def mountWithIntl_PS[P, S](node: ReactElement): ReactWrapper[P, S, ReactComponentClass[js.Object]] = js.native
   @JSName("mountWithIntl")
   def mountWithIntl_PS[P, S](node: ReactElement, options: MountRendererProps): ReactWrapper[P, S, ReactComponentClass[js.Object]] = js.native
-  def renderWithIntl[P, S](node: ReactElement): Cheerio_ = js.native
-  def renderWithIntl[P, S](node: ReactElement, options: js.Any): Cheerio_ = js.native
+  def renderWithIntl[P, S](node: ReactElement): Cheerio = js.native
+  def renderWithIntl[P, S](node: ReactElement, options: js.Any): Cheerio = js.native
   def setLocale(locale: String): Unit = js.native
   def shallowWithIntl[P](node: ReactElement): ShallowWrapper[P, _, ReactComponentClass[js.Object]] = js.native
   def shallowWithIntl[P](node: ReactElement, options: ShallowRendererProps): ShallowWrapper[P, _, ReactComponentClass[js.Object]] = js.native

@@ -80,11 +80,8 @@ import scala.scalajs.js.annotation._
   *     this.tf.process(this.shader);
   * };
   */
-@JSGlobal("pc.TransformFeedback")
 @js.native
-class TransformFeedback protected () extends js.Object {
-  def this(inputBuffer: VertexBuffer) = this()
-  def this(inputBuffer: VertexBuffer, usage: Double) = this()
+trait TransformFeedback extends js.Object {
   /**
     * @readonly
     * @name pc.TransformFeedback#inputBuffer

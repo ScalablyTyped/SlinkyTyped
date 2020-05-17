@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.NodeListOf
-import typingsSlinky.overlayscrollbars.AnonDictindex
+import typingsSlinky.overlayscrollbars.anon.Dictindex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,7 +44,7 @@ trait OverlayScrollbarsStatic extends js.Object {
   def apply(element: HTMLElement, options: Options, extensions: Extensions): OverlayScrollbars = js.native
   def defaultOptions(): Options = js.native
   def defaultOptions(newDefaultOptions: Options): Unit = js.native
-  def extension(): AnonDictindex = js.native
+  def extension(): Dictindex = js.native
   def extension(extensionName: String): Unit = js.native
   def extension(
     extensionName: String,

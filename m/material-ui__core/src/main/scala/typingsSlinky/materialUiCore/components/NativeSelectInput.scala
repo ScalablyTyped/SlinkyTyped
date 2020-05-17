@@ -5,7 +5,7 @@ import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.web.html.select.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.materialUiCore.AnonNode
+import typingsSlinky.materialUiCore.anon.Node
 import typingsSlinky.materialUiCore.materialUiCoreStrings.filled
 import typingsSlinky.materialUiCore.materialUiCoreStrings.outlined
 import typingsSlinky.materialUiCore.materialUiCoreStrings.standard
@@ -34,7 +34,7 @@ object NativeSelectInput {
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def inputRef(value: /* ref */ HTMLSelectElement | AnonNode => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
+    def inputRef(value: /* ref */ HTMLSelectElement | Node => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline

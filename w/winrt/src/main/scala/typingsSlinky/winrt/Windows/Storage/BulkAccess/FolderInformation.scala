@@ -10,9 +10,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Storage.BulkAccess.FolderInformation")
 @js.native
-class FolderInformation ()
+trait FolderInformation
   extends IStorageFolder
      with IStorageItemInformation
      with IStorageItemProperties

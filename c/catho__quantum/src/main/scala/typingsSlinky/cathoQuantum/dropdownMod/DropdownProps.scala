@@ -1,7 +1,7 @@
 package typingsSlinky.cathoQuantum.dropdownMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.cathoQuantum.AnonBaseFontSize
+import typingsSlinky.cathoQuantum.anon.BaseFontSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +27,7 @@ trait DropdownProps extends js.Object {
   var placeholder: js.UndefOr[String] = js.native
   var required: js.UndefOr[Boolean] = js.native
   var selectedItem: js.UndefOr[ItemPropType] = js.native
-  var theme: js.UndefOr[AnonBaseFontSize] = js.native
+  var theme: js.UndefOr[BaseFontSize] = js.native
 }
 
 object DropdownProps {
@@ -189,7 +189,7 @@ object DropdownProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonBaseFontSize): Self = {
+    def withTheme(value: BaseFontSize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

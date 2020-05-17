@@ -1,6 +1,6 @@
 package typingsSlinky.reactTable.mod
 
-import typingsSlinky.reactTable.PartialTableToggleAllRows
+import typingsSlinky.reactTable.anon.PartialTableToggleAllRows
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

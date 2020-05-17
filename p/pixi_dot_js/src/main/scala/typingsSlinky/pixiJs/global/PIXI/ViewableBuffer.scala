@@ -1,0 +1,20 @@
+package typingsSlinky.pixiJs.global.PIXI
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Flexible wrapper around `ArrayBuffer` that also provides
+  * typed array views on demand.
+  *
+  * @class
+  * @memberof PIXI
+  */
+@JSGlobal("PIXI.ViewableBuffer")
+@js.native
+class ViewableBuffer protected ()
+  extends typingsSlinky.pixiJs.PIXI.ViewableBuffer {
+  def this(size: Double) = this()
+}
+

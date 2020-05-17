@@ -1,14 +1,14 @@
 organization := "org.scalablytyped.slinky"
 name := "semantic-ui-modal"
-version := "2.2-dt-20200225Z-55878c"
-scalaVersion := "2.13.1"
+version := "2.2-dt-20200225Z-9bd10f"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "semantic-ui-dimmer" % "2.2-dt-20200225Z-a7b91b")
+  "org.scalablytyped.slinky" %%% "semantic-ui-dimmer" % "2.2-dt-20200225Z-d642e5")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

@@ -1,6 +1,5 @@
 package typingsSlinky.kendoUi.kendo.mobile.ui
 
-import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.JQuery
 import typingsSlinky.kendoUi.kendo.data.DataSource
 import typingsSlinky.kendoUi.kendo.data.Model
@@ -8,12 +7,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.mobile.ui.ListView")
 @js.native
-class ListView protected ()
+trait ListView
   extends typingsSlinky.kendoUi.kendo.ui.Widget {
-  def this(element: Element) = this()
-  def this(element: Element, options: ListViewOptions) = this()
   var dataSource: DataSource = js.native
   @JSName("options")
   var options_ListView: ListViewOptions = js.native
@@ -26,13 +22,5 @@ class ListView protected ()
   def replace(dataItems: js.Any): Unit = js.native
   def setDataItem(item: JQuery, dataItem: Model): Unit = js.native
   def setDataSource(dataSource: DataSource): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("kendo.mobile.ui.ListView")
-@js.native
-object ListView extends js.Object {
-  var fn: ListView = js.native
-  def extend(proto: js.Object): ListView = js.native
 }
 

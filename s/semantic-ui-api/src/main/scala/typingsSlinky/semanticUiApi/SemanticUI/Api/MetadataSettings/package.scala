@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object MetadataSettings {
-  type Param = (typingsSlinky.semanticUiApi.PickImplactionAction | typingsSlinky.semanticUiApi.PickImplurlUrl) with typingsSlinky.semanticUiApi.PartialPickImplkeyofImplAction
+  type Param = (typingsSlinky.semanticUiApi.anon.PickImplactionAction | typingsSlinky.semanticUiApi.anon.PickImplurlUrl) with typingsSlinky.semanticUiApi.anon.PartialPickImplkeyofImplAction
 }

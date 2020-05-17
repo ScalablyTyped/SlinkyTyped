@@ -1,6 +1,6 @@
 package typingsSlinky.weixinApp.wx
 
-import typingsSlinky.weixinApp.AnonProgress
+import typingsSlinky.weixinApp.anon.Progress
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,6 +17,6 @@ trait UploadTask extends js.Object {
   		 * @version 1.4.0
   		 */
   def onProgressUpdate(): Unit = js.native
-  def onProgressUpdate(callback: js.Function1[/* res */ AnonProgress, Unit]): Unit = js.native
+  def onProgressUpdate(callback: js.Function1[/* res */ Progress, Unit]): Unit = js.native
 }
 

@@ -2,9 +2,9 @@ package typingsSlinky.typeFest.packageJsonMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.typeFest.AnonDictmoduleName
-import typingsSlinky.typeFest.AnonType
-import typingsSlinky.typeFest.AnonUrl
+import typingsSlinky.typeFest.anon.DictmoduleName
+import typingsSlinky.typeFest.anon.Type
+import typingsSlinky.typeFest.anon.Url
 import typingsSlinky.typeFest.mod.LiteralUnion
 import typingsSlinky.typeFest.packageJsonMod.PackageJson.BugsLocation
 import typingsSlinky.typeFest.packageJsonMod.PackageJson.Dependency
@@ -128,7 +128,7 @@ trait PackageJson_
   /**
   		A module ID with untranspiled code that is the primary entry point to the program.
   		*/
-  var esnext: js.UndefOr[String | AnonDictmoduleName] = js.native
+  var esnext: js.UndefOr[String | DictmoduleName] = js.native
   /**
   	The files included in the package.
   	*/
@@ -152,7 +152,7 @@ trait PackageJson_
   /**
   	The licenses for the package.
   	*/
-  var licenses: js.UndefOr[js.Array[AnonType]] = js.native
+  var licenses: js.UndefOr[js.Array[Type]] = js.native
   /**
   	The module ID that is the primary entry point to the program.
   	*/
@@ -208,7 +208,7 @@ trait PackageJson_
   /**
   	Location for the code repository.
   	*/
-  var repository: js.UndefOr[String | AnonUrl] = js.native
+  var repository: js.UndefOr[String | Url] = js.native
   /**
   		Selective version resolutions. Allows the definition of custom package versions inside dependencies without manual edits in the `yarn.lock` file.
   		*/
@@ -435,7 +435,7 @@ object PackageJson_ {
         ret
     }
     @scala.inline
-    def withEsnext(value: String | AnonDictmoduleName): Self = {
+    def withEsnext(value: String | DictmoduleName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("esnext")(value.asInstanceOf[js.Any])
         ret
@@ -507,7 +507,7 @@ object PackageJson_ {
         ret
     }
     @scala.inline
-    def withLicenses(value: js.Array[AnonType]): Self = {
+    def withLicenses(value: js.Array[Type]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("licenses")(value.asInstanceOf[js.Any])
         ret
@@ -658,7 +658,7 @@ object PackageJson_ {
         ret
     }
     @scala.inline
-    def withRepository(value: String | AnonUrl): Self = {
+    def withRepository(value: String | Url): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(value.asInstanceOf[js.Any])
         ret

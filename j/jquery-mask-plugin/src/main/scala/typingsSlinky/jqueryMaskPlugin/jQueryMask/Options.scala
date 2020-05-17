@@ -1,7 +1,7 @@
 package typingsSlinky.jqueryMaskPlugin.jQueryMask
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.jqueryMaskPlugin.JQuery
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,15 +14,15 @@ trait Options extends js.Object {
   var dataMaskAttr: js.UndefOr[String] = js.native
   var maskElements: js.UndefOr[String] = js.native
   var onChange: js.UndefOr[
-    js.Function4[/* value */ String, /* e */ Event_, /* $element */ JQuery, /* options */ this.type, Unit]
+    js.Function4[/* value */ String, /* e */ Event, /* $element */ JQuery, /* options */ this.type, Unit]
   ] = js.native
   var onComplete: js.UndefOr[
-    js.Function4[/* value */ String, /* e */ Event_, /* $element */ JQuery, /* options */ this.type, Unit]
+    js.Function4[/* value */ String, /* e */ Event, /* $element */ JQuery, /* options */ this.type, Unit]
   ] = js.native
   var onInvalid: js.UndefOr[
     js.Function5[
       /* value */ String, 
-      /* e */ Event_, 
+      /* e */ Event, 
       /* $element */ JQuery, 
       /* invalid */ js.Array[Invalid], 
       /* options */ this.type, 
@@ -30,7 +30,7 @@ trait Options extends js.Object {
     ]
   ] = js.native
   var onKeyPress: js.UndefOr[
-    js.Function4[/* value */ String, /* e */ Event_, /* $element */ JQuery, /* options */ this.type, Unit]
+    js.Function4[/* value */ String, /* e */ Event, /* $element */ JQuery, /* options */ this.type, Unit]
   ] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var reverse: js.UndefOr[Boolean] = js.native
@@ -114,7 +114,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withOnChange(value: (/* value */ String, /* e */ Event_, /* $element */ JQuery, Options) => Unit): Self = {
+    def withOnChange(value: (/* value */ String, /* e */ Event, /* $element */ JQuery, Options) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction4(value))
         ret
@@ -126,7 +126,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withOnComplete(value: (/* value */ String, /* e */ Event_, /* $element */ JQuery, Options) => Unit): Self = {
+    def withOnComplete(value: (/* value */ String, /* e */ Event, /* $element */ JQuery, Options) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onComplete")(js.Any.fromFunction4(value))
         ret
@@ -139,7 +139,7 @@ object Options {
     }
     @scala.inline
     def withOnInvalid(
-      value: (/* value */ String, /* e */ Event_, /* $element */ JQuery, /* invalid */ js.Array[Invalid], Options) => Unit
+      value: (/* value */ String, /* e */ Event, /* $element */ JQuery, /* invalid */ js.Array[Invalid], Options) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInvalid")(js.Any.fromFunction5(value))
@@ -152,7 +152,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withOnKeyPress(value: (/* value */ String, /* e */ Event_, /* $element */ JQuery, Options) => Unit): Self = {
+    def withOnKeyPress(value: (/* value */ String, /* e */ Event, /* $element */ JQuery, Options) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyPress")(js.Any.fromFunction4(value))
         ret

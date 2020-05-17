@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientAdmin.gapi.client.admin
 
-import typingsSlinky.gapiClientAdmin.AnonCustomerId
-import typingsSlinky.gapiClientAdmin.AnonDatetimeValue
+import typingsSlinky.gapiClientAdmin.anon.CustomerId
+import typingsSlinky.gapiClientAdmin.anon.DatetimeValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,13 +11,13 @@ trait UsageReport extends js.Object {
   /** The date to which the record belongs. */
   var date: js.UndefOr[String] = js.native
   /** Information about the type of the item. */
-  var entity: js.UndefOr[AnonCustomerId] = js.native
+  var entity: js.UndefOr[CustomerId] = js.native
   /** ETag of the resource. */
   var etag: js.UndefOr[String] = js.native
   /** The kind of object. */
   var kind: js.UndefOr[String] = js.native
   /** Parameter value pairs for various applications. */
-  var parameters: js.UndefOr[js.Array[AnonDatetimeValue]] = js.native
+  var parameters: js.UndefOr[js.Array[DatetimeValue]] = js.native
 }
 
 object UsageReport {
@@ -45,7 +45,7 @@ object UsageReport {
         ret
     }
     @scala.inline
-    def withEntity(value: AnonCustomerId): Self = {
+    def withEntity(value: CustomerId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("entity")(value.asInstanceOf[js.Any])
         ret
@@ -81,7 +81,7 @@ object UsageReport {
         ret
     }
     @scala.inline
-    def withParameters(value: js.Array[AnonDatetimeValue]): Self = {
+    def withParameters(value: js.Array[DatetimeValue]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
         ret

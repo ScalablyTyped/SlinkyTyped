@@ -1,6 +1,6 @@
 package typingsSlinky.googleCloudTasks.mod
 
-import typingsSlinky.googleCloudTasks.PartialTask
+import typingsSlinky.googleCloudTasks.anon.PartialTask
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonReachedRight
+import typingsSlinky.devextreme.anon.ReachedRight
 import typingsSlinky.devextreme.devextremeStrings.always
 import typingsSlinky.devextreme.devextremeStrings.both
 import typingsSlinky.devextreme.devextremeStrings.horizontal
@@ -22,9 +22,9 @@ trait dxScrollableOptions[T] extends DOMComponentOptions[T] {
   /** A Boolean value specifying whether or not the widget can respond to user interaction. */
   var disabled: js.UndefOr[Boolean] = js.native
   /** A function that is executed on each scroll gesture. */
-  var onScroll: js.UndefOr[js.Function1[/* e */ AnonReachedRight[T], _]] = js.native
+  var onScroll: js.UndefOr[js.Function1[/* e */ ReachedRight[T], _]] = js.native
   /** A function that is executed each time the widget is updated. */
-  var onUpdated: js.UndefOr[js.Function1[/* e */ AnonReachedRight[T], _]] = js.native
+  var onUpdated: js.UndefOr[js.Function1[/* e */ ReachedRight[T], _]] = js.native
   /** A Boolean value specifying whether or not an end-user can scroll the widget content swiping it up or down. Applies only if useNative is false */
   var scrollByContent: js.UndefOr[Boolean] = js.native
   /** A Boolean value specifying whether or not an end-user can scroll the widget content using the scrollbar. */
@@ -84,7 +84,7 @@ object dxScrollableOptions {
         ret
     }
     @scala.inline
-    def withOnScroll(value: /* e */ AnonReachedRight[T] => _): Self[T] = {
+    def withOnScroll(value: /* e */ ReachedRight[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.Any.fromFunction1(value))
         ret
@@ -96,7 +96,7 @@ object dxScrollableOptions {
         ret
     }
     @scala.inline
-    def withOnUpdated(value: /* e */ AnonReachedRight[T] => _): Self[T] = {
+    def withOnUpdated(value: /* e */ ReachedRight[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdated")(js.Any.fromFunction1(value))
         ret

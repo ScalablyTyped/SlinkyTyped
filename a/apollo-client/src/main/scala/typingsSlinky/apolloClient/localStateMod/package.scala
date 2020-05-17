@@ -15,7 +15,7 @@ package object localStateMod {
     /* rootValue */ js.UndefOr[js.Any], 
     /* args */ js.UndefOr[js.Any], 
     /* context */ js.UndefOr[js.Any], 
-    /* info */ js.UndefOr[typingsSlinky.apolloClient.AnonField], 
+    /* info */ js.UndefOr[typingsSlinky.apolloClient.anon.Field], 
     js.Any
   ]
   type VariableMap = org.scalablytyped.runtime.StringDictionary[js.Any]

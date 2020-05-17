@@ -2,7 +2,7 @@ package typingsSlinky.scBrokerCluster.mod
 
 import typingsSlinky.async.mod.AsyncResultArrayCallback
 import typingsSlinky.fleximap.mod.KeyChain
-import typingsSlinky.scBrokerCluster.AnonTargets
+import typingsSlinky.scBrokerCluster.anon.Targets
 import typingsSlinky.scBrokerCluster.clientclusterMod.ClientCluster
 import typingsSlinky.scChannel.mod.SCChannel
 import scala.scalajs.js
@@ -21,7 +21,7 @@ class SCExchange protected () extends AbstractDataClient {
   def getMapper(): mapperFunction = js.native
   def isSubscribed(channelName: String): Boolean = js.native
   def isSubscribed(channelName: String, includePending: Boolean): Boolean = js.native
-  def map(keyChain: KeyChain, method: String): AnonTargets = js.native
+  def map(keyChain: KeyChain, method: String): Targets = js.native
   def publish(channelName: String, data: js.Any): Unit = js.native
   def publish(channelName: String, data: js.Any, callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
   def send(data: js.Any): Unit = js.native

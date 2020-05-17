@@ -1,7 +1,7 @@
 package typingsSlinky.foundation.Foundation
 
-import typingsSlinky.foundation.AnonClose
 import typingsSlinky.foundation.JQuery
+import typingsSlinky.foundation.anon.Close
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait RevealOptions extends js.Object {
   var close: js.UndefOr[js.Function0[_]] = js.native
   var close_on_background_click: js.UndefOr[Boolean] = js.native
   var closed: js.UndefOr[js.Function0[_]] = js.native
-  var css: js.UndefOr[AnonClose] = js.native
+  var css: js.UndefOr[Close] = js.native
   var dismiss_modal_class: js.UndefOr[String] = js.native
   var multiple_opened: js.UndefOr[Boolean] = js.native
   var on_ajax_error: js.UndefOr[js.Function0[_]] = js.native
@@ -121,7 +121,7 @@ object RevealOptions {
         ret
     }
     @scala.inline
-    def withCss(value: AnonClose): Self = {
+    def withCss(value: Close): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("css")(value.asInstanceOf[js.Any])
         ret

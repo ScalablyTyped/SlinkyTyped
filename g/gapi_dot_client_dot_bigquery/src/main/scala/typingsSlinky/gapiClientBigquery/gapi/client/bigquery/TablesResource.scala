@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientBigquery.gapi.client.bigquery
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientBigquery.AnonDatasetId
-import typingsSlinky.gapiClientBigquery.AnonOauthtoken
-import typingsSlinky.gapiClientBigquery.AnonPrettyPrint
-import typingsSlinky.gapiClientBigquery.AnonProjectId
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientBigquery.anon.DatasetId
+import typingsSlinky.gapiClientBigquery.anon.Oauthtoken
+import typingsSlinky.gapiClientBigquery.anon.PrettyPrint
+import typingsSlinky.gapiClientBigquery.anon.ProjectId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,37 +12,37 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TablesResource extends js.Object {
   /** Deletes the table specified by tableId from the dataset. If the table contains data, all the data will be deleted. */
-  def delete(request: AnonOauthtoken): Request_[Unit] = js.native
+  def delete(request: Oauthtoken): Request[Unit] = js.native
   /**
     * Gets the specified table resource by table ID. This method does not return the data in the table, it only returns the table resource, which describes
     * the structure of this table.
     */
-  def get(request: AnonPrettyPrint): Request_[Table] = js.native
+  def get(request: PrettyPrint): Request[Table] = js.native
   /** Creates a new, empty table in the dataset. */
-  def insert(request: AnonDatasetId): Request_[Table] = js.native
+  def insert(request: DatasetId): Request[Table] = js.native
   /** Lists all tables in the specified dataset. Requires the READER dataset role. */
-  def list(request: AnonProjectId): Request_[TableList] = js.native
+  def list(request: ProjectId): Request[TableList] = js.native
   /**
     * Updates information in an existing table. The update method replaces the entire table resource, whereas the patch method only replaces fields that are
     * provided in the submitted table resource. This method supports patch semantics.
     */
-  def patch(request: AnonOauthtoken): Request_[Table] = js.native
+  def patch(request: Oauthtoken): Request[Table] = js.native
   /**
     * Updates information in an existing table. The update method replaces the entire table resource, whereas the patch method only replaces fields that are
     * provided in the submitted table resource.
     */
-  def update(request: AnonOauthtoken): Request_[Table] = js.native
+  def update(request: Oauthtoken): Request[Table] = js.native
 }
 
 object TablesResource {
   @scala.inline
   def apply(
-    delete: AnonOauthtoken => Request_[Unit],
-    get: AnonPrettyPrint => Request_[Table],
-    insert: AnonDatasetId => Request_[Table],
-    list: AnonProjectId => Request_[TableList],
-    patch: AnonOauthtoken => Request_[Table],
-    update: AnonOauthtoken => Request_[Table]
+    delete: Oauthtoken => Request[Unit],
+    get: PrettyPrint => Request[Table],
+    insert: DatasetId => Request[Table],
+    list: ProjectId => Request[TableList],
+    patch: Oauthtoken => Request[Table],
+    update: Oauthtoken => Request[Table]
   ): TablesResource = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[TablesResource]
@@ -54,37 +54,37 @@ object TablesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDelete(value: AnonOauthtoken => Request_[Unit]): Self = {
+    def withDelete(value: Oauthtoken => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonPrettyPrint => Request_[Table]): Self = {
+    def withGet(value: PrettyPrint => Request[Table]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withInsert(value: AnonDatasetId => Request_[Table]): Self = {
+    def withInsert(value: DatasetId => Request[Table]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonProjectId => Request_[TableList]): Self = {
+    def withList(value: ProjectId => Request[TableList]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPatch(value: AnonOauthtoken => Request_[Table]): Self = {
+    def withPatch(value: Oauthtoken => Request[Table]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonOauthtoken => Request_[Table]): Self = {
+    def withUpdate(value: Oauthtoken => Request[Table]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

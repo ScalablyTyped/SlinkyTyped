@@ -1,5 +1,6 @@
 package typingsSlinky.jestCli
 
+import typingsSlinky.jestCli.anon.ArgumentsPartialallboolea
 import typingsSlinky.jestTypes.configMod.Path
 import scala.scalajs.js
 import scala.scalajs.js.`|`

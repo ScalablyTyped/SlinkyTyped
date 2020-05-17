@@ -1,25 +1,25 @@
 package typingsSlinky.zingchart.mod
 
-import typingsSlinky.zingchart.AnonAlphaBackgroundcolor
-import typingsSlinky.zingchart.AnonAlphaarea
-import typingsSlinky.zingchart.AnonBordercolorBorderradius
-import typingsSlinky.zingchart.AnonBorderradiusbottomleft
-import typingsSlinky.zingchart.AnonBorderwidth
-import typingsSlinky.zingchart.AnonCalloutposition
-import typingsSlinky.zingchart.AnonCursor
-import typingsSlinky.zingchart.AnonDelay
-import typingsSlinky.zingchart.AnonFilloffsety
-import typingsSlinky.zingchart.AnonFilltype
-import typingsSlinky.zingchart.AnonFontsize
-import typingsSlinky.zingchart.AnonGradientcolors
-import typingsSlinky.zingchart.AnonGradientstops
-import typingsSlinky.zingchart.AnonLinegapsize
-import typingsSlinky.zingchart.AnonLinewidth
-import typingsSlinky.zingchart.AnonOffsetx
-import typingsSlinky.zingchart.AnonRtlrighttoleft
-import typingsSlinky.zingchart.AnonRule
-import typingsSlinky.zingchart.AnonShadow
-import typingsSlinky.zingchart.AnonType
+import typingsSlinky.zingchart.anon.AlphaBackgroundcolor
+import typingsSlinky.zingchart.anon.Alphaarea
+import typingsSlinky.zingchart.anon.BordercolorBorderradius
+import typingsSlinky.zingchart.anon.Borderradiusbottomleft
+import typingsSlinky.zingchart.anon.Borderwidth
+import typingsSlinky.zingchart.anon.Calloutposition
+import typingsSlinky.zingchart.anon.Cursor
+import typingsSlinky.zingchart.anon.Delay
+import typingsSlinky.zingchart.anon.Filloffsety
+import typingsSlinky.zingchart.anon.Filltype
+import typingsSlinky.zingchart.anon.Fontsize
+import typingsSlinky.zingchart.anon.Gradientcolors
+import typingsSlinky.zingchart.anon.Gradientstops
+import typingsSlinky.zingchart.anon.Linegapsize
+import typingsSlinky.zingchart.anon.Linewidth
+import typingsSlinky.zingchart.anon.Offsetx
+import typingsSlinky.zingchart.anon.Rtlrighttoleft
+import typingsSlinky.zingchart.anon.Rule
+import typingsSlinky.zingchart.anon.Shadow
+import typingsSlinky.zingchart.anon.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +31,7 @@ trait series extends js.Object {
     * ransparent and 1.0 being completely opaque. Note that values require the leading zero before the decimal point. 0.3 | 0.9 | ...
     */
   var alpha: js.UndefOr[Double] = js.native
-  var animation: js.UndefOr[AnonDelay] = js.native
+  var animation: js.UndefOr[Delay] = js.native
   /**
     * Modifies how data points appear on a chart. Refer to the applicable chart types page for more information. Options by Chart Type:
     * "segmented" | "spline" | "stepped" | "jumped" | "cone" | "histogram" | ...
@@ -62,7 +62,7 @@ trait series extends js.Object {
     * Sets a background image for the object. Value can be a local file or a web image's location. "image.png" | ...
     */
   var `background-image`: js.UndefOr[String] = js.native
-  var `background-marker`: js.UndefOr[AnonFilloffsety] = js.native
+  var `background-marker`: js.UndefOr[Filloffsety] = js.native
   /**
     * Sets the position of the background when the "background-repeat" value is "no-repeat". "0 0" | "50 100" | "80% 60%" | ...
     */
@@ -71,7 +71,7 @@ trait series extends js.Object {
     * Sets the repeating mode for the background image. "no-repeat" | "repeat" | "repeat-x" | "repeat-y"
     */
   var `background-repeat`: js.UndefOr[String] = js.native
-  var `background-state`: js.UndefOr[AnonFilltype] = js.native
+  var `background-state`: js.UndefOr[Filltype] = js.native
   /**
     * Nested Pie Charts Only: This attribute is used to set the space between band in nested pie charts ("type":"nestedpie"). 5 | 10 | .
     * ..
@@ -198,7 +198,7 @@ trait series extends js.Object {
     * Text" | ...
     */
   var description: js.UndefOr[String] = js.native
-  var error: js.UndefOr[AnonLinegapsize] = js.native
+  var error: js.UndefOr[Linegapsize] = js.native
   var errors: js.UndefOr[js.Array[js.Object]] = js.native
   /**
     * By default ZingChart uses sampling when rendering charts. This helps improve rendering speeds and typically does not effect the ap
@@ -230,7 +230,7 @@ trait series extends js.Object {
     * Sets the background gradient fill type to either linear or radial. "linear" | "radial"
     */
   var `fill-type`: js.UndefOr[String] = js.native
-  var goal: js.UndefOr[AnonBordercolorBorderradius] = js.native
+  var goal: js.UndefOr[BordercolorBorderradius] = js.native
   /**
     * Bullet Charts Only: Accepts numerical values. Determines where goals are set for all plots. The "goals": [ ] values can also be se
     * t individually within each value set. [45, 70, 60]
@@ -251,17 +251,17 @@ trait series extends js.Object {
     * be set. true | false | 1 | 0
     */
   var `group-selections`: js.UndefOr[Boolean] = js.native
-  var `guide-label`: js.UndefOr[AnonFontsize] = js.native
-  var `highlight-marker`: js.UndefOr[AnonBorderwidth] = js.native
-  var `highlight-state`: js.UndefOr[AnonLinewidth] = js.native
-  var `hover-marker`: js.UndefOr[AnonGradientcolors] = js.native
-  var `hover-state`: js.UndefOr[AnonAlphaarea] = js.native
+  var `guide-label`: js.UndefOr[Fontsize] = js.native
+  var `highlight-marker`: js.UndefOr[Borderwidth] = js.native
+  var `highlight-state`: js.UndefOr[Linewidth] = js.native
+  var `hover-marker`: js.UndefOr[Gradientcolors] = js.native
+  var `hover-state`: js.UndefOr[Alphaarea] = js.native
   /**
     * Venn Diagrams Only: This attribute allow you to set the values for the area to be shared between each node. [30]
     */
   var join: js.UndefOr[js.Any] = js.native
-  var `legend-item`: js.UndefOr[AnonBorderradiusbottomleft] = js.native
-  var `legend-marker`: js.UndefOr[AnonCursor] = js.native
+  var `legend-item`: js.UndefOr[Borderradiusbottomleft] = js.native
+  var `legend-marker`: js.UndefOr[Cursor] = js.native
   /**
     * The "legend-text": attribute is typically used within "series": [ ] value sets. Using this attribute allows you to associate both
     * a "text":" " and "legend-text":" " to each value set "Some Text" | ...
@@ -290,7 +290,7 @@ trait series extends js.Object {
     * Sets the line width of the object, applicable on non-closed shapes. See also "border-width" for closed shapes. 4 | "6px" | ...
     */
   var `line-width`: js.UndefOr[js.Any] = js.native
-  var marker: js.UndefOr[AnonGradientstops] = js.native
+  var marker: js.UndefOr[Gradientstops] = js.native
   /**
     * Applies to charts such as line and area which have markers. When there are too many markers for the chart ZingChart does not displ
     * ay all markers. Example 1000 nodes on a 300px wide chart. Setting max-nodes will override the default setting and force nodes to b
@@ -348,7 +348,7 @@ trait series extends js.Object {
     * Sets a Y offset to apply when positioning the object/shape. 4 | "6px" | ...
     */
   var `offset-y`: js.UndefOr[js.Any] = js.native
-  var preview: js.UndefOr[AnonType] = js.native
+  var preview: js.UndefOr[Type] = js.native
   /**
     * Bar, Line and Area Charts only Include object in any series to override style displayed in the preview window. {...}
     */
@@ -362,7 +362,7 @@ trait series extends js.Object {
     * otal" | "chart-max" | "chart-total"
     */
   var reference: js.UndefOr[String] = js.native
-  var rules: js.UndefOr[js.Array[AnonRule]] = js.native
+  var rules: js.UndefOr[js.Array[Rule]] = js.native
   /**
     * By default ZingChart uses sampling when rendering large datasets. If you are trying to render 10000 data points on a chart which i
     * s only 500px wide there is not enough space for each data point. ZingChart will automatically determine which data points to show.
@@ -392,8 +392,8 @@ trait series extends js.Object {
     * arkers only. true (default) | false
     */
   var `segment-trackers`: js.UndefOr[Boolean] = js.native
-  var `selected-marker`: js.UndefOr[AnonOffsetx] = js.native
-  var `selected-state`: js.UndefOr[AnonShadow] = js.native
+  var `selected-marker`: js.UndefOr[Offsetx] = js.native
+  var `selected-state`: js.UndefOr[Shadow] = js.native
   /**
     * Sets whether the object's shadow is visible or not. Has limited effect on HTML5 implementation. true | false | 1 | 0
     */
@@ -473,20 +473,20 @@ trait series extends js.Object {
     * ata. Objects such as "scale-y": { }, "scale-x": { }, etc..., will need to be set separately. "." | "," | ...
     */
   var `thousands-separator`: js.UndefOr[String] = js.native
-  var tooltip: js.UndefOr[AnonCalloutposition] = js.native
+  var tooltip: js.UndefOr[Calloutposition] = js.native
   /**
     * Using the "tooltip-text":" " attribute allows you to set text for tooltips. This can also be done using a variety of other tokens
     * "Some Text" | ...
     */
   var `tooltip-text`: js.UndefOr[String] = js.native
-  var `trend-down`: js.UndefOr[AnonAlphaBackgroundcolor] = js.native
-  var `trend-equal`: js.UndefOr[AnonAlphaBackgroundcolor] = js.native
-  var `trend-up`: js.UndefOr[AnonAlphaBackgroundcolor] = js.native
+  var `trend-down`: js.UndefOr[AlphaBackgroundcolor] = js.native
+  var `trend-equal`: js.UndefOr[AlphaBackgroundcolor] = js.native
+  var `trend-up`: js.UndefOr[AlphaBackgroundcolor] = js.native
   /**
     * Sets the URL for the link associated with the object. "http://www.domain.com/link.php" | "link.asp" | ...
     */
   var url: js.UndefOr[String] = js.native
-  var `value-box`: js.UndefOr[AnonRtlrighttoleft] = js.native
+  var `value-box`: js.UndefOr[Rtlrighttoleft] = js.native
   var values: js.UndefOr[js.Any] = js.native
   /**
     * Sets the visibility of the object. Allows you to turn off the object without removing lines of JSON. true | false | 1 | 0
@@ -527,7 +527,7 @@ object series {
         ret
     }
     @scala.inline
-    def withAnimation(value: AnonDelay): Self = {
+    def withAnimation(value: Delay): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
         ret
@@ -611,7 +611,7 @@ object series {
         ret
     }
     @scala.inline
-    def `withBackground-marker`(value: AnonFilloffsety): Self = {
+    def `withBackground-marker`(value: Filloffsety): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("background-marker")(value.asInstanceOf[js.Any])
         ret
@@ -647,7 +647,7 @@ object series {
         ret
     }
     @scala.inline
-    def `withBackground-state`(value: AnonFilltype): Self = {
+    def `withBackground-state`(value: Filltype): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("background-state")(value.asInstanceOf[js.Any])
         ret
@@ -983,7 +983,7 @@ object series {
         ret
     }
     @scala.inline
-    def withError(value: AnonLinegapsize): Self = {
+    def withError(value: Linegapsize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret
@@ -1091,7 +1091,7 @@ object series {
         ret
     }
     @scala.inline
-    def withGoal(value: AnonBordercolorBorderradius): Self = {
+    def withGoal(value: BordercolorBorderradius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("goal")(value.asInstanceOf[js.Any])
         ret
@@ -1151,7 +1151,7 @@ object series {
         ret
     }
     @scala.inline
-    def `withGuide-label`(value: AnonFontsize): Self = {
+    def `withGuide-label`(value: Fontsize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("guide-label")(value.asInstanceOf[js.Any])
         ret
@@ -1163,7 +1163,7 @@ object series {
         ret
     }
     @scala.inline
-    def `withHighlight-marker`(value: AnonBorderwidth): Self = {
+    def `withHighlight-marker`(value: Borderwidth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("highlight-marker")(value.asInstanceOf[js.Any])
         ret
@@ -1175,7 +1175,7 @@ object series {
         ret
     }
     @scala.inline
-    def `withHighlight-state`(value: AnonLinewidth): Self = {
+    def `withHighlight-state`(value: Linewidth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("highlight-state")(value.asInstanceOf[js.Any])
         ret
@@ -1187,7 +1187,7 @@ object series {
         ret
     }
     @scala.inline
-    def `withHover-marker`(value: AnonGradientcolors): Self = {
+    def `withHover-marker`(value: Gradientcolors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hover-marker")(value.asInstanceOf[js.Any])
         ret
@@ -1199,7 +1199,7 @@ object series {
         ret
     }
     @scala.inline
-    def `withHover-state`(value: AnonAlphaarea): Self = {
+    def `withHover-state`(value: Alphaarea): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hover-state")(value.asInstanceOf[js.Any])
         ret
@@ -1223,7 +1223,7 @@ object series {
         ret
     }
     @scala.inline
-    def `withLegend-item`(value: AnonBorderradiusbottomleft): Self = {
+    def `withLegend-item`(value: Borderradiusbottomleft): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("legend-item")(value.asInstanceOf[js.Any])
         ret
@@ -1235,7 +1235,7 @@ object series {
         ret
     }
     @scala.inline
-    def `withLegend-marker`(value: AnonCursor): Self = {
+    def `withLegend-marker`(value: Cursor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("legend-marker")(value.asInstanceOf[js.Any])
         ret
@@ -1319,7 +1319,7 @@ object series {
         ret
     }
     @scala.inline
-    def withMarker(value: AnonGradientstops): Self = {
+    def withMarker(value: Gradientstops): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("marker")(value.asInstanceOf[js.Any])
         ret
@@ -1475,7 +1475,7 @@ object series {
         ret
     }
     @scala.inline
-    def withPreview(value: AnonType): Self = {
+    def withPreview(value: Type): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("preview")(value.asInstanceOf[js.Any])
         ret
@@ -1523,7 +1523,7 @@ object series {
         ret
     }
     @scala.inline
-    def withRules(value: js.Array[AnonRule]): Self = {
+    def withRules(value: js.Array[Rule]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(value.asInstanceOf[js.Any])
         ret
@@ -1595,7 +1595,7 @@ object series {
         ret
     }
     @scala.inline
-    def `withSelected-marker`(value: AnonOffsetx): Self = {
+    def `withSelected-marker`(value: Offsetx): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selected-marker")(value.asInstanceOf[js.Any])
         ret
@@ -1607,7 +1607,7 @@ object series {
         ret
     }
     @scala.inline
-    def `withSelected-state`(value: AnonShadow): Self = {
+    def `withSelected-state`(value: Shadow): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selected-state")(value.asInstanceOf[js.Any])
         ret
@@ -1823,7 +1823,7 @@ object series {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonCalloutposition): Self = {
+    def withTooltip(value: Calloutposition): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
@@ -1847,7 +1847,7 @@ object series {
         ret
     }
     @scala.inline
-    def `withTrend-down`(value: AnonAlphaBackgroundcolor): Self = {
+    def `withTrend-down`(value: AlphaBackgroundcolor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("trend-down")(value.asInstanceOf[js.Any])
         ret
@@ -1859,7 +1859,7 @@ object series {
         ret
     }
     @scala.inline
-    def `withTrend-equal`(value: AnonAlphaBackgroundcolor): Self = {
+    def `withTrend-equal`(value: AlphaBackgroundcolor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("trend-equal")(value.asInstanceOf[js.Any])
         ret
@@ -1871,7 +1871,7 @@ object series {
         ret
     }
     @scala.inline
-    def `withTrend-up`(value: AnonAlphaBackgroundcolor): Self = {
+    def `withTrend-up`(value: AlphaBackgroundcolor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("trend-up")(value.asInstanceOf[js.Any])
         ret
@@ -1895,7 +1895,7 @@ object series {
         ret
     }
     @scala.inline
-    def `withValue-box`(value: AnonRtlrighttoleft): Self = {
+    def `withValue-box`(value: Rtlrighttoleft): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("value-box")(value.asInstanceOf[js.Any])
         ret

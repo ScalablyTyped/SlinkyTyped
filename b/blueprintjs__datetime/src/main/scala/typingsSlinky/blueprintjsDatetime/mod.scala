@@ -1,5 +1,7 @@
 package typingsSlinky.blueprintjsDatetime
 
+import typingsSlinky.blueprintjsDatetime.anon.PartialIDateInputProps
+import typingsSlinky.blueprintjsDatetime.anon.PartialIDateRangeInputPro
 import typingsSlinky.blueprintjsDatetime.blueprintjsDatetimeStrings.millisecond
 import typingsSlinky.blueprintjsDatetime.blueprintjsDatetimeStrings.minute
 import typingsSlinky.blueprintjsDatetime.blueprintjsDatetimeStrings.second

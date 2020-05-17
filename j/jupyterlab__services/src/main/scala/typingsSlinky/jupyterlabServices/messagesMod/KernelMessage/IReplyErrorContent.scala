@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait IReplyErrorContent
-  extends _ReplyContent[js.Any] {
+  extends ReplyContent[js.Any] {
   /**
     * Exception name
     */

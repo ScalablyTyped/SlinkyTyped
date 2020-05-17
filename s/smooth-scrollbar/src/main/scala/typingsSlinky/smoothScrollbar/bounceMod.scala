@@ -1,5 +1,6 @@
 package typingsSlinky.smoothScrollbar
 
+import typingsSlinky.smoothScrollbar.anon.X
 import typingsSlinky.smoothScrollbar.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +13,7 @@ object bounceMod extends js.Object {
   class Bounce protected () extends js.Object {
     def this(_scrollbar: default) = this()
     var _scrollbar: js.Any = js.native
-    def render(hasXY: AnonX): Unit = js.native
+    def render(hasXY: X): Unit = js.native
   }
   
 }

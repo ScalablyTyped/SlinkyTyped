@@ -1,8 +1,8 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin.linterConfigHelpersMod
 
-import typingsSlinky.forkTsCheckerWebpackPlugin.AnonExclude
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.Exclude
 import typingsSlinky.std.Map
-import typingsSlinky.tslint.PartialIOptions
+import typingsSlinky.tslint.anon.PartialIOptions
 import typingsSlinky.tslint.configurationMod.IConfigurationFile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ConfigurationFile extends IConfigurationFile {
   @JSName("linterOptions")
-  var linterOptions_ConfigurationFile: js.UndefOr[AnonExclude] = js.native
+  var linterOptions_ConfigurationFile: js.UndefOr[Exclude] = js.native
 }
 
 object ConfigurationFile {
@@ -33,7 +33,7 @@ object ConfigurationFile {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withLinterOptions(value: AnonExclude): Self = {
+    def withLinterOptions(value: Exclude): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("linterOptions")(value.asInstanceOf[js.Any])
         ret

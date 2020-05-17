@@ -1,6 +1,6 @@
 package typingsSlinky.eggCore.mod
 
-import typingsSlinky.eggCore.AnonExports
+import typingsSlinky.eggCore.anon.Exports
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,12 +40,12 @@ trait FileLoaderBase extends js.Object {
     * @return {Array} items
     * @since 1.0.0
     */
-  def parse(): js.Array[AnonExports] = js.native
+  def parse(): js.Array[Exports] = js.native
 }
 
 object FileLoaderBase {
   @scala.inline
-  def apply(load: () => js.Object, parse: () => js.Array[AnonExports]): FileLoaderBase = {
+  def apply(load: () => js.Object, parse: () => js.Array[Exports]): FileLoaderBase = {
     val __obj = js.Dynamic.literal(load = js.Any.fromFunction0(load), parse = js.Any.fromFunction0(parse))
     __obj.asInstanceOf[FileLoaderBase]
   }
@@ -62,7 +62,7 @@ object FileLoaderBase {
         ret
     }
     @scala.inline
-    def withParse(value: () => js.Array[AnonExports]): Self = {
+    def withParse(value: () => js.Array[Exports]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.Any.fromFunction0(value))
         ret

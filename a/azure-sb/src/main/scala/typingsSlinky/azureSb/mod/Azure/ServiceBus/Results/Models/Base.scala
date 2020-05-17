@@ -1,6 +1,6 @@
 package typingsSlinky.azureSb.mod.Azure.ServiceBus.Results.Models
 
-import typingsSlinky.azureSb.AnonAuthor
+import typingsSlinky.azureSb.anon.Author
 import typingsSlinky.azureSb.mod.Azure.ServiceBus.DateString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation._
 trait Base extends js.Object {
   var CreatedAt: DateString = js.native
   @JSName("_")
-  var _underscore: AnonAuthor = js.native
+  var _underscore: Author = js.native
 }
 
 object Base {
   @scala.inline
-  def apply(CreatedAt: DateString, _underscore: AnonAuthor): Base = {
+  def apply(CreatedAt: DateString, _underscore: Author): Base = {
     val __obj = js.Dynamic.literal(CreatedAt = CreatedAt.asInstanceOf[js.Any])
     __obj.updateDynamic("_")(_underscore.asInstanceOf[js.Any])
     __obj.asInstanceOf[Base]
@@ -33,7 +33,7 @@ object Base {
         ret
     }
     @scala.inline
-    def with_underscore(value: AnonAuthor): Self = {
+    def with_underscore(value: Author): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("_")(value.asInstanceOf[js.Any])
         ret

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Class_XmlElement")
 @js.native
-class ClassXmlElement () extends ClassXmlNode {
+trait ClassXmlElement extends ClassXmlNode {
   /**
   	 * class prop 
   	 *

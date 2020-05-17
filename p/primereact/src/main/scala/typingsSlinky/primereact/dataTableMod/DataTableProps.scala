@@ -2,17 +2,17 @@ package typingsSlinky.primereact.dataTableMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.primereact.AnonColumns
-import typingsSlinky.primereact.AnonData
-import typingsSlinky.primereact.AnonDataField
-import typingsSlinky.primereact.AnonDataIndex
-import typingsSlinky.primereact.AnonDataOriginalEvent
-import typingsSlinky.primereact.AnonDelta
-import typingsSlinky.primereact.AnonDragIndex
-import typingsSlinky.primereact.AnonFirst
-import typingsSlinky.primereact.AnonMultiSortMeta
-import typingsSlinky.primereact.AnonType
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.Columns
+import typingsSlinky.primereact.anon.Data
+import typingsSlinky.primereact.anon.DataField
+import typingsSlinky.primereact.anon.DataIndex
+import typingsSlinky.primereact.anon.DataOriginalEvent
+import typingsSlinky.primereact.anon.Delta
+import typingsSlinky.primereact.anon.DragIndex
+import typingsSlinky.primereact.anon.First
+import typingsSlinky.primereact.anon.MultiSortMeta
+import typingsSlinky.primereact.anon.Type
+import typingsSlinky.primereact.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,7 +34,7 @@ trait DataTableProps extends js.Object {
   var expandableRowGroups: js.UndefOr[Boolean] = js.native
   var expandedRows: js.UndefOr[js.Array[_]] = js.native
   var exportFilename: js.UndefOr[String] = js.native
-  var exportFunction: js.UndefOr[js.Function1[/* e */ AnonDataField, _]] = js.native
+  var exportFunction: js.UndefOr[js.Function1[/* e */ DataField, _]] = js.native
   var filters: js.UndefOr[js.Object] = js.native
   var first: js.UndefOr[Double] = js.native
   var footer: js.UndefOr[js.Any] = js.native
@@ -53,27 +53,27 @@ trait DataTableProps extends js.Object {
   var loadingIcon: js.UndefOr[String] = js.native
   var metaKeySelection: js.UndefOr[Boolean] = js.native
   var multiSortMeta: js.UndefOr[js.Array[_]] = js.native
-  var onColReorder: js.UndefOr[js.Function1[/* e */ AnonColumns, Unit]] = js.native
-  var onColumnResizeEnd: js.UndefOr[js.Function1[/* e */ AnonDelta, Unit]] = js.native
-  var onContextMenu: js.UndefOr[js.Function1[/* e */ AnonDataOriginalEvent, Unit]] = js.native
-  var onContextMenuSelectionChange: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
+  var onColReorder: js.UndefOr[js.Function1[/* e */ Columns, Unit]] = js.native
+  var onColumnResizeEnd: js.UndefOr[js.Function1[/* e */ Delta, Unit]] = js.native
+  var onContextMenu: js.UndefOr[js.Function1[/* e */ DataOriginalEvent, Unit]] = js.native
+  var onContextMenuSelectionChange: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
   var onFilter: js.UndefOr[js.Function1[/* filters */ js.Array[_], Unit]] = js.native
-  var onPage: js.UndefOr[js.Function1[/* e */ AnonFirst, Unit]] = js.native
-  var onRowClick: js.UndefOr[js.Function1[/* e */ AnonDataIndex, Unit]] = js.native
-  var onRowCollapse: js.UndefOr[js.Function1[/* e */ AnonDataOriginalEvent, Unit]] = js.native
-  var onRowDoubleClick: js.UndefOr[js.Function1[/* e */ AnonDataIndex, Unit]] = js.native
-  var onRowEditCancel: js.UndefOr[js.Function1[/* e */ AnonDataIndex, Unit]] = js.native
-  var onRowEditInit: js.UndefOr[js.Function1[/* e */ AnonDataOriginalEvent, Unit]] = js.native
-  var onRowEditSave: js.UndefOr[js.Function1[/* e */ AnonDataOriginalEvent, Unit]] = js.native
-  var onRowExpand: js.UndefOr[js.Function1[/* e */ AnonDataOriginalEvent, Unit]] = js.native
-  var onRowReorder: js.UndefOr[js.Function1[/* e */ AnonDragIndex, Unit]] = js.native
-  var onRowSelect: js.UndefOr[js.Function1[/* e */ AnonType, Unit]] = js.native
-  var onRowToggle: js.UndefOr[js.Function1[/* e */ AnonData, Unit]] = js.native
-  var onRowUnselect: js.UndefOr[js.Function1[/* e */ AnonType, Unit]] = js.native
-  var onSelectionChange: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
-  var onSort: js.UndefOr[js.Function1[/* e */ AnonMultiSortMeta, Unit]] = js.native
+  var onPage: js.UndefOr[js.Function1[/* e */ First, Unit]] = js.native
+  var onRowClick: js.UndefOr[js.Function1[/* e */ DataIndex, Unit]] = js.native
+  var onRowCollapse: js.UndefOr[js.Function1[/* e */ DataOriginalEvent, Unit]] = js.native
+  var onRowDoubleClick: js.UndefOr[js.Function1[/* e */ DataIndex, Unit]] = js.native
+  var onRowEditCancel: js.UndefOr[js.Function1[/* e */ DataIndex, Unit]] = js.native
+  var onRowEditInit: js.UndefOr[js.Function1[/* e */ DataOriginalEvent, Unit]] = js.native
+  var onRowEditSave: js.UndefOr[js.Function1[/* e */ DataOriginalEvent, Unit]] = js.native
+  var onRowExpand: js.UndefOr[js.Function1[/* e */ DataOriginalEvent, Unit]] = js.native
+  var onRowReorder: js.UndefOr[js.Function1[/* e */ DragIndex, Unit]] = js.native
+  var onRowSelect: js.UndefOr[js.Function1[/* e */ Type, Unit]] = js.native
+  var onRowToggle: js.UndefOr[js.Function1[/* e */ Data, Unit]] = js.native
+  var onRowUnselect: js.UndefOr[js.Function1[/* e */ Type, Unit]] = js.native
+  var onSelectionChange: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
+  var onSort: js.UndefOr[js.Function1[/* e */ MultiSortMeta, Unit]] = js.native
   var onValueChange: js.UndefOr[js.Function1[/* value */ js.Array[_], Unit]] = js.native
-  var onVirtualScroll: js.UndefOr[js.Function1[/* e */ AnonFirst, Unit]] = js.native
+  var onVirtualScroll: js.UndefOr[js.Function1[/* e */ First, Unit]] = js.native
   var pageLinkSize: js.UndefOr[Double] = js.native
   var paginator: js.UndefOr[Boolean] = js.native
   var paginatorLeft: js.UndefOr[js.Any] = js.native
@@ -305,7 +305,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withExportFunction(value: /* e */ AnonDataField => _): Self = {
+    def withExportFunction(value: /* e */ DataField => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("exportFunction")(js.Any.fromFunction1(value))
         ret
@@ -533,7 +533,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnColReorder(value: /* e */ AnonColumns => Unit): Self = {
+    def withOnColReorder(value: /* e */ Columns => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onColReorder")(js.Any.fromFunction1(value))
         ret
@@ -545,7 +545,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnColumnResizeEnd(value: /* e */ AnonDelta => Unit): Self = {
+    def withOnColumnResizeEnd(value: /* e */ Delta => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onColumnResizeEnd")(js.Any.fromFunction1(value))
         ret
@@ -557,7 +557,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnContextMenu(value: /* e */ AnonDataOriginalEvent => Unit): Self = {
+    def withOnContextMenu(value: /* e */ DataOriginalEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(js.Any.fromFunction1(value))
         ret
@@ -569,7 +569,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnContextMenuSelectionChange(value: /* e */ AnonValue => Unit): Self = {
+    def withOnContextMenuSelectionChange(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenuSelectionChange")(js.Any.fromFunction1(value))
         ret
@@ -593,7 +593,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnPage(value: /* e */ AnonFirst => Unit): Self = {
+    def withOnPage(value: /* e */ First => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPage")(js.Any.fromFunction1(value))
         ret
@@ -605,7 +605,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnRowClick(value: /* e */ AnonDataIndex => Unit): Self = {
+    def withOnRowClick(value: /* e */ DataIndex => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowClick")(js.Any.fromFunction1(value))
         ret
@@ -617,7 +617,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnRowCollapse(value: /* e */ AnonDataOriginalEvent => Unit): Self = {
+    def withOnRowCollapse(value: /* e */ DataOriginalEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowCollapse")(js.Any.fromFunction1(value))
         ret
@@ -629,7 +629,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnRowDoubleClick(value: /* e */ AnonDataIndex => Unit): Self = {
+    def withOnRowDoubleClick(value: /* e */ DataIndex => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowDoubleClick")(js.Any.fromFunction1(value))
         ret
@@ -641,7 +641,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnRowEditCancel(value: /* e */ AnonDataIndex => Unit): Self = {
+    def withOnRowEditCancel(value: /* e */ DataIndex => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowEditCancel")(js.Any.fromFunction1(value))
         ret
@@ -653,7 +653,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnRowEditInit(value: /* e */ AnonDataOriginalEvent => Unit): Self = {
+    def withOnRowEditInit(value: /* e */ DataOriginalEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowEditInit")(js.Any.fromFunction1(value))
         ret
@@ -665,7 +665,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnRowEditSave(value: /* e */ AnonDataOriginalEvent => Unit): Self = {
+    def withOnRowEditSave(value: /* e */ DataOriginalEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowEditSave")(js.Any.fromFunction1(value))
         ret
@@ -677,7 +677,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnRowExpand(value: /* e */ AnonDataOriginalEvent => Unit): Self = {
+    def withOnRowExpand(value: /* e */ DataOriginalEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowExpand")(js.Any.fromFunction1(value))
         ret
@@ -689,7 +689,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnRowReorder(value: /* e */ AnonDragIndex => Unit): Self = {
+    def withOnRowReorder(value: /* e */ DragIndex => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowReorder")(js.Any.fromFunction1(value))
         ret
@@ -701,7 +701,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnRowSelect(value: /* e */ AnonType => Unit): Self = {
+    def withOnRowSelect(value: /* e */ Type => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowSelect")(js.Any.fromFunction1(value))
         ret
@@ -713,7 +713,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnRowToggle(value: /* e */ AnonData => Unit): Self = {
+    def withOnRowToggle(value: /* e */ Data => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowToggle")(js.Any.fromFunction1(value))
         ret
@@ -725,7 +725,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnRowUnselect(value: /* e */ AnonType => Unit): Self = {
+    def withOnRowUnselect(value: /* e */ Type => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowUnselect")(js.Any.fromFunction1(value))
         ret
@@ -737,7 +737,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnSelectionChange(value: /* e */ AnonValue => Unit): Self = {
+    def withOnSelectionChange(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChange")(js.Any.fromFunction1(value))
         ret
@@ -749,7 +749,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnSort(value: /* e */ AnonMultiSortMeta => Unit): Self = {
+    def withOnSort(value: /* e */ MultiSortMeta => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSort")(js.Any.fromFunction1(value))
         ret
@@ -773,7 +773,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnVirtualScroll(value: /* e */ AnonFirst => Unit): Self = {
+    def withOnVirtualScroll(value: /* e */ First => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onVirtualScroll")(js.Any.fromFunction1(value))
         ret

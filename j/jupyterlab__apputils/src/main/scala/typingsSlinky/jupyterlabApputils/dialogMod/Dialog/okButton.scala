@@ -1,7 +1,7 @@
 package typingsSlinky.jupyterlabApputils.dialogMod.Dialog
 
-import typingsSlinky.jupyterlabApputils.PartialIButton
-import typingsSlinky.jupyterlabApputils.ReadonlyIButton
+import typingsSlinky.jupyterlabApputils.anon.PartialIButton
+import typingsSlinky.jupyterlabApputils.anon.ReadonlyIButton
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

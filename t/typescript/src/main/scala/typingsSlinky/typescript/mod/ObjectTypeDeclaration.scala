@@ -11,3 +11,12 @@ import scala.scalajs.js.annotation._
 */
 trait ObjectTypeDeclaration extends js.Object
 
+object ObjectTypeDeclaration {
+  @scala.inline
+  implicit def apply(value: ClassLikeDeclaration): ObjectTypeDeclaration = value.asInstanceOf[ObjectTypeDeclaration]
+  @scala.inline
+  implicit def apply(value: InterfaceDeclaration): ObjectTypeDeclaration = value.asInstanceOf[ObjectTypeDeclaration]
+  @scala.inline
+  implicit def apply(value: TypeLiteralNode): ObjectTypeDeclaration = value.asInstanceOf[ObjectTypeDeclaration]
+}
+

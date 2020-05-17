@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 // engine/model/position
 @JSImport("@ckeditor/ckeditor5-engine", "model.Position")
 @js.native
-class Position protected () extends _SchemaContextDefinition {
+class Position protected () extends SchemaContextDefinition {
   def this(root: DocumentFragment, path: js.Array[Double]) = this()
   def this(root: Element, path: js.Array[Double]) = this()
   def this(root: DocumentFragment, path: js.Array[Double], stickiness: PositionStickiness) = this()

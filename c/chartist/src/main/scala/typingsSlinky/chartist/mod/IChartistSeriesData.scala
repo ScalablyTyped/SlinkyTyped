@@ -1,6 +1,6 @@
 package typingsSlinky.chartist.mod
 
-import typingsSlinky.chartist.AnonX
+import typingsSlinky.chartist.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IChartistSeriesData extends js.Object {
   var className: js.UndefOr[String] = js.native
-  var data: js.UndefOr[js.Array[AnonX | Double]] = js.native
+  var data: js.UndefOr[js.Array[Double | X]] = js.native
   var meta: js.UndefOr[js.Any] = js.native
   var name: js.UndefOr[String] = js.native
   var value: js.UndefOr[Double] = js.native
@@ -39,7 +39,7 @@ object IChartistSeriesData {
         ret
     }
     @scala.inline
-    def withData(value: js.Array[AnonX | Double]): Self = {
+    def withData(value: js.Array[Double | X]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

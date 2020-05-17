@@ -1,26 +1,21 @@
 package typingsSlinky.firefoxWebextBrowser.browser.extensionTypes
 
-import typingsSlinky.firefoxWebextBrowser.browser.manifest.ExtensionURL
+import typingsSlinky.firefoxWebextBrowser.anon.Code
+import typingsSlinky.firefoxWebextBrowser.anon.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.firefoxWebextBrowser.AnonFile
-  - typingsSlinky.firefoxWebextBrowser.AnonCode
+  - typingsSlinky.firefoxWebextBrowser.anon.File
+  - typingsSlinky.firefoxWebextBrowser.anon.Code
 */
 trait ExtensionFileOrCode extends js.Object
 
 object ExtensionFileOrCode {
   @scala.inline
-  def AnonFile(file: ExtensionURL): ExtensionFileOrCode = {
-    val __obj = js.Dynamic.literal(file = file.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ExtensionFileOrCode]
-  }
+  implicit def apply(value: Code): ExtensionFileOrCode = value.asInstanceOf[ExtensionFileOrCode]
   @scala.inline
-  def AnonCode(code: String): ExtensionFileOrCode = {
-    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ExtensionFileOrCode]
-  }
+  implicit def apply(value: File): ExtensionFileOrCode = value.asInstanceOf[ExtensionFileOrCode]
 }
 

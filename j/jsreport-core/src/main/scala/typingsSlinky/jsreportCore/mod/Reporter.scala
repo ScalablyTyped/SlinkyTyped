@@ -1,6 +1,6 @@
 package typingsSlinky.jsreportCore.mod
 
-import typingsSlinky.jsreportCore.PartialRequest
+import typingsSlinky.jsreportCore.anon.PartialRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

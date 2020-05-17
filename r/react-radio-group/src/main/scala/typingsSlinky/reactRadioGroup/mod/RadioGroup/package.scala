@@ -8,5 +8,5 @@ package object RadioGroup {
   type RadioGroupProps = (typingsSlinky.reactRadioGroup.mod.Omit[
     typingsSlinky.react.mod.HTMLProps[_], 
     typingsSlinky.reactRadioGroup.reactRadioGroupStrings.onChange
-  ]) with typingsSlinky.reactRadioGroup.AnonComponent
+  ]) with typingsSlinky.reactRadioGroup.anon.Component
 }

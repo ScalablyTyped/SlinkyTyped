@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -553,7 +553,7 @@ object IgGridGroupBy {
         ret
     }
     @scala.inline
-    def withGroupedColumnsChanged(value: (/* event */ Event_, /* ui */ GroupedColumnsChangedEventUIParam) => Unit): Self = {
+    def withGroupedColumnsChanged(value: (/* event */ Event, /* ui */ GroupedColumnsChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("groupedColumnsChanged")(js.Any.fromFunction2(value))
         ret
@@ -565,7 +565,7 @@ object IgGridGroupBy {
         ret
     }
     @scala.inline
-    def withGroupedColumnsChanging(value: (/* event */ Event_, /* ui */ GroupedColumnsChangingEventUIParam) => Unit): Self = {
+    def withGroupedColumnsChanging(value: (/* event */ Event, /* ui */ GroupedColumnsChangingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("groupedColumnsChanging")(js.Any.fromFunction2(value))
         ret
@@ -673,7 +673,7 @@ object IgGridGroupBy {
         ret
     }
     @scala.inline
-    def withModalDialogButtonApplyClick(value: (/* event */ Event_, /* ui */ ModalDialogButtonApplyClickEventUIParam) => Unit): Self = {
+    def withModalDialogButtonApplyClick(value: (/* event */ Event, /* ui */ ModalDialogButtonApplyClickEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogButtonApplyClick")(js.Any.fromFunction2(value))
         ret
@@ -709,7 +709,7 @@ object IgGridGroupBy {
         ret
     }
     @scala.inline
-    def withModalDialogButtonResetClick(value: (/* event */ Event_, /* ui */ ModalDialogButtonResetClickEventUIParam) => Unit): Self = {
+    def withModalDialogButtonResetClick(value: (/* event */ Event, /* ui */ ModalDialogButtonResetClickEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogButtonResetClick")(js.Any.fromFunction2(value))
         ret
@@ -781,7 +781,7 @@ object IgGridGroupBy {
         ret
     }
     @scala.inline
-    def withModalDialogClosed(value: (/* event */ Event_, /* ui */ ModalDialogClosedEventUIParam) => Unit): Self = {
+    def withModalDialogClosed(value: (/* event */ Event, /* ui */ ModalDialogClosedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogClosed")(js.Any.fromFunction2(value))
         ret
@@ -793,7 +793,7 @@ object IgGridGroupBy {
         ret
     }
     @scala.inline
-    def withModalDialogClosing(value: (/* event */ Event_, /* ui */ ModalDialogClosingEventUIParam) => Unit): Self = {
+    def withModalDialogClosing(value: (/* event */ Event, /* ui */ ModalDialogClosingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogClosing")(js.Any.fromFunction2(value))
         ret
@@ -805,7 +805,7 @@ object IgGridGroupBy {
         ret
     }
     @scala.inline
-    def withModalDialogContentsRendered(value: (/* event */ Event_, /* ui */ ModalDialogContentsRenderedEventUIParam) => Unit): Self = {
+    def withModalDialogContentsRendered(value: (/* event */ Event, /* ui */ ModalDialogContentsRenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogContentsRendered")(js.Any.fromFunction2(value))
         ret
@@ -817,7 +817,7 @@ object IgGridGroupBy {
         ret
     }
     @scala.inline
-    def withModalDialogContentsRendering(value: (/* event */ Event_, /* ui */ ModalDialogContentsRenderingEventUIParam) => Unit): Self = {
+    def withModalDialogContentsRendering(value: (/* event */ Event, /* ui */ ModalDialogContentsRenderingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogContentsRendering")(js.Any.fromFunction2(value))
         ret
@@ -901,7 +901,7 @@ object IgGridGroupBy {
         ret
     }
     @scala.inline
-    def withModalDialogGroupColumn(value: (/* event */ Event_, /* ui */ ModalDialogGroupColumnEventUIParam) => Unit): Self = {
+    def withModalDialogGroupColumn(value: (/* event */ Event, /* ui */ ModalDialogGroupColumnEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogGroupColumn")(js.Any.fromFunction2(value))
         ret
@@ -913,7 +913,7 @@ object IgGridGroupBy {
         ret
     }
     @scala.inline
-    def withModalDialogGroupingColumn(value: (/* event */ Event_, /* ui */ ModalDialogGroupingColumnEventUIParam) => Unit): Self = {
+    def withModalDialogGroupingColumn(value: (/* event */ Event, /* ui */ ModalDialogGroupingColumnEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogGroupingColumn")(js.Any.fromFunction2(value))
         ret
@@ -937,7 +937,7 @@ object IgGridGroupBy {
         ret
     }
     @scala.inline
-    def withModalDialogMoving(value: (/* event */ Event_, /* ui */ ModalDialogMovingEventUIParam) => Unit): Self = {
+    def withModalDialogMoving(value: (/* event */ Event, /* ui */ ModalDialogMovingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogMoving")(js.Any.fromFunction2(value))
         ret
@@ -949,7 +949,7 @@ object IgGridGroupBy {
         ret
     }
     @scala.inline
-    def withModalDialogOpened(value: (/* event */ Event_, /* ui */ ModalDialogOpenedEventUIParam) => Unit): Self = {
+    def withModalDialogOpened(value: (/* event */ Event, /* ui */ ModalDialogOpenedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogOpened")(js.Any.fromFunction2(value))
         ret
@@ -961,7 +961,7 @@ object IgGridGroupBy {
         ret
     }
     @scala.inline
-    def withModalDialogOpening(value: (/* event */ Event_, /* ui */ ModalDialogOpeningEventUIParam) => Unit): Self = {
+    def withModalDialogOpening(value: (/* event */ Event, /* ui */ ModalDialogOpeningEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogOpening")(js.Any.fromFunction2(value))
         ret
@@ -985,7 +985,7 @@ object IgGridGroupBy {
         ret
     }
     @scala.inline
-    def withModalDialogSortGroupedColumn(value: (/* event */ Event_, /* ui */ ModalDialogSortGroupedColumnEventUIParam) => Unit): Self = {
+    def withModalDialogSortGroupedColumn(value: (/* event */ Event, /* ui */ ModalDialogSortGroupedColumnEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogSortGroupedColumn")(js.Any.fromFunction2(value))
         ret
@@ -997,7 +997,7 @@ object IgGridGroupBy {
         ret
     }
     @scala.inline
-    def withModalDialogUngroupColumn(value: (/* event */ Event_, /* ui */ ModalDialogUngroupColumnEventUIParam) => Unit): Self = {
+    def withModalDialogUngroupColumn(value: (/* event */ Event, /* ui */ ModalDialogUngroupColumnEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogUngroupColumn")(js.Any.fromFunction2(value))
         ret
@@ -1009,7 +1009,7 @@ object IgGridGroupBy {
         ret
     }
     @scala.inline
-    def withModalDialogUngroupingColumn(value: (/* event */ Event_, /* ui */ ModalDialogUngroupingColumnEventUIParam) => Unit): Self = {
+    def withModalDialogUngroupingColumn(value: (/* event */ Event, /* ui */ ModalDialogUngroupingColumnEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalDialogUngroupingColumn")(js.Any.fromFunction2(value))
         ret

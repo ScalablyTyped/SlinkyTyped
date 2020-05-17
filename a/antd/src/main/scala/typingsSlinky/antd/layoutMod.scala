@@ -3,6 +3,8 @@ package typingsSlinky.antd
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import slinky.core.ReactComponentClass
+import typingsSlinky.antd.anon.PartialBasicProps
+import typingsSlinky.antd.anon.WeakValidationMapBasicPro
 import typingsSlinky.antd.layoutLayoutMod.BasicProps
 import typingsSlinky.antd.siderMod.SiderProps
 import typingsSlinky.react.mod.Component

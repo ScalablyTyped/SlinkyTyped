@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.paginationMod
 
-import typingsSlinky.antDesignReactNative.AnonNextText
+import typingsSlinky.antDesignReactNative.anon.NextText
 import typingsSlinky.antDesignReactNative.libStyleMod.WithThemeStyles
 import typingsSlinky.antDesignReactNative.paginationPropsTypeMod.PaginationPropsType
 import typingsSlinky.antDesignReactNative.paginationStyleMod.PaginationStyle
@@ -15,7 +15,7 @@ trait PaginationNativeProps
   extends PaginationPropsType
      with WithThemeStyles[PaginationStyle] {
   var indicatorStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var locale: js.UndefOr[AnonNextText] = js.native
+  var locale: js.UndefOr[NextText] = js.native
   var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
 }
 
@@ -50,7 +50,7 @@ object PaginationNativeProps {
         ret
     }
     @scala.inline
-    def withLocale(value: AnonNextText): Self = {
+    def withLocale(value: NextText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
         ret

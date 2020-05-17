@@ -1,0 +1,17 @@
+package typingsSlinky.officeJs.global.Excel
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  *
+  * Encapsulates the bin options for histogram charts and pareto charts.
+  *
+  * [Api set: ExcelApi 1.9]
+  */
+@JSGlobal("Excel.ChartBinOptions")
+@js.native
+class ChartBinOptions ()
+  extends typingsSlinky.officeJs.Excel.ChartBinOptions
+

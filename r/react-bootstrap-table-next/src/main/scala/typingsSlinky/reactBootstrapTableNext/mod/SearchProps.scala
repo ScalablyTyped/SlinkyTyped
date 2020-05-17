@@ -1,6 +1,6 @@
 package typingsSlinky.reactBootstrapTableNext.mod
 
-import typingsSlinky.reactBootstrapTableNext.AnonColumn
+import typingsSlinky.reactBootstrapTableNext.anon.Column
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait SearchProps[T] extends js.Object {
   var defaultSearch: js.UndefOr[String] = js.native
   /* custom search method, return true if matched and false if not */
-  var onColumnMatch: js.UndefOr[js.Function1[/* searchProps */ AnonColumn[T], Boolean]] = js.native
+  var onColumnMatch: js.UndefOr[js.Function1[/* searchProps */ Column[T], Boolean]] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var searchText: js.UndefOr[String] = js.native
 }
@@ -39,7 +39,7 @@ object SearchProps {
         ret
     }
     @scala.inline
-    def withOnColumnMatch(value: /* searchProps */ AnonColumn[T] => Boolean): Self[T] = {
+    def withOnColumnMatch(value: /* searchProps */ Column[T] => Boolean): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onColumnMatch")(js.Any.fromFunction1(value))
         ret

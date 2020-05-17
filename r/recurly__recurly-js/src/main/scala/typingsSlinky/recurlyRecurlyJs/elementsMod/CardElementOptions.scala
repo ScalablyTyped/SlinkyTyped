@@ -1,6 +1,6 @@
 package typingsSlinky.recurlyRecurlyJs.elementsMod
 
-import typingsSlinky.recurlyRecurlyJs.CommonElementStyleinvalid
+import typingsSlinky.recurlyRecurlyJs.anon.CommonElementStyleinvalid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

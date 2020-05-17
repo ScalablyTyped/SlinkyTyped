@@ -1,12 +1,11 @@
 package typingsSlinky.chromeApps.chrome.management
 
-import typingsSlinky.chromeApps.AnonADMIN
-import typingsSlinky.chromeApps.AnonOPENASPINNEDTAB
-import typingsSlinky.chromeApps.AnonPERMISSIONSINCREASE
+import typingsSlinky.chromeApps.anon.ADMIN
+import typingsSlinky.chromeApps.anon.OPENASPINNEDTAB
+import typingsSlinky.chromeApps.anon.PERMISSIONSINCREASE
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chrome.runtime.Permission
 import typingsSlinky.chromeApps.chromeAppsBooleans.`true`
-import typingsSlinky.chromeApps.chromeAppsStrings.ADMIN
 import typingsSlinky.chromeApps.chromeAppsStrings.DEVELOPMENT
 import typingsSlinky.chromeApps.chromeAppsStrings.NORMAL
 import typingsSlinky.chromeApps.chromeAppsStrings.OPEN_AS_PINNED_TAB
@@ -44,10 +43,10 @@ trait ExtensionInfo extends js.Object {
   var availableLaunchTypes: js.UndefOr[
     js.Array[
       ToStringLiteral[
-        AnonOPENASPINNEDTAB, 
-        /* keyof chrome-apps.AnonOPENASPINNEDTAB */ OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN, 
+        OPENASPINNEDTAB, 
+        /* keyof chrome-apps.anon.OPENASPINNEDTAB */ OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN, 
         Exclude[
-          /* keyof chrome-apps.AnonOPENASPINNEDTAB */ OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN, 
+          /* keyof chrome-apps.anon.OPENASPINNEDTAB */ OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN, 
           OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN
         ]
       ]
@@ -64,10 +63,10 @@ trait ExtensionInfo extends js.Object {
     */
   var disabledReason: js.UndefOr[
     ToStringLiteral[
-      AnonPERMISSIONSINCREASE, 
-      /* keyof chrome-apps.AnonPERMISSIONSINCREASE */ UNKNOWN | PERMISSIONS_INCREASE, 
+      PERMISSIONSINCREASE, 
+      /* keyof chrome-apps.anon.PERMISSIONSINCREASE */ UNKNOWN | PERMISSIONS_INCREASE, 
       Exclude[
-        /* keyof chrome-apps.AnonPERMISSIONSINCREASE */ UNKNOWN | PERMISSIONS_INCREASE, 
+        /* keyof chrome-apps.anon.PERMISSIONSINCREASE */ UNKNOWN | PERMISSIONS_INCREASE, 
         unknown__ | permissions_increase_
       ]
     ]
@@ -99,10 +98,10 @@ trait ExtensionInfo extends js.Object {
     * @since Chrome 22.
     */
   var installType: ToStringLiteral[
-    AnonADMIN, 
-    /* keyof chrome-apps.AnonADMIN */ ADMIN | DEVELOPMENT | NORMAL | SIDELOAD | OTHER, 
+    ADMIN, 
+    /* keyof chrome-apps.anon.ADMIN */ typingsSlinky.chromeApps.chromeAppsStrings.ADMIN | DEVELOPMENT | NORMAL | SIDELOAD | OTHER, 
     Exclude[
-      /* keyof chrome-apps.AnonADMIN */ ADMIN | DEVELOPMENT | NORMAL | SIDELOAD | OTHER, 
+      /* keyof chrome-apps.anon.ADMIN */ typingsSlinky.chromeApps.chromeAppsStrings.ADMIN | DEVELOPMENT | NORMAL | SIDELOAD | OTHER, 
       other_ | normal_ | development_ | admin_ | sideload_
     ]
   ] = js.native
@@ -117,10 +116,10 @@ trait ExtensionInfo extends js.Object {
     */
   var launchType: js.UndefOr[
     ToStringLiteral[
-      AnonOPENASPINNEDTAB, 
-      /* keyof chrome-apps.AnonOPENASPINNEDTAB */ OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN, 
+      OPENASPINNEDTAB, 
+      /* keyof chrome-apps.anon.OPENASPINNEDTAB */ OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN, 
       Exclude[
-        /* keyof chrome-apps.AnonOPENASPINNEDTAB */ OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN, 
+        /* keyof chrome-apps.anon.OPENASPINNEDTAB */ OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN, 
         OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN
       ]
     ]
@@ -169,10 +168,10 @@ object ExtensionInfo {
     hostPermissions: js.Array[String],
     id: String,
     installType: ToStringLiteral[
-      AnonADMIN, 
-      /* keyof chrome-apps.AnonADMIN */ ADMIN | DEVELOPMENT | NORMAL | SIDELOAD | OTHER, 
+      ADMIN, 
+      /* keyof chrome-apps.anon.ADMIN */ typingsSlinky.chromeApps.chromeAppsStrings.ADMIN | DEVELOPMENT | NORMAL | SIDELOAD | OTHER, 
       Exclude[
-        /* keyof chrome-apps.AnonADMIN */ ADMIN | DEVELOPMENT | NORMAL | SIDELOAD | OTHER, 
+        /* keyof chrome-apps.anon.ADMIN */ typingsSlinky.chromeApps.chromeAppsStrings.ADMIN | DEVELOPMENT | NORMAL | SIDELOAD | OTHER, 
         other_ | normal_ | development_ | admin_ | sideload_
       ]
     ],
@@ -222,10 +221,10 @@ object ExtensionInfo {
     @scala.inline
     def withInstallType(
       value: ToStringLiteral[
-          AnonADMIN, 
-          /* keyof chrome-apps.AnonADMIN */ ADMIN | DEVELOPMENT | NORMAL | SIDELOAD | OTHER, 
+          ADMIN, 
+          /* keyof chrome-apps.anon.ADMIN */ typingsSlinky.chromeApps.chromeAppsStrings.ADMIN | DEVELOPMENT | NORMAL | SIDELOAD | OTHER, 
           Exclude[
-            /* keyof chrome-apps.AnonADMIN */ ADMIN | DEVELOPMENT | NORMAL | SIDELOAD | OTHER, 
+            /* keyof chrome-apps.anon.ADMIN */ typingsSlinky.chromeApps.chromeAppsStrings.ADMIN | DEVELOPMENT | NORMAL | SIDELOAD | OTHER, 
             other_ | normal_ | development_ | admin_ | sideload_
           ]
         ]
@@ -298,10 +297,10 @@ object ExtensionInfo {
     def withAvailableLaunchTypes(
       value: js.Array[
           ToStringLiteral[
-            AnonOPENASPINNEDTAB, 
-            /* keyof chrome-apps.AnonOPENASPINNEDTAB */ OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN, 
+            OPENASPINNEDTAB, 
+            /* keyof chrome-apps.anon.OPENASPINNEDTAB */ OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN, 
             Exclude[
-              /* keyof chrome-apps.AnonOPENASPINNEDTAB */ OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN, 
+              /* keyof chrome-apps.anon.OPENASPINNEDTAB */ OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN, 
               OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN
             ]
           ]
@@ -320,10 +319,10 @@ object ExtensionInfo {
     @scala.inline
     def withDisabledReason(
       value: ToStringLiteral[
-          AnonPERMISSIONSINCREASE, 
-          /* keyof chrome-apps.AnonPERMISSIONSINCREASE */ UNKNOWN | PERMISSIONS_INCREASE, 
+          PERMISSIONSINCREASE, 
+          /* keyof chrome-apps.anon.PERMISSIONSINCREASE */ UNKNOWN | PERMISSIONS_INCREASE, 
           Exclude[
-            /* keyof chrome-apps.AnonPERMISSIONSINCREASE */ UNKNOWN | PERMISSIONS_INCREASE, 
+            /* keyof chrome-apps.anon.PERMISSIONSINCREASE */ UNKNOWN | PERMISSIONS_INCREASE, 
             unknown__ | permissions_increase_
           ]
         ]
@@ -377,10 +376,10 @@ object ExtensionInfo {
     @scala.inline
     def withLaunchType(
       value: ToStringLiteral[
-          AnonOPENASPINNEDTAB, 
-          /* keyof chrome-apps.AnonOPENASPINNEDTAB */ OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN, 
+          OPENASPINNEDTAB, 
+          /* keyof chrome-apps.anon.OPENASPINNEDTAB */ OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN, 
           Exclude[
-            /* keyof chrome-apps.AnonOPENASPINNEDTAB */ OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN, 
+            /* keyof chrome-apps.anon.OPENASPINNEDTAB */ OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN, 
             OPEN_AS_REGULAR_TAB | OPEN_AS_PINNED_TAB | OPEN_AS_WINDOW | OPEN_FULL_SCREEN
           ]
         ]

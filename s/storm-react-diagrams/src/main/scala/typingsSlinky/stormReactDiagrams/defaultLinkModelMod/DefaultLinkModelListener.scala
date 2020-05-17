@@ -1,7 +1,7 @@
 package typingsSlinky.stormReactDiagrams.defaultLinkModelMod
 
-import typingsSlinky.stormReactDiagrams.BaseEventDefaultLinkModel
-import typingsSlinky.stormReactDiagrams.BaseEventDefaultLinkModelEntity
+import typingsSlinky.stormReactDiagrams.anon.BaseEventDefaultLinkModel
+import typingsSlinky.stormReactDiagrams.anon.BaseEventDefaultLinkModelEntity
 import typingsSlinky.stormReactDiagrams.linkModelMod.LinkModelListener
 import scala.scalajs.js
 import scala.scalajs.js.`|`

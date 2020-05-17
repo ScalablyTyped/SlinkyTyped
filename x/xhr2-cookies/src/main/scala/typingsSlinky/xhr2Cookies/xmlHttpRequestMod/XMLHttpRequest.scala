@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.httpsMod.Agent
-import typingsSlinky.xhr2Cookies.AnonBaseUrl
+import typingsSlinky.xhr2Cookies.anon.BaseUrl
 import typingsSlinky.xhr2Cookies.xmlHttpRequestEventTargetMod.ProgressEventListener
 import typingsSlinky.xhr2Cookies.xmlHttpRequestEventTargetMod.XMLHttpRequestEventTarget
 import typingsSlinky.xhr2Cookies.xmlHttpRequestUploadMod.XMLHttpRequestUpload
@@ -78,7 +78,7 @@ class XMLHttpRequest () extends XMLHttpRequestEventTarget {
   def abort(): Unit = js.native
   def getAllResponseHeaders(): String = js.native
   def getResponseHeader(name: String): String = js.native
-  def nodejsSet(options: AnonBaseUrl): Unit = js.native
+  def nodejsSet(options: BaseUrl): Unit = js.native
   def open(method: String, url: String): Unit = js.native
   def open(method: String, url: String, async: Boolean): Unit = js.native
   def open(method: String, url: String, async: Boolean, user: String): Unit = js.native
@@ -106,6 +106,6 @@ object XMLHttpRequest extends js.Object {
   var UNSENT: Double = js.native
   var XMLHttpRequestUpload: Instantiable0[typingsSlinky.xhr2Cookies.xmlHttpRequestUploadMod.XMLHttpRequestUpload] = js.native
   var cookieJar: js.Any = js.native
-  def nodejsSet(options: AnonBaseUrl): Unit = js.native
+  def nodejsSet(options: BaseUrl): Unit = js.native
 }
 

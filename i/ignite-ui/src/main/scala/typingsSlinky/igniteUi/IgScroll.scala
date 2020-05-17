@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -353,7 +353,7 @@ object IgScroll {
         ret
     }
     @scala.inline
-    def withRendered(value: (/* event */ Event_, /* ui */ RenderedEventUIParam) => Unit): Self = {
+    def withRendered(value: (/* event */ Event, /* ui */ RenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rendered")(js.Any.fromFunction2(value))
         ret
@@ -365,7 +365,7 @@ object IgScroll {
         ret
     }
     @scala.inline
-    def withResized(value: (/* event */ Event_, /* ui */ ResizedEventUIParam) => Unit): Self = {
+    def withResized(value: (/* event */ Event, /* ui */ ResizedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resized")(js.Any.fromFunction2(value))
         ret
@@ -377,7 +377,7 @@ object IgScroll {
         ret
     }
     @scala.inline
-    def withResizing(value: (/* event */ Event_, /* ui */ ResizingEventUIParam) => Unit): Self = {
+    def withResizing(value: (/* event */ Event, /* ui */ ResizingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resizing")(js.Any.fromFunction2(value))
         ret
@@ -521,7 +521,7 @@ object IgScroll {
         ret
     }
     @scala.inline
-    def withScrolled(value: (/* event */ Event_, /* ui */ ScrolledEventUIParam) => Unit): Self = {
+    def withScrolled(value: (/* event */ Event, /* ui */ ScrolledEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrolled")(js.Any.fromFunction2(value))
         ret
@@ -533,7 +533,7 @@ object IgScroll {
         ret
     }
     @scala.inline
-    def withScrolling(value: (/* event */ Event_, /* ui */ ScrollingEventUIParam) => Unit): Self = {
+    def withScrolling(value: (/* event */ Event, /* ui */ ScrollingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrolling")(js.Any.fromFunction2(value))
         ret
@@ -629,7 +629,7 @@ object IgScroll {
         ret
     }
     @scala.inline
-    def withThumbDragEnd(value: (/* event */ Event_, /* ui */ ThumbDragEndEventUIParam) => Unit): Self = {
+    def withThumbDragEnd(value: (/* event */ Event, /* ui */ ThumbDragEndEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("thumbDragEnd")(js.Any.fromFunction2(value))
         ret
@@ -641,7 +641,7 @@ object IgScroll {
         ret
     }
     @scala.inline
-    def withThumbDragMove(value: (/* event */ Event_, /* ui */ ThumbDragMoveEventUIParam) => Unit): Self = {
+    def withThumbDragMove(value: (/* event */ Event, /* ui */ ThumbDragMoveEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("thumbDragMove")(js.Any.fromFunction2(value))
         ret
@@ -653,7 +653,7 @@ object IgScroll {
         ret
     }
     @scala.inline
-    def withThumbDragStart(value: (/* event */ Event_, /* ui */ ThumbDragStartEventUIParam) => Unit): Self = {
+    def withThumbDragStart(value: (/* event */ Event, /* ui */ ThumbDragStartEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("thumbDragStart")(js.Any.fromFunction2(value))
         ret

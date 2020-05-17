@@ -2,7 +2,7 @@ package typingsSlinky.eventTargetShim.mod.EventTarget
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.eventTargetShim.EventTargetloose
+import typingsSlinky.eventTargetShim.anon.EventTargetloose
 import typingsSlinky.eventTargetShim.mod.EventTargetConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`

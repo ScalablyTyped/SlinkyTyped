@@ -1,7 +1,7 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonIndex
-import typingsSlinky.aliApp.PartialBadge
+import typingsSlinky.aliApp.anon.Index
+import typingsSlinky.aliApp.anon.PartialBadge
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ trait ActionSheetOptions
   		 * 接口调用成功的回调函数
   		 */
   @JSName("success")
-  var success_ActionSheetOptions: js.UndefOr[js.Function1[/* res */ AnonIndex, Unit]] = js.native
+  var success_ActionSheetOptions: js.UndefOr[js.Function1[/* res */ Index, Unit]] = js.native
   /** 菜单标题 */
   var title: js.UndefOr[String] = js.native
 }
@@ -89,7 +89,7 @@ object ActionSheetOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonIndex => Unit): Self = {
+    def withSuccess(value: /* res */ Index => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

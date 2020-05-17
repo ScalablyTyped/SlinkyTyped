@@ -1,7 +1,7 @@
 package typingsSlinky.pgQueryStream.mod
 
-import typingsSlinky.node.AnonEnd
 import typingsSlinky.node.NodeJS.WritableStream
+import typingsSlinky.node.anon.End
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.pg.mod.Submittable
 import scala.scalajs.js
@@ -18,6 +18,6 @@ trait QueryStream
   /* InferMemberOverrides */
   override def pipe[T /* <: WritableStream */](destination: T): T = js.native
   /* InferMemberOverrides */
-  override def pipe[T /* <: WritableStream */](destination: T, options: AnonEnd): T = js.native
+  override def pipe[T /* <: WritableStream */](destination: T, options: End): T = js.native
 }
 

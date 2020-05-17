@@ -1,6 +1,5 @@
 package typingsSlinky.playcanvas.mod
 
-import typingsSlinky.playcanvas.AnonAsset
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,6 +40,10 @@ import scala.scalajs.js.annotation._
 @js.native
 class SoundSlot protected ()
   extends typingsSlinky.playcanvas.pc.SoundSlot {
-  def this(component: typingsSlinky.playcanvas.pc.SoundComponent, name: String, options: AnonAsset) = this()
+  def this(
+    component: typingsSlinky.playcanvas.pc.SoundComponent,
+    name: String,
+    options: typingsSlinky.playcanvas.anon.Asset
+  ) = this()
 }
 

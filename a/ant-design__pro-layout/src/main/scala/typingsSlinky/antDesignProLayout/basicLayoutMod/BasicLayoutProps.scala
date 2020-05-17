@@ -2,9 +2,9 @@ package typingsSlinky.antDesignProLayout.basicLayoutMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antDesignProLayout.AnonDefaultOpenAll
-import typingsSlinky.antDesignProLayout.AnonId
-import typingsSlinky.antDesignProLayout.MenuDataItemisUrlboolean
+import typingsSlinky.antDesignProLayout.anon.DefaultOpenAll
+import typingsSlinky.antDesignProLayout.anon.Id
+import typingsSlinky.antDesignProLayout.anon.MenuDataItemisUrlboolean
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.realDark
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.sidemenu
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.topmenu
@@ -73,7 +73,7 @@ trait BasicLayoutProps extends SiderMenuProps {
     */
   @JSName("logo")
   var logo_BasicLayoutProps: js.UndefOr[TagMod[Any] | WithFalse[js.Function0[TagMod[Any]]]] = js.native
-  var menu: js.UndefOr[AnonDefaultOpenAll] = js.native
+  var menu: js.UndefOr[DefaultOpenAll] = js.native
   var menuDataRender: js.UndefOr[js.Function1[/* menuData */ js.Array[MenuDataItem], js.Array[MenuDataItem]]] = js.native
   var menuItemRender: js.UndefOr[
     WithFalse[
@@ -94,7 +94,7 @@ trait BasicLayoutProps extends SiderMenuProps {
       js.Function3[
         /* props */ GetPageTitleProps, 
         /* defaultPageTitle */ js.UndefOr[String], 
-        /* info */ js.UndefOr[AnonId], 
+        /* info */ js.UndefOr[Id], 
         String
       ]
     ]
@@ -423,7 +423,7 @@ object BasicLayoutProps {
         ret
     }
     @scala.inline
-    def withMenu(value: AnonDefaultOpenAll): Self = {
+    def withMenu(value: DefaultOpenAll): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
         ret
@@ -518,7 +518,7 @@ object BasicLayoutProps {
     }
     @scala.inline
     def withPageTitleRenderFunction3(
-      value: (/* props */ GetPageTitleProps, /* defaultPageTitle */ js.UndefOr[String], /* info */ js.UndefOr[AnonId]) => String
+      value: (/* props */ GetPageTitleProps, /* defaultPageTitle */ js.UndefOr[String], /* info */ js.UndefOr[Id]) => String
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pageTitleRender")(js.Any.fromFunction3(value))
@@ -530,7 +530,7 @@ object BasicLayoutProps {
           js.Function3[
             /* props */ GetPageTitleProps, 
             /* defaultPageTitle */ js.UndefOr[String], 
-            /* info */ js.UndefOr[AnonId], 
+            /* info */ js.UndefOr[Id], 
             String
           ]
         ]

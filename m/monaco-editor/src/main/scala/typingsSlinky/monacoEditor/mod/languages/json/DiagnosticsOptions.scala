@@ -1,6 +1,6 @@
 package typingsSlinky.monacoEditor.mod.languages.json
 
-import typingsSlinky.monacoEditor.AnonFileMatch
+import typingsSlinky.monacoEditor.anon.FileMatch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait DiagnosticsOptions extends js.Object {
   /**
     * A list of known schemas and/or associations of schemas to file names.
     */
-  val schemas: js.UndefOr[js.Array[AnonFileMatch]] = js.native
+  val schemas: js.UndefOr[js.Array[FileMatch]] = js.native
   /**
     * If set, the validator will be enabled and perform syntax validation as well as schema based validation.
     */
@@ -62,7 +62,7 @@ object DiagnosticsOptions {
         ret
     }
     @scala.inline
-    def withSchemas(value: js.Array[AnonFileMatch]): Self = {
+    def withSchemas(value: js.Array[FileMatch]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("schemas")(value.asInstanceOf[js.Any])
         ret

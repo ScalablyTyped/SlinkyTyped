@@ -1,7 +1,7 @@
 package typingsSlinky.formik
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object utilsMod extends js.Object {
   def getActiveElement(): Element | Null = js.native
-  def getActiveElement(doc: Document_): Element | Null = js.native
+  def getActiveElement(doc: Document): Element | Null = js.native
   def getIn(obj: js.Any, key: String): js.Any = js.native
   def getIn(obj: js.Any, key: String, `def`: js.Any): js.Any = js.native
   def getIn(obj: js.Any, key: String, `def`: js.Any, p: Double): js.Any = js.native

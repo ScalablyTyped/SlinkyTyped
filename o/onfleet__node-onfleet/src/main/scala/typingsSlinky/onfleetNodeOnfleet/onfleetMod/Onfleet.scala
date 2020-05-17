@@ -1,6 +1,6 @@
 package typingsSlinky.onfleetNodeOnfleet.onfleetMod
 
-import typingsSlinky.onfleetNodeOnfleet.AnonBaseUrl
+import typingsSlinky.onfleetNodeOnfleet.anon.BaseUrl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Onfleet extends js.Object {
   var admins: typingsSlinky.onfleetNodeOnfleet.administratorsMod.^ = js.native
-  var api: AnonBaseUrl = js.native
+  var api: BaseUrl = js.native
   var apiKey: String = js.native
   var containers: typingsSlinky.onfleetNodeOnfleet.containersMod.^ = js.native
   var destinations: typingsSlinky.onfleetNodeOnfleet.destinationsMod.^ = js.native
@@ -26,7 +26,7 @@ object Onfleet {
   @scala.inline
   def apply(
     admins: typingsSlinky.onfleetNodeOnfleet.administratorsMod.^,
-    api: AnonBaseUrl,
+    api: BaseUrl,
     apiKey: String,
     containers: typingsSlinky.onfleetNodeOnfleet.containersMod.^,
     destinations: typingsSlinky.onfleetNodeOnfleet.destinationsMod.^,
@@ -55,7 +55,7 @@ object Onfleet {
         ret
     }
     @scala.inline
-    def withApi(value: AnonBaseUrl): Self = {
+    def withApi(value: BaseUrl): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("api")(value.asInstanceOf[js.Any])
         ret

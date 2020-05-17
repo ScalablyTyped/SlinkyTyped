@@ -1,6 +1,6 @@
 package typingsSlinky.blueprintjsCore.mod
 
-import typingsSlinky.blueprintjsCore.AnonTabIndex
+import typingsSlinky.blueprintjsCore.anon.TabIndex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ class Hotkeys ()
 @JSImport("@blueprintjs/core", "Hotkeys")
 @js.native
 object Hotkeys extends js.Object {
-  var defaultProps: AnonTabIndex = js.native
+  var defaultProps: TabIndex = js.native
   var displayName: String = js.native
 }
 

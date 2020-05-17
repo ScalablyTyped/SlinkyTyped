@@ -1,8 +1,5 @@
 package typingsSlinky.nightwatch.mod
 
-import typingsSlinky.nightwatch.AnonClass
-import typingsSlinky.nightwatch.nightwatchNumbers.`0`
-import typingsSlinky.nightwatch.nightwatchNumbers.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,14 +12,8 @@ trait NightwatchCallbackResult[T] extends js.Object
 
 object NightwatchCallbackResult {
   @scala.inline
-  def NightwatchTypedCallbackResult[T](state: js.Error | String, status: `0`, value: T): NightwatchCallbackResult[T] = {
-    val __obj = js.Dynamic.literal(state = state.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NightwatchCallbackResult[T]]
-  }
+  implicit def apply[T](value: NightwatchCallbackResultError): NightwatchCallbackResult[T] = value.asInstanceOf[NightwatchCallbackResult[T]]
   @scala.inline
-  def NightwatchCallbackResultError[T](state: js.Error | String, status: `1`, value: AnonClass): NightwatchCallbackResult[T] = {
-    val __obj = js.Dynamic.literal(state = state.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NightwatchCallbackResult[T]]
-  }
+  implicit def apply[T](value: NightwatchTypedCallbackResult[T]): NightwatchCallbackResult[T] = value.asInstanceOf[NightwatchCallbackResult[T]]
 }
 

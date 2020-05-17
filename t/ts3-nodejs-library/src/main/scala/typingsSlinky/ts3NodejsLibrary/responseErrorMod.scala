@@ -1,6 +1,7 @@
 package typingsSlinky.ts3NodejsLibrary
 
 import typingsSlinky.std.Error
+import typingsSlinky.ts3NodejsLibrary.anon.Extramsg
 import typingsSlinky.ts3NodejsLibrary.commandMod.Command
 import typingsSlinky.ts3NodejsLibrary.responseTypesMod.QueryErrorMessage
 import scala.scalajs.js
@@ -19,7 +20,7 @@ object responseErrorMod extends js.Object {
     /**
       * returns a json encodeable object for this error
       */
-    def toJSON(): AnonExtramsg = js.native
+    def toJSON(): Extramsg = js.native
   }
   
 }

@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("grpc", "ClientUnaryCall")
 @js.native
-class ClientUnaryCall protected () extends js.Object {
+class ClientUnaryCall protected () extends Call {
   /**
     * Cancel the ongoing call. Results in the call ending with a CANCELLED status,
     * unless it has already ended with some other status.

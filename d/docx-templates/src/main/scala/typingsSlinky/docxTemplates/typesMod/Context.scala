@@ -1,14 +1,14 @@
 package typingsSlinky.docxTemplates.typesMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.docxTemplates.AnonWp
+import typingsSlinky.docxTemplates.anon.Wp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Context extends js.Object {
-  var buffers: AnonWp = js.native
+  var buffers: Wp = js.native
   var cmd: String = js.native
   var fCmd: Boolean = js.native
   var fJump: Boolean = js.native
@@ -35,7 +35,7 @@ trait Context extends js.Object {
 object Context {
   @scala.inline
   def apply(
-    buffers: AnonWp,
+    buffers: Wp,
     cmd: String,
     fCmd: Boolean,
     fJump: Boolean,
@@ -62,7 +62,7 @@ object Context {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBuffers(value: AnonWp): Self = {
+    def withBuffers(value: Wp): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("buffers")(value.asInstanceOf[js.Any])
         ret

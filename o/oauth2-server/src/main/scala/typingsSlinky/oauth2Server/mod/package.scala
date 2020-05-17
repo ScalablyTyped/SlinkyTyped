@@ -10,17 +10,6 @@ package object mod {
     */
   type Callback[T] = js.Function2[/* err */ js.UndefOr[js.Any], /* result */ js.UndefOr[T], scala.Unit]
   /**
-    * For returning falsey parameters in cases of failure
-    */
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.oauth2Server.oauth2ServerStrings._empty
-    - typingsSlinky.oauth2Server.oauth2ServerNumbers.`0`
-    - typingsSlinky.oauth2Server.oauth2ServerBooleans.`false`
-    - scala.Null
-    - js.UndefOr[scala.Nothing]
-  */
-  type Falsey = js.UndefOr[typingsSlinky.oauth2Server.mod._Falsey | scala.Null]
-  /**
     * An interface representing the user.
     * A user object is completely transparent to oauth2-server and is simply used as input to model functions.
     */

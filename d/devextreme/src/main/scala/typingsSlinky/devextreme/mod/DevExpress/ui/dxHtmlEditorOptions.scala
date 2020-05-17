@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonEventModel
+import typingsSlinky.devextreme.anon.EventModel
 import typingsSlinky.devextreme.devextremeStrings.html
 import typingsSlinky.devextreme.devextremeStrings.markdown
 import scala.scalajs.js
@@ -18,9 +18,9 @@ trait dxHtmlEditorOptions extends EditorOptions[dxHtmlEditor] {
   /** The value to be assigned to the `name` attribute of the underlying HTML element. */
   var name: js.UndefOr[String] = js.native
   /** A function that is executed when the widget gets focus. */
-  var onFocusIn: js.UndefOr[js.Function1[/* e */ AnonEventModel, _]] = js.native
+  var onFocusIn: js.UndefOr[js.Function1[/* e */ EventModel, _]] = js.native
   /** A function that is executed when the widget loses focus. */
-  var onFocusOut: js.UndefOr[js.Function1[/* e */ AnonEventModel, _]] = js.native
+  var onFocusOut: js.UndefOr[js.Function1[/* e */ EventModel, _]] = js.native
   /** Specifies the text displayed when the input field is empty. */
   var placeholder: js.UndefOr[String] = js.native
   /** Configures the widget's toolbar. */
@@ -92,7 +92,7 @@ object dxHtmlEditorOptions {
         ret
     }
     @scala.inline
-    def withOnFocusIn(value: /* e */ AnonEventModel => _): Self = {
+    def withOnFocusIn(value: /* e */ EventModel => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusIn")(js.Any.fromFunction1(value))
         ret
@@ -104,7 +104,7 @@ object dxHtmlEditorOptions {
         ret
     }
     @scala.inline
-    def withOnFocusOut(value: /* e */ AnonEventModel => _): Self = {
+    def withOnFocusOut(value: /* e */ EventModel => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusOut")(js.Any.fromFunction1(value))
         ret

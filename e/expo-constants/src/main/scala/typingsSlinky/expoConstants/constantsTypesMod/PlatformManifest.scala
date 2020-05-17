@@ -1,7 +1,7 @@
 package typingsSlinky.expoConstants.constantsTypesMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.expoConstants.AnonScheme
+import typingsSlinky.expoConstants.anon.Scheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait PlatformManifest
   extends /* key */ StringDictionary[js.Any] {
   var android: js.UndefOr[AndroidManifest] = js.native
-  var detach: js.UndefOr[AnonScheme] = js.native
+  var detach: js.UndefOr[Scheme] = js.native
   var developer: js.UndefOr[String] = js.native
   var hostUri: js.UndefOr[String] = js.native
   var ios: js.UndefOr[IOSManifest] = js.native
@@ -44,7 +44,7 @@ object PlatformManifest {
         ret
     }
     @scala.inline
-    def withDetach(value: AnonScheme): Self = {
+    def withDetach(value: Scheme): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("detach")(value.asInstanceOf[js.Any])
         ret

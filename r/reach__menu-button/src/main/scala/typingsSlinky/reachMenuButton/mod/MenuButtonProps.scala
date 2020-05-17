@@ -50,7 +50,7 @@ import typingsSlinky.reachMenuButton.reachMenuButtonStrings.tree
 import typingsSlinky.reachMenuButton.reachMenuButtonStrings.url
 import typingsSlinky.reachMenuButton.reachMenuButtonStrings.vertical
 import typingsSlinky.reachMenuButton.reachMenuButtonStrings.yes
-import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -299,7 +299,7 @@ trait MenuButtonProps extends js.Object {
   var controls: js.UndefOr[Boolean] = js.native
   var coords: js.UndefOr[String] = js.native
   var crossOrigin: js.UndefOr[String] = js.native
-  var dangerouslySetInnerHTML: js.UndefOr[AnonHtml] = js.native
+  var dangerouslySetInnerHTML: js.UndefOr[Html] = js.native
   var data: js.UndefOr[String] = js.native
   var datatype: js.UndefOr[String] = js.native
   var dateTime: js.UndefOr[String] = js.native

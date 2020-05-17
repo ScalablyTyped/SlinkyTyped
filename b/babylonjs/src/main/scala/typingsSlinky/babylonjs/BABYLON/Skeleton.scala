@@ -4,22 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.Skeleton")
 @js.native
-class Skeleton protected () extends IAnimatable {
-  /**
-    * Creates a new skeleton
-    * @param name defines the skeleton name
-    * @param id defines the skeleton Id
-    * @param scene defines the hosting scene
-    */
-  def this(
-    /** defines the skeleton name */
-  name: String,
-    /** defines the skeleton Id */
-  id: String,
-    scene: Scene
-  ) = this()
+trait Skeleton extends IAnimatable {
   var _animatables: js.Any = js.native
   var _animationPropertiesOverride: js.Any = js.native
   var _canUseTextureForBones: js.Any = js.native
@@ -237,18 +223,5 @@ class Skeleton protected () extends IAnimatable {
     */
   def useTextureToStoreBoneMatrices: Boolean = js.native
   def useTextureToStoreBoneMatrices(value: Boolean): js.Any = js.native
-}
-
-/* static members */
-@JSGlobal("BABYLON.Skeleton")
-@js.native
-object Skeleton extends js.Object {
-  /**
-    * Creates a new skeleton from serialized data
-    * @param parsedSkeleton defines the serialized data
-    * @param scene defines the hosting scene
-    * @returns a new skeleton
-    */
-  def Parse(parsedSkeleton: js.Any, scene: Scene): Skeleton = js.native
 }
 

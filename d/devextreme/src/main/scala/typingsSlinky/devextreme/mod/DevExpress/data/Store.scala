@@ -1,8 +1,8 @@
 package typingsSlinky.devextreme.mod.DevExpress.data
 
-import typingsSlinky.devextreme.AnonFilter
-import typingsSlinky.devextreme.mod._Global_.JQueryPromise
-import typingsSlinky.devextreme.mod._Global_.Promise
+import typingsSlinky.devextreme.anon.Filter
+import typingsSlinky.devextreme.mod.global.JQueryPromise
+import typingsSlinky.devextreme.mod.global.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,7 +38,7 @@ trait Store extends js.Object {
   def remove(key: js.Any): Promise[Unit] with JQueryPromise[Unit] = js.native
   def remove(key: Double): Promise[Unit] with JQueryPromise[Unit] = js.native
   /** Gets the total count of items the load() function returns. */
-  def totalCount(obj: AnonFilter): Promise[Double] with JQueryPromise[Double] = js.native
+  def totalCount(obj: Filter): Promise[Double] with JQueryPromise[Double] = js.native
   def update(key: String, values: js.Any): Promise[_] with JQueryPromise[_] = js.native
   /** Updates a data item with a specific key. */
   def update(key: js.Any, values: js.Any): Promise[_] with JQueryPromise[_] = js.native

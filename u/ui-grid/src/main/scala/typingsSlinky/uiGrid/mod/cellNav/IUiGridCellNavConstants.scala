@@ -1,7 +1,7 @@
 package typingsSlinky.uiGrid.mod.cellNav
 
-import typingsSlinky.uiGrid.AnonCLEAR
-import typingsSlinky.uiGrid.AnonLEFT
+import typingsSlinky.uiGrid.anon.CLEAR
+import typingsSlinky.uiGrid.anon.LEFT
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,14 +9,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IUiGridCellNavConstants extends js.Object {
   var CELL_NAV_EVENT: String = js.native
-  var EVENT_TYPE: AnonCLEAR = js.native
+  var EVENT_TYPE: CLEAR = js.native
   var FEATURE_NAME: String = js.native
-  var direction: AnonLEFT = js.native
+  var direction: LEFT = js.native
 }
 
 object IUiGridCellNavConstants {
   @scala.inline
-  def apply(CELL_NAV_EVENT: String, EVENT_TYPE: AnonCLEAR, FEATURE_NAME: String, direction: AnonLEFT): IUiGridCellNavConstants = {
+  def apply(CELL_NAV_EVENT: String, EVENT_TYPE: CLEAR, FEATURE_NAME: String, direction: LEFT): IUiGridCellNavConstants = {
     val __obj = js.Dynamic.literal(CELL_NAV_EVENT = CELL_NAV_EVENT.asInstanceOf[js.Any], EVENT_TYPE = EVENT_TYPE.asInstanceOf[js.Any], FEATURE_NAME = FEATURE_NAME.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any])
     __obj.asInstanceOf[IUiGridCellNavConstants]
   }
@@ -33,7 +33,7 @@ object IUiGridCellNavConstants {
         ret
     }
     @scala.inline
-    def withEVENT_TYPE(value: AnonCLEAR): Self = {
+    def withEVENT_TYPE(value: CLEAR): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("EVENT_TYPE")(value.asInstanceOf[js.Any])
         ret
@@ -45,7 +45,7 @@ object IUiGridCellNavConstants {
         ret
     }
     @scala.inline
-    def withDirection(value: AnonLEFT): Self = {
+    def withDirection(value: LEFT): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
         ret

@@ -4,7 +4,7 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antdMobileRn.AnonArrowV
+import typingsSlinky.antdMobileRn.anon.ArrowV
 import typingsSlinky.antdMobileRn.listIndexNativeMod.ListProps
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -38,7 +38,7 @@ object List {
     @scala.inline
     def styleNull: this.type = set("style", null)
     @scala.inline
-    def styles(value: AnonArrowV): this.type = set("styles", value.asInstanceOf[js.Any])
+    def styles(value: ArrowV): this.type = set("styles", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

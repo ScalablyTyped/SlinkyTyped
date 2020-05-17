@@ -1,5 +1,7 @@
 package typingsSlinky.baconjs
 
+import typingsSlinky.baconjs.frombinderMod.EventLike
+import typingsSlinky.baconjs.typesFlatmapMod.EventOrValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +22,9 @@ object eventMod extends js.Object {
   }
   
   @js.native
-  abstract class Event[V] () extends js.Object {
+  abstract class Event[V] ()
+    extends EventLike[V]
+       with EventOrValue[V] {
     /** @hidden */
     var _isEvent: Boolean = js.native
     var hasValue: Boolean = js.native

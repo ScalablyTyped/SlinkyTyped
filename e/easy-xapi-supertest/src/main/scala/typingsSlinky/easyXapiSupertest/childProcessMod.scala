@@ -1,8 +1,14 @@
 package typingsSlinky.easyXapiSupertest
 
+import typingsSlinky.easyXapiSupertest.anon.Custom
+import typingsSlinky.easyXapiSupertest.anon.CustomFds
+import typingsSlinky.easyXapiSupertest.anon.Cwd
+import typingsSlinky.easyXapiSupertest.anon.Encoding
+import typingsSlinky.easyXapiSupertest.anon.Env
 import typingsSlinky.easyXapiSupertest.eventsMod.EventEmitter
 import typingsSlinky.easyXapiSupertest.streamMod.Readable
 import typingsSlinky.easyXapiSupertest.streamMod.Writable
+import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,67 +32,42 @@ object childProcessMod extends js.Object {
   def exec(command: String): ChildProcess = js.native
   def exec(
     command: String,
-    callback: js.Function3[
-      /* error */ js.Error, 
-      /* stdout */ typingsSlinky.node.Buffer, 
-      /* stderr */ typingsSlinky.node.Buffer, 
-      Unit
-    ]
+    callback: js.Function3[/* error */ js.Error, /* stdout */ Buffer, /* stderr */ Buffer, Unit]
   ): ChildProcess = js.native
-  def exec(command: String, options: AnonCustomFds): ChildProcess = js.native
+  def exec(command: String, options: CustomFds): ChildProcess = js.native
   def exec(
     command: String,
-    options: AnonCustomFds,
-    callback: js.Function3[
-      /* error */ js.Error, 
-      /* stdout */ typingsSlinky.node.Buffer, 
-      /* stderr */ typingsSlinky.node.Buffer, 
-      Unit
-    ]
+    options: CustomFds,
+    callback: js.Function3[/* error */ js.Error, /* stdout */ Buffer, /* stderr */ Buffer, Unit]
   ): ChildProcess = js.native
   def execFile(file: String): ChildProcess = js.native
   def execFile(file: String, args: js.Array[String]): ChildProcess = js.native
   def execFile(
     file: String,
     args: js.Array[String],
-    callback: js.Function3[
-      /* error */ js.Error, 
-      /* stdout */ typingsSlinky.node.Buffer, 
-      /* stderr */ typingsSlinky.node.Buffer, 
-      Unit
-    ]
+    callback: js.Function3[/* error */ js.Error, /* stdout */ Buffer, /* stderr */ Buffer, Unit]
   ): ChildProcess = js.native
-  def execFile(file: String, args: js.Array[String], options: AnonCwd): ChildProcess = js.native
+  def execFile(file: String, args: js.Array[String], options: Cwd): ChildProcess = js.native
   def execFile(
     file: String,
     args: js.Array[String],
-    options: AnonCwd,
-    callback: js.Function3[
-      /* error */ js.Error, 
-      /* stdout */ typingsSlinky.node.Buffer, 
-      /* stderr */ typingsSlinky.node.Buffer, 
-      Unit
-    ]
+    options: Cwd,
+    callback: js.Function3[/* error */ js.Error, /* stdout */ Buffer, /* stderr */ Buffer, Unit]
   ): ChildProcess = js.native
   def execFile(
     file: String,
-    callback: js.Function3[
-      /* error */ js.Error, 
-      /* stdout */ typingsSlinky.node.Buffer, 
-      /* stderr */ typingsSlinky.node.Buffer, 
-      Unit
-    ]
+    callback: js.Function3[/* error */ js.Error, /* stdout */ Buffer, /* stderr */ Buffer, Unit]
   ): ChildProcess = js.native
   def execFileSync(command: String): ChildProcess = js.native
   def execFileSync(command: String, args: js.Array[String]): ChildProcess = js.native
-  def execFileSync(command: String, args: js.Array[String], options: AnonEnv): ChildProcess = js.native
+  def execFileSync(command: String, args: js.Array[String], options: Env): ChildProcess = js.native
   def execSync(command: String): ChildProcess = js.native
-  def execSync(command: String, options: AnonEnv): ChildProcess = js.native
+  def execSync(command: String, options: Env): ChildProcess = js.native
   def fork(modulePath: String): ChildProcess = js.native
   def fork(modulePath: String, args: js.Array[String]): ChildProcess = js.native
-  def fork(modulePath: String, args: js.Array[String], options: AnonEncoding): ChildProcess = js.native
+  def fork(modulePath: String, args: js.Array[String], options: Encoding): ChildProcess = js.native
   def spawn(command: String): ChildProcess = js.native
   def spawn(command: String, args: js.Array[String]): ChildProcess = js.native
-  def spawn(command: String, args: js.Array[String], options: AnonCustom): ChildProcess = js.native
+  def spawn(command: String, args: js.Array[String], options: Custom): ChildProcess = js.native
 }
 

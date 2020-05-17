@@ -1,11 +1,11 @@
 package typingsSlinky.reactPlaidLink.mod
 
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactPlaidLink.AnonAccounts
-import typingsSlinky.reactPlaidLink.AnonDisplaymessage
-import typingsSlinky.reactPlaidLink.AnonEmailAddress
-import typingsSlinky.reactPlaidLink.AnonErrorcode
-import typingsSlinky.reactPlaidLink.AnonInstitution
+import typingsSlinky.reactPlaidLink.anon.Accounts
+import typingsSlinky.reactPlaidLink.anon.Displaymessage
+import typingsSlinky.reactPlaidLink.anon.EmailAddress
+import typingsSlinky.reactPlaidLink.anon.Errorcode
+import typingsSlinky.reactPlaidLink.anon.Institution
 import typingsSlinky.reactPlaidLink.reactPlaidLinkStrings.ERROR
 import typingsSlinky.reactPlaidLink.reactPlaidLinkStrings.EXIT
 import typingsSlinky.reactPlaidLink.reactPlaidLinkStrings.HANDOFF
@@ -52,13 +52,13 @@ trait PlaidLinkProps extends js.Object {
   var onEvent: js.UndefOr[
     js.Function2[
       /* eventName */ ERROR | EXIT | HANDOFF | OPEN | OPEN_MY_PLAID | SEARCH_INSTITUTION | SELECT_INSTITUTION | SUBMIT_CREDENTIALS | SUBMIT_MFA | TRANSITION_VIEW, 
-      /* metadata */ AnonErrorcode, 
+      /* metadata */ Errorcode, 
       Unit
     ]
   ] = js.native
   // A function that is called when a user has specifically exited Link flow
   var onExit: js.UndefOr[
-    js.Function2[/* error */ AnonDisplaymessage | Null, /* metadata */ AnonInstitution, Unit]
+    js.Function2[/* error */ Displaymessage | Null, /* metadata */ Institution, Unit]
   ] = js.native
   // A function that is called when the Link module has finished loading.
   // Calls to plaidLinkHandler.open() prior to the onLoad callback will be
@@ -84,13 +84,13 @@ trait PlaidLinkProps extends js.Object {
   // Specify a user object to enable all Auth features. Reach out to your
   // account manager or integrations@plaid.com to get enabled. See the Auth
   // [https://plaid.com/docs#auth] docs for integration details.
-  var user: js.UndefOr[AnonEmailAddress] = js.native
+  var user: js.UndefOr[EmailAddress] = js.native
   // Specify a webhook to associate with a user.
   var webhook: js.UndefOr[String] = js.native
   // A function that is called when a user has successfully onboarded their
   // account. The function should expect two arguments, the public_key and a
   // metadata object
-  def onSuccess(publicToken: String, metadata: AnonAccounts): Unit = js.native
+  def onSuccess(publicToken: String, metadata: Accounts): Unit = js.native
 }
 
 object PlaidLinkProps {
@@ -98,7 +98,7 @@ object PlaidLinkProps {
   def apply(
     clientName: String,
     env: tartan | sandbox | development | production,
-    onSuccess: (String, AnonAccounts) => Unit,
+    onSuccess: (String, Accounts) => Unit,
     product: js.Array[
       connect | info | auth | identity | income | transactions | assets | liabilities | investments | payment_initiation
     ],
@@ -126,7 +126,7 @@ object PlaidLinkProps {
         ret
     }
     @scala.inline
-    def withOnSuccess(value: (String, AnonAccounts) => Unit): Self = {
+    def withOnSuccess(value: (String, Accounts) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSuccess")(js.Any.fromFunction2(value))
         ret
@@ -185,7 +185,7 @@ object PlaidLinkProps {
     }
     @scala.inline
     def withOnEvent(
-      value: (/* eventName */ ERROR | EXIT | HANDOFF | OPEN | OPEN_MY_PLAID | SEARCH_INSTITUTION | SELECT_INSTITUTION | SUBMIT_CREDENTIALS | SUBMIT_MFA | TRANSITION_VIEW, /* metadata */ AnonErrorcode) => Unit
+      value: (/* eventName */ ERROR | EXIT | HANDOFF | OPEN | OPEN_MY_PLAID | SEARCH_INSTITUTION | SELECT_INSTITUTION | SUBMIT_CREDENTIALS | SUBMIT_MFA | TRANSITION_VIEW, /* metadata */ Errorcode) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEvent")(js.Any.fromFunction2(value))
@@ -198,7 +198,7 @@ object PlaidLinkProps {
         ret
     }
     @scala.inline
-    def withOnExit(value: (/* error */ AnonDisplaymessage | Null, /* metadata */ AnonInstitution) => Unit): Self = {
+    def withOnExit(value: (/* error */ Displaymessage | Null, /* metadata */ Institution) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onExit")(js.Any.fromFunction2(value))
         ret
@@ -258,7 +258,7 @@ object PlaidLinkProps {
         ret
     }
     @scala.inline
-    def withUser(value: AnonEmailAddress): Self = {
+    def withUser(value: EmailAddress): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
         ret

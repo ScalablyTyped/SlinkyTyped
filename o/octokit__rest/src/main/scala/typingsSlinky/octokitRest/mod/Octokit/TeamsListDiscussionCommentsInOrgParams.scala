@@ -13,7 +13,8 @@ trait TeamsListDiscussionCommentsInOrgParams extends js.Object {
     */
   var direction: js.UndefOr[asc | desc] = js.native
   var discussion_number: Double = js.native
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
   /**
     * Page number of the results to fetch.
     */
@@ -27,8 +28,9 @@ trait TeamsListDiscussionCommentsInOrgParams extends js.Object {
 
 object TeamsListDiscussionCommentsInOrgParams {
   @scala.inline
-  def apply(discussion_number: Double, org: String, team_slug: String): TeamsListDiscussionCommentsInOrgParams = {
-    val __obj = js.Dynamic.literal(discussion_number = discussion_number.asInstanceOf[js.Any], org = org.asInstanceOf[js.Any], team_slug = team_slug.asInstanceOf[js.Any])
+  def apply(discussion_number: Double, org_ : String, team_slug: String): TeamsListDiscussionCommentsInOrgParams = {
+    val __obj = js.Dynamic.literal(discussion_number = discussion_number.asInstanceOf[js.Any], team_slug = team_slug.asInstanceOf[js.Any])
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[TeamsListDiscussionCommentsInOrgParams]
   }
   @scala.inline
@@ -44,7 +46,7 @@ object TeamsListDiscussionCommentsInOrgParams {
         ret
     }
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

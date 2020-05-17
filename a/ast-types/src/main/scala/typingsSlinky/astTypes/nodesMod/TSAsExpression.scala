@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.nodesMod
 
-import typingsSlinky.astTypes.AnonParenthesized
+import typingsSlinky.astTypes.anon.Parenthesized
 import typingsSlinky.astTypes.kindsMod.CommentKind
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.kindsMod.SourceLocationKind
@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 trait TSAsExpression extends ASTNode {
   var comments: js.UndefOr[js.Array[CommentKind]] = js.native
   var expression: ExpressionKind = js.native
-  var extra: AnonParenthesized | Null = js.native
+  var extra: Parenthesized | Null = js.native
   var loc: js.UndefOr[SourceLocationKind] = js.native
   var `type`: typingsSlinky.astTypes.astTypesStrings.TSAsExpression = js.native
   var typeAnnotation: TSTypeKind = js.native
@@ -69,7 +69,7 @@ object TSAsExpression {
         ret
     }
     @scala.inline
-    def withExtra(value: AnonParenthesized): Self = {
+    def withExtra(value: Parenthesized): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
         ret

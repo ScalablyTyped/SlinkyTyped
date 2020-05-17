@@ -4,7 +4,7 @@ import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -37,7 +37,7 @@ import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.resize
 import typingsSlinky.reactNative.reactNativeStrings.scale
 import typingsSlinky.reactNative.reactNativeStrings.yes
-import typingsSlinky.reactNativeSnapCarousel.AnonHeight
+import typingsSlinky.reactNativeSnapCarousel.anon.Height
 import typingsSlinky.reactNativeSnapCarousel.mod.ParallaxImageProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -103,7 +103,7 @@ object ParallaxImage {
     @scala.inline
     def defaultSource(value: ImageURISource | Double): this.type = set("defaultSource", value.asInstanceOf[js.Any])
     @scala.inline
-    def dimensions(value: AnonHeight): this.type = set("dimensions", value.asInstanceOf[js.Any])
+    def dimensions(value: Height): this.type = set("dimensions", value.asInstanceOf[js.Any])
     @scala.inline
     def fadeDuration(value: Double): this.type = set("fadeDuration", value.asInstanceOf[js.Any])
     @scala.inline

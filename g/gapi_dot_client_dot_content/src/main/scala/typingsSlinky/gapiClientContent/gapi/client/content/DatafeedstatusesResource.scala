@@ -1,28 +1,28 @@
 package typingsSlinky.gapiClientContent.gapi.client.content
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientContent.AnonAlt
-import typingsSlinky.gapiClientContent.AnonCountry
-import typingsSlinky.gapiClientContent.AnonMaxResults
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientContent.anon.Alt
+import typingsSlinky.gapiClientContent.anon.Country
+import typingsSlinky.gapiClientContent.anon.MaxResults
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait DatafeedstatusesResource extends js.Object {
-  def custombatch(request: AnonAlt): Request_[DatafeedstatusesCustomBatchResponse] = js.native
+  def custombatch(request: Alt): Request[DatafeedstatusesCustomBatchResponse] = js.native
   /** Retrieves the status of a datafeed from your Merchant Center account. This method can only be called for non-multi-client accounts. */
-  def get(request: AnonCountry): Request_[DatafeedStatus] = js.native
+  def get(request: Country): Request[DatafeedStatus] = js.native
   /** Lists the statuses of the datafeeds in your Merchant Center account. This method can only be called for non-multi-client accounts. */
-  def list(request: AnonMaxResults): Request_[DatafeedstatusesListResponse] = js.native
+  def list(request: MaxResults): Request[DatafeedstatusesListResponse] = js.native
 }
 
 object DatafeedstatusesResource {
   @scala.inline
   def apply(
-    custombatch: AnonAlt => Request_[DatafeedstatusesCustomBatchResponse],
-    get: AnonCountry => Request_[DatafeedStatus],
-    list: AnonMaxResults => Request_[DatafeedstatusesListResponse]
+    custombatch: Alt => Request[DatafeedstatusesCustomBatchResponse],
+    get: Country => Request[DatafeedStatus],
+    list: MaxResults => Request[DatafeedstatusesListResponse]
   ): DatafeedstatusesResource = {
     val __obj = js.Dynamic.literal(custombatch = js.Any.fromFunction1(custombatch), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[DatafeedstatusesResource]
@@ -34,19 +34,19 @@ object DatafeedstatusesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCustombatch(value: AnonAlt => Request_[DatafeedstatusesCustomBatchResponse]): Self = {
+    def withCustombatch(value: Alt => Request[DatafeedstatusesCustomBatchResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("custombatch")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonCountry => Request_[DatafeedStatus]): Self = {
+    def withGet(value: Country => Request[DatafeedStatus]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonMaxResults => Request_[DatafeedstatusesListResponse]): Self = {
+    def withList(value: MaxResults => Request[DatafeedstatusesListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

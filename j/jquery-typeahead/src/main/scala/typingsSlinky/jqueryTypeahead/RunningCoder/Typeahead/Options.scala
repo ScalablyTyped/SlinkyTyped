@@ -557,24 +557,6 @@ object Options {
         ret
     }
     @scala.inline
-    def withGroupTemplate(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupTemplate")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupTemplate: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupTemplate")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupTemplateNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupTemplate")(null)
-        ret
-    }
-    @scala.inline
     def withHighlight(value: any | Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(value.asInstanceOf[js.Any])

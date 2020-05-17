@@ -1,6 +1,6 @@
 package typingsSlinky.evernote.mod.NoteStore
 
-import typingsSlinky.evernote.AnonAttributes
+import typingsSlinky.evernote.anon.Attributes
 import typingsSlinky.evernote.mod.Types.Guid
 import typingsSlinky.evernote.mod.Types.NoteAttributes
 import typingsSlinky.evernote.mod.Types.Timestamp
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @JSImport("evernote", "NoteStore.NoteMetadata")
 @js.native
 class NoteMetadata () extends js.Object {
-  def this(args: AnonAttributes) = this()
+  def this(args: Attributes) = this()
   var attributes: js.UndefOr[NoteAttributes] = js.native
   var contentLength: js.UndefOr[Double] = js.native
   var created: js.UndefOr[Timestamp] = js.native

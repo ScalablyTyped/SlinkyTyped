@@ -1,6 +1,6 @@
 package typingsSlinky.jestJasmine2.specMod
 
-import typingsSlinky.jestJasmine2.AnonGetColumnNumber
+import typingsSlinky.jestJasmine2.anon.GetColumnNumber
 import typingsSlinky.jestJasmine2.expectationResultFactoryMod.Options
 import typingsSlinky.jestTestResult.typesMod.FailedAssertion
 import typingsSlinky.jestTestResult.typesMod.Milliseconds
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait SpecResult extends js.Object {
-  var __callsite: js.UndefOr[AnonGetColumnNumber] = js.native
+  var __callsite: js.UndefOr[GetColumnNumber] = js.native
   var description: String = js.native
   var duration: js.UndefOr[Milliseconds] = js.native
   var failedExpectations: js.Array[FailedAssertion] = js.native
@@ -109,7 +109,7 @@ object SpecResult {
         ret
     }
     @scala.inline
-    def with__callsite(value: AnonGetColumnNumber): Self = {
+    def with__callsite(value: GetColumnNumber): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("__callsite")(value.asInstanceOf[js.Any])
         ret

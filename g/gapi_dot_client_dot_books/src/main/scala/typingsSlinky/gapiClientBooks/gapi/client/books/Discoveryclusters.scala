@@ -1,13 +1,13 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClientBooks.AnonBannerwithcontentcontainer
+import typingsSlinky.gapiClientBooks.anon.Bannerwithcontentcontainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Discoveryclusters extends js.Object {
-  var clusters: js.UndefOr[js.Array[AnonBannerwithcontentcontainer]] = js.native
+  var clusters: js.UndefOr[js.Array[Bannerwithcontentcontainer]] = js.native
   /** Resorce type. */
   var kind: js.UndefOr[String] = js.native
   var totalClusters: js.UndefOr[Double] = js.native
@@ -26,7 +26,7 @@ object Discoveryclusters {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClusters(value: js.Array[AnonBannerwithcontentcontainer]): Self = {
+    def withClusters(value: js.Array[Bannerwithcontentcontainer]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("clusters")(value.asInstanceOf[js.Any])
         ret

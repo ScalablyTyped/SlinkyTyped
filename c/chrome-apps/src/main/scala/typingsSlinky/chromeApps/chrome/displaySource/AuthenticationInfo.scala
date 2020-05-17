@@ -1,8 +1,7 @@
 package typingsSlinky.chromeApps.chrome.displaySource
 
-import typingsSlinky.chromeApps.AnonPBC
+import typingsSlinky.chromeApps.anon.PBC
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
-import typingsSlinky.chromeApps.chromeAppsStrings.PBC
 import typingsSlinky.chromeApps.chromeAppsStrings.PIN
 import typingsSlinky.std.Exclude
 import scala.scalajs.js
@@ -21,9 +20,12 @@ trait AuthenticationInfo extends js.Object {
     */
   var method: js.UndefOr[
     ToStringLiteral[
-      AnonPBC, 
-      /* keyof chrome-apps.AnonPBC */ PBC | PIN, 
-      Exclude[/* keyof chrome-apps.AnonPBC */ PBC | PIN, PBC | PIN]
+      PBC, 
+      /* keyof chrome-apps.anon.PBC */ typingsSlinky.chromeApps.chromeAppsStrings.PBC | PIN, 
+      Exclude[
+        /* keyof chrome-apps.anon.PBC */ typingsSlinky.chromeApps.chromeAppsStrings.PBC | PIN, 
+        typingsSlinky.chromeApps.chromeAppsStrings.PBC | PIN
+      ]
     ]
   ] = js.native
 }
@@ -55,9 +57,12 @@ object AuthenticationInfo {
     @scala.inline
     def withMethod(
       value: ToStringLiteral[
-          AnonPBC, 
-          /* keyof chrome-apps.AnonPBC */ PBC | PIN, 
-          Exclude[/* keyof chrome-apps.AnonPBC */ PBC | PIN, PBC | PIN]
+          PBC, 
+          /* keyof chrome-apps.anon.PBC */ typingsSlinky.chromeApps.chromeAppsStrings.PBC | PIN, 
+          Exclude[
+            /* keyof chrome-apps.anon.PBC */ typingsSlinky.chromeApps.chromeAppsStrings.PBC | PIN, 
+            typingsSlinky.chromeApps.chromeAppsStrings.PBC | PIN
+          ]
         ]
     ): Self = {
         val ret = this.duplicate

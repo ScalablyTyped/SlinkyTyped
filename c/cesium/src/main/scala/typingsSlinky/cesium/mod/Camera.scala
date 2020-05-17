@@ -1,8 +1,8 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonCancel
-import typingsSlinky.cesium.AnonComplete
-import typingsSlinky.cesium.AnonConvert
+import typingsSlinky.cesium.anon.Cancel
+import typingsSlinky.cesium.anon.Complete
+import typingsSlinky.cesium.anon.Convert
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -51,9 +51,9 @@ class Camera protected () extends js.Object {
   def computeViewRectangle(ellipsoid: Ellipsoid, result: Rectangle): js.UndefOr[Rectangle] = js.native
   def distanceToBoundingSphere(boundingSphere: BoundingSphere): Double = js.native
   def flyHome(duration: Double): Unit = js.native
-  def flyTo(options: AnonCancel): Unit = js.native
+  def flyTo(options: Cancel): Unit = js.native
   def flyToBoundingSphere(boundingSphere: BoundingSphere): Unit = js.native
-  def flyToBoundingSphere(boundingSphere: BoundingSphere, options: AnonComplete): Unit = js.native
+  def flyToBoundingSphere(boundingSphere: BoundingSphere, options: Complete): Unit = js.native
   def getMagnitude(): Double = js.native
   def getPickRay(windowPosition: Cartesian2): Ray = js.native
   def getPickRay(windowPosition: Cartesian2, result: Ray): Ray = js.native
@@ -102,7 +102,7 @@ class Camera protected () extends js.Object {
   def rotateRight(angle: Double): Unit = js.native
   def rotateUp(): Unit = js.native
   def rotateUp(angle: Double): Unit = js.native
-  def setView(options: AnonConvert): Unit = js.native
+  def setView(options: Convert): Unit = js.native
   def switchToOrthographicFrustum(): Unit = js.native
   def switchToPerspectiveFrustum(): Unit = js.native
   def twistLeft(): Unit = js.native

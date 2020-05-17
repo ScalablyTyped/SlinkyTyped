@@ -1,5 +1,6 @@
 package typingsSlinky.jqgrid
 
+import typingsSlinky.jqgrid.anon.ColModel
 import typingsSlinky.jqgrid.jqgridStrings.actions
 import typingsSlinky.jqgrid.jqgridStrings.center
 import typingsSlinky.jqgrid.jqgridStrings.checkbox
@@ -72,7 +73,7 @@ trait JQueryJqGridColumn extends js.Object {
     * @returns {} the formatted value
     */
   var formatter: js.UndefOr[
-    integer | number | currency | date | email | link | showlink | checkbox | select | actions | (js.Function3[/* cellvalue */ js.Any, /* options */ AnonColModel, /* rowObject */ js.Any, _])
+    integer | number | currency | date | email | link | showlink | checkbox | select | actions | (js.Function3[/* cellvalue */ js.Any, /* options */ ColModel, /* rowObject */ js.Any, _])
   ] = js.native
   /**
     * Defines if this column is hidden at initialization.
@@ -194,14 +195,14 @@ object JQueryJqGridColumn {
         ret
     }
     @scala.inline
-    def withFormatterFunction3(value: (/* cellvalue */ js.Any, /* options */ AnonColModel, /* rowObject */ js.Any) => _): Self = {
+    def withFormatterFunction3(value: (/* cellvalue */ js.Any, /* options */ ColModel, /* rowObject */ js.Any) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.Any.fromFunction3(value))
         ret
     }
     @scala.inline
     def withFormatter(
-      value: integer | number | currency | date | email | link | showlink | checkbox | select | actions | (js.Function3[/* cellvalue */ js.Any, /* options */ AnonColModel, /* rowObject */ js.Any, _])
+      value: integer | number | currency | date | email | link | showlink | checkbox | select | actions | (js.Function3[/* cellvalue */ js.Any, /* options */ ColModel, /* rowObject */ js.Any, _])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(value.asInstanceOf[js.Any])

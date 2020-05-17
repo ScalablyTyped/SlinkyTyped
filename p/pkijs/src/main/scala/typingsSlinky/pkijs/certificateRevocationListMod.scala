@@ -3,6 +3,7 @@ package typingsSlinky.pkijs
 import org.scalajs.dom.crypto.CryptoKey
 import typingsSlinky.asn1js.mod.BitString
 import typingsSlinky.asn1js.mod.Sequence
+import typingsSlinky.pkijs.anon.IssuerCertificate
 import typingsSlinky.std.AlgorithmIdentifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -47,7 +48,7 @@ object certificateRevocationListMod extends js.Object {
       * @param {{[issuerCertificate]: Certificate, [publicKeyInfo]: PublicKeyInfo}} parameters
       * @returns {*}
       */
-    def verify(parameters: AnonIssuerCertificate): js.Thenable[Boolean] = js.native
+    def verify(parameters: IssuerCertificate): js.Thenable[Boolean] = js.native
   }
   
   @js.native

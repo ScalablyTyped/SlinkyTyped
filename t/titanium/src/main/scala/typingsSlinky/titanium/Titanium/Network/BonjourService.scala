@@ -12,9 +12,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * Describes a service on the network which is published by Bonjour.
 		 */
-@JSGlobal("Titanium.Network.BonjourService")
 @js.native
-class BonjourService () extends Proxy {
+trait BonjourService extends Proxy {
   /**
   			 * the domain of the service
   			 */

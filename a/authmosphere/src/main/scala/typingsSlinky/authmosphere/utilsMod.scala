@@ -1,5 +1,6 @@
 package typingsSlinky.authmosphere
 
+import typingsSlinky.authmosphere.anon.Accesstoken
 import typingsSlinky.authmosphere.loggerMod.Logger
 import typingsSlinky.authmosphere.oauthconfigMod.CredentialsClientConfig
 import typingsSlinky.authmosphere.oauthconfigMod.CredentialsUserClientConfig
@@ -65,7 +66,7 @@ object utilsMod extends js.Object {
     * @param req
     * @returns {function(any): undefined}
     */
-  def setTokeninfo(req: Request_[ParamsDictionary, _, _, Query]): js.Function1[/* data */ AnonAccesstoken, Unit] = js.native
+  def setTokeninfo(req: Request_[ParamsDictionary, _, _, Query]): js.Function1[/* data */ Accesstoken, Unit] = js.native
   /**
     * Validates options object and throws TypeError if mandatory options is not specified.
     *

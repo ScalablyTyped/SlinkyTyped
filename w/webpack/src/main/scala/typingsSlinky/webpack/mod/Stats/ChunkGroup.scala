@@ -1,7 +1,7 @@
 package typingsSlinky.webpack.mod.Stats
 
 import typingsSlinky.std.Record
-import typingsSlinky.webpack.AnonAssets
+import typingsSlinky.webpack.anon.Assets
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait ChunkGroup extends js.Object {
   var assets: js.Array[String] = js.native
   var childAssets: Record[String, js.Array[String]] = js.native
-  var children: Record[String, AnonAssets] = js.native
+  var children: Record[String, Assets] = js.native
   var chunks: js.Array[Double | String] = js.native
   var isOverSizeLimit: js.UndefOr[Boolean] = js.native
 }
@@ -20,7 +20,7 @@ object ChunkGroup {
   def apply(
     assets: js.Array[String],
     childAssets: Record[String, js.Array[String]],
-    children: Record[String, AnonAssets],
+    children: Record[String, Assets],
     chunks: js.Array[Double | String]
   ): ChunkGroup = {
     val __obj = js.Dynamic.literal(assets = assets.asInstanceOf[js.Any], childAssets = childAssets.asInstanceOf[js.Any], children = children.asInstanceOf[js.Any], chunks = chunks.asInstanceOf[js.Any])
@@ -45,7 +45,7 @@ object ChunkGroup {
         ret
     }
     @scala.inline
-    def withChildren(value: Record[String, AnonAssets]): Self = {
+    def withChildren(value: Record[String, Assets]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.autobahn.mod
 
-import typingsSlinky.when.When.Promise_
+import typingsSlinky.when.When.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -105,7 +105,7 @@ object IConnectionOptions {
     }
     @scala.inline
     def withOnchallenge(
-      value: (/* session */ Session, /* method */ String, /* extra */ js.Any) => String | Promise_[String]
+      value: (/* session */ Session, /* method */ String, /* extra */ js.Any) => String | Promise[String]
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onchallenge")(js.Any.fromFunction3(value))
@@ -190,7 +190,7 @@ object IConnectionOptions {
         ret
     }
     @scala.inline
-    def withUse_deferred(value: () => Promise_[js.Any]): Self = {
+    def withUse_deferred(value: () => Promise[js.Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("use_deferred")(js.Any.fromFunction0(value))
         ret

@@ -1,18 +1,18 @@
 package typingsSlinky.webpackDevServer.mod
 
-import typingsSlinky.webpackDevServer.AnonPort
+import typingsSlinky.webpackDevServer.anon.Port
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ListeningApp extends js.Object {
-  def address(): AnonPort = js.native
+  def address(): Port = js.native
 }
 
 object ListeningApp {
   @scala.inline
-  def apply(address: () => AnonPort): ListeningApp = {
+  def apply(address: () => Port): ListeningApp = {
     val __obj = js.Dynamic.literal(address = js.Any.fromFunction0(address))
     __obj.asInstanceOf[ListeningApp]
   }
@@ -23,7 +23,7 @@ object ListeningApp {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddress(value: () => AnonPort): Self = {
+    def withAddress(value: () => Port): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("address")(js.Any.fromFunction0(value))
         ret

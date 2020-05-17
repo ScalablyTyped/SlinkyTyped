@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait ArrayBufferLike extends js.Object
 
+object ArrayBufferLike {
+  @scala.inline
+  implicit def apply(value: js.typedarray.ArrayBuffer): ArrayBufferLike = value.asInstanceOf[ArrayBufferLike]
+  @scala.inline
+  implicit def apply(value: SharedArrayBuffer): ArrayBufferLike = value.asInstanceOf[ArrayBufferLike]
+}
+

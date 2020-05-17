@@ -1,0 +1,18 @@
+package typingsSlinky.ckeditor.global.CKEDITOR
+
+import org.scalajs.dom.raw.HTMLElement
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("CKEDITOR.editable")
+@js.native
+class editable protected ()
+  extends typingsSlinky.ckeditor.CKEDITOR.editable {
+  def this(
+    editor: typingsSlinky.ckeditor.CKEDITOR.editor,
+    element: typingsSlinky.ckeditor.CKEDITOR.dom.element
+  ) = this()
+  def this(editor: typingsSlinky.ckeditor.CKEDITOR.editor, element: HTMLElement) = this()
+}
+

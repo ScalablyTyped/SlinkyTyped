@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojanimationMod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.oracleOraclejet.AnonAxis
+import typingsSlinky.oracleOraclejet.anon.Axis
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object flipOut extends js.Object {
   def apply(element: Element): js.Promise[Boolean] = js.native
-  def apply(element: Element, options: AnonAxis): js.Promise[Boolean] = js.native
+  def apply(element: Element, options: Axis): js.Promise[Boolean] = js.native
 }
 

@@ -5,12 +5,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the result of creating an audio file input node. */
-@JSGlobal("Windows.Media.Audio.CreateAudioFileInputNodeResult")
 @js.native
-abstract class CreateAudioFileInputNodeResult () extends js.Object {
+trait CreateAudioFileInputNodeResult extends js.Object {
   /** Gets the audio file input node. */
   var fileInputNode: AudioFileInputNode = js.native
   /** Gets the status of audio file input node creation. */
   var status: AudioFileNodeCreationStatus = js.native
+}
+
+object CreateAudioFileInputNodeResult {
+  @scala.inline
+  def apply(fileInputNode: AudioFileInputNode, status: AudioFileNodeCreationStatus): CreateAudioFileInputNodeResult = {
+    val __obj = js.Dynamic.literal(fileInputNode = fileInputNode.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CreateAudioFileInputNodeResult]
+  }
+  @scala.inline
+  implicit class CreateAudioFileInputNodeResultOps[Self <: CreateAudioFileInputNodeResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFileInputNode(value: AudioFileInputNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileInputNode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: AudioFileNodeCreationStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

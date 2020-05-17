@@ -4,14 +4,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Access.AccessObjectProperty")
 @js.native
-class AccessObjectProperty protected () extends js.Object {
+trait AccessObjectProperty extends js.Object {
   @JSName("Access.AccessObjectProperty_typekey")
   var AccessDotAccessObjectProperty_typekey: AccessObjectProperty = js.native
   val Name: String = js.native
   var Value: js.Any = js.native
   val _Value: js.Any = js.native
   def IsMemberSafe(dispid: Double): Boolean = js.native
+}
+
+object AccessObjectProperty {
+  @scala.inline
+  def apply(
+    AccessDotAccessObjectProperty_typekey: AccessObjectProperty,
+    IsMemberSafe: Double => Boolean,
+    Name: String,
+    Value: js.Any,
+    _Value: js.Any
+  ): AccessObjectProperty = {
+    val __obj = js.Dynamic.literal(IsMemberSafe = js.Any.fromFunction1(IsMemberSafe), Name = Name.asInstanceOf[js.Any], Value = Value.asInstanceOf[js.Any], _Value = _Value.asInstanceOf[js.Any])
+    __obj.updateDynamic("Access.AccessObjectProperty_typekey")(AccessDotAccessObjectProperty_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AccessObjectProperty]
+  }
+  @scala.inline
+  implicit class AccessObjectPropertyOps[Self <: AccessObjectProperty] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessDotAccessObjectProperty_typekey(value: AccessObjectProperty): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Access.AccessObjectProperty_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsMemberSafe(value: Double => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsMemberSafe")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_Value(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_Value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.vexflow.mod.Flow
 
-import typingsSlinky.vexflow.AnonAllvoices
-import typingsSlinky.vexflow.AnonLeftshift
 import typingsSlinky.vexflow.Vex.Flow.Stroke.Type
+import typingsSlinky.vexflow.anon.Allvoices
+import typingsSlinky.vexflow.anon.Leftshift
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 class Stroke protected ()
   extends typingsSlinky.vexflow.Vex.Flow.Stroke {
   def this(`type`: Type) = this()
-  def this(`type`: Type, options: AnonAllvoices) = this()
+  def this(`type`: Type, options: Allvoices) = this()
 }
 
 /* static members */
@@ -20,6 +20,6 @@ class Stroke protected ()
 @js.native
 object Stroke extends js.Object {
   val CATEGORY: String = js.native
-  def format(strokes: js.Array[typingsSlinky.vexflow.Vex.Flow.Stroke], state: AnonLeftshift): Boolean = js.native
+  def format(strokes: js.Array[typingsSlinky.vexflow.Vex.Flow.Stroke], state: Leftshift): Boolean = js.native
 }
 

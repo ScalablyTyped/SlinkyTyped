@@ -1,16 +1,16 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonAction
-import typingsSlinky.devextreme.AnonComponentDxList
-import typingsSlinky.devextreme.AnonComponentElementItemData
-import typingsSlinky.devextreme.AnonDirection
-import typingsSlinky.devextreme.AnonElementItemData
-import typingsSlinky.devextreme.AnonGroupData
-import typingsSlinky.devextreme.AnonItemIndexJQueryEvent
-import typingsSlinky.devextreme.AnonModelValue
-import typingsSlinky.devextreme.AnonReachedBottom
-import typingsSlinky.devextreme.AnonToIndex
+import typingsSlinky.devextreme.anon.Action
+import typingsSlinky.devextreme.anon.ComponentDxList
+import typingsSlinky.devextreme.anon.ComponentElementItemData
+import typingsSlinky.devextreme.anon.Direction
+import typingsSlinky.devextreme.anon.ElementItemData
+import typingsSlinky.devextreme.anon.GroupData
+import typingsSlinky.devextreme.anon.ItemIndexJQueryEvent
+import typingsSlinky.devextreme.anon.ModelValue
+import typingsSlinky.devextreme.anon.ReachedBottom
+import typingsSlinky.devextreme.anon.ToIndex
 import typingsSlinky.devextreme.devextremeStrings.all
 import typingsSlinky.devextreme.devextremeStrings.allPages
 import typingsSlinky.devextreme.devextremeStrings.always
@@ -33,7 +33,7 @@ import typingsSlinky.devextreme.devextremeStrings.toggle
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -77,38 +77,38 @@ trait dxListOptions
   @JSName("items")
   var items_dxListOptions: js.UndefOr[js.Array[String | dxListItem | _]] = js.native
   /** Specifies the array of items for a context menu called for a list item. */
-  var menuItems: js.UndefOr[js.Array[AnonAction]] = js.native
+  var menuItems: js.UndefOr[js.Array[Action]] = js.native
   /** Specifies whether an item context menu is shown when a user holds or swipes an item. */
   var menuMode: js.UndefOr[context | slide] = js.native
   /** The text displayed on the button used to load the next page from the data source. */
   var nextButtonText: js.UndefOr[String] = js.native
   /** A function that is executed when a group element is rendered. */
-  var onGroupRendered: js.UndefOr[js.Function1[/* e */ AnonGroupData, _]] = js.native
+  var onGroupRendered: js.UndefOr[js.Function1[/* e */ GroupData, _]] = js.native
   /** A function that is executed when a collection item is clicked or tapped. */
   @JSName("onItemClick")
-  var onItemClick_dxListOptions: js.UndefOr[(js.Function1[/* e */ AnonItemIndexJQueryEvent, _]) | String] = js.native
+  var onItemClick_dxListOptions: js.UndefOr[(js.Function1[/* e */ ItemIndexJQueryEvent, _]) | String] = js.native
   /** A function that is executed when a collection item is right-clicked or pressed. */
   @JSName("onItemContextMenu")
-  var onItemContextMenu_dxListOptions: js.UndefOr[js.Function1[/* e */ AnonItemIndexJQueryEvent, _]] = js.native
+  var onItemContextMenu_dxListOptions: js.UndefOr[js.Function1[/* e */ ItemIndexJQueryEvent, _]] = js.native
   /** A function that is executed after a list item is deleted from the data source. */
-  var onItemDeleted: js.UndefOr[js.Function1[/* e */ AnonElementItemData, _]] = js.native
+  var onItemDeleted: js.UndefOr[js.Function1[/* e */ ElementItemData, _]] = js.native
   /** A function that is executed before a collection item is deleted from the data source. */
-  var onItemDeleting: js.UndefOr[js.Function1[/* e */ AnonComponentElementItemData, _]] = js.native
+  var onItemDeleting: js.UndefOr[js.Function1[/* e */ ComponentElementItemData, _]] = js.native
   /** A function that is executed when a collection item has been held for a specified period. */
   @JSName("onItemHold")
-  var onItemHold_dxListOptions: js.UndefOr[js.Function1[/* e */ AnonItemIndexJQueryEvent, _]] = js.native
+  var onItemHold_dxListOptions: js.UndefOr[js.Function1[/* e */ ItemIndexJQueryEvent, _]] = js.native
   /** A function that is executed after a list item is moved to another position. */
-  var onItemReordered: js.UndefOr[js.Function1[/* e */ AnonToIndex, _]] = js.native
+  var onItemReordered: js.UndefOr[js.Function1[/* e */ ToIndex, _]] = js.native
   /** A function that is executed when a list item is swiped. */
-  var onItemSwipe: js.UndefOr[js.Function1[/* e */ AnonDirection, _]] = js.native
+  var onItemSwipe: js.UndefOr[js.Function1[/* e */ Direction, _]] = js.native
   /** A function that is executed before the next page is loaded. */
-  var onPageLoading: js.UndefOr[js.Function1[/* e */ AnonComponentDxList, _]] = js.native
+  var onPageLoading: js.UndefOr[js.Function1[/* e */ ComponentDxList, _]] = js.native
   /** A function that is executed when the "pull to refresh" gesture is performed. Supported in mobile themes only. */
-  var onPullRefresh: js.UndefOr[js.Function1[/* e */ AnonComponentDxList, _]] = js.native
+  var onPullRefresh: js.UndefOr[js.Function1[/* e */ ComponentDxList, _]] = js.native
   /** A function that is executed on each scroll gesture. */
-  var onScroll: js.UndefOr[js.Function1[/* e */ AnonReachedBottom, _]] = js.native
+  var onScroll: js.UndefOr[js.Function1[/* e */ ReachedBottom, _]] = js.native
   /** A function that is executed when the "Select All" check box value is changed. Applies only if the selectionMode is "all". */
-  var onSelectAllValueChanged: js.UndefOr[js.Function1[/* e */ AnonModelValue, _]] = js.native
+  var onSelectAllValueChanged: js.UndefOr[js.Function1[/* e */ ModelValue, _]] = js.native
   /** Specifies whether the next page is loaded when a user scrolls the widget to the bottom or when the "next" button is clicked. */
   var pageLoadMode: js.UndefOr[nextButton | scrollBottom] = js.native
   /** Specifies the text shown in the pullDown panel, which is displayed when the list is scrolled to the bottom. */
@@ -325,7 +325,7 @@ object dxListOptions {
         ret
     }
     @scala.inline
-    def withMenuItems(value: js.Array[AnonAction]): Self = {
+    def withMenuItems(value: js.Array[Action]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("menuItems")(value.asInstanceOf[js.Any])
         ret
@@ -361,7 +361,7 @@ object dxListOptions {
         ret
     }
     @scala.inline
-    def withOnGroupRendered(value: /* e */ AnonGroupData => _): Self = {
+    def withOnGroupRendered(value: /* e */ GroupData => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onGroupRendered")(js.Any.fromFunction1(value))
         ret
@@ -373,13 +373,13 @@ object dxListOptions {
         ret
     }
     @scala.inline
-    def withOnItemClickFunction1(value: /* e */ AnonItemIndexJQueryEvent => _): Self = {
+    def withOnItemClickFunction1(value: /* e */ ItemIndexJQueryEvent => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnItemClick(value: (js.Function1[/* e */ AnonItemIndexJQueryEvent, _]) | String): Self = {
+    def withOnItemClick(value: (js.Function1[/* e */ ItemIndexJQueryEvent, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(value.asInstanceOf[js.Any])
         ret
@@ -391,7 +391,7 @@ object dxListOptions {
         ret
     }
     @scala.inline
-    def withOnItemContextMenu(value: /* e */ AnonItemIndexJQueryEvent => _): Self = {
+    def withOnItemContextMenu(value: /* e */ ItemIndexJQueryEvent => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemContextMenu")(js.Any.fromFunction1(value))
         ret
@@ -403,7 +403,7 @@ object dxListOptions {
         ret
     }
     @scala.inline
-    def withOnItemDeleted(value: /* e */ AnonElementItemData => _): Self = {
+    def withOnItemDeleted(value: /* e */ ElementItemData => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemDeleted")(js.Any.fromFunction1(value))
         ret
@@ -415,7 +415,7 @@ object dxListOptions {
         ret
     }
     @scala.inline
-    def withOnItemDeleting(value: /* e */ AnonComponentElementItemData => _): Self = {
+    def withOnItemDeleting(value: /* e */ ComponentElementItemData => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemDeleting")(js.Any.fromFunction1(value))
         ret
@@ -427,7 +427,7 @@ object dxListOptions {
         ret
     }
     @scala.inline
-    def withOnItemHold(value: /* e */ AnonItemIndexJQueryEvent => _): Self = {
+    def withOnItemHold(value: /* e */ ItemIndexJQueryEvent => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemHold")(js.Any.fromFunction1(value))
         ret
@@ -439,7 +439,7 @@ object dxListOptions {
         ret
     }
     @scala.inline
-    def withOnItemReordered(value: /* e */ AnonToIndex => _): Self = {
+    def withOnItemReordered(value: /* e */ ToIndex => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemReordered")(js.Any.fromFunction1(value))
         ret
@@ -451,7 +451,7 @@ object dxListOptions {
         ret
     }
     @scala.inline
-    def withOnItemSwipe(value: /* e */ AnonDirection => _): Self = {
+    def withOnItemSwipe(value: /* e */ Direction => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemSwipe")(js.Any.fromFunction1(value))
         ret
@@ -463,7 +463,7 @@ object dxListOptions {
         ret
     }
     @scala.inline
-    def withOnPageLoading(value: /* e */ AnonComponentDxList => _): Self = {
+    def withOnPageLoading(value: /* e */ ComponentDxList => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPageLoading")(js.Any.fromFunction1(value))
         ret
@@ -475,7 +475,7 @@ object dxListOptions {
         ret
     }
     @scala.inline
-    def withOnPullRefresh(value: /* e */ AnonComponentDxList => _): Self = {
+    def withOnPullRefresh(value: /* e */ ComponentDxList => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPullRefresh")(js.Any.fromFunction1(value))
         ret
@@ -487,7 +487,7 @@ object dxListOptions {
         ret
     }
     @scala.inline
-    def withOnScroll(value: /* e */ AnonReachedBottom => _): Self = {
+    def withOnScroll(value: /* e */ ReachedBottom => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.Any.fromFunction1(value))
         ret
@@ -499,7 +499,7 @@ object dxListOptions {
         ret
     }
     @scala.inline
-    def withOnSelectAllValueChanged(value: /* e */ AnonModelValue => _): Self = {
+    def withOnSelectAllValueChanged(value: /* e */ ModelValue => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectAllValueChanged")(js.Any.fromFunction1(value))
         ret

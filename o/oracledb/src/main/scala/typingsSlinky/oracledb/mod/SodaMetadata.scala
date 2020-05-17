@@ -1,10 +1,10 @@
 package typingsSlinky.oracledb.mod
 
-import typingsSlinky.oracledb.AnonAssignmentMethod
-import typingsSlinky.oracledb.AnonCache
-import typingsSlinky.oracledb.AnonIndex
-import typingsSlinky.oracledb.AnonMethod
-import typingsSlinky.oracledb.AnonName
+import typingsSlinky.oracledb.anon.AssignmentMethod
+import typingsSlinky.oracledb.anon.Cache
+import typingsSlinky.oracledb.anon.Index
+import typingsSlinky.oracledb.anon.Method
+import typingsSlinky.oracledb.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,15 +19,15 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SodaMetadata extends js.Object {
   /** Object containing information related to the content column. */
-  var contentColumn: js.UndefOr[AnonCache] = js.native
+  var contentColumn: js.UndefOr[Cache] = js.native
   /** Object containing information related to the creation time column. */
-  var creationTimeColumn: js.UndefOr[AnonName] = js.native
+  var creationTimeColumn: js.UndefOr[Name] = js.native
   /** Object containing information related to the key column. */
-  var keyColumn: js.UndefOr[AnonAssignmentMethod] = js.native
+  var keyColumn: js.UndefOr[AssignmentMethod] = js.native
   /** Object containing information related to the last modified column. */
-  var lastModifiedColumn: js.UndefOr[AnonIndex] = js.native
+  var lastModifiedColumn: js.UndefOr[Index] = js.native
   /** Object containing information related to the media type column. */
-  var mediaTypeColumn: js.UndefOr[AnonName] = js.native
+  var mediaTypeColumn: js.UndefOr[Name] = js.native
   /** Specifies whether or not the collection is read-only. */
   var readOnly: js.UndefOr[Boolean] = js.native
   /** Name of the Oracle Database schema that owns the table or view to which the collection is mapped. */
@@ -35,7 +35,7 @@ trait SodaMetadata extends js.Object {
   /** Name of the table to which the collection is mapped. */
   var tableName: js.UndefOr[String] = js.native
   /** Object containing information related to the version column. */
-  var versionColumn: js.UndefOr[AnonMethod] = js.native
+  var versionColumn: js.UndefOr[Method] = js.native
   /** Name of the view to which the collection is mapped. */
   var viewName: js.UndefOr[String] = js.native
 }
@@ -53,7 +53,7 @@ object SodaMetadata {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContentColumn(value: AnonCache): Self = {
+    def withContentColumn(value: Cache): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentColumn")(value.asInstanceOf[js.Any])
         ret
@@ -65,7 +65,7 @@ object SodaMetadata {
         ret
     }
     @scala.inline
-    def withCreationTimeColumn(value: AnonName): Self = {
+    def withCreationTimeColumn(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("creationTimeColumn")(value.asInstanceOf[js.Any])
         ret
@@ -77,7 +77,7 @@ object SodaMetadata {
         ret
     }
     @scala.inline
-    def withKeyColumn(value: AnonAssignmentMethod): Self = {
+    def withKeyColumn(value: AssignmentMethod): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyColumn")(value.asInstanceOf[js.Any])
         ret
@@ -89,7 +89,7 @@ object SodaMetadata {
         ret
     }
     @scala.inline
-    def withLastModifiedColumn(value: AnonIndex): Self = {
+    def withLastModifiedColumn(value: Index): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifiedColumn")(value.asInstanceOf[js.Any])
         ret
@@ -101,7 +101,7 @@ object SodaMetadata {
         ret
     }
     @scala.inline
-    def withMediaTypeColumn(value: AnonName): Self = {
+    def withMediaTypeColumn(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mediaTypeColumn")(value.asInstanceOf[js.Any])
         ret
@@ -149,7 +149,7 @@ object SodaMetadata {
         ret
     }
     @scala.inline
-    def withVersionColumn(value: AnonMethod): Self = {
+    def withVersionColumn(value: Method): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("versionColumn")(value.asInstanceOf[js.Any])
         ret

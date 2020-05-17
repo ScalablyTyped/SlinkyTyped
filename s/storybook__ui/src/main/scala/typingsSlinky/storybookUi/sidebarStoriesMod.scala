@@ -2,6 +2,7 @@ package typingsSlinky.storybookUi
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
+import typingsSlinky.storybookUi.anon.Id
 import typingsSlinky.storybookUi.sidebarMod.SidebarProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,12 +22,12 @@ object sidebarStoriesMod extends js.Object {
   
   @js.native
   object loadingData extends js.Object {
-    var menu: js.Array[AnonId] = js.native
+    var menu: js.Array[Id] = js.native
   }
   
   @js.native
   object simpleData extends js.Object {
-    var menu: js.Array[AnonId] = js.native
+    var menu: js.Array[Id] = js.native
     var stories: js.Any = js.native
     var storyId: String = js.native
   }

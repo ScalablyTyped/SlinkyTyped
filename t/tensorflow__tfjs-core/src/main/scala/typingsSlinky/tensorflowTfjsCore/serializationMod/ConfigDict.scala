@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ConfigDict
   extends /* key */ StringDictionary[ConfigDictValue]
-     with _ConfigDictValue
+     with ConfigDictValue
 
 object ConfigDict {
   @scala.inline

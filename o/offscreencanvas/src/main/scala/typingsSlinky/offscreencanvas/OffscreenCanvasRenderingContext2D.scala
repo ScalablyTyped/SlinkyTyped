@@ -1,6 +1,5 @@
 package typingsSlinky.offscreencanvas
 
-import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.std.CanvasCompositing
 import typingsSlinky.std.CanvasDrawPath
 import typingsSlinky.std.CanvasFillStrokeStyles
@@ -39,8 +38,4 @@ trait OffscreenCanvasRenderingContext2D
      with CanvasPath {
   val canvas: OffscreenCanvas = js.native
 }
-
-@JSGlobal("OffscreenCanvasRenderingContext2D")
-@js.native
-object OffscreenCanvasRenderingContext2D extends Instantiable0[OffscreenCanvasRenderingContext2D]
 

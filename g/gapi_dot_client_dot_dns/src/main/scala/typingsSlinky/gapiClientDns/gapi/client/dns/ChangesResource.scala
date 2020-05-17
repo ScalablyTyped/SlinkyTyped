@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientDns.gapi.client.dns
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientDns.AnonAlt
-import typingsSlinky.gapiClientDns.AnonChangeId
-import typingsSlinky.gapiClientDns.AnonFields
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientDns.anon.Alt
+import typingsSlinky.gapiClientDns.anon.ChangeId
+import typingsSlinky.gapiClientDns.anon.Fields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,19 +11,19 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ChangesResource extends js.Object {
   /** Atomically update the ResourceRecordSet collection. */
-  def create(request: AnonAlt): Request_[Change] = js.native
+  def create(request: Alt): Request[Change] = js.native
   /** Fetch the representation of an existing Change. */
-  def get(request: AnonChangeId): Request_[Change] = js.native
+  def get(request: ChangeId): Request[Change] = js.native
   /** Enumerate Changes to a ResourceRecordSet collection. */
-  def list(request: AnonFields): Request_[ChangesListResponse] = js.native
+  def list(request: Fields): Request[ChangesListResponse] = js.native
 }
 
 object ChangesResource {
   @scala.inline
   def apply(
-    create: AnonAlt => Request_[Change],
-    get: AnonChangeId => Request_[Change],
-    list: AnonFields => Request_[ChangesListResponse]
+    create: Alt => Request[Change],
+    get: ChangeId => Request[Change],
+    list: Fields => Request[ChangesListResponse]
   ): ChangesResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[ChangesResource]
@@ -35,19 +35,19 @@ object ChangesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: AnonAlt => Request_[Change]): Self = {
+    def withCreate(value: Alt => Request[Change]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonChangeId => Request_[Change]): Self = {
+    def withGet(value: ChangeId => Request[Change]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonFields => Request_[ChangesListResponse]): Self = {
+    def withList(value: Fields => Request[ChangesListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

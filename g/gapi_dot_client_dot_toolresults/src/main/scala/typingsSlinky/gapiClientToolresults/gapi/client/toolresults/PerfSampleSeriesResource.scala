@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientToolresults.gapi.client.toolresults
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientToolresults.AnonFields
-import typingsSlinky.gapiClientToolresults.AnonFilter
-import typingsSlinky.gapiClientToolresults.AnonHistoryId
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientToolresults.anon.Fields
+import typingsSlinky.gapiClientToolresults.anon.Filter
+import typingsSlinky.gapiClientToolresults.anon.HistoryId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,13 +17,13 @@ trait PerfSampleSeriesResource extends js.Object {
     * May return any of the following error code(s): - ALREADY_EXISTS - PerfMetricSummary already exists for the given Step - NOT_FOUND - The containing Step
     * does not exist
     */
-  def create(request: AnonFields): Request_[PerfSampleSeries] = js.native
+  def create(request: Fields): Request[PerfSampleSeries] = js.native
   /**
     * Gets a PerfSampleSeries.
     *
     * May return any of the following error code(s): - NOT_FOUND - The specified PerfSampleSeries does not exist
     */
-  def get(request: AnonHistoryId): Request_[PerfSampleSeries] = js.native
+  def get(request: HistoryId): Request[PerfSampleSeries] = js.native
   /**
     * Lists PerfSampleSeries for a given Step.
     *
@@ -32,15 +32,15 @@ trait PerfSampleSeriesResource extends js.Object {
     *
     * May return any of the following canonical error codes: - NOT_FOUND - The containing Step does not exist
     */
-  def list(request: AnonFilter): Request_[ListPerfSampleSeriesResponse] = js.native
+  def list(request: Filter): Request[ListPerfSampleSeriesResponse] = js.native
 }
 
 object PerfSampleSeriesResource {
   @scala.inline
   def apply(
-    create: AnonFields => Request_[PerfSampleSeries],
-    get: AnonHistoryId => Request_[PerfSampleSeries],
-    list: AnonFilter => Request_[ListPerfSampleSeriesResponse],
+    create: Fields => Request[PerfSampleSeries],
+    get: HistoryId => Request[PerfSampleSeries],
+    list: Filter => Request[ListPerfSampleSeriesResponse],
     samples: SamplesResource
   ): PerfSampleSeriesResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), samples = samples.asInstanceOf[js.Any])
@@ -53,19 +53,19 @@ object PerfSampleSeriesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: AnonFields => Request_[PerfSampleSeries]): Self = {
+    def withCreate(value: Fields => Request[PerfSampleSeries]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonHistoryId => Request_[PerfSampleSeries]): Self = {
+    def withGet(value: HistoryId => Request[PerfSampleSeries]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonFilter => Request_[ListPerfSampleSeriesResponse]): Self = {
+    def withList(value: Filter => Request[ListPerfSampleSeriesResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

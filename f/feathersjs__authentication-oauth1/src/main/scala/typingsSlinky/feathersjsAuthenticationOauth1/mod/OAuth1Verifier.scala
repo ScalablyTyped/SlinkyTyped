@@ -3,7 +3,7 @@ package typingsSlinky.feathersjsAuthenticationOauth1.mod
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
-import typingsSlinky.feathersjsAuthenticationOauth1.AnonAccessToken
+import typingsSlinky.feathersjsAuthenticationOauth1.anon.AccessToken
 import typingsSlinky.feathersjsFeathers.mod.Application
 import typingsSlinky.feathersjsFeathers.mod.Paginated
 import scala.scalajs.js
@@ -15,11 +15,11 @@ import scala.scalajs.js.annotation._
 class OAuth1Verifier protected () extends js.Object {
   def this(app: Application[js.Object], options: js.Any) = this()
    // updates an existing entity
-  def _createEntity(data: AnonAccessToken): js.Promise[_] = js.native
+  def _createEntity(data: AccessToken): js.Promise[_] = js.native
    // creates an entity if they didn't exist already
   def _normalizeResult[T](results: js.Array[T]): js.Promise[T] = js.native
   def _normalizeResult[T](results: Paginated[T]): js.Promise[T] = js.native
-  def _updateEntity(entity: js.Any, data: AnonAccessToken): js.Promise[_] = js.native
+  def _updateEntity(entity: js.Any, data: AccessToken): js.Promise[_] = js.native
    // normalizes result from service to account for pagination
   def verify(
     req: Request_[ParamsDictionary, _, _, Query],

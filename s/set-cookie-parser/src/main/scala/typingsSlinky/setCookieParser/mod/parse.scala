@@ -1,8 +1,8 @@
 package typingsSlinky.setCookieParser.mod
 
 import typingsSlinky.node.httpMod.IncomingMessage
-import typingsSlinky.setCookieParser.Optionsmapfalse
-import typingsSlinky.setCookieParser.Optionsmaptrue
+import typingsSlinky.setCookieParser.anon.Optionsmapfalse
+import typingsSlinky.setCookieParser.anon.Optionsmaptrue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

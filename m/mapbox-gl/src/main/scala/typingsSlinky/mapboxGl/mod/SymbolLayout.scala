@@ -26,7 +26,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SymbolLayout
   extends Layout
-     with _AnyLayout {
+     with AnyLayout {
   var `icon-allow-overlap`: js.UndefOr[Boolean | StyleFunction | Expression] = js.native
   var `icon-anchor`: js.UndefOr[Anchor | StyleFunction | Expression] = js.native
   var `icon-ignore-placement`: js.UndefOr[Boolean] = js.native

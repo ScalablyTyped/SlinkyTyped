@@ -5,6 +5,7 @@ import typingsSlinky.nukaCarousel.mod.CarouselControlContainerProp
 import typingsSlinky.nukaCarousel.mod.CarouselHeightModeProp
 import typingsSlinky.nukaCarousel.mod.CarouselScrollModeProp
 import typingsSlinky.nukaCarousel.mod.CarouselSlideActions
+import typingsSlinky.nukaCarousel.mod.CarouselSlidesToScrollProp
 import typingsSlinky.nukaCarousel.mod.CarouselTransitionModeProp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -39,7 +40,7 @@ object nukaCarouselStrings {
   sealed trait TopRight extends CarouselControlContainerProp
   
   @js.native
-  sealed trait auto extends js.Object
+  sealed trait auto extends CarouselSlidesToScrollProp
   
   @js.native
   sealed trait center extends CarouselCellAlignProp

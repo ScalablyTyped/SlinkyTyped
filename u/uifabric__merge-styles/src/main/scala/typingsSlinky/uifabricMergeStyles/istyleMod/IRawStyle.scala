@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IRawStyle
   extends IRawStyleBase
-     with _IStyleBase {
+     with IStyleBase {
   /**
     * Display name for the style.
     */

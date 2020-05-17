@@ -1,8 +1,8 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesBar
 
-import typingsSlinky.echarts.AnonBarBorderRadius
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonFontFamily
+import typingsSlinky.echarts.anon.BarBorderRadius
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.FontFamily
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,14 +12,14 @@ trait DataObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-bar.data.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBarBorderRadius] = js.native
+  var itemStyle: js.UndefOr[BarBorderRadius] = js.native
   /**
     * The style setting of the text label in a single bar.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.data.label
     */
-  var label: js.UndefOr[AnonFontFamily] = js.native
+  var label: js.UndefOr[FontFamily] = js.native
   /**
     * The name of data item.
     *
@@ -33,7 +33,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.data.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * The value of a single data item.
     *
@@ -56,7 +56,7 @@ object DataObject {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withItemStyle(value: AnonBarBorderRadius): Self = {
+    def withItemStyle(value: BarBorderRadius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -68,7 +68,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonFontFamily): Self = {
+    def withLabel(value: FontFamily): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -92,7 +92,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

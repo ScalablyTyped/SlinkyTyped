@@ -1,7 +1,7 @@
 package typingsSlinky.ckeditorCkeditor5Engine.mod.conversion
 
-import typingsSlinky.ckeditorCkeditor5Engine.AnonAdd
-import typingsSlinky.ckeditorCkeditor5Engine.AnonModel
+import typingsSlinky.ckeditorCkeditor5Engine.anon.Add
+import typingsSlinky.ckeditorCkeditor5Engine.anon.Model
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,10 +11,10 @@ import scala.scalajs.js.annotation._
 @js.native
 class Conversion () extends js.Object {
   def attributeToAttribute(): Unit = js.native
-  def attributeToAttribute(definition: AnonModel): Unit = js.native
+  def attributeToAttribute(definition: Model): Unit = js.native
   def attributeToElement(definition: ConverterDefinition): Unit = js.native
   def elementToElement(definition: ConverterDefinition): Unit = js.native
-  def `for`(groupName: String): AnonAdd = js.native
+  def `for`(groupName: String): Add = js.native
   def register(groupName: String, dispatchers: js.Array[DowncastDispatcher | UpcastDispatcher]): Unit = js.native
 }
 

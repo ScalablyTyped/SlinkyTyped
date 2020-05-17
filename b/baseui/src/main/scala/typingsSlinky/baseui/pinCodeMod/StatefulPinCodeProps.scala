@@ -2,7 +2,7 @@ package typingsSlinky.baseui.pinCodeMod
 
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.TagMod
-import typingsSlinky.baseui.AnonValues
+import typingsSlinky.baseui.anon.Values
 import typingsSlinky.baseui.baseuiStrings.both
 import typingsSlinky.baseui.baseuiStrings.change_
 import typingsSlinky.baseui.baseuiStrings.compact
@@ -45,7 +45,7 @@ trait StatefulPinCodeProps extends js.Object {
   var min: js.UndefOr[Double] = js.native
   var name: js.UndefOr[String] = js.native
   var onBlur: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.native
-  var onChange: js.UndefOr[js.Function1[/* args */ AnonValues, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* args */ Values, Unit]] = js.native
   var onFocus: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.native
   var onKeyDown: js.UndefOr[KeyboardEventHandler[HTMLInputElement]] = js.native
   var onKeyPress: js.UndefOr[KeyboardEventHandler[HTMLInputElement]] = js.native

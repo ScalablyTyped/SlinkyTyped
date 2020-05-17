@@ -1,15 +1,15 @@
 package typingsSlinky.appdmg.mod
 
-import typingsSlinky.appdmg.AnonHeight
-import typingsSlinky.appdmg.AnonX
+import typingsSlinky.appdmg.anon.Height
+import typingsSlinky.appdmg.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SpecificationWindow extends js.Object {
-  var position: js.UndefOr[AnonX] = js.native
-  var size: js.UndefOr[AnonHeight] = js.native
+  var position: js.UndefOr[X] = js.native
+  var size: js.UndefOr[Height] = js.native
 }
 
 object SpecificationWindow {
@@ -25,7 +25,7 @@ object SpecificationWindow {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPosition(value: AnonX): Self = {
+    def withPosition(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
         ret
@@ -37,7 +37,7 @@ object SpecificationWindow {
         ret
     }
     @scala.inline
-    def withSize(value: AnonHeight): Self = {
+    def withSize(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
         ret

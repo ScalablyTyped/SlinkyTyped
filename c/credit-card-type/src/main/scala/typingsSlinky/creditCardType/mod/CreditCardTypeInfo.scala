@@ -1,13 +1,13 @@
 package typingsSlinky.creditCardType.mod
 
-import typingsSlinky.creditCardType.AnonName
+import typingsSlinky.creditCardType.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CreditCardTypeInfo extends js.Object {
-  var code: js.UndefOr[AnonName] = js.native
+  var code: js.UndefOr[Name] = js.native
   var exactPattern: js.UndefOr[js.RegExp] = js.native
   var gaps: js.UndefOr[js.Array[Double]] = js.native
   var lengths: js.UndefOr[js.Array[Double]] = js.native
@@ -29,7 +29,7 @@ object CreditCardTypeInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCode(value: AnonName): Self = {
+    def withCode(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
         ret

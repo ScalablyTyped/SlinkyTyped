@@ -2,7 +2,6 @@ package typingsSlinky.cesium.mod
 
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
-import typingsSlinky.cesium.AnonBoundingSphere
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "QuantizedMeshTerrainData")
 @js.native
 class QuantizedMeshTerrainData protected () extends js.Object {
-  def this(options: AnonBoundingSphere) = this()
+  def this(options: typingsSlinky.cesium.anon.BoundingSphere) = this()
   var waterMask: js.typedarray.Uint8Array | HTMLImageElement | HTMLCanvasElement = js.native
   def createMesh(tilingScheme: TilingScheme, x: Double, y: Double, level: Double): js.Promise[TerrainMesh] = js.native
   def interpolateHeight(rectangle: Rectangle, longitude: Double, latitude: Double): Double = js.native

@@ -1,18 +1,11 @@
 package typingsSlinky.ejWebAll.ej
 
-import org.scalajs.dom.raw.Element
-import typingsSlinky.ejWebAll.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("ej.Sparkline")
 @js.native
-class Sparkline_ protected () extends Widget_ {
-  def this(element: JQuery) = this()
-  def this(element: Element) = this()
-  def this(element: JQuery, options: Model) = this()
-  def this(element: Element, options: Model) = this()
+trait Sparkline_ extends Widget_ {
   var defaults: Model = js.native
   @JSName("model")
   var model_Sparkline_ : Model = js.native

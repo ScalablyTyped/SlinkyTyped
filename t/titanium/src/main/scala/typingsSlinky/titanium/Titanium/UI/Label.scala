@@ -27,9 +27,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A text label, with an optional background image.
 		 */
-@JSGlobal("Titanium.UI.Label")
 @js.native
-class Label () extends View {
+trait Label extends View {
   /**
   			 * Specify an attributed string for the label.
   			 */

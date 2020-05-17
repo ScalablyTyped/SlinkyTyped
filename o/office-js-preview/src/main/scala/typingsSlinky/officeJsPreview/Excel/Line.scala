@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.LineData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.LineLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.LineUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Curve
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Diamond
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Elbow
@@ -30,9 +30,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@JSGlobal("Excel.Line")
 @js.native
-class Line () extends ClientObject {
+trait Line extends ClientObject {
   /**
     *
     * Represents the length of the arrowhead at the beginning of the specified line.
@@ -178,7 +177,7 @@ class Line () extends ClientObject {
     */
   def load(): Line = js.native
   def load(options: LineLoadOptions): Line = js.native
-  def load(propertyNamesAndPaths: AnonExpand): Line = js.native
+  def load(propertyNamesAndPaths: Expand): Line = js.native
   def load(propertyNames: String): Line = js.native
   def load(propertyNames: js.Array[String]): Line = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

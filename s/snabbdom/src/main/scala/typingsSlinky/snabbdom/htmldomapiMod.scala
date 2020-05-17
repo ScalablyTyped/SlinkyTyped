@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Comment
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.Text
-import typingsSlinky.snabbdom.attributesMod._Global_.Element
+import typingsSlinky.snabbdom.attributesMod.global.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ object htmldomapiMod extends js.Object {
     def insertBefore(parentNode: Node, newNode: Node): Unit = js.native
     def insertBefore(parentNode: Node, newNode: Node, referenceNode: Node): Unit = js.native
     def isComment(node: Node): /* is std.Comment */ Boolean = js.native
-    def isElement(node: Node): /* is snabbdom.snabbdom/modules/attributes._Global_.Element */ Boolean = js.native
+    def isElement(node: Node): /* is snabbdom.snabbdom/modules/attributes.<global>.Element */ Boolean = js.native
     def isText(node: Node): /* is std.Text */ Boolean = js.native
     def nextSibling(node: Node): Node = js.native
     def parentNode(node: Node): Node = js.native

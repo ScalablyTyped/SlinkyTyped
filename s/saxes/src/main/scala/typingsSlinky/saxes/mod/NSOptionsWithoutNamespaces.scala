@@ -28,30 +28,6 @@ object NSOptionsWithoutNamespaces {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAdditionalNamespaces(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalNamespaces")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAdditionalNamespaces: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalNamespaces")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withResolvePrefix(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvePrefix")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutResolvePrefix: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resolvePrefix")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withXmlns(value: `false`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("xmlns")(value.asInstanceOf[js.Any])

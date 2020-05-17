@@ -1,13 +1,13 @@
 package typingsSlinky.serverless.mod
 
-import typingsSlinky.serverless.AnonLog
+import typingsSlinky.serverless.anon.Log
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Serverless extends js.Object {
-  var cli: AnonLog = js.native
+  var cli: Log = js.native
   var config: Config = js.native
   var pluginManager: typingsSlinky.serverless.pluginManagerMod.^ = js.native
   var serverlessDirPath: String = js.native
@@ -25,7 +25,7 @@ trait Serverless extends js.Object {
 object Serverless {
   @scala.inline
   def apply(
-    cli: AnonLog,
+    cli: Log,
     config: Config,
     getProvider: String => typingsSlinky.serverless.awsProviderMod.^,
     getVersion: () => String,
@@ -49,7 +49,7 @@ object Serverless {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCli(value: AnonLog): Self = {
+    def withCli(value: Log): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cli")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeScrollableTabView.mod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactNativeScrollableTabView.TabBarPropsDefaultTabBarP
+import typingsSlinky.reactNativeScrollableTabView.anon.TabBarPropsDefaultTabBarP
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,9 +1,9 @@
 package typingsSlinky.cypress.cypressMod.Cypress
 
+import org.scalajs.dom.raw.Document
 import typingsSlinky.cypress.cypressStrings.fullPage
 import typingsSlinky.cypress.cypressStrings.runner
 import typingsSlinky.cypress.cypressStrings.viewport
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,8 +16,8 @@ trait ScreenshotDefaultsOptions extends ScreenshotOptions {
 object ScreenshotDefaultsOptions {
   @scala.inline
   def apply(
-    afterScreenshot: Document_ => Unit,
-    beforeScreenshot: Document_ => Unit,
+    afterScreenshot: Document => Unit,
+    beforeScreenshot: Document => Unit,
     blackout: js.Array[String],
     capture: runner | viewport | fullPage,
     clip: Dimensions,

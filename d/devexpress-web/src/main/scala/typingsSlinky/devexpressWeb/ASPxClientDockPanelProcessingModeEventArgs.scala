@@ -7,16 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientDockPanel.AfterFloat event.
   */
-@JSGlobal("ASPxClientDockPanelProcessingModeEventArgs")
 @js.native
-class ASPxClientDockPanelProcessingModeEventArgs protected () extends ASPxClientProcessingModeEventArgs {
-  /**
-    * For internal use only.
-    */
-  def this(processOnServer: Boolean, zone: ASPxClientDockZone) = this()
+trait ASPxClientDockPanelProcessingModeEventArgs extends ASPxClientProcessingModeEventArgs {
   /**
     * Gets the zone currently being processed.
     */
   var zone: ASPxClientDockZone = js.native
+}
+
+object ASPxClientDockPanelProcessingModeEventArgs {
+  @scala.inline
+  def apply(processOnServer: Boolean, zone: ASPxClientDockZone): ASPxClientDockPanelProcessingModeEventArgs = {
+    val __obj = js.Dynamic.literal(processOnServer = processOnServer.asInstanceOf[js.Any], zone = zone.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientDockPanelProcessingModeEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientDockPanelProcessingModeEventArgsOps[Self <: ASPxClientDockPanelProcessingModeEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withZone(value: ASPxClientDockZone): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zone")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

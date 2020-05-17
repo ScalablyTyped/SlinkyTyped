@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientS3Node.typesGetBucketInventoryConfigurationOutputMod
 
-import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientS3Node.typesInventoryConfigurationMod.UnmarshalledInventoryConfiguration
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetBucketInventoryConfigurationOutput
   extends MetadataBearer
-     with _OutputTypesUnion {
+     with OutputTypesUnion {
   /**
     * <p>Specifies the inventory configuration.</p>
     */

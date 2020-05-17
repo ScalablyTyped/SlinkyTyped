@@ -2,7 +2,7 @@ package typingsSlinky.oracleOraclejet.ojinputtextMod
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.AnonRegexp
+import typingsSlinky.oracleOraclejet.anon.Regexp
 import typingsSlinky.oracleOraclejet.ojeditablevalueMod.editableValue
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.AsyncValidator
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.Validation.RegisteredValidator
@@ -51,7 +51,7 @@ trait inputBase[V, SP /* <: inputBaseSettableProperties[V, SV, V] */, SV, RV] ex
   var readonly: Boolean = js.native
   var required: Boolean = js.native
   @JSName("translations")
-  var translations_inputBase: AnonRegexp = js.native
+  var translations_inputBase: Regexp = js.native
   var validators: (js.Array[Validator[V] | RegisteredValidator]) | Null = js.native
   def addEventListener(`type`: autocompleteChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
@@ -149,7 +149,7 @@ trait inputBase[V, SP /* <: inputBaseSettableProperties[V, SV, V] */, SV, RV] ex
   @JSName("setProperty")
   def setProperty_required(property: required, value: Boolean): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonRegexp): Unit = js.native
+  def setProperty_translations(property: translations, value: Regexp): Unit = js.native
   @JSName("setProperty")
   def setProperty_validators(property: validators): Unit = js.native
   @JSName("setProperty")

@@ -2,7 +2,7 @@ package typingsSlinky.wreck.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.node.httpMod.ClientRequest
-import typingsSlinky.wreck.AnonHttp
+import typingsSlinky.wreck.anon.Http
 import typingsSlinky.wreck.wreckBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait RequestOptions extends js.Object {
-  var agent: js.UndefOr[AnonHttp | `false`] = js.native
+  var agent: js.UndefOr[Http | `false`] = js.native
   var baseUrl: js.UndefOr[String] = js.native
   var beforeRedirect: js.UndefOr[
     js.Function6[
@@ -53,7 +53,7 @@ object RequestOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAgent(value: AnonHttp | `false`): Self = {
+    def withAgent(value: Http | `false`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("agent")(value.asInstanceOf[js.Any])
         ret

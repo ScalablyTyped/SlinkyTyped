@@ -1,56 +1,41 @@
 package typingsSlinky.camljs.mod
 
+import typingsSlinky.camljs.anon.Avg
+import typingsSlinky.camljs.anon.Count
+import typingsSlinky.camljs.anon.Max
+import typingsSlinky.camljs.anon.Min
+import typingsSlinky.camljs.anon.Stdev
+import typingsSlinky.camljs.anon.Sum
+import typingsSlinky.camljs.anon.Var
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.camljs.AnonCount
-  - typingsSlinky.camljs.AnonSum
-  - typingsSlinky.camljs.AnonAvg
-  - typingsSlinky.camljs.AnonMax
-  - typingsSlinky.camljs.AnonMin
-  - typingsSlinky.camljs.AnonStdev
-  - typingsSlinky.camljs.AnonVar
+  - typingsSlinky.camljs.anon.Count
+  - typingsSlinky.camljs.anon.Sum
+  - typingsSlinky.camljs.anon.Avg
+  - typingsSlinky.camljs.anon.Max
+  - typingsSlinky.camljs.anon.Min
+  - typingsSlinky.camljs.anon.Stdev
+  - typingsSlinky.camljs.anon.Var
 */
-trait Aggregation extends js.Object
+trait Aggregation extends ViewField
 
 object Aggregation {
   @scala.inline
-  def AnonSum(sum: String): Aggregation = {
-    val __obj = js.Dynamic.literal(sum = sum.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Aggregation]
-  }
+  implicit def apply(value: Avg): Aggregation = value.asInstanceOf[Aggregation]
   @scala.inline
-  def AnonMin(min: String): Aggregation = {
-    val __obj = js.Dynamic.literal(min = min.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Aggregation]
-  }
+  implicit def apply(value: Count): Aggregation = value.asInstanceOf[Aggregation]
   @scala.inline
-  def AnonStdev(stdev: String): Aggregation = {
-    val __obj = js.Dynamic.literal(stdev = stdev.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Aggregation]
-  }
+  implicit def apply(value: Max): Aggregation = value.asInstanceOf[Aggregation]
   @scala.inline
-  def AnonAvg(avg: String): Aggregation = {
-    val __obj = js.Dynamic.literal(avg = avg.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Aggregation]
-  }
+  implicit def apply(value: Min): Aggregation = value.asInstanceOf[Aggregation]
   @scala.inline
-  def AnonCount(count: String): Aggregation = {
-    val __obj = js.Dynamic.literal(count = count.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Aggregation]
-  }
+  implicit def apply(value: Stdev): Aggregation = value.asInstanceOf[Aggregation]
   @scala.inline
-  def AnonMax(max: String): Aggregation = {
-    val __obj = js.Dynamic.literal(max = max.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Aggregation]
-  }
+  implicit def apply(value: Sum): Aggregation = value.asInstanceOf[Aggregation]
   @scala.inline
-  def AnonVar(`var`: String): Aggregation = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("var")(`var`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Aggregation]
-  }
+  implicit def apply(value: Var): Aggregation = value.asInstanceOf[Aggregation]
 }
 

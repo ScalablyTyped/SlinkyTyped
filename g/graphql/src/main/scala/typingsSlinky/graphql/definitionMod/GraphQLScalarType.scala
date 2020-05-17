@@ -1,7 +1,7 @@
 package typingsSlinky.graphql.definitionMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.graphql.GraphQLScalarTypeConfigan
+import typingsSlinky.graphql.anon.GraphQLScalarTypeConfigan
 import typingsSlinky.graphql.astMod.ScalarTypeDefinitionNode
 import typingsSlinky.graphql.astMod.ScalarTypeExtensionNode
 import typingsSlinky.graphql.astMod.ValueNode
@@ -14,12 +14,12 @@ import scala.scalajs.js.annotation._
 @JSImport("graphql/type/definition", "GraphQLScalarType")
 @js.native
 class GraphQLScalarType protected ()
-  extends GraphQLLeafType
-     with _GraphQLInputType
-     with _GraphQLNamedType
-     with _GraphQLNullableType
-     with _GraphQLOutputType
-     with _GraphQLType {
+  extends GraphQLInputType
+     with GraphQLLeafType
+     with GraphQLNamedType
+     with GraphQLNullableType
+     with GraphQLOutputType
+     with GraphQLType {
   def this(config: GraphQLScalarTypeConfig[_, _]) = this()
   var astNode: Maybe[ScalarTypeDefinitionNode] = js.native
   var description: Maybe[String] = js.native

@@ -1,9 +1,9 @@
 package typingsSlinky.openseadragon.mod
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Event_
-import typingsSlinky.std.Location_
+import org.scalajs.dom.raw.Location
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +39,7 @@ class Viewer protected () extends ControlDock {
     element: String,
     location: Point,
     placement: Placement,
-    onDraw: js.Function3[/* element */ HTMLElement, /* location */ Location_, /* placement */ Placement, Unit]
+    onDraw: js.Function3[/* element */ HTMLElement, /* location */ Location, /* placement */ Placement, Unit]
   ): Viewer = js.native
   def addOverlay(element: String, location: Rect): Viewer = js.native
   def addOverlay(element: String, location: Rect, placement: Placement): Viewer = js.native
@@ -47,7 +47,7 @@ class Viewer protected () extends ControlDock {
     element: String,
     location: Rect,
     placement: Placement,
-    onDraw: js.Function3[/* element */ HTMLElement, /* location */ Location_, /* placement */ Placement, Unit]
+    onDraw: js.Function3[/* element */ HTMLElement, /* location */ Location, /* placement */ Placement, Unit]
   ): Viewer = js.native
   def addOverlay(element: js.Object): Viewer = js.native
   def addOverlay(element: js.Object, location: Point): Viewer = js.native
@@ -56,7 +56,7 @@ class Viewer protected () extends ControlDock {
     element: js.Object,
     location: Point,
     placement: Placement,
-    onDraw: js.Function3[/* element */ HTMLElement, /* location */ Location_, /* placement */ Placement, Unit]
+    onDraw: js.Function3[/* element */ HTMLElement, /* location */ Location, /* placement */ Placement, Unit]
   ): Viewer = js.native
   def addOverlay(element: js.Object, location: Rect): Viewer = js.native
   def addOverlay(element: js.Object, location: Rect, placement: Placement): Viewer = js.native
@@ -64,7 +64,7 @@ class Viewer protected () extends ControlDock {
     element: js.Object,
     location: Rect,
     placement: Placement,
-    onDraw: js.Function3[/* element */ HTMLElement, /* location */ Location_, /* placement */ Placement, Unit]
+    onDraw: js.Function3[/* element */ HTMLElement, /* location */ Location, /* placement */ Placement, Unit]
   ): Viewer = js.native
   def addOverlay(element: HTMLElement): Viewer = js.native
   def addOverlay(element: HTMLElement, location: Point): Viewer = js.native
@@ -73,7 +73,7 @@ class Viewer protected () extends ControlDock {
     element: HTMLElement,
     location: Point,
     placement: Placement,
-    onDraw: js.Function3[/* element */ HTMLElement, /* location */ Location_, /* placement */ Placement, Unit]
+    onDraw: js.Function3[/* element */ HTMLElement, /* location */ Location, /* placement */ Placement, Unit]
   ): Viewer = js.native
   def addOverlay(element: HTMLElement, location: Rect): Viewer = js.native
   def addOverlay(element: HTMLElement, location: Rect, placement: Placement): Viewer = js.native
@@ -81,7 +81,7 @@ class Viewer protected () extends ControlDock {
     element: HTMLElement,
     location: Rect,
     placement: Placement,
-    onDraw: js.Function3[/* element */ HTMLElement, /* location */ Location_, /* placement */ Placement, Unit]
+    onDraw: js.Function3[/* element */ HTMLElement, /* location */ Location, /* placement */ Placement, Unit]
   ): Viewer = js.native
   def addReferenceStrip(): Unit = js.native
   def addSimpleImage(options: TiledImageOptions): Unit = js.native
@@ -95,7 +95,7 @@ class Viewer protected () extends ControlDock {
   def destroy(): Unit = js.native
   def forceRedraw(): Viewer = js.native
   def gestureSettingsByDeviceType(`type`: String): GestureSettings = js.native
-  def getHandler(eventName: String): js.Function1[/* event */ Event_, Unit] = js.native
+  def getHandler(eventName: String): js.Function1[/* event */ Event, Unit] = js.native
   def getOverlayById(element: String): Overlay = js.native
   def getOverlayById(element: Element): Overlay = js.native
   def goToPage(page: Double): Viewer = js.native
@@ -112,7 +112,7 @@ class Viewer protected () extends ControlDock {
   def raiseEvent(eventName: String): Unit = js.native
   def raiseEvent(eventName: String, eventArgs: js.Object): Unit = js.native
   def removeAllHandlers(eventName: String): Unit = js.native
-  def removeHandler(eventName: String, handler: js.Function1[/* event */ Event_, Unit]): Unit = js.native
+  def removeHandler(eventName: String, handler: js.Function1[/* event */ Event, Unit]): Unit = js.native
   def removeOverlay(overlay: String): Viewer = js.native
   def removeOverlay(overlay: Element): Viewer = js.native
   def removeReferenceStrip(): Unit = js.native

@@ -6,5 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ArrayPlugable extends Array[Plugable]
+trait ArrayPlugable
+  extends Array[Plugable]
+     with Plugable
 

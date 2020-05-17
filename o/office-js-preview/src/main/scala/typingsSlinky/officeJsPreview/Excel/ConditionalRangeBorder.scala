@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ConditionalRangeBorderData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ConditionalRangeBorderLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ConditionalRangeBorderUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Continuous
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Dash
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.DashDot
@@ -26,9 +26,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.6]
   */
-@JSGlobal("Excel.ConditionalRangeBorder")
 @js.native
-class ConditionalRangeBorder () extends ClientObject {
+trait ConditionalRangeBorder extends ClientObject {
   /**
     *
     * HTML color code representing the color of the border line, of the form #RRGGBB (e.g. "FFA500") or as a named HTML color (e.g. "orange").
@@ -60,7 +59,7 @@ class ConditionalRangeBorder () extends ClientObject {
     */
   def load(): ConditionalRangeBorder = js.native
   def load(options: ConditionalRangeBorderLoadOptions): ConditionalRangeBorder = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ConditionalRangeBorder = js.native
+  def load(propertyNamesAndPaths: Expand): ConditionalRangeBorder = js.native
   def load(propertyNames: String): ConditionalRangeBorder = js.native
   def load(propertyNames: js.Array[String]): ConditionalRangeBorder = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

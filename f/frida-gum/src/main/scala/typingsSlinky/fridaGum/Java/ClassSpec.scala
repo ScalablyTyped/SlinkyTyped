@@ -14,7 +14,7 @@ trait ClassSpec extends js.Object {
   /**
     * Interfaces implemented by this class.
     */
-  var implements: js.UndefOr[js.Array[typingsSlinky.fridaGum.Wrapper]] = js.native
+  var implements: js.UndefOr[js.Array[typingsSlinky.fridaGum.anon.Wrapper]] = js.native
   /**
     * Methods to implement. Use the special name `$init` to define one or more constructors.
     */
@@ -28,7 +28,7 @@ trait ClassSpec extends js.Object {
   /**
     * Super-class. Omit to inherit from `java.lang.Object`.
     */
-  var superClass: js.UndefOr[typingsSlinky.fridaGum.Wrapper] = js.native
+  var superClass: js.UndefOr[typingsSlinky.fridaGum.anon.Wrapper] = js.native
 }
 
 object ClassSpec {
@@ -62,7 +62,7 @@ object ClassSpec {
         ret
     }
     @scala.inline
-    def withImplements(value: js.Array[typingsSlinky.fridaGum.Wrapper]): Self = {
+    def withImplements(value: js.Array[typingsSlinky.fridaGum.anon.Wrapper]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("implements")(value.asInstanceOf[js.Any])
         ret
@@ -86,7 +86,7 @@ object ClassSpec {
         ret
     }
     @scala.inline
-    def withSuperClass(value: typingsSlinky.fridaGum.Wrapper): Self = {
+    def withSuperClass(value: typingsSlinky.fridaGum.anon.Wrapper): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("superClass")(value.asInstanceOf[js.Any])
         ret

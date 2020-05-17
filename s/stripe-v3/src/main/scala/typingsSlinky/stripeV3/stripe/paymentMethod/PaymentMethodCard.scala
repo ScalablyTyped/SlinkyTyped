@@ -1,9 +1,9 @@
 package typingsSlinky.stripeV3.stripe.paymentMethod
 
-import typingsSlinky.stripeV3.AnonAddressline1check
-import typingsSlinky.stripeV3.AnonAmexexpresscheckout
-import typingsSlinky.stripeV3.AnonCharge
-import typingsSlinky.stripeV3.AnonSupported
+import typingsSlinky.stripeV3.anon.Addressline1check
+import typingsSlinky.stripeV3.anon.Amexexpresscheckout
+import typingsSlinky.stripeV3.anon.Charge
+import typingsSlinky.stripeV3.anon.Supported
 import typingsSlinky.stripeV3.stripe.fundingType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ trait PaymentMethodCard extends js.Object {
   /**
     * Checks on Card address and CVC if provided.
     */
-  var checks: AnonAddressline1check = js.native
+  var checks: Addressline1check = js.native
   /**
     * Two-letter ISO code representing the country of the card. You
     * could use this attribute to get a sense of the international
@@ -46,7 +46,7 @@ trait PaymentMethodCard extends js.Object {
   /**
     * Details of the original PaymentMethod that created this object.
     */
-  var generated_from: AnonCharge = js.native
+  var generated_from: Charge = js.native
   /**
     * The last four digits of the card.
     */
@@ -54,25 +54,25 @@ trait PaymentMethodCard extends js.Object {
   /**
     * Contains details on how this Card maybe be used for 3D Secure authentication.
     */
-  var three_d_secure_usage: js.UndefOr[AnonSupported] = js.native
+  var three_d_secure_usage: js.UndefOr[Supported] = js.native
   /**
     * If this Card is part of a card wallet, this contains the details of
     * the card wallet.
     */
-  var wallet: AnonAmexexpresscheckout | Null = js.native
+  var wallet: Amexexpresscheckout | Null = js.native
 }
 
 object PaymentMethodCard {
   @scala.inline
   def apply(
     brand: paymentMethodCardBrand,
-    checks: AnonAddressline1check,
+    checks: Addressline1check,
     country: String,
     exp_month: Double,
     exp_year: Double,
     fingerprint: String,
     funding: fundingType,
-    generated_from: AnonCharge,
+    generated_from: Charge,
     last4: String
   ): PaymentMethodCard = {
     val __obj = js.Dynamic.literal(brand = brand.asInstanceOf[js.Any], checks = checks.asInstanceOf[js.Any], country = country.asInstanceOf[js.Any], exp_month = exp_month.asInstanceOf[js.Any], exp_year = exp_year.asInstanceOf[js.Any], fingerprint = fingerprint.asInstanceOf[js.Any], funding = funding.asInstanceOf[js.Any], generated_from = generated_from.asInstanceOf[js.Any], last4 = last4.asInstanceOf[js.Any])
@@ -91,7 +91,7 @@ object PaymentMethodCard {
         ret
     }
     @scala.inline
-    def withChecks(value: AnonAddressline1check): Self = {
+    def withChecks(value: Addressline1check): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("checks")(value.asInstanceOf[js.Any])
         ret
@@ -127,7 +127,7 @@ object PaymentMethodCard {
         ret
     }
     @scala.inline
-    def withGenerated_from(value: AnonCharge): Self = {
+    def withGenerated_from(value: Charge): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("generated_from")(value.asInstanceOf[js.Any])
         ret
@@ -139,7 +139,7 @@ object PaymentMethodCard {
         ret
     }
     @scala.inline
-    def withThree_d_secure_usage(value: AnonSupported): Self = {
+    def withThree_d_secure_usage(value: Supported): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("three_d_secure_usage")(value.asInstanceOf[js.Any])
         ret
@@ -151,7 +151,7 @@ object PaymentMethodCard {
         ret
     }
     @scala.inline
-    def withWallet(value: AnonAmexexpresscheckout): Self = {
+    def withWallet(value: Amexexpresscheckout): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("wallet")(value.asInstanceOf[js.Any])
         ret

@@ -12,14 +12,8 @@ trait ConfigPageOrGroup extends js.Object
 
 object ConfigPageOrGroup {
   @scala.inline
-  def ConfigPage(path: String, title: String): ConfigPageOrGroup = {
-    val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ConfigPageOrGroup]
-  }
+  implicit def apply(value: ConfigPage): ConfigPageOrGroup = value.asInstanceOf[ConfigPageOrGroup]
   @scala.inline
-  def ConfigPageGroup(pages: js.Array[ConfigPage], title: String): ConfigPageOrGroup = {
-    val __obj = js.Dynamic.literal(pages = pages.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ConfigPageOrGroup]
-  }
+  implicit def apply(value: ConfigPageGroup): ConfigPageOrGroup = value.asInstanceOf[ConfigPageOrGroup]
 }
 

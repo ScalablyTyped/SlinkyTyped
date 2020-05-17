@@ -1,6 +1,6 @@
 package typingsSlinky.amcharts.periodSelectorMod
 
-import typingsSlinky.amcharts.AnonCount
+import typingsSlinky.amcharts.anon.Count
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -73,7 +73,7 @@ trait PeriodSelector extends js.Object {
     * @param handler - Dispatched when dates in period selector input fields are changed or
     * user clicks on one of the predefined period buttons.
     */
-  def addListener(`type`: String, handler: js.Function1[/* e */ AnonCount, Unit]): Unit = js.native
+  def addListener(`type`: String, handler: js.Function1[/* e */ Count, Unit]): Unit = js.native
   /**
     * Removes event listener from chart object.
     */
@@ -83,7 +83,7 @@ trait PeriodSelector extends js.Object {
 object PeriodSelector {
   @scala.inline
   def apply(
-    addListener: (String, js.Function1[/* e */ AnonCount, Unit]) => Unit,
+    addListener: (String, js.Function1[/* e */ Count, Unit]) => Unit,
     dateFormat: String,
     fromText: String,
     hideOutOfScopePeriods: Boolean,
@@ -107,7 +107,7 @@ object PeriodSelector {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddListener(value: (String, js.Function1[/* e */ AnonCount, Unit]) => Unit): Self = {
+    def withAddListener(value: (String, js.Function1[/* e */ Count, Unit]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addListener")(js.Any.fromFunction2(value))
         ret

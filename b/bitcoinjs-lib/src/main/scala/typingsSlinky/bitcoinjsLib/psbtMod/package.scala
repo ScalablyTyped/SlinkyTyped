@@ -18,6 +18,6 @@ package object psbtMod {
     /* isSegwit */ scala.Boolean, 
     /* isP2SH */ scala.Boolean, 
     /* isP2WSH */ scala.Boolean, 
-    typingsSlinky.bitcoinjsLib.AnonFinalScriptSig
+    typingsSlinky.bitcoinjsLib.anon.FinalScriptSig
   ]
 }

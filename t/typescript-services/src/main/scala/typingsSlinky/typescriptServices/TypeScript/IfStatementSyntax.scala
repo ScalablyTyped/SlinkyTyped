@@ -4,20 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("TypeScript.IfStatementSyntax")
 @js.native
-class IfStatementSyntax protected ()
+trait IfStatementSyntax
   extends SyntaxNode
      with IStatementSyntax {
-  def this(
-    ifKeyword: ISyntaxToken,
-    openParenToken: ISyntaxToken,
-    condition: IExpressionSyntax,
-    closeParenToken: ISyntaxToken,
-    statement: IStatementSyntax,
-    elseClause: ElseClauseSyntax,
-    parsedInStrictMode: Boolean
-  ) = this()
   var closeParenToken: ISyntaxToken = js.native
   var condition: IExpressionSyntax = js.native
   var elseClause: ElseClauseSyntax = js.native
@@ -40,19 +30,5 @@ class IfStatementSyntax protected ()
   def withIfKeyword(ifKeyword: ISyntaxToken): IfStatementSyntax = js.native
   def withOpenParenToken(openParenToken: ISyntaxToken): IfStatementSyntax = js.native
   def withStatement(statement: IStatementSyntax): IfStatementSyntax = js.native
-}
-
-/* static members */
-@JSGlobal("TypeScript.IfStatementSyntax")
-@js.native
-object IfStatementSyntax extends js.Object {
-  def create(
-    ifKeyword: ISyntaxToken,
-    openParenToken: ISyntaxToken,
-    condition: IExpressionSyntax,
-    closeParenToken: ISyntaxToken,
-    statement: IStatementSyntax
-  ): IfStatementSyntax = js.native
-  def create1(condition: IExpressionSyntax, statement: IStatementSyntax): IfStatementSyntax = js.native
 }
 

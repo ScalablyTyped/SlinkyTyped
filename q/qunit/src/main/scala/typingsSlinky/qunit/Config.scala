@@ -1,5 +1,6 @@
 package typingsSlinky.qunit
 
+import typingsSlinky.qunit.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +25,7 @@ trait Config extends js.Object {
   var seed: String = js.native
   var testId: js.Array[String] = js.native
   var testTimeout: Double = js.native
-  var urlConfig: js.Array[AnonId] = js.native
+  var urlConfig: js.Array[Id] = js.native
 }
 
 object Config {
@@ -48,7 +49,7 @@ object Config {
     seed: String,
     testId: js.Array[String],
     testTimeout: Double,
-    urlConfig: js.Array[AnonId]
+    urlConfig: js.Array[Id]
   ): Config = {
     val __obj = js.Dynamic.literal(altertitle = altertitle.asInstanceOf[js.Any], autostart = autostart.asInstanceOf[js.Any], collapse = collapse.asInstanceOf[js.Any], current = current.asInstanceOf[js.Any], filter = filter.asInstanceOf[js.Any], fixture = fixture.asInstanceOf[js.Any], hidepassed = hidepassed.asInstanceOf[js.Any], maxDepth = maxDepth.asInstanceOf[js.Any], module = module.asInstanceOf[js.Any], moduleId = moduleId.asInstanceOf[js.Any], noglobals = noglobals.asInstanceOf[js.Any], notrycatch = notrycatch.asInstanceOf[js.Any], reorder = reorder.asInstanceOf[js.Any], requireExpects = requireExpects.asInstanceOf[js.Any], scrolltop = scrolltop.asInstanceOf[js.Any], seed = seed.asInstanceOf[js.Any], testId = testId.asInstanceOf[js.Any], testTimeout = testTimeout.asInstanceOf[js.Any], urlConfig = urlConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config]
@@ -174,7 +175,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withUrlConfig(value: js.Array[AnonId]): Self = {
+    def withUrlConfig(value: js.Array[Id]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("urlConfig")(value.asInstanceOf[js.Any])
         ret

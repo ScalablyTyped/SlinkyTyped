@@ -1,9 +1,9 @@
 package typingsSlinky.frctlFractal.mod
 
-import typingsSlinky.frctlFractal.AnonHandleString
-import typingsSlinky.frctlFractal.AnonMount
-import typingsSlinky.frctlFractal.AnonParams
-import typingsSlinky.frctlFractal.AnonPath
+import typingsSlinky.frctlFractal.anon.HandleString
+import typingsSlinky.frctlFractal.anon.Mount
+import typingsSlinky.frctlFractal.anon.Params
+import typingsSlinky.frctlFractal.anon.Path
 import typingsSlinky.frctlFractal.frctlFractalBooleans.`false`
 import typingsSlinky.frctlFractal.frctlFractalStrings.favicon
 import typingsSlinky.frctlFractal.frctlFractalStrings.format
@@ -30,8 +30,8 @@ class WebTheme protected () extends EventEmitter {
   def this(viewPaths: js.Array[String], options: WebThemeOptions) = this()
   def addLoadPath(path: String): this.type = js.native
   def addResolver(handle: String, resolvers: js.Any): this.type = js.native
-  def addRoute(path: String, opts: AnonHandleString): this.type = js.native
-  def addRoute(path: String, opts: AnonHandleString, resolver: js.Any): this.type = js.native
+  def addRoute(path: String, opts: HandleString): this.type = js.native
+  def addRoute(path: String, opts: HandleString, resolver: js.Any): this.type = js.native
   def addStatic(path: String, mount: String): Unit = js.native
   def config(): WebThemeOptions = js.native
   def config(config: WebThemeOptions): this.type = js.native
@@ -59,7 +59,7 @@ class WebTheme protected () extends EventEmitter {
   @JSName("getOption")
   def getOption_skin(key: skin): String = js.native
   @JSName("getOption")
-  def getOption_static(key: static): AnonMount = js.native
+  def getOption_static(key: static): Mount = js.native
   @JSName("getOption")
   def getOption_staticmount(key: staticDotmount): String = js.native
   @JSName("getOption")
@@ -67,7 +67,7 @@ class WebTheme protected () extends EventEmitter {
   @JSName("getOption")
   def getOption_version(key: version): String = js.native
   def loadPaths(): js.Array[String] = js.native
-  def matchRoute(urlPath: String): AnonParams | `false` = js.native
+  def matchRoute(urlPath: String): Params | `false` = js.native
   def options(): WebThemeOptions = js.native
   def options(value: WebThemeOptions): this.type = js.native
   def redirectView(): String = js.native
@@ -96,7 +96,7 @@ class WebTheme protected () extends EventEmitter {
   @JSName("setOption")
   def setOption_skin(key: skin, value: String): this.type = js.native
   @JSName("setOption")
-  def setOption_static(key: static, value: AnonMount): this.type = js.native
+  def setOption_static(key: static, value: Mount): this.type = js.native
   @JSName("setOption")
   def setOption_staticmount(key: staticDotmount, value: String): this.type = js.native
   @JSName("setOption")
@@ -104,7 +104,7 @@ class WebTheme protected () extends EventEmitter {
   @JSName("setOption")
   def setOption_version(key: version, value: String): this.type = js.native
   def setRedirectView(view: String): Unit = js.native
-  def static(): js.Array[AnonPath] = js.native
+  def static(): js.Array[Path] = js.native
   def urlFromRoute(handle: String, params: js.Any): String | Null = js.native
   def urlFromRoute(handle: String, params: js.Any, noRedirect: Boolean): String | Null = js.native
 }

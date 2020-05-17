@@ -1,7 +1,7 @@
 package typingsSlinky.grommet.radioButtonGroupMod
 
 import org.scalajs.dom.raw.HTMLInputElement
-import typingsSlinky.grommet.AnonDisabled
+import typingsSlinky.grommet.anon.Disabled
 import typingsSlinky.react.mod.ChangeEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,13 +12,13 @@ trait RadioButtonGroupProps extends js.Object {
   var disabled: js.UndefOr[Boolean] = js.native
   var name: String = js.native
   var onChange: js.UndefOr[js.Function1[/* event */ ChangeEvent[HTMLInputElement], Unit]] = js.native
-  var options: js.Array[String | AnonDisabled] = js.native
+  var options: js.Array[String | Disabled] = js.native
   var value: js.UndefOr[String | js.Object] = js.native
 }
 
 object RadioButtonGroupProps {
   @scala.inline
-  def apply(name: String, options: js.Array[String | AnonDisabled]): RadioButtonGroupProps = {
+  def apply(name: String, options: js.Array[String | Disabled]): RadioButtonGroupProps = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
     __obj.asInstanceOf[RadioButtonGroupProps]
   }
@@ -35,7 +35,7 @@ object RadioButtonGroupProps {
         ret
     }
     @scala.inline
-    def withOptions(value: js.Array[String | AnonDisabled]): Self = {
+    def withOptions(value: js.Array[String | Disabled]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

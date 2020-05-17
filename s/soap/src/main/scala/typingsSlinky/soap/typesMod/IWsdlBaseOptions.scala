@@ -1,8 +1,8 @@
 package typingsSlinky.soap.typesMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.soap.AnonNamespace
-import typingsSlinky.soap.AnonNamespaces
+import typingsSlinky.soap.anon.Namespace
+import typingsSlinky.soap.anon.Namespaces
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,12 +16,12 @@ trait IWsdlBaseOptions extends js.Object {
   var forceSoap12Headers: js.UndefOr[Boolean] = js.native
   var handleNilAsNull: js.UndefOr[Boolean] = js.native
   var ignoreBaseNameSpaces: js.UndefOr[Boolean] = js.native
-  var ignoredNamespaces: js.UndefOr[Boolean | js.Array[String] | AnonNamespaces] = js.native
+  var ignoredNamespaces: js.UndefOr[Boolean | js.Array[String] | Namespaces] = js.native
   /** provides support for nonstandard array semantics. If true, JSON arrays of the form {list: [{elem: 1}, {elem: 2}]} are marshalled into xml as <list><elem>1</elem></list> <list><elem>2</elem></list>. If false, marshalls into <list> <elem>1</elem> <elem>2</elem> </list>. Default: true. */
   var namespaceArrayElements: js.UndefOr[Boolean] = js.native
   /** if your wsdl operations contains names with non identifier characters ([^a-z$_0-9]), replace them with _. Note: if using this option, clients using wsdls with two operations like soap:method and soap-method will be overwritten. Then, use bracket notation instead (client['soap:method']()). */
   var normalizeNames: js.UndefOr[Boolean] = js.native
-  var overrideRootElement: js.UndefOr[AnonNamespace] = js.native
+  var overrideRootElement: js.UndefOr[Namespace] = js.native
   /** to preserve leading and trailing whitespace characters in text and cdata. */
   var preserveWhitespace: js.UndefOr[Boolean] = js.native
   /** return an Invalid XML SOAP fault on a bad request, default: false. */
@@ -109,7 +109,7 @@ object IWsdlBaseOptions {
         ret
     }
     @scala.inline
-    def withIgnoredNamespaces(value: Boolean | js.Array[String] | AnonNamespaces): Self = {
+    def withIgnoredNamespaces(value: Boolean | js.Array[String] | Namespaces): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ignoredNamespaces")(value.asInstanceOf[js.Any])
         ret
@@ -145,7 +145,7 @@ object IWsdlBaseOptions {
         ret
     }
     @scala.inline
-    def withOverrideRootElement(value: AnonNamespace): Self = {
+    def withOverrideRootElement(value: Namespace): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overrideRootElement")(value.asInstanceOf[js.Any])
         ret

@@ -1,8 +1,8 @@
 package typingsSlinky.winrt.Windows.UI.Input
 
-import typingsSlinky.winrt.AnonOutPoint
 import typingsSlinky.winrt.Windows.Foundation.Point
 import typingsSlinky.winrt.Windows.Foundation.Rect
+import typingsSlinky.winrt.anon.OutPoint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,16 +11,12 @@ import scala.scalajs.js.annotation._
 trait IPointerPointTransform extends js.Object {
   var inverse: IPointerPointTransform = js.native
   def transformBounds(rect: Rect): Rect = js.native
-  def tryTransform(inPoint: Point): AnonOutPoint = js.native
+  def tryTransform(inPoint: Point): OutPoint = js.native
 }
 
 object IPointerPointTransform {
   @scala.inline
-  def apply(
-    inverse: IPointerPointTransform,
-    transformBounds: Rect => Rect,
-    tryTransform: Point => AnonOutPoint
-  ): IPointerPointTransform = {
+  def apply(inverse: IPointerPointTransform, transformBounds: Rect => Rect, tryTransform: Point => OutPoint): IPointerPointTransform = {
     val __obj = js.Dynamic.literal(inverse = inverse.asInstanceOf[js.Any], transformBounds = js.Any.fromFunction1(transformBounds), tryTransform = js.Any.fromFunction1(tryTransform))
     __obj.asInstanceOf[IPointerPointTransform]
   }
@@ -43,7 +39,7 @@ object IPointerPointTransform {
         ret
     }
     @scala.inline
-    def withTryTransform(value: Point => AnonOutPoint): Self = {
+    def withTryTransform(value: Point => OutPoint): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tryTransform")(js.Any.fromFunction1(value))
         ret

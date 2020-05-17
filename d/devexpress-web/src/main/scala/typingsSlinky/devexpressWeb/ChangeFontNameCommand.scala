@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * A command to change the font name of characters in a selected range.
   */
-@JSGlobal("ChangeFontNameCommand")
 @js.native
-class ChangeFontNameCommand () extends CommandBase {
+trait ChangeFontNameCommand extends CommandBase {
   /**
     * Lists names of fonts available in the control.
     */
@@ -23,5 +22,39 @@ class ChangeFontNameCommand () extends CommandBase {
     * Gets information about the command's state.
     */
   def getState(): CommandState[String] = js.native
+}
+
+object ChangeFontNameCommand {
+  @scala.inline
+  def apply(execute: String => Boolean, fontNames: js.Array[String], getState: () => CommandState[String]): ChangeFontNameCommand = {
+    val __obj = js.Dynamic.literal(execute = js.Any.fromFunction1(execute), fontNames = fontNames.asInstanceOf[js.Any], getState = js.Any.fromFunction0(getState))
+    __obj.asInstanceOf[ChangeFontNameCommand]
+  }
+  @scala.inline
+  implicit class ChangeFontNameCommandOps[Self <: ChangeFontNameCommand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExecute(value: String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFontNames(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetState(value: () => CommandState[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getState")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

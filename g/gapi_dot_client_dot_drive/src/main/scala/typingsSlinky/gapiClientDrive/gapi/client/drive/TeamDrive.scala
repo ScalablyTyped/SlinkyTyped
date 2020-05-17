@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientDrive.gapi.client.drive
 
-import typingsSlinky.gapiClientDrive.AnonCanChangeTeamDriveBackground
-import typingsSlinky.gapiClientDrive.AnonId
+import typingsSlinky.gapiClientDrive.anon.CanChangeTeamDriveBackground
+import typingsSlinky.gapiClientDrive.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,11 +12,11 @@ trait TeamDrive extends js.Object {
     * An image file and cropping parameters from which a background image for this Team Drive is set. This is a write only field; it can only be set on
     * drive.teamdrives.update requests that don't set themeId. When specified, all fields of the backgroundImageFile must be set.
     */
-  var backgroundImageFile: js.UndefOr[AnonId] = js.native
+  var backgroundImageFile: js.UndefOr[Id] = js.native
   /** A short-lived link to this Team Drive's background image. */
   var backgroundImageLink: js.UndefOr[String] = js.native
   /** Capabilities the current user has on this Team Drive. */
-  var capabilities: js.UndefOr[AnonCanChangeTeamDriveBackground] = js.native
+  var capabilities: js.UndefOr[CanChangeTeamDriveBackground] = js.native
   /** The color of this Team Drive as an RGB hex string. It can only be set on a drive.teamdrives.update request that does not set themeId. */
   var colorRgb: js.UndefOr[String] = js.native
   /** The time at which the Team Drive was created (RFC 3339 date-time). */
@@ -48,7 +48,7 @@ object TeamDrive {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBackgroundImageFile(value: AnonId): Self = {
+    def withBackgroundImageFile(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundImageFile")(value.asInstanceOf[js.Any])
         ret
@@ -72,7 +72,7 @@ object TeamDrive {
         ret
     }
     @scala.inline
-    def withCapabilities(value: AnonCanChangeTeamDriveBackground): Self = {
+    def withCapabilities(value: CanChangeTeamDriveBackground): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("capabilities")(value.asInstanceOf[js.Any])
         ret

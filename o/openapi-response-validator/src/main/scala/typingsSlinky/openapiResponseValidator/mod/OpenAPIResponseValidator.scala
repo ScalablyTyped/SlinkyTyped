@@ -1,6 +1,6 @@
 package typingsSlinky.openapiResponseValidator.mod
 
-import typingsSlinky.openapiResponseValidator.AnonErrors
+import typingsSlinky.openapiResponseValidator.anon.Errors
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait OpenAPIResponseValidator extends IOpenAPIResponseValidator {
   var errorMapper: js.Any = js.native
   var validators: js.Any = js.native
-  def validateResponse(statusCode: js.Any, response: js.Any): AnonErrors = js.native
+  def validateResponse(statusCode: js.Any, response: js.Any): Errors = js.native
 }
 
 object OpenAPIResponseValidator {
   @scala.inline
-  def apply(errorMapper: js.Any, validateResponse: (js.Any, js.Any) => AnonErrors, validators: js.Any): OpenAPIResponseValidator = {
+  def apply(errorMapper: js.Any, validateResponse: (js.Any, js.Any) => Errors, validators: js.Any): OpenAPIResponseValidator = {
     val __obj = js.Dynamic.literal(errorMapper = errorMapper.asInstanceOf[js.Any], validateResponse = js.Any.fromFunction2(validateResponse), validators = validators.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenAPIResponseValidator]
   }
@@ -31,7 +31,7 @@ object OpenAPIResponseValidator {
         ret
     }
     @scala.inline
-    def withValidateResponse(value: (js.Any, js.Any) => AnonErrors): Self = {
+    def withValidateResponse(value: (js.Any, js.Any) => Errors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validateResponse")(js.Any.fromFunction2(value))
         ret

@@ -12,3 +12,14 @@ import scala.scalajs.js.annotation._
 */
 trait CollectionNode extends AstNode
 
+object CollectionNode {
+  @scala.inline
+  implicit def apply(value: BlockMap): CollectionNode = value.asInstanceOf[CollectionNode]
+  @scala.inline
+  implicit def apply(value: BlockSeq): CollectionNode = value.asInstanceOf[CollectionNode]
+  @scala.inline
+  implicit def apply(value: FlowMap): CollectionNode = value.asInstanceOf[CollectionNode]
+  @scala.inline
+  implicit def apply(value: FlowSeq): CollectionNode = value.asInstanceOf[CollectionNode]
+}
+

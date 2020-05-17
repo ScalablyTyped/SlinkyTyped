@@ -1,6 +1,6 @@
 package typingsSlinky.recharts.mod
 
-import typingsSlinky.recharts.AnonX
+import typingsSlinky.recharts.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait ScatterPoint extends js.Object {
   var cx: js.UndefOr[Double] = js.native
   var cy: js.UndefOr[Double] = js.native
-  var node: js.UndefOr[AnonX] = js.native
+  var node: js.UndefOr[X] = js.native
   var payload: js.UndefOr[js.Any] = js.native
   var size: js.UndefOr[Double] = js.native
 }
@@ -51,7 +51,7 @@ object ScatterPoint {
         ret
     }
     @scala.inline
-    def withNode(value: AnonX): Self = {
+    def withNode(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
         ret

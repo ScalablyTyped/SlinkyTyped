@@ -1,6 +1,5 @@
 package typingsSlinky.mathjax.MathJax
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -75,7 +74,111 @@ trait OutputJax extends js.Object {
   def preTranslate(state: js.Any): Unit = js.native
 }
 
-@JSGlobal("MathJax.OutputJax")
-@js.native
-object OutputJax extends TopLevel[OutputJax]
+object OutputJax {
+  @scala.inline
+  def apply(
+    Register: String => Unit,
+    Remove: js.Any => Unit,
+    Translate: (js.Any, js.Any) => ElementJax,
+    Zoom: (js.Any, js.Any, js.Any, Double, Double) => ZoomStruct,
+    directory: String,
+    fontDir: String,
+    getJaxFromMath: js.Any => ElementJax,
+    id: String,
+    imageDir: String,
+    postTranslate: js.Any => Unit,
+    preProcess: js.Any => Unit,
+    preTranslate: js.Any => Unit,
+    version: String
+  ): OutputJax = {
+    val __obj = js.Dynamic.literal(Register = js.Any.fromFunction1(Register), Remove = js.Any.fromFunction1(Remove), Translate = js.Any.fromFunction2(Translate), Zoom = js.Any.fromFunction5(Zoom), directory = directory.asInstanceOf[js.Any], fontDir = fontDir.asInstanceOf[js.Any], getJaxFromMath = js.Any.fromFunction1(getJaxFromMath), id = id.asInstanceOf[js.Any], imageDir = imageDir.asInstanceOf[js.Any], postTranslate = js.Any.fromFunction1(postTranslate), preProcess = js.Any.fromFunction1(preProcess), preTranslate = js.Any.fromFunction1(preTranslate), version = version.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OutputJax]
+  }
+  @scala.inline
+  implicit class OutputJaxOps[Self <: OutputJax] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRegister(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Register")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemove(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Remove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTranslate(value: (js.Any, js.Any) => ElementJax): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Translate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withZoom(value: (js.Any, js.Any, js.Any, Double, Double) => ZoomStruct): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Zoom")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withDirectory(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFontDir(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontDir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetJaxFromMath(value: js.Any => ElementJax): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getJaxFromMath")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImageDir(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imageDir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPostTranslate(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postTranslate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPreProcess(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preProcess")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPreTranslate(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preTranslate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

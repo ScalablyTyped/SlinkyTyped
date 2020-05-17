@@ -1,7 +1,6 @@
 package typingsSlinky.openseadragon.mod
 
-import org.scalajs.dom.raw.Element
-import typingsSlinky.openseadragon.AnonElement
+import typingsSlinky.openseadragon.anon.Element
 import typingsSlinky.std.EventSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,9 +9,9 @@ import scala.scalajs.js.annotation._
 @JSImport("openseadragon", "Button")
 @js.native
 class Button protected () extends EventSource {
-  def this(options: AnonElement) = this()
+  def this(options: Element) = this()
   var currentState: ButtonState = js.native
-  var element: Element = js.native
+  var element: org.scalajs.dom.raw.Element = js.native
   var fadeDelay: Double = js.native
   var fadeLength: Double = js.native
   var tracker: MouseTracker = js.native

@@ -8,11 +8,11 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.Menus.IconMenuProps
+import typingsSlinky.materialUi.MaterialUI.Menus.MenuItemProps
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.origin
 import typingsSlinky.materialUi.iconMenuMod.default
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,12 +55,14 @@ object IconMenu {
     @scala.inline
     def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: (/* e */ SyntheticEvent[Event_, js.Object], /* itemValue */ js.Any | js.Array[_]) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    def onChange(
+      value: (/* e */ SyntheticEvent[org.scalajs.dom.raw.Event, js.Object], /* itemValue */ js.Any | js.Array[_]) => Unit
+    ): this.type = set("onChange", js.Any.fromFunction2(value))
     @scala.inline
-    def onClick(value: /* e */ SyntheticEvent[Event_, js.Object] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    def onClick(value: /* e */ SyntheticEvent[org.scalajs.dom.raw.Event, js.Object] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
     def onItemClick(
-      value: (/* e */ SyntheticEvent[Event_, js.Object], /* item */ typingsSlinky.materialUi.MaterialUI.Menus.MenuItem) => Unit
+      value: (/* e */ SyntheticEvent[org.scalajs.dom.raw.Event, js.Object], ReactComponentClass[MenuItemProps]) => Unit
     ): this.type = set("onItemClick", js.Any.fromFunction2(value))
     @scala.inline
     def onKeyboardFocus(value: (/* e */ SyntheticFocusEvent[js.Object], /* isKeyboardFocused */ Boolean) => Unit): this.type = set("onKeyboardFocus", js.Any.fromFunction2(value))

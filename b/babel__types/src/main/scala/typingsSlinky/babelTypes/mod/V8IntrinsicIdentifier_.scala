@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait V8IntrinsicIdentifier_
   extends BaseNode
-     with _Node {
+     with Node {
   var name: String = js.native
   @JSName("type")
   var type_V8IntrinsicIdentifier_ : V8IntrinsicIdentifier = js.native

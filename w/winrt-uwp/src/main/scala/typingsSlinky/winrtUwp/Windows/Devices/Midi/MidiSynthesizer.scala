@@ -1,16 +1,14 @@
 package typingsSlinky.winrtUwp.Windows.Devices.Midi
 
 import typingsSlinky.winrtUwp.Windows.Devices.Enumeration.DeviceInformation
-import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the Microsoft GS wavetable software synthesizer, included in Windows. This synthesizer provides a Roland GS sound set, which includes and extends the General MIDI sound set. */
-@JSGlobal("Windows.Devices.Midi.MidiSynthesizer")
 @js.native
-abstract class MidiSynthesizer () extends js.Object {
+trait MidiSynthesizer extends js.Object {
   /** Gets the audio output device being used by this instance of the Microsoft MIDI synthesizer. */
   var audioDevice: DeviceInformation = js.native
   /** Gets the device ID of the Microsoft MIDI synthesizer. Note that all instances of the synthesizer have the same ID. */
@@ -31,26 +29,62 @@ abstract class MidiSynthesizer () extends js.Object {
   def sendMessage(midiMessage: IMidiMessage): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Devices.Midi.MidiSynthesizer")
-@js.native
-object MidiSynthesizer extends js.Object {
-  /**
-    * Creates a new instance of the Microsoft MIDI synthesizer that uses the system's default audio output device.
-    * @return An instance of the Windows MIDI synthesizer.
-    */
-  def createAsync(): IPromiseWithIAsyncOperation[MidiSynthesizer] = js.native
-  /**
-    * Creates a new instance of the Microsoft MIDI synthesizer with a specified audio output device.
-    * @param audioDevice The audio output device.
-    * @return An instance of the Microsoft MIDI synthesizer.
-    */
-  def createAsync(audioDevice: DeviceInformation): IPromiseWithIAsyncOperation[MidiSynthesizer] = js.native
-  /**
-    * Determines whether a particular device is an instance of the Microsoft MIDI synthesizer. When all MIDI out ports on the system are enumerated, this method can be used to identify which of them is the Microsoft MIDI synthesizer.
-    * @param midiDevice An object that represents the device in question.
-    * @return True if the device is the Microsoft MIDI synthesizer; otherwise, false.
-    */
-  def isSynthesizer(midiDevice: DeviceInformation): Boolean = js.native
+object MidiSynthesizer {
+  @scala.inline
+  def apply(
+    audioDevice: DeviceInformation,
+    close: () => Unit,
+    deviceId: String,
+    sendBuffer: IBuffer => Unit,
+    sendMessage: IMidiMessage => Unit,
+    volume: Double
+  ): MidiSynthesizer = {
+    val __obj = js.Dynamic.literal(audioDevice = audioDevice.asInstanceOf[js.Any], close = js.Any.fromFunction0(close), deviceId = deviceId.asInstanceOf[js.Any], sendBuffer = js.Any.fromFunction1(sendBuffer), sendMessage = js.Any.fromFunction1(sendMessage), volume = volume.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MidiSynthesizer]
+  }
+  @scala.inline
+  implicit class MidiSynthesizerOps[Self <: MidiSynthesizer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAudioDevice(value: DeviceInformation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audioDevice")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDeviceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSendBuffer(value: IBuffer => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendBuffer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSendMessage(value: IMidiMessage => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendMessage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withVolume(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("volume")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

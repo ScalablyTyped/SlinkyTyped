@@ -1,14 +1,14 @@
 package typingsSlinky.reactNativeSvgCharts.mod
 
-import typingsSlinky.reactNativeSvgCharts.AnonCornerRadius
-import typingsSlinky.reactNativeSvgCharts.PartialPathProps
+import typingsSlinky.reactNativeSvgCharts.anon.CornerRadius
+import typingsSlinky.reactNativeSvgCharts.anon.PartialPathProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait PieChartData extends js.Object {
-  var arc: js.UndefOr[AnonCornerRadius] = js.native
+  var arc: js.UndefOr[CornerRadius] = js.native
   var key: String | Double = js.native
   var svg: js.UndefOr[PartialPathProps] = js.native
   var value: js.UndefOr[Double] = js.native
@@ -33,7 +33,7 @@ object PieChartData {
         ret
     }
     @scala.inline
-    def withArc(value: AnonCornerRadius): Self = {
+    def withArc(value: CornerRadius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("arc")(value.asInstanceOf[js.Any])
         ret

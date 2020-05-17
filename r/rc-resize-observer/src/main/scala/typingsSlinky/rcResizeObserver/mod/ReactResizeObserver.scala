@@ -1,10 +1,10 @@
 package typingsSlinky.rcResizeObserver.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.rcResizeObserver.AnonHeight
+import typingsSlinky.rcResizeObserver.anon.Height
 import typingsSlinky.react.mod.Component
 import typingsSlinky.resizeObserverPolyfill.mod.ResizeObserver
-import typingsSlinky.resizeObserverPolyfill.mod._Global_.ResizeObserverCallback
+import typingsSlinky.resizeObserverPolyfill.mod.global.ResizeObserverCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait ReactResizeObserver
   var onResize: ResizeObserverCallback = js.native
   var resizeObserver: ResizeObserver | Null = js.native
   @JSName("state")
-  var state_ReactResizeObserver: AnonHeight = js.native
+  var state_ReactResizeObserver: Height = js.native
   @JSName("componentDidMount")
   def componentDidMount_MReactResizeObserver(): Unit = js.native
   @JSName("componentDidUpdate")

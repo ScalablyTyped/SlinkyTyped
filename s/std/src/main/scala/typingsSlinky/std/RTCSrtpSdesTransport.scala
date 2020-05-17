@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.std.stdStrings.error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,46 +9,41 @@ import scala.scalajs.js.annotation._
 trait RTCSrtpSdesTransport
   extends EventTarget
      with RTCTransport {
-  var onerror: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
+  var onerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
   val transport: RTCIceTransport = js.native
-  @JSName("addEventListener")
-  def addEventListener_error(`type`: error, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_error(
     `type`: error,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_error(
+    `type`: error,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_error(
     `type`: error,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_error(`type`: error, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_error(
+    `type`: error,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: error,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_error(
     `type`: error,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
-}
-
-@JSGlobal("RTCSrtpSdesTransport")
-@js.native
-object RTCSrtpSdesTransport extends Instantiable3[
-      /* transport */ RTCIceTransport, 
-      /* encryptParameters */ RTCSrtpSdesParameters, 
-      /* decryptParameters */ RTCSrtpSdesParameters, 
-      RTCSrtpSdesTransport
-    ] {
-  def getLocalParameters(): js.Array[RTCSrtpSdesParameters] = js.native
 }
 

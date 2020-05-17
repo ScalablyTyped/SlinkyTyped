@@ -12,23 +12,12 @@ class OneOfList protected ()
   extends typingsSlinky.grammarkdown.nodesMod.OneOfList {
   def this(
     oneKeyword: typingsSlinky.grammarkdown.nodesMod.Token[OneKeyword],
-    ofKeyword: js.UndefOr[scala.Nothing],
+    ofKeyword: js.UndefOr[typingsSlinky.grammarkdown.nodesMod.Token[OfKeyword]],
     indented: Boolean
   ) = this()
   def this(
     oneKeyword: typingsSlinky.grammarkdown.nodesMod.Token[OneKeyword],
-    ofKeyword: typingsSlinky.grammarkdown.nodesMod.Token[OfKeyword],
-    indented: Boolean
-  ) = this()
-  def this(
-    oneKeyword: typingsSlinky.grammarkdown.nodesMod.Token[OneKeyword],
-    ofKeyword: js.UndefOr[scala.Nothing],
-    indented: Boolean,
-    terminals: js.Array[typingsSlinky.grammarkdown.nodesMod.Terminal]
-  ) = this()
-  def this(
-    oneKeyword: typingsSlinky.grammarkdown.nodesMod.Token[OneKeyword],
-    ofKeyword: typingsSlinky.grammarkdown.nodesMod.Token[OfKeyword],
+    ofKeyword: js.UndefOr[typingsSlinky.grammarkdown.nodesMod.Token[OfKeyword]],
     indented: Boolean,
     terminals: js.Array[typingsSlinky.grammarkdown.nodesMod.Terminal]
   ) = this()

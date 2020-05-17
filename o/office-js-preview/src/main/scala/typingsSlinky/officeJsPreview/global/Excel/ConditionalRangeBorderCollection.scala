@@ -1,0 +1,17 @@
+package typingsSlinky.officeJsPreview.global.Excel
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  *
+  * Represents the border objects that make up range border.
+  *
+  * [Api set: ExcelApi 1.6]
+  */
+@JSGlobal("Excel.ConditionalRangeBorderCollection")
+@js.native
+class ConditionalRangeBorderCollection ()
+  extends typingsSlinky.officeJsPreview.Excel.ConditionalRangeBorderCollection
+

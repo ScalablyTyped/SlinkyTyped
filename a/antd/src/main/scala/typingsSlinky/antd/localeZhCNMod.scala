@@ -1,5 +1,7 @@
 package typingsSlinky.antd
 
+import typingsSlinky.antd.anon.BackToToday
+import typingsSlinky.antd.anon.Placeholder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +11,8 @@ import scala.scalajs.js.annotation._
 object localeZhCNMod extends js.Object {
   @js.native
   object default extends js.Object {
-    var lang: AnonBackToToday = js.native
-    var timePickerLocale: AnonPlaceholder = js.native
+    var lang: BackToToday = js.native
+    var timePickerLocale: Placeholder = js.native
   }
   
 }

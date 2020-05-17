@@ -1,7 +1,7 @@
 package typingsSlinky.tar.mod
 
 import typingsSlinky.node.streamMod.Writable
-import typingsSlinky.tar.ListOptionsFileOptionssyn
+import typingsSlinky.tar.anon.ListOptionsFileOptionssyn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

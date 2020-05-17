@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides information for the StatusChanged event. */
-@JSGlobal("Windows.Devices.Geolocation.StatusChangedEventArgs")
 @js.native
-abstract class StatusChangedEventArgs () extends js.Object {
+trait StatusChangedEventArgs extends js.Object {
   /** The updated status of the Geolocator object. */
   var status: PositionStatus = js.native
+}
+
+object StatusChangedEventArgs {
+  @scala.inline
+  def apply(status: PositionStatus): StatusChangedEventArgs = {
+    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
+    __obj.asInstanceOf[StatusChangedEventArgs]
+  }
+  @scala.inline
+  implicit class StatusChangedEventArgsOps[Self <: StatusChangedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStatus(value: PositionStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

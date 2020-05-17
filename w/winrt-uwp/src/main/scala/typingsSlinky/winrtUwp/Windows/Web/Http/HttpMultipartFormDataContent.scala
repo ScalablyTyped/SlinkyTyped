@@ -1,26 +1,19 @@
 package typingsSlinky.winrtUwp.Windows.Web.Http
 
-import typingsSlinky.winrtUwp.AnonLength
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperationWithProgress
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IInputStream
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IOutputStream
 import typingsSlinky.winrtUwp.Windows.Web.Http.Headers.HttpContentHeaderCollection
+import typingsSlinky.winrtUwp.anon.Length
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides HTTP content that uses the multipart/form-data MIME type. */
-@JSGlobal("Windows.Web.Http.HttpMultipartFormDataContent")
 @js.native
-/** Initializes a new instance of the HttpMultipartFormDataContent class. */
-class HttpMultipartFormDataContent () extends js.Object {
-  /**
-    * Initializes a new instance of the HttpMultipartFormDataContent class with the specified boundary string.
-    * @param boundary The boundary string for the multipart content.
-    */
-  def this(boundary: String) = this()
+trait HttpMultipartFormDataContent extends js.Object {
   /** Get a collection of content headers set on the HttpMultipartFormDataContent . */
   var headers: HttpContentHeaderCollection = js.native
   /**
@@ -71,7 +64,7 @@ class HttpMultipartFormDataContent () extends js.Object {
   /**
     * Determines whether the HttpMultipartFormDataContent has a valid length in bytes.
     */
-  def tryComputeLength(): AnonLength = js.native
+  def tryComputeLength(): Length = js.native
   /**
     * Write the HttpMultipartFormDataContent to an output stream as an asynchronous operation.
     * @param outputStream The output stream to write to.

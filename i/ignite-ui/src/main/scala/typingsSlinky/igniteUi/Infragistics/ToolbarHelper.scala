@@ -4,9 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Infragistics.ToolbarHelper")
 @js.native
-class ToolbarHelper () extends js.Object {
+trait ToolbarHelper extends js.Object {
   def analyse(el: js.Object): Unit = js.native
+}
+
+object ToolbarHelper {
+  @scala.inline
+  def apply(analyse: js.Object => Unit): ToolbarHelper = {
+    val __obj = js.Dynamic.literal(analyse = js.Any.fromFunction1(analyse))
+    __obj.asInstanceOf[ToolbarHelper]
+  }
+  @scala.inline
+  implicit class ToolbarHelperOps[Self <: ToolbarHelper] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnalyse(value: js.Object => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("analyse")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

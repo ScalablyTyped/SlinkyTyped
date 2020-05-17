@@ -7,7 +7,6 @@ import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticTouchEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.materialUi.AnonCall
 import typingsSlinky.materialUi.MaterialUI.DatePicker.DatePickerProps
 import typingsSlinky.materialUi.datePickerMod.default
 import typingsSlinky.materialUi.materialUiStrings.`inline`
@@ -29,7 +28,7 @@ object DatePicker {
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
     @scala.inline
-    def DateTimeFormat(value: AnonCall): this.type = set("DateTimeFormat", value.asInstanceOf[js.Any])
+    def DateTimeFormat(value: typingsSlinky.materialUi.anon.Call): this.type = set("DateTimeFormat", value.asInstanceOf[js.Any])
     @scala.inline
     def autoOk(value: Boolean): this.type = set("autoOk", value.asInstanceOf[js.Any])
     @scala.inline

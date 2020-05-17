@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,7 +49,62 @@ trait SceneViewPerformanceInfo extends js.Object {
   var usedMemory: Double = js.native
 }
 
-@JSGlobal("__esri.SceneViewPerformanceInfo")
-@js.native
-object SceneViewPerformanceInfo extends TopLevel[SceneViewPerformanceInfo]
+object SceneViewPerformanceInfo {
+  @scala.inline
+  def apply(
+    edgesMemory: Double,
+    layerPerformanceInfos: js.Array[LayerPerformanceInfo],
+    quality: Double,
+    terrainMemory: Double,
+    totalMemory: Double,
+    usedMemory: Double
+  ): SceneViewPerformanceInfo = {
+    val __obj = js.Dynamic.literal(edgesMemory = edgesMemory.asInstanceOf[js.Any], layerPerformanceInfos = layerPerformanceInfos.asInstanceOf[js.Any], quality = quality.asInstanceOf[js.Any], terrainMemory = terrainMemory.asInstanceOf[js.Any], totalMemory = totalMemory.asInstanceOf[js.Any], usedMemory = usedMemory.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SceneViewPerformanceInfo]
+  }
+  @scala.inline
+  implicit class SceneViewPerformanceInfoOps[Self <: SceneViewPerformanceInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEdgesMemory(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("edgesMemory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLayerPerformanceInfos(value: js.Array[LayerPerformanceInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layerPerformanceInfos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQuality(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTerrainMemory(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("terrainMemory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTotalMemory(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalMemory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUsedMemory(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("usedMemory")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

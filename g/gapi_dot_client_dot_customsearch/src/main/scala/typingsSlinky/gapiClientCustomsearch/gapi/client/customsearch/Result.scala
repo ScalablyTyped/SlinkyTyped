@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientCustomsearch.gapi.client.customsearch
 
-import typingsSlinky.gapiClientCustomsearch.AnonByteSize
-import typingsSlinky.gapiClientCustomsearch.AnonDisplayName
+import typingsSlinky.gapiClientCustomsearch.anon.ByteSize
+import typingsSlinky.gapiClientCustomsearch.anon.DisplayName
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,9 +16,9 @@ trait Result extends js.Object {
   var htmlFormattedUrl: js.UndefOr[String] = js.native
   var htmlSnippet: js.UndefOr[String] = js.native
   var htmlTitle: js.UndefOr[String] = js.native
-  var image: js.UndefOr[AnonByteSize] = js.native
+  var image: js.UndefOr[ByteSize] = js.native
   var kind: js.UndefOr[String] = js.native
-  var labels: js.UndefOr[js.Array[AnonDisplayName]] = js.native
+  var labels: js.UndefOr[js.Array[DisplayName]] = js.native
   var link: js.UndefOr[String] = js.native
   var mime: js.UndefOr[String] = js.native
   var pagemap: js.UndefOr[Record[String, js.Array[Record[String, _]]]] = js.native
@@ -123,7 +123,7 @@ object Result {
         ret
     }
     @scala.inline
-    def withImage(value: AnonByteSize): Self = {
+    def withImage(value: ByteSize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
         ret
@@ -147,7 +147,7 @@ object Result {
         ret
     }
     @scala.inline
-    def withLabels(value: js.Array[AnonDisplayName]): Self = {
+    def withLabels(value: js.Array[DisplayName]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
         ret

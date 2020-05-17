@@ -1,6 +1,6 @@
 package typingsSlinky.firebaseAppTypes.mod
 
-import typingsSlinky.firebaseAppTypes.AnonCall
+import typingsSlinky.firebaseAppTypes.anon.Call
 import typingsSlinky.firebaseLogger.loggerMod.LogCallback
 import typingsSlinky.firebaseLogger.loggerMod.LogLevelString
 import typingsSlinky.firebaseLogger.loggerMod.LogOptions
@@ -13,7 +13,7 @@ trait FirebaseNamespace extends js.Object {
   // The current SDK version.
   var SDK_VERSION: String = js.native
   @JSName("app")
-  var app_Original: AnonCall = js.native
+  var app_Original: Call = js.native
   /**
     * A (read-only) array of all the initialized Apps.
     */

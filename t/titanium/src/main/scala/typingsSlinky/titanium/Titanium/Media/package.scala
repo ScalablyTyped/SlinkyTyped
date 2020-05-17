@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation._
 
 package object Media {
   /**
+  		 * Android-specific media-related functionality.
+  		 */
+  type Android = typingsSlinky.titanium.Titanium.Module
+  /**
   		 * Fired when the currently playing media item changes.
   		 */
   type MusicPlayerPlayingchangeEvent = typingsSlinky.titanium.Titanium.Media.MusicPlayerBaseEvent

@@ -1,6 +1,7 @@
 package typingsSlinky.toastr
 
 import typingsSlinky.jquery.JQueryMouseEventObject
+import typingsSlinky.toastr.anon.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -92,7 +93,7 @@ trait ToastrOptions extends js.Object {
   /**
   	 * If specified, you must provide all classes.
   	 */
-  var iconClasses: js.UndefOr[AnonError] = js.native
+  var iconClasses: js.UndefOr[Error] = js.native
   /**
   	 * CSS class the message element will be given.
   	 * @default toast-message
@@ -391,7 +392,7 @@ object ToastrOptions {
         ret
     }
     @scala.inline
-    def withIconClasses(value: AnonError): Self = {
+    def withIconClasses(value: Error): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("iconClasses")(value.asInstanceOf[js.Any])
         ret

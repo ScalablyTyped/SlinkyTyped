@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Networking.NetworkOperators.UssdReply")
 @js.native
-class UssdReply () extends IUssdReply
+trait UssdReply extends IUssdReply
+
+object UssdReply {
+  @scala.inline
+  def apply(message: UssdMessage, resultCode: UssdResultCode): UssdReply = {
+    val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], resultCode = resultCode.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UssdReply]
+  }
+}
 

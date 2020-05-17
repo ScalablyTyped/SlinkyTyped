@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientSqladmin.gapi.client.sqladmin
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientSqladmin.AnonKey
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientSqladmin.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TiersResource extends js.Object {
   /** Lists all available service tiers for Google Cloud SQL, for example D1, D2. For related information, see Pricing. */
-  def list(request: AnonKey): Request_[TiersListResponse] = js.native
+  def list(request: Key): Request[TiersListResponse] = js.native
 }
 
 object TiersResource {
   @scala.inline
-  def apply(list: AnonKey => Request_[TiersListResponse]): TiersResource = {
+  def apply(list: Key => Request[TiersListResponse]): TiersResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[TiersResource]
   }
@@ -25,7 +25,7 @@ object TiersResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withList(value: AnonKey => Request_[TiersListResponse]): Self = {
+    def withList(value: Key => Request[TiersListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

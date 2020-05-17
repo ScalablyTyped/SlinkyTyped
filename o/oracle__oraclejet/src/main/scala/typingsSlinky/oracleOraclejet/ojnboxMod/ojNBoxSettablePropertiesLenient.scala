@@ -1,9 +1,9 @@
 package typingsSlinky.oracleOraclejet.ojnboxMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.Anon13
-import typingsSlinky.oracleOraclejet.AnonCellDefaults
-import typingsSlinky.oracleOraclejet.AnonHighlightedCount
+import typingsSlinky.oracleOraclejet.anon.CellDefaults
+import typingsSlinky.oracleOraclejet.anon.HighlightedCount
+import typingsSlinky.oracleOraclejet.anon.`13`
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojnboxMod.ojNBox.Cell
 import typingsSlinky.oracleOraclejet.ojnboxMod.ojNBox.Column
@@ -63,11 +63,11 @@ trait ojNBoxSettablePropertiesLenient[K, D]
   var rowsTitle: js.UndefOr[String] = js.native
   var selection: js.UndefOr[js.Array[K]] = js.native
   var selectionMode: js.UndefOr[none | single | multiple] = js.native
-  var styleDefaults: js.UndefOr[AnonCellDefaults] = js.native
-  var tooltip: js.UndefOr[Anon13[K]] = js.native
+  var styleDefaults: js.UndefOr[CellDefaults] = js.native
+  var tooltip: js.UndefOr[`13`[K]] = js.native
   var touchResponse: js.UndefOr[touchStart | auto] = js.native
   var trackResize: js.UndefOr[on | off] = js.native
-  var translations: js.UndefOr[AnonHighlightedCount] = js.native
+  var translations: js.UndefOr[HighlightedCount] = js.native
 }
 
 object ojNBoxSettablePropertiesLenient {
@@ -383,7 +383,7 @@ object ojNBoxSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withStyleDefaults(value: AnonCellDefaults): Self[K, D] = {
+    def withStyleDefaults(value: CellDefaults): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styleDefaults")(value.asInstanceOf[js.Any])
         ret
@@ -395,7 +395,7 @@ object ojNBoxSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTooltip(value: Anon13[K]): Self[K, D] = {
+    def withTooltip(value: `13`[K]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
@@ -431,7 +431,7 @@ object ojNBoxSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonHighlightedCount): Self[K, D] = {
+    def withTranslations(value: HighlightedCount): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

@@ -1,18 +1,18 @@
 package typingsSlinky.handsontable.mod.Handsontable.customBorders
 
-import typingsSlinky.handsontable.AnonFrom
+import typingsSlinky.handsontable.anon.From
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait BorderRange extends js.Object {
-  var range: AnonFrom = js.native
+  var range: From = js.native
 }
 
 object BorderRange {
   @scala.inline
-  def apply(range: AnonFrom): BorderRange = {
+  def apply(range: From): BorderRange = {
     val __obj = js.Dynamic.literal(range = range.asInstanceOf[js.Any])
     __obj.asInstanceOf[BorderRange]
   }
@@ -23,7 +23,7 @@ object BorderRange {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withRange(value: AnonFrom): Self = {
+    def withRange(value: From): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
         ret

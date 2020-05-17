@@ -1,0 +1,17 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Contains information defining the occurrences of a recurring client appointment.
+  */
+@JSGlobal("ASPxClientRecurrenceInfo")
+@js.native
+/**
+  * Initializes a new instance of the ASPxClientRecurrenceInfo class with default settings.
+  */
+class ASPxClientRecurrenceInfo ()
+  extends typingsSlinky.devexpressWeb.ASPxClientRecurrenceInfo
+

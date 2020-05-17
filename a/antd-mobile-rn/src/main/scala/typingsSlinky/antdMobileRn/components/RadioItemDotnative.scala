@@ -2,7 +2,7 @@ package typingsSlinky.antdMobileRn.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antdMobileRn.AnonTarget
+import typingsSlinky.antdMobileRn.anon.Target
 import typingsSlinky.antdMobileRn.radioItemNativeMod.RadioItemNativeProps
 import typingsSlinky.antdMobileRn.radioItemNativeMod.default
 import typingsSlinky.antdMobileRn.radioStyleIndexNativeMod.IRadioStyle
@@ -31,7 +31,7 @@ object RadioItemDotnative {
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* e */ AnonTarget => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ Target => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def onClick(value: () => _): this.type = set("onClick", js.Any.fromFunction0(value))
     @scala.inline

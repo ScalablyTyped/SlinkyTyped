@@ -2,7 +2,7 @@ package typingsSlinky.reactForm.mod
 
 import typingsSlinky.react.mod.ChildContextProvider
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactForm.FieldPropschildrenpropsFi
+import typingsSlinky.reactForm.anon.FieldPropschildrenpropsFi
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

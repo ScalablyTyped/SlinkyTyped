@@ -1,6 +1,6 @@
 package typingsSlinky.nodelibFsStat.optionsMod
 
-import typingsSlinky.nodelibFsStat.PartialFileSystemAdapter
+import typingsSlinky.nodelibFsStat.anon.PartialFileSystemAdapter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -2,14 +2,14 @@ package typingsSlinky.oracleOraclejet.ojtableMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.Anon19
-import typingsSlinky.oracleOraclejet.AnonColumnKey
-import typingsSlinky.oracleOraclejet.AnonDropReorder
-import typingsSlinky.oracleOraclejet.AnonField
-import typingsSlinky.oracleOraclejet.AnonFooterClassName
-import typingsSlinky.oracleOraclejet.AnonLabelAccSelectionAffordanceBottom
-import typingsSlinky.oracleOraclejet.AnonMaxCount
-import typingsSlinky.oracleOraclejet.AnonRowHeader
+import typingsSlinky.oracleOraclejet.anon.ColumnKey
+import typingsSlinky.oracleOraclejet.anon.DropReorder
+import typingsSlinky.oracleOraclejet.anon.Field
+import typingsSlinky.oracleOraclejet.anon.FooterClassName
+import typingsSlinky.oracleOraclejet.anon.LabelAccSelectionAffordanceBottom
+import typingsSlinky.oracleOraclejet.anon.MaxCount
+import typingsSlinky.oracleOraclejet.anon.RowHeader
+import typingsSlinky.oracleOraclejet.anon.`19`
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojtableMod.ojTable.ColumnSelectionEnd
 import typingsSlinky.oracleOraclejet.ojtableMod.ojTable.ColumnSelectionStart
@@ -33,14 +33,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ojTableSettablePropertiesLenient[K, D]
   extends /* key */ StringDictionary[js.Any] {
-  var accessibility: js.UndefOr[AnonRowHeader] = js.native
+  var accessibility: js.UndefOr[RowHeader] = js.native
   var as: js.UndefOr[String] = js.native
-  var columns: js.UndefOr[js.Array[AnonField[K, D]]] = js.native
-  var columnsDefault: js.UndefOr[AnonFooterClassName[K, D]] = js.native
+  var columns: js.UndefOr[js.Array[Field[K, D]]] = js.native
+  var columnsDefault: js.UndefOr[FooterClassName[K, D]] = js.native
   var currentRow: js.UndefOr[CurrentRow[K]] = js.native
   var data: js.UndefOr[DataProvider[K, D]] = js.native
   var display: js.UndefOr[list | grid] = js.native
-  var dnd: js.UndefOr[AnonDropReorder[K, D]] = js.native
+  var dnd: js.UndefOr[DropReorder[K, D]] = js.native
   var editMode: js.UndefOr[none | rowEdit] = js.native
   var firstSelectedRow: js.UndefOr[js.Object] = js.native
   var horizontalGridVisible: js.UndefOr[auto | enabled | disabled] = js.native
@@ -48,16 +48,16 @@ trait ojTableSettablePropertiesLenient[K, D]
     js.Function1[/* context */ RowRendererContext[K, D], String | HTMLElement | Unit]
   ] = js.native
   var scrollPolicy: js.UndefOr[auto | loadMoreOnScroll] = js.native
-  var scrollPolicyOptions: js.UndefOr[AnonMaxCount] = js.native
-  var scrollPosition: js.UndefOr[AnonColumnKey] = js.native
+  var scrollPolicyOptions: js.UndefOr[MaxCount] = js.native
+  var scrollPosition: js.UndefOr[ColumnKey] = js.native
   var selection: js.UndefOr[
     js.Array[
       (RowSelectionStart[K] with RowSelectionEnd[K]) | (ColumnSelectionStart[K] with ColumnSelectionEnd[K])
     ]
   ] = js.native
-  var selectionMode: js.UndefOr[Anon19] = js.native
+  var selectionMode: js.UndefOr[`19`] = js.native
   var selectionRequired: js.UndefOr[Boolean] = js.native
-  var translations: js.UndefOr[AnonLabelAccSelectionAffordanceBottom] = js.native
+  var translations: js.UndefOr[LabelAccSelectionAffordanceBottom] = js.native
   var verticalGridVisible: js.UndefOr[auto | enabled | disabled] = js.native
 }
 
@@ -74,7 +74,7 @@ object ojTableSettablePropertiesLenient {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): (Self[K, D]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[K, D]) with Other]
     @scala.inline
-    def withAccessibility(value: AnonRowHeader): Self[K, D] = {
+    def withAccessibility(value: RowHeader): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("accessibility")(value.asInstanceOf[js.Any])
         ret
@@ -98,7 +98,7 @@ object ojTableSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withColumns(value: js.Array[AnonField[K, D]]): Self[K, D] = {
+    def withColumns(value: js.Array[Field[K, D]]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
         ret
@@ -110,7 +110,7 @@ object ojTableSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withColumnsDefault(value: AnonFooterClassName[K, D]): Self[K, D] = {
+    def withColumnsDefault(value: FooterClassName[K, D]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnsDefault")(value.asInstanceOf[js.Any])
         ret
@@ -158,7 +158,7 @@ object ojTableSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withDnd(value: AnonDropReorder[K, D]): Self[K, D] = {
+    def withDnd(value: DropReorder[K, D]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dnd")(value.asInstanceOf[js.Any])
         ret
@@ -230,7 +230,7 @@ object ojTableSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withScrollPolicyOptions(value: AnonMaxCount): Self[K, D] = {
+    def withScrollPolicyOptions(value: MaxCount): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPolicyOptions")(value.asInstanceOf[js.Any])
         ret
@@ -242,7 +242,7 @@ object ojTableSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withScrollPosition(value: AnonColumnKey): Self[K, D] = {
+    def withScrollPosition(value: ColumnKey): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPosition")(value.asInstanceOf[js.Any])
         ret
@@ -270,7 +270,7 @@ object ojTableSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withSelectionMode(value: Anon19): Self[K, D] = {
+    def withSelectionMode(value: `19`): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
         ret
@@ -294,7 +294,7 @@ object ojTableSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelAccSelectionAffordanceBottom): Self[K, D] = {
+    def withTranslations(value: LabelAccSelectionAffordanceBottom): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

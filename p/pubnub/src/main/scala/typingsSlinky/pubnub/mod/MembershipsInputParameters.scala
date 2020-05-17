@@ -1,19 +1,19 @@
 package typingsSlinky.pubnub.mod
 
-import typingsSlinky.pubnub.AnonCustom
+import typingsSlinky.pubnub.anon.Custom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait MembershipsInputParameters extends GetObjectsParameters {
-  var spaces: js.Array[AnonCustom] = js.native
+  var spaces: js.Array[Custom] = js.native
   var userId: String = js.native
 }
 
 object MembershipsInputParameters {
   @scala.inline
-  def apply(spaces: js.Array[AnonCustom], userId: String): MembershipsInputParameters = {
+  def apply(spaces: js.Array[Custom], userId: String): MembershipsInputParameters = {
     val __obj = js.Dynamic.literal(spaces = spaces.asInstanceOf[js.Any], userId = userId.asInstanceOf[js.Any])
     __obj.asInstanceOf[MembershipsInputParameters]
   }
@@ -24,7 +24,7 @@ object MembershipsInputParameters {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSpaces(value: js.Array[AnonCustom]): Self = {
+    def withSpaces(value: js.Array[Custom]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("spaces")(value.asInstanceOf[js.Any])
         ret

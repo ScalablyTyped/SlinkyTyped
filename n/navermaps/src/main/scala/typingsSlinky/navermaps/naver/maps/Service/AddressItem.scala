@@ -1,19 +1,19 @@
 package typingsSlinky.navermaps.naver.maps.Service
 
-import typingsSlinky.navermaps.AnonCountry
+import typingsSlinky.navermaps.anon.Country
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait AddressItem extends js.Object {
-  var addrdetail: AnonCountry = js.native
+  var addrdetail: Country = js.native
   var address: String = js.native
 }
 
 object AddressItem {
   @scala.inline
-  def apply(addrdetail: AnonCountry, address: String): AddressItem = {
+  def apply(addrdetail: Country, address: String): AddressItem = {
     val __obj = js.Dynamic.literal(addrdetail = addrdetail.asInstanceOf[js.Any], address = address.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddressItem]
   }
@@ -24,7 +24,7 @@ object AddressItem {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddrdetail(value: AnonCountry): Self = {
+    def withAddrdetail(value: Country): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addrdetail")(value.asInstanceOf[js.Any])
         ret

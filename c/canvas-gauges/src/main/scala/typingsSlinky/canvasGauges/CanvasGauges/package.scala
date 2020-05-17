@@ -10,5 +10,4 @@ package object CanvasGauges {
   type EndEventCallback = js.Function0[js.Any]
   type EventListeners = org.scalablytyped.runtime.StringDictionary[js.Function | js.Array[js.Function]]
   type MajorTicks = js.Array[scala.Double | java.lang.String]
-  type RenderTarget = java.lang.String | org.scalajs.dom.raw.HTMLElement
 }

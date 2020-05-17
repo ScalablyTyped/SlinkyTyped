@@ -3,6 +3,7 @@ package typingsSlinky.typesettable
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.typesettable.abstractMeasurerMod.IDimensions
+import typingsSlinky.typesettable.anon.Write
 import typingsSlinky.typesettable.contextsMod.IPenFactoryContext
 import typingsSlinky.typesettable.contextsMod.IRulerFactoryContext
 import typingsSlinky.typesettable.writerMod.ITransform
@@ -30,7 +31,7 @@ object htmlMod extends js.Object {
     var className: js.Any = js.native
     var element: js.Any = js.native
     /* private */ def createHtmlLinePen(textBlock: js.Any): js.Any = js.native
-    def createPen(text: String, transform: ITransform, element: Element): AnonWrite = js.native
+    def createPen(text: String, transform: ITransform, element: Element): Write = js.native
     def setAddTitle(addTitle: Boolean): Unit = js.native
   }
   

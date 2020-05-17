@@ -1,20 +1,20 @@
 package typingsSlinky.reactOverlays.dropdownToggleMod
 
-import typingsSlinky.reactOverlays.AnonAriaexpanded
+import typingsSlinky.reactOverlays.anon.Ariaexpanded
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait DropdownToggleRenderProps extends js.Object {
-  var props: AnonAriaexpanded = js.native
+  var props: Ariaexpanded = js.native
   var show: Boolean = js.native
   def toggle(show: Boolean): Unit = js.native
 }
 
 object DropdownToggleRenderProps {
   @scala.inline
-  def apply(props: AnonAriaexpanded, show: Boolean, toggle: Boolean => Unit): DropdownToggleRenderProps = {
+  def apply(props: Ariaexpanded, show: Boolean, toggle: Boolean => Unit): DropdownToggleRenderProps = {
     val __obj = js.Dynamic.literal(props = props.asInstanceOf[js.Any], show = show.asInstanceOf[js.Any], toggle = js.Any.fromFunction1(toggle))
     __obj.asInstanceOf[DropdownToggleRenderProps]
   }
@@ -25,7 +25,7 @@ object DropdownToggleRenderProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withProps(value: AnonAriaexpanded): Self = {
+    def withProps(value: Ariaexpanded): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("props")(value.asInstanceOf[js.Any])
         ret

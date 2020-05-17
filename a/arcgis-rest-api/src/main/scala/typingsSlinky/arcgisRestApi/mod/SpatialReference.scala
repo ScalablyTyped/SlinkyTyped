@@ -12,14 +12,8 @@ trait SpatialReference extends js.Object
 
 object SpatialReference {
   @scala.inline
-  def SpatialReferenceWkt(): SpatialReference = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[SpatialReference]
-  }
+  implicit def apply(value: SpatialReferenceWkid): SpatialReference = value.asInstanceOf[SpatialReference]
   @scala.inline
-  def SpatialReferenceWkid(): SpatialReference = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[SpatialReference]
-  }
+  implicit def apply(value: SpatialReferenceWkt): SpatialReference = value.asInstanceOf[SpatialReference]
 }
 

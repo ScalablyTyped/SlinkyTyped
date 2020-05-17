@@ -1,13 +1,13 @@
 package typingsSlinky.actionsOnGoogle.v2Mod
 
-import typingsSlinky.actionsOnGoogle.argumentArgumentMod._Argument
+import typingsSlinky.actionsOnGoogle.argumentArgumentMod.Argument
 import typingsSlinky.actionsOnGoogle.commonMod.ApiClientObjectMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait GoogleRpcStatus extends _Argument {
+trait GoogleRpcStatus extends Argument {
   /**
     * The status code, which should be an enum value of google.rpc.Code.
     */

@@ -1,5 +1,6 @@
 package typingsSlinky.handsontable.mod.Handsontable._editors
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLTableCellElement
 import typingsSlinky.handsontable.handsontableStrings._empty
 import typingsSlinky.handsontable.handsontableStrings.`bottom-left-corner`
@@ -9,7 +10,6 @@ import typingsSlinky.handsontable.handsontableStrings.left
 import typingsSlinky.handsontable.handsontableStrings.top
 import typingsSlinky.handsontable.mod.Handsontable.CellProperties
 import typingsSlinky.handsontable.mod._Handsontable.Core
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +27,7 @@ trait Base extends js.Object {
   var state: EditorState = js.native
   def beginEditing(): Unit = js.native
   def beginEditing(initialValue: js.Any): Unit = js.native
-  def beginEditing(initialValue: js.Any, event: Event_): Unit = js.native
+  def beginEditing(initialValue: js.Any, event: Event): Unit = js.native
   def cancelChanges(): Unit = js.native
   def checkEditorSection(): `top-left-corner` | top | `bottom-left-corner` | bottom | left | _empty = js.native
   def close(): Unit = js.native
@@ -48,7 +48,7 @@ trait Base extends js.Object {
   def isOpened(): Boolean = js.native
   def isWaiting(): Boolean = js.native
   def open(): Unit = js.native
-  def open(event: Event_): Unit = js.native
+  def open(event: Event): Unit = js.native
   def prepare(
     row: Double,
     col: Double,

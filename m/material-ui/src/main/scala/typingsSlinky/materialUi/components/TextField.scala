@@ -11,7 +11,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.TextFieldProps
 import typingsSlinky.materialUi.textFieldMod.default
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -80,7 +79,9 @@ object TextField {
     @scala.inline
     def onBlur(value: SyntheticFocusEvent[js.Object] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: (SyntheticEvent[EventTarget with js.Object, Event_], /* newValue */ String) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    def onChange(
+      value: (SyntheticEvent[EventTarget with js.Object, org.scalajs.dom.raw.Event], /* newValue */ String) => Unit
+    ): this.type = set("onChange", js.Any.fromFunction2(value))
     @scala.inline
     def onFocus(value: SyntheticFocusEvent[js.Object] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline

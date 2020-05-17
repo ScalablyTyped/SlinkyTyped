@@ -3,6 +3,7 @@ package typingsSlinky.rcMenu
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
+import typingsSlinky.rcMenu.anon.Find
 import typingsSlinky.react.mod.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +18,7 @@ object utilMod extends js.Object {
   def getWidth(elem: HTMLElement): Double = js.native
   def isMobileDevice(): Boolean = js.native
   def loopMenuItem(children: TagMod[Any], cb: js.Function2[/* node */ ReactElement, /* index */ Double, Unit]): Unit = js.native
-  def loopMenuItemRecursively(children: TagMod[Any], keys: js.Array[String], ret: AnonFind): Unit = js.native
+  def loopMenuItemRecursively(children: TagMod[Any], keys: js.Array[String], ret: Find): Unit = js.native
   def noop(): Unit = js.native
   def setStyle(
     elem: HTMLElement,

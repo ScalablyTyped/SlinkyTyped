@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.engineRenderTargetCubeMod
 
-import typingsSlinky.babylonjs.PartialRenderTargetCreati
+import typingsSlinky.babylonjs.anon.PartialRenderTargetCreati
 import typingsSlinky.babylonjs.internalTextureMod.InternalTexture
 import scala.scalajs.js
 import scala.scalajs.js.`|`

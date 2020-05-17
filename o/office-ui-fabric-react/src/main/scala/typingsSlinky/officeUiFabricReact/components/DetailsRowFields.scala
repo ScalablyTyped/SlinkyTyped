@@ -3,10 +3,10 @@ package typingsSlinky.officeUiFabricReact.components
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.officeUiFabricReact.anon.kinkeyofPickIDetailsRowSt
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IColumn
 import typingsSlinky.officeUiFabricReact.detailsRowFieldsTypesMod.IDetailsRowFieldsProps
 import typingsSlinky.officeUiFabricReact.detailsRowTypesMod.ICellStyleProps
-import typingsSlinky.officeUiFabricReact.kinkeyofPickIDetailsRowSt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

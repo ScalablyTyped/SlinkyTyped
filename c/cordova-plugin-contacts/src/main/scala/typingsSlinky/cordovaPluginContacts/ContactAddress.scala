@@ -1,6 +1,5 @@
 package typingsSlinky.cordovaPluginContacts
 
-import org.scalablytyped.runtime.Instantiable8
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,19 +28,115 @@ trait ContactAddress extends js.Object {
   var `type`: js.UndefOr[String] = js.native
 }
 
-@JSGlobal("ContactAddress")
-@js.native
-object ContactAddress
-  extends /** Constructor of ContactAddress object */
-Instantiable8[
-      js.UndefOr[/* pref */ Boolean], 
-      js.UndefOr[/* type */ String], 
-      js.UndefOr[/* formatted */ String], 
-      js.UndefOr[/* streetAddress */ String], 
-      js.UndefOr[/* locality */ String], 
-      js.UndefOr[/* region */ String], 
-      js.UndefOr[/* postalCode */ String], 
-      js.UndefOr[/* country */ String], 
-      ContactAddress
-    ]
+object ContactAddress {
+  @scala.inline
+  def apply(): ContactAddress = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ContactAddress]
+  }
+  @scala.inline
+  implicit class ContactAddressOps[Self <: ContactAddress] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCountry(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutCountry: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withFormatted(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormatted: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatted")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLocality(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLocality: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locality")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPostalCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPostalCode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPref(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pref")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPref: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pref")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRegion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRegion: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStreetAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streetAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStreetAddress: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streetAddress")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
+}
 

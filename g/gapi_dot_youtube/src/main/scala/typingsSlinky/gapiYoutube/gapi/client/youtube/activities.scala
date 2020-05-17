@@ -1,10 +1,10 @@
 package typingsSlinky.gapiYoutube.gapi.client.youtube
 
 import typingsSlinky.gapi.gapi.client.HttpRequest
-import typingsSlinky.gapiYoutube.AnonChannelId
-import typingsSlinky.gapiYoutube.AnonPart
 import typingsSlinky.gapiYoutube.GoogleApiYouTubeActivityResource
 import typingsSlinky.gapiYoutube.GoogleApiYouTubePaginationInfo
+import typingsSlinky.gapiYoutube.anon.Home
+import typingsSlinky.gapiYoutube.anon.Part
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,18 +14,18 @@ trait activities extends js.Object {
   /**
     * Posts a bulletin for a specific channel.
     */
-  def insert(`object`: AnonPart): HttpRequest[GoogleApiYouTubeActivityResource] = js.native
+  def insert(`object`: Part): HttpRequest[GoogleApiYouTubeActivityResource] = js.native
   /**
     * Returns a list of channel activity events that match the request criteria.
     */
-  def list(`object`: AnonChannelId): HttpRequest[GoogleApiYouTubePaginationInfo[GoogleApiYouTubeActivityResource]] = js.native
+  def list(`object`: Home): HttpRequest[GoogleApiYouTubePaginationInfo[GoogleApiYouTubeActivityResource]] = js.native
 }
 
 object activities {
   @scala.inline
   def apply(
-    insert: AnonPart => HttpRequest[GoogleApiYouTubeActivityResource],
-    list: AnonChannelId => HttpRequest[GoogleApiYouTubePaginationInfo[GoogleApiYouTubeActivityResource]]
+    insert: Part => HttpRequest[GoogleApiYouTubeActivityResource],
+    list: Home => HttpRequest[GoogleApiYouTubePaginationInfo[GoogleApiYouTubeActivityResource]]
   ): activities = {
     val __obj = js.Dynamic.literal(insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[activities]
@@ -37,15 +37,13 @@ object activities {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withInsert(value: AnonPart => HttpRequest[GoogleApiYouTubeActivityResource]): Self = {
+    def withInsert(value: Part => HttpRequest[GoogleApiYouTubeActivityResource]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(
-      value: AnonChannelId => HttpRequest[GoogleApiYouTubePaginationInfo[GoogleApiYouTubeActivityResource]]
-    ): Self = {
+    def withList(value: Home => HttpRequest[GoogleApiYouTubePaginationInfo[GoogleApiYouTubeActivityResource]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

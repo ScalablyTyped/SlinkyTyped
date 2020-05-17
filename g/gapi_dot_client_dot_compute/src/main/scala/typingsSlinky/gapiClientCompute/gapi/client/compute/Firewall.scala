@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientCompute.gapi.client.compute
 
-import typingsSlinky.gapiClientCompute.AnonIPProtocol
+import typingsSlinky.gapiClientCompute.anon.IPProtocol
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,11 +8,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Firewall extends js.Object {
   /** The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a permitted connection. */
-  var allowed: js.UndefOr[js.Array[AnonIPProtocol]] = js.native
+  var allowed: js.UndefOr[js.Array[IPProtocol]] = js.native
   /** [Output Only] Creation timestamp in RFC3339 text format. */
   var creationTimestamp: js.UndefOr[String] = js.native
   /** The list of DENY rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a permitted connection. */
-  var denied: js.UndefOr[js.Array[AnonIPProtocol]] = js.native
+  var denied: js.UndefOr[js.Array[IPProtocol]] = js.native
   /** An optional description of this resource. Provide this property when you create the resource. */
   var description: js.UndefOr[String] = js.native
   /**
@@ -87,7 +87,7 @@ object Firewall {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAllowed(value: js.Array[AnonIPProtocol]): Self = {
+    def withAllowed(value: js.Array[IPProtocol]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("allowed")(value.asInstanceOf[js.Any])
         ret
@@ -111,7 +111,7 @@ object Firewall {
         ret
     }
     @scala.inline
-    def withDenied(value: js.Array[AnonIPProtocol]): Self = {
+    def withDenied(value: js.Array[IPProtocol]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("denied")(value.asInstanceOf[js.Any])
         ret

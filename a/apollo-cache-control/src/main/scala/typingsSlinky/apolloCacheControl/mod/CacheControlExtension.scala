@@ -1,8 +1,8 @@
 package typingsSlinky.apolloCacheControl.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.apolloCacheControl.AnonGraphqlResponse
-import typingsSlinky.apolloCacheControl.RequiredCacheHint
+import typingsSlinky.apolloCacheControl.anon.GraphqlResponse
+import typingsSlinky.apolloCacheControl.anon.RequiredCacheHint
 import typingsSlinky.graphql.definitionMod.GraphQLResolveInfo
 import typingsSlinky.graphqlExtensions.mod.GraphQLExtension
 import scala.scalajs.js
@@ -18,7 +18,7 @@ class CacheControlExtension[TContext] () extends GraphQLExtension[TContext] {
   var options: CacheControlExtensionOptions = js.native
   var overallCachePolicyOverride: js.UndefOr[js.Any] = js.native
   @JSName("willSendResponse")
-  var willSendResponse_CacheControlExtension: js.UndefOr[js.Function1[/* o */ AnonGraphqlResponse, Unit]] = js.native
+  var willSendResponse_CacheControlExtension: js.UndefOr[js.Function1[/* o */ GraphqlResponse, Unit]] = js.native
   def addHint(
     path: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ResponsePath */ js.Any,
     hint: CacheHint

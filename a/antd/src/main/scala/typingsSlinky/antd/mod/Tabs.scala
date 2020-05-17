@@ -1,7 +1,7 @@
 package typingsSlinky.antd.mod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.antd.AnonHideAdd
+import typingsSlinky.antd.anon.HideAdd
 import typingsSlinky.antd.tabsMod.TabPaneProps
 import typingsSlinky.antd.tabsMod.default
 import scala.scalajs.js
@@ -17,6 +17,6 @@ class Tabs () extends default
 @js.native
 object Tabs extends js.Object {
   var TabPane: ReactComponentClass[TabPaneProps] = js.native
-  var defaultProps: AnonHideAdd = js.native
+  var defaultProps: HideAdd = js.native
 }
 

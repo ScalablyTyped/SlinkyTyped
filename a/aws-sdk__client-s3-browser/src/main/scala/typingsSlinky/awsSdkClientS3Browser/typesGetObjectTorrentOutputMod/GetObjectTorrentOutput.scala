@@ -1,6 +1,7 @@
 package typingsSlinky.awsSdkClientS3Browser.typesGetObjectTorrentOutputMod
 
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.requester_
+import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
@@ -8,7 +9,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait GetObjectTorrentOutput[StreamType] extends MetadataBearer {
+trait GetObjectTorrentOutput[StreamType]
+  extends MetadataBearer
+     with OutputTypesUnion {
   /**
     * _Body shape
     */

@@ -1,6 +1,6 @@
 package typingsSlinky.bugsnagJs.reportMod
 
-import typingsSlinky.bugsnagJs.AnonType
+import typingsSlinky.bugsnagJs.anon.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IHandledState extends js.Object {
   var severity: String = js.native
-  var severityReason: AnonType = js.native
+  var severityReason: Type = js.native
   var unhandled: Boolean = js.native
 }
 
 object IHandledState {
   @scala.inline
-  def apply(severity: String, severityReason: AnonType, unhandled: Boolean): IHandledState = {
+  def apply(severity: String, severityReason: Type, unhandled: Boolean): IHandledState = {
     val __obj = js.Dynamic.literal(severity = severity.asInstanceOf[js.Any], severityReason = severityReason.asInstanceOf[js.Any], unhandled = unhandled.asInstanceOf[js.Any])
     __obj.asInstanceOf[IHandledState]
   }
@@ -31,7 +31,7 @@ object IHandledState {
         ret
     }
     @scala.inline
-    def withSeverityReason(value: AnonType): Self = {
+    def withSeverityReason(value: Type): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("severityReason")(value.asInstanceOf[js.Any])
         ret

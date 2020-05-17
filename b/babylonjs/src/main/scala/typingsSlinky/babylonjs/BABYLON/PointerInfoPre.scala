@@ -6,18 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.PointerInfoPre")
 @js.native
-class PointerInfoPre protected () extends PointerInfoBase {
-  def this(`type`: Double, event: WheelEvent, localX: Double, localY: Double) = this()
-  /**
-    * Instantiates a PointerInfoPre to store pointer related info to the onPrePointerObservable event.
-    * @param type Defines the type of event (PointerEventTypes)
-    * @param event Defines the related dom event
-    * @param localX Defines the local x coordinates of the pointer when the event occured
-    * @param localY Defines the local y coordinates of the pointer when the event occured
-    */
-  def this(`type`: Double, event: PointerEvent, localX: Double, localY: Double) = this()
+trait PointerInfoPre extends PointerInfoBase {
   /**
     * Defines the local position of the pointer on the canvas.
     */
@@ -30,5 +20,51 @@ class PointerInfoPre protected () extends PointerInfoBase {
     * Defines whether the engine should skip the next OnPointerObservable associated to this pre.
     */
   var skipOnPointerObservable: Boolean = js.native
+}
+
+object PointerInfoPre {
+  @scala.inline
+  def apply(
+    event: PointerEvent | WheelEvent,
+    localPosition: Vector2,
+    skipOnPointerObservable: Boolean,
+    `type`: Double
+  ): PointerInfoPre = {
+    val __obj = js.Dynamic.literal(event = event.asInstanceOf[js.Any], localPosition = localPosition.asInstanceOf[js.Any], skipOnPointerObservable = skipOnPointerObservable.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PointerInfoPre]
+  }
+  @scala.inline
+  implicit class PointerInfoPreOps[Self <: PointerInfoPre] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocalPosition(value: Vector2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSkipOnPointerObservable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipOnPointerObservable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRay(value: Nullable[Ray]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ray")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRayNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ray")(null)
+        ret
+    }
+  }
+  
 }
 

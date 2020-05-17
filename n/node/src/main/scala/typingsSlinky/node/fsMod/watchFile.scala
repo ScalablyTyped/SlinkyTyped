@@ -1,6 +1,6 @@
 package typingsSlinky.node.fsMod
 
-import typingsSlinky.node.AnonInterval
+import typingsSlinky.node.anon.Interval
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,17 +14,12 @@ object watchFile extends js.Object {
     * URL support is _experimental_.
     */
   def apply(filename: PathLike, listener: js.Function2[/* curr */ Stats, /* prev */ Stats, Unit]): Unit = js.native
-  def apply(
-    filename: PathLike,
-    options: js.UndefOr[scala.Nothing],
-    listener: js.Function2[/* curr */ Stats, /* prev */ Stats, Unit]
-  ): Unit = js.native
   /**
     * Watch for changes on `filename`. The callback `listener` will be called each time the file is accessed.
     */
   def apply(
     filename: PathLike,
-    options: AnonInterval,
+    options: js.UndefOr[Interval],
     listener: js.Function2[/* curr */ Stats, /* prev */ Stats, Unit]
   ): Unit = js.native
 }

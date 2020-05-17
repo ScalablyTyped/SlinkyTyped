@@ -1,7 +1,7 @@
 package typingsSlinky.semanticRelease.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.semanticRelease.AnonError
+import typingsSlinky.semanticRelease.anon.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait Context extends js.Object {
   /**
   		 * The shared logger instance of semantic release.
   		 */
-  var logger: AnonError = js.native
+  var logger: Error = js.native
   /**
   		 * The next release details.
   		 */
@@ -32,7 +32,7 @@ trait Context extends js.Object {
 
 object Context {
   @scala.inline
-  def apply(env: StringDictionary[String], logger: AnonError): Context = {
+  def apply(env: StringDictionary[String], logger: Error): Context = {
     val __obj = js.Dynamic.literal(env = env.asInstanceOf[js.Any], logger = logger.asInstanceOf[js.Any])
     __obj.asInstanceOf[Context]
   }
@@ -49,7 +49,7 @@ object Context {
         ret
     }
     @scala.inline
-    def withLogger(value: AnonError): Self = {
+    def withLogger(value: Error): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
         ret

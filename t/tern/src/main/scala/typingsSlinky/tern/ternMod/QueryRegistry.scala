@@ -1,40 +1,39 @@
 package typingsSlinky.tern.ternMod
 
-import typingsSlinky.tern.AnonQueryDefinitionQuery
-import typingsSlinky.tern.AnonQueryDocumentationQuery
-import typingsSlinky.tern.AnonQueryFilesQuery
-import typingsSlinky.tern.AnonQueryPropertiesQuery
-import typingsSlinky.tern.AnonQueryRefsQuery
-import typingsSlinky.tern.AnonQueryRenameQuery
-import typingsSlinky.tern.AnonQueryResult
-import typingsSlinky.tern.AnonResult
+import typingsSlinky.tern.anon.QueryDefinitionQuery
+import typingsSlinky.tern.anon.QueryDocumentationQuery
+import typingsSlinky.tern.anon.QueryFilesQuery
+import typingsSlinky.tern.anon.QueryPropertiesQuery
+import typingsSlinky.tern.anon.QueryRefsQuery
+import typingsSlinky.tern.anon.QueryRenameQuery
+import typingsSlinky.tern.anon.Result
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait QueryRegistry extends js.Object {
-  var completions: AnonResult = js.native
-  var definition: AnonQueryDefinitionQuery = js.native
-  var documentation: AnonQueryDocumentationQuery = js.native
-  var files: AnonQueryFilesQuery = js.native
-  var properties: AnonQueryPropertiesQuery = js.native
-  var refs: AnonQueryRefsQuery = js.native
-  var rename: AnonQueryRenameQuery = js.native
-  var `type`: AnonQueryResult = js.native
+  var completions: Result = js.native
+  var definition: QueryDefinitionQuery = js.native
+  var documentation: QueryDocumentationQuery = js.native
+  var files: QueryFilesQuery = js.native
+  var properties: QueryPropertiesQuery = js.native
+  var refs: QueryRefsQuery = js.native
+  var rename: QueryRenameQuery = js.native
+  var `type`: typingsSlinky.tern.anon.QueryResult = js.native
 }
 
 object QueryRegistry {
   @scala.inline
   def apply(
-    completions: AnonResult,
-    definition: AnonQueryDefinitionQuery,
-    documentation: AnonQueryDocumentationQuery,
-    files: AnonQueryFilesQuery,
-    properties: AnonQueryPropertiesQuery,
-    refs: AnonQueryRefsQuery,
-    rename: AnonQueryRenameQuery,
-    `type`: AnonQueryResult
+    completions: Result,
+    definition: QueryDefinitionQuery,
+    documentation: QueryDocumentationQuery,
+    files: QueryFilesQuery,
+    properties: QueryPropertiesQuery,
+    refs: QueryRefsQuery,
+    rename: QueryRenameQuery,
+    `type`: typingsSlinky.tern.anon.QueryResult
   ): QueryRegistry = {
     val __obj = js.Dynamic.literal(completions = completions.asInstanceOf[js.Any], definition = definition.asInstanceOf[js.Any], documentation = documentation.asInstanceOf[js.Any], files = files.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], refs = refs.asInstanceOf[js.Any], rename = rename.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
@@ -47,49 +46,49 @@ object QueryRegistry {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCompletions(value: AnonResult): Self = {
+    def withCompletions(value: Result): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("completions")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withDefinition(value: AnonQueryDefinitionQuery): Self = {
+    def withDefinition(value: QueryDefinitionQuery): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("definition")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withDocumentation(value: AnonQueryDocumentationQuery): Self = {
+    def withDocumentation(value: QueryDocumentationQuery): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("documentation")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withFiles(value: AnonQueryFilesQuery): Self = {
+    def withFiles(value: QueryFilesQuery): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withProperties(value: AnonQueryPropertiesQuery): Self = {
+    def withProperties(value: QueryPropertiesQuery): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withRefs(value: AnonQueryRefsQuery): Self = {
+    def withRefs(value: QueryRefsQuery): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("refs")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withRename(value: AnonQueryRenameQuery): Self = {
+    def withRename(value: QueryRenameQuery): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rename")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withType(value: AnonQueryResult): Self = {
+    def withType(value: typingsSlinky.tern.anon.QueryResult): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
         ret

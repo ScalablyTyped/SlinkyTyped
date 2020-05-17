@@ -1,5 +1,6 @@
 package typingsSlinky.bootstrapTreeview
 
+import typingsSlinky.bootstrapTreeview.anon.Checked
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +15,7 @@ trait BootstrapTreeViewNodeData extends js.Object {
   var nodes: js.UndefOr[js.Array[BootstrapTreeViewNodeData]] = js.native
   var selectable: js.UndefOr[Boolean] = js.native
   var selectedIcon: js.UndefOr[String] = js.native
-  var state: js.UndefOr[AnonChecked] = js.native
+  var state: js.UndefOr[Checked] = js.native
   var tags: js.UndefOr[js.Array[String]] = js.native
   var text: js.UndefOr[String] = js.native
 }
@@ -128,7 +129,7 @@ object BootstrapTreeViewNodeData {
         ret
     }
     @scala.inline
-    def withState(value: AnonChecked): Self = {
+    def withState(value: Checked): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
         ret

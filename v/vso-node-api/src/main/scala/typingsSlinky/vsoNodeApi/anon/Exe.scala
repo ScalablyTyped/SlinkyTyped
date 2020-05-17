@@ -1,0 +1,54 @@
+package typingsSlinky.vsoNodeApi.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Exe extends js.Object {
+  var exe: scala.Double = js.native
+  var msi: scala.Double = js.native
+  var referralLink: scala.Double = js.native
+  var vsix: scala.Double = js.native
+}
+
+object Exe {
+  @scala.inline
+  def apply(exe: scala.Double, msi: scala.Double, referralLink: scala.Double, vsix: scala.Double): Exe = {
+    val __obj = js.Dynamic.literal(exe = exe.asInstanceOf[js.Any], msi = msi.asInstanceOf[js.Any], referralLink = referralLink.asInstanceOf[js.Any], vsix = vsix.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Exe]
+  }
+  @scala.inline
+  implicit class ExeOps[Self <: Exe] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExe(value: scala.Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMsi(value: scala.Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("msi")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReferralLink(value: scala.Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referralLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVsix(value: scala.Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vsix")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

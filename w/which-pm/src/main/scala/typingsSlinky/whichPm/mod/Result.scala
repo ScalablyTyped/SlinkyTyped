@@ -1,8 +1,5 @@
 package typingsSlinky.whichPm.mod
 
-import typingsSlinky.whichPm.whichPmStrings.npm
-import typingsSlinky.whichPm.whichPmStrings.pnpm
-import typingsSlinky.whichPm.whichPmStrings.yarn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,24 +14,12 @@ trait Result extends js.Object
 
 object Result {
   @scala.inline
-  def NPM(name: npm): Result = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Result]
-  }
+  implicit def apply(value: NPM): Result = value.asInstanceOf[Result]
   @scala.inline
-  def YARN(name: yarn): Result = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Result]
-  }
+  implicit def apply(value: Other): Result = value.asInstanceOf[Result]
   @scala.inline
-  def PNPM(name: pnpm, version: String): Result = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Result]
-  }
+  implicit def apply(value: PNPM): Result = value.asInstanceOf[Result]
   @scala.inline
-  def Other(name: String): Result = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Result]
-  }
+  implicit def apply(value: YARN): Result = value.asInstanceOf[Result]
 }
 

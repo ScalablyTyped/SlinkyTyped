@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("google.visualization.ColorFormat")
 @js.native
-class ColorFormat () extends DefaultFormatter {
+trait ColorFormat extends DefaultFormatter {
   /**
     * Assigns a background color from a range, according to the cell value. The color is scaled to match the cell's value within a range from a lower boundary color to an upper boundary color. Note that this method cannot compare string values, as addRange() can. Tip: Color ranges are often hard for viewers to gauge accurately; the simplest and easiest to read range is from a fully saturated color to white (e.g., #FF0000—FFFFFF).
     *
@@ -26,5 +25,37 @@ class ColorFormat () extends DefaultFormatter {
     * @param bgcolor - The color to apply to the background of matching cells. Values can be either '#RRGGBB' values or defined color constants, (example: '#FF0000' or 'red').
     */
   def addRange(from: js.Any, to: js.Any, color: String, bgcolor: String): Unit = js.native
+}
+
+object ColorFormat {
+  @scala.inline
+  def apply(
+    addGradientRange: (js.Any, js.Any, String, String, String) => Unit,
+    addRange: (js.Any, js.Any, String, String) => Unit,
+    format: (DataTable, Double) => Unit
+  ): ColorFormat = {
+    val __obj = js.Dynamic.literal(addGradientRange = js.Any.fromFunction5(addGradientRange), addRange = js.Any.fromFunction4(addRange), format = js.Any.fromFunction2(format))
+    __obj.asInstanceOf[ColorFormat]
+  }
+  @scala.inline
+  implicit class ColorFormatOps[Self <: ColorFormat] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddGradientRange(value: (js.Any, js.Any, String, String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addGradientRange")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withAddRange(value: (js.Any, js.Any, String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addRange")(js.Any.fromFunction4(value))
+        ret
+    }
+  }
+  
 }
 

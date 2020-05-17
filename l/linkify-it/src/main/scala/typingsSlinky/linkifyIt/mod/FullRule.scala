@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait FullRule extends js.Object {
+trait FullRule extends Rule {
   var normalize: js.UndefOr[js.Function1[/* match */ Match, Unit]] = js.native
   var validate: String | js.RegExp | Validate = js.native
 }

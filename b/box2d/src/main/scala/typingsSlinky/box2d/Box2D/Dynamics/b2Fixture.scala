@@ -10,9 +10,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Box2D.Dynamics.b2Fixture")
 @js.native
-class b2Fixture () extends js.Object {
+trait b2Fixture extends js.Object {
   /**
   		* Get the fixture's AABB. This AABB may be enlarge and/or stale. If you need a more accurate AABB, compute it using the shape and the body transform.
   		* @return Fiture's AABB.

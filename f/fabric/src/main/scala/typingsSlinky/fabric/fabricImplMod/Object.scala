@@ -1,14 +1,15 @@
 package typingsSlinky.fabric.fabricImplMod
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
-import typingsSlinky.fabric.AnonBr
-import typingsSlinky.fabric.AnonE
-import typingsSlinky.fabric.AnonEEvent
-import typingsSlinky.fabric.AnonMb
-import typingsSlinky.fabric.AnonPropertySet
-import typingsSlinky.fabric.AnonScaleX
-import typingsSlinky.fabric.AnonTop
-import typingsSlinky.fabric.AnonX
+import org.scalajs.dom.raw.Event
+import typingsSlinky.fabric.anon.Br
+import typingsSlinky.fabric.anon.E
+import typingsSlinky.fabric.anon.EEvent
+import typingsSlinky.fabric.anon.Mb
+import typingsSlinky.fabric.anon.PropertySet
+import typingsSlinky.fabric.anon.ScaleX
+import typingsSlinky.fabric.anon.Top
+import typingsSlinky.fabric.anon.X
 import typingsSlinky.fabric.fabricStrings.bl
 import typingsSlinky.fabric.fabricStrings.br
 import typingsSlinky.fabric.fabricStrings.fill
@@ -20,7 +21,6 @@ import typingsSlinky.fabric.fabricStrings.mtr
 import typingsSlinky.fabric.fabricStrings.stroke
 import typingsSlinky.fabric.fabricStrings.tl
 import typingsSlinky.fabric.fabricStrings.tr
-import typingsSlinky.std.Event_
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -33,7 +33,7 @@ class Object ()
      with IObjectOptions
      with IObjectAnimation[Object] {
   def this(options: IObjectOptions) = this()
-  var _controlsVisibility: AnonBr = js.native
+  var _controlsVisibility: Br = js.native
   /**
   	 * @private
   	 * @param {CanvasRenderingContext2D} ctx Context to render on
@@ -50,13 +50,13 @@ class Object ()
   	 * @param {Object} pointer The pointer indicating the mouse position
   	 * @return {String|Boolean} corner code (tl, tr, bl, br, etc.), or false if nothing is found
   	 */
-  def _findTargetCorner(pointer: AnonX): Boolean | bl | br | mb | ml | mr | mt | tl | tr | mtr = js.native
+  def _findTargetCorner(pointer: X): Boolean | bl | br | mb | ml | mr | mt | tl | tr | mtr = js.native
   /**
   	 * Returns the instance of the control visibility set for this object.
   	 * @private
   	 * @returns {Object}
   	 */
-  def _getControlsVisibility(): AnonMb = js.native
+  def _getControlsVisibility(): Mb = js.native
   /**
   	 * Returns the top, left coordinates
   	 * @private
@@ -69,16 +69,16 @@ class Object ()
   	 * @return {Object} .x width dimension
   	 * @return {Object} .y height dimension
   	 */
-  def _getNonTransformedDimensions(): AnonX = js.native
+  def _getNonTransformedDimensions(): X = js.native
   /*
   	 * Calculate object bounding box dimensions from its properties scale, skew.
   	 * @private
   	 * @return {Object} .x width dimension
   	 * @return {Object} .y height dimension
   	 */
-  def _getTransformedDimensions(): AnonX = js.native
-  def _getTransformedDimensions(skewX: Double): AnonX = js.native
-  def _getTransformedDimensions(skewX: Double, skewY: Double): AnonX = js.native
+  def _getTransformedDimensions(): X = js.native
+  def _getTransformedDimensions(skewX: Double): X = js.native
+  def _getTransformedDimensions(skewX: Double, skewY: Double): X = js.native
   /**
   	 * @private
   	 * @param {CanvasRenderingContext2D} ctx Context to render on
@@ -291,9 +291,9 @@ class Object ()
   	 * @param {Boolean} [calculate] use coordinates of current position instead of .oCoords / .aCoords
   	 * @return {Object} Object with left, top, width, height properties
   	 */
-  def getBoundingRect(): AnonTop = js.native
-  def getBoundingRect(absolute: Boolean): AnonTop = js.native
-  def getBoundingRect(absolute: Boolean, calculate: Boolean): AnonTop = js.native
+  def getBoundingRect(): Top = js.native
+  def getBoundingRect(absolute: Boolean): Top = js.native
+  def getBoundingRect(absolute: Boolean, calculate: Boolean): Top = js.native
   /**
   	 * Returns the real center coordinates of the object
   	 */
@@ -309,8 +309,8 @@ class Object ()
   	 * @param e Event to operate upon
   	 * @param [pointer] Pointer to operate upon (instead of event)
   	 */
-  def getLocalPointer(e: Event_): AnonX = js.native
-  def getLocalPointer(e: Event_, pointer: AnonX): AnonX = js.native
+  def getLocalPointer(e: Event): X = js.native
+  def getLocalPointer(e: Event, pointer: X): X = js.native
   /**
   	 * Return the object opacity counting also the group property
   	 * @return {Number}
@@ -320,7 +320,7 @@ class Object ()
   	 * Return the object scale factor counting also the group scaling
   	 * @return {Object} object with scaleX and scaleY properties
   	 */
-  def getObjectScaling(): AnonScaleX = js.native
+  def getObjectScaling(): ScaleX = js.native
   /**
   	 * Returns the coordinates of the object as if it has a different origin
   	 * @param {String} originX Horizontal origin: 'left', 'center' or 'right'
@@ -389,7 +389,7 @@ class Object ()
   	 * Return the object scale factor counting also the group scaling, zoom and retina
   	 * @return {Object} object with scaleX and scaleY properties
   	 */
-  def getTotalObjectScaling(): AnonScaleX = js.native
+  def getTotalObjectScaling(): ScaleX = js.native
   /**
   	 * Retrieves viewportTransform from Object's canvas if possible
   	 */
@@ -494,12 +494,12 @@ class Object ()
   	 * try to to deselect this object. If the function returns true, the process is cancelled
   	 * @return {Boolean} true to cancel selection
   	 */
-  def onDeselect(options: AnonE): Boolean = js.native
+  def onDeselect(options: E): Boolean = js.native
   /**
   	 * This callback function is called every time _discardActiveObject or _setActiveObject
   	 * try to to select this object. If the function returns true, the process is cancelled
   	 */
-  def onSelect(options: AnonEEvent): Boolean = js.native
+  def onSelect(options: EEvent): Boolean = js.native
   /**
   	 * Renders an object on a specified context
   	 * @param {CanvasRenderingContext2D} ctx Context to render on
@@ -516,7 +516,7 @@ class Object ()
   	 * @return thisArg
   	 */
   def saveState(): Object = js.native
-  def saveState(options: AnonPropertySet): Object = js.native
+  def saveState(options: PropertySet): Object = js.native
   /**
   	 * Scales an object (equally by x and y)
   	 * @param value Scale factor
@@ -591,7 +591,7 @@ class Object ()
   	 * @param [options] Options object
   	 */
   def setControlsVisibility(): this.type = js.native
-  def setControlsVisibility(options: AnonBr): this.type = js.native
+  def setControlsVisibility(options: Br): this.type = js.native
   // functions from geometry mixin
   // -------------------------------------------------------------------------------------------------------------------------------
   /**

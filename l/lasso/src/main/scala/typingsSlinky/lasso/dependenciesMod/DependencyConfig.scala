@@ -1,13 +1,13 @@
 package typingsSlinky.lasso.dependenciesMod
 
-import typingsSlinky.lasso.AnonCrossorigin
+import typingsSlinky.lasso.anon.Crossorigin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait DependencyConfig extends js.Object {
-  var attributes: js.UndefOr[AnonCrossorigin] = js.native
+  var attributes: js.UndefOr[Crossorigin] = js.native
   var `css-slot`: js.UndefOr[String] = js.native
   var dependencies: js.UndefOr[js.Array[DependencyConfig | String]] = js.native
   var external: js.UndefOr[Boolean] = js.native
@@ -39,7 +39,7 @@ object DependencyConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAttributes(value: AnonCrossorigin): Self = {
+    def withAttributes(value: Crossorigin): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
         ret

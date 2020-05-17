@@ -11,6 +11,7 @@ import typingsSlinky.reactNative.mod.View
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNavigation.mod.NavigationParams
 import typingsSlinky.reactNavigation.mod.NavigationRoute
+import typingsSlinky.reactNavigationStack.anon.PickPropsstylechildrensce
 import typingsSlinky.reactNavigationStack.createPointerEventsContainerMod.PointerEvents
 import typingsSlinky.reactNavigationStack.typesMod.NavigationStackProp
 import typingsSlinky.reactNavigationStack.typesMod.Scene

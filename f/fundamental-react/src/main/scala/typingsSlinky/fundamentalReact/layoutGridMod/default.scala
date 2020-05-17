@@ -1,8 +1,8 @@
 package typingsSlinky.fundamentalReact.layoutGridMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.fundamentalReact.PartialLayoutGridProps
-import typingsSlinky.fundamentalReact.WeakValidationMapLayoutGr
+import typingsSlinky.fundamentalReact.anon.PartialLayoutGridProps
+import typingsSlinky.fundamentalReact.anon.WeakValidationMapLayoutGr
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap
 import scala.scalajs.js

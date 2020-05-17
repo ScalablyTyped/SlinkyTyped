@@ -1,8 +1,8 @@
 package typingsSlinky.fabric.fabricImplMod
 
 import org.scalajs.dom.raw.SVGElement
-import typingsSlinky.fabric.AnonTop
-import typingsSlinky.fabric.AnonX
+import typingsSlinky.fabric.anon.Top
+import typingsSlinky.fabric.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,8 +18,8 @@ class Polyline protected () extends Object {
   	 * @param [options] Options object
   	 * @param [skipOffset] Whether points offsetting should be skipped
   	 */
-  def this(points: js.Array[AnonX]) = this()
-  def this(points: js.Array[AnonX], options: IPolylineOptions) = this()
+  def this(points: js.Array[X]) = this()
+  def this(points: js.Array[X], options: IPolylineOptions) = this()
   var pathOffset: Point = js.native
   /**
   	 * Points array
@@ -34,7 +34,7 @@ class Polyline protected () extends Object {
   	 * @return {Object} object.width distance between X coordinates of the polygon leftmost and rightmost point
   	 * @return {Object} object.height distance between Y coordinates of the polygon topmost and bottommost point
   	 */
-  def _calcDimensions(): AnonTop = js.native
+  def _calcDimensions(): Top = js.native
 }
 
 /* static members */

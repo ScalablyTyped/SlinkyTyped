@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ConstrainDOMStringParameters extends js.Object {
+trait ConstrainDOMStringParameters extends ConstrainDOMString {
   var exact: js.UndefOr[java.lang.String | js.Array[java.lang.String]] = js.native
   var ideal: js.UndefOr[java.lang.String | js.Array[java.lang.String]] = js.native
 }

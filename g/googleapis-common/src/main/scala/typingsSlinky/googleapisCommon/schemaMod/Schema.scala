@@ -1,14 +1,14 @@
 package typingsSlinky.googleapisCommon.schemaMod
 
-import typingsSlinky.googleapisCommon.AnonOauth2
-import typingsSlinky.googleapisCommon.AnonX16
+import typingsSlinky.googleapisCommon.anon.Oauth2
+import typingsSlinky.googleapisCommon.anon.X16
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Schema extends js.Object {
-  var auth: AnonOauth2 = js.native
+  var auth: Oauth2 = js.native
   var basePath: String = js.native
   var baseUrl: String = js.native
   var batchPath: String = js.native
@@ -17,7 +17,7 @@ trait Schema extends js.Object {
   var discoveryVersion: String = js.native
   var documentationLink: String = js.native
   var etag: String = js.native
-  var icons: AnonX16 = js.native
+  var icons: X16 = js.native
   var id: String = js.native
   var kind: String = js.native
   var methods: SchemaMethods = js.native
@@ -38,7 +38,7 @@ trait Schema extends js.Object {
 object Schema {
   @scala.inline
   def apply(
-    auth: AnonOauth2,
+    auth: Oauth2,
     basePath: String,
     baseUrl: String,
     batchPath: String,
@@ -47,7 +47,7 @@ object Schema {
     discoveryVersion: String,
     documentationLink: String,
     etag: String,
-    icons: AnonX16,
+    icons: X16,
     id: String,
     kind: String,
     methods: SchemaMethods,
@@ -74,7 +74,7 @@ object Schema {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAuth(value: AnonOauth2): Self = {
+    def withAuth(value: Oauth2): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
         ret
@@ -128,7 +128,7 @@ object Schema {
         ret
     }
     @scala.inline
-    def withIcons(value: AnonX16): Self = {
+    def withIcons(value: X16): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
         ret

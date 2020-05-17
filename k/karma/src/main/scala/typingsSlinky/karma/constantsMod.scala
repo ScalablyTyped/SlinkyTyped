@@ -1,5 +1,6 @@
 package typingsSlinky.karma
 
+import typingsSlinky.karma.anon.Pattern
 import typingsSlinky.karma.karmaStrings.DEBUG
 import typingsSlinky.karma.karmaStrings.ERROR
 import typingsSlinky.karma.karmaStrings.INFO
@@ -29,7 +30,7 @@ object constantsMod extends js.Object {
   val VERSION: String = js.native
   @js.native
   object CONSOLE_APPENDER extends js.Object {
-    var layout: AnonPattern = js.native
+    var layout: Pattern = js.native
     var `type`: String = js.native
   }
   

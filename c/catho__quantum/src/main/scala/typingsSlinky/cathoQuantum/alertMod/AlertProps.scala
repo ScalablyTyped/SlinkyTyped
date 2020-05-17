@@ -3,7 +3,7 @@ package typingsSlinky.cathoQuantum.alertMod
 import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.cathoQuantum.AnonColors
+import typingsSlinky.cathoQuantum.anon.Colors
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.error
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.neutral
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.primary
@@ -20,7 +20,7 @@ trait AlertProps extends js.Object {
   var icon: js.UndefOr[String] = js.native
   var onClose: MouseEventHandler[HTMLButtonElement] = js.native
   var skin: js.UndefOr[primary | success | error | neutral | warning] = js.native
-  var theme: js.UndefOr[AnonColors] = js.native
+  var theme: js.UndefOr[Colors] = js.native
 }
 
 object AlertProps {
@@ -78,7 +78,7 @@ object AlertProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonColors): Self = {
+    def withTheme(value: Colors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

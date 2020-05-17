@@ -2,7 +2,6 @@ package typingsSlinky.sqlite3.mod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.sqlite3.AnonDatabase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +21,7 @@ trait sqlite3 extends js.Object {
   var OPEN_URI: Double = js.native
   var RunResult: typingsSlinky.sqlite3.mod.RunResult = js.native
   var Statement: Instantiable0[typingsSlinky.sqlite3.mod.Statement] = js.native
-  var cached: AnonDatabase = js.native
+  var cached: typingsSlinky.sqlite3.anon.Database = js.native
   def verbose(): this.type = js.native
 }
 
@@ -42,7 +41,7 @@ object sqlite3 {
     OPEN_URI: Double,
     RunResult: RunResult,
     Statement: Instantiable0[Statement],
-    cached: AnonDatabase,
+    cached: typingsSlinky.sqlite3.anon.Database,
     verbose: () => sqlite3
   ): sqlite3 = {
     val __obj = js.Dynamic.literal(Database = Database.asInstanceOf[js.Any], OPEN_CREATE = OPEN_CREATE.asInstanceOf[js.Any], OPEN_PRIVATECACHE = OPEN_PRIVATECACHE.asInstanceOf[js.Any], OPEN_READONLY = OPEN_READONLY.asInstanceOf[js.Any], OPEN_READWRITE = OPEN_READWRITE.asInstanceOf[js.Any], OPEN_SHAREDCACHE = OPEN_SHAREDCACHE.asInstanceOf[js.Any], OPEN_URI = OPEN_URI.asInstanceOf[js.Any], RunResult = RunResult.asInstanceOf[js.Any], Statement = Statement.asInstanceOf[js.Any], cached = cached.asInstanceOf[js.Any], verbose = js.Any.fromFunction0(verbose))
@@ -115,7 +114,7 @@ object sqlite3 {
         ret
     }
     @scala.inline
-    def withCached(value: AnonDatabase): Self = {
+    def withCached(value: typingsSlinky.sqlite3.anon.Database): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cached")(value.asInstanceOf[js.Any])
         ret

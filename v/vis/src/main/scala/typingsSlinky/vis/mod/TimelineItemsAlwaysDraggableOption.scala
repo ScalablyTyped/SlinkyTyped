@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TimelineItemsAlwaysDraggableOption extends js.Object {
+trait TimelineItemsAlwaysDraggableOption extends TimelineOptionsItemsAlwaysDraggableType {
   var item: js.UndefOr[Boolean] = js.native
   var range: js.UndefOr[Boolean] = js.native
 }

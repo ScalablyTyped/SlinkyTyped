@@ -5,7 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ConstrainDoubleRange extends DoubleRange {
+trait ConstrainDoubleRange
+  extends DoubleRange
+     with ConstrainDouble {
   var exact: js.UndefOr[Double] = js.native
   var ideal: js.UndefOr[Double] = js.native
 }

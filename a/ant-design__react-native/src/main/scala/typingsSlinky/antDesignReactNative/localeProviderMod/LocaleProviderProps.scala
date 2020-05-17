@@ -1,7 +1,7 @@
 package typingsSlinky.antDesignReactNative.localeProviderMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.antDesignReactNative.PartialLocale
+import typingsSlinky.antDesignReactNative.anon.PartialLocale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

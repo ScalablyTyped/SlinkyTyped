@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Networking.Connectivity.IPInformation")
 @js.native
-class IPInformation () extends IIPInformation
+trait IPInformation extends IIPInformation
+
+object IPInformation {
+  @scala.inline
+  def apply(networkAdapter: NetworkAdapter, prefixLength: Double): IPInformation = {
+    val __obj = js.Dynamic.literal(networkAdapter = networkAdapter.asInstanceOf[js.Any], prefixLength = prefixLength.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IPInformation]
+  }
+}
 

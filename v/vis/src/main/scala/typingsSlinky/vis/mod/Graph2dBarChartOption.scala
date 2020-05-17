@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Graph2dBarChartOption extends js.Object {
+trait Graph2dBarChartOption extends Graph2dOptionBarChart {
   var align: js.UndefOr[Graph2dBarChartAlign] = js.native
   var minWidth: js.UndefOr[Double] = js.native
   var sideBySide: js.UndefOr[Boolean] = js.native

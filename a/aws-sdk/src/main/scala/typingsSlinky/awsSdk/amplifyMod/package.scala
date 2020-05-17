@@ -46,18 +46,6 @@ package object amplifyMod {
   type DomainAssociations = js.Array[typingsSlinky.awsSdk.amplifyMod.DomainAssociation]
   type DomainName = java.lang.String
   type DomainPrefix = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.PENDING_VERIFICATION
-    - typingsSlinky.awsSdk.awsSdkStrings.IN_PROGRESS
-    - typingsSlinky.awsSdk.awsSdkStrings.AVAILABLE
-    - typingsSlinky.awsSdk.awsSdkStrings.PENDING_DEPLOYMENT
-    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
-    - typingsSlinky.awsSdk.awsSdkStrings.CREATING
-    - typingsSlinky.awsSdk.awsSdkStrings.REQUESTING_CERTIFICATE
-    - typingsSlinky.awsSdk.awsSdkStrings.UPDATING
-    - java.lang.String
-  */
-  type DomainStatus = typingsSlinky.awsSdk.amplifyMod._DomainStatus | java.lang.String
   type EnableAutoBranchCreation = scala.Boolean
   type EnableAutoBuild = scala.Boolean
   type EnableAutoSubDomain = scala.Boolean
@@ -77,26 +65,7 @@ package object amplifyMod {
   type JobArn = java.lang.String
   type JobId = java.lang.String
   type JobReason = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.PENDING
-    - typingsSlinky.awsSdk.awsSdkStrings.PROVISIONING
-    - typingsSlinky.awsSdk.awsSdkStrings.RUNNING
-    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
-    - typingsSlinky.awsSdk.awsSdkStrings.SUCCEED
-    - typingsSlinky.awsSdk.awsSdkStrings.CANCELLING
-    - typingsSlinky.awsSdk.awsSdkStrings.CANCELLED
-    - java.lang.String
-  */
-  type JobStatus = typingsSlinky.awsSdk.amplifyMod._JobStatus | java.lang.String
   type JobSummaries = js.Array[typingsSlinky.awsSdk.amplifyMod.JobSummary]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.RELEASE
-    - typingsSlinky.awsSdk.awsSdkStrings.RETRY
-    - typingsSlinky.awsSdk.awsSdkStrings.MANUAL
-    - typingsSlinky.awsSdk.awsSdkStrings.WEB_HOOK
-    - java.lang.String
-  */
-  type JobType = typingsSlinky.awsSdk.amplifyMod._JobType | java.lang.String
   type LastDeployTime = js.Date
   type LogUrl = java.lang.String
   type MD5Hash = java.lang.String
@@ -104,7 +73,6 @@ package object amplifyMod {
   type Name = java.lang.String
   type NextToken = java.lang.String
   type OauthToken = java.lang.String
-  type Platform = typingsSlinky.awsSdk.awsSdkStrings.WEB | java.lang.String
   type PullRequestEnvironmentName = java.lang.String
   type Repository = java.lang.String
   type ResourceArn = java.lang.String
@@ -113,15 +81,6 @@ package object amplifyMod {
   type Source = java.lang.String
   type SourceUrl = java.lang.String
   type StackName = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.PRODUCTION
-    - typingsSlinky.awsSdk.awsSdkStrings.BETA
-    - typingsSlinky.awsSdk.awsSdkStrings.DEVELOPMENT
-    - typingsSlinky.awsSdk.awsSdkStrings.EXPERIMENTAL
-    - typingsSlinky.awsSdk.awsSdkStrings.PULL_REQUEST
-    - java.lang.String
-  */
-  type Stage = typingsSlinky.awsSdk.amplifyMod._Stage | java.lang.String
   type StartTime = js.Date
   type Status = java.lang.String
   type StatusReason = java.lang.String
@@ -147,10 +106,4 @@ package object amplifyMod {
   type WebhookId = java.lang.String
   type WebhookUrl = java.lang.String
   type Webhooks = js.Array[typingsSlinky.awsSdk.amplifyMod.Webhook]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2017-07-25`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.amplifyMod._apiVersion | java.lang.String
 }

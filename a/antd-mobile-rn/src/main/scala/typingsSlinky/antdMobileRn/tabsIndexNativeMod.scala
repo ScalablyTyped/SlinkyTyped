@@ -1,6 +1,7 @@
 package typingsSlinky.antdMobileRn
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.antdMobileRn.anon.TypeofRMCDefaultTabBar
 import typingsSlinky.antdMobileRn.tabsPropsTypeMod.TabsProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js

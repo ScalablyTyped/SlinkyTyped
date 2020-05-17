@@ -1,8 +1,8 @@
 package typingsSlinky.winston.configMod
 
-import typingsSlinky.winston.AnonColors
-import typingsSlinky.winston.AnonColorsLevels
-import typingsSlinky.winston.AnonLevels
+import typingsSlinky.winston.anon.Colors
+import typingsSlinky.winston.anon.ColorsLevels
+import typingsSlinky.winston.anon.Levels
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,9 +10,9 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Config extends js.Object {
   var allColors: AbstractConfigSetColors = js.native
-  var cli: AnonColors = js.native
-  var npm: AnonLevels = js.native
-  var syslog: AnonColorsLevels = js.native
+  var cli: Colors = js.native
+  var npm: Levels = js.native
+  var syslog: ColorsLevels = js.native
   def addColors(colors: AbstractConfigSetColors): Unit = js.native
 }
 
@@ -21,9 +21,9 @@ object Config {
   def apply(
     addColors: AbstractConfigSetColors => Unit,
     allColors: AbstractConfigSetColors,
-    cli: AnonColors,
-    npm: AnonLevels,
-    syslog: AnonColorsLevels
+    cli: Colors,
+    npm: Levels,
+    syslog: ColorsLevels
   ): Config = {
     val __obj = js.Dynamic.literal(addColors = js.Any.fromFunction1(addColors), allColors = allColors.asInstanceOf[js.Any], cli = cli.asInstanceOf[js.Any], npm = npm.asInstanceOf[js.Any], syslog = syslog.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config]
@@ -47,19 +47,19 @@ object Config {
         ret
     }
     @scala.inline
-    def withCli(value: AnonColors): Self = {
+    def withCli(value: Colors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cli")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withNpm(value: AnonLevels): Self = {
+    def withNpm(value: Levels): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("npm")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSyslog(value: AnonColorsLevels): Self = {
+    def withSyslog(value: ColorsLevels): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("syslog")(value.asInstanceOf[js.Any])
         ret

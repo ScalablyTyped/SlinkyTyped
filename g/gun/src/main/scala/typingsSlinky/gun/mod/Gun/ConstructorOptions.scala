@@ -1,6 +1,6 @@
 package typingsSlinky.gun.mod.Gun
 
-import typingsSlinky.gun.AnonBucket
+import typingsSlinky.gun.anon.Bucket
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ trait ConstructorOptions extends js.Object {
   var localStorage: js.UndefOr[Boolean] = js.native
   var peers: js.UndefOr[Record[String, js.Object]] = js.native
   var radisk: js.UndefOr[Boolean] = js.native
-  var s3: js.UndefOr[AnonBucket] = js.native
+  var s3: js.UndefOr[Bucket] = js.native
   var uuid: js.UndefOr[js.Function0[String]] = js.native
   var web: js.UndefOr[js.Any] = js.native
 }
@@ -84,7 +84,7 @@ object ConstructorOptions {
         ret
     }
     @scala.inline
-    def withS3(value: AnonBucket): Self = {
+    def withS3(value: Bucket): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("s3")(value.asInstanceOf[js.Any])
         ret

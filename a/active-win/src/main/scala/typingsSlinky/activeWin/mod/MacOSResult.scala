@@ -1,7 +1,7 @@
 package typingsSlinky.activeWin.mod
 
-import typingsSlinky.activeWin.AnonHeight
 import typingsSlinky.activeWin.activeWinStrings.macos
+import typingsSlinky.activeWin.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,14 +17,7 @@ trait MacOSResult
 
 object MacOSResult {
   @scala.inline
-  def apply(
-    bounds: AnonHeight,
-    id: Double,
-    memoryUsage: Double,
-    owner: MacOSOwner,
-    platform: macos,
-    title: String
-  ): MacOSResult = {
+  def apply(bounds: Height, id: Double, memoryUsage: Double, owner: MacOSOwner, platform: macos, title: String): MacOSResult = {
     val __obj = js.Dynamic.literal(bounds = bounds.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], memoryUsage = memoryUsage.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], platform = platform.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
     __obj.asInstanceOf[MacOSResult]
   }

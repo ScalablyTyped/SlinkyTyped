@@ -13,9 +13,6 @@ import scala.scalajs.js.annotation._
   * @description Create a new ModelComponentSystem.
   * @param {pc.Application} app - The Application.
   */
-@JSGlobal("pc.ModelComponentSystem")
 @js.native
-class ModelComponentSystem protected () extends ComponentSystem {
-  def this(app: Application) = this()
-}
+trait ModelComponentSystem extends ComponentSystem
 

@@ -1,17 +1,17 @@
 package typingsSlinky.firebaseAuthTypes.mod
 
-import typingsSlinky.firebaseAuthTypes.AnonBundleId
-import typingsSlinky.firebaseAuthTypes.AnonInstallApp
+import typingsSlinky.firebaseAuthTypes.anon.BundleId
+import typingsSlinky.firebaseAuthTypes.anon.InstallApp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ActionCodeSettings extends js.Object {
-  var android: js.UndefOr[AnonInstallApp] = js.native
+  var android: js.UndefOr[InstallApp] = js.native
   var dynamicLinkDomain: js.UndefOr[String] = js.native
   var handleCodeInApp: js.UndefOr[Boolean] = js.native
-  var iOS: js.UndefOr[AnonBundleId] = js.native
+  var iOS: js.UndefOr[BundleId] = js.native
   var url: String = js.native
 }
 
@@ -34,7 +34,7 @@ object ActionCodeSettings {
         ret
     }
     @scala.inline
-    def withAndroid(value: AnonInstallApp): Self = {
+    def withAndroid(value: InstallApp): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("android")(value.asInstanceOf[js.Any])
         ret
@@ -70,7 +70,7 @@ object ActionCodeSettings {
         ret
     }
     @scala.inline
-    def withIOS(value: AnonBundleId): Self = {
+    def withIOS(value: BundleId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("iOS")(value.asInstanceOf[js.Any])
         ret

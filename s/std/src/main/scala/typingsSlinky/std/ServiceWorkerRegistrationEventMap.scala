@@ -6,12 +6,12 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ServiceWorkerRegistrationEventMap extends js.Object {
-  var updatefound: Event_ = js.native
+  var updatefound: org.scalajs.dom.raw.Event = js.native
 }
 
 object ServiceWorkerRegistrationEventMap {
   @scala.inline
-  def apply(updatefound: Event_): ServiceWorkerRegistrationEventMap = {
+  def apply(updatefound: org.scalajs.dom.raw.Event): ServiceWorkerRegistrationEventMap = {
     val __obj = js.Dynamic.literal(updatefound = updatefound.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceWorkerRegistrationEventMap]
   }
@@ -22,7 +22,7 @@ object ServiceWorkerRegistrationEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withUpdatefound(value: Event_): Self = {
+    def withUpdatefound(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("updatefound")(value.asInstanceOf[js.Any])
         ret

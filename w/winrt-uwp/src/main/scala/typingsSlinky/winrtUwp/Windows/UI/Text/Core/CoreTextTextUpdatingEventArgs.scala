@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data for the TextUpdating event. */
-@JSGlobal("Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs")
 @js.native
-abstract class CoreTextTextUpdatingEventArgs () extends js.Object {
+trait CoreTextTextUpdatingEventArgs extends js.Object {
   /** Gets a Language object representing the current input language. */
   var inputLanguage: Language = js.native
   /** Gets a value that indicates whether the text update operation is canceled. */
@@ -27,5 +26,71 @@ abstract class CoreTextTextUpdatingEventArgs () extends js.Object {
     * @return A Deferral deferral object.
     */
   def getDeferral(): Deferral = js.native
+}
+
+object CoreTextTextUpdatingEventArgs {
+  @scala.inline
+  def apply(
+    getDeferral: () => Deferral,
+    inputLanguage: Language,
+    isCanceled: Boolean,
+    newSelection: CoreTextRange,
+    range: CoreTextRange,
+    result: CoreTextTextUpdatingResult,
+    text: String
+  ): CoreTextTextUpdatingEventArgs = {
+    val __obj = js.Dynamic.literal(getDeferral = js.Any.fromFunction0(getDeferral), inputLanguage = inputLanguage.asInstanceOf[js.Any], isCanceled = isCanceled.asInstanceOf[js.Any], newSelection = newSelection.asInstanceOf[js.Any], range = range.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CoreTextTextUpdatingEventArgs]
+  }
+  @scala.inline
+  implicit class CoreTextTextUpdatingEventArgsOps[Self <: CoreTextTextUpdatingEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetDeferral(value: () => Deferral): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDeferral")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withInputLanguage(value: Language): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsCanceled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCanceled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNewSelection(value: CoreTextRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newSelection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRange(value: CoreTextRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResult(value: CoreTextTextUpdatingResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

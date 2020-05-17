@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.ChartAxesData
 import typingsSlinky.officeJs.Excel.Interfaces.ChartAxesLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.ChartAxesUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.Category
 import typingsSlinky.officeJs.officeJsStrings.Invalid
 import typingsSlinky.officeJs.officeJsStrings.Primary
@@ -22,9 +22,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.ChartAxes")
 @js.native
-class ChartAxes () extends ClientObject {
+trait ChartAxes extends ClientObject {
   /**
     *
     * Represents the category axis in a chart. Read-only.
@@ -90,7 +89,7 @@ class ChartAxes () extends ClientObject {
     */
   def load(): ChartAxes = js.native
   def load(options: ChartAxesLoadOptions): ChartAxes = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartAxes = js.native
+  def load(propertyNamesAndPaths: Expand): ChartAxes = js.native
   def load(propertyNames: String): ChartAxes = js.native
   def load(propertyNames: js.Array[String]): ChartAxes = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

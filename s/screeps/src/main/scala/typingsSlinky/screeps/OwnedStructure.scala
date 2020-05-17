@@ -1,6 +1,5 @@
 package typingsSlinky.screeps
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +20,54 @@ trait OwnedStructure[T /* <: StructureConstant */] extends Structure[T] {
   var owner: js.UndefOr[Owner] = js.native
 }
 
-@JSGlobal("OwnedStructure")
-@js.native
-object OwnedStructure extends TopLevel[OwnedStructureConstructor]
+object OwnedStructure {
+  @scala.inline
+  def apply[T](
+    destroy: () => ScreepsReturnCode,
+    effects: js.Array[RoomObjectEffect],
+    hits: Double,
+    hitsMax: Double,
+    id: Id[OwnedStructure[T]],
+    isActive: () => Boolean,
+    notifyWhenAttacked: Boolean => ScreepsReturnCode,
+    pos: RoomPosition,
+    room: Room,
+    structureType: T
+  ): OwnedStructure[T] = {
+    val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), effects = effects.asInstanceOf[js.Any], hits = hits.asInstanceOf[js.Any], hitsMax = hitsMax.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isActive = js.Any.fromFunction0(isActive), notifyWhenAttacked = js.Any.fromFunction1(notifyWhenAttacked), pos = pos.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any], structureType = structureType.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OwnedStructure[T]]
+  }
+  @scala.inline
+  implicit class OwnedStructureOps[Self[t] <: OwnedStructure[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withMy(value: Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("my")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMy: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("my")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withOwner(value: Owner): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOwner: Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(js.undefined)
+        ret
+    }
+  }
+  
+}
 

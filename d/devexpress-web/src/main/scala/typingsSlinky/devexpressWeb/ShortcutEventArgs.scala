@@ -7,15 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the client-side ASPxClientScheduler.Shortcut event.
   */
-@JSGlobal("ShortcutEventArgs")
 @js.native
-class ShortcutEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initialize a new instance of the class.
-    * @param commandName Specifies the command name.
-    * @param htmlEvent Specifies the html event.
-    */
-  def this(commandName: String, htmlEvent: js.Any) = this()
+trait ShortcutEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the name of a command associated with the keyboard shortcut.
     */
@@ -28,5 +21,39 @@ class ShortcutEventArgs protected () extends ASPxClientEventArgs {
     * Gets an object containing information about a keyboard shortcut event.
     */
   var htmlEvent: js.Any = js.native
+}
+
+object ShortcutEventArgs {
+  @scala.inline
+  def apply(commandName: String, handled: Boolean, htmlEvent: js.Any): ShortcutEventArgs = {
+    val __obj = js.Dynamic.literal(commandName = commandName.asInstanceOf[js.Any], handled = handled.asInstanceOf[js.Any], htmlEvent = htmlEvent.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ShortcutEventArgs]
+  }
+  @scala.inline
+  implicit class ShortcutEventArgsOps[Self <: ShortcutEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommandName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commandName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHandled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtmlEvent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

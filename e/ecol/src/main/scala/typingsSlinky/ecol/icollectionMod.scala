@@ -1,6 +1,7 @@
 package typingsSlinky.ecol
 
 import typingsSlinky.ecol.ieventdispatcherMod.IEventDispatcher
+import typingsSlinky.tstl.icontainerMod.IContainer.Iterator
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import typingsSlinky.tstl.mod.base.Container
 import scala.scalajs.js
@@ -23,10 +24,24 @@ object icollectionMod extends js.Object {
     /* InferMemberOverrides */
     override def assign[InputIterator /* <: IForwardIterator[T, InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
     /**
+      * Iterator to the first element.
+      *
+      * @return Iterator to the first element.
+      */
+    /* InferMemberOverrides */
+    override def begin(): Iterator[T, SourceT, IteratorT, ReverseT, T] = js.native
+    /**
       * @inheritDoc
       */
     /* InferMemberOverrides */
     override def clear(): Unit = js.native
+    /**
+      * Iterator to the end.
+      *
+      * @return Iterator to the end.
+      */
+    /* InferMemberOverrides */
+    override def end(): Iterator[T, SourceT, IteratorT, ReverseT, T] = js.native
     /**
       * Erase elements in range.
       *
@@ -44,9 +59,25 @@ object icollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def erase(pos: IteratorT): IteratorT = js.native
+    /**
+      * Reverse iterator to the first element in reverse.
+      *
+      * @return Reverse iterator to the first.
+      */
+    /* InferMemberOverrides */
+    /* InferMemberOverrides */
+    override def rbegin(): ReverseT = js.native
     def refresh(): Unit = js.native
     def refresh(first: IteratorT, last: IteratorT): Unit = js.native
     def refresh(it: IteratorT): Unit = js.native
+    /**
+      * Reverse iterator to the reverse end.
+      *
+      * @return Reverse iterator to the end.
+      */
+    /* InferMemberOverrides */
+    /* InferMemberOverrides */
+    override def rend(): ReverseT = js.native
     /**
       * Swap elements.
       *

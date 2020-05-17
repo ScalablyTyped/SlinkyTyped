@@ -1,7 +1,7 @@
 package typingsSlinky.babylonjs.nodeMaterialMod
 
-import typingsSlinky.babylonjs.PartialINodeMaterialOptio
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
+import typingsSlinky.babylonjs.anon.PartialINodeMaterialOptio
 import typingsSlinky.babylonjs.imageProcessingConfigurationMod.ImageProcessingConfiguration
 import typingsSlinky.babylonjs.inputBlockMod.InputBlock
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock

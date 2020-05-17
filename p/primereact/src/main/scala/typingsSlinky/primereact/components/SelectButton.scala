@@ -2,7 +2,7 @@ package typingsSlinky.primereact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.selectButtonMod.SelectButtonProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
@@ -31,7 +31,7 @@ object SelectButton {
     @scala.inline
     def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* e */ AnonValue => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ Value => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def optionLabel(value: String): this.type = set("optionLabel", value.asInstanceOf[js.Any])
     @scala.inline

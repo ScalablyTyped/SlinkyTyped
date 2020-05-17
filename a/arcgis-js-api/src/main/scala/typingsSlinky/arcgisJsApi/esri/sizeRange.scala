@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +27,25 @@ trait sizeRange extends js.Object {
   def sizeRange(params: sizeRangeSizeRangeParams): js.Promise[SizeRangeResult] = js.native
 }
 
-@JSGlobal("__esri.sizeRange")
-@js.native
-object sizeRange extends TopLevel[sizeRange]
+object sizeRange {
+  @scala.inline
+  def apply(sizeRange: sizeRangeSizeRangeParams => js.Promise[SizeRangeResult]): sizeRange = {
+    val __obj = js.Dynamic.literal(sizeRange = js.Any.fromFunction1(sizeRange))
+    __obj.asInstanceOf[sizeRange]
+  }
+  @scala.inline
+  implicit class sizeRangeOps[Self <: sizeRange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSizeRange(value: sizeRangeSizeRangeParams => js.Promise[SizeRangeResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sizeRange")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

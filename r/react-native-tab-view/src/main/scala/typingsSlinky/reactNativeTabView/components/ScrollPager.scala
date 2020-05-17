@@ -5,9 +5,9 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.reactNativeGestureHandler.mod.PanGestureHandler
-import typingsSlinky.reactNativeTabView.AnonDamping
-import typingsSlinky.reactNativeTabView.AnonDuration
-import typingsSlinky.reactNativeTabView.AnonOverscroll
+import typingsSlinky.reactNativeTabView.anon.Damping
+import typingsSlinky.reactNativeTabView.anon.Duration
+import typingsSlinky.reactNativeTabView.anon.Overscroll
 import typingsSlinky.reactNativeTabView.pagerMod.Props
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.`on-drag`
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.auto
@@ -43,7 +43,7 @@ object ScrollPager {
     def swipeVelocityImpact(value: Double): this.type = set("swipeVelocityImpact", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T <: Route](p: Props[T] with AnonOverscroll): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[T <: Route](p: Props[T] with Overscroll): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply[T <: Route](
     gestureHandlerProps: ComponentProps[Instantiable0[PanGestureHandler]],
@@ -51,12 +51,12 @@ object ScrollPager {
     layout: Layout,
     navigationState: NavigationState[T],
     onIndexChange: Double => Unit,
-    springConfig: AnonDamping,
+    springConfig: Damping,
     swipeEnabled: Boolean,
-    timingConfig: AnonDuration
+    timingConfig: Duration
   ): Builder[T] = {
     val __props = js.Dynamic.literal(gestureHandlerProps = gestureHandlerProps.asInstanceOf[js.Any], keyboardDismissMode = keyboardDismissMode.asInstanceOf[js.Any], layout = layout.asInstanceOf[js.Any], navigationState = navigationState.asInstanceOf[js.Any], onIndexChange = js.Any.fromFunction1(onIndexChange), springConfig = springConfig.asInstanceOf[js.Any], swipeEnabled = swipeEnabled.asInstanceOf[js.Any], timingConfig = timingConfig.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[Props[T] with AnonOverscroll]))
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[Props[T] with Overscroll]))
   }
 }
 

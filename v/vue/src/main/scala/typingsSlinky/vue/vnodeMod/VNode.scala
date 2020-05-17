@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait VNode extends _ScopedSlotReturnValue {
+trait VNode extends ScopedSlotReturnValue {
   var children: js.UndefOr[js.Array[VNode]] = js.native
   var componentInstance: js.UndefOr[Vue] = js.native
   var componentOptions: js.UndefOr[VNodeComponentOptions] = js.native

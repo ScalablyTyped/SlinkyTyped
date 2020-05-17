@@ -1,8 +1,7 @@
 package typingsSlinky.gapiClientAnalytics.gapi.client.analytics
 
-import typingsSlinky.gapiClientAnalytics.AnonAccountId
-import typingsSlinky.gapiClientAnalytics.AnonColumnType
-import typingsSlinky.gapiClientAnalytics.AnonFilters
+import typingsSlinky.gapiClientAnalytics.anon.AccountId
+import typingsSlinky.gapiClientAnalytics.anon.ColumnType
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,15 +10,15 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RealtimeData extends js.Object {
   /** Column headers that list dimension names followed by the metric names. The order of dimensions and metrics is same as specified in the request. */
-  var columnHeaders: js.UndefOr[js.Array[AnonColumnType]] = js.native
+  var columnHeaders: js.UndefOr[js.Array[ColumnType]] = js.native
   /** Unique ID for this data response. */
   var id: js.UndefOr[String] = js.native
   /** Resource type. */
   var kind: js.UndefOr[String] = js.native
   /** Information for the view (profile), for which the real time data was requested. */
-  var profileInfo: js.UndefOr[AnonAccountId] = js.native
+  var profileInfo: js.UndefOr[AccountId] = js.native
   /** Real time data request query parameters. */
-  var query: js.UndefOr[AnonFilters] = js.native
+  var query: js.UndefOr[typingsSlinky.gapiClientAnalytics.anon.Filters] = js.native
   /**
     * Real time data rows, where each row contains a list of dimension values followed by the metric values. The order of dimensions and metrics is same as
     * specified in the request.
@@ -49,7 +48,7 @@ object RealtimeData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withColumnHeaders(value: js.Array[AnonColumnType]): Self = {
+    def withColumnHeaders(value: js.Array[ColumnType]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnHeaders")(value.asInstanceOf[js.Any])
         ret
@@ -85,7 +84,7 @@ object RealtimeData {
         ret
     }
     @scala.inline
-    def withProfileInfo(value: AnonAccountId): Self = {
+    def withProfileInfo(value: AccountId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("profileInfo")(value.asInstanceOf[js.Any])
         ret
@@ -97,7 +96,7 @@ object RealtimeData {
         ret
     }
     @scala.inline
-    def withQuery(value: AnonFilters): Self = {
+    def withQuery(value: typingsSlinky.gapiClientAnalytics.anon.Filters): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
         ret

@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientPartners.gapi.client.partners
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientPartners.AnonBearertoken
-import typingsSlinky.gapiClientPartners.AnonCallback
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientPartners.anon.Bearertoken
+import typingsSlinky.gapiClientPartners.anon.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,20 +10,17 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LeadsResource extends js.Object {
   /** Creates an advertiser lead for the given company ID. */
-  def create(request: AnonBearertoken): Request_[CreateLeadResponse] = js.native
+  def create(request: Bearertoken): Request[CreateLeadResponse] = js.native
   /**
     * Lists advertiser leads for a user's associated company.
     * Should only be called within the context of an authorized logged in user.
     */
-  def list(request: AnonCallback): Request_[ListLeadsResponse] = js.native
+  def list(request: Callback): Request[ListLeadsResponse] = js.native
 }
 
 object LeadsResource {
   @scala.inline
-  def apply(
-    create: AnonBearertoken => Request_[CreateLeadResponse],
-    list: AnonCallback => Request_[ListLeadsResponse]
-  ): LeadsResource = {
+  def apply(create: Bearertoken => Request[CreateLeadResponse], list: Callback => Request[ListLeadsResponse]): LeadsResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[LeadsResource]
   }
@@ -34,13 +31,13 @@ object LeadsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: AnonBearertoken => Request_[CreateLeadResponse]): Self = {
+    def withCreate(value: Bearertoken => Request[CreateLeadResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonCallback => Request_[ListLeadsResponse]): Self = {
+    def withList(value: Callback => Request[ListLeadsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.jestEnvironment.mod
 
+import org.scalajs.dom.raw.Console
 import typingsSlinky.jestTypes.configMod.Path
-import typingsSlinky.std.Console_
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 /* Inlined std.Partial<{  console  :std.Console,   docblockPragmas  :std.Record<string, string | std.Array<string>>,   testPath  :@jest/types.@jest/types.Config.Path}> */
 @js.native
 trait EnvironmentContext extends js.Object {
-  var console: js.UndefOr[Console_] = js.native
+  var console: js.UndefOr[Console] = js.native
   var docblockPragmas: js.UndefOr[Record[String, String | js.Array[String]]] = js.native
   var testPath: js.UndefOr[Path] = js.native
 }
@@ -28,7 +28,7 @@ object EnvironmentContext {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withConsole(value: Console_): Self = {
+    def withConsole(value: Console): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("console")(value.asInstanceOf[js.Any])
         ret

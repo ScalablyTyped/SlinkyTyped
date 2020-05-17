@@ -1,5 +1,6 @@
 package typingsSlinky.rsocketCore
 
+import typingsSlinky.rsocketCore.anon.PartialISubscriberFrame
 import typingsSlinky.rsocketCore.rsocketleaseMod.RequesterLeaseHandler
 import typingsSlinky.rsocketCore.rsocketleaseMod.ResponderLeaseHandler
 import typingsSlinky.rsocketCore.rsocketserializationMod.PayloadSerializers

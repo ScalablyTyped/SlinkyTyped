@@ -29,6 +29,6 @@ package object choicesMod {
     */
   type RealChoice[T] = typingsSlinky.std.Exclude[
     typingsSlinky.inquirer.choicesMod.DistinctChoice[T], 
-    typingsSlinky.inquirer.AnonType
+    typingsSlinky.inquirer.anon.Type
   ]
 }

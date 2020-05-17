@@ -1,7 +1,7 @@
 package typingsSlinky.gestalt.mod
 
 import slinky.core.TagMod
-import typingsSlinky.gestalt.AnonHeight
+import typingsSlinky.gestalt.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +14,12 @@ trait CollageProps extends js.Object {
   var height: Double = js.native
   var layoutKey: js.UndefOr[Double] = js.native
   var width: Double = js.native
-  def renderImage(args: AnonHeight): TagMod[Any] = js.native
+  def renderImage(args: Height): TagMod[Any] = js.native
 }
 
 object CollageProps {
   @scala.inline
-  def apply(columns: Double, height: Double, renderImage: AnonHeight => TagMod[Any], width: Double): CollageProps = {
+  def apply(columns: Double, height: Double, renderImage: Height => TagMod[Any], width: Double): CollageProps = {
     val __obj = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], renderImage = js.Any.fromFunction1(renderImage), width = width.asInstanceOf[js.Any])
     __obj.asInstanceOf[CollageProps]
   }
@@ -42,7 +42,7 @@ object CollageProps {
         ret
     }
     @scala.inline
-    def withRenderImage(value: AnonHeight => TagMod[Any]): Self = {
+    def withRenderImage(value: Height => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderImage")(js.Any.fromFunction1(value))
         ret

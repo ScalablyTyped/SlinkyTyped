@@ -2,7 +2,7 @@ package typingsSlinky.reactNativeMaps.mod
 
 import typingsSlinky.react.mod.BaseSyntheticEvent
 import typingsSlinky.reactNative.mod.NodeHandle
-import typingsSlinky.reactNativeMaps.AnonCoordinateAnonAccuracy
+import typingsSlinky.reactNativeMaps.anon.CoordinateAccuracy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait EventUserLocation
   extends BaseSyntheticEvent[js.Object, NodeHandle, NodeHandle] {
   @JSName("nativeEvent")
-  var nativeEvent_EventUserLocation: AnonCoordinateAnonAccuracy = js.native
+  var nativeEvent_EventUserLocation: CoordinateAccuracy = js.native
 }
 
 object EventUserLocation {
@@ -25,7 +25,7 @@ object EventUserLocation {
     isDefaultPrevented: () => Boolean,
     isPropagationStopped: () => Boolean,
     isTrusted: Boolean,
-    nativeEvent: AnonCoordinateAnonAccuracy,
+    nativeEvent: CoordinateAccuracy,
     persist: () => Unit,
     preventDefault: () => Unit,
     stopPropagation: () => Unit,
@@ -44,7 +44,7 @@ object EventUserLocation {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withNativeEvent(value: AnonCoordinateAnonAccuracy): Self = {
+    def withNativeEvent(value: CoordinateAccuracy): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nativeEvent")(value.asInstanceOf[js.Any])
         ret

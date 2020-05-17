@@ -1,8 +1,11 @@
 package typingsSlinky.materialTabScroller
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import typingsSlinky.materialTabScroller.adapterMod.MDCTabScrollerAdapter
-import typingsSlinky.std.Document_
+import typingsSlinky.materialTabScroller.anon.ANIMATING
+import typingsSlinky.materialTabScroller.anon.AREASELECTOR
+import typingsSlinky.materialTabScroller.anon.PartialMDCTabScrollerAdap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,9 +32,9 @@ object mod extends js.Object {
   /* static members */
   @js.native
   object MDCTabScrollerFoundation extends js.Object {
-    val cssClasses: AnonANIMATING = js.native
+    val cssClasses: ANIMATING = js.native
     val defaultAdapter: MDCTabScrollerAdapter = js.native
-    val strings: AnonAREASELECTOR = js.native
+    val strings: AREASELECTOR = js.native
   }
   
   /**
@@ -71,8 +74,8 @@ object mod extends js.Object {
   
   @js.native
   object util extends js.Object {
-    def computeHorizontalScrollbarHeight(documentObj: Document_): Double = js.native
-    def computeHorizontalScrollbarHeight(documentObj: Document_, shouldCacheResult: Boolean): Double = js.native
+    def computeHorizontalScrollbarHeight(documentObj: Document): Double = js.native
+    def computeHorizontalScrollbarHeight(documentObj: Document, shouldCacheResult: Boolean): Double = js.native
   }
   
 }

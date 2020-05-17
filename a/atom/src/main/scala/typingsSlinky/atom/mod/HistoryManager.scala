@@ -1,6 +1,6 @@
 package typingsSlinky.atom.mod
 
-import typingsSlinky.atom.AnonReloaded
+import typingsSlinky.atom.anon.Reloaded
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait HistoryManager extends js.Object {
   /** Obtain a list of previously opened projects. */
   def getProjects(): js.Array[ProjectHistory] = js.native
   /** Invoke the given callback when the list of projects changes. */
-  def onDidChangeProjects(callback: js.Function1[/* args */ AnonReloaded, Unit]): Disposable = js.native
+  def onDidChangeProjects(callback: js.Function1[/* args */ Reloaded, Unit]): Disposable = js.native
 }
 
 object HistoryManager {
@@ -24,7 +24,7 @@ object HistoryManager {
   def apply(
     clearProjects: () => Unit,
     getProjects: () => js.Array[ProjectHistory],
-    onDidChangeProjects: js.Function1[/* args */ AnonReloaded, Unit] => Disposable
+    onDidChangeProjects: js.Function1[/* args */ Reloaded, Unit] => Disposable
   ): HistoryManager = {
     val __obj = js.Dynamic.literal(clearProjects = js.Any.fromFunction0(clearProjects), getProjects = js.Any.fromFunction0(getProjects), onDidChangeProjects = js.Any.fromFunction1(onDidChangeProjects))
     __obj.asInstanceOf[HistoryManager]
@@ -48,7 +48,7 @@ object HistoryManager {
         ret
     }
     @scala.inline
-    def withOnDidChangeProjects(value: js.Function1[/* args */ AnonReloaded, Unit] => Disposable): Self = {
+    def withOnDidChangeProjects(value: js.Function1[/* args */ Reloaded, Unit] => Disposable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDidChangeProjects")(js.Any.fromFunction1(value))
         ret

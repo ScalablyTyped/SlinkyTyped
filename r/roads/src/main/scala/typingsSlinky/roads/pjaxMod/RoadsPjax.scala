@@ -1,11 +1,11 @@
 package typingsSlinky.roads.pjaxMod
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLAnchorElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLFormElement
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait RoadsPjax extends js.Object {
   var _container_element: HTMLElement = js.native
   var _page_title: js.UndefOr[String] = js.native
   var _road: typingsSlinky.roads.roadMod.default = js.native
-  var _window: Window_ = js.native
+  var _window: Window = js.native
   /**
     * Handles all click events, and directs
     * @param {MouseEvent} event
@@ -39,7 +39,7 @@ trait RoadsPjax extends js.Object {
     * @param {Document} document - The pages document object to properly parse and set cookies
     * @returns {RoadsPjax} this object, useful for chaining
     */
-  def addCookieMiddleware(document: Document_): RoadsPjax = js.native
+  def addCookieMiddleware(document: Document): RoadsPjax = js.native
   /**
     * Adds middleware to the assigned road whcih will adds setTitle to the PJAX object (as opposed to the request object like the setTitle middlweare does).
     * This allows you to easily update the page title.
@@ -72,8 +72,8 @@ object RoadsPjax {
     _road: typingsSlinky.roads.roadMod.default,
     _roadsFormEvent: HTMLFormElement => Unit,
     _roadsLinkEvent: HTMLAnchorElement => Unit,
-    _window: Window_,
-    addCookieMiddleware: Document_ => RoadsPjax,
+    _window: Window,
+    addCookieMiddleware: Document => RoadsPjax,
     addTitleMiddleware: () => RoadsPjax,
     register: () => Unit,
     registerAdditionalElement: HTMLAnchorElement => Unit,
@@ -119,13 +119,13 @@ object RoadsPjax {
         ret
     }
     @scala.inline
-    def with_window(value: Window_): Self = {
+    def with_window(value: Window): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("_window")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withAddCookieMiddleware(value: Document_ => RoadsPjax): Self = {
+    def withAddCookieMiddleware(value: Document => RoadsPjax): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addCookieMiddleware")(js.Any.fromFunction1(value))
         ret

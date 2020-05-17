@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignReactNative.AnonDatePickerLocale
+import typingsSlinky.antDesignReactNative.anon.DatePickerLocale
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.date
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.datetime
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.month
@@ -54,7 +54,7 @@ object DatePicker {
     @scala.inline
     def itemStyleNull: this.type = set("itemStyle", null)
     @scala.inline
-    def locale(value: AnonDatePickerLocale): this.type = set("locale", value.asInstanceOf[js.Any])
+    def locale(value: DatePickerLocale): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline
     def maxDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
     @scala.inline

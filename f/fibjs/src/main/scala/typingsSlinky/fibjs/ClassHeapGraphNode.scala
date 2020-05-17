@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 	* @brief HeapGraphNode表示堆视图中的一个节点
 	* @detail 
 	*/
-@JSGlobal("Class_HeapGraphNode")
 @js.native
-class ClassHeapGraphNode () extends ClassObject {
+trait ClassHeapGraphNode extends ClassObject {
   /**
   	 * class prop 
   	 *

@@ -1,14 +1,16 @@
 package typingsSlinky.eventTargetShim.mod
 
-import typingsSlinky.eventTargetShim.EventTargetstandard
-import typingsSlinky.eventTargetShim.mod.EventTarget._EventData
+import typingsSlinky.eventTargetShim.anon.EventTargetstandard
+import typingsSlinky.eventTargetShim.mod.EventTarget.EventData
+import typingsSlinky.eventTargetShim.mod.EventTarget.PickEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Event
-  extends _EventData[js.Any, js.Any, js.Any] {
+  extends EventData[js.Any, js.Any, js.Any]
+     with PickEvent[js.Any, js.Any] {
   /**
     * Constant of AT_TARGET.
     */

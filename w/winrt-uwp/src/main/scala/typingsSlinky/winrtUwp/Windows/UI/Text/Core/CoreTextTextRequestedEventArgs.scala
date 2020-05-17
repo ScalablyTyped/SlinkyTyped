@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data for the TextRequested event. */
-@JSGlobal("Windows.UI.Text.Core.CoreTextTextRequestedEventArgs")
 @js.native
-abstract class CoreTextTextRequestedEventArgs () extends js.Object {
+trait CoreTextTextRequestedEventArgs extends js.Object {
   /** Gets information about a TextRequested event. */
   var request: CoreTextTextRequest = js.native
+}
+
+object CoreTextTextRequestedEventArgs {
+  @scala.inline
+  def apply(request: CoreTextTextRequest): CoreTextTextRequestedEventArgs = {
+    val __obj = js.Dynamic.literal(request = request.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CoreTextTextRequestedEventArgs]
+  }
+  @scala.inline
+  implicit class CoreTextTextRequestedEventArgsOps[Self <: CoreTextTextRequestedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRequest(value: CoreTextTextRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

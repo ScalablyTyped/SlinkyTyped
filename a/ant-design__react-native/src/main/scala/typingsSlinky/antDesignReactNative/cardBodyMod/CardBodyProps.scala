@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.cardBodyMod
 
-import typingsSlinky.antDesignReactNative.PickCardStylebody
+import typingsSlinky.antDesignReactNative.anon.PickCardStylebody
 import typingsSlinky.antDesignReactNative.libStyleMod.WithThemeStyles
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle

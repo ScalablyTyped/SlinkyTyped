@@ -18,12 +18,6 @@ package object importexportMod {
   type IsTruncated = scala.Boolean
   type JobId = java.lang.String
   type JobIdList = js.Array[typingsSlinky.awsSdk.importexportMod.GenericString]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.Import_
-    - typingsSlinky.awsSdk.awsSdkStrings.Export_
-    - java.lang.String
-  */
-  type JobType = typingsSlinky.awsSdk.importexportMod._JobType | java.lang.String
   type JobsList = js.Array[typingsSlinky.awsSdk.importexportMod.Job]
   type LocationCode = java.lang.String
   type LocationMessage = java.lang.String
@@ -42,12 +36,6 @@ package object importexportMod {
   type URL = java.lang.String
   type ValidateOnly = scala.Boolean
   type WarningMessage = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2010-06-01`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.importexportMod._apiVersion | java.lang.String
   type city = java.lang.String
   type company = java.lang.String
   type country = java.lang.String

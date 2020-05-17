@@ -1,7 +1,7 @@
 package typingsSlinky.workboxBroadcastUpdate.broadcastCacheUpdateMod.BroadcastCacheUpdate
 
 import org.scalajs.dom.experimental.Response
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait NotifyIfUpdatedOptions extends js.Object {
   var cacheName: String = js.native
-  var event: js.UndefOr[Event_] = js.native
+  var event: js.UndefOr[Event] = js.native
   var newResponse: Response = js.native
   var oldResponse: js.UndefOr[Response] = js.native
   var url: String = js.native
@@ -46,7 +46,7 @@ object NotifyIfUpdatedOptions {
         ret
     }
     @scala.inline
-    def withEvent(value: Event_): Self = {
+    def withEvent(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
         ret

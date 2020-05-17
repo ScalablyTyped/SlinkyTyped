@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignReactNative.PickCardStylefooterConten
+import typingsSlinky.antDesignReactNative.anon.PickCardStylefooterConten
 import typingsSlinky.antDesignReactNative.cardFooterMod.CardFooterProps
 import typingsSlinky.antDesignReactNative.cardFooterMod.default
 import typingsSlinky.reactNative.mod.StyleProp

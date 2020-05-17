@@ -1,6 +1,6 @@
 package typingsSlinky.yup.mod
 
-import typingsSlinky.yup.PartialTestMessageParams
+import typingsSlinky.yup.anon.PartialTestMessageParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

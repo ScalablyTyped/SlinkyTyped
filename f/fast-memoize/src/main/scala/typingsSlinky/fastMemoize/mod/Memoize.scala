@@ -1,12 +1,12 @@
 package typingsSlinky.fastMemoize.mod
 
-import typingsSlinky.fastMemoize.AnonMonadic
+import typingsSlinky.fastMemoize.anon.Monadic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Memoize extends MemoizeFunc {
-  var strategies: AnonMonadic = js.native
+  var strategies: Monadic = js.native
 }
 

@@ -81,7 +81,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withForceVisible(value: Boolean | x | y): Self = {
+    def withForceVisible(value: Boolean | typingsSlinky.simplebar.simplebarStrings.x | y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("forceVisible")(value.asInstanceOf[js.Any])
         ret

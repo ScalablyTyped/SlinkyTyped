@@ -5,7 +5,7 @@ import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
 import slinky.web.svg.rect.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.nivoBar.dataFromindexeskeysLegend
+import typingsSlinky.nivoBar.anon.dataFromindexeskeysLegend
 import typingsSlinky.nivoBar.mod.AccessorFunc
 import typingsSlinky.nivoBar.mod.Axis
 import typingsSlinky.nivoBar.mod.BarDatum
@@ -24,8 +24,8 @@ import typingsSlinky.nivoBar.nivoBarStrings.stacked
 import typingsSlinky.nivoBar.nivoBarStrings.vertical
 import typingsSlinky.nivoColors.mod.InheritedColorProp
 import typingsSlinky.nivoColors.mod.OrdinalColorsInstruction
-import typingsSlinky.nivoCore.AnonDictkey
-import typingsSlinky.nivoCore.AnonId
+import typingsSlinky.nivoCore.anon.Dictkey
+import typingsSlinky.nivoCore.anon.Id
 import typingsSlinky.nivoCore.mod.Box
 import typingsSlinky.nivoCore.mod.CartesianMarkerProps
 import typingsSlinky.nivoCore.mod.Theme
@@ -63,7 +63,7 @@ object ResponsiveBar {
     @scala.inline
     def colors(value: OrdinalColorsInstruction[_]): this.type = set("colors", value.asInstanceOf[js.Any])
     @scala.inline
-    def defs(value: js.Array[AnonDictkey]): this.type = set("defs", value.asInstanceOf[js.Any])
+    def defs(value: js.Array[Dictkey]): this.type = set("defs", value.asInstanceOf[js.Any])
     @scala.inline
     def enableGridX(value: Boolean): this.type = set("enableGridX", value.asInstanceOf[js.Any])
     @scala.inline
@@ -71,7 +71,7 @@ object ResponsiveBar {
     @scala.inline
     def enableLabel(value: Boolean): this.type = set("enableLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def fill(value: js.Array[AnonId[BarDatum]]): this.type = set("fill", value.asInstanceOf[js.Any])
+    def fill(value: js.Array[Id[BarDatum]]): this.type = set("fill", value.asInstanceOf[js.Any])
     @scala.inline
     def groupMode(value: stacked | grouped): this.type = set("groupMode", value.asInstanceOf[js.Any])
     @scala.inline

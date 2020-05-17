@@ -1,6 +1,6 @@
 package typingsSlinky.relayRuntime.relayDeclarativeMutationConfigMod
 
-import typingsSlinky.relayRuntime.AnonKey
+import typingsSlinky.relayRuntime.anon.Key
 import typingsSlinky.relayRuntime.relayRuntimeStrings.RANGE_DELETE
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait RangeDeleteConfig extends DeclarativeMutationConfig {
-  var connectionKeys: js.UndefOr[js.Array[AnonKey]] = js.native
+  var connectionKeys: js.UndefOr[js.Array[Key]] = js.native
   var connectionName: js.UndefOr[String] = js.native
   var deletedIDFieldName: String | js.Array[String] = js.native
   var parentID: js.UndefOr[String] = js.native
@@ -53,7 +53,7 @@ object RangeDeleteConfig {
         ret
     }
     @scala.inline
-    def withConnectionKeys(value: js.Array[AnonKey]): Self = {
+    def withConnectionKeys(value: js.Array[Key]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("connectionKeys")(value.asInstanceOf[js.Any])
         ret

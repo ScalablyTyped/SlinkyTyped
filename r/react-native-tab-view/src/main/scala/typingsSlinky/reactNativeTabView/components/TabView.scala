@@ -8,11 +8,9 @@ import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeGestureHandler.mod.PanGestureHandler
-import typingsSlinky.reactNativeTabView.AnonDamping
-import typingsSlinky.reactNativeTabView.AnonDuration
-import typingsSlinky.reactNativeTabView.AnonHeight
-import typingsSlinky.reactNativeTabView.AnonNavigationState
-import typingsSlinky.reactNativeTabView.AnonRoute
+import typingsSlinky.reactNativeTabView.anon.Damping
+import typingsSlinky.reactNativeTabView.anon.Duration
+import typingsSlinky.reactNativeTabView.anon.Height
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.`on-drag`
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.auto
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.bottom
@@ -37,7 +35,7 @@ object TabView {
     extends AnyVal
        with StBuildingComponent[tag.type, default[js.Any]] {
     @scala.inline
-    def initialLayout(value: AnonHeight): this.type = set("initialLayout", value.asInstanceOf[js.Any])
+    def initialLayout(value: Height): this.type = set("initialLayout", value.asInstanceOf[js.Any])
     @scala.inline
     def onSwipeEnd(value: () => Unit): this.type = set("onSwipeEnd", js.Any.fromFunction0(value))
     @scala.inline
@@ -71,14 +69,14 @@ object TabView {
     lazyPreloadDistance: Double,
     navigationState: NavigationState[T],
     onIndexChange: Double => Unit,
-    renderLazyPlaceholder: AnonRoute[T] => TagMod[Any],
+    renderLazyPlaceholder: typingsSlinky.reactNativeTabView.anon.Route[T] => TagMod[Any],
     renderPager: typingsSlinky.reactNativeTabView.pagerMod.Props[T] => TagMod[Any],
-    renderScene: SceneRendererProps with AnonRoute[T] => TagMod[Any],
-    renderTabBar: SceneRendererProps with AnonNavigationState[T] => TagMod[Any],
-    springConfig: AnonDamping,
+    renderScene: SceneRendererProps with typingsSlinky.reactNativeTabView.anon.Route[T] => TagMod[Any],
+    renderTabBar: SceneRendererProps with typingsSlinky.reactNativeTabView.anon.NavigationState[T] => TagMod[Any],
+    springConfig: Damping,
     swipeEnabled: Boolean,
     tabBarPosition: top | bottom,
-    timingConfig: AnonDuration
+    timingConfig: Duration
   ): Builder[T] = {
     val __props = js.Dynamic.literal(gestureHandlerProps = gestureHandlerProps.asInstanceOf[js.Any], keyboardDismissMode = keyboardDismissMode.asInstanceOf[js.Any], lazyPreloadDistance = lazyPreloadDistance.asInstanceOf[js.Any], navigationState = navigationState.asInstanceOf[js.Any], onIndexChange = js.Any.fromFunction1(onIndexChange), renderLazyPlaceholder = js.Any.fromFunction1(renderLazyPlaceholder), renderPager = js.Any.fromFunction1(renderPager), renderScene = js.Any.fromFunction1(renderScene), renderTabBar = js.Any.fromFunction1(renderTabBar), springConfig = springConfig.asInstanceOf[js.Any], swipeEnabled = swipeEnabled.asInstanceOf[js.Any], tabBarPosition = tabBarPosition.asInstanceOf[js.Any], timingConfig = timingConfig.asInstanceOf[js.Any])
     __props.updateDynamic("lazy")(`lazy`.asInstanceOf[js.Any])

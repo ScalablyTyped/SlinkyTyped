@@ -1,6 +1,7 @@
 package typingsSlinky.webappsecCredentialManagement
 
-import org.scalajs.dom.raw.HTMLFormElement
+import org.scalajs.dom.raw.FormData
+import typingsSlinky.webappsecCredentialManagement.webappsecCredentialManagementStrings.password
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,17 +9,10 @@ import scala.scalajs.js.annotation._
 /**
   * @see {@link https://www.w3.org/TR/credential-management-1/#passwordcredential}
   */
-@JSGlobal("PasswordCredential")
 @js.native
-class PasswordCredential protected ()
+trait PasswordCredential
   extends SiteBoundCredential
      with CredentialType {
-  def this(data: HTMLFormElement) = this()
-  /**
-    * @see {@link https://www.w3.org/TR/credential-management-1/#dom-passwordcredential-passwordcredential-data}
-    * @see {@link https://www.w3.org/TR/credential-management-1/#dom-passwordcredential-passwordcredential}
-    */
-  def this(data: PasswordCredentialData) = this()
   /**
     * If the developer wishes to specify additional data to insert into the
     * request body when submitting the credential information to a remote
@@ -54,5 +48,70 @@ class PasswordCredential protected ()
   var passwordName: String = js.native
   @JSName("type")
   val type_PasswordCredential: typingsSlinky.webappsecCredentialManagement.webappsecCredentialManagementStrings.password = js.native
+}
+
+object PasswordCredential {
+  @scala.inline
+  def apply(id: String, idName: String, passwordName: String, `type`: password): PasswordCredential = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], idName = idName.asInstanceOf[js.Any], passwordName = passwordName.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PasswordCredential]
+  }
+  @scala.inline
+  implicit class PasswordCredentialOps[Self <: PasswordCredential] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIdName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("idName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPasswordName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: password): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdditionalDataFormData(value: FormData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdditionalData(value: CredentialBodyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdditionalDataNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("additionalData")(null)
+        ret
+    }
+    @scala.inline
+    def withPassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPassword: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

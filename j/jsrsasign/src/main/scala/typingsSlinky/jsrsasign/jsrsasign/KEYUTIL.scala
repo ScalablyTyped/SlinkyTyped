@@ -1,16 +1,10 @@
 package typingsSlinky.jsrsasign.jsrsasign
 
-import typingsSlinky.jsrsasign.AnonAlgoid
-import typingsSlinky.jsrsasign.AnonAlgparam
-import typingsSlinky.jsrsasign.AnonE
-import typingsSlinky.jsrsasign.AnonN
-import typingsSlinky.jsrsasign.AnonP8pubkeyhex
-import typingsSlinky.jsrsasign.AnonPrvKeyObj_
+import typingsSlinky.jsrsasign.anon.Algoid
+import typingsSlinky.jsrsasign.anon.Algparam
+import typingsSlinky.jsrsasign.anon.N
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.crypto.DSA
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.crypto.ECDSA
-import typingsSlinky.jsrsasign.jsrsasign.KJUR.jws.JWS.JsonWebKey
-import typingsSlinky.jsrsasign.jsrsasignStrings.EC
-import typingsSlinky.jsrsasign.jsrsasignStrings.RSA
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -72,9 +66,8 @@ import scala.scalajs.js.annotation._
   * // 4. exporting public key
   * var pem = KEYUTIL.getPEM(publicKeyObj);
   */
-@JSGlobal("jsrsasign.KEYUTIL")
 @js.native
-class KEYUTIL () extends js.Object {
+trait KEYUTIL extends js.Object {
   /**
     * get RSAKey/DSA/ECDSA public key object from hexadecimal string of PKCS#8 public key
     * @param pkcsPub8Hex hexadecimal string of PKCS#8 public key
@@ -231,7 +224,7 @@ class KEYUTIL () extends js.Object {
     * - keyidx - string starting index of key in pkcs8PrvHex
     *
     */
-  def parsePlainPrivatePKCS8Hex(pkcs8PrvHex: String): AnonAlgoid = js.native
+  def parsePlainPrivatePKCS8Hex(pkcs8PrvHex: String): Algoid = js.native
   /**
     * parse hexadecimal string of PKCS#8 RSA/EC/DSA public key
     * @param pkcs8PubHex hexadecimal string of PKCS#8 public key
@@ -244,7 +237,7 @@ class KEYUTIL () extends js.Object {
     * - key - hexadecimal string of public key
     *
     */
-  def parsePublicPKCS8Hex(pkcs8PubHex: String): AnonAlgparam = js.native
+  def parsePublicPKCS8Hex(pkcs8PubHex: String): Algparam = js.native
   /**
     * parse hexadecimal string of plain PKCS#8 private key
     * @param pubRawRSAHex hexadecimal string of ASN.1 encoded PKCS#8 public key
@@ -256,263 +249,128 @@ class KEYUTIL () extends js.Object {
     * - e - hexadecimal string of public exponent
     *
     */
-  def parsePublicRawRSAKeyHex(pubRawRSAHex: String): AnonN = js.native
+  def parsePublicRawRSAKeyHex(pubRawRSAHex: String): N = js.native
 }
 
-/* static members */
-@JSGlobal("jsrsasign.KEYUTIL")
-@js.native
-object KEYUTIL extends js.Object {
-  val version: String = js.native
-  @JSName("generateKeypair")
-  def generateKeypair_EC(alg: EC, keylenOrCurve: String): AnonPrvKeyObj_ = js.native
-  @JSName("generateKeypair")
-  def generateKeypair_EC(alg: EC, keylenOrCurve: Double): AnonPrvKeyObj_ = js.native
-  @JSName("generateKeypair")
-  def generateKeypair_RSA(alg: RSA, keylenOrCurve: String): AnonPrvKeyObj_ = js.native
-  /**
-    * @param alg 'RSA' or 'EC'
-    * @param keylenOrCurve key length for RSA or curve name for EC
-    * @return associative array of keypair which has prvKeyObj and pubKeyObj parameters
-    * @description
-    * This method generates a key pair of public key algorithm.
-    * The result will be an associative array which has following
-    * parameters:
-    *
-    * - prvKeyObj - RSAKey or ECDSA object of private key
-    * - pubKeyObj - RSAKey or ECDSA object of public key
-    *
-    * NOTE1: As for RSA algoirthm, public exponent has fixed
-    * value '0x10001'.
-    * NOTE2: As for EC algorithm, supported names of curve are
-    * secp256r1, secp256k1 and secp384r1.
-    * NOTE3: DSA is not supported yet.
-    * @example
-    * var rsaKeypair = KEYUTIL.generateKeypair("RSA", 1024);
-    * var ecKeypair = KEYUTIL.generateKeypair("EC", "secp256r1");
-    *
-    */
-  @JSName("generateKeypair")
-  def generateKeypair_RSA(alg: RSA, keylenOrCurve: Double): AnonPrvKeyObj_ = js.native
-  def getJWKFromKey(keyObj: DSA): JsonWebKey = js.native
-  def getJWKFromKey(keyObj: ECDSA): JsonWebKey = js.native
-  /**
-    * convert from RSAKey/KJUR.crypto.ECDSA public/private key object to RFC 7517 JSON Web Key(JWK)
-    * @param keyObj RSAKey/KJUR.crypto.ECDSA public/private key object
-    * @return JWK object
-    * @description
-    * This static method convert from RSAKey/KJUR.crypto.ECDSA public/private key object
-    * to RFC 7517 JSON Web Key(JWK)
-    * @example
-    * kp1 = KEYUTIL.generateKeypair("EC", "P-256");
-    * jwkPrv1 = KEYUTIL.getJWKFromKey(kp1.prvKeyObj);
-    * jwkPub1 = KEYUTIL.getJWKFromKey(kp1.pubKeyObj);
-    *
-    * kp2 = KEYUTIL.generateKeypair("RSA", 2048);
-    * jwkPrv2 = KEYUTIL.getJWKFromKey(kp2.prvKeyObj);
-    * jwkPub2 = KEYUTIL.getJWKFromKey(kp2.pubKeyObj);
-    *
-    * // if you need RFC 7638 JWK thumprint as kid do like this:
-    * jwkPub2.kid = KJUR.jws.JWS.getJWKthumbprint(jwkPub2);
-    */
-  def getJWKFromKey(keyObj: RSAKey): JsonWebKey = js.native
-  def getKey(param: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: String, passcode: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: String, passcode: String, hextype: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: String, passcode: Null, hextype: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: AnonE): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: AnonE, passcode: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: AnonE, passcode: String, hextype: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: AnonE, passcode: Null, hextype: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: ECCPrivateKey): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: ECCPrivateKey, passcode: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: ECCPrivateKey, passcode: String, hextype: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: ECCPrivateKey, passcode: Null, hextype: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: DSA): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: DSA, passcode: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: DSA, passcode: String, hextype: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: DSA, passcode: Null, hextype: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: ECDSA): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: ECDSA, passcode: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: ECDSA, passcode: String, hextype: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: ECDSA, passcode: Null, hextype: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: JsonWebKey): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: JsonWebKey, passcode: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: JsonWebKey, passcode: String, hextype: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: JsonWebKey, passcode: Null, hextype: String): RSAKey | DSA | ECDSA = js.native
-  /**
-    * get private or public key object from any arguments
-    * @param param parameter to get key object. see description in detail.
-    * @param passcode (OPTION) parameter to get key object. see description in detail.
-    * @param hextype (OPTION) parameter to get key object. see description in detail.
-    * @return `RSAKey`, `KJUR.crypto.ECDSA` or `KJUR.crypto.ECDSA` object
-    * @description
-    * This method gets private or public key object(`RSAKey`, `KJUR.crypto.DSA` or `KJUR.crypto.ECDSA`)
-    * for RSA, DSA and ECC.
-    * Arguments for this methods depends on a key format you specify.
-    * Following key representations are supported.
-    *
-    * - ECC private/public key object(as is): param=KJUR.crypto.ECDSA
-    * - DSA private/public key object(as is): param=KJUR.crypto.DSA
-    * - RSA private/public key object(as is): param=RSAKey
-    * - ECC private key parameters: param={d: d, curve: curveName}
-    * - RSA private key parameters: param={n: n, e: e, d: d, p: p, q: q, dp: dp, dq: dq, co: co}
-    *   NOTE: Each value shall be hexadecimal string of key spec.
-    * - DSA private key parameters: param={p: p, q: q, g: g, y: y, x: x}
-    *   NOTE: Each value shall be hexadecimal string of key spec.
-    * - ECC public key parameters: param={xy: xy, curve: curveName}
-    *   NOTE: ECC public key 'xy' shall be concatination of "04", x-bytes-hex and y-bytes-hex.
-    * - DSA public key parameters: param={p: p, q: q, g: g, y: y}
-    *   NOTE: Each value shall be hexadecimal string of key spec.
-    * - RSA public key parameters: param={n: n, e: e}
-    * - X.509v1/v3 PEM certificate (RSA/DSA/ECC): param=pemString
-    * - PKCS#8 hexadecimal RSA/ECC public key: param=pemString, null, "pkcs8pub"
-    * - PKCS#8 PEM RSA/DSA/ECC public key: param=pemString
-    * - PKCS#5 plain hexadecimal RSA private key: param=hexString, null, "pkcs5prv"
-    * - PKCS#5 plain PEM DSA/RSA private key: param=pemString
-    * - PKCS#8 plain PEM RSA/ECDSA private key: param=pemString
-    * - PKCS#5 encrypted PEM RSA/DSA private key: param=pemString, passcode
-    * - PKCS#8 encrypted PEM RSA/ECDSA private key: param=pemString, passcode
-    *
-    * Please note following limitation on encrypted keys:
-    *
-    * - Encrypted PKCS#8 only supports PBKDF2/HmacSHA1/3DES
-    * - Encrypted PKCS#5 supports DES-CBC, DES-EDE3-CBC, AES-{128,192.256}-CBC
-    * - JWT plain ECC private/public key
-    * - JWT plain RSA public key
-    * - JWT plain RSA private key with P/Q/DP/DQ/COEFF
-    * - JWT plain RSA private key without P/Q/DP/DQ/COEFF (since jsrsasign 5.0.0)
-    *
-    * NOTE1: [RFC 7517 JSON Web Key(JWK)](https://tools.ietf.org/html/rfc7517) support for RSA/ECC private/public key from jsrsasign 4.8.1.
-    * NOTE2: X509v1 support is added since jsrsasign 5.0.11.
-    *
-    * @example
-    * // 1. loading private key from PEM string
-    * keyObj = KEYUTIL.getKey("-----BEGIN RSA PRIVATE KEY...");
-    * keyObj = KEYUTIL.getKey("-----BEGIN RSA PRIVATE KEY..., "passcode");
-    * keyObj = KEYUTIL.getKey("-----BEGIN PRIVATE KEY...");
-    * keyObj = KEYUTIL.getKey("-----BEGIN PRIVATE KEY...", "passcode");
-    * // 2. loading public key from PEM string
-    * keyObj = KEYUTIL.getKey("-----BEGIN PUBLIC KEY...");
-    * keyObj = KEYUTIL.getKey("-----BEGIN X509 CERTIFICATE...");
-    * // 3. loading hexadecimal PKCS#5/PKCS#8 key
-    * keyObj = KEYUTIL.getKey("308205c1...", null, "pkcs8pub");
-    * keyObj = KEYUTIL.getKey("3082048b...", null, "pkcs5prv");
-    * // 4. loading JSON Web Key(JWK)
-    * keyObj = KEYUTIL.getKey({kty: "RSA", n: "0vx7...", e: "AQAB"});
-    * keyObj = KEYUTIL.getKey({kty: "EC", crv: "P-256",
-    *                          x: "MKBC...", y: "4Etl6...", d: "870Mb..."});
-    * // 5. bare hexadecimal key
-    * keyObj = KEYUTIL.getKey({n: "75ab..", e: "010001"});
-    */
-  def getKey(param: RSAKey): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: RSAKey, passcode: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: RSAKey, passcode: String, hextype: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: RSAKey, passcode: Null, hextype: String): RSAKey | DSA | ECDSA = js.native
-  /**
-    * get RSAKey/DSA/ECDSA public key object from hexadecimal string of PKCS#10 CSR
-    * @param csrHex hexadecimal string of PKCS#10 CSR
-    * @return RSAKey/DSA/ECDSA public key object
-    */
-  def getKeyFromCSRHex(csrHex: String): RSAKey | DSA | ECDSA = js.native
-  /**
-    * get RSAKey/DSA/ECDSA public key object from PEM formatted PKCS#10 CSR string
-    * @param csrPEM PEM formatted PKCS#10 CSR string
-    * @return RSAKey/DSA/ECDSA public key object
-    */
-  def getKeyFromCSRPEM(csrPEM: String): RSAKey | DSA | ECDSA = js.native
-  def getPEM(keyObjOrHex: DSA): Unit = js.native
-  def getPEM(keyObjOrHex: DSA, formatType: PrivateKeyOutputFormatType): Unit = js.native
-  def getPEM(keyObjOrHex: DSA, formatType: PrivateKeyOutputFormatType, passwd: String): Unit = js.native
-  def getPEM(keyObjOrHex: DSA, formatType: PrivateKeyOutputFormatType, passwd: String, encAlg: String): Unit = js.native
-  def getPEM(
-    keyObjOrHex: DSA,
-    formatType: PrivateKeyOutputFormatType,
-    passwd: String,
-    encAlg: String,
-    hexType: String
-  ): Unit = js.native
-  def getPEM(
-    keyObjOrHex: DSA,
-    formatType: PrivateKeyOutputFormatType,
-    passwd: String,
-    encAlg: String,
-    hexType: String,
-    ivsaltHex: String
-  ): Unit = js.native
-  def getPEM(keyObjOrHex: ECDSA): Unit = js.native
-  def getPEM(keyObjOrHex: ECDSA, formatType: PrivateKeyOutputFormatType): Unit = js.native
-  def getPEM(keyObjOrHex: ECDSA, formatType: PrivateKeyOutputFormatType, passwd: String): Unit = js.native
-  def getPEM(keyObjOrHex: ECDSA, formatType: PrivateKeyOutputFormatType, passwd: String, encAlg: String): Unit = js.native
-  def getPEM(
-    keyObjOrHex: ECDSA,
-    formatType: PrivateKeyOutputFormatType,
-    passwd: String,
-    encAlg: String,
-    hexType: String
-  ): Unit = js.native
-  def getPEM(
-    keyObjOrHex: ECDSA,
-    formatType: PrivateKeyOutputFormatType,
-    passwd: String,
-    encAlg: String,
-    hexType: String,
-    ivsaltHex: String
-  ): Unit = js.native
-  /**
-    * get PEM formatted private or public key file from a RSA/ECDSA/DSA key object
-    * @param keyObjOrHex key object `RSAKey`, `KJUR.crypto.ECDSA` or `KJUR.crypto.DSA` to encode to
-    * @param formatType (OPTION) output format type of "PKCS1PRV", "PKCS5PRV" or "PKCS8PRV" for private key
-    * @param passwd (OPTION) password to protect private key
-    * @param encAlg (OPTION) encryption algorithm for PKCS#5. currently supports DES-CBC, DES-EDE3-CBC and AES-{128,192,256}-CBC
-    * @param hexType (OPTION) type of hex string (ex. pkcs5prv, pkcs8prv)
-    * @param ivsaltHex hexadecimal string of IV and salt (default generated random IV)
-    * @description
-    *
-    * __NOTE1:__ PKCS#5 encrypted private key protection algorithm supports DES-CBC, DES-EDE3-CBC and AES-{128,192,256}-CBC
-    * __NOTE2:__ OpenSSL supports
-    * __NOTE3:__ Parameter "ivsaltHex" supported since jsrsasign 8.0.0 keyutil 1.2.0.
-    *
-    * @example
-    * KEYUTIL.getPEM(publicKey) => generates PEM PKCS#8 public key
-    * KEYUTIL.getPEM(privateKey, "PKCS1PRV") => generates PEM PKCS#1 plain private key
-    * KEYUTIL.getPEM(privateKey, "PKCS5PRV", "pass") => generates PEM PKCS#5 encrypted private key
-    *                                                          with DES-EDE3-CBC (DEFAULT)
-    * KEYUTIL.getPEM(privateKey, "PKCS5PRV", "pass", "DES-CBC") => generates PEM PKCS#5 encrypted
-    *                                                                 private key with DES-CBC
-    * KEYUTIL.getPEM(privateKey, "PKCS8PRV") => generates PEM PKCS#8 plain private key
-    * KEYUTIL.getPEM(privateKey, "PKCS8PRV", "pass") => generates PEM PKCS#8 encrypted private key
-    *                                                      with PBKDF2_HmacSHA1_3DES
-    */
-  def getPEM(keyObjOrHex: RSAKey): Unit = js.native
-  def getPEM(keyObjOrHex: RSAKey, formatType: PrivateKeyOutputFormatType): Unit = js.native
-  def getPEM(keyObjOrHex: RSAKey, formatType: PrivateKeyOutputFormatType, passwd: String): Unit = js.native
-  def getPEM(keyObjOrHex: RSAKey, formatType: PrivateKeyOutputFormatType, passwd: String, encAlg: String): Unit = js.native
-  def getPEM(
-    keyObjOrHex: RSAKey,
-    formatType: PrivateKeyOutputFormatType,
-    passwd: String,
-    encAlg: String,
-    hexType: String
-  ): Unit = js.native
-  def getPEM(
-    keyObjOrHex: RSAKey,
-    formatType: PrivateKeyOutputFormatType,
-    passwd: String,
-    encAlg: String,
-    hexType: String,
-    ivsaltHex: String
-  ): Unit = js.native
-  /**
-    * parse hexadecimal string of PKCS#10 CSR (certificate signing request)
-    * @param csrHex hexadecimal string of PKCS#10 CSR
-    * @return associative array of parsed CSR
-    * @description
-    * Resulted associative array has following properties:
-    *
-    * - p8pubkeyhex - hexadecimal string of subject public key in PKCS#8
-    *
-    */
-  def parseCSRHex(csrHex: String): AnonP8pubkeyhex = js.native
+object KEYUTIL {
+  @scala.inline
+  def apply(
+    _getKeyFromPublicPKCS8Hex: String => RSAKey | ECDSA,
+    _getPlainPKCS8HexFromEncryptedPKCS8PEM: (String, String) => String,
+    decryptKeyB64: (String, String, String, String) => String,
+    getDecryptedKeyHex: (String, String) => String,
+    getEncryptedPKCS5PEMFromPrvKeyHex: (String, String, String, String, String) => String,
+    getKeyAndUnusedIvByPasscodeAndIvsalt: (String, String, String) => String,
+    getKeyFromEncryptedPKCS8PEM: (String, String) => RSAKey | ECDSA,
+    getKeyFromPlainPrivatePKCS8Hex: String => RSAKey | DSA | ECDSA,
+    getKeyFromPlainPrivatePKCS8PEM: String => RSAKey | ECDSA,
+    getPBKDF2KeyHexFromParam: (PKCS8Info, String) => String,
+    parseHexOfEncryptedPKCS8: String => PKCS8Info,
+    parsePKCS5PEM: String => String,
+    parsePlainPrivatePKCS8Hex: String => Algoid,
+    parsePublicPKCS8Hex: String => Algparam,
+    parsePublicRawRSAKeyHex: String => N
+  ): KEYUTIL = {
+    val __obj = js.Dynamic.literal(_getKeyFromPublicPKCS8Hex = js.Any.fromFunction1(_getKeyFromPublicPKCS8Hex), _getPlainPKCS8HexFromEncryptedPKCS8PEM = js.Any.fromFunction2(_getPlainPKCS8HexFromEncryptedPKCS8PEM), decryptKeyB64 = js.Any.fromFunction4(decryptKeyB64), getDecryptedKeyHex = js.Any.fromFunction2(getDecryptedKeyHex), getEncryptedPKCS5PEMFromPrvKeyHex = js.Any.fromFunction5(getEncryptedPKCS5PEMFromPrvKeyHex), getKeyAndUnusedIvByPasscodeAndIvsalt = js.Any.fromFunction3(getKeyAndUnusedIvByPasscodeAndIvsalt), getKeyFromEncryptedPKCS8PEM = js.Any.fromFunction2(getKeyFromEncryptedPKCS8PEM), getKeyFromPlainPrivatePKCS8Hex = js.Any.fromFunction1(getKeyFromPlainPrivatePKCS8Hex), getKeyFromPlainPrivatePKCS8PEM = js.Any.fromFunction1(getKeyFromPlainPrivatePKCS8PEM), getPBKDF2KeyHexFromParam = js.Any.fromFunction2(getPBKDF2KeyHexFromParam), parseHexOfEncryptedPKCS8 = js.Any.fromFunction1(parseHexOfEncryptedPKCS8), parsePKCS5PEM = js.Any.fromFunction1(parsePKCS5PEM), parsePlainPrivatePKCS8Hex = js.Any.fromFunction1(parsePlainPrivatePKCS8Hex), parsePublicPKCS8Hex = js.Any.fromFunction1(parsePublicPKCS8Hex), parsePublicRawRSAKeyHex = js.Any.fromFunction1(parsePublicRawRSAKeyHex))
+    __obj.asInstanceOf[KEYUTIL]
+  }
+  @scala.inline
+  implicit class KEYUTILOps[Self <: KEYUTIL] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_getKeyFromPublicPKCS8Hex(value: String => RSAKey | ECDSA): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_getKeyFromPublicPKCS8Hex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def with_getPlainPKCS8HexFromEncryptedPKCS8PEM(value: (String, String) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_getPlainPKCS8HexFromEncryptedPKCS8PEM")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withDecryptKeyB64(value: (String, String, String, String) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decryptKeyB64")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withGetDecryptedKeyHex(value: (String, String) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDecryptedKeyHex")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetEncryptedPKCS5PEMFromPrvKeyHex(value: (String, String, String, String, String) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getEncryptedPKCS5PEMFromPrvKeyHex")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withGetKeyAndUnusedIvByPasscodeAndIvsalt(value: (String, String, String) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getKeyAndUnusedIvByPasscodeAndIvsalt")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withGetKeyFromEncryptedPKCS8PEM(value: (String, String) => RSAKey | ECDSA): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getKeyFromEncryptedPKCS8PEM")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetKeyFromPlainPrivatePKCS8Hex(value: String => RSAKey | DSA | ECDSA): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getKeyFromPlainPrivatePKCS8Hex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetKeyFromPlainPrivatePKCS8PEM(value: String => RSAKey | ECDSA): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getKeyFromPlainPrivatePKCS8PEM")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetPBKDF2KeyHexFromParam(value: (PKCS8Info, String) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPBKDF2KeyHexFromParam")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withParseHexOfEncryptedPKCS8(value: String => PKCS8Info): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parseHexOfEncryptedPKCS8")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withParsePKCS5PEM(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parsePKCS5PEM")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withParsePlainPrivatePKCS8Hex(value: String => Algoid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parsePlainPrivatePKCS8Hex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withParsePublicPKCS8Hex(value: String => Algparam): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parsePublicPKCS8Hex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withParsePublicRawRSAKeyHex(value: String => N): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parsePublicRawRSAKeyHex")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

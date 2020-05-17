@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientAnalytics.gapi.client.analytics
 
-import typingsSlinky.gapiClientAnalytics.AnonEffective
-import typingsSlinky.gapiClientAnalytics.AnonHref
+import typingsSlinky.gapiClientAnalytics.anon.Effective
+import typingsSlinky.gapiClientAnalytics.anon.Href
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Account extends js.Object {
   /** Child link for an account entry. Points to the list of web properties for this account. */
-  var childLink: js.UndefOr[AnonHref] = js.native
+  var childLink: js.UndefOr[Href] = js.native
   /** Time the account was created. */
   var created: js.UndefOr[String] = js.native
   /** Account ID. */
@@ -19,7 +19,7 @@ trait Account extends js.Object {
   /** Account name. */
   var name: js.UndefOr[String] = js.native
   /** Permissions the user has for this account. */
-  var permissions: js.UndefOr[AnonEffective] = js.native
+  var permissions: js.UndefOr[Effective] = js.native
   /** Link for this account. */
   var selfLink: js.UndefOr[String] = js.native
   /** Indicates whether this account is starred or not. */
@@ -41,7 +41,7 @@ object Account {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withChildLink(value: AnonHref): Self = {
+    def withChildLink(value: Href): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("childLink")(value.asInstanceOf[js.Any])
         ret
@@ -101,7 +101,7 @@ object Account {
         ret
     }
     @scala.inline
-    def withPermissions(value: AnonEffective): Self = {
+    def withPermissions(value: Effective): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
         ret

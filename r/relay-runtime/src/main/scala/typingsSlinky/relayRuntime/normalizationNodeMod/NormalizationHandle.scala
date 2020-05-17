@@ -12,14 +12,8 @@ trait NormalizationHandle extends NormalizationSelection
 
 object NormalizationHandle {
   @scala.inline
-  def NormalizationScalarHandle(handle: String, key: String, kind: String, name: String): NormalizationHandle = {
-    val __obj = js.Dynamic.literal(handle = handle.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NormalizationHandle]
-  }
+  implicit def apply(value: NormalizationLinkedHandle): NormalizationHandle = value.asInstanceOf[NormalizationHandle]
   @scala.inline
-  def NormalizationLinkedHandle(handle: String, key: String, kind: String, name: String): NormalizationHandle = {
-    val __obj = js.Dynamic.literal(handle = handle.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NormalizationHandle]
-  }
+  implicit def apply(value: NormalizationScalarHandle): NormalizationHandle = value.asInstanceOf[NormalizationHandle]
 }
 

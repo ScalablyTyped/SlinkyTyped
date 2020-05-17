@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.indexBundleMod
 
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object initializeFocusRects extends js.Object {
   def apply(): Unit = js.native
-  def apply(window: Window_): Unit = js.native
+  def apply(window: Window): Unit = js.native
 }
 

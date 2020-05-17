@@ -1,7 +1,7 @@
 package typingsSlinky.leafletGeosearch.mod
 
-import typingsSlinky.leafletGeosearch.AnonAdminDistrict
-import typingsSlinky.leafletGeosearch.BingProviderResultPointca
+import typingsSlinky.leafletGeosearch.anon.AdminDistrict
+import typingsSlinky.leafletGeosearch.anon.BingProviderResultPointca
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait BingProviderResultRaw extends js.Object {
   var __type: String = js.native
-  var address: AnonAdminDistrict = js.native
+  var address: AdminDistrict = js.native
   var bbox: js.Tuple4[Double, Double, Double, Double] = js.native
   var confidence: String = js.native
   var entityType: String = js.native
@@ -23,7 +23,7 @@ object BingProviderResultRaw {
   @scala.inline
   def apply(
     __type: String,
-    address: AnonAdminDistrict,
+    address: AdminDistrict,
     bbox: js.Tuple4[Double, Double, Double, Double],
     confidence: String,
     entityType: String,
@@ -48,7 +48,7 @@ object BingProviderResultRaw {
         ret
     }
     @scala.inline
-    def withAddress(value: AnonAdminDistrict): Self = {
+    def withAddress(value: AdminDistrict): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
         ret

@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientClassroom.gapi.client.classroom
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientClassroom.AnonIdKey
-import typingsSlinky.gapiClientClassroom.AnonKeyOauthtoken
-import typingsSlinky.gapiClientClassroom.AnonPageSize
-import typingsSlinky.gapiClientClassroom.AnonResourceUploadType
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientClassroom.anon.IdKey
+import typingsSlinky.gapiClientClassroom.anon.KeyOauthtoken
+import typingsSlinky.gapiClientClassroom.anon.PageSize
+import typingsSlinky.gapiClientClassroom.anon.ResourceUploadType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,9 +28,9 @@ trait InvitationsResource extends js.Object {
     * &#42; UserGroupsMembershipLimitReached
     * &#42; `NOT_FOUND` if no invitation exists with the requested ID.
     */
-  def accept(): Request_[js.Object] = js.native
-  def accept(request: AnonIdKey): Request_[js.Object] = js.native
-  def create(request: AnonKeyOauthtoken, body: Invitation): Request_[Invitation] = js.native
+  def accept(): Request[js.Object] = js.native
+  def accept(request: IdKey): Request[js.Object] = js.native
+  def create(request: KeyOauthtoken, body: Invitation): Request[Invitation] = js.native
   /**
     * Creates an invitation. Only one invitation for a user and course may exist
     * at a time. Delete and re-create an invitation to make changes.
@@ -45,7 +45,7 @@ trait InvitationsResource extends js.Object {
     * &#42; `ALREADY_EXISTS` if an invitation for the specified user and course
     * already exists.
     */
-  def create(request: AnonResourceUploadType): Request_[Invitation] = js.native
+  def create(request: ResourceUploadType): Request[Invitation] = js.native
   /**
     * Deletes an invitation.
     *
@@ -55,8 +55,8 @@ trait InvitationsResource extends js.Object {
     * requested invitation or for access errors.
     * &#42; `NOT_FOUND` if no invitation exists with the requested ID.
     */
-  def delete(): Request_[js.Object] = js.native
-  def delete(request: AnonIdKey): Request_[js.Object] = js.native
+  def delete(): Request[js.Object] = js.native
+  def delete(request: IdKey): Request[js.Object] = js.native
   /**
     * Returns an invitation.
     *
@@ -66,8 +66,8 @@ trait InvitationsResource extends js.Object {
     * requested invitation or for access errors.
     * &#42; `NOT_FOUND` if no invitation exists with the requested ID.
     */
-  def get(): Request_[Invitation] = js.native
-  def get(request: AnonIdKey): Request_[Invitation] = js.native
+  def get(): Request[Invitation] = js.native
+  def get(request: IdKey): Request[Invitation] = js.native
   /**
     * Returns a list of invitations that the requesting user is permitted to
     * view, restricted to those that match the list request.
@@ -79,7 +79,7 @@ trait InvitationsResource extends js.Object {
     *
     * &#42; `PERMISSION_DENIED` for access errors.
     */
-  def list(): Request_[ListInvitationsResponse] = js.native
-  def list(request: AnonPageSize): Request_[ListInvitationsResponse] = js.native
+  def list(): Request[ListInvitationsResponse] = js.native
+  def list(request: PageSize): Request[ListInvitationsResponse] = js.native
 }
 

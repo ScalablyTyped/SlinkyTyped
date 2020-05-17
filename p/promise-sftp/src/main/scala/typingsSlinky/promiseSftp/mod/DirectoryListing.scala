@@ -1,6 +1,6 @@
 package typingsSlinky.promiseSftp.mod
 
-import typingsSlinky.promiseSftp.AnonGroup
+import typingsSlinky.promiseSftp.anon.Group
 import typingsSlinky.promiseSftp.promiseSftpStrings.`-_`
 import typingsSlinky.promiseSftp.promiseSftpStrings.d
 import typingsSlinky.promiseSftp.promiseSftpStrings.l
@@ -20,7 +20,7 @@ trait DirectoryListing extends js.Object {
   /** The user name or ID that this entry belongs to. *NIX only */
   var owner: js.UndefOr[String] = js.native
   /** The various permissions for this entry. *NIX only */
-  var rights: js.UndefOr[AnonGroup] = js.native
+  var rights: js.UndefOr[Group] = js.native
   /** True if the sticky bit is set for this entry */
   var sticky: js.UndefOr[Boolean] = js.native
   /** For symlink entries, this is the symlink's target. *NIX only */
@@ -85,7 +85,7 @@ object DirectoryListing {
         ret
     }
     @scala.inline
-    def withRights(value: AnonGroup): Self = {
+    def withRights(value: Group): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rights")(value.asInstanceOf[js.Any])
         ret

@@ -2,7 +2,7 @@ package typingsSlinky.recharts.mod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.recharts.AnonHeight
+import typingsSlinky.recharts.anon.Height
 import typingsSlinky.recharts.rechartsNumbers.`100`
 import typingsSlinky.recharts.rechartsNumbers.`200`
 import typingsSlinky.recharts.rechartsNumbers.`300`
@@ -578,7 +578,7 @@ object CartesianGridProps {
         ret
     }
     @scala.inline
-    def withHorizontalCoordinatesGenerator(value: /* arg */ AnonHeight => js.Array[Double]): Self = {
+    def withHorizontalCoordinatesGenerator(value: /* arg */ Height => js.Array[Double]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalCoordinatesGenerator")(js.Any.fromFunction1(value))
         ret
@@ -998,7 +998,7 @@ object CartesianGridProps {
         ret
     }
     @scala.inline
-    def withVerticalCoordinatesGenerator(value: /* arg */ AnonHeight => js.Array[Double]): Self = {
+    def withVerticalCoordinatesGenerator(value: /* arg */ Height => js.Array[Double]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("verticalCoordinatesGenerator")(js.Any.fromFunction1(value))
         ret

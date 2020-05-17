@@ -1,5 +1,9 @@
 package typingsSlinky.ionicReact
 
+import typingsSlinky.ionicReact.anon.IonRouterOutletPickHTMLAt
+import typingsSlinky.ionicReact.anon.IonTabBarPickHTMLAttribut
+import typingsSlinky.ionicReact.anon.PickIonBackButtondisabled
+import typingsSlinky.ionicReact.anon.PickIonicReactExternalProAbout
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`

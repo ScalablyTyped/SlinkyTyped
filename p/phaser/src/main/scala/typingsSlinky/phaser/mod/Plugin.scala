@@ -1,11 +1,11 @@
 package typingsSlinky.phaser.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.phaser.AnonDict
-import typingsSlinky.phaser.AnonIsRange
-import typingsSlinky.phaser.AnonName
-import typingsSlinky.phaser.AnonUses
 import typingsSlinky.phaser.MatterJS.Dependency
+import typingsSlinky.phaser.anon.Dict
+import typingsSlinky.phaser.anon.IsRange
+import typingsSlinky.phaser.anon.Name
+import typingsSlinky.phaser.anon.Uses
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +36,7 @@ object Plugin extends js.Object {
     * @param dependency {string} The dependency of the format `'module-name'` or `'module-name@version'`.
     * @return {object} The dependency parsed into its components.
     */
-  def dependencyParse(dependency: Dependency): AnonName = js.native
+  def dependencyParse(dependency: Dependency): Name = js.native
   /**
     * Returns `true` if `plugin.for` is applicable to `module` by comparing against `module.name` and `module.version`.
     * If `plugin.for` is not specified then it is assumed to be applicable.
@@ -46,7 +46,7 @@ object Plugin extends js.Object {
     * @param module {} The module.
     * @return {boolean} `true` if `plugin.for` is applicable to `module`, otherwise `false`.
     */
-  def isFor(plugin: typingsSlinky.phaser.MatterJS.Plugin, module: AnonDict): Boolean = js.native
+  def isFor(plugin: typingsSlinky.phaser.MatterJS.Plugin, module: Dict): Boolean = js.native
   /**
     * Returns `true` if the object meets the minimum standard to be considered a plugin.
     * This means it must define the following properties:
@@ -97,7 +97,7 @@ object Plugin extends js.Object {
     * @param module {} The module install plugins on.
     * @param [plugins=module.uses] {} The plugins to install on module (optional, defaults to `module.uses`).
     */
-  def use(module: AnonUses, plugins: js.Array[typingsSlinky.phaser.MatterJS.Plugin | String]): Unit = js.native
+  def use(module: Uses, plugins: js.Array[typingsSlinky.phaser.MatterJS.Plugin | String]): Unit = js.native
   /**
     * Parses a version string into its components.
     * Versions are strictly of the format `x.y.z` (as in [semver](http://semver.org/)).
@@ -112,7 +112,7 @@ object Plugin extends js.Object {
     * @param range {string} The version string.
     * @return {object} The version range parsed into its components.
     */
-  def versionParse(range: String): AnonIsRange = js.native
+  def versionParse(range: String): IsRange = js.native
   /**
     * Returns `true` if `version` satisfies the given `range`.
     * See documentation for `Plugin.versionParse` for a description of the format.

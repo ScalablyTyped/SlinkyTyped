@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait WhereGroup extends _WhereExpression {
+trait WhereGroup extends WhereExpression {
   var expressions: js.Array[WhereExpression] = js.native
   var op: js.UndefOr[String] = js.native
 }

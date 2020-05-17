@@ -1,6 +1,6 @@
 package typingsSlinky.nodeHueApi.mod
 
-import typingsSlinky.nodeHueApi.AnonApi
+import typingsSlinky.nodeHueApi.anon.Api
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IBridgeVersion extends js.Object {
   var name: String = js.native
-  var version: AnonApi = js.native
+  var version: Api = js.native
 }
 
 object IBridgeVersion {
   @scala.inline
-  def apply(name: String, version: AnonApi): IBridgeVersion = {
+  def apply(name: String, version: Api): IBridgeVersion = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
     __obj.asInstanceOf[IBridgeVersion]
   }
@@ -30,7 +30,7 @@ object IBridgeVersion {
         ret
     }
     @scala.inline
-    def withVersion(value: AnonApi): Self = {
+    def withVersion(value: Api): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
         ret

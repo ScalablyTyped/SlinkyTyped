@@ -2,7 +2,7 @@ package typingsSlinky.recharts.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.recharts.PartialMargin
+import typingsSlinky.recharts.anon.PartialMargin
 import typingsSlinky.recharts.mod.BrushProps
 import typingsSlinky.recharts.mod.DataKey
 import scala.scalajs.js

@@ -1,6 +1,6 @@
 package typingsSlinky.openpgp.mod.key
 
-import typingsSlinky.openpgp.AnonErr
+import typingsSlinky.openpgp.anon.Err
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ object read extends js.Object {
     * @param data to be parsed
     * @returns result object with key and error arrays
     */
-  def apply(data: js.typedarray.Uint8Array): js.Promise[AnonErr] = js.native
+  def apply(data: js.typedarray.Uint8Array): js.Promise[Err] = js.native
 }
 

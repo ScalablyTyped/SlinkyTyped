@@ -1,10 +1,23 @@
 package typingsSlinky.winrt.Windows.ApplicationModel.Activation
 
+import typingsSlinky.winrt.Windows.Storage.Pickers.Provider.FileSavePickerUI
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs")
 @js.native
-class FileSavePickerActivatedEventArgs () extends IFileSavePickerActivatedEventArgs
+trait FileSavePickerActivatedEventArgs extends IFileSavePickerActivatedEventArgs
+
+object FileSavePickerActivatedEventArgs {
+  @scala.inline
+  def apply(
+    fileSavePickerUI: FileSavePickerUI,
+    kind: ActivationKind,
+    previousExecutionState: ApplicationExecutionState,
+    splashScreen: SplashScreen
+  ): FileSavePickerActivatedEventArgs = {
+    val __obj = js.Dynamic.literal(fileSavePickerUI = fileSavePickerUI.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], previousExecutionState = previousExecutionState.asInstanceOf[js.Any], splashScreen = splashScreen.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FileSavePickerActivatedEventArgs]
+  }
+}
 

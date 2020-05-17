@@ -1,5 +1,6 @@
 package typingsSlinky.auth0Lock
 
+import typingsSlinky.auth0Lock.anon.Hint
 import typingsSlinky.auth0Lock.auth0LockStrings.text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +16,7 @@ trait Auth0LockAdditionalTextSignUpField extends Auth0LockAdditionalSignUpField 
   var placeholder: String = js.native
   var prefill: js.UndefOr[String | Auth0LockAdditionalSignUpFieldPrefillFunction] = js.native
   var `type`: js.UndefOr[text] = js.native
-  var validator: js.UndefOr[js.Function1[/* input */ String, AnonHint]] = js.native
+  var validator: js.UndefOr[js.Function1[/* input */ String, Hint]] = js.native
 }
 
 object Auth0LockAdditionalTextSignUpField {
@@ -105,7 +106,7 @@ object Auth0LockAdditionalTextSignUpField {
         ret
     }
     @scala.inline
-    def withValidator(value: /* input */ String => AnonHint): Self = {
+    def withValidator(value: /* input */ String => Hint): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validator")(js.Any.fromFunction1(value))
         ret

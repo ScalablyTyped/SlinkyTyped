@@ -1,7 +1,7 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.AnonAnimate
-import typingsSlinky.tabris.OmitScrollViewset
+import typingsSlinky.tabris.anon.Animate
+import typingsSlinky.tabris.anon.OmitScrollViewset
 import typingsSlinky.tabris.tabrisStrings.drag
 import typingsSlinky.tabris.tabrisStrings.horizontal
 import typingsSlinky.tabris.tabrisStrings.rest
@@ -84,7 +84,7 @@ class ScrollView () extends Composite[Widget] {
     * @param options An additional parameter object to control the animation.
     */
   def scrollToX(offset: Double): this.type = js.native
-  def scrollToX(offset: Double, options: AnonAnimate): this.type = js.native
+  def scrollToX(offset: Double, options: Animate): this.type = js.native
   /**
     * Scrolls to the given vertical offset. Give `{animate: false}` as the second parameter to suppress the
     * animation.
@@ -92,6 +92,6 @@ class ScrollView () extends Composite[Widget] {
     * @param options An parameter object to control the animation.
     */
   def scrollToY(offset: Double): this.type = js.native
-  def scrollToY(offset: Double, options: AnonAnimate): this.type = js.native
+  def scrollToY(offset: Double, options: Animate): this.type = js.native
 }
 

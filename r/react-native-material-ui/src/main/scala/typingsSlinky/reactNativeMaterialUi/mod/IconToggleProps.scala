@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeMaterialUi.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactNativeMaterialUi.AnonContainerIcon
+import typingsSlinky.reactNativeMaterialUi.anon.ContainerIcon
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait IconToggleProps extends js.Object {
   var onPress: js.UndefOr[js.Function0[Unit]] = js.native
   var percent: js.UndefOr[Double] = js.native
   var size: js.UndefOr[Double] = js.native
-  var style: js.UndefOr[AnonContainerIcon] = js.native
+  var style: js.UndefOr[ContainerIcon] = js.native
   var testID: js.UndefOr[String] = js.native
   var underlayColor: js.UndefOr[String] = js.native
 }
@@ -124,7 +124,7 @@ object IconToggleProps {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonContainerIcon): Self = {
+    def withStyle(value: ContainerIcon): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

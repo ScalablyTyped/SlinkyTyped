@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Fill_ extends _Doc {
+trait Fill_ extends Doc {
   var parts: js.Array[Doc] = js.native
   var `type`: typingsSlinky.prettier.prettierStrings.fill = js.native
 }

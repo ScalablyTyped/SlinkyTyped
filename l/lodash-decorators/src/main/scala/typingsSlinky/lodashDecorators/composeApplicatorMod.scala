@@ -1,5 +1,6 @@
 package typingsSlinky.lodashDecorators
 
+import typingsSlinky.lodashDecorators.anon.Post
 import typingsSlinky.lodashDecorators.applicatorMod.Applicator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation._
 object composeApplicatorMod extends js.Object {
   @js.native
   class ComposeApplicator () extends Applicator {
-    def this(_config: AnonPost) = this()
+    def this(_config: Post) = this()
     var _config: js.Any = js.native
     val post: Boolean = js.native
   }

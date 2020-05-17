@@ -5,7 +5,8 @@ import typingsSlinky.handlebars.Handlebars.HelperDeclareSpec
 import typingsSlinky.handlebars.Handlebars.HelperDelegate
 import typingsSlinky.handlebars.Handlebars.ParseOptions
 import typingsSlinky.handlebars.Handlebars.ResolvePartialOptions
-import typingsSlinky.handlebars.Handlebars.Template_
+import typingsSlinky.handlebars.Handlebars.Template
+import typingsSlinky.handlebars.anon.TypeofHandlebars
 import typingsSlinky.handlebars.hbs.AST.Node
 import typingsSlinky.handlebars.hbs.AST.Program
 import scala.scalajs.js
@@ -53,7 +54,7 @@ object mod extends js.Object {
   def registerDecorator(name: String, fn: js.Function): Unit = js.native
   def registerHelper(name: String, fn: HelperDelegate): Unit = js.native
   def registerHelper(name: HelperDeclareSpec): Unit = js.native
-  def registerPartial(name: String, fn: Template_[_]): Unit = js.native
+  def registerPartial(name: String, fn: Template[_]): Unit = js.native
   def registerPartial(spec: StringDictionary[HandlebarsTemplateDelegate[_]]): Unit = js.native
   def template[T](precompilation: TemplateSpecification): HandlebarsTemplateDelegate[T] = js.native
   def unregisterDecorator(name: String): Unit = js.native
@@ -78,8 +79,11 @@ object mod extends js.Object {
   
   @js.native
   object VM extends js.Object {
-    def resolvePartial[T](partial: js.UndefOr[scala.Nothing], context: js.Any, options: ResolvePartialOptions): HandlebarsTemplateDelegate[T] = js.native
-    def resolvePartial[T](partial: HandlebarsTemplateDelegate[T], context: js.Any, options: ResolvePartialOptions): HandlebarsTemplateDelegate[T] = js.native
+    def resolvePartial[T](
+      partial: js.UndefOr[HandlebarsTemplateDelegate[T]],
+      context: js.Any,
+      options: ResolvePartialOptions
+    ): HandlebarsTemplateDelegate[T] = js.native
   }
   
   @js.native

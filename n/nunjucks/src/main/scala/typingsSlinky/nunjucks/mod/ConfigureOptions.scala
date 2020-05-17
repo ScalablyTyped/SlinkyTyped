@@ -1,7 +1,7 @@
 package typingsSlinky.nunjucks.mod
 
-import typingsSlinky.nunjucks.AnonAsync
-import typingsSlinky.nunjucks.AnonBlockEnd
+import typingsSlinky.nunjucks.anon.Async
+import typingsSlinky.nunjucks.anon.BlockEnd
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,11 +12,11 @@ trait ConfigureOptions extends js.Object {
   var express: js.UndefOr[js.Object] = js.native
   var lstripBlocks: js.UndefOr[Boolean] = js.native
   var noCache: js.UndefOr[Boolean] = js.native
-  var tags: js.UndefOr[AnonBlockEnd] = js.native
+  var tags: js.UndefOr[BlockEnd] = js.native
   var throwOnUndefined: js.UndefOr[Boolean] = js.native
   var trimBlocks: js.UndefOr[Boolean] = js.native
   var watch: js.UndefOr[Boolean] = js.native
-  var web: js.UndefOr[AnonAsync] = js.native
+  var web: js.UndefOr[Async] = js.native
 }
 
 object ConfigureOptions {
@@ -80,7 +80,7 @@ object ConfigureOptions {
         ret
     }
     @scala.inline
-    def withTags(value: AnonBlockEnd): Self = {
+    def withTags(value: BlockEnd): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
         ret
@@ -128,7 +128,7 @@ object ConfigureOptions {
         ret
     }
     @scala.inline
-    def withWeb(value: AnonAsync): Self = {
+    def withWeb(value: Async): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("web")(value.asInstanceOf[js.Any])
         ret

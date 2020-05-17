@@ -1,6 +1,6 @@
 package typingsSlinky.bugsnagJs.commonMod
 
-import typingsSlinky.bugsnagJs.AnonNotify
+import typingsSlinky.bugsnagJs.anon.Notify
 import typingsSlinky.bugsnagJs.clientMod.ILogger
 import typingsSlinky.bugsnagJs.reportMod.default
 import scala.scalajs.js
@@ -18,7 +18,7 @@ trait IConfig extends js.Object {
   var collectUserIp: js.UndefOr[Boolean] = js.native
   var consoleBreadcrumbsEnabled: js.UndefOr[Boolean] = js.native
   var endpoint: js.UndefOr[String] = js.native
-  var endpoints: js.UndefOr[AnonNotify] = js.native
+  var endpoints: js.UndefOr[Notify] = js.native
   var interactionBreadcrumbsEnabled: js.UndefOr[Boolean] = js.native
   var logger: js.UndefOr[ILogger | Null] = js.native
   var maxBreadcrumbs: js.UndefOr[Double] = js.native
@@ -153,7 +153,7 @@ object IConfig {
         ret
     }
     @scala.inline
-    def withEndpoints(value: AnonNotify): Self = {
+    def withEndpoints(value: Notify): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("endpoints")(value.asInstanceOf[js.Any])
         ret

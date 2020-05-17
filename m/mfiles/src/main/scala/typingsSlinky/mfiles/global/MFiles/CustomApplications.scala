@@ -1,0 +1,16 @@
+package typingsSlinky.mfiles.global.MFiles
+
+import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.ICustomApplications
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("MFiles.CustomApplications")
+@js.native
+class CustomApplications () extends ICustomApplications
+
+@JSGlobal("MFiles.CustomApplications")
+@js.native
+object CustomApplications extends Instantiable0[ICustomApplications]
+

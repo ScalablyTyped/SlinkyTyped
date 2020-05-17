@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartLineFormatData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartLineFormatLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartLineFormatUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Automatic
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Continuous
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Dash
@@ -27,9 +27,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.ChartLineFormat")
 @js.native
-class ChartLineFormat () extends ClientObject {
+trait ChartLineFormat extends ClientObject {
   /**
     *
     * HTML color code representing the color of lines in the chart.
@@ -67,7 +66,7 @@ class ChartLineFormat () extends ClientObject {
     */
   def load(): ChartLineFormat = js.native
   def load(options: ChartLineFormatLoadOptions): ChartLineFormat = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartLineFormat = js.native
+  def load(propertyNamesAndPaths: Expand): ChartLineFormat = js.native
   def load(propertyNames: String): ChartLineFormat = js.native
   def load(propertyNames: js.Array[String]): ChartLineFormat = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object ClassNameSettings {
-  type Param = (typingsSlinky.semanticUiSticky.PickImplbound | typingsSlinky.semanticUiSticky.PickImplfixed | typingsSlinky.semanticUiSticky.PickImplsupported | typingsSlinky.semanticUiSticky.PickImpltop | typingsSlinky.semanticUiSticky.PickImplbottom) with typingsSlinky.semanticUiSticky.PartialPickImplkeyofImplBottom
+  type Param = (typingsSlinky.semanticUiSticky.anon.PickImplbound | typingsSlinky.semanticUiSticky.anon.PickImplfixed | typingsSlinky.semanticUiSticky.anon.PickImplsupported | typingsSlinky.semanticUiSticky.anon.PickImpltop | typingsSlinky.semanticUiSticky.anon.PickImplbottom) with typingsSlinky.semanticUiSticky.anon.PartialPickImplkeyofImplBottom
 }

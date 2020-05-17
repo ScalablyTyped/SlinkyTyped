@@ -1,21 +1,21 @@
 package typingsSlinky.overwatchApi.mod
 
-import typingsSlinky.overwatchApi.AnonCompetitive
-import typingsSlinky.overwatchApi.AnonDamage
-import typingsSlinky.overwatchApi.AnonFrame
-import typingsSlinky.overwatchApi.AnonQuickplay
+import typingsSlinky.overwatchApi.anon.Competitive
+import typingsSlinky.overwatchApi.anon.Damage
+import typingsSlinky.overwatchApi.anon.Frame
+import typingsSlinky.overwatchApi.anon.Quickplay
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Profile extends js.Object {
-  var competitive: AnonDamage = js.native
-  var endorsement: AnonFrame = js.native
-  var games: AnonCompetitive = js.native
+  var competitive: Damage = js.native
+  var endorsement: Frame = js.native
+  var games: Competitive = js.native
   var level: Double = js.native
   var levelFrame: String = js.native
-  var playtime: AnonQuickplay = js.native
+  var playtime: Quickplay = js.native
   var portrait: String = js.native
   var `private`: Boolean = js.native
   var star: String = js.native
@@ -25,12 +25,12 @@ trait Profile extends js.Object {
 object Profile {
   @scala.inline
   def apply(
-    competitive: AnonDamage,
-    endorsement: AnonFrame,
-    games: AnonCompetitive,
+    competitive: Damage,
+    endorsement: Frame,
+    games: Competitive,
     level: Double,
     levelFrame: String,
-    playtime: AnonQuickplay,
+    playtime: Quickplay,
     portrait: String,
     `private`: Boolean,
     star: String,
@@ -47,19 +47,19 @@ object Profile {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCompetitive(value: AnonDamage): Self = {
+    def withCompetitive(value: Damage): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("competitive")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withEndorsement(value: AnonFrame): Self = {
+    def withEndorsement(value: Frame): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("endorsement")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withGames(value: AnonCompetitive): Self = {
+    def withGames(value: Competitive): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("games")(value.asInstanceOf[js.Any])
         ret
@@ -77,7 +77,7 @@ object Profile {
         ret
     }
     @scala.inline
-    def withPlaytime(value: AnonQuickplay): Self = {
+    def withPlaytime(value: Quickplay): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("playtime")(value.asInstanceOf[js.Any])
         ret

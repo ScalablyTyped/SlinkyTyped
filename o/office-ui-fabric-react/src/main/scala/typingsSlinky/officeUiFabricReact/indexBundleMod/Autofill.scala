@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.indexBundleMod
 
-import typingsSlinky.officeUiFabricReact.AnonEnableAutofillOnKeyPress
+import typingsSlinky.officeUiFabricReact.anon.EnableAutofillOnKeyPress
 import typingsSlinky.officeUiFabricReact.autofillTypesMod.IAutofillProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,6 +17,6 @@ class Autofill protected ()
 @JSImport("office-ui-fabric-react/lib/index.bundle", "Autofill")
 @js.native
 object Autofill extends js.Object {
-  var defaultProps: AnonEnableAutofillOnKeyPress = js.native
+  var defaultProps: EnableAutofillOnKeyPress = js.native
 }
 

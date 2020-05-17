@@ -1,18 +1,18 @@
 package typingsSlinky.firebaseDatabaseTypes.mod
 
-import typingsSlinky.firebaseDatabaseTypes.AnonSv
+import typingsSlinky.firebaseDatabaseTypes.anon.Sv
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ServerValue extends js.Object {
-  var TIMESTAMP: AnonSv = js.native
+  var TIMESTAMP: Sv = js.native
 }
 
 object ServerValue {
   @scala.inline
-  def apply(TIMESTAMP: AnonSv): ServerValue = {
+  def apply(TIMESTAMP: Sv): ServerValue = {
     val __obj = js.Dynamic.literal(TIMESTAMP = TIMESTAMP.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServerValue]
   }
@@ -23,7 +23,7 @@ object ServerValue {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTIMESTAMP(value: AnonSv): Self = {
+    def withTIMESTAMP(value: Sv): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TIMESTAMP")(value.asInstanceOf[js.Any])
         ret

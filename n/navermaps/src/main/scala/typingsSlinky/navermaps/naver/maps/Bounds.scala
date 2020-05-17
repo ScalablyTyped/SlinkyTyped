@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait Bounds extends js.Object
 
+object Bounds {
+  @scala.inline
+  implicit def apply(value: LatLngBounds): Bounds = value.asInstanceOf[Bounds]
+  @scala.inline
+  implicit def apply(value: PointBounds): Bounds = value.asInstanceOf[Bounds]
+}
+

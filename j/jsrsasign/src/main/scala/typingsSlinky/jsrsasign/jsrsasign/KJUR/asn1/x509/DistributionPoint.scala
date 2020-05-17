@@ -1,6 +1,5 @@
 package typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.x509
 
-import typingsSlinky.jsrsasign.AnonDpobj
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,10 +29,30 @@ import scala.scalajs.js.annotation._
   *      aACompromise            (8) }
   * ```
   */
-@JSGlobal("jsrsasign.KJUR.asn1.x509.DistributionPoint")
 @js.native
-class DistributionPoint () extends js.Object {
-  def this(params: AnonDpobj) = this()
+trait DistributionPoint extends js.Object {
   def getEncodedHex(): String = js.native
+}
+
+object DistributionPoint {
+  @scala.inline
+  def apply(getEncodedHex: () => String): DistributionPoint = {
+    val __obj = js.Dynamic.literal(getEncodedHex = js.Any.fromFunction0(getEncodedHex))
+    __obj.asInstanceOf[DistributionPoint]
+  }
+  @scala.inline
+  implicit class DistributionPointOps[Self <: DistributionPoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetEncodedHex(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getEncodedHex")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -7,10 +7,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("jsts.geom.LineSegment")
 @js.native
-class LineSegment protected () extends js.Object {
-  def this(p0: Coordinate, p1: Coordinate) = this()
+trait LineSegment extends js.Object {
   var p0: Coordinate = js.native
   var p1: Coordinate = js.native
   /**
@@ -289,17 +287,237 @@ class LineSegment protected () extends js.Object {
   def toGeometry(geomFactory: GeometryFactory): LineString = js.native
 }
 
-/* static members */
-@JSGlobal("jsts.geom.LineSegment")
-@js.native
-object LineSegment extends js.Object {
-  /**
-    * Computes the midpoint of a segment
-    *
-    * @param {jsts.geom.Coordinate} p0
-    * @param {jsts.geom.Coordinate} p1
-    * @return {jsts.geom.Coordinate} the midpoint of the segment
-    */
-  def midPoint(p0: Coordinate, p1: Coordinate): Coordinate = js.native
+object LineSegment {
+  @scala.inline
+  def apply(
+    angle: () => Double,
+    closestPoint: Coordinate => Coordinate,
+    closestPoints: LineSegment => js.Tuple2[Coordinate, Coordinate],
+    compareTo: LineSegment => Double,
+    distance1: LineSegment => Double,
+    distance2: Coordinate => Double,
+    distancePerpendicular: Coordinate => Double,
+    equals: LineSegment => Boolean,
+    equalsTopo: LineSegment => Boolean,
+    getCoordinate: () => Double,
+    getLength: () => Double,
+    intersection: LineSegment => Coordinate | Null,
+    isHorizontal: () => Boolean,
+    isVertical: () => Boolean,
+    lineIntersection: LineSegment => Coordinate | Null,
+    midPoint: () => Coordinate,
+    normalize: () => Unit,
+    orientationIndex1: LineSegment => `1` | `-1` | `0`,
+    orientationIndex2: Coordinate => `1` | `-1` | `0`,
+    p0: Coordinate,
+    p1: Coordinate,
+    pointAlong: Double => Coordinate,
+    pointAlongOffset: (Double, Double) => Coordinate,
+    project1: Coordinate => Coordinate,
+    project2: LineSegment => LineSegment,
+    projectionFactor: Coordinate => Double,
+    reverse: () => Unit,
+    segmentFraction: Coordinate => Double,
+    setCoordinates: LineSegment => Unit,
+    setCoordinates2: (Coordinate, Coordinate) => Unit,
+    toGeometry: GeometryFactory => LineString
+  ): LineSegment = {
+    val __obj = js.Dynamic.literal(angle = js.Any.fromFunction0(angle), closestPoint = js.Any.fromFunction1(closestPoint), closestPoints = js.Any.fromFunction1(closestPoints), compareTo = js.Any.fromFunction1(compareTo), distance1 = js.Any.fromFunction1(distance1), distance2 = js.Any.fromFunction1(distance2), distancePerpendicular = js.Any.fromFunction1(distancePerpendicular), equals = js.Any.fromFunction1(equals), equalsTopo = js.Any.fromFunction1(equalsTopo), getCoordinate = js.Any.fromFunction0(getCoordinate), getLength = js.Any.fromFunction0(getLength), intersection = js.Any.fromFunction1(intersection), isHorizontal = js.Any.fromFunction0(isHorizontal), isVertical = js.Any.fromFunction0(isVertical), lineIntersection = js.Any.fromFunction1(lineIntersection), midPoint = js.Any.fromFunction0(midPoint), normalize = js.Any.fromFunction0(normalize), orientationIndex1 = js.Any.fromFunction1(orientationIndex1), orientationIndex2 = js.Any.fromFunction1(orientationIndex2), p0 = p0.asInstanceOf[js.Any], p1 = p1.asInstanceOf[js.Any], pointAlong = js.Any.fromFunction1(pointAlong), pointAlongOffset = js.Any.fromFunction2(pointAlongOffset), project1 = js.Any.fromFunction1(project1), project2 = js.Any.fromFunction1(project2), projectionFactor = js.Any.fromFunction1(projectionFactor), reverse = js.Any.fromFunction0(reverse), segmentFraction = js.Any.fromFunction1(segmentFraction), setCoordinates = js.Any.fromFunction1(setCoordinates), setCoordinates2 = js.Any.fromFunction2(setCoordinates2), toGeometry = js.Any.fromFunction1(toGeometry))
+    __obj.asInstanceOf[LineSegment]
+  }
+  @scala.inline
+  implicit class LineSegmentOps[Self <: LineSegment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAngle(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withClosestPoint(value: Coordinate => Coordinate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closestPoint")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withClosestPoints(value: LineSegment => js.Tuple2[Coordinate, Coordinate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closestPoints")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCompareTo(value: LineSegment => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareTo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDistance1(value: LineSegment => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distance1")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDistance2(value: Coordinate => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distance2")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDistancePerpendicular(value: Coordinate => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distancePerpendicular")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEquals(value: LineSegment => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEqualsTopo(value: LineSegment => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equalsTopo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetCoordinate(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCoordinate")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLength(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLength")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIntersection(value: LineSegment => Coordinate | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intersection")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsHorizontal(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isHorizontal")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsVertical(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isVertical")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withLineIntersection(value: LineSegment => Coordinate | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineIntersection")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMidPoint(value: () => Coordinate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("midPoint")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNormalize(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOrientationIndex1(value: LineSegment => `1` | `-1` | `0`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientationIndex1")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOrientationIndex2(value: Coordinate => `1` | `-1` | `0`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientationIndex2")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withP0(value: Coordinate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p0")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withP1(value: Coordinate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPointAlong(value: Double => Coordinate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointAlong")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPointAlongOffset(value: (Double, Double) => Coordinate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointAlongOffset")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withProject1(value: Coordinate => Coordinate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("project1")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withProject2(value: LineSegment => LineSegment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("project2")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withProjectionFactor(value: Coordinate => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("projectionFactor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withReverse(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reverse")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSegmentFraction(value: Coordinate => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segmentFraction")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetCoordinates(value: LineSegment => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setCoordinates")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetCoordinates2(value: (Coordinate, Coordinate) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setCoordinates2")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withToGeometry(value: GeometryFactory => LineString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toGeometry")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.postcss.mod
 
-import typingsSlinky.postcss.PickProcessOptionsmapfrom
+import typingsSlinky.postcss.anon.PickProcessOptionsmapfrom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

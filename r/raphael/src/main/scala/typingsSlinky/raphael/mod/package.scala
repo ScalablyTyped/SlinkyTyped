@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type RaphaelBasicEventHandler[ThisContext, TEvent /* <: typingsSlinky.std.Event_ */] = /**
+  type RaphaelBasicEventHandler[ThisContext, TEvent /* <: org.scalajs.dom.raw.Event */] = /**
     * @param event The original DOM event that triggered the event this handler was registered for.
     * @return A value that is returned as the return value of the `document.addEventListener` callback.
     */
@@ -24,7 +24,7 @@ package object mod {
       /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
     ], 
     /* values */ TArgs, 
-    typingsSlinky.raphael.PartialRaphaelAttributes
+    typingsSlinky.raphael.anon.PartialRaphaelAttributes
   ]
   type RaphaelCustomEasingFormula = java.lang.String with js.Object
   type RaphaelDragOnEndHandler[ThisContext] = /**
@@ -111,38 +111,7 @@ package object mod {
   type RaphaelPaperPluginRegistry[TTechnology /* <: typingsSlinky.raphael.mod.RaphaelTechnology */, T /* <: js.Object */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]: T[P] extends (args : any): any? raphael.raphael.RaphaelPaperPluginMethod<TTechnology, std.Parameters<T[P]>, std.ReturnType<T[P]>> : / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias raphael.raphael.RaphaelPaperPluginRegistry<TTechnology, T[P]> * / object}
     */ typingsSlinky.raphael.raphaelStrings.RaphaelPaperPluginRegistry with org.scalablytyped.runtime.TopLevel[js.Any]
-  type RaphaelPathSegment = (js.Tuple3[
-    typingsSlinky.raphael.raphaelStrings.M | typingsSlinky.raphael.raphaelStrings.m_ | typingsSlinky.raphael.raphaelStrings.L | typingsSlinky.raphael.raphaelStrings.l_ | typingsSlinky.raphael.raphaelStrings.T | typingsSlinky.raphael.raphaelStrings.t_ | typingsSlinky.raphael.raphaelStrings.R | typingsSlinky.raphael.raphaelStrings.r_, 
-    scala.Double, 
-    scala.Double
-  ]) | (js.Tuple2[
-    typingsSlinky.raphael.raphaelStrings.H | typingsSlinky.raphael.raphaelStrings.h_ | typingsSlinky.raphael.raphaelStrings.V | typingsSlinky.raphael.raphaelStrings.v_, 
-    scala.Double
-  ]) | (js.Tuple5[
-    typingsSlinky.raphael.raphaelStrings.Q | typingsSlinky.raphael.raphaelStrings.q_ | typingsSlinky.raphael.raphaelStrings.S | typingsSlinky.raphael.raphaelStrings.s_, 
-    scala.Double, 
-    scala.Double, 
-    scala.Double, 
-    scala.Double
-  ]) | (js.Tuple7[
-    typingsSlinky.raphael.raphaelStrings.C | typingsSlinky.raphael.raphaelStrings.c_, 
-    scala.Double, 
-    scala.Double, 
-    scala.Double, 
-    scala.Double, 
-    scala.Double, 
-    scala.Double
-  ]) | (js.Tuple8[
-    typingsSlinky.raphael.raphaelStrings.A | typingsSlinky.raphael.raphaelStrings.a_, 
-    scala.Double, 
-    scala.Double, 
-    scala.Double, 
-    scala.Double, 
-    scala.Double, 
-    scala.Double, 
-    scala.Double
-  ]) | (js.Array[typingsSlinky.raphael.raphaelStrings.Z | typingsSlinky.raphael.raphaelStrings.z_])
-  type RaphaelPotentialFailure[T /* <: js.Object */] = T with typingsSlinky.raphael.AnonError
+  type RaphaelPotentialFailure[T /* <: js.Object */] = T with typingsSlinky.raphael.anon.Error
   type RaphaelSetPluginMethod[TTechnology /* <: typingsSlinky.raphael.mod.RaphaelTechnology */, TArgs /* <: js.Array[_] */, TRetVal] = /**
     * @param args The arguments, as required by this set plugin. They need to be passed when the plugin method
     * is called on a {@link RaphaelSet}.
@@ -154,29 +123,6 @@ package object mod {
     /* args */ TArgs, 
     TRetVal
   ]
-  type RaphaelTransformSegment = (js.Tuple3[
-    typingsSlinky.raphael.raphaelStrings.t_ | typingsSlinky.raphael.raphaelStrings.s_, 
-    scala.Double, 
-    scala.Double
-  ]) | (js.Tuple5[
-    typingsSlinky.raphael.raphaelStrings.s_, 
-    scala.Double, 
-    scala.Double, 
-    scala.Double, 
-    scala.Double
-  ]) | (js.Tuple4[typingsSlinky.raphael.raphaelStrings.r_, scala.Double, scala.Double, scala.Double]) | (js.Tuple2[typingsSlinky.raphael.raphaelStrings.r_, scala.Double]) | (js.Tuple7[
-    typingsSlinky.raphael.raphaelStrings.m_, 
-    scala.Double, 
-    scala.Double, 
-    scala.Double, 
-    scala.Double, 
-    scala.Double, 
-    scala.Double
-  ])
-  type RaphaelUnwrapElement[TTechnology /* <: typingsSlinky.raphael.mod.RaphaelTechnology */, TBase /* <: typingsSlinky.raphael.mod.RaphaelBaseElement[TTechnology] */] = TBase | (typingsSlinky.raphael.mod.RaphaelElement[
-    TTechnology, 
-    /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any
-  ])
   type VMLCircleElement = org.scalajs.dom.raw.Element
   type VMLElement = org.scalajs.dom.raw.Element
   type VMLEllipseElement = org.scalajs.dom.raw.Element

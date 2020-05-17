@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.disabled
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ready
 import scala.scalajs.js
@@ -84,8 +83,4 @@ trait ScaleRangeSliderViewModel extends Accessor {
     */
   def mapSliderToScale(value: Double): Double = js.native
 }
-
-@JSGlobal("__esri.ScaleRangeSliderViewModel")
-@js.native
-object ScaleRangeSliderViewModel extends TopLevel[ScaleRangeSliderViewModelConstructor]
 

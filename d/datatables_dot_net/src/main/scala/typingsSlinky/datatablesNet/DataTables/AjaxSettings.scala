@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait AjaxSettings
-  extends typingsSlinky.jquery.JQuery_.AjaxSettings[js.Any] {
+  extends typingsSlinky.jquery.JQuery.AjaxSettings[js.Any] {
   /**
     * Data property or manipulation method for table data. Since: 1.10
     */

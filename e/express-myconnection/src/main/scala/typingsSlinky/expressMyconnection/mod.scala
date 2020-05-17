@@ -1,6 +1,7 @@
 package typingsSlinky.expressMyconnection
 
 import typingsSlinky.express.mod.RequestHandler
+import typingsSlinky.expressMyconnection.anon.Typeofmysql
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.mysql.mod.ConnectionConfig

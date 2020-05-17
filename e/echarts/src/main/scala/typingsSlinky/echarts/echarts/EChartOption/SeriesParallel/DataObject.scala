@@ -1,6 +1,6 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesParallel
 
-import typingsSlinky.echarts.AnonLineStyleAnonShadowBlur
+import typingsSlinky.echarts.anon.LineStyleShadowBlur
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ trait DataObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-parallel.data.emphasis
     */
-  var emphasis: js.UndefOr[AnonLineStyleAnonShadowBlur] = js.native
+  var emphasis: js.UndefOr[LineStyleShadowBlur] = js.native
   /**
     * Line style.
     *
@@ -147,7 +147,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonLineStyleAnonShadowBlur): Self = {
+    def withEmphasis(value: LineStyleShadowBlur): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret

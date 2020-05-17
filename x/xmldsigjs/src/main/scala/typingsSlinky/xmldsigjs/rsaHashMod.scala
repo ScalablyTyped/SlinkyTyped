@@ -1,6 +1,7 @@
 package typingsSlinky.xmldsigjs
 
 import typingsSlinky.xmldsigjs.algorithmMod.HashAlgorithm
+import typingsSlinky.xmldsigjs.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,25 +12,25 @@ object rsaHashMod extends js.Object {
   @js.native
   class Sha1 () extends HashAlgorithm {
     @JSName("algorithm")
-    var algorithm_Sha1: AnonName = js.native
+    var algorithm_Sha1: Name = js.native
   }
   
   @js.native
   class Sha256 () extends HashAlgorithm {
     @JSName("algorithm")
-    var algorithm_Sha256: AnonName = js.native
+    var algorithm_Sha256: Name = js.native
   }
   
   @js.native
   class Sha384 () extends HashAlgorithm {
     @JSName("algorithm")
-    var algorithm_Sha384: AnonName = js.native
+    var algorithm_Sha384: Name = js.native
   }
   
   @js.native
   class Sha512 () extends HashAlgorithm {
     @JSName("algorithm")
-    var algorithm_Sha512: AnonName = js.native
+    var algorithm_Sha512: Name = js.native
   }
   
   @JSName("SHA1")

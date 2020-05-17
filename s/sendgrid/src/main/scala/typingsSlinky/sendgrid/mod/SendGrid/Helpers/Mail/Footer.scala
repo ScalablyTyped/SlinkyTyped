@@ -1,6 +1,6 @@
 package typingsSlinky.sendgrid.mod.SendGrid.Helpers.Mail
 
-import typingsSlinky.sendgrid.AnonText
+import typingsSlinky.sendgrid.anon.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait Footer extends js.Object {
   def setEnable(enabled: Boolean): Unit = js.native
   def setHtml(html: String): Unit = js.native
   def setText(text: String): Unit = js.native
-  def toJSON(): AnonText = js.native
+  def toJSON(): Text = js.native
 }
 
 object Footer {
@@ -25,7 +25,7 @@ object Footer {
     setEnable: Boolean => Unit,
     setHtml: String => Unit,
     setText: String => Unit,
-    toJSON: () => AnonText
+    toJSON: () => Text
   ): Footer = {
     val __obj = js.Dynamic.literal(getEnable = js.Any.fromFunction0(getEnable), getHtml = js.Any.fromFunction0(getHtml), getText = js.Any.fromFunction0(getText), setEnable = js.Any.fromFunction1(setEnable), setHtml = js.Any.fromFunction1(setHtml), setText = js.Any.fromFunction1(setText), toJSON = js.Any.fromFunction0(toJSON))
     __obj.asInstanceOf[Footer]
@@ -73,7 +73,7 @@ object Footer {
         ret
     }
     @scala.inline
-    def withToJSON(value: () => AnonText): Self = {
+    def withToJSON(value: () => Text): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
         ret

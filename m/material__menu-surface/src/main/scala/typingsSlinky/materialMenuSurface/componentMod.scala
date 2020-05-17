@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.materialBase.componentMod.MDCComponent
 import typingsSlinky.materialBase.foundationMod.default
+import typingsSlinky.materialMenuSurface.anon.PartialMDCMenuDistance
 import typingsSlinky.materialMenuSurface.constantsMod.Corner
 import typingsSlinky.materialMenuSurface.foundationMod.MDCMenuSurfaceFoundation
 import scala.scalajs.js

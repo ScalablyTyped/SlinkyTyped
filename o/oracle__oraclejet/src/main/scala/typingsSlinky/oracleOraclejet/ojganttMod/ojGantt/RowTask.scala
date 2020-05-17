@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojganttMod.ojGantt
 
-import typingsSlinky.oracleOraclejet.AnonEnd
-import typingsSlinky.oracleOraclejet.AnonValue
+import typingsSlinky.oracleOraclejet.anon.End
+import typingsSlinky.oracleOraclejet.anon.Value
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.auto
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.milestone
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.normal
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 // tslint:disable-next-line interface-over-type-literal
 @js.native
 trait RowTask[K2] extends js.Object {
-  var baseline: js.UndefOr[AnonEnd] = js.native
+  var baseline: js.UndefOr[End] = js.native
   var borderRadius: js.UndefOr[String] = js.native
   var end: js.UndefOr[String] = js.native
   var height: js.UndefOr[Double] = js.native
@@ -21,7 +21,7 @@ trait RowTask[K2] extends js.Object {
   var label: js.UndefOr[String] = js.native
   var labelPosition: js.UndefOr[String | js.Array[String]] = js.native
   var labelStyle: js.UndefOr[js.Object] = js.native
-  var progress: js.UndefOr[AnonValue] = js.native
+  var progress: js.UndefOr[Value] = js.native
   var shortDesc: js.UndefOr[String] = js.native
   var start: js.UndefOr[String] = js.native
   var svgClassName: js.UndefOr[String] = js.native
@@ -48,7 +48,7 @@ object RowTask {
         ret
     }
     @scala.inline
-    def withBaseline(value: AnonEnd): Self[K2] = {
+    def withBaseline(value: End): Self[K2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("baseline")(value.asInstanceOf[js.Any])
         ret
@@ -132,7 +132,7 @@ object RowTask {
         ret
     }
     @scala.inline
-    def withProgress(value: AnonValue): Self[K2] = {
+    def withProgress(value: Value): Self[K2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
         ret

@@ -1,14 +1,9 @@
 package typingsSlinky.webix.webix
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CopyPaste extends js.Object
-
-@JSGlobal("webix.CopyPaste")
-@js.native
-object CopyPaste extends TopLevel[CopyPaste]
 

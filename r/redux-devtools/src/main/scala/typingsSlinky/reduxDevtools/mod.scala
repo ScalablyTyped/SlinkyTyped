@@ -2,7 +2,7 @@ package typingsSlinky.reduxDevtools
 
 import org.scalablytyped.runtime.Instantiable0
 import slinky.core.facade.ReactElement
-import typingsSlinky.react.mod._Global_.JSX.ElementClass
+import typingsSlinky.react.mod.global.JSX.ElementClass
 import typingsSlinky.redux.mod.StoreEnhancer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

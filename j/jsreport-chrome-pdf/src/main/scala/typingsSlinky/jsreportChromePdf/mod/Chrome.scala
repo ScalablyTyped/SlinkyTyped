@@ -1,6 +1,6 @@
 package typingsSlinky.jsreportChromePdf.mod
 
-import typingsSlinky.jsreportChromePdf.AnonBottom
+import typingsSlinky.jsreportChromePdf.anon.Bottom
 import typingsSlinky.jsreportChromePdf.jsreportChromePdfStrings.print
 import typingsSlinky.jsreportChromePdf.jsreportChromePdfStrings.screen
 import scala.scalajs.js
@@ -20,7 +20,7 @@ trait Chrome extends js.Object {
   var headerTemplate: String = js.native
   var height: String | Double = js.native
   var landscape: Boolean = js.native
-  var margin: AnonBottom = js.native
+  var margin: Bottom = js.native
   var marginBottom: String | Double = js.native
   var marginLeft: String | Double = js.native
   var marginRight: String | Double = js.native
@@ -50,7 +50,7 @@ object Chrome {
     headerTemplate: String,
     height: String | Double,
     landscape: Boolean,
-    margin: AnonBottom,
+    margin: Bottom,
     marginBottom: String | Double,
     marginLeft: String | Double,
     marginRight: String | Double,
@@ -120,7 +120,7 @@ object Chrome {
         ret
     }
     @scala.inline
-    def withMargin(value: AnonBottom): Self = {
+    def withMargin(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
         ret

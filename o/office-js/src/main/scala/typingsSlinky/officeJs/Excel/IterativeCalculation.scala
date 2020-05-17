@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.IterativeCalculationData
 import typingsSlinky.officeJs.Excel.Interfaces.IterativeCalculationLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.IterativeCalculationUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@JSGlobal("Excel.IterativeCalculation")
 @js.native
-class IterativeCalculation () extends ClientObject {
+trait IterativeCalculation extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_IterativeCalculation: RequestContext = js.native
@@ -50,7 +49,7 @@ class IterativeCalculation () extends ClientObject {
     */
   def load(): IterativeCalculation = js.native
   def load(options: IterativeCalculationLoadOptions): IterativeCalculation = js.native
-  def load(propertyNamesAndPaths: AnonExpand): IterativeCalculation = js.native
+  def load(propertyNamesAndPaths: Expand): IterativeCalculation = js.native
   def load(propertyNames: String): IterativeCalculation = js.native
   def load(propertyNames: js.Array[String]): IterativeCalculation = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

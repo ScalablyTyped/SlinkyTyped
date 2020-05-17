@@ -1,0 +1,48 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.script
+
+import typingsSlinky.activexLibreoffice.com_.sun.star.uno.Exception
+import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * is thrown in order to transport an error to Basic.
+  * @since OOo 2.0
+  */
+@js.native
+trait BasicErrorException extends Exception {
+  /** The error code. */
+  var ErrorCode: Double = js.native
+  /** Specifies the argument which is used in the localized error message for the placeholder. */
+  var ErrorMessageArgument: String = js.native
+}
+
+object BasicErrorException {
+  @scala.inline
+  def apply(Context: XInterface, ErrorCode: Double, ErrorMessageArgument: String, Message: String): BasicErrorException = {
+    val __obj = js.Dynamic.literal(Context = Context.asInstanceOf[js.Any], ErrorCode = ErrorCode.asInstanceOf[js.Any], ErrorMessageArgument = ErrorMessageArgument.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BasicErrorException]
+  }
+  @scala.inline
+  implicit class BasicErrorExceptionOps[Self <: BasicErrorException] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withErrorMessageArgument(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ErrorMessageArgument")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

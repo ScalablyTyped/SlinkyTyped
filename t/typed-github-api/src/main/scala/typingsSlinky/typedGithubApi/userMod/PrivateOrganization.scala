@@ -1,6 +1,6 @@
 package typingsSlinky.typedGithubApi.userMod
 
-import typingsSlinky.typedGithubApi.AnonCollaborators
+import typingsSlinky.typedGithubApi.anon.Collaborators
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait PrivateOrganization extends Organization {
   var disk_usage: Double = js.native
   var members_can_create_repositories: Boolean = js.native
   var owned_private_repos: Double = js.native
-  var plan: AnonCollaborators = js.native
+  var plan: Collaborators = js.native
   var private_gists: Double = js.native
   var total_private_repos: Double = js.native
 }
@@ -49,7 +49,7 @@ object PrivateOrganization {
     members_url: String,
     name: String,
     owned_private_repos: Double,
-    plan: AnonCollaborators,
+    plan: Collaborators,
     private_gists: Double,
     public_gists: Double,
     public_members_url: String,
@@ -107,7 +107,7 @@ object PrivateOrganization {
         ret
     }
     @scala.inline
-    def withPlan(value: AnonCollaborators): Self = {
+    def withPlan(value: Collaborators): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("plan")(value.asInstanceOf[js.Any])
         ret

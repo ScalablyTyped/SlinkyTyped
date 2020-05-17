@@ -1,12 +1,13 @@
 package typingsSlinky.reactSelect.typesMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.reactSelect.themeMod.ThemeConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Theme extends js.Object {
+trait Theme extends ThemeConfig {
   var borderRadius: Double = js.native
   var colors: StringDictionary[String] = js.native
   var spacing: ThemeSpacing = js.native

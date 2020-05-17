@@ -1,7 +1,7 @@
 package typingsSlinky.roads.pjaxMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,6 +16,6 @@ class default protected () extends RoadsPjax {
     * @param {HTMLElement} container_element - The element that will be filled with your roads output
     * @param {Window} window - The pages window object to help set page title and other items
     */
-  def this(road: typingsSlinky.roads.roadMod.default, container_element: HTMLElement, window: Window_) = this()
+  def this(road: typingsSlinky.roads.roadMod.default, container_element: HTMLElement, window: Window) = this()
 }
 

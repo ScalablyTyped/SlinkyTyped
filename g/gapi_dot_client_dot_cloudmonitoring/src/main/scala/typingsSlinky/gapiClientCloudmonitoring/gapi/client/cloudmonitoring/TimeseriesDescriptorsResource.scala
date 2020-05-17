@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientCloudmonitoring.gapi.client.cloudmonitoring
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientCloudmonitoring.AnonAggregator
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientCloudmonitoring.anon.Aggregator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,12 +13,12 @@ trait TimeseriesDescriptorsResource extends js.Object {
     * paginated; use the nextPageToken returned in the response to request subsequent pages of results by setting the pageToken query parameter to the value
     * of the nextPageToken.
     */
-  def list(request: AnonAggregator): Request_[ListTimeseriesDescriptorsResponse] = js.native
+  def list(request: Aggregator): Request[ListTimeseriesDescriptorsResponse] = js.native
 }
 
 object TimeseriesDescriptorsResource {
   @scala.inline
-  def apply(list: AnonAggregator => Request_[ListTimeseriesDescriptorsResponse]): TimeseriesDescriptorsResource = {
+  def apply(list: Aggregator => Request[ListTimeseriesDescriptorsResponse]): TimeseriesDescriptorsResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[TimeseriesDescriptorsResource]
   }
@@ -29,7 +29,7 @@ object TimeseriesDescriptorsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withList(value: AnonAggregator => Request_[ListTimeseriesDescriptorsResponse]): Self = {
+    def withList(value: Aggregator => Request[ListTimeseriesDescriptorsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

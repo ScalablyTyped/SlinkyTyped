@@ -30,23 +30,35 @@ import scala.scalajs.js.annotation._
   * `extern`, allocated using e.g. `Memory.alloc()`, and passed in as symbols
   * through the constructor's second argument.
   */
-@JSGlobal("CModule")
 @js.native
-class CModule protected ()
+trait CModule
   extends /* name */ StringDictionary[js.Any] {
-  /**
-    * Creates a new C module by compiling the provided C source code to machine
-    * code, straight to memory.
-    *
-    * @param source C source code to compile.
-    * @param symbols Symbols to expose to the C module. Declare them as `extern`.
-    */
-  def this(source: String) = this()
-  def this(source: String, symbols: CSymbols) = this()
   /**
     * Eagerly unmaps the module from memory. Useful for short-lived modules
     * when waiting for a future garbage collection isn't desirable.
     */
   def dispose(): Unit = js.native
+}
+
+object CModule {
+  @scala.inline
+  def apply(dispose: () => Unit): CModule = {
+    val __obj = js.Dynamic.literal(dispose = js.Any.fromFunction0(dispose))
+    __obj.asInstanceOf[CModule]
+  }
+  @scala.inline
+  implicit class CModuleOps[Self <: CModule] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDispose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispose")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

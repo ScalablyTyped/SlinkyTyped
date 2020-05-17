@@ -27,7 +27,7 @@ import scala.scalajs.js.annotation._
 @JSImport("paho-mqtt", "Client")
 @js.native
 class Client protected ()
-  extends typingsSlinky.pahoMqtt.mod._Global_.Paho.MQTT.Client {
+  extends typingsSlinky.pahoMqtt.mod.global.Paho.MQTT.Client {
   /**
     * @param hostUri - the address of the messaging server as a fully qualified WebSocket URI
     * @param clientId - the Messaging client identifier, between 1 and 23 characters in length.

@@ -1,8 +1,8 @@
 package typingsSlinky.jqueryui.JQueryUI
 
+import org.scalajs.dom.raw.Document
+import org.scalajs.dom.raw.Window
 import typingsSlinky.jqueryui.JQuery
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,26 +10,26 @@ import scala.scalajs.js.annotation._
 @js.native
 trait WidgetCommonProperties extends js.Object {
   var defaultElement: String = js.native
-  var document: Document_ = js.native
+  var document: Document = js.native
   var element: JQuery = js.native
   var namespace: String = js.native
   var uuid: String = js.native
   var widgetEventPrefix: String = js.native
   var widgetFullName: String = js.native
-  var window: Window_ = js.native
+  var window: Window = js.native
 }
 
 object WidgetCommonProperties {
   @scala.inline
   def apply(
     defaultElement: String,
-    document: Document_,
+    document: Document,
     element: JQuery,
     namespace: String,
     uuid: String,
     widgetEventPrefix: String,
     widgetFullName: String,
-    window: Window_
+    window: Window
   ): WidgetCommonProperties = {
     val __obj = js.Dynamic.literal(defaultElement = defaultElement.asInstanceOf[js.Any], document = document.asInstanceOf[js.Any], element = element.asInstanceOf[js.Any], namespace = namespace.asInstanceOf[js.Any], uuid = uuid.asInstanceOf[js.Any], widgetEventPrefix = widgetEventPrefix.asInstanceOf[js.Any], widgetFullName = widgetFullName.asInstanceOf[js.Any], window = window.asInstanceOf[js.Any])
     __obj.asInstanceOf[WidgetCommonProperties]
@@ -47,7 +47,7 @@ object WidgetCommonProperties {
         ret
     }
     @scala.inline
-    def withDocument(value: Document_): Self = {
+    def withDocument(value: Document): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
         ret
@@ -83,7 +83,7 @@ object WidgetCommonProperties {
         ret
     }
     @scala.inline
-    def withWindow(value: Window_): Self = {
+    def withWindow(value: Window): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("window")(value.asInstanceOf[js.Any])
         ret

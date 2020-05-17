@@ -2,8 +2,8 @@ package typingsSlinky.recharts.mod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.recharts.AnonWidth
-import typingsSlinky.recharts.PartialMargin
+import typingsSlinky.recharts.anon.PartialMargin
+import typingsSlinky.recharts.anon.Width
 import typingsSlinky.recharts.rechartsStrings.bottom
 import typingsSlinky.recharts.rechartsStrings.center
 import typingsSlinky.recharts.rechartsStrings.left
@@ -185,7 +185,7 @@ object LegendProps {
         ret
     }
     @scala.inline
-    def withOnBBoxUpdate(value: /* box */ AnonWidth => Unit): Self = {
+    def withOnBBoxUpdate(value: /* box */ Width => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBBoxUpdate")(js.Any.fromFunction1(value))
         ret

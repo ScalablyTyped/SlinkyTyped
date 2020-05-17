@@ -6,15 +6,6 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   type BootstrapTable[T /* <: js.Object */] = slinky.core.ReactComponentClass[typingsSlinky.reactBootstrapTableNext.mod.BootstrapTableProps[T]]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.left
-    - typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.center
-    - typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.right
-    - typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.start
-    - typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.end
-    - java.lang.String
-  */
-  type CellAlignment = typingsSlinky.reactBootstrapTableNext.mod._CellAlignment | java.lang.String
   type ColumnFormatter[R, E, C] = js.Function4[
     /* cell */ C, 
     /* row */ R, 
@@ -35,11 +26,11 @@ package object mod {
   type HeaderFormatter[T /* <: js.Object */] = js.Function3[
     /* column */ typingsSlinky.reactBootstrapTableNext.mod.ColumnDescription[T, js.Any], 
     /* colIndex */ scala.Double, 
-    /* components */ typingsSlinky.reactBootstrapTableNext.AnonFilterElement, 
+    /* components */ typingsSlinky.reactBootstrapTableNext.anon.FilterElement, 
     slinky.core.facade.ReactElement | java.lang.String | scala.Double | typingsSlinky.react.mod.ReactText
   ]
   type RowEventHandler[T] = js.Function3[
-    /* e */ slinky.core.SyntheticEvent[typingsSlinky.std.Event_, org.scalajs.dom.raw.Element], 
+    /* e */ slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, org.scalajs.dom.raw.Element], 
     /* row */ T, 
     /* rowIndex */ scala.Double, 
     scala.Unit

@@ -129,6 +129,21 @@ import typingsSlinky.activexShdocvw.activexShdocvwStrings.pDispWindow
 import typingsSlinky.activexShdocvw.activexShdocvwStrings.pWB2
 import typingsSlinky.activexShdocvw.activexShdocvwStrings.ppDisp
 import typingsSlinky.activexShdocvw.activexShdocvwStrings.szProperty
+import typingsSlinky.activexShdocvw.anon.BImpacted
+import typingsSlinky.activexShdocvw.anon.BstrUrl
+import typingsSlinky.activexShdocvw.anon.BstrWorkerLabel
+import typingsSlinky.activexShdocvw.anon.CancelBoolean
+import typingsSlinky.activexShdocvw.anon.DwCount
+import typingsSlinky.activexShdocvw.anon.DwUniqueID
+import typingsSlinky.activexShdocvw.anon.DwValidFlagsMask
+import typingsSlinky.activexShdocvw.anon.FDone
+import typingsSlinky.activexShdocvw.anon.LCauseFlag
+import typingsSlinky.activexShdocvw.anon.LCookie
+import typingsSlinky.activexShdocvw.anon.PDisp
+import typingsSlinky.activexShdocvw.anon.PDispAny
+import typingsSlinky.activexShdocvw.anon.PDispWindow
+import typingsSlinky.activexShdocvw.anon.PpDisp
+import typingsSlinky.activexShdocvw.anon.SzProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -139,949 +154,1293 @@ trait ActiveXObject extends js.Object {
     obj: InternetExplorerMedium,
     event: BeforeScriptExecute,
     argNames: js.Array[pDispWindow],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonPDispWindow, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ PDispWindow, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: ClientToHostWindow,
     argNames: js.Tuple2[CX, CY],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonCX, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.CX, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: CommandStateChange,
     argNames: js.Tuple2[Command, Enable],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonCommand, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Command, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: DocumentComplete,
     argNames: js.Tuple2[pDisp, URL],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonPDisp, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ PDisp, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: FileDownload,
     argNames: js.Tuple2[ActiveDocument, Cancel],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonActiveDocument, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.ActiveDocument, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: NavigateComplete2,
     argNames: js.Tuple2[pDisp, URL],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonPDisp, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ PDisp, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: NavigateError,
     argNames: js.Tuple5[pDisp, URL, Frame, StatusCode, Cancel],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonCancel, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Cancel, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: NewProcess,
     argNames: js.Tuple3[lCauseFlag, pWB2, Cancel],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonLCauseFlag, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ LCauseFlag, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: NewWindow2,
     argNames: js.Tuple2[ppDisp, Cancel],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonPpDisp, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ PpDisp, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: NewWindow3,
     argNames: js.Tuple5[ppDisp, Cancel, dwFlags, bstrUrlContext, bstrUrl],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonBstrUrl, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ BstrUrl, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: OnFullScreen,
     argNames: js.Array[FullScreen],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonFullScreen, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.FullScreen, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: OnMenuBar,
     argNames: js.Array[MenuBar],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonMenuBar, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.MenuBar, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: OnStatusBar,
     argNames: js.Array[StatusBar],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonStatusBar, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.StatusBar, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: OnTheaterMode,
     argNames: js.Array[TheaterMode],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonTheaterMode, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.TheaterMode, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: OnToolBar,
     argNames: js.Array[ToolBar],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonToolBar, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.ToolBar, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: OnVisible,
     argNames: js.Array[Visible],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonVisible, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Visible, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: PrintTemplateInstantiation,
     argNames: js.Array[pDisp],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonPDispAny, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ PDispAny, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: PrintTemplateTeardown,
     argNames: js.Array[pDisp],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonPDispAny, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ PDispAny, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: PrivacyImpactedStateChange,
     argNames: js.Array[bImpacted],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonBImpacted, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ BImpacted, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: ProgressChange,
     argNames: js.Tuple2[Progress, ProgressMax],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonProgress, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Progress, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: PropertyChange,
     argNames: js.Array[szProperty],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonSzProperty, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ SzProperty, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: RedirectXDomainBlocked,
     argNames: js.Tuple5[pDisp, StartURL, RedirectURL, Frame, StatusCode],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonFrame, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Frame, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: SetPhishingFilterStatus,
     argNames: js.Array[PhishingFilterStatus],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonPhishingFilterStatus, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.PhishingFilterStatus, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: SetSecureLockIcon,
     argNames: js.Array[SecureLockIcon],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonSecureLockIcon, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.SecureLockIcon, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: StatusTextChange,
     argNames: js.Array[Text],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonText, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Text, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: ThirdPartyUrlBlocked,
     argNames: js.Tuple2[URL, dwCount],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonDwCount, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ DwCount, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: TitleChange,
     argNames: js.Array[Text],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonText, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Text, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: UpdatePageStatus,
     argNames: js.Tuple3[pDisp, nPage, fDone],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonFDone, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ FDone, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: WebWorkerFinsihed,
     argNames: js.Array[dwUniqueID],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonDwUniqueID, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ DwUniqueID, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: WebWorkerStarted,
     argNames: js.Tuple2[dwUniqueID, bstrWorkerLabel],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonBstrWorkerLabel, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ BstrWorkerLabel, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: WindowClosing,
     argNames: js.Tuple2[IsChildWindow, Cancel],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonIsChildWindow, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.IsChildWindow, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: WindowSetHeight,
     argNames: js.Array[Height],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonHeight, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Height, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: WindowSetLeft,
     argNames: js.Array[Left],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonLeft, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Left, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: WindowSetResizable,
     argNames: js.Array[Resizable],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonResizable, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Resizable, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: WindowSetTop,
     argNames: js.Array[Top],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonTop, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Top, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: WindowSetWidth,
     argNames: js.Array[Width],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonWidth, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorerMedium, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Width, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorerMedium,
     event: WindowStateChanged,
     argNames: js.Tuple2[dwWindowStateFlags, dwValidFlagsMask],
-    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ AnonDwValidFlagsMask, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorerMedium, /* parameter */ DwValidFlagsMask, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: BeforeScriptExecute,
     argNames: js.Array[pDispWindow],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonPDispWindow, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ PDispWindow, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: ClientToHostWindow,
     argNames: js.Tuple2[CX, CY],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonCX, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.CX, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: CommandStateChange,
     argNames: js.Tuple2[Command, Enable],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonCommand, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Command, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: DocumentComplete,
     argNames: js.Tuple2[pDisp, URL],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonPDisp, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ PDisp, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: FileDownload,
     argNames: js.Tuple2[ActiveDocument, Cancel],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonActiveDocument, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.ActiveDocument, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: NavigateComplete2,
     argNames: js.Tuple2[pDisp, URL],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonPDisp, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ PDisp, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: NavigateError,
     argNames: js.Tuple5[pDisp, URL, Frame, StatusCode, Cancel],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonCancel, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Cancel, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: NewProcess,
     argNames: js.Tuple3[lCauseFlag, pWB2, Cancel],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonLCauseFlag, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ LCauseFlag, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: NewWindow2,
     argNames: js.Tuple2[ppDisp, Cancel],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonPpDisp, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ PpDisp, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: NewWindow3,
     argNames: js.Tuple5[ppDisp, Cancel, dwFlags, bstrUrlContext, bstrUrl],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonBstrUrl, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ BstrUrl, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: OnFullScreen,
     argNames: js.Array[FullScreen],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonFullScreen, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.FullScreen, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: OnMenuBar,
     argNames: js.Array[MenuBar],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonMenuBar, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.MenuBar, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: OnStatusBar,
     argNames: js.Array[StatusBar],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonStatusBar, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.StatusBar, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: OnTheaterMode,
     argNames: js.Array[TheaterMode],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonTheaterMode, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.TheaterMode, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: OnToolBar,
     argNames: js.Array[ToolBar],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonToolBar, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.ToolBar, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: OnVisible,
     argNames: js.Array[Visible],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonVisible, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Visible, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: PrintTemplateInstantiation,
     argNames: js.Array[pDisp],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonPDispAny, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ PDispAny, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: PrintTemplateTeardown,
     argNames: js.Array[pDisp],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonPDispAny, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ PDispAny, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: PrivacyImpactedStateChange,
     argNames: js.Array[bImpacted],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonBImpacted, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ BImpacted, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: ProgressChange,
     argNames: js.Tuple2[Progress, ProgressMax],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonProgress, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Progress, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: PropertyChange,
     argNames: js.Array[szProperty],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonSzProperty, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ SzProperty, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: RedirectXDomainBlocked,
     argNames: js.Tuple5[pDisp, StartURL, RedirectURL, Frame, StatusCode],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonFrame, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Frame, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: SetPhishingFilterStatus,
     argNames: js.Array[PhishingFilterStatus],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonPhishingFilterStatus, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.PhishingFilterStatus, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: SetSecureLockIcon,
     argNames: js.Array[SecureLockIcon],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonSecureLockIcon, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.SecureLockIcon, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: StatusTextChange,
     argNames: js.Array[Text],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonText, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Text, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: ThirdPartyUrlBlocked,
     argNames: js.Tuple2[URL, dwCount],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonDwCount, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ DwCount, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: TitleChange,
     argNames: js.Array[Text],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonText, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Text, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: UpdatePageStatus,
     argNames: js.Tuple3[pDisp, nPage, fDone],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonFDone, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ FDone, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: WebWorkerFinsihed,
     argNames: js.Array[dwUniqueID],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonDwUniqueID, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ DwUniqueID, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: WebWorkerStarted,
     argNames: js.Tuple2[dwUniqueID, bstrWorkerLabel],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonBstrWorkerLabel, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ BstrWorkerLabel, Unit]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: WindowClosing,
     argNames: js.Tuple2[IsChildWindow, Cancel],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonIsChildWindow, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.IsChildWindow, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: WindowSetHeight,
     argNames: js.Array[Height],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonHeight, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Height, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: WindowSetLeft,
     argNames: js.Array[Left],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonLeft, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Left, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: WindowSetResizable,
     argNames: js.Array[Resizable],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonResizable, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Resizable, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: WindowSetTop,
     argNames: js.Array[Top],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonTop, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Top, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: WindowSetWidth,
     argNames: js.Array[Width],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonWidth, Unit]
+    handler: js.ThisFunction1[
+      /* this */ InternetExplorer, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Width, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: InternetExplorer,
     event: WindowStateChanged,
     argNames: js.Tuple2[dwWindowStateFlags, dwValidFlagsMask],
-    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ AnonDwValidFlagsMask, Unit]
+    handler: js.ThisFunction1[/* this */ InternetExplorer, /* parameter */ DwValidFlagsMask, Unit]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: BeforeScriptExecute,
     argNames: js.Array[pDispWindow],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonPDispWindow, Unit]
+    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ PDispWindow, Unit]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: ClientToHostWindow,
     argNames: js.Tuple2[CX, CY],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonCX, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.CX, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: CommandStateChange,
     argNames: js.Tuple2[Command, Enable],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonCommand, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Command, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: DocumentComplete,
     argNames: js.Tuple2[pDisp, URL],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonPDisp, Unit]
+    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ PDisp, Unit]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: FileDownload,
     argNames: js.Tuple2[ActiveDocument, Cancel],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonActiveDocument, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.ActiveDocument, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: NavigateComplete2,
     argNames: js.Tuple2[pDisp, URL],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonPDisp, Unit]
+    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ PDisp, Unit]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: NavigateError,
     argNames: js.Tuple5[pDisp, URL, Frame, StatusCode, Cancel],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonCancel, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Cancel, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: NewProcess,
     argNames: js.Tuple3[lCauseFlag, pWB2, Cancel],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonLCauseFlag, Unit]
+    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ LCauseFlag, Unit]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: NewWindow2,
     argNames: js.Tuple2[ppDisp, Cancel],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonPpDisp, Unit]
+    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ PpDisp, Unit]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: NewWindow3,
     argNames: js.Tuple5[ppDisp, Cancel, dwFlags, bstrUrlContext, bstrUrl],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonBstrUrl, Unit]
+    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ BstrUrl, Unit]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: OnFullScreen,
     argNames: js.Array[FullScreen],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonFullScreen, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.FullScreen, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: OnMenuBar,
     argNames: js.Array[MenuBar],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonMenuBar, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.MenuBar, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: OnStatusBar,
     argNames: js.Array[StatusBar],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonStatusBar, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.StatusBar, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: OnTheaterMode,
     argNames: js.Array[TheaterMode],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonTheaterMode, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.TheaterMode, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: OnToolBar,
     argNames: js.Array[ToolBar],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonToolBar, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.ToolBar, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: OnVisible,
     argNames: js.Array[Visible],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonVisible, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Visible, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: PrintTemplateInstantiation,
     argNames: js.Array[pDisp],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonPDispAny, Unit]
+    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ PDispAny, Unit]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: PrintTemplateTeardown,
     argNames: js.Array[pDisp],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonPDispAny, Unit]
+    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ PDispAny, Unit]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: PrivacyImpactedStateChange,
     argNames: js.Array[bImpacted],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonBImpacted, Unit]
+    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ BImpacted, Unit]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: ProgressChange,
     argNames: js.Tuple2[Progress, ProgressMax],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonProgress, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Progress, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: PropertyChange,
     argNames: js.Array[szProperty],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonSzProperty, Unit]
+    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ SzProperty, Unit]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: RedirectXDomainBlocked,
     argNames: js.Tuple5[pDisp, StartURL, RedirectURL, Frame, StatusCode],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonFrame, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Frame, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: SetPhishingFilterStatus,
     argNames: js.Array[PhishingFilterStatus],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonPhishingFilterStatus, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.PhishingFilterStatus, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: SetSecureLockIcon,
     argNames: js.Array[SecureLockIcon],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonSecureLockIcon, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.SecureLockIcon, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: StatusTextChange,
     argNames: js.Array[Text],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonText, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Text, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: ThirdPartyUrlBlocked,
     argNames: js.Tuple2[URL, dwCount],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonDwCount, Unit]
+    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ DwCount, Unit]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: TitleChange,
     argNames: js.Array[Text],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonText, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Text, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: UpdatePageStatus,
     argNames: js.Tuple3[pDisp, nPage, fDone],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonFDone, Unit]
+    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ FDone, Unit]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: WebWorkerFinsihed,
     argNames: js.Array[dwUniqueID],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonDwUniqueID, Unit]
+    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ DwUniqueID, Unit]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: WebWorkerStarted,
     argNames: js.Tuple2[dwUniqueID, bstrWorkerLabel],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonBstrWorkerLabel, Unit]
+    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ BstrWorkerLabel, Unit]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: WindowClosing,
     argNames: js.Tuple2[IsChildWindow, Cancel],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonIsChildWindow, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.IsChildWindow, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: WindowSetHeight,
     argNames: js.Array[Height],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonHeight, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Height, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: WindowSetLeft,
     argNames: js.Array[Left],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonLeft, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Left, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: WindowSetResizable,
     argNames: js.Array[Resizable],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonResizable, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Resizable, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: WindowSetTop,
     argNames: js.Array[Top],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonTop, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Top, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: WindowSetWidth,
     argNames: js.Array[Width],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonWidth, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ShellBrowserWindow, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Width, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ShellBrowserWindow,
     event: WindowStateChanged,
     argNames: js.Tuple2[dwWindowStateFlags, dwValidFlagsMask],
-    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ AnonDwValidFlagsMask, Unit]
+    handler: js.ThisFunction1[/* this */ ShellBrowserWindow, /* parameter */ DwValidFlagsMask, Unit]
   ): Unit = js.native
   def on(
     obj: ShellWindows,
     event: WindowRegistered,
     argNames: js.Array[lCookie],
-    handler: js.ThisFunction1[/* this */ ShellWindows, /* parameter */ AnonLCookie, Unit]
+    handler: js.ThisFunction1[/* this */ ShellWindows, /* parameter */ LCookie, Unit]
   ): Unit = js.native
   def on(
     obj: ShellWindows,
     event: WindowRevoked,
     argNames: js.Array[lCookie],
-    handler: js.ThisFunction1[/* this */ ShellWindows, /* parameter */ AnonLCookie, Unit]
+    handler: js.ThisFunction1[/* this */ ShellWindows, /* parameter */ LCookie, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowserV1,
     event: CommandStateChange,
     argNames: js.Tuple2[Command, Enable],
-    handler: js.ThisFunction1[/* this */ WebBrowserV1, /* parameter */ AnonCommand, Unit]
+    handler: js.ThisFunction1[
+      /* this */ WebBrowserV1, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Command, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: WebBrowserV1,
     event: FrameNavigateComplete,
     argNames: js.Array[URL],
-    handler: js.ThisFunction1[/* this */ WebBrowserV1, /* parameter */ AnonURL, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowserV1, /* parameter */ typingsSlinky.activexShdocvw.anon.URL, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowserV1,
     event: NavigateComplete,
     argNames: js.Array[URL],
-    handler: js.ThisFunction1[/* this */ WebBrowserV1, /* parameter */ AnonURL, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowserV1, /* parameter */ typingsSlinky.activexShdocvw.anon.URL, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowserV1,
     event: ProgressChange,
     argNames: js.Tuple2[Progress, ProgressMax],
-    handler: js.ThisFunction1[/* this */ WebBrowserV1, /* parameter */ AnonProgress, Unit]
+    handler: js.ThisFunction1[
+      /* this */ WebBrowserV1, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Progress, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: WebBrowserV1,
     event: PropertyChange,
     argNames: js.Array[Property],
-    handler: js.ThisFunction1[/* this */ WebBrowserV1, /* parameter */ AnonProperty, Unit]
+    handler: js.ThisFunction1[
+      /* this */ WebBrowserV1, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Property, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: WebBrowserV1,
     event: Quit,
     argNames: js.Array[Cancel],
-    handler: js.ThisFunction1[/* this */ WebBrowserV1, /* parameter */ AnonCancelBoolean, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowserV1, /* parameter */ CancelBoolean, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowserV1,
     event: StatusTextChange,
     argNames: js.Array[Text],
-    handler: js.ThisFunction1[/* this */ WebBrowserV1, /* parameter */ AnonText, Unit]
+    handler: js.ThisFunction1[
+      /* this */ WebBrowserV1, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Text, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: WebBrowserV1,
     event: TitleChange,
     argNames: js.Array[Text],
-    handler: js.ThisFunction1[/* this */ WebBrowserV1, /* parameter */ AnonText, Unit]
+    handler: js.ThisFunction1[
+      /* this */ WebBrowserV1, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Text, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: BeforeScriptExecute,
     argNames: js.Array[pDispWindow],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonPDispWindow, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ PDispWindow, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: ClientToHostWindow,
     argNames: js.Tuple2[CX, CY],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonCX, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ typingsSlinky.activexShdocvw.anon.CX, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: CommandStateChange,
     argNames: js.Tuple2[Command, Enable],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonCommand, Unit]
+    handler: js.ThisFunction1[
+      /* this */ WebBrowser, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Command, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: DocumentComplete,
     argNames: js.Tuple2[pDisp, URL],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonPDisp, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ PDisp, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: FileDownload,
     argNames: js.Tuple2[ActiveDocument, Cancel],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonActiveDocument, Unit]
+    handler: js.ThisFunction1[
+      /* this */ WebBrowser, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.ActiveDocument, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: NavigateComplete2,
     argNames: js.Tuple2[pDisp, URL],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonPDisp, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ PDisp, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: NavigateError,
     argNames: js.Tuple5[pDisp, URL, Frame, StatusCode, Cancel],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonCancel, Unit]
+    handler: js.ThisFunction1[
+      /* this */ WebBrowser, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Cancel, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: NewProcess,
     argNames: js.Tuple3[lCauseFlag, pWB2, Cancel],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonLCauseFlag, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ LCauseFlag, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: NewWindow2,
     argNames: js.Tuple2[ppDisp, Cancel],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonPpDisp, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ PpDisp, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: NewWindow3,
     argNames: js.Tuple5[ppDisp, Cancel, dwFlags, bstrUrlContext, bstrUrl],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonBstrUrl, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ BstrUrl, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: OnFullScreen,
     argNames: js.Array[FullScreen],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonFullScreen, Unit]
+    handler: js.ThisFunction1[
+      /* this */ WebBrowser, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.FullScreen, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: OnMenuBar,
     argNames: js.Array[MenuBar],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonMenuBar, Unit]
+    handler: js.ThisFunction1[
+      /* this */ WebBrowser, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.MenuBar, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: OnStatusBar,
     argNames: js.Array[StatusBar],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonStatusBar, Unit]
+    handler: js.ThisFunction1[
+      /* this */ WebBrowser, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.StatusBar, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: OnTheaterMode,
     argNames: js.Array[TheaterMode],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonTheaterMode, Unit]
+    handler: js.ThisFunction1[
+      /* this */ WebBrowser, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.TheaterMode, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: OnToolBar,
     argNames: js.Array[ToolBar],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonToolBar, Unit]
+    handler: js.ThisFunction1[
+      /* this */ WebBrowser, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.ToolBar, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: OnVisible,
     argNames: js.Array[Visible],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonVisible, Unit]
+    handler: js.ThisFunction1[
+      /* this */ WebBrowser, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Visible, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: PrintTemplateInstantiation,
     argNames: js.Array[pDisp],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonPDispAny, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ PDispAny, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: PrintTemplateTeardown,
     argNames: js.Array[pDisp],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonPDispAny, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ PDispAny, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: PrivacyImpactedStateChange,
     argNames: js.Array[bImpacted],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonBImpacted, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ BImpacted, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: ProgressChange,
     argNames: js.Tuple2[Progress, ProgressMax],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonProgress, Unit]
+    handler: js.ThisFunction1[
+      /* this */ WebBrowser, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Progress, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: PropertyChange,
     argNames: js.Array[szProperty],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonSzProperty, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ SzProperty, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: RedirectXDomainBlocked,
     argNames: js.Tuple5[pDisp, StartURL, RedirectURL, Frame, StatusCode],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonFrame, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ typingsSlinky.activexShdocvw.anon.Frame, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: SetPhishingFilterStatus,
     argNames: js.Array[PhishingFilterStatus],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonPhishingFilterStatus, Unit]
+    handler: js.ThisFunction1[
+      /* this */ WebBrowser, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.PhishingFilterStatus, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: SetSecureLockIcon,
     argNames: js.Array[SecureLockIcon],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonSecureLockIcon, Unit]
+    handler: js.ThisFunction1[
+      /* this */ WebBrowser, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.SecureLockIcon, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: StatusTextChange,
     argNames: js.Array[Text],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonText, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ typingsSlinky.activexShdocvw.anon.Text, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: ThirdPartyUrlBlocked,
     argNames: js.Tuple2[URL, dwCount],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonDwCount, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ DwCount, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: TitleChange,
     argNames: js.Array[Text],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonText, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ typingsSlinky.activexShdocvw.anon.Text, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: UpdatePageStatus,
     argNames: js.Tuple3[pDisp, nPage, fDone],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonFDone, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ FDone, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: WebWorkerFinsihed,
     argNames: js.Array[dwUniqueID],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonDwUniqueID, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ DwUniqueID, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: WebWorkerStarted,
     argNames: js.Tuple2[dwUniqueID, bstrWorkerLabel],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonBstrWorkerLabel, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ BstrWorkerLabel, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: WindowClosing,
     argNames: js.Tuple2[IsChildWindow, Cancel],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonIsChildWindow, Unit]
+    handler: js.ThisFunction1[
+      /* this */ WebBrowser, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.IsChildWindow, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: WindowSetHeight,
     argNames: js.Array[Height],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonHeight, Unit]
+    handler: js.ThisFunction1[
+      /* this */ WebBrowser, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Height, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: WindowSetLeft,
     argNames: js.Array[Left],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonLeft, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ typingsSlinky.activexShdocvw.anon.Left, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: WindowSetResizable,
     argNames: js.Array[Resizable],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonResizable, Unit]
+    handler: js.ThisFunction1[
+      /* this */ WebBrowser, 
+      /* parameter */ typingsSlinky.activexShdocvw.anon.Resizable, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: WindowSetTop,
     argNames: js.Array[Top],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonTop, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ typingsSlinky.activexShdocvw.anon.Top, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: WindowSetWidth,
     argNames: js.Array[Width],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonWidth, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ typingsSlinky.activexShdocvw.anon.Width, Unit]
   ): Unit = js.native
   def on(
     obj: WebBrowser,
     event: WindowStateChanged,
     argNames: js.Tuple2[dwWindowStateFlags, dwValidFlagsMask],
-    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ AnonDwValidFlagsMask, Unit]
+    handler: js.ThisFunction1[/* this */ WebBrowser, /* parameter */ DwValidFlagsMask, Unit]
   ): Unit = js.native
   @JSName("on")
   def on_BeforeNavigate(

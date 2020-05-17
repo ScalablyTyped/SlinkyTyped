@@ -1,14 +1,14 @@
 package typingsSlinky.scrollbooster.mod
 
-import typingsSlinky.scrollbooster.AnonBottom
-import typingsSlinky.scrollbooster.RequiredPosition
+import typingsSlinky.scrollbooster.anon.Bottom
+import typingsSlinky.scrollbooster.anon.RequiredPosition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ScrollingState extends js.Object {
-  var borderCollision: AnonBottom = js.native
+  var borderCollision: Bottom = js.native
   var dragOffset: Double = js.native
   var isDragging: Boolean = js.native
   var isMoving: Boolean = js.native
@@ -18,7 +18,7 @@ trait ScrollingState extends js.Object {
 object ScrollingState {
   @scala.inline
   def apply(
-    borderCollision: AnonBottom,
+    borderCollision: Bottom,
     dragOffset: Double,
     isDragging: Boolean,
     isMoving: Boolean,
@@ -34,7 +34,7 @@ object ScrollingState {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBorderCollision(value: AnonBottom): Self = {
+    def withBorderCollision(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("borderCollision")(value.asInstanceOf[js.Any])
         ret

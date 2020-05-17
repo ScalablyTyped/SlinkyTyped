@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TruncateConfigObj extends js.Object {
+trait TruncateConfigObj extends TruncateConfig {
   var length: js.UndefOr[Double] = js.native
   var location: js.UndefOr[end | middle | smart] = js.native
 }

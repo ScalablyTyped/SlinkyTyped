@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientAdmin.gapi.client.admin
 
-import typingsSlinky.gapiClientAdmin.AnonApplicationName
-import typingsSlinky.gapiClientAdmin.AnonCallerType
-import typingsSlinky.gapiClientAdmin.AnonName
+import typingsSlinky.gapiClientAdmin.anon.ApplicationName
+import typingsSlinky.gapiClientAdmin.anon.CallerType
+import typingsSlinky.gapiClientAdmin.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,13 +10,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Activity extends js.Object {
   /** User doing the action. */
-  var actor: js.UndefOr[AnonCallerType] = js.native
+  var actor: js.UndefOr[CallerType] = js.native
   /** ETag of the entry. */
   var etag: js.UndefOr[String] = js.native
   /** Activity events. */
-  var events: js.UndefOr[js.Array[AnonName]] = js.native
+  var events: js.UndefOr[js.Array[Name]] = js.native
   /** Unique identifier for each activity record. */
-  var id: js.UndefOr[AnonApplicationName] = js.native
+  var id: js.UndefOr[ApplicationName] = js.native
   /** IP Address of the user doing the action. */
   var ipAddress: js.UndefOr[String] = js.native
   /** Kind of resource this is. */
@@ -38,7 +38,7 @@ object Activity {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActor(value: AnonCallerType): Self = {
+    def withActor(value: CallerType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("actor")(value.asInstanceOf[js.Any])
         ret
@@ -62,7 +62,7 @@ object Activity {
         ret
     }
     @scala.inline
-    def withEvents(value: js.Array[AnonName]): Self = {
+    def withEvents(value: js.Array[Name]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
         ret
@@ -74,7 +74,7 @@ object Activity {
         ret
     }
     @scala.inline
-    def withId(value: AnonApplicationName): Self = {
+    def withId(value: ApplicationName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
         ret

@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Visio
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJsPreview.Visio.Interfaces.PageData
 import typingsSlinky.officeJsPreview.Visio.Interfaces.PageLoadOptions
 import typingsSlinky.officeJsPreview.Visio.Interfaces.PageUpdateData
+import typingsSlinky.officeJsPreview.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set:  1.1]
   */
-@JSGlobal("Visio.Page")
 @js.native
-class Page () extends ClientObject {
+trait Page extends ClientObject {
   /**
     *
     * All shapes in the Page, including subshapes. Read-only.
@@ -110,8 +109,8 @@ class Page () extends ClientObject {
   def load(): Page = js.native
   def load(option: String): Page = js.native
   def load(option: js.Array[String]): Page = js.native
-  def load(option: AnonExpand): Page = js.native
   def load(option: PageLoadOptions): Page = js.native
+  def load(option: Expand): Page = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.
     *
     * @remarks

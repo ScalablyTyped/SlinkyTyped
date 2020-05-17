@@ -6,8 +6,8 @@ import typingsSlinky.webdriver.HTTPRequestOptions
 import typingsSlinky.webdriver.HTTPResponse
 import typingsSlinky.webdriver.WebDriver.DesiredCapabilities
 import typingsSlinky.webdriver.WebDriver.WebDriverLogTypes
-import typingsSlinky.webdriverio.AnonDuration
-import typingsSlinky.webdriverio.AnonSpecFiltering
+import typingsSlinky.webdriverio.anon.Duration
+import typingsSlinky.webdriverio.anon.SpecFiltering
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -48,7 +48,7 @@ trait Config extends js.Object {
     js.Function5[
       /* test */ js.Any, 
       /* context */ js.Any, 
-      /* result */ AnonDuration, 
+      /* result */ Duration, 
       /* stepData */ js.UndefOr[js.Any], 
       /* world */ js.UndefOr[js.Any], 
       Unit
@@ -72,9 +72,7 @@ trait Config extends js.Object {
     ])
   ] = js.native
   var afterSuite: js.UndefOr[js.Function1[/* suite */ Suite, Unit]] = js.native
-  var afterTest: js.UndefOr[
-    js.Function3[/* test */ Test, /* context */ js.Any, /* result */ AnonDuration, Unit]
-  ] = js.native
+  var afterTest: js.UndefOr[js.Function3[/* test */ Test, /* context */ js.Any, /* result */ Duration, Unit]] = js.native
   var bail: js.UndefOr[Double] = js.native
   var baseUrl: js.UndefOr[String] = js.native
   var before: js.UndefOr[
@@ -118,7 +116,7 @@ trait Config extends js.Object {
   var connectionRetryTimeout: js.UndefOr[Double] = js.native
   var exclude: js.UndefOr[js.Array[String]] = js.native
   var execArgv: js.UndefOr[js.Array[String]] = js.native
-  var featureFlags: js.UndefOr[AnonSpecFiltering] = js.native
+  var featureFlags: js.UndefOr[SpecFiltering] = js.native
   var framework: js.UndefOr[String] = js.native
   var headers: js.UndefOr[StringDictionary[String]] = js.native
   var hostname: js.UndefOr[String] = js.native
@@ -241,7 +239,7 @@ object Config {
     }
     @scala.inline
     def withAfterHook(
-      value: (/* test */ js.Any, /* context */ js.Any, /* result */ AnonDuration, /* stepData */ js.UndefOr[js.Any], /* world */ js.UndefOr[js.Any]) => Unit
+      value: (/* test */ js.Any, /* context */ js.Any, /* result */ Duration, /* stepData */ js.UndefOr[js.Any], /* world */ js.UndefOr[js.Any]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterHook")(js.Any.fromFunction5(value))
@@ -290,7 +288,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withAfterTest(value: (/* test */ Test, /* context */ js.Any, /* result */ AnonDuration) => Unit): Self = {
+    def withAfterTest(value: (/* test */ Test, /* context */ js.Any, /* result */ Duration) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterTest")(js.Any.fromFunction3(value))
         ret
@@ -484,7 +482,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withFeatureFlags(value: AnonSpecFiltering): Self = {
+    def withFeatureFlags(value: SpecFiltering): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("featureFlags")(value.asInstanceOf[js.Any])
         ret

@@ -1,8 +1,8 @@
 package typingsSlinky.node.dnsMod
 
-import typingsSlinky.node.AnonHostname
-import typingsSlinky.node.FnCall
-import typingsSlinky.node.FnCallHostnameOptions
+import typingsSlinky.node.anon.FnCall
+import typingsSlinky.node.anon.FnCallHostnameOptions
+import typingsSlinky.node.anon.Hostname
 import typingsSlinky.node.nodeStrings.A
 import typingsSlinky.node.nodeStrings.AAAA
 import typingsSlinky.node.nodeStrings.ANY
@@ -105,7 +105,7 @@ object promises extends js.Object {
   def lookup(hostname: String, options: LookupAllOptions): js.Promise[js.Array[LookupAddress]] = js.native
   def lookup(hostname: String, options: LookupOneOptions): js.Promise[LookupAddress] = js.native
   def lookup(hostname: String, options: LookupOptions): js.Promise[LookupAddress | js.Array[LookupAddress]] = js.native
-  def lookupService(address: String, port: Double): js.Promise[AnonHostname] = js.native
+  def lookupService(address: String, port: Double): js.Promise[Hostname] = js.native
   def resolve(hostname: String): js.Promise[js.Array[String]] = js.native
   def resolve(hostname: String, rrtype: String): js.Promise[
     (js.Array[AnyRecord | js.Array[String] | MxRecord | NaptrRecord | SrvRecord | String]) | SoaRecord

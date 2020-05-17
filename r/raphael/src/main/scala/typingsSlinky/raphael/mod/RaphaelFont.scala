@@ -1,7 +1,7 @@
 package typingsSlinky.raphael.mod
 
-import typingsSlinky.raphael.PartialRaphaelFontFace
-import typingsSlinky.raphael.PartialRaphaelFontGlyph
+import typingsSlinky.raphael.anon.PartialRaphaelFontFace
+import typingsSlinky.raphael.anon.PartialRaphaelFontGlyph
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`

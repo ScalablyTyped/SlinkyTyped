@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TSExternalModuleReference_
   extends BaseNode
-     with _Node {
+     with Node {
   var expression: StringLiteral_ = js.native
   @JSName("type")
   var type_TSExternalModuleReference_ : TSExternalModuleReference = js.native

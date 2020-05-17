@@ -1,7 +1,7 @@
 package typingsSlinky.reactabularSticky.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.reactabularSticky.PartialUIEvent
+import typingsSlinky.reactabularSticky.anon.PartialUIEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

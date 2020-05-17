@@ -1,6 +1,6 @@
 package typingsSlinky.awsLambda.cloudformationCustomResourceMod
 
-import typingsSlinky.awsLambda.AnonDictKey
+import typingsSlinky.awsLambda.anon.DictKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait CloudFormationCustomResourceEventCommon extends js.Object {
   var LogicalResourceId: String = js.native
   var RequestId: String = js.native
-  var ResourceProperties: AnonDictKey = js.native
+  var ResourceProperties: DictKey = js.native
   var ResourceType: String = js.native
   var ResponseURL: String = js.native
   var ServiceToken: String = js.native
@@ -21,7 +21,7 @@ object CloudFormationCustomResourceEventCommon {
   def apply(
     LogicalResourceId: String,
     RequestId: String,
-    ResourceProperties: AnonDictKey,
+    ResourceProperties: DictKey,
     ResourceType: String,
     ResponseURL: String,
     ServiceToken: String,
@@ -49,7 +49,7 @@ object CloudFormationCustomResourceEventCommon {
         ret
     }
     @scala.inline
-    def withResourceProperties(value: AnonDictKey): Self = {
+    def withResourceProperties(value: DictKey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ResourceProperties")(value.asInstanceOf[js.Any])
         ret

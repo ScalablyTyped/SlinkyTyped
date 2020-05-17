@@ -1,7 +1,7 @@
 package typingsSlinky.spotifyWebApiNode.mod
 
-import typingsSlinky.spotifyWebApiNode.AnonPosition
-import typingsSlinky.spotifyWebApiNode.AnonUri
+import typingsSlinky.spotifyWebApiNode.anon.Position
+import typingsSlinky.spotifyWebApiNode.anon.Uri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PlayOptions extends DeviceOptions {
   var context_uri: js.UndefOr[String] = js.native
-  var offset: js.UndefOr[AnonPosition | AnonUri] = js.native
+  var offset: js.UndefOr[Position | Uri] = js.native
   var position_ms: js.UndefOr[Double] = js.native
   var uris: js.UndefOr[js.Array[String]] = js.native
 }
@@ -39,7 +39,7 @@ object PlayOptions {
         ret
     }
     @scala.inline
-    def withOffset(value: AnonPosition | AnonUri): Self = {
+    def withOffset(value: Position | Uri): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
         ret

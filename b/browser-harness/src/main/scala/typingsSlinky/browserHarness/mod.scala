@@ -1,5 +1,8 @@
 package typingsSlinky.browserHarness
 
+import typingsSlinky.browserHarness.anon.Args
+import typingsSlinky.browserHarness.anon.Condition
+import typingsSlinky.browserHarness.anon.Location
 import typingsSlinky.browserHarness.browserHarnessStrings.consoleDoterror
 import typingsSlinky.browserHarness.browserHarnessStrings.consoleDotlog
 import typingsSlinky.browserHarness.browserHarnessStrings.consoleDotwarn
@@ -16,7 +19,7 @@ object mod extends js.Object {
   @js.native
   class Browser protected () extends js.Object {
     //constructor(args: { type: string; location?: string; args?: string[] });
-    def this(args: AnonLocation) = this()
+    def this(args: Location) = this()
     def close(): js.Any = js.native
     def open(harnessUrl: String): js.Any = js.native
     def open(harnessUrl: String, serverUrl: String): js.Any = js.native
@@ -25,8 +28,8 @@ object mod extends js.Object {
   @js.native
   trait Driver extends js.Object {
     var events: DriverEvents = js.native
-    def exec(args: AnonArgs): js.Any = js.native
-    def exec(args: AnonArgs, callback: js.Function): js.Any = js.native
+    def exec(args: Args): js.Any = js.native
+    def exec(args: Args, callback: js.Function): js.Any = js.native
     def exec(func: js.Function): js.Any = js.native
     def exec(func: js.Function, callback: js.Function): js.Any = js.native
     def find(selector: String): ElementProxy = js.native
@@ -41,8 +44,8 @@ object mod extends js.Object {
     def findVisibles(selector: String, callback: js.Function2[/* err */ js.Error, /* elements */ ElementProxy, Unit]): ElementProxy = js.native
     def setUrl(url: String): js.Any = js.native
     def setUrl(url: String, callback: js.Function): js.Any = js.native
-    def waitFor(args: AnonCondition): js.Any = js.native
-    def waitFor(args: AnonCondition, callback: js.Function): js.Any = js.native
+    def waitFor(args: Condition): js.Any = js.native
+    def waitFor(args: Condition, callback: js.Function): js.Any = js.native
     def waitFor(condition: js.Function): js.Any = js.native
     def waitFor(condition: js.Function, callback: js.Function): js.Any = js.native
   }

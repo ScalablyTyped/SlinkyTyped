@@ -6,7 +6,7 @@ import typingsSlinky.webdriver.HTTPRequestOptions
 import typingsSlinky.webdriver.HTTPResponse
 import typingsSlinky.webdriver.WebDriver.DesiredCapabilities
 import typingsSlinky.webdriver.WebDriver.WebDriverLogTypes
-import typingsSlinky.webdriverio.AnonSpecFiltering
+import typingsSlinky.webdriverio.anon.SpecFiltering
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ trait RemoteOptions extends js.Object {
   var connectionRetryTimeout: js.UndefOr[Double] = js.native
   var exclude: js.UndefOr[js.Array[String]] = js.native
   var execArgv: js.UndefOr[js.Array[String]] = js.native
-  var featureFlags: js.UndefOr[AnonSpecFiltering] = js.native
+  var featureFlags: js.UndefOr[SpecFiltering] = js.native
   var framework: js.UndefOr[String] = js.native
   var headers: js.UndefOr[StringDictionary[String]] = js.native
   var hostname: js.UndefOr[String] = js.native
@@ -151,7 +151,7 @@ object RemoteOptions {
         ret
     }
     @scala.inline
-    def withFeatureFlags(value: AnonSpecFiltering): Self = {
+    def withFeatureFlags(value: SpecFiltering): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("featureFlags")(value.asInstanceOf[js.Any])
         ret

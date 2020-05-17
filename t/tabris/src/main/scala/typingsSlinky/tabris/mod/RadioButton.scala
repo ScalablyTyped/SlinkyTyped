@@ -1,7 +1,7 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.AnonChildrenString
-import typingsSlinky.tabris.OmitRadioButtonset
+import typingsSlinky.tabris.anon.ChildrenString
+import typingsSlinky.tabris.anon.OmitRadioButtonset
 import typingsSlinky.tabris.tabrisStrings.checked
 import typingsSlinky.tabris.tabrisStrings.checkedTintColor
 import typingsSlinky.tabris.tabrisStrings.font
@@ -33,7 +33,7 @@ class RadioButton () extends Widget {
     * @constant
     */
   @JSName("jsxAttributes")
-  val jsxAttributes_RadioButton: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with AnonChildrenString = js.native
+  val jsxAttributes_RadioButton: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with ChildrenString = js.native
   /**
     * Fired when the [*checked*](#checked) property has changed.
     */

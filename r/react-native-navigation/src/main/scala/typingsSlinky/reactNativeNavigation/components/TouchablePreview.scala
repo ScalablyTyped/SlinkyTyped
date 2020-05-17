@@ -8,7 +8,7 @@ import typingsSlinky.reactNative.mod.TouchableHighlight
 import typingsSlinky.reactNative.mod.TouchableNativeFeedback
 import typingsSlinky.reactNative.mod.TouchableOpacity
 import typingsSlinky.reactNative.mod.TouchableWithoutFeedback
-import typingsSlinky.reactNativeNavigation.AnonReactTag
+import typingsSlinky.reactNativeNavigation.anon.ReactTag
 import typingsSlinky.reactNativeNavigation.touchablePreviewMod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -30,7 +30,7 @@ object TouchablePreview {
     @scala.inline
     def onPress(value: () => Unit): this.type = set("onPress", js.Any.fromFunction0(value))
     @scala.inline
-    def onPressIn(value: /* payload */ AnonReactTag => Unit): this.type = set("onPressIn", js.Any.fromFunction1(value))
+    def onPressIn(value: /* payload */ ReactTag => Unit): this.type = set("onPressIn", js.Any.fromFunction1(value))
     @scala.inline
     def touchableComponentReactElement(value: ReactElement): this.type = set("touchableComponent", value.asInstanceOf[js.Any])
     @scala.inline

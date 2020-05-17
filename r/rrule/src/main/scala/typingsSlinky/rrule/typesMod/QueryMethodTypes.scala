@@ -12,3 +12,14 @@ import scala.scalajs.js.annotation._
 */
 trait QueryMethodTypes extends js.Object
 
+object QueryMethodTypes {
+  @scala.inline
+  def all: typingsSlinky.rrule.rruleStrings.all = "all".asInstanceOf[typingsSlinky.rrule.rruleStrings.all]
+  @scala.inline
+  def between: typingsSlinky.rrule.rruleStrings.between = "between".asInstanceOf[typingsSlinky.rrule.rruleStrings.between]
+  @scala.inline
+  def before: typingsSlinky.rrule.rruleStrings.before = "before".asInstanceOf[typingsSlinky.rrule.rruleStrings.before]
+  @scala.inline
+  def after: typingsSlinky.rrule.rruleStrings.after = "after".asInstanceOf[typingsSlinky.rrule.rruleStrings.after]
+}
+

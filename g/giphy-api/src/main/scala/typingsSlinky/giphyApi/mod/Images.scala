@@ -1,11 +1,11 @@
 package typingsSlinky.giphyApi.mod
 
-import typingsSlinky.giphyApi.AnonHeight
-import typingsSlinky.giphyApi.AnonMp4
-import typingsSlinky.giphyApi.BaseImagesizestring
-import typingsSlinky.giphyApi.BaseImagesizestringframes
-import typingsSlinky.giphyApi.BaseImagesizestringmp4str
-import typingsSlinky.giphyApi.BaseImagesizestringwebpst
+import typingsSlinky.giphyApi.anon.BaseImagesizestring
+import typingsSlinky.giphyApi.anon.BaseImagesizestringframes
+import typingsSlinky.giphyApi.anon.BaseImagesizestringmp4str
+import typingsSlinky.giphyApi.anon.BaseImagesizestringwebpst
+import typingsSlinky.giphyApi.anon.Height
+import typingsSlinky.giphyApi.anon.Mp4
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,10 +27,10 @@ trait Images extends js.Object {
   var fixed_width_small: BaseImagesizestringmp4str = js.native
   var fixed_width_small_still: BaseImage = js.native
   var fixed_width_still: BaseImage = js.native
-  var looping: AnonMp4 = js.native
+  var looping: Mp4 = js.native
   var original: BaseImagesizestringframes = js.native
   var original_still: BaseImage = js.native
-  var preview: AnonHeight = js.native
+  var preview: Height = js.native
   var preview_gif: BaseImagesizestring = js.native
 }
 
@@ -52,10 +52,10 @@ object Images {
     fixed_width_small: BaseImagesizestringmp4str,
     fixed_width_small_still: BaseImage,
     fixed_width_still: BaseImage,
-    looping: AnonMp4,
+    looping: Mp4,
     original: BaseImagesizestringframes,
     original_still: BaseImage,
-    preview: AnonHeight,
+    preview: Height,
     preview_gif: BaseImagesizestring
   ): Images = {
     val __obj = js.Dynamic.literal(downsized = downsized.asInstanceOf[js.Any], downsized_large = downsized_large.asInstanceOf[js.Any], downsized_medium = downsized_medium.asInstanceOf[js.Any], downsized_small = downsized_small.asInstanceOf[js.Any], downsized_still = downsized_still.asInstanceOf[js.Any], fixed_height = fixed_height.asInstanceOf[js.Any], fixed_height_downsampled = fixed_height_downsampled.asInstanceOf[js.Any], fixed_height_small = fixed_height_small.asInstanceOf[js.Any], fixed_height_small_still = fixed_height_small_still.asInstanceOf[js.Any], fixed_height_still = fixed_height_still.asInstanceOf[js.Any], fixed_width = fixed_width.asInstanceOf[js.Any], fixed_width_downsampled = fixed_width_downsampled.asInstanceOf[js.Any], fixed_width_small = fixed_width_small.asInstanceOf[js.Any], fixed_width_small_still = fixed_width_small_still.asInstanceOf[js.Any], fixed_width_still = fixed_width_still.asInstanceOf[js.Any], looping = looping.asInstanceOf[js.Any], original = original.asInstanceOf[js.Any], original_still = original_still.asInstanceOf[js.Any], preview = preview.asInstanceOf[js.Any], preview_gif = preview_gif.asInstanceOf[js.Any])
@@ -158,7 +158,7 @@ object Images {
         ret
     }
     @scala.inline
-    def withLooping(value: AnonMp4): Self = {
+    def withLooping(value: Mp4): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("looping")(value.asInstanceOf[js.Any])
         ret
@@ -176,7 +176,7 @@ object Images {
         ret
     }
     @scala.inline
-    def withPreview(value: AnonHeight): Self = {
+    def withPreview(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("preview")(value.asInstanceOf[js.Any])
         ret

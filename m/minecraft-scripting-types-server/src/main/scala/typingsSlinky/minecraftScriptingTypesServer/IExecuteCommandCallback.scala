@@ -1,5 +1,6 @@
 package typingsSlinky.minecraftScriptingTypesServer
 
+import typingsSlinky.minecraftScriptingTypesServer.anon.Message
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IExecuteCommandCallback extends js.Object {
   var command: String = js.native
-  var data: AnonMessage = js.native
+  var data: Message = js.native
 }
 
 object IExecuteCommandCallback {
   @scala.inline
-  def apply(command: String, data: AnonMessage): IExecuteCommandCallback = {
+  def apply(command: String, data: Message): IExecuteCommandCallback = {
     val __obj = js.Dynamic.literal(command = command.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any])
     __obj.asInstanceOf[IExecuteCommandCallback]
   }
@@ -29,7 +30,7 @@ object IExecuteCommandCallback {
         ret
     }
     @scala.inline
-    def withData(value: AnonMessage): Self = {
+    def withData(value: Message): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

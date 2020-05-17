@@ -1,7 +1,6 @@
 package typingsSlinky.hlsParser.mod.types
 
-import typingsSlinky.hlsParser.AnonByterange
-import typingsSlinky.hlsParser.mod.Byterange
+import typingsSlinky.hlsParser.anon.Byterange
 import typingsSlinky.hlsParser.mod.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,8 +9,8 @@ import scala.scalajs.js.annotation._
 @JSImport("hls-parser", "types.Segment")
 @js.native
 class Segment protected () extends Data {
-  def this(properties: AnonByterange) = this()
-  var byterange: js.UndefOr[Byterange] = js.native
+  def this(properties: Byterange) = this()
+  var byterange: js.UndefOr[typingsSlinky.hlsParser.mod.Byterange] = js.native
   var dateRange: DateRange = js.native
   var discontinuity: js.UndefOr[Boolean] = js.native
   var discontinuitySequence: Double = js.native

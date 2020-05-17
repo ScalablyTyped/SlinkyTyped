@@ -1,6 +1,6 @@
 package typingsSlinky.cordovaPluginKeyboard
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,11 +10,11 @@ trait WindowEventMap extends js.Object {
   /**
     * This event is fired when the keyboard is fully closed.
     */
-  var keyboardDidHide: Event_ = js.native
+  var keyboardDidHide: Event = js.native
   /**
     * This event is fired when keyboard fully shown.
     */
-  var keyboardDidShow: Event_ = js.native
+  var keyboardDidShow: Event = js.native
   /**
     * This event is fired when the keyboard is fully closed.
     */
@@ -22,21 +22,21 @@ trait WindowEventMap extends js.Object {
   /**
     * This event is fired when the keyboard is fully closed.
     */
-  var keyboardWillHide: Event_ = js.native
+  var keyboardWillHide: Event = js.native
   /**
     * This event fires before keyboard will be shown.
     */
-  var keyboardWillShow: Event_ = js.native
+  var keyboardWillShow: Event = js.native
 }
 
 object WindowEventMap {
   @scala.inline
   def apply(
-    keyboardDidHide: Event_,
-    keyboardDidShow: Event_,
+    keyboardDidHide: Event,
+    keyboardDidShow: Event,
     keyboardHeightWillChange: CordovaKeyboardEvent,
-    keyboardWillHide: Event_,
-    keyboardWillShow: Event_
+    keyboardWillHide: Event,
+    keyboardWillShow: Event
   ): WindowEventMap = {
     val __obj = js.Dynamic.literal(keyboardDidHide = keyboardDidHide.asInstanceOf[js.Any], keyboardDidShow = keyboardDidShow.asInstanceOf[js.Any], keyboardHeightWillChange = keyboardHeightWillChange.asInstanceOf[js.Any], keyboardWillHide = keyboardWillHide.asInstanceOf[js.Any], keyboardWillShow = keyboardWillShow.asInstanceOf[js.Any])
     __obj.asInstanceOf[WindowEventMap]
@@ -48,13 +48,13 @@ object WindowEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withKeyboardDidHide(value: Event_): Self = {
+    def withKeyboardDidHide(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardDidHide")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withKeyboardDidShow(value: Event_): Self = {
+    def withKeyboardDidShow(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardDidShow")(value.asInstanceOf[js.Any])
         ret
@@ -66,13 +66,13 @@ object WindowEventMap {
         ret
     }
     @scala.inline
-    def withKeyboardWillHide(value: Event_): Self = {
+    def withKeyboardWillHide(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardWillHide")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withKeyboardWillShow(value: Event_): Self = {
+    def withKeyboardWillShow(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardWillShow")(value.asInstanceOf[js.Any])
         ret

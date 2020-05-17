@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ILevel extends _IMinecraftObject {
+trait ILevel extends IMinecraftObject {
   /**
     * The type of the object
     */

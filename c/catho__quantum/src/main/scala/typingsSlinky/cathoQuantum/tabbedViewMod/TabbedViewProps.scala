@@ -2,7 +2,7 @@ package typingsSlinky.cathoQuantum.tabbedViewMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.cathoQuantum.AnonComponentsSpacing
+import typingsSlinky.cathoQuantum.anon.ComponentsSpacing
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.neutral
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.primary
 import scala.scalajs.js
@@ -15,7 +15,7 @@ trait TabbedViewProps extends js.Object {
   var children: js.Array[TagMod[Any]] | TagMod[Any] = js.native
   var fluid: js.UndefOr[Boolean] = js.native
   var skin: js.UndefOr[neutral | primary] = js.native
-  var theme: js.UndefOr[AnonComponentsSpacing] = js.native
+  var theme: js.UndefOr[ComponentsSpacing] = js.native
 }
 
 object TabbedViewProps {
@@ -85,7 +85,7 @@ object TabbedViewProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonComponentsSpacing): Self = {
+    def withTheme(value: ComponentsSpacing): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

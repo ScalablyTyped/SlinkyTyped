@@ -62,7 +62,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withRating(value: g | pg | r | x): Self = {
+    def withRating(value: g | pg | r | typingsSlinky.gravatarUrl.gravatarUrlStrings.x): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rating")(value.asInstanceOf[js.Any])
         ret

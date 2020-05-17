@@ -1,8 +1,8 @@
 package typingsSlinky.baseui.accordionMod
 
 import slinky.core.TagMod
-import typingsSlinky.baseui.AnonExpanded
-import typingsSlinky.baseui.SharedPropsexpandednever
+import typingsSlinky.baseui.anon.Expanded
+import typingsSlinky.baseui.anon.SharedPropsexpandednever
 import typingsSlinky.baseui.baseuiStrings.expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ trait AccordionProps extends js.Object {
   var children: TagMod[Any] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
   var initialState: js.UndefOr[AccordionState] = js.native
-  var onChange: js.UndefOr[js.Function1[/* args */ AnonExpanded, _]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* args */ Expanded, _]] = js.native
   var overrides: js.UndefOr[AccordionOverrides[SharedPropsexpandednever]] = js.native
   var renderAll: js.UndefOr[Boolean] = js.native
   var renderPanelContent: js.UndefOr[Boolean] = js.native
@@ -82,7 +82,7 @@ object AccordionProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* args */ AnonExpanded => _): Self = {
+    def withOnChange(value: /* args */ Expanded => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

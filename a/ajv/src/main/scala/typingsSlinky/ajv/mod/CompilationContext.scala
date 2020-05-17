@@ -1,7 +1,7 @@
 package typingsSlinky.ajv.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.ajv.AnonCopy
+import typingsSlinky.ajv.anon.Copy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait CompilationContext extends js.Object {
   var schema: js.Any = js.native
   var schemaPath: String = js.native
   var self: Ajv = js.native
-  var util: AnonCopy = js.native
+  var util: Copy = js.native
   def validate(schema: js.Object): Boolean = js.native
 }
 
@@ -39,7 +39,7 @@ object CompilationContext {
     schema: js.Any,
     schemaPath: String,
     self: Ajv,
-    util: AnonCopy,
+    util: Copy,
     validate: js.Object => Boolean
   ): CompilationContext = {
     val __obj = js.Dynamic.literal(async = async.asInstanceOf[js.Any], baseId = baseId.asInstanceOf[js.Any], compositeRule = compositeRule.asInstanceOf[js.Any], dataLevel = dataLevel.asInstanceOf[js.Any], dataPathArr = dataPathArr.asInstanceOf[js.Any], formats = formats.asInstanceOf[js.Any], keywords = keywords.asInstanceOf[js.Any], level = level.asInstanceOf[js.Any], opts = opts.asInstanceOf[js.Any], schema = schema.asInstanceOf[js.Any], schemaPath = schemaPath.asInstanceOf[js.Any], self = self.asInstanceOf[js.Any], util = util.asInstanceOf[js.Any], validate = js.Any.fromFunction1(validate))
@@ -124,7 +124,7 @@ object CompilationContext {
         ret
     }
     @scala.inline
-    def withUtil(value: AnonCopy): Self = {
+    def withUtil(value: Copy): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("util")(value.asInstanceOf[js.Any])
         ret

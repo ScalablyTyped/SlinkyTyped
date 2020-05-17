@@ -1,6 +1,6 @@
 package typingsSlinky.angularCore.mod
 
-import typingsSlinky.angularCore.AnonName
+import typingsSlinky.angularCore.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +33,7 @@ abstract class Injector () extends js.Object {
 object Injector extends js.Object {
   var NULL: Injector = js.native
   var THROW_IF_NOT_FOUND: js.Object = js.native
-  def create(options: AnonName): Injector = js.native
+  def create(options: Name): Injector = js.native
   /**
     * @deprecated from v5 use the new signature Injector.create(options)
     */

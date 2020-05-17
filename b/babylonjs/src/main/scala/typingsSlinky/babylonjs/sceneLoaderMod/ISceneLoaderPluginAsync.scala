@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.sceneLoaderMod
 
-import typingsSlinky.babylonjs.AnonAnimationGroups
+import typingsSlinky.babylonjs.anon.AnimationGroups
 import typingsSlinky.babylonjs.assetContainerMod.AssetContainer
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
@@ -19,14 +19,14 @@ trait ISceneLoaderPluginAsync extends ISceneLoaderPluginBase {
     * @param fileName Defines the name of the file to load
     * @returns The loaded meshes, particle systems, skeletons, and animation groups
     */
-  def importMeshAsync(meshesNames: js.Any, scene: Scene, data: js.Any, rootUrl: String): js.Promise[AnonAnimationGroups] = js.native
+  def importMeshAsync(meshesNames: js.Any, scene: Scene, data: js.Any, rootUrl: String): js.Promise[AnimationGroups] = js.native
   def importMeshAsync(
     meshesNames: js.Any,
     scene: Scene,
     data: js.Any,
     rootUrl: String,
     onProgress: js.Function1[/* event */ SceneLoaderProgressEvent, Unit]
-  ): js.Promise[AnonAnimationGroups] = js.native
+  ): js.Promise[AnimationGroups] = js.native
   def importMeshAsync(
     meshesNames: js.Any,
     scene: Scene,
@@ -34,7 +34,7 @@ trait ISceneLoaderPluginAsync extends ISceneLoaderPluginBase {
     rootUrl: String,
     onProgress: js.Function1[/* event */ SceneLoaderProgressEvent, Unit],
     fileName: String
-  ): js.Promise[AnonAnimationGroups] = js.native
+  ): js.Promise[AnimationGroups] = js.native
   /**
     * Load into an asset container.
     * @param scene The scene to load into

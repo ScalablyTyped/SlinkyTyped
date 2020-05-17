@@ -1,6 +1,6 @@
 package typingsSlinky.evernote.mod.NoteStore
 
-import typingsSlinky.evernote.AnonErrors
+import typingsSlinky.evernote.anon.Errors
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("evernote", "NoteStore.ManageNoteSharesResult")
 @js.native
 class ManageNoteSharesResult () extends js.Object {
-  def this(args: AnonErrors) = this()
+  def this(args: Errors) = this()
   var errors: js.UndefOr[js.Array[ManageNoteSharesError]] = js.native
 }
 

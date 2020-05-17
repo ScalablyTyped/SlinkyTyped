@@ -1,6 +1,6 @@
 package typingsSlinky.recase.mod
 
-import typingsSlinky.recase.AnonExceptions
+import typingsSlinky.recase.anon.Exceptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("recase", "create")
 @js.native
 object create extends js.Object {
-  def apply(opts: AnonExceptions): Recase = js.native
+  def apply(opts: Exceptions): Recase = js.native
 }
 

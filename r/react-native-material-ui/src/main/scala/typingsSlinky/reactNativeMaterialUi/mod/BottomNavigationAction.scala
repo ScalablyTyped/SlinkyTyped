@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeMaterialUi.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactNativeMaterialUi.AnonActive
+import typingsSlinky.reactNativeMaterialUi.anon.Active
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait BottomNavigationAction extends js.Object {
   var key: js.UndefOr[String] = js.native
   var label: js.UndefOr[String] = js.native
   var onPress: js.UndefOr[js.Function0[Unit]] = js.native
-  var style: js.UndefOr[AnonActive] = js.native
+  var style: js.UndefOr[Active] = js.native
   var testID: js.UndefOr[String] = js.native
 }
 
@@ -97,7 +97,7 @@ object BottomNavigationAction {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonActive): Self = {
+    def withStyle(value: Active): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

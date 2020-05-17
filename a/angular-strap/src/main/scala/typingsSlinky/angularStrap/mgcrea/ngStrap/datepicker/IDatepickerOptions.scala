@@ -1,6 +1,6 @@
 package typingsSlinky.angularStrap.mgcrea.ngStrap.datepicker
 
-import typingsSlinky.angularStrap.AnonHide
+import typingsSlinky.angularStrap.anon.Hide
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait IDatepickerOptions extends js.Object {
   var dateFormat: js.UndefOr[String] = js.native
   var dateType: js.UndefOr[String] = js.native
   var daysOfWeekDisabled: js.UndefOr[String] = js.native
-  var delay: js.UndefOr[Double | AnonHide] = js.native
+  var delay: js.UndefOr[Double | Hide] = js.native
   var disabledDates: js.UndefOr[js.Array[IDatepickerDateRange]] = js.native
   var html: js.UndefOr[Boolean] = js.native
   var iconLeft: js.UndefOr[String] = js.native
@@ -121,7 +121,7 @@ object IDatepickerOptions {
         ret
     }
     @scala.inline
-    def withDelay(value: Double | AnonHide): Self = {
+    def withDelay(value: Double | Hide): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
         ret

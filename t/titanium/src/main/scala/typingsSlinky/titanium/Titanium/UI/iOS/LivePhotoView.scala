@@ -24,9 +24,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * A view to display a <Titanium.UI.iOS.LivePhoto> object introduced in iOS 9.1.
 			 */
-@JSGlobal("Titanium.UI.iOS.LivePhotoView")
 @js.native
-class LivePhotoView () extends View {
+trait LivePhotoView extends View {
   /**
   				 * The Live Photo displayed in the view.
   				 */

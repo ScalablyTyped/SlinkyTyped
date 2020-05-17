@@ -1,7 +1,7 @@
 package typingsSlinky.blueprintjsCore.hotkeysMod
 
-import typingsSlinky.blueprintjsCore.AnonTabIndex
-import typingsSlinky.blueprintjsCore.IHotkeysPropschildrenReac
+import typingsSlinky.blueprintjsCore.anon.IHotkeysPropschildrenReac
+import typingsSlinky.blueprintjsCore.anon.TabIndex
 import typingsSlinky.blueprintjsCore.commonMod.AbstractPureComponent2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ class Hotkeys ()
 @JSImport("@blueprintjs/core/lib/esm/components/hotkeys/hotkeys", "Hotkeys")
 @js.native
 object Hotkeys extends js.Object {
-  var defaultProps: AnonTabIndex = js.native
+  var defaultProps: TabIndex = js.native
   var displayName: String = js.native
 }
 

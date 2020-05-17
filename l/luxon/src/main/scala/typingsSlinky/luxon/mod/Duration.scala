@@ -1,6 +1,6 @@
 package typingsSlinky.luxon.mod
 
-import typingsSlinky.luxon.AnonIncludeConfig
+import typingsSlinky.luxon.anon.IncludeConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,7 +42,7 @@ class Duration () extends js.Object {
   def toISO(): String = js.native
   def toJSON(): String = js.native
   def toObject(): DurationObject = js.native
-  def toObject(options: AnonIncludeConfig): DurationObject = js.native
+  def toObject(options: IncludeConfig): DurationObject = js.native
 }
 
 /* static members */

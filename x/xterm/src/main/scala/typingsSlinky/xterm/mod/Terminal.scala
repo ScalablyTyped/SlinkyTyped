@@ -4,9 +4,9 @@ import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.xterm.AnonCols
-import typingsSlinky.xterm.AnonDomEvent
-import typingsSlinky.xterm.AnonEnd
+import typingsSlinky.xterm.anon.Cols
+import typingsSlinky.xterm.anon.DomEvent
+import typingsSlinky.xterm.anon.End
 import typingsSlinky.xterm.xtermStrings.`100`
 import typingsSlinky.xterm.xtermStrings.`200`
 import typingsSlinky.xterm.xtermStrings.`300`
@@ -118,7 +118,7 @@ class Terminal () extends IDisposable {
     * @returns an `IDisposable` to stop listening.
     */
   @JSName("onKey")
-  var onKey_Original: IEvent[AnonDomEvent, Unit] = js.native
+  var onKey_Original: IEvent[DomEvent, Unit] = js.native
   /**
     * Adds an event listener for when a line feed is added.
     * @returns an `IDisposable` to stop listening.
@@ -132,14 +132,14 @@ class Terminal () extends IDisposable {
     * @returns an `IDisposable` to stop listening.
     */
   @JSName("onRender")
-  var onRender_Original: IEvent[AnonEnd, Unit] = js.native
+  var onRender_Original: IEvent[End, Unit] = js.native
   /**
     * Adds an event listener for when the terminal is resized. The event value
     * contains the new size.
     * @returns an `IDisposable` to stop listening.
     */
   @JSName("onResize")
-  var onResize_Original: IEvent[AnonCols, Unit] = js.native
+  var onResize_Original: IEvent[Cols, Unit] = js.native
   /**
     * Adds an event listener for when a scroll occurs. The event value is the
     * new position of the viewport.
@@ -306,7 +306,7 @@ class Terminal () extends IDisposable {
     * triggered it.
     * @returns an `IDisposable` to stop listening.
     */
-  def onKey(listener: js.Function2[/* arg1 */ AnonDomEvent, /* arg2 */ Unit, _]): IDisposable = js.native
+  def onKey(listener: js.Function2[/* arg1 */ DomEvent, /* arg2 */ Unit, _]): IDisposable = js.native
   /**
     * Adds an event listener for when a line feed is added.
     * @returns an `IDisposable` to stop listening.
@@ -318,13 +318,13 @@ class Terminal () extends IDisposable {
     * to `Terminal.rows - 1`).
     * @returns an `IDisposable` to stop listening.
     */
-  def onRender(listener: js.Function2[/* arg1 */ AnonEnd, /* arg2 */ Unit, _]): IDisposable = js.native
+  def onRender(listener: js.Function2[/* arg1 */ End, /* arg2 */ Unit, _]): IDisposable = js.native
   /**
     * Adds an event listener for when the terminal is resized. The event value
     * contains the new size.
     * @returns an `IDisposable` to stop listening.
     */
-  def onResize(listener: js.Function2[/* arg1 */ AnonCols, /* arg2 */ Unit, _]): IDisposable = js.native
+  def onResize(listener: js.Function2[/* arg1 */ Cols, /* arg2 */ Unit, _]): IDisposable = js.native
   /**
     * Adds an event listener for when a scroll occurs. The event value is the
     * new position of the viewport.

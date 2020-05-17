@@ -5,7 +5,7 @@ import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.AnonInkBar
+import typingsSlinky.antd.anon.InkBar
 import typingsSlinky.antd.antdStrings.add
 import typingsSlinky.antd.antdStrings.large
 import typingsSlinky.antd.antdStrings.remove
@@ -19,7 +19,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TabsProps extends js.Object {
   var activeKey: js.UndefOr[String] = js.native
-  var animated: js.UndefOr[Boolean | AnonInkBar] = js.native
+  var animated: js.UndefOr[Boolean | InkBar] = js.native
   var className: js.UndefOr[String] = js.native
   var defaultActiveKey: js.UndefOr[String] = js.native
   var destroyInactiveTabPane: js.UndefOr[Boolean] = js.native
@@ -73,7 +73,7 @@ object TabsProps {
         ret
     }
     @scala.inline
-    def withAnimated(value: Boolean | AnonInkBar): Self = {
+    def withAnimated(value: Boolean | InkBar): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("animated")(value.asInstanceOf[js.Any])
         ret

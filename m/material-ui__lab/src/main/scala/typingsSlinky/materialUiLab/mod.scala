@@ -5,6 +5,7 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import typingsSlinky.materialUiLab.alertAlertMod.AlertProps
 import typingsSlinky.materialUiLab.alertTitleAlertTitleMod.AlertTitleProps
+import typingsSlinky.materialUiLab.anon.AnchorEl
 import typingsSlinky.materialUiLab.autocompleteAutocompleteMod.AutocompleteProps
 import typingsSlinky.materialUiLab.avatarGroupAvatarGroupMod.AvatarGroupProps
 import typingsSlinky.materialUiLab.paginationPaginationMod.PaginationProps
@@ -51,7 +52,7 @@ object mod extends js.Object {
   def TreeView(props: TreeViewProps): ReactElement = js.native
   def createFilterOptions[T](): js.Function2[/* options */ js.Array[T], /* state */ FilterOptionsState[T], js.Array[T]] = js.native
   def createFilterOptions[T](config: CreateFilterOptionsConfig[T]): js.Function2[/* options */ js.Array[T], /* state */ FilterOptionsState[T], js.Array[T]] = js.native
-  def useAutocomplete[T](props: UseAutocompleteProps[T]): AnonAnchorEl[T] = js.native
+  def useAutocomplete[T](props: UseAutocompleteProps[T]): AnchorEl[T] = js.native
   def usePagination(props: UsePaginationProps): UsePaginationResult = js.native
   @js.native
   object Rating extends TopLevel[ReactComponentClass[RatingProps]]

@@ -1,13 +1,13 @@
 package typingsSlinky.antDesignProLayout.blockCheckboxMod
 
-import typingsSlinky.antDesignProLayout.AnonKey
+import typingsSlinky.antDesignProLayout.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait BlockCheckboxProps extends js.Object {
-  var list: js.UndefOr[js.Array[AnonKey]] = js.native
+  var list: js.UndefOr[js.Array[Key]] = js.native
   var value: String = js.native
   def onChange(key: String): Unit = js.native
 }
@@ -37,7 +37,7 @@ object BlockCheckboxProps {
         ret
     }
     @scala.inline
-    def withList(value: js.Array[AnonKey]): Self = {
+    def withList(value: js.Array[Key]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(value.asInstanceOf[js.Any])
         ret

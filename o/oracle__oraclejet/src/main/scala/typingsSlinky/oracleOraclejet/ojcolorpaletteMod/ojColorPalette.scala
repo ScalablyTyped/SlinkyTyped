@@ -2,8 +2,8 @@ package typingsSlinky.oracleOraclejet.ojcolorpaletteMod
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.AnonLabel
-import typingsSlinky.oracleOraclejet.AnonLabelNone
+import typingsSlinky.oracleOraclejet.anon.Label
+import typingsSlinky.oracleOraclejet.anon.LabelNone
 import typingsSlinky.oracleOraclejet.ojcolorMod.^
 import typingsSlinky.oracleOraclejet.ojeditablevalueMod.editableValue
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.auto
@@ -42,10 +42,10 @@ trait ojColorPalette extends editableValue[^, ojColorPaletteSettableProperties, 
   var onOjAnimateStart_ojColorPalette: (js.Function1[CustomEvent, _]) | Null = js.native
   var onPaletteChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var onSwatchSizeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var palette: js.Array[AnonLabel] = js.native
+  var palette: js.Array[Label] = js.native
   var swatchSize: xs | sm | lg = js.native
   @JSName("translations")
-  var translations_ojColorPalette: AnonLabelNone = js.native
+  var translations_ojColorPalette: LabelNone = js.native
   def addEventListener(`type`: labelDisplayChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: labelDisplayChanged,
@@ -87,7 +87,7 @@ trait ojColorPalette extends editableValue[^, ojColorPaletteSettableProperties, 
   @JSName("getProperty")
   def getProperty_layout(property: layout): grid | list = js.native
   @JSName("getProperty")
-  def getProperty_palette(property: palette): js.Array[AnonLabel] = js.native
+  def getProperty_palette(property: palette): js.Array[Label] = js.native
   @JSName("getProperty")
   def getProperty_swatchSize(property: swatchSize): xs | sm | lg = js.native
   def setProperties(properties: ojColorPaletteSettablePropertiesLenient): Unit = js.native
@@ -103,9 +103,9 @@ trait ojColorPalette extends editableValue[^, ojColorPaletteSettableProperties, 
   @JSName("setProperty")
   def setProperty_labelledBy(property: labelledBy, value: String): Unit = js.native
   @JSName("setProperty")
-  def setProperty_palette(property: palette, value: js.Array[AnonLabel]): Unit = js.native
+  def setProperty_palette(property: palette, value: js.Array[Label]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonLabelNone): Unit = js.native
+  def setProperty_translations(property: translations, value: LabelNone): Unit = js.native
 }
 
 @JSImport("@oracle/oraclejet/ojcolorpalette", "ojColorPalette")

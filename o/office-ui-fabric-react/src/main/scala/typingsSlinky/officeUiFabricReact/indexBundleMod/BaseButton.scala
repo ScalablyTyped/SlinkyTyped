@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.indexBundleMod
 
-import typingsSlinky.officeUiFabricReact.PartialIBaseButtonProps
+import typingsSlinky.officeUiFabricReact.anon.PartialIBaseButtonProps
 import typingsSlinky.officeUiFabricReact.baseButtonMod.IBaseButtonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

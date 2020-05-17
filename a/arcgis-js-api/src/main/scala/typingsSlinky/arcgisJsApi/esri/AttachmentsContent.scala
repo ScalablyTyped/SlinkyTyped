@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.attachments
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.list
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.preview
@@ -30,8 +29,4 @@ trait AttachmentsContent
   @JSName("type")
   val type_AttachmentsContent: attachments = js.native
 }
-
-@JSGlobal("__esri.AttachmentsContent")
-@js.native
-object AttachmentsContent extends TopLevel[AttachmentsContentConstructor]
 

@@ -5,6 +5,7 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.CanvasRenderingContext2D
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLAnchorElement
@@ -116,6 +117,7 @@ import org.scalajs.dom.raw.SVGTextPathElement
 import org.scalajs.dom.raw.SVGUseElement
 import org.scalajs.dom.raw.SVGViewElement
 import org.scalajs.dom.raw.TouchList
+import org.scalajs.dom.raw.Window
 import typingsSlinky.d3Array.mod.Bisector_
 import typingsSlinky.d3Array.mod.HistogramGeneratorDate
 import typingsSlinky.d3Array.mod.HistogramGeneratorNumber
@@ -129,8 +131,8 @@ import typingsSlinky.d3Chord.mod.ChordLayout
 import typingsSlinky.d3Chord.mod.RibbonGenerator
 import typingsSlinky.d3Chord.mod.RibbonSubgroup
 import typingsSlinky.d3Chord.mod.Ribbon_
-import typingsSlinky.d3Collection.AnonKey
-import typingsSlinky.d3Collection.AnonValue
+import typingsSlinky.d3Collection.anon.Key
+import typingsSlinky.d3Collection.anon.Value
 import typingsSlinky.d3Collection.mod.Map_
 import typingsSlinky.d3Collection.mod.Nest_
 import typingsSlinky.d3Collection.mod.Set_
@@ -160,7 +162,7 @@ import typingsSlinky.d3Dsv.mod.DSVRowString
 import typingsSlinky.d3Ease.mod.BackEasingFactory
 import typingsSlinky.d3Ease.mod.ElasticEasingFactory
 import typingsSlinky.d3Ease.mod.PolynomialEasingFactory
-import typingsSlinky.d3Fetch.PartialHTMLImageElement
+import typingsSlinky.d3Fetch.anon.PartialHTMLImageElement
 import typingsSlinky.d3Force.mod.ForceCenter_
 import typingsSlinky.d3Force.mod.ForceCollide_
 import typingsSlinky.d3Force.mod.ForceLink_
@@ -171,11 +173,11 @@ import typingsSlinky.d3Force.mod.ForceY_
 import typingsSlinky.d3Force.mod.Simulation
 import typingsSlinky.d3Force.mod.SimulationLinkDatum
 import typingsSlinky.d3Force.mod.SimulationNodeDatum
-import typingsSlinky.d3Format.AnonValueOf
+import typingsSlinky.d3Format.anon.ValueOf
 import typingsSlinky.d3Format.mod.FormatLocaleDefinition
 import typingsSlinky.d3Format.mod.FormatLocaleObject
 import typingsSlinky.d3Format.mod.FormatSpecifier_
-import typingsSlinky.d3Geo.Anon0
+import typingsSlinky.d3Geo.anon.`0`
 import typingsSlinky.d3Geo.mod.ExtendedFeature
 import typingsSlinky.d3Geo.mod.ExtendedFeatureCollection
 import typingsSlinky.d3Geo.mod.ExtendedGeometryCollection
@@ -204,7 +206,7 @@ import typingsSlinky.d3Hierarchy.mod.RatioSquarifyTilingFactory
 import typingsSlinky.d3Hierarchy.mod.StratifyOperator
 import typingsSlinky.d3Hierarchy.mod.TreeLayout
 import typingsSlinky.d3Hierarchy.mod.TreemapLayout
-import typingsSlinky.d3Interpolate.AnonToString
+import typingsSlinky.d3Interpolate.anon.ToString
 import typingsSlinky.d3Interpolate.mod.ArrayInterpolator
 import typingsSlinky.d3Interpolate.mod.ColorGammaInterpolationFactory
 import typingsSlinky.d3Interpolate.mod.ZoomInterpolator
@@ -271,7 +273,7 @@ import typingsSlinky.d3Zoom.mod.ZoomBehavior
 import typingsSlinky.d3Zoom.mod.ZoomTransform_
 import typingsSlinky.geojson.mod.GeoJsonProperties
 import typingsSlinky.geojson.mod.MultiLineString
-import typingsSlinky.plotlyJs.AnonName
+import typingsSlinky.plotlyJs.anon.Name
 import typingsSlinky.plotlyJs.plotlyJsStrings.`object`
 import typingsSlinky.plotlyJs.plotlyJsStrings.`var`
 import typingsSlinky.plotlyJs.plotlyJsStrings.a
@@ -445,7 +447,6 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.video
 import typingsSlinky.plotlyJs.plotlyJsStrings.view
 import typingsSlinky.plotlyJs.plotlyJsStrings.wbr
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.Document_
 import typingsSlinky.std.HTMLAppletElement
 import typingsSlinky.std.HTMLBaseFontElement
 import typingsSlinky.std.HTMLDataElement
@@ -466,7 +467,6 @@ import typingsSlinky.std.HTMLTemplateElement
 import typingsSlinky.std.HTMLTimeElement
 import typingsSlinky.std.Map
 import typingsSlinky.std.SVGForeignObjectElement
-import typingsSlinky.std.Window_
 import typingsSlinky.std.XMLDocument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -538,7 +538,7 @@ object d3 extends js.Object {
   val randomUniform_Original: RandomUniform_ = js.native
   @JSName("rgb")
   val rgb_Original: RGBColorFactory = js.native
-  val scaleImplicit: AnonName = js.native
+  val scaleImplicit: Name = js.native
   val schemeAccent: js.Array[String] = js.native
   val schemeBlues: js.Array[js.Array[String]] = js.native
   val schemeBrBG: js.Array[js.Array[String]] = js.native
@@ -654,12 +654,12 @@ object d3 extends js.Object {
   def active[Datum, PElement /* <: BaseType */, PDatum](node: Null, name: String): (Transition_[Null, Datum, PElement, PDatum]) | Null = js.native
   def active[Datum, PElement /* <: BaseType */, PDatum](node: EnterElement): (Transition_[EnterElement, Datum, PElement, PDatum]) | Null = js.native
   def active[Datum, PElement /* <: BaseType */, PDatum](node: EnterElement, name: String): (Transition_[EnterElement, Datum, PElement, PDatum]) | Null = js.native
-  def active[Datum, PElement /* <: BaseType */, PDatum](node: Document_): (Transition_[Document_, Datum, PElement, PDatum]) | Null = js.native
-  def active[Datum, PElement /* <: BaseType */, PDatum](node: Document_, name: String): (Transition_[Document_, Datum, PElement, PDatum]) | Null = js.native
+  def active[Datum, PElement /* <: BaseType */, PDatum](node: Document): (Transition_[Document, Datum, PElement, PDatum]) | Null = js.native
+  def active[Datum, PElement /* <: BaseType */, PDatum](node: Document, name: String): (Transition_[Document, Datum, PElement, PDatum]) | Null = js.native
   def active[Datum, PElement /* <: BaseType */, PDatum](node: Element): (Transition_[Element, Datum, PElement, PDatum]) | Null = js.native
   def active[Datum, PElement /* <: BaseType */, PDatum](node: Element, name: String): (Transition_[Element, Datum, PElement, PDatum]) | Null = js.native
-  def active[Datum, PElement /* <: BaseType */, PDatum](node: Window_): (Transition_[Window_, Datum, PElement, PDatum]) | Null = js.native
-  def active[Datum, PElement /* <: BaseType */, PDatum](node: Window_, name: String): (Transition_[Window_, Datum, PElement, PDatum]) | Null = js.native
+  def active[Datum, PElement /* <: BaseType */, PDatum](node: Window): (Transition_[Window, Datum, PElement, PDatum]) | Null = js.native
+  def active[Datum, PElement /* <: BaseType */, PDatum](node: Window, name: String): (Transition_[Window, Datum, PElement, PDatum]) | Null = js.native
   def arc(): Arc_[_, DefaultArcObject] = js.native
   @JSName("arc")
   def arc_Datum[Datum](): Arc_[_, Datum] = js.native
@@ -672,8 +672,8 @@ object d3 extends js.Object {
   @JSName("area")
   def area_Datum[Datum](): Area_[Datum] = js.native
   def ascending(): Double = js.native
-  def ascending(a: js.UndefOr[Primitive], b: Primitive): Double = js.native
   def ascending(a: Primitive): Double = js.native
+  def ascending(a: Primitive, b: Primitive): Double = js.native
   def axisBottom[Domain /* <: AxisDomain */](scale: AxisScale[Domain]): typingsSlinky.d3Axis.mod.Axis[Domain] = js.native
   def axisLeft[Domain /* <: AxisDomain */](scale: AxisScale[Domain]): typingsSlinky.d3Axis.mod.Axis[Domain] = js.native
   def axisRight[Domain /* <: AxisDomain */](scale: AxisScale[Domain]): typingsSlinky.d3Axis.mod.Axis[Domain] = js.native
@@ -1650,8 +1650,8 @@ object d3 extends js.Object {
     args: js.Any*
   ): Result = js.native
   def descending(): Double = js.native
-  def descending(a: js.UndefOr[Primitive], b: Primitive): Double = js.native
   def descending(a: Primitive): Double = js.native
+  def descending(a: Primitive, b: Primitive): Double = js.native
   def deviation[T /* <: Numeric */](array: js.Iterable[js.UndefOr[T | Null]]): js.UndefOr[Double] = js.native
   def deviation[T](
     array: js.Iterable[T],
@@ -1664,9 +1664,9 @@ object d3 extends js.Object {
   ): js.UndefOr[Double] = js.native
   def dispatch[T /* <: EventTarget */](types: String*): Dispatch_[T] = js.native
   def drag[GElement /* <: Element */, Datum](): DragBehavior[GElement, Datum, Datum | SubjectPosition] = js.native
-  def dragDisable(window: Window_): Unit = js.native
-  def dragEnable(window: Window_): Unit = js.native
-  def dragEnable(window: Window_, noClick: Boolean): Unit = js.native
+  def dragDisable(window: Window): Unit = js.native
+  def dragEnable(window: Window): Unit = js.native
+  def dragEnable(window: Window, noClick: Boolean): Unit = js.native
   @JSName("drag")
   def drag_GElement_DraggedElementBaseTypeDatumSubject[GElement /* <: Element */, Datum, Subject](): DragBehavior[GElement, Datum, Subject] = js.native
   def dsv[Columns /* <: String */](delimiter: String, url: String): js.Promise[DSVRowArray[Columns]] = js.native
@@ -1778,9 +1778,9 @@ object d3 extends js.Object {
   def easeSinIn(normalizedTime: Double): Double = js.native
   def easeSinInOut(normalizedTime: Double): Double = js.native
   def easeSinOut(normalizedTime: Double): Double = js.native
-  def entries(obj: js.Object): js.Array[AnonValue] = js.native
-  def entries[T](obj: StringDictionary[T]): js.Array[AnonKey[T]] = js.native
-  def entries[T](obj: ArrayLike[T]): js.Array[AnonKey[T]] = js.native
+  def entries(obj: js.Object): js.Array[Value] = js.native
+  def entries[T](obj: StringDictionary[T]): js.Array[Key[T]] = js.native
+  def entries[T](obj: ArrayLike[T]): js.Array[Key[T]] = js.native
   def extent(array: js.Iterable[String]): js.Tuple2[js.UndefOr[String], js.UndefOr[String]] = js.native
   def extent[T](
     array: js.Iterable[T],
@@ -1872,10 +1872,10 @@ object d3 extends js.Object {
   def forceY[NodeDatum /* <: SimulationNodeDatum */](): ForceY_[NodeDatum] = js.native
   def forceY[NodeDatum /* <: SimulationNodeDatum */](y: js.Function3[/* d */ NodeDatum, /* i */ Double, /* data */ js.Array[NodeDatum], Double]): ForceY_[NodeDatum] = js.native
   def forceY[NodeDatum /* <: SimulationNodeDatum */](y: Double): ForceY_[NodeDatum] = js.native
-  def format(specifier: String): js.Function1[/* n */ Double | AnonValueOf, String] = js.native
+  def format(specifier: String): js.Function1[/* n */ Double | ValueOf, String] = js.native
   def formatDefaultLocale(defaultLocale: FormatLocaleDefinition): FormatLocaleObject = js.native
   def formatLocale(locale: FormatLocaleDefinition): FormatLocaleObject = js.native
-  def formatPrefix(specifier: String, value: Double): js.Function1[/* n */ Double | AnonValueOf, String] = js.native
+  def formatPrefix(specifier: String, value: Double): js.Function1[/* n */ Double | ValueOf, String] = js.native
   def formatSpecifier(specifier: String): FormatSpecifier_ = js.native
   def geoAlbers(): GeoConicProjection = js.native
   def geoAlbersUsa(): GeoProjection_ = js.native
@@ -1983,7 +1983,7 @@ object d3 extends js.Object {
   def geoStream(`object`: ExtendedFeature[GeoGeometryObjects | Null, GeoJsonProperties], stream: GeoStream_): Unit = js.native
   def geoStream(`object`: ExtendedGeometryCollection[GeoGeometryObjects], stream: GeoStream_): Unit = js.native
   def geoStream(`object`: GeoGeometryObjects, stream: GeoStream_): Unit = js.native
-  def geoTransform[T /* <: GeoTransformPrototype */](methods: T): Anon0[T] = js.native
+  def geoTransform[T /* <: GeoTransformPrototype */](methods: T): `0`[T] = js.native
   def geoTransverseMercator(): GeoProjection_ = js.native
   def geoTransverseMercatorRaw(): GeoRawProjection = js.native
   /**
@@ -2061,8 +2061,8 @@ object d3 extends js.Object {
     */
   def hsl(h: Double, s: Double, l: Double): HSLColor = js.native
   def hsl(h: Double, s: Double, l: Double, opacity: Double): HSLColor = js.native
-  def html(url: String): js.Promise[Document_] = js.native
-  def html(url: String, init: RequestInit): js.Promise[Document_] = js.native
+  def html(url: String): js.Promise[Document] = js.native
+  def html(url: String, init: RequestInit): js.Promise[Document] = js.native
   def image(url: String): js.Promise[HTMLImageElement] = js.native
   def image(url: String, init: PartialHTMLImageElement): js.Promise[HTMLImageElement] = js.native
   def interpolate(a: String, b: String): js.Function1[/* t */ Double, String] = js.native
@@ -2070,11 +2070,11 @@ object d3 extends js.Object {
   def interpolate(a: js.Any): js.Function1[/* t */ Double, Null] = js.native
   def interpolate(a: js.Any, b: Boolean): js.Function1[/* t */ Double, Boolean] = js.native
   def interpolate(a: Double, b: Double): js.Function1[/* t */ Double, Double] = js.native
-  def interpolate(a: Double, b: typingsSlinky.d3Interpolate.AnonValueOf): js.Function1[/* t */ Double, Double] = js.native
+  def interpolate(a: Double, b: typingsSlinky.d3Interpolate.anon.ValueOf): js.Function1[/* t */ Double, Double] = js.native
   def interpolate(a: ColorCommonInstance, b: ColorCommonInstance): js.Function1[/* t */ Double, String] = js.native
-  def interpolate(a: AnonToString, b: String): js.Function1[/* t */ Double, String] = js.native
-  def interpolate(a: typingsSlinky.d3Interpolate.AnonValueOf, b: Double): js.Function1[/* t */ Double, Double] = js.native
-  def interpolate(a: typingsSlinky.d3Interpolate.AnonValueOf, b: typingsSlinky.d3Interpolate.AnonValueOf): js.Function1[/* t */ Double, Double] = js.native
+  def interpolate(a: ToString, b: String): js.Function1[/* t */ Double, String] = js.native
+  def interpolate(a: typingsSlinky.d3Interpolate.anon.ValueOf, b: Double): js.Function1[/* t */ Double, Double] = js.native
+  def interpolate(a: typingsSlinky.d3Interpolate.anon.ValueOf, b: typingsSlinky.d3Interpolate.anon.ValueOf): js.Function1[/* t */ Double, Double] = js.native
   def interpolate(a: js.Date, b: js.Date): js.Function1[/* t */ Double, js.Date] = js.native
   def interpolate[U /* <: js.Object */](a: js.Any, b: U): js.Function1[/* t */ Double, U] = js.native
   def interpolate[U /* <: js.Array[_] */](a: js.Array[_], b: U): js.Function1[/* t */ Double, U] = js.native
@@ -2125,9 +2125,9 @@ object d3 extends js.Object {
   def interpolateLab(a: ColorCommonInstance, b: ColorCommonInstance): js.Function1[/* t */ Double, String] = js.native
   def interpolateMagma(t: Double): String = js.native
   def interpolateNumber(a: Double, b: Double): js.Function1[/* t */ Double, Double] = js.native
-  def interpolateNumber(a: Double, b: typingsSlinky.d3Interpolate.AnonValueOf): js.Function1[/* t */ Double, Double] = js.native
-  def interpolateNumber(a: typingsSlinky.d3Interpolate.AnonValueOf, b: Double): js.Function1[/* t */ Double, Double] = js.native
-  def interpolateNumber(a: typingsSlinky.d3Interpolate.AnonValueOf, b: typingsSlinky.d3Interpolate.AnonValueOf): js.Function1[/* t */ Double, Double] = js.native
+  def interpolateNumber(a: Double, b: typingsSlinky.d3Interpolate.anon.ValueOf): js.Function1[/* t */ Double, Double] = js.native
+  def interpolateNumber(a: typingsSlinky.d3Interpolate.anon.ValueOf, b: Double): js.Function1[/* t */ Double, Double] = js.native
+  def interpolateNumber(a: typingsSlinky.d3Interpolate.anon.ValueOf, b: typingsSlinky.d3Interpolate.anon.ValueOf): js.Function1[/* t */ Double, Double] = js.native
   def interpolateObject[U /* <: js.Object */](a: js.Any, b: U): js.Function1[/* t */ Double, U] = js.native
   def interpolateOrRd(t: Double): String = js.native
   def interpolateOranges(t: Double): String = js.native
@@ -2153,15 +2153,15 @@ object d3 extends js.Object {
   def interpolateRgbBasis(colors: js.Array[String | ColorCommonInstance]): js.Function1[/* t */ Double, String] = js.native
   def interpolateRgbBasisClosed(colors: js.Array[String | ColorCommonInstance]): js.Function1[/* t */ Double, String] = js.native
   def interpolateRound(a: Double, b: Double): js.Function1[/* t */ Double, Double] = js.native
-  def interpolateRound(a: Double, b: typingsSlinky.d3Interpolate.AnonValueOf): js.Function1[/* t */ Double, Double] = js.native
-  def interpolateRound(a: typingsSlinky.d3Interpolate.AnonValueOf, b: Double): js.Function1[/* t */ Double, Double] = js.native
-  def interpolateRound(a: typingsSlinky.d3Interpolate.AnonValueOf, b: typingsSlinky.d3Interpolate.AnonValueOf): js.Function1[/* t */ Double, Double] = js.native
+  def interpolateRound(a: Double, b: typingsSlinky.d3Interpolate.anon.ValueOf): js.Function1[/* t */ Double, Double] = js.native
+  def interpolateRound(a: typingsSlinky.d3Interpolate.anon.ValueOf, b: Double): js.Function1[/* t */ Double, Double] = js.native
+  def interpolateRound(a: typingsSlinky.d3Interpolate.anon.ValueOf, b: typingsSlinky.d3Interpolate.anon.ValueOf): js.Function1[/* t */ Double, Double] = js.native
   def interpolateSinebow(t: Double): String = js.native
   def interpolateSpectral(t: Double): String = js.native
   def interpolateString(a: String, b: String): js.Function1[/* t */ Double, String] = js.native
-  def interpolateString(a: String, b: AnonToString): js.Function1[/* t */ Double, String] = js.native
-  def interpolateString(a: AnonToString, b: String): js.Function1[/* t */ Double, String] = js.native
-  def interpolateString(a: AnonToString, b: AnonToString): js.Function1[/* t */ Double, String] = js.native
+  def interpolateString(a: String, b: ToString): js.Function1[/* t */ Double, String] = js.native
+  def interpolateString(a: ToString, b: String): js.Function1[/* t */ Double, String] = js.native
+  def interpolateString(a: ToString, b: ToString): js.Function1[/* t */ Double, String] = js.native
   def interpolateTransformCss(a: String, b: String): js.Function1[/* t */ Double, String] = js.native
   def interpolateTransformSvg(a: String, b: String): js.Function1[/* t */ Double, String] = js.native
   def interpolateTurbo(t: Double): String = js.native
@@ -2334,7 +2334,7 @@ object d3 extends js.Object {
   def permute[T, K /* <: /* keyof T */ String */](`object`: T, keys: ArrayLike[K]): js.Array[
     /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any
   ] = js.native
-  def pie(): Pie_[_, Double | typingsSlinky.d3Shape.AnonValueOf] = js.native
+  def pie(): Pie_[_, Double | typingsSlinky.d3Shape.anon.ValueOf] = js.native
   @JSName("pie")
   def pie_Datum[Datum](): Pie_[_, Datum] = js.native
   @JSName("pie")
@@ -2477,7 +2477,7 @@ object d3 extends js.Object {
   ): Map[TKey, TReduce] = js.native
   def scaleBand(): ScaleBand_[String] = js.native
   @JSName("scaleBand")
-  def scaleBand_Domain_AnonToString[Domain /* <: typingsSlinky.d3Scale.AnonToString */](): ScaleBand_[Domain] = js.native
+  def scaleBand_Domain_ToString[Domain /* <: typingsSlinky.d3Scale.anon.ToString */](): ScaleBand_[Domain] = js.native
   def scaleDiverging[T](interpolator: js.Function1[/* t */ Double, T]): ScaleDiverging_[T] = js.native
   def scaleIdentity(): ScaleIdentity_ = js.native
   def scaleLinear(): ScaleLinear_[Double, Double] = js.native
@@ -2493,12 +2493,12 @@ object d3 extends js.Object {
   def scaleOrdinal[Range](): ScaleOrdinal_[String, Range] = js.native
   def scaleOrdinal[Range](range: js.Array[Range]): ScaleOrdinal_[String, Range] = js.native
   @JSName("scaleOrdinal")
-  def scaleOrdinal_Domain_AnonToStringRange[Domain /* <: typingsSlinky.d3Scale.AnonToString */, Range](): ScaleOrdinal_[Domain, Range] = js.native
+  def scaleOrdinal_Domain_ToStringRange[Domain /* <: typingsSlinky.d3Scale.anon.ToString */, Range](): ScaleOrdinal_[Domain, Range] = js.native
   @JSName("scaleOrdinal")
-  def scaleOrdinal_Domain_AnonToStringRange[Domain /* <: typingsSlinky.d3Scale.AnonToString */, Range](range: js.Array[Range]): ScaleOrdinal_[Domain, Range] = js.native
+  def scaleOrdinal_Domain_ToStringRange[Domain /* <: typingsSlinky.d3Scale.anon.ToString */, Range](range: js.Array[Range]): ScaleOrdinal_[Domain, Range] = js.native
   def scalePoint(): ScalePoint_[String] = js.native
   @JSName("scalePoint")
-  def scalePoint_Domain_AnonToString[Domain /* <: typingsSlinky.d3Scale.AnonToString */](): ScalePoint_[Domain] = js.native
+  def scalePoint_Domain_ToString[Domain /* <: typingsSlinky.d3Scale.anon.ToString */](): ScalePoint_[Domain] = js.native
   def scalePow(): ScalePower[Double, Double] = js.native
   @JSName("scalePow")
   def scalePow_Output[Output](): ScalePower[Output, Output] = js.native
@@ -2540,9 +2540,9 @@ object d3 extends js.Object {
   def scan_T[T](array: js.Iterable[T], comparator: js.Function2[/* a */ T, /* b */ T, Double]): js.UndefOr[Double] = js.native
   def select[OldDatum](): Selection_[Null, OldDatum, Null, js.UndefOr[scala.Nothing]] = js.native
   def select[OldDatum](node: EnterElement): Selection_[EnterElement, OldDatum, Null, js.UndefOr[scala.Nothing]] = js.native
-  def select[OldDatum](node: Document_): Selection_[Document_, OldDatum, Null, js.UndefOr[scala.Nothing]] = js.native
+  def select[OldDatum](node: Document): Selection_[Document, OldDatum, Null, js.UndefOr[scala.Nothing]] = js.native
   def select[OldDatum](node: Element): Selection_[Element, OldDatum, Null, js.UndefOr[scala.Nothing]] = js.native
-  def select[OldDatum](node: Window_): Selection_[Window_, OldDatum, Null, js.UndefOr[scala.Nothing]] = js.native
+  def select[OldDatum](node: Window): Selection_[Window, OldDatum, Null, js.UndefOr[scala.Nothing]] = js.native
   def select[GElement /* <: BaseType */, OldDatum](selector: String): Selection_[GElement, OldDatum, HTMLElement, _] = js.native
   def selectAll(): Selection_[Null, js.UndefOr[scala.Nothing], Null, js.UndefOr[scala.Nothing]] = js.native
   def selectAll[GElement /* <: BaseType */, OldDatum](nodes: js.Array[GElement]): Selection_[GElement, OldDatum, Null, js.UndefOr[scala.Nothing]] = js.native
@@ -2618,8 +2618,8 @@ object d3 extends js.Object {
       js.UndefOr[Double | Null]
     ]
   ): Double = js.native
-  def svg(url: String): js.Promise[Document_] = js.native
-  def svg(url: String, init: RequestInit): js.Promise[Document_] = js.native
+  def svg(url: String): js.Promise[Document] = js.native
+  def svg(url: String, init: RequestInit): js.Promise[Document] = js.native
   def symbol(): Symbol_[_, _] = js.native
   @JSName("symbol")
   def symbol_Datum[Datum](): Symbol_[_, Datum] = js.native
@@ -3390,9 +3390,9 @@ object d3 extends js.Object {
     ]
   ): js.UndefOr[Double] = js.native
   def voronoi[T](): VoronoiLayout[T] = js.native
-  def window(DOMNode: Document_): Window_ = js.native
-  def window(DOMNode: Element): Window_ = js.native
-  def window(DOMNode: Window_): Window_ = js.native
+  def window(DOMNode: Document): Window = js.native
+  def window(DOMNode: Element): Window = js.native
+  def window(DOMNode: Window): Window = js.native
   def xml(url: String): js.Promise[XMLDocument] = js.native
   def xml(url: String, init: RequestInit): js.Promise[XMLDocument] = js.native
   def zip[T](arrays: ArrayLike[T]*): js.Array[js.Array[T]] = js.native

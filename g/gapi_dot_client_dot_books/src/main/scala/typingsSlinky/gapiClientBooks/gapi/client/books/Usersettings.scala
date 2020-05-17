@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClientBooks.AnonFolderName
-import typingsSlinky.gapiClientBooks.AnonMoreFromAuthors
+import typingsSlinky.gapiClientBooks.anon.FolderName
+import typingsSlinky.gapiClientBooks.anon.MoreFromAuthors
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,8 +11,8 @@ trait Usersettings extends js.Object {
   /** Resource type. */
   var kind: js.UndefOr[String] = js.native
   /** User settings in sub-objects, each for different purposes. */
-  var notesExport: js.UndefOr[AnonFolderName] = js.native
-  var notification: js.UndefOr[AnonMoreFromAuthors] = js.native
+  var notesExport: js.UndefOr[FolderName] = js.native
+  var notification: js.UndefOr[MoreFromAuthors] = js.native
 }
 
 object Usersettings {
@@ -40,7 +40,7 @@ object Usersettings {
         ret
     }
     @scala.inline
-    def withNotesExport(value: AnonFolderName): Self = {
+    def withNotesExport(value: FolderName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notesExport")(value.asInstanceOf[js.Any])
         ret
@@ -52,7 +52,7 @@ object Usersettings {
         ret
     }
     @scala.inline
-    def withNotification(value: AnonMoreFromAuthors): Self = {
+    def withNotification(value: MoreFromAuthors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notification")(value.asInstanceOf[js.Any])
         ret

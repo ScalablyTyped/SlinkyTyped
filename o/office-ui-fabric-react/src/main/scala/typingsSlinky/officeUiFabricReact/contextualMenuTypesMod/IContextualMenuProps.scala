@@ -3,6 +3,7 @@ package typingsSlinky.officeUiFabricReact.contextualMenuTypesMod
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
+import org.scalajs.dom.raw.Window
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
@@ -15,7 +16,6 @@ import typingsSlinky.officeUiFabricReact.contextualMenuClassNamesMod.IContextual
 import typingsSlinky.officeUiFabricReact.contextualMenuItemTypesMod.IContextualMenuItemProps
 import typingsSlinky.officeUiFabricReact.withResponsiveModeMod.IWithResponsiveModeState
 import typingsSlinky.std.Partial
-import typingsSlinky.std.Window_
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.baseComponentTypesMod.IBaseProps
@@ -49,7 +49,7 @@ trait IContextualMenuProps
   var bounds: js.UndefOr[
     IRectangle | (js.Function2[
       /* target */ js.UndefOr[Target], 
-      /* targetWindow */ js.UndefOr[Window_], 
+      /* targetWindow */ js.UndefOr[Window], 
       js.UndefOr[IRectangle]
     ])
   ] = js.native
@@ -293,7 +293,7 @@ object IContextualMenuProps {
     }
     @scala.inline
     def withBoundsFunction2(
-      value: (/* target */ js.UndefOr[Target], /* targetWindow */ js.UndefOr[Window_]) => js.UndefOr[IRectangle]
+      value: (/* target */ js.UndefOr[Target], /* targetWindow */ js.UndefOr[Window]) => js.UndefOr[IRectangle]
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.Any.fromFunction2(value))
@@ -303,7 +303,7 @@ object IContextualMenuProps {
     def withBounds(
       value: IRectangle | (js.Function2[
           /* target */ js.UndefOr[Target], 
-          /* targetWindow */ js.UndefOr[Window_], 
+          /* targetWindow */ js.UndefOr[Window], 
           js.UndefOr[IRectangle]
         ])
     ): Self = {

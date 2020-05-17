@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonMembers
+import typingsSlinky.astTypes.anon.Members
 import typingsSlinky.astTypes.kindsMod.TSCallSignatureDeclarationKind
 import typingsSlinky.astTypes.kindsMod.TSConstructSignatureDeclarationKind
 import typingsSlinky.astTypes.kindsMod.TSIndexSignatureKind
@@ -18,6 +18,6 @@ trait TSTypeLiteralBuilder extends js.Object {
       TSCallSignatureDeclarationKind | TSConstructSignatureDeclarationKind | TSIndexSignatureKind | TSMethodSignatureKind | TSPropertySignatureKind
     ]
   ): TSTypeLiteral = js.native
-  def from(params: AnonMembers): TSTypeLiteral = js.native
+  def from(params: Members): TSTypeLiteral = js.native
 }
 

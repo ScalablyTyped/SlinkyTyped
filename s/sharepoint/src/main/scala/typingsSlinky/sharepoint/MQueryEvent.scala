@@ -1,13 +1,13 @@
 package typingsSlinky.sharepoint
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Event_
+import typingsSlinky.std.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait MQueryEvent extends Event_ {
+trait MQueryEvent extends Event {
   var altKey: Boolean = js.native
   var attrChange: Double = js.native
   var attrName: String = js.native

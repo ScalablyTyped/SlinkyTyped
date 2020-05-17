@@ -1,10 +1,10 @@
 package typingsSlinky.swaggerStats.mod
 
 import typingsSlinky.std.Record
-import typingsSlinky.swaggerStats.RecordHTTPMethodAPIOperat
-import typingsSlinky.swaggerStats.RecordHTTPMethodAPIOperatDELETE
-import typingsSlinky.swaggerStats.RecordHTTPMethodReqResSta
-import typingsSlinky.swaggerStats.RecordHTTPMethodSubsetReq
+import typingsSlinky.swaggerStats.anon.RecordHTTPMethodAPIOperat
+import typingsSlinky.swaggerStats.anon.RecordHTTPMethodAPIOperatDELETE
+import typingsSlinky.swaggerStats.anon.RecordHTTPMethodReqResSta
+import typingsSlinky.swaggerStats.anon.RecordHTTPMethodSubsetReq
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,7 @@
 package typingsSlinky.waterline.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.bluebird.FnCall
+import typingsSlinky.bluebird.anon.FnCall
 import typingsSlinky.bluebird.mod.Bluebird
 import typingsSlinky.bluebird.mod.CatchFilter
 import typingsSlinky.bluebird.mod.ConcurrencyOption
@@ -13,7 +13,7 @@ import typingsSlinky.bluebird.mod.Resolvable
 import typingsSlinky.bluebird.mod.SpreadOption
 import typingsSlinky.std.Map
 import typingsSlinky.std.ReturnType
-import typingsSlinky.waterline.AnonLimit
+import typingsSlinky.waterline.anon.Limit
 import typingsSlinky.waterline.waterlineStrings.Object
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -82,7 +82,6 @@ trait QueryBuilder[T] extends js.Object {
     * Cancel this `promise`. Will not do anything if this promise is already settled or if the cancellation feature has not been enabled
     */
   def cancel(): Unit = js.native
-  def `catch`[U](): Bluebird[U | T] = js.native
   /**
     * This is a catch-all exception handler, shortcut for calling `.then(null, handler)` on this promise.
     *
@@ -90,6 +89,7 @@ trait QueryBuilder[T] extends js.Object {
     *
     * Alias `.caught();` for compatibility with earlier ECMAScript version.
     */
+  def `catch`[U](): Bluebird[U | T] = js.native
   def `catch`[U](onReject: js.Function1[/* error */ js.Any, Resolvable[U]]): Bluebird[U | T] = js.native
   def `catch`[U, E1](
     // tslint:disable-next-line:unified-signatures
@@ -1246,7 +1246,7 @@ trait QueryBuilder[T] extends js.Object {
   def nodeify(callback: js.Function2[/* err */ js.Any, /* value */ js.UndefOr[T], Unit], options: SpreadOption): this.type = js.native
   def nodeify(sink: js.Any*): this.type = js.native
   def paginate(): QueryBuilder[T] = js.native
-  def paginate(pagination: AnonLimit): QueryBuilder[T] = js.native
+  def paginate(pagination: Limit): QueryBuilder[T] = js.native
   def populate(association: String): QueryBuilder[T] = js.native
   def populate(association: String, filter: js.Any): QueryBuilder[T] = js.native
   def props[T](): Bluebird[T] = js.native
@@ -1547,10 +1547,6 @@ trait QueryBuilder[T] extends js.Object {
     onFulfill: js.Function1[/* value */ T, Resolvable[U]],
     onReject: js.Function1[/* error */ js.Any, Resolvable[U]]
   ): Bluebird[U] = js.native
-  def `then`[TResult1, TResult2](
-    onfulfilled: js.UndefOr[scala.Nothing],
-    onrejected: js.Function1[/* reason */ js.Any, TResult2 | js.Thenable[TResult2]]
-  ): js.Thenable[TResult1 | TResult2] = js.native
   def `then`[TResult1, TResult2](onfulfilled: Null, onrejected: js.Function1[/* reason */ js.Any, TResult2 | js.Thenable[TResult2]]): js.Thenable[TResult1 | TResult2] = js.native
   def thenReturn(): Bluebird[Unit] = js.native
   def thenReturn[U](value: U): Bluebird[U] = js.native

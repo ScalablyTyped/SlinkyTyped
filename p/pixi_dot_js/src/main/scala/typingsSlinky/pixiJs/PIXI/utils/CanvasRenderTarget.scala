@@ -12,11 +12,8 @@ import scala.scalajs.js.annotation._
   * @class
   * @memberof PIXI.utils
   */
-@JSGlobal("PIXI.utils.CanvasRenderTarget")
 @js.native
-class CanvasRenderTarget protected () extends js.Object {
-  def this(width: Double, height: Double) = this()
-  def this(width: Double, height: Double, resolution: Double) = this()
+trait CanvasRenderTarget extends js.Object {
   /**
     * The Canvas object that belongs to this CanvasRenderTarget.
     *
@@ -53,5 +50,64 @@ class CanvasRenderTarget protected () extends js.Object {
     * @param {number} height - the new height of the canvas
     */
   def resize(width: Double, height: Double): Unit = js.native
+}
+
+object CanvasRenderTarget {
+  @scala.inline
+  def apply(
+    canvas: HTMLCanvasElement,
+    context: CanvasRenderingContext2D,
+    destroy: () => Unit,
+    height: Double,
+    resize: (Double, Double) => Unit,
+    width: Double
+  ): CanvasRenderTarget = {
+    val __obj = js.Dynamic.literal(canvas = canvas.asInstanceOf[js.Any], context = context.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), height = height.asInstanceOf[js.Any], resize = js.Any.fromFunction2(resize), width = width.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CanvasRenderTarget]
+  }
+  @scala.inline
+  implicit class CanvasRenderTargetOps[Self <: CanvasRenderTarget] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCanvas(value: HTMLCanvasElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canvas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContext(value: CanvasRenderingContext2D): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestroy(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResize(value: (Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

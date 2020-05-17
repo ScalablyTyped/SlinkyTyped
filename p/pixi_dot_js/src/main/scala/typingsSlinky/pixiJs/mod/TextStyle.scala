@@ -1,6 +1,6 @@
 package typingsSlinky.pixiJs.mod
 
-import typingsSlinky.pixiJs.AnonAlign
+import typingsSlinky.pixiJs.anon.Align
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,6 +19,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class TextStyle ()
   extends typingsSlinky.pixiJs.PIXI.TextStyle {
-  def this(style: AnonAlign) = this()
+  def this(style: Align) = this()
 }
 

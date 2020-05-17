@@ -1,6 +1,6 @@
 package typingsSlinky.playcanvas.mod
 
-import typingsSlinky.playcanvas.AnonFshader
+import typingsSlinky.playcanvas.anon.Attributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -53,6 +53,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class Shader protected ()
   extends typingsSlinky.playcanvas.pc.Shader {
-  def this(graphicsDevice: typingsSlinky.playcanvas.pc.GraphicsDevice, definition: AnonFshader) = this()
+  def this(graphicsDevice: typingsSlinky.playcanvas.pc.GraphicsDevice, definition: Attributes) = this()
 }
 

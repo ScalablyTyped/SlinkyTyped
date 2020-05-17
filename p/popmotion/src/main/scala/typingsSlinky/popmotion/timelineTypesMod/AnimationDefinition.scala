@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait AnimationDefinition extends js.Object {
+trait AnimationDefinition extends Instruction {
   var at: js.UndefOr[Double] = js.native
   var duration: js.UndefOr[Double] = js.native
   var ease: js.UndefOr[Easing] = js.native

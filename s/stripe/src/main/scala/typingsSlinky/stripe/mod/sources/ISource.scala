@@ -1,10 +1,10 @@
 package typingsSlinky.stripe.mod.sources
 
-import typingsSlinky.stripe.AnonAmountcharged
-import typingsSlinky.stripe.AnonAttemptsremaining
-import typingsSlinky.stripe.AnonBankname
-import typingsSlinky.stripe.AnonFailurereason
-import typingsSlinky.stripe.AnonPhone
+import typingsSlinky.stripe.anon.Amountcharged
+import typingsSlinky.stripe.anon.Attemptsremaining
+import typingsSlinky.stripe.anon.Bankname
+import typingsSlinky.stripe.anon.Failurereason
+import typingsSlinky.stripe.anon.Phone
 import typingsSlinky.stripe.mod.ICardHashInfo
 import typingsSlinky.stripe.mod.IMetadata
 import typingsSlinky.stripe.mod.IResourceObject
@@ -45,11 +45,11 @@ import scala.scalajs.js.annotation._
 trait ISource
   extends IResourceObject
      with IStripeSource {
-  var ach_credit_transfer: js.UndefOr[AnonBankname] = js.native
+  var ach_credit_transfer: js.UndefOr[Bankname] = js.native
   var amount: js.UndefOr[Double | Null] = js.native
   var card: js.UndefOr[ICardHashInfo] = js.native
   var client_secret: String = js.native
-  var code_verification: js.UndefOr[AnonAttemptsremaining] = js.native
+  var code_verification: js.UndefOr[Attemptsremaining] = js.native
   var created: Double = js.native
   var currency: js.UndefOr[String] = js.native
   var customer: js.UndefOr[String] = js.native
@@ -58,9 +58,9 @@ trait ISource
   var metadata: IMetadata = js.native
   @JSName("object")
   var object_ISource: source = js.native
-  var owner: AnonPhone = js.native
-  var receiver: js.UndefOr[AnonAmountcharged] = js.native
-  var redirect: js.UndefOr[AnonFailurereason] = js.native
+  var owner: Phone = js.native
+  var receiver: js.UndefOr[Amountcharged] = js.native
+  var redirect: js.UndefOr[Failurereason] = js.native
   var statement_descriptor: js.UndefOr[String | Null] = js.native
   var status: canceled | chargeable | consumed | failed | pending = js.native
   var `type`: ach_credit_transfer | ach_debit | alipay | bancontact | card | card_present | eps | giropay | ideal | multibanco | p24 | sepa_debit | sofort | three_d_secure | wechat = js.native
@@ -77,7 +77,7 @@ object ISource {
     livemode: Boolean,
     metadata: IMetadata,
     `object`: source,
-    owner: AnonPhone,
+    owner: Phone,
     status: canceled | chargeable | consumed | failed | pending,
     `type`: ach_credit_transfer | ach_debit | alipay | bancontact | card | card_present | eps | giropay | ideal | multibanco | p24 | sepa_debit | sofort | three_d_secure | wechat,
     usage: reusable | single_use
@@ -130,7 +130,7 @@ object ISource {
         ret
     }
     @scala.inline
-    def withOwner(value: AnonPhone): Self = {
+    def withOwner(value: Phone): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
         ret
@@ -156,7 +156,7 @@ object ISource {
         ret
     }
     @scala.inline
-    def withAch_credit_transfer(value: AnonBankname): Self = {
+    def withAch_credit_transfer(value: Bankname): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ach_credit_transfer")(value.asInstanceOf[js.Any])
         ret
@@ -198,7 +198,7 @@ object ISource {
         ret
     }
     @scala.inline
-    def withCode_verification(value: AnonAttemptsremaining): Self = {
+    def withCode_verification(value: Attemptsremaining): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("code_verification")(value.asInstanceOf[js.Any])
         ret
@@ -234,7 +234,7 @@ object ISource {
         ret
     }
     @scala.inline
-    def withReceiver(value: AnonAmountcharged): Self = {
+    def withReceiver(value: Amountcharged): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("receiver")(value.asInstanceOf[js.Any])
         ret
@@ -246,7 +246,7 @@ object ISource {
         ret
     }
     @scala.inline
-    def withRedirect(value: AnonFailurereason): Self = {
+    def withRedirect(value: Failurereason): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("redirect")(value.asInstanceOf[js.Any])
         ret

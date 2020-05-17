@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 /* Inlined waterline.waterline.BaseAttribute<string> & {  type  :'email'} */
 @js.native
-trait EmailAttribute extends _Attribute {
+trait EmailAttribute extends Attribute {
   var after: js.UndefOr[AttributeValidation[String]] = js.native
   var alpha: js.UndefOr[AttributeValidation[Boolean]] = js.native
   var alphanumeric: js.UndefOr[AttributeValidation[Boolean]] = js.native

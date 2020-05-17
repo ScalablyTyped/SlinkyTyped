@@ -16,10 +16,8 @@ import scala.scalajs.js.annotation._
   * @param {pc.ResourceLoader} loader - The ResourceLoader used to load the asset files.
   * @property {string} prefix A URL prefix that will be added to all asset loading requests.
   */
-@JSGlobal("pc.AssetRegistry")
 @js.native
-class AssetRegistry protected () extends EventHandler {
-  def this(loader: ResourceLoader) = this()
+trait AssetRegistry extends EventHandler {
   /**
     * A URL prefix that will be added to all asset loading requests.
     */

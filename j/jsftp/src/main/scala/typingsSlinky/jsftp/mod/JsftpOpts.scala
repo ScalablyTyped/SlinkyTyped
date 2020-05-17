@@ -1,6 +1,6 @@
 package typingsSlinky.jsftp.mod
 
-import typingsSlinky.jsftp.AnonHost
+import typingsSlinky.jsftp.anon.Host
 import typingsSlinky.node.netMod.Socket
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait JsftpOpts extends js.Object {
   var createSocket: js.UndefOr[
-    js.Function2[/* hasPortHost */ AnonHost, /* firstAction */ js.Function0[js.Object], Socket]
+    js.Function2[/* hasPortHost */ Host, /* firstAction */ js.Function0[js.Object], Socket]
   ] = js.native
   var host: js.UndefOr[String] = js.native
   var pass: js.UndefOr[String] = js.native
@@ -31,7 +31,7 @@ object JsftpOpts {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreateSocket(value: (/* hasPortHost */ AnonHost, /* firstAction */ js.Function0[js.Object]) => Socket): Self = {
+    def withCreateSocket(value: (/* hasPortHost */ Host, /* firstAction */ js.Function0[js.Object]) => Socket): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("createSocket")(js.Any.fromFunction2(value))
         ret

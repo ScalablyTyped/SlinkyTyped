@@ -18,7 +18,7 @@ import typingsSlinky.antd.dropdownDropdownMod.Placement
 import typingsSlinky.antd.formFormMod.FormLayout
 import typingsSlinky.antd.formItemMod.ValidateStatus
 import typingsSlinky.antd.generateCalendarMod.CalendarMode
-import typingsSlinky.antd.gridColMod._FlexType
+import typingsSlinky.antd.gridColMod.FlexType
 import typingsSlinky.antd.inputNumberMod.OmitAttrs
 import typingsSlinky.antd.interfaceMod.FormLabelAlign
 import typingsSlinky.antd.listMod.ColumnType
@@ -39,13 +39,13 @@ import typingsSlinky.antd.resultMod.ExceptionStatusType
 import typingsSlinky.antd.resultMod.ResultStatusType
 import typingsSlinky.antd.siderMod.CollapseType
 import typingsSlinky.antd.siderMod.SiderTheme
-import typingsSlinky.antd.sizeContextMod._SizeType
+import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.antd.spinMod.SpinSize
-import typingsSlinky.antd.statisticUtilsMod._Formatter
+import typingsSlinky.antd.statisticUtilsMod.Formatter
 import typingsSlinky.antd.switchMod.SwitchSize
+import typingsSlinky.antd.tableInterfaceMod.ExpandType
 import typingsSlinky.antd.tableInterfaceMod.RowSelectionType
-import typingsSlinky.antd.tableInterfaceMod._ExpandType
-import typingsSlinky.antd.tableInterfaceMod._SortOrder
+import typingsSlinky.antd.tableInterfaceMod.SortOrder
 import typingsSlinky.antd.tabsMod.TabsPosition
 import typingsSlinky.antd.tabsMod.TabsType
 import typingsSlinky.antd.tooltipMod.TooltipPlacement
@@ -374,7 +374,7 @@ object antdStrings {
   sealed trait `aria-valuetext` extends js.Object
   
   @js.native
-  sealed trait ascend extends _SortOrder
+  sealed trait ascend extends SortOrder
   
   @js.native
   sealed trait ascending extends js.Object
@@ -383,7 +383,7 @@ object antdStrings {
   sealed trait assertive extends js.Object
   
   @js.native
-  sealed trait auto extends _FlexType
+  sealed trait auto extends FlexType
   
   @js.native
   sealed trait autoFocus extends js.Object
@@ -617,7 +617,7 @@ object antdStrings {
   sealed trait copy extends js.Object
   
   @js.native
-  sealed trait countdown extends _Formatter
+  sealed trait countdown extends Formatter
   
   @js.native
   sealed trait cover extends js.Object
@@ -687,7 +687,7 @@ object antdStrings {
   sealed trait defaultValue extends OmitAttrs
   
   @js.native
-  sealed trait descend extends _SortOrder
+  sealed trait descend extends SortOrder
   
   @js.native
   sealed trait descending extends js.Object
@@ -999,8 +999,8 @@ object antdStrings {
   @js.native
   sealed trait large
     extends ListSize
+       with SizeType
        with SpinSize
-       with _SizeType
   
   @js.native
   sealed trait left
@@ -1219,7 +1219,7 @@ object antdStrings {
   sealed trait meterchunk extends js.Object
   
   @js.native
-  sealed trait middle extends _SizeType
+  sealed trait middle extends SizeType
   
   @js.native
   sealed trait minuteStep extends js.Object
@@ -1255,7 +1255,7 @@ object antdStrings {
   sealed trait navigation extends js.Object
   
   @js.native
-  sealed trait nest extends _ExpandType
+  sealed trait nest extends ExpandType
   
   @js.native
   sealed trait next extends js.Object
@@ -1282,7 +1282,7 @@ object antdStrings {
   sealed trait `non-scaling-stroke` extends js.Object
   
   @js.native
-  sealed trait none extends _FlexType
+  sealed trait none extends FlexType
   
   @js.native
   sealed trait nonzero extends js.Object
@@ -1294,7 +1294,7 @@ object antdStrings {
   sealed trait nowrap extends js.Object
   
   @js.native
-  sealed trait number extends _Formatter
+  sealed trait number extends Formatter
   
   @js.native
   sealed trait numeric extends js.Object
@@ -1597,7 +1597,7 @@ object antdStrings {
   sealed trait round extends ButtonShape
   
   @js.native
-  sealed trait row extends _ExpandType
+  sealed trait row extends ExpandType
   
   @js.native
   sealed trait `row-reverse` extends js.Object
@@ -1783,9 +1783,9 @@ object antdStrings {
     extends CardSize
        with ListSize
        with ProgressSize
+       with SizeType
        with SpinSize
        with SwitchSize
-       with _SizeType
   
   @js.native
   sealed trait `small-caps` extends js.Object

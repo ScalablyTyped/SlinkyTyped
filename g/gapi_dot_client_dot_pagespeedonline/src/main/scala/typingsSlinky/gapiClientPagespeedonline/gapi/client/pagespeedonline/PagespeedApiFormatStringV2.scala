@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientPagespeedonline.gapi.client.pagespeedonline
 
-import typingsSlinky.gapiClientPagespeedonline.AnonKey
+import typingsSlinky.gapiClientPagespeedonline.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PagespeedApiFormatStringV2 extends js.Object {
   /** List of arguments for the format string. */
-  var args: js.UndefOr[js.Array[AnonKey]] = js.native
+  var args: js.UndefOr[js.Array[Key]] = js.native
   /**
     * A localized format string with {{FOO}} placeholders, where 'FOO' is the key of the argument whose value should be substituted. For HYPERLINK arguments,
     * the format string will instead contain {{BEGIN_FOO}} and {{END_FOO}} for the argument with key 'FOO'.
@@ -29,7 +29,7 @@ object PagespeedApiFormatStringV2 {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withArgs(value: js.Array[AnonKey]): Self = {
+    def withArgs(value: js.Array[Key]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
         ret

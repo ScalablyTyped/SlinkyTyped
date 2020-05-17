@@ -1,10 +1,10 @@
 package typingsSlinky.rbx.tableTableMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.rbx.Anon7
-import typingsSlinky.rbx.AnonAsElementType
-import typingsSlinky.rbx.PickBadgeHelpersPropsFloa
-import typingsSlinky.rbx.PreferHelpersPropsOverridBackgroundColor
+import typingsSlinky.rbx.anon.AsElementType
+import typingsSlinky.rbx.anon.PickBadgeHelpersPropsFloa
+import typingsSlinky.rbx.anon.PreferHelpersPropsOverridBackgroundColor
+import typingsSlinky.rbx.anon.`7`
 import typingsSlinky.rbx.exoticMod.ForwardRefAsExoticComponent
 import typingsSlinky.rbx.exoticMod.FromReactType
 import typingsSlinky.rbx.helpersMod.HelpersPropsOverrides
@@ -69,12 +69,12 @@ object Table extends js.Object {
   var Head: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
   var Heading: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
   var Row: ForwardRefAsExoticComponent[TableRowProps, ReactElement] = js.native
-  var defaultProps: AnonAsElementType with (Partial[
+  var defaultProps: AsElementType with (Partial[
     HelpersPropsOverrides with PickBadgeHelpersPropsFloa with TableModifierProps with (Pick[_, String | Double | js.Symbol])
   ]) = js.native
   var displayName: js.UndefOr[String] = js.native
   def apply[TAsComponent /* <: ReactElement */](
-    props: Anon7[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with TableModifierProps with (Pick[
+    props: `7`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with TableModifierProps with (Pick[
       ComponentProps[TAsComponent], 
       Exclude[
         /* keyof react.react.ComponentProps<TAsComponent> */ String, 

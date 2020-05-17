@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("google.earth.GETime")
 @js.native
-class GETime () extends js.Object {
+trait GETime extends js.Object {
   /**
     * Returns the GETimeControl object; this is the time slider.
     */
@@ -41,5 +40,78 @@ class GETime () extends js.Object {
     * Sets the current plugin time.
     */
   def setTimePrimitive(timePrimitive: KmlTimePrimitive): Unit = js.native
+}
+
+object GETime {
+  @scala.inline
+  def apply(
+    getControl: () => GETimeControl,
+    getHistoricalImageryEnabled: () => Boolean,
+    getRate: () => Double,
+    getSystemTime: () => KmlTimeStamp,
+    getTimePrimitive: () => KmlTimePrimitive,
+    setHistoricalImageryEnabled: Boolean => Unit,
+    setRate: Double => Unit,
+    setTimePrimitive: KmlTimePrimitive => Unit
+  ): GETime = {
+    val __obj = js.Dynamic.literal(getControl = js.Any.fromFunction0(getControl), getHistoricalImageryEnabled = js.Any.fromFunction0(getHistoricalImageryEnabled), getRate = js.Any.fromFunction0(getRate), getSystemTime = js.Any.fromFunction0(getSystemTime), getTimePrimitive = js.Any.fromFunction0(getTimePrimitive), setHistoricalImageryEnabled = js.Any.fromFunction1(setHistoricalImageryEnabled), setRate = js.Any.fromFunction1(setRate), setTimePrimitive = js.Any.fromFunction1(setTimePrimitive))
+    __obj.asInstanceOf[GETime]
+  }
+  @scala.inline
+  implicit class GETimeOps[Self <: GETime] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetControl(value: () => GETimeControl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getControl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetHistoricalImageryEnabled(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getHistoricalImageryEnabled")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRate(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRate")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSystemTime(value: () => KmlTimeStamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSystemTime")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetTimePrimitive(value: () => KmlTimePrimitive): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTimePrimitive")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetHistoricalImageryEnabled(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setHistoricalImageryEnabled")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetRate(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setRate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetTimePrimitive(value: KmlTimePrimitive => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTimePrimitive")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

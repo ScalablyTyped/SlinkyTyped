@@ -1,9 +1,9 @@
 package typingsSlinky.tern.inferMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.tern.Primnamebool
-import typingsSlinky.tern.Primnamenumber
-import typingsSlinky.tern.Primnamestring
+import typingsSlinky.tern.anon.Primnamebool
+import typingsSlinky.tern.anon.Primnamenumber
+import typingsSlinky.tern.anon.Primnamestring
 import typingsSlinky.tern.ternMod.Server
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,13 +1,13 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonAddedItemsComponent
-import typingsSlinky.devextreme.AnonElementModelValue
-import typingsSlinky.devextreme.AnonMultiTagElement
+import typingsSlinky.devextreme.anon.AddedItemsComponent
+import typingsSlinky.devextreme.anon.ElementModelValue
+import typingsSlinky.devextreme.anon.MultiTagElement
 import typingsSlinky.devextreme.devextremeStrings.allPages
 import typingsSlinky.devextreme.devextremeStrings.page
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,12 +21,12 @@ trait dxTagBoxOptions extends dxSelectBoxOptions[dxTagBox] {
   /** A Boolean value specifying whether or not the widget is multiline. */
   var multiline: js.UndefOr[Boolean] = js.native
   /** A function that is executed before the multi-tag is rendered. */
-  var onMultiTagPreparing: js.UndefOr[js.Function1[/* e */ AnonMultiTagElement, _]] = js.native
+  var onMultiTagPreparing: js.UndefOr[js.Function1[/* e */ MultiTagElement, _]] = js.native
   /** A function that is executed when the "Select All" check box value is changed. Applies only if showSelectionControls is true. */
-  var onSelectAllValueChanged: js.UndefOr[js.Function1[/* e */ AnonElementModelValue, _]] = js.native
+  var onSelectAllValueChanged: js.UndefOr[js.Function1[/* e */ ElementModelValue, _]] = js.native
   /** A function that is executed when a list item is selected or selection is canceled. */
   @JSName("onSelectionChanged")
-  var onSelectionChanged_dxTagBoxOptions: js.UndefOr[js.Function1[/* e */ AnonAddedItemsComponent, _]] = js.native
+  var onSelectionChanged_dxTagBoxOptions: js.UndefOr[js.Function1[/* e */ AddedItemsComponent, _]] = js.native
   /** Specifies the mode in which all items are selected. */
   var selectAllMode: js.UndefOr[allPages | page] = js.native
   /** Gets the currently selected items. */
@@ -91,7 +91,7 @@ object dxTagBoxOptions {
         ret
     }
     @scala.inline
-    def withOnMultiTagPreparing(value: /* e */ AnonMultiTagElement => _): Self = {
+    def withOnMultiTagPreparing(value: /* e */ MultiTagElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMultiTagPreparing")(js.Any.fromFunction1(value))
         ret
@@ -103,7 +103,7 @@ object dxTagBoxOptions {
         ret
     }
     @scala.inline
-    def withOnSelectAllValueChanged(value: /* e */ AnonElementModelValue => _): Self = {
+    def withOnSelectAllValueChanged(value: /* e */ ElementModelValue => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectAllValueChanged")(js.Any.fromFunction1(value))
         ret
@@ -115,7 +115,7 @@ object dxTagBoxOptions {
         ret
     }
     @scala.inline
-    def withOnSelectionChanged(value: /* e */ AnonAddedItemsComponent => _): Self = {
+    def withOnSelectionChanged(value: /* e */ AddedItemsComponent => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.Any.fromFunction1(value))
         ret

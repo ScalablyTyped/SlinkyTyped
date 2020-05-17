@@ -1,7 +1,7 @@
 package typingsSlinky.gulpModernizr.mod
 
-import typingsSlinky.gulpModernizr.AnonClassPrefix
-import typingsSlinky.gulpModernizr.AnonSrc
+import typingsSlinky.gulpModernizr.anon.ClassPrefix
+import typingsSlinky.gulpModernizr.anon.Src
 import typingsSlinky.gulpModernizr.gulpModernizrBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -39,11 +39,11 @@ trait Params extends js.Object {
   /**
     * By default, this task will crawl all *.js, *.css, *.scss files.
     */
-  var files: js.UndefOr[AnonSrc] = js.native
+  var files: js.UndefOr[Src] = js.native
   /**
     * Based on default settings on http://modernizr.com/download/
     */
-  var options: js.UndefOr[AnonClassPrefix] = js.native
+  var options: js.UndefOr[ClassPrefix] = js.native
   /**
     * Define any tests you want to explicitly include
     */
@@ -143,7 +143,7 @@ object Params {
         ret
     }
     @scala.inline
-    def withFiles(value: AnonSrc): Self = {
+    def withFiles(value: Src): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
         ret
@@ -155,7 +155,7 @@ object Params {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonClassPrefix): Self = {
+    def withOptions(value: ClassPrefix): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

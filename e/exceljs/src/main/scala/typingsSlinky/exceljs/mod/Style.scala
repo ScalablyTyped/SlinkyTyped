@@ -1,9 +1,9 @@
 package typingsSlinky.exceljs.mod
 
-import typingsSlinky.exceljs.PartialAlignment
-import typingsSlinky.exceljs.PartialBorders
-import typingsSlinky.exceljs.PartialFont
-import typingsSlinky.exceljs.PartialProtection
+import typingsSlinky.exceljs.anon.PartialAlignment
+import typingsSlinky.exceljs.anon.PartialBorders
+import typingsSlinky.exceljs.anon.PartialFont
+import typingsSlinky.exceljs.anon.PartialProtection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,18 +1,17 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.File
-import typingsSlinky.devextreme.AnonBytesLoaded
-import typingsSlinky.devextreme.AnonBytesUploaded
-import typingsSlinky.devextreme.AnonFile
-import typingsSlinky.devextreme.AnonJQueryEventModel
-import typingsSlinky.devextreme.AnonRequest
+import typingsSlinky.devextreme.anon.BytesLoaded
+import typingsSlinky.devextreme.anon.BytesUploaded
+import typingsSlinky.devextreme.anon.JQueryEventModel
+import typingsSlinky.devextreme.anon.Request
 import typingsSlinky.devextreme.devextremeStrings.POST
 import typingsSlinky.devextreme.devextremeStrings.PUT
 import typingsSlinky.devextreme.devextremeStrings.instantly
 import typingsSlinky.devextreme.devextremeStrings.useButtons
 import typingsSlinky.devextreme.devextremeStrings.useForm
-import typingsSlinky.devextreme.mod._Global_.JQueryPromise
-import typingsSlinky.devextreme.mod._Global_.Promise
+import typingsSlinky.devextreme.mod.global.JQueryPromise
+import typingsSlinky.devextreme.mod.global.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,11 +20,7 @@ import scala.scalajs.js.annotation._
 trait dxFileUploaderOptions extends EditorOptions[dxFileUploader] {
   /** A function that cancels the file upload. */
   var abortUpload: js.UndefOr[
-    js.Function2[
-      /* file */ File, 
-      /* uploadInfo */ AnonBytesUploaded, 
-      Promise[_] | JQueryPromise[_] | _
-    ]
+    js.Function2[/* file */ File, /* uploadInfo */ BytesUploaded, Promise[_] | JQueryPromise[_] | _]
   ] = js.native
   /** Specifies a file type or several types accepted by the widget. */
   var accept: js.UndefOr[String] = js.native
@@ -52,18 +47,18 @@ trait dxFileUploaderOptions extends EditorOptions[dxFileUploader] {
   /** Specifies the value passed to the name attribute of the underlying input element. Required to access uploaded files on the server. */
   var name: js.UndefOr[String] = js.native
   /** A function that is executed when a file segment is uploaded. */
-  var onProgress: js.UndefOr[js.Function1[/* e */ AnonBytesLoaded, _]] = js.native
+  var onProgress: js.UndefOr[js.Function1[/* e */ BytesLoaded, _]] = js.native
   /** A function that is executed when the file upload is aborted. */
-  var onUploadAborted: js.UndefOr[js.Function1[/* e */ AnonFile, _]] = js.native
+  var onUploadAborted: js.UndefOr[js.Function1[/* e */ typingsSlinky.devextreme.anon.File, _]] = js.native
   /** A function that is executed when an error occurs during the file upload. */
-  var onUploadError: js.UndefOr[js.Function1[/* e */ AnonRequest, _]] = js.native
+  var onUploadError: js.UndefOr[js.Function1[/* e */ Request, _]] = js.native
   /** A function that is executed when the file upload is started. */
-  var onUploadStarted: js.UndefOr[js.Function1[/* e */ AnonFile, _]] = js.native
+  var onUploadStarted: js.UndefOr[js.Function1[/* e */ typingsSlinky.devextreme.anon.File, _]] = js.native
   /** A function that is executed when a file is successfully uploaded. */
-  var onUploaded: js.UndefOr[js.Function1[/* e */ AnonFile, _]] = js.native
+  var onUploaded: js.UndefOr[js.Function1[/* e */ typingsSlinky.devextreme.anon.File, _]] = js.native
   /** A function that is executed when one or several files are added to or removed from the selection. */
   @JSName("onValueChanged")
-  var onValueChanged_dxFileUploaderOptions: js.UndefOr[js.Function1[/* e */ AnonJQueryEventModel, _]] = js.native
+  var onValueChanged_dxFileUploaderOptions: js.UndefOr[js.Function1[/* e */ JQueryEventModel, _]] = js.native
   /** Gets the current progress in percentages. */
   var progress: js.UndefOr[Double] = js.native
   /** The message displayed by the widget when it is ready to upload the specified files. */
@@ -76,11 +71,7 @@ trait dxFileUploaderOptions extends EditorOptions[dxFileUploader] {
   var uploadButtonText: js.UndefOr[String] = js.native
   /** A function that uploads a file in chunks. */
   var uploadChunk: js.UndefOr[
-    js.Function2[
-      /* file */ File, 
-      /* uploadInfo */ AnonBytesUploaded, 
-      Promise[_] | JQueryPromise[_] | _
-    ]
+    js.Function2[/* file */ File, /* uploadInfo */ BytesUploaded, Promise[_] | JQueryPromise[_] | _]
   ] = js.native
   /** The message displayed by the widget on uploading failure. */
   var uploadFailedMessage: js.UndefOr[String] = js.native
@@ -120,7 +111,7 @@ object dxFileUploaderOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAbortUpload(value: (/* file */ File, /* uploadInfo */ AnonBytesUploaded) => Promise[_] | JQueryPromise[_] | _): Self = {
+    def withAbortUpload(value: (/* file */ File, /* uploadInfo */ BytesUploaded) => Promise[_] | JQueryPromise[_] | _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("abortUpload")(js.Any.fromFunction2(value))
         ret
@@ -276,7 +267,7 @@ object dxFileUploaderOptions {
         ret
     }
     @scala.inline
-    def withOnProgress(value: /* e */ AnonBytesLoaded => _): Self = {
+    def withOnProgress(value: /* e */ BytesLoaded => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.Any.fromFunction1(value))
         ret
@@ -288,7 +279,7 @@ object dxFileUploaderOptions {
         ret
     }
     @scala.inline
-    def withOnUploadAborted(value: /* e */ AnonFile => _): Self = {
+    def withOnUploadAborted(value: /* e */ typingsSlinky.devextreme.anon.File => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onUploadAborted")(js.Any.fromFunction1(value))
         ret
@@ -300,7 +291,7 @@ object dxFileUploaderOptions {
         ret
     }
     @scala.inline
-    def withOnUploadError(value: /* e */ AnonRequest => _): Self = {
+    def withOnUploadError(value: /* e */ Request => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onUploadError")(js.Any.fromFunction1(value))
         ret
@@ -312,7 +303,7 @@ object dxFileUploaderOptions {
         ret
     }
     @scala.inline
-    def withOnUploadStarted(value: /* e */ AnonFile => _): Self = {
+    def withOnUploadStarted(value: /* e */ typingsSlinky.devextreme.anon.File => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onUploadStarted")(js.Any.fromFunction1(value))
         ret
@@ -324,7 +315,7 @@ object dxFileUploaderOptions {
         ret
     }
     @scala.inline
-    def withOnUploaded(value: /* e */ AnonFile => _): Self = {
+    def withOnUploaded(value: /* e */ typingsSlinky.devextreme.anon.File => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onUploaded")(js.Any.fromFunction1(value))
         ret
@@ -336,7 +327,7 @@ object dxFileUploaderOptions {
         ret
     }
     @scala.inline
-    def withOnValueChanged(value: /* e */ AnonJQueryEventModel => _): Self = {
+    def withOnValueChanged(value: /* e */ JQueryEventModel => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onValueChanged")(js.Any.fromFunction1(value))
         ret
@@ -408,7 +399,7 @@ object dxFileUploaderOptions {
         ret
     }
     @scala.inline
-    def withUploadChunk(value: (/* file */ File, /* uploadInfo */ AnonBytesUploaded) => Promise[_] | JQueryPromise[_] | _): Self = {
+    def withUploadChunk(value: (/* file */ File, /* uploadInfo */ BytesUploaded) => Promise[_] | JQueryPromise[_] | _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("uploadChunk")(js.Any.fromFunction2(value))
         ret

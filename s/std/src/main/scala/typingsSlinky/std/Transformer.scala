@@ -38,18 +38,6 @@ object Transformer {
         ret
     }
     @scala.inline
-    def withReadableType(value: scala.Nothing): Self[I, O] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readableType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReadableType: Self[I, O] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("readableType")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withStart(value: /* controller */ TransformStreamDefaultController[O] => Unit | js.Thenable[Unit]): Self[I, O] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction1(value))
@@ -71,18 +59,6 @@ object Transformer {
     def withoutTransform: Self[I, O] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWritableType(value: scala.Nothing): Self[I, O] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writableType")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWritableType: Self[I, O] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("writableType")(js.undefined)
         ret
     }
   }

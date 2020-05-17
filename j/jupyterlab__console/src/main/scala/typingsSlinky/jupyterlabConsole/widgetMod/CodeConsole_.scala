@@ -1,5 +1,6 @@
 package typingsSlinky.jupyterlabConsole.widgetMod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.jupyterlabApputils.clientsessionMod.IClientSession
 import typingsSlinky.jupyterlabCells.mod.Cell
 import typingsSlinky.jupyterlabCells.mod.CodeCell
@@ -12,7 +13,6 @@ import typingsSlinky.jupyterlabRendermime.tokensMod.IRenderMimeRegistry
 import typingsSlinky.phosphorCoreutils.jsonMod.JSONObject
 import typingsSlinky.phosphorSignaling.mod.ISignal
 import typingsSlinky.phosphorWidgets.mod.Widget
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -179,7 +179,7 @@ class CodeConsole_ protected () extends Widget {
     * called in response to events on the notebook panel's node. It should
     * not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
   /**
     * Inject arbitrary code for the console to execute immediately.
     *

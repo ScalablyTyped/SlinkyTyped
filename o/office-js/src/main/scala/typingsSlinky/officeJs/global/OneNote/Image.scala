@@ -1,0 +1,17 @@
+package typingsSlinky.officeJs.global.OneNote
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  *
+  * Represents an Image. An Image can be a direct child of a PageContent object or a Paragraph object.
+  *
+  * [Api set: OneNoteApi 1.1]
+  */
+@JSGlobal("OneNote.Image")
+@js.native
+class Image ()
+  extends typingsSlinky.officeJs.OneNote.Image
+

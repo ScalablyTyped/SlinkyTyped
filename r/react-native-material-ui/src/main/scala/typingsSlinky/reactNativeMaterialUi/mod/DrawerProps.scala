@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeMaterialUi.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactNativeMaterialUi.AnonContainerViewStyle
+import typingsSlinky.reactNativeMaterialUi.anon.ContainerViewStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DrawerProps extends js.Object {
   var children: ReactElement = js.native
-  var style: js.UndefOr[AnonContainerViewStyle] = js.native
+  var style: js.UndefOr[ContainerViewStyle] = js.native
 }
 
 object DrawerProps {
@@ -31,7 +31,7 @@ object DrawerProps {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonContainerViewStyle): Self = {
+    def withStyle(value: ContainerViewStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.fabric.fabricImplMod
 
-import typingsSlinky.fabric.AnonMl
-import typingsSlinky.fabric.AnonTr
+import typingsSlinky.fabric.anon.Ml
+import typingsSlinky.fabric.anon.Tr
 import typingsSlinky.fabric.fabricStrings.circle
 import typingsSlinky.fabric.fabricStrings.rect
 import scala.scalajs.js
@@ -22,7 +22,7 @@ trait IObjectOptions extends js.Object {
   	 * You can calculate them without updating with @method calcCoords(true);
   	 * @memberOf fabric.Object.prototype
   	 */
-  var aCoords: js.UndefOr[AnonTr] = js.native
+  var aCoords: js.UndefOr[Tr] = js.native
   /**
   	 * Meaningful ONLY when the object is used as clipPath.
   	 * if true, the clipPath will have its top and left relative to canvas, and will
@@ -270,7 +270,7 @@ trait IObjectOptions extends js.Object {
   	 * You can calculate them without updating with @method calcCoords;
   	 * @memberOf fabric.Object.prototype
   	 */
-  var oCoords: js.UndefOr[AnonMl] = js.native
+  var oCoords: js.UndefOr[Ml] = js.native
   /**
   	 * When `true`, object is cached on an additional canvas.
   	 */
@@ -446,7 +446,7 @@ object IObjectOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withACoords(value: AnonTr): Self = {
+    def withACoords(value: Tr): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("aCoords")(value.asInstanceOf[js.Any])
         ret
@@ -1058,7 +1058,7 @@ object IObjectOptions {
         ret
     }
     @scala.inline
-    def withOCoords(value: AnonMl): Self = {
+    def withOCoords(value: Ml): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oCoords")(value.asInstanceOf[js.Any])
         ret

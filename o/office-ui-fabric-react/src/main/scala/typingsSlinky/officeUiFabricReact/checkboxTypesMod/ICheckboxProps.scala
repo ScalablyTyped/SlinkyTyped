@@ -1,5 +1,6 @@
 package typingsSlinky.officeUiFabricReact.checkboxTypesMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLButtonElement
 import org.scalajs.dom.raw.HTMLElement
@@ -12,7 +13,6 @@ import typingsSlinky.officeUiFabricReact.keytipTypesMod.IKeytipProps
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.end
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.start
 import typingsSlinky.react.mod.ButtonHTMLAttributes
-import typingsSlinky.std.Event_
 import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -99,7 +99,7 @@ trait ICheckboxProps extends ButtonHTMLAttributes[HTMLElement | HTMLInputElement
   @JSName("onChange")
   var onChange_ICheckboxProps: js.UndefOr[
     js.Function2[
-      /* ev */ js.UndefOr[SyntheticEvent[EventTarget with (HTMLElement | HTMLInputElement), Event_]], 
+      /* ev */ js.UndefOr[SyntheticEvent[EventTarget with (HTMLElement | HTMLInputElement), Event]], 
       /* checked */ js.UndefOr[Boolean], 
       Unit
     ]
@@ -312,7 +312,7 @@ object ICheckboxProps {
     }
     @scala.inline
     def withOnChange(
-      value: (/* ev */ js.UndefOr[SyntheticEvent[EventTarget with (HTMLElement | HTMLInputElement), Event_]], /* checked */ js.UndefOr[Boolean]) => Unit
+      value: (/* ev */ js.UndefOr[SyntheticEvent[EventTarget with (HTMLElement | HTMLInputElement), Event]], /* checked */ js.UndefOr[Boolean]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))

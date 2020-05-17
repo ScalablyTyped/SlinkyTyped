@@ -2,7 +2,7 @@ package typingsSlinky.graphqlTools.interfacesMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.graphql.definitionMod.GraphQLResolveInfo
-import typingsSlinky.graphqlTools.AnonField
+import typingsSlinky.graphqlTools.anon.Field
 import typingsSlinky.graphqlTools.graphqlToolsStrings.mutation_
 import typingsSlinky.graphqlTools.graphqlToolsStrings.query_
 import typingsSlinky.graphqlTools.graphqlToolsStrings.subscription_
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait MergeInfo extends js.Object {
-  var fragments: js.Array[AnonField] = js.native
+  var fragments: js.Array[Field] = js.native
   def delegateToSchema[TContext](options: IDelegateToSchemaOptions[TContext]): js.Any = js.native
   @JSName("delegate")
   def delegate_mutation(

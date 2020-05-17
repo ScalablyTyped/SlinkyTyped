@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Infragistics.Measure")
 @js.native
-class Measure () extends js.Object {
+trait Measure extends js.Object {
   /**
   	 * Returns the aggregator type that identifies how a measure was derived. It is a value from the $.ig.AggregatorType enumeration.
   	 *
@@ -101,5 +100,78 @@ class Measure () extends js.Object {
   	 * @param value
   	 */
   def uniqueName(value: js.Object): String = js.native
+}
+
+object Measure {
+  @scala.inline
+  def apply(
+    aggregatorType: js.Object => Double,
+    caption: js.Object => String,
+    defaultFormatString: js.Object => String,
+    description: js.Object => String,
+    measureDisplayFolder: js.Object => String,
+    measureGroupName: js.Object => String,
+    name: js.Object => String,
+    uniqueName: js.Object => String
+  ): Measure = {
+    val __obj = js.Dynamic.literal(aggregatorType = js.Any.fromFunction1(aggregatorType), caption = js.Any.fromFunction1(caption), defaultFormatString = js.Any.fromFunction1(defaultFormatString), description = js.Any.fromFunction1(description), measureDisplayFolder = js.Any.fromFunction1(measureDisplayFolder), measureGroupName = js.Any.fromFunction1(measureGroupName), name = js.Any.fromFunction1(name), uniqueName = js.Any.fromFunction1(uniqueName))
+    __obj.asInstanceOf[Measure]
+  }
+  @scala.inline
+  implicit class MeasureOps[Self <: Measure] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAggregatorType(value: js.Object => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aggregatorType")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCaption(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDefaultFormatString(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultFormatString")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDescription(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMeasureDisplayFolder(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("measureDisplayFolder")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMeasureGroupName(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("measureGroupName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withName(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUniqueName(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueName")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

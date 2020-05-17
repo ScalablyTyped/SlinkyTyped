@@ -1,13 +1,13 @@
 package typingsSlinky.firebaseMessaging.apiMod
 
-import typingsSlinky.firebaseMessaging.AnonMessage
+import typingsSlinky.firebaseMessaging.anon.Message
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ApiResponse extends js.Object {
-  var error: js.UndefOr[AnonMessage] = js.native
+  var error: js.UndefOr[Message] = js.native
   var token: js.UndefOr[String] = js.native
 }
 
@@ -24,7 +24,7 @@ object ApiResponse {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withError(value: AnonMessage): Self = {
+    def withError(value: Message): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret

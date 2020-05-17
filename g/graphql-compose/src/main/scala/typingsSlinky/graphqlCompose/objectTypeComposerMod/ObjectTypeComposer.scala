@@ -23,6 +23,8 @@ import typingsSlinky.graphqlCompose.resolverMod.ResolverNextRpCb
 import typingsSlinky.graphqlCompose.resolverMod.ResolverOpts
 import typingsSlinky.graphqlCompose.resolverMod.ResolverWrapCb
 import typingsSlinky.graphqlCompose.scalarTypeComposerMod.ScalarTypeComposer
+import typingsSlinky.graphqlCompose.schemaComposerMod.AnyComposeType
+import typingsSlinky.graphqlCompose.schemaComposerMod.AnyType
 import typingsSlinky.graphqlCompose.schemaComposerMod.SchemaComposer
 import typingsSlinky.graphqlCompose.unionTypeComposerMod.UnionTypeComposer
 import typingsSlinky.std.Map
@@ -33,7 +35,11 @@ import scala.scalajs.js.annotation._
 
 @JSImport("graphql-compose/lib/ObjectTypeComposer", "ObjectTypeComposer")
 @js.native
-class ObjectTypeComposer[TSource, TContext] protected () extends _ComposeOutputType[TSource, TContext] {
+class ObjectTypeComposer[TSource, TContext] protected ()
+  extends ComposeOutputType[TSource, TContext]
+     with AnyComposeType[TContext]
+     with AnyType[TContext]
+     with ComposeObjectType {
   def this(gqType: GraphQLObjectType[_, _, StringDictionary[_]], schemaComposer: SchemaComposer[TContext]) = this()
   var gqType: GraphQLObjectTypeExtended[TSource, TContext] = js.native
   var schemaComposer: SchemaComposer[TContext] = js.native

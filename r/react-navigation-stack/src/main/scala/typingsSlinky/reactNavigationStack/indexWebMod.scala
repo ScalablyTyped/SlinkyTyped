@@ -12,6 +12,30 @@ import typingsSlinky.reactNavigation.mod.NavigationRoute
 import typingsSlinky.reactNavigation.mod.NavigationRouteConfigMap
 import typingsSlinky.reactNavigation.mod.NavigationStackRouterConfig
 import typingsSlinky.reactNavigation.mod.SupportedThemes
+import typingsSlinky.reactNavigationStack.anon.BackImage
+import typingsSlinky.reactNavigationStack.anon.ComponentClassPickPropssc
+import typingsSlinky.reactNavigationStack.anon.ContainerStyleDark
+import typingsSlinky.reactNavigationStack.anon.ContainerStyleLight
+import typingsSlinky.reactNavigationStack.anon.FnCall
+import typingsSlinky.reactNavigationStack.anon.FunctionComponentPickProp
+import typingsSlinky.reactNavigationStack.anon.Opacity
+import typingsSlinky.reactNavigationStack.anon.OpacityAnimatedInterpolation
+import typingsSlinky.reactNavigationStack.anon.OpacityAnimatedInterpolationTransformArray
+import typingsSlinky.reactNavigationStack.anon.OpacityNumber
+import typingsSlinky.reactNavigationStack.anon.OpacityTransform
+import typingsSlinky.reactNavigationStack.anon.OpacityUndefined
+import typingsSlinky.reactNavigationStack.anon.OpacityUndefinedTransformArray
+import typingsSlinky.reactNavigationStack.anon.OverlayOpacity
+import typingsSlinky.reactNavigationStack.anon.PickPropsmodeheaderModehe
+import typingsSlinky.reactNavigationStack.anon.PickPropsscenenavigationp
+import typingsSlinky.reactNavigationStack.anon.PickPropsstylechildrensce
+import typingsSlinky.reactNavigationStack.anon.ScreenInterpolator
+import typingsSlinky.reactNavigationStack.anon.ShadowOpacity
+import typingsSlinky.reactNavigationStack.anon.Transform
+import typingsSlinky.reactNavigationStack.anon.TransformArray
+import typingsSlinky.reactNavigationStack.anon.TransitionSpec
+import typingsSlinky.reactNavigationStack.anon.`0`
+import typingsSlinky.reactNavigationStack.anon.`1`
 import typingsSlinky.reactNavigationStack.createPointerEventsContainerMod.InjectedProps
 import typingsSlinky.reactNavigationStack.createPointerEventsContainerMod.InputProps
 import typingsSlinky.reactNavigationStack.headerBackButtonMod.default
@@ -116,28 +140,28 @@ object indexWebMod extends js.Object {
   @js.native
   object HeaderBackButton extends js.Object {
     var contextType: Context[SupportedThemes] = js.native
-    var defaultProps: AnonBackImage = js.native
+    var defaultProps: BackImage = js.native
   }
   
   @js.native
   object HeaderStyleInterpolator extends js.Object {
-    var forBackground: js.Function1[/* hasNavigationScene */ SceneInterpolatorProps, AnonOpacity] = js.native
-    var forBackgroundWithFade: js.Function1[/* props */ SceneInterpolatorProps, AnonOpacity | AnonOpacityAnimatedInterpolation] = js.native
-    var forBackgroundWithInactiveHidden: js.Function1[/* hasNavigationScene */ SceneInterpolatorProps, AnonOpacity] = js.native
-    var forBackgroundWithTranslation: js.Function1[/* props */ SceneInterpolatorProps, AnonOpacityTransform | AnonOpacityUndefined] = js.native
-    var forCenter: js.Function1[/* props */ SceneInterpolatorProps, AnonOpacity | AnonOpacityAnimatedInterpolation] = js.native
+    var forBackground: js.Function1[/* hasNavigationScene */ SceneInterpolatorProps, Opacity] = js.native
+    var forBackgroundWithFade: js.Function1[/* props */ SceneInterpolatorProps, Opacity | OpacityAnimatedInterpolation] = js.native
+    var forBackgroundWithInactiveHidden: js.Function1[/* hasNavigationScene */ SceneInterpolatorProps, Opacity] = js.native
+    var forBackgroundWithTranslation: js.Function1[/* props */ SceneInterpolatorProps, OpacityTransform | OpacityUndefined] = js.native
+    var forCenter: js.Function1[/* props */ SceneInterpolatorProps, Opacity | OpacityAnimatedInterpolation] = js.native
     var forCenterFromLeft: js.Function1[
         /* props */ SceneInterpolatorProps, 
-        AnonOpacityTransform | AnonOpacityAnimatedInterpolationTransformArray
+        OpacityTransform | OpacityAnimatedInterpolationTransformArray
       ] = js.native
-    var forLayout: js.Function1[/* props */ SceneInterpolatorProps, AnonTransform | AnonTransformArray | Anon0] = js.native
-    var forLeft: js.Function1[/* props */ SceneInterpolatorProps, AnonOpacity | AnonOpacityAnimatedInterpolation] = js.native
-    var forLeftButton: js.Function1[/* props */ SceneInterpolatorProps, AnonOpacity | AnonOpacityAnimatedInterpolation] = js.native
+    var forLayout: js.Function1[/* props */ SceneInterpolatorProps, Transform | TransformArray | `0`] = js.native
+    var forLeft: js.Function1[/* props */ SceneInterpolatorProps, Opacity | OpacityAnimatedInterpolation] = js.native
+    var forLeftButton: js.Function1[/* props */ SceneInterpolatorProps, Opacity | OpacityAnimatedInterpolation] = js.native
     var forLeftLabel: js.Function1[
         /* props */ SceneInterpolatorProps, 
-        AnonOpacityTransform | AnonOpacityAnimatedInterpolationTransformArray
+        OpacityTransform | OpacityAnimatedInterpolationTransformArray
       ] = js.native
-    var forRight: js.Function1[/* props */ SceneInterpolatorProps, AnonOpacity | AnonOpacityAnimatedInterpolation] = js.native
+    var forRight: js.Function1[/* props */ SceneInterpolatorProps, Opacity | OpacityAnimatedInterpolation] = js.native
   }
   
   /* static members */
@@ -156,34 +180,25 @@ object indexWebMod extends js.Object {
   object StackViewStyleInterpolator extends js.Object {
     var forFade: js.Function1[
         /* props */ SceneInterpolatorProps, 
-        AnonOpacityNumber | AnonOpacity | AnonOpacityAnimatedInterpolation
+        OpacityNumber | Opacity | OpacityAnimatedInterpolation
       ] = js.native
-    var forFadeFromBottomAndroid: js.Function1[
-        /* props */ SceneInterpolatorProps, 
-        AnonOpacityNumber | AnonOpacityTransform | Anon1
-      ] = js.native
-    var forFadeToBottomAndroid: js.Function1[
-        /* props */ SceneInterpolatorProps, 
-        AnonOpacityNumber | AnonOpacityTransform | Anon1
-      ] = js.native
-    var forHorizontal: js.Function1[
-        /* props */ SceneInterpolatorProps, 
-        AnonOpacityNumber | AnonOverlayOpacity | AnonShadowOpacity
-      ] = js.native
+    var forFadeFromBottomAndroid: js.Function1[/* props */ SceneInterpolatorProps, OpacityNumber | OpacityTransform | `1`] = js.native
+    var forFadeToBottomAndroid: js.Function1[/* props */ SceneInterpolatorProps, OpacityNumber | OpacityTransform | `1`] = js.native
+    var forHorizontal: js.Function1[/* props */ SceneInterpolatorProps, OpacityNumber | OverlayOpacity | ShadowOpacity] = js.native
     var forNoAnimation: js.Function0[js.Object] = js.native
     var forVertical: js.Function1[
         /* props */ SceneInterpolatorProps, 
-        AnonOpacityNumber | AnonOpacityTransform | AnonOpacityUndefinedTransformArray
+        OpacityNumber | OpacityTransform | OpacityUndefinedTransformArray
       ] = js.native
   }
   
   @js.native
   object StackViewTransitionConfigs extends js.Object {
-    var FadeInFromBottomAndroid: AnonScreenInterpolator = js.native
-    var FadeOutToBottomAndroid: AnonScreenInterpolator = js.native
-    var ModalSlideFromBottomIOS: AnonContainerStyleLight = js.native
-    var NoAnimation: AnonTransitionSpec = js.native
-    var SlideFromRightIOS: AnonContainerStyleDark = js.native
+    var FadeInFromBottomAndroid: ScreenInterpolator = js.native
+    var FadeOutToBottomAndroid: ScreenInterpolator = js.native
+    var ModalSlideFromBottomIOS: ContainerStyleLight = js.native
+    var NoAnimation: TransitionSpec = js.native
+    var SlideFromRightIOS: ContainerStyleDark = js.native
     var defaultTransitionConfig: js.Function3[
         /* transitionProps */ TransitionProps, 
         /* prevTransitionProps */ js.UndefOr[TransitionProps], 

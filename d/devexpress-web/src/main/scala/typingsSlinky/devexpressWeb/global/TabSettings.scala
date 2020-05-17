@@ -1,0 +1,14 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Contains settings of a tab stop.
+  */
+@JSGlobal("TabSettings")
+@js.native
+class TabSettings ()
+  extends typingsSlinky.devexpressWeb.TabSettings
+

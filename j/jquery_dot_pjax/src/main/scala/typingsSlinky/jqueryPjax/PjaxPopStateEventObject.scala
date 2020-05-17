@@ -1,6 +1,6 @@
 package typingsSlinky.jqueryPjax
 
-import typingsSlinky.jquery.JQuery_.Event
+import typingsSlinky.jquery.JQuery.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

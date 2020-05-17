@@ -1,18 +1,18 @@
 package typingsSlinky.webgme.GmeConfig
 
-import typingsSlinky.webgme.AnonLevelString
+import typingsSlinky.webgme.anon.LevelString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait LogOptions extends js.Object {
-  var log: AnonLevelString = js.native
+  var log: LevelString = js.native
 }
 
 object LogOptions {
   @scala.inline
-  def apply(log: AnonLevelString): LogOptions = {
+  def apply(log: LevelString): LogOptions = {
     val __obj = js.Dynamic.literal(log = log.asInstanceOf[js.Any])
     __obj.asInstanceOf[LogOptions]
   }
@@ -23,7 +23,7 @@ object LogOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withLog(value: AnonLevelString): Self = {
+    def withLog(value: LevelString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
         ret

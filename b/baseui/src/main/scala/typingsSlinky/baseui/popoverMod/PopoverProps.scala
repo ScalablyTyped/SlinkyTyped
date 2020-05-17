@@ -1,5 +1,6 @@
 package typingsSlinky.baseui.popoverMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import slinky.core.TagMod
@@ -22,7 +23,6 @@ import typingsSlinky.baseui.baseuiStrings.tooltip
 import typingsSlinky.baseui.baseuiStrings.top
 import typingsSlinky.baseui.baseuiStrings.topLeft
 import typingsSlinky.baseui.baseuiStrings.topRight
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,7 +42,7 @@ trait PopoverProps extends js.Object {
   var isOpen: Boolean = js.native
   var mountNode: js.UndefOr[HTMLElement] = js.native
   var onBlur: js.UndefOr[js.Function0[_]] = js.native
-  var onClick: js.UndefOr[js.Function1[/* e */ Event_, _]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* e */ Event, _]] = js.native
   var onClickOutside: js.UndefOr[js.Function1[/* event */ MouseEvent, _]] = js.native
   var onEsc: js.UndefOr[js.Function0[_]] = js.native
   var onFocus: js.UndefOr[js.Function0[_]] = js.native
@@ -224,7 +224,7 @@ object PopoverProps {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* e */ Event_ => _): Self = {
+    def withOnClick(value: /* e */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret

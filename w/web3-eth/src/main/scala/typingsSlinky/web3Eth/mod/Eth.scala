@@ -19,7 +19,6 @@ import typingsSlinky.web3Core.mod.TransactionConfig
 import typingsSlinky.web3Core.mod.TransactionReceipt
 import typingsSlinky.web3Core.mod.chain
 import typingsSlinky.web3Core.mod.hardfork
-import typingsSlinky.web3Core.mod.provider
 import typingsSlinky.web3CoreHelpers.mod.RevertInstructionError
 import typingsSlinky.web3CoreHelpers.mod.TransactionRevertInstructionError
 import typingsSlinky.web3CoreSubscriptions.mod.Subscription
@@ -42,8 +41,8 @@ import scala.scalajs.js.annotation._
 @JSImport("web3-eth", "Eth")
 @js.native
 class Eth () extends js.Object {
-  def this(provider: provider) = this()
-  def this(provider: provider, net: Socket) = this()
+  def this(provider: typingsSlinky.web3Core.mod.provider) = this()
+  def this(provider: typingsSlinky.web3Core.mod.provider, net: Socket) = this()
   var BatchRequest: Instantiable0[typingsSlinky.web3Core.mod.BatchRequest] = js.native
   var Contract: Instantiable3[
     /* jsonInterface */ js.Array[AbiItem] | AbiItem, 
@@ -54,7 +53,7 @@ class Eth () extends js.Object {
   var Iban: Instantiable1[/* iban */ String, typingsSlinky.web3EthIban.mod.Iban] = js.native
   var abi: AbiCoder = js.native
   var accounts: Accounts = js.native
-  val currentProvider: provider = js.native
+  val currentProvider: typingsSlinky.web3Core.mod.provider = js.native
   var defaultAccount: String | Null = js.native
   var defaultBlock: BlockNumber = js.native
   var defaultChain: chain = js.native
@@ -406,7 +405,7 @@ class Eth () extends js.Object {
     transactionConfig: TransactionConfig,
     callback: js.Function2[/* error */ js.Error, /* hash */ String, Unit]
   ): PromiEvent[TransactionReceipt | TransactionRevertInstructionError] = js.native
-  def setProvider(provider: provider): Boolean = js.native
+  def setProvider(provider: typingsSlinky.web3Core.mod.provider): Boolean = js.native
   def sign(dataToSign: String, address: String): js.Promise[String] = js.native
   def sign(
     dataToSign: String,

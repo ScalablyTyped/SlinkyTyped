@@ -1,21 +1,18 @@
 package typingsSlinky.ckeditor.CKEDITOR.plugins
 
-import typingsSlinky.ckeditor.AnonWeight
 import typingsSlinky.ckeditor.CKEDITOR.event
 import typingsSlinky.ckeditor.CKEDITOR.plugins.notificationAggregator.task
+import typingsSlinky.ckeditor.anon.Weight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("CKEDITOR.plugins.notificationAggregator")
 @js.native
-class notificationAggregator protected () extends event {
-  def this(editor: typingsSlinky.ckeditor.CKEDITOR.editor, message: String) = this()
-  def this(editor: typingsSlinky.ckeditor.CKEDITOR.editor, message: String, singularMessage: String) = this()
+trait notificationAggregator extends event {
   val editor: typingsSlinky.ckeditor.CKEDITOR.editor = js.native
   val notification: typingsSlinky.ckeditor.CKEDITOR.plugins.notification = js.native
   def createTask(): task = js.native
-  def createTask(options: AnonWeight): task = js.native
+  def createTask(options: Weight): task = js.native
   def getDoneTaskCount(): Double = js.native
   def getPercentage(): Double = js.native
   def getTaskCount(): Double = js.native
@@ -27,8 +24,7 @@ class notificationAggregator protected () extends event {
 @js.native
 object notificationAggregator extends js.Object {
   @js.native
-  class task () extends event {
-    def this(weight: Double) = this()
+  trait task extends event {
     def cancel(): Unit = js.native
     def done(): Unit = js.native
     def isCanceled(): Boolean = js.native

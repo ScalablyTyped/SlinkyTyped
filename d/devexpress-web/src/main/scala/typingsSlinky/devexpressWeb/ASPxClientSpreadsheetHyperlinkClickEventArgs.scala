@@ -7,22 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientSpreadsheet.HyperlinkClick event.
   */
-@JSGlobal("ASPxClientSpreadsheetHyperlinkClickEventArgs")
 @js.native
-class ASPxClientSpreadsheetHyperlinkClickEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientSpreadsheetHyperlinkClickEventArgs object. For internal use only.
-    * @param htmlEvent A DHTML event object that relates to the processed event.
-    * @param handled true if the event is handled and no default processing is required; otherwise false.
-    * @param hyperlinkType One of the ASPxClientOfficeDocumentLinkType values.
-    * @param targetUri A sting value specifying the link's URI.
-    */
-  def this(
-    htmlEvent: js.Any,
-    handled: Boolean,
-    hyperlinkType: ASPxClientOfficeDocumentLinkType,
-    targetUri: String
-  ) = this()
+trait ASPxClientSpreadsheetHyperlinkClickEventArgs extends ASPxClientEventArgs {
   /**
     * Gets or sets a value that specifies whether the event is handled, and the default processing is not required.
     */
@@ -39,5 +25,50 @@ class ASPxClientSpreadsheetHyperlinkClickEventArgs protected () extends ASPxClie
     * Gets the clicked link's URI.
     */
   var targetUri: String = js.native
+}
+
+object ASPxClientSpreadsheetHyperlinkClickEventArgs {
+  @scala.inline
+  def apply(
+    handled: Boolean,
+    htmlEvent: js.Any,
+    hyperlinkType: ASPxClientOfficeDocumentLinkType,
+    targetUri: String
+  ): ASPxClientSpreadsheetHyperlinkClickEventArgs = {
+    val __obj = js.Dynamic.literal(handled = handled.asInstanceOf[js.Any], htmlEvent = htmlEvent.asInstanceOf[js.Any], hyperlinkType = hyperlinkType.asInstanceOf[js.Any], targetUri = targetUri.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientSpreadsheetHyperlinkClickEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientSpreadsheetHyperlinkClickEventArgsOps[Self <: ASPxClientSpreadsheetHyperlinkClickEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHandled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtmlEvent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHyperlinkType(value: ASPxClientOfficeDocumentLinkType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hyperlinkType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

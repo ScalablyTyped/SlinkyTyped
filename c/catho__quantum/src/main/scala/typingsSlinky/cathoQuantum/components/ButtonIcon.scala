@@ -2,7 +2,7 @@ package typingsSlinky.cathoQuantum.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonSpacing
+import typingsSlinky.cathoQuantum.anon.Spacing
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.error
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.large
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.medium
@@ -33,7 +33,7 @@ object ButtonIcon {
     @scala.inline
     def skin(value: neutral | primary | secondary | success | warning | error): this.type = set("skin", value.asInstanceOf[js.Any])
     @scala.inline
-    def theme(value: AnonSpacing): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: Spacing): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: IconButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

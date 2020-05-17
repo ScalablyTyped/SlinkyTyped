@@ -1,7 +1,7 @@
 package typingsSlinky.docxTemplates.typesMod
 
-import typingsSlinky.docxTemplates.AnonCtx
-import typingsSlinky.docxTemplates.AnonModifiedSandbox
+import typingsSlinky.docxTemplates.anon.Ctx
+import typingsSlinky.docxTemplates.anon.ModifiedSandbox
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -184,7 +184,7 @@ object UserOptions {
         ret
     }
     @scala.inline
-    def withRunJs(value: /* o */ AnonCtx => AnonModifiedSandbox): Self = {
+    def withRunJs(value: /* o */ Ctx => ModifiedSandbox): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("runJs")(js.Any.fromFunction1(value))
         ret

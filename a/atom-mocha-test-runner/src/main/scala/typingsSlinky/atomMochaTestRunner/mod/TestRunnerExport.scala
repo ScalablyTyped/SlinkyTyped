@@ -1,7 +1,7 @@
 package typingsSlinky.atomMochaTestRunner.mod
 
 import typingsSlinky.atom.mod.TestRunner
-import typingsSlinky.mocha.Mocha_
+import typingsSlinky.mocha.Mocha
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,6 +16,6 @@ import scala.scalajs.js.annotation._
 trait TestRunnerExport extends TestRunner {
   def createRunner(): TestRunner = js.native
   def createRunner(options: AtomMochaOptions): TestRunner = js.native
-  def createRunner(options: AtomMochaOptions, mochaConfigFunction: js.Function1[/* mocha */ Mocha_, Unit]): TestRunner = js.native
+  def createRunner(options: AtomMochaOptions, mochaConfigFunction: js.Function1[/* mocha */ Mocha, Unit]): TestRunner = js.native
 }
 

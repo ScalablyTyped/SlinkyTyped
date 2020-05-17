@@ -1,18 +1,18 @@
 package typingsSlinky.ipp.mod
 
-import typingsSlinky.ipp.AnonLimit
+import typingsSlinky.ipp.anon.Limit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait GetJobsRequest extends js.Object {
-  var `operation-attributes-tag`: AnonLimit = js.native
+  var `operation-attributes-tag`: Limit = js.native
 }
 
 object GetJobsRequest {
   @scala.inline
-  def apply(`operation-attributes-tag`: AnonLimit): GetJobsRequest = {
+  def apply(`operation-attributes-tag`: Limit): GetJobsRequest = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("operation-attributes-tag")(`operation-attributes-tag`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetJobsRequest]
@@ -24,7 +24,7 @@ object GetJobsRequest {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def `withOperation-attributes-tag`(value: AnonLimit): Self = {
+    def `withOperation-attributes-tag`(value: Limit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("operation-attributes-tag")(value.asInstanceOf[js.Any])
         ret

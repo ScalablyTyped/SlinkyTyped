@@ -1,6 +1,5 @@
 package typingsSlinky.sendgrid.mod.SendGrid.Helpers.Mail
 
-import typingsSlinky.sendgrid.AnonBcc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +16,7 @@ trait MailSettings extends js.Object {
   def setFooter(footer: Footer): Unit = js.native
   def setSandBoxMode(sandBoxMode: SandBoxMode): Unit = js.native
   def setSpamCheck(spamCheck: SpamCheck): Unit = js.native
-  def toJSON(): AnonBcc = js.native
+  def toJSON(): typingsSlinky.sendgrid.anon.Bcc = js.native
 }
 
 object MailSettings {
@@ -33,7 +32,7 @@ object MailSettings {
     setFooter: Footer => Unit,
     setSandBoxMode: SandBoxMode => Unit,
     setSpamCheck: SpamCheck => Unit,
-    toJSON: () => AnonBcc
+    toJSON: () => typingsSlinky.sendgrid.anon.Bcc
   ): MailSettings = {
     val __obj = js.Dynamic.literal(getBcc = js.Any.fromFunction0(getBcc), getBypassListManagement = js.Any.fromFunction0(getBypassListManagement), getFooter = js.Any.fromFunction0(getFooter), getSandBoxMode = js.Any.fromFunction0(getSandBoxMode), getSpamCheck = js.Any.fromFunction0(getSpamCheck), setBcc = js.Any.fromFunction1(setBcc), setBypassListManagement = js.Any.fromFunction1(setBypassListManagement), setFooter = js.Any.fromFunction1(setFooter), setSandBoxMode = js.Any.fromFunction1(setSandBoxMode), setSpamCheck = js.Any.fromFunction1(setSpamCheck), toJSON = js.Any.fromFunction0(toJSON))
     __obj.asInstanceOf[MailSettings]
@@ -105,7 +104,7 @@ object MailSettings {
         ret
     }
     @scala.inline
-    def withToJSON(value: () => AnonBcc): Self = {
+    def withToJSON(value: () => typingsSlinky.sendgrid.anon.Bcc): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
         ret

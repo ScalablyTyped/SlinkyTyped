@@ -1,6 +1,6 @@
 package typingsSlinky.asyncPolling.mod
 
-import typingsSlinky.asyncPolling.AnonOn
+import typingsSlinky.asyncPolling.anon.On
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +14,6 @@ object ^ extends js.Object {
       _
     ],
     delay: Double
-  ): AnonOn = js.native
+  ): On = js.native
 }
 

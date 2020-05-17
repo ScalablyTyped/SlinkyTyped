@@ -1,7 +1,7 @@
 package typingsSlinky.swaggerStats.mod
 
 import typingsSlinky.std.Record
-import typingsSlinky.swaggerStats.AnonBucketcurrent
+import typingsSlinky.swaggerStats.anon.Bucketcurrent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TimelineStats extends js.Object {
   var data: Record[String, TimelineStatsData] = js.native
-  var settings: AnonBucketcurrent = js.native
+  var settings: Bucketcurrent = js.native
 }
 
 object TimelineStats {
   @scala.inline
-  def apply(data: Record[String, TimelineStatsData], settings: AnonBucketcurrent): TimelineStats = {
+  def apply(data: Record[String, TimelineStatsData], settings: Bucketcurrent): TimelineStats = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], settings = settings.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimelineStats]
   }
@@ -31,7 +31,7 @@ object TimelineStats {
         ret
     }
     @scala.inline
-    def withSettings(value: AnonBucketcurrent): Self = {
+    def withSettings(value: Bucketcurrent): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("settings")(value.asInstanceOf[js.Any])
         ret

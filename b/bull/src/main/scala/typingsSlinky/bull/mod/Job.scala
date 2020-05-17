@@ -1,7 +1,7 @@
 package typingsSlinky.bull.mod
 
-import typingsSlinky.bull.AnonAttemptsMade
-import typingsSlinky.bull.AnonMessage
+import typingsSlinky.bull.anon.AttemptsMade
+import typingsSlinky.bull.anon.Message
 import typingsSlinky.bull.bullBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -111,8 +111,8 @@ trait Job[T] extends js.Object {
     * Moves a job to the `failed` queue. Pulls a job from 'waiting' to 'active'
     * and returns a tuple containing the next jobs data and id. If no job is in the `waiting` queue, returns null.
     */
-  def moveToFailed(errorInfo: AnonMessage): js.Promise[(js.Tuple2[_, JobId]) | Null] = js.native
-  def moveToFailed(errorInfo: AnonMessage, ignoreLock: Boolean): js.Promise[(js.Tuple2[_, JobId]) | Null] = js.native
+  def moveToFailed(errorInfo: Message): js.Promise[(js.Tuple2[_, JobId]) | Null] = js.native
+  def moveToFailed(errorInfo: Message, ignoreLock: Boolean): js.Promise[(js.Tuple2[_, JobId]) | Null] = js.native
   /**
     * Get progress on a job
     */
@@ -146,7 +146,7 @@ trait Job[T] extends js.Object {
   /**
     * Get job properties as Json Object
     */
-  def toJSON(): AnonAttemptsMade[T] = js.native
+  def toJSON(): AttemptsMade[T] = js.native
   /**
     * Update a specific job's data. Promise resolves when the job has been updated.
     */

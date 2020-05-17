@@ -2,7 +2,7 @@ package typingsSlinky.grommet.formFieldMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.grommet.AnonMessage
+import typingsSlinky.grommet.anon.Message
 import typingsSlinky.grommet.utilsMod.MarginType
 import typingsSlinky.grommet.utilsMod.PlaceHolderType
 import scala.scalajs.js
@@ -26,7 +26,7 @@ trait FormFieldProps extends js.Object {
   var placeholder: js.UndefOr[PlaceHolderType] = js.native
   var required: js.UndefOr[Boolean] = js.native
   var validate: js.UndefOr[
-    AnonMessage | (js.Function1[/* repeated */ js.Any, _]) | (js.Array[AnonMessage | (js.Function1[/* repeated */ _, _])])
+    Message | (js.Function1[/* repeated */ js.Any, _]) | (js.Array[Message | (js.Function1[/* repeated */ _, _])])
   ] = js.native
 }
 
@@ -236,7 +236,7 @@ object FormFieldProps {
     }
     @scala.inline
     def withValidate(
-      value: AnonMessage | (js.Function1[/* repeated */ js.Any, _]) | (js.Array[AnonMessage | (js.Function1[/* repeated */ _, _])])
+      value: Message | (js.Function1[/* repeated */ js.Any, _]) | (js.Array[Message | (js.Function1[/* repeated */ _, _])])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(value.asInstanceOf[js.Any])

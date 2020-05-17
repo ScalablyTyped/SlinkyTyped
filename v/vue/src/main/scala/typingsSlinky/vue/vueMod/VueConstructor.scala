@@ -3,8 +3,9 @@ package typingsSlinky.vue.vueMod
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.std.Record
-import typingsSlinky.vue.AnonStaticRenderFns
+import typingsSlinky.vue.anon.StaticRenderFns
 import typingsSlinky.vue.optionsMod.AsyncComponent
+import typingsSlinky.vue.optionsMod.Component
 import typingsSlinky.vue.optionsMod.ComponentOptions
 import typingsSlinky.vue.optionsMod.DefaultComputed
 import typingsSlinky.vue.optionsMod.DefaultData
@@ -25,7 +26,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait VueConstructor[V /* <: Vue */]
-  extends // ideally, the return type should just contain Props, not Record<keyof Props, any>. But TS requires to have Base constructors with the same return type.
+  extends Component[js.Any, js.Any, js.Any, js.Any]
+     with // ideally, the return type should just contain Props, not Record<keyof Props, any>. But TS requires to have Base constructors with the same return type.
 Instantiable0[
       CombinedVueInstance[V, js.Object, js.Object, js.Object, Record[/* keyof object */ String, js.Any]]
     ]
@@ -42,7 +44,7 @@ Instantiable0[
     ] {
   var config: VueConfiguration = js.native
   var version: String = js.native
-  def compile(template: String): AnonStaticRenderFns = js.native
+  def compile(template: String): StaticRenderFns = js.native
   def component(id: String): ExtendedVue[V, js.Object, js.Object, js.Object, js.Object] = js.native
   def component(
     id: String,

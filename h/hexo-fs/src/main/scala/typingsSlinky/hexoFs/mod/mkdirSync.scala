@@ -1,7 +1,7 @@
 package typingsSlinky.hexoFs.mod
 
-import typingsSlinky.node.MakeDirectoryOptionsrecur
-import typingsSlinky.node.MakeDirectoryOptionsrecurMode
+import typingsSlinky.node.anon.MakeDirectoryOptionsrecur
+import typingsSlinky.node.anon.MakeDirectoryOptionsrecurMode
 import typingsSlinky.node.fsMod.MakeDirectoryOptions
 import typingsSlinky.node.fsMod.PathLike
 import scala.scalajs.js

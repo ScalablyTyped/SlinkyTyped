@@ -13,19 +13,10 @@ trait Selection extends js.Object
 
 object Selection {
   @scala.inline
-  def Field(kind: String, name: Name): Selection = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Selection]
-  }
+  implicit def apply(value: Field): Selection = value.asInstanceOf[Selection]
   @scala.inline
-  def FragmentSpread(kind: String, name: Name): Selection = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Selection]
-  }
+  implicit def apply(value: FragmentSpread): Selection = value.asInstanceOf[Selection]
   @scala.inline
-  def InlineFragment(kind: String, selectionSet: SelectionSet): Selection = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], selectionSet = selectionSet.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Selection]
-  }
+  implicit def apply(value: InlineFragment): Selection = value.asInstanceOf[Selection]
 }
 

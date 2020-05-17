@@ -11,9 +11,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * Provides support for the built-in iOS dynamic animations
 			 */
-@JSGlobal("Titanium.UI.iOS.Animator")
 @js.native
-class Animator () extends Proxy {
+trait Animator extends Proxy {
   /**
   				 * Behaviors associated with this animator.
   				 */

@@ -1,6 +1,5 @@
 package typingsSlinky.pixiJs.PIXI
 
-import typingsSlinky.pixiJs.PIXI.AnimatedSprite.FrameObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,11 +37,8 @@ import scala.scalajs.js.annotation._
   * @extends PIXI.Sprite
   * @memberof PIXI
   */
-@JSGlobal("PIXI.AnimatedSprite")
 @js.native
-class AnimatedSprite_ protected () extends Sprite {
-  def this(textures: js.Array[FrameObject | Texture]) = this()
-  def this(textures: js.Array[FrameObject | Texture], autoUpdate: Boolean) = this()
+trait AnimatedSprite_ extends Sprite {
   /**
     * The speed that the AnimatedSprite will play at. Higher is faster, lower is slower.
     *

@@ -1,6 +1,6 @@
 package typingsSlinky.googleVisualization.google.visualization
 
-import typingsSlinky.googleVisualization.AnonBarLabelStyle
+import typingsSlinky.googleVisualization.anon.BarLabelStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait TimelineOptions extends js.Object {
   var enableInteractivity: js.UndefOr[Boolean] = js.native
   var forceIFrame: js.UndefOr[Boolean] = js.native
   var height: js.UndefOr[Double] = js.native
-  var timeline: js.UndefOr[AnonBarLabelStyle] = js.native
+  var timeline: js.UndefOr[BarLabelStyle] = js.native
   var width: js.UndefOr[Double] = js.native
 }
 
@@ -102,7 +102,7 @@ object TimelineOptions {
         ret
     }
     @scala.inline
-    def withTimeline(value: AnonBarLabelStyle): Self = {
+    def withTimeline(value: BarLabelStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("timeline")(value.asInstanceOf[js.Any])
         ret

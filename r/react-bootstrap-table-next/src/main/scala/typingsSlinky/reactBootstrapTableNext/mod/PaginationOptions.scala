@@ -1,12 +1,12 @@
 package typingsSlinky.reactBootstrapTableNext.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactBootstrapTableNext.AnonText
+import typingsSlinky.reactBootstrapTableNext.anon.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Partial<{  custom  :boolean,   page  :number,   sizePerPage  :number,   totalSize  :number,   pageStartIndex  :number,   paginationSize  :number,   showTotal  :boolean,   sizePerPageList  :std.Array<number> | std.Array<{  text  :string,   value  :number}>,   withFirstAndLast  :boolean,   alwaysShowAllBtns  :boolean,   firstPageText  :string,   prePageText  :string,   nextPageText  :string,   lastPageText  :string,   nextPageTitle  :string,   prePageTitle  :string,   firstPageTitle  :string,   lastPageTitle  :string,   hideSizePerPage  :boolean,   hidePageListOnlyOnePage  :boolean, pageButtonRenderer (options : react-bootstrap-table-next.react-bootstrap-table-next.PageButtonRendererOptions): react.react._Global_.JSX.Element, onPageChange (page : number, sizePerPage : number): void, onSizePerPageChange (page : number, sizePerPage : number): void, pageListRenderer (options : react-bootstrap-table-next.react-bootstrap-table-next.PageListRendererOptions): react.react._Global_.JSX.Element, sizePerPageRenderer (options : react-bootstrap-table-next.react-bootstrap-table-next.SizePerPageRendererOptions): react.react._Global_.JSX.Element, sizePerPageOptionRenderer (options : react-bootstrap-table-next.react-bootstrap-table-next.SizePerPageOptionRendererOptions): react.react._Global_.JSX.Element, paginationTotalRenderer (from : number, to : number, size : number): react.react._Global_.JSX.Element}> */
+/* Inlined std.Partial<{  custom  :boolean,   page  :number,   sizePerPage  :number,   totalSize  :number,   pageStartIndex  :number,   paginationSize  :number,   showTotal  :boolean,   sizePerPageList  :std.Array<number> | std.Array<{  text  :string,   value  :number}>,   withFirstAndLast  :boolean,   alwaysShowAllBtns  :boolean,   firstPageText  :string,   prePageText  :string,   nextPageText  :string,   lastPageText  :string,   nextPageTitle  :string,   prePageTitle  :string,   firstPageTitle  :string,   lastPageTitle  :string,   hideSizePerPage  :boolean,   hidePageListOnlyOnePage  :boolean, pageButtonRenderer (options : react-bootstrap-table-next.react-bootstrap-table-next.PageButtonRendererOptions): react.react.<global>.JSX.Element, onPageChange (page : number, sizePerPage : number): void, onSizePerPageChange (page : number, sizePerPage : number): void, pageListRenderer (options : react-bootstrap-table-next.react-bootstrap-table-next.PageListRendererOptions): react.react.<global>.JSX.Element, sizePerPageRenderer (options : react-bootstrap-table-next.react-bootstrap-table-next.SizePerPageRendererOptions): react.react.<global>.JSX.Element, sizePerPageOptionRenderer (options : react-bootstrap-table-next.react-bootstrap-table-next.SizePerPageOptionRendererOptions): react.react.<global>.JSX.Element, paginationTotalRenderer (from : number, to : number, size : number): react.react.<global>.JSX.Element}> */
 @js.native
 trait PaginationOptions extends js.Object {
   var alwaysShowAllBtns: js.UndefOr[Boolean] = js.native
@@ -33,7 +33,7 @@ trait PaginationOptions extends js.Object {
   var prePageTitle: js.UndefOr[String] = js.native
   var showTotal: js.UndefOr[Boolean] = js.native
   var sizePerPage: js.UndefOr[Double] = js.native
-  var sizePerPageList: js.UndefOr[js.Array[AnonText | Double]] = js.native
+  var sizePerPageList: js.UndefOr[js.Array[Double | Text]] = js.native
   var sizePerPageOptionRenderer: js.UndefOr[js.Function1[/* options */ SizePerPageOptionRendererOptions, ReactElement]] = js.native
   var sizePerPageRenderer: js.UndefOr[js.Function1[/* options */ SizePerPageRendererOptions, ReactElement]] = js.native
   var totalSize: js.UndefOr[Double] = js.native
@@ -317,7 +317,7 @@ object PaginationOptions {
         ret
     }
     @scala.inline
-    def withSizePerPageList(value: js.Array[AnonText | Double]): Self = {
+    def withSizePerPageList(value: js.Array[Double | Text]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sizePerPageList")(value.asInstanceOf[js.Any])
         ret

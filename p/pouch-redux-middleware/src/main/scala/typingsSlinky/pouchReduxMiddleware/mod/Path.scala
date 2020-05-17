@@ -1,6 +1,6 @@
 package typingsSlinky.pouchReduxMiddleware.mod
 
-import typingsSlinky.pouchReduxMiddleware.AnonBatchInsert
+import typingsSlinky.pouchReduxMiddleware.anon.BatchInsert
 import typingsSlinky.pouchdbCore.PouchDB.Database
 import typingsSlinky.redux.mod.Dispatch
 import scala.scalajs.js
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Path[T] extends js.Object {
-  var actions: AnonBatchInsert[T] = js.native
+  var actions: BatchInsert[T] = js.native
   var db: Database[T] = js.native
   var docs: js.UndefOr[js.Any] = js.native
   var handleResponse: js.UndefOr[
@@ -33,7 +33,7 @@ trait Path[T] extends js.Object {
 
 object Path {
   @scala.inline
-  def apply[T](actions: AnonBatchInsert[T], db: Database[T], path: String): Path[T] = {
+  def apply[T](actions: BatchInsert[T], db: Database[T], path: String): Path[T] = {
     val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], db = db.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
     __obj.asInstanceOf[Path[T]]
   }
@@ -44,7 +44,7 @@ object Path {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withActions(value: AnonBatchInsert[T]): Self[T] = {
+    def withActions(value: BatchInsert[T]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.pixiJs.PIXI
 
-import typingsSlinky.pixiJs.AnonLoadElement
+import typingsSlinky.pixiJs.anon.LoadElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait ILoaderOptions extends js.Object {
   var crossOrigin: js.UndefOr[Boolean | String] = js.native
   var loadType: js.UndefOr[Double] = js.native
-  var metadata: js.UndefOr[AnonLoadElement] = js.native
+  var metadata: js.UndefOr[LoadElement] = js.native
   var xhrType: js.UndefOr[String] = js.native
 }
 
@@ -50,7 +50,7 @@ object ILoaderOptions {
         ret
     }
     @scala.inline
-    def withMetadata(value: AnonLoadElement): Self = {
+    def withMetadata(value: LoadElement): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
         ret

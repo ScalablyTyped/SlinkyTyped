@@ -1,6 +1,6 @@
 package typingsSlinky.epilogue.mod
 
-import typingsSlinky.epilogue.AnonModel
+import typingsSlinky.epilogue.anon.Model
 import typingsSlinky.express.mod.Express
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
@@ -17,7 +17,7 @@ trait BaseContollerOptions extends js.Object {
   @JSName("app")
   var app_Original: Express = js.native
   var endpoint: String = js.native
-  var include: js.Array[AnonModel | String] = js.native
+  var include: js.Array[Model | String] = js.native
   var model: js.Any = js.native
   var resource: Resource_ = js.native
   /**

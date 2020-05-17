@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
 trait ConstructorTypeNode
   extends FunctionOrConstructorTypeNodeBase
      with FunctionOrConstructorTypeNode
-     with SignatureDeclaration
-     with _HasJSDoc {
+     with HasJSDoc
+     with SignatureDeclaration {
   @JSName("kind")
   var kind_ConstructorTypeNode: ConstructorType = js.native
 }

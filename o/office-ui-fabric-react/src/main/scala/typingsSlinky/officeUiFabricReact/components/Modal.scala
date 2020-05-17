@@ -31,7 +31,7 @@ object Modal {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, LegacyRef[js.Any]] {
     @scala.inline
     def allowTouchBodyScroll(value: Boolean): this.type = set("allowTouchBodyScroll", value.asInstanceOf[js.Any])
     @scala.inline

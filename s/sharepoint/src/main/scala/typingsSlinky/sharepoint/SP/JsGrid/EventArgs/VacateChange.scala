@@ -6,10 +6,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("SP.JsGrid.EventArgs.VacateChange")
 @js.native
-class VacateChange protected () extends IEventArgs {
-  def this(changeKey: IChangeKey) = this()
+trait VacateChange extends IEventArgs {
   var changeKey: IChangeKey = js.native
+}
+
+object VacateChange {
+  @scala.inline
+  def apply(changeKey: IChangeKey): VacateChange = {
+    val __obj = js.Dynamic.literal(changeKey = changeKey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VacateChange]
+  }
+  @scala.inline
+  implicit class VacateChangeOps[Self <: VacateChange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChangeKey(value: IChangeKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changeKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

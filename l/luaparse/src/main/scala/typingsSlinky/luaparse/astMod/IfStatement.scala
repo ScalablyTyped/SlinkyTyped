@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait IfStatement
-  extends _Statement
+  extends Statement
      with Base[typingsSlinky.luaparse.luaparseStrings.IfStatement] {
   var clauses: js.Array[IfClause | ElseifClause | ElseClause] = js.native
 }

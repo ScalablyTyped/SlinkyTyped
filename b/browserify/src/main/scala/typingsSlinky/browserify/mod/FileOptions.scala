@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * Options pertaining to an individual file.
   */
 @js.native
-trait FileOptions extends js.Object {
+trait FileOptions extends InputFile {
   // Basedir to use to resolve this file's path.
   var basedir: js.UndefOr[String] = js.native
   // If true, this is considered an entry point to your app.

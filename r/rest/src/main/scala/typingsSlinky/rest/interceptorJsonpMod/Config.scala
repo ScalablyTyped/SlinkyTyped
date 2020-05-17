@@ -1,13 +1,13 @@
 package typingsSlinky.rest.interceptorJsonpMod
 
-import typingsSlinky.rest.AnonName
+import typingsSlinky.rest.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Config extends js.Object {
-  var callback: js.UndefOr[AnonName] = js.native
+  var callback: js.UndefOr[Name] = js.native
 }
 
 object Config {
@@ -23,7 +23,7 @@ object Config {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCallback(value: AnonName): Self = {
+    def withCallback(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(value.asInstanceOf[js.Any])
         ret

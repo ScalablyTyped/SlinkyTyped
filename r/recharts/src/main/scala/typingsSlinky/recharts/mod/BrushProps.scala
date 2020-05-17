@@ -2,7 +2,7 @@ package typingsSlinky.recharts.mod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.recharts.PartialMargin
+import typingsSlinky.recharts.anon.PartialMargin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

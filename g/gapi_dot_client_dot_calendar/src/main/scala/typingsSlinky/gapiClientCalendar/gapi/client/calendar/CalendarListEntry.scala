@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientCalendar.gapi.client.calendar
 
-import typingsSlinky.gapiClientCalendar.AnonNotifications
+import typingsSlinky.gapiClientCalendar.anon.Notifications
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -51,7 +51,7 @@ trait CalendarListEntry extends js.Object {
   /** Geographic location of the calendar as free-form text. Optional. Read-only. */
   var location: js.UndefOr[String] = js.native
   /** The notifications that the authenticated user is receiving for this calendar. */
-  var notificationSettings: js.UndefOr[AnonNotifications] = js.native
+  var notificationSettings: js.UndefOr[Notifications] = js.native
   /** Whether the calendar is the primary calendar of the authenticated user. Read-only. Optional. The default is False. */
   var primary: js.UndefOr[Boolean] = js.native
   /** Whether the calendar content shows up in the calendar UI. Optional. The default is False. */
@@ -233,7 +233,7 @@ object CalendarListEntry {
         ret
     }
     @scala.inline
-    def withNotificationSettings(value: AnonNotifications): Self = {
+    def withNotificationSettings(value: Notifications): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notificationSettings")(value.asInstanceOf[js.Any])
         ret

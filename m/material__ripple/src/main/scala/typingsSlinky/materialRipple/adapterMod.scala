@@ -2,6 +2,7 @@ package typingsSlinky.materialRipple
 
 import org.scalajs.dom.raw.ClientRect
 import org.scalajs.dom.raw.EventTarget
+import typingsSlinky.materialRipple.anon.X
 import typingsSlinky.std.EventListener
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +20,7 @@ object adapterMod extends js.Object {
     def deregisterDocumentInteractionHandler(evtType: String, handler: EventListener): Unit = js.native
     def deregisterInteractionHandler(evtType: String, handler: EventListener): Unit = js.native
     def deregisterResizeHandler(handler: EventListener): Unit = js.native
-    def getWindowPageOffset(): AnonX = js.native
+    def getWindowPageOffset(): X = js.native
     def isSurfaceActive(): Boolean = js.native
     def isSurfaceDisabled(): Boolean = js.native
     def isUnbounded(): Boolean = js.native

@@ -1,6 +1,5 @@
 package typingsSlinky.pixiJs.PIXI
 
-import typingsSlinky.pixiJs.AnonBaseTexture
 import typingsSlinky.pixiJs.pixiJsStrings.added
 import typingsSlinky.pixiJs.pixiJsStrings.removed
 import scala.scalajs.js
@@ -21,9 +20,8 @@ import scala.scalajs.js.annotation._
   * @extends PIXI.DisplayObject
   * @memberof PIXI
   */
-@JSGlobal("PIXI.Container")
 @js.native
-class Container () extends DisplayObject {
+trait Container extends DisplayObject {
   /**
     * The array of children of this container.
     *
@@ -107,7 +105,7 @@ class Container () extends DisplayObject {
     * @return {PIXI.DisplayObject} The child that was added.
     */
   def addChildAt[T /* <: DisplayObject */](child: T, index: Double): T = js.native
-  def destroy(options: AnonBaseTexture): Unit = js.native
+  def destroy(options: typingsSlinky.pixiJs.anon.BaseTexture): Unit = js.native
   /**
     * Returns the child at the specified index
     *

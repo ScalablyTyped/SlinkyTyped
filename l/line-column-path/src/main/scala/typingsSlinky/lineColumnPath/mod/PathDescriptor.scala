@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PathDescriptor extends js.Object {
+trait PathDescriptor extends PathLike {
   val column: js.UndefOr[Double] = js.native
   val file: String = js.native
   val line: js.UndefOr[Double] = js.native

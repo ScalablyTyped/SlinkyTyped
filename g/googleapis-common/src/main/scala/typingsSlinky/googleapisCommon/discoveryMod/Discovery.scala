@@ -1,6 +1,6 @@
 package typingsSlinky.googleapisCommon.discoveryMod
 
-import typingsSlinky.googleapisCommon.AnonUrl
+import typingsSlinky.googleapisCommon.anon.Url
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,7 +34,7 @@ class Discovery protected () extends js.Object {
     * @returns A promise that resolves with a function that creates the endpoint
     */
   def discoverAPI(apiDiscoveryUrl: String): js.Promise[EndpointCreator] = js.native
-  def discoverAPI(apiDiscoveryUrl: AnonUrl): js.Promise[EndpointCreator] = js.native
+  def discoverAPI(apiDiscoveryUrl: Url): js.Promise[EndpointCreator] = js.native
   /**
     * Generate all APIs and return as in-memory object.
     * @param discoveryUrl

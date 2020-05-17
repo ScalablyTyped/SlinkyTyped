@@ -1,7 +1,7 @@
 package typingsSlinky.inert.mod.hapiAugmentingMod
 
 import typingsSlinky.hapi.mod.Request
-import typingsSlinky.inert.AnonRelativeTo
+import typingsSlinky.inert.anon.RelativeTo
 import typingsSlinky.inert.mod.DirectoryHandlerRouteObject
 import typingsSlinky.inert.mod.FileHandlerRouteObject
 import typingsSlinky.inert.mod.RequestHandler
@@ -34,7 +34,7 @@ trait HandlerDecorations extends js.Object {
     * @see {@link https://github.com/hapijs/inert#the-file-handler}
     */
   var file: js.UndefOr[String | RequestHandler[String] | FileHandlerRouteObject] = js.native
-  var files: js.UndefOr[AnonRelativeTo] = js.native
+  var files: js.UndefOr[RelativeTo] = js.native
 }
 
 object HandlerDecorations {
@@ -80,7 +80,7 @@ object HandlerDecorations {
         ret
     }
     @scala.inline
-    def withFiles(value: AnonRelativeTo): Self = {
+    def withFiles(value: RelativeTo): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
         ret

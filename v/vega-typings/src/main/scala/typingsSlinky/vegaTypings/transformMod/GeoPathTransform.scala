@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait GeoPathTransform extends _Transforms {
+trait GeoPathTransform extends Transforms {
   var as: js.UndefOr[String | SignalRef] = js.native
   var field: js.UndefOr[FieldRef] = js.native
   var pointRadius: js.UndefOr[Double | SignalRef | ExprRef] = js.native

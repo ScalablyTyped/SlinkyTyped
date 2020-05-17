@@ -1,6 +1,7 @@
 package typingsSlinky.slimerjs
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.slimerjs.anon.Format
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -125,7 +126,7 @@ trait WebPage extends js.Object {
   def reload(): Unit = js.native
   // render(filename: string): Promise<void>;
   def render(filename: String): Unit = js.native
-  def render(filename: String, options: AnonFormat): js.Promise[Unit] = js.native
+  def render(filename: String, options: Format): js.Promise[Unit] = js.native
   def renderBase64(format: String): String = js.native
   @JSName("renderBase64")
   def renderBase64_Promise(`type`: String): js.Promise[String] = js.native

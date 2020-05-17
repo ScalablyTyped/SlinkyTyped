@@ -226,12 +226,7 @@ object mod extends js.Object {
   def utcquarter(date: Double): Double = js.native
   def utcquarter(date: js.Date): Double = js.native
   def visitArray(
-    array: js.UndefOr[scala.Nothing],
-    filter: js.Function1[/* any */ js.Any, js.UndefOr[Boolean]],
-    visitor: js.Function3[/* v */ js.Any, /* i */ Double, /* arr */ js.Array[_], Unit]
-  ): Unit = js.native
-  def visitArray(
-    array: js.Array[_],
+    array: js.UndefOr[js.Array[_]],
     filter: js.Function1[/* any */ js.Any, js.UndefOr[Boolean]],
     visitor: js.Function3[/* v */ js.Any, /* i */ Double, /* arr */ js.Array[_], Unit]
   ): Unit = js.native

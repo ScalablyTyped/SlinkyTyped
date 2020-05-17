@@ -1,10 +1,10 @@
 package typingsSlinky.grommet.textInputMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.grommet.AnonEnterSelect
-import typingsSlinky.grommet.AnonLabelValue
-import typingsSlinky.grommet.AnonLeft
-import typingsSlinky.grommet.AnonSuggestion
+import typingsSlinky.grommet.anon.EnterSelect
+import typingsSlinky.grommet.anon.LabelValue
+import typingsSlinky.grommet.anon.Left
+import typingsSlinky.grommet.anon.Suggestion
 import typingsSlinky.grommet.dropMod.DropProps
 import typingsSlinky.grommet.grommetStrings.large
 import typingsSlinky.grommet.grommetStrings.medium
@@ -18,23 +18,23 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait TextInputProps extends js.Object {
-  var dropAlign: js.UndefOr[AnonLeft] = js.native
+  var dropAlign: js.UndefOr[Left] = js.native
   var dropHeight: js.UndefOr[xsmall | small | medium | large | xlarge | String] = js.native
   var dropProps: js.UndefOr[DropProps] = js.native
   var dropTarget: js.UndefOr[js.Object] = js.native
   var focusIndicator: js.UndefOr[Boolean] = js.native
   var icon: js.UndefOr[ReactElement] = js.native
   var id: js.UndefOr[String] = js.native
-  var messages: js.UndefOr[AnonEnterSelect] = js.native
+  var messages: js.UndefOr[EnterSelect] = js.native
   var name: js.UndefOr[String] = js.native
-  var onSelect: js.UndefOr[js.Function1[/* x */ AnonSuggestion, Unit]] = js.native
+  var onSelect: js.UndefOr[js.Function1[/* x */ Suggestion, Unit]] = js.native
   var onSuggestionsClose: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
   var onSuggestionsOpen: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
   var placeholder: js.UndefOr[PlaceHolderType] = js.native
   var plain: js.UndefOr[Boolean] = js.native
   var reverse: js.UndefOr[Boolean] = js.native
   var size: js.UndefOr[small | medium | large | xlarge | String] = js.native
-  var suggestions: js.UndefOr[js.Array[AnonLabelValue | String]] = js.native
+  var suggestions: js.UndefOr[js.Array[LabelValue | String]] = js.native
   var value: js.UndefOr[String | Double] = js.native
 }
 
@@ -51,7 +51,7 @@ object TextInputProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDropAlign(value: AnonLeft): Self = {
+    def withDropAlign(value: Left): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropAlign")(value.asInstanceOf[js.Any])
         ret
@@ -135,7 +135,7 @@ object TextInputProps {
         ret
     }
     @scala.inline
-    def withMessages(value: AnonEnterSelect): Self = {
+    def withMessages(value: EnterSelect): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
         ret
@@ -159,7 +159,7 @@ object TextInputProps {
         ret
     }
     @scala.inline
-    def withOnSelect(value: /* x */ AnonSuggestion => Unit): Self = {
+    def withOnSelect(value: /* x */ Suggestion => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
         ret
@@ -249,7 +249,7 @@ object TextInputProps {
         ret
     }
     @scala.inline
-    def withSuggestions(value: js.Array[AnonLabelValue | String]): Self = {
+    def withSuggestions(value: js.Array[LabelValue | String]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("suggestions")(value.asInstanceOf[js.Any])
         ret

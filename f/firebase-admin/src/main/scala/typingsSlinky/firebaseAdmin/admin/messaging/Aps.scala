@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Aps
-  extends /* key */ StringDictionary[js.Any] {
+  extends /* customData */ StringDictionary[js.Any] {
   /**
     * Alert to be included in the message. This may be a string or an object of
     * type `admin.messaging.ApsAlert`.

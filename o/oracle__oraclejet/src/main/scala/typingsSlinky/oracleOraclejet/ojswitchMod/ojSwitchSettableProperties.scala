@@ -1,8 +1,8 @@
 package typingsSlinky.oracleOraclejet.ojswitchMod
 
-import typingsSlinky.oracleOraclejet.AnonConverterHint
-import typingsSlinky.oracleOraclejet.AnonDefinition
-import typingsSlinky.oracleOraclejet.AnonInstruction
+import typingsSlinky.oracleOraclejet.anon.ConverterHint
+import typingsSlinky.oracleOraclejet.anon.Definition
+import typingsSlinky.oracleOraclejet.anon.Instruction
 import typingsSlinky.oracleOraclejet.ojeditablevalueMod.editableValueSettableProperties
 import typingsSlinky.oracleOraclejet.ojmessagingMod.^
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.invalidHidden
@@ -22,9 +22,9 @@ object ojSwitchSettableProperties {
   @scala.inline
   def apply(
     disabled: Boolean,
-    displayOptions: AnonConverterHint,
-    help: AnonInstruction,
-    helpHints: AnonDefinition,
+    displayOptions: ConverterHint,
+    help: Instruction,
+    helpHints: Definition,
     labelHint: String,
     messagesCustom: js.Array[^],
     readonly: Boolean,

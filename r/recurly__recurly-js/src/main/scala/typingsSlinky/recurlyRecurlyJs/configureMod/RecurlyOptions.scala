@@ -1,6 +1,6 @@
 package typingsSlinky.recurlyRecurlyJs.configureMod
 
-import typingsSlinky.recurlyRecurlyJs.AnonBraintree
+import typingsSlinky.recurlyRecurlyJs.anon.Braintree
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait RecurlyOptions extends js.Object {
   var cors: js.UndefOr[Boolean] = js.native
   var currency: js.UndefOr[String] = js.native
-  var fraud: js.UndefOr[AnonBraintree] = js.native
+  var fraud: js.UndefOr[Braintree] = js.native
   var publicKey: String = js.native
   var required: js.UndefOr[js.Array[String]] = js.native
   var timeout: js.UndefOr[Double] = js.native
@@ -58,7 +58,7 @@ object RecurlyOptions {
         ret
     }
     @scala.inline
-    def withFraud(value: AnonBraintree): Self = {
+    def withFraud(value: Braintree): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fraud")(value.asInstanceOf[js.Any])
         ret

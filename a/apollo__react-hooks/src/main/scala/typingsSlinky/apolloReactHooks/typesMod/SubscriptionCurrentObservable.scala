@@ -1,6 +1,6 @@
 package typingsSlinky.apolloReactHooks.typesMod
 
-import typingsSlinky.zenObservable.mod._Global_.ZenObservable.Subscription
+import typingsSlinky.zenObservable.mod.global.ZenObservable.Subscription
 import typingsSlinky.zenObservableTs.zenObservableMod.Observable
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,6 +1,6 @@
 package typingsSlinky.appleMusicApi.AppleMusicApi
 
-import typingsSlinky.appleMusicApi.AnonArtistName
+import typingsSlinky.appleMusicApi.anon.ArtistName
 import typingsSlinky.appleMusicApi.appleMusicApiStrings.albums
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Album extends Resource {
   // https://developer.apple.com/documentation/applemusicapi/album/attributes
-  var attributes: js.UndefOr[AnonArtistName] = js.native
+  var attributes: js.UndefOr[ArtistName] = js.native
   var relationships: js.UndefOr[AlbumRelationships] = js.native
   @JSName("type")
   var type_Album: albums = js.native
@@ -36,7 +36,7 @@ object Album {
         ret
     }
     @scala.inline
-    def withAttributes(value: AnonArtistName): Self = {
+    def withAttributes(value: ArtistName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
         ret

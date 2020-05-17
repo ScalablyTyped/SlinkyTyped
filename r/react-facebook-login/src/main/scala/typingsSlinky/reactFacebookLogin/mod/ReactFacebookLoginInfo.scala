@@ -1,6 +1,6 @@
 package typingsSlinky.reactFacebookLogin.mod
 
-import typingsSlinky.reactFacebookLogin.AnonData
+import typingsSlinky.reactFacebookLogin.anon.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait ReactFacebookLoginInfo extends js.Object {
   var email: js.UndefOr[String] = js.native
   var id: String = js.native
   var name: js.UndefOr[String] = js.native
-  var picture: js.UndefOr[AnonData] = js.native
+  var picture: js.UndefOr[Data] = js.native
 }
 
 object ReactFacebookLoginInfo {
@@ -63,7 +63,7 @@ object ReactFacebookLoginInfo {
         ret
     }
     @scala.inline
-    def withPicture(value: AnonData): Self = {
+    def withPicture(value: Data): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("picture")(value.asInstanceOf[js.Any])
         ret

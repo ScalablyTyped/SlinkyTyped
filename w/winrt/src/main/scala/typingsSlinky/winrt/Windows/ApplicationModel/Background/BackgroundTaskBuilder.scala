@@ -4,7 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.ApplicationModel.Background.BackgroundTaskBuilder")
 @js.native
-class BackgroundTaskBuilder () extends IBackgroundTaskBuilder
+trait BackgroundTaskBuilder extends IBackgroundTaskBuilder
+
+object BackgroundTaskBuilder {
+  @scala.inline
+  def apply(
+    addCondition: IBackgroundCondition => Unit,
+    name: String,
+    register: () => BackgroundTaskRegistration,
+    setTrigger: IBackgroundTrigger => Unit,
+    taskEntryPoint: String
+  ): BackgroundTaskBuilder = {
+    val __obj = js.Dynamic.literal(addCondition = js.Any.fromFunction1(addCondition), name = name.asInstanceOf[js.Any], register = js.Any.fromFunction0(register), setTrigger = js.Any.fromFunction1(setTrigger), taskEntryPoint = taskEntryPoint.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BackgroundTaskBuilder]
+  }
+}
 

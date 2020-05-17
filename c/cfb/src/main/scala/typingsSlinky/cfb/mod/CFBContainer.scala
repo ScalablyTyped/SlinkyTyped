@@ -1,6 +1,6 @@
 package typingsSlinky.cfb.mod
 
-import typingsSlinky.cfb.AnonHeader
+import typingsSlinky.cfb.anon.Header
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait CFBContainer extends js.Object {
   /* List of streams and storages */
   var FullPaths: js.Array[String] = js.native
   /* Raw Content, in chunks (Buffer when available, Array of bytes otherwise) */
-  var raw: js.UndefOr[AnonHeader] = js.native
+  var raw: js.UndefOr[Header] = js.native
 }
 
 object CFBContainer {
@@ -40,7 +40,7 @@ object CFBContainer {
         ret
     }
     @scala.inline
-    def withRaw(value: AnonHeader): Self = {
+    def withRaw(value: Header): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(value.asInstanceOf[js.Any])
         ret

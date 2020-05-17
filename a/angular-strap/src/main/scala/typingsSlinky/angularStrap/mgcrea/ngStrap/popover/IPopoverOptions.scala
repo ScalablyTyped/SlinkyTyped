@@ -1,8 +1,8 @@
 package typingsSlinky.angularStrap.mgcrea.ngStrap.popover
 
 import typingsSlinky.angular.mod.IAugmentedJQuery
-import typingsSlinky.angularStrap.AnonHide
-import typingsSlinky.angularStrap.AnonPadding
+import typingsSlinky.angularStrap.anon.Hide
+import typingsSlinky.angularStrap.anon.Padding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait IPopoverOptions extends js.Object {
   var container: js.UndefOr[String | Boolean] = js.native
   var content: js.UndefOr[String] = js.native
   var contentTemplate: js.UndefOr[String] = js.native
-  var delay: js.UndefOr[Double | AnonHide] = js.native
+  var delay: js.UndefOr[Double | Hide] = js.native
   var html: js.UndefOr[Boolean] = js.native
   var id: js.UndefOr[String] = js.native
   var onBeforeHide: js.UndefOr[js.Function1[/* popover */ IPopover, Unit]] = js.native
@@ -27,7 +27,7 @@ trait IPopoverOptions extends js.Object {
   var templateUrl: js.UndefOr[String] = js.native
   var title: js.UndefOr[String] = js.native
   var trigger: js.UndefOr[String] = js.native
-  var viewport: js.UndefOr[String | AnonPadding] = js.native
+  var viewport: js.UndefOr[String | Padding] = js.native
 }
 
 object IPopoverOptions {
@@ -103,7 +103,7 @@ object IPopoverOptions {
         ret
     }
     @scala.inline
-    def withDelay(value: Double | AnonHide): Self = {
+    def withDelay(value: Double | Hide): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
         ret
@@ -259,7 +259,7 @@ object IPopoverOptions {
         ret
     }
     @scala.inline
-    def withViewport(value: String | AnonPadding): Self = {
+    def withViewport(value: String | Padding): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("viewport")(value.asInstanceOf[js.Any])
         ret

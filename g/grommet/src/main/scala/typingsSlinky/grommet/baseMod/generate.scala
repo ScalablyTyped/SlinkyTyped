@@ -1,6 +1,6 @@
 package typingsSlinky.grommet.baseMod
 
-import typingsSlinky.grommet.DeepReadonlyThemeType
+import typingsSlinky.grommet.anon.DeepReadonlyThemeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

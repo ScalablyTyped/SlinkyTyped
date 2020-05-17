@@ -7,20 +7,6 @@ import scala.scalajs.js.annotation._
 package object EChartOption {
   type Calendar = typingsSlinky.echarts.echarts.EChartOption.Calendar_
   /**
-    * Color type for itemStyle / areaStyle etc.
-    * [Color](https://echarts.apache.org/zh/option.html#series-line.areaStyle)
-    * + Linear gradient. First four parameters are x0, y0, x2, and y2, each ranged from 0 to 1, standing for percentage in the bounding box. If global is `true`, then the first four parameters are in absolute pixel positions.
-    * + Radial gradient. First three parameters are x and y positions of center, and radius, similar to linear gradient.
-    * + Fill with texture
-    */
-  /* Rewritten from type alias, can be one of: 
-    - java.lang.String
-    - typingsSlinky.echarts.AnonType
-    - typingsSlinky.echarts.AnonX
-    - typingsSlinky.echarts.AnonImage
-  */
-  type Color = typingsSlinky.echarts.echarts.EChartOption._Color | java.lang.String
-  /**
     * Data zoom component of inside type.
     * Refer to dataZoom for more information.
     * The inside means it's inside the coordinates.
@@ -41,7 +27,6 @@ package object EChartOption {
     * @see https://echarts.apache.org/en/tutorial.html#Rich%20Text
     */
   type RichStyle = org.scalablytyped.runtime.StringDictionary[typingsSlinky.echarts.echarts.EChartOption.TextStyle]
-  type Series = typingsSlinky.echarts.echarts.EChartOption.SeriesLine | typingsSlinky.echarts.echarts.EChartOption.SeriesBar | typingsSlinky.echarts.echarts.EChartOption.SeriesPie | typingsSlinky.echarts.echarts.EChartOption.SeriesScatter | typingsSlinky.echarts.echarts.EChartOption.SeriesEffectScatter | typingsSlinky.echarts.echarts.EChartOption.SeriesRadar | typingsSlinky.echarts.echarts.EChartOption.SeriesTree | typingsSlinky.echarts.echarts.EChartOption.SeriesTreemap | typingsSlinky.echarts.echarts.EChartOption.SeriesSunburst | typingsSlinky.echarts.echarts.EChartOption.SeriesBoxplot | typingsSlinky.echarts.echarts.EChartOption.SeriesCandlestick | typingsSlinky.echarts.echarts.EChartOption.SeriesHeatmap | typingsSlinky.echarts.echarts.EChartOption.SeriesMap | typingsSlinky.echarts.echarts.EChartOption.SeriesParallel | typingsSlinky.echarts.echarts.EChartOption.SeriesLines | typingsSlinky.echarts.echarts.EChartOption.SeriesGraph | typingsSlinky.echarts.echarts.EChartOption.SeriesSankey | typingsSlinky.echarts.echarts.EChartOption.SeriesFunnel | typingsSlinky.echarts.echarts.EChartOption.SeriesGauge | typingsSlinky.echarts.echarts.EChartOption.SeriesPictorialBar | typingsSlinky.echarts.echarts.EChartOption.SeriesThemeRiver | typingsSlinky.echarts.echarts.EChartOption.SeriesCustom
   type SeriesBar = typingsSlinky.echarts.echarts.EChartOption.SeriesBar_
   type SeriesBoxplot = typingsSlinky.echarts.echarts.EChartOption.SeriesBoxplot_
   type SeriesCandlestick = typingsSlinky.echarts.echarts.EChartOption.SeriesCandlestick_

@@ -1,11 +1,11 @@
 package typingsSlinky.htmlPdf.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.htmlPdf.AnonBottom
-import typingsSlinky.htmlPdf.AnonContents
-import typingsSlinky.htmlPdf.AnonDetached
-import typingsSlinky.htmlPdf.AnonDomain
-import typingsSlinky.htmlPdf.AnonHeight
+import typingsSlinky.htmlPdf.anon.Bottom
+import typingsSlinky.htmlPdf.anon.Contents
+import typingsSlinky.htmlPdf.anon.Detached
+import typingsSlinky.htmlPdf.anon.Domain
+import typingsSlinky.htmlPdf.anon.Height
 import typingsSlinky.htmlPdf.htmlPdfStrings.A3
 import typingsSlinky.htmlPdf.htmlPdfStrings.A4
 import typingsSlinky.htmlPdf.htmlPdfStrings.A5
@@ -27,18 +27,18 @@ trait CreateOptions extends js.Object {
   // Rendering options
   var base: js.UndefOr[String] = js.native
   // Page options
-  var border: js.UndefOr[String | AnonBottom] = js.native
+  var border: js.UndefOr[String | Bottom] = js.native
   // To run Node application as Windows service
-  var childProcessOptions: js.UndefOr[AnonDetached] = js.native
+  var childProcessOptions: js.UndefOr[Detached] = js.native
   // Export options
   var directory: js.UndefOr[String] = js.native
-  var footer: js.UndefOr[AnonHeight] = js.native
+  var footer: js.UndefOr[Height] = js.native
   var format: js.UndefOr[A3 | A4 | A5 | Legal | Letter | Tabloid] = js.native
-  var header: js.UndefOr[AnonContents] = js.native
+  var header: js.UndefOr[Contents] = js.native
   // Papersize Options: http://phantomjs.org/api/webpage/property/paper-size.html
   var height: js.UndefOr[String] = js.native
   // HTTP Cookies that are used for requests
-  var httpCookies: js.UndefOr[js.Array[AnonDomain]] = js.native
+  var httpCookies: js.UndefOr[js.Array[Domain]] = js.native
   // HTTP Headers that are used for requests
   var httpHeaders: js.UndefOr[StringDictionary[String]] = js.native
   var orientation: js.UndefOr[portrait | landscape] = js.native
@@ -83,7 +83,7 @@ object CreateOptions {
         ret
     }
     @scala.inline
-    def withBorder(value: String | AnonBottom): Self = {
+    def withBorder(value: String | Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
         ret
@@ -95,7 +95,7 @@ object CreateOptions {
         ret
     }
     @scala.inline
-    def withChildProcessOptions(value: AnonDetached): Self = {
+    def withChildProcessOptions(value: Detached): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("childProcessOptions")(value.asInstanceOf[js.Any])
         ret
@@ -119,7 +119,7 @@ object CreateOptions {
         ret
     }
     @scala.inline
-    def withFooter(value: AnonHeight): Self = {
+    def withFooter(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("footer")(value.asInstanceOf[js.Any])
         ret
@@ -143,7 +143,7 @@ object CreateOptions {
         ret
     }
     @scala.inline
-    def withHeader(value: AnonContents): Self = {
+    def withHeader(value: Contents): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
         ret
@@ -167,7 +167,7 @@ object CreateOptions {
         ret
     }
     @scala.inline
-    def withHttpCookies(value: js.Array[AnonDomain]): Self = {
+    def withHttpCookies(value: js.Array[Domain]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("httpCookies")(value.asInstanceOf[js.Any])
         ret

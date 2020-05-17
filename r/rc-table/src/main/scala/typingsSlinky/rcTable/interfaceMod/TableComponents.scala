@@ -2,16 +2,16 @@ package typingsSlinky.rcTable.interfaceMod
 
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
-import typingsSlinky.rcTable.AnonCell
-import typingsSlinky.rcTable.AnonOnScroll
+import typingsSlinky.rcTable.anon.Cell
+import typingsSlinky.rcTable.anon.OnScroll
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait TableComponents[RecordType] extends js.Object {
-  var body: js.UndefOr[CustomizeScrollBody[RecordType] | AnonCell] = js.native
-  var header: js.UndefOr[AnonCell] = js.native
+  var body: js.UndefOr[CustomizeScrollBody[RecordType] | Cell] = js.native
+  var header: js.UndefOr[Cell] = js.native
   var table: js.UndefOr[CustomizeComponent] = js.native
 }
 
@@ -28,13 +28,13 @@ object TableComponents {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[RecordType] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[RecordType] with Other]
     @scala.inline
-    def withBodyFunction2(value: (/* data */ js.Array[RecordType], /* info */ AnonOnScroll) => TagMod[Any]): Self[RecordType] = {
+    def withBodyFunction2(value: (/* data */ js.Array[RecordType], /* info */ OnScroll) => TagMod[Any]): Self[RecordType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("body")(js.Any.fromFunction2(value))
         ret
     }
     @scala.inline
-    def withBody(value: CustomizeScrollBody[RecordType] | AnonCell): Self[RecordType] = {
+    def withBody(value: CustomizeScrollBody[RecordType] | Cell): Self[RecordType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
         ret
@@ -46,7 +46,7 @@ object TableComponents {
         ret
     }
     @scala.inline
-    def withHeader(value: AnonCell): Self[RecordType] = {
+    def withHeader(value: Cell): Self[RecordType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
         ret

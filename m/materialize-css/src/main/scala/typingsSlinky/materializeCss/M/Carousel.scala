@@ -1,15 +1,11 @@
 package typingsSlinky.materializeCss.M
 
-import org.scalajs.dom.raw.Element
-import typingsSlinky.materializeCss.MElements
-import typingsSlinky.materializeCss.PartialCarouselOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("M.Carousel")
 @js.native
-class Carousel () extends Component[CarouselOptions] {
+trait Carousel extends Component[CarouselOptions] {
   /**
     * The index of the center carousel item
     */
@@ -40,25 +36,5 @@ class Carousel () extends Component[CarouselOptions] {
     */
   def set(): Unit = js.native
   def set(n: Double): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("M.Carousel")
-@js.native
-object Carousel extends js.Object {
-  /**
-    * Get Instance
-    */
-  def getInstance(elem: Element): Carousel = js.native
-  /**
-    * Init carousels
-    */
-  def init(els: MElements): js.Array[Carousel] = js.native
-  def init(els: MElements, options: PartialCarouselOptions): js.Array[Carousel] = js.native
-  /**
-    * Init carousel
-    */
-  def init(els: Element): Carousel = js.native
-  def init(els: Element, options: PartialCarouselOptions): Carousel = js.native
 }
 

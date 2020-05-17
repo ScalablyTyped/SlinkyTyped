@@ -1,19 +1,19 @@
 package typingsSlinky.plotlyJs.mod
 
-import typingsSlinky.plotlyJs.PartialAnnotationsAlign
-import typingsSlinky.plotlyJs.PartialAxis
-import typingsSlinky.plotlyJs.PartialFont
-import typingsSlinky.plotlyJs.PartialHoverLabel
-import typingsSlinky.plotlyJs.PartialImage
-import typingsSlinky.plotlyJs.PartialLayoutAxis
-import typingsSlinky.plotlyJs.PartialLegend
-import typingsSlinky.plotlyJs.PartialMargin
-import typingsSlinky.plotlyJs.PartialPolarLayout
-import typingsSlinky.plotlyJs.PartialScene
-import typingsSlinky.plotlyJs.PartialShape
-import typingsSlinky.plotlyJs.PartialSlider
-import typingsSlinky.plotlyJs.Partialrowsnumberroworder
-import typingsSlinky.plotlyJs.PartialtextstringfontPart
+import typingsSlinky.plotlyJs.anon.PartialAnnotationsAlign
+import typingsSlinky.plotlyJs.anon.PartialAxis
+import typingsSlinky.plotlyJs.anon.PartialFont
+import typingsSlinky.plotlyJs.anon.PartialHoverLabel
+import typingsSlinky.plotlyJs.anon.PartialImage
+import typingsSlinky.plotlyJs.anon.PartialLayoutAxis
+import typingsSlinky.plotlyJs.anon.PartialLegend
+import typingsSlinky.plotlyJs.anon.PartialMargin
+import typingsSlinky.plotlyJs.anon.PartialPolarLayout
+import typingsSlinky.plotlyJs.anon.PartialScene
+import typingsSlinky.plotlyJs.anon.PartialShape
+import typingsSlinky.plotlyJs.anon.PartialSlider
+import typingsSlinky.plotlyJs.anon.Partialrowsnumberroworder
+import typingsSlinky.plotlyJs.anon.PartialtextstringfontPart
 import typingsSlinky.plotlyJs.plotlyJsBooleans.`false`
 import typingsSlinky.plotlyJs.plotlyJsNumbers.`0`
 import typingsSlinky.plotlyJs.plotlyJsNumbers.`1`
@@ -352,7 +352,7 @@ object PlotRelayoutEvent {
         ret
     }
     @scala.inline
-    def withHovermode(value: closest | x | y | `false`): Self = {
+    def withHovermode(value: closest | typingsSlinky.plotlyJs.plotlyJsStrings.x | y | `false`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hovermode")(value.asInstanceOf[js.Any])
         ret

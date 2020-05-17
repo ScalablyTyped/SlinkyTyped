@@ -46,18 +46,6 @@ object BrowserEventObj {
         ret.asInstanceOf[js.Dynamic].updateDynamic("targetdestroyed")(value.asInstanceOf[js.Any])
         ret
     }
-    @scala.inline
-    def withDisconnected(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disconnected")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDisconnected: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("disconnected")(js.undefined)
-        ret
-    }
   }
   
 }

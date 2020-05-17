@@ -12,8 +12,8 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.typescript.mod.TypeElement because var conflicts: _declarationBrand, decorators, end, flags, kind, modifiers, name, parent, pos. Inlined _typeElementBrand, questionToken */ @js.native
 trait MethodSignature
   extends SignatureDeclarationBase
-     with SignatureDeclaration
-     with _HasJSDoc {
+     with HasJSDoc
+     with SignatureDeclaration {
   var _typeElementBrand: js.Any = js.native
   @JSName("kind")
   var kind_MethodSignature: typingsSlinky.typescript.mod.SyntaxKind.MethodSignature = js.native

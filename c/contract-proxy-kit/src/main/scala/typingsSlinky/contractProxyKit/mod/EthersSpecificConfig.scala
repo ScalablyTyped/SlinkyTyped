@@ -1,6 +1,6 @@
 package typingsSlinky.contractProxyKit.mod
 
-import typingsSlinky.contractProxyKit.Typeofethers
+import typingsSlinky.contractProxyKit.anon.Typeofethers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

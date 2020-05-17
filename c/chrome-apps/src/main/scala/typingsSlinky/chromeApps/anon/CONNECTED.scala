@@ -1,0 +1,50 @@
+package typingsSlinky.chromeApps.anon
+
+import typingsSlinky.chromeApps.chromeAppsStrings.Connected_
+import typingsSlinky.chromeApps.chromeAppsStrings.Connecting_
+import typingsSlinky.chromeApps.chromeAppsStrings.Disconnected_
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait CONNECTED extends js.Object {
+  var CONNECTED: Connected_ = js.native
+  var CONNECTING: Connecting_ = js.native
+  var DISCONNECTED: Disconnected_ = js.native
+}
+
+object CONNECTED {
+  @scala.inline
+  def apply(CONNECTED: Connected_, CONNECTING: Connecting_, DISCONNECTED: Disconnected_): CONNECTED = {
+    val __obj = js.Dynamic.literal(CONNECTED = CONNECTED.asInstanceOf[js.Any], CONNECTING = CONNECTING.asInstanceOf[js.Any], DISCONNECTED = DISCONNECTED.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CONNECTED]
+  }
+  @scala.inline
+  implicit class CONNECTEDOps[Self <: CONNECTED] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCONNECTED(value: Connected_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CONNECTED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCONNECTING(value: Connecting_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CONNECTING")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDISCONNECTED(value: Disconnected_): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DISCONNECTED")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

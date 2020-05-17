@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * An action the user selects in response to an interactive notification.
 			 */
-@JSGlobal("Titanium.App.iOS.UserNotificationAction")
 @js.native
-class UserNotificationAction () extends Proxy {
+trait UserNotificationAction extends Proxy {
   /**
   				 * Selects how to activate the application.
   				 */

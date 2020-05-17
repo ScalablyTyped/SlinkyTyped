@@ -1,20 +1,13 @@
 package typingsSlinky.winrtUwp.Windows.Web.Http.Headers
 
-import typingsSlinky.winrtUwp.AnonMediaTypeHeaderValue
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the value of the Content-Type HTTP header on the HTTP content in a request or a response. */
-@JSGlobal("Windows.Web.Http.Headers.HttpMediaTypeHeaderValue")
 @js.native
-class HttpMediaTypeHeaderValue protected () extends js.Object {
-  /**
-    * Initializes a new instance of the HttpMediaTypeHeaderValue class.
-    * @param mediaType The media-type of the entity-body used in the Content-Type HTTP header.
-    */
-  def this(mediaType: String) = this()
+trait HttpMediaTypeHeaderValue extends js.Object {
   /** Gets or sets the character set of the entity-body used in the Content-Type HTTP header. */
   var charSet: String = js.native
   /** Gets or sets the media-type of the entity-body used in the Content-Type HTTP header. */
@@ -23,20 +16,37 @@ class HttpMediaTypeHeaderValue protected () extends js.Object {
   var parameters: IVector[HttpNameValueHeaderValue] = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Web.Http.Headers.HttpMediaTypeHeaderValue")
-@js.native
-object HttpMediaTypeHeaderValue extends js.Object {
-  /**
-    * Converts a string to an HttpMediaTypeHeaderValue instance.
-    * @param input A string that represents the media-type and character set information used in the Content-Type HTTP header.
-    * @return An HttpMediaTypeHeaderValue instance.
-    */
-  def parse(input: String): HttpMediaTypeHeaderValue = js.native
-  /**
-    * Determines whether a string is valid HttpMediaTypeHeaderValue information.
-    * @param input The string to validate.
-    */
-  def tryParse(input: String): AnonMediaTypeHeaderValue = js.native
+object HttpMediaTypeHeaderValue {
+  @scala.inline
+  def apply(charSet: String, mediaType: String, parameters: IVector[HttpNameValueHeaderValue]): HttpMediaTypeHeaderValue = {
+    val __obj = js.Dynamic.literal(charSet = charSet.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any], parameters = parameters.asInstanceOf[js.Any])
+    __obj.asInstanceOf[HttpMediaTypeHeaderValue]
+  }
+  @scala.inline
+  implicit class HttpMediaTypeHeaderValueOps[Self <: HttpMediaTypeHeaderValue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCharSet(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charSet")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMediaType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mediaType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParameters(value: IVector[HttpNameValueHeaderValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

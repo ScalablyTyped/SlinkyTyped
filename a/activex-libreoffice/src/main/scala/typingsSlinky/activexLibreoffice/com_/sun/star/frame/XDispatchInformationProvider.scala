@@ -1,0 +1,80 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.frame
+
+import typingsSlinky.activexLibreoffice.`type`
+import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
+import typingsSlinky.std.SafeArray
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * provides information about supported commands
+  *
+  * This interface can be used to retrieve additional information about supported commands. This interface is normally used by configuration
+  * implementations to retrieve all supported commands. A dispatch information provider is normally supported by a {@link Frame} service.
+  * @see Frame
+  * @since OOo 2.0
+  */
+@js.native
+trait XDispatchInformationProvider extends XInterface {
+  /**
+    * returns all supported command groups.
+    * @returns a sequence of supported command groups.
+    * @see CommandGroup
+    */
+  val SupportedCommandGroups: SafeArray[Double] = js.native
+  /**
+    * returns additional information about supported commands of a given command group.
+    * @param CommandGroup specifies a command group.
+    * @returns name and group name of every command supported. A group ID which is not supported returns an empty com::sun::star::uno::Sequence.
+    */
+  def getConfigurableDispatchInformation(CommandGroup: Double): SafeArray[DispatchInformation] = js.native
+  /**
+    * returns all supported command groups.
+    * @returns a sequence of supported command groups.
+    * @see CommandGroup
+    */
+  def getSupportedCommandGroups(): SafeArray[Double] = js.native
+}
+
+object XDispatchInformationProvider {
+  @scala.inline
+  def apply(
+    SupportedCommandGroups: SafeArray[Double],
+    acquire: () => Unit,
+    getConfigurableDispatchInformation: Double => SafeArray[DispatchInformation],
+    getSupportedCommandGroups: () => SafeArray[Double],
+    queryInterface: `type` => js.Any,
+    release: () => Unit
+  ): XDispatchInformationProvider = {
+    val __obj = js.Dynamic.literal(SupportedCommandGroups = SupportedCommandGroups.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getConfigurableDispatchInformation = js.Any.fromFunction1(getConfigurableDispatchInformation), getSupportedCommandGroups = js.Any.fromFunction0(getSupportedCommandGroups), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
+    __obj.asInstanceOf[XDispatchInformationProvider]
+  }
+  @scala.inline
+  implicit class XDispatchInformationProviderOps[Self <: XDispatchInformationProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSupportedCommandGroups(value: SafeArray[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SupportedCommandGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetConfigurableDispatchInformation(value: Double => SafeArray[DispatchInformation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getConfigurableDispatchInformation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetSupportedCommandGroups(value: () => SafeArray[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSupportedCommandGroups")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
+}
+

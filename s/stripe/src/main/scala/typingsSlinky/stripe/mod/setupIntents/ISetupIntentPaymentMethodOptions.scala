@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.setupIntents
 
-import typingsSlinky.stripe.AnonRequestthreedsecure
+import typingsSlinky.stripe.anon.Requestthreedsecure
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait ISetupIntentPaymentMethodOptions extends js.Object {
   /**
     * Configuration for any card payments attempted on this SetupIntent.
     */
-  var card: js.UndefOr[AnonRequestthreedsecure] = js.native
+  var card: js.UndefOr[Requestthreedsecure] = js.native
 }
 
 object ISetupIntentPaymentMethodOptions {
@@ -26,7 +26,7 @@ object ISetupIntentPaymentMethodOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCard(value: AnonRequestthreedsecure): Self = {
+    def withCard(value: Requestthreedsecure): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("card")(value.asInstanceOf[js.Any])
         ret

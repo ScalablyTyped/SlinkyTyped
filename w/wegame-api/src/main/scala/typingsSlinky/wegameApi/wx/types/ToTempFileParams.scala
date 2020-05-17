@@ -1,6 +1,6 @@
 package typingsSlinky.wegameApi.wx.types
 
-import typingsSlinky.wegameApi.AnonTempFilePath
+import typingsSlinky.wegameApi.anon.TempFilePath
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait ToTempFileParams extends ToTempFileSyncParams {
   var complete: js.UndefOr[js.Function0[Unit]] = js.native
   var fail: js.UndefOr[js.Function0[Unit]] = js.native
-  var success: js.UndefOr[js.Function1[/* res */ AnonTempFilePath, Unit]] = js.native
+  var success: js.UndefOr[js.Function1[/* res */ TempFilePath, Unit]] = js.native
 }
 
 object ToTempFileParams {
@@ -49,7 +49,7 @@ object ToTempFileParams {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonTempFilePath => Unit): Self = {
+    def withSuccess(value: /* res */ TempFilePath => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

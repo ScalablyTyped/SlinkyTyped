@@ -2,7 +2,7 @@ package typingsSlinky.reactNativeZssRichTextEditor.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNativeZssRichTextEditor.PartialRichTextEditorProp
+import typingsSlinky.reactNativeZssRichTextEditor.anon.PartialRichTextEditorProp
 import typingsSlinky.reactNativeZssRichTextEditor.mod.ContentInset
 import typingsSlinky.reactNativeZssRichTextEditor.mod.RichTextStyles
 import scala.scalajs.js

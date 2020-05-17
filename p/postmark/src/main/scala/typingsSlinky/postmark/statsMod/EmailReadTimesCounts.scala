@@ -1,7 +1,7 @@
 package typingsSlinky.postmark.statsMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.postmark.AnonDictkey
+import typingsSlinky.postmark.anon.Dictkey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait EmailReadTimesCounts
   extends /* key */ StringDictionary[js.Any] {
-  var Days: js.Array[AnonDictkey] = js.native
+  var Days: js.Array[Dictkey] = js.native
 }
 
 object EmailReadTimesCounts {
   @scala.inline
-  def apply(Days: js.Array[AnonDictkey]): EmailReadTimesCounts = {
+  def apply(Days: js.Array[Dictkey]): EmailReadTimesCounts = {
     val __obj = js.Dynamic.literal(Days = Days.asInstanceOf[js.Any])
     __obj.asInstanceOf[EmailReadTimesCounts]
   }
@@ -25,7 +25,7 @@ object EmailReadTimesCounts {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDays(value: js.Array[AnonDictkey]): Self = {
+    def withDays(value: js.Array[Dictkey]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Days")(value.asInstanceOf[js.Any])
         ret

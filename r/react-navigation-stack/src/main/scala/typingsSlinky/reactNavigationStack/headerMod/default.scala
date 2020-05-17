@@ -2,9 +2,9 @@ package typingsSlinky.reactNavigationStack.headerMod
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactNavigationStack.ComponentClassPickPropssc
-import typingsSlinky.reactNavigationStack.FunctionComponentPickProp
-import typingsSlinky.reactNavigationStack.PickPropsscenenavigationp
+import typingsSlinky.reactNavigationStack.anon.ComponentClassPickPropssc
+import typingsSlinky.reactNavigationStack.anon.FunctionComponentPickProp
+import typingsSlinky.reactNavigationStack.anon.PickPropsscenenavigationp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

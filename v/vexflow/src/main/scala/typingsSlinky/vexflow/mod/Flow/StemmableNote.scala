@@ -1,6 +1,6 @@
 package typingsSlinky.vexflow.mod.Flow
 
-import typingsSlinky.vexflow.AnonType
+import typingsSlinky.vexflow.anon.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class StemmableNote protected ()
   extends typingsSlinky.vexflow.Vex.Flow.StemmableNote {
-  def this(note_struct: AnonType) = this()
+  def this(note_struct: Type) = this()
 }
 
 /* static members */

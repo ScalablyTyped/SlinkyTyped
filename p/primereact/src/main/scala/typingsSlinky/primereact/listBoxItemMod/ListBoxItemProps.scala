@@ -1,15 +1,15 @@
 package typingsSlinky.primereact.listBoxItemMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.primereact.AnonOptionOriginalEvent
+import typingsSlinky.primereact.anon.OptionOriginalEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ListBoxItemProps extends js.Object {
-  var onClick: js.UndefOr[js.Function1[/* e */ AnonOptionOriginalEvent, Unit]] = js.native
-  var onTouchEnd: js.UndefOr[js.Function1[/* e */ AnonOptionOriginalEvent, Unit]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* e */ OptionOriginalEvent, Unit]] = js.native
+  var onTouchEnd: js.UndefOr[js.Function1[/* e */ OptionOriginalEvent, Unit]] = js.native
   var option: js.UndefOr[js.Any] = js.native
   var selected: js.UndefOr[Boolean] = js.native
   var template: js.UndefOr[js.Function1[/* item */ js.Any, js.UndefOr[ReactElement]]] = js.native
@@ -28,7 +28,7 @@ object ListBoxItemProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnClick(value: /* e */ AnonOptionOriginalEvent => Unit): Self = {
+    def withOnClick(value: /* e */ OptionOriginalEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret
@@ -40,7 +40,7 @@ object ListBoxItemProps {
         ret
     }
     @scala.inline
-    def withOnTouchEnd(value: /* e */ AnonOptionOriginalEvent => Unit): Self = {
+    def withOnTouchEnd(value: /* e */ OptionOriginalEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchEnd")(js.Any.fromFunction1(value))
         ret

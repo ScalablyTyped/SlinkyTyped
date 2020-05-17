@@ -19,55 +19,22 @@ trait FlowNode extends js.Object
 
 object FlowNode {
   @scala.inline
-  def PreFinallyFlow(antecedent: FlowNode, flags: FlowFlags, lock: FlowLock): FlowNode = {
-    val __obj = js.Dynamic.literal(antecedent = antecedent.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], lock = lock.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowNode]
-  }
+  implicit def apply(value: AfterFinallyFlow): FlowNode = value.asInstanceOf[FlowNode]
   @scala.inline
-  def FlowAssignment(antecedent: FlowNode, flags: FlowFlags, node: Expression | VariableDeclaration | BindingElement): FlowNode = {
-    val __obj = js.Dynamic.literal(antecedent = antecedent.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowNode]
-  }
+  implicit def apply(value: FlowArrayMutation): FlowNode = value.asInstanceOf[FlowNode]
   @scala.inline
-  def FlowLabel(flags: FlowFlags): FlowNode = {
-    val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowNode]
-  }
+  implicit def apply(value: FlowAssignment): FlowNode = value.asInstanceOf[FlowNode]
   @scala.inline
-  def FlowStart(flags: FlowFlags): FlowNode = {
-    val __obj = js.Dynamic.literal(flags = flags.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowNode]
-  }
+  implicit def apply(value: FlowCall): FlowNode = value.asInstanceOf[FlowNode]
   @scala.inline
-  def FlowSwitchClause(
-    antecedent: FlowNode,
-    clauseEnd: Double,
-    clauseStart: Double,
-    flags: FlowFlags,
-    switchStatement: SwitchStatement
-  ): FlowNode = {
-    val __obj = js.Dynamic.literal(antecedent = antecedent.asInstanceOf[js.Any], clauseEnd = clauseEnd.asInstanceOf[js.Any], clauseStart = clauseStart.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], switchStatement = switchStatement.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowNode]
-  }
+  implicit def apply(value: FlowCondition): FlowNode = value.asInstanceOf[FlowNode]
   @scala.inline
-  def AfterFinallyFlow(antecedent: FlowNode, flags: FlowFlags): FlowNode = {
-    val __obj = js.Dynamic.literal(antecedent = antecedent.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowNode]
-  }
+  implicit def apply(value: FlowLabel): FlowNode = value.asInstanceOf[FlowNode]
   @scala.inline
-  def FlowCondition(antecedent: FlowNode, flags: FlowFlags, node: Expression): FlowNode = {
-    val __obj = js.Dynamic.literal(antecedent = antecedent.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowNode]
-  }
+  implicit def apply(value: FlowStart): FlowNode = value.asInstanceOf[FlowNode]
   @scala.inline
-  def FlowCall(antecedent: FlowNode, flags: FlowFlags, node: CallExpression): FlowNode = {
-    val __obj = js.Dynamic.literal(antecedent = antecedent.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowNode]
-  }
+  implicit def apply(value: FlowSwitchClause): FlowNode = value.asInstanceOf[FlowNode]
   @scala.inline
-  def FlowArrayMutation(antecedent: FlowNode, flags: FlowFlags, node: CallExpression | BinaryExpression): FlowNode = {
-    val __obj = js.Dynamic.literal(antecedent = antecedent.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowNode]
-  }
+  implicit def apply(value: PreFinallyFlow): FlowNode = value.asInstanceOf[FlowNode]
 }
 

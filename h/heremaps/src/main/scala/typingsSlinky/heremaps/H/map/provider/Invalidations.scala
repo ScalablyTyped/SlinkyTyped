@@ -1,6 +1,5 @@
 package typingsSlinky.heremaps.H.map.provider
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.heremaps.H.map.provider.Invalidations.Mark
 import typingsSlinky.heremaps.H.math.BitMask
 import scala.scalajs.js
@@ -11,9 +10,8 @@ import scala.scalajs.js.annotation._
   * This class represents invalidation states of a renderable object. A renderer can optimize its rendering strategies based on the information in this object.
   * @property MARK_INITIAL {H.map.provider.Invalidations.Mark} - This constant represents the initial invalidation mark an invalidations object has.
   */
-@JSGlobal("H.map.provider.Invalidations")
 @js.native
-class Invalidations () extends js.Object {
+trait Invalidations extends js.Object {
   /**
     * This method returns the current invalidation mark of this invalidations object.
     * @returns {H.map.provider.Invalidations.Mark} - the current invalidation mark
@@ -63,14 +61,12 @@ class Invalidations () extends js.Object {
   def update(mark: Mark, types: BitMask): Unit = js.native
 }
 
-/* static members */
 @JSGlobal("H.map.provider.Invalidations")
 @js.native
 object Invalidations extends js.Object {
   @js.native
   sealed trait Flag extends js.Object
   
-  var MARK_INITIAL: Mark = js.native
   /**
     * This enumeration encapsulates bit flags for different invalidations of map objects.
     */
@@ -93,26 +89,6 @@ object Invalidations extends js.Object {
     
     @js.native
     sealed trait Z_ORDER extends Flag
-    
-    @JSBracketAccess
-    def apply(value: Double): js.UndefOr[Flag with Double] = js.native
-    /* 3 */ @js.native
-    object ADD extends TopLevel[ADD with Double]
-    
-    /* 0 */ @js.native
-    object NONE extends TopLevel[NONE with Double]
-    
-    /* 4 */ @js.native
-    object REMOVE extends TopLevel[REMOVE with Double]
-    
-    /* 2 */ @js.native
-    object SPATIAL extends TopLevel[SPATIAL with Double]
-    
-    /* 1 */ @js.native
-    object VISUAL extends TopLevel[VISUAL with Double]
-    
-    /* 5 */ @js.native
-    object Z_ORDER extends TopLevel[Z_ORDER with Double]
     
   }
   

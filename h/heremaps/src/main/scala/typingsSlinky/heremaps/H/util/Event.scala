@@ -11,16 +11,8 @@ import scala.scalajs.js.annotation._
   * @property type {string} - Name of the dispatched event
   * @property defaultPrevented {boolean} - Indicates if preventDefault was called on the current event
   */
-@JSGlobal("H.util.Event")
 @js.native
-class Event protected () extends js.Object {
-  /**
-    * Constructor
-    * @param type {string} - Event Type.
-    * @param opt_target {Object=} - Reference to the object that is the target of this event. It has to implement the {@link EventTargetInstance} interface.
-    */
-  def this(`type`: String) = this()
-  def this(`type`: String, opt_target: js.Any) = this()
+trait Event extends js.Object {
   var currentTarget: js.Any = js.native
   var defaultPrevented: Boolean = js.native
   var target: js.Any = js.native
@@ -33,5 +25,65 @@ class Event protected () extends js.Object {
     * Stops propagation for current event.
     */
   def stopPropagation(): Unit = js.native
+}
+
+object Event {
+  @scala.inline
+  def apply(
+    currentTarget: js.Any,
+    defaultPrevented: Boolean,
+    preventDefault: () => Unit,
+    stopPropagation: () => Unit,
+    target: js.Any,
+    `type`: String
+  ): Event = {
+    val __obj = js.Dynamic.literal(currentTarget = currentTarget.asInstanceOf[js.Any], defaultPrevented = defaultPrevented.asInstanceOf[js.Any], preventDefault = js.Any.fromFunction0(preventDefault), stopPropagation = js.Any.fromFunction0(stopPropagation), target = target.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Event]
+  }
+  @scala.inline
+  implicit class EventOps[Self <: Event] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrentTarget(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultPrevented(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPrevented")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreventDefault(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefault")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStopPropagation(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPropagation")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withTarget(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

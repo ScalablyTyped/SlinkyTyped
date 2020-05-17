@@ -1,11 +1,11 @@
 package typingsSlinky.reactBootstrapTableNext.mod
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.left
 import typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.right
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,13 +24,13 @@ trait ExpandRowProps[T] extends js.Object {
       /* row */ T, 
       /* isExpand */ Boolean, 
       /* rowIndex */ Double, 
-      /* e */ SyntheticEvent[Event_, Element], 
+      /* e */ SyntheticEvent[Event, Element], 
       Unit
     ]
   ] = js.native
   var onlyOneExpanding: js.UndefOr[Boolean] = js.native
   var showExpandColumn: js.UndefOr[Boolean] = js.native
-  def onExpandAll(isExpandAll: Boolean, results: js.Array[Double], e: SyntheticEvent[Event_, Element]): Unit = js.native
+  def onExpandAll(isExpandAll: Boolean, results: js.Array[Double], e: SyntheticEvent[Event, Element]): Unit = js.native
   def renderer(row: T, rowIndex: Double): ReactElement = js.native
 }
 
@@ -42,7 +42,7 @@ object ExpandRowProps {
     expandColumnRenderer: ReactElement,
     expandHeaderColumnRenderer: ReactElement,
     nonExpandable: js.Array[Double],
-    onExpandAll: (Boolean, js.Array[Double], SyntheticEvent[Event_, Element]) => Unit,
+    onExpandAll: (Boolean, js.Array[Double], SyntheticEvent[Event, Element]) => Unit,
     renderer: (T, Double) => ReactElement
   ): ExpandRowProps[T] = {
     val __obj = js.Dynamic.literal(className = className.asInstanceOf[js.Any], expandColumnPosition = expandColumnPosition.asInstanceOf[js.Any], expandColumnRenderer = expandColumnRenderer.asInstanceOf[js.Any], expandHeaderColumnRenderer = expandHeaderColumnRenderer.asInstanceOf[js.Any], nonExpandable = nonExpandable.asInstanceOf[js.Any], onExpandAll = js.Any.fromFunction3(onExpandAll), renderer = js.Any.fromFunction2(renderer))
@@ -91,7 +91,7 @@ object ExpandRowProps {
         ret
     }
     @scala.inline
-    def withOnExpandAll(value: (Boolean, js.Array[Double], SyntheticEvent[Event_, Element]) => Unit): Self[T] = {
+    def withOnExpandAll(value: (Boolean, js.Array[Double], SyntheticEvent[Event, Element]) => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onExpandAll")(js.Any.fromFunction3(value))
         ret
@@ -128,7 +128,7 @@ object ExpandRowProps {
     }
     @scala.inline
     def withOnExpand(
-      value: (/* row */ T, /* isExpand */ Boolean, /* rowIndex */ Double, /* e */ SyntheticEvent[Event_, Element]) => Unit
+      value: (/* row */ T, /* isExpand */ Boolean, /* rowIndex */ Double, /* e */ SyntheticEvent[Event, Element]) => Unit
     ): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onExpand")(js.Any.fromFunction4(value))

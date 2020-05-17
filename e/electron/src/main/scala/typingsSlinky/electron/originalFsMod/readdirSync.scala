@@ -1,11 +1,11 @@
 package typingsSlinky.electron.originalFsMod
 
-import typingsSlinky.node.Anon4
-import typingsSlinky.node.Anon5
-import typingsSlinky.node.AnonEncodingWithFileTypes
-import typingsSlinky.node.AnonWithFileTypes
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
+import typingsSlinky.node.anon.EncodingWithFileTypes
+import typingsSlinky.node.anon.WithFileTypes
+import typingsSlinky.node.anon.`4`
+import typingsSlinky.node.anon.`5`
 import typingsSlinky.node.fsMod.PathLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,20 +21,20 @@ object readdirSync extends js.Object {
     */
   def apply(path: PathLike): js.Array[String] = js.native
   def apply(path: PathLike, options: String): js.Array[Buffer | String] = js.native
-  def apply(path: PathLike, options: Anon4): js.Array[Buffer | String] = js.native
-  /**
-    * Synchronous readdir(3) - read a directory.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * @param options If called with `withFileTypes: true` the result data will be an array of Dirent.
-    */
-  def apply(path: PathLike, options: Anon5): js.Array[typingsSlinky.node.fsMod.Dirent] = js.native
+  def apply(path: PathLike, options: BufferEncoding): js.Array[String] = js.native
   /**
     * Synchronous readdir(3) - read a directory.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
     * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
     */
-  def apply(path: PathLike, options: AnonEncodingWithFileTypes): js.Array[Buffer] = js.native
-  def apply(path: PathLike, options: AnonWithFileTypes): js.Array[String] = js.native
-  def apply(path: PathLike, options: BufferEncoding): js.Array[String] = js.native
+  def apply(path: PathLike, options: EncodingWithFileTypes): js.Array[Buffer] = js.native
+  def apply(path: PathLike, options: WithFileTypes): js.Array[String] = js.native
+  def apply(path: PathLike, options: `4`): js.Array[Buffer | String] = js.native
+  /**
+    * Synchronous readdir(3) - read a directory.
+    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
+    * @param options If called with `withFileTypes: true` the result data will be an array of Dirent.
+    */
+  def apply(path: PathLike, options: `5`): js.Array[typingsSlinky.node.fsMod.Dirent] = js.native
 }
 

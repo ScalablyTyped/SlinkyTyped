@@ -1,7 +1,7 @@
 package typingsSlinky.webpack.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.webpack.AnonPath
+import typingsSlinky.webpack.anon.Path
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ trait Resolve extends js.Object {
     *
     * Defaults to `() => true`.
     */
-  var cachePredicate: js.UndefOr[js.Function1[/* data */ AnonPath, Boolean]] = js.native
+  var cachePredicate: js.UndefOr[js.Function1[/* data */ Path, Boolean]] = js.native
   /**
     * If unsafe cache is enabled, includes request.context in the cache key.
     * This option is taken into account by the enhanced-resolve module.
@@ -137,7 +137,7 @@ object Resolve {
         ret
     }
     @scala.inline
-    def withCachePredicate(value: /* data */ AnonPath => Boolean): Self = {
+    def withCachePredicate(value: /* data */ Path => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cachePredicate")(js.Any.fromFunction1(value))
         ret

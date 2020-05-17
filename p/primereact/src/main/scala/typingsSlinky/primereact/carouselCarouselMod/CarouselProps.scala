@@ -1,6 +1,6 @@
 package typingsSlinky.primereact.carouselCarouselMod
 
-import typingsSlinky.primereact.AnonPage
+import typingsSlinky.primereact.anon.Page
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait CarouselProps extends js.Object {
   var itemTemplate: js.UndefOr[js.Any] = js.native
   var numScroll: js.UndefOr[Double] = js.native
   var numVisible: js.UndefOr[Double] = js.native
-  var onPageChange: js.UndefOr[js.Function1[/* e */ AnonPage, Unit]] = js.native
+  var onPageChange: js.UndefOr[js.Function1[/* e */ Page, Unit]] = js.native
   var orientation: js.UndefOr[String] = js.native
   var page: js.UndefOr[Double] = js.native
   var responsiveOptions: js.UndefOr[js.Any] = js.native
@@ -185,7 +185,7 @@ object CarouselProps {
         ret
     }
     @scala.inline
-    def withOnPageChange(value: /* e */ AnonPage => Unit): Self = {
+    def withOnPageChange(value: /* e */ Page => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPageChange")(js.Any.fromFunction1(value))
         ret

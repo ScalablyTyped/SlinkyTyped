@@ -1,26 +1,26 @@
 package typingsSlinky.reactBootstrapTable2Toolkit.mod
 
-import typingsSlinky.reactBootstrapTable2Toolkit.AnonBootstrap4
-import typingsSlinky.reactBootstrapTable2Toolkit.AnonColumns
-import typingsSlinky.reactBootstrapTable2Toolkit.AnonOnExport
+import typingsSlinky.reactBootstrapTable2Toolkit.anon.Bootstrap4
+import typingsSlinky.reactBootstrapTable2Toolkit.anon.Columns
+import typingsSlinky.reactBootstrapTable2Toolkit.anon.OnExport
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ToolkitContextType extends js.Object {
-  var baseProps: AnonBootstrap4 = js.native
-  var columnToggleProps: AnonColumns = js.native
-  var csvProps: AnonOnExport = js.native
+  var baseProps: Bootstrap4 = js.native
+  var columnToggleProps: Columns = js.native
+  var csvProps: OnExport = js.native
   var searchProps: InjectedSearchProps = js.native
 }
 
 object ToolkitContextType {
   @scala.inline
   def apply(
-    baseProps: AnonBootstrap4,
-    columnToggleProps: AnonColumns,
-    csvProps: AnonOnExport,
+    baseProps: Bootstrap4,
+    columnToggleProps: Columns,
+    csvProps: OnExport,
     searchProps: InjectedSearchProps
   ): ToolkitContextType = {
     val __obj = js.Dynamic.literal(baseProps = baseProps.asInstanceOf[js.Any], columnToggleProps = columnToggleProps.asInstanceOf[js.Any], csvProps = csvProps.asInstanceOf[js.Any], searchProps = searchProps.asInstanceOf[js.Any])
@@ -33,19 +33,19 @@ object ToolkitContextType {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBaseProps(value: AnonBootstrap4): Self = {
+    def withBaseProps(value: Bootstrap4): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("baseProps")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withColumnToggleProps(value: AnonColumns): Self = {
+    def withColumnToggleProps(value: Columns): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnToggleProps")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withCsvProps(value: AnonOnExport): Self = {
+    def withCsvProps(value: OnExport): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("csvProps")(value.asInstanceOf[js.Any])
         ret

@@ -1,0 +1,17 @@
+package typingsSlinky.playcanvas.global.pc
+
+import org.scalablytyped.runtime.TopLevel
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * @constant
+  * @name pc.ASPECT_AUTO
+  * @type {number}
+  * @description Automatically set aspect ratio to current render target's width divided by height.
+  */
+@JSGlobal("pc.ASPECT_AUTO")
+@js.native
+object ASPECT_AUTO extends TopLevel[Double]
+

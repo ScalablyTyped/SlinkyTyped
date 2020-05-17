@@ -1,8 +1,8 @@
 package typingsSlinky.uifabricUtilities.asyncMod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.uifabricUtilities.AnonLeading
-import typingsSlinky.uifabricUtilities.AnonMaxWait
+import typingsSlinky.uifabricUtilities.anon.Leading
+import typingsSlinky.uifabricUtilities.anon.MaxWait
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -57,7 +57,7 @@ class Async () extends js.Object {
     */
   def debounce[T /* <: js.Function */](func: T): ICancelable[T] with js.Function0[Unit] = js.native
   def debounce[T /* <: js.Function */](func: T, wait: Double): ICancelable[T] with js.Function0[Unit] = js.native
-  def debounce[T /* <: js.Function */](func: T, wait: Double, options: AnonMaxWait): ICancelable[T] with js.Function0[Unit] = js.native
+  def debounce[T /* <: js.Function */](func: T, wait: Double, options: MaxWait): ICancelable[T] with js.Function0[Unit] = js.native
   /**
     * Dispose function, clears all async operations.
     */
@@ -102,6 +102,6 @@ class Async () extends js.Object {
     */
   def throttle[T /* <: js.Function */](func: T): T | js.Function0[Unit] = js.native
   def throttle[T /* <: js.Function */](func: T, wait: Double): T | js.Function0[Unit] = js.native
-  def throttle[T /* <: js.Function */](func: T, wait: Double, options: AnonLeading): T | js.Function0[Unit] = js.native
+  def throttle[T /* <: js.Function */](func: T, wait: Double, options: Leading): T | js.Function0[Unit] = js.native
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.primereact.orderListMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait OrderListProps extends js.Object {
   var id: js.UndefOr[String] = js.native
   var itemTemplate: js.UndefOr[js.Function1[/* item */ js.Any, js.UndefOr[ReactElement]]] = js.native
   var listStyle: js.UndefOr[js.Object] = js.native
-  var onChange: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
   var responsive: js.UndefOr[Boolean] = js.native
   var style: js.UndefOr[js.Object] = js.native
   var tabIndex: js.UndefOr[String] = js.native
@@ -106,7 +106,7 @@ object OrderListProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* e */ AnonValue => Unit): Self = {
+    def withOnChange(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

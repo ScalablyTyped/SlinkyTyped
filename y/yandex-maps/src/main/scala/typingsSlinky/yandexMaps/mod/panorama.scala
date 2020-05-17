@@ -1,8 +1,8 @@
 package typingsSlinky.yandexMaps.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.yandexMaps.AnonAutoFitToViewport
-import typingsSlinky.yandexMaps.AnonDirection
+import typingsSlinky.yandexMaps.anon.AutoFitToViewport
+import typingsSlinky.yandexMaps.anon.Direction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,8 +25,8 @@ object panorama extends js.Object {
   class Player protected () extends IEventEmitter {
     def this(element: String, panorama: IPanorama) = this()
     def this(element: HTMLElement, panorama: IPanorama) = this()
-    def this(element: String, panorama: IPanorama, options: AnonAutoFitToViewport) = this()
-    def this(element: HTMLElement, panorama: IPanorama, options: AnonAutoFitToViewport) = this()
+    def this(element: String, panorama: IPanorama, options: AutoFitToViewport) = this()
+    def this(element: HTMLElement, panorama: IPanorama, options: AutoFitToViewport) = this()
     def destroy(): Unit = js.native
     def fitToViewport(): Unit = js.native
     def getDirection(): js.Array[Double] = js.native
@@ -34,7 +34,7 @@ object panorama extends js.Object {
     def getSpan(): js.Array[Double] = js.native
     def lookAt(point: js.Array[Double]): this.type = js.native
     def moveTo(point: js.Array[Double]): js.Promise[Unit] = js.native
-    def moveTo(point: js.Array[Double], options: AnonDirection): js.Promise[Unit] = js.native
+    def moveTo(point: js.Array[Double], options: Direction): js.Promise[Unit] = js.native
     def setDirection(direction: String): this.type = js.native
     def setDirection(direction: js.Array[Double]): this.type = js.native
     def setPanorama(panorama: IPanorama): this.type = js.native

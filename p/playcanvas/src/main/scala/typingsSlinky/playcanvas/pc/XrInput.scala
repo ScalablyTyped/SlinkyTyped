@@ -13,10 +13,8 @@ import scala.scalajs.js.annotation._
   * @param {pc.XrManager} manager - WebXR Manager.
   * @property {pc.XrInputSource[]} inputSources List of active {pc.XrInputSource}
   */
-@JSGlobal("pc.XrInput")
 @js.native
-class XrInput protected () extends EventHandler {
-  def this(manager: XrManager) = this()
+trait XrInput extends EventHandler {
   /**
     * List of active {pc.XrInputSource}
     */

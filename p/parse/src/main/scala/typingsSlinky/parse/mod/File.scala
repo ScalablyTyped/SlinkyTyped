@@ -1,8 +1,8 @@
 package typingsSlinky.parse.mod
 
-import typingsSlinky.parse.AnonBase64
-import typingsSlinky.parse.AnonSize
-import typingsSlinky.parse.AnonUri
+import typingsSlinky.parse.anon.Base64
+import typingsSlinky.parse.anon.Size
+import typingsSlinky.parse.anon.Uri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,14 +38,14 @@ import scala.scalajs.js.annotation._
 @JSImport("parse", "File")
 @js.native
 class File protected ()
-  extends typingsSlinky.parse.mod._Global_.Parse.File {
+  extends typingsSlinky.parse.mod.global.Parse.File {
   def this(name: String, data: js.Array[Double]) = this()
-  def this(name: String, data: AnonBase64) = this()
-  def this(name: String, data: AnonSize) = this()
-  def this(name: String, data: AnonUri) = this()
+  def this(name: String, data: Base64) = this()
+  def this(name: String, data: Size) = this()
+  def this(name: String, data: Uri) = this()
   def this(name: String, data: js.Array[Double], `type`: String) = this()
-  def this(name: String, data: AnonBase64, `type`: String) = this()
-  def this(name: String, data: AnonSize, `type`: String) = this()
-  def this(name: String, data: AnonUri, `type`: String) = this()
+  def this(name: String, data: Base64, `type`: String) = this()
+  def this(name: String, data: Size, `type`: String) = this()
+  def this(name: String, data: Uri, `type`: String) = this()
 }
 

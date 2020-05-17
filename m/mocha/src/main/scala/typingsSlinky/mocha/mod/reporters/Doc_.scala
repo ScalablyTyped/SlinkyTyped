@@ -1,5 +1,6 @@
 package typingsSlinky.mocha.mod.reporters
 
+import typingsSlinky.mocha.Mocha.reporters.Base
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +12,5 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("mocha", "reporters.Doc")
 @js.native
-class Doc_ ()
-  extends typingsSlinky.mocha.Mocha_.reporters.Base_
+class Doc_ () extends Base
 

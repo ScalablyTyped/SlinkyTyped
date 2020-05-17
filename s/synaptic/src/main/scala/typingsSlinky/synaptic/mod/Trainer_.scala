@@ -1,6 +1,6 @@
 package typingsSlinky.synaptic.mod
 
-import typingsSlinky.synaptic.AnonTest
+import typingsSlinky.synaptic.anon.Test
 import typingsSlinky.synaptic.mod.Trainer.DSROptions
 import typingsSlinky.synaptic.mod.Trainer.DSRTrainingResult
 import typingsSlinky.synaptic.mod.Trainer.ERGOptions
@@ -45,8 +45,8 @@ class Trainer_ protected () extends js.Object {
   /**
     * This test challenges the network to complete a timing task.
     */
-  def timingTask(): AnonTest = js.native
-  def timingTask(options: js.Any): AnonTest = js.native
+  def timingTask(): Test = js.native
+  def timingTask(options: js.Any): Test = js.native
   /**
     * This method allows you to train any training set to a Network.
     * @returns When the training is done this method returns an object with the error, the iterations, and the elapsed time of the training.

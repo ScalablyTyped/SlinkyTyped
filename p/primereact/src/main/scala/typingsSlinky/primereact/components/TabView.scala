@@ -2,7 +2,7 @@ package typingsSlinky.primereact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonIndex
+import typingsSlinky.primereact.anon.Index
 import typingsSlinky.primereact.tabViewMod.TabViewProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,7 +24,7 @@ object TabView {
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
-    def onTabChange(value: /* e */ AnonIndex => Unit): this.type = set("onTabChange", js.Any.fromFunction1(value))
+    def onTabChange(value: /* e */ Index => Unit): this.type = set("onTabChange", js.Any.fromFunction1(value))
     @scala.inline
     def renderActiveOnly(value: Boolean): this.type = set("renderActiveOnly", value.asInstanceOf[js.Any])
     @scala.inline

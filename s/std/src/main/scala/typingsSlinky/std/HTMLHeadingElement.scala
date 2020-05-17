@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,9 +13,4 @@ trait HTMLHeadingElement extends HTMLElement {
   /** @deprecated */
   var align: java.lang.String = js.native
 }
-
-@JSGlobal("HTMLHeadingElement")
-@js.native
-object HTMLHeadingElement
-  extends Instantiable0[org.scalajs.dom.raw.HTMLHeadingElement]
 

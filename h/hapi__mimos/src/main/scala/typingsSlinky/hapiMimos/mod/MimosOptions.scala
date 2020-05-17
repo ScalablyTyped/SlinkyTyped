@@ -1,7 +1,7 @@
 package typingsSlinky.hapiMimos.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.hapiMimos.MimosOptionsValuepredicat
+import typingsSlinky.hapiMimos.anon.MimosOptionsValuepredicat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

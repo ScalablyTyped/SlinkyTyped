@@ -12,14 +12,8 @@ trait SearchOptions extends js.Object
 
 object SearchOptions {
   @scala.inline
-  def SearchOptionsWithQ(q: String): SearchOptions = {
-    val __obj = js.Dynamic.literal(q = q.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SearchOptions]
-  }
+  implicit def apply(value: SearchOptionsWithQ): SearchOptions = value.asInstanceOf[SearchOptions]
   @scala.inline
-  def SearchOptionsWithQuery(query: String): SearchOptions = {
-    val __obj = js.Dynamic.literal(query = query.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SearchOptions]
-  }
+  implicit def apply(value: SearchOptionsWithQuery): SearchOptions = value.asInstanceOf[SearchOptions]
 }
 

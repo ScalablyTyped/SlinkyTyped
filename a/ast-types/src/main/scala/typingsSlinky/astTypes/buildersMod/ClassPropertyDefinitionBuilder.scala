@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonDefinition
+import typingsSlinky.astTypes.anon.Definition
 import typingsSlinky.astTypes.kindsMod.ClassPropertyDefinitionKind
 import typingsSlinky.astTypes.kindsMod.ClassPropertyKind
 import typingsSlinky.astTypes.kindsMod.MethodDefinitionKind
@@ -16,6 +16,6 @@ trait ClassPropertyDefinitionBuilder extends js.Object {
   def apply(definition: ClassPropertyKind): ClassPropertyDefinition = js.native
   def apply(definition: MethodDefinitionKind): ClassPropertyDefinition = js.native
   def apply(definition: VariableDeclaratorKind): ClassPropertyDefinition = js.native
-  def from(params: AnonDefinition): ClassPropertyDefinition = js.native
+  def from(params: Definition): ClassPropertyDefinition = js.native
 }
 

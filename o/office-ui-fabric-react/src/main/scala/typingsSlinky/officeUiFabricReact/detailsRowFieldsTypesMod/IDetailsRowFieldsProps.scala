@@ -1,8 +1,8 @@
 package typingsSlinky.officeUiFabricReact.detailsRowFieldsTypesMod
 
+import typingsSlinky.officeUiFabricReact.anon.kinkeyofPickIDetailsRowSt
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IColumn
 import typingsSlinky.officeUiFabricReact.detailsRowTypesMod.ICellStyleProps
-import typingsSlinky.officeUiFabricReact.kinkeyofPickIDetailsRowSt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

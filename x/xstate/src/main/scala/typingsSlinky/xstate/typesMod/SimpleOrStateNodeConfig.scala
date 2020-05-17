@@ -12,14 +12,8 @@ trait SimpleOrStateNodeConfig[TContext, TStateSchema /* <: StateSchema[_] */, TE
 
 object SimpleOrStateNodeConfig {
   @scala.inline
-  def AtomicStateNodeConfig[TContext, TStateSchema, TEvent](): SimpleOrStateNodeConfig[TContext, TStateSchema, TEvent] = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[SimpleOrStateNodeConfig[TContext, TStateSchema, TEvent]]
-  }
+  implicit def apply[TContext, TStateSchema, TEvent](value: AtomicStateNodeConfig[TContext, TEvent]): SimpleOrStateNodeConfig[TContext, TStateSchema, TEvent] = value.asInstanceOf[SimpleOrStateNodeConfig[TContext, TStateSchema, TEvent]]
   @scala.inline
-  def StateNodeConfig[TContext, TStateSchema, TEvent](): SimpleOrStateNodeConfig[TContext, TStateSchema, TEvent] = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[SimpleOrStateNodeConfig[TContext, TStateSchema, TEvent]]
-  }
+  implicit def apply[TContext, TStateSchema, TEvent](value: StateNodeConfig[TContext, TStateSchema, TEvent]): SimpleOrStateNodeConfig[TContext, TStateSchema, TEvent] = value.asInstanceOf[SimpleOrStateNodeConfig[TContext, TStateSchema, TEvent]]
 }
 

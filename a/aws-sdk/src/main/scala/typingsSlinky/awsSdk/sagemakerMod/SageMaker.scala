@@ -1,10 +1,10 @@
 package typingsSlinky.awsSdk.sagemakerMod
 
-import typingsSlinky.awsSdk.DescribeEndpointInputwait
-import typingsSlinky.awsSdk.DescribeNotebookInstanceI
-import typingsSlinky.awsSdk.DescribeProcessingJobRequ
-import typingsSlinky.awsSdk.DescribeTrainingJobReques
-import typingsSlinky.awsSdk.DescribeTransformJobReque
+import typingsSlinky.awsSdk.anon.DescribeEndpointInputwait
+import typingsSlinky.awsSdk.anon.DescribeNotebookInstanceI
+import typingsSlinky.awsSdk.anon.DescribeProcessingJobRequ
+import typingsSlinky.awsSdk.anon.DescribeTrainingJobReques
+import typingsSlinky.awsSdk.anon.DescribeTransformJobReque
 import typingsSlinky.awsSdk.awsSdkStrings.endpointDeleted
 import typingsSlinky.awsSdk.awsSdkStrings.endpointInService
 import typingsSlinky.awsSdk.awsSdkStrings.notebookInstanceDeleted

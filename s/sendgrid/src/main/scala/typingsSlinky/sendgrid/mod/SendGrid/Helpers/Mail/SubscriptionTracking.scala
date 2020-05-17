@@ -1,6 +1,6 @@
 package typingsSlinky.sendgrid.mod.SendGrid.Helpers.Mail
 
-import typingsSlinky.sendgrid.AnonHtml
+import typingsSlinky.sendgrid.anon.Html
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait SubscriptionTracking extends js.Object {
   def setHtml(html: String): Unit = js.native
   def setSubstitutionTag(substitutionTag: String): Unit = js.native
   def setText(text: String): Unit = js.native
-  def toJSON(): AnonHtml = js.native
+  def toJSON(): Html = js.native
 }
 
 object SubscriptionTracking {
@@ -29,7 +29,7 @@ object SubscriptionTracking {
     setHtml: String => Unit,
     setSubstitutionTag: String => Unit,
     setText: String => Unit,
-    toJSON: () => AnonHtml
+    toJSON: () => Html
   ): SubscriptionTracking = {
     val __obj = js.Dynamic.literal(getEnable = js.Any.fromFunction0(getEnable), getHtml = js.Any.fromFunction0(getHtml), getSubstitutionTag = js.Any.fromFunction0(getSubstitutionTag), getText = js.Any.fromFunction0(getText), setEnable = js.Any.fromFunction1(setEnable), setHtml = js.Any.fromFunction1(setHtml), setSubstitutionTag = js.Any.fromFunction1(setSubstitutionTag), setText = js.Any.fromFunction1(setText), toJSON = js.Any.fromFunction0(toJSON))
     __obj.asInstanceOf[SubscriptionTracking]
@@ -89,7 +89,7 @@ object SubscriptionTracking {
         ret
     }
     @scala.inline
-    def withToJSON(value: () => AnonHtml): Self = {
+    def withToJSON(value: () => Html): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
         ret

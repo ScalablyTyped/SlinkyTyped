@@ -1,13 +1,12 @@
 package typingsSlinky.mongodb.mod
 
-import typingsSlinky.mongodb.AnonBatchSize
-import typingsSlinky.mongodb.AnonDropTarget
-import typingsSlinky.mongodb.AnonFull
-import typingsSlinky.mongodb.AnonReadPreference
-import typingsSlinky.mongodb.AnonScale
-import typingsSlinky.mongodb.AnonSession
-import typingsSlinky.mongodb.AnonSessionClientSession
-import typingsSlinky.mongodb.ChangeStreamOptionssessio
+import typingsSlinky.mongodb.anon.BatchSize
+import typingsSlinky.mongodb.anon.ChangeStreamOptionssessio
+import typingsSlinky.mongodb.anon.DropTarget
+import typingsSlinky.mongodb.anon.Full
+import typingsSlinky.mongodb.anon.Scale
+import typingsSlinky.mongodb.anon.Session
+import typingsSlinky.mongodb.anon.SessionClientSession
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -47,8 +46,8 @@ class Db protected () extends EventEmitter {
   def command(command: js.Object): js.Promise[_] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Db.html#command */
   def command(command: js.Object, callback: MongoCallback[_]): Unit = js.native
-  def command(command: js.Object, options: AnonReadPreference): js.Promise[_] = js.native
-  def command(command: js.Object, options: AnonReadPreference, callback: MongoCallback[_]): Unit = js.native
+  def command(command: js.Object, options: typingsSlinky.mongodb.anon.ReadPreference): js.Promise[_] = js.native
+  def command(command: js.Object, options: typingsSlinky.mongodb.anon.ReadPreference, callback: MongoCallback[_]): Unit = js.native
   def createCollection[TSchema](name: String): js.Promise[Collection[TSchema]] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Db.html#createCollection */
   def createCollection[TSchema](name: String, callback: MongoCallback[Collection[TSchema]]): Unit = js.native
@@ -72,28 +71,28 @@ class Db protected () extends EventEmitter {
   def executeDbAdminCommand(command: js.Object): js.Promise[_] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Db.html#executeDbAdminCommand */
   def executeDbAdminCommand(command: js.Object, callback: MongoCallback[_]): Unit = js.native
-  def executeDbAdminCommand(command: js.Object, options: AnonSession): js.Promise[_] = js.native
-  def executeDbAdminCommand(command: js.Object, options: AnonSession, callback: MongoCallback[_]): Unit = js.native
+  def executeDbAdminCommand(command: js.Object, options: Session): js.Promise[_] = js.native
+  def executeDbAdminCommand(command: js.Object, options: Session, callback: MongoCallback[_]): Unit = js.native
   def indexInformation(name: String): js.Promise[_] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Db.html#indexInformation */
   def indexInformation(name: String, callback: MongoCallback[_]): Unit = js.native
-  def indexInformation(name: String, options: AnonFull): js.Promise[_] = js.native
-  def indexInformation(name: String, options: AnonFull, callback: MongoCallback[_]): Unit = js.native
+  def indexInformation(name: String, options: Full): js.Promise[_] = js.native
+  def indexInformation(name: String, options: Full, callback: MongoCallback[_]): Unit = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Db.html#listCollections */
   def listCollections(): CommandCursor = js.native
   def listCollections(filter: js.Object): CommandCursor = js.native
-  def listCollections(filter: js.Object, options: AnonBatchSize): CommandCursor = js.native
+  def listCollections(filter: js.Object, options: BatchSize): CommandCursor = js.native
   def profilingInfo(): js.Promise[Unit] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Db.html#profilingInfo */
   /** @deprecated Query the system.profile collection directly. */
   def profilingInfo(callback: MongoCallback[_]): Unit = js.native
-  def profilingInfo(options: AnonSessionClientSession): js.Promise[Unit] = js.native
-  def profilingInfo(options: AnonSessionClientSession, callback: MongoCallback[Unit]): Unit = js.native
+  def profilingInfo(options: SessionClientSession): js.Promise[Unit] = js.native
+  def profilingInfo(options: SessionClientSession, callback: MongoCallback[Unit]): Unit = js.native
   def profilingLevel(): js.Promise[ProfilingLevel] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Db.html#profilingLevel */
   def profilingLevel(callback: MongoCallback[ProfilingLevel]): Unit = js.native
-  def profilingLevel(options: AnonSessionClientSession): js.Promise[ProfilingLevel] = js.native
-  def profilingLevel(options: AnonSessionClientSession, callback: MongoCallback[ProfilingLevel]): Unit = js.native
+  def profilingLevel(options: SessionClientSession): js.Promise[ProfilingLevel] = js.native
+  def profilingLevel(options: SessionClientSession, callback: MongoCallback[ProfilingLevel]): Unit = js.native
   def removeUser(username: String): js.Promise[_] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Db.html#removeUser */
   def removeUser(username: String, callback: MongoCallback[_]): Unit = js.native
@@ -102,23 +101,23 @@ class Db protected () extends EventEmitter {
   def renameCollection[TSchema](fromCollection: String, toCollection: String): js.Promise[Collection[TSchema]] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Db.html#renameCollection */
   def renameCollection[TSchema](fromCollection: String, toCollection: String, callback: MongoCallback[Collection[TSchema]]): Unit = js.native
-  def renameCollection[TSchema](fromCollection: String, toCollection: String, options: AnonDropTarget): js.Promise[Collection[TSchema]] = js.native
+  def renameCollection[TSchema](fromCollection: String, toCollection: String, options: DropTarget): js.Promise[Collection[TSchema]] = js.native
   def renameCollection[TSchema](
     fromCollection: String,
     toCollection: String,
-    options: AnonDropTarget,
+    options: DropTarget,
     callback: MongoCallback[Collection[TSchema]]
   ): Unit = js.native
   def setProfilingLevel(level: ProfilingLevel): js.Promise[ProfilingLevel] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Db.html#setProfilingLevel */
   def setProfilingLevel(level: ProfilingLevel, callback: MongoCallback[ProfilingLevel]): Unit = js.native
-  def setProfilingLevel(level: ProfilingLevel, options: AnonSessionClientSession): js.Promise[ProfilingLevel] = js.native
-  def setProfilingLevel(level: ProfilingLevel, options: AnonSessionClientSession, callback: MongoCallback[ProfilingLevel]): Unit = js.native
+  def setProfilingLevel(level: ProfilingLevel, options: SessionClientSession): js.Promise[ProfilingLevel] = js.native
+  def setProfilingLevel(level: ProfilingLevel, options: SessionClientSession, callback: MongoCallback[ProfilingLevel]): Unit = js.native
   def stats(): js.Promise[_] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Db.html#stats */
   def stats(callback: MongoCallback[_]): Unit = js.native
-  def stats(options: AnonScale): js.Promise[_] = js.native
-  def stats(options: AnonScale, callback: MongoCallback[_]): Unit = js.native
+  def stats(options: Scale): js.Promise[_] = js.native
+  def stats(options: Scale, callback: MongoCallback[_]): Unit = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.3/api/Db.html#watch */
   def watch[TSchema /* <: js.Object */](): ChangeStream[TSchema] = js.native
   def watch[TSchema /* <: js.Object */](pipeline: js.Array[js.Object]): ChangeStream[TSchema] = js.native

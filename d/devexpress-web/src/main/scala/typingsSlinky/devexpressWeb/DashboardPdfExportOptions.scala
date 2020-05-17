@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Contains options related to exporting a dashboard/dashboard item to the PDF format.
   */
-@JSGlobal("DashboardPdfExportOptions")
 @js.native
-class DashboardPdfExportOptions () extends js.Object {
+trait DashboardPdfExportOptions extends js.Object {
   /**
     * Gets or sets the number of horizontal/vertical pages spanning the total width/height of a dashboard/dashboard item.
     */
@@ -120,5 +119,218 @@ class DashboardPdfExportOptions () extends js.Object {
     * Gets or sets the export size mode for the Treemap dashboard item.
     */
   var TreemapSizeMode: String = js.native
+}
+
+object DashboardPdfExportOptions {
+  @scala.inline
+  def apply(
+    AutoFitPageCount: Double,
+    CardAutoArrangeContent: Boolean,
+    ChartAutomaticPageLayout: Boolean,
+    ChartSizeMode: String,
+    DashboardAutomaticPageLayout: Boolean,
+    DashboardStatePosition: String,
+    DocumentScaleMode: String,
+    ExportFilters: Boolean,
+    ExportParameters: Boolean,
+    FontInfo: ExportFontInfo,
+    GaugeAutoArrangeContent: Boolean,
+    GridFitToPageWidth: Boolean,
+    GridPrintHeadersOnEveryPage: Boolean,
+    IncludeHiddenParameters: Boolean,
+    MapAutomaticPageLayout: Boolean,
+    MapSizeMode: String,
+    PageLayout: String,
+    PaperKind: String,
+    PieAutoArrangeContent: Boolean,
+    PivotPrintHeadersOnEveryPage: Boolean,
+    RangeFilterAutomaticPageLayout: Boolean,
+    RangeFilterSizeMode: String,
+    ScaleFactor: Double,
+    ScaleMode: String,
+    ShowTitle: Boolean,
+    Title: String,
+    TreemapAutomaticPageLayout: Boolean,
+    TreemapSizeMode: String
+  ): DashboardPdfExportOptions = {
+    val __obj = js.Dynamic.literal(AutoFitPageCount = AutoFitPageCount.asInstanceOf[js.Any], CardAutoArrangeContent = CardAutoArrangeContent.asInstanceOf[js.Any], ChartAutomaticPageLayout = ChartAutomaticPageLayout.asInstanceOf[js.Any], ChartSizeMode = ChartSizeMode.asInstanceOf[js.Any], DashboardAutomaticPageLayout = DashboardAutomaticPageLayout.asInstanceOf[js.Any], DashboardStatePosition = DashboardStatePosition.asInstanceOf[js.Any], DocumentScaleMode = DocumentScaleMode.asInstanceOf[js.Any], ExportFilters = ExportFilters.asInstanceOf[js.Any], ExportParameters = ExportParameters.asInstanceOf[js.Any], FontInfo = FontInfo.asInstanceOf[js.Any], GaugeAutoArrangeContent = GaugeAutoArrangeContent.asInstanceOf[js.Any], GridFitToPageWidth = GridFitToPageWidth.asInstanceOf[js.Any], GridPrintHeadersOnEveryPage = GridPrintHeadersOnEveryPage.asInstanceOf[js.Any], IncludeHiddenParameters = IncludeHiddenParameters.asInstanceOf[js.Any], MapAutomaticPageLayout = MapAutomaticPageLayout.asInstanceOf[js.Any], MapSizeMode = MapSizeMode.asInstanceOf[js.Any], PageLayout = PageLayout.asInstanceOf[js.Any], PaperKind = PaperKind.asInstanceOf[js.Any], PieAutoArrangeContent = PieAutoArrangeContent.asInstanceOf[js.Any], PivotPrintHeadersOnEveryPage = PivotPrintHeadersOnEveryPage.asInstanceOf[js.Any], RangeFilterAutomaticPageLayout = RangeFilterAutomaticPageLayout.asInstanceOf[js.Any], RangeFilterSizeMode = RangeFilterSizeMode.asInstanceOf[js.Any], ScaleFactor = ScaleFactor.asInstanceOf[js.Any], ScaleMode = ScaleMode.asInstanceOf[js.Any], ShowTitle = ShowTitle.asInstanceOf[js.Any], Title = Title.asInstanceOf[js.Any], TreemapAutomaticPageLayout = TreemapAutomaticPageLayout.asInstanceOf[js.Any], TreemapSizeMode = TreemapSizeMode.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DashboardPdfExportOptions]
+  }
+  @scala.inline
+  implicit class DashboardPdfExportOptionsOps[Self <: DashboardPdfExportOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoFitPageCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoFitPageCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCardAutoArrangeContent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CardAutoArrangeContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChartAutomaticPageLayout(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChartAutomaticPageLayout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChartSizeMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChartSizeMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDashboardAutomaticPageLayout(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DashboardAutomaticPageLayout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDashboardStatePosition(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DashboardStatePosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDocumentScaleMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentScaleMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExportFilters(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportFilters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExportParameters(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExportParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFontInfo(value: ExportFontInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FontInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGaugeAutoArrangeContent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GaugeAutoArrangeContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGridFitToPageWidth(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GridFitToPageWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGridPrintHeadersOnEveryPage(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GridPrintHeadersOnEveryPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIncludeHiddenParameters(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IncludeHiddenParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMapAutomaticPageLayout(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MapAutomaticPageLayout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMapSizeMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MapSizeMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPageLayout(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PageLayout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaperKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaperKind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPieAutoArrangeContent(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PieAutoArrangeContent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPivotPrintHeadersOnEveryPage(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PivotPrintHeadersOnEveryPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRangeFilterAutomaticPageLayout(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RangeFilterAutomaticPageLayout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRangeFilterSizeMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RangeFilterSizeMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScaleFactor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScaleFactor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScaleMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScaleMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShowTitle(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTreemapAutomaticPageLayout(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TreemapAutomaticPageLayout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTreemapSizeMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TreemapSizeMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

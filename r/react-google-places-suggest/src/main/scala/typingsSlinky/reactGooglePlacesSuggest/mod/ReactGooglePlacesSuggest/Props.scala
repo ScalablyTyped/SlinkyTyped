@@ -3,7 +3,7 @@ package typingsSlinky.reactGooglePlacesSuggest.mod.ReactGooglePlacesSuggest
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.googlemaps.google.maps.places.AutocompletionRequest
-import typingsSlinky.reactGooglePlacesSuggest.Typeofmaps
+import typingsSlinky.reactGooglePlacesSuggest.anon.Typeofmaps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

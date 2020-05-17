@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonDepthFailMaterial
+import typingsSlinky.cesium.anon.DepthFailMaterial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "PolylineGraphics")
 @js.native
 class PolylineGraphics () extends js.Object {
-  def this(options: AnonDepthFailMaterial) = this()
+  def this(options: DepthFailMaterial) = this()
   var arcType: Property = js.native
   var clampToGround: Property = js.native
   var classificationType: Property = js.native

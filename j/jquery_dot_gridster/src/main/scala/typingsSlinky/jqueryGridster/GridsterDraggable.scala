@@ -1,6 +1,7 @@
 package typingsSlinky.jqueryGridster
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
+import typingsSlinky.jqueryGridster.anon.Helper
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,13 +9,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GridsterDraggable extends js.Object {
   var distance: js.UndefOr[Double] = js.native
-  var drag: js.UndefOr[js.Function2[/* event */ Event_, /* ui */ GridsterUi, Unit]] = js.native
+  var drag: js.UndefOr[js.Function2[/* event */ Event, /* ui */ GridsterUi, Unit]] = js.native
   var handle: js.UndefOr[String] = js.native
   var items: js.UndefOr[js.Any] = js.native
   var limit: js.UndefOr[Boolean] = js.native
   var offset_left: js.UndefOr[Double] = js.native
-  var start: js.UndefOr[js.Function2[/* event */ Event_, /* ui */ AnonHelper, Unit]] = js.native
-  var stop: js.UndefOr[js.Function2[/* event */ Event_, /* ui */ AnonHelper, Unit]] = js.native
+  var start: js.UndefOr[js.Function2[/* event */ Event, /* ui */ Helper, Unit]] = js.native
+  var stop: js.UndefOr[js.Function2[/* event */ Event, /* ui */ Helper, Unit]] = js.native
 }
 
 object GridsterDraggable {
@@ -42,7 +43,7 @@ object GridsterDraggable {
         ret
     }
     @scala.inline
-    def withDrag(value: (/* event */ Event_, /* ui */ GridsterUi) => Unit): Self = {
+    def withDrag(value: (/* event */ Event, /* ui */ GridsterUi) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(js.Any.fromFunction2(value))
         ret
@@ -102,7 +103,7 @@ object GridsterDraggable {
         ret
     }
     @scala.inline
-    def withStart(value: (/* event */ Event_, /* ui */ AnonHelper) => Unit): Self = {
+    def withStart(value: (/* event */ Event, /* ui */ Helper) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction2(value))
         ret
@@ -114,7 +115,7 @@ object GridsterDraggable {
         ret
     }
     @scala.inline
-    def withStop(value: (/* event */ Event_, /* ui */ AnonHelper) => Unit): Self = {
+    def withStop(value: (/* event */ Event, /* ui */ Helper) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction2(value))
         ret

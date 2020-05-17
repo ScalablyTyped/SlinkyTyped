@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IdValue extends _StoreValue {
+trait IdValue extends StoreValue {
   var generated: Boolean = js.native
   var id: String = js.native
   var `type`: id = js.native

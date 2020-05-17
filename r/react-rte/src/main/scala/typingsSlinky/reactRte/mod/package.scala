@@ -21,7 +21,6 @@ package object mod {
     /* element */ org.scalajs.dom.raw.Element, 
     js.UndefOr[scala.Null | typingsSlinky.reactRte.mod.CustomBlockObject]
   ]
-  type CustomControl = slinky.core.TagMod[scala.Any] | typingsSlinky.reactRte.mod.CustControlFunc
   type CustomInlineFn = js.Function2[
     /* element */ org.scalajs.dom.raw.Element, 
     /* inlineCreators */ typingsSlinky.reactRte.mod.InlineCreators, 

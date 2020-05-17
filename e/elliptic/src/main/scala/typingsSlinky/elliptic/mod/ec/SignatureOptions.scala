@@ -1,13 +1,13 @@
 package typingsSlinky.elliptic.mod.ec
 
 import typingsSlinky.elliptic.mod.BNInput
-import typingsSlinky.elliptic.mod._SignatureInput
+import typingsSlinky.elliptic.mod.SignatureInput
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SignatureOptions extends _SignatureInput {
+trait SignatureOptions extends SignatureInput {
   var r: BNInput = js.native
   var recoveryParam: js.UndefOr[Double] = js.native
   var s: BNInput = js.native

@@ -1,17 +1,33 @@
 package typingsSlinky.dockerode.mod
 
+import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.dockerode.dockerodeStrings.http
 import typingsSlinky.dockerode.dockerodeStrings.https
 import typingsSlinky.dockerode.dockerodeStrings.ssh
 import typingsSlinky.node.Buffer
 import typingsSlinky.std.PromiseConstructor
+import typingsSlinky.std.global.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait DockerOptions extends js.Object {
-  var Promise: js.UndefOr[PromiseConstructor] = js.native
+  var Promise: js.UndefOr[
+    PromiseConstructor with (Instantiable1[
+      /* executor */ js.Function2[
+        /* resolve */ js.Function1[
+          /* value */ js.UndefOr[
+            (/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any) | (js.Thenable[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any])
+          ], 
+          Unit
+        ], 
+        /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
+        Unit
+      ], 
+      typingsSlinky.std.global.Promise[js.Object]
+    ])
+  ] = js.native
   var ca: js.UndefOr[String | (js.Array[Buffer | String]) | Buffer] = js.native
   var cert: js.UndefOr[String | (js.Array[Buffer | String]) | Buffer] = js.native
   var host: js.UndefOr[String] = js.native
@@ -38,7 +54,21 @@ object DockerOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPromise(value: PromiseConstructor): Self = {
+    def withPromise(
+      value: PromiseConstructor with (Instantiable1[
+          /* executor */ js.Function2[
+            /* resolve */ js.Function1[
+              /* value */ js.UndefOr[
+                (/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any) | (js.Thenable[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any])
+              ], 
+              Unit
+            ], 
+            /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
+            Unit
+          ], 
+          Promise[js.Object]
+        ])
+    ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Promise")(value.asInstanceOf[js.Any])
         ret

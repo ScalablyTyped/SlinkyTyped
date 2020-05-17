@@ -6,10 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Modern mail apps evaluate and apply the EAS security policies. An EasClientSecurityPolicy object is constructed by the caller app to set policies received from the Exchange server or application. */
-@JSGlobal("Windows.Security.ExchangeActiveSyncProvisioning.EasClientSecurityPolicy")
 @js.native
-/** Creates an instance of an object that allows the caller app to set policies received from the Exchange server for evaluation or application. */
-class EasClientSecurityPolicy () extends js.Object {
+trait EasClientSecurityPolicy extends js.Object {
   /** Gets or sets the ability to prevent convenience logons. DisallowConvenienceLogon is not defined in MS-ASPROV. It is mapped from MS-ASPROV AllowSimplePassword with respect to the Windows password policies. */
   var disallowConvenienceLogon: Boolean = js.native
   /** Gets or sets the maximum length of time the computer can remain inactive before it is locked. The MS-ASPROV name is MaxInactivityTimeDeviceLock. */
@@ -36,5 +34,92 @@ class EasClientSecurityPolicy () extends js.Object {
     * @return Returns the results of the compliance check, in synchronous mode.
     */
   def checkCompliance(): EasComplianceResults = js.native
+}
+
+object EasClientSecurityPolicy {
+  @scala.inline
+  def apply(
+    applyAsync: () => IPromiseWithIAsyncOperation[EasComplianceResults],
+    checkCompliance: () => EasComplianceResults,
+    disallowConvenienceLogon: Boolean,
+    maxInactivityTimeLock: Double,
+    maxPasswordFailedAttempts: Double,
+    minPasswordComplexCharacters: Double,
+    minPasswordLength: Double,
+    passwordExpiration: Double,
+    passwordHistory: Double,
+    requireEncryption: Boolean
+  ): EasClientSecurityPolicy = {
+    val __obj = js.Dynamic.literal(applyAsync = js.Any.fromFunction0(applyAsync), checkCompliance = js.Any.fromFunction0(checkCompliance), disallowConvenienceLogon = disallowConvenienceLogon.asInstanceOf[js.Any], maxInactivityTimeLock = maxInactivityTimeLock.asInstanceOf[js.Any], maxPasswordFailedAttempts = maxPasswordFailedAttempts.asInstanceOf[js.Any], minPasswordComplexCharacters = minPasswordComplexCharacters.asInstanceOf[js.Any], minPasswordLength = minPasswordLength.asInstanceOf[js.Any], passwordExpiration = passwordExpiration.asInstanceOf[js.Any], passwordHistory = passwordHistory.asInstanceOf[js.Any], requireEncryption = requireEncryption.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EasClientSecurityPolicy]
+  }
+  @scala.inline
+  implicit class EasClientSecurityPolicyOps[Self <: EasClientSecurityPolicy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplyAsync(value: () => IPromiseWithIAsyncOperation[EasComplianceResults]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applyAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withCheckCompliance(value: () => EasComplianceResults): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checkCompliance")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDisallowConvenienceLogon(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disallowConvenienceLogon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxInactivityTimeLock(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxInactivityTimeLock")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxPasswordFailedAttempts(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPasswordFailedAttempts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinPasswordComplexCharacters(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minPasswordComplexCharacters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMinPasswordLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minPasswordLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPasswordExpiration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordExpiration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPasswordHistory(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("passwordHistory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRequireEncryption(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requireEncryption")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

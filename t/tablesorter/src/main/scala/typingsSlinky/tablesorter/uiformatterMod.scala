@@ -1,7 +1,7 @@
 package typingsSlinky.tablesorter
 
-import typingsSlinky.tablesorter.mod._Global_.HTMLElement
-import typingsSlinky.tablesorter.mod._Global_.JQuery
+import typingsSlinky.tablesorter.mod.global.HTMLElement
+import typingsSlinky.tablesorter.mod.global.JQuery
 import typingsSlinky.tablesorter.uidatecompareoptionsMod.UIDateCompareOptions
 import typingsSlinky.tablesorter.uidaterangeoptionsMod.UIDateRangeOptions
 import typingsSlinky.tablesorter.uirangeoptionsMod.UIRangeOptions

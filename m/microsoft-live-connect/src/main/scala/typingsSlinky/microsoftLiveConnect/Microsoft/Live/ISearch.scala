@@ -1,6 +1,6 @@
 package typingsSlinky.microsoftLiveConnect.Microsoft.Live
 
-import typingsSlinky.microsoftLiveConnect.AnonNext
+import typingsSlinky.microsoftLiveConnect.anon.Next
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait ISearch extends js.Object {
     * The path strings that reference the next and previous sets in a
     * paginated response.
     */
-  var paging: js.UndefOr[AnonNext] = js.native
+  var paging: js.UndefOr[Next] = js.native
 }
 
 object ISearch {
@@ -43,7 +43,7 @@ object ISearch {
         ret
     }
     @scala.inline
-    def withPaging(value: AnonNext): Self = {
+    def withPaging(value: Next): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("paging")(value.asInstanceOf[js.Any])
         ret

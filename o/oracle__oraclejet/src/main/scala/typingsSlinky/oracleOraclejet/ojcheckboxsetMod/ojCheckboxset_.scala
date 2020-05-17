@@ -3,7 +3,7 @@ package typingsSlinky.oracleOraclejet.ojcheckboxsetMod
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.AnonRequired
+import typingsSlinky.oracleOraclejet.anon.Required
 import typingsSlinky.oracleOraclejet.ojcheckboxsetMod.ojCheckboxset.OptionContext
 import typingsSlinky.oracleOraclejet.ojcheckboxsetMod.ojCheckboxset.OptionsKeys
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
@@ -48,7 +48,7 @@ trait ojCheckboxset_[K, D]
   var optionsKeys: js.UndefOr[OptionsKeys] = js.native
   var required: Boolean = js.native
   @JSName("translations")
-  var translations_ojCheckboxset_ : AnonRequired = js.native
+  var translations_ojCheckboxset_ : Required = js.native
   @JSName("value")
   var value_ojCheckboxset_ : js.Array[_] = js.native
   @JSName("addEventListener")
@@ -119,7 +119,7 @@ trait ojCheckboxset_[K, D]
   @JSName("setProperty")
   def setProperty_required(property: required, value: Boolean): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonRequired): Unit = js.native
+  def setProperty_translations(property: translations, value: Required): Unit = js.native
   def validate(): js.Promise[String] = js.native
 }
 

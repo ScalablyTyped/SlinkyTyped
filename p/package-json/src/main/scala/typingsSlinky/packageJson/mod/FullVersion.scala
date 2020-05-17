@@ -1,7 +1,7 @@
 package typingsSlinky.packageJson.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.packageJson.AnonIntegrity
+import typingsSlinky.packageJson.anon.Integrity
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +30,7 @@ object FullVersion {
     _nodeVersion: String,
     _npmUser: String,
     _npmVersion: String,
-    dist: AnonIntegrity,
+    dist: Integrity,
     name: String,
     version: String
   ): FullVersion = {

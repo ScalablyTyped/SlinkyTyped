@@ -1,13 +1,13 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonAnimationDurationUpdate
-import typingsSlinky.echarts.AnonAnimationEasing
-import typingsSlinky.echarts.AnonAnimationEasingUpdate
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonFontStyle
-import typingsSlinky.echarts.AnonLabelLine
-import typingsSlinky.echarts.AnonLength
-import typingsSlinky.echarts.AnonShadowOffsetY
+import typingsSlinky.echarts.anon.AnimationDurationUpdate
+import typingsSlinky.echarts.anon.AnimationEasing
+import typingsSlinky.echarts.anon.AnimationEasingUpdate
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.FontStyle
+import typingsSlinky.echarts.anon.LabelLine
+import typingsSlinky.echarts.anon.Length
+import typingsSlinky.echarts.anon.ShadowOffsetY
 import typingsSlinky.echarts.echarts.EChartOption.SeriesFunnel.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -173,7 +173,7 @@ trait SeriesFunnel_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis
     */
-  var emphasis: js.UndefOr[AnonLabelLine] = js.native
+  var emphasis: js.UndefOr[LabelLine] = js.native
   /**
     * Horizontal align.
     * Defaults to align center. Can be 'left', 'right', 'center'.
@@ -207,7 +207,7 @@ trait SeriesFunnel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonShadowOffsetY] = js.native
+  var itemStyle: js.UndefOr[ShadowOffsetY] = js.native
   /**
     * Text label of funnel chart, to explain some data information
     * about graphic item like value, name and so on.
@@ -219,7 +219,7 @@ trait SeriesFunnel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.label
     */
-  var label: js.UndefOr[AnonFontStyle] = js.native
+  var label: js.UndefOr[FontStyle] = js.native
   /**
     * The visual guide line style of label. When
     * [label position](https://echarts.apache.org/en/option.html#series-funnel.label.position)
@@ -228,7 +228,7 @@ trait SeriesFunnel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine
     */
-  var labelLine: js.UndefOr[AnonLength] = js.native
+  var labelLine: js.UndefOr[Length] = js.native
   /**
     * Whether to enable highlighting chart when
     * [legend](https://echarts.apache.org/en/option.html#legend)
@@ -247,21 +247,21 @@ trait SeriesFunnel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.markArea
     */
-  var markArea: js.UndefOr[AnonAnimationEasingUpdate] = js.native
+  var markArea: js.UndefOr[AnimationEasingUpdate] = js.native
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.markLine
     */
-  var markLine: js.UndefOr[AnonAnimationEasing] = js.native
+  var markLine: js.UndefOr[AnimationEasing] = js.native
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint
     */
-  var markPoint: js.UndefOr[AnonAnimationDurationUpdate] = js.native
+  var markPoint: js.UndefOr[AnimationDurationUpdate] = js.native
   /**
     * The specified maximum value.
     *
@@ -360,7 +360,7 @@ trait SeriesFunnel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * @default
     * "funnel"
@@ -502,7 +502,7 @@ object SeriesFunnel_ {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonLabelLine): Self = {
+    def withEmphasis(value: LabelLine): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -550,7 +550,7 @@ object SeriesFunnel_ {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonShadowOffsetY): Self = {
+    def withItemStyle(value: ShadowOffsetY): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -562,7 +562,7 @@ object SeriesFunnel_ {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonFontStyle): Self = {
+    def withLabel(value: FontStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -574,7 +574,7 @@ object SeriesFunnel_ {
         ret
     }
     @scala.inline
-    def withLabelLine(value: AnonLength): Self = {
+    def withLabelLine(value: Length): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("labelLine")(value.asInstanceOf[js.Any])
         ret
@@ -598,7 +598,7 @@ object SeriesFunnel_ {
         ret
     }
     @scala.inline
-    def withMarkArea(value: AnonAnimationEasingUpdate): Self = {
+    def withMarkArea(value: AnimationEasingUpdate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(value.asInstanceOf[js.Any])
         ret
@@ -610,7 +610,7 @@ object SeriesFunnel_ {
         ret
     }
     @scala.inline
-    def withMarkLine(value: AnonAnimationEasing): Self = {
+    def withMarkLine(value: AnimationEasing): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(value.asInstanceOf[js.Any])
         ret
@@ -622,7 +622,7 @@ object SeriesFunnel_ {
         ret
     }
     @scala.inline
-    def withMarkPoint(value: AnonAnimationDurationUpdate): Self = {
+    def withMarkPoint(value: AnimationDurationUpdate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(value.asInstanceOf[js.Any])
         ret
@@ -718,7 +718,7 @@ object SeriesFunnel_ {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

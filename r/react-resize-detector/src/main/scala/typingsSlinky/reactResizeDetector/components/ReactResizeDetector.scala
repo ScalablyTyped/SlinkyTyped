@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactResizeDetector.AnonLeading
+import typingsSlinky.reactResizeDetector.anon.Leading
 import typingsSlinky.reactResizeDetector.mod.ReactResizeDetectorDimensions
 import typingsSlinky.reactResizeDetector.mod.ReactResizeDetectorProps
 import typingsSlinky.reactResizeDetector.mod.default
@@ -36,7 +36,7 @@ object ReactResizeDetector {
     @scala.inline
     def refreshMode(value: throttle | debounce): this.type = set("refreshMode", value.asInstanceOf[js.Any])
     @scala.inline
-    def refreshOptions(value: AnonLeading): this.type = set("refreshOptions", value.asInstanceOf[js.Any])
+    def refreshOptions(value: Leading): this.type = set("refreshOptions", value.asInstanceOf[js.Any])
     @scala.inline
     def refreshRate(value: Double): this.type = set("refreshRate", value.asInstanceOf[js.Any])
     @scala.inline

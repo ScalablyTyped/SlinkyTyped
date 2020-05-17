@@ -1,6 +1,6 @@
 package typingsSlinky.antd.mod
 
-import typingsSlinky.antd.AnonGapDegree
+import typingsSlinky.antd.anon.GapDegree
 import typingsSlinky.antd.progressMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +14,6 @@ class Progress () extends default
 @JSImport("antd", "Progress")
 @js.native
 object Progress extends js.Object {
-  var defaultProps: AnonGapDegree = js.native
+  var defaultProps: GapDegree = js.native
 }
 

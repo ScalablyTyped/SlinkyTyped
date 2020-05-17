@@ -2,7 +2,7 @@ package typingsSlinky.tensorflowTfjsLayers.recurrentMod
 
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
-import typingsSlinky.tensorflowTfjsLayers.AnonConstants
+import typingsSlinky.tensorflowTfjsLayers.anon.Constants
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.SymbolicTensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,12 +15,12 @@ object standardizeArgs extends js.Object {
     inputs: Tensor[Rank] | (js.Array[SymbolicTensor | Tensor[Rank]]) | SymbolicTensor,
     initialState: Tensor[Rank] | (js.Array[SymbolicTensor | Tensor[Rank]]) | SymbolicTensor,
     constants: Tensor[Rank] | (js.Array[SymbolicTensor | Tensor[Rank]]) | SymbolicTensor
-  ): AnonConstants = js.native
+  ): Constants = js.native
   def apply(
     inputs: Tensor[Rank] | (js.Array[SymbolicTensor | Tensor[Rank]]) | SymbolicTensor,
     initialState: Tensor[Rank] | (js.Array[SymbolicTensor | Tensor[Rank]]) | SymbolicTensor,
     constants: Tensor[Rank] | (js.Array[SymbolicTensor | Tensor[Rank]]) | SymbolicTensor,
     numConstants: Double
-  ): AnonConstants = js.native
+  ): Constants = js.native
 }
 

@@ -2,10 +2,10 @@ package typingsSlinky.reactVirtualized.esWindowScrollerMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Window
 import slinky.core.TagMod
-import typingsSlinky.reactVirtualized.AnonHeight
-import typingsSlinky.reactVirtualized.AnonScrollLeft
-import typingsSlinky.std.Window_
+import typingsSlinky.reactVirtualized.anon.Height
+import typingsSlinky.reactVirtualized.anon.ScrollLeft
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,11 +21,11 @@ trait WindowScrollerProps
   */
 /* key */ StringDictionary[js.Any] {
   /** Callback to be invoked on-resize: ({ height, width }) */
-  var onResize: js.UndefOr[js.Function1[/* params */ AnonHeight, Unit]] = js.native
+  var onResize: js.UndefOr[js.Function1[/* params */ Height, Unit]] = js.native
   /** Callback to be invoked on-scroll: ({ scrollLeft, scrollTop }) */
-  var onScroll: js.UndefOr[js.Function1[/* params */ AnonScrollLeft, Unit]] = js.native
+  var onScroll: js.UndefOr[js.Function1[/* params */ ScrollLeft, Unit]] = js.native
   /** Element to attach scroll event listeners. Defaults to window. */
-  var scrollElement: js.UndefOr[(Window_ with (/* globalThis */ js.Any)) | Element] = js.native
+  var scrollElement: js.UndefOr[(Window with (/* globalThis */ js.Any)) | Element] = js.native
   /**
     * Wait this amount of time after the last scroll event before resetting child `pointer-events`.
     */
@@ -61,7 +61,7 @@ object WindowScrollerProps {
         ret
     }
     @scala.inline
-    def withOnResize(value: /* params */ AnonHeight => Unit): Self = {
+    def withOnResize(value: /* params */ Height => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onResize")(js.Any.fromFunction1(value))
         ret
@@ -73,7 +73,7 @@ object WindowScrollerProps {
         ret
     }
     @scala.inline
-    def withOnScroll(value: /* params */ AnonScrollLeft => Unit): Self = {
+    def withOnScroll(value: /* params */ ScrollLeft => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.Any.fromFunction1(value))
         ret
@@ -91,7 +91,7 @@ object WindowScrollerProps {
         ret
     }
     @scala.inline
-    def withScrollElement(value: (Window_ with (/* globalThis */ js.Any)) | Element): Self = {
+    def withScrollElement(value: (Window with (/* globalThis */ js.Any)) | Element): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollElement")(value.asInstanceOf[js.Any])
         ret

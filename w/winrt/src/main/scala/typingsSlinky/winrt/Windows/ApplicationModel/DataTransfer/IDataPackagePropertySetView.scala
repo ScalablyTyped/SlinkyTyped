@@ -1,12 +1,12 @@
 package typingsSlinky.winrt.Windows.ApplicationModel.DataTransfer
 
-import typingsSlinky.winrt.AnonFirst
 import typingsSlinky.winrt.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrt.Windows.Foundation.Collections.IKeyValuePair
 import typingsSlinky.winrt.Windows.Foundation.Collections.IMapView
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrt.Windows.Foundation.Uri
 import typingsSlinky.winrt.Windows.Storage.Streams.RandomAccessStreamReference
+import typingsSlinky.winrt.anon.First
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +33,7 @@ object IDataPackagePropertySetView {
     hasKey: String => Boolean,
     lookup: String => js.Any,
     size: Double,
-    split: () => AnonFirst[String, js.Any],
+    split: () => First[String, js.Any],
     thumbnail: RandomAccessStreamReference,
     title: String
   ): IDataPackagePropertySetView = {

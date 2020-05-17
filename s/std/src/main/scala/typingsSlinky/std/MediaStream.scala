@@ -1,7 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
-import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.std.stdStrings.addtrack
 import typingsSlinky.std.stdStrings.removetrack
 import scala.scalajs.js
@@ -146,13 +144,4 @@ trait MediaStream extends EventTarget {
   ): Unit = js.native
   def removeTrack(track: org.scalajs.dom.experimental.mediastream.MediaStreamTrack): Unit = js.native
 }
-
-@JSGlobal("MediaStream")
-@js.native
-object MediaStream
-  extends Instantiable0[org.scalajs.dom.experimental.mediastream.MediaStream]
-     with Instantiable1[
-      (/* tracks */ js.Array[org.scalajs.dom.experimental.mediastream.MediaStreamTrack]) | (/* stream */ org.scalajs.dom.experimental.mediastream.MediaStream), 
-      org.scalajs.dom.experimental.mediastream.MediaStream
-    ]
 

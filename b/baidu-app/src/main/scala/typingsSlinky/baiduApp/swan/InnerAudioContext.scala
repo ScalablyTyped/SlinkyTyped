@@ -1,6 +1,6 @@
 package typingsSlinky.baiduApp.swan
 
-import typingsSlinky.baiduApp.AnonPosition
+import typingsSlinky.baiduApp.anon.Position
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -72,7 +72,7 @@ trait InnerAudioContext extends js.Object {
   /** 播放 */
   def play(): Unit = js.native
   /** 跳转到指定位置，单位 s */
-  def seek(options: AnonPosition): Unit = js.native
+  def seek(options: Position): Unit = js.native
   /** 停止 */
   def stop(): Unit = js.native
 }
@@ -106,7 +106,7 @@ object InnerAudioContext {
     pause: () => Unit,
     paused: Boolean,
     play: () => Unit,
-    seek: AnonPosition => Unit,
+    seek: Position => Unit,
     stop: () => Unit
   ): InnerAudioContext = {
     val __obj = js.Dynamic.literal(currentTime = currentTime.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), duration = duration.asInstanceOf[js.Any], offCanplay = js.Any.fromFunction1(offCanplay), offEnded = js.Any.fromFunction1(offEnded), offError = js.Any.fromFunction1(offError), offPause = js.Any.fromFunction1(offPause), offPlay = js.Any.fromFunction1(offPlay), offSeeked = js.Any.fromFunction1(offSeeked), offSeeking = js.Any.fromFunction1(offSeeking), offStop = js.Any.fromFunction1(offStop), offTimeUpdate = js.Any.fromFunction1(offTimeUpdate), offWaiting = js.Any.fromFunction1(offWaiting), onCanplay = js.Any.fromFunction1(onCanplay), onEnded = js.Any.fromFunction1(onEnded), onError = js.Any.fromFunction1(onError), onPause = js.Any.fromFunction1(onPause), onPlay = js.Any.fromFunction1(onPlay), onSeeked = js.Any.fromFunction1(onSeeked), onSeeking = js.Any.fromFunction1(onSeeking), onStop = js.Any.fromFunction1(onStop), onTimeUpdate = js.Any.fromFunction1(onTimeUpdate), onWaiting = js.Any.fromFunction1(onWaiting), pause = js.Any.fromFunction0(pause), paused = paused.asInstanceOf[js.Any], play = js.Any.fromFunction0(play), seek = js.Any.fromFunction1(seek), stop = js.Any.fromFunction0(stop))
@@ -275,7 +275,7 @@ object InnerAudioContext {
         ret
     }
     @scala.inline
-    def withSeek(value: AnonPosition => Unit): Self = {
+    def withSeek(value: Position => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seek")(js.Any.fromFunction1(value))
         ret

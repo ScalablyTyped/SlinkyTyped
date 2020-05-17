@@ -1,7 +1,7 @@
 package typingsSlinky.reactDragtastic.mod
 
 import slinky.core.TagMod
-import typingsSlinky.reactDragtastic.StateisOverAcceptedboolea
+import typingsSlinky.reactDragtastic.anon.StateisOverAcceptedboolea
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

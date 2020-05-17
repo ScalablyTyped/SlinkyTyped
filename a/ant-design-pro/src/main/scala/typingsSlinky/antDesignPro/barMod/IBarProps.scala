@@ -1,7 +1,7 @@
 package typingsSlinky.antDesignPro.barMod
 
 import slinky.core.TagMod
-import typingsSlinky.antDesignPro.AnonX
+import typingsSlinky.antDesignPro.anon.X
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait IBarProps extends js.Object {
   var autoLabel: js.UndefOr[Boolean] = js.native
   var color: js.UndefOr[String] = js.native
-  var data: js.Array[AnonX] = js.native
+  var data: js.Array[X] = js.native
   var height: Double = js.native
   var padding: js.UndefOr[js.Tuple4[Double, Double, Double, Double]] = js.native
   var style: js.UndefOr[CSSProperties] = js.native
@@ -20,7 +20,7 @@ trait IBarProps extends js.Object {
 
 object IBarProps {
   @scala.inline
-  def apply(data: js.Array[AnonX], height: Double): IBarProps = {
+  def apply(data: js.Array[X], height: Double): IBarProps = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any])
     __obj.asInstanceOf[IBarProps]
   }
@@ -31,7 +31,7 @@ object IBarProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withData(value: js.Array[AnonX]): Self = {
+    def withData(value: js.Array[X]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

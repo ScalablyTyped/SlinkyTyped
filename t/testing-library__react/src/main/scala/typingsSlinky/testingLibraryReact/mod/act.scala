@@ -1,7 +1,7 @@
 package typingsSlinky.testingLibraryReact.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.testingLibraryReact.FnCall
+import typingsSlinky.testingLibraryReact.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

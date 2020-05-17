@@ -1,7 +1,6 @@
 package typingsSlinky.cropperjs
 
 import org.scalajs.dom.raw.HTMLCanvasElement
-import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.cropperjs.Cropper.CanvasData
 import typingsSlinky.cropperjs.Cropper.ContainerData
 import typingsSlinky.cropperjs.Cropper.CropBoxData
@@ -9,21 +8,16 @@ import typingsSlinky.cropperjs.Cropper.Data
 import typingsSlinky.cropperjs.Cropper.DragMode
 import typingsSlinky.cropperjs.Cropper.GetCroppedCanvasOptions
 import typingsSlinky.cropperjs.Cropper.ImageData
-import typingsSlinky.cropperjs.Cropper.Options
 import typingsSlinky.cropperjs.Cropper.SetCanvasDataOptions
 import typingsSlinky.cropperjs.Cropper.SetCropBoxDataOptions
 import typingsSlinky.cropperjs.Cropper.SetDataOptions
+import typingsSlinky.cropperjs.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Cropper")
 @js.native
-class Cropper_ protected () extends js.Object {
-  def this(element: HTMLCanvasElement) = this()
-  def this(element: HTMLImageElement) = this()
-  def this(element: HTMLCanvasElement, options: Options) = this()
-  def this(element: HTMLImageElement, options: Options) = this()
+trait Cropper_ extends js.Object {
   def clear(): Cropper = js.native
   def crop(): Cropper = js.native
   def destroy(): Cropper = js.native
@@ -57,6 +51,6 @@ class Cropper_ protected () extends js.Object {
   def setDragMode(dragMode: DragMode): Cropper = js.native
   def zoom(ratio: Double): Cropper = js.native
   def zoomTo(ratio: Double): Cropper = js.native
-  def zoomTo(ratio: Double, pivot: AnonX): Cropper = js.native
+  def zoomTo(ratio: Double, pivot: X): Cropper = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.codemirror.mod
 
-import typingsSlinky.codemirror.AnonAnchor
+import typingsSlinky.codemirror.anon.Anchor
 import typingsSlinky.codemirror.codemirrorStrings.beforeSelectionChange
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +13,7 @@ object on_beforeSelectionChange extends js.Object {
   def apply(
     doc: Doc,
     eventName: beforeSelectionChange,
-    handler: js.Function2[/* instance */ Editor, /* selection */ AnonAnchor, Unit]
+    handler: js.Function2[/* instance */ Editor, /* selection */ Anchor, Unit]
   ): Unit = js.native
 }
 

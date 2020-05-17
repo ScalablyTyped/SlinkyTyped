@@ -2,6 +2,7 @@ package typingsSlinky.reactScrollbar
 
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Props
+import typingsSlinky.reactScrollbar.anon.ContainerHeight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +18,7 @@ trait ScrollAreaProps extends Props[ScrollArea] {
   var horizontalContainerStyle: js.UndefOr[CSSProperties] = js.native
   var horizontalScrollbarStyle: js.UndefOr[CSSProperties] = js.native
   var minScrollSize: js.UndefOr[Double] = js.native
-  var onScroll: js.UndefOr[js.Function1[/* value */ AnonContainerHeight, Unit]] = js.native
+  var onScroll: js.UndefOr[js.Function1[/* value */ ContainerHeight, Unit]] = js.native
   var ownerDocument: js.UndefOr[js.Any] = js.native
   var smoothScrolling: js.UndefOr[Boolean] = js.native
   var speed: js.UndefOr[Double] = js.native
@@ -150,7 +151,7 @@ object ScrollAreaProps {
         ret
     }
     @scala.inline
-    def withOnScroll(value: /* value */ AnonContainerHeight => Unit): Self = {
+    def withOnScroll(value: /* value */ ContainerHeight => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.Any.fromFunction1(value))
         ret

@@ -4,16 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("FirebaseFirestore.FieldPath")
 @js.native
-class FieldPath protected () extends js.Object {
-  /**
-    * Creates a FieldPath from the provided field names. If more than one field
-    * name is provided, the path will point to a nested field in a document.
-    *
-    * @param fieldNames A list of field names.
-    */
-  def this(fieldNames: String*) = this()
+trait FieldPath extends js.Object {
   /**
     * Returns true if this `FieldPath` is equal to the provided one.
     *
@@ -23,14 +15,25 @@ class FieldPath protected () extends js.Object {
   def isEqual(other: FieldPath): Boolean = js.native
 }
 
-/* static members */
-@JSGlobal("FirebaseFirestore.FieldPath")
-@js.native
-object FieldPath extends js.Object {
-  /**
-    * Returns a special sentinel FieldPath to refer to the ID of a document.
-    * It can be used in queries to sort or filter by the document ID.
-    */
-  def documentId(): FieldPath = js.native
+object FieldPath {
+  @scala.inline
+  def apply(isEqual: FieldPath => Boolean): FieldPath = {
+    val __obj = js.Dynamic.literal(isEqual = js.Any.fromFunction1(isEqual))
+    __obj.asInstanceOf[FieldPath]
+  }
+  @scala.inline
+  implicit class FieldPathOps[Self <: FieldPath] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsEqual(value: FieldPath => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEqual")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

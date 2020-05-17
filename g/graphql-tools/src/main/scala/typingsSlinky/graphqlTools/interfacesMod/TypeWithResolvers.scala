@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TypeWithResolvers extends js.Object {
+trait TypeWithResolvers extends VisitTypeResult {
   var resolvers: js.UndefOr[IResolvers[_, _]] = js.native
   var `type`: GraphQLNamedType = js.native
 }

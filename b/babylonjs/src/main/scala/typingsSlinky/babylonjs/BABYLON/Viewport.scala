@@ -4,26 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.Viewport")
 @js.native
-class Viewport protected () extends js.Object {
-  /**
-    * Creates a Viewport object located at (x, y) and sized (width, height)
-    * @param x defines viewport left coordinate
-    * @param y defines viewport top coordinate
-    * @param width defines the viewport width
-    * @param height defines the viewport height
-    */
-  def this(
-    /** viewport left coordinate */
-  x: Double,
-    /** viewport top coordinate */
-  y: Double,
-    /**viewport width */
-  width: Double,
-    /** viewport height */
-  height: Double
-  ) = this()
+trait Viewport extends js.Object {
   /** viewport height */
   var height: Double = js.native
   /**viewport width */
@@ -47,5 +29,64 @@ class Viewport protected () extends js.Object {
     * @returns the current viewport
     */
   def toGlobalToRef(renderWidth: Double, renderHeight: Double, ref: Viewport): Viewport = js.native
+}
+
+object Viewport {
+  @scala.inline
+  def apply(
+    height: Double,
+    toGlobal: (Double, Double) => Viewport,
+    toGlobalToRef: (Double, Double, Viewport) => Viewport,
+    width: Double,
+    x: Double,
+    y: Double
+  ): Viewport = {
+    val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], toGlobal = js.Any.fromFunction2(toGlobal), toGlobalToRef = js.Any.fromFunction3(toGlobalToRef), width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Viewport]
+  }
+  @scala.inline
+  implicit class ViewportOps[Self <: Viewport] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToGlobal(value: (Double, Double) => Viewport): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toGlobal")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withToGlobalToRef(value: (Double, Double, Viewport) => Viewport): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toGlobalToRef")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

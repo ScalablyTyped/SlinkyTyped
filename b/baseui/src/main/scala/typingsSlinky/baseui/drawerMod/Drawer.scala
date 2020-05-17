@@ -2,7 +2,7 @@ package typingsSlinky.baseui.drawerMod
 
 import org.scalajs.dom.raw.KeyboardEvent
 import slinky.core.TagMod
-import typingsSlinky.baseui.SharedStylePropsArgchildr
+import typingsSlinky.baseui.anon.SharedStylePropsArgchildr
 import typingsSlinky.baseui.baseuiStrings.backdrop
 import typingsSlinky.baseui.baseuiStrings.closeButton
 import typingsSlinky.baseui.baseuiStrings.escape_

@@ -2,10 +2,10 @@ package typingsSlinky.oracleOraclejet.ojcheckboxsetMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
-import typingsSlinky.oracleOraclejet.AnonConverterHint
-import typingsSlinky.oracleOraclejet.AnonDefinition
-import typingsSlinky.oracleOraclejet.AnonInstruction
-import typingsSlinky.oracleOraclejet.AnonRequired
+import typingsSlinky.oracleOraclejet.anon.ConverterHint
+import typingsSlinky.oracleOraclejet.anon.Definition
+import typingsSlinky.oracleOraclejet.anon.Instruction
+import typingsSlinky.oracleOraclejet.anon.Required
 import typingsSlinky.oracleOraclejet.ojcheckboxsetMod.ojCheckboxset.OptionContext
 import typingsSlinky.oracleOraclejet.ojcheckboxsetMod.ojCheckboxset.OptionsKeys
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
@@ -24,9 +24,9 @@ trait ojCheckboxsetSettablePropertiesLenient[K, D]
   extends /* key */ StringDictionary[js.Any] {
   var describedBy: js.UndefOr[String] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
-  var displayOptions: js.UndefOr[AnonConverterHint] = js.native
-  var help: js.UndefOr[AnonInstruction] = js.native
-  var helpHints: js.UndefOr[AnonDefinition] = js.native
+  var displayOptions: js.UndefOr[ConverterHint] = js.native
+  var help: js.UndefOr[Instruction] = js.native
+  var helpHints: js.UndefOr[Definition] = js.native
   var labelHint: js.UndefOr[String] = js.native
   var labelledBy: js.UndefOr[String] = js.native
   var messagesCustom: js.UndefOr[js.Array[^]] = js.native
@@ -34,7 +34,7 @@ trait ojCheckboxsetSettablePropertiesLenient[K, D]
   var options: js.UndefOr[DataProvider[K, D]] = js.native
   var optionsKeys: js.UndefOr[OptionsKeys] = js.native
   var required: js.UndefOr[Boolean] = js.native
-  var translations: js.UndefOr[AnonRequired] = js.native
+  var translations: js.UndefOr[Required] = js.native
   var valid: js.UndefOr[
     typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valid | pending | invalidHidden | invalidShown
   ] = js.native
@@ -78,7 +78,7 @@ object ojCheckboxsetSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withDisplayOptions(value: AnonConverterHint): Self[K, D] = {
+    def withDisplayOptions(value: ConverterHint): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("displayOptions")(value.asInstanceOf[js.Any])
         ret
@@ -90,7 +90,7 @@ object ojCheckboxsetSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withHelp(value: AnonInstruction): Self[K, D] = {
+    def withHelp(value: Instruction): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
         ret
@@ -102,7 +102,7 @@ object ojCheckboxsetSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withHelpHints(value: AnonDefinition): Self[K, D] = {
+    def withHelpHints(value: Definition): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("helpHints")(value.asInstanceOf[js.Any])
         ret
@@ -198,7 +198,7 @@ object ojCheckboxsetSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonRequired): Self[K, D] = {
+    def withTranslations(value: Required): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.gitlab.resourceAccessRequestsMod
 
-import typingsSlinky.gitlab.accessLevelAccessLevelSud
+import typingsSlinky.gitlab.anon.accessLevelAccessLevelSud
 import typingsSlinky.gitlab.baseServiceMod.BaseServiceOptions
 import typingsSlinky.gitlab.infrastructureMod.BaseService
 import typingsSlinky.gitlab.requestHelperMod.GetResponse

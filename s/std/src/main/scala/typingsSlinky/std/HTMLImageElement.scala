@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.std.stdStrings.async
 import typingsSlinky.std.stdStrings.auto
 import typingsSlinky.std.stdStrings.sync
@@ -128,9 +127,4 @@ trait HTMLImageElement
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
-
-@JSGlobal("HTMLImageElement")
-@js.native
-object HTMLImageElement
-  extends Instantiable0[org.scalajs.dom.raw.HTMLImageElement]
 

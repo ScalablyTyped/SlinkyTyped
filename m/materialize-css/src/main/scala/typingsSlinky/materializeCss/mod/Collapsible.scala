@@ -2,7 +2,7 @@ package typingsSlinky.materializeCss.mod
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.materializeCss.MElements
-import typingsSlinky.materializeCss.PartialCollapsibleOptions
+import typingsSlinky.materializeCss.anon.PartialCollapsibleOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

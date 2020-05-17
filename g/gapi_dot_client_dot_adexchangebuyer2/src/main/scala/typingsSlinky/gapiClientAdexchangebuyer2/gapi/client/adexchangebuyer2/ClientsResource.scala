@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientAdexchangebuyer2.gapi.client.adexchangebuyer2
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAdexchangebuyer2.AnonAccesstoken
-import typingsSlinky.gapiClientAdexchangebuyer2.AnonCallback
-import typingsSlinky.gapiClientAdexchangebuyer2.AnonFields
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAdexchangebuyer2.anon.Accesstoken
+import typingsSlinky.gapiClientAdexchangebuyer2.anon.Callback
+import typingsSlinky.gapiClientAdexchangebuyer2.anon.Fields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,23 +13,23 @@ trait ClientsResource extends js.Object {
   var invitations: InvitationsResource = js.native
   var users: UsersResource = js.native
   /** Creates a new client buyer. */
-  def create(request: AnonCallback): Request_[Client] = js.native
+  def create(request: Callback): Request[Client] = js.native
   /** Gets a client buyer with a given client account ID. */
-  def get(request: AnonAccesstoken): Request_[Client] = js.native
+  def get(request: Accesstoken): Request[Client] = js.native
   /** Lists all the clients for the current sponsor buyer. */
-  def list(request: AnonFields): Request_[ListClientsResponse] = js.native
+  def list(request: Fields): Request[ListClientsResponse] = js.native
   /** Updates an existing client buyer. */
-  def update(request: AnonAccesstoken): Request_[Client] = js.native
+  def update(request: Accesstoken): Request[Client] = js.native
 }
 
 object ClientsResource {
   @scala.inline
   def apply(
-    create: AnonCallback => Request_[Client],
-    get: AnonAccesstoken => Request_[Client],
+    create: Callback => Request[Client],
+    get: Accesstoken => Request[Client],
     invitations: InvitationsResource,
-    list: AnonFields => Request_[ListClientsResponse],
-    update: AnonAccesstoken => Request_[Client],
+    list: Fields => Request[ListClientsResponse],
+    update: Accesstoken => Request[Client],
     users: UsersResource
   ): ClientsResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), get = js.Any.fromFunction1(get), invitations = invitations.asInstanceOf[js.Any], list = js.Any.fromFunction1(list), update = js.Any.fromFunction1(update), users = users.asInstanceOf[js.Any])
@@ -42,13 +42,13 @@ object ClientsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: AnonCallback => Request_[Client]): Self = {
+    def withCreate(value: Callback => Request[Client]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonAccesstoken => Request_[Client]): Self = {
+    def withGet(value: Accesstoken => Request[Client]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
@@ -60,13 +60,13 @@ object ClientsResource {
         ret
     }
     @scala.inline
-    def withList(value: AnonFields => Request_[ListClientsResponse]): Self = {
+    def withList(value: Fields => Request[ListClientsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonAccesstoken => Request_[Client]): Self = {
+    def withUpdate(value: Accesstoken => Request[Client]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

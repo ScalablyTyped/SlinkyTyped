@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait ErrorLikeConstructor[T /* <: ErrorLike */] extends js.Object
 
+object ErrorLikeConstructor {
+  @scala.inline
+  implicit def apply[T](value: ErrorLikeConstructorClass[T]): ErrorLikeConstructor[T] = value.asInstanceOf[ErrorLikeConstructor[T]]
+  @scala.inline
+  implicit def apply[T](value: ErrorLikeConstructorFunction[T]): ErrorLikeConstructor[T] = value.asInstanceOf[ErrorLikeConstructor[T]]
+}
+

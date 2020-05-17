@@ -1,0 +1,45 @@
+package typingsSlinky.awsSdkClientCodecommitNode.getRepositoryTriggersExceptionsUnionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+*/
+trait GetRepositoryTriggersExceptionsUnion extends js.Object
+
+object GetRepositoryTriggersExceptionsUnion {
+  @scala.inline
+  implicit def apply(value: EncryptionIntegrityChecksFailedException): GetRepositoryTriggersExceptionsUnion = value.asInstanceOf[GetRepositoryTriggersExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyAccessDeniedException): GetRepositoryTriggersExceptionsUnion = value.asInstanceOf[GetRepositoryTriggersExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyDisabledException): GetRepositoryTriggersExceptionsUnion = value.asInstanceOf[GetRepositoryTriggersExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyNotFoundException): GetRepositoryTriggersExceptionsUnion = value.asInstanceOf[GetRepositoryTriggersExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyUnavailableException): GetRepositoryTriggersExceptionsUnion = value.asInstanceOf[GetRepositoryTriggersExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidRepositoryNameException): GetRepositoryTriggersExceptionsUnion = value.asInstanceOf[GetRepositoryTriggersExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryDoesNotExistException): GetRepositoryTriggersExceptionsUnion = value.asInstanceOf[GetRepositoryTriggersExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryNameRequiredException): GetRepositoryTriggersExceptionsUnion = value.asInstanceOf[GetRepositoryTriggersExceptionsUnion]
+}
+

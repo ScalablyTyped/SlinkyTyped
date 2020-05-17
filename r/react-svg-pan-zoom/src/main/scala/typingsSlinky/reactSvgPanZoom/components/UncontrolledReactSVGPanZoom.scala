@@ -4,8 +4,8 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactSvgPanZoom.AnonBackground
-import typingsSlinky.reactSvgPanZoom.AnonPosition
+import typingsSlinky.reactSvgPanZoom.anon.Background
+import typingsSlinky.reactSvgPanZoom.anon.Position
 import typingsSlinky.reactSvgPanZoom.mod.Tool
 import typingsSlinky.reactSvgPanZoom.mod.UncontrolledProps
 import typingsSlinky.reactSvgPanZoom.mod.Value
@@ -52,7 +52,7 @@ object UncontrolledReactSVGPanZoom {
     @scala.inline
     def disableDoubleClickZoomWithToolAuto(value: Boolean): this.type = set("disableDoubleClickZoomWithToolAuto", value.asInstanceOf[js.Any])
     @scala.inline
-    def miniatureProps(value: AnonBackground): this.type = set("miniatureProps", value.asInstanceOf[js.Any])
+    def miniatureProps(value: Background): this.type = set("miniatureProps", value.asInstanceOf[js.Any])
     @scala.inline
     def modifierKeys(value: js.Array[String]): this.type = set("modifierKeys", value.asInstanceOf[js.Any])
     @scala.inline
@@ -88,7 +88,7 @@ object UncontrolledReactSVGPanZoom {
     @scala.inline
     def tool(value: Tool): this.type = set("tool", value.asInstanceOf[js.Any])
     @scala.inline
-    def toolbarProps(value: AnonPosition): this.type = set("toolbarProps", value.asInstanceOf[js.Any])
+    def toolbarProps(value: Position): this.type = set("toolbarProps", value.asInstanceOf[js.Any])
     @scala.inline
     def value(value: Value): this.type = set("value", value.asInstanceOf[js.Any])
   }

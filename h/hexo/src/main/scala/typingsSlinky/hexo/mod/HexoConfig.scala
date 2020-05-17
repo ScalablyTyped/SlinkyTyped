@@ -1,7 +1,7 @@
 package typingsSlinky.hexo.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.hexo.AnonAutodetect
+import typingsSlinky.hexo.anon.Autodetect
 import typingsSlinky.hexo.hexoBooleans.`false`
 import typingsSlinky.hexo.mod.extend.Deployer.Config
 import scala.scalajs.js
@@ -71,7 +71,7 @@ trait HexoConfig
   /**
     * Code block settings
     */
-  val highlight: AnonAutodetect = js.native
+  val highlight: Autodetect = js.native
   /**
     * i18n directory
     */
@@ -193,7 +193,7 @@ object HexoConfig {
     external_link: Boolean,
     filename_case: Double,
     future: Boolean,
-    highlight: AnonAutodetect,
+    highlight: Autodetect,
     i18n_dir: String,
     ignore: js.Array[String],
     language: String,
@@ -300,7 +300,7 @@ object HexoConfig {
         ret
     }
     @scala.inline
-    def withHighlight(value: AnonAutodetect): Self = {
+    def withHighlight(value: Autodetect): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.rcTable.bodyRowMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.rcTable.AnonChildren
+import typingsSlinky.rcTable.anon.Children
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object default extends js.Object {
   var displayName: String = js.native
-  def apply[RecordType /* <: AnonChildren[RecordType] */](props: BodyRowProps[RecordType]): ReactElement = js.native
+  def apply[RecordType /* <: Children[RecordType] */](props: BodyRowProps[RecordType]): ReactElement = js.native
 }
 

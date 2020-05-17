@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CheckboxParams
   extends SharedEditorParams
-     with _EditorParams {
+     with EditorParams {
   var indeterminateValue: js.UndefOr[String] = js.native
   // tick
   var tristate: js.UndefOr[Boolean] = js.native

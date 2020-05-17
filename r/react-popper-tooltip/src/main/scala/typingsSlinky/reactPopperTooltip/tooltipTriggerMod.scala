@@ -1,6 +1,7 @@
 package typingsSlinky.reactPopperTooltip
 
 import typingsSlinky.react.mod.Component
+import typingsSlinky.reactPopperTooltip.anon.CloseOnOutOfBoundaries
 import typingsSlinky.reactPopperTooltip.typesMod.TooltipTriggerProps
 import typingsSlinky.reactPopperTooltip.typesMod.TooltipTriggerState
 import scala.scalajs.js
@@ -37,7 +38,7 @@ object tooltipTriggerMod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var defaultProps: AnonCloseOnOutOfBoundaries = js.native
+    var defaultProps: CloseOnOutOfBoundaries = js.native
   }
   
 }

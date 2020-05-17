@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientDataflow.gapi.client.dataflow
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientDataflow.AnonAccesstoken
-import typingsSlinky.gapiClientDataflow.AnonAlt
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientDataflow.anon.Accesstoken
+import typingsSlinky.gapiClientDataflow.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DebugResource extends js.Object {
   /** Get encoded debug configuration for component. Not cacheable. */
-  def getConfig(request: AnonAccesstoken): Request_[GetDebugConfigResponse] = js.native
+  def getConfig(request: Accesstoken): Request[GetDebugConfigResponse] = js.native
   /** Get encoded debug configuration for component. Not cacheable. */
-  def getConfig(request: AnonAlt): Request_[GetDebugConfigResponse] = js.native
+  def getConfig(request: Alt): Request[GetDebugConfigResponse] = js.native
   /** Send encoded debug capture data for component. */
-  def sendCapture(request: AnonAccesstoken): Request_[js.Object] = js.native
+  def sendCapture(request: Accesstoken): Request[js.Object] = js.native
   /** Send encoded debug capture data for component. */
-  def sendCapture(request: AnonAlt): Request_[js.Object] = js.native
+  def sendCapture(request: Alt): Request[js.Object] = js.native
 }
 

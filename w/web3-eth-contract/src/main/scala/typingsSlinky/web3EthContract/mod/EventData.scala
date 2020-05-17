@@ -1,7 +1,7 @@
 package typingsSlinky.web3EthContract.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.web3EthContract.AnonData
+import typingsSlinky.web3EthContract.anon.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait EventData extends js.Object {
   var blockNumber: Double = js.native
   var event: String = js.native
   var logIndex: Double = js.native
-  var raw: AnonData = js.native
+  var raw: Data = js.native
   var returnValues: StringDictionary[js.Any] = js.native
   var signature: String = js.native
   var transactionHash: String = js.native
@@ -28,7 +28,7 @@ object EventData {
     blockNumber: Double,
     event: String,
     logIndex: Double,
-    raw: AnonData,
+    raw: Data,
     returnValues: StringDictionary[js.Any],
     signature: String,
     transactionHash: String,
@@ -74,7 +74,7 @@ object EventData {
         ret
     }
     @scala.inline
-    def withRaw(value: AnonData): Self = {
+    def withRaw(value: Data): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(value.asInstanceOf[js.Any])
         ret

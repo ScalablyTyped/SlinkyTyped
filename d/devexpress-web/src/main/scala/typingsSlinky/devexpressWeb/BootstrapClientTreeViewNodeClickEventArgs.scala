@@ -7,22 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientTreeView.NodeClick event.
   */
-@JSGlobal("BootstrapClientTreeViewNodeClickEventArgs")
 @js.native
-class BootstrapClientTreeViewNodeClickEventArgs protected () extends BootstrapClientTreeViewNodeProcessingModeEventArgs {
-  /**
-    * Initializes a new object of the BootstrapClientTreeViewNodeClickEventArgs type with the specified settings.
-    * @param processOnServer true to process the event on the server side; false to completely handle it on the client side.
-    * @param node An BootstrapClientTreeViewNode object that represents a node related to the event.
-    * @param htmlElement An HTML object that contains the processed node.
-    * @param htmlEvent A DHTML event object that relates to the processed event.
-    */
-  def this(
-    processOnServer: Boolean,
-    node: BootstrapClientTreeViewNode,
-    htmlElement: js.Any,
-    htmlEvent: js.Any
-  ) = this()
+trait BootstrapClientTreeViewNodeClickEventArgs extends BootstrapClientTreeViewNodeProcessingModeEventArgs {
   /**
     * Gets an HTML object that contains the processed Tree View node.
     */
@@ -31,5 +17,38 @@ class BootstrapClientTreeViewNodeClickEventArgs protected () extends BootstrapCl
     * Gets a DHTML event object that relates to the processed event.
     */
   var htmlEvent: js.Any = js.native
+}
+
+object BootstrapClientTreeViewNodeClickEventArgs {
+  @scala.inline
+  def apply(
+    htmlElement: js.Any,
+    htmlEvent: js.Any,
+    node: BootstrapClientTreeViewNode,
+    processOnServer: Boolean
+  ): BootstrapClientTreeViewNodeClickEventArgs = {
+    val __obj = js.Dynamic.literal(htmlElement = htmlElement.asInstanceOf[js.Any], htmlEvent = htmlEvent.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any], processOnServer = processOnServer.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BootstrapClientTreeViewNodeClickEventArgs]
+  }
+  @scala.inline
+  implicit class BootstrapClientTreeViewNodeClickEventArgsOps[Self <: BootstrapClientTreeViewNodeClickEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHtmlElement(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtmlEvent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

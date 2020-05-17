@@ -1,5 +1,6 @@
 package typingsSlinky.blueprintjsTable.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
@@ -9,7 +10,6 @@ import typingsSlinky.blueprintjsTable.esmRegionsMod.TableLoadingOption
 import typingsSlinky.blueprintjsTable.gridMod.Grid
 import typingsSlinky.blueprintjsTable.tableQuadrantMod.QuadrantType
 import typingsSlinky.blueprintjsTable.tableQuadrantStackMod.ITableQuadrantStackProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -62,7 +62,7 @@ object TableQuadrantStack {
     @scala.inline
     def numRows(value: Double): this.type = set("numRows", value.asInstanceOf[js.Any])
     @scala.inline
-    def onScroll(value: SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
+    def onScroll(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
     @scala.inline
     def quadrantRef(value: /* ref */ HTMLElement | Null => Unit): this.type = set("quadrantRef", js.Any.fromFunction1(value))
     @scala.inline

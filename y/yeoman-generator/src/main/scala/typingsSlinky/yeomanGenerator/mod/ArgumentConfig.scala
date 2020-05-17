@@ -1,9 +1,14 @@
 package typingsSlinky.yeomanGenerator.mod
 
+import org.scalablytyped.runtime.Instantiable0
+import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.std.ArrayConstructor
 import typingsSlinky.std.NumberConstructor
 import typingsSlinky.std.ObjectConstructor
 import typingsSlinky.std.StringConstructor
+import typingsSlinky.std.global.Array
+import typingsSlinky.std.global.Number
+import typingsSlinky.std.global.Object
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +19,9 @@ trait ArgumentConfig extends js.Object {
   var description: js.UndefOr[String] = js.native
   var optional: js.UndefOr[Boolean] = js.native
   var required: js.UndefOr[Boolean] = js.native
-  var `type`: js.UndefOr[StringConstructor | NumberConstructor | ArrayConstructor | ObjectConstructor] = js.native
+  var `type`: js.UndefOr[
+    (StringConstructor with Instantiable0[typingsSlinky.std.global.String]) | (NumberConstructor with Instantiable0[Number]) | (ArrayConstructor with (Instantiable1[/* arrayLength */ Double, Array[js.Object]])) | (ObjectConstructor with Instantiable0[Object])
+  ] = js.native
 }
 
 object ArgumentConfig {
@@ -78,7 +85,9 @@ object ArgumentConfig {
         ret
     }
     @scala.inline
-    def withType(value: StringConstructor | NumberConstructor | ArrayConstructor | ObjectConstructor): Self = {
+    def withType(
+      value: (StringConstructor with Instantiable0[typingsSlinky.std.global.String]) | (NumberConstructor with Instantiable0[Number]) | (ArrayConstructor with (Instantiable1[/* arrayLength */ Double, Array[js.Object]])) | (ObjectConstructor with Instantiable0[Object])
+    ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
         ret

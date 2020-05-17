@@ -1,6 +1,7 @@
 package typingsSlinky.draftJs.mod.Draft.Component.Base
 
 import org.scalajs.dom.raw.Blob
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
 import slinky.web.SyntheticKeyboardEvent
@@ -11,7 +12,6 @@ import typingsSlinky.draftJs.mod.Draft.Model.ImmutableData.DraftInlineStyle
 import typingsSlinky.draftJs.mod.Draft.Model.ImmutableData.EditorState
 import typingsSlinky.draftJs.mod.Draft.Model.ImmutableData.SelectionState
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -129,11 +129,11 @@ trait DraftEditorProps extends js.Object {
     * be invoked.
     */
   var keyBindingFn: js.UndefOr[js.Function1[SyntheticKeyboardEvent[js.Object], EditorCommand | Null]] = js.native
-  var onBlur: js.UndefOr[js.Function1[SyntheticEvent[EventTarget with js.Object, Event_], Unit]] = js.native
+  var onBlur: js.UndefOr[js.Function1[SyntheticEvent[EventTarget with js.Object, Event], Unit]] = js.native
   var onDownArrow: js.UndefOr[js.Function1[SyntheticKeyboardEvent[js.Object], Unit]] = js.native
   // Non-cancelable event triggers.
   var onEscape: js.UndefOr[js.Function1[SyntheticKeyboardEvent[js.Object], Unit]] = js.native
-  var onFocus: js.UndefOr[js.Function1[SyntheticEvent[EventTarget with js.Object, Event_], Unit]] = js.native
+  var onFocus: js.UndefOr[js.Function1[SyntheticEvent[EventTarget with js.Object, Event], Unit]] = js.native
   var onLeftArrow: js.UndefOr[js.Function1[SyntheticKeyboardEvent[js.Object], Unit]] = js.native
   var onRightArrow: js.UndefOr[js.Function1[SyntheticKeyboardEvent[js.Object], Unit]] = js.native
   var onTab: js.UndefOr[js.Function1[SyntheticKeyboardEvent[js.Object], Unit]] = js.native
@@ -517,7 +517,7 @@ object DraftEditorProps {
         ret
     }
     @scala.inline
-    def withOnBlur(value: SyntheticEvent[EventTarget with js.Object, Event_] => Unit): Self = {
+    def withOnBlur(value: SyntheticEvent[EventTarget with js.Object, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
         ret
@@ -553,7 +553,7 @@ object DraftEditorProps {
         ret
     }
     @scala.inline
-    def withOnFocus(value: SyntheticEvent[EventTarget with js.Object, Event_] => Unit): Self = {
+    def withOnFocus(value: SyntheticEvent[EventTarget with js.Object, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
         ret

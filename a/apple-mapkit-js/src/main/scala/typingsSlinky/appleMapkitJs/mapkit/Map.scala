@@ -1,14 +1,9 @@
 package typingsSlinky.appleMapkitJs.mapkit
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.appleMapkitJs.AnonAdaptive
-import typingsSlinky.appleMapkitJs.AnonAnnotation
-import typingsSlinky.appleMapkitJs.AnonAnnotationAnnotation
-import typingsSlinky.appleMapkitJs.AnonCode
-import typingsSlinky.appleMapkitJs.AnonCoordinate
-import typingsSlinky.appleMapkitJs.AnonDark
-import typingsSlinky.appleMapkitJs.AnonHybrid
-import typingsSlinky.appleMapkitJs.AnonTimestamp
+import typingsSlinky.appleMapkitJs.anon.AnnotationAnnotation
+import typingsSlinky.appleMapkitJs.anon.Code
+import typingsSlinky.appleMapkitJs.anon.Timestamp
 import typingsSlinky.appleMapkitJs.appleMapkitJsStrings.`double-tap`
 import typingsSlinky.appleMapkitJs.appleMapkitJsStrings.`drag-end`
 import typingsSlinky.appleMapkitJs.appleMapkitJsStrings.`drag-start`
@@ -34,22 +29,8 @@ import scala.scalajs.js.annotation._
 /**
   * An embeddable interactive map that you add to a webpage.
   */
-@JSGlobal("mapkit.Map")
 @js.native
-class Map protected () extends js.Object {
-  /**
-    * Creates a map that you embed on a webpage, and initializes its display
-    * properties and other options.
-    *
-    * @parent parent A DOM element or the ID of a DOM element to use as this
-    * map's container.
-    * @param options An object that contains options for initializing a map's
-    * features.
-    */
-  def this(parent: String) = this()
-  def this(parent: Element) = this()
-  def this(parent: String, options: MapConstructorOptions) = this()
-  def this(parent: Element, options: MapConstructorOptions) = this()
+trait Map extends js.Object {
   // Annotating the Map
   /**
     * An array of all the annotations on the map.
@@ -186,12 +167,20 @@ class Map protected () extends js.Object {
   @JSName("addEventListener")
   def addEventListener_deselect[T](
     `type`: deselect,
-    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with AnonAnnotation, Unit]
+    listener: js.ThisFunction1[
+      /* this */ T, 
+      /* event */ EventBase[this.type] with typingsSlinky.appleMapkitJs.anon.Annotation, 
+      Unit
+    ]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_deselect[T](
     `type`: deselect,
-    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with AnonAnnotation, Unit],
+    listener: js.ThisFunction1[
+      /* this */ T, 
+      /* event */ EventBase[this.type] with typingsSlinky.appleMapkitJs.anon.Annotation, 
+      Unit
+    ],
     thisObject: T
   ): Unit = js.native
   @JSName("addEventListener")
@@ -208,34 +197,42 @@ class Map protected () extends js.Object {
   @JSName("addEventListener")
   def addEventListener_dragend[T](
     `type`: `drag-end`,
-    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with AnonAnnotationAnnotation, Unit]
+    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with AnnotationAnnotation, Unit]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dragend[T](
     `type`: `drag-end`,
-    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with AnonAnnotationAnnotation, Unit],
+    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with AnnotationAnnotation, Unit],
     thisObject: T
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dragging[T](
     `type`: dragging,
-    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with AnonCoordinate, Unit]
+    listener: js.ThisFunction1[
+      /* this */ T, 
+      /* event */ EventBase[this.type] with typingsSlinky.appleMapkitJs.anon.Coordinate, 
+      Unit
+    ]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dragging[T](
     `type`: dragging,
-    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with AnonCoordinate, Unit],
+    listener: js.ThisFunction1[
+      /* this */ T, 
+      /* event */ EventBase[this.type] with typingsSlinky.appleMapkitJs.anon.Coordinate, 
+      Unit
+    ],
     thisObject: T
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dragstart[T](
     `type`: `drag-start`,
-    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with AnonAnnotationAnnotation, Unit]
+    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with AnnotationAnnotation, Unit]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dragstart[T](
     `type`: `drag-start`,
-    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with AnonAnnotationAnnotation, Unit],
+    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with AnnotationAnnotation, Unit],
     thisObject: T
   ): Unit = js.native
   @JSName("addEventListener")
@@ -317,12 +314,20 @@ class Map protected () extends js.Object {
   @JSName("addEventListener")
   def addEventListener_select[T](
     `type`: select,
-    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with AnonAnnotation, Unit]
+    listener: js.ThisFunction1[
+      /* this */ T, 
+      /* event */ EventBase[this.type] with typingsSlinky.appleMapkitJs.anon.Annotation, 
+      Unit
+    ]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_select[T](
     `type`: select,
-    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with AnonAnnotation, Unit],
+    listener: js.ThisFunction1[
+      /* this */ T, 
+      /* event */ EventBase[this.type] with typingsSlinky.appleMapkitJs.anon.Annotation, 
+      Unit
+    ],
     thisObject: T
   ): Unit = js.native
   @JSName("addEventListener")
@@ -339,23 +344,23 @@ class Map protected () extends js.Object {
   @JSName("addEventListener")
   def addEventListener_userlocationchange[T](
     `type`: `user-location-change`,
-    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with AnonTimestamp, Unit]
+    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with Timestamp, Unit]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_userlocationchange[T](
     `type`: `user-location-change`,
-    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with AnonTimestamp, Unit],
+    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with Timestamp, Unit],
     thisObject: T
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_userlocationerror[T](
     `type`: `user-location-error`,
-    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with AnonCode, Unit]
+    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with Code, Unit]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_userlocationerror[T](
     `type`: `user-location-error`,
-    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with AnonCode, Unit],
+    listener: js.ThisFunction1[/* this */ T, /* event */ EventBase[this.type] with Code, Unit],
     thisObject: T
   ): Unit = js.native
   @JSName("addEventListener")
@@ -435,12 +440,20 @@ class Map protected () extends js.Object {
   @JSName("removeEventListener")
   def removeEventListener_deselect[T](
     `type`: deselect,
-    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with AnonAnnotation, Unit]
+    listener: js.Function2[
+      /* type */ T, 
+      /* event */ EventBase[this.type] with typingsSlinky.appleMapkitJs.anon.Annotation, 
+      Unit
+    ]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_deselect[T](
     `type`: deselect,
-    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with AnonAnnotation, Unit],
+    listener: js.Function2[
+      /* type */ T, 
+      /* event */ EventBase[this.type] with typingsSlinky.appleMapkitJs.anon.Annotation, 
+      Unit
+    ],
     thisObject: T
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -454,34 +467,42 @@ class Map protected () extends js.Object {
   @JSName("removeEventListener")
   def removeEventListener_dragend[T](
     `type`: `drag-end`,
-    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with AnonAnnotationAnnotation, Unit]
+    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with AnnotationAnnotation, Unit]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragend[T](
     `type`: `drag-end`,
-    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with AnonAnnotationAnnotation, Unit],
+    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with AnnotationAnnotation, Unit],
     thisObject: T
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragging[T](
     `type`: dragging,
-    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with AnonCoordinate, Unit]
+    listener: js.Function2[
+      /* type */ T, 
+      /* event */ EventBase[this.type] with typingsSlinky.appleMapkitJs.anon.Coordinate, 
+      Unit
+    ]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragging[T](
     `type`: dragging,
-    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with AnonCoordinate, Unit],
+    listener: js.Function2[
+      /* type */ T, 
+      /* event */ EventBase[this.type] with typingsSlinky.appleMapkitJs.anon.Coordinate, 
+      Unit
+    ],
     thisObject: T
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragstart[T](
     `type`: `drag-start`,
-    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with AnonAnnotationAnnotation, Unit]
+    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with AnnotationAnnotation, Unit]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragstart[T](
     `type`: `drag-start`,
-    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with AnonAnnotationAnnotation, Unit],
+    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with AnnotationAnnotation, Unit],
     thisObject: T
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -550,12 +571,20 @@ class Map protected () extends js.Object {
   @JSName("removeEventListener")
   def removeEventListener_select[T](
     `type`: select,
-    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with AnonAnnotation, Unit]
+    listener: js.Function2[
+      /* type */ T, 
+      /* event */ EventBase[this.type] with typingsSlinky.appleMapkitJs.anon.Annotation, 
+      Unit
+    ]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_select[T](
     `type`: select,
-    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with AnonAnnotation, Unit],
+    listener: js.Function2[
+      /* type */ T, 
+      /* event */ EventBase[this.type] with typingsSlinky.appleMapkitJs.anon.Annotation, 
+      Unit
+    ],
     thisObject: T
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -569,23 +598,23 @@ class Map protected () extends js.Object {
   @JSName("removeEventListener")
   def removeEventListener_userlocationchange[T](
     `type`: `user-location-change`,
-    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with AnonTimestamp, Unit]
+    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with Timestamp, Unit]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_userlocationchange[T](
     `type`: `user-location-change`,
-    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with AnonTimestamp, Unit],
+    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with Timestamp, Unit],
     thisObject: T
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_userlocationerror[T](
     `type`: `user-location-error`,
-    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with AnonCode, Unit]
+    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with Code, Unit]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_userlocationerror[T](
     `type`: `user-location-error`,
-    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with AnonCode, Unit],
+    listener: js.Function2[/* type */ T, /* event */ EventBase[this.type] with Code, Unit],
     thisObject: T
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -650,24 +679,5 @@ class Map protected () extends js.Object {
     * Returns the topmost overlay at a given point on the webpage.
     */
   def topOverlayAtPoint(point: DOMPoint): Overlay | Null = js.native
-}
-
-/* static members */
-@JSGlobal("mapkit.Map")
-@js.native
-object Map extends js.Object {
-  // Configuring the Map's Appearance
-  /**
-    * Constants indicating the color scheme of the map.
-    */
-  val ColorSchemes: AnonDark = js.native
-  /**
-    * Constants indicating the system of measurement displayed on the map.
-    */
-  val Distances: AnonAdaptive = js.native
-  /**
-    * Constants representing the type of map to display.
-    */
-  val MapTypes: AnonHybrid = js.native
 }
 

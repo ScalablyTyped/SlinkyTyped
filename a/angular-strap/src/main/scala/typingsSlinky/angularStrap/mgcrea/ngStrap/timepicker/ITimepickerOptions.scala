@@ -1,6 +1,6 @@
 package typingsSlinky.angularStrap.mgcrea.ngStrap.timepicker
 
-import typingsSlinky.angularStrap.AnonHide
+import typingsSlinky.angularStrap.anon.Hide
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait ITimepickerOptions extends js.Object {
   var arrowBehaviour: js.UndefOr[String] = js.native
   var autoclose: js.UndefOr[Boolean] = js.native
   var container: js.UndefOr[String | Boolean] = js.native
-  var delay: js.UndefOr[Double | AnonHide] = js.native
+  var delay: js.UndefOr[Double | Hide] = js.native
   var hourStep: js.UndefOr[Double] = js.native
   var html: js.UndefOr[Boolean] = js.native
   var iconDown: js.UndefOr[String] = js.native
@@ -98,7 +98,7 @@ object ITimepickerOptions {
         ret
     }
     @scala.inline
-    def withDelay(value: Double | AnonHide): Self = {
+    def withDelay(value: Double | Hide): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
         ret

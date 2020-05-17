@@ -1,7 +1,7 @@
 package typingsSlinky.audiosprite.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.audiosprite.AnonEnd
+import typingsSlinky.audiosprite.anon.End
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation._
 trait Result extends js.Object {
   var autoplay: js.UndefOr[String] = js.native
   var resources: js.Array[String] = js.native
-  var spritemap: StringDictionary[AnonEnd] = js.native
+  var spritemap: StringDictionary[End] = js.native
 }
 
 object Result {
   @scala.inline
-  def apply(resources: js.Array[String], spritemap: StringDictionary[AnonEnd]): Result = {
+  def apply(resources: js.Array[String], spritemap: StringDictionary[End]): Result = {
     val __obj = js.Dynamic.literal(resources = resources.asInstanceOf[js.Any], spritemap = spritemap.asInstanceOf[js.Any])
     __obj.asInstanceOf[Result]
   }
@@ -32,7 +32,7 @@ object Result {
         ret
     }
     @scala.inline
-    def withSpritemap(value: StringDictionary[AnonEnd]): Self = {
+    def withSpritemap(value: StringDictionary[End]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("spritemap")(value.asInstanceOf[js.Any])
         ret

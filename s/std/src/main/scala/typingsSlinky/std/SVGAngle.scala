@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,14 +20,97 @@ trait SVGAngle extends js.Object {
   def newValueSpecifiedUnits(unitType: Double, valueInSpecifiedUnits: Double): Unit = js.native
 }
 
-@JSGlobal("SVGAngle")
-@js.native
-object SVGAngle
-  extends Instantiable0[org.scalajs.dom.raw.SVGAngle] {
-  val SVG_ANGLETYPE_DEG: Double = js.native
-  val SVG_ANGLETYPE_GRAD: Double = js.native
-  val SVG_ANGLETYPE_RAD: Double = js.native
-  val SVG_ANGLETYPE_UNKNOWN: Double = js.native
-  val SVG_ANGLETYPE_UNSPECIFIED: Double = js.native
+object SVGAngle {
+  @scala.inline
+  def apply(
+    SVG_ANGLETYPE_DEG: Double,
+    SVG_ANGLETYPE_GRAD: Double,
+    SVG_ANGLETYPE_RAD: Double,
+    SVG_ANGLETYPE_UNKNOWN: Double,
+    SVG_ANGLETYPE_UNSPECIFIED: Double,
+    convertToSpecifiedUnits: Double => Unit,
+    newValueSpecifiedUnits: (Double, Double) => Unit,
+    unitType: Double,
+    value: Double,
+    valueAsString: java.lang.String,
+    valueInSpecifiedUnits: Double
+  ): SVGAngle = {
+    val __obj = js.Dynamic.literal(SVG_ANGLETYPE_DEG = SVG_ANGLETYPE_DEG.asInstanceOf[js.Any], SVG_ANGLETYPE_GRAD = SVG_ANGLETYPE_GRAD.asInstanceOf[js.Any], SVG_ANGLETYPE_RAD = SVG_ANGLETYPE_RAD.asInstanceOf[js.Any], SVG_ANGLETYPE_UNKNOWN = SVG_ANGLETYPE_UNKNOWN.asInstanceOf[js.Any], SVG_ANGLETYPE_UNSPECIFIED = SVG_ANGLETYPE_UNSPECIFIED.asInstanceOf[js.Any], convertToSpecifiedUnits = js.Any.fromFunction1(convertToSpecifiedUnits), newValueSpecifiedUnits = js.Any.fromFunction2(newValueSpecifiedUnits), unitType = unitType.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any], valueAsString = valueAsString.asInstanceOf[js.Any], valueInSpecifiedUnits = valueInSpecifiedUnits.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SVGAngle]
+  }
+  @scala.inline
+  implicit class SVGAngleOps[Self <: org.scalajs.dom.raw.SVGAngle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSVG_ANGLETYPE_DEG(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG_ANGLETYPE_DEG")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSVG_ANGLETYPE_GRAD(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG_ANGLETYPE_GRAD")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSVG_ANGLETYPE_RAD(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG_ANGLETYPE_RAD")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSVG_ANGLETYPE_UNKNOWN(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG_ANGLETYPE_UNKNOWN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSVG_ANGLETYPE_UNSPECIFIED(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG_ANGLETYPE_UNSPECIFIED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConvertToSpecifiedUnits(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("convertToSpecifiedUnits")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withNewValueSpecifiedUnits(value: (Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newValueSpecifiedUnits")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withUnitType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unitType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValueAsString(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueAsString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValueInSpecifiedUnits(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("valueInSpecifiedUnits")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

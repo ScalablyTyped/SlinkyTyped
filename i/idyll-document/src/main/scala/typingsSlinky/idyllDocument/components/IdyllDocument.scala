@@ -5,7 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.idyllCompiler.mod.AST
 import typingsSlinky.idyllCompiler.mod.Options
-import typingsSlinky.idyllDocument.AnonChildren
+import typingsSlinky.idyllDocument.anon.Children
 import typingsSlinky.idyllDocument.mod.IdyllDocumentProps
 import typingsSlinky.idyllDocument.mod.default
 import scala.scalajs.js
@@ -30,11 +30,11 @@ object IdyllDocument {
     @scala.inline
     def datasets(value: js.Object): this.type = set("datasets", value.asInstanceOf[js.Any])
     @scala.inline
-    def errorComponentFunctionComponent(value: ReactComponentClass[AnonChildren]): this.type = set("errorComponent", value.asInstanceOf[js.Any])
+    def errorComponentFunctionComponent(value: ReactComponentClass[Children]): this.type = set("errorComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def errorComponentComponentClass(value: ReactComponentClass[AnonChildren]): this.type = set("errorComponent", value.asInstanceOf[js.Any])
+    def errorComponentComponentClass(value: ReactComponentClass[Children]): this.type = set("errorComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def errorComponent(value: ReactComponentClass[AnonChildren]): this.type = set("errorComponent", value.asInstanceOf[js.Any])
+    def errorComponent(value: ReactComponentClass[Children]): this.type = set("errorComponent", value.asInstanceOf[js.Any])
     @scala.inline
     def initialState(value: js.Any): this.type = set("initialState", value.asInstanceOf[js.Any])
     @scala.inline

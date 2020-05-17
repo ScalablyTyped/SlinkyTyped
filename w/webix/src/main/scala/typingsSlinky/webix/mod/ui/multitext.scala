@@ -1,7 +1,7 @@
 package typingsSlinky.webix.mod.ui
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Event_
 import typingsSlinky.webix.mod.WebixCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -55,7 +55,7 @@ class multitext ()
   @JSName("$tooltipIn")
   def $tooltipIn(node: HTMLElement): HTMLElement = js.native
   @JSName("$tooltipMove")
-  def $tooltipMove(t: HTMLElement, e: Event_, text: String): Unit = js.native
+  def $tooltipMove(t: HTMLElement, e: Event, text: String): Unit = js.native
   @JSName("$tooltipOut")
   def $tooltipOut(): Unit = js.native
   def addSection(): String | Double = js.native

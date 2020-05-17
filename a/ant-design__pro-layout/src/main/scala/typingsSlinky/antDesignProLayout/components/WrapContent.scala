@@ -2,7 +2,7 @@ package typingsSlinky.antDesignProLayout.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignProLayout.AnonChildren
+import typingsSlinky.antDesignProLayout.anon.Children
 import typingsSlinky.antDesignProLayout.wrapContentMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -28,7 +28,7 @@ object WrapContent {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AnonChildren): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: Children): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: WrapContent.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -2,7 +2,7 @@ package typingsSlinky.antd.tableInterfaceMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.AnonCompare
+import typingsSlinky.antd.anon.Compare
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ trait ColumnType[RecordType]
   var onFilterDropdownVisibleChange: js.UndefOr[js.Function1[/* visible */ Boolean, Unit]] = js.native
   var sortDirections: js.UndefOr[js.Array[SortOrder]] = js.native
   var sortOrder: js.UndefOr[SortOrder] = js.native
-  var sorter: js.UndefOr[Boolean | CompareFn[RecordType] | AnonCompare[RecordType]] = js.native
+  var sorter: js.UndefOr[Boolean | CompareFn[RecordType] | Compare[RecordType]] = js.native
 }
 
 object ColumnType {
@@ -251,7 +251,7 @@ object ColumnType {
         ret
     }
     @scala.inline
-    def withSorter(value: Boolean | CompareFn[RecordType] | AnonCompare[RecordType]): Self[RecordType] = {
+    def withSorter(value: Boolean | CompareFn[RecordType] | Compare[RecordType]): Self[RecordType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sorter")(value.asInstanceOf[js.Any])
         ret

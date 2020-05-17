@@ -1,7 +1,6 @@
 package typingsSlinky.reactElemental.mod
 
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactElemental.AnonLabel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,7 @@ trait SelectListProps extends js.Object {
   val error: js.UndefOr[String] = js.native
   val height: js.UndefOr[Double] = js.native
   val onChange: js.UndefOr[js.Function1[/* value */ String, Unit]] = js.native
-  val options: js.UndefOr[js.Array[AnonLabel]] = js.native
+  val options: js.UndefOr[js.Array[typingsSlinky.reactElemental.anon.Label]] = js.native
   val placeholder: js.UndefOr[String] = js.native
   val style: js.UndefOr[CSSProperties] = js.native
   val width: js.UndefOr[Double | String] = js.native
@@ -66,7 +65,7 @@ object SelectListProps {
         ret
     }
     @scala.inline
-    def withOptions(value: js.Array[AnonLabel]): Self = {
+    def withOptions(value: js.Array[typingsSlinky.reactElemental.anon.Label]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.actionsOnGoogle.apiV1Mod
 
-import typingsSlinky.actionsOnGoogle.AnonAck
+import typingsSlinky.actionsOnGoogle.anon.Ack
 import typingsSlinky.actionsOnGoogle.commonMod.ApiClientObjectMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait SmartHomeV1ExecuteRequestExecution extends js.Object {
-  var challenge: js.UndefOr[AnonAck] = js.native
+  var challenge: js.UndefOr[Ack] = js.native
   var command: String = js.native
   var params: ApiClientObjectMap[_] = js.native
 }
@@ -38,7 +38,7 @@ object SmartHomeV1ExecuteRequestExecution {
         ret
     }
     @scala.inline
-    def withChallenge(value: AnonAck): Self = {
+    def withChallenge(value: Ack): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("challenge")(value.asInstanceOf[js.Any])
         ret

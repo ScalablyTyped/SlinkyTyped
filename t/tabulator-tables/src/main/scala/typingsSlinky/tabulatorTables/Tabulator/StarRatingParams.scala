@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait StarRatingParams extends _FormatterParams {
+trait StarRatingParams extends FormatterParams {
   // Star Rating
   var stars: js.UndefOr[Double] = js.native
 }

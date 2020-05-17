@@ -12,28 +12,11 @@ class DeclareVarStmt protected ()
   def this(name: String, value: typingsSlinky.angularCompiler.outputAstMod.Expression) = this()
   def this(
     name: String,
-    value: js.UndefOr[scala.Nothing],
-    `type`: typingsSlinky.angularCompiler.outputAstMod.Type
-  ) = this()
-  def this(
-    name: String,
     value: typingsSlinky.angularCompiler.outputAstMod.Expression,
     `type`: typingsSlinky.angularCompiler.outputAstMod.Type
   ) = this()
   def this(
     name: String,
-    value: js.UndefOr[scala.Nothing],
-    `type`: Null,
-    modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier]
-  ) = this()
-  def this(
-    name: String,
-    value: js.UndefOr[scala.Nothing],
-    `type`: typingsSlinky.angularCompiler.outputAstMod.Type,
-    modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier]
-  ) = this()
-  def this(
-    name: String,
     value: typingsSlinky.angularCompiler.outputAstMod.Expression,
     `type`: Null,
     modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier]
@@ -43,34 +26,6 @@ class DeclareVarStmt protected ()
     value: typingsSlinky.angularCompiler.outputAstMod.Expression,
     `type`: typingsSlinky.angularCompiler.outputAstMod.Type,
     modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier]
-  ) = this()
-  def this(
-    name: String,
-    value: js.UndefOr[scala.Nothing],
-    `type`: Null,
-    modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier],
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
-  ) = this()
-  def this(
-    name: String,
-    value: js.UndefOr[scala.Nothing],
-    `type`: Null,
-    modifiers: Null,
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
-  ) = this()
-  def this(
-    name: String,
-    value: js.UndefOr[scala.Nothing],
-    `type`: typingsSlinky.angularCompiler.outputAstMod.Type,
-    modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier],
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
-  ) = this()
-  def this(
-    name: String,
-    value: js.UndefOr[scala.Nothing],
-    `type`: typingsSlinky.angularCompiler.outputAstMod.Type,
-    modifiers: Null,
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
   def this(
     name: String,

@@ -8,8 +8,8 @@ package object mod {
   type CustomFilterFunction = js.Function1[/* file */ java.lang.String, scala.Boolean]
   type CustomHashFunction = js.Function1[/* file */ typingsSlinky.node.Buffer, java.lang.String]
   type CustomTransformFunction = js.Function2[
-    /* asset */ typingsSlinky.postcssUrl.AnonAbsolutePath, 
-    /* dir */ typingsSlinky.postcssUrl.AnonFile, 
+    /* asset */ typingsSlinky.postcssUrl.anon.AbsolutePath, 
+    /* dir */ typingsSlinky.postcssUrl.anon.File, 
     java.lang.String
   ]
   type Url = typingsSlinky.postcss.mod.Plugin_[

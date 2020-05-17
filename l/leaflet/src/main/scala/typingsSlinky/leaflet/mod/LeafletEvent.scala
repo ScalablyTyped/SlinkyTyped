@@ -1,12 +1,12 @@
 package typingsSlinky.leaflet.mod
 
-import typingsSlinky.leaflet.mod.DomEvent._PropagableEvent
+import typingsSlinky.leaflet.mod.DomEvent.PropagableEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LeafletEvent extends _PropagableEvent {
+trait LeafletEvent extends PropagableEvent {
   /**
     * @deprecated The same as {@link LeafletEvent.propagatedFrom propagatedFrom}.
     */

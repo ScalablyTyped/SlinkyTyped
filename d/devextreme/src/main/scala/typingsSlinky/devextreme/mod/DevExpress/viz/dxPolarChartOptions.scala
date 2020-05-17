@@ -1,12 +1,12 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonArgumentComponent
-import typingsSlinky.devextreme.AnonComponentDxPolarChart
-import typingsSlinky.devextreme.AnonConvertToAxisDataType
-import typingsSlinky.devextreme.AnonCustomizeSeriesNameField
-import typingsSlinky.devextreme.AnonJQueryEventModelTarget
-import typingsSlinky.devextreme.AnonPreviousRange
-import typingsSlinky.devextreme.AnonRange
+import typingsSlinky.devextreme.anon.ArgumentComponent
+import typingsSlinky.devextreme.anon.ComponentDxPolarChart
+import typingsSlinky.devextreme.anon.ConvertToAxisDataType
+import typingsSlinky.devextreme.anon.CustomizeSeriesNameField
+import typingsSlinky.devextreme.anon.JQueryEventModelTarget
+import typingsSlinky.devextreme.anon.PreviousRange
+import typingsSlinky.devextreme.anon.Range
 import typingsSlinky.devextreme.devextremeStrings.hide
 import typingsSlinky.devextreme.devextremeStrings.multiple
 import typingsSlinky.devextreme.devextremeStrings.none
@@ -36,7 +36,7 @@ trait dxPolarChartOptions extends BaseChartOptions[dxPolarChart] {
   /** Specifies the color of the parent page element. */
   var containerBackgroundColor: js.UndefOr[String] = js.native
   /** An object providing options for managing data from a data source. */
-  var dataPrepareSettings: js.UndefOr[AnonConvertToAxisDataType] = js.native
+  var dataPrepareSettings: js.UndefOr[ConvertToAxisDataType] = js.native
   /** @deprecated Use CommonPolarChartSeries.ignoreEmptyPoints instead. */
   /** Specifies whether or not all bars in a series must have the same angle, or may have different angles if any points in other series are missing. */
   var equalBarWidth: js.UndefOr[Boolean] = js.native
@@ -46,25 +46,25 @@ trait dxPolarChartOptions extends BaseChartOptions[dxPolarChart] {
   /** Forces the widget to treat negative values as zeroes. Applies to stacked-like series only. */
   var negativesAsZeroes: js.UndefOr[Boolean] = js.native
   /** A function that is executed when a label on the argument axis is clicked or tapped. */
-  var onArgumentAxisClick: js.UndefOr[(js.Function1[/* e */ AnonArgumentComponent, _]) | String] = js.native
+  var onArgumentAxisClick: js.UndefOr[(js.Function1[/* e */ ArgumentComponent, _]) | String] = js.native
   /** A function that is executed when a legend item is clicked or tapped. */
-  var onLegendClick: js.UndefOr[(js.Function1[/* e */ AnonJQueryEventModelTarget, _]) | String] = js.native
+  var onLegendClick: js.UndefOr[(js.Function1[/* e */ JQueryEventModelTarget, _]) | String] = js.native
   /** A function that is executed when a series is clicked or tapped. */
-  var onSeriesClick: js.UndefOr[(js.Function1[/* e */ AnonJQueryEventModelTarget, _]) | String] = js.native
+  var onSeriesClick: js.UndefOr[(js.Function1[/* e */ JQueryEventModelTarget, _]) | String] = js.native
   /** A function that is executed after the pointer enters or leaves a series. */
-  var onSeriesHoverChanged: js.UndefOr[js.Function1[/* e */ AnonComponentDxPolarChart, _]] = js.native
+  var onSeriesHoverChanged: js.UndefOr[js.Function1[/* e */ ComponentDxPolarChart, _]] = js.native
   /** A function that is executed when a series is selected or selection is canceled. */
-  var onSeriesSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonComponentDxPolarChart, _]] = js.native
+  var onSeriesSelectionChanged: js.UndefOr[js.Function1[/* e */ ComponentDxPolarChart, _]] = js.native
   /** A function that is executed when zooming or panning ends. */
-  var onZoomEnd: js.UndefOr[js.Function1[/* e */ AnonPreviousRange, _]] = js.native
+  var onZoomEnd: js.UndefOr[js.Function1[/* e */ PreviousRange, _]] = js.native
   /** A function that is executed when zooming or panning begins. */
-  var onZoomStart: js.UndefOr[js.Function1[/* e */ AnonRange, _]] = js.native
+  var onZoomStart: js.UndefOr[js.Function1[/* e */ Range, _]] = js.native
   /** Specifies how the chart must behave when series point labels overlap. */
   var resolveLabelOverlapping: js.UndefOr[hide | none] = js.native
   /** Specifies whether a single series or multiple series can be selected in the chart. */
   var seriesSelectionMode: js.UndefOr[multiple | single_] = js.native
   /** Defines options for the series template. */
-  var seriesTemplate: js.UndefOr[AnonCustomizeSeriesNameField] = js.native
+  var seriesTemplate: js.UndefOr[CustomizeSeriesNameField] = js.native
   /** Specifies options for PolarChart widget series. */
   @JSName("series")
   var series_dxPolarChartOptions: js.UndefOr[PolarChartSeries | js.Array[PolarChartSeries]] = js.native
@@ -186,7 +186,7 @@ object dxPolarChartOptions {
         ret
     }
     @scala.inline
-    def withDataPrepareSettings(value: AnonConvertToAxisDataType): Self = {
+    def withDataPrepareSettings(value: ConvertToAxisDataType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataPrepareSettings")(value.asInstanceOf[js.Any])
         ret
@@ -234,13 +234,13 @@ object dxPolarChartOptions {
         ret
     }
     @scala.inline
-    def withOnArgumentAxisClickFunction1(value: /* e */ AnonArgumentComponent => _): Self = {
+    def withOnArgumentAxisClickFunction1(value: /* e */ ArgumentComponent => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onArgumentAxisClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnArgumentAxisClick(value: (js.Function1[/* e */ AnonArgumentComponent, _]) | String): Self = {
+    def withOnArgumentAxisClick(value: (js.Function1[/* e */ ArgumentComponent, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onArgumentAxisClick")(value.asInstanceOf[js.Any])
         ret
@@ -252,13 +252,13 @@ object dxPolarChartOptions {
         ret
     }
     @scala.inline
-    def withOnLegendClickFunction1(value: /* e */ AnonJQueryEventModelTarget => _): Self = {
+    def withOnLegendClickFunction1(value: /* e */ JQueryEventModelTarget => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLegendClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnLegendClick(value: (js.Function1[/* e */ AnonJQueryEventModelTarget, _]) | String): Self = {
+    def withOnLegendClick(value: (js.Function1[/* e */ JQueryEventModelTarget, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLegendClick")(value.asInstanceOf[js.Any])
         ret
@@ -270,13 +270,13 @@ object dxPolarChartOptions {
         ret
     }
     @scala.inline
-    def withOnSeriesClickFunction1(value: /* e */ AnonJQueryEventModelTarget => _): Self = {
+    def withOnSeriesClickFunction1(value: /* e */ JQueryEventModelTarget => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnSeriesClick(value: (js.Function1[/* e */ AnonJQueryEventModelTarget, _]) | String): Self = {
+    def withOnSeriesClick(value: (js.Function1[/* e */ JQueryEventModelTarget, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesClick")(value.asInstanceOf[js.Any])
         ret
@@ -288,7 +288,7 @@ object dxPolarChartOptions {
         ret
     }
     @scala.inline
-    def withOnSeriesHoverChanged(value: /* e */ AnonComponentDxPolarChart => _): Self = {
+    def withOnSeriesHoverChanged(value: /* e */ ComponentDxPolarChart => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesHoverChanged")(js.Any.fromFunction1(value))
         ret
@@ -300,7 +300,7 @@ object dxPolarChartOptions {
         ret
     }
     @scala.inline
-    def withOnSeriesSelectionChanged(value: /* e */ AnonComponentDxPolarChart => _): Self = {
+    def withOnSeriesSelectionChanged(value: /* e */ ComponentDxPolarChart => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeriesSelectionChanged")(js.Any.fromFunction1(value))
         ret
@@ -312,7 +312,7 @@ object dxPolarChartOptions {
         ret
     }
     @scala.inline
-    def withOnZoomEnd(value: /* e */ AnonPreviousRange => _): Self = {
+    def withOnZoomEnd(value: /* e */ PreviousRange => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onZoomEnd")(js.Any.fromFunction1(value))
         ret
@@ -324,7 +324,7 @@ object dxPolarChartOptions {
         ret
     }
     @scala.inline
-    def withOnZoomStart(value: /* e */ AnonRange => _): Self = {
+    def withOnZoomStart(value: /* e */ Range => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onZoomStart")(js.Any.fromFunction1(value))
         ret
@@ -372,7 +372,7 @@ object dxPolarChartOptions {
         ret
     }
     @scala.inline
-    def withSeriesTemplate(value: AnonCustomizeSeriesNameField): Self = {
+    def withSeriesTemplate(value: CustomizeSeriesNameField): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seriesTemplate")(value.asInstanceOf[js.Any])
         ret

@@ -1,10 +1,10 @@
 package typingsSlinky.oracleOraclejet.ojradiosetMod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.oracleOraclejet.AnonConverterHint
-import typingsSlinky.oracleOraclejet.AnonDefinition
-import typingsSlinky.oracleOraclejet.AnonInstruction
-import typingsSlinky.oracleOraclejet.AnonRequired
+import typingsSlinky.oracleOraclejet.anon.ConverterHint
+import typingsSlinky.oracleOraclejet.anon.Definition
+import typingsSlinky.oracleOraclejet.anon.Instruction
+import typingsSlinky.oracleOraclejet.anon.Required
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojeditablevalueMod.editableValueSettableProperties
 import typingsSlinky.oracleOraclejet.ojmessagingMod.^
@@ -27,20 +27,20 @@ trait ojRadiosetSettableProperties[K, D]
   var optionsKeys: js.UndefOr[OptionsKeys] = js.native
   var required: Boolean = js.native
   @JSName("translations")
-  var translations_ojRadiosetSettableProperties: AnonRequired = js.native
+  var translations_ojRadiosetSettableProperties: Required = js.native
 }
 
 object ojRadiosetSettableProperties {
   @scala.inline
   def apply[K, D](
     disabled: Boolean,
-    displayOptions: AnonConverterHint,
-    help: AnonInstruction,
-    helpHints: AnonDefinition,
+    displayOptions: ConverterHint,
+    help: Instruction,
+    helpHints: Definition,
     labelHint: String,
     messagesCustom: js.Array[^],
     required: Boolean,
-    translations: AnonRequired,
+    translations: Required,
     valid: valid | pending | invalidHidden | invalidShown,
     value: js.Any
   ): ojRadiosetSettableProperties[K, D] = {
@@ -60,7 +60,7 @@ object ojRadiosetSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonRequired): Self[K, D] = {
+    def withTranslations(value: Required): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

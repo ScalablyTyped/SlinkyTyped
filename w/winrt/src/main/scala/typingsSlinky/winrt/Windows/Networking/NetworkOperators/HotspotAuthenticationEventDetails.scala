@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Networking.NetworkOperators.HotspotAuthenticationEventDetails")
 @js.native
-class HotspotAuthenticationEventDetails () extends IHotspotAuthenticationEventDetails
+trait HotspotAuthenticationEventDetails extends IHotspotAuthenticationEventDetails
+
+object HotspotAuthenticationEventDetails {
+  @scala.inline
+  def apply(eventToken: String): HotspotAuthenticationEventDetails = {
+    val __obj = js.Dynamic.literal(eventToken = eventToken.asInstanceOf[js.Any])
+    __obj.asInstanceOf[HotspotAuthenticationEventDetails]
+  }
+}
 

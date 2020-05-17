@@ -1,5 +1,6 @@
 package typingsSlinky.uirouterCore
 
+import typingsSlinky.uirouterCore.anon.UiViewContextAnchor
 import typingsSlinky.uirouterCore.commonCommonMod.TypedMap
 import typingsSlinky.uirouterCore.routerMod.UIRouter
 import typingsSlinky.uirouterCore.viewInterfaceMod.ActiveUIView
@@ -91,8 +92,8 @@ object viewMod extends js.Object {
       *
       * @returns the normalized uiViewName and uiViewContextAnchor that the view targets
       */
-    def normalizeUIViewTarget(context: ViewContext): AnonUiViewContextAnchor = js.native
-    def normalizeUIViewTarget(context: ViewContext, rawViewName: String): AnonUiViewContextAnchor = js.native
+    def normalizeUIViewTarget(context: ViewContext): UiViewContextAnchor = js.native
+    def normalizeUIViewTarget(context: ViewContext, rawViewName: String): UiViewContextAnchor = js.native
   }
   
 }

@@ -1,17 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "jest__console"
-version := "24.9.0-06dd5e"
-scalaVersion := "2.13.1"
+version := "24.9.0-ce15eb"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "callsites" % "3.1.0-19f69f",
-  "org.scalablytyped.slinky" %%% "jest__source-map" % "24.9.0-3a9d98",
-  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-6c3110",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
+  "org.scalablytyped.slinky" %%% "callsites" % "3.1.0-4697db",
+  "org.scalablytyped.slinky" %%% "jest__source-map" % "24.9.0-f70e60",
+  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-9e8213",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

@@ -67,18 +67,6 @@ object ErrorResponse {
         ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
         ret
     }
-    @scala.inline
-    def withIp(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ip")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutIp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ip")(js.undefined)
-        ret
-    }
   }
   
 }

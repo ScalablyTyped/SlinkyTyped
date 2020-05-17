@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientAdsensehost.gapi.client.adsensehost
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAdsensehost.AnonAdClientId
-import typingsSlinky.gapiClientAdsensehost.AnonCustomChannelId
-import typingsSlinky.gapiClientAdsensehost.AnonMaxResults
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAdsensehost.anon.AdClientId
+import typingsSlinky.gapiClientAdsensehost.anon.CustomChannelId
+import typingsSlinky.gapiClientAdsensehost.anon.MaxResults
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,28 +11,28 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CustomchannelsResource extends js.Object {
   /** Delete a specific custom channel from the host AdSense account. */
-  def delete(request: AnonCustomChannelId): Request_[CustomChannel] = js.native
+  def delete(request: CustomChannelId): Request[CustomChannel] = js.native
   /** Get a specific custom channel from the host AdSense account. */
-  def get(request: AnonCustomChannelId): Request_[CustomChannel] = js.native
+  def get(request: CustomChannelId): Request[CustomChannel] = js.native
   /** Add a new custom channel to the host AdSense account. */
-  def insert(request: AnonAdClientId): Request_[CustomChannel] = js.native
+  def insert(request: AdClientId): Request[CustomChannel] = js.native
   /** List all host custom channels in this AdSense account. */
-  def list(request: AnonMaxResults): Request_[CustomChannels] = js.native
+  def list(request: MaxResults): Request[CustomChannels] = js.native
   /** Update a custom channel in the host AdSense account. This method supports patch semantics. */
-  def patch(request: AnonCustomChannelId): Request_[CustomChannel] = js.native
+  def patch(request: CustomChannelId): Request[CustomChannel] = js.native
   /** Update a custom channel in the host AdSense account. */
-  def update(request: AnonAdClientId): Request_[CustomChannel] = js.native
+  def update(request: AdClientId): Request[CustomChannel] = js.native
 }
 
 object CustomchannelsResource {
   @scala.inline
   def apply(
-    delete: AnonCustomChannelId => Request_[CustomChannel],
-    get: AnonCustomChannelId => Request_[CustomChannel],
-    insert: AnonAdClientId => Request_[CustomChannel],
-    list: AnonMaxResults => Request_[CustomChannels],
-    patch: AnonCustomChannelId => Request_[CustomChannel],
-    update: AnonAdClientId => Request_[CustomChannel]
+    delete: CustomChannelId => Request[CustomChannel],
+    get: CustomChannelId => Request[CustomChannel],
+    insert: AdClientId => Request[CustomChannel],
+    list: MaxResults => Request[CustomChannels],
+    patch: CustomChannelId => Request[CustomChannel],
+    update: AdClientId => Request[CustomChannel]
   ): CustomchannelsResource = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[CustomchannelsResource]
@@ -44,37 +44,37 @@ object CustomchannelsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDelete(value: AnonCustomChannelId => Request_[CustomChannel]): Self = {
+    def withDelete(value: CustomChannelId => Request[CustomChannel]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonCustomChannelId => Request_[CustomChannel]): Self = {
+    def withGet(value: CustomChannelId => Request[CustomChannel]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withInsert(value: AnonAdClientId => Request_[CustomChannel]): Self = {
+    def withInsert(value: AdClientId => Request[CustomChannel]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonMaxResults => Request_[CustomChannels]): Self = {
+    def withList(value: MaxResults => Request[CustomChannels]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPatch(value: AnonCustomChannelId => Request_[CustomChannel]): Self = {
+    def withPatch(value: CustomChannelId => Request[CustomChannel]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonAdClientId => Request_[CustomChannel]): Self = {
+    def withUpdate(value: AdClientId => Request[CustomChannel]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

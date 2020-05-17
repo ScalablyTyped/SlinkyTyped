@@ -1,9 +1,8 @@
 package typingsSlinky.chromeApps.chrome.system.storage
 
-import typingsSlinky.chromeApps.AnonFIXED
+import typingsSlinky.chromeApps.anon.FIXED
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chrome.integer
-import typingsSlinky.chromeApps.chromeAppsStrings.FIXED
 import typingsSlinky.chromeApps.chromeAppsStrings.REMOVABLE
 import typingsSlinky.chromeApps.chromeAppsStrings.UNKNOWN
 import typingsSlinky.chromeApps.chromeAppsStrings.fixed_
@@ -34,10 +33,10 @@ trait StorageUnitInfo extends js.Object {
     * @see enum StorageUnitType
     */
   var `type`: ToStringLiteral[
-    AnonFIXED, 
-    /* keyof chrome-apps.AnonFIXED */ FIXED | REMOVABLE | UNKNOWN, 
+    FIXED, 
+    /* keyof chrome-apps.anon.FIXED */ typingsSlinky.chromeApps.chromeAppsStrings.FIXED | REMOVABLE | UNKNOWN, 
     Exclude[
-      /* keyof chrome-apps.AnonFIXED */ FIXED | REMOVABLE | UNKNOWN, 
+      /* keyof chrome-apps.anon.FIXED */ typingsSlinky.chromeApps.chromeAppsStrings.FIXED | REMOVABLE | UNKNOWN, 
       fixed_ | removable_ | unknown__
     ]
   ] = js.native
@@ -50,10 +49,10 @@ object StorageUnitInfo {
     id: String,
     name: String,
     `type`: ToStringLiteral[
-      AnonFIXED, 
-      /* keyof chrome-apps.AnonFIXED */ FIXED | REMOVABLE | UNKNOWN, 
+      FIXED, 
+      /* keyof chrome-apps.anon.FIXED */ typingsSlinky.chromeApps.chromeAppsStrings.FIXED | REMOVABLE | UNKNOWN, 
       Exclude[
-        /* keyof chrome-apps.AnonFIXED */ FIXED | REMOVABLE | UNKNOWN, 
+        /* keyof chrome-apps.anon.FIXED */ typingsSlinky.chromeApps.chromeAppsStrings.FIXED | REMOVABLE | UNKNOWN, 
         fixed_ | removable_ | unknown__
       ]
     ]
@@ -89,10 +88,10 @@ object StorageUnitInfo {
     @scala.inline
     def withType(
       value: ToStringLiteral[
-          AnonFIXED, 
-          /* keyof chrome-apps.AnonFIXED */ FIXED | REMOVABLE | UNKNOWN, 
+          FIXED, 
+          /* keyof chrome-apps.anon.FIXED */ typingsSlinky.chromeApps.chromeAppsStrings.FIXED | REMOVABLE | UNKNOWN, 
           Exclude[
-            /* keyof chrome-apps.AnonFIXED */ FIXED | REMOVABLE | UNKNOWN, 
+            /* keyof chrome-apps.anon.FIXED */ typingsSlinky.chromeApps.chromeAppsStrings.FIXED | REMOVABLE | UNKNOWN, 
             fixed_ | removable_ | unknown__
           ]
         ]

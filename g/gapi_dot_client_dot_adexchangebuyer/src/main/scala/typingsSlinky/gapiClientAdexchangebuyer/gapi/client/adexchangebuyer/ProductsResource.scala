@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientAdexchangebuyer.gapi.client.adexchangebuyer
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAdexchangebuyer.AnonProductId
-import typingsSlinky.gapiClientAdexchangebuyer.AnonUserIp
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAdexchangebuyer.anon.ProductId
+import typingsSlinky.gapiClientAdexchangebuyer.anon.UserIp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ProductsResource extends js.Object {
   /** Gets the requested product by id. */
-  def get(request: AnonProductId): Request_[Product] = js.native
+  def get(request: ProductId): Request[Product] = js.native
   /** Gets the requested product. */
-  def search(request: AnonUserIp): Request_[GetOffersResponse] = js.native
+  def search(request: UserIp): Request[GetOffersResponse] = js.native
 }
 
 object ProductsResource {
   @scala.inline
-  def apply(get: AnonProductId => Request_[Product], search: AnonUserIp => Request_[GetOffersResponse]): ProductsResource = {
+  def apply(get: ProductId => Request[Product], search: UserIp => Request[GetOffersResponse]): ProductsResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), search = js.Any.fromFunction1(search))
     __obj.asInstanceOf[ProductsResource]
   }
@@ -28,13 +28,13 @@ object ProductsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonProductId => Request_[Product]): Self = {
+    def withGet(value: ProductId => Request[Product]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withSearch(value: AnonUserIp => Request_[GetOffersResponse]): Self = {
+    def withSearch(value: UserIp => Request[GetOffersResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("search")(js.Any.fromFunction1(value))
         ret

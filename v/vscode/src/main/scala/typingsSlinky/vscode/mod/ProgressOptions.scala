@@ -1,6 +1,6 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonViewId
+import typingsSlinky.vscode.anon.ViewId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait ProgressOptions extends js.Object {
   /**
   		 * The location at which progress should show.
   		 */
-  var location: ProgressLocation | AnonViewId = js.native
+  var location: ProgressLocation | ViewId = js.native
   /**
   		 * A human-readable string which will be used to describe the
   		 * operation.
@@ -27,7 +27,7 @@ trait ProgressOptions extends js.Object {
 
 object ProgressOptions {
   @scala.inline
-  def apply(location: ProgressLocation | AnonViewId): ProgressOptions = {
+  def apply(location: ProgressLocation | ViewId): ProgressOptions = {
     val __obj = js.Dynamic.literal(location = location.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProgressOptions]
   }
@@ -38,7 +38,7 @@ object ProgressOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withLocation(value: ProgressLocation | AnonViewId): Self = {
+    def withLocation(value: ProgressLocation | ViewId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
         ret

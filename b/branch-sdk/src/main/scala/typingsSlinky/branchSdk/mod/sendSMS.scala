@@ -1,6 +1,6 @@
 package typingsSlinky.branchSdk.mod
 
-import typingsSlinky.branchSdk.AnonMakenewlink
+import typingsSlinky.branchSdk.anon.Makenewlink
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,11 +9,11 @@ import scala.scalajs.js.annotation._
 @js.native
 object sendSMS extends js.Object {
   def apply(phone: String, link_data: DeepLinkData): Unit = js.native
-  def apply(phone: String, link_data: DeepLinkData, options: AnonMakenewlink): Unit = js.native
+  def apply(phone: String, link_data: DeepLinkData, options: Makenewlink): Unit = js.native
   def apply(
     phone: String,
     link_data: DeepLinkData,
-    options: AnonMakenewlink,
+    options: Makenewlink,
     callback: js.Function1[/* err */ BranchError, Unit]
   ): Unit = js.native
 }

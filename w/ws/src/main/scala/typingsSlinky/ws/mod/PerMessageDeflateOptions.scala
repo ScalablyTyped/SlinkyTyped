@@ -1,7 +1,7 @@
 package typingsSlinky.ws.mod
 
 import typingsSlinky.node.zlibMod.ZlibOptions
-import typingsSlinky.ws.AnonChunkSize
+import typingsSlinky.ws.anon.ChunkSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait PerMessageDeflateOptions extends js.Object {
   var serverMaxWindowBits: js.UndefOr[Double] = js.native
   var serverNoContextTakeover: js.UndefOr[Boolean] = js.native
   var threshold: js.UndefOr[Double] = js.native
-  var zlibDeflateOptions: js.UndefOr[AnonChunkSize] = js.native
+  var zlibDeflateOptions: js.UndefOr[ChunkSize] = js.native
   var zlibInflateOptions: js.UndefOr[ZlibOptions] = js.native
 }
 
@@ -103,7 +103,7 @@ object PerMessageDeflateOptions {
         ret
     }
     @scala.inline
-    def withZlibDeflateOptions(value: AnonChunkSize): Self = {
+    def withZlibDeflateOptions(value: ChunkSize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("zlibDeflateOptions")(value.asInstanceOf[js.Any])
         ret

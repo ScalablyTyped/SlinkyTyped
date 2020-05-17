@@ -5,7 +5,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonBreakpoints
+import typingsSlinky.cathoQuantum.anon.Breakpoints
 import typingsSlinky.cathoQuantum.buttonMod.ButtonProps
 import typingsSlinky.cathoQuantum.buttonMod.default
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.button
@@ -58,7 +58,7 @@ object Button {
     @scala.inline
     def stroked(value: Boolean): this.type = set("stroked", value.asInstanceOf[js.Any])
     @scala.inline
-    def theme(value: AnonBreakpoints): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: Breakpoints): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
     def `type`(value: button | reset | submit): this.type = set("type", value.asInstanceOf[js.Any])
   }

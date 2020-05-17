@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonGranularity
+import typingsSlinky.cesium.anon.Granularity
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "CorridorOutlineGeometry")
 @js.native
 class CorridorOutlineGeometry protected () extends Packable {
-  def this(options: AnonGranularity) = this()
+  def this(options: Granularity) = this()
 }
 
 /* static members */

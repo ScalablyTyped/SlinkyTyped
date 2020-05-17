@@ -2,9 +2,9 @@ package typingsSlinky.walkdir.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.node.fsMod.Stats
-import typingsSlinky.walkdir.syncfalseWalkOptions
-import typingsSlinky.walkdir.synctruereturnobjectfalse
-import typingsSlinky.walkdir.synctruereturnobjecttrueW
+import typingsSlinky.walkdir.anon.syncfalseWalkOptions
+import typingsSlinky.walkdir.anon.synctruereturnobjectfalse
+import typingsSlinky.walkdir.anon.synctruereturnobjecttrueW
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,13 +13,13 @@ import scala.scalajs.js.annotation._
 @js.native
 object find extends js.Object {
   def apply(path: String): WalkEmitter = js.native
-  def apply(path: String, options: WalkEventListener): WalkEmitter = js.native
-  def apply(path: String, options: WalkEventListener, eventListener: WalkEventListener): WalkEmitter = js.native
   def apply(path: String, options: syncfalseWalkOptions): WalkEmitter = js.native
   def apply(path: String, options: syncfalseWalkOptions, eventListener: WalkEventListener): WalkEmitter = js.native
   def apply(path: String, options: synctruereturnobjectfalse): js.Array[String] = js.native
   def apply(path: String, options: synctruereturnobjectfalse, eventListener: WalkEventListener): js.Array[String] = js.native
   def apply(path: String, options: synctruereturnobjecttrueW): StringDictionary[Stats] = js.native
   def apply(path: String, options: synctruereturnobjecttrueW, eventListener: WalkEventListener): StringDictionary[Stats] = js.native
+  def apply(path: String, options: WalkEventListener): WalkEmitter = js.native
+  def apply(path: String, options: WalkEventListener, eventListener: WalkEventListener): WalkEmitter = js.native
 }
 

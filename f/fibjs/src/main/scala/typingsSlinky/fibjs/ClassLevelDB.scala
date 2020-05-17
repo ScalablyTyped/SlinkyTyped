@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 	* @brief LevelDB 数据库对象
 	* @detail 用以创建和管理字典对象，创建方法：,```JavaScript,var db = require("db");,var test = new db.openLevelDB("test.db");,```
 	*/
-@JSGlobal("Class_LevelDB")
 @js.native
-class ClassLevelDB () extends ClassObject {
+trait ClassLevelDB extends ClassObject {
   /**
   	 * 
   	 * @brief 在当前数据库上开启一个事务

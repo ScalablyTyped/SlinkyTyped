@@ -1,7 +1,7 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin.cancellationTokenMod
 
-import typingsSlinky.forkTsCheckerWebpackPlugin.AnonCancellationFileName
-import typingsSlinky.forkTsCheckerWebpackPlugin.Typeofts
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.CancellationFileName
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.Typeofts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ class CancellationToken protected () extends js.Object {
   def isCancellationRequested(): Boolean = js.native
   def requestCancellation(): Unit = js.native
   def throwIfCancellationRequested(): Unit = js.native
-  def toJSON(): AnonCancellationFileName = js.native
+  def toJSON(): CancellationFileName = js.native
 }
 
 /* static members */

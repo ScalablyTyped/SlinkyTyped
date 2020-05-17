@@ -1,6 +1,6 @@
 package typingsSlinky.sequelize.mod
 
-import typingsSlinky.sequelize.AnonPlural
+import typingsSlinky.sequelize.anon.Plural
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait AssociationOptions extends js.Object {
     * same alias when eager loading and when getting assocated models. Defaults to the singularized name of
     * target
     */
-  var as: js.UndefOr[String | AnonPlural] = js.native
+  var as: js.UndefOr[String | Plural] = js.native
   /**
     * Should on update and on delete constraints be enabled on the foreign key.
     */
@@ -70,7 +70,7 @@ object AssociationOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAs(value: String | AnonPlural): Self = {
+    def withAs(value: String | Plural): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("as")(value.asInstanceOf[js.Any])
         ret

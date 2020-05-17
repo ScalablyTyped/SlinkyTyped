@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.AnimationEvent
 import org.scalajs.dom.raw.ClipboardEvent
 import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.ErrorEvent
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventListenerOptions
 import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.KeyboardEvent
@@ -19,9 +20,7 @@ import typingsSlinky.chromeApps.WebView.ClearDataTypeSet
 import typingsSlinky.chromeApps.WebView.ContentScriptDetails
 import typingsSlinky.chromeApps.WebView.ContentWindow
 import typingsSlinky.chromeApps.WebView.ContextMenus
-import typingsSlinky.chromeApps.WebView.Events.CloseEvent
 import typingsSlinky.chromeApps.WebView.Events.ConsoleMessageEvent
-import typingsSlinky.chromeApps.WebView.Events.ContentLoadEvent
 import typingsSlinky.chromeApps.WebView.Events.DialogEvent
 import typingsSlinky.chromeApps.WebView.Events.ExitEvent
 import typingsSlinky.chromeApps.WebView.Events.FindUpdateEvent
@@ -29,7 +28,6 @@ import typingsSlinky.chromeApps.WebView.Events.LoadAbortEvent
 import typingsSlinky.chromeApps.WebView.Events.LoadCommitEvent
 import typingsSlinky.chromeApps.WebView.Events.LoadRedirectEvent
 import typingsSlinky.chromeApps.WebView.Events.LoadStartEvent
-import typingsSlinky.chromeApps.WebView.Events.LoadStopEvent
 import typingsSlinky.chromeApps.WebView.Events.NewWindowEvent
 import typingsSlinky.chromeApps.WebView.Events.PermissionRequestEvent
 import typingsSlinky.chromeApps.WebView.Events.ResponsiveEvent
@@ -156,7 +154,6 @@ import typingsSlinky.chromeApps.chromeAppsStrings.waiting
 import typingsSlinky.chromeApps.chromeAppsStrings.wheel
 import typingsSlinky.chromeApps.chromeAppsStrings.zoomchange
 import typingsSlinky.std.AddEventListenerOptions
-import typingsSlinky.std.Event_
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -175,10 +172,8 @@ import scala.scalajs.js.annotation._
   * Your app can control the appearance of the *webview* and interact with the web content, initiate navigations in
   * an embedded web page, react to error events that happen within it.
   */
-@JSGlobal("HTMLWebViewElement")
 @js.native
-/** Create a new element */
-class HTMLWebViewElement () extends HTMLElement {
+trait HTMLWebViewElement extends HTMLElement {
   /**
     * Allow scaling?
     * @default false
@@ -230,7 +225,7 @@ class HTMLWebViewElement () extends HTMLElement {
     * page navigation within the current document or
     * asynchronous resource loads.
     */
-  var oncontentload: (js.ThisFunction1[/* this */ this.type, /* ev */ ContentLoadEvent, _]) | Null = js.native
+  var oncontentload: (js.ThisFunction1[/* this */ this.type, Event, _]) | Null = js.native
   /**
     * Fired when the guest window attempts to open a modal dialog via
     * window.alert, window.confirm, or window.prompt.
@@ -284,7 +279,7 @@ class HTMLWebViewElement () extends HTMLElement {
     * follow a loadabort event, even if all committed loads since the last loadstop
     * event (if any) were aborted.
     */
-  var onloadstop: (js.ThisFunction1[/* this */ this.type, /* ev */ LoadStopEvent, _]) | Null = js.native
+  var onloadstop: (js.ThisFunction1[/* this */ this.type, Event, _]) | Null = js.native
   /**
     * Fired when the guest page attempts to open a new browser window.
     */
@@ -498,59 +493,59 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_cancel(`type`: cancel, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_cancel(`type`: cancel, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_cancel(
     `type`: cancel,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_cancel(
     `type`: cancel,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_canplay(`type`: canplay, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_canplay(`type`: canplay, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_canplay(
     `type`: canplay,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_canplay(
     `type`: canplay,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_canplaythrough(`type`: canplaythrough, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_canplaythrough(`type`: canplaythrough, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_canplaythrough(
     `type`: canplaythrough,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_canplaythrough(
     `type`: canplaythrough,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_change(`type`: change, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_change(`type`: change, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_change(
     `type`: change,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_change(
     `type`: change,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -568,17 +563,13 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_close(`type`: close, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ CloseEvent, _]): Unit = js.native
+  def addEventListener_close(`type`: close, listener: js.ThisFunction1[/* this */ HTMLElement, Event, _]): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_close(`type`: close, listener: js.ThisFunction1[/* this */ HTMLElement, Event, _], options: Boolean): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_close(
     `type`: close,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ CloseEvent, _],
-    options: Boolean
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_close(
-    `type`: close,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ CloseEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -599,20 +590,17 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_contentload(
-    `type`: contentload,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ContentLoadEvent, _]
-  ): Unit = js.native
+  def addEventListener_contentload(`type`: contentload, listener: js.ThisFunction1[/* this */ HTMLElement, Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_contentload(
     `type`: contentload,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ContentLoadEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_contentload(
     `type`: contentload,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ContentLoadEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -644,17 +632,17 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_cuechange(`type`: cuechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_cuechange(`type`: cuechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_cuechange(
     `type`: cuechange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_cuechange(
     `type`: cuechange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -742,17 +730,17 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_dragexit(`type`: dragexit, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_dragexit(`type`: dragexit, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dragexit(
     `type`: dragexit,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dragexit(
     `type`: dragexit,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -812,45 +800,45 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_durationchange(`type`: durationchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_durationchange(`type`: durationchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_durationchange(
     `type`: durationchange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_durationchange(
     `type`: durationchange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_emptied(`type`: emptied, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_emptied(`type`: emptied, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_emptied(
     `type`: emptied,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_emptied(
     `type`: emptied,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_ended(`type`: ended, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_ended(`type`: ended, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ended(
     `type`: ended,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ended(
     `type`: ended,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -941,31 +929,31 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_fullscreenchange(`type`: fullscreenchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_fullscreenchange(`type`: fullscreenchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenchange(
     `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenchange(
     `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_fullscreenerror(`type`: fullscreenerror, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_fullscreenerror(`type`: fullscreenerror, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenerror(
     `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenerror(
     `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -986,31 +974,31 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_input(`type`: input_, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_input(`type`: input_, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_input(
     `type`: input_,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_input(
     `type`: input_,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_invalid(`type`: invalid, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_invalid(`type`: invalid, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_invalid(
     `type`: invalid,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_invalid(
     `type`: invalid,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -1056,17 +1044,17 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_load(`type`: load, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_load(`type`: load, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_load(
     `type`: load,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_load(
     `type`: load,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -1101,31 +1089,31 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_loadeddata(`type`: loadeddata, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_loadeddata(`type`: loadeddata, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadeddata(
     `type`: loadeddata,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadeddata(
     `type`: loadeddata,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_loadedmetadata(`type`: loadedmetadata, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_loadedmetadata(`type`: loadedmetadata, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadedmetadata(
     `type`: loadedmetadata,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadedmetadata(
     `type`: loadedmetadata,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -1160,17 +1148,13 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_loadstop(`type`: loadstop, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ LoadStopEvent, _]): Unit = js.native
+  def addEventListener_loadstop(`type`: loadstop, listener: js.ThisFunction1[/* this */ HTMLElement, Event, _]): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_loadstop(`type`: loadstop, listener: js.ThisFunction1[/* this */ HTMLElement, Event, _], options: Boolean): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadstop(
     `type`: loadstop,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ LoadStopEvent, _],
-    options: Boolean
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_loadstop(
-    `type`: loadstop,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ LoadStopEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -1317,17 +1301,17 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_pause(`type`: pause, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_pause(`type`: pause, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pause(
     `type`: pause,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pause(
     `type`: pause,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -1348,31 +1332,31 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_play(`type`: play, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_play(`type`: play, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_play(
     `type`: play,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_play(
     `type`: play,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_playing(`type`: playing, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_playing(`type`: playing, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_playing(
     `type`: playing,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_playing(
     `type`: playing,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -1505,31 +1489,31 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_ratechange(`type`: ratechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_ratechange(`type`: ratechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ratechange(
     `type`: ratechange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ratechange(
     `type`: ratechange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_reset(`type`: reset, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_reset(`type`: reset, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_reset(
     `type`: reset,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_reset(
     `type`: reset,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -1564,17 +1548,17 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_scroll(`type`: scroll, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_scroll(`type`: scroll, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_scroll(
     `type`: scroll,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_scroll(
     `type`: scroll,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -1595,73 +1579,73 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_seeked(`type`: seeked, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_seeked(`type`: seeked, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_seeked(
     `type`: seeked,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_seeked(
     `type`: seeked,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_seeking(`type`: seeking, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_seeking(`type`: seeking, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_seeking(
     `type`: seeking,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_seeking(
     `type`: seeking,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_select(`type`: select, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_select(`type`: select, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_select(
     `type`: select,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_select(
     `type`: select,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_selectionchange(`type`: selectionchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_selectionchange(`type`: selectionchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_selectionchange(
     `type`: selectionchange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_selectionchange(
     `type`: selectionchange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_selectstart(`type`: selectstart, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_selectstart(`type`: selectstart, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_selectstart(
     `type`: selectstart,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_selectstart(
     `type`: selectstart,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -1682,73 +1666,73 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_stalled(`type`: stalled, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_stalled(`type`: stalled, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_stalled(
     `type`: stalled,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_stalled(
     `type`: stalled,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_submit(`type`: submit, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_submit(`type`: submit, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_submit(
     `type`: submit,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_submit(
     `type`: submit,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_suspend(`type`: suspend_, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_suspend(`type`: suspend_, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_suspend(
     `type`: suspend_,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_suspend(
     `type`: suspend_,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_timeupdate(`type`: timeupdate, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_timeupdate(`type`: timeupdate, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_timeupdate(
     `type`: timeupdate,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_timeupdate(
     `type`: timeupdate,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_toggle(`type`: toggle, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_toggle(`type`: toggle, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_toggle(
     `type`: toggle,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_toggle(
     `type`: toggle,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -1893,31 +1877,31 @@ class HTMLWebViewElement () extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_volumechange(`type`: volumechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_volumechange(`type`: volumechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_volumechange(
     `type`: volumechange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_volumechange(
     `type`: volumechange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_waiting(`type`: waiting, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_waiting(`type`: waiting, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_waiting(
     `type`: waiting,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_waiting(
     `type`: waiting,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -2235,59 +2219,59 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_cancel(`type`: cancel, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_cancel(`type`: cancel, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_cancel(
     `type`: cancel,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_cancel(
     `type`: cancel,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_canplay(`type`: canplay, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_canplay(`type`: canplay, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_canplay(
     `type`: canplay,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_canplay(
     `type`: canplay,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_canplaythrough(`type`: canplaythrough, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_canplaythrough(`type`: canplaythrough, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_canplaythrough(
     `type`: canplaythrough,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_canplaythrough(
     `type`: canplaythrough,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_change(`type`: change, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_change(`type`: change, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_change(
     `type`: change,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_change(
     `type`: change,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -2305,17 +2289,13 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_close(`type`: close, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ CloseEvent, _]): Unit = js.native
+  def removeEventListener_close(`type`: close, listener: js.ThisFunction1[/* this */ HTMLElement, Event, _]): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_close(`type`: close, listener: js.ThisFunction1[/* this */ HTMLElement, Event, _], options: Boolean): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_close(
     `type`: close,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ CloseEvent, _],
-    options: Boolean
-  ): Unit = js.native
-  @JSName("removeEventListener")
-  def removeEventListener_close(
-    `type`: close,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ CloseEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -2336,20 +2316,17 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_contentload(
-    `type`: contentload,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ContentLoadEvent, _]
-  ): Unit = js.native
+  def removeEventListener_contentload(`type`: contentload, listener: js.ThisFunction1[/* this */ HTMLElement, Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_contentload(
     `type`: contentload,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ContentLoadEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_contentload(
     `type`: contentload,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ ContentLoadEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -2381,17 +2358,17 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_cuechange(`type`: cuechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_cuechange(`type`: cuechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_cuechange(
     `type`: cuechange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_cuechange(
     `type`: cuechange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -2479,17 +2456,17 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_dragexit(`type`: dragexit, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_dragexit(`type`: dragexit, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragexit(
     `type`: dragexit,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragexit(
     `type`: dragexit,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -2549,45 +2526,45 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_durationchange(`type`: durationchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_durationchange(`type`: durationchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_durationchange(
     `type`: durationchange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_durationchange(
     `type`: durationchange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_emptied(`type`: emptied, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_emptied(`type`: emptied, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_emptied(
     `type`: emptied,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_emptied(
     `type`: emptied,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_ended(`type`: ended, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_ended(`type`: ended, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_ended(
     `type`: ended,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_ended(
     `type`: ended,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -2678,31 +2655,31 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_fullscreenchange(`type`: fullscreenchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_fullscreenchange(`type`: fullscreenchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenchange(
     `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenchange(
     `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_fullscreenerror(`type`: fullscreenerror, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_fullscreenerror(`type`: fullscreenerror, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenerror(
     `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenerror(
     `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -2723,31 +2700,31 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_input(`type`: input_, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_input(`type`: input_, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_input(
     `type`: input_,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_input(
     `type`: input_,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_invalid(`type`: invalid, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_invalid(`type`: invalid, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_invalid(
     `type`: invalid,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_invalid(
     `type`: invalid,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -2793,17 +2770,17 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_load(`type`: load, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_load(`type`: load, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_load(
     `type`: load,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_load(
     `type`: load,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -2838,31 +2815,31 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_loadeddata(`type`: loadeddata, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_loadeddata(`type`: loadeddata, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadeddata(
     `type`: loadeddata,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadeddata(
     `type`: loadeddata,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_loadedmetadata(`type`: loadedmetadata, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_loadedmetadata(`type`: loadedmetadata, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadedmetadata(
     `type`: loadedmetadata,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadedmetadata(
     `type`: loadedmetadata,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -2897,17 +2874,13 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_loadstop(`type`: loadstop, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ LoadStopEvent, _]): Unit = js.native
+  def removeEventListener_loadstop(`type`: loadstop, listener: js.ThisFunction1[/* this */ HTMLElement, Event, _]): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_loadstop(`type`: loadstop, listener: js.ThisFunction1[/* this */ HTMLElement, Event, _], options: Boolean): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadstop(
     `type`: loadstop,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ LoadStopEvent, _],
-    options: Boolean
-  ): Unit = js.native
-  @JSName("removeEventListener")
-  def removeEventListener_loadstop(
-    `type`: loadstop,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ LoadStopEvent, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -3054,17 +3027,17 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_pause(`type`: pause, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_pause(`type`: pause, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pause(
     `type`: pause,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pause(
     `type`: pause,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -3085,31 +3058,31 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_play(`type`: play, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_play(`type`: play, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_play(
     `type`: play,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_play(
     `type`: play,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_playing(`type`: playing, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_playing(`type`: playing, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_playing(
     `type`: playing,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_playing(
     `type`: playing,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -3242,31 +3215,31 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_ratechange(`type`: ratechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_ratechange(`type`: ratechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_ratechange(
     `type`: ratechange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_ratechange(
     `type`: ratechange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_reset(`type`: reset, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_reset(`type`: reset, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_reset(
     `type`: reset,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_reset(
     `type`: reset,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -3301,17 +3274,17 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_scroll(`type`: scroll, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_scroll(`type`: scroll, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_scroll(
     `type`: scroll,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_scroll(
     `type`: scroll,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -3332,73 +3305,73 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_seeked(`type`: seeked, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_seeked(`type`: seeked, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_seeked(
     `type`: seeked,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_seeked(
     `type`: seeked,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_seeking(`type`: seeking, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_seeking(`type`: seeking, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_seeking(
     `type`: seeking,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_seeking(
     `type`: seeking,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_select(`type`: select, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_select(`type`: select, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_select(
     `type`: select,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_select(
     `type`: select,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_selectionchange(`type`: selectionchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_selectionchange(`type`: selectionchange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_selectionchange(
     `type`: selectionchange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_selectionchange(
     `type`: selectionchange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_selectstart(`type`: selectstart, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_selectstart(`type`: selectstart, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_selectstart(
     `type`: selectstart,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_selectstart(
     `type`: selectstart,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -3419,73 +3392,73 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_stalled(`type`: stalled, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_stalled(`type`: stalled, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_stalled(
     `type`: stalled,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_stalled(
     `type`: stalled,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_submit(`type`: submit, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_submit(`type`: submit, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_submit(
     `type`: submit,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_submit(
     `type`: submit,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_suspend(`type`: suspend_, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_suspend(`type`: suspend_, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_suspend(
     `type`: suspend_,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_suspend(
     `type`: suspend_,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_timeupdate(`type`: timeupdate, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_timeupdate(`type`: timeupdate, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_timeupdate(
     `type`: timeupdate,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_timeupdate(
     `type`: timeupdate,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_toggle(`type`: toggle, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_toggle(`type`: toggle, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_toggle(
     `type`: toggle,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_toggle(
     `type`: toggle,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -3630,31 +3603,31 @@ class HTMLWebViewElement () extends HTMLElement {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_volumechange(`type`: volumechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_volumechange(`type`: volumechange, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_volumechange(
     `type`: volumechange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_volumechange(
     `type`: volumechange,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_waiting(`type`: waiting, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_waiting(`type`: waiting, listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_waiting(
     `type`: waiting,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_waiting(
     `type`: waiting,
-    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ HTMLElement, /* ev */ Event, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")

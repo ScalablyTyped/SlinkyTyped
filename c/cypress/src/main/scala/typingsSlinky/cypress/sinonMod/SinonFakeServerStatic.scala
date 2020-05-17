@@ -1,6 +1,6 @@
 package typingsSlinky.cypress.sinonMod
 
-import typingsSlinky.cypress.PartialSinonFakeServerOpt
+import typingsSlinky.cypress.anon.PartialSinonFakeServerOpt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

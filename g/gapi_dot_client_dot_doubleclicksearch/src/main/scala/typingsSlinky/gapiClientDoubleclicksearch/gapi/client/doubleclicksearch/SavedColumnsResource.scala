@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientDoubleclicksearch.gapi.client.doubleclicksearch
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientDoubleclicksearch.AnonAgencyId
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientDoubleclicksearch.anon.AgencyId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SavedColumnsResource extends js.Object {
   /** Retrieve the list of saved columns for a specified advertiser. */
-  def list(request: AnonAgencyId): Request_[SavedColumnList] = js.native
+  def list(request: AgencyId): Request[SavedColumnList] = js.native
 }
 
 object SavedColumnsResource {
   @scala.inline
-  def apply(list: AnonAgencyId => Request_[SavedColumnList]): SavedColumnsResource = {
+  def apply(list: AgencyId => Request[SavedColumnList]): SavedColumnsResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[SavedColumnsResource]
   }
@@ -25,7 +25,7 @@ object SavedColumnsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withList(value: AnonAgencyId => Request_[SavedColumnList]): Self = {
+    def withList(value: AgencyId => Request[SavedColumnList]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

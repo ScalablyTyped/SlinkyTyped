@@ -20,10 +20,4 @@ package object plugins {
     /* route */ typingsSlinky.restify.mod.Route, 
     scala.Unit
   ]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.restify.restifyStrings.close
-    - typingsSlinky.restify.restifyStrings.aborted
-    - js.UndefOr[scala.Nothing]
-  */
-  type TMetricsCallback = js.UndefOr[typingsSlinky.restify.mod.plugins._TMetricsCallback]
 }

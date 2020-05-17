@@ -1,6 +1,5 @@
 package typingsSlinky.trezorConnect.mod
 
-import typingsSlinky.trezorConnect.AnonError
 import typingsSlinky.trezorConnect.trezorConnectBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,13 +8,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Error
   extends ResponseMessage[js.Any] {
-  var payload: AnonError = js.native
+  var payload: typingsSlinky.trezorConnect.anon.Error = js.native
   var success: `false` = js.native
 }
 
 object Error {
   @scala.inline
-  def apply(payload: AnonError, success: `false`): Error = {
+  def apply(payload: typingsSlinky.trezorConnect.anon.Error, success: `false`): Error = {
     val __obj = js.Dynamic.literal(payload = payload.asInstanceOf[js.Any], success = success.asInstanceOf[js.Any])
     __obj.asInstanceOf[Error]
   }
@@ -26,7 +25,7 @@ object Error {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPayload(value: AnonError): Self = {
+    def withPayload(value: typingsSlinky.trezorConnect.anon.Error): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
         ret

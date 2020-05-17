@@ -1,6 +1,6 @@
 package typingsSlinky.wegameApi.wx.types
 
-import typingsSlinky.wegameApi.AnonLineHeight
+import typingsSlinky.wegameApi.anon.LineHeight
 import typingsSlinky.wegameApi.wegameApiStrings.bold
 import typingsSlinky.wegameApi.wegameApiStrings.italic
 import typingsSlinky.wegameApi.wegameApiStrings.normal
@@ -16,7 +16,7 @@ trait LineHeightParams extends js.Object {
   var fontSize: js.UndefOr[Double] = js.native
   var fontStyle: js.UndefOr[normal | italic] = js.native
   var fontWeight: js.UndefOr[normal | bold] = js.native
-  var success: js.UndefOr[js.Function1[/* res */ AnonLineHeight, Unit]] = js.native
+  var success: js.UndefOr[js.Function1[/* res */ LineHeight, Unit]] = js.native
   var text: String = js.native
 }
 
@@ -105,7 +105,7 @@ object LineHeightParams {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonLineHeight => Unit): Self = {
+    def withSuccess(value: /* res */ LineHeight => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

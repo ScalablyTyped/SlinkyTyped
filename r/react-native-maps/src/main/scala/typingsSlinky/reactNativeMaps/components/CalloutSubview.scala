@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeMaps.components
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -29,8 +29,8 @@ import typingsSlinky.reactNative.reactNativeStrings.polite
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.yes
-import typingsSlinky.reactNativeMaps.Anon1
-import typingsSlinky.reactNativeMaps.AnonCoordinate
+import typingsSlinky.reactNativeMaps.anon.Coordinate
+import typingsSlinky.reactNativeMaps.anon.`1`
 import typingsSlinky.reactNativeMaps.mod.MapCalloutSubviewProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -102,7 +102,7 @@ object CalloutSubview {
     @scala.inline
     def onMoveShouldSetResponderCapture(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onMoveShouldSetResponderCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onPress(value: SyntheticEvent[NodeHandle, Anon1 with AnonCoordinate] => Unit): this.type = set("onPress", js.Any.fromFunction1(value))
+    def onPress(value: SyntheticEvent[NodeHandle, `1` with Coordinate] => Unit): this.type = set("onPress", js.Any.fromFunction1(value))
     @scala.inline
     def onResponderEnd(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onResponderEnd", js.Any.fromFunction1(value))
     @scala.inline

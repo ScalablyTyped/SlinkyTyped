@@ -1,6 +1,6 @@
 package typingsSlinky.octokitRest.mod.Octokit
 
-import typingsSlinky.octokitRest.AnonFormat
+import typingsSlinky.octokitRest.anon.Format
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait RequestOptions extends js.Object {
   /**
     * Media type options, see {@link https://developer.github.com/v3/media/|GitHub Developer Guide}
     */
-  var mediaType: js.UndefOr[AnonFormat] = js.native
+  var mediaType: js.UndefOr[Format] = js.native
   var method: js.UndefOr[RequestMethod] = js.native
   var request: js.UndefOr[OctokitRequestOptions] = js.native
   var url: js.UndefOr[String] = js.native
@@ -55,7 +55,7 @@ object RequestOptions {
         ret
     }
     @scala.inline
-    def withMediaType(value: AnonFormat): Self = {
+    def withMediaType(value: Format): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mediaType")(value.asInstanceOf[js.Any])
         ret

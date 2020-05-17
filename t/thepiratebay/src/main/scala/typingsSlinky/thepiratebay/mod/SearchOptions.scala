@@ -1,6 +1,6 @@
 package typingsSlinky.thepiratebay.mod
 
-import typingsSlinky.thepiratebay.AnonVerified
+import typingsSlinky.thepiratebay.anon.Verified
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SearchOptions extends js.Object {
   var category: js.UndefOr[String | Double] = js.native
-  var filter: js.UndefOr[AnonVerified] = js.native
+  var filter: js.UndefOr[Verified] = js.native
   var orderBy: js.UndefOr[String] = js.native
   var page: js.UndefOr[Double] = js.native
   var sortBy: js.UndefOr[String] = js.native
@@ -39,7 +39,7 @@ object SearchOptions {
         ret
     }
     @scala.inline
-    def withFilter(value: AnonVerified): Self = {
+    def withFilter(value: Verified): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
         ret

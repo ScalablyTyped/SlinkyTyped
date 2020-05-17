@@ -1,8 +1,8 @@
 package typingsSlinky.reduxSagaCore.typesMod
 
 import typingsSlinky.redux.mod.Action
-import typingsSlinky.reduxSagaCore.AnonArgs
-import typingsSlinky.reduxSagaCore.AnonEffect
+import typingsSlinky.reduxSagaCore.anon.Args
+import typingsSlinky.reduxSagaCore.anon.Effect
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,13 +41,13 @@ trait SagaMonitor extends js.Object {
     *   `race`/`all`
     * @param effect The yielded effect itself
     */
-  var effectTriggered: js.UndefOr[js.Function1[/* options */ AnonEffect, Unit]] = js.native
+  var effectTriggered: js.UndefOr[js.Function1[/* options */ Effect, Unit]] = js.native
   /**
     * @param effectId Unique ID assigned to this root saga execution
     * @param saga The generator function that starts to run
     * @param args The arguments passed to the generator function
     */
-  var rootSagaStarted: js.UndefOr[js.Function1[/* options */ AnonArgs, Unit]] = js.native
+  var rootSagaStarted: js.UndefOr[js.Function1[/* options */ Args, Unit]] = js.native
 }
 
 object SagaMonitor {
@@ -111,7 +111,7 @@ object SagaMonitor {
         ret
     }
     @scala.inline
-    def withEffectTriggered(value: /* options */ AnonEffect => Unit): Self = {
+    def withEffectTriggered(value: /* options */ Effect => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("effectTriggered")(js.Any.fromFunction1(value))
         ret
@@ -123,7 +123,7 @@ object SagaMonitor {
         ret
     }
     @scala.inline
-    def withRootSagaStarted(value: /* options */ AnonArgs => Unit): Self = {
+    def withRootSagaStarted(value: /* options */ Args => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rootSagaStarted")(js.Any.fromFunction1(value))
         ret

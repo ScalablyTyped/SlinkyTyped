@@ -1,7 +1,7 @@
 package typingsSlinky.heremaps.H.service
 
-import typingsSlinky.heremaps.AnonNormal
-import typingsSlinky.heremaps.AnonSatellite
+import typingsSlinky.heremaps.anon.Normal
+import typingsSlinky.heremaps.anon.Satellite
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,13 +11,13 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait DefaultLayers extends js.Object {
-  var raster: AnonSatellite = js.native
-  var vector: AnonNormal = js.native
+  var raster: Satellite = js.native
+  var vector: Normal = js.native
 }
 
 object DefaultLayers {
   @scala.inline
-  def apply(raster: AnonSatellite, vector: AnonNormal): DefaultLayers = {
+  def apply(raster: Satellite, vector: Normal): DefaultLayers = {
     val __obj = js.Dynamic.literal(raster = raster.asInstanceOf[js.Any], vector = vector.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultLayers]
   }
@@ -28,13 +28,13 @@ object DefaultLayers {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withRaster(value: AnonSatellite): Self = {
+    def withRaster(value: Satellite): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("raster")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withVector(value: AnonNormal): Self = {
+    def withVector(value: Normal): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("vector")(value.asInstanceOf[js.Any])
         ret

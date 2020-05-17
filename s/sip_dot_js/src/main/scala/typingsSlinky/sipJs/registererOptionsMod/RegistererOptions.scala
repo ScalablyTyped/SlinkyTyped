@@ -1,6 +1,6 @@
 package typingsSlinky.sipJs.registererOptionsMod
 
-import typingsSlinky.sipJs.AnonFromTag
+import typingsSlinky.sipJs.anon.FromTag
 import typingsSlinky.sipJs.coreMod.URI
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,7 +25,7 @@ trait RegistererOptions extends js.Object {
     */
   var logConfiguration: js.UndefOr[Boolean] = js.native
   /** @deprecated TODO: provide alternative. */
-  var params: js.UndefOr[AnonFromTag] = js.native
+  var params: js.UndefOr[FromTag] = js.native
   /**
     * Value to provide with "reg-id" Contact parameter.
     * @defaultValue 1
@@ -111,7 +111,7 @@ object RegistererOptions {
         ret
     }
     @scala.inline
-    def withParams(value: AnonFromTag): Self = {
+    def withParams(value: FromTag): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
         ret

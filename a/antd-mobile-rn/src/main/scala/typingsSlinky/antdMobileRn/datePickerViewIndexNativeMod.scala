@@ -1,5 +1,7 @@
 package typingsSlinky.antdMobileRn
 
+import typingsSlinky.antdMobileRn.anon.AntLocale
+import typingsSlinky.antdMobileRn.anon.Extra
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +16,8 @@ object datePickerViewIndexNativeMod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var contextTypes: AnonAntLocale = js.native
-    var defaultProps: AnonExtra = js.native
+    var contextTypes: AntLocale = js.native
+    var defaultProps: Extra = js.native
   }
   
 }

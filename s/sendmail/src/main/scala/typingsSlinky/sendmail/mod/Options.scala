@@ -1,7 +1,7 @@
 package typingsSlinky.sendmail.mod
 
-import typingsSlinky.sendmail.AnonDebug
-import typingsSlinky.sendmail.AnonKeySelector
+import typingsSlinky.sendmail.anon.Debug
+import typingsSlinky.sendmail.anon.KeySelector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +13,8 @@ trait Options extends js.Object {
   /** Default: False */
   var devPort: js.UndefOr[Double | Boolean] = js.native
   /** Default: False */
-  var dkim: js.UndefOr[Boolean | AnonKeySelector] = js.native
-  var logger: js.UndefOr[AnonDebug] = js.native
+  var dkim: js.UndefOr[Boolean | KeySelector] = js.native
+  var logger: js.UndefOr[Debug] = js.native
   var silent: js.UndefOr[Boolean] = js.native
   /** Default: -1 - extra smtp host after resolveMX */
   var smtpHost: js.UndefOr[String | Double] = js.native
@@ -59,7 +59,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withDkim(value: Boolean | AnonKeySelector): Self = {
+    def withDkim(value: Boolean | KeySelector): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dkim")(value.asInstanceOf[js.Any])
         ret
@@ -71,7 +71,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withLogger(value: AnonDebug): Self = {
+    def withLogger(value: Debug): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
         ret

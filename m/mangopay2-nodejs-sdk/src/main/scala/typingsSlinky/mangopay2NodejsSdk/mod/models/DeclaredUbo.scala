@@ -1,6 +1,6 @@
 package typingsSlinky.mangopay2NodejsSdk.mod.models
 
-import typingsSlinky.mangopay2NodejsSdk.PartialUboDeclarationData
+import typingsSlinky.mangopay2NodejsSdk.anon.PartialUboDeclarationData
 import typingsSlinky.mangopay2NodejsSdk.mod.uboDeclaration.UboDeclarationData
 import scala.scalajs.js
 import scala.scalajs.js.`|`

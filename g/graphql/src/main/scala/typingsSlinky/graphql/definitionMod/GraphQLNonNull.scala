@@ -26,7 +26,11 @@ import scala.scalajs.js.annotation._
   * Note: the enforcement of non-nullability occurs within the executor.
   */
 @js.native
-trait GraphQLNonNull[T /* <: GraphQLNullableType */] extends js.Object {
+trait GraphQLNonNull[T /* <: GraphQLNullableType */]
+  extends GraphQLInputType
+     with GraphQLOutputType
+     with GraphQLType
+     with GraphQLWrappingType {
   val ofType: T = js.native
   def inspect(): String = js.native
   def toJSON(): String = js.native

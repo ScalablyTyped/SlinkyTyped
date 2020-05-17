@@ -1,6 +1,6 @@
 package typingsSlinky.googleVisualization.google.visualization
 
-import typingsSlinky.googleVisualization.AnonColor
+import typingsSlinky.googleVisualization.anon.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ChartCrosshair extends js.Object {
   var color: js.UndefOr[String] = js.native
-  var focused: js.UndefOr[AnonColor] = js.native
+  var focused: js.UndefOr[Color] = js.native
   var opacity: js.UndefOr[Double] = js.native
   var orientation: js.UndefOr[ChartOrientation] = js.native
-  var selected: js.UndefOr[AnonColor] = js.native
+  var selected: js.UndefOr[Color] = js.native
   var trigger: js.UndefOr[String] = js.native
 }
 
@@ -40,7 +40,7 @@ object ChartCrosshair {
         ret
     }
     @scala.inline
-    def withFocused(value: AnonColor): Self = {
+    def withFocused(value: Color): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("focused")(value.asInstanceOf[js.Any])
         ret
@@ -76,7 +76,7 @@ object ChartCrosshair {
         ret
     }
     @scala.inline
-    def withSelected(value: AnonColor): Self = {
+    def withSelected(value: Color): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
         ret

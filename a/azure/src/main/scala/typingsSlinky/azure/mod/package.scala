@@ -92,7 +92,7 @@ package object mod {
   type StorageServiceStatsCallback = typingsSlinky.azure.mod.StorageCallback[typingsSlinky.azure.mod.StorageServiceStats]
   type TableRequestCallback = js.Function3[
     /* error */ js.Error, 
-    /* tableResult */ typingsSlinky.azure.AnonTableName, 
+    /* tableResult */ typingsSlinky.azure.anon.TableName, 
     /* response */ typingsSlinky.azure.mod.WebResponse, 
     scala.Unit
   ]

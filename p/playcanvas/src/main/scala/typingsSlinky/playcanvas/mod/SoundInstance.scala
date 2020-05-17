@@ -1,6 +1,6 @@
 package typingsSlinky.playcanvas.mod
 
-import typingsSlinky.playcanvas.AnonDuration
+import typingsSlinky.playcanvas.anon.Duration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,7 +43,7 @@ class SoundInstance protected ()
   def this(
     manager: typingsSlinky.playcanvas.pc.SoundManager,
     sound: typingsSlinky.playcanvas.pc.Sound,
-    options: AnonDuration
+    options: Duration
   ) = this()
 }
 

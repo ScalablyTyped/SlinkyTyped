@@ -1,6 +1,6 @@
 package typingsSlinky.hlsParser.mod.types
 
-import typingsSlinky.hlsParser.AnonOffset
+import typingsSlinky.hlsParser.anon.Offset
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait BasePlaylistConstructorProperties extends js.Object {
   var independentSegments: js.UndefOr[Boolean] = js.native
   var source: js.UndefOr[String] = js.native
-  var start: js.UndefOr[AnonOffset] = js.native
+  var start: js.UndefOr[Offset] = js.native
   var uri: js.UndefOr[String] = js.native
   var version: js.UndefOr[Double] = js.native
 }
@@ -51,7 +51,7 @@ object BasePlaylistConstructorProperties {
         ret
     }
     @scala.inline
-    def withStart(value: AnonOffset): Self = {
+    def withStart(value: Offset): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
         ret

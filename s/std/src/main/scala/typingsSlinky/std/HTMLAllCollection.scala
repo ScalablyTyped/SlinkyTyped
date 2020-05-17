@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.NumberDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,8 +28,4 @@ trait HTMLAllCollection
     */
   def namedItem(name: java.lang.String): org.scalajs.dom.raw.HTMLCollection | org.scalajs.dom.raw.Element | Null = js.native
 }
-
-@JSGlobal("HTMLAllCollection")
-@js.native
-object HTMLAllCollection extends Instantiable0[HTMLAllCollection]
 

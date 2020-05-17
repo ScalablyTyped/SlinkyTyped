@@ -1,7 +1,7 @@
 package typingsSlinky.pacote.mod
 
-import typingsSlinky.pacote.AnonDirectory
-import typingsSlinky.pacote.AnonEmail
+import typingsSlinky.pacote.anon.Directory
+import typingsSlinky.pacote.anon.Email
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CommonMetadata extends js.Object {
   var author: js.UndefOr[Person] = js.native
-  var bugs: js.UndefOr[AnonEmail] = js.native
+  var bugs: js.UndefOr[Email] = js.native
   var contributors: js.UndefOr[js.Array[Person]] = js.native
   var homepage: js.UndefOr[String] = js.native
   var keywords: js.UndefOr[js.Array[String]] = js.native
@@ -18,7 +18,7 @@ trait CommonMetadata extends js.Object {
   var maintainers: js.UndefOr[js.Array[Person]] = js.native
   var readme: js.UndefOr[String] = js.native
   var readmeFilename: js.UndefOr[String] = js.native
-  var repository: js.UndefOr[AnonDirectory] = js.native
+  var repository: js.UndefOr[Directory] = js.native
   var users: js.UndefOr[Record[String, Boolean]] = js.native
 }
 
@@ -47,7 +47,7 @@ object CommonMetadata {
         ret
     }
     @scala.inline
-    def withBugs(value: AnonEmail): Self = {
+    def withBugs(value: Email): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bugs")(value.asInstanceOf[js.Any])
         ret
@@ -143,7 +143,7 @@ object CommonMetadata {
         ret
     }
     @scala.inline
-    def withRepository(value: AnonDirectory): Self = {
+    def withRepository(value: Directory): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(value.asInstanceOf[js.Any])
         ret

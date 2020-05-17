@@ -1,7 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,14 +18,4 @@ trait BiquadFilterNode extends AudioNode {
     phaseResponse: js.typedarray.Float32Array
   ): Unit = js.native
 }
-
-@JSGlobal("BiquadFilterNode")
-@js.native
-object BiquadFilterNode
-  extends Instantiable1[/* context */ BaseAudioContext, org.scalajs.dom.raw.BiquadFilterNode]
-     with Instantiable2[
-      /* context */ BaseAudioContext, 
-      /* options */ BiquadFilterOptions, 
-      org.scalajs.dom.raw.BiquadFilterNode
-    ]
 

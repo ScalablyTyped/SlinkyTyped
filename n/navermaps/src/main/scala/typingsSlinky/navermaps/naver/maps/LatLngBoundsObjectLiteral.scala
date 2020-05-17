@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LatLngBoundsObjectLiteral extends js.Object {
+trait LatLngBoundsObjectLiteral extends LatLngBoundsLiteral {
   var east: Double = js.native
   var north: Double = js.native
   var south: Double = js.native

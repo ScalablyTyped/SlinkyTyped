@@ -1,5 +1,6 @@
 package typingsSlinky.ngxInfiniteScroll.modelsMod
 
+import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,6 +28,12 @@ object IResolver {
     def withAxis(value: js.Any): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContainerWindow(value: Window): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline

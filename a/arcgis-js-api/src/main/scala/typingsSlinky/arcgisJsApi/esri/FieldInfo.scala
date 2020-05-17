@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`rich-text`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`text-area`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`text-box`
@@ -75,8 +74,4 @@ trait FieldInfo
     */
   var visible: Boolean = js.native
 }
-
-@JSGlobal("__esri.FieldInfo")
-@js.native
-object FieldInfo extends TopLevel[FieldInfoConstructor]
 

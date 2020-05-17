@@ -1,6 +1,7 @@
 package typingsSlinky.stormReactDiagrams
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.stormReactDiagrams.anon.Height
 import typingsSlinky.stormReactDiagrams.baseModelMod.BaseModel
 import typingsSlinky.stormReactDiagrams.baseModelMod.BaseModelListener
 import typingsSlinky.stormReactDiagrams.linkModelMod.LinkModel
@@ -36,7 +37,7 @@ object portModelMod extends js.Object {
     def getNode(): NodeModel = js.native
     def removeLink(link: LinkModel[LinkModelListener]): Unit = js.native
     def setMaximumLinks(maximumLinks: Double): Unit = js.native
-    def updateCoords(hasXYWidthHeight: AnonHeight): Unit = js.native
+    def updateCoords(hasXYWidthHeight: Height): Unit = js.native
   }
   
 }

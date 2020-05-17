@@ -2,11 +2,11 @@ package typingsSlinky.reactCountup.mod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactCountup.AnonPauseResume
-import typingsSlinky.reactCountup.AnonPauseResumeReset
-import typingsSlinky.reactCountup.AnonReset
-import typingsSlinky.reactCountup.AnonStart
-import typingsSlinky.reactCountup.AnonUpdate
+import typingsSlinky.reactCountup.anon.PauseResume
+import typingsSlinky.reactCountup.anon.PauseResumeReset
+import typingsSlinky.reactCountup.anon.Reset
+import typingsSlinky.reactCountup.anon.Start
+import typingsSlinky.reactCountup.anon.Update
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -58,23 +58,23 @@ trait Props extends js.Object {
   /**
     * Callback function on transition end.
     */
-  var onEnd: js.UndefOr[js.Function1[/* providedFn */ AnonPauseResume, Unit]] = js.native
+  var onEnd: js.UndefOr[js.Function1[/* providedFn */ PauseResume, Unit]] = js.native
   /**
     * Callback function on pause or resume.
     */
-  var onPauseResume: js.UndefOr[js.Function0[js.Function1[/* providedFn */ AnonStart, Unit]]] = js.native
+  var onPauseResume: js.UndefOr[js.Function0[js.Function1[/* providedFn */ Start, Unit]]] = js.native
   /**
     * Callback function on reset.
     */
-  var onReset: js.UndefOr[js.Function0[js.Function1[/* providedFn */ AnonUpdate, Unit]]] = js.native
+  var onReset: js.UndefOr[js.Function0[js.Function1[/* providedFn */ Update, Unit]]] = js.native
   /**
     * Callback function on transition start.
     */
-  var onStart: js.UndefOr[js.Function1[/* providedFn */ AnonReset, Unit]] = js.native
+  var onStart: js.UndefOr[js.Function1[/* providedFn */ Reset, Unit]] = js.native
   /**
     * Callback function on update.
     */
-  var onUpdate: js.UndefOr[js.Function1[/* providedFn */ AnonPauseResumeReset, Unit]] = js.native
+  var onUpdate: js.UndefOr[js.Function1[/* providedFn */ PauseResumeReset, Unit]] = js.native
   /**
     * Static text before the transitioning value.
     */
@@ -236,7 +236,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withOnEnd(value: /* providedFn */ AnonPauseResume => Unit): Self = {
+    def withOnEnd(value: /* providedFn */ PauseResume => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(js.Any.fromFunction1(value))
         ret
@@ -248,7 +248,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withOnPauseResume(value: () => js.Function1[/* providedFn */ AnonStart, Unit]): Self = {
+    def withOnPauseResume(value: () => js.Function1[/* providedFn */ Start, Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPauseResume")(js.Any.fromFunction0(value))
         ret
@@ -260,7 +260,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withOnReset(value: () => js.Function1[/* providedFn */ AnonUpdate, Unit]): Self = {
+    def withOnReset(value: () => js.Function1[/* providedFn */ Update, Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onReset")(js.Any.fromFunction0(value))
         ret
@@ -272,7 +272,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withOnStart(value: /* providedFn */ AnonReset => Unit): Self = {
+    def withOnStart(value: /* providedFn */ Reset => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(js.Any.fromFunction1(value))
         ret
@@ -284,7 +284,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withOnUpdate(value: /* providedFn */ AnonPauseResumeReset => Unit): Self = {
+    def withOnUpdate(value: /* providedFn */ PauseResumeReset => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdate")(js.Any.fromFunction1(value))
         ret

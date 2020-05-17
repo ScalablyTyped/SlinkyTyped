@@ -1,7 +1,7 @@
 package typingsSlinky.yaml.parseCstMod.CST
 
-import typingsSlinky.yaml.AnonHandle
-import typingsSlinky.yaml.AnonVerbatim
+import typingsSlinky.yaml.anon.Handle
+import typingsSlinky.yaml.anon.Verbatim
 import typingsSlinky.yaml.utilMod.Type
 import typingsSlinky.yaml.utilMod.YAMLSyntaxError
 import scala.scalajs.js
@@ -23,7 +23,7 @@ trait Node extends js.Object {
   /** span of context.src parsed into this node */
   var range: Range | Null = js.native
   val rawValue: String | Null = js.native
-  val tag: Null | AnonVerbatim | AnonHandle = js.native
+  val tag: Null | Verbatim | Handle = js.native
   /** specific node type */
   var `type`: Type = js.native
   /** if non-null, overrides source value */
@@ -161,7 +161,7 @@ object Node {
         ret
     }
     @scala.inline
-    def withTag(value: AnonVerbatim | AnonHandle): Self = {
+    def withTag(value: Verbatim | Handle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
         ret

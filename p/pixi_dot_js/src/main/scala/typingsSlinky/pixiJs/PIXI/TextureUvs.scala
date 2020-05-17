@@ -20,9 +20,8 @@ import scala.scalajs.js.annotation._
   * @protected
   * @memberof PIXI
   */
-@JSGlobal("PIXI.TextureUvs")
 @js.native
-class TextureUvs () extends js.Object {
+trait TextureUvs extends js.Object {
   /**
     * X-component of top-left corner `(x0,y0)`.
     *
@@ -80,5 +79,85 @@ class TextureUvs () extends js.Object {
     * @param {number} rotate - Rotation of frame, see {@link PIXI.groupD8}
     */
   /* protected */ def set(frame: Rectangle, baseFrame: Rectangle, rotate: Double): Unit = js.native
+}
+
+object TextureUvs {
+  @scala.inline
+  def apply(
+    set: (Rectangle, Rectangle, Double) => Unit,
+    x0: Double,
+    x1: Double,
+    x2: Double,
+    x3: Double,
+    y0: Double,
+    y1: Double,
+    y2: Double,
+    y3: Double
+  ): TextureUvs = {
+    val __obj = js.Dynamic.literal(set = js.Any.fromFunction3(set), x0 = x0.asInstanceOf[js.Any], x1 = x1.asInstanceOf[js.Any], x2 = x2.asInstanceOf[js.Any], x3 = x3.asInstanceOf[js.Any], y0 = y0.asInstanceOf[js.Any], y1 = y1.asInstanceOf[js.Any], y2 = y2.asInstanceOf[js.Any], y3 = y3.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TextureUvs]
+  }
+  @scala.inline
+  implicit class TextureUvsOps[Self <: TextureUvs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSet(value: (Rectangle, Rectangle, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withX0(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x0")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX1(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX2(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX3(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x3")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY0(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y0")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY1(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY2(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY3(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y3")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

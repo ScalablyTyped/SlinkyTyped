@@ -1,6 +1,6 @@
 package typingsSlinky.fundamentalReact.timeMod
 
-import typingsSlinky.fundamentalReact.AnonHour
+import typingsSlinky.fundamentalReact.anon.Hour
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait TimeBaseProps extends js.Object {
   var showMinute: js.UndefOr[Boolean] = js.native
   var showSecond: js.UndefOr[Boolean] = js.native
   var spinners: js.UndefOr[Boolean] = js.native
-  var time: js.UndefOr[AnonHour] = js.native
+  var time: js.UndefOr[Hour] = js.native
 }
 
 object TimeBaseProps {
@@ -101,7 +101,7 @@ object TimeBaseProps {
         ret
     }
     @scala.inline
-    def withTime(value: AnonHour): Self = {
+    def withTime(value: Hour): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
         ret

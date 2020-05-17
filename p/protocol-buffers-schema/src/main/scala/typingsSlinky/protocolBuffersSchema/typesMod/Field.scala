@@ -1,13 +1,13 @@
 package typingsSlinky.protocolBuffersSchema.typesMod
 
-import typingsSlinky.protocolBuffersSchema.AnonFrom
+import typingsSlinky.protocolBuffersSchema.anon.From
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Field extends js.Object {
-  var map: AnonFrom = js.native
+  var map: From = js.native
   var name: String = js.native
   var oneof: Null | String = js.native
   var options: FieldOptions = js.native
@@ -20,7 +20,7 @@ trait Field extends js.Object {
 object Field {
   @scala.inline
   def apply(
-    map: AnonFrom,
+    map: From,
     name: String,
     options: FieldOptions,
     repeated: Boolean,
@@ -39,7 +39,7 @@ object Field {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMap(value: AnonFrom): Self = {
+    def withMap(value: From): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
         ret

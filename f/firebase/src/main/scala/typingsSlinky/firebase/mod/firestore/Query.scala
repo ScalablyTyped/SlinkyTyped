@@ -1,6 +1,6 @@
 package typingsSlinky.firebase.mod.firestore
 
-import typingsSlinky.firebase.AnonCompleteError
+import typingsSlinky.firebase.anon.CompleteError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -105,7 +105,7 @@ class Query[T] protected () extends js.Object {
     * @return An unsubscribe function that can be called to cancel
     * the snapshot listener.
     */
-  def onSnapshot(observer: AnonCompleteError[T]): js.Function0[Unit] = js.native
+  def onSnapshot(observer: CompleteError[T]): js.Function0[Unit] = js.native
   /**
     * Attaches a listener for QuerySnapshot events. You may either pass
     * individual `onNext` and `onError` callbacks or pass a single observer
@@ -146,7 +146,7 @@ class Query[T] protected () extends js.Object {
     * @return An unsubscribe function that can be called to cancel
     * the snapshot listener.
     */
-  def onSnapshot(options: SnapshotListenOptions, observer: AnonCompleteError[T]): js.Function0[Unit] = js.native
+  def onSnapshot(options: SnapshotListenOptions, observer: CompleteError[T]): js.Function0[Unit] = js.native
   /**
     * Attaches a listener for QuerySnapshot events. You may either pass
     * individual `onNext` and `onError` callbacks or pass a single observer

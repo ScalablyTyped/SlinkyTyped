@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignPro.AnonAddTab
+import typingsSlinky.antDesignPro.anon.AddTab
 import typingsSlinky.antDesignPro.loginTabMod.LoginTabProps
 import typingsSlinky.antDesignPro.loginTabMod.default
 import scala.scalajs.js
@@ -28,7 +28,7 @@ object LoginTab {
   
   def withProps(p: LoginTabProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(tabUtil: AnonAddTab): Builder = {
+  def apply(tabUtil: AddTab): Builder = {
     val __props = js.Dynamic.literal(tabUtil = tabUtil.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[LoginTabProps]))
   }

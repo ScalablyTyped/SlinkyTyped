@@ -3,7 +3,7 @@ package typingsSlinky.bizcharts.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antvG2.mod.Styles.line
-import typingsSlinky.bizcharts.AnonAutoRotate
+import typingsSlinky.bizcharts.anon.AutoRotate
 import typingsSlinky.bizcharts.mod.Guide.Line
 import typingsSlinky.bizcharts.mod.Guide.LineProps
 import scala.scalajs.js
@@ -34,7 +34,7 @@ object GuideLine {
       value: js.Object | js.Array[_] | (js.Function2[/* xScale */ js.UndefOr[js.Any], /* yScale */ js.UndefOr[js.Any], _])
     ): this.type = set("start", value.asInstanceOf[js.Any])
     @scala.inline
-    def text(value: AnonAutoRotate): this.type = set("text", value.asInstanceOf[js.Any])
+    def text(value: AutoRotate): this.type = set("text", value.asInstanceOf[js.Any])
     @scala.inline
     def top(value: Boolean): this.type = set("top", value.asInstanceOf[js.Any])
   }

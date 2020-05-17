@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.helpersIndexMod
 
-import typingsSlinky.babylonjs.PartialIEnvironmentHelper
+import typingsSlinky.babylonjs.anon.PartialIEnvironmentHelper
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`

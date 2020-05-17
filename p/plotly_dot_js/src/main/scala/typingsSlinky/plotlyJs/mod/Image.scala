@@ -116,7 +116,7 @@ object Image {
         ret
     }
     @scala.inline
-    def withXref(value: paper | x): Self = {
+    def withXref(value: paper | typingsSlinky.plotlyJs.plotlyJsStrings.x): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("xref")(value.asInstanceOf[js.Any])
         ret

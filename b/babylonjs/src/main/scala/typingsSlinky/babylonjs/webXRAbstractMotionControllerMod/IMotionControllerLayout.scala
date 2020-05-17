@@ -1,7 +1,7 @@
 package typingsSlinky.babylonjs.webXRAbstractMotionControllerMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.babylonjs.AnonGamepadIndices
+import typingsSlinky.babylonjs.anon.GamepadIndices
 import typingsSlinky.babylonjs.babylonjsStrings._empty
 import typingsSlinky.babylonjs.babylonjsStrings.`xr-standard`
 import scala.scalajs.js
@@ -20,7 +20,7 @@ trait IMotionControllerLayout extends js.Object {
   var components: /**
     * A map of component Ids
     */
-  StringDictionary[AnonGamepadIndices] = js.native
+  StringDictionary[GamepadIndices] = js.native
   /**
     * Is it xr standard mapping or not
     */
@@ -42,7 +42,7 @@ object IMotionControllerLayout {
     components: /**
     * A map of component Ids
     */
-  StringDictionary[AnonGamepadIndices],
+  StringDictionary[GamepadIndices],
     gamepadMapping: _empty | `xr-standard`,
     rootNodeName: String,
     selectComponentId: String
@@ -66,7 +66,7 @@ object IMotionControllerLayout {
     def withComponents(value: /**
       * A map of component Ids
       */
-    StringDictionary[AnonGamepadIndices]): Self = {
+    StringDictionary[GamepadIndices]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("components")(value.asInstanceOf[js.Any])
         ret

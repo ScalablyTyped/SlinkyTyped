@@ -1,6 +1,6 @@
 package typingsSlinky.gestalt.mod
 
-import typingsSlinky.gestalt.AnonEventValue
+import typingsSlinky.gestalt.anon.EventValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,12 +11,12 @@ trait SwitchProps extends js.Object {
   var id: String = js.native
   var name: js.UndefOr[String] = js.native
   var switched: js.UndefOr[Boolean] = js.native
-  def onChange(args: AnonEventValue): Unit = js.native
+  def onChange(args: EventValue): Unit = js.native
 }
 
 object SwitchProps {
   @scala.inline
-  def apply(id: String, onChange: AnonEventValue => Unit): SwitchProps = {
+  def apply(id: String, onChange: EventValue => Unit): SwitchProps = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
     __obj.asInstanceOf[SwitchProps]
   }
@@ -33,7 +33,7 @@ object SwitchProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: AnonEventValue => Unit): Self = {
+    def withOnChange(value: EventValue => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

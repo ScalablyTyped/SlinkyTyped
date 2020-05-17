@@ -1,7 +1,7 @@
 package typingsSlinky.mocha
 
-import typingsSlinky.mocha.Mocha_.Interface
-import typingsSlinky.mocha.Mocha_.Reporter
+import typingsSlinky.mocha.Mocha.Interface
+import typingsSlinky.mocha.Mocha.Reporter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.materialUiCore.createMountMod
 
-import typingsSlinky.materialUiCore.FnCall
+import typingsSlinky.materialUiCore.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

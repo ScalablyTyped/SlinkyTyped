@@ -1,7 +1,7 @@
 package typingsSlinky.hapiYar.mod
 
 import typingsSlinky.hapiHapi.mod.CachePolicyOptions
-import typingsSlinky.hapiYar.AnonClearInvalid
+import typingsSlinky.hapiYar.anon.ClearInvalid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait YarOptions extends js.Object {
   /**
     * the configuration for cookie-specific features:
     */
-  var cookieOptions: AnonClearInvalid = js.native
+  var cookieOptions: ClearInvalid = js.native
   /**
     * will cause yar to throw an exception if trying to persist to cache when the cache is unavailable.
     * Setting this to false will allow applications using yar to run uninterrupted if the cache is not ready (however sessions will not be saving).
@@ -41,7 +41,7 @@ trait YarOptions extends js.Object {
 
 object YarOptions {
   @scala.inline
-  def apply(cookieOptions: AnonClearInvalid): YarOptions = {
+  def apply(cookieOptions: ClearInvalid): YarOptions = {
     val __obj = js.Dynamic.literal(cookieOptions = cookieOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[YarOptions]
   }
@@ -52,7 +52,7 @@ object YarOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCookieOptions(value: AnonClearInvalid): Self = {
+    def withCookieOptions(value: ClearInvalid): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cookieOptions")(value.asInstanceOf[js.Any])
         ret

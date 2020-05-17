@@ -4,7 +4,7 @@ import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeMultiSlider.AnonBorderRadius
+import typingsSlinky.reactNativeMultiSlider.anon.BorderRadius
 import typingsSlinky.reactNativeMultiSlider.mod.MarkerProps
 import typingsSlinky.reactNativeMultiSlider.mod.MultiSliderProps
 import typingsSlinky.reactNativeMultiSlider.mod.default
@@ -56,7 +56,7 @@ object ReactNativeMultiSlider {
     @scala.inline
     def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
     @scala.inline
-    def touchDimensions(value: AnonBorderRadius): this.type = set("touchDimensions", value.asInstanceOf[js.Any])
+    def touchDimensions(value: BorderRadius): this.type = set("touchDimensions", value.asInstanceOf[js.Any])
     @scala.inline
     def trackStyle(value: ViewStyle): this.type = set("trackStyle", value.asInstanceOf[js.Any])
     @scala.inline

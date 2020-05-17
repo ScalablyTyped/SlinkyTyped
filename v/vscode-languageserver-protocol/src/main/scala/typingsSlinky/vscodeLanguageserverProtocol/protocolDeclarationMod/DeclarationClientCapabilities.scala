@@ -1,6 +1,6 @@
 package typingsSlinky.vscodeLanguageserverProtocol.protocolDeclarationMod
 
-import typingsSlinky.vscodeLanguageserverProtocol.AnonDeclaration
+import typingsSlinky.vscodeLanguageserverProtocol.anon.Declaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait DeclarationClientCapabilities extends js.Object {
   /**
     * The text document client capabilities
     */
-  var textDocument: js.UndefOr[AnonDeclaration] = js.native
+  var textDocument: js.UndefOr[Declaration] = js.native
 }
 
 object DeclarationClientCapabilities {
@@ -26,7 +26,7 @@ object DeclarationClientCapabilities {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTextDocument(value: AnonDeclaration): Self = {
+    def withTextDocument(value: Declaration): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("textDocument")(value.asInstanceOf[js.Any])
         ret

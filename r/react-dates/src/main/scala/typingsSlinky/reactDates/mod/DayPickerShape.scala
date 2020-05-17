@@ -1,7 +1,7 @@
 package typingsSlinky.reactDates.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactDates.AnonIsVisible
+import typingsSlinky.reactDates.anon.IsVisible
 import typingsSlinky.reactDates.mod.momentPropTypes.momentObj
 import typingsSlinky.reactDates.reactDatesNumbers.`0`
 import typingsSlinky.reactDates.reactDatesNumbers.`1`
@@ -43,7 +43,7 @@ trait DayPickerShape extends js.Object {
   var renderCalendarDay: js.UndefOr[js.Function1[/* day */ momentObj, String | ReactElement]] = js.native
   var renderCalendarInfo: js.UndefOr[js.Function0[String | ReactElement]] = js.native
   var renderDayContents: js.UndefOr[js.Function1[/* day */ momentObj, String | ReactElement]] = js.native
-  var renderMonthElement: js.UndefOr[js.Function1[/* props */ AnonIsVisible, String | ReactElement]] = js.native
+  var renderMonthElement: js.UndefOr[js.Function1[/* props */ IsVisible, String | ReactElement]] = js.native
   var renderMonthText: js.UndefOr[js.Function1[/* day */ momentObj, String | ReactElement]] = js.native
   var showKeyboardShortcuts: js.UndefOr[Boolean] = js.native
   var transitionDuration: js.UndefOr[Double] = js.native
@@ -365,7 +365,7 @@ object DayPickerShape {
         ret
     }
     @scala.inline
-    def withRenderMonthElement(value: /* props */ AnonIsVisible => String | ReactElement): Self = {
+    def withRenderMonthElement(value: /* props */ IsVisible => String | ReactElement): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderMonthElement")(js.Any.fromFunction1(value))
         ret

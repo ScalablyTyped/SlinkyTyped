@@ -3,7 +3,7 @@ package typingsSlinky.downshift.mod
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import slinky.core.ReactComponentClass
-import typingsSlinky.downshift.AnonBlurButton
+import typingsSlinky.downshift.anon.BlurButton
 import typingsSlinky.react.mod.Context
 import typingsSlinky.react.mod.GetDerivedStateFromError
 import typingsSlinky.react.mod.GetDerivedStateFromProps
@@ -31,6 +31,6 @@ trait DownshiftInterface[Item]
   var getDerivedStateFromError: js.UndefOr[GetDerivedStateFromError[DownshiftProps[Item], js.Object]] = js.native
   var getDerivedStateFromProps: js.UndefOr[GetDerivedStateFromProps[DownshiftProps[Item], js.Object]] = js.native
   var propTypes: js.UndefOr[WeakValidationMap[DownshiftProps[Item]]] = js.native
-  var stateChangeTypes: AnonBlurButton = js.native
+  var stateChangeTypes: BlurButton = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.jqueryCleditor
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait JQueryCLEditorButtonDefinition extends js.Object {
   var buttonClick: js.UndefOr[
-    js.Function2[/* event */ Event_, /* data */ JQueryCLEditorButtonDefinitionEventData, Boolean]
+    js.Function2[/* event */ Event, /* data */ JQueryCLEditorButtonDefinitionEventData, Boolean]
   ] = js.native
   var command: js.UndefOr[String] = js.native
   var css: js.UndefOr[js.Any] = js.native
@@ -17,7 +17,7 @@ trait JQueryCLEditorButtonDefinition extends js.Object {
   var image: js.UndefOr[String] = js.native
   var name: String = js.native
   var popupClick: js.UndefOr[
-    js.Function2[/* event */ Event_, /* data */ JQueryCLEditorButtonDefinitionEventData, Boolean]
+    js.Function2[/* event */ Event, /* data */ JQueryCLEditorButtonDefinitionEventData, Boolean]
   ] = js.native
   var popupContent: js.UndefOr[String] = js.native
   var popupName: js.UndefOr[String] = js.native
@@ -50,7 +50,7 @@ object JQueryCLEditorButtonDefinition {
         ret
     }
     @scala.inline
-    def withButtonClick(value: (/* event */ Event_, /* data */ JQueryCLEditorButtonDefinitionEventData) => Boolean): Self = {
+    def withButtonClick(value: (/* event */ Event, /* data */ JQueryCLEditorButtonDefinitionEventData) => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("buttonClick")(js.Any.fromFunction2(value))
         ret
@@ -122,7 +122,7 @@ object JQueryCLEditorButtonDefinition {
         ret
     }
     @scala.inline
-    def withPopupClick(value: (/* event */ Event_, /* data */ JQueryCLEditorButtonDefinitionEventData) => Boolean): Self = {
+    def withPopupClick(value: (/* event */ Event, /* data */ JQueryCLEditorButtonDefinitionEventData) => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("popupClick")(js.Any.fromFunction2(value))
         ret

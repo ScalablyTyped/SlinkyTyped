@@ -1,8 +1,7 @@
 package typingsSlinky.pino.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.pino.AnonAsObject
-import typingsSlinky.pino.AnonBindings
+import typingsSlinky.pino.anon.AsObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,7 @@ trait LoggerOptions extends js.Object {
   /**
     * Browser only, see http://getpino.io/#/docs/browser.
     */
-  var browser: js.UndefOr[AnonAsObject] = js.native
+  var browser: js.UndefOr[AsObject] = js.native
   /**
     * (DEPRECATED, use `levelKey`) Changes the property `level` to any string value you pass in. Default: 'level'
     */
@@ -36,7 +35,7 @@ trait LoggerOptions extends js.Object {
     * These functions allow for full customization of the resulting log lines.
     * For example, they can be used to change the level key name or to enrich the default metadata.
     */
-  var formatters: js.UndefOr[AnonBindings] = js.native
+  var formatters: js.UndefOr[typingsSlinky.pino.anon.Bindings] = js.native
   /**
     * One of the supported levels or `silent` to disable logging. Any other value defines a custom level and
     * requires supplying a level value via `levelVal`. Default: 'info'.
@@ -152,7 +151,7 @@ object LoggerOptions {
         ret
     }
     @scala.inline
-    def withBrowser(value: AnonAsObject): Self = {
+    def withBrowser(value: AsObject): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("browser")(value.asInstanceOf[js.Any])
         ret
@@ -200,7 +199,7 @@ object LoggerOptions {
         ret
     }
     @scala.inline
-    def withFormatters(value: AnonBindings): Self = {
+    def withFormatters(value: typingsSlinky.pino.anon.Bindings): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formatters")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.std.stdStrings.backward
 import typingsSlinky.std.stdStrings.forward
 import typingsSlinky.std.stdStrings.none
@@ -212,9 +211,4 @@ trait HTMLInputElement extends HTMLElement {
   def stepUp(): Unit = js.native
   def stepUp(n: Double): Unit = js.native
 }
-
-@JSGlobal("HTMLInputElement")
-@js.native
-object HTMLInputElement
-  extends Instantiable0[org.scalajs.dom.raw.HTMLInputElement]
 

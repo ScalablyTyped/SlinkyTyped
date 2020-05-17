@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait NewLoader extends js.Object {
+trait NewLoader extends Loader_ {
   var loader: String = js.native
   var options: js.UndefOr[StringDictionary[js.Any]] = js.native
 }

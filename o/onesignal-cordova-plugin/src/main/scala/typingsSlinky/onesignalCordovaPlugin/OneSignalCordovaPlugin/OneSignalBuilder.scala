@@ -1,6 +1,6 @@
 package typingsSlinky.onesignalCordovaPlugin.OneSignalCordovaPlugin
 
-import typingsSlinky.onesignalCordovaPlugin.AnonKOSSettingsKeyAutoPrompt
+import typingsSlinky.onesignalCordovaPlugin.anon.KOSSettingsKeyAutoPrompt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait OneSignalBuilder extends js.Object {
   def endInit(): Unit = js.native
   def handleNotificationOpened(callback: js.Function1[/* json */ OSNotificationOpenedResult, Unit]): OneSignalBuilder = js.native
   def handleNotificationReceived(callback: js.Function1[/* json */ OSNotification, Unit]): OneSignalBuilder = js.native
-  def iOSSettings(settings: AnonKOSSettingsKeyAutoPrompt): OneSignalBuilder = js.native
+  def iOSSettings(settings: KOSSettingsKeyAutoPrompt): OneSignalBuilder = js.native
   def inFocusDisplaying(displayOption: OSDisplayType): OneSignalBuilder = js.native
 }
 
@@ -20,7 +20,7 @@ object OneSignalBuilder {
     endInit: () => Unit,
     handleNotificationOpened: js.Function1[/* json */ OSNotificationOpenedResult, Unit] => OneSignalBuilder,
     handleNotificationReceived: js.Function1[/* json */ OSNotification, Unit] => OneSignalBuilder,
-    iOSSettings: AnonKOSSettingsKeyAutoPrompt => OneSignalBuilder,
+    iOSSettings: KOSSettingsKeyAutoPrompt => OneSignalBuilder,
     inFocusDisplaying: OSDisplayType => OneSignalBuilder
   ): OneSignalBuilder = {
     val __obj = js.Dynamic.literal(endInit = js.Any.fromFunction0(endInit), handleNotificationOpened = js.Any.fromFunction1(handleNotificationOpened), handleNotificationReceived = js.Any.fromFunction1(handleNotificationReceived), iOSSettings = js.Any.fromFunction1(iOSSettings), inFocusDisplaying = js.Any.fromFunction1(inFocusDisplaying))
@@ -51,7 +51,7 @@ object OneSignalBuilder {
         ret
     }
     @scala.inline
-    def withIOSSettings(value: AnonKOSSettingsKeyAutoPrompt => OneSignalBuilder): Self = {
+    def withIOSSettings(value: KOSSettingsKeyAutoPrompt => OneSignalBuilder): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("iOSSettings")(js.Any.fromFunction1(value))
         ret

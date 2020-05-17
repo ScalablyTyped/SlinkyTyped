@@ -1,7 +1,7 @@
 package typingsSlinky.rrule.rrulestrMod
 
-import typingsSlinky.rrule.AnonDtstart
-import typingsSlinky.rrule.PartialRRuleStrOptions
+import typingsSlinky.rrule.anon.Dtstart
+import typingsSlinky.rrule.anon.PartialRRuleStrOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @JSImport("rrule/dist/esm/src/rrulestr", "parseInput")
 @js.native
 object parseInput extends js.Object {
-  def apply(s: String, options: PartialRRuleStrOptions): AnonDtstart = js.native
+  def apply(s: String, options: PartialRRuleStrOptions): Dtstart = js.native
 }
 

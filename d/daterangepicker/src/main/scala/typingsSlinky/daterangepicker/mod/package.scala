@@ -11,5 +11,4 @@ package object mod {
     /* label */ java.lang.String | scala.Null, 
     scala.Unit
   ]
-  type DateOrString = java.lang.String | typingsSlinky.moment.mod.Moment | js.Date
 }

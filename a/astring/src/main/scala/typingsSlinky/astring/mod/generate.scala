@@ -1,6 +1,6 @@
 package typingsSlinky.astring.mod
 
-import typingsSlinky.astring.OptionsoutputStream
+import typingsSlinky.astring.anon.OptionsoutputStream
 import typingsSlinky.estree.mod.Node
 import typingsSlinky.node.streamMod.Stream
 import scala.scalajs.js

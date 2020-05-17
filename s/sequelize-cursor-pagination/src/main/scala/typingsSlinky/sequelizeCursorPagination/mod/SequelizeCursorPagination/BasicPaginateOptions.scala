@@ -1,6 +1,6 @@
 package typingsSlinky.sequelizeCursorPagination.mod.SequelizeCursorPagination
 
-import typingsSlinky.sequelize.AnonExclude
+import typingsSlinky.sequelize.anon.Exclude
 import typingsSlinky.sequelize.mod.FindOptionsAttributesArray
 import typingsSlinky.sequelize.mod.IncludeOptions
 import typingsSlinky.sequelize.mod.Model
@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation._
 trait BasicPaginateOptions[T] extends js.Object {
    // the before cursor
   var after: js.UndefOr[String] = js.native
-  var attributes: js.UndefOr[FindOptionsAttributesArray | AnonExclude] = js.native
+  var attributes: js.UndefOr[FindOptionsAttributesArray | Exclude] = js.native
    // [default: false]
   var before: js.UndefOr[String] = js.native
    // limit the number of records returned
@@ -59,7 +59,7 @@ object BasicPaginateOptions {
         ret
     }
     @scala.inline
-    def withAttributes(value: FindOptionsAttributesArray | AnonExclude): Self[T] = {
+    def withAttributes(value: FindOptionsAttributesArray | Exclude): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
         ret

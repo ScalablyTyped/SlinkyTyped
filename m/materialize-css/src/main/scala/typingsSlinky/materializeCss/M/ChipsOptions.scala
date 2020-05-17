@@ -1,7 +1,7 @@
 package typingsSlinky.materializeCss.M
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.materializeCss.PartialAutocompleteOptionData
+import typingsSlinky.materializeCss.anon.PartialAutocompleteOptionData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

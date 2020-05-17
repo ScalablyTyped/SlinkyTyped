@@ -12,21 +12,8 @@ trait EmojiData extends EmojiEntry
 
 object EmojiData {
   @scala.inline
-  def BaseEmoji(
-    colons: String,
-    emoticons: js.Array[String],
-    id: String,
-    name: String,
-    native: String,
-    unified: String
-  ): EmojiData = {
-    val __obj = js.Dynamic.literal(colons = colons.asInstanceOf[js.Any], emoticons = emoticons.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any], unified = unified.asInstanceOf[js.Any])
-    __obj.asInstanceOf[EmojiData]
-  }
+  implicit def apply(value: BaseEmoji): EmojiData = value.asInstanceOf[EmojiData]
   @scala.inline
-  def CustomEmoji(imageUrl: String, name: String, short_names: js.Array[String]): EmojiData = {
-    val __obj = js.Dynamic.literal(imageUrl = imageUrl.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], short_names = short_names.asInstanceOf[js.Any])
-    __obj.asInstanceOf[EmojiData]
-  }
+  implicit def apply(value: CustomEmoji): EmojiData = value.asInstanceOf[EmojiData]
 }
 

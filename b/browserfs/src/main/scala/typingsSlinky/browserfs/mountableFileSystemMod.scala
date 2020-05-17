@@ -1,6 +1,7 @@
 package typingsSlinky.browserfs
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.browserfs.anon.Fs
 import typingsSlinky.browserfs.apiErrorMod.ApiError
 import typingsSlinky.browserfs.fileFlagMod.FileFlag
 import typingsSlinky.browserfs.fileMod.File
@@ -31,7 +32,7 @@ object mountableFileSystemMod extends js.Object {
     /**
       * Returns the file system that the path points to.
       */
-    def _getFs(path: String): AnonFs = js.native
+    def _getFs(path: String): Fs = js.native
     /* InferMemberOverrides */
     override def chmod(p: String, isLchmod: Boolean, mode: Double, cb: BFSOneArgCallback): Unit = js.native
     /* InferMemberOverrides */

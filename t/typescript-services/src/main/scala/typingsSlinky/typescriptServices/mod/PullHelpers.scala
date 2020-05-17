@@ -1,8 +1,8 @@
 package typingsSlinky.typescriptServices.mod
 
-import typingsSlinky.typescriptServices.AnonAllSignatures
-import typingsSlinky.typescriptServices.AnonGetter
 import typingsSlinky.typescriptServices.TypeScript.PullHelpers.PullTypeSymbolStructureWalker
+import typingsSlinky.typescriptServices.anon.AllSignatures
+import typingsSlinky.typescriptServices.anon.Getter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,9 +33,9 @@ object PullHelpers extends js.Object {
   def getGetterAndSetterFunction(
     funcDecl: typingsSlinky.typescriptServices.TypeScript.AST,
     semanticInfoChain: typingsSlinky.typescriptServices.TypeScript.SemanticInfoChain
-  ): AnonGetter = js.native
+  ): Getter = js.native
   def getRootType(`type`: typingsSlinky.typescriptServices.TypeScript.PullTypeSymbol): typingsSlinky.typescriptServices.TypeScript.PullTypeSymbol = js.native
-  def getSignatureForFuncDecl(functionDecl: typingsSlinky.typescriptServices.TypeScript.PullDecl): AnonAllSignatures = js.native
+  def getSignatureForFuncDecl(functionDecl: typingsSlinky.typescriptServices.TypeScript.PullDecl): AllSignatures = js.native
   def isExportedSymbolInClodule(symbol: typingsSlinky.typescriptServices.TypeScript.PullSymbol): Boolean = js.native
   def isNameNumeric(name: String): Boolean = js.native
   def isSymbolDeclaredInScopeChain(

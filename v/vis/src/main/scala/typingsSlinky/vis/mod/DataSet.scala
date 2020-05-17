@@ -12,7 +12,9 @@ import scala.scalajs.js.annotation._
   * @param [data] An Array with items.
   * @param [options] DataSet options.
   */
-class DataSet[T /* <: DataItem | DataGroup | Node | Edge */] () extends js.Object {
+class DataSet[T /* <: DataItem | DataGroup | Node | Edge */] ()
+  extends DataGroupCollectionType
+     with DataItemCollectionType {
   def this(data: js.Array[T]) = this()
   /**
     * Creates an instance of DataSet.

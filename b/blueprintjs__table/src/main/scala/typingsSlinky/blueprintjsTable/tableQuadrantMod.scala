@@ -8,6 +8,7 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import typingsSlinky.blueprintjsCore.mod.AbstractComponent2
 import typingsSlinky.blueprintjsCore.propsMod.IProps
+import typingsSlinky.blueprintjsTable.anon.PartialITableQuadrantProp
 import typingsSlinky.blueprintjsTable.gridMod.Grid
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.EventHandler

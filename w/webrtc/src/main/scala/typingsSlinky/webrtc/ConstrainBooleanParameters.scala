@@ -1,11 +1,12 @@
 package typingsSlinky.webrtc
 
+import typingsSlinky.webrtc.W3C.ConstrainBoolean
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ConstrainBooleanParameters extends js.Object {
+trait ConstrainBooleanParameters extends ConstrainBoolean {
   var exact: js.UndefOr[Boolean] = js.native
   var ideal: js.UndefOr[Boolean] = js.native
 }

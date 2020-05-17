@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.mod
 
-import typingsSlinky.officeUiFabricReact.AnonOptions
+import typingsSlinky.officeUiFabricReact.anon.Options
 import typingsSlinky.officeUiFabricReact.dropdownTypesMod.IDropdownProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,6 +17,6 @@ class DropdownBase protected ()
 @JSImport("office-ui-fabric-react", "DropdownBase")
 @js.native
 object DropdownBase extends js.Object {
-  var defaultProps: AnonOptions = js.native
+  var defaultProps: Options = js.native
 }
 

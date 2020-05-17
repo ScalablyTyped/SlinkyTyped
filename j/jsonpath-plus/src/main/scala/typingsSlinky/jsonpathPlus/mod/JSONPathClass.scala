@@ -1,13 +1,13 @@
 package typingsSlinky.jsonpathPlus.mod
 
-import typingsSlinky.jsonpathPlus.AnonCallback
+import typingsSlinky.jsonpathPlus.anon.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait JSONPathClass extends js.Object {
-  def evaluate(options: AnonCallback): js.Any = js.native
+  def evaluate(options: Callback): js.Any = js.native
   def evaluate(path: String | js.Array[_]): js.Any = js.native
   def evaluate(path: String | js.Array[_], json: Boolean | Double | String | js.Object | js.Array[_]): js.Any = js.native
   def evaluate(

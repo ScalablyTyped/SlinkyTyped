@@ -1,5 +1,8 @@
 package typingsSlinky.notyf
 
+import typingsSlinky.notyf.anon.DeepPartialINotyfNotifica
+import typingsSlinky.notyf.anon.PartialINotyfNotification
+import typingsSlinky.notyf.anon.PartialINotyfOptions
 import typingsSlinky.notyf.notyfModelsMod.NotyfArray
 import typingsSlinky.notyf.notyfModelsMod.NotyfNotification
 import typingsSlinky.notyf.notyfOptionsMod.INotyfOptions

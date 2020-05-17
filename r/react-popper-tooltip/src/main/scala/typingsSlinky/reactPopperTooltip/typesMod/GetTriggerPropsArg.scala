@@ -2,8 +2,8 @@ package typingsSlinky.reactPopperTooltip.typesMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,14 +11,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetTriggerPropsArg
   extends /* key */ StringDictionary[js.Any] {
-  var onBlur: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, Element], Unit]] = js.native
-  var onClick: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, Element], Unit]] = js.native
-  var onContextMenu: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, Element], Unit]] = js.native
-  var onFocus: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, Element], Unit]] = js.native
-  var onMouseEnter: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, Element], Unit]] = js.native
-  var onMouseLeave: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, Element], Unit]] = js.native
-  var onMouseMove: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, Element], Unit]] = js.native
-  var onTouchEnd: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, Element], Unit]] = js.native
+  var onBlur: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, Element], Unit]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, Element], Unit]] = js.native
+  var onContextMenu: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, Element], Unit]] = js.native
+  var onFocus: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, Element], Unit]] = js.native
+  var onMouseEnter: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, Element], Unit]] = js.native
+  var onMouseLeave: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, Element], Unit]] = js.native
+  var onMouseMove: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, Element], Unit]] = js.native
+  var onTouchEnd: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, Element], Unit]] = js.native
 }
 
 object GetTriggerPropsArg {
@@ -34,7 +34,7 @@ object GetTriggerPropsArg {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnBlur(value: /* event */ SyntheticEvent[Event_, Element] => Unit): Self = {
+    def withOnBlur(value: /* event */ SyntheticEvent[Event, Element] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
         ret
@@ -46,7 +46,7 @@ object GetTriggerPropsArg {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* event */ SyntheticEvent[Event_, Element] => Unit): Self = {
+    def withOnClick(value: /* event */ SyntheticEvent[Event, Element] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret
@@ -58,7 +58,7 @@ object GetTriggerPropsArg {
         ret
     }
     @scala.inline
-    def withOnContextMenu(value: /* event */ SyntheticEvent[Event_, Element] => Unit): Self = {
+    def withOnContextMenu(value: /* event */ SyntheticEvent[Event, Element] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(js.Any.fromFunction1(value))
         ret
@@ -70,7 +70,7 @@ object GetTriggerPropsArg {
         ret
     }
     @scala.inline
-    def withOnFocus(value: /* event */ SyntheticEvent[Event_, Element] => Unit): Self = {
+    def withOnFocus(value: /* event */ SyntheticEvent[Event, Element] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
         ret
@@ -82,7 +82,7 @@ object GetTriggerPropsArg {
         ret
     }
     @scala.inline
-    def withOnMouseEnter(value: /* event */ SyntheticEvent[Event_, Element] => Unit): Self = {
+    def withOnMouseEnter(value: /* event */ SyntheticEvent[Event, Element] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction1(value))
         ret
@@ -94,7 +94,7 @@ object GetTriggerPropsArg {
         ret
     }
     @scala.inline
-    def withOnMouseLeave(value: /* event */ SyntheticEvent[Event_, Element] => Unit): Self = {
+    def withOnMouseLeave(value: /* event */ SyntheticEvent[Event, Element] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.Any.fromFunction1(value))
         ret
@@ -106,7 +106,7 @@ object GetTriggerPropsArg {
         ret
     }
     @scala.inline
-    def withOnMouseMove(value: /* event */ SyntheticEvent[Event_, Element] => Unit): Self = {
+    def withOnMouseMove(value: /* event */ SyntheticEvent[Event, Element] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(js.Any.fromFunction1(value))
         ret
@@ -118,7 +118,7 @@ object GetTriggerPropsArg {
         ret
     }
     @scala.inline
-    def withOnTouchEnd(value: /* event */ SyntheticEvent[Event_, Element] => Unit): Self = {
+    def withOnTouchEnd(value: /* event */ SyntheticEvent[Event, Element] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTouchEnd")(js.Any.fromFunction1(value))
         ret

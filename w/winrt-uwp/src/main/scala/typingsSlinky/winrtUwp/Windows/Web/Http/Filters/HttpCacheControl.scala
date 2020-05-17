@@ -5,12 +5,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides control of the local HTTP cache for responses to HTTP requests by methods in the Windows.Web.Http and Windows.Web.Http.Filters namespaces. */
-@JSGlobal("Windows.Web.Http.Filters.HttpCacheControl")
 @js.native
-abstract class HttpCacheControl () extends js.Object {
+trait HttpCacheControl extends js.Object {
   /** Get or set the read behavior to use for cache control on the HttpCacheControl object. */
   var readBehavior: HttpCacheReadBehavior = js.native
   /** Get or set the write behavior to use for cache control on the HttpCacheControl object. */
   var writeBehavior: HttpCacheWriteBehavior = js.native
+}
+
+object HttpCacheControl {
+  @scala.inline
+  def apply(readBehavior: HttpCacheReadBehavior, writeBehavior: HttpCacheWriteBehavior): HttpCacheControl = {
+    val __obj = js.Dynamic.literal(readBehavior = readBehavior.asInstanceOf[js.Any], writeBehavior = writeBehavior.asInstanceOf[js.Any])
+    __obj.asInstanceOf[HttpCacheControl]
+  }
+  @scala.inline
+  implicit class HttpCacheControlOps[Self <: HttpCacheControl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReadBehavior(value: HttpCacheReadBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWriteBehavior(value: HttpCacheWriteBehavior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeBehavior")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

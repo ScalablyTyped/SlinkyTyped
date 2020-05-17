@@ -1,6 +1,6 @@
 package typingsSlinky.jsreportChromePdf.mod
 
-import typingsSlinky.jsreportChromePdf.PartialOptions
+import typingsSlinky.jsreportChromePdf.anon.PartialOptions
 import typingsSlinky.jsreportCore.mod.ExtensionDefinition
 import scala.scalajs.js
 import scala.scalajs.js.`|`

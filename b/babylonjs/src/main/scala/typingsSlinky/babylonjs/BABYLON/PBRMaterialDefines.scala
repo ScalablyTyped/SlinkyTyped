@@ -9,12 +9,8 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.babylonjs.BABYLON.IMaterialSheenDefines because var conflicts: _areTexturesDirty. Inlined SHEEN, SHEEN_TEXTURE, SHEEN_TEXTUREDIRECTUV, SHEEN_LINKWITHALBEDO
 - typingsSlinky.babylonjs.BABYLON.IMaterialBRDFDefines because var conflicts: _areMiscDirty. Inlined BRDF_V_HEIGHT_CORRELATED, MS_BRDF_ENERGY_CONSERVATION, SPHERICAL_HARMONICS, SPECULAR_GLOSSINESS_ENERGY_CONSERVATION
 - typingsSlinky.babylonjs.BABYLON.IMaterialAnisotropicDefines because var conflicts: _areTexturesDirty, _needUVs. Inlined ANISOTROPIC, ANISOTROPIC_TEXTURE, ANISOTROPIC_TEXTUREDIRECTUV, MAINUV1
-- typingsSlinky.babylonjs.BABYLON.IMaterialClearCoatDefines because var conflicts: _areTexturesDirty. Inlined CLEARCOAT, CLEARCOAT_DEFAULTIOR, CLEARCOAT_TEXTURE, CLEARCOAT_TEXTUREDIRECTUV, CLEARCOAT_BUMP, CLEARCOAT_BUMPDIRECTUV, CLEARCOAT_TINT, CLEARCOAT_TINT_TEXTURE, CLEARCOAT_TINT_TEXTUREDIRECTUV */ @JSGlobal("BABYLON.PBRMaterialDefines")
-@js.native
-/**
-  * Initializes the PBR Material defines.
-  */
-class PBRMaterialDefines ()
+- typingsSlinky.babylonjs.BABYLON.IMaterialClearCoatDefines because var conflicts: _areTexturesDirty. Inlined CLEARCOAT, CLEARCOAT_DEFAULTIOR, CLEARCOAT_TEXTURE, CLEARCOAT_TEXTUREDIRECTUV, CLEARCOAT_BUMP, CLEARCOAT_BUMPDIRECTUV, CLEARCOAT_TINT, CLEARCOAT_TINT_TEXTURE, CLEARCOAT_TINT_TEXTUREDIRECTUV */ @js.native
+trait PBRMaterialDefines
   extends MaterialDefines
      with IImageProcessingConfigurationDefines {
   var ALBEDO: Boolean = js.native

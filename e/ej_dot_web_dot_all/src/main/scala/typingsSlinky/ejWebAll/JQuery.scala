@@ -39,7 +39,7 @@ import typingsSlinky.ejWebAll.ej.PivotGrid
 import typingsSlinky.ejWebAll.ej.PivotPager
 import typingsSlinky.ejWebAll.ej.PivotSchemaDesigner
 import typingsSlinky.ejWebAll.ej.PivotTreeMap
-import typingsSlinky.ejWebAll.ej.Print_
+import typingsSlinky.ejWebAll.ej.Print
 import typingsSlinky.ejWebAll.ej.ProgressBar
 import typingsSlinky.ejWebAll.ej.RTE
 import typingsSlinky.ejWebAll.ej.RadialMenu
@@ -279,7 +279,7 @@ trait JQuery extends js.Object {
   @JSName("data")
   def data_ejPivotTreeMap(key: ejPivotTreeMap): PivotTreeMap = js.native
   @JSName("data")
-  def data_ejPrint(key: ejPrint): Print_ = js.native
+  def data_ejPrint(key: ejPrint): Print = js.native
   @JSName("data")
   def data_ejProgressBar(key: ejProgressBar): ProgressBar = js.native
   @JSName("data")
@@ -601,7 +601,7 @@ trait JQuery extends js.Object {
   def ejPrint(memberName: js.Any): js.Any = js.native
   def ejPrint(memberName: js.Any, value: js.Any): js.Any = js.native
   def ejPrint(memberName: js.Any, value: js.Any, param: js.Any): js.Any = js.native
-  def ejPrint(options: typingsSlinky.ejWebAll.ej.Print_.Model): JQuery = js.native
+  def ejPrint(options: typingsSlinky.ejWebAll.ej.Print.Model): JQuery = js.native
   def ejProgressBar(): JQuery = js.native
   def ejProgressBar(memberName: js.Any): js.Any = js.native
   def ejProgressBar(memberName: js.Any, value: js.Any): js.Any = js.native

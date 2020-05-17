@@ -1,6 +1,6 @@
 package typingsSlinky.saslPlain.mod
 
-import typingsSlinky.saslPlain.TypeofPlainMechanism
+import typingsSlinky.saslPlain.anon.TypeofPlainMechanism
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

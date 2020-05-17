@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Electron.BrowserWindowProxy")
 @js.native
-class BrowserWindowProxy () extends EventEmitter {
+trait BrowserWindowProxy extends EventEmitter {
   var closed: Boolean = js.native
   // Docs: http://electronjs.org/docs/api/browser-window-proxy
   /**

@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.mod
 
-import typingsSlinky.antDesignReactNative.AnonDefaultValue
+import typingsSlinky.antDesignReactNative.anon.DefaultValue
 import typingsSlinky.antDesignReactNative.sliderMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +14,6 @@ class Slider () extends default
 @JSImport("@ant-design/react-native", "Slider")
 @js.native
 object Slider extends js.Object {
-  var defaultProps: AnonDefaultValue = js.native
+  var defaultProps: DefaultValue = js.native
 }
 

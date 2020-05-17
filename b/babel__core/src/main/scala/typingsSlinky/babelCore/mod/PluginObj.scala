@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PluginObj[S] extends js.Object {
+trait PluginObj[S] extends PluginItem {
   var inherits: js.UndefOr[js.Any] = js.native
   var manipulateOptions: js.UndefOr[js.Function2[/* opts */ js.Any, /* parserOpts */ js.Any, Unit]] = js.native
   var name: js.UndefOr[String] = js.native

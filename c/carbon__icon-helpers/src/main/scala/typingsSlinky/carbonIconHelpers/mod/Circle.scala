@@ -1,6 +1,6 @@
 package typingsSlinky.carbonIconHelpers.mod
 
-import typingsSlinky.carbonIconHelpers.AnonCx
+import typingsSlinky.carbonIconHelpers.anon.Cx
 import typingsSlinky.carbonIconHelpers.carbonIconHelpersStrings.circle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Circle extends js.Object {
-  var attrs: AnonCx = js.native
+  var attrs: Cx = js.native
   var elem: circle = js.native
 }
 
 object Circle {
   @scala.inline
-  def apply(attrs: AnonCx, elem: circle): Circle = {
+  def apply(attrs: Cx, elem: circle): Circle = {
     val __obj = js.Dynamic.literal(attrs = attrs.asInstanceOf[js.Any], elem = elem.asInstanceOf[js.Any])
     __obj.asInstanceOf[Circle]
   }
@@ -25,7 +25,7 @@ object Circle {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAttrs(value: AnonCx): Self = {
+    def withAttrs(value: Cx): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("attrs")(value.asInstanceOf[js.Any])
         ret

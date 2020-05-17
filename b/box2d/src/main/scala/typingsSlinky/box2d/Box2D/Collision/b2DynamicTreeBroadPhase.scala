@@ -1,15 +1,12 @@
 package typingsSlinky.box2d.Box2D.Collision
 
+import typingsSlinky.box2d.Box2D.Common.Math.b2Vec2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Box2D.Collision.b2DynamicTreeBroadPhase")
 @js.native
-/**
-		* Creates the dynamic tree broad phase.
-		**/
-class b2DynamicTreeBroadPhase () extends IBroadPhase {
+trait b2DynamicTreeBroadPhase extends IBroadPhase {
   /**
   		* Tests if two proxies overlap.
   		* @param proxyA First proxy to test.
@@ -29,5 +26,52 @@ class b2DynamicTreeBroadPhase () extends IBroadPhase {
   		* NOTE: this says "todo" in the current Box2DFlash code.
   		**/
   def Validate(): Unit = js.native
+}
+
+object b2DynamicTreeBroadPhase {
+  @scala.inline
+  def apply(
+    CreateProxy: (b2AABB, js.Any) => b2DynamicTreeNode,
+    DestroyProxy: b2DynamicTreeNode => Unit,
+    GetFatAABB: b2DynamicTreeNode => b2AABB,
+    GetProxyCount: () => Double,
+    GetUserData: b2DynamicTreeNode => js.Any,
+    MoveProxy: (b2DynamicTreeNode, b2AABB, b2Vec2) => Unit,
+    Query: (js.Function1[/* proxy */ b2DynamicTreeNode, Boolean], b2AABB) => Unit,
+    RayCast: (js.Function2[/* input */ b2RayCastInput, /* proxy */ b2DynamicTreeNode, Double], b2RayCastInput) => Unit,
+    Rebalance: Double => Unit,
+    TestOverlap: (b2DynamicTreeNode, b2DynamicTreeNode) => Boolean,
+    UpdatePairs: js.Function2[/* userDataA */ js.Any, /* userDataB */ js.Any, Unit] => Unit,
+    Validate: () => Unit
+  ): b2DynamicTreeBroadPhase = {
+    val __obj = js.Dynamic.literal(CreateProxy = js.Any.fromFunction2(CreateProxy), DestroyProxy = js.Any.fromFunction1(DestroyProxy), GetFatAABB = js.Any.fromFunction1(GetFatAABB), GetProxyCount = js.Any.fromFunction0(GetProxyCount), GetUserData = js.Any.fromFunction1(GetUserData), MoveProxy = js.Any.fromFunction3(MoveProxy), Query = js.Any.fromFunction2(Query), RayCast = js.Any.fromFunction2(RayCast), Rebalance = js.Any.fromFunction1(Rebalance), TestOverlap = js.Any.fromFunction2(TestOverlap), UpdatePairs = js.Any.fromFunction1(UpdatePairs), Validate = js.Any.fromFunction0(Validate))
+    __obj.asInstanceOf[b2DynamicTreeBroadPhase]
+  }
+  @scala.inline
+  implicit class b2DynamicTreeBroadPhaseOps[Self <: b2DynamicTreeBroadPhase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTestOverlap(value: (b2DynamicTreeNode, b2DynamicTreeNode) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TestOverlap")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withUpdatePairs(value: js.Function2[/* userDataA */ js.Any, /* userDataB */ js.Any, Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UpdatePairs")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withValidate(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Validate")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

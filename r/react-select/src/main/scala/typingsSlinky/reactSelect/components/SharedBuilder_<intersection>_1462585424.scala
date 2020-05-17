@@ -1,5 +1,6 @@
 package typingsSlinky.reactSelect.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
@@ -8,8 +9,8 @@ import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactSelect.AnonCount
-import typingsSlinky.reactSelect.AnonInputValue
+import typingsSlinky.reactSelect.anon.Count
+import typingsSlinky.reactSelect.anon.InputValue
 import typingsSlinky.reactSelect.componentsMod.SelectComponentsConfig
 import typingsSlinky.reactSelect.selectMod.FormatOptionLabelMeta
 import typingsSlinky.reactSelect.selectMod.default
@@ -26,7 +27,6 @@ import typingsSlinky.reactSelect.typesMod.OptionsType
 import typingsSlinky.reactSelect.typesMod.Theme
 import typingsSlinky.reactSelect.typesMod.ValueType
 import typingsSlinky.std.EventListener
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,7 +54,7 @@ class `SharedBuilder_<intersection>_1462585424`[R <: js.Object, OptionType <: Op
   @scala.inline
   def classNamePrefixNull: this.type = set("classNamePrefix", null)
   @scala.inline
-  def closeMenuOnScrollFunction1(value: /* evt */ Event_ => Unit): this.type = set("closeMenuOnScroll", js.Any.fromFunction1(value))
+  def closeMenuOnScrollFunction1(value: /* evt */ Event => Unit): this.type = set("closeMenuOnScroll", js.Any.fromFunction1(value))
   @scala.inline
   def closeMenuOnScroll(value: Boolean | EventListener): this.type = set("closeMenuOnScroll", value.asInstanceOf[js.Any])
   @scala.inline
@@ -116,7 +116,7 @@ class `SharedBuilder_<intersection>_1462585424`[R <: js.Object, OptionType <: Op
   @scala.inline
   def isSearchable(value: Boolean): this.type = set("isSearchable", value.asInstanceOf[js.Any])
   @scala.inline
-  def loadingMessage(value: /* obj */ AnonInputValue => String | Null): this.type = set("loadingMessage", js.Any.fromFunction1(value))
+  def loadingMessage(value: /* obj */ InputValue => String | Null): this.type = set("loadingMessage", js.Any.fromFunction1(value))
   @scala.inline
   def maxMenuHeight(value: Double): this.type = set("maxMenuHeight", value.asInstanceOf[js.Any])
   @scala.inline
@@ -138,7 +138,7 @@ class `SharedBuilder_<intersection>_1462585424`[R <: js.Object, OptionType <: Op
   @scala.inline
   def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
   @scala.inline
-  def noOptionsMessage(value: /* obj */ AnonInputValue => String | Null): this.type = set("noOptionsMessage", js.Any.fromFunction1(value))
+  def noOptionsMessage(value: /* obj */ InputValue => String | Null): this.type = set("noOptionsMessage", js.Any.fromFunction1(value))
   @scala.inline
   def onBlur(value: /* event */ SyntheticFocusEvent[HTMLElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
   @scala.inline
@@ -154,9 +154,9 @@ class `SharedBuilder_<intersection>_1462585424`[R <: js.Object, OptionType <: Op
   @scala.inline
   def onMenuOpen(value: () => Unit): this.type = set("onMenuOpen", js.Any.fromFunction0(value))
   @scala.inline
-  def onMenuScrollToBottom(value: /* event */ SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onMenuScrollToBottom", js.Any.fromFunction1(value))
+  def onMenuScrollToBottom(value: /* event */ SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onMenuScrollToBottom", js.Any.fromFunction1(value))
   @scala.inline
-  def onMenuScrollToTop(value: /* event */ SyntheticEvent[Event_, HTMLElement] => Unit): this.type = set("onMenuScrollToTop", js.Any.fromFunction1(value))
+  def onMenuScrollToTop(value: /* event */ SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onMenuScrollToTop", js.Any.fromFunction1(value))
   @scala.inline
   def openMenuOnClick(value: Boolean): this.type = set("openMenuOnClick", value.asInstanceOf[js.Any])
   @scala.inline
@@ -170,7 +170,7 @@ class `SharedBuilder_<intersection>_1462585424`[R <: js.Object, OptionType <: Op
   @scala.inline
   def placeholder(value: TagMod[Any]): this.type = set("placeholder", value.asInstanceOf[js.Any])
   @scala.inline
-  def screenReaderStatus(value: /* obj */ AnonCount => String): this.type = set("screenReaderStatus", js.Any.fromFunction1(value))
+  def screenReaderStatus(value: /* obj */ Count => String): this.type = set("screenReaderStatus", js.Any.fromFunction1(value))
   @scala.inline
   def styles(value: StylesConfig): this.type = set("styles", value.asInstanceOf[js.Any])
   @scala.inline

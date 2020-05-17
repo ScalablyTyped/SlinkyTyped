@@ -1,12 +1,40 @@
 package typingsSlinky.winrt.Windows.Storage
 
+import typingsSlinky.winrt.Windows.Foundation.IAsyncAction
+import typingsSlinky.winrt.Windows.Storage.Streams.IRandomAccessStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Storage.StorageStreamTransaction")
 @js.native
-class StorageStreamTransaction () extends IStorageStreamTransaction {
+trait StorageStreamTransaction extends IStorageStreamTransaction {
   def dispose(): Unit = js.native
+}
+
+object StorageStreamTransaction {
+  @scala.inline
+  def apply(
+    close: () => Unit,
+    commitAsync: () => IAsyncAction,
+    dispose: () => Unit,
+    stream: IRandomAccessStream
+  ): StorageStreamTransaction = {
+    val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), commitAsync = js.Any.fromFunction0(commitAsync), dispose = js.Any.fromFunction0(dispose), stream = stream.asInstanceOf[js.Any])
+    __obj.asInstanceOf[StorageStreamTransaction]
+  }
+  @scala.inline
+  implicit class StorageStreamTransactionOps[Self <: StorageStreamTransaction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDispose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispose")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

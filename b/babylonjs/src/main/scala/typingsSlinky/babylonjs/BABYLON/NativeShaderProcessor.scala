@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.NativeShaderProcessor")
 @js.native
-class NativeShaderProcessor () extends WebGL2ShaderProcessor {
+trait NativeShaderProcessor extends WebGL2ShaderProcessor {
   var _genericAttributeLocation: js.Any = js.native
   var _replacements: js.Any = js.native
   var _textureCount: js.Any = js.native
@@ -25,5 +24,106 @@ class NativeShaderProcessor () extends WebGL2ShaderProcessor {
   def uniformProcessor_MNativeShaderProcessor(uniform: String): String = js.native
   @JSName("varyingProcessor")
   def varyingProcessor_MNativeShaderProcessor(varying: String, isFragment: Boolean): String = js.native
+}
+
+object NativeShaderProcessor {
+  @scala.inline
+  def apply(
+    _genericAttributeLocation: js.Any,
+    _replacements: js.Any,
+    _textureCount: js.Any,
+    _uniforms: js.Any,
+    _varyingLocationCount: js.Any,
+    _varyingLocationMap: js.Any,
+    attributeProcessor: String => String,
+    lineProcessor: String => String,
+    postProcessor: (String, js.Array[String], Boolean) => String,
+    preProcessor: (String, js.Array[String], Boolean) => String,
+    uniformProcessor: String => String,
+    varyingProcessor: (String, Boolean) => String
+  ): NativeShaderProcessor = {
+    val __obj = js.Dynamic.literal(_genericAttributeLocation = _genericAttributeLocation.asInstanceOf[js.Any], _replacements = _replacements.asInstanceOf[js.Any], _textureCount = _textureCount.asInstanceOf[js.Any], _uniforms = _uniforms.asInstanceOf[js.Any], _varyingLocationCount = _varyingLocationCount.asInstanceOf[js.Any], _varyingLocationMap = _varyingLocationMap.asInstanceOf[js.Any], attributeProcessor = js.Any.fromFunction1(attributeProcessor), lineProcessor = js.Any.fromFunction1(lineProcessor), postProcessor = js.Any.fromFunction3(postProcessor), preProcessor = js.Any.fromFunction3(preProcessor), uniformProcessor = js.Any.fromFunction1(uniformProcessor), varyingProcessor = js.Any.fromFunction2(varyingProcessor))
+    __obj.asInstanceOf[NativeShaderProcessor]
+  }
+  @scala.inline
+  implicit class NativeShaderProcessorOps[Self <: NativeShaderProcessor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_genericAttributeLocation(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_genericAttributeLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_replacements(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_replacements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_textureCount(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_textureCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_uniforms(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_uniforms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_varyingLocationCount(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_varyingLocationCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_varyingLocationMap(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_varyingLocationMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttributeProcessor(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributeProcessor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLineProcessor(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineProcessor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPostProcessor(value: (String, js.Array[String], Boolean) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postProcessor")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withPreProcessor(value: (String, js.Array[String], Boolean) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preProcessor")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withUniformProcessor(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniformProcessor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withVaryingProcessor(value: (String, Boolean) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("varyingProcessor")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

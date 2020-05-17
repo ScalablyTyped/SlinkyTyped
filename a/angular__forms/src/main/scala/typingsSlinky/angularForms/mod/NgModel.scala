@@ -3,7 +3,7 @@ package typingsSlinky.angularForms.mod
 import typingsSlinky.angularCore.mod.EventEmitter
 import typingsSlinky.angularCore.mod.OnChanges
 import typingsSlinky.angularCore.mod.OnDestroy
-import typingsSlinky.angularForms.AnonName
+import typingsSlinky.angularForms.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -68,7 +68,7 @@ class NgModel protected ()
     * Defaults to 'change'. Possible values: `'change'` | `'blur'` | `'submit'`.
     *
     */
-  var options: AnonName = js.native
+  var options: Name = js.native
   /**
     * @description
     * Returns an array that represents the path from the top-level form to this control.

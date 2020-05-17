@@ -1,6 +1,6 @@
 package typingsSlinky.reactWeui.mod
 
-import typingsSlinky.reactWeui.AnonAccess
+import typingsSlinky.reactWeui.anon.Access
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ class Panel protected () extends js.Object {
 @JSImport("react-weui", "Panel")
 @js.native
 object Panel extends js.Object {
-  var defaultProps: AnonAccess = js.native
+  var defaultProps: Access = js.native
   @js.native
   object propTypes extends js.Object {
     @js.native

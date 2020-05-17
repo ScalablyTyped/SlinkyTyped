@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,13 +9,4 @@ import scala.scalajs.js.annotation._
 trait MediaElementAudioSourceNode extends AudioNode {
   val mediaElement: org.scalajs.dom.raw.HTMLMediaElement = js.native
 }
-
-@JSGlobal("MediaElementAudioSourceNode")
-@js.native
-object MediaElementAudioSourceNode
-  extends Instantiable2[
-      /* context */ org.scalajs.dom.raw.AudioContext, 
-      /* options */ MediaElementAudioSourceOptions, 
-      org.scalajs.dom.raw.MediaElementAudioSourceNode
-    ]
 

@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientAdexchangebuyer.gapi.client.adexchangebuyer
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAdexchangebuyer.AnonPrettyPrint
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAdexchangebuyer.anon.PrettyPrint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MarketplaceprivateauctionResource extends js.Object {
   /** Update a given private auction proposal */
-  def updateproposal(request: AnonPrettyPrint): Request_[Unit] = js.native
+  def updateproposal(request: PrettyPrint): Request[Unit] = js.native
 }
 
 object MarketplaceprivateauctionResource {
   @scala.inline
-  def apply(updateproposal: AnonPrettyPrint => Request_[Unit]): MarketplaceprivateauctionResource = {
+  def apply(updateproposal: PrettyPrint => Request[Unit]): MarketplaceprivateauctionResource = {
     val __obj = js.Dynamic.literal(updateproposal = js.Any.fromFunction1(updateproposal))
     __obj.asInstanceOf[MarketplaceprivateauctionResource]
   }
@@ -25,7 +25,7 @@ object MarketplaceprivateauctionResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withUpdateproposal(value: AnonPrettyPrint => Request_[Unit]): Self = {
+    def withUpdateproposal(value: PrettyPrint => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("updateproposal")(js.Any.fromFunction1(value))
         ret

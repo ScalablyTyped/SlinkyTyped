@@ -1,11 +1,11 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonCancelComponentElementModel
-import typingsSlinky.devextreme.AnonElementDxElement
+import typingsSlinky.devextreme.anon.CancelComponentElementModel
+import typingsSlinky.devextreme.anon.ElementDxElement
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.event
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,13 +33,13 @@ trait dxOverlayOptions[T] extends WidgetOptions[T] {
   /** Specifies the minimum width the widget can reach while resizing. */
   var minWidth: js.UndefOr[Double | String | (js.Function0[Double | String])] = js.native
   /** A function that is executed after the widget is hidden. */
-  var onHidden: js.UndefOr[js.Function1[/* e */ AnonElementDxElement[T], _]] = js.native
+  var onHidden: js.UndefOr[js.Function1[/* e */ ElementDxElement[T], _]] = js.native
   /** A function that is executed before the widget is hidden. */
-  var onHiding: js.UndefOr[js.Function1[/* e */ AnonCancelComponentElementModel[T], _]] = js.native
+  var onHiding: js.UndefOr[js.Function1[/* e */ CancelComponentElementModel[T], _]] = js.native
   /** A function that is executed before the widget is displayed. */
-  var onShowing: js.UndefOr[js.Function1[/* e */ AnonElementDxElement[T], _]] = js.native
+  var onShowing: js.UndefOr[js.Function1[/* e */ ElementDxElement[T], _]] = js.native
   /** A function that is executed after the widget is displayed. */
-  var onShown: js.UndefOr[js.Function1[/* e */ AnonElementDxElement[T], _]] = js.native
+  var onShown: js.UndefOr[js.Function1[/* e */ ElementDxElement[T], _]] = js.native
   /** Positions the widget. */
   var position: js.UndefOr[js.Any] = js.native
   /** Specifies whether to shade the background when the widget is active. */
@@ -213,7 +213,7 @@ object dxOverlayOptions {
         ret
     }
     @scala.inline
-    def withOnHidden(value: /* e */ AnonElementDxElement[T] => _): Self[T] = {
+    def withOnHidden(value: /* e */ ElementDxElement[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onHidden")(js.Any.fromFunction1(value))
         ret
@@ -225,7 +225,7 @@ object dxOverlayOptions {
         ret
     }
     @scala.inline
-    def withOnHiding(value: /* e */ AnonCancelComponentElementModel[T] => _): Self[T] = {
+    def withOnHiding(value: /* e */ CancelComponentElementModel[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onHiding")(js.Any.fromFunction1(value))
         ret
@@ -237,7 +237,7 @@ object dxOverlayOptions {
         ret
     }
     @scala.inline
-    def withOnShowing(value: /* e */ AnonElementDxElement[T] => _): Self[T] = {
+    def withOnShowing(value: /* e */ ElementDxElement[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onShowing")(js.Any.fromFunction1(value))
         ret
@@ -249,7 +249,7 @@ object dxOverlayOptions {
         ret
     }
     @scala.inline
-    def withOnShown(value: /* e */ AnonElementDxElement[T] => _): Self[T] = {
+    def withOnShown(value: /* e */ ElementDxElement[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onShown")(js.Any.fromFunction1(value))
         ret

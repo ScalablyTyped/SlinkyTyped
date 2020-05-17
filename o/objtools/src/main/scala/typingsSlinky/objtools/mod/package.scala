@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type Mask = typingsSlinky.objtools.mod.MaskObj | js.Array[typingsSlinky.objtools.mod.MaskObj] | scala.Boolean
   type MaskedOutHook = js.Function1[/* path */ java.lang.String, scala.Unit]
   type MergeCustomizer = js.Function4[
     /* objectValue */ js.Any, 

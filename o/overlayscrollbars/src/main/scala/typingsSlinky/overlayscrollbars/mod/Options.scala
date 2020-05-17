@@ -1,10 +1,10 @@
 package typingsSlinky.overlayscrollbars.mod
 
-import typingsSlinky.overlayscrollbars.AnonAutoHide
-import typingsSlinky.overlayscrollbars.AnonDynHeight
-import typingsSlinky.overlayscrollbars.AnonInitialize
-import typingsSlinky.overlayscrollbars.AnonOnContentSizeChanged
-import typingsSlinky.overlayscrollbars.AnonXOverflowBehavior
+import typingsSlinky.overlayscrollbars.anon.AutoHide
+import typingsSlinky.overlayscrollbars.anon.DynHeight
+import typingsSlinky.overlayscrollbars.anon.Initialize
+import typingsSlinky.overlayscrollbars.anon.OnContentSizeChanged
+import typingsSlinky.overlayscrollbars.anon.XOverflowBehavior
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,17 +13,17 @@ import scala.scalajs.js.annotation._
 trait Options extends js.Object {
   var autoUpdate: js.UndefOr[Boolean | Null] = js.native
   var autoUpdateInterval: js.UndefOr[Double] = js.native
-  var callbacks: js.UndefOr[AnonOnContentSizeChanged] = js.native
+  var callbacks: js.UndefOr[OnContentSizeChanged] = js.native
   var className: js.UndefOr[String | Null] = js.native
   var clipAlways: js.UndefOr[Boolean] = js.native
-  var nativeScrollbarsOverlaid: js.UndefOr[AnonInitialize] = js.native
+  var nativeScrollbarsOverlaid: js.UndefOr[Initialize] = js.native
   var normalizeRTL: js.UndefOr[Boolean] = js.native
-  var overflowBehavior: js.UndefOr[AnonXOverflowBehavior] = js.native
+  var overflowBehavior: js.UndefOr[XOverflowBehavior] = js.native
   var paddingAbsolute: js.UndefOr[Boolean] = js.native
   var resize: js.UndefOr[ResizeBehavior] = js.native
-  var scrollbars: js.UndefOr[AnonAutoHide] = js.native
+  var scrollbars: js.UndefOr[AutoHide] = js.native
   var sizeAutoCapable: js.UndefOr[Boolean] = js.native
-  var textarea: js.UndefOr[AnonDynHeight] = js.native
+  var textarea: js.UndefOr[DynHeight] = js.native
   var updateOnLoad: js.UndefOr[String | js.Array[String] | Null] = js.native
 }
 
@@ -70,7 +70,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withCallbacks(value: AnonOnContentSizeChanged): Self = {
+    def withCallbacks(value: OnContentSizeChanged): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("callbacks")(value.asInstanceOf[js.Any])
         ret
@@ -112,7 +112,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withNativeScrollbarsOverlaid(value: AnonInitialize): Self = {
+    def withNativeScrollbarsOverlaid(value: Initialize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nativeScrollbarsOverlaid")(value.asInstanceOf[js.Any])
         ret
@@ -136,7 +136,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withOverflowBehavior(value: AnonXOverflowBehavior): Self = {
+    def withOverflowBehavior(value: XOverflowBehavior): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overflowBehavior")(value.asInstanceOf[js.Any])
         ret
@@ -172,7 +172,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withScrollbars(value: AnonAutoHide): Self = {
+    def withScrollbars(value: AutoHide): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollbars")(value.asInstanceOf[js.Any])
         ret
@@ -196,7 +196,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withTextarea(value: AnonDynHeight): Self = {
+    def withTextarea(value: DynHeight): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("textarea")(value.asInstanceOf[js.Any])
         ret

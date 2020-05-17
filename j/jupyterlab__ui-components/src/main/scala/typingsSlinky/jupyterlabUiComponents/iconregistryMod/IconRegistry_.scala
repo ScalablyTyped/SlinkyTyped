@@ -1,7 +1,7 @@
 package typingsSlinky.jupyterlabUiComponents.iconregistryMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jupyterlabUiComponents.INodeOptionscontainerHTML
+import typingsSlinky.jupyterlabUiComponents.anon.INodeOptionscontainerHTML
 import typingsSlinky.jupyterlabUiComponents.iconregistryMod.IconRegistry.IOptions
 import typingsSlinky.jupyterlabUiComponents.interfacesMod.IIconRegistry
 import scala.scalajs.js

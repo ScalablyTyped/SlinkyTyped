@@ -67,6 +67,12 @@ object nullEngineMod extends js.Object {
     def clear(color: IColor4Like, backBuffer: Boolean, depth: Boolean): Unit = js.native
     def clear(color: IColor4Like, backBuffer: Boolean, depth: Boolean, stencil: Boolean): Unit = js.native
     /**
+      * Creates a dynamic vertex buffer
+      * @param vertices the data for the dynamic vertex buffer
+      * @returns the new WebGL dynamic buffer
+      */
+    def createDynamicVertexBuffer(vertices: FloatArray): DataBuffer = js.native
+    /**
       * Creates a new render target texture
       * @param size defines the size of the texture
       * @param options defines the options used to create the texture
@@ -82,6 +88,12 @@ object nullEngineMod extends js.Object {
       defines: String,
       context: WebGLRenderingContext
     ): WebGLProgram = js.native
+    /**
+      * Creates a vertex buffer
+      * @param vertices the data for the vertex buffer
+      * @returns the new WebGL static buffer
+      */
+    def createVertexBuffer(vertices: FloatArray): DataBuffer = js.native
     /**
       * Activates an effect, mkaing it the current one (ie. the one used for rendering)
       * @param effect defines the effect to activate

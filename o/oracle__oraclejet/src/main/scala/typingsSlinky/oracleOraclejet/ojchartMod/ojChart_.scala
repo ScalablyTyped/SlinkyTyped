@@ -3,21 +3,21 @@ package typingsSlinky.oracleOraclejet.ojchartMod
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.AnonAlignTickMarks
-import typingsSlinky.oracleOraclejet.AnonAnimationDownColor
-import typingsSlinky.oracleOraclejet.AnonAxisLine
-import typingsSlinky.oracleOraclejet.AnonBackgroundColor
-import typingsSlinky.oracleOraclejet.AnonBaselineScaling
-import typingsSlinky.oracleOraclejet.AnonBorderWidth
-import typingsSlinky.oracleOraclejet.AnonClose
-import typingsSlinky.oracleOraclejet.AnonComponentName
-import typingsSlinky.oracleOraclejet.AnonContent
-import typingsSlinky.oracleOraclejet.AnonConverter
-import typingsSlinky.oracleOraclejet.AnonDrag
-import typingsSlinky.oracleOraclejet.AnonInsert
-import typingsSlinky.oracleOraclejet.AnonPreventDefault
-import typingsSlinky.oracleOraclejet.AnonRenderer
-import typingsSlinky.oracleOraclejet.AnonX
+import typingsSlinky.oracleOraclejet.anon.AlignTickMarks
+import typingsSlinky.oracleOraclejet.anon.AnimationDownColor
+import typingsSlinky.oracleOraclejet.anon.AxisLine
+import typingsSlinky.oracleOraclejet.anon.BackgroundColor
+import typingsSlinky.oracleOraclejet.anon.BaselineScaling
+import typingsSlinky.oracleOraclejet.anon.BorderWidth
+import typingsSlinky.oracleOraclejet.anon.Close
+import typingsSlinky.oracleOraclejet.anon.ComponentName
+import typingsSlinky.oracleOraclejet.anon.Content
+import typingsSlinky.oracleOraclejet.anon.Converter
+import typingsSlinky.oracleOraclejet.anon.Drag
+import typingsSlinky.oracleOraclejet.anon.Insert
+import typingsSlinky.oracleOraclejet.anon.PreventDefault
+import typingsSlinky.oracleOraclejet.anon.Renderer
+import typingsSlinky.oracleOraclejet.anon.X
 import typingsSlinky.oracleOraclejet.ojchartMod.ojChart.AxisTitleContext
 import typingsSlinky.oracleOraclejet.ojchartMod.ojChart.DataLabelContext
 import typingsSlinky.oracleOraclejet.ojchartMod.ojChart.GroupContext
@@ -190,8 +190,8 @@ trait ojChart_[K, D] extends dvtBaseComponent[ojChartSettableProperties[K, D]] {
   var data: (DataProvider[K, D]) | Null = js.native
   var dataCursor: off | on | auto = js.native
   var dataCursorBehavior: smooth | snap | auto = js.native
-  var dataCursorPosition: AnonX = js.native
-  var dnd: AnonDrag = js.native
+  var dataCursorPosition: X = js.native
+  var dnd: Drag = js.native
   var dragMode: pan | zoom | select | off | user = js.native
   var drilling: on | seriesOnly | groupsOnly | off = js.native
   var groupComparator: (js.Function2[/* param0 */ js.Object, /* param1 */ js.Object, Double]) | Null = js.native
@@ -201,7 +201,7 @@ trait ojChart_[K, D] extends dvtBaseComponent[ojChartSettableProperties[K, D]] {
   var highlightedCategories: js.Array[String] = js.native
   var hoverBehavior: dim | none = js.native
   var initialZooming: first | last | none = js.native
-  var legend: AnonBackgroundColor = js.native
+  var legend: BackgroundColor = js.native
   var onAnimationOnDataChangeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var onAnimationOnDisplayChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var onAsChanged: (js.Function1[CustomEvent, _]) | Null = js.native
@@ -253,9 +253,9 @@ trait ojChart_[K, D] extends dvtBaseComponent[ojChartSettableProperties[K, D]] {
   var onZoomDirectionChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var orientation: horizontal | vertical = js.native
   var otherThreshold: Double = js.native
-  var overview: AnonContent = js.native
-  var pieCenter: AnonConverter = js.native
-  var plotArea: AnonBorderWidth = js.native
+  var overview: Content = js.native
+  var pieCenter: Converter = js.native
+  var plotArea: BorderWidth = js.native
   var polarGridShape: polygon | circle = js.native
   var selection: js.Array[K] = js.native
   var selectionMode: single | multiple | none = js.native
@@ -265,17 +265,17 @@ trait ojChart_[K, D] extends dvtBaseComponent[ojChartSettableProperties[K, D]] {
   var splitterPosition: Double = js.native
   var stack: on | off = js.native
   var stackLabel: on | off = js.native
-  var styleDefaults: AnonAnimationDownColor = js.native
+  var styleDefaults: AnimationDownColor = js.native
   var timeAxisType: enabled | mixedFrequency | skipGaps | disabled | auto = js.native
-  var tooltip: AnonRenderer = js.native
+  var tooltip: Renderer = js.native
   var touchResponse: touchStart | auto = js.native
   @JSName("translations")
-  var translations_ojChart_ : AnonComponentName = js.native
+  var translations_ojChart_ : ComponentName = js.native
   var `type`: line | area | lineWithArea | stock | boxPlot | combo | pie | scatter | bubble | funnel | pyramid | bar = js.native
-  var valueFormats: AnonClose = js.native
-  var xAxis: AnonAxisLine = js.native
-  var y2Axis: AnonAlignTickMarks = js.native
-  var yAxis: AnonBaselineScaling = js.native
+  var valueFormats: Close = js.native
+  var xAxis: AxisLine = js.native
+  var y2Axis: AlignTickMarks = js.native
+  var yAxis: BaselineScaling = js.native
   var zoomAndScroll: delayedScrollOnly | liveScrollOnly | delayed | live | off = js.native
   var zoomDirection: x | y | auto = js.native
   def addEventListener(
@@ -654,7 +654,7 @@ trait ojChart_[K, D] extends dvtBaseComponent[ojChartSettableProperties[K, D]] {
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
-  def dataLabel(context: DataLabelContext): AnonInsert | AnonPreventDefault = js.native
+  def dataLabel(context: DataLabelContext): Insert | PreventDefault = js.native
   def getContextByNode(node: Element): PieCenterLabelContext | LegendItemContext | ReferenceObject | GroupContext | AxisTitleContext | ItemContext | SeriesContext = js.native
   def getDataItem(seriesIndex: Double, groupIndex: Double): js.Object | Null = js.native
   def getGroup(groupIndex: String): String = js.native
@@ -676,9 +676,9 @@ trait ojChart_[K, D] extends dvtBaseComponent[ojChartSettableProperties[K, D]] {
   @JSName("getProperty")
   def getProperty_dataCursorBehavior(property: dataCursorBehavior): smooth | snap | auto = js.native
   @JSName("getProperty")
-  def getProperty_dataCursorPosition(property: dataCursorPosition): AnonX = js.native
+  def getProperty_dataCursorPosition(property: dataCursorPosition): X = js.native
   @JSName("getProperty")
-  def getProperty_dnd(property: dnd): AnonDrag = js.native
+  def getProperty_dnd(property: dnd): Drag = js.native
   @JSName("getProperty")
   def getProperty_dragMode(property: dragMode): pan | zoom | select | off | user = js.native
   @JSName("getProperty")
@@ -698,17 +698,17 @@ trait ojChart_[K, D] extends dvtBaseComponent[ojChartSettableProperties[K, D]] {
   @JSName("getProperty")
   def getProperty_initialZooming(property: initialZooming): first | last | none = js.native
   @JSName("getProperty")
-  def getProperty_legend(property: legend): AnonBackgroundColor = js.native
+  def getProperty_legend(property: legend): BackgroundColor = js.native
   @JSName("getProperty")
   def getProperty_orientation(property: orientation): horizontal | vertical = js.native
   @JSName("getProperty")
   def getProperty_otherThreshold(property: otherThreshold): Double = js.native
   @JSName("getProperty")
-  def getProperty_overview(property: overview): AnonContent = js.native
+  def getProperty_overview(property: overview): Content = js.native
   @JSName("getProperty")
-  def getProperty_pieCenter(property: pieCenter): AnonConverter = js.native
+  def getProperty_pieCenter(property: pieCenter): Converter = js.native
   @JSName("getProperty")
-  def getProperty_plotArea(property: plotArea): AnonBorderWidth = js.native
+  def getProperty_plotArea(property: plotArea): BorderWidth = js.native
   @JSName("getProperty")
   def getProperty_polarGridShape(property: polarGridShape): polygon | circle = js.native
   @JSName("getProperty")
@@ -728,23 +728,23 @@ trait ojChart_[K, D] extends dvtBaseComponent[ojChartSettableProperties[K, D]] {
   @JSName("getProperty")
   def getProperty_stackLabel(property: stackLabel): on | off = js.native
   @JSName("getProperty")
-  def getProperty_styleDefaults(property: styleDefaults): AnonAnimationDownColor = js.native
+  def getProperty_styleDefaults(property: styleDefaults): AnimationDownColor = js.native
   @JSName("getProperty")
   def getProperty_timeAxisType(property: timeAxisType): enabled | mixedFrequency | skipGaps | disabled | auto = js.native
   @JSName("getProperty")
-  def getProperty_tooltip(property: tooltip): AnonRenderer = js.native
+  def getProperty_tooltip(property: tooltip): Renderer = js.native
   @JSName("getProperty")
   def getProperty_touchResponse(property: touchResponse): touchStart | auto = js.native
   @JSName("getProperty")
   def getProperty_type(property: `type`): line | area | lineWithArea | stock | boxPlot | combo | pie | scatter | bubble | funnel | pyramid | bar = js.native
   @JSName("getProperty")
-  def getProperty_valueFormats(property: valueFormats): AnonClose = js.native
+  def getProperty_valueFormats(property: valueFormats): Close = js.native
   @JSName("getProperty")
-  def getProperty_xAxis(property: xAxis): AnonAxisLine = js.native
+  def getProperty_xAxis(property: xAxis): AxisLine = js.native
   @JSName("getProperty")
-  def getProperty_y2Axis(property: y2Axis): AnonAlignTickMarks = js.native
+  def getProperty_y2Axis(property: y2Axis): AlignTickMarks = js.native
   @JSName("getProperty")
-  def getProperty_yAxis(property: yAxis): AnonBaselineScaling = js.native
+  def getProperty_yAxis(property: yAxis): BaselineScaling = js.native
   @JSName("getProperty")
   def getProperty_zoomAndScroll(property: zoomAndScroll): delayedScrollOnly | liveScrollOnly | delayed | live | off = js.native
   @JSName("getProperty")
@@ -834,9 +834,9 @@ trait ojChart_[K, D] extends dvtBaseComponent[ojChartSettableProperties[K, D]] {
   @JSName("setProperty")
   def setProperty_data(property: data, value: DataProvider[K, D]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_dataCursorPosition(property: dataCursorPosition, value: AnonX): Unit = js.native
+  def setProperty_dataCursorPosition(property: dataCursorPosition, value: X): Unit = js.native
   @JSName("setProperty")
-  def setProperty_dnd(property: dnd, value: AnonDrag): Unit = js.native
+  def setProperty_dnd(property: dnd, value: Drag): Unit = js.native
   @JSName("setProperty")
   def setProperty_groupComparator(property: groupComparator): Unit = js.native
   @JSName("setProperty")
@@ -849,15 +849,15 @@ trait ojChart_[K, D] extends dvtBaseComponent[ojChartSettableProperties[K, D]] {
   @JSName("setProperty")
   def setProperty_highlightedCategories(property: highlightedCategories, value: js.Array[String]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_legend(property: legend, value: AnonBackgroundColor): Unit = js.native
+  def setProperty_legend(property: legend, value: BackgroundColor): Unit = js.native
   @JSName("setProperty")
   def setProperty_otherThreshold(property: otherThreshold, value: Double): Unit = js.native
   @JSName("setProperty")
-  def setProperty_overview(property: overview, value: AnonContent): Unit = js.native
+  def setProperty_overview(property: overview, value: Content): Unit = js.native
   @JSName("setProperty")
-  def setProperty_pieCenter(property: pieCenter, value: AnonConverter): Unit = js.native
+  def setProperty_pieCenter(property: pieCenter, value: Converter): Unit = js.native
   @JSName("setProperty")
-  def setProperty_plotArea(property: plotArea, value: AnonBorderWidth): Unit = js.native
+  def setProperty_plotArea(property: plotArea, value: BorderWidth): Unit = js.native
   @JSName("setProperty")
   def setProperty_selection(property: selection, value: js.Array[K]): Unit = js.native
   @JSName("setProperty")
@@ -870,18 +870,18 @@ trait ojChart_[K, D] extends dvtBaseComponent[ojChartSettableProperties[K, D]] {
   @JSName("setProperty")
   def setProperty_splitterPosition(property: splitterPosition, value: Double): Unit = js.native
   @JSName("setProperty")
-  def setProperty_styleDefaults(property: styleDefaults, value: AnonAnimationDownColor): Unit = js.native
+  def setProperty_styleDefaults(property: styleDefaults, value: AnimationDownColor): Unit = js.native
   @JSName("setProperty")
-  def setProperty_tooltip(property: tooltip, value: AnonRenderer): Unit = js.native
+  def setProperty_tooltip(property: tooltip, value: Renderer): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonComponentName): Unit = js.native
+  def setProperty_translations(property: translations, value: ComponentName): Unit = js.native
   @JSName("setProperty")
-  def setProperty_valueFormats(property: valueFormats, value: AnonClose): Unit = js.native
+  def setProperty_valueFormats(property: valueFormats, value: Close): Unit = js.native
   @JSName("setProperty")
-  def setProperty_xAxis(property: xAxis, value: AnonAxisLine): Unit = js.native
+  def setProperty_xAxis(property: xAxis, value: AxisLine): Unit = js.native
   @JSName("setProperty")
-  def setProperty_y2Axis(property: y2Axis, value: AnonAlignTickMarks): Unit = js.native
+  def setProperty_y2Axis(property: y2Axis, value: AlignTickMarks): Unit = js.native
   @JSName("setProperty")
-  def setProperty_yAxis(property: yAxis, value: AnonBaselineScaling): Unit = js.native
+  def setProperty_yAxis(property: yAxis, value: BaselineScaling): Unit = js.native
 }
 

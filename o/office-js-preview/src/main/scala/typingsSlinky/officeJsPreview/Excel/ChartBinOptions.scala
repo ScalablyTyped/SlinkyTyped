@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartBinOptionsData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartBinOptionsLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartBinOptionsUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Auto
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.BinCount
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.BinWidth
@@ -20,9 +20,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@JSGlobal("Excel.ChartBinOptions")
 @js.native
-class ChartBinOptions () extends ClientObject {
+trait ChartBinOptions extends ClientObject {
   /**
     *
     * Specifies whether or not the bin overflow is enabled in a histogram chart or pareto chart. Read/Write.
@@ -82,7 +81,7 @@ class ChartBinOptions () extends ClientObject {
     */
   def load(): ChartBinOptions = js.native
   def load(options: ChartBinOptionsLoadOptions): ChartBinOptions = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartBinOptions = js.native
+  def load(propertyNamesAndPaths: Expand): ChartBinOptions = js.native
   def load(propertyNames: String): ChartBinOptions = js.native
   def load(propertyNames: js.Array[String]): ChartBinOptions = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

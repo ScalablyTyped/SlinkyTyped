@@ -1,31 +1,31 @@
 package typingsSlinky.chrome.chrome.runtime
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.chrome.Anon3D
-import typingsSlinky.chrome.AnonAcceptstlschannelid
-import typingsSlinky.chrome.AnonActions
-import typingsSlinky.chrome.AnonAllframes
-import typingsSlinky.chrome.AnonBookmarks
-import typingsSlinky.chrome.AnonBookmarksui
-import typingsSlinky.chrome.AnonChromestyle
-import typingsSlinky.chrome.AnonClientid
-import typingsSlinky.chrome.AnonConfigurable
-import typingsSlinky.chrome.AnonContentsecuritypolicy
-import typingsSlinky.chrome.AnonDefaulttitle
-import typingsSlinky.chrome.AnonDescription
-import typingsSlinky.chrome.AnonDictionaryformat
-import typingsSlinky.chrome.AnonHomepage
-import typingsSlinky.chrome.AnonId
-import typingsSlinky.chrome.AnonKeyword
-import typingsSlinky.chrome.AnonLanguage
-import typingsSlinky.chrome.AnonManagedschema
-import typingsSlinky.chrome.AnonMatches
-import typingsSlinky.chrome.AnonMimetype
-import typingsSlinky.chrome.AnonNaclarch
-import typingsSlinky.chrome.AnonPage
-import typingsSlinky.chrome.AnonPath
-import typingsSlinky.chrome.AnonVoices
-import typingsSlinky.chrome.AnonWhitelist
+import typingsSlinky.chrome.anon.Acceptstlschannelid
+import typingsSlinky.chrome.anon.Actions
+import typingsSlinky.chrome.anon.Allframes
+import typingsSlinky.chrome.anon.Bookmarks
+import typingsSlinky.chrome.anon.Bookmarksui
+import typingsSlinky.chrome.anon.Chromestyle
+import typingsSlinky.chrome.anon.Clientid
+import typingsSlinky.chrome.anon.Configurable
+import typingsSlinky.chrome.anon.Contentsecuritypolicy
+import typingsSlinky.chrome.anon.Defaulttitle
+import typingsSlinky.chrome.anon.Description
+import typingsSlinky.chrome.anon.Dictionaryformat
+import typingsSlinky.chrome.anon.Homepage
+import typingsSlinky.chrome.anon.Id
+import typingsSlinky.chrome.anon.Keyword
+import typingsSlinky.chrome.anon.Language
+import typingsSlinky.chrome.anon.Managedschema
+import typingsSlinky.chrome.anon.Matches
+import typingsSlinky.chrome.anon.Mimetype
+import typingsSlinky.chrome.anon.Naclarch
+import typingsSlinky.chrome.anon.Page
+import typingsSlinky.chrome.anon.Path
+import typingsSlinky.chrome.anon.Voices
+import typingsSlinky.chrome.anon.Whitelist
+import typingsSlinky.chrome.anon.`3D`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,16 +36,16 @@ trait Manifest
   // Optional
   var author: js.UndefOr[js.Any] = js.native
   var automation: js.UndefOr[js.Any] = js.native
-  var background: js.UndefOr[AnonPage] = js.native
+  var background: js.UndefOr[Page] = js.native
   var background_page: js.UndefOr[String] = js.native
   // Pick one (or none)
   var browser_action: js.UndefOr[ManifestAction] = js.native
-  var chrome_settings_overrides: js.UndefOr[AnonHomepage] = js.native
-  var chrome_ui_overrides: js.UndefOr[AnonBookmarksui] = js.native
-  var chrome_url_overrides: js.UndefOr[AnonBookmarks] = js.native
-  var commands: js.UndefOr[StringDictionary[AnonDescription]] = js.native
-  var content_capabilities: js.UndefOr[AnonMatches] = js.native
-  var content_scripts: js.UndefOr[js.Array[AnonAllframes]] = js.native
+  var chrome_settings_overrides: js.UndefOr[Homepage] = js.native
+  var chrome_ui_overrides: js.UndefOr[Bookmarksui] = js.native
+  var chrome_url_overrides: js.UndefOr[Bookmarks] = js.native
+  var commands: js.UndefOr[StringDictionary[Description]] = js.native
+  var content_capabilities: js.UndefOr[Matches] = js.native
+  var content_scripts: js.UndefOr[js.Array[Allframes]] = js.native
   var content_security_policy: js.UndefOr[String] = js.native
   var converted_from_user_script: js.UndefOr[Boolean] = js.native
   var copresence: js.UndefOr[js.Any] = js.native
@@ -54,40 +54,40 @@ trait Manifest
   var default_locale: js.UndefOr[String] = js.native
   var description: js.UndefOr[String] = js.native
   var devtools_page: js.UndefOr[String] = js.native
-  var event_rules: js.UndefOr[js.Array[AnonActions]] = js.native
-  var export: js.UndefOr[AnonWhitelist] = js.native
-  var externally_connectable: js.UndefOr[AnonAcceptstlschannelid] = js.native
-  var file_browser_handlers: js.UndefOr[js.Array[AnonDefaulttitle]] = js.native
-  var file_system_provider_capabilities: js.UndefOr[AnonConfigurable] = js.native
+  var event_rules: js.UndefOr[js.Array[Actions]] = js.native
+  var export: js.UndefOr[Whitelist] = js.native
+  var externally_connectable: js.UndefOr[Acceptstlschannelid] = js.native
+  var file_browser_handlers: js.UndefOr[js.Array[Defaulttitle]] = js.native
+  var file_system_provider_capabilities: js.UndefOr[Configurable] = js.native
   var homepage_url: js.UndefOr[String] = js.native
   var icons: js.UndefOr[ManifestIcons] = js.native
-  var `import`: js.UndefOr[js.Array[AnonId]] = js.native
+  var `import`: js.UndefOr[js.Array[Id]] = js.native
   var incognito: js.UndefOr[String] = js.native
-  var input_components: js.UndefOr[js.Array[AnonLanguage]] = js.native
+  var input_components: js.UndefOr[js.Array[Language]] = js.native
   var key: js.UndefOr[String] = js.native
   // Required
   var manifest_version: Double = js.native
   var minimum_chrome_version: js.UndefOr[String] = js.native
-  var nacl_modules: js.UndefOr[js.Array[AnonMimetype]] = js.native
+  var nacl_modules: js.UndefOr[js.Array[Mimetype]] = js.native
   var name: String = js.native
-  var oauth2: js.UndefOr[AnonClientid] = js.native
+  var oauth2: js.UndefOr[Clientid] = js.native
   var offline_enabled: js.UndefOr[Boolean] = js.native
-  var omnibox: js.UndefOr[AnonKeyword] = js.native
+  var omnibox: js.UndefOr[Keyword] = js.native
   var optional_permissions: js.UndefOr[js.Array[String]] = js.native
   var options_page: js.UndefOr[String] = js.native
-  var options_ui: js.UndefOr[AnonChromestyle] = js.native
+  var options_ui: js.UndefOr[Chromestyle] = js.native
   var page_action: js.UndefOr[ManifestAction] = js.native
   var permissions: js.UndefOr[js.Array[String]] = js.native
-  var platforms: js.UndefOr[js.Array[AnonNaclarch]] = js.native
-  var plugins: js.UndefOr[js.Array[AnonPath]] = js.native
-  var requirements: js.UndefOr[Anon3D] = js.native
-  var sandbox: js.UndefOr[AnonContentsecuritypolicy] = js.native
+  var platforms: js.UndefOr[js.Array[Naclarch]] = js.native
+  var plugins: js.UndefOr[js.Array[Path]] = js.native
+  var requirements: js.UndefOr[`3D`] = js.native
+  var sandbox: js.UndefOr[Contentsecuritypolicy] = js.native
   var short_name: js.UndefOr[String] = js.native
   var signature: js.UndefOr[js.Any] = js.native
-  var spellcheck: js.UndefOr[AnonDictionaryformat] = js.native
-  var storage: js.UndefOr[AnonManagedschema] = js.native
+  var spellcheck: js.UndefOr[Dictionaryformat] = js.native
+  var storage: js.UndefOr[Managedschema] = js.native
   var system_indicator: js.UndefOr[js.Any] = js.native
-  var tts_engine: js.UndefOr[AnonVoices] = js.native
+  var tts_engine: js.UndefOr[Voices] = js.native
   var update_url: js.UndefOr[String] = js.native
   var version: String = js.native
   var version_name: js.UndefOr[String] = js.native
@@ -149,7 +149,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withBackground(value: AnonPage): Self = {
+    def withBackground(value: Page): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
         ret
@@ -185,7 +185,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withChrome_settings_overrides(value: AnonHomepage): Self = {
+    def withChrome_settings_overrides(value: Homepage): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("chrome_settings_overrides")(value.asInstanceOf[js.Any])
         ret
@@ -197,7 +197,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withChrome_ui_overrides(value: AnonBookmarksui): Self = {
+    def withChrome_ui_overrides(value: Bookmarksui): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("chrome_ui_overrides")(value.asInstanceOf[js.Any])
         ret
@@ -209,7 +209,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withChrome_url_overrides(value: AnonBookmarks): Self = {
+    def withChrome_url_overrides(value: Bookmarks): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("chrome_url_overrides")(value.asInstanceOf[js.Any])
         ret
@@ -221,7 +221,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withCommands(value: StringDictionary[AnonDescription]): Self = {
+    def withCommands(value: StringDictionary[Description]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(value.asInstanceOf[js.Any])
         ret
@@ -233,7 +233,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withContent_capabilities(value: AnonMatches): Self = {
+    def withContent_capabilities(value: Matches): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content_capabilities")(value.asInstanceOf[js.Any])
         ret
@@ -245,7 +245,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withContent_scripts(value: js.Array[AnonAllframes]): Self = {
+    def withContent_scripts(value: js.Array[Allframes]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content_scripts")(value.asInstanceOf[js.Any])
         ret
@@ -341,7 +341,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withEvent_rules(value: js.Array[AnonActions]): Self = {
+    def withEvent_rules(value: js.Array[Actions]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("event_rules")(value.asInstanceOf[js.Any])
         ret
@@ -353,7 +353,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withExport(value: AnonWhitelist): Self = {
+    def withExport(value: Whitelist): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("export")(value.asInstanceOf[js.Any])
         ret
@@ -365,7 +365,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withExternally_connectable(value: AnonAcceptstlschannelid): Self = {
+    def withExternally_connectable(value: Acceptstlschannelid): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("externally_connectable")(value.asInstanceOf[js.Any])
         ret
@@ -377,7 +377,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withFile_browser_handlers(value: js.Array[AnonDefaulttitle]): Self = {
+    def withFile_browser_handlers(value: js.Array[Defaulttitle]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("file_browser_handlers")(value.asInstanceOf[js.Any])
         ret
@@ -389,7 +389,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withFile_system_provider_capabilities(value: AnonConfigurable): Self = {
+    def withFile_system_provider_capabilities(value: Configurable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("file_system_provider_capabilities")(value.asInstanceOf[js.Any])
         ret
@@ -425,7 +425,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withImport(value: js.Array[AnonId]): Self = {
+    def withImport(value: js.Array[Id]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("import")(value.asInstanceOf[js.Any])
         ret
@@ -449,7 +449,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withInput_components(value: js.Array[AnonLanguage]): Self = {
+    def withInput_components(value: js.Array[Language]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("input_components")(value.asInstanceOf[js.Any])
         ret
@@ -485,7 +485,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withNacl_modules(value: js.Array[AnonMimetype]): Self = {
+    def withNacl_modules(value: js.Array[Mimetype]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nacl_modules")(value.asInstanceOf[js.Any])
         ret
@@ -497,7 +497,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withOauth2(value: AnonClientid): Self = {
+    def withOauth2(value: Clientid): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oauth2")(value.asInstanceOf[js.Any])
         ret
@@ -521,7 +521,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withOmnibox(value: AnonKeyword): Self = {
+    def withOmnibox(value: Keyword): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("omnibox")(value.asInstanceOf[js.Any])
         ret
@@ -557,7 +557,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withOptions_ui(value: AnonChromestyle): Self = {
+    def withOptions_ui(value: Chromestyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options_ui")(value.asInstanceOf[js.Any])
         ret
@@ -593,7 +593,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withPlatforms(value: js.Array[AnonNaclarch]): Self = {
+    def withPlatforms(value: js.Array[Naclarch]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("platforms")(value.asInstanceOf[js.Any])
         ret
@@ -605,7 +605,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withPlugins(value: js.Array[AnonPath]): Self = {
+    def withPlugins(value: js.Array[Path]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
         ret
@@ -617,7 +617,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withRequirements(value: Anon3D): Self = {
+    def withRequirements(value: `3D`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("requirements")(value.asInstanceOf[js.Any])
         ret
@@ -629,7 +629,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withSandbox(value: AnonContentsecuritypolicy): Self = {
+    def withSandbox(value: Contentsecuritypolicy): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sandbox")(value.asInstanceOf[js.Any])
         ret
@@ -665,7 +665,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withSpellcheck(value: AnonDictionaryformat): Self = {
+    def withSpellcheck(value: Dictionaryformat): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("spellcheck")(value.asInstanceOf[js.Any])
         ret
@@ -677,7 +677,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withStorage(value: AnonManagedschema): Self = {
+    def withStorage(value: Managedschema): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(value.asInstanceOf[js.Any])
         ret
@@ -701,7 +701,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withTts_engine(value: AnonVoices): Self = {
+    def withTts_engine(value: Voices): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tts_engine")(value.asInstanceOf[js.Any])
         ret

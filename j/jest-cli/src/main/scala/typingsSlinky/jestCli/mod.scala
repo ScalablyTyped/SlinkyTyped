@@ -3,7 +3,8 @@ package typingsSlinky.jestCli
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable3
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.jestCore.AnonIsWatchMode
+import typingsSlinky.jestCli.anon.ArgumentsPartialallboolea
+import typingsSlinky.jestCore.anon.IsWatchMode
 import typingsSlinky.jestCore.testSchedulerMod.TestSchedulerContext
 import typingsSlinky.jestCore.testSchedulerMod.TestSchedulerOptions
 import typingsSlinky.jestRuntime.mod.Context
@@ -31,7 +32,7 @@ object mod extends js.Object {
   @js.native
   class TestWatcher protected ()
     extends typingsSlinky.jestCore.mod.TestWatcher {
-    def this(hasIsWatchMode: AnonIsWatchMode) = this()
+    def this(hasIsWatchMode: IsWatchMode) = this()
   }
   
   var getVersion: js.Function0[String] = js.native
@@ -40,7 +41,7 @@ object mod extends js.Object {
     /* project */ js.UndefOr[Path], 
     js.Promise[Unit]
   ] = js.native
-  def runCLI(argv: ArgumentsPartialallboolea, projects: js.Array[String]): js.Promise[AnonGlobalConfig] = js.native
+  def runCLI(argv: ArgumentsPartialallboolea, projects: js.Array[String]): js.Promise[typingsSlinky.jestCli.anon.GlobalConfig] = js.native
   @js.native
   object SearchSource
     extends TopLevel[Instantiable1[/* context */ Context, typingsSlinky.jestCore.mod.SearchSource]]
@@ -59,7 +60,7 @@ object mod extends js.Object {
   @js.native
   object TestWatcher
     extends TopLevel[
-          Instantiable1[/* hasIsWatchMode */ AnonIsWatchMode, typingsSlinky.jestCore.mod.TestWatcher]
+          Instantiable1[/* hasIsWatchMode */ IsWatchMode, typingsSlinky.jestCore.mod.TestWatcher]
         ]
   
 }

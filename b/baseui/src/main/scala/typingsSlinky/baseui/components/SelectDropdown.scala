@@ -5,8 +5,8 @@ import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonItem
-import typingsSlinky.baseui.AnonOptionState
+import typingsSlinky.baseui.anon.Item
+import typingsSlinky.baseui.anon.OptionState
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
@@ -33,7 +33,7 @@ object SelectDropdown {
     @scala.inline
     def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
     @scala.inline
-    def getOptionLabel(value: /* args */ AnonOptionState => TagMod[Any]): this.type = set("getOptionLabel", js.Any.fromFunction1(value))
+    def getOptionLabel(value: /* args */ OptionState => TagMod[Any]): this.type = set("getOptionLabel", js.Any.fromFunction1(value))
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
@@ -59,7 +59,7 @@ object SelectDropdown {
     @scala.inline
     def onActiveDescendantChange(value: /* id */ js.UndefOr[String] => Unit): this.type = set("onActiveDescendantChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onItemSelect(value: /* args */ AnonItem => js.Any): this.type = set("onItemSelect", js.Any.fromFunction1(value))
+    def onItemSelect(value: /* args */ Item => js.Any): this.type = set("onItemSelect", js.Any.fromFunction1(value))
     @scala.inline
     def options(value: Value): this.type = set("options", value.asInstanceOf[js.Any])
     @scala.inline

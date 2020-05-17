@@ -1,0 +1,27 @@
+package typingsSlinky.amapJsApiMap3d.global.AMap
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("AMap.Lights")
+@js.native
+object Lights extends js.Object {
+  @js.native
+  class AmbientLight protected ()
+    extends typingsSlinky.amapJsApiMap3d.AMap.Lights.AmbientLight {
+    def this(color: js.Tuple3[Double, Double, Double], intensity: Double) = this()
+  }
+  
+  @js.native
+  class DirectionLight protected ()
+    extends typingsSlinky.amapJsApiMap3d.AMap.Lights.DirectionLight {
+    def this(
+      direction: js.Tuple3[Double, Double, Double],
+      color: js.Tuple3[Double, Double, Double],
+      intensity: Double
+    ) = this()
+  }
+  
+}
+

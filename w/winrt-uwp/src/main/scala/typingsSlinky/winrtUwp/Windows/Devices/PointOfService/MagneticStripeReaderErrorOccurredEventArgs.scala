@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides error information for the ErrorOccurred event. */
-@JSGlobal("Windows.Devices.PointOfService.MagneticStripeReaderErrorOccurredEventArgs")
 @js.native
-abstract class MagneticStripeReaderErrorOccurredEventArgs () extends js.Object {
+trait MagneticStripeReaderErrorOccurredEventArgs extends js.Object {
   /** Gets the error information, such as cause of error, severity, error message, and any available vendor specific error information. */
   var errorData: UnifiedPosErrorData = js.native
   /** Gets the track data for tracks the did not have errors. */
@@ -20,5 +19,64 @@ abstract class MagneticStripeReaderErrorOccurredEventArgs () extends js.Object {
   var track3Status: MagneticStripeReaderTrackErrorType = js.native
   /** Gets the Track 4 error information. */
   var track4Status: MagneticStripeReaderTrackErrorType = js.native
+}
+
+object MagneticStripeReaderErrorOccurredEventArgs {
+  @scala.inline
+  def apply(
+    errorData: UnifiedPosErrorData,
+    partialInputData: MagneticStripeReaderReport,
+    track1Status: MagneticStripeReaderTrackErrorType,
+    track2Status: MagneticStripeReaderTrackErrorType,
+    track3Status: MagneticStripeReaderTrackErrorType,
+    track4Status: MagneticStripeReaderTrackErrorType
+  ): MagneticStripeReaderErrorOccurredEventArgs = {
+    val __obj = js.Dynamic.literal(errorData = errorData.asInstanceOf[js.Any], partialInputData = partialInputData.asInstanceOf[js.Any], track1Status = track1Status.asInstanceOf[js.Any], track2Status = track2Status.asInstanceOf[js.Any], track3Status = track3Status.asInstanceOf[js.Any], track4Status = track4Status.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MagneticStripeReaderErrorOccurredEventArgs]
+  }
+  @scala.inline
+  implicit class MagneticStripeReaderErrorOccurredEventArgsOps[Self <: MagneticStripeReaderErrorOccurredEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorData(value: UnifiedPosErrorData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPartialInputData(value: MagneticStripeReaderReport): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("partialInputData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrack1Status(value: MagneticStripeReaderTrackErrorType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track1Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrack2Status(value: MagneticStripeReaderTrackErrorType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track2Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrack3Status(value: MagneticStripeReaderTrackErrorType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track3Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTrack4Status(value: MagneticStripeReaderTrackErrorType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track4Status")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

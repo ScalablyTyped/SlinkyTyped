@@ -1,6 +1,6 @@
 package typingsSlinky.oracleOraclejet.ojrouterMod
 
-import typingsSlinky.oracleOraclejet.AnonHasChanged
+import typingsSlinky.oracleOraclejet.anon.HasChanged
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait RouterState_ extends js.Object {
   var title: String | js.Function0[js.UndefOr[String]] = js.native
   var value: js.Any = js.native
   // constructor(id: string, options?: RouterState.ConfigOptions, router?: Router);
-  def go(): js.Promise[AnonHasChanged] = js.native
+  def go(): js.Promise[HasChanged] = js.native
   def isCurrent(): Boolean = js.native
 }
 
@@ -28,7 +28,7 @@ object RouterState_ {
     canExit: () => Boolean | js.Promise[Boolean],
     enter: () => js.Promise[Unit] | Unit,
     exit: () => js.Promise[Unit] | Unit,
-    go: () => js.Promise[AnonHasChanged],
+    go: () => js.Promise[HasChanged],
     id: String,
     isCurrent: () => Boolean,
     parameters: js.Object,
@@ -69,7 +69,7 @@ object RouterState_ {
         ret
     }
     @scala.inline
-    def withGo(value: () => js.Promise[AnonHasChanged]): Self = {
+    def withGo(value: () => js.Promise[HasChanged]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("go")(js.Any.fromFunction0(value))
         ret

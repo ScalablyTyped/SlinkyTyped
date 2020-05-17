@@ -6,12 +6,12 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ScreenOrientationEventMap extends js.Object {
-  var change: Event_ = js.native
+  var change: org.scalajs.dom.raw.Event = js.native
 }
 
 object ScreenOrientationEventMap {
   @scala.inline
-  def apply(change: Event_): ScreenOrientationEventMap = {
+  def apply(change: org.scalajs.dom.raw.Event): ScreenOrientationEventMap = {
     val __obj = js.Dynamic.literal(change = change.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScreenOrientationEventMap]
   }
@@ -22,7 +22,7 @@ object ScreenOrientationEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withChange(value: Event_): Self = {
+    def withChange(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("change")(value.asInstanceOf[js.Any])
         ret

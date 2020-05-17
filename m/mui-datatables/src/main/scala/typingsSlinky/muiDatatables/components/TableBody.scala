@@ -2,7 +2,7 @@ package typingsSlinky.muiDatatables.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.muiDatatables.AnonRowIndex
+import typingsSlinky.muiDatatables.anon.RowIndex
 import typingsSlinky.muiDatatables.mod.MUIDataTableBody
 import typingsSlinky.muiDatatables.mod.MUIDataTableColumnDef
 import scala.scalajs.js
@@ -21,7 +21,7 @@ object TableBody {
     @scala.inline
     def filterList(value: js.Array[js.Array[String]]): this.type = set("filterList", value.asInstanceOf[js.Any])
     @scala.inline
-    def onRowClick(value: (/* rowData */ js.Array[String], /* rowMeta */ AnonRowIndex) => Unit): this.type = set("onRowClick", js.Any.fromFunction2(value))
+    def onRowClick(value: (/* rowData */ js.Array[String], /* rowMeta */ RowIndex) => Unit): this.type = set("onRowClick", js.Any.fromFunction2(value))
     @scala.inline
     def searchText(value: String): this.type = set("searchText", value.asInstanceOf[js.Any])
     @scala.inline

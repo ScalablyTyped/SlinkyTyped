@@ -2,8 +2,7 @@ package typingsSlinky.schwifty.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.knex.mod.Knex
-import typingsSlinky.schwifty.AnonKnex
-import typingsSlinky.schwifty.TypeofModel
+import typingsSlinky.schwifty.anon.TypeofModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +31,7 @@ object hapiAugmentingMod extends js.Object {
     def models(): StringDictionary[TypeofModel] = js.native
     def models(all: Boolean): StringDictionary[TypeofModel] = js.native
     def schwifty(config: js.Array[ModelClass]): Unit = js.native
-    def schwifty(config: AnonKnex): Unit = js.native
+    def schwifty(config: typingsSlinky.schwifty.anon.Knex): Unit = js.native
     def schwifty(config: ModelClass): Unit = js.native
   }
   

@@ -1,5 +1,6 @@
 package typingsSlinky.openfin
 
+import typingsSlinky.openfin.anon.FnCall
 import typingsSlinky.openfin.channelChannelMod.ChannelBase
 import typingsSlinky.openfin.channelChannelMod.ProviderIdentity
 import typingsSlinky.std.Map

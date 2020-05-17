@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DefaultTreeDocumentType extends DefaultTreeNode {
+trait DefaultTreeDocumentType
+  extends DefaultTreeNode
+     with DocumentType {
   /**
     * Document type name.
     */

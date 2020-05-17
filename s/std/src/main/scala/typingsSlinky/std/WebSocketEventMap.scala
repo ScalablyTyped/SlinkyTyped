@@ -7,18 +7,18 @@ import scala.scalajs.js.annotation._
 @js.native
 trait WebSocketEventMap extends js.Object {
   var close: org.scalajs.dom.raw.CloseEvent = js.native
-  var error: Event_ = js.native
+  var error: org.scalajs.dom.raw.Event = js.native
   var message: org.scalajs.dom.raw.MessageEvent = js.native
-  var open: Event_ = js.native
+  var open: org.scalajs.dom.raw.Event = js.native
 }
 
 object WebSocketEventMap {
   @scala.inline
   def apply(
     close: org.scalajs.dom.raw.CloseEvent,
-    error: Event_,
+    error: org.scalajs.dom.raw.Event,
     message: org.scalajs.dom.raw.MessageEvent,
-    open: Event_
+    open: org.scalajs.dom.raw.Event
   ): WebSocketEventMap = {
     val __obj = js.Dynamic.literal(close = close.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], open = open.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebSocketEventMap]
@@ -36,7 +36,7 @@ object WebSocketEventMap {
         ret
     }
     @scala.inline
-    def withError(value: Event_): Self = {
+    def withError(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret
@@ -48,7 +48,7 @@ object WebSocketEventMap {
         ret
     }
     @scala.inline
-    def withOpen(value: Event_): Self = {
+    def withOpen(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
         ret

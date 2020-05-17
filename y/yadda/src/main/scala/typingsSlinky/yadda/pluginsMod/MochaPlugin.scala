@@ -1,7 +1,7 @@
 package typingsSlinky.yadda.pluginsMod
 
-import typingsSlinky.yadda.TypeofScenarioLevelPlugin
-import typingsSlinky.yadda.TypeofStepLevelPlugin
+import typingsSlinky.yadda.anon.TypeofScenarioLevelPlugin
+import typingsSlinky.yadda.anon.TypeofStepLevelPlugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

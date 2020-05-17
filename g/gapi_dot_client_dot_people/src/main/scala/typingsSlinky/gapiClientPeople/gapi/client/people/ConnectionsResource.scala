@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientPeople.gapi.client.people
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientPeople.AnonPageSize
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientPeople.anon.PageSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait ConnectionsResource extends js.Object {
     *
     * The request throws a 400 error if 'personFields' is not specified.
     */
-  def list(): Request_[ListConnectionsResponse] = js.native
-  def list(request: AnonPageSize): Request_[ListConnectionsResponse] = js.native
+  def list(): Request[ListConnectionsResponse] = js.native
+  def list(request: PageSize): Request[ListConnectionsResponse] = js.native
 }
 

@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartPlotAreaData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartPlotAreaLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartPlotAreaUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Automatic
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Custom
 import scala.scalajs.js
@@ -18,9 +18,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.8]
   */
-@JSGlobal("Excel.ChartPlotArea")
 @js.native
-class ChartPlotArea () extends ClientObject {
+trait ChartPlotArea extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_ChartPlotArea: RequestContext = js.native
@@ -101,7 +100,7 @@ class ChartPlotArea () extends ClientObject {
     */
   def load(): ChartPlotArea = js.native
   def load(options: ChartPlotAreaLoadOptions): ChartPlotArea = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartPlotArea = js.native
+  def load(propertyNamesAndPaths: Expand): ChartPlotArea = js.native
   def load(propertyNames: String): ChartPlotArea = js.native
   def load(propertyNames: js.Array[String]): ChartPlotArea = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

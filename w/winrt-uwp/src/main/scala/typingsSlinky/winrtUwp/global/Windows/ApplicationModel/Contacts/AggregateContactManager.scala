@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Contacts
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Provides functionality for linking individual (raw) contacts across services together into a single aggregate contact. */
+@JSGlobal("Windows.ApplicationModel.Contacts.AggregateContactManager")
+@js.native
+abstract class AggregateContactManager ()
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Contacts.AggregateContactManager
+

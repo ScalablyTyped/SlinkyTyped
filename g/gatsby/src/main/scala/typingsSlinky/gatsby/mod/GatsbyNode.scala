@@ -1,7 +1,7 @@
 package typingsSlinky.gatsby.mod
 
-import typingsSlinky.gatsby.CreatePagesArgstraceIdini
-import typingsSlinky.gatsby.CreatePagesArgstraceIdiniDictkey
+import typingsSlinky.gatsby.anon.CreatePagesArgstraceIdini
+import typingsSlinky.gatsby.anon.CreatePagesArgstraceIdiniDictkey
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`

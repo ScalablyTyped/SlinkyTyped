@@ -1,5 +1,6 @@
 package typingsSlinky.apolloEngineReporting
 
+import typingsSlinky.apolloEngineReporting.anon.RewriteError
 import typingsSlinky.apolloEngineReportingProtobuf.mod.Trace
 import typingsSlinky.graphql.definitionMod.GraphQLResolveInfo
 import typingsSlinky.graphql.mod.GraphQLError
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation._
 object treeBuilderMod extends js.Object {
   @js.native
   class EngineReportingTreeBuilder protected () extends js.Object {
-    def this(options: AnonRewriteError) = this()
+    def this(options: RewriteError) = this()
     var addProtobufError: js.Any = js.native
     var ensureParentNode: js.Any = js.native
     var newNode: js.Any = js.native

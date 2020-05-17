@@ -1,14 +1,13 @@
 package typingsSlinky.croppie.mod
 
-import typingsSlinky.croppie.AnonHeight
-import typingsSlinky.croppie.AnonType
+import typingsSlinky.croppie.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CroppieOptions extends js.Object {
-  var boundary: js.UndefOr[AnonHeight] = js.native
+  var boundary: js.UndefOr[Height] = js.native
   var customClass: js.UndefOr[String] = js.native
   var enableExif: js.UndefOr[Boolean] = js.native
   var enableOrientation: js.UndefOr[Boolean] = js.native
@@ -16,7 +15,7 @@ trait CroppieOptions extends js.Object {
   var enforceBoundary: js.UndefOr[Boolean] = js.native
   var mouseWheelZoom: js.UndefOr[Boolean] = js.native
   var showZoomer: js.UndefOr[Boolean] = js.native
-  var viewport: js.UndefOr[AnonType] = js.native
+  var viewport: js.UndefOr[typingsSlinky.croppie.anon.Type] = js.native
 }
 
 object CroppieOptions {
@@ -32,7 +31,7 @@ object CroppieOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBoundary(value: AnonHeight): Self = {
+    def withBoundary(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("boundary")(value.asInstanceOf[js.Any])
         ret
@@ -128,7 +127,7 @@ object CroppieOptions {
         ret
     }
     @scala.inline
-    def withViewport(value: AnonType): Self = {
+    def withViewport(value: typingsSlinky.croppie.anon.Type): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("viewport")(value.asInstanceOf[js.Any])
         ret

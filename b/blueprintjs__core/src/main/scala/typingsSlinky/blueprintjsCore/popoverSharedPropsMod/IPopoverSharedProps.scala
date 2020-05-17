@@ -1,5 +1,6 @@
 package typingsSlinky.blueprintjsCore.popoverSharedPropsMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import typingsSlinky.blueprintjsCore.overlayMod.IOverlayableProps
@@ -7,7 +8,6 @@ import typingsSlinky.blueprintjsCore.propsMod.IProps
 import typingsSlinky.popperJs.mod.Boundary
 import typingsSlinky.popperJs.mod.Modifiers
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -84,7 +84,7 @@ trait IPopoverSharedProps
   var onInteraction: js.UndefOr[
     js.Function2[
       /* nextOpenState */ Boolean, 
-      /* e */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]], 
+      /* e */ js.UndefOr[SyntheticEvent[Event, HTMLElement]], 
       Unit
     ]
   ] = js.native
@@ -260,7 +260,7 @@ object IPopoverSharedProps {
     }
     @scala.inline
     def withOnInteraction(
-      value: (/* nextOpenState */ Boolean, /* e */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]]) => Unit
+      value: (/* nextOpenState */ Boolean, /* e */ js.UndefOr[SyntheticEvent[Event, HTMLElement]]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInteraction")(js.Any.fromFunction2(value))

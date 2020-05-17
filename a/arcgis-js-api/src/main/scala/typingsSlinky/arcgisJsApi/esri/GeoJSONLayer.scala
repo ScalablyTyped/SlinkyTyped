@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.IHandle
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.edits
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.geojson
@@ -317,8 +316,4 @@ trait GeoJSONLayer
   def queryObjectIds(query: QueryProperties, options: GeoJSONLayerQueryObjectIdsOptions): js.Promise[js.Array[Double]] = js.native
   def queryObjectIds(query: Query, options: GeoJSONLayerQueryObjectIdsOptions): js.Promise[js.Array[Double]] = js.native
 }
-
-@JSGlobal("__esri.GeoJSONLayer")
-@js.native
-object GeoJSONLayer extends TopLevel[GeoJSONLayerConstructor]
 

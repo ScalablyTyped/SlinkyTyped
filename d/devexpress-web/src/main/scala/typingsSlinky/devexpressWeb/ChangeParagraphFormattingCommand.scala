@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * A command to change the formatting of paragraphs in a selected range.
   */
-@JSGlobal("ChangeParagraphFormattingCommand")
 @js.native
-class ChangeParagraphFormattingCommand () extends CommandBase {
+trait ChangeParagraphFormattingCommand extends CommandBase {
   /**
     * Executes the ChangeParagraphFormattingCommand command with the specified parameter. true if the command has been successfully executed; false if the command execution has failed.
     * @param settings A ParagraphFormattingSettings object specifying paragraph formatting settings.
@@ -19,5 +18,36 @@ class ChangeParagraphFormattingCommand () extends CommandBase {
     * Gets information about the command's state.
     */
   def getState(): CommandState[ParagraphFormattingSettings] = js.native
+}
+
+object ChangeParagraphFormattingCommand {
+  @scala.inline
+  def apply(
+    execute: ParagraphFormattingSettings => Boolean,
+    getState: () => CommandState[ParagraphFormattingSettings]
+  ): ChangeParagraphFormattingCommand = {
+    val __obj = js.Dynamic.literal(execute = js.Any.fromFunction1(execute), getState = js.Any.fromFunction0(getState))
+    __obj.asInstanceOf[ChangeParagraphFormattingCommand]
+  }
+  @scala.inline
+  implicit class ChangeParagraphFormattingCommandOps[Self <: ChangeParagraphFormattingCommand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExecute(value: ParagraphFormattingSettings => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetState(value: () => CommandState[ParagraphFormattingSettings]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getState")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

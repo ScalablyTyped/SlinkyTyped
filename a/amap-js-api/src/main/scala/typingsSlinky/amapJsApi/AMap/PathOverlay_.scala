@@ -1,14 +1,11 @@
 package typingsSlinky.amapJsApi.AMap
 
-import typingsSlinky.amapJsApi.AMap.PathOverlay.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("AMap.PathOverlay")
 @js.native
-abstract class PathOverlay_[ExtraData] () extends ShapeOverlay[ExtraData] {
-  def this(options: Options[ExtraData]) = this()
+trait PathOverlay_[ExtraData] extends ShapeOverlay[ExtraData] {
   /**
     * 获取范围
     */

@@ -1,25 +1,21 @@
 package typingsSlinky.googleCloudTextToSpeech.mod
 
+import typingsSlinky.googleCloudTextToSpeech.anon.Ssml
+import typingsSlinky.googleCloudTextToSpeech.anon.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.googleCloudTextToSpeech.AnonText
-  - typingsSlinky.googleCloudTextToSpeech.AnonSsml
+  - typingsSlinky.googleCloudTextToSpeech.anon.Text
+  - typingsSlinky.googleCloudTextToSpeech.anon.Ssml
 */
 trait SynthesisInput extends js.Object
 
 object SynthesisInput {
   @scala.inline
-  def AnonText(text: String): SynthesisInput = {
-    val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SynthesisInput]
-  }
+  implicit def apply(value: Ssml): SynthesisInput = value.asInstanceOf[SynthesisInput]
   @scala.inline
-  def AnonSsml(ssml: String): SynthesisInput = {
-    val __obj = js.Dynamic.literal(ssml = ssml.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SynthesisInput]
-  }
+  implicit def apply(value: Text): SynthesisInput = value.asInstanceOf[SynthesisInput]
 }
 

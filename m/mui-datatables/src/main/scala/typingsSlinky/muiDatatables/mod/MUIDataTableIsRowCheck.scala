@@ -1,20 +1,20 @@
 package typingsSlinky.muiDatatables.mod
 
-import typingsSlinky.muiDatatables.AnonDataIndex
-import typingsSlinky.muiDatatables.AnonIndex
+import typingsSlinky.muiDatatables.anon.DataIndex
+import typingsSlinky.muiDatatables.anon.Index
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait MUIDataTableIsRowCheck extends js.Object {
-  var data: js.Array[AnonIndex] = js.native
-  var lookup: AnonDataIndex = js.native
+  var data: js.Array[Index] = js.native
+  var lookup: DataIndex = js.native
 }
 
 object MUIDataTableIsRowCheck {
   @scala.inline
-  def apply(data: js.Array[AnonIndex], lookup: AnonDataIndex): MUIDataTableIsRowCheck = {
+  def apply(data: js.Array[Index], lookup: DataIndex): MUIDataTableIsRowCheck = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], lookup = lookup.asInstanceOf[js.Any])
     __obj.asInstanceOf[MUIDataTableIsRowCheck]
   }
@@ -25,13 +25,13 @@ object MUIDataTableIsRowCheck {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withData(value: js.Array[AnonIndex]): Self = {
+    def withData(value: js.Array[Index]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withLookup(value: AnonDataIndex): Self = {
+    def withLookup(value: DataIndex): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lookup")(value.asInstanceOf[js.Any])
         ret

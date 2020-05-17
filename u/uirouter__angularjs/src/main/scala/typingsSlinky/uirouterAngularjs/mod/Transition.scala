@@ -1,6 +1,6 @@
 package typingsSlinky.uirouterAngularjs.mod
 
-import typingsSlinky.uirouterCore.TypeofTransition
+import typingsSlinky.uirouterCore.anon.TypeofTransition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

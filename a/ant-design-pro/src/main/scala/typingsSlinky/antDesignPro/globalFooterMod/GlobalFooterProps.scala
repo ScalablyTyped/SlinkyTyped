@@ -2,7 +2,7 @@ package typingsSlinky.antDesignPro.globalFooterMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antDesignPro.AnonBlankTarget
+import typingsSlinky.antDesignPro.anon.BlankTarget
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait GlobalFooterProps extends js.Object {
   var className: js.UndefOr[String] = js.native
   var copyright: js.UndefOr[TagMod[Any]] = js.native
-  var links: js.UndefOr[js.Array[AnonBlankTarget]] = js.native
+  var links: js.UndefOr[js.Array[BlankTarget]] = js.native
   var style: js.UndefOr[CSSProperties] = js.native
 }
 
@@ -59,7 +59,7 @@ object GlobalFooterProps {
         ret
     }
     @scala.inline
-    def withLinks(value: js.Array[AnonBlankTarget]): Self = {
+    def withLinks(value: js.Array[BlankTarget]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
         ret

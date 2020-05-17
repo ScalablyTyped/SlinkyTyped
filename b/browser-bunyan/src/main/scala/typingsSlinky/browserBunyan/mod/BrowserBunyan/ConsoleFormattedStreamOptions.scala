@@ -1,6 +1,6 @@
 package typingsSlinky.browserBunyan.mod.BrowserBunyan
 
-import typingsSlinky.browserBunyan.PartialConsoleFormattedStDef
+import typingsSlinky.browserBunyan.anon.PartialConsoleFormattedStDef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

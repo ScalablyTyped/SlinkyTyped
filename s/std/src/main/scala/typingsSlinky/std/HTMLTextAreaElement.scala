@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.std.stdStrings.backward
 import typingsSlinky.std.stdStrings.forward
 import typingsSlinky.std.stdStrings.none
@@ -117,9 +116,4 @@ trait HTMLTextAreaElement extends HTMLElement {
   @JSName("setSelectionRange")
   def setSelectionRange_none(start: Double, end: Double, direction: none): Unit = js.native
 }
-
-@JSGlobal("HTMLTextAreaElement")
-@js.native
-object HTMLTextAreaElement
-  extends Instantiable0[org.scalajs.dom.raw.HTMLTextAreaElement]
 

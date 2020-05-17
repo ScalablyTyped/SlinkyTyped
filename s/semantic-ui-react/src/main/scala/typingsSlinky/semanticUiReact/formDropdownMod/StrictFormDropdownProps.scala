@@ -1,5 +1,6 @@
 package typingsSlinky.semanticUiReact.formDropdownMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
@@ -19,7 +20,6 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.bottom
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.left
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.right
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.top
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -118,7 +118,7 @@ trait StrictFormDropdownProps extends StrictFormFieldProps {
     * @param {object} data - All props and proposed value.
     */
   var onChange: js.UndefOr[
-    js.Function2[/* event */ SyntheticEvent[Event_, HTMLElement], /* data */ DropdownProps, Unit]
+    js.Function2[/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps, Unit]
   ] = js.native
   /**
     * Called on click.
@@ -136,7 +136,7 @@ trait StrictFormDropdownProps extends StrictFormFieldProps {
     * @param {object} data - All props.
     */
   var onClose: js.UndefOr[
-    js.Function2[/* event */ SyntheticEvent[Event_, HTMLElement], /* data */ DropdownProps, Unit]
+    js.Function2[/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps, Unit]
   ] = js.native
   /**
     * Called on focus.
@@ -145,7 +145,7 @@ trait StrictFormDropdownProps extends StrictFormFieldProps {
     * @param {object} data - All props.
     */
   var onFocus: js.UndefOr[
-    js.Function2[/* event */ SyntheticEvent[Event_, HTMLElement], /* data */ DropdownProps, Unit]
+    js.Function2[/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps, Unit]
   ] = js.native
   /**
     * Called when a multi-select label is clicked.
@@ -172,7 +172,7 @@ trait StrictFormDropdownProps extends StrictFormFieldProps {
     * @param {object} data - All props.
     */
   var onOpen: js.UndefOr[
-    js.Function2[/* event */ SyntheticEvent[Event_, HTMLElement], /* data */ DropdownProps, Unit]
+    js.Function2[/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps, Unit]
   ] = js.native
   /**
     * Called on search input change.
@@ -182,7 +182,7 @@ trait StrictFormDropdownProps extends StrictFormFieldProps {
     */
   var onSearchChange: js.UndefOr[
     js.Function2[
-      /* event */ SyntheticEvent[Event_, HTMLElement], 
+      /* event */ SyntheticEvent[Event, HTMLElement], 
       /* data */ DropdownOnSearchChangeData, 
       Unit
     ]
@@ -663,7 +663,7 @@ object StrictFormDropdownProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: (/* event */ SyntheticEvent[Event_, HTMLElement], /* data */ DropdownProps) => Unit): Self = {
+    def withOnChange(value: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
         ret
@@ -687,7 +687,7 @@ object StrictFormDropdownProps {
         ret
     }
     @scala.inline
-    def withOnClose(value: (/* event */ SyntheticEvent[Event_, HTMLElement], /* data */ DropdownProps) => Unit): Self = {
+    def withOnClose(value: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction2(value))
         ret
@@ -699,7 +699,7 @@ object StrictFormDropdownProps {
         ret
     }
     @scala.inline
-    def withOnFocus(value: (/* event */ SyntheticEvent[Event_, HTMLElement], /* data */ DropdownProps) => Unit): Self = {
+    def withOnFocus(value: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction2(value))
         ret
@@ -735,7 +735,7 @@ object StrictFormDropdownProps {
         ret
     }
     @scala.inline
-    def withOnOpen(value: (/* event */ SyntheticEvent[Event_, HTMLElement], /* data */ DropdownProps) => Unit): Self = {
+    def withOnOpen(value: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.Any.fromFunction2(value))
         ret
@@ -748,7 +748,7 @@ object StrictFormDropdownProps {
     }
     @scala.inline
     def withOnSearchChange(
-      value: (/* event */ SyntheticEvent[Event_, HTMLElement], /* data */ DropdownOnSearchChangeData) => Unit
+      value: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownOnSearchChangeData) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSearchChange")(js.Any.fromFunction2(value))

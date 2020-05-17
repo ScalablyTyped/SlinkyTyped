@@ -1,9 +1,9 @@
 package typingsSlinky.jsforce.connectionMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.jsforce.AnonBody
-import typingsSlinky.jsforce.AnonCustomdomain
-import typingsSlinky.jsforce.AnonPicture
+import typingsSlinky.jsforce.anon.Body
+import typingsSlinky.jsforce.anon.Customdomain
+import typingsSlinky.jsforce.anon.Picture
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,10 +34,10 @@ trait IdentityInfo
   var mobile_phone_verified: Boolean = js.native
   var nick_name: String = js.native
   var organization_id: String = js.native
-  var photos: AnonPicture = js.native
-  var status: AnonBody = js.native
+  var photos: Picture = js.native
+  var status: Body = js.native
   var timezone: String = js.native
-  var urls: AnonCustomdomain = js.native
+  var urls: Customdomain = js.native
   var user_id: String = js.native
   var user_type: String = js.native
   var username: String = js.native
@@ -62,10 +62,10 @@ object IdentityInfo {
     mobile_phone_verified: Boolean,
     nick_name: String,
     organization_id: String,
-    photos: AnonPicture,
-    status: AnonBody,
+    photos: Picture,
+    status: Body,
     timezone: String,
-    urls: AnonCustomdomain,
+    urls: Customdomain,
     user_id: String,
     user_type: String,
     username: String,
@@ -171,13 +171,13 @@ object IdentityInfo {
         ret
     }
     @scala.inline
-    def withPhotos(value: AnonPicture): Self = {
+    def withPhotos(value: Picture): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("photos")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withStatus(value: AnonBody): Self = {
+    def withStatus(value: Body): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
         ret
@@ -189,7 +189,7 @@ object IdentityInfo {
         ret
     }
     @scala.inline
-    def withUrls(value: AnonCustomdomain): Self = {
+    def withUrls(value: Customdomain): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("urls")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.rxjs.rxMod
 
-import typingsSlinky.rxjs.FnCall
+import typingsSlinky.rxjs.anon.FnCall
 import typingsSlinky.rxjs.typesMod.SchedulerLike
 import typingsSlinky.rxjs.typesMod.SubscribableOrPromise
 import typingsSlinky.rxjs.typesMod.TeardownLogic

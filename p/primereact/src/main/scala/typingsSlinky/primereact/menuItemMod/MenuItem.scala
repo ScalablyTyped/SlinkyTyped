@@ -1,6 +1,6 @@
 package typingsSlinky.primereact.menuItemMod
 
-import typingsSlinky.primereact.AnonItem
+import typingsSlinky.primereact.anon.Item
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MenuItem extends js.Object {
   var className: js.UndefOr[String] = js.native
-  var command: js.UndefOr[js.Function1[/* e */ AnonItem, Unit]] = js.native
+  var command: js.UndefOr[js.Function1[/* e */ Item, Unit]] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
   var icon: js.UndefOr[String] = js.native
   var items: js.UndefOr[js.Array[js.Array[MenuItem] | MenuItem]] = js.native
@@ -44,7 +44,7 @@ object MenuItem {
         ret
     }
     @scala.inline
-    def withCommand(value: /* e */ AnonItem => Unit): Self = {
+    def withCommand(value: /* e */ Item => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("command")(js.Any.fromFunction1(value))
         ret

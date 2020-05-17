@@ -2,20 +2,20 @@ package typingsSlinky.zeroclipboard.ZC
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLObjectElement
-import typingsSlinky.zeroclipboard.AnonClearData
+import typingsSlinky.zeroclipboard.anon.ClearData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ZeroClipboardCopyEvent extends ZeroClipboardEvent {
-  var clipboardData: AnonClearData = js.native
+  var clipboardData: ClearData = js.native
 }
 
 object ZeroClipboardCopyEvent {
   @scala.inline
   def apply(
-    clipboardData: AnonClearData,
+    clipboardData: ClearData,
     currentTarget: HTMLObjectElement,
     relatedTarget: HTMLElement,
     target: HTMLElement,
@@ -33,7 +33,7 @@ object ZeroClipboardCopyEvent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClipboardData(value: AnonClearData): Self = {
+    def withClipboardData(value: ClearData): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("clipboardData")(value.asInstanceOf[js.Any])
         ret

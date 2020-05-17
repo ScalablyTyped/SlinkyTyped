@@ -12,5 +12,4 @@ package object linterMod {
     ], 
     scala.Unit
   ]
-  type LintResult = js.Array[typingsSlinky.atom.linterMod.Message] | scala.Null
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TSTypeParameterInstantiation_
   extends BaseNode
-     with _Node {
+     with Node {
   var params: js.Array[TSType] = js.native
   @JSName("type")
   var type_TSTypeParameterInstantiation_ : TSTypeParameterInstantiation = js.native

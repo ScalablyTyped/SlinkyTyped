@@ -1,6 +1,6 @@
 package typingsSlinky.googleAppsScript.GoogleAppsScript.DataStudio
 
-import typingsSlinky.googleAppsScript.AnonName
+import typingsSlinky.googleAppsScript.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ trait Request[T] extends js.Object {
     */
   var dimensionsFilters: js.Array[js.Array[DimensionsFilters]] = js.native
   /** The names of the requested fields. */
-  var fields: js.Array[AnonName] = js.native
+  var fields: js.Array[Name] = js.native
   /** An object containing information relevant to connector execution. */
   var scriptParams: ScriptParams = js.native
 }
@@ -37,7 +37,7 @@ object Request {
     configParams: T,
     dateRange: DateRange,
     dimensionsFilters: js.Array[js.Array[DimensionsFilters]],
-    fields: js.Array[AnonName],
+    fields: js.Array[Name],
     scriptParams: ScriptParams
   ): Request[T] = {
     val __obj = js.Dynamic.literal(configParams = configParams.asInstanceOf[js.Any], dateRange = dateRange.asInstanceOf[js.Any], dimensionsFilters = dimensionsFilters.asInstanceOf[js.Any], fields = fields.asInstanceOf[js.Any], scriptParams = scriptParams.asInstanceOf[js.Any])
@@ -68,7 +68,7 @@ object Request {
         ret
     }
     @scala.inline
-    def withFields(value: js.Array[AnonName]): Self[T] = {
+    def withFields(value: js.Array[Name]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
         ret

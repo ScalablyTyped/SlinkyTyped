@@ -3,7 +3,7 @@ package typingsSlinky.ckeditorCkeditor5Utils.mod
 import org.scalajs.dom.raw.ClientRect
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Range
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ class Rect protected () extends js.Object {
   def this(source: ClientRect) = this()
   def this(source: HTMLElement) = this()
   def this(source: Range) = this()
-  def this(source: Window_) = this()
+  def this(source: Window) = this()
   val bottom: Double = js.native
   val height: Double = js.native
   val left: Double = js.native

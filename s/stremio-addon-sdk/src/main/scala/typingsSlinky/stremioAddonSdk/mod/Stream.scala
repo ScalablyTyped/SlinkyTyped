@@ -1,6 +1,6 @@
 package typingsSlinky.stremioAddonSdk.mod
 
-import typingsSlinky.stremioAddonSdk.AnonCountryWhitelist
+import typingsSlinky.stremioAddonSdk.anon.CountryWhitelist
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Stream extends js.Object {
-  var behaviorHints: js.UndefOr[AnonCountryWhitelist] = js.native
+  var behaviorHints: js.UndefOr[CountryWhitelist] = js.native
   /**
     * Meta Link or an external URL to the video, which should be opened in a browser (webpage).
     *
@@ -70,7 +70,7 @@ object Stream {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBehaviorHints(value: AnonCountryWhitelist): Self = {
+    def withBehaviorHints(value: CountryWhitelist): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("behaviorHints")(value.asInstanceOf[js.Any])
         ret

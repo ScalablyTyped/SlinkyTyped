@@ -1,0 +1,25 @@
+package typingsSlinky.cannon.global.CANNON
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("CANNON.PointToPointConstraint")
+@js.native
+class PointToPointConstraint protected ()
+  extends typingsSlinky.cannon.CANNON.Constraint {
+  def this(
+    bodyA: typingsSlinky.cannon.CANNON.Body,
+    pivotA: typingsSlinky.cannon.CANNON.Vec3,
+    bodyB: typingsSlinky.cannon.CANNON.Body,
+    pivotB: typingsSlinky.cannon.CANNON.Vec3
+  ) = this()
+  def this(
+    bodyA: typingsSlinky.cannon.CANNON.Body,
+    pivotA: typingsSlinky.cannon.CANNON.Vec3,
+    bodyB: typingsSlinky.cannon.CANNON.Body,
+    pivotB: typingsSlinky.cannon.CANNON.Vec3,
+    maxForce: Double
+  ) = this()
+}
+

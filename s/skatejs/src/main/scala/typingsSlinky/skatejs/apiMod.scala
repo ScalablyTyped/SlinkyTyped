@@ -2,6 +2,7 @@ package typingsSlinky.skatejs
 
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.skatejs.anon.TypeofWithComponent
 import typingsSlinky.skatejs.typesMod.ComposedCustomEvent
 import typingsSlinky.skatejs.typesMod.Constructor
 import typingsSlinky.skatejs.typesMod.CustomElement

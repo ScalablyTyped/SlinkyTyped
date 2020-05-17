@@ -1,6 +1,6 @@
 package typingsSlinky.wordpressData.mod
 
-import typingsSlinky.wordpressData.FnCall
+import typingsSlinky.wordpressData.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

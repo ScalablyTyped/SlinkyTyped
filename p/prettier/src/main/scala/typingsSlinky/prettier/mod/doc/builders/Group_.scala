@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Group_ extends _Doc {
+trait Group_ extends Doc {
   var break: Boolean = js.native
   var contents: Doc = js.native
   var expandedStates: js.Array[Doc] = js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.yandexMaps.mod
 
-import typingsSlinky.yandexMaps.AnonAddViaPoints
+import typingsSlinky.yandexMaps.anon.AddViaPoints
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ object router extends js.Object {
   @js.native
   class Editor () extends ICustomizable {
     def start(): Unit = js.native
-    def start(options: AnonAddViaPoints): Unit = js.native
+    def start(options: AddViaPoints): Unit = js.native
     def stop(): Unit = js.native
   }
   

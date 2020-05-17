@@ -1,7 +1,6 @@
 package typingsSlinky.styletronReact.mod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.styletronReact.AnonStackIndex
 import typingsSlinky.styletronStandard.mod.StandardEngine
 import typingsSlinky.styletronStandard.mod.StyleObject
 import scala.scalajs.js
@@ -11,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Styletron extends js.Object {
   var base: StyletronBase = js.native
-  var debug: js.UndefOr[AnonStackIndex] = js.native
+  var debug: js.UndefOr[typingsSlinky.styletronReact.anon.StackIndex] = js.native
   var driver: StyletronDriver = js.native
   var getInitialStyle: StyletronGetInitialStyle = js.native
   var reducers: js.Array[ReducerContainer] = js.native
@@ -79,7 +78,7 @@ object Styletron {
         ret
     }
     @scala.inline
-    def withDebug(value: AnonStackIndex): Self = {
+    def withDebug(value: typingsSlinky.styletronReact.anon.StackIndex): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
         ret

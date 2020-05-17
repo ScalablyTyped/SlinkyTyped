@@ -1,13 +1,13 @@
 package typingsSlinky.gapiClientClassroom.gapi.client.classroom
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientClassroom.AnonCallbackFields
-import typingsSlinky.gapiClientClassroom.AnonCourseStates
-import typingsSlinky.gapiClientClassroom.AnonIdKey
-import typingsSlinky.gapiClientClassroom.AnonKeyOauthtoken
-import typingsSlinky.gapiClientClassroom.AnonOauthtokenPrettyPrint
-import typingsSlinky.gapiClientClassroom.AnonPrettyPrintQuotaUser
-import typingsSlinky.gapiClientClassroom.AnonQuotaUserResource
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientClassroom.anon.CallbackFields
+import typingsSlinky.gapiClientClassroom.anon.CourseStates
+import typingsSlinky.gapiClientClassroom.anon.IdKey
+import typingsSlinky.gapiClientClassroom.anon.KeyOauthtoken
+import typingsSlinky.gapiClientClassroom.anon.OauthtokenPrettyPrint
+import typingsSlinky.gapiClientClassroom.anon.PrettyPrintQuotaUser
+import typingsSlinky.gapiClientClassroom.anon.QuotaUserResource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,8 +37,8 @@ trait CoursesResource extends js.Object {
     * &#42; `ALREADY_EXISTS` if an alias was specified in the `id` and
     * already exists.
     */
-  def create(request: AnonCallbackFields): Request_[Course] = js.native
-  def create(request: AnonKeyOauthtoken, body: Course): Request_[Course] = js.native
+  def create(request: CallbackFields): Request[Course] = js.native
+  def create(request: KeyOauthtoken, body: Course): Request[Course] = js.native
   /**
     * Deletes a course.
     *
@@ -48,8 +48,8 @@ trait CoursesResource extends js.Object {
     * requested course or for access errors.
     * &#42; `NOT_FOUND` if no course exists with the requested ID.
     */
-  def delete(): Request_[js.Object] = js.native
-  def delete(request: AnonIdKey): Request_[js.Object] = js.native
+  def delete(): Request[js.Object] = js.native
+  def delete(request: IdKey): Request[js.Object] = js.native
   /**
     * Returns a course.
     *
@@ -59,8 +59,8 @@ trait CoursesResource extends js.Object {
     * requested course or for access errors.
     * &#42; `NOT_FOUND` if no course exists with the requested ID.
     */
-  def get(): Request_[Course] = js.native
-  def get(request: AnonIdKey): Request_[Course] = js.native
+  def get(): Request[Course] = js.native
+  def get(request: IdKey): Request[Course] = js.native
   /**
     * Returns a list of courses that the requesting user is permitted to view,
     * restricted to those that match the request. Returned courses are ordered by
@@ -72,8 +72,8 @@ trait CoursesResource extends js.Object {
     * &#42; `INVALID_ARGUMENT` if the query argument is malformed.
     * &#42; `NOT_FOUND` if any users specified in the query arguments do not exist.
     */
-  def list(): Request_[ListCoursesResponse] = js.native
-  def list(request: AnonCourseStates): Request_[ListCoursesResponse] = js.native
+  def list(): Request[ListCoursesResponse] = js.native
+  def list(request: CourseStates): Request[ListCoursesResponse] = js.native
   /**
     * Updates one or more fields in a course.
     *
@@ -87,9 +87,9 @@ trait CoursesResource extends js.Object {
     * &#42; `FAILED_PRECONDITION` for the following request errors:
     * &#42; CourseNotModifiable
     */
-  def patch(request: AnonOauthtokenPrettyPrint): Request_[Course] = js.native
-  def patch(request: AnonPrettyPrintQuotaUser, body: Course): Request_[Course] = js.native
-  def update(request: AnonIdKey, body: Course): Request_[Course] = js.native
+  def patch(request: OauthtokenPrettyPrint): Request[Course] = js.native
+  def patch(request: PrettyPrintQuotaUser, body: Course): Request[Course] = js.native
+  def update(request: IdKey, body: Course): Request[Course] = js.native
   /**
     * Updates a course.
     *
@@ -101,6 +101,6 @@ trait CoursesResource extends js.Object {
     * &#42; `FAILED_PRECONDITION` for the following request errors:
     * &#42; CourseNotModifiable
     */
-  def update(request: AnonQuotaUserResource): Request_[Course] = js.native
+  def update(request: QuotaUserResource): Request[Course] = js.native
 }
 

@@ -1,15 +1,15 @@
 package typingsSlinky.primereact.components
 
+import org.scalajs.dom.raw.Event
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonOriginalEventEvent
-import typingsSlinky.primereact.AnonOriginalEventValue
+import typingsSlinky.primereact.anon.OriginalEventEvent
+import typingsSlinky.primereact.anon.OriginalEventValue
 import typingsSlinky.primereact.calendarCalendarMod.CalendarProps
 import typingsSlinky.primereact.calendarCalendarMod.DateMetaData
 import typingsSlinky.primereact.calendarCalendarMod.LocaleSettings
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -80,21 +80,21 @@ object Calendar {
     @scala.inline
     def numberOfMonths(value: Double): this.type = set("numberOfMonths", value.asInstanceOf[js.Any])
     @scala.inline
-    def onBlur(value: /* event */ Event_ => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    def onBlur(value: /* event */ Event => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: /* e */ AnonOriginalEventEvent => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ OriginalEventEvent => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onClearButtonClick(value: /* event */ Event_ => Unit): this.type = set("onClearButtonClick", js.Any.fromFunction1(value))
+    def onClearButtonClick(value: /* event */ Event => Unit): this.type = set("onClearButtonClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onFocus(value: /* event */ Event_ => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    def onFocus(value: /* event */ Event => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
-    def onInput(value: /* event */ Event_ => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
+    def onInput(value: /* event */ Event => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
     @scala.inline
-    def onSelect(value: /* e */ AnonOriginalEventValue => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    def onSelect(value: /* e */ OriginalEventValue => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline
-    def onTodayButtonClick(value: /* event */ Event_ => Unit): this.type = set("onTodayButtonClick", js.Any.fromFunction1(value))
+    def onTodayButtonClick(value: /* event */ Event => Unit): this.type = set("onTodayButtonClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onViewDateChange(value: /* e */ AnonOriginalEventValue => Unit): this.type = set("onViewDateChange", js.Any.fromFunction1(value))
+    def onViewDateChange(value: /* e */ OriginalEventValue => Unit): this.type = set("onViewDateChange", js.Any.fromFunction1(value))
     @scala.inline
     def panelClassName(value: String): this.type = set("panelClassName", value.asInstanceOf[js.Any])
     @scala.inline

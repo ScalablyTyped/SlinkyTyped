@@ -5,10 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object optionsMod {
-  type DateLimit[D] = D | typingsSlinky.flatpickr.optionsMod.DateRangeLimit[D] | (js.Function1[/* date */ typingsSlinky.flatpickr.globalsMod._Global_.Date, scala.Boolean])
-  type DateOption = typingsSlinky.flatpickr.globalsMod._Global_.Date | java.lang.String | scala.Double
   type Hook = js.Function4[
-    /* dates */ js.Array[typingsSlinky.flatpickr.globalsMod._Global_.Date], 
+    /* dates */ js.Array[typingsSlinky.flatpickr.globalsMod.global.Date], 
     /* currentDateString */ java.lang.String, 
     /* self */ typingsSlinky.flatpickr.instanceMod.Instance, 
     /* data */ js.UndefOr[js.Any], 

@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a Universal Integrated Circuit Card (UICC), normally called a SIM Card on a mobile broadband device. */
-@JSGlobal("Windows.Networking.NetworkOperators.MobileBroadbandUicc")
 @js.native
-abstract class MobileBroadbandUicc () extends js.Object {
+trait MobileBroadbandUicc extends js.Object {
   /** Gets the unique SIM Card identity on a mobile broadband device. */
   var simIccId: String = js.native
   /**
@@ -16,5 +15,36 @@ abstract class MobileBroadbandUicc () extends js.Object {
     * @return An asynchronous retrieval operation. On successful completion, returns an object with the results of the retrieval operation.
     */
   def getUiccAppsAsync(): IPromiseWithIAsyncOperation[MobileBroadbandUiccAppsResult] = js.native
+}
+
+object MobileBroadbandUicc {
+  @scala.inline
+  def apply(
+    getUiccAppsAsync: () => IPromiseWithIAsyncOperation[MobileBroadbandUiccAppsResult],
+    simIccId: String
+  ): MobileBroadbandUicc = {
+    val __obj = js.Dynamic.literal(getUiccAppsAsync = js.Any.fromFunction0(getUiccAppsAsync), simIccId = simIccId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MobileBroadbandUicc]
+  }
+  @scala.inline
+  implicit class MobileBroadbandUiccOps[Self <: MobileBroadbandUicc] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetUiccAppsAsync(value: () => IPromiseWithIAsyncOperation[MobileBroadbandUiccAppsResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getUiccAppsAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSimIccId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("simIccId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

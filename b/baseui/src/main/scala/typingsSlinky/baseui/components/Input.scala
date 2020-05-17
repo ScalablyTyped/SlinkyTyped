@@ -1,5 +1,6 @@
 package typingsSlinky.baseui.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
@@ -22,7 +23,6 @@ import typingsSlinky.baseui.inputMod.InputOverrides
 import typingsSlinky.baseui.inputMod.InputProps
 import typingsSlinky.baseui.inputMod.SharedProps
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -83,7 +83,7 @@ object Input {
     @scala.inline
     def onBlur(value: SyntheticFocusEvent[HTMLInputElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def onFocus(value: SyntheticFocusEvent[HTMLInputElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline

@@ -9,5 +9,5 @@ package object typesMod {
     /* import warning: importer.ImportType#apply Failed type conversion: std.DocumentEventMap[T] */ /* e */ js.Any, 
     scala.Unit
   ]
-  type TargetRef = slinky.core.facade.ReactRef[org.scalajs.dom.raw.Node | typingsSlinky.std.Window_]
+  type TargetRef = slinky.core.facade.ReactRef[org.scalajs.dom.raw.Node | org.scalajs.dom.raw.Window]
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.nodal.mod
 
-import typingsSlinky.nodal.TypeofModel
+import typingsSlinky.nodal.anon.TypeofModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

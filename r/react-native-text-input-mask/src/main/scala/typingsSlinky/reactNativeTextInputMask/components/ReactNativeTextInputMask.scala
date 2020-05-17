@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeTextInputMask.components
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -88,10 +88,10 @@ import typingsSlinky.reactNative.reactNativeStrings.top
 import typingsSlinky.reactNative.reactNativeStrings.username
 import typingsSlinky.reactNative.reactNativeStrings.yes
 import typingsSlinky.reactNative.reactNativeStrings.yesExcludeDescendants
-import typingsSlinky.reactNativeTextInputMask.AnonEnd
-import typingsSlinky.reactNativeTextInputMask.AnonNativeEvent
-import typingsSlinky.reactNativeTextInputMask.AnonNativeEventAnonContentSizeAnonHeight
-import typingsSlinky.reactNativeTextInputMask.AnonNativeEventAnonText
+import typingsSlinky.reactNativeTextInputMask.anon.End
+import typingsSlinky.reactNativeTextInputMask.anon.NativeEvent
+import typingsSlinky.reactNativeTextInputMask.anon.NativeEventContentSizeHeight
+import typingsSlinky.reactNativeTextInputMask.anon.NativeEventText
 import typingsSlinky.reactNativeTextInputMask.mod.TextInputMaskProps
 import typingsSlinky.reactNativeTextInputMask.mod.default
 import typingsSlinky.reactNativeTextInputMask.reactNativeTextInputMaskStrings.characters
@@ -215,11 +215,11 @@ object ReactNativeTextInputMask {
     @scala.inline
     def onBlur(value: SyntheticEvent[NodeHandle, TextInputFocusEventData] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: /* event */ AnonNativeEvent => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* event */ NativeEvent => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onContentSizeChange(value: /* event */ AnonNativeEventAnonContentSizeAnonHeight => Unit): this.type = set("onContentSizeChange", js.Any.fromFunction1(value))
+    def onContentSizeChange(value: /* event */ NativeEventContentSizeHeight => Unit): this.type = set("onContentSizeChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onEndEditing(value: /* event */ AnonNativeEventAnonText => Unit): this.type = set("onEndEditing", js.Any.fromFunction1(value))
+    def onEndEditing(value: /* event */ NativeEventText => Unit): this.type = set("onEndEditing", js.Any.fromFunction1(value))
     @scala.inline
     def onFocus(value: SyntheticEvent[NodeHandle, TextInputFocusEventData] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
@@ -257,7 +257,7 @@ object ReactNativeTextInputMask {
     @scala.inline
     def onStartShouldSetResponderCapture(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onStartShouldSetResponderCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onSubmitEditing(value: /* event */ AnonNativeEventAnonText => Unit): this.type = set("onSubmitEditing", js.Any.fromFunction1(value))
+    def onSubmitEditing(value: /* event */ NativeEventText => Unit): this.type = set("onSubmitEditing", js.Any.fromFunction1(value))
     @scala.inline
     def onTouchCancel(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))
     @scala.inline
@@ -297,7 +297,7 @@ object ReactNativeTextInputMask {
     @scala.inline
     def selectTextOnFocus(value: Boolean): this.type = set("selectTextOnFocus", value.asInstanceOf[js.Any])
     @scala.inline
-    def selection(value: AnonEnd): this.type = set("selection", value.asInstanceOf[js.Any])
+    def selection(value: End): this.type = set("selection", value.asInstanceOf[js.Any])
     @scala.inline
     def selectionColor(value: String): this.type = set("selectionColor", value.asInstanceOf[js.Any])
     @scala.inline

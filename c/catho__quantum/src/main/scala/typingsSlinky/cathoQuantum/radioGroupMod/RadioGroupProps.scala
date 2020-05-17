@@ -3,8 +3,8 @@ package typingsSlinky.cathoQuantum.radioGroupMod
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.cathoQuantum.AnonColorsSpacing
-import typingsSlinky.cathoQuantum.AnonDisabled
+import typingsSlinky.cathoQuantum.anon.ColorsSpacing
+import typingsSlinky.cathoQuantum.anon.Disabled
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.button
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.radio
 import typingsSlinky.react.mod.ChangeEvent
@@ -20,8 +20,8 @@ trait RadioGroupProps extends js.Object {
   var `inline`: js.UndefOr[Boolean] = js.native
   var name: String = js.native
   var onChange: js.UndefOr[ChangeEventHandler[HTMLInputElement]] = js.native
-  var options: js.UndefOr[js.Array[AnonDisabled]] = js.native
-  var theme: js.UndefOr[AnonColorsSpacing] = js.native
+  var options: js.UndefOr[js.Array[Disabled]] = js.native
+  var theme: js.UndefOr[ColorsSpacing] = js.native
   var `type`: js.UndefOr[radio | button] = js.native
   var value: js.UndefOr[String] = js.native
 }
@@ -99,7 +99,7 @@ object RadioGroupProps {
         ret
     }
     @scala.inline
-    def withOptions(value: js.Array[AnonDisabled]): Self = {
+    def withOptions(value: js.Array[Disabled]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret
@@ -111,7 +111,7 @@ object RadioGroupProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonColorsSpacing): Self = {
+    def withTheme(value: ColorsSpacing): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

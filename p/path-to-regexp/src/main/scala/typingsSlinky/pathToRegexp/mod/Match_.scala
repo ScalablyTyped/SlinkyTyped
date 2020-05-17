@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait Match_[P /* <: js.Object */] extends js.Object
 
+object Match_ {
+  @scala.inline
+  def `false`[P]: typingsSlinky.pathToRegexp.pathToRegexpBooleans.`false` = false.asInstanceOf[typingsSlinky.pathToRegexp.pathToRegexpBooleans.`false`]
+  @scala.inline
+  implicit def apply[P](value: MatchResult[P]): Match_[P] = value.asInstanceOf[Match_[P]]
+}
+

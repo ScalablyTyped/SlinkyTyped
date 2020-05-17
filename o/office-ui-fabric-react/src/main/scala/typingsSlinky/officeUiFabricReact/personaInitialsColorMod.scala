@@ -1,5 +1,6 @@
 package typingsSlinky.officeUiFabricReact
 
+import typingsSlinky.officeUiFabricReact.anon.PickIPersonaPropsprimaryT
 import typingsSlinky.officeUiFabricReact.personaTypesMod.IPersonaProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

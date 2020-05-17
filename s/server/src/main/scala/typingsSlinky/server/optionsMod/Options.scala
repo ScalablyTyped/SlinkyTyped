@@ -1,9 +1,9 @@
 package typingsSlinky.server.optionsMod
 
 import typingsSlinky.expressSession.mod.SessionOptions
-import typingsSlinky.server.AnonBody
-import typingsSlinky.server.AnonLevel
-import typingsSlinky.server.IHelmetConfigurationcsurf
+import typingsSlinky.server.anon.Body
+import typingsSlinky.server.anon.IHelmetConfigurationcsurf
+import typingsSlinky.server.anon.Level
 import typingsSlinky.server.commonMod.LogLevel
 import typingsSlinky.server.serverBooleans.`false`
 import scala.scalajs.js
@@ -15,8 +15,8 @@ trait Options extends js.Object {
   var engine: js.UndefOr[String] = js.native
   var env: js.UndefOr[String] = js.native
   var favicon: js.UndefOr[String] = js.native
-  var log: js.UndefOr[LogLevel | AnonLevel] = js.native
-  var parser: js.UndefOr[AnonBody] = js.native
+  var log: js.UndefOr[LogLevel | Level] = js.native
+  var parser: js.UndefOr[Body] = js.native
   var port: js.UndefOr[Double] = js.native
   var public: js.UndefOr[String] = js.native
   var secret: js.UndefOr[String] = js.native
@@ -74,7 +74,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withLog(value: LogLevel | AnonLevel): Self = {
+    def withLog(value: LogLevel | Level): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
         ret
@@ -86,7 +86,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withParser(value: AnonBody): Self = {
+    def withParser(value: Body): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parser")(value.asInstanceOf[js.Any])
         ret

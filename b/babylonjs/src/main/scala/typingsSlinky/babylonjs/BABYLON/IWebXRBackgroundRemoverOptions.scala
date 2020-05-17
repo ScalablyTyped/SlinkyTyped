@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.BABYLON
 
-import typingsSlinky.babylonjs.AnonGround
+import typingsSlinky.babylonjs.anon.Ground
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait IWebXRBackgroundRemoverOptions extends js.Object {
     * flags to configure the removal of the environment helper.
     * If not set, the entire background will be removed. If set, flags should be set as well.
     */
-  var environmentHelperRemovalFlags: js.UndefOr[AnonGround] = js.native
+  var environmentHelperRemovalFlags: js.UndefOr[Ground] = js.native
   /**
     * don't disable the environment helper
     */
@@ -47,7 +47,7 @@ object IWebXRBackgroundRemoverOptions {
         ret
     }
     @scala.inline
-    def withEnvironmentHelperRemovalFlags(value: AnonGround): Self = {
+    def withEnvironmentHelperRemovalFlags(value: Ground): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("environmentHelperRemovalFlags")(value.asInstanceOf[js.Any])
         ret

@@ -14,3 +14,18 @@ import scala.scalajs.js.annotation._
 */
 trait Symbol2D extends js.Object
 
+object Symbol2D {
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.PictureFillSymbol): Symbol2D = value.asInstanceOf[Symbol2D]
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.PictureMarkerSymbol): Symbol2D = value.asInstanceOf[Symbol2D]
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.SimpleFillSymbol): Symbol2D = value.asInstanceOf[Symbol2D]
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.SimpleLineSymbol): Symbol2D = value.asInstanceOf[Symbol2D]
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.SimpleMarkerSymbol): Symbol2D = value.asInstanceOf[Symbol2D]
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.TextSymbol): Symbol2D = value.asInstanceOf[Symbol2D]
+}
+

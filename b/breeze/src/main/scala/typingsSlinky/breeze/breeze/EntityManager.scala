@@ -1,17 +1,13 @@
 package typingsSlinky.breeze.breeze
 
-import typingsSlinky.breeze.AnonEntities
-import typingsSlinky.breeze.AnonMergeStrategy
+import typingsSlinky.breeze.anon.Entities
 import typingsSlinky.breeze.breeze.core.ErrorCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("breeze.EntityManager")
 @js.native
-class EntityManager () extends js.Object {
-  def this(config: String) = this()
-  def this(config: EntityManagerOptions) = this()
+trait EntityManager extends js.Object {
   var dataService: DataService = js.native
   var entityChanged: EntityChangedEvent = js.native
   var hasChangesChanged: HasChangesChangedEvent = js.native
@@ -98,10 +94,10 @@ class EntityManager () extends js.Object {
   def hasChanges(entityTypeName: String): Boolean = js.native
   def hasChanges(entityTypeNames: js.Array[EntityType | String]): Boolean = js.native
   def hasChanges(entityType: EntityType): Boolean = js.native
-  def importEntities(exportedData: js.Object): AnonEntities = js.native
-  def importEntities(exportedData: js.Object, config: AnonMergeStrategy): AnonEntities = js.native
-  def importEntities(exportedString: String): AnonEntities = js.native
-  def importEntities(exportedString: String, config: AnonMergeStrategy): AnonEntities = js.native
+  def importEntities(exportedData: js.Object): Entities = js.native
+  def importEntities(exportedData: js.Object, config: typingsSlinky.breeze.anon.MergeStrategy): Entities = js.native
+  def importEntities(exportedString: String): Entities = js.native
+  def importEntities(exportedString: String, config: typingsSlinky.breeze.anon.MergeStrategy): Entities = js.native
   def rejectChanges(): js.Array[Entity] = js.native
   def saveChanges(): js.Promise[SaveResult] = js.native
   def saveChanges(entities: js.Array[Entity]): js.Promise[SaveResult] = js.native
@@ -114,15 +110,5 @@ class EntityManager () extends js.Object {
     errorCallback: SaveChangesErrorCallback
   ): js.Promise[SaveResult] = js.native
   def setProperties(config: EntityManagerProperties): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("breeze.EntityManager")
-@js.native
-object EntityManager extends js.Object {
-  def importEntities(exportedData: js.Object): EntityManager = js.native
-  def importEntities(exportedData: js.Object, config: AnonMergeStrategy): EntityManager = js.native
-  def importEntities(exportedString: String): EntityManager = js.native
-  def importEntities(exportedString: String, config: AnonMergeStrategy): EntityManager = js.native
 }
 

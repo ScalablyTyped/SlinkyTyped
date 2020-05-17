@@ -1,6 +1,6 @@
 package typingsSlinky.reactWeui.mod
 
-import typingsSlinky.reactWeui.AnonActions
+import typingsSlinky.reactWeui.anon.Actions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ class ActionSheet protected () extends js.Object {
 @JSImport("react-weui", "ActionSheet")
 @js.native
 object ActionSheet extends js.Object {
-  var defaultProps: AnonActions = js.native
+  var defaultProps: Actions = js.native
   @js.native
   object propTypes extends js.Object {
     @js.native

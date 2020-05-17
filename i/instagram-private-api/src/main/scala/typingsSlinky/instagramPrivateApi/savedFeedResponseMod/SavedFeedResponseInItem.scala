@@ -32,24 +32,6 @@ object SavedFeedResponseInItem {
         ret
     }
     @scala.inline
-    def withDuration_in_video_in_sec(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration_in_video_in_sec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDuration_in_video_in_sec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration_in_video_in_sec")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDuration_in_video_in_secNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("duration_in_video_in_sec")(null)
-        ret
-    }
-    @scala.inline
     def withProduct(value: SavedFeedResponseProduct): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("product")(value.asInstanceOf[js.Any])
@@ -59,24 +41,6 @@ object SavedFeedResponseInItem {
     def withoutProduct: Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("product")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart_time_in_video_in_sec(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start_time_in_video_in_sec")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStart_time_in_video_in_sec: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start_time_in_video_in_sec")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStart_time_in_video_in_secNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("start_time_in_video_in_sec")(null)
         ret
     }
     @scala.inline

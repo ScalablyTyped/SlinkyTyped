@@ -2,7 +2,7 @@ package typingsSlinky.rcTable.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
-import typingsSlinky.rcTable.FnCall
+import typingsSlinky.rcTable.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

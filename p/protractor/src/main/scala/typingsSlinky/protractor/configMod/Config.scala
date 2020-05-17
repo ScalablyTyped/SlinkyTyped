@@ -1,10 +1,10 @@
 package typingsSlinky.protractor.configMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.protractor.AnonDefaultTimeoutInterval
-import typingsSlinky.protractor.AnonDictkey
-import typingsSlinky.protractor.AnonJvmArgs
-import typingsSlinky.protractor.AnonReporter
+import typingsSlinky.protractor.anon.DefaultTimeoutInterval
+import typingsSlinky.protractor.anon.Dictkey
+import typingsSlinky.protractor.anon.JvmArgs
+import typingsSlinky.protractor.anon.Reporter
 import typingsSlinky.protractor.pluginsMod.PluginConfig
 import typingsSlinky.protractor.protractorStrings.DEBUG
 import typingsSlinky.protractor.protractorStrings.ERROR
@@ -114,7 +114,7 @@ trait Config
     *   seleniumAddress: 'http://localhost:4444/wd/hub'
     * }
     */
-  var capabilities: js.UndefOr[AnonDictkey] = js.native
+  var capabilities: js.UndefOr[Dictkey] = js.native
   /**
     * ChromeDriver location is used to help find the chromedriver binary. This will be passed to the
     * Selenium jar as the system property webdriver.chrome.driver. If the value is not set when
@@ -216,7 +216,7 @@ trait Config
     * See https://github.com/jasmine/jasmine-npm/blob/master/lib/jasmine.js
     * for the exact options available.
     */
-  var jasmineNodeOpts: js.UndefOr[AnonDefaultTimeoutInterval] = js.native
+  var jasmineNodeOpts: js.UndefOr[DefaultTimeoutInterval] = js.native
   var jvmArgs: js.UndefOr[js.Array[String]] = js.native
   /**
     * If kobitonUser and kobitonKey are specified, testobjectUser, testojbectKey, browserStackUser,
@@ -238,7 +238,7 @@ trait Config
     * values set via the deprecated config values `seleniumPort` and
     * `seleniumArgs`.
     */
-  var localSeleniumStandaloneOpts: js.UndefOr[AnonJvmArgs] = js.native
+  var localSeleniumStandaloneOpts: js.UndefOr[JvmArgs] = js.native
   /**
     * Protractor log level
     *
@@ -256,7 +256,7 @@ trait Config
     *
     * See the full list at http://mochajs.org/
     */
-  var mochaOpts: js.UndefOr[AnonReporter] = js.native
+  var mochaOpts: js.UndefOr[Reporter] = js.native
   var mockSelenium: js.UndefOr[Boolean] = js.native
   /**
     * If you would like to run more than one instance of WebDriver on the same
@@ -658,7 +658,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withCapabilities(value: AnonDictkey): Self = {
+    def withCapabilities(value: Dictkey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("capabilities")(value.asInstanceOf[js.Any])
         ret
@@ -874,7 +874,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withJasmineNodeOpts(value: AnonDefaultTimeoutInterval): Self = {
+    def withJasmineNodeOpts(value: DefaultTimeoutInterval): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("jasmineNodeOpts")(value.asInstanceOf[js.Any])
         ret
@@ -922,7 +922,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withLocalSeleniumStandaloneOpts(value: AnonJvmArgs): Self = {
+    def withLocalSeleniumStandaloneOpts(value: JvmArgs): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("localSeleniumStandaloneOpts")(value.asInstanceOf[js.Any])
         ret
@@ -958,7 +958,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withMochaOpts(value: AnonReporter): Self = {
+    def withMochaOpts(value: Reporter): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mochaOpts")(value.asInstanceOf[js.Any])
         ret

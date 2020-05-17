@@ -1,21 +1,11 @@
 package typingsSlinky.babylonjs.BABYLON
 
-import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.Plane")
 @js.native
-class Plane protected () extends js.Object {
-  /**
-    * Creates a Plane object according to the given floats a, b, c, d and the plane equation : ax + by + cz + d = 0
-    * @param a a component of the plane
-    * @param b b component of the plane
-    * @param c c component of the plane
-    * @param d d component of the plane
-    */
-  def this(a: Double, b: Double, c: Double, d: Double) = this()
+trait Plane extends js.Object {
   /**
     * d component of the plane
     */
@@ -76,40 +66,97 @@ class Plane protected () extends js.Object {
   def transform(transformation: DeepImmutable[Matrix]): Plane = js.native
 }
 
-/* static members */
-@JSGlobal("BABYLON.Plane")
-@js.native
-object Plane extends js.Object {
-  var _TmpMatrix: js.Any = js.native
-  /**
-    * Creates a plane from an  array
-    * @param array the array to create a plane from
-    * @returns a new Plane from the given array.
-    */
-  def FromArray(array: DeepImmutable[ArrayLike[Double]]): Plane = js.native
-  /**
-    * Creates a plane from three points
-    * @param point1 point used to create the plane
-    * @param point2 point used to create the plane
-    * @param point3 point used to create the plane
-    * @returns a new Plane defined by the three given points.
-    */
-  def FromPoints(point1: DeepImmutable[Vector3], point2: DeepImmutable[Vector3], point3: DeepImmutable[Vector3]): Plane = js.native
-  /**
-    * Creates a plane from an origin point and a normal
-    * @param origin origin of the plane to be constructed
-    * @param normal normal of the plane to be constructed
-    * @returns a new Plane the normal vector to this plane at the given origin point.
-    * Note : the vector "normal" is updated because normalized.
-    */
-  def FromPositionAndNormal(origin: DeepImmutable[Vector3], normal: DeepImmutable[Vector3]): Plane = js.native
-  /**
-    * Calculates the distance from a plane and a point
-    * @param origin origin of the plane to be constructed
-    * @param normal normal of the plane to be constructed
-    * @param point point to calculate distance to
-    * @returns the signed distance between the plane defined by the normal vector at the "origin"" point and the given other point.
-    */
-  def SignedDistanceToPlaneFromPositionAndNormal(origin: DeepImmutable[Vector3], normal: DeepImmutable[Vector3], point: DeepImmutable[Vector3]): Double = js.native
+object Plane {
+  @scala.inline
+  def apply(
+    asArray: () => js.Array[Double],
+    copyFromPoints: (DeepImmutable[Vector3], DeepImmutable[Vector3], DeepImmutable[Vector3]) => Plane,
+    d: Double,
+    dotCoordinate: DeepImmutable[Vector3] => Double,
+    getClassName: () => String,
+    getHashCode: () => Double,
+    isFrontFacingTo: (DeepImmutable[Vector3], Double) => Boolean,
+    normal: Vector3,
+    normalize: () => Plane,
+    signedDistanceTo: DeepImmutable[Vector3] => Double,
+    transform: DeepImmutable[Matrix] => Plane
+  ): Plane = {
+    val __obj = js.Dynamic.literal(asArray = js.Any.fromFunction0(asArray), copyFromPoints = js.Any.fromFunction3(copyFromPoints), d = d.asInstanceOf[js.Any], dotCoordinate = js.Any.fromFunction1(dotCoordinate), getClassName = js.Any.fromFunction0(getClassName), getHashCode = js.Any.fromFunction0(getHashCode), isFrontFacingTo = js.Any.fromFunction2(isFrontFacingTo), normal = normal.asInstanceOf[js.Any], normalize = js.Any.fromFunction0(normalize), signedDistanceTo = js.Any.fromFunction1(signedDistanceTo), transform = js.Any.fromFunction1(transform))
+    __obj.asInstanceOf[Plane]
+  }
+  @scala.inline
+  implicit class PlaneOps[Self <: Plane] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAsArray(value: () => js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asArray")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withCopyFromPoints(value: (DeepImmutable[Vector3], DeepImmutable[Vector3], DeepImmutable[Vector3]) => Plane): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyFromPoints")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withD(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("d")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDotCoordinate(value: DeepImmutable[Vector3] => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dotCoordinate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetClassName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getClassName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetHashCode(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getHashCode")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsFrontFacingTo(value: (DeepImmutable[Vector3], Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFrontFacingTo")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withNormal(value: Vector3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNormalize(value: () => Plane): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSignedDistanceTo(value: DeepImmutable[Vector3] => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signedDistanceTo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTransform(value: DeepImmutable[Matrix] => Plane): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transform")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

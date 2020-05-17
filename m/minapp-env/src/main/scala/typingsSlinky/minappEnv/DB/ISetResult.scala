@@ -1,7 +1,7 @@
 package typingsSlinky.minappEnv.DB
 
-import typingsSlinky.minappEnv.AnonCreated
 import typingsSlinky.minappEnv.IAPISuccessParam
+import typingsSlinky.minappEnv.anon.Created
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ISetResult extends IAPISuccessParam {
   var _id: DocumentId = js.native
-  var stats: AnonCreated = js.native
+  var stats: Created = js.native
 }
 
 object ISetResult {
   @scala.inline
-  def apply(_id: DocumentId, errMsg: String, stats: AnonCreated): ISetResult = {
+  def apply(_id: DocumentId, errMsg: String, stats: Created): ISetResult = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], errMsg = errMsg.asInstanceOf[js.Any], stats = stats.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISetResult]
   }
@@ -31,7 +31,7 @@ object ISetResult {
         ret
     }
     @scala.inline
-    def withStats(value: AnonCreated): Self = {
+    def withStats(value: Created): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
         ret

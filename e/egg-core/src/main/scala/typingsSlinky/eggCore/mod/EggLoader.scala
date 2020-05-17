@@ -1,8 +1,8 @@
 package typingsSlinky.eggCore.mod
 
-import typingsSlinky.eggCore.AnonType
-import typingsSlinky.eggCore.PartialContextLoaderOptio
-import typingsSlinky.eggCore.PartialFileLoaderOption
+import typingsSlinky.eggCore.anon.PartialContextLoaderOptio
+import typingsSlinky.eggCore.anon.PartialFileLoaderOption
+import typingsSlinky.eggCore.anon.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -56,7 +56,7 @@ class EggLoader[T, Config] protected () extends js.Object {
     * @return {Array} loadUnits
     * @since 1.0.0
     */
-  def getLoadUnits(): js.Array[AnonType] = js.native
+  def getLoadUnits(): js.Array[Type] = js.native
   def getTypeFiles(filename: String): js.Array[String] = js.native
   /* protected */ def loadAgentExtend(): Unit = js.native
   /* protected */ def loadApplicationExtend(): Unit = js.native

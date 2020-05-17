@@ -1,6 +1,6 @@
 package typingsSlinky.foreverMonitor.mod
 
-import typingsSlinky.foreverMonitor.AnonCommand
+import typingsSlinky.foreverMonitor.anon.Command
 import typingsSlinky.foreverMonitor.foreverMonitorBooleans.`false`
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
@@ -28,8 +28,8 @@ class Monitor protected () extends EventEmitter {
     * @param command - Command string to parse
     * @param args - Additional default arguments
     */
-  def parseCommand(command: String): `false` | AnonCommand = js.native
-  def parseCommand(command: String, args: js.Array[String]): `false` | AnonCommand = js.native
+  def parseCommand(command: String): `false` | Command = js.native
+  def parseCommand(command: String, args: js.Array[String]): `false` | Command = js.native
   /**
     * @description Restarts the target script associated with this instance.
     */

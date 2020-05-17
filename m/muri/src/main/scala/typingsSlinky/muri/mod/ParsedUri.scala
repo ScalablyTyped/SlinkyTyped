@@ -1,13 +1,13 @@
 package typingsSlinky.muri.mod
 
-import typingsSlinky.muri.AnonPass
+import typingsSlinky.muri.anon.Pass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ParsedUri extends js.Object {
-  var auth: js.UndefOr[AnonPass] = js.native
+  var auth: js.UndefOr[Pass] = js.native
   var db: String = js.native
   var hosts: js.Array[Host] = js.native
   var options: js.Any = js.native
@@ -44,7 +44,7 @@ object ParsedUri {
         ret
     }
     @scala.inline
-    def withAuth(value: AnonPass): Self = {
+    def withAuth(value: Pass): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
         ret

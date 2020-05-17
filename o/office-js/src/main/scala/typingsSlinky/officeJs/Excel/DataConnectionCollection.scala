@@ -12,9 +12,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.7]
   */
-@JSGlobal("Excel.DataConnectionCollection")
 @js.native
-class DataConnectionCollection () extends ClientObject {
+trait DataConnectionCollection extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_DataConnectionCollection: RequestContext = js.native
@@ -29,5 +28,44 @@ class DataConnectionCollection () extends ClientObject {
     * Whereas the original Excel.DataConnectionCollection object is an API object, the `toJSON` method returns a plain JavaScript object (typed as `Excel.Interfaces.DataConnectionCollectionData`) that contains shallow copies of any loaded child properties from the original object.
     */
   def toJSON(): StringDictionary[String] = js.native
+}
+
+object DataConnectionCollection {
+  @scala.inline
+  def apply(
+    context: RequestContext,
+    isNullObject: Boolean,
+    refreshAll: () => Unit,
+    toJSON: () => StringDictionary[String]
+  ): DataConnectionCollection = {
+    val __obj = js.Dynamic.literal(context = context.asInstanceOf[js.Any], isNullObject = isNullObject.asInstanceOf[js.Any], refreshAll = js.Any.fromFunction0(refreshAll), toJSON = js.Any.fromFunction0(toJSON))
+    __obj.asInstanceOf[DataConnectionCollection]
+  }
+  @scala.inline
+  implicit class DataConnectionCollectionOps[Self <: DataConnectionCollection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContext(value: RequestContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRefreshAll(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshAll")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withToJSON(value: () => StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

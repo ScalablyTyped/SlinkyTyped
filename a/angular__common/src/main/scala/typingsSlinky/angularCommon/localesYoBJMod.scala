@@ -1,5 +1,6 @@
 package typingsSlinky.angularCommon
 
+import typingsSlinky.angularCommon.anon.NGN
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation._
 object localesYoBJMod extends js.Object {
   val default: js.Array[
     js.UndefOr[
-      String | Double | (js.Array[js.UndefOr[js.Array[String] | Double | String]]) | (js.Function1[/* n */ Double, Double]) | AnonNGN
+      String | Double | (js.Array[js.UndefOr[js.Array[String] | Double | String]]) | (js.Function1[/* n */ Double, Double]) | NGN
     ]
   ] = js.native
 }

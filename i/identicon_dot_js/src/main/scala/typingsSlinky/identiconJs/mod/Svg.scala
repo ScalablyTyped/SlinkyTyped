@@ -1,6 +1,5 @@
 package typingsSlinky.identiconJs.mod
 
-import typingsSlinky.identiconJs.AnonColor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +8,7 @@ import scala.scalajs.js.annotation._
 trait Svg extends js.Object {
   var background: Color = js.native
   var foreground: Color = js.native
-  var rectangles: js.Array[AnonColor] = js.native
+  var rectangles: js.Array[typingsSlinky.identiconJs.anon.Color] = js.native
   var size: Double = js.native
   /**
     * Returns a string with the structure 'rgb(r, g, b, a)'.
@@ -37,7 +36,7 @@ object Svg {
     foreground: Color,
     getBase64: () => String,
     getDump: () => String,
-    rectangles: js.Array[AnonColor],
+    rectangles: js.Array[typingsSlinky.identiconJs.anon.Color],
     size: Double
   ): Svg = {
     val __obj = js.Dynamic.literal(background = background.asInstanceOf[js.Any], color = js.Any.fromFunction4(color), foreground = foreground.asInstanceOf[js.Any], getBase64 = js.Any.fromFunction0(getBase64), getDump = js.Any.fromFunction0(getDump), rectangles = rectangles.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
@@ -80,7 +79,7 @@ object Svg {
         ret
     }
     @scala.inline
-    def withRectangles(value: js.Array[AnonColor]): Self = {
+    def withRectangles(value: js.Array[typingsSlinky.identiconJs.anon.Color]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rectangles")(value.asInstanceOf[js.Any])
         ret

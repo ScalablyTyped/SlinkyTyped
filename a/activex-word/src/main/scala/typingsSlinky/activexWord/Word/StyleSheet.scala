@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Word.StyleSheet")
 @js.native
-class StyleSheet protected () extends js.Object {
+trait StyleSheet extends js.Object {
   val Application: typingsSlinky.activexWord.Word.Application = js.native
   val Creator: Double = js.native
   val FullName: String = js.native
@@ -20,5 +19,107 @@ class StyleSheet protected () extends js.Object {
   var WordDotStyleSheet_typekey: StyleSheet = js.native
   def Delete(): Unit = js.native
   def Move(Precedence: WdStyleSheetPrecedence): Unit = js.native
+}
+
+object StyleSheet {
+  @scala.inline
+  def apply(
+    Application: Application,
+    Creator: Double,
+    Delete: () => Unit,
+    FullName: String,
+    Index: Double,
+    Move: WdStyleSheetPrecedence => Unit,
+    Name: String,
+    Parent: js.Any,
+    Path: String,
+    Title: String,
+    Type: WdStyleSheetLinkType,
+    WordDotStyleSheet_typekey: StyleSheet
+  ): StyleSheet = {
+    val __obj = js.Dynamic.literal(Application = Application.asInstanceOf[js.Any], Creator = Creator.asInstanceOf[js.Any], Delete = js.Any.fromFunction0(Delete), FullName = FullName.asInstanceOf[js.Any], Index = Index.asInstanceOf[js.Any], Move = js.Any.fromFunction1(Move), Name = Name.asInstanceOf[js.Any], Parent = Parent.asInstanceOf[js.Any], Path = Path.asInstanceOf[js.Any], Title = Title.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
+    __obj.updateDynamic("Word.StyleSheet_typekey")(WordDotStyleSheet_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[StyleSheet]
+  }
+  @scala.inline
+  implicit class StyleSheetOps[Self <: StyleSheet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplication(value: Application): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreator(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDelete(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withFullName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FullName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMove(value: WdStyleSheetPrecedence => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Move")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: WdStyleSheetLinkType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWordDotStyleSheet_typekey(value: StyleSheet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.StyleSheet_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

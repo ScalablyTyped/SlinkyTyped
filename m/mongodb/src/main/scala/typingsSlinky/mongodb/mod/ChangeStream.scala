@@ -1,7 +1,7 @@
 package typingsSlinky.mongodb.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.mongodb.AnonTransformFunction
+import typingsSlinky.mongodb.anon.TransformFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,6 +29,6 @@ class ChangeStream[TSchema /* <: StringDictionary[js.Any] */] protected () exten
   def next(callback: MongoCallback[_]): Unit = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/ChangeStream.html#stream */
   def stream(): Cursor[Default] = js.native
-  def stream(options: AnonTransformFunction): Cursor[Default] = js.native
+  def stream(options: TransformFunction): Cursor[Default] = js.native
 }
 

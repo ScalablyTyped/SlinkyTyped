@@ -1,14 +1,14 @@
 package typingsSlinky.systeminformation.mod.Systeminformation
 
-import typingsSlinky.systeminformation.AnonR
-import typingsSlinky.systeminformation.AnonRx
+import typingsSlinky.systeminformation.anon.R
+import typingsSlinky.systeminformation.anon.Rx
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait DockerContainerStatsData extends js.Object {
-  var blockIO: AnonR = js.native
+  var blockIO: R = js.native
   var cpu_percent: Double = js.native
   var cpu_stats: js.Any = js.native
   var id: String = js.native
@@ -16,7 +16,7 @@ trait DockerContainerStatsData extends js.Object {
   var mem_percent: Double = js.native
   var mem_usage: Double = js.native
   var memory_stats: js.Any = js.native
-  var netIO: AnonRx = js.native
+  var netIO: Rx = js.native
   var networks: js.Any = js.native
   var precpu_stats: js.Any = js.native
   var restartCount: Double = js.native
@@ -25,7 +25,7 @@ trait DockerContainerStatsData extends js.Object {
 object DockerContainerStatsData {
   @scala.inline
   def apply(
-    blockIO: AnonR,
+    blockIO: R,
     cpu_percent: Double,
     cpu_stats: js.Any,
     id: String,
@@ -33,7 +33,7 @@ object DockerContainerStatsData {
     mem_percent: Double,
     mem_usage: Double,
     memory_stats: js.Any,
-    netIO: AnonRx,
+    netIO: Rx,
     networks: js.Any,
     precpu_stats: js.Any,
     restartCount: Double
@@ -48,7 +48,7 @@ object DockerContainerStatsData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBlockIO(value: AnonR): Self = {
+    def withBlockIO(value: R): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("blockIO")(value.asInstanceOf[js.Any])
         ret
@@ -96,7 +96,7 @@ object DockerContainerStatsData {
         ret
     }
     @scala.inline
-    def withNetIO(value: AnonRx): Self = {
+    def withNetIO(value: Rx): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("netIO")(value.asInstanceOf[js.Any])
         ret

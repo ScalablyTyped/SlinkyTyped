@@ -50,19 +50,14 @@ import typingsSlinky.androiduix.android.widget.TextView.OnEditorActionListener
 import typingsSlinky.androiduix.androidui.attr.AttrBinder.ClassBinderMap
 import typingsSlinky.androiduix.java_.lang.Runnable
 import typingsSlinky.androiduix.java_.util.ArrayList
-import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.widget.TextView")
 @js.native
-class TextView_ protected ()
+trait TextView_
   extends View
      with OnPreDrawListener {
-  def this(context: Context) = this()
-  def this(context: Context, bindElement: HTMLElement) = this()
-  def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String]) = this()
   var mAllowTransformationLengthChange: js.Any = js.native
   var mAutoLinkMask: js.Any = js.native
   var mBoring: js.Any = js.native

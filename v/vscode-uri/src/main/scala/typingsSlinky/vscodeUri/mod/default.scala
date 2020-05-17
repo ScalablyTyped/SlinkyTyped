@@ -1,6 +1,6 @@
 package typingsSlinky.vscodeUri.mod
 
-import typingsSlinky.vscodeUri.AnonAuthority
+import typingsSlinky.vscodeUri.anon.Authority
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,7 +49,7 @@ object default extends js.Object {
     * @param path A file system path (see `URI#fsPath`)
     */
   def file(path: String): URI = js.native
-  def from(components: AnonAuthority): URI = js.native
+  def from(components: Authority): URI = js.native
   def isUri(thing: js.Any): /* is vscode-uri.vscode-uri.URI */ Boolean = js.native
   /**
     * Creates a new URI from a string, e.g. `http://www.msft.com/some/path`,

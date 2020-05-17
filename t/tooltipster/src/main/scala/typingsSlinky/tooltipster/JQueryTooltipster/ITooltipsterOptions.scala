@@ -1,9 +1,9 @@
 package typingsSlinky.tooltipster.JQueryTooltipster
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.tooltipster.AnonClick
-import typingsSlinky.tooltipster.AnonMouseenter
 import typingsSlinky.tooltipster.JQuery
+import typingsSlinky.tooltipster.anon.Click
+import typingsSlinky.tooltipster.anon.Mouseenter
 import typingsSlinky.tooltipster.tooltipsterStrings.current
 import typingsSlinky.tooltipster.tooltipsterStrings.fade
 import typingsSlinky.tooltipster.tooltipsterStrings.fall
@@ -235,13 +235,13 @@ trait ITooltipsterOptions
   		 * allows you to reactivate the triggers of your choice to create a customized behavior. Only applies 
   		 * if 'trigger' is set to 'custom'. See http://iamceege.github.io/tooltipster/#triggers.
   		 */
-  var triggerClose: js.UndefOr[AnonClick] = js.native
+  var triggerClose: js.UndefOr[Click] = js.native
   /**
   		 * When 'trigger' is set to 'custom', all built-in open triggers are disabled by default. This option 
   		 * allows you to reactivate the triggers of your choice to create a customized behavior. Only applies 
   		 * if 'trigger' is set to 'custom'. See http://iamceege.github.io/tooltipster/#triggers.
   		 */
-  var triggerOpen: js.UndefOr[AnonMouseenter] = js.native
+  var triggerOpen: js.UndefOr[Mouseenter] = js.native
   /**
   		 * Plays a subtle animation when the content of the tooltip is updated (if the tooltip is open). You 
   		 * may create custom animations in your CSS files. Set to null to disable the animation. 
@@ -675,7 +675,7 @@ object ITooltipsterOptions {
         ret
     }
     @scala.inline
-    def withTriggerClose(value: AnonClick): Self = {
+    def withTriggerClose(value: Click): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("triggerClose")(value.asInstanceOf[js.Any])
         ret
@@ -687,7 +687,7 @@ object ITooltipsterOptions {
         ret
     }
     @scala.inline
-    def withTriggerOpen(value: AnonMouseenter): Self = {
+    def withTriggerOpen(value: Mouseenter): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("triggerOpen")(value.asInstanceOf[js.Any])
         ret

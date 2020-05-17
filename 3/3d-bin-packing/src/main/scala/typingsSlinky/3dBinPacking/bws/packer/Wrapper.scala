@@ -10,27 +10,8 @@ import scala.scalajs.js.annotation._
   * @author Jeongho Nam <http://samchon.org>
   */
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify protocol.EntityDeque<Wrap> * / any */ @JSGlobal("bws.packer.Wrapper")
-@js.native
-/**
-  * Default Constructor.
-  */
-class Wrapper () extends Instance {
-  /**
-    * Copy Constructor.
-    */
-  def this(wrapper: Wrapper) = this()
-  /**
-    * Construct from members.
-    *
-    * @param name Name, identifier of a Wrapper.
-    * @param price Price, issued cost for a type of the Wrapper.
-    * @param width Width, dimensional length on the X-axis in 3D.
-    * @param height Height, dimensional length on the Y-axis in 3D.
-    * @param length Length, dimensional length on the Z-axis in 3D.
-    * @param thickness A thickness causes shrinkness on containable volume.
-    */
-  def this(name: String, price: Double, width: Double, height: Double, length: Double, thickness: Double) = this()
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify protocol.EntityDeque<Wrap> * / any */ @js.native
+trait Wrapper extends Instance {
   @JSName("$height")
   var $height: String = js.native
   @JSName("$length")
@@ -162,5 +143,244 @@ class Wrapper () extends Instance {
     * @inheritdoc
     */
   def toXML(): js.Any = js.native
+}
+
+object Wrapper {
+  @scala.inline
+  def apply(
+    $height: String,
+    $length: String,
+    $name: String,
+    $price: String,
+    $scale: String,
+    $spaceUtilization: String,
+    $thickness: String,
+    $width: String,
+    CHILD_TAG: () => String,
+    TAG: () => String,
+    TYPE: () => String,
+    containable: Instance => Boolean,
+    createChild: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify library.XML */ js.Any => Wrap,
+    equals: Wrapper => Boolean,
+    getContainableHeight: () => Double,
+    getContainableLength: () => Double,
+    getContainableVolume: () => Double,
+    getContainableWidth: () => Double,
+    getHeight: () => Double,
+    getLength: () => Double,
+    getName: () => String,
+    getPrice: () => Double,
+    getThickness: () => Double,
+    getUtilization: () => Double,
+    getVolume: () => Double,
+    getWidth: () => Double,
+    height: Double,
+    key: () => js.Any,
+    length: Double,
+    name: String,
+    price: Double,
+    setHeight: Double => Unit,
+    setLength: Double => Unit,
+    setName: String => Unit,
+    setPrice: Double => Unit,
+    setThickness: Double => Unit,
+    setWidth: Double => Unit,
+    thickness: Double,
+    toXML: () => js.Any,
+    width: Double
+  ): Wrapper = {
+    val __obj = js.Dynamic.literal($height = $height.asInstanceOf[js.Any], $length = $length.asInstanceOf[js.Any], $name = $name.asInstanceOf[js.Any], $price = $price.asInstanceOf[js.Any], $scale = $scale.asInstanceOf[js.Any], $spaceUtilization = $spaceUtilization.asInstanceOf[js.Any], $thickness = $thickness.asInstanceOf[js.Any], $width = $width.asInstanceOf[js.Any], CHILD_TAG = js.Any.fromFunction0(CHILD_TAG), TAG = js.Any.fromFunction0(TAG), TYPE = js.Any.fromFunction0(TYPE), containable = js.Any.fromFunction1(containable), createChild = js.Any.fromFunction1(createChild), equals = js.Any.fromFunction1(equals), getContainableHeight = js.Any.fromFunction0(getContainableHeight), getContainableLength = js.Any.fromFunction0(getContainableLength), getContainableVolume = js.Any.fromFunction0(getContainableVolume), getContainableWidth = js.Any.fromFunction0(getContainableWidth), getHeight = js.Any.fromFunction0(getHeight), getLength = js.Any.fromFunction0(getLength), getName = js.Any.fromFunction0(getName), getPrice = js.Any.fromFunction0(getPrice), getThickness = js.Any.fromFunction0(getThickness), getUtilization = js.Any.fromFunction0(getUtilization), getVolume = js.Any.fromFunction0(getVolume), getWidth = js.Any.fromFunction0(getWidth), height = height.asInstanceOf[js.Any], key = js.Any.fromFunction0(key), length = length.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], price = price.asInstanceOf[js.Any], setHeight = js.Any.fromFunction1(setHeight), setLength = js.Any.fromFunction1(setLength), setName = js.Any.fromFunction1(setName), setPrice = js.Any.fromFunction1(setPrice), setThickness = js.Any.fromFunction1(setThickness), setWidth = js.Any.fromFunction1(setWidth), thickness = thickness.asInstanceOf[js.Any], toXML = js.Any.fromFunction0(toXML), width = width.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Wrapper]
+  }
+  @scala.inline
+  implicit class WrapperOps[Self <: Wrapper] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$height(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$length(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$price(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$price")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$scale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$spaceUtilization(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$spaceUtilization")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$thickness(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$thickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$width(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCHILD_TAG(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CHILD_TAG")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withTAG(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TAG")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withContainable(value: Instance => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containable")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateChild(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify library.XML */ js.Any => Wrap
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createChild")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEquals(value: Wrapper => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetContainableHeight(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getContainableHeight")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetContainableLength(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getContainableLength")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetContainableVolume(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getContainableVolume")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetContainableWidth(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getContainableWidth")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPrice(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPrice")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetThickness(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getThickness")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetUtilization(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getUtilization")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKey(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrice(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("price")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetPrice(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setPrice")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetThickness(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setThickness")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withThickness(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thickness")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToXML(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toXML")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -2,7 +2,7 @@ package typingsSlinky.flot.jquery.flot
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait hooks extends js.Object {
   var bindEvents: js.UndefOr[
-    js.Array[js.Function2[/* plot */ plot, /* eventHolder */ JQuery_[HTMLElement], Unit]]
+    js.Array[js.Function2[/* plot */ plot, /* eventHolder */ JQuery[HTMLElement], Unit]]
   ] = js.native
   var draw: js.UndefOr[
     js.Array[js.Function2[/* plot */ plot, /* context */ CanvasRenderingContext2D, Unit]]
@@ -45,7 +45,7 @@ trait hooks extends js.Object {
     ]
   ] = js.native
   var shutdown: js.UndefOr[
-    js.Array[js.Function2[/* plot */ plot, /* eventHolder */ JQuery_[HTMLElement], Unit]]
+    js.Array[js.Function2[/* plot */ plot, /* eventHolder */ JQuery[HTMLElement], Unit]]
   ] = js.native
 }
 
@@ -62,7 +62,7 @@ object hooks {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBindEvents(value: js.Array[js.Function2[/* plot */ plot, /* eventHolder */ JQuery_[HTMLElement], Unit]]): Self = {
+    def withBindEvents(value: js.Array[js.Function2[/* plot */ plot, /* eventHolder */ JQuery[HTMLElement], Unit]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bindEvents")(value.asInstanceOf[js.Any])
         ret
@@ -188,7 +188,7 @@ object hooks {
         ret
     }
     @scala.inline
-    def withShutdown(value: js.Array[js.Function2[/* plot */ plot, /* eventHolder */ JQuery_[HTMLElement], Unit]]): Self = {
+    def withShutdown(value: js.Array[js.Function2[/* plot */ plot, /* eventHolder */ JQuery[HTMLElement], Unit]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shutdown")(value.asInstanceOf[js.Any])
         ret

@@ -41,18 +41,6 @@ object GroupedDataFormat {
         ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
         ret
     }
-    @scala.inline
-    def withId(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutId: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(js.undefined)
-        ret
-    }
   }
   
 }

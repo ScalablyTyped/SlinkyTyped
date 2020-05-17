@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.IHandle
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`cursor-update`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`draw-complete`
@@ -64,8 +63,4 @@ trait SegmentDrawAction extends DrawAction {
   @JSName("on")
   def on_vertexadd(name: `vertex-add`, eventHandler: SegmentDrawActionVertexAddEventHandler): IHandle = js.native
 }
-
-@JSGlobal("__esri.SegmentDrawAction")
-@js.native
-object SegmentDrawAction extends TopLevel[SegmentDrawActionConstructor]
 

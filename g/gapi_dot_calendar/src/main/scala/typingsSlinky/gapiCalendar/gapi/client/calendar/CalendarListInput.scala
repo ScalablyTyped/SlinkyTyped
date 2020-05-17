@@ -1,7 +1,7 @@
 package typingsSlinky.gapiCalendar.gapi.client.calendar
 
-import typingsSlinky.gapiCalendar.AnonMethod
-import typingsSlinky.gapiCalendar.AnonNotifications
+import typingsSlinky.gapiCalendar.anon.Method
+import typingsSlinky.gapiCalendar.anon.Notifications
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,12 +11,12 @@ trait CalendarListInput extends js.Object {
   // Optional Properties
   var backgroundColor: js.UndefOr[String] = js.native
   var colorId: js.UndefOr[String] = js.native
-  var defaultReminders: js.UndefOr[js.Array[AnonMethod]] = js.native
+  var defaultReminders: js.UndefOr[js.Array[Method]] = js.native
   var foregroundColor: js.UndefOr[String] = js.native
   var hidden: js.UndefOr[Boolean] = js.native
   // Required Properties
   var id: String = js.native
-  var notificationSettings: js.UndefOr[AnonNotifications] = js.native
+  var notificationSettings: js.UndefOr[Notifications] = js.native
   var selected: js.UndefOr[Boolean] = js.native
   var summaryOverride: js.UndefOr[String] = js.native
 }
@@ -64,7 +64,7 @@ object CalendarListInput {
         ret
     }
     @scala.inline
-    def withDefaultReminders(value: js.Array[AnonMethod]): Self = {
+    def withDefaultReminders(value: js.Array[Method]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defaultReminders")(value.asInstanceOf[js.Any])
         ret
@@ -100,7 +100,7 @@ object CalendarListInput {
         ret
     }
     @scala.inline
-    def withNotificationSettings(value: AnonNotifications): Self = {
+    def withNotificationSettings(value: Notifications): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notificationSettings")(value.asInstanceOf[js.Any])
         ret

@@ -1,16 +1,15 @@
 package typingsSlinky.winrt.Windows.Devices.Sms
 
-import typingsSlinky.winrt.AnonCompletedGetResults
 import typingsSlinky.winrt.Windows.Foundation.IAsyncAction
 import typingsSlinky.winrt.Windows.Foundation.IPromise
+import typingsSlinky.winrt.anon.CompletedGetResults
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Devices.Sms.DeleteSmsMessagesOperation")
 @js.native
-class DeleteSmsMessagesOperation () extends IAsyncAction {
-  var operation: AnonCompletedGetResults = js.native
+trait DeleteSmsMessagesOperation extends IAsyncAction {
+  var operation: CompletedGetResults = js.native
   @JSName("done")
   def done_MDeleteSmsMessagesOperation[U](): Unit = js.native
   @JSName("done")

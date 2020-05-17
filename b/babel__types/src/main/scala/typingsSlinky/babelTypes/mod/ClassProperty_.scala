@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babelTypes.mod._Node because Already inherited */ @js.native
+- typingsSlinky.babelTypes.mod.Node because Already inherited */ @js.native
 trait ClassProperty_
   extends Property
      with BaseNode {

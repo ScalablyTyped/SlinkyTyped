@@ -12,9 +12,8 @@ import scala.scalajs.js.annotation._
   * @property {string} name Human-readable name of the animation.
   * @property {number} duration Duration of the animation in seconds.
   */
-@JSGlobal("pc.Animation")
 @js.native
-class Animation () extends js.Object {
+trait Animation extends js.Object {
   /**
     * Duration of the animation in seconds.
     */
@@ -45,5 +44,57 @@ class Animation () extends js.Object {
     * @returns {pc.Node} The pc.Node with the specified name.
     */
   def getNode(name: String): Node = js.native
+}
+
+object Animation {
+  @scala.inline
+  def apply(
+    addNode: Node => Unit,
+    duration: Double,
+    getNode: String => Node,
+    name: String,
+    nodes: js.Array[Node]
+  ): Animation = {
+    val __obj = js.Dynamic.literal(addNode = js.Any.fromFunction1(addNode), duration = duration.asInstanceOf[js.Any], getNode = js.Any.fromFunction1(getNode), name = name.asInstanceOf[js.Any], nodes = nodes.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Animation]
+  }
+  @scala.inline
+  implicit class AnimationOps[Self <: Animation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddNode(value: Node => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addNode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetNode(value: String => Node): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNodes(value: js.Array[Node]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

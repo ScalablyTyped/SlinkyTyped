@@ -1,8 +1,7 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.AnonChildrenFlatten
-import typingsSlinky.tabris.AnonImage
-import typingsSlinky.tabris.OmitActionSheetset
+import typingsSlinky.tabris.anon.ChildrenFlatten
+import typingsSlinky.tabris.anon.OmitActionSheetset
 import typingsSlinky.tabris.tabrisStrings.actions
 import typingsSlinky.tabris.tabrisStrings.message
 import typingsSlinky.tabris.tabrisStrings.set
@@ -19,12 +18,12 @@ class ActionSheet () extends Popup {
     * An array of objects describing the actions to be displayed. The entries may be instances of
     * `ActionSheetItem` *or plain objects* with some or all of the same properties.
     */
-  var actions: js.Array[AnonImage] = js.native
+  var actions: js.Array[typingsSlinky.tabris.anon.Image] = js.native
   /**
     * @constant
     */
   @JSName("jsxAttributes")
-  val jsxAttributes_ActionSheet: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with AnonChildrenFlatten = js.native
+  val jsxAttributes_ActionSheet: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with ChildrenFlatten = js.native
   /**
     * A descriptive message for the available actions.
     */

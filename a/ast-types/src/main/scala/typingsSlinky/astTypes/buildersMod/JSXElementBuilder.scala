@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonAttributes
+import typingsSlinky.astTypes.anon.Attributes
 import typingsSlinky.astTypes.kindsMod.JSXClosingElementKind
 import typingsSlinky.astTypes.kindsMod.JSXElementKind
 import typingsSlinky.astTypes.kindsMod.JSXExpressionContainerKind
@@ -31,6 +31,6 @@ trait JSXElementBuilder extends js.Object {
       JSXElementKind | JSXExpressionContainerKind | JSXFragmentKind | JSXTextKind | LiteralKind
     ]
   ): JSXElement = js.native
-  def from(params: AnonAttributes): JSXElement = js.native
+  def from(params: Attributes): JSXElement = js.native
 }
 

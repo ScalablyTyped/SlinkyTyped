@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 /**
 	 * A container for binary data.
 	 */
-@JSGlobal("Titanium.Blob")
 @js.native
-class Blob () extends Proxy {
+trait Blob extends Proxy {
   /**
   		 * File object represented by this blob, or `null` if this blob is not
   		 * associated with a file.

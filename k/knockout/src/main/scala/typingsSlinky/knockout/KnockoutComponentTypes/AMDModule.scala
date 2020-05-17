@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 // common AMD type
 @js.native
-trait AMDModule extends _ViewModel {
+trait AMDModule extends ViewModel {
   var require: String = js.native
 }
 

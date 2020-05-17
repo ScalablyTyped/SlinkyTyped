@@ -1,6 +1,6 @@
 package typingsSlinky.paypalRestSdk.mod
 
-import typingsSlinky.paypalRestSdk.AnonBrandname
+import typingsSlinky.paypalRestSdk.anon.Brandname
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait Payee extends js.Object {
   var email: String = js.native
   var merchant_id: String = js.native
-  var payee_display_metadata: js.UndefOr[AnonBrandname] = js.native
+  var payee_display_metadata: js.UndefOr[Brandname] = js.native
 }
 
 object Payee {
@@ -37,7 +37,7 @@ object Payee {
         ret
     }
     @scala.inline
-    def withPayee_display_metadata(value: AnonBrandname): Self = {
+    def withPayee_display_metadata(value: Brandname): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("payee_display_metadata")(value.asInstanceOf[js.Any])
         ret

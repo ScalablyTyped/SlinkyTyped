@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,9 +12,4 @@ trait HTMLUListElement extends HTMLElement {
   /** @deprecated */
   var `type`: java.lang.String = js.native
 }
-
-@JSGlobal("HTMLUListElement")
-@js.native
-object HTMLUListElement
-  extends Instantiable0[org.scalajs.dom.raw.HTMLUListElement]
 

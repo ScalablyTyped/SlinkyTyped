@@ -1,6 +1,6 @@
 package typingsSlinky.rcFieldForm.fieldMod
 
-import typingsSlinky.rcFieldForm.AnonTrigger
+import typingsSlinky.rcFieldForm.anon.Trigger
 import typingsSlinky.rcFieldForm.interfaceMod.InternalFormInstance
 import typingsSlinky.react.mod.Context
 import scala.scalajs.js
@@ -16,6 +16,6 @@ class default () extends Field
 @js.native
 object default extends js.Object {
   var contextType: Context[InternalFormInstance] = js.native
-  var defaultProps: AnonTrigger = js.native
+  var defaultProps: Trigger = js.native
 }
 

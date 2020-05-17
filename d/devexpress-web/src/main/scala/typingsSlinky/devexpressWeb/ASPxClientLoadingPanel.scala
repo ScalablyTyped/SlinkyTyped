@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a client-side equivalent of the ASPxLoadingPanel control.
   */
-@JSGlobal("ASPxClientLoadingPanel")
 @js.native
-class ASPxClientLoadingPanel () extends ASPxClientControl {
+trait ASPxClientLoadingPanel extends ASPxClientControl {
   /**
     * Gets the text displayed within the ASPxLoadingPanel.
     */
@@ -45,14 +44,84 @@ class ASPxClientLoadingPanel () extends ASPxClientControl {
   def ShowInElementByID(id: String): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("ASPxClientLoadingPanel")
-@js.native
-object ASPxClientLoadingPanel extends js.Object {
-  /**
-    * Converts the specified object to the ASPxClientLoadingPanel type. The converted client object specified by the obj parameter.
-    * @param obj The client object to be type cast.
-    */
-  def Cast(obj: js.Any): ASPxClientLoadingPanel = js.native
+object ASPxClientLoadingPanel {
+  @scala.inline
+  def apply(
+    AdjustControl: () => Unit,
+    GetClientVisible: () => Boolean,
+    GetHeight: () => Double,
+    GetMainElement: () => js.Any,
+    GetParentControl: () => js.Any,
+    GetText: () => String,
+    GetVisible: () => Boolean,
+    GetWidth: () => Double,
+    Hide: () => Unit,
+    InCallback: () => Boolean,
+    Init: ASPxClientEvent[ASPxClientEventHandler[ASPxClientControlBase]],
+    SendMessageToAssistiveTechnology: String => Unit,
+    SetClientVisible: Boolean => Unit,
+    SetHeight: Double => Unit,
+    SetText: String => Unit,
+    SetVisible: Boolean => Unit,
+    SetWidth: Double => Unit,
+    Show: () => Unit,
+    ShowAtPos: (Double, Double) => Unit,
+    ShowInElement: js.Any => Unit,
+    ShowInElementByID: String => Unit,
+    name: String
+  ): ASPxClientLoadingPanel = {
+    val __obj = js.Dynamic.literal(AdjustControl = js.Any.fromFunction0(AdjustControl), GetClientVisible = js.Any.fromFunction0(GetClientVisible), GetHeight = js.Any.fromFunction0(GetHeight), GetMainElement = js.Any.fromFunction0(GetMainElement), GetParentControl = js.Any.fromFunction0(GetParentControl), GetText = js.Any.fromFunction0(GetText), GetVisible = js.Any.fromFunction0(GetVisible), GetWidth = js.Any.fromFunction0(GetWidth), Hide = js.Any.fromFunction0(Hide), InCallback = js.Any.fromFunction0(InCallback), Init = Init.asInstanceOf[js.Any], SendMessageToAssistiveTechnology = js.Any.fromFunction1(SendMessageToAssistiveTechnology), SetClientVisible = js.Any.fromFunction1(SetClientVisible), SetHeight = js.Any.fromFunction1(SetHeight), SetText = js.Any.fromFunction1(SetText), SetVisible = js.Any.fromFunction1(SetVisible), SetWidth = js.Any.fromFunction1(SetWidth), Show = js.Any.fromFunction0(Show), ShowAtPos = js.Any.fromFunction2(ShowAtPos), ShowInElement = js.Any.fromFunction1(ShowInElement), ShowInElementByID = js.Any.fromFunction1(ShowInElementByID), name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientLoadingPanel]
+  }
+  @scala.inline
+  implicit class ASPxClientLoadingPanelOps[Self <: ASPxClientLoadingPanel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetText(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetText")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHide(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Hide")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetText(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withShow(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Show")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withShowAtPos(value: (Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowAtPos")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withShowInElement(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowInElement")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withShowInElementByID(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowInElementByID")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

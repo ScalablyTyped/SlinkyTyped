@@ -1,6 +1,6 @@
 package typingsSlinky.relayRuntime.readerNodeMod
 
-import typingsSlinky.relayRuntime.AnonRefetch
+import typingsSlinky.relayRuntime.anon.Refetch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ReaderRefetchableFragment extends ReaderFragment {
   @JSName("metadata")
-  val metadata_ReaderRefetchableFragment: AnonRefetch = js.native
+  val metadata_ReaderRefetchableFragment: Refetch = js.native
 }
 
 object ReaderRefetchableFragment {
@@ -16,7 +16,7 @@ object ReaderRefetchableFragment {
   def apply(
     argumentDefinitions: js.Array[ReaderArgumentDefinition],
     kind: String,
-    metadata: AnonRefetch,
+    metadata: Refetch,
     name: String,
     selections: js.Array[ReaderSelection],
     `type`: String
@@ -32,7 +32,7 @@ object ReaderRefetchableFragment {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMetadata(value: AnonRefetch): Self = {
+    def withMetadata(value: Refetch): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
         ret

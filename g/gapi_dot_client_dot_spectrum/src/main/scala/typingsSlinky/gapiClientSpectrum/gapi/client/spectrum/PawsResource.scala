@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientSpectrum.gapi.client.spectrum
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientSpectrum.AnonAlt
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientSpectrum.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,34 +12,34 @@ trait PawsResource extends js.Object {
     * Requests information about the available spectrum for a device at a location. Requests from a fixed-mode device must include owner information so the
     * device can be registered with the database.
     */
-  def getSpectrum(request: AnonAlt): Request_[PawsGetSpectrumResponse] = js.native
+  def getSpectrum(request: Alt): Request[PawsGetSpectrumResponse] = js.native
   /** The Google Spectrum Database does not support batch requests, so this method always yields an UNIMPLEMENTED error. */
-  def getSpectrumBatch(request: AnonAlt): Request_[PawsGetSpectrumBatchResponse] = js.native
+  def getSpectrumBatch(request: Alt): Request[PawsGetSpectrumBatchResponse] = js.native
   /** Initializes the connection between a white space device and the database. */
-  def init(request: AnonAlt): Request_[PawsInitResponse] = js.native
+  def init(request: Alt): Request[PawsInitResponse] = js.native
   /**
     * Notifies the database that the device has selected certain frequency ranges for transmission. Only to be invoked when required by the regulator. The
     * Google Spectrum Database does not operate in domains that require notification, so this always yields an UNIMPLEMENTED error.
     */
-  def notifySpectrumUse(request: AnonAlt): Request_[PawsNotifySpectrumUseResponse] = js.native
+  def notifySpectrumUse(request: Alt): Request[PawsNotifySpectrumUseResponse] = js.native
   /** The Google Spectrum Database implements registration in the getSpectrum method. As such this always returns an UNIMPLEMENTED error. */
-  def register(request: AnonAlt): Request_[PawsRegisterResponse] = js.native
+  def register(request: Alt): Request[PawsRegisterResponse] = js.native
   /**
     * Validates a device for white space use in accordance with regulatory rules. The Google Spectrum Database does not support master/slave configurations,
     * so this always yields an UNIMPLEMENTED error.
     */
-  def verifyDevice(request: AnonAlt): Request_[PawsVerifyDeviceResponse] = js.native
+  def verifyDevice(request: Alt): Request[PawsVerifyDeviceResponse] = js.native
 }
 
 object PawsResource {
   @scala.inline
   def apply(
-    getSpectrum: AnonAlt => Request_[PawsGetSpectrumResponse],
-    getSpectrumBatch: AnonAlt => Request_[PawsGetSpectrumBatchResponse],
-    init: AnonAlt => Request_[PawsInitResponse],
-    notifySpectrumUse: AnonAlt => Request_[PawsNotifySpectrumUseResponse],
-    register: AnonAlt => Request_[PawsRegisterResponse],
-    verifyDevice: AnonAlt => Request_[PawsVerifyDeviceResponse]
+    getSpectrum: Alt => Request[PawsGetSpectrumResponse],
+    getSpectrumBatch: Alt => Request[PawsGetSpectrumBatchResponse],
+    init: Alt => Request[PawsInitResponse],
+    notifySpectrumUse: Alt => Request[PawsNotifySpectrumUseResponse],
+    register: Alt => Request[PawsRegisterResponse],
+    verifyDevice: Alt => Request[PawsVerifyDeviceResponse]
   ): PawsResource = {
     val __obj = js.Dynamic.literal(getSpectrum = js.Any.fromFunction1(getSpectrum), getSpectrumBatch = js.Any.fromFunction1(getSpectrumBatch), init = js.Any.fromFunction1(init), notifySpectrumUse = js.Any.fromFunction1(notifySpectrumUse), register = js.Any.fromFunction1(register), verifyDevice = js.Any.fromFunction1(verifyDevice))
     __obj.asInstanceOf[PawsResource]
@@ -51,37 +51,37 @@ object PawsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetSpectrum(value: AnonAlt => Request_[PawsGetSpectrumResponse]): Self = {
+    def withGetSpectrum(value: Alt => Request[PawsGetSpectrumResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getSpectrum")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGetSpectrumBatch(value: AnonAlt => Request_[PawsGetSpectrumBatchResponse]): Self = {
+    def withGetSpectrumBatch(value: Alt => Request[PawsGetSpectrumBatchResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getSpectrumBatch")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withInit(value: AnonAlt => Request_[PawsInitResponse]): Self = {
+    def withInit(value: Alt => Request[PawsInitResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withNotifySpectrumUse(value: AnonAlt => Request_[PawsNotifySpectrumUseResponse]): Self = {
+    def withNotifySpectrumUse(value: Alt => Request[PawsNotifySpectrumUseResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notifySpectrumUse")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withRegister(value: AnonAlt => Request_[PawsRegisterResponse]): Self = {
+    def withRegister(value: Alt => Request[PawsRegisterResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("register")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withVerifyDevice(value: AnonAlt => Request_[PawsVerifyDeviceResponse]): Self = {
+    def withVerifyDevice(value: Alt => Request[PawsVerifyDeviceResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("verifyDevice")(js.Any.fromFunction1(value))
         ret

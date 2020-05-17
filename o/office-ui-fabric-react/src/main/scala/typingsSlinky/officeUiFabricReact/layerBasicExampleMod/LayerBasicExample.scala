@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.layerBasicExampleMod
 
-import typingsSlinky.officeUiFabricReact.AnonShowLayer
+import typingsSlinky.officeUiFabricReact.anon.ShowLayer
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,6 +12,6 @@ class LayerBasicExample ()
   extends Component[js.Object, ILayerBasicExampleState, js.Any] {
   var _onChange: js.Any = js.native
   @JSName("state")
-  var state_LayerBasicExample: AnonShowLayer = js.native
+  var state_LayerBasicExample: ShowLayer = js.native
 }
 

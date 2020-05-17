@@ -1,14 +1,14 @@
 package typingsSlinky.rcDialog.idialogproptypesMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.rcDialog.AnonX
+import typingsSlinky.rcDialog.anon.X
 import typingsSlinky.rcDialog.rcDialogBooleans.`false`
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,8 +36,8 @@ trait IDialogPropTypes extends js.Object {
   var maskProps: js.UndefOr[js.Any] = js.native
   var maskStyle: js.UndefOr[js.Object] = js.native
   var maskTransitionName: js.UndefOr[String] = js.native
-  var mousePosition: js.UndefOr[AnonX] = js.native
-  var onClose: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event_, HTMLDivElement], _]] = js.native
+  var mousePosition: js.UndefOr[X] = js.native
+  var onClose: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event, HTMLDivElement], _]] = js.native
   var prefixCls: js.UndefOr[String] = js.native
   var style: js.UndefOr[CSSProperties] = js.native
   var title: js.UndefOr[TagMod[Any]] = js.native
@@ -339,7 +339,7 @@ object IDialogPropTypes {
         ret
     }
     @scala.inline
-    def withMousePosition(value: AnonX): Self = {
+    def withMousePosition(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mousePosition")(value.asInstanceOf[js.Any])
         ret
@@ -351,7 +351,7 @@ object IDialogPropTypes {
         ret
     }
     @scala.inline
-    def withOnClose(value: /* e */ SyntheticEvent[Event_, HTMLDivElement] => _): Self = {
+    def withOnClose(value: /* e */ SyntheticEvent[Event, HTMLDivElement] => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction1(value))
         ret

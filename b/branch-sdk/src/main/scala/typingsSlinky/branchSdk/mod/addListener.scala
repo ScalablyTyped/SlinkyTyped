@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object addListener extends js.Object {
   def apply(
-    event: js.UndefOr[scala.Nothing],
+    event: js.UndefOr[JourneyEvent],
     listener: js.Function2[/* event */ JourneyEvent, /* data */ js.Object, Unit]
   ): Unit = js.native
-  def apply(event: JourneyEvent, listener: js.Function2[/* event */ JourneyEvent, /* data */ js.Object, Unit]): Unit = js.native
 }
 

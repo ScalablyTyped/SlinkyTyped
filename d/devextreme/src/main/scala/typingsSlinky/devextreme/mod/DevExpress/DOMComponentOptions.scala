@@ -1,7 +1,7 @@
 package typingsSlinky.devextreme.mod.DevExpress
 
-import typingsSlinky.devextreme.AnonModel
-import typingsSlinky.devextreme.AnonName
+import typingsSlinky.devextreme.anon.Model
+import typingsSlinky.devextreme.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,10 +15,10 @@ trait DOMComponentOptions[T] extends ComponentOptions[T] {
   var height: js.UndefOr[Double | String | (js.Function0[Double | String])] = js.native
   /** A function that is executed before the widget is disposed of. */
   @JSName("onDisposing")
-  var onDisposing_DOMComponentOptions: js.UndefOr[js.Function1[/* e */ AnonModel[T], _]] = js.native
+  var onDisposing_DOMComponentOptions: js.UndefOr[js.Function1[/* e */ Model[T], _]] = js.native
   /** A function that is executed after a widget option is changed. */
   @JSName("onOptionChanged")
-  var onOptionChanged_DOMComponentOptions: js.UndefOr[js.Function1[/* e */ AnonName[T], _]] = js.native
+  var onOptionChanged_DOMComponentOptions: js.UndefOr[js.Function1[/* e */ Name[T], _]] = js.native
   /** Switches the widget to a right-to-left representation. */
   var rtlEnabled: js.UndefOr[Boolean] = js.native
   /** Specifies the widget's width. */
@@ -80,7 +80,7 @@ object DOMComponentOptions {
         ret
     }
     @scala.inline
-    def withOnDisposing(value: /* e */ AnonModel[T] => _): Self[T] = {
+    def withOnDisposing(value: /* e */ Model[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDisposing")(js.Any.fromFunction1(value))
         ret
@@ -92,7 +92,7 @@ object DOMComponentOptions {
         ret
     }
     @scala.inline
-    def withOnOptionChanged(value: /* e */ AnonName[T] => _): Self[T] = {
+    def withOnOptionChanged(value: /* e */ Name[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOptionChanged")(js.Any.fromFunction1(value))
         ret

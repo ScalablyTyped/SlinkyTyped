@@ -1,5 +1,6 @@
 package typingsSlinky.fridaGum
 
+import typingsSlinky.fridaGum.anon.Block
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +24,7 @@ trait StalkerOptions extends js.Object {
     * Which events, if any, should be generated and periodically delivered to
     * `onReceive()` and/or `onCallSummary()`.
     */
-  var events: js.UndefOr[AnonBlock] = js.native
+  var events: js.UndefOr[Block] = js.native
   /**
     * Callback that periodically receives a summary of `call` events that
     * happened in each time window.
@@ -78,7 +79,7 @@ object StalkerOptions {
         ret
     }
     @scala.inline
-    def withEvents(value: AnonBlock): Self = {
+    def withEvents(value: Block): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
         ret

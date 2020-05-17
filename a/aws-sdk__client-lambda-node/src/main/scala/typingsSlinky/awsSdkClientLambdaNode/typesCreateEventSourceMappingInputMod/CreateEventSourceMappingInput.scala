@@ -3,7 +3,7 @@ package typingsSlinky.awsSdkClientLambdaNode.typesCreateEventSourceMappingInputM
 import typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.AT_TIMESTAMP
 import typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.LATEST
 import typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.TRIM_HORIZON
-import typingsSlinky.awsSdkClientLambdaNode.inputTypesUnionMod._InputTypesUnion
+import typingsSlinky.awsSdkClientLambdaNode.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.httpMod.NodeHttpOptions
 import scala.scalajs.js
@@ -11,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CreateEventSourceMappingInput extends _InputTypesUnion {
+trait CreateEventSourceMappingInput extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *

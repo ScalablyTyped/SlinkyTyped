@@ -6,10 +6,10 @@ import org.scalajs.dom.raw.HTMLDocument
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import typingsSlinky.prettyFormat.mod.OptionsReceived
-import typingsSlinky.testingLibraryDom.AnonContainer
-import typingsSlinky.testingLibraryDom.AnonInterval
-import typingsSlinky.testingLibraryDom.AnonMutationObserverOptions
-import typingsSlinky.testingLibraryDom.PartialConfig
+import typingsSlinky.testingLibraryDom.anon.Container
+import typingsSlinky.testingLibraryDom.anon.Interval
+import typingsSlinky.testingLibraryDom.anon.MutationObserverOptions
+import typingsSlinky.testingLibraryDom.anon.PartialConfig
 import typingsSlinky.testingLibraryDom.configMod.ConfigFn
 import typingsSlinky.testingLibraryDom.eventsMod.CreateObject
 import typingsSlinky.testingLibraryDom.eventsMod.FireFunction
@@ -39,6 +39,9 @@ import typingsSlinky.testingLibraryDom.queryHelpersMod.BuiltQueryMethods
 import typingsSlinky.testingLibraryDom.queryHelpersMod.GetAllBy
 import typingsSlinky.testingLibraryDom.queryHelpersMod.QueryByAttribute_
 import typingsSlinky.testingLibraryDom.waitForElementMod.WaitForElementOptions
+import typingsSlinky.testingLibraryReact.anon.FnCall
+import typingsSlinky.testingLibraryReact.anon.OmitRenderOptionsreadonly
+import typingsSlinky.testingLibraryReact.anon.RenderResultreadonlygetAl
 import typingsSlinky.testingLibraryReact.mod.RenderOptions
 import typingsSlinky.testingLibraryReact.mod.RenderResult
 import typingsSlinky.testingLibraryReact.testingLibraryReactBooleans.`false`
@@ -137,17 +140,17 @@ object pureMod extends js.Object {
   def render(ui: ReactElement, options: OmitRenderOptionsreadonly): RenderResultreadonlygetAl = js.native
   def render[Q /* <: Queries */](ui: ReactElement, options: RenderOptions[Q]): RenderResult[Q] = js.native
   def wait(callback: js.Function0[Unit]): js.Promise[Unit] = js.native
-  def wait(callback: js.Function0[Unit], options: AnonInterval): js.Promise[Unit] = js.native
+  def wait(callback: js.Function0[Unit], options: Interval): js.Promise[Unit] = js.native
   def waitFor[T](callback: js.Function0[T]): js.Promise[T] = js.native
-  def waitFor[T](callback: js.Function0[T], options: AnonContainer): js.Promise[T] = js.native
+  def waitFor[T](callback: js.Function0[T], options: Container): js.Promise[T] = js.native
   def waitForDomChange(): js.Promise[_] = js.native
-  def waitForDomChange(options: AnonMutationObserverOptions): js.Promise[_] = js.native
+  def waitForDomChange(options: MutationObserverOptions): js.Promise[_] = js.native
   def waitForElement[T](callback: js.Function0[T]): js.Promise[T] = js.native
   def waitForElement[T](callback: js.Function0[T], options: WaitForElementOptions): js.Promise[T] = js.native
   def waitForElementToBeRemoved[T](callback: T): js.Promise[T] = js.native
-  def waitForElementToBeRemoved[T](callback: T, options: AnonContainer): js.Promise[T] = js.native
+  def waitForElementToBeRemoved[T](callback: T, options: Container): js.Promise[T] = js.native
   def waitForElementToBeRemoved[T](callback: js.Function0[T]): js.Promise[T] = js.native
-  def waitForElementToBeRemoved[T](callback: js.Function0[T], options: AnonContainer): js.Promise[T] = js.native
+  def waitForElementToBeRemoved[T](callback: js.Function0[T], options: Container): js.Promise[T] = js.native
   @js.native
   object queries extends js.Object {
     val findAllByAltText: FindAllByBoundAttribute = js.native

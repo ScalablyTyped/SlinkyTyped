@@ -1,7 +1,7 @@
 package typingsSlinky.plotlyJs.mod
 
-import typingsSlinky.plotlyJs.PartialDomain
-import typingsSlinky.plotlyJs.PartialLayoutAxis
+import typingsSlinky.plotlyJs.anon.PartialDomain
+import typingsSlinky.plotlyJs.anon.PartialLayoutAxis
 import typingsSlinky.plotlyJs.plotlyJsStrings.circular
 import typingsSlinky.plotlyJs.plotlyJsStrings.linear
 import scala.scalajs.js

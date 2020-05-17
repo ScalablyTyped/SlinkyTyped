@@ -1,6 +1,6 @@
 package typingsSlinky.notyf.notyfModelsMod
 
-import typingsSlinky.notyf.DeepPartialINotyfNotifica
+import typingsSlinky.notyf.anon.DeepPartialINotyfNotifica
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

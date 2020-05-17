@@ -1,6 +1,7 @@
 package typingsSlinky.smoothScrollbar
 
 import org.scalajs.dom.raw.EventTarget
+import typingsSlinky.smoothScrollbar.anon.PartialScrollbarOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

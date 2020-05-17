@@ -1,6 +1,6 @@
 package typingsSlinky.graphqlCompose.inputTypeComposerMod
 
-import typingsSlinky.graphql.GraphQLInputObjectTypeCon
+import typingsSlinky.graphql.anon.GraphQLInputObjectTypeCon
 import typingsSlinky.graphql.astMod.InputObjectTypeDefinitionNode
 import typingsSlinky.graphql.astMod.InputObjectTypeExtensionNode
 import typingsSlinky.graphql.definitionMod.GraphQLInputFieldMap

@@ -1,13 +1,13 @@
 package typingsSlinky.aliOss.mod
 
-import typingsSlinky.aliOss.AnonEtag
+import typingsSlinky.aliOss.anon.Etag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Checkpoint extends js.Object {
-  var doneParts: js.Array[AnonEtag] = js.native
+  var doneParts: js.Array[Etag] = js.native
   var file: js.Any = js.native
    //  object key
   var fileSize: Double = js.native
@@ -20,7 +20,7 @@ trait Checkpoint extends js.Object {
 object Checkpoint {
   @scala.inline
   def apply(
-    doneParts: js.Array[AnonEtag],
+    doneParts: js.Array[Etag],
     file: js.Any,
     fileSize: Double,
     name: String,
@@ -37,7 +37,7 @@ object Checkpoint {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDoneParts(value: js.Array[AnonEtag]): Self = {
+    def withDoneParts(value: js.Array[Etag]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("doneParts")(value.asInstanceOf[js.Any])
         ret

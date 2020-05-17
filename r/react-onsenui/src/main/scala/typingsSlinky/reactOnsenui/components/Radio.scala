@@ -1,10 +1,10 @@
 package typingsSlinky.reactOnsenui.components
 
+import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameDefaultChecked
-import typingsSlinky.std.Event_
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameDefaultChecked
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +35,7 @@ object Radio {
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* e */ Event_ => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ Event => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

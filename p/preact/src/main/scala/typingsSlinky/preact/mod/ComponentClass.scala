@@ -9,7 +9,9 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ComponentClass[P, S]
-  extends Instantiable1[/* props */ P, Component[P, S]]
+  extends typingsSlinky.preact.internalMod.ComponentFactory[P]
+     with ComponentType[P]
+     with Instantiable1[/* props */ P, Component[P, S]]
      with Instantiable2[/* props */ P, /* context */ js.Any, Component[P, S]] {
   var defaultProps: js.UndefOr[Partial[P]] = js.native
   var displayName: js.UndefOr[String] = js.native

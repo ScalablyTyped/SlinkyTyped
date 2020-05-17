@@ -1,8 +1,8 @@
 package typingsSlinky.firebaseFirestore
 
+import org.scalajs.dom.raw.Document
+import org.scalajs.dom.raw.Window
 import typingsSlinky.firebaseFirestore.platformPlatformMod.Platform
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,9 +13,9 @@ object platformBrowserBrowserPlatformMod extends js.Object {
   @js.native
   class BrowserPlatform () extends Platform {
     @JSName("document")
-    def document_MBrowserPlatform: Document_ | Null = js.native
+    def document_MBrowserPlatform: Document | Null = js.native
     @JSName("window")
-    def window_MBrowserPlatform: Window_ | Null = js.native
+    def window_MBrowserPlatform: Window | Null = js.native
   }
   
 }

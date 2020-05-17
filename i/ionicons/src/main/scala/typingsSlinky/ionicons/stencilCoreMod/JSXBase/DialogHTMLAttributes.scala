@@ -1,13 +1,13 @@
 package typingsSlinky.ionicons.stencilCoreMod.JSXBase
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait DialogHTMLAttributes[T] extends HTMLAttributes[T] {
-  var onClose: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onClose: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   var open: js.UndefOr[Boolean] = js.native
   var returnValue: js.UndefOr[String] = js.native
 }
@@ -25,7 +25,7 @@ object DialogHTMLAttributes {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withOnClose(value: /* event */ Event_ => Unit): Self[T] = {
+    def withOnClose(value: /* event */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction1(value))
         ret

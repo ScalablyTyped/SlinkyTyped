@@ -1,6 +1,6 @@
 package typingsSlinky.blueprintjsTable.reorderableMod
 
-import typingsSlinky.blueprintjsTable.PartialIDragReorderable
+import typingsSlinky.blueprintjsTable.anon.PartialIDragReorderable
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

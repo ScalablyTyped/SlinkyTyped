@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeSvgCharts.mod
 
-import typingsSlinky.reactNativeSvgCharts.PartialLineProps
+import typingsSlinky.reactNativeSvgCharts.anon.PartialLineProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

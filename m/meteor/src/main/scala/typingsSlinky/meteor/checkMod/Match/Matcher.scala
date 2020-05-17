@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Matcher[T] extends js.Object {
+trait Matcher[T] extends Pattern {
   var _meteorCheckMatcherBrand: Unit = js.native
 }
 

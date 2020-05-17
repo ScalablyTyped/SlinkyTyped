@@ -6,7 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.StyleHTMLAttributes
-import typingsSlinky.reactShare.CommonShareButtonPropstit
+import typingsSlinky.reactShare.anon.CommonShareButtonPropstit
 import typingsSlinky.reactShare.reactShareStrings.screenCenter
 import typingsSlinky.reactShare.reactShareStrings.windowCenter
 import scala.scalajs.js

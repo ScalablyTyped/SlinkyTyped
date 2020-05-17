@@ -5,10 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Describes the format of a video stream. */
-@JSGlobal("Windows.Media.MediaProperties.VideoEncodingProperties")
 @js.native
-/** Creates a new instance of the VideoEncodingProperties class. */
-class VideoEncodingProperties () extends js.Object {
+trait VideoEncodingProperties extends js.Object {
   /** Gets or sets the video bit rate. */
   var bitrate: Double = js.native
   /** Gets or sets the video frame rate. */
@@ -39,27 +37,98 @@ class VideoEncodingProperties () extends js.Object {
   def setFormatUserData(value: js.Array[Double]): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Media.MediaProperties.VideoEncodingProperties")
-@js.native
-object VideoEncodingProperties extends js.Object {
-  /**
-    * Creates an instance of VideoEncodingProperties for a H.263 video.
-    * @return The video encoding properties.
-    */
-  def createH264(): VideoEncodingProperties = js.native
-  /**
-    * Creates an instance of VideoEncodingProperties for a MPEG-2 video.
-    * @return The video encoding properties.
-    */
-  def createMpeg2(): VideoEncodingProperties = js.native
-  /**
-    * Creates an instance of VideoEncodingProperties for a uncompressed video.
-    * @param subtype The media subtype of the format.
-    * @param width The video image width.
-    * @param height The video image height.
-    * @return The video encoding properties.
-    */
-  def createUncompressed(subtype: String, width: Double, height: Double): VideoEncodingProperties = js.native
+object VideoEncodingProperties {
+  @scala.inline
+  def apply(
+    bitrate: Double,
+    frameRate: MediaRatio,
+    getFormatUserData: () => js.Array[Double],
+    height: Double,
+    pixelAspectRatio: MediaRatio,
+    profileId: Double,
+    properties: MediaPropertySet,
+    setFormatUserData: js.Array[Double] => Unit,
+    subtype: String,
+    `type`: String,
+    width: Double
+  ): VideoEncodingProperties = {
+    val __obj = js.Dynamic.literal(bitrate = bitrate.asInstanceOf[js.Any], frameRate = frameRate.asInstanceOf[js.Any], getFormatUserData = js.Any.fromFunction0(getFormatUserData), height = height.asInstanceOf[js.Any], pixelAspectRatio = pixelAspectRatio.asInstanceOf[js.Any], profileId = profileId.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], setFormatUserData = js.Any.fromFunction1(setFormatUserData), subtype = subtype.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VideoEncodingProperties]
+  }
+  @scala.inline
+  implicit class VideoEncodingPropertiesOps[Self <: VideoEncodingProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBitrate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bitrate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFrameRate(value: MediaRatio): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetFormatUserData(value: () => js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFormatUserData")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPixelAspectRatio(value: MediaRatio): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pixelAspectRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProfileId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("profileId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProperties(value: MediaPropertySet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetFormatUserData(value: js.Array[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFormatUserData")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSubtype(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtype")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

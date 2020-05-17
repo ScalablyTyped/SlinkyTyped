@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.HTMLButtonElement
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.materialUiCore.anon.PartialIconButtonProps
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.HTMLAttributes
 import scala.scalajs.js

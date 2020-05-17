@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientDataflow.gapi.client.dataflow
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientDataflow.AnonUploadprotocol
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientDataflow.anon.Uploadprotocol
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait ProjectsResource extends js.Object {
   var locations: LocationsResource = js.native
   var templates: TemplatesResource = js.native
   /** Send a worker_message to the service. */
-  def workerMessages(request: AnonUploadprotocol): Request_[SendWorkerMessagesResponse] = js.native
+  def workerMessages(request: Uploadprotocol): Request[SendWorkerMessagesResponse] = js.native
 }
 
 object ProjectsResource {
@@ -21,7 +21,7 @@ object ProjectsResource {
     jobs: JobsResource,
     locations: LocationsResource,
     templates: TemplatesResource,
-    workerMessages: AnonUploadprotocol => Request_[SendWorkerMessagesResponse]
+    workerMessages: Uploadprotocol => Request[SendWorkerMessagesResponse]
   ): ProjectsResource = {
     val __obj = js.Dynamic.literal(jobs = jobs.asInstanceOf[js.Any], locations = locations.asInstanceOf[js.Any], templates = templates.asInstanceOf[js.Any], workerMessages = js.Any.fromFunction1(workerMessages))
     __obj.asInstanceOf[ProjectsResource]
@@ -51,7 +51,7 @@ object ProjectsResource {
         ret
     }
     @scala.inline
-    def withWorkerMessages(value: AnonUploadprotocol => Request_[SendWorkerMessagesResponse]): Self = {
+    def withWorkerMessages(value: Uploadprotocol => Request[SendWorkerMessagesResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("workerMessages")(js.Any.fromFunction1(value))
         ret

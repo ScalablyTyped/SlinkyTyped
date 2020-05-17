@@ -3,8 +3,8 @@ package typingsSlinky.rcTable.tableMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.rcTable.AnonBody
-import typingsSlinky.rcTable.AnonX
+import typingsSlinky.rcTable.anon.Body
+import typingsSlinky.rcTable.anon.X
 import typingsSlinky.rcTable.interfaceMod.ColumnType
 import typingsSlinky.rcTable.interfaceMod.ColumnsType
 import typingsSlinky.rcTable.interfaceMod.ExpandableConfig
@@ -48,13 +48,13 @@ trait TableProps[RecordType] extends LegacyExpandableProps[RecordType] {
     *
     * !!! DO NOT USE IN PRODUCTION ENVIRONMENT !!!
     */
-  var internalRefs: js.UndefOr[AnonBody] = js.native
+  var internalRefs: js.UndefOr[Body] = js.native
   var onHeaderRow: js.UndefOr[GetComponentProps[js.Array[ColumnType[RecordType]]]] = js.native
   var onRow: js.UndefOr[GetComponentProps[RecordType]] = js.native
   var prefixCls: js.UndefOr[String] = js.native
   var rowClassName: js.UndefOr[String | RowClassName[RecordType]] = js.native
   var rowKey: js.UndefOr[String | GetRowKey[RecordType]] = js.native
-  var scroll: js.UndefOr[AnonX] = js.native
+  var scroll: js.UndefOr[X] = js.native
   var showHeader: js.UndefOr[Boolean] = js.native
   var style: js.UndefOr[CSSProperties] = js.native
   var summary: js.UndefOr[js.Function1[/* data */ js.Array[RecordType], TagMod[Any]]] = js.native
@@ -231,7 +231,7 @@ object TableProps {
         ret
     }
     @scala.inline
-    def withInternalRefs(value: AnonBody): Self[RecordType] = {
+    def withInternalRefs(value: Body): Self[RecordType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("internalRefs")(value.asInstanceOf[js.Any])
         ret
@@ -317,7 +317,7 @@ object TableProps {
         ret
     }
     @scala.inline
-    def withScroll(value: AnonX): Self[RecordType] = {
+    def withScroll(value: X): Self[RecordType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scroll")(value.asInstanceOf[js.Any])
         ret

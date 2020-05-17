@@ -5,6 +5,8 @@ import typingsSlinky.apolloEngineReporting.agentMod.AddTraceArgs
 import typingsSlinky.apolloEngineReporting.agentMod.EngineReportingOptions
 import typingsSlinky.apolloEngineReporting.agentMod.SendValuesBaseOptions
 import typingsSlinky.apolloEngineReporting.agentMod.VariableValueOptions
+import typingsSlinky.apolloEngineReporting.anon.Context
+import typingsSlinky.apolloEngineReporting.anon.ExecutionArgs
 import typingsSlinky.apolloEngineReportingProtobuf.mod.Trace.Details
 import typingsSlinky.apolloEngineReportingProtobuf.protobufMod.Trace.IHTTP
 import typingsSlinky.apolloServerEnv.mod.Headers
@@ -38,9 +40,9 @@ object extensionMod extends js.Object {
     @JSName("didEncounterErrors")
     def didEncounterErrors_MEngineReportingExtension(errors: js.Array[GraphQLError]): Unit = js.native
     @JSName("executionDidStart")
-    def executionDidStart_MEngineReportingExtension(o: AnonExecutionArgs): Unit = js.native
+    def executionDidStart_MEngineReportingExtension(o: ExecutionArgs): Unit = js.native
     @JSName("requestDidStart")
-    def requestDidStart_MEngineReportingExtension(o: AnonContext[TContext]): EndHandler = js.native
+    def requestDidStart_MEngineReportingExtension(o: Context[TContext]): EndHandler = js.native
     @JSName("willResolveField")
     def willResolveField_MEngineReportingExtension(_source: js.Any, _args: StringDictionary[js.Any], _context: TContext, info: GraphQLResolveInfo): (js.Function2[/* error */ js.Error | Null, /* result */ js.Any, Unit]) | Unit = js.native
   }

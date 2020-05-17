@@ -58,7 +58,10 @@ trait ScrollableTabViewProperties extends Props[ScrollableTabView] {
     * You can manually pass the props to the TabBar component.
     */
   var renderTabBar: js.UndefOr[
-    (js.Function1[/* props */ typingsSlinky.reactNativeScrollableTabView.TabBarProps, ReactElement]) | `false`
+    (js.Function1[
+      /* props */ typingsSlinky.reactNativeScrollableTabView.anon.TabBarProps, 
+      ReactElement
+    ]) | `false`
   ] = js.native
   /**
     * on tab press change tab without animation.
@@ -194,14 +197,17 @@ object ScrollableTabViewProperties {
         ret
     }
     @scala.inline
-    def withRenderTabBarFunction1(value: /* props */ typingsSlinky.reactNativeScrollableTabView.TabBarProps => ReactElement): Self = {
+    def withRenderTabBarFunction1(value: /* props */ typingsSlinky.reactNativeScrollableTabView.anon.TabBarProps => ReactElement): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderTabBar")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
     def withRenderTabBar(
-      value: (js.Function1[/* props */ typingsSlinky.reactNativeScrollableTabView.TabBarProps, ReactElement]) | `false`
+      value: (js.Function1[
+          /* props */ typingsSlinky.reactNativeScrollableTabView.anon.TabBarProps, 
+          ReactElement
+        ]) | `false`
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderTabBar")(value.asInstanceOf[js.Any])

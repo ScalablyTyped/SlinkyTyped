@@ -1,7 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,14 +17,4 @@ trait AnalyserNode extends AudioNode {
   def getFloatFrequencyData(array: js.typedarray.Float32Array): Unit = js.native
   def getFloatTimeDomainData(array: js.typedarray.Float32Array): Unit = js.native
 }
-
-@JSGlobal("AnalyserNode")
-@js.native
-object AnalyserNode
-  extends Instantiable1[/* context */ BaseAudioContext, org.scalajs.dom.raw.AnalyserNode]
-     with Instantiable2[
-      /* context */ BaseAudioContext, 
-      /* options */ AnalyserOptions, 
-      org.scalajs.dom.raw.AnalyserNode
-    ]
 

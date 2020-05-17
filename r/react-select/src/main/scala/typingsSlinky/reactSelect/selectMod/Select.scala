@@ -9,9 +9,9 @@ import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactSelect.AnonClearValue
-import typingsSlinky.reactSelect.AnonContext
-import typingsSlinky.reactSelect.AnonEvent
+import typingsSlinky.reactSelect.anon.ClearValue
+import typingsSlinky.reactSelect.anon.Context
+import typingsSlinky.reactSelect.anon.Event
 import typingsSlinky.reactSelect.componentsMod.PlaceholderOrValue
 import typingsSlinky.reactSelect.componentsMod.SelectComponents
 import typingsSlinky.reactSelect.reactSelectStrings.first
@@ -28,7 +28,6 @@ import typingsSlinky.reactSelect.typesMod.InputActionMeta
 import typingsSlinky.reactSelect.typesMod.OptionTypeBase
 import typingsSlinky.reactSelect.typesMod.OptionsType
 import typingsSlinky.reactSelect.typesMod.ValueType
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -60,11 +59,11 @@ trait Select[OptionType /* <: OptionTypeBase */]
   var openAfterFocus: Boolean = js.native
   var scrollToFocusedOptionOnUpdate: Boolean = js.native
   var userIsDragging: Boolean | Null = js.native
-  def announceAriaLiveContext(props: AnonEvent): Unit = js.native
+  def announceAriaLiveContext(props: Event): Unit = js.native
   // ==============================
   // Helpers
   // ==============================
-  def announceAriaLiveSelection(props: AnonContext): Unit = js.native
+  def announceAriaLiveSelection(props: Context): Unit = js.native
   def blur(): Unit = js.native
   def blurInput(): Unit = js.native
   // ==============================
@@ -97,7 +96,7 @@ trait Select[OptionType /* <: OptionTypeBase */]
   // ==============================
   // Getters
   // ==============================
-  def getCommonProps(): AnonClearValue[OptionType] = js.native
+  def getCommonProps(): ClearValue[OptionType] = js.native
   def getControlRef(ref: HTMLElement): Unit = js.native
   @JSName("getElementId")
   def getElementId_group(element: group): String = js.native
@@ -148,7 +147,7 @@ trait Select[OptionType /* <: OptionTypeBase */]
   // ==============================
   def onMenuOpen(): Unit = js.native
   def onOptionHover(focusedOption: OptionType): Unit = js.native
-  def onScroll(event: Event_): Unit = js.native
+  def onScroll(event: org.scalajs.dom.raw.Event): Unit = js.native
   def onTouchEnd(event: TouchEvent): Unit = js.native
   def onTouchMove(event: TouchEvent): Unit = js.native
   def onTouchStart(event: TouchEvent): Unit = js.native

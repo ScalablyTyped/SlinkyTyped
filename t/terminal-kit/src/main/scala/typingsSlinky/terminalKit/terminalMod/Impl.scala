@@ -1,17 +1,17 @@
 package typingsSlinky.terminalKit.terminalMod
 
-import typingsSlinky.terminalKit.Anon0
-import typingsSlinky.terminalKit.Anon1
-import typingsSlinky.terminalKit.AnonAbort
-import typingsSlinky.terminalKit.AnonB
-import typingsSlinky.terminalKit.AnonBarStyle
-import typingsSlinky.terminalKit.AnonContinue
-import typingsSlinky.terminalKit.AnonDelay
-import typingsSlinky.terminalKit.AnonMouse
-import typingsSlinky.terminalKit.AnonNoAlternate
-import typingsSlinky.terminalKit.AnonPromise
-import typingsSlinky.terminalKit.AnonPromisePromise
-import typingsSlinky.terminalKit.AnonShrinkAnonHeight
+import typingsSlinky.terminalKit.anon.Abort
+import typingsSlinky.terminalKit.anon.B
+import typingsSlinky.terminalKit.anon.BarStyle
+import typingsSlinky.terminalKit.anon.Continue
+import typingsSlinky.terminalKit.anon.Delay
+import typingsSlinky.terminalKit.anon.Mouse
+import typingsSlinky.terminalKit.anon.NoAlternate
+import typingsSlinky.terminalKit.anon.Promise
+import typingsSlinky.terminalKit.anon.PromisePromise
+import typingsSlinky.terminalKit.anon.ShrinkHeight
+import typingsSlinky.terminalKit.anon.`0`
+import typingsSlinky.terminalKit.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -208,7 +208,7 @@ trait Impl extends js.Object {
   def backDelete(str: String): Terminal = js.native
   def backwardTab(n: Double): Terminal = js.native
   def bar(value: Double): Unit = js.native
-  def bar(value: Double, options: AnonBarStyle): Unit = js.native
+  def bar(value: Double, options: BarStyle): Unit = js.native
   def bell(): Terminal = js.native
   def bell(args: js.Any*): Terminal = js.native
   def bell(str: String): Terminal = js.native
@@ -369,8 +369,8 @@ trait Impl extends js.Object {
   def down(n: Double): Terminal = js.native
   def drawImage(url: String): js.Promise[Unit] = js.native
   def drawImage(url: String, callback: Callback[Unit]): Unit = js.native
-  def drawImage(url: String, options: AnonShrinkAnonHeight): js.Promise[Unit] = js.native
-  def drawImage(url: String, options: AnonShrinkAnonHeight, callback: Callback[Unit]): Unit = js.native
+  def drawImage(url: String, options: ShrinkHeight): js.Promise[Unit] = js.native
+  def drawImage(url: String, options: ShrinkHeight, callback: Callback[Unit]): Unit = js.native
   def eraseArea(x: Double, y: Double): Terminal = js.native
   def eraseArea(x: Double, y: Double, width: Double): Terminal = js.native
   def eraseArea(x: Double, y: Double, width: Double, height: Double): Terminal = js.native
@@ -406,9 +406,9 @@ trait Impl extends js.Object {
   def focusEvent(str: String): Terminal = js.native
   def forwardTab(n: Double): Terminal = js.native
   def fullscreen(options: Boolean): Unit = js.native
-  def fullscreen(options: AnonNoAlternate): Unit = js.native
+  def fullscreen(options: NoAlternate): Unit = js.native
   def getColor(register: Double): Unit = js.native
-  def getColor(register: Double, callback: Callback[AnonB]): Unit = js.native
+  def getColor(register: Double, callback: Callback[B]): Unit = js.native
   def getCursorLocation(
     callback: js.Function3[/* error */ js.Any, /* x */ js.UndefOr[Double], /* y */ js.UndefOr[Double], Unit]
   ): Unit = js.native
@@ -416,8 +416,8 @@ trait Impl extends js.Object {
   def getPalette(register: Double, callback: Callback[Palette]): Unit = js.native
   def grabInput(options: Boolean): Unit = js.native
   def grabInput(options: Boolean, safeCallback: Boolean): Unit = js.native
-  def grabInput(options: AnonMouse): Unit = js.native
-  def grabInput(options: AnonMouse, safeCallback: Boolean): Unit = js.native
+  def grabInput(options: Mouse): Unit = js.native
+  def grabInput(options: Mouse, safeCallback: Boolean): Unit = js.native
   def gray(): Terminal = js.native
   def gray(args: js.Any*): Terminal = js.native
   def gray(str: String): Terminal = js.native
@@ -427,9 +427,9 @@ trait Impl extends js.Object {
   def grey(): Terminal = js.native
   def grey(args: js.Any*): Terminal = js.native
   def grey(str: String): Terminal = js.native
-  def gridMenu(menuItems: js.Array[String]): Anon1 = js.native
+  def gridMenu(menuItems: js.Array[String]): `1` = js.native
   def gridMenu(menuItems: js.Array[String], callback: Callback[GridMenuResponse]): Unit = js.native
-  def gridMenu(menuItems: js.Array[String], options: GridMenuOptions): Anon1 = js.native
+  def gridMenu(menuItems: js.Array[String], options: GridMenuOptions): `1` = js.native
   def gridMenu(menuItems: js.Array[String], options: GridMenuOptions, callback: Callback[GridMenuResponse]): Unit = js.native
   def hidden(): Terminal = js.native
   def hidden(args: js.Any*): Terminal = js.native
@@ -438,9 +438,9 @@ trait Impl extends js.Object {
   def hideCursor(args: js.Any*): Terminal = js.native
   def hideCursor(str: String): Terminal = js.native
   def iconName(str: String): Terminal = js.native
-  def inputField(callback: Callback[js.UndefOr[String]]): AnonPromise = js.native
-  def inputField(options: InputFieldOptions): AnonPromise = js.native
-  def inputField(options: InputFieldOptions, callback: Callback[js.UndefOr[String]]): AnonPromise = js.native
+  def inputField(callback: Callback[js.UndefOr[String]]): Promise = js.native
+  def inputField(options: InputFieldOptions): Promise = js.native
+  def inputField(options: InputFieldOptions, callback: Callback[js.UndefOr[String]]): Promise = js.native
   def insert(n: Double): Terminal = js.native
   def insertLine(n: Double): Terminal = js.native
   def inverse(): Terminal = js.native
@@ -519,8 +519,8 @@ trait Impl extends js.Object {
   def scrollDown(n: Double): Terminal = js.native
   def scrollUp(n: Double): Terminal = js.native
   def scrollingRegion(top: Double, bottom: Double): Terminal = js.native
-  def setColor(register: Double, rgb: AnonB): Unit = js.native
-  def setColor(register: Double, rgb: AnonB, names: js.Array[String]): Unit = js.native
+  def setColor(register: Double, rgb: B): Unit = js.native
+  def setColor(register: Double, rgb: B, names: js.Array[String]): Unit = js.native
   def setColor(register: Double, r: Double, g: Double, b: Double): Unit = js.native
   def setColor(register: Double, r: Double, g: Double, b: Double, names: js.Array[String]): Unit = js.native
   def setCursorColor(register: Double): Terminal = js.native
@@ -530,25 +530,25 @@ trait Impl extends js.Object {
   def setHighlightBgColorRgb(r: Double, g: Double, b: Double): Terminal = js.native
   def setPalette(palette: String): Unit = js.native
   def setPalette(palette: Palette): Unit = js.native
-  def singleColumnMenu(menuItems: js.Array[String]): Anon0 = js.native
+  def singleColumnMenu(menuItems: js.Array[String]): `0` = js.native
   def singleColumnMenu(menuItems: js.Array[String], callback: Callback[SingleColumnMenuResponse]): Unit = js.native
-  def singleColumnMenu(menuItems: js.Array[String], options: SingleColumnMenuOptions): Anon0 = js.native
+  def singleColumnMenu(menuItems: js.Array[String], options: SingleColumnMenuOptions): `0` = js.native
   def singleColumnMenu(
     menuItems: js.Array[String],
     options: SingleColumnMenuOptions,
     callback: Callback[SingleColumnMenuResponse]
   ): Unit = js.native
-  def singleLineMenu(menuItems: js.Array[String]): AnonPromisePromise = js.native
+  def singleLineMenu(menuItems: js.Array[String]): PromisePromise = js.native
   def singleLineMenu(menuItems: js.Array[String], callback: Callback[SingleLineMenuResponse]): Unit = js.native
-  def singleLineMenu(menuItems: js.Array[String], options: SingleLineMenuOptions): AnonPromisePromise = js.native
+  def singleLineMenu(menuItems: js.Array[String], options: SingleLineMenuOptions): PromisePromise = js.native
   def singleLineMenu(
     menuItems: js.Array[String],
     options: SingleLineMenuOptions,
     callback: Callback[SingleLineMenuResponse]
   ): Unit = js.native
-  def singleRowMenu(menuItems: js.Array[String]): AnonPromisePromise = js.native
+  def singleRowMenu(menuItems: js.Array[String]): PromisePromise = js.native
   def singleRowMenu(menuItems: js.Array[String], callback: Callback[SingleLineMenuResponse]): Unit = js.native
-  def singleRowMenu(menuItems: js.Array[String], options: SingleLineMenuOptions): AnonPromisePromise = js.native
+  def singleRowMenu(menuItems: js.Array[String], options: SingleLineMenuOptions): PromisePromise = js.native
   def singleRowMenu(
     menuItems: js.Array[String],
     options: SingleLineMenuOptions,
@@ -556,8 +556,8 @@ trait Impl extends js.Object {
   ): Unit = js.native
   def slowTyping(str: String): js.Promise[Unit] = js.native
   def slowTyping(str: String, callback: Callback[Unit]): Unit = js.native
-  def slowTyping(str: String, options: AnonDelay): js.Promise[Unit] = js.native
-  def slowTyping(str: String, options: AnonDelay, callback: Callback[Unit]): Unit = js.native
+  def slowTyping(str: String, options: Delay): js.Promise[Unit] = js.native
+  def slowTyping(str: String, options: Delay, callback: Callback[Unit]): Unit = js.native
   def str(): Terminal = js.native
   def str(args: js.Any*): Terminal = js.native
   def str(str: String): Terminal = js.native
@@ -587,14 +587,13 @@ trait Impl extends js.Object {
   def wrap(args: js.Any*): Terminal = js.native
   def wrap(str: String): Terminal = js.native
   def wrapColumn(): Unit = js.native
-  def wrapColumn(options: AnonContinue): Unit = js.native
-  def wrapColumn(x: js.UndefOr[scala.Nothing], width: Double): Unit = js.native
-  def wrapColumn(x: Double, width: Double): Unit = js.native
+  def wrapColumn(options: Continue): Unit = js.native
+  def wrapColumn(x: js.UndefOr[Double], width: Double): Unit = js.native
   def yellow(): Terminal = js.native
   def yellow(args: js.Any*): Terminal = js.native
   def yellow(str: String): Terminal = js.native
-  def yesOrNo(): AnonAbort = js.native
-  def yesOrNo(options: YesOrNoOptions): AnonAbort = js.native
+  def yesOrNo(): Abort = js.native
+  def yesOrNo(options: YesOrNoOptions): Abort = js.native
   def yesOrNo(options: YesOrNoOptions, callback: Callback[Boolean]): Unit = js.native
 }
 

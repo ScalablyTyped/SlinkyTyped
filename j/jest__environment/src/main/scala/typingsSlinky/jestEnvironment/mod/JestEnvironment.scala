@@ -1,6 +1,6 @@
 package typingsSlinky.jestEnvironment.mod
 
-import typingsSlinky.jestEnvironment.AnonEVALRESULTVARIABLE
+import typingsSlinky.jestEnvironment.anon.EVALRESULTVARIABLE
 import typingsSlinky.jestFakeTimers.mod.JestFakeTimers
 import typingsSlinky.jestMock.mod.ModuleMocker
 import typingsSlinky.jestTypes.circusMod.Event
@@ -21,7 +21,7 @@ class JestEnvironment protected () extends js.Object {
   var global: Global = js.native
   var handleTestEvent: js.UndefOr[js.Function2[/* event */ Event, /* state */ State, Unit]] = js.native
   var moduleMocker: ModuleMocker | Null = js.native
-  def runScript(script: Script): AnonEVALRESULTVARIABLE | Null = js.native
+  def runScript(script: Script): EVALRESULTVARIABLE | Null = js.native
   def setup(): js.Promise[Unit] = js.native
   def teardown(): js.Promise[Unit] = js.native
 }

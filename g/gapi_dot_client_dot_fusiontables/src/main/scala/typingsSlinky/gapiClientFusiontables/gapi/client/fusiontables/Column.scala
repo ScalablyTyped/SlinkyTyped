@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientFusiontables.gapi.client.fusiontables
 
-import typingsSlinky.gapiClientFusiontables.AnonColumnId
+import typingsSlinky.gapiClientFusiontables.anon.ColumnId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Column extends js.Object {
   /** Identifier of the base column. If present, this column is derived from the specified base column. */
-  var baseColumn: js.UndefOr[AnonColumnId] = js.native
+  var baseColumn: js.UndefOr[ColumnId] = js.native
   /** Identifier for the column. */
   var columnId: js.UndefOr[Double] = js.native
   /** JSON schema for interpreting JSON in this column. */
@@ -63,7 +63,7 @@ object Column {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBaseColumn(value: AnonColumnId): Self = {
+    def withBaseColumn(value: ColumnId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("baseColumn")(value.asInstanceOf[js.Any])
         ret

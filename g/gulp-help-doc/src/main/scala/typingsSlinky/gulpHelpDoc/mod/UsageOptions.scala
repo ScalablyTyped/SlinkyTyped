@@ -1,6 +1,6 @@
 package typingsSlinky.gulpHelpDoc.mod
 
-import typingsSlinky.gulpHelpDoc.AnonLog
+import typingsSlinky.gulpHelpDoc.anon.Log
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +27,7 @@ trait UsageOptions extends js.Object {
     * Printing engine (by default is console). Accepted any device
     * which has log() function defined to do output.
     */
-  var logger: js.UndefOr[AnonLog] = js.native
+  var logger: js.UndefOr[Log] = js.native
   /**
     * Defines number of empty characters for left-padding of the output
     */
@@ -83,7 +83,7 @@ object UsageOptions {
         ret
     }
     @scala.inline
-    def withLogger(value: AnonLog): Self = {
+    def withLogger(value: Log): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
         ret

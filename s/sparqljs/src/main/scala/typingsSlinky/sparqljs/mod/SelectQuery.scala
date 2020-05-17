@@ -1,7 +1,7 @@
 package typingsSlinky.sparqljs.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.sparqljs.AnonDefault
+import typingsSlinky.sparqljs.anon.Default
 import typingsSlinky.sparqljs.sparqljsStrings.Asterisk
 import typingsSlinky.sparqljs.sparqljsStrings.SELECT
 import typingsSlinky.sparqljs.sparqljsStrings.query
@@ -15,7 +15,7 @@ trait SelectQuery
      with BaseQuery
      with Pattern {
   var distinct: js.UndefOr[Boolean] = js.native
-  var from: js.UndefOr[AnonDefault] = js.native
+  var from: js.UndefOr[Default] = js.native
   var group: js.UndefOr[js.Array[Grouping]] = js.native
   var having: js.UndefOr[js.Array[Expression]] = js.native
   var limit: js.UndefOr[Double] = js.native
@@ -69,7 +69,7 @@ object SelectQuery {
         ret
     }
     @scala.inline
-    def withFrom(value: AnonDefault): Self = {
+    def withFrom(value: Default): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
         ret

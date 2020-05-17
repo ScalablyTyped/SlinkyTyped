@@ -1,11 +1,10 @@
 package typingsSlinky.lowlight.lowlight
 
-import typingsSlinky.lowlight.lowlight.AST.Properties
-import typingsSlinky.lowlight.lowlight.AST.Unist.Node
-import typingsSlinky.lowlight.lowlightStrings.comment
-import typingsSlinky.lowlight.lowlightStrings.doctype
-import typingsSlinky.lowlight.lowlightStrings.element
-import typingsSlinky.lowlight.lowlightStrings.root
+import typingsSlinky.lowlight.lowlight.AST.Comment
+import typingsSlinky.lowlight.lowlight.AST.Doctype
+import typingsSlinky.lowlight.lowlight.AST.Element
+import typingsSlinky.lowlight.lowlight.AST.Root
+import typingsSlinky.lowlight.lowlight.AST.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,34 +20,14 @@ trait HastNode extends js.Object
 
 object HastNode {
   @scala.inline
-  def Text(`type`: String, value: String): HastNode = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[HastNode]
-  }
+  implicit def apply(value: Comment): HastNode = value.asInstanceOf[HastNode]
   @scala.inline
-  def Comment(`type`: comment, value: String): HastNode = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[HastNode]
-  }
+  implicit def apply(value: Doctype): HastNode = value.asInstanceOf[HastNode]
   @scala.inline
-  def Element(children: js.Array[Node], properties: Properties, tagName: String, `type`: element): HastNode = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], tagName = tagName.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[HastNode]
-  }
+  implicit def apply(value: Element): HastNode = value.asInstanceOf[HastNode]
   @scala.inline
-  def Doctype(name: String, `type`: doctype): HastNode = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[HastNode]
-  }
+  implicit def apply(value: Root): HastNode = value.asInstanceOf[HastNode]
   @scala.inline
-  def Root(children: js.Array[Node], `type`: root): HastNode = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[HastNode]
-  }
+  implicit def apply(value: Text): HastNode = value.asInstanceOf[HastNode]
 }
 

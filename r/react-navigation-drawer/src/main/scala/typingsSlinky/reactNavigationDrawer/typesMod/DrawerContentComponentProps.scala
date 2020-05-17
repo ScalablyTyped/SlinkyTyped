@@ -7,7 +7,7 @@ import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNavigation.mod.NavigationParams
 import typingsSlinky.reactNavigation.mod.NavigationRoute
 import typingsSlinky.reactNavigation.mod.NavigationScreenProp
-import typingsSlinky.reactNavigationDrawer.AnonFocused
+import typingsSlinky.reactNavigationDrawer.anon.Focused
 import typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.left
 import typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.right
 import scala.scalajs.js
@@ -35,7 +35,7 @@ trait DrawerContentComponentProps extends js.Object {
   var navigation: NavigationScreenProp[NavigationDrawerState, NavigationParams] = js.native
   var screenProps: js.Any = js.native
   def getLabel(scene: Scene): TagMod[Any] = js.native
-  def onItemPress(scene: AnonFocused): Unit = js.native
+  def onItemPress(scene: Focused): Unit = js.native
   def renderIcon(scene: Scene): TagMod[Any] = js.native
 }
 
@@ -48,7 +48,7 @@ object DrawerContentComponentProps {
     getLabel: Scene => TagMod[Any],
     items: js.Array[NavigationRoute[NavigationParams]],
     navigation: NavigationScreenProp[NavigationDrawerState, NavigationParams],
-    onItemPress: AnonFocused => Unit,
+    onItemPress: Focused => Unit,
     renderIcon: Scene => TagMod[Any],
     screenProps: js.Any
   ): DrawerContentComponentProps = {
@@ -100,7 +100,7 @@ object DrawerContentComponentProps {
         ret
     }
     @scala.inline
-    def withOnItemPress(value: AnonFocused => Unit): Self = {
+    def withOnItemPress(value: Focused => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemPress")(js.Any.fromFunction1(value))
         ret

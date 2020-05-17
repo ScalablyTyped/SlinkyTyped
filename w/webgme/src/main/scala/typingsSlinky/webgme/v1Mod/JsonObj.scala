@@ -1,7 +1,7 @@
 package typingsSlinky.webgme.v1Mod
 
-import typingsSlinky.webgme.AnonGuid
 import typingsSlinky.webgme.GmeCommon.RelId
+import typingsSlinky.webgme.anon.Guid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait JsonObj extends js.Object {
    //
   var nodes: js.Any = js.native
   var relids: js.Array[RelId] = js.native
-  var root: AnonGuid = js.native
+  var root: Guid = js.native
 }
 
 object JsonObj {
@@ -26,7 +26,7 @@ object JsonObj {
     metaSheets: js.Any,
     nodes: js.Any,
     relids: js.Array[RelId],
-    root: AnonGuid
+    root: Guid
   ): JsonObj = {
     val __obj = js.Dynamic.literal(bases = bases.asInstanceOf[js.Any], containment = containment.asInstanceOf[js.Any], metaSheets = metaSheets.asInstanceOf[js.Any], nodes = nodes.asInstanceOf[js.Any], relids = relids.asInstanceOf[js.Any], root = root.asInstanceOf[js.Any])
     __obj.asInstanceOf[JsonObj]
@@ -68,7 +68,7 @@ object JsonObj {
         ret
     }
     @scala.inline
-    def withRoot(value: AnonGuid): Self = {
+    def withRoot(value: Guid): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("root")(value.asInstanceOf[js.Any])
         ret

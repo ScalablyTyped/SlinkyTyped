@@ -1,8 +1,8 @@
 package typingsSlinky.escpos.mod
 
-import typingsSlinky.escpos.AnonColors
-import typingsSlinky.escpos.AnonData
-import typingsSlinky.escpos.AnonHeight
+import typingsSlinky.escpos.anon.Colors
+import typingsSlinky.escpos.anon.Data
+import typingsSlinky.escpos.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,10 +11,10 @@ import scala.scalajs.js.annotation._
 @js.native
 class Image protected () extends js.Object {
   def this(pixels: js.Any) = this()
-  def size(): AnonColors = js.native
-  def toBitmap(): AnonData = js.native
-  def toBitmap(density: Double): AnonData = js.native
-  def toRaster(): AnonHeight = js.native
+  def size(): Colors = js.native
+  def toBitmap(): Data = js.native
+  def toBitmap(density: Double): Data = js.native
+  def toRaster(): Height = js.native
 }
 
 /* static members */

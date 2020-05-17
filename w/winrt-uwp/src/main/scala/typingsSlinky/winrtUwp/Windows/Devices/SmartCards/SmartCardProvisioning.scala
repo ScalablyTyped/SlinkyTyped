@@ -1,15 +1,13 @@
 package typingsSlinky.winrtUwp.Windows.Devices.SmartCards
 
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
-import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents info about, and operations for, configuring smart cards. */
-@JSGlobal("Windows.Devices.SmartCards.SmartCardProvisioning")
 @js.native
-abstract class SmartCardProvisioning () extends js.Object {
+trait SmartCardProvisioning extends js.Object {
   var getAuthorityKeyContainerNameAsync: js.Any = js.native
   /** Gets the configured smart card. */
   var smartCard: SmartCard = js.native
@@ -41,39 +39,69 @@ abstract class SmartCardProvisioning () extends js.Object {
   def requestPinResetAsync(handler: SmartCardPinResetHandler): IPromiseWithIAsyncOperation[Boolean] = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Devices.SmartCards.SmartCardProvisioning")
-@js.native
-object SmartCardProvisioning extends js.Object {
-  var requestAttestedVirtualSmartCardCreationAsync: js.Any = js.native
-  /**
-    * Returns a smart card to be configured.
-    * @param card The specified smart card.
-    * @return An instance of SmartCardProvisioning , representing the smart card to be configured.
-    */
-  def fromSmartCardAsync(card: SmartCard): IPromiseWithIAsyncOperation[SmartCardProvisioning] = js.native
-  /**
-    * Creates a Trusted Platform Module (TPM) virtual smart card with a given human-readable name, admin key, and personal identification number (PIN) rules set.
-    * @param friendlyName The smart card's human-readable name.
-    * @param administrativeKey The smart card's admin key (also known as an administrator PIN or unblock PIN).
-    * @param pinPolicy The smart card's PIN rules set.
-    * @return After the operation completes, returns an instance of SmartCardProvisioning , representing the configured TPM virtual smart card.
-    */
-  def requestVirtualSmartCardCreationAsync(friendlyName: String, administrativeKey: IBuffer, pinPolicy: SmartCardPinPolicy): IPromiseWithIAsyncOperation[SmartCardProvisioning] = js.native
-   /* unmapped type */ /**
-    * Creates a Trusted Platform Module (TPM) virtual smart card with a given human-readable name, admin key, personal identification number (PIN) rules set, and ID.
-    * @param friendlyName The smart card's human-readable name.
-    * @param administrativeKey The smart card's admin key (also known as an administrator PIN or unblock PIN).
-    * @param pinPolicy The smart card's PIN rules set.
-    * @param cardId The smart card's ID.
-    * @return After the operation completes, returns an instance of SmartCardProvisioning , representing the configured TPM virtual smart card.
-    */
-  def requestVirtualSmartCardCreationAsync(friendlyName: String, administrativeKey: IBuffer, pinPolicy: SmartCardPinPolicy, cardId: String): IPromiseWithIAsyncOperation[SmartCardProvisioning] = js.native
-  /**
-    * Deletes a Trusted Platform Module (TPM) virtual smart card.
-    * @param card The TPM virtual smart card to delete.
-    * @return After the deletion attempt completes, returns true if the TPM virtual smart card was successfully deleted; otherwise false.
-    */
-  def requestVirtualSmartCardDeletionAsync(card: SmartCard): IPromiseWithIAsyncOperation[Boolean] = js.native
+object SmartCardProvisioning {
+  @scala.inline
+  def apply(
+    getAuthorityKeyContainerNameAsync: js.Any,
+    getChallengeContextAsync: () => IPromiseWithIAsyncOperation[SmartCardChallengeContext],
+    getIdAsync: () => IPromiseWithIAsyncOperation[String],
+    getNameAsync: () => IPromiseWithIAsyncOperation[String],
+    requestPinChangeAsync: () => IPromiseWithIAsyncOperation[Boolean],
+    requestPinResetAsync: SmartCardPinResetHandler => IPromiseWithIAsyncOperation[Boolean],
+    smartCard: SmartCard
+  ): SmartCardProvisioning = {
+    val __obj = js.Dynamic.literal(getAuthorityKeyContainerNameAsync = getAuthorityKeyContainerNameAsync.asInstanceOf[js.Any], getChallengeContextAsync = js.Any.fromFunction0(getChallengeContextAsync), getIdAsync = js.Any.fromFunction0(getIdAsync), getNameAsync = js.Any.fromFunction0(getNameAsync), requestPinChangeAsync = js.Any.fromFunction0(requestPinChangeAsync), requestPinResetAsync = js.Any.fromFunction1(requestPinResetAsync), smartCard = smartCard.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SmartCardProvisioning]
+  }
+  @scala.inline
+  implicit class SmartCardProvisioningOps[Self <: SmartCardProvisioning] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetAuthorityKeyContainerNameAsync(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAuthorityKeyContainerNameAsync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetChallengeContextAsync(value: () => IPromiseWithIAsyncOperation[SmartCardChallengeContext]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getChallengeContextAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetIdAsync(value: () => IPromiseWithIAsyncOperation[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getIdAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetNameAsync(value: () => IPromiseWithIAsyncOperation[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNameAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRequestPinChangeAsync(value: () => IPromiseWithIAsyncOperation[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestPinChangeAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRequestPinResetAsync(value: SmartCardPinResetHandler => IPromiseWithIAsyncOperation[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requestPinResetAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSmartCard(value: SmartCard): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smartCard")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

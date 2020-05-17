@@ -1,6 +1,6 @@
 package typingsSlinky.actionsOnGoogle.actionssdkMod
 
-import typingsSlinky.actionsOnGoogle.incomingMod._IncomingMessage
+import typingsSlinky.actionsOnGoogle.incomingMod.IncomingMessage
 import typingsSlinky.actionsOnGoogle.listMod.ListOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class List protected ()
   extends typingsSlinky.actionsOnGoogle.conversationMod.List
-     with _IncomingMessage {
+     with IncomingMessage {
   /**
     * @param options List options
     * @public

@@ -1,6 +1,6 @@
 package typingsSlinky.yup.mod
 
-import typingsSlinky.yup.AnonValues
+import typingsSlinky.yup.anon.Values
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,9 +24,9 @@ trait Schema[T] extends js.Object {
   def meta(): js.Any = js.native
   def meta(metadata: js.Any): this.type = js.native
   def notOneOf(arrayOfValues: js.Array[_]): this.type = js.native
-  def notOneOf(arrayOfValues: js.Array[_], message: TestOptionsMessage[AnonValues, _]): this.type = js.native
+  def notOneOf(arrayOfValues: js.Array[_], message: TestOptionsMessage[Values, _]): this.type = js.native
   def oneOf(arrayOfValues: js.Array[T | Ref_ | Null]): this.type = js.native
-  def oneOf(arrayOfValues: js.Array[T | Ref_ | Null], message: TestOptionsMessage[AnonValues, _]): this.type = js.native
+  def oneOf(arrayOfValues: js.Array[T | Ref_ | Null], message: TestOptionsMessage[Values, _]): this.type = js.native
   def strict(isStrict: Boolean): this.type = js.native
   def strip(strip: Boolean): this.type = js.native
   def test(

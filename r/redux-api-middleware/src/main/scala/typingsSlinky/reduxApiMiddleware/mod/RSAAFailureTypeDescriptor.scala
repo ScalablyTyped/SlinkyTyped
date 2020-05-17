@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RSAAFailureTypeDescriptor[State, Payload, Meta] extends js.Object {
+trait RSAAFailureTypeDescriptor[State, Payload, Meta] extends RSAAFailureType[State, Payload, Meta] {
   var meta: js.UndefOr[
     (js.Function3[/* action */ RSAAAction[_, _, _], /* state */ State, /* res */ Response, Meta]) | Meta
   ] = js.native

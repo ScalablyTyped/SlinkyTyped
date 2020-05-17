@@ -1,7 +1,7 @@
 package typingsSlinky.selectables.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,8 +15,8 @@ trait Options extends js.Object {
   var onDeselect: js.UndefOr[js.Function1[/* el */ Element, Unit]] = js.native
   var onSelect: js.UndefOr[js.Function1[/* el */ Element, Unit]] = js.native
   var selectedClass: js.UndefOr[String] = js.native
-  var start: js.UndefOr[js.Function1[/* e */ Event_, Unit]] = js.native
-  var stop: js.UndefOr[js.Function1[/* e */ Event_, Unit]] = js.native
+  var start: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
+  var stop: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
   var zone: js.UndefOr[String] = js.native
 }
 
@@ -117,7 +117,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withStart(value: /* e */ Event_ => Unit): Self = {
+    def withStart(value: /* e */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction1(value))
         ret
@@ -129,7 +129,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withStop(value: /* e */ Event_ => Unit): Self = {
+    def withStop(value: /* e */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction1(value))
         ret

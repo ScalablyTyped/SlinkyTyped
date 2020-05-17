@@ -14,8 +14,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait StateDeclaration
-  extends _StateDeclaration
-     with _StateOrName {
+  extends StateOrName
+     with _StateDeclaration {
   /**
     * Gets the internal State object API
     *

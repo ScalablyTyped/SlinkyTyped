@@ -11,14 +11,8 @@ import scala.scalajs.js.annotation._
   * @class
   * @memberof PIXI
   */
-@JSGlobal("PIXI.RoundedRectangle")
 @js.native
-class RoundedRectangle () extends js.Object {
-  def this(x: Double) = this()
-  def this(x: Double, y: Double) = this()
-  def this(x: Double, y: Double, width: Double) = this()
-  def this(x: Double, y: Double, width: Double, height: Double) = this()
-  def this(x: Double, y: Double, width: Double, height: Double, radius: Double) = this()
+trait RoundedRectangle extends js.Object {
   /**
     * @member {number} PIXI.RoundedRectangle#height
     * @default 0
@@ -61,5 +55,72 @@ class RoundedRectangle () extends js.Object {
     * @return {boolean} Whether the x/y coordinates are within this Rounded Rectangle
     */
   def contains(x: Double, y: Double): Boolean = js.native
+}
+
+object RoundedRectangle {
+  @scala.inline
+  def apply(
+    contains: (Double, Double) => Boolean,
+    height: Double,
+    radius: Double,
+    `type`: Double,
+    width: Double,
+    x: Double,
+    y: Double
+  ): RoundedRectangle = {
+    val __obj = js.Dynamic.literal(contains = js.Any.fromFunction2(contains), height = height.asInstanceOf[js.Any], radius = radius.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RoundedRectangle]
+  }
+  @scala.inline
+  implicit class RoundedRectangleOps[Self <: RoundedRectangle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContains(value: (Double, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

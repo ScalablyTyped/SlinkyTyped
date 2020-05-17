@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +9,25 @@ trait BarProp extends js.Object {
   val visible: scala.Boolean = js.native
 }
 
-@JSGlobal("BarProp")
-@js.native
-object BarProp extends Instantiable0[BarProp]
+object BarProp {
+  @scala.inline
+  def apply(visible: scala.Boolean): BarProp = {
+    val __obj = js.Dynamic.literal(visible = visible.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BarProp]
+  }
+  @scala.inline
+  implicit class BarPropOps[Self <: BarProp] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVisible(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

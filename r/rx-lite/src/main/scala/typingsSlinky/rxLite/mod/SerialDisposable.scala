@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @JSImport("rx-lite", "SerialDisposable")
 @js.native
 class SerialDisposable ()
-  extends typingsSlinky.rxLite.Rx.SerialDisposable
+  extends typingsSlinky.rxLite.Rx.SingleAssignmentDisposable
 

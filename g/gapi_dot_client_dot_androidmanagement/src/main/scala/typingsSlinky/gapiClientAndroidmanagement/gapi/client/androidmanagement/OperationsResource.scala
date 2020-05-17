@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientAndroidmanagement.gapi.client.androidmanagement
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAndroidmanagement.AnonAlt
-import typingsSlinky.gapiClientAndroidmanagement.AnonBearertoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAndroidmanagement.anon.Alt
+import typingsSlinky.gapiClientAndroidmanagement.anon.Bearertoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,17 +15,17 @@ trait OperationsResource extends js.Object {
     * whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted;
     * instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to Code.CANCELLED.
     */
-  def cancel(request: AnonAlt): Request_[js.Object] = js.native
+  def cancel(request: Alt): Request[js.Object] = js.native
   /**
     * Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the
     * operation. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED.
     */
-  def delete(request: AnonAlt): Request_[js.Object] = js.native
+  def delete(request: Alt): Request[js.Object] = js.native
   /**
     * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API
     * service.
     */
-  def get(request: AnonAlt): Request_[Operation] = js.native
+  def get(request: Alt): Request[Operation] = js.native
   /**
     * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.NOTE: the name
     * binding allows API services to override the binding to use different resource name schemes, such as users/&#42;/operations. To override the binding, API
@@ -33,16 +33,16 @@ trait OperationsResource extends js.Object {
     * includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection
     * id.
     */
-  def list(request: AnonBearertoken): Request_[ListOperationsResponse] = js.native
+  def list(request: Bearertoken): Request[ListOperationsResponse] = js.native
 }
 
 object OperationsResource {
   @scala.inline
   def apply(
-    cancel: AnonAlt => Request_[js.Object],
-    delete: AnonAlt => Request_[js.Object],
-    get: AnonAlt => Request_[Operation],
-    list: AnonBearertoken => Request_[ListOperationsResponse]
+    cancel: Alt => Request[js.Object],
+    delete: Alt => Request[js.Object],
+    get: Alt => Request[Operation],
+    list: Bearertoken => Request[ListOperationsResponse]
   ): OperationsResource = {
     val __obj = js.Dynamic.literal(cancel = js.Any.fromFunction1(cancel), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[OperationsResource]
@@ -54,25 +54,25 @@ object OperationsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCancel(value: AnonAlt => Request_[js.Object]): Self = {
+    def withCancel(value: Alt => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonAlt => Request_[js.Object]): Self = {
+    def withDelete(value: Alt => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonAlt => Request_[Operation]): Self = {
+    def withGet(value: Alt => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonBearertoken => Request_[ListOperationsResponse]): Self = {
+    def withList(value: Bearertoken => Request[ListOperationsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

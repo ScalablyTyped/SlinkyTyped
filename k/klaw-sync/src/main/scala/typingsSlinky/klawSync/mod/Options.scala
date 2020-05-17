@@ -1,6 +1,6 @@
 package typingsSlinky.klawSync.mod
 
-import typingsSlinky.klawSync.AnonReaddirSync
+import typingsSlinky.klawSync.anon.ReaddirSync
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ trait Options extends js.Object {
     * @default graceful-fs
     * @since v4.0.0
     */
-  var fs: js.UndefOr[AnonReaddirSync] = js.native
+  var fs: js.UndefOr[ReaddirSync] = js.native
   /**
     * @description True to only return files (ignore directories).
     *              Defaults to false if not specified.
@@ -87,7 +87,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withFs(value: AnonReaddirSync): Self = {
+    def withFs(value: ReaddirSync): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fs")(value.asInstanceOf[js.Any])
         ret

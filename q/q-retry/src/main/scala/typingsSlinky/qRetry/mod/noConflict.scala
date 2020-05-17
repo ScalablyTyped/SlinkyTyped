@@ -1,6 +1,6 @@
 package typingsSlinky.qRetry.mod
 
-import typingsSlinky.q.Typeofq
+import typingsSlinky.q.anon.Typeofq
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

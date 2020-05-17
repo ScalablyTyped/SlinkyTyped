@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait AddressData extends _AddressType {
+trait AddressData extends AddressType {
   var AddressLine1: String = js.native
   var AddressLine2: String = js.native
   var City: String = js.native

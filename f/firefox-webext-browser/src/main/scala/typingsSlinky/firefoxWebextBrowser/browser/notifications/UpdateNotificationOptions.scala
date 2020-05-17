@@ -1,6 +1,6 @@
 package typingsSlinky.firefoxWebextBrowser.browser.notifications
 
-import typingsSlinky.firefoxWebextBrowser.AnonIconUrl
+import typingsSlinky.firefoxWebextBrowser.anon.IconUrl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait UpdateNotificationOptions extends js.Object {
     * Text and icons for up to two notification action buttons.
     * @deprecated Unsupported on Firefox at this time.
     */
-  var buttons: js.UndefOr[js.Array[AnonIconUrl]] = js.native
+  var buttons: js.UndefOr[js.Array[IconUrl]] = js.native
   /** Alternate notification content with a lower-weight font. */
   var contextMessage: js.UndefOr[String] = js.native
   /** A timestamp associated with the notification, in milliseconds past the epoch. */
@@ -65,7 +65,7 @@ object UpdateNotificationOptions {
         ret
     }
     @scala.inline
-    def withButtons(value: js.Array[AnonIconUrl]): Self = {
+    def withButtons(value: js.Array[IconUrl]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
         ret

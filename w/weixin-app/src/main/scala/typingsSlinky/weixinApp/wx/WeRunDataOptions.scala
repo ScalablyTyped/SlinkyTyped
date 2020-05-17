@@ -1,6 +1,6 @@
 package typingsSlinky.weixinApp.wx
 
-import typingsSlinky.weixinApp.AnonEncryptedData
+import typingsSlinky.weixinApp.anon.EncryptedData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait WeRunDataOptions
   extends BaseOptions[js.Any, js.Any] {
   @JSName("success")
-  var success_WeRunDataOptions: js.UndefOr[js.Function1[/* res */ AnonEncryptedData, Unit]] = js.native
+  var success_WeRunDataOptions: js.UndefOr[js.Function1[/* res */ EncryptedData, Unit]] = js.native
 }
 
 object WeRunDataOptions {
@@ -25,7 +25,7 @@ object WeRunDataOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSuccess(value: /* res */ AnonEncryptedData => Unit): Self = {
+    def withSuccess(value: /* res */ EncryptedData => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

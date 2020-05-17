@@ -11,17 +11,8 @@ import scala.scalajs.js.annotation._
   * 
   * You shouldn't create an instance of a MultiFile directly, but should extend it with your own class, setting a custom type and processing methods.
   */
-@JSGlobal("Phaser.Loader.MultiFile")
 @js.native
-class MultiFile protected () extends js.Object {
-  /**
-    * 
-    * @param loader The Loader that is going to load this File.
-    * @param type The file type string for sorting within the Loader.
-    * @param key The key of the file within the loader.
-    * @param files An array of Files that make-up this MultiFile.
-    */
-  def this(loader: LoaderPlugin, `type`: String, key: String, files: js.Array[File]) = this()
+trait MultiFile extends js.Object {
   /**
     * A reference to the Loaders baseURL at the time this MultiFile was created.
     * Used to populate child-files.
@@ -88,5 +79,128 @@ class MultiFile protected () extends js.Object {
     * @param file The File that has failed to load.
     */
   def onFileFailed(file: File): Unit = js.native
+}
+
+object MultiFile {
+  @scala.inline
+  def apply(
+    addToMultiFile: File => MultiFile,
+    baseURL: String,
+    complete: Boolean,
+    config: js.Any,
+    failed: integer,
+    files: js.Array[File],
+    isReadyToProcess: () => Boolean,
+    key: String,
+    loader: LoaderPlugin,
+    onFileComplete: File => Unit,
+    onFileFailed: File => Unit,
+    path: String,
+    pending: integer,
+    prefix: String,
+    `type`: String
+  ): MultiFile = {
+    val __obj = js.Dynamic.literal(addToMultiFile = js.Any.fromFunction1(addToMultiFile), baseURL = baseURL.asInstanceOf[js.Any], complete = complete.asInstanceOf[js.Any], config = config.asInstanceOf[js.Any], failed = failed.asInstanceOf[js.Any], files = files.asInstanceOf[js.Any], isReadyToProcess = js.Any.fromFunction0(isReadyToProcess), key = key.asInstanceOf[js.Any], loader = loader.asInstanceOf[js.Any], onFileComplete = js.Any.fromFunction1(onFileComplete), onFileFailed = js.Any.fromFunction1(onFileFailed), path = path.asInstanceOf[js.Any], pending = pending.asInstanceOf[js.Any], prefix = prefix.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MultiFile]
+  }
+  @scala.inline
+  implicit class MultiFileOps[Self <: MultiFile] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddToMultiFile(value: File => MultiFile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addToMultiFile")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withBaseURL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("baseURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComplete(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConfig(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFailed(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("failed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFiles(value: js.Array[File]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsReadyToProcess(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isReadyToProcess")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoader(value: LoaderPlugin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnFileComplete(value: File => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFileComplete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnFileFailed(value: File => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFileFailed")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPending(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pending")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

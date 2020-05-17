@@ -1,5 +1,6 @@
 package typingsSlinky.qtip2
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.qtip2.QTip2.Api
 import typingsSlinky.qtip2.QTip2.Content
 import typingsSlinky.qtip2.QTip2.EventApiFunc
@@ -77,13 +78,15 @@ import typingsSlinky.qtip2.qtip2Strings.styleDotwidget
 import typingsSlinky.qtip2.qtip2Strings.styleDotwidth
 import typingsSlinky.qtip2.qtip2Strings.suppress
 import typingsSlinky.qtip2.qtip2Strings.toggle
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery
+  extends Target
+     with Text
+     with Title {
   @JSName("qtip")
   var qtip_Original: Plugin = js.native
   def qtip(): JQuery = js.native
@@ -101,8 +104,8 @@ trait JQuery extends js.Object {
   def qtip(methodName: option, propertyName: contentDottext): Text = js.native
   def qtip(methodName: option, propertyName: contentDottext, value: Text): Api = js.native
   def qtip(methodName: option, propertyName: contentDottitle): Title = js.native
-  def qtip(methodName: option, propertyName: contentDottitle, value: AnonText): Api = js.native
   def qtip(methodName: option, propertyName: contentDottitle, value: Title): Api = js.native
+  def qtip(methodName: option, propertyName: contentDottitle, value: typingsSlinky.qtip2.anon.Text): Api = js.native
   def qtip(methodName: option, propertyName: content, value: Content): Api = js.native
   def qtip(methodName: option, propertyName: content, value: Text): Api = js.native
   def qtip(methodName: option, propertyName: events): Events = js.native
@@ -232,7 +235,7 @@ trait JQuery extends js.Object {
   @JSName("qtip")
   def qtip_blur(methodName: blur): JQuery = js.native
   @JSName("qtip")
-  def qtip_blur(methodName: blur, event: Event_): JQuery = js.native
+  def qtip_blur(methodName: blur, event: Event): JQuery = js.native
   @JSName("qtip")
   def qtip_destroy(methodName: destroy): JQuery = js.native
   @JSName("qtip")
@@ -246,28 +249,28 @@ trait JQuery extends js.Object {
   @JSName("qtip")
   def qtip_focus(methodName: focus): JQuery = js.native
   @JSName("qtip")
-  def qtip_focus(methodName: focus, event: Event_): JQuery = js.native
+  def qtip_focus(methodName: focus, event: Event): JQuery = js.native
   @JSName("qtip")
   def qtip_hide(methodName: hide): JQuery = js.native
   @JSName("qtip")
-  def qtip_hide(methodName: hide, event: Event_): JQuery = js.native
+  def qtip_hide(methodName: hide, event: Event): JQuery = js.native
   @JSName("qtip")
   def qtip_option(methodName: option, properties: QTipOptions): Api = js.native
   @JSName("qtip")
   def qtip_reposition(methodName: reposition): JQuery = js.native
   @JSName("qtip")
-  def qtip_reposition(methodName: reposition, event: Event_): JQuery = js.native
+  def qtip_reposition(methodName: reposition, event: Event): JQuery = js.native
   @JSName("qtip")
-  def qtip_reposition(methodName: reposition, event: Event_, effect: Boolean): JQuery = js.native
+  def qtip_reposition(methodName: reposition, event: Event, effect: Boolean): JQuery = js.native
   @JSName("qtip")
   def qtip_show(methodName: show): JQuery = js.native
   @JSName("qtip")
-  def qtip_show(methodName: show, event: Event_): JQuery = js.native
+  def qtip_show(methodName: show, event: Event): JQuery = js.native
   @JSName("qtip")
   def qtip_toggle(methodName: toggle): JQuery = js.native
   @JSName("qtip")
   def qtip_toggle(methodName: toggle, state: Boolean): JQuery = js.native
   @JSName("qtip")
-  def qtip_toggle(methodName: toggle, state: Boolean, event: Event_): JQuery = js.native
+  def qtip_toggle(methodName: toggle, state: Boolean, event: Event): JQuery = js.native
 }
 

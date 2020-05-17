@@ -1,8 +1,8 @@
 package typingsSlinky.plotlyJs.mod
 
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.plotlyJs.PartialConfig
-import typingsSlinky.plotlyJs.PartialLayout
+import typingsSlinky.plotlyJs.anon.PartialConfig
+import typingsSlinky.plotlyJs.anon.PartialLayout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

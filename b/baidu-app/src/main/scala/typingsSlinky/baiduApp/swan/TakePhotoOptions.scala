@@ -1,6 +1,6 @@
 package typingsSlinky.baiduApp.swan
 
-import typingsSlinky.baiduApp.AnonTempImagePath
+import typingsSlinky.baiduApp.anon.TempImagePath
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait TakePhotoOptions
   /** 成像质量，值为high, normal, low，默认normal */
   var quality: js.UndefOr[String] = js.native
   @JSName("success")
-  var success_TakePhotoOptions: js.UndefOr[js.Function1[/* res */ AnonTempImagePath, Unit]] = js.native
+  var success_TakePhotoOptions: js.UndefOr[js.Function1[/* res */ TempImagePath, Unit]] = js.native
 }
 
 object TakePhotoOptions {
@@ -39,7 +39,7 @@ object TakePhotoOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonTempImagePath => Unit): Self = {
+    def withSuccess(value: /* res */ TempImagePath => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

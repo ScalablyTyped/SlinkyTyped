@@ -20,3 +20,30 @@ import scala.scalajs.js.annotation._
 */
 trait OperationRecord extends js.Object
 
+object OperationRecord {
+  @scala.inline
+  implicit def apply(value: AccountMergeOperationRecord): OperationRecord = value.asInstanceOf[OperationRecord]
+  @scala.inline
+  implicit def apply(value: AllowTrustOperationRecord): OperationRecord = value.asInstanceOf[OperationRecord]
+  @scala.inline
+  implicit def apply(value: BumpSequenceOperationRecord): OperationRecord = value.asInstanceOf[OperationRecord]
+  @scala.inline
+  implicit def apply(value: ChangeTrustOperationRecord): OperationRecord = value.asInstanceOf[OperationRecord]
+  @scala.inline
+  implicit def apply(value: CreateAccountOperationRecord): OperationRecord = value.asInstanceOf[OperationRecord]
+  @scala.inline
+  implicit def apply(value: InflationOperationRecord): OperationRecord = value.asInstanceOf[OperationRecord]
+  @scala.inline
+  implicit def apply(value: ManageDataOperationRecord): OperationRecord = value.asInstanceOf[OperationRecord]
+  @scala.inline
+  implicit def apply(value: ManageOfferOperationRecord): OperationRecord = value.asInstanceOf[OperationRecord]
+  @scala.inline
+  implicit def apply(value: PassiveOfferOperationRecord): OperationRecord = value.asInstanceOf[OperationRecord]
+  @scala.inline
+  implicit def apply(value: PathPaymentOperationRecord): OperationRecord = value.asInstanceOf[OperationRecord]
+  @scala.inline
+  implicit def apply(value: PaymentOperationRecord): OperationRecord = value.asInstanceOf[OperationRecord]
+  @scala.inline
+  implicit def apply(value: SetOptionsOperationRecord): OperationRecord = value.asInstanceOf[OperationRecord]
+}
+

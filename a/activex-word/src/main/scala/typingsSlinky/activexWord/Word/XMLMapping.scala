@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Word.XMLMapping")
 @js.native
-class XMLMapping protected () extends js.Object {
+trait XMLMapping extends js.Object {
   val Application: typingsSlinky.activexWord.Word.Application = js.native
   val Creator: Double = js.native
   val CustomXMLNode: typingsSlinky.activexOffice.Office.CustomXMLNode = js.native

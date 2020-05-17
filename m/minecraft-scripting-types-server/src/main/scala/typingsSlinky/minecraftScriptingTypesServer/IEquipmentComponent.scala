@@ -1,5 +1,6 @@
 package typingsSlinky.minecraftScriptingTypesServer
 
+import typingsSlinky.minecraftScriptingTypesServer.anon.Dropchance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +13,7 @@ trait IEquipmentComponent extends js.Object {
   /**
     * A list of slots with the chance to drop an equipped item from that slot
     */
-  var slot_drop_chance: js.Array[AnonDropchance] = js.native
+  var slot_drop_chance: js.Array[Dropchance] = js.native
   /**
     * The file path to the equipment table, relative to the behavior pack's root
     */
@@ -21,7 +22,7 @@ trait IEquipmentComponent extends js.Object {
 
 object IEquipmentComponent {
   @scala.inline
-  def apply(slot_drop_chance: js.Array[AnonDropchance], table: String): IEquipmentComponent = {
+  def apply(slot_drop_chance: js.Array[Dropchance], table: String): IEquipmentComponent = {
     val __obj = js.Dynamic.literal(slot_drop_chance = slot_drop_chance.asInstanceOf[js.Any], table = table.asInstanceOf[js.Any])
     __obj.asInstanceOf[IEquipmentComponent]
   }
@@ -32,7 +33,7 @@ object IEquipmentComponent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSlot_drop_chance(value: js.Array[AnonDropchance]): Self = {
+    def withSlot_drop_chance(value: js.Array[Dropchance]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("slot_drop_chance")(value.asInstanceOf[js.Any])
         ret

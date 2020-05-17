@@ -1,0 +1,21 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Provides data for the ASPxClientImageGallery.FullscreenViewerShowing event.
+  */
+@JSGlobal("ASPxClientImageGalleryCancelEventArgs")
+@js.native
+class ASPxClientImageGalleryCancelEventArgs protected ()
+  extends typingsSlinky.devexpressWeb.ASPxClientImageGalleryCancelEventArgs {
+  /**
+    * Initializes a new instance of the ASPxClientImageGalleryCancelEventArgs class.
+    * @param index A Int32 value that is the processed item index.
+    * @param name A String value that specifies the processed item's unique identifier name.
+    */
+  def this(index: Double, name: String) = this()
+}
+

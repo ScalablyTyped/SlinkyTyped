@@ -12,4 +12,5 @@ package object ui {
   type ModalViewCloseEvent = typingsSlinky.kendoUi.kendo.mobile.ui.ModalViewEvent
   type ModalViewInitEvent = typingsSlinky.kendoUi.kendo.mobile.ui.ModalViewEvent
   type PopOverCloseEvent = typingsSlinky.kendoUi.kendo.mobile.ui.PopOverEvent
+  type Widget = typingsSlinky.kendoUi.kendo.ui.Widget
 }

@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientDfareporting.gapi.client.dfareporting
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientDfareporting.AnonFields
-import typingsSlinky.gapiClientDfareporting.AnonKey
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientDfareporting.anon.Fields
+import typingsSlinky.gapiClientDfareporting.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MobileCarriersResource extends js.Object {
   /** Gets one mobile carrier by ID. */
-  def get(request: AnonFields): Request_[MobileCarrier] = js.native
+  def get(request: Fields): Request[MobileCarrier] = js.native
   /** Retrieves a list of mobile carriers. */
-  def list(request: AnonKey): Request_[MobileCarriersListResponse] = js.native
+  def list(request: Key): Request[MobileCarriersListResponse] = js.native
 }
 
 object MobileCarriersResource {
   @scala.inline
-  def apply(get: AnonFields => Request_[MobileCarrier], list: AnonKey => Request_[MobileCarriersListResponse]): MobileCarriersResource = {
+  def apply(get: Fields => Request[MobileCarrier], list: Key => Request[MobileCarriersListResponse]): MobileCarriersResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[MobileCarriersResource]
   }
@@ -28,13 +28,13 @@ object MobileCarriersResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonFields => Request_[MobileCarrier]): Self = {
+    def withGet(value: Fields => Request[MobileCarrier]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonKey => Request_[MobileCarriersListResponse]): Self = {
+    def withList(value: Key => Request[MobileCarriersListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

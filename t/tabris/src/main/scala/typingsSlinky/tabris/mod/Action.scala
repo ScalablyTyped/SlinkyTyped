@@ -1,7 +1,7 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.AnonChildrenString
-import typingsSlinky.tabris.OmitActionset
+import typingsSlinky.tabris.anon.ChildrenString
+import typingsSlinky.tabris.anon.OmitActionset
 import typingsSlinky.tabris.tabrisStrings.default
 import typingsSlinky.tabris.tabrisStrings.image
 import typingsSlinky.tabris.tabrisStrings.navigation
@@ -28,7 +28,7 @@ class Action () extends Widget {
     * @constant
     */
   @JSName("jsxAttributes")
-  val jsxAttributes_Action: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with AnonChildrenString = js.native
+  val jsxAttributes_Action: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with ChildrenString = js.native
   /**
     * Fired when the [*image*](#image) property has changed.
     */

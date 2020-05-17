@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.segmentedIosMod
 
-import typingsSlinky.antDesignReactNative.AnonSelectedIndex
+import typingsSlinky.antDesignReactNative.anon.SelectedIndex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ class default () extends SegmentedControl
 @JSImport("@ant-design/react-native/lib/segmented-control/segmented.ios", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonSelectedIndex = js.native
+  var defaultProps: SelectedIndex = js.native
 }
 

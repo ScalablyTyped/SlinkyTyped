@@ -1,19 +1,12 @@
 package typingsSlinky.amapJsApiControlBar.AMap
 
 import typingsSlinky.amapJsApi.AMap.EventEmitter
-import typingsSlinky.amapJsApiControlBar.AMap.ControlBar.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("AMap.ControlBar")
 @js.native
-/**
-  * 组合了旋转、倾斜、复位、缩放在内的地图控件
-  * @param options 选项
-  */
-class ControlBar_ () extends EventEmitter {
-  def this(options: Options) = this()
+trait ControlBar_ extends EventEmitter {
   def hide(): Unit = js.native
   // internal
   def show(): Unit = js.native

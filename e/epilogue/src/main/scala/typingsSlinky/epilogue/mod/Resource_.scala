@@ -1,7 +1,7 @@
 package typingsSlinky.epilogue.mod
 
-import typingsSlinky.epilogue.AnonModel
-import typingsSlinky.epilogue.AnonPlural
+import typingsSlinky.epilogue.anon.Model
+import typingsSlinky.epilogue.anon.Plural
 import typingsSlinky.express.mod.Express
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
@@ -24,9 +24,9 @@ class Resource_ protected () extends js.Object {
   var associationOptions: ResourceAssociationOptions = js.native
   var attributes: js.Array[String] = js.native
   var controllers: Controllers = js.native
-  var endpoints: AnonPlural = js.native
+  var endpoints: Plural = js.native
   var excludeAttributes: js.Array[String] = js.native
-  var include: js.Array[AnonModel | String] = js.native
+  var include: js.Array[Model | String] = js.native
   var model: js.Any = js.native
   var pagination: Boolean = js.native
   var readOnlyAttributes: js.Array[String] = js.native

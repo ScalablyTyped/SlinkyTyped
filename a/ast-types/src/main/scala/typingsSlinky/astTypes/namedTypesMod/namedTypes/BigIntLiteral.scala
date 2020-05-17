@@ -1,8 +1,8 @@
 package typingsSlinky.astTypes.namedTypesMod.namedTypes
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.astTypes.AnonFlags
-import typingsSlinky.astTypes.AnonRawString
+import typingsSlinky.astTypes.anon.Flags
+import typingsSlinky.astTypes.anon.RawString
 import typingsSlinky.astTypes.kindsMod.CommentKind
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.kindsMod.LiteralKind
@@ -23,9 +23,9 @@ trait BigIntLiteral
      with NodeKind
      with PrintableKind {
   var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var extra: js.UndefOr[AnonRawString] = js.native
+  var extra: js.UndefOr[RawString] = js.native
   var loc: js.UndefOr[SourceLocationKind] = js.native
-  var regex: js.UndefOr[AnonFlags] = js.native
+  var regex: js.UndefOr[Flags] = js.native
   var `type`: typingsSlinky.astTypes.astTypesStrings.BigIntLiteral = js.native
   var value: String | Double = js.native
 }

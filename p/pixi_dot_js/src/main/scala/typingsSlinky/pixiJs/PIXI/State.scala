@@ -13,9 +13,8 @@ import scala.scalajs.js.annotation._
   * @class
   * @memberof PIXI
   */
-@JSGlobal("PIXI.State")
 @js.native
-class State () extends js.Object {
+trait State extends js.Object {
   /**
     * Activates blending of the computed fragment color values
     *
@@ -65,5 +64,71 @@ class State () extends js.Object {
     * @default 0
     */
   var polygonOffset: Double = js.native
+}
+
+object State {
+  @scala.inline
+  def apply(
+    blend: Boolean,
+    blendMode: Double,
+    clockwiseFrontFace: Boolean,
+    culling: Boolean,
+    depthTest: Boolean,
+    offsets: Boolean,
+    polygonOffset: Double
+  ): State = {
+    val __obj = js.Dynamic.literal(blend = blend.asInstanceOf[js.Any], blendMode = blendMode.asInstanceOf[js.Any], clockwiseFrontFace = clockwiseFrontFace.asInstanceOf[js.Any], culling = culling.asInstanceOf[js.Any], depthTest = depthTest.asInstanceOf[js.Any], offsets = offsets.asInstanceOf[js.Any], polygonOffset = polygonOffset.asInstanceOf[js.Any])
+    __obj.asInstanceOf[State]
+  }
+  @scala.inline
+  implicit class StateOps[Self <: State] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBlend(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blend")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlendMode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blendMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClockwiseFrontFace(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clockwiseFrontFace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCulling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("culling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDepthTest(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("depthTest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOffsets(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPolygonOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("polygonOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

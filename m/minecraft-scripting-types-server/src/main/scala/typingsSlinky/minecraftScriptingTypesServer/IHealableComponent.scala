@@ -1,5 +1,6 @@
 package typingsSlinky.minecraftScriptingTypesServer
 
+import typingsSlinky.minecraftScriptingTypesServer.anon.Effects
 import typingsSlinky.minecraftScriptingTypesShared.MinecraftFilter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,12 +23,12 @@ trait IHealableComponent extends js.Object {
   /**
     * The array of items that can be used to heal this entity
     */
-  var items: js.Array[AnonEffects] = js.native
+  var items: js.Array[Effects] = js.native
 }
 
 object IHealableComponent {
   @scala.inline
-  def apply(force_use: Boolean, items: js.Array[AnonEffects]): IHealableComponent = {
+  def apply(force_use: Boolean, items: js.Array[Effects]): IHealableComponent = {
     val __obj = js.Dynamic.literal(force_use = force_use.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
     __obj.asInstanceOf[IHealableComponent]
   }
@@ -44,7 +45,7 @@ object IHealableComponent {
         ret
     }
     @scala.inline
-    def withItems(value: js.Array[AnonEffects]): Self = {
+    def withItems(value: js.Array[Effects]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
         ret

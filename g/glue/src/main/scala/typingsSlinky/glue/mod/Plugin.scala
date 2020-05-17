@@ -1,6 +1,5 @@
 package typingsSlinky.glue.mod
 
-import typingsSlinky.glue.AnonOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,13 +7,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Plugin extends js.Object {
   var options: js.UndefOr[js.Any] = js.native
-  var plugin: String | AnonOptions = js.native
+  var plugin: String | typingsSlinky.glue.anon.Options = js.native
   var routes: js.UndefOr[js.Any] = js.native
 }
 
 object Plugin {
   @scala.inline
-  def apply(plugin: String | AnonOptions): Plugin = {
+  def apply(plugin: String | typingsSlinky.glue.anon.Options): Plugin = {
     val __obj = js.Dynamic.literal(plugin = plugin.asInstanceOf[js.Any])
     __obj.asInstanceOf[Plugin]
   }
@@ -25,7 +24,7 @@ object Plugin {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPlugin(value: String | AnonOptions): Self = {
+    def withPlugin(value: String | typingsSlinky.glue.anon.Options): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("plugin")(value.asInstanceOf[js.Any])
         ret

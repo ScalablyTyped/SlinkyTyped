@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabServices.workspaceMod.Workspace
 
-import typingsSlinky.jupyterlabServices.AnonId
+import typingsSlinky.jupyterlabServices.anon.Id
 import typingsSlinky.phosphorCoreutils.jsonMod.ReadonlyJSONObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,12 +18,12 @@ trait IWorkspace extends js.Object {
   /**
     * The metadata for a workspace.
     */
-  var metadata: AnonId = js.native
+  var metadata: Id = js.native
 }
 
 object IWorkspace {
   @scala.inline
-  def apply(data: ReadonlyJSONObject, metadata: AnonId): IWorkspace = {
+  def apply(data: ReadonlyJSONObject, metadata: Id): IWorkspace = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[IWorkspace]
   }
@@ -40,7 +40,7 @@ object IWorkspace {
         ret
     }
     @scala.inline
-    def withMetadata(value: AnonId): Self = {
+    def withMetadata(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
         ret

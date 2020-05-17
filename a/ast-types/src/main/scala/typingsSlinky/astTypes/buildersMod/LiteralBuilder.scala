@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonRegex
+import typingsSlinky.astTypes.anon.Regex
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.Literal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,6 +13,6 @@ trait LiteralBuilder extends js.Object {
   def apply(value: Boolean): Literal = js.native
   def apply(value: Double): Literal = js.native
   def apply(value: js.RegExp): Literal = js.native
-  def from(params: AnonRegex): Literal = js.native
+  def from(params: Regex): Literal = js.native
 }
 

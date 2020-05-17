@@ -1,5 +1,6 @@
 package typingsSlinky.typedoc
 
+import typingsSlinky.typedoc.anon.Begin
 import typingsSlinky.typedoc.applicationMod.Application
 import typingsSlinky.typedoc.libUtilsMod.ChildableComponent
 import typingsSlinky.typedoc.modelsMod.ProjectReflection
@@ -18,7 +19,7 @@ object serializerMod extends js.Object {
     var router: js.Any = js.native
     var routes: js.Any = js.native
     def projectToObject(value: ProjectReflection): js.Any = js.native
-    def projectToObject(value: ProjectReflection, eventData: AnonBegin): js.Any = js.native
+    def projectToObject(value: ProjectReflection, eventData: Begin): js.Any = js.native
     def toObject(value: js.Any): js.Any = js.native
     def toObject(value: js.Any, obj: js.Any): js.Any = js.native
   }

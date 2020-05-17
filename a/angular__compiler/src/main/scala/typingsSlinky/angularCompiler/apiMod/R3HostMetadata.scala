@@ -1,7 +1,7 @@
 package typingsSlinky.angularCompiler.apiMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.angularCompiler.AnonClassAttr
+import typingsSlinky.angularCompiler.anon.ClassAttr
 import typingsSlinky.angularCompiler.outputAstMod.Expression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,7 @@ trait R3HostMetadata extends js.Object {
     * A mapping of property binding keys to unparsed expressions.
     */
   var properties: StringDictionary[String] = js.native
-  var specialAttributes: AnonClassAttr = js.native
+  var specialAttributes: ClassAttr = js.native
 }
 
 object R3HostMetadata {
@@ -30,7 +30,7 @@ object R3HostMetadata {
     attributes: StringDictionary[Expression],
     listeners: StringDictionary[String],
     properties: StringDictionary[String],
-    specialAttributes: AnonClassAttr
+    specialAttributes: ClassAttr
   ): R3HostMetadata = {
     val __obj = js.Dynamic.literal(attributes = attributes.asInstanceOf[js.Any], listeners = listeners.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], specialAttributes = specialAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[R3HostMetadata]
@@ -60,7 +60,7 @@ object R3HostMetadata {
         ret
     }
     @scala.inline
-    def withSpecialAttributes(value: AnonClassAttr): Self = {
+    def withSpecialAttributes(value: ClassAttr): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("specialAttributes")(value.asInstanceOf[js.Any])
         ret

@@ -1,14 +1,11 @@
 package typingsSlinky.googleVisualization.google.visualization
 
-import org.scalajs.dom.raw.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("google.visualization.Timeline")
 @js.native
-class Timeline protected () extends js.Object {
-  def this(element: Element) = this()
+trait Timeline extends js.Object {
   def clearChart(): Unit = js.native
   def draw(data: DataTable): Unit = js.native
   def draw(data: DataTable, options: TimelineOptions): Unit = js.native

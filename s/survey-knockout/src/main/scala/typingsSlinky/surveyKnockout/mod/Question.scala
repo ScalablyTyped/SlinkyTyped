@@ -1,8 +1,8 @@
 package typingsSlinky.surveyKnockout.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.surveyKnockout.AnonCalculations
-import typingsSlinky.surveyKnockout.AnonIsNeedRender
+import typingsSlinky.surveyKnockout.anon.Calculations
+import typingsSlinky.surveyKnockout.anon.IsNeedRender
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,7 +49,7 @@ class Question protected ()
     * The link to the custom widget.
     */
   val customWidget: QuestionCustomWidget = js.native
-  var customWidgetData: AnonIsNeedRender = js.native
+  var customWidgetData: IsNeedRender = js.native
   /**
     * Set the default value to the question. It will be assign to the question on loading the survey from JSON or adding a question to the survey or on setting this property of the value is empty.
     */
@@ -319,7 +319,7 @@ class Question protected ()
     * set options.includeEmpty to false if you want to skip empty answers
     */
   def getPlainData(): js.Any = js.native
-  def getPlainData(options: AnonCalculations): js.Any = js.native
+  def getPlainData(options: Calculations): js.Any = js.native
   /* protected */ def getProcessedTextValue(textValue: TextPreProcessorValue): Unit = js.native
   def getQuestionFromArray(name: String, index: Double): IQuestion = js.native
   def getQuestionTitleTemplate(): String = js.native

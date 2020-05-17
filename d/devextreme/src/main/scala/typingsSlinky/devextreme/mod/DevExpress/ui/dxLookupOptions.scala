@@ -1,16 +1,16 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonComponentDxLookup
-import typingsSlinky.devextreme.AnonHide
-import typingsSlinky.devextreme.AnonPreviousValueValue
-import typingsSlinky.devextreme.AnonReachedLeft
-import typingsSlinky.devextreme.AnonTitleElement
+import typingsSlinky.devextreme.anon.ComponentDxLookup
+import typingsSlinky.devextreme.anon.Hide
+import typingsSlinky.devextreme.anon.PreviousValueValue
+import typingsSlinky.devextreme.anon.ReachedLeft
+import typingsSlinky.devextreme.anon.TitleElement
 import typingsSlinky.devextreme.devextremeStrings.nextButton
 import typingsSlinky.devextreme.devextremeStrings.scrollBottom
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.positionConfig
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait dxLookupOptions extends dxDropDownListOptions[dxLookup] {
   /** Configures widget visibility animations. This object contains two fields: show and hide. */
-  var animation: js.UndefOr[AnonHide] = js.native
+  var animation: js.UndefOr[Hide] = js.native
   /** The text displayed on the Apply button. */
   var applyButtonText: js.UndefOr[String] = js.native
   /** The text displayed on the Cancel button. */
@@ -38,16 +38,16 @@ trait dxLookupOptions extends dxDropDownListOptions[dxLookup] {
   /** The text displayed on the button used to load the next page from the data source. */
   var nextButtonText: js.UndefOr[String] = js.native
   /** A function that is executed before the next page is loaded. */
-  var onPageLoading: js.UndefOr[js.Function1[/* e */ AnonComponentDxLookup, _]] = js.native
+  var onPageLoading: js.UndefOr[js.Function1[/* e */ ComponentDxLookup, _]] = js.native
   /** A function that is executed when the "pull to refresh" gesture is performed on the drop-down item list. Supported in mobile themes only. */
-  var onPullRefresh: js.UndefOr[js.Function1[/* e */ AnonComponentDxLookup, _]] = js.native
+  var onPullRefresh: js.UndefOr[js.Function1[/* e */ ComponentDxLookup, _]] = js.native
   /** A function that is executed on each scroll gesture performed on the drop-down item list. */
-  var onScroll: js.UndefOr[js.Function1[/* e */ AnonReachedLeft, _]] = js.native
+  var onScroll: js.UndefOr[js.Function1[/* e */ ReachedLeft, _]] = js.native
   /** A function that is executed when the drop-down list's title is rendered. */
-  var onTitleRendered: js.UndefOr[js.Function1[/* e */ AnonTitleElement, _]] = js.native
+  var onTitleRendered: js.UndefOr[js.Function1[/* e */ TitleElement, _]] = js.native
   /** A function that is executed after the widget's value is changed. */
   @JSName("onValueChanged")
-  var onValueChanged_dxLookupOptions: js.UndefOr[js.Function1[/* e */ AnonPreviousValueValue, _]] = js.native
+  var onValueChanged_dxLookupOptions: js.UndefOr[js.Function1[/* e */ PreviousValueValue, _]] = js.native
   /** Specifies whether the next page is loaded when a user scrolls the widget to the bottom or when the "next" button is clicked. */
   var pageLoadMode: js.UndefOr[nextButton | scrollBottom] = js.native
   /** Specifies the text shown in the pullDown panel, which is displayed when the widget is scrolled to the bottom. */
@@ -99,7 +99,7 @@ object dxLookupOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAnimation(value: AnonHide): Self = {
+    def withAnimation(value: Hide): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
         ret
@@ -227,7 +227,7 @@ object dxLookupOptions {
         ret
     }
     @scala.inline
-    def withOnPageLoading(value: /* e */ AnonComponentDxLookup => _): Self = {
+    def withOnPageLoading(value: /* e */ ComponentDxLookup => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPageLoading")(js.Any.fromFunction1(value))
         ret
@@ -239,7 +239,7 @@ object dxLookupOptions {
         ret
     }
     @scala.inline
-    def withOnPullRefresh(value: /* e */ AnonComponentDxLookup => _): Self = {
+    def withOnPullRefresh(value: /* e */ ComponentDxLookup => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPullRefresh")(js.Any.fromFunction1(value))
         ret
@@ -251,7 +251,7 @@ object dxLookupOptions {
         ret
     }
     @scala.inline
-    def withOnScroll(value: /* e */ AnonReachedLeft => _): Self = {
+    def withOnScroll(value: /* e */ ReachedLeft => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.Any.fromFunction1(value))
         ret
@@ -263,7 +263,7 @@ object dxLookupOptions {
         ret
     }
     @scala.inline
-    def withOnTitleRendered(value: /* e */ AnonTitleElement => _): Self = {
+    def withOnTitleRendered(value: /* e */ TitleElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTitleRendered")(js.Any.fromFunction1(value))
         ret
@@ -275,7 +275,7 @@ object dxLookupOptions {
         ret
     }
     @scala.inline
-    def withOnValueChanged(value: /* e */ AnonPreviousValueValue => _): Self = {
+    def withOnValueChanged(value: /* e */ PreviousValueValue => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onValueChanged")(js.Any.fromFunction1(value))
         ret

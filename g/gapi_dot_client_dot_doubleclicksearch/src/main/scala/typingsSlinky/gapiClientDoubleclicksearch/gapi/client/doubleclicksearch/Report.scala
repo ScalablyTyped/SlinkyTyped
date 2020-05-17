@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientDoubleclicksearch.gapi.client.doubleclicksearch
 
-import typingsSlinky.gapiClientDoubleclicksearch.AnonByteCount
+import typingsSlinky.gapiClientDoubleclicksearch.anon.ByteCount
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Report extends js.Object {
   /** Asynchronous report only. Contains a list of generated report files once the report has succesfully completed. */
-  var files: js.UndefOr[js.Array[AnonByteCount]] = js.native
+  var files: js.UndefOr[js.Array[ByteCount]] = js.native
   /** Asynchronous report only. Id of the report. */
   var id: js.UndefOr[String] = js.native
   /** Asynchronous report only. True if and only if the report has completed successfully and the report files are ready to be downloaded. */
@@ -43,7 +43,7 @@ object Report {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFiles(value: js.Array[AnonByteCount]): Self = {
+    def withFiles(value: js.Array[ByteCount]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
         ret

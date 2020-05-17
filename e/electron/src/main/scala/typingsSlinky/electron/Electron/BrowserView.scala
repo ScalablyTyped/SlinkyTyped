@@ -4,11 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Electron.BrowserView")
 @js.native
-// Docs: http://electronjs.org/docs/api/browser-view
-class BrowserView () extends EventEmitter {
-  def this(options: BrowserViewConstructorOptions) = this()
+trait BrowserView extends EventEmitter {
   var id: Double = js.native
   var webContents: WebContents_ = js.native
   /**
@@ -24,14 +21,5 @@ class BrowserView () extends EventEmitter {
     * Resizes and moves the view to the supplied bounds relative to the window.
     */
   def setBounds(bounds: Rectangle): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("Electron.BrowserView")
-@js.native
-object BrowserView extends js.Object {
-  def fromId(id: Double): BrowserView = js.native
-  def fromWebContents(webContents: WebContents_): BrowserView | Null = js.native
-  def getAllViews(): js.Array[BrowserView] = js.native
 }
 

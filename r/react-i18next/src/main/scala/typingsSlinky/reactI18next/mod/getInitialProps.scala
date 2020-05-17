@@ -1,6 +1,6 @@
 package typingsSlinky.reactI18next.mod
 
-import typingsSlinky.reactI18next.AnonInitialI18nStore
+import typingsSlinky.reactI18next.anon.InitialI18nStore
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("react-i18next", "getInitialProps")
 @js.native
 object getInitialProps extends js.Object {
-  def apply(): AnonInitialI18nStore = js.native
+  def apply(): InitialI18nStore = js.native
 }
 

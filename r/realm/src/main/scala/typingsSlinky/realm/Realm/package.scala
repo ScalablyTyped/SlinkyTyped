@@ -29,26 +29,4 @@ package object Realm {
   type PropertiesTypes = org.scalablytyped.runtime.StringDictionary[
     typingsSlinky.realm.Realm.PropertyType | typingsSlinky.realm.Realm.ObjectSchemaProperty
   ]
-  /**
-    * PropertyType
-    * @see { @link https://realm.io/docs/javascript/latest/api/Realm.html#~PropertyType }
-    */
-  /* Rewritten from type alias, can be one of: 
-    - java.lang.String
-    - typingsSlinky.realm.realmStrings.bool
-    - typingsSlinky.realm.realmStrings.int
-    - typingsSlinky.realm.realmStrings.float
-    - typingsSlinky.realm.realmStrings.double
-    - typingsSlinky.realm.realmStrings.string
-    - typingsSlinky.realm.realmStrings.data
-    - typingsSlinky.realm.realmStrings.date
-    - typingsSlinky.realm.realmStrings.list
-    - typingsSlinky.realm.realmStrings.linkingObjects
-  */
-  type PropertyType = typingsSlinky.realm.Realm._PropertyType | java.lang.String
-  /**
-    * SortDescriptor
-    * @see { @link https://realm.io/docs/javascript/latest/api/Realm.Collection.html#~SortDescriptor }
-    */
-  type SortDescriptor = js.Array[java.lang.String] | (js.Tuple2[java.lang.String, scala.Boolean])
 }

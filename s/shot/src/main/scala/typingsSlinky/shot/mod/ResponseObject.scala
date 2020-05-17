@@ -2,7 +2,7 @@ package typingsSlinky.shot.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.node.Buffer
-import typingsSlinky.shot.AnonReq
+import typingsSlinky.shot.anon.Req
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait ResponseObject extends js.Object {
   /** the payload as a UTF-8 encoded string. */
   var payload: String = js.native
   /** an object containing the raw request and response objects where: */
-  var raw: AnonReq = js.native
+  var raw: Req = js.native
   /** the raw payload as a Buffer. */
   var rawPayload: Buffer = js.native
   /** the HTTP status code. */
@@ -30,7 +30,7 @@ object ResponseObject {
   def apply(
     headers: Headers,
     payload: String,
-    raw: AnonReq,
+    raw: Req,
     rawPayload: Buffer,
     statusCode: Double,
     statusMessage: String,
@@ -58,7 +58,7 @@ object ResponseObject {
         ret
     }
     @scala.inline
-    def withRaw(value: AnonReq): Self = {
+    def withRaw(value: Req): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(value.asInstanceOf[js.Any])
         ret

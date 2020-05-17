@@ -1,18 +1,18 @@
 package typingsSlinky.wxServerSdk.mod
 
-import typingsSlinky.wxServerSdk.AnonDatabase
+import typingsSlinky.wxServerSdk.anon.Database
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait InitOptions extends js.Object {
-  var env: String | AnonDatabase = js.native
+  var env: String | Database = js.native
 }
 
 object InitOptions {
   @scala.inline
-  def apply(env: String | AnonDatabase): InitOptions = {
+  def apply(env: String | Database): InitOptions = {
     val __obj = js.Dynamic.literal(env = env.asInstanceOf[js.Any])
     __obj.asInstanceOf[InitOptions]
   }
@@ -23,7 +23,7 @@ object InitOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEnv(value: String | AnonDatabase): Self = {
+    def withEnv(value: String | Database): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
         ret

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ContentCanvas
   extends ContentBase
-     with _Content {
+     with Content {
   var canvas: js.Array[CanvasElement] = js.native
 }
 

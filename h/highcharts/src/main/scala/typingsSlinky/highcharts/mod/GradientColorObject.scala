@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait GradientColorObject extends _ColorType {
+trait GradientColorObject extends ColorType {
   /**
     * Holds an object that defines the start position and the end position
     * relative to the shape.

@@ -13,8 +13,8 @@ import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.reactDayPicker.AnonNextMonth
-import typingsSlinky.reactDayPicker.PartialModifiers
+import typingsSlinky.reactDayPicker.anon.NextMonth
+import typingsSlinky.reactDayPicker.anon.PartialModifiers
 import typingsSlinky.reactDayPicker.commonMod.ClassNames
 import typingsSlinky.reactDayPicker.commonMod.DayModifiers
 import typingsSlinky.reactDayPicker.commonMod.Modifier
@@ -64,7 +64,7 @@ class SharedBuilder_DayPickerProps821347195[R <: js.Object] (val args: js.Array[
   @scala.inline
   def initialMonth(value: js.Date): this.type = set("initialMonth", value.asInstanceOf[js.Any])
   @scala.inline
-  def labels(value: AnonNextMonth): this.type = set("labels", value.asInstanceOf[js.Any])
+  def labels(value: NextMonth): this.type = set("labels", value.asInstanceOf[js.Any])
   @scala.inline
   def locale(value: String): this.type = set("locale", value.asInstanceOf[js.Any])
   @scala.inline

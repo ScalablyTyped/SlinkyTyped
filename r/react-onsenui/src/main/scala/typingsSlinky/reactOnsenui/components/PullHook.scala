@@ -3,7 +3,7 @@ package typingsSlinky.reactOnsenui.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameFixedContent
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameFixedContent
 import typingsSlinky.reactOnsenui.mod.PullHookChangeEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`

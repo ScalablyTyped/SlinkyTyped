@@ -1,6 +1,6 @@
 package typingsSlinky.intercomClient.eventMod
 
-import typingsSlinky.intercomClient.AnonNext
+import typingsSlinky.intercomClient.anon.Next
 import typingsSlinky.intercomClient.intercomClientStrings.eventDotlist
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,14 +9,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait List extends js.Object {
   var events: js.Array[Event] = js.native
-  var pages: AnonNext = js.native
+  var pages: Next = js.native
   var total_count: Double = js.native
   var `type`: eventDotlist = js.native
 }
 
 object List {
   @scala.inline
-  def apply(events: js.Array[Event], pages: AnonNext, total_count: Double, `type`: eventDotlist): List = {
+  def apply(events: js.Array[Event], pages: Next, total_count: Double, `type`: eventDotlist): List = {
     val __obj = js.Dynamic.literal(events = events.asInstanceOf[js.Any], pages = pages.asInstanceOf[js.Any], total_count = total_count.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[List]
@@ -34,7 +34,7 @@ object List {
         ret
     }
     @scala.inline
-    def withPages(value: AnonNext): Self = {
+    def withPages(value: Next): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pages")(value.asInstanceOf[js.Any])
         ret

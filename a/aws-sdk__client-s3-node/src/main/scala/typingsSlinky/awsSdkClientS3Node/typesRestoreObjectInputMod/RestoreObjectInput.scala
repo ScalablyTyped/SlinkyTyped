@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdkClientS3Node.typesRestoreObjectInputMod
 
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.requester_
-import typingsSlinky.awsSdkClientS3Node.inputTypesUnionMod._InputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientS3Node.typesRestoreRequestMod.RestoreRequest
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.httpMod.NodeHttpOptions
@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RestoreObjectInput extends _InputTypesUnion {
+trait RestoreObjectInput extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *

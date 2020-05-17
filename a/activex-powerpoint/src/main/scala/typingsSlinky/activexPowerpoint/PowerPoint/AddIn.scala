@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("PowerPoint.AddIn")
 @js.native
-class AddIn protected () extends js.Object {
+trait AddIn extends js.Object {
   val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application = js.native
   var AutoLoad: MsoTriState = js.native
   var DisplayAlerts: MsoTriState = js.native
@@ -20,5 +19,100 @@ class AddIn protected () extends js.Object {
   var PowerPointDotAddIn_typekey: AddIn = js.native
   var Registered: MsoTriState = js.native
   val RegisteredInHKLM: MsoTriState = js.native
+}
+
+object AddIn {
+  @scala.inline
+  def apply(
+    Application: Application,
+    AutoLoad: MsoTriState,
+    DisplayAlerts: MsoTriState,
+    FullName: String,
+    Loaded: MsoTriState,
+    Name: String,
+    Parent: js.Any,
+    Path: String,
+    PowerPointDotAddIn_typekey: AddIn,
+    Registered: MsoTriState,
+    RegisteredInHKLM: MsoTriState
+  ): AddIn = {
+    val __obj = js.Dynamic.literal(Application = Application.asInstanceOf[js.Any], AutoLoad = AutoLoad.asInstanceOf[js.Any], DisplayAlerts = DisplayAlerts.asInstanceOf[js.Any], FullName = FullName.asInstanceOf[js.Any], Loaded = Loaded.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Parent = Parent.asInstanceOf[js.Any], Path = Path.asInstanceOf[js.Any], Registered = Registered.asInstanceOf[js.Any], RegisteredInHKLM = RegisteredInHKLM.asInstanceOf[js.Any])
+    __obj.updateDynamic("PowerPoint.AddIn_typekey")(PowerPointDotAddIn_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AddIn]
+  }
+  @scala.inline
+  implicit class AddInOps[Self <: AddIn] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplication(value: Application): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutoLoad(value: MsoTriState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoLoad")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisplayAlerts(value: MsoTriState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DisplayAlerts")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFullName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FullName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoaded(value: MsoTriState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Loaded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPowerPointDotAddIn_typekey(value: AddIn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PowerPoint.AddIn_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRegistered(value: MsoTriState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Registered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRegisteredInHKLM(value: MsoTriState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RegisteredInHKLM")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

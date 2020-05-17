@@ -1,5 +1,6 @@
 package typingsSlinky.baseui.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.File
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
@@ -13,7 +14,6 @@ import typingsSlinky.baseui.fileUploaderMod.FileUploaderProps
 import typingsSlinky.baseui.fileUploaderMod.StyleProps
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.std.DataTransferItem
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +36,7 @@ object FileUploader {
     @scala.inline
     def errorMessage(value: String): this.type = set("errorMessage", value.asInstanceOf[js.Any])
     @scala.inline
-    def getDataTransferItems(value: /* event */ SyntheticEvent[Event_, js.Any] => js.Promise[js.Array[File | DataTransferItem]]): this.type = set("getDataTransferItems", js.Any.fromFunction1(value))
+    def getDataTransferItems(value: /* event */ SyntheticEvent[Event, js.Any] => js.Promise[js.Array[File | DataTransferItem]]): this.type = set("getDataTransferItems", js.Any.fromFunction1(value))
     @scala.inline
     def maxSize(value: Double): this.type = set("maxSize", value.asInstanceOf[js.Any])
     @scala.inline
@@ -61,15 +61,15 @@ object FileUploader {
     def onDragStart(value: /* event */ DragEvent[HTMLElement] => _): this.type = set("onDragStart", js.Any.fromFunction1(value))
     @scala.inline
     def onDrop(
-      value: (/* accepted */ js.Array[File], /* rejected */ js.Array[File], /* event */ SyntheticEvent[Event_, HTMLElement]) => js.Any
+      value: (/* accepted */ js.Array[File], /* rejected */ js.Array[File], /* event */ SyntheticEvent[Event, HTMLElement]) => js.Any
     ): this.type = set("onDrop", js.Any.fromFunction3(value))
     @scala.inline
     def onDropAccepted(
-      value: (/* acceptedOrRejected */ js.Array[File], /* event */ SyntheticEvent[Event_, HTMLElement]) => js.Any
+      value: (/* acceptedOrRejected */ js.Array[File], /* event */ SyntheticEvent[Event, HTMLElement]) => js.Any
     ): this.type = set("onDropAccepted", js.Any.fromFunction2(value))
     @scala.inline
     def onDropRejected(
-      value: (/* acceptedOrRejected */ js.Array[File], /* event */ SyntheticEvent[Event_, HTMLElement]) => js.Any
+      value: (/* acceptedOrRejected */ js.Array[File], /* event */ SyntheticEvent[Event, HTMLElement]) => js.Any
     ): this.type = set("onDropRejected", js.Any.fromFunction2(value))
     @scala.inline
     def onFileDialogCancel(value: () => _): this.type = set("onFileDialogCancel", js.Any.fromFunction0(value))

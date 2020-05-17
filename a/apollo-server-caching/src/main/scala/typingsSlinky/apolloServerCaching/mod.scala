@@ -1,5 +1,6 @@
 package typingsSlinky.apolloServerCaching
 
+import typingsSlinky.apolloServerCaching.anon.MaxSize
 import typingsSlinky.apolloServerCaching.keyValueCacheMod.KeyValueCache
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +12,7 @@ object mod extends js.Object {
   @js.native
   class InMemoryLRUCache[V] ()
     extends typingsSlinky.apolloServerCaching.inMemoryLRUCacheMod.InMemoryLRUCache[V] {
-    def this(hasMaxSizeSizeCalculatorOnDispose: AnonMaxSize[V]) = this()
+    def this(hasMaxSizeSizeCalculatorOnDispose: MaxSize[V]) = this()
   }
   
   @js.native

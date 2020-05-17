@@ -1,7 +1,7 @@
 package typingsSlinky.webpackConfigUtils
 
 import typingsSlinky.webpackConfigUtils.mod.EnvVars
-import typingsSlinky.webpackConfigUtils.mod._Falsy
+import typingsSlinky.webpackConfigUtils.mod.Falsy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ object webpackConfigUtilsStrings {
   sealed trait NonEmptyObject extends js.Object
   
   @js.native
-  sealed trait _empty extends _Falsy
+  sealed trait _empty extends Falsy
   
   @js.native
   sealed trait dev extends EnvVars
@@ -20,7 +20,7 @@ object webpackConfigUtilsStrings {
   sealed trait development extends EnvVars
   
   @js.native
-  sealed trait `false` extends _Falsy
+  sealed trait `false` extends Falsy
   
   @js.native
   sealed trait getIfUtils extends js.Object

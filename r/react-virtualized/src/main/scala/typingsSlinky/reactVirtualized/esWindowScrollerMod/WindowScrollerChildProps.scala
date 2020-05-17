@@ -1,7 +1,7 @@
 package typingsSlinky.reactVirtualized.esWindowScrollerMod
 
 import slinky.core.TagMod
-import typingsSlinky.reactVirtualized.AnonScrollTop
+import typingsSlinky.reactVirtualized.anon.ScrollTop
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait WindowScrollerChildProps extends js.Object {
   var scrollLeft: Double = js.native
   var scrollTop: Double = js.native
   var width: Double = js.native
-  def onChildScroll(params: AnonScrollTop): Unit = js.native
+  def onChildScroll(params: ScrollTop): Unit = js.native
   def registerChild(): Unit = js.native
   def registerChild(element: TagMod[Any]): Unit = js.native
 }

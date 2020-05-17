@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 	* @brief Redis 数据库客户端 Hash 对象，此对象为包含指定 key 的客户端，只有调用其方法才会操作数据库
 	* @detail 用以操作 Redis 的 Hash 对象，创建方法：,```JavaScript,var db = require("db");,var rdb = new db.openRedis("redis-server");,var hash = rdb.getHash("test");,```
 	*/
-@JSGlobal("Class_RedisHash")
 @js.native
-class ClassRedisHash () extends ClassObject {
+trait ClassRedisHash extends ClassObject {
   /**
   	 * 
   	 * @brief 删除哈希表中的一个或多个指定域，不存在的域将被忽略

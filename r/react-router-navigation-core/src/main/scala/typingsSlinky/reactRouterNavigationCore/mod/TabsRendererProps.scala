@@ -1,6 +1,6 @@
 package typingsSlinky.reactRouterNavigationCore.mod
 
-import typingsSlinky.reactRouterNavigationCore.AnonTestID
+import typingsSlinky.reactRouterNavigationCore.anon.TestID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TabsRendererProps extends js.Object {
   var loadedTabs: js.Array[String] = js.native
-  var navigationState: NavigationState[AnonTestID] = js.native
+  var navigationState: NavigationState[TestID] = js.native
   var tabs: js.Array[Tab] = js.native
   def onIndexChange(index: Double): Unit = js.native
 }
@@ -17,7 +17,7 @@ object TabsRendererProps {
   @scala.inline
   def apply(
     loadedTabs: js.Array[String],
-    navigationState: NavigationState[AnonTestID],
+    navigationState: NavigationState[TestID],
     onIndexChange: Double => Unit,
     tabs: js.Array[Tab]
   ): TabsRendererProps = {
@@ -37,7 +37,7 @@ object TabsRendererProps {
         ret
     }
     @scala.inline
-    def withNavigationState(value: NavigationState[AnonTestID]): Self = {
+    def withNavigationState(value: NavigationState[TestID]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("navigationState")(value.asInstanceOf[js.Any])
         ret

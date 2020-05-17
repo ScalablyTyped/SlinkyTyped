@@ -1,6 +1,6 @@
 package typingsSlinky.wordpressWordcount.mod
 
-import typingsSlinky.wordpressWordcount.AnonShortcodes
+import typingsSlinky.wordpressWordcount.anon.Shortcodes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait Settings extends js.Object {
   var characters_excluding_spacesRegExp: js.RegExp = js.native
   var characters_including_spacesRegExp: js.RegExp = js.native
   var connectorRegExp: js.RegExp = js.native
-  var l10n: AnonShortcodes = js.native
+  var l10n: Shortcodes = js.native
   /** Characters to be removed from input text. */
   var removeRegExp: js.RegExp = js.native
   var spaceRegExp: js.RegExp = js.native
@@ -31,7 +31,7 @@ object Settings {
     characters_excluding_spacesRegExp: js.RegExp,
     characters_including_spacesRegExp: js.RegExp,
     connectorRegExp: js.RegExp,
-    l10n: AnonShortcodes,
+    l10n: Shortcodes,
     removeRegExp: js.RegExp,
     spaceRegExp: js.RegExp,
     wordsRegExp: js.RegExp
@@ -88,7 +88,7 @@ object Settings {
         ret
     }
     @scala.inline
-    def withL10n(value: AnonShortcodes): Self = {
+    def withL10n(value: Shortcodes): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("l10n")(value.asInstanceOf[js.Any])
         ret

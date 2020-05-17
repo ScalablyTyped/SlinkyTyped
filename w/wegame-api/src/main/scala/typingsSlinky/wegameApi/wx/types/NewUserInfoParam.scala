@@ -1,6 +1,6 @@
 package typingsSlinky.wegameApi.wx.types
 
-import typingsSlinky.wegameApi.AnonDataReadonlyArray
+import typingsSlinky.wegameApi.anon.DataReadonlyArray
 import typingsSlinky.wegameApi.wegameApiStrings.en
 import typingsSlinky.wegameApi.wegameApiStrings.zh_CN
 import typingsSlinky.wegameApi.wegameApiStrings.zh_TW
@@ -23,7 +23,7 @@ trait NewUserInfoParam extends js.Object {
     * 要获取信息的用户的 openId 数组，如果要获取当前用户信息，则将数组中的一个元素设为 'selfOpenId'
     */
   var openIdList: js.UndefOr[js.Array[String]] = js.native
-  var success: js.UndefOr[js.Function1[/* res */ AnonDataReadonlyArray, Unit]] = js.native
+  var success: js.UndefOr[js.Function1[/* res */ DataReadonlyArray, Unit]] = js.native
 }
 
 object NewUserInfoParam {
@@ -87,7 +87,7 @@ object NewUserInfoParam {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonDataReadonlyArray => Unit): Self = {
+    def withSuccess(value: /* res */ DataReadonlyArray => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

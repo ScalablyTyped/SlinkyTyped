@@ -1,8 +1,11 @@
 package typingsSlinky.ionicReact
 
 import org.scalajs.dom.raw.DOMTokenList
+import org.scalajs.dom.raw.Document
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.mod.Config_
+import typingsSlinky.ionicReact.anon.ElementeventskeystringeEv
 import typingsSlinky.ionicReact.ionicReactPropsMod.IonicReactProps
 import typingsSlinky.ionicReact.ionicReactStrings.android
 import typingsSlinky.ionicReact.ionicReactStrings.capacitor
@@ -23,8 +26,6 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.PropsWithoutRef
 import typingsSlinky.react.mod.RefAttributes
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Event_
 import typingsSlinky.std.Omit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -46,7 +47,7 @@ object utilsMod extends js.Object {
     ios | ipad | iphone | android | phablet | tablet | cordova | capacitor | electron | pwa | mobile | mobileweb | desktop | hybrid
   ] = js.native
   def isCoveredByReact(eventNameSuffix: String): Boolean = js.native
-  def isCoveredByReact(eventNameSuffix: String, doc: Document_): Boolean = js.native
+  def isCoveredByReact(eventNameSuffix: String, doc: Document): Boolean = js.native
   def isPlatform(
     platform: ios | ipad | iphone | android | phablet | tablet | cordova | capacitor | electron | pwa | mobile | mobileweb | desktop | hybrid
   ): Boolean = js.native
@@ -54,7 +55,7 @@ object utilsMod extends js.Object {
   def syncEvent(
     node: ElementeventskeystringeEv,
     eventName: String,
-    newEventHandler: js.Function1[/* e */ Event_, _]
+    newEventHandler: js.Function1[/* e */ Event, _]
   ): Unit = js.native
   type IonicReactExternalProps[PropType, ElementType] = PropType with (Omit[HTMLAttributes[ElementType], style]) with IonicReactProps
 }

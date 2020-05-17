@@ -1,6 +1,6 @@
 package typingsSlinky.firefoxWebextBrowser.browser.webRequest
 
-import typingsSlinky.firefoxWebextBrowser.AnonPassword
+import typingsSlinky.firefoxWebextBrowser.anon.Password
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait BlockingResponse extends js.Object {
     * Only used as a response to the onAuthRequired event. If set, the request is made using the supplied
     * credentials.
     */
-  var authCredentials: js.UndefOr[AnonPassword] = js.native
+  var authCredentials: js.UndefOr[Password] = js.native
   /**
     * If true, the request is cancelled. Used in onBeforeRequest, this prevents the request from being sent.
     */
@@ -60,7 +60,7 @@ object BlockingResponse {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAuthCredentials(value: AnonPassword): Self = {
+    def withAuthCredentials(value: Password): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("authCredentials")(value.asInstanceOf[js.Any])
         ret

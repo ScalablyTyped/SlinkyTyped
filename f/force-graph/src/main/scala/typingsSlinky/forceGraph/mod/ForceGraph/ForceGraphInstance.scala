@@ -1,7 +1,7 @@
 package typingsSlinky.forceGraph.mod.ForceGraph
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.forceGraph.ForceGraphInstancexnumber
+import typingsSlinky.forceGraph.anon.ForceGraphInstancexnumber
 import typingsSlinky.forceGraph.forceGraphStrings.center
 import typingsSlinky.forceGraph.forceGraphStrings.charge
 import typingsSlinky.forceGraph.forceGraphStrings.link

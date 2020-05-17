@@ -44,7 +44,7 @@ object ChartHoverOptions {
         ret
     }
     @scala.inline
-    def withAxis(value: x | y | xy): Self = {
+    def withAxis(value: typingsSlinky.chartJs.chartJsStrings.x | y | xy): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
         ret

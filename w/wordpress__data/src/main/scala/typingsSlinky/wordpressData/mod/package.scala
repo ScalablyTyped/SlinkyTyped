@@ -9,7 +9,7 @@ package object mod {
   type Plugin[T /* <: typingsSlinky.std.Record[java.lang.String, _] */] = js.Function2[
     /* registry */ typingsSlinky.wordpressData.mod.DataRegistry, 
     /* options */ T, 
-    typingsSlinky.wordpressData.PartialDataRegistry
+    typingsSlinky.wordpressData.anon.PartialDataRegistry
   ]
   type SelectorMap = typingsSlinky.std.Record[java.lang.String, js.Function1[/* repeated */ js.Any, js.Any]]
   type Subscriber = js.Function1[/* callback */ js.Function0[scala.Unit], js.Function0[scala.Unit]]

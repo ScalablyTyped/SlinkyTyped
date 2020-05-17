@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.recharts.AnonHeight
+import typingsSlinky.recharts.anon.Height
 import typingsSlinky.recharts.mod.CartesianGridProps
 import typingsSlinky.recharts.mod.ContentRenderer
 import typingsSlinky.recharts.mod.LineProps
@@ -120,7 +120,7 @@ object CartesianGrid {
     @scala.inline
     def horizontal(value: js.Object | ReactElement | (ContentRenderer[LineProps with CartesianGridProps]) | Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
     @scala.inline
-    def horizontalCoordinatesGenerator(value: /* arg */ AnonHeight => js.Array[Double]): this.type = set("horizontalCoordinatesGenerator", js.Any.fromFunction1(value))
+    def horizontalCoordinatesGenerator(value: /* arg */ Height => js.Array[Double]): this.type = set("horizontalCoordinatesGenerator", js.Any.fromFunction1(value))
     @scala.inline
     def horizontalFill(value: js.Array[String]): this.type = set("horizontalFill", value.asInstanceOf[js.Any])
     @scala.inline
@@ -192,7 +192,7 @@ object CartesianGrid {
     @scala.inline
     def vertical(value: js.Object | ReactElement | (ContentRenderer[LineProps with CartesianGridProps]) | Boolean): this.type = set("vertical", value.asInstanceOf[js.Any])
     @scala.inline
-    def verticalCoordinatesGenerator(value: /* arg */ AnonHeight => js.Array[Double]): this.type = set("verticalCoordinatesGenerator", js.Any.fromFunction1(value))
+    def verticalCoordinatesGenerator(value: /* arg */ Height => js.Array[Double]): this.type = set("verticalCoordinatesGenerator", js.Any.fromFunction1(value))
     @scala.inline
     def verticalFill(value: js.Array[String]): this.type = set("verticalFill", value.asInstanceOf[js.Any])
     @scala.inline

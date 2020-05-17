@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Line_ extends _Doc {
+trait Line_ extends Doc {
   var hard: js.UndefOr[Boolean] = js.native
   var literal: js.UndefOr[Boolean] = js.native
   var soft: js.UndefOr[Boolean] = js.native

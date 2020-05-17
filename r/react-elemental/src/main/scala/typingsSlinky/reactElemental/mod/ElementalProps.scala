@@ -1,8 +1,8 @@
 package typingsSlinky.reactElemental.mod
 
 import slinky.core.TagMod
-import typingsSlinky.reactElemental.AnonPrimary
-import typingsSlinky.reactElemental.AnonPrimaryDark
+import typingsSlinky.reactElemental.anon.Primary
+import typingsSlinky.reactElemental.anon.PrimaryDark
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,8 +10,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ElementalProps extends js.Object {
   val children: TagMod[Any] = js.native
-  val colorOpts: js.UndefOr[AnonPrimaryDark] = js.native
-  val fontOpts: js.UndefOr[AnonPrimary] = js.native
+  val colorOpts: js.UndefOr[PrimaryDark] = js.native
+  val fontOpts: js.UndefOr[Primary] = js.native
 }
 
 object ElementalProps {
@@ -39,7 +39,7 @@ object ElementalProps {
         ret
     }
     @scala.inline
-    def withColorOpts(value: AnonPrimaryDark): Self = {
+    def withColorOpts(value: PrimaryDark): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("colorOpts")(value.asInstanceOf[js.Any])
         ret
@@ -51,7 +51,7 @@ object ElementalProps {
         ret
     }
     @scala.inline
-    def withFontOpts(value: AnonPrimary): Self = {
+    def withFontOpts(value: Primary): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fontOpts")(value.asInstanceOf[js.Any])
         ret

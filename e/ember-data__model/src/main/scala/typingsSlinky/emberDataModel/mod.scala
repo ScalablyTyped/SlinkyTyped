@@ -4,7 +4,7 @@ import typingsSlinky.ember.mod.Ember.Array
 import typingsSlinky.ember.mod.Ember.NativeArray
 import typingsSlinky.ember.mod.default.ComputedProperty
 import typingsSlinky.ember.mod.default.Map
-import typingsSlinky.emberData.TypeofModel
+import typingsSlinky.emberData.anon.TypeofModel
 import typingsSlinky.emberData.mod.AttributeMeta
 import typingsSlinky.emberData.mod.DS.Async
 import typingsSlinky.emberData.mod.DS.AttrOptions

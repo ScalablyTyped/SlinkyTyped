@@ -1,6 +1,6 @@
 package typingsSlinky.dockerode.mod
 
-import typingsSlinky.dockerode.AnonActiveanon
+import typingsSlinky.dockerode.anon.Activeanon
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,13 +10,13 @@ trait MemoryStats extends js.Object {
   var failcnt: Double = js.native
   var limit: Double = js.native
   var max_usage: Double = js.native
-  var stats: AnonActiveanon = js.native
+  var stats: Activeanon = js.native
   var usage: Double = js.native
 }
 
 object MemoryStats {
   @scala.inline
-  def apply(failcnt: Double, limit: Double, max_usage: Double, stats: AnonActiveanon, usage: Double): MemoryStats = {
+  def apply(failcnt: Double, limit: Double, max_usage: Double, stats: Activeanon, usage: Double): MemoryStats = {
     val __obj = js.Dynamic.literal(failcnt = failcnt.asInstanceOf[js.Any], limit = limit.asInstanceOf[js.Any], max_usage = max_usage.asInstanceOf[js.Any], stats = stats.asInstanceOf[js.Any], usage = usage.asInstanceOf[js.Any])
     __obj.asInstanceOf[MemoryStats]
   }
@@ -45,7 +45,7 @@ object MemoryStats {
         ret
     }
     @scala.inline
-    def withStats(value: AnonActiveanon): Self = {
+    def withStats(value: Activeanon): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
         ret

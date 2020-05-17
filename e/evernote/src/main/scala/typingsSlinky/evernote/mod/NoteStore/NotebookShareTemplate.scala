@@ -1,6 +1,6 @@
 package typingsSlinky.evernote.mod.NoteStore
 
-import typingsSlinky.evernote.AnonNotebookGuid
+import typingsSlinky.evernote.anon.NotebookGuid
 import typingsSlinky.evernote.mod.Types.Contact
 import typingsSlinky.evernote.mod.Types.Guid
 import typingsSlinky.evernote.mod.Types.MessageThreadID
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @JSImport("evernote", "NoteStore.NotebookShareTemplate")
 @js.native
 class NotebookShareTemplate () extends js.Object {
-  def this(args: AnonNotebookGuid) = this()
+  def this(args: NotebookGuid) = this()
   var notebookGuid: js.UndefOr[Guid] = js.native
   var privilege: js.UndefOr[SharedNotebookPrivilegeLevel] = js.native
   var recipientContacts: js.UndefOr[js.Array[Contact]] = js.native

@@ -1,6 +1,7 @@
 package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.officeUiFabricReact.anon.ShouldFadeIn
 import typingsSlinky.officeUiFabricReact.imageTypesMod.IImageProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,7 +21,7 @@ object imageMod extends js.Object {
   @js.native
   object ImageBase extends js.Object {
     var _svgRegex: js.Any = js.native
-    var defaultProps: AnonShouldFadeIn = js.native
+    var defaultProps: ShouldFadeIn = js.native
   }
   
   @js.native

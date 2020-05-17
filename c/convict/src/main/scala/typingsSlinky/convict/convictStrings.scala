@@ -1,14 +1,14 @@
 package typingsSlinky.convict
 
+import typingsSlinky.convict.mod.PredefinedFormat
 import typingsSlinky.convict.mod.ValidationMethod
-import typingsSlinky.convict.mod._PredefinedFormat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object convictStrings {
   @js.native
-  sealed trait Asterisk extends _PredefinedFormat
+  sealed trait Asterisk extends PredefinedFormat
   
   @js.native
   sealed trait InternalSchema extends js.Object
@@ -20,40 +20,40 @@ object convictStrings {
   sealed trait Schema extends js.Object
   
   @js.native
-  sealed trait duration extends _PredefinedFormat
+  sealed trait duration extends PredefinedFormat
   
   @js.native
-  sealed trait email extends _PredefinedFormat
+  sealed trait email extends PredefinedFormat
   
   @js.native
-  sealed trait int extends _PredefinedFormat
+  sealed trait int extends PredefinedFormat
   
   @js.native
-  sealed trait ipaddress extends _PredefinedFormat
+  sealed trait ipaddress extends PredefinedFormat
   
   @js.native
-  sealed trait nat extends _PredefinedFormat
+  sealed trait nat extends PredefinedFormat
   
   @js.native
-  sealed trait port extends _PredefinedFormat
+  sealed trait port extends PredefinedFormat
   
   @js.native
-  sealed trait port_or_windows_named_pipe extends _PredefinedFormat
+  sealed trait port_or_windows_named_pipe extends PredefinedFormat
   
   @js.native
   sealed trait strict extends ValidationMethod
   
   @js.native
-  sealed trait timestamp extends _PredefinedFormat
+  sealed trait timestamp extends PredefinedFormat
   
   @js.native
-  sealed trait url extends _PredefinedFormat
+  sealed trait url extends PredefinedFormat
   
   @js.native
   sealed trait warn extends ValidationMethod
   
   @js.native
-  sealed trait windows_named_pipe extends _PredefinedFormat
+  sealed trait windows_named_pipe extends PredefinedFormat
   
   @scala.inline
   def Asterisk: Asterisk = "*".asInstanceOf[Asterisk]

@@ -101,10 +101,8 @@ import scala.scalajs.js.annotation._
   * @property {number[]} layers An array of layer IDs ({@link pc.Layer#id}) to which this particle system should belong.
   * Don't push/pop/splice or modify this array, if you want to change it - set a new one instead.
   */
-@JSGlobal("pc.ParticleSystemComponent")
 @js.native
-class ParticleSystemComponent protected () extends Component {
-  def this(system: ParticleSystemComponentSystem, entity: Entity) = this()
+trait ParticleSystemComponent extends Component {
   /**
     * Orient particles in their direction of motion.
     */

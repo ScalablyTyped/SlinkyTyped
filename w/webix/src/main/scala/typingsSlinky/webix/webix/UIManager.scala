@@ -1,6 +1,5 @@
 package typingsSlinky.webix.webix
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.webix.webix.ui.baseview
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,8 +28,4 @@ trait UIManager extends js.Object {
   def setFocus(id: Double): Unit = js.native
   def setState(state: js.Any): Unit = js.native
 }
-
-@JSGlobal("webix.UIManager")
-@js.native
-object UIManager extends TopLevel[UIManager]
 

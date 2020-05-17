@@ -2,6 +2,8 @@ package typingsSlinky.apolloReactHooks
 
 import typingsSlinky.apolloClient.typesMod.ApolloQueryResult
 import typingsSlinky.apolloReactCommon.typesMod.QueryResult
+import typingsSlinky.apolloReactHooks.anon.ForceUpdate
+import typingsSlinky.apolloReactHooks.anon.Lazy
 import typingsSlinky.apolloReactHooks.operationDataMod.OperationData
 import typingsSlinky.apolloReactHooks.typesMod.QueryTuple
 import scala.scalajs.js
@@ -14,7 +16,7 @@ object queryDataMod extends js.Object {
   @js.native
   class QueryData[TData, TVariables] protected ()
     extends OperationData[js.Any] {
-    def this(hasOptionsContextForceUpdate: AnonForceUpdate[TData, TVariables]) = this()
+    def this(hasOptionsContextForceUpdate: ForceUpdate[TData, TVariables]) = this()
     var currentObservable: js.Any = js.native
     var forceUpdate: js.Any = js.native
     var getExecuteResult: js.Any = js.native
@@ -39,7 +41,7 @@ object queryDataMod extends js.Object {
     var startQuerySubscription: js.Any = js.native
     var updateObservableQuery: js.Any = js.native
     def afterExecute(): js.Function0[Unit] = js.native
-    def afterExecute(hasLazy: AnonLazy): js.Function0[Unit] = js.native
+    def afterExecute(hasLazy: Lazy): js.Function0[Unit] = js.native
     def execute(): QueryResult[TData, TVariables] = js.native
     def executeLazy(): QueryTuple[TData, TVariables] = js.native
     def fetchData(): js.Promise[ApolloQueryResult[_]] | Boolean = js.native

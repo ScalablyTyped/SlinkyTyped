@@ -1,6 +1,6 @@
 package typingsSlinky.ibmDb.mod
 
-import typingsSlinky.ibmDb.AnonOutparams
+import typingsSlinky.ibmDb.anon.Outparams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ class ODBCStatement () extends js.Object {
   def bindSync(ary: js.Array[_]): Unit = js.native
    // TODO: type of outparams is unknown
   def execute(cb: js.Function3[/* err */ js.Error, /* result */ js.Array[_], /* outparams */ js.Any, Unit]): Unit = js.native
-  def execute(params: js.Array[_]): js.Promise[AnonOutparams] = js.native
+  def execute(params: js.Array[_]): js.Promise[Outparams] = js.native
   def execute(
     params: js.Array[_],
     cb: js.Function3[/* err */ js.Error, /* result */ js.Array[_], /* outparams */ js.Any, Unit]

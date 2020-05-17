@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data when an app is activated to show the details of an appointment. */
-@JSGlobal("Windows.ApplicationModel.Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs")
 @js.native
-abstract class AppointmentsProviderShowAppointmentDetailsActivatedEventArgs () extends js.Object {
+trait AppointmentsProviderShowAppointmentDetailsActivatedEventArgs extends js.Object {
   /** Gets the start date of the appointment instance for which the app should display details. */
   var instanceStartDate: js.Date = js.native
   /** Gets the activation type. */
@@ -22,5 +21,71 @@ abstract class AppointmentsProviderShowAppointmentDetailsActivatedEventArgs () e
   var splashScreen: SplashScreen = js.native
   /** Gets the action to be performed by the appointments provider. */
   var verb: String = js.native
+}
+
+object AppointmentsProviderShowAppointmentDetailsActivatedEventArgs {
+  @scala.inline
+  def apply(
+    instanceStartDate: js.Date,
+    kind: ActivationKind,
+    localId: String,
+    previousExecutionState: ApplicationExecutionState,
+    roamingId: String,
+    splashScreen: SplashScreen,
+    verb: String
+  ): AppointmentsProviderShowAppointmentDetailsActivatedEventArgs = {
+    val __obj = js.Dynamic.literal(instanceStartDate = instanceStartDate.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], localId = localId.asInstanceOf[js.Any], previousExecutionState = previousExecutionState.asInstanceOf[js.Any], roamingId = roamingId.asInstanceOf[js.Any], splashScreen = splashScreen.asInstanceOf[js.Any], verb = verb.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AppointmentsProviderShowAppointmentDetailsActivatedEventArgs]
+  }
+  @scala.inline
+  implicit class AppointmentsProviderShowAppointmentDetailsActivatedEventArgsOps[Self <: AppointmentsProviderShowAppointmentDetailsActivatedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInstanceStartDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instanceStartDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKind(value: ActivationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocalId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreviousExecutionState(value: ApplicationExecutionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousExecutionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoamingId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("roamingId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSplashScreen(value: SplashScreen): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splashScreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVerb(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verb")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

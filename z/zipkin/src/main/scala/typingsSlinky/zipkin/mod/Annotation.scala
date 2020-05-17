@@ -1,8 +1,8 @@
 package typingsSlinky.zipkin.mod
 
-import typingsSlinky.zipkin.AnonHost
-import typingsSlinky.zipkin.AnonHostPort
-import typingsSlinky.zipkin.AnonPort
+import typingsSlinky.zipkin.anon.Host
+import typingsSlinky.zipkin.anon.HostPort
+import typingsSlinky.zipkin.anon.Port
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ object Annotation extends js.Object {
   
   @js.native
   class ClientAddr protected () extends IAnnotation {
-    def this(args: AnonPort) = this()
+    def this(args: Port) = this()
   }
   
   @js.native
@@ -36,7 +36,7 @@ object Annotation extends js.Object {
   
   @js.native
   class LocalAddr () extends IAnnotation {
-    def this(args: AnonHostPort) = this()
+    def this(args: HostPort) = this()
     var host: InetAddress = js.native
     var port: Double = js.native
   }
@@ -58,7 +58,7 @@ object Annotation extends js.Object {
   
   @js.native
   class MessageAddr protected () extends IAnnotation {
-    def this(args: AnonHost) = this()
+    def this(args: Host) = this()
     var host: InetAddress = js.native
     var port: Double = js.native
     var serviceName: String = js.native
@@ -78,7 +78,7 @@ object Annotation extends js.Object {
   
   @js.native
   class ServerAddr protected () extends IAnnotation {
-    def this(args: AnonHost) = this()
+    def this(args: Host) = this()
     var host: InetAddress = js.native
     var port: Double = js.native
     var serviceName: String = js.native

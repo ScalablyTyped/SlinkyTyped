@@ -1,9 +1,9 @@
 package typingsSlinky.angularCompiler.apiMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.angularCompiler.AnonExpressionSelector
-import typingsSlinky.angularCompiler.AnonNodes
-import typingsSlinky.angularCompiler.AnonUsesOnChanges
+import typingsSlinky.angularCompiler.anon.ExpressionSelector
+import typingsSlinky.angularCompiler.anon.Nodes
+import typingsSlinky.angularCompiler.anon.UsesOnChanges
 import typingsSlinky.angularCompiler.coreMod.ChangeDetectionStrategy
 import typingsSlinky.angularCompiler.coreMod.ViewEncapsulation
 import typingsSlinky.angularCompiler.interpolationConfigMod.InterpolationConfig
@@ -28,7 +28,7 @@ trait R3ComponentMetadata extends R3DirectiveMetadata {
     * A list of directive selectors and an expression referencing the directive type which are in the
     * scope of the compilation.
     */
-  var directives: js.Array[AnonExpressionSelector] = js.native
+  var directives: js.Array[ExpressionSelector] = js.native
   /**
     * An encapsulation policy for the template and CSS styles. One of:
     * - `ViewEncapsulation.Native`: Use shadow roots. This works only if natively available on the
@@ -66,7 +66,7 @@ trait R3ComponentMetadata extends R3DirectiveMetadata {
   /**
     * Information about the component's template.
     */
-  var template: AnonNodes = js.native
+  var template: Nodes = js.native
   /**
     * The list of view providers defined in the component.
     */
@@ -82,20 +82,20 @@ trait R3ComponentMetadata extends R3DirectiveMetadata {
 object R3ComponentMetadata {
   @scala.inline
   def apply(
-    directives: js.Array[AnonExpressionSelector],
+    directives: js.Array[ExpressionSelector],
     encapsulation: ViewEncapsulation,
     host: R3HostMetadata,
     i18nUseExternalIds: Boolean,
     inputs: StringDictionary[String | (js.Tuple2[String, String])],
     interpolation: InterpolationConfig,
-    lifecycle: AnonUsesOnChanges,
+    lifecycle: UsesOnChanges,
     name: String,
     outputs: StringDictionary[String],
     pipes: Map[String, Expression],
     queries: js.Array[R3QueryMetadata],
     relativeContextFilePath: String,
     styles: js.Array[String],
-    template: AnonNodes,
+    template: Nodes,
     `type`: Expression,
     typeArgumentCount: Double,
     typeSourceSpan: ParseSourceSpan,
@@ -114,7 +114,7 @@ object R3ComponentMetadata {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDirectives(value: js.Array[AnonExpressionSelector]): Self = {
+    def withDirectives(value: js.Array[ExpressionSelector]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("directives")(value.asInstanceOf[js.Any])
         ret
@@ -156,7 +156,7 @@ object R3ComponentMetadata {
         ret
     }
     @scala.inline
-    def withTemplate(value: AnonNodes): Self = {
+    def withTemplate(value: Nodes): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
         ret

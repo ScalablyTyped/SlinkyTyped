@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 trait FunctionDeclaration
   extends Expression
      with Base[typingsSlinky.luaparse.luaparseStrings.FunctionDeclaration]
-     with _Statement {
+     with Statement {
   var body: js.Array[Statement] = js.native
   var identifier: Identifier | MemberExpression | Null = js.native
   var isLocal: Boolean = js.native

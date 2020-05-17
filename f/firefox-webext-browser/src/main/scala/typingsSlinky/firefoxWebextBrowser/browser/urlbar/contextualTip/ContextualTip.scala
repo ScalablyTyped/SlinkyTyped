@@ -1,6 +1,6 @@
 package typingsSlinky.firefoxWebextBrowser.browser.urlbar.contextualTip
 
-import typingsSlinky.firefoxWebextBrowser.AnonDefaultIcon_
+import typingsSlinky.firefoxWebextBrowser.anon.DefaultIcon_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait ContextualTip extends js.Object {
   /** A string to be used as the contextual tip's button's title. */
   var buttonTitle: js.UndefOr[String] = js.native
   /** Specifies the default icon and theme icons */
-  var icon: js.UndefOr[AnonDefaultIcon_] = js.native
+  var icon: js.UndefOr[DefaultIcon_] = js.native
   /** A string to be used as the contextual tip's link's title. */
   var linkTitle: js.UndefOr[String] = js.native
   /** A string to be used as the contextual tip's title. */
@@ -52,7 +52,7 @@ object ContextualTip {
         ret
     }
     @scala.inline
-    def withIcon(value: AnonDefaultIcon_): Self = {
+    def withIcon(value: DefaultIcon_): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
         ret

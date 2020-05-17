@@ -5,7 +5,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ClassType
-import typingsSlinky.reactResponsive.PartialMediaQueryMatchers
+import typingsSlinky.reactResponsive.anon.PartialMediaQueryMatchers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

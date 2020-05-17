@@ -6,69 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the information in a PlayReady content header. */
-@JSGlobal("Windows.Media.Protection.PlayReady.PlayReadyContentHeader")
 @js.native
-class PlayReadyContentHeader protected () extends js.Object {
-  /**
-    * Initializes a new instance of the PlayReadyContentHeader class.
-    * @param headerBytes Raw data bytes representing a PlayReady content header.
-    */
-  def this(headerBytes: js.Array[Double]) = this()
-  /**
-    * Initializes a new instance of the PlayReadyContentHeader class.
-    * @param headerBytes Raw data bytes representing a legacy WMDRM header.
-    * @param licenseAcquisitionUrl The URL for the silent (no user interaction) license acquisition Web service.
-    * @param licenseAcquisitionUserInterfaceUrl The URL for a non-silent license acquisition Web page.
-    * @param customAttributes Contains custom data used by the content provider. The content author can add arbitrary XML inside this element. Microsoft code does not act on any data contained inside this element.
-    * @param domainServiceId Service identifier for the domain service.
-    */
-  def this(
-    headerBytes: js.Array[Double],
-    licenseAcquisitionUrl: Uri,
-    licenseAcquisitionUserInterfaceUrl: Uri,
-    customAttributes: String,
-    domainServiceId: String
-  ) = this()
-  /**
-    * Initializes a new instance of the PlayReadyContentHeader class.
-    * @param contentKeyId Identifier of the content encryption key.
-    * @param contentKeyIdString String representation of the content key. If the contentKeyId parameter is specified, then this parameter is ignored.
-    * @param contentEncryptionAlgorithm Encryption algorithm type used to encrypt the content.
-    * @param licenseAcquisitionUrl The URL for the silent (no user interaction) license acquisition Web service.
-    * @param licenseAcquisitionUserInterfaceUrl The URL for a non-silent license acquisition Web page.
-    * @param customAttributes Contains custom data used by the content provider. The content author can add arbitrary XML inside this element. Microsoft code does not act on any data contained inside this element.
-    * @param domainServiceId Service identifier for the domain service.
-    */
-  def this(
-    contentKeyId: String,
-    contentKeyIdString: String,
-    contentEncryptionAlgorithm: PlayReadyEncryptionAlgorithm,
-    licenseAcquisitionUrl: Uri,
-    licenseAcquisitionUserInterfaceUrl: Uri,
-    customAttributes: String,
-    domainServiceId: String
-  ) = this()
-  /**
-    * Initializes a new instance of the PlayReadyContentHeader class.
-    * @param dwFlags Reserved. Set to 0.
-    * @param contentKeyIds Identifiers of the content encryption keys.
-    * @param contentKeyIdStrings String representations of the content keys. Each string must be a Base-64 encoded 16 byte value.
-    * @param contentEncryptionAlgorithm Encryption algorithm type used to encrypt the content.
-    * @param licenseAcquisitionUrl The URL for the silent (no user interaction) license acquisition Web service.
-    * @param licenseAcquisitionUserInterfaceUrl The URL for a non-silent license acquisition Web page.
-    * @param customAttributes Contains custom data used by the content provider. The content author can add arbitrary XML inside this element. Microsoft code does not act on any data contained inside this element.
-    * @param domainServiceId Service identifier for the domain service.
-    */
-  def this(
-    dwFlags: Double,
-    contentKeyIds: js.Array[String],
-    contentKeyIdStrings: js.Array[String],
-    contentEncryptionAlgorithm: PlayReadyEncryptionAlgorithm,
-    licenseAcquisitionUrl: Uri,
-    licenseAcquisitionUserInterfaceUrl: Uri,
-    customAttributes: String,
-    domainServiceId: String
-  ) = this()
+trait PlayReadyContentHeader extends js.Object {
   /** Gets the custom data used by the content provider. */
   var customAttributes: String = js.native
   /** Gets the decryptor setup value in the header if it is set. */
@@ -96,5 +35,106 @@ class PlayReadyContentHeader protected () extends js.Object {
     * @return The header containing the full PlayReady object.
     */
   def getSerializedHeader(): js.Array[Double] = js.native
+}
+
+object PlayReadyContentHeader {
+  @scala.inline
+  def apply(
+    customAttributes: String,
+    decryptorSetup: PlayReadyDecryptorSetup,
+    domainServiceId: String,
+    encryptionType: PlayReadyEncryptionAlgorithm,
+    getSerializedHeader: () => js.Array[Double],
+    headerWithEmbeddedUpdates: PlayReadyContentHeader,
+    keyId: String,
+    keyIdString: String,
+    keyIdStrings: String,
+    keyIds: String,
+    licenseAcquisitionUrl: Uri,
+    licenseAcquisitionUserInterfaceUrl: Uri
+  ): PlayReadyContentHeader = {
+    val __obj = js.Dynamic.literal(customAttributes = customAttributes.asInstanceOf[js.Any], decryptorSetup = decryptorSetup.asInstanceOf[js.Any], domainServiceId = domainServiceId.asInstanceOf[js.Any], encryptionType = encryptionType.asInstanceOf[js.Any], getSerializedHeader = js.Any.fromFunction0(getSerializedHeader), headerWithEmbeddedUpdates = headerWithEmbeddedUpdates.asInstanceOf[js.Any], keyId = keyId.asInstanceOf[js.Any], keyIdString = keyIdString.asInstanceOf[js.Any], keyIdStrings = keyIdStrings.asInstanceOf[js.Any], keyIds = keyIds.asInstanceOf[js.Any], licenseAcquisitionUrl = licenseAcquisitionUrl.asInstanceOf[js.Any], licenseAcquisitionUserInterfaceUrl = licenseAcquisitionUserInterfaceUrl.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PlayReadyContentHeader]
+  }
+  @scala.inline
+  implicit class PlayReadyContentHeaderOps[Self <: PlayReadyContentHeader] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustomAttributes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDecryptorSetup(value: PlayReadyDecryptorSetup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decryptorSetup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDomainServiceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domainServiceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEncryptionType(value: PlayReadyEncryptionAlgorithm): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("encryptionType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetSerializedHeader(value: () => js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSerializedHeader")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHeaderWithEmbeddedUpdates(value: PlayReadyContentHeader): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headerWithEmbeddedUpdates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeyId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeyIdString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyIdString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeyIdStrings(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyIdStrings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeyIds(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLicenseAcquisitionUrl(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseAcquisitionUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLicenseAcquisitionUserInterfaceUrl(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("licenseAcquisitionUserInterfaceUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

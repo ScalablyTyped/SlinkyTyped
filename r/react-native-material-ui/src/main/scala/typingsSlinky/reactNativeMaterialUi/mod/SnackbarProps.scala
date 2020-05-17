@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeMaterialUi.mod
 
-import typingsSlinky.reactNativeMaterialUi.AnonMessage
+import typingsSlinky.reactNativeMaterialUi.anon.Message
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait SnackbarProps extends js.Object {
   var button: js.UndefOr[ButtonProps] = js.native
   var message: String = js.native
   var onActionPress: js.UndefOr[js.Function0[Unit]] = js.native
-  var style: js.UndefOr[AnonMessage] = js.native
+  var style: js.UndefOr[Message] = js.native
   var timeout: Double = js.native
   var visible: Boolean = js.native
   def onRequestClose(): Unit = js.native
@@ -103,7 +103,7 @@ object SnackbarProps {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonMessage): Self = {
+    def withStyle(value: Message): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

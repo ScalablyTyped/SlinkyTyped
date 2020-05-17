@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientDfareporting.gapi.client.dfareporting
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientDfareporting.AnonFields
-import typingsSlinky.gapiClientDfareporting.AnonKey
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientDfareporting.anon.Fields
+import typingsSlinky.gapiClientDfareporting.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,17 +10,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AccountPermissionsResource extends js.Object {
   /** Gets one account permission by ID. */
-  def get(request: AnonFields): Request_[AccountPermission] = js.native
+  def get(request: Fields): Request[AccountPermission] = js.native
   /** Retrieves the list of account permissions. */
-  def list(request: AnonKey): Request_[AccountPermissionsListResponse] = js.native
+  def list(request: Key): Request[AccountPermissionsListResponse] = js.native
 }
 
 object AccountPermissionsResource {
   @scala.inline
-  def apply(
-    get: AnonFields => Request_[AccountPermission],
-    list: AnonKey => Request_[AccountPermissionsListResponse]
-  ): AccountPermissionsResource = {
+  def apply(get: Fields => Request[AccountPermission], list: Key => Request[AccountPermissionsListResponse]): AccountPermissionsResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[AccountPermissionsResource]
   }
@@ -31,13 +28,13 @@ object AccountPermissionsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonFields => Request_[AccountPermission]): Self = {
+    def withGet(value: Fields => Request[AccountPermission]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonKey => Request_[AccountPermissionsListResponse]): Self = {
+    def withList(value: Key => Request[AccountPermissionsListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

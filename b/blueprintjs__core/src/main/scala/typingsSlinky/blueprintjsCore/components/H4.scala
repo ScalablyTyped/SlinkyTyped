@@ -13,7 +13,7 @@ object H4 {
   @js.native
   object component extends js.Object
   
-  def withProps(p: HTMLProps[HTMLHeadingElement] with IElementRefProps[HTMLHeadingElement]): `SharedBuilder_<intersection>_55601569`[LegacyRef[js.Any] with js.Object] = new `SharedBuilder_<intersection>_55601569`[LegacyRef[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: H4.type): `SharedBuilder_<intersection>_55601569`[LegacyRef[js.Any] with js.Object] = new `SharedBuilder_<intersection>_55601569`[LegacyRef[js.Any] with js.Object](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: HTMLProps[HTMLHeadingElement] with IElementRefProps[HTMLHeadingElement]): `SharedBuilder_<intersection>_55601569`[LegacyRef[js.Any]] = new `SharedBuilder_<intersection>_55601569`[LegacyRef[js.Any]](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: H4.type): `SharedBuilder_<intersection>_55601569`[LegacyRef[js.Any]] = new `SharedBuilder_<intersection>_55601569`[LegacyRef[js.Any]](js.Array(this.component, js.Dictionary.empty))()
 }
 

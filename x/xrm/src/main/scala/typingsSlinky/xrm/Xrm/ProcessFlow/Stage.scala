@@ -1,6 +1,6 @@
 package typingsSlinky.xrm.Xrm.ProcessFlow
 
-import typingsSlinky.xrm.AnonGetValue
+import typingsSlinky.xrm.anon.GetValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait Stage extends js.Object {
     * category.
     * @returns The stage category.
     */
-  def getCategory(): AnonGetValue = js.native
+  def getCategory(): GetValue = js.native
   /**
     * Returns the logical name of the entity associated with the stage.
     * @returns The entity name.
@@ -47,7 +47,7 @@ trait Stage extends js.Object {
 object Stage {
   @scala.inline
   def apply(
-    getCategory: () => AnonGetValue,
+    getCategory: () => GetValue,
     getEntityName: () => String,
     getId: () => String,
     getName: () => String,
@@ -64,7 +64,7 @@ object Stage {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetCategory(value: () => AnonGetValue): Self = {
+    def withGetCategory(value: () => GetValue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getCategory")(js.Any.fromFunction0(value))
         ret

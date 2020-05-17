@@ -1,12 +1,9 @@
 package typingsSlinky.gapiClientDfareporting.gapi.client.dfareporting
 
-import typingsSlinky.gapiClientDfareporting.AnonActive
-import typingsSlinky.gapiClientDfareporting.AnonActivities
-import typingsSlinky.gapiClientDfareporting.AnonActivityFilters
-import typingsSlinky.gapiClientDfareporting.AnonBreakdown
-import typingsSlinky.gapiClientDfareporting.AnonCustomRichMediaEvents
-import typingsSlinky.gapiClientDfareporting.AnonDateRange
-import typingsSlinky.gapiClientDfareporting.AnonEmailOwner
+import typingsSlinky.gapiClientDfareporting.anon.Active
+import typingsSlinky.gapiClientDfareporting.anon.ActivityFilters
+import typingsSlinky.gapiClientDfareporting.anon.Breakdown
+import typingsSlinky.gapiClientDfareporting.anon.EmailOwner
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,17 +13,17 @@ trait Report extends js.Object {
   /** The account ID to which this report belongs. */
   var accountId: js.UndefOr[String] = js.native
   /** The report criteria for a report of type "STANDARD". */
-  var criteria: js.UndefOr[AnonActivities] = js.native
+  var criteria: js.UndefOr[typingsSlinky.gapiClientDfareporting.anon.Activities] = js.native
   /** The report criteria for a report of type "CROSS_DIMENSION_REACH". */
-  var crossDimensionReachCriteria: js.UndefOr[AnonBreakdown] = js.native
+  var crossDimensionReachCriteria: js.UndefOr[Breakdown] = js.native
   /** The report's email delivery settings. */
-  var delivery: js.UndefOr[AnonEmailOwner] = js.native
+  var delivery: js.UndefOr[EmailOwner] = js.native
   /** The eTag of this response for caching purposes. */
   var etag: js.UndefOr[String] = js.native
   /** The filename used when generating report files for this report. */
   var fileName: js.UndefOr[String] = js.native
   /** The report criteria for a report of type "FLOODLIGHT". */
-  var floodlightCriteria: js.UndefOr[AnonCustomRichMediaEvents] = js.native
+  var floodlightCriteria: js.UndefOr[typingsSlinky.gapiClientDfareporting.anon.CustomRichMediaEvents] = js.native
   /**
     * The output format of the report. If not specified, default format is "CSV". Note that the actual format in the completed report file might differ if
     * for instance the report's size exceeds the format's capabilities. "CSV" will then be the fallback format.
@@ -43,11 +40,11 @@ trait Report extends js.Object {
   /** The user profile id of the owner of this report. */
   var ownerProfileId: js.UndefOr[String] = js.native
   /** The report criteria for a report of type "PATH_TO_CONVERSION". */
-  var pathToConversionCriteria: js.UndefOr[AnonActivityFilters] = js.native
+  var pathToConversionCriteria: js.UndefOr[ActivityFilters] = js.native
   /** The report criteria for a report of type "REACH". */
-  var reachCriteria: js.UndefOr[AnonDateRange] = js.native
+  var reachCriteria: js.UndefOr[typingsSlinky.gapiClientDfareporting.anon.DateRange] = js.native
   /** The report's schedule. Can only be set if the report's 'dateRange' is a relative date range and the relative date range is not "TODAY". */
-  var schedule: js.UndefOr[AnonActive] = js.native
+  var schedule: js.UndefOr[Active] = js.native
   /** The subaccount ID to which this report belongs if applicable. */
   var subAccountId: js.UndefOr[String] = js.native
   /** The type of the report. */
@@ -79,7 +76,7 @@ object Report {
         ret
     }
     @scala.inline
-    def withCriteria(value: AnonActivities): Self = {
+    def withCriteria(value: typingsSlinky.gapiClientDfareporting.anon.Activities): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("criteria")(value.asInstanceOf[js.Any])
         ret
@@ -91,7 +88,7 @@ object Report {
         ret
     }
     @scala.inline
-    def withCrossDimensionReachCriteria(value: AnonBreakdown): Self = {
+    def withCrossDimensionReachCriteria(value: Breakdown): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("crossDimensionReachCriteria")(value.asInstanceOf[js.Any])
         ret
@@ -103,7 +100,7 @@ object Report {
         ret
     }
     @scala.inline
-    def withDelivery(value: AnonEmailOwner): Self = {
+    def withDelivery(value: EmailOwner): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delivery")(value.asInstanceOf[js.Any])
         ret
@@ -139,7 +136,7 @@ object Report {
         ret
     }
     @scala.inline
-    def withFloodlightCriteria(value: AnonCustomRichMediaEvents): Self = {
+    def withFloodlightCriteria(value: typingsSlinky.gapiClientDfareporting.anon.CustomRichMediaEvents): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("floodlightCriteria")(value.asInstanceOf[js.Any])
         ret
@@ -223,7 +220,7 @@ object Report {
         ret
     }
     @scala.inline
-    def withPathToConversionCriteria(value: AnonActivityFilters): Self = {
+    def withPathToConversionCriteria(value: ActivityFilters): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pathToConversionCriteria")(value.asInstanceOf[js.Any])
         ret
@@ -235,7 +232,7 @@ object Report {
         ret
     }
     @scala.inline
-    def withReachCriteria(value: AnonDateRange): Self = {
+    def withReachCriteria(value: typingsSlinky.gapiClientDfareporting.anon.DateRange): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("reachCriteria")(value.asInstanceOf[js.Any])
         ret
@@ -247,7 +244,7 @@ object Report {
         ret
     }
     @scala.inline
-    def withSchedule(value: AnonActive): Self = {
+    def withSchedule(value: Active): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("schedule")(value.asInstanceOf[js.Any])
         ret

@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactFlipMove.reactFlipMoveStrings.accordionHorizontal
   - typingsSlinky.reactFlipMove.reactFlipMoveStrings.none
 */
-trait AnimationPreset extends _AnimationProp
+trait AnimationPreset extends AnimationProp
 
 object AnimationPreset {
   @scala.inline

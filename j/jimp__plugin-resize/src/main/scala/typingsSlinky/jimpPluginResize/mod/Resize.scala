@@ -1,6 +1,6 @@
 package typingsSlinky.jimpPluginResize.mod
 
-import typingsSlinky.jimpPluginResize.AnonRESIZEBEZIER
+import typingsSlinky.jimpPluginResize.anon.RESIZEBEZIER
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Resize extends js.Object {
   var `class`: ResizeClass = js.native
-  var constants: AnonRESIZEBEZIER = js.native
+  var constants: RESIZEBEZIER = js.native
 }
 
 object Resize {
   @scala.inline
-  def apply(`class`: ResizeClass, constants: AnonRESIZEBEZIER): Resize = {
+  def apply(`class`: ResizeClass, constants: RESIZEBEZIER): Resize = {
     val __obj = js.Dynamic.literal(constants = constants.asInstanceOf[js.Any])
     __obj.updateDynamic("class")(`class`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Resize]
@@ -31,7 +31,7 @@ object Resize {
         ret
     }
     @scala.inline
-    def withConstants(value: AnonRESIZEBEZIER): Self = {
+    def withConstants(value: RESIZEBEZIER): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("constants")(value.asInstanceOf[js.Any])
         ret

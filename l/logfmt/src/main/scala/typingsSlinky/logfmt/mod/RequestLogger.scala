@@ -1,6 +1,6 @@
 package typingsSlinky.logfmt.mod
 
-import typingsSlinky.logfmt.AnonContentlength
+import typingsSlinky.logfmt.anon.Contentlength
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
 import scala.scalajs.js
@@ -13,6 +13,6 @@ trait RequestLogger extends js.Object {
   def apply(formatter: RequestLoggerFormatter): HTTPHandler = js.native
   def apply(options: RequestLoggerOptions): HTTPHandler = js.native
   def apply(options: RequestLoggerOptions, formatter: RequestLoggerFormatter): HTTPHandler = js.native
-  def commonFormatter(req: IncomingMessage, res: ServerResponse): AnonContentlength = js.native
+  def commonFormatter(req: IncomingMessage, res: ServerResponse): Contentlength = js.native
 }
 

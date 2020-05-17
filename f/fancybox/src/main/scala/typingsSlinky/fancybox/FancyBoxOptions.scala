@@ -1,5 +1,7 @@
 package typingsSlinky.fancybox
 
+import typingsSlinky.fancybox.anon.AutoStart_
+import typingsSlinky.fancybox.anon.Autostart
 import typingsSlinky.fancybox.fancyboxBooleans.`false`
 import typingsSlinky.fancybox.fancyboxStrings.`inline`
 import typingsSlinky.fancybox.fancyboxStrings.`zoom-in-out`
@@ -20,7 +22,7 @@ import typingsSlinky.fancybox.fancyboxStrings.slideShow
 import typingsSlinky.fancybox.fancyboxStrings.thumbs
 import typingsSlinky.fancybox.fancyboxStrings.tube
 import typingsSlinky.fancybox.fancyboxStrings.zoom
-import typingsSlinky.jquery.JQuery_.Event
+import typingsSlinky.jquery.JQuery.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -136,7 +138,7 @@ trait FancyBoxOptions extends js.Object {
     * Error message template
     */
   var errorTpl: js.UndefOr[String] = js.native
-  var fullScreen: js.UndefOr[AnonAutostart] = js.native
+  var fullScreen: js.UndefOr[Autostart] = js.native
   /**
     * Horizontal space between slides
     */
@@ -214,7 +216,7 @@ trait FancyBoxOptions extends js.Object {
     * Custom CSS class for slide element
     */
   var slideClass: js.UndefOr[String] = js.native
-  var slideShow: js.UndefOr[AnonAutoStart_] = js.native
+  var slideShow: js.UndefOr[AutoStart_] = js.native
   /**
     * Should display close button (using `btnTpl.smallBtn` template) over the content
     * Can be true, false, "auto"
@@ -653,7 +655,7 @@ object FancyBoxOptions {
         ret
     }
     @scala.inline
-    def withFullScreen(value: AnonAutostart): Self = {
+    def withFullScreen(value: Autostart): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fullScreen")(value.asInstanceOf[js.Any])
         ret
@@ -905,7 +907,7 @@ object FancyBoxOptions {
         ret
     }
     @scala.inline
-    def withSlideShow(value: AnonAutoStart_): Self = {
+    def withSlideShow(value: AutoStart_): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("slideShow")(value.asInstanceOf[js.Any])
         ret

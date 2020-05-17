@@ -1,6 +1,6 @@
 package typingsSlinky.axon.mod
 
-import typingsSlinky.axon.AnonAddress
+import typingsSlinky.axon.anon.Address
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.netMod.Socket
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Socket_ () extends EventEmitter {
   def addSocket(sock: Socket_): Unit = js.native
-  def address(): js.UndefOr[AnonAddress] = js.native
+  def address(): js.UndefOr[Address] = js.native
   def bind(port: ConnectionPort): Socket_ = js.native
   def bind(port: ConnectionPort, host: String): Socket_ = js.native
   def bind(port: ConnectionPort, host: String, fn: js.Function0[Unit]): Socket_ = js.native

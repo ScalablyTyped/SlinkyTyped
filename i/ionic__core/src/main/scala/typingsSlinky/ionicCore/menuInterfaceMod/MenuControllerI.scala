@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCore.menuInterfaceMod
 
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonMenuElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonMenuElement
 import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation
 import scala.scalajs.js
 import scala.scalajs.js.`|`

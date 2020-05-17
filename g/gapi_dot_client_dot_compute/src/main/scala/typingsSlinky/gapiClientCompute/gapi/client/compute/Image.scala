@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientCompute.gapi.client.compute
 
-import typingsSlinky.gapiClientCompute.AnonContainerType
+import typingsSlinky.gapiClientCompute.anon.ContainerType
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -66,7 +66,7 @@ trait Image extends js.Object {
     */
   var name: js.UndefOr[String] = js.native
   /** The parameters of the raw disk image. */
-  var rawDisk: js.UndefOr[AnonContainerType] = js.native
+  var rawDisk: js.UndefOr[ContainerType] = js.native
   /** [Output Only] Server-defined URL for the resource. */
   var selfLink: js.UndefOr[String] = js.native
   /**
@@ -288,7 +288,7 @@ object Image {
         ret
     }
     @scala.inline
-    def withRawDisk(value: AnonContainerType): Self = {
+    def withRawDisk(value: ContainerType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rawDisk")(value.asInstanceOf[js.Any])
         ret

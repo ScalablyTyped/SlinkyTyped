@@ -1,8 +1,8 @@
 package typingsSlinky.webix.mod
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,15 +14,15 @@ trait DragControl extends js.Object {
   var left: Double = js.native
   var top: Double = js.native
   @JSName("$drag")
-  def $drag(source: HTMLElement, ev: Event_): HTMLElement = js.native
+  def $drag(source: HTMLElement, ev: Event): HTMLElement = js.native
   @JSName("$dragIn")
-  def $dragIn(source: HTMLElement, target: HTMLElement, ev: Event_): Unit = js.native
+  def $dragIn(source: HTMLElement, target: HTMLElement, ev: Event): Unit = js.native
   @JSName("$dragOut")
-  def $dragOut(source: HTMLElement, target: HTMLElement, drop: HTMLElement, event: Event_): Unit = js.native
+  def $dragOut(source: HTMLElement, target: HTMLElement, drop: HTMLElement, event: Event): Unit = js.native
   @JSName("$dragPos")
   def $dragPos(args: js.Any*): js.Any = js.native
   @JSName("$drop")
-  def $drop(source: HTMLElement, target: HTMLElement, ev: Event_): Unit = js.native
+  def $drop(source: HTMLElement, target: HTMLElement, ev: Event): Unit = js.native
   def addDrag(node: String, ctrl: js.Any): Unit = js.native
   def addDrag(node: Double, ctrl: js.Any): Unit = js.native
   def addDrag(node: HTMLElement, ctrl: js.Any): Unit = js.native
@@ -32,7 +32,7 @@ trait DragControl extends js.Object {
   def addDrop(node: Double, ctrl: js.Any, master_mode: Boolean): Unit = js.native
   def addDrop(node: HTMLElement, ctrl: js.Any): Unit = js.native
   def addDrop(node: HTMLElement, ctrl: js.Any, master_mode: Boolean): Unit = js.native
-  def createDrag(event: Event_): Unit = js.native
+  def createDrag(event: Event): Unit = js.native
   def destroyDrag(): Unit = js.native
   def getContext(): js.Any = js.native
   def getMaster(target: js.Any): js.Any = js.native

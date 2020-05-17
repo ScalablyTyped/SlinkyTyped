@@ -1,5 +1,6 @@
 package typingsSlinky.jupyterlabCodeeditor
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLSpanElement
 import typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.Factory
@@ -8,7 +9,6 @@ import typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.IModel
 import typingsSlinky.jupyterlabCodeeditor.jsoneditorMod.JSONEditor.IOptions
 import typingsSlinky.jupyterlabObservables.observablejsonMod.IObservableJSON
 import typingsSlinky.phosphorWidgets.mod.Widget
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -93,7 +93,7 @@ object jsoneditorMod extends js.Object {
       * called in response to events on the notebook panel's node. It should
       * not be called directly by user code.
       */
-    def handleEvent(event: Event_): Unit = js.native
+    def handleEvent(event: Event): Unit = js.native
   }
   
   @js.native

@@ -1,5 +1,6 @@
 package typingsSlinky.three
 
+import typingsSlinky.three.anon.Arc
 import typingsSlinky.three.bufferGeometryMod.BufferGeometry
 import typingsSlinky.three.geometryMod.Geometry
 import scala.scalajs.js
@@ -16,7 +17,7 @@ object torusGeometryMod extends js.Object {
     def this(radius: Double, tube: Double, radialSegments: Double) = this()
     def this(radius: Double, tube: Double, radialSegments: Double, tubularSegments: Double) = this()
     def this(radius: Double, tube: Double, radialSegments: Double, tubularSegments: Double, arc: Double) = this()
-    var parameters: AnonArc = js.native
+    var parameters: Arc = js.native
   }
   
   @js.native
@@ -26,7 +27,7 @@ object torusGeometryMod extends js.Object {
     def this(radius: Double, tube: Double, radialSegments: Double) = this()
     def this(radius: Double, tube: Double, radialSegments: Double, tubularSegments: Double) = this()
     def this(radius: Double, tube: Double, radialSegments: Double, tubularSegments: Double, arc: Double) = this()
-    var parameters: AnonArc = js.native
+    var parameters: Arc = js.native
   }
   
 }

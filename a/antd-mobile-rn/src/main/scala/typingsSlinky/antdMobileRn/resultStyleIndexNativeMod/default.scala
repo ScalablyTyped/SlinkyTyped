@@ -1,12 +1,12 @@
 package typingsSlinky.antdMobileRn.resultStyleIndexNativeMod
 
-import typingsSlinky.antdMobileRn.AnonBackgroundColorBorderBottomColor
-import typingsSlinky.antdMobileRn.AnonColorStringFontSizeNumber
-import typingsSlinky.antdMobileRn.AnonFlexDirectionMarginTopPaddingHorizontal
-import typingsSlinky.antdMobileRn.AnonFlexNumber
-import typingsSlinky.antdMobileRn.AnonHeightWidth
-import typingsSlinky.antdMobileRn.AnonMargin
-import typingsSlinky.antdMobileRn.AnonMarginTopPaddingHorizontal
+import typingsSlinky.antdMobileRn.anon.BackgroundColorBorderBottomColor
+import typingsSlinky.antdMobileRn.anon.ColorStringFontSizeNumber
+import typingsSlinky.antdMobileRn.anon.FlexDirectionMarginTopPaddingHorizontal
+import typingsSlinky.antdMobileRn.anon.FlexNumber
+import typingsSlinky.antdMobileRn.anon.HeightWidth
+import typingsSlinky.antdMobileRn.anon.Margin
+import typingsSlinky.antdMobileRn.anon.MarginTopPaddingHorizontal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,14 +14,14 @@ import scala.scalajs.js.annotation._
 @JSImport("antd-mobile-rn/lib/result/style/index.native", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var button: AnonFlexNumber = js.native
-  var buttonWrap: AnonFlexDirectionMarginTopPaddingHorizontal = js.native
-  var img: AnonHeightWidth = js.native
-  var imgWrap: AnonMargin = js.native
-  var message: AnonMarginTopPaddingHorizontal = js.native
-  var messageText: AnonColorStringFontSizeNumber = js.native
-  var result: AnonBackgroundColorBorderBottomColor = js.native
-  var title: AnonMarginTopPaddingHorizontal = js.native
-  var titleText: AnonColorStringFontSizeNumber = js.native
+  var button: FlexNumber = js.native
+  var buttonWrap: FlexDirectionMarginTopPaddingHorizontal = js.native
+  var img: HeightWidth = js.native
+  var imgWrap: Margin = js.native
+  var message: MarginTopPaddingHorizontal = js.native
+  var messageText: ColorStringFontSizeNumber = js.native
+  var result: BackgroundColorBorderBottomColor = js.native
+  var title: MarginTopPaddingHorizontal = js.native
+  var titleText: ColorStringFontSizeNumber = js.native
 }
 

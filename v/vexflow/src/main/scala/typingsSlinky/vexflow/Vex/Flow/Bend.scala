@@ -1,29 +1,71 @@
 package typingsSlinky.vexflow.Vex.Flow
 
-import typingsSlinky.vexflow.AnonLeftshift
-import typingsSlinky.vexflow.AnonText
+import typingsSlinky.vexflow.Vex.Flow.Modifier.Position
+import typingsSlinky.vexflow.Vex.IRenderContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Vex.Flow.Bend")
 @js.native
-class Bend protected () extends Modifier {
-  def this(text: String) = this()
-  def this(text: String, release: Boolean) = this()
-  def this(text: String, release: Boolean, phrase: js.Array[AnonText]) = this()
+trait Bend extends Modifier {
   def getText(): String = js.native
   def setFont(font: String): Bend = js.native
   def updateWidth(): Bend = js.native
 }
 
-/* static members */
-@JSGlobal("Vex.Flow.Bend")
-@js.native
-object Bend extends js.Object {
-  val CATEGORY: String = js.native
-  var DOWN: Double = js.native
-  var UP: Double = js.native
-  def format(bends: js.Array[Bend], state: AnonLeftshift): Boolean = js.native
+object Bend {
+  @scala.inline
+  def apply(
+    alignSubNotesWithNote: (js.Array[Note], Note) => Unit,
+    draw: () => Unit,
+    getCategory: () => String,
+    getContext: () => IRenderContext,
+    getIndex: () => Double,
+    getModifierContext: () => ModifierContext,
+    getNote: () => Note,
+    getPosition: () => Position,
+    getText: () => String,
+    getWidth: () => Double,
+    setContext: IRenderContext => Modifier,
+    setFont: String => Bend,
+    setIndex: Double => Modifier,
+    setModifierContext: ModifierContext => Modifier,
+    setNote: Note => Modifier,
+    setPosition: Position => Modifier,
+    setTextLine: Double => Modifier,
+    setWidth: Double => Modifier,
+    setXShift: Double => Unit,
+    setYShift: Double => Modifier,
+    updateWidth: () => Bend
+  ): Bend = {
+    val __obj = js.Dynamic.literal(alignSubNotesWithNote = js.Any.fromFunction2(alignSubNotesWithNote), draw = js.Any.fromFunction0(draw), getCategory = js.Any.fromFunction0(getCategory), getContext = js.Any.fromFunction0(getContext), getIndex = js.Any.fromFunction0(getIndex), getModifierContext = js.Any.fromFunction0(getModifierContext), getNote = js.Any.fromFunction0(getNote), getPosition = js.Any.fromFunction0(getPosition), getText = js.Any.fromFunction0(getText), getWidth = js.Any.fromFunction0(getWidth), setContext = js.Any.fromFunction1(setContext), setFont = js.Any.fromFunction1(setFont), setIndex = js.Any.fromFunction1(setIndex), setModifierContext = js.Any.fromFunction1(setModifierContext), setNote = js.Any.fromFunction1(setNote), setPosition = js.Any.fromFunction1(setPosition), setTextLine = js.Any.fromFunction1(setTextLine), setWidth = js.Any.fromFunction1(setWidth), setXShift = js.Any.fromFunction1(setXShift), setYShift = js.Any.fromFunction1(setYShift), updateWidth = js.Any.fromFunction0(updateWidth))
+    __obj.asInstanceOf[Bend]
+  }
+  @scala.inline
+  implicit class BendOps[Self <: Bend] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetText(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getText")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetFont(value: String => Bend): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFont")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateWidth(value: () => Bend): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateWidth")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

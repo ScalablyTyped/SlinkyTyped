@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientFusiontables.gapi.client.fusiontables
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientFusiontables.AnonHdrs
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientFusiontables.anon.Hdrs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,19 +18,19 @@ trait QueryResource extends js.Object {
     * - DESCRIBE
     * - CREATE statement.
     */
-  def sql(request: AnonHdrs): Request_[Sqlresponse] = js.native
+  def sql(request: Hdrs): Request[Sqlresponse] = js.native
   /**
     * Executes a SQL statement which can be any of
     * - SELECT
     * - SHOW
     * - DESCRIBE
     */
-  def sqlGet(request: AnonHdrs): Request_[Sqlresponse] = js.native
+  def sqlGet(request: Hdrs): Request[Sqlresponse] = js.native
 }
 
 object QueryResource {
   @scala.inline
-  def apply(sql: AnonHdrs => Request_[Sqlresponse], sqlGet: AnonHdrs => Request_[Sqlresponse]): QueryResource = {
+  def apply(sql: Hdrs => Request[Sqlresponse], sqlGet: Hdrs => Request[Sqlresponse]): QueryResource = {
     val __obj = js.Dynamic.literal(sql = js.Any.fromFunction1(sql), sqlGet = js.Any.fromFunction1(sqlGet))
     __obj.asInstanceOf[QueryResource]
   }
@@ -41,13 +41,13 @@ object QueryResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSql(value: AnonHdrs => Request_[Sqlresponse]): Self = {
+    def withSql(value: Hdrs => Request[Sqlresponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sql")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withSqlGet(value: AnonHdrs => Request_[Sqlresponse]): Self = {
+    def withSqlGet(value: Hdrs => Request[Sqlresponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sqlGet")(js.Any.fromFunction1(value))
         ret

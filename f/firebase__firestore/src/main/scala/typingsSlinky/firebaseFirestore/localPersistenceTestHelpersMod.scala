@@ -1,5 +1,6 @@
 package typingsSlinky.firebaseFirestore
 
+import typingsSlinky.firebaseFirestore.anon.Queue
 import typingsSlinky.firebaseFirestore.authUserMod.User
 import typingsSlinky.firebaseFirestore.coreDatabaseInfoMod.DatabaseId
 import typingsSlinky.firebaseFirestore.coreListenSequenceMod.SequenceNumberSyncer
@@ -31,8 +32,8 @@ object localPersistenceTestHelpersMod extends js.Object {
     existingQueryTargetIds: js.Array[TargetId]
   ): js.Promise[Unit] = js.native
   def testIndexedDbPersistence(): js.Promise[IndexedDbPersistence] = js.native
-  def testIndexedDbPersistence(options: AnonQueue): js.Promise[IndexedDbPersistence] = js.native
-  def testIndexedDbPersistence(options: AnonQueue, lruParams: LruParams): js.Promise[IndexedDbPersistence] = js.native
+  def testIndexedDbPersistence(options: Queue): js.Promise[IndexedDbPersistence] = js.native
+  def testIndexedDbPersistence(options: Queue, lruParams: LruParams): js.Promise[IndexedDbPersistence] = js.native
   def testMemoryEagerPersistence(): js.Promise[MemoryPersistence] = js.native
   def testMemoryLruPersistence(): js.Promise[MemoryPersistence] = js.native
   def testMemoryLruPersistence(params: LruParams): js.Promise[MemoryPersistence] = js.native

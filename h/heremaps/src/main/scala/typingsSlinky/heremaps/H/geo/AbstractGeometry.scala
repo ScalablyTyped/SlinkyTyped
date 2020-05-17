@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * The base class for all geometry types.
   */
-@JSGlobal("H.geo.AbstractGeometry")
 @js.native
-class AbstractGeometry () extends js.Object {
+trait AbstractGeometry extends js.Object {
   /**
     * Checks whether the geometry is equal to the geometry supplied by the caller.
     * Two geometries are considered as equal if they represent the same geometry type and have equal coordinate values.
@@ -22,5 +21,33 @@ class AbstractGeometry () extends js.Object {
     * @return {H.geo.Rect} - the bounding rectangle of the geometry or null if the bounding rectangle can't be computed (e.g. for a geometry without coordinates)
     */
   def getBoundingBox(): Rect = js.native
+}
+
+object AbstractGeometry {
+  @scala.inline
+  def apply(equals: js.Any => Boolean, getBoundingBox: () => Rect): AbstractGeometry = {
+    val __obj = js.Dynamic.literal(equals = js.Any.fromFunction1(equals), getBoundingBox = js.Any.fromFunction0(getBoundingBox))
+    __obj.asInstanceOf[AbstractGeometry]
+  }
+  @scala.inline
+  implicit class AbstractGeometryOps[Self <: AbstractGeometry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEquals(value: js.Any => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetBoundingBox(value: () => Rect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBoundingBox")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -6,23 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains the XML that defines the toast notification that will display at the scheduled time. */
-@JSGlobal("Windows.UI.Notifications.ScheduledToastNotification")
 @js.native
-class ScheduledToastNotification protected () extends js.Object {
-  /**
-    * Creates and initializes a new instance of a ScheduledToastNotification that will be displayed only once.
-    * @param content The XML that defines the toast notification content.
-    * @param deliveryTime The date and time that Windows should display the toast notification. You must call AddToSchedule before this time.
-    */
-  def this(content: XmlDocument, deliveryTime: js.Date) = this()
-  /**
-    * Creates and initializes a new instance of a recurring ScheduledToastNotification .
-    * @param content The XML that defines the toast notification content.
-    * @param deliveryTime The date and time that Windows should first display the toast notification. You must call AddToSchedule before this time.
-    * @param snoozeInterval The amount of time between occurrences of the notification. To be valid, this value must be no less than 60 seconds and no more than 60 minutes.
-    * @param maximumSnoozeCount The maximum number of times to display this notification. Valid values range from 1 to 5.
-    */
-  def this(content: XmlDocument, deliveryTime: js.Date, snoozeInterval: Double, maximumSnoozeCount: Double) = this()
+trait ScheduledToastNotification extends js.Object {
   /** Gets the XML that defines this scheduled toast notification. */
   var content: XmlDocument = js.native
   /** Gets the time that this toast notification is scheduled to be displayed. */
@@ -39,5 +24,78 @@ class ScheduledToastNotification protected () extends js.Object {
   var suppressPopup: Boolean = js.native
   /** Gets or sets a string that uniquely identifies a toast notification inside a Group . */
   var tag: String = js.native
+}
+
+object ScheduledToastNotification {
+  @scala.inline
+  def apply(
+    content: XmlDocument,
+    deliveryTime: js.Date,
+    group: String,
+    id: String,
+    maximumSnoozeCount: Double,
+    snoozeInterval: Double,
+    suppressPopup: Boolean,
+    tag: String
+  ): ScheduledToastNotification = {
+    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], deliveryTime = deliveryTime.asInstanceOf[js.Any], group = group.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], maximumSnoozeCount = maximumSnoozeCount.asInstanceOf[js.Any], snoozeInterval = snoozeInterval.asInstanceOf[js.Any], suppressPopup = suppressPopup.asInstanceOf[js.Any], tag = tag.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ScheduledToastNotification]
+  }
+  @scala.inline
+  implicit class ScheduledToastNotificationOps[Self <: ScheduledToastNotification] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContent(value: XmlDocument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeliveryTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deliveryTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGroup(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaximumSnoozeCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumSnoozeCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSnoozeInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snoozeInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuppressPopup(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suppressPopup")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTag(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tag")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.virtualKeyboard.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -106,7 +106,7 @@ object KeyboardOptions {
     }
     @scala.inline
     def withAccepted(
-      value: (/* event */ js.UndefOr[Event_ | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+      value: (/* event */ js.UndefOr[Event | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("accepted")(js.Any.fromFunction3(value))
@@ -192,7 +192,7 @@ object KeyboardOptions {
     }
     @scala.inline
     def withBeforeClose(
-      value: (/* event */ js.UndefOr[Event_ | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+      value: (/* event */ js.UndefOr[Event | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeClose")(js.Any.fromFunction3(value))
@@ -206,7 +206,7 @@ object KeyboardOptions {
     }
     @scala.inline
     def withBeforeInsert(
-      value: (/* event */ js.UndefOr[Event_ | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+      value: (/* event */ js.UndefOr[Event | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeInsert")(js.Any.fromFunction3(value))
@@ -220,7 +220,7 @@ object KeyboardOptions {
     }
     @scala.inline
     def withBeforeVisible(
-      value: (/* event */ js.UndefOr[Event_ | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+      value: (/* event */ js.UndefOr[Event | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeVisible")(js.Any.fromFunction3(value))
@@ -234,7 +234,7 @@ object KeyboardOptions {
     }
     @scala.inline
     def withBuildKey(
-      value: (/* event */ js.UndefOr[Event_ | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+      value: (/* event */ js.UndefOr[Event | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("buildKey")(js.Any.fromFunction3(value))
@@ -260,7 +260,7 @@ object KeyboardOptions {
     }
     @scala.inline
     def withCanceled(
-      value: (/* event */ js.UndefOr[Event_ | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+      value: (/* event */ js.UndefOr[Event | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("canceled")(js.Any.fromFunction3(value))
@@ -286,7 +286,7 @@ object KeyboardOptions {
     }
     @scala.inline
     def withChange(
-      value: (/* event */ js.UndefOr[Event_ | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+      value: (/* event */ js.UndefOr[Event | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.Any.fromFunction3(value))
@@ -420,7 +420,7 @@ object KeyboardOptions {
     }
     @scala.inline
     def withHidden(
-      value: (/* event */ js.UndefOr[Event_ | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+      value: (/* event */ js.UndefOr[Event | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hidden")(js.Any.fromFunction3(value))
@@ -458,7 +458,7 @@ object KeyboardOptions {
     }
     @scala.inline
     def withInitialized(
-      value: (/* event */ js.UndefOr[Event_ | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+      value: (/* event */ js.UndefOr[Event | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("initialized")(js.Any.fromFunction3(value))
@@ -664,7 +664,7 @@ object KeyboardOptions {
     }
     @scala.inline
     def withRestricted(
-      value: (/* event */ js.UndefOr[Event_ | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+      value: (/* event */ js.UndefOr[Event | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("restricted")(js.Any.fromFunction3(value))
@@ -738,7 +738,7 @@ object KeyboardOptions {
     }
     @scala.inline
     def withSwitchInput(
-      value: (/* event */ js.UndefOr[Event_ | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+      value: (/* event */ js.UndefOr[Event | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("switchInput")(js.Any.fromFunction3(value))
@@ -824,7 +824,7 @@ object KeyboardOptions {
     }
     @scala.inline
     def withValidate(
-      value: (/* event */ js.UndefOr[Event_ | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+      value: (/* event */ js.UndefOr[Event | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(js.Any.fromFunction3(value))
@@ -838,7 +838,7 @@ object KeyboardOptions {
     }
     @scala.inline
     def withVisible(
-      value: (/* event */ js.UndefOr[Event_ | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+      value: (/* event */ js.UndefOr[Event | String], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.Any.fromFunction3(value))

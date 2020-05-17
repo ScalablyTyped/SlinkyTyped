@@ -2,7 +2,7 @@ package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -290,7 +290,7 @@ object IgDialog {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAnimationEnded(value: (/* event */ Event_, /* ui */ AnimationEndedEventUIParam) => Unit): Self = {
+    def withAnimationEnded(value: (/* event */ Event, /* ui */ AnimationEndedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("animationEnded")(js.Any.fromFunction2(value))
         ret
@@ -302,7 +302,7 @@ object IgDialog {
         ret
     }
     @scala.inline
-    def withBlur(value: (/* event */ Event_, /* ui */ BlurEventUIParam) => Unit): Self = {
+    def withBlur(value: (/* event */ Event, /* ui */ BlurEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("blur")(js.Any.fromFunction2(value))
         ret
@@ -410,7 +410,7 @@ object IgDialog {
         ret
     }
     @scala.inline
-    def withFocus(value: (/* event */ Event_, /* ui */ IgFocusEventUIParam) => Unit): Self = {
+    def withFocus(value: (/* event */ Event, /* ui */ IgFocusEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.Any.fromFunction2(value))
         ret
@@ -770,7 +770,7 @@ object IgDialog {
         ret
     }
     @scala.inline
-    def withStateChanged(value: (/* event */ Event_, /* ui */ StateChangedEventUIParam) => Unit): Self = {
+    def withStateChanged(value: (/* event */ Event, /* ui */ StateChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stateChanged")(js.Any.fromFunction2(value))
         ret
@@ -782,7 +782,7 @@ object IgDialog {
         ret
     }
     @scala.inline
-    def withStateChanging(value: (/* event */ Event_, /* ui */ StateChangingEventUIParam) => Unit): Self = {
+    def withStateChanging(value: (/* event */ Event, /* ui */ StateChangingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stateChanging")(js.Any.fromFunction2(value))
         ret

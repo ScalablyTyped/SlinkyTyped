@@ -5,7 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
-import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameChecked
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameChecked
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

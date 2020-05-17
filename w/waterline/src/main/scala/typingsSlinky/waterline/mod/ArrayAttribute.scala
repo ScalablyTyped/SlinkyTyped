@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 /* Inlined waterline.waterline.BaseAttribute<any> & {  type  :'array'} */
 @js.native
-trait ArrayAttribute extends _Attribute {
+trait ArrayAttribute extends Attribute {
   var after: js.UndefOr[AttributeValidation[String]] = js.native
   var alpha: js.UndefOr[AttributeValidation[Boolean]] = js.native
   var alphanumeric: js.UndefOr[AttributeValidation[Boolean]] = js.native

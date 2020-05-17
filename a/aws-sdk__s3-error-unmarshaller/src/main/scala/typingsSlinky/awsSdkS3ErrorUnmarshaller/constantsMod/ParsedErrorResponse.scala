@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkS3ErrorUnmarshaller.constantsMod
 
-import typingsSlinky.awsSdkS3ErrorUnmarshaller.AnonRequestId
+import typingsSlinky.awsSdkS3ErrorUnmarshaller.anon.RequestId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ParsedErrorResponse extends js.Object {
   @JSName("$metadata")
-  var $metadata: AnonRequestId = js.native
+  var $metadata: RequestId = js.native
   var Code: String = js.native
   var Message: String = js.native
 }
 
 object ParsedErrorResponse {
   @scala.inline
-  def apply($metadata: AnonRequestId, Code: String, Message: String): ParsedErrorResponse = {
+  def apply($metadata: RequestId, Code: String, Message: String): ParsedErrorResponse = {
     val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], Code = Code.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParsedErrorResponse]
   }
@@ -26,7 +26,7 @@ object ParsedErrorResponse {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with$metadata(value: AnonRequestId): Self = {
+    def with$metadata(value: RequestId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("$metadata")(value.asInstanceOf[js.Any])
         ret

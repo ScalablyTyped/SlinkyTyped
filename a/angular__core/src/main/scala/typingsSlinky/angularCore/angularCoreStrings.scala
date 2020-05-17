@@ -10,15 +10,6 @@ import scala.scalajs.js.annotation._
 
 object angularCoreStrings {
   @js.native
-  sealed trait AnonChangeDetection extends js.Object
-  
-  @js.native
-  sealed trait AnonContentQueries extends js.Object
-  
-  @js.native
-  sealed trait AnonExportAs extends js.Object
-  
-  @js.native
   sealed trait AnyDuringRendererMigration extends HelperFunction
   
   @js.native
@@ -29,6 +20,15 @@ object angularCoreStrings {
   
   @js.native
   sealed trait `Brand for PlayerFactory that nothing will match` extends js.Object
+  
+  @js.native
+  sealed trait ChangeDetection extends js.Object
+  
+  @js.native
+  sealed trait ContentQueries extends js.Object
+  
+  @js.native
+  sealed trait ExportAs extends js.Object
   
   @js.native
   sealed trait Html extends BypassType
@@ -124,12 +124,6 @@ object angularCoreStrings {
   sealed trait ɵɵBaseDef extends js.Object
   
   @scala.inline
-  def AnonChangeDetection: AnonChangeDetection = "AnonChangeDetection".asInstanceOf[AnonChangeDetection]
-  @scala.inline
-  def AnonContentQueries: AnonContentQueries = "AnonContentQueries".asInstanceOf[AnonContentQueries]
-  @scala.inline
-  def AnonExportAs: AnonExportAs = "AnonExportAs".asInstanceOf[AnonExportAs]
-  @scala.inline
   def AnyDuringRendererMigration: AnyDuringRendererMigration = "AnyDuringRendererMigration".asInstanceOf[AnyDuringRendererMigration]
   @scala.inline
   def Asterisk: Asterisk = "*".asInstanceOf[Asterisk]
@@ -137,6 +131,12 @@ object angularCoreStrings {
   def `Brand for OpaqueViewState that nothing will match`: `Brand for OpaqueViewState that nothing will match` = ("Brand for OpaqueViewState that nothing will match").asInstanceOf[`Brand for OpaqueViewState that nothing will match`]
   @scala.inline
   def `Brand for PlayerFactory that nothing will match`: `Brand for PlayerFactory that nothing will match` = ("Brand for PlayerFactory that nothing will match").asInstanceOf[`Brand for PlayerFactory that nothing will match`]
+  @scala.inline
+  def ChangeDetection: ChangeDetection = "ChangeDetection".asInstanceOf[ChangeDetection]
+  @scala.inline
+  def ContentQueries: ContentQueries = "ContentQueries".asInstanceOf[ContentQueries]
+  @scala.inline
+  def ExportAs: ExportAs = "ExportAs".asInstanceOf[ExportAs]
   @scala.inline
   def Html: Html = "Html".asInstanceOf[Html]
   @scala.inline

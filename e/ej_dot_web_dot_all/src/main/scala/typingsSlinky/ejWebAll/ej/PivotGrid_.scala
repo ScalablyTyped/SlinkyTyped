@@ -1,18 +1,11 @@
 package typingsSlinky.ejWebAll.ej
 
-import org.scalajs.dom.raw.Element
-import typingsSlinky.ejWebAll.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("ej.PivotGrid")
 @js.native
-class PivotGrid_ protected () extends Widget_ {
-  def this(element: JQuery) = this()
-  def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.PivotGrid.Model) = this()
-  def this(element: Element, options: typingsSlinky.ejWebAll.ej.PivotGrid.Model) = this()
+trait PivotGrid_ extends Widget_ {
   var defaults: typingsSlinky.ejWebAll.ej.PivotGrid.Model = js.native
   @JSName("model")
   var model_PivotGrid_ : typingsSlinky.ejWebAll.ej.PivotGrid.Model = js.native

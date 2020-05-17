@@ -1,17 +1,17 @@
 package typingsSlinky.pdfmake.interfacesMod
 
-import typingsSlinky.pdfmake.AnonX
+import typingsSlinky.pdfmake.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ContentBase extends Style {
-  var absolutePosition: js.UndefOr[AnonX] = js.native
+  var absolutePosition: js.UndefOr[X] = js.native
   var headlineLevel: js.UndefOr[Double] = js.native
   var pageBreak: js.UndefOr[PageBreak] = js.native
   var pageOrientation: js.UndefOr[PageOrientation] = js.native
-  var relativePosition: js.UndefOr[AnonX] = js.native
+  var relativePosition: js.UndefOr[X] = js.native
   var style: js.UndefOr[String | js.Array[String] | Style] = js.native
 }
 
@@ -28,7 +28,7 @@ object ContentBase {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAbsolutePosition(value: AnonX): Self = {
+    def withAbsolutePosition(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("absolutePosition")(value.asInstanceOf[js.Any])
         ret
@@ -76,7 +76,7 @@ object ContentBase {
         ret
     }
     @scala.inline
-    def withRelativePosition(value: AnonX): Self = {
+    def withRelativePosition(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("relativePosition")(value.asInstanceOf[js.Any])
         ret

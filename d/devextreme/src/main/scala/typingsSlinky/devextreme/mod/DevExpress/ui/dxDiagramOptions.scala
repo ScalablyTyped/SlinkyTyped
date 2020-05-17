@@ -1,18 +1,18 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonAllowEditImage
-import typingsSlinky.devextreme.AnonAutoLayout
-import typingsSlinky.devextreme.AnonCollapsible
-import typingsSlinky.devextreme.AnonCommands
-import typingsSlinky.devextreme.AnonComponentDxDiagram
-import typingsSlinky.devextreme.AnonElementItems
-import typingsSlinky.devextreme.AnonFromExpr
-import typingsSlinky.devextreme.AnonGroups
-import typingsSlinky.devextreme.AnonItem
-import typingsSlinky.devextreme.AnonItemsValue
-import typingsSlinky.devextreme.AnonProxyUrl
-import typingsSlinky.devextreme.AnonVisible
-import typingsSlinky.devextreme.AnonWidth
+import typingsSlinky.devextreme.anon.AllowEditImage
+import typingsSlinky.devextreme.anon.AutoLayout
+import typingsSlinky.devextreme.anon.Collapsible
+import typingsSlinky.devextreme.anon.Commands
+import typingsSlinky.devextreme.anon.ComponentDxDiagram
+import typingsSlinky.devextreme.anon.ElementItems
+import typingsSlinky.devextreme.anon.FromExpr
+import typingsSlinky.devextreme.anon.Groups
+import typingsSlinky.devextreme.anon.Item
+import typingsSlinky.devextreme.anon.ItemsValue
+import typingsSlinky.devextreme.anon.ProxyUrl
+import typingsSlinky.devextreme.anon.Visible
+import typingsSlinky.devextreme.anon.Width
 import typingsSlinky.devextreme.devextremeStrings.cm
 import typingsSlinky.devextreme.devextremeStrings.disabled
 import typingsSlinky.devextreme.devextremeStrings.fitContent
@@ -30,35 +30,35 @@ trait dxDiagramOptions extends WidgetOptions[dxDiagram] {
   /** Specifies whether the Diagram widget automatically zooms the work area. */
   var autoZoom: js.UndefOr[fitContent | fitWidth | disabled] = js.native
   /** Configures the context menu's settings. */
-  var contextMenu: js.UndefOr[AnonCommands] = js.native
+  var contextMenu: js.UndefOr[Commands] = js.native
   /** Provide access to an array of custom shapes. */
-  var customShapes: js.UndefOr[js.Array[AnonAllowEditImage]] = js.native
+  var customShapes: js.UndefOr[js.Array[AllowEditImage]] = js.native
   /** Allows you to bind the collection of diagram edges to a data source. */
-  var edges: js.UndefOr[AnonFromExpr] = js.native
+  var edges: js.UndefOr[FromExpr] = js.native
   /** Configures export settings. */
-  var export: js.UndefOr[AnonProxyUrl] = js.native
+  var export: js.UndefOr[ProxyUrl] = js.native
   /** Specifies whether or not to display the widget in full-screen mode. */
   var fullScreen: js.UndefOr[Boolean] = js.native
   /** Specifies the grid pitch. */
-  var gridSize: js.UndefOr[Double | AnonItemsValue] = js.native
+  var gridSize: js.UndefOr[Double | ItemsValue] = js.native
   /** Allows you to bind the collection of diagram nodes to a data source. */
-  var nodes: js.UndefOr[AnonAutoLayout] = js.native
+  var nodes: js.UndefOr[AutoLayout] = js.native
   /** A function that is executed when the diagram's data changes. */
-  var onDataChanged: js.UndefOr[js.Function1[/* e */ AnonComponentDxDiagram, _]] = js.native
+  var onDataChanged: js.UndefOr[js.Function1[/* e */ ComponentDxDiagram, _]] = js.native
   /** A function that is executed after a shape or connector is clicked. */
-  var onItemClick: js.UndefOr[js.Function1[/* e */ AnonItem, _]] = js.native
+  var onItemClick: js.UndefOr[js.Function1[/* e */ Item, _]] = js.native
   /** A function that is executed after a shape or connector is double-clicked. */
-  var onItemDblClick: js.UndefOr[js.Function1[/* e */ AnonItem, _]] = js.native
+  var onItemDblClick: js.UndefOr[js.Function1[/* e */ Item, _]] = js.native
   /** A function that is executed after the selection is changed in the Diagram. */
-  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonElementItems, _]] = js.native
+  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ ElementItems, _]] = js.native
   /** Specifies the color of a diagram page. */
   var pageColor: js.UndefOr[String] = js.native
   /** Specifies the page orientation. */
   var pageOrientation: js.UndefOr[portrait | landscape] = js.native
   /** Specifies a size of pages. */
-  var pageSize: js.UndefOr[AnonWidth] = js.native
+  var pageSize: js.UndefOr[Width] = js.native
   /** Provides access to Properties panel settings. */
-  var propertiesPanel: js.UndefOr[AnonCollapsible] = js.native
+  var propertiesPanel: js.UndefOr[Collapsible] = js.native
   /** Specifies whether the diagram is read-only. */
   var readOnly: js.UndefOr[Boolean] = js.native
   /** Specifies whether grid lines are visible. */
@@ -68,15 +68,15 @@ trait dxDiagramOptions extends WidgetOptions[dxDiagram] {
   /** Specifies whether diagram elements should snap to grid lines. */
   var snapToGrid: js.UndefOr[Boolean] = js.native
   /** Provides access to toolbar settings. */
-  var toolbar: js.UndefOr[AnonVisible] = js.native
+  var toolbar: js.UndefOr[Visible] = js.native
   /** Provides access to toolbox settings. */
-  var toolbox: js.UndefOr[AnonGroups] = js.native
+  var toolbox: js.UndefOr[Groups] = js.native
   /** Specifies the unit for measurement options (for example, defaultHeight, gridSize, leftExpr). */
   var units: js.UndefOr[in | cm | px] = js.native
   /** Specifies the measurement unit that is displayed in user interface elements. */
   var viewUnits: js.UndefOr[in | cm | px] = js.native
   /** Specifies the zoom level. */
-  var zoomLevel: js.UndefOr[Double | AnonItemsValue] = js.native
+  var zoomLevel: js.UndefOr[Double | ItemsValue] = js.native
 }
 
 object dxDiagramOptions {
@@ -104,7 +104,7 @@ object dxDiagramOptions {
         ret
     }
     @scala.inline
-    def withContextMenu(value: AnonCommands): Self = {
+    def withContextMenu(value: Commands): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenu")(value.asInstanceOf[js.Any])
         ret
@@ -116,7 +116,7 @@ object dxDiagramOptions {
         ret
     }
     @scala.inline
-    def withCustomShapes(value: js.Array[AnonAllowEditImage]): Self = {
+    def withCustomShapes(value: js.Array[AllowEditImage]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customShapes")(value.asInstanceOf[js.Any])
         ret
@@ -128,7 +128,7 @@ object dxDiagramOptions {
         ret
     }
     @scala.inline
-    def withEdges(value: AnonFromExpr): Self = {
+    def withEdges(value: FromExpr): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("edges")(value.asInstanceOf[js.Any])
         ret
@@ -140,7 +140,7 @@ object dxDiagramOptions {
         ret
     }
     @scala.inline
-    def withExport(value: AnonProxyUrl): Self = {
+    def withExport(value: ProxyUrl): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("export")(value.asInstanceOf[js.Any])
         ret
@@ -164,7 +164,7 @@ object dxDiagramOptions {
         ret
     }
     @scala.inline
-    def withGridSize(value: Double | AnonItemsValue): Self = {
+    def withGridSize(value: Double | ItemsValue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gridSize")(value.asInstanceOf[js.Any])
         ret
@@ -176,7 +176,7 @@ object dxDiagramOptions {
         ret
     }
     @scala.inline
-    def withNodes(value: AnonAutoLayout): Self = {
+    def withNodes(value: AutoLayout): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nodes")(value.asInstanceOf[js.Any])
         ret
@@ -188,7 +188,7 @@ object dxDiagramOptions {
         ret
     }
     @scala.inline
-    def withOnDataChanged(value: /* e */ AnonComponentDxDiagram => _): Self = {
+    def withOnDataChanged(value: /* e */ ComponentDxDiagram => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDataChanged")(js.Any.fromFunction1(value))
         ret
@@ -200,7 +200,7 @@ object dxDiagramOptions {
         ret
     }
     @scala.inline
-    def withOnItemClick(value: /* e */ AnonItem => _): Self = {
+    def withOnItemClick(value: /* e */ Item => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction1(value))
         ret
@@ -212,7 +212,7 @@ object dxDiagramOptions {
         ret
     }
     @scala.inline
-    def withOnItemDblClick(value: /* e */ AnonItem => _): Self = {
+    def withOnItemDblClick(value: /* e */ Item => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemDblClick")(js.Any.fromFunction1(value))
         ret
@@ -224,7 +224,7 @@ object dxDiagramOptions {
         ret
     }
     @scala.inline
-    def withOnSelectionChanged(value: /* e */ AnonElementItems => _): Self = {
+    def withOnSelectionChanged(value: /* e */ ElementItems => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.Any.fromFunction1(value))
         ret
@@ -260,7 +260,7 @@ object dxDiagramOptions {
         ret
     }
     @scala.inline
-    def withPageSize(value: AnonWidth): Self = {
+    def withPageSize(value: Width): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
         ret
@@ -272,7 +272,7 @@ object dxDiagramOptions {
         ret
     }
     @scala.inline
-    def withPropertiesPanel(value: AnonCollapsible): Self = {
+    def withPropertiesPanel(value: Collapsible): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("propertiesPanel")(value.asInstanceOf[js.Any])
         ret
@@ -332,7 +332,7 @@ object dxDiagramOptions {
         ret
     }
     @scala.inline
-    def withToolbar(value: AnonVisible): Self = {
+    def withToolbar(value: Visible): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(value.asInstanceOf[js.Any])
         ret
@@ -344,7 +344,7 @@ object dxDiagramOptions {
         ret
     }
     @scala.inline
-    def withToolbox(value: AnonGroups): Self = {
+    def withToolbox(value: Groups): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toolbox")(value.asInstanceOf[js.Any])
         ret
@@ -380,7 +380,7 @@ object dxDiagramOptions {
         ret
     }
     @scala.inline
-    def withZoomLevel(value: Double | AnonItemsValue): Self = {
+    def withZoomLevel(value: Double | ItemsValue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("zoomLevel")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.imagery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -59,8 +58,4 @@ trait ImageryLayer
     */
   def redraw(): Unit = js.native
 }
-
-@JSGlobal("__esri.ImageryLayer")
-@js.native
-object ImageryLayer extends TopLevel[ImageryLayerConstructor]
 

@@ -2,7 +2,7 @@ package typingsSlinky.awsSdkClientS3Browser.typesGetBucketAccelerateConfiguratio
 
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.Enabled
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.Suspended
-import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetBucketAccelerateConfigurationOutput
   extends MetadataBearer
-     with _OutputTypesUnion {
+     with OutputTypesUnion {
   /**
     * <p>The accelerate configuration of the bucket.</p>
     */

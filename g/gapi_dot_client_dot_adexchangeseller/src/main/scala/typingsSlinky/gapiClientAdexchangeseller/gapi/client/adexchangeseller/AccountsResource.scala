@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientAdexchangeseller.gapi.client.adexchangeseller
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAdexchangeseller.AnonKey
-import typingsSlinky.gapiClientAdexchangeseller.AnonMaxResults
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAdexchangeseller.anon.Key
+import typingsSlinky.gapiClientAdexchangeseller.anon.MaxResults
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,9 +17,9 @@ trait AccountsResource extends js.Object {
   var reports: ReportsResource = js.native
   var urlchannels: UrlchannelsResource = js.native
   /** Get information about the selected Ad Exchange account. */
-  def get(request: AnonKey): Request_[Account] = js.native
+  def get(request: Key): Request[Account] = js.native
   /** List all accounts available to this Ad Exchange account. */
-  def list(request: AnonMaxResults): Request_[Accounts] = js.native
+  def list(request: MaxResults): Request[Accounts] = js.native
 }
 
 object AccountsResource {
@@ -28,8 +28,8 @@ object AccountsResource {
     adclients: AdclientsResource,
     alerts: AlertsResource,
     customchannels: CustomchannelsResource,
-    get: AnonKey => Request_[Account],
-    list: AnonMaxResults => Request_[Accounts],
+    get: Key => Request[Account],
+    list: MaxResults => Request[Accounts],
     metadata: MetadataResource,
     preferreddeals: PreferreddealsResource,
     reports: ReportsResource,
@@ -63,13 +63,13 @@ object AccountsResource {
         ret
     }
     @scala.inline
-    def withGet(value: AnonKey => Request_[Account]): Self = {
+    def withGet(value: Key => Request[Account]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonMaxResults => Request_[Accounts]): Self = {
+    def withList(value: MaxResults => Request[Accounts]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

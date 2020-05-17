@@ -9,7 +9,7 @@ import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.AnonLang
+import typingsSlinky.antd.anon.Lang
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
 import typingsSlinky.antd.antdStrings.additions
@@ -210,7 +210,7 @@ class SharedBuilder_RangePickerProps1198066462 (val args: js.Array[js.Any])
   @scala.inline
   def inputReadOnly(value: Boolean): this.type = set("inputReadOnly", value.asInstanceOf[js.Any])
   @scala.inline
-  def locale(value: AnonLang): this.type = set("locale", value.asInstanceOf[js.Any])
+  def locale(value: Lang): this.type = set("locale", value.asInstanceOf[js.Any])
   @scala.inline
   def mode(value: js.Tuple2[PanelMode, PanelMode]): this.type = set("mode", value.asInstanceOf[js.Any])
   @scala.inline

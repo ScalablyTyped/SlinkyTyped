@@ -1,8 +1,8 @@
 package typingsSlinky.jupyterlabStatusbar.hoverMod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.jupyterlabStatusbar.hoverMod.Popup.IOptions
 import typingsSlinky.phosphorWidgets.mod.Widget
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ class Popup_ protected () extends Widget {
   /**
     * Handle DOM events for the widget.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
   /**
     * Attach the popup widget to the page.
     */

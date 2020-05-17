@@ -73,10 +73,8 @@ import scala.scalajs.js.annotation._
   * @property {number[]} layers An array of layer IDs ({@link pc.Layer#id}) to which this camera should belong.
   * Don't push/pop/splice or modify this array, if you want to change it - set a new one instead.
   */
-@JSGlobal("pc.CameraComponent")
 @js.native
-class CameraComponent protected () extends Component {
-  def this(system: CameraComponentSystem, entity: Entity) = this()
+trait CameraComponent extends Component {
   /**
     * The aspect ratio (width divided by height) of the camera. If aspectRatioMode is ASPECT_AUTO, then this value will be automatically calculated every frame, and you can only read it. If it's ASPECT_MANUAL, you can set the value.
     */

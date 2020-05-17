@@ -1,8 +1,6 @@
 package typingsSlinky.reactNativeCommunityCli.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.reactNativeCommunityCli.AnonHooks
-import typingsSlinky.reactNativeCommunityCli.AnonPlatforms
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,9 +10,9 @@ trait UserDependencyConfig extends js.Object {
   // An array of commands that ship with the dependency
   var commands: js.Array[Command] = js.native
   // Additional dependency settings
-  var dependency: js.UndefOr[AnonHooks] = js.native
+  var dependency: js.UndefOr[typingsSlinky.reactNativeCommunityCli.anon.Hooks] = js.native
   // Haste config defined by legacy `rnpm`
-  var haste: js.UndefOr[AnonPlatforms] = js.native
+  var haste: js.UndefOr[typingsSlinky.reactNativeCommunityCli.anon.Platforms] = js.native
   // An array of extra platforms to load
   var platforms: js.UndefOr[StringDictionary[js.Any]] = js.native
 }
@@ -38,7 +36,7 @@ object UserDependencyConfig {
         ret
     }
     @scala.inline
-    def withDependency(value: AnonHooks): Self = {
+    def withDependency(value: typingsSlinky.reactNativeCommunityCli.anon.Hooks): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dependency")(value.asInstanceOf[js.Any])
         ret
@@ -50,7 +48,7 @@ object UserDependencyConfig {
         ret
     }
     @scala.inline
-    def withHaste(value: AnonPlatforms): Self = {
+    def withHaste(value: typingsSlinky.reactNativeCommunityCli.anon.Platforms): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("haste")(value.asInstanceOf[js.Any])
         ret

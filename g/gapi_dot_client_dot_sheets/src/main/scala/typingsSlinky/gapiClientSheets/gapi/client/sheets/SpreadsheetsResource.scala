@@ -1,12 +1,11 @@
 package typingsSlinky.gapiClientSheets.gapi.client.sheets
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientSheets.AnonAccesstokenAlt
-import typingsSlinky.gapiClientSheets.AnonAltCallback
-import typingsSlinky.gapiClientSheets.AnonCallback
-import typingsSlinky.gapiClientSheets.AnonIncludeGridData
-import typingsSlinky.gapiClientSheets.AnonUploadprotocol
-import typingsSlinky.gapiClientSheets.AnonXgafv
+import typingsSlinky.gapiClientSheets.anon.AccesstokenAlt
+import typingsSlinky.gapiClientSheets.anon.AltCallback
+import typingsSlinky.gapiClientSheets.anon.Callback
+import typingsSlinky.gapiClientSheets.anon.IncludeGridData
+import typingsSlinky.gapiClientSheets.anon.Uploadprotocol
+import typingsSlinky.gapiClientSheets.anon.Xgafv
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,7 @@ trait SpreadsheetsResource extends js.Object {
   var developerMetadata: DeveloperMetadataResource = js.native
   var sheets: SheetsResource = js.native
   var values: ValuesResource = js.native
-  def batchUpdate(request: AnonCallback, body: BatchUpdateSpreadsheetRequest): Request_[BatchUpdateSpreadsheetResponse] = js.native
+  def batchUpdate(request: Callback, body: BatchUpdateSpreadsheetRequest): typingsSlinky.gapiClient.gapi.client.Request[BatchUpdateSpreadsheetResponse] = js.native
   /**
     * Applies one or more updates to the spreadsheet.
     *
@@ -38,10 +37,10 @@ trait SpreadsheetsResource extends js.Object {
     * collaborator changes. If there are no collaborators, the spreadsheet
     * should reflect your changes.
     */
-  def batchUpdate(request: AnonUploadprotocol): Request_[BatchUpdateSpreadsheetResponse] = js.native
-  def create(request: AnonAccesstokenAlt, body: Spreadsheet): Request_[Spreadsheet] = js.native
+  def batchUpdate(request: Uploadprotocol): typingsSlinky.gapiClient.gapi.client.Request[BatchUpdateSpreadsheetResponse] = js.native
+  def create(request: AccesstokenAlt, body: Spreadsheet): typingsSlinky.gapiClient.gapi.client.Request[Spreadsheet] = js.native
   /** Creates a spreadsheet, returning the newly created spreadsheet. */
-  def create(request: AnonXgafv): Request_[Spreadsheet] = js.native
+  def create(request: Xgafv): typingsSlinky.gapiClient.gapi.client.Request[Spreadsheet] = js.native
   /**
     * Returns the spreadsheet at the given ID.
     * The caller must specify the spreadsheet ID.
@@ -65,8 +64,8 @@ trait SpreadsheetsResource extends js.Object {
     * return only the portions of the spreadsheet that intersect the requested
     * ranges. Ranges are specified using A1 notation.
     */
-  def get(): Request_[Spreadsheet] = js.native
-  def get(request: AnonIncludeGridData): Request_[Spreadsheet] = js.native
+  def get(): typingsSlinky.gapiClient.gapi.client.Request[Spreadsheet] = js.native
+  def get(request: IncludeGridData): typingsSlinky.gapiClient.gapi.client.Request[Spreadsheet] = js.native
   /**
     * Returns the spreadsheet at the given ID.
     * The caller must specify the spreadsheet ID.
@@ -91,7 +90,7 @@ trait SpreadsheetsResource extends js.Object {
     * For large spreadsheets, it is recommended to retrieve only the specific
     * fields of the spreadsheet that you want.
     */
-  def getByDataFilter(request: AnonAltCallback): Request_[Spreadsheet] = js.native
-  def getByDataFilter(request: AnonCallback, body: GetSpreadsheetByDataFilterRequest): Request_[Spreadsheet] = js.native
+  def getByDataFilter(request: AltCallback): typingsSlinky.gapiClient.gapi.client.Request[Spreadsheet] = js.native
+  def getByDataFilter(request: Callback, body: GetSpreadsheetByDataFilterRequest): typingsSlinky.gapiClient.gapi.client.Request[Spreadsheet] = js.native
 }
 

@@ -2,7 +2,7 @@ package typingsSlinky.reactBootstrapTable.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactBootstrapTable.AnonText
+import typingsSlinky.reactBootstrapTable.anon.Text
 import typingsSlinky.reactBootstrapTable.mod.DropDirection
 import typingsSlinky.reactBootstrapTable.mod.SizePerPageDropDownProps
 import scala.scalajs.js
@@ -31,7 +31,7 @@ object SizePerPageDropDown {
     @scala.inline
     def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
     @scala.inline
-    def options(value: js.Array[AnonText | Double]): this.type = set("options", value.asInstanceOf[js.Any])
+    def options(value: js.Array[Double | Text]): this.type = set("options", value.asInstanceOf[js.Any])
     @scala.inline
     def variation(value: DropDirection): this.type = set("variation", value.asInstanceOf[js.Any])
   }

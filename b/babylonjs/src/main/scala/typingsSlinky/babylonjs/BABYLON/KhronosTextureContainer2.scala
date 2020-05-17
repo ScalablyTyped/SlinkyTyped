@@ -4,25 +4,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.KhronosTextureContainer2")
 @js.native
-class KhronosTextureContainer2 protected () extends js.Object {
-  def this(engine: ThinEngine) = this()
+trait KhronosTextureContainer2 extends js.Object {
   var _determineTranscodeFormat: js.Any = js.native
   def uploadAsync(data: js.typedarray.ArrayBufferView, internalTexture: InternalTexture): js.Promise[Unit] = js.native
 }
 
-/* static members */
-@JSGlobal("BABYLON.KhronosTextureContainer2")
-@js.native
-object KhronosTextureContainer2 extends js.Object {
-  var _ModulePromise: js.Any = js.native
-  var _TranscodeFormat: js.Any = js.native
-  /**
-    * Checks if the given data starts with a KTX2 file identifier.
-    * @param data the data to check
-    * @returns true if the data is a KTX2 file or false otherwise
-    */
-  def IsValid(data: js.typedarray.ArrayBufferView): Boolean = js.native
+object KhronosTextureContainer2 {
+  @scala.inline
+  def apply(
+    _determineTranscodeFormat: js.Any,
+    uploadAsync: (js.typedarray.ArrayBufferView, InternalTexture) => js.Promise[Unit]
+  ): KhronosTextureContainer2 = {
+    val __obj = js.Dynamic.literal(_determineTranscodeFormat = _determineTranscodeFormat.asInstanceOf[js.Any], uploadAsync = js.Any.fromFunction2(uploadAsync))
+    __obj.asInstanceOf[KhronosTextureContainer2]
+  }
+  @scala.inline
+  implicit class KhronosTextureContainer2Ops[Self <: KhronosTextureContainer2] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_determineTranscodeFormat(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_determineTranscodeFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUploadAsync(value: (js.typedarray.ArrayBufferView, InternalTexture) => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uploadAsync")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

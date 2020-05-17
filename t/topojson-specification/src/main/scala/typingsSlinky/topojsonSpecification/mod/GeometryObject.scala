@@ -18,73 +18,20 @@ trait GeometryObject[P /* <: Properties */] extends js.Object
 
 object GeometryObject {
   @scala.inline
-  def Polygon[P](
-    arcs: js.Array[ArcIndexes],
-    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.Polygon
-  ): GeometryObject[P] = {
-    val __obj = js.Dynamic.literal(arcs = arcs.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[GeometryObject[P]]
-  }
+  implicit def apply[P](value: GeometryCollection[P]): GeometryObject[P] = value.asInstanceOf[GeometryObject[P]]
   @scala.inline
-  def MultiPoint[P](
-    coordinates: js.Array[Positions],
-    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.MultiPoint
-  ): GeometryObject[P] = {
-    val __obj = js.Dynamic.literal(coordinates = coordinates.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[GeometryObject[P]]
-  }
+  implicit def apply[P](value: LineString[P]): GeometryObject[P] = value.asInstanceOf[GeometryObject[P]]
   @scala.inline
-  def NullObject[P](`type`: Null): GeometryObject[P] = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[GeometryObject[P]]
-  }
+  implicit def apply[P](value: MultiLineString[P]): GeometryObject[P] = value.asInstanceOf[GeometryObject[P]]
   @scala.inline
-  def Point[P](
-    coordinates: Positions,
-    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.Point
-  ): GeometryObject[P] = {
-    val __obj = js.Dynamic.literal(coordinates = coordinates.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[GeometryObject[P]]
-  }
+  implicit def apply[P](value: MultiPoint[P]): GeometryObject[P] = value.asInstanceOf[GeometryObject[P]]
   @scala.inline
-  def MultiLineString[P](
-    arcs: js.Array[ArcIndexes],
-    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.MultiLineString
-  ): GeometryObject[P] = {
-    val __obj = js.Dynamic.literal(arcs = arcs.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[GeometryObject[P]]
-  }
+  implicit def apply[P](value: MultiPolygon[P]): GeometryObject[P] = value.asInstanceOf[GeometryObject[P]]
   @scala.inline
-  def MultiPolygon[P](
-    arcs: js.Array[js.Array[ArcIndexes]],
-    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.MultiPolygon
-  ): GeometryObject[P] = {
-    val __obj = js.Dynamic.literal(arcs = arcs.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[GeometryObject[P]]
-  }
+  implicit def apply[P](value: NullObject): GeometryObject[P] = value.asInstanceOf[GeometryObject[P]]
   @scala.inline
-  def LineString[P](
-    arcs: ArcIndexes,
-    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.LineString
-  ): GeometryObject[P] = {
-    val __obj = js.Dynamic.literal(arcs = arcs.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[GeometryObject[P]]
-  }
+  implicit def apply[P](value: Point[P]): GeometryObject[P] = value.asInstanceOf[GeometryObject[P]]
   @scala.inline
-  def GeometryCollection[P](
-    geometries: js.Array[GeometryObject[P]],
-    `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.GeometryCollection
-  ): GeometryObject[P] = {
-    val __obj = js.Dynamic.literal(geometries = geometries.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[GeometryObject[P]]
-  }
+  implicit def apply[P](value: Polygon[P]): GeometryObject[P] = value.asInstanceOf[GeometryObject[P]]
 }
 

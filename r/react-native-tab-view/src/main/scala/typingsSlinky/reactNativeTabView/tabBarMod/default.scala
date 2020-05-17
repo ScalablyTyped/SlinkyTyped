@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeTabView.tabBarMod
 
-import typingsSlinky.reactNativeTabView.AnonGetAccessibilityLabel
+import typingsSlinky.reactNativeTabView.anon.GetAccessibilityLabel
 import typingsSlinky.reactNativeTabView.typesMod.Route
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +14,6 @@ class default[T /* <: Route */] () extends TabBar[T]
 @JSImport("react-native-tab-view/lib/typescript/src/TabBar", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonGetAccessibilityLabel = js.native
+  var defaultProps: GetAccessibilityLabel = js.native
 }
 

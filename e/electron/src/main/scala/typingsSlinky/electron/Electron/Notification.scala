@@ -9,10 +9,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Electron.Notification")
 @js.native
-class Notification protected () extends EventEmitter {
-  def this(options: NotificationConstructorOptions) = this()
+trait Notification extends EventEmitter {
   @JSName("addListener")
   def addListener_action(event: action, listener: js.Function2[/* event */ Event, /* index */ Double, Unit]): this.type = js.native
   @JSName("addListener")
@@ -84,12 +82,5 @@ class Notification protected () extends EventEmitter {
     * properties.
     */
   def show(): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("Electron.Notification")
-@js.native
-object Notification extends js.Object {
-  def isSupported(): Boolean = js.native
 }
 

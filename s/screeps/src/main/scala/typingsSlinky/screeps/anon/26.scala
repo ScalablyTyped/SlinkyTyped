@@ -1,0 +1,34 @@
+package typingsSlinky.screeps.anon
+
+import typingsSlinky.screeps.screepsStrings.XZH2O
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait `26` extends js.Object {
+  var X: XZH2O = js.native
+}
+
+object `26` {
+  @scala.inline
+  def apply(X: XZH2O): `26` = {
+    val __obj = js.Dynamic.literal(X = X.asInstanceOf[js.Any])
+    __obj.asInstanceOf[`26`]
+  }
+  @scala.inline
+  implicit class `26Ops`[Self <: `26`] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withX(value: XZH2O): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("X")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

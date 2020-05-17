@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.document
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.none
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.view
@@ -32,8 +31,4 @@ trait GamepadSettings extends Accessor {
     */
   var enabledFocusMode: document | view | none = js.native
 }
-
-@JSGlobal("__esri.GamepadSettings")
-@js.native
-object GamepadSettings extends TopLevel[GamepadSettingsConstructor]
 

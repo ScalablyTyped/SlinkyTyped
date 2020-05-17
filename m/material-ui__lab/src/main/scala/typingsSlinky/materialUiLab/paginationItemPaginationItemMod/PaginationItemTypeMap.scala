@@ -1,7 +1,7 @@
 package typingsSlinky.materialUiLab.paginationItemPaginationItemMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.materialUiLab.AnonColor
+import typingsSlinky.materialUiLab.anon.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation._
 trait PaginationItemTypeMap[P, D /* <: ReactElement */] extends js.Object {
   var classKey: PaginationItemClassKey = js.native
   var defaultComponent: D = js.native
-  var props: P with AnonColor = js.native
+  var props: P with Color = js.native
 }
 
 object PaginationItemTypeMap {
   @scala.inline
-  def apply[P, D](classKey: PaginationItemClassKey, defaultComponent: D, props: P with AnonColor): PaginationItemTypeMap[P, D] = {
+  def apply[P, D](classKey: PaginationItemClassKey, defaultComponent: D, props: P with Color): PaginationItemTypeMap[P, D] = {
     val __obj = js.Dynamic.literal(classKey = classKey.asInstanceOf[js.Any], defaultComponent = defaultComponent.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaginationItemTypeMap[P, D]]
   }
@@ -38,7 +38,7 @@ object PaginationItemTypeMap {
         ret
     }
     @scala.inline
-    def withProps(value: P with AnonColor): Self[P, D] = {
+    def withProps(value: P with Color): Self[P, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("props")(value.asInstanceOf[js.Any])
         ret

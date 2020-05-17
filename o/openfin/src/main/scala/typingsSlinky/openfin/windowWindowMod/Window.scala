@@ -11,7 +11,6 @@ import typingsSlinky.openfin.viewViewMod.View
 import typingsSlinky.openfin.webcontentsWebcontentsMod.WebContents
 import typingsSlinky.openfin.windowMod.WindowEvents
 import typingsSlinky.openfin.windowOptionMod.WindowOption
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -356,7 +355,7 @@ class Window protected () extends WebContents[WindowEvents] {
     * @return {object}
     * @tutorial Window.getWebWindow
     */
-  def getWebWindow(): Window_ = js.native
+  def getWebWindow(): org.scalajs.dom.raw.Window = js.native
   /**
     * Hides the window.
     * @return {Promise.<void>}

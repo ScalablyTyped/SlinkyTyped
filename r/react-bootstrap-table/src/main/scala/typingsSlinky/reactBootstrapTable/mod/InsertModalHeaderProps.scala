@@ -1,7 +1,7 @@
 package typingsSlinky.reactBootstrapTable.mod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait InsertModalHeaderProps extends js.Object {
   /**
   	 * Callback function to call prior to closing the Insert Modal window.
   	 */
-  var beforeClose: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event_, _], Unit]] = js.native
+  var beforeClose: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event, _], Unit]] = js.native
   /**
   	 * Header class name.
   	 */
@@ -47,7 +47,7 @@ object InsertModalHeaderProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBeforeClose(value: /* e */ SyntheticEvent[Event_, _] => Unit): Self = {
+    def withBeforeClose(value: /* e */ SyntheticEvent[Event, _] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeClose")(js.Any.fromFunction1(value))
         ret

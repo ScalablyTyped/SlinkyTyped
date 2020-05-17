@@ -1,7 +1,7 @@
 package typingsSlinky.postcssReporter.mod
 
 import typingsSlinky.postcss.mod.ResultMessage
-import typingsSlinky.postcssReporter.AnonMessages
+import typingsSlinky.postcssReporter.anon.Messages
 import typingsSlinky.postcssReporter.postcssReporterStrings.any
 import typingsSlinky.postcssReporter.postcssReporterStrings.first
 import typingsSlinky.postcssReporter.postcssReporterStrings.last
@@ -36,7 +36,7 @@ trait Options extends DefaultOptions {
     * - accepts an object containing a messages array and a source string
     * - returns the string to report
     */
-  var formatter: js.UndefOr[js.Function1[/* input */ AnonMessages, String]] = js.native
+  var formatter: js.UndefOr[js.Function1[/* input */ Messages, String]] = js.native
   /**
     * If plugins is empty (as it is by default),
     * the reporter will log messages from every PostCSS plugin.
@@ -105,7 +105,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withFormatter(value: /* input */ AnonMessages => String): Self = {
+    def withFormatter(value: /* input */ Messages => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formatter")(js.Any.fromFunction1(value))
         ret

@@ -2,7 +2,7 @@ package typingsSlinky.gestalt.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.AnonStyle
+import typingsSlinky.gestalt.anon.Style
 import typingsSlinky.gestalt.gestaltNumbers.`0.1`
 import typingsSlinky.gestalt.gestaltNumbers.`0.2`
 import typingsSlinky.gestalt.gestaltNumbers.`0.3`
@@ -106,7 +106,7 @@ object Box {
     @scala.inline
     def column(value: UnsignedUpTo12): this.type = set("column", value.asInstanceOf[js.Any])
     @scala.inline
-    def dangerouslySetInlineStyle(value: AnonStyle): this.type = set("dangerouslySetInlineStyle", value.asInstanceOf[js.Any])
+    def dangerouslySetInlineStyle(value: Style): this.type = set("dangerouslySetInlineStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def direction(value: row | column): this.type = set("direction", value.asInstanceOf[js.Any])
     @scala.inline

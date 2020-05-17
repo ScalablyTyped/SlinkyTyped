@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClientBooks.AnonContentVersion
+import typingsSlinky.gapiClientBooks.anon.ContentVersion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait Volumeannotation extends js.Object {
   /** The type of annotation this is. */
   var annotationType: js.UndefOr[String] = js.native
   /** The content ranges to identify the selected text. */
-  var contentRanges: js.UndefOr[AnonContentVersion] = js.native
+  var contentRanges: js.UndefOr[ContentVersion] = js.native
   /** Data for this annotation. */
   var data: js.UndefOr[String] = js.native
   /** Indicates that this annotation is deleted. */
@@ -86,7 +86,7 @@ object Volumeannotation {
         ret
     }
     @scala.inline
-    def withContentRanges(value: AnonContentVersion): Self = {
+    def withContentRanges(value: ContentVersion): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentRanges")(value.asInstanceOf[js.Any])
         ret

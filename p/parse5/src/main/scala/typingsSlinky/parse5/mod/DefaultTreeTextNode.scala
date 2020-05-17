@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DefaultTreeTextNode extends DefaultTreeChildNode {
+trait DefaultTreeTextNode
+  extends DefaultTreeChildNode
+     with TextNode {
   /**
     * The name of the node.
     */

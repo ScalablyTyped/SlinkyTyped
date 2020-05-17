@@ -28,9 +28,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * A specialized text field for entering search text.
 			 */
-@JSGlobal("Titanium.UI.Android.SearchView")
 @js.native
-class SearchView () extends View {
+trait SearchView extends View {
   /**
   				 * Color of the text in this SearchView, as a color name or hex triplet.
   				 */

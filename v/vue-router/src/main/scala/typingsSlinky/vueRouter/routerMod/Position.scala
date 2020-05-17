@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Position extends _PositionResult {
+trait Position extends PositionResult {
   var x: Double = js.native
   var y: Double = js.native
 }

@@ -5,7 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Location extends HistoryLocation {
+trait Location
+  extends HistoryLocation
+     with Href {
   var basename: js.UndefOr[String] = js.native
   var options: js.UndefOr[LocationOptions] = js.native
   var params: js.UndefOr[Params] = js.native

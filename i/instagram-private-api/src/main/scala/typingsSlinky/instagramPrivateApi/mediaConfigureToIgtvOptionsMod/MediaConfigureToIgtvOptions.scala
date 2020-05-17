@@ -1,10 +1,10 @@
 package typingsSlinky.instagramPrivateApi.mediaConfigureToIgtvOptionsMod
 
-import typingsSlinky.instagramPrivateApi.AnonAndroidversion
-import typingsSlinky.instagramPrivateApi.AnonCropbottom
-import typingsSlinky.instagramPrivateApi.AnonLengthSourcetype
-import typingsSlinky.instagramPrivateApi.AnonNumreupload
-import typingsSlinky.instagramPrivateApi.AnonSourceheight
+import typingsSlinky.instagramPrivateApi.anon.Androidversion
+import typingsSlinky.instagramPrivateApi.anon.Cropbottom
+import typingsSlinky.instagramPrivateApi.anon.LengthSourcetype
+import typingsSlinky.instagramPrivateApi.anon.Numreupload
+import typingsSlinky.instagramPrivateApi.anon.Sourceheight
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.`0`
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.`1`
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.`3`
@@ -17,17 +17,17 @@ import scala.scalajs.js.annotation._
 trait MediaConfigureToIgtvOptions extends js.Object {
   var audio_muted: js.UndefOr[Boolean] = js.native
   var caption: js.UndefOr[String] = js.native
-  var clips: js.UndefOr[js.Array[AnonLengthSourcetype]] = js.native
+  var clips: js.UndefOr[js.Array[LengthSourcetype]] = js.native
   var date_time_original: js.UndefOr[String] = js.native
-  var device: js.UndefOr[AnonAndroidversion] = js.native
-  var extra: AnonSourceheight = js.native
-  var feed_preview_crop: js.UndefOr[AnonCropbottom | String] = js.native
+  var device: js.UndefOr[Androidversion] = js.native
+  var extra: Sourceheight = js.native
+  var feed_preview_crop: js.UndefOr[Cropbottom | String] = js.native
   var filter_type: js.UndefOr[String] = js.native
   var igtv_share_preview_to_feed: js.UndefOr[`1` | `0`] = js.native
   var length: Double = js.native
   var media_folder: js.UndefOr[String] = js.native
   var poster_frame_index: js.UndefOr[Double] = js.native
-  var retryContext: js.UndefOr[AnonNumreupload] = js.native
+  var retryContext: js.UndefOr[Numreupload] = js.native
   var source_type: js.UndefOr[`3` | `4`] = js.native
   var timezone_offset: js.UndefOr[String] = js.native
   var title: String = js.native
@@ -36,7 +36,7 @@ trait MediaConfigureToIgtvOptions extends js.Object {
 
 object MediaConfigureToIgtvOptions {
   @scala.inline
-  def apply(extra: AnonSourceheight, length: Double, title: String, upload_id: String): MediaConfigureToIgtvOptions = {
+  def apply(extra: Sourceheight, length: Double, title: String, upload_id: String): MediaConfigureToIgtvOptions = {
     val __obj = js.Dynamic.literal(extra = extra.asInstanceOf[js.Any], length = length.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], upload_id = upload_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaConfigureToIgtvOptions]
   }
@@ -47,7 +47,7 @@ object MediaConfigureToIgtvOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withExtra(value: AnonSourceheight): Self = {
+    def withExtra(value: Sourceheight): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
         ret
@@ -95,7 +95,7 @@ object MediaConfigureToIgtvOptions {
         ret
     }
     @scala.inline
-    def withClips(value: js.Array[AnonLengthSourcetype]): Self = {
+    def withClips(value: js.Array[LengthSourcetype]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("clips")(value.asInstanceOf[js.Any])
         ret
@@ -119,7 +119,7 @@ object MediaConfigureToIgtvOptions {
         ret
     }
     @scala.inline
-    def withDevice(value: AnonAndroidversion): Self = {
+    def withDevice(value: Androidversion): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("device")(value.asInstanceOf[js.Any])
         ret
@@ -131,7 +131,7 @@ object MediaConfigureToIgtvOptions {
         ret
     }
     @scala.inline
-    def withFeed_preview_crop(value: AnonCropbottom | String): Self = {
+    def withFeed_preview_crop(value: Cropbottom | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("feed_preview_crop")(value.asInstanceOf[js.Any])
         ret
@@ -191,7 +191,7 @@ object MediaConfigureToIgtvOptions {
         ret
     }
     @scala.inline
-    def withRetryContext(value: AnonNumreupload): Self = {
+    def withRetryContext(value: Numreupload): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("retryContext")(value.asInstanceOf[js.Any])
         ret

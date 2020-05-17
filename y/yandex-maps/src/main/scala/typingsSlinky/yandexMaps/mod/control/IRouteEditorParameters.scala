@@ -1,13 +1,13 @@
 package typingsSlinky.yandexMaps.mod.control
 
-import typingsSlinky.yandexMaps.AnonImage
+import typingsSlinky.yandexMaps.anon.Image
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IRouteEditorParameters extends js.Object {
-  var data: js.UndefOr[AnonImage] = js.native
+  var data: js.UndefOr[Image] = js.native
   var options: js.UndefOr[IBaseButtonParametersOptions] = js.native
   var state: js.UndefOr[js.Object] = js.native
 }
@@ -25,7 +25,7 @@ object IRouteEditorParameters {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withData(value: AnonImage): Self = {
+    def withData(value: Image): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

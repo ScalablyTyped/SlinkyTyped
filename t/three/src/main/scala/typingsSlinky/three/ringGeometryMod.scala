@@ -1,5 +1,6 @@
 package typingsSlinky.three
 
+import typingsSlinky.three.anon.InnerRadius
 import typingsSlinky.three.bufferGeometryMod.BufferGeometry
 import typingsSlinky.three.geometryMod.Geometry
 import scala.scalajs.js
@@ -19,7 +20,7 @@ object ringGeometryMod extends js.Object {
       thetaStart: js.UndefOr[Double],
       thetaLength: js.UndefOr[Double]
     ) = this()
-    var parameters: AnonInnerRadius = js.native
+    var parameters: InnerRadius = js.native
   }
   
   @js.native
@@ -32,7 +33,7 @@ object ringGeometryMod extends js.Object {
       thetaStart: js.UndefOr[Double],
       thetaLength: js.UndefOr[Double]
     ) = this()
-    var parameters: AnonInnerRadius = js.native
+    var parameters: InnerRadius = js.native
   }
   
 }

@@ -3,6 +3,7 @@ package typingsSlinky.ajvPack
 import typingsSlinky.ajv.mod.Ajv
 import typingsSlinky.ajv.mod.KeywordDefinition
 import typingsSlinky.ajv.mod.ValidateFunction
+import typingsSlinky.ajvPack.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

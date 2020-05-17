@@ -1,6 +1,7 @@
 package typingsSlinky.mendixmodelsdk
 
 import typingsSlinky.eventsource.mod.^
+import typingsSlinky.mendixmodelsdk.anon.HandleError
 import typingsSlinky.mendixmodelsdk.imodelserverclientMod.IModelServerClient
 import typingsSlinky.mendixmodelsdk.iworkingcopyeventMod.IBuildResultEvent
 import typingsSlinky.mendixmodelsdk.iworkingcopyeventMod.IWorkingCopyDataEvent
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation._
 object workingCopyEventReceiverMod extends js.Object {
   @js.native
   class WorkingCopyEventReceiver protected () extends js.Object {
-    def this(workingCopyId: String, client: IModelServerClient, errorHandler: AnonHandleError) = this()
+    def this(workingCopyId: String, client: IModelServerClient, errorHandler: HandleError) = this()
     var buildResultEventEmitter: js.Any = js.native
     var client: js.Any = js.native
     var errorHandler: js.Any = js.native

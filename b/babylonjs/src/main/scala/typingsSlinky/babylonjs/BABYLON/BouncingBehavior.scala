@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.BouncingBehavior")
 @js.native
-class BouncingBehavior () extends Behavior[ArcRotateCamera] {
+trait BouncingBehavior extends Behavior[ArcRotateCamera] {
   var _animatables: js.Any = js.native
   /**
     * Applies an animation to the radius of the camera, extending by the radiusDelta.
@@ -60,19 +59,5 @@ class BouncingBehavior () extends Behavior[ArcRotateCamera] {
     * Stops and removes all animations that have been applied to the camera
     */
   def stopAllAnimations(): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("BABYLON.BouncingBehavior")
-@js.native
-object BouncingBehavior extends js.Object {
-  /**
-    * The easing function used by animations
-    */
-  var EasingFunction: BackEase = js.native
-  /**
-    * The easing mode used by animations
-    */
-  var EasingMode: Double = js.native
 }
 

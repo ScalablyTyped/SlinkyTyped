@@ -1,0 +1,46 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.table
+
+import typingsSlinky.activexLibreoffice.`type`
+import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** provides a method to apply TableAutoFormats to a cell range. */
+@js.native
+trait XAutoFormattable extends XInterface {
+  /**
+    * applies an AutoFormat to the cell range of the current context.
+    * @param aName is the name of the AutoFormat to apply.
+    * @throws com::sun::star::lang::IllegalArgumentException if the specified AutoFormat does not exist.
+    */
+  def autoFormat(aName: String): Unit = js.native
+}
+
+object XAutoFormattable {
+  @scala.inline
+  def apply(
+    acquire: () => Unit,
+    autoFormat: String => Unit,
+    queryInterface: `type` => js.Any,
+    release: () => Unit
+  ): XAutoFormattable = {
+    val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), autoFormat = js.Any.fromFunction1(autoFormat), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
+    __obj.asInstanceOf[XAutoFormattable]
+  }
+  @scala.inline
+  implicit class XAutoFormattableOps[Self <: XAutoFormattable] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoFormat(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFormat")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
+

@@ -1,7 +1,5 @@
 package typingsSlinky.microsoftAjax.Sys.UI
 
-import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,16 +8,8 @@ import scala.scalajs.js.annotation._
   * Provides cross-browser access to DOM event properties and helper APIs that are used to attach handlers to DOM element events.
   * @see {@link http://msdn.microsoft.com/en-us/library/bb310935(v=vs.100).aspx}
   */
-@JSGlobal("Sys.UI.DomEvent")
 @js.native
-class DomEvent protected () extends js.Object {
-  //#region Constructors
-  /**
-    * Initializes a new instance of the Sys.UI.DomEvent class and associates it with the specified HTMLElement object.
-    * @param domElement
-    *           The HTMLElement object to associate with the event.
-    */
-  def this(domElement: HTMLElement) = this()
+trait DomEvent extends js.Object {
   //#endregion
   //#region Fields
   /**
@@ -114,85 +104,133 @@ class DomEvent protected () extends js.Object {
   def stopPropagation(): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("Sys.UI.DomEvent")
-@js.native
-object DomEvent extends js.Object {
-  //#endregion
-  //#region Methods
-  /**
-    * Provides a method to add a DOM event handler to the DOM element that exposes the event. This member is static and can be invoked without creating an instance of the class.
-    * Use the addHandler method to add a DOM event handler to the element that exposes the event. The eventName parameter should not include the "on" prefix. For example, specify "click" instead of "onclick".
-    * This method can be accessed through the $addHandler shortcut method.
-    *
-    * @param element
-    *          The element that exposes the event.
-    * @param eventName
-    *          The name of the event.
-    * @param handler
-    *          The client function that is called when the event occurs.
-    * @param autoRemove
-    *          (Optional) A boolean value that determines whether the handler should be removed automatically when the element is disposed.
-    */
-  def addHandler(element: HTMLElement, eventName: String, handler: js.Function1[/* e */ this.type, Unit]): Unit = js.native
-  def addHandler(
-    element: HTMLElement,
-    eventName: String,
-    handler: js.Function1[/* e */ this.type, Unit],
-    autoRemove: Boolean
-  ): Unit = js.native
-  /**
-    * Adds a list of DOM event handlers to the DOM element that exposes the events. This member is static and can be invoked without creating an instance of the class.
-    * Use the addHandlers method to add a list of DOM event handlers to the element that exposes the event.
-    * The events parameter takes a comma-separated list of name/value pairs in the format name:value, where name is the name of the DOM event and value is the name of the handler function.
-    * If there is more than one name/value pair, the list must be enclosed in braces ({}) to identify it as a single parameter. Multiple name/value pairs are separated with commas.
-    * Event names should not include the "on" prefix. For example, specify "click" instead of "onclick".
-    * If handlerOwner is specified, delegates are created for each handler. These delegates are attached to the specified object instance, and the this pointer from the delegate handler will refer to the handlerOwner object.
-    * This method can be accessed through the $addHandlers shortcut method.
-    *
-    * @param element
-    *          The DOM element that exposes the events.
-    * @param events
-    *          A dictionary of event handlers.
-    * @param handlerOwner
-    *          (Optional) The object instance that is the context for the delegates that should be created from the handlers.
-    * @param autoRemove
-    *          (Optional) A boolean value that determines whether the handler should be removed automatically when the element is disposed.
-    *
-    * @throws Error.invalidOperation - (Debug) One of the handlers specified in events is not a function.
-    *
-    */
-  def addHandlers(element: HTMLElement, events: StringDictionary[js.Function1[/* e */ DomEvent, Unit]]): Unit = js.native
-  def addHandlers(
-    element: HTMLElement,
-    events: StringDictionary[js.Function1[/* e */ DomEvent, Unit]],
-    handlerOwner: js.Any
-  ): Unit = js.native
-  def addHandlers(
-    element: HTMLElement,
-    events: StringDictionary[js.Function1[/* e */ DomEvent, Unit]],
-    handlerOwner: js.Any,
-    autoRemove: Boolean
-  ): Unit = js.native
-  /**
-    * Removes all DOM event handlers from a DOM element that were added through the Sys.UI.DomEvent addHandler or the Sys.UI.DomEvent addHandlers methods.
-    * This member is static and can be invoked without creating an instance of the class.
-    * This method can be accessed through the $clearHandlers shortcut method.
-    *
-    * @param element
-    *          The element that exposes the events.
-    */
-  def clearHandlers(element: HTMLElement): Unit = js.native
-  /**
-    * Removes a DOM event handler from the DOM element that exposes the event. This member is static and can be invoked without creating an instance of the class.
-    *
-    * @param element
-    *          The element that exposes the event.
-    * @param eventName
-    *          The name of the event.
-    * @param handler
-    *          The event handler to remove.
-    */
-  def removeHandler(element: HTMLElement, eventName: String, handler: js.Function1[/* e */ this.type, Unit]): Unit = js.native
+object DomEvent {
+  @scala.inline
+  def apply(
+    altKey: Boolean,
+    button: MouseButton,
+    charCode: Double,
+    clientX: Double,
+    clientY: Double,
+    ctrlKey: Boolean,
+    keyCode: Double,
+    offsetX: Double,
+    offsetY: Double,
+    preventDefault: () => Unit,
+    screenX: Double,
+    screenY: Double,
+    shiftKey: Boolean,
+    stopPropagation: () => Unit,
+    target: js.Any,
+    `type`: String
+  ): DomEvent = {
+    val __obj = js.Dynamic.literal(altKey = altKey.asInstanceOf[js.Any], button = button.asInstanceOf[js.Any], charCode = charCode.asInstanceOf[js.Any], clientX = clientX.asInstanceOf[js.Any], clientY = clientY.asInstanceOf[js.Any], ctrlKey = ctrlKey.asInstanceOf[js.Any], keyCode = keyCode.asInstanceOf[js.Any], offsetX = offsetX.asInstanceOf[js.Any], offsetY = offsetY.asInstanceOf[js.Any], preventDefault = js.Any.fromFunction0(preventDefault), screenX = screenX.asInstanceOf[js.Any], screenY = screenY.asInstanceOf[js.Any], shiftKey = shiftKey.asInstanceOf[js.Any], stopPropagation = js.Any.fromFunction0(stopPropagation), target = target.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DomEvent]
+  }
+  @scala.inline
+  implicit class DomEventOps[Self <: DomEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAltKey(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("altKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withButton(value: MouseButton): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCharCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClientY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clientY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCtrlKey(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ctrlKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeyCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOffsetX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOffsetY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offsetY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreventDefault(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefault")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withScreenX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScreenY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShiftKey(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shiftKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStopPropagation(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPropagation")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withTarget(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

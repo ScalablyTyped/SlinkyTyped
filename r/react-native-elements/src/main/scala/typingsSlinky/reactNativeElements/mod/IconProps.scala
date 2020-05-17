@@ -9,7 +9,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IconProps extends IconButtonProps {
+trait IconProps
+  extends IconButtonProps
+     with IconNode {
   /**
     * View if no onPress method is defined, TouchableHighlight if onPress method is defined	React Native component	update React Native Component
     */

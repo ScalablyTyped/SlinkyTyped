@@ -1,6 +1,6 @@
 package typingsSlinky.tablesorter
 
-import typingsSlinky.jquery.JQuery_.TriggeredEvent
+import typingsSlinky.jquery.JQuery.TriggeredEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

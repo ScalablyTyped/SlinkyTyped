@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeTabView.scrollPagerMod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactNativeTabView.AnonOverscroll
+import typingsSlinky.reactNativeTabView.anon.Overscroll
 import typingsSlinky.reactNativeTabView.pagerMod.Props
 import typingsSlinky.reactNativeTabView.typesMod.Route
 import scala.scalajs.js
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ScrollPager[T /* <: Route */]
-  extends Component[Props[T] with AnonOverscroll, State, js.Any] {
+  extends Component[Props[T] with Overscroll, State, js.Any] {
   var addListener: js.Any = js.native
   var enterListeners: js.Any = js.native
   var initialOffset: js.Any = js.native

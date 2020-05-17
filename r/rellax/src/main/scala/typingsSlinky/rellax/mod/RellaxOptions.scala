@@ -1,7 +1,7 @@
 package typingsSlinky.rellax.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.rellax.AnonX
+import typingsSlinky.rellax.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait RellaxOptions extends js.Object {
     * Will run on every animation event
     * @param positions Object with x and y positions of the rellax element
     */
-  var callback: js.UndefOr[js.Function1[/* positions */ AnonX, Unit]] = js.native
+  var callback: js.UndefOr[js.Function1[/* positions */ X, Unit]] = js.native
   /**
     * Enable the ability to center parallax elements in your viewport
     */
@@ -56,7 +56,7 @@ object RellaxOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCallback(value: /* positions */ AnonX => Unit): Self = {
+    def withCallback(value: /* positions */ X => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction1(value))
         ret

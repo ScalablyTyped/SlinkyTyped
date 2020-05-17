@@ -3,13 +3,14 @@ package typingsSlinky.baconjs.sourceMod
 import typingsSlinky.baconjs.observableMod.default
 import typingsSlinky.baconjs.typesMod.EventSink
 import typingsSlinky.baconjs.typesMod.Unsub
+import typingsSlinky.baconjs.whenMod.ObservableOrSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("baconjs/types/internal/source", "Source")
 @js.native
-abstract class Source[In, Out] protected () extends js.Object {
+abstract class Source[In, Out] protected () extends ObservableOrSource[Out] {
   def this(obs: default[In], sync: Boolean) = this()
   var _isSource: Boolean = js.native
   var ended: Boolean = js.native

@@ -2,7 +2,7 @@ package typingsSlinky.materialUiCore.createShallowMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.enzyme.mod.EnzymeSelector
-import typingsSlinky.materialUiCore.Fn1
+import typingsSlinky.materialUiCore.anon.Fn1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

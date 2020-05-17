@@ -1,6 +1,6 @@
 package typingsSlinky.csvStringify.mod
 
-import typingsSlinky.csvStringify.AnonDate
+import typingsSlinky.csvStringify.anon.Date
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ trait Options extends js.Object {
   /**
     * Key-value object which defines custom cast for certain data types
     */
-  var cast: js.UndefOr[AnonDate] = js.native
+  var cast: js.UndefOr[Date] = js.native
   /**
     * List of fields, applied when `transform` returns an object
     * order matters
@@ -78,7 +78,7 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCast(value: AnonDate): Self = {
+    def withCast(value: Date): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cast")(value.asInstanceOf[js.Any])
         ret

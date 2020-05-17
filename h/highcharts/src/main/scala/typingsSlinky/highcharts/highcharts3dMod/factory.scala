@@ -1,6 +1,6 @@
 package typingsSlinky.highcharts.highcharts3dMod
 
-import typingsSlinky.highcharts.TypeofHighcharts
+import typingsSlinky.highcharts.anon.TypeofHighcharts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.std.stdStrings.abort
 import typingsSlinky.std.stdStrings.error
 import typingsSlinky.std.stdStrings.load
@@ -288,9 +287,4 @@ trait XMLHttpRequestEventTarget extends EventTarget {
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
-
-@JSGlobal("XMLHttpRequestEventTarget")
-@js.native
-object XMLHttpRequestEventTarget
-  extends Instantiable0[org.scalajs.dom.raw.XMLHttpRequestEventTarget]
 

@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientDoubleclickbidmanager.gapi.client.doubleclickbidmanager
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientDoubleclickbidmanager.AnonFields
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientDoubleclickbidmanager.anon.Fields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ReportsResource extends js.Object {
   /** Retrieves stored reports. */
-  def listreports(request: AnonFields): Request_[ListReportsResponse] = js.native
+  def listreports(request: Fields): Request[ListReportsResponse] = js.native
 }
 
 object ReportsResource {
   @scala.inline
-  def apply(listreports: AnonFields => Request_[ListReportsResponse]): ReportsResource = {
+  def apply(listreports: Fields => Request[ListReportsResponse]): ReportsResource = {
     val __obj = js.Dynamic.literal(listreports = js.Any.fromFunction1(listreports))
     __obj.asInstanceOf[ReportsResource]
   }
@@ -25,7 +25,7 @@ object ReportsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withListreports(value: AnonFields => Request_[ListReportsResponse]): Self = {
+    def withListreports(value: Fields => Request[ListReportsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("listreports")(js.Any.fromFunction1(value))
         ret

@@ -2,7 +2,7 @@ package typingsSlinky.istanbulLibSourceMaps.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.istanbulLibCoverage.mod.CoverageMap
-import typingsSlinky.istanbulLibSourceMaps.AnonData
+import typingsSlinky.istanbulLibSourceMaps.anon.Data
 import typingsSlinky.sourceMap.mod.RawSourceMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MapStore extends js.Object {
   var baseDir: String | Null = js.native
-  var data: StringDictionary[AnonData] = js.native
+  var data: StringDictionary[Data] = js.native
   var sourceStore: SourceStore = js.native
   var verbose: Boolean = js.native
   def addInputSourceMapsSync(coverageData: js.Any): Unit = js.native
@@ -27,7 +27,7 @@ object MapStore {
   @scala.inline
   def apply(
     addInputSourceMapsSync: js.Any => Unit,
-    data: StringDictionary[AnonData],
+    data: StringDictionary[Data],
     dispose: () => Unit,
     getSourceMapSync: String => js.Any,
     registerMap: (String, RawSourceMap) => Unit,
@@ -53,7 +53,7 @@ object MapStore {
         ret
     }
     @scala.inline
-    def withData(value: StringDictionary[AnonData]): Self = {
+    def withData(value: StringDictionary[Data]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

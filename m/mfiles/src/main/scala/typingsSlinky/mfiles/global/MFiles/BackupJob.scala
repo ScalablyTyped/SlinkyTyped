@@ -1,0 +1,16 @@
+package typingsSlinky.mfiles.global.MFiles
+
+import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.IBackupJob
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("MFiles.BackupJob")
+@js.native
+class BackupJob () extends IBackupJob
+
+@JSGlobal("MFiles.BackupJob")
+@js.native
+object BackupJob extends Instantiable0[IBackupJob]
+

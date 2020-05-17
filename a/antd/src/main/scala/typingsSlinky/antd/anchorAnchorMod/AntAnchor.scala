@@ -2,7 +2,7 @@ package typingsSlinky.antd.anchorAnchorMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.AnonHref
+import typingsSlinky.antd.anon.Href
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,9 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AntAnchor extends js.Object {
   var activeLink: String | Null = js.native
-  var onClick: js.UndefOr[
-    js.Function2[/* e */ SyntheticMouseEvent[HTMLElement], /* link */ AnonHref, Unit]
-  ] = js.native
+  var onClick: js.UndefOr[js.Function2[/* e */ SyntheticMouseEvent[HTMLElement], /* link */ Href, Unit]] = js.native
   def registerLink(link: String): Unit = js.native
   def scrollTo(link: String): Unit = js.native
   def unregisterLink(link: String): Unit = js.native
@@ -61,7 +59,7 @@ object AntAnchor {
         ret
     }
     @scala.inline
-    def withOnClick(value: (/* e */ SyntheticMouseEvent[HTMLElement], /* link */ AnonHref) => Unit): Self = {
+    def withOnClick(value: (/* e */ SyntheticMouseEvent[HTMLElement], /* link */ Href) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction2(value))
         ret

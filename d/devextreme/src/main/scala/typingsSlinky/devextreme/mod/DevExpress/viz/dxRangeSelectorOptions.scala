@@ -1,14 +1,14 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonAggregateByCategory
-import typingsSlinky.devextreme.AnonAllowSlidersSwap
-import typingsSlinky.devextreme.AnonBarGroupPadding
-import typingsSlinky.devextreme.AnonElementEventModel
-import typingsSlinky.devextreme.AnonImage
-import typingsSlinky.devextreme.AnonInvalidRangeColor
-import typingsSlinky.devextreme.AnonOpacity
-import typingsSlinky.devextreme.AnonOpacityWidth
-import typingsSlinky.devextreme.AnonRight
+import typingsSlinky.devextreme.anon.AggregateByCategory
+import typingsSlinky.devextreme.anon.AllowSlidersSwap
+import typingsSlinky.devextreme.anon.BarGroupPadding
+import typingsSlinky.devextreme.anon.ElementEventModel
+import typingsSlinky.devextreme.anon.Image
+import typingsSlinky.devextreme.anon.InvalidRangeColor
+import typingsSlinky.devextreme.anon.Opacity
+import typingsSlinky.devextreme.anon.OpacityWidth
+import typingsSlinky.devextreme.anon.Right
 import typingsSlinky.devextreme.devextremeStrings.auto
 import typingsSlinky.devextreme.devextremeStrings.keep
 import typingsSlinky.devextreme.devextremeStrings.reset
@@ -22,11 +22,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait dxRangeSelectorOptions extends BaseWidgetOptions[dxRangeSelector] {
   /** Specifies the options for the range selector's background. */
-  var background: js.UndefOr[AnonImage] = js.native
+  var background: js.UndefOr[Image] = js.native
   /** Specifies the RangeSelector's behavior options. */
-  var behavior: js.UndefOr[AnonAllowSlidersSwap] = js.native
+  var behavior: js.UndefOr[AllowSlidersSwap] = js.native
   /** Specifies the options required to display a chart as the range selector's background. */
-  var chart: js.UndefOr[AnonBarGroupPadding] = js.native
+  var chart: js.UndefOr[BarGroupPadding] = js.native
   /** Specifies the color of the parent page element. */
   var containerBackgroundColor: js.UndefOr[String] = js.native
   /** Specifies a data source for the scale values and for the chart at the background. */
@@ -34,21 +34,21 @@ trait dxRangeSelectorOptions extends BaseWidgetOptions[dxRangeSelector] {
   /** Specifies the data source field that provides data for the scale. */
   var dataSourceField: js.UndefOr[String] = js.native
   /** Range selector's indent options. */
-  var indent: js.UndefOr[AnonRight] = js.native
+  var indent: js.UndefOr[Right] = js.native
   /** A function that is executed after the widget's value is changed. */
-  var onValueChanged: js.UndefOr[js.Function1[/* e */ AnonElementEventModel, _]] = js.native
+  var onValueChanged: js.UndefOr[js.Function1[/* e */ ElementEventModel, _]] = js.native
   /** Specifies options of the range selector's scale. */
-  var scale: js.UndefOr[AnonAggregateByCategory] = js.native
+  var scale: js.UndefOr[AggregateByCategory] = js.native
   /** Specifies the color of the selected range. */
   var selectedRangeColor: js.UndefOr[String] = js.native
   /** Specifies how the selected range should behave when data is updated. Applies only when the RangeSelector is bound to a data source. */
   var selectedRangeUpdateMode: js.UndefOr[auto | keep | reset | shift] = js.native
   /** Specifies range selector shutter options. */
-  var shutter: js.UndefOr[AnonOpacity] = js.native
+  var shutter: js.UndefOr[Opacity] = js.native
   /** Specifies the appearance of the range selector's slider handles. */
-  var sliderHandle: js.UndefOr[AnonOpacityWidth] = js.native
+  var sliderHandle: js.UndefOr[OpacityWidth] = js.native
   /** Defines the options of the range selector slider markers. */
-  var sliderMarker: js.UndefOr[AnonInvalidRangeColor] = js.native
+  var sliderMarker: js.UndefOr[InvalidRangeColor] = js.native
   /** The selected range (initial or current). Equals the entire scale when not set. */
   var value: js.UndefOr[(js.Array[Double | String | js.Date]) | VizRange] = js.native
 }
@@ -66,7 +66,7 @@ object dxRangeSelectorOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBackground(value: AnonImage): Self = {
+    def withBackground(value: Image): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
         ret
@@ -78,7 +78,7 @@ object dxRangeSelectorOptions {
         ret
     }
     @scala.inline
-    def withBehavior(value: AnonAllowSlidersSwap): Self = {
+    def withBehavior(value: AllowSlidersSwap): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("behavior")(value.asInstanceOf[js.Any])
         ret
@@ -90,7 +90,7 @@ object dxRangeSelectorOptions {
         ret
     }
     @scala.inline
-    def withChart(value: AnonBarGroupPadding): Self = {
+    def withChart(value: BarGroupPadding): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("chart")(value.asInstanceOf[js.Any])
         ret
@@ -138,7 +138,7 @@ object dxRangeSelectorOptions {
         ret
     }
     @scala.inline
-    def withIndent(value: AnonRight): Self = {
+    def withIndent(value: Right): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("indent")(value.asInstanceOf[js.Any])
         ret
@@ -150,7 +150,7 @@ object dxRangeSelectorOptions {
         ret
     }
     @scala.inline
-    def withOnValueChanged(value: /* e */ AnonElementEventModel => _): Self = {
+    def withOnValueChanged(value: /* e */ ElementEventModel => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onValueChanged")(js.Any.fromFunction1(value))
         ret
@@ -162,7 +162,7 @@ object dxRangeSelectorOptions {
         ret
     }
     @scala.inline
-    def withScale(value: AnonAggregateByCategory): Self = {
+    def withScale(value: AggregateByCategory): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
         ret
@@ -198,7 +198,7 @@ object dxRangeSelectorOptions {
         ret
     }
     @scala.inline
-    def withShutter(value: AnonOpacity): Self = {
+    def withShutter(value: Opacity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shutter")(value.asInstanceOf[js.Any])
         ret
@@ -210,7 +210,7 @@ object dxRangeSelectorOptions {
         ret
     }
     @scala.inline
-    def withSliderHandle(value: AnonOpacityWidth): Self = {
+    def withSliderHandle(value: OpacityWidth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sliderHandle")(value.asInstanceOf[js.Any])
         ret
@@ -222,7 +222,7 @@ object dxRangeSelectorOptions {
         ret
     }
     @scala.inline
-    def withSliderMarker(value: AnonInvalidRangeColor): Self = {
+    def withSliderMarker(value: InvalidRangeColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sliderMarker")(value.asInstanceOf[js.Any])
         ret

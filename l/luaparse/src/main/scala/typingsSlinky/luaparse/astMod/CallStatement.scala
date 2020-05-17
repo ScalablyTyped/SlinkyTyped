@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait CallStatement
-  extends _Statement
+  extends Statement
      with Base[typingsSlinky.luaparse.luaparseStrings.CallStatement] {
   var expression: CallExpression | StringCallExpression | TableCallExpression = js.native
 }

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.async
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.sync
 import scala.scalajs.js
@@ -37,8 +36,4 @@ trait PrintTask extends Task {
   def execute(params: PrintParameters): js.Promise[PrintResponse] = js.native
   def execute(params: PrintParameters, requestOptions: js.Any): js.Promise[PrintResponse] = js.native
 }
-
-@JSGlobal("__esri.PrintTask")
-@js.native
-object PrintTask extends TopLevel[PrintTaskConstructor]
 

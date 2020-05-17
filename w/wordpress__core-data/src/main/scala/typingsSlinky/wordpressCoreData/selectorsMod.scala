@@ -2,7 +2,7 @@ package typingsSlinky.wordpressCoreData
 
 import typingsSlinky.std.Partial
 import typingsSlinky.std.Record
-import typingsSlinky.wordpressApiFetch.AnonFormats
+import typingsSlinky.wordpressApiFetch.anon.Formats
 import typingsSlinky.wordpressApiFetch.mod.Schema.User
 import typingsSlinky.wordpressCoreData.mod.Autosave
 import typingsSlinky.wordpressCoreData.mod.Entity
@@ -44,7 +44,7 @@ object selectorsMod extends js.Object {
   def getEntityRecord(kind: String, name: String, key: Double): js.UndefOr[Record[String, _]] = js.native
   def getEntityRecords(kind: String, name: String): js.Array[Record[String, _]] = js.native
   def getEntityRecords(kind: String, name: String, query: Record[String, _]): js.Array[Record[String, _]] = js.native
-  def getThemeSupports(): Partial[AnonFormats] = js.native
+  def getThemeSupports(): Partial[Formats] = js.native
   def getUserQueryResults(queryId: String): js.Array[User[view]] = js.native
   def hasFetchedAutosaves(postType: String, postId: Double): Boolean = js.native
   def hasUploadPermissions(): Boolean = js.native

@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientGenomics.gapi.client.genomics
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientGenomics.AnonAccesstoken
-import typingsSlinky.gapiClientGenomics.AnonCallSetId
-import typingsSlinky.gapiClientGenomics.AnonCallback
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientGenomics.anon.Accesstoken
+import typingsSlinky.gapiClientGenomics.anon.CallSetId
+import typingsSlinky.gapiClientGenomics.anon.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait CallsetsResource extends js.Object {
     * [Fundamentals of Google
     * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
     */
-  def create(request: AnonAccesstoken): Request_[CallSet] = js.native
+  def create(request: Accesstoken): Request[CallSet] = js.native
   /**
     * Deletes a call set.
     *
@@ -25,7 +25,7 @@ trait CallsetsResource extends js.Object {
     * [Fundamentals of Google
     * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
     */
-  def delete(request: AnonCallSetId): Request_[js.Object] = js.native
+  def delete(request: CallSetId): Request[js.Object] = js.native
   /**
     * Gets a call set by ID.
     *
@@ -33,7 +33,7 @@ trait CallsetsResource extends js.Object {
     * [Fundamentals of Google
     * Genomics](https://cloud.google.com/genomics/fundamentals-of-google-genomics)
     */
-  def get(request: AnonCallSetId): Request_[CallSet] = js.native
+  def get(request: CallSetId): Request[CallSet] = js.native
   /**
     * Updates a call set.
     *
@@ -43,7 +43,7 @@ trait CallsetsResource extends js.Object {
     *
     * This method supports patch semantics.
     */
-  def patch(request: AnonCallback): Request_[CallSet] = js.native
+  def patch(request: Callback): Request[CallSet] = js.native
   /**
     * Gets a list of call sets matching the criteria.
     *
@@ -54,17 +54,17 @@ trait CallsetsResource extends js.Object {
     * Implements
     * [GlobalAllianceApi.searchCallSets](https://github.com/ga4gh/schemas/blob/v0.5.1/src/main/resources/avro/variantmethods.avdl#L178).
     */
-  def search(request: AnonAccesstoken): Request_[SearchCallSetsResponse] = js.native
+  def search(request: Accesstoken): Request[SearchCallSetsResponse] = js.native
 }
 
 object CallsetsResource {
   @scala.inline
   def apply(
-    create: AnonAccesstoken => Request_[CallSet],
-    delete: AnonCallSetId => Request_[js.Object],
-    get: AnonCallSetId => Request_[CallSet],
-    patch: AnonCallback => Request_[CallSet],
-    search: AnonAccesstoken => Request_[SearchCallSetsResponse]
+    create: Accesstoken => Request[CallSet],
+    delete: CallSetId => Request[js.Object],
+    get: CallSetId => Request[CallSet],
+    patch: Callback => Request[CallSet],
+    search: Accesstoken => Request[SearchCallSetsResponse]
   ): CallsetsResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), patch = js.Any.fromFunction1(patch), search = js.Any.fromFunction1(search))
     __obj.asInstanceOf[CallsetsResource]
@@ -76,31 +76,31 @@ object CallsetsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: AnonAccesstoken => Request_[CallSet]): Self = {
+    def withCreate(value: Accesstoken => Request[CallSet]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonCallSetId => Request_[js.Object]): Self = {
+    def withDelete(value: CallSetId => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonCallSetId => Request_[CallSet]): Self = {
+    def withGet(value: CallSetId => Request[CallSet]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPatch(value: AnonCallback => Request_[CallSet]): Self = {
+    def withPatch(value: Callback => Request[CallSet]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withSearch(value: AnonAccesstoken => Request_[SearchCallSetsResponse]): Self = {
+    def withSearch(value: Accesstoken => Request[SearchCallSetsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("search")(js.Any.fromFunction1(value))
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.reactCalendar.mod
 
-import typingsSlinky.reactCalendar.AnonDate
-import typingsSlinky.reactCalendar.CalendarTilePropertiesact
+import typingsSlinky.reactCalendar.anon.CalendarTilePropertiesact
+import typingsSlinky.reactCalendar.anon.Date
 import typingsSlinky.reactCalendar.reactCalendarStrings.end
 import typingsSlinky.reactCalendar.reactCalendarStrings.range
 import typingsSlinky.reactCalendar.reactCalendarStrings.start
@@ -30,7 +30,7 @@ trait CalendarProps extends js.Object {
   var navigationAriaLabel: js.UndefOr[String] = js.native
   var navigationLabel: js.UndefOr[
     js.Function1[
-      /* props */ AnonDate, 
+      /* props */ Date, 
       String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ _) | Null
     ]
   ] = js.native
@@ -312,7 +312,7 @@ object CalendarProps {
     }
     @scala.inline
     def withNavigationLabel(
-      value: /* props */ AnonDate => String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ _) | Null
+      value: /* props */ Date => String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSX.Element */ _) | Null
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("navigationLabel")(js.Any.fromFunction1(value))

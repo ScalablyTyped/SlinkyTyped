@@ -1,7 +1,7 @@
 package typingsSlinky.oauthJs.OAuth
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oauthJs.AnonInstantiable
+import typingsSlinky.oauthJs.anon.Instantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SignatureMethodStatic extends js.Object {
   /** A map from signature method name to constructor. */
-  var REGISTERED: StringDictionary[AnonInstantiable] = js.native
+  var REGISTERED: StringDictionary[Instantiable] = js.native
   /**
     * Generate a signature base string from a Message object.
     * @see {@link https://tools.ietf.org/html/rfc5849#section-3.4.1}
@@ -20,7 +20,7 @@ trait SignatureMethodStatic extends js.Object {
     * Create a subclass of OAuth.SignatureMethod, with the given getSignature function.
     * @param getSignatureFunction
     */
-  def makeSubclass(getSignatureFunction: js.Function1[/* baseString */ String, String]): AnonInstantiable = js.native
+  def makeSubclass(getSignatureFunction: js.Function1[/* baseString */ String, String]): Instantiable = js.native
   /** Instantiate a SignatureMethod for the given method name. */
   def newMethod(name: String, accessor: Accessor): SignatureMethod = js.native
   def normalizeParameters(parameters: ParameterListOrMap): String = js.native
@@ -32,21 +32,21 @@ trait SignatureMethodStatic extends js.Object {
     * The resulting object should usually implement getSignature(baseString).
     * You can easily define such a constructor by calling makeSubclass method.
     */
-  def registerMethodClass(names: js.Array[String], classConstructor: AnonInstantiable): Unit = js.native
+  def registerMethodClass(names: js.Array[String], classConstructor: Instantiable): Unit = js.native
   def sign(message: Message, accessor: Accessor): Unit = js.native
 }
 
 object SignatureMethodStatic {
   @scala.inline
   def apply(
-    REGISTERED: StringDictionary[AnonInstantiable],
+    REGISTERED: StringDictionary[Instantiable],
     getBaseString: Message => String,
-    makeSubclass: js.Function1[/* baseString */ String, String] => AnonInstantiable,
+    makeSubclass: js.Function1[/* baseString */ String, String] => Instantiable,
     newMethod: (String, Accessor) => SignatureMethod,
     normalizeParameters: ParameterListOrMap => String,
     normalizeUrl: String => String,
     parseUri: String => Uri,
-    registerMethodClass: (js.Array[String], AnonInstantiable) => Unit,
+    registerMethodClass: (js.Array[String], Instantiable) => Unit,
     sign: (Message, Accessor) => Unit
   ): SignatureMethodStatic = {
     val __obj = js.Dynamic.literal(REGISTERED = REGISTERED.asInstanceOf[js.Any], getBaseString = js.Any.fromFunction1(getBaseString), makeSubclass = js.Any.fromFunction1(makeSubclass), newMethod = js.Any.fromFunction2(newMethod), normalizeParameters = js.Any.fromFunction1(normalizeParameters), normalizeUrl = js.Any.fromFunction1(normalizeUrl), parseUri = js.Any.fromFunction1(parseUri), registerMethodClass = js.Any.fromFunction2(registerMethodClass), sign = js.Any.fromFunction2(sign))
@@ -59,7 +59,7 @@ object SignatureMethodStatic {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withREGISTERED(value: StringDictionary[AnonInstantiable]): Self = {
+    def withREGISTERED(value: StringDictionary[Instantiable]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("REGISTERED")(value.asInstanceOf[js.Any])
         ret
@@ -71,7 +71,7 @@ object SignatureMethodStatic {
         ret
     }
     @scala.inline
-    def withMakeSubclass(value: js.Function1[/* baseString */ String, String] => AnonInstantiable): Self = {
+    def withMakeSubclass(value: js.Function1[/* baseString */ String, String] => Instantiable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("makeSubclass")(js.Any.fromFunction1(value))
         ret
@@ -101,7 +101,7 @@ object SignatureMethodStatic {
         ret
     }
     @scala.inline
-    def withRegisterMethodClass(value: (js.Array[String], AnonInstantiable) => Unit): Self = {
+    def withRegisterMethodClass(value: (js.Array[String], Instantiable) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("registerMethodClass")(js.Any.fromFunction2(value))
         ret

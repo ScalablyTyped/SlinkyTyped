@@ -1,9 +1,6 @@
 package typingsSlinky.playcanvas.pc
 
-import org.scalajs.dom.raw.Element
-import typingsSlinky.playcanvas.AnonAssetPrefix
-import typingsSlinky.playcanvas.AnonLayer
-import typingsSlinky.playcanvas.AnonPhysics
+import typingsSlinky.playcanvas.anon.Physics
 import typingsSlinky.playcanvas.pc.callbacks.ConfigureApp
 import typingsSlinky.playcanvas.pc.callbacks.LoadHierarchy
 import typingsSlinky.playcanvas.pc.callbacks.LoadSettings
@@ -58,10 +55,8 @@ import scala.scalajs.js.annotation._
   * // Start the application's main loop
   * app.start();
   */
-@JSGlobal("pc.Application")
 @js.native
-class Application protected () extends EventHandler {
-  def this(canvas: Element, options: AnonAssetPrefix) = this()
+trait Application extends EventHandler {
   /**
     * @name pc.Application#assets
     * @type {pc.AssetRegistry}
@@ -311,7 +306,7 @@ class Application protected () extends EventHandler {
     * };
     * app.applySceneSettings(settings);
     */
-  def applySceneSettings(settings: AnonPhysics): Unit = js.native
+  def applySceneSettings(settings: Physics): Unit = js.native
   /**
     * @function
     * @name pc.Application#configure
@@ -444,7 +439,13 @@ class Application protected () extends EventHandler {
     */
   def renderLine(start: Vec3, end: Vec3, color: Color): Unit = js.native
   def renderLine(start: Vec3, end: Vec3, color: Color, endColor: Color): Unit = js.native
-  def renderLine(start: Vec3, end: Vec3, color: Color, endColor: Color, options: AnonLayer): Unit = js.native
+  def renderLine(
+    start: Vec3,
+    end: Vec3,
+    color: Color,
+    endColor: Color,
+    options: typingsSlinky.playcanvas.anon.Layer
+  ): Unit = js.native
   /**
     * @function
     * @name pc.Application#renderLines
@@ -459,7 +460,7 @@ class Application protected () extends EventHandler {
     * app.renderLines(points, colors);
     */
   def renderLines(position: js.Array[Vec3], color: js.Array[Color]): Unit = js.native
-  def renderLines(position: js.Array[Vec3], color: js.Array[Color], options: AnonLayer): Unit = js.native
+  def renderLines(position: js.Array[Vec3], color: js.Array[Color], options: typingsSlinky.playcanvas.anon.Layer): Unit = js.native
   /**
     * @function
     * @name pc.Application#resizeCanvas
@@ -537,26 +538,5 @@ class Application protected () extends EventHandler {
     * @param {number} dt - The time delta since the last frame.
     */
   def update(dt: Double): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("pc.Application")
-@js.native
-object Application extends js.Object {
-  /**
-    * @static
-    * @function
-    * @name pc.Application.getApplication
-    * @description Get the current application. In the case where there are multiple running
-    * applications, the function can get an application based on a supplied canvas id. This
-    * function is particularly useful when the current pc.Application is not readily available.
-    * For example, in the JavaScript console of the browser's developer tools.
-    * @param {string} [id] - If defined, the returned application should use the canvas which has this id. Otherwise current application will be returned.
-    * @returns {pc.Application|undefined} The running application, if any.
-    * @example
-    * var app = pc.Application.getApplication();
-    */
-  def getApplication(): js.UndefOr[Application] = js.native
-  def getApplication(id: String): js.UndefOr[Application] = js.native
 }
 

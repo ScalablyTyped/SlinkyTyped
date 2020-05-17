@@ -1,11 +1,10 @@
 package typingsSlinky.hapi.mod
 
-import typingsSlinky.hapi.AnonCollect
-import typingsSlinky.hapi.AnonFailAction
-import typingsSlinky.hapi.AnonRelativeTo
-import typingsSlinky.hapi.AnonServer
+import typingsSlinky.hapi.anon.Collect
+import typingsSlinky.hapi.anon.FailAction
+import typingsSlinky.hapi.anon.RelativeTo
+import typingsSlinky.hapi.anon.keyinRouteRequestExtTypeR
 import typingsSlinky.hapi.hapiBooleans.`false`
-import typingsSlinky.hapi.keyinRouteRequestExtTypeR
 import typingsSlinky.hapi.mod.Json.StringifyArguments
 import typingsSlinky.hapi.mod.Lifecycle.Method
 import typingsSlinky.hapi.mod.Lifecycle.ReturnValue
@@ -93,7 +92,7 @@ trait RouteOptions extends js.Object {
     * * relativeTo - determines the folder relative paths are resolved against.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsfiles)
     */
-  var files: js.UndefOr[AnonRelativeTo] = js.native
+  var files: js.UndefOr[RelativeTo] = js.native
   /**
     * Default value: none.
     * The route handler function performs the main business logic of the route and sets the response. handler can be assigned:
@@ -141,7 +140,7 @@ trait RouteOptions extends js.Object {
     * collect - if true, request-level logs (both internal and application) are collected and accessible via request.logs.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionslog)
     */
-  var log: js.UndefOr[AnonCollect] = js.native
+  var log: js.UndefOr[Collect] = js.native
   /**
     * Default value: none.
     * Route notes used for generating documentation (string or array of strings).
@@ -196,7 +195,7 @@ trait RouteOptions extends js.Object {
     * errors. Defaults to 'error' (return a Bad Request (400) error response).
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionsstate)
     */
-  var state: js.UndefOr[AnonFailAction] = js.native
+  var state: js.UndefOr[FailAction] = js.native
   /**
     * Default value: none.
     * Route tags used for generating documentation (array of strings).
@@ -209,7 +208,7 @@ trait RouteOptions extends js.Object {
     * Timeouts for processing durations.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionstimeout)
     */
-  var timeout: js.UndefOr[AnonServer] = js.native
+  var timeout: js.UndefOr[typingsSlinky.hapi.anon.Server] = js.native
   /**
     * Default value: { headers: true, params: true, query: true, payload: true, failAction: 'error' }.
     * Request input validation rules for various request components.
@@ -333,7 +332,7 @@ object RouteOptions {
         ret
     }
     @scala.inline
-    def withFiles(value: AnonRelativeTo): Self = {
+    def withFiles(value: RelativeTo): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
         ret
@@ -413,7 +412,7 @@ object RouteOptions {
         ret
     }
     @scala.inline
-    def withLog(value: AnonCollect): Self = {
+    def withLog(value: Collect): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
         ret
@@ -497,7 +496,7 @@ object RouteOptions {
         ret
     }
     @scala.inline
-    def withState(value: AnonFailAction): Self = {
+    def withState(value: FailAction): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
         ret
@@ -521,7 +520,7 @@ object RouteOptions {
         ret
     }
     @scala.inline
-    def withTimeout(value: AnonServer): Self = {
+    def withTimeout(value: typingsSlinky.hapi.anon.Server): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
         ret

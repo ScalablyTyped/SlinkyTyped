@@ -1,6 +1,6 @@
 package typingsSlinky.extjs.Ext.dd
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ trait IDropTarget extends IDDTarget {
   var notifyDrop: js.UndefOr[
     js.Function3[
       /* source */ js.UndefOr[IDragSource], 
-      /* e */ js.UndefOr[Event_], 
+      /* e */ js.UndefOr[Event], 
       /* data */ js.UndefOr[js.Any], 
       Boolean
     ]
@@ -36,7 +36,7 @@ trait IDropTarget extends IDDTarget {
   var notifyEnter: js.UndefOr[
     js.Function3[
       /* source */ js.UndefOr[IDragSource], 
-      /* e */ js.UndefOr[Event_], 
+      /* e */ js.UndefOr[Event], 
       /* data */ js.UndefOr[js.Any], 
       String
     ]
@@ -49,7 +49,7 @@ trait IDropTarget extends IDDTarget {
   var notifyOut: js.UndefOr[
     js.Function3[
       /* source */ js.UndefOr[IDragSource], 
-      /* e */ js.UndefOr[Event_], 
+      /* e */ js.UndefOr[Event], 
       /* data */ js.UndefOr[js.Any], 
       Unit
     ]
@@ -63,7 +63,7 @@ trait IDropTarget extends IDDTarget {
   var notifyOver: js.UndefOr[
     js.Function3[
       /* source */ js.UndefOr[IDragSource], 
-      /* e */ js.UndefOr[Event_], 
+      /* e */ js.UndefOr[Event], 
       /* data */ js.UndefOr[js.Any], 
       String
     ]
@@ -122,7 +122,7 @@ object IDropTarget {
     }
     @scala.inline
     def withNotifyDrop(
-      value: (/* source */ js.UndefOr[IDragSource], /* e */ js.UndefOr[Event_], /* data */ js.UndefOr[js.Any]) => Boolean
+      value: (/* source */ js.UndefOr[IDragSource], /* e */ js.UndefOr[Event], /* data */ js.UndefOr[js.Any]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notifyDrop")(js.Any.fromFunction3(value))
@@ -136,7 +136,7 @@ object IDropTarget {
     }
     @scala.inline
     def withNotifyEnter(
-      value: (/* source */ js.UndefOr[IDragSource], /* e */ js.UndefOr[Event_], /* data */ js.UndefOr[js.Any]) => String
+      value: (/* source */ js.UndefOr[IDragSource], /* e */ js.UndefOr[Event], /* data */ js.UndefOr[js.Any]) => String
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notifyEnter")(js.Any.fromFunction3(value))
@@ -150,7 +150,7 @@ object IDropTarget {
     }
     @scala.inline
     def withNotifyOut(
-      value: (/* source */ js.UndefOr[IDragSource], /* e */ js.UndefOr[Event_], /* data */ js.UndefOr[js.Any]) => Unit
+      value: (/* source */ js.UndefOr[IDragSource], /* e */ js.UndefOr[Event], /* data */ js.UndefOr[js.Any]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notifyOut")(js.Any.fromFunction3(value))
@@ -164,7 +164,7 @@ object IDropTarget {
     }
     @scala.inline
     def withNotifyOver(
-      value: (/* source */ js.UndefOr[IDragSource], /* e */ js.UndefOr[Event_], /* data */ js.UndefOr[js.Any]) => String
+      value: (/* source */ js.UndefOr[IDragSource], /* e */ js.UndefOr[Event], /* data */ js.UndefOr[js.Any]) => String
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notifyOver")(js.Any.fromFunction3(value))

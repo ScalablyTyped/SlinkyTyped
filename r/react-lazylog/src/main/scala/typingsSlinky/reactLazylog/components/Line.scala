@@ -6,7 +6,7 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.a.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactLazylog.AnonText
+import typingsSlinky.reactLazylog.anon.Text
 import typingsSlinky.reactLazylog.lineMod.LineProps
 import typingsSlinky.reactLazylog.lineMod.default
 import scala.scalajs.js
@@ -38,7 +38,7 @@ object Line {
   
   def withProps(p: LineProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(data: js.Array[AnonText], number: Double, rowHeight: Double): Builder = {
+  def apply(data: js.Array[Text], number: Double, rowHeight: Double): Builder = {
     val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[LineProps]))
   }

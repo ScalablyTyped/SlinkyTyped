@@ -2,7 +2,7 @@ package typingsSlinky.mongodb.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.mongodb.AnonType
+import typingsSlinky.mongodb.anon.Type
 import typingsSlinky.mongodb.mongodbBooleans.`true`
 import typingsSlinky.mongodb.mongodbNumbers.`-1`
 import typingsSlinky.mongodb.mongodbNumbers.`1`
@@ -23,7 +23,7 @@ trait UpdateQuery[TSchema] extends js.Object {
   ] = js.native
   /** https://docs.mongodb.com/manual/reference/operator/update-field/ */
   @JSName("$currentDate")
-  var $currentDate: js.UndefOr[OnlyFieldsOfType[TSchema, js.Date, `true` | AnonType]] = js.native
+  var $currentDate: js.UndefOr[OnlyFieldsOfType[TSchema, js.Date, `true` | Type]] = js.native
   @JSName("$inc")
   var $inc: js.UndefOr[OnlyFieldsOfType[TSchema, js.UndefOr[scala.Double], js.UndefOr[scala.Double]]] = js.native
   @JSName("$max")
@@ -87,7 +87,7 @@ object UpdateQuery {
         ret
     }
     @scala.inline
-    def with$currentDate(value: OnlyFieldsOfType[TSchema, js.Date, `true` | AnonType]): Self[TSchema] = {
+    def with$currentDate(value: OnlyFieldsOfType[TSchema, js.Date, `true` | Type]): Self[TSchema] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("$currentDate")(value.asInstanceOf[js.Any])
         ret

@@ -1,9 +1,9 @@
 package typingsSlinky.grommet.chartMod
 
-import typingsSlinky.grommet.AnonColor
-import typingsSlinky.grommet.AnonHeight
-import typingsSlinky.grommet.AnonLabel
-import typingsSlinky.grommet.AnonValue
+import typingsSlinky.grommet.anon.Color
+import typingsSlinky.grommet.anon.Height
+import typingsSlinky.grommet.anon.Label
+import typingsSlinky.grommet.anon.Value
 import typingsSlinky.grommet.grommetStrings.area
 import typingsSlinky.grommet.grommetStrings.bar
 import typingsSlinky.grommet.grommetStrings.full
@@ -31,7 +31,7 @@ trait ChartProps extends js.Object {
   var a11yTitle: js.UndefOr[A11yTitleType] = js.native
   var alignSelf: js.UndefOr[AlignSelfType] = js.native
   var bounds: js.UndefOr[js.Array[js.Array[Double]]] = js.native
-  var color: js.UndefOr[String | AnonColor | js.Array[AnonValue]] = js.native
+  var color: js.UndefOr[String | Color | js.Array[Value]] = js.native
   var gap: js.UndefOr[GapType] = js.native
   var gridArea: js.UndefOr[GridAreaType] = js.native
   var margin: js.UndefOr[MarginType] = js.native
@@ -39,15 +39,15 @@ trait ChartProps extends js.Object {
   var onHover: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
   var overflow: js.UndefOr[Boolean] = js.native
   var round: js.UndefOr[Boolean] = js.native
-  var size: js.UndefOr[xxsmall | xsmall | small | medium | large | xlarge | full | AnonHeight | String] = js.native
+  var size: js.UndefOr[xxsmall | xsmall | small | medium | large | xlarge | full | Height | String] = js.native
   var thickness: js.UndefOr[hair | xsmall | small | medium | large | xlarge | none | String] = js.native
   var `type`: js.UndefOr[bar | line | area | point] = js.native
-  var values: js.Array[Double | js.Array[Double] | AnonLabel] = js.native
+  var values: js.Array[Double | js.Array[Double] | Label] = js.native
 }
 
 object ChartProps {
   @scala.inline
-  def apply(values: js.Array[Double | js.Array[Double] | AnonLabel]): ChartProps = {
+  def apply(values: js.Array[Double | js.Array[Double] | Label]): ChartProps = {
     val __obj = js.Dynamic.literal(values = values.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartProps]
   }
@@ -58,7 +58,7 @@ object ChartProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withValues(value: js.Array[Double | js.Array[Double] | AnonLabel]): Self = {
+    def withValues(value: js.Array[Double | js.Array[Double] | Label]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
         ret
@@ -100,7 +100,7 @@ object ChartProps {
         ret
     }
     @scala.inline
-    def withColor(value: String | AnonColor | js.Array[AnonValue]): Self = {
+    def withColor(value: String | Color | js.Array[Value]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
         ret
@@ -196,7 +196,7 @@ object ChartProps {
         ret
     }
     @scala.inline
-    def withSize(value: xxsmall | xsmall | small | medium | large | xlarge | full | AnonHeight | String): Self = {
+    def withSize(value: xxsmall | xsmall | small | medium | large | xlarge | full | Height | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
         ret

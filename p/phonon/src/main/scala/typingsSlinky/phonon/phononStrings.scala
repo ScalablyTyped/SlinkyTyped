@@ -1,8 +1,8 @@
 package typingsSlinky.phonon
 
-import typingsSlinky.phonon.Phonon_.PhononAjaxErrorFlag
-import typingsSlinky.phonon.Phonon_.PhononColor
-import typingsSlinky.phonon.Phonon_.PhononPopoverDirection
+import typingsSlinky.phonon.Phonon.PhononAjaxErrorFlag
+import typingsSlinky.phonon.Phonon.PhononColor
+import typingsSlinky.phonon.Phonon.PhononPopoverDirection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

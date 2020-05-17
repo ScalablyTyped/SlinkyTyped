@@ -1,6 +1,6 @@
 package typingsSlinky.blueprintjsTable.selectableMod
 
-import typingsSlinky.blueprintjsTable.PartialIDragSelectablePro
+import typingsSlinky.blueprintjsTable.anon.PartialIDragSelectablePro
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

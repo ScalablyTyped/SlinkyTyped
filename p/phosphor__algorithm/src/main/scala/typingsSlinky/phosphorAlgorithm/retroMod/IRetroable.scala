@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IRetroable[T] extends js.Object {
+trait IRetroable[T] extends RetroableOrArrayLike[T] {
   /**
     * Get a reverse iterator over the object's values.
     *

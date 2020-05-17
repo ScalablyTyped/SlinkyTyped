@@ -1,6 +1,6 @@
 package typingsSlinky.pixiJs.mod
 
-import typingsSlinky.pixiJs.AnonAutoPreventDefault
+import typingsSlinky.pixiJs.anon.AutoPreventDefault
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,7 +52,7 @@ object interaction extends js.Object {
   class InteractionManager protected ()
     extends typingsSlinky.pixiJs.PIXI.interaction.InteractionManager {
     def this(renderer: typingsSlinky.pixiJs.PIXI.Renderer) = this()
-    def this(renderer: typingsSlinky.pixiJs.PIXI.Renderer, options: AnonAutoPreventDefault) = this()
+    def this(renderer: typingsSlinky.pixiJs.PIXI.Renderer, options: AutoPreventDefault) = this()
   }
   
 }

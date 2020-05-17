@@ -1,6 +1,6 @@
 package typingsSlinky.instagramPrivateApi.mediaConfigureStoryOptionsMod
 
-import typingsSlinky.instagramPrivateApi.AnonCount
+import typingsSlinky.instagramPrivateApi.anon.Count
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait StoryQuiz extends StorySticker {
   var correct_answer: String = js.native
   var end_background_color: String = js.native
-  var options: js.Array[AnonCount] = js.native
+  var options: js.Array[Count] = js.native
   var question: String = js.native
   var start_background_color: String = js.native
   var text_color: String = js.native
@@ -23,7 +23,7 @@ object StoryQuiz {
     correct_answer: String,
     end_background_color: String,
     height: Double,
-    options: js.Array[AnonCount],
+    options: js.Array[Count],
     question: String,
     rotation: Double,
     start_background_color: String,
@@ -56,7 +56,7 @@ object StoryQuiz {
         ret
     }
     @scala.inline
-    def withOptions(value: js.Array[AnonCount]): Self = {
+    def withOptions(value: js.Array[Count]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

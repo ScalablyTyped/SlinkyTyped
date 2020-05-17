@@ -2,7 +2,7 @@ package typingsSlinky.relayRuntime.relayConcreteNodeMod
 
 import typingsSlinky.relayRuntime.normalizationNodeMod.NormalizationOperation
 import typingsSlinky.relayRuntime.readerNodeMod.ReaderFragment
-import typingsSlinky.relayRuntime.relayModernGraphQLTagMod._GraphQLTaggedNode
+import typingsSlinky.relayRuntime.relayModernGraphQLTagMod.GraphQLTaggedNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ConcreteRequest
   extends GeneratedNode
-     with _GraphQLTaggedNode {
+     with GraphQLTaggedNode {
    // 'Request';
   val fragment: ReaderFragment = js.native
   val kind: String = js.native

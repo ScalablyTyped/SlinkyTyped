@@ -1,44 +1,22 @@
 package typingsSlinky.styledComponents.styledComponentsMod
 
+import typingsSlinky.styledComponents.anon.PickStyledComponentBasean
+import typingsSlinky.styledComponents.anon.PickStyledComponentBaseanDefaultProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // remove the call signature from StyledComponent so Interpolation can still infer InterpolationFunction
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.styledComponents.PickStyledComponentBasean
-  - typingsSlinky.styledComponents.PickStyledComponentBaseanDefaultProps
+  - typingsSlinky.styledComponents.anon.PickStyledComponentBasean
+  - typingsSlinky.styledComponents.anon.PickStyledComponentBaseanDefaultProps
 */
-trait StyledComponentInterpolation extends _InterpolationValue
+trait StyledComponentInterpolation extends InterpolationValue
 
 object StyledComponentInterpolation {
   @scala.inline
-  def PickStyledComponentBasean(
-    DollarDollartypeof: js.Symbol,
-    withComponent: /* component */ AnyStyledComponent => StyledComponent[
-      StyledComponentInnerComponent[AnyStyledComponent], 
-      _, 
-      js.Any with StyledComponentInnerOtherProps[AnyStyledComponent], 
-      _ | StyledComponentInnerAttrs[AnyStyledComponent]
-    ]
-  ): StyledComponentInterpolation = {
-    val __obj = js.Dynamic.literal(withComponent = js.Any.fromFunction1(withComponent))
-    __obj.updateDynamic("$$typeof")(DollarDollartypeof.asInstanceOf[js.Any])
-    __obj.asInstanceOf[StyledComponentInterpolation]
-  }
+  implicit def apply(value: PickStyledComponentBasean): StyledComponentInterpolation = value.asInstanceOf[StyledComponentInterpolation]
   @scala.inline
-  def PickStyledComponentBaseanDefaultProps(
-    DollarDollartypeof: js.Symbol,
-    withComponent: /* component */ AnyStyledComponent => StyledComponent[
-      StyledComponentInnerComponent[AnyStyledComponent], 
-      _, 
-      js.Any with StyledComponentInnerOtherProps[AnyStyledComponent], 
-      scala.Nothing | StyledComponentInnerAttrs[AnyStyledComponent]
-    ]
-  ): StyledComponentInterpolation = {
-    val __obj = js.Dynamic.literal(withComponent = js.Any.fromFunction1(withComponent))
-    __obj.updateDynamic("$$typeof")(DollarDollartypeof.asInstanceOf[js.Any])
-    __obj.asInstanceOf[StyledComponentInterpolation]
-  }
+  implicit def apply(value: PickStyledComponentBaseanDefaultProps): StyledComponentInterpolation = value.asInstanceOf[StyledComponentInterpolation]
 }
 

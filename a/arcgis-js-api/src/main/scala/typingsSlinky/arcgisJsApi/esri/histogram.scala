@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,8 +44,25 @@ trait histogram extends js.Object {
   def histogram(params: histogramHistogramParams): js.Promise[HistogramResult] = js.native
 }
 
-@JSGlobal("__esri.histogram")
-@js.native
-object histogram
-  extends TopLevel[js.Function1[/* params */ histogramHistogramParams, js.Promise[HistogramResult]]]
+object histogram {
+  @scala.inline
+  def apply(histogram: histogramHistogramParams => js.Promise[HistogramResult]): histogram = {
+    val __obj = js.Dynamic.literal(histogram = js.Any.fromFunction1(histogram))
+    __obj.asInstanceOf[histogram]
+  }
+  @scala.inline
+  implicit class histogramOps[Self <: histogram] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHistogram(value: histogramHistogramParams => js.Promise[HistogramResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("histogram")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

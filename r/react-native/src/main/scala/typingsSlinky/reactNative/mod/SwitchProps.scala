@@ -1,6 +1,6 @@
 package typingsSlinky.reactNative.mod
 
-import typingsSlinky.reactNative.AnonFalse
+import typingsSlinky.reactNative.anon.False
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +30,7 @@ trait SwitchProps extends SwitchPropsIOS {
     *
     * Color when false and color when true
     */
-  var trackColor: js.UndefOr[AnonFalse] = js.native
+  var trackColor: js.UndefOr[False] = js.native
   /**
     * The value of the switch. If true the switch will be turned on.
     * Default value is false.
@@ -99,7 +99,7 @@ object SwitchProps {
         ret
     }
     @scala.inline
-    def withTrackColor(value: AnonFalse): Self = {
+    def withTrackColor(value: False): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("trackColor")(value.asInstanceOf[js.Any])
         ret

@@ -1,11 +1,11 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonId
+import typingsSlinky.devextreme.anon.Id
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +35,7 @@ trait dxHtmlEditorMention extends js.Object {
   var searchTimeout: js.UndefOr[Double] = js.native
   /** Specifies a custom template for mentions. */
   var template: js.UndefOr[
-    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* mentionData */ AnonId, /* contentElement */ dxElement, String | Element | JQuery])
+    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* mentionData */ Id, /* contentElement */ dxElement, String | Element | JQuery])
   ] = js.native
   /** Specifies which data field provides unique values to the template's `id` parameter. */
   var valueExpr: js.UndefOr[String | js.Function] = js.native
@@ -165,7 +165,7 @@ object dxHtmlEditorMention {
         ret
     }
     @scala.inline
-    def withTemplateFunction2(value: (/* mentionData */ AnonId, /* contentElement */ dxElement) => String | Element | JQuery): Self = {
+    def withTemplateFunction2(value: (/* mentionData */ Id, /* contentElement */ dxElement) => String | Element | JQuery): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.Any.fromFunction2(value))
         ret
@@ -178,7 +178,7 @@ object dxHtmlEditorMention {
     }
     @scala.inline
     def withTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* mentionData */ AnonId, /* contentElement */ dxElement, String | Element | JQuery])
+      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* mentionData */ Id, /* contentElement */ dxElement, String | Element | JQuery])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])

@@ -6,12 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Box2D.Dynamics.Joints.b2RevoluteJointDef")
 @js.native
-/**
-		* Constructor.
-		**/
-class b2RevoluteJointDef () extends b2JointDef {
+trait b2RevoluteJointDef extends b2JointDef {
   /**
   		* A flag to enable joint limits.
   		**/
@@ -55,5 +51,98 @@ class b2RevoluteJointDef () extends b2JointDef {
   		* @param anchor Anchor.
   		**/
   def Initialize(bA: b2Body, bB: b2Body, anchor: b2Vec2): Unit = js.native
+}
+
+object b2RevoluteJointDef {
+  @scala.inline
+  def apply(
+    Initialize: (b2Body, b2Body, b2Vec2) => Unit,
+    bodyA: b2Body,
+    bodyB: b2Body,
+    collideConnected: Boolean,
+    enableLimit: Boolean,
+    enableMotor: Boolean,
+    localAnchorA: b2Vec2,
+    localAnchorB: b2Vec2,
+    lowerAngle: Double,
+    maxMotorTorque: Double,
+    motorSpeed: Double,
+    referenceAngle: Double,
+    `type`: Double,
+    upperAngle: Double,
+    userData: js.Any
+  ): b2RevoluteJointDef = {
+    val __obj = js.Dynamic.literal(Initialize = js.Any.fromFunction3(Initialize), bodyA = bodyA.asInstanceOf[js.Any], bodyB = bodyB.asInstanceOf[js.Any], collideConnected = collideConnected.asInstanceOf[js.Any], enableLimit = enableLimit.asInstanceOf[js.Any], enableMotor = enableMotor.asInstanceOf[js.Any], localAnchorA = localAnchorA.asInstanceOf[js.Any], localAnchorB = localAnchorB.asInstanceOf[js.Any], lowerAngle = lowerAngle.asInstanceOf[js.Any], maxMotorTorque = maxMotorTorque.asInstanceOf[js.Any], motorSpeed = motorSpeed.asInstanceOf[js.Any], referenceAngle = referenceAngle.asInstanceOf[js.Any], upperAngle = upperAngle.asInstanceOf[js.Any], userData = userData.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[b2RevoluteJointDef]
+  }
+  @scala.inline
+  implicit class b2RevoluteJointDefOps[Self <: b2RevoluteJointDef] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInitialize(value: (b2Body, b2Body, b2Vec2) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Initialize")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withEnableLimit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnableMotor(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableMotor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocalAnchorA(value: b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localAnchorA")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocalAnchorB(value: b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localAnchorB")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLowerAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lowerAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxMotorTorque(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMotorTorque")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMotorSpeed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("motorSpeed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReferenceAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpperAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("upperAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

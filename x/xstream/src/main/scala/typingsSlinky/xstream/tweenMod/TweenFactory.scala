@@ -1,6 +1,5 @@
 package typingsSlinky.xstream.tweenMod
 
-import typingsSlinky.xstream.AnonEase
 import typingsSlinky.xstream.mod.Stream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +12,7 @@ trait TweenFactory extends js.Object {
   var circular: Easings = js.native
   var elastic: Easings = js.native
   var exponential: Easings = js.native
-  var linear: AnonEase = js.native
+  var linear: typingsSlinky.xstream.anon.Ease = js.native
   var power2: Easings = js.native
   var power3: Easings = js.native
   var power4: Easings = js.native

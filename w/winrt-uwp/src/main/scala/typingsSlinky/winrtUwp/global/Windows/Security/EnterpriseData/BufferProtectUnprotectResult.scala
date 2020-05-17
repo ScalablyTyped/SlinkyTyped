@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.Security.EnterpriseData
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Contains information about the result from protecting or unprotecting an enterprise protected buffer. */
+@JSGlobal("Windows.Security.EnterpriseData.BufferProtectUnprotectResult")
+@js.native
+abstract class BufferProtectUnprotectResult ()
+  extends typingsSlinky.winrtUwp.Windows.Security.EnterpriseData.BufferProtectUnprotectResult
+

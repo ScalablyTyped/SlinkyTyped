@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SampleTransform extends _Transforms {
+trait SampleTransform extends Transforms {
   var size: Double | SignalRef = js.native
   var `type`: sample = js.native
 }

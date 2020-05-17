@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antdMobile.PartialHTMLPropsHTMLDivEl
+import typingsSlinky.antdMobile.anon.PartialHTMLPropsHTMLDivEl
 import typingsSlinky.antdMobile.modalMod.default
 import typingsSlinky.antdMobile.modalModalMod.ModalProps
 import typingsSlinky.antdMobile.modalPropsTypeMod.Action

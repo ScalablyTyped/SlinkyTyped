@@ -1,6 +1,6 @@
 package typingsSlinky.preact.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import typingsSlinky.std.FrameRequestCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ trait Options_ extends js.Object {
   var debounceRendering: js.UndefOr[js.Function1[/* cb */ js.Function0[Unit], Unit]] = js.native
   /** Attach a hook that is invoked after a vnode has rendered. */
   var diffed: js.UndefOr[js.Function1[/* vnode */ VNode[js.Object], Unit]] = js.native
-  var event: js.UndefOr[js.Function1[/* e */ Event_, _]] = js.native
+  var event: js.UndefOr[js.Function1[/* e */ Event, _]] = js.native
   var requestAnimationFrame: js.UndefOr[js.Function1[/* callback */ FrameRequestCallback, Double]] = js.native
   /** Attach a hook that is invoked immediately before a vnode is unmounted. */
   var unmount: js.UndefOr[js.Function1[/* vnode */ VNode[js.Object], Unit]] = js.native
@@ -76,7 +76,7 @@ object Options_ {
         ret
     }
     @scala.inline
-    def withEvent(value: /* e */ Event_ => _): Self = {
+    def withEvent(value: /* e */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.Any.fromFunction1(value))
         ret

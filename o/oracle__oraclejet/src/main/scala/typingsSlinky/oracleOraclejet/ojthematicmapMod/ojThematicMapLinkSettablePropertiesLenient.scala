@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojthematicmapMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonLocation
+import typingsSlinky.oracleOraclejet.anon.Location
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.auto
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.off
 import scala.scalajs.js
@@ -14,10 +14,10 @@ trait ojThematicMapLinkSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
   var categories: js.UndefOr[js.Array[String]] = js.native
   var color: js.UndefOr[String] = js.native
-  var endLocation: js.UndefOr[AnonLocation] = js.native
+  var endLocation: js.UndefOr[Location] = js.native
   var selectable: js.UndefOr[auto | off] = js.native
   var shortDesc: js.UndefOr[String] = js.native
-  var startLocation: js.UndefOr[AnonLocation] = js.native
+  var startLocation: js.UndefOr[Location] = js.native
   var svgClassName: js.UndefOr[String] = js.native
   var svgStyle: js.UndefOr[js.Object] = js.native
   var width: js.UndefOr[Double] = js.native
@@ -60,7 +60,7 @@ object ojThematicMapLinkSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withEndLocation(value: AnonLocation): Self = {
+    def withEndLocation(value: Location): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("endLocation")(value.asInstanceOf[js.Any])
         ret
@@ -96,7 +96,7 @@ object ojThematicMapLinkSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withStartLocation(value: AnonLocation): Self = {
+    def withStartLocation(value: Location): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("startLocation")(value.asInstanceOf[js.Any])
         ret

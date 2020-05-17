@@ -1,6 +1,6 @@
 package typingsSlinky.npmRegistryPackageInfo.mod
 
-import typingsSlinky.npmRegistryPackageInfo.AnonFailure
+import typingsSlinky.npmRegistryPackageInfo.anon.Failure
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Data extends js.Object {
   var data: js.Any = js.native
-  var meta: AnonFailure = js.native
+  var meta: Failure = js.native
 }
 
 object Data {
   @scala.inline
-  def apply(data: js.Any, meta: AnonFailure): Data = {
+  def apply(data: js.Any, meta: Failure): Data = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any])
     __obj.asInstanceOf[Data]
   }
@@ -30,7 +30,7 @@ object Data {
         ret
     }
     @scala.inline
-    def withMeta(value: AnonFailure): Self = {
+    def withMeta(value: Failure): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
         ret

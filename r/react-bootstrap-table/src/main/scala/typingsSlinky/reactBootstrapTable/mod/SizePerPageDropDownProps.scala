@@ -1,6 +1,6 @@
 package typingsSlinky.reactBootstrapTable.mod
 
-import typingsSlinky.reactBootstrapTable.AnonText
+import typingsSlinky.reactBootstrapTable.anon.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,7 +34,7 @@ trait SizePerPageDropDownProps extends js.Object {
   /**
   	 * Size Per Page options list
   	 */
-  var options: js.UndefOr[js.Array[AnonText | Double]] = js.native
+  var options: js.UndefOr[js.Array[Double | Text]] = js.native
   /**
   	 * Whether the button menu should 'dropup' or 'dropdown'.
   	 */
@@ -126,7 +126,7 @@ object SizePerPageDropDownProps {
         ret
     }
     @scala.inline
-    def withOptions(value: js.Array[AnonText | Double]): Self = {
+    def withOptions(value: js.Array[Double | Text]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

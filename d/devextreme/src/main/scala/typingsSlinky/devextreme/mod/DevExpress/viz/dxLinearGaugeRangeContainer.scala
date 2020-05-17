@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonStart
+import typingsSlinky.devextreme.anon.Start
 import typingsSlinky.devextreme.devextremeStrings.bottom
 import typingsSlinky.devextreme.devextremeStrings.center
 import typingsSlinky.devextreme.devextremeStrings.left
@@ -17,7 +17,7 @@ trait dxLinearGaugeRangeContainer extends BaseGaugeRangeContainer {
   /** Specifies the orientation of the range container. Applies only if the geometry.orientation option is "horizontal". */
   var verticalOrientation: js.UndefOr[bottom | center | top] = js.native
   /** Specifies the width of the range container's start and end boundaries in the LinearGauge widget. */
-  var width: js.UndefOr[AnonStart | Double] = js.native
+  var width: js.UndefOr[Start | Double] = js.native
 }
 
 object dxLinearGaugeRangeContainer {
@@ -57,7 +57,7 @@ object dxLinearGaugeRangeContainer {
         ret
     }
     @scala.inline
-    def withWidth(value: AnonStart | Double): Self = {
+    def withWidth(value: Start | Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.formatjsIntlUnifiedNumberformat.dataMod
 
-import typingsSlinky.formatjsIntlUnifiedNumberformat.RecordDecimalFormatNumSig
+import typingsSlinky.formatjsIntlUnifiedNumberformat.anon.RecordDecimalFormatNumSig
 import typingsSlinky.formatjsIntlUtils.numberTypesMod.DecimalFormatNum
 import typingsSlinky.formatjsIntlUtils.numberTypesMod.NotationPattern
 import typingsSlinky.formatjsIntlUtils.numberTypesMod.RawNumberData

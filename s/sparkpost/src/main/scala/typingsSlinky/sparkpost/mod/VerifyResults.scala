@@ -1,6 +1,6 @@
 package typingsSlinky.sparkpost.mod
 
-import typingsSlinky.sparkpost.AnonDkimrecord
+import typingsSlinky.sparkpost.anon.Dkimrecord
 import typingsSlinky.sparkpost.sparkpostStrings.blocked
 import typingsSlinky.sparkpost.sparkpostStrings.invalid
 import typingsSlinky.sparkpost.sparkpostStrings.pending
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait VerifyResults extends Status {
-  var dns: js.UndefOr[AnonDkimrecord] = js.native
+  var dns: js.UndefOr[Dkimrecord] = js.native
 }
 
 object VerifyResults {
@@ -37,7 +37,7 @@ object VerifyResults {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDns(value: AnonDkimrecord): Self = {
+    def withDns(value: Dkimrecord): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dns")(value.asInstanceOf[js.Any])
         ret

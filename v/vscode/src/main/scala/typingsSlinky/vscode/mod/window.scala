@@ -1,10 +1,9 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonIncrement
-import typingsSlinky.vscode.AnonPreserveFocus
-import typingsSlinky.vscode.AnonWebviewOptions
-import typingsSlinky.vscode.QuickPickOptionscanPickMa
 import typingsSlinky.vscode.Thenable
+import typingsSlinky.vscode.anon.Increment
+import typingsSlinky.vscode.anon.PreserveFocus
+import typingsSlinky.vscode.anon.QuickPickOptionscanPickMa
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,11 +41,11 @@ object window extends js.Object {
   def createTerminal(options: TerminalOptions): Terminal = js.native
   def createTextEditorDecorationType(options: DecorationRenderOptions): TextEditorDecorationType = js.native
   def createTreeView[T](viewId: String, options: TreeViewOptions[T]): TreeView[T] = js.native
-  def createWebviewPanel(viewType: String, title: String, showOptions: AnonPreserveFocus): WebviewPanel = js.native
+  def createWebviewPanel(viewType: String, title: String, showOptions: PreserveFocus): WebviewPanel = js.native
   def createWebviewPanel(
     viewType: String,
     title: String,
-    showOptions: AnonPreserveFocus,
+    showOptions: PreserveFocus,
     options: WebviewPanelOptions with WebviewOptions
   ): WebviewPanel = js.native
   def createWebviewPanel(viewType: String, title: String, showOptions: ViewColumn): WebviewPanel = js.native
@@ -57,7 +56,11 @@ object window extends js.Object {
     options: WebviewPanelOptions with WebviewOptions
   ): WebviewPanel = js.native
   def registerCustomEditorProvider(viewType: String, provider: CustomTextEditorProvider): Disposable = js.native
-  def registerCustomEditorProvider(viewType: String, provider: CustomTextEditorProvider, options: AnonWebviewOptions): Disposable = js.native
+  def registerCustomEditorProvider(
+    viewType: String,
+    provider: CustomTextEditorProvider,
+    options: typingsSlinky.vscode.anon.WebviewOptions
+  ): Disposable = js.native
   def registerTreeDataProvider[T](viewId: String, treeDataProvider: TreeDataProvider[T]): Disposable = js.native
   def registerUriHandler(handler: UriHandler): Disposable = js.native
   def registerWebviewPanelSerializer(viewType: String, serializer: WebviewPanelSerializer): Disposable = js.native
@@ -127,7 +130,7 @@ object window extends js.Object {
   def showWorkspaceFolderPick(options: WorkspaceFolderPickOptions): Thenable[js.UndefOr[WorkspaceFolder]] = js.native
   def withProgress[R](
     options: ProgressOptions,
-    task: js.Function2[/* progress */ Progress[AnonIncrement], /* token */ CancellationToken, Thenable[R]]
+    task: js.Function2[/* progress */ Progress[Increment], /* token */ CancellationToken, Thenable[R]]
   ): Thenable[R] = js.native
   def withScmProgress[R](task: js.Function1[/* progress */ Progress[Double], Thenable[R]]): Thenable[R] = js.native
 }

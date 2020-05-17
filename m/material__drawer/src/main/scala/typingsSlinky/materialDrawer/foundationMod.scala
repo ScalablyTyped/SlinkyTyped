@@ -1,9 +1,9 @@
 package typingsSlinky.materialDrawer
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.KeyboardEvent
 import typingsSlinky.materialBase.foundationMod.default
 import typingsSlinky.materialDrawer.adapterMod.MDCDrawerAdapter
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ object foundationMod extends js.Object {
     /**
       * Handles a transition end event on the root element.
       */
-    def handleTransitionEnd(evt: Event_): Unit = js.native
+    def handleTransitionEnd(evt: Event): Unit = js.native
     /**
       * Returns true if drawer is animating closed.
       */

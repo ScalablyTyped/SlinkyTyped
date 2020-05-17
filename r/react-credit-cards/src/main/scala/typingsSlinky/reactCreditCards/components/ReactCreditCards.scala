@@ -2,8 +2,8 @@ package typingsSlinky.reactCreditCards.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactCreditCards.AnonName
-import typingsSlinky.reactCreditCards.AnonValid
+import typingsSlinky.reactCreditCards.anon.Name
+import typingsSlinky.reactCreditCards.anon.Valid
 import typingsSlinky.reactCreditCards.mod.CallbackArgument
 import typingsSlinky.reactCreditCards.mod.Focused
 import typingsSlinky.reactCreditCards.mod.ReactCreditCardProps
@@ -30,9 +30,9 @@ object ReactCreditCards {
     @scala.inline
     def issuer(value: String): this.type = set("issuer", value.asInstanceOf[js.Any])
     @scala.inline
-    def locale(value: AnonValid): this.type = set("locale", value.asInstanceOf[js.Any])
+    def locale(value: Valid): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline
-    def placeholders(value: AnonName): this.type = set("placeholders", value.asInstanceOf[js.Any])
+    def placeholders(value: Name): this.type = set("placeholders", value.asInstanceOf[js.Any])
     @scala.inline
     def preview(value: Boolean): this.type = set("preview", value.asInstanceOf[js.Any])
   }

@@ -1,6 +1,6 @@
 package typingsSlinky.chaiUuid
 
-import typingsSlinky.chaiUuid.mod._Global_.Chai.UuidVersion
+import typingsSlinky.chaiUuid.mod.global.Chai.UuidVersion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

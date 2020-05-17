@@ -1,6 +1,7 @@
 package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.officeUiFabricReact.anon.IsSelectedOnFocus
 import typingsSlinky.officeUiFabricReact.marqueeSelectionTypesMod.IMarqueeSelectionProps
 import typingsSlinky.officeUiFabricReact.selectionZoneMod.ISelectionZoneProps
 import typingsSlinky.officeUiFabricReact.selectionZoneMod.ISelectionZoneState
@@ -52,7 +53,7 @@ object libMarqueeSelectionMod extends js.Object {
   /* static members */
   @js.native
   object SelectionZone extends js.Object {
-    var defaultProps: AnonIsSelectedOnFocus = js.native
+    var defaultProps: IsSelectedOnFocus = js.native
     def getDerivedStateFromProps(nextProps: ISelectionZoneProps, prevState: ISelectionZoneState): ISelectionZoneState = js.native
   }
   

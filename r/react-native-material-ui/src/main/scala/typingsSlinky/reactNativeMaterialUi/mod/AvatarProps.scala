@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeMaterialUi.mod
 
 import typingsSlinky.reactNative.mod.Image
-import typingsSlinky.reactNativeMaterialUi.AnonContent
+import typingsSlinky.reactNativeMaterialUi.anon.Content
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait AvatarProps extends js.Object {
   var iconSize: js.UndefOr[Double] = js.native
   var image: js.UndefOr[Image] = js.native
   var size: js.UndefOr[Double] = js.native
-  var style: js.UndefOr[AnonContent] = js.native
+  var style: js.UndefOr[Content] = js.native
   var text: js.UndefOr[String] = js.native
 }
 
@@ -90,7 +90,7 @@ object AvatarProps {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonContent): Self = {
+    def withStyle(value: Content): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

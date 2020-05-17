@@ -6,7 +6,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.officeUiFabricReact.AnonItemIndex
+import typingsSlinky.officeUiFabricReact.anon.ItemIndex
 import typingsSlinky.officeUiFabricReact.detailsColumnTypesMod.IDetailsColumnProps
 import typingsSlinky.officeUiFabricReact.detailsColumnTypesMod.IDetailsColumnRenderTooltipProps
 import typingsSlinky.officeUiFabricReact.detailsColumnTypesMod.IDetailsColumnStyleProps
@@ -63,7 +63,7 @@ object DetailsColumnBase {
     @scala.inline
     def theme(value: ITheme): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
-    def updateDragInfo(value: (/* props */ AnonItemIndex, /* event */ js.UndefOr[MouseEvent]) => Unit): this.type = set("updateDragInfo", js.Any.fromFunction2(value))
+    def updateDragInfo(value: (/* props */ ItemIndex, /* event */ js.UndefOr[MouseEvent]) => Unit): this.type = set("updateDragInfo", js.Any.fromFunction2(value))
     @scala.inline
     def useFastIcons(value: Boolean): this.type = set("useFastIcons", value.asInstanceOf[js.Any])
   }

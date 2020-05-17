@@ -1,5 +1,6 @@
 package typingsSlinky.materialUi.MaterialUI.List
 
+import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.materialUi.MaterialUI.EnhancedButtonProps
@@ -22,7 +23,7 @@ trait ListItemProps extends EnhancedButtonProps {
   var nestedItems: js.UndefOr[js.Array[ReactElement]] = js.native
   var nestedLevel: js.UndefOr[Double] = js.native
   var nestedListStyle: js.UndefOr[CSSProperties] = js.native
-  var onNestedListToggle: js.UndefOr[js.Function1[/* item */ ListItem, Unit]] = js.native
+  var onNestedListToggle: js.UndefOr[js.Function1[ReactComponentClass[ListItemProps], Unit]] = js.native
   var open: js.UndefOr[Boolean] = js.native
   var primaryText: js.UndefOr[TagMod[Any]] = js.native
   var primaryTogglesNestedList: js.UndefOr[Boolean] = js.native
@@ -180,7 +181,7 @@ object ListItemProps {
         ret
     }
     @scala.inline
-    def withOnNestedListToggle(value: /* item */ ListItem => Unit): Self = {
+    def withOnNestedListToggle(value: ReactComponentClass[ListItemProps] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onNestedListToggle")(js.Any.fromFunction1(value))
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.edtrIoMathquill.mod
 
 import org.scalajs.dom.raw.HTMLTextAreaElement
-import typingsSlinky.edtrIoMathquill.AnonEdit
+import typingsSlinky.edtrIoMathquill.anon.Edit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait Config extends js.Object {
   var autoOperatorNames: js.UndefOr[String] = js.native
   var autoSubscriptNumerals: js.UndefOr[Boolean] = js.native
   var charsThatBreakOutOfSupSub: js.UndefOr[String] = js.native
-  var handlers: js.UndefOr[AnonEdit] = js.native
+  var handlers: js.UndefOr[Edit] = js.native
   var leftRightIntoCmdGoes: js.UndefOr[String] = js.native
   var maxDepth: js.UndefOr[Double] = js.native
   var restrictMismatchedBrackets: js.UndefOr[Boolean] = js.native
@@ -83,7 +83,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withHandlers(value: AnonEdit): Self = {
+    def withHandlers(value: Edit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("handlers")(value.asInstanceOf[js.Any])
         ret

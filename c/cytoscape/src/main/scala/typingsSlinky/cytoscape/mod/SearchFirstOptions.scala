@@ -12,14 +12,8 @@ trait SearchFirstOptions extends js.Object
 
 object SearchFirstOptions {
   @scala.inline
-  def SearchFirstOptions1(root: Selector | CollectionArgument): SearchFirstOptions = {
-    val __obj = js.Dynamic.literal(root = root.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SearchFirstOptions]
-  }
+  implicit def apply(value: SearchFirstOptions1): SearchFirstOptions = value.asInstanceOf[SearchFirstOptions]
   @scala.inline
-  def SearchFirstOptions2(roots: Selector | CollectionArgument): SearchFirstOptions = {
-    val __obj = js.Dynamic.literal(roots = roots.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SearchFirstOptions]
-  }
+  implicit def apply(value: SearchFirstOptions2): SearchFirstOptions = value.asInstanceOf[SearchFirstOptions]
 }
 

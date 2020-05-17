@@ -1,6 +1,5 @@
 package typingsSlinky.makerJs.MakerJs.models
 
-import typingsSlinky.makerJs.MakerJs.IFindChainsOptions
 import typingsSlinky.makerJs.MakerJs.IModel
 import typingsSlinky.makerJs.MakerJs.IModelMap
 import typingsSlinky.makerJs.MakerJs.IPathBezierSeed
@@ -10,21 +9,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("MakerJs.models.BezierCurve")
 @js.native
-class BezierCurve protected () extends IModel {
-  def this(points: js.Array[IPoint]) = this()
-  def this(seed: IPathBezierSeed) = this()
-  def this(points: js.Array[IPoint], accuracy: Double) = this()
-  def this(seed: IPathBezierSeed, accuracy: Double) = this()
-  def this(seed: IPathBezierSeed, isChild: Boolean) = this()
-  def this(origin: IPoint, controls: js.Array[IPoint], end: IPoint) = this()
-  def this(origin: IPoint, control: IPoint, end: IPoint) = this()
-  def this(seed: IPathBezierSeed, isChild: Boolean, accuracy: Double) = this()
-  def this(origin: IPoint, control1: IPoint, control2: IPoint, end: IPoint) = this()
-  def this(origin: IPoint, controls: js.Array[IPoint], end: IPoint, accuracy: Double) = this()
-  def this(origin: IPoint, control: IPoint, end: IPoint, accuracy: Double) = this()
-  def this(origin: IPoint, control1: IPoint, control2: IPoint, end: IPoint, accuracy: Double) = this()
+trait BezierCurve extends IModel {
   var accuracy: Double = js.native
   @JSName("models")
   var models_BezierCurve: IModelMap = js.native
@@ -37,14 +23,63 @@ class BezierCurve protected () extends IModel {
   var type_BezierCurve: String = js.native
 }
 
-/* static members */
-@JSGlobal("MakerJs.models.BezierCurve")
-@js.native
-object BezierCurve extends js.Object {
-  var typeName: String = js.native
-  def computeLength(seed: IPathBezierSeed): Double = js.native
-  def computePoint(seed: IPathBezierSeed, t: Double): IPoint = js.native
-  def getBezierSeeds(curve: BezierCurve): js.Array[IPathBezierSeed] = js.native
-  def getBezierSeeds(curve: BezierCurve, options: IFindChainsOptions): js.Array[IPathBezierSeed] = js.native
+object BezierCurve {
+  @scala.inline
+  def apply(
+    accuracy: Double,
+    models: IModelMap,
+    origin: IPoint,
+    paths: IPathMap,
+    seed: IPathBezierSeed,
+    `type`: String
+  ): BezierCurve = {
+    val __obj = js.Dynamic.literal(accuracy = accuracy.asInstanceOf[js.Any], models = models.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any], paths = paths.asInstanceOf[js.Any], seed = seed.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BezierCurve]
+  }
+  @scala.inline
+  implicit class BezierCurveOps[Self <: BezierCurve] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccuracy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accuracy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withModels(value: IModelMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("models")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrigin(value: IPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaths(value: IPathMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSeed(value: IPathBezierSeed): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("seed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

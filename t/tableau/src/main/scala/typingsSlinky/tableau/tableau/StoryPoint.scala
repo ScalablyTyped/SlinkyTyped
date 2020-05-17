@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("tableau.StoryPoint")
 @js.native
-class StoryPoint () extends js.Object {
+trait StoryPoint extends js.Object {
   /** Gets the content of the textual description for this story point. */
   def getCaption(): String = js.native
   /** Gets the sheet that this story point contains. This will be null if the story point does not have a contained sheet. */
@@ -19,5 +18,64 @@ class StoryPoint () extends js.Object {
   def getIsUpdated(): Boolean = js.native
   /** Gets the Story object that contains the story point. */
   def getParentStory(): Story = js.native
+}
+
+object StoryPoint {
+  @scala.inline
+  def apply(
+    getCaption: () => String,
+    getContainedSheet: () => Sheet,
+    getIndex: () => Double,
+    getIsActive: () => Boolean,
+    getIsUpdated: () => Boolean,
+    getParentStory: () => Story
+  ): StoryPoint = {
+    val __obj = js.Dynamic.literal(getCaption = js.Any.fromFunction0(getCaption), getContainedSheet = js.Any.fromFunction0(getContainedSheet), getIndex = js.Any.fromFunction0(getIndex), getIsActive = js.Any.fromFunction0(getIsActive), getIsUpdated = js.Any.fromFunction0(getIsUpdated), getParentStory = js.Any.fromFunction0(getParentStory))
+    __obj.asInstanceOf[StoryPoint]
+  }
+  @scala.inline
+  implicit class StoryPointOps[Self <: StoryPoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetCaption(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCaption")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetContainedSheet(value: () => Sheet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getContainedSheet")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetIndex(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getIndex")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetIsActive(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getIsActive")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetIsUpdated(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getIsUpdated")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetParentStory(value: () => Story): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getParentStory")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

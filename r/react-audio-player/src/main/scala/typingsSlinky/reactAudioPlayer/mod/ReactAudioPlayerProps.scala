@@ -1,11 +1,11 @@
 package typingsSlinky.reactAudioPlayer.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLAudioElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,17 +22,17 @@ trait ReactAudioPlayerProps extends js.Object {
   var listenInterval: js.UndefOr[Double] = js.native
   var loop: js.UndefOr[Boolean] = js.native
   var muted: js.UndefOr[Boolean] = js.native
-  var onAbort: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, HTMLAudioElement], Unit]] = js.native
-  var onCanPlay: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, HTMLAudioElement], Unit]] = js.native
-  var onCanPlayThrough: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, HTMLAudioElement], Unit]] = js.native
-  var onEnded: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, HTMLAudioElement], Unit]] = js.native
-  var onError: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, HTMLAudioElement], Unit]] = js.native
-  var onListen: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, HTMLAudioElement], Unit]] = js.native
-  var onLoadedMetadata: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, HTMLAudioElement], Unit]] = js.native
-  var onPause: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, HTMLAudioElement], Unit]] = js.native
-  var onPlay: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, HTMLAudioElement], Unit]] = js.native
-  var onSeeked: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, HTMLAudioElement], Unit]] = js.native
-  var onVolumeChanged: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, HTMLAudioElement], Unit]] = js.native
+  var onAbort: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
+  var onCanPlay: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
+  var onCanPlayThrough: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
+  var onEnded: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
+  var onError: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
+  var onListen: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
+  var onLoadedMetadata: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
+  var onPause: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
+  var onPlay: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
+  var onSeeked: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
+  var onVolumeChanged: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLAudioElement], Unit]] = js.native
   var preload: js.UndefOr[Preload] = js.native
   var src: js.UndefOr[String] = js.native
   var style: js.UndefOr[CSSProperties] = js.native
@@ -179,7 +179,7 @@ object ReactAudioPlayerProps {
         ret
     }
     @scala.inline
-    def withOnAbort(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): Self = {
+    def withOnAbort(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAbort")(js.Any.fromFunction1(value))
         ret
@@ -191,7 +191,7 @@ object ReactAudioPlayerProps {
         ret
     }
     @scala.inline
-    def withOnCanPlay(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): Self = {
+    def withOnCanPlay(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlay")(js.Any.fromFunction1(value))
         ret
@@ -203,7 +203,7 @@ object ReactAudioPlayerProps {
         ret
     }
     @scala.inline
-    def withOnCanPlayThrough(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): Self = {
+    def withOnCanPlayThrough(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlayThrough")(js.Any.fromFunction1(value))
         ret
@@ -215,7 +215,7 @@ object ReactAudioPlayerProps {
         ret
     }
     @scala.inline
-    def withOnEnded(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): Self = {
+    def withOnEnded(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEnded")(js.Any.fromFunction1(value))
         ret
@@ -227,7 +227,7 @@ object ReactAudioPlayerProps {
         ret
     }
     @scala.inline
-    def withOnError(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): Self = {
+    def withOnError(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
         ret
@@ -239,7 +239,7 @@ object ReactAudioPlayerProps {
         ret
     }
     @scala.inline
-    def withOnListen(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): Self = {
+    def withOnListen(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onListen")(js.Any.fromFunction1(value))
         ret
@@ -251,7 +251,7 @@ object ReactAudioPlayerProps {
         ret
     }
     @scala.inline
-    def withOnLoadedMetadata(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): Self = {
+    def withOnLoadedMetadata(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedMetadata")(js.Any.fromFunction1(value))
         ret
@@ -263,7 +263,7 @@ object ReactAudioPlayerProps {
         ret
     }
     @scala.inline
-    def withOnPause(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): Self = {
+    def withOnPause(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.Any.fromFunction1(value))
         ret
@@ -275,7 +275,7 @@ object ReactAudioPlayerProps {
         ret
     }
     @scala.inline
-    def withOnPlay(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): Self = {
+    def withOnPlay(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.Any.fromFunction1(value))
         ret
@@ -287,7 +287,7 @@ object ReactAudioPlayerProps {
         ret
     }
     @scala.inline
-    def withOnSeeked(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): Self = {
+    def withOnSeeked(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeked")(js.Any.fromFunction1(value))
         ret
@@ -299,7 +299,7 @@ object ReactAudioPlayerProps {
         ret
     }
     @scala.inline
-    def withOnVolumeChanged(value: /* event */ SyntheticEvent[Event_, HTMLAudioElement] => Unit): Self = {
+    def withOnVolumeChanged(value: /* event */ SyntheticEvent[Event, HTMLAudioElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onVolumeChanged")(js.Any.fromFunction1(value))
         ret

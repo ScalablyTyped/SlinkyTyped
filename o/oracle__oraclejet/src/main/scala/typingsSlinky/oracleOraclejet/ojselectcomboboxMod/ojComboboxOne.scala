@@ -3,10 +3,10 @@ package typingsSlinky.oracleOraclejet.ojselectcomboboxMod
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.AnonChildren
-import typingsSlinky.oracleOraclejet.AnonClass
-import typingsSlinky.oracleOraclejet.AnonFilterFurther
-import typingsSlinky.oracleOraclejet.AnonLabelValue
+import typingsSlinky.oracleOraclejet.anon.Children
+import typingsSlinky.oracleOraclejet.anon.Class
+import typingsSlinky.oracleOraclejet.anon.FilterFurther
+import typingsSlinky.oracleOraclejet.anon.LabelValue
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojselectcomboboxMod.ojCombobox.OptionContext
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.AsyncValidator
@@ -79,16 +79,16 @@ trait ojComboboxOne[K, D]
   var options: (js.Array[
     typingsSlinky.oracleOraclejet.ojselectcomboboxMod.ojCombobox.Option | typingsSlinky.oracleOraclejet.ojselectcomboboxMod.ojCombobox.Optgroup
   ]) | (DataProvider[K, D]) | Null = js.native
-  var optionsKeys: AnonChildren = js.native
-  var pickerAttributes: AnonClass = js.native
+  var optionsKeys: Children = js.native
+  var pickerAttributes: Class = js.native
   var placeholder: String | Null = js.native
   val rawValue: String | Null = js.native
   var readOnly: Boolean = js.native
   var required: Boolean = js.native
   @JSName("translations")
-  var translations_ojComboboxOne: AnonFilterFurther = js.native
+  var translations_ojComboboxOne: FilterFurther = js.native
   var validators: (js.Array[Validator[_] | RegisteredValidator]) | Null = js.native
-  var valueOption: AnonLabelValue = js.native
+  var valueOption: LabelValue = js.native
   def addEventListener(`type`: filterOnOpenChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: filterOnOpenChanged,
@@ -231,9 +231,9 @@ trait ojComboboxOne[K, D]
     typingsSlinky.oracleOraclejet.ojselectcomboboxMod.ojCombobox.Option | typingsSlinky.oracleOraclejet.ojselectcomboboxMod.ojCombobox.Optgroup
   ]) | (DataProvider[K, D]) | Null = js.native
   @JSName("getProperty")
-  def getProperty_optionsKeys(property: optionsKeys): AnonChildren = js.native
+  def getProperty_optionsKeys(property: optionsKeys): Children = js.native
   @JSName("getProperty")
-  def getProperty_pickerAttributes(property: pickerAttributes): AnonClass = js.native
+  def getProperty_pickerAttributes(property: pickerAttributes): Class = js.native
   @JSName("getProperty")
   def getProperty_placeholder(property: placeholder): String | Null = js.native
   @JSName("getProperty")
@@ -245,7 +245,7 @@ trait ojComboboxOne[K, D]
   @JSName("getProperty")
   def getProperty_validators(property: validators): (js.Array[Validator[_] | RegisteredValidator]) | Null = js.native
   @JSName("getProperty")
-  def getProperty_valueOption(property: valueOption): AnonLabelValue = js.native
+  def getProperty_valueOption(property: valueOption): LabelValue = js.native
   def setProperties(properties: ojComboboxOneSettablePropertiesLenient[K, D]): Unit = js.native
   def setProperty(property: filterOnOpen, value: none): Unit = js.native
   def setProperty(property: filterOnOpen, value: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.rawValue): Unit = js.native
@@ -275,9 +275,9 @@ trait ojComboboxOne[K, D]
   @JSName("setProperty")
   def setProperty_options(property: options, value: DataProvider[K, D]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_optionsKeys(property: optionsKeys, value: AnonChildren): Unit = js.native
+  def setProperty_optionsKeys(property: optionsKeys, value: Children): Unit = js.native
   @JSName("setProperty")
-  def setProperty_pickerAttributes(property: pickerAttributes, value: AnonClass): Unit = js.native
+  def setProperty_pickerAttributes(property: pickerAttributes, value: Class): Unit = js.native
   @JSName("setProperty")
   def setProperty_placeholder(property: placeholder): Unit = js.native
   @JSName("setProperty")
@@ -291,13 +291,13 @@ trait ojComboboxOne[K, D]
   @JSName("setProperty")
   def setProperty_required(property: required, value: Boolean): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonFilterFurther): Unit = js.native
+  def setProperty_translations(property: translations, value: FilterFurther): Unit = js.native
   @JSName("setProperty")
   def setProperty_validators(property: validators): Unit = js.native
   @JSName("setProperty")
   def setProperty_validators(property: validators, value: js.Array[Validator[_] | RegisteredValidator]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_valueOption(property: valueOption, value: AnonLabelValue): Unit = js.native
+  def setProperty_valueOption(property: valueOption, value: LabelValue): Unit = js.native
 }
 
 @JSImport("@oracle/oraclejet/ojselectcombobox", "ojComboboxOne")

@@ -1,14 +1,14 @@
 package typingsSlinky.tablesorter.pagerConfigurationMod
 
+import typingsSlinky.jquery.JQuery.AjaxSettings
+import typingsSlinky.jquery.JQuery.Selector
+import typingsSlinky.jquery.JQuery.jqXHR
 import typingsSlinky.jquery.JQueryAjaxSettings
-import typingsSlinky.jquery.JQuery_.AjaxSettings
-import typingsSlinky.jquery.JQuery_.Selector
-import typingsSlinky.jquery.JQuery_.jqXHR
 import typingsSlinky.tablesorter.ajaxDataProcessorMod.AjaxDataProcessor
 import typingsSlinky.tablesorter.ajaxErrorHandlerMod.AjaxErrorHandler
 import typingsSlinky.tablesorter.ajaxUrlProcessorMod.AjaxUrlProcessor
-import typingsSlinky.tablesorter.mod._Global_.HTMLElement
-import typingsSlinky.tablesorter.mod._Global_.JQuery
+import typingsSlinky.tablesorter.mod.global.HTMLElement
+import typingsSlinky.tablesorter.mod.global.JQuery
 import typingsSlinky.tablesorter.pageSizeMod.PageSize
 import typingsSlinky.tablesorter.pagerDataPartMod.PagerDataPart
 import typingsSlinky.tablesorter.pagerInitialRowsMod.PagerInitialRows

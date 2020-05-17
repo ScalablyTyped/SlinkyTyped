@@ -2,7 +2,6 @@ package typingsSlinky.baseui.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonSelect
 import typingsSlinky.baseui.baseuiStrings.`12`
 import typingsSlinky.baseui.baseuiStrings.`24`
 import typingsSlinky.baseui.baseuiStrings.compact
@@ -36,7 +35,7 @@ object TimePicker {
     @scala.inline
     def onChange(value: /* args */ js.Date => _): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def overrides(value: AnonSelect): this.type = set("overrides", value.asInstanceOf[js.Any])
+    def overrides(value: typingsSlinky.baseui.anon.Select): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline

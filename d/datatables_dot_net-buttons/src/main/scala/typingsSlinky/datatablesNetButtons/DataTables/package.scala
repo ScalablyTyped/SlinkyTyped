@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object DataTables {
-  type ButtonSelectorTypes = java.lang.String | scala.Double | typingsSlinky.datatablesNet.JQuery
   /**
     * A function that will be executed upon creation of the buttons.
     */
@@ -31,7 +30,7 @@ package object DataTables {
     /* title */ java.lang.String, 
     java.lang.String
   ]
-  type FunctionButtonCustomize = js.Function1[/* win */ typingsSlinky.std.Window_ | java.lang.String, scala.Unit]
+  type FunctionButtonCustomize = js.Function1[/* win */ org.scalajs.dom.raw.Window | java.lang.String, scala.Unit]
   type FunctionButtonCustomizeData = js.Function1[/* content */ js.Any, scala.Unit]
   type FunctionButtonInit = js.Function3[
     /* dt */ typingsSlinky.datatablesNetButtons.DataTables.Api, 

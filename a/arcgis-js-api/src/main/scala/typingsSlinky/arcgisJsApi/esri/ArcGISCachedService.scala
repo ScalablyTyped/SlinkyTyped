@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +26,37 @@ trait ArcGISCachedService extends js.Object {
   var tileInfo: TileInfo = js.native
 }
 
-@JSGlobal("__esri.ArcGISCachedService")
-@js.native
-object ArcGISCachedService extends TopLevel[ArcGISCachedServiceConstructor]
+object ArcGISCachedService {
+  @scala.inline
+  def apply(copyright: String, spatialReference: SpatialReference, tileInfo: TileInfo): ArcGISCachedService = {
+    val __obj = js.Dynamic.literal(copyright = copyright.asInstanceOf[js.Any], spatialReference = spatialReference.asInstanceOf[js.Any], tileInfo = tileInfo.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ArcGISCachedService]
+  }
+  @scala.inline
+  implicit class ArcGISCachedServiceOps[Self <: ArcGISCachedService] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCopyright(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyright")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpatialReference(value: SpatialReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spatialReference")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTileInfo(value: TileInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

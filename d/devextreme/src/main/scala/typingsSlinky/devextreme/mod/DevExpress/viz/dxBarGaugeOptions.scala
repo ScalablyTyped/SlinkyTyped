@@ -1,8 +1,8 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonComponentDxBarGauge
-import typingsSlinky.devextreme.AnonConnectorColor
-import typingsSlinky.devextreme.AnonEndAngle
+import typingsSlinky.devextreme.anon.ComponentDxBarGauge
+import typingsSlinky.devextreme.anon.ConnectorColor
+import typingsSlinky.devextreme.anon.EndAngle
 import typingsSlinky.devextreme.devextremeStrings.Bright
 import typingsSlinky.devextreme.devextremeStrings.Carmine
 import typingsSlinky.devextreme.devextremeStrings.Default
@@ -41,18 +41,18 @@ trait dxBarGaugeOptions extends BaseWidgetOptions[dxBarGauge] {
   /** Specifies an end value for the gauge's invisible scale. */
   var endValue: js.UndefOr[Double] = js.native
   /** Defines the shape of the gauge's arc. */
-  var geometry: js.UndefOr[AnonEndAngle] = js.native
+  var geometry: js.UndefOr[EndAngle] = js.native
   /** Specifies the options of the labels that accompany gauge bars. */
-  var label: js.UndefOr[AnonConnectorColor] = js.native
+  var label: js.UndefOr[ConnectorColor] = js.native
   /** Configures the legend. */
   var legend: js.UndefOr[dxBarGaugeLegend] = js.native
   /** Configures the loading indicator. */
   @JSName("loadingIndicator")
   var loadingIndicator_dxBarGaugeOptions: js.UndefOr[dxBarGaugeLoadingIndicator] = js.native
   /** A function that is executed when a tooltip becomes hidden. */
-  var onTooltipHidden: js.UndefOr[js.Function1[/* e */ AnonComponentDxBarGauge, _]] = js.native
+  var onTooltipHidden: js.UndefOr[js.Function1[/* e */ ComponentDxBarGauge, _]] = js.native
   /** A function that is executed when a tooltip appears. */
-  var onTooltipShown: js.UndefOr[js.Function1[/* e */ AnonComponentDxBarGauge, _]] = js.native
+  var onTooltipShown: js.UndefOr[js.Function1[/* e */ ComponentDxBarGauge, _]] = js.native
   /** Sets the palette to be used for colorizing bars in the gauge. */
   var palette: js.UndefOr[
     js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
@@ -145,7 +145,7 @@ object dxBarGaugeOptions {
         ret
     }
     @scala.inline
-    def withGeometry(value: AnonEndAngle): Self = {
+    def withGeometry(value: EndAngle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("geometry")(value.asInstanceOf[js.Any])
         ret
@@ -157,7 +157,7 @@ object dxBarGaugeOptions {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonConnectorColor): Self = {
+    def withLabel(value: ConnectorColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -193,7 +193,7 @@ object dxBarGaugeOptions {
         ret
     }
     @scala.inline
-    def withOnTooltipHidden(value: /* e */ AnonComponentDxBarGauge => _): Self = {
+    def withOnTooltipHidden(value: /* e */ ComponentDxBarGauge => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTooltipHidden")(js.Any.fromFunction1(value))
         ret
@@ -205,7 +205,7 @@ object dxBarGaugeOptions {
         ret
     }
     @scala.inline
-    def withOnTooltipShown(value: /* e */ AnonComponentDxBarGauge => _): Self = {
+    def withOnTooltipShown(value: /* e */ ComponentDxBarGauge => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTooltipShown")(js.Any.fromFunction1(value))
         ret

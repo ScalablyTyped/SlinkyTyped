@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,9 +23,4 @@ trait MutationObserver extends js.Object {
     */
   def takeRecords(): js.Array[org.scalajs.dom.raw.MutationRecord] = js.native
 }
-
-@JSGlobal("MutationObserver")
-@js.native
-object MutationObserver
-  extends Instantiable1[/* callback */ MutationCallback, org.scalajs.dom.raw.MutationObserver]
 

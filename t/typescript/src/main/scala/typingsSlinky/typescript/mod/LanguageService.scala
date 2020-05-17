@@ -1,6 +1,6 @@
 package typingsSlinky.typescript.mod
 
-import typingsSlinky.typescript.WithMetadataCompletionInf
+import typingsSlinky.typescript.anon.WithMetadataCompletionInf
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,38 +55,7 @@ trait LanguageService extends js.Object {
     fileName: java.lang.String,
     position: Double,
     name: java.lang.String,
-    formatOptions: js.UndefOr[scala.Nothing],
-    source: js.UndefOr[scala.Nothing],
-    preferences: UserPreferences
-  ): js.UndefOr[CompletionEntryDetails] = js.native
-  def getCompletionEntryDetails(
-    fileName: java.lang.String,
-    position: Double,
-    name: java.lang.String,
-    formatOptions: js.UndefOr[scala.Nothing],
-    source: java.lang.String
-  ): js.UndefOr[CompletionEntryDetails] = js.native
-  def getCompletionEntryDetails(
-    fileName: java.lang.String,
-    position: Double,
-    name: java.lang.String,
-    formatOptions: js.UndefOr[scala.Nothing],
-    source: java.lang.String,
-    preferences: UserPreferences
-  ): js.UndefOr[CompletionEntryDetails] = js.native
-  def getCompletionEntryDetails(
-    fileName: java.lang.String,
-    position: Double,
-    name: java.lang.String,
     formatOptions: FormatCodeOptions
-  ): js.UndefOr[CompletionEntryDetails] = js.native
-  def getCompletionEntryDetails(
-    fileName: java.lang.String,
-    position: Double,
-    name: java.lang.String,
-    formatOptions: FormatCodeOptions,
-    source: js.UndefOr[scala.Nothing],
-    preferences: UserPreferences
   ): js.UndefOr[CompletionEntryDetails] = js.native
   def getCompletionEntryDetails(
     fileName: java.lang.String,
@@ -108,14 +77,6 @@ trait LanguageService extends js.Object {
     position: Double,
     name: java.lang.String,
     formatOptions: FormatCodeSettings
-  ): js.UndefOr[CompletionEntryDetails] = js.native
-  def getCompletionEntryDetails(
-    fileName: java.lang.String,
-    position: Double,
-    name: java.lang.String,
-    formatOptions: FormatCodeSettings,
-    source: js.UndefOr[scala.Nothing],
-    preferences: UserPreferences
   ): js.UndefOr[CompletionEntryDetails] = js.native
   def getCompletionEntryDetails(
     fileName: java.lang.String,

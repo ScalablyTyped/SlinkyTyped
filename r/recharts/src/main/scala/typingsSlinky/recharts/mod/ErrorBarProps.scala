@@ -1,6 +1,6 @@
 package typingsSlinky.recharts.mod
 
-import typingsSlinky.recharts.AnonErrorVal
+import typingsSlinky.recharts.anon.ErrorVal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -57,7 +57,7 @@ object ErrorBarProps {
         ret
     }
     @scala.inline
-    def withDataPointFormatter(value: (/* entry */ js.Any, /* dataKey */ DataKey) => AnonErrorVal): Self = {
+    def withDataPointFormatter(value: (/* entry */ js.Any, /* dataKey */ DataKey) => ErrorVal): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataPointFormatter")(js.Any.fromFunction2(value))
         ret

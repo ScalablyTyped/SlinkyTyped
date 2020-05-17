@@ -1,6 +1,6 @@
 package typingsSlinky.knex.mod
 
-import typingsSlinky.knex.AnonCancel
+import typingsSlinky.knex.anon.Cancel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,10 @@ import scala.scalajs.js.annotation._
 @js.native
 class QueryBuilder[TRecord /* <: js.Object */, TResult] ()
   extends ChainableInterface[ResolveResult[TResult]]
-     with QueryInterface[TRecord, TResult] {
+     with QueryInterface[TRecord, TResult]
+     with ColumnDescriptor[TRecord, TResult]
+     with RawBinding
+     with TableDescriptor {
   var and: QueryBuilder[TRecord, TResult] = js.native
   var not: QueryBuilder[TRecord, TResult] = js.native
   var or: QueryBuilder[TRecord, TResult] = js.native
@@ -25,7 +28,7 @@ class QueryBuilder[TRecord /* <: js.Object */, TResult] ()
   def queryContext(context: js.Any): QueryBuilder[TRecord, TResult] = js.native
   def skipLocked(): QueryBuilder[TRecord, TResult] = js.native
   def timeout(ms: Double): QueryBuilder[TRecord, TResult] = js.native
-  def timeout(ms: Double, options: AnonCancel): QueryBuilder[TRecord, TResult] = js.native
+  def timeout(ms: Double, options: Cancel): QueryBuilder[TRecord, TResult] = js.native
   def toSQL(): Sql = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.gatsby.mod
 
-import typingsSlinky.gatsby.AnonComponent
+import typingsSlinky.gatsby.anon.Component
 import typingsSlinky.history.mod.LocationState
 import typingsSlinky.reachRouter.mod.NavigateFn
 import typingsSlinky.reachRouter.mod.WindowLocation
@@ -50,7 +50,7 @@ trait PageProps[DataType, PageContextType] extends js.Object {
     */
   var pageContext: PageContextType = js.native
   /** Holds information about the build process for this component */
-  var pageResources: AnonComponent[DataType, PageContextType] = js.native
+  var pageResources: Component[DataType, PageContextType] = js.native
   /** The path for this current page */
   var path: String = js.native
   /** @deprecated use pageContext instead */
@@ -66,7 +66,7 @@ object PageProps {
     location: WindowLocation[LocationState],
     navigate: NavigateFn,
     pageContext: PageContextType,
-    pageResources: AnonComponent[DataType, PageContextType],
+    pageResources: Component[DataType, PageContextType],
     path: String,
     pathContext: js.Object,
     uri: String
@@ -105,7 +105,7 @@ object PageProps {
         ret
     }
     @scala.inline
-    def withPageResources(value: AnonComponent[DataType, PageContextType]): Self[DataType, PageContextType] = {
+    def withPageResources(value: Component[DataType, PageContextType]): Self[DataType, PageContextType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pageResources")(value.asInstanceOf[js.Any])
         ret
@@ -126,18 +126,6 @@ object PageProps {
     def withUri(value: String): Self[DataType, PageContextType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withChildren(value: scala.Nothing): Self[DataType, PageContextType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self[DataType, PageContextType] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
         ret
     }
   }

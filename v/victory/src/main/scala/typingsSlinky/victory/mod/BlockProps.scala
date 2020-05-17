@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait BlockProps extends js.Object {
+trait BlockProps extends PaddingProps {
   var bottom: js.UndefOr[Double] = js.native
   var left: js.UndefOr[Double] = js.native
   var right: js.UndefOr[Double] = js.native

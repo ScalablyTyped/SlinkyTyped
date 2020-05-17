@@ -1,12 +1,11 @@
 package typingsSlinky.gapiClientCompute.gapi.client.compute
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientCompute.AnonAlt
-import typingsSlinky.gapiClientCompute.AnonFailoverRatio
-import typingsSlinky.gapiClientCompute.AnonFilter
-import typingsSlinky.gapiClientCompute.AnonPrettyPrint
-import typingsSlinky.gapiClientCompute.AnonRegionTargetPool
-import typingsSlinky.gapiClientCompute.AnonTargetPool
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientCompute.anon.Alt
+import typingsSlinky.gapiClientCompute.anon.FailoverRatio
+import typingsSlinky.gapiClientCompute.anon.Filter
+import typingsSlinky.gapiClientCompute.anon.PrettyPrint
+import typingsSlinky.gapiClientCompute.anon.RegionTargetPool
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,43 +13,43 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TargetPoolsResource extends js.Object {
   /** Adds health check URLs to a target pool. */
-  def addHealthCheck(request: AnonTargetPool): Request_[Operation] = js.native
+  def addHealthCheck(request: typingsSlinky.gapiClientCompute.anon.TargetPool): Request[Operation] = js.native
   /** Adds an instance to a target pool. */
-  def addInstance(request: AnonTargetPool): Request_[Operation] = js.native
+  def addInstance(request: typingsSlinky.gapiClientCompute.anon.TargetPool): Request[Operation] = js.native
   /** Retrieves an aggregated list of target pools. */
-  def aggregatedList(request: AnonAlt): Request_[TargetPoolAggregatedList] = js.native
+  def aggregatedList(request: Alt): Request[TargetPoolAggregatedList] = js.native
   /** Deletes the specified target pool. */
-  def delete(request: AnonTargetPool): Request_[Operation] = js.native
+  def delete(request: typingsSlinky.gapiClientCompute.anon.TargetPool): Request[Operation] = js.native
   /** Returns the specified target pool. Get a list of available target pools by making a list() request. */
-  def get(request: AnonRegionTargetPool): Request_[TargetPool] = js.native
+  def get(request: RegionTargetPool): Request[TargetPool] = js.native
   /** Gets the most recent health check results for each IP for the instance that is referenced by the given target pool. */
-  def getHealth(request: AnonRegionTargetPool): Request_[TargetPoolInstanceHealth] = js.native
+  def getHealth(request: RegionTargetPool): Request[TargetPoolInstanceHealth] = js.native
   /** Creates a target pool in the specified project and region using the data included in the request. */
-  def insert(request: AnonPrettyPrint): Request_[Operation] = js.native
+  def insert(request: PrettyPrint): Request[Operation] = js.native
   /** Retrieves a list of target pools available to the specified project and region. */
-  def list(request: AnonFilter): Request_[TargetPoolList] = js.native
+  def list(request: Filter): Request[TargetPoolList] = js.native
   /** Removes health check URL from a target pool. */
-  def removeHealthCheck(request: AnonTargetPool): Request_[Operation] = js.native
+  def removeHealthCheck(request: typingsSlinky.gapiClientCompute.anon.TargetPool): Request[Operation] = js.native
   /** Removes instance URL from a target pool. */
-  def removeInstance(request: AnonTargetPool): Request_[Operation] = js.native
+  def removeInstance(request: typingsSlinky.gapiClientCompute.anon.TargetPool): Request[Operation] = js.native
   /** Changes a backup target pool's configurations. */
-  def setBackup(request: AnonFailoverRatio): Request_[Operation] = js.native
+  def setBackup(request: FailoverRatio): Request[Operation] = js.native
 }
 
 object TargetPoolsResource {
   @scala.inline
   def apply(
-    addHealthCheck: AnonTargetPool => Request_[Operation],
-    addInstance: AnonTargetPool => Request_[Operation],
-    aggregatedList: AnonAlt => Request_[TargetPoolAggregatedList],
-    delete: AnonTargetPool => Request_[Operation],
-    get: AnonRegionTargetPool => Request_[TargetPool],
-    getHealth: AnonRegionTargetPool => Request_[TargetPoolInstanceHealth],
-    insert: AnonPrettyPrint => Request_[Operation],
-    list: AnonFilter => Request_[TargetPoolList],
-    removeHealthCheck: AnonTargetPool => Request_[Operation],
-    removeInstance: AnonTargetPool => Request_[Operation],
-    setBackup: AnonFailoverRatio => Request_[Operation]
+    addHealthCheck: typingsSlinky.gapiClientCompute.anon.TargetPool => Request[Operation],
+    addInstance: typingsSlinky.gapiClientCompute.anon.TargetPool => Request[Operation],
+    aggregatedList: Alt => Request[TargetPoolAggregatedList],
+    delete: typingsSlinky.gapiClientCompute.anon.TargetPool => Request[Operation],
+    get: RegionTargetPool => Request[TargetPool],
+    getHealth: RegionTargetPool => Request[TargetPoolInstanceHealth],
+    insert: PrettyPrint => Request[Operation],
+    list: Filter => Request[TargetPoolList],
+    removeHealthCheck: typingsSlinky.gapiClientCompute.anon.TargetPool => Request[Operation],
+    removeInstance: typingsSlinky.gapiClientCompute.anon.TargetPool => Request[Operation],
+    setBackup: FailoverRatio => Request[Operation]
   ): TargetPoolsResource = {
     val __obj = js.Dynamic.literal(addHealthCheck = js.Any.fromFunction1(addHealthCheck), addInstance = js.Any.fromFunction1(addInstance), aggregatedList = js.Any.fromFunction1(aggregatedList), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), getHealth = js.Any.fromFunction1(getHealth), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), removeHealthCheck = js.Any.fromFunction1(removeHealthCheck), removeInstance = js.Any.fromFunction1(removeInstance), setBackup = js.Any.fromFunction1(setBackup))
     __obj.asInstanceOf[TargetPoolsResource]
@@ -62,67 +61,67 @@ object TargetPoolsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddHealthCheck(value: AnonTargetPool => Request_[Operation]): Self = {
+    def withAddHealthCheck(value: typingsSlinky.gapiClientCompute.anon.TargetPool => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addHealthCheck")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withAddInstance(value: AnonTargetPool => Request_[Operation]): Self = {
+    def withAddInstance(value: typingsSlinky.gapiClientCompute.anon.TargetPool => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addInstance")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withAggregatedList(value: AnonAlt => Request_[TargetPoolAggregatedList]): Self = {
+    def withAggregatedList(value: Alt => Request[TargetPoolAggregatedList]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("aggregatedList")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonTargetPool => Request_[Operation]): Self = {
+    def withDelete(value: typingsSlinky.gapiClientCompute.anon.TargetPool => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonRegionTargetPool => Request_[TargetPool]): Self = {
+    def withGet(value: RegionTargetPool => Request[TargetPool]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGetHealth(value: AnonRegionTargetPool => Request_[TargetPoolInstanceHealth]): Self = {
+    def withGetHealth(value: RegionTargetPool => Request[TargetPoolInstanceHealth]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getHealth")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withInsert(value: AnonPrettyPrint => Request_[Operation]): Self = {
+    def withInsert(value: PrettyPrint => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonFilter => Request_[TargetPoolList]): Self = {
+    def withList(value: Filter => Request[TargetPoolList]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withRemoveHealthCheck(value: AnonTargetPool => Request_[Operation]): Self = {
+    def withRemoveHealthCheck(value: typingsSlinky.gapiClientCompute.anon.TargetPool => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("removeHealthCheck")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withRemoveInstance(value: AnonTargetPool => Request_[Operation]): Self = {
+    def withRemoveInstance(value: typingsSlinky.gapiClientCompute.anon.TargetPool => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("removeInstance")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withSetBackup(value: AnonFailoverRatio => Request_[Operation]): Self = {
+    def withSetBackup(value: FailoverRatio => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("setBackup")(js.Any.fromFunction1(value))
         ret

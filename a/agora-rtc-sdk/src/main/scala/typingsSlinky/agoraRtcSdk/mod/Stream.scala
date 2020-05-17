@@ -1,11 +1,5 @@
 package typingsSlinky.agoraRtcSdk.mod
 
-import typingsSlinky.agoraRtcSdk.AnonCacheResource
-import typingsSlinky.agoraRtcSdk.AnonCycle
-import typingsSlinky.agoraRtcSdk.AnonFit
-import typingsSlinky.agoraRtcSdk.AnonInfo
-import typingsSlinky.agoraRtcSdk.AnonLighteningContrastLevel
-import typingsSlinky.agoraRtcSdk.AnonSoundId
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.`player-status-change`
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.accessAllowed
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.accessDenied
@@ -22,6 +16,12 @@ import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.standard_stereo
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.stopScreenSharing
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.video
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.videoTrackEnded
+import typingsSlinky.agoraRtcSdk.anon.CacheResource
+import typingsSlinky.agoraRtcSdk.anon.Cycle
+import typingsSlinky.agoraRtcSdk.anon.Fit
+import typingsSlinky.agoraRtcSdk.anon.Info
+import typingsSlinky.agoraRtcSdk.anon.LighteningContrastLevel
+import typingsSlinky.agoraRtcSdk.anon.SoundId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -177,7 +177,7 @@ trait Stream extends js.Object {
     * });
     * ```
     */
-  def getEffectsVolume(): js.Array[AnonSoundId] = js.native
+  def getEffectsVolume(): js.Array[SoundId] = js.native
   /**
     * Retrieves the Stream ID
     *
@@ -302,7 +302,7 @@ trait Stream extends js.Object {
     */
   def init(): Unit = js.native
   def init(onSuccess: js.Function0[Unit]): Unit = js.native
-  def init(onSuccess: js.Function0[Unit], onFailure: js.Function1[/* err */ AnonInfo, Unit]): Unit = js.native
+  def init(onSuccess: js.Function0[Unit], onFailure: js.Function1[/* err */ Info, Unit]): Unit = js.native
   /**
     * Returns Whether the Stream is Playing
     *
@@ -482,12 +482,8 @@ trait Stream extends js.Object {
     *  - [[StreamPlayError]] if the playback fails.
     */
   def play(HTMLElementID: String): Unit = js.native
-  def play(HTMLElementID: String, option: AnonFit): Unit = js.native
-  def play(
-    HTMLElementID: String,
-    option: AnonFit,
-    callback: js.Function1[/* err */ Null | StreamPlayError, Unit]
-  ): Unit = js.native
+  def play(HTMLElementID: String, option: Fit): Unit = js.native
+  def play(HTMLElementID: String, option: Fit, callback: js.Function1[/* err */ Null | StreamPlayError, Unit]): Unit = js.native
   /**
     * Plays a specified audio effect.
     *
@@ -532,8 +528,8 @@ trait Stream extends js.Object {
     *
     * ```
     */
-  def playEffect(options: AnonCycle): Unit = js.native
-  def playEffect(options: AnonCycle, callback: js.Function1[/* err */ String | Null, Unit]): Unit = js.native
+  def playEffect(options: Cycle): Unit = js.native
+  def playEffect(options: Cycle, callback: js.Function1[/* err */ String | Null, Unit]): Unit = js.native
   /**
     * Preloads a specified audio effect file into the memory.
     *
@@ -776,7 +772,7 @@ trait Stream extends js.Object {
     *
     * ```
     */
-  def setBeautyEffectOptions(enabled: Boolean, options: AnonLighteningContrastLevel): Unit = js.native
+  def setBeautyEffectOptions(enabled: Boolean, options: LighteningContrastLevel): Unit = js.native
   /**
     * Sets the volume of the audio effects.
     *
@@ -928,8 +924,8 @@ trait Stream extends js.Object {
     *
     * ```
     */
-  def startAudioMixing(options: AnonCacheResource): Unit = js.native
-  def startAudioMixing(options: AnonCacheResource, callback: js.Function1[/* err */ String | Null, Unit]): Unit = js.native
+  def startAudioMixing(options: CacheResource): Unit = js.native
+  def startAudioMixing(options: CacheResource, callback: js.Function1[/* err */ String | Null, Unit]): Unit = js.native
   /**
     * Stops the Audio/Video Stream Playback
     *

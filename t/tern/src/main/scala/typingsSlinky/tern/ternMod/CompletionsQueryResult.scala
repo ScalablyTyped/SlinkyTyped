@@ -1,6 +1,6 @@
 package typingsSlinky.tern.ternMod
 
-import typingsSlinky.tern.AnonDepth
+import typingsSlinky.tern.anon.Depth
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait CompletionsQueryResult extends js.Object {
     * and, depending on the options, `type`, `depth`, `doc`, `url`, and `origin` properties.
     * When none of these options are enabled, the result array will hold plain strings.
     */
-  var completions: js.Array[AnonDepth | String] = js.native
+  var completions: js.Array[Depth | String] = js.native
   /** end offsets of the word that was completed */
   var end: Double | Position = js.native
   /** whether the completion is for a property or a variable */
@@ -26,7 +26,7 @@ trait CompletionsQueryResult extends js.Object {
 object CompletionsQueryResult {
   @scala.inline
   def apply(
-    completions: js.Array[AnonDepth | String],
+    completions: js.Array[Depth | String],
     end: Double | Position,
     isProperty: Boolean,
     start: Double | Position
@@ -41,7 +41,7 @@ object CompletionsQueryResult {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCompletions(value: js.Array[AnonDepth | String]): Self = {
+    def withCompletions(value: js.Array[Depth | String]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("completions")(value.asInstanceOf[js.Any])
         ret

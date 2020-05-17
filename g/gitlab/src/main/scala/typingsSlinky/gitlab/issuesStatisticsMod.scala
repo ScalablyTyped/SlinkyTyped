@@ -1,5 +1,7 @@
 package typingsSlinky.gitlab
 
+import typingsSlinky.gitlab.anon.GroupId
+import typingsSlinky.gitlab.anon.ProjectId
 import typingsSlinky.gitlab.infrastructureMod.BaseService
 import typingsSlinky.gitlab.requestHelperMod.BaseRequestOptions
 import typingsSlinky.gitlab.requestHelperMod.GetResponse
@@ -13,7 +15,7 @@ object issuesStatisticsMod extends js.Object {
   @js.native
   class IssuesStatistics () extends BaseService {
     def all(): js.Promise[GetResponse] = js.native
-    def all(hasProjectIdGroupIdOptions: (AnonProjectId | AnonGroupId | js.Object) with BaseRequestOptions): js.Promise[GetResponse] = js.native
+    def all(hasProjectIdGroupIdOptions: (ProjectId | GroupId | js.Object) with BaseRequestOptions): js.Promise[GetResponse] = js.native
   }
   
 }

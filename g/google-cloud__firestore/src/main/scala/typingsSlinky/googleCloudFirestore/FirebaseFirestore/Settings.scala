@@ -1,7 +1,7 @@
 package typingsSlinky.googleCloudFirestore.FirebaseFirestore
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.googleCloudFirestore.AnonClientemail
+import typingsSlinky.googleCloudFirestore.anon.Clientemail
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait Settings
     * Default Credentials}. If your credentials are stored in a JSON file, you
     * can specify a `keyFilename` instead.
     */
-  var credentials: js.UndefOr[AnonClientemail] = js.native
+  var credentials: js.UndefOr[Clientemail] = js.native
   /** The hostname to connect to. */
   var host: js.UndefOr[String] = js.native
   /**
@@ -62,7 +62,7 @@ object Settings {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCredentials(value: AnonClientemail): Self = {
+    def withCredentials(value: Clientemail): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(value.asInstanceOf[js.Any])
         ret

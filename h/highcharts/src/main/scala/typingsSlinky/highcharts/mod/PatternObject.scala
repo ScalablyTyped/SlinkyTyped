@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PatternObject extends _ColorType {
+trait PatternObject extends ColorType {
   /**
     * Animation options for the image pattern loading.
     */

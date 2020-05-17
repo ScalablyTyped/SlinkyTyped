@@ -1,6 +1,6 @@
 package typingsSlinky.web3Core
 
-import typingsSlinky.web3Core.mod._BlockNumber
+import typingsSlinky.web3Core.mod.BlockNumber
 import typingsSlinky.web3Core.mod.chain
 import typingsSlinky.web3Core.mod.hardfork
 import scala.scalajs.js
@@ -24,13 +24,13 @@ object web3CoreStrings {
   sealed trait dao extends hardfork
   
   @js.native
-  sealed trait earliest extends _BlockNumber
+  sealed trait earliest extends BlockNumber
   
   @js.native
   sealed trait error extends js.Object
   
   @js.native
-  sealed trait genesis extends _BlockNumber
+  sealed trait genesis extends BlockNumber
   
   @js.native
   sealed trait goerli extends chain
@@ -45,13 +45,13 @@ object web3CoreStrings {
   sealed trait kovan extends chain
   
   @js.native
-  sealed trait latest extends _BlockNumber
+  sealed trait latest extends BlockNumber
   
   @js.native
   sealed trait mainnet extends chain
   
   @js.native
-  sealed trait pending extends _BlockNumber
+  sealed trait pending extends BlockNumber
   
   @js.native
   sealed trait petersburg extends hardfork

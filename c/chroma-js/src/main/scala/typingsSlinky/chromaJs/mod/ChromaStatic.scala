@@ -1,7 +1,7 @@
 package typingsSlinky.chromaJs.mod
 
-import typingsSlinky.chromaJs.AnonAccent
-import typingsSlinky.chromaJs.AnonCall
+import typingsSlinky.chromaJs.anon.Accent
+import typingsSlinky.chromaJs.anon.Call
 import typingsSlinky.chromaJs.chromaJsStrings.burn
 import typingsSlinky.chromaJs.chromaJsStrings.cmyk
 import typingsSlinky.chromaJs.chromaJsStrings.darken
@@ -33,7 +33,7 @@ trait ChromaStatic extends js.Object {
     * chroma.brewer is an map of ColorBrewer scales that are included in chroma.js for convenience.
     * chroma.scale uses the colors to construct.
     */
-  var brewer: AnonAccent = js.native
+  var brewer: Accent = js.native
   /**
     * Create a color in the specified color space using a, b and c as values.
     *
@@ -88,7 +88,7 @@ trait ChromaStatic extends js.Object {
     * colors in Lab space. The input range of the function is [0..1].
     * You can convert it to a scale instance by calling <code>chroma.bezier(...).scale()</code>
     */
-  def bezier(colors: js.Array[String]): AnonCall = js.native
+  def bezier(colors: js.Array[String]): Call = js.native
   /**
     * Blends two colors using RGB channel-wise blend functions.
     */

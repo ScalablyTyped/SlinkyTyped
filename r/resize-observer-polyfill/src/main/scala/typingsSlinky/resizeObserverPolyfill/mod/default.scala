@@ -1,7 +1,7 @@
 package typingsSlinky.resizeObserverPolyfill.mod
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.resizeObserverPolyfill.mod._Global_.ResizeObserverCallback
+import typingsSlinky.resizeObserverPolyfill.mod.global.ResizeObserverCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,18 +1,18 @@
 package typingsSlinky.yandexMoneySdk.YandexMoneySDK.ExternalPayment
 
-import typingsSlinky.yandexMoneySdk.AnonDictkey
-import typingsSlinky.yandexMoneySdk.AnonMoneysourcetoken
+import typingsSlinky.yandexMoneySdk.anon.Dictkey
+import typingsSlinky.yandexMoneySdk.anon.Moneysourcetoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ProcessResult extends js.Object {
-  var acs_params: js.UndefOr[AnonDictkey] = js.native
+  var acs_params: js.UndefOr[Dictkey] = js.native
   var acs_uri: js.UndefOr[String] = js.native
   var error: js.UndefOr[String] = js.native
   var invoice_id: js.UndefOr[String] = js.native
-  var money_source: js.UndefOr[AnonMoneysourcetoken] = js.native
+  var money_source: js.UndefOr[Moneysourcetoken] = js.native
   var next_retry: js.UndefOr[Double] = js.native
   var status: String = js.native
 }
@@ -36,7 +36,7 @@ object ProcessResult {
         ret
     }
     @scala.inline
-    def withAcs_params(value: AnonDictkey): Self = {
+    def withAcs_params(value: Dictkey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("acs_params")(value.asInstanceOf[js.Any])
         ret
@@ -84,7 +84,7 @@ object ProcessResult {
         ret
     }
     @scala.inline
-    def withMoney_source(value: AnonMoneysourcetoken): Self = {
+    def withMoney_source(value: Moneysourcetoken): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("money_source")(value.asInstanceOf[js.Any])
         ret

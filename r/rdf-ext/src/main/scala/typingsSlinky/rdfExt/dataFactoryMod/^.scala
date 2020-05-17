@@ -1,7 +1,7 @@
 package typingsSlinky.rdfExt.dataFactoryMod
 
-import typingsSlinky.rdfExt.AnonBlankNode
-import typingsSlinky.rdfExt.TypeofDataFactoryExt
+import typingsSlinky.rdfExt.anon.BlankNode
+import typingsSlinky.rdfExt.anon.TypeofDataFactoryExt
 import typingsSlinky.rdfExt.blankNodeMod.BlankNodeExt
 import typingsSlinky.rdfExt.datasetMod.DatasetExt
 import typingsSlinky.rdfExt.defaultGraphMod.DefaultGraphExt
@@ -30,7 +30,7 @@ class ^ () extends DataFactory[QuadExt, Quad]
 @JSImport("rdf-ext/lib/DataFactory", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
-  var defaults: AnonBlankNode = js.native
+  var defaults: BlankNode = js.native
   var factory: TypeofDataFactoryExt = js.native
   def blankNode(): BlankNodeExt = js.native
   def blankNode(value: String): BlankNodeExt = js.native

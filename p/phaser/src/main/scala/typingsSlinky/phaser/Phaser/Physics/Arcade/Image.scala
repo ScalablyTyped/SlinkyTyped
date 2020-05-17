@@ -12,8 +12,6 @@ import typingsSlinky.phaser.Phaser.Physics.Arcade.Components.Immovable
 import typingsSlinky.phaser.Phaser.Physics.Arcade.Components.Mass
 import typingsSlinky.phaser.Phaser.Physics.Arcade.Components.Size
 import typingsSlinky.phaser.Phaser.Physics.Arcade.Components.Velocity
-import typingsSlinky.phaser.Phaser.Scene
-import typingsSlinky.phaser.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,10 +23,9 @@ import scala.scalajs.js.annotation._
   * The main difference between an Arcade Image and an Arcade Sprite is that you cannot animate an Arcade Image.
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.phaser.Phaser.Types.Physics.Arcade._ArcadeColliderType because Already inherited
-- typingsSlinky.phaser.Phaser.GameObjects.Components.Texture because var conflicts: frame, texture. Inlined  */ @JSGlobal("Phaser.Physics.Arcade.Image")
-@js.native
-class Image protected ()
+- typingsSlinky.phaser.Phaser.Types.Physics.Arcade.ArcadeColliderType because Already inherited
+- typingsSlinky.phaser.Phaser.GameObjects.Components.Texture because var conflicts: frame, texture. Inlined  */ @js.native
+trait Image
   extends typingsSlinky.phaser.Phaser.GameObjects.Image
      with Acceleration
      with Angular
@@ -42,17 +39,6 @@ class Image protected ()
      with Mass
      with Size
      with Velocity {
-  /**
-    * 
-    * @param scene The Scene to which this Game Object belongs. A Game Object can only belong to one Scene at a time.
-    * @param x The horizontal position of this Game Object in the world.
-    * @param y The vertical position of this Game Object in the world.
-    * @param texture The key of the Texture this Game Object will use to render with, as stored in the Texture Manager.
-    * @param frame An optional frame from the Texture this Game Object is rendering with.
-    */
-  def this(scene: Scene, x: Double, y: Double, texture: String) = this()
-  def this(scene: Scene, x: Double, y: Double, texture: String, frame: String) = this()
-  def this(scene: Scene, x: Double, y: Double, texture: String, frame: integer) = this()
   /**
     * Sets the internal size of this Game Object, as used for frame or physics body creation.
     * 

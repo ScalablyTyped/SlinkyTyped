@@ -1,0 +1,158 @@
+package typingsSlinky.zingchart.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Guide extends js.Object {
+  /**
+    * Allows you to set the format for your scale-v values. You can use a combination of text and tokens (%v represents the scale values
+    * ), e.g., “%v°” or “Variable %v”. 'Value: %v'
+    */
+  var format: js.UndefOr[String] = js.native
+  var guide: js.UndefOr[BackgroundcolorItems] = js.native
+  var item: js.UndefOr[Fontstyle] = js.native
+  /**
+    * Allows you to set custom labels for each step along scale-v. Note that if there are more steps than provided labels, the default v
+    * alues will be used for the remaining labels. [...]
+    */
+  var labels: js.UndefOr[js.Any] = js.native
+  var `ref-line`: js.UndefOr[LinestyleLinewidth] = js.native
+  var tick: js.UndefOr[Placement] = js.native
+  var tooltip: js.UndefOr[Fontweight] = js.native
+  /**
+    * Used to set the minimum, maximum, and step scale values on scale-v. E.g., for “values”: “0:100:25”, 0 is the minimum, 100 is the m
+    * aximum, and 25 is the step. "0:100:10" | [1,3,5,7] | ...
+    */
+  var values: js.UndefOr[js.Any] = js.native
+  /**
+    * Used to hide the v-axis. true | false
+    */
+  var visible: js.UndefOr[Boolean] = js.native
+}
+
+object Guide {
+  @scala.inline
+  def apply(): Guide = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[Guide]
+  }
+  @scala.inline
+  implicit class GuideOps[Self <: Guide] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutFormat: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGuide(value: BackgroundcolorItems): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guide")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGuide: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("guide")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withItem(value: Fontstyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutItem: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withLabels(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutLabels: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def `withRef-line`(value: LinestyleLinewidth): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ref-line")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def `withoutRef-line`: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ref-line")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTick(value: Placement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTick: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTooltip(value: Fontweight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTooltip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withValues(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutValues: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutVisible: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

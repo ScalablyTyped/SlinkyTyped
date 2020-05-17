@@ -1,15 +1,15 @@
 package typingsSlinky.asana.mod.resources
 
-import typingsSlinky.asana.AnonAsanaBaseUrl
-import typingsSlinky.asana.AnonData
+import typingsSlinky.asana.anon.AsanaBaseUrl
+import typingsSlinky.asana.anon.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ResourceList[T /* <: Resource */] extends js.Object {
-  var _dispatcher: AnonAsanaBaseUrl = js.native
-  var _response: AnonData[T] = js.native
+  var _dispatcher: AsanaBaseUrl = js.native
+  var _response: Data[T] = js.native
   var data: js.Array[T] = js.native
   /**
     * Get the next page of results in a collection.
@@ -23,8 +23,8 @@ trait ResourceList[T /* <: Resource */] extends js.Object {
 object ResourceList {
   @scala.inline
   def apply[T](
-    _dispatcher: AnonAsanaBaseUrl,
-    _response: AnonData[T],
+    _dispatcher: AsanaBaseUrl,
+    _response: Data[T],
     data: js.Array[T],
     nextPage: () => typingsSlinky.bluebird.mod.^[ResourceList[T] | Null]
   ): ResourceList[T] = {
@@ -38,13 +38,13 @@ object ResourceList {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def with_dispatcher(value: AnonAsanaBaseUrl): Self[T] = {
+    def with_dispatcher(value: AsanaBaseUrl): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("_dispatcher")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def with_response(value: AnonData[T]): Self[T] = {
+    def with_response(value: Data[T]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("_response")(value.asInstanceOf[js.Any])
         ret

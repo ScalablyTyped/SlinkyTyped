@@ -1,8 +1,8 @@
 package typingsSlinky.restify.mod
 
-import typingsSlinky.restify.AnonHeaders
-import typingsSlinky.restify.AnonMessage
-import typingsSlinky.restify.AnonUserAgentRegExp
+import typingsSlinky.restify.anon.Headers
+import typingsSlinky.restify.anon.Message
+import typingsSlinky.restify.anon.UserAgentRegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ object pre extends js.Object {
   /**
     * Automatically reuse incoming request header as the request id.
     */
-  def reqIdHeaders(options: AnonHeaders): RequestHandler = js.native
+  def reqIdHeaders(options: Headers): RequestHandler = js.native
   /**
     * Cleans up duplicate or trailing / on the URL
     */
@@ -31,11 +31,11 @@ object pre extends js.Object {
     * Checks req.urls query params with strict key/val format and rejects non-strict requests with status code 400.
     */
   def strictQueryParams(): RequestHandler = js.native
-  def strictQueryParams(options: AnonMessage): RequestHandler = js.native
+  def strictQueryParams(options: Message): RequestHandler = js.native
   /**
     * Regexp to capture curl user-agents
     */
   def userAgentConnection(): RequestHandler = js.native
-  def userAgentConnection(options: AnonUserAgentRegExp): RequestHandler = js.native
+  def userAgentConnection(options: UserAgentRegExp): RequestHandler = js.native
 }
 

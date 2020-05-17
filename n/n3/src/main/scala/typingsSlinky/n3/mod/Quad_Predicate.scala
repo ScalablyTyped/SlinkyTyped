@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait Quad_Predicate extends js.Object
 
+object Quad_Predicate {
+  @scala.inline
+  implicit def apply(value: NamedNode): Quad_Predicate = value.asInstanceOf[Quad_Predicate]
+  @scala.inline
+  implicit def apply(value: Variable): Quad_Predicate = value.asInstanceOf[Quad_Predicate]
+}
+

@@ -1,7 +1,7 @@
 package typingsSlinky.instagramPrivateApi.mediaConfigureOptionsMod
 
-import typingsSlinky.instagramPrivateApi.AnonCroporiginalsize
-import typingsSlinky.instagramPrivateApi.AnonSourceheight
+import typingsSlinky.instagramPrivateApi.anon.Croporiginalsize
+import typingsSlinky.instagramPrivateApi.anon.Sourceheight
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.`0`
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.`1`
 import scala.scalajs.js
@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MediaConfigureOptions extends js.Object {
   var disable_comments: js.UndefOr[Boolean] = js.native
-  var edits: js.UndefOr[AnonCroporiginalsize] = js.native
-  var extra: js.UndefOr[AnonSourceheight] = js.native
+  var edits: js.UndefOr[Croporiginalsize] = js.native
+  var extra: js.UndefOr[Sourceheight] = js.native
   var geotag_enabled: js.UndefOr[`1` | `0`] = js.native
   var height: js.UndefOr[Double] = js.native
   var media_folder: js.UndefOr[String] = js.native
@@ -58,7 +58,7 @@ object MediaConfigureOptions {
         ret
     }
     @scala.inline
-    def withEdits(value: AnonCroporiginalsize): Self = {
+    def withEdits(value: Croporiginalsize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("edits")(value.asInstanceOf[js.Any])
         ret
@@ -70,7 +70,7 @@ object MediaConfigureOptions {
         ret
     }
     @scala.inline
-    def withExtra(value: AnonSourceheight): Self = {
+    def withExtra(value: Sourceheight): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
         ret

@@ -5,7 +5,7 @@ import typingsSlinky.d3Selection.mod.BaseType
 import typingsSlinky.d3Selection.mod.Selection_
 import typingsSlinky.dagre.mod.Edge
 import typingsSlinky.dagre.mod.graphlib.Graph
-import typingsSlinky.dagreD3.Node
+import typingsSlinky.dagreD3.anon.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

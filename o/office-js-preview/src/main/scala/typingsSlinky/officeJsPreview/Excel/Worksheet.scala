@@ -1,6 +1,5 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.WorksheetData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.WorksheetLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.WorksheetUpdateData
@@ -8,6 +7,7 @@ import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientResult
 import typingsSlinky.officeJsPreview.OfficeExtension.EventHandlers
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.After
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Before
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Beginning
@@ -27,9 +27,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.Worksheet")
 @js.native
-class Worksheet () extends ClientObject {
+trait Worksheet extends ClientObject {
   /**
     *
     * Represents the AutoFilter object of the worksheet. Read-Only.
@@ -482,7 +481,7 @@ class Worksheet () extends ClientObject {
     */
   def load(): Worksheet = js.native
   def load(options: WorksheetLoadOptions): Worksheet = js.native
-  def load(propertyNamesAndPaths: AnonExpand): Worksheet = js.native
+  def load(propertyNamesAndPaths: Expand): Worksheet = js.native
   def load(propertyNames: String): Worksheet = js.native
   def load(propertyNames: js.Array[String]): Worksheet = js.native
   /**

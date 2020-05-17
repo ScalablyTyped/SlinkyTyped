@@ -1,18 +1,18 @@
 organization := "org.scalablytyped.slinky"
 name := "react-html-parser"
-version := "2.0-dt-20190717Z-c49c91"
-scalaVersion := "2.13.1"
+version := "2.0-dt-20190717Z-cf6050"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-fa3762",
-  "org.scalablytyped.slinky" %%% "domhandler" % "2.4-dt-20200225Z-44ed42",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-24495c",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200409Z-47fb9f",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-e9335f",
+  "org.scalablytyped.slinky" %%% "domhandler" % "2.4-dt-20200225Z-7d8404",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-7e1d98",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200409Z-36b705",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

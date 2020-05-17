@@ -6,10 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.os.Handler")
 @js.native
-class Handler_ () extends js.Object {
-  def this(callback: Callback) = this()
+trait Handler_ extends js.Object {
   var mCallback: Callback = js.native
   def dispatchMessage(msg: Message): Unit = js.native
   def handleMessage(msg: Message): Unit = js.native

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 /* Inlined waterline.waterline.BaseAttribute<std.Date> & {  type  :'date'} */
 @js.native
-trait DateAttribute extends _Attribute {
+trait DateAttribute extends Attribute {
   var after: js.UndefOr[AttributeValidation[String]] = js.native
   var alpha: js.UndefOr[AttributeValidation[Boolean]] = js.native
   var alphanumeric: js.UndefOr[AttributeValidation[Boolean]] = js.native

@@ -1,6 +1,7 @@
 package typingsSlinky.autolinker.htmlTagMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.autolinker.autolinkerMod.ReplaceFnReturn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation._
   * @method constructor
   * @param {Object} [cfg] The configuration properties for this class, in an Object (map)
   */
-class HtmlTag () extends js.Object {
+class HtmlTag () extends ReplaceFnReturn {
   def this(cfg: HtmlTagCfg) = this()
   /**
     * @cfg {Object.<String, String>} attrs

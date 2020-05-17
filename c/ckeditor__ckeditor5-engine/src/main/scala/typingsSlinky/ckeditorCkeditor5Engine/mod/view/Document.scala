@@ -1,7 +1,7 @@
 package typingsSlinky.ckeditorCkeditor5Engine.mod.view
 
-import typingsSlinky.ckeditorCkeditor5Engine.Anon0
-import typingsSlinky.ckeditorCkeditor5Engine.AnonPriority
+import typingsSlinky.ckeditorCkeditor5Engine.anon.Priority
+import typingsSlinky.ckeditorCkeditor5Engine.anon.`0`
 import typingsSlinky.ckeditorCkeditor5Utils.mod.Collection
 import typingsSlinky.ckeditorCkeditor5Utils.mod.Emitter
 import typingsSlinky.ckeditorCkeditor5Utils.mod.Observable
@@ -21,9 +21,9 @@ class Document () extends Observable {
   /* protected */ def _callPostFixers(writer: DowncastWriter): Unit = js.native
   def getRoot(): RootEditableElement | Null = js.native
   def getRoot(name: String): RootEditableElement | Null = js.native
-  def listenTo(emitter: Emitter, event: String, callback: js.Function, options: AnonPriority): Unit = js.native
-  def on(event: String, callback: js.Function, options: Anon0): Unit = js.native
-  def once(event: String, callback: js.Function, options: Anon0): Unit = js.native
+  def listenTo(emitter: Emitter, event: String, callback: js.Function, options: Priority): Unit = js.native
+  def on(event: String, callback: js.Function, options: `0`): Unit = js.native
+  def once(event: String, callback: js.Function, options: `0`): Unit = js.native
   def registerPostFixer(postFixer: js.Function1[/* downcastWriter */ DowncastWriter, Boolean]): Unit = js.native
 }
 

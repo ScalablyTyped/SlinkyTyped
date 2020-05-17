@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.reverse
 */
 trait SingleAnimationDirection
-  extends _SingleAnimation
-     with _AnimationDirectionProperty
+  extends SingleAnimation
+     with AnimationDirectionProperty
 
 object SingleAnimationDirection {
   @scala.inline

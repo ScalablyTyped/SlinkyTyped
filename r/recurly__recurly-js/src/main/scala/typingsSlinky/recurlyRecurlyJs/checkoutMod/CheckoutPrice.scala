@@ -1,27 +1,22 @@
 package typingsSlinky.recurlyRecurlyJs.checkoutMod
 
-import typingsSlinky.recurlyRecurlyJs.AnonAdjustments
-import typingsSlinky.recurlyRecurlyJs.AnonCode
+import typingsSlinky.recurlyRecurlyJs.anon.Adjustments
+import typingsSlinky.recurlyRecurlyJs.anon.Code
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CheckoutPrice extends js.Object {
-  var currency: AnonCode = js.native
-  var next: AnonAdjustments = js.native
-  var now: AnonAdjustments = js.native
+  var currency: Code = js.native
+  var next: Adjustments = js.native
+  var now: Adjustments = js.native
   var taxes: js.Array[CheckoutPricingStateTax] = js.native
 }
 
 object CheckoutPrice {
   @scala.inline
-  def apply(
-    currency: AnonCode,
-    next: AnonAdjustments,
-    now: AnonAdjustments,
-    taxes: js.Array[CheckoutPricingStateTax]
-  ): CheckoutPrice = {
+  def apply(currency: Code, next: Adjustments, now: Adjustments, taxes: js.Array[CheckoutPricingStateTax]): CheckoutPrice = {
     val __obj = js.Dynamic.literal(currency = currency.asInstanceOf[js.Any], next = next.asInstanceOf[js.Any], now = now.asInstanceOf[js.Any], taxes = taxes.asInstanceOf[js.Any])
     __obj.asInstanceOf[CheckoutPrice]
   }
@@ -32,19 +27,19 @@ object CheckoutPrice {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCurrency(value: AnonCode): Self = {
+    def withCurrency(value: Code): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withNext(value: AnonAdjustments): Self = {
+    def withNext(value: Adjustments): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withNow(value: AnonAdjustments): Self = {
+    def withNow(value: Adjustments): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("now")(value.asInstanceOf[js.Any])
         ret

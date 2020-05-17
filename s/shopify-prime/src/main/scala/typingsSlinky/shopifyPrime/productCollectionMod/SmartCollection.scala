@@ -1,6 +1,6 @@
 package typingsSlinky.shopifyPrime.productCollectionMod
 
-import typingsSlinky.shopifyPrime.AnonColumn
+import typingsSlinky.shopifyPrime.anon.Column
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -51,7 +51,7 @@ trait SmartCollection extends ProductCollection {
     *
     * tag: product tag.
     */
-  var rules: js.UndefOr[js.Array[AnonColumn]] = js.native
+  var rules: js.UndefOr[js.Array[Column]] = js.native
 }
 
 object SmartCollection {
@@ -79,7 +79,7 @@ object SmartCollection {
         ret
     }
     @scala.inline
-    def withRules(value: js.Array[AnonColumn]): Self = {
+    def withRules(value: js.Array[Column]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rules")(value.asInstanceOf[js.Any])
         ret

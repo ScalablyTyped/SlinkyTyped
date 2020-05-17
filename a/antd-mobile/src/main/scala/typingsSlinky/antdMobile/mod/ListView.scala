@@ -1,7 +1,7 @@
 package typingsSlinky.antdMobile.mod
 
-import typingsSlinky.antdMobile.AnonListPrefixCls
-import typingsSlinky.antdMobile.TypeofIndexedList
+import typingsSlinky.antdMobile.anon.ListPrefixCls
+import typingsSlinky.antdMobile.anon.TypeofIndexedList
 import typingsSlinky.antdMobile.listViewMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,6 +17,6 @@ class ListView () extends default
 object ListView extends js.Object {
   var DataSource: js.Any = js.native
   var IndexedList: TypeofIndexedList = js.native
-  var defaultProps: AnonListPrefixCls = js.native
+  var defaultProps: ListPrefixCls = js.native
 }
 

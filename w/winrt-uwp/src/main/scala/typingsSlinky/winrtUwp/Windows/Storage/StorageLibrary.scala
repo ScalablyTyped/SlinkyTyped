@@ -4,7 +4,6 @@ import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IObservableVector
 import typingsSlinky.winrtUwp.Windows.Foundation.EventHandler
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtUwp.Windows.Foundation.TypedEventHandler
-import typingsSlinky.winrtUwp.Windows.System.User
 import typingsSlinky.winrtUwp.Windows.WinRTEvent
 import typingsSlinky.winrtUwp.winrtUwpStrings.definitionchanged
 import scala.scalajs.js
@@ -12,9 +11,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Lets you add and remove folders from a library like Music or Videos and lets you get a list of folders included in the library. */
-@JSGlobal("Windows.Storage.StorageLibrary")
 @js.native
-abstract class StorageLibrary () extends js.Object {
+trait StorageLibrary extends js.Object {
   /** Gets the folders in the current library. */
   var folders: IObservableVector[StorageFolder] = js.native
   /** Occurs when the list of folders in the current library changes. */
@@ -41,24 +39,5 @@ abstract class StorageLibrary () extends js.Object {
     * @return Returns true if the folder was removed; otherwise false.
     */
   def requestRemoveFolderAsync(folder: StorageFolder): IPromiseWithIAsyncOperation[Boolean] = js.native
-}
-
-/* static members */
-@JSGlobal("Windows.Storage.StorageLibrary")
-@js.native
-object StorageLibrary extends js.Object {
-  /**
-    * Gets the specified library.
-    * @param libraryId A KnownLibraryId value that identifies the library to retrieve, like Music or Videos.
-    * @return When this method completes successfully, it returns the library (type StorageLibrary ).
-    */
-  def getLibraryAsync(libraryId: KnownLibraryId): IPromiseWithIAsyncOperation[StorageLibrary] = js.native
-  /**
-    * Gets the specified library for a User .
-    * @param user The User for which the library is retrieved.
-    * @param libraryId A KnownLibraryId value that identifies the library to retrieve, like Music or Videos.
-    * @return When this method completes successfully, it returns the library (type StorageLibrary ).
-    */
-  def getLibraryForUserAsync(user: User, libraryId: KnownLibraryId): IPromiseWithIAsyncOperation[StorageLibrary] = js.native
 }
 

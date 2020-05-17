@@ -2,6 +2,7 @@ package typingsSlinky.antDesignColors
 
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.antDesignColors.anon.Arraystringprimarystring
 import typingsSlinky.antDesignColors.antDesignColorsNumbers.`0`
 import typingsSlinky.antDesignColors.antDesignColorsNumbers.`1`
 import typingsSlinky.antDesignColors.antDesignColorsNumbers.`2`
@@ -10,8 +11,8 @@ import typingsSlinky.antDesignColors.antDesignColorsNumbers.`4`
 import typingsSlinky.antDesignColors.antDesignColorsNumbers.`5`
 import typingsSlinky.antDesignColors.antDesignColorsNumbers.`6`
 import typingsSlinky.antDesignColors.antDesignColorsNumbers.`7`
-import typingsSlinky.std.AnonCopyWithin
 import typingsSlinky.std.IterableIterator
+import typingsSlinky.std.anon.CopyWithin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +37,7 @@ object mod extends js.Object {
       * when they will be absent when used in a 'with' statement.
       */
     @JSName(js.Symbol.unscopables)
-    var unscopables: js.Function0[AnonCopyWithin] = js.native
+    var unscopables: js.Function0[CopyWithin] = js.native
     /**
       * Combines two or more arrays.
       * @param items Additional items to add to the end of array1.
@@ -483,7 +484,7 @@ object mod extends js.Object {
       * when they will be absent when used in a 'with' statement.
       */
     @JSName(js.Symbol.unscopables)
-    var unscopables: js.Function0[AnonCopyWithin] = js.native
+    var unscopables: js.Function0[CopyWithin] = js.native
     /**
       * Combines two or more arrays.
       * @param items Additional items to add to the end of array1.
@@ -930,7 +931,7 @@ object mod extends js.Object {
       * when they will be absent when used in a 'with' statement.
       */
     @JSName(js.Symbol.unscopables)
-    var unscopables: js.Function0[AnonCopyWithin] = js.native
+    var unscopables: js.Function0[CopyWithin] = js.native
     /**
       * Combines two or more arrays.
       * @param items Additional items to add to the end of array1.
@@ -1377,7 +1378,7 @@ object mod extends js.Object {
       * when they will be absent when used in a 'with' statement.
       */
     @JSName(js.Symbol.unscopables)
-    var unscopables: js.Function0[AnonCopyWithin] = js.native
+    var unscopables: js.Function0[CopyWithin] = js.native
     /**
       * Combines two or more arrays.
       * @param items Additional items to add to the end of array1.
@@ -1824,7 +1825,7 @@ object mod extends js.Object {
       * when they will be absent when used in a 'with' statement.
       */
     @JSName(js.Symbol.unscopables)
-    var unscopables: js.Function0[AnonCopyWithin] = js.native
+    var unscopables: js.Function0[CopyWithin] = js.native
     /**
       * Combines two or more arrays.
       * @param items Additional items to add to the end of array1.
@@ -2271,7 +2272,7 @@ object mod extends js.Object {
       * when they will be absent when used in a 'with' statement.
       */
     @JSName(js.Symbol.unscopables)
-    var unscopables: js.Function0[AnonCopyWithin] = js.native
+    var unscopables: js.Function0[CopyWithin] = js.native
     /**
       * Combines two or more arrays.
       * @param items Additional items to add to the end of array1.
@@ -2718,7 +2719,7 @@ object mod extends js.Object {
       * when they will be absent when used in a 'with' statement.
       */
     @JSName(js.Symbol.unscopables)
-    var unscopables: js.Function0[AnonCopyWithin] = js.native
+    var unscopables: js.Function0[CopyWithin] = js.native
     /**
       * Combines two or more arrays.
       * @param items Additional items to add to the end of array1.
@@ -3165,7 +3166,7 @@ object mod extends js.Object {
       * when they will be absent when used in a 'with' statement.
       */
     @JSName(js.Symbol.unscopables)
-    var unscopables: js.Function0[AnonCopyWithin] = js.native
+    var unscopables: js.Function0[CopyWithin] = js.native
     /**
       * Combines two or more arrays.
       * @param items Additional items to add to the end of array1.
@@ -3612,7 +3613,7 @@ object mod extends js.Object {
       * when they will be absent when used in a 'with' statement.
       */
     @JSName(js.Symbol.unscopables)
-    var unscopables: js.Function0[AnonCopyWithin] = js.native
+    var unscopables: js.Function0[CopyWithin] = js.native
     /**
       * Combines two or more arrays.
       * @param items Additional items to add to the end of array1.
@@ -4062,7 +4063,7 @@ object mod extends js.Object {
       * when they will be absent when used in a 'with' statement.
       */
     @JSName(js.Symbol.unscopables)
-    var unscopables: js.Function0[AnonCopyWithin] = js.native
+    var unscopables: js.Function0[CopyWithin] = js.native
     /**
       * Combines two or more arrays.
       * @param items Additional items to add to the end of array1.
@@ -4509,7 +4510,7 @@ object mod extends js.Object {
       * when they will be absent when used in a 'with' statement.
       */
     @JSName(js.Symbol.unscopables)
-    var unscopables: js.Function0[AnonCopyWithin] = js.native
+    var unscopables: js.Function0[CopyWithin] = js.native
     /**
       * Combines two or more arrays.
       * @param items Additional items to add to the end of array1.
@@ -4956,7 +4957,7 @@ object mod extends js.Object {
       * when they will be absent when used in a 'with' statement.
       */
     @JSName(js.Symbol.unscopables)
-    var unscopables: js.Function0[AnonCopyWithin] = js.native
+    var unscopables: js.Function0[CopyWithin] = js.native
     /**
       * Combines two or more arrays.
       * @param items Additional items to add to the end of array1.
@@ -5403,7 +5404,7 @@ object mod extends js.Object {
       * when they will be absent when used in a 'with' statement.
       */
     @JSName(js.Symbol.unscopables)
-    var unscopables: js.Function0[AnonCopyWithin] = js.native
+    var unscopables: js.Function0[CopyWithin] = js.native
     /**
       * Combines two or more arrays.
       * @param items Additional items to add to the end of array1.

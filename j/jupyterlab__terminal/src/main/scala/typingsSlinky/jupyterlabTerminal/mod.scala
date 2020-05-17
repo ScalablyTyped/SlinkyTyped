@@ -1,6 +1,7 @@
 package typingsSlinky.jupyterlabTerminal
 
 import typingsSlinky.jupyterlabServices.terminalTerminalMod.TerminalSession.ISession
+import typingsSlinky.jupyterlabTerminal.anon.PartialIOptions
 import typingsSlinky.jupyterlabTerminal.tokensMod.ITerminal.IOptions
 import typingsSlinky.phosphorCoreutils.mod.Token
 import scala.scalajs.js

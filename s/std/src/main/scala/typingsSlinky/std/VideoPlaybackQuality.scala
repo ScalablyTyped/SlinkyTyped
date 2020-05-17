@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +14,55 @@ trait VideoPlaybackQuality extends js.Object {
   val totalVideoFrames: Double = js.native
 }
 
-@JSGlobal("VideoPlaybackQuality")
-@js.native
-object VideoPlaybackQuality extends Instantiable0[VideoPlaybackQuality]
+object VideoPlaybackQuality {
+  @scala.inline
+  def apply(
+    corruptedVideoFrames: Double,
+    creationTime: Double,
+    droppedVideoFrames: Double,
+    totalFrameDelay: Double,
+    totalVideoFrames: Double
+  ): VideoPlaybackQuality = {
+    val __obj = js.Dynamic.literal(corruptedVideoFrames = corruptedVideoFrames.asInstanceOf[js.Any], creationTime = creationTime.asInstanceOf[js.Any], droppedVideoFrames = droppedVideoFrames.asInstanceOf[js.Any], totalFrameDelay = totalFrameDelay.asInstanceOf[js.Any], totalVideoFrames = totalVideoFrames.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VideoPlaybackQuality]
+  }
+  @scala.inline
+  implicit class VideoPlaybackQualityOps[Self <: VideoPlaybackQuality] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCorruptedVideoFrames(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("corruptedVideoFrames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreationTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creationTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDroppedVideoFrames(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("droppedVideoFrames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTotalFrameDelay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalFrameDelay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTotalVideoFrames(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalVideoFrames")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

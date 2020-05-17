@@ -5,7 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ValueValidatorConfig[T] extends SimpleValidatorConfig {
+trait ValueValidatorConfig[T]
+  extends SimpleValidatorConfig
+     with ValueValidator[T] {
   var value: T = js.native
 }
 

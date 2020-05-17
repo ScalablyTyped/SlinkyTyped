@@ -9,9 +9,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides access to application resource maps and more advanced resource functionality. */
-@JSGlobal("Windows.ApplicationModel.Resources.Core.ResourceManager")
 @js.native
-abstract class ResourceManager () extends js.Object {
+trait ResourceManager extends js.Object {
   /** Gets a map of ResourceMap objects typically associated with the app packages, indexed by package name. */
   var allResourceMaps: IMapView[String, ResourceMap] = js.native
   /** Gets the default ResourceContext for the currently running application. Unless explicitly overridden, the default ResourceContext is used to determine the most appropriate representation of any given named resource. */
@@ -44,17 +43,69 @@ abstract class ResourceManager () extends js.Object {
   def unloadPriFiles(files: IIterable[IStorageFile]): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.ApplicationModel.Resources.Core.ResourceManager")
-@js.native
-object ResourceManager extends js.Object {
-  /** Gets the ResourceManager for the currently running application. */
-  var current: ResourceManager = js.native
-  /**
-    * Determines whether a supplied string matches the resource reference format (an ms-resource string URI identifier).
-    * @param resourceReference The string you want to match.
-    * @return TRUE if the string matches.
-    */
-  def isResourceReference(resourceReference: String): Boolean = js.native
+object ResourceManager {
+  @scala.inline
+  def apply(
+    allResourceMaps: IMapView[String, ResourceMap],
+    defaultContext: ResourceContext,
+    getAllNamedResourcesForPackage: (String, ResourceLayoutInfo) => IVectorView[NamedResource],
+    getAllSubtreesForPackage: (String, ResourceLayoutInfo) => IVectorView[ResourceMap],
+    loadPriFiles: IIterable[IStorageFile] => Unit,
+    mainResourceMap: ResourceMap,
+    unloadPriFiles: IIterable[IStorageFile] => Unit
+  ): ResourceManager = {
+    val __obj = js.Dynamic.literal(allResourceMaps = allResourceMaps.asInstanceOf[js.Any], defaultContext = defaultContext.asInstanceOf[js.Any], getAllNamedResourcesForPackage = js.Any.fromFunction2(getAllNamedResourcesForPackage), getAllSubtreesForPackage = js.Any.fromFunction2(getAllSubtreesForPackage), loadPriFiles = js.Any.fromFunction1(loadPriFiles), mainResourceMap = mainResourceMap.asInstanceOf[js.Any], unloadPriFiles = js.Any.fromFunction1(unloadPriFiles))
+    __obj.asInstanceOf[ResourceManager]
+  }
+  @scala.inline
+  implicit class ResourceManagerOps[Self <: ResourceManager] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllResourceMaps(value: IMapView[String, ResourceMap]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allResourceMaps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultContext(value: ResourceContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetAllNamedResourcesForPackage(value: (String, ResourceLayoutInfo) => IVectorView[NamedResource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllNamedResourcesForPackage")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetAllSubtreesForPackage(value: (String, ResourceLayoutInfo) => IVectorView[ResourceMap]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllSubtreesForPackage")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withLoadPriFiles(value: IIterable[IStorageFile] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadPriFiles")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMainResourceMap(value: ResourceMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mainResourceMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnloadPriFiles(value: IIterable[IStorageFile] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unloadPriFiles")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

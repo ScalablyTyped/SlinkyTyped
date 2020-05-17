@@ -13,5 +13,5 @@ import scala.scalajs.js.annotation._
 @JSImport("mocha", "Hook")
 @js.native
 class Hook ()
-  extends typingsSlinky.cypress.Mocha_.Hook
+  extends typingsSlinky.cypress.Mocha.Hook
 

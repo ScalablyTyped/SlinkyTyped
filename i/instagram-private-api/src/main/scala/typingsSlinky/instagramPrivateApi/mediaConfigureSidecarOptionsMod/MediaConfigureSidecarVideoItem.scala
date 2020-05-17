@@ -1,6 +1,6 @@
 package typingsSlinky.instagramPrivateApi.mediaConfigureSidecarOptionsMod
 
-import typingsSlinky.instagramPrivateApi.AnonLength
+import typingsSlinky.instagramPrivateApi.anon.Length
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MediaConfigureSidecarVideoItem extends MediaConfigureSidecarItem {
   var audio_muted: js.UndefOr[String] = js.native
-  var clips: js.UndefOr[js.Array[AnonLength] | String] = js.native
+  var clips: js.UndefOr[js.Array[Length] | String] = js.native
   var date_time_original: js.UndefOr[String] = js.native
   var filter_type: js.UndefOr[String] = js.native
   var length: String = js.native
@@ -47,7 +47,7 @@ object MediaConfigureSidecarVideoItem {
         ret
     }
     @scala.inline
-    def withClips(value: js.Array[AnonLength] | String): Self = {
+    def withClips(value: js.Array[Length] | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("clips")(value.asInstanceOf[js.Any])
         ret

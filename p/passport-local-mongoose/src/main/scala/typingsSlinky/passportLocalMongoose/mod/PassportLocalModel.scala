@@ -1,7 +1,7 @@
 package typingsSlinky.passportLocalMongoose.mod
 
+import org.scalajs.dom.raw.Document
 import typingsSlinky.passportLocal.mod.Strategy
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 // statics
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
 - Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Model<T> * / any */ @js.native
-trait PassportLocalModel[T /* <: Document_ */] extends js.Object {
+trait PassportLocalModel[T /* <: Document */] extends js.Object {
   def authenticate(): AuthenticateMethod[T] = js.native
   def createStrategy(): Strategy = js.native
   def deserializeUser(): js.Function2[

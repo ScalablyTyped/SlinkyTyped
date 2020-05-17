@@ -1,6 +1,7 @@
 package typingsSlinky.wiiu
 
 import org.scalajs.dom.raw.CustomEvent
+import typingsSlinky.wiiu.anon.Typeofwiiu
 import typingsSlinky.wiiu.wiiuStrings.wiiu_imageview_change_content
 import typingsSlinky.wiiu.wiiuStrings.wiiu_imageview_change_viewmode
 import typingsSlinky.wiiu.wiiuStrings.wiiu_imageview_end

@@ -3,7 +3,7 @@ package typingsSlinky.reactChatWidget.components
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactChatWidget.AnonAutofocus
+import typingsSlinky.reactChatWidget.anon.Autofocus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,11 +45,11 @@ object Widget {
     def titleAvatar(value: String): this.type = set("titleAvatar", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AnonAutofocus): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: Autofocus): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(handleNewUserMessage: String => Unit): Builder = {
     val __props = js.Dynamic.literal(handleNewUserMessage = js.Any.fromFunction1(handleNewUserMessage))
-    new Builder(js.Array(this.component, __props.asInstanceOf[AnonAutofocus]))
+    new Builder(js.Array(this.component, __props.asInstanceOf[Autofocus]))
   }
 }
 

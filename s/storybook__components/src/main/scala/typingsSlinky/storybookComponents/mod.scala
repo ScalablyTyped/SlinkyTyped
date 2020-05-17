@@ -175,6 +175,17 @@ import typingsSlinky.std.SVGFEDropShadowElement
 import typingsSlinky.std.SVGForeignObjectElement
 import typingsSlinky.storybookComponents.actionBarMod.ActionBarProps
 import typingsSlinky.storybookComponents.addonPanelMod.AddonPanelProps
+import typingsSlinky.storybookComponents.anon.IsLink
+import typingsSlinky.storybookComponents.anon.PartialButtonPropsRefAttr
+import typingsSlinky.storybookComponents.anon.PartialDetailedHTMLPropsF
+import typingsSlinky.storybookComponents.anon.PickDetailedHTMLPropsForm
+import typingsSlinky.storybookComponents.anon.PickDetailedHTMLPropsHTML
+import typingsSlinky.storybookComponents.anon.PropsWithChildrenDetailed
+import typingsSlinky.storybookComponents.anon.StyledComponentPickPickHT
+import typingsSlinky.storybookComponents.anon.StyledComponentPickPickTe
+import typingsSlinky.storybookComponents.anon.StyledComponentPickSelect
+import typingsSlinky.storybookComponents.anon.WeakValidationMapButtonPr
+import typingsSlinky.storybookComponents.anon.WeakValidationMapDetailed
 import typingsSlinky.storybookComponents.badgeMod.BadgeProps
 import typingsSlinky.storybookComponents.barMod.FlexBarProps
 import typingsSlinky.storybookComponents.buttonButtonMod.ButtonProps
@@ -490,7 +501,7 @@ object mod extends js.Object {
   object Button extends js.Object {
     @JSName("$$typeof")
     val DollarDollartypeof: js.Symbol = js.native
-    var defaultProps: js.UndefOr[AnonIsLink | PartialButtonPropsRefAttr] = js.native
+    var defaultProps: js.UndefOr[IsLink | PartialButtonPropsRefAttr] = js.native
     var displayName: js.UndefOr[String] = js.native
     var propTypes: js.UndefOr[WeakValidationMapButtonPr] = js.native
     /**

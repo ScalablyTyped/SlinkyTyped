@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientCompute.gapi.client.compute
 
-import typingsSlinky.gapiClientCompute.AnonCode
+import typingsSlinky.gapiClientCompute.anon.Code
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +23,7 @@ trait AddressAggregatedList extends js.Object {
   /** [Output Only] Server-defined URL for this resource. */
   var selfLink: js.UndefOr[String] = js.native
   /** [Output Only] Informational warning message. */
-  var warning: js.UndefOr[AnonCode] = js.native
+  var warning: js.UndefOr[Code] = js.native
 }
 
 object AddressAggregatedList {
@@ -99,7 +99,7 @@ object AddressAggregatedList {
         ret
     }
     @scala.inline
-    def withWarning(value: AnonCode): Self = {
+    def withWarning(value: Code): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
         ret

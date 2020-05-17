@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.ApplicationModel.DataTransfer.DataTransferManager")
 @js.native
-class DataTransferManager () extends IDataTransferManager
+trait DataTransferManager extends IDataTransferManager
 
-/* static members */
-@JSGlobal("Windows.ApplicationModel.DataTransfer.DataTransferManager")
-@js.native
-object DataTransferManager extends js.Object {
-  def getForCurrentView(): DataTransferManager = js.native
-  def showShareUI(): Unit = js.native
+object DataTransferManager {
+  @scala.inline
+  def apply(ondatarequested: js.Any, ontargetapplicationchosen: js.Any): DataTransferManager = {
+    val __obj = js.Dynamic.literal(ondatarequested = ondatarequested.asInstanceOf[js.Any], ontargetapplicationchosen = ontargetapplicationchosen.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DataTransferManager]
+  }
 }
 

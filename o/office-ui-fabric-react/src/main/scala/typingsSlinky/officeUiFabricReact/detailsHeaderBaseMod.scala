@@ -1,5 +1,6 @@
 package typingsSlinky.officeUiFabricReact
 
+import typingsSlinky.officeUiFabricReact.anon.CollapseAllVisibility
 import typingsSlinky.officeUiFabricReact.detailsHeaderTypesMod.IDetailsHeader
 import typingsSlinky.officeUiFabricReact.detailsHeaderTypesMod.IDetailsHeaderBaseProps
 import typingsSlinky.officeUiFabricReact.detailsHeaderTypesMod.IDetailsHeaderState
@@ -100,7 +101,7 @@ object detailsHeaderBaseMod extends js.Object {
   /* static members */
   @js.native
   object DetailsHeaderBase extends js.Object {
-    var defaultProps: AnonCollapseAllVisibility = js.native
+    var defaultProps: CollapseAllVisibility = js.native
   }
   
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.ddTrace.mod.plugins
 
-import typingsSlinky.ddTrace.Anon0
+import typingsSlinky.ddTrace.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait HttpClient extends Http_ {
   /**
     * Hooks to run before spans are finished.
     */
-  var hooks: js.UndefOr[Anon0] = js.native
+  var hooks: js.UndefOr[`0`] = js.native
   /**
     * Use the remote endpoint host as the service name instead of the default.
     *
@@ -33,7 +33,7 @@ object HttpClient {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withHooks(value: Anon0): Self = {
+    def withHooks(value: `0`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hooks")(value.asInstanceOf[js.Any])
         ret

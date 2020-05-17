@@ -1,7 +1,7 @@
 package typingsSlinky.keya.storeMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.keya.AnonKey
+import typingsSlinky.keya.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,10 +11,10 @@ trait Store extends js.Object {
   var name: String = js.native
   var store: StringDictionary[js.Any] = js.native
   var version: Double = js.native
-  def all(): js.Promise[js.Array[AnonKey]] = js.native
+  def all(): js.Promise[js.Array[Key]] = js.native
   def clear(): js.Promise[Unit] = js.native
   def delete(key: String): js.Promise[Boolean] = js.native
-  def find(finder: js.Function2[/* value */ js.Any, /* name */ String, js.Promise[Boolean] | Boolean]): js.Promise[js.Array[AnonKey]] = js.native
+  def find(finder: js.Function2[/* value */ js.Any, /* name */ String, js.Promise[Boolean] | Boolean]): js.Promise[js.Array[Key]] = js.native
   def get(key: String): js.Promise[_] = js.native
   def initalize(): js.Promise[Unit] = js.native
   def load(): js.Promise[Unit] = js.native
@@ -25,10 +25,10 @@ trait Store extends js.Object {
 object Store {
   @scala.inline
   def apply(
-    all: () => js.Promise[js.Array[AnonKey]],
+    all: () => js.Promise[js.Array[Key]],
     clear: () => js.Promise[Unit],
     delete: String => js.Promise[Boolean],
-    find: js.Function2[/* value */ js.Any, /* name */ String, js.Promise[Boolean] | Boolean] => js.Promise[js.Array[AnonKey]],
+    find: js.Function2[/* value */ js.Any, /* name */ String, js.Promise[Boolean] | Boolean] => js.Promise[js.Array[Key]],
     get: String => js.Promise[_],
     initalize: () => js.Promise[Unit],
     load: () => js.Promise[Unit],
@@ -48,7 +48,7 @@ object Store {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAll(value: () => js.Promise[js.Array[AnonKey]]): Self = {
+    def withAll(value: () => js.Promise[js.Array[Key]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("all")(js.Any.fromFunction0(value))
         ret
@@ -67,7 +67,7 @@ object Store {
     }
     @scala.inline
     def withFind(
-      value: js.Function2[/* value */ js.Any, /* name */ String, js.Promise[Boolean] | Boolean] => js.Promise[js.Array[AnonKey]]
+      value: js.Function2[/* value */ js.Any, /* name */ String, js.Promise[Boolean] | Boolean] => js.Promise[js.Array[Key]]
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("find")(js.Any.fromFunction1(value))

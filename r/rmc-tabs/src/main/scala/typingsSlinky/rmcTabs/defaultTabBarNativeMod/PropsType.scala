@@ -1,6 +1,6 @@
 package typingsSlinky.rmcTabs.defaultTabBarNativeMod
 
-import typingsSlinky.rmcTabs.AnonTabBar
+import typingsSlinky.rmcTabs.anon.TabBar
 import typingsSlinky.rmcTabs.modelsMod.Models.TabData
 import typingsSlinky.rmcTabs.propsTypeMod.TabBarPropsType
 import scala.scalajs.js
@@ -13,7 +13,7 @@ trait PropsType extends TabBarPropsType {
   var dynamicTabUnderlineWidth: js.UndefOr[Boolean] = js.native
   var keyboardShouldPersistTaps: js.UndefOr[Boolean] = js.native
   var scrollValue: js.UndefOr[js.Any] = js.native
-  var styles: js.UndefOr[AnonTabBar] = js.native
+  var styles: js.UndefOr[TabBar] = js.native
   var tabStyle: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RN.ViewStyle */ js.Any
   ] = js.native
@@ -77,7 +77,7 @@ object PropsType {
         ret
     }
     @scala.inline
-    def withStyles(value: AnonTabBar): Self = {
+    def withStyles(value: TabBar): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.vexflow.mod.Flow
 
-import typingsSlinky.vexflow.AnonFirstindices
+import typingsSlinky.vexflow.anon.Firstindices
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class StaveLine protected ()
   extends typingsSlinky.vexflow.Vex.Flow.StaveLine {
-  def this(notes: AnonFirstindices) = this()
+  def this(notes: Firstindices) = this()
 }
 

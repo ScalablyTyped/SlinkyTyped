@@ -49,10 +49,8 @@ import scala.scalajs.js.annotation._
   * @class
   * @memberof PIXI
   */
-@JSGlobal("PIXI.Runner")
 @js.native
-class Runner protected () extends js.Object {
-  def this(name: String) = this()
+trait Runner extends js.Object {
   /**
     * `true` if there are no this Runner contains no listeners
     *
@@ -128,5 +126,92 @@ class Runner protected () extends js.Object {
     * @see PIXI.Runner#emit
     */
   def run(): Unit = js.native
+}
+
+object Runner {
+  @scala.inline
+  def apply(
+    add: js.Any => Runner,
+    contains: js.Any => Unit,
+    destroy: () => Unit,
+    dispatch: () => Unit,
+    emit: /* repeated */ js.Any => Runner,
+    empty: Boolean,
+    name: String,
+    remove: js.Any => Runner,
+    removeAll: () => Runner,
+    run: () => Unit
+  ): Runner = {
+    val __obj = js.Dynamic.literal(add = js.Any.fromFunction1(add), contains = js.Any.fromFunction1(contains), destroy = js.Any.fromFunction0(destroy), dispatch = js.Any.fromFunction0(dispatch), emit = js.Any.fromFunction1(emit), empty = empty.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], remove = js.Any.fromFunction1(remove), removeAll = js.Any.fromFunction0(removeAll), run = js.Any.fromFunction0(run))
+    __obj.asInstanceOf[Runner]
+  }
+  @scala.inline
+  implicit class RunnerOps[Self <: Runner] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdd(value: js.Any => Runner): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withContains(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDestroy(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDispatch(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispatch")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withEmit(value: /* repeated */ js.Any => Runner): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("emit")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEmpty(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("empty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemove(value: js.Any => Runner): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveAll(value: () => Runner): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAll")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRun(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("run")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

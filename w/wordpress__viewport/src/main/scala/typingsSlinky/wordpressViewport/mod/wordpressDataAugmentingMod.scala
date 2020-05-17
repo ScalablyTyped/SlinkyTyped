@@ -1,7 +1,7 @@
 package typingsSlinky.wordpressViewport.mod
 
-import typingsSlinky.wordpressViewport.TypeofimportedActions
-import typingsSlinky.wordpressViewport.TypeofimportedSelectors
+import typingsSlinky.wordpressViewport.anon.TypeofimportedActions
+import typingsSlinky.wordpressViewport.anon.TypeofimportedSelectors
 import typingsSlinky.wordpressViewport.wordpressViewportStrings.coreSlashviewport
 import scala.scalajs.js
 import scala.scalajs.js.`|`

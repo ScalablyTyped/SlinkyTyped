@@ -1,5 +1,6 @@
 package typingsSlinky.tensorflowTfjsCore
 
+import typingsSlinky.tensorflowTfjsCore.anon.Data
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TypedArray
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensor
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensorMap
@@ -20,10 +21,10 @@ object ioUtilsMod extends js.Object {
   def concatenateArrayBuffers(buffers: js.Array[js.typedarray.ArrayBuffer]): js.typedarray.ArrayBuffer = js.native
   def concatenateTypedArrays(xs: js.Array[TypedArray]): js.typedarray.ArrayBuffer = js.native
   def decodeWeights(buffer: js.typedarray.ArrayBuffer, specs: js.Array[WeightsManifestEntry]): NamedTensorMap = js.native
-  def encodeWeights(tensors: js.Array[NamedTensor]): js.Promise[AnonData] = js.native
-  def encodeWeights(tensors: js.Array[NamedTensor], group: WeightGroup): js.Promise[AnonData] = js.native
-  def encodeWeights(tensors: NamedTensorMap): js.Promise[AnonData] = js.native
-  def encodeWeights(tensors: NamedTensorMap, group: WeightGroup): js.Promise[AnonData] = js.native
+  def encodeWeights(tensors: js.Array[NamedTensor]): js.Promise[Data] = js.native
+  def encodeWeights(tensors: js.Array[NamedTensor], group: WeightGroup): js.Promise[Data] = js.native
+  def encodeWeights(tensors: NamedTensorMap): js.Promise[Data] = js.native
+  def encodeWeights(tensors: NamedTensorMap, group: WeightGroup): js.Promise[Data] = js.native
   def getModelArtifactsInfoForJSON(modelArtifacts: ModelArtifacts): ModelArtifactsInfo = js.native
   def stringByteLength(str: String): Double = js.native
 }

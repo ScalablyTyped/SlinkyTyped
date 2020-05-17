@@ -1,0 +1,50 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.drawing
+
+import typingsSlinky.activexLibreoffice.`type`
+import typingsSlinky.activexLibreoffice.com_.sun.star.awt.Point
+import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** @deprecated Deprecated */
+@js.native
+trait XConnectableShape extends XInterface {
+  def canConnect(nPos: Point, bCreateGluePoint: Boolean, nMaxDist: Double): Boolean = js.native
+  def doConnect(nPos: Point, bCreateGluePoint: Boolean, nMaxDist: Double): Boolean = js.native
+}
+
+object XConnectableShape {
+  @scala.inline
+  def apply(
+    acquire: () => Unit,
+    canConnect: (Point, Boolean, Double) => Boolean,
+    doConnect: (Point, Boolean, Double) => Boolean,
+    queryInterface: `type` => js.Any,
+    release: () => Unit
+  ): XConnectableShape = {
+    val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), canConnect = js.Any.fromFunction3(canConnect), doConnect = js.Any.fromFunction3(doConnect), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
+    __obj.asInstanceOf[XConnectableShape]
+  }
+  @scala.inline
+  implicit class XConnectableShapeOps[Self <: XConnectableShape] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCanConnect(value: (Point, Boolean, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canConnect")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withDoConnect(value: (Point, Boolean, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("doConnect")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
+}
+

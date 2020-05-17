@@ -1,11 +1,11 @@
 package typingsSlinky.recurlyRecurlyJs.recurlyMod
 
 import org.scalajs.dom.raw.HTMLFormElement
-import typingsSlinky.recurlyRecurlyJs.AnonThreeDSecure
 import typingsSlinky.recurlyRecurlyJs.`3dSecureMod`.Risk
 import typingsSlinky.recurlyRecurlyJs.adyenMod.Adyen
 import typingsSlinky.recurlyRecurlyJs.adyenMod.AdyenInstance
 import typingsSlinky.recurlyRecurlyJs.adyenMod.AdyenOptions
+import typingsSlinky.recurlyRecurlyJs.anon.ThreeDSecure
 import typingsSlinky.recurlyRecurlyJs.applePayMod.ApplePay
 import typingsSlinky.recurlyRecurlyJs.applePayMod.ApplePayConfig
 import typingsSlinky.recurlyRecurlyJs.applePayMod.ApplePayInstance
@@ -56,7 +56,7 @@ trait Recurly extends Emitter[RecurlyEvent] {
   def Elements(): ElementsInstance = js.native
   def PayPal(): PayPalInstance = js.native
   def PayPal(config: PayPalConfig): PayPalInstance = js.native
-  def Risk(): AnonThreeDSecure = js.native
+  def Risk(): ThreeDSecure = js.native
   def configure(recurlyConfig: String): Unit = js.native
   def configure(recurlyConfig: RecurlyOptions): Unit = js.native
   def giftCard(giftCardOptions: GiftCardOptions, done: Done): Unit = js.native

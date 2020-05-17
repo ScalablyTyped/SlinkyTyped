@@ -1,6 +1,9 @@
 package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.officeUiFabricReact.anon.PartialIToggleState
+import typingsSlinky.officeUiFabricReact.anon.ReadonlyIToggleProps
+import typingsSlinky.officeUiFabricReact.anon.ReadonlyIToggleState
 import typingsSlinky.officeUiFabricReact.toggleTypesMod.IToggleProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

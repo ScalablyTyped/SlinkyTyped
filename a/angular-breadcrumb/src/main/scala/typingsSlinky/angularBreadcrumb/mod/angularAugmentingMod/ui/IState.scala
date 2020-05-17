@@ -1,13 +1,13 @@
 package typingsSlinky.angularBreadcrumb.mod.angularAugmentingMod.ui
 
-import typingsSlinky.angularBreadcrumb.AnonLabel
+import typingsSlinky.angularBreadcrumb.anon.Label
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IState extends js.Object {
-  var ncyBreadcrumb: js.UndefOr[AnonLabel] = js.native
+  var ncyBreadcrumb: js.UndefOr[Label] = js.native
   var ncyBreadcrumbLabel: js.UndefOr[String] = js.native
   var ncyBreadcrumbLink: js.UndefOr[String] = js.native
 }
@@ -25,7 +25,7 @@ object IState {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withNcyBreadcrumb(value: AnonLabel): Self = {
+    def withNcyBreadcrumb(value: Label): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ncyBreadcrumb")(value.asInstanceOf[js.Any])
         ret

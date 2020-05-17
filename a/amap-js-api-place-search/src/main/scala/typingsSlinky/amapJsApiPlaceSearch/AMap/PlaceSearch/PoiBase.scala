@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PoiBase extends js.Object {
+trait PoiBase extends Poi {
   /**
     * 地址
     */

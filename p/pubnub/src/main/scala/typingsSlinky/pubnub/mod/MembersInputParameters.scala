@@ -1,6 +1,6 @@
 package typingsSlinky.pubnub.mod
 
-import typingsSlinky.pubnub.AnonCustom
+import typingsSlinky.pubnub.anon.Custom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MembersInputParameters extends GetObjectsParameters {
   var spaceId: String = js.native
-  var users: js.Array[AnonCustom] = js.native
+  var users: js.Array[Custom] = js.native
 }
 
 object MembersInputParameters {
   @scala.inline
-  def apply(spaceId: String, users: js.Array[AnonCustom]): MembersInputParameters = {
+  def apply(spaceId: String, users: js.Array[Custom]): MembersInputParameters = {
     val __obj = js.Dynamic.literal(spaceId = spaceId.asInstanceOf[js.Any], users = users.asInstanceOf[js.Any])
     __obj.asInstanceOf[MembersInputParameters]
   }
@@ -30,7 +30,7 @@ object MembersInputParameters {
         ret
     }
     @scala.inline
-    def withUsers(value: js.Array[AnonCustom]): Self = {
+    def withUsers(value: js.Array[Custom]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("users")(value.asInstanceOf[js.Any])
         ret

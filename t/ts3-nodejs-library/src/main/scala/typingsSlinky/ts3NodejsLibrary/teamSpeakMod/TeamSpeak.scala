@@ -2,12 +2,12 @@ package typingsSlinky.ts3NodejsLibrary.teamSpeakMod
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.ts3NodejsLibrary.PartialChannelGroupList
-import typingsSlinky.ts3NodejsLibrary.PartialChannelList
-import typingsSlinky.ts3NodejsLibrary.PartialClientList
-import typingsSlinky.ts3NodejsLibrary.PartialConnectionParams
-import typingsSlinky.ts3NodejsLibrary.PartialServerGroupList
-import typingsSlinky.ts3NodejsLibrary.PartialServerList
+import typingsSlinky.ts3NodejsLibrary.anon.PartialChannelGroupList
+import typingsSlinky.ts3NodejsLibrary.anon.PartialChannelList
+import typingsSlinky.ts3NodejsLibrary.anon.PartialClientList
+import typingsSlinky.ts3NodejsLibrary.anon.PartialConnectionParams
+import typingsSlinky.ts3NodejsLibrary.anon.PartialServerGroupList
+import typingsSlinky.ts3NodejsLibrary.anon.PartialServerList
 import typingsSlinky.ts3NodejsLibrary.channelGroupMod.TeamSpeakChannelGroup
 import typingsSlinky.ts3NodejsLibrary.channelMod.TeamSpeakChannel
 import typingsSlinky.ts3NodejsLibrary.clientMod.TeamSpeakClient

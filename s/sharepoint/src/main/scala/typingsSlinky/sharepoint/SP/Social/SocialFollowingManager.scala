@@ -2,7 +2,6 @@ package typingsSlinky.sharepoint.SP.Social
 
 import typingsSlinky.sharepoint.SP.BooleanResult
 import typingsSlinky.sharepoint.SP.ClientObject
-import typingsSlinky.sharepoint.SP.ClientRuntimeContext
 import typingsSlinky.sharepoint.SP.IntResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,10 +9,8 @@ import scala.scalajs.js.annotation._
 
 /** Provides properties and methods for managing a user's list of followed actors.
   Actors can be users, documents, sites, and tags. */
-@JSGlobal("SP.Social.SocialFollowingManager")
 @js.native
-class SocialFollowingManager protected () extends ClientObject {
-  def this(context: ClientRuntimeContext) = this()
+trait SocialFollowingManager extends ClientObject {
   /** Adds the specified actor to the current user's list of followed items.
     Returns one of the following values, wrapped into the SP.IntResult object:
     0 = ok,

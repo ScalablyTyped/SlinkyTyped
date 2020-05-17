@@ -1,15 +1,15 @@
 package typingsSlinky.exceljs.mod
 
-import typingsSlinky.exceljs.AnonError
+import typingsSlinky.exceljs.anon.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CellFormulaValue extends _CellValue {
+trait CellFormulaValue extends CellValue {
   var date1904: Boolean = js.native
   var formula: String = js.native
-  var result: js.UndefOr[Double | String | js.Date | AnonError] = js.native
+  var result: js.UndefOr[Double | String | js.Date | Error] = js.native
 }
 
 object CellFormulaValue {
@@ -43,7 +43,7 @@ object CellFormulaValue {
         ret
     }
     @scala.inline
-    def withResult(value: Double | String | js.Date | AnonError): Self = {
+    def withResult(value: Double | String | js.Date | Error): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
         ret

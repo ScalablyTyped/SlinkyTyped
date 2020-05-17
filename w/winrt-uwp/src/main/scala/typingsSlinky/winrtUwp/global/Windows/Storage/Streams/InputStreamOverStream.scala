@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.Storage.Streams
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Provides a Windows Runtime input stream for an IStream base implementation. */
+@JSGlobal("Windows.Storage.Streams.InputStreamOverStream")
+@js.native
+abstract class InputStreamOverStream ()
+  extends typingsSlinky.winrtUwp.Windows.Storage.Streams.InputStreamOverStream
+

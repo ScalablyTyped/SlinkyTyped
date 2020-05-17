@@ -1,6 +1,6 @@
 package typingsSlinky.exceljs.mod.stream.xlsx
 
-import typingsSlinky.exceljs.PartialZlibOptions
+import typingsSlinky.exceljs.anon.PartialZlibOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

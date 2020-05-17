@@ -1,13 +1,13 @@
 package typingsSlinky.loggly.mod
 
-import typingsSlinky.loggly.AnonPassword
+import typingsSlinky.loggly.anon.Password
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait LogglyOptions extends js.Object {
-  var auth: js.UndefOr[AnonPassword] = js.native
+  var auth: js.UndefOr[Password] = js.native
   var host: js.UndefOr[String] = js.native
   var json: js.UndefOr[Boolean] = js.native
   var subdomain: String = js.native
@@ -40,7 +40,7 @@ object LogglyOptions {
         ret
     }
     @scala.inline
-    def withAuth(value: AnonPassword): Self = {
+    def withAuth(value: Password): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.reactOnsenui.components
 
-import typingsSlinky.reactOnsenui.HTMLAttributesidclassName
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ object Splitter {
   @js.native
   object component extends js.Object
   
-  def withProps(p: HTMLAttributesidclassName): SharedBuilder_HTMLAttributesidclassName1108775840[typingsSlinky.reactOnsenui.mod.Splitter] = new SharedBuilder_HTMLAttributesidclassName1108775840[typingsSlinky.reactOnsenui.mod.Splitter](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Splitter.type): SharedBuilder_HTMLAttributesidclassName1108775840[typingsSlinky.reactOnsenui.mod.Splitter] = new SharedBuilder_HTMLAttributesidclassName1108775840[typingsSlinky.reactOnsenui.mod.Splitter](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: HTMLAttributesidclassName): SharedBuilder_HTMLAttributesidclassName259688250[typingsSlinky.reactOnsenui.mod.Splitter] = new SharedBuilder_HTMLAttributesidclassName259688250[typingsSlinky.reactOnsenui.mod.Splitter](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Splitter.type): SharedBuilder_HTMLAttributesidclassName259688250[typingsSlinky.reactOnsenui.mod.Splitter] = new SharedBuilder_HTMLAttributesidclassName259688250[typingsSlinky.reactOnsenui.mod.Splitter](js.Array(this.component, js.Dictionary.empty))()
 }
 

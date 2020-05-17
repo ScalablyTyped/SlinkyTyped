@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ComposeInputFieldConfigAsObject
-  extends /* opt */ StringDictionary[js.Any] {
+  extends /* key */ StringDictionary[js.Any]
+     with ComposeInputFieldConfig {
   var astNode: js.UndefOr[InputValueDefinitionNode | Null] = js.native
   var defaultValue: js.UndefOr[js.Any] = js.native
   var description: js.UndefOr[String | Null] = js.native

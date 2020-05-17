@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Obj extends _Type {
+trait Obj extends Type {
   var bottom: js.UndefOr[String | Double] = js.native
   var left: js.UndefOr[String | Double] = js.native
   var right: js.UndefOr[String | Double] = js.native

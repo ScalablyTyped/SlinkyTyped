@@ -5,12 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Box2D.Collision.b2DynamicTree")
 @js.native
-/**
-		* Constructing the tree initializes the node pool.
-		**/
-class b2DynamicTree () extends js.Object {
+trait b2DynamicTree extends js.Object {
   /**
   		* Create a proxy. Provide a tight fitting AABB and a userData.
   		* @param aabb AABB.
@@ -67,5 +63,80 @@ class b2DynamicTree () extends js.Object {
   		* @param iterations Number of rebalance iterations to perform.
   		**/
   def Rebalance(iterations: Double): Unit = js.native
+}
+
+object b2DynamicTree {
+  @scala.inline
+  def apply(
+    CreateProxy: (b2AABB, js.Any) => b2DynamicTreeNode,
+    DestroyProxy: b2DynamicTreeNode => Unit,
+    GetFatAABB: b2DynamicTreeNode => b2AABB,
+    GetUserData: b2DynamicTreeNode => js.Any,
+    MoveProxy: (b2DynamicTreeNode, b2AABB, b2Vec2) => Boolean,
+    Query: (js.Function1[/* proxy */ b2DynamicTreeNode, Boolean], b2AABB) => Unit,
+    RayCast: (js.Function2[/* input */ b2RayCastInput, /* proxy */ b2DynamicTreeNode, Double], b2RayCastInput) => Unit,
+    Rebalance: Double => Unit
+  ): b2DynamicTree = {
+    val __obj = js.Dynamic.literal(CreateProxy = js.Any.fromFunction2(CreateProxy), DestroyProxy = js.Any.fromFunction1(DestroyProxy), GetFatAABB = js.Any.fromFunction1(GetFatAABB), GetUserData = js.Any.fromFunction1(GetUserData), MoveProxy = js.Any.fromFunction3(MoveProxy), Query = js.Any.fromFunction2(Query), RayCast = js.Any.fromFunction2(RayCast), Rebalance = js.Any.fromFunction1(Rebalance))
+    __obj.asInstanceOf[b2DynamicTree]
+  }
+  @scala.inline
+  implicit class b2DynamicTreeOps[Self <: b2DynamicTree] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateProxy(value: (b2AABB, js.Any) => b2DynamicTreeNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CreateProxy")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withDestroyProxy(value: b2DynamicTreeNode => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DestroyProxy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetFatAABB(value: b2DynamicTreeNode => b2AABB): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetFatAABB")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetUserData(value: b2DynamicTreeNode => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetUserData")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMoveProxy(value: (b2DynamicTreeNode, b2AABB, b2Vec2) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MoveProxy")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withQuery(value: (js.Function1[/* proxy */ b2DynamicTreeNode, Boolean], b2AABB) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Query")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRayCast(
+      value: (js.Function2[/* input */ b2RayCastInput, /* proxy */ b2DynamicTreeNode, Double], b2RayCastInput) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RayCast")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRebalance(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rebalance")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

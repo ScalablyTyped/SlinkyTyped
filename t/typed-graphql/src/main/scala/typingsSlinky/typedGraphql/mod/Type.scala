@@ -14,21 +14,10 @@ trait Type extends js.Object
 
 object Type {
   @scala.inline
-  def NamedType(kind: String, name: Name): Type = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Type]
-  }
+  implicit def apply(value: ListType): Type = value.asInstanceOf[Type]
   @scala.inline
-  def ListType(kind: String, `type`: Type): Type = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Type]
-  }
+  implicit def apply(value: NamedType): Type = value.asInstanceOf[Type]
   @scala.inline
-  def NonNullType(kind: String, `type`: NamedType | ListType): Type = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Type]
-  }
+  implicit def apply(value: NonNullType): Type = value.asInstanceOf[Type]
 }
 

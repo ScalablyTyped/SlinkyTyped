@@ -1,6 +1,6 @@
 package typingsSlinky.baseui.sideNavigationMod
 
-import typingsSlinky.baseui.AnonEventItem
+import typingsSlinky.baseui.anon.EventItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait NavigationProps extends js.Object {
   var activePredicate: js.UndefOr[js.Function2[/* item */ js.Any, /* activeItemId */ String, Boolean]] = js.native
   var items: js.UndefOr[js.Array[Item]] = js.native
   var mapItem: js.UndefOr[js.Function1[/* item */ Item, Item]] = js.native
-  var onChange: js.UndefOr[js.Function1[/* args */ AnonEventItem, _]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* args */ EventItem, _]] = js.native
   var overrides: js.UndefOr[NavigationOverrides] = js.native
 }
 
@@ -70,7 +70,7 @@ object NavigationProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* args */ AnonEventItem => _): Self = {
+    def withOnChange(value: /* args */ EventItem => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

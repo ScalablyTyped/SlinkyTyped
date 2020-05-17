@@ -2,7 +2,7 @@ package typingsSlinky.reactNativeMaterialUi.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNativeMaterialUi.AnonContainerViewStyle
+import typingsSlinky.reactNativeMaterialUi.anon.ContainerViewStyle
 import typingsSlinky.reactNativeMaterialUi.mod.BottomNavigationProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +22,7 @@ object BottomNavigation {
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     @scala.inline
-    def style(value: AnonContainerViewStyle): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: ContainerViewStyle): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: BottomNavigationProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

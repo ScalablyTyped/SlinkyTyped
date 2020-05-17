@@ -3,13 +3,13 @@ package typingsSlinky.muiDatatables.mod
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.muiDatatables.AnonColIndex
-import typingsSlinky.muiDatatables.AnonDataDataIndex
-import typingsSlinky.muiDatatables.AnonLookup
-import typingsSlinky.muiDatatables.AnonRowIndex
-import typingsSlinky.muiDatatables.AnonXAxis
-import typingsSlinky.muiDatatables.PartialMUIDataTableTextLaBody
-import typingsSlinky.muiDatatables.Partialfilenamestringsepa
+import typingsSlinky.muiDatatables.anon.ColIndex
+import typingsSlinky.muiDatatables.anon.DataDataIndex
+import typingsSlinky.muiDatatables.anon.Lookup
+import typingsSlinky.muiDatatables.anon.PartialMUIDataTableTextLaBody
+import typingsSlinky.muiDatatables.anon.Partialfilenamestringsepa
+import typingsSlinky.muiDatatables.anon.RowIndex
+import typingsSlinky.muiDatatables.anon.XAxis
 import typingsSlinky.muiDatatables.muiDatatablesStrings.chip
 import typingsSlinky.muiDatatables.muiDatatablesStrings.reset
 import scala.scalajs.js
@@ -57,8 +57,8 @@ trait MUIDataTableOptions extends js.Object {
   var customToolbar: js.UndefOr[js.Function0[TagMod[Any]]] = js.native
   var customToolbarSelect: js.UndefOr[
     js.Function3[
-      /* selectedRows */ AnonLookup, 
-      /* displayData */ js.Array[AnonDataDataIndex], 
+      /* selectedRows */ Lookup, 
+      /* displayData */ js.Array[DataDataIndex], 
       /* setSelectedRows */ js.Function1[/* rows */ js.Array[Double], Unit], 
       TagMod[Any]
     ]
@@ -72,7 +72,7 @@ trait MUIDataTableOptions extends js.Object {
   var filter: js.UndefOr[Boolean] = js.native
   var filterType: js.UndefOr[FilterType] = js.native
   var fixedHeader: js.UndefOr[Boolean] = js.native
-  var fixedHeaderOptions: js.UndefOr[AnonXAxis] = js.native
+  var fixedHeaderOptions: js.UndefOr[XAxis] = js.native
   var isRowExpandable: js.UndefOr[
     js.Function2[
       /* dataIndex */ Double, 
@@ -87,7 +87,7 @@ trait MUIDataTableOptions extends js.Object {
       Boolean
     ]
   ] = js.native
-  var onCellClick: js.UndefOr[js.Function2[/* colData */ js.Any, /* cellMeta */ AnonColIndex, Unit]] = js.native
+  var onCellClick: js.UndefOr[js.Function2[/* colData */ js.Any, /* cellMeta */ ColIndex, Unit]] = js.native
   var onChangePage: js.UndefOr[js.Function1[/* currentPage */ Double, Unit]] = js.native
   var onChangeRowsPerPage: js.UndefOr[js.Function1[/* numberOfRows */ Double, Unit]] = js.native
   var onColumnSortChange: js.UndefOr[js.Function2[/* changedColumn */ String, /* direction */ String, Unit]] = js.native
@@ -116,7 +116,7 @@ trait MUIDataTableOptions extends js.Object {
   ] = js.native
   var onFilterDialogClose: js.UndefOr[js.Function0[Unit]] = js.native
   var onFilterDialogOpen: js.UndefOr[js.Function0[Unit]] = js.native
-  var onRowClick: js.UndefOr[js.Function2[/* rowData */ js.Array[String], /* rowMeta */ AnonRowIndex, Unit]] = js.native
+  var onRowClick: js.UndefOr[js.Function2[/* rowData */ js.Array[String], /* rowMeta */ RowIndex, Unit]] = js.native
   var onRowsDelete: js.UndefOr[js.Function1[/* rowsDeleted */ js.Array[_], Unit]] = js.native
   var onRowsExpand: js.UndefOr[
     js.Function2[/* currentRowsExpanded */ js.Array[_], /* allRowsExpanded */ js.Array[_], Unit]
@@ -133,7 +133,7 @@ trait MUIDataTableOptions extends js.Object {
   var pagination: js.UndefOr[Boolean] = js.native
   var print: js.UndefOr[Boolean] = js.native
   var renderExpandableRow: js.UndefOr[
-    js.Function2[/* rowData */ js.Array[String], /* rowMeta */ AnonRowIndex, TagMod[Any]]
+    js.Function2[/* rowData */ js.Array[String], /* rowMeta */ RowIndex, TagMod[Any]]
   ] = js.native
   var resizableColumns: js.UndefOr[Boolean] = js.native
   var responsive: js.UndefOr[Responsive] = js.native
@@ -287,7 +287,7 @@ object MUIDataTableOptions {
     }
     @scala.inline
     def withCustomToolbarSelect(
-      value: (/* selectedRows */ AnonLookup, /* displayData */ js.Array[AnonDataDataIndex], /* setSelectedRows */ js.Function1[/* rows */ js.Array[Double], Unit]) => TagMod[Any]
+      value: (/* selectedRows */ Lookup, /* displayData */ js.Array[DataDataIndex], /* setSelectedRows */ js.Function1[/* rows */ js.Array[Double], Unit]) => TagMod[Any]
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customToolbarSelect")(js.Any.fromFunction3(value))
@@ -408,7 +408,7 @@ object MUIDataTableOptions {
         ret
     }
     @scala.inline
-    def withFixedHeaderOptions(value: AnonXAxis): Self = {
+    def withFixedHeaderOptions(value: XAxis): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fixedHeaderOptions")(value.asInstanceOf[js.Any])
         ret
@@ -444,7 +444,7 @@ object MUIDataTableOptions {
         ret
     }
     @scala.inline
-    def withOnCellClick(value: (/* colData */ js.Any, /* cellMeta */ AnonColIndex) => Unit): Self = {
+    def withOnCellClick(value: (/* colData */ js.Any, /* cellMeta */ ColIndex) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCellClick")(js.Any.fromFunction2(value))
         ret
@@ -556,7 +556,7 @@ object MUIDataTableOptions {
         ret
     }
     @scala.inline
-    def withOnRowClick(value: (/* rowData */ js.Array[String], /* rowMeta */ AnonRowIndex) => Unit): Self = {
+    def withOnRowClick(value: (/* rowData */ js.Array[String], /* rowMeta */ RowIndex) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowClick")(js.Any.fromFunction2(value))
         ret
@@ -700,7 +700,7 @@ object MUIDataTableOptions {
         ret
     }
     @scala.inline
-    def withRenderExpandableRow(value: (/* rowData */ js.Array[String], /* rowMeta */ AnonRowIndex) => TagMod[Any]): Self = {
+    def withRenderExpandableRow(value: (/* rowData */ js.Array[String], /* rowMeta */ RowIndex) => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderExpandableRow")(js.Any.fromFunction2(value))
         ret

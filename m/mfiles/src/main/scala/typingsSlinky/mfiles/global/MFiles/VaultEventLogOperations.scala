@@ -1,0 +1,16 @@
+package typingsSlinky.mfiles.global.MFiles
+
+import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.IVaultEventLogOperations
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("MFiles.VaultEventLogOperations")
+@js.native
+class VaultEventLogOperations () extends IVaultEventLogOperations
+
+@JSGlobal("MFiles.VaultEventLogOperations")
+@js.native
+object VaultEventLogOperations extends Instantiable0[IVaultEventLogOperations]
+

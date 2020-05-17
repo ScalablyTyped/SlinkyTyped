@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +17,4 @@ trait CharacterData
   def replaceData(offset: Double, count: Double, data: java.lang.String): Unit = js.native
   def substringData(offset: Double, count: Double): java.lang.String = js.native
 }
-
-@JSGlobal("CharacterData")
-@js.native
-object CharacterData
-  extends Instantiable0[org.scalajs.dom.raw.CharacterData]
 

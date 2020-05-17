@@ -79,30 +79,6 @@ object EXCEPINFO {
         ret.asInstanceOf[js.Dynamic].updateDynamic("wReserved")(value.asInstanceOf[js.Any])
         ret
     }
-    @scala.inline
-    def withPfnDeferredFillIn(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pfnDeferredFillIn")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPfnDeferredFillIn: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pfnDeferredFillIn")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withPvReserved(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pvReserved")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutPvReserved: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("pvReserved")(js.undefined)
-        ret
-    }
   }
   
 }

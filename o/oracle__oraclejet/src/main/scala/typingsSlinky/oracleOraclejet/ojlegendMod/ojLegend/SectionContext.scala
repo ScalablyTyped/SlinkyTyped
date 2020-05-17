@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojlegendMod.ojLegend
 
-import typingsSlinky.oracleOraclejet.AnonSections
-import typingsSlinky.oracleOraclejet.AnonTextString
+import typingsSlinky.oracleOraclejet.anon.Sections
+import typingsSlinky.oracleOraclejet.anon.TextString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
 // tslint:disable-next-line interface-over-type-literal
 @js.native
 trait SectionContext extends js.Object {
-  var getItems: AnonTextString = js.native
-  var getSection: AnonSections = js.native
+  var getItems: TextString = js.native
+  var getSection: Sections = js.native
   var items: js.Array[js.Object] = js.native
   var sections: js.Array[js.Object] = js.native
   var title: String = js.native
@@ -19,8 +19,8 @@ trait SectionContext extends js.Object {
 object SectionContext {
   @scala.inline
   def apply(
-    getItems: AnonTextString,
-    getSection: AnonSections,
+    getItems: TextString,
+    getSection: Sections,
     items: js.Array[js.Object],
     sections: js.Array[js.Object],
     title: String
@@ -35,13 +35,13 @@ object SectionContext {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetItems(value: AnonTextString): Self = {
+    def withGetItems(value: TextString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getItems")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withGetSection(value: AnonSections): Self = {
+    def withGetSection(value: Sections): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getSection")(value.asInstanceOf[js.Any])
         ret

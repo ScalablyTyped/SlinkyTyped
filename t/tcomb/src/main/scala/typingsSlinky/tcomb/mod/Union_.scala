@@ -1,6 +1,6 @@
 package typingsSlinky.tcomb.mod
 
-import typingsSlinky.tcomb.AnonIdentityKind
+import typingsSlinky.tcomb.anon.IdentityKind
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Union_[T] extends Type[T] {
   @JSName("meta")
-  var meta_Union_ : AnonIdentityKind[T] = js.native
+  var meta_Union_ : IdentityKind[T] = js.native
   @JSName("update")
   var update_Original: Update_[T] = js.native
   def dispatch(x: js.Any): Constructor[T] = js.native

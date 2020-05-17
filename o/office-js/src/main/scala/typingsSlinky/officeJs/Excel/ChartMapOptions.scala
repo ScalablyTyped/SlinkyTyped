@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.ChartMapOptionsData
 import typingsSlinky.officeJs.Excel.Interfaces.ChartMapOptionsLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.ChartMapOptionsUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.Albers
 import typingsSlinky.officeJs.officeJsStrings.Automatic
 import typingsSlinky.officeJs.officeJsStrings.BestFit
@@ -31,9 +31,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@JSGlobal("Excel.ChartMapOptions")
 @js.native
-class ChartMapOptions () extends ClientObject {
+trait ChartMapOptions extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_ChartMapOptions: RequestContext = js.native
@@ -65,7 +64,7 @@ class ChartMapOptions () extends ClientObject {
     */
   def load(): ChartMapOptions = js.native
   def load(options: ChartMapOptionsLoadOptions): ChartMapOptions = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartMapOptions = js.native
+  def load(propertyNamesAndPaths: Expand): ChartMapOptions = js.native
   def load(propertyNames: String): ChartMapOptions = js.native
   def load(propertyNames: js.Array[String]): ChartMapOptions = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

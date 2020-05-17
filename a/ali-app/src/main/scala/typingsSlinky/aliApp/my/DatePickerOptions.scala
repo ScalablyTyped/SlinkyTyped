@@ -1,12 +1,12 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonDate
 import typingsSlinky.aliApp.aliAppNumbers.`11`
 import typingsSlinky.aliApp.aliAppStrings.HHColonmm
 import typingsSlinky.aliApp.aliAppStrings.`yyyy-MM-dd HHColonmm`
 import typingsSlinky.aliApp.aliAppStrings.`yyyy-MM-dd`
 import typingsSlinky.aliApp.aliAppStrings.`yyyy-MM`
 import typingsSlinky.aliApp.aliAppStrings.yyyy
+import typingsSlinky.aliApp.anon.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +35,7 @@ trait DatePickerOptions
   @JSName("fail")
   def fail_11(error: `11`): Unit = js.native
   @JSName("success")
-  def success_MDatePickerOptions(result: AnonDate): Unit = js.native
+  def success_MDatePickerOptions(result: Date): Unit = js.native
 }
 
 object DatePickerOptions {
@@ -46,7 +46,7 @@ object DatePickerOptions {
     fail: `11` => Unit,
     format: `yyyy-MM-dd` | HHColonmm | (`yyyy-MM-dd HHColonmm`) | `yyyy-MM` | yyyy,
     startDate: String,
-    success: AnonDate => Unit
+    success: Date => Unit
   ): DatePickerOptions = {
     val __obj = js.Dynamic.literal(currentDate = currentDate.asInstanceOf[js.Any], endDate = endDate.asInstanceOf[js.Any], fail = js.Any.fromFunction1(fail), format = format.asInstanceOf[js.Any], startDate = startDate.asInstanceOf[js.Any], success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[DatePickerOptions]
@@ -88,7 +88,7 @@ object DatePickerOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: AnonDate => Unit): Self = {
+    def withSuccess(value: Date => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

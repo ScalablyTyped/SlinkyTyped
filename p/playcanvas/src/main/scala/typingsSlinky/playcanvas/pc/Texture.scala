@@ -3,8 +3,7 @@ package typingsSlinky.playcanvas.pc
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLVideoElement
-import typingsSlinky.playcanvas.AnonAddressU
-import typingsSlinky.playcanvas.AnonFace
+import typingsSlinky.playcanvas.anon.Face
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -98,11 +97,8 @@ import scala.scalajs.js.annotation._
   * texture.unlock();
   * @property {string} name The name of the texture. Defaults to null.
   */
-@JSGlobal("pc.Texture")
 @js.native
-class Texture protected () extends js.Object {
-  def this(graphicsDevice: GraphicsDevice) = this()
-  def this(graphicsDevice: GraphicsDevice, options: AnonAddressU) = this()
+trait Texture extends js.Object {
   /**
     * @name pc.Texture#addressU
     * @type {number}
@@ -295,7 +291,7 @@ class Texture protected () extends js.Object {
     * @returns {Uint8Array|Uint16Array|Float32Array} A typed array containing the pixel data of the locked mip level.
     */
   def lock(): js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Float32Array = js.native
-  def lock(options: AnonFace): js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Float32Array = js.native
+  def lock(options: Face): js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Float32Array = js.native
   def setSource(source: js.Array[HTMLCanvasElement | HTMLImageElement | HTMLVideoElement]): Unit = js.native
   def setSource(source: js.Array[HTMLCanvasElement | HTMLImageElement | HTMLVideoElement], mipLevel: Double): Unit = js.native
   /**

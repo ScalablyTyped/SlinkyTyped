@@ -1,8 +1,11 @@
 package typingsSlinky.materialSwitch
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.materialBase.foundationMod.MDCFoundation
 import typingsSlinky.materialSwitch.adapterMod.MDCSwitchAdapter
-import typingsSlinky.std.Event_
+import typingsSlinky.materialSwitch.anon.CHECKED
+import typingsSlinky.materialSwitch.anon.NATIVECONTROLSELECTOR
+import typingsSlinky.materialSwitch.anon.PartialMDCSwitchAdapter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +17,7 @@ object foundationMod extends js.Object {
   class MDCSwitchFoundation () extends MDCFoundation[MDCSwitchAdapter] {
     def this(adapter: PartialMDCSwitchAdapter) = this()
     /** Handles the change event for the switch native control. */
-    def handleChange(evt: Event_): Unit = js.native
+    def handleChange(evt: Event): Unit = js.native
     /** Sets the checked state of the switch. */
     def setChecked(checked: Boolean): Unit = js.native
     /** Sets the disabled state of the switch. */
@@ -30,22 +33,22 @@ object foundationMod extends js.Object {
   @js.native
   object MDCSwitchFoundation extends js.Object {
     /** The CSS classes used by the switch. */
-    val cssClasses: AnonCHECKED = js.native
+    val cssClasses: CHECKED = js.native
     /** The default Adapter for the switch. */
     val defaultAdapter: MDCSwitchAdapter = js.native
     /** The string constants used by the switch. */
-    val strings: AnonNATIVECONTROLSELECTOR = js.native
+    val strings: NATIVECONTROLSELECTOR = js.native
   }
   
   /* static members */
   @js.native
   object default extends js.Object {
     /** The CSS classes used by the switch. */
-    val cssClasses: AnonCHECKED = js.native
+    val cssClasses: CHECKED = js.native
     /** The default Adapter for the switch. */
     val defaultAdapter: MDCSwitchAdapter = js.native
     /** The string constants used by the switch. */
-    val strings: AnonNATIVECONTROLSELECTOR = js.native
+    val strings: NATIVECONTROLSELECTOR = js.native
   }
   
 }

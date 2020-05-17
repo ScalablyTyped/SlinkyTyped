@@ -1,19 +1,19 @@
 package typingsSlinky.cliTable2.mod
 
-import typingsSlinky.cliTable2.AnonHead
-import typingsSlinky.cliTable2.PartialRecordCharNamestri
+import typingsSlinky.cliTable2.anon.Head
+import typingsSlinky.cliTable2.anon.PartialRecordCharNamestri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CellOptions extends js.Object {
+trait CellOptions extends Cell {
   var chars: js.UndefOr[PartialRecordCharNamestri] = js.native
   var colSpan: js.UndefOr[Double] = js.native
   var content: CellValue = js.native
   var hAlign: js.UndefOr[HorizontalAlignment] = js.native
   var rowSpan: js.UndefOr[Double] = js.native
-  var style: js.UndefOr[AnonHead] = js.native
+  var style: js.UndefOr[Head] = js.native
   var truncate: js.UndefOr[String] = js.native
   var vAlign: js.UndefOr[VerticalAlignment] = js.native
 }
@@ -97,7 +97,7 @@ object CellOptions {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonHead): Self = {
+    def withStyle(value: Head): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

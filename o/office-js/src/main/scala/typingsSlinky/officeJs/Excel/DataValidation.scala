@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.DataValidationData
 import typingsSlinky.officeJs.Excel.Interfaces.DataValidationLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.DataValidationUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.Custom
 import typingsSlinky.officeJs.officeJsStrings.Date
 import typingsSlinky.officeJs.officeJsStrings.Decimal
@@ -27,9 +27,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.8]
   */
-@JSGlobal("Excel.DataValidation")
 @js.native
-class DataValidation () extends ClientObject {
+trait DataValidation extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_DataValidation: RequestContext = js.native
@@ -102,7 +101,7 @@ class DataValidation () extends ClientObject {
     */
   def load(): DataValidation = js.native
   def load(options: DataValidationLoadOptions): DataValidation = js.native
-  def load(propertyNamesAndPaths: AnonExpand): DataValidation = js.native
+  def load(propertyNamesAndPaths: Expand): DataValidation = js.native
   def load(propertyNames: String): DataValidation = js.native
   def load(propertyNames: js.Array[String]): DataValidation = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

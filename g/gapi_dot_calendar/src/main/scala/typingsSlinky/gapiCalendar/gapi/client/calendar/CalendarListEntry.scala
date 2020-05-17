@@ -1,7 +1,7 @@
 package typingsSlinky.gapiCalendar.gapi.client.calendar
 
-import typingsSlinky.gapiCalendar.AnonMethod
-import typingsSlinky.gapiCalendar.AnonNotifications
+import typingsSlinky.gapiCalendar.anon.Method
+import typingsSlinky.gapiCalendar.anon.Notifications
 import typingsSlinky.gapiCalendar.gapiCalendarStrings.calendarNumbersigncalendarListEntry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +13,7 @@ trait CalendarListEntry extends js.Object {
   var accessRole: AccessRoleWithoutNone = js.native
   var backgroundColor: js.UndefOr[String] = js.native
   var colorId: js.UndefOr[String] = js.native
-  var defaultReminders: js.Array[AnonMethod] = js.native
+  var defaultReminders: js.Array[Method] = js.native
   var deleted: js.UndefOr[Boolean] = js.native
   var description: js.UndefOr[String] = js.native
   var etag: typingsSlinky.gapiCalendar.gapi.client.calendar.etag = js.native
@@ -22,7 +22,7 @@ trait CalendarListEntry extends js.Object {
   var id: String = js.native
   var kind: calendarNumbersigncalendarListEntry = js.native
   var location: js.UndefOr[String] = js.native
-  var notificationSettings: js.UndefOr[AnonNotifications] = js.native
+  var notificationSettings: js.UndefOr[Notifications] = js.native
   var primary: js.UndefOr[Boolean] = js.native
   var selected: js.UndefOr[Boolean] = js.native
   var summary: String = js.native
@@ -34,7 +34,7 @@ object CalendarListEntry {
   @scala.inline
   def apply(
     accessRole: AccessRoleWithoutNone,
-    defaultReminders: js.Array[AnonMethod],
+    defaultReminders: js.Array[Method],
     etag: etag,
     id: String,
     kind: calendarNumbersigncalendarListEntry,
@@ -56,7 +56,7 @@ object CalendarListEntry {
         ret
     }
     @scala.inline
-    def withDefaultReminders(value: js.Array[AnonMethod]): Self = {
+    def withDefaultReminders(value: js.Array[Method]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defaultReminders")(value.asInstanceOf[js.Any])
         ret
@@ -170,7 +170,7 @@ object CalendarListEntry {
         ret
     }
     @scala.inline
-    def withNotificationSettings(value: AnonNotifications): Self = {
+    def withNotificationSettings(value: Notifications): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notificationSettings")(value.asInstanceOf[js.Any])
         ret

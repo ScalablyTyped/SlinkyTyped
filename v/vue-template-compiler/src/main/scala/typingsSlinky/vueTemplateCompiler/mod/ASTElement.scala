@@ -1,9 +1,9 @@
 package typingsSlinky.vueTemplateCompiler.mod
 
 import typingsSlinky.std.Record
-import typingsSlinky.vueTemplateCompiler.AnonCallback
-import typingsSlinky.vueTemplateCompiler.AnonName
-import typingsSlinky.vueTemplateCompiler.AnonValue
+import typingsSlinky.vueTemplateCompiler.anon.Callback
+import typingsSlinky.vueTemplateCompiler.anon.Name
+import typingsSlinky.vueTemplateCompiler.anon.Value
 import typingsSlinky.vueTemplateCompiler.vueTemplateCompilerBooleans.`true`
 import typingsSlinky.vueTemplateCompiler.vueTemplateCompilerNumbers.`1`
 import scala.scalajs.js
@@ -15,8 +15,8 @@ trait ASTElement extends ASTNode {
   var alias: js.UndefOr[String] = js.native
   // weex specific
   var appendAsTree: js.UndefOr[Boolean] = js.native
-  var attrs: js.UndefOr[js.Array[AnonName]] = js.native
-  var attrsList: js.Array[AnonName] = js.native
+  var attrs: js.UndefOr[js.Array[Name]] = js.native
+  var attrsList: js.Array[Name] = js.native
   var attrsMap: Record[String, _] = js.native
   var children: js.Array[ASTNode] = js.native
   var classBinding: js.UndefOr[String] = js.native
@@ -36,7 +36,7 @@ trait ASTElement extends ASTNode {
   var iterator1: js.UndefOr[String] = js.native
   var iterator2: js.UndefOr[String] = js.native
   var key: js.UndefOr[String] = js.native
-  var model: js.UndefOr[AnonCallback] = js.native
+  var model: js.UndefOr[Callback] = js.native
   var nativeEvents: js.UndefOr[ASTElementHandlers] = js.native
   var ns: js.UndefOr[String] = js.native
   var once: js.UndefOr[`true`] = js.native
@@ -45,7 +45,7 @@ trait ASTElement extends ASTNode {
   var plain: js.UndefOr[Boolean] = js.native
   var pre: js.UndefOr[`true`] = js.native
   var processed: js.UndefOr[`true`] = js.native
-  var props: js.UndefOr[js.Array[AnonValue]] = js.native
+  var props: js.UndefOr[js.Array[Value]] = js.native
   var ref: js.UndefOr[String] = js.native
   var refInFor: js.UndefOr[Boolean] = js.native
   var scopedSlots: js.UndefOr[Record[String, ASTElement]] = js.native
@@ -74,7 +74,7 @@ trait ASTElement extends ASTNode {
 object ASTElement {
   @scala.inline
   def apply(
-    attrsList: js.Array[AnonName],
+    attrsList: js.Array[Name],
     attrsMap: Record[String, _],
     children: js.Array[ASTNode],
     tag: String,
@@ -91,7 +91,7 @@ object ASTElement {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAttrsList(value: js.Array[AnonName]): Self = {
+    def withAttrsList(value: js.Array[Name]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("attrsList")(value.asInstanceOf[js.Any])
         ret
@@ -145,7 +145,7 @@ object ASTElement {
         ret
     }
     @scala.inline
-    def withAttrs(value: js.Array[AnonName]): Self = {
+    def withAttrs(value: js.Array[Name]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("attrs")(value.asInstanceOf[js.Any])
         ret
@@ -361,7 +361,7 @@ object ASTElement {
         ret
     }
     @scala.inline
-    def withModel(value: AnonCallback): Self = {
+    def withModel(value: Callback): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
         ret
@@ -469,7 +469,7 @@ object ASTElement {
         ret
     }
     @scala.inline
-    def withProps(value: js.Array[AnonValue]): Self = {
+    def withProps(value: js.Array[Value]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("props")(value.asInstanceOf[js.Any])
         ret

@@ -1,0 +1,78 @@
+package typingsSlinky.auth0Js.anon
+
+import typingsSlinky.auth0Js.auth0JsStrings.fragment
+import typingsSlinky.auth0Js.auth0JsStrings.query
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait RedirectUri extends js.Object {
+  /** url that the Auth0 will redirect after Auth with the Authorization Response */
+  var redirectUri: js.UndefOr[String] = js.native
+  /** how the AuthN response is encoded and redirected back to the client. */
+  var responseMode: js.UndefOr[query | fragment] = js.native
+  /** type of the response used. It can be any of the values `code` and `token` */
+  var responseType: js.UndefOr[String] = js.native
+  /** scopes to be requested during AuthN. e.g. `openid email` */
+  var scope: String = js.native
+}
+
+object RedirectUri {
+  @scala.inline
+  def apply(scope: String): RedirectUri = {
+    val __obj = js.Dynamic.literal(scope = scope.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RedirectUri]
+  }
+  @scala.inline
+  implicit class RedirectUriOps[Self <: RedirectUri] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withScope(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scope")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRedirectUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRedirectUri: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectUri")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseMode(value: query | fragment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseMode: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseMode")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResponseType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponseType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseType")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

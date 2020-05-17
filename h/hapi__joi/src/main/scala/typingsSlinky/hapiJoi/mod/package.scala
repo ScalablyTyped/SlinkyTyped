@@ -17,23 +17,7 @@ package object mod {
   type ExternalValidationFunction = js.Function1[/* value */ js.Any, js.Any]
   type LanguageMessages = typingsSlinky.std.Record[java.lang.String, java.lang.String]
   type RuleMethod = js.Function1[/* repeated */ js.Any, js.Any]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.hapiJoi.mod.AnySchema
-    - typingsSlinky.hapiJoi.mod.ArraySchema
-    - typingsSlinky.hapiJoi.mod.AlternativesSchema
-    - typingsSlinky.hapiJoi.mod.BinarySchema
-    - typingsSlinky.hapiJoi.mod.BooleanSchema
-    - typingsSlinky.hapiJoi.mod.DateSchema
-    - typingsSlinky.hapiJoi.mod.FunctionSchema
-    - typingsSlinky.hapiJoi.mod.NumberSchema
-    - typingsSlinky.hapiJoi.mod.ObjectSchema[js.Any]
-    - typingsSlinky.hapiJoi.mod.StringSchema
-    - typingsSlinky.hapiJoi.mod.LinkSchema
-    - typingsSlinky.hapiJoi.mod.SymbolSchema
-  */
-  type Schema = typingsSlinky.hapiJoi.mod._Schema | typingsSlinky.hapiJoi.mod.ObjectSchema[js.Any]
   type SchemaFunction = js.Function1[/* schema */ typingsSlinky.hapiJoi.mod.Schema, typingsSlinky.hapiJoi.mod.Schema]
-  type SchemaLike = java.lang.String | scala.Double | scala.Boolean | js.Object | scala.Null | typingsSlinky.hapiJoi.mod.Schema | typingsSlinky.hapiJoi.mod.SchemaMap[js.Any]
   type SchemaMap[TSchema] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in keyof TSchema ]:? @hapi/joi.@hapi/joi.SchemaLike | std.Array<@hapi/joi.@hapi/joi.SchemaLike>}
     */ typingsSlinky.hapiJoi.hapiJoiStrings.SchemaMap with org.scalablytyped.runtime.TopLevel[js.Any]

@@ -1,7 +1,7 @@
 package typingsSlinky.bizcharts.mod.Guide
 
 import typingsSlinky.antvG2.mod.Styles.line
-import typingsSlinky.bizcharts.AnonAutoRotate
+import typingsSlinky.bizcharts.anon.AutoRotate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait LineProps extends js.Object {
   var start: js.UndefOr[
     js.Object | js.Array[_] | (js.Function2[/* xScale */ js.UndefOr[js.Any], /* yScale */ js.UndefOr[js.Any], _])
   ] = js.native
-  var text: js.UndefOr[AnonAutoRotate] = js.native
+  var text: js.UndefOr[AutoRotate] = js.native
   var top: js.UndefOr[Boolean] = js.native
 }
 
@@ -84,7 +84,7 @@ object LineProps {
         ret
     }
     @scala.inline
-    def withText(value: AnonAutoRotate): Self = {
+    def withText(value: AutoRotate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
         ret

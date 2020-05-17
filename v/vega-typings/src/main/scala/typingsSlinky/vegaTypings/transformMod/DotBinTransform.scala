@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DotBinTransform extends _Transforms {
+trait DotBinTransform extends Transforms {
   var as: js.UndefOr[String | SignalRef] = js.native
   var field: FieldRef = js.native
   var groupby: js.UndefOr[js.Array[FieldRef] | SignalRef] = js.native

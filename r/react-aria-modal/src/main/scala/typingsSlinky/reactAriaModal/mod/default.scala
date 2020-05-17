@@ -3,8 +3,8 @@ package typingsSlinky.reactAriaModal.mod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactAriaModal.PickAriaModalPropstitleId
-import typingsSlinky.reactAriaModal.PickAriaModalPropstitleTe
+import typingsSlinky.reactAriaModal.anon.PickAriaModalPropstitleId
+import typingsSlinky.reactAriaModal.anon.PickAriaModalPropstitleTe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

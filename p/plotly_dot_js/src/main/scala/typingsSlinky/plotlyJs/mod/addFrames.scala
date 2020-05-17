@@ -1,6 +1,6 @@
 package typingsSlinky.plotlyJs.mod
 
-import typingsSlinky.plotlyJs.PartialFrame
+import typingsSlinky.plotlyJs.anon.PartialFrame
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

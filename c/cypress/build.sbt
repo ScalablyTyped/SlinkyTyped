@@ -1,17 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "cypress"
-version := "3.8.3-5a5e5e"
-scalaVersion := "2.13.1"
+version := "3.8.3-179e33"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "eventemitter2" % "5.0.1-b0fb59",
-  "org.scalablytyped.slinky" %%% "moment" % "2.24.0-25e9d0",
-  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20181006Z-1b2bf8",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
+  "org.scalablytyped.slinky" %%% "eventemitter2" % "5.0.1-6faa28",
+  "org.scalablytyped.slinky" %%% "moment" % "2.24.0-e19481",
+  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20181006Z-61c165",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

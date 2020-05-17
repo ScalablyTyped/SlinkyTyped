@@ -1,0 +1,34 @@
+package typingsSlinky.activexOffice.anon
+
+import typingsSlinky.activexOffice.Office.CommandBarComboBox
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Ctrl extends js.Object {
+  val Ctrl: CommandBarComboBox = js.native
+}
+
+object Ctrl {
+  @scala.inline
+  def apply(Ctrl: CommandBarComboBox): Ctrl = {
+    val __obj = js.Dynamic.literal(Ctrl = Ctrl.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Ctrl]
+  }
+  @scala.inline
+  implicit class CtrlOps[Self <: Ctrl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCtrl(value: CommandBarComboBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Ctrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

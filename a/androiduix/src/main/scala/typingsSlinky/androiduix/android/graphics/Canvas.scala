@@ -7,10 +7,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.graphics.Canvas")
 @js.native
-class Canvas protected () extends js.Object {
-  def this(width: Double, height: Double) = this()
+trait Canvas extends js.Object {
   var _mCanvasContent: js.Any = js.native
   var _saveCount: js.Any = js.native
   var mCanvasElement: HTMLCanvasElement = js.native
@@ -192,25 +190,5 @@ class Canvas protected () extends js.Object {
   /* protected */ def setTextAlignImpl(align: String): Unit = js.native
   def translate(dx: Double, dy: Double): Unit = js.native
   /* protected */ def translateImpl(dx: Double, dy: Double): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("android.graphics.Canvas")
-@js.native
-object Canvas extends js.Object {
-  var DIRECTION_LTR: Double = js.native
-  var DIRECTION_RTL: Double = js.native
-  var TempMatrixValue: js.Array[Double] = js.native
-  var _measureCacheMap: js.Any = js.native
-  var _measureCacheTextSize: js.Any = js.native
-  var _measureTextContext: js.Any = js.native
-  var _static: js.Any = js.native
-  var sRectPool: js.Any = js.native
-  /* protected */ def getMeasureTextFontFamily(): String = js.native
-  def measureText(text: String, textSize: Double): Double = js.native
-  /* protected */ def measureTextImpl(text: String, textSize: Double): Double = js.native
-  /* private */ def obtainRect(): js.Any = js.native
-  /* private */ def obtainRect(copy: js.Any): js.Any = js.native
-  /* private */ def recycleRect(rect: js.Any): js.Any = js.native
 }
 

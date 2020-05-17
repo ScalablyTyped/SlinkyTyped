@@ -1,6 +1,6 @@
 package typingsSlinky.cucumber.mod
 
-import typingsSlinky.cucumber.AnonAttach
+import typingsSlinky.cucumber.anon.Attach
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,6 +23,6 @@ trait Hooks extends js.Object {
   def setDefaultTimeout(time: Double): Unit = js.native
   def setWorldConstructor(world: js.Object): Unit = js.native
   // tslint:disable-next-line ban-types
-  def setWorldConstructor(world: js.ThisFunction1[/* this */ World, /* init */ AnonAttach, Unit]): Unit = js.native
+  def setWorldConstructor(world: js.ThisFunction1[/* this */ World, /* init */ Attach, Unit]): Unit = js.native
 }
 

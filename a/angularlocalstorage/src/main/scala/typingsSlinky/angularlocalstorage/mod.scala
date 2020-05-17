@@ -1,6 +1,7 @@
 package typingsSlinky.angularlocalstorage
 
 import typingsSlinky.angular.mod.IScope
+import typingsSlinky.angularlocalstorage.anon.DefaultValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +15,7 @@ object mod extends js.Object {
     @js.native
     trait ILocalStorageService extends js.Object {
       def bind($scope: IScope, key: String): js.Any = js.native
-      def bind($scope: IScope, key: String, opts: AnonDefaultValue): js.Any = js.native
+      def bind($scope: IScope, key: String, opts: DefaultValue): js.Any = js.native
       def clearAll(): Unit = js.native
       def get(key: String): js.Any = js.native
       def remove(key: String): Boolean = js.native

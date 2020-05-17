@@ -1,5 +1,6 @@
 package typingsSlinky.officeUiFabricReact
 
+import typingsSlinky.officeUiFabricReact.anon.Rating
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation._
 object ratingButtonControlledExampleMod extends js.Object {
   @js.native
   class RatingButtonControlledExample protected ()
-    extends Component[js.Object, AnonRating, js.Any] {
+    extends Component[js.Object, Rating, js.Any] {
     def this(props: js.Object) = this()
     var _getRatingComponentAriaLabel: js.Any = js.native
   }

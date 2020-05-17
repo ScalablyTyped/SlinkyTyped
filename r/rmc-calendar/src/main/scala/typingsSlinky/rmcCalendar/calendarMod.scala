@@ -2,6 +2,9 @@ package typingsSlinky.rmcCalendar
 
 import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.react.mod.Component
+import typingsSlinky.rmcCalendar.anon.EndDate
+import typingsSlinky.rmcCalendar.anon.ReadonlychildrenReactNode
+import typingsSlinky.rmcCalendar.anon.TypeofHeader
 import typingsSlinky.rmcCalendar.calendarPropsMod.PropsType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,8 +27,8 @@ object calendarMod extends js.Object {
     def onTimeChange(date: js.Date): Unit = js.native
     def selectDate(date: js.Date): StateType = js.native
     def selectDate(date: js.Date, useDateTime: Boolean): StateType = js.native
-    def selectDate(date: js.Date, useDateTime: Boolean, oldState: AnonEndDate): StateType = js.native
-    def selectDate(date: js.Date, useDateTime: Boolean, oldState: AnonEndDate, props: ReadonlychildrenReactNode): StateType = js.native
+    def selectDate(date: js.Date, useDateTime: Boolean, oldState: EndDate): StateType = js.native
+    def selectDate(date: js.Date, useDateTime: Boolean, oldState: EndDate, props: ReadonlychildrenReactNode): StateType = js.native
     def setClientHeight(height: Double): Unit = js.native
     def shortcutSelect(startDate: js.Date, endDate: js.Date): Unit = js.native
     def shortcutSelect(startDate: js.Date, endDate: js.Date, props: ReadonlychildrenReactNode): Unit = js.native

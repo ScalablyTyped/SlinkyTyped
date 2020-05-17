@@ -12,7 +12,19 @@ object SubMenu {
   @js.native
   object component extends js.Object
   
-  def apply(p: js.Any): Default[tag.type, typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Menu.SubMenu] = new Default[tag.type, typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Menu.SubMenu](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: SubMenu.type): Default[tag.type, typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Menu.SubMenu] = new Default[tag.type, typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Menu.SubMenu](js.Array(this.component, js.Dictionary.empty))()
+  def apply(p: js.Any): Default[
+    tag.type, 
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Menu.SubMenu
+  ] = new Default[
+    tag.type, 
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Menu.SubMenu
+  ](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: SubMenu.type): Default[
+    tag.type, 
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Menu.SubMenu
+  ] = new Default[
+    tag.type, 
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Menu.SubMenu
+  ](js.Array(this.component, js.Dictionary.empty))()
 }
 

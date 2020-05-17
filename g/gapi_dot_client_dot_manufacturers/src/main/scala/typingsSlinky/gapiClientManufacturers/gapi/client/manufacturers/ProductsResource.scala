@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientManufacturers.gapi.client.manufacturers
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientManufacturers.AnonAccesstoken
-import typingsSlinky.gapiClientManufacturers.AnonAlt
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientManufacturers.anon.Accesstoken
+import typingsSlinky.gapiClientManufacturers.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ProductsResource extends js.Object {
   /** Deletes the product from a Manufacturer Center account. */
-  def delete(request: AnonAccesstoken): Request_[js.Object] = js.native
+  def delete(request: Accesstoken): Request[js.Object] = js.native
   /**
     * Gets the product from a Manufacturer Center account, including product
     * issues.
@@ -20,9 +20,9 @@ trait ProductsResource extends js.Object {
     * available once the product has been processed, other issues may take days
     * to appear.
     */
-  def get(request: AnonAccesstoken): Request_[Product] = js.native
+  def get(request: Accesstoken): Request[Product] = js.native
   /** Lists all the products in a Manufacturer Center account. */
-  def list(request: AnonAlt): Request_[ListProductsResponse] = js.native
+  def list(request: Alt): Request[ListProductsResponse] = js.native
   /**
     * Inserts or updates the product in a Manufacturer Center account.
     *
@@ -37,16 +37,16 @@ trait ProductsResource extends js.Object {
     * retrieved. Until then, new products will be unavailable, and retrieval
     * of updated products will return the original state of the product.
     */
-  def update(request: AnonAccesstoken): Request_[Product] = js.native
+  def update(request: Accesstoken): Request[Product] = js.native
 }
 
 object ProductsResource {
   @scala.inline
   def apply(
-    delete: AnonAccesstoken => Request_[js.Object],
-    get: AnonAccesstoken => Request_[Product],
-    list: AnonAlt => Request_[ListProductsResponse],
-    update: AnonAccesstoken => Request_[Product]
+    delete: Accesstoken => Request[js.Object],
+    get: Accesstoken => Request[Product],
+    list: Alt => Request[ListProductsResponse],
+    update: Accesstoken => Request[Product]
   ): ProductsResource = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[ProductsResource]
@@ -58,25 +58,25 @@ object ProductsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDelete(value: AnonAccesstoken => Request_[js.Object]): Self = {
+    def withDelete(value: Accesstoken => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonAccesstoken => Request_[Product]): Self = {
+    def withGet(value: Accesstoken => Request[Product]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonAlt => Request_[ListProductsResponse]): Self = {
+    def withList(value: Alt => Request[ListProductsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonAccesstoken => Request_[Product]): Self = {
+    def withUpdate(value: Accesstoken => Request[Product]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

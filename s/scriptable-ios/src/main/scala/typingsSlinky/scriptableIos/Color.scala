@@ -11,19 +11,8 @@ import scala.scalajs.js.annotation._
   * Examples of valid hex values: #ff0000, #00ff0080 #00f and #ff. The hashtag is optional.
   * @see https://docs.scriptable.app/color/#-new-color
   */
-@JSGlobal("Color")
 @js.native
-class Color protected () extends js.Object {
-  /**
-    * _Stores color data including opacity._
-    *
-    * Constructs a new color with a hex value and optionally an alpha value. The hex value may specify the alpha value but this will be ignored if the alpha value parameter is provided.
-    * Examples of valid hex values: #ff0000, #00ff0080 #00f and #ff. The hashtag is optional.
-    * @param hex - Hex value.
-    * @param alpha - Alpha value.
-    * @see https://docs.scriptable.app/color/#-new-color
-    */
-  def this(hex: String, alpha: Double) = this()
+trait Color extends js.Object {
   /**
     * _Alpha of the color._
     * @see https://docs.scriptable.app/color/#alpha
@@ -51,84 +40,49 @@ class Color protected () extends js.Object {
   var red: Double = js.native
 }
 
-/* static members */
-@JSGlobal("Color")
-@js.native
-object Color extends js.Object {
-  /**
-    * _Constructs a black color._
-    * @see https://docs.scriptable.app/color/#black
-    */
-  def black(): Color = js.native
-  /**
-    * _Constructs a blue color._
-    * @see https://docs.scriptable.app/color/#blue
-    */
-  def blue(): Color = js.native
-  /**
-    * _Constructs a brown color._
-    * @see https://docs.scriptable.app/color/#brown
-    */
-  def brown(): Color = js.native
-  /**
-    * _Constructs a transparent color._
-    * @see https://docs.scriptable.app/color/#clear
-    */
-  def clear(): Color = js.native
-  /**
-    * _Constructs a cyan color._
-    * @see https://docs.scriptable.app/color/#cyan
-    */
-  def cyan(): Color = js.native
-  /**
-    * _Constructs a dark gray color._
-    * @see https://docs.scriptable.app/color/#darkgray
-    */
-  def darkGray(): Color = js.native
-  /**
-    * _Constructs a gray color._
-    * @see https://docs.scriptable.app/color/#gray
-    */
-  def gray(): Color = js.native
-  /**
-    * _Constructs a green color._
-    * @see https://docs.scriptable.app/color/#green
-    */
-  def green(): Color = js.native
-  /**
-    * _Constructs a light gray color._
-    * @see https://docs.scriptable.app/color/#lightgray
-    */
-  def lightGray(): Color = js.native
-  /**
-    * _Constructs a magenta color._
-    * @see https://docs.scriptable.app/color/#magenta
-    */
-  def magenta(): Color = js.native
-  /**
-    * _Constructs a orange color._
-    * @see https://docs.scriptable.app/color/#orange
-    */
-  def orange(): Color = js.native
-  /**
-    * _Constructs a purple color._
-    * @see https://docs.scriptable.app/color/#purple
-    */
-  def purple(): Color = js.native
-  /**
-    * _Constructs a red color._
-    * @see https://docs.scriptable.app/color/#red
-    */
-  def red(): Color = js.native
-  /**
-    * _Constructs a white color._
-    * @see https://docs.scriptable.app/color/#white
-    */
-  def white(): Color = js.native
-  /**
-    * _Constructs a yellow color._
-    * @see https://docs.scriptable.app/color/#yellow
-    */
-  def yellow(): Color = js.native
+object Color {
+  @scala.inline
+  def apply(alpha: Double, blue: Double, green: Double, hex: String, red: Double): Color = {
+    val __obj = js.Dynamic.literal(alpha = alpha.asInstanceOf[js.Any], blue = blue.asInstanceOf[js.Any], green = green.asInstanceOf[js.Any], hex = hex.asInstanceOf[js.Any], red = red.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Color]
+  }
+  @scala.inline
+  implicit class ColorOps[Self <: Color] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlpha(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alpha")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGreen(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("green")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHex(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRed(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("red")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -12,10 +12,8 @@ import scala.scalajs.js.annotation._
   * @extends PIXI.System
   * @memberof PIXI
   */
-@JSGlobal("PIXI.ObjectRenderer")
 @js.native
-class ObjectRenderer protected () extends System {
-  def this(renderer: Renderer) = this()
+trait ObjectRenderer extends System {
   /**
     * Stub method that should be used to empty the current
     * batch by rendering objects now.
@@ -40,5 +38,52 @@ class ObjectRenderer protected () extends System {
     * become dormant.
     */
   def stop(): Unit = js.native
+}
+
+object ObjectRenderer {
+  @scala.inline
+  def apply(
+    destroy: () => Unit,
+    flush: () => Unit,
+    render: DisplayObject => Unit,
+    renderer: Renderer,
+    start: () => Unit,
+    stop: () => Unit
+  ): ObjectRenderer = {
+    val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), flush = js.Any.fromFunction0(flush), render = js.Any.fromFunction1(render), renderer = renderer.asInstanceOf[js.Any], start = js.Any.fromFunction0(start), stop = js.Any.fromFunction0(stop))
+    __obj.asInstanceOf[ObjectRenderer]
+  }
+  @scala.inline
+  implicit class ObjectRendererOps[Self <: ObjectRenderer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFlush(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flush")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRender(value: DisplayObject => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withStart(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStop(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

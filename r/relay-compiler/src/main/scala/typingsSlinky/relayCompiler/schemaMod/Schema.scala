@@ -3,7 +3,7 @@ package typingsSlinky.relayCompiler.schemaMod
 import typingsSlinky.graphql.astMod.DocumentNode
 import typingsSlinky.graphql.astMod.TypeNode
 import typingsSlinky.graphql.astMod.ValueNode
-import typingsSlinky.relayCompiler.AnonArgs
+import typingsSlinky.relayCompiler.anon.Args
 import typingsSlinky.relayCompiler.iRMod.Field
 import typingsSlinky.std.ReadonlySet
 import scala.scalajs.js
@@ -54,7 +54,7 @@ trait Schema extends js.Object {
   def getFieldArgByName(field: FieldID, argName: String): js.UndefOr[Argument | Null] = js.native
   def getFieldArgs(field: FieldID): js.Array[Argument] = js.native
   def getFieldByName(`type`: CompositeTypeID | InputObjectTypeID, fieldName: String): js.UndefOr[FieldID | Null] = js.native
-  def getFieldConfig(field: FieldID): AnonArgs = js.native
+  def getFieldConfig(field: FieldID): Args = js.native
   def getFieldName(field: FieldID): String = js.native
   def getFieldParentType(field: FieldID): TypeID = js.native
   def getFieldType(field: FieldID): TypeID = js.native

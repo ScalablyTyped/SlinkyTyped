@@ -1,35 +1,54 @@
 package typingsSlinky.dropboxjs.Dropbox
 
-import org.scalajs.dom.raw.XMLHttpRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Dropbox.ApiError")
 @js.native
-class ApiError protected () extends js.Object {
-  def this(xhr: XMLHttpRequest, method: String, url: String) = this()
+trait ApiError extends js.Object {
   var method: String = js.native
   var responseText: String = js.native
   var status: Double = js.native
   var url: String = js.native
 }
 
-/* static members */
-@JSGlobal("Dropbox.ApiError")
-@js.native
-object ApiError extends js.Object {
-  var CONFLICT: Double = js.native
-  var INVALID_METHOD: Double = js.native
-  var INVALID_PARAM: Double = js.native
-  var INVALID_TOKEN: Double = js.native
-  var NETWORK_ERROR: Double = js.native
-  var NOT_ACCEPTABLE: Double = js.native
-  var NOT_FOUND: Double = js.native
-  var NO_CONTENT: Double = js.native
-  var OAUTH_ERROR: Double = js.native
-  var OVER_QUOTA: Double = js.native
-  var RATE_LIMITED: Double = js.native
-  var SERVER_ERROR: Double = js.native
+object ApiError {
+  @scala.inline
+  def apply(method: String, responseText: String, status: Double, url: String): ApiError = {
+    val __obj = js.Dynamic.literal(method = method.asInstanceOf[js.Any], responseText = responseText.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ApiError]
+  }
+  @scala.inline
+  implicit class ApiErrorOps[Self <: ApiError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMethod(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResponseText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Used to access information specific to a WWAN connection. */
-@JSGlobal("Windows.Networking.Connectivity.WwanConnectionProfileDetails")
 @js.native
-abstract class WwanConnectionProfileDetails () extends js.Object {
+trait WwanConnectionProfileDetails extends js.Object {
   /** Indicates the name of the access point used to establish the WWAN connection. */
   var accessPointName: String = js.native
   /** Indicates the Home Network Provider ID. */
@@ -22,5 +21,50 @@ abstract class WwanConnectionProfileDetails () extends js.Object {
     * @return The current network registration state.
     */
   def getNetworkRegistrationState(): WwanNetworkRegistrationState = js.native
+}
+
+object WwanConnectionProfileDetails {
+  @scala.inline
+  def apply(
+    accessPointName: String,
+    getCurrentDataClass: () => WwanDataClass,
+    getNetworkRegistrationState: () => WwanNetworkRegistrationState,
+    homeProviderId: String
+  ): WwanConnectionProfileDetails = {
+    val __obj = js.Dynamic.literal(accessPointName = accessPointName.asInstanceOf[js.Any], getCurrentDataClass = js.Any.fromFunction0(getCurrentDataClass), getNetworkRegistrationState = js.Any.fromFunction0(getNetworkRegistrationState), homeProviderId = homeProviderId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WwanConnectionProfileDetails]
+  }
+  @scala.inline
+  implicit class WwanConnectionProfileDetailsOps[Self <: WwanConnectionProfileDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessPointName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessPointName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetCurrentDataClass(value: () => WwanDataClass): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentDataClass")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetNetworkRegistrationState(value: () => WwanNetworkRegistrationState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNetworkRegistrationState")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHomeProviderId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("homeProviderId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

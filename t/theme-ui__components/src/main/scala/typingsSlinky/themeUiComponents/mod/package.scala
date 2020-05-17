@@ -32,7 +32,7 @@ package object mod {
   type FieldProps[T /* <: slinky.core.facade.ReactElement */] = typingsSlinky.themeUiComponents.mod.FieldOwnProps with (typingsSlinky.themeUiComponents.mod.Omit[
     typingsSlinky.react.mod.ComponentProps[T], 
     typingsSlinky.themeUiComponents.themeUiComponentsStrings.as | typingsSlinky.themeUiComponents.themeUiComponentsStrings.label | typingsSlinky.themeUiComponents.themeUiComponentsStrings.name
-  ]) with typingsSlinky.themeUiComponents.AnonAs[T]
+  ]) with typingsSlinky.themeUiComponents.anon.As[T]
   type FlexProps = typingsSlinky.themeUiComponents.mod.BoxProps
   type FlexStyleProps = typingsSlinky.themeUiComponents.mod.BoxOwnProps
   type ForwardRef[T, P] = typingsSlinky.react.mod.ForwardRefExoticComponent[

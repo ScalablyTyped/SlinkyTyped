@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.personaTypesMod
 
-import typingsSlinky.officeUiFabricReact.AnonAvailable
+import typingsSlinky.officeUiFabricReact.anon.Available
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ trait IPersonaPresenceStyleProps extends js.Object {
   var className: js.UndefOr[String] = js.native
   var isOutOfOffice: js.UndefOr[Boolean] = js.native
   var presence: js.UndefOr[PersonaPresence] = js.native
-  var presenceColors: js.UndefOr[AnonAvailable] = js.native
+  var presenceColors: js.UndefOr[Available] = js.native
   var size: js.UndefOr[PersonaSize] = js.native
   var theme: ITheme = js.native
 }
@@ -72,7 +72,7 @@ object IPersonaPresenceStyleProps {
         ret
     }
     @scala.inline
-    def withPresenceColors(value: AnonAvailable): Self = {
+    def withPresenceColors(value: Available): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("presenceColors")(value.asInstanceOf[js.Any])
         ret

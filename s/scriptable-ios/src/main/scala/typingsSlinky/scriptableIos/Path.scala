@@ -10,15 +10,8 @@ import scala.scalajs.js.annotation._
   * Use the methods on the path to create complex shapes.
   * @see https://docs.scriptable.app/path/#-new-path
   */
-@JSGlobal("Path")
 @js.native
-/**
-  * _A path describes a shape._
-  *
-  * Use the methods on the path to create complex shapes.
-  * @see https://docs.scriptable.app/path/#-new-path
-  */
-class Path () extends js.Object {
+trait Path extends js.Object {
   /**
     * _Adds a cubic curve to a point._
     *
@@ -104,5 +97,92 @@ class Path () extends js.Object {
     * @see https://docs.scriptable.app/path/#-move
     */
   def move(point: Point): Unit = js.native
+}
+
+object Path {
+  @scala.inline
+  def apply(
+    addCurve: (Point, Point, Point) => Unit,
+    addEllipse: Rect => Unit,
+    addLine: Point => Unit,
+    addLines: js.Array[Point] => Unit,
+    addQuadCurve: (Point, Point) => Unit,
+    addRect: Rect => Unit,
+    addRects: js.Array[Rect] => Unit,
+    addRoundedRect: (Rect, Double, Double) => Unit,
+    closeSubpath: () => Unit,
+    move: Point => Unit
+  ): Path = {
+    val __obj = js.Dynamic.literal(addCurve = js.Any.fromFunction3(addCurve), addEllipse = js.Any.fromFunction1(addEllipse), addLine = js.Any.fromFunction1(addLine), addLines = js.Any.fromFunction1(addLines), addQuadCurve = js.Any.fromFunction2(addQuadCurve), addRect = js.Any.fromFunction1(addRect), addRects = js.Any.fromFunction1(addRects), addRoundedRect = js.Any.fromFunction3(addRoundedRect), closeSubpath = js.Any.fromFunction0(closeSubpath), move = js.Any.fromFunction1(move))
+    __obj.asInstanceOf[Path]
+  }
+  @scala.inline
+  implicit class PathOps[Self <: Path] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddCurve(value: (Point, Point, Point) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addCurve")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withAddEllipse(value: Rect => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addEllipse")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAddLine(value: Point => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addLine")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAddLines(value: js.Array[Point] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addLines")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAddQuadCurve(value: (Point, Point) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addQuadCurve")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withAddRect(value: Rect => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addRect")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAddRects(value: js.Array[Rect] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addRects")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAddRoundedRect(value: (Rect, Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addRoundedRect")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withCloseSubpath(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeSubpath")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withMove(value: Point => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("move")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

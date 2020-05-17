@@ -1,6 +1,7 @@
 package typingsSlinky.jqueryEditableSelect
 
 import typingsSlinky.jqueryEditableSelect.JQueryEditableSelect.EditableSelectOptions
+import typingsSlinky.jqueryEditableSelect.anon.Name
 import typingsSlinky.jqueryEditableSelect.jqueryEditableSelectStrings.add
 import typingsSlinky.jqueryEditableSelect.jqueryEditableSelectStrings.clear
 import typingsSlinky.jqueryEditableSelect.jqueryEditableSelectStrings.destroy
@@ -36,9 +37,9 @@ trait JQuery extends js.Object {
   @JSName("editableSelect")
   def editableSelect_add(action: add, text: String, index: Double): Unit = js.native
   @JSName("editableSelect")
-  def editableSelect_add(action: add, text: String, index: Double, attrs: js.Array[AnonName]): Unit = js.native
+  def editableSelect_add(action: add, text: String, index: Double, attrs: js.Array[Name]): Unit = js.native
   @JSName("editableSelect")
-  def editableSelect_add(action: add, text: String, index: Double, attrs: js.Array[AnonName], data: String): Unit = js.native
+  def editableSelect_add(action: add, text: String, index: Double, attrs: js.Array[Name], data: String): Unit = js.native
   @JSName("editableSelect")
   def editableSelect_clear(action: clear): Unit = js.native
   @JSName("editableSelect")

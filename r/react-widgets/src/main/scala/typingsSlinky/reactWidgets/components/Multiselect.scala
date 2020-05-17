@@ -3,9 +3,9 @@ package typingsSlinky.reactWidgets.components
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactWidgets.AnonAction
-import typingsSlinky.reactWidgets.AnonLastSearchTerm
-import typingsSlinky.reactWidgets.AnonOriginalEvent
+import typingsSlinky.reactWidgets.anon.Action
+import typingsSlinky.reactWidgets.anon.LastSearchTerm
+import typingsSlinky.reactWidgets.anon.OriginalEvent
 import typingsSlinky.reactWidgets.mod.Multiselect.^
 import typingsSlinky.reactWidgets.multiselectMod.MultiselectMessages
 import typingsSlinky.reactWidgets.multiselectMod.MultiselectProps
@@ -88,13 +88,13 @@ object Multiselect {
     @scala.inline
     def minLength(value: Double): this.type = set("minLength", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: (/* dataItems */ js.Array[_], /* metadata */ AnonAction) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    def onChange(value: (/* dataItems */ js.Array[_], /* metadata */ Action) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
     @scala.inline
     def onCreate(value: /* searchTerm */ String => Unit): this.type = set("onCreate", js.Any.fromFunction1(value))
     @scala.inline
-    def onSearch(value: (/* searchTerm */ String, /* metadata */ AnonLastSearchTerm) => Unit): this.type = set("onSearch", js.Any.fromFunction2(value))
+    def onSearch(value: (/* searchTerm */ String, /* metadata */ LastSearchTerm) => Unit): this.type = set("onSearch", js.Any.fromFunction2(value))
     @scala.inline
-    def onSelect(value: (/* value */ js.Any, /* metadata */ AnonOriginalEvent) => Unit): this.type = set("onSelect", js.Any.fromFunction2(value))
+    def onSelect(value: (/* value */ js.Any, /* metadata */ OriginalEvent) => Unit): this.type = set("onSelect", js.Any.fromFunction2(value))
     @scala.inline
     def onToggle(value: /* isOpen */ Boolean => Unit): this.type = set("onToggle", js.Any.fromFunction1(value))
     @scala.inline

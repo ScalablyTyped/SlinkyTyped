@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait AnyCreep extends js.Object
 
+object AnyCreep {
+  @scala.inline
+  implicit def apply(value: Creep): AnyCreep = value.asInstanceOf[AnyCreep]
+  @scala.inline
+  implicit def apply(value: PowerCreep): AnyCreep = value.asInstanceOf[AnyCreep]
+}
+

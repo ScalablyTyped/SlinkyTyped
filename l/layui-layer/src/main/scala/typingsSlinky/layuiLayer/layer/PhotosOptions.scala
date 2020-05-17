@@ -1,7 +1,7 @@
 package typingsSlinky.layuiLayer.layer
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait PhotosOptions extends Options {
     * @param pic
     * @param layero
     */
-  var tab: js.UndefOr[js.Function2[/* pic */ PhotosDataItem, /* layero */ JQuery_[HTMLElement], Unit]] = js.native
+  var tab: js.UndefOr[js.Function2[/* pic */ PhotosDataItem, /* layero */ JQuery[HTMLElement], Unit]] = js.native
 }
 
 object PhotosOptions {
@@ -36,7 +36,7 @@ object PhotosOptions {
         ret
     }
     @scala.inline
-    def withTab(value: (/* pic */ PhotosDataItem, /* layero */ JQuery_[HTMLElement]) => Unit): Self = {
+    def withTab(value: (/* pic */ PhotosDataItem, /* layero */ JQuery[HTMLElement]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tab")(js.Any.fromFunction2(value))
         ret

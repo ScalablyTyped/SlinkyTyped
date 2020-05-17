@@ -1,12 +1,12 @@
 package typingsSlinky.actionsOnGoogle.v2Mod
 
-import typingsSlinky.actionsOnGoogle.argumentArgumentMod._Argument
+import typingsSlinky.actionsOnGoogle.argumentArgumentMod.Argument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait GoogleActionsV2DateTime extends _Argument {
+trait GoogleActionsV2DateTime extends Argument {
   /**
     * Date value
     */

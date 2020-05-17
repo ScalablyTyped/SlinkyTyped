@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 // engine/model/documentfragment
 @JSImport("@ckeditor/ckeditor5-engine", "model.DocumentFragment")
 @js.native
-class DocumentFragment protected () extends _NodeSet {
+class DocumentFragment protected () extends NodeSet {
   protected def this(children: Node) = this()
   protected def this(children: js.Iterable[Node]) = this()
   val childCount: Double = js.native

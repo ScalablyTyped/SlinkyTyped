@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.subscriptions
 
-import typingsSlinky.stripe.AnonUsagegte
+import typingsSlinky.stripe.anon.Usagegte
 import typingsSlinky.stripe.mod.IOptionsMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ trait ISubscriptionCreationItem extends js.Object {
   /**
     * Define thresholds at which an invoice will be sent, and the related subscription advanced to a new billing period.
     */
-  var billing_thresholds: js.UndefOr[AnonUsagegte] = js.native
+  var billing_thresholds: js.UndefOr[Usagegte] = js.native
   /**
     * A set of key/value pairs that you can attach to an object. It can be useful for storing
     * additional information about the object in a structured format.
@@ -46,7 +46,7 @@ object ISubscriptionCreationItem {
         ret
     }
     @scala.inline
-    def withBilling_thresholds(value: AnonUsagegte): Self = {
+    def withBilling_thresholds(value: Usagegte): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("billing_thresholds")(value.asInstanceOf[js.Any])
         ret

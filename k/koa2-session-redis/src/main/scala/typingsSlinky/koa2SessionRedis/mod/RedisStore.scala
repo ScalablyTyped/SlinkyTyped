@@ -1,6 +1,6 @@
 package typingsSlinky.koa2SessionRedis.mod
 
-import typingsSlinky.koa2SessionRedis.PartialSessionexpirenumbe
+import typingsSlinky.koa2SessionRedis.anon.PartialSessionexpirenumbe
 import typingsSlinky.koa2SessionRedis.koa2SessionRedisStrings.session
 import typingsSlinky.koaSession.mod.stores
 import scala.scalajs.js

@@ -4,7 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.reactNavigation.mod.NavigationParams
 import typingsSlinky.reactNavigation.mod.NavigationScreenProp
-import typingsSlinky.reactNavigationDrawer.DrawerOptionscontentCompo
+import typingsSlinky.reactNavigationDrawer.anon.DrawerOptionscontentCompo
 import typingsSlinky.reactNavigationDrawer.drawerViewMod.Props
 import typingsSlinky.reactNavigationDrawer.drawerViewMod.default
 import typingsSlinky.reactNavigationDrawer.typesMod.NavigationDrawerState

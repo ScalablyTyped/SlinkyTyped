@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait EventExpressionData
   extends BaseExpressionData
-     with _ExpressionData {
+     with ExpressionData {
   var name: String = js.native
 }
 

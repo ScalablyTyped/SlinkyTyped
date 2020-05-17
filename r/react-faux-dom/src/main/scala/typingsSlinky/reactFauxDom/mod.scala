@@ -2,6 +2,7 @@ package typingsSlinky.reactFauxDom
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
+import typingsSlinky.reactFauxDom.anon.GetPropertyValue
 import typingsSlinky.reactFauxDom.reactFauxDomStrings.animateFauxDOM
 import typingsSlinky.reactFauxDom.reactFauxDomStrings.connectFauxDOM
 import typingsSlinky.reactFauxDom.reactFauxDomStrings.drawFauxDOM
@@ -48,7 +49,7 @@ object mod extends js.Object {
   ] = js.native
   @js.native
   object defaultView extends js.Object {
-    def getComputedStyle(node: Element): AnonGetPropertyValue = js.native
+    def getComputedStyle(node: Element): GetPropertyValue = js.native
   }
   
 }

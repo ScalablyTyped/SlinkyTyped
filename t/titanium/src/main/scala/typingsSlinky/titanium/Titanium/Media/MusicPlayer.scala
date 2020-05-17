@@ -10,9 +10,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * This object represents a music controller.
 		 */
-@JSGlobal("Titanium.Media.MusicPlayer")
 @js.native
-class MusicPlayer () extends Proxy {
+trait MusicPlayer extends Proxy {
   /**
   			 * Current point in song playback, in seconds.
   			 */

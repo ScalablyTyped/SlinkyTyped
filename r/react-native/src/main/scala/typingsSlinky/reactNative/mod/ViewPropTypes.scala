@@ -2,7 +2,7 @@ package typingsSlinky.reactNative.mod
 
 import slinky.core.SyntheticEvent
 import typingsSlinky.propTypes.mod.Validator
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.reactNativeStrings.`box-none`
 import typingsSlinky.reactNative.reactNativeStrings.`box-only`
 import typingsSlinky.reactNative.reactNativeStrings.`no-hide-descendants`

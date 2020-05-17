@@ -1,13 +1,13 @@
 package typingsSlinky.cradle.mod
 
-import typingsSlinky.cradle.AnonPassword
+import typingsSlinky.cradle.anon.Password
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Options extends js.Object {
-  var auth: js.UndefOr[String | AnonPassword] = js.native
+  var auth: js.UndefOr[String | Password] = js.native
   var ca: js.UndefOr[String] = js.native
   var cache: js.UndefOr[Boolean] = js.native
   var forceSave: js.UndefOr[Boolean] = js.native
@@ -33,7 +33,7 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAuth(value: String | AnonPassword): Self = {
+    def withAuth(value: String | Password): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
         ret

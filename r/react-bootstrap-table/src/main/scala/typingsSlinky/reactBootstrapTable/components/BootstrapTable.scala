@@ -4,7 +4,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactBootstrapTable.AnonFilter
+import typingsSlinky.reactBootstrapTable.anon.Filter
 import typingsSlinky.reactBootstrapTable.mod.BootstrapTableProps
 import typingsSlinky.reactBootstrapTable.mod.BootstrapVersion
 import typingsSlinky.reactBootstrapTable.mod.CellEdit
@@ -30,7 +30,7 @@ object BootstrapTable {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactBootstrapTable.mod.BootstrapTable] {
     @scala.inline
-    def autoCollapse(value: AnonFilter): this.type = set("autoCollapse", value.asInstanceOf[js.Any])
+    def autoCollapse(value: Filter): this.type = set("autoCollapse", value.asInstanceOf[js.Any])
     @scala.inline
     def bodyContainerClass(value: String): this.type = set("bodyContainerClass", value.asInstanceOf[js.Any])
     @scala.inline

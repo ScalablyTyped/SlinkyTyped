@@ -7,17 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the MVCxClientQueryBuilder.SaveCommandExecuted event.
   */
-@JSGlobal("MVCxClientQueryBuilderSaveCommandExecutedEventArgs")
 @js.native
-class MVCxClientQueryBuilderSaveCommandExecutedEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the MVCxClientQueryBuilderSaveCommandExecutedEventArgs class with the specified settings.
-    * @param result An object that specifies the Save command execution result.
-    */
-  def this(result: String) = this()
+trait MVCxClientQueryBuilderSaveCommandExecutedEventArgs extends ASPxClientEventArgs {
   /**
     * Specifies the Save command execution result.
     */
   var Result: String = js.native
+}
+
+object MVCxClientQueryBuilderSaveCommandExecutedEventArgs {
+  @scala.inline
+  def apply(Result: String): MVCxClientQueryBuilderSaveCommandExecutedEventArgs = {
+    val __obj = js.Dynamic.literal(Result = Result.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MVCxClientQueryBuilderSaveCommandExecutedEventArgs]
+  }
+  @scala.inline
+  implicit class MVCxClientQueryBuilderSaveCommandExecutedEventArgsOps[Self <: MVCxClientQueryBuilderSaveCommandExecutedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResult(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Result")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

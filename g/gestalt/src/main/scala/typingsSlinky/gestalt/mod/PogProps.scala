@@ -1,6 +1,6 @@
 package typingsSlinky.gestalt.mod
 
-import typingsSlinky.gestalt.AnonPathString
+import typingsSlinky.gestalt.anon.PathString
 import typingsSlinky.gestalt.gestaltStrings.blue
 import typingsSlinky.gestalt.gestaltStrings.darkGray
 import typingsSlinky.gestalt.gestaltStrings.gray
@@ -23,7 +23,7 @@ import scala.scalajs.js.annotation._
 trait PogProps extends js.Object {
   var active: js.UndefOr[Boolean] = js.native
   var bgColor: js.UndefOr[transparent | lightGray | white | gray | blue | transparentDarkGray] = js.native
-  var dangerouslySetSvgPath: js.UndefOr[AnonPathString] = js.native
+  var dangerouslySetSvgPath: js.UndefOr[PathString] = js.native
   var focused: js.UndefOr[Boolean] = js.native
   var hovered: js.UndefOr[Boolean] = js.native
   var icon: js.UndefOr[Icons] = js.native
@@ -69,7 +69,7 @@ object PogProps {
         ret
     }
     @scala.inline
-    def withDangerouslySetSvgPath(value: AnonPathString): Self = {
+    def withDangerouslySetSvgPath(value: PathString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetSvgPath")(value.asInstanceOf[js.Any])
         ret

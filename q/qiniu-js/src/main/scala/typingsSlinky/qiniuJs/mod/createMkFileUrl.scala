@@ -1,6 +1,6 @@
 package typingsSlinky.qiniuJs.mod
 
-import typingsSlinky.qiniuJs.PartialExtra
+import typingsSlinky.qiniuJs.anon.PartialExtra
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

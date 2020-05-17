@@ -5,7 +5,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactVirtualized.AnonSortBy
+import typingsSlinky.reactVirtualized.anon.SortBy
 import typingsSlinky.reactVirtualized.esCellMeasurerMod.CellMeasurerCache
 import typingsSlinky.reactVirtualized.esGridMod.GridCellRangeProps
 import typingsSlinky.reactVirtualized.esGridMod.OverscanIndices
@@ -140,7 +140,7 @@ object Table {
     @scala.inline
     def scrollingResetTimeInterval(value: Double): this.type = set("scrollingResetTimeInterval", value.asInstanceOf[js.Any])
     @scala.inline
-    def sort(value: /* info */ AnonSortBy => Unit): this.type = set("sort", js.Any.fromFunction1(value))
+    def sort(value: /* info */ SortBy => Unit): this.type = set("sort", js.Any.fromFunction1(value))
     @scala.inline
     def sortBy(value: String): this.type = set("sortBy", value.asInstanceOf[js.Any])
     @scala.inline

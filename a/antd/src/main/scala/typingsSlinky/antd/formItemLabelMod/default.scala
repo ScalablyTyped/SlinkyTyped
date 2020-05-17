@@ -2,7 +2,7 @@ package typingsSlinky.antd.formItemLabelMod
 
 import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
-import typingsSlinky.antd.FormItemLabelPropsrequire
+import typingsSlinky.antd.anon.FormItemLabelPropsrequire
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

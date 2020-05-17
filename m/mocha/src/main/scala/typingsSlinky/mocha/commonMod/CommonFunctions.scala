@@ -1,8 +1,8 @@
 package typingsSlinky.mocha.commonMod
 
-import typingsSlinky.mocha.Mocha_.AsyncFunc
-import typingsSlinky.mocha.Mocha_.Func
-import typingsSlinky.mocha.Mocha_.Suite_
+import typingsSlinky.mocha.Mocha.AsyncFunc
+import typingsSlinky.mocha.Mocha.Func
+import typingsSlinky.mocha.Mocha.Suite
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -63,6 +63,6 @@ trait CommonFunctions extends js.Object {
     * This is only present if flag --delay is passed into Mocha. It triggers
     * root suite execution.
     */
-  def runWithSuite(suite: Suite_): js.Function0[Unit] = js.native
+  def runWithSuite(suite: Suite): js.Function0[Unit] = js.native
 }
 

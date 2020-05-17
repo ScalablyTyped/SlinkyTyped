@@ -1,0 +1,74 @@
+package typingsSlinky.pizzip.anon
+
+import typingsSlinky.pizzip.mod.Compression
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Base64 extends js.Object {
+  /**
+    * @deprecated
+    */
+  var base64: Boolean = js.native
+  /**
+    * @deprecated
+    */
+  var binary: Boolean = js.native
+  var compression: Compression = js.native
+  /**
+    * @deprecated use File.date
+    */
+  var date: js.Date = js.native
+  /**
+    * @deprecated use File.dir
+    */
+  var dir: Boolean = js.native
+}
+
+object Base64 {
+  @scala.inline
+  def apply(base64: Boolean, binary: Boolean, compression: Compression, date: js.Date, dir: Boolean): Base64 = {
+    val __obj = js.Dynamic.literal(base64 = base64.asInstanceOf[js.Any], binary = binary.asInstanceOf[js.Any], compression = compression.asInstanceOf[js.Any], date = date.asInstanceOf[js.Any], dir = dir.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Base64]
+  }
+  @scala.inline
+  implicit class Base64Ops[Self <: Base64] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBase64(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("base64")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBinary(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("binary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCompression(value: Compression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDir(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dir")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

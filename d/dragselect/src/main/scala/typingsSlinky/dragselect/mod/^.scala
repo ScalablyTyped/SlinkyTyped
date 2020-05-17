@@ -1,6 +1,6 @@
 package typingsSlinky.dragselect.mod
 
-import typingsSlinky.dragselect.PartialareaHTMLElementSVG
+import typingsSlinky.dragselect.anon.PartialareaHTMLElementSVG
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

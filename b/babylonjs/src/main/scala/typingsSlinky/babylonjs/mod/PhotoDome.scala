@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.mod
 
-import typingsSlinky.babylonjs.AnonFaceForward
+import typingsSlinky.babylonjs.anon.FaceForward
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,13 +20,13 @@ class PhotoDome protected ()
   def this(
     name: String,
     urlOfPhoto: String,
-    options: AnonFaceForward,
+    options: FaceForward,
     scene: typingsSlinky.babylonjs.sceneMod.Scene
   ) = this()
   def this(
     name: String,
     urlOfPhoto: String,
-    options: AnonFaceForward,
+    options: FaceForward,
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     onError: Nullable[
         js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[_], Unit]

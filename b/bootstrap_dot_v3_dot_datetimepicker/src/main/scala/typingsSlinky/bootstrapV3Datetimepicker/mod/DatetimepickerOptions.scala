@@ -8,7 +8,7 @@ import typingsSlinky.bootstrapV3Datetimepicker.bootstrapV3DatetimepickerStrings.
 import typingsSlinky.bootstrapV3Datetimepicker.bootstrapV3DatetimepickerStrings.months
 import typingsSlinky.bootstrapV3Datetimepicker.bootstrapV3DatetimepickerStrings.top
 import typingsSlinky.bootstrapV3Datetimepicker.bootstrapV3DatetimepickerStrings.years
-import typingsSlinky.bootstrapV3Datetimepicker.mod._Global_.JQuery
+import typingsSlinky.bootstrapV3Datetimepicker.mod.global.JQuery
 import typingsSlinky.moment.mod.Moment
 import typingsSlinky.moment.mod.MomentBuiltinFormat
 import scala.scalajs.js

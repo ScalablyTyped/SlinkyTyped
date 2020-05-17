@@ -1,6 +1,5 @@
 package typingsSlinky.algoliasearchHelper.mod
 
-import typingsSlinky.algoliasearchHelper.AnonContent
 import typingsSlinky.algoliasearchHelper.algoliasearchHelperStrings.change
 import typingsSlinky.algoliasearchHelper.algoliasearchHelperStrings.error
 import typingsSlinky.algoliasearchHelper.algoliasearchHelperStrings.result
@@ -8,6 +7,7 @@ import typingsSlinky.algoliasearchHelper.algoliasearchHelperStrings.search
 import typingsSlinky.algoliasearchHelper.algoliasearchHelperStrings.searchForFacetValues
 import typingsSlinky.algoliasearchHelper.algoliasearchHelperStrings.searchOnce
 import typingsSlinky.algoliasearchHelper.algoliasearchHelperStrings.searchQueueEmpty
+import typingsSlinky.algoliasearchHelper.anon.Content
 import typingsSlinky.algoliasearchHelper.mod.AlgoliaSearchHelper.FacetSearchResult
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
@@ -203,7 +203,7 @@ class AlgoliaSearchHelper_ () extends EventEmitter {
     *   // }
     * }
     */
-  def searchOnce(options: QueryParameters): js.Promise[AnonContent] = js.native
+  def searchOnce(options: QueryParameters): js.Promise[Content] = js.native
   def searchOnce(
     options: QueryParameters,
     cb: js.Function3[/* error */ js.Any, /* content */ SearchResults, /* state */ SearchParameters, _]

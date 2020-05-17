@@ -4,12 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.SixDofDragBehavior")
 @js.native
-/**
-  * Instantiates a behavior that when attached to a mesh will allow the mesh to be dragged around based on directions and origin of the pointer's ray
-  */
-class SixDofDragBehavior () extends Behavior[Mesh] {
+trait SixDofDragBehavior extends Behavior[Mesh] {
   var _moving: js.Any = js.native
   var _ownerNode: js.Any = js.native
   var _pointerObserver: js.Any = js.native
@@ -62,10 +58,156 @@ class SixDofDragBehavior () extends Behavior[Mesh] {
   def name_MSixDofDragBehavior: String = js.native
 }
 
-/* static members */
-@JSGlobal("BABYLON.SixDofDragBehavior")
-@js.native
-object SixDofDragBehavior extends js.Object {
-  var _virtualScene: js.Any = js.native
+object SixDofDragBehavior {
+  @scala.inline
+  def apply(
+    _moving: js.Any,
+    _ownerNode: js.Any,
+    _pointerCamera: () => js.Any,
+    _pointerObserver: js.Any,
+    _scene: js.Any,
+    _sceneRenderObserver: js.Any,
+    _startingOrientation: js.Any,
+    _targetPosition: js.Any,
+    _virtualDragMesh: js.Any,
+    _virtualOriginMesh: js.Any,
+    attach: Mesh => Unit,
+    currentDraggingPointerID: Double,
+    detach: () => Unit,
+    detachCameraControls: Boolean,
+    dragDeltaRatio: Double,
+    dragging: Boolean,
+    init: () => Unit,
+    name: () => String,
+    onDragEndObservable: Observable[js.Object],
+    onDragStartObservable: Observable[js.Object],
+    rotateDraggedObject: Boolean,
+    zDragFactor: js.Any
+  ): SixDofDragBehavior = {
+    val __obj = js.Dynamic.literal(_moving = _moving.asInstanceOf[js.Any], _ownerNode = _ownerNode.asInstanceOf[js.Any], _pointerCamera = js.Any.fromFunction0(_pointerCamera), _pointerObserver = _pointerObserver.asInstanceOf[js.Any], _scene = _scene.asInstanceOf[js.Any], _sceneRenderObserver = _sceneRenderObserver.asInstanceOf[js.Any], _startingOrientation = _startingOrientation.asInstanceOf[js.Any], _targetPosition = _targetPosition.asInstanceOf[js.Any], _virtualDragMesh = _virtualDragMesh.asInstanceOf[js.Any], _virtualOriginMesh = _virtualOriginMesh.asInstanceOf[js.Any], attach = js.Any.fromFunction1(attach), currentDraggingPointerID = currentDraggingPointerID.asInstanceOf[js.Any], detach = js.Any.fromFunction0(detach), detachCameraControls = detachCameraControls.asInstanceOf[js.Any], dragDeltaRatio = dragDeltaRatio.asInstanceOf[js.Any], dragging = dragging.asInstanceOf[js.Any], init = js.Any.fromFunction0(init), name = js.Any.fromFunction0(name), onDragEndObservable = onDragEndObservable.asInstanceOf[js.Any], onDragStartObservable = onDragStartObservable.asInstanceOf[js.Any], rotateDraggedObject = rotateDraggedObject.asInstanceOf[js.Any], zDragFactor = zDragFactor.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SixDofDragBehavior]
+  }
+  @scala.inline
+  implicit class SixDofDragBehaviorOps[Self <: SixDofDragBehavior] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_moving(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_moving")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_ownerNode(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_ownerNode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_pointerCamera(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_pointerCamera")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def with_pointerObserver(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_pointerObserver")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_scene(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_scene")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_sceneRenderObserver(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_sceneRenderObserver")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_startingOrientation(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_startingOrientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_targetPosition(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_targetPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_virtualDragMesh(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_virtualDragMesh")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_virtualOriginMesh(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_virtualOriginMesh")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentDraggingPointerID(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentDraggingPointerID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDetachCameraControls(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detachCameraControls")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDragDeltaRatio(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragDeltaRatio")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDragging(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dragging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnDragEndObservable(value: Observable[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEndObservable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnDragStartObservable(value: Observable[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStartObservable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRotateDraggedObject(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateDraggedObject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withZDragFactor(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zDragFactor")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

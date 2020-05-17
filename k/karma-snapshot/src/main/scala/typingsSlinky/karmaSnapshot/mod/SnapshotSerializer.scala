@@ -1,6 +1,6 @@
 package typingsSlinky.karmaSnapshot.mod
 
-import typingsSlinky.karmaSnapshot.AnonName
+import typingsSlinky.karmaSnapshot.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,13 +10,13 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait SnapshotSerializer extends js.Object {
-  def deserialize(content: String): AnonName = js.native
+  def deserialize(content: String): Name = js.native
   def serialize(name: String, suite: SnapshotSuite): String = js.native
 }
 
 object SnapshotSerializer {
   @scala.inline
-  def apply(deserialize: String => AnonName, serialize: (String, SnapshotSuite) => String): SnapshotSerializer = {
+  def apply(deserialize: String => Name, serialize: (String, SnapshotSuite) => String): SnapshotSerializer = {
     val __obj = js.Dynamic.literal(deserialize = js.Any.fromFunction1(deserialize), serialize = js.Any.fromFunction2(serialize))
     __obj.asInstanceOf[SnapshotSerializer]
   }
@@ -27,7 +27,7 @@ object SnapshotSerializer {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDeserialize(value: String => AnonName): Self = {
+    def withDeserialize(value: String => Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("deserialize")(js.Any.fromFunction1(value))
         ret

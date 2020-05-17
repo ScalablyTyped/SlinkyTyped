@@ -1,6 +1,14 @@
 package typingsSlinky.vexdb
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.vexdb.anon.Awards
+import typingsSlinky.vexdb.anon.LiveRequestObjectAwardsRe
+import typingsSlinky.vexdb.anon.LiveRequestObjectEventsRe
+import typingsSlinky.vexdb.anon.LiveRequestObjectMatchesR
+import typingsSlinky.vexdb.anon.LiveRequestObjectRankings
+import typingsSlinky.vexdb.anon.LiveRequestObjectSeasonRa
+import typingsSlinky.vexdb.anon.LiveRequestObjectSkillsRe
+import typingsSlinky.vexdb.anon.LiveRequestObjectTeamsReq
 import typingsSlinky.vexdb.cacheMod.CacheEntry
 import typingsSlinky.vexdb.liveMod.LiveEventEmitter
 import typingsSlinky.vexdb.liveMod.LiveRequestObject
@@ -131,7 +139,7 @@ object mod extends js.Object {
     var endpoints: js.Array[Endpoint] = js.native
     var isBrowser: js.Function = js.native
     var settings: typingsSlinky.vexdb.settingsMod.settings = js.native
-    var validParams: AnonAwards = js.native
+    var validParams: Awards = js.native
     def header(headers: StringDictionary[String]): Unit = js.native
     def param(params: RequestObject): Unit = js.native
   }

@@ -1,7 +1,7 @@
 package typingsSlinky.apolloServerExpress.mod
 
-import typingsSlinky.apolloServerErrors.ErrorextensionsRecordstri
-import typingsSlinky.apolloServerErrors.ErrorextensionsRecordstriExtensions
+import typingsSlinky.apolloServerErrors.anon.ErrorextensionsRecordstri
+import typingsSlinky.apolloServerErrors.anon.ErrorextensionsRecordstriExtensions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -11,13 +11,10 @@ import scala.scalajs.js.annotation._
   * Dynamically generated wrapper for any Objective-C instance, class, or meta-class.
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- org.scalablytyped.runtime.StringDictionary because Already inherited */ @JSGlobal("ObjC.Object")
-@js.native
-class Object protected ()
+- org.scalablytyped.runtime.StringDictionary because Already inherited */ @js.native
+trait Object
   extends ObjectWrapper
      with ObjectMethods {
-  def this(handle: NativePointer) = this()
-  def this(handle: NativePointer, protocol: Protocol) = this()
   /**
     * Class that this object is an instance of.
     */

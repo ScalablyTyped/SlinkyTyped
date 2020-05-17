@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait TeamsAddOrUpdateProjectInOrgParams extends js.Object {
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
   /**
     * The permission to grant to the team for this project. Can be one of:
     * \* `read` - team members can read, but not write to or administer this project.
@@ -24,8 +25,9 @@ trait TeamsAddOrUpdateProjectInOrgParams extends js.Object {
 
 object TeamsAddOrUpdateProjectInOrgParams {
   @scala.inline
-  def apply(org: String, project_id: Double, team_slug: String): TeamsAddOrUpdateProjectInOrgParams = {
-    val __obj = js.Dynamic.literal(org = org.asInstanceOf[js.Any], project_id = project_id.asInstanceOf[js.Any], team_slug = team_slug.asInstanceOf[js.Any])
+  def apply(org_ : String, project_id: Double, team_slug: String): TeamsAddOrUpdateProjectInOrgParams = {
+    val __obj = js.Dynamic.literal(project_id = project_id.asInstanceOf[js.Any], team_slug = team_slug.asInstanceOf[js.Any])
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[TeamsAddOrUpdateProjectInOrgParams]
   }
   @scala.inline
@@ -35,7 +37,7 @@ object TeamsAddOrUpdateProjectInOrgParams {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

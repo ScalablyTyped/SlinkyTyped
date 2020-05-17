@@ -1,7 +1,7 @@
 package typingsSlinky.mapsjs.mod
 
-import typingsSlinky.mapsjs.AnonDistance
-import typingsSlinky.mapsjs.AnonIdx
+import typingsSlinky.mapsjs.anon.Distance
+import typingsSlinky.mapsjs.anon.Idx
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ class geometry () extends js.Object {
   	 * the 0-based index of the set the point was added to and idx is the
   	 * 0-based index of the point in its set.
   	 */
-  def addPointToLastSet(pt: point): AnonIdx = js.native
+  def addPointToLastSet(pt: point): Idx = js.native
   /**
   	 * Tests whether this geometry contains a given point/
   	 * @param {point} pt The reference point.
@@ -42,8 +42,8 @@ class geometry () extends js.Object {
   	 * index of the point in the set, pt is the point object, and distance
   	 * is the distance of the point to the reference point in map units.
   	 */
-  def findNearestSegment(pt: point): AnonDistance = js.native
-  def findNearestSegment(pt: point, close: Boolean): AnonDistance = js.native
+  def findNearestSegment(pt: point): Distance = js.native
+  def findNearestSegment(pt: point, close: Boolean): Distance = js.native
   /**
   	 * Finds the point in this geometry nearest to the given point.
   	 * @param {point} pt Reference point.
@@ -52,7 +52,7 @@ class geometry () extends js.Object {
   	 * index of the point in the set, pt is the point object, and distance
   	 * is the distance of the point to the reference point in map units.
   	 */
-  def findNearestVertex(pt: point): AnonDistance = js.native
+  def findNearestVertex(pt: point): Distance = js.native
   /**
   	 * Iterates every vertex in the geometry and passes to the supplied 
   	 * callback. Return true from in the callback will break the iteration.

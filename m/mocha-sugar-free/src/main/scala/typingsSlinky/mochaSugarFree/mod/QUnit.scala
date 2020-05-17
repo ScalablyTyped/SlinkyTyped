@@ -2,10 +2,10 @@ package typingsSlinky.mochaSugarFree.mod
 
 import typingsSlinky.mocha.mod.Suite_
 import typingsSlinky.mocha.mod.Test_
-import typingsSlinky.mochaSugarFree.OptionsasyncfalsefnTestCa
-import typingsSlinky.mochaSugarFree.OptionsasynctruefnTestCas
-import typingsSlinky.mochaSugarFree.OptionsfnSuiteFunc
-import typingsSlinky.mochaSugarFree.OptionstitlestringfnSuite
+import typingsSlinky.mochaSugarFree.anon.OptionsasyncfalsefnTestCa
+import typingsSlinky.mochaSugarFree.anon.OptionsasynctruefnTestCas
+import typingsSlinky.mochaSugarFree.anon.OptionsfnSuiteFunc
+import typingsSlinky.mochaSugarFree.anon.OptionstitlestringfnSuite
 import typingsSlinky.mochaSugarFree.mochaSugarFreeStrings.qunit
 import scala.scalajs.js
 import scala.scalajs.js.`|`

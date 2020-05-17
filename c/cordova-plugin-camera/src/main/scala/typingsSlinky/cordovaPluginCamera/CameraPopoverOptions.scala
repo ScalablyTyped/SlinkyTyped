@@ -9,14 +9,8 @@ import scala.scalajs.js.annotation._
   * of the popover when selecting images from an iPad's library or album.
   */
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CameraPopoverOptions * / any */ @JSGlobal("CameraPopoverOptions")
-@js.native
-class CameraPopoverOptions () extends js.Object {
-  def this(x: Double) = this()
-  def this(x: Double, y: Double) = this()
-  def this(x: Double, y: Double, width: Double) = this()
-  def this(x: Double, y: Double, width: Double, height: Double) = this()
-  def this(x: Double, y: Double, width: Double, height: Double, arrowDir: Double) = this()
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CameraPopoverOptions * / any */ @js.native
+trait CameraPopoverOptions extends js.Object {
   /**
     * Direction the arrow on the popover should point. Defined in Camera.PopoverArrowDirection
     * Matches iOS UIPopoverArrowDirection constants.
@@ -33,5 +27,71 @@ class CameraPopoverOptions () extends js.Object {
   var width: Double = js.native
   var x: Double = js.native
   var y: Double = js.native
+}
+
+object CameraPopoverOptions {
+  @scala.inline
+  def apply(
+    arrowDir: Double,
+    height: Double,
+    popoverHeight: Double,
+    popoverWidth: Double,
+    width: Double,
+    x: Double,
+    y: Double
+  ): CameraPopoverOptions = {
+    val __obj = js.Dynamic.literal(arrowDir = arrowDir.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], popoverHeight = popoverHeight.asInstanceOf[js.Any], popoverWidth = popoverWidth.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CameraPopoverOptions]
+  }
+  @scala.inline
+  implicit class CameraPopoverOptionsOps[Self <: CameraPopoverOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArrowDir(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arrowDir")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPopoverHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popoverHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPopoverWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("popoverWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

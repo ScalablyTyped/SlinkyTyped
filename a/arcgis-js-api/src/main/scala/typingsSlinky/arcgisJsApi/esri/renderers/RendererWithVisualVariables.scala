@@ -12,3 +12,14 @@ import scala.scalajs.js.annotation._
 */
 trait RendererWithVisualVariables extends js.Object
 
+object RendererWithVisualVariables {
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.ClassBreaksRenderer): RendererWithVisualVariables = value.asInstanceOf[RendererWithVisualVariables]
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.DotDensityRenderer): RendererWithVisualVariables = value.asInstanceOf[RendererWithVisualVariables]
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.SimpleRenderer): RendererWithVisualVariables = value.asInstanceOf[RendererWithVisualVariables]
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.UniqueValueRenderer): RendererWithVisualVariables = value.asInstanceOf[RendererWithVisualVariables]
+}
+

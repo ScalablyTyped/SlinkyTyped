@@ -1,18 +1,18 @@
 package typingsSlinky.reduxOptimisticUi.mod
 
-import typingsSlinky.reduxOptimisticUi.AnonOptimistic
+import typingsSlinky.reduxOptimisticUi.anon.Optimistic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait OptimisticAction extends js.Object {
-  var meta: AnonOptimistic = js.native
+  var meta: Optimistic = js.native
 }
 
 object OptimisticAction {
   @scala.inline
-  def apply(meta: AnonOptimistic): OptimisticAction = {
+  def apply(meta: Optimistic): OptimisticAction = {
     val __obj = js.Dynamic.literal(meta = meta.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptimisticAction]
   }
@@ -23,7 +23,7 @@ object OptimisticAction {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMeta(value: AnonOptimistic): Self = {
+    def withMeta(value: Optimistic): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
         ret

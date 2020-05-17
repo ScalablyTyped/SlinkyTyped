@@ -1,12 +1,13 @@
 package typingsSlinky.fridaGum
 
+import typingsSlinky.fridaGum.anon.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ArmBaseOperand extends js.Object {
-  var shift: js.UndefOr[AnonType] = js.native
+  var shift: js.UndefOr[Type] = js.native
   var subtracted: Boolean = js.native
   var vectorIndex: js.UndefOr[Double] = js.native
 }
@@ -30,7 +31,7 @@ object ArmBaseOperand {
         ret
     }
     @scala.inline
-    def withShift(value: AnonType): Self = {
+    def withShift(value: Type): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shift")(value.asInstanceOf[js.Any])
         ret

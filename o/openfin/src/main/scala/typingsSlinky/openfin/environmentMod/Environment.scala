@@ -1,9 +1,9 @@
 package typingsSlinky.openfin.environmentMod
 
+import org.scalajs.dom.raw.Window
 import typingsSlinky.openfin.frameFrameMod.EntityType
 import typingsSlinky.openfin.identityMod.Identity
 import typingsSlinky.openfin.wireMod.NewConnectConfig
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait Environment extends js.Object {
   def getCurrentEntityType(): EntityType = js.native
   def getNextMessageId(): js.Any = js.native
   def getRandomId(): String = js.native
-  def getWebWindow(identity: Identity): Window_ = js.native
+  def getWebWindow(identity: Identity): Window = js.native
   def isWindowExists(uuid: String, name: String): Boolean = js.native
   def retrievePort(config: NewConnectConfig): js.Promise[Double] = js.native
   def writeToken(path: String, token: String): js.Promise[String] = js.native
@@ -29,7 +29,7 @@ object Environment {
     getCurrentEntityType: () => EntityType,
     getNextMessageId: () => js.Any,
     getRandomId: () => String,
-    getWebWindow: Identity => Window_,
+    getWebWindow: Identity => Window,
     isWindowExists: (String, String) => Boolean,
     retrievePort: NewConnectConfig => js.Promise[Double],
     writeToken: (String, String) => js.Promise[String]
@@ -74,7 +74,7 @@ object Environment {
         ret
     }
     @scala.inline
-    def withGetWebWindow(value: Identity => Window_): Self = {
+    def withGetWebWindow(value: Identity => Window): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getWebWindow")(js.Any.fromFunction1(value))
         ret

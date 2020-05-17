@@ -5,6 +5,7 @@ import typingsSlinky.codemirror.mod.Position
 import typingsSlinky.jupyterlabApputils.mainareawidgetMod.MainAreaWidget.IOptions
 import typingsSlinky.jupyterlabApputils.toolbarMod.Toolbar
 import typingsSlinky.jupyterlabCodemirror.mod.CodeMirrorEditor
+import typingsSlinky.jupyterlabDocumentsearch.anon.Editor
 import typingsSlinky.jupyterlabDocumentsearch.interfacesMod.ISearchMatch
 import typingsSlinky.jupyterlabDocumentsearch.interfacesMod.ISearchProvider
 import typingsSlinky.jupyterlabFileeditor.mod.FileEditor
@@ -58,7 +59,7 @@ object codemirrorsearchproviderMod extends js.Object {
     /**
       * The content hosted by the widget.
       */
-    val content: FileEditor with AnonEditor = js.native
+    val content: FileEditor with Editor = js.native
     /**
       * The dataset for the widget's DOM node.
       */

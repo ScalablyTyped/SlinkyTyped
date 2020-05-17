@@ -1,6 +1,5 @@
 package typingsSlinky.webix.webix
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +10,31 @@ trait history extends js.Object {
   def track(view: String, url: String): Unit = js.native
 }
 
-@JSGlobal("webix.history")
-@js.native
-object history extends TopLevel[history]
+object history {
+  @scala.inline
+  def apply(push: (String, String, js.Any) => Unit, track: (String, String) => Unit): history = {
+    val __obj = js.Dynamic.literal(push = js.Any.fromFunction3(push), track = js.Any.fromFunction2(track))
+    __obj.asInstanceOf[history]
+  }
+  @scala.inline
+  implicit class historyOps[Self <: history] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPush(value: (String, String, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("push")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withTrack(value: (String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("track")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
+}
 

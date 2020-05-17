@@ -1,13 +1,13 @@
 package typingsSlinky.node.vmMod
 
-import typingsSlinky.node.AnonStrings
+import typingsSlinky.node.anon.Strings
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CreateContextOptions extends js.Object {
-  var codeGeneration: js.UndefOr[AnonStrings] = js.native
+  var codeGeneration: js.UndefOr[Strings] = js.native
   /**
     * Human-readable name of the newly created context.
     * @default 'VM Context i' Where i is an ascending numerical index of the created context.
@@ -36,7 +36,7 @@ object CreateContextOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCodeGeneration(value: AnonStrings): Self = {
+    def withCodeGeneration(value: Strings): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("codeGeneration")(value.asInstanceOf[js.Any])
         ret

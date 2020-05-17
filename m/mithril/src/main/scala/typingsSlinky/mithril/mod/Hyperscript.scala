@@ -1,7 +1,7 @@
 package typingsSlinky.mithril.mod
 
-import typingsSlinky.mithril.AnonKey
-import typingsSlinky.mithril.Lifecycleanyanykeystringa
+import typingsSlinky.mithril.anon.Key
+import typingsSlinky.mithril.anon.Lifecycleanyanykeystringa
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait Hyperscript extends js.Object {
   /** Creates a virtual element (Vnode). */
   def apply[Attrs, State](
     component: ComponentTypes[Attrs, State],
-    attributes: Attrs with (Lifecycle[Attrs, State]) with AnonKey,
+    attributes: Attrs with (Lifecycle[Attrs, State]) with Key,
     args: Children*
   ): Vnode[Attrs, State] = js.native
   /** Creates a fragment virtual element (Vnode). */

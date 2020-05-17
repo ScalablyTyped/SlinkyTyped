@@ -14,19 +14,16 @@ import typingsSlinky.androiduix.android.view.Window.Callback
 import typingsSlinky.androiduix.android.view.WindowManager
 import typingsSlinky.androiduix.android.view.animation.Animation
 import typingsSlinky.androiduix.android.view.menu.MenuPopupHelper
-import typingsSlinky.androiduix.androidui.AndroidUI
 import typingsSlinky.androiduix.java_.lang.Runnable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.app.Activity")
 @js.native
-class Activity protected ()
+trait Activity
   extends Context
      with Callback
      with typingsSlinky.androiduix.android.view.KeyEvent.Callback {
-  def this(androidUI: AndroidUI) = this()
   var mCallActivity: js.Any = js.native
   var mCalled: js.Any = js.native
   var mDestroyed: js.Any = js.native
@@ -132,16 +129,5 @@ class Activity protected ()
   def startActivityIfNeeded(intent: Intent, requestCode: Double): Boolean = js.native
   def startActivityIfNeeded(intent: Intent, requestCode: Double, options: Bundle): Boolean = js.native
   def takeKeyEvents(_get: Boolean): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("android.app.Activity")
-@js.native
-object Activity extends js.Object {
-  var DEBUG_LIFECYCLE: js.Any = js.native
-  var RESULT_CANCELED: Double = js.native
-  var RESULT_FIRST_USER: Double = js.native
-  var RESULT_OK: Double = js.native
-  var TAG: js.Any = js.native
 }
 

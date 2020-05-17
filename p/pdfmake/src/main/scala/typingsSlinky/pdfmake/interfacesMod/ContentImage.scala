@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 trait ContentImage
   extends ContentBase
      with ContentLink
-     with _Content {
+     with Content {
   var fit: js.UndefOr[js.Tuple2[Double, Double]] = js.native
   var height: js.UndefOr[Double] = js.native
   var image: String = js.native

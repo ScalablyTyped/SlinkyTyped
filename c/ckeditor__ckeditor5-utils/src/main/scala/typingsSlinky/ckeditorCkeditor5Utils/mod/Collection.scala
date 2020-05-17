@@ -1,6 +1,6 @@
 package typingsSlinky.ckeditorCkeditor5Utils.mod
 
-import typingsSlinky.ckeditorCkeditor5Utils.AnonIdProperty
+import typingsSlinky.ckeditorCkeditor5Utils.anon.IdProperty
 import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 class Collection[T] ()
   extends Iterable[T]
      with Emitter {
-  def this(options: AnonIdProperty[T]) = this()
+  def this(options: IdProperty[T]) = this()
   var first: T | Null = js.native
   var last: T | Null = js.native
   var length: Double = js.native

@@ -14,5 +14,7 @@ trait BlockLiteral
   var cstNode_BlockLiteral: js.UndefOr[typingsSlinky.yaml.parseCstMod.CST.BlockLiteral] = js.native
   @JSName("type")
   var type_BlockLiteral: BLOCK_LITERAL = js.native
+  /* InferMemberOverrides */
+  override def toJSON(arg: js.Any, ctx: NodeToJsonContext): js.Any = js.native
 }
 

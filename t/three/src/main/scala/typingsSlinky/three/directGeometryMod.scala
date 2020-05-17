@@ -1,5 +1,6 @@
 package typingsSlinky.three
 
+import typingsSlinky.three.anon.MaterialIndexStart
 import typingsSlinky.three.box3Mod.Box3
 import typingsSlinky.three.colorMod.Color
 import typingsSlinky.three.geometryMod.Geometry
@@ -21,7 +22,7 @@ object directGeometryMod extends js.Object {
     var boundingSphere: Sphere = js.native
     var colors: js.Array[Color] = js.native
     var colorsNeedUpdate: Boolean = js.native
-    var groups: js.Array[AnonMaterialIndexStart] = js.native
+    var groups: js.Array[MaterialIndexStart] = js.native
     var groupsNeedUpdate: Boolean = js.native
     var id: Double = js.native
     var indices: js.Array[Double] = js.native

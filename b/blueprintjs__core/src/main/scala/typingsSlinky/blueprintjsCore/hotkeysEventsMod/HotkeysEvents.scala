@@ -1,7 +1,7 @@
 package typingsSlinky.blueprintjsCore.hotkeysEventsMod
 
 import org.scalajs.dom.raw.KeyboardEvent
-import typingsSlinky.blueprintjsCore.IHotkeysPropschildrenReacChildren
+import typingsSlinky.blueprintjsCore.anon.IHotkeysPropschildrenReacChildren
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

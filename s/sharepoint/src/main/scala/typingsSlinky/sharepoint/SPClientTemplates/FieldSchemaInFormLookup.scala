@@ -1,6 +1,6 @@
 package typingsSlinky.sharepoint.SPClientTemplates
 
-import typingsSlinky.sharepoint.AnonLookupId
+import typingsSlinky.sharepoint.anon.LookupId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait FieldSchemaInFormLookup extends FieldSchemaInForm {
   /** Number of choices. Appears only for Lookup field. */
   var ChoiceCount: Double = js.native
   /** List of choices for this field. */
-  var Choices: js.Array[AnonLookupId] = js.native
+  var Choices: js.Array[LookupId] = js.native
   /** Indicates if the field is a dependent lookup */
   var DependentLookup: Boolean = js.native
   var LookupListId: String = js.native
@@ -34,7 +34,7 @@ object FieldSchemaInFormLookup {
     AllowMultipleValues: Boolean,
     BaseDisplayFormUrl: String,
     ChoiceCount: Double,
-    Choices: js.Array[AnonLookupId],
+    Choices: js.Array[LookupId],
     DependentLookup: Boolean,
     Description: String,
     Direction: String,
@@ -81,7 +81,7 @@ object FieldSchemaInFormLookup {
         ret
     }
     @scala.inline
-    def withChoices(value: js.Array[AnonLookupId]): Self = {
+    def withChoices(value: js.Array[LookupId]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Choices")(value.asInstanceOf[js.Any])
         ret

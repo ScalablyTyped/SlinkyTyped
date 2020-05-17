@@ -1,8 +1,8 @@
 package typingsSlinky.stripe.mod
 
 import typingsSlinky.node.httpMod.Agent
-import typingsSlinky.stripe.AnonBindingsversion
-import typingsSlinky.stripe.AnonPartnerid
+import typingsSlinky.stripe.anon.Bindingsversion
+import typingsSlinky.stripe.anon.Partnerid
 import typingsSlinky.stripe.mod.resources.Accounts
 import typingsSlinky.stripe.mod.resources.ApplicationFees
 import typingsSlinky.stripe.mod.resources.Balance
@@ -61,7 +61,7 @@ trait Stripe extends js.Object {
   var DEFAULT_TIMEOUT: Double = js.native
   var PACKAGE_VERSION: String = js.native
   var StripeResource: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Stripe.StripeResource */ js.Any = js.native
-  var USER_AGENT: AnonBindingsversion = js.native
+  var USER_AGENT: Bindingsversion = js.native
   var USER_AGENT_SERIALIZED: String = js.native
   var accounts: Accounts = js.native
   var applicationFees: ApplicationFees = js.native
@@ -134,7 +134,7 @@ trait Stripe extends js.Object {
   def setApiVersion(): Unit = js.native
   def setApiVersion(version: String): Unit = js.native
   def setAppInfo(): Unit = js.native
-  def setAppInfo(info: AnonPartnerid): Unit = js.native
+  def setAppInfo(info: Partnerid): Unit = js.native
   def setHost(host: String): Unit = js.native
   def setHost(host: String, port: String): Unit = js.native
   def setHost(host: String, port: String, protocol: String): Unit = js.native

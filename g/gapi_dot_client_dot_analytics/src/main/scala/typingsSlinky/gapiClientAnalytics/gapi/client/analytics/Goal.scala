@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientAnalytics.gapi.client.analytics
 
-import typingsSlinky.gapiClientAnalytics.AnonComparisonValue
-import typingsSlinky.gapiClientAnalytics.AnonEventConditions
-import typingsSlinky.gapiClientAnalytics.AnonFirstStepRequired
-import typingsSlinky.gapiClientAnalytics.AnonHref
+import typingsSlinky.gapiClientAnalytics.anon.ComparisonValue
+import typingsSlinky.gapiClientAnalytics.anon.EventConditions
+import typingsSlinky.gapiClientAnalytics.anon.FirstStepRequired
+import typingsSlinky.gapiClientAnalytics.anon.Href
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait Goal extends js.Object {
   /** Time this goal was created. */
   var created: js.UndefOr[String] = js.native
   /** Details for the goal of the type EVENT. */
-  var eventDetails: js.UndefOr[AnonEventConditions] = js.native
+  var eventDetails: js.UndefOr[EventConditions] = js.native
   /** Goal ID. */
   var id: js.UndefOr[String] = js.native
   /** Internal ID for the web property to which this goal belongs. */
@@ -27,7 +27,7 @@ trait Goal extends js.Object {
   /** Goal name. */
   var name: js.UndefOr[String] = js.native
   /** Parent link for a goal. Points to the view (profile) to which this goal belongs. */
-  var parentLink: js.UndefOr[AnonHref] = js.native
+  var parentLink: js.UndefOr[Href] = js.native
   /** View (Profile) ID to which this goal belongs. */
   var profileId: js.UndefOr[String] = js.native
   /** Link for this goal. */
@@ -37,13 +37,13 @@ trait Goal extends js.Object {
   /** Time this goal was last modified. */
   var updated: js.UndefOr[String] = js.native
   /** Details for the goal of the type URL_DESTINATION. */
-  var urlDestinationDetails: js.UndefOr[AnonFirstStepRequired] = js.native
+  var urlDestinationDetails: js.UndefOr[FirstStepRequired] = js.native
   /** Goal value. */
   var value: js.UndefOr[Double] = js.native
   /** Details for the goal of the type VISIT_NUM_PAGES. */
-  var visitNumPagesDetails: js.UndefOr[AnonComparisonValue] = js.native
+  var visitNumPagesDetails: js.UndefOr[ComparisonValue] = js.native
   /** Details for the goal of the type VISIT_TIME_ON_SITE. */
-  var visitTimeOnSiteDetails: js.UndefOr[AnonComparisonValue] = js.native
+  var visitTimeOnSiteDetails: js.UndefOr[ComparisonValue] = js.native
   /** Web property ID to which this goal belongs. The web property ID is of the form UA-XXXXX-YY. */
   var webPropertyId: js.UndefOr[String] = js.native
 }
@@ -97,7 +97,7 @@ object Goal {
         ret
     }
     @scala.inline
-    def withEventDetails(value: AnonEventConditions): Self = {
+    def withEventDetails(value: EventConditions): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("eventDetails")(value.asInstanceOf[js.Any])
         ret
@@ -157,7 +157,7 @@ object Goal {
         ret
     }
     @scala.inline
-    def withParentLink(value: AnonHref): Self = {
+    def withParentLink(value: Href): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parentLink")(value.asInstanceOf[js.Any])
         ret
@@ -217,7 +217,7 @@ object Goal {
         ret
     }
     @scala.inline
-    def withUrlDestinationDetails(value: AnonFirstStepRequired): Self = {
+    def withUrlDestinationDetails(value: FirstStepRequired): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("urlDestinationDetails")(value.asInstanceOf[js.Any])
         ret
@@ -241,7 +241,7 @@ object Goal {
         ret
     }
     @scala.inline
-    def withVisitNumPagesDetails(value: AnonComparisonValue): Self = {
+    def withVisitNumPagesDetails(value: ComparisonValue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("visitNumPagesDetails")(value.asInstanceOf[js.Any])
         ret
@@ -253,7 +253,7 @@ object Goal {
         ret
     }
     @scala.inline
-    def withVisitTimeOnSiteDetails(value: AnonComparisonValue): Self = {
+    def withVisitTimeOnSiteDetails(value: ComparisonValue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("visitTimeOnSiteDetails")(value.asInstanceOf[js.Any])
         ret

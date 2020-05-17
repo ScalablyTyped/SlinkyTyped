@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.customers
 
-import typingsSlinky.stripe.AnonType
+import typingsSlinky.stripe.anon.Type
 import typingsSlinky.stripe.mod.IAddress
 import typingsSlinky.stripe.mod.IDataOptionsWithMetadata
 import typingsSlinky.stripe.mod.IShippingInformation
@@ -91,7 +91,7 @@ trait ICustomerCreationOptions extends IDataOptionsWithMetadata {
   /**
     * The customer’s tax IDs.
     */
-  var tax_id_data: js.UndefOr[js.Array[AnonType]] = js.native
+  var tax_id_data: js.UndefOr[js.Array[Type]] = js.native
   /**
     * @deprecated
     */
@@ -335,7 +335,7 @@ object ICustomerCreationOptions {
         ret
     }
     @scala.inline
-    def withTax_id_data(value: js.Array[AnonType]): Self = {
+    def withTax_id_data(value: js.Array[Type]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tax_id_data")(value.asInstanceOf[js.Any])
         ret

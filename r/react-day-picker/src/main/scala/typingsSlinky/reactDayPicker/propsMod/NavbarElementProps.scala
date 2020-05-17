@@ -1,6 +1,6 @@
 package typingsSlinky.reactDayPicker.propsMod
 
-import typingsSlinky.reactDayPicker.AnonNextMonth
+import typingsSlinky.reactDayPicker.anon.NextMonth
 import typingsSlinky.reactDayPicker.commonMod.ClassNames
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ trait NavbarElementProps extends js.Object {
   var className: String = js.native
   var classNames: ClassNames = js.native
   var dir: js.UndefOr[String] = js.native
-  var labels: AnonNextMonth = js.native
+  var labels: NextMonth = js.native
   var locale: String = js.native
   var localeUtils: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any = js.native
   var month: js.Date = js.native

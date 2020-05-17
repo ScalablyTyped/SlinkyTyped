@@ -1,7 +1,7 @@
 package typingsSlinky.dagre.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.dagre.AnonCompound
+import typingsSlinky.dagre.anon.Compound
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 object graphlib extends js.Object {
   @js.native
   class Graph[T] () extends js.Object {
-    def this(opt: AnonCompound) = this()
+    def this(opt: Compound) = this()
     def children(parentName: String): js.UndefOr[String] = js.native
     def edge(edgeObj: Edge): GraphEdge = js.native
     def edge(outNodeName: String, inNodeName: String): GraphEdge = js.native

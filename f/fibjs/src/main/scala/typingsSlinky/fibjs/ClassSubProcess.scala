@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Class_SubProcess")
 @js.native
-class ClassSubProcess () extends ClassBufferedStream {
+trait ClassSubProcess extends ClassBufferedStream {
   /**
   	 * class prop 
   	 *

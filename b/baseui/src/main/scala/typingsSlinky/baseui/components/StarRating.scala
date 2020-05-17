@@ -2,7 +2,7 @@ package typingsSlinky.baseui.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonValueNumber
+import typingsSlinky.baseui.anon.ValueNumber
 import typingsSlinky.baseui.ratingMod.RatingOverrides
 import typingsSlinky.baseui.ratingMod.StarRatingProps
 import scala.scalajs.js
@@ -21,7 +21,7 @@ object StarRating {
     @scala.inline
     def numItems(value: Double): this.type = set("numItems", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* args */ AnonValueNumber => _): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* args */ ValueNumber => _): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def overrides(value: RatingOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline

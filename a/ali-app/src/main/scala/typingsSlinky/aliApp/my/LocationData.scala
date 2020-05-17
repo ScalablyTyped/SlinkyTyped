@@ -1,7 +1,7 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonAddress
-import typingsSlinky.aliApp.AnonNumber
+import typingsSlinky.aliApp.anon.Address
+import typingsSlinky.aliApp.anon.Number
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,7 +46,7 @@ trait LocationData extends js.Object {
   /**
   		 * 需要POI级别逆地理的才会有的字段, 定位点附近的 POI 信息，结构是：{ name, address } （type > 2生效）
   		 */
-  var pois: js.UndefOr[js.Array[AnonAddress]] = js.native
+  var pois: js.UndefOr[js.Array[Address]] = js.native
   /**
   		 * 省份(type>0生效)
   		 */
@@ -54,7 +54,7 @@ trait LocationData extends js.Object {
   /**
   		 * 需要街道级别逆地理的才会有的字段,街道门牌信息，结构是：{ street, number } (type > 1生效)
   		 */
-  var streetNumber: js.UndefOr[AnonNumber] = js.native
+  var streetNumber: js.UndefOr[Number] = js.native
 }
 
 object LocationData {
@@ -166,7 +166,7 @@ object LocationData {
         ret
     }
     @scala.inline
-    def withPois(value: js.Array[AnonAddress]): Self = {
+    def withPois(value: js.Array[Address]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pois")(value.asInstanceOf[js.Any])
         ret
@@ -190,7 +190,7 @@ object LocationData {
         ret
     }
     @scala.inline
-    def withStreetNumber(value: AnonNumber): Self = {
+    def withStreetNumber(value: Number): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("streetNumber")(value.asInstanceOf[js.Any])
         ret

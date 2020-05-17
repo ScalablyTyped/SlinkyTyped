@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
-import typingsSlinky.blueprintjsCore.AnonIsMoving
+import typingsSlinky.blueprintjsCore.anon.IsMoving
 import typingsSlinky.blueprintjsCore.commonMod.AbstractPureComponent2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -33,7 +33,7 @@ class Handle ()
   var refHandlers: js.Any = js.native
   var removeDocumentEventListeners: js.Any = js.native
   @JSName("state")
-  var state_Handle: AnonIsMoving = js.native
+  var state_Handle: IsMoving = js.native
   def beginHandleMovement(event: SyntheticMouseEvent[HTMLElement]): Unit = js.native
   def beginHandleMovement(event: MouseEvent): Unit = js.native
   def beginHandleTouchMovement(event: SyntheticTouchEvent[HTMLElement]): Unit = js.native

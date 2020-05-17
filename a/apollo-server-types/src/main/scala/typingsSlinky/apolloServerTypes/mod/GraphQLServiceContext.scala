@@ -1,7 +1,7 @@
 package typingsSlinky.apolloServerTypes.mod
 
-import typingsSlinky.apolloServerTypes.AnonApiKeyHash
-import typingsSlinky.apolloServerTypes.AnonCache
+import typingsSlinky.apolloServerTypes.anon.ApiKeyHash
+import typingsSlinky.apolloServerTypes.anon.Cache
 import typingsSlinky.graphql.mod.GraphQLSchema
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,15 +9,15 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait GraphQLServiceContext extends js.Object {
-  var engine: AnonApiKeyHash = js.native
-  var persistedQueries: js.UndefOr[AnonCache] = js.native
+  var engine: ApiKeyHash = js.native
+  var persistedQueries: js.UndefOr[Cache] = js.native
   var schema: GraphQLSchema = js.native
   var schemaHash: String = js.native
 }
 
 object GraphQLServiceContext {
   @scala.inline
-  def apply(engine: AnonApiKeyHash, schema: GraphQLSchema, schemaHash: String): GraphQLServiceContext = {
+  def apply(engine: ApiKeyHash, schema: GraphQLSchema, schemaHash: String): GraphQLServiceContext = {
     val __obj = js.Dynamic.literal(engine = engine.asInstanceOf[js.Any], schema = schema.asInstanceOf[js.Any], schemaHash = schemaHash.asInstanceOf[js.Any])
     __obj.asInstanceOf[GraphQLServiceContext]
   }
@@ -28,7 +28,7 @@ object GraphQLServiceContext {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEngine(value: AnonApiKeyHash): Self = {
+    def withEngine(value: ApiKeyHash): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("engine")(value.asInstanceOf[js.Any])
         ret
@@ -46,7 +46,7 @@ object GraphQLServiceContext {
         ret
     }
     @scala.inline
-    def withPersistedQueries(value: AnonCache): Self = {
+    def withPersistedQueries(value: Cache): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("persistedQueries")(value.asInstanceOf[js.Any])
         ret

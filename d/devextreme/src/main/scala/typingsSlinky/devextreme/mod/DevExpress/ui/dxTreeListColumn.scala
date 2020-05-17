@@ -1,9 +1,9 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonColumnColumnIndexComponent
-import typingsSlinky.devextreme.AnonDisplayValueOldValue
-import typingsSlinky.devextreme.AnonDisplayValueRow
+import typingsSlinky.devextreme.anon.ColumnColumnIndexComponent
+import typingsSlinky.devextreme.anon.DisplayValueOldValue
+import typingsSlinky.devextreme.anon.DisplayValueRow
 import typingsSlinky.devextreme.devextremeStrings.adaptive
 import typingsSlinky.devextreme.devextremeStrings.add
 import typingsSlinky.devextreme.devextremeStrings.buttons
@@ -25,17 +25,17 @@ trait dxTreeListColumn extends GridBaseColumn {
   ] = js.native
   /** Specifies a custom template for data cells. */
   var cellTemplate: js.UndefOr[
-    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ AnonDisplayValueOldValue, _])
+    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ DisplayValueOldValue, _])
   ] = js.native
   /** Configures columns. */
   var columns: js.UndefOr[js.Array[dxTreeListColumn | String]] = js.native
   /** Specifies a custom template for data cells in editing state. */
   var editCellTemplate: js.UndefOr[
-    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ AnonDisplayValueRow, _])
+    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ DisplayValueRow, _])
   ] = js.native
   /** Specifies a custom template for column headers. */
   var headerCellTemplate: js.UndefOr[
-    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* columnHeader */ dxElement, /* headerInfo */ AnonColumnColumnIndexComponent, _])
+    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* columnHeader */ dxElement, /* headerInfo */ ColumnColumnIndexComponent, _])
   ] = js.native
   /** Specifies the command column that this object customizes. */
   var `type`: js.UndefOr[adaptive | buttons] = js.native
@@ -66,7 +66,7 @@ object dxTreeListColumn {
         ret
     }
     @scala.inline
-    def withCellTemplateFunction2(value: (/* cellElement */ dxElement, /* cellInfo */ AnonDisplayValueOldValue) => _): Self = {
+    def withCellTemplateFunction2(value: (/* cellElement */ dxElement, /* cellInfo */ DisplayValueOldValue) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cellTemplate")(js.Any.fromFunction2(value))
         ret
@@ -79,7 +79,7 @@ object dxTreeListColumn {
     }
     @scala.inline
     def withCellTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ AnonDisplayValueOldValue, _])
+      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ DisplayValueOldValue, _])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cellTemplate")(value.asInstanceOf[js.Any])
@@ -104,7 +104,7 @@ object dxTreeListColumn {
         ret
     }
     @scala.inline
-    def withEditCellTemplateFunction2(value: (/* cellElement */ dxElement, /* cellInfo */ AnonDisplayValueRow) => _): Self = {
+    def withEditCellTemplateFunction2(value: (/* cellElement */ dxElement, /* cellInfo */ DisplayValueRow) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editCellTemplate")(js.Any.fromFunction2(value))
         ret
@@ -117,7 +117,7 @@ object dxTreeListColumn {
     }
     @scala.inline
     def withEditCellTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ AnonDisplayValueRow, _])
+      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ DisplayValueRow, _])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editCellTemplate")(value.asInstanceOf[js.Any])
@@ -130,7 +130,7 @@ object dxTreeListColumn {
         ret
     }
     @scala.inline
-    def withHeaderCellTemplateFunction2(value: (/* columnHeader */ dxElement, /* headerInfo */ AnonColumnColumnIndexComponent) => _): Self = {
+    def withHeaderCellTemplateFunction2(value: (/* columnHeader */ dxElement, /* headerInfo */ ColumnColumnIndexComponent) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headerCellTemplate")(js.Any.fromFunction2(value))
         ret
@@ -143,7 +143,7 @@ object dxTreeListColumn {
     }
     @scala.inline
     def withHeaderCellTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* columnHeader */ dxElement, /* headerInfo */ AnonColumnColumnIndexComponent, _])
+      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* columnHeader */ dxElement, /* headerInfo */ ColumnColumnIndexComponent, _])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headerCellTemplate")(value.asInstanceOf[js.Any])

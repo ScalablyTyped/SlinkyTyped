@@ -1,22 +1,22 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonCellElementColumn
-import typingsSlinky.devextreme.AnonColumnIndexComponent
-import typingsSlinky.devextreme.AnonDataDisplayValue
-import typingsSlinky.devextreme.AnonEventType
-import typingsSlinky.devextreme.AnonGrouping
-import typingsSlinky.devextreme.AnonIsHighlighted
-import typingsSlinky.devextreme.AnonKeyModel
-import typingsSlinky.devextreme.AnonLevel
-import typingsSlinky.devextreme.AnonModelRow
-import typingsSlinky.devextreme.AnonNode
-import typingsSlinky.devextreme.AnonParentType
-import typingsSlinky.devextreme.AnonPrevRowIndex
-import typingsSlinky.devextreme.AnonReadOnly
-import typingsSlinky.devextreme.AnonRoot
-import typingsSlinky.devextreme.AnonRowRowElement
-import typingsSlinky.devextreme.AnonTarget
-import typingsSlinky.devextreme.AnonValues
+import typingsSlinky.devextreme.anon.CellElementColumn
+import typingsSlinky.devextreme.anon.ColumnIndexComponent
+import typingsSlinky.devextreme.anon.DataDisplayValue
+import typingsSlinky.devextreme.anon.EventType
+import typingsSlinky.devextreme.anon.Grouping
+import typingsSlinky.devextreme.anon.IsHighlighted
+import typingsSlinky.devextreme.anon.KeyModel
+import typingsSlinky.devextreme.anon.Level
+import typingsSlinky.devextreme.anon.ModelRow
+import typingsSlinky.devextreme.anon.Node
+import typingsSlinky.devextreme.anon.ParentType
+import typingsSlinky.devextreme.anon.PrevRowIndex
+import typingsSlinky.devextreme.anon.ReadOnly
+import typingsSlinky.devextreme.anon.Root
+import typingsSlinky.devextreme.anon.RowRowElement
+import typingsSlinky.devextreme.anon.Target
+import typingsSlinky.devextreme.anon.Values
 import typingsSlinky.devextreme.devextremeStrings.auto
 import typingsSlinky.devextreme.devextremeStrings.fullBranch
 import typingsSlinky.devextreme.devextremeStrings.matchOnly
@@ -54,44 +54,44 @@ trait dxTreeListOptions extends GridBaseOptions[dxTreeList] {
   /** Specifies which data field provides keys for nodes. */
   var keyExpr: js.UndefOr[String | js.Function] = js.native
   /** A function that is executed when a cell is clicked or tapped. Executed before onRowClick. */
-  var onCellClick: js.UndefOr[(js.Function1[/* e */ AnonCellElementColumn, _]) | String] = js.native
+  var onCellClick: js.UndefOr[(js.Function1[/* e */ CellElementColumn, _]) | String] = js.native
   /** A function that is executed when a cell is double-clicked or double-tapped. Executed before onRowDblClick. */
-  var onCellDblClick: js.UndefOr[js.Function1[/* e */ AnonColumnIndexComponent, _]] = js.native
+  var onCellDblClick: js.UndefOr[js.Function1[/* e */ ColumnIndexComponent, _]] = js.native
   /** A function that is executed after the pointer enters or leaves a cell. */
-  var onCellHoverChanged: js.UndefOr[js.Function1[/* e */ AnonEventType, _]] = js.native
+  var onCellHoverChanged: js.UndefOr[js.Function1[/* e */ EventType, _]] = js.native
   /** A function that is executed after a grid cell is created. */
-  var onCellPrepared: js.UndefOr[js.Function1[/* e */ AnonDataDisplayValue, _]] = js.native
+  var onCellPrepared: js.UndefOr[js.Function1[/* e */ DataDisplayValue, _]] = js.native
   /** A function that is executed before the context menu is rendered. */
-  var onContextMenuPreparing: js.UndefOr[js.Function1[/* e */ AnonTarget, _]] = js.native
+  var onContextMenuPreparing: js.UndefOr[js.Function1[/* e */ Target, _]] = js.native
   /** A function that is executed before a cell or row switches to the editing state. */
-  var onEditingStart: js.UndefOr[js.Function1[/* e */ AnonKeyModel, _]] = js.native
+  var onEditingStart: js.UndefOr[js.Function1[/* e */ KeyModel, _]] = js.native
   /** A function that is executed after an editor is created. Not executed for cells with an editCellTemplate. */
-  var onEditorPrepared: js.UndefOr[js.Function1[/* options */ AnonParentType, _]] = js.native
+  var onEditorPrepared: js.UndefOr[js.Function1[/* options */ ParentType, _]] = js.native
   /** A function used to customize or replace default editors. Not executed for cells with an editCellTemplate. */
-  var onEditorPreparing: js.UndefOr[js.Function1[/* e */ AnonReadOnly, _]] = js.native
+  var onEditorPreparing: js.UndefOr[js.Function1[/* e */ ReadOnly, _]] = js.native
   /** A function that is executed after the focused cell changes. */
-  var onFocusedCellChanged: js.UndefOr[js.Function1[/* e */ AnonModelRow, _]] = js.native
+  var onFocusedCellChanged: js.UndefOr[js.Function1[/* e */ ModelRow, _]] = js.native
   /** A function that is executed before the focused cell changes. */
-  var onFocusedCellChanging: js.UndefOr[js.Function1[/* e */ AnonIsHighlighted, _]] = js.native
+  var onFocusedCellChanging: js.UndefOr[js.Function1[/* e */ IsHighlighted, _]] = js.native
   /** A function that executed when the focused row changes. Applies only when focusedRowEnabled is true. */
-  var onFocusedRowChanged: js.UndefOr[js.Function1[/* e */ AnonRowRowElement, _]] = js.native
+  var onFocusedRowChanged: js.UndefOr[js.Function1[/* e */ RowRowElement, _]] = js.native
   /** A function that is executed before the focused row changes. Applies only when focusedRowEnabled is true. */
-  var onFocusedRowChanging: js.UndefOr[js.Function1[/* e */ AnonPrevRowIndex, _]] = js.native
+  var onFocusedRowChanging: js.UndefOr[js.Function1[/* e */ PrevRowIndex, _]] = js.native
   /** A function that is executed after the loaded nodes are initialized. */
-  var onNodesInitialized: js.UndefOr[js.Function1[/* e */ AnonRoot, _]] = js.native
+  var onNodesInitialized: js.UndefOr[js.Function1[/* e */ Root, _]] = js.native
   /** A function that is executed when a grid row is clicked or tapped. */
-  var onRowClick: js.UndefOr[(js.Function1[/* e */ AnonLevel, _]) | String] = js.native
+  var onRowClick: js.UndefOr[(js.Function1[/* e */ Level, _]) | String] = js.native
   /** A function that is executed when a row is double-clicked or double-tapped. Executed after onCellDblClick. */
-  var onRowDblClick: js.UndefOr[js.Function1[/* e */ AnonValues, _]] = js.native
+  var onRowDblClick: js.UndefOr[js.Function1[/* e */ Values, _]] = js.native
   /** A function that is executed after a row is created. */
-  var onRowPrepared: js.UndefOr[js.Function1[/* e */ AnonNode, _]] = js.native
+  var onRowPrepared: js.UndefOr[js.Function1[/* e */ Node, _]] = js.native
   /** Configures paging. */
   @JSName("paging")
   var paging_dxTreeListOptions: js.UndefOr[dxTreeListPaging] = js.native
   /** Specifies which data field provides parent keys. */
   var parentIdExpr: js.UndefOr[String | js.Function] = js.native
   /** Notifies the TreeList of the server's data processing operations. Applies only if data has a plain structure. */
-  var remoteOperations: js.UndefOr[AnonGrouping | auto] = js.native
+  var remoteOperations: js.UndefOr[Grouping | auto] = js.native
   /** Specifies the root node's identifier. Applies if dataStructure is "plain". */
   var rootValue: js.UndefOr[js.Any] = js.native
   /** Configures scrolling. */
@@ -247,13 +247,13 @@ object dxTreeListOptions {
         ret
     }
     @scala.inline
-    def withOnCellClickFunction1(value: /* e */ AnonCellElementColumn => _): Self = {
+    def withOnCellClickFunction1(value: /* e */ CellElementColumn => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCellClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnCellClick(value: (js.Function1[/* e */ AnonCellElementColumn, _]) | String): Self = {
+    def withOnCellClick(value: (js.Function1[/* e */ CellElementColumn, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCellClick")(value.asInstanceOf[js.Any])
         ret
@@ -265,7 +265,7 @@ object dxTreeListOptions {
         ret
     }
     @scala.inline
-    def withOnCellDblClick(value: /* e */ AnonColumnIndexComponent => _): Self = {
+    def withOnCellDblClick(value: /* e */ ColumnIndexComponent => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCellDblClick")(js.Any.fromFunction1(value))
         ret
@@ -277,7 +277,7 @@ object dxTreeListOptions {
         ret
     }
     @scala.inline
-    def withOnCellHoverChanged(value: /* e */ AnonEventType => _): Self = {
+    def withOnCellHoverChanged(value: /* e */ EventType => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCellHoverChanged")(js.Any.fromFunction1(value))
         ret
@@ -289,7 +289,7 @@ object dxTreeListOptions {
         ret
     }
     @scala.inline
-    def withOnCellPrepared(value: /* e */ AnonDataDisplayValue => _): Self = {
+    def withOnCellPrepared(value: /* e */ DataDisplayValue => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCellPrepared")(js.Any.fromFunction1(value))
         ret
@@ -301,7 +301,7 @@ object dxTreeListOptions {
         ret
     }
     @scala.inline
-    def withOnContextMenuPreparing(value: /* e */ AnonTarget => _): Self = {
+    def withOnContextMenuPreparing(value: /* e */ Target => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenuPreparing")(js.Any.fromFunction1(value))
         ret
@@ -313,7 +313,7 @@ object dxTreeListOptions {
         ret
     }
     @scala.inline
-    def withOnEditingStart(value: /* e */ AnonKeyModel => _): Self = {
+    def withOnEditingStart(value: /* e */ KeyModel => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEditingStart")(js.Any.fromFunction1(value))
         ret
@@ -325,7 +325,7 @@ object dxTreeListOptions {
         ret
     }
     @scala.inline
-    def withOnEditorPrepared(value: /* options */ AnonParentType => _): Self = {
+    def withOnEditorPrepared(value: /* options */ ParentType => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEditorPrepared")(js.Any.fromFunction1(value))
         ret
@@ -337,7 +337,7 @@ object dxTreeListOptions {
         ret
     }
     @scala.inline
-    def withOnEditorPreparing(value: /* e */ AnonReadOnly => _): Self = {
+    def withOnEditorPreparing(value: /* e */ ReadOnly => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEditorPreparing")(js.Any.fromFunction1(value))
         ret
@@ -349,7 +349,7 @@ object dxTreeListOptions {
         ret
     }
     @scala.inline
-    def withOnFocusedCellChanged(value: /* e */ AnonModelRow => _): Self = {
+    def withOnFocusedCellChanged(value: /* e */ ModelRow => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusedCellChanged")(js.Any.fromFunction1(value))
         ret
@@ -361,7 +361,7 @@ object dxTreeListOptions {
         ret
     }
     @scala.inline
-    def withOnFocusedCellChanging(value: /* e */ AnonIsHighlighted => _): Self = {
+    def withOnFocusedCellChanging(value: /* e */ IsHighlighted => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusedCellChanging")(js.Any.fromFunction1(value))
         ret
@@ -373,7 +373,7 @@ object dxTreeListOptions {
         ret
     }
     @scala.inline
-    def withOnFocusedRowChanged(value: /* e */ AnonRowRowElement => _): Self = {
+    def withOnFocusedRowChanged(value: /* e */ RowRowElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusedRowChanged")(js.Any.fromFunction1(value))
         ret
@@ -385,7 +385,7 @@ object dxTreeListOptions {
         ret
     }
     @scala.inline
-    def withOnFocusedRowChanging(value: /* e */ AnonPrevRowIndex => _): Self = {
+    def withOnFocusedRowChanging(value: /* e */ PrevRowIndex => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusedRowChanging")(js.Any.fromFunction1(value))
         ret
@@ -397,7 +397,7 @@ object dxTreeListOptions {
         ret
     }
     @scala.inline
-    def withOnNodesInitialized(value: /* e */ AnonRoot => _): Self = {
+    def withOnNodesInitialized(value: /* e */ Root => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onNodesInitialized")(js.Any.fromFunction1(value))
         ret
@@ -409,13 +409,13 @@ object dxTreeListOptions {
         ret
     }
     @scala.inline
-    def withOnRowClickFunction1(value: /* e */ AnonLevel => _): Self = {
+    def withOnRowClickFunction1(value: /* e */ Level => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnRowClick(value: (js.Function1[/* e */ AnonLevel, _]) | String): Self = {
+    def withOnRowClick(value: (js.Function1[/* e */ Level, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowClick")(value.asInstanceOf[js.Any])
         ret
@@ -427,7 +427,7 @@ object dxTreeListOptions {
         ret
     }
     @scala.inline
-    def withOnRowDblClick(value: /* e */ AnonValues => _): Self = {
+    def withOnRowDblClick(value: /* e */ Values => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowDblClick")(js.Any.fromFunction1(value))
         ret
@@ -439,7 +439,7 @@ object dxTreeListOptions {
         ret
     }
     @scala.inline
-    def withOnRowPrepared(value: /* e */ AnonNode => _): Self = {
+    def withOnRowPrepared(value: /* e */ Node => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowPrepared")(js.Any.fromFunction1(value))
         ret
@@ -475,7 +475,7 @@ object dxTreeListOptions {
         ret
     }
     @scala.inline
-    def withRemoteOperations(value: AnonGrouping | auto): Self = {
+    def withRemoteOperations(value: Grouping | auto): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("remoteOperations")(value.asInstanceOf[js.Any])
         ret

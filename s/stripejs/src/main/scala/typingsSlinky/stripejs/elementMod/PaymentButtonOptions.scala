@@ -1,7 +1,7 @@
 package typingsSlinky.stripejs.elementMod
 
-import typingsSlinky.stripejs.AnonBase
-import typingsSlinky.stripejs.AnonComplete
+import typingsSlinky.stripejs.anon.Base
+import typingsSlinky.stripejs.anon.Complete
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,9 +12,9 @@ trait PaymentButtonOptions extends js.Object {
     * Set custom class names on the container DOM element when the Stripe Element is in a
     * particular state.
     */
-  var classes: js.UndefOr[AnonBase] = js.native
+  var classes: js.UndefOr[Base] = js.native
   var paymentRequest: js.Any = js.native
-  var style: js.UndefOr[AnonComplete] = js.native
+  var style: js.UndefOr[Complete] = js.native
 }
 
 object PaymentButtonOptions {
@@ -36,7 +36,7 @@ object PaymentButtonOptions {
         ret
     }
     @scala.inline
-    def withClasses(value: AnonBase): Self = {
+    def withClasses(value: Base): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
         ret
@@ -48,7 +48,7 @@ object PaymentButtonOptions {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonComplete): Self = {
+    def withStyle(value: Complete): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabCoreutils.nbformatMod.nbformat
 
-import typingsSlinky.jupyterlabCoreutils.PartialIBaseCellJupyterMe
+import typingsSlinky.jupyterlabCoreutils.anon.PartialIBaseCellJupyterMe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

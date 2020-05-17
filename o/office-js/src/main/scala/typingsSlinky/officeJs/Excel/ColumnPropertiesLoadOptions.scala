@@ -1,6 +1,6 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.CellPropertiesFormatLoadOAutoIndent
+import typingsSlinky.officeJs.anon.CellPropertiesFormatLoadOAutoIndent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

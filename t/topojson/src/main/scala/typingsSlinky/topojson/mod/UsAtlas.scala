@@ -1,6 +1,6 @@
 package typingsSlinky.topojson.mod
 
-import typingsSlinky.topojson.AnonCounties
+import typingsSlinky.topojson.anon.Counties
 import typingsSlinky.topojsonSpecification.mod.Arc
 import typingsSlinky.topojsonSpecification.mod.Objects
 import typingsSlinky.topojsonSpecification.mod.Properties
@@ -15,7 +15,7 @@ trait UsAtlas extends Topology[Objects[Properties]] {
   @JSName("bbox")
   var bbox_UsAtlas: js.Tuple4[Double, Double, Double, Double] = js.native
   @JSName("objects")
-  var objects_UsAtlas: AnonCounties = js.native
+  var objects_UsAtlas: Counties = js.native
   @JSName("transform")
   var transform_UsAtlas: Transform = js.native
 }
@@ -25,7 +25,7 @@ object UsAtlas {
   def apply(
     arcs: js.Array[Arc],
     bbox: js.Tuple4[Double, Double, Double, Double],
-    objects: AnonCounties,
+    objects: Counties,
     transform: Transform,
     `type`: typingsSlinky.topojsonSpecification.topojsonSpecificationStrings.Topology
   ): UsAtlas = {
@@ -46,7 +46,7 @@ object UsAtlas {
         ret
     }
     @scala.inline
-    def withObjects(value: AnonCounties): Self = {
+    def withObjects(value: Counties): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("objects")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.reactTether.mod
 
-import typingsSlinky.reactTether.AnonRenderElementTag
+import typingsSlinky.reactTether.anon.RenderElementTag
 import typingsSlinky.reactTether.mod.ReactTether.TetherComponentProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ class default () extends TetherComponent
 @JSImport("react-tether", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonRenderElementTag = js.native
+  var defaultProps: RenderElementTag = js.native
   var propTypes: TetherComponentProps = js.native
 }
 

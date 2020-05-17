@@ -1,6 +1,6 @@
 package typingsSlinky.pixiJs.mod
 
-import typingsSlinky.pixiJs.AnonResolution
+import typingsSlinky.pixiJs.anon.Resolution
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -71,6 +71,6 @@ object RenderTexture extends js.Object {
     * @return {PIXI.RenderTexture} The new render texture
     */
   def create(): typingsSlinky.pixiJs.PIXI.RenderTexture = js.native
-  def create(options: AnonResolution): typingsSlinky.pixiJs.PIXI.RenderTexture = js.native
+  def create(options: Resolution): typingsSlinky.pixiJs.PIXI.RenderTexture = js.native
 }
 

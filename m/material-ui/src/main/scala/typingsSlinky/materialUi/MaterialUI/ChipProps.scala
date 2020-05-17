@@ -1,5 +1,6 @@
 package typingsSlinky.materialUi.MaterialUI
 
+import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
@@ -19,8 +20,8 @@ trait ChipProps extends js.Object {
   var deleteIconStyle: js.UndefOr[CSSProperties] = js.native
   var labelColor: js.UndefOr[String] = js.native
   var labelStyle: js.UndefOr[CSSProperties] = js.native
-  var onClick: js.UndefOr[MouseEventHandler[Chip]] = js.native
-  var onRequestDelete: js.UndefOr[TouchEventHandler[Chip]] = js.native
+  var onClick: js.UndefOr[MouseEventHandler[ReactComponentClass[ChipProps]]] = js.native
+  var onRequestDelete: js.UndefOr[TouchEventHandler[ReactComponentClass[ChipProps]]] = js.native
   var style: js.UndefOr[CSSProperties] = js.native
 }
 
@@ -115,7 +116,7 @@ object ChipProps {
         ret
     }
     @scala.inline
-    def withOnClick(value: SyntheticMouseEvent[Chip] => Unit): Self = {
+    def withOnClick(value: SyntheticMouseEvent[ReactComponentClass[ChipProps]] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret
@@ -127,7 +128,7 @@ object ChipProps {
         ret
     }
     @scala.inline
-    def withOnRequestDelete(value: SyntheticTouchEvent[Chip] => Unit): Self = {
+    def withOnRequestDelete(value: SyntheticTouchEvent[ReactComponentClass[ChipProps]] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRequestDelete")(js.Any.fromFunction1(value))
         ret

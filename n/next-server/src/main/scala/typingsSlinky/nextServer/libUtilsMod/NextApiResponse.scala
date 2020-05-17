@@ -6,9 +6,9 @@ import typingsSlinky.nextServer.nextServerStrings.error
 import typingsSlinky.nextServer.nextServerStrings.finish
 import typingsSlinky.nextServer.nextServerStrings.pipe
 import typingsSlinky.nextServer.nextServerStrings.unpipe
-import typingsSlinky.node.AnonChunk
-import typingsSlinky.node.AnonEnd
 import typingsSlinky.node.NodeJS.WritableStream
+import typingsSlinky.node.anon.Chunk
+import typingsSlinky.node.anon.End
 import typingsSlinky.node.eventsMod.EventEmitterOptions
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.OutgoingHttpHeaders
@@ -25,7 +25,7 @@ import scala.scalajs.js.annotation._
 trait NextApiResponse[T] extends js.Object {
   var _writev: js.UndefOr[
     js.Function2[
-      /* chunks */ js.Array[AnonChunk], 
+      /* chunks */ js.Array[Chunk], 
       /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ]
@@ -170,7 +170,7 @@ trait NextApiResponse[T] extends js.Object {
   @JSName("once")
   def once_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   def pipe[T /* <: WritableStream */](destination: T): T = js.native
-  def pipe[T /* <: WritableStream */](destination: T, options: AnonEnd): T = js.native
+  def pipe[T /* <: WritableStream */](destination: T, options: End): T = js.native
   def prependListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   def prependListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("prependListener")

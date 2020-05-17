@@ -1,103 +1,103 @@
 package typingsSlinky.webpack
 
 import typingsSlinky.webpack.mod.LibraryTarget
-import typingsSlinky.webpack.mod.Options._Devtool
+import typingsSlinky.webpack.mod.Options.Devtool
+import typingsSlinky.webpack.mod.Stats.Preset
 import typingsSlinky.webpack.mod.Stats.ReasonType
-import typingsSlinky.webpack.mod.Stats._Preset
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object webpackStrings {
   @js.native
-  sealed trait `@cheap-eval-source-map` extends _Devtool
+  sealed trait `@cheap-eval-source-map` extends Devtool
   
   @js.native
-  sealed trait `@cheap-module-eval-source-map` extends _Devtool
+  sealed trait `@cheap-module-eval-source-map` extends Devtool
   
   @js.native
-  sealed trait `@cheap-module-source-map` extends _Devtool
+  sealed trait `@cheap-module-source-map` extends Devtool
   
   @js.native
-  sealed trait `@cheap-source-map` extends _Devtool
+  sealed trait `@cheap-source-map` extends Devtool
   
   @js.native
-  sealed trait `@eval` extends _Devtool
+  sealed trait `@eval` extends Devtool
   
   @js.native
-  sealed trait `@eval-source-map` extends _Devtool
+  sealed trait `@eval-source-map` extends Devtool
   
   @js.native
-  sealed trait `@hidden-source-map` extends _Devtool
+  sealed trait `@hidden-source-map` extends Devtool
   
   @js.native
-  sealed trait `@inline-source-map` extends _Devtool
+  sealed trait `@inline-source-map` extends Devtool
   
   @js.native
-  sealed trait `@nosources-source-map` extends _Devtool
+  sealed trait `@nosources-source-map` extends Devtool
   
   @js.native
-  sealed trait `@source-map` extends _Devtool
+  sealed trait `@source-map` extends Devtool
   
   @js.native
-  sealed trait `Numbersign@cheap-eval-source-map` extends _Devtool
+  sealed trait `Numbersign@cheap-eval-source-map` extends Devtool
   
   @js.native
-  sealed trait `Numbersign@cheap-module-eval-source-map` extends _Devtool
+  sealed trait `Numbersign@cheap-module-eval-source-map` extends Devtool
   
   @js.native
-  sealed trait `Numbersign@cheap-module-source-map` extends _Devtool
+  sealed trait `Numbersign@cheap-module-source-map` extends Devtool
   
   @js.native
-  sealed trait `Numbersign@cheap-source-map` extends _Devtool
+  sealed trait `Numbersign@cheap-source-map` extends Devtool
   
   @js.native
-  sealed trait `Numbersign@eval` extends _Devtool
+  sealed trait `Numbersign@eval` extends Devtool
   
   @js.native
-  sealed trait `Numbersign@eval-source-map` extends _Devtool
+  sealed trait `Numbersign@eval-source-map` extends Devtool
   
   @js.native
-  sealed trait `Numbersign@hidden-source-map` extends _Devtool
+  sealed trait `Numbersign@hidden-source-map` extends Devtool
   
   @js.native
-  sealed trait `Numbersign@inline-source-map` extends _Devtool
+  sealed trait `Numbersign@inline-source-map` extends Devtool
   
   @js.native
-  sealed trait `Numbersign@nosources-source-map` extends _Devtool
+  sealed trait `Numbersign@nosources-source-map` extends Devtool
   
   @js.native
-  sealed trait `Numbersign@source-map` extends _Devtool
+  sealed trait `Numbersign@source-map` extends Devtool
   
   @js.native
-  sealed trait `Numbersigncheap-eval-source-map` extends _Devtool
+  sealed trait `Numbersigncheap-eval-source-map` extends Devtool
   
   @js.native
-  sealed trait `Numbersigncheap-module-eval-source-map` extends _Devtool
+  sealed trait `Numbersigncheap-module-eval-source-map` extends Devtool
   
   @js.native
-  sealed trait `Numbersigncheap-module-source-map` extends _Devtool
+  sealed trait `Numbersigncheap-module-source-map` extends Devtool
   
   @js.native
-  sealed trait `Numbersigncheap-source-map` extends _Devtool
+  sealed trait `Numbersigncheap-source-map` extends Devtool
   
   @js.native
-  sealed trait Numbersigneval extends _Devtool
+  sealed trait Numbersigneval extends Devtool
   
   @js.native
-  sealed trait `Numbersigneval-source-map` extends _Devtool
+  sealed trait `Numbersigneval-source-map` extends Devtool
   
   @js.native
-  sealed trait `Numbersignhidden-source-map` extends _Devtool
+  sealed trait `Numbersignhidden-source-map` extends Devtool
   
   @js.native
-  sealed trait `Numbersigninline-source-map` extends _Devtool
+  sealed trait `Numbersigninline-source-map` extends Devtool
   
   @js.native
-  sealed trait `Numbersignnosources-source-map` extends _Devtool
+  sealed trait `Numbersignnosources-source-map` extends Devtool
   
   @js.native
-  sealed trait `Numbersignsource-map` extends _Devtool
+  sealed trait `Numbersignsource-map` extends Devtool
   
   @js.native
   sealed trait `accepted harmony modules` extends ReasonType
@@ -136,16 +136,16 @@ object webpackStrings {
   sealed trait base64 extends js.Object
   
   @js.native
-  sealed trait `cheap-eval-source-map` extends _Devtool
+  sealed trait `cheap-eval-source-map` extends Devtool
   
   @js.native
-  sealed trait `cheap-module-eval-source-map` extends _Devtool
+  sealed trait `cheap-module-eval-source-map` extends Devtool
   
   @js.native
-  sealed trait `cheap-module-source-map` extends _Devtool
+  sealed trait `cheap-module-source-map` extends Devtool
   
   @js.native
-  sealed trait `cheap-source-map` extends _Devtool
+  sealed trait `cheap-source-map` extends Devtool
   
   @js.native
   sealed trait `cjs require` extends ReasonType
@@ -193,16 +193,16 @@ object webpackStrings {
   sealed trait error extends js.Object
   
   @js.native
-  sealed trait `errors-only` extends _Preset
+  sealed trait `errors-only` extends Preset
   
   @js.native
-  sealed trait `errors-warnings` extends _Preset
+  sealed trait `errors-warnings` extends Preset
   
   @js.native
-  sealed trait eval extends _Devtool
+  sealed trait eval extends Devtool
   
   @js.native
-  sealed trait `eval-source-map` extends _Devtool
+  sealed trait `eval-source-map` extends Devtool
   
   @js.native
   sealed trait exports extends js.Object
@@ -241,7 +241,7 @@ object webpackStrings {
   sealed trait hex extends js.Object
   
   @js.native
-  sealed trait `hidden-source-map` extends _Devtool
+  sealed trait `hidden-source-map` extends Devtool
   
   @js.native
   sealed trait importLeftparenthesisRightparenthesis extends ReasonType
@@ -262,13 +262,13 @@ object webpackStrings {
   sealed trait initial extends js.Object
   
   @js.native
-  sealed trait `inline-cheap-module-source-map` extends _Devtool
+  sealed trait `inline-cheap-module-source-map` extends Devtool
   
   @js.native
-  sealed trait `inline-cheap-source-map` extends _Devtool
+  sealed trait `inline-cheap-source-map` extends Devtool
   
   @js.native
-  sealed trait `inline-source-map` extends _Devtool
+  sealed trait `inline-source-map` extends Devtool
   
   @js.native
   sealed trait javascriptSlashauto extends js.Object
@@ -295,7 +295,7 @@ object webpackStrings {
   sealed trait loader extends ReasonType
   
   @js.native
-  sealed trait minimal extends _Preset
+  sealed trait minimal extends Preset
   
   @js.native
   sealed trait mock extends js.Object
@@ -328,13 +328,13 @@ object webpackStrings {
   sealed trait `node-webkit` extends js.Object
   
   @js.native
-  sealed trait none extends _Preset
+  sealed trait none extends Preset
   
   @js.native
-  sealed trait normal extends _Preset
+  sealed trait normal extends Preset
   
   @js.native
-  sealed trait `nosources-source-map` extends _Devtool
+  sealed trait `nosources-source-map` extends Devtool
   
   @js.native
   sealed trait `null` extends ReasonType
@@ -376,7 +376,7 @@ object webpackStrings {
   sealed trait size extends js.Object
   
   @js.native
-  sealed trait `source-map` extends _Devtool
+  sealed trait `source-map` extends Devtool
   
   @js.native
   sealed trait system extends LibraryTarget
@@ -397,7 +397,7 @@ object webpackStrings {
   sealed trait `var` extends LibraryTarget
   
   @js.native
-  sealed trait verbose extends _Preset
+  sealed trait verbose extends Preset
   
   @js.native
   sealed trait warning extends js.Object

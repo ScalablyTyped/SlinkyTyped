@@ -1,7 +1,7 @@
 package typingsSlinky.mosca.mod
 
-import typingsSlinky.mosca.AnonCertPath
-import typingsSlinky.mosca.AnonPort
+import typingsSlinky.mosca.anon.CertPath
+import typingsSlinky.mosca.anon.Port
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,12 +13,12 @@ trait ServerOptions extends js.Object {
   var backend: js.UndefOr[js.Any] = js.native
   var bundle: js.UndefOr[js.Any] = js.native
   var host: js.UndefOr[String] = js.native
-  var http: js.UndefOr[AnonPort] = js.native
+  var http: js.UndefOr[Port] = js.native
   var logger: js.UndefOr[js.Any] = js.native
   var maxInflightMessages: js.UndefOr[Double] = js.native
   var persistence: js.UndefOr[js.Any] = js.native
   var port: js.UndefOr[Double] = js.native
-  var secure: js.UndefOr[AnonCertPath] = js.native
+  var secure: js.UndefOr[CertPath] = js.native
   var static: js.UndefOr[js.Any] = js.native
   var stats: js.UndefOr[js.Any] = js.native
 }
@@ -96,7 +96,7 @@ object ServerOptions {
         ret
     }
     @scala.inline
-    def withHttp(value: AnonPort): Self = {
+    def withHttp(value: Port): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("http")(value.asInstanceOf[js.Any])
         ret
@@ -156,7 +156,7 @@ object ServerOptions {
         ret
     }
     @scala.inline
-    def withSecure(value: AnonCertPath): Self = {
+    def withSecure(value: CertPath): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("secure")(value.asInstanceOf[js.Any])
         ret

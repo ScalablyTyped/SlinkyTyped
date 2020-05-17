@@ -1,6 +1,6 @@
 package typingsSlinky.openseadragon.mod
 
-import typingsSlinky.openseadragon.AnonDefaultZoomLevel
+import typingsSlinky.openseadragon.anon.DefaultZoomLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("openseadragon", "Viewport")
 @js.native
 class Viewport protected () extends js.Object {
-  def this(options: AnonDefaultZoomLevel) = this()
+  def this(options: DefaultZoomLevel) = this()
   def applyConstraints(): Viewport = js.native
   def applyConstraints(immediately: Boolean): Viewport = js.native
   def deltaPixelsFromPoints(deltaPoints: Point): Point = js.native

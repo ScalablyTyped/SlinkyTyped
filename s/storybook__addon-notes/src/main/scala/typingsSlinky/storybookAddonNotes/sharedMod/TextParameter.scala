@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TextParameter extends _Parameters {
+trait TextParameter extends Parameters {
   var text: String = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.karmaViewport.viewportMod
 
-import typingsSlinky.karmaViewport.AnonHeight
+import typingsSlinky.karmaViewport.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ViewportBreakpoint extends js.Object {
   var name: String = js.native
-  var size: AnonHeight = js.native
+  var size: Height = js.native
 }
 
 object ViewportBreakpoint {
   @scala.inline
-  def apply(name: String, size: AnonHeight): ViewportBreakpoint = {
+  def apply(name: String, size: Height): ViewportBreakpoint = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
     __obj.asInstanceOf[ViewportBreakpoint]
   }
@@ -30,7 +30,7 @@ object ViewportBreakpoint {
         ret
     }
     @scala.inline
-    def withSize(value: AnonHeight): Self = {
+    def withSize(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
         ret

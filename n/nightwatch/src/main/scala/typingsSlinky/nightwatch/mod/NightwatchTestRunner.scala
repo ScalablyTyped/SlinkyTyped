@@ -1,13 +1,13 @@
 package typingsSlinky.nightwatch.mod
 
-import typingsSlinky.nightwatch.AnonUi
+import typingsSlinky.nightwatch.anon.Ui
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait NightwatchTestRunner extends js.Object {
-  var options: js.UndefOr[AnonUi] = js.native
+  var options: js.UndefOr[Ui] = js.native
   var `type`: js.UndefOr[String] = js.native
 }
 
@@ -24,7 +24,7 @@ object NightwatchTestRunner {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOptions(value: AnonUi): Self = {
+    def withOptions(value: Ui): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

@@ -1,13 +1,13 @@
 package typingsSlinky.gapiClientFusiontables.gapi.client.fusiontables
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientFusiontables.AnonCopyPresentation
-import typingsSlinky.gapiClientFusiontables.AnonDelimiter
-import typingsSlinky.gapiClientFusiontables.AnonEncoding
-import typingsSlinky.gapiClientFusiontables.AnonFields
-import typingsSlinky.gapiClientFusiontables.AnonMaxResults
-import typingsSlinky.gapiClientFusiontables.AnonPrettyPrint
-import typingsSlinky.gapiClientFusiontables.AnonQuotaUser
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientFusiontables.anon.CopyPresentation
+import typingsSlinky.gapiClientFusiontables.anon.Delimiter
+import typingsSlinky.gapiClientFusiontables.anon.Encoding
+import typingsSlinky.gapiClientFusiontables.anon.Fields
+import typingsSlinky.gapiClientFusiontables.anon.MaxResults
+import typingsSlinky.gapiClientFusiontables.anon.PrettyPrint
+import typingsSlinky.gapiClientFusiontables.anon.QuotaUser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,43 +15,43 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TableResource extends js.Object {
   /** Copies a table. */
-  def copy(request: AnonCopyPresentation): Request_[Table] = js.native
+  def copy(request: CopyPresentation): Request[Table] = js.native
   /** Deletes a table. */
-  def delete(request: AnonFields): Request_[Unit] = js.native
+  def delete(request: Fields): Request[Unit] = js.native
   /** Retrieves a specific table by its ID. */
-  def get(request: AnonFields): Request_[Table] = js.native
+  def get(request: Fields): Request[Table] = js.native
   /** Imports more rows into a table. */
-  def importRows(request: AnonDelimiter): Request_[Import] = js.native
+  def importRows(request: Delimiter): Request[Import] = js.native
   /** Imports a new table. */
-  def importTable(request: AnonEncoding): Request_[Table] = js.native
+  def importTable(request: Encoding): Request[Table] = js.native
   /** Creates a new table. */
-  def insert(request: AnonPrettyPrint): Request_[Table] = js.native
+  def insert(request: PrettyPrint): Request[Table] = js.native
   /** Retrieves a list of tables a user owns. */
-  def list(request: AnonMaxResults): Request_[TableList] = js.native
+  def list(request: MaxResults): Request[TableList] = js.native
   /**
     * Updates an existing table. Unless explicitly requested, only the name, description, and attribution will be updated. This method supports patch
     * semantics.
     */
-  def patch(request: AnonQuotaUser): Request_[Table] = js.native
+  def patch(request: QuotaUser): Request[Table] = js.native
   /** Replaces rows of an existing table. Current rows remain visible until all replacement rows are ready. */
-  def replaceRows(request: AnonDelimiter): Request_[Task] = js.native
+  def replaceRows(request: Delimiter): Request[Task] = js.native
   /** Updates an existing table. Unless explicitly requested, only the name, description, and attribution will be updated. */
-  def update(request: AnonQuotaUser): Request_[Table] = js.native
+  def update(request: QuotaUser): Request[Table] = js.native
 }
 
 object TableResource {
   @scala.inline
   def apply(
-    copy: AnonCopyPresentation => Request_[Table],
-    delete: AnonFields => Request_[Unit],
-    get: AnonFields => Request_[Table],
-    importRows: AnonDelimiter => Request_[Import],
-    importTable: AnonEncoding => Request_[Table],
-    insert: AnonPrettyPrint => Request_[Table],
-    list: AnonMaxResults => Request_[TableList],
-    patch: AnonQuotaUser => Request_[Table],
-    replaceRows: AnonDelimiter => Request_[Task],
-    update: AnonQuotaUser => Request_[Table]
+    copy: CopyPresentation => Request[Table],
+    delete: Fields => Request[Unit],
+    get: Fields => Request[Table],
+    importRows: Delimiter => Request[Import],
+    importTable: Encoding => Request[Table],
+    insert: PrettyPrint => Request[Table],
+    list: MaxResults => Request[TableList],
+    patch: QuotaUser => Request[Table],
+    replaceRows: Delimiter => Request[Task],
+    update: QuotaUser => Request[Table]
   ): TableResource = {
     val __obj = js.Dynamic.literal(copy = js.Any.fromFunction1(copy), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), importRows = js.Any.fromFunction1(importRows), importTable = js.Any.fromFunction1(importTable), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), replaceRows = js.Any.fromFunction1(replaceRows), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[TableResource]
@@ -63,61 +63,61 @@ object TableResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCopy(value: AnonCopyPresentation => Request_[Table]): Self = {
+    def withCopy(value: CopyPresentation => Request[Table]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonFields => Request_[Unit]): Self = {
+    def withDelete(value: Fields => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonFields => Request_[Table]): Self = {
+    def withGet(value: Fields => Request[Table]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withImportRows(value: AnonDelimiter => Request_[Import]): Self = {
+    def withImportRows(value: Delimiter => Request[Import]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("importRows")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withImportTable(value: AnonEncoding => Request_[Table]): Self = {
+    def withImportTable(value: Encoding => Request[Table]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("importTable")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withInsert(value: AnonPrettyPrint => Request_[Table]): Self = {
+    def withInsert(value: PrettyPrint => Request[Table]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonMaxResults => Request_[TableList]): Self = {
+    def withList(value: MaxResults => Request[TableList]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPatch(value: AnonQuotaUser => Request_[Table]): Self = {
+    def withPatch(value: QuotaUser => Request[Table]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withReplaceRows(value: AnonDelimiter => Request_[Task]): Self = {
+    def withReplaceRows(value: Delimiter => Request[Task]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("replaceRows")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonQuotaUser => Request_[Table]): Self = {
+    def withUpdate(value: QuotaUser => Request[Table]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

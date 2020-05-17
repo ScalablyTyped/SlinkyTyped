@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object relayDeclarativeMutationConfigMod {
-  type RangeBehaviors = typingsSlinky.relayRuntime.relayDeclarativeMutationConfigMod.RangeBehaviorsFunction | typingsSlinky.relayRuntime.relayDeclarativeMutationConfigMod.RangeBehaviorsObject
   type RangeBehaviorsFunction = js.Function1[
     /* connectionArgs */ org.scalablytyped.runtime.StringDictionary[js.Any], 
     typingsSlinky.relayRuntime.relayDeclarativeMutationConfigMod.RangeOperations

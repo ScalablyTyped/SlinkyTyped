@@ -1,6 +1,5 @@
 package typingsSlinky.phaser.Phaser.Physics.Impact
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,20 +42,6 @@ object TYPE extends js.Object {
     */
   @js.native
   sealed trait NONE extends TYPE
-  
-  @JSBracketAccess
-  def apply(value: Double): js.UndefOr[TYPE with Double] = js.native
-  /* 1 */ @js.native
-  object A extends TopLevel[A with Double]
-  
-  /* 2 */ @js.native
-  object B extends TopLevel[B with Double]
-  
-  /* 3 */ @js.native
-  object BOTH extends TopLevel[BOTH with Double]
-  
-  /* 0 */ @js.native
-  object NONE extends TopLevel[NONE with Double]
   
 }
 

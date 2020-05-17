@@ -2,7 +2,7 @@ package typingsSlinky.mjmlReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.mjmlReact.AnonInline
+import typingsSlinky.mjmlReact.anon.Inline
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ object MjmlStyle {
     def `inline`(value: Boolean): this.type = set("inline", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AnonInline): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: Inline): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: MjmlStyle.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

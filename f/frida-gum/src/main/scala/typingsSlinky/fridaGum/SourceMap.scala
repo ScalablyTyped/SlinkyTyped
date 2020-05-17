@@ -8,20 +8,35 @@ import scala.scalajs.js.annotation._
   * Helper used internally for source map parsing in order to provide helpful
   * JavaScript stack-traces.
   */
-@JSGlobal("SourceMap")
 @js.native
-class SourceMap protected () extends js.Object {
-  /**
-    * Constructs a source map from JSON.
-    *
-    * @param json String containing the source map encoded as JSON.
-    */
-  def this(json: String) = this()
+trait SourceMap extends js.Object {
   /**
     * Attempts to map a generated source position back to the original.
     *
     * @param generatedPosition Position in generated code.
     */
   def resolve(generatedPosition: GeneratedSourcePosition): OriginalSourcePosition | Null = js.native
+}
+
+object SourceMap {
+  @scala.inline
+  def apply(resolve: GeneratedSourcePosition => OriginalSourcePosition | Null): SourceMap = {
+    val __obj = js.Dynamic.literal(resolve = js.Any.fromFunction1(resolve))
+    __obj.asInstanceOf[SourceMap]
+  }
+  @scala.inline
+  implicit class SourceMapOps[Self <: SourceMap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResolve(value: GeneratedSourcePosition => OriginalSourcePosition | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolve")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

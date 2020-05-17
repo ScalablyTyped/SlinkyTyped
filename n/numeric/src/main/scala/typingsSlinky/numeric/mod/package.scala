@@ -35,8 +35,6 @@ package object mod {
     ]
   ]
   type MultidimensionalMatrix = typingsSlinky.numeric.mod.MultidimensionalArray[scala.Double]
-  type NonNullPrimitive = js.UndefOr[scala.Double | java.lang.String | scala.Boolean]
-  type NonScalar = typingsSlinky.numeric.mod.Vector | typingsSlinky.numeric.mod.MultidimensionalMatrix
   type Scalar = scala.Double
   type ShapeFunction = js.Function2[/* i */ scala.Double, /* j */ scala.Double, scala.Boolean]
   type SparseMatrix = js.Tuple3[
@@ -44,7 +42,6 @@ package object mod {
     typingsSlinky.numeric.mod.Vector, 
     typingsSlinky.numeric.mod.Vector
   ]
-  type TensorValue = typingsSlinky.numeric.mod.Scalar | typingsSlinky.numeric.mod.Vector | typingsSlinky.numeric.mod.MultidimensionalMatrix
   type Vector = js.Array[scala.Double]
   type VectorBoolean = js.Array[scala.Boolean]
 }

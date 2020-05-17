@@ -5,8 +5,10 @@ import org.scalajs.dom.raw.Attr
 import org.scalajs.dom.raw.CSSStyleDeclaration
 import org.scalajs.dom.raw.ClipboardEvent
 import org.scalajs.dom.raw.DOMTokenList
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.FileList
 import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.HTMLAnchorElement
@@ -30,10 +32,10 @@ import org.scalajs.dom.raw.WheelEvent
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.flatpickr.globalsMod._Global_.Date
+import typingsSlinky.flatpickr.globalsMod.global.Date
 import typingsSlinky.flatpickr.instanceMod.Instance
 import typingsSlinky.flatpickr.mod.flatpickr.Options.Options
-import typingsSlinky.reactFlatpickr.OmitDateTimePickerPropsop
+import typingsSlinky.reactFlatpickr.anon.OmitDateTimePickerPropsop
 import typingsSlinky.reactFlatpickr.mod.DateTimePickerProps
 import typingsSlinky.reactFlatpickr.mod.default
 import typingsSlinky.reactFlatpickr.reactFlatpickrStrings.a
@@ -47,8 +49,6 @@ import typingsSlinky.std.ChildNode
 import typingsSlinky.std.DOMRect
 import typingsSlinky.std.DOMRectList
 import typingsSlinky.std.DOMStringMap
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Event_
 import typingsSlinky.std.HTMLCollectionOf
 import typingsSlinky.std.HTMLSlotElement
 import typingsSlinky.std.InsertPosition
@@ -113,7 +113,7 @@ object ReactFlatpickr {
     def accessKeyLabel(value: String): this.type = set("accessKeyLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def addEventListener(
-      value: (fullscreenchange, /* listener */ js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]) => Unit
+      value: (fullscreenchange, /* listener */ js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]) => Unit
     ): this.type = set("addEventListener", js.Any.fromFunction2(value))
     @scala.inline
     def after(value: /* repeated */ Node | String => Unit): this.type = set("after", js.Any.fromFunction1(value))
@@ -190,7 +190,7 @@ object ReactFlatpickr {
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def dispatchEvent(value: /* event */ Event_ => Boolean): this.type = set("dispatchEvent", js.Any.fromFunction1(value))
+    def dispatchEvent(value: /* event */ Event => Boolean): this.type = set("dispatchEvent", js.Any.fromFunction1(value))
     @scala.inline
     def draggable(value: Boolean): this.type = set("draggable", value.asInstanceOf[js.Any])
     @scala.inline
@@ -386,11 +386,11 @@ object ReactFlatpickr {
     @scala.inline
     def onblur(value: js.ThisFunction1[DateTimePickerProps, /* ev */ FocusEvent, _]): this.type = set("onblur", value.asInstanceOf[js.Any])
     @scala.inline
-    def oncancel(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("oncancel", value.asInstanceOf[js.Any])
+    def oncancel(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("oncancel", value.asInstanceOf[js.Any])
     @scala.inline
-    def oncanplay(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("oncanplay", value.asInstanceOf[js.Any])
+    def oncanplay(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("oncanplay", value.asInstanceOf[js.Any])
     @scala.inline
-    def oncanplaythrough(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("oncanplaythrough", value.asInstanceOf[js.Any])
+    def oncanplaythrough(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("oncanplaythrough", value.asInstanceOf[js.Any])
     @scala.inline
     def onclick(value: js.ThisFunction1[DateTimePickerProps, /* ev */ MouseEvent, _]): this.type = set("onclick", value.asInstanceOf[js.Any])
     @scala.inline
@@ -398,7 +398,7 @@ object ReactFlatpickr {
     @scala.inline
     def oncopy(value: js.ThisFunction1[DateTimePickerProps, /* ev */ ClipboardEvent, _]): this.type = set("oncopy", value.asInstanceOf[js.Any])
     @scala.inline
-    def oncuechange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("oncuechange", value.asInstanceOf[js.Any])
+    def oncuechange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("oncuechange", value.asInstanceOf[js.Any])
     @scala.inline
     def oncut(value: js.ThisFunction1[DateTimePickerProps, /* ev */ ClipboardEvent, _]): this.type = set("oncut", value.asInstanceOf[js.Any])
     @scala.inline
@@ -410,7 +410,7 @@ object ReactFlatpickr {
     @scala.inline
     def ondragenter(value: js.ThisFunction1[DateTimePickerProps, /* ev */ DragEvent, _]): this.type = set("ondragenter", value.asInstanceOf[js.Any])
     @scala.inline
-    def ondragexit(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("ondragexit", value.asInstanceOf[js.Any])
+    def ondragexit(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("ondragexit", value.asInstanceOf[js.Any])
     @scala.inline
     def ondragleave(value: js.ThisFunction1[DateTimePickerProps, /* ev */ DragEvent, _]): this.type = set("ondragleave", value.asInstanceOf[js.Any])
     @scala.inline
@@ -420,29 +420,29 @@ object ReactFlatpickr {
     @scala.inline
     def ondrop(value: js.ThisFunction1[DateTimePickerProps, /* ev */ DragEvent, _]): this.type = set("ondrop", value.asInstanceOf[js.Any])
     @scala.inline
-    def ondurationchange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("ondurationchange", value.asInstanceOf[js.Any])
+    def ondurationchange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("ondurationchange", value.asInstanceOf[js.Any])
     @scala.inline
-    def onemptied(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onemptied", value.asInstanceOf[js.Any])
+    def onemptied(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onemptied", value.asInstanceOf[js.Any])
     @scala.inline
-    def onended(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onended", value.asInstanceOf[js.Any])
+    def onended(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onended", value.asInstanceOf[js.Any])
     @scala.inline
     def onerror(
-      value: (/* event */ Event_ | String, /* source */ js.UndefOr[String], /* lineno */ js.UndefOr[Double], /* colno */ js.UndefOr[Double], /* error */ js.UndefOr[js.Error]) => js.Any
+      value: (/* event */ Event | String, /* source */ js.UndefOr[String], /* lineno */ js.UndefOr[Double], /* colno */ js.UndefOr[Double], /* error */ js.UndefOr[js.Error]) => js.Any
     ): this.type = set("onerror", js.Any.fromFunction5(value))
     @scala.inline
     def onerrorNull: this.type = set("onerror", null)
     @scala.inline
     def onfocus(value: js.ThisFunction1[DateTimePickerProps, /* ev */ FocusEvent, _]): this.type = set("onfocus", value.asInstanceOf[js.Any])
     @scala.inline
-    def onfullscreenchange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onfullscreenchange", value.asInstanceOf[js.Any])
+    def onfullscreenchange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onfullscreenchange", value.asInstanceOf[js.Any])
     @scala.inline
-    def onfullscreenerror(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onfullscreenerror", value.asInstanceOf[js.Any])
+    def onfullscreenerror(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onfullscreenerror", value.asInstanceOf[js.Any])
     @scala.inline
     def ongotpointercapture(value: js.ThisFunction1[DateTimePickerProps, /* ev */ PointerEvent, _]): this.type = set("ongotpointercapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def oninput(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("oninput", value.asInstanceOf[js.Any])
+    def oninput(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("oninput", value.asInstanceOf[js.Any])
     @scala.inline
-    def oninvalid(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("oninvalid", value.asInstanceOf[js.Any])
+    def oninvalid(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("oninvalid", value.asInstanceOf[js.Any])
     @scala.inline
     def onkeydown(value: js.ThisFunction1[DateTimePickerProps, /* ev */ KeyboardEvent, _]): this.type = set("onkeydown", value.asInstanceOf[js.Any])
     @scala.inline
@@ -450,13 +450,13 @@ object ReactFlatpickr {
     @scala.inline
     def onkeyup(value: js.ThisFunction1[DateTimePickerProps, /* ev */ KeyboardEvent, _]): this.type = set("onkeyup", value.asInstanceOf[js.Any])
     @scala.inline
-    def onload(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onload", value.asInstanceOf[js.Any])
+    def onload(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onload", value.asInstanceOf[js.Any])
     @scala.inline
-    def onloadeddata(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onloadeddata", value.asInstanceOf[js.Any])
+    def onloadeddata(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onloadeddata", value.asInstanceOf[js.Any])
     @scala.inline
-    def onloadedmetadata(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onloadedmetadata", value.asInstanceOf[js.Any])
+    def onloadedmetadata(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onloadedmetadata", value.asInstanceOf[js.Any])
     @scala.inline
-    def onloadstart(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onloadstart", value.asInstanceOf[js.Any])
+    def onloadstart(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onloadstart", value.asInstanceOf[js.Any])
     @scala.inline
     def onlostpointercapture(value: js.ThisFunction1[DateTimePickerProps, /* ev */ PointerEvent, _]): this.type = set("onlostpointercapture", value.asInstanceOf[js.Any])
     @scala.inline
@@ -476,11 +476,11 @@ object ReactFlatpickr {
     @scala.inline
     def onpaste(value: js.ThisFunction1[DateTimePickerProps, /* ev */ ClipboardEvent, _]): this.type = set("onpaste", value.asInstanceOf[js.Any])
     @scala.inline
-    def onpause(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onpause", value.asInstanceOf[js.Any])
+    def onpause(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onpause", value.asInstanceOf[js.Any])
     @scala.inline
-    def onplay(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onplay", value.asInstanceOf[js.Any])
+    def onplay(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onplay", value.asInstanceOf[js.Any])
     @scala.inline
-    def onplaying(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onplaying", value.asInstanceOf[js.Any])
+    def onplaying(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onplaying", value.asInstanceOf[js.Any])
     @scala.inline
     def onpointercancel(value: js.ThisFunction1[DateTimePickerProps, /* ev */ PointerEvent, _]): this.type = set("onpointercancel", value.asInstanceOf[js.Any])
     @scala.inline
@@ -500,35 +500,35 @@ object ReactFlatpickr {
     @scala.inline
     def onprogress(value: js.ThisFunction1[DateTimePickerProps, /* ev */ ProgressEvent, _]): this.type = set("onprogress", value.asInstanceOf[js.Any])
     @scala.inline
-    def onratechange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onratechange", value.asInstanceOf[js.Any])
+    def onratechange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onratechange", value.asInstanceOf[js.Any])
     @scala.inline
-    def onreset(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onreset", value.asInstanceOf[js.Any])
+    def onreset(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onreset", value.asInstanceOf[js.Any])
     @scala.inline
     def onresize(value: js.ThisFunction1[DateTimePickerProps, /* ev */ UIEvent, _]): this.type = set("onresize", value.asInstanceOf[js.Any])
     @scala.inline
-    def onscroll(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onscroll", value.asInstanceOf[js.Any])
+    def onscroll(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onscroll", value.asInstanceOf[js.Any])
     @scala.inline
     def onsecuritypolicyviolation(value: js.ThisFunction1[DateTimePickerProps, /* ev */ SecurityPolicyViolationEvent, _]): this.type = set("onsecuritypolicyviolation", value.asInstanceOf[js.Any])
     @scala.inline
-    def onseeked(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onseeked", value.asInstanceOf[js.Any])
+    def onseeked(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onseeked", value.asInstanceOf[js.Any])
     @scala.inline
-    def onseeking(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onseeking", value.asInstanceOf[js.Any])
+    def onseeking(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onseeking", value.asInstanceOf[js.Any])
     @scala.inline
-    def onselect(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onselect", value.asInstanceOf[js.Any])
+    def onselect(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onselect", value.asInstanceOf[js.Any])
     @scala.inline
-    def onselectionchange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onselectionchange", value.asInstanceOf[js.Any])
+    def onselectionchange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onselectionchange", value.asInstanceOf[js.Any])
     @scala.inline
-    def onselectstart(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onselectstart", value.asInstanceOf[js.Any])
+    def onselectstart(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onselectstart", value.asInstanceOf[js.Any])
     @scala.inline
-    def onstalled(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onstalled", value.asInstanceOf[js.Any])
+    def onstalled(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onstalled", value.asInstanceOf[js.Any])
     @scala.inline
-    def onsubmit(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onsubmit", value.asInstanceOf[js.Any])
+    def onsubmit(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onsubmit", value.asInstanceOf[js.Any])
     @scala.inline
-    def onsuspend(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onsuspend", value.asInstanceOf[js.Any])
+    def onsuspend(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onsuspend", value.asInstanceOf[js.Any])
     @scala.inline
-    def ontimeupdate(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("ontimeupdate", value.asInstanceOf[js.Any])
+    def ontimeupdate(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("ontimeupdate", value.asInstanceOf[js.Any])
     @scala.inline
-    def ontoggle(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("ontoggle", value.asInstanceOf[js.Any])
+    def ontoggle(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("ontoggle", value.asInstanceOf[js.Any])
     @scala.inline
     def ontouchcancel(value: js.ThisFunction1[DateTimePickerProps, /* ev */ TouchEvent, _]): this.type = set("ontouchcancel", value.asInstanceOf[js.Any])
     @scala.inline
@@ -546,9 +546,9 @@ object ReactFlatpickr {
     @scala.inline
     def ontransitionstart(value: js.ThisFunction1[DateTimePickerProps, /* ev */ TransitionEvent, _]): this.type = set("ontransitionstart", value.asInstanceOf[js.Any])
     @scala.inline
-    def onvolumechange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onvolumechange", value.asInstanceOf[js.Any])
+    def onvolumechange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onvolumechange", value.asInstanceOf[js.Any])
     @scala.inline
-    def onwaiting(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): this.type = set("onwaiting", value.asInstanceOf[js.Any])
+    def onwaiting(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): this.type = set("onwaiting", value.asInstanceOf[js.Any])
     @scala.inline
     def onwheel(value: js.ThisFunction1[DateTimePickerProps, /* ev */ WheelEvent, _]): this.type = set("onwheel", value.asInstanceOf[js.Any])
     @scala.inline
@@ -556,7 +556,7 @@ object ReactFlatpickr {
     @scala.inline
     def outerHTML(value: String): this.type = set("outerHTML", value.asInstanceOf[js.Any])
     @scala.inline
-    def ownerDocument(value: Document_): this.type = set("ownerDocument", value.asInstanceOf[js.Any])
+    def ownerDocument(value: Document): this.type = set("ownerDocument", value.asInstanceOf[js.Any])
     @scala.inline
     def parentElement(value: HTMLElement): this.type = set("parentElement", value.asInstanceOf[js.Any])
     @scala.inline
@@ -593,7 +593,7 @@ object ReactFlatpickr {
     def removeChild(value: /* oldChild */ Node => Node): this.type = set("removeChild", js.Any.fromFunction1(value))
     @scala.inline
     def removeEventListener(
-      value: (fullscreenchange, /* listener */ js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]) => Unit
+      value: (fullscreenchange, /* listener */ js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]) => Unit
     ): this.type = set("removeEventListener", js.Any.fromFunction2(value))
     @scala.inline
     def render(

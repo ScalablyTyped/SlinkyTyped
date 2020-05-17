@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +30,45 @@ trait ImageMediaInfo
   var value: ImageMediaInfoValue = js.native
 }
 
-@JSGlobal("__esri.ImageMediaInfo")
-@js.native
-object ImageMediaInfo extends TopLevel[ImageMediaInfoConstructor]
+object ImageMediaInfo {
+  @scala.inline
+  def apply(
+    caption: String,
+    refreshInterval: Double,
+    title: String,
+    toJSON: () => js.Any,
+    `type`: String,
+    value: ImageMediaInfoValue
+  ): ImageMediaInfo = {
+    val __obj = js.Dynamic.literal(caption = caption.asInstanceOf[js.Any], refreshInterval = refreshInterval.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ImageMediaInfo]
+  }
+  @scala.inline
+  implicit class ImageMediaInfoOps[Self <: ImageMediaInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRefreshInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refreshInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: ImageMediaInfoValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

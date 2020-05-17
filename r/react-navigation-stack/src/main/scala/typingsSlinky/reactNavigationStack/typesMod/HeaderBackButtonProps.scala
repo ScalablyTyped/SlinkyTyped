@@ -3,7 +3,7 @@ package typingsSlinky.reactNavigationStack.typesMod
 import slinky.core.TagMod
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
-import typingsSlinky.reactNavigationStack.AnonTintColor
+import typingsSlinky.reactNavigationStack.anon.TintColor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait HeaderBackButtonProps extends js.Object {
   var allowFontScaling: js.UndefOr[Boolean] = js.native
-  var backImage: js.UndefOr[js.Function1[/* props */ AnonTintColor, TagMod[Any]]] = js.native
+  var backImage: js.UndefOr[js.Function1[/* props */ TintColor, TagMod[Any]]] = js.native
   var backTitleVisible: js.UndefOr[Boolean] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
   var layoutPreset: HeaderLayoutPreset = js.native
@@ -68,7 +68,7 @@ object HeaderBackButtonProps {
         ret
     }
     @scala.inline
-    def withBackImage(value: /* props */ AnonTintColor => TagMod[Any]): Self = {
+    def withBackImage(value: /* props */ TintColor => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("backImage")(js.Any.fromFunction1(value))
         ret

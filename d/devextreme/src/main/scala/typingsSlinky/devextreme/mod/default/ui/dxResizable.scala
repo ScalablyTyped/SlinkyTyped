@@ -3,7 +3,7 @@ package typingsSlinky.devextreme.mod.default.ui
 import org.scalajs.dom.raw.Element
 import typingsSlinky.devextreme.mod.DevExpress.DOMComponent
 import typingsSlinky.devextreme.mod.DevExpress.ui.dxResizableOptions
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

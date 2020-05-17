@@ -1,14 +1,12 @@
 package typingsSlinky.sharepoint.SP
 
-import typingsSlinky.microsoftAjax.Sys.StringBuilder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Defines a writer that provides a set of methods to append text in XML format. Use the static SP.XmlWriter.create(sb) Method to create an SP.XmlWriter object with the Sys.StringBuilder object you pass in. */
-@JSGlobal("SP.XmlWriter")
 @js.native
-class XmlWriter () extends js.Object {
+trait XmlWriter extends js.Object {
   /** This member is reserved for internal use and is not intended to be used directly from your code. */
   def close(): Unit = js.native
   /** Appends an attribute with the specified name and value in XML format to the object?s string builder. */
@@ -29,11 +27,83 @@ class XmlWriter () extends js.Object {
   def writeString(value: String): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("SP.XmlWriter")
-@js.native
-object XmlWriter extends js.Object {
-  /** Creates a new instance of the XmlWriter class with the specified string builder. */
-  def create(sb: StringBuilder): XmlWriter = js.native
+object XmlWriter {
+  @scala.inline
+  def apply(
+    close: () => Unit,
+    writeAttributeString: (String, String) => Unit,
+    writeElementString: (String, String) => Unit,
+    writeEndAttribute: () => Unit,
+    writeEndElement: () => Unit,
+    writeRaw: String => Unit,
+    writeStartAttribute: String => Unit,
+    writeStartElement: String => Unit,
+    writeString: String => Unit
+  ): XmlWriter = {
+    val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), writeAttributeString = js.Any.fromFunction2(writeAttributeString), writeElementString = js.Any.fromFunction2(writeElementString), writeEndAttribute = js.Any.fromFunction0(writeEndAttribute), writeEndElement = js.Any.fromFunction0(writeEndElement), writeRaw = js.Any.fromFunction1(writeRaw), writeStartAttribute = js.Any.fromFunction1(writeStartAttribute), writeStartElement = js.Any.fromFunction1(writeStartElement), writeString = js.Any.fromFunction1(writeString))
+    __obj.asInstanceOf[XmlWriter]
+  }
+  @scala.inline
+  implicit class XmlWriterOps[Self <: XmlWriter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withWriteAttributeString(value: (String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeAttributeString")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withWriteElementString(value: (String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeElementString")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withWriteEndAttribute(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeEndAttribute")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withWriteEndElement(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeEndElement")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withWriteRaw(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeRaw")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWriteStartAttribute(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeStartAttribute")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWriteStartElement(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeStartElement")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWriteString(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeString")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

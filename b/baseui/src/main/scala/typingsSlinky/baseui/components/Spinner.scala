@@ -2,7 +2,7 @@ package typingsSlinky.baseui.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonActivePath
+import typingsSlinky.baseui.anon.ActivePath
 import typingsSlinky.baseui.spinnerMod.SpinnerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +22,7 @@ object Spinner {
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
-    def overrides(value: AnonActivePath): this.type = set("overrides", value.asInstanceOf[js.Any])
+    def overrides(value: ActivePath): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline
     def size(value: Double | String): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline

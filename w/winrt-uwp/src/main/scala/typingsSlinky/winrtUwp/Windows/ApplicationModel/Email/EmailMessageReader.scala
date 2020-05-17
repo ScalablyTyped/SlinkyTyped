@@ -6,13 +6,34 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Gets a batch of email messages. */
-@JSGlobal("Windows.ApplicationModel.Email.EmailMessageReader")
 @js.native
-abstract class EmailMessageReader () extends js.Object {
+trait EmailMessageReader extends js.Object {
   /**
     * Reads a collection of email messages.
     * @return A batch of email messages.
     */
   def readBatchAsync(): IPromiseWithIAsyncOperation[EmailMessageBatch] = js.native
+}
+
+object EmailMessageReader {
+  @scala.inline
+  def apply(readBatchAsync: () => IPromiseWithIAsyncOperation[EmailMessageBatch]): EmailMessageReader = {
+    val __obj = js.Dynamic.literal(readBatchAsync = js.Any.fromFunction0(readBatchAsync))
+    __obj.asInstanceOf[EmailMessageReader]
+  }
+  @scala.inline
+  implicit class EmailMessageReaderOps[Self <: EmailMessageReader] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReadBatchAsync(value: () => IPromiseWithIAsyncOperation[EmailMessageBatch]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readBatchAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

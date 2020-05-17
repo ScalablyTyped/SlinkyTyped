@@ -1,13 +1,13 @@
 package typingsSlinky.contextjs.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait MenuObject extends js.Object {
-  var action: js.UndefOr[js.Function1[/* e */ Event_, Unit]] = js.native
+  var action: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
   var divider: js.UndefOr[Boolean] = js.native
   var header: js.UndefOr[String] = js.native
   var href: js.UndefOr[String] = js.native
@@ -29,7 +29,7 @@ object MenuObject {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAction(value: /* e */ Event_ => Unit): Self = {
+    def withAction(value: /* e */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("action")(js.Any.fromFunction1(value))
         ret

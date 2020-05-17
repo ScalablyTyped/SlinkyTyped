@@ -1,6 +1,6 @@
 package typingsSlinky.qrcodeSvg.mod
 
-import typingsSlinky.qrcodeSvg.AnonData
+import typingsSlinky.qrcodeSvg.anon.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait Model extends js.Object {
   /** The cache used to store data during the creation of this QRCode. */
   var dataCache: js.Array[Double] | Null = js.native
   /** A list of the data added to this QRCode. */
-  var dataList: js.Array[AnonData] = js.native
+  var dataList: js.Array[Data] = js.native
   /** The numerical error correction level for this QRCode. */
   var errorCorrectLevel: Double = js.native
   /** The width/length of this QRCode's modules matrix. */
@@ -46,7 +46,7 @@ object Model {
   @scala.inline
   def apply(
     addData: String => Unit,
-    dataList: js.Array[AnonData],
+    dataList: js.Array[Data],
     errorCorrectLevel: Double,
     getModuleCount: () => Double,
     isDark: (Double, Double) => Boolean,
@@ -71,7 +71,7 @@ object Model {
         ret
     }
     @scala.inline
-    def withDataList(value: js.Array[AnonData]): Self = {
+    def withDataList(value: js.Array[Data]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataList")(value.asInstanceOf[js.Any])
         ret

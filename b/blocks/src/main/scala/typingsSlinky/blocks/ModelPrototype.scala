@@ -1,6 +1,7 @@
 package typingsSlinky.blocks
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.blocks.anon.BaseUrl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +23,7 @@ trait ModelPrototype
   	 * 
   	 */
   var isNew: js.UndefOr[js.Function0[Boolean]] = js.native
-  var options: js.UndefOr[AnonBaseUrl] = js.native
+  var options: js.UndefOr[BaseUrl] = js.native
   /**
   	 * Applies new properties to the Model by providing an Object
   	 * 
@@ -84,7 +85,7 @@ object ModelPrototype {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonBaseUrl): Self = {
+    def withOptions(value: BaseUrl): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

@@ -16,15 +16,8 @@ import scala.scalajs.js.annotation._
   * {@link Item#style}. This is a convenient way to define a style once and
   * apply it to a series of items:
   */
-@JSGlobal("paper.Style")
 @js.native
-class Style protected () extends js.Object {
-  /** 
-    * Style objects don't need to be created directly. Just pass an object to
-    * {@link Item#style} or {@link Project#currentStyle}, it will be converted
-    * to a Style object internally.
-    */
-  def this(style: js.Object) = this()
+trait Style extends js.Object {
   /** 
     * Specifies an array containing the dash and gap lengths of the stroke.
     */
@@ -116,5 +109,182 @@ class Style protected () extends js.Object {
     * The view that this style belongs to.
     */
   val view: View = js.native
+}
+
+object Style {
+  @scala.inline
+  def apply(
+    dashArray: js.Array[Double],
+    dashOffset: Double,
+    fillRule: String,
+    fontFamily: String,
+    fontSize: Double | String,
+    fontWeight: String | Double,
+    justification: String,
+    leading: Double | String,
+    miterLimit: Double,
+    shadowBlur: Double,
+    shadowOffset: Point,
+    strokeCap: String,
+    strokeJoin: String,
+    strokeScaling: Boolean,
+    strokeWidth: Double,
+    view: View
+  ): Style = {
+    val __obj = js.Dynamic.literal(dashArray = dashArray.asInstanceOf[js.Any], dashOffset = dashOffset.asInstanceOf[js.Any], fillRule = fillRule.asInstanceOf[js.Any], fontFamily = fontFamily.asInstanceOf[js.Any], fontSize = fontSize.asInstanceOf[js.Any], fontWeight = fontWeight.asInstanceOf[js.Any], justification = justification.asInstanceOf[js.Any], leading = leading.asInstanceOf[js.Any], miterLimit = miterLimit.asInstanceOf[js.Any], shadowBlur = shadowBlur.asInstanceOf[js.Any], shadowOffset = shadowOffset.asInstanceOf[js.Any], strokeCap = strokeCap.asInstanceOf[js.Any], strokeJoin = strokeJoin.asInstanceOf[js.Any], strokeScaling = strokeScaling.asInstanceOf[js.Any], strokeWidth = strokeWidth.asInstanceOf[js.Any], view = view.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Style]
+  }
+  @scala.inline
+  implicit class StyleOps[Self <: Style] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDashArray(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dashArray")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDashOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dashOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFillRule(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillRule")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFontFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFontSize(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFontWeight(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontWeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withJustification(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("justification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLeading(value: Double | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMiterLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("miterLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShadowBlur(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowBlur")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShadowOffset(value: Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStrokeCap(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeCap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStrokeJoin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeJoin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStrokeScaling(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeScaling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStrokeWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withView(value: View): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFillColor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFillColorNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillColor")(null)
+        ret
+    }
+    @scala.inline
+    def withSelectedColor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSelectedColorNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedColor")(null)
+        ret
+    }
+    @scala.inline
+    def withShadowColor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShadowColorNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shadowColor")(null)
+        ret
+    }
+    @scala.inline
+    def withStrokeColor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStrokeColorNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeColor")(null)
+        ret
+    }
+  }
+  
 }
 

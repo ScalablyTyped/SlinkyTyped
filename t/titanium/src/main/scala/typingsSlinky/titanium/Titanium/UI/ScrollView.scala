@@ -31,9 +31,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A view that contains a horizontally and/or vertically-scrollable region of content.
 		 */
-@JSGlobal("Titanium.UI.ScrollView")
 @js.native
-class ScrollView () extends View {
+trait ScrollView extends View {
   /**
   			 * Determines whether this scroll view can cancel subview touches in order to scroll instead.
   			 */

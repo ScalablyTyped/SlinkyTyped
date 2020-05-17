@@ -1,18 +1,18 @@
 package typingsSlinky.uiGrid.mod.pinning
 
-import typingsSlinky.uiGrid.AnonNONE
+import typingsSlinky.uiGrid.anon.NONE
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IUiGridPinningConstants extends js.Object {
-  var container: AnonNONE = js.native
+  var container: NONE = js.native
 }
 
 object IUiGridPinningConstants {
   @scala.inline
-  def apply(container: AnonNONE): IUiGridPinningConstants = {
+  def apply(container: NONE): IUiGridPinningConstants = {
     val __obj = js.Dynamic.literal(container = container.asInstanceOf[js.Any])
     __obj.asInstanceOf[IUiGridPinningConstants]
   }
@@ -23,7 +23,7 @@ object IUiGridPinningConstants {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContainer(value: AnonNONE): Self = {
+    def withContainer(value: NONE): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
         ret

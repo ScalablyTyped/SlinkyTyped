@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TimelineOrientationOption extends js.Object {
+trait TimelineOrientationOption extends TimelineOptionsOrientationType {
   var axis: js.UndefOr[String] = js.native
   var item: js.UndefOr[String] = js.native
 }

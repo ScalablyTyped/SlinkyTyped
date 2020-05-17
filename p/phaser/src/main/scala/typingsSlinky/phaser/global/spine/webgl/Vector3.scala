@@ -1,0 +1,15 @@
+package typingsSlinky.phaser.global.spine.webgl
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("spine.webgl.Vector3")
+@js.native
+class Vector3 ()
+  extends typingsSlinky.phaser.spine.webgl.Vector3 {
+  def this(x: Double) = this()
+  def this(x: Double, y: Double) = this()
+  def this(x: Double, y: Double, z: Double) = this()
+}
+

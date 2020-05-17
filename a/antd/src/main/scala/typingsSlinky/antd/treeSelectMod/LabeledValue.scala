@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LabeledValue extends js.Object {
+trait LabeledValue extends SelectValue {
   var key: js.UndefOr[String] = js.native
   var label: TagMod[Any] = js.native
   var value: RawValue = js.native

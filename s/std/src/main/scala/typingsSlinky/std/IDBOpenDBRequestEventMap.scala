@@ -6,16 +6,16 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait IDBOpenDBRequestEventMap extends IDBRequestEventMap {
-  var blocked: Event_ = js.native
+  var blocked: org.scalajs.dom.raw.Event = js.native
   var upgradeneeded: org.scalajs.dom.raw.IDBVersionChangeEvent = js.native
 }
 
 object IDBOpenDBRequestEventMap {
   @scala.inline
   def apply(
-    blocked: Event_,
-    error: Event_,
-    success: Event_,
+    blocked: org.scalajs.dom.raw.Event,
+    error: org.scalajs.dom.raw.Event,
+    success: org.scalajs.dom.raw.Event,
     upgradeneeded: org.scalajs.dom.raw.IDBVersionChangeEvent
   ): IDBOpenDBRequestEventMap = {
     val __obj = js.Dynamic.literal(blocked = blocked.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], success = success.asInstanceOf[js.Any], upgradeneeded = upgradeneeded.asInstanceOf[js.Any])
@@ -28,7 +28,7 @@ object IDBOpenDBRequestEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBlocked(value: Event_): Self = {
+    def withBlocked(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("blocked")(value.asInstanceOf[js.Any])
         ret

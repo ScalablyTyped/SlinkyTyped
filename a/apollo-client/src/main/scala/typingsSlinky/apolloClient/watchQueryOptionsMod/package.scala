@@ -17,7 +17,7 @@ package object watchQueryOptionsMod {
   type RefetchQueryDescription = js.Array[java.lang.String | typingsSlinky.apolloClient.typesMod.PureQueryOptions]
   type UpdateQueryFn[TData, TSubscriptionVariables, TSubscriptionData] = js.Function2[
     /* previousQueryResult */ TData, 
-    /* options */ typingsSlinky.apolloClient.AnonSubscriptionData[TSubscriptionData, TSubscriptionVariables], 
+    /* options */ typingsSlinky.apolloClient.anon.SubscriptionData[TSubscriptionData, TSubscriptionVariables], 
     TData
   ]
 }

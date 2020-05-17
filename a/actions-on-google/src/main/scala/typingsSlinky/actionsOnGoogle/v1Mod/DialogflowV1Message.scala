@@ -1,6 +1,5 @@
 package typingsSlinky.actionsOnGoogle.v1Mod
 
-import typingsSlinky.actionsOnGoogle.actionsOnGoogleStrings.google
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,64 +22,28 @@ trait DialogflowV1Message extends js.Object
 
 object DialogflowV1Message {
   @scala.inline
-  def DialogflowV1MessageText(): DialogflowV1Message = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[DialogflowV1Message]
-  }
+  implicit def apply(value: DialogflowV1MessageBasicCard): DialogflowV1Message = value.asInstanceOf[DialogflowV1Message]
   @scala.inline
-  def DialogflowV1MessageCard(): DialogflowV1Message = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[DialogflowV1Message]
-  }
+  implicit def apply(value: DialogflowV1MessageCard): DialogflowV1Message = value.asInstanceOf[DialogflowV1Message]
   @scala.inline
-  def DialogflowV1MessageLinkOut(platform: google): DialogflowV1Message = {
-    val __obj = js.Dynamic.literal(platform = platform.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DialogflowV1Message]
-  }
+  implicit def apply(value: DialogflowV1MessageCarousel): DialogflowV1Message = value.asInstanceOf[DialogflowV1Message]
   @scala.inline
-  def DialogflowV1MessageList(platform: google): DialogflowV1Message = {
-    val __obj = js.Dynamic.literal(platform = platform.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DialogflowV1Message]
-  }
+  implicit def apply(value: DialogflowV1MessageCustomPayload): DialogflowV1Message = value.asInstanceOf[DialogflowV1Message]
   @scala.inline
-  def DialogflowV1MessageBasicCard(platform: google): DialogflowV1Message = {
-    val __obj = js.Dynamic.literal(platform = platform.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DialogflowV1Message]
-  }
+  implicit def apply(value: DialogflowV1MessageGooglePayload): DialogflowV1Message = value.asInstanceOf[DialogflowV1Message]
   @scala.inline
-  def DialogflowV1MessageSuggestions(platform: google): DialogflowV1Message = {
-    val __obj = js.Dynamic.literal(platform = platform.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DialogflowV1Message]
-  }
+  implicit def apply(value: DialogflowV1MessageImage): DialogflowV1Message = value.asInstanceOf[DialogflowV1Message]
   @scala.inline
-  def DialogflowV1MessageGooglePayload(platform: google): DialogflowV1Message = {
-    val __obj = js.Dynamic.literal(platform = platform.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DialogflowV1Message]
-  }
+  implicit def apply(value: DialogflowV1MessageLinkOut): DialogflowV1Message = value.asInstanceOf[DialogflowV1Message]
   @scala.inline
-  def DialogflowV1MessageImage(): DialogflowV1Message = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[DialogflowV1Message]
-  }
+  implicit def apply(value: DialogflowV1MessageList): DialogflowV1Message = value.asInstanceOf[DialogflowV1Message]
   @scala.inline
-  def DialogflowV1MessageSimpleResponse(platform: google): DialogflowV1Message = {
-    val __obj = js.Dynamic.literal(platform = platform.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DialogflowV1Message]
-  }
+  implicit def apply(value: DialogflowV1MessageQuickReplies): DialogflowV1Message = value.asInstanceOf[DialogflowV1Message]
   @scala.inline
-  def DialogflowV1MessageQuickReplies(): DialogflowV1Message = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[DialogflowV1Message]
-  }
+  implicit def apply(value: DialogflowV1MessageSimpleResponse): DialogflowV1Message = value.asInstanceOf[DialogflowV1Message]
   @scala.inline
-  def DialogflowV1MessageCarousel(platform: google): DialogflowV1Message = {
-    val __obj = js.Dynamic.literal(platform = platform.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DialogflowV1Message]
-  }
+  implicit def apply(value: DialogflowV1MessageSuggestions): DialogflowV1Message = value.asInstanceOf[DialogflowV1Message]
   @scala.inline
-  def DialogflowV1MessageCustomPayload(): DialogflowV1Message = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[DialogflowV1Message]
-  }
+  implicit def apply(value: DialogflowV1MessageText): DialogflowV1Message = value.asInstanceOf[DialogflowV1Message]
 }
 

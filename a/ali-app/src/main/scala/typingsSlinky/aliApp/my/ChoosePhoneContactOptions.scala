@@ -1,8 +1,8 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonMobile
 import typingsSlinky.aliApp.aliAppNumbers.`10`
 import typingsSlinky.aliApp.aliAppNumbers.`11`
+import typingsSlinky.aliApp.anon.Mobile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,12 +19,12 @@ trait ChoosePhoneContactOptions
   @JSName("fail")
   var fail_ChoosePhoneContactOptions: js.UndefOr[js.Function1[/* error */ `10` | `11`, Unit]] = js.native
   @JSName("success")
-  def success_MChoosePhoneContactOptions(result: AnonMobile): Unit = js.native
+  def success_MChoosePhoneContactOptions(result: Mobile): Unit = js.native
 }
 
 object ChoosePhoneContactOptions {
   @scala.inline
-  def apply(success: AnonMobile => Unit): ChoosePhoneContactOptions = {
+  def apply(success: Mobile => Unit): ChoosePhoneContactOptions = {
     val __obj = js.Dynamic.literal(success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[ChoosePhoneContactOptions]
   }
@@ -35,7 +35,7 @@ object ChoosePhoneContactOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSuccess(value: AnonMobile => Unit): Self = {
+    def withSuccess(value: Mobile => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

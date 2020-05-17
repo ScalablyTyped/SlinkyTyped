@@ -7,13 +7,34 @@ import scala.scalajs.js.annotation._
 /**
   * A command to delete a specific bookmark.
   */
-@JSGlobal("DeleteBookmarkCommand")
 @js.native
-class DeleteBookmarkCommand () extends CommandWithSimpleStateBase {
+trait DeleteBookmarkCommand extends CommandWithSimpleStateBase {
   /**
     * Executes the DeleteBookmarkCommand command with the specified parameter. true if the command has been successfully executed; false if the command execution has failed.
     * @param name A string value specifying a name of the deleted bookmark.
     */
   def execute(name: String): Boolean = js.native
+}
+
+object DeleteBookmarkCommand {
+  @scala.inline
+  def apply(execute: String => Boolean, getState: () => SimpleCommandState): DeleteBookmarkCommand = {
+    val __obj = js.Dynamic.literal(execute = js.Any.fromFunction1(execute), getState = js.Any.fromFunction0(getState))
+    __obj.asInstanceOf[DeleteBookmarkCommand]
+  }
+  @scala.inline
+  implicit class DeleteBookmarkCommandOps[Self <: DeleteBookmarkCommand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExecute(value: String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

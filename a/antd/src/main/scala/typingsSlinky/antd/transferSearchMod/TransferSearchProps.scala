@@ -1,10 +1,10 @@
 package typingsSlinky.antd.transferSearchMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 trait TransferSearchProps extends js.Object {
   var disabled: js.UndefOr[Boolean] = js.native
   var handleClear: js.UndefOr[js.Function1[/* e */ SyntheticMouseEvent[HTMLElement], Unit]] = js.native
-  var onChange: js.UndefOr[js.Function1[SyntheticEvent[EventTarget with HTMLElement, Event_], Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[SyntheticEvent[EventTarget with HTMLElement, Event], Unit]] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var prefixCls: js.UndefOr[String] = js.native
   var value: js.UndefOr[String] = js.native
@@ -56,7 +56,7 @@ object TransferSearchProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: SyntheticEvent[EventTarget with HTMLElement, Event_] => Unit): Self = {
+    def withOnChange(value: SyntheticEvent[EventTarget with HTMLElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

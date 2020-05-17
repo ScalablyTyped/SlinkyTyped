@@ -7,19 +7,8 @@ import scala.scalajs.js.annotation._
 /** 
   * The GradientStop object.
   */
-@JSGlobal("paper.GradientStop")
 @js.native
-/** 
-  * Creates a GradientStop object.
-  * 
-  * @param color - the color of the stop
-  * @param offset - the position of the stop on the gradient
-  * ramp as a value between `0` and `1`; `null` or `undefined` for automatic
-  * assignment.
-  */
-class GradientStop () extends js.Object {
-  def this(color: Color) = this()
-  def this(color: Color, offset: Double) = this()
+trait GradientStop extends js.Object {
   /** 
     * The color of the gradient stop.
     */
@@ -28,5 +17,33 @@ class GradientStop () extends js.Object {
     * The ramp-point of the gradient stop as a value between `0` and `1`.
     */
   var offset: Double = js.native
+}
+
+object GradientStop {
+  @scala.inline
+  def apply(color: Color, offset: Double): GradientStop = {
+    val __obj = js.Dynamic.literal(color = color.asInstanceOf[js.Any], offset = offset.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GradientStop]
+  }
+  @scala.inline
+  implicit class GradientStopOps[Self <: GradientStop] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOffset(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

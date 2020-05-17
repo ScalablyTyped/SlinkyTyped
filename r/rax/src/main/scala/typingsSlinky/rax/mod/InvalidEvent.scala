@@ -1,12 +1,12 @@
 package typingsSlinky.rax.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait InvalidEvent[T] extends BaseSyntheticEvent[Event_, EventTarget with T, EventTarget] {
+trait InvalidEvent[T] extends BaseSyntheticEvent[Event, EventTarget with T, EventTarget] {
   @JSName("target")
   var target_InvalidEvent: EventTarget with T = js.native
 }
@@ -22,7 +22,7 @@ object InvalidEvent {
     isDefaultPrevented: () => Boolean,
     isPropagationStopped: () => Boolean,
     isTrusted: Boolean,
-    nativeEvent: Event_,
+    nativeEvent: Event,
     persist: () => Unit,
     preventDefault: () => Unit,
     stopPropagation: () => Unit,

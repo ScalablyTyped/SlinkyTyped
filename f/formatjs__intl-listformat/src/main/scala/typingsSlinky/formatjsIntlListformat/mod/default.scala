@@ -1,6 +1,6 @@
 package typingsSlinky.formatjsIntlListformat.mod
 
-import typingsSlinky.formatjsIntlListformat.PickIntlListFormatOptions
+import typingsSlinky.formatjsIntlListformat.anon.PickIntlListFormatOptions
 import typingsSlinky.formatjsIntlUtils.listTypesMod.ListPatternFieldsData
 import typingsSlinky.formatjsIntlUtils.listTypesMod.ListPatternLocaleData
 import typingsSlinky.std.Record

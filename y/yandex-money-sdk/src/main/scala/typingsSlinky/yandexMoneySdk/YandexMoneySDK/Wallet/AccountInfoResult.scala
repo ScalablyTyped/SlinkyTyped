@@ -1,8 +1,8 @@
 package typingsSlinky.yandexMoneySdk.YandexMoneySDK.Wallet
 
-import typingsSlinky.yandexMoneySdk.AnonAvailable
-import typingsSlinky.yandexMoneySdk.AnonPanfragment
-import typingsSlinky.yandexMoneySdk.AnonTs
+import typingsSlinky.yandexMoneySdk.anon.Available
+import typingsSlinky.yandexMoneySdk.anon.Panfragment
+import typingsSlinky.yandexMoneySdk.anon.Ts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,10 +12,10 @@ trait AccountInfoResult extends js.Object {
   var account: String = js.native
   var account_status: String = js.native
   var account_type: String = js.native
-  var avatar: js.UndefOr[AnonTs] = js.native
+  var avatar: js.UndefOr[Ts] = js.native
   var balance: Double = js.native
-  var balance_details: js.UndefOr[AnonAvailable] = js.native
-  var cards_linked: js.UndefOr[js.Array[AnonPanfragment]] = js.native
+  var balance_details: js.UndefOr[Available] = js.native
+  var cards_linked: js.UndefOr[js.Array[Panfragment]] = js.native
   var currency: String = js.native
 }
 
@@ -62,7 +62,7 @@ object AccountInfoResult {
         ret
     }
     @scala.inline
-    def withAvatar(value: AnonTs): Self = {
+    def withAvatar(value: Ts): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("avatar")(value.asInstanceOf[js.Any])
         ret
@@ -74,7 +74,7 @@ object AccountInfoResult {
         ret
     }
     @scala.inline
-    def withBalance_details(value: AnonAvailable): Self = {
+    def withBalance_details(value: Available): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("balance_details")(value.asInstanceOf[js.Any])
         ret
@@ -86,7 +86,7 @@ object AccountInfoResult {
         ret
     }
     @scala.inline
-    def withCards_linked(value: js.Array[AnonPanfragment]): Self = {
+    def withCards_linked(value: js.Array[Panfragment]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cards_linked")(value.asInstanceOf[js.Any])
         ret

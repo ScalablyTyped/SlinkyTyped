@@ -1,7 +1,7 @@
 package typingsSlinky.winstonLogglyBulk.mod
 
 import typingsSlinky.node.urlMod.Url
-import typingsSlinky.winstonLogglyBulk.AnonPassword
+import typingsSlinky.winstonLogglyBulk.anon.Password
 import typingsSlinky.winstonTransport.mod.TransportStreamOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait LogglyOptions extends TransportStreamOptions {
-  var auth: js.UndefOr[AnonPassword | Null] = js.native
+  var auth: js.UndefOr[Password | Null] = js.native
   var bufferOptions: js.UndefOr[BufferOptions] = js.native
   var isBulk: js.UndefOr[Boolean] = js.native
   var json: js.UndefOr[Boolean] = js.native
@@ -47,7 +47,7 @@ object LogglyOptions {
         ret
     }
     @scala.inline
-    def withAuth(value: AnonPassword): Self = {
+    def withAuth(value: Password): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
         ret

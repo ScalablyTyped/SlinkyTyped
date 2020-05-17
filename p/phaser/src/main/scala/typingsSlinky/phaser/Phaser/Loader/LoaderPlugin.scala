@@ -69,14 +69,8 @@ import scala.scalajs.js.annotation._
   * when it's instantiated. You can create your own custom file types by extending either the File or MultiFile classes.
   * See those files for more details.
   */
-@JSGlobal("Phaser.Loader.LoaderPlugin")
 @js.native
-class LoaderPlugin protected () extends EventEmitter {
-  /**
-    * 
-    * @param scene The Scene which owns this Loader instance.
-    */
-  def this(scene: Scene) = this()
+trait LoaderPlugin extends EventEmitter {
   /**
     * If you want to append a URL before the path of any asset you can set this here.
     * 

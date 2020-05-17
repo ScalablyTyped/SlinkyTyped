@@ -1,6 +1,8 @@
 package typingsSlinky.amqplib
 
 import typingsSlinky.amqplib.amqplibBooleans.`false`
+import typingsSlinky.amqplib.anon.Mechanism
+import typingsSlinky.amqplib.anon.Password
 import typingsSlinky.amqplib.propertiesMod.Message
 import typingsSlinky.amqplib.propertiesMod.Options.AssertExchange
 import typingsSlinky.amqplib.propertiesMod.Options.AssertQueue
@@ -197,8 +199,8 @@ object callbackApiMod extends js.Object {
   ): Unit = js.native
   @js.native
   object credentials extends js.Object {
-    def external(): AnonMechanism = js.native
-    def plain(username: String, password: String): AnonPassword = js.native
+    def external(): Mechanism = js.native
+    def plain(username: String, password: String): Password = js.native
   }
   
 }

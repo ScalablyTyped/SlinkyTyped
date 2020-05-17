@@ -1,14 +1,15 @@
 package typingsSlinky.antd
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
+import typingsSlinky.antd.anon.ListType
 import typingsSlinky.antd.contextMod.ConfigConsumerProps
 import typingsSlinky.antd.uploadInterfaceMod.UploadFile
 import typingsSlinky.antd.uploadInterfaceMod.UploadListProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +27,7 @@ object uploadListMod extends js.Object {
     def handleClose(file: UploadFile[_]): Unit = js.native
     def handleDownload(file: UploadFile[_]): Unit = js.native
     def handleIconRender(file: UploadFile[_]): js.UndefOr[js.Object | Null] = js.native
-    def handlePreview(file: UploadFile[_], e: SyntheticEvent[Event_, HTMLElement]): Unit = js.native
+    def handlePreview(file: UploadFile[_], e: SyntheticEvent[Event, HTMLElement]): Unit = js.native
     def renderUploadList(hasGetPrefixClsDirection: ConfigConsumerProps): ReactElement = js.native
   }
   
@@ -36,7 +37,7 @@ object uploadListMod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var defaultProps: AnonListType = js.native
+    var defaultProps: ListType = js.native
   }
   
 }

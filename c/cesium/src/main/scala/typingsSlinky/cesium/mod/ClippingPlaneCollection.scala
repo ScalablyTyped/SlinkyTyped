@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonEdgeColor
+import typingsSlinky.cesium.anon.EdgeColor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "ClippingPlaneCollection")
 @js.native
 class ClippingPlaneCollection () extends js.Object {
-  def this(options: AnonEdgeColor) = this()
+  def this(options: EdgeColor) = this()
   var edgeColor: Color = js.native
   var edgeWidth: Double = js.native
   var enabled: Boolean = js.native

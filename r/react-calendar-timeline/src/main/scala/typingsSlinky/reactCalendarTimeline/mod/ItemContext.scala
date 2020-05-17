@@ -1,7 +1,7 @@
 package typingsSlinky.reactCalendarTimeline.mod
 
-import typingsSlinky.reactCalendarTimeline.AnonCollisionLeft
-import typingsSlinky.reactCalendarTimeline.AnonX
+import typingsSlinky.reactCalendarTimeline.anon.CollisionLeft
+import typingsSlinky.reactCalendarTimeline.anon.X
 import typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.left
 import typingsSlinky.reactCalendarTimeline.reactCalendarTimelineStrings.right
 import scala.scalajs.js
@@ -13,9 +13,9 @@ trait ItemContext extends js.Object {
   var canMove: Boolean = js.native
   var canResizeLeft: Boolean = js.native
   var canResizeRight: Boolean = js.native
-  var dimensions: AnonCollisionLeft = js.native
+  var dimensions: CollisionLeft = js.native
   var dragGroupDelta: Double = js.native
-  var dragStart: AnonX = js.native
+  var dragStart: X = js.native
   var dragTime: Double = js.native
   var dragging: Boolean = js.native
   var resizeEdge: left | right = js.native
@@ -34,9 +34,9 @@ object ItemContext {
     canMove: Boolean,
     canResizeLeft: Boolean,
     canResizeRight: Boolean,
-    dimensions: AnonCollisionLeft,
+    dimensions: CollisionLeft,
     dragGroupDelta: Double,
-    dragStart: AnonX,
+    dragStart: X,
     dragTime: Double,
     dragging: Boolean,
     resizeEdge: left | right,
@@ -76,7 +76,7 @@ object ItemContext {
         ret
     }
     @scala.inline
-    def withDimensions(value: AnonCollisionLeft): Self = {
+    def withDimensions(value: CollisionLeft): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(value.asInstanceOf[js.Any])
         ret
@@ -88,7 +88,7 @@ object ItemContext {
         ret
     }
     @scala.inline
-    def withDragStart(value: AnonX): Self = {
+    def withDragStart(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragStart")(value.asInstanceOf[js.Any])
         ret

@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ProgressEventListenerObject extends js.Object {
+trait ProgressEventListenerObject extends ProgressEventListenerOrEventListenerObject {
   def handleEvent(event: ProgressEvent): Unit = js.native
 }
 

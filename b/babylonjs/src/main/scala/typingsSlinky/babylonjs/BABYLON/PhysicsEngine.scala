@@ -4,16 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.PhysicsEngine")
 @js.native
-class PhysicsEngine protected () extends IPhysicsEngine {
-  /**
-    * Creates a new Physics Engine
-    * @param gravity defines the gravity vector used by the simulation
-    * @param _physicsPlugin defines the plugin to use (CannonJS by default)
-    */
-  def this(gravity: Nullable[Vector3]) = this()
-  def this(gravity: Nullable[Vector3], _physicsPlugin: IPhysicsEnginePlugin) = this()
+trait PhysicsEngine extends IPhysicsEngine {
   var _impostors: js.Any = js.native
   var _joints: js.Any = js.native
   var _physicsPlugin: js.Any = js.native
@@ -33,20 +25,5 @@ class PhysicsEngine protected () extends IPhysicsEngine {
     * @param newTimeStep defines the new timestep to apply to this world.
     */
   def setTimeStep(): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("BABYLON.PhysicsEngine")
-@js.native
-object PhysicsEngine extends js.Object {
-  /**
-    * Global value used to control the smallest number supported by the simulation
-    */
-  var Epsilon: Double = js.native
-  /**
-    * Factory used to create the default physics plugin.
-    * @returns The default physics plugin
-    */
-  def DefaultPluginFactory(): IPhysicsEnginePlugin = js.native
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.ngxInfiniteScroll
 
+import typingsSlinky.ngxInfiniteScroll.anon.Fire
 import typingsSlinky.ngxInfiniteScroll.modelsMod.IPositionStats
 import typingsSlinky.ngxInfiniteScroll.modelsMod.IScrollState
 import typingsSlinky.ngxInfiniteScroll.modelsMod.IScrollerDistance
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation._
 @JSImport("ngx-infinite-scroll/src/services/scroll-resolver", JSImport.Namespace)
 @js.native
 object scrollResolverMod extends js.Object {
-  def getScrollStats(lastScrollPosition: Double, container: IPositionStats, distance: IScrollerDistance): AnonFire = js.native
+  def getScrollStats(lastScrollPosition: Double, container: IPositionStats, distance: IScrollerDistance): Fire = js.native
   def isSameTotalToScroll(scrollState: IScrollState): Boolean = js.native
   def isScrollingDownwards(lastScrollPosition: Double, container: IPositionStats): Boolean = js.native
   def isTriggeredScroll(totalToScroll: js.Any, scrollState: IScrollState, isScrollingDown: Boolean): Boolean = js.native

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait StripPrefixConfigObj extends js.Object {
+trait StripPrefixConfigObj extends StripPrefixConfig {
   var scheme: js.UndefOr[Boolean] = js.native
   var www: js.UndefOr[Boolean] = js.native
 }

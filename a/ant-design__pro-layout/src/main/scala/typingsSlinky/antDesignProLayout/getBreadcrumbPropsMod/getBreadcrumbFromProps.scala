@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignProLayout.getBreadcrumbPropsMod
 
-import typingsSlinky.antDesignProLayout.AnonBreadcrumbMap
+import typingsSlinky.antDesignProLayout.anon.BreadcrumbMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@ant-design/pro-layout/lib/utils/getBreadcrumbProps", "getBreadcrumbFromProps")
 @js.native
 object getBreadcrumbFromProps extends js.Object {
-  def apply(props: BreadcrumbProps): AnonBreadcrumbMap = js.native
+  def apply(props: BreadcrumbProps): BreadcrumbMap = js.native
 }
 

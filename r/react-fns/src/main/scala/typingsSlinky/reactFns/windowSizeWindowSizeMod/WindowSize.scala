@@ -1,7 +1,7 @@
 package typingsSlinky.reactFns.windowSizeWindowSizeMod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactFns.PartialWindowSizeConfig
+import typingsSlinky.reactFns.anon.PartialWindowSizeConfig
 import typingsSlinky.reactFns.typesMod.SharedRenderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

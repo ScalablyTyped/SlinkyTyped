@@ -1,0 +1,44 @@
+package typingsSlinky.gestalt.anon
+
+import org.scalajs.dom.raw.HTMLInputElement
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait SyntheticEvent extends js.Object {
+  var syntheticEvent: slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, HTMLInputElement] = js.native
+  var value: String = js.native
+}
+
+object SyntheticEvent {
+  @scala.inline
+  def apply(
+    syntheticEvent: slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, HTMLInputElement],
+    value: String
+  ): SyntheticEvent = {
+    val __obj = js.Dynamic.literal(syntheticEvent = syntheticEvent.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SyntheticEvent]
+  }
+  @scala.inline
+  implicit class SyntheticEventOps[Self <: SyntheticEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSyntheticEvent(value: slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, HTMLInputElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("syntheticEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

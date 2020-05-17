@@ -1,6 +1,7 @@
 package typingsSlinky.reactRange
 
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.reactRange.anon.AllowOverlap
 import typingsSlinky.reactRange.rangeMod.default
 import typingsSlinky.reactRange.typesMod.IProps
 import typingsSlinky.reactRange.typesMod.ITrackBackground
@@ -37,7 +38,7 @@ object mod extends js.Object {
   /* static members */
   @js.native
   object Range extends js.Object {
-    var defaultProps: AnonAllowOverlap = js.native
+    var defaultProps: AllowOverlap = js.native
   }
   
 }

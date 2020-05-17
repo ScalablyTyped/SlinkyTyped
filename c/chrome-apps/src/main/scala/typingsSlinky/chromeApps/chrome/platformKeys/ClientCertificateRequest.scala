@@ -1,6 +1,6 @@
 package typingsSlinky.chromeApps.chrome.platformKeys
 
-import typingsSlinky.chromeApps.AnonECDSASIGN
+import typingsSlinky.chromeApps.anon.ECDSASIGN
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chromeAppsStrings.ECDSA_SIGN
 import typingsSlinky.chromeApps.chromeAppsStrings.RSA_SIGN
@@ -31,9 +31,9 @@ trait ClientCertificateRequest extends js.Object {
     */
   var certificateTypes: js.Array[
     ToStringLiteral[
-      AnonECDSASIGN, 
-      /* keyof chrome-apps.AnonECDSASIGN */ RSA_SIGN | ECDSA_SIGN, 
-      Exclude[/* keyof chrome-apps.AnonECDSASIGN */ RSA_SIGN | ECDSA_SIGN, rsaSign | ecdsaSign]
+      ECDSASIGN, 
+      /* keyof chrome-apps.anon.ECDSASIGN */ RSA_SIGN | ECDSA_SIGN, 
+      Exclude[/* keyof chrome-apps.anon.ECDSASIGN */ RSA_SIGN | ECDSA_SIGN, rsaSign | ecdsaSign]
     ]
   ] = js.native
 }
@@ -44,9 +44,9 @@ object ClientCertificateRequest {
     certificateAuthorities: js.Array[js.typedarray.ArrayBuffer],
     certificateTypes: js.Array[
       ToStringLiteral[
-        AnonECDSASIGN, 
-        /* keyof chrome-apps.AnonECDSASIGN */ RSA_SIGN | ECDSA_SIGN, 
-        Exclude[/* keyof chrome-apps.AnonECDSASIGN */ RSA_SIGN | ECDSA_SIGN, rsaSign | ecdsaSign]
+        ECDSASIGN, 
+        /* keyof chrome-apps.anon.ECDSASIGN */ RSA_SIGN | ECDSA_SIGN, 
+        Exclude[/* keyof chrome-apps.anon.ECDSASIGN */ RSA_SIGN | ECDSA_SIGN, rsaSign | ecdsaSign]
       ]
     ]
   ): ClientCertificateRequest = {
@@ -69,9 +69,9 @@ object ClientCertificateRequest {
     def withCertificateTypes(
       value: js.Array[
           ToStringLiteral[
-            AnonECDSASIGN, 
-            /* keyof chrome-apps.AnonECDSASIGN */ RSA_SIGN | ECDSA_SIGN, 
-            Exclude[/* keyof chrome-apps.AnonECDSASIGN */ RSA_SIGN | ECDSA_SIGN, rsaSign | ecdsaSign]
+            ECDSASIGN, 
+            /* keyof chrome-apps.anon.ECDSASIGN */ RSA_SIGN | ECDSA_SIGN, 
+            Exclude[/* keyof chrome-apps.anon.ECDSASIGN */ RSA_SIGN | ECDSA_SIGN, rsaSign | ecdsaSign]
           ]
         ]
     ): Self = {

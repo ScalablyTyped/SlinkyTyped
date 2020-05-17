@@ -1,6 +1,8 @@
 package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.officeUiFabricReact.anon.CalloutProps
+import typingsSlinky.officeUiFabricReact.anon.HasCondensedHeadline
 import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubbleProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,13 +28,13 @@ object libTeachingBubbleMod extends js.Object {
   /* static members */
   @js.native
   object TeachingBubbleBase extends js.Object {
-    var defaultProps: AnonCalloutProps = js.native
+    var defaultProps: CalloutProps = js.native
   }
   
   /* static members */
   @js.native
   object TeachingBubbleContentBase extends js.Object {
-    var defaultProps: AnonHasCondensedHeadline = js.native
+    var defaultProps: HasCondensedHeadline = js.native
   }
   
 }

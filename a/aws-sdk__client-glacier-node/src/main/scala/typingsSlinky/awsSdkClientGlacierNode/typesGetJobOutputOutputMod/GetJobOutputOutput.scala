@@ -1,12 +1,13 @@
 package typingsSlinky.awsSdkClientGlacierNode.typesGetJobOutputOutputMod
 
+import typingsSlinky.awsSdkClientGlacierNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait GetJobOutputOutput[StreamType] extends js.Object {
+trait GetJobOutputOutput[StreamType] extends OutputTypesUnion {
   /**
     * Metadata about the response received, including the HTTP status code, HTTP headers, and any request identifiers recognized by the SDK.
     */

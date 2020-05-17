@@ -1,12 +1,13 @@
 package typingsSlinky.baseui
 
+import typingsSlinky.baseui.blockMod.Scale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object baseuiNumbers {
   @js.native
-  sealed trait `0` extends js.Object
+  sealed trait `0` extends Scale
   
   @js.native
   sealed trait `1` extends js.Object

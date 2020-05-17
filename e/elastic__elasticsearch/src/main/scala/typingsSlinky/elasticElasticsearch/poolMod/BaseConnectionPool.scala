@@ -1,6 +1,6 @@
 package typingsSlinky.elasticElasticsearch.poolMod
 
-import typingsSlinky.elasticElasticsearch.AnonInstantiable
+import typingsSlinky.elasticElasticsearch.anon.Instantiable
 import typingsSlinky.elasticElasticsearch.connectionMod.AgentOptions
 import typingsSlinky.elasticElasticsearch.connectionMod.default
 import typingsSlinky.node.tlsMod.SecureContextOptions
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class BaseConnectionPool () extends js.Object {
   def this(opts: BaseConnectionPoolOptions) = this()
-  var Connection: AnonInstantiable = js.native
+  var Connection: Instantiable = js.native
   var _agent: AgentOptions | Null = js.native
   var _ssl: SecureContextOptions | Null = js.native
   var auth: BasicAuth | ApiKeyAuth = js.native

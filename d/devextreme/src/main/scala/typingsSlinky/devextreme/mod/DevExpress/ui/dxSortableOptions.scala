@@ -1,17 +1,17 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonComponentDropInsideItem
-import typingsSlinky.devextreme.AnonDropInsideItemElement
-import typingsSlinky.devextreme.AnonFromComponentFromData
-import typingsSlinky.devextreme.AnonFromDataFromIndex
-import typingsSlinky.devextreme.AnonFromIndexItemData
+import typingsSlinky.devextreme.anon.ComponentDropInsideItem
+import typingsSlinky.devextreme.anon.DropInsideItemElement
+import typingsSlinky.devextreme.anon.FromComponentFromData
+import typingsSlinky.devextreme.anon.FromDataFromIndex
+import typingsSlinky.devextreme.anon.FromIndexItemData
 import typingsSlinky.devextreme.devextremeStrings.horizontal
 import typingsSlinky.devextreme.devextremeStrings.indicate
 import typingsSlinky.devextreme.devextremeStrings.push
 import typingsSlinky.devextreme.devextremeStrings.vertical
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ trait dxSortableOptions extends DraggableBaseOptions[dxSortable] {
   /** Specifies custom markup to be shown instead of the item being dragged. */
   var dragTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
-      /* dragInfo */ AnonFromIndexItemData, 
+      /* dragInfo */ FromIndexItemData, 
       /* containerElement */ dxElement, 
       String | Element | JQuery
     ])
@@ -39,19 +39,19 @@ trait dxSortableOptions extends DraggableBaseOptions[dxSortable] {
   /** Moves an element in the HTML markup when it is dropped. */
   var moveItemOnDrop: js.UndefOr[Boolean] = js.native
   /** A function that is called when a new item is added. */
-  var onAdd: js.UndefOr[js.Function1[/* e */ AnonComponentDropInsideItem, _]] = js.native
+  var onAdd: js.UndefOr[js.Function1[/* e */ ComponentDropInsideItem, _]] = js.native
   /** A function that is called when the dragged item's position in the list is changed. */
-  var onDragChange: js.UndefOr[js.Function1[/* e */ AnonDropInsideItemElement, _]] = js.native
+  var onDragChange: js.UndefOr[js.Function1[/* e */ DropInsideItemElement, _]] = js.native
   /** A function that is called when the drag gesture is finished. */
-  var onDragEnd: js.UndefOr[js.Function1[/* e */ AnonDropInsideItemElement, _]] = js.native
+  var onDragEnd: js.UndefOr[js.Function1[/* e */ DropInsideItemElement, _]] = js.native
   /** A function that is called every time a draggable item is moved. */
-  var onDragMove: js.UndefOr[js.Function1[/* e */ AnonDropInsideItemElement, _]] = js.native
+  var onDragMove: js.UndefOr[js.Function1[/* e */ DropInsideItemElement, _]] = js.native
   /** A function that is called when drag gesture is initialized. */
-  var onDragStart: js.UndefOr[js.Function1[/* e */ AnonFromDataFromIndex, _]] = js.native
+  var onDragStart: js.UndefOr[js.Function1[/* e */ FromDataFromIndex, _]] = js.native
   /** A function that is called when a draggable item is removed. */
-  var onRemove: js.UndefOr[js.Function1[/* e */ AnonFromComponentFromData, _]] = js.native
+  var onRemove: js.UndefOr[js.Function1[/* e */ FromComponentFromData, _]] = js.native
   /** A function that is called when the draggable items are reordered. */
-  var onReorder: js.UndefOr[js.Function1[/* e */ AnonComponentDropInsideItem, _]] = js.native
+  var onReorder: js.UndefOr[js.Function1[/* e */ ComponentDropInsideItem, _]] = js.native
 }
 
 object dxSortableOptions {
@@ -92,7 +92,7 @@ object dxSortableOptions {
     }
     @scala.inline
     def withDragTemplateFunction2(
-      value: (/* dragInfo */ AnonFromIndexItemData, /* containerElement */ dxElement) => String | Element | JQuery
+      value: (/* dragInfo */ FromIndexItemData, /* containerElement */ dxElement) => String | Element | JQuery
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragTemplate")(js.Any.fromFunction2(value))
@@ -107,7 +107,7 @@ object dxSortableOptions {
     @scala.inline
     def withDragTemplate(
       value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
-          /* dragInfo */ AnonFromIndexItemData, 
+          /* dragInfo */ FromIndexItemData, 
           /* containerElement */ dxElement, 
           String | Element | JQuery
         ])
@@ -171,7 +171,7 @@ object dxSortableOptions {
         ret
     }
     @scala.inline
-    def withOnAdd(value: /* e */ AnonComponentDropInsideItem => _): Self = {
+    def withOnAdd(value: /* e */ ComponentDropInsideItem => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAdd")(js.Any.fromFunction1(value))
         ret
@@ -183,7 +183,7 @@ object dxSortableOptions {
         ret
     }
     @scala.inline
-    def withOnDragChange(value: /* e */ AnonDropInsideItemElement => _): Self = {
+    def withOnDragChange(value: /* e */ DropInsideItemElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDragChange")(js.Any.fromFunction1(value))
         ret
@@ -195,7 +195,7 @@ object dxSortableOptions {
         ret
     }
     @scala.inline
-    def withOnDragEnd(value: /* e */ AnonDropInsideItemElement => _): Self = {
+    def withOnDragEnd(value: /* e */ DropInsideItemElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDragEnd")(js.Any.fromFunction1(value))
         ret
@@ -207,7 +207,7 @@ object dxSortableOptions {
         ret
     }
     @scala.inline
-    def withOnDragMove(value: /* e */ AnonDropInsideItemElement => _): Self = {
+    def withOnDragMove(value: /* e */ DropInsideItemElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDragMove")(js.Any.fromFunction1(value))
         ret
@@ -219,7 +219,7 @@ object dxSortableOptions {
         ret
     }
     @scala.inline
-    def withOnDragStart(value: /* e */ AnonFromDataFromIndex => _): Self = {
+    def withOnDragStart(value: /* e */ FromDataFromIndex => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.Any.fromFunction1(value))
         ret
@@ -231,7 +231,7 @@ object dxSortableOptions {
         ret
     }
     @scala.inline
-    def withOnRemove(value: /* e */ AnonFromComponentFromData => _): Self = {
+    def withOnRemove(value: /* e */ FromComponentFromData => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRemove")(js.Any.fromFunction1(value))
         ret
@@ -243,7 +243,7 @@ object dxSortableOptions {
         ret
     }
     @scala.inline
-    def withOnReorder(value: /* e */ AnonComponentDropInsideItem => _): Self = {
+    def withOnReorder(value: /* e */ ComponentDropInsideItem => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onReorder")(js.Any.fromFunction1(value))
         ret

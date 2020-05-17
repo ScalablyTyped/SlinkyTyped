@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientCompute.gapi.client.compute
 
-import typingsSlinky.gapiClientCompute.AnonCode
+import typingsSlinky.gapiClientCompute.anon.Code
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait InstanceGroupsScopedList extends js.Object {
   /** [Output Only] The list of instance groups that are contained in this scope. */
   var instanceGroups: js.UndefOr[js.Array[InstanceGroup]] = js.native
   /** [Output Only] An informational warning that replaces the list of instance groups when the list is empty. */
-  var warning: js.UndefOr[AnonCode] = js.native
+  var warning: js.UndefOr[Code] = js.native
 }
 
 object InstanceGroupsScopedList {
@@ -38,7 +38,7 @@ object InstanceGroupsScopedList {
         ret
     }
     @scala.inline
-    def withWarning(value: AnonCode): Self = {
+    def withWarning(value: Code): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
         ret

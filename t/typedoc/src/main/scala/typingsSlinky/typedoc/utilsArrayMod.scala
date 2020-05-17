@@ -1,5 +1,6 @@
 package typingsSlinky.typedoc
 
+import typingsSlinky.typedoc.anon.Priority
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object utilsArrayMod extends js.Object {
   def binaryFindPartition[T](arr: js.Array[T], partition: js.Function1[/* item */ T, Boolean]): Double = js.native
-  def insertPrioritySorted[T /* <: AnonPriority */](arr: js.Array[T], item: T): js.Array[T] = js.native
+  def insertPrioritySorted[T /* <: Priority */](arr: js.Array[T], item: T): js.Array[T] = js.native
 }
 

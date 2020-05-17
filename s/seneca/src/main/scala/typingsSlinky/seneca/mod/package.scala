@@ -25,7 +25,6 @@ package object mod {
   type ExecutorWorker = js.Function1[/* callback */ js.Any, scala.Unit]
   type GlobalErrorHandler = js.Function1[/* error */ js.Error, scala.Unit]
   type MessagePayload[T] = typingsSlinky.seneca.mod.PartialMessagePayload with T
-  type Pattern = java.lang.String | typingsSlinky.seneca.mod.MinimalPattern
   type PluginModule = js.Function1[/* options */ js.Any, scala.Unit]
   type UnknownType = js.Any
 }

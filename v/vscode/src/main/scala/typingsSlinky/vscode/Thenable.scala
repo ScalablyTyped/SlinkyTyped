@@ -1,5 +1,6 @@
 package typingsSlinky.vscode
 
+import typingsSlinky.vscode.mod.ProviderResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +12,8 @@ import scala.scalajs.js.annotation._
   * we recommend the use of native promises which are available in this editor.
   */
 @js.native
-trait Thenable[T] extends js.Object {
+trait Thenable[T]
+  extends ProviderResult[js.Any] {
   /**
   	* Attaches callbacks for the resolution and/or rejection of the Promise.
   	* @param onfulfilled The callback to execute when the Promise is resolved.

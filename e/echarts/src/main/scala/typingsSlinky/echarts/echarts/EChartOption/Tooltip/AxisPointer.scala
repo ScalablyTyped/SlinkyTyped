@@ -1,6 +1,6 @@
 package typingsSlinky.echarts.echarts.EChartOption.Tooltip
 
-import typingsSlinky.echarts.AnonOpacity
+import typingsSlinky.echarts.anon.Opacity
 import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.PointerLabel
 import typingsSlinky.echarts.echarts.EChartOption.LineStyle
 import typingsSlinky.echarts.echartsStrings.angle
@@ -31,7 +31,7 @@ trait AxisPointer extends js.Object {
   var crossStyle: js.UndefOr[LineStyle] = js.native
   var label: js.UndefOr[PointerLabel] = js.native
   var lineStyle: js.UndefOr[LineStyle] = js.native
-  var shadowStyle: js.UndefOr[AnonOpacity] = js.native
+  var shadowStyle: js.UndefOr[Opacity] = js.native
   var show: js.UndefOr[Boolean] = js.native
   var snap: js.UndefOr[Boolean] = js.native
   var `type`: js.UndefOr[line | shadow | none | cross] = js.native
@@ -147,7 +147,7 @@ object AxisPointer {
         ret
     }
     @scala.inline
-    def withAxis(value: auto | x | y | radius | angle): Self = {
+    def withAxis(value: auto | typingsSlinky.echarts.echartsStrings.x | y | radius | angle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
         ret
@@ -195,7 +195,7 @@ object AxisPointer {
         ret
     }
     @scala.inline
-    def withShadowStyle(value: AnonOpacity): Self = {
+    def withShadowStyle(value: Opacity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shadowStyle")(value.asInstanceOf[js.Any])
         ret

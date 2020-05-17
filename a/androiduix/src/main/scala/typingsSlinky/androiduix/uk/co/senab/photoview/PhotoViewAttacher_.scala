@@ -9,15 +9,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("uk.co.senab.photoview.PhotoViewAttacher")
 @js.native
-class PhotoViewAttacher_ protected ()
+trait PhotoViewAttacher_
   extends IPhotoView
      with OnTouchListener
      with OnGestureListener
      with OnGlobalLayoutListener {
-  def this(imageView: ImageView) = this()
-  def this(imageView: ImageView, zoomable: Boolean) = this()
   var ZOOM_DURATION: Double = js.native
   var mAllowParentInterceptOnEdge: js.Any = js.native
   var mBaseMatrix: js.Any = js.native

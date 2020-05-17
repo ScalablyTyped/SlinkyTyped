@@ -1,5 +1,6 @@
 package typingsSlinky.jqgrid
 
+import typingsSlinky.jqgrid.anon.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +18,7 @@ trait IJqGridJsonReader extends js.Object {
     * @param obj 
     * @returns {} 
     */
-  var records: String | (js.Function1[/* obj */ AnonData, Double]) = js.native
+  var records: String | (js.Function1[/* obj */ Data, Double]) = js.native
   /**
     * tells jqGrid that the information for the data in the row is repeatable - i.e. the elements have the same tag cell described in cell element. Setting this option to false instructs jqGrid to search elements in the json data by name.
     * This is the name from colModel or the name described with the jsonmap option in colModel
@@ -41,7 +42,7 @@ object IJqGridJsonReader {
   @scala.inline
   def apply(
     page: String | (js.Function1[/* obj */ js.Any, Double]),
-    records: String | (js.Function1[/* obj */ AnonData, Double]),
+    records: String | (js.Function1[/* obj */ Data, Double]),
     repeatitems: Boolean,
     root: String | (js.Function1[/* obj */ js.Any, _]),
     total: String | (js.Function1[/* obj */ js.Any, Double])
@@ -68,13 +69,13 @@ object IJqGridJsonReader {
         ret
     }
     @scala.inline
-    def withRecordsFunction1(value: /* obj */ AnonData => Double): Self = {
+    def withRecordsFunction1(value: /* obj */ Data => Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("records")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withRecords(value: String | (js.Function1[/* obj */ AnonData, Double])): Self = {
+    def withRecords(value: String | (js.Function1[/* obj */ Data, Double])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("records")(value.asInstanceOf[js.Any])
         ret

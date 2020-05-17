@@ -2,6 +2,7 @@ package typingsSlinky.firebasePerformance
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.PerformanceEntry
+import typingsSlinky.firebasePerformance.anon.Attributes
 import typingsSlinky.firebasePerformanceTypes.mod.PerformanceTrace
 import typingsSlinky.std.PerformanceNavigationTiming
 import scala.scalajs.js
@@ -42,7 +43,7 @@ object traceMod extends js.Object {
     var traceMeasure: js.Any = js.native
     var traceStartMark: js.Any = js.native
     var traceStopMark: js.Any = js.native
-    def record(startTime: Double, duration: Double, options: AnonAttributes): Unit = js.native
+    def record(startTime: Double, duration: Double, options: Attributes): Unit = js.native
   }
   
   /* static members */

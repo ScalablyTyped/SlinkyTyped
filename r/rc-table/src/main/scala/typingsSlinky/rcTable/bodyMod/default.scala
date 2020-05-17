@@ -2,7 +2,7 @@ package typingsSlinky.rcTable.bodyMod
 
 import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
-import typingsSlinky.rcTable.FnCall
+import typingsSlinky.rcTable.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

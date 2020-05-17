@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait Node extends js.Object
 
+object Node {
+  @scala.inline
+  implicit def apply(value: ChildNode): Node = value.asInstanceOf[Node]
+  @scala.inline
+  implicit def apply(value: Root_): Node = value.asInstanceOf[Node]
+}
+

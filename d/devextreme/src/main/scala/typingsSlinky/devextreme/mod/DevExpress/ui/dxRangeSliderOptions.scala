@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonEnd
+import typingsSlinky.devextreme.anon.End
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait dxRangeSliderOptions extends dxSliderBaseOptions[dxRangeSlider] {
   var endName: js.UndefOr[String] = js.native
   /** A function that is executed after the widget's value is changed. */
   @JSName("onValueChanged")
-  var onValueChanged_dxRangeSliderOptions: js.UndefOr[js.Function1[/* e */ AnonEnd, _]] = js.native
+  var onValueChanged_dxRangeSliderOptions: js.UndefOr[js.Function1[/* e */ End, _]] = js.native
   /** The left edge of the interval currently selected using the range slider. */
   var start: js.UndefOr[Double] = js.native
   /** The value to be assigned to the name attribute of the underlying `` element. */
@@ -60,7 +60,7 @@ object dxRangeSliderOptions {
         ret
     }
     @scala.inline
-    def withOnValueChanged(value: /* e */ AnonEnd => _): Self = {
+    def withOnValueChanged(value: /* e */ End => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onValueChanged")(js.Any.fromFunction1(value))
         ret

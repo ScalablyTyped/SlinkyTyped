@@ -1,9 +1,9 @@
 package typingsSlinky.oracleOraclejet.ojinputtextMod
 
-import typingsSlinky.oracleOraclejet.AnonConverterHint
-import typingsSlinky.oracleOraclejet.AnonDefinition
-import typingsSlinky.oracleOraclejet.AnonInstruction
-import typingsSlinky.oracleOraclejet.AnonRegexp
+import typingsSlinky.oracleOraclejet.anon.ConverterHint
+import typingsSlinky.oracleOraclejet.anon.Definition
+import typingsSlinky.oracleOraclejet.anon.Instruction
+import typingsSlinky.oracleOraclejet.anon.Regexp
 import typingsSlinky.oracleOraclejet.ojeditablevalueMod.editableValueSettableProperties
 import typingsSlinky.oracleOraclejet.ojmessagingMod.^
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.AsyncValidator
@@ -29,7 +29,7 @@ trait inputBaseSettableProperties[V, SV, RV] extends editableValueSettableProper
   var readonly: Boolean = js.native
   var required: Boolean = js.native
   @JSName("translations")
-  var translations_inputBaseSettableProperties: AnonRegexp = js.native
+  var translations_inputBaseSettableProperties: Regexp = js.native
   var validators: (js.Array[Validator[V] | RegisteredValidator]) | Null = js.native
 }
 
@@ -40,16 +40,16 @@ object inputBaseSettableProperties {
     autocomplete: on | off | String,
     autofocus: Boolean,
     disabled: Boolean,
-    displayOptions: AnonConverterHint,
-    help: AnonInstruction,
-    helpHints: AnonDefinition,
+    displayOptions: ConverterHint,
+    help: Instruction,
+    helpHints: Definition,
     labelHint: String,
     messagesCustom: js.Array[^],
     placeholder: String,
     rawValue: RV,
     readonly: Boolean,
     required: Boolean,
-    translations: AnonRegexp,
+    translations: Regexp,
     valid: valid | pending | invalidHidden | invalidShown,
     value: SV
   ): inputBaseSettableProperties[V, SV, RV] = {
@@ -105,7 +105,7 @@ object inputBaseSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonRegexp): Self[V, SV, RV] = {
+    def withTranslations(value: Regexp): Self[V, SV, RV] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

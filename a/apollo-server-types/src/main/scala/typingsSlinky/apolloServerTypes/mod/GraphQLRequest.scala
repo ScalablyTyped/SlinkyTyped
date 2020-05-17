@@ -1,6 +1,6 @@
 package typingsSlinky.apolloServerTypes.mod
 
-import typingsSlinky.apolloServerTypes.PickRequesturlmethodheade
+import typingsSlinky.apolloServerTypes.anon.PickRequesturlmethodheade
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`

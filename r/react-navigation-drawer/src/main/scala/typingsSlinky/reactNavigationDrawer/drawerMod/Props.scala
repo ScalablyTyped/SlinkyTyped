@@ -5,7 +5,7 @@ import slinky.core.TagMod
 import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeGestureHandler.mod.PanGestureHandler
-import typingsSlinky.reactNavigationDrawer.AnonProgress
+import typingsSlinky.reactNavigationDrawer.anon.Progress
 import typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.`on-drag`
 import typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.back
 import typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.fade
@@ -52,8 +52,8 @@ object Props {
     onClose: () => Unit,
     onOpen: () => Unit,
     open: Boolean,
-    renderDrawerContent: /* props */ AnonProgress => TagMod[Any],
-    renderSceneContent: /* props */ AnonProgress => TagMod[Any],
+    renderDrawerContent: /* props */ Progress => TagMod[Any],
+    renderSceneContent: /* props */ Progress => TagMod[Any],
     statusBarAnimation: slide | none | fade,
     swipeEdgeWidth: Double,
     swipeVelocityThreshold: Double
@@ -116,13 +116,13 @@ object Props {
         ret
     }
     @scala.inline
-    def withRenderDrawerContent(value: /* props */ AnonProgress => TagMod[Any]): Self = {
+    def withRenderDrawerContent(value: /* props */ Progress => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderDrawerContent")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withRenderSceneContent(value: /* props */ AnonProgress => TagMod[Any]): Self = {
+    def withRenderSceneContent(value: /* props */ Progress => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderSceneContent")(js.Any.fromFunction1(value))
         ret

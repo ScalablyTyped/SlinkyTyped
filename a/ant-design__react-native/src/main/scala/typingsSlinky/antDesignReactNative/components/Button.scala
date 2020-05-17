@@ -11,7 +11,7 @@ import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.warning
 import typingsSlinky.antDesignReactNative.buttonMod.ButtonProps
 import typingsSlinky.antDesignReactNative.buttonMod.default
 import typingsSlinky.antDesignReactNative.buttonStyleMod.ButtonStyles
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState

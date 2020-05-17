@@ -1,6 +1,6 @@
 package typingsSlinky.elasticsearch.mod
 
-import typingsSlinky.elasticsearch.AnonActions
+import typingsSlinky.elasticsearch.anon.Actions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IndicesUpdateAliasesParams extends GenericParams {
   @JSName("body")
-  var body_IndicesUpdateAliasesParams: AnonActions = js.native
+  var body_IndicesUpdateAliasesParams: Actions = js.native
   var masterTimeout: js.UndefOr[TimeSpan] = js.native
   var timeout: js.UndefOr[TimeSpan] = js.native
 }
 
 object IndicesUpdateAliasesParams {
   @scala.inline
-  def apply(body: AnonActions): IndicesUpdateAliasesParams = {
+  def apply(body: Actions): IndicesUpdateAliasesParams = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndicesUpdateAliasesParams]
   }
@@ -26,7 +26,7 @@ object IndicesUpdateAliasesParams {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBody(value: AnonActions): Self = {
+    def withBody(value: Actions): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
         ret

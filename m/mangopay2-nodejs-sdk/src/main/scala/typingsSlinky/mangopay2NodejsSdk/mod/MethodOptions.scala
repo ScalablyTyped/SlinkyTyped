@@ -1,8 +1,8 @@
 package typingsSlinky.mangopay2NodejsSdk.mod
 
-import typingsSlinky.mangopay2NodejsSdk.DeepPartialPartialHeaders
-import typingsSlinky.mangopay2NodejsSdk.DeepPartialclientIdstring
-import typingsSlinky.mangopay2NodejsSdk.DeepPartialtimeoutnumber
+import typingsSlinky.mangopay2NodejsSdk.anon.DeepPartialPartialHeaders
+import typingsSlinky.mangopay2NodejsSdk.anon.DeepPartialclientIdstring
+import typingsSlinky.mangopay2NodejsSdk.anon.DeepPartialtimeoutnumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

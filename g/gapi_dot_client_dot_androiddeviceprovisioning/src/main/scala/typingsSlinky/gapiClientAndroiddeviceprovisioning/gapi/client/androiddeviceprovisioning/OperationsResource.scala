@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientAndroiddeviceprovisioning.gapi.client.androiddeviceprovisioning
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAndroiddeviceprovisioning.AnonAccesstoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAndroiddeviceprovisioning.anon.Accesstoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,12 +13,12 @@ trait OperationsResource extends js.Object {
     * method to poll the operation result at intervals as recommended by the API
     * service.
     */
-  def get(request: AnonAccesstoken): Request_[Operation] = js.native
+  def get(request: Accesstoken): Request[Operation] = js.native
 }
 
 object OperationsResource {
   @scala.inline
-  def apply(get: AnonAccesstoken => Request_[Operation]): OperationsResource = {
+  def apply(get: Accesstoken => Request[Operation]): OperationsResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get))
     __obj.asInstanceOf[OperationsResource]
   }
@@ -29,7 +29,7 @@ object OperationsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonAccesstoken => Request_[Operation]): Self = {
+    def withGet(value: Accesstoken => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret

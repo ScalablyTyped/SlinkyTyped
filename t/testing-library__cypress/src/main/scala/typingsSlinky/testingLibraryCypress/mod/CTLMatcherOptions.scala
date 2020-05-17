@@ -1,14 +1,17 @@
 package typingsSlinky.testingLibraryCypress.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.cypress.JQuery_
+import typingsSlinky.cypress.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CTLMatcherOptions extends js.Object {
-  var container: js.UndefOr[HTMLElement | JQuery_[HTMLElement]] = js.native
+trait CTLMatcherOptions
+  extends ByRoleOptions
+     with MatcherOptions
+     with SelectorMatcherOptions {
+  var container: js.UndefOr[HTMLElement | JQuery[HTMLElement]] = js.native
   var timeout: js.UndefOr[Double] = js.native
 }
 
@@ -31,7 +34,7 @@ object CTLMatcherOptions {
         ret
     }
     @scala.inline
-    def withContainer(value: HTMLElement | JQuery_[HTMLElement]): Self = {
+    def withContainer(value: HTMLElement | JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
         ret

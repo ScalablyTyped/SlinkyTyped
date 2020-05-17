@@ -1,6 +1,6 @@
 package typingsSlinky.stylelint.mod
 
-import typingsSlinky.stylelint.PartialConfiguration
+import typingsSlinky.stylelint.anon.PartialConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

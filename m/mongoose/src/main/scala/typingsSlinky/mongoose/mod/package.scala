@@ -15,6 +15,7 @@ package object mod {
       typingsSlinky.mongoose.mongooseStrings._id
     ]
   ]
+  type Error = typingsSlinky.mongoose.mod.Error_
   type FilterQuery[T] = typingsSlinky.mongoose.mod.MongooseFilterQuery[typingsSlinky.mongoose.mod.DocumentDefinition[T]]
   // Because the mongoose Map type shares a name with the default global interface,
   // this type alias has to exist outside of the namespace
@@ -42,9 +43,9 @@ package object mod {
     * Some mongoose classes have the same name as the native JS classes
     * Keep references to native classes using a "Native" prefix
     */
-  type NativeBuffer = typingsSlinky.node.TypeofBuffer
-  type NativeDate = typingsSlinky.std.DateConstructor
-  type NativeError = typingsSlinky.std.ErrorConstructor
+  type NativeBuffer = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify global.Buffer */ js.Any
+  type NativeDate = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify global.Date */ js.Any
+  type NativeError = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify global.Error */ js.Any
   // We can use TypeScript Omit once minimum required TypeScript Version is above 3.5
   type Omit[T, K] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
   /*

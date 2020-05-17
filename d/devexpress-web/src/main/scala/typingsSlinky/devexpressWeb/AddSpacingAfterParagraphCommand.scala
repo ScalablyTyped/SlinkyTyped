@@ -7,12 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * A command to add spacing after a paragraph.
   */
-@JSGlobal("AddSpacingAfterParagraphCommand")
 @js.native
-class AddSpacingAfterParagraphCommand () extends CommandWithSimpleStateBase {
+trait AddSpacingAfterParagraphCommand extends CommandWithSimpleStateBase {
   /**
     * Executes the AddSpacingAfterParagraphCommand command.
     */
   def execute(): Boolean = js.native
+}
+
+object AddSpacingAfterParagraphCommand {
+  @scala.inline
+  def apply(execute: () => Boolean, getState: () => SimpleCommandState): AddSpacingAfterParagraphCommand = {
+    val __obj = js.Dynamic.literal(execute = js.Any.fromFunction0(execute), getState = js.Any.fromFunction0(getState))
+    __obj.asInstanceOf[AddSpacingAfterParagraphCommand]
+  }
+  @scala.inline
+  implicit class AddSpacingAfterParagraphCommandOps[Self <: AddSpacingAfterParagraphCommand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExecute(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

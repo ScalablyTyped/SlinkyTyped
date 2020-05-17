@@ -1,7 +1,7 @@
 package typingsSlinky.autolinker.urlMatchMod
 
-import typingsSlinky.autolinker.RequiredStripPrefixConfig
 import typingsSlinky.autolinker.anchorTagBuilderMod.AnchorTagBuilder
+import typingsSlinky.autolinker.anon.RequiredStripPrefixConfig
 import typingsSlinky.autolinker.autolinkerMod.UrlMatchTypeOptions
 import typingsSlinky.autolinker.matchMatchMod.MatchConfig
 import scala.scalajs.js

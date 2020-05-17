@@ -1,7 +1,7 @@
 package typingsSlinky.c3.mod
 
-import typingsSlinky.c3.AnonAnchor
-import typingsSlinky.c3.AnonOnclick
+import typingsSlinky.c3.anon.Anchor
+import typingsSlinky.c3.anon.Onclick
 import typingsSlinky.c3.c3Strings.bottom
 import typingsSlinky.c3.c3Strings.inset
 import typingsSlinky.c3.c3Strings.right
@@ -24,8 +24,8 @@ trait LegendOptions extends js.Object {
   /**
     * Change inset legend attributes. Ignored unless `legend.position` is `"inset"`.
     */
-  var inset: js.UndefOr[AnonAnchor] = js.native
-  var item: js.UndefOr[AnonOnclick] = js.native
+  var inset: js.UndefOr[Anchor] = js.native
+  var item: js.UndefOr[Onclick] = js.native
   /**
     * Padding between legend elements.
     * Defaults to `0`.
@@ -79,7 +79,7 @@ object LegendOptions {
         ret
     }
     @scala.inline
-    def withInset(value: AnonAnchor): Self = {
+    def withInset(value: Anchor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("inset")(value.asInstanceOf[js.Any])
         ret
@@ -91,7 +91,7 @@ object LegendOptions {
         ret
     }
     @scala.inline
-    def withItem(value: AnonOnclick): Self = {
+    def withItem(value: Onclick): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
         ret

@@ -11,10 +11,8 @@ import scala.scalajs.js.annotation._
   * @classdesc Load resource data, potentially from remote sources. Caches resource on load to prevent
   * multiple requests. Add ResourceHandlers to handle different types of resources.
   */
-@JSGlobal("pc.ResourceLoader")
 @js.native
-class ResourceLoader protected () extends js.Object {
-  def this(app: Application) = this()
+trait ResourceLoader extends js.Object {
   /**
     * @function
     * @name pc.ResourceLoader#addHandler

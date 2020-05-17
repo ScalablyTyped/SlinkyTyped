@@ -1,7 +1,7 @@
 package typingsSlinky.reactJsonschemaForm.schemaFieldMod
 
 import typingsSlinky.jsonSchema.mod.JSONSchema6
-import typingsSlinky.reactJsonschemaForm.AnonDefinitions
+import typingsSlinky.reactJsonschemaForm.anon.Definitions
 import typingsSlinky.reactJsonschemaForm.mod.ErrorSchema
 import typingsSlinky.reactJsonschemaForm.mod.IdSchema
 import typingsSlinky.reactJsonschemaForm.mod.UiSchema
@@ -16,7 +16,7 @@ trait SchemaFieldProps[T] extends js.Object {
   var formContext: js.Any = js.native
   var formData: T = js.native
   var idSchema: IdSchema[_] = js.native
-  var registry: AnonDefinitions = js.native
+  var registry: Definitions = js.native
   var schema: JSONSchema6 = js.native
   var uiSchema: UiSchema = js.native
 }
@@ -28,7 +28,7 @@ object SchemaFieldProps {
     formContext: js.Any,
     formData: T,
     idSchema: IdSchema[_],
-    registry: AnonDefinitions,
+    registry: Definitions,
     schema: JSONSchema6,
     uiSchema: UiSchema
   ): SchemaFieldProps[T] = {
@@ -66,7 +66,7 @@ object SchemaFieldProps {
         ret
     }
     @scala.inline
-    def withRegistry(value: AnonDefinitions): Self[T] = {
+    def withRegistry(value: Definitions): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("registry")(value.asInstanceOf[js.Any])
         ret

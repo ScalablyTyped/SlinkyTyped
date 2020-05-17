@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartAxisData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartAxisLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartAxisUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Automatic
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Billions
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Category
@@ -52,9 +52,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.ChartAxis")
 @js.native
-class ChartAxis () extends ClientObject {
+trait ChartAxis extends ClientObject {
   /**
     *
     * Represents the alignment for the specified axis tick label. See Excel.ChartTextHorizontalAlignment for detail.
@@ -338,7 +337,7 @@ class ChartAxis () extends ClientObject {
     */
   def load(): ChartAxis = js.native
   def load(options: ChartAxisLoadOptions): ChartAxis = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartAxis = js.native
+  def load(propertyNamesAndPaths: Expand): ChartAxis = js.native
   def load(propertyNames: String): ChartAxis = js.native
   def load(propertyNames: js.Array[String]): ChartAxis = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

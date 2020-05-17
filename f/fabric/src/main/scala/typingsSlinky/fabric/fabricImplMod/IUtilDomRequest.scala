@@ -1,7 +1,7 @@
 package typingsSlinky.fabric.fabricImplMod
 
 import org.scalajs.dom.raw.XMLHttpRequest
-import typingsSlinky.fabric.AnonMethod
+import typingsSlinky.fabric.anon.Method
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ trait IUtilDomRequest extends js.Object {
   	 * @param url URL to send XMLHttpRequest to
   	 */
   def request(url: String): XMLHttpRequest = js.native
-  def request(url: String, options: AnonMethod): XMLHttpRequest = js.native
+  def request(url: String, options: Method): XMLHttpRequest = js.native
 }
 

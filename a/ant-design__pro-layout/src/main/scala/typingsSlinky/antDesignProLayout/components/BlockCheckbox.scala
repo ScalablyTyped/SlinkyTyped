@@ -2,7 +2,7 @@ package typingsSlinky.antDesignProLayout.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignProLayout.AnonKey
+import typingsSlinky.antDesignProLayout.anon.Key
 import typingsSlinky.antDesignProLayout.blockCheckboxMod.BlockCheckboxProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ object BlockCheckbox {
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
-    def list(value: js.Array[AnonKey]): this.type = set("list", value.asInstanceOf[js.Any])
+    def list(value: js.Array[Key]): this.type = set("list", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: BlockCheckboxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

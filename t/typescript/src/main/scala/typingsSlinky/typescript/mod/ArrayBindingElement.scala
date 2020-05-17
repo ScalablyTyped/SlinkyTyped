@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait ArrayBindingElement extends js.Object
 
+object ArrayBindingElement {
+  @scala.inline
+  implicit def apply(value: BindingElement): ArrayBindingElement = value.asInstanceOf[ArrayBindingElement]
+  @scala.inline
+  implicit def apply(value: OmittedExpression): ArrayBindingElement = value.asInstanceOf[ArrayBindingElement]
+}
+

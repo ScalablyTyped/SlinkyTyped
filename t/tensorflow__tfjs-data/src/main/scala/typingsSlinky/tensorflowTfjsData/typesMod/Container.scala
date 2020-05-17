@@ -8,5 +8,12 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.tensorflowTfjsData.typesMod.ContainerObject[T]
   - typingsSlinky.tensorflowTfjsData.typesMod.ContainerArray[T]
 */
-trait Container[T] extends js.Object
+trait Container[T] extends ContainerOrT[T]
+
+object Container {
+  @scala.inline
+  implicit def apply[T](value: ContainerArray[T]): Container[T] = value.asInstanceOf[Container[T]]
+  @scala.inline
+  implicit def apply[T](value: ContainerObject[T]): Container[T] = value.asInstanceOf[Container[T]]
+}
 

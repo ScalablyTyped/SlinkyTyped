@@ -1,21 +1,14 @@
 package typingsSlinky.androiduix.android.widget
 
-import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.androiduix.android.content.Context
 import typingsSlinky.androiduix.android.widget.NumberPicker.Formatter
 import typingsSlinky.androiduix.android.widget.NumberPicker.OnScrollListener
 import typingsSlinky.androiduix.android.widget.NumberPicker.OnValueChangeListener
-import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.widget.NumberPicker")
 @js.native
-class NumberPicker_ protected () extends LinearLayout {
-  def this(context: Context) = this()
-  def this(context: Context, bindElement: HTMLElement) = this()
-  def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String]) = this()
+trait NumberPicker_ extends LinearLayout {
   var SELECTOR_MIDDLE_ITEM_INDEX: js.Any = js.native
   var SELECTOR_WHEEL_ITEM_COUNT: js.Any = js.native
   var mAdjustScroller: js.Any = js.native

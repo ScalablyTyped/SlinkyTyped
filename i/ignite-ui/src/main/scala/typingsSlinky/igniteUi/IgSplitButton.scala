@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -77,7 +77,7 @@ object IgSplitButton {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClick(value: (/* event */ Event_, /* ui */ ClickEventUIParam) => Unit): Self = {
+    def withClick(value: (/* event */ Event, /* ui */ ClickEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("click")(js.Any.fromFunction2(value))
         ret
@@ -89,7 +89,7 @@ object IgSplitButton {
         ret
     }
     @scala.inline
-    def withCollapsed(value: (/* event */ Event_, /* ui */ CollapsedEventUIParam) => Unit): Self = {
+    def withCollapsed(value: (/* event */ Event, /* ui */ CollapsedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(js.Any.fromFunction2(value))
         ret
@@ -101,7 +101,7 @@ object IgSplitButton {
         ret
     }
     @scala.inline
-    def withCollapsing(value: (/* event */ Event_, /* ui */ CollapsingEventUIParam) => Unit): Self = {
+    def withCollapsing(value: (/* event */ Event, /* ui */ CollapsingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("collapsing")(js.Any.fromFunction2(value))
         ret
@@ -125,7 +125,7 @@ object IgSplitButton {
         ret
     }
     @scala.inline
-    def withExpanded(value: (/* event */ Event_, /* ui */ ExpandedEventUIParam) => Unit): Self = {
+    def withExpanded(value: (/* event */ Event, /* ui */ ExpandedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(js.Any.fromFunction2(value))
         ret
@@ -137,7 +137,7 @@ object IgSplitButton {
         ret
     }
     @scala.inline
-    def withExpanding(value: (/* event */ Event_, /* ui */ ExpandingEventUIParam) => Unit): Self = {
+    def withExpanding(value: (/* event */ Event, /* ui */ ExpandingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("expanding")(js.Any.fromFunction2(value))
         ret

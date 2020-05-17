@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabServices.messagesMod.KernelMessage
 
-import typingsSlinky.jupyterlabServices.AnonText
+import typingsSlinky.jupyterlabServices.anon.Text
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.ok
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IInfoReply extends IReplyOkContent {
   var banner: String = js.native
-  var help_links: js.Array[AnonText] = js.native
+  var help_links: js.Array[Text] = js.native
   var implementation: String = js.native
   var implementation_version: String = js.native
   var language_info: ILanguageInfo = js.native
@@ -25,7 +25,7 @@ object IInfoReply {
   @scala.inline
   def apply(
     banner: String,
-    help_links: js.Array[AnonText],
+    help_links: js.Array[Text],
     implementation: String,
     implementation_version: String,
     language_info: ILanguageInfo,
@@ -48,7 +48,7 @@ object IInfoReply {
         ret
     }
     @scala.inline
-    def withHelp_links(value: js.Array[AnonText]): Self = {
+    def withHelp_links(value: js.Array[Text]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("help_links")(value.asInstanceOf[js.Any])
         ret

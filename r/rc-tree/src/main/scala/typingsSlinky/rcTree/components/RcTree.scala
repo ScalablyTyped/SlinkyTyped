@@ -4,7 +4,7 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.rcTree.AnonChecked
+import typingsSlinky.rcTree.anon.Checked
 import typingsSlinky.rcTree.mod.CheckData
 import typingsSlinky.rcTree.mod.ExpandData
 import typingsSlinky.rcTree.mod.InternalTreeNodeProps
@@ -42,7 +42,7 @@ object RcTree {
     @scala.inline
     def checkable(value: Boolean | ReactElement): this.type = set("checkable", value.asInstanceOf[js.Any])
     @scala.inline
-    def checkedKeys(value: js.Array[String] | AnonChecked): this.type = set("checkedKeys", value.asInstanceOf[js.Any])
+    def checkedKeys(value: js.Array[String] | Checked): this.type = set("checkedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

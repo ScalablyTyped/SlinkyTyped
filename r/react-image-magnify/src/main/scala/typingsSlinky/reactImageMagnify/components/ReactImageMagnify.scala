@@ -3,8 +3,8 @@ package typingsSlinky.reactImageMagnify.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactImageMagnify.AnonHeight
-import typingsSlinky.reactImageMagnify.ReactImageMagnifyPropsRea
+import typingsSlinky.reactImageMagnify.anon.Height
+import typingsSlinky.reactImageMagnify.anon.ReactImageMagnifyPropsRea
 import typingsSlinky.reactImageMagnify.mod.LargeImageType
 import typingsSlinky.reactImageMagnify.mod.SmallImageType
 import scala.scalajs.js
@@ -27,7 +27,7 @@ object ReactImageMagnify {
     @scala.inline
     def enlargedImageContainerClassName(value: String): this.type = set("enlargedImageContainerClassName", value.asInstanceOf[js.Any])
     @scala.inline
-    def enlargedImageContainerDimensions(value: AnonHeight): this.type = set("enlargedImageContainerDimensions", value.asInstanceOf[js.Any])
+    def enlargedImageContainerDimensions(value: Height): this.type = set("enlargedImageContainerDimensions", value.asInstanceOf[js.Any])
     @scala.inline
     def enlargedImageContainerStyle(value: CSSProperties): this.type = set("enlargedImageContainerStyle", value.asInstanceOf[js.Any])
     @scala.inline

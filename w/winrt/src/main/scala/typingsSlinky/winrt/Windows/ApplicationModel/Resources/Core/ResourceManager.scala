@@ -1,18 +1,26 @@
 package typingsSlinky.winrt.Windows.ApplicationModel.Resources.Core
 
+import typingsSlinky.winrt.Windows.Foundation.Collections.IIterable
+import typingsSlinky.winrt.Windows.Foundation.Collections.IMapView
+import typingsSlinky.winrt.Windows.Storage.IStorageFile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.ApplicationModel.Resources.Core.ResourceManager")
 @js.native
-class ResourceManager () extends IResourceManager
+trait ResourceManager extends IResourceManager
 
-/* static members */
-@JSGlobal("Windows.ApplicationModel.Resources.Core.ResourceManager")
-@js.native
-object ResourceManager extends js.Object {
-  var current: ResourceManager = js.native
-  def isResourceReference(resourceReference: String): Boolean = js.native
+object ResourceManager {
+  @scala.inline
+  def apply(
+    allResourceMaps: IMapView[String, ResourceMap],
+    defaultContext: ResourceContext,
+    loadPriFiles: IIterable[IStorageFile] => Unit,
+    mainResourceMap: ResourceMap,
+    unloadPriFiles: IIterable[IStorageFile] => Unit
+  ): ResourceManager = {
+    val __obj = js.Dynamic.literal(allResourceMaps = allResourceMaps.asInstanceOf[js.Any], defaultContext = defaultContext.asInstanceOf[js.Any], loadPriFiles = js.Any.fromFunction1(loadPriFiles), mainResourceMap = mainResourceMap.asInstanceOf[js.Any], unloadPriFiles = js.Any.fromFunction1(unloadPriFiles))
+    __obj.asInstanceOf[ResourceManager]
+  }
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.cypress.cypressMod
 
-import typingsSlinky.cypress.PartialCypressOpenOptions
-import typingsSlinky.cypress.PartialCypressRunOptions
+import typingsSlinky.cypress.anon.PartialCypressOpenOptions
+import typingsSlinky.cypress.anon.PartialCypressRunOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

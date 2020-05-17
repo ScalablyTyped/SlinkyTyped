@@ -19,7 +19,7 @@ import typingsSlinky.reactContentLoader.reactContentLoaderStrings.radiobutton_ch
 import typingsSlinky.reactContentLoader.reactContentLoaderStrings.radiobutton_unchecked
 import typingsSlinky.reactContentLoader.reactContentLoaderStrings.uri
 import typingsSlinky.reactContentLoader.reactContentLoaderStrings.yes
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState

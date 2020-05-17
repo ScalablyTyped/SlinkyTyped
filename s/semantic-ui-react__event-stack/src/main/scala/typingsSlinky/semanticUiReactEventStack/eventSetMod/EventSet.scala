@@ -1,7 +1,7 @@
 package typingsSlinky.semanticUiReactEventStack.eventSetMod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.semanticUiReactEventStack.typesMod.EventListeners
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait EventSet extends js.Object {
     * @see https://jsperf.com/suir-eventset-dispatchsingle
     * @see https://jsperf.com/suir-eventset-dispatchmultiple2
     */
-  def dispatchEvent(event: Event_, dispatchAll: Boolean): Unit = js.native
+  def dispatchEvent(event: Event, dispatchAll: Boolean): Unit = js.native
   def hasHandlers(): Boolean = js.native
   /**
     * @see https://jsperf.com/suir-eventset-removehandlers
@@ -29,7 +29,7 @@ object EventSet {
   @scala.inline
   def apply(
     addHandlers: EventListeners => EventSet,
-    dispatchEvent: (Event_, Boolean) => Unit,
+    dispatchEvent: (Event, Boolean) => Unit,
     handlers: js.Any,
     hasHandlers: () => Boolean,
     removeHandlers: EventListeners => EventSet
@@ -50,7 +50,7 @@ object EventSet {
         ret
     }
     @scala.inline
-    def withDispatchEvent(value: (Event_, Boolean) => Unit): Self = {
+    def withDispatchEvent(value: (Event, Boolean) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dispatchEvent")(js.Any.fromFunction2(value))
         ret

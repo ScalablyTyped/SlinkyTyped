@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -38,8 +37,62 @@ trait Storage
   def setItem(key: java.lang.String, value: java.lang.String): Unit = js.native
 }
 
-@JSGlobal("Storage")
-@js.native
-object Storage
-  extends Instantiable0[org.scalajs.dom.raw.Storage]
+object Storage {
+  @scala.inline
+  def apply(
+    clear: () => Unit,
+    getItem: java.lang.String => java.lang.String | Null,
+    key: Double => java.lang.String | Null,
+    length: Double,
+    removeItem: java.lang.String => Unit,
+    setItem: (java.lang.String, java.lang.String) => Unit
+  ): Storage = {
+    val __obj = js.Dynamic.literal(clear = js.Any.fromFunction0(clear), getItem = js.Any.fromFunction1(getItem), key = js.Any.fromFunction1(key), length = length.asInstanceOf[js.Any], removeItem = js.Any.fromFunction1(removeItem), setItem = js.Any.fromFunction2(setItem))
+    __obj.asInstanceOf[Storage]
+  }
+  @scala.inline
+  implicit class StorageOps[Self <: org.scalajs.dom.raw.Storage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClear(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetItem(value: java.lang.String => java.lang.String | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withKey(value: Double => java.lang.String | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoveItem(value: java.lang.String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetItem(value: (java.lang.String, java.lang.String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setItem")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
+}
 

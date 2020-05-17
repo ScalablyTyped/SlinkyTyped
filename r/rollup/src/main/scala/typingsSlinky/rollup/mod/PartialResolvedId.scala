@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PartialResolvedId extends _ResolveIdResult {
+trait PartialResolvedId extends ResolveIdResult {
   var external: js.UndefOr[Boolean] = js.native
   var id: String = js.native
   var moduleSideEffects: js.UndefOr[Boolean | Null] = js.native

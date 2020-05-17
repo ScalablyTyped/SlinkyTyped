@@ -9,8 +9,8 @@ import typingsSlinky.vscode.mod.TextDocumentChangeEvent
 import typingsSlinky.vscode.mod.TextDocumentWillSaveEvent
 import typingsSlinky.vscode.mod.Uri
 import typingsSlinky.vscodeJsonrpc.Thenable
-import typingsSlinky.vscodeLanguageclient.AnonIncludeDeclaration
-import typingsSlinky.vscodeLanguageclient.AnonPlaceholder
+import typingsSlinky.vscodeLanguageclient.anon.IncludeDeclaration
+import typingsSlinky.vscodeLanguageclient.anon.Placeholder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,7 +37,7 @@ trait _Middleware extends js.Object {
       /* position */ typingsSlinky.vscode.mod.Position, 
       /* token */ typingsSlinky.vscode.mod.CancellationToken, 
       /* next */ PrepareRenameSignature, 
-      ProviderResult[typingsSlinky.vscode.mod.Range | AnonPlaceholder]
+      ProviderResult[typingsSlinky.vscode.mod.Range | Placeholder]
     ]
   ] = js.native
   var provideCodeActions: js.UndefOr[
@@ -163,7 +163,7 @@ trait _Middleware extends js.Object {
       /* this */ Unit, 
       /* document */ typingsSlinky.vscode.mod.TextDocument, 
       /* position */ typingsSlinky.vscode.mod.Position, 
-      /* options */ AnonIncludeDeclaration, 
+      /* options */ IncludeDeclaration, 
       /* token */ typingsSlinky.vscode.mod.CancellationToken, 
       /* next */ ProvideReferencesSignature, 
       ProviderResult[js.Array[typingsSlinky.vscode.mod.Location]]
@@ -321,7 +321,7 @@ object _Middleware {
           /* position */ typingsSlinky.vscode.mod.Position, 
           /* token */ typingsSlinky.vscode.mod.CancellationToken, 
           /* next */ PrepareRenameSignature, 
-          ProviderResult[typingsSlinky.vscode.mod.Range | AnonPlaceholder]
+          ProviderResult[typingsSlinky.vscode.mod.Range | Placeholder]
         ]
     ): Self = {
         val ret = this.duplicate
@@ -579,7 +579,7 @@ object _Middleware {
           /* this */ Unit, 
           /* document */ typingsSlinky.vscode.mod.TextDocument, 
           /* position */ typingsSlinky.vscode.mod.Position, 
-          /* options */ AnonIncludeDeclaration, 
+          /* options */ IncludeDeclaration, 
           /* token */ typingsSlinky.vscode.mod.CancellationToken, 
           /* next */ ProvideReferencesSignature, 
           ProviderResult[js.Array[typingsSlinky.vscode.mod.Location]]

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Concat_ extends _Doc {
+trait Concat_ extends Doc {
   var parts: js.Array[Doc] = js.native
   var `type`: typingsSlinky.prettier.prettierStrings.concat = js.native
 }

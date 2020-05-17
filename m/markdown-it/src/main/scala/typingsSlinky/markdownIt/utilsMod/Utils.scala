@@ -1,6 +1,6 @@
 package typingsSlinky.markdownIt.utilsMod
 
-import typingsSlinky.markdownIt.AnonMdurl
+import typingsSlinky.markdownIt.anon.Mdurl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 // import ucmicro from 'uc.micro';
 @js.native
 trait Utils extends js.Object {
-  var lib: AnonMdurl = js.native
+  var lib: Mdurl = js.native
   /**
     * Remove element from array and put another array at those position.
     * Useful for some operations with tokens.
@@ -72,7 +72,7 @@ object Utils {
     isString: js.Any => /* is string */ Boolean,
     isValidEntityCode: Double => Boolean,
     isWhiteSpace: Double => Boolean,
-    lib: AnonMdurl,
+    lib: Mdurl,
     normalizeReference: String => String,
     unescapeAll: String => String,
     unescapeMd: String => String
@@ -159,7 +159,7 @@ object Utils {
         ret
     }
     @scala.inline
-    def withLib(value: AnonMdurl): Self = {
+    def withLib(value: Mdurl): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lib")(value.asInstanceOf[js.Any])
         ret

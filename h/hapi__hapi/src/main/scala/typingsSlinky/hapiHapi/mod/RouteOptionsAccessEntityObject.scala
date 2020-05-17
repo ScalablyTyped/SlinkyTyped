@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RouteOptionsAccessEntityObject extends _RouteOptionsAccessObject {
+trait RouteOptionsAccessEntityObject extends RouteOptionsAccessObject {
   var entity: AccessEntity = js.native
 }
 

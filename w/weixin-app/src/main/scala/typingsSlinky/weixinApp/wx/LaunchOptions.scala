@@ -1,6 +1,6 @@
 package typingsSlinky.weixinApp.wx
 
-import typingsSlinky.weixinApp.AnonExtraData
+import typingsSlinky.weixinApp.anon.ExtraData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait LaunchOptions extends js.Object {
   /**
   		 * 当场景为由从另一个小程序或公众号或App打开时，返回此字段
   		 */
-  var referrerInfo: AnonExtraData = js.native
+  var referrerInfo: ExtraData = js.native
   /**
   		 * 打开小程序的[场景值](https://mp.weixin.qq.com/debug/wxadoc/dev/framework/app-service/scene.html)
   		 *
@@ -101,13 +101,7 @@ trait LaunchOptions extends js.Object {
 
 object LaunchOptions {
   @scala.inline
-  def apply(
-    path: String,
-    query: js.Object,
-    referrerInfo: AnonExtraData,
-    scene: SceneValues,
-    shareTicket: String
-  ): LaunchOptions = {
+  def apply(path: String, query: js.Object, referrerInfo: ExtraData, scene: SceneValues, shareTicket: String): LaunchOptions = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any], query = query.asInstanceOf[js.Any], referrerInfo = referrerInfo.asInstanceOf[js.Any], scene = scene.asInstanceOf[js.Any], shareTicket = shareTicket.asInstanceOf[js.Any])
     __obj.asInstanceOf[LaunchOptions]
   }
@@ -130,7 +124,7 @@ object LaunchOptions {
         ret
     }
     @scala.inline
-    def withReferrerInfo(value: AnonExtraData): Self = {
+    def withReferrerInfo(value: ExtraData): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("referrerInfo")(value.asInstanceOf[js.Any])
         ret

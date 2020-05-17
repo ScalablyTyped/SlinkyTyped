@@ -2,7 +2,7 @@ package typingsSlinky.reactBodyClassname.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
-import typingsSlinky.reactBodyClassname.AnonClassName
+import typingsSlinky.reactBodyClassname.anon.ClassName
 import typingsSlinky.reactBodyClassname.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,11 +13,11 @@ object ReactBodyClassname {
   @js.native
   object component extends js.Object
   
-  def withProps(p: AnonClassName): Default[tag.type, ^] = new Default[tag.type, ^](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: ClassName): Default[tag.type, ^] = new Default[tag.type, ^](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(className: String): Default[tag.type, ^] = {
     val __props = js.Dynamic.literal(className = className.asInstanceOf[js.Any])
-    new Default[tag.type, ^](js.Array(this.component, __props.asInstanceOf[AnonClassName]))
+    new Default[tag.type, ^](js.Array(this.component, __props.asInstanceOf[ClassName]))
   }
 }
 

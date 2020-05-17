@@ -2,7 +2,7 @@ package typingsSlinky.officeUiFabricReact.dragdropInterfacesMod
 
 import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.officeUiFabricReact.AnonCallback
+import typingsSlinky.officeUiFabricReact.anon.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +30,7 @@ trait IDragDropOptions extends js.Object {
   /**
     * Map of event name to callback function to subscribe to.
     */
-  var eventMap: js.UndefOr[js.Array[AnonCallback]] = js.native
+  var eventMap: js.UndefOr[js.Array[Callback]] = js.native
   /**
     * Unique key to associate with instance.
     */
@@ -132,7 +132,7 @@ object IDragDropOptions {
         ret
     }
     @scala.inline
-    def withEventMap(value: js.Array[AnonCallback]): Self = {
+    def withEventMap(value: js.Array[Callback]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("eventMap")(value.asInstanceOf[js.Any])
         ret

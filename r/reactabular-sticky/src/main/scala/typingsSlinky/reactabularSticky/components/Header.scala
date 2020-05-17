@@ -3,9 +3,9 @@ package typingsSlinky.reactabularSticky.components
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactabularSticky.PartialUIEvent
+import typingsSlinky.reactabularSticky.anon.PartialUIEvent
 import typingsSlinky.reactabularSticky.mod.StickyHeaderProps
-import typingsSlinky.reactabularTable.PartialCSSStyleDeclaratio
+import typingsSlinky.reactabularTable.anon.PartialCSSStyleDeclaratio
 import typingsSlinky.reactabularTable.mod.Column
 import typingsSlinky.reactabularTable.mod.HeaderProps
 import scala.scalajs.js

@@ -4,13 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("PayPalConfiguration")
 @js.native
-/**
-  * @param options A set of options to use. Any options not specified will assume default values.
-  */
-class PayPalConfiguration () extends js.Object {
-  def this(options: PayPalConfigurationOptions) = this()
+trait PayPalConfiguration extends js.Object {
   /**
     * If set to false, the SDK will only support paying with PayPal, not with credit cards.
     * This applies only to single payments (via PayPalPaymentViewController).
@@ -119,5 +114,127 @@ class PayPalConfiguration () extends js.Object {
     * PIN to use for sandbox if 'forceDefaultsInSandbox' is set.
     */
   var sandboxUserPin: String = js.native
+}
+
+object PayPalConfiguration {
+  @scala.inline
+  def apply(
+    acceptCreditCards: Boolean,
+    defaultUserEmail: String,
+    defaultUserPhoneCountryCode: String,
+    defaultUserPhoneNumber: String,
+    disableBlurWhenBackgrounding: Boolean,
+    forceDefaultsInSandbox: Boolean,
+    languageOrLocale: String,
+    merchantName: String,
+    merchantPrivacyPolicyURL: String,
+    merchantUserAgreementURL: String,
+    payPalShippingAddressOption: Double,
+    presentingInPopover: Boolean,
+    rememberUser: Boolean,
+    sandboxUserPassword: String,
+    sandboxUserPin: String
+  ): PayPalConfiguration = {
+    val __obj = js.Dynamic.literal(acceptCreditCards = acceptCreditCards.asInstanceOf[js.Any], defaultUserEmail = defaultUserEmail.asInstanceOf[js.Any], defaultUserPhoneCountryCode = defaultUserPhoneCountryCode.asInstanceOf[js.Any], defaultUserPhoneNumber = defaultUserPhoneNumber.asInstanceOf[js.Any], disableBlurWhenBackgrounding = disableBlurWhenBackgrounding.asInstanceOf[js.Any], forceDefaultsInSandbox = forceDefaultsInSandbox.asInstanceOf[js.Any], languageOrLocale = languageOrLocale.asInstanceOf[js.Any], merchantName = merchantName.asInstanceOf[js.Any], merchantPrivacyPolicyURL = merchantPrivacyPolicyURL.asInstanceOf[js.Any], merchantUserAgreementURL = merchantUserAgreementURL.asInstanceOf[js.Any], payPalShippingAddressOption = payPalShippingAddressOption.asInstanceOf[js.Any], presentingInPopover = presentingInPopover.asInstanceOf[js.Any], rememberUser = rememberUser.asInstanceOf[js.Any], sandboxUserPassword = sandboxUserPassword.asInstanceOf[js.Any], sandboxUserPin = sandboxUserPin.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PayPalConfiguration]
+  }
+  @scala.inline
+  implicit class PayPalConfigurationOps[Self <: PayPalConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAcceptCreditCards(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptCreditCards")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultUserEmail(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultUserEmail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultUserPhoneCountryCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultUserPhoneCountryCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultUserPhoneNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultUserPhoneNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisableBlurWhenBackgrounding(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("disableBlurWhenBackgrounding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withForceDefaultsInSandbox(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceDefaultsInSandbox")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLanguageOrLocale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("languageOrLocale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMerchantName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMerchantPrivacyPolicyURL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantPrivacyPolicyURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMerchantUserAgreementURL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("merchantUserAgreementURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPayPalShippingAddressOption(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("payPalShippingAddressOption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPresentingInPopover(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("presentingInPopover")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRememberUser(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rememberUser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSandboxUserPassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sandboxUserPassword")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSandboxUserPin(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sandboxUserPin")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

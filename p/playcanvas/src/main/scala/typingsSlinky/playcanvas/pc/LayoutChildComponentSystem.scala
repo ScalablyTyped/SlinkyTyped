@@ -12,9 +12,6 @@ import scala.scalajs.js.annotation._
   * @classdesc Manages creation of {@link pc.LayoutChildComponent}s.
   * @param {pc.Application} app - The application.
   */
-@JSGlobal("pc.LayoutChildComponentSystem")
 @js.native
-class LayoutChildComponentSystem protected () extends ComponentSystem {
-  def this(app: Application) = this()
-}
+trait LayoutChildComponentSystem extends ComponentSystem
 

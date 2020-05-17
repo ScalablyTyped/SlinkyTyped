@@ -1,0 +1,21 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Contains settings related to the ASPxClientCommandConsts.TABLEPROPERTIES_DIALOG_COMMAND command parameter.
+  */
+@JSGlobal("ASPxClientHtmlEditorTablePropertiesCommandArguments")
+@js.native
+class ASPxClientHtmlEditorTablePropertiesCommandArguments protected ()
+  extends typingsSlinky.devexpressWeb.ASPxClientHtmlEditorTablePropertiesCommandArguments {
+  /**
+    * Initializes a new instance of the ASPxClientHtmlEditorTablePropertiesCommandArguments class with specified settings.
+    * @param htmlEditor The HTML editor executing a command.
+    * @param selectedElement An object containing the currently selected element in the HTML editor.
+    */
+  def this(htmlEditor: typingsSlinky.devexpressWeb.ASPxClientHtmlEditor, selectedElement: js.Any) = this()
+}
+

@@ -1,6 +1,5 @@
 package typingsSlinky.screeps
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +22,44 @@ trait StructureInvaderCore
   var ticksToDeploy: Double = js.native
 }
 
-@JSGlobal("StructureInvaderCore")
-@js.native
-object StructureInvaderCore extends TopLevel[StructureInvaderCoreConstructor]
+object StructureInvaderCore {
+  @scala.inline
+  def apply(
+    destroy: () => ScreepsReturnCode,
+    effects: js.Array[RoomObjectEffect],
+    hits: Double,
+    hitsMax: Double,
+    id: Id[StructureInvaderCore],
+    isActive: () => Boolean,
+    level: Double,
+    notifyWhenAttacked: Boolean => ScreepsReturnCode,
+    pos: RoomPosition,
+    room: Room,
+    structureType: STRUCTURE_INVADER_CORE,
+    ticksToDeploy: Double
+  ): StructureInvaderCore = {
+    val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), effects = effects.asInstanceOf[js.Any], hits = hits.asInstanceOf[js.Any], hitsMax = hitsMax.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isActive = js.Any.fromFunction0(isActive), level = level.asInstanceOf[js.Any], notifyWhenAttacked = js.Any.fromFunction1(notifyWhenAttacked), pos = pos.asInstanceOf[js.Any], room = room.asInstanceOf[js.Any], structureType = structureType.asInstanceOf[js.Any], ticksToDeploy = ticksToDeploy.asInstanceOf[js.Any])
+    __obj.asInstanceOf[StructureInvaderCore]
+  }
+  @scala.inline
+  implicit class StructureInvaderCoreOps[Self <: StructureInvaderCore] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLevel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("level")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTicksToDeploy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticksToDeploy")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

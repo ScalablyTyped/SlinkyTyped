@@ -1,6 +1,6 @@
 package typingsSlinky.intercomClient.tagMod
 
-import typingsSlinky.intercomClient.AnonId
+import typingsSlinky.intercomClient.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TagCompanies extends TagOper {
   var name: String = js.native
-  var users: js.Array[AnonId] = js.native
+  var users: js.Array[Id] = js.native
 }
 
 object TagCompanies {
   @scala.inline
-  def apply(name: String, users: js.Array[AnonId]): TagCompanies = {
+  def apply(name: String, users: js.Array[Id]): TagCompanies = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], users = users.asInstanceOf[js.Any])
     __obj.asInstanceOf[TagCompanies]
   }
@@ -30,7 +30,7 @@ object TagCompanies {
         ret
     }
     @scala.inline
-    def withUsers(value: js.Array[AnonId]): Self = {
+    def withUsers(value: js.Array[Id]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("users")(value.asInstanceOf[js.Any])
         ret

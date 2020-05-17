@@ -4,26 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("GlideTime")
 @js.native
-/**
-  * Instantiates a GlideTime object with the current time.
-  *
-  * @example
-  *
-  * var gt = new GlideTime();
-  * gs.info(gt.getDisplayValue());
-  */
-class GlideTime () extends js.Object {
-  /**
-    * Instantiates a GlideTime object with the specified time.
-    *
-    * @example
-    *
-    * var gt = new GlideTime(10000);
-    * gs.info(gt.getDisplayValue());
-    */
-  def this(milliseconds: Double) = this()
+trait GlideTime extends js.Object {
   /**
     * Gets the time in the specified format.
     *
@@ -160,5 +142,120 @@ class GlideTime () extends js.Object {
     * gs.info(dur.getDisplayValue());
     */
   def subtract(start: GlideTime, end: GlideTime): GlideDuration = js.native
+}
+
+object GlideTime {
+  @scala.inline
+  def apply(
+    getByFormat: String => String,
+    getDisplayValue: () => String,
+    getDisplayValueInternal: () => String,
+    getHourLocalTime: () => Double,
+    getHourOfDayLocalTime: () => Double,
+    getHourOfDayUTC: () => Double,
+    getHourUTC: () => Double,
+    getMinutesLocalTime: () => Double,
+    getMinutesUTC: () => Double,
+    getSeconds: () => Double,
+    getValue: () => String,
+    setDisplayValue: String => Unit,
+    setValue: String => Unit,
+    subtract: (GlideTime, GlideTime) => GlideDuration
+  ): GlideTime = {
+    val __obj = js.Dynamic.literal(getByFormat = js.Any.fromFunction1(getByFormat), getDisplayValue = js.Any.fromFunction0(getDisplayValue), getDisplayValueInternal = js.Any.fromFunction0(getDisplayValueInternal), getHourLocalTime = js.Any.fromFunction0(getHourLocalTime), getHourOfDayLocalTime = js.Any.fromFunction0(getHourOfDayLocalTime), getHourOfDayUTC = js.Any.fromFunction0(getHourOfDayUTC), getHourUTC = js.Any.fromFunction0(getHourUTC), getMinutesLocalTime = js.Any.fromFunction0(getMinutesLocalTime), getMinutesUTC = js.Any.fromFunction0(getMinutesUTC), getSeconds = js.Any.fromFunction0(getSeconds), getValue = js.Any.fromFunction0(getValue), setDisplayValue = js.Any.fromFunction1(setDisplayValue), setValue = js.Any.fromFunction1(setValue), subtract = js.Any.fromFunction2(subtract))
+    __obj.asInstanceOf[GlideTime]
+  }
+  @scala.inline
+  implicit class GlideTimeOps[Self <: GlideTime] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetByFormat(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getByFormat")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetDisplayValue(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDisplayValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDisplayValueInternal(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDisplayValueInternal")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetHourLocalTime(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getHourLocalTime")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetHourOfDayLocalTime(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getHourOfDayLocalTime")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetHourOfDayUTC(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getHourOfDayUTC")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetHourUTC(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getHourUTC")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMinutesLocalTime(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMinutesLocalTime")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMinutesUTC(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMinutesUTC")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSeconds(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSeconds")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetValue(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetDisplayValue(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDisplayValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetValue(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSubtract(value: (GlideTime, GlideTime) => GlideDuration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtract")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

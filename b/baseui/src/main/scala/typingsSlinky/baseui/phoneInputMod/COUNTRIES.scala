@@ -1,494 +1,494 @@
 package typingsSlinky.baseui.phoneInputMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.baseui.Anon0
-import typingsSlinky.baseui.Anon1
-import typingsSlinky.baseui.Anon10
-import typingsSlinky.baseui.Anon100
-import typingsSlinky.baseui.Anon101
-import typingsSlinky.baseui.Anon102
-import typingsSlinky.baseui.Anon103
-import typingsSlinky.baseui.Anon104
-import typingsSlinky.baseui.Anon105
-import typingsSlinky.baseui.Anon106
-import typingsSlinky.baseui.Anon107
-import typingsSlinky.baseui.Anon108
-import typingsSlinky.baseui.Anon109
-import typingsSlinky.baseui.Anon11
-import typingsSlinky.baseui.Anon110
-import typingsSlinky.baseui.Anon111
-import typingsSlinky.baseui.Anon112
-import typingsSlinky.baseui.Anon113
-import typingsSlinky.baseui.Anon114
-import typingsSlinky.baseui.Anon115
-import typingsSlinky.baseui.Anon116
-import typingsSlinky.baseui.Anon117
-import typingsSlinky.baseui.Anon118
-import typingsSlinky.baseui.Anon119
-import typingsSlinky.baseui.Anon12
-import typingsSlinky.baseui.Anon120
-import typingsSlinky.baseui.Anon121
-import typingsSlinky.baseui.Anon122
-import typingsSlinky.baseui.Anon123
-import typingsSlinky.baseui.Anon124
-import typingsSlinky.baseui.Anon125
-import typingsSlinky.baseui.Anon126
-import typingsSlinky.baseui.Anon127
-import typingsSlinky.baseui.Anon128
-import typingsSlinky.baseui.Anon129
-import typingsSlinky.baseui.Anon13
-import typingsSlinky.baseui.Anon130
-import typingsSlinky.baseui.Anon131
-import typingsSlinky.baseui.Anon132
-import typingsSlinky.baseui.Anon133
-import typingsSlinky.baseui.Anon134
-import typingsSlinky.baseui.Anon135
-import typingsSlinky.baseui.Anon136
-import typingsSlinky.baseui.Anon137
-import typingsSlinky.baseui.Anon138
-import typingsSlinky.baseui.Anon139
-import typingsSlinky.baseui.Anon14
-import typingsSlinky.baseui.Anon140
-import typingsSlinky.baseui.Anon141
-import typingsSlinky.baseui.Anon142
-import typingsSlinky.baseui.Anon143
-import typingsSlinky.baseui.Anon144
-import typingsSlinky.baseui.Anon145
-import typingsSlinky.baseui.Anon146
-import typingsSlinky.baseui.Anon147
-import typingsSlinky.baseui.Anon148
-import typingsSlinky.baseui.Anon149
-import typingsSlinky.baseui.Anon15
-import typingsSlinky.baseui.Anon150
-import typingsSlinky.baseui.Anon151
-import typingsSlinky.baseui.Anon152
-import typingsSlinky.baseui.Anon153
-import typingsSlinky.baseui.Anon154
-import typingsSlinky.baseui.Anon155
-import typingsSlinky.baseui.Anon156
-import typingsSlinky.baseui.Anon157
-import typingsSlinky.baseui.Anon158
-import typingsSlinky.baseui.Anon159
-import typingsSlinky.baseui.Anon16
-import typingsSlinky.baseui.Anon160
-import typingsSlinky.baseui.Anon161
-import typingsSlinky.baseui.Anon162
-import typingsSlinky.baseui.Anon163
-import typingsSlinky.baseui.Anon164
-import typingsSlinky.baseui.Anon165
-import typingsSlinky.baseui.Anon166
-import typingsSlinky.baseui.Anon167
-import typingsSlinky.baseui.Anon168
-import typingsSlinky.baseui.Anon169
-import typingsSlinky.baseui.Anon17
-import typingsSlinky.baseui.Anon170
-import typingsSlinky.baseui.Anon171
-import typingsSlinky.baseui.Anon172
-import typingsSlinky.baseui.Anon173
-import typingsSlinky.baseui.Anon174
-import typingsSlinky.baseui.Anon175
-import typingsSlinky.baseui.Anon176
-import typingsSlinky.baseui.Anon177
-import typingsSlinky.baseui.Anon178
-import typingsSlinky.baseui.Anon179
-import typingsSlinky.baseui.Anon18
-import typingsSlinky.baseui.Anon180
-import typingsSlinky.baseui.Anon181
-import typingsSlinky.baseui.Anon182
-import typingsSlinky.baseui.Anon183
-import typingsSlinky.baseui.Anon184
-import typingsSlinky.baseui.Anon185
-import typingsSlinky.baseui.Anon186
-import typingsSlinky.baseui.Anon187
-import typingsSlinky.baseui.Anon188
-import typingsSlinky.baseui.Anon189
-import typingsSlinky.baseui.Anon19
-import typingsSlinky.baseui.Anon190
-import typingsSlinky.baseui.Anon191
-import typingsSlinky.baseui.Anon192
-import typingsSlinky.baseui.Anon193
-import typingsSlinky.baseui.Anon194
-import typingsSlinky.baseui.Anon195
-import typingsSlinky.baseui.Anon196
-import typingsSlinky.baseui.Anon197
-import typingsSlinky.baseui.Anon198
-import typingsSlinky.baseui.Anon199
-import typingsSlinky.baseui.Anon2
-import typingsSlinky.baseui.Anon20
-import typingsSlinky.baseui.Anon200
-import typingsSlinky.baseui.Anon201
-import typingsSlinky.baseui.Anon202
-import typingsSlinky.baseui.Anon203
-import typingsSlinky.baseui.Anon204
-import typingsSlinky.baseui.Anon205
-import typingsSlinky.baseui.Anon206
-import typingsSlinky.baseui.Anon207
-import typingsSlinky.baseui.Anon208
-import typingsSlinky.baseui.Anon209
-import typingsSlinky.baseui.Anon21
-import typingsSlinky.baseui.Anon210
-import typingsSlinky.baseui.Anon211
-import typingsSlinky.baseui.Anon212
-import typingsSlinky.baseui.Anon213
-import typingsSlinky.baseui.Anon214
-import typingsSlinky.baseui.Anon215
-import typingsSlinky.baseui.Anon216
-import typingsSlinky.baseui.Anon217
-import typingsSlinky.baseui.Anon218
-import typingsSlinky.baseui.Anon219
-import typingsSlinky.baseui.Anon22
-import typingsSlinky.baseui.Anon220
-import typingsSlinky.baseui.Anon221
-import typingsSlinky.baseui.Anon222
-import typingsSlinky.baseui.Anon223
-import typingsSlinky.baseui.Anon224
-import typingsSlinky.baseui.Anon225
-import typingsSlinky.baseui.Anon226
-import typingsSlinky.baseui.Anon227
-import typingsSlinky.baseui.Anon228
-import typingsSlinky.baseui.Anon229
-import typingsSlinky.baseui.Anon23
-import typingsSlinky.baseui.Anon230
-import typingsSlinky.baseui.Anon231
-import typingsSlinky.baseui.Anon232
-import typingsSlinky.baseui.Anon233
-import typingsSlinky.baseui.Anon234
-import typingsSlinky.baseui.Anon235
-import typingsSlinky.baseui.Anon24
-import typingsSlinky.baseui.Anon25
-import typingsSlinky.baseui.Anon26
-import typingsSlinky.baseui.Anon27
-import typingsSlinky.baseui.Anon28
-import typingsSlinky.baseui.Anon29
-import typingsSlinky.baseui.Anon3
-import typingsSlinky.baseui.Anon30
-import typingsSlinky.baseui.Anon31
-import typingsSlinky.baseui.Anon32
-import typingsSlinky.baseui.Anon33
-import typingsSlinky.baseui.Anon34
-import typingsSlinky.baseui.Anon35
-import typingsSlinky.baseui.Anon36
-import typingsSlinky.baseui.Anon37
-import typingsSlinky.baseui.Anon38
-import typingsSlinky.baseui.Anon39
-import typingsSlinky.baseui.Anon4
-import typingsSlinky.baseui.Anon40
-import typingsSlinky.baseui.Anon41
-import typingsSlinky.baseui.Anon42
-import typingsSlinky.baseui.Anon43
-import typingsSlinky.baseui.Anon44
-import typingsSlinky.baseui.Anon45
-import typingsSlinky.baseui.Anon46
-import typingsSlinky.baseui.Anon47
-import typingsSlinky.baseui.Anon48
-import typingsSlinky.baseui.Anon49
-import typingsSlinky.baseui.Anon5
-import typingsSlinky.baseui.Anon50
-import typingsSlinky.baseui.Anon51
-import typingsSlinky.baseui.Anon52
-import typingsSlinky.baseui.Anon53
-import typingsSlinky.baseui.Anon54
-import typingsSlinky.baseui.Anon55
-import typingsSlinky.baseui.Anon56
-import typingsSlinky.baseui.Anon57
-import typingsSlinky.baseui.Anon58
-import typingsSlinky.baseui.Anon59
-import typingsSlinky.baseui.Anon6
-import typingsSlinky.baseui.Anon60
-import typingsSlinky.baseui.Anon61
-import typingsSlinky.baseui.Anon62
-import typingsSlinky.baseui.Anon63
-import typingsSlinky.baseui.Anon64
-import typingsSlinky.baseui.Anon65
-import typingsSlinky.baseui.Anon66
-import typingsSlinky.baseui.Anon67
-import typingsSlinky.baseui.Anon68
-import typingsSlinky.baseui.Anon69
-import typingsSlinky.baseui.Anon7
-import typingsSlinky.baseui.Anon70
-import typingsSlinky.baseui.Anon71
-import typingsSlinky.baseui.Anon72
-import typingsSlinky.baseui.Anon73
-import typingsSlinky.baseui.Anon74
-import typingsSlinky.baseui.Anon75
-import typingsSlinky.baseui.Anon76
-import typingsSlinky.baseui.Anon77
-import typingsSlinky.baseui.Anon78
-import typingsSlinky.baseui.Anon79
-import typingsSlinky.baseui.Anon8
-import typingsSlinky.baseui.Anon80
-import typingsSlinky.baseui.Anon81
-import typingsSlinky.baseui.Anon82
-import typingsSlinky.baseui.Anon83
-import typingsSlinky.baseui.Anon84
-import typingsSlinky.baseui.Anon85
-import typingsSlinky.baseui.Anon86
-import typingsSlinky.baseui.Anon87
-import typingsSlinky.baseui.Anon88
-import typingsSlinky.baseui.Anon89
-import typingsSlinky.baseui.Anon9
-import typingsSlinky.baseui.Anon90
-import typingsSlinky.baseui.Anon91
-import typingsSlinky.baseui.Anon92
-import typingsSlinky.baseui.Anon93
-import typingsSlinky.baseui.Anon94
-import typingsSlinky.baseui.Anon95
-import typingsSlinky.baseui.Anon96
-import typingsSlinky.baseui.Anon97
-import typingsSlinky.baseui.Anon98
-import typingsSlinky.baseui.Anon99
-import typingsSlinky.baseui.AnonDialCode
-import typingsSlinky.baseui.AnonDialCodeId
-import typingsSlinky.baseui.AnonDialCodeIdLabel
-import typingsSlinky.baseui.AnonIdLabel
-import typingsSlinky.baseui.AnonLabel
+import typingsSlinky.baseui.anon.DialCode
+import typingsSlinky.baseui.anon.DialCodeId
+import typingsSlinky.baseui.anon.DialCodeIdLabel
+import typingsSlinky.baseui.anon.IdLabel
+import typingsSlinky.baseui.anon.Label
+import typingsSlinky.baseui.anon.`0`
+import typingsSlinky.baseui.anon.`100`
+import typingsSlinky.baseui.anon.`101`
+import typingsSlinky.baseui.anon.`102`
+import typingsSlinky.baseui.anon.`103`
+import typingsSlinky.baseui.anon.`104`
+import typingsSlinky.baseui.anon.`105`
+import typingsSlinky.baseui.anon.`106`
+import typingsSlinky.baseui.anon.`107`
+import typingsSlinky.baseui.anon.`108`
+import typingsSlinky.baseui.anon.`109`
+import typingsSlinky.baseui.anon.`10`
+import typingsSlinky.baseui.anon.`110`
+import typingsSlinky.baseui.anon.`111`
+import typingsSlinky.baseui.anon.`112`
+import typingsSlinky.baseui.anon.`113`
+import typingsSlinky.baseui.anon.`114`
+import typingsSlinky.baseui.anon.`115`
+import typingsSlinky.baseui.anon.`116`
+import typingsSlinky.baseui.anon.`117`
+import typingsSlinky.baseui.anon.`118`
+import typingsSlinky.baseui.anon.`119`
+import typingsSlinky.baseui.anon.`11`
+import typingsSlinky.baseui.anon.`120`
+import typingsSlinky.baseui.anon.`121`
+import typingsSlinky.baseui.anon.`122`
+import typingsSlinky.baseui.anon.`123`
+import typingsSlinky.baseui.anon.`124`
+import typingsSlinky.baseui.anon.`125`
+import typingsSlinky.baseui.anon.`126`
+import typingsSlinky.baseui.anon.`127`
+import typingsSlinky.baseui.anon.`128`
+import typingsSlinky.baseui.anon.`129`
+import typingsSlinky.baseui.anon.`12`
+import typingsSlinky.baseui.anon.`130`
+import typingsSlinky.baseui.anon.`131`
+import typingsSlinky.baseui.anon.`132`
+import typingsSlinky.baseui.anon.`133`
+import typingsSlinky.baseui.anon.`134`
+import typingsSlinky.baseui.anon.`135`
+import typingsSlinky.baseui.anon.`136`
+import typingsSlinky.baseui.anon.`137`
+import typingsSlinky.baseui.anon.`138`
+import typingsSlinky.baseui.anon.`139`
+import typingsSlinky.baseui.anon.`13`
+import typingsSlinky.baseui.anon.`140`
+import typingsSlinky.baseui.anon.`141`
+import typingsSlinky.baseui.anon.`142`
+import typingsSlinky.baseui.anon.`143`
+import typingsSlinky.baseui.anon.`144`
+import typingsSlinky.baseui.anon.`145`
+import typingsSlinky.baseui.anon.`146`
+import typingsSlinky.baseui.anon.`147`
+import typingsSlinky.baseui.anon.`148`
+import typingsSlinky.baseui.anon.`149`
+import typingsSlinky.baseui.anon.`14`
+import typingsSlinky.baseui.anon.`150`
+import typingsSlinky.baseui.anon.`151`
+import typingsSlinky.baseui.anon.`152`
+import typingsSlinky.baseui.anon.`153`
+import typingsSlinky.baseui.anon.`154`
+import typingsSlinky.baseui.anon.`155`
+import typingsSlinky.baseui.anon.`156`
+import typingsSlinky.baseui.anon.`157`
+import typingsSlinky.baseui.anon.`158`
+import typingsSlinky.baseui.anon.`159`
+import typingsSlinky.baseui.anon.`15`
+import typingsSlinky.baseui.anon.`160`
+import typingsSlinky.baseui.anon.`161`
+import typingsSlinky.baseui.anon.`162`
+import typingsSlinky.baseui.anon.`163`
+import typingsSlinky.baseui.anon.`164`
+import typingsSlinky.baseui.anon.`165`
+import typingsSlinky.baseui.anon.`166`
+import typingsSlinky.baseui.anon.`167`
+import typingsSlinky.baseui.anon.`168`
+import typingsSlinky.baseui.anon.`169`
+import typingsSlinky.baseui.anon.`16`
+import typingsSlinky.baseui.anon.`170`
+import typingsSlinky.baseui.anon.`171`
+import typingsSlinky.baseui.anon.`172`
+import typingsSlinky.baseui.anon.`173`
+import typingsSlinky.baseui.anon.`174`
+import typingsSlinky.baseui.anon.`175`
+import typingsSlinky.baseui.anon.`176`
+import typingsSlinky.baseui.anon.`177`
+import typingsSlinky.baseui.anon.`178`
+import typingsSlinky.baseui.anon.`179`
+import typingsSlinky.baseui.anon.`17`
+import typingsSlinky.baseui.anon.`180`
+import typingsSlinky.baseui.anon.`181`
+import typingsSlinky.baseui.anon.`182`
+import typingsSlinky.baseui.anon.`183`
+import typingsSlinky.baseui.anon.`184`
+import typingsSlinky.baseui.anon.`185`
+import typingsSlinky.baseui.anon.`186`
+import typingsSlinky.baseui.anon.`187`
+import typingsSlinky.baseui.anon.`188`
+import typingsSlinky.baseui.anon.`189`
+import typingsSlinky.baseui.anon.`18`
+import typingsSlinky.baseui.anon.`190`
+import typingsSlinky.baseui.anon.`191`
+import typingsSlinky.baseui.anon.`192`
+import typingsSlinky.baseui.anon.`193`
+import typingsSlinky.baseui.anon.`194`
+import typingsSlinky.baseui.anon.`195`
+import typingsSlinky.baseui.anon.`196`
+import typingsSlinky.baseui.anon.`197`
+import typingsSlinky.baseui.anon.`198`
+import typingsSlinky.baseui.anon.`199`
+import typingsSlinky.baseui.anon.`19`
+import typingsSlinky.baseui.anon.`1`
+import typingsSlinky.baseui.anon.`200`
+import typingsSlinky.baseui.anon.`201`
+import typingsSlinky.baseui.anon.`202`
+import typingsSlinky.baseui.anon.`203`
+import typingsSlinky.baseui.anon.`204`
+import typingsSlinky.baseui.anon.`205`
+import typingsSlinky.baseui.anon.`206`
+import typingsSlinky.baseui.anon.`207`
+import typingsSlinky.baseui.anon.`208`
+import typingsSlinky.baseui.anon.`209`
+import typingsSlinky.baseui.anon.`20`
+import typingsSlinky.baseui.anon.`210`
+import typingsSlinky.baseui.anon.`211`
+import typingsSlinky.baseui.anon.`212`
+import typingsSlinky.baseui.anon.`213`
+import typingsSlinky.baseui.anon.`214`
+import typingsSlinky.baseui.anon.`215`
+import typingsSlinky.baseui.anon.`216`
+import typingsSlinky.baseui.anon.`217`
+import typingsSlinky.baseui.anon.`218`
+import typingsSlinky.baseui.anon.`219`
+import typingsSlinky.baseui.anon.`21`
+import typingsSlinky.baseui.anon.`220`
+import typingsSlinky.baseui.anon.`221`
+import typingsSlinky.baseui.anon.`222`
+import typingsSlinky.baseui.anon.`223`
+import typingsSlinky.baseui.anon.`224`
+import typingsSlinky.baseui.anon.`225`
+import typingsSlinky.baseui.anon.`226`
+import typingsSlinky.baseui.anon.`227`
+import typingsSlinky.baseui.anon.`228`
+import typingsSlinky.baseui.anon.`229`
+import typingsSlinky.baseui.anon.`22`
+import typingsSlinky.baseui.anon.`230`
+import typingsSlinky.baseui.anon.`231`
+import typingsSlinky.baseui.anon.`232`
+import typingsSlinky.baseui.anon.`233`
+import typingsSlinky.baseui.anon.`234`
+import typingsSlinky.baseui.anon.`235`
+import typingsSlinky.baseui.anon.`23`
+import typingsSlinky.baseui.anon.`24`
+import typingsSlinky.baseui.anon.`25`
+import typingsSlinky.baseui.anon.`26`
+import typingsSlinky.baseui.anon.`27`
+import typingsSlinky.baseui.anon.`28`
+import typingsSlinky.baseui.anon.`29`
+import typingsSlinky.baseui.anon.`2`
+import typingsSlinky.baseui.anon.`30`
+import typingsSlinky.baseui.anon.`31`
+import typingsSlinky.baseui.anon.`32`
+import typingsSlinky.baseui.anon.`33`
+import typingsSlinky.baseui.anon.`34`
+import typingsSlinky.baseui.anon.`35`
+import typingsSlinky.baseui.anon.`36`
+import typingsSlinky.baseui.anon.`37`
+import typingsSlinky.baseui.anon.`38`
+import typingsSlinky.baseui.anon.`39`
+import typingsSlinky.baseui.anon.`3`
+import typingsSlinky.baseui.anon.`40`
+import typingsSlinky.baseui.anon.`41`
+import typingsSlinky.baseui.anon.`42`
+import typingsSlinky.baseui.anon.`43`
+import typingsSlinky.baseui.anon.`44`
+import typingsSlinky.baseui.anon.`45`
+import typingsSlinky.baseui.anon.`46`
+import typingsSlinky.baseui.anon.`47`
+import typingsSlinky.baseui.anon.`48`
+import typingsSlinky.baseui.anon.`49`
+import typingsSlinky.baseui.anon.`4`
+import typingsSlinky.baseui.anon.`50`
+import typingsSlinky.baseui.anon.`51`
+import typingsSlinky.baseui.anon.`52`
+import typingsSlinky.baseui.anon.`53`
+import typingsSlinky.baseui.anon.`54`
+import typingsSlinky.baseui.anon.`55`
+import typingsSlinky.baseui.anon.`56`
+import typingsSlinky.baseui.anon.`57`
+import typingsSlinky.baseui.anon.`58`
+import typingsSlinky.baseui.anon.`59`
+import typingsSlinky.baseui.anon.`5`
+import typingsSlinky.baseui.anon.`60`
+import typingsSlinky.baseui.anon.`61`
+import typingsSlinky.baseui.anon.`62`
+import typingsSlinky.baseui.anon.`63`
+import typingsSlinky.baseui.anon.`64`
+import typingsSlinky.baseui.anon.`65`
+import typingsSlinky.baseui.anon.`66`
+import typingsSlinky.baseui.anon.`67`
+import typingsSlinky.baseui.anon.`68`
+import typingsSlinky.baseui.anon.`69`
+import typingsSlinky.baseui.anon.`6`
+import typingsSlinky.baseui.anon.`70`
+import typingsSlinky.baseui.anon.`71`
+import typingsSlinky.baseui.anon.`72`
+import typingsSlinky.baseui.anon.`73`
+import typingsSlinky.baseui.anon.`74`
+import typingsSlinky.baseui.anon.`75`
+import typingsSlinky.baseui.anon.`76`
+import typingsSlinky.baseui.anon.`77`
+import typingsSlinky.baseui.anon.`78`
+import typingsSlinky.baseui.anon.`79`
+import typingsSlinky.baseui.anon.`7`
+import typingsSlinky.baseui.anon.`80`
+import typingsSlinky.baseui.anon.`81`
+import typingsSlinky.baseui.anon.`82`
+import typingsSlinky.baseui.anon.`83`
+import typingsSlinky.baseui.anon.`84`
+import typingsSlinky.baseui.anon.`85`
+import typingsSlinky.baseui.anon.`86`
+import typingsSlinky.baseui.anon.`87`
+import typingsSlinky.baseui.anon.`88`
+import typingsSlinky.baseui.anon.`89`
+import typingsSlinky.baseui.anon.`8`
+import typingsSlinky.baseui.anon.`90`
+import typingsSlinky.baseui.anon.`91`
+import typingsSlinky.baseui.anon.`92`
+import typingsSlinky.baseui.anon.`93`
+import typingsSlinky.baseui.anon.`94`
+import typingsSlinky.baseui.anon.`95`
+import typingsSlinky.baseui.anon.`96`
+import typingsSlinky.baseui.anon.`97`
+import typingsSlinky.baseui.anon.`98`
+import typingsSlinky.baseui.anon.`99`
+import typingsSlinky.baseui.anon.`9`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait COUNTRIES extends js.Object {
-  var AD: AnonDialCodeIdLabel = js.native
-  var AE: Anon222 = js.native
-  var AF: AnonDialCode = js.native
-  var AG: Anon2 = js.native
-  var AI: Anon1 = js.native
-  var AL: AnonLabel = js.native
-  var AM: Anon4 = js.native
-  var AO: Anon0 = js.native
-  var AR: Anon3 = js.native
-  var AS: AnonIdLabel = js.native
-  var AT: Anon7 = js.native
-  var AU: Anon6 = js.native
-  var AW: Anon5 = js.native
-  var AX: Anon235 = js.native
-  var AZ: Anon8 = js.native
-  var BA: Anon20 = js.native
-  var BB: Anon12 = js.native
-  var BD: Anon11 = js.native
-  var BE: Anon14 = js.native
-  var BF: Anon27 = js.native
-  var BG: Anon26 = js.native
-  var BH: Anon10 = js.native
-  var BI: Anon28 = js.native
-  var BJ: Anon16 = js.native
-  var BL: Anon172 = js.native
-  var BM: Anon17 = js.native
-  var BN: Anon25 = js.native
-  var BO: Anon19 = js.native
-  var BR: Anon22 = js.native
-  var BS: Anon9 = js.native
-  var BT: Anon18 = js.native
-  var BW: Anon21 = js.native
-  var BY: Anon13 = js.native
-  var BZ: Anon15 = js.native
-  var CA: Anon31 = js.native
-  var CC: Anon39 = js.native
-  var CD: Anon42 = js.native
-  var CF: Anon34 = js.native
-  var CG: Anon43 = js.native
-  var CH: Anon203 = js.native
-  var CI: Anon46 = js.native
-  var CK: Anon44 = js.native
-  var CL: Anon36 = js.native
-  var CM: Anon30 = js.native
-  var CN: Anon37 = js.native
-  var CO: Anon40 = js.native
-  var CR: Anon45 = js.native
-  var CU: Anon48 = js.native
-  var CV: Anon32 = js.native
-  var CW: Anon49 = js.native
-  var CX: Anon38 = js.native
-  var CY: Anon50 = js.native
-  var CZ: Anon51 = js.native
-  var DE: Anon73 = js.native
-  var DJ: Anon53 = js.native
-  var DK: Anon52 = js.native
-  var DM: Anon54 = js.native
-  var DO: Anon55 = js.native
-  var DZ: AnonDialCodeId = js.native
-  var EC: Anon56 = js.native
-  var EE: Anon61 = js.native
-  var EG: Anon57 = js.native
-  var ER: Anon60 = js.native
-  var ES: Anon196 = js.native
-  var ET: Anon62 = js.native
-  var FI: Anon66 = js.native
-  var FJ: Anon65 = js.native
-  var FK: Anon63 = js.native
-  var FM: Anon132 = js.native
-  var FO: Anon64 = js.native
-  var FR: Anon67 = js.native
-  var GA: Anon70 = js.native
-  var GB: Anon223 = js.native
-  var GD: Anon78 = js.native
-  var GE: Anon72 = js.native
-  var GF: Anon68 = js.native
-  var GG: Anon82 = js.native
-  var GH: Anon74 = js.native
-  var GI: Anon75 = js.native
-  var GL: Anon77 = js.native
-  var GM: Anon71 = js.native
-  var GN: Anon83 = js.native
-  var GP: Anon79 = js.native
-  var GQ: Anon59 = js.native
-  var GR: Anon76 = js.native
-  var GT: Anon81 = js.native
-  var GU: Anon80 = js.native
-  var GW: Anon84 = js.native
-  var GY: Anon85 = js.native
-  var HK: Anon88 = js.native
-  var HN: Anon87 = js.native
-  var HR: Anon47 = js.native
-  var HT: Anon86 = js.native
-  var HU: Anon89 = js.native
-  var ID: Anon92 = js.native
-  var IE: Anon95 = js.native
-  var IL: Anon97 = js.native
-  var IM: Anon96 = js.native
-  var IN: Anon91 = js.native
-  var IO: Anon23 = js.native
-  var IQ: Anon94 = js.native
-  var IR: Anon93 = js.native
-  var IS: Anon90 = js.native
-  var IT: Anon98 = js.native
-  var JE: Anon101 = js.native
-  var JM: Anon99 = js.native
-  var JO: Anon102 = js.native
-  var JP: Anon100 = js.native
-  var KE: Anon104 = js.native
-  var KG: Anon108 = js.native
-  var KH: Anon29 = js.native
-  var KI: Anon105 = js.native
-  var KM: Anon41 = js.native
-  var KN: Anon174 = js.native
-  var KP: Anon152 = js.native
-  var KR: Anon194 = js.native
-  var KW: Anon107 = js.native
-  var KY: Anon33 = js.native
-  var KZ: Anon103 = js.native
-  var LA: Anon109 = js.native
-  var LB: Anon111 = js.native
-  var LC: Anon175 = js.native
-  var LI: Anon115 = js.native
-  var LK: Anon197 = js.native
-  var LR: Anon113 = js.native
-  var LS: Anon112 = js.native
-  var LT: Anon116 = js.native
-  var LU: Anon117 = js.native
-  var LV: Anon110 = js.native
-  var LY: Anon114 = js.native
-  var MA: Anon138 = js.native
-  var MC: Anon134 = js.native
-  var MD: Anon133 = js.native
-  var ME: Anon136 = js.native
-  var MF: Anon176 = js.native
-  var MG: Anon120 = js.native
-  var MH: Anon126 = js.native
-  var MK: Anon119 = js.native
-  var ML: Anon124 = js.native
-  var MM: Anon140 = js.native
-  var MN: Anon135 = js.native
-  var MO: Anon118 = js.native
-  var MP: Anon153 = js.native
-  var MQ: Anon127 = js.native
-  var MR: Anon128 = js.native
-  var MS: Anon137 = js.native
-  var MT: Anon125 = js.native
-  var MU: Anon129 = js.native
-  var MV: Anon123 = js.native
-  var MW: Anon121 = js.native
-  var MX: Anon131 = js.native
-  var MY: Anon122 = js.native
-  var MZ: Anon139 = js.native
-  var NA: Anon141 = js.native
-  var NC: Anon145 = js.native
-  var NE: Anon148 = js.native
-  var NF: Anon151 = js.native
-  var NG: Anon149 = js.native
-  var NI: Anon147 = js.native
-  var NL: Anon144 = js.native
-  var NO: Anon154 = js.native
-  var NP: Anon143 = js.native
-  var NR: Anon142 = js.native
-  var NU: Anon150 = js.native
-  var NZ: Anon146 = js.native
-  var OM: Anon155 = js.native
-  var PA: Anon159 = js.native
-  var PE: Anon162 = js.native
-  var PF: Anon69 = js.native
-  var PG: Anon160 = js.native
-  var PH: Anon163 = js.native
-  var PK: Anon156 = js.native
-  var PL: Anon164 = js.native
-  var PM: Anon177 = js.native
-  var PR: Anon166 = js.native
-  var PS: Anon158 = js.native
-  var PT: Anon165 = js.native
-  var PW: Anon157 = js.native
-  var PY: Anon161 = js.native
-  var QA: Anon167 = js.native
-  var RE: Anon168 = js.native
-  var RO: Anon169 = js.native
-  var RS: Anon184 = js.native
-  var RU: Anon170 = js.native
-  var RW: Anon171 = js.native
-  var SA: Anon182 = js.native
-  var SB: Anon191 = js.native
-  var SC: Anon185 = js.native
-  var SD: Anon198 = js.native
-  var SE: Anon202 = js.native
-  var SG: Anon187 = js.native
-  var SH: Anon173 = js.native
-  var SI: Anon190 = js.native
-  var SJ: Anon200 = js.native
-  var SK: Anon189 = js.native
-  var SL: Anon186 = js.native
-  var SM: Anon180 = js.native
-  var SN: Anon183 = js.native
-  var SO: Anon192 = js.native
-  var SR: Anon199 = js.native
-  var SS: Anon195 = js.native
-  var ST: Anon181 = js.native
-  var SV: Anon58 = js.native
-  var SX: Anon188 = js.native
-  var SY: Anon204 = js.native
-  var SZ: Anon201 = js.native
-  var TC: Anon217 = js.native
-  var TD: Anon35 = js.native
-  var TG: Anon210 = js.native
-  var TH: Anon208 = js.native
-  var TJ: Anon206 = js.native
-  var TK: Anon211 = js.native
-  var TL: Anon209 = js.native
-  var TM: Anon216 = js.native
-  var TN: Anon214 = js.native
-  var TO: Anon212 = js.native
-  var TR: Anon215 = js.native
-  var TT: Anon213 = js.native
-  var TV: Anon218 = js.native
-  var TW: Anon205 = js.native
-  var TZ: Anon207 = js.native
-  var UA: Anon221 = js.native
-  var UG: Anon220 = js.native
-  var US: Anon224 = js.native
-  var UY: Anon225 = js.native
-  var UZ: Anon226 = js.native
-  var VA: Anon228 = js.native
-  var VC: Anon178 = js.native
-  var VE: Anon229 = js.native
-  var VG: Anon24 = js.native
-  var VI: Anon219 = js.native
-  var VN: Anon230 = js.native
-  var VU: Anon227 = js.native
-  var WF: Anon231 = js.native
-  var WS: Anon179 = js.native
-  var XK: Anon106 = js.native
-  var YE: Anon232 = js.native
-  var YT: Anon130 = js.native
-  var ZA: Anon193 = js.native
-  var ZM: Anon233 = js.native
-  var ZW: Anon234 = js.native
+  var AD: DialCodeIdLabel = js.native
+  var AE: `222` = js.native
+  var AF: DialCode = js.native
+  var AG: `2` = js.native
+  var AI: `1` = js.native
+  var AL: Label = js.native
+  var AM: `4` = js.native
+  var AO: `0` = js.native
+  var AR: `3` = js.native
+  var AS: IdLabel = js.native
+  var AT: `7` = js.native
+  var AU: `6` = js.native
+  var AW: `5` = js.native
+  var AX: `235` = js.native
+  var AZ: `8` = js.native
+  var BA: `20` = js.native
+  var BB: `12` = js.native
+  var BD: `11` = js.native
+  var BE: `14` = js.native
+  var BF: `27` = js.native
+  var BG: `26` = js.native
+  var BH: `10` = js.native
+  var BI: `28` = js.native
+  var BJ: `16` = js.native
+  var BL: `172` = js.native
+  var BM: `17` = js.native
+  var BN: `25` = js.native
+  var BO: `19` = js.native
+  var BR: `22` = js.native
+  var BS: `9` = js.native
+  var BT: `18` = js.native
+  var BW: `21` = js.native
+  var BY: `13` = js.native
+  var BZ: `15` = js.native
+  var CA: `31` = js.native
+  var CC: `39` = js.native
+  var CD: `42` = js.native
+  var CF: `34` = js.native
+  var CG: `43` = js.native
+  var CH: `203` = js.native
+  var CI: `46` = js.native
+  var CK: `44` = js.native
+  var CL: `36` = js.native
+  var CM: `30` = js.native
+  var CN: `37` = js.native
+  var CO: `40` = js.native
+  var CR: `45` = js.native
+  var CU: `48` = js.native
+  var CV: `32` = js.native
+  var CW: `49` = js.native
+  var CX: `38` = js.native
+  var CY: `50` = js.native
+  var CZ: `51` = js.native
+  var DE: `73` = js.native
+  var DJ: `53` = js.native
+  var DK: `52` = js.native
+  var DM: `54` = js.native
+  var DO: `55` = js.native
+  var DZ: DialCodeId = js.native
+  var EC: `56` = js.native
+  var EE: `61` = js.native
+  var EG: `57` = js.native
+  var ER: `60` = js.native
+  var ES: `196` = js.native
+  var ET: `62` = js.native
+  var FI: `66` = js.native
+  var FJ: `65` = js.native
+  var FK: `63` = js.native
+  var FM: `132` = js.native
+  var FO: `64` = js.native
+  var FR: `67` = js.native
+  var GA: `70` = js.native
+  var GB: `223` = js.native
+  var GD: `78` = js.native
+  var GE: `72` = js.native
+  var GF: `68` = js.native
+  var GG: `82` = js.native
+  var GH: `74` = js.native
+  var GI: `75` = js.native
+  var GL: `77` = js.native
+  var GM: `71` = js.native
+  var GN: `83` = js.native
+  var GP: `79` = js.native
+  var GQ: `59` = js.native
+  var GR: `76` = js.native
+  var GT: `81` = js.native
+  var GU: `80` = js.native
+  var GW: `84` = js.native
+  var GY: `85` = js.native
+  var HK: `88` = js.native
+  var HN: `87` = js.native
+  var HR: `47` = js.native
+  var HT: `86` = js.native
+  var HU: `89` = js.native
+  var ID: `92` = js.native
+  var IE: `95` = js.native
+  var IL: `97` = js.native
+  var IM: `96` = js.native
+  var IN: `91` = js.native
+  var IO: `23` = js.native
+  var IQ: `94` = js.native
+  var IR: `93` = js.native
+  var IS: `90` = js.native
+  var IT: `98` = js.native
+  var JE: `101` = js.native
+  var JM: `99` = js.native
+  var JO: `102` = js.native
+  var JP: `100` = js.native
+  var KE: `104` = js.native
+  var KG: `108` = js.native
+  var KH: `29` = js.native
+  var KI: `105` = js.native
+  var KM: `41` = js.native
+  var KN: `174` = js.native
+  var KP: `152` = js.native
+  var KR: `194` = js.native
+  var KW: `107` = js.native
+  var KY: `33` = js.native
+  var KZ: `103` = js.native
+  var LA: `109` = js.native
+  var LB: `111` = js.native
+  var LC: `175` = js.native
+  var LI: `115` = js.native
+  var LK: `197` = js.native
+  var LR: `113` = js.native
+  var LS: `112` = js.native
+  var LT: `116` = js.native
+  var LU: `117` = js.native
+  var LV: `110` = js.native
+  var LY: `114` = js.native
+  var MA: `138` = js.native
+  var MC: `134` = js.native
+  var MD: `133` = js.native
+  var ME: `136` = js.native
+  var MF: `176` = js.native
+  var MG: `120` = js.native
+  var MH: `126` = js.native
+  var MK: `119` = js.native
+  var ML: `124` = js.native
+  var MM: `140` = js.native
+  var MN: `135` = js.native
+  var MO: `118` = js.native
+  var MP: `153` = js.native
+  var MQ: `127` = js.native
+  var MR: `128` = js.native
+  var MS: `137` = js.native
+  var MT: `125` = js.native
+  var MU: `129` = js.native
+  var MV: `123` = js.native
+  var MW: `121` = js.native
+  var MX: `131` = js.native
+  var MY: `122` = js.native
+  var MZ: `139` = js.native
+  var NA: `141` = js.native
+  var NC: `145` = js.native
+  var NE: `148` = js.native
+  var NF: `151` = js.native
+  var NG: `149` = js.native
+  var NI: `147` = js.native
+  var NL: `144` = js.native
+  var NO: `154` = js.native
+  var NP: `143` = js.native
+  var NR: `142` = js.native
+  var NU: `150` = js.native
+  var NZ: `146` = js.native
+  var OM: `155` = js.native
+  var PA: `159` = js.native
+  var PE: `162` = js.native
+  var PF: `69` = js.native
+  var PG: `160` = js.native
+  var PH: `163` = js.native
+  var PK: `156` = js.native
+  var PL: `164` = js.native
+  var PM: `177` = js.native
+  var PR: `166` = js.native
+  var PS: `158` = js.native
+  var PT: `165` = js.native
+  var PW: `157` = js.native
+  var PY: `161` = js.native
+  var QA: `167` = js.native
+  var RE: `168` = js.native
+  var RO: `169` = js.native
+  var RS: `184` = js.native
+  var RU: `170` = js.native
+  var RW: `171` = js.native
+  var SA: `182` = js.native
+  var SB: `191` = js.native
+  var SC: `185` = js.native
+  var SD: `198` = js.native
+  var SE: `202` = js.native
+  var SG: `187` = js.native
+  var SH: `173` = js.native
+  var SI: `190` = js.native
+  var SJ: `200` = js.native
+  var SK: `189` = js.native
+  var SL: `186` = js.native
+  var SM: `180` = js.native
+  var SN: `183` = js.native
+  var SO: `192` = js.native
+  var SR: `199` = js.native
+  var SS: `195` = js.native
+  var ST: `181` = js.native
+  var SV: `58` = js.native
+  var SX: `188` = js.native
+  var SY: `204` = js.native
+  var SZ: `201` = js.native
+  var TC: `217` = js.native
+  var TD: `35` = js.native
+  var TG: `210` = js.native
+  var TH: `208` = js.native
+  var TJ: `206` = js.native
+  var TK: `211` = js.native
+  var TL: `209` = js.native
+  var TM: `216` = js.native
+  var TN: `214` = js.native
+  var TO: `212` = js.native
+  var TR: `215` = js.native
+  var TT: `213` = js.native
+  var TV: `218` = js.native
+  var TW: `205` = js.native
+  var TZ: `207` = js.native
+  var UA: `221` = js.native
+  var UG: `220` = js.native
+  var US: `224` = js.native
+  var UY: `225` = js.native
+  var UZ: `226` = js.native
+  var VA: `228` = js.native
+  var VC: `178` = js.native
+  var VE: `229` = js.native
+  var VG: `24` = js.native
+  var VI: `219` = js.native
+  var VN: `230` = js.native
+  var VU: `227` = js.native
+  var WF: `231` = js.native
+  var WS: `179` = js.native
+  var XK: `106` = js.native
+  var YE: `232` = js.native
+  var YT: `130` = js.native
+  var ZA: `193` = js.native
+  var ZM: `233` = js.native
+  var ZW: `234` = js.native
 }
 
 @JSImport("baseui/phone-input", "COUNTRIES")

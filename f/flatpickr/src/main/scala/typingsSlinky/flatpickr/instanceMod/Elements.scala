@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLSelectElement
 import org.scalajs.dom.raw.HTMLSpanElement
 import org.scalajs.dom.raw.Node
-import typingsSlinky.flatpickr.globalsMod._Global_.HTMLElement
+import typingsSlinky.flatpickr.globalsMod.global.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

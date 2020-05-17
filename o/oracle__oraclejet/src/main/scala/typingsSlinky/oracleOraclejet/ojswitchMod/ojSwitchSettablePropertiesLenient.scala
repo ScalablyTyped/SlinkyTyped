@@ -1,9 +1,9 @@
 package typingsSlinky.oracleOraclejet.ojswitchMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonConverterHint
-import typingsSlinky.oracleOraclejet.AnonDefinition
-import typingsSlinky.oracleOraclejet.AnonInstruction
+import typingsSlinky.oracleOraclejet.anon.ConverterHint
+import typingsSlinky.oracleOraclejet.anon.Definition
+import typingsSlinky.oracleOraclejet.anon.Instruction
 import typingsSlinky.oracleOraclejet.ojmessagingMod.^
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.invalidHidden
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.invalidShown
@@ -19,9 +19,9 @@ trait ojSwitchSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
   var describedBy: js.UndefOr[String] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
-  var displayOptions: js.UndefOr[AnonConverterHint] = js.native
-  var help: js.UndefOr[AnonInstruction] = js.native
-  var helpHints: js.UndefOr[AnonDefinition] = js.native
+  var displayOptions: js.UndefOr[ConverterHint] = js.native
+  var help: js.UndefOr[Instruction] = js.native
+  var helpHints: js.UndefOr[Definition] = js.native
   var labelHint: js.UndefOr[String] = js.native
   var messagesCustom: js.UndefOr[js.Array[^]] = js.native
   var readonly: js.UndefOr[Boolean] = js.native
@@ -69,7 +69,7 @@ object ojSwitchSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withDisplayOptions(value: AnonConverterHint): Self = {
+    def withDisplayOptions(value: ConverterHint): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("displayOptions")(value.asInstanceOf[js.Any])
         ret
@@ -81,7 +81,7 @@ object ojSwitchSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withHelp(value: AnonInstruction): Self = {
+    def withHelp(value: Instruction): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
         ret
@@ -93,7 +93,7 @@ object ojSwitchSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withHelpHints(value: AnonDefinition): Self = {
+    def withHelpHints(value: Definition): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("helpHints")(value.asInstanceOf[js.Any])
         ret

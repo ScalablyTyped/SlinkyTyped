@@ -1,12 +1,13 @@
 package typingsSlinky.minappEnv
 
+import typingsSlinky.minappEnv.anon.Database
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IInitCloudConfig extends js.Object {
-  var env: js.UndefOr[java.lang.String | AnonDatabase] = js.native
+  var env: js.UndefOr[java.lang.String | Database] = js.native
   var traceUser: js.UndefOr[scala.Boolean] = js.native
 }
 
@@ -23,7 +24,7 @@ object IInitCloudConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEnv(value: java.lang.String | AnonDatabase): Self = {
+    def withEnv(value: java.lang.String | Database): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
         ret

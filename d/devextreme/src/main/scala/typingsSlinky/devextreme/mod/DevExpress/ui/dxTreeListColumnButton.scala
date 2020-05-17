@@ -1,9 +1,9 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonColumnComponentElement
-import typingsSlinky.devextreme.AnonColumnDxTreeListColumn
-import typingsSlinky.devextreme.AnonKeyRow
+import typingsSlinky.devextreme.anon.ColumnComponentElement
+import typingsSlinky.devextreme.anon.ColumnDxTreeListColumn
+import typingsSlinky.devextreme.anon.KeyRow
 import typingsSlinky.devextreme.devextremeStrings.add
 import typingsSlinky.devextreme.devextremeStrings.cancel
 import typingsSlinky.devextreme.devextremeStrings.delete
@@ -11,7 +11,7 @@ import typingsSlinky.devextreme.devextremeStrings.edit
 import typingsSlinky.devextreme.devextremeStrings.save
 import typingsSlinky.devextreme.devextremeStrings.undelete
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,13 +21,13 @@ trait dxTreeListColumnButton extends GridBaseColumnButton {
   /** The name used to identify a built-in button. */
   var name: js.UndefOr[add | cancel | delete | edit | save | undelete | String] = js.native
   /** A function that is executed when the button is clicked or tapped. Not executed if a template is used. */
-  var onClick: js.UndefOr[(js.Function1[/* e */ AnonColumnComponentElement, _]) | String] = js.native
+  var onClick: js.UndefOr[(js.Function1[/* e */ ColumnComponentElement, _]) | String] = js.native
   /** Specifies a custom button template. */
   var template: js.UndefOr[
-    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ AnonKeyRow, String | Element | JQuery])
+    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ KeyRow, String | Element | JQuery])
   ] = js.native
   /** Specifies the button's visibility. */
-  var visible: js.UndefOr[Boolean | (js.Function1[/* options */ AnonColumnDxTreeListColumn, Boolean])] = js.native
+  var visible: js.UndefOr[Boolean | (js.Function1[/* options */ ColumnDxTreeListColumn, Boolean])] = js.native
 }
 
 object dxTreeListColumnButton {
@@ -55,13 +55,13 @@ object dxTreeListColumnButton {
         ret
     }
     @scala.inline
-    def withOnClickFunction1(value: /* e */ AnonColumnComponentElement => _): Self = {
+    def withOnClickFunction1(value: /* e */ ColumnComponentElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnClick(value: (js.Function1[/* e */ AnonColumnComponentElement, _]) | String): Self = {
+    def withOnClick(value: (js.Function1[/* e */ ColumnComponentElement, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(value.asInstanceOf[js.Any])
         ret
@@ -73,7 +73,7 @@ object dxTreeListColumnButton {
         ret
     }
     @scala.inline
-    def withTemplateFunction2(value: (/* cellElement */ dxElement, /* cellInfo */ AnonKeyRow) => String | Element | JQuery): Self = {
+    def withTemplateFunction2(value: (/* cellElement */ dxElement, /* cellInfo */ KeyRow) => String | Element | JQuery): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("template")(js.Any.fromFunction2(value))
         ret
@@ -86,7 +86,7 @@ object dxTreeListColumnButton {
     }
     @scala.inline
     def withTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ AnonKeyRow, String | Element | JQuery])
+      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ KeyRow, String | Element | JQuery])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
@@ -99,13 +99,13 @@ object dxTreeListColumnButton {
         ret
     }
     @scala.inline
-    def withVisibleFunction1(value: /* options */ AnonColumnDxTreeListColumn => Boolean): Self = {
+    def withVisibleFunction1(value: /* options */ ColumnDxTreeListColumn => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withVisible(value: Boolean | (js.Function1[/* options */ AnonColumnDxTreeListColumn, Boolean])): Self = {
+    def withVisible(value: Boolean | (js.Function1[/* options */ ColumnDxTreeListColumn, Boolean])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
         ret

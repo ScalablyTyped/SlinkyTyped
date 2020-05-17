@@ -23,9 +23,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * A widget used to increment and decrement a value.
 			 */
-@JSGlobal("Titanium.UI.iOS.Stepper")
 @js.native
-class Stepper () extends View {
+trait Stepper extends View {
   /**
   				 * If YES, the user pressing and holding on the stepper repeatedly alters value.
   				 * The default value is YES.

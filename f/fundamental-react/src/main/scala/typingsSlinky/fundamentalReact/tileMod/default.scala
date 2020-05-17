@@ -1,11 +1,11 @@
 package typingsSlinky.fundamentalReact.tileMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.fundamentalReact.FunctionComponentTileActi
-import typingsSlinky.fundamentalReact.FunctionComponentTileCont
-import typingsSlinky.fundamentalReact.FunctionComponentTileMedi
-import typingsSlinky.fundamentalReact.PartialTileProps
-import typingsSlinky.fundamentalReact.WeakValidationMapTileProp
+import typingsSlinky.fundamentalReact.anon.FunctionComponentTileActi
+import typingsSlinky.fundamentalReact.anon.FunctionComponentTileCont
+import typingsSlinky.fundamentalReact.anon.FunctionComponentTileMedi
+import typingsSlinky.fundamentalReact.anon.PartialTileProps
+import typingsSlinky.fundamentalReact.anon.WeakValidationMapTileProp
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.Tile
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap

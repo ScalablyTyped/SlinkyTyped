@@ -1,0 +1,110 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.media
+
+import typingsSlinky.activexLibreoffice.`type`
+import typingsSlinky.activexLibreoffice.com_.sun.star.awt.Rectangle
+import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XFocusListener
+import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XKeyListener
+import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XMouseListener
+import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XMouseMotionListener
+import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XPaintListener
+import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XWindow
+import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XWindowListener
+import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XEventListener
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** interacts with the media player window */
+@js.native
+trait XPlayerWindow extends XWindow {
+  /** gets the current media ratio. */
+  var ZoomLevel: typingsSlinky.activexLibreoffice.com_.sun.star.media.ZoomLevel = js.native
+  /** gets the current media ratio. */
+  def getZoomLevel(): ZoomLevel = js.native
+  /**
+    * changes the pointer for the player window.
+    * @param SystemPointerType a {@link com.sun.star.awt.SystemPointer}
+    */
+  def setPointerType(SystemPointerType: Double): Unit = js.native
+  /** changes the zoom of the media played by the window. */
+  def setZoomLevel(ZoomLevel: ZoomLevel): Boolean = js.native
+  /** redraws the player window */
+  def update(): Unit = js.native
+}
+
+object XPlayerWindow {
+  @scala.inline
+  def apply(
+    PosSize: Rectangle,
+    ZoomLevel: ZoomLevel,
+    acquire: () => Unit,
+    addEventListener: XEventListener => Unit,
+    addFocusListener: XFocusListener => Unit,
+    addKeyListener: XKeyListener => Unit,
+    addMouseListener: XMouseListener => Unit,
+    addMouseMotionListener: XMouseMotionListener => Unit,
+    addPaintListener: XPaintListener => Unit,
+    addWindowListener: XWindowListener => Unit,
+    dispose: () => Unit,
+    getPosSize: () => Rectangle,
+    getZoomLevel: () => ZoomLevel,
+    queryInterface: `type` => js.Any,
+    release: () => Unit,
+    removeEventListener: XEventListener => Unit,
+    removeFocusListener: XFocusListener => Unit,
+    removeKeyListener: XKeyListener => Unit,
+    removeMouseListener: XMouseListener => Unit,
+    removeMouseMotionListener: XMouseMotionListener => Unit,
+    removePaintListener: XPaintListener => Unit,
+    removeWindowListener: XWindowListener => Unit,
+    setEnable: Boolean => Unit,
+    setFocus: () => Unit,
+    setPointerType: Double => Unit,
+    setPosSize: (Double, Double, Double, Double, Double) => Unit,
+    setVisible: Boolean => Unit,
+    setZoomLevel: ZoomLevel => Boolean,
+    update: () => Unit
+  ): XPlayerWindow = {
+    val __obj = js.Dynamic.literal(PosSize = PosSize.asInstanceOf[js.Any], ZoomLevel = ZoomLevel.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addFocusListener = js.Any.fromFunction1(addFocusListener), addKeyListener = js.Any.fromFunction1(addKeyListener), addMouseListener = js.Any.fromFunction1(addMouseListener), addMouseMotionListener = js.Any.fromFunction1(addMouseMotionListener), addPaintListener = js.Any.fromFunction1(addPaintListener), addWindowListener = js.Any.fromFunction1(addWindowListener), dispose = js.Any.fromFunction0(dispose), getPosSize = js.Any.fromFunction0(getPosSize), getZoomLevel = js.Any.fromFunction0(getZoomLevel), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), removeFocusListener = js.Any.fromFunction1(removeFocusListener), removeKeyListener = js.Any.fromFunction1(removeKeyListener), removeMouseListener = js.Any.fromFunction1(removeMouseListener), removeMouseMotionListener = js.Any.fromFunction1(removeMouseMotionListener), removePaintListener = js.Any.fromFunction1(removePaintListener), removeWindowListener = js.Any.fromFunction1(removeWindowListener), setEnable = js.Any.fromFunction1(setEnable), setFocus = js.Any.fromFunction0(setFocus), setPointerType = js.Any.fromFunction1(setPointerType), setPosSize = js.Any.fromFunction5(setPosSize), setVisible = js.Any.fromFunction1(setVisible), setZoomLevel = js.Any.fromFunction1(setZoomLevel), update = js.Any.fromFunction0(update))
+    __obj.asInstanceOf[XPlayerWindow]
+  }
+  @scala.inline
+  implicit class XPlayerWindowOps[Self <: XPlayerWindow] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withZoomLevel(value: ZoomLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ZoomLevel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetZoomLevel(value: () => ZoomLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getZoomLevel")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetPointerType(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setPointerType")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetZoomLevel(value: ZoomLevel => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setZoomLevel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
+}
+

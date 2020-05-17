@@ -3,7 +3,6 @@ package typingsSlinky.reactNativeMaps.mod
 import slinky.core.SyntheticEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.ViewProps
-import typingsSlinky.reactNativeMaps.AnonCoordinate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +17,12 @@ trait MapPolylineProps extends ViewProps {
   var lineDashPhase: js.UndefOr[Double] = js.native
   var lineJoin: js.UndefOr[LineJoinType] = js.native
   var miterLimit: js.UndefOr[Double] = js.native
-  var onPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, js.Object with AnonCoordinate], Unit]] = js.native
+  var onPress: js.UndefOr[
+    js.Function1[
+      SyntheticEvent[NodeHandle, js.Object with typingsSlinky.reactNativeMaps.anon.Coordinate], 
+      Unit
+    ]
+  ] = js.native
   var strokeColor: js.UndefOr[String] = js.native
   var strokeColors: js.UndefOr[js.Array[String]] = js.native
   var strokeWidth: js.UndefOr[Double] = js.native
@@ -129,7 +133,9 @@ object MapPolylineProps {
         ret
     }
     @scala.inline
-    def withOnPress(value: SyntheticEvent[NodeHandle, js.Object with AnonCoordinate] => Unit): Self = {
+    def withOnPress(
+      value: SyntheticEvent[NodeHandle, js.Object with typingsSlinky.reactNativeMaps.anon.Coordinate] => Unit
+    ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.Any.fromFunction1(value))
         ret

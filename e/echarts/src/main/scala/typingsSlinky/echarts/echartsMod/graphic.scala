@@ -1,7 +1,7 @@
 package typingsSlinky.echarts.echartsMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.echarts.echarts.Graphic_
+import typingsSlinky.echarts.echarts.Graphic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,5 +11,5 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("echarts/lib/echarts", "graphic")
 @js.native
-object graphic extends TopLevel[Graphic_]
+object graphic extends TopLevel[Graphic]
 

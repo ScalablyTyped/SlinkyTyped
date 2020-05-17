@@ -36,9 +36,8 @@ import scala.scalajs.js.annotation._
   * @property {pc.Skin} [skin] The skin data (if any) that drives skinned mesh animations for this mesh.
   * @property {pc.Morph} [morph] The morph data (if any) that drives morph target animations for this mesh.
   */
-@JSGlobal("pc.Mesh")
 @js.native
-class Mesh () extends js.Object {
+trait Mesh extends js.Object {
   /**
     * The axis-aligned bounding box for the object space vertices of this mesh.
     */
@@ -67,5 +66,74 @@ class Mesh () extends js.Object {
     * The vertex buffer holding the vertex data of the mesh.
     */
   var vertexBuffer: VertexBuffer = js.native
+}
+
+object Mesh {
+  @scala.inline
+  def apply(
+    aabb: BoundingBox,
+    indexBuffer: js.Array[IndexBuffer],
+    primitive: js.Array[js.Object],
+    vertexBuffer: VertexBuffer
+  ): Mesh = {
+    val __obj = js.Dynamic.literal(aabb = aabb.asInstanceOf[js.Any], indexBuffer = indexBuffer.asInstanceOf[js.Any], primitive = primitive.asInstanceOf[js.Any], vertexBuffer = vertexBuffer.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Mesh]
+  }
+  @scala.inline
+  implicit class MeshOps[Self <: Mesh] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAabb(value: BoundingBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("aabb")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIndexBuffer(value: js.Array[IndexBuffer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexBuffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrimitive(value: js.Array[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("primitive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVertexBuffer(value: VertexBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexBuffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMorph(value: Morph): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("morph")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMorph: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("morph")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkin(value: Skin): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skin")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.baiduApp.swan
 
-import typingsSlinky.baiduApp.AnonErrMsg
+import typingsSlinky.baiduApp.anon.ErrMsg
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait NavigateBackMiniProgramOptions
   var extraData: js.UndefOr[js.Any] = js.native
    // 需要返回给上一个小程序的数据，上一个小程序可在 App.onShow() 中获取到这份数据。详情
   @JSName("success")
-  var success_NavigateBackMiniProgramOptions: js.UndefOr[js.Function1[/* res */ AnonErrMsg, Unit]] = js.native
+  var success_NavigateBackMiniProgramOptions: js.UndefOr[js.Function1[/* res */ ErrMsg, Unit]] = js.native
 }
 
 object NavigateBackMiniProgramOptions {
@@ -39,7 +39,7 @@ object NavigateBackMiniProgramOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonErrMsg => Unit): Self = {
+    def withSuccess(value: /* res */ ErrMsg => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

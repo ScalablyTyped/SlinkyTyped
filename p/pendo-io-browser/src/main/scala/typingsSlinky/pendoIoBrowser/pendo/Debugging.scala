@@ -1,6 +1,6 @@
 package typingsSlinky.pendoIoBrowser.pendo
 
-import typingsSlinky.pendoIoBrowser.AnonAuto
+import typingsSlinky.pendoIoBrowser.anon.Auto
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait Debugging extends js.Object {
    // TODO
   def getAllGuides(): js.Array[Guide] = js.native
-  def getAutoGuides(): AnonAuto = js.native
+  def getAutoGuides(): Auto = js.native
   def getBadgeGuides(): js.Array[Guide] = js.native
   def getEventCache(): js.Array[_] = js.native
   def getLauncherGuides(): js.Array[Guide] = js.native
@@ -19,7 +19,7 @@ object Debugging {
   @scala.inline
   def apply(
     getAllGuides: () => js.Array[Guide],
-    getAutoGuides: () => AnonAuto,
+    getAutoGuides: () => Auto,
     getBadgeGuides: () => js.Array[Guide],
     getEventCache: () => js.Array[_],
     getLauncherGuides: () => js.Array[Guide]
@@ -40,7 +40,7 @@ object Debugging {
         ret
     }
     @scala.inline
-    def withGetAutoGuides(value: () => AnonAuto): Self = {
+    def withGetAutoGuides(value: () => Auto): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getAutoGuides")(js.Any.fromFunction0(value))
         ret

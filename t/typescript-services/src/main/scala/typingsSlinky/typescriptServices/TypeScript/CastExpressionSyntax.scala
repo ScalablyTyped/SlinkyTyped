@@ -4,18 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("TypeScript.CastExpressionSyntax")
 @js.native
-class CastExpressionSyntax protected ()
-  extends SyntaxNode
-     with IUnaryExpressionSyntax {
-  def this(
-    lessThanToken: ISyntaxToken,
-    `type`: ITypeSyntax,
-    greaterThanToken: ISyntaxToken,
-    expression: IUnaryExpressionSyntax,
-    parsedInStrictMode: Boolean
-  ) = this()
+trait CastExpressionSyntax
+  extends IUnaryExpressionSyntax
+     with SyntaxNode {
   var expression: IUnaryExpressionSyntax = js.native
   var greaterThanToken: ISyntaxToken = js.native
   var lessThanToken: ISyntaxToken = js.native
@@ -32,12 +24,5 @@ class CastExpressionSyntax protected ()
   def withGreaterThanToken(greaterThanToken: ISyntaxToken): CastExpressionSyntax = js.native
   def withLessThanToken(lessThanToken: ISyntaxToken): CastExpressionSyntax = js.native
   def withType(`type`: ITypeSyntax): CastExpressionSyntax = js.native
-}
-
-/* static members */
-@JSGlobal("TypeScript.CastExpressionSyntax")
-@js.native
-object CastExpressionSyntax extends js.Object {
-  def create1(`type`: ITypeSyntax, expression: IUnaryExpressionSyntax): CastExpressionSyntax = js.native
 }
 

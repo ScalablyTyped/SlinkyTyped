@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Activation
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Provides data when an app is activated to replace an appointment in the user’s calendar. */
+@JSGlobal("Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs")
+@js.native
+abstract class AppointmentsProviderReplaceAppointmentActivatedEventArgs ()
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs
+

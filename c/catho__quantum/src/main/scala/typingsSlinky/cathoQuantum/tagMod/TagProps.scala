@@ -2,7 +2,7 @@ package typingsSlinky.cathoQuantum.tagMod
 
 import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.cathoQuantum.AnonColorsComponentsSpacing
+import typingsSlinky.cathoQuantum.anon.ColorsComponentsSpacing
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.error
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.large
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.medium
@@ -25,7 +25,7 @@ trait TagProps extends js.Object {
   var skin: js.UndefOr[neutral | primary | success | warning | error] = js.native
   var stroked: js.UndefOr[Boolean] = js.native
   var text: js.UndefOr[String] = js.native
-  var theme: js.UndefOr[AnonColorsComponentsSpacing] = js.native
+  var theme: js.UndefOr[ColorsComponentsSpacing] = js.native
 }
 
 object TagProps {
@@ -125,7 +125,7 @@ object TagProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonColorsComponentsSpacing): Self = {
+    def withTheme(value: ColorsComponentsSpacing): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

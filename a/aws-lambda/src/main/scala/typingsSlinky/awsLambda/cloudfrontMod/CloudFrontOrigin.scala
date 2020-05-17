@@ -1,25 +1,21 @@
 package typingsSlinky.awsLambda.cloudfrontMod
 
+import typingsSlinky.awsLambda.anon.Custom
+import typingsSlinky.awsLambda.anon.S3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.awsLambda.AnonS3
-  - typingsSlinky.awsLambda.AnonCustom
+  - typingsSlinky.awsLambda.anon.S3
+  - typingsSlinky.awsLambda.anon.Custom
 */
 trait CloudFrontOrigin extends js.Object
 
 object CloudFrontOrigin {
   @scala.inline
-  def AnonS3(s3: CloudFrontS3Origin): CloudFrontOrigin = {
-    val __obj = js.Dynamic.literal(s3 = s3.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CloudFrontOrigin]
-  }
+  implicit def apply(value: Custom): CloudFrontOrigin = value.asInstanceOf[CloudFrontOrigin]
   @scala.inline
-  def AnonCustom(custom: CloudFrontCustomOrigin): CloudFrontOrigin = {
-    val __obj = js.Dynamic.literal(custom = custom.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CloudFrontOrigin]
-  }
+  implicit def apply(value: S3): CloudFrontOrigin = value.asInstanceOf[CloudFrontOrigin]
 }
 

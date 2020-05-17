@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("google.earth.GETimeControl")
 @js.native
-class GETimeControl () extends GEControl {
+trait GETimeControl extends GEControl {
   /**
     * Returns an array containing the KmlTimeStamp objects associated with the historical imagery available in this view.
     */
@@ -29,5 +28,57 @@ class GETimeControl () extends GEControl {
     * Specifies whether the control is visible or hidden.
     */
   def setVisibility(visibility: GEVisibilityEnum): Unit = js.native
+}
+
+object GETimeControl {
+  @scala.inline
+  def apply(
+    getAvailableImageDates: () => KmlObjectList[KmlTimeStamp],
+    getCalculatedRate: () => Double,
+    getExtents: () => KmlTimeSpan,
+    getVisibility: () => GEVisibilityEnum,
+    setVisibility: GEVisibilityEnum => Unit
+  ): GETimeControl = {
+    val __obj = js.Dynamic.literal(getAvailableImageDates = js.Any.fromFunction0(getAvailableImageDates), getCalculatedRate = js.Any.fromFunction0(getCalculatedRate), getExtents = js.Any.fromFunction0(getExtents), getVisibility = js.Any.fromFunction0(getVisibility), setVisibility = js.Any.fromFunction1(setVisibility))
+    __obj.asInstanceOf[GETimeControl]
+  }
+  @scala.inline
+  implicit class GETimeControlOps[Self <: GETimeControl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetAvailableImageDates(value: () => KmlObjectList[KmlTimeStamp]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAvailableImageDates")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetCalculatedRate(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCalculatedRate")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetExtents(value: () => KmlTimeSpan): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getExtents")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetVisibility(value: () => GEVisibilityEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getVisibility")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetVisibility(value: GEVisibilityEnum => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setVisibility")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

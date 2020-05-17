@@ -1,6 +1,6 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonDark
+import typingsSlinky.vscode.anon.Dark
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait QuickInputButton extends js.Object {
   /**
   		 * Icon for the button.
   		 */
-  val iconPath: Uri | AnonDark | ThemeIcon = js.native
+  val iconPath: Uri | Dark | ThemeIcon = js.native
   /**
   		 * An optional tooltip.
   		 */
@@ -19,7 +19,7 @@ trait QuickInputButton extends js.Object {
 
 object QuickInputButton {
   @scala.inline
-  def apply(iconPath: Uri | AnonDark | ThemeIcon): QuickInputButton = {
+  def apply(iconPath: Uri | Dark | ThemeIcon): QuickInputButton = {
     val __obj = js.Dynamic.literal(iconPath = iconPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[QuickInputButton]
   }
@@ -30,7 +30,7 @@ object QuickInputButton {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withIconPath(value: Uri | AnonDark | ThemeIcon): Self = {
+    def withIconPath(value: Uri | Dark | ThemeIcon): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("iconPath")(value.asInstanceOf[js.Any])
         ret

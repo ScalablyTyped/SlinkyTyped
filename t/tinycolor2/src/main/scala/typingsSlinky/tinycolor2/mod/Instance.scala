@@ -20,7 +20,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Instance extends _ColorInput {
+trait Instance extends ColorInput {
   /**
     * Gets an analogous color scheme based off of the current color.
     *

@@ -1,7 +1,7 @@
 package typingsSlinky.wordpressElement.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.wordpressElement.AnonChildren
+import typingsSlinky.wordpressElement.anon.Children
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ object RawHTML extends js.Object {
     * @return Dangerously-rendering element.
     */
   def apply(
-    props: AnonChildren with (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HTMLProps<HTMLDivElement> */ js.Any)
+    props: Children with (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HTMLProps<HTMLDivElement> */ js.Any)
   ): ReactElement = js.native
 }
 

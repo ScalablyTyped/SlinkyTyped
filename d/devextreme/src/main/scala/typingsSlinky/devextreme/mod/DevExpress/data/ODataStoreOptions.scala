@@ -1,7 +1,7 @@
 package typingsSlinky.devextreme.mod.DevExpress.data
 
-import typingsSlinky.devextreme.AnonAsync
-import typingsSlinky.devextreme.AnonErrorDetails
+import typingsSlinky.devextreme.anon.Async
+import typingsSlinky.devextreme.anon.ErrorDetails
 import typingsSlinky.devextreme.devextremeStrings.Decimal
 import typingsSlinky.devextreme.devextremeStrings.Int32
 import typingsSlinky.devextreme.devextremeStrings.Int64
@@ -14,12 +14,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ODataStoreOptions extends StoreOptions[ODataStore] {
   /** Specifies a function that customizes the request before it is sent to the server. */
-  var beforeSend: js.UndefOr[js.Function1[/* options */ AnonAsync, _]] = js.native
+  var beforeSend: js.UndefOr[js.Function1[/* options */ Async, _]] = js.native
   /** Specifies whether the store serializes/parses date-time values. */
   var deserializeDates: js.UndefOr[Boolean] = js.native
   /** Specifies a function that is executed when the ODataStore throws an error. */
   @JSName("errorHandler")
-  var errorHandler_ODataStoreOptions: js.UndefOr[js.Function1[/* e */ AnonErrorDetails, _]] = js.native
+  var errorHandler_ODataStoreOptions: js.UndefOr[js.Function1[/* e */ ErrorDetails, _]] = js.native
   /** Specifies the data field types. Accepts the following types: "String", "Int32", "Int64", "Boolean", "Single", "Decimal" and "Guid". */
   var fieldTypes: js.UndefOr[js.Any] = js.native
   /** Specifies whether to convert string values to lowercase in filter and search requests. Applies to the following operations: "startswith", "endswith", "contains", and "notcontains". */
@@ -51,7 +51,7 @@ object ODataStoreOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBeforeSend(value: /* options */ AnonAsync => _): Self = {
+    def withBeforeSend(value: /* options */ Async => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeSend")(js.Any.fromFunction1(value))
         ret
@@ -75,7 +75,7 @@ object ODataStoreOptions {
         ret
     }
     @scala.inline
-    def withErrorHandler(value: /* e */ AnonErrorDetails => _): Self = {
+    def withErrorHandler(value: /* e */ ErrorDetails => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("errorHandler")(js.Any.fromFunction1(value))
         ret

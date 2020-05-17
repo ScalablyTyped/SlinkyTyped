@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Box2D.Collision.b2Segment")
 @js.native
-class b2Segment () extends js.Object {
+trait b2Segment extends js.Object {
   /**
   		* The starting point.
   		**/
@@ -39,5 +38,64 @@ class b2Segment () extends js.Object {
   		* @return True if there is an intersection, otherwise false.
   		**/
   def TestSegment(lambda: js.Array[Double], normal: b2Vec2, segment: b2Segment, maxLambda: Double): Boolean = js.native
+}
+
+object b2Segment {
+  @scala.inline
+  def apply(
+    Extend: b2AABB => Unit,
+    ExtendBackward: b2AABB => Unit,
+    ExtendForward: b2AABB => Unit,
+    TestSegment: (js.Array[Double], b2Vec2, b2Segment, Double) => Boolean,
+    p1: b2Vec2,
+    p2: b2Vec2
+  ): b2Segment = {
+    val __obj = js.Dynamic.literal(Extend = js.Any.fromFunction1(Extend), ExtendBackward = js.Any.fromFunction1(ExtendBackward), ExtendForward = js.Any.fromFunction1(ExtendForward), TestSegment = js.Any.fromFunction4(TestSegment), p1 = p1.asInstanceOf[js.Any], p2 = p2.asInstanceOf[js.Any])
+    __obj.asInstanceOf[b2Segment]
+  }
+  @scala.inline
+  implicit class b2SegmentOps[Self <: b2Segment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExtend(value: b2AABB => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Extend")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withExtendBackward(value: b2AABB => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtendBackward")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withExtendForward(value: b2AABB => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExtendForward")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTestSegment(value: (js.Array[Double], b2Vec2, b2Segment, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TestSegment")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withP1(value: b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withP2(value: b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p2")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

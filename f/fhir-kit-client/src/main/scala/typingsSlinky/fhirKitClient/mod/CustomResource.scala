@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
 trait CustomResource
   extends ResourceBase
      with /* key */ StringDictionary[js.Any]
+     with FhirResource
 
 object CustomResource {
   @scala.inline

@@ -1,13 +1,13 @@
 package typingsSlinky.cypress
 
-import typingsSlinky.cypress.JQuery_._Falsy
+import typingsSlinky.cypress.JQuery.Falsy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object cypressBooleans {
   @js.native
-  sealed trait `false` extends _Falsy
+  sealed trait `false` extends Falsy
   
   @js.native
   sealed trait `true` extends js.Object

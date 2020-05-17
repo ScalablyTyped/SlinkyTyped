@@ -1,6 +1,6 @@
 package typingsSlinky.whatwgUrl.mod
 
-import typingsSlinky.whatwgUrl.AnonEncodingOverride
+import typingsSlinky.whatwgUrl.anon.EncodingOverride
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object basicURLParse extends js.Object {
   def apply(input: String): URLRecord | Null = js.native
-  def apply(input: String, options: AnonEncodingOverride): URLRecord | Null = js.native
+  def apply(input: String, options: EncodingOverride): URLRecord | Null = js.native
 }
 

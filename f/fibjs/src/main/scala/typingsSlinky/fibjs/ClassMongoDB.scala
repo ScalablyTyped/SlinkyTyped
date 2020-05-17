@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 	* @brief mongodb 数据库连接对象
 	* @detail 使用 db.open 或 db.openMongoDB 创建，创建方式：,```JavaScript,var mdb = db.openMongoDB("mongodb://host/db");,```
 	*/
-@JSGlobal("Class_MongoDB")
 @js.native
-class ClassMongoDB () extends ClassObject {
+trait ClassMongoDB extends ClassObject {
   /**
   	 * 
   	 * @brief 关闭当前数据库连接

@@ -1,6 +1,6 @@
 package typingsSlinky.baiduApp.swan
 
-import typingsSlinky.baiduApp.AnonShareTickets
+import typingsSlinky.baiduApp.anon.ShareTickets
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ trait ShareAppMessage
   		 */
   var path: js.UndefOr[String] = js.native
   @JSName("success")
-  var success_ShareAppMessage: js.UndefOr[js.Function1[/* res */ AnonShareTickets, Unit]] = js.native
+  var success_ShareAppMessage: js.UndefOr[js.Function1[/* res */ ShareTickets, Unit]] = js.native
   /**
   		 * 分享标题  默认为当前小程序名称
   		 *
@@ -83,7 +83,7 @@ object ShareAppMessage {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonShareTickets => Unit): Self = {
+    def withSuccess(value: /* res */ ShareTickets => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

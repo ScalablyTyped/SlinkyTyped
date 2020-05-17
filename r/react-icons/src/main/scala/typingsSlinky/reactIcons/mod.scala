@@ -2,6 +2,7 @@ package typingsSlinky.reactIcons
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Context
+import typingsSlinky.reactIcons.anon.IconBasePropsattrundefine
 import typingsSlinky.reactIcons.iconBaseMod.IconBaseProps
 import typingsSlinky.reactIcons.iconBaseMod.IconTree
 import typingsSlinky.reactIcons.iconsManifestMod.IconManifest

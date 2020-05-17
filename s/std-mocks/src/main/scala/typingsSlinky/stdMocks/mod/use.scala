@@ -1,6 +1,6 @@
 package typingsSlinky.stdMocks.mod
 
-import typingsSlinky.stdMocks.Optionsprintboolean
+import typingsSlinky.stdMocks.anon.Optionsprintboolean
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

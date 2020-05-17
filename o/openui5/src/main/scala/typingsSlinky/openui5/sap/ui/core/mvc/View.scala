@@ -1,6 +1,5 @@
 package typingsSlinky.openui5.sap.ui.core.mvc
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.jquery.JQueryPromise
 import typingsSlinky.openui5.sap.ui.core.Control
 import typingsSlinky.openui5.sap.ui.core.Element
@@ -9,19 +8,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("sap.ui.core.mvc.View")
 @js.native
-class View protected () extends Control {
-  /**
-    * Constructor for a new View.Accepts an object literal <code>mSettings</code> that defines
-    * initialproperty values, aggregated and associated objects as well as event handlers.See {@link
-    * sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings
-    * object.
-    * @param sId id for the new control, generated automatically if no id is given
-    * @param mSettings initial settings for the new control
-    */
-  def this(sId: String) = this()
-  def this(sId: String, mSettings: js.Any) = this()
+trait View extends Control {
   /**
     * Adds some content to the aggregation <code>content</code>.
     * @param oContent the content to add; if empty, nothing is inserted
@@ -415,23 +403,6 @@ object View extends js.Object {
       
       @js.native
       sealed trait XML extends ViewType
-      
-      @JSBracketAccess
-      def apply(value: Double): js.UndefOr[ViewType with Double] = js.native
-      /* 0 */ @js.native
-      object HTML extends TopLevel[HTML with Double]
-      
-      /* 1 */ @js.native
-      object JS extends TopLevel[JS with Double]
-      
-      /* 2 */ @js.native
-      object JSON extends TopLevel[JSON with Double]
-      
-      /* 3 */ @js.native
-      object Template extends TopLevel[Template with Double]
-      
-      /* 4 */ @js.native
-      object XML extends TopLevel[XML with Double]
       
     }
     

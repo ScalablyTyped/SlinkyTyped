@@ -1,9 +1,9 @@
 package typingsSlinky.reactVirtualized.esTableMod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactVirtualized.AnonAlignmentIndex
-import typingsSlinky.reactVirtualized.AnonClassName
-import typingsSlinky.reactVirtualized.AnonDisableHeader
+import typingsSlinky.reactVirtualized.anon.AlignmentIndex
+import typingsSlinky.reactVirtualized.anon.ClassName
+import typingsSlinky.reactVirtualized.anon.DisableHeader
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ class Table ()
   var Grid: typingsSlinky.reactVirtualized.esGridMod.Grid = js.native
   def forceUpdateGrid(): Unit = js.native
   /** See Grid#getOffsetForCell */
-  def getOffsetForRow(params: AnonAlignmentIndex): Double = js.native
+  def getOffsetForRow(params: AlignmentIndex): Double = js.native
   /** See Grid#measureAllCells */
   def measureAllRows(): Unit = js.native
   /** See Grid#recomputeGridSize */
@@ -33,7 +33,7 @@ class Table ()
 @JSImport("react-virtualized/dist/es/Table", "Table")
 @js.native
 object Table extends js.Object {
-  var defaultProps: AnonDisableHeader = js.native
-  var propTypes: AnonClassName = js.native
+  var defaultProps: DisableHeader = js.native
+  var propTypes: ClassName = js.native
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.cassandraDriver.metadataMod.metadata
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.cassandraDriver.AnonActivity
+import typingsSlinky.cassandraDriver.anon.Activity
 import typingsSlinky.cassandraDriver.typesMod.types.InetAddress
 import typingsSlinky.cassandraDriver.typesMod.types.Long
 import scala.scalajs.js
@@ -13,7 +13,7 @@ trait QueryTrace extends js.Object {
   var clientAddress: String = js.native
   var coordinator: InetAddress = js.native
   var duration: Double = js.native
-  var events: js.Array[AnonActivity] = js.native
+  var events: js.Array[Activity] = js.native
   var parameters: StringDictionary[js.Any] = js.native
   var requestType: String = js.native
   var startedAt: Double | Long = js.native
@@ -25,7 +25,7 @@ object QueryTrace {
     clientAddress: String,
     coordinator: InetAddress,
     duration: Double,
-    events: js.Array[AnonActivity],
+    events: js.Array[Activity],
     parameters: StringDictionary[js.Any],
     requestType: String,
     startedAt: Double | Long
@@ -58,7 +58,7 @@ object QueryTrace {
         ret
     }
     @scala.inline
-    def withEvents(value: js.Array[AnonActivity]): Self = {
+    def withEvents(value: js.Array[Activity]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
         ret

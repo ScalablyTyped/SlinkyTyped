@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +17,25 @@ trait lang extends js.Object {
   def clone(elem: js.Any): js.Any = js.native
 }
 
-@JSGlobal("__esri.lang")
-@js.native
-object lang extends TopLevel[lang]
+object lang {
+  @scala.inline
+  def apply(clone: js.Any => js.Any): lang = {
+    val __obj = js.Dynamic.literal(clone = js.Any.fromFunction1(clone))
+    __obj.asInstanceOf[lang]
+  }
+  @scala.inline
+  implicit class langOps[Self <: lang] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClone(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clone")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

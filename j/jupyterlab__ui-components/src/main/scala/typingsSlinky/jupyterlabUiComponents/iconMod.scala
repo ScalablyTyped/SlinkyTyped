@@ -1,6 +1,7 @@
 package typingsSlinky.jupyterlabUiComponents
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.jupyterlabUiComponents.anon.INodeOptionstagspandiv
 import typingsSlinky.jupyterlabUiComponents.interfacesMod.Icon.IModel
 import typingsSlinky.jupyterlabUiComponents.styleIconMod.IconKindType
 import typingsSlinky.jupyterlabUiComponents.tabbarsvgMod.DockPanelSvg.IOptions

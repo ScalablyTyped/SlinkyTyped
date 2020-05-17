@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.paymentIntents
 
-import typingsSlinky.stripe.AnonReturnurl
+import typingsSlinky.stripe.anon.Returnurl
 import typingsSlinky.stripe.stripeStrings.redirect_to_url
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,13 +11,13 @@ trait IPaymentIntentNextActionRedirectToUrl extends js.Object {
   /**
     * Contains instructions for authenticating a payment by redirecting your customer to another page or application.
     */
-  var redirect_to_url: AnonReturnurl = js.native
+  var redirect_to_url: Returnurl = js.native
   var `type`: redirect_to_url = js.native
 }
 
 object IPaymentIntentNextActionRedirectToUrl {
   @scala.inline
-  def apply(redirect_to_url: AnonReturnurl, `type`: redirect_to_url): IPaymentIntentNextActionRedirectToUrl = {
+  def apply(redirect_to_url: Returnurl, `type`: redirect_to_url): IPaymentIntentNextActionRedirectToUrl = {
     val __obj = js.Dynamic.literal(redirect_to_url = redirect_to_url.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPaymentIntentNextActionRedirectToUrl]
@@ -29,7 +29,7 @@ object IPaymentIntentNextActionRedirectToUrl {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withRedirect_to_url(value: AnonReturnurl): Self = {
+    def withRedirect_to_url(value: Returnurl): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("redirect_to_url")(value.asInstanceOf[js.Any])
         ret

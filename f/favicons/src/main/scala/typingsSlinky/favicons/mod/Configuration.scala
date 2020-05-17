@@ -1,6 +1,6 @@
 package typingsSlinky.favicons.mod
 
-import typingsSlinky.favicons.PartialandroidbooleanIcon
+import typingsSlinky.favicons.anon.PartialandroidbooleanIcon
 import typingsSlinky.favicons.faviconsStrings.`black-translucent`
 import typingsSlinky.favicons.faviconsStrings.`minimal-ui`
 import typingsSlinky.favicons.faviconsStrings.any

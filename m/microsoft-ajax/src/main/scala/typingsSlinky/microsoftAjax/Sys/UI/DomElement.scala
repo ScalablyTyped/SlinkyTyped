@@ -1,9 +1,8 @@
 package typingsSlinky.microsoftAjax.Sys.UI
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.microsoftAjax.AnonHeight
 import typingsSlinky.microsoftAjax.Sys.EventArgs
+import typingsSlinky.microsoftAjax.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,7 +43,7 @@ trait DomElement extends js.Object {
     * @return
     *      An object of the JavaScript type Object that contains the x-coordinate and y-coordinate of the upper-left corner, the width, and the height of the element in pixels.
     */
-  def getBounds(element: HTMLElement): AnonHeight = js.native
+  def getBounds(element: HTMLElement): Height = js.native
   /**
     * @param id
     *      The ID of the element to find.
@@ -164,8 +163,4 @@ trait DomElement extends js.Object {
     */
   def toggleCssClass(element: HTMLElement, className: String): Unit = js.native
 }
-
-@JSGlobal("Sys.UI.DomElement")
-@js.native
-object DomElement extends TopLevel[DomElement]
 

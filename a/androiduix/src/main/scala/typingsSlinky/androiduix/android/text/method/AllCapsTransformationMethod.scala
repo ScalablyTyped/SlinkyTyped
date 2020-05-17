@@ -1,20 +1,40 @@
 package typingsSlinky.androiduix.android.text.method
 
+import typingsSlinky.androiduix.android.graphics.Rect
+import typingsSlinky.androiduix.android.view.View
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.text.method.AllCapsTransformationMethod")
 @js.native
-class AllCapsTransformationMethod () extends TransformationMethod2 {
-  def this(context: js.Any) = this()
+trait AllCapsTransformationMethod extends TransformationMethod2 {
   var mEnabled: js.Any = js.native
 }
 
-/* static members */
-@JSGlobal("android.text.method.AllCapsTransformationMethod")
-@js.native
-object AllCapsTransformationMethod extends js.Object {
-  var TAG: js.Any = js.native
+object AllCapsTransformationMethod {
+  @scala.inline
+  def apply(
+    getTransformation: (String, View) => String,
+    mEnabled: js.Any,
+    onFocusChanged: (View, String, Boolean, Double, Rect) => Unit,
+    setLengthChangesAllowed: Boolean => Unit
+  ): AllCapsTransformationMethod = {
+    val __obj = js.Dynamic.literal(getTransformation = js.Any.fromFunction2(getTransformation), mEnabled = mEnabled.asInstanceOf[js.Any], onFocusChanged = js.Any.fromFunction5(onFocusChanged), setLengthChangesAllowed = js.Any.fromFunction1(setLengthChangesAllowed))
+    __obj.asInstanceOf[AllCapsTransformationMethod]
+  }
+  @scala.inline
+  implicit class AllCapsTransformationMethodOps[Self <: AllCapsTransformationMethod] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMEnabled(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

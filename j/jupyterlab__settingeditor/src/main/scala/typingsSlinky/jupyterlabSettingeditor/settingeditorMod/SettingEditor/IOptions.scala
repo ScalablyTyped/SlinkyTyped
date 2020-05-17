@@ -5,7 +5,7 @@ import typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.IEditor
 import typingsSlinky.jupyterlabCoreutils.tokensMod.ISettingRegistry
 import typingsSlinky.jupyterlabCoreutils.tokensMod.IStateDB
 import typingsSlinky.jupyterlabRendermime.tokensMod.IRenderMimeRegistry
-import typingsSlinky.jupyterlabSettingeditor.AnonRegistry
+import typingsSlinky.jupyterlabSettingeditor.anon.Registry
 import typingsSlinky.phosphorCoreutils.jsonMod.ReadonlyJSONValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +19,7 @@ trait IOptions extends js.Object {
   /**
     * The toolbar commands and registry for the setting editor toolbar.
     */
-  var commands: AnonRegistry = js.native
+  var commands: Registry = js.native
   /**
     * The editor factory used by the setting editor.
     */
@@ -49,7 +49,7 @@ trait IOptions extends js.Object {
 object IOptions {
   @scala.inline
   def apply(
-    commands: AnonRegistry,
+    commands: Registry,
     editorFactory: /* options */ typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.IOptions => IEditor,
     key: String,
     registry: ISettingRegistry,
@@ -65,7 +65,7 @@ object IOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCommands(value: AnonRegistry): Self = {
+    def withCommands(value: Registry): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(value.asInstanceOf[js.Any])
         ret

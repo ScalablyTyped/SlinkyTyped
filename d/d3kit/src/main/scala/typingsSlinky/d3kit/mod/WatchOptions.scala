@@ -1,7 +1,7 @@
 package typingsSlinky.d3kit.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.d3kit.AnonHeight
+import typingsSlinky.d3kit.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait WatchOptions extends js.Object {
   var interval: js.UndefOr[Double] = js.native
   var mode: js.UndefOr[String] = js.native
-  var target: js.UndefOr[Element | (js.Tuple2[Double, Double]) | AnonHeight | Null] = js.native
+  var target: js.UndefOr[Element | (js.Tuple2[Double, Double]) | Height | Null] = js.native
 }
 
 object WatchOptions {
@@ -56,7 +56,7 @@ object WatchOptions {
         ret
     }
     @scala.inline
-    def withTarget(value: Element | (js.Tuple2[Double, Double]) | AnonHeight): Self = {
+    def withTarget(value: Element | (js.Tuple2[Double, Double]) | Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
         ret

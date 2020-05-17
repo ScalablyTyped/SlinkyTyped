@@ -1,7 +1,7 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.AnonChildrenString
-import typingsSlinky.tabris.OmitTextInputset
+import typingsSlinky.tabris.anon.ChildrenString
+import typingsSlinky.tabris.anon.OmitTextInputset
 import typingsSlinky.tabris.tabrisBooleans.`false`
 import typingsSlinky.tabris.tabrisBooleans.`true`
 import typingsSlinky.tabris.tabrisStrings.alignment
@@ -116,7 +116,7 @@ class TextInput () extends Widget {
     * @constant
     */
   @JSName("jsxAttributes")
-  val jsxAttributes_TextInput: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with AnonChildrenString = js.native
+  val jsxAttributes_TextInput: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with ChildrenString = js.native
   /**
     * When `true` the `TextInput` will keep its focus, even when tapped outside of the widget bounds.
     */

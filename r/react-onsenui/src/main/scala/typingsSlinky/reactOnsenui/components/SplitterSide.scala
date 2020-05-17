@@ -1,9 +1,10 @@
 package typingsSlinky.reactOnsenui.components
 
+import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameAnimation
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameAnimation
 import typingsSlinky.reactOnsenui.mod.AnimationOptions
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.collapse
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.default
@@ -13,7 +14,6 @@ import typingsSlinky.reactOnsenui.reactOnsenuiStrings.overlay
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.portrait
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.right
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.split
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,15 +42,15 @@ object SplitterSide {
     @scala.inline
     def mode(value: collapse | split): this.type = set("mode", value.asInstanceOf[js.Any])
     @scala.inline
-    def onClose(value: /* e */ js.UndefOr[Event_] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
+    def onClose(value: /* e */ js.UndefOr[Event] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
     @scala.inline
-    def onModeChange(value: /* e */ js.UndefOr[Event_] => Unit): this.type = set("onModeChange", js.Any.fromFunction1(value))
+    def onModeChange(value: /* e */ js.UndefOr[Event] => Unit): this.type = set("onModeChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onOpen(value: /* e */ js.UndefOr[Event_] => Unit): this.type = set("onOpen", js.Any.fromFunction1(value))
+    def onOpen(value: /* e */ js.UndefOr[Event] => Unit): this.type = set("onOpen", js.Any.fromFunction1(value))
     @scala.inline
-    def onPreClose(value: /* e */ js.UndefOr[Event_] => Unit): this.type = set("onPreClose", js.Any.fromFunction1(value))
+    def onPreClose(value: /* e */ js.UndefOr[Event] => Unit): this.type = set("onPreClose", js.Any.fromFunction1(value))
     @scala.inline
-    def onPreOpen(value: /* e */ js.UndefOr[Event_] => Unit): this.type = set("onPreOpen", js.Any.fromFunction1(value))
+    def onPreOpen(value: /* e */ js.UndefOr[Event] => Unit): this.type = set("onPreOpen", js.Any.fromFunction1(value))
     @scala.inline
     def openThreshold(value: Double): this.type = set("openThreshold", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,6 +1,6 @@
 package typingsSlinky.seleniumWebdriver.mod.error
 
-import typingsSlinky.seleniumWebdriver.AnonMessage
+import typingsSlinky.seleniumWebdriver.anon.Message
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait MaybeLegacyResponse extends js.Object {
   var getAlertText: js.UndefOr[js.Function0[String]] = js.native
   var message: js.UndefOr[String] = js.native
   var status: js.UndefOr[Double] = js.native
-  var value: js.UndefOr[AnonMessage] = js.native
+  var value: js.UndefOr[Message] = js.native
 }
 
 object MaybeLegacyResponse {
@@ -62,7 +62,7 @@ object MaybeLegacyResponse {
         ret
     }
     @scala.inline
-    def withValue(value: AnonMessage): Self = {
+    def withValue(value: Message): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
         ret

@@ -1,16 +1,16 @@
 package typingsSlinky.netlifyIdentityWidget.mod
 
-import typingsSlinky.netlifyIdentityWidget.AnonApiURL
-import typingsSlinky.netlifyIdentityWidget.AnonAvatarurl
-import typingsSlinky.netlifyIdentityWidget.AnonProvider
+import typingsSlinky.netlifyIdentityWidget.anon.ApiURL
+import typingsSlinky.netlifyIdentityWidget.anon.Avatarurl
+import typingsSlinky.netlifyIdentityWidget.anon.Provider
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait User extends js.Object {
-  var api: AnonApiURL = js.native
-  var app_metadata: AnonProvider = js.native
+  var api: ApiURL = js.native
+  var app_metadata: Provider = js.native
   var aud: String = js.native
   var audience: js.UndefOr[js.Any] = js.native
   var confirmed_at: String = js.native
@@ -21,14 +21,14 @@ trait User extends js.Object {
   var token: js.UndefOr[Token] = js.native
   var updated_at: String = js.native
   var url: String = js.native
-  var user_metadata: AnonAvatarurl = js.native
+  var user_metadata: Avatarurl = js.native
 }
 
 object User {
   @scala.inline
   def apply(
-    api: AnonApiURL,
-    app_metadata: AnonProvider,
+    api: ApiURL,
+    app_metadata: Provider,
     aud: String,
     confirmed_at: String,
     created_at: String,
@@ -37,7 +37,7 @@ object User {
     role: String,
     updated_at: String,
     url: String,
-    user_metadata: AnonAvatarurl
+    user_metadata: Avatarurl
   ): User = {
     val __obj = js.Dynamic.literal(api = api.asInstanceOf[js.Any], app_metadata = app_metadata.asInstanceOf[js.Any], aud = aud.asInstanceOf[js.Any], confirmed_at = confirmed_at.asInstanceOf[js.Any], created_at = created_at.asInstanceOf[js.Any], email = email.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], role = role.asInstanceOf[js.Any], updated_at = updated_at.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], user_metadata = user_metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[User]
@@ -49,13 +49,13 @@ object User {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withApi(value: AnonApiURL): Self = {
+    def withApi(value: ApiURL): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("api")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withApp_metadata(value: AnonProvider): Self = {
+    def withApp_metadata(value: Provider): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("app_metadata")(value.asInstanceOf[js.Any])
         ret
@@ -109,7 +109,7 @@ object User {
         ret
     }
     @scala.inline
-    def withUser_metadata(value: AnonAvatarurl): Self = {
+    def withUser_metadata(value: Avatarurl): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("user_metadata")(value.asInstanceOf[js.Any])
         ret

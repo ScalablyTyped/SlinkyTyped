@@ -1,8 +1,8 @@
 package typingsSlinky.gulpMinify.mod
 
-import typingsSlinky.gulpMinify.AnonAsciionly
-import typingsSlinky.gulpMinify.AnonBooleans
-import typingsSlinky.gulpMinify.AnonMin
+import typingsSlinky.gulpMinify.anon.Asciionly
+import typingsSlinky.gulpMinify.anon.Booleans
+import typingsSlinky.gulpMinify.anon.Min
 import typingsSlinky.gulpMinify.gulpMinifyStrings.all
 import typingsSlinky.gulpMinify.gulpMinifyStrings.some
 import scala.scalajs.js
@@ -14,7 +14,7 @@ trait Options extends js.Object {
   /**
     * Pass an object to specify custom compressor options. Pass false to skip compression completely.
     */
-  var compress: js.UndefOr[AnonBooleans | Boolean] = js.native
+  var compress: js.UndefOr[Booleans | Boolean] = js.native
   /**
     * Will not minify files in the dirs.
     */
@@ -22,7 +22,7 @@ trait Options extends js.Object {
   /**
     * An object that specifies output src and minified file extensions.
     */
-  var ext: js.UndefOr[AnonMin] = js.native
+  var ext: js.UndefOr[Min] = js.native
   /**
     * Will not minify files which matches the pattern.
     */
@@ -38,7 +38,7 @@ trait Options extends js.Object {
   /**
     * Pass an object if you wish to specify additional output options.The defaults are optimized for best compression.
     */
-  var output: js.UndefOr[AnonAsciionly] = js.native
+  var output: js.UndefOr[Asciionly] = js.native
   /**
     * A convenience option for options.output.comments. Defaults to preserving no comments.
     *
@@ -66,7 +66,7 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCompress(value: AnonBooleans | Boolean): Self = {
+    def withCompress(value: Booleans | Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("compress")(value.asInstanceOf[js.Any])
         ret
@@ -90,7 +90,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withExt(value: AnonMin): Self = {
+    def withExt(value: Min): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ext")(value.asInstanceOf[js.Any])
         ret
@@ -138,7 +138,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withOutput(value: AnonAsciionly): Self = {
+    def withOutput(value: Asciionly): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
         ret

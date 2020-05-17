@@ -1,7 +1,6 @@
 package typingsSlinky.ioredis.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.ioredis.AnonPipeline
 import typingsSlinky.ioredis.ioredisStrings.AFTER
 import typingsSlinky.ioredis.ioredisStrings.BEFORE
 import typingsSlinky.ioredis.ioredisStrings.COUNT
@@ -851,7 +850,7 @@ trait Commands extends js.Object {
   def multi(): Pipeline = js.native
   def multi(commands: js.Array[js.Array[String]]): Pipeline = js.native
   def multi(commands: js.Array[js.Array[String]], options: MultiOptions): Pipeline = js.native
-  def multi(options: AnonPipeline): js.Promise[Ok] = js.native
+  def multi(options: typingsSlinky.ioredis.anon.Pipeline): js.Promise[Ok] = js.native
   def `object`(arg1: js.Array[ValueType]): js.Promise[_] = js.native
   def `object`(arg1: js.Array[ValueType], cb: Callback[_]): Unit = js.native
   def `object`(

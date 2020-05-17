@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TSTypeAnnotation_
   extends BaseNode
-     with _Node {
+     with Node {
   var typeAnnotation: TSType = js.native
   @JSName("type")
   var type_TSTypeAnnotation_ : TSTypeAnnotation = js.native

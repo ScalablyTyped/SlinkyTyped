@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Message extends js.Object {
+trait Message extends MessageOrName {
   var body: String = js.native
   var brokerProperties: js.UndefOr[BrokerProperties] = js.native
   var contentType: js.UndefOr[String] = js.native

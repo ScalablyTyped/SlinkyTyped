@@ -1,7 +1,7 @@
 package typingsSlinky.ranjs.mod
 
-import typingsSlinky.ranjs.AnonClosed
-import typingsSlinky.ranjs.AnonStatistics
+import typingsSlinky.ranjs.anon.Closed
+import typingsSlinky.ranjs.anon.Statistics
 import typingsSlinky.ranjs.ranjsStrings.continuous
 import typingsSlinky.ranjs.ranjsStrings.discrete
 import scala.scalajs.js
@@ -28,9 +28,9 @@ object _dist extends js.Object {
     def save(): State[T] = js.native
     def seed(value: String): this.type = js.native
     def seed(value: Double): this.type = js.native
-    def support(): js.Array[AnonClosed] = js.native
+    def support(): js.Array[Closed] = js.native
     def survival(x: Double): Double = js.native
-    def test(values: js.Array[Double]): AnonStatistics = js.native
+    def test(values: js.Array[Double]): Statistics = js.native
     def `type`(): discrete | continuous = js.native
   }
   

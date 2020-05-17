@@ -12,3 +12,14 @@ import scala.scalajs.js.annotation._
 */
 trait BlockLike extends js.Object
 
+object BlockLike {
+  @scala.inline
+  implicit def apply(value: Block): BlockLike = value.asInstanceOf[BlockLike]
+  @scala.inline
+  implicit def apply(value: CaseOrDefaultClause): BlockLike = value.asInstanceOf[BlockLike]
+  @scala.inline
+  implicit def apply(value: ModuleBlock): BlockLike = value.asInstanceOf[BlockLike]
+  @scala.inline
+  implicit def apply(value: SourceFile): BlockLike = value.asInstanceOf[BlockLike]
+}
+

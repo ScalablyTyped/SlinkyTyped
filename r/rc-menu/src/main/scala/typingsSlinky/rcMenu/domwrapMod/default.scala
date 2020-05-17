@@ -1,6 +1,6 @@
 package typingsSlinky.rcMenu.domwrapMod
 
-import typingsSlinky.rcMenu.AnonClassName
+import typingsSlinky.rcMenu.anon.ClassName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ class default () extends DOMWrap
 @JSImport("rc-menu/lib/DOMWrap", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonClassName = js.native
+  var defaultProps: ClassName = js.native
 }
 

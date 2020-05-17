@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ClientRequest
-  extends /* key */ StringDictionary[js.Any] {
+  extends // Users can use server middleware to add additional metadata to snapshots.
+/* key */ StringDictionary[js.Any] {
   /** Short name of the request's action */
   var a: RequestAction = js.native
 }

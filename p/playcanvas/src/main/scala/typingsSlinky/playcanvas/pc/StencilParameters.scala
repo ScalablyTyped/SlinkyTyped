@@ -18,10 +18,8 @@ import scala.scalajs.js.annotation._
   * @property {number} readMask Sets stencil test reading mask. See {@link pc.GraphicsDevice#setStencilFunc}.
   * @property {number} writeMask Sets stencil test writing mask. See {@link pc.GraphicsDevice#setStencilOperation}.
   */
-@JSGlobal("pc.StencilParameters")
 @js.native
-class StencilParameters protected () extends js.Object {
-  def this(options: js.Any) = this()
+trait StencilParameters extends js.Object {
   /**
     * Sets operation to perform if stencil test is failed. See {@link pc.GraphicsDevice#setStencilOperation}.
     */
@@ -50,5 +48,71 @@ class StencilParameters protected () extends js.Object {
     * Sets operation to perform if both stencil and depth test are passed. See {@link pc.GraphicsDevice#setStencilOperation}.
     */
   var zpass: Double = js.native
+}
+
+object StencilParameters {
+  @scala.inline
+  def apply(
+    fail: Double,
+    func: Double,
+    readMask: Double,
+    ref: Double,
+    writeMask: Double,
+    zfail: Double,
+    zpass: Double
+  ): StencilParameters = {
+    val __obj = js.Dynamic.literal(fail = fail.asInstanceOf[js.Any], func = func.asInstanceOf[js.Any], readMask = readMask.asInstanceOf[js.Any], ref = ref.asInstanceOf[js.Any], writeMask = writeMask.asInstanceOf[js.Any], zfail = zfail.asInstanceOf[js.Any], zpass = zpass.asInstanceOf[js.Any])
+    __obj.asInstanceOf[StencilParameters]
+  }
+  @scala.inline
+  implicit class StencilParametersOps[Self <: StencilParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFail(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFunc(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("func")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReadMask(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readMask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRef(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ref")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWriteMask(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeMask")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withZfail(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zfail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withZpass(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("zpass")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

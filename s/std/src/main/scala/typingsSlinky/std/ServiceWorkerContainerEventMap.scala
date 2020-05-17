@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ServiceWorkerContainerEventMap extends js.Object {
-  var controllerchange: Event_ = js.native
+  var controllerchange: org.scalajs.dom.raw.Event = js.native
   var message: org.scalajs.dom.raw.MessageEvent = js.native
   var messageerror: org.scalajs.dom.raw.MessageEvent = js.native
 }
@@ -14,7 +14,7 @@ trait ServiceWorkerContainerEventMap extends js.Object {
 object ServiceWorkerContainerEventMap {
   @scala.inline
   def apply(
-    controllerchange: Event_,
+    controllerchange: org.scalajs.dom.raw.Event,
     message: org.scalajs.dom.raw.MessageEvent,
     messageerror: org.scalajs.dom.raw.MessageEvent
   ): ServiceWorkerContainerEventMap = {
@@ -28,7 +28,7 @@ object ServiceWorkerContainerEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withControllerchange(value: Event_): Self = {
+    def withControllerchange(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("controllerchange")(value.asInstanceOf[js.Any])
         ret

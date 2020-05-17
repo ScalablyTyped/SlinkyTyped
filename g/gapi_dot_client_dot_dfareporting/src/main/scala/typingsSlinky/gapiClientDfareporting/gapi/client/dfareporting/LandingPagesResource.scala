@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientDfareporting.gapi.client.dfareporting
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientDfareporting.AnonAltCampaignId
-import typingsSlinky.gapiClientDfareporting.AnonCampaignId
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientDfareporting.anon.AltCampaignId
+import typingsSlinky.gapiClientDfareporting.anon.CampaignId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,28 +10,28 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LandingPagesResource extends js.Object {
   /** Deletes an existing campaign landing page. */
-  def delete(request: AnonAltCampaignId): Request_[Unit] = js.native
+  def delete(request: AltCampaignId): Request[Unit] = js.native
   /** Gets one campaign landing page by ID. */
-  def get(request: AnonAltCampaignId): Request_[LandingPage] = js.native
+  def get(request: AltCampaignId): Request[LandingPage] = js.native
   /** Inserts a new landing page for the specified campaign. */
-  def insert(request: AnonCampaignId): Request_[LandingPage] = js.native
+  def insert(request: CampaignId): Request[LandingPage] = js.native
   /** Retrieves the list of landing pages for the specified campaign. */
-  def list(request: AnonCampaignId): Request_[LandingPagesListResponse] = js.native
+  def list(request: CampaignId): Request[LandingPagesListResponse] = js.native
   /** Updates an existing campaign landing page. This method supports patch semantics. */
-  def patch(request: AnonAltCampaignId): Request_[LandingPage] = js.native
+  def patch(request: AltCampaignId): Request[LandingPage] = js.native
   /** Updates an existing campaign landing page. */
-  def update(request: AnonCampaignId): Request_[LandingPage] = js.native
+  def update(request: CampaignId): Request[LandingPage] = js.native
 }
 
 object LandingPagesResource {
   @scala.inline
   def apply(
-    delete: AnonAltCampaignId => Request_[Unit],
-    get: AnonAltCampaignId => Request_[LandingPage],
-    insert: AnonCampaignId => Request_[LandingPage],
-    list: AnonCampaignId => Request_[LandingPagesListResponse],
-    patch: AnonAltCampaignId => Request_[LandingPage],
-    update: AnonCampaignId => Request_[LandingPage]
+    delete: AltCampaignId => Request[Unit],
+    get: AltCampaignId => Request[LandingPage],
+    insert: CampaignId => Request[LandingPage],
+    list: CampaignId => Request[LandingPagesListResponse],
+    patch: AltCampaignId => Request[LandingPage],
+    update: CampaignId => Request[LandingPage]
   ): LandingPagesResource = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[LandingPagesResource]
@@ -43,37 +43,37 @@ object LandingPagesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDelete(value: AnonAltCampaignId => Request_[Unit]): Self = {
+    def withDelete(value: AltCampaignId => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonAltCampaignId => Request_[LandingPage]): Self = {
+    def withGet(value: AltCampaignId => Request[LandingPage]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withInsert(value: AnonCampaignId => Request_[LandingPage]): Self = {
+    def withInsert(value: CampaignId => Request[LandingPage]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonCampaignId => Request_[LandingPagesListResponse]): Self = {
+    def withList(value: CampaignId => Request[LandingPagesListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPatch(value: AnonAltCampaignId => Request_[LandingPage]): Self = {
+    def withPatch(value: AltCampaignId => Request[LandingPage]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonCampaignId => Request_[LandingPage]): Self = {
+    def withUpdate(value: CampaignId => Request[LandingPage]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

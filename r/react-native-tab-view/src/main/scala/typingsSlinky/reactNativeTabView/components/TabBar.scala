@@ -6,7 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeTabView.AnonColor
+import typingsSlinky.reactNativeTabView.anon.Color
 import typingsSlinky.reactNativeTabView.tabBarMod.Props
 import typingsSlinky.reactNativeTabView.tabBarMod.default
 import typingsSlinky.reactNativeTabView.typesMod.Event
@@ -60,9 +60,9 @@ object TabBar {
     @scala.inline
     def renderBadge(value: /* scene */ Scene[T] => TagMod[Any]): this.type = set("renderBadge", js.Any.fromFunction1(value))
     @scala.inline
-    def renderIcon(value: /* scene */ Scene[T] with AnonColor => TagMod[Any]): this.type = set("renderIcon", js.Any.fromFunction1(value))
+    def renderIcon(value: /* scene */ Scene[T] with Color => TagMod[Any]): this.type = set("renderIcon", js.Any.fromFunction1(value))
     @scala.inline
-    def renderLabel(value: /* scene */ Scene[T] with AnonColor => TagMod[Any]): this.type = set("renderLabel", js.Any.fromFunction1(value))
+    def renderLabel(value: /* scene */ Scene[T] with Color => TagMod[Any]): this.type = set("renderLabel", js.Any.fromFunction1(value))
     @scala.inline
     def scrollEnabled(value: Boolean): this.type = set("scrollEnabled", value.asInstanceOf[js.Any])
     @scala.inline

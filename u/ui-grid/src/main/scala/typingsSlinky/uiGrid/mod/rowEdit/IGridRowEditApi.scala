@@ -1,7 +1,7 @@
 package typingsSlinky.uiGrid.mod.rowEdit
 
 import typingsSlinky.angular.mod.IPromise
-import typingsSlinky.uiGrid.AnonSaveRow
+import typingsSlinky.uiGrid.anon.SaveRow
 import typingsSlinky.uiGrid.mod.IGridInstanceOf
 import typingsSlinky.uiGrid.mod.IGridRowOf
 import scala.scalajs.js
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IGridRowEditApi[TEntity] extends js.Object {
   // Events
-  var on: AnonSaveRow[TEntity] = js.native
+  var on: SaveRow[TEntity] = js.native
   // Methods
   /**
     * Triggers a save event for all currently dirty rows.

@@ -1,5 +1,6 @@
 package typingsSlinky.bloem
 
+import typingsSlinky.bloem.anon.Initialcapacity
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,7 +26,7 @@ object mod extends js.Object {
   @js.native
   class ScalingBloem protected () extends js.Object {
     def this(error_rate: Double) = this()
-    def this(error_rate: Double, options: AnonInitialcapacity) = this()
+    def this(error_rate: Double, options: Initialcapacity) = this()
     def add(key: Buffer): Unit = js.native
     def has(key: Buffer): Boolean = js.native
   }

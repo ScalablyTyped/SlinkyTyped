@@ -1,13 +1,13 @@
 package typingsSlinky.reactNative.mod
 
-import typingsSlinky.reactNative.AnonChanged
+import typingsSlinky.reactNative.anon.Changed
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ViewabilityConfigCallbackPair extends js.Object {
-  var onViewableItemsChanged: (js.Function1[/* info */ AnonChanged, Unit]) | Null = js.native
+  var onViewableItemsChanged: (js.Function1[/* info */ Changed, Unit]) | Null = js.native
   var viewabilityConfig: ViewabilityConfig = js.native
 }
 
@@ -30,7 +30,7 @@ object ViewabilityConfigCallbackPair {
         ret
     }
     @scala.inline
-    def withOnViewableItemsChanged(value: /* info */ AnonChanged => Unit): Self = {
+    def withOnViewableItemsChanged(value: /* info */ Changed => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onViewableItemsChanged")(js.Any.fromFunction1(value))
         ret

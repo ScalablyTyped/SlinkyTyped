@@ -1,6 +1,6 @@
 package typingsSlinky.go.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,7 +43,7 @@ class InputEvent () extends js.Object {
   /**Gets or sets whether the InputEvent represents a mouse-down or a key-down event.*/
   var down: Boolean = js.native
   /**Gets or sets the platform's user-agent-supplied event for this event.*/
-  var event: Event_ = js.native
+  var event: Event = js.native
   /**Gets or sets whether an InputEvent that applies to a GraphObject and bubbles up the chain of containing Panels is stopped from continuing up the chain.*/
   var handled: Boolean = js.native
   var isMac: Boolean = js.native

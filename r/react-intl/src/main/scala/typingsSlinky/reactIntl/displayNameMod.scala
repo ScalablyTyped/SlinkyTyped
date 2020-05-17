@@ -1,5 +1,6 @@
 package typingsSlinky.reactIntl
 
+import typingsSlinky.reactIntl.anon.PickIntlConfiglocaleonErr
 import typingsSlinky.std.ConstructorParameters
 import scala.scalajs.js
 import scala.scalajs.js.`|`

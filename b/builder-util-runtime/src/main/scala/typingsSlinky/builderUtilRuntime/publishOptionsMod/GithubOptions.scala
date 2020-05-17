@@ -12,8 +12,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait GithubOptions
-  extends PublishConfiguration
-     with _AllPublishOptions {
+  extends AllPublishOptions
+     with PublishConfiguration {
   /**
     * The host (including the port if need).
     * @default github.com

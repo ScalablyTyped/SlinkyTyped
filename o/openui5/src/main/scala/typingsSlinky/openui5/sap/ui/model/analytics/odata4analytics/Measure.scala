@@ -4,16 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("sap.ui.model.analytics.odata4analytics.Measure")
 @js.native
-class Measure protected () extends js.Object {
-  /**
-    * Create a representation of a measure provided by an analytic query. Do not create your own
-    * instances.
-    * @param oQueryResult The query result containing this measure
-    * @param oProperty The DataJS object object representing the measure
-    */
-  def this(oQueryResult: QueryResult, oProperty: js.Any) = this()
+trait Measure extends js.Object {
   /**
     * Get the text property associated to the raw value property holding theformatted value related to
     * this measure
@@ -48,5 +40,64 @@ class Measure protected () extends js.Object {
     * @returns True iff the measure is updatable
     */
   def isUpdatable(): Boolean = js.native
+}
+
+object Measure {
+  @scala.inline
+  def apply(
+    getFormattedValueProperty: () => js.Any,
+    getLabelText: () => String,
+    getName: () => String,
+    getRawValueProperty: () => js.Any,
+    getUnitProperty: () => js.Any,
+    isUpdatable: () => Boolean
+  ): Measure = {
+    val __obj = js.Dynamic.literal(getFormattedValueProperty = js.Any.fromFunction0(getFormattedValueProperty), getLabelText = js.Any.fromFunction0(getLabelText), getName = js.Any.fromFunction0(getName), getRawValueProperty = js.Any.fromFunction0(getRawValueProperty), getUnitProperty = js.Any.fromFunction0(getUnitProperty), isUpdatable = js.Any.fromFunction0(isUpdatable))
+    __obj.asInstanceOf[Measure]
+  }
+  @scala.inline
+  implicit class MeasureOps[Self <: Measure] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetFormattedValueProperty(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFormattedValueProperty")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLabelText(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLabelText")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRawValueProperty(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRawValueProperty")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetUnitProperty(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getUnitProperty")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsUpdatable(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isUpdatable")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

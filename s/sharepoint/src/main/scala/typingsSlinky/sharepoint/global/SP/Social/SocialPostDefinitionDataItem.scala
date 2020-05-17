@@ -1,0 +1,13 @@
+package typingsSlinky.sharepoint.global.SP.Social
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Specifies an item to be inserted in a post by replacing a token in the post definition.
+  This type can only be specified in a server-to-server call. */
+@JSGlobal("SP.Social.SocialPostDefinitionDataItem")
+@js.native
+class SocialPostDefinitionDataItem ()
+  extends typingsSlinky.sharepoint.SP.Social.SocialPostDefinitionDataItem
+

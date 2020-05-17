@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Word.SmartTagTypes")
 @js.native
-class SmartTagTypes protected () extends js.Object {
+trait SmartTagTypes extends js.Object {
   val Application: typingsSlinky.activexWord.Word.Application = js.native
   val Count: Double = js.native
   val Creator: Double = js.native
@@ -15,5 +14,72 @@ class SmartTagTypes protected () extends js.Object {
   var WordDotSmartTagTypes_typekey: SmartTagTypes = js.native
   def Item(Index: js.Any): SmartTagType = js.native
   def ReloadAll(): Unit = js.native
+}
+
+object SmartTagTypes {
+  @scala.inline
+  def apply(
+    Application: Application,
+    Count: Double,
+    Creator: Double,
+    Item: js.Any => SmartTagType,
+    Parent: js.Any,
+    ReloadAll: () => Unit,
+    WordDotSmartTagTypes_typekey: SmartTagTypes
+  ): SmartTagTypes = {
+    val __obj = js.Dynamic.literal(Application = Application.asInstanceOf[js.Any], Count = Count.asInstanceOf[js.Any], Creator = Creator.asInstanceOf[js.Any], Item = js.Any.fromFunction1(Item), Parent = Parent.asInstanceOf[js.Any], ReloadAll = js.Any.fromFunction0(ReloadAll))
+    __obj.updateDynamic("Word.SmartTagTypes_typekey")(WordDotSmartTagTypes_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SmartTagTypes]
+  }
+  @scala.inline
+  implicit class SmartTagTypesOps[Self <: SmartTagTypes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplication(value: Application): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreator(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItem(value: js.Any => SmartTagType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Item")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withParent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReloadAll(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReloadAll")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withWordDotSmartTagTypes_typekey(value: SmartTagTypes): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Word.SmartTagTypes_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

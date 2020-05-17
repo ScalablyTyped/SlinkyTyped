@@ -1,7 +1,7 @@
 package typingsSlinky.openfin.mod.fin
 
-import typingsSlinky.openfin.PartialViewOptions
-import typingsSlinky.openfin.PickBoundsheightwidthtopl
+import typingsSlinky.openfin.anon.PartialViewOptions
+import typingsSlinky.openfin.anon.PickBoundsheightwidthtopl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

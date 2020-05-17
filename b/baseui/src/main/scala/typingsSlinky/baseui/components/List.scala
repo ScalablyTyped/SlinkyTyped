@@ -3,7 +3,7 @@ package typingsSlinky.baseui.components
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonOldIndex
+import typingsSlinky.baseui.anon.OldIndex
 import typingsSlinky.baseui.dndListMod.ListOverrides
 import typingsSlinky.baseui.dndListMod.ListProps
 import scala.scalajs.js
@@ -22,7 +22,7 @@ object List {
     @scala.inline
     def items(value: js.Array[TagMod[Any]]): this.type = set("items", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* args */ AnonOldIndex => _): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* args */ OldIndex => _): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def overrides(value: ListOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline

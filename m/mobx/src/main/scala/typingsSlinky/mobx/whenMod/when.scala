@@ -1,6 +1,6 @@
 package typingsSlinky.mobx.whenMod
 
-import typingsSlinky.mobx.Promisevoidcancelvoid
+import typingsSlinky.mobx.anon.Promisevoidcancelvoid
 import typingsSlinky.mobx.reactionMod.IReactionDisposer
 import typingsSlinky.mobx.utilsMod.Lambda
 import scala.scalajs.js

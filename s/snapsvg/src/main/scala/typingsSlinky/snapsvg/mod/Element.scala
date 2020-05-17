@@ -3,8 +3,8 @@ package typingsSlinky.snapsvg.mod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.snapsvg.AnonAlpha
-import typingsSlinky.snapsvg.AnonAnim
+import typingsSlinky.snapsvg.anon.Alpha
+import typingsSlinky.snapsvg.anon.Anim
 import typingsSlinky.snapsvg.snapsvgStrings.viewBox
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -109,7 +109,7 @@ trait Element extends js.Object {
   ): Element = js.native
   def getAlign(el: Element, way: String): String = js.native
   def getBBox(): BBox = js.native
-  def getPointAtLength(length: Double): AnonAlpha = js.native
+  def getPointAtLength(length: Double): Alpha = js.native
   def getSubpath(from: Double, to: Double): String = js.native
   def getTotalLength(): Double = js.native
   def hasClass(value: String): Boolean = js.native
@@ -128,7 +128,7 @@ trait Element extends js.Object {
     hoverOutHandler: js.Function1[/* event */ MouseEvent, Unit],
     thisArg: js.Any
   ): Element = js.native
-  def inAnim(): js.Array[AnonAnim] = js.native
+  def inAnim(): js.Array[Anim] = js.native
   def innerSVG(): String = js.native
   def insertAfter(el: Element): Element = js.native
   def insertBefore(el: Element): Element = js.native

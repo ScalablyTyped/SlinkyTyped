@@ -6,16 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a MIDI messages that specifies a MIDI note to turn off. */
-@JSGlobal("Windows.Devices.Midi.MidiNoteOffMessage")
 @js.native
-class MidiNoteOffMessage protected () extends js.Object {
-  /**
-    * Creates a new MidiNoteOffMessage object.
-    * @param channel The channel from 0-15 that this message applies to.
-    * @param note The note which is specified as a value from 0-127.
-    * @param velocity The velocity which is specified as a value from 0-127.
-    */
-  def this(channel: Double, note: Double, velocity: Double) = this()
+trait MidiNoteOffMessage extends js.Object {
   /** Gets the channel from 0-15 that this message applies to. */
   var channel: Double = js.native
   /** Gets the note to turn off which is specified as a value from 0-127. */
@@ -28,5 +20,65 @@ class MidiNoteOffMessage protected () extends js.Object {
   var `type`: MidiMessageType = js.native
   /** Gets the value of the velocity from 0-127. */
   var velocity: Double = js.native
+}
+
+object MidiNoteOffMessage {
+  @scala.inline
+  def apply(
+    channel: Double,
+    note: Double,
+    rawData: IBuffer,
+    timestamp: Double,
+    `type`: MidiMessageType,
+    velocity: Double
+  ): MidiNoteOffMessage = {
+    val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], note = note.asInstanceOf[js.Any], rawData = rawData.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any], velocity = velocity.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MidiNoteOffMessage]
+  }
+  @scala.inline
+  implicit class MidiNoteOffMessageOps[Self <: MidiNoteOffMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChannel(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNote(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("note")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRawData(value: IBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimestamp(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: MidiMessageType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVelocity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("velocity")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

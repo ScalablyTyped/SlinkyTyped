@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientDfareporting.gapi.client.dfareporting
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientDfareporting.AnonFields
-import typingsSlinky.gapiClientDfareporting.AnonKey
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientDfareporting.anon.Fields
+import typingsSlinky.gapiClientDfareporting.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,16 +10,16 @@ import scala.scalajs.js.annotation._
 @js.native
 trait OperatingSystemVersionsResource extends js.Object {
   /** Gets one operating system version by ID. */
-  def get(request: AnonFields): Request_[OperatingSystemVersion] = js.native
+  def get(request: Fields): Request[OperatingSystemVersion] = js.native
   /** Retrieves a list of operating system versions. */
-  def list(request: AnonKey): Request_[OperatingSystemVersionsListResponse] = js.native
+  def list(request: Key): Request[OperatingSystemVersionsListResponse] = js.native
 }
 
 object OperatingSystemVersionsResource {
   @scala.inline
   def apply(
-    get: AnonFields => Request_[OperatingSystemVersion],
-    list: AnonKey => Request_[OperatingSystemVersionsListResponse]
+    get: Fields => Request[OperatingSystemVersion],
+    list: Key => Request[OperatingSystemVersionsListResponse]
   ): OperatingSystemVersionsResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[OperatingSystemVersionsResource]
@@ -31,13 +31,13 @@ object OperatingSystemVersionsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonFields => Request_[OperatingSystemVersion]): Self = {
+    def withGet(value: Fields => Request[OperatingSystemVersion]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonKey => Request_[OperatingSystemVersionsListResponse]): Self = {
+    def withList(value: Key => Request[OperatingSystemVersionsListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

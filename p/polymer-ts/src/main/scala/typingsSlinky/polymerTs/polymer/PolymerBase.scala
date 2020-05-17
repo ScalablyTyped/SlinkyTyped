@@ -1,15 +1,14 @@
 package typingsSlinky.polymerTs.polymer
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.polymerTs.AnonAddedCount
+import typingsSlinky.polymerTs.anon.AddedCount
 import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("polymer.PolymerBase")
 @js.native
-class PolymerBase () extends HTMLElement {
+trait PolymerBase extends HTMLElement {
   @JSName("$")
   var $: js.Any = js.native
   @JSName("$$")
@@ -63,7 +62,7 @@ class PolymerBase () extends HTMLElement {
   def mixin(target: js.Object, source: js.Object): Unit = js.native
   def notifyPath(path: String, value: js.Any): Unit = js.native
   def notifyPath(path: String, value: js.Any, fromAbove: js.Any): Unit = js.native
-  def notifySplices(path: String, splices: AnonAddedCount): Unit = js.native
+  def notifySplices(path: String, splices: AddedCount): Unit = js.native
   def pop(path: String): js.Any = js.native
   def push(path: String, value: js.Any): js.Any = js.native
   def reflectPropertyToAttribute(name: String): Unit = js.native

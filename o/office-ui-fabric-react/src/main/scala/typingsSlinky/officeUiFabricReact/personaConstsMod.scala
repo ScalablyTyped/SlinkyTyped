@@ -1,6 +1,8 @@
 package typingsSlinky.officeUiFabricReact
 
 import org.scalablytyped.runtime.NumberDictionary
+import typingsSlinky.officeUiFabricReact.anon.IsAvailable
+import typingsSlinky.officeUiFabricReact.anon.IsSize10
 import typingsSlinky.officeUiFabricReact.personaTypesMod.PersonaPresence
 import typingsSlinky.officeUiFabricReact.personaTypesMod.PersonaSize
 import scala.scalajs.js
@@ -10,8 +12,8 @@ import scala.scalajs.js.annotation._
 @JSImport("office-ui-fabric-react/lib/components/Persona/PersonaConsts", JSImport.Namespace)
 @js.native
 object personaConstsMod extends js.Object {
-  def presenceBoolean(presence: PersonaPresence): AnonIsAvailable = js.native
-  def sizeBoolean(size: PersonaSize): AnonIsSize10 = js.native
+  def presenceBoolean(presence: PersonaPresence): IsAvailable = js.native
+  def sizeBoolean(size: PersonaSize): IsSize10 = js.native
   @js.native
   object personaPresenceSize extends js.Object {
     /**

@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeZssRichTextEditor.components
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNativeZssRichTextEditor.PartialRichTextToolbarPro
+import typingsSlinky.reactNativeZssRichTextEditor.anon.PartialRichTextToolbarPro
 import typingsSlinky.reactNativeZssRichTextEditor.mod.ACTIONS
 import typingsSlinky.reactNativeZssRichTextEditor.mod.ElementStyles
 import typingsSlinky.reactNativeZssRichTextEditor.mod.IconsMap

@@ -1,12 +1,12 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.PivotLayoutData
 import typingsSlinky.officeJs.Excel.Interfaces.PivotLayoutLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.PivotLayoutUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.ClientResult
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.Ascending
 import typingsSlinky.officeJs.officeJsStrings.AtBottom
 import typingsSlinky.officeJs.officeJsStrings.AtTop
@@ -29,9 +29,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.8]
   */
-@JSGlobal("Excel.PivotLayout")
 @js.native
-class PivotLayout () extends ClientObject {
+trait PivotLayout extends ClientObject {
   /**
     *
     * Specifies whether formatting will be automatically formatted when it’s refreshed or when fields are moved
@@ -171,7 +170,7 @@ class PivotLayout () extends ClientObject {
     */
   def load(): PivotLayout = js.native
   def load(options: PivotLayoutLoadOptions): PivotLayout = js.native
-  def load(propertyNamesAndPaths: AnonExpand): PivotLayout = js.native
+  def load(propertyNamesAndPaths: Expand): PivotLayout = js.native
   def load(propertyNames: String): PivotLayout = js.native
   def load(propertyNames: js.Array[String]): PivotLayout = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

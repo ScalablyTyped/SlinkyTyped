@@ -1,7 +1,7 @@
 package typingsSlinky.winrt.Windows.Media.Devices
 
-import typingsSlinky.winrt.AnonSucceededBoolean
-import typingsSlinky.winrt.AnonSucceededValue
+import typingsSlinky.winrt.anon.SucceededBoolean
+import typingsSlinky.winrt.anon.SucceededValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IMediaDeviceControl extends js.Object {
   var capabilities: MediaDeviceControlCapabilities = js.native
-  def tryGetAuto(): AnonSucceededBoolean = js.native
-  def tryGetValue(): AnonSucceededValue = js.native
+  def tryGetAuto(): SucceededBoolean = js.native
+  def tryGetValue(): SucceededValue = js.native
   def trySetAuto(value: Boolean): Boolean = js.native
   def trySetValue(value: Double): Boolean = js.native
 }
@@ -19,8 +19,8 @@ object IMediaDeviceControl {
   @scala.inline
   def apply(
     capabilities: MediaDeviceControlCapabilities,
-    tryGetAuto: () => AnonSucceededBoolean,
-    tryGetValue: () => AnonSucceededValue,
+    tryGetAuto: () => SucceededBoolean,
+    tryGetValue: () => SucceededValue,
     trySetAuto: Boolean => Boolean,
     trySetValue: Double => Boolean
   ): IMediaDeviceControl = {
@@ -40,13 +40,13 @@ object IMediaDeviceControl {
         ret
     }
     @scala.inline
-    def withTryGetAuto(value: () => AnonSucceededBoolean): Self = {
+    def withTryGetAuto(value: () => SucceededBoolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tryGetAuto")(js.Any.fromFunction0(value))
         ret
     }
     @scala.inline
-    def withTryGetValue(value: () => AnonSucceededValue): Self = {
+    def withTryGetValue(value: () => SucceededValue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tryGetValue")(js.Any.fromFunction0(value))
         ret

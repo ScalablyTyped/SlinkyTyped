@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class WebsocketProvider protected ()
   extends WebsocketProviderBase
-     with _provider {
+     with provider {
   def this(host: String) = this()
   def this(host: String, options: WebsocketProviderOptions) = this()
 }

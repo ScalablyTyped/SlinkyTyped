@@ -2,7 +2,7 @@ package typingsSlinky.marked.mod
 
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.marked.AnonHref
+import typingsSlinky.marked.anon.Href
 import typingsSlinky.marked.markedNumbers.`0`
 import typingsSlinky.marked.markedNumbers.`1`
 import typingsSlinky.marked.markedNumbers.`2`
@@ -11,8 +11,8 @@ import typingsSlinky.marked.markedNumbers.`4`
 import typingsSlinky.marked.markedNumbers.`5`
 import typingsSlinky.marked.markedNumbers.`6`
 import typingsSlinky.marked.markedNumbers.`7`
-import typingsSlinky.std.AnonCopyWithin
 import typingsSlinky.std.IterableIterator
+import typingsSlinky.std.anon.CopyWithin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,13 +27,13 @@ trait TokensList extends /* n */ NumberDictionary[Token] {
     * Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
     */
   var length: Double = js.native
-  var links: StringDictionary[AnonHref] = js.native
+  var links: StringDictionary[Href] = js.native
   /**
     * Returns an object whose properties have the value 'true'
     * when they will be absent when used in a 'with' statement.
     */
   @JSName(js.Symbol.unscopables)
-  var unscopables: js.Function0[AnonCopyWithin] = js.native
+  var unscopables: js.Function0[CopyWithin] = js.native
   /**
     * Combines two or more arrays.
     * @param items Additional items to add to the end of array1.

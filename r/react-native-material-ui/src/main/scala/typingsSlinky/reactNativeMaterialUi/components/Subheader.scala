@@ -2,7 +2,7 @@ package typingsSlinky.reactNativeMaterialUi.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNativeMaterialUi.AnonText
+import typingsSlinky.reactNativeMaterialUi.anon.Text
 import typingsSlinky.reactNativeMaterialUi.mod.SubheaderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +22,7 @@ object Subheader {
     @scala.inline
     def lines(value: Double): this.type = set("lines", value.asInstanceOf[js.Any])
     @scala.inline
-    def style(value: AnonText): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: Text): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SubheaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

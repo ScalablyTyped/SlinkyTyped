@@ -1,8 +1,8 @@
 package typingsSlinky.hardSourceWebpackPlugin.mod
 
-import typingsSlinky.hardSourceWebpackPlugin.AnonDirectories
-import typingsSlinky.hardSourceWebpackPlugin.AnonLevel
-import typingsSlinky.hardSourceWebpackPlugin.AnonMaxAge
+import typingsSlinky.hardSourceWebpackPlugin.anon.Directories
+import typingsSlinky.hardSourceWebpackPlugin.anon.Level
+import typingsSlinky.hardSourceWebpackPlugin.anon.MaxAge
 import typingsSlinky.webpack.mod.Configuration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,10 +11,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Options extends js.Object {
   var cacheDirectory: js.UndefOr[String] = js.native
-  var cachePrune: js.UndefOr[AnonMaxAge] = js.native
+  var cachePrune: js.UndefOr[MaxAge] = js.native
   var configHash: js.UndefOr[String | (js.Function1[/* webpackConfig */ js.UndefOr[Configuration], String])] = js.native
-  var environmentHash: js.UndefOr[AnonDirectories] = js.native
-  var info: js.UndefOr[AnonLevel] = js.native
+  var environmentHash: js.UndefOr[Directories] = js.native
+  var info: js.UndefOr[Level] = js.native
 }
 
 object Options {
@@ -42,7 +42,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withCachePrune(value: AnonMaxAge): Self = {
+    def withCachePrune(value: MaxAge): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cachePrune")(value.asInstanceOf[js.Any])
         ret
@@ -72,7 +72,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withEnvironmentHash(value: AnonDirectories): Self = {
+    def withEnvironmentHash(value: Directories): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("environmentHash")(value.asInstanceOf[js.Any])
         ret
@@ -84,7 +84,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withInfo(value: AnonLevel): Self = {
+    def withInfo(value: Level): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
         ret

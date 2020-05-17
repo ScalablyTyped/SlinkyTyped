@@ -4,35 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.ValueCondition")
 @js.native
-class ValueCondition protected () extends Condition {
-  /**
-    * Creates a new ValueCondition
-    * @param actionManager manager for the action the condition applies to
-    * @param target for the action
-    * @param propertyPath path to specify the property of the target the conditional operator uses
-    * @param value the value compared by the conditional operator against the current value of the property
-    * @param operator the conditional operator, default ValueCondition.IsEqual
-    */
-  def this(
-    actionManager: ActionManager,
-    target: js.Any,
-    /** path to specify the property of the target the conditional operator uses  */
-  propertyPath: String,
-    /** the value compared by the conditional operator against the current value of the property */
-  value: js.Any
-  ) = this()
-  def this(
-    actionManager: ActionManager,
-    target: js.Any,
-    /** path to specify the property of the target the conditional operator uses  */
-  propertyPath: String,
-    /** the value compared by the conditional operator against the current value of the property */
-  value: js.Any,
-    /** the conditional operator, default ValueCondition.IsEqual */
-  operator: Double
-  ) = this()
+trait ValueCondition extends Condition {
   /**
     * Internal only
     * @hidden
@@ -56,51 +29,70 @@ class ValueCondition protected () extends Condition {
   var value: js.Any = js.native
 }
 
-/* static members */
-@JSGlobal("BABYLON.ValueCondition")
-@js.native
-object ValueCondition extends js.Object {
-  /**
-    * Internal only
-    * @hidden
-    */
-  var _IsDifferent: js.Any = js.native
-  /**
-    * Internal only
-    * @hidden
-    */
-  var _IsEqual: js.Any = js.native
-  /**
-    * Internal only
-    * @hidden
-    */
-  var _IsGreater: js.Any = js.native
-  /**
-    * Internal only
-    * @hidden
-    */
-  var _IsLesser: js.Any = js.native
-  /**
-    * Gets the name of the conditional operator for the ValueCondition
-    * @param operator the conditional operator
-    * @returns the name
-    */
-  def GetOperatorName(operator: Double): String = js.native
-  /**
-    * Returns the number for IsDifferent
-    */
-  def IsDifferent: Double = js.native
-  /**
-    * returns the number for IsEqual
-    */
-  def IsEqual: Double = js.native
-  /**
-    * Returns the number for IsGreater
-    */
-  def IsGreater: Double = js.native
-  /**
-    * Returns the number for IsLesser
-    */
-  def IsLesser: Double = js.native
+object ValueCondition {
+  @scala.inline
+  def apply(
+    _actionManager: ActionManager,
+    _currentResult: Boolean,
+    _effectiveTarget: js.Any,
+    _evaluationId: Double,
+    _getEffectiveTarget: (js.Any, String) => js.Any,
+    _getProperty: String => String,
+    _property: js.Any,
+    _serialize: js.Any => js.Any,
+    _target: js.Any,
+    isValid: () => Boolean,
+    operator: Double,
+    propertyPath: String,
+    serialize: () => js.Any,
+    value: js.Any
+  ): ValueCondition = {
+    val __obj = js.Dynamic.literal(_actionManager = _actionManager.asInstanceOf[js.Any], _currentResult = _currentResult.asInstanceOf[js.Any], _effectiveTarget = _effectiveTarget.asInstanceOf[js.Any], _evaluationId = _evaluationId.asInstanceOf[js.Any], _getEffectiveTarget = js.Any.fromFunction2(_getEffectiveTarget), _getProperty = js.Any.fromFunction1(_getProperty), _property = _property.asInstanceOf[js.Any], _serialize = js.Any.fromFunction1(_serialize), _target = _target.asInstanceOf[js.Any], isValid = js.Any.fromFunction0(isValid), operator = operator.asInstanceOf[js.Any], propertyPath = propertyPath.asInstanceOf[js.Any], serialize = js.Any.fromFunction0(serialize), value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ValueCondition]
+  }
+  @scala.inline
+  implicit class ValueConditionOps[Self <: ValueCondition] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_effectiveTarget(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_effectiveTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_property(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_property")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_target(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOperator(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPropertyPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("propertyPath")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

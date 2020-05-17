@@ -233,9 +233,8 @@ import scala.scalajs.js.annotation._
   * // Notify the material that it has been modified
   * material.update();
   */
-@JSGlobal("pc.StandardMaterial")
 @js.native
-class StandardMaterial () extends Material {
+trait StandardMaterial extends Material {
   /**
     * The ambient color of the material. This color value is 3-component (RGB),
     * where each component is between 0 and 1.

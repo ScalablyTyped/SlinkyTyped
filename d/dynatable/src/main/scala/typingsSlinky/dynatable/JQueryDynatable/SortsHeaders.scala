@@ -1,8 +1,8 @@
 package typingsSlinky.dynatable.JQueryDynatable
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import typingsSlinky.dynatable.JQuery
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -83,7 +83,7 @@ trait SortsHeaders extends js.Object {
     * @param $link The header link
     * @param column The Column object to be sorted
     */
-  def toggleSort(e: Event_, $link: JQuery, column: Column): Unit = js.native
+  def toggleSort(e: Event, $link: JQuery, column: Column): Unit = js.native
 }
 
 object SortsHeaders {
@@ -102,7 +102,7 @@ object SortsHeaders {
     removeOne: Element => Unit,
     sortedByColumn: (JQuery, Column) => Boolean,
     sortedByColumnValue: Column => Double,
-    toggleSort: (Event_, JQuery, Column) => Unit
+    toggleSort: (Event, JQuery, Column) => Unit
   ): SortsHeaders = {
     val __obj = js.Dynamic.literal(appendArrowDown = js.Any.fromFunction1(appendArrowDown), appendArrowUp = js.Any.fromFunction1(appendArrowUp), attach = js.Any.fromFunction0(attach), attachOne = js.Any.fromFunction1(attachOne), create = js.Any.fromFunction1(create), init = js.Any.fromFunction0(init), initOnLoad = js.Any.fromFunction0(initOnLoad), removeAll = js.Any.fromFunction0(removeAll), removeAllArrows = js.Any.fromFunction0(removeAllArrows), removeArrow = js.Any.fromFunction1(removeArrow), removeOne = js.Any.fromFunction1(removeOne), sortedByColumn = js.Any.fromFunction2(sortedByColumn), sortedByColumnValue = js.Any.fromFunction1(sortedByColumnValue), toggleSort = js.Any.fromFunction3(toggleSort))
     __obj.asInstanceOf[SortsHeaders]
@@ -192,7 +192,7 @@ object SortsHeaders {
         ret
     }
     @scala.inline
-    def withToggleSort(value: (Event_, JQuery, Column) => Unit): Self = {
+    def withToggleSort(value: (Event, JQuery, Column) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toggleSort")(js.Any.fromFunction3(value))
         ret

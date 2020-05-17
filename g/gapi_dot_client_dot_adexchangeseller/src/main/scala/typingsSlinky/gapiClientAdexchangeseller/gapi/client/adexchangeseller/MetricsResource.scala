@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientAdexchangeseller.gapi.client.adexchangeseller
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAdexchangeseller.AnonKey
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAdexchangeseller.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MetricsResource extends js.Object {
   /** List the metadata for the metrics available to this AdExchange account. */
-  def list(request: AnonKey): Request_[Metadata] = js.native
+  def list(request: Key): Request[Metadata] = js.native
 }
 
 object MetricsResource {
   @scala.inline
-  def apply(list: AnonKey => Request_[Metadata]): MetricsResource = {
+  def apply(list: Key => Request[Metadata]): MetricsResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[MetricsResource]
   }
@@ -25,7 +25,7 @@ object MetricsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withList(value: AnonKey => Request_[Metadata]): Self = {
+    def withList(value: Key => Request[Metadata]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

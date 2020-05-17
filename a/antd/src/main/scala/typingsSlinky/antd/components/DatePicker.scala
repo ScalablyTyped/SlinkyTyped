@@ -9,7 +9,7 @@ import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.AnonLang
+import typingsSlinky.antd.anon.Lang
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
 import typingsSlinky.antd.antdStrings.additions
@@ -208,7 +208,7 @@ object DatePicker {
       @scala.inline
       def inputReadOnly(value: Boolean): this.type = set("inputReadOnly", value.asInstanceOf[js.Any])
       @scala.inline
-      def locale(value: AnonLang): this.type = set("locale", value.asInstanceOf[js.Any])
+      def locale(value: Lang): this.type = set("locale", value.asInstanceOf[js.Any])
       @scala.inline
       def mode(value: PanelMode): this.type = set("mode", value.asInstanceOf[js.Any])
       @scala.inline
@@ -425,7 +425,7 @@ object DatePicker {
       @scala.inline
       def inputReadOnly(value: Boolean): this.type = set("inputReadOnly", value.asInstanceOf[js.Any])
       @scala.inline
-      def locale(value: AnonLang): this.type = set("locale", value.asInstanceOf[js.Any])
+      def locale(value: Lang): this.type = set("locale", value.asInstanceOf[js.Any])
       @scala.inline
       def mode(value: PanelMode): this.type = set("mode", value.asInstanceOf[js.Any])
       @scala.inline
@@ -654,7 +654,7 @@ object DatePicker {
       @scala.inline
       def inputReadOnly(value: Boolean): this.type = set("inputReadOnly", value.asInstanceOf[js.Any])
       @scala.inline
-      def locale(value: AnonLang): this.type = set("locale", value.asInstanceOf[js.Any])
+      def locale(value: Lang): this.type = set("locale", value.asInstanceOf[js.Any])
       @scala.inline
       def minuteStep(value: Double): this.type = set("minuteStep", value.asInstanceOf[js.Any])
       @scala.inline

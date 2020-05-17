@@ -1,6 +1,6 @@
 package typingsSlinky.plotlyJs.mod
 
-import typingsSlinky.plotlyJs.AnonDtickrange
+import typingsSlinky.plotlyJs.anon.Dtickrange
 import typingsSlinky.plotlyJs.plotlyJsStrings.B
 import typingsSlinky.plotlyJs.plotlyJsStrings.E
 import typingsSlinky.plotlyJs.plotlyJsStrings.SI
@@ -52,7 +52,7 @@ trait ColorBar extends js.Object {
   var tickcolor: Color = js.native
   var tickfont: Font = js.native
   var tickformat: String = js.native
-  var tickformatstops: AnonDtickrange = js.native
+  var tickformatstops: Dtickrange = js.native
   var ticklen: Double = js.native
   var tickmode: auto | linear | array = js.native
   var tickprefix: String = js.native
@@ -99,7 +99,7 @@ object ColorBar {
     tickcolor: Color,
     tickfont: Font,
     tickformat: String,
-    tickformatstops: AnonDtickrange,
+    tickformatstops: Dtickrange,
     ticklen: Double,
     tickmode: auto | linear | array,
     tickprefix: String,
@@ -262,7 +262,7 @@ object ColorBar {
         ret
     }
     @scala.inline
-    def withTickformatstops(value: AnonDtickrange): Self = {
+    def withTickformatstops(value: Dtickrange): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tickformatstops")(value.asInstanceOf[js.Any])
         ret

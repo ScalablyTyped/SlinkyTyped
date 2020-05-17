@@ -5,10 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.UI.Notifications.ScheduledToastNotification")
 @js.native
-class ScheduledToastNotification protected () extends IScheduledToastNotification {
-  def this(content: XmlDocument, deliveryTime: js.Date) = this()
-  def this(content: XmlDocument, deliveryTime: js.Date, snoozeInterval: Double, maximumSnoozeCount: Double) = this()
+trait ScheduledToastNotification extends IScheduledToastNotification
+
+object ScheduledToastNotification {
+  @scala.inline
+  def apply(
+    content: XmlDocument,
+    deliveryTime: js.Date,
+    id: String,
+    maximumSnoozeCount: Double,
+    snoozeInterval: Double
+  ): ScheduledToastNotification = {
+    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], deliveryTime = deliveryTime.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], maximumSnoozeCount = maximumSnoozeCount.asInstanceOf[js.Any], snoozeInterval = snoozeInterval.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ScheduledToastNotification]
+  }
 }
 

@@ -4,7 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactDataGrid.AdazzleReactDataGrid.ExcelColumn
 import typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.AutoCompleteEditorProps
-import typingsSlinky.reactDataGrid.AnonId
+import typingsSlinky.reactDataGrid.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ object AutoComplete {
     extends AnyVal
        with StBuildingComponent[
           tag.type, 
-          typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Editors.AutoComplete
+          typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Editors.AutoComplete
         ] {
     @scala.inline
     def column(value: ExcelColumn): this.type = set("column", value.asInstanceOf[js.Any])
@@ -36,7 +36,7 @@ object AutoComplete {
     @scala.inline
     def onKeyDown(value: () => Unit): this.type = set("onKeyDown", js.Any.fromFunction0(value))
     @scala.inline
-    def options(value: js.Array[AnonId]): this.type = set("options", value.asInstanceOf[js.Any])
+    def options(value: js.Array[Id]): this.type = set("options", value.asInstanceOf[js.Any])
     @scala.inline
     def resultIdentifier(value: String): this.type = set("resultIdentifier", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,8 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,10 +10,31 @@ trait WebKitPoint extends js.Object {
   var y: Double = js.native
 }
 
-@JSGlobal("WebKitPoint")
-@js.native
-object WebKitPoint
-  extends Instantiable0[WebKitPoint]
-     with Instantiable1[/* x */ Double, WebKitPoint]
-     with Instantiable2[/* x */ Double, /* y */ Double, WebKitPoint]
+object WebKitPoint {
+  @scala.inline
+  def apply(x: Double, y: Double): WebKitPoint = {
+    val __obj = js.Dynamic.literal(x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebKitPoint]
+  }
+  @scala.inline
+  implicit class WebKitPointOps[Self <: WebKitPoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

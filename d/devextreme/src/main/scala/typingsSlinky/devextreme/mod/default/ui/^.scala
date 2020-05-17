@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.default.ui
 
-import typingsSlinky.devextreme.AnonCompile
+import typingsSlinky.devextreme.anon.Compile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,6 +22,6 @@ object ^ extends js.Object {
   /** Sets a template engine. */
   def setTemplateEngine(templateEngineName: String): Unit = js.native
   /** Sets a custom template engine defined via custom compile and render functions. */
-  def setTemplateEngine(templateEngineOptions: AnonCompile): Unit = js.native
+  def setTemplateEngine(templateEngineOptions: Compile): Unit = js.native
 }
 

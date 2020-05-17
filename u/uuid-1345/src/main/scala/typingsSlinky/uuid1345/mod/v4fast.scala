@@ -1,9 +1,9 @@
 package typingsSlinky.uuid1345.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.uuid1345.Anon0
-import typingsSlinky.uuid1345.Anon1
-import typingsSlinky.uuid1345.Anon2
+import typingsSlinky.uuid1345.anon.`0`
+import typingsSlinky.uuid1345.anon.`1`
+import typingsSlinky.uuid1345.anon.`2`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,11 +13,11 @@ import scala.scalajs.js.annotation._
 object v4fast extends js.Object {
   def apply(): String = js.native
   def apply(callback: ASCIICallback): Unit = js.native
-  def apply(options: Anon0): String = js.native
-  def apply(options: Anon0, callback: ASCIICallback): Unit = js.native
-  def apply(options: Anon1): Buffer = js.native
-  def apply(options: Anon1, callback: BinaryCallback): Unit = js.native
-  def apply(options: Anon2): UUID = js.native
-  def apply(options: Anon2, callback: ObjectCallback): Unit = js.native
+  def apply(options: `0`): String = js.native
+  def apply(options: `0`, callback: ASCIICallback): Unit = js.native
+  def apply(options: `1`): Buffer = js.native
+  def apply(options: `1`, callback: BinaryCallback): Unit = js.native
+  def apply(options: `2`): UUID = js.native
+  def apply(options: `2`, callback: ObjectCallback): Unit = js.native
 }
 

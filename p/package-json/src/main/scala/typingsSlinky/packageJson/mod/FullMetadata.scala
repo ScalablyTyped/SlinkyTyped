@@ -1,7 +1,7 @@
 package typingsSlinky.packageJson.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.packageJson.AnonDictversion
+import typingsSlinky.packageJson.anon.Dictversion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait FullMetadata
      with HoistedData {
   val _id: String = js.native
   val _rev: String = js.native
-  val time: AnonDictversion = js.native
+  val time: Dictversion = js.native
   val users: js.UndefOr[StringDictionary[Boolean]] = js.native
   @JSName("versions")
   val versions_FullMetadata: StringDictionary[FullVersion] = js.native
@@ -26,7 +26,7 @@ object FullMetadata {
     `dist-tags`: DistTags,
     modified: String,
     name: String,
-    time: AnonDictversion,
+    time: Dictversion,
     versions: StringDictionary[FullVersion]
   ): FullMetadata = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], _rev = _rev.asInstanceOf[js.Any], modified = modified.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], time = time.asInstanceOf[js.Any], versions = versions.asInstanceOf[js.Any])
@@ -52,7 +52,7 @@ object FullMetadata {
         ret
     }
     @scala.inline
-    def withTime(value: AnonDictversion): Self = {
+    def withTime(value: Dictversion): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
         ret

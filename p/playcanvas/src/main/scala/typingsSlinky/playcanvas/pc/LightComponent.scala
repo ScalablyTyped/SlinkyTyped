@@ -96,10 +96,8 @@ import scala.scalajs.js.annotation._
   * @property {number[]} layers An array of layer IDs ({@link pc.Layer#id}) to which this light should belong.
   * Don't push/pop/splice or modify this array, if you want to change it - set a new one instead.
   */
-@JSGlobal("pc.LightComponent")
 @js.native
-class LightComponent protected () extends Component {
-  def this(system: LightComponentSystem, entity: Entity) = this()
+trait LightComponent extends Component {
   /**
     * If enabled the light will affect non-lightmapped objects
     */

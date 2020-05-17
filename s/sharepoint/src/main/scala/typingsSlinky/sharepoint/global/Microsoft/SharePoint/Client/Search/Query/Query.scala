@@ -1,0 +1,12 @@
+package typingsSlinky.sharepoint.global.Microsoft.SharePoint.Client.Search.Query
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**Contains information common to all types of search queries.*/
+@JSGlobal("Microsoft.SharePoint.Client.Search.Query.Query")
+@js.native
+class Query ()
+  extends typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search.Query.Query
+

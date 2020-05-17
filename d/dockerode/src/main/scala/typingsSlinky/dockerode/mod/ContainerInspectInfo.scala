@@ -1,10 +1,10 @@
 package typingsSlinky.dockerode.mod
 
-import typingsSlinky.dockerode.AnonAttachStderr
-import typingsSlinky.dockerode.AnonBridge
-import typingsSlinky.dockerode.AnonData
-import typingsSlinky.dockerode.AnonDead
-import typingsSlinky.dockerode.AnonMode
+import typingsSlinky.dockerode.anon.AttachStderr
+import typingsSlinky.dockerode.anon.Bridge
+import typingsSlinky.dockerode.anon.Data
+import typingsSlinky.dockerode.anon.Dead
+import typingsSlinky.dockerode.anon.Mode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,11 +13,11 @@ import scala.scalajs.js.annotation._
 trait ContainerInspectInfo extends js.Object {
   var AppArmorProfile: String = js.native
   var Args: js.Array[String] = js.native
-  var Config: AnonAttachStderr = js.native
+  var Config: AttachStderr = js.native
   var Created: String = js.native
   var Driver: String = js.native
   var ExecIDs: js.UndefOr[js.Any] = js.native
-  var GraphDriver: AnonData = js.native
+  var GraphDriver: Data = js.native
   var HostConfig: typingsSlinky.dockerode.mod.HostConfig = js.native
   var HostnamePath: String = js.native
   var HostsPath: String = js.native
@@ -25,14 +25,14 @@ trait ContainerInspectInfo extends js.Object {
   var Image: String = js.native
   var LogPath: String = js.native
   var MountLabel: String = js.native
-  var Mounts: js.Array[AnonMode] = js.native
+  var Mounts: js.Array[Mode] = js.native
   var Name: String = js.native
-  var NetworkSettings: AnonBridge = js.native
+  var NetworkSettings: Bridge = js.native
   var Path: String = js.native
   var ProcessLabel: String = js.native
   var ResolvConfPath: String = js.native
   var RestartCount: Double = js.native
-  var State: AnonDead = js.native
+  var State: Dead = js.native
 }
 
 object ContainerInspectInfo {
@@ -40,10 +40,10 @@ object ContainerInspectInfo {
   def apply(
     AppArmorProfile: String,
     Args: js.Array[String],
-    Config: AnonAttachStderr,
+    Config: AttachStderr,
     Created: String,
     Driver: String,
-    GraphDriver: AnonData,
+    GraphDriver: Data,
     HostConfig: HostConfig,
     HostnamePath: String,
     HostsPath: String,
@@ -51,14 +51,14 @@ object ContainerInspectInfo {
     Image: String,
     LogPath: String,
     MountLabel: String,
-    Mounts: js.Array[AnonMode],
+    Mounts: js.Array[Mode],
     Name: String,
-    NetworkSettings: AnonBridge,
+    NetworkSettings: Bridge,
     Path: String,
     ProcessLabel: String,
     ResolvConfPath: String,
     RestartCount: Double,
-    State: AnonDead
+    State: Dead
   ): ContainerInspectInfo = {
     val __obj = js.Dynamic.literal(AppArmorProfile = AppArmorProfile.asInstanceOf[js.Any], Args = Args.asInstanceOf[js.Any], Config = Config.asInstanceOf[js.Any], Created = Created.asInstanceOf[js.Any], Driver = Driver.asInstanceOf[js.Any], GraphDriver = GraphDriver.asInstanceOf[js.Any], HostConfig = HostConfig.asInstanceOf[js.Any], HostnamePath = HostnamePath.asInstanceOf[js.Any], HostsPath = HostsPath.asInstanceOf[js.Any], Id = Id.asInstanceOf[js.Any], Image = Image.asInstanceOf[js.Any], LogPath = LogPath.asInstanceOf[js.Any], MountLabel = MountLabel.asInstanceOf[js.Any], Mounts = Mounts.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], NetworkSettings = NetworkSettings.asInstanceOf[js.Any], Path = Path.asInstanceOf[js.Any], ProcessLabel = ProcessLabel.asInstanceOf[js.Any], ResolvConfPath = ResolvConfPath.asInstanceOf[js.Any], RestartCount = RestartCount.asInstanceOf[js.Any], State = State.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContainerInspectInfo]
@@ -82,7 +82,7 @@ object ContainerInspectInfo {
         ret
     }
     @scala.inline
-    def withConfig(value: AnonAttachStderr): Self = {
+    def withConfig(value: AttachStderr): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Config")(value.asInstanceOf[js.Any])
         ret
@@ -100,7 +100,7 @@ object ContainerInspectInfo {
         ret
     }
     @scala.inline
-    def withGraphDriver(value: AnonData): Self = {
+    def withGraphDriver(value: Data): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("GraphDriver")(value.asInstanceOf[js.Any])
         ret
@@ -148,7 +148,7 @@ object ContainerInspectInfo {
         ret
     }
     @scala.inline
-    def withMounts(value: js.Array[AnonMode]): Self = {
+    def withMounts(value: js.Array[Mode]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Mounts")(value.asInstanceOf[js.Any])
         ret
@@ -160,7 +160,7 @@ object ContainerInspectInfo {
         ret
     }
     @scala.inline
-    def withNetworkSettings(value: AnonBridge): Self = {
+    def withNetworkSettings(value: Bridge): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("NetworkSettings")(value.asInstanceOf[js.Any])
         ret
@@ -190,7 +190,7 @@ object ContainerInspectInfo {
         ret
     }
     @scala.inline
-    def withState(value: AnonDead): Self = {
+    def withState(value: Dead): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("State")(value.asInstanceOf[js.Any])
         ret

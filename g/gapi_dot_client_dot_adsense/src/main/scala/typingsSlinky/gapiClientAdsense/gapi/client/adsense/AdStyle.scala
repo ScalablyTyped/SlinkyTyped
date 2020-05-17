@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientAdsense.gapi.client.adsense
 
-import typingsSlinky.gapiClientAdsense.AnonBackground
-import typingsSlinky.gapiClientAdsense.AnonFamily
+import typingsSlinky.gapiClientAdsense.anon.Background
+import typingsSlinky.gapiClientAdsense.anon.Family
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,11 +12,11 @@ trait AdStyle extends js.Object {
     * The colors which are included in the style. These are represented as six hexadecimal characters, similar to HTML color codes, but without the leading
     * hash.
     */
-  var colors: js.UndefOr[AnonBackground] = js.native
+  var colors: js.UndefOr[Background] = js.native
   /** The style of the corners in the ad (deprecated: never populated, ignored). */
   var corners: js.UndefOr[String] = js.native
   /** The font which is included in the style. */
-  var font: js.UndefOr[AnonFamily] = js.native
+  var font: js.UndefOr[Family] = js.native
   /** Kind this is, in this case adsense#adStyle. */
   var kind: js.UndefOr[String] = js.native
 }
@@ -34,7 +34,7 @@ object AdStyle {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withColors(value: AnonBackground): Self = {
+    def withColors(value: Background): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
         ret
@@ -58,7 +58,7 @@ object AdStyle {
         ret
     }
     @scala.inline
-    def withFont(value: AnonFamily): Self = {
+    def withFont(value: Family): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
         ret

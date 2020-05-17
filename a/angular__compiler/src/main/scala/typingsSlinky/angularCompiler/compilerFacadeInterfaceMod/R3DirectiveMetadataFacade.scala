@@ -1,7 +1,7 @@
 package typingsSlinky.angularCompiler.compilerFacadeInterfaceMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.angularCompiler.AnonUsesOnChanges
+import typingsSlinky.angularCompiler.anon.UsesOnChanges
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait R3DirectiveMetadataFacade extends js.Object {
   var exportAs: js.Array[String] | Null = js.native
   var host: StringDictionary[String] = js.native
   var inputs: js.Array[String] = js.native
-  var lifecycle: AnonUsesOnChanges = js.native
+  var lifecycle: UsesOnChanges = js.native
   var name: String = js.native
   var outputs: js.Array[String] = js.native
   var propMetadata: StringDictionary[js.Array[_]] = js.native
@@ -31,7 +31,7 @@ object R3DirectiveMetadataFacade {
   def apply(
     host: StringDictionary[String],
     inputs: js.Array[String],
-    lifecycle: AnonUsesOnChanges,
+    lifecycle: UsesOnChanges,
     name: String,
     outputs: js.Array[String],
     propMetadata: StringDictionary[js.Array[_]],
@@ -65,7 +65,7 @@ object R3DirectiveMetadataFacade {
         ret
     }
     @scala.inline
-    def withLifecycle(value: AnonUsesOnChanges): Self = {
+    def withLifecycle(value: UsesOnChanges): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lifecycle")(value.asInstanceOf[js.Any])
         ret

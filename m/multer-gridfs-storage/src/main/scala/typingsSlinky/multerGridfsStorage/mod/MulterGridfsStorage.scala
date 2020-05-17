@@ -1,10 +1,10 @@
 package typingsSlinky.multerGridfsStorage.mod
 
-import typingsSlinky.expressServeStaticCore.mod._Global_.Express.Request
+import typingsSlinky.expressServeStaticCore.mod.global.Express.Request
 import typingsSlinky.mongodb.mod.Db
 import typingsSlinky.mongodb.mod.MongoClient
 import typingsSlinky.multer.mod.StorageEngine
-import typingsSlinky.multerGridfsStorage.mod._Global_.Express.Multer.File
+import typingsSlinky.multerGridfsStorage.mod.global.Express.Multer.File
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`

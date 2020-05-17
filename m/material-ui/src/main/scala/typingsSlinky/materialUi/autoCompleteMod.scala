@@ -1,6 +1,10 @@
 package typingsSlinky.materialUi
 
-import typingsSlinky.materialUi.MaterialUI.Menus.MenuItem
+import slinky.core.ReactComponentClass
+import typingsSlinky.materialUi.MaterialUI.AutoCompleteProps
+import typingsSlinky.materialUi.MaterialUI.DividerProps
+import typingsSlinky.materialUi.MaterialUI.Menus.MenuItemProps
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +14,7 @@ import scala.scalajs.js.annotation._
 object autoCompleteMod extends js.Object {
   @js.native
   class AutoComplete ()
-    extends typingsSlinky.materialUi.MaterialUI.AutoComplete
+    extends Component[AutoCompleteProps[js.Any], js.Object, js.Any]
   
   @js.native
   class default () extends AutoComplete
@@ -18,8 +22,8 @@ object autoCompleteMod extends js.Object {
   /* static members */
   @js.native
   object AutoComplete extends js.Object {
-    var Divider: typingsSlinky.materialUi.MaterialUI.Divider = js.native
-    var Item: MenuItem = js.native
+    var Divider: ReactComponentClass[DividerProps] = js.native
+    var Item: ReactComponentClass[MenuItemProps] = js.native
     def caseInsensitiveFilter(searchText: String, key: String): Boolean = js.native
     def caseSensitiveFilter(searchText: String, key: String): Boolean = js.native
     def defaultFilter(searchText: String, key: String): Boolean = js.native
@@ -31,8 +35,8 @@ object autoCompleteMod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var Divider: typingsSlinky.materialUi.MaterialUI.Divider = js.native
-    var Item: MenuItem = js.native
+    var Divider: ReactComponentClass[DividerProps] = js.native
+    var Item: ReactComponentClass[MenuItemProps] = js.native
     def caseInsensitiveFilter(searchText: String, key: String): Boolean = js.native
     def caseSensitiveFilter(searchText: String, key: String): Boolean = js.native
     def defaultFilter(searchText: String, key: String): Boolean = js.native

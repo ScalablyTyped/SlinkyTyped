@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object SelectorSettings {
-  type Param = (typingsSlinky.semanticUiShape.PickImplsides | typingsSlinky.semanticUiShape.PickImplside) with typingsSlinky.semanticUiShape.PartialPickImplkeyofImplSide
+  type Param = (typingsSlinky.semanticUiShape.anon.PickImplsides | typingsSlinky.semanticUiShape.anon.PickImplside) with typingsSlinky.semanticUiShape.anon.PartialPickImplkeyofImplSide
 }

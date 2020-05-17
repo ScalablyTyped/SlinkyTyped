@@ -1,6 +1,5 @@
 package typingsSlinky.kendoUi.kendo.dataviz.ui
 
-import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.JQuery
 import typingsSlinky.kendoUi.JQueryPromise
 import typingsSlinky.kendoUi.kendo.drawing.PDFOptions
@@ -9,11 +8,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.dataviz.ui.LinearGauge")
 @js.native
-class LinearGauge protected () extends Widget {
-  def this(element: Element) = this()
-  def this(element: Element, options: LinearGaugeOptions) = this()
+trait LinearGauge extends Widget {
   @JSName("options")
   var options_LinearGauge: LinearGaugeOptions = js.native
   var wrapper: JQuery = js.native
@@ -27,13 +23,5 @@ class LinearGauge protected () extends Widget {
   def setOptions(options: js.Any): Unit = js.native
   def svg(): Unit = js.native
   def value(): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("kendo.dataviz.ui.LinearGauge")
-@js.native
-object LinearGauge extends js.Object {
-  var fn: LinearGauge = js.native
-  def extend(proto: js.Object): LinearGauge = js.native
 }
 

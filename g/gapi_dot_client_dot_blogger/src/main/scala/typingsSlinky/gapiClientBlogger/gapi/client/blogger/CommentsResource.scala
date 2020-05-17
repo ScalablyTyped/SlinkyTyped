@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientBlogger.gapi.client.blogger
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientBlogger.AnonCommentId
-import typingsSlinky.gapiClientBlogger.AnonEndDate
-import typingsSlinky.gapiClientBlogger.AnonFetchBodies
-import typingsSlinky.gapiClientBlogger.AnonKey
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientBlogger.anon.CommentId
+import typingsSlinky.gapiClientBlogger.anon.EndDate
+import typingsSlinky.gapiClientBlogger.anon.FetchBodies
+import typingsSlinky.gapiClientBlogger.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,31 +12,31 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CommentsResource extends js.Object {
   /** Marks a comment as not spam. */
-  def approve(request: AnonCommentId): Request_[Comment] = js.native
+  def approve(request: CommentId): Request[Comment] = js.native
   /** Delete a comment by ID. */
-  def delete(request: AnonCommentId): Request_[Unit] = js.native
+  def delete(request: CommentId): Request[Unit] = js.native
   /** Gets one comment by ID. */
-  def get(request: AnonKey): Request_[Comment] = js.native
+  def get(request: Key): Request[Comment] = js.native
   /** Retrieves the comments for a post, possibly filtered. */
-  def list(request: AnonEndDate): Request_[CommentList] = js.native
+  def list(request: EndDate): Request[CommentList] = js.native
   /** Retrieves the comments for a blog, across all posts, possibly filtered. */
-  def listByBlog(request: AnonFetchBodies): Request_[CommentList] = js.native
+  def listByBlog(request: FetchBodies): Request[CommentList] = js.native
   /** Marks a comment as spam. */
-  def markAsSpam(request: AnonCommentId): Request_[Comment] = js.native
+  def markAsSpam(request: CommentId): Request[Comment] = js.native
   /** Removes the content of a comment. */
-  def removeContent(request: AnonCommentId): Request_[Comment] = js.native
+  def removeContent(request: CommentId): Request[Comment] = js.native
 }
 
 object CommentsResource {
   @scala.inline
   def apply(
-    approve: AnonCommentId => Request_[Comment],
-    delete: AnonCommentId => Request_[Unit],
-    get: AnonKey => Request_[Comment],
-    list: AnonEndDate => Request_[CommentList],
-    listByBlog: AnonFetchBodies => Request_[CommentList],
-    markAsSpam: AnonCommentId => Request_[Comment],
-    removeContent: AnonCommentId => Request_[Comment]
+    approve: CommentId => Request[Comment],
+    delete: CommentId => Request[Unit],
+    get: Key => Request[Comment],
+    list: EndDate => Request[CommentList],
+    listByBlog: FetchBodies => Request[CommentList],
+    markAsSpam: CommentId => Request[Comment],
+    removeContent: CommentId => Request[Comment]
   ): CommentsResource = {
     val __obj = js.Dynamic.literal(approve = js.Any.fromFunction1(approve), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), listByBlog = js.Any.fromFunction1(listByBlog), markAsSpam = js.Any.fromFunction1(markAsSpam), removeContent = js.Any.fromFunction1(removeContent))
     __obj.asInstanceOf[CommentsResource]
@@ -48,43 +48,43 @@ object CommentsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withApprove(value: AnonCommentId => Request_[Comment]): Self = {
+    def withApprove(value: CommentId => Request[Comment]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("approve")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonCommentId => Request_[Unit]): Self = {
+    def withDelete(value: CommentId => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonKey => Request_[Comment]): Self = {
+    def withGet(value: Key => Request[Comment]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonEndDate => Request_[CommentList]): Self = {
+    def withList(value: EndDate => Request[CommentList]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withListByBlog(value: AnonFetchBodies => Request_[CommentList]): Self = {
+    def withListByBlog(value: FetchBodies => Request[CommentList]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("listByBlog")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withMarkAsSpam(value: AnonCommentId => Request_[Comment]): Self = {
+    def withMarkAsSpam(value: CommentId => Request[Comment]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markAsSpam")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withRemoveContent(value: AnonCommentId => Request_[Comment]): Self = {
+    def withRemoveContent(value: CommentId => Request[Comment]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("removeContent")(js.Any.fromFunction1(value))
         ret

@@ -1,29 +1,29 @@
 package typingsSlinky.mobileMessagingCordova.MobileMessagingCordova
 
-import typingsSlinky.mobileMessagingCordova.AnonActions
-import typingsSlinky.mobileMessagingCordova.AnonApplicationCodePersistingDisabled
-import typingsSlinky.mobileMessagingCordova.AnonForceCleanup
-import typingsSlinky.mobileMessagingCordova.AnonMultipleNotifications
+import typingsSlinky.mobileMessagingCordova.anon.Actions
+import typingsSlinky.mobileMessagingCordova.anon.ApplicationCodePersistingDisabled
+import typingsSlinky.mobileMessagingCordova.anon.ForceCleanup
+import typingsSlinky.mobileMessagingCordova.anon.MultipleNotifications
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Configuration extends js.Object {
-  var android: js.UndefOr[AnonMultipleNotifications] = js.native
+  var android: js.UndefOr[MultipleNotifications] = js.native
   /**
     * The application code of your Application from Push Portal website
     */
   var applicationCode: String = js.native
   var defaultMessageStorage: js.UndefOr[Boolean] = js.native
   var geofencingEnabled: js.UndefOr[Boolean] = js.native
-  var ios: js.UndefOr[AnonForceCleanup] = js.native
+  var ios: js.UndefOr[ForceCleanup] = js.native
   /**
     * Message storage save callback
     */
   var messageStorage: js.UndefOr[String] = js.native
-  var notificationCategories: js.UndefOr[js.Array[AnonActions]] = js.native
-  var privacySettings: js.UndefOr[AnonApplicationCodePersistingDisabled] = js.native
+  var notificationCategories: js.UndefOr[js.Array[Actions]] = js.native
+  var privacySettings: js.UndefOr[ApplicationCodePersistingDisabled] = js.native
 }
 
 object Configuration {
@@ -45,7 +45,7 @@ object Configuration {
         ret
     }
     @scala.inline
-    def withAndroid(value: AnonMultipleNotifications): Self = {
+    def withAndroid(value: MultipleNotifications): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("android")(value.asInstanceOf[js.Any])
         ret
@@ -81,7 +81,7 @@ object Configuration {
         ret
     }
     @scala.inline
-    def withIos(value: AnonForceCleanup): Self = {
+    def withIos(value: ForceCleanup): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ios")(value.asInstanceOf[js.Any])
         ret
@@ -105,7 +105,7 @@ object Configuration {
         ret
     }
     @scala.inline
-    def withNotificationCategories(value: js.Array[AnonActions]): Self = {
+    def withNotificationCategories(value: js.Array[Actions]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notificationCategories")(value.asInstanceOf[js.Any])
         ret
@@ -117,7 +117,7 @@ object Configuration {
         ret
     }
     @scala.inline
-    def withPrivacySettings(value: AnonApplicationCodePersistingDisabled): Self = {
+    def withPrivacySettings(value: ApplicationCodePersistingDisabled): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("privacySettings")(value.asInstanceOf[js.Any])
         ret

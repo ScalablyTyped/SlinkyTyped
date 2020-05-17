@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientTaskqueue.gapi.client.taskqueue
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientTaskqueue.AnonAlt
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientTaskqueue.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TaskqueuesResource extends js.Object {
   /** Get detailed information about a TaskQueue. */
-  def get(request: AnonAlt): Request_[TaskQueue] = js.native
+  def get(request: Alt): Request[TaskQueue] = js.native
 }
 
 object TaskqueuesResource {
   @scala.inline
-  def apply(get: AnonAlt => Request_[TaskQueue]): TaskqueuesResource = {
+  def apply(get: Alt => Request[TaskQueue]): TaskqueuesResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get))
     __obj.asInstanceOf[TaskqueuesResource]
   }
@@ -25,7 +25,7 @@ object TaskqueuesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonAlt => Request_[TaskQueue]): Self = {
+    def withGet(value: Alt => Request[TaskQueue]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret

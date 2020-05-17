@@ -1,6 +1,6 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonDevices
+import typingsSlinky.aliApp.anon.Devices
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait OnBluetoothDeviceFoundOptions
   extends BaseOptions[js.Any, js.Any] {
   @JSName("success")
-  var success_OnBluetoothDeviceFoundOptions: js.UndefOr[js.Function1[/* res */ AnonDevices, Unit]] = js.native
+  var success_OnBluetoothDeviceFoundOptions: js.UndefOr[js.Function1[/* res */ Devices, Unit]] = js.native
 }
 
 object OnBluetoothDeviceFoundOptions {
@@ -25,7 +25,7 @@ object OnBluetoothDeviceFoundOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSuccess(value: /* res */ AnonDevices => Unit): Self = {
+    def withSuccess(value: /* res */ Devices => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

@@ -11,7 +11,6 @@ import scala.scalajs.js.annotation._
 trait Collapse
   extends Component[CollapseProps, js.Any, js.Any] {
   def renderCollapse(hasGetPrefixClsDirection: ConfigConsumerProps): ReactElement = js.native
-  def renderExpandIcon(panelProps: js.UndefOr[scala.Nothing], prefixCls: String): js.UndefOr[js.Object | Null] = js.native
-  def renderExpandIcon(panelProps: PanelProps, prefixCls: String): js.UndefOr[js.Object | Null] = js.native
+  def renderExpandIcon(panelProps: js.UndefOr[PanelProps], prefixCls: String): js.UndefOr[js.Object | Null] = js.native
 }
 

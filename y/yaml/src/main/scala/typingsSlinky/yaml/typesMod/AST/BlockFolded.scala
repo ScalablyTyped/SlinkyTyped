@@ -14,5 +14,7 @@ trait BlockFolded
   var cstNode_BlockFolded: js.UndefOr[typingsSlinky.yaml.parseCstMod.CST.BlockFolded] = js.native
   @JSName("type")
   var type_BlockFolded: BLOCK_FOLDED = js.native
+  /* InferMemberOverrides */
+  override def toJSON(arg: js.Any, ctx: NodeToJsonContext): js.Any = js.native
 }
 

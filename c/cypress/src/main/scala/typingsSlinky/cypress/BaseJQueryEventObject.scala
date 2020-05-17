@@ -1,7 +1,6 @@
 package typingsSlinky.cypress
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +9,8 @@ import scala.scalajs.js.annotation._
   * @deprecated ​ Deprecated. Use \`{@link JQuery.Event }\`.
   */
 @js.native
-trait BaseJQueryEventObject extends Event_ {
+trait BaseJQueryEventObject
+  extends typingsSlinky.std.Event {
   /**
     * The current DOM element within the event bubbling phase.
     * @see \`{@link https://api.jquery.com/event.currentTarget/ }\`
@@ -41,7 +41,7 @@ trait BaseJQueryEventObject extends Event_ {
     * The browser's original Event object.
     * @see \`{@link https://api.jquery.com/category/events/event-object/ }\`
     */
-  var originalEvent: Event_ = js.native
+  var originalEvent: org.scalajs.dom.raw.Event = js.native
   /**
     * The mouse position relative to the left edge of the document.
     * @see \`{@link https://api.jquery.com/event.pageX/ }\`

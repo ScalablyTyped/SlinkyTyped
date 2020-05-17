@@ -1,6 +1,6 @@
 package typingsSlinky.mendixmodelsdk.commonMod.common
 
-import typingsSlinky.mendixmodelsdk.deltasDeltasMod._PrimitiveValue
+import typingsSlinky.mendixmodelsdk.deltasDeltasMod.PrimitiveValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
   * Representation of a size, e.g. of an entity box.
   */
 @js.native
-trait ISize extends _PrimitiveValue {
+trait ISize extends PrimitiveValue {
   var height: Double = js.native
   var width: Double = js.native
 }

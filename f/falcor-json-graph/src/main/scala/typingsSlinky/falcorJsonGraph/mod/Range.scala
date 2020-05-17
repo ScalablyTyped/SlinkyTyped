@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * Describe a range of integers. Must contain either a "to" or "length" property.
   **/
 @js.native
-trait Range extends js.Object {
+trait Range extends KeySet {
   var from: js.UndefOr[Double] = js.native
   var length: js.UndefOr[Double] = js.native
   var to: js.UndefOr[Double] = js.native

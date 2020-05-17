@@ -1,6 +1,6 @@
 package typingsSlinky.enhancedResolve.commonTypesMod
 
-import typingsSlinky.enhancedResolve.AnonPush
+import typingsSlinky.enhancedResolve.anon.Push
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LoggingCallbackTools extends js.Object {
   var log: js.UndefOr[js.Function1[/* msg */ String, Unit]] = js.native
-  var missing: js.UndefOr[js.Array[String] | AnonPush] = js.native
+  var missing: js.UndefOr[js.Array[String] | Push] = js.native
   var stack: js.UndefOr[js.Array[String]] = js.native
 }
 
@@ -37,7 +37,7 @@ object LoggingCallbackTools {
         ret
     }
     @scala.inline
-    def withMissing(value: js.Array[String] | AnonPush): Self = {
+    def withMissing(value: js.Array[String] | Push): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("missing")(value.asInstanceOf[js.Any])
         ret

@@ -2,6 +2,8 @@ package typingsSlinky.appframework
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.XMLHttpRequest
+import typingsSlinky.appframework.anon.Android
+import typingsSlinky.appframework.anon.CssPrefix
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait appFrameworkStatic extends js.Object {
   /* AJAX settings */
   var ajaxSettings: appFrameworkAjaxSettings = js.native
-  var feat: AnonCssPrefix = js.native
+  var feat: CssPrefix = js.native
   /**
     * Prototype for afm object.  Also extens $.fn
     */
@@ -33,7 +35,7 @@ trait appFrameworkStatic extends js.Object {
     * .feat.nativetouchScroll
     * @api private
     */
-  var os: AnonAndroid = js.native
+  var os: Android = js.native
   def apply(collection: appFrameworkCollection): appFrameworkCollection = js.native
   def apply(element: HTMLElement): appFrameworkCollection = js.native
   def apply(`object`: js.Any): appFrameworkCollection = js.native

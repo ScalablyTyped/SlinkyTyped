@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -87,7 +86,90 @@ trait ViewState extends js.Object {
   def toScreenNoRotation(out: js.Array[Double], x: Double, y: Double): js.Array[Double] = js.native
 }
 
-@JSGlobal("__esri.ViewState")
-@js.native
-object ViewState extends TopLevel[ViewStateConstructor]
+object ViewState {
+  @scala.inline
+  def apply(
+    center: js.Array[Double],
+    copy: ViewState => ViewState,
+    extent: Extent,
+    resolution: Double,
+    rotation: Double,
+    scale: Double,
+    size: js.Array[Double],
+    toMap: (js.Array[Double], Double, Double) => js.Array[Double],
+    toScreen: (js.Array[Double], Double, Double) => js.Array[Double],
+    toScreenNoRotation: (js.Array[Double], Double, Double) => js.Array[Double]
+  ): ViewState = {
+    val __obj = js.Dynamic.literal(center = center.asInstanceOf[js.Any], copy = js.Any.fromFunction1(copy), extent = extent.asInstanceOf[js.Any], resolution = resolution.asInstanceOf[js.Any], rotation = rotation.asInstanceOf[js.Any], scale = scale.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], toMap = js.Any.fromFunction3(toMap), toScreen = js.Any.fromFunction3(toScreen), toScreenNoRotation = js.Any.fromFunction3(toScreenNoRotation))
+    __obj.asInstanceOf[ViewState]
+  }
+  @scala.inline
+  implicit class ViewStateOps[Self <: ViewState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCenter(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCopy(value: ViewState => ViewState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withExtent(value: Extent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResolution(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRotation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSize(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToMap(value: (js.Array[Double], Double, Double) => js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toMap")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withToScreen(value: (js.Array[Double], Double, Double) => js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toScreen")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withToScreenNoRotation(value: (js.Array[Double], Double, Double) => js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toScreenNoRotation")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
+}
 

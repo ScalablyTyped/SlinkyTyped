@@ -6,7 +6,6 @@ import typingsSlinky.web3Core.mod.Extension
 import typingsSlinky.web3Core.mod.Providers
 import typingsSlinky.web3Core.mod.RLPEncodedTransaction
 import typingsSlinky.web3Core.mod.TransactionConfig
-import typingsSlinky.web3Core.mod.provider
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,10 +15,10 @@ import scala.scalajs.js.annotation._
 object mod extends js.Object {
   @js.native
   class Personal () extends js.Object {
-    def this(provider: provider) = this()
-    def this(provider: provider, net: Socket) = this()
+    def this(provider: typingsSlinky.web3Core.mod.provider) = this()
+    def this(provider: typingsSlinky.web3Core.mod.provider, net: Socket) = this()
     var BatchRequest: Instantiable0[typingsSlinky.web3Core.mod.BatchRequest] = js.native
-    val currentProvider: provider = js.native
+    val currentProvider: typingsSlinky.web3Core.mod.provider = js.native
     var defaultAccount: String | Null = js.native
     var defaultBlock: String | Double = js.native
     val givenProvider: js.Any = js.native
@@ -48,7 +47,7 @@ object mod extends js.Object {
       password: String,
       callback: js.Function2[/* error */ js.Error, /* transactionHash */ String, Unit]
     ): js.Promise[String] = js.native
-    def setProvider(provider: provider): Boolean = js.native
+    def setProvider(provider: typingsSlinky.web3Core.mod.provider): Boolean = js.native
     def sign(dataToSign: String, address: String, password: String): js.Promise[String] = js.native
     def sign(
       dataToSign: String,

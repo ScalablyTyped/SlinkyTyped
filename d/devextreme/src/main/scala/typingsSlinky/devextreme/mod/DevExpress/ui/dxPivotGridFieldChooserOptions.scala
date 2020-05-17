@@ -1,8 +1,8 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonAllFields
-import typingsSlinky.devextreme.AnonAreaComponent
-import typingsSlinky.devextreme.AnonSearchTimeout
+import typingsSlinky.devextreme.anon.AllFields
+import typingsSlinky.devextreme.anon.AreaComponent
+import typingsSlinky.devextreme.anon.SearchTimeout
 import typingsSlinky.devextreme.devextremeNumbers.`0`
 import typingsSlinky.devextreme.devextremeNumbers.`1`
 import typingsSlinky.devextreme.devextremeNumbers.`2`
@@ -22,17 +22,17 @@ trait dxPivotGridFieldChooserOptions extends WidgetOptions[dxPivotGridFieldChoos
   /** The data source of a PivotGrid widget. */
   var dataSource: js.UndefOr[PivotGridDataSource] = js.native
   /** Configures the header filter feature. */
-  var headerFilter: js.UndefOr[AnonSearchTimeout] = js.native
+  var headerFilter: js.UndefOr[SearchTimeout] = js.native
   /** Specifies the field chooser layout. */
   var layout: js.UndefOr[`0` | `1` | `2`] = js.native
   /** A function that is executed before the context menu is rendered. */
-  var onContextMenuPreparing: js.UndefOr[js.Function1[/* e */ AnonAreaComponent, _]] = js.native
+  var onContextMenuPreparing: js.UndefOr[js.Function1[/* e */ AreaComponent, _]] = js.native
   /** Specifies a delay in milliseconds between when a user finishes typing in the field chooser's search panel, and when the search is executed. */
   var searchTimeout: js.UndefOr[Double] = js.native
   /** The widget's state. */
   var state: js.UndefOr[js.Any] = js.native
   /** Strings that can be changed or localized in the PivotGridFieldChooser widget. */
-  var texts: js.UndefOr[AnonAllFields] = js.native
+  var texts: js.UndefOr[AllFields] = js.native
 }
 
 object dxPivotGridFieldChooserOptions {
@@ -84,7 +84,7 @@ object dxPivotGridFieldChooserOptions {
         ret
     }
     @scala.inline
-    def withHeaderFilter(value: AnonSearchTimeout): Self = {
+    def withHeaderFilter(value: SearchTimeout): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headerFilter")(value.asInstanceOf[js.Any])
         ret
@@ -108,7 +108,7 @@ object dxPivotGridFieldChooserOptions {
         ret
     }
     @scala.inline
-    def withOnContextMenuPreparing(value: /* e */ AnonAreaComponent => _): Self = {
+    def withOnContextMenuPreparing(value: /* e */ AreaComponent => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenuPreparing")(js.Any.fromFunction1(value))
         ret
@@ -144,7 +144,7 @@ object dxPivotGridFieldChooserOptions {
         ret
     }
     @scala.inline
-    def withTexts(value: AnonAllFields): Self = {
+    def withTexts(value: AllFields): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("texts")(value.asInstanceOf[js.Any])
         ret

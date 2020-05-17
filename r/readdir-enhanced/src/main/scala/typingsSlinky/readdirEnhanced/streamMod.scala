@@ -1,6 +1,8 @@
 package typingsSlinky.readdirEnhanced
 
 import typingsSlinky.node.streamMod.Readable
+import typingsSlinky.readdirEnhanced.anon.Optionsstatsfalse
+import typingsSlinky.readdirEnhanced.anon.Optionsstatstrue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

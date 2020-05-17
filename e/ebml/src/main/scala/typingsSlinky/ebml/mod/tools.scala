@@ -1,6 +1,6 @@
 package typingsSlinky.ebml.mod
 
-import typingsSlinky.ebml.AnonLength
+import typingsSlinky.ebml.anon.Length
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -70,8 +70,8 @@ object tools extends js.Object {
     * @param [start=0] position in buffer
     * @returns value / length object
     */
-  def readVint(buffer: Buffer): AnonLength = js.native
-  def readVint(buffer: Buffer, start: Double): AnonLength = js.native
+  def readVint(buffer: Buffer): Length = js.native
+  def readVint(buffer: Buffer, start: Double): Length = js.native
   /**
     * write variable length integer
     * @param value to store into buffer

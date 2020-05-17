@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientToolresults.gapi.client.toolresults
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientToolresults.AnonFilterByName
-import typingsSlinky.gapiClientToolresults.AnonRequestId
-import typingsSlinky.gapiClientToolresults.AnonUserIp
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientToolresults.anon.FilterByName
+import typingsSlinky.gapiClientToolresults.anon.RequestId
+import typingsSlinky.gapiClientToolresults.anon.UserIp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait HistoriesResource extends js.Object {
     * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the
     * containing project does not exist
     */
-  def create(request: AnonRequestId): Request_[History] = js.native
+  def create(request: RequestId): Request[History] = js.native
   /**
     * Gets a History.
     *
@@ -30,7 +30,7 @@ trait HistoriesResource extends js.Object {
     * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the History does
     * not exist
     */
-  def get(request: AnonUserIp): Request_[History] = js.native
+  def get(request: UserIp): Request[History] = js.native
   /**
     * Lists Histories for a given Project.
     *
@@ -42,16 +42,16 @@ trait HistoriesResource extends js.Object {
     * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the History does
     * not exist
     */
-  def list(request: AnonFilterByName): Request_[ListHistoriesResponse] = js.native
+  def list(request: FilterByName): Request[ListHistoriesResponse] = js.native
 }
 
 object HistoriesResource {
   @scala.inline
   def apply(
-    create: AnonRequestId => Request_[History],
+    create: RequestId => Request[History],
     executions: ExecutionsResource,
-    get: AnonUserIp => Request_[History],
-    list: AnonFilterByName => Request_[ListHistoriesResponse]
+    get: UserIp => Request[History],
+    list: FilterByName => Request[ListHistoriesResponse]
   ): HistoriesResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), executions = executions.asInstanceOf[js.Any], get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[HistoriesResource]
@@ -63,7 +63,7 @@ object HistoriesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: AnonRequestId => Request_[History]): Self = {
+    def withCreate(value: RequestId => Request[History]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
@@ -75,13 +75,13 @@ object HistoriesResource {
         ret
     }
     @scala.inline
-    def withGet(value: AnonUserIp => Request_[History]): Self = {
+    def withGet(value: UserIp => Request[History]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonFilterByName => Request_[ListHistoriesResponse]): Self = {
+    def withList(value: FilterByName => Request[ListHistoriesResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

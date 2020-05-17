@@ -2,7 +2,7 @@ package typingsSlinky.cathoQuantum.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonGutter
+import typingsSlinky.cathoQuantum.anon.Gutter
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.large
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.medium
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.primary
@@ -30,7 +30,7 @@ object CircularLoader {
     @scala.inline
     def skin(value: primary | secondary): this.type = set("skin", value.asInstanceOf[js.Any])
     @scala.inline
-    def theme(value: AnonGutter): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: Gutter): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: CircularLoaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

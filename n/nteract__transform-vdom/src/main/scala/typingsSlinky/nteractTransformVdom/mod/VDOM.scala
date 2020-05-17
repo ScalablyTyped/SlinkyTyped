@@ -1,6 +1,6 @@
 package typingsSlinky.nteractTransformVdom.mod
 
-import typingsSlinky.nteractTransformVdom.PartialProps
+import typingsSlinky.nteractTransformVdom.anon.PartialProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

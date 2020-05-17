@@ -1,7 +1,7 @@
 package typingsSlinky.parquetjs.metadataInterfaceMod
 
 import typingsSlinky.nodeInt64.mod.^
-import typingsSlinky.parquetjs.AnonCodec
+import typingsSlinky.parquetjs.anon.Codec
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation._
 trait MetadataRowGroupsColumnsInterface extends js.Object {
   var file_offset: ^ = js.native
   var file_path: String | Null = js.native
-  var meta_data: AnonCodec = js.native
+  var meta_data: Codec = js.native
 }
 
 object MetadataRowGroupsColumnsInterface {
   @scala.inline
-  def apply(file_offset: ^, meta_data: AnonCodec): MetadataRowGroupsColumnsInterface = {
+  def apply(file_offset: ^, meta_data: Codec): MetadataRowGroupsColumnsInterface = {
     val __obj = js.Dynamic.literal(file_offset = file_offset.asInstanceOf[js.Any], meta_data = meta_data.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetadataRowGroupsColumnsInterface]
   }
@@ -32,7 +32,7 @@ object MetadataRowGroupsColumnsInterface {
         ret
     }
     @scala.inline
-    def withMeta_data(value: AnonCodec): Self = {
+    def withMeta_data(value: Codec): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("meta_data")(value.asInstanceOf[js.Any])
         ret

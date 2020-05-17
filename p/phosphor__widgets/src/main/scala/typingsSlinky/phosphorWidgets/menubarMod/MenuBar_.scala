@@ -1,11 +1,11 @@
 package typingsSlinky.phosphorWidgets.menubarMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLUListElement
 import typingsSlinky.phosphorWidgets.menuMod.Menu
 import typingsSlinky.phosphorWidgets.menubarMod.MenuBar.IOptions
 import typingsSlinky.phosphorWidgets.menubarMod.MenuBar.IRenderer
 import typingsSlinky.phosphorWidgets.widgetMod.Widget
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -133,7 +133,7 @@ class MenuBar_ () extends Widget {
     * called in response to events on the menu bar's DOM nodes. It
     * should not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
   /**
     * Insert a menu into the menu bar at the specified index.
     *

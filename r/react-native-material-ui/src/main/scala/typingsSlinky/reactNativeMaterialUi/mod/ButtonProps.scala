@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeMaterialUi.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactNativeMaterialUi.AnonText
+import typingsSlinky.reactNativeMaterialUi.anon.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait ButtonProps extends js.Object {
   var onPress: js.UndefOr[js.Function0[Unit]] = js.native
   var primary: js.UndefOr[Boolean] = js.native
   var raised: js.UndefOr[Boolean] = js.native
-  var style: js.UndefOr[AnonText] = js.native
+  var style: js.UndefOr[Text] = js.native
   var testID: js.UndefOr[String] = js.native
   var text: String = js.native
   var upperCase: js.UndefOr[Boolean] = js.native
@@ -130,7 +130,7 @@ object ButtonProps {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonText): Self = {
+    def withStyle(value: Text): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

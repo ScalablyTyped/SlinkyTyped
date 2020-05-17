@@ -1,8 +1,8 @@
 package typingsSlinky.fundamentalReact.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.fundamentalReact.PartialFormGroupProps
-import typingsSlinky.fundamentalReact.WeakValidationMapFormGrou
+import typingsSlinky.fundamentalReact.anon.PartialFormGroupProps
+import typingsSlinky.fundamentalReact.anon.WeakValidationMapFormGrou
 import typingsSlinky.fundamentalReact.formGroupMod.FormGroupProps
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap

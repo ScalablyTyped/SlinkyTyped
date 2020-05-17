@@ -4,11 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.UI.Input.Spatial.SpatialInteractionDetectedEventArgs")
 @js.native
-abstract class SpatialInteractionDetectedEventArgs () extends js.Object {
+trait SpatialInteractionDetectedEventArgs extends js.Object {
   var interaction: js.Any = js.native
    /* unmapped type */ var interactionSourceKind: js.Any = js.native
    /* unmapped type */ var tryGetPointerPose: js.Any = js.native
+}
+
+object SpatialInteractionDetectedEventArgs {
+  @scala.inline
+  def apply(interaction: js.Any, interactionSourceKind: js.Any, tryGetPointerPose: js.Any): SpatialInteractionDetectedEventArgs = {
+    val __obj = js.Dynamic.literal(interaction = interaction.asInstanceOf[js.Any], interactionSourceKind = interactionSourceKind.asInstanceOf[js.Any], tryGetPointerPose = tryGetPointerPose.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SpatialInteractionDetectedEventArgs]
+  }
+  @scala.inline
+  implicit class SpatialInteractionDetectedEventArgsOps[Self <: SpatialInteractionDetectedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInteraction(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interaction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInteractionSourceKind(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interactionSourceKind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTryGetPointerPose(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tryGetPointerPose")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

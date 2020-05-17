@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeChartsWrapper.mod
 
-import typingsSlinky.reactNativeChartsWrapper.AnonLabel
-import typingsSlinky.reactNativeChartsWrapper.AnonLineLength
+import typingsSlinky.reactNativeChartsWrapper.anon.Label
+import typingsSlinky.reactNativeChartsWrapper.anon.LineLength
 import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.DAYS
 import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.HOURS
 import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.MILLISECONDS
@@ -29,11 +29,11 @@ trait Axis extends js.Object {
   var granularity: js.UndefOr[Double] = js.native
   var granularityEnabled: js.UndefOr[Boolean] = js.native
   var gridColor: js.UndefOr[Color] = js.native
-  var gridDashedLine: js.UndefOr[AnonLineLength] = js.native
+  var gridDashedLine: js.UndefOr[LineLength] = js.native
   var gridLineWidth: js.UndefOr[Double] = js.native
   var labelCount: js.UndefOr[Double] = js.native
   var labelCountForce: js.UndefOr[Boolean] = js.native
-  var limitLines: js.UndefOr[js.Array[AnonLabel]] = js.native
+  var limitLines: js.UndefOr[js.Array[Label]] = js.native
   var since: js.UndefOr[Double] = js.native
   var textColor: js.UndefOr[Color] = js.native
   var textSize: js.UndefOr[Double] = js.native
@@ -247,7 +247,7 @@ object Axis {
         ret
     }
     @scala.inline
-    def withGridDashedLine(value: AnonLineLength): Self = {
+    def withGridDashedLine(value: LineLength): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gridDashedLine")(value.asInstanceOf[js.Any])
         ret
@@ -295,7 +295,7 @@ object Axis {
         ret
     }
     @scala.inline
-    def withLimitLines(value: js.Array[AnonLabel]): Self = {
+    def withLimitLines(value: js.Array[Label]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("limitLines")(value.asInstanceOf[js.Any])
         ret

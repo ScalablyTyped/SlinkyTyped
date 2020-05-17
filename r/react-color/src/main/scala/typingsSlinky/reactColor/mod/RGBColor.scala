@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RGBColor extends _Color {
+trait RGBColor extends Color {
   var a: js.UndefOr[Double] = js.native
   var b: Double = js.native
   var g: Double = js.native

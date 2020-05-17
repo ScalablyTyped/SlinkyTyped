@@ -3,7 +3,7 @@ package typingsSlinky.primereact.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonField
+import typingsSlinky.primereact.anon.Field
 import typingsSlinky.primereact.columnColumnMod.ColumnProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -91,7 +91,7 @@ object Column {
     @scala.inline
     def sortField(value: String): this.type = set("sortField", value.asInstanceOf[js.Any])
     @scala.inline
-    def sortFunction(value: /* e */ AnonField => Unit): this.type = set("sortFunction", js.Any.fromFunction1(value))
+    def sortFunction(value: /* e */ Field => Unit): this.type = set("sortFunction", js.Any.fromFunction1(value))
     @scala.inline
     def sortable(value: Boolean): this.type = set("sortable", value.asInstanceOf[js.Any])
     @scala.inline

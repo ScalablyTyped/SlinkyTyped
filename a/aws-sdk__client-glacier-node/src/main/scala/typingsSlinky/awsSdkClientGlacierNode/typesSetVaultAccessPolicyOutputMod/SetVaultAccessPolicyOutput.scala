@@ -1,13 +1,13 @@
 package typingsSlinky.awsSdkClientGlacierNode.typesSetVaultAccessPolicyOutputMod
 
-import typingsSlinky.awsSdkClientGlacierNode.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientGlacierNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SetVaultAccessPolicyOutput extends _OutputTypesUnion {
+trait SetVaultAccessPolicyOutput extends OutputTypesUnion {
   /**
     * Metadata about the response received, including the HTTP status code, HTTP headers, and any request identifiers recognized by the SDK.
     */

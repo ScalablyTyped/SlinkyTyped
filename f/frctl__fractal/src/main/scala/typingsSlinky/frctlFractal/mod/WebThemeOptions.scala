@@ -1,6 +1,6 @@
 package typingsSlinky.frctlFractal.mod
 
-import typingsSlinky.frctlFractal.AnonMount
+import typingsSlinky.frctlFractal.anon.Mount
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait WebThemeOptions extends js.Object {
   var rtl: Boolean = js.native
   var scripts: js.UndefOr[js.Array[String]] = js.native
   var skin: js.UndefOr[String] = js.native
-  var static: js.UndefOr[AnonMount] = js.native
+  var static: js.UndefOr[Mount] = js.native
   @JSName("static.mount")
   var staticDotmount: String = js.native
   var styles: js.UndefOr[js.Array[String]] = js.native
@@ -132,7 +132,7 @@ object WebThemeOptions {
         ret
     }
     @scala.inline
-    def withStatic(value: AnonMount): Self = {
+    def withStatic(value: Mount): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("static")(value.asInstanceOf[js.Any])
         ret

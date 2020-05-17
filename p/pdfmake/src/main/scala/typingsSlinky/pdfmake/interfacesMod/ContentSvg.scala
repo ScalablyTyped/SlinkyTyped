@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ContentSvg
   extends ContentBase
-     with _Content {
+     with Content {
   var fit: js.UndefOr[js.Tuple2[Double, Double]] = js.native
   var height: js.UndefOr[Double] = js.native
   var svg: String = js.native

@@ -2,7 +2,7 @@ package typingsSlinky.reactNativeMaterialUi.mod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.Image
-import typingsSlinky.reactNativeMaterialUi.AnonContainerContentContainer
+import typingsSlinky.reactNativeMaterialUi.anon.ContainerContentContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait DrawerHeaderProps extends js.Object {
   var backgroundColor: js.UndefOr[String] = js.native
   var children: js.UndefOr[ReactElement] = js.native
   var image: js.UndefOr[js.Array[Image]] = js.native
-  var style: js.UndefOr[AnonContainerContentContainer] = js.native
+  var style: js.UndefOr[ContainerContentContainer] = js.native
 }
 
 object DrawerHeaderProps {
@@ -64,7 +64,7 @@ object DrawerHeaderProps {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonContainerContentContainer): Self = {
+    def withStyle(value: ContainerContentContainer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

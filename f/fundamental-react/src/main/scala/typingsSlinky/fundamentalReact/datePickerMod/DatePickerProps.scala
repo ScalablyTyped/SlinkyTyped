@@ -1,9 +1,9 @@
 package typingsSlinky.fundamentalReact.datePickerMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.fundamentalReact.AnonDate
-import typingsSlinky.fundamentalReact.AnonNextMonth
-import typingsSlinky.fundamentalReact.AnonState
+import typingsSlinky.fundamentalReact.anon.Date
+import typingsSlinky.fundamentalReact.anon.NextMonth
+import typingsSlinky.fundamentalReact.anon.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,9 +28,9 @@ trait DatePickerProps
   var enableRangeSelection: js.UndefOr[Boolean] = js.native
   var inputProps: js.UndefOr[StringDictionary[js.Any]] = js.native
   var locale: js.UndefOr[String] = js.native
-  var localizedText: js.UndefOr[AnonNextMonth] = js.native
-  var onBlur: js.UndefOr[js.Function1[/* hasDateFormattedDate */ AnonDate, Unit]] = js.native
-  var validationState: js.UndefOr[AnonState] = js.native
+  var localizedText: js.UndefOr[NextMonth] = js.native
+  var onBlur: js.UndefOr[js.Function1[/* hasDateFormattedDate */ Date, Unit]] = js.native
+  var validationState: js.UndefOr[State] = js.native
 }
 
 object DatePickerProps {
@@ -238,7 +238,7 @@ object DatePickerProps {
         ret
     }
     @scala.inline
-    def withLocalizedText(value: AnonNextMonth): Self = {
+    def withLocalizedText(value: NextMonth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("localizedText")(value.asInstanceOf[js.Any])
         ret
@@ -250,7 +250,7 @@ object DatePickerProps {
         ret
     }
     @scala.inline
-    def withOnBlur(value: /* hasDateFormattedDate */ AnonDate => Unit): Self = {
+    def withOnBlur(value: /* hasDateFormattedDate */ Date => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
         ret
@@ -262,7 +262,7 @@ object DatePickerProps {
         ret
     }
     @scala.inline
-    def withValidationState(value: AnonState): Self = {
+    def withValidationState(value: State): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validationState")(value.asInstanceOf[js.Any])
         ret

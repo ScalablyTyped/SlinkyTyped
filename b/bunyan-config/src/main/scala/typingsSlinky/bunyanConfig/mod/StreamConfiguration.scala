@@ -1,6 +1,6 @@
 package typingsSlinky.bunyanConfig.mod
 
-import typingsSlinky.bunyanConfig.AnonHost
+import typingsSlinky.bunyanConfig.anon.Host
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait StreamConfiguration extends js.Object {
   var name: String = js.native
-  var params: js.UndefOr[AnonHost] = js.native
+  var params: js.UndefOr[Host] = js.native
 }
 
 object StreamConfiguration {
@@ -30,7 +30,7 @@ object StreamConfiguration {
         ret
     }
     @scala.inline
-    def withParams(value: AnonHost): Self = {
+    def withParams(value: Host): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
         ret

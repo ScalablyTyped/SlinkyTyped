@@ -2,7 +2,7 @@ package typingsSlinky.yargs.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.yargs.PartialParserConfiguratio
+import typingsSlinky.yargs.anon.PartialParserConfiguratio
 import typingsSlinky.yargs.yargsBooleans.`false`
 import typingsSlinky.yargs.yargsBooleans.`true`
 import typingsSlinky.yargsParser.mod.DetailedArguments

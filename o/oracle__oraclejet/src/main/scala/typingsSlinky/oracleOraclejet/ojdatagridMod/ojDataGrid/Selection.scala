@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojdatagridMod.ojDataGrid
 
-import typingsSlinky.oracleOraclejet.AnonColumnNumber
-import typingsSlinky.oracleOraclejet.AnonRowK
+import typingsSlinky.oracleOraclejet.anon.ColumnNumber
+import typingsSlinky.oracleOraclejet.anon.RowK
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,10 +9,10 @@ import scala.scalajs.js.annotation._
 // tslint:disable-next-line interface-over-type-literal
 @js.native
 trait Selection[K] extends js.Object {
-  var endIndex: js.UndefOr[AnonColumnNumber] = js.native
-  var endKey: js.UndefOr[AnonRowK[K]] = js.native
-  var startIndex: js.UndefOr[AnonColumnNumber] = js.native
-  var startKey: js.UndefOr[AnonRowK[K]] = js.native
+  var endIndex: js.UndefOr[ColumnNumber] = js.native
+  var endKey: js.UndefOr[RowK[K]] = js.native
+  var startIndex: js.UndefOr[ColumnNumber] = js.native
+  var startKey: js.UndefOr[RowK[K]] = js.native
 }
 
 object Selection {
@@ -28,7 +28,7 @@ object Selection {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[K] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[K] with Other]
     @scala.inline
-    def withEndIndex(value: AnonColumnNumber): Self[K] = {
+    def withEndIndex(value: ColumnNumber): Self[K] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("endIndex")(value.asInstanceOf[js.Any])
         ret
@@ -40,7 +40,7 @@ object Selection {
         ret
     }
     @scala.inline
-    def withEndKey(value: AnonRowK[K]): Self[K] = {
+    def withEndKey(value: RowK[K]): Self[K] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("endKey")(value.asInstanceOf[js.Any])
         ret
@@ -52,7 +52,7 @@ object Selection {
         ret
     }
     @scala.inline
-    def withStartIndex(value: AnonColumnNumber): Self[K] = {
+    def withStartIndex(value: ColumnNumber): Self[K] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("startIndex")(value.asInstanceOf[js.Any])
         ret
@@ -64,7 +64,7 @@ object Selection {
         ret
     }
     @scala.inline
-    def withStartKey(value: AnonRowK[K]): Self[K] = {
+    def withStartKey(value: RowK[K]): Self[K] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("startKey")(value.asInstanceOf[js.Any])
         ret

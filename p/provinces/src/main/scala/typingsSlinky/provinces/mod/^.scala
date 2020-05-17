@@ -1,7 +1,7 @@
 package typingsSlinky.provinces.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.provinces.mod._Global_.Province
+import typingsSlinky.provinces.mod.global.Province
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

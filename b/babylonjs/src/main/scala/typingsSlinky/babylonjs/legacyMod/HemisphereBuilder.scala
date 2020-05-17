@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.legacyMod
 
-import typingsSlinky.babylonjs.AnonSegments
+import typingsSlinky.babylonjs.anon.Segments
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,6 +21,6 @@ object HemisphereBuilder extends js.Object {
     * @param scene defines the hosting scene
     * @returns the hemisphere mesh
     */
-  def CreateHemisphere(name: String, options: AnonSegments, scene: js.Any): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateHemisphere(name: String, options: Segments, scene: js.Any): typingsSlinky.babylonjs.meshMod.Mesh = js.native
 }
 

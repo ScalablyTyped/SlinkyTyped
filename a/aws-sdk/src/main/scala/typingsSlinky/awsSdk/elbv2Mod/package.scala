@@ -6,15 +6,6 @@ import scala.scalajs.js.annotation._
 
 package object elbv2Mod {
   type ActionOrder = scala.Double
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.forward__
-    - typingsSlinky.awsSdk.awsSdkStrings.`authenticate-oidc`
-    - typingsSlinky.awsSdk.awsSdkStrings.`authenticate-cognito`
-    - typingsSlinky.awsSdk.awsSdkStrings.redirect
-    - typingsSlinky.awsSdk.awsSdkStrings.`fixed-response`
-    - java.lang.String
-  */
-  type ActionTypeEnum = typingsSlinky.awsSdk.elbv2Mod._ActionTypeEnum | java.lang.String
   type Actions = js.Array[typingsSlinky.awsSdk.elbv2Mod.Action]
   type AllocationId = java.lang.String
   type AuthenticateCognitoActionAuthenticationRequestExtraParams = org.scalablytyped.runtime.StringDictionary[
@@ -22,13 +13,6 @@ package object elbv2Mod {
   ]
   type AuthenticateCognitoActionAuthenticationRequestParamName = java.lang.String
   type AuthenticateCognitoActionAuthenticationRequestParamValue = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.deny__
-    - typingsSlinky.awsSdk.awsSdkStrings.allow__
-    - typingsSlinky.awsSdk.awsSdkStrings.authenticate
-    - java.lang.String
-  */
-  type AuthenticateCognitoActionConditionalBehaviorEnum = typingsSlinky.awsSdk.elbv2Mod._AuthenticateCognitoActionConditionalBehaviorEnum | java.lang.String
   type AuthenticateCognitoActionScope = java.lang.String
   type AuthenticateCognitoActionSessionCookieName = java.lang.String
   type AuthenticateCognitoActionSessionTimeout = scala.Double
@@ -43,13 +27,6 @@ package object elbv2Mod {
   type AuthenticateOidcActionAuthorizationEndpoint = java.lang.String
   type AuthenticateOidcActionClientId = java.lang.String
   type AuthenticateOidcActionClientSecret = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.deny__
-    - typingsSlinky.awsSdk.awsSdkStrings.allow__
-    - typingsSlinky.awsSdk.awsSdkStrings.authenticate
-    - java.lang.String
-  */
-  type AuthenticateOidcActionConditionalBehaviorEnum = typingsSlinky.awsSdk.elbv2Mod._AuthenticateOidcActionConditionalBehaviorEnum | java.lang.String
   type AuthenticateOidcActionIssuer = java.lang.String
   type AuthenticateOidcActionScope = java.lang.String
   type AuthenticateOidcActionSessionCookieName = java.lang.String
@@ -81,12 +58,6 @@ package object elbv2Mod {
   type HttpCode = java.lang.String
   type HttpHeaderConditionName = java.lang.String
   type IpAddress = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.ipv4_
-    - typingsSlinky.awsSdk.awsSdkStrings.dualstack
-    - java.lang.String
-  */
-  type IpAddressType = typingsSlinky.awsSdk.elbv2Mod._IpAddressType | java.lang.String
   type IsDefault = scala.Boolean
   type Limits = js.Array[typingsSlinky.awsSdk.elbv2Mod.Limit]
   type ListOfString = js.Array[typingsSlinky.awsSdk.elbv2Mod.StringValue]
@@ -101,26 +72,6 @@ package object elbv2Mod {
   type LoadBalancerAttributes = js.Array[typingsSlinky.awsSdk.elbv2Mod.LoadBalancerAttribute]
   type LoadBalancerName = java.lang.String
   type LoadBalancerNames = js.Array[typingsSlinky.awsSdk.elbv2Mod.LoadBalancerName]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`internet-facing`
-    - typingsSlinky.awsSdk.awsSdkStrings.internal
-    - java.lang.String
-  */
-  type LoadBalancerSchemeEnum = typingsSlinky.awsSdk.elbv2Mod._LoadBalancerSchemeEnum | java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.active__
-    - typingsSlinky.awsSdk.awsSdkStrings.provisioning_
-    - typingsSlinky.awsSdk.awsSdkStrings.active_impaired
-    - typingsSlinky.awsSdk.awsSdkStrings.failed__
-    - java.lang.String
-  */
-  type LoadBalancerStateEnum = typingsSlinky.awsSdk.elbv2Mod._LoadBalancerStateEnum | java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.application_
-    - typingsSlinky.awsSdk.awsSdkStrings.network_
-    - java.lang.String
-  */
-  type LoadBalancerTypeEnum = typingsSlinky.awsSdk.elbv2Mod._LoadBalancerTypeEnum | java.lang.String
   type LoadBalancers = js.Array[typingsSlinky.awsSdk.elbv2Mod.LoadBalancer]
   type Marker = java.lang.String
   type Max = java.lang.String
@@ -129,28 +80,12 @@ package object elbv2Mod {
   type Path = java.lang.String
   type Port = scala.Double
   type PrivateIPv4Address = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.HTTP
-    - typingsSlinky.awsSdk.awsSdkStrings.HTTPS
-    - typingsSlinky.awsSdk.awsSdkStrings.TCP
-    - typingsSlinky.awsSdk.awsSdkStrings.TLS
-    - typingsSlinky.awsSdk.awsSdkStrings.UDP
-    - typingsSlinky.awsSdk.awsSdkStrings.TCP_UDP
-    - java.lang.String
-  */
-  type ProtocolEnum = typingsSlinky.awsSdk.elbv2Mod._ProtocolEnum | java.lang.String
   type QueryStringKeyValuePairList = js.Array[typingsSlinky.awsSdk.elbv2Mod.QueryStringKeyValuePair]
   type RedirectActionHost = java.lang.String
   type RedirectActionPath = java.lang.String
   type RedirectActionPort = java.lang.String
   type RedirectActionProtocol = java.lang.String
   type RedirectActionQuery = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.HTTP_301
-    - typingsSlinky.awsSdk.awsSdkStrings.HTTP_302
-    - java.lang.String
-  */
-  type RedirectActionStatusCodeEnum = typingsSlinky.awsSdk.elbv2Mod._RedirectActionStatusCodeEnum | java.lang.String
   type ResourceArn = java.lang.String
   type ResourceArns = js.Array[typingsSlinky.awsSdk.elbv2Mod.ResourceArn]
   type RuleArn = java.lang.String
@@ -191,46 +126,7 @@ package object elbv2Mod {
   type TargetGroupWeight = scala.Double
   type TargetGroups = js.Array[typingsSlinky.awsSdk.elbv2Mod.TargetGroup]
   type TargetHealthDescriptions = js.Array[typingsSlinky.awsSdk.elbv2Mod.TargetHealthDescription]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.ElbDotRegistrationInProgress
-    - typingsSlinky.awsSdk.awsSdkStrings.ElbDotInitialHealthChecking
-    - typingsSlinky.awsSdk.awsSdkStrings.TargetDotResponseCodeMismatch
-    - typingsSlinky.awsSdk.awsSdkStrings.TargetDotTimeout
-    - typingsSlinky.awsSdk.awsSdkStrings.TargetDotFailedHealthChecks
-    - typingsSlinky.awsSdk.awsSdkStrings.TargetDotNotRegistered
-    - typingsSlinky.awsSdk.awsSdkStrings.TargetDotNotInUse
-    - typingsSlinky.awsSdk.awsSdkStrings.TargetDotDeregistrationInProgress
-    - typingsSlinky.awsSdk.awsSdkStrings.TargetDotInvalidState
-    - typingsSlinky.awsSdk.awsSdkStrings.TargetDotIpUnusable
-    - typingsSlinky.awsSdk.awsSdkStrings.TargetDotHealthCheckDisabled
-    - typingsSlinky.awsSdk.awsSdkStrings.ElbDotInternalError
-    - java.lang.String
-  */
-  type TargetHealthReasonEnum = typingsSlinky.awsSdk.elbv2Mod._TargetHealthReasonEnum | java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.initial_
-    - typingsSlinky.awsSdk.awsSdkStrings.healthy__
-    - typingsSlinky.awsSdk.awsSdkStrings.unhealthy__
-    - typingsSlinky.awsSdk.awsSdkStrings.unused
-    - typingsSlinky.awsSdk.awsSdkStrings.draining_
-    - typingsSlinky.awsSdk.awsSdkStrings.unavailable__
-    - java.lang.String
-  */
-  type TargetHealthStateEnum = typingsSlinky.awsSdk.elbv2Mod._TargetHealthStateEnum | java.lang.String
   type TargetId = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.instance__
-    - typingsSlinky.awsSdk.awsSdkStrings.ip_
-    - typingsSlinky.awsSdk.awsSdkStrings.lambda__
-    - java.lang.String
-  */
-  type TargetTypeEnum = typingsSlinky.awsSdk.elbv2Mod._TargetTypeEnum | java.lang.String
   type VpcId = java.lang.String
   type ZoneName = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2015-12-01`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.elbv2Mod._apiVersion | java.lang.String
 }

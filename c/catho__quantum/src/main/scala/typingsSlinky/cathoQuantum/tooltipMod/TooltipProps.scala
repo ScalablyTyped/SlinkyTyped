@@ -2,7 +2,7 @@ package typingsSlinky.cathoQuantum.tooltipMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.cathoQuantum.AnonBaseFontSizeColors
+import typingsSlinky.cathoQuantum.anon.BaseFontSizeColors
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.bottom
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.left
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.right
@@ -16,7 +16,7 @@ trait TooltipProps extends js.Object {
   var children: js.Array[TagMod[Any]] | TagMod[Any] = js.native
   var placement: js.UndefOr[top | right | bottom | left] = js.native
   var text: String = js.native
-  var theme: js.UndefOr[AnonBaseFontSizeColors] = js.native
+  var theme: js.UndefOr[BaseFontSizeColors] = js.native
   var visible: js.UndefOr[Boolean] = js.native
 }
 
@@ -69,7 +69,7 @@ object TooltipProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonBaseFontSizeColors): Self = {
+    def withTheme(value: BaseFontSizeColors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

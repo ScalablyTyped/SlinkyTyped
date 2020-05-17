@@ -3,10 +3,10 @@ package typingsSlinky.devextreme.mod.DevExpress.viz
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.SVGElement
 import org.scalajs.dom.raw.SVGGElement
-import typingsSlinky.devextreme.AnonItemText
+import typingsSlinky.devextreme.anon.ItemText
 import typingsSlinky.devextreme.mod.DevExpress.core.template
 import typingsSlinky.devextreme.mod.DevExpress.ui.format
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,13 +14,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait dxBarGaugeLegend extends BaseLegend {
   /** Specifies the hint that appears when a user hovers the mouse pointer over a legend item. */
-  var customizeHint: js.UndefOr[js.Function1[/* arg */ AnonItemText, String]] = js.native
+  var customizeHint: js.UndefOr[js.Function1[/* arg */ ItemText, String]] = js.native
   /** Allows you to change the order, text, and visibility of legend items. */
   var customizeItems: js.UndefOr[
     js.Function1[/* items */ js.Array[BarGaugeLegendItem], js.Array[BarGaugeLegendItem]]
   ] = js.native
   /** Customizes the text displayed by legend items. */
-  var customizeText: js.UndefOr[js.Function1[/* arg */ AnonItemText, String]] = js.native
+  var customizeText: js.UndefOr[js.Function1[/* arg */ ItemText, String]] = js.native
   /** Formats the item text before it is displayed. Accepts only numeric formats. When unspecified, it inherits the label's format. */
   var itemTextFormat: js.UndefOr[format] = js.native
   /** Specifies an SVG element that serves as a custom legend item marker. */
@@ -46,7 +46,7 @@ object dxBarGaugeLegend {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCustomizeHint(value: /* arg */ AnonItemText => String): Self = {
+    def withCustomizeHint(value: /* arg */ ItemText => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customizeHint")(js.Any.fromFunction1(value))
         ret
@@ -70,7 +70,7 @@ object dxBarGaugeLegend {
         ret
     }
     @scala.inline
-    def withCustomizeText(value: /* arg */ AnonItemText => String): Self = {
+    def withCustomizeText(value: /* arg */ ItemText => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customizeText")(js.Any.fromFunction1(value))
         ret

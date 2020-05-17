@@ -1,0 +1,18 @@
+package typingsSlinky.playcanvas.global.pc
+
+import typingsSlinky.playcanvas.pc.Http
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * @class
+  * @name pc.Http
+  * @classdesc Used to send and receive HTTP requests.
+  * @description Create a new Http instance. By default, a PlayCanvas application creates an instance of this
+  * object at `pc.http`.
+  */
+@JSGlobal("pc.Http")
+@js.native
+class Http_ () extends Http
+

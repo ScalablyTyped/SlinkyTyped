@@ -1,8 +1,8 @@
 package typingsSlinky.inquirer.mod
 
-import typingsSlinky.inquirer.AnonBottomBar
-import typingsSlinky.inquirer.AnonUi
-import typingsSlinky.inquirer.TypeofSeparator
+import typingsSlinky.inquirer.anon.BottomBar
+import typingsSlinky.inquirer.anon.TypeofSeparator
+import typingsSlinky.inquirer.anon.Ui
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait Inquirer extends PromptModuleBase {
   /**
     * Provides ui-components.
     */
-  var ui: AnonBottomBar = js.native
+  var ui: BottomBar = js.native
   /**
     * Creates a prompt-module.
     *
@@ -39,6 +39,6 @@ trait Inquirer extends PromptModuleBase {
   /**
     * The default prompt-module.
     */
-  def prompt[T](questions: QuestionCollection[T]): js.Promise[T] with AnonUi = js.native
+  def prompt[T](questions: QuestionCollection[T]): js.Promise[T] with Ui = js.native
 }
 

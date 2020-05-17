@@ -1,14 +1,14 @@
 package typingsSlinky.xmlCore.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.xmlCore.AnonType
+import typingsSlinky.xmlCore.anon.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait XmlSchema extends js.Object {
-  var items: js.UndefOr[StringDictionary[(XmlChildElementType[_] | XmlAttributeType[_]) with AnonType]] = js.native
+  var items: js.UndefOr[StringDictionary[(XmlChildElementType[_] | XmlAttributeType[_]) with Type]] = js.native
   var localName: js.UndefOr[String] = js.native
   var namespaceURI: js.UndefOr[String | Null] = js.native
   var parser: js.UndefOr[IXmlSerializableConstructor] = js.native
@@ -29,7 +29,7 @@ object XmlSchema {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withItems(value: StringDictionary[(XmlChildElementType[_] | XmlAttributeType[_]) with AnonType]): Self = {
+    def withItems(value: StringDictionary[(XmlChildElementType[_] | XmlAttributeType[_]) with Type]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
         ret

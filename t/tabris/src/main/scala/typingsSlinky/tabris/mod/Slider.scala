@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.OmitSliderset
+import typingsSlinky.tabris.anon.OmitSliderset
 import typingsSlinky.tabris.tabrisStrings.maximum
 import typingsSlinky.tabris.tabrisStrings.minimum
 import typingsSlinky.tabris.tabrisStrings.selection

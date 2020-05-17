@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.swipeActionMod
 
-import typingsSlinky.antDesignReactNative.AnonBackgroundColor
+import typingsSlinky.antDesignReactNative.anon.BackgroundColor
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNativeSwipeout.mod.SwipeoutButtonProperties
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait SwipeoutButtonProps extends SwipeoutButtonProperties {
-  var style: js.UndefOr[StyleProp[TextStyle] with AnonBackgroundColor] = js.native
+  var style: js.UndefOr[StyleProp[TextStyle] with BackgroundColor] = js.native
 }
 
 object SwipeoutButtonProps {
@@ -26,7 +26,7 @@ object SwipeoutButtonProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withStyle(value: StyleProp[TextStyle] with AnonBackgroundColor): Self = {
+    def withStyle(value: StyleProp[TextStyle] with BackgroundColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

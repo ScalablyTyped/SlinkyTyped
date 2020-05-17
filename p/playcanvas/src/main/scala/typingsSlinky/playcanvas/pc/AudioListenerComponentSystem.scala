@@ -13,9 +13,6 @@ import scala.scalajs.js.annotation._
   * @param {pc.Application} app - The application managing this system.
   * @param {pc.SoundManager} manager - A sound manager instance.
   */
-@JSGlobal("pc.AudioListenerComponentSystem")
 @js.native
-class AudioListenerComponentSystem protected () extends ComponentSystem {
-  def this(app: Application, manager: SoundManager) = this()
-}
+trait AudioListenerComponentSystem extends ComponentSystem
 

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait NonStandardEvent
   extends /* key */ StringDictionary[js.Any]
-     with _EventData[js.Any, js.Any, js.Any] {
+     with EventData[js.Any, js.Any, js.Any] {
   var `type`: String = js.native
 }
 

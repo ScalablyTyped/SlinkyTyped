@@ -1,13 +1,15 @@
 package typingsSlinky.wordpressApiFetch.mod.Schema
 
 import typingsSlinky.std.Record
-import typingsSlinky.wordpressApiFetch.AnonDictk
+import typingsSlinky.wordpressApiFetch.anon.Dictk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait BasePostRevision[T /* <: Context */] extends BaseResponse {
+trait BasePostRevision[T /* <: Context */]
+  extends BaseResponse
+     with PostRevision[T] {
   var author: Double = js.native
   var content: Contextual[T, js.Object, js.Object] = js.native
   var date: String = js.native
@@ -25,7 +27,7 @@ trait BasePostRevision[T /* <: Context */] extends BaseResponse {
 object BasePostRevision {
   @scala.inline
   def apply[T](
-    _links: Record[String, js.Array[AnonDictk]],
+    _links: Record[String, js.Array[Dictk]],
     author: Double,
     content: Contextual[T, js.Object, js.Object],
     date: String,

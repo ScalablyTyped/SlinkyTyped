@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.Services.Store
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Contains pricing info for a product listing in the Windows Store. */
+@JSGlobal("Windows.Services.Store.StorePrice")
+@js.native
+abstract class StorePrice ()
+  extends typingsSlinky.winrtUwp.Windows.Services.Store.StorePrice
+

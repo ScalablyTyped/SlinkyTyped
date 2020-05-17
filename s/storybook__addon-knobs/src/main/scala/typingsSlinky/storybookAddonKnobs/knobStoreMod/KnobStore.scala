@@ -2,8 +2,8 @@ package typingsSlinky.storybookAddonKnobs.knobStoreMod
 
 import typingsSlinky.std.Partial
 import typingsSlinky.std.Record
-import typingsSlinky.storybookAddonKnobs.AnonDefaultValue
-import typingsSlinky.storybookAddonKnobs.typeanygroupIdstringundef
+import typingsSlinky.storybookAddonKnobs.anon.DefaultValue
+import typingsSlinky.storybookAddonKnobs.anon.typeanygroupIdstringundef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait KnobStore extends js.Object {
   var callbacks: js.Array[Callback] = js.native
   var store: Record[String, KnobStoreKnob] = js.native
   var timer: js.UndefOr[Double] = js.native
-  def get(key: String): typeanygroupIdstringundef | AnonDefaultValue = js.native
+  def get(key: String): typeanygroupIdstringundef | DefaultValue = js.native
   def getAll(): Record[String, KnobStoreKnob] = js.native
   def has(key: String): Boolean = js.native
   def markAllUnused(): Unit = js.native
@@ -28,7 +28,7 @@ object KnobStore {
   @scala.inline
   def apply(
     callbacks: js.Array[Callback],
-    get: String => typeanygroupIdstringundef | AnonDefaultValue,
+    get: String => typeanygroupIdstringundef | DefaultValue,
     getAll: () => Record[String, KnobStoreKnob],
     has: String => Boolean,
     markAllUnused: () => Unit,
@@ -55,7 +55,7 @@ object KnobStore {
         ret
     }
     @scala.inline
-    def withGet(value: String => typeanygroupIdstringundef | AnonDefaultValue): Self = {
+    def withGet(value: String => typeanygroupIdstringundef | DefaultValue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret

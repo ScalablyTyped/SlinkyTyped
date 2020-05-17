@@ -20,7 +20,8 @@ trait ReactionsCreateForTeamDiscussionCommentInOrgParams extends js.Object {
     */
   var content: Plussign1 | `-1` | laugh | confused | heart | hooray | rocket | eyes = js.native
   var discussion_number: Double = js.native
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
   var team_slug: String = js.native
 }
 
@@ -30,10 +31,11 @@ object ReactionsCreateForTeamDiscussionCommentInOrgParams {
     comment_number: Double,
     content: Plussign1 | `-1` | laugh | confused | heart | hooray | rocket | eyes,
     discussion_number: Double,
-    org: String,
+    org_ : String,
     team_slug: String
   ): ReactionsCreateForTeamDiscussionCommentInOrgParams = {
-    val __obj = js.Dynamic.literal(comment_number = comment_number.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], discussion_number = discussion_number.asInstanceOf[js.Any], org = org.asInstanceOf[js.Any], team_slug = team_slug.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(comment_number = comment_number.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], discussion_number = discussion_number.asInstanceOf[js.Any], team_slug = team_slug.asInstanceOf[js.Any])
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactionsCreateForTeamDiscussionCommentInOrgParams]
   }
   @scala.inline
@@ -61,7 +63,7 @@ object ReactionsCreateForTeamDiscussionCommentInOrgParams {
         ret
     }
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

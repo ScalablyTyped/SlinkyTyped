@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait MarkerSymbol extends js.Object
 
+object MarkerSymbol {
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.PictureMarkerSymbol): MarkerSymbol = value.asInstanceOf[MarkerSymbol]
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.SimpleMarkerSymbol): MarkerSymbol = value.asInstanceOf[MarkerSymbol]
+}
+

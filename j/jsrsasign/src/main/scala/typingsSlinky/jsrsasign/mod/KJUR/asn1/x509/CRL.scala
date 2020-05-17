@@ -1,6 +1,6 @@
 package typingsSlinky.jsrsasign.mod.KJUR.asn1.x509
 
-import typingsSlinky.jsrsasign.AnonRsaprvkey
+import typingsSlinky.jsrsasign.anon.Rsaprvkey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,6 +33,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class CRL ()
   extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.x509.CRL {
-  def this(params: AnonRsaprvkey) = this()
+  def this(params: Rsaprvkey) = this()
 }
 

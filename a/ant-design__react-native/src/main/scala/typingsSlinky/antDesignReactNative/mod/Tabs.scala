@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.mod
 
-import typingsSlinky.antDesignReactNative.TypeofDefaultTabBar
+import typingsSlinky.antDesignReactNative.anon.TypeofDefaultTabBar
 import typingsSlinky.antDesignReactNative.tabsMod.default
 import typingsSlinky.antDesignReactNative.tabsPropsTypeMod.PropsType
 import scala.scalajs.js

@@ -1,7 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.AnonImage
-import typingsSlinky.tabris.AnonStyle
+import typingsSlinky.tabris.anon.Style
 import typingsSlinky.tabris.tabrisStrings.cancel
 import typingsSlinky.tabris.tabrisStrings.default
 import typingsSlinky.tabris.tabrisStrings.destructive
@@ -12,7 +11,7 @@ import scala.scalajs.js.annotation._
 @JSImport("tabris", "ActionSheetItem")
 @js.native
 class ActionSheetItem () extends js.Object {
-  def this(properties: AnonImage) = this()
+  def this(properties: typingsSlinky.tabris.anon.Image) = this()
   /**
     * An image to be displayed for this item in the `ActionSheet`
     * @constant
@@ -21,7 +20,7 @@ class ActionSheetItem () extends js.Object {
   /**
     * @constant
     */
-  val jsxAttributes: AnonStyle = js.native
+  val jsxAttributes: Style = js.native
   /**
     * The style of presentation for this item in the `ActionSheet`. With the style `cancel` or
     * `destructive` are displayed in a special way.

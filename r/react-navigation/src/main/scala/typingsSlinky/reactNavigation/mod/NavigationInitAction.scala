@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.reactNavigation.mod._NavigationAction because Already inherited */ @js.native
+- typingsSlinky.reactNavigation.mod.NavigationAction because Already inherited */ @js.native
 trait NavigationInitAction
   extends NavigationStackAction
      with NavigationInitActionPayload

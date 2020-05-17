@@ -1,6 +1,6 @@
 package typingsSlinky.azdata.mod.nb
 
-import typingsSlinky.azdata.AnonUndoStopAfter
+import typingsSlinky.azdata.anon.UndoStopAfter
 import typingsSlinky.vscode.Thenable
 import typingsSlinky.vscode.mod.ViewColumn
 import scala.scalajs.js
@@ -45,7 +45,7 @@ trait NotebookEditor extends js.Object {
   			 * @return A promise that resolves with a value indicating if the edits could be applied.
   			 */
   def edit(callback: js.Function1[/* editBuilder */ NotebookEditorEdit, Unit]): Thenable[Boolean] = js.native
-  def edit(callback: js.Function1[/* editBuilder */ NotebookEditorEdit, Unit], options: AnonUndoStopAfter): Thenable[Boolean] = js.native
+  def edit(callback: js.Function1[/* editBuilder */ NotebookEditorEdit, Unit], options: UndoStopAfter): Thenable[Boolean] = js.native
   /**
   			 * Kicks off execution of all code cells. Thenable will resolve only when full execution of all cells is completed.
   			 */

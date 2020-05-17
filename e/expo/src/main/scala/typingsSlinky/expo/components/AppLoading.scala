@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AppLoading {
-  object AnonAutoHideSplash {
+  object AutoHideSplash {
     @JSImport("expo/build/launch/AppLoading", JSImport.Default)
     @js.native
     object component extends js.Object
@@ -28,20 +28,20 @@ object AppLoading {
       def startAsync(value: () => js.Promise[Unit]): this.type = set("startAsync", js.Any.fromFunction0(value))
     }
     
-    def withProps(p: typingsSlinky.expo.AnonAutoHideSplash): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    implicit def make(companion: AnonAutoHideSplash.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+    def withProps(p: typingsSlinky.expo.anon.AutoHideSplash): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: AutoHideSplash.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   }
   
-  object AnonOnError {
+  object OnError {
     @JSImport("expo/build/launch/AppLoading", JSImport.Default)
     @js.native
     object component extends js.Object
     
-    def withProps(p: typingsSlinky.expo.AnonOnError): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+    def withProps(p: typingsSlinky.expo.anon.OnError): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
     @scala.inline
     def apply(onError: Null, onFinish: Null, startAsync: Null): Default[tag.type, default] = {
         val __props = js.Dynamic.literal(onError = onError.asInstanceOf[js.Any], onFinish = onFinish.asInstanceOf[js.Any], startAsync = startAsync.asInstanceOf[js.Any])
-        new Default[tag.type, default](js.Array(this.component, __props.asInstanceOf[typingsSlinky.expo.AnonOnError]))
+        new Default[tag.type, default](js.Array(this.component, __props.asInstanceOf[typingsSlinky.expo.anon.OnError]))
     }
   }
   

@@ -7,32 +7,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.FilesInput")
 @js.native
-class FilesInput protected () extends js.Object {
-  /**
-    * Creates a new FilesInput
-    * @param engine defines the rendering engine
-    * @param scene defines the hosting scene
-    * @param sceneLoadedCallback callback called when scene is loaded
-    * @param progressCallback callback called to track progress
-    * @param additionalRenderLoopLogicCallback callback called to add user logic to the rendering loop
-    * @param textureLoadingCallback callback called when a texture is loading
-    * @param startingProcessingFilesCallback callback called when the system is about to process all files
-    * @param onReloadCallback callback called when a reload is requested
-    * @param errorCallback callback call if an error occurs
-    */
-  def this(
-    engine: Engine,
-    scene: Scene,
-    sceneLoadedCallback: js.Function2[/* sceneFile */ File, /* scene */ Scene, Unit],
-    progressCallback: js.Function1[/* progress */ SceneLoaderProgressEvent, Unit],
-    additionalRenderLoopLogicCallback: js.Function0[Unit],
-    textureLoadingCallback: js.Function1[/* remaining */ Double, Unit],
-    startingProcessingFilesCallback: js.Function1[/* files */ js.UndefOr[js.Array[File]], Unit],
-    onReloadCallback: js.Function1[/* sceneFile */ File, Unit],
-    errorCallback: js.Function3[/* sceneFile */ File, /* scene */ Scene, /* message */ String, Unit]
-  ) = this()
+trait FilesInput extends js.Object {
   var _additionalRenderLoopLogicCallback: js.Any = js.native
   var _currentScene: js.Any = js.native
   var _dragEnterHandler: js.Any = js.native
@@ -78,13 +54,202 @@ class FilesInput protected () extends js.Object {
   def reload(): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("BABYLON.FilesInput")
-@js.native
-object FilesInput extends js.Object {
-  /**
-    * List of files ready to be loaded
-    */
-  def FilesToLoad: org.scalablytyped.runtime.StringDictionary[File] = js.native
+object FilesInput {
+  @scala.inline
+  def apply(
+    _additionalRenderLoopLogicCallback: js.Any,
+    _currentScene: js.Any,
+    _dragEnterHandler: js.Any,
+    _dragOverHandler: js.Any,
+    _dropHandler: js.Any,
+    _elementToMonitor: js.Any,
+    _engine: js.Any,
+    _errorCallback: js.Any,
+    _filesToLoad: js.Any,
+    _onReloadCallback: js.Any,
+    _processFiles: js.Any,
+    _processReload: js.Any,
+    _progressCallback: js.Any,
+    _sceneFileToLoad: js.Any,
+    _sceneLoadedCallback: js.Any,
+    _startingProcessingFilesCallback: js.Any,
+    _textureLoadingCallback: js.Any,
+    _traverseFolder: js.Any,
+    dispose: () => Unit,
+    drag: js.Any,
+    drop: js.Any,
+    loadFiles: js.Any => Unit,
+    monitorElementForDragNDrop: HTMLElement => Unit,
+    onProcessFileCallback: (File, String, String) => `true`,
+    reload: () => Unit,
+    renderFunction: js.Any
+  ): FilesInput = {
+    val __obj = js.Dynamic.literal(_additionalRenderLoopLogicCallback = _additionalRenderLoopLogicCallback.asInstanceOf[js.Any], _currentScene = _currentScene.asInstanceOf[js.Any], _dragEnterHandler = _dragEnterHandler.asInstanceOf[js.Any], _dragOverHandler = _dragOverHandler.asInstanceOf[js.Any], _dropHandler = _dropHandler.asInstanceOf[js.Any], _elementToMonitor = _elementToMonitor.asInstanceOf[js.Any], _engine = _engine.asInstanceOf[js.Any], _errorCallback = _errorCallback.asInstanceOf[js.Any], _filesToLoad = _filesToLoad.asInstanceOf[js.Any], _onReloadCallback = _onReloadCallback.asInstanceOf[js.Any], _processFiles = _processFiles.asInstanceOf[js.Any], _processReload = _processReload.asInstanceOf[js.Any], _progressCallback = _progressCallback.asInstanceOf[js.Any], _sceneFileToLoad = _sceneFileToLoad.asInstanceOf[js.Any], _sceneLoadedCallback = _sceneLoadedCallback.asInstanceOf[js.Any], _startingProcessingFilesCallback = _startingProcessingFilesCallback.asInstanceOf[js.Any], _textureLoadingCallback = _textureLoadingCallback.asInstanceOf[js.Any], _traverseFolder = _traverseFolder.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), drag = drag.asInstanceOf[js.Any], drop = drop.asInstanceOf[js.Any], loadFiles = js.Any.fromFunction1(loadFiles), monitorElementForDragNDrop = js.Any.fromFunction1(monitorElementForDragNDrop), onProcessFileCallback = js.Any.fromFunction3(onProcessFileCallback), reload = js.Any.fromFunction0(reload), renderFunction = renderFunction.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FilesInput]
+  }
+  @scala.inline
+  implicit class FilesInputOps[Self <: FilesInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_additionalRenderLoopLogicCallback(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_additionalRenderLoopLogicCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_currentScene(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_currentScene")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_dragEnterHandler(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_dragEnterHandler")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_dragOverHandler(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_dragOverHandler")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_dropHandler(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_dropHandler")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_elementToMonitor(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_elementToMonitor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_engine(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_engine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_errorCallback(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_errorCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_filesToLoad(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_filesToLoad")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_onReloadCallback(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_onReloadCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_processFiles(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_processFiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_processReload(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_processReload")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_progressCallback(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_progressCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_sceneFileToLoad(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_sceneFileToLoad")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_sceneLoadedCallback(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_sceneLoadedCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_startingProcessingFilesCallback(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_startingProcessingFilesCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_textureLoadingCallback(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_textureLoadingCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_traverseFolder(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_traverseFolder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDispose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispose")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDrag(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDrop(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drop")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoadFiles(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadFiles")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMonitorElementForDragNDrop(value: HTMLElement => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("monitorElementForDragNDrop")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnProcessFileCallback(value: (File, String, String) => `true`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onProcessFileCallback")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withReload(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reload")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRenderFunction(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderFunction")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.googleCloudCommon.utilMod
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.googleCloudCommon.TypeofApiError
+import typingsSlinky.googleCloudCommon.anon.TypeofApiError
 import typingsSlinky.teenyRequest.mod.Response
 import scala.scalajs.js
 import scala.scalajs.js.`|`

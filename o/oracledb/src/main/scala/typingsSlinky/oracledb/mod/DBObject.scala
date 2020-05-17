@@ -1,7 +1,7 @@
 package typingsSlinky.oracledb.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracledb.AnonTypeClass
+import typingsSlinky.oracledb.anon.TypeClass
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,11 +15,11 @@ import scala.scalajs.js.annotation._
 @js.native
 class DBObject ()
   extends /* key */ StringDictionary[js.Any]
-     with _EnqueueMessage {
+     with EnqueueMessage {
   /**
     * When dbObject.isCollection is false, this will be an object containing attributes corresponding to the Oracle Database object attributes. 
     */
-  var attributes: Record[String, AnonTypeClass] = js.native
+  var attributes: Record[String, TypeClass] = js.native
   /** When dbObject.isCollection is true, this will be one of the DB_TYPE constants. */
   val elementType: Double = js.native
   val elementTypeClass: DBObjectClass = js.native

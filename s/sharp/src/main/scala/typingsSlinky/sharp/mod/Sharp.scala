@@ -2,11 +2,10 @@ package typingsSlinky.sharp.mod
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.Duplex
-import typingsSlinky.sharp.Anon0
-import typingsSlinky.sharp.AnonBrightness
-import typingsSlinky.sharp.AnonData
-import typingsSlinky.sharp.AnonRaw
-import typingsSlinky.sharp.AnonResolveWithObject
+import typingsSlinky.sharp.anon.Brightness
+import typingsSlinky.sharp.anon.Data
+import typingsSlinky.sharp.anon.ResolveWithObject
+import typingsSlinky.sharp.anon.`0`
 import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -41,9 +40,9 @@ trait Sharp extends Duplex {
     * @returns A sharp instance that can be used to chain operations
     */
   def boolean(operand: String, operator: String): Sharp = js.native
-  def boolean(operand: String, operator: String, options: AnonRaw): Sharp = js.native
+  def boolean(operand: String, operator: String, options: typingsSlinky.sharp.anon.Raw): Sharp = js.native
   def boolean(operand: Buffer, operator: String): Sharp = js.native
-  def boolean(operand: Buffer, operator: String, options: AnonRaw): Sharp = js.native
+  def boolean(operand: Buffer, operator: String, options: typingsSlinky.sharp.anon.Raw): Sharp = js.native
   //#endregion
   //#region Composite functions
   /**
@@ -211,7 +210,7 @@ trait Sharp extends Duplex {
     * @returns A sharp instance that can be used to chain operations
     */
   def modulate(): Sharp = js.native
-  def modulate(options: AnonBrightness): Sharp = js.native
+  def modulate(options: Brightness): Sharp = js.native
   /**
     * Produce the "negative" of the image.
     * @param negate true to enable and false to disable (defaults to true)
@@ -413,6 +412,7 @@ trait Sharp extends Duplex {
     * @returns A sharp instance that can be used to chain operations
     */
   def toBuffer(callback: js.Function3[/* err */ js.Error, /* buffer */ Buffer, /* info */ OutputInfo, Unit]): Sharp = js.native
+  def toBuffer(options: ResolveWithObject): js.Promise[Buffer] = js.native
   /**
     * Write output to a Buffer. JPEG, PNG, WebP, TIFF and RAW output are supported.
     * By default, the format will match the input image, except GIF and SVG input which become PNG output.
@@ -420,8 +420,7 @@ trait Sharp extends Duplex {
     * @param options.resolveWithObject Resolve the Promise with an Object containing data and info properties instead of resolving only with data.
     * @returns A promise that resolves with an object containing the Buffer data and an info object containing the output image format, size (bytes), width, height and channels
     */
-  def toBuffer(options: Anon0): js.Promise[AnonData] = js.native
-  def toBuffer(options: AnonResolveWithObject): js.Promise[Buffer] = js.native
+  def toBuffer(options: `0`): js.Promise[Data] = js.native
   /**
     * Alternative spelling of toColourspace().
     * @param colorspace output colorspace e.g. srgb, rgb, cmyk, lab, b-w ...

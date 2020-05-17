@@ -1,7 +1,7 @@
 package typingsSlinky.relayRuntime.normalizationNodeMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.relayRuntime.AnonFragmentName
+import typingsSlinky.relayRuntime.anon.FragmentName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait NormalizationMatchField extends NormalizationField {
   val alias: js.UndefOr[String | Null] = js.native
   val args: js.Array[NormalizationArgument] = js.native
   val kind: String = js.native
-  val matchesByType: StringDictionary[AnonFragmentName] = js.native
+  val matchesByType: StringDictionary[FragmentName] = js.native
   val name: String = js.native
   val storageKey: js.UndefOr[String | Null] = js.native
 }
@@ -23,7 +23,7 @@ object NormalizationMatchField {
   def apply(
     args: js.Array[NormalizationArgument],
     kind: String,
-    matchesByType: StringDictionary[AnonFragmentName],
+    matchesByType: StringDictionary[FragmentName],
     name: String
   ): NormalizationMatchField = {
     val __obj = js.Dynamic.literal(args = args.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], matchesByType = matchesByType.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
@@ -48,7 +48,7 @@ object NormalizationMatchField {
         ret
     }
     @scala.inline
-    def withMatchesByType(value: StringDictionary[AnonFragmentName]): Self = {
+    def withMatchesByType(value: StringDictionary[FragmentName]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("matchesByType")(value.asInstanceOf[js.Any])
         ret

@@ -1,13 +1,13 @@
 package typingsSlinky.cypress.sinonMod
 
-import typingsSlinky.cypress.AnonAbort
+import typingsSlinky.cypress.anon.Abort
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SinonFakeUploadProgress extends js.Object {
-  var eventListeners: AnonAbort = js.native
+  var eventListeners: Abort = js.native
   def addEventListener(event: String, listener: js.Function1[/* e */ Event, _]): Unit = js.native
   def dispatchEvent(event: Event): Unit = js.native
   def removeEventListener(event: String, listener: js.Function1[/* e */ Event, _]): Unit = js.native
@@ -18,7 +18,7 @@ object SinonFakeUploadProgress {
   def apply(
     addEventListener: (String, js.Function1[/* e */ Event, _]) => Unit,
     dispatchEvent: Event => Unit,
-    eventListeners: AnonAbort,
+    eventListeners: Abort,
     removeEventListener: (String, js.Function1[/* e */ Event, _]) => Unit
   ): SinonFakeUploadProgress = {
     val __obj = js.Dynamic.literal(addEventListener = js.Any.fromFunction2(addEventListener), dispatchEvent = js.Any.fromFunction1(dispatchEvent), eventListeners = eventListeners.asInstanceOf[js.Any], removeEventListener = js.Any.fromFunction2(removeEventListener))
@@ -43,7 +43,7 @@ object SinonFakeUploadProgress {
         ret
     }
     @scala.inline
-    def withEventListeners(value: AnonAbort): Self = {
+    def withEventListeners(value: Abort): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("eventListeners")(value.asInstanceOf[js.Any])
         ret

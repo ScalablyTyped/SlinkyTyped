@@ -1,6 +1,6 @@
 package typingsSlinky.reactBootstrapTableNext.mod
 
-import typingsSlinky.reactBootstrapTableNext.AnonText
+import typingsSlinky.reactBootstrapTableNext.anon.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait SizePerPageRendererOptions extends js.Object {
   /**
     * dropdown options
     */
-  var options: js.Array[AnonText] = js.native
+  var options: js.Array[Text] = js.native
   /**
     * call it when you need to change size per page
     */
@@ -23,11 +23,7 @@ trait SizePerPageRendererOptions extends js.Object {
 
 object SizePerPageRendererOptions {
   @scala.inline
-  def apply(
-    currentSizePerPage: Double,
-    onSizePerPageChange: (Double, Double) => Unit,
-    options: js.Array[AnonText]
-  ): SizePerPageRendererOptions = {
+  def apply(currentSizePerPage: Double, onSizePerPageChange: (Double, Double) => Unit, options: js.Array[Text]): SizePerPageRendererOptions = {
     val __obj = js.Dynamic.literal(currentSizePerPage = currentSizePerPage.asInstanceOf[js.Any], onSizePerPageChange = js.Any.fromFunction2(onSizePerPageChange), options = options.asInstanceOf[js.Any])
     __obj.asInstanceOf[SizePerPageRendererOptions]
   }
@@ -50,7 +46,7 @@ object SizePerPageRendererOptions {
         ret
     }
     @scala.inline
-    def withOptions(value: js.Array[AnonText]): Self = {
+    def withOptions(value: js.Array[Text]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

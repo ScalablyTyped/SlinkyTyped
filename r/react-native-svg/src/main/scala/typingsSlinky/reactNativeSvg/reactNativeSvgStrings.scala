@@ -1,11 +1,13 @@
 package typingsSlinky.reactNativeSvg
 
 import typingsSlinky.reactNativeSvg.mod.AlignmentBaseline
+import typingsSlinky.reactNativeSvg.mod.BaselineShift
 import typingsSlinky.reactNativeSvg.mod.FillRule
 import typingsSlinky.reactNativeSvg.mod.FontStretch
 import typingsSlinky.reactNativeSvg.mod.FontStyle
 import typingsSlinky.reactNativeSvg.mod.FontVariant
 import typingsSlinky.reactNativeSvg.mod.FontVariantLigatures
+import typingsSlinky.reactNativeSvg.mod.FontWeight
 import typingsSlinky.reactNativeSvg.mod.LengthAdjust
 import typingsSlinky.reactNativeSvg.mod.Linecap
 import typingsSlinky.reactNativeSvg.mod.Linejoin
@@ -15,39 +17,37 @@ import typingsSlinky.reactNativeSvg.mod.TextPathMethod
 import typingsSlinky.reactNativeSvg.mod.TextPathMidLine
 import typingsSlinky.reactNativeSvg.mod.TextPathSpacing
 import typingsSlinky.reactNativeSvg.mod.Units
-import typingsSlinky.reactNativeSvg.mod._BaselineShift
-import typingsSlinky.reactNativeSvg.mod._FontWeight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object reactNativeSvgStrings {
   @js.native
-  sealed trait `100` extends _FontWeight
+  sealed trait `100` extends FontWeight
   
   @js.native
-  sealed trait `200` extends _FontWeight
+  sealed trait `200` extends FontWeight
   
   @js.native
-  sealed trait `300` extends _FontWeight
+  sealed trait `300` extends FontWeight
   
   @js.native
-  sealed trait `400` extends _FontWeight
+  sealed trait `400` extends FontWeight
   
   @js.native
-  sealed trait `500` extends _FontWeight
+  sealed trait `500` extends FontWeight
   
   @js.native
-  sealed trait `600` extends _FontWeight
+  sealed trait `600` extends FontWeight
   
   @js.native
-  sealed trait `700` extends _FontWeight
+  sealed trait `700` extends FontWeight
   
   @js.native
-  sealed trait `800` extends _FontWeight
+  sealed trait `800` extends FontWeight
   
   @js.native
-  sealed trait `900` extends _FontWeight
+  sealed trait `900` extends FontWeight
   
   @js.native
   sealed trait `after-edge` extends AlignmentBaseline
@@ -64,7 +64,7 @@ object reactNativeSvgStrings {
   @js.native
   sealed trait baseline
     extends AlignmentBaseline
-       with _BaselineShift
+       with BaselineShift
   
   @js.native
   sealed trait `before-edge` extends AlignmentBaseline
@@ -76,10 +76,10 @@ object reactNativeSvgStrings {
   sealed trait blink extends TextDecoration
   
   @js.native
-  sealed trait bold extends _FontWeight
+  sealed trait bold extends FontWeight
   
   @js.native
-  sealed trait bolder extends _FontWeight
+  sealed trait bolder extends FontWeight
   
   @js.native
   sealed trait bottom extends AlignmentBaseline
@@ -136,7 +136,7 @@ object reactNativeSvgStrings {
   sealed trait italic extends FontStyle
   
   @js.native
-  sealed trait lighter extends _FontWeight
+  sealed trait lighter extends FontWeight
   
   @js.native
   sealed trait `line-through` extends TextDecoration
@@ -175,7 +175,7 @@ object reactNativeSvgStrings {
        with FontStyle
        with FontVariant
        with FontVariantLigatures
-       with _FontWeight
+       with FontWeight
   
   @js.native
   sealed trait objectBoundingBox extends Units
@@ -222,10 +222,10 @@ object reactNativeSvgStrings {
   sealed trait stretch extends TextPathMethod
   
   @js.native
-  sealed trait sub extends _BaselineShift
+  sealed trait sub extends BaselineShift
   
   @js.native
-  sealed trait `super` extends _BaselineShift
+  sealed trait `super` extends BaselineShift
   
   @js.native
   sealed trait `text-after-edge` extends AlignmentBaseline

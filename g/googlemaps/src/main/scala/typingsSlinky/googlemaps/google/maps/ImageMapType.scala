@@ -4,12 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("google.maps.ImageMapType")
 @js.native
-class ImageMapType protected ()
+trait ImageMapType
   extends MVCObject
      with MapType {
-  def this(opts: ImageMapTypeOptions) = this()
   @JSName("alt")
   var alt_ImageMapType: String = js.native
   @JSName("maxZoom")

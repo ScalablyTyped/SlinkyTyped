@@ -1,6 +1,6 @@
 package typingsSlinky.primereact.ratingMod
 
-import typingsSlinky.primereact.AnonValueNumber
+import typingsSlinky.primereact.anon.ValueNumber
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ trait RatingProps extends js.Object {
   var className: js.UndefOr[String] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
   var id: js.UndefOr[String] = js.native
-  var onChange: js.UndefOr[js.Function1[/* e */ AnonValueNumber, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* e */ ValueNumber, Unit]] = js.native
   var readonly: js.UndefOr[Boolean] = js.native
   var stars: js.UndefOr[Double] = js.native
   var style: js.UndefOr[js.Object] = js.native
@@ -82,7 +82,7 @@ object RatingProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* e */ AnonValueNumber => Unit): Self = {
+    def withOnChange(value: /* e */ ValueNumber => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

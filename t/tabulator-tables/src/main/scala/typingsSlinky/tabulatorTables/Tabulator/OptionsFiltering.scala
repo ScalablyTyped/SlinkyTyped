@@ -1,6 +1,6 @@
 package typingsSlinky.tabulatorTables.Tabulator
 
-import typingsSlinky.tabulatorTables.PickFilterfieldvalue
+import typingsSlinky.tabulatorTables.anon.PickFilterfieldvalue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

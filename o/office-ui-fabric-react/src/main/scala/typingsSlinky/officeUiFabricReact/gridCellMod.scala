@@ -1,5 +1,6 @@
 package typingsSlinky.officeUiFabricReact
 
+import typingsSlinky.officeUiFabricReact.anon.Disabled
 import typingsSlinky.officeUiFabricReact.gridCellTypesMod.IGridCellProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -22,7 +23,7 @@ object gridCellMod extends js.Object {
   /* static members */
   @js.native
   object GridCell extends js.Object {
-    var defaultProps: AnonDisabled = js.native
+    var defaultProps: Disabled = js.native
   }
   
 }

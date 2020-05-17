@@ -1,8 +1,8 @@
 package typingsSlinky.svgSprite.mod
 
-import typingsSlinky.svgSprite.AnonAttributes
-import typingsSlinky.svgSprite.AnonBox
-import typingsSlinky.svgSprite.AnonGenerator
+import typingsSlinky.svgSprite.anon.Attributes
+import typingsSlinky.svgSprite.anon.Box
+import typingsSlinky.svgSprite.anon.Generator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,11 +23,11 @@ trait Shape extends js.Object {
   /**
     * Dimension related options
     */
-  var dimension: js.UndefOr[AnonAttributes] = js.native
+  var dimension: js.UndefOr[Attributes] = js.native
   /**
     * SVG shape ID related options
     */
-  var id: js.UndefOr[AnonGenerator] = js.native
+  var id: js.UndefOr[Generator] = js.native
   /**
     * Path to YAML file with meta / accessibility data
     */
@@ -35,7 +35,7 @@ trait Shape extends js.Object {
   /**
     * Spacing related options
     */
-  var spacing: js.UndefOr[AnonBox] = js.native
+  var spacing: js.UndefOr[Box] = js.native
   /**
     * List of transformations / optimizations
     */
@@ -79,7 +79,7 @@ object Shape {
         ret
     }
     @scala.inline
-    def withDimension(value: AnonAttributes): Self = {
+    def withDimension(value: Attributes): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dimension")(value.asInstanceOf[js.Any])
         ret
@@ -91,7 +91,7 @@ object Shape {
         ret
     }
     @scala.inline
-    def withId(value: AnonGenerator): Self = {
+    def withId(value: Generator): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
         ret
@@ -115,7 +115,7 @@ object Shape {
         ret
     }
     @scala.inline
-    def withSpacing(value: AnonBox): Self = {
+    def withSpacing(value: Box): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("spacing")(value.asInstanceOf[js.Any])
         ret

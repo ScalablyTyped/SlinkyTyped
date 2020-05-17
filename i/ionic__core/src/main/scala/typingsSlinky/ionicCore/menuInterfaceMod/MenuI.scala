@@ -1,7 +1,7 @@
 package typingsSlinky.ionicCore.menuInterfaceMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonMenuElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonMenuElement
 import typingsSlinky.ionicCore.mod.Side
 import scala.scalajs.js
 import scala.scalajs.js.`|`

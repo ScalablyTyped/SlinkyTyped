@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientTagmanager.gapi.client.tagmanager
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientTagmanager.AnonAlt
-import typingsSlinky.gapiClientTagmanager.AnonFields
-import typingsSlinky.gapiClientTagmanager.AnonFingerprint
-import typingsSlinky.gapiClientTagmanager.AnonKey
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientTagmanager.anon.Alt
+import typingsSlinky.gapiClientTagmanager.anon.Fields
+import typingsSlinky.gapiClientTagmanager.anon.Fingerprint
+import typingsSlinky.gapiClientTagmanager.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,26 +16,26 @@ trait ContainersResource extends js.Object {
   var versions: VersionsResource = js.native
   var workspaces: WorkspacesResource = js.native
   /** Creates a Container. */
-  def create(request: AnonAlt): Request_[Container] = js.native
+  def create(request: Alt): Request[Container] = js.native
   /** Deletes a Container. */
-  def delete(request: AnonFields): Request_[Unit] = js.native
+  def delete(request: Fields): Request[Unit] = js.native
   /** Gets a Container. */
-  def get(request: AnonFields): Request_[Container] = js.native
+  def get(request: Fields): Request[Container] = js.native
   /** Lists all Containers that belongs to a GTM Account. */
-  def list(request: AnonKey): Request_[ListContainersResponse] = js.native
+  def list(request: Key): Request[ListContainersResponse] = js.native
   /** Updates a Container. */
-  def update(request: AnonFingerprint): Request_[Container] = js.native
+  def update(request: Fingerprint): Request[Container] = js.native
 }
 
 object ContainersResource {
   @scala.inline
   def apply(
-    create: AnonAlt => Request_[Container],
-    delete: AnonFields => Request_[Unit],
+    create: Alt => Request[Container],
+    delete: Fields => Request[Unit],
     environments: EnvironmentsResource,
-    get: AnonFields => Request_[Container],
-    list: AnonKey => Request_[ListContainersResponse],
-    update: AnonFingerprint => Request_[Container],
+    get: Fields => Request[Container],
+    list: Key => Request[ListContainersResponse],
+    update: Fingerprint => Request[Container],
     version_headers: VersionHeadersResource,
     versions: VersionsResource,
     workspaces: WorkspacesResource
@@ -50,13 +50,13 @@ object ContainersResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: AnonAlt => Request_[Container]): Self = {
+    def withCreate(value: Alt => Request[Container]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonFields => Request_[Unit]): Self = {
+    def withDelete(value: Fields => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
@@ -68,19 +68,19 @@ object ContainersResource {
         ret
     }
     @scala.inline
-    def withGet(value: AnonFields => Request_[Container]): Self = {
+    def withGet(value: Fields => Request[Container]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonKey => Request_[ListContainersResponse]): Self = {
+    def withList(value: Key => Request[ListContainersResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonFingerprint => Request_[Container]): Self = {
+    def withUpdate(value: Fingerprint => Request[Container]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

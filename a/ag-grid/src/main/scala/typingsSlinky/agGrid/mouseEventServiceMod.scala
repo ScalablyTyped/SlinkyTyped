@@ -1,10 +1,10 @@
 package typingsSlinky.agGrid
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.agGrid.cellCompMod.CellComp
 import typingsSlinky.agGrid.gridCellMod.GridCell
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ object mouseEventServiceMod extends js.Object {
     var gridOptionsWrapper: js.Any = js.native
     def getGridCellForEvent(event: KeyboardEvent): GridCell = js.native
     def getGridCellForEvent(event: MouseEvent): GridCell = js.native
-    def getRenderedCellForEvent(event: Event_): CellComp = js.native
+    def getRenderedCellForEvent(event: Event): CellComp = js.native
     /* private */ def init(): js.Any = js.native
     def isEventFromThisGrid(event: KeyboardEvent): Boolean = js.native
     def isEventFromThisGrid(event: MouseEvent): Boolean = js.native

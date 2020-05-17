@@ -1,6 +1,6 @@
 package typingsSlinky.vueSelect.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,6 +26,6 @@ trait VueSelectMethods extends js.Object {
   def onSearchFocus(): Unit = js.native
   def optionExists(option: js.Any): Boolean = js.native
   def select(option: js.Any): Unit = js.native
-  def toggleDropdown(e: Event_): Unit = js.native
+  def toggleDropdown(e: Event): Unit = js.native
 }
 

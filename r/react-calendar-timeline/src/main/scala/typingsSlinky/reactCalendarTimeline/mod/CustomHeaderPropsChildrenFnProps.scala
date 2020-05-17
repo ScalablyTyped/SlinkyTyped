@@ -1,8 +1,8 @@
 package typingsSlinky.reactCalendarTimeline.mod
 
 import typingsSlinky.moment.mod.Moment
-import typingsSlinky.reactCalendarTimeline.AnonStyle
-import typingsSlinky.reactCalendarTimeline.RequiredGetIntervalPropsk
+import typingsSlinky.reactCalendarTimeline.anon.RequiredGetIntervalPropsk
+import typingsSlinky.reactCalendarTimeline.anon.Style
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +14,8 @@ trait CustomHeaderPropsChildrenFnProps[Data] extends js.Object {
   var timelineContext: TimelineContext = js.native
   def getIntervalProps(): RequiredGetIntervalPropsk = js.native
   def getIntervalProps(props: GetIntervalProps): RequiredGetIntervalPropsk = js.native
-  def getRootProps(): AnonStyle = js.native
-  def getRootProps(propsToOverride: AnonStyle): AnonStyle = js.native
+  def getRootProps(): Style = js.native
+  def getRootProps(propsToOverride: Style): Style = js.native
   def showPeriod(startDate: Double, endDate: Double): scala.Unit = js.native
   def showPeriod(startDate: Double, endDate: Moment): scala.Unit = js.native
   def showPeriod(startDate: Moment, endDate: Double): scala.Unit = js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignCompatible.formItemMod
 
-import typingsSlinky.antDesignCompatible.AnonHasFeedback
+import typingsSlinky.antDesignCompatible.anon.HasFeedback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ class default () extends FormItem
 @JSImport("@ant-design/compatible/lib/form/FormItem", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonHasFeedback = js.native
+  var defaultProps: HasFeedback = js.native
 }
 

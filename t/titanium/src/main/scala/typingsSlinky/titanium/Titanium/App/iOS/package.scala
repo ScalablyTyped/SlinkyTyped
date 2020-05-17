@@ -14,4 +14,9 @@ package object iOS {
   			 * Fired when a property is changed.
   			 */
   type UserDefaultsChangeEvent = typingsSlinky.titanium.Titanium.App.iOS.UserDefaultsBaseEvent
+  /**
+  			 * The top-level App iOS Notification Center module. It is used to control scheduled notifications
+  			 * and receive details about the system-wide notification settings.
+  			 */
+  type UserNotificationCenter = typingsSlinky.titanium.Titanium.Module
 }

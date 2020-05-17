@@ -1,8 +1,8 @@
 package typingsSlinky.angularCompiler.compilerFacadeInterfaceMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.angularCompiler.AnonSelector
-import typingsSlinky.angularCompiler.AnonUsesOnChanges
+import typingsSlinky.angularCompiler.anon.Selector
+import typingsSlinky.angularCompiler.anon.UsesOnChanges
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait R3ComponentMetadataFacade extends R3DirectiveMetadataFacade {
   var animations: js.UndefOr[js.Array[_]] = js.native
   var changeDetection: js.UndefOr[ChangeDetectionStrategy] = js.native
-  var directives: js.Array[AnonSelector] = js.native
+  var directives: js.Array[Selector] = js.native
   var encapsulation: ViewEncapsulation = js.native
   var interpolation: js.UndefOr[js.Tuple2[String, String]] = js.native
   var pipes: Map[String, _] = js.native
@@ -25,11 +25,11 @@ trait R3ComponentMetadataFacade extends R3DirectiveMetadataFacade {
 object R3ComponentMetadataFacade {
   @scala.inline
   def apply(
-    directives: js.Array[AnonSelector],
+    directives: js.Array[Selector],
     encapsulation: ViewEncapsulation,
     host: StringDictionary[String],
     inputs: js.Array[String],
-    lifecycle: AnonUsesOnChanges,
+    lifecycle: UsesOnChanges,
     name: String,
     outputs: js.Array[String],
     pipes: Map[String, _],
@@ -55,7 +55,7 @@ object R3ComponentMetadataFacade {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDirectives(value: js.Array[AnonSelector]): Self = {
+    def withDirectives(value: js.Array[Selector]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("directives")(value.asInstanceOf[js.Any])
         ret

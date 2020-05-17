@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DataMatcherMap
   extends /* key */ StringDictionary[DataMatcher]
-     with _DataMatcher
-     with _RequestBodyMatcher
+     with DataMatcher
+     with RequestBodyMatcher
 
 object DataMatcherMap {
   @scala.inline

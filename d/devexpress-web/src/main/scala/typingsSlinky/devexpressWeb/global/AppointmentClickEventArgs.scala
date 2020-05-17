@@ -1,0 +1,21 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Provides data for the ASPxClientScheduler.AppointmentClick and the ASPxClientScheduler.AppointmentDoubleClick events.
+  */
+@JSGlobal("AppointmentClickEventArgs")
+@js.native
+class AppointmentClickEventArgs protected ()
+  extends typingsSlinky.devexpressWeb.AppointmentClickEventArgs {
+  /**
+    * Initializes a new instance of the class.
+    * @param appointmentId Specifies an appointment ID.
+    * @param sourceEvent Specifies an event source.
+    */
+  def this(appointmentId: String, sourceEvent: js.Any) = this()
+}
+

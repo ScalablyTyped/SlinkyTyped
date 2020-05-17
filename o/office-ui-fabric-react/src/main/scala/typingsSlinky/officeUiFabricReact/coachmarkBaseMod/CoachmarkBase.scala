@@ -1,13 +1,13 @@
 package typingsSlinky.officeUiFabricReact.coachmarkBaseMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.officeUiFabricReact.PartialICoachmarkProps
+import typingsSlinky.officeUiFabricReact.anon.PartialICoachmarkProps
 import typingsSlinky.officeUiFabricReact.coachmarkTypesMod.ICoachmark
 import typingsSlinky.officeUiFabricReact.coachmarkTypesMod.ICoachmarkProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -62,7 +62,7 @@ class CoachmarkBase protected ()
   @JSName("dismiss")
   def dismiss_MCoachmarkBase(ev: SyntheticMouseEvent[HTMLElement]): Unit = js.native
   @JSName("dismiss")
-  def dismiss_MCoachmarkBase(ev: Event_): Unit = js.native
+  def dismiss_MCoachmarkBase(ev: Event): Unit = js.native
   @JSName("shouldComponentUpdate")
   def shouldComponentUpdate_MCoachmarkBase(newProps: ICoachmarkProps, newState: ICoachmarkState): Boolean = js.native
 }

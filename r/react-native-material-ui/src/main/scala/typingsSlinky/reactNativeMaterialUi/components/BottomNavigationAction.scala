@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeMaterialUi.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNativeMaterialUi.AnonActive
+import typingsSlinky.reactNativeMaterialUi.anon.Active
 import typingsSlinky.reactNativeMaterialUi.mod.BottomNavigation.Action
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,7 +25,7 @@ object BottomNavigationAction {
     @scala.inline
     def onPress(value: () => Unit): this.type = set("onPress", js.Any.fromFunction0(value))
     @scala.inline
-    def style(value: AnonActive): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: Active): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
   }

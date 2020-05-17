@@ -1,8 +1,9 @@
 package typingsSlinky.cypressImageSnapshot.mod
 
-import typingsSlinky.cypressImageSnapshot.AnonCounter
-import typingsSlinky.cypressImageSnapshot.AnonHeight
-import typingsSlinky.cypressImageSnapshot.AnonIncludeAA
+import org.scalajs.dom.raw.Document
+import typingsSlinky.cypressImageSnapshot.anon.Counter
+import typingsSlinky.cypressImageSnapshot.anon.Height
+import typingsSlinky.cypressImageSnapshot.anon.IncludeAA
 import typingsSlinky.cypressImageSnapshot.cypressImageSnapshotStrings.fullPage
 import typingsSlinky.cypressImageSnapshot.cypressImageSnapshotStrings.horizontal
 import typingsSlinky.cypressImageSnapshot.cypressImageSnapshotStrings.percent
@@ -10,7 +11,6 @@ import typingsSlinky.cypressImageSnapshot.cypressImageSnapshotStrings.pixel
 import typingsSlinky.cypressImageSnapshot.cypressImageSnapshotStrings.runner
 import typingsSlinky.cypressImageSnapshot.cypressImageSnapshotStrings.vertical
 import typingsSlinky.cypressImageSnapshot.cypressImageSnapshotStrings.viewport
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,15 +18,15 @@ import scala.scalajs.js.annotation._
 /* Inlined parent std.Partial<{  blackout  :std.Array<string>,   capture  :'runner' | 'viewport' | 'fullPage',   clip  :{  x  :number,   y  :number,   width  :number,   height  :number},   disableTimersAndAnimations  :boolean,   padding  :number | [number] | [number, number] | [number, number, number] | [number, number, number, number],   scale  :boolean, beforeScreenshot (doc : std.Document): void, afterScreenshot (doc : std.Document): void,   customDiffConfig ? :{ readonly threshold ? :number,  readonly includeAA ? :boolean},   customSnapshotsDir ? :string,   customDiffDir ? :string,   customSnapshotIdentifier ? :(parameters : {  testPath  :string,   currentTestName  :string,   counter  :number,   defaultIdentifier  :string}): string | string,   diffDirection ? :'horizontal' | 'vertical',   noColors ? :boolean,   failureThreshold ? :number,   failureThresholdType ? :'pixel' | 'percent',   updatePassedSnapshot ? :boolean,   blur ? :number,   runInProcess ? :boolean}> */
 @js.native
 trait Options extends js.Object {
-  var afterScreenshot: js.UndefOr[js.Function1[/* doc */ Document_, Unit]] = js.native
-  var beforeScreenshot: js.UndefOr[js.Function1[/* doc */ Document_, Unit]] = js.native
+  var afterScreenshot: js.UndefOr[js.Function1[/* doc */ Document, Unit]] = js.native
+  var beforeScreenshot: js.UndefOr[js.Function1[/* doc */ Document, Unit]] = js.native
   var blackout: js.UndefOr[js.Array[String]] = js.native
   var blur: js.UndefOr[Double] = js.native
   var capture: js.UndefOr[runner | viewport | fullPage] = js.native
-  var clip: js.UndefOr[AnonHeight] = js.native
-  var customDiffConfig: js.UndefOr[AnonIncludeAA] = js.native
+  var clip: js.UndefOr[Height] = js.native
+  var customDiffConfig: js.UndefOr[IncludeAA] = js.native
   var customDiffDir: js.UndefOr[String] = js.native
-  var customSnapshotIdentifier: js.UndefOr[(js.Function1[/* parameters */ AnonCounter, String]) | String] = js.native
+  var customSnapshotIdentifier: js.UndefOr[(js.Function1[/* parameters */ Counter, String]) | String] = js.native
   var customSnapshotsDir: js.UndefOr[String] = js.native
   var diffDirection: js.UndefOr[horizontal | vertical] = js.native
   var disableTimersAndAnimations: js.UndefOr[Boolean] = js.native
@@ -54,7 +54,7 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAfterScreenshot(value: /* doc */ Document_ => Unit): Self = {
+    def withAfterScreenshot(value: /* doc */ Document => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterScreenshot")(js.Any.fromFunction1(value))
         ret
@@ -66,7 +66,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withBeforeScreenshot(value: /* doc */ Document_ => Unit): Self = {
+    def withBeforeScreenshot(value: /* doc */ Document => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeScreenshot")(js.Any.fromFunction1(value))
         ret
@@ -114,7 +114,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withClip(value: AnonHeight): Self = {
+    def withClip(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("clip")(value.asInstanceOf[js.Any])
         ret
@@ -126,7 +126,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withCustomDiffConfig(value: AnonIncludeAA): Self = {
+    def withCustomDiffConfig(value: IncludeAA): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customDiffConfig")(value.asInstanceOf[js.Any])
         ret
@@ -150,13 +150,13 @@ object Options {
         ret
     }
     @scala.inline
-    def withCustomSnapshotIdentifierFunction1(value: /* parameters */ AnonCounter => String): Self = {
+    def withCustomSnapshotIdentifierFunction1(value: /* parameters */ Counter => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customSnapshotIdentifier")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withCustomSnapshotIdentifier(value: (js.Function1[/* parameters */ AnonCounter, String]) | String): Self = {
+    def withCustomSnapshotIdentifier(value: (js.Function1[/* parameters */ Counter, String]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customSnapshotIdentifier")(value.asInstanceOf[js.Any])
         ret

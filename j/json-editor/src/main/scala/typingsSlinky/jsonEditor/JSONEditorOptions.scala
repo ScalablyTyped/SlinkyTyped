@@ -1,5 +1,6 @@
 package typingsSlinky.jsonEditor
 
+import typingsSlinky.jsonEditor.anon.Compile
 import typingsSlinky.jsonEditor.jsonEditorStrings.always
 import typingsSlinky.jsonEditor.jsonEditorStrings.barebones
 import typingsSlinky.jsonEditor.jsonEditorStrings.bootstrap2
@@ -96,7 +97,7 @@ trait JSONEditorOptions[TValue] extends js.Object {
   /**
     * The JS template engine to use.
     */
-  var template: js.UndefOr[String | AnonCompile] = js.native
+  var template: js.UndefOr[String | Compile] = js.native
   /**
     * The CSS theme to use.
     */
@@ -324,7 +325,7 @@ object JSONEditorOptions {
         ret
     }
     @scala.inline
-    def withTemplate(value: String | AnonCompile): Self[TValue] = {
+    def withTemplate(value: String | Compile): Self[TValue] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("template")(value.asInstanceOf[js.Any])
         ret

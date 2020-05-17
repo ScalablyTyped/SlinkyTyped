@@ -11,10 +11,4 @@ package object personalizeeventsMod {
   type EventPropertiesJSON = java.lang.String
   type StringType = java.lang.String
   type UserId = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2018-03-22`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.personalizeeventsMod._apiVersion | java.lang.String
 }

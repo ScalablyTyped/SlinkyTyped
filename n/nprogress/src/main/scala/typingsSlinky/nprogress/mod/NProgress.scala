@@ -1,7 +1,7 @@
 package typingsSlinky.nprogress.mod
 
 import org.scalajs.dom.raw.HTMLDivElement
-import typingsSlinky.nprogress.PartialNProgressOptions
+import typingsSlinky.nprogress.anon.PartialNProgressOptions
 import typingsSlinky.nprogress.nprogressStrings.margin
 import typingsSlinky.nprogress.nprogressStrings.translate
 import typingsSlinky.nprogress.nprogressStrings.translate3d

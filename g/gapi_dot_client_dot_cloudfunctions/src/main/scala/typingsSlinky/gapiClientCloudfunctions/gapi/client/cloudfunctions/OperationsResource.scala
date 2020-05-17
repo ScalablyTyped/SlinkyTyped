@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientCloudfunctions.gapi.client.cloudfunctions
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientCloudfunctions.AnonAccesstoken
-import typingsSlinky.gapiClientCloudfunctions.AnonAlt
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientCloudfunctions.anon.Accesstoken
+import typingsSlinky.gapiClientCloudfunctions.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait OperationsResource extends js.Object {
     * method to poll the operation result at intervals as recommended by the API
     * service.
     */
-  def get(request: AnonAccesstoken): Request_[Operation] = js.native
+  def get(request: Accesstoken): Request[Operation] = js.native
   /**
     * Lists operations that match the specified filter in the request. If the
     * server doesn't support this method, it returns `UNIMPLEMENTED`.
@@ -27,12 +27,12 @@ trait OperationsResource extends js.Object {
     * collection id, however overriding users must ensure the name binding
     * is the parent resource, without the operations collection id.
     */
-  def list(request: AnonAlt): Request_[ListOperationsResponse] = js.native
+  def list(request: Alt): Request[ListOperationsResponse] = js.native
 }
 
 object OperationsResource {
   @scala.inline
-  def apply(get: AnonAccesstoken => Request_[Operation], list: AnonAlt => Request_[ListOperationsResponse]): OperationsResource = {
+  def apply(get: Accesstoken => Request[Operation], list: Alt => Request[ListOperationsResponse]): OperationsResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[OperationsResource]
   }
@@ -43,13 +43,13 @@ object OperationsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonAccesstoken => Request_[Operation]): Self = {
+    def withGet(value: Accesstoken => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonAlt => Request_[ListOperationsResponse]): Self = {
+    def withList(value: Alt => Request[ListOperationsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

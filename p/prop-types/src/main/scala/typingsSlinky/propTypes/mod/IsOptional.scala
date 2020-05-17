@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait IsOptional[T] extends js.Object
 
+object IsOptional {
+  @scala.inline
+  def `false`[T]: typingsSlinky.propTypes.propTypesBooleans.`false` = false.asInstanceOf[typingsSlinky.propTypes.propTypesBooleans.`false`]
+  @scala.inline
+  def `true`[T]: typingsSlinky.propTypes.propTypesBooleans.`true` = true.asInstanceOf[typingsSlinky.propTypes.propTypesBooleans.`true`]
+}
+

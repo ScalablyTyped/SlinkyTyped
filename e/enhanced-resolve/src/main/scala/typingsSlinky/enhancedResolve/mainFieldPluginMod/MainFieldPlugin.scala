@@ -1,13 +1,13 @@
 package typingsSlinky.enhancedResolve.mainFieldPluginMod
 
-import typingsSlinky.enhancedResolve.AnonForceRelative
+import typingsSlinky.enhancedResolve.anon.ForceRelative
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait MainFieldPlugin extends js.Object {
-  var options: AnonForceRelative = js.native
+  var options: ForceRelative = js.native
   var source: String = js.native
   var target: String = js.native
   @JSName("apply")
@@ -18,7 +18,7 @@ object MainFieldPlugin {
   @scala.inline
   def apply(
     apply: typingsSlinky.enhancedResolve.resolverMod.^ => Unit,
-    options: AnonForceRelative,
+    options: ForceRelative,
     source: String,
     target: String
   ): MainFieldPlugin = {
@@ -38,7 +38,7 @@ object MainFieldPlugin {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonForceRelative): Self = {
+    def withOptions(value: ForceRelative): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

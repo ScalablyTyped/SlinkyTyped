@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -104,7 +104,7 @@ object IgGridRowSelectors {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCheckBoxStateChanged(value: (/* event */ Event_, /* ui */ CheckBoxStateChangedEventUIParam) => Unit): Self = {
+    def withCheckBoxStateChanged(value: (/* event */ Event, /* ui */ CheckBoxStateChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("checkBoxStateChanged")(js.Any.fromFunction2(value))
         ret
@@ -116,7 +116,7 @@ object IgGridRowSelectors {
         ret
     }
     @scala.inline
-    def withCheckBoxStateChanging(value: (/* event */ Event_, /* ui */ CheckBoxStateChangingEventUIParam) => Unit): Self = {
+    def withCheckBoxStateChanging(value: (/* event */ Event, /* ui */ CheckBoxStateChangingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("checkBoxStateChanging")(js.Any.fromFunction2(value))
         ret
@@ -224,7 +224,7 @@ object IgGridRowSelectors {
         ret
     }
     @scala.inline
-    def withRowSelectorClicked(value: (/* event */ Event_, /* ui */ RowSelectorClickedEventUIParam) => Unit): Self = {
+    def withRowSelectorClicked(value: (/* event */ Event, /* ui */ RowSelectorClickedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowSelectorClicked")(js.Any.fromFunction2(value))
         ret

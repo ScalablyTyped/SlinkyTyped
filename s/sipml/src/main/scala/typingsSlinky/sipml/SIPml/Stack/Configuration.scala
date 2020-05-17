@@ -1,21 +1,21 @@
 package typingsSlinky.sipml.SIPml.Stack
 
-import typingsSlinky.sipml.AnonAudio
-import typingsSlinky.sipml.AnonListener
-import typingsSlinky.sipml.AnonMaxHeight
+import typingsSlinky.sipml.anon.Audio
+import typingsSlinky.sipml.anon.Listener
+import typingsSlinky.sipml.anon.MaxHeight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Configuration extends js.Object {
-  var bandwidth: js.UndefOr[AnonAudio] = js.native
+  var bandwidth: js.UndefOr[Audio] = js.native
   var display_name: js.UndefOr[String] = js.native
   var enable_click2call: js.UndefOr[Boolean] = js.native
   var enable_early_ims: js.UndefOr[Boolean] = js.native
   var enable_media_stream_cache: js.UndefOr[Boolean] = js.native
   var enable_rtcweb_breaker: js.UndefOr[Boolean] = js.native
-  var events_listener: js.UndefOr[AnonListener] = js.native
+  var events_listener: js.UndefOr[Listener] = js.native
   var ice_servers: js.UndefOr[js.Array[js.Object]] = js.native
   var impi: js.UndefOr[String] = js.native
   var impu: js.UndefOr[String] = js.native
@@ -23,7 +23,7 @@ trait Configuration extends js.Object {
   var password: js.UndefOr[String] = js.native
   var realm: js.UndefOr[String] = js.native
   var sip_headers: js.UndefOr[js.Array[js.Object]] = js.native
-  var video_size: js.UndefOr[AnonMaxHeight] = js.native
+  var video_size: js.UndefOr[MaxHeight] = js.native
   var websocket_proxy_url: js.UndefOr[String] = js.native
 }
 
@@ -40,7 +40,7 @@ object Configuration {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBandwidth(value: AnonAudio): Self = {
+    def withBandwidth(value: Audio): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bandwidth")(value.asInstanceOf[js.Any])
         ret
@@ -112,7 +112,7 @@ object Configuration {
         ret
     }
     @scala.inline
-    def withEvents_listener(value: AnonListener): Self = {
+    def withEvents_listener(value: Listener): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("events_listener")(value.asInstanceOf[js.Any])
         ret
@@ -208,7 +208,7 @@ object Configuration {
         ret
     }
     @scala.inline
-    def withVideo_size(value: AnonMaxHeight): Self = {
+    def withVideo_size(value: MaxHeight): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("video_size")(value.asInstanceOf[js.Any])
         ret

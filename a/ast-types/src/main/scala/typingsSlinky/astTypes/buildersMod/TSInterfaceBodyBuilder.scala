@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonBodyArrayComments
+import typingsSlinky.astTypes.anon.BodyArrayComments
 import typingsSlinky.astTypes.kindsMod.TSCallSignatureDeclarationKind
 import typingsSlinky.astTypes.kindsMod.TSConstructSignatureDeclarationKind
 import typingsSlinky.astTypes.kindsMod.TSIndexSignatureKind
@@ -18,6 +18,6 @@ trait TSInterfaceBodyBuilder extends js.Object {
       TSCallSignatureDeclarationKind | TSConstructSignatureDeclarationKind | TSIndexSignatureKind | TSMethodSignatureKind | TSPropertySignatureKind
     ]
   ): TSInterfaceBody = js.native
-  def from(params: AnonBodyArrayComments): TSInterfaceBody = js.native
+  def from(params: BodyArrayComments): TSInterfaceBody = js.native
 }
 

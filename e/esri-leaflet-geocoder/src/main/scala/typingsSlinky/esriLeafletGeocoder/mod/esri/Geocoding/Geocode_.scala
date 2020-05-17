@@ -1,6 +1,5 @@
 package typingsSlinky.esriLeafletGeocoder.mod.esri.Geocoding
 
-import typingsSlinky.esriLeafletGeocoder.AnonResults
 import typingsSlinky.leaflet.mod.LatLngBoundsExpression
 import typingsSlinky.leaflet.mod.LatLngExpression
 import scala.scalajs.js
@@ -21,10 +20,20 @@ class Geocode_ () extends js.Object {
   def postal(text: String): this.type = js.native
   def region(text: String): this.type = js.native
   def run(
-    callback: js.Function3[/* error */ js.UndefOr[js.Any], /* results */ AnonResults, /* response */ js.Any, Unit]
+    callback: js.Function3[
+      /* error */ js.UndefOr[js.Any], 
+      /* results */ typingsSlinky.esriLeafletGeocoder.anon.Results, 
+      /* response */ js.Any, 
+      Unit
+    ]
   ): this.type = js.native
   def run(
-    callback: js.Function3[/* error */ js.UndefOr[js.Any], /* results */ AnonResults, /* response */ js.Any, Unit],
+    callback: js.Function3[
+      /* error */ js.UndefOr[js.Any], 
+      /* results */ typingsSlinky.esriLeafletGeocoder.anon.Results, 
+      /* response */ js.Any, 
+      Unit
+    ],
     context: js.Any
   ): this.type = js.native
   def subregion(text: String): this.type = js.native

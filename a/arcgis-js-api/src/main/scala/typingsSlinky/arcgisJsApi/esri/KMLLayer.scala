@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.kml
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,8 +25,4 @@ trait KMLLayer
     */
   var url: String = js.native
 }
-
-@JSGlobal("__esri.KMLLayer")
-@js.native
-object KMLLayer extends TopLevel[KMLLayerConstructor]
 

@@ -1,0 +1,57 @@
+package typingsSlinky.awsSdkClientCodecommitNode.updateDefaultBranchExceptionsUnionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.typesBranchDoesNotExistExceptionMod.BranchDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesBranchNameRequiredExceptionMod.BranchNameRequiredException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidBranchNameExceptionMod.InvalidBranchNameException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesBranchNameRequiredExceptionMod.BranchNameRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidBranchNameExceptionMod.InvalidBranchNameException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesBranchDoesNotExistExceptionMod.BranchDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+*/
+trait UpdateDefaultBranchExceptionsUnion extends js.Object
+
+object UpdateDefaultBranchExceptionsUnion {
+  @scala.inline
+  implicit def apply(value: BranchDoesNotExistException): UpdateDefaultBranchExceptionsUnion = value.asInstanceOf[UpdateDefaultBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: BranchNameRequiredException): UpdateDefaultBranchExceptionsUnion = value.asInstanceOf[UpdateDefaultBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionIntegrityChecksFailedException): UpdateDefaultBranchExceptionsUnion = value.asInstanceOf[UpdateDefaultBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyAccessDeniedException): UpdateDefaultBranchExceptionsUnion = value.asInstanceOf[UpdateDefaultBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyDisabledException): UpdateDefaultBranchExceptionsUnion = value.asInstanceOf[UpdateDefaultBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyNotFoundException): UpdateDefaultBranchExceptionsUnion = value.asInstanceOf[UpdateDefaultBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyUnavailableException): UpdateDefaultBranchExceptionsUnion = value.asInstanceOf[UpdateDefaultBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidBranchNameException): UpdateDefaultBranchExceptionsUnion = value.asInstanceOf[UpdateDefaultBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidRepositoryNameException): UpdateDefaultBranchExceptionsUnion = value.asInstanceOf[UpdateDefaultBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryDoesNotExistException): UpdateDefaultBranchExceptionsUnion = value.asInstanceOf[UpdateDefaultBranchExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryNameRequiredException): UpdateDefaultBranchExceptionsUnion = value.asInstanceOf[UpdateDefaultBranchExceptionsUnion]
+}
+

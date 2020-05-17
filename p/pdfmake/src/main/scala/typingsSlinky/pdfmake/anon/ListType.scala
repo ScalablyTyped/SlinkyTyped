@@ -1,0 +1,40 @@
+package typingsSlinky.pdfmake.anon
+
+import typingsSlinky.pdfmake.interfacesMod.UnorderedListType
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ListType extends js.Object {
+  var listType: js.UndefOr[UnorderedListType] = js.native
+}
+
+object ListType {
+  @scala.inline
+  def apply(): ListType = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ListType]
+  }
+  @scala.inline
+  implicit class ListTypeOps[Self <: ListType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withListType(value: UnorderedListType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutListType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listType")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

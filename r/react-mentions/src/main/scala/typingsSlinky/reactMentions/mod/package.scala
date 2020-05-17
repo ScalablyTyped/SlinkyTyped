@@ -17,7 +17,7 @@ package object mod {
   type MentionsInputClass = slinky.core.ReactComponentClass[typingsSlinky.reactMentions.mod.MentionsInputProps]
   type Omit[T, K] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
   type OnChangeHandlerFunc = js.Function4[
-    /* event */ typingsSlinky.reactMentions.AnonTarget, 
+    /* event */ typingsSlinky.reactMentions.anon.Target, 
     /* newValue */ java.lang.String, 
     /* newPlainTextValue */ java.lang.String, 
     /* mentions */ js.Array[typingsSlinky.reactMentions.mod.MentionItem], 

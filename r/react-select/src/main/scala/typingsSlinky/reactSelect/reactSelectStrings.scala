@@ -2,6 +2,7 @@ package typingsSlinky.reactSelect
 
 import typingsSlinky.reactSelect.selectMod.FormatOptionLabelContext
 import typingsSlinky.reactSelect.transitionsMod.TransitionState
+import typingsSlinky.reactSelect.transitionsMod.Width
 import typingsSlinky.reactSelect.typesMod.ActionTypes
 import typingsSlinky.reactSelect.typesMod.FocusDirection
 import typingsSlinky.reactSelect.typesMod.InputActionTypes
@@ -25,7 +26,9 @@ object reactSelectStrings {
   sealed trait any extends js.Object
   
   @js.native
-  sealed trait auto extends MenuPlacement
+  sealed trait auto
+    extends MenuPlacement
+       with Width
   
   @js.native
   sealed trait bottom extends MenuPlacement

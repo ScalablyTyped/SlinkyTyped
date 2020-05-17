@@ -6,7 +6,7 @@ import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.pdfjsDist.mod.PDFDocumentProxy
 import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.reactPdf.AnonPageNumber
+import typingsSlinky.reactPdf.anon.PageNumber
 import typingsSlinky.reactPdf.reactPdfStrings._blank
 import typingsSlinky.reactPdf.reactPdfStrings._parent
 import typingsSlinky.reactPdf.reactPdfStrings._self
@@ -69,7 +69,7 @@ trait Props extends js.Object {
     * Function called when an outline item has been clicked.
     * Usually, you would like to use this callback to move the user wherever they requested to.
     */
-  var onItemClick: js.UndefOr[js.Function1[/* hasPageNumber */ AnonPageNumber, Unit]] = js.native
+  var onItemClick: js.UndefOr[js.Function1[/* hasPageNumber */ PageNumber, Unit]] = js.native
   /**
     * Function called in case of an error while loading a document.
     */
@@ -273,7 +273,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withOnItemClick(value: /* hasPageNumber */ AnonPageNumber => Unit): Self = {
+    def withOnItemClick(value: /* hasPageNumber */ PageNumber => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction1(value))
         ret

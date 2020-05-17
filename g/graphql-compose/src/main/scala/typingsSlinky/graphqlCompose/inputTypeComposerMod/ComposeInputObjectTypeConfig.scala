@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ComposeInputObjectTypeConfig extends _InputTypeComposeDefinition {
+trait ComposeInputObjectTypeConfig extends InputTypeComposeDefinition {
   var description: js.UndefOr[String | Null] = js.native
   var extensions: js.UndefOr[Extensions] = js.native
   var fields: Thunk[ComposeInputFieldConfigMap] = js.native

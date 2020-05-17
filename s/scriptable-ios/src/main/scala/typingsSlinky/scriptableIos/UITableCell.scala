@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
   * _Cell in a UITableRow._
   * @see https://docs.scriptable.app/uitablecell
   */
-@JSGlobal("UITableCell")
 @js.native
-class UITableCell () extends js.Object {
+trait UITableCell extends js.Object {
   /**
     * _Whether to dismiss the table when the button is tapped._
     *
@@ -76,44 +75,76 @@ class UITableCell () extends js.Object {
   def rightAligned(): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("UITableCell")
-@js.native
-object UITableCell extends js.Object {
-  /**
-    * _Constructs a button cell._
-    *
-    * Constructs a new cell that contains a button. Set the `onTap` property to specify an action to performed when the button is tapped.
-    * @param title - Title of the button.
-    * @see https://docs.scriptable.app/uitablecell/#button
-    */
-  def button(title: String): UITableCell = js.native
-  /**
-    * _Constructs an image cell._
-    *
-    * Constructs a new cell containing an image.
-    * @param image - Image to show in the cell.
-    * @see https://docs.scriptable.app/uitablecell/#image
-    */
-  def image(image: Image): UITableCell = js.native
-  /**
-    * _Constructs an image cell._
-    *
-    * Constructs a new cell that loads the image at the specified URL.
-    * @param url - URL to image.
-    * @see https://docs.scriptable.app/uitablecell/#imageaturl
-    */
-  def imageAtURL(url: String): UITableCell = js.native
-  /**
-    * _Constructs a text cell._
-    *
-    * Constructs a new cell containing a text.
-    * @param title - Optional title to show in the cell.
-    * @param subtitle - Optional subtitle shown below the title.
-    * @see https://docs.scriptable.app/uitablecell/#text
-    */
-  def text(): UITableCell = js.native
-  def text(title: String): UITableCell = js.native
-  def text(title: String, subtitle: String): UITableCell = js.native
+object UITableCell {
+  @scala.inline
+  def apply(
+    centerAligned: () => Unit,
+    dismissOnTap: Boolean,
+    leftAligned: () => Unit,
+    onTap: () => Unit,
+    rightAligned: () => Unit,
+    subtitleColor: Color,
+    titleColor: Color,
+    widthWeight: Double
+  ): UITableCell = {
+    val __obj = js.Dynamic.literal(centerAligned = js.Any.fromFunction0(centerAligned), dismissOnTap = dismissOnTap.asInstanceOf[js.Any], leftAligned = js.Any.fromFunction0(leftAligned), onTap = js.Any.fromFunction0(onTap), rightAligned = js.Any.fromFunction0(rightAligned), subtitleColor = subtitleColor.asInstanceOf[js.Any], titleColor = titleColor.asInstanceOf[js.Any], widthWeight = widthWeight.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UITableCell]
+  }
+  @scala.inline
+  implicit class UITableCellOps[Self <: UITableCell] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCenterAligned(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("centerAligned")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDismissOnTap(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dismissOnTap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLeftAligned(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("leftAligned")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnTap(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTap")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRightAligned(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rightAligned")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSubtitleColor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitleColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitleColor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidthWeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("widthWeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

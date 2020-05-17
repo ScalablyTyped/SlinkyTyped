@@ -1,9 +1,8 @@
 package typingsSlinky.videoJs.mod.videojs
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import org.scalajs.dom.raw.HTMLTrackElement
-import typingsSlinky.std.Event_
-import typingsSlinky.videoJs.mod.videojs.EventTarget.Event
 import typingsSlinky.videoJs.videoJsBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -248,7 +247,7 @@ trait Tech_ extends Component {
     *
     * @listens Tech#durationchange
     */
-  def onDurationChange(event: Event_): Unit = js.native
+  def onDurationChange(event: Event): Unit = js.native
   /**
     * Attempt to force override of native audio tracks.
     *
@@ -340,7 +339,7 @@ trait Tech_ extends Component {
     * @listens Tech#ready
     * @fires Tech#progress
     */
-  def trackProgress(event: Event): Unit = js.native
+  def trackProgress(event: typingsSlinky.videoJs.mod.videojs.EventTarget.Event): Unit = js.native
   /**
     * A special function to trigger source set in a way that will allow player
     * to re-trigger if the player or tech are not ready yet.

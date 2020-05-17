@@ -1,23 +1,20 @@
 package typingsSlinky.marked.mod
 
-import typingsSlinky.marked.markedStrings.blockquote_end
-import typingsSlinky.marked.markedStrings.blockquote_start
-import typingsSlinky.marked.markedStrings.center
-import typingsSlinky.marked.markedStrings.code
-import typingsSlinky.marked.markedStrings.heading
-import typingsSlinky.marked.markedStrings.hr
-import typingsSlinky.marked.markedStrings.html
-import typingsSlinky.marked.markedStrings.left
-import typingsSlinky.marked.markedStrings.list_end
-import typingsSlinky.marked.markedStrings.list_item_end
-import typingsSlinky.marked.markedStrings.list_item_start
-import typingsSlinky.marked.markedStrings.list_start
-import typingsSlinky.marked.markedStrings.loose_item_start
-import typingsSlinky.marked.markedStrings.paragraph
-import typingsSlinky.marked.markedStrings.right
-import typingsSlinky.marked.markedStrings.space
-import typingsSlinky.marked.markedStrings.table
-import typingsSlinky.marked.markedStrings.text
+import typingsSlinky.marked.mod.Tokens.BlockquoteEnd
+import typingsSlinky.marked.mod.Tokens.BlockquoteStart
+import typingsSlinky.marked.mod.Tokens.Code
+import typingsSlinky.marked.mod.Tokens.HTML
+import typingsSlinky.marked.mod.Tokens.Heading
+import typingsSlinky.marked.mod.Tokens.Hr
+import typingsSlinky.marked.mod.Tokens.ListEnd
+import typingsSlinky.marked.mod.Tokens.ListItemEnd
+import typingsSlinky.marked.mod.Tokens.ListItemStart
+import typingsSlinky.marked.mod.Tokens.ListStart
+import typingsSlinky.marked.mod.Tokens.LooseItemStart
+import typingsSlinky.marked.mod.Tokens.Paragraph
+import typingsSlinky.marked.mod.Tokens.Space
+import typingsSlinky.marked.mod.Tokens.Table
+import typingsSlinky.marked.mod.Tokens.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,99 +40,34 @@ trait Token extends js.Object
 
 object Token {
   @scala.inline
-  def Hr(`type`: hr): Token = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Token]
-  }
+  implicit def apply(value: BlockquoteEnd): Token = value.asInstanceOf[Token]
   @scala.inline
-  def Paragraph(text: String, `type`: paragraph): Token = {
-    val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Token]
-  }
+  implicit def apply(value: BlockquoteStart): Token = value.asInstanceOf[Token]
   @scala.inline
-  def Table(
-    align: js.Array[center | left | right | Null],
-    cells: js.Array[js.Array[String]],
-    header: js.Array[String],
-    `type`: table
-  ): Token = {
-    val __obj = js.Dynamic.literal(align = align.asInstanceOf[js.Any], cells = cells.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Token]
-  }
+  implicit def apply(value: Code): Token = value.asInstanceOf[Token]
   @scala.inline
-  def ListEnd(`type`: list_end): Token = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Token]
-  }
+  implicit def apply(value: HTML): Token = value.asInstanceOf[Token]
   @scala.inline
-  def ListStart(ordered: Boolean, `type`: list_start): Token = {
-    val __obj = js.Dynamic.literal(ordered = ordered.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Token]
-  }
+  implicit def apply(value: Heading): Token = value.asInstanceOf[Token]
   @scala.inline
-  def Code(text: String, `type`: code): Token = {
-    val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Token]
-  }
+  implicit def apply(value: Hr): Token = value.asInstanceOf[Token]
   @scala.inline
-  def ListItemEnd(`type`: list_item_end): Token = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Token]
-  }
+  implicit def apply(value: ListEnd): Token = value.asInstanceOf[Token]
   @scala.inline
-  def Space(`type`: space): Token = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Token]
-  }
+  implicit def apply(value: ListItemEnd): Token = value.asInstanceOf[Token]
   @scala.inline
-  def BlockquoteStart(`type`: blockquote_start): Token = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Token]
-  }
+  implicit def apply(value: ListItemStart): Token = value.asInstanceOf[Token]
   @scala.inline
-  def BlockquoteEnd(`type`: blockquote_end): Token = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Token]
-  }
+  implicit def apply(value: ListStart): Token = value.asInstanceOf[Token]
   @scala.inline
-  def Heading(depth: Double, text: String, `type`: heading): Token = {
-    val __obj = js.Dynamic.literal(depth = depth.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Token]
-  }
+  implicit def apply(value: LooseItemStart): Token = value.asInstanceOf[Token]
   @scala.inline
-  def ListItemStart(`type`: list_item_start): Token = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Token]
-  }
+  implicit def apply(value: Paragraph): Token = value.asInstanceOf[Token]
   @scala.inline
-  def HTML(pre: Boolean, text: String, `type`: html): Token = {
-    val __obj = js.Dynamic.literal(pre = pre.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Token]
-  }
+  implicit def apply(value: Space): Token = value.asInstanceOf[Token]
   @scala.inline
-  def Text(text: String, `type`: text): Token = {
-    val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Token]
-  }
+  implicit def apply(value: Table): Token = value.asInstanceOf[Token]
   @scala.inline
-  def LooseItemStart(`type`: loose_item_start): Token = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Token]
-  }
+  implicit def apply(value: Text): Token = value.asInstanceOf[Token]
 }
 

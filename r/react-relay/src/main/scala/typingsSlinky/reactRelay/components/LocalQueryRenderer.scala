@@ -3,7 +3,7 @@ package typingsSlinky.reactRelay.components
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactRelay.AnonError
+import typingsSlinky.reactRelay.anon.Error
 import typingsSlinky.reactRelay.mod.QueryRendererProps
 import typingsSlinky.relayRuntime.readerNodeMod.ReaderFragment
 import typingsSlinky.relayRuntime.relayConcreteNodeMod.ConcreteRequest
@@ -35,7 +35,7 @@ object LocalQueryRenderer {
   @scala.inline
   def apply[TOperation <: OperationType](
     environment: Environment,
-    render: AnonError[TOperation] => TagMod[Any],
+    render: Error[TOperation] => TagMod[Any],
     variables: /* import warning: importer.ImportType#apply Failed type conversion: TOperation['variables'] */ js.Any
   ): Builder[TOperation] = {
     val __props = js.Dynamic.literal(environment = environment.asInstanceOf[js.Any], render = js.Any.fromFunction1(render), variables = variables.asInstanceOf[js.Any])

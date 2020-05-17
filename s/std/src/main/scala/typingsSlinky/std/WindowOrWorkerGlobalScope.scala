@@ -7,10 +7,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait WindowOrWorkerGlobalScope extends js.Object {
   val caches: org.scalajs.dom.experimental.serviceworkers.CacheStorage = js.native
-  val crypto: Crypto_ = js.native
+  val crypto: org.scalajs.dom.crypto.Crypto = js.native
   val indexedDB: org.scalajs.dom.raw.IDBFactory = js.native
   val origin: java.lang.String = js.native
-  val performance: Performance_ = js.native
+  val performance: org.scalajs.dom.raw.Performance = js.native
   def atob(data: java.lang.String): java.lang.String = js.native
   def btoa(data: java.lang.String): java.lang.String = js.native
   def clearInterval(): Unit = js.native

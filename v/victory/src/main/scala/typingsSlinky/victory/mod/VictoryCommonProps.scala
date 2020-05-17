@@ -1,9 +1,9 @@
 package typingsSlinky.victory.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.victory.Anon1
-import typingsSlinky.victory.AnonXBoolean
-import typingsSlinky.victory.AnonY
+import typingsSlinky.victory.anon.XBoolean
+import typingsSlinky.victory.anon.Y
+import typingsSlinky.victory.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -66,7 +66,7 @@ trait VictoryCommonProps extends js.Object {
     * and the y value refers to the dependent variable. This may cause confusion in
     * horizontal charts, as the independent variable will corresponds to the y axis.
     */
-  var maxDomain: js.UndefOr[Double | AnonY] = js.native
+  var maxDomain: js.UndefOr[Double | Y] = js.native
   /**
     * The minDomain prop defines a minimum domain value for a chart. This prop is useful in
     * situations where the minimum domain of a chart is static, while the maximum value
@@ -77,7 +77,7 @@ trait VictoryCommonProps extends js.Object {
     * and the y value refers to the dependent variable. This may cause confusion in
     * horizontal charts, as the independent variable will corresponds to the y axis.
     */
-  var minDomain: js.UndefOr[Double | AnonY] = js.native
+  var minDomain: js.UndefOr[Double | Y] = js.native
   /**
     * The name prop is used to reference a component instance when defining shared events.
     */
@@ -97,7 +97,7 @@ trait VictoryCommonProps extends js.Object {
     * @example d3Scale.time(), {x: "linear", y: "log"}
     * @default "linear"
     */
-  var scale: js.UndefOr[ScalePropType | D3Scale | Anon1] = js.native
+  var scale: js.UndefOr[ScalePropType | D3Scale | `1`] = js.native
   /**
     * By default `domainPadding` is coerced to existing quadrants. This means that if a given domain only
     * includes positive values, no amount of padding applied by `domainPadding` will result in a domain with
@@ -111,7 +111,7 @@ trait VictoryCommonProps extends js.Object {
     * and the `y` value refers to the *dependent* variable. This may cause confusion in horizontal charts, as the
     * independent variable will corresponds to the y axis.
     */
-  var singleQuadrantDomainPadding: js.UndefOr[Boolean | AnonXBoolean] = js.native
+  var singleQuadrantDomainPadding: js.UndefOr[Boolean | XBoolean] = js.native
   /**
     * The standalone prop determines whether the component will render a standalone svg
     * or a <g> tag that will be included in an external svg. Set standalone to false to
@@ -209,7 +209,7 @@ object VictoryCommonProps {
         ret
     }
     @scala.inline
-    def withMaxDomain(value: Double | AnonY): Self = {
+    def withMaxDomain(value: Double | Y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("maxDomain")(value.asInstanceOf[js.Any])
         ret
@@ -221,7 +221,7 @@ object VictoryCommonProps {
         ret
     }
     @scala.inline
-    def withMinDomain(value: Double | AnonY): Self = {
+    def withMinDomain(value: Double | Y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("minDomain")(value.asInstanceOf[js.Any])
         ret
@@ -257,7 +257,7 @@ object VictoryCommonProps {
         ret
     }
     @scala.inline
-    def withScale(value: ScalePropType | D3Scale | Anon1): Self = {
+    def withScale(value: ScalePropType | D3Scale | `1`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
         ret
@@ -269,7 +269,7 @@ object VictoryCommonProps {
         ret
     }
     @scala.inline
-    def withSingleQuadrantDomainPadding(value: Boolean | AnonXBoolean): Self = {
+    def withSingleQuadrantDomainPadding(value: Boolean | XBoolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("singleQuadrantDomainPadding")(value.asInstanceOf[js.Any])
         ret

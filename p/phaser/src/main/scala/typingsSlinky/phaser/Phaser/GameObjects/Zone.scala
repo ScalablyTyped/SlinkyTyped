@@ -6,7 +6,6 @@ import typingsSlinky.phaser.Phaser.GameObjects.Components.Origin
 import typingsSlinky.phaser.Phaser.GameObjects.Components.ScrollFactor
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Transform
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Visible
-import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.Phaser.Types.Input.HitAreaCallback
 import typingsSlinky.phaser.integer
 import scala.scalajs.js
@@ -25,9 +24,8 @@ import scala.scalajs.js.annotation._
   * non-displaying Game Objects.
   * The default origin is 0.5, the center of the Zone, the same as with Game Objects.
   */
-@JSGlobal("Phaser.GameObjects.Zone")
 @js.native
-class Zone protected ()
+trait Zone
   extends GameObject
      with Depth
      with GetBounds
@@ -35,17 +33,6 @@ class Zone protected ()
      with Transform
      with ScrollFactor
      with Visible {
-  /**
-    * 
-    * @param scene The Scene to which this Game Object belongs.
-    * @param x The horizontal position of this Game Object in the world.
-    * @param y The vertical position of this Game Object in the world.
-    * @param width The width of the Game Object. Default 1.
-    * @param height The height of the Game Object. Default 1.
-    */
-  def this(scene: Scene, x: Double, y: Double) = this()
-  def this(scene: Scene, x: Double, y: Double, width: Double) = this()
-  def this(scene: Scene, x: Double, y: Double, width: Double, height: Double) = this()
   /**
     * The Blend Mode of the Game Object.
     * Although a Zone never renders, it still has a blend mode to allow it to fit seamlessly into

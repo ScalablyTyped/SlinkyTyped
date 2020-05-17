@@ -1,10 +1,10 @@
 package typingsSlinky.nodeHueApi.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.nodeHueApi.AnonCheckforupdate
-import typingsSlinky.nodeHueApi.AnonCommunication
-import typingsSlinky.nodeHueApi.AnonCreatedate
-import typingsSlinky.nodeHueApi.AnonErrorcode
+import typingsSlinky.nodeHueApi.anon.Checkforupdate
+import typingsSlinky.nodeHueApi.anon.Communication
+import typingsSlinky.nodeHueApi.anon.Createdate
+import typingsSlinky.nodeHueApi.anon.Errorcode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 trait IBridgeConfig extends js.Object {
   var UTC: js.Date = js.native
   var apiversion: String = js.native
-  var backup: AnonErrorcode = js.native
+  var backup: Errorcode = js.native
   var bridgeid: String = js.native
   var dhcp: Boolean = js.native
   var factorynew: Boolean = js.native
@@ -27,14 +27,14 @@ trait IBridgeConfig extends js.Object {
   var netmask: String = js.native
   var portalconnection: String = js.native
   var portalservices: Boolean = js.native
-  var portalstate: AnonCommunication = js.native
+  var portalstate: Communication = js.native
   var proxyaddress: String = js.native
   var proxyport: Double = js.native
   var replacesbridgeid: js.UndefOr[String] = js.native
-  var swupdate: AnonCheckforupdate = js.native
+  var swupdate: Checkforupdate = js.native
   var swversion: String = js.native
   var timezone: String = js.native
-  var whitelist: StringDictionary[AnonCreatedate] = js.native
+  var whitelist: StringDictionary[Createdate] = js.native
   var zigbeechannel: Double = js.native
 }
 
@@ -43,7 +43,7 @@ object IBridgeConfig {
   def apply(
     UTC: js.Date,
     apiversion: String,
-    backup: AnonErrorcode,
+    backup: Errorcode,
     bridgeid: String,
     dhcp: Boolean,
     factorynew: Boolean,
@@ -57,13 +57,13 @@ object IBridgeConfig {
     netmask: String,
     portalconnection: String,
     portalservices: Boolean,
-    portalstate: AnonCommunication,
+    portalstate: Communication,
     proxyaddress: String,
     proxyport: Double,
-    swupdate: AnonCheckforupdate,
+    swupdate: Checkforupdate,
     swversion: String,
     timezone: String,
-    whitelist: StringDictionary[AnonCreatedate],
+    whitelist: StringDictionary[Createdate],
     zigbeechannel: Double
   ): IBridgeConfig = {
     val __obj = js.Dynamic.literal(UTC = UTC.asInstanceOf[js.Any], apiversion = apiversion.asInstanceOf[js.Any], backup = backup.asInstanceOf[js.Any], bridgeid = bridgeid.asInstanceOf[js.Any], dhcp = dhcp.asInstanceOf[js.Any], factorynew = factorynew.asInstanceOf[js.Any], gateway = gateway.asInstanceOf[js.Any], ipaddress = ipaddress.asInstanceOf[js.Any], linkbutton = linkbutton.asInstanceOf[js.Any], localtime = localtime.asInstanceOf[js.Any], mac = mac.asInstanceOf[js.Any], modelid = modelid.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], netmask = netmask.asInstanceOf[js.Any], portalconnection = portalconnection.asInstanceOf[js.Any], portalservices = portalservices.asInstanceOf[js.Any], portalstate = portalstate.asInstanceOf[js.Any], proxyaddress = proxyaddress.asInstanceOf[js.Any], proxyport = proxyport.asInstanceOf[js.Any], swupdate = swupdate.asInstanceOf[js.Any], swversion = swversion.asInstanceOf[js.Any], timezone = timezone.asInstanceOf[js.Any], whitelist = whitelist.asInstanceOf[js.Any], zigbeechannel = zigbeechannel.asInstanceOf[js.Any])
@@ -88,7 +88,7 @@ object IBridgeConfig {
         ret
     }
     @scala.inline
-    def withBackup(value: AnonErrorcode): Self = {
+    def withBackup(value: Errorcode): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("backup")(value.asInstanceOf[js.Any])
         ret
@@ -172,7 +172,7 @@ object IBridgeConfig {
         ret
     }
     @scala.inline
-    def withPortalstate(value: AnonCommunication): Self = {
+    def withPortalstate(value: Communication): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("portalstate")(value.asInstanceOf[js.Any])
         ret
@@ -190,7 +190,7 @@ object IBridgeConfig {
         ret
     }
     @scala.inline
-    def withSwupdate(value: AnonCheckforupdate): Self = {
+    def withSwupdate(value: Checkforupdate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("swupdate")(value.asInstanceOf[js.Any])
         ret
@@ -208,7 +208,7 @@ object IBridgeConfig {
         ret
     }
     @scala.inline
-    def withWhitelist(value: StringDictionary[AnonCreatedate]): Self = {
+    def withWhitelist(value: StringDictionary[Createdate]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("whitelist")(value.asInstanceOf[js.Any])
         ret

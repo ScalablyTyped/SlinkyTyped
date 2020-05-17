@@ -1,7 +1,7 @@
 package typingsSlinky.awsLambda.lexMod
 
-import typingsSlinky.awsLambda.AnonContent
-import typingsSlinky.awsLambda.AnonContentType
+import typingsSlinky.awsLambda.anon.Content
+import typingsSlinky.awsLambda.anon.ContentType
 import typingsSlinky.awsLambda.awsLambdaStrings.Close
 import typingsSlinky.awsLambda.awsLambdaStrings.ConfirmIntent
 import typingsSlinky.awsLambda.awsLambdaStrings.ElicitIntent
@@ -12,8 +12,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait LexDialogActionBase extends js.Object {
-  var message: js.UndefOr[AnonContent] = js.native
-  var responseCard: js.UndefOr[AnonContentType] = js.native
+  var message: js.UndefOr[Content] = js.native
+  var responseCard: js.UndefOr[ContentType] = js.native
   var `type`: Close | ElicitIntent | ElicitSlot | ConfirmIntent = js.native
 }
 
@@ -37,7 +37,7 @@ object LexDialogActionBase {
         ret
     }
     @scala.inline
-    def withMessage(value: AnonContent): Self = {
+    def withMessage(value: Content): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
         ret
@@ -49,7 +49,7 @@ object LexDialogActionBase {
         ret
     }
     @scala.inline
-    def withResponseCard(value: AnonContentType): Self = {
+    def withResponseCard(value: ContentType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("responseCard")(value.asInstanceOf[js.Any])
         ret

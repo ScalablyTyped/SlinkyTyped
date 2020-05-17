@@ -1,8 +1,8 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesLines
 
-import typingsSlinky.echarts.AnonFontStyle
-import typingsSlinky.echarts.AnonLineStyleAnonShadowColor
-import typingsSlinky.echarts.AnonShadowColor
+import typingsSlinky.echarts.anon.FontStyle
+import typingsSlinky.echarts.anon.LineStyleShadowColor
+import typingsSlinky.echarts.anon.ShadowColor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,18 +24,18 @@ trait DataObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-lines.data.emphasis
     */
-  var emphasis: js.UndefOr[AnonLineStyleAnonShadowColor] = js.native
+  var emphasis: js.UndefOr[LineStyleShadowColor] = js.native
   /**
     * @see https://echarts.apache.org/en/option.html#series-lines.data.label
     */
-  var label: js.UndefOr[AnonFontStyle] = js.native
+  var label: js.UndefOr[FontStyle] = js.native
   /**
     * The line style of this data item.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-lines.data.lineStyle
     */
-  var lineStyle: js.UndefOr[AnonShadowColor] = js.native
+  var lineStyle: js.UndefOr[ShadowColor] = js.native
   /**
     * the name of data.
     *
@@ -70,7 +70,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonLineStyleAnonShadowColor): Self = {
+    def withEmphasis(value: LineStyleShadowColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -82,7 +82,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonFontStyle): Self = {
+    def withLabel(value: FontStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -94,7 +94,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withLineStyle(value: AnonShadowColor): Self = {
+    def withLineStyle(value: ShadowColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
         ret

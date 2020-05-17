@@ -1,6 +1,6 @@
 package typingsSlinky.connectRedis.mod
 
-import typingsSlinky.expressSession.mod._Global_.Express.SessionData
+import typingsSlinky.expressSession.mod.global.Express.SessionData
 import typingsSlinky.ioredis.mod.Redis
 import typingsSlinky.redis.mod.RedisClient
 import typingsSlinky.std.JSON

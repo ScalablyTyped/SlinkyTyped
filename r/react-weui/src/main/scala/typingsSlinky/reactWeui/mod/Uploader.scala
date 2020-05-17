@@ -1,6 +1,6 @@
 package typingsSlinky.reactWeui.mod
 
-import typingsSlinky.reactWeui.AnonFiles
+import typingsSlinky.reactWeui.anon.Files
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ class Uploader protected () extends js.Object {
 @JSImport("react-weui", "Uploader")
 @js.native
 object Uploader extends js.Object {
-  var defaultProps: AnonFiles = js.native
+  var defaultProps: Files = js.native
   @js.native
   object propTypes extends js.Object {
     @js.native

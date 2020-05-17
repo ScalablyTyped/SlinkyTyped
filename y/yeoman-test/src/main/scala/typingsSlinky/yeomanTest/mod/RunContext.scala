@@ -2,8 +2,8 @@ package typingsSlinky.yeomanTest.mod
 
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.yeomanGenerator.mod.Answers
-import typingsSlinky.yeomanTest.FnCall
-import typingsSlinky.yeomanTest.FnCallOnrejected
+import typingsSlinky.yeomanTest.anon.FnCall
+import typingsSlinky.yeomanTest.anon.FnCallOnrejected
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -74,13 +74,6 @@ trait RunContext
   	 * Promise `.then()` duck typing
   	 */
   def `then`[TResult1, TResult2](): js.Promise[TResult1 | TResult2] = js.native
-  /**
-  	 * Promise `.then()` duck typing
-  	 */
-  def `then`[TResult1, TResult2](
-    onfulfilled: js.UndefOr[scala.Nothing],
-    onrejected: js.Function1[/* reason */ js.Any, TResult2 | js.Thenable[TResult2]]
-  ): js.Promise[TResult1 | TResult2] = js.native
   /**
   	 * Promise `.then()` duck typing
   	 */

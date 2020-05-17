@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Contains absolute size settings for floating objects.
   */
-@JSGlobal("FloatingObjectAbsoluteSizeSettings")
 @js.native
-class FloatingObjectAbsoluteSizeSettings () extends js.Object {
+trait FloatingObjectAbsoluteSizeSettings extends js.Object {
   /**
     * Gets or sets a floating object's absolute height.
     */
@@ -18,5 +17,33 @@ class FloatingObjectAbsoluteSizeSettings () extends js.Object {
     * Gets or sets a floating object's absolute width.
     */
   var absoluteWidth: Double = js.native
+}
+
+object FloatingObjectAbsoluteSizeSettings {
+  @scala.inline
+  def apply(absoluteHeight: Double, absoluteWidth: Double): FloatingObjectAbsoluteSizeSettings = {
+    val __obj = js.Dynamic.literal(absoluteHeight = absoluteHeight.asInstanceOf[js.Any], absoluteWidth = absoluteWidth.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FloatingObjectAbsoluteSizeSettings]
+  }
+  @scala.inline
+  implicit class FloatingObjectAbsoluteSizeSettingsOps[Self <: FloatingObjectAbsoluteSizeSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAbsoluteHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("absoluteHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAbsoluteWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("absoluteWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

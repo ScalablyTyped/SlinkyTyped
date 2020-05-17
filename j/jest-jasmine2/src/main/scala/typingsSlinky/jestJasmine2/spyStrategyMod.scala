@@ -1,5 +1,6 @@
 package typingsSlinky.jestJasmine2
 
+import typingsSlinky.jestJasmine2.anon.Fn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +23,7 @@ object spyStrategyMod extends js.Object {
   
   @js.native
   class default () extends SpyStrategy {
-    def this(hasNameFnGetSpy: AnonFn) = this()
+    def this(hasNameFnGetSpy: Fn) = this()
   }
   
 }

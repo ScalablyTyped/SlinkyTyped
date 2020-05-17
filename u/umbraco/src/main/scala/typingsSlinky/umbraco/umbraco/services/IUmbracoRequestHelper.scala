@@ -1,8 +1,8 @@
 package typingsSlinky.umbraco.umbraco.services
 
 import typingsSlinky.angular.mod.IPromise
-import typingsSlinky.umbraco.AnonError
-import typingsSlinky.umbraco.AnonErrorMsg
+import typingsSlinky.umbraco.anon.Error
+import typingsSlinky.umbraco.anon.ErrorMsg
 import typingsSlinky.umbraco.mod.resources.IResourcePromise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -76,7 +76,7 @@ trait IUmbracoRequestHelper extends js.Object {
     *   The error callback must return an object containing: {errorMsg: errorMessage, data: originalData, status: status }
     */
   def resourcePromise[T](httpPromise: IPromise[T], opts: String): IResourcePromise | js.Object = js.native
-  def resourcePromise[T](httpPromise: IPromise[T], opts: AnonError[T]): IResourcePromise | js.Object = js.native
-  def resourcePromise[T](httpPromise: IPromise[T], opts: AnonErrorMsg[T]): IResourcePromise | js.Object = js.native
+  def resourcePromise[T](httpPromise: IPromise[T], opts: Error[T]): IResourcePromise | js.Object = js.native
+  def resourcePromise[T](httpPromise: IPromise[T], opts: ErrorMsg[T]): IResourcePromise | js.Object = js.native
 }
 

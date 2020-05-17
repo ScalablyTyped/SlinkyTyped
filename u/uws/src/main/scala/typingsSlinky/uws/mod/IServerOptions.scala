@@ -1,6 +1,6 @@
 package typingsSlinky.uws.mod
 
-import typingsSlinky.uws.AnonOrigin
+import typingsSlinky.uws.anon.Origin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -140,13 +140,13 @@ object IServerOptions {
         ret
     }
     @scala.inline
-    def withVerifyClientFunction2(value: (/* info */ AnonOrigin, /* callback */ js.Function1[/* res */ Boolean, Unit]) => Unit): Self = {
+    def withVerifyClientFunction2(value: (/* info */ Origin, /* callback */ js.Function1[/* res */ Boolean, Unit]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("verifyClient")(js.Any.fromFunction2(value))
         ret
     }
     @scala.inline
-    def withVerifyClientFunction1(value: /* info */ AnonOrigin => Boolean): Self = {
+    def withVerifyClientFunction1(value: /* info */ Origin => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("verifyClient")(js.Any.fromFunction1(value))
         ret

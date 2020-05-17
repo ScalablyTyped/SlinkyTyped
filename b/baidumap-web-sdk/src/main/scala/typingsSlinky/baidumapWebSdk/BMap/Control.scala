@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BMap.Control")
 @js.native
-class Control () extends js.Object {
+trait Control extends js.Object {
   var defaultAnchor: ControlAnchor = js.native
   var defaultOffset: Size = js.native
   def getAnchor(): ControlAnchor = js.native
@@ -20,5 +19,99 @@ class Control () extends js.Object {
   def setAnchor(anchor: ControlAnchor): Unit = js.native
   def setOffset(offset: Size): Unit = js.native
   def show(): Unit = js.native
+}
+
+object Control {
+  @scala.inline
+  def apply(
+    defaultAnchor: ControlAnchor,
+    defaultOffset: Size,
+    getAnchor: () => ControlAnchor,
+    getContainer: () => js.UndefOr[HTMLElement],
+    getOffset: () => Size,
+    hide: () => Unit,
+    initialize: Map => HTMLElement,
+    isVisible: () => Boolean,
+    setAnchor: ControlAnchor => Unit,
+    setOffset: Size => Unit,
+    show: () => Unit
+  ): Control = {
+    val __obj = js.Dynamic.literal(defaultAnchor = defaultAnchor.asInstanceOf[js.Any], defaultOffset = defaultOffset.asInstanceOf[js.Any], getAnchor = js.Any.fromFunction0(getAnchor), getContainer = js.Any.fromFunction0(getContainer), getOffset = js.Any.fromFunction0(getOffset), hide = js.Any.fromFunction0(hide), initialize = js.Any.fromFunction1(initialize), isVisible = js.Any.fromFunction0(isVisible), setAnchor = js.Any.fromFunction1(setAnchor), setOffset = js.Any.fromFunction1(setOffset), show = js.Any.fromFunction0(show))
+    __obj.asInstanceOf[Control]
+  }
+  @scala.inline
+  implicit class ControlOps[Self <: Control] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultAnchor(value: ControlAnchor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAnchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultOffset(value: Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetAnchor(value: () => ControlAnchor): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAnchor")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetContainer(value: () => js.UndefOr[HTMLElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getContainer")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetOffset(value: () => Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getOffset")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHide(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withInitialize(value: Map => HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsVisible(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isVisible")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetAnchor(value: ControlAnchor => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAnchor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetOffset(value: Size => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setOffset")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withShow(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

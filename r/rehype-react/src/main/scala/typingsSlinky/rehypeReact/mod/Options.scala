@@ -2,15 +2,15 @@ package typingsSlinky.rehypeReact.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
-import typingsSlinky.rehypeReact.AnonChildren
-import typingsSlinky.rehypeReact.FnCall
+import typingsSlinky.rehypeReact.anon.Children
+import typingsSlinky.rehypeReact.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Options extends js.Object {
-  var Fragment: js.UndefOr[ReactComponentClass[AnonChildren]] = js.native
+  var Fragment: js.UndefOr[ReactComponentClass[Children]] = js.native
   var components: js.UndefOr[StringDictionary[ReactComponentClass[_]]] = js.native
   var createElement: FnCall = js.native
   var prefix: js.UndefOr[String] = js.native
@@ -35,19 +35,19 @@ object Options {
         ret
     }
     @scala.inline
-    def withFragmentFunctionComponent(value: ReactComponentClass[AnonChildren]): Self = {
+    def withFragmentFunctionComponent(value: ReactComponentClass[Children]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Fragment")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withFragmentComponentClass(value: ReactComponentClass[AnonChildren]): Self = {
+    def withFragmentComponentClass(value: ReactComponentClass[Children]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Fragment")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withFragment(value: ReactComponentClass[AnonChildren]): Self = {
+    def withFragment(value: ReactComponentClass[Children]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Fragment")(value.asInstanceOf[js.Any])
         ret

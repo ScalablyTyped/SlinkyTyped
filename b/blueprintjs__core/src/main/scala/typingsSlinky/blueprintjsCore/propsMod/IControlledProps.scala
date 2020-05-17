@@ -1,10 +1,10 @@
 package typingsSlinky.blueprintjsCore.propsMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import typingsSlinky.react.mod.FormEventHandler
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,7 +44,7 @@ object IControlledProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: SyntheticEvent[EventTarget with HTMLElement, Event_] => Unit): Self = {
+    def withOnChange(value: SyntheticEvent[EventTarget with HTMLElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

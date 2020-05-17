@@ -66,7 +66,8 @@ trait ReposCreateInOrgParams extends js.Object {
     * The name of the repository.
     */
   var name: String = js.native
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
   /**
     * Either `true` to create a private repository or `false` to create a public one. Creating private repositories requires a paid GitHub account.
     */
@@ -86,8 +87,9 @@ trait ReposCreateInOrgParams extends js.Object {
 
 object ReposCreateInOrgParams {
   @scala.inline
-  def apply(name: String, org: String): ReposCreateInOrgParams = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], org = org.asInstanceOf[js.Any])
+  def apply(name: String, org_ : String): ReposCreateInOrgParams = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReposCreateInOrgParams]
   }
   @scala.inline
@@ -103,7 +105,7 @@ object ReposCreateInOrgParams {
         ret
     }
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

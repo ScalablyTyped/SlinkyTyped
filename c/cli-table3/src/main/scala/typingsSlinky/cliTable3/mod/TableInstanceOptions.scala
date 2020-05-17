@@ -1,7 +1,7 @@
 package typingsSlinky.cliTable3.mod
 
-import typingsSlinky.cliTable3.AnonBorder
-import typingsSlinky.cliTable3.RecordCharNamestring
+import typingsSlinky.cliTable3.anon.Border
+import typingsSlinky.cliTable3.anon.RecordCharNamestring
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TableInstanceOptions extends TableOptions {
   var chars: RecordCharNamestring = js.native
-  var style: AnonBorder = js.native
+  var style: Border = js.native
 }
 
 object TableInstanceOptions {
@@ -21,7 +21,7 @@ object TableInstanceOptions {
     head: js.Array[String],
     rowAligns: js.Array[VerticalAlignment],
     rowHeights: js.Array[Double | Null],
-    style: AnonBorder,
+    style: Border,
     truncate: String,
     wordWrap: Boolean
   ): TableInstanceOptions = {
@@ -41,7 +41,7 @@ object TableInstanceOptions {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonBorder): Self = {
+    def withStyle(value: Border): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

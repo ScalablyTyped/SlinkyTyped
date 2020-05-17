@@ -7,6 +7,7 @@ import typingsSlinky.popmotionPose.typesMod.DomPopmotionConfig
 import typingsSlinky.popmotionPose.typesMod.DomPopmotionPoser
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.ConsumerProps
+import typingsSlinky.reactPose.anon.Dictkey
 import typingsSlinky.reactPose.typesMod.ChildRegistration
 import typingsSlinky.reactPose.typesMod.CurrentPose
 import typingsSlinky.reactPose.typesMod.PopStyle
@@ -41,7 +42,7 @@ object poseElementMod extends js.Object {
     def flushChildren(): Unit = js.native
     def getFirstPose(): CurrentPose | Unit = js.native
     def getInitialPose(): CurrentPose | Unit = js.native
-    def getSetProps(): AnonDictkey = js.native
+    def getSetProps(): Dictkey = js.native
     @JSName("getSnapshotBeforeUpdate")
     def getSnapshotBeforeUpdate_MPoseElement(): Null = js.native
     def initPoser(poser: DomPopmotionPoser): Unit = js.native

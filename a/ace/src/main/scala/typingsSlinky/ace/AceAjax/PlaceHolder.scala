@@ -1,7 +1,5 @@
 package typingsSlinky.ace.AceAjax
 
-import org.scalablytyped.runtime.Instantiable4
-import org.scalablytyped.runtime.Instantiable6
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,31 +44,76 @@ trait PlaceHolder extends js.Object {
   def showOtherMarkers(): Unit = js.native
 }
 
-@JSGlobal("AceAjax.PlaceHolder")
-@js.native
-object PlaceHolder
-  extends /**
-  * - @param session (Document): The document to associate with the anchor
-  * - @param length (Number): The starting row position
-  * - @param pos (Number): The starting column position
-  * - @param others (String):
-  * - @param mainClass (String):
-  * - @param othersClass (String):
-  **/
-Instantiable6[
-      /* session */ Document, 
-      /* length */ Double, 
-      /* pos */ Double, 
-      /* others */ String, 
-      /* mainClass */ String, 
-      /* othersClass */ String, 
-      PlaceHolder
-    ]
-     with Instantiable4[
-      /* session */ IEditSession, 
-      /* length */ Double, 
-      /* pos */ Position, 
-      /* positions */ js.Array[Position], 
-      PlaceHolder
-    ]
+object PlaceHolder {
+  @scala.inline
+  def apply(
+    cancel: () => Unit,
+    detach: () => Unit,
+    hideOtherMarkers: () => Unit,
+    on: (String, js.Function1[/* e */ js.Any, _]) => Unit,
+    onCursorChange: () => Unit,
+    onUpdate: () => Unit,
+    setup: () => Unit,
+    showOtherMarkers: () => Unit
+  ): PlaceHolder = {
+    val __obj = js.Dynamic.literal(cancel = js.Any.fromFunction0(cancel), detach = js.Any.fromFunction0(detach), hideOtherMarkers = js.Any.fromFunction0(hideOtherMarkers), on = js.Any.fromFunction2(on), onCursorChange = js.Any.fromFunction0(onCursorChange), onUpdate = js.Any.fromFunction0(onUpdate), setup = js.Any.fromFunction0(setup), showOtherMarkers = js.Any.fromFunction0(showOtherMarkers))
+    __obj.asInstanceOf[PlaceHolder]
+  }
+  @scala.inline
+  implicit class PlaceHolderOps[Self <: PlaceHolder] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCancel(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDetach(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detach")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHideOtherMarkers(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideOtherMarkers")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOn(value: (String, js.Function1[/* e */ js.Any, _]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withOnCursorChange(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCursorChange")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnUpdate(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdate")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetup(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setup")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withShowOtherMarkers(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showOtherMarkers")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
+}
 

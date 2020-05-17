@@ -1,6 +1,12 @@
 package typingsSlinky.formatjsIntlUtils
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.formatjsIntlUtils.anon.Dictk
+import typingsSlinky.formatjsIntlUtils.anon.LocaleMatcher
+import typingsSlinky.formatjsIntlUtils.anon.PartialThresholds
+import typingsSlinky.formatjsIntlUtils.anon.Type
+import typingsSlinky.formatjsIntlUtils.anon.TypeValue
+import typingsSlinky.formatjsIntlUtils.anon.Value
 import typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.boolean
 import typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.string
 import typingsSlinky.formatjsIntlUtils.numberTypesMod.NumberFormatDigitInternalSlots
@@ -26,7 +32,7 @@ object mod extends js.Object {
     */ typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.createResolveLocale with TopLevel[js.Any] */](getDefaultLocale: js.Function0[String]): js.Function5[
     /* availableLocales */ js.Array[String], 
     /* requestedLocales */ js.Array[String], 
-    /* options */ AnonDictk, 
+    /* options */ Dictk, 
     /* relevantExtensionKeys */ js.Array[K], 
     /* localeData */ Record[String, D], 
     ResolveLocaleResult
@@ -41,25 +47,17 @@ object mod extends js.Object {
   def getMultiInternalSlots[Instance /* <: js.Object */, Internal /* <: js.Object */, Field /* <: /* keyof Internal */ String */](map: WeakMap[Instance, Internal], pl: Instance, fields: Field*): Pick[Internal, Field] = js.native
   def getNumberOption[T /* <: js.Object */, K /* <: /* keyof T */ String */](options: T, property: K, minimum: Double, maximum: Double, fallback: Double): Double = js.native
   @JSName("getOption")
-  def getOption_boolean[T /* <: js.Object */, K /* <: /* keyof T */ String */, F](opts: T, prop: K, `type`: boolean, values: js.UndefOr[scala.Nothing], fallback: F): (Exclude[
-    /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any, 
-    js.UndefOr[scala.Nothing]
-  ]) | F = js.native
-  @JSName("getOption")
   def getOption_boolean[T /* <: js.Object */, K /* <: /* keyof T */ String */, F](
     opts: T,
     prop: K,
     `type`: boolean,
-    values: js.Array[
-      /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any
+    values: js.UndefOr[
+      js.Array[
+        /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any
+      ]
     ],
     fallback: F
   ): (Exclude[
-    /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any, 
-    js.UndefOr[scala.Nothing]
-  ]) | F = js.native
-  @JSName("getOption")
-  def getOption_string[T /* <: js.Object */, K /* <: /* keyof T */ String */, F](opts: T, prop: K, `type`: string, values: js.UndefOr[scala.Nothing], fallback: F): (Exclude[
     /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any, 
     js.UndefOr[scala.Nothing]
   ]) | F = js.native
@@ -68,8 +66,10 @@ object mod extends js.Object {
     opts: T,
     prop: K,
     `type`: string,
-    values: js.Array[
-      /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any
+    values: js.UndefOr[
+      js.Array[
+        /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any
+      ]
     ],
     fallback: F
   ): (Exclude[
@@ -79,23 +79,23 @@ object mod extends js.Object {
   def getParentLocalesByLang(lang: String): Record[String, String] = js.native
   def invariant(condition: Boolean, message: String): Unit = js.native
   def invariant(condition: Boolean, message: String, Err: js.Any): Unit = js.native
-  def isLiteralPart(patternPart: AnonType): /* is @formatjs/intl-utils.@formatjs/intl-utils/dist/polyfill-utils.LiteralPart */ Boolean = js.native
+  def isLiteralPart(patternPart: Type): /* is @formatjs/intl-utils.@formatjs/intl-utils/dist/polyfill-utils.LiteralPart */ Boolean = js.native
   def isLiteralPart(patternPart: LiteralPart): /* is @formatjs/intl-utils.@formatjs/intl-utils/dist/polyfill-utils.LiteralPart */ Boolean = js.native
   def isMissingLocaleDataError(e: js.Error): /* is @formatjs/intl-utils.@formatjs/intl-utils/dist/resolve-locale.MissingLocaleDataError */ Boolean = js.native
   def isWellFormedCurrencyCode(currency: String): Boolean = js.native
   def objectIs(x: js.Any, y: js.Any): Boolean = js.native
-  def partitionPattern(pattern: String): js.Array[AnonValue | AnonTypeValue] = js.native
+  def partitionPattern(pattern: String): js.Array[Value | TypeValue] = js.native
   def removeUnitNamespace(unit: String): String = js.native
-  def selectUnit(from: Double): AnonUnit = js.native
-  def selectUnit(from: Double, to: Double): AnonUnit = js.native
-  def selectUnit(from: Double, to: Double, thresholds: PartialThresholds): AnonUnit = js.native
-  def selectUnit(from: Double, to: js.Date): AnonUnit = js.native
-  def selectUnit(from: Double, to: js.Date, thresholds: PartialThresholds): AnonUnit = js.native
-  def selectUnit(from: js.Date): AnonUnit = js.native
-  def selectUnit(from: js.Date, to: Double): AnonUnit = js.native
-  def selectUnit(from: js.Date, to: Double, thresholds: PartialThresholds): AnonUnit = js.native
-  def selectUnit(from: js.Date, to: js.Date): AnonUnit = js.native
-  def selectUnit(from: js.Date, to: js.Date, thresholds: PartialThresholds): AnonUnit = js.native
+  def selectUnit(from: Double): typingsSlinky.formatjsIntlUtils.anon.Unit = js.native
+  def selectUnit(from: Double, to: Double): typingsSlinky.formatjsIntlUtils.anon.Unit = js.native
+  def selectUnit(from: Double, to: Double, thresholds: PartialThresholds): typingsSlinky.formatjsIntlUtils.anon.Unit = js.native
+  def selectUnit(from: Double, to: js.Date): typingsSlinky.formatjsIntlUtils.anon.Unit = js.native
+  def selectUnit(from: Double, to: js.Date, thresholds: PartialThresholds): typingsSlinky.formatjsIntlUtils.anon.Unit = js.native
+  def selectUnit(from: js.Date): typingsSlinky.formatjsIntlUtils.anon.Unit = js.native
+  def selectUnit(from: js.Date, to: Double): typingsSlinky.formatjsIntlUtils.anon.Unit = js.native
+  def selectUnit(from: js.Date, to: Double, thresholds: PartialThresholds): typingsSlinky.formatjsIntlUtils.anon.Unit = js.native
+  def selectUnit(from: js.Date, to: js.Date): typingsSlinky.formatjsIntlUtils.anon.Unit = js.native
+  def selectUnit(from: js.Date, to: js.Date, thresholds: PartialThresholds): typingsSlinky.formatjsIntlUtils.anon.Unit = js.native
   def setInternalSlot[Instance /* <: js.Object */, Internal /* <: js.Object */, Field /* <: /* keyof Internal */ String */](
     map: WeakMap[Instance, Internal],
     pl: Instance,
@@ -111,7 +111,7 @@ object mod extends js.Object {
     mxfdDefault: Double
   ): Unit = js.native
   def supportedLocales(availableLocales: js.Array[String], requestedLocales: js.Array[String]): js.Array[String] = js.native
-  def supportedLocales(availableLocales: js.Array[String], requestedLocales: js.Array[String], options: AnonLocaleMatcher): js.Array[String] = js.native
+  def supportedLocales(availableLocales: js.Array[String], requestedLocales: js.Array[String], options: LocaleMatcher): js.Array[String] = js.native
   def toObject[T](arg: T): T = js.native
   def toString(o: js.Any): String = js.native
   def unpackData[T /* <: Record[String, _] */](locale: String, localeData: LocaleData[T]): T = js.native

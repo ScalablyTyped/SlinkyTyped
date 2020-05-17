@@ -1,7 +1,7 @@
 package typingsSlinky.yaml.mod.scalarOptions
 
-import typingsSlinky.yaml.AnonJsonEncoding
-import typingsSlinky.yaml.AnonLineWidth
+import typingsSlinky.yaml.anon.JsonEncoding
+import typingsSlinky.yaml.anon.LineWidth
 import typingsSlinky.yaml.typesMod.Scalar.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,13 +15,13 @@ trait Str extends js.Object {
     * Default: `'PLAIN'`
     */
   var defaultType: Type = js.native
-  var doubleQuoted: AnonJsonEncoding = js.native
-  var fold: AnonLineWidth = js.native
+  var doubleQuoted: JsonEncoding = js.native
+  var fold: LineWidth = js.native
 }
 
 object Str {
   @scala.inline
-  def apply(defaultType: Type, doubleQuoted: AnonJsonEncoding, fold: AnonLineWidth): Str = {
+  def apply(defaultType: Type, doubleQuoted: JsonEncoding, fold: LineWidth): Str = {
     val __obj = js.Dynamic.literal(defaultType = defaultType.asInstanceOf[js.Any], doubleQuoted = doubleQuoted.asInstanceOf[js.Any], fold = fold.asInstanceOf[js.Any])
     __obj.asInstanceOf[Str]
   }
@@ -38,13 +38,13 @@ object Str {
         ret
     }
     @scala.inline
-    def withDoubleQuoted(value: AnonJsonEncoding): Self = {
+    def withDoubleQuoted(value: JsonEncoding): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("doubleQuoted")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withFold(value: AnonLineWidth): Self = {
+    def withFold(value: LineWidth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fold")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.agGrid.colDefMod
 
-import typingsSlinky.agGrid.AnonInstantiableAny
-import typingsSlinky.agGrid.AnonInstantiableIHeaderGroupComp
+import typingsSlinky.agGrid.anon.InstantiableAny
+import typingsSlinky.agGrid.anon.InstantiableIHeaderGroupComp
 import typingsSlinky.agGrid.componentResolverMod.ComponentHolder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,9 +16,9 @@ trait ColGroupDef
   /** Group ID */
   var groupId: js.UndefOr[String] = js.native
   /** The custom header group component to be used for rendering the component header. If none specified the default ag-Grid is used**/
-  var headerGroupComponent: js.UndefOr[String | AnonInstantiableIHeaderGroupComp] = js.native
+  var headerGroupComponent: js.UndefOr[String | InstantiableIHeaderGroupComp] = js.native
   /** The custom header group component to be used for rendering the component header in the hosting framework (ie: React/Angular). If none specified the default ag-Grid is used**/
-  var headerGroupComponentFramework: js.UndefOr[AnonInstantiableAny] = js.native
+  var headerGroupComponentFramework: js.UndefOr[InstantiableAny] = js.native
   /** The custom header group component to be used for rendering the component header. If none specified the default ag-Grid is used**/
   var headerGroupComponentParams: js.UndefOr[js.Any] = js.native
   /** If true, group cannot be broken up by column moving, child columns will always appear side by side, however you can rearrange child columns within the group */
@@ -58,7 +58,7 @@ object ColGroupDef {
         ret
     }
     @scala.inline
-    def withHeaderGroupComponent(value: String | AnonInstantiableIHeaderGroupComp): Self = {
+    def withHeaderGroupComponent(value: String | InstantiableIHeaderGroupComp): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headerGroupComponent")(value.asInstanceOf[js.Any])
         ret
@@ -70,7 +70,7 @@ object ColGroupDef {
         ret
     }
     @scala.inline
-    def withHeaderGroupComponentFramework(value: AnonInstantiableAny): Self = {
+    def withHeaderGroupComponentFramework(value: InstantiableAny): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headerGroupComponentFramework")(value.asInstanceOf[js.Any])
         ret

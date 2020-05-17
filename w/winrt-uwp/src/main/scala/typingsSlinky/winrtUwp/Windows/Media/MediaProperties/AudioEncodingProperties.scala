@@ -5,10 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Describes the format of an audio stream. */
-@JSGlobal("Windows.Media.MediaProperties.AudioEncodingProperties")
 @js.native
-/** Creates a new instance of the AudioEncodingProperties class. */
-class AudioEncodingProperties () extends js.Object {
+trait AudioEncodingProperties extends js.Object {
   /** Gets or sets the audio bit rate. */
   var bitrate: Double = js.native
   /** Gets or sets the number of bits per audio sample. */
@@ -35,49 +33,84 @@ class AudioEncodingProperties () extends js.Object {
   def setFormatUserData(value: js.Array[Double]): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Media.MediaProperties.AudioEncodingProperties")
-@js.native
-object AudioEncodingProperties extends js.Object {
-  /**
-    * Creates an instance of AudioEncodingProperties for Advanced Audio Coding (AAC) audio.
-    * @param sampleRate The audio sampling rate.
-    * @param channelCount The number of audio channels.
-    * @param bitrate The audio bit rate.
-    * @return The audio encoding properties.
-    */
-  def createAac(sampleRate: Double, channelCount: Double, bitrate: Double): AudioEncodingProperties = js.native
-  /**
-    * Creates an instance of AudioEncodingProperties for Advanced Audio Coding (AAC) audio in Audio Data Transport Stream (ADTS) format.
-    * @param sampleRate The audio sampling rate.
-    * @param channelCount The number of audio channels.
-    * @param bitrate The audio bit rate.
-    * @return The audio encoding properties.
-    */
-  def createAacAdts(sampleRate: Double, channelCount: Double, bitrate: Double): AudioEncodingProperties = js.native
-  /**
-    * Creates an instance of AudioEncodingProperties for MPEG Audio Layer-3 (MP3) audio.
-    * @param sampleRate The audio sampling rate.
-    * @param channelCount The number of audio channels.
-    * @param bitrate The audio bit rate.
-    * @return The audio encoding properties.
-    */
-  def createMp3(sampleRate: Double, channelCount: Double, bitrate: Double): AudioEncodingProperties = js.native
-  /**
-    * Creates an instance of AudioEncodingProperties for Pulse Code Modulation (PCM) audio.
-    * @param sampleRate The audio sampling rate.
-    * @param channelCount The number of audio channels.
-    * @param bitsPerSample The audio bit depth.
-    * @return The audio encoding properties.
-    */
-  def createPcm(sampleRate: Double, channelCount: Double, bitsPerSample: Double): AudioEncodingProperties = js.native
-  /**
-    * Creates an instance of AudioEncodingProperties for Windows Media Audio (WMA).
-    * @param sampleRate The audio sampling rate.
-    * @param channelCount The number of audio channels.
-    * @param bitrate The audio bit rate.
-    * @return The audio encoding properties.
-    */
-  def createWma(sampleRate: Double, channelCount: Double, bitrate: Double): AudioEncodingProperties = js.native
+object AudioEncodingProperties {
+  @scala.inline
+  def apply(
+    bitrate: Double,
+    bitsPerSample: Double,
+    channelCount: Double,
+    getFormatUserData: () => js.Array[Double],
+    properties: MediaPropertySet,
+    sampleRate: Double,
+    setFormatUserData: js.Array[Double] => Unit,
+    subtype: String,
+    `type`: String
+  ): AudioEncodingProperties = {
+    val __obj = js.Dynamic.literal(bitrate = bitrate.asInstanceOf[js.Any], bitsPerSample = bitsPerSample.asInstanceOf[js.Any], channelCount = channelCount.asInstanceOf[js.Any], getFormatUserData = js.Any.fromFunction0(getFormatUserData), properties = properties.asInstanceOf[js.Any], sampleRate = sampleRate.asInstanceOf[js.Any], setFormatUserData = js.Any.fromFunction1(setFormatUserData), subtype = subtype.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AudioEncodingProperties]
+  }
+  @scala.inline
+  implicit class AudioEncodingPropertiesOps[Self <: AudioEncodingProperties] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBitrate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bitrate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBitsPerSample(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bitsPerSample")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChannelCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("channelCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetFormatUserData(value: () => js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFormatUserData")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withProperties(value: MediaPropertySet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSampleRate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sampleRate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetFormatUserData(value: js.Array[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFormatUserData")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSubtype(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtype")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

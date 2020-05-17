@@ -1,7 +1,7 @@
 package typingsSlinky.materialUiCore.listItemAvatarListItemAvatarMod
 
 import slinky.core.facade.ReactRef
-import typingsSlinky.materialUiCore.PartialClassNameMapListItIcon
+import typingsSlinky.materialUiCore.anon.PartialClassNameMapListItIcon
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js

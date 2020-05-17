@@ -1,5 +1,6 @@
 package typingsSlinky.agGrid
 
+import typingsSlinky.agGrid.anon.InstantiableIComponent
 import typingsSlinky.agGrid.componentProviderMod.AgGridComponentFunctionInput
 import typingsSlinky.agGrid.componentProviderMod.AgGridRegisteredComponentInput
 import typingsSlinky.agGrid.componentResolverMod.ComponentSource
@@ -16,7 +17,7 @@ object agComponentUtilsMod extends js.Object {
   @js.native
   class AgComponentUtils () extends js.Object {
     var componentMetadataProvider: js.Any = js.native
-    def adaptCellRendererFunction(callback: AgGridComponentFunctionInput): AnonInstantiableIComponent = js.native
+    def adaptCellRendererFunction(callback: AgGridComponentFunctionInput): InstantiableIComponent = js.native
     def adaptFunction[A /* <: IComponent[_] with B */, B](
       propertyName: String,
       hardcodedJsFunction: AgGridComponentFunctionInput,

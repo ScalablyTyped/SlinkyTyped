@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -184,7 +184,7 @@ object IgRating {
         ret
     }
     @scala.inline
-    def withHoverChange(value: (/* event */ Event_, /* ui */ HoverChangeEventUIParam) => Unit): Self = {
+    def withHoverChange(value: (/* event */ Event, /* ui */ HoverChangeEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hoverChange")(js.Any.fromFunction2(value))
         ret
@@ -328,7 +328,7 @@ object IgRating {
         ret
     }
     @scala.inline
-    def withValueChange(value: (/* event */ Event_, /* ui */ ValueChangeEventUIParam) => Unit): Self = {
+    def withValueChange(value: (/* event */ Event, /* ui */ ValueChangeEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("valueChange")(js.Any.fromFunction2(value))
         ret

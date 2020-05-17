@@ -1,0 +1,45 @@
+package typingsSlinky.awsSdkClientCodecommitNode.postCommentReplyExceptionsUnionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.typesClientRequestTokenRequiredExceptionMod.ClientRequestTokenRequiredException
+import typingsSlinky.awsSdkClientCodecommitNode.typesCommentContentRequiredExceptionMod.CommentContentRequiredException
+import typingsSlinky.awsSdkClientCodecommitNode.typesCommentContentSizeLimitExceededExceptionMod.CommentContentSizeLimitExceededException
+import typingsSlinky.awsSdkClientCodecommitNode.typesCommentDoesNotExistExceptionMod.CommentDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesCommentIdRequiredExceptionMod.CommentIdRequiredException
+import typingsSlinky.awsSdkClientCodecommitNode.typesIdempotencyParameterMismatchExceptionMod.IdempotencyParameterMismatchException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidClientRequestTokenExceptionMod.InvalidClientRequestTokenException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidCommentIdExceptionMod.InvalidCommentIdException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.awsSdkClientCodecommitNode.typesClientRequestTokenRequiredExceptionMod.ClientRequestTokenRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidClientRequestTokenExceptionMod.InvalidClientRequestTokenException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesIdempotencyParameterMismatchExceptionMod.IdempotencyParameterMismatchException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesCommentContentRequiredExceptionMod.CommentContentRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesCommentContentSizeLimitExceededExceptionMod.CommentContentSizeLimitExceededException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesCommentDoesNotExistExceptionMod.CommentDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesCommentIdRequiredExceptionMod.CommentIdRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidCommentIdExceptionMod.InvalidCommentIdException
+*/
+trait PostCommentReplyExceptionsUnion extends js.Object
+
+object PostCommentReplyExceptionsUnion {
+  @scala.inline
+  implicit def apply(value: ClientRequestTokenRequiredException): PostCommentReplyExceptionsUnion = value.asInstanceOf[PostCommentReplyExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: CommentContentRequiredException): PostCommentReplyExceptionsUnion = value.asInstanceOf[PostCommentReplyExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: CommentContentSizeLimitExceededException): PostCommentReplyExceptionsUnion = value.asInstanceOf[PostCommentReplyExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: CommentDoesNotExistException): PostCommentReplyExceptionsUnion = value.asInstanceOf[PostCommentReplyExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: CommentIdRequiredException): PostCommentReplyExceptionsUnion = value.asInstanceOf[PostCommentReplyExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: IdempotencyParameterMismatchException): PostCommentReplyExceptionsUnion = value.asInstanceOf[PostCommentReplyExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidClientRequestTokenException): PostCommentReplyExceptionsUnion = value.asInstanceOf[PostCommentReplyExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidCommentIdException): PostCommentReplyExceptionsUnion = value.asInstanceOf[PostCommentReplyExceptionsUnion]
+}
+

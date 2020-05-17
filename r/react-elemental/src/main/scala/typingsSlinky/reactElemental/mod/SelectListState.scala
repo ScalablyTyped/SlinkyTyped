@@ -1,6 +1,6 @@
 package typingsSlinky.reactElemental.mod
 
-import typingsSlinky.reactElemental.AnonValue
+import typingsSlinky.reactElemental.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,12 +11,12 @@ trait SelectListState extends js.Object {
   val isExpanded: Boolean = js.native
   val isFocused: Boolean = js.native
   val isHovered: Boolean = js.native
-  val selectedOption: AnonValue = js.native
+  val selectedOption: Value = js.native
 }
 
 object SelectListState {
   @scala.inline
-  def apply(isExpanded: Boolean, isFocused: Boolean, isHovered: Boolean, selectedOption: AnonValue): SelectListState = {
+  def apply(isExpanded: Boolean, isFocused: Boolean, isHovered: Boolean, selectedOption: Value): SelectListState = {
     val __obj = js.Dynamic.literal(isExpanded = isExpanded.asInstanceOf[js.Any], isFocused = isFocused.asInstanceOf[js.Any], isHovered = isHovered.asInstanceOf[js.Any], selectedOption = selectedOption.asInstanceOf[js.Any])
     __obj.asInstanceOf[SelectListState]
   }
@@ -45,7 +45,7 @@ object SelectListState {
         ret
     }
     @scala.inline
-    def withSelectedOption(value: AnonValue): Self = {
+    def withSelectedOption(value: Value): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectedOption")(value.asInstanceOf[js.Any])
         ret

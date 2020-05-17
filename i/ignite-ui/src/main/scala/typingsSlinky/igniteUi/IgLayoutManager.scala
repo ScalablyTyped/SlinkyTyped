@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -150,7 +150,7 @@ object IgLayoutManager {
         ret
     }
     @scala.inline
-    def withInternalResized(value: (/* event */ Event_, /* ui */ InternalResizedEventUIParam) => Unit): Self = {
+    def withInternalResized(value: (/* event */ Event, /* ui */ InternalResizedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("internalResized")(js.Any.fromFunction2(value))
         ret
@@ -162,7 +162,7 @@ object IgLayoutManager {
         ret
     }
     @scala.inline
-    def withInternalResizing(value: (/* event */ Event_, /* ui */ InternalResizingEventUIParam) => Unit): Self = {
+    def withInternalResizing(value: (/* event */ Event, /* ui */ InternalResizingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("internalResizing")(js.Any.fromFunction2(value))
         ret
@@ -186,7 +186,7 @@ object IgLayoutManager {
         ret
     }
     @scala.inline
-    def withItemRendered(value: (/* event */ Event_, /* ui */ ItemRenderedEventUIParam) => Unit): Self = {
+    def withItemRendered(value: (/* event */ Event, /* ui */ ItemRenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemRendered")(js.Any.fromFunction2(value))
         ret
@@ -198,7 +198,7 @@ object IgLayoutManager {
         ret
     }
     @scala.inline
-    def withItemRendering(value: (/* event */ Event_, /* ui */ ItemRenderingEventUIParam) => Unit): Self = {
+    def withItemRendering(value: (/* event */ Event, /* ui */ ItemRenderingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemRendering")(js.Any.fromFunction2(value))
         ret
@@ -234,7 +234,7 @@ object IgLayoutManager {
         ret
     }
     @scala.inline
-    def withRendered(value: (/* event */ Event_, /* ui */ RenderedEventUIParam) => Unit): Self = {
+    def withRendered(value: (/* event */ Event, /* ui */ RenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rendered")(js.Any.fromFunction2(value))
         ret

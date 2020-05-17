@@ -1,6 +1,7 @@
 package typingsSlinky.jupyterlabCodemirror
 
 import typingsSlinky.jupyterlabCodeeditor.factoryMod.IEditorFactoryService
+import typingsSlinky.jupyterlabCodemirror.anon.PartialIConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

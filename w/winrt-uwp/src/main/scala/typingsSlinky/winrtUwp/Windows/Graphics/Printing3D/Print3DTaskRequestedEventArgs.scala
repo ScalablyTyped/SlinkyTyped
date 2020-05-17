@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data for the TaskRequested event. */
-@JSGlobal("Windows.Graphics.Printing3D.Print3DTaskRequestedEventArgs")
 @js.native
-abstract class Print3DTaskRequestedEventArgs () extends js.Object {
+trait Print3DTaskRequestedEventArgs extends js.Object {
   /** Gets the 3D print job request associated with the Print3DManager . */
   var request: Print3DTaskRequest = js.native
+}
+
+object Print3DTaskRequestedEventArgs {
+  @scala.inline
+  def apply(request: Print3DTaskRequest): Print3DTaskRequestedEventArgs = {
+    val __obj = js.Dynamic.literal(request = request.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Print3DTaskRequestedEventArgs]
+  }
+  @scala.inline
+  implicit class Print3DTaskRequestedEventArgsOps[Self <: Print3DTaskRequestedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRequest(value: Print3DTaskRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

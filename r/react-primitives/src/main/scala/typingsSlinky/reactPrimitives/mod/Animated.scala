@@ -3,7 +3,7 @@ package typingsSlinky.reactPrimitives.mod
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.ComponentClass
 import typingsSlinky.react.mod.FunctionComponent
-import typingsSlinky.reactNative.AnonY
+import typingsSlinky.reactNative.anon.Y
 import typingsSlinky.reactNative.mod.Animated.AnimatedComponent
 import typingsSlinky.reactNative.mod.Animated.AnimatedValue
 import typingsSlinky.reactNative.mod.Animated.AnimatedValueXY
@@ -69,7 +69,7 @@ object Animated extends js.Object {
   @js.native
   class ValueXY ()
     extends typingsSlinky.reactNative.mod.Animated.ValueXY {
-    def this(valueIn: AnonY) = this()
+    def this(valueIn: Y) = this()
   }
   
   val FlatList: AnimatedComponent[typingsSlinky.reactNative.mod.FlatList[js.Any]] = js.native

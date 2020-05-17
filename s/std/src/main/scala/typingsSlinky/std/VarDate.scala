@@ -7,9 +7,30 @@ import scala.scalajs.js.annotation._
 /**
   * Automation date (VT_DATE)
   */
-@JSGlobal("VarDate")
 @js.native
-class VarDate protected () extends js.Object {
+trait VarDate extends js.Object {
   var VarDate_typekey: VarDate = js.native
+}
+
+object VarDate {
+  @scala.inline
+  def apply(VarDate_typekey: VarDate): VarDate = {
+    val __obj = js.Dynamic.literal(VarDate_typekey = VarDate_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VarDate]
+  }
+  @scala.inline
+  implicit class VarDateOps[Self <: VarDate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVarDate_typekey(value: VarDate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VarDate_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

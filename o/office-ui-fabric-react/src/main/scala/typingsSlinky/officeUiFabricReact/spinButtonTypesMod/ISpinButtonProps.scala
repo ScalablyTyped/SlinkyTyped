@@ -1,13 +1,14 @@
 package typingsSlinky.officeUiFabricReact.spinButtonTypesMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticFocusEvent
-import typingsSlinky.officeUiFabricReact.PartialIButtonStyles
-import typingsSlinky.officeUiFabricReact.PartialISpinButtonStyles
+import typingsSlinky.officeUiFabricReact.anon.PartialIButtonStyles
+import typingsSlinky.officeUiFabricReact.anon.PartialISpinButtonStyles
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonProps
 import typingsSlinky.officeUiFabricReact.iconTypesMod.IIconProps
 import typingsSlinky.officeUiFabricReact.keytipTypesMod.IKeytipProps
@@ -17,7 +18,6 @@ import typingsSlinky.officeUiFabricReact.spinButtonSpinButtonMod.KeyboardSpinDir
 import typingsSlinky.react.mod.FocusEventHandler
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.InputHTMLAttributes
-import typingsSlinky.std.Event_
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
@@ -168,7 +168,7 @@ trait ISpinButtonProps extends HTMLAttributes[HTMLDivElement] {
   var onValidate: js.UndefOr[
     js.Function2[
       /* value */ String, 
-      /* event */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]], 
+      /* event */ js.UndefOr[SyntheticEvent[Event, HTMLElement]], 
       String | Unit
     ]
   ] = js.native
@@ -561,7 +561,7 @@ object ISpinButtonProps {
     }
     @scala.inline
     def withOnValidate(
-      value: (/* value */ String, /* event */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]]) => String | Unit
+      value: (/* value */ String, /* event */ js.UndefOr[SyntheticEvent[Event, HTMLElement]]) => String | Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onValidate")(js.Any.fromFunction2(value))

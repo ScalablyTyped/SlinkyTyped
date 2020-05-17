@@ -1,6 +1,6 @@
 package typingsSlinky.graphql.definitionMod
 
-import typingsSlinky.graphql.GraphQLObjectTypeConfigan
+import typingsSlinky.graphql.anon.GraphQLObjectTypeConfigan
 import typingsSlinky.graphql.astMod.ObjectTypeDefinitionNode
 import typingsSlinky.graphql.astMod.ObjectTypeExtensionNode
 import typingsSlinky.graphql.maybeMod.Maybe
@@ -11,7 +11,12 @@ import scala.scalajs.js.annotation._
 
 @JSImport("graphql/type/definition", "GraphQLObjectType")
 @js.native
-class GraphQLObjectType[TSource, TContext, TArgs] protected () extends js.Object {
+class GraphQLObjectType[TSource, TContext, TArgs] protected ()
+  extends GraphQLCompositeType
+     with GraphQLNamedType
+     with GraphQLNullableType
+     with GraphQLOutputType
+     with GraphQLType {
   def this(config: GraphQLObjectTypeConfig[TSource, TContext, TArgs]) = this()
   var astNode: Maybe[ObjectTypeDefinitionNode] = js.native
   var description: Maybe[String] = js.native

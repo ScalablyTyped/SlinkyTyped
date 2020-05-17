@@ -1,8 +1,8 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonDelayName
-import typingsSlinky.devextreme.AnonModelRootItem
-import typingsSlinky.devextreme.AnonRootItem
+import typingsSlinky.devextreme.anon.DelayName
+import typingsSlinky.devextreme.anon.ModelRootItem
+import typingsSlinky.devextreme.anon.RootItem
 import typingsSlinky.devextreme.devextremeStrings.auto
 import typingsSlinky.devextreme.devextremeStrings.horizontal
 import typingsSlinky.devextreme.devextremeStrings.leftOrTop
@@ -29,17 +29,17 @@ trait dxMenuOptions extends dxMenuBaseOptions[dxMenu] {
   @JSName("items")
   var items_dxMenuOptions: js.UndefOr[js.Array[dxMenuItem]] = js.native
   /** A function that is executed after a submenu is hidden. */
-  var onSubmenuHidden: js.UndefOr[js.Function1[/* e */ AnonRootItem, _]] = js.native
+  var onSubmenuHidden: js.UndefOr[js.Function1[/* e */ RootItem, _]] = js.native
   /** A function that is executed before a submenu is hidden. */
-  var onSubmenuHiding: js.UndefOr[js.Function1[/* e */ AnonModelRootItem, _]] = js.native
+  var onSubmenuHiding: js.UndefOr[js.Function1[/* e */ ModelRootItem, _]] = js.native
   /** A function that is executed before a submenu is displayed. */
-  var onSubmenuShowing: js.UndefOr[js.Function1[/* e */ AnonRootItem, _]] = js.native
+  var onSubmenuShowing: js.UndefOr[js.Function1[/* e */ RootItem, _]] = js.native
   /** A function that is executed after a submenu is displayed. */
-  var onSubmenuShown: js.UndefOr[js.Function1[/* e */ AnonRootItem, _]] = js.native
+  var onSubmenuShown: js.UndefOr[js.Function1[/* e */ RootItem, _]] = js.native
   /** Specifies whether the menu has horizontal or vertical orientation. */
   var orientation: js.UndefOr[horizontal | vertical] = js.native
   /** Specifies options for showing and hiding the first level submenu. */
-  var showFirstSubmenuMode: js.UndefOr[AnonDelayName | onClick | onHover] = js.native
+  var showFirstSubmenuMode: js.UndefOr[DelayName | onClick | onHover] = js.native
   /** Specifies the direction at which the submenus are displayed. */
   var submenuDirection: js.UndefOr[auto | leftOrTop | rightOrBottom] = js.native
 }
@@ -105,7 +105,7 @@ object dxMenuOptions {
         ret
     }
     @scala.inline
-    def withOnSubmenuHidden(value: /* e */ AnonRootItem => _): Self = {
+    def withOnSubmenuHidden(value: /* e */ RootItem => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmenuHidden")(js.Any.fromFunction1(value))
         ret
@@ -117,7 +117,7 @@ object dxMenuOptions {
         ret
     }
     @scala.inline
-    def withOnSubmenuHiding(value: /* e */ AnonModelRootItem => _): Self = {
+    def withOnSubmenuHiding(value: /* e */ ModelRootItem => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmenuHiding")(js.Any.fromFunction1(value))
         ret
@@ -129,7 +129,7 @@ object dxMenuOptions {
         ret
     }
     @scala.inline
-    def withOnSubmenuShowing(value: /* e */ AnonRootItem => _): Self = {
+    def withOnSubmenuShowing(value: /* e */ RootItem => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmenuShowing")(js.Any.fromFunction1(value))
         ret
@@ -141,7 +141,7 @@ object dxMenuOptions {
         ret
     }
     @scala.inline
-    def withOnSubmenuShown(value: /* e */ AnonRootItem => _): Self = {
+    def withOnSubmenuShown(value: /* e */ RootItem => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmenuShown")(js.Any.fromFunction1(value))
         ret
@@ -165,7 +165,7 @@ object dxMenuOptions {
         ret
     }
     @scala.inline
-    def withShowFirstSubmenuMode(value: AnonDelayName | onClick | onHover): Self = {
+    def withShowFirstSubmenuMode(value: DelayName | onClick | onHover): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("showFirstSubmenuMode")(value.asInstanceOf[js.Any])
         ret

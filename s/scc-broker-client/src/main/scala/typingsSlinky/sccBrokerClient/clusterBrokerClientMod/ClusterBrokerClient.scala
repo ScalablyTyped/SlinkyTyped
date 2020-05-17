@@ -2,8 +2,8 @@ package typingsSlinky.sccBrokerClient.clusterBrokerClientMod
 
 import typingsSlinky.asyncStreamEmitter.mod.AsyncStreamEmitter
 import typingsSlinky.jsonwebtoken.mod.Secret
-import typingsSlinky.sccBrokerClient.AnonError
-import typingsSlinky.sccBrokerClient.AnonNoMatchingPublishTargetError
+import typingsSlinky.sccBrokerClient.anon.Error
+import typingsSlinky.sccBrokerClient.anon.NoMatchingPublishTargetError
 import typingsSlinky.sccBrokerClient.clientPoolMod.PublishData
 import typingsSlinky.sccBrokerClient.clientPoolMod.PublishFailData
 import typingsSlinky.sccBrokerClient.clientPoolMod.SubscribeData
@@ -29,14 +29,14 @@ trait ClusterBrokerClient
   var authKey: js.UndefOr[Secret] = js.native
   var broker: typingsSlinky.scBroker.scbrokerMod.^ = js.native
   var clientPoolSize: Double = js.native
-  var errors: AnonNoMatchingPublishTargetError = js.native
+  var errors: NoMatchingPublishTargetError = js.native
   var isReady: Boolean = js.native
   var mapper: MappingEngine = js.native
   var mappingEngine: skeletonRendezvous | simple | MappingEngine = js.native
   var sccBrokerClientPools: js.Array[typingsSlinky.sccBrokerClient.clientPoolMod.^] = js.native
   var sccBrokerURIList: js.Array[String] = js.native
   @JSName("emit")
-  def emit_error(eventName: error, data: AnonError): Unit = js.native
+  def emit_error(eventName: error, data: Error): Unit = js.native
   @JSName("emit")
   def emit_message(eventName: message, data: MessageData): Unit = js.native
   @JSName("emit")
@@ -54,7 +54,7 @@ trait ClusterBrokerClient
   def getAllSubscriptions(): js.Array[String] = js.native
   def invokePublish(channelName: String, data: js.Any): Unit = js.native
   @JSName("listener")
-  def listener_error(eventName: error): typingsSlinky.consumableStream.mod.^[AnonError] = js.native
+  def listener_error(eventName: error): typingsSlinky.consumableStream.mod.^[Error] = js.native
   @JSName("listener")
   def listener_message(eventName: message): typingsSlinky.consumableStream.mod.^[MessageData] = js.native
   @JSName("listener")

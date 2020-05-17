@@ -8,15 +8,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Implements the ISyndicationClient interface which retrieves feeds from a URI asynchronously. */
-@JSGlobal("Windows.Web.Syndication.SyndicationClient")
 @js.native
-/** Creates a new SyndicationClient object. */
-class SyndicationClient () extends js.Object {
-  /**
-    * Creates a new SyndicationClient object with authentication credentials.
-    * @param serverCredential Credentials for user authentication.
-    */
-  def this(serverCredential: PasswordCredential) = this()
+trait SyndicationClient extends js.Object {
   /** Gets or sets a Boolean value that specifies whether to bypass the cache when retrieving the feed. */
   var bypassCacheOnRetrieve: Boolean = js.native
   /** Gets or sets the maximum number of bytes to buffer when receiving a response from a server. */
@@ -39,5 +32,71 @@ class SyndicationClient () extends js.Object {
     * @param value The value of the header.
     */
   def setRequestHeader(name: String, value: String): Unit = js.native
+}
+
+object SyndicationClient {
+  @scala.inline
+  def apply(
+    bypassCacheOnRetrieve: Boolean,
+    maxResponseBufferSize: Double,
+    proxyCredential: PasswordCredential,
+    retrieveFeedAsync: Uri => IPromiseWithIAsyncOperationWithProgress[SyndicationFeed, RetrievalProgress],
+    serverCredential: PasswordCredential,
+    setRequestHeader: (String, String) => Unit,
+    timeout: Double
+  ): SyndicationClient = {
+    val __obj = js.Dynamic.literal(bypassCacheOnRetrieve = bypassCacheOnRetrieve.asInstanceOf[js.Any], maxResponseBufferSize = maxResponseBufferSize.asInstanceOf[js.Any], proxyCredential = proxyCredential.asInstanceOf[js.Any], retrieveFeedAsync = js.Any.fromFunction1(retrieveFeedAsync), serverCredential = serverCredential.asInstanceOf[js.Any], setRequestHeader = js.Any.fromFunction2(setRequestHeader), timeout = timeout.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SyndicationClient]
+  }
+  @scala.inline
+  implicit class SyndicationClientOps[Self <: SyndicationClient] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBypassCacheOnRetrieve(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bypassCacheOnRetrieve")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxResponseBufferSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxResponseBufferSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProxyCredential(value: PasswordCredential): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proxyCredential")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRetrieveFeedAsync(value: Uri => IPromiseWithIAsyncOperationWithProgress[SyndicationFeed, RetrievalProgress]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retrieveFeedAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withServerCredential(value: PasswordCredential): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serverCredential")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetRequestHeader(value: (String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setRequestHeader")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

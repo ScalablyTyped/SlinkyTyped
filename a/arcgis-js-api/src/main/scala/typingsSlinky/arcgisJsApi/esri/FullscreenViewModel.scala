@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -53,8 +52,4 @@ trait FullscreenViewModel extends Accessor {
     */
   def toggle(): Unit = js.native
 }
-
-@JSGlobal("__esri.FullscreenViewModel")
-@js.native
-object FullscreenViewModel extends TopLevel[FullscreenViewModelConstructor]
 

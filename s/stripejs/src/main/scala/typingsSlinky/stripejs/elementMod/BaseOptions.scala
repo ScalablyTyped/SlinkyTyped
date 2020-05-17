@@ -1,7 +1,7 @@
 package typingsSlinky.stripejs.elementMod
 
-import typingsSlinky.stripejs.AnonEmpty
-import typingsSlinky.stripejs.AnonInvalid
+import typingsSlinky.stripejs.anon.Empty
+import typingsSlinky.stripejs.anon.Invalid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait BaseOptions extends js.Object {
     * Set custom class names on the container DOM element when the Stripe Element is in a
     * particular state.
     */
-  var classes: js.UndefOr[AnonEmpty] = js.native
+  var classes: js.UndefOr[Empty] = js.native
   /**
     * Whether or not the input is disabled
     * @default false
@@ -26,7 +26,7 @@ trait BaseOptions extends js.Object {
   /**
     * Customize appearance using CSS properties
     */
-  var style: js.UndefOr[AnonInvalid] = js.native
+  var style: js.UndefOr[Invalid] = js.native
 }
 
 object BaseOptions {
@@ -42,7 +42,7 @@ object BaseOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClasses(value: AnonEmpty): Self = {
+    def withClasses(value: Empty): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
         ret
@@ -78,7 +78,7 @@ object BaseOptions {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonInvalid): Self = {
+    def withStyle(value: Invalid): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

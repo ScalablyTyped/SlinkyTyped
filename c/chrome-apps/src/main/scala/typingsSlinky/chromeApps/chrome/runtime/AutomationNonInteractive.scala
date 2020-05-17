@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait AutomationNonInteractive extends _AutomationOptions {
+trait AutomationNonInteractive extends AutomationOptions {
   var desktop: js.UndefOr[`false`] = js.native
   var interact: `false` = js.native
   /** Patterns for matching, use chrome url pattern */

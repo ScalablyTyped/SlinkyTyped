@@ -1,6 +1,6 @@
 package typingsSlinky.wxJsSdkDt.wx
 
-import typingsSlinky.wxJsSdkDt.AnonCardList
+import typingsSlinky.wxJsSdkDt.anon.CardList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +35,7 @@ trait ChooseCardConfig extends WxBaseRequestConfig {
     * var cardList= res.cardList; 用户选中的卡券列表信息
     */
   @JSName("success")
-  var success_ChooseCardConfig: js.UndefOr[js.Function1[/* res */ AnonCardList, Unit]] = js.native
+  var success_ChooseCardConfig: js.UndefOr[js.Function1[/* res */ CardList, Unit]] = js.native
   /**
     * 卡券签名时间戳
     */
@@ -115,7 +115,7 @@ object ChooseCardConfig {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonCardList => Unit): Self = {
+    def withSuccess(value: /* res */ CardList => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

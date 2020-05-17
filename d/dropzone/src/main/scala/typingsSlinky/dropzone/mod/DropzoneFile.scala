@@ -1,7 +1,7 @@
 package typingsSlinky.dropzone.mod
 
 import org.scalajs.dom.raw.XMLHttpRequest
-import typingsSlinky.dropzone.mod._Global_.HTMLElement
+import typingsSlinky.dropzone.mod.global.HTMLElement
 import typingsSlinky.std.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`

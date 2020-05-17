@@ -1,7 +1,7 @@
 package typingsSlinky.webgme.GmeConfig
 
-import typingsSlinky.webgme.AnonDSN
-import typingsSlinky.webgme.AnonLevelString
+import typingsSlinky.webgme.anon.DSN
+import typingsSlinky.webgme.anon.LevelString
 import typingsSlinky.webgme.webgmeStrings.basic
 import typingsSlinky.webgme.webgmeStrings.basic2
 import typingsSlinky.webgme.webgmeStrings.basic3
@@ -35,7 +35,7 @@ trait ClientOptions extends js.Object {
     * 
     * Options passed to the raven-client, if not specified {release: } will be passed.
     */
-  var errorReporting: AnonDSN = js.native
+  var errorReporting: DSN = js.native
   /**
     * When debug is activated in the browser 
     * (type localStorage.debug = gme* in the 
@@ -43,7 +43,7 @@ trait ClientOptions extends js.Object {
     * this level will not be printed.
     * e.g. debug, info, warn, error
     */
-  var log: AnonLevelString = js.native
+  var log: LevelString = js.native
 }
 
 object ClientOptions {
@@ -51,8 +51,8 @@ object ClientOptions {
   def apply(
     appDir: String,
     defaultConnectionRouter: basic | basic2 | basic3,
-    errorReporting: AnonDSN,
-    log: AnonLevelString
+    errorReporting: DSN,
+    log: LevelString
   ): ClientOptions = {
     val __obj = js.Dynamic.literal(appDir = appDir.asInstanceOf[js.Any], defaultConnectionRouter = defaultConnectionRouter.asInstanceOf[js.Any], errorReporting = errorReporting.asInstanceOf[js.Any], log = log.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientOptions]
@@ -76,13 +76,13 @@ object ClientOptions {
         ret
     }
     @scala.inline
-    def withErrorReporting(value: AnonDSN): Self = {
+    def withErrorReporting(value: DSN): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("errorReporting")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withLog(value: AnonLevelString): Self = {
+    def withLog(value: LevelString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
         ret

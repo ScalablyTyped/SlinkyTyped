@@ -1,6 +1,6 @@
 package typingsSlinky.extjs.Ext.dd
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait IDragSource extends IDDProxy {
   var afterDragDrop: js.UndefOr[
     js.Function3[
       /* target */ js.UndefOr[IDragDrop], 
-      /* e */ js.UndefOr[Event_], 
+      /* e */ js.UndefOr[Event], 
       /* id */ js.UndefOr[String], 
       Unit
     ]
@@ -28,7 +28,7 @@ trait IDragSource extends IDDProxy {
   var afterDragEnter: js.UndefOr[
     js.Function3[
       /* target */ js.UndefOr[IDragDrop], 
-      /* e */ js.UndefOr[Event_], 
+      /* e */ js.UndefOr[Event], 
       /* id */ js.UndefOr[String], 
       Unit
     ]
@@ -41,7 +41,7 @@ trait IDragSource extends IDDProxy {
   var afterDragOut: js.UndefOr[
     js.Function3[
       /* target */ js.UndefOr[IDragDrop], 
-      /* e */ js.UndefOr[Event_], 
+      /* e */ js.UndefOr[Event], 
       /* id */ js.UndefOr[String], 
       Unit
     ]
@@ -54,7 +54,7 @@ trait IDragSource extends IDDProxy {
   var afterDragOver: js.UndefOr[
     js.Function3[
       /* target */ js.UndefOr[IDragDrop], 
-      /* e */ js.UndefOr[Event_], 
+      /* e */ js.UndefOr[Event], 
       /* id */ js.UndefOr[String], 
       Unit
     ]
@@ -63,7 +63,7 @@ trait IDragSource extends IDDProxy {
   		* @param e Event The event object
   		* @param id String The id of the dropped element
   		*/
-  var afterInvalidDrop: js.UndefOr[js.Function2[/* e */ js.UndefOr[Event_], /* id */ js.UndefOr[String], Unit]] = js.native
+  var afterInvalidDrop: js.UndefOr[js.Function2[/* e */ js.UndefOr[Event], /* id */ js.UndefOr[String], Unit]] = js.native
   /** [Method] An empty function by default but provided so that you can perform a custom action after a valid drop has occurred by
   		* @param target Object The target DD
   		* @param e Event The event object
@@ -72,7 +72,7 @@ trait IDragSource extends IDDProxy {
   var afterValidDrop: js.UndefOr[
     js.Function3[
       /* target */ js.UndefOr[js.Any], 
-      /* e */ js.UndefOr[Event_], 
+      /* e */ js.UndefOr[Event], 
       /* id */ js.UndefOr[String], 
       Unit
     ]
@@ -91,7 +91,7 @@ trait IDragSource extends IDDProxy {
   var beforeDragDrop: js.UndefOr[
     js.Function3[
       /* target */ js.UndefOr[IDragDrop], 
-      /* e */ js.UndefOr[Event_], 
+      /* e */ js.UndefOr[Event], 
       /* id */ js.UndefOr[String], 
       Boolean
     ]
@@ -105,7 +105,7 @@ trait IDragSource extends IDDProxy {
   var beforeDragEnter: js.UndefOr[
     js.Function3[
       /* target */ js.UndefOr[IDragDrop], 
-      /* e */ js.UndefOr[Event_], 
+      /* e */ js.UndefOr[Event], 
       /* id */ js.UndefOr[String], 
       Boolean
     ]
@@ -119,7 +119,7 @@ trait IDragSource extends IDDProxy {
   var beforeDragOut: js.UndefOr[
     js.Function3[
       /* target */ js.UndefOr[IDragDrop], 
-      /* e */ js.UndefOr[Event_], 
+      /* e */ js.UndefOr[Event], 
       /* id */ js.UndefOr[String], 
       Boolean
     ]
@@ -133,7 +133,7 @@ trait IDragSource extends IDDProxy {
   var beforeDragOver: js.UndefOr[
     js.Function3[
       /* target */ js.UndefOr[IDragDrop], 
-      /* e */ js.UndefOr[Event_], 
+      /* e */ js.UndefOr[Event], 
       /* id */ js.UndefOr[String], 
       Boolean
     ]
@@ -147,7 +147,7 @@ trait IDragSource extends IDDProxy {
   var beforeInvalidDrop: js.UndefOr[
     js.Function3[
       /* target */ js.UndefOr[IDragDrop], 
-      /* e */ js.UndefOr[Event_], 
+      /* e */ js.UndefOr[Event], 
       /* id */ js.UndefOr[String], 
       Boolean
     ]
@@ -176,7 +176,7 @@ trait IDragSource extends IDDProxy {
   		* @param e Event The event object
   		* @returns Boolean isValid True if the drag event is valid, else false to cancel
   		*/
-  var onBeforeDrag: js.UndefOr[js.Function2[/* data */ js.UndefOr[js.Any], /* e */ js.UndefOr[Event_], Boolean]] = js.native
+  var onBeforeDrag: js.UndefOr[js.Function2[/* data */ js.UndefOr[js.Any], /* e */ js.UndefOr[Event], Boolean]] = js.native
   /** [Method] An empty function by default but provided so that you can perform a custom action once the initial drag event has be
   		* @param x Number The x position of the click on the dragged object
   		* @param y Number The y position of the click on the dragged object
@@ -200,7 +200,7 @@ object IDragSource {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
     def withAfterDragDrop(
-      value: (/* target */ js.UndefOr[IDragDrop], /* e */ js.UndefOr[Event_], /* id */ js.UndefOr[String]) => Unit
+      value: (/* target */ js.UndefOr[IDragDrop], /* e */ js.UndefOr[Event], /* id */ js.UndefOr[String]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterDragDrop")(js.Any.fromFunction3(value))
@@ -214,7 +214,7 @@ object IDragSource {
     }
     @scala.inline
     def withAfterDragEnter(
-      value: (/* target */ js.UndefOr[IDragDrop], /* e */ js.UndefOr[Event_], /* id */ js.UndefOr[String]) => Unit
+      value: (/* target */ js.UndefOr[IDragDrop], /* e */ js.UndefOr[Event], /* id */ js.UndefOr[String]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterDragEnter")(js.Any.fromFunction3(value))
@@ -228,7 +228,7 @@ object IDragSource {
     }
     @scala.inline
     def withAfterDragOut(
-      value: (/* target */ js.UndefOr[IDragDrop], /* e */ js.UndefOr[Event_], /* id */ js.UndefOr[String]) => Unit
+      value: (/* target */ js.UndefOr[IDragDrop], /* e */ js.UndefOr[Event], /* id */ js.UndefOr[String]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterDragOut")(js.Any.fromFunction3(value))
@@ -242,7 +242,7 @@ object IDragSource {
     }
     @scala.inline
     def withAfterDragOver(
-      value: (/* target */ js.UndefOr[IDragDrop], /* e */ js.UndefOr[Event_], /* id */ js.UndefOr[String]) => Unit
+      value: (/* target */ js.UndefOr[IDragDrop], /* e */ js.UndefOr[Event], /* id */ js.UndefOr[String]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterDragOver")(js.Any.fromFunction3(value))
@@ -255,7 +255,7 @@ object IDragSource {
         ret
     }
     @scala.inline
-    def withAfterInvalidDrop(value: (/* e */ js.UndefOr[Event_], /* id */ js.UndefOr[String]) => Unit): Self = {
+    def withAfterInvalidDrop(value: (/* e */ js.UndefOr[Event], /* id */ js.UndefOr[String]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterInvalidDrop")(js.Any.fromFunction2(value))
         ret
@@ -268,7 +268,7 @@ object IDragSource {
     }
     @scala.inline
     def withAfterValidDrop(
-      value: (/* target */ js.UndefOr[js.Any], /* e */ js.UndefOr[Event_], /* id */ js.UndefOr[String]) => Unit
+      value: (/* target */ js.UndefOr[js.Any], /* e */ js.UndefOr[Event], /* id */ js.UndefOr[String]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterValidDrop")(js.Any.fromFunction3(value))
@@ -306,7 +306,7 @@ object IDragSource {
     }
     @scala.inline
     def withBeforeDragDrop(
-      value: (/* target */ js.UndefOr[IDragDrop], /* e */ js.UndefOr[Event_], /* id */ js.UndefOr[String]) => Boolean
+      value: (/* target */ js.UndefOr[IDragDrop], /* e */ js.UndefOr[Event], /* id */ js.UndefOr[String]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeDragDrop")(js.Any.fromFunction3(value))
@@ -320,7 +320,7 @@ object IDragSource {
     }
     @scala.inline
     def withBeforeDragEnter(
-      value: (/* target */ js.UndefOr[IDragDrop], /* e */ js.UndefOr[Event_], /* id */ js.UndefOr[String]) => Boolean
+      value: (/* target */ js.UndefOr[IDragDrop], /* e */ js.UndefOr[Event], /* id */ js.UndefOr[String]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeDragEnter")(js.Any.fromFunction3(value))
@@ -334,7 +334,7 @@ object IDragSource {
     }
     @scala.inline
     def withBeforeDragOut(
-      value: (/* target */ js.UndefOr[IDragDrop], /* e */ js.UndefOr[Event_], /* id */ js.UndefOr[String]) => Boolean
+      value: (/* target */ js.UndefOr[IDragDrop], /* e */ js.UndefOr[Event], /* id */ js.UndefOr[String]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeDragOut")(js.Any.fromFunction3(value))
@@ -348,7 +348,7 @@ object IDragSource {
     }
     @scala.inline
     def withBeforeDragOver(
-      value: (/* target */ js.UndefOr[IDragDrop], /* e */ js.UndefOr[Event_], /* id */ js.UndefOr[String]) => Boolean
+      value: (/* target */ js.UndefOr[IDragDrop], /* e */ js.UndefOr[Event], /* id */ js.UndefOr[String]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeDragOver")(js.Any.fromFunction3(value))
@@ -362,7 +362,7 @@ object IDragSource {
     }
     @scala.inline
     def withBeforeInvalidDrop(
-      value: (/* target */ js.UndefOr[IDragDrop], /* e */ js.UndefOr[Event_], /* id */ js.UndefOr[String]) => Boolean
+      value: (/* target */ js.UndefOr[IDragDrop], /* e */ js.UndefOr[Event], /* id */ js.UndefOr[String]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeInvalidDrop")(js.Any.fromFunction3(value))
@@ -459,7 +459,7 @@ object IDragSource {
         ret
     }
     @scala.inline
-    def withOnBeforeDrag(value: (/* data */ js.UndefOr[js.Any], /* e */ js.UndefOr[Event_]) => Boolean): Self = {
+    def withOnBeforeDrag(value: (/* data */ js.UndefOr[js.Any], /* e */ js.UndefOr[Event]) => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeDrag")(js.Any.fromFunction2(value))
         ret

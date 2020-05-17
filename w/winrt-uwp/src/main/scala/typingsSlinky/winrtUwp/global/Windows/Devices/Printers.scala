@@ -1,0 +1,125 @@
+package typingsSlinky.winrtUwp.global.Windows.Devices
+
+import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Provides APIs for working with 3D printers. */
+@JSGlobal("Windows.Devices.Printers")
+@js.native
+object Printers extends js.Object {
+  /** Represents a 3D printer. */
+  @js.native
+  abstract class Print3DDevice ()
+    extends typingsSlinky.winrtUwp.Windows.Devices.Printers.Print3DDevice
+  
+  /** Provides APIs to access a 3D printer's capabilities and print tickets. */
+  @js.native
+  abstract class PrintSchema ()
+    extends typingsSlinky.winrtUwp.Windows.Devices.Printers.PrintSchema
+  
+  /** Contains classes and interfaces that provide access to the Windows Runtime Components for print task configuration and print notifications. */
+  @js.native
+  object Extensions extends js.Object {
+    /** Represents a customized printing experience for a 3D printer. */
+    @js.native
+    abstract class Print3DWorkflow ()
+      extends typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.Print3DWorkflow
+    
+    /** Provides data about the print request to the app that initiated the request. */
+    @js.native
+    abstract class Print3DWorkflowPrintRequestedEventArgs ()
+      extends typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.Print3DWorkflowPrintRequestedEventArgs
+    
+    /** Provides the context for the printer extension object. */
+    @js.native
+    abstract class PrintExtensionContext ()
+      extends typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.PrintExtensionContext
+    
+    /** Contains properties that allow a client to access and/or manipulate print event data and print device name information. */
+    @js.native
+    abstract class PrintNotificationEventDetails ()
+      extends typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.PrintNotificationEventDetails
+    
+    /** Allows a client to retrieve the print task extension context, and also to add an event handler to the print task. */
+    @js.native
+    abstract class PrintTaskConfiguration ()
+      extends typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.PrintTaskConfiguration
+    
+    /** Called when the print dialog for your app raises a SaveRequested event. */
+    @js.native
+    abstract class PrintTaskConfigurationSaveRequest ()
+      extends typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequest
+    
+    /** Called by the device app to provide an update of the status of the deferral. */
+    @js.native
+    abstract class PrintTaskConfigurationSaveRequestedDeferral ()
+      extends typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral
+    
+    /** Called to notify the device app that the print task configuration must be saved. */
+    @js.native
+    abstract class PrintTaskConfigurationSaveRequestedEventArgs ()
+      extends typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedEventArgs
+    
+    /** Specifies the types of errors that may be encountered by the Print3DWorkflow class. */
+    @js.native
+    object Print3DWorkflowDetail extends js.Object {
+      /* 3 */ val invalidMaterialSelection: typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.Print3DWorkflowDetail.invalidMaterialSelection with Double = js.native
+      /* 4 */ val invalidModel: typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.Print3DWorkflowDetail.invalidModel with Double = js.native
+      /* 6 */ val invalidPrintTicket: typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.Print3DWorkflowDetail.invalidPrintTicket with Double = js.native
+      /* 1 */ val modelExceedsPrintBed: typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.Print3DWorkflowDetail.modelExceedsPrintBed with Double = js.native
+      /* 5 */ val modelNotManifold: typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.Print3DWorkflowDetail.modelNotManifold with Double = js.native
+      /* 0 */ val unknown: typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.Print3DWorkflowDetail.unknown with Double = js.native
+      /* 2 */ val uploadFailed: typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.Print3DWorkflowDetail.uploadFailed with Double = js.native
+      @JSBracketAccess
+      def apply(value: Double): js.UndefOr[
+            typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.Print3DWorkflowDetail with Double
+          ] = js.native
+    }
+    
+    /** Specifies the status of the Print3DWorkflow class. */
+    @js.native
+    object Print3DWorkflowStatus extends js.Object {
+      /* 0 */ val abandoned: typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.Print3DWorkflowStatus.abandoned with Double = js.native
+      /* 1 */ val canceled: typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.Print3DWorkflowStatus.canceled with Double = js.native
+      /* 2 */ val failed: typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.Print3DWorkflowStatus.failed with Double = js.native
+      /* 3 */ val slicing: typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.Print3DWorkflowStatus.slicing with Double = js.native
+      /* 4 */ val submitted: typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.Print3DWorkflowStatus.submitted with Double = js.native
+      @JSBracketAccess
+      def apply(value: Double): js.UndefOr[
+            typingsSlinky.winrtUwp.Windows.Devices.Printers.Extensions.Print3DWorkflowStatus with Double
+          ] = js.native
+    }
+    
+    /* static members */
+    @js.native
+    object PrintExtensionContext extends js.Object {
+      /**
+        * Gets the context for the printer extension object based on the DeviceInformation ID.
+        * @param deviceId The device information ID for the print device.
+        * @return Pointer to the context.
+        */
+      def fromDeviceId(deviceId: String): js.Any = js.native
+    }
+    
+  }
+  
+  /* static members */
+  @js.native
+  object Print3DDevice extends js.Object {
+    /**
+      * Creates a Print3DDevice object that represents a 3D printer connected to the device.
+      * @param deviceId The device ID of the 3D printer.
+      * @return A Print3DDevice object that corresponds to the specified 3D printer.
+      */
+    def fromIdAsync(deviceId: String): IPromiseWithIAsyncOperation[typingsSlinky.winrtUwp.Windows.Devices.Printers.Print3DDevice] = js.native
+    /**
+      * Gets an Advanced Query Syntax (AQS) string that can be used to find all 3D printers that are connected to the device.
+      * @return An AQS string that can be used to find all 3D printers connected to the device.
+      */
+    def getDeviceSelector(): String = js.native
+  }
+  
+}
+

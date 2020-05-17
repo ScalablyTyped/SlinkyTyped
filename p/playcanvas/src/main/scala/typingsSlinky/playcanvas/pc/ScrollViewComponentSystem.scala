@@ -12,9 +12,6 @@ import scala.scalajs.js.annotation._
   * @description Create a new ScrollViewComponentSystem.
   * @param {pc.Application} app - The application.
   */
-@JSGlobal("pc.ScrollViewComponentSystem")
 @js.native
-class ScrollViewComponentSystem protected () extends ComponentSystem {
-  def this(app: Application) = this()
-}
+trait ScrollViewComponentSystem extends ComponentSystem
 

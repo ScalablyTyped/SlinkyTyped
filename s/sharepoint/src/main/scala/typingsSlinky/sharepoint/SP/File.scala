@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a file in a SharePoint Web site that can be a Web Part Page, an item in a document library, or a file in a folder. */
-@JSGlobal("SP.File")
 @js.native
-class File () extends ClientObject {
+trait File extends ClientObject {
   /** Approves the file submitted for content approval with the specified comment.  */
   def approve(comment: String): Unit = js.native
   def checkIn(comment: String, checkInType: CheckinType): Unit = js.native
@@ -66,12 +65,5 @@ class File () extends ClientObject {
   def unPublish(comment: String): Unit = js.native
   /** Reverts an existing online or offline checkout for the file. */
   def undoCheckOut(): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("SP.File")
-@js.native
-object File extends js.Object {
-  def getContentVerFromTag(context: ClientRuntimeContext, contentTag: String): IntResult = js.native
 }
 

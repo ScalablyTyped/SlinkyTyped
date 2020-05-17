@@ -2,7 +2,7 @@ package typingsSlinky.gestalt.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.AnonEvent
+import typingsSlinky.gestalt.anon.Event
 import typingsSlinky.gestalt.gestaltStrings.`null`
 import typingsSlinky.gestalt.gestaltStrings.blank
 import typingsSlinky.gestalt.gestaltStrings.self
@@ -23,7 +23,7 @@ object Link {
     @scala.inline
     def `inline`(value: Boolean): this.type = set("inline", value.asInstanceOf[js.Any])
     @scala.inline
-    def onClick(value: /* args */ AnonEvent => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    def onClick(value: /* args */ Event => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
     def target(value: `null` | self | blank): this.type = set("target", value.asInstanceOf[js.Any])
   }

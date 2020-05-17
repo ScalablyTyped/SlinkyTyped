@@ -1,0 +1,47 @@
+package typingsSlinky.googleCloudPubsub.protosMod.google.pubsub.v1
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Properties of a DeleteSnapshotRequest. */
+@js.native
+trait IDeleteSnapshotRequest extends js.Object {
+  /** DeleteSnapshotRequest snapshot */
+  var snapshot: js.UndefOr[String | Null] = js.native
+}
+
+object IDeleteSnapshotRequest {
+  @scala.inline
+  def apply(): IDeleteSnapshotRequest = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[IDeleteSnapshotRequest]
+  }
+  @scala.inline
+  implicit class IDeleteSnapshotRequestOps[Self <: IDeleteSnapshotRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSnapshot(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSnapshot: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshot")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSnapshotNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshot")(null)
+        ret
+    }
+  }
+  
+}
+

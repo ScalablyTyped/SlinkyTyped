@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.popoverStyleMod
 
-import typingsSlinky.antDesignReactNative.AnonBackground
+import typingsSlinky.antDesignReactNative.anon.Background
 import typingsSlinky.antDesignReactNative.libStyleMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@ant-design/react-native/lib/popover/style", JSImport.Default)
 @js.native
 object default extends js.Object {
-  def apply(theme: Theme): AnonBackground = js.native
+  def apply(theme: Theme): Background = js.native
 }
 

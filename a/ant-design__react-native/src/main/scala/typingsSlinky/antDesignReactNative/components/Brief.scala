@@ -2,7 +2,7 @@ package typingsSlinky.antDesignReactNative.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignReactNative.PickListStyleBriefBriefTe
+import typingsSlinky.antDesignReactNative.anon.PickListStyleBriefBriefTe
 import typingsSlinky.antDesignReactNative.listItemMod.BriefProps
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle

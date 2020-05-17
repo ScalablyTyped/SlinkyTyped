@@ -1,6 +1,6 @@
 package typingsSlinky.saslScramSha1.mod
 
-import typingsSlinky.saslScramSha1.TypeofScramSha1Mechanism
+import typingsSlinky.saslScramSha1.anon.TypeofScramSha1Mechanism
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

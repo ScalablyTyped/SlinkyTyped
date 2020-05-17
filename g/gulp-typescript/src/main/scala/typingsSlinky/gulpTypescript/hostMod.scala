@@ -1,5 +1,6 @@
 package typingsSlinky.gulpTypescript
 
+import typingsSlinky.gulpTypescript.anon.Typeofts
 import typingsSlinky.gulpTypescript.inputMod.FileCache
 import typingsSlinky.typescript.mod.CompilerHost
 import typingsSlinky.typescript.mod.CompilerOptions

@@ -2,7 +2,7 @@ package typingsSlinky.catalog.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.catalog.PartialTheme
+import typingsSlinky.catalog.anon.PartialTheme
 import typingsSlinky.catalog.mod.Config
 import typingsSlinky.catalog.mod.ConfigPageOrGroup
 import typingsSlinky.catalog.mod.ConfigResponsiveSize

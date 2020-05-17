@@ -3,7 +3,7 @@ package typingsSlinky.reactOnsenui.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameIgnoreEdgeWidth
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameIgnoreEdgeWidth
 import typingsSlinky.reactOnsenui.mod.AnimationOptions
 import typingsSlinky.reactOnsenui.mod.TabbarRenderTab
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.auto

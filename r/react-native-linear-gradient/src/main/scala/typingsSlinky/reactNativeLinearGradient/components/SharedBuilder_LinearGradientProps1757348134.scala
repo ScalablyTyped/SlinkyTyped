@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeLinearGradient.components
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -29,7 +29,7 @@ import typingsSlinky.reactNative.reactNativeStrings.polite
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.yes
-import typingsSlinky.reactNativeLinearGradient.AnonX
+import typingsSlinky.reactNativeLinearGradient.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -69,11 +69,11 @@ class SharedBuilder_LinearGradientProps1757348134[R <: js.Object] (val args: js.
   @scala.inline
   def angle(value: Double): this.type = set("angle", value.asInstanceOf[js.Any])
   @scala.inline
-  def angleCenter(value: AnonX): this.type = set("angleCenter", value.asInstanceOf[js.Any])
+  def angleCenter(value: X): this.type = set("angleCenter", value.asInstanceOf[js.Any])
   @scala.inline
   def collapsable(value: Boolean): this.type = set("collapsable", value.asInstanceOf[js.Any])
   @scala.inline
-  def end(value: AnonX): this.type = set("end", value.asInstanceOf[js.Any])
+  def end(value: X): this.type = set("end", value.asInstanceOf[js.Any])
   @scala.inline
   def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
   @scala.inline
@@ -141,7 +141,7 @@ class SharedBuilder_LinearGradientProps1757348134[R <: js.Object] (val args: js.
   @scala.inline
   def shouldRasterizeIOS(value: Boolean): this.type = set("shouldRasterizeIOS", value.asInstanceOf[js.Any])
   @scala.inline
-  def start(value: AnonX): this.type = set("start", value.asInstanceOf[js.Any])
+  def start(value: X): this.type = set("start", value.asInstanceOf[js.Any])
   @scala.inline
   def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
   @scala.inline

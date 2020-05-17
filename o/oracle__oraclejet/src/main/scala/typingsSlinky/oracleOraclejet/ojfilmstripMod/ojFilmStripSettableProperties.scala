@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojfilmstripMod
 
-import typingsSlinky.oracleOraclejet.AnonId
-import typingsSlinky.oracleOraclejet.AnonLabelAccArrowNextPage
+import typingsSlinky.oracleOraclejet.anon.Id
+import typingsSlinky.oracleOraclejet.anon.LabelAccArrowNextPage
 import typingsSlinky.oracleOraclejet.mod.baseComponentSettableProperties
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.adjacent
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.auto
@@ -21,12 +21,12 @@ import scala.scalajs.js.annotation._
 trait ojFilmStripSettableProperties extends baseComponentSettableProperties {
   var arrowPlacement: adjacent | overlay = js.native
   var arrowVisibility: visible | hidden | hover | auto = js.native
-  var currentItem: AnonId = js.native
+  var currentItem: Id = js.native
   var looping: off | page = js.native
   var maxItemsPerPage: Double = js.native
   var orientation: horizontal | vertical = js.native
   @JSName("translations")
-  var translations_ojFilmStripSettableProperties: AnonLabelAccArrowNextPage = js.native
+  var translations_ojFilmStripSettableProperties: LabelAccArrowNextPage = js.native
 }
 
 object ojFilmStripSettableProperties {
@@ -34,11 +34,11 @@ object ojFilmStripSettableProperties {
   def apply(
     arrowPlacement: adjacent | overlay,
     arrowVisibility: visible | hidden | hover | auto,
-    currentItem: AnonId,
+    currentItem: Id,
     looping: off | page,
     maxItemsPerPage: Double,
     orientation: horizontal | vertical,
-    translations: AnonLabelAccArrowNextPage
+    translations: LabelAccArrowNextPage
   ): ojFilmStripSettableProperties = {
     val __obj = js.Dynamic.literal(arrowPlacement = arrowPlacement.asInstanceOf[js.Any], arrowVisibility = arrowVisibility.asInstanceOf[js.Any], currentItem = currentItem.asInstanceOf[js.Any], looping = looping.asInstanceOf[js.Any], maxItemsPerPage = maxItemsPerPage.asInstanceOf[js.Any], orientation = orientation.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojFilmStripSettableProperties]
@@ -62,7 +62,7 @@ object ojFilmStripSettableProperties {
         ret
     }
     @scala.inline
-    def withCurrentItem(value: AnonId): Self = {
+    def withCurrentItem(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("currentItem")(value.asInstanceOf[js.Any])
         ret
@@ -86,7 +86,7 @@ object ojFilmStripSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelAccArrowNextPage): Self = {
+    def withTranslations(value: LabelAccArrowNextPage): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

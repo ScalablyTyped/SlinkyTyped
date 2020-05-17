@@ -1,7 +1,7 @@
 package typingsSlinky.astTypes.namedTypesMod.namedTypes
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.astTypes.AnonCooked
+import typingsSlinky.astTypes.anon.Cooked
 import typingsSlinky.astTypes.kindsMod.CommentKind
 import typingsSlinky.astTypes.kindsMod.NodeKind
 import typingsSlinky.astTypes.kindsMod.PrintableKind
@@ -21,7 +21,7 @@ trait TemplateElement
   var loc: js.UndefOr[SourceLocationKind] = js.native
   var tail: Boolean = js.native
   var `type`: typingsSlinky.astTypes.astTypesStrings.TemplateElement = js.native
-  var value: AnonCooked = js.native
+  var value: Cooked = js.native
 }
 
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TemplateElement")

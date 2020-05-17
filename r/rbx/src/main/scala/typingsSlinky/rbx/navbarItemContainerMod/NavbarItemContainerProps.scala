@@ -6,8 +6,8 @@ import org.scalajs.dom.raw.SVGElement
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.rbx.BinVariablesbreakpointsLi
-import typingsSlinky.rbx.KinVariablesbreakpointsto
+import typingsSlinky.rbx.anon.BinVariablesbreakpointsLi
+import typingsSlinky.rbx.anon.KinVariablesbreakpointsto
 import typingsSlinky.rbx.rbxNumbers.`1`
 import typingsSlinky.rbx.rbxNumbers.`2`
 import typingsSlinky.rbx.rbxNumbers.`3`

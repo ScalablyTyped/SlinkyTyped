@@ -1,6 +1,6 @@
 package typingsSlinky.uiGrid.mod.grouping
 
-import typingsSlinky.uiGrid.AnonGroupPriority
+import typingsSlinky.uiGrid.anon.GroupPriority
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ trait IColumnDef extends js.Object {
     * we'll renumber them to be sequential.
     * Defaults to undefined.
     */
-  var grouping: js.UndefOr[AnonGroupPriority] = js.native
+  var grouping: js.UndefOr[GroupPriority] = js.native
   /**
     * Show the aggregation menu on this column.  Defaults to true
     * @default true
@@ -64,7 +64,7 @@ object IColumnDef {
         ret
     }
     @scala.inline
-    def withGrouping(value: AnonGroupPriority): Self = {
+    def withGrouping(value: GroupPriority): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("grouping")(value.asInstanceOf[js.Any])
         ret

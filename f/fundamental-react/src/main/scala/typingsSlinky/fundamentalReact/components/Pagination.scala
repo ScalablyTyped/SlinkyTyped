@@ -2,7 +2,7 @@ package typingsSlinky.fundamentalReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.fundamentalReact.AnonNext
+import typingsSlinky.fundamentalReact.anon.Next
 import typingsSlinky.fundamentalReact.paginationMod.PaginationProps
 import typingsSlinky.fundamentalReact.paginationMod.default
 import scala.scalajs.js
@@ -33,7 +33,7 @@ object Pagination {
     @scala.inline
     def linkProps(value: js.Any): this.type = set("linkProps", value.asInstanceOf[js.Any])
     @scala.inline
-    def localizedText(value: AnonNext): this.type = set("localizedText", value.asInstanceOf[js.Any])
+    def localizedText(value: Next): this.type = set("localizedText", value.asInstanceOf[js.Any])
     @scala.inline
     def nextProps(value: js.Any): this.type = set("nextProps", value.asInstanceOf[js.Any])
     @scala.inline

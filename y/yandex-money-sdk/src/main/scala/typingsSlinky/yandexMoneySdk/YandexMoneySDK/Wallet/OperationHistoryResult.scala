@@ -1,6 +1,6 @@
 package typingsSlinky.yandexMoneySdk.YandexMoneySDK.Wallet
 
-import typingsSlinky.yandexMoneySdk.AnonAmount
+import typingsSlinky.yandexMoneySdk.anon.Amount
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait OperationHistoryResult extends js.Object {
   var error: js.UndefOr[String] = js.native
   var next_record: js.UndefOr[String] = js.native
-  var operations: js.UndefOr[js.Array[AnonAmount]] = js.native
+  var operations: js.UndefOr[js.Array[Amount]] = js.native
 }
 
 object OperationHistoryResult {
@@ -49,7 +49,7 @@ object OperationHistoryResult {
         ret
     }
     @scala.inline
-    def withOperations(value: js.Array[AnonAmount]): Self = {
+    def withOperations(value: js.Array[Amount]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("operations")(value.asInstanceOf[js.Any])
         ret

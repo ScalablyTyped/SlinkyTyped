@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,7 +44,55 @@ trait GeolocationPositioning extends js.Object {
   var view: MapView | SceneView = js.native
 }
 
-@JSGlobal("__esri.GeolocationPositioning")
-@js.native
-object GeolocationPositioning extends TopLevel[GeolocationPositioningConstructor]
+object GeolocationPositioning {
+  @scala.inline
+  def apply(
+    geolocationOptions: js.Any,
+    goToLocationEnabled: Boolean,
+    graphic: Graphic,
+    scale: Double,
+    view: MapView | SceneView
+  ): GeolocationPositioning = {
+    val __obj = js.Dynamic.literal(geolocationOptions = geolocationOptions.asInstanceOf[js.Any], goToLocationEnabled = goToLocationEnabled.asInstanceOf[js.Any], graphic = graphic.asInstanceOf[js.Any], scale = scale.asInstanceOf[js.Any], view = view.asInstanceOf[js.Any])
+    __obj.asInstanceOf[GeolocationPositioning]
+  }
+  @scala.inline
+  implicit class GeolocationPositioningOps[Self <: GeolocationPositioning] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGeolocationOptions(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geolocationOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGoToLocationEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goToLocationEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGraphic(value: Graphic): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("graphic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScale(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withView(value: MapView | SceneView): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

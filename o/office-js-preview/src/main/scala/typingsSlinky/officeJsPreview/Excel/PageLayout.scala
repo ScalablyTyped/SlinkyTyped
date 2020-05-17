@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.PageLayoutData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.PageLayoutLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.PageLayoutUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.A3
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.A4
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.A4Small
@@ -72,9 +72,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@JSGlobal("Excel.PageLayout")
 @js.native
-class PageLayout () extends ClientObject {
+trait PageLayout extends ClientObject {
   /**
     *
     * Gets or sets the worksheet's black and white print option.
@@ -262,7 +261,7 @@ class PageLayout () extends ClientObject {
     */
   def load(): PageLayout = js.native
   def load(options: PageLayoutLoadOptions): PageLayout = js.native
-  def load(propertyNamesAndPaths: AnonExpand): PageLayout = js.native
+  def load(propertyNamesAndPaths: Expand): PageLayout = js.native
   def load(propertyNames: String): PageLayout = js.native
   def load(propertyNames: js.Array[String]): PageLayout = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

@@ -1,14 +1,12 @@
 package typingsSlinky.googleLibphonenumber.libphonenumber
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.googleLibphonenumber.libphonenumber.PhoneNumber.CountryCodeSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("libphonenumber.PhoneNumber")
 @js.native
-class PhoneNumber () extends js.Object {
+trait PhoneNumber extends js.Object {
   def clearCountryCode(): Unit = js.native
   def clearCountryCodeSource(): Unit = js.native
   def clearExtension(): Unit = js.native
@@ -78,20 +76,6 @@ object PhoneNumber extends js.Object {
     
     @js.native
     sealed trait FROM_NUMBER_WITH_PLUS_SIGN extends CountryCodeSource
-    
-    @JSBracketAccess
-    def apply(value: Double): js.UndefOr[CountryCodeSource with Double] = js.native
-    /* 20 */ @js.native
-    object FROM_DEFAULT_COUNTRY extends TopLevel[FROM_DEFAULT_COUNTRY with Double]
-    
-    /* 10 */ @js.native
-    object FROM_NUMBER_WITHOUT_PLUS_SIGN extends TopLevel[FROM_NUMBER_WITHOUT_PLUS_SIGN with Double]
-    
-    /* 5 */ @js.native
-    object FROM_NUMBER_WITH_IDD extends TopLevel[FROM_NUMBER_WITH_IDD with Double]
-    
-    /* 1 */ @js.native
-    object FROM_NUMBER_WITH_PLUS_SIGN extends TopLevel[FROM_NUMBER_WITH_PLUS_SIGN with Double]
     
   }
   

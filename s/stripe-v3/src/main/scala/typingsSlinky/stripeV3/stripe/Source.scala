@@ -1,9 +1,9 @@
 package typingsSlinky.stripeV3.stripe
 
-import typingsSlinky.stripeV3.AnonAddress
-import typingsSlinky.stripeV3.AnonAuthenticated
-import typingsSlinky.stripeV3.AnonBankcode
-import typingsSlinky.stripeV3.AnonStatus
+import typingsSlinky.stripeV3.anon.Address
+import typingsSlinky.stripeV3.anon.Authenticated
+import typingsSlinky.stripeV3.anon.Bankcode
+import typingsSlinky.stripeV3.anon.Status
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,16 +15,16 @@ trait Source extends js.Object {
   var created: Double = js.native
   var currency: String = js.native
   var id: String = js.native
-  var owner: AnonAddress = js.native
-  var redirect: js.UndefOr[AnonStatus] = js.native
-  var sepa_debit: js.UndefOr[AnonBankcode] = js.native
+  var owner: Address = js.native
+  var redirect: js.UndefOr[Status] = js.native
+  var sepa_debit: js.UndefOr[Bankcode] = js.native
   var status: js.UndefOr[String] = js.native
-  var three_d_secure: js.UndefOr[AnonAuthenticated] = js.native
+  var three_d_secure: js.UndefOr[Authenticated] = js.native
 }
 
 object Source {
   @scala.inline
-  def apply(client_secret: String, created: Double, currency: String, id: String, owner: AnonAddress): Source = {
+  def apply(client_secret: String, created: Double, currency: String, id: String, owner: Address): Source = {
     val __obj = js.Dynamic.literal(client_secret = client_secret.asInstanceOf[js.Any], created = created.asInstanceOf[js.Any], currency = currency.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any])
     __obj.asInstanceOf[Source]
   }
@@ -59,7 +59,7 @@ object Source {
         ret
     }
     @scala.inline
-    def withOwner(value: AnonAddress): Self = {
+    def withOwner(value: Address): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
         ret
@@ -77,7 +77,7 @@ object Source {
         ret
     }
     @scala.inline
-    def withRedirect(value: AnonStatus): Self = {
+    def withRedirect(value: Status): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("redirect")(value.asInstanceOf[js.Any])
         ret
@@ -89,7 +89,7 @@ object Source {
         ret
     }
     @scala.inline
-    def withSepa_debit(value: AnonBankcode): Self = {
+    def withSepa_debit(value: Bankcode): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sepa_debit")(value.asInstanceOf[js.Any])
         ret
@@ -113,7 +113,7 @@ object Source {
         ret
     }
     @scala.inline
-    def withThree_d_secure(value: AnonAuthenticated): Self = {
+    def withThree_d_secure(value: Authenticated): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("three_d_secure")(value.asInstanceOf[js.Any])
         ret

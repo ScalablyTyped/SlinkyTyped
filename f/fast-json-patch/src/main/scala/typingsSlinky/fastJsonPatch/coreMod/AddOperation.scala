@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait AddOperation[T] extends BaseOperation {
+trait AddOperation[T]
+  extends BaseOperation
+     with Operation {
   var op: add = js.native
   var value: T = js.native
 }

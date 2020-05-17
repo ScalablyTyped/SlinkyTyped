@@ -1,6 +1,6 @@
 package typingsSlinky.ethereumjsCommon.mod
 
-import typingsSlinky.ethereumjsCommon.PartialChain
+import typingsSlinky.ethereumjsCommon.anon.PartialChain
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

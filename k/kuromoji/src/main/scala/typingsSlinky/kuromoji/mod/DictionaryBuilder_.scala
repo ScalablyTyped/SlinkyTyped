@@ -1,7 +1,7 @@
 package typingsSlinky.kuromoji.mod
 
 import typingsSlinky.doublearray.doublearray.DoubleArray
-import typingsSlinky.kuromoji.AnonTokeninfodictionary
+import typingsSlinky.kuromoji.anon.Tokeninfodictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait DictionaryBuilder_ extends js.Object {
   def build(): DynamicDictionaries = js.native
   def buildConnectionCosts(): ConnectionCosts = js.native
   def buildDoubleArray(): DoubleArray = js.native
-  def buildTokenInfoDictionary(): AnonTokeninfodictionary = js.native
+  def buildTokenInfoDictionary(): Tokeninfodictionary = js.native
   def buildUnknownDictionary(): UnknownDictionary = js.native
   def charDef(char_text: String): DictionaryBuilder_ = js.native
   def costMatrix(matrix_text: String): DictionaryBuilder_ = js.native
@@ -28,7 +28,7 @@ object DictionaryBuilder_ {
     build: () => DynamicDictionaries,
     buildConnectionCosts: () => ConnectionCosts,
     buildDoubleArray: () => DoubleArray,
-    buildTokenInfoDictionary: () => AnonTokeninfodictionary,
+    buildTokenInfoDictionary: () => Tokeninfodictionary,
     buildUnknownDictionary: () => UnknownDictionary,
     charDef: String => DictionaryBuilder_,
     costMatrix: String => DictionaryBuilder_,
@@ -70,7 +70,7 @@ object DictionaryBuilder_ {
         ret
     }
     @scala.inline
-    def withBuildTokenInfoDictionary(value: () => AnonTokeninfodictionary): Self = {
+    def withBuildTokenInfoDictionary(value: () => Tokeninfodictionary): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("buildTokenInfoDictionary")(js.Any.fromFunction0(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.firebaseAdmin.admin.auth
 
-import typingsSlinky.firebaseAdmin.AnonEnabled
+import typingsSlinky.firebaseAdmin.anon.Enabled
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,7 +34,7 @@ trait Tenant extends js.Object {
   /**
     * The email sign in provider configuration.
     */
-  var emailSignInConfig: js.UndefOr[AnonEnabled] = js.native
+  var emailSignInConfig: js.UndefOr[Enabled] = js.native
   /**
     * The tenant identifier.
     */
@@ -82,7 +82,7 @@ object Tenant {
         ret
     }
     @scala.inline
-    def withEmailSignInConfig(value: AnonEnabled): Self = {
+    def withEmailSignInConfig(value: Enabled): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emailSignInConfig")(value.asInstanceOf[js.Any])
         ret

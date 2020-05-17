@@ -1,6 +1,5 @@
 package typingsSlinky.playcanvas.pc
 
-import typingsSlinky.playcanvas.AnonDistanceModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,10 +42,8 @@ import scala.scalajs.js.annotation._
   * @property {number} maxDistance The maximum distance from the listener at which audio falloff stops. Note the volume of the audio is not 0 after this distance, but just doesn't fall off anymore.
   * @property {number} rollOffFactor The factor used in the falloff equation.
   */
-@JSGlobal("pc.SoundInstance3d")
 @js.native
-class SoundInstance3d protected () extends SoundInstance {
-  def this(manager: SoundManager, sound: Sound, options: AnonDistanceModel) = this()
+trait SoundInstance3d extends SoundInstance {
   /**
     * Determines which algorithm to use to reduce the volume of the audio as it moves away from the listener. Can be:
     * * {@link pc.DISTANCE_LINEAR}

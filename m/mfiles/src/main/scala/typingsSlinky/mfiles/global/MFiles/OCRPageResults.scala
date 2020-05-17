@@ -1,0 +1,16 @@
+package typingsSlinky.mfiles.global.MFiles
+
+import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.IOCRPageResults
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("MFiles.OCRPageResults")
+@js.native
+class OCRPageResults () extends IOCRPageResults
+
+@JSGlobal("MFiles.OCRPageResults")
+@js.native
+object OCRPageResults extends Instantiable0[IOCRPageResults]
+

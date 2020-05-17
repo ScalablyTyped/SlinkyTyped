@@ -94,7 +94,7 @@ object VictoryCursorContainerProps {
         ret
     }
     @scala.inline
-    def withCursorDimension(value: x | y): Self = {
+    def withCursorDimension(value: typingsSlinky.victory.victoryStrings.x | y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cursorDimension")(value.asInstanceOf[js.Any])
         ret

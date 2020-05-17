@@ -1,5 +1,6 @@
 package typingsSlinky.screeps
 
+import typingsSlinky.screeps.anon.Username
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,9 +12,9 @@ trait Transaction extends js.Object {
   var description: String = js.native
   var from: String = js.native
   var order: js.UndefOr[TransactionOrder] = js.native
-  var recipient: js.UndefOr[AnonUsername] = js.native
+  var recipient: js.UndefOr[Username] = js.native
   var resourceType: MarketResourceConstant = js.native
-  var sender: js.UndefOr[AnonUsername] = js.native
+  var sender: js.UndefOr[Username] = js.native
   var time: Double = js.native
   var to: String = js.native
   var transactionId: String = js.native
@@ -94,7 +95,7 @@ object Transaction {
         ret
     }
     @scala.inline
-    def withRecipient(value: AnonUsername): Self = {
+    def withRecipient(value: Username): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("recipient")(value.asInstanceOf[js.Any])
         ret
@@ -106,7 +107,7 @@ object Transaction {
         ret
     }
     @scala.inline
-    def withSender(value: AnonUsername): Self = {
+    def withSender(value: Username): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sender")(value.asInstanceOf[js.Any])
         ret

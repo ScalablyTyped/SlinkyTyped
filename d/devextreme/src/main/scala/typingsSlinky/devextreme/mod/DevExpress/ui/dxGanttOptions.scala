@@ -1,11 +1,11 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonAllowDependencyAdding
-import typingsSlinky.devextreme.AnonEndExpr
-import typingsSlinky.devextreme.AnonKeyExpr
-import typingsSlinky.devextreme.AnonResourceIdExpr
-import typingsSlinky.devextreme.AnonSelectedRowKey
-import typingsSlinky.devextreme.AnonTextExpr
+import typingsSlinky.devextreme.anon.AllowDependencyAdding
+import typingsSlinky.devextreme.anon.EndExpr
+import typingsSlinky.devextreme.anon.KeyExpr
+import typingsSlinky.devextreme.anon.ResourceIdExpr
+import typingsSlinky.devextreme.anon.SelectedRowKey
+import typingsSlinky.devextreme.anon.TextExpr
 import typingsSlinky.devextreme.devextremeStrings.auto
 import typingsSlinky.devextreme.devextremeStrings.days
 import typingsSlinky.devextreme.devextremeStrings.hours
@@ -28,15 +28,15 @@ trait dxGanttOptions extends WidgetOptions[dxGantt] {
   /** An array of columns in the Gantt. */
   var columns: js.UndefOr[js.Array[dxTreeListColumn | String]] = js.native
   /** Configures dependencies. */
-  var dependencies: js.UndefOr[AnonKeyExpr] = js.native
+  var dependencies: js.UndefOr[KeyExpr] = js.native
   /** Configures edit options. */
-  var editing: js.UndefOr[AnonAllowDependencyAdding] = js.native
+  var editing: js.UndefOr[AllowDependencyAdding] = js.native
   /** A function that is executed after users select a task or clear its selection. */
-  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonSelectedRowKey, _]] = js.native
+  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ SelectedRowKey, _]] = js.native
   /** Configures resource assignments. */
-  var resourceAssignments: js.UndefOr[AnonResourceIdExpr] = js.native
+  var resourceAssignments: js.UndefOr[ResourceIdExpr] = js.native
   /** Configures task resources. */
-  var resources: js.UndefOr[AnonTextExpr] = js.native
+  var resources: js.UndefOr[TextExpr] = js.native
   /** Specifies the zoom level of tasks in the Gantt chart. */
   var scaleType: js.UndefOr[auto | minutes | hours | days | weeks | months | quarters | years] = js.native
   /** Allows you to select a row or determine which row is selected. */
@@ -50,7 +50,7 @@ trait dxGanttOptions extends WidgetOptions[dxGantt] {
   /** Specifies a task's title position. */
   var taskTitlePosition: js.UndefOr[inside | outside | none] = js.native
   /** Configures tasks. */
-  var tasks: js.UndefOr[AnonEndExpr] = js.native
+  var tasks: js.UndefOr[EndExpr] = js.native
 }
 
 object dxGanttOptions {
@@ -90,7 +90,7 @@ object dxGanttOptions {
         ret
     }
     @scala.inline
-    def withDependencies(value: AnonKeyExpr): Self = {
+    def withDependencies(value: KeyExpr): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(value.asInstanceOf[js.Any])
         ret
@@ -102,7 +102,7 @@ object dxGanttOptions {
         ret
     }
     @scala.inline
-    def withEditing(value: AnonAllowDependencyAdding): Self = {
+    def withEditing(value: AllowDependencyAdding): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editing")(value.asInstanceOf[js.Any])
         ret
@@ -114,7 +114,7 @@ object dxGanttOptions {
         ret
     }
     @scala.inline
-    def withOnSelectionChanged(value: /* e */ AnonSelectedRowKey => _): Self = {
+    def withOnSelectionChanged(value: /* e */ SelectedRowKey => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.Any.fromFunction1(value))
         ret
@@ -126,7 +126,7 @@ object dxGanttOptions {
         ret
     }
     @scala.inline
-    def withResourceAssignments(value: AnonResourceIdExpr): Self = {
+    def withResourceAssignments(value: ResourceIdExpr): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resourceAssignments")(value.asInstanceOf[js.Any])
         ret
@@ -138,7 +138,7 @@ object dxGanttOptions {
         ret
     }
     @scala.inline
-    def withResources(value: AnonTextExpr): Self = {
+    def withResources(value: TextExpr): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
         ret
@@ -222,7 +222,7 @@ object dxGanttOptions {
         ret
     }
     @scala.inline
-    def withTasks(value: AnonEndExpr): Self = {
+    def withTasks(value: EndExpr): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tasks")(value.asInstanceOf[js.Any])
         ret

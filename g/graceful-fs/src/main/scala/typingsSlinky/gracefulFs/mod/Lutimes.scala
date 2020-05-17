@@ -1,6 +1,6 @@
 package typingsSlinky.gracefulFs.mod
 
-import typingsSlinky.gracefulFs.Typeoflutimes
+import typingsSlinky.gracefulFs.anon.Typeoflutimes
 import typingsSlinky.node.fsMod.PathLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`

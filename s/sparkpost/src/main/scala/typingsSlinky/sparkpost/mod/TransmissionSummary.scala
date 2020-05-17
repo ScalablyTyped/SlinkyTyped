@@ -1,6 +1,6 @@
 package typingsSlinky.sparkpost.mod
 
-import typingsSlinky.sparkpost.AnonTemplateidString
+import typingsSlinky.sparkpost.anon.TemplateidString
 import typingsSlinky.sparkpost.sparkpostStrings.Canceled
 import typingsSlinky.sparkpost.sparkpostStrings.Generating
 import typingsSlinky.sparkpost.sparkpostStrings.Success
@@ -14,7 +14,7 @@ trait TransmissionSummary extends js.Object {
   /** Name of the campaign */
   var campaign_id: String = js.native
   /** Content that will be used to construct a message */
-  var content: AnonTemplateidString = js.native
+  var content: TemplateidString = js.native
   /** Description of the transmission */
   var description: String = js.native
   /** ID of the transmission */
@@ -27,7 +27,7 @@ object TransmissionSummary {
   @scala.inline
   def apply(
     campaign_id: String,
-    content: AnonTemplateidString,
+    content: TemplateidString,
     description: String,
     id: String,
     state: submitted | Generating | Success | Canceled
@@ -48,7 +48,7 @@ object TransmissionSummary {
         ret
     }
     @scala.inline
-    def withContent(value: AnonTemplateidString): Self = {
+    def withContent(value: TemplateidString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
         ret

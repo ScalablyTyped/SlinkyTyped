@@ -1,29 +1,26 @@
 package typingsSlinky.elasticElasticsearch.mod
 
-import typingsSlinky.elasticElasticsearch.AnonAckWatch
-import typingsSlinky.elasticElasticsearch.AnonAliases
-import typingsSlinky.elasticElasticsearch.AnonAllocationExplain
-import typingsSlinky.elasticElasticsearch.AnonAnalyze
-import typingsSlinky.elasticElasticsearch.AnonAuthenticate
-import typingsSlinky.elasticElasticsearch.AnonBulk
-import typingsSlinky.elasticElasticsearch.AnonCancel
-import typingsSlinky.elasticElasticsearch.AnonCertificates
-import typingsSlinky.elasticElasticsearch.AnonCleanupRepository
-import typingsSlinky.elasticElasticsearch.AnonClearCursor
-import typingsSlinky.elasticElasticsearch.AnonCloseJob
-import typingsSlinky.elasticElasticsearch.AnonDelete
-import typingsSlinky.elasticElasticsearch.AnonDeleteAutoFollowPattern
-import typingsSlinky.elasticElasticsearch.AnonDeleteJob
-import typingsSlinky.elasticElasticsearch.AnonDeleteLifecycle_
-import typingsSlinky.elasticElasticsearch.AnonDeletePipeline
-import typingsSlinky.elasticElasticsearch.AnonDeletePolicy
-import typingsSlinky.elasticElasticsearch.AnonDeleteTransform
-import typingsSlinky.elasticElasticsearch.AnonDeletelifecycle
-import typingsSlinky.elasticElasticsearch.AnonDeprecations
-import typingsSlinky.elasticElasticsearch.AnonExplore
-import typingsSlinky.elasticElasticsearch.AnonForce
-import typingsSlinky.elasticElasticsearch.AnonHotThreads
-import typingsSlinky.elasticElasticsearch.AnonInfo
+import typingsSlinky.elasticElasticsearch.anon.AckWatch
+import typingsSlinky.elasticElasticsearch.anon.Aliases
+import typingsSlinky.elasticElasticsearch.anon.AllocationExplain
+import typingsSlinky.elasticElasticsearch.anon.Analyze
+import typingsSlinky.elasticElasticsearch.anon.Authenticate
+import typingsSlinky.elasticElasticsearch.anon.Cancel
+import typingsSlinky.elasticElasticsearch.anon.Certificates
+import typingsSlinky.elasticElasticsearch.anon.CleanupRepository
+import typingsSlinky.elasticElasticsearch.anon.ClearCursor
+import typingsSlinky.elasticElasticsearch.anon.CloseJob
+import typingsSlinky.elasticElasticsearch.anon.DeleteAutoFollowPattern
+import typingsSlinky.elasticElasticsearch.anon.DeleteJob
+import typingsSlinky.elasticElasticsearch.anon.DeleteLifecycle_
+import typingsSlinky.elasticElasticsearch.anon.DeletePipeline
+import typingsSlinky.elasticElasticsearch.anon.DeletePolicy
+import typingsSlinky.elasticElasticsearch.anon.DeleteTransform
+import typingsSlinky.elasticElasticsearch.anon.Deletelifecycle
+import typingsSlinky.elasticElasticsearch.anon.Deprecations
+import typingsSlinky.elasticElasticsearch.anon.Explore
+import typingsSlinky.elasticElasticsearch.anon.Force
+import typingsSlinky.elasticElasticsearch.anon.HotThreads
 import typingsSlinky.elasticElasticsearch.requestParamsMod.Bulk
 import typingsSlinky.elasticElasticsearch.requestParamsMod.ClearScroll
 import typingsSlinky.elasticElasticsearch.requestParamsMod.Count
@@ -78,13 +75,13 @@ class Client () extends EventEmitter {
   /* GENERATED */
   @JSName("bulk")
   var bulk_Original: ApiMethod[Bulk[_], _] = js.native
-  var cat: AnonAliases = js.native
-  var ccr: AnonDeleteAutoFollowPattern = js.native
+  var cat: Aliases = js.native
+  var ccr: DeleteAutoFollowPattern = js.native
   @JSName("clearScroll")
   var clearScroll_Original: ApiMethod[ClearScroll[_], _] = js.native
   @JSName("clear_scroll")
   var clear_scroll_Original: ApiMethod[ClearScroll[_], _] = js.native
-  var cluster: AnonAllocationExplain = js.native
+  var cluster: AllocationExplain = js.native
   var connectionPool: typingsSlinky.elasticElasticsearch.poolMod.ConnectionPool = js.native
   @JSName("count")
   var count_Original: ApiMethod[Count[_], _] = js.native
@@ -104,7 +101,7 @@ class Client () extends EventEmitter {
   var delete_by_query_rethrottle_Original: ApiMethod[DeleteByQueryRethrottle, _] = js.native
   @JSName("delete_script")
   var delete_script_Original: ApiMethod[DeleteScript, _] = js.native
-  var enrich: AnonDeletePolicy = js.native
+  var enrich: DeletePolicy = js.native
   @JSName("existsSource")
   var existsSource_Original: ApiMethod[ExistsSource, _] = js.native
   @JSName("exists")
@@ -137,20 +134,20 @@ class Client () extends EventEmitter {
   var get_script_languages_Original: ApiMethod[GetScriptLanguages, _] = js.native
   @JSName("get_source")
   var get_source_Original: ApiMethod[GetSource, _] = js.native
-  var graph: AnonExplore = js.native
-  var ilm: AnonDeleteLifecycle_ = js.native
+  var graph: Explore = js.native
+  var ilm: DeleteLifecycle_ = js.native
   @JSName("index")
   var index_Original: ApiMethod[Index[_], _] = js.native
-  var indices: AnonAnalyze = js.native
+  var indices: Analyze = js.native
   @JSName("info")
   var info_Original: ApiMethod[Info, _] = js.native
-  var ingest: AnonDeletePipeline = js.native
-  var license: AnonDelete = js.native
+  var ingest: DeletePipeline = js.native
+  var license: typingsSlinky.elasticElasticsearch.anon.Delete = js.native
   @JSName("mget")
   var mget_Original: ApiMethod[Mget[_], _] = js.native
-  var migration: AnonDeprecations = js.native
-  var ml: AnonCloseJob = js.native
-  var monitoring: AnonBulk = js.native
+  var migration: Deprecations = js.native
+  var ml: CloseJob = js.native
+  var monitoring: typingsSlinky.elasticElasticsearch.anon.Bulk = js.native
   @JSName("msearchTemplate")
   var msearchTemplate_Original: ApiMethod[MsearchTemplate[_], _] = js.native
   @JSName("msearch")
@@ -159,7 +156,7 @@ class Client () extends EventEmitter {
   var msearch_template_Original: ApiMethod[MsearchTemplate[_], _] = js.native
   @JSName("mtermvectors")
   var mtermvectors_Original: ApiMethod[Mtermvectors[_], _] = js.native
-  var nodes: AnonHotThreads = js.native
+  var nodes: HotThreads = js.native
   @JSName("ping")
   var ping_Original: ApiMethod[Ping, _] = js.native
   @JSName("putScript")
@@ -180,7 +177,7 @@ class Client () extends EventEmitter {
   var renderSearchTemplate_Original: ApiMethod[RenderSearchTemplate[_], _] = js.native
   @JSName("render_search_template")
   var render_search_template_Original: ApiMethod[RenderSearchTemplate[_], _] = js.native
-  var rollup: AnonDeleteJob = js.native
+  var rollup: DeleteJob = js.native
   @JSName("scriptsPainlessExecute")
   var scriptsPainlessExecute_Original: ApiMethod[ScriptsPainlessExecute[_], _] = js.native
   @JSName("scripts_painless_execute")
@@ -197,16 +194,16 @@ class Client () extends EventEmitter {
   var search_shards_Original: ApiMethod[SearchShards, _] = js.native
   @JSName("search_template")
   var search_template_Original: ApiMethod[SearchTemplate[_], _] = js.native
-  var security: AnonAuthenticate = js.native
+  var security: Authenticate = js.native
   var serializer: default = js.native
-  var slm: AnonDeletelifecycle = js.native
-  var snapshot: AnonCleanupRepository = js.native
-  var sql: AnonClearCursor = js.native
-  var ssl: AnonCertificates = js.native
-  var tasks: AnonCancel = js.native
+  var slm: Deletelifecycle = js.native
+  var snapshot: CleanupRepository = js.native
+  var sql: ClearCursor = js.native
+  var ssl: Certificates = js.native
+  var tasks: Cancel = js.native
   @JSName("termvectors")
   var termvectors_Original: ApiMethod[Termvectors[_], _] = js.native
-  var transform: AnonDeleteTransform = js.native
+  var transform: DeleteTransform = js.native
   var transport: typingsSlinky.elasticElasticsearch.transportMod.default = js.native
   @JSName("updateByQueryRethrottle")
   var updateByQueryRethrottle_Original: ApiMethod[UpdateByQueryRethrottle, _] = js.native
@@ -218,8 +215,8 @@ class Client () extends EventEmitter {
   var update_by_query_Original: ApiMethod[UpdateByQuery[_], _] = js.native
   @JSName("update_by_query_rethrottle")
   var update_by_query_rethrottle_Original: ApiMethod[UpdateByQueryRethrottle, _] = js.native
-  var watcher: AnonAckWatch = js.native
-  var xpack: AnonInfo = js.native
+  var watcher: AckWatch = js.native
+  var xpack: typingsSlinky.elasticElasticsearch.anon.Info = js.native
   // Promise API
   /* GENERATED */
   def bulk(): js.Promise[ApiResponse[_, _]] = js.native
@@ -359,7 +356,7 @@ class Client () extends EventEmitter {
   def explain(params: Explain[_], options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
   def explain(params: Explain[_], options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
   def extend(method: String, fn: extendsCallback): Unit = js.native
-  def extend(method: String, opts: AnonForce, fn: extendsCallback): Unit = js.native
+  def extend(method: String, opts: Force, fn: extendsCallback): Unit = js.native
   // Promise API
   def fieldCaps(): js.Promise[ApiResponse[_, _]] = js.native
   // Callback API

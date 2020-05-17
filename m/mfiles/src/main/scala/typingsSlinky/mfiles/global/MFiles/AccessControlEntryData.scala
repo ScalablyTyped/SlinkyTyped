@@ -1,0 +1,16 @@
+package typingsSlinky.mfiles.global.MFiles
+
+import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.IAccessControlEntryData
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("MFiles.AccessControlEntryData")
+@js.native
+class AccessControlEntryData () extends IAccessControlEntryData
+
+@JSGlobal("MFiles.AccessControlEntryData")
+@js.native
+object AccessControlEntryData extends Instantiable0[IAccessControlEntryData]
+

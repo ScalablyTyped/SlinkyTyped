@@ -1,7 +1,7 @@
 package typingsSlinky.nodemon.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.nodemon.AnonRe
+import typingsSlinky.nodemon.anon.Re
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,7 +47,7 @@ trait Settings
   /**
     * Ignore specific files or directories.  One entry per ignored value.  Wildcards are allowed.
     */
-  var ignore: js.UndefOr[js.Array[String | AnonRe]] = js.native
+  var ignore: js.UndefOr[js.Array[String | Re]] = js.native
   /**
     * Root paths to ignore
     */
@@ -101,7 +101,7 @@ trait Settings
   /**
     * Watch directory or file.  One entry per watched value.  Wildcards are allowed.
     */
-  var watch: js.UndefOr[js.Array[String | AnonRe]] = js.native
+  var watch: js.UndefOr[js.Array[String | Re]] = js.native
 }
 
 object Settings {
@@ -249,7 +249,7 @@ object Settings {
         ret
     }
     @scala.inline
-    def withIgnore(value: js.Array[String | AnonRe]): Self = {
+    def withIgnore(value: js.Array[String | Re]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ignore")(value.asInstanceOf[js.Any])
         ret
@@ -441,7 +441,7 @@ object Settings {
         ret
     }
     @scala.inline
-    def withWatch(value: js.Array[String | AnonRe]): Self = {
+    def withWatch(value: js.Array[String | Re]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("watch")(value.asInstanceOf[js.Any])
         ret

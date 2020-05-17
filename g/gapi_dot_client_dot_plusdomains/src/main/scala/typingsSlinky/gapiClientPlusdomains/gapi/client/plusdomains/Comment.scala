@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientPlusdomains.gapi.client.plusdomains
 
-import typingsSlinky.gapiClientPlusdomains.AnonDisplayName
-import typingsSlinky.gapiClientPlusdomains.AnonId
-import typingsSlinky.gapiClientPlusdomains.AnonObjectType
-import typingsSlinky.gapiClientPlusdomains.AnonTotalItems
+import typingsSlinky.gapiClientPlusdomains.anon.DisplayName
+import typingsSlinky.gapiClientPlusdomains.anon.Id
+import typingsSlinky.gapiClientPlusdomains.anon.ObjectType
+import typingsSlinky.gapiClientPlusdomains.anon.TotalItems
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,19 +11,19 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Comment extends js.Object {
   /** The person who posted this comment. */
-  var actor: js.UndefOr[AnonDisplayName] = js.native
+  var actor: js.UndefOr[DisplayName] = js.native
   /** ETag of this response for caching purposes. */
   var etag: js.UndefOr[String] = js.native
   /** The ID of this comment. */
   var id: js.UndefOr[String] = js.native
   /** The activity this comment replied to. */
-  var inReplyTo: js.UndefOr[js.Array[AnonId]] = js.native
+  var inReplyTo: js.UndefOr[js.Array[Id]] = js.native
   /** Identifies this resource as a comment. Value: "plus#comment". */
   var kind: js.UndefOr[String] = js.native
   /** The object of this comment. */
-  var `object`: js.UndefOr[AnonObjectType] = js.native
+  var `object`: js.UndefOr[ObjectType] = js.native
   /** People who +1'd this comment. */
-  var plusoners: js.UndefOr[AnonTotalItems] = js.native
+  var plusoners: js.UndefOr[TotalItems] = js.native
   /** The time at which this comment was initially published. Formatted as an RFC 3339 timestamp. */
   var published: js.UndefOr[String] = js.native
   /** Link to this comment resource. */
@@ -50,7 +50,7 @@ object Comment {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActor(value: AnonDisplayName): Self = {
+    def withActor(value: DisplayName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("actor")(value.asInstanceOf[js.Any])
         ret
@@ -86,7 +86,7 @@ object Comment {
         ret
     }
     @scala.inline
-    def withInReplyTo(value: js.Array[AnonId]): Self = {
+    def withInReplyTo(value: js.Array[Id]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("inReplyTo")(value.asInstanceOf[js.Any])
         ret
@@ -110,7 +110,7 @@ object Comment {
         ret
     }
     @scala.inline
-    def withObject(value: AnonObjectType): Self = {
+    def withObject(value: ObjectType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
         ret
@@ -122,7 +122,7 @@ object Comment {
         ret
     }
     @scala.inline
-    def withPlusoners(value: AnonTotalItems): Self = {
+    def withPlusoners(value: TotalItems): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("plusoners")(value.asInstanceOf[js.Any])
         ret

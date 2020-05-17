@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Attachment extends js.Object {
+trait Attachment extends AttachmentData {
   var contentType: js.UndefOr[String] = js.native
   var data: String | Buffer | ReadWriteStream = js.native
   var filename: js.UndefOr[String] = js.native

@@ -10,9 +10,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * Dynamic behavior defining an item's movement to a specific point.
 			 */
-@JSGlobal("Titanium.UI.iOS.SnapBehavior")
 @js.native
-class SnapBehavior () extends Proxy {
+trait SnapBehavior extends Proxy {
   /**
   				 * Specifies the amount of oscillation during the conclusion of the snap.
   				 */

@@ -1,7 +1,7 @@
 package typingsSlinky.jupyterlabServices.messagesMod.KernelMessage
 
-import typingsSlinky.jupyterlabServices.AnonMetadata
-import typingsSlinky.jupyterlabServices.AnonTransientAnonDisplayidString
+import typingsSlinky.jupyterlabServices.anon.Metadata
+import typingsSlinky.jupyterlabServices.anon.TransientDisplayidString
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.iopub
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.update_display_data
 import typingsSlinky.phosphorCoreutils.jsonMod.JSONObject
@@ -17,16 +17,16 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IUpdateDisplayDataMsg
   extends IIOPubMessage[update_display_data]
-     with _Message {
+     with Message {
   @JSName("content")
-  var content_IUpdateDisplayDataMsg: AnonMetadata with AnonTransientAnonDisplayidString = js.native
+  var content_IUpdateDisplayDataMsg: Metadata with TransientDisplayidString = js.native
 }
 
 object IUpdateDisplayDataMsg {
   @scala.inline
   def apply(
     channel: iopub,
-    content: AnonMetadata with AnonTransientAnonDisplayidString,
+    content: Metadata with TransientDisplayidString,
     header: IHeader[update_display_data],
     metadata: JSONObject,
     parent_header: IHeader[MessageType] | js.Object
@@ -41,7 +41,7 @@ object IUpdateDisplayDataMsg {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContent(value: AnonMetadata with AnonTransientAnonDisplayidString): Self = {
+    def withContent(value: Metadata with TransientDisplayidString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
         ret

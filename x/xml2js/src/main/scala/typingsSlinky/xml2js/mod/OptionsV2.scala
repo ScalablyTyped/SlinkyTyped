@@ -1,7 +1,7 @@
 package typingsSlinky.xml2js.mod
 
-import typingsSlinky.xml2js.AnonEncoding
-import typingsSlinky.xml2js.AnonIndent
+import typingsSlinky.xml2js.anon.Encoding
+import typingsSlinky.xml2js.anon.Indent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,9 +13,9 @@ trait OptionsV2 extends Options {
   var doctype: js.UndefOr[js.Any] = js.native
   var headless: js.UndefOr[Boolean] = js.native
   var preserveChildrenOrder: js.UndefOr[Boolean] = js.native
-  var renderOpts: js.UndefOr[AnonIndent] = js.native
+  var renderOpts: js.UndefOr[Indent] = js.native
   var rootName: js.UndefOr[String] = js.native
-  var xmldec: js.UndefOr[AnonEncoding] = js.native
+  var xmldec: js.UndefOr[Encoding] = js.native
 }
 
 object OptionsV2 {
@@ -91,7 +91,7 @@ object OptionsV2 {
         ret
     }
     @scala.inline
-    def withRenderOpts(value: AnonIndent): Self = {
+    def withRenderOpts(value: Indent): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderOpts")(value.asInstanceOf[js.Any])
         ret
@@ -115,7 +115,7 @@ object OptionsV2 {
         ret
     }
     @scala.inline
-    def withXmldec(value: AnonEncoding): Self = {
+    def withXmldec(value: Encoding): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("xmldec")(value.asInstanceOf[js.Any])
         ret

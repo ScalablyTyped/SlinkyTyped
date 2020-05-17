@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** FaxSecurity2 Class */
-@JSGlobal("FAXCOMEXLib.FaxSecurity2")
 @js.native
-class FaxSecurity2 protected () extends js.Object {
+trait FaxSecurity2 extends js.Object {
   /** Security descriptor */
   var Descriptor: js.Any = js.native
   @JSName("FAXCOMEXLib.FaxSecurity2_typekey")
@@ -20,5 +19,65 @@ class FaxSecurity2 protected () extends js.Object {
   def Refresh(): Unit = js.native
   /** Save the object */
   def Save(): Unit = js.native
+}
+
+object FaxSecurity2 {
+  @scala.inline
+  def apply(
+    Descriptor: js.Any,
+    FAXCOMEXLibDotFaxSecurity2_typekey: FaxSecurity2,
+    GrantedRights: FAX_ACCESS_RIGHTS_ENUM_2,
+    InformationType: Double,
+    Refresh: () => Unit,
+    Save: () => Unit
+  ): FaxSecurity2 = {
+    val __obj = js.Dynamic.literal(Descriptor = Descriptor.asInstanceOf[js.Any], GrantedRights = GrantedRights.asInstanceOf[js.Any], InformationType = InformationType.asInstanceOf[js.Any], Refresh = js.Any.fromFunction0(Refresh), Save = js.Any.fromFunction0(Save))
+    __obj.updateDynamic("FAXCOMEXLib.FaxSecurity2_typekey")(FAXCOMEXLibDotFaxSecurity2_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FaxSecurity2]
+  }
+  @scala.inline
+  implicit class FaxSecurity2Ops[Self <: FaxSecurity2] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescriptor(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Descriptor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFAXCOMEXLibDotFaxSecurity2_typekey(value: FaxSecurity2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FAXCOMEXLib.FaxSecurity2_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGrantedRights(value: FAX_ACCESS_RIGHTS_ENUM_2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GrantedRights")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInformationType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InformationType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRefresh(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Refresh")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSave(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Save")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

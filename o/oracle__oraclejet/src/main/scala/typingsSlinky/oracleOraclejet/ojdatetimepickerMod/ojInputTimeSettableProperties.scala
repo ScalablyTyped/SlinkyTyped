@@ -1,11 +1,11 @@
 package typingsSlinky.oracleOraclejet.ojdatetimepickerMod
 
-import typingsSlinky.oracleOraclejet.AnonAmpmWheelLabel
-import typingsSlinky.oracleOraclejet.AnonClass
-import typingsSlinky.oracleOraclejet.AnonConverterHint
-import typingsSlinky.oracleOraclejet.AnonDefinition
-import typingsSlinky.oracleOraclejet.AnonFooterLayout
-import typingsSlinky.oracleOraclejet.AnonInstruction
+import typingsSlinky.oracleOraclejet.anon.AmpmWheelLabel
+import typingsSlinky.oracleOraclejet.anon.Class
+import typingsSlinky.oracleOraclejet.anon.ConverterHint
+import typingsSlinky.oracleOraclejet.anon.Definition
+import typingsSlinky.oracleOraclejet.anon.FooterLayout
+import typingsSlinky.oracleOraclejet.anon.Instruction
 import typingsSlinky.oracleOraclejet.ojinputtextMod.inputBaseSettableProperties
 import typingsSlinky.oracleOraclejet.ojmessagingMod.^
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.AsyncValidator
@@ -31,11 +31,11 @@ trait ojInputTimeSettableProperties extends inputBaseSettableProperties[String, 
   var keyboardEdit: enabled | disabled = js.native
   var max: String | Null = js.native
   var min: String | Null = js.native
-  var pickerAttributes: AnonClass = js.native
+  var pickerAttributes: Class = js.native
   var renderMode: jet | native = js.native
-  var timePicker: AnonFooterLayout = js.native
+  var timePicker: FooterLayout = js.native
   @JSName("translations")
-  var translations_ojInputTimeSettableProperties: AnonAmpmWheelLabel = js.native
+  var translations_ojInputTimeSettableProperties: AmpmWheelLabel = js.native
 }
 
 object ojInputTimeSettableProperties {
@@ -46,20 +46,20 @@ object ojInputTimeSettableProperties {
     autofocus: Boolean,
     converter: Converter[String] | RegisteredConverter,
     disabled: Boolean,
-    displayOptions: AnonConverterHint,
-    help: AnonInstruction,
-    helpHints: AnonDefinition,
+    displayOptions: ConverterHint,
+    help: Instruction,
+    helpHints: Definition,
     keyboardEdit: enabled | disabled,
     labelHint: String,
     messagesCustom: js.Array[^],
-    pickerAttributes: AnonClass,
+    pickerAttributes: Class,
     placeholder: String,
     rawValue: String,
     readonly: Boolean,
     renderMode: jet | native,
     required: Boolean,
-    timePicker: AnonFooterLayout,
-    translations: AnonAmpmWheelLabel,
+    timePicker: FooterLayout,
+    translations: AmpmWheelLabel,
     valid: valid | pending | invalidHidden | invalidShown,
     value: String
   ): ojInputTimeSettableProperties = {
@@ -85,7 +85,7 @@ object ojInputTimeSettableProperties {
         ret
     }
     @scala.inline
-    def withPickerAttributes(value: AnonClass): Self = {
+    def withPickerAttributes(value: Class): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pickerAttributes")(value.asInstanceOf[js.Any])
         ret
@@ -97,13 +97,13 @@ object ojInputTimeSettableProperties {
         ret
     }
     @scala.inline
-    def withTimePicker(value: AnonFooterLayout): Self = {
+    def withTimePicker(value: FooterLayout): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("timePicker")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonAmpmWheelLabel): Self = {
+    def withTranslations(value: AmpmWheelLabel): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

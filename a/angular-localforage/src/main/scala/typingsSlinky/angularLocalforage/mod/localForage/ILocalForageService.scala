@@ -2,7 +2,7 @@ package typingsSlinky.angularLocalforage.mod.localForage
 
 import typingsSlinky.angular.mod.IPromise
 import typingsSlinky.angular.mod.IScope
-import typingsSlinky.angularLocalforage.AnonDefaultValue
+import typingsSlinky.angularLocalforage.anon.DefaultValue
 import typingsSlinky.localforage.LocalForageDriver
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ILocalForageService extends js.Object {
-  def bind($scope: IScope, config: AnonDefaultValue): IPromise[_] = js.native
+  def bind($scope: IScope, config: DefaultValue): IPromise[_] = js.native
   def bind($scope: IScope, key: String): IPromise[_] = js.native
   def clear(): IPromise[Unit] = js.native
   def createInstance(config: LocalForageConfig): ILocalForageService = js.native

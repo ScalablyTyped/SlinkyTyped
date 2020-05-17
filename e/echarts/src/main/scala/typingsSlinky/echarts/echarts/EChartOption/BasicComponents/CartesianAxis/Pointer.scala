@@ -1,7 +1,7 @@
 package typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis
 
-import typingsSlinky.echarts.AnonIcon
-import typingsSlinky.echarts.AnonOpacity
+import typingsSlinky.echarts.anon.Icon
+import typingsSlinky.echarts.anon.Opacity
 import typingsSlinky.echarts.echarts.EChartOption.LineStyle
 import typingsSlinky.echarts.echartsStrings.line
 import typingsSlinky.echarts.echartsStrings.none
@@ -15,10 +15,10 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Pointer extends js.Object {
-  var handle: js.UndefOr[AnonIcon] = js.native
+  var handle: js.UndefOr[Icon] = js.native
   var label: js.UndefOr[PointerLabel] = js.native
   var lineStyle: js.UndefOr[LineStyle] = js.native
-  var shadowStyle: js.UndefOr[AnonOpacity] = js.native
+  var shadowStyle: js.UndefOr[Opacity] = js.native
   var show: js.UndefOr[Boolean] = js.native
   var snap: js.UndefOr[Boolean] = js.native
   var status: js.UndefOr[Boolean] = js.native
@@ -41,7 +41,7 @@ object Pointer {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withHandle(value: AnonIcon): Self = {
+    def withHandle(value: Icon): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("handle")(value.asInstanceOf[js.Any])
         ret
@@ -77,7 +77,7 @@ object Pointer {
         ret
     }
     @scala.inline
-    def withShadowStyle(value: AnonOpacity): Self = {
+    def withShadowStyle(value: Opacity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shadowStyle")(value.asInstanceOf[js.Any])
         ret

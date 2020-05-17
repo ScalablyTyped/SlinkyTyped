@@ -1,8 +1,8 @@
 package typingsSlinky.reactYoutube.mod
 
-import typingsSlinky.reactYoutube.AnonData
-import typingsSlinky.reactYoutube.AnonDataTarget
-import typingsSlinky.reactYoutube.AnonTarget
+import typingsSlinky.reactYoutube.anon.Data
+import typingsSlinky.reactYoutube.anon.DataTarget
+import typingsSlinky.reactYoutube.anon.Target
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,14 +12,14 @@ trait YouTubeProps extends js.Object {
   var className: js.UndefOr[String] = js.native
   var containerClassName: js.UndefOr[String] = js.native
   var id: js.UndefOr[String] = js.native
-  var onEnd: js.UndefOr[js.Function1[/* event */ AnonData, Unit]] = js.native
-  var onError: js.UndefOr[js.Function1[/* event */ AnonData, Unit]] = js.native
-  var onPause: js.UndefOr[js.Function1[/* event */ AnonData, Unit]] = js.native
-  var onPlay: js.UndefOr[js.Function1[/* event */ AnonData, Unit]] = js.native
-  var onPlaybackQualityChange: js.UndefOr[js.Function1[/* event */ AnonDataTarget, Unit]] = js.native
-  var onPlaybackRateChange: js.UndefOr[js.Function1[/* event */ AnonData, Unit]] = js.native
-  var onReady: js.UndefOr[js.Function1[/* event */ AnonTarget, Unit]] = js.native
-  var onStateChange: js.UndefOr[js.Function1[/* event */ AnonData, Unit]] = js.native
+  var onEnd: js.UndefOr[js.Function1[/* event */ Data, Unit]] = js.native
+  var onError: js.UndefOr[js.Function1[/* event */ Data, Unit]] = js.native
+  var onPause: js.UndefOr[js.Function1[/* event */ Data, Unit]] = js.native
+  var onPlay: js.UndefOr[js.Function1[/* event */ Data, Unit]] = js.native
+  var onPlaybackQualityChange: js.UndefOr[js.Function1[/* event */ DataTarget, Unit]] = js.native
+  var onPlaybackRateChange: js.UndefOr[js.Function1[/* event */ Data, Unit]] = js.native
+  var onReady: js.UndefOr[js.Function1[/* event */ Target, Unit]] = js.native
+  var onStateChange: js.UndefOr[js.Function1[/* event */ Data, Unit]] = js.native
   var opts: js.UndefOr[Options] = js.native
   var videoId: js.UndefOr[String] = js.native
 }
@@ -73,7 +73,7 @@ object YouTubeProps {
         ret
     }
     @scala.inline
-    def withOnEnd(value: /* event */ AnonData => Unit): Self = {
+    def withOnEnd(value: /* event */ Data => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(js.Any.fromFunction1(value))
         ret
@@ -85,7 +85,7 @@ object YouTubeProps {
         ret
     }
     @scala.inline
-    def withOnError(value: /* event */ AnonData => Unit): Self = {
+    def withOnError(value: /* event */ Data => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
         ret
@@ -97,7 +97,7 @@ object YouTubeProps {
         ret
     }
     @scala.inline
-    def withOnPause(value: /* event */ AnonData => Unit): Self = {
+    def withOnPause(value: /* event */ Data => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.Any.fromFunction1(value))
         ret
@@ -109,7 +109,7 @@ object YouTubeProps {
         ret
     }
     @scala.inline
-    def withOnPlay(value: /* event */ AnonData => Unit): Self = {
+    def withOnPlay(value: /* event */ Data => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.Any.fromFunction1(value))
         ret
@@ -121,7 +121,7 @@ object YouTubeProps {
         ret
     }
     @scala.inline
-    def withOnPlaybackQualityChange(value: /* event */ AnonDataTarget => Unit): Self = {
+    def withOnPlaybackQualityChange(value: /* event */ DataTarget => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaybackQualityChange")(js.Any.fromFunction1(value))
         ret
@@ -133,7 +133,7 @@ object YouTubeProps {
         ret
     }
     @scala.inline
-    def withOnPlaybackRateChange(value: /* event */ AnonData => Unit): Self = {
+    def withOnPlaybackRateChange(value: /* event */ Data => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaybackRateChange")(js.Any.fromFunction1(value))
         ret
@@ -145,7 +145,7 @@ object YouTubeProps {
         ret
     }
     @scala.inline
-    def withOnReady(value: /* event */ AnonTarget => Unit): Self = {
+    def withOnReady(value: /* event */ Target => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onReady")(js.Any.fromFunction1(value))
         ret
@@ -157,7 +157,7 @@ object YouTubeProps {
         ret
     }
     @scala.inline
-    def withOnStateChange(value: /* event */ AnonData => Unit): Self = {
+    def withOnStateChange(value: /* event */ Data => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onStateChange")(js.Any.fromFunction1(value))
         ret

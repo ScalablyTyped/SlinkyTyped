@@ -1,27 +1,14 @@
 package typingsSlinky.easeljs.createjs
 
 import typingsSlinky.createjsLib.createjs.Event
-import typingsSlinky.easeljs.Anon0
-import typingsSlinky.easeljs.AnonHandleEvent
+import typingsSlinky.easeljs.anon.HandleEvent
+import typingsSlinky.easeljs.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("createjs.MouseEvent")
 @js.native
-class MouseEvent protected () extends Event {
-  def this(
-    `type`: String,
-    bubbles: Boolean,
-    cancelable: Boolean,
-    stageX: Double,
-    stageY: Double,
-    nativeEvent: org.scalajs.dom.raw.MouseEvent,
-    pointerID: Double,
-    primary: Boolean,
-    rawX: Double,
-    rawY: Double
-  ) = this()
+trait MouseEvent extends Event {
   // properties
   var isTouch: Boolean = js.native
   var localX: Double = js.native
@@ -42,10 +29,10 @@ class MouseEvent protected () extends Event {
     listener: js.Function1[/* eventObj */ js.Object, Boolean | Unit],
     useCapture: Boolean
   ): js.Function = js.native
-  def addEventListener(`type`: String, listener: Anon0): js.Object = js.native
-  def addEventListener(`type`: String, listener: Anon0, useCapture: Boolean): js.Object = js.native
-  def addEventListener(`type`: String, listener: AnonHandleEvent): js.Object = js.native
-  def addEventListener(`type`: String, listener: AnonHandleEvent, useCapture: Boolean): js.Object = js.native
+  def addEventListener(`type`: String, listener: HandleEvent): js.Object = js.native
+  def addEventListener(`type`: String, listener: HandleEvent, useCapture: Boolean): js.Object = js.native
+  def addEventListener(`type`: String, listener: `0`): js.Object = js.native
+  def addEventListener(`type`: String, listener: `0`, useCapture: Boolean): js.Object = js.native
   def dispatchEvent(eventObj: String): Boolean = js.native
   def dispatchEvent(eventObj: String, target: js.Object): Boolean = js.native
   def dispatchEvent(eventObj: js.Object): Boolean = js.native
@@ -61,10 +48,10 @@ class MouseEvent protected () extends Event {
     useCapture: Boolean
   ): Unit = js.native
   def off(`type`: String, listener: js.Function, useCapture: Boolean): Unit = js.native
-  def off(`type`: String, listener: Anon0): Unit = js.native
-  def off(`type`: String, listener: Anon0, useCapture: Boolean): Unit = js.native
-  def off(`type`: String, listener: AnonHandleEvent): Unit = js.native
-  def off(`type`: String, listener: AnonHandleEvent, useCapture: Boolean): Unit = js.native
+  def off(`type`: String, listener: HandleEvent): Unit = js.native
+  def off(`type`: String, listener: HandleEvent, useCapture: Boolean): Unit = js.native
+  def off(`type`: String, listener: `0`): Unit = js.native
+  def off(`type`: String, listener: `0`, useCapture: Boolean): Unit = js.native
    // It is necessary for "arguments.callee"
   def on(`type`: String, listener: js.Function1[/* eventObj */ js.Object, Boolean | Unit]): js.Function = js.native
   def on(`type`: String, listener: js.Function1[/* eventObj */ js.Object, Boolean | Unit], scope: js.Object): js.Function = js.native
@@ -89,30 +76,23 @@ class MouseEvent protected () extends Event {
     data: js.Any,
     useCapture: Boolean
   ): js.Function = js.native
-  def on(`type`: String, listener: Anon0): js.Object = js.native
-  def on(`type`: String, listener: Anon0, scope: js.Object): js.Object = js.native
-  def on(`type`: String, listener: Anon0, scope: js.Object, once: Boolean): js.Object = js.native
-  def on(`type`: String, listener: Anon0, scope: js.Object, once: Boolean, data: js.Any): js.Object = js.native
+  def on(`type`: String, listener: HandleEvent): js.Object = js.native
+  def on(`type`: String, listener: HandleEvent, scope: js.Object): js.Object = js.native
+  def on(`type`: String, listener: HandleEvent, scope: js.Object, once: Boolean): js.Object = js.native
+  def on(`type`: String, listener: HandleEvent, scope: js.Object, once: Boolean, data: js.Any): js.Object = js.native
   def on(
     `type`: String,
-    listener: Anon0,
+    listener: HandleEvent,
     scope: js.Object,
     once: Boolean,
     data: js.Any,
     useCapture: Boolean
   ): js.Object = js.native
-  def on(`type`: String, listener: AnonHandleEvent): js.Object = js.native
-  def on(`type`: String, listener: AnonHandleEvent, scope: js.Object): js.Object = js.native
-  def on(`type`: String, listener: AnonHandleEvent, scope: js.Object, once: Boolean): js.Object = js.native
-  def on(`type`: String, listener: AnonHandleEvent, scope: js.Object, once: Boolean, data: js.Any): js.Object = js.native
-  def on(
-    `type`: String,
-    listener: AnonHandleEvent,
-    scope: js.Object,
-    once: Boolean,
-    data: js.Any,
-    useCapture: Boolean
-  ): js.Object = js.native
+  def on(`type`: String, listener: `0`): js.Object = js.native
+  def on(`type`: String, listener: `0`, scope: js.Object): js.Object = js.native
+  def on(`type`: String, listener: `0`, scope: js.Object, once: Boolean): js.Object = js.native
+  def on(`type`: String, listener: `0`, scope: js.Object, once: Boolean, data: js.Any): js.Object = js.native
+  def on(`type`: String, listener: `0`, scope: js.Object, once: Boolean, data: js.Any, useCapture: Boolean): js.Object = js.native
   def removeAllEventListeners(): Unit = js.native
   def removeAllEventListeners(`type`: String): Unit = js.native
   def removeEventListener(`type`: String, listener: js.Function): Unit = js.native
@@ -123,10 +103,10 @@ class MouseEvent protected () extends Event {
     useCapture: Boolean
   ): Unit = js.native
   def removeEventListener(`type`: String, listener: js.Function, useCapture: Boolean): Unit = js.native
-  def removeEventListener(`type`: String, listener: Anon0): Unit = js.native
-  def removeEventListener(`type`: String, listener: Anon0, useCapture: Boolean): Unit = js.native
-  def removeEventListener(`type`: String, listener: AnonHandleEvent): Unit = js.native
-  def removeEventListener(`type`: String, listener: AnonHandleEvent, useCapture: Boolean): Unit = js.native
+  def removeEventListener(`type`: String, listener: HandleEvent): Unit = js.native
+  def removeEventListener(`type`: String, listener: HandleEvent, useCapture: Boolean): Unit = js.native
+  def removeEventListener(`type`: String, listener: `0`): Unit = js.native
+  def removeEventListener(`type`: String, listener: `0`, useCapture: Boolean): Unit = js.native
   def willTrigger(`type`: String): Boolean = js.native
 }
 

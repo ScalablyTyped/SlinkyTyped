@@ -4,14 +4,14 @@ import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable3
 import org.scalablytyped.runtime.Instantiable4
-import typingsSlinky.jimp.AnonAutoGreyscale
-import typingsSlinky.jimp.AnonB
-import typingsSlinky.jimp.AnonCropOnlyFrames
-import typingsSlinky.jimp.AnonIdx
-import typingsSlinky.jimp.AnonImage
-import typingsSlinky.jimp.AnonOpacity
-import typingsSlinky.jimp.AnonR
-import typingsSlinky.jimp.AnonRadius
+import typingsSlinky.jimp.anon.AutoGreyscale
+import typingsSlinky.jimp.anon.B
+import typingsSlinky.jimp.anon.CropOnlyFrames
+import typingsSlinky.jimp.anon.Idx
+import typingsSlinky.jimp.anon.Image
+import typingsSlinky.jimp.anon.Opacity
+import typingsSlinky.jimp.anon.R
+import typingsSlinky.jimp.anon.Radius
 import typingsSlinky.jimp.jimpNumbers.`-1`
 import typingsSlinky.jimp.jimpNumbers.`0`
 import typingsSlinky.jimp.jimpNumbers.`16`
@@ -151,8 +151,8 @@ Instantiable1[
   def autocrop(): this.type = js.native
   def autocrop(cropOnlyFrames: Boolean): this.type = js.native
   def autocrop(cropOnlyFrames: Boolean, cb: ImageCallback[_]): this.type = js.native
-  def autocrop(options: AnonCropOnlyFrames): this.type = js.native
-  def autocrop(options: AnonCropOnlyFrames, cb: ImageCallback[_]): this.type = js.native
+  def autocrop(options: CropOnlyFrames): this.type = js.native
+  def autocrop(options: CropOnlyFrames, cb: ImageCallback[_]): this.type = js.native
   def autocrop(tolerance: Double): this.type = js.native
   def autocrop(tolerance: Double, cb: ImageCallback[_]): this.type = js.native
   def autocrop(tolerance: Double, cropOnlyFrames: Boolean): this.type = js.native
@@ -182,8 +182,8 @@ Instantiable1[
   def brightness(`val`: Double, cb: ImageCallback[_]): this.type = js.native
   def circle(): this.type = js.native
   def circle(cb: ImageCallback[_]): this.type = js.native
-  def circle(options: AnonRadius): this.type = js.native
-  def circle(options: AnonRadius, cb: ImageCallback[_]): this.type = js.native
+  def circle(options: Radius): this.type = js.native
+  def circle(options: Radius, cb: ImageCallback[_]): this.type = js.native
   def clone(cb: ImageCallback[_]): this.type = js.native
   def cloneQuiet(): this.type = js.native
   def cloneQuiet(cb: ImageCallback[_]): this.type = js.native
@@ -245,8 +245,8 @@ Instantiable1[
   def deflateLevel(l: Double, cb: ImageCallback[_]): this.type = js.native
   def deflateStrategy(s: Double): this.type = js.native
   def deflateStrategy(s: Double, cb: ImageCallback[_]): this.type = js.native
-  def diff(img1: this.type, img2: this.type): AnonImage = js.native
-  def diff(img1: this.type, img2: this.type, threshold: Double): AnonImage = js.native
+  def diff(img1: this.type, img2: this.type): Image = js.native
+  def diff(img1: this.type, img2: this.type, threshold: Double): Image = js.native
   def displace(map: DepreciatedJimp, offset: Double): this.type = js.native
   def displace(map: DepreciatedJimp, offset: Double, cb: ImageCallback[_]): this.type = js.native
   def distance(img1: this.type, img2: this.type): Double = js.native
@@ -261,8 +261,8 @@ Instantiable1[
   def filterType(f: Double, cb: ImageCallback[_]): this.type = js.native
   def fishEye(): this.type = js.native
   def fishEye(cb: ImageCallback[_]): this.type = js.native
-  def fishEye(opts: AnonR): this.type = js.native
-  def fishEye(opts: AnonR, cb: ImageCallback[_]): this.type = js.native
+  def fishEye(opts: R): this.type = js.native
+  def fishEye(opts: R, cb: ImageCallback[_]): this.type = js.native
   def flip(horizontal: Boolean, vertical: Boolean): this.type = js.native
   def flip(horizontal: Boolean, vertical: Boolean, cb: ImageCallback[_]): this.type = js.native
   def gaussian(r: Double): this.type = js.native
@@ -289,12 +289,11 @@ Instantiable1[
   def greyscale(cb: ImageCallback[_]): this.type = js.native
   def hasAlpha(): Boolean = js.native
   def hash(): String = js.native
-  def hash(base: js.UndefOr[scala.Nothing], cb: GenericCallback[String, _, this.type]): String = js.native
   def hash(base: Double): String = js.native
   def hash(base: Double, cb: GenericCallback[String, _, this.type]): String = js.native
   def hash(base: Null, cb: GenericCallback[String, _, this.type]): String = js.native
   def hash(cb: GenericCallback[String, _, this.type]): String = js.native
-  def histogram(): AnonB = js.native
+  def histogram(): B = js.native
   def inspect(): String = js.native
   def intToRGBA(i: Double): RGBA = js.native
   def intToRGBA(i: Double, cb: GenericCallback[RGBA, _, _]): RGBA = js.native
@@ -318,7 +317,6 @@ Instantiable1[
   def opaque(): this.type = js.native
   def opaque(cb: ImageCallback[_]): this.type = js.native
   def parseBitmap(data: Buffer): Unit = js.native
-  def parseBitmap(data: Buffer, path: js.UndefOr[scala.Nothing], cb: ImageCallback[_]): Unit = js.native
   def parseBitmap(data: Buffer, path: String): Unit = js.native
   def parseBitmap(data: Buffer, path: String, cb: ImageCallback[_]): Unit = js.native
   def parseBitmap(data: Buffer, path: Null, cb: ImageCallback[_]): Unit = js.native
@@ -388,7 +386,7 @@ Instantiable1[
     f: js.ThisFunction3[/* this */ this.type, /* x */ Double, /* y */ Double, /* idx */ Double, _],
     cb: ImageCallback[_]
   ): this.type = js.native
-  def scanIterator(x: Double, y: Double, w: Double, h: Double): IterableIterator[AnonIdx] = js.native
+  def scanIterator(x: Double, y: Double, w: Double, h: Double): IterableIterator[Idx] = js.native
   def scanQuiet(
     x: Double,
     y: Double,
@@ -412,10 +410,10 @@ Instantiable1[
   def setPixelColour(hex: Double, x: Double, y: Double, cb: ImageCallback[_]): this.type = js.native
   def shadow(): this.type = js.native
   def shadow(cb: ImageCallback[_]): this.type = js.native
-  def shadow(options: AnonOpacity): this.type = js.native
-  def shadow(options: AnonOpacity, cb: ImageCallback[_]): this.type = js.native
-  def threshold(opts: AnonAutoGreyscale): this.type = js.native
-  def threshold(opts: AnonAutoGreyscale, cb: ImageCallback[_]): this.type = js.native
+  def shadow(options: Opacity): this.type = js.native
+  def shadow(options: Opacity, cb: ImageCallback[_]): this.type = js.native
+  def threshold(opts: AutoGreyscale): this.type = js.native
+  def threshold(opts: AutoGreyscale, cb: ImageCallback[_]): this.type = js.native
   def write(path: String): this.type = js.native
   def write(path: String, cb: ImageCallback[_]): this.type = js.native
   def writeAsync(path: String): js.Promise[this.type] = js.native

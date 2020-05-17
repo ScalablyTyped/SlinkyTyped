@@ -12,8 +12,8 @@ import typingsSlinky.puppeteer.puppeteerNumbers.`4`
 import typingsSlinky.puppeteer.puppeteerNumbers.`5`
 import typingsSlinky.puppeteer.puppeteerNumbers.`6`
 import typingsSlinky.puppeteer.puppeteerNumbers.`7`
-import typingsSlinky.std.AnonCopyWithin
 import typingsSlinky.std.IterableIterator
+import typingsSlinky.std.anon.CopyWithin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +33,7 @@ object devices extends TopLevel[(/* key */ StringDictionary[Device]) with (/* n 
     * when they will be absent when used in a 'with' statement.
     */
   @JSName(js.Symbol.unscopables)
-  var unscopables: js.Function0[AnonCopyWithin] = js.native
+  var unscopables: js.Function0[CopyWithin] = js.native
   /**
     * Combines two or more arrays.
     * @param items Additional items to add to the end of array1.

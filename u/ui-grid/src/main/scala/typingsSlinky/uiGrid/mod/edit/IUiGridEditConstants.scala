@@ -1,6 +1,6 @@
 package typingsSlinky.uiGrid.mod.edit
 
-import typingsSlinky.uiGrid.AnonBEGINCELLEDIT
+import typingsSlinky.uiGrid.anon.BEGINCELLEDIT
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait IUiGridEditConstants extends js.Object {
   var EDITABLE_CELL_DIRECTIVE: String = js.native
   var EDITABLE_CELL_TEMPLATE: String = js.native
-  var events: AnonBEGINCELLEDIT = js.native
+  var events: BEGINCELLEDIT = js.native
 }
 
 object IUiGridEditConstants {
   @scala.inline
-  def apply(EDITABLE_CELL_DIRECTIVE: String, EDITABLE_CELL_TEMPLATE: String, events: AnonBEGINCELLEDIT): IUiGridEditConstants = {
+  def apply(EDITABLE_CELL_DIRECTIVE: String, EDITABLE_CELL_TEMPLATE: String, events: BEGINCELLEDIT): IUiGridEditConstants = {
     val __obj = js.Dynamic.literal(EDITABLE_CELL_DIRECTIVE = EDITABLE_CELL_DIRECTIVE.asInstanceOf[js.Any], EDITABLE_CELL_TEMPLATE = EDITABLE_CELL_TEMPLATE.asInstanceOf[js.Any], events = events.asInstanceOf[js.Any])
     __obj.asInstanceOf[IUiGridEditConstants]
   }
@@ -37,7 +37,7 @@ object IUiGridEditConstants {
         ret
     }
     @scala.inline
-    def withEvents(value: AnonBEGINCELLEDIT): Self = {
+    def withEvents(value: BEGINCELLEDIT): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
         ret

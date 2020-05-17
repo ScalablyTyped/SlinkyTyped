@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.listListMod
 
-import typingsSlinky.officeUiFabricReact.AnonOnRenderCell
+import typingsSlinky.officeUiFabricReact.anon.OnRenderCell
 import typingsSlinky.officeUiFabricReact.listTypesMod.IList
 import typingsSlinky.officeUiFabricReact.listTypesMod.IListProps
 import typingsSlinky.react.mod.Component
@@ -120,6 +120,6 @@ class List[T] protected ()
 @JSImport("office-ui-fabric-react/lib/components/List/List", "List")
 @js.native
 object List extends js.Object {
-  var defaultProps: AnonOnRenderCell = js.native
+  var defaultProps: OnRenderCell = js.native
 }
 

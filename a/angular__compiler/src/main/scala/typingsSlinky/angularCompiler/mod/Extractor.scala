@@ -1,6 +1,5 @@
 package typingsSlinky.angularCompiler.mod
 
-import typingsSlinky.angularCompiler.AnonExtractor
 import typingsSlinky.angularCompiler.extractorMod.ExtractorHost
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +21,7 @@ class Extractor protected ()
 @JSImport("@angular/compiler", "Extractor")
 @js.native
 object Extractor extends js.Object {
-  def create(host: ExtractorHost): AnonExtractor = js.native
-  def create(host: ExtractorHost, locale: String): AnonExtractor = js.native
+  def create(host: ExtractorHost): typingsSlinky.angularCompiler.anon.Extractor = js.native
+  def create(host: ExtractorHost, locale: String): typingsSlinky.angularCompiler.anon.Extractor = js.native
 }
 

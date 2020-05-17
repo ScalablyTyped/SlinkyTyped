@@ -1,7 +1,7 @@
 package typingsSlinky.antDesignReactNative.tabBarItemMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.antDesignReactNative.AnonBadge
+import typingsSlinky.antDesignReactNative.anon.Badge
 import typingsSlinky.antDesignReactNative.libStyleMod.Theme
 import typingsSlinky.antDesignReactNative.tabBarPropsTypeMod.TabBarIcon
 import typingsSlinky.reactNative.mod.ImageStyle
@@ -20,7 +20,7 @@ trait TabBarItemProps extends js.Object {
   var renderAsOriginal: js.UndefOr[Boolean] = js.native
   var selected: js.UndefOr[Boolean] = js.native
   var selectedIcon: js.UndefOr[TabBarIcon] = js.native
-  var styles: js.UndefOr[ReturnType[js.Function1[/* theme */ Theme, AnonBadge]]] = js.native
+  var styles: js.UndefOr[ReturnType[js.Function1[/* theme */ Theme, Badge]]] = js.native
   var tintColor: js.UndefOr[String] = js.native
   var title: String = js.native
   var unselectedTintColor: js.UndefOr[String] = js.native
@@ -147,7 +147,7 @@ object TabBarItemProps {
         ret
     }
     @scala.inline
-    def withStyles(value: ReturnType[js.Function1[/* theme */ Theme, AnonBadge]]): Self = {
+    def withStyles(value: ReturnType[js.Function1[/* theme */ Theme, Badge]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
         ret

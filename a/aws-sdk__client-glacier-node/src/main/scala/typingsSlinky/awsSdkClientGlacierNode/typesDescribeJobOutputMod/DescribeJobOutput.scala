@@ -6,7 +6,7 @@ import typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.InPr
 import typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.InventoryRetrieval
 import typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.Select
 import typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.Succeeded
-import typingsSlinky.awsSdkClientGlacierNode.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientGlacierNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientGlacierNode.typesInventoryRetrievalJobDescriptionMod.UnmarshalledInventoryRetrievalJobDescription
 import typingsSlinky.awsSdkClientGlacierNode.typesOutputLocationMod.UnmarshalledOutputLocation
 import typingsSlinky.awsSdkClientGlacierNode.typesSelectParametersMod.UnmarshalledSelectParameters
@@ -16,7 +16,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DescribeJobOutput extends _OutputTypesUnion {
+trait DescribeJobOutput extends OutputTypesUnion {
   /**
     * Metadata about the response received, including the HTTP status code, HTTP headers, and any request identifiers recognized by the SDK.
     */

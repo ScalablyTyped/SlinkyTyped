@@ -1,12 +1,12 @@
 package typingsSlinky.firebaseFirestore
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.IDBFactory
 import org.scalajs.dom.raw.Storage
 import org.scalajs.dom.raw.VisibilityState
+import org.scalajs.dom.raw.Window
 import typingsSlinky.firebaseFirestore.platformPlatformMod.Platform
-import typingsSlinky.std.Document_
 import typingsSlinky.std.EventListener
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,10 +61,10 @@ object utilTestPlatformMod extends js.Object {
     @JSName("base64Available")
     def base64Available_MTestPlatform: Boolean = js.native
     @JSName("document")
-    def document_MTestPlatform: Document_ | Null = js.native
+    def document_MTestPlatform: Document | Null = js.native
     def raiseVisibilityEvent(visibility: VisibilityState): Unit = js.native
     @JSName("window")
-    def window_MTestPlatform: Window_ | Null = js.native
+    def window_MTestPlatform: Window | Null = js.native
   }
   
 }

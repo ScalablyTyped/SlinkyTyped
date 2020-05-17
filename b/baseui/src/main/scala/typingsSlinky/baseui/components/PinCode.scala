@@ -8,7 +8,7 @@ import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonValues
+import typingsSlinky.baseui.anon.Values
 import typingsSlinky.baseui.baseuiStrings.both
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
@@ -115,7 +115,7 @@ object PinCode {
   
   def withProps(p: PinCodeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(onChange: AnonValues => Unit, values: js.Array[String]): Builder = {
+  def apply(onChange: Values => Unit, values: js.Array[String]): Builder = {
     val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange), values = values.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[PinCodeProps]))
   }

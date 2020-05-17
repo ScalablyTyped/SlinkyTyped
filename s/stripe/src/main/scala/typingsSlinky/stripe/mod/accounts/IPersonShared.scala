@@ -1,7 +1,7 @@
 package typingsSlinky.stripe.mod.accounts
 
-import typingsSlinky.stripe.AnonDay
-import typingsSlinky.stripe.AnonDirector
+import typingsSlinky.stripe.anon.Day
+import typingsSlinky.stripe.anon.Director
 import typingsSlinky.stripe.mod.IAddress
 import typingsSlinky.stripe.mod.IAddressKana
 import typingsSlinky.stripe.mod.IAddressKanji
@@ -32,7 +32,7 @@ trait IPersonShared extends js.Object {
   /**
     * The person’s date of birth.
     */
-  var dob: js.UndefOr[AnonDay] = js.native
+  var dob: js.UndefOr[Day] = js.native
   /**
     * The person’s email address.
     */
@@ -76,7 +76,7 @@ trait IPersonShared extends js.Object {
   /**
     * Describes the person’s relationship to the account.
     */
-  var relationship: js.UndefOr[AnonDirector] = js.native
+  var relationship: js.UndefOr[Director] = js.native
 }
 
 object IPersonShared {
@@ -140,7 +140,7 @@ object IPersonShared {
         ret
     }
     @scala.inline
-    def withDob(value: AnonDay): Self = {
+    def withDob(value: Day): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dob")(value.asInstanceOf[js.Any])
         ret
@@ -272,7 +272,7 @@ object IPersonShared {
         ret
     }
     @scala.inline
-    def withRelationship(value: AnonDirector): Self = {
+    def withRelationship(value: Director): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("relationship")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.charges
 
-import typingsSlinky.stripe.AnonAmountDestination
+import typingsSlinky.stripe.anon.AmountDestination
 import typingsSlinky.stripe.mod.IDataOptionsWithMetadata
 import typingsSlinky.stripe.mod.IShippingInformation
 import typingsSlinky.stripe.mod.cards.ICardSourceCreationOptions
@@ -97,7 +97,7 @@ trait IChargeCreationOptions extends IDataOptionsWithMetadata {
     * An optional dictionary including the account to automatically transfer
     * to as part of a destination charge. See the Connect documentation for details.
     */
-  var transfer_data: js.UndefOr[AnonAmountDestination] = js.native
+  var transfer_data: js.UndefOr[AmountDestination] = js.native
   /**
     * A string that identifies this transaction as part of a group.
     * See the Connect documentation for details.
@@ -252,7 +252,7 @@ object IChargeCreationOptions {
         ret
     }
     @scala.inline
-    def withTransfer_data(value: AnonAmountDestination): Self = {
+    def withTransfer_data(value: AmountDestination): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("transfer_data")(value.asInstanceOf[js.Any])
         ret

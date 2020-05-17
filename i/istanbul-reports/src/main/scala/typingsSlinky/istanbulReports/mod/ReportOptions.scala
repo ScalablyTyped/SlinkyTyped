@@ -1,7 +1,7 @@
 package typingsSlinky.istanbulReports.mod
 
-import typingsSlinky.istanbulReports.OptionsblockNamestring
-import typingsSlinky.istanbulReports.OptionsmaxColsnumber
+import typingsSlinky.istanbulReports.anon.OptionsblockNamestring
+import typingsSlinky.istanbulReports.anon.OptionsmaxColsnumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

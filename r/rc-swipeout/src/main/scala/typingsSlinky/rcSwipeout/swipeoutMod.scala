@@ -1,6 +1,7 @@
 package typingsSlinky.rcSwipeout
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.rcSwipeout.anon.AutoClose
 import typingsSlinky.rcSwipeout.propTypesMod.IPropTypes
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -51,7 +52,7 @@ object swipeoutMod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var defaultProps: AnonAutoClose = js.native
+    var defaultProps: AutoClose = js.native
   }
   
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.thrift.mod
 
-import typingsSlinky.thrift.AnonInstantiable
+import typingsSlinky.thrift.anon.Instantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ServiceOptions[TProcessor, THandler] extends js.Object {
   var handler: js.UndefOr[THandler] = js.native
-  var processor: js.UndefOr[AnonInstantiable[THandler, TProcessor]] = js.native
+  var processor: js.UndefOr[Instantiable[THandler, TProcessor]] = js.native
   var protocol: js.UndefOr[TProtocolConstructor] = js.native
   var transport: js.UndefOr[TTransportConstructor] = js.native
 }
@@ -38,7 +38,7 @@ object ServiceOptions {
         ret
     }
     @scala.inline
-    def withProcessor(value: AnonInstantiable[THandler, TProcessor]): Self[TProcessor, THandler] = {
+    def withProcessor(value: Instantiable[THandler, TProcessor]): Self[TProcessor, THandler] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("processor")(value.asInstanceOf[js.Any])
         ret

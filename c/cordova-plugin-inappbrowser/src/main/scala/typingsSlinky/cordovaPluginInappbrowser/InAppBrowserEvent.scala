@@ -1,12 +1,12 @@
 package typingsSlinky.cordovaPluginInappbrowser
 
-import typingsSlinky.std.Event_
+import typingsSlinky.std.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait InAppBrowserEvent extends Event_ {
+trait InAppBrowserEvent extends Event {
   /** the error code, only in the case of loaderror. */
   var code: Double = js.native
   /** the error message, only in the case of loaderror. */

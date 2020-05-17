@@ -5,11 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.widget.OverScroller")
 @js.native
-class OverScroller () extends js.Object {
-  def this(interpolator: Interpolator) = this()
-  def this(interpolator: Interpolator, flywheel: Boolean) = this()
+trait OverScroller extends js.Object {
   var mFlywheel: js.Any = js.native
   var mInterpolator: js.Any = js.native
   var mMode: js.Any = js.native
@@ -70,14 +67,5 @@ class OverScroller () extends js.Object {
   def startScroll(startX: Double, startY: Double, dx: Double, dy: Double): Unit = js.native
   def startScroll(startX: Double, startY: Double, dx: Double, dy: Double, duration: Double): Unit = js.native
   def timePassed(): Double = js.native
-}
-
-/* static members */
-@JSGlobal("android.widget.OverScroller")
-@js.native
-object OverScroller extends js.Object {
-  var DEFAULT_DURATION: Double = js.native
-  var FLING_MODE: Double = js.native
-  var SCROLL_MODE: Double = js.native
 }
 

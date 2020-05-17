@@ -1,6 +1,5 @@
 package typingsSlinky.playcanvas.pc
 
-import typingsSlinky.playcanvas.AnonAtlas
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,11 +36,8 @@ import scala.scalajs.js.annotation._
   * @property {string[]} frameKeys The keys of the frames in the sprite atlas that this sprite is using.
   * @property {pc.Mesh[]} meshes An array that contains a mesh for each frame.
   */
-@JSGlobal("pc.Sprite")
 @js.native
-class Sprite protected () extends EventHandler {
-  def this(device: GraphicsDevice) = this()
-  def this(device: GraphicsDevice, options: AnonAtlas) = this()
+trait Sprite extends EventHandler {
   /**
     * The texture atlas.
     */

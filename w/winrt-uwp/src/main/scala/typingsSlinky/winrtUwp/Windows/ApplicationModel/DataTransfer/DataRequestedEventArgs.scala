@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains information about the DataRequested event. The system fires this event when the user invokes the Share UI. */
-@JSGlobal("Windows.ApplicationModel.DataTransfer.DataRequestedEventArgs")
 @js.native
-abstract class DataRequestedEventArgs () extends js.Object {
+trait DataRequestedEventArgs extends js.Object {
   /** Enables you to get the DataRequest object and either give it data or a failure message. */
   var request: DataRequest = js.native
+}
+
+object DataRequestedEventArgs {
+  @scala.inline
+  def apply(request: DataRequest): DataRequestedEventArgs = {
+    val __obj = js.Dynamic.literal(request = request.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DataRequestedEventArgs]
+  }
+  @scala.inline
+  implicit class DataRequestedEventArgsOps[Self <: DataRequestedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRequest(value: DataRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

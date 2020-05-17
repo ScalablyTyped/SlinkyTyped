@@ -1,10 +1,10 @@
 package typingsSlinky.oracleOraclejet.ojcolorpaletteMod
 
-import typingsSlinky.oracleOraclejet.AnonConverterHint
-import typingsSlinky.oracleOraclejet.AnonDefinition
-import typingsSlinky.oracleOraclejet.AnonInstruction
-import typingsSlinky.oracleOraclejet.AnonLabel
-import typingsSlinky.oracleOraclejet.AnonLabelNone
+import typingsSlinky.oracleOraclejet.anon.ConverterHint
+import typingsSlinky.oracleOraclejet.anon.Definition
+import typingsSlinky.oracleOraclejet.anon.Instruction
+import typingsSlinky.oracleOraclejet.anon.Label
+import typingsSlinky.oracleOraclejet.anon.LabelNone
 import typingsSlinky.oracleOraclejet.ojcolorMod.^
 import typingsSlinky.oracleOraclejet.ojeditablevalueMod.editableValueSettableProperties
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.auto
@@ -27,26 +27,26 @@ trait ojColorPaletteSettableProperties extends editableValueSettableProperties[^
   var labelDisplay: auto | off = js.native
   var labelledBy: String | Null = js.native
   var layout: grid | list = js.native
-  var palette: js.Array[AnonLabel] = js.native
+  var palette: js.Array[Label] = js.native
   var swatchSize: xs | sm | lg = js.native
   @JSName("translations")
-  var translations_ojColorPaletteSettableProperties: AnonLabelNone = js.native
+  var translations_ojColorPaletteSettableProperties: LabelNone = js.native
 }
 
 object ojColorPaletteSettableProperties {
   @scala.inline
   def apply(
     disabled: Boolean,
-    displayOptions: AnonConverterHint,
-    help: AnonInstruction,
-    helpHints: AnonDefinition,
+    displayOptions: ConverterHint,
+    help: Instruction,
+    helpHints: Definition,
     labelDisplay: auto | off,
     labelHint: String,
     layout: grid | list,
     messagesCustom: js.Array[typingsSlinky.oracleOraclejet.ojmessagingMod.^],
-    palette: js.Array[AnonLabel],
+    palette: js.Array[Label],
     swatchSize: xs | sm | lg,
-    translations: AnonLabelNone,
+    translations: LabelNone,
     valid: valid | pending | invalidHidden | invalidShown,
     value: ^
   ): ojColorPaletteSettableProperties = {
@@ -72,7 +72,7 @@ object ojColorPaletteSettableProperties {
         ret
     }
     @scala.inline
-    def withPalette(value: js.Array[AnonLabel]): Self = {
+    def withPalette(value: js.Array[Label]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("palette")(value.asInstanceOf[js.Any])
         ret
@@ -84,7 +84,7 @@ object ojColorPaletteSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelNone): Self = {
+    def withTranslations(value: LabelNone): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

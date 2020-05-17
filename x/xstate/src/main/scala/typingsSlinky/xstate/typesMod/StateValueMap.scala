@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait StateValueMap extends /* key */ StringDictionary[StateValue]
+trait StateValueMap
+  extends /* key */ StringDictionary[StateValue]
+     with StateValue
 
 object StateValueMap {
   @scala.inline

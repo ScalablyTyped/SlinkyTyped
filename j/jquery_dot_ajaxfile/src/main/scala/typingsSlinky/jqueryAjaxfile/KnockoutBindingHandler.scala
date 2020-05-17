@@ -1,5 +1,6 @@
 package typingsSlinky.jqueryAjaxfile
 
+import typingsSlinky.jqueryAjaxfile.anon.ControlsDescendantBindings
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +14,7 @@ trait KnockoutBindingHandler extends js.Object {
       /* allBindingsAccessor */ js.UndefOr[KnockoutAllBindingsAccessor], 
       /* viewModel */ js.UndefOr[js.Any], 
       /* bindingContext */ js.UndefOr[KnockoutBindingContext], 
-      Unit | AnonControlsDescendantBindings
+      Unit | ControlsDescendantBindings
     ]
   ] = js.native
   var options: js.UndefOr[js.Any] = js.native
@@ -51,7 +52,7 @@ object KnockoutBindingHandler {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
     def withInit(
-      value: (/* element */ js.Any, /* valueAccessor */ js.Function0[_], /* allBindingsAccessor */ js.UndefOr[KnockoutAllBindingsAccessor], /* viewModel */ js.UndefOr[js.Any], /* bindingContext */ js.UndefOr[KnockoutBindingContext]) => Unit | AnonControlsDescendantBindings
+      value: (/* element */ js.Any, /* valueAccessor */ js.Function0[_], /* allBindingsAccessor */ js.UndefOr[KnockoutAllBindingsAccessor], /* viewModel */ js.UndefOr[js.Any], /* bindingContext */ js.UndefOr[KnockoutBindingContext]) => Unit | ControlsDescendantBindings
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction5(value))

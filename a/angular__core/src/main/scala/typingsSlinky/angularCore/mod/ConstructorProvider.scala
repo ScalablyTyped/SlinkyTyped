@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ConstructorProvider
   extends ConstructorSansProvider
-     with _Provider
-     with _StaticProvider {
+     with Provider
+     with StaticProvider {
   /**
     * When true, injector returns an array of instances. This is useful to allow multiple
     * providers spread across many files to provide configuration information to a common token.

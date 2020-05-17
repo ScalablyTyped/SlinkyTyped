@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object typedObjectsMod {
-  type TypeOfTypeHint[T /* <: typingsSlinky.grammarkdown.typedObjectsMod.TypeHint */] = typingsSlinky.grammarkdown.typedObjectsMod.TypedObject[T] | js.Object | scala.Null | java.lang.String | scala.Double
   type TypeOfTypeObject[T /* <: typingsSlinky.grammarkdown.typedObjectsMod.TypeObject[
     typingsSlinky.grammarkdown.typedObjectsMod.TypeHint, 
     typingsSlinky.grammarkdown.typedObjectsMod.TypeOfTypeHint[typingsSlinky.grammarkdown.typedObjectsMod.TypeHint]

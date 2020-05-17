@@ -2,7 +2,7 @@ package typingsSlinky.ecol.mod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable3
-import typingsSlinky.tstl.Iteratoranyanyanyany
+import typingsSlinky.tstl.anon.Iteratoranyanyanyany
 import typingsSlinky.tstl.mapContainerMod.MapContainer
 import typingsSlinky.tstl.mod.base.Container
 import scala.scalajs.js

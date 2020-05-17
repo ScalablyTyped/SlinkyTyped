@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -534,7 +534,7 @@ object IgDateEditor {
         ret
     }
     @scala.inline
-    def withDropDownItemSelected(value: (/* event */ Event_, /* ui */ DropDownItemSelectedEventUIParam) => Unit): Self = {
+    def withDropDownItemSelected(value: (/* event */ Event, /* ui */ DropDownItemSelectedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownItemSelected")(js.Any.fromFunction2(value))
         ret
@@ -546,7 +546,7 @@ object IgDateEditor {
         ret
     }
     @scala.inline
-    def withDropDownItemSelecting(value: (/* event */ Event_, /* ui */ DropDownItemSelectingEventUIParam) => Unit): Self = {
+    def withDropDownItemSelecting(value: (/* event */ Event, /* ui */ DropDownItemSelectingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownItemSelecting")(js.Any.fromFunction2(value))
         ret
@@ -558,7 +558,7 @@ object IgDateEditor {
         ret
     }
     @scala.inline
-    def withDropDownListClosed(value: (/* event */ Event_, /* ui */ DropDownListClosedEventUIParam) => Unit): Self = {
+    def withDropDownListClosed(value: (/* event */ Event, /* ui */ DropDownListClosedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownListClosed")(js.Any.fromFunction2(value))
         ret
@@ -570,7 +570,7 @@ object IgDateEditor {
         ret
     }
     @scala.inline
-    def withDropDownListClosing(value: (/* event */ Event_, /* ui */ DropDownListClosingEventUIParam) => Unit): Self = {
+    def withDropDownListClosing(value: (/* event */ Event, /* ui */ DropDownListClosingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownListClosing")(js.Any.fromFunction2(value))
         ret
@@ -582,7 +582,7 @@ object IgDateEditor {
         ret
     }
     @scala.inline
-    def withDropDownListOpened(value: (/* event */ Event_, /* ui */ DropDownListOpenedEventUIParam) => Unit): Self = {
+    def withDropDownListOpened(value: (/* event */ Event, /* ui */ DropDownListOpenedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownListOpened")(js.Any.fromFunction2(value))
         ret
@@ -594,7 +594,7 @@ object IgDateEditor {
         ret
     }
     @scala.inline
-    def withDropDownListOpening(value: (/* event */ Event_, /* ui */ DropDownListOpeningEventUIParam) => Unit): Self = {
+    def withDropDownListOpening(value: (/* event */ Event, /* ui */ DropDownListOpeningEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownListOpening")(js.Any.fromFunction2(value))
         ret

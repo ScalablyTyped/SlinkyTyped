@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.BABYLON
 
-import typingsSlinky.babylonjs.AnonPressed
+import typingsSlinky.babylonjs.anon.Pressed
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +14,12 @@ trait IMinimalMotionControllerObject extends js.Object {
   /**
     * An array of available buttons
     */
-  var buttons: js.Array[AnonPressed] = js.native
+  var buttons: js.Array[Pressed] = js.native
 }
 
 object IMinimalMotionControllerObject {
   @scala.inline
-  def apply(axes: js.Array[Double], buttons: js.Array[AnonPressed]): IMinimalMotionControllerObject = {
+  def apply(axes: js.Array[Double], buttons: js.Array[Pressed]): IMinimalMotionControllerObject = {
     val __obj = js.Dynamic.literal(axes = axes.asInstanceOf[js.Any], buttons = buttons.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMinimalMotionControllerObject]
   }
@@ -36,7 +36,7 @@ object IMinimalMotionControllerObject {
         ret
     }
     @scala.inline
-    def withButtons(value: js.Array[AnonPressed]): Self = {
+    def withButtons(value: js.Array[Pressed]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
         ret

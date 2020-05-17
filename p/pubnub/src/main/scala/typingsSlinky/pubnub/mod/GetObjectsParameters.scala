@@ -1,16 +1,16 @@
 package typingsSlinky.pubnub.mod
 
-import typingsSlinky.pubnub.AnonCustomFields
-import typingsSlinky.pubnub.AnonNext
+import typingsSlinky.pubnub.anon.CustomFields
+import typingsSlinky.pubnub.anon.Next
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait GetObjectsParameters extends js.Object {
-  var include: js.UndefOr[AnonCustomFields] = js.native
+  var include: js.UndefOr[CustomFields] = js.native
   var limit: js.UndefOr[Double] = js.native
-  var page: js.UndefOr[AnonNext] = js.native
+  var page: js.UndefOr[Next] = js.native
 }
 
 object GetObjectsParameters {
@@ -26,7 +26,7 @@ object GetObjectsParameters {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withInclude(value: AnonCustomFields): Self = {
+    def withInclude(value: CustomFields): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("include")(value.asInstanceOf[js.Any])
         ret
@@ -50,7 +50,7 @@ object GetObjectsParameters {
         ret
     }
     @scala.inline
-    def withPage(value: AnonNext): Self = {
+    def withPage(value: Next): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
         ret

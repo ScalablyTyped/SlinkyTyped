@@ -34,18 +34,6 @@ object MockResultIncomplete {
         ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
         ret
     }
-    @scala.inline
-    def withValue(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutValue: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(js.undefined)
-        ret
-    }
   }
   
 }

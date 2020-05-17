@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PathToValueMap
   extends /* xpath */ StringDictionary[Value]
-     with _Value
+     with Value
 
 object PathToValueMap {
   @scala.inline

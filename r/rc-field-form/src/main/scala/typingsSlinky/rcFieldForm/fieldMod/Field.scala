@@ -3,8 +3,8 @@ package typingsSlinky.rcFieldForm.fieldMod
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.rcFieldForm.AnonChild
-import typingsSlinky.rcFieldForm.AnonResetCount
+import typingsSlinky.rcFieldForm.anon.Child
+import typingsSlinky.rcFieldForm.anon.ResetCount
 import typingsSlinky.rcFieldForm.interfaceMod.FormInstance
 import typingsSlinky.rcFieldForm.interfaceMod.InternalNamePath
 import typingsSlinky.rcFieldForm.interfaceMod.Meta
@@ -34,7 +34,7 @@ trait Field
   ] = js.native
   var prevValidating: js.Any = js.native
   @JSName("state")
-  var state_Field: AnonResetCount = js.native
+  var state_Field: ResetCount = js.native
   /**
     * Follow state should not management in State since it will async update by React.
     * This makes first render of form can not get correct state value.
@@ -51,16 +51,16 @@ trait Field
   def getErrors(): js.Array[String] = js.native
   def getMeta(): Meta = js.native
   def getNamePath(): InternalNamePath = js.native
-  def getOnlyChild(children: String): AnonChild = js.native
+  def getOnlyChild(children: String): Child = js.native
   def getOnlyChild(
     children: js.Function3[/* control */ ChildProps, /* meta */ Meta, /* context */ FormInstance, TagMod[Any]]
-  ): AnonChild = js.native
-  def getOnlyChild(children: js.Object): AnonChild = js.native
-  def getOnlyChild(children: Boolean): AnonChild = js.native
-  def getOnlyChild(children: Double): AnonChild = js.native
-  def getOnlyChild(children: ReactElement): AnonChild = js.native
-  def getOnlyChild(children: ReactNodeArray): AnonChild = js.native
-  def getOnlyChild(children: ReactPortal): AnonChild = js.native
+  ): Child = js.native
+  def getOnlyChild(children: js.Object): Child = js.native
+  def getOnlyChild(children: Boolean): Child = js.native
+  def getOnlyChild(children: Double): Child = js.native
+  def getOnlyChild(children: ReactElement): Child = js.native
+  def getOnlyChild(children: ReactNodeArray): Child = js.native
+  def getOnlyChild(children: ReactPortal): Child = js.native
   def getRules(): js.Array[RuleObject] = js.native
   def getValue(): js.Any = js.native
   def getValue(store: Store): js.Any = js.native

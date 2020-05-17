@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data for the orientation-sensor reading-changed event. */
-@JSGlobal("Windows.Devices.Sensors.OrientationSensorReadingChangedEventArgs")
 @js.native
-abstract class OrientationSensorReadingChangedEventArgs () extends js.Object {
+trait OrientationSensorReadingChangedEventArgs extends js.Object {
   /** Gets the current reading which includes a Quaternion, a RotationMatrix, and a timestamp. */
   var reading: OrientationSensorReading = js.native
+}
+
+object OrientationSensorReadingChangedEventArgs {
+  @scala.inline
+  def apply(reading: OrientationSensorReading): OrientationSensorReadingChangedEventArgs = {
+    val __obj = js.Dynamic.literal(reading = reading.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OrientationSensorReadingChangedEventArgs]
+  }
+  @scala.inline
+  implicit class OrientationSensorReadingChangedEventArgsOps[Self <: OrientationSensorReadingChangedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReading(value: OrientationSensorReading): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reading")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

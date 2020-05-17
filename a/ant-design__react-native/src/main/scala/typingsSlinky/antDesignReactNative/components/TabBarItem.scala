@@ -3,7 +3,6 @@ package typingsSlinky.antDesignReactNative.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignReactNative.AnonBadge
 import typingsSlinky.antDesignReactNative.libStyleMod.Theme
 import typingsSlinky.antDesignReactNative.tabBarItemMod.TabBarItemProps
 import typingsSlinky.antDesignReactNative.tabBarItemMod.default
@@ -45,7 +44,7 @@ object TabBarItem {
     @scala.inline
     def selectedIcon(value: TabBarIcon): this.type = set("selectedIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def styles(value: ReturnType[js.Function1[/* theme */ Theme, AnonBadge]]): this.type = set("styles", value.asInstanceOf[js.Any])
+    def styles(value: ReturnType[js.Function1[/* theme */ Theme, typingsSlinky.antDesignReactNative.anon.Badge]]): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline
     def tintColor(value: String): this.type = set("tintColor", value.asInstanceOf[js.Any])
     @scala.inline

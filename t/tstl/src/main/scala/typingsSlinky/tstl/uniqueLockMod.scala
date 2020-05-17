@@ -1,5 +1,9 @@
 package typingsSlinky.tstl
 
+import typingsSlinky.tstl.anon.PickILockablelockunlock
+import typingsSlinky.tstl.anon.PickILockabletrylockunloc
+import typingsSlinky.tstl.anon.PickITimedLockabletrylock
+import typingsSlinky.tstl.anon.PickITimedLockabletrylockTrylockuntil
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

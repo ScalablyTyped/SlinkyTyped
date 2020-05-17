@@ -15,9 +15,9 @@ package object mod {
     /* event */ slinky.web.SyntheticMouseEvent[js.Any], 
     scala.Unit
   ]
-  type LabelAccessor = js.Function1[/* datum */ typingsSlinky.nivoChord.OmitArcDatalabel, java.lang.String]
+  type LabelAccessor = js.Function1[/* datum */ typingsSlinky.nivoChord.anon.OmitArcDatalabel, java.lang.String]
   type ValueFormatter = js.Function1[
-    /* datum */ typingsSlinky.nivoChord.OmitArcDataformattedValue, 
+    /* datum */ typingsSlinky.nivoChord.anon.OmitArcDataformattedValue, 
     java.lang.String | scala.Double
   ]
 }

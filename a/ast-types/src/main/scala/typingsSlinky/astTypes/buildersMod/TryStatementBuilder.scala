@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonBlock
+import typingsSlinky.astTypes.anon.Block
 import typingsSlinky.astTypes.kindsMod.BlockStatementKind
 import typingsSlinky.astTypes.kindsMod.CatchClauseKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.TryStatement
@@ -14,6 +14,6 @@ trait TryStatementBuilder extends js.Object {
   def apply(block: BlockStatementKind, handler: Null, finalizer: BlockStatementKind): TryStatement = js.native
   def apply(block: BlockStatementKind, handler: CatchClauseKind): TryStatement = js.native
   def apply(block: BlockStatementKind, handler: CatchClauseKind, finalizer: BlockStatementKind): TryStatement = js.native
-  def from(params: AnonBlock): TryStatement = js.native
+  def from(params: Block): TryStatement = js.native
 }
 

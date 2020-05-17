@@ -1,6 +1,7 @@
 package typingsSlinky.actionsOnGoogle
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.actionsOnGoogle.anon.Type
 import typingsSlinky.debug.mod.IDebugger
 import typingsSlinky.node.httpMod.ClientRequest
 import typingsSlinky.node.httpMod.IncomingMessage
@@ -49,6 +50,6 @@ object commonMod extends js.Object {
   
   type ApiClientObjectMap[TValue] = StringDictionary[TValue]
   type JsonObject = StringDictionary[js.Any]
-  type ProtoAny[TType, TSpec] = AnonType[TType] with TSpec
+  type ProtoAny[TType, TSpec] = Type[TType] with TSpec
 }
 

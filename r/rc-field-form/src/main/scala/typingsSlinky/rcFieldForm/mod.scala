@@ -1,6 +1,8 @@
 package typingsSlinky.rcFieldForm
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.rcFieldForm.anon.Trigger
+import typingsSlinky.rcFieldForm.anon.TypeofField
 import typingsSlinky.rcFieldForm.formContextMod.FormProviderProps
 import typingsSlinky.rcFieldForm.formMod.FormProps
 import typingsSlinky.rcFieldForm.interfaceMod.FormInstance
@@ -37,7 +39,7 @@ object mod extends js.Object {
   @js.native
   object Field extends js.Object {
     var contextType: Context[InternalFormInstance] = js.native
-    var defaultProps: AnonTrigger = js.native
+    var defaultProps: Trigger = js.native
   }
   
   type InternalForm = ForwardRefExoticComponent[FormProps with RefAttributes[FormInstance]]

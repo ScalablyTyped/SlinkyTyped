@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.DocumentFragment
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Text
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait BootboxAlertOptions extends BootboxDialogOptions[Unit] {
 object BootboxAlertOptions {
   @scala.inline
   def apply(
-    message: JQuery_[HTMLElement] | js.Array[_] | Element | DocumentFragment | Text | String | (js.Function2[/* index */ Double, /* html */ String, String | Element | JQuery_[HTMLElement]])
+    message: JQuery[HTMLElement] | js.Array[_] | Element | DocumentFragment | Text | String | (js.Function2[/* index */ Double, /* html */ String, String | Element | JQuery[HTMLElement]])
   ): BootboxAlertOptions = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
     __obj.asInstanceOf[BootboxAlertOptions]

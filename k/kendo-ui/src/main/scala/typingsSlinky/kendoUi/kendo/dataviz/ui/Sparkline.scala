@@ -1,6 +1,5 @@
 package typingsSlinky.kendoUi.kendo.dataviz.ui
 
-import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.JQuery
 import typingsSlinky.kendoUi.JQueryPromise
 import typingsSlinky.kendoUi.kendo.data.DataSource
@@ -10,11 +9,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.dataviz.ui.Sparkline")
 @js.native
-class Sparkline protected () extends Widget {
-  def this(element: Element) = this()
-  def this(element: Element, options: SparklineOptions) = this()
+trait Sparkline extends Widget {
   var dataSource: DataSource = js.native
   @JSName("options")
   var options_Sparkline: SparklineOptions = js.native
@@ -28,13 +24,5 @@ class Sparkline protected () extends Widget {
   def setDataSource(dataSource: DataSource): Unit = js.native
   def setOptions(options: js.Any): Unit = js.native
   def svg(): String = js.native
-}
-
-/* static members */
-@JSGlobal("kendo.dataviz.ui.Sparkline")
-@js.native
-object Sparkline extends js.Object {
-  var fn: Sparkline = js.native
-  def extend(proto: js.Object): Sparkline = js.native
 }
 

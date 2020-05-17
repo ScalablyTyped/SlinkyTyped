@@ -3,7 +3,6 @@ package typingsSlinky.reactBootstrapTable.mod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Props
-import typingsSlinky.reactBootstrapTable.AnonFilter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +14,7 @@ trait BootstrapTableProps extends Props[BootstrapTable] {
   	 * Is an object with three possible fields: sort, filter, search. Each field is a flag to specify whether that
   	 * action type should cause expanded rows to close. All three fields default to false.
   	 */
-  var autoCollapse: js.UndefOr[AnonFilter] = js.native
+  var autoCollapse: js.UndefOr[typingsSlinky.reactBootstrapTable.anon.Filter] = js.native
   /**
   	 * Add your own class names on the react-bs-container-body class
   	 */
@@ -278,7 +277,7 @@ object BootstrapTableProps {
         ret
     }
     @scala.inline
-    def withAutoCollapse(value: AnonFilter): Self = {
+    def withAutoCollapse(value: typingsSlinky.reactBootstrapTable.anon.Filter): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("autoCollapse")(value.asInstanceOf[js.Any])
         ret

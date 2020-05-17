@@ -1,7 +1,7 @@
 package typingsSlinky.baseui.dndListMod
 
 import slinky.core.TagMod
-import typingsSlinky.baseui.AnonOldIndex
+import typingsSlinky.baseui.anon.OldIndex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ListProps extends js.Object {
   var items: js.UndefOr[js.Array[TagMod[Any]]] = js.native
-  var onChange: js.UndefOr[js.Function1[/* args */ AnonOldIndex, _]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* args */ OldIndex, _]] = js.native
   var overrides: js.UndefOr[ListOverrides] = js.native
   var removable: js.UndefOr[Boolean] = js.native
   var removableByMove: js.UndefOr[Boolean] = js.native
@@ -40,7 +40,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* args */ AnonOldIndex => _): Self = {
+    def withOnChange(value: /* args */ OldIndex => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

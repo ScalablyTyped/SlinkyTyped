@@ -1,8 +1,8 @@
 package typingsSlinky.antd.affixMod
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Window
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait AffixState extends js.Object {
   var affixStyle: js.UndefOr[CSSProperties] = js.native
   var lastAffix: Boolean = js.native
   var placeholderStyle: js.UndefOr[CSSProperties] = js.native
-  var prevTarget: Window_ | HTMLElement | Null = js.native
+  var prevTarget: Window | HTMLElement | Null = js.native
   var status: AffixStatus = js.native
 }
 
@@ -71,7 +71,13 @@ object AffixState {
         ret
     }
     @scala.inline
-    def withPrevTarget(value: Window_ | HTMLElement): Self = {
+    def withPrevTargetWindow(value: Window): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prevTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrevTarget(value: Window | HTMLElement): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("prevTarget")(value.asInstanceOf[js.Any])
         ret

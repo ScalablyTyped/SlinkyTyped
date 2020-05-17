@@ -1,6 +1,6 @@
 package typingsSlinky.copyWebpackPlugin.mod
 
-import typingsSlinky.copyWebpackPlugin.AnonKey
+import typingsSlinky.copyWebpackPlugin.anon.Key
 import typingsSlinky.copyWebpackPlugin.copyWebpackPluginStrings.dir
 import typingsSlinky.copyWebpackPlugin.copyWebpackPluginStrings.file
 import typingsSlinky.copyWebpackPlugin.copyWebpackPluginStrings.template
@@ -16,7 +16,7 @@ trait CopyPattern extends js.Object {
   	 * 
   	 * You can use `{ key: 'my-cache-key' }` to invalidate the cache.  
   	 * */
-  var cache: js.UndefOr[Boolean | AnonKey] = js.native
+  var cache: js.UndefOr[Boolean | Key] = js.native
   /** A path that determines how to interpret the `from` path. 
   	 * 
   	 * (default: `options.context | compiler.options.context`) 
@@ -94,7 +94,7 @@ object CopyPattern {
         ret
     }
     @scala.inline
-    def withCache(value: Boolean | AnonKey): Self = {
+    def withCache(value: Boolean | Key): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
         ret

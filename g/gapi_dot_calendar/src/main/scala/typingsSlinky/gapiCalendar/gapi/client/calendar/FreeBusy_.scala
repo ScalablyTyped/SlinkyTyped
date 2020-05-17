@@ -1,7 +1,7 @@
 package typingsSlinky.gapiCalendar.gapi.client.calendar
 
-import typingsSlinky.gapiCalendar.AnonBusy
-import typingsSlinky.gapiCalendar.AnonCalendars
+import typingsSlinky.gapiCalendar.anon.Busy
+import typingsSlinky.gapiCalendar.anon.Calendars
 import typingsSlinky.gapiCalendar.gapiCalendarStrings.calendarNumbersignfreeBusy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,15 +12,15 @@ trait FreeBusy_ extends js.Object {
   var kind: calendarNumbersignfreeBusy = js.native
   var timeMax: datetime = js.native
   var timeMin: datetime = js.native
-  def calendars(key: String): AnonBusy = js.native
-  def groups(key: String): AnonCalendars = js.native
+  def calendars(key: String): Busy = js.native
+  def groups(key: String): Calendars = js.native
 }
 
 object FreeBusy_ {
   @scala.inline
   def apply(
-    calendars: String => AnonBusy,
-    groups: String => AnonCalendars,
+    calendars: String => Busy,
+    groups: String => Calendars,
     kind: calendarNumbersignfreeBusy,
     timeMax: datetime,
     timeMin: datetime
@@ -35,13 +35,13 @@ object FreeBusy_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCalendars(value: String => AnonBusy): Self = {
+    def withCalendars(value: String => Busy): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("calendars")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGroups(value: String => AnonCalendars): Self = {
+    def withGroups(value: String => Calendars): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(js.Any.fromFunction1(value))
         ret

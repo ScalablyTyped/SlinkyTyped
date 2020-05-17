@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ModelFullField[Field, Doc] extends js.Object {
+trait ModelFullField[Field, Doc] extends ModelField[Field, Doc] {
   var default: js.UndefOr[js.Function0[Field]] = js.native
   var immutable: js.UndefOr[Boolean] = js.native
   var index: js.UndefOr[String | Double] = js.native

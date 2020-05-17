@@ -4,8 +4,8 @@ import org.scalajs.dom.raw.MouseEvent
 import slinky.core.TagMod
 import typingsSlinky.photoswipe.mod.Item
 import typingsSlinky.photoswipe.mod.Options
-import typingsSlinky.reactPhotoswipe.AnonPrevent
-import typingsSlinky.reactPhotoswipe.AnonX
+import typingsSlinky.reactPhotoswipe.anon.Prevent
+import typingsSlinky.reactPhotoswipe.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,7 +52,7 @@ trait PhotoSwipeGalleryProps extends js.Object {
       /* instance */ PhotoSwipe, 
       /* e */ MouseEvent, 
       /* isDown */ Boolean, 
-      /* preventObj */ AnonPrevent, 
+      /* preventObj */ Prevent, 
       Unit
     ]
   ] = js.native
@@ -61,7 +61,7 @@ trait PhotoSwipeGalleryProps extends js.Object {
     js.Function3[/* instance */ PhotoSwipe, /* e */ MouseEvent, /* item */ Item, Unit]
   ] = js.native
   var unbindEvents: js.UndefOr[js.Function1[/* instance */ PhotoSwipe, Unit]] = js.native
-  var updateScrollOffset: js.UndefOr[js.Function2[/* instance */ PhotoSwipe, /* _offset */ AnonX, Unit]] = js.native
+  var updateScrollOffset: js.UndefOr[js.Function2[/* instance */ PhotoSwipe, /* _offset */ X, Unit]] = js.native
   /**
     * Thumbnail content
     * @default <img src={item.src} width='100' height='100'/>
@@ -299,7 +299,7 @@ object PhotoSwipeGalleryProps {
     }
     @scala.inline
     def withPreventDragEvent(
-      value: (/* instance */ PhotoSwipe, /* e */ MouseEvent, /* isDown */ Boolean, /* preventObj */ AnonPrevent) => Unit
+      value: (/* instance */ PhotoSwipe, /* e */ MouseEvent, /* isDown */ Boolean, /* preventObj */ Prevent) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("preventDragEvent")(js.Any.fromFunction4(value))
@@ -348,7 +348,7 @@ object PhotoSwipeGalleryProps {
         ret
     }
     @scala.inline
-    def withUpdateScrollOffset(value: (/* instance */ PhotoSwipe, /* _offset */ AnonX) => Unit): Self = {
+    def withUpdateScrollOffset(value: (/* instance */ PhotoSwipe, /* _offset */ X) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("updateScrollOffset")(js.Any.fromFunction2(value))
         ret

@@ -6,7 +6,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
-import typingsSlinky.reactNavigationStack.AnonTintColor
+import typingsSlinky.reactNavigationStack.anon.TintColor
 import typingsSlinky.reactNavigationStack.modularHeaderBackButtonMod.Props
 import typingsSlinky.reactNavigationStack.modularHeaderBackButtonMod.default
 import typingsSlinky.reactNavigationStack.typesMod.HeaderLayoutPreset
@@ -27,7 +27,7 @@ object ModularHeaderBackButton {
     @scala.inline
     def allowFontScaling(value: Boolean): this.type = set("allowFontScaling", value.asInstanceOf[js.Any])
     @scala.inline
-    def backImage(value: /* props */ AnonTintColor => TagMod[Any]): this.type = set("backImage", js.Any.fromFunction1(value))
+    def backImage(value: /* props */ TintColor => TagMod[Any]): this.type = set("backImage", js.Any.fromFunction1(value))
     @scala.inline
     def backTitleVisible(value: Boolean): this.type = set("backTitleVisible", value.asInstanceOf[js.Any])
     @scala.inline

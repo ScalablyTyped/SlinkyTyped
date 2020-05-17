@@ -1,6 +1,7 @@
 package typingsSlinky.storybookUi
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.storybookUi.anon.Id
 import typingsSlinky.storybookUi.sidebarHeadingMod.SidebarHeadingProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,7 +27,7 @@ object sidebarHeadingStoriesMod extends js.Object {
   
   @js.native
   object standardData extends js.Object {
-    var menu: js.Array[AnonId] = js.native
+    var menu: js.Array[Id] = js.native
   }
   
 }

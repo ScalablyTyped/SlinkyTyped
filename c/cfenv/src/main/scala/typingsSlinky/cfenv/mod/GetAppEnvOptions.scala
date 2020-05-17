@@ -1,6 +1,6 @@
 package typingsSlinky.cfenv.mod
 
-import typingsSlinky.cfenv.AnonApplication
+import typingsSlinky.cfenv.anon.Application
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait GetAppEnvOptions extends js.Object {
   var name: js.UndefOr[String] = js.native
   var protocol: js.UndefOr[String] = js.native
-  var vcap: js.UndefOr[AnonApplication] = js.native
+  var vcap: js.UndefOr[Application] = js.native
   var vcapFile: js.UndefOr[String] = js.native
 }
 
@@ -50,7 +50,7 @@ object GetAppEnvOptions {
         ret
     }
     @scala.inline
-    def withVcap(value: AnonApplication): Self = {
+    def withVcap(value: Application): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("vcap")(value.asInstanceOf[js.Any])
         ret

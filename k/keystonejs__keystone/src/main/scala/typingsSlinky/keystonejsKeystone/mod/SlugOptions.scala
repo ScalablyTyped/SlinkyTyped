@@ -1,7 +1,7 @@
 package typingsSlinky.keystonejsKeystone.mod
 
 import typingsSlinky.keystonejsFields.mod.FieldType
-import typingsSlinky.keystonejsKeystone.AnonResolvedData
+import typingsSlinky.keystonejsKeystone.anon.ResolvedData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,12 +11,12 @@ import scala.scalajs.js.annotation._
 trait SlugOptions[FieldNames /* <: String */] extends BaseFieldOptions {
   var from: String = js.native
   // TODO: resolved data is of the same type as the current object list. Investigate if we can at least provide the available keys via a generic.
-  def generate(opts: AnonResolvedData[FieldNames]): String = js.native
+  def generate(opts: ResolvedData[FieldNames]): String = js.native
 }
 
 object SlugOptions {
   @scala.inline
-  def apply[FieldNames](from: String, generate: AnonResolvedData[FieldNames] => String, `type`: FieldType): SlugOptions[FieldNames] = {
+  def apply[FieldNames](from: String, generate: ResolvedData[FieldNames] => String, `type`: FieldType): SlugOptions[FieldNames] = {
     val __obj = js.Dynamic.literal(from = from.asInstanceOf[js.Any], generate = js.Any.fromFunction1(generate))
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SlugOptions[FieldNames]]
@@ -34,7 +34,7 @@ object SlugOptions {
         ret
     }
     @scala.inline
-    def withGenerate(value: AnonResolvedData[FieldNames] => String): Self[FieldNames] = {
+    def withGenerate(value: ResolvedData[FieldNames] => String): Self[FieldNames] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("generate")(js.Any.fromFunction1(value))
         ret

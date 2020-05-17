@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.sesMod
 
-import typingsSlinky.awsSdk.GetIdentityVerificationAt
+import typingsSlinky.awsSdk.anon.GetIdentityVerificationAt
 import typingsSlinky.awsSdk.awsSdkStrings.identityExists
 import typingsSlinky.awsSdk.configMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError

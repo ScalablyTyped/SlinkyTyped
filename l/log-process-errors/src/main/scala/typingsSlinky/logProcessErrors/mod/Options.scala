@@ -1,6 +1,6 @@
 package typingsSlinky.logProcessErrors.mod
 
-import typingsSlinky.logProcessErrors.PartialRecordExceptionTyp
+import typingsSlinky.logProcessErrors.anon.PartialRecordExceptionTyp
 import typingsSlinky.logProcessErrors.logProcessErrorsStrings.`node-tap`
 import typingsSlinky.logProcessErrors.logProcessErrorsStrings.ava
 import typingsSlinky.logProcessErrors.logProcessErrorsStrings.jasmine

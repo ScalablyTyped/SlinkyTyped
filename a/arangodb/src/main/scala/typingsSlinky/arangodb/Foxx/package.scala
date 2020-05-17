@@ -10,7 +10,6 @@ package object Foxx {
     /* res */ typingsSlinky.arangodb.Foxx.Response, 
     scala.Unit
   ]
-  type Middleware = typingsSlinky.arangodb.Foxx.SimpleMiddleware | typingsSlinky.arangodb.Foxx.DelegateMiddleware
   type NextFunction = js.Function0[scala.Unit]
   type SimpleMiddleware = js.Function3[
     /* req */ typingsSlinky.arangodb.Foxx.Request, 

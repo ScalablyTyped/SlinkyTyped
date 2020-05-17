@@ -1,6 +1,6 @@
 package typingsSlinky.reactAsync.mod
 
-import typingsSlinky.reactAsync.AnonDictmeta
+import typingsSlinky.reactAsync.anon.Dictmeta
 import typingsSlinky.reactAsync.reactAsyncBooleans.`true`
 import typingsSlinky.reactAsync.reactAsyncStrings.reject
 import scala.scalajs.js
@@ -12,14 +12,14 @@ import scala.scalajs.js.annotation._
 trait Reject
   extends AsyncAction[js.Any] {
   var error: `true` = js.native
-  var meta: AnonDictmeta = js.native
+  var meta: Dictmeta = js.native
   var payload: js.Error = js.native
   var `type`: String with reject = js.native
 }
 
 object Reject {
   @scala.inline
-  def apply(error: `true`, meta: AnonDictmeta, payload: js.Error, `type`: String with reject): Reject = {
+  def apply(error: `true`, meta: Dictmeta, payload: js.Error, `type`: String with reject): Reject = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any], payload = payload.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Reject]
@@ -37,7 +37,7 @@ object Reject {
         ret
     }
     @scala.inline
-    def withMeta(value: AnonDictmeta): Self = {
+    def withMeta(value: Dictmeta): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
         ret

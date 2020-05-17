@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "react-dnd-test-backend"
-version := "9.5.1-865a44"
-scalaVersion := "2.13.1"
+version := "9.5.1-dcb1ea"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "dnd-core" % "9.5.1-14e2a2",
-  "org.scalablytyped.slinky" %%% "redux" % "4.0.5-e999f1",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
+  "org.scalablytyped.slinky" %%% "dnd-core" % "9.5.1-049dd4",
+  "org.scalablytyped.slinky" %%% "redux" % "4.0.5-d1b67b",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

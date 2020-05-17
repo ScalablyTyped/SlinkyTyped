@@ -4,24 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("TypeScript.ForStatementSyntax")
 @js.native
-class ForStatementSyntax protected ()
-  extends SyntaxNode
-     with IIterationStatementSyntax {
-  def this(
-    forKeyword: ISyntaxToken,
-    openParenToken: ISyntaxToken,
-    variableDeclaration: VariableDeclarationSyntax,
-    initializer: IExpressionSyntax,
-    firstSemicolonToken: ISyntaxToken,
-    condition: IExpressionSyntax,
-    secondSemicolonToken: ISyntaxToken,
-    incrementor: IExpressionSyntax,
-    closeParenToken: ISyntaxToken,
-    statement: IStatementSyntax,
-    parsedInStrictMode: Boolean
-  ) = this()
+trait ForStatementSyntax
+  extends IIterationStatementSyntax
+     with SyntaxNode {
   var closeParenToken: ISyntaxToken = js.native
   var condition: IExpressionSyntax = js.native
   var firstSemicolonToken: ISyntaxToken = js.native
@@ -56,20 +42,5 @@ class ForStatementSyntax protected ()
   def withSecondSemicolonToken(secondSemicolonToken: ISyntaxToken): ForStatementSyntax = js.native
   def withStatement(statement: IStatementSyntax): ForStatementSyntax = js.native
   def withVariableDeclaration(variableDeclaration: VariableDeclarationSyntax): ForStatementSyntax = js.native
-}
-
-/* static members */
-@JSGlobal("TypeScript.ForStatementSyntax")
-@js.native
-object ForStatementSyntax extends js.Object {
-  def create(
-    forKeyword: ISyntaxToken,
-    openParenToken: ISyntaxToken,
-    firstSemicolonToken: ISyntaxToken,
-    secondSemicolonToken: ISyntaxToken,
-    closeParenToken: ISyntaxToken,
-    statement: IStatementSyntax
-  ): ForStatementSyntax = js.native
-  def create1(statement: IStatementSyntax): ForStatementSyntax = js.native
 }
 

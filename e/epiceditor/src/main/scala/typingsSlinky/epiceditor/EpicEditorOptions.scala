@@ -1,5 +1,9 @@
 package typingsSlinky.epiceditor
 
+import typingsSlinky.epiceditor.anon.AutoSave
+import typingsSlinky.epiceditor.anon.Base
+import typingsSlinky.epiceditor.anon.Fullscreen
+import typingsSlinky.epiceditor.anon.ToggleEdit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,14 +13,14 @@ trait EpicEditorOptions extends js.Object {
   var basePath: js.UndefOr[String] = js.native
   var clientSideStorage: js.UndefOr[Boolean] = js.native
   var container: js.UndefOr[js.Any] = js.native
-  var file: js.UndefOr[AnonAutoSave] = js.native
+  var file: js.UndefOr[AutoSave] = js.native
   var focusOnLoad: js.UndefOr[Boolean] = js.native
   var localStorageName: js.UndefOr[String] = js.native
   var parser: js.UndefOr[js.Any] = js.native
-  var shortcut: js.UndefOr[AnonFullscreen] = js.native
-  var string: js.UndefOr[AnonToggleEdit] = js.native
+  var shortcut: js.UndefOr[Fullscreen] = js.native
+  var string: js.UndefOr[ToggleEdit] = js.native
   var textarea: js.UndefOr[js.Any] = js.native
-  var theme: js.UndefOr[AnonBase] = js.native
+  var theme: js.UndefOr[Base] = js.native
   var useNativeFullsreen: js.UndefOr[Boolean] = js.native
 }
 
@@ -69,7 +73,7 @@ object EpicEditorOptions {
         ret
     }
     @scala.inline
-    def withFile(value: AnonAutoSave): Self = {
+    def withFile(value: AutoSave): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
         ret
@@ -117,7 +121,7 @@ object EpicEditorOptions {
         ret
     }
     @scala.inline
-    def withShortcut(value: AnonFullscreen): Self = {
+    def withShortcut(value: Fullscreen): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shortcut")(value.asInstanceOf[js.Any])
         ret
@@ -129,7 +133,7 @@ object EpicEditorOptions {
         ret
     }
     @scala.inline
-    def withString(value: AnonToggleEdit): Self = {
+    def withString(value: ToggleEdit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("string")(value.asInstanceOf[js.Any])
         ret
@@ -153,7 +157,7 @@ object EpicEditorOptions {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonBase): Self = {
+    def withTheme(value: Base): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

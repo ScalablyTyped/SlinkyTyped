@@ -1,6 +1,6 @@
 package typingsSlinky.chromeApps.chrome.fileSystemProvider
 
-import typingsSlinky.chromeApps.AnonOFFLINENOTNECESSARY
+import typingsSlinky.chromeApps.anon.OFFLINENOTNECESSARY
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chromeAppsStrings.OFFLINE_NOT_NECESSARY
 import typingsSlinky.chromeApps.chromeAppsStrings.SAVE_FOR_OFFLINE
@@ -18,10 +18,10 @@ trait Action extends js.Object {
     * @see CommonActionId
     **/
   var id: (ToStringLiteral[
-    AnonOFFLINENOTNECESSARY, 
-    /* keyof chrome-apps.AnonOFFLINENOTNECESSARY */ SAVE_FOR_OFFLINE | OFFLINE_NOT_NECESSARY | SHARE, 
+    OFFLINENOTNECESSARY, 
+    /* keyof chrome-apps.anon.OFFLINENOTNECESSARY */ SAVE_FOR_OFFLINE | OFFLINE_NOT_NECESSARY | SHARE, 
     Exclude[
-      /* keyof chrome-apps.AnonOFFLINENOTNECESSARY */ SAVE_FOR_OFFLINE | OFFLINE_NOT_NECESSARY | SHARE, 
+      /* keyof chrome-apps.anon.OFFLINENOTNECESSARY */ SAVE_FOR_OFFLINE | OFFLINE_NOT_NECESSARY | SHARE, 
       SAVE_FOR_OFFLINE | OFFLINE_NOT_NECESSARY | SHARE
     ]
   ]) | String = js.native
@@ -33,10 +33,10 @@ object Action {
   @scala.inline
   def apply(
     id: (ToStringLiteral[
-      AnonOFFLINENOTNECESSARY, 
-      /* keyof chrome-apps.AnonOFFLINENOTNECESSARY */ SAVE_FOR_OFFLINE | OFFLINE_NOT_NECESSARY | SHARE, 
+      OFFLINENOTNECESSARY, 
+      /* keyof chrome-apps.anon.OFFLINENOTNECESSARY */ SAVE_FOR_OFFLINE | OFFLINE_NOT_NECESSARY | SHARE, 
       Exclude[
-        /* keyof chrome-apps.AnonOFFLINENOTNECESSARY */ SAVE_FOR_OFFLINE | OFFLINE_NOT_NECESSARY | SHARE, 
+        /* keyof chrome-apps.anon.OFFLINENOTNECESSARY */ SAVE_FOR_OFFLINE | OFFLINE_NOT_NECESSARY | SHARE, 
         SAVE_FOR_OFFLINE | OFFLINE_NOT_NECESSARY | SHARE
       ]
     ]) | String
@@ -53,10 +53,10 @@ object Action {
     @scala.inline
     def withId(
       value: (ToStringLiteral[
-          AnonOFFLINENOTNECESSARY, 
-          /* keyof chrome-apps.AnonOFFLINENOTNECESSARY */ SAVE_FOR_OFFLINE | OFFLINE_NOT_NECESSARY | SHARE, 
+          OFFLINENOTNECESSARY, 
+          /* keyof chrome-apps.anon.OFFLINENOTNECESSARY */ SAVE_FOR_OFFLINE | OFFLINE_NOT_NECESSARY | SHARE, 
           Exclude[
-            /* keyof chrome-apps.AnonOFFLINENOTNECESSARY */ SAVE_FOR_OFFLINE | OFFLINE_NOT_NECESSARY | SHARE, 
+            /* keyof chrome-apps.anon.OFFLINENOTNECESSARY */ SAVE_FOR_OFFLINE | OFFLINE_NOT_NECESSARY | SHARE, 
             SAVE_FOR_OFFLINE | OFFLINE_NOT_NECESSARY | SHARE
           ]
         ]) | String

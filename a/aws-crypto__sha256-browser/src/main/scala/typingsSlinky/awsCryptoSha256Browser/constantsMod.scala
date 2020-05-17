@@ -1,5 +1,6 @@
 package typingsSlinky.awsCryptoSha256Browser
 
+import typingsSlinky.awsCryptoSha256Browser.anon.Name
 import typingsSlinky.awsCryptoSha256Browser.awsCryptoSha256BrowserStrings.HMAC
 import typingsSlinky.awsCryptoSha256Browser.awsCryptoSha256BrowserStrings.`SHA-256`
 import scala.scalajs.js
@@ -17,7 +18,7 @@ object constantsMod extends js.Object {
   
   @js.native
   object SHA_256_HMAC_ALGO extends js.Object {
-    var hash: AnonName = js.native
+    var hash: Name = js.native
     var name: HMAC = js.native
   }
   

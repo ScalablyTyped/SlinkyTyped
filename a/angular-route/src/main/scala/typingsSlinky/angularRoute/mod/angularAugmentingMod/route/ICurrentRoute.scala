@@ -1,6 +1,6 @@
 package typingsSlinky.angularRoute.mod.angularAugmentingMod.route
 
-import typingsSlinky.angularRoute.AnonDictindex
+import typingsSlinky.angularRoute.anon.Dictindex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 // see http://docs.angularjs.org/api/ng.$route#current
 @js.native
 trait ICurrentRoute extends IRoute {
-  var locals: AnonDictindex = js.native
+  var locals: Dictindex = js.native
   var params: js.Any = js.native
 }
 
 object ICurrentRoute {
   @scala.inline
-  def apply(locals: AnonDictindex, params: js.Any): ICurrentRoute = {
+  def apply(locals: Dictindex, params: js.Any): ICurrentRoute = {
     val __obj = js.Dynamic.literal(locals = locals.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICurrentRoute]
   }
@@ -25,7 +25,7 @@ object ICurrentRoute {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withLocals(value: AnonDictindex): Self = {
+    def withLocals(value: Dictindex): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("locals")(value.asInstanceOf[js.Any])
         ret

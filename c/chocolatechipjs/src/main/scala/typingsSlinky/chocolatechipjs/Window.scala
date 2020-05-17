@@ -1,7 +1,7 @@
 package typingsSlinky.chocolatechipjs
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait Window extends js.Object {
     * If no argument is provided, return the document as a ChocolateChipElementArray.
     */
   @JSName("$")
-  def $(): js.Array[Document_] = js.native
+  def $(): js.Array[Document] = js.native
   /**
     * Binds a function to be executed when the DOM has finished loading.
     *
@@ -31,7 +31,7 @@ trait Window extends js.Object {
     * @param document The document object.
     */
   @JSName("$")
-  def $(document: Document_): js.Array[Document_] = js.native
+  def $(document: Document): js.Array[Document] = js.native
   /**
     * Accepts a string containing a CSS selector which is then used to match a set of elements.
     *
@@ -52,9 +52,9 @@ trait Window extends js.Object {
   @JSName("$")
   def $(selector: String, context: HTMLElement): ChocolateChipElementArray = js.native
   @JSName("$")
-  def $(selector: Document_, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
+  def $(selector: Document, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
   @JSName("$")
-  def $(selector: Document_, context: HTMLElement): ChocolateChipElementArray = js.native
+  def $(selector: Document, context: HTMLElement): ChocolateChipElementArray = js.native
   /**
     * Accepts a string containing a CSS selector which is then used to match a set of elements.
     *
@@ -67,11 +67,11 @@ trait Window extends js.Object {
   @JSName("$")
   def $(selector: HTMLElement, context: HTMLElement): ChocolateChipElementArray = js.native
   @JSName("$")
-  def $_ChocolateChipElementArray(selector: Document_): ChocolateChipElementArray = js.native
+  def $_ChocolateChipElementArray(selector: Document): ChocolateChipElementArray = js.native
   /**
     * If no argument is provided, return the document as a ChocolateChipElementArray.
     */
-  def chocolatechipjs(): js.Array[Document_] = js.native
+  def chocolatechipjs(): js.Array[Document] = js.native
   /**
     * Binds a function to be executed when the DOM has finished loading.
     *
@@ -83,7 +83,7 @@ trait Window extends js.Object {
     *
     * @param document The document object.
     */
-  def chocolatechipjs(document: Document_): js.Array[Document_] = js.native
+  def chocolatechipjs(document: Document): js.Array[Document] = js.native
   /**
     * Accepts a string containing a CSS selector which is then used to match a set of elements.
     *
@@ -99,8 +99,8 @@ trait Window extends js.Object {
   def chocolatechipjs(selector: String): ChocolateChipElementArray = js.native
   def chocolatechipjs(selector: String, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
   def chocolatechipjs(selector: String, context: HTMLElement): ChocolateChipElementArray = js.native
-  def chocolatechipjs(selector: Document_, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
-  def chocolatechipjs(selector: Document_, context: HTMLElement): ChocolateChipElementArray = js.native
+  def chocolatechipjs(selector: Document, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
+  def chocolatechipjs(selector: Document, context: HTMLElement): ChocolateChipElementArray = js.native
   /**
     * Accepts a string containing a CSS selector which is then used to match a set of elements.
     *
@@ -110,6 +110,6 @@ trait Window extends js.Object {
   def chocolatechipjs(selector: HTMLElement, context: ChocolateChipElementArray): ChocolateChipElementArray = js.native
   def chocolatechipjs(selector: HTMLElement, context: HTMLElement): ChocolateChipElementArray = js.native
   @JSName("chocolatechipjs")
-  def chocolatechipjs_ChocolateChipElementArray(selector: Document_): ChocolateChipElementArray = js.native
+  def chocolatechipjs_ChocolateChipElementArray(selector: Document): ChocolateChipElementArray = js.native
 }
 

@@ -6,6 +6,6 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   type Option = org.scalablytyped.runtime.StringDictionary[
-    typingsSlinky.yargsInteractive.mod.OptionData | typingsSlinky.yargsInteractive.AnonDefault
+    typingsSlinky.yargsInteractive.mod.OptionData | typingsSlinky.yargsInteractive.anon.Default
   ]
 }

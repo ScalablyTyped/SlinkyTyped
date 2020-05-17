@@ -1,7 +1,7 @@
 package typingsSlinky.babylonjs.legacyMod
 
-import typingsSlinky.babylonjs.AnonAutoPlay
 import typingsSlinky.babylonjs.HTMLVideoElement
+import typingsSlinky.babylonjs.anon.AutoPlay
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,19 +19,19 @@ class VideoDome protected ()
   def this(
     name: String,
     urlsOrVideo: String,
-    options: AnonAutoPlay,
+    options: AutoPlay,
     scene: typingsSlinky.babylonjs.sceneMod.Scene
   ) = this()
   def this(
     name: String,
     urlsOrVideo: js.Array[String],
-    options: AnonAutoPlay,
+    options: AutoPlay,
     scene: typingsSlinky.babylonjs.sceneMod.Scene
   ) = this()
   def this(
     name: String,
     urlsOrVideo: HTMLVideoElement,
-    options: AnonAutoPlay,
+    options: AutoPlay,
     scene: typingsSlinky.babylonjs.sceneMod.Scene
   ) = this()
 }

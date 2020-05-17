@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("tabris", "Constraint")
 @js.native
-class Constraint protected () extends _ConstraintValue {
+class Constraint protected () extends ConstraintValue {
   def this(reference: Percent, offset: Offset) = this()
   def this(reference: SiblingReference, offset: Offset) = this()
   /**

@@ -4,10 +4,10 @@ import org.scalablytyped.runtime.NumberDictionary
 import org.scalajs.dom.raw.HTMLTableCellElement
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.handsontable.AnonSkipRender
-import typingsSlinky.handsontable.AnonValue
-import typingsSlinky.handsontable.AnonValueAny
-import typingsSlinky.handsontable.AnonValueCellValue
+import typingsSlinky.handsontable.anon.SkipRender
+import typingsSlinky.handsontable.anon.Value
+import typingsSlinky.handsontable.anon.ValueAny
+import typingsSlinky.handsontable.anon.ValueCellValue
 import typingsSlinky.handsontable.handsontableNumbers.`-1`
 import typingsSlinky.handsontable.handsontableNumbers.`0`
 import typingsSlinky.handsontable.handsontableStrings.area
@@ -322,7 +322,7 @@ trait Bucket extends js.Object {
         /* column */ Double, 
         /* row2 */ Double, 
         /* column2 */ Double, 
-        /* preventScrolling */ AnonValue, 
+        /* preventScrolling */ Value, 
         /* selectionLayerLevel */ Double, 
         Unit
       ]
@@ -335,7 +335,7 @@ trait Bucket extends js.Object {
         /* prop */ String, 
         /* row2 */ Double, 
         /* prop2 */ String, 
-        /* preventScrolling */ AnonValue, 
+        /* preventScrolling */ Value, 
         /* selectionLayerLevel */ Double, 
         Unit
       ]
@@ -690,7 +690,7 @@ trait Bucket extends js.Object {
     ]
   ] = js.native
   var beforeRender: js.Array[
-    js.UndefOr[js.Function2[/* isForced */ Boolean, /* skipRender */ AnonSkipRender, Unit]]
+    js.UndefOr[js.Function2[/* isForced */ Boolean, /* skipRender */ SkipRender, Unit]]
   ] = js.native
   var beforeRenderer: js.Array[
     js.UndefOr[
@@ -804,7 +804,7 @@ trait Bucket extends js.Object {
       js.Function4[
         /* row */ Double, 
         /* column */ Double, 
-        /* valueHolder */ AnonValueCellValue, 
+        /* valueHolder */ ValueCellValue, 
         /* ioMode */ get | set, 
         Unit
       ]
@@ -829,7 +829,7 @@ trait Bucket extends js.Object {
   var modifyTransformEnd: js.Array[js.UndefOr[js.Function1[/* delta */ CellCoords, Unit]]] = js.native
   var modifyTransformStart: js.Array[js.UndefOr[js.Function1[/* delta */ CellCoords, Unit]]] = js.native
   var persistentStateLoad: js.Array[
-    js.UndefOr[js.Function2[/* key */ String, /* valuePlaceholder */ AnonValueAny, Unit]]
+    js.UndefOr[js.Function2[/* key */ String, /* valuePlaceholder */ ValueAny, Unit]]
   ] = js.native
   var persistentStateReset: js.Array[js.UndefOr[js.Function1[/* key */ String, Unit]]] = js.native
   var persistentStateSave: js.Array[js.UndefOr[js.Function2[/* key */ String, /* value */ _, Unit]]] = js.native
@@ -1492,7 +1492,7 @@ object Bucket {
               /* column */ Double, 
               /* row2 */ Double, 
               /* column2 */ Double, 
-              /* preventScrolling */ AnonValue, 
+              /* preventScrolling */ Value, 
               /* selectionLayerLevel */ Double, 
               Unit
             ]
@@ -1512,7 +1512,7 @@ object Bucket {
               /* prop */ String, 
               /* row2 */ Double, 
               /* prop2 */ String, 
-              /* preventScrolling */ AnonValue, 
+              /* preventScrolling */ Value, 
               /* selectionLayerLevel */ Double, 
               Unit
             ]
@@ -2230,7 +2230,7 @@ object Bucket {
     @scala.inline
     def withBeforeRender(
       value: js.Array[
-          js.UndefOr[js.Function2[/* isForced */ Boolean, /* skipRender */ AnonSkipRender, Unit]]
+          js.UndefOr[js.Function2[/* isForced */ Boolean, /* skipRender */ SkipRender, Unit]]
         ]
     ): Self = {
         val ret = this.duplicate
@@ -2503,7 +2503,7 @@ object Bucket {
             js.Function4[
               /* row */ Double, 
               /* column */ Double, 
-              /* valueHolder */ AnonValueCellValue, 
+              /* valueHolder */ ValueCellValue, 
               /* ioMode */ get | set, 
               Unit
             ]
@@ -2582,7 +2582,7 @@ object Bucket {
     @scala.inline
     def withPersistentStateLoad(
       value: js.Array[
-          js.UndefOr[js.Function2[/* key */ String, /* valuePlaceholder */ AnonValueAny, Unit]]
+          js.UndefOr[js.Function2[/* key */ String, /* valuePlaceholder */ ValueAny, Unit]]
         ]
     ): Self = {
         val ret = this.duplicate

@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.videoTextureMod
 import org.scalajs.dom.experimental.mediastream.MediaStream
 import org.scalajs.dom.experimental.mediastream.MediaTrackConstraints
 import typingsSlinky.babylonjs.HTMLVideoElement
-import typingsSlinky.babylonjs.minWidthnumbermaxWidthnum
+import typingsSlinky.babylonjs.anon.minWidthnumbermaxWidthnum
 import typingsSlinky.babylonjs.observableMod.Observable
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.textureMod.Texture

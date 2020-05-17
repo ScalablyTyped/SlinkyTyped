@@ -1,0 +1,84 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.table
+
+import typingsSlinky.activexLibreoffice.`type`
+import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * provides methods to access the collections of columns and rows of a cell range.
+  * @see com.sun.star.table.CellRange
+  */
+@js.native
+trait XColumnRowRange extends XInterface {
+  /**
+    * returns the collection of columns in the range.
+    * @see com.sun.star.table.TableColumns
+    */
+  val Columns: XTableColumns = js.native
+  /**
+    * returns the collection of rows in the range.
+    * @see com.sun.star.table.TableRows
+    */
+  val Rows: XTableRows = js.native
+  /**
+    * returns the collection of columns in the range.
+    * @see com.sun.star.table.TableColumns
+    */
+  def getColumns(): XTableColumns = js.native
+  /**
+    * returns the collection of rows in the range.
+    * @see com.sun.star.table.TableRows
+    */
+  def getRows(): XTableRows = js.native
+}
+
+object XColumnRowRange {
+  @scala.inline
+  def apply(
+    Columns: XTableColumns,
+    Rows: XTableRows,
+    acquire: () => Unit,
+    getColumns: () => XTableColumns,
+    getRows: () => XTableRows,
+    queryInterface: `type` => js.Any,
+    release: () => Unit
+  ): XColumnRowRange = {
+    val __obj = js.Dynamic.literal(Columns = Columns.asInstanceOf[js.Any], Rows = Rows.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getColumns = js.Any.fromFunction0(getColumns), getRows = js.Any.fromFunction0(getRows), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
+    __obj.asInstanceOf[XColumnRowRange]
+  }
+  @scala.inline
+  implicit class XColumnRowRangeOps[Self <: XColumnRowRange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumns(value: XTableColumns): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Columns")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRows(value: XTableRows): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetColumns(value: () => XTableColumns): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getColumns")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRows(value: () => XTableRows): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRows")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
+}
+

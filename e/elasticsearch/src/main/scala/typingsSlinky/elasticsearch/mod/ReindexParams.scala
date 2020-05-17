@@ -1,6 +1,5 @@
 package typingsSlinky.elasticsearch.mod
 
-import typingsSlinky.elasticsearch.AnonConflicts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ReindexParams extends GenericParams {
   @JSName("body")
-  var body_ReindexParams: AnonConflicts = js.native
+  var body_ReindexParams: typingsSlinky.elasticsearch.anon.Conflicts = js.native
   var refresh: js.UndefOr[Boolean] = js.native
   var requestsPerSecond: js.UndefOr[Double] = js.native
   var slices: js.UndefOr[Double] = js.native
@@ -19,7 +18,7 @@ trait ReindexParams extends GenericParams {
 
 object ReindexParams {
   @scala.inline
-  def apply(body: AnonConflicts): ReindexParams = {
+  def apply(body: typingsSlinky.elasticsearch.anon.Conflicts): ReindexParams = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReindexParams]
   }
@@ -30,7 +29,7 @@ object ReindexParams {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBody(value: AnonConflicts): Self = {
+    def withBody(value: typingsSlinky.elasticsearch.anon.Conflicts): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
         ret

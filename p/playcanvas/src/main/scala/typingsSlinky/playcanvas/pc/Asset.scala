@@ -1,6 +1,6 @@
 package typingsSlinky.playcanvas.pc
 
-import typingsSlinky.playcanvas.AnonFilename
+import typingsSlinky.playcanvas.anon.Filename
 import typingsSlinky.playcanvas.pc.callbacks.AssetReady
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -49,12 +49,8 @@ import scala.scalajs.js.annotation._
   * @property {boolean} loading True if the resource is currently being loaded
   * @property {pc.AssetRegistry} registry The asset registry that this Asset belongs to
   */
-@JSGlobal("pc.Asset")
 @js.native
-class Asset protected () extends EventHandler {
-  def this(name: String, `type`: String) = this()
-  def this(name: String, `type`: String, file: js.Any) = this()
-  def this(name: String, `type`: String, file: js.Any, data: js.Any) = this()
+trait Asset extends EventHandler {
   /**
     * JSON data that contains either the complete resource data (e.g. in the case of a material) or additional data (e.g. in the case of a model it contains mappings from mesh to material)
     */
@@ -62,7 +58,7 @@ class Asset protected () extends EventHandler {
   /**
     * The file details or null if no file
     */
-  var file: AnonFilename = js.native
+  var file: Filename = js.native
   /**
     * The asset id
     */

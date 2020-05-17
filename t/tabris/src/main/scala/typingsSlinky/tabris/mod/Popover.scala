@@ -1,7 +1,7 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.Anon2
-import typingsSlinky.tabris.OmitPopoverset
+import typingsSlinky.tabris.anon.OmitPopoverset
+import typingsSlinky.tabris.anon.`1`
 import typingsSlinky.tabris.tabrisStrings.anchor
 import typingsSlinky.tabris.tabrisStrings.height
 import typingsSlinky.tabris.tabrisStrings.set
@@ -34,7 +34,7 @@ class Popover () extends Popup {
     * @constant
     */
   @JSName("jsxAttributes")
-  val jsxAttributes_Popover: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with Anon2 = js.native
+  val jsxAttributes_Popover: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with `1` = js.native
   /**
     * Fired when the [*anchor*](#anchor) property has changed.
     */

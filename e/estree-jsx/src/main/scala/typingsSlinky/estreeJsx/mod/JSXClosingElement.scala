@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait JSXClosingElement
   extends JSXBoundaryElement
-     with _Node {
+     with Node {
   @JSName("type")
   var type_JSXClosingElement: typingsSlinky.estreeJsx.estreeJsxStrings.JSXClosingElement = js.native
 }

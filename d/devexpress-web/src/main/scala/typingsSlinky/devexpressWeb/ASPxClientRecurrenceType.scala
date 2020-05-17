@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Contains recurrence types.
   */
-@JSGlobal("ASPxClientRecurrenceType")
 @js.native
-class ASPxClientRecurrenceType () extends js.Object {
+trait ASPxClientRecurrenceType extends js.Object {
   /**
     * The recurring appointment occurs on a daily basis.
     */
@@ -30,5 +29,51 @@ class ASPxClientRecurrenceType () extends js.Object {
     * The recurring appointment reoccurs on an yearly basis.
     */
   var Yearly: String = js.native
+}
+
+object ASPxClientRecurrenceType {
+  @scala.inline
+  def apply(Daily: String, Hourly: String, Monthly: String, Weekly: String, Yearly: String): ASPxClientRecurrenceType = {
+    val __obj = js.Dynamic.literal(Daily = Daily.asInstanceOf[js.Any], Hourly = Hourly.asInstanceOf[js.Any], Monthly = Monthly.asInstanceOf[js.Any], Weekly = Weekly.asInstanceOf[js.Any], Yearly = Yearly.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientRecurrenceType]
+  }
+  @scala.inline
+  implicit class ASPxClientRecurrenceTypeOps[Self <: ASPxClientRecurrenceType] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDaily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Daily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHourly(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Hourly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMonthly(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Monthly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWeekly(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Weekly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withYearly(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Yearly")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

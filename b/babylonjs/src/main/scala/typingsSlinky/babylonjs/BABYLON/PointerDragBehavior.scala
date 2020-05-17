@@ -1,20 +1,14 @@
 package typingsSlinky.babylonjs.BABYLON
 
-import typingsSlinky.babylonjs.AnonDragAxisDragPlaneNormal
-import typingsSlinky.babylonjs.AnonDragPlaneNormal
-import typingsSlinky.babylonjs.AnonPointerId
+import typingsSlinky.babylonjs.anon.DragAxisDragPlaneNormal
+import typingsSlinky.babylonjs.anon.DragPlaneNormal
+import typingsSlinky.babylonjs.anon.PointerId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.PointerDragBehavior")
 @js.native
-/**
-  * Creates a pointer drag behavior that can be attached to a mesh
-  * @param options The drag axis or normal of the plane that will be dragged across. If no options are specified the drag plane will always face the ray's origin (eg. camera)
-  */
-class PointerDragBehavior () extends Behavior[AbstractMesh] {
-  def this(options: AnonDragAxisDragPlaneNormal) = this()
+trait PointerDragBehavior extends Behavior[AbstractMesh] {
   var _alternatePickedPoint: js.Any = js.native
   var _attachedElement: js.Any = js.native
   var _beforeRenderObserver: js.Any = js.native
@@ -85,7 +79,7 @@ class PointerDragBehavior () extends Behavior[AbstractMesh] {
   /**
     *  Fires each time a drag ends (eg. mouse release after drag)
     */
-  var onDragEndObservable: Observable[AnonPointerId] = js.native
+  var onDragEndObservable: Observable[PointerId] = js.native
   /**
     *  Fires each time the attached mesh is dragged with the pointer
     *  * delta between last drag position and current drag position in world space
@@ -93,11 +87,11 @@ class PointerDragBehavior () extends Behavior[AbstractMesh] {
     *  * dragPlaneNormal normal of the current drag plane used during the drag
     *  * dragPlanePoint in world space where the drag intersects the drag plane
     */
-  var onDragObservable: Observable[AnonDragPlaneNormal] = js.native
+  var onDragObservable: Observable[DragPlaneNormal] = js.native
   /**
     *  Fires each time a drag begins (eg. mouse down on mesh)
     */
-  var onDragStartObservable: Observable[AnonPointerId] = js.native
+  var onDragStartObservable: Observable[PointerId] = js.native
   /**
     * If pointer events should start and release the drag (Default: true)
     */
@@ -119,11 +113,11 @@ class PointerDragBehavior () extends Behavior[AbstractMesh] {
   /**
     * Gets the options used by the behavior
     */
-  def options: AnonDragAxisDragPlaneNormal = js.native
+  def options: DragAxisDragPlaneNormal = js.native
   /**
     * Sets the options used by the behavior
     */
-  def options(options: AnonDragAxisDragPlaneNormal): js.Any = js.native
+  def options(options: DragAxisDragPlaneNormal): js.Any = js.native
   /**
     * Force relase the drag action by code.
     */
@@ -142,13 +136,5 @@ class PointerDragBehavior () extends Behavior[AbstractMesh] {
     * Predicate to determine if it is valid to move the object to a new position when it is moved
     */
   def validateDrag(targetPosition: Vector3): Boolean = js.native
-}
-
-/* static members */
-@JSGlobal("BABYLON.PointerDragBehavior")
-@js.native
-object PointerDragBehavior extends js.Object {
-  var _AnyMouseID: js.Any = js.native
-  var _planeScene: js.Any = js.native
 }
 

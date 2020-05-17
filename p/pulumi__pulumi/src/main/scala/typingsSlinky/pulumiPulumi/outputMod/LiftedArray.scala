@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LiftedArray[T] extends /* n */ NumberDictionary[Output_[T]] {
+trait LiftedArray[T]
+  extends /* n */ NumberDictionary[Output_[T]]
+     with Lifted[js.Any] {
   /**
     * Gets the length of the array. This is a number one higher than the highest element defined
     * in an array.

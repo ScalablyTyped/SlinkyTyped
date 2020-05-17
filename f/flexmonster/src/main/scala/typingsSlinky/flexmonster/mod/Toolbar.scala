@@ -1,13 +1,13 @@
 package typingsSlinky.flexmonster.mod
 
-import typingsSlinky.flexmonster.AnonCharts
+import typingsSlinky.flexmonster.anon.Charts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Toolbar extends js.Object {
-  var icons: AnonCharts = js.native
+  var icons: Charts = js.native
   // Charts tab
   def chartsHandler(`type`: String): Unit = js.native
   def chartsMultipleHandler(): Unit = js.native
@@ -56,7 +56,7 @@ object Toolbar {
     fullscreenHandler: () => Unit,
     getTabs: () => js.Array[ToolbarTab],
     gridHandler: () => Unit,
-    icons: AnonCharts,
+    icons: Charts,
     openLocalReport: () => Unit,
     openRemoteReport: () => Unit,
     optionsHandler: () => Unit,
@@ -157,7 +157,7 @@ object Toolbar {
         ret
     }
     @scala.inline
-    def withIcons(value: AnonCharts): Self = {
+    def withIcons(value: Charts): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
         ret

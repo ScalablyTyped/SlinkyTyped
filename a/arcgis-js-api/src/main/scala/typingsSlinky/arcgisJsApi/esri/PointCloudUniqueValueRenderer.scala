@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`absolute-value`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`high-four-bit`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`low-four-bit`
@@ -50,8 +49,4 @@ trait PointCloudUniqueValueRenderer
   @JSName("type")
   val type_PointCloudUniqueValueRenderer: `point-cloud-unique-value` = js.native
 }
-
-@JSGlobal("__esri.PointCloudUniqueValueRenderer")
-@js.native
-object PointCloudUniqueValueRenderer extends TopLevel[PointCloudUniqueValueRendererConstructor]
 

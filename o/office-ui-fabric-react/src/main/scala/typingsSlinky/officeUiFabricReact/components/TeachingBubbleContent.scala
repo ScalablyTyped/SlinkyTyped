@@ -11,7 +11,7 @@ object TeachingBubbleContent {
   @js.native
   object component extends js.Object
   
-  def withProps(p: ITeachingBubbleProps): SharedBuilder_ITeachingBubbleProps_1595191623[LegacyRef[js.Any] with js.Object] = new SharedBuilder_ITeachingBubbleProps_1595191623[LegacyRef[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: TeachingBubbleContent.type): SharedBuilder_ITeachingBubbleProps_1595191623[LegacyRef[js.Any] with js.Object] = new SharedBuilder_ITeachingBubbleProps_1595191623[LegacyRef[js.Any] with js.Object](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: ITeachingBubbleProps): SharedBuilder_ITeachingBubbleProps_1595191623[LegacyRef[js.Any]] = new SharedBuilder_ITeachingBubbleProps_1595191623[LegacyRef[js.Any]](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TeachingBubbleContent.type): SharedBuilder_ITeachingBubbleProps_1595191623[LegacyRef[js.Any]] = new SharedBuilder_ITeachingBubbleProps_1595191623[LegacyRef[js.Any]](js.Array(this.component, js.Dictionary.empty))()
 }
 

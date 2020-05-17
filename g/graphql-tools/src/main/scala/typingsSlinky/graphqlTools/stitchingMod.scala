@@ -4,6 +4,8 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.apolloLink.mod.ApolloLink
 import typingsSlinky.graphql.definitionMod.GraphQLFieldResolver
 import typingsSlinky.graphql.mod.GraphQLSchema
+import typingsSlinky.graphqlTools.anon.BuildSchemaOptions
+import typingsSlinky.graphqlTools.anon.InheritResolversFromInterfaces
 import typingsSlinky.graphqlTools.interfacesMod.IDelegateToSchemaOptions
 import typingsSlinky.graphqlTools.makeRemoteExecutableSchemaMod.Fetcher
 import scala.scalajs.js
@@ -21,9 +23,9 @@ object stitchingMod extends js.Object {
   def introspectSchema(fetcher: ApolloLink, linkContext: StringDictionary[js.Any]): js.Promise[GraphQLSchema] = js.native
   def introspectSchema(fetcher: Fetcher): js.Promise[GraphQLSchema] = js.native
   def introspectSchema(fetcher: Fetcher, linkContext: StringDictionary[js.Any]): js.Promise[GraphQLSchema] = js.native
-  def makeRemoteExecutableSchema(hasSchemaLinkFetcherCreateResolverBuildSchemaOptionsPrintSchemaOptions: AnonBuildSchemaOptions): GraphQLSchema = js.native
+  def makeRemoteExecutableSchema(hasSchemaLinkFetcherCreateResolverBuildSchemaOptionsPrintSchemaOptions: BuildSchemaOptions): GraphQLSchema = js.native
   def mergeSchemas(
-    hasSchemasOnTypeConflictResolversSchemaDirectivesInheritResolversFromInterfacesMergeDirectives: AnonInheritResolversFromInterfaces
+    hasSchemasOnTypeConflictResolversSchemaDirectivesInheritResolversFromInterfacesMergeDirectives: InheritResolversFromInterfaces
   ): GraphQLSchema = js.native
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -267,7 +267,7 @@ object IgRadialMenu {
         ret
     }
     @scala.inline
-    def withClosed(value: (/* event */ Event_, /* ui */ ClosedEventUIParam) => Unit): Self = {
+    def withClosed(value: (/* event */ Event, /* ui */ ClosedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("closed")(js.Any.fromFunction2(value))
         ret
@@ -423,7 +423,7 @@ object IgRadialMenu {
         ret
     }
     @scala.inline
-    def withOpened(value: (/* event */ Event_, /* ui */ OpenedEventUIParam) => Unit): Self = {
+    def withOpened(value: (/* event */ Event, /* ui */ OpenedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("opened")(js.Any.fromFunction2(value))
         ret

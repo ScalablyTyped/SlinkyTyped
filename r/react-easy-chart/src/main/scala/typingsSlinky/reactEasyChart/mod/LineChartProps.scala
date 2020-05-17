@@ -1,8 +1,8 @@
 package typingsSlinky.reactEasyChart.mod
 
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.reactEasyChart.AnonBottom
-import typingsSlinky.reactEasyChart.AnonY
+import typingsSlinky.reactEasyChart.anon.Bottom
+import typingsSlinky.reactEasyChart.anon.Y
 import typingsSlinky.reactEasyChart.reactEasyChartStrings.`basis-closed`
 import typingsSlinky.reactEasyChart.reactEasyChartStrings.`basis-open`
 import typingsSlinky.reactEasyChart.reactEasyChartStrings.`cardinal-closed`
@@ -27,7 +27,7 @@ trait LineChartProps extends js.Object {
   /** Whether to show axis labels */
   var axes: js.UndefOr[Boolean] = js.native
   /** Labels for each of the axis */
-  var axisLabels: js.UndefOr[AnonY] = js.native
+  var axisLabels: js.UndefOr[Y] = js.native
   var clickHandler: js.UndefOr[js.Function2[/* data */ LineData, /* mouseEvent */ MouseEvent, _]] = js.native
   var data: js.Array[js.Array[LineData]] = js.native
   /** Whether to show circles on the data points */
@@ -42,7 +42,7 @@ trait LineChartProps extends js.Object {
   ] = js.native
   var lineColors: js.UndefOr[js.Array[String]] = js.native
   /** css margins */
-  var margin: js.UndefOr[AnonBottom] = js.native
+  var margin: js.UndefOr[Bottom] = js.native
   var mouseMoveHandler: js.UndefOr[js.Function2[/* data */ LineData, /* mouseEvent */ MouseEvent, _]] = js.native
   var mouseOutHandler: js.UndefOr[js.Function2[/* data */ LineData, /* mouseEvent */ MouseEvent, _]] = js.native
   var mouseOverHandler: js.UndefOr[js.Function2[/* data */ LineData, /* mouseEvent */ MouseEvent, _]] = js.native
@@ -99,7 +99,7 @@ object LineChartProps {
         ret
     }
     @scala.inline
-    def withAxisLabels(value: AnonY): Self = {
+    def withAxisLabels(value: Y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("axisLabels")(value.asInstanceOf[js.Any])
         ret
@@ -185,7 +185,7 @@ object LineChartProps {
         ret
     }
     @scala.inline
-    def withMargin(value: AnonBottom): Self = {
+    def withMargin(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientAdexchangeseller.gapi.client.adexchangeseller
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAdexchangeseller.AnonFields
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAdexchangeseller.anon.Fields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UrlchannelsResource extends js.Object {
   /** List all URL channels in the specified ad client for this Ad Exchange account. */
-  def list(request: AnonFields): Request_[UrlChannels] = js.native
+  def list(request: Fields): Request[UrlChannels] = js.native
 }
 
 object UrlchannelsResource {
   @scala.inline
-  def apply(list: AnonFields => Request_[UrlChannels]): UrlchannelsResource = {
+  def apply(list: Fields => Request[UrlChannels]): UrlchannelsResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[UrlchannelsResource]
   }
@@ -25,7 +25,7 @@ object UrlchannelsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withList(value: AnonFields => Request_[UrlChannels]): Self = {
+    def withList(value: Fields => Request[UrlChannels]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

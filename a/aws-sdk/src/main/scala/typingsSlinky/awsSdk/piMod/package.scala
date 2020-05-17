@@ -19,13 +19,6 @@ package object piMod {
   type MetricQueryList = js.Array[typingsSlinky.awsSdk.piMod.MetricQuery]
   type MetricValuesList = js.Array[typingsSlinky.awsSdk.piMod.Double]
   type ResponsePartitionKeyList = js.Array[typingsSlinky.awsSdk.piMod.ResponsePartitionKey]
-  type ServiceType = typingsSlinky.awsSdk.awsSdkStrings.RDS | java.lang.String
   type String = java.lang.String
   type StringList = js.Array[typingsSlinky.awsSdk.piMod.String]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2018-02-27`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.piMod._apiVersion | java.lang.String
 }

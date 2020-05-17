@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeDrawerLayout.mod
 
-import typingsSlinky.reactNativeDrawerLayout.AnonLeft
+import typingsSlinky.reactNativeDrawerLayout.anon.Left
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ class default () extends DrawerLayout
 @JSImport("react-native-drawer-layout", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var positions: AnonLeft = js.native
+  var positions: Left = js.native
 }
 

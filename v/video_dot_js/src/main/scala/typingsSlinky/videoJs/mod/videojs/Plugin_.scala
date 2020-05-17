@@ -1,6 +1,6 @@
 package typingsSlinky.videoJs.mod.videojs
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import typingsSlinky.videoJs.mod.videojs.Plugin.PluginEventHash
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -54,7 +54,7 @@ trait Plugin_ extends EventedMixin {
     *           An object describing changes that occurred with the "statechanged"
     *           event.
     */
-  def handleStateChanged(e: Event_): Unit = js.native
+  def handleStateChanged(e: Event): Unit = js.native
   /**
     * Get the version of the plugin that was set on <pluginName>.VERSION
     */

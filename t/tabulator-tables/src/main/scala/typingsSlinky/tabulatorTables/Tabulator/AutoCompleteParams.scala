@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 trait AutoCompleteParams
   extends SharedEditorParams
      with SharedSelectAutoCompleteEditorParams
-     with _EditorParams {
+     with EditorParams {
   var allowEmpty: js.UndefOr[Boolean] = js.native
   var emptyPlaceholder: js.UndefOr[String | HTMLElement] = js.native
   var freetext: js.UndefOr[Boolean] = js.native

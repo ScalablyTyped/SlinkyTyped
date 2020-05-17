@@ -4,9 +4,9 @@ import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.backbone.mod.Model
-import typingsSlinky.backboneMarionette.AnonDictindex
+import typingsSlinky.backboneMarionette.anon.Dictindex
 import typingsSlinky.backboneMarionette.backboneMarionetteBooleans.`false`
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ class View[TModel /* <: Model */] ()
   /**
     * Behavior objects to assign to this View.
     */
-  var behaviors: (js.Array[AnonDictindex | Behavior]) | (StringDictionary[Instantiable1[js.UndefOr[/* options */ js.Any], Behavior]]) = js.native
+  var behaviors: (js.Array[Behavior | Dictindex]) | (StringDictionary[Instantiable1[js.UndefOr[/* options */ js.Any], Behavior]]) = js.native
   /**
     * Customize the event prefix for events that are forwarded through the
     * collection view.
@@ -90,7 +90,7 @@ class View[TModel /* <: Model */] ()
   /**
     * Get handle on UI element defined in ui hash
     */
-  def getUI(ui: String): JQuery_[HTMLElement] = js.native
+  def getUI(ui: String): JQuery[HTMLElement] = js.native
   /**
     * Check if this View is attached to the DOM.
     */

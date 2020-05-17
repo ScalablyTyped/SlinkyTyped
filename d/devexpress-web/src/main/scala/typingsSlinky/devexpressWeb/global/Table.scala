@@ -1,0 +1,14 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Defines a table in the document.
+  */
+@JSGlobal("Table")
+@js.native
+class Table ()
+  extends typingsSlinky.devexpressWeb.Table
+

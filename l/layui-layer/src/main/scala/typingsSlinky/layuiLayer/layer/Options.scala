@@ -1,7 +1,7 @@
 package typingsSlinky.layuiLayer.layer
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery
 import typingsSlinky.layuiLayer.layuiLayerBooleans.`false`
 import typingsSlinky.layuiLayer.layuiLayerNumbers.`-1`
 import typingsSlinky.layuiLayer.layuiLayerNumbers.`0`
@@ -54,28 +54,28 @@ trait Options extends js.Object {
   var btn: js.UndefOr[String | js.Array[String]] = js.native
   //#region 按钮1的回调是yes，而从按钮2开始，则回调为btn2: function(){}，以此类推。
   var btn2: js.UndefOr[
-    js.Function2[/* index */ Index, /* layero */ JQuery_[HTMLElement], `false` | Unit]
+    js.Function2[/* index */ Index, /* layero */ JQuery[HTMLElement], `false` | Unit]
   ] = js.native
   var btn3: js.UndefOr[
-    js.Function2[/* index */ Index, /* layero */ JQuery_[HTMLElement], `false` | Unit]
+    js.Function2[/* index */ Index, /* layero */ JQuery[HTMLElement], `false` | Unit]
   ] = js.native
   var btn4: js.UndefOr[
-    js.Function2[/* index */ Index, /* layero */ JQuery_[HTMLElement], `false` | Unit]
+    js.Function2[/* index */ Index, /* layero */ JQuery[HTMLElement], `false` | Unit]
   ] = js.native
   var btn5: js.UndefOr[
-    js.Function2[/* index */ Index, /* layero */ JQuery_[HTMLElement], `false` | Unit]
+    js.Function2[/* index */ Index, /* layero */ JQuery[HTMLElement], `false` | Unit]
   ] = js.native
   var btn6: js.UndefOr[
-    js.Function2[/* index */ Index, /* layero */ JQuery_[HTMLElement], `false` | Unit]
+    js.Function2[/* index */ Index, /* layero */ JQuery[HTMLElement], `false` | Unit]
   ] = js.native
   var btn7: js.UndefOr[
-    js.Function2[/* index */ Index, /* layero */ JQuery_[HTMLElement], `false` | Unit]
+    js.Function2[/* index */ Index, /* layero */ JQuery[HTMLElement], `false` | Unit]
   ] = js.native
   var btn8: js.UndefOr[
-    js.Function2[/* index */ Index, /* layero */ JQuery_[HTMLElement], `false` | Unit]
+    js.Function2[/* index */ Index, /* layero */ JQuery[HTMLElement], `false` | Unit]
   ] = js.native
   var btn9: js.UndefOr[
-    js.Function2[/* index */ Index, /* layero */ JQuery_[HTMLElement], `false` | Unit]
+    js.Function2[/* index */ Index, /* layero */ JQuery[HTMLElement], `false` | Unit]
   ] = js.native
   /**
     * 按钮排列
@@ -94,7 +94,7 @@ trait Options extends js.Object {
     * @description 默认会自动触发关闭。如果不想关闭，`return false`
     */
   var cancel: js.UndefOr[
-    js.Function2[/* index */ Index, /* layero */ JQuery_[HTMLElement], `false` | Unit]
+    js.Function2[/* index */ Index, /* layero */ JQuery[HTMLElement], `false` | Unit]
   ] = js.native
   /**
     * 关闭按钮
@@ -106,7 +106,7 @@ trait Options extends js.Object {
     * 内容
     * @default ''
     */
-  var content: js.UndefOr[String | HTMLElement | JQuery_[HTMLElement] | (js.Tuple2[String, String])] = js.native
+  var content: js.UndefOr[String | HTMLElement | JQuery[HTMLElement] | (js.Tuple2[String, String])] = js.native
   /**
     * 层销毁后触发的回调
     * @description 无论是确认还是取消，只要层被销毁了，end都会执行，不携带任何参数。
@@ -127,7 +127,7 @@ trait Options extends js.Object {
     * 最大化后触发的回调
     * @param layero 当前层DOM
     */
-  var full: js.UndefOr[js.Function1[/* layero */ JQuery_[HTMLElement], Unit]] = js.native
+  var full: js.UndefOr[js.Function1[/* layero */ JQuery[HTMLElement], Unit]] = js.native
   /**
     * 图标
     * 信息框和加载层的私有参数
@@ -169,18 +169,18 @@ trait Options extends js.Object {
     * @param layero 当前层DOM
     * @description `return false` 不执行默认最小化。
     */
-  var min: js.UndefOr[js.Function1[/* layero */ JQuery_[HTMLElement], `false` | Unit]] = js.native
+  var min: js.UndefOr[js.Function1[/* layero */ JQuery[HTMLElement], `false` | Unit]] = js.native
   /**
     * 触发拖动的元素
     * @default '.layui-layer-title'
     */
-  var move: js.UndefOr[Selector | `false` | JQuery_[HTMLElement]] = js.native
+  var move: js.UndefOr[Selector | `false` | JQuery[HTMLElement]] = js.native
   /**
     * 拖动完毕后的回调方法
     * @param this 合并的选项
     * @param layero 当前层的DOM对象
     */
-  var moveEnd: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* layero */ JQuery_[HTMLElement], Unit]] = js.native
+  var moveEnd: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* layero */ JQuery[HTMLElement], Unit]] = js.native
   /**
     * 是否允许拖拽到窗口外
     * @default false
@@ -218,12 +218,12 @@ trait Options extends js.Object {
     * 监听窗口拉伸动作
     * @param layero 当前层的DOM对象
     */
-  var resizing: js.UndefOr[js.Function1[/* layero */ JQuery_[HTMLElement], Unit]] = js.native
+  var resizing: js.UndefOr[js.Function1[/* layero */ JQuery[HTMLElement], Unit]] = js.native
   /**
     * 还原后触发的回调
     * @param layero 当前层DOM
     */
-  var restore: js.UndefOr[js.Function1[/* layero */ JQuery_[HTMLElement], Unit]] = js.native
+  var restore: js.UndefOr[js.Function1[/* layero */ JQuery[HTMLElement], Unit]] = js.native
   /**
     * 是否允许浏览器出现滚动条
     * @default true
@@ -256,7 +256,7 @@ trait Options extends js.Object {
     * @param layero 当前层DOM
     * @param index 当前层索引
     */
-  var success: js.UndefOr[js.Function2[/* layero */ JQuery_[HTMLElement], /* index */ Index, Unit]] = js.native
+  var success: js.UndefOr[js.Function2[/* layero */ JQuery[HTMLElement], /* index */ Index, Unit]] = js.native
   /**
     * 自动关闭所需毫秒
     * @default 0 //不会自动关闭
@@ -300,7 +300,7 @@ trait Options extends js.Object {
     * @param layero 当前层DOM对象
     * @description 如果设定了yes回调，需进行手工关闭，`close(index)`
     */
-  var yes: js.UndefOr[js.Function2[/* index */ Index, /* layero */ JQuery_[HTMLElement], Unit]] = js.native
+  var yes: js.UndefOr[js.Function2[/* index */ Index, /* layero */ JQuery[HTMLElement], Unit]] = js.native
   /**
     * 层叠顺序
     * @default 19891014
@@ -358,7 +358,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withBtn2(value: (/* index */ Index, /* layero */ JQuery_[HTMLElement]) => `false` | Unit): Self = {
+    def withBtn2(value: (/* index */ Index, /* layero */ JQuery[HTMLElement]) => `false` | Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("btn2")(js.Any.fromFunction2(value))
         ret
@@ -370,7 +370,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withBtn3(value: (/* index */ Index, /* layero */ JQuery_[HTMLElement]) => `false` | Unit): Self = {
+    def withBtn3(value: (/* index */ Index, /* layero */ JQuery[HTMLElement]) => `false` | Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("btn3")(js.Any.fromFunction2(value))
         ret
@@ -382,7 +382,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withBtn4(value: (/* index */ Index, /* layero */ JQuery_[HTMLElement]) => `false` | Unit): Self = {
+    def withBtn4(value: (/* index */ Index, /* layero */ JQuery[HTMLElement]) => `false` | Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("btn4")(js.Any.fromFunction2(value))
         ret
@@ -394,7 +394,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withBtn5(value: (/* index */ Index, /* layero */ JQuery_[HTMLElement]) => `false` | Unit): Self = {
+    def withBtn5(value: (/* index */ Index, /* layero */ JQuery[HTMLElement]) => `false` | Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("btn5")(js.Any.fromFunction2(value))
         ret
@@ -406,7 +406,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withBtn6(value: (/* index */ Index, /* layero */ JQuery_[HTMLElement]) => `false` | Unit): Self = {
+    def withBtn6(value: (/* index */ Index, /* layero */ JQuery[HTMLElement]) => `false` | Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("btn6")(js.Any.fromFunction2(value))
         ret
@@ -418,7 +418,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withBtn7(value: (/* index */ Index, /* layero */ JQuery_[HTMLElement]) => `false` | Unit): Self = {
+    def withBtn7(value: (/* index */ Index, /* layero */ JQuery[HTMLElement]) => `false` | Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("btn7")(js.Any.fromFunction2(value))
         ret
@@ -430,7 +430,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withBtn8(value: (/* index */ Index, /* layero */ JQuery_[HTMLElement]) => `false` | Unit): Self = {
+    def withBtn8(value: (/* index */ Index, /* layero */ JQuery[HTMLElement]) => `false` | Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("btn8")(js.Any.fromFunction2(value))
         ret
@@ -442,7 +442,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withBtn9(value: (/* index */ Index, /* layero */ JQuery_[HTMLElement]) => `false` | Unit): Self = {
+    def withBtn9(value: (/* index */ Index, /* layero */ JQuery[HTMLElement]) => `false` | Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("btn9")(js.Any.fromFunction2(value))
         ret
@@ -466,7 +466,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withCancel(value: (/* index */ Index, /* layero */ JQuery_[HTMLElement]) => `false` | Unit): Self = {
+    def withCancel(value: (/* index */ Index, /* layero */ JQuery[HTMLElement]) => `false` | Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction2(value))
         ret
@@ -496,7 +496,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withContent(value: String | HTMLElement | JQuery_[HTMLElement] | (js.Tuple2[String, String])): Self = {
+    def withContent(value: String | HTMLElement | JQuery[HTMLElement] | (js.Tuple2[String, String])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
         ret
@@ -544,7 +544,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withFull(value: /* layero */ JQuery_[HTMLElement] => Unit): Self = {
+    def withFull(value: /* layero */ JQuery[HTMLElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("full")(js.Any.fromFunction1(value))
         ret
@@ -628,7 +628,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withMin(value: /* layero */ JQuery_[HTMLElement] => `false` | Unit): Self = {
+    def withMin(value: /* layero */ JQuery[HTMLElement] => `false` | Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.Any.fromFunction1(value))
         ret
@@ -640,7 +640,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withMove(value: Selector | `false` | JQuery_[HTMLElement]): Self = {
+    def withMove(value: Selector | `false` | JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("move")(value.asInstanceOf[js.Any])
         ret
@@ -652,7 +652,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withMoveEnd(value: js.ThisFunction1[Options, /* layero */ JQuery_[HTMLElement], Unit]): Self = {
+    def withMoveEnd(value: js.ThisFunction1[Options, /* layero */ JQuery[HTMLElement], Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("moveEnd")(value.asInstanceOf[js.Any])
         ret
@@ -712,7 +712,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withResizing(value: /* layero */ JQuery_[HTMLElement] => Unit): Self = {
+    def withResizing(value: /* layero */ JQuery[HTMLElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resizing")(js.Any.fromFunction1(value))
         ret
@@ -724,7 +724,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withRestore(value: /* layero */ JQuery_[HTMLElement] => Unit): Self = {
+    def withRestore(value: /* layero */ JQuery[HTMLElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("restore")(js.Any.fromFunction1(value))
         ret
@@ -796,7 +796,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withSuccess(value: (/* layero */ JQuery_[HTMLElement], /* index */ Index) => Unit): Self = {
+    def withSuccess(value: (/* layero */ JQuery[HTMLElement], /* index */ Index) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction2(value))
         ret
@@ -868,7 +868,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withYes(value: (/* index */ Index, /* layero */ JQuery_[HTMLElement]) => Unit): Self = {
+    def withYes(value: (/* index */ Index, /* layero */ JQuery[HTMLElement]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("yes")(js.Any.fromFunction2(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.bizcharts.mod
 
-import typingsSlinky.bizcharts.AnonStyle
+import typingsSlinky.bizcharts.anon.Style
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Props
 import scala.scalajs.js
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait TooltipProps
   extends Props[js.Any] {
   var containerTpl: js.UndefOr[String] = js.native
-  var crosshairs: js.UndefOr[AnonStyle | Boolean] = js.native
+  var crosshairs: js.UndefOr[Style | Boolean] = js.native
   var enterable: js.UndefOr[Boolean] = js.native
   var follow: js.UndefOr[Boolean] = js.native
   var `g2-tooltip`: js.UndefOr[CSSProperties] = js.native
@@ -59,7 +59,7 @@ object TooltipProps {
         ret
     }
     @scala.inline
-    def withCrosshairs(value: AnonStyle | Boolean): Self = {
+    def withCrosshairs(value: Style | Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("crosshairs")(value.asInstanceOf[js.Any])
         ret

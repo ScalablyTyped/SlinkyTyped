@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SimpleValidatorConfig extends js.Object {
+trait SimpleValidatorConfig extends SimpleValidator {
   var message: String = js.native
   var validateIf: js.UndefOr[(js.Function1[/* context */ ValidatorContext, Boolean]) | Boolean] = js.native
 }

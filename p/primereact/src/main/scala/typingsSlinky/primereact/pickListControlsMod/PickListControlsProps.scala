@@ -1,6 +1,6 @@
 package typingsSlinky.primereact.pickListControlsMod
 
-import typingsSlinky.primereact.AnonDirection
+import typingsSlinky.primereact.anon.Direction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait PickListControlsProps extends js.Object {
   var className: js.UndefOr[String] = js.native
   var list: js.UndefOr[js.Array[_]] = js.native
-  var onReorder: js.UndefOr[js.Function1[/* e */ AnonDirection, Unit]] = js.native
+  var onReorder: js.UndefOr[js.Function1[/* e */ Direction, Unit]] = js.native
   var selection: js.UndefOr[js.Array[_]] = js.native
 }
 
@@ -50,7 +50,7 @@ object PickListControlsProps {
         ret
     }
     @scala.inline
-    def withOnReorder(value: /* e */ AnonDirection => Unit): Self = {
+    def withOnReorder(value: /* e */ Direction => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onReorder")(js.Any.fromFunction1(value))
         ret

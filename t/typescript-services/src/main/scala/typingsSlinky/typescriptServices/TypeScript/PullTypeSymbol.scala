@@ -4,12 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("TypeScript.PullTypeSymbol")
 @js.native
-class PullTypeSymbol protected ()
+trait PullTypeSymbol
   extends PullSymbol
      with InstantiableSymbol {
-  def this(name: String, kind: PullElementKind) = this()
   var _allCallSignatures: js.Any = js.native
   var _allConstructSignatures: js.Any = js.native
   var _allIndexSignatures: js.Any = js.native

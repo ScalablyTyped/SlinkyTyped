@@ -1,7 +1,7 @@
 package typingsSlinky.chromeApps.chrome.bluetoothLowEnergy
 
-import typingsSlinky.chromeApps.AnonData
-import typingsSlinky.chromeApps.AnonUuid
+import typingsSlinky.chromeApps.anon.Data
+import typingsSlinky.chromeApps.anon.Uuid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Advertisement extends js.Object {
   /** List of manufacturer specific data to be included in 'Manufacturer Specific Data' fields of the advertising data. */
-  var manufacturerData: js.UndefOr[AnonData] = js.native
+  var manufacturerData: js.UndefOr[Data] = js.native
   /** List of service data to be included in 'Service Data' fields of the advertising data. */
-  var serviceData: AnonUuid = js.native
+  var serviceData: Uuid = js.native
   /** List of UUIDs to include in the 'Service UUIDs' field of the Advertising Data. These UUIDs can be of the 16bit, 32bit or 128 formats. */
   var serviceUuids: js.UndefOr[js.Array[String]] = js.native
   /** List of UUIDs to include in the 'Solicit UUIDs' field of the Advertising Data. These UUIDs can be of the 16bit, 32bit or 128 formats. */
@@ -22,7 +22,7 @@ trait Advertisement extends js.Object {
 
 object Advertisement {
   @scala.inline
-  def apply(serviceData: AnonUuid, `type`: AdvertisementType): Advertisement = {
+  def apply(serviceData: Uuid, `type`: AdvertisementType): Advertisement = {
     val __obj = js.Dynamic.literal(serviceData = serviceData.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Advertisement]
@@ -34,7 +34,7 @@ object Advertisement {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withServiceData(value: AnonUuid): Self = {
+    def withServiceData(value: Uuid): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("serviceData")(value.asInstanceOf[js.Any])
         ret
@@ -46,7 +46,7 @@ object Advertisement {
         ret
     }
     @scala.inline
-    def withManufacturerData(value: AnonData): Self = {
+    def withManufacturerData(value: Data): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturerData")(value.asInstanceOf[js.Any])
         ret

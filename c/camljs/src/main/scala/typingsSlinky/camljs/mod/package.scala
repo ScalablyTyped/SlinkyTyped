@@ -6,5 +6,4 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   type IGroupedQuery = typingsSlinky.camljs.mod.ISortable
-  type ViewField = java.lang.String | typingsSlinky.camljs.mod.Aggregation
 }

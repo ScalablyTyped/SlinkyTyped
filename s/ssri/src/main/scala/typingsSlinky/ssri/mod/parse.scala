@@ -1,8 +1,8 @@
 package typingsSlinky.ssri.mod
 
-import typingsSlinky.ssri.AnonSingle
-import typingsSlinky.ssri.AnonSingleBoolean
-import typingsSlinky.ssri.AnonSingleStrict
+import typingsSlinky.ssri.anon.Single
+import typingsSlinky.ssri.anon.SingleBoolean
+import typingsSlinky.ssri.anon.SingleStrict
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,16 +11,16 @@ import scala.scalajs.js.annotation._
 @js.native
 object parse extends js.Object {
   def apply(sri: String): Hash = js.native
-  def apply(sri: String, opts: AnonSingle): IntegrityMap = js.native
-  def apply(sri: String, opts: AnonSingleBoolean): IntegrityMap | Hash = js.native
-  def apply(sri: String, opts: AnonSingleStrict): Hash = js.native
+  def apply(sri: String, opts: Single): IntegrityMap = js.native
+  def apply(sri: String, opts: SingleBoolean): IntegrityMap | Hash = js.native
+  def apply(sri: String, opts: SingleStrict): Hash = js.native
   def apply(sri: HashLike): Hash = js.native
-  def apply(sri: HashLike, opts: AnonSingle): IntegrityMap = js.native
-  def apply(sri: HashLike, opts: AnonSingleBoolean): IntegrityMap | Hash = js.native
-  def apply(sri: HashLike, opts: AnonSingleStrict): Hash = js.native
+  def apply(sri: HashLike, opts: Single): IntegrityMap = js.native
+  def apply(sri: HashLike, opts: SingleBoolean): IntegrityMap | Hash = js.native
+  def apply(sri: HashLike, opts: SingleStrict): Hash = js.native
   def apply(sri: IntegrityLike): Hash = js.native
-  def apply(sri: IntegrityLike, opts: AnonSingle): IntegrityMap = js.native
-  def apply(sri: IntegrityLike, opts: AnonSingleBoolean): IntegrityMap | Hash = js.native
-  def apply(sri: IntegrityLike, opts: AnonSingleStrict): Hash = js.native
+  def apply(sri: IntegrityLike, opts: Single): IntegrityMap = js.native
+  def apply(sri: IntegrityLike, opts: SingleBoolean): IntegrityMap | Hash = js.native
+  def apply(sri: IntegrityLike, opts: SingleStrict): Hash = js.native
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.appleMapkitJs.mapkit
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.appleMapkitJs.AnonHeight
+import typingsSlinky.appleMapkitJs.anon.Height
 import typingsSlinky.std.DOMPoint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,7 @@ trait AnnotationCalloutDelegate extends js.Object {
   /**
     * Returns a point determining the callout's anchor offset.
     */
-  var calloutAnchorOffsetForAnnotation: js.UndefOr[js.Function2[/* annotation */ Annotation, /* size */ AnonHeight, DOMPoint]] = js.native
+  var calloutAnchorOffsetForAnnotation: js.UndefOr[js.Function2[/* annotation */ Annotation, /* size */ Height, DOMPoint]] = js.native
   /**
     * Returns a CSS animation used when the callout appears.
     */
@@ -61,7 +61,7 @@ object AnnotationCalloutDelegate {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCalloutAnchorOffsetForAnnotation(value: (/* annotation */ Annotation, /* size */ AnonHeight) => DOMPoint): Self = {
+    def withCalloutAnchorOffsetForAnnotation(value: (/* annotation */ Annotation, /* size */ Height) => DOMPoint): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("calloutAnchorOffsetForAnnotation")(js.Any.fromFunction2(value))
         ret

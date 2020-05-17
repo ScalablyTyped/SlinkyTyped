@@ -1,7 +1,7 @@
 package typingsSlinky.hapiAuthCookie.mod
 
 import typingsSlinky.hapi.mod.Request
-import typingsSlinky.hapiAuthCookie.ServerStateCookieOptionsn
+import typingsSlinky.hapiAuthCookie.anon.ServerStateCookieOptionsn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

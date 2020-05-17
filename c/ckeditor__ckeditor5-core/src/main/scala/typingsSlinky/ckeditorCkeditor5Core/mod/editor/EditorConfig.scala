@@ -1,6 +1,6 @@
 package typingsSlinky.ckeditorCkeditor5Core.mod.editor
 
-import typingsSlinky.ckeditorCkeditor5Core.AnonItems
+import typingsSlinky.ckeditorCkeditor5Core.anon.Items
 import typingsSlinky.ckeditorCkeditor5Core.mod.AlignmentConfig
 import typingsSlinky.ckeditorCkeditor5Core.mod.AutosaveConfig
 import typingsSlinky.ckeditorCkeditor5Core.mod.CKFinderAdapterConfig
@@ -35,7 +35,7 @@ trait EditorConfig extends js.Object {
   var mediaEmbed: MediaEmbedConfig = js.native
   var plugins: js.Array[String | Plugin[Unit]] = js.native
   var removePlugins: js.Array[String] = js.native
-  var toolbar: js.Array[String] | AnonItems = js.native
+  var toolbar: js.Array[String] | Items = js.native
   var typing: TypingConfig = js.native
 }
 
@@ -57,7 +57,7 @@ object EditorConfig {
     mediaEmbed: MediaEmbedConfig,
     plugins: js.Array[String | Plugin[Unit]],
     removePlugins: js.Array[String],
-    toolbar: js.Array[String] | AnonItems,
+    toolbar: js.Array[String] | Items,
     typing: TypingConfig
   ): EditorConfig = {
     val __obj = js.Dynamic.literal(alignment = alignment.asInstanceOf[js.Any], autosave = autosave.asInstanceOf[js.Any], balloonToolbar = balloonToolbar.asInstanceOf[js.Any], blockToolbar = blockToolbar.asInstanceOf[js.Any], ckfinder = ckfinder.asInstanceOf[js.Any], cloudServices = cloudServices.asInstanceOf[js.Any], fontFamily = fontFamily.asInstanceOf[js.Any], fontSize = fontSize.asInstanceOf[js.Any], heading = heading.asInstanceOf[js.Any], highlight = highlight.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], language = language.asInstanceOf[js.Any], mediaEmbed = mediaEmbed.asInstanceOf[js.Any], plugins = plugins.asInstanceOf[js.Any], removePlugins = removePlugins.asInstanceOf[js.Any], toolbar = toolbar.asInstanceOf[js.Any], typing = typing.asInstanceOf[js.Any])
@@ -160,7 +160,7 @@ object EditorConfig {
         ret
     }
     @scala.inline
-    def withToolbar(value: js.Array[String] | AnonItems): Self = {
+    def withToolbar(value: js.Array[String] | Items): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toolbar")(value.asInstanceOf[js.Any])
         ret

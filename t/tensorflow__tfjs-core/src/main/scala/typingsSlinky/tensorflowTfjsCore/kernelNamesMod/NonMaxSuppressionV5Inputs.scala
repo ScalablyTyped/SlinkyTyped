@@ -7,14 +7,14 @@ import scala.scalajs.js.annotation._
 /* Inlined std.Pick<@tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/kernel_registry.NamedTensorInfoMap, 'boxes' | 'scores'> */
 @js.native
 trait NonMaxSuppressionV5Inputs extends js.Object {
-  var boxes: js.Any = js.native
-  var scores: js.Any = js.native
+  var boxes: js.UndefOr[js.Any] = js.native
+  var scores: js.UndefOr[js.Any] = js.native
 }
 
 object NonMaxSuppressionV5Inputs {
   @scala.inline
-  def apply(boxes: js.Any, scores: js.Any): NonMaxSuppressionV5Inputs = {
-    val __obj = js.Dynamic.literal(boxes = boxes.asInstanceOf[js.Any], scores = scores.asInstanceOf[js.Any])
+  def apply(): NonMaxSuppressionV5Inputs = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[NonMaxSuppressionV5Inputs]
   }
   @scala.inline
@@ -30,9 +30,21 @@ object NonMaxSuppressionV5Inputs {
         ret
     }
     @scala.inline
+    def withoutBoxes: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boxes")(js.undefined)
+        ret
+    }
+    @scala.inline
     def withScores(value: js.Any): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scores")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutScores: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scores")(js.undefined)
         ret
     }
   }

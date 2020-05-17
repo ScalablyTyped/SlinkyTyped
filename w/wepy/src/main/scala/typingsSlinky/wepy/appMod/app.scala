@@ -1,14 +1,14 @@
 package typingsSlinky.wepy.appMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.wepy.AnonPages
+import typingsSlinky.wepy.anon.Pages
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait app extends js.Object {
-  var config: AnonPages = js.native
+  var config: Pages = js.native
   @JSName("$init")
   def $init(wepy: js.Any, config: AppConfig): Unit = js.native
   @JSName("$initAPI")

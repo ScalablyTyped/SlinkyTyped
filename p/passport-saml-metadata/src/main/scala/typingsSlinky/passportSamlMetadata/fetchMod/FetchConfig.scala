@@ -1,6 +1,6 @@
 package typingsSlinky.passportSamlMetadata.fetchMod
 
-import typingsSlinky.passportSamlMetadata.AnonGet
+import typingsSlinky.passportSamlMetadata.anon.Get
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait FetchConfig extends js.Object {
   var backupStore: js.UndefOr[Map[String, String]] = js.native
-  var client: js.UndefOr[AnonGet] = js.native
+  var client: js.UndefOr[Get] = js.native
   var responseType: js.UndefOr[String] = js.native
   var timeout: js.UndefOr[Double] = js.native
   var url: String = js.native
@@ -47,7 +47,7 @@ object FetchConfig {
         ret
     }
     @scala.inline
-    def withClient(value: AnonGet): Self = {
+    def withClient(value: Get): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("client")(value.asInstanceOf[js.Any])
         ret

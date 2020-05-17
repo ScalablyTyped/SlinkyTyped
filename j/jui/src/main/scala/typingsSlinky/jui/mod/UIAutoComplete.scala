@@ -1,6 +1,6 @@
 package typingsSlinky.jui.mod
 
-import typingsSlinky.jui.AnonEvent
+import typingsSlinky.jui.anon.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UIAutoComplete extends js.Object {
   def apply(selector: js.Any): this.type = js.native
-  def apply(selector: js.Any, options: AnonEvent): this.type = js.native
+  def apply(selector: js.Any, options: Event): this.type = js.native
   def close(): Unit = js.native
   /**
     * Gets filtered words subject to autofill

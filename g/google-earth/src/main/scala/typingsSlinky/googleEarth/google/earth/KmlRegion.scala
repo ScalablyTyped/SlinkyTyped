@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("google.earth.KmlRegion")
 @js.native
-class KmlRegion () extends KmlObject {
+trait KmlRegion extends KmlObject {
   /**
     * A bounding box that describes an area of interest defined by geographic coordinates and altitudes.
     */
@@ -31,5 +30,71 @@ class KmlRegion () extends KmlObject {
     * " Also specifies the size of the pixel ramp used for fading in (from transparent to opaque) and fading out (from opaque to transparent).
     */
   def setLod(lod: KmlLod): Unit = js.native
+}
+
+object KmlRegion {
+  @scala.inline
+  def apply(
+    click: KmlMouseEvent => Unit,
+    dblclick: KmlMouseEvent => Unit,
+    equals: KmlObject => Boolean,
+    getId: () => String,
+    getLatLonAltBox: () => KmlLatLonAltBox,
+    getLod: () => KmlLod,
+    getOwnerDocument: () => KmlDocument,
+    getParentNode: () => KmlObject,
+    getType: () => String,
+    getUrl: () => String,
+    mousedown: KmlMouseEvent => Unit,
+    mousemove: KmlMouseEvent => Unit,
+    mouseout: KmlMouseEvent => Unit,
+    mouseover: KmlMouseEvent => Unit,
+    mouseup: KmlMouseEvent => Unit,
+    release: () => Unit,
+    set: (KmlLatLonAltBox, KmlLod) => Unit,
+    setLatLonAltBox: KmlLatLonAltBox => Unit,
+    setLod: KmlLod => Unit
+  ): KmlRegion = {
+    val __obj = js.Dynamic.literal(click = js.Any.fromFunction1(click), dblclick = js.Any.fromFunction1(dblclick), equals = js.Any.fromFunction1(equals), getId = js.Any.fromFunction0(getId), getLatLonAltBox = js.Any.fromFunction0(getLatLonAltBox), getLod = js.Any.fromFunction0(getLod), getOwnerDocument = js.Any.fromFunction0(getOwnerDocument), getParentNode = js.Any.fromFunction0(getParentNode), getType = js.Any.fromFunction0(getType), getUrl = js.Any.fromFunction0(getUrl), mousedown = js.Any.fromFunction1(mousedown), mousemove = js.Any.fromFunction1(mousemove), mouseout = js.Any.fromFunction1(mouseout), mouseover = js.Any.fromFunction1(mouseover), mouseup = js.Any.fromFunction1(mouseup), release = js.Any.fromFunction0(release), set = js.Any.fromFunction2(set), setLatLonAltBox = js.Any.fromFunction1(setLatLonAltBox), setLod = js.Any.fromFunction1(setLod))
+    __obj.asInstanceOf[KmlRegion]
+  }
+  @scala.inline
+  implicit class KmlRegionOps[Self <: KmlRegion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetLatLonAltBox(value: () => KmlLatLonAltBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLatLonAltBox")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLod(value: () => KmlLod): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLod")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSet(value: (KmlLatLonAltBox, KmlLod) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetLatLonAltBox(value: KmlLatLonAltBox => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setLatLonAltBox")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetLod(value: KmlLod => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setLod")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.protonNative.mod
 
-import typingsSlinky.protonNative.AnonA
+import typingsSlinky.protonNative.anon.A
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait ColorButtonProps
   /**
     * Called when the color is changed for the ColorButton. The current color is passed as an object of RGBA.
     */
-  var onChange: js.UndefOr[js.Function1[/* color */ AnonA, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* color */ A, Unit]] = js.native
 }
 
 object ColorButtonProps {
@@ -45,7 +45,7 @@ object ColorButtonProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* color */ AnonA => Unit): Self = {
+    def withOnChange(value: /* color */ A => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

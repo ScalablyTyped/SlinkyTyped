@@ -15,10 +15,9 @@ package object runtimeMod {
   type Runtime = js.Any
   type RuntimeMark = typingsSlinky.vegaTypings.runtimeMod.DefineMark[
     typingsSlinky.vegaTypings.vegaTypingsStrings.group | typingsSlinky.vegaTypings.vegaTypingsStrings.rect | typingsSlinky.vegaTypings.vegaTypingsStrings.symbol | typingsSlinky.vegaTypings.vegaTypingsStrings.path | typingsSlinky.vegaTypings.vegaTypingsStrings.arc | typingsSlinky.vegaTypings.vegaTypingsStrings.area | typingsSlinky.vegaTypings.vegaTypingsStrings.line | typingsSlinky.vegaTypings.vegaTypingsStrings.image | typingsSlinky.vegaTypings.vegaTypingsStrings.text, 
-    typingsSlinky.vegaTypings.AnonFill | js.Object, 
+    typingsSlinky.vegaTypings.anon.Fill | js.Object, 
     typingsSlinky.vegaTypings.vegaTypingsStrings.`legend-symbol` | typingsSlinky.vegaTypings.vegaTypingsStrings.`axis-label` | typingsSlinky.vegaTypings.vegaTypingsStrings.`legend-label` | scala.Nothing
   ]
-  type ScenegraphEvent = org.scalajs.dom.raw.MouseEvent | org.scalajs.dom.raw.TouchEvent | org.scalajs.dom.raw.KeyboardEvent
   type SignalListenerHandler = js.Function2[
     /* name */ java.lang.String, 
     /* value */ typingsSlinky.vegaTypings.signalMod.SignalValue, 

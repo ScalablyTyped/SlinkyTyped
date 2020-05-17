@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.IHandle
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`at-least`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`at-most`
@@ -233,8 +232,4 @@ trait HistogramRangeSlider extends Widget_ {
   @JSName("on")
   def on_thumbdrag(name: `thumb-drag`, eventHandler: HistogramRangeSliderThumbDragEventHandler): IHandle = js.native
 }
-
-@JSGlobal("__esri.HistogramRangeSlider")
-@js.native
-object HistogramRangeSlider extends TopLevel[HistogramRangeSliderConstructor]
 

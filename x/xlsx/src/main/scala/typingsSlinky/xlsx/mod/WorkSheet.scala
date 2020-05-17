@@ -5,7 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait WorkSheet extends Sheet {
+trait WorkSheet
+  extends Sheet
+     with WSSpec {
   /** AutoFilter info */
   @JSName("!autofilter")
   var Exclamationmarkautofilter: js.UndefOr[AutoFilterInfo] = js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.babelGenerator.mod
 
-import typingsSlinky.babelGenerator.AnonCompact
+import typingsSlinky.babelGenerator.anon.Compact
 import typingsSlinky.babelGenerator.babelGeneratorStrings.auto
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -40,7 +40,7 @@ trait GeneratorOptions extends js.Object {
   /**
     * Options for outputting jsesc representation.
     */
-  var jsescOption: js.UndefOr[AnonCompact] = js.native
+  var jsescOption: js.UndefOr[Compact] = js.native
   /**
     * Set to true to run jsesc with "json": true to print "\\u00A9" vs. "©";
     */
@@ -177,7 +177,7 @@ object GeneratorOptions {
         ret
     }
     @scala.inline
-    def withJsescOption(value: AnonCompact): Self = {
+    def withJsescOption(value: Compact): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("jsescOption")(value.asInstanceOf[js.Any])
         ret

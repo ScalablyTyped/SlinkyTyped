@@ -1,11 +1,11 @@
 package typingsSlinky.babylonjs.actionEventMod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
 import typingsSlinky.babylonjs.mathVectorMod.Vector2
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.spriteMod.Sprite
 import typingsSlinky.babylonjs.typesMod.Nullable
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -72,8 +72,8 @@ object ActionEvent extends js.Object {
     * @returns the new ActionEvent
     */
   def CreateNew(source: AbstractMesh): ActionEvent = js.native
-  def CreateNew(source: AbstractMesh, evt: Event_): ActionEvent = js.native
-  def CreateNew(source: AbstractMesh, evt: Event_, additionalData: js.Any): ActionEvent = js.native
+  def CreateNew(source: AbstractMesh, evt: Event): ActionEvent = js.native
+  def CreateNew(source: AbstractMesh, evt: Event, additionalData: js.Any): ActionEvent = js.native
   /**
     * Helper function to auto-create an ActionEvent from a primitive
     * @param prim defines the target primitive
@@ -83,15 +83,15 @@ object ActionEvent extends js.Object {
     * @returns the new ActionEvent
     */
   def CreateNewFromPrimitive(prim: js.Any, pointerPos: Vector2): ActionEvent = js.native
-  def CreateNewFromPrimitive(prim: js.Any, pointerPos: Vector2, evt: Event_): ActionEvent = js.native
-  def CreateNewFromPrimitive(prim: js.Any, pointerPos: Vector2, evt: Event_, additionalData: js.Any): ActionEvent = js.native
+  def CreateNewFromPrimitive(prim: js.Any, pointerPos: Vector2, evt: Event): ActionEvent = js.native
+  def CreateNewFromPrimitive(prim: js.Any, pointerPos: Vector2, evt: Event, additionalData: js.Any): ActionEvent = js.native
   /**
     * Helper function to auto-create an ActionEvent from a scene. If triggered by a mesh use ActionEvent.CreateNew
     * @param scene the scene where the event occurred
     * @param evt The original (browser) event
     * @returns the new ActionEvent
     */
-  def CreateNewFromScene(scene: Scene, evt: Event_): ActionEvent = js.native
+  def CreateNewFromScene(scene: Scene, evt: Event): ActionEvent = js.native
   /**
     * Helper function to auto-create an ActionEvent from a source sprite
     * @param source The source sprite that triggered the event
@@ -101,7 +101,7 @@ object ActionEvent extends js.Object {
     * @returns the new ActionEvent
     */
   def CreateNewFromSprite(source: Sprite, scene: Scene): ActionEvent = js.native
-  def CreateNewFromSprite(source: Sprite, scene: Scene, evt: Event_): ActionEvent = js.native
-  def CreateNewFromSprite(source: Sprite, scene: Scene, evt: Event_, additionalData: js.Any): ActionEvent = js.native
+  def CreateNewFromSprite(source: Sprite, scene: Scene, evt: Event): ActionEvent = js.native
+  def CreateNewFromSprite(source: Sprite, scene: Scene, evt: Event, additionalData: js.Any): ActionEvent = js.native
 }
 

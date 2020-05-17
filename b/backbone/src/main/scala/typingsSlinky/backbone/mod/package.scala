@@ -15,7 +15,7 @@ package object mod {
     */
   type EventsHash = org.scalablytyped.runtime.StringDictionary[
     java.lang.String | (js.Function1[
-      /* eventObject */ typingsSlinky.jquery.JQuery_.TriggeredEvent[js.Any, js.Any, js.Any, js.Any], 
+      /* eventObject */ typingsSlinky.jquery.JQuery.TriggeredEvent[js.Any, js.Any, js.Any, js.Any], 
       scala.Unit
     ])
   ]

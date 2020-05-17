@@ -1,6 +1,6 @@
 package typingsSlinky.entriaRelayExperimental.useLoadMoreFunctionMod
 
-import typingsSlinky.entriaRelayExperimental.AnonCursor
+import typingsSlinky.entriaRelayExperimental.anon.Cursor
 import typingsSlinky.relayRuntime.readerNodeMod.ReaderFragment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +14,6 @@ object getConnectionState extends js.Object {
     fragmentNode: ReaderFragment,
     fragmentData: js.Any,
     connectionPathInFragmentData: js.Array[String | Double]
-  ): AnonCursor = js.native
+  ): Cursor = js.native
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.xstream
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.Event_
 import typingsSlinky.xstream.mod.InternalProducer
 import typingsSlinky.xstream.mod.Stream
 import scala.scalajs.js
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object fromEventMod extends js.Object {
   @js.native
-  class DOMEventProducer protected () extends InternalProducer[Event_] {
+  class DOMEventProducer protected () extends InternalProducer[Event] {
     def this(node: EventTarget, eventType: String, useCapture: Boolean) = this()
     var eventType: js.Any = js.native
     var listener: js.UndefOr[js.Any] = js.native
@@ -33,7 +33,7 @@ object fromEventMod extends js.Object {
   }
   
   def default[T](element: EventEmitter, eventName: String): Stream[T] = js.native
-  def default[T /* <: Event_ */](element: EventTarget, eventName: String): Stream[T] = js.native
-  def default[T /* <: Event_ */](element: EventTarget, eventName: String, useCapture: Boolean): Stream[T] = js.native
+  def default[T /* <: Event */](element: EventTarget, eventName: String): Stream[T] = js.native
+  def default[T /* <: Event */](element: EventTarget, eventName: String, useCapture: Boolean): Stream[T] = js.native
 }
 

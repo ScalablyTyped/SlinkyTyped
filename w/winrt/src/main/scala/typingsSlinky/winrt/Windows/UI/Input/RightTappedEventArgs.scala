@@ -1,10 +1,19 @@
 package typingsSlinky.winrt.Windows.UI.Input
 
+import typingsSlinky.winrt.Windows.Devices.Input.PointerDeviceType
+import typingsSlinky.winrt.Windows.Foundation.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.UI.Input.RightTappedEventArgs")
 @js.native
-class RightTappedEventArgs () extends IRightTappedEventArgs
+trait RightTappedEventArgs extends IRightTappedEventArgs
+
+object RightTappedEventArgs {
+  @scala.inline
+  def apply(pointerDeviceType: PointerDeviceType, position: Point): RightTappedEventArgs = {
+    val __obj = js.Dynamic.literal(pointerDeviceType = pointerDeviceType.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RightTappedEventArgs]
+  }
+}
 

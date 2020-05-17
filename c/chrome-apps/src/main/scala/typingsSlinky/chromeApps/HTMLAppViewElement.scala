@@ -17,10 +17,8 @@ import scala.scalajs.js.annotation._
   * @requires Permissions: 'appview'
   * @see[Documentation]{@link https://developer.chrome.com/apps/tags/appview}
   */
-@JSGlobal("HTMLAppViewElement")
 @js.native
-/** Create a new AppView tag */
-class HTMLAppViewElement () extends HTMLElement {
+trait HTMLAppViewElement extends HTMLElement {
   /**
     * Requests another app to be embedded.
     * @param app The extension id of the app to be embedded.

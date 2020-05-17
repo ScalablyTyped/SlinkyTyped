@@ -1,6 +1,6 @@
 package typingsSlinky.pusherJs.mod
 
-import typingsSlinky.pusherJs.AnonAuthorize
+import typingsSlinky.pusherJs.anon.Authorize
 import typingsSlinky.pusherJs.pusherJsStrings.ajax
 import typingsSlinky.pusherJs.pusherJsStrings.jsonp
 import scala.scalajs.js
@@ -144,7 +144,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withAuthorizer(value: (/* channel */ Channel, /* options */ Config) => AnonAuthorize): Self = {
+    def withAuthorizer(value: (/* channel */ Channel, /* options */ Config) => Authorize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("authorizer")(js.Any.fromFunction2(value))
         ret

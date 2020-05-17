@@ -1,6 +1,6 @@
 package typingsSlinky.gulpIstanbul.mod
 
-import typingsSlinky.gulpIstanbul.AnonEach
+import typingsSlinky.gulpIstanbul.anon.Each
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ThresholdOptions extends js.Object {
   var coverageVariable: js.UndefOr[String] = js.native
-  var thresholds: js.UndefOr[AnonEach] = js.native
+  var thresholds: js.UndefOr[Each] = js.native
 }
 
 object ThresholdOptions {
@@ -36,7 +36,7 @@ object ThresholdOptions {
         ret
     }
     @scala.inline
-    def withThresholds(value: AnonEach): Self = {
+    def withThresholds(value: Each): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("thresholds")(value.asInstanceOf[js.Any])
         ret

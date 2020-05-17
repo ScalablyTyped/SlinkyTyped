@@ -2,7 +2,7 @@ package typingsSlinky.pizzip.mod
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.Platform
-import typingsSlinky.pizzip.AnonLevel
+import typingsSlinky.pizzip.anon.Level
 import typingsSlinky.pizzip.pizzipStrings.DOS
 import typingsSlinky.pizzip.pizzipStrings.UNIX
 import typingsSlinky.pizzip.pizzipStrings.arraybuffer
@@ -40,7 +40,7 @@ trait GenerateOptions extends js.Object {
     * calling `generate()` with a different compression level won't update the entry.
     * The reason is simple : PizZip doesn't know how compressed the content was and how to match the compression level with the implementation we use.
     */
-  var compressionOptions: js.UndefOr[AnonLevel | Null] = js.native
+  var compressionOptions: js.UndefOr[Level | Null] = js.native
   /**
     * the function to encode the file name / comment.
     * By default, PizZip uses UTF-8 to encode the file names / comments. You can use this method to force an other encoding.
@@ -133,7 +133,7 @@ object GenerateOptions {
         ret
     }
     @scala.inline
-    def withCompressionOptions(value: AnonLevel): Self = {
+    def withCompressionOptions(value: Level): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("compressionOptions")(value.asInstanceOf[js.Any])
         ret

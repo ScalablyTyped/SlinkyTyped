@@ -1,6 +1,7 @@
 package typingsSlinky.classValidator
 
 import org.scalablytyped.runtime.Instantiable1
+import typingsSlinky.classValidator.anon.Async
 import typingsSlinky.classValidator.classValidatorStrings.`3`
 import typingsSlinky.classValidator.classValidatorStrings.`4`
 import typingsSlinky.classValidator.classValidatorStrings.`5`
@@ -249,6 +250,6 @@ object decoratorsMod extends js.Object {
   def ValidatePromise(): js.Function2[/* object */ js.Object, /* propertyName */ String, Unit] = js.native
   def ValidatePromise(validationOptions: ValidationOptions): js.Function2[/* object */ js.Object, /* propertyName */ String, Unit] = js.native
   def ValidatorConstraint(): js.Function1[/* target */ js.Function, Unit] = js.native
-  def ValidatorConstraint(options: AnonAsync): js.Function1[/* target */ js.Function, Unit] = js.native
+  def ValidatorConstraint(options: Async): js.Function1[/* target */ js.Function, Unit] = js.native
 }
 

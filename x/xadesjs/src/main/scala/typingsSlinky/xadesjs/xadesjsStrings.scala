@@ -1,6 +1,6 @@
 package typingsSlinky.xadesjs
 
-import typingsSlinky.xadesjs.encapsulatedPkiDataMod._EncodingType
+import typingsSlinky.xadesjs.encapsulatedPkiDataMod.EncodingType
 import typingsSlinky.xadesjs.objectIdentifierMod.IdentifierQualifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,19 +14,19 @@ object xadesjsStrings {
   sealed trait OIDAsURN extends IdentifierQualifier
   
   @js.native
-  sealed trait ber extends _EncodingType
+  sealed trait ber extends EncodingType
   
   @js.native
-  sealed trait cer extends _EncodingType
+  sealed trait cer extends EncodingType
   
   @js.native
-  sealed trait der extends _EncodingType
+  sealed trait der extends EncodingType
   
   @js.native
-  sealed trait per extends _EncodingType
+  sealed trait per extends EncodingType
   
   @js.native
-  sealed trait xer extends _EncodingType
+  sealed trait xer extends EncodingType
   
   @scala.inline
   def OIDAsURI: OIDAsURI = "OIDAsURI".asInstanceOf[OIDAsURI]

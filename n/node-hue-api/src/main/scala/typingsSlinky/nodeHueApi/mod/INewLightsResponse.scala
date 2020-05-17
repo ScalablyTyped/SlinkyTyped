@@ -1,13 +1,13 @@
 package typingsSlinky.nodeHueApi.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.nodeHueApi.AnonName
+import typingsSlinky.nodeHueApi.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait INewLightsResponse extends /* key */ StringDictionary[String | AnonName] {
+trait INewLightsResponse extends /* key */ StringDictionary[String | Name] {
   var lastscan: String = js.native
 }
 

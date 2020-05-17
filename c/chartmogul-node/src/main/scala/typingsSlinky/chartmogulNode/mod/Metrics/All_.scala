@@ -1,18 +1,18 @@
 package typingsSlinky.chartmogulNode.mod.Metrics
 
-import typingsSlinky.chartmogulNode.AnonArpa
+import typingsSlinky.chartmogulNode.anon.Arpa
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait All_ extends js.Object {
-  var entries: AnonArpa = js.native
+  var entries: Arpa = js.native
 }
 
 object All_ {
   @scala.inline
-  def apply(entries: AnonArpa): All_ = {
+  def apply(entries: Arpa): All_ = {
     val __obj = js.Dynamic.literal(entries = entries.asInstanceOf[js.Any])
     __obj.asInstanceOf[All_]
   }
@@ -23,7 +23,7 @@ object All_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEntries(value: AnonArpa): Self = {
+    def withEntries(value: Arpa): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("entries")(value.asInstanceOf[js.Any])
         ret

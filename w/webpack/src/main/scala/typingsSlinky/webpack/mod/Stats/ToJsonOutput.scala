@@ -1,9 +1,9 @@
 package typingsSlinky.webpack.mod.Stats
 
 import typingsSlinky.std.Record
-import typingsSlinky.webpack.AnonChildren
-import typingsSlinky.webpack.AnonChunkNames
-import typingsSlinky.webpack.ToJsonOutputnamestring
+import typingsSlinky.webpack.anon.Children
+import typingsSlinky.webpack.anon.ChunkNames
+import typingsSlinky.webpack.anon.ToJsonOutputnamestring
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,11 +12,11 @@ import scala.scalajs.js.annotation._
 trait ToJsonOutput extends js.Object {
   var _showErrors: Boolean = js.native
   var _showWarnings: Boolean = js.native
-  var assets: js.UndefOr[js.Array[AnonChunkNames]] = js.native
+  var assets: js.UndefOr[js.Array[ChunkNames]] = js.native
   var assetsByChunkName: js.UndefOr[Record[String, String | js.Array[String]]] = js.native
   var builtAt: js.UndefOr[Double] = js.native
   var children: js.UndefOr[js.Array[ToJsonOutputnamestring]] = js.native
-  var chunks: js.UndefOr[js.Array[AnonChildren]] = js.native
+  var chunks: js.UndefOr[js.Array[Children]] = js.native
   var entrypoints: js.UndefOr[Record[String, ChunkGroup]] = js.native
   var env: js.UndefOr[Record[String, _]] = js.native
   var errors: js.Array[String] = js.native
@@ -70,7 +70,7 @@ object ToJsonOutput {
         ret
     }
     @scala.inline
-    def withAssets(value: js.Array[AnonChunkNames]): Self = {
+    def withAssets(value: js.Array[ChunkNames]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("assets")(value.asInstanceOf[js.Any])
         ret
@@ -118,7 +118,7 @@ object ToJsonOutput {
         ret
     }
     @scala.inline
-    def withChunks(value: js.Array[AnonChildren]): Self = {
+    def withChunks(value: js.Array[Children]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("chunks")(value.asInstanceOf[js.Any])
         ret

@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a receipt printer station that has been claimed for use. */
-@JSGlobal("Windows.Devices.PointOfService.ClaimedReceiptPrinter")
 @js.native
-abstract class ClaimedReceiptPrinter () extends js.Object {
+trait ClaimedReceiptPrinter extends js.Object {
   /** Gets or sets the number of characters the receipt printer station can print per line of text. */
   var charactersPerLine: Double = js.native
   /** Gets or sets the color cartridge that the receipt printer station should use when it prints. */
@@ -57,5 +56,162 @@ abstract class ClaimedReceiptPrinter () extends js.Object {
     * @return True if the data passes validation; otherwise false.
     */
   def validateData(data: String): Boolean = js.native
+}
+
+object ClaimedReceiptPrinter {
+  @scala.inline
+  def apply(
+    charactersPerLine: Double,
+    colorCartridge: PosPrinterColorCartridge,
+    createJob: () => ReceiptPrintJob,
+    isCartridgeEmpty: Boolean,
+    isCartridgeRemoved: Boolean,
+    isCoverOpen: Boolean,
+    isHeadCleaning: Boolean,
+    isLetterQuality: Boolean,
+    isPaperEmpty: Boolean,
+    isPaperNearEnd: Boolean,
+    isReadyToPrint: Boolean,
+    lineHeight: Double,
+    lineSpacing: Double,
+    lineWidth: Double,
+    linesToPaperCut: Double,
+    pageSize: Size,
+    printArea: Rect,
+    sidewaysMaxChars: Double,
+    sidewaysMaxLines: Double,
+    validateData: String => Boolean
+  ): ClaimedReceiptPrinter = {
+    val __obj = js.Dynamic.literal(charactersPerLine = charactersPerLine.asInstanceOf[js.Any], colorCartridge = colorCartridge.asInstanceOf[js.Any], createJob = js.Any.fromFunction0(createJob), isCartridgeEmpty = isCartridgeEmpty.asInstanceOf[js.Any], isCartridgeRemoved = isCartridgeRemoved.asInstanceOf[js.Any], isCoverOpen = isCoverOpen.asInstanceOf[js.Any], isHeadCleaning = isHeadCleaning.asInstanceOf[js.Any], isLetterQuality = isLetterQuality.asInstanceOf[js.Any], isPaperEmpty = isPaperEmpty.asInstanceOf[js.Any], isPaperNearEnd = isPaperNearEnd.asInstanceOf[js.Any], isReadyToPrint = isReadyToPrint.asInstanceOf[js.Any], lineHeight = lineHeight.asInstanceOf[js.Any], lineSpacing = lineSpacing.asInstanceOf[js.Any], lineWidth = lineWidth.asInstanceOf[js.Any], linesToPaperCut = linesToPaperCut.asInstanceOf[js.Any], pageSize = pageSize.asInstanceOf[js.Any], printArea = printArea.asInstanceOf[js.Any], sidewaysMaxChars = sidewaysMaxChars.asInstanceOf[js.Any], sidewaysMaxLines = sidewaysMaxLines.asInstanceOf[js.Any], validateData = js.Any.fromFunction1(validateData))
+    __obj.asInstanceOf[ClaimedReceiptPrinter]
+  }
+  @scala.inline
+  implicit class ClaimedReceiptPrinterOps[Self <: ClaimedReceiptPrinter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCharactersPerLine(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("charactersPerLine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColorCartridge(value: PosPrinterColorCartridge): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorCartridge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreateJob(value: () => ReceiptPrintJob): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createJob")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsCartridgeEmpty(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCartridgeEmpty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsCartridgeRemoved(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCartridgeRemoved")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsCoverOpen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCoverOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsHeadCleaning(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isHeadCleaning")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsLetterQuality(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLetterQuality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsPaperEmpty(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPaperEmpty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsPaperNearEnd(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPaperNearEnd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsReadyToPrint(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isReadyToPrint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLineHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLineSpacing(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineSpacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLineWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLinesToPaperCut(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("linesToPaperCut")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPageSize(value: Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrintArea(value: Rect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("printArea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSidewaysMaxChars(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sidewaysMaxChars")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSidewaysMaxLines(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sidewaysMaxLines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValidateData(value: String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validateData")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

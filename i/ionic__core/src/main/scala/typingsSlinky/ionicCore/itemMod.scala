@@ -1,7 +1,7 @@
 package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.CustomEvent
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonItemElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonItemElement
 import typingsSlinky.ionicCore.elementInterfaceMod.AnchorInterface
 import typingsSlinky.ionicCore.elementInterfaceMod.ButtonInterface
 import typingsSlinky.ionicCore.interfaceMod.RouterDirection

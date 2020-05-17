@@ -3,7 +3,6 @@ package typingsSlinky.reactElemental.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactElemental.AnonLabel
 import typingsSlinky.reactElemental.mod.SelectListProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,7 +24,7 @@ object SelectList {
     @scala.inline
     def onChange(value: /* value */ String => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def options(value: js.Array[AnonLabel]): this.type = set("options", value.asInstanceOf[js.Any])
+    def options(value: js.Array[typingsSlinky.reactElemental.anon.Label]): this.type = set("options", value.asInstanceOf[js.Any])
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline

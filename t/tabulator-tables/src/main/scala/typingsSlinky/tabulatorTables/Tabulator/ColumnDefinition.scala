@@ -24,7 +24,7 @@ import scala.scalajs.js.annotation._
 trait ColumnDefinition
   extends ColumnLayout
      with CellCallbacks
-     with _ColumnLookup {
+     with ColumnLookup {
   /**  Accessors are used to alter data as it is extracted from the table, through commands, the clipboard, or download.
     You can set accessors on a per column basis using the accessor option in the column definition object.*/
   var accessor: js.UndefOr[CustomAccessor] = js.native

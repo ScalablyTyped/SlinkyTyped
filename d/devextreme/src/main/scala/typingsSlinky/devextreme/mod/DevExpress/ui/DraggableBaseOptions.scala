@@ -1,12 +1,12 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonY
+import typingsSlinky.devextreme.anon.Y
 import typingsSlinky.devextreme.devextremeStrings.both
 import typingsSlinky.devextreme.devextremeStrings.horizontal
 import typingsSlinky.devextreme.devextremeStrings.vertical
 import typingsSlinky.devextreme.mod.DevExpress.DOMComponentOptions
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait DraggableBaseOptions[T] extends DOMComponentOptions[T] {
   /** Specifies a custom container in which the draggable item should be rendered. */
   var container: js.UndefOr[String | Element | JQuery] = js.native
   /** Specifies the cursor offset from the dragged item. */
-  var cursorOffset: js.UndefOr[String | AnonY] = js.native
+  var cursorOffset: js.UndefOr[String | Y] = js.native
   /** A container for custom data. */
   var data: js.UndefOr[js.Any] = js.native
   /** Specifies the directions in which an item can be dragged. */
@@ -96,7 +96,7 @@ object DraggableBaseOptions {
         ret
     }
     @scala.inline
-    def withCursorOffset(value: String | AnonY): Self[T] = {
+    def withCursorOffset(value: String | Y): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cursorOffset")(value.asInstanceOf[js.Any])
         ret

@@ -1,8 +1,8 @@
 package typingsSlinky.reactFloater.mod
 
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactFloater.AnonZIndex
-import typingsSlinky.reactFloater.CSSPropertieslengthnumber
+import typingsSlinky.reactFloater.anon.CSSPropertieslengthnumber
+import typingsSlinky.reactFloater.anon.ZIndex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait Styles extends js.Object {
   var floaterWithAnimation: CSSProperties = js.native
   var floaterWithComponent: CSSProperties = js.native
   var footer: CSSProperties = js.native
-  var options: AnonZIndex = js.native
+  var options: ZIndex = js.native
   var title: CSSProperties = js.native
   var wrapper: CSSProperties = js.native
   var wrapperPosition: CSSProperties = js.native
@@ -40,7 +40,7 @@ object Styles {
     floaterWithAnimation: CSSProperties,
     floaterWithComponent: CSSProperties,
     footer: CSSProperties,
-    options: AnonZIndex,
+    options: ZIndex,
     title: CSSProperties,
     wrapper: CSSProperties,
     wrapperPosition: CSSProperties
@@ -121,7 +121,7 @@ object Styles {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonZIndex): Self = {
+    def withOptions(value: ZIndex): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeTabView.typesMod
 
-import typingsSlinky.reactNativeTabView.AnonDamping
-import typingsSlinky.reactNativeTabView.AnonDuration
+import typingsSlinky.reactNativeTabView.anon.Damping
+import typingsSlinky.reactNativeTabView.anon.Duration
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.`on-drag`
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.auto
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.none
@@ -14,20 +14,20 @@ trait PagerCommonProps extends js.Object {
   var keyboardDismissMode: none | `on-drag` | auto = js.native
   var onSwipeEnd: js.UndefOr[js.Function0[Unit]] = js.native
   var onSwipeStart: js.UndefOr[js.Function0[Unit]] = js.native
-  var springConfig: AnonDamping = js.native
+  var springConfig: Damping = js.native
   var springVelocityScale: js.UndefOr[Double] = js.native
   var swipeEnabled: Boolean = js.native
   var swipeVelocityImpact: js.UndefOr[Double] = js.native
-  var timingConfig: AnonDuration = js.native
+  var timingConfig: Duration = js.native
 }
 
 object PagerCommonProps {
   @scala.inline
   def apply(
     keyboardDismissMode: none | `on-drag` | auto,
-    springConfig: AnonDamping,
+    springConfig: Damping,
     swipeEnabled: Boolean,
-    timingConfig: AnonDuration
+    timingConfig: Duration
   ): PagerCommonProps = {
     val __obj = js.Dynamic.literal(keyboardDismissMode = keyboardDismissMode.asInstanceOf[js.Any], springConfig = springConfig.asInstanceOf[js.Any], swipeEnabled = swipeEnabled.asInstanceOf[js.Any], timingConfig = timingConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[PagerCommonProps]
@@ -45,7 +45,7 @@ object PagerCommonProps {
         ret
     }
     @scala.inline
-    def withSpringConfig(value: AnonDamping): Self = {
+    def withSpringConfig(value: Damping): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("springConfig")(value.asInstanceOf[js.Any])
         ret
@@ -57,7 +57,7 @@ object PagerCommonProps {
         ret
     }
     @scala.inline
-    def withTimingConfig(value: AnonDuration): Self = {
+    def withTimingConfig(value: Duration): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("timingConfig")(value.asInstanceOf[js.Any])
         ret

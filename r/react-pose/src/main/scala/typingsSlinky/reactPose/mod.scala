@@ -1,5 +1,8 @@
 package typingsSlinky.reactPose
 
+import typingsSlinky.reactPose.anon.EnterAfterExit
+import typingsSlinky.reactPose.anon.FlipMove
+import typingsSlinky.reactPose.anon.PartialState
 import typingsSlinky.reactPose.posedMod.Posed
 import typingsSlinky.reactPose.transitionTypesMod.Props
 import typingsSlinky.reactPose.transitionTypesMod.State
@@ -22,13 +25,13 @@ object mod extends js.Object {
   /* static members */
   @js.native
   object PoseGroup extends js.Object {
-    var defaultProps: AnonFlipMove = js.native
+    var defaultProps: FlipMove = js.native
   }
   
   /* static members */
   @js.native
   object Transition extends js.Object {
-    var defaultProps: AnonEnterAfterExit = js.native
+    var defaultProps: EnterAfterExit = js.native
     def getDerivedStateFromProps(props: Props, state: State): PartialState = js.native
   }
   

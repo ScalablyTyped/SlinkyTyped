@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CompletionItem_ extends js.Object {
+trait CompletionItem_ extends CompleteItemOrString {
   /**
     * The optional description of the completion.
     */

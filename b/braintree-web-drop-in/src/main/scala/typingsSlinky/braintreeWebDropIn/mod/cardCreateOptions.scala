@@ -1,23 +1,23 @@
 package typingsSlinky.braintreeWebDropIn.mod
 
-import typingsSlinky.braintreeWebDropIn.AnonAllowVaultCardOverride
-import typingsSlinky.braintreeWebDropIn.AnonFields
-import typingsSlinky.braintreeWebDropIn.AnonRequired
+import typingsSlinky.braintreeWebDropIn.anon.AllowVaultCardOverride
+import typingsSlinky.braintreeWebDropIn.anon.Fields
+import typingsSlinky.braintreeWebDropIn.anon.Required
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait cardCreateOptions extends js.Object {
-  var cardholderName: js.UndefOr[Boolean | AnonRequired] = js.native
+  var cardholderName: js.UndefOr[Boolean | Required] = js.native
   var clearFieldsAfterTokenization: js.UndefOr[Boolean] = js.native
-  var overrides: AnonFields = js.native
-  var vault: js.UndefOr[AnonAllowVaultCardOverride] = js.native
+  var overrides: Fields = js.native
+  var vault: js.UndefOr[AllowVaultCardOverride] = js.native
 }
 
 object cardCreateOptions {
   @scala.inline
-  def apply(overrides: AnonFields): cardCreateOptions = {
+  def apply(overrides: Fields): cardCreateOptions = {
     val __obj = js.Dynamic.literal(overrides = overrides.asInstanceOf[js.Any])
     __obj.asInstanceOf[cardCreateOptions]
   }
@@ -28,13 +28,13 @@ object cardCreateOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOverrides(value: AnonFields): Self = {
+    def withOverrides(value: Fields): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withCardholderName(value: Boolean | AnonRequired): Self = {
+    def withCardholderName(value: Boolean | Required): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cardholderName")(value.asInstanceOf[js.Any])
         ret
@@ -58,7 +58,7 @@ object cardCreateOptions {
         ret
     }
     @scala.inline
-    def withVault(value: AnonAllowVaultCardOverride): Self = {
+    def withVault(value: AllowVaultCardOverride): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("vault")(value.asInstanceOf[js.Any])
         ret

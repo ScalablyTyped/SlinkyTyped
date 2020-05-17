@@ -1,6 +1,6 @@
 package typingsSlinky.mjmlReact.components
 
-import typingsSlinky.mjmlReact.AnonChildren
+import typingsSlinky.mjmlReact.anon.Children
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ object MjmlTitle {
   @js.native
   object component extends js.Object
   
-  def withProps(p: AnonChildren): SharedBuilder_AnonChildren_1167735050[typingsSlinky.mjmlReact.mod.MjmlTitle] = new SharedBuilder_AnonChildren_1167735050[typingsSlinky.mjmlReact.mod.MjmlTitle](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: MjmlTitle.type): SharedBuilder_AnonChildren_1167735050[typingsSlinky.mjmlReact.mod.MjmlTitle] = new SharedBuilder_AnonChildren_1167735050[typingsSlinky.mjmlReact.mod.MjmlTitle](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: Children): SharedBuilder_Children_486447409[typingsSlinky.mjmlReact.mod.MjmlTitle] = new SharedBuilder_Children_486447409[typingsSlinky.mjmlReact.mod.MjmlTitle](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MjmlTitle.type): SharedBuilder_Children_486447409[typingsSlinky.mjmlReact.mod.MjmlTitle] = new SharedBuilder_Children_486447409[typingsSlinky.mjmlReact.mod.MjmlTitle](js.Array(this.component, js.Dictionary.empty))()
 }
 

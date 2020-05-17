@@ -1,7 +1,7 @@
 package typingsSlinky.ckeditorCkeditor5Utils.mod
 
-import typingsSlinky.ckeditorCkeditor5Utils.Anon0
-import typingsSlinky.ckeditorCkeditor5Utils.AnonPriority
+import typingsSlinky.ckeditorCkeditor5Utils.anon.Priority
+import typingsSlinky.ckeditorCkeditor5Utils.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,13 +12,13 @@ trait Emitter extends js.Object {
   def fire(eventOrInfo: String, args: js.Any*): js.Any = js.native
   def fire(eventOrInfo: EventInfo[Emitter], args: js.Any*): js.Any = js.native
   def listenTo(emitter: Emitter, event: String, callback: js.Function): Unit = js.native
-  def listenTo(emitter: Emitter, event: String, callback: js.Function, options: AnonPriority): Unit = js.native
+  def listenTo(emitter: Emitter, event: String, callback: js.Function, options: Priority): Unit = js.native
   def off(event: String): Unit = js.native
   def off(event: String, callback: js.Function): Unit = js.native
   def on(event: String, callback: js.Function): Unit = js.native
-  def on(event: String, callback: js.Function, options: Anon0): Unit = js.native
+  def on(event: String, callback: js.Function, options: `0`): Unit = js.native
   def once(event: String, callback: js.Function): Unit = js.native
-  def once(event: String, callback: js.Function, options: Anon0): Unit = js.native
+  def once(event: String, callback: js.Function, options: `0`): Unit = js.native
   def stopDelegating(): Unit = js.native
   def stopDelegating(event: String): Unit = js.native
   def stopDelegating(event: String, emitter: Emitter): Unit = js.native

@@ -1,7 +1,7 @@
 package typingsSlinky.ink.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.node.processMod._Global_.NodeJS.WriteStream
+import typingsSlinky.node.processMod.global.NodeJS.WriteStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

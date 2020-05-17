@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCore
 
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonLoadingElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonLoadingElement
 import typingsSlinky.ionicCore.loadingInterfaceMod.LoadingOptions
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayController
 import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface

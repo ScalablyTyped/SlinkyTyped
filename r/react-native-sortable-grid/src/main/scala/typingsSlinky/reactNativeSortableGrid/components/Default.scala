@@ -4,7 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeSortableGrid.AnonTransform
+import typingsSlinky.reactNativeSortableGrid.anon.Transform
 import typingsSlinky.reactNativeSortableGrid.mod.ItemOrder
 import typingsSlinky.reactNativeSortableGrid.mod.OrderedItem
 import typingsSlinky.reactNativeSortableGrid.mod.SortableGridProps
@@ -31,7 +31,7 @@ object Default {
     @scala.inline
     def dragActivationThreshold(value: Double): this.type = set("dragActivationThreshold", value.asInstanceOf[js.Any])
     @scala.inline
-    def dragStartAnimation(value: AnonTransform): this.type = set("dragStartAnimation", value.asInstanceOf[js.Any])
+    def dragStartAnimation(value: Transform): this.type = set("dragStartAnimation", value.asInstanceOf[js.Any])
     @scala.inline
     def itemHeight(value: Double): this.type = set("itemHeight", value.asInstanceOf[js.Any])
     @scala.inline

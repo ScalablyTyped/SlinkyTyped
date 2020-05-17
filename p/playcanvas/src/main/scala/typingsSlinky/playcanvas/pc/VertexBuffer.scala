@@ -16,18 +16,8 @@ import scala.scalajs.js.annotation._
   * @param {number} [usage] - The usage type of the vertex buffer (see pc.BUFFER_*).
   * @param {ArrayBuffer} [initialData] - Initial data.
   */
-@JSGlobal("pc.VertexBuffer")
 @js.native
-class VertexBuffer protected () extends js.Object {
-  def this(graphicsDevice: GraphicsDevice, format: VertexFormat, numVertices: Double) = this()
-  def this(graphicsDevice: GraphicsDevice, format: VertexFormat, numVertices: Double, usage: Double) = this()
-  def this(
-    graphicsDevice: GraphicsDevice,
-    format: VertexFormat,
-    numVertices: Double,
-    usage: Double,
-    initialData: js.typedarray.ArrayBuffer
-  ) = this()
+trait VertexBuffer extends js.Object {
   /**
     * @function
     * @name pc.VertexBuffer#destroy

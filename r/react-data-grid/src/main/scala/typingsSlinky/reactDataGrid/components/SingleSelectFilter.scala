@@ -14,17 +14,17 @@ object SingleSelectFilter {
   
   def apply(p: js.Any): Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Filters.SingleSelectFilter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Filters.SingleSelectFilter
   ] = new Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Filters.SingleSelectFilter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Filters.SingleSelectFilter
   ](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: SingleSelectFilter.type): Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Filters.SingleSelectFilter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Filters.SingleSelectFilter
   ] = new Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Filters.SingleSelectFilter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Filters.SingleSelectFilter
   ](js.Array(this.component, js.Dictionary.empty))()
 }
 

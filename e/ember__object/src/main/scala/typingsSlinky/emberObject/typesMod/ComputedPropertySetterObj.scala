@@ -5,7 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ComputedPropertySetterObj[T] extends _ComputedPropertyObj[T] {
+trait ComputedPropertySetterObj[T]
+  extends ComputedPropertyObj[T]
+     with ComputedPropertySetter[T] {
   def set(key: String, value: T): T = js.native
 }
 

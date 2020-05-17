@@ -1,6 +1,6 @@
 package typingsSlinky.expoLocation.mod
 
-import typingsSlinky.expoLocation.AnonNotificationBody
+import typingsSlinky.expoLocation.anon.NotificationBody
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait LocationTaskOptions extends js.Object {
   var deferredUpdatesInterval: js.UndefOr[Double] = js.native
   var deferredUpdatesTimeout: js.UndefOr[Double] = js.native
   var distanceInterval: js.UndefOr[Double] = js.native
-  var foregroundService: js.UndefOr[AnonNotificationBody] = js.native
+  var foregroundService: js.UndefOr[NotificationBody] = js.native
   var pausesUpdatesAutomatically: js.UndefOr[Boolean] = js.native
   var showsBackgroundLocationIndicator: js.UndefOr[Boolean] = js.native
   var timeInterval: js.UndefOr[Double] = js.native
@@ -104,7 +104,7 @@ object LocationTaskOptions {
         ret
     }
     @scala.inline
-    def withForegroundService(value: AnonNotificationBody): Self = {
+    def withForegroundService(value: NotificationBody): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("foregroundService")(value.asInstanceOf[js.Any])
         ret

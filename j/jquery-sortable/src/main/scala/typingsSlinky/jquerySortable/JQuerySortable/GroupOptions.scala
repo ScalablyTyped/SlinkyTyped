@@ -1,8 +1,8 @@
 package typingsSlinky.jquerySortable.JQuerySortable
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import typingsSlinky.jquerySortable.JQuery
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -162,7 +162,7 @@ object GroupOptions {
     def withOnCancel(
       value: (/* $item */ js.UndefOr[JQuery], /* container */ js.UndefOr[Container], /* _super */ js.UndefOr[
           /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias jquery-sortable.JQuerySortable.OnCancelHandler */ js.Object
-        ], /* event */ js.UndefOr[Event_]) => Unit
+        ], /* event */ js.UndefOr[Event]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCancel")(js.Any.fromFunction4(value))
@@ -178,7 +178,7 @@ object GroupOptions {
     def withOnDrag(
       value: (/* $item */ js.UndefOr[JQuery], /* position */ js.UndefOr[Position], /* _super */ js.UndefOr[
           /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias jquery-sortable.JQuerySortable.OnDragEventHandler */ js.Object
-        ], /* event */ js.UndefOr[Event_]) => Unit
+        ], /* event */ js.UndefOr[Event]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDrag")(js.Any.fromFunction4(value))
@@ -194,7 +194,7 @@ object GroupOptions {
     def withOnDragStart(
       value: (/* $item */ js.UndefOr[JQuery], /* container */ js.UndefOr[Container], /* _super */ js.UndefOr[
           /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias jquery-sortable.JQuerySortable.GenericEventHandler */ js.Object
-        ], /* event */ js.UndefOr[Event_]) => Unit
+        ], /* event */ js.UndefOr[Event]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.Any.fromFunction4(value))
@@ -210,7 +210,7 @@ object GroupOptions {
     def withOnDrop(
       value: (/* $item */ js.UndefOr[JQuery], /* container */ js.UndefOr[Container], /* _super */ js.UndefOr[
           /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias jquery-sortable.JQuerySortable.GenericEventHandler */ js.Object
-        ], /* event */ js.UndefOr[Event_]) => Unit
+        ], /* event */ js.UndefOr[Event]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDrop")(js.Any.fromFunction4(value))
@@ -226,7 +226,7 @@ object GroupOptions {
     def withOnMousedown(
       value: (/* $item */ js.UndefOr[JQuery], /* _super */ js.UndefOr[
           /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias jquery-sortable.JQuerySortable.OnMousedownHandler */ js.Object
-        ], /* event */ js.UndefOr[Event_]) => Unit
+        ], /* event */ js.UndefOr[Event]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMousedown")(js.Any.fromFunction3(value))

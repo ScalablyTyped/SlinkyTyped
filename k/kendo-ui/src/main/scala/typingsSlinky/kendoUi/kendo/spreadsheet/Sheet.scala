@@ -1,14 +1,13 @@
 package typingsSlinky.kendoUi.kendo.spreadsheet
 
-import typingsSlinky.kendoUi.kendo.Observable_
+import typingsSlinky.kendoUi.kendo.Observable
 import typingsSlinky.kendoUi.kendo.data.DataSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.spreadsheet.Sheet")
 @js.native
-class Sheet () extends Observable_ {
+trait Sheet extends Observable {
   var options: SheetOptions = js.native
   def batch(callback: js.Function, changeEventArgs: js.Any): Unit = js.native
   def clearFilter(indexes: js.Any): Unit = js.native

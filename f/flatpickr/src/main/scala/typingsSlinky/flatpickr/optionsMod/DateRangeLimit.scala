@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DateRangeLimit[D] extends js.Object {
+trait DateRangeLimit[D] extends DateLimit[D] {
   var from: D = js.native
   var to: D = js.native
 }

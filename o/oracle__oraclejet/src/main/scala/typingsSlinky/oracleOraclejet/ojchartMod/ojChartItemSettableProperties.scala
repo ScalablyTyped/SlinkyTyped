@@ -1,6 +1,6 @@
 package typingsSlinky.oracleOraclejet.ojchartMod
 
-import typingsSlinky.oracleOraclejet.AnonMedianSvgStyle
+import typingsSlinky.oracleOraclejet.anon.MedianSvgStyle
 import typingsSlinky.oracleOraclejet.mod.JetSettableProperties
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.aboveMarker
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.afterMarker
@@ -43,7 +43,7 @@ import scala.scalajs.js.annotation._
 trait ojChartItemSettableProperties extends JetSettableProperties {
   var borderColor: js.UndefOr[String] = js.native
   var borderWidth: js.UndefOr[Double] = js.native
-  var boxPlot: js.UndefOr[AnonMedianSvgStyle] = js.native
+  var boxPlot: js.UndefOr[MedianSvgStyle] = js.native
   var categories: js.UndefOr[js.Array[String]] = js.native
   var close: js.UndefOr[Double] = js.native
   var color: js.UndefOr[String] = js.native
@@ -134,7 +134,7 @@ object ojChartItemSettableProperties {
         ret
     }
     @scala.inline
-    def withBoxPlot(value: AnonMedianSvgStyle): Self = {
+    def withBoxPlot(value: MedianSvgStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("boxPlot")(value.asInstanceOf[js.Any])
         ret

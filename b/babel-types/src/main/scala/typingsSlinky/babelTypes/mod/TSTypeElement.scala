@@ -15,62 +15,14 @@ trait TSTypeElement extends js.Object
 
 object TSTypeElement {
   @scala.inline
-  def TSConstructSignatureDeclaration(
-    end: Double,
-    loc: SourceLocation,
-    start: Double,
-    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSConstructSignatureDeclaration
-  ): TSTypeElement = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSTypeElement]
-  }
+  implicit def apply(value: TSCallSignatureDeclaration): TSTypeElement = value.asInstanceOf[TSTypeElement]
   @scala.inline
-  def TSPropertySignature(
-    end: Double,
-    key: Expression,
-    loc: SourceLocation,
-    start: Double,
-    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSPropertySignature
-  ): TSTypeElement = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSTypeElement]
-  }
+  implicit def apply(value: TSConstructSignatureDeclaration): TSTypeElement = value.asInstanceOf[TSTypeElement]
   @scala.inline
-  def TSMethodSignature(
-    end: Double,
-    key: Expression,
-    loc: SourceLocation,
-    start: Double,
-    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSMethodSignature
-  ): TSTypeElement = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSTypeElement]
-  }
+  implicit def apply(value: TSIndexSignature): TSTypeElement = value.asInstanceOf[TSTypeElement]
   @scala.inline
-  def TSIndexSignature(
-    end: Double,
-    loc: SourceLocation,
-    parameters: js.Array[Identifier_],
-    start: Double,
-    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSIndexSignature
-  ): TSTypeElement = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], parameters = parameters.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSTypeElement]
-  }
+  implicit def apply(value: TSMethodSignature): TSTypeElement = value.asInstanceOf[TSTypeElement]
   @scala.inline
-  def TSCallSignatureDeclaration(
-    end: Double,
-    loc: SourceLocation,
-    start: Double,
-    `type`: typingsSlinky.babelTypes.babelTypesStrings.TSCallSignatureDeclaration
-  ): TSTypeElement = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TSTypeElement]
-  }
+  implicit def apply(value: TSPropertySignature): TSTypeElement = value.asInstanceOf[TSTypeElement]
 }
 

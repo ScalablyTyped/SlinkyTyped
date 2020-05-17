@@ -1,9 +1,9 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.WorksheetCustomPropertyData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.WorksheetCustomPropertyLoadOptions
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
+import typingsSlinky.officeJsPreview.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,9 +15,8 @@ import scala.scalajs.js.annotation._
   * [Api set: ExcelApi BETA (PREVIEW ONLY)]
   * @beta
   */
-@JSGlobal("Excel.WorksheetCustomProperty")
 @js.native
-class WorksheetCustomProperty () extends ClientObject {
+trait WorksheetCustomProperty extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_WorksheetCustomProperty: RequestContext = js.native
@@ -44,7 +43,7 @@ class WorksheetCustomProperty () extends ClientObject {
     */
   def load(): WorksheetCustomProperty = js.native
   def load(options: WorksheetCustomPropertyLoadOptions): WorksheetCustomProperty = js.native
-  def load(propertyNamesAndPaths: AnonExpand): WorksheetCustomProperty = js.native
+  def load(propertyNamesAndPaths: Expand): WorksheetCustomProperty = js.native
   def load(propertyNames: String): WorksheetCustomProperty = js.native
   def load(propertyNames: js.Array[String]): WorksheetCustomProperty = js.native
   /**

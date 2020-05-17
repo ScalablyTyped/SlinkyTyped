@@ -1,21 +1,21 @@
 organization := "org.scalablytyped.slinky"
 name := "react-instantsearch-dom"
-version := "5.2-dt-20191126Z-ed46d8"
-scalaVersion := "2.13.1"
+version := "6.3-dt-20200323Z-017268"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.4",
-  "org.scalablytyped.slinky" %%% "algoliasearch" % "3.34.0-dt-20200226Z-cc92fb",
-  "org.scalablytyped.slinky" %%% "algoliasearch-helper" % "2.26-dt-20190524Z-5b0645",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-89abae",
-  "org.scalablytyped.slinky" %%% "node" % "13.7-dt-20200228Z-eb4e34",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-6bb503",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200227Z-f18fda",
-  "org.scalablytyped.slinky" %%% "react-instantsearch-core" % "5.2-dt-20191022Z-cebec0",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
+  "me.shadaj" %%% "slinky-web" % "0.6.5",
+  "org.scalablytyped.slinky" %%% "algoliasearch" % "3.34.0-dt-20200226Z-a76548",
+  "org.scalablytyped.slinky" %%% "algoliasearch-helper" % "2.26-dt-20190524Z-ebc7ef",
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-e9335f",
+  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-9e8213",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-7e1d98",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200409Z-36b705",
+  "org.scalablytyped.slinky" %%% "react-instantsearch-core" % "6.3-dt-20200323Z-faad9f",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-bintrayRepository := "SlinkyTyped"
-resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
+bintrayRepository := "ScalablyTyped"
+resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait JSXFragment
   extends BaseNode
-     with _Node {
+     with Node {
   var children: js.Array[JSXText | JSXExpressionContainer | JSXSpreadChild | JSXElement | JSXFragment] = js.native
   var closingFragment: JSXClosingFragment = js.native
   var openingFragment: JSXOpeningFragment = js.native

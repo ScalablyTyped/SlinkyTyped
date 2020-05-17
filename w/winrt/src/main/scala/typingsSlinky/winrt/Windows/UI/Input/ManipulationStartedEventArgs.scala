@@ -1,10 +1,19 @@
 package typingsSlinky.winrt.Windows.UI.Input
 
+import typingsSlinky.winrt.Windows.Devices.Input.PointerDeviceType
+import typingsSlinky.winrt.Windows.Foundation.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.UI.Input.ManipulationStartedEventArgs")
 @js.native
-class ManipulationStartedEventArgs () extends IManipulationStartedEventArgs
+trait ManipulationStartedEventArgs extends IManipulationStartedEventArgs
+
+object ManipulationStartedEventArgs {
+  @scala.inline
+  def apply(cumulative: ManipulationDelta, pointerDeviceType: PointerDeviceType, position: Point): ManipulationStartedEventArgs = {
+    val __obj = js.Dynamic.literal(cumulative = cumulative.asInstanceOf[js.Any], pointerDeviceType = pointerDeviceType.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ManipulationStartedEventArgs]
+  }
+}
 

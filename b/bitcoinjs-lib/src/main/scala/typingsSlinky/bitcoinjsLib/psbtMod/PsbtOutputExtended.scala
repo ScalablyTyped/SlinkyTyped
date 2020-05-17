@@ -1,6 +1,5 @@
 package typingsSlinky.bitcoinjsLib.psbtMod
 
-import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,14 +12,8 @@ trait PsbtOutputExtended extends js.Object
 
 object PsbtOutputExtended {
   @scala.inline
-  def PsbtOutputExtendedAddress(address: String, value: Double): PsbtOutputExtended = {
-    val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    __obj.asInstanceOf[PsbtOutputExtended]
-  }
+  implicit def apply(value: PsbtOutputExtendedAddress): PsbtOutputExtended = value.asInstanceOf[PsbtOutputExtended]
   @scala.inline
-  def PsbtOutputExtendedScript(script: Buffer, value: Double): PsbtOutputExtended = {
-    val __obj = js.Dynamic.literal(script = script.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    __obj.asInstanceOf[PsbtOutputExtended]
-  }
+  implicit def apply(value: PsbtOutputExtendedScript): PsbtOutputExtended = value.asInstanceOf[PsbtOutputExtended]
 }
 

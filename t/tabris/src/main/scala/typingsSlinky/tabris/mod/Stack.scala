@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.OmitStackset
+import typingsSlinky.tabris.anon.OmitStackset
 import typingsSlinky.tabris.tabrisStrings.centerX
 import typingsSlinky.tabris.tabrisStrings.left
 import typingsSlinky.tabris.tabrisStrings.right

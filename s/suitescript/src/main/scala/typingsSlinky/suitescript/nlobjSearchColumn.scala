@@ -1,8 +1,5 @@
 package typingsSlinky.suitescript
 
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
-import org.scalablytyped.runtime.Instantiable3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,22 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * @since 2007.0
   */
-@JSGlobal("nlobjSearchColumn")
 @js.native
-class nlobjSearchColumn protected ()
-  extends /**
-  *
-  * @param name
-  * @param join
-  * @param summary
-  * @return
-  */
-Instantiable1[/* name */ String, nlobjSearchColumn]
-     with Instantiable2[/* name */ String, /* join */ String, nlobjSearchColumn]
-     with Instantiable3[/* name */ String, /* join */ String, /* summary */ String, nlobjSearchColumn] {
-  def this(name: String) = this()
-  def this(name: String, join: String) = this()
-  def this(name: String, join: String, summary: String) = this()
+trait nlobjSearchColumn extends js.Object {
   /**
     * return formula for this search column.
     * @return {string}
@@ -101,5 +84,71 @@ Instantiable1[/* name */ String, nlobjSearchColumn]
     * @return
     */
   def setSort(order: js.Any): js.Function3[/* name */ String, /* join */ String, /* summary */ String, Unit] = js.native
+}
+
+object nlobjSearchColumn {
+  @scala.inline
+  def apply(
+    getFormula: () => String,
+    getJoin: () => String,
+    getLabel: () => String,
+    getName: () => String,
+    getSummary: () => String,
+    setLabel: String => nlobjSearchColumn,
+    setSort: js.Any => js.Function3[/* name */ String, /* join */ String, /* summary */ String, Unit]
+  ): nlobjSearchColumn = {
+    val __obj = js.Dynamic.literal(getFormula = js.Any.fromFunction0(getFormula), getJoin = js.Any.fromFunction0(getJoin), getLabel = js.Any.fromFunction0(getLabel), getName = js.Any.fromFunction0(getName), getSummary = js.Any.fromFunction0(getSummary), setLabel = js.Any.fromFunction1(setLabel), setSort = js.Any.fromFunction1(setSort))
+    __obj.asInstanceOf[nlobjSearchColumn]
+  }
+  @scala.inline
+  implicit class nlobjSearchColumnOps[Self <: nlobjSearchColumn] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetFormula(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFormula")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetJoin(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getJoin")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLabel(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLabel")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSummary(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSummary")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetLabel(value: String => nlobjSearchColumn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setLabel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetSort(value: js.Any => js.Function3[/* name */ String, /* join */ String, /* summary */ String, Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSort")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

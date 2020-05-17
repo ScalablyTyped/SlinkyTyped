@@ -24,9 +24,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A picker row, representing a selectable item in a <Titanium.UI.Picker>.
 		 */
-@JSGlobal("Titanium.UI.PickerRow")
 @js.native
-class PickerRow () extends View {
+trait PickerRow extends View {
   /**
   			 * Color of the item text, as a color name or hex triplet.
   			 */

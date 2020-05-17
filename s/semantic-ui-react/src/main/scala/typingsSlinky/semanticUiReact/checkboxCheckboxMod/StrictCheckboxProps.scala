@@ -1,5 +1,6 @@
 package typingsSlinky.semanticUiReact.checkboxCheckboxMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.ReactComponentClass
@@ -13,7 +14,6 @@ import typingsSlinky.semanticUiReact.genericMod.HtmlLabelProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.checkbox
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.radio
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,7 +42,7 @@ trait StrictCheckboxProps extends InputHTMLAttributes[HTMLInputElement] {
   @JSName("onChange")
   var onChange_StrictCheckboxProps: js.UndefOr[
     js.Function2[
-      SyntheticEvent[EventTarget with HTMLInputElement, Event_], 
+      SyntheticEvent[EventTarget with HTMLInputElement, Event], 
       /* data */ CheckboxProps, 
       Unit
     ]
@@ -194,7 +194,7 @@ object StrictCheckboxProps {
     }
     @scala.inline
     def withOnChange(
-      value: (SyntheticEvent[EventTarget with HTMLInputElement, Event_], /* data */ CheckboxProps) => Unit
+      value: (SyntheticEvent[EventTarget with HTMLInputElement, Event], /* data */ CheckboxProps) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))

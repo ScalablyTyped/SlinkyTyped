@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait FluxStandardAction[Type /* <: String */, Payload, Meta] extends _FluxStandardActionAuto[Type, Payload, Meta] {
+trait FluxStandardAction[Type /* <: String */, Payload, Meta] extends FluxStandardActionAuto[Type, Payload, Meta] {
   /**
     * The optional `error` property MAY be set to true if the action represents an error.
     * An action whose `error` is true is analogous to a rejected Promise.

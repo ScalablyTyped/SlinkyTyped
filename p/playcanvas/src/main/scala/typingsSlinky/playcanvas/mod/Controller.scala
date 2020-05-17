@@ -1,7 +1,7 @@
 package typingsSlinky.playcanvas.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.playcanvas.AnonGamepads
+import typingsSlinky.playcanvas.anon.Gamepads
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,6 +28,6 @@ import scala.scalajs.js.annotation._
 class Controller ()
   extends typingsSlinky.playcanvas.pc.Controller {
   def this(element: Element) = this()
-  def this(element: Element, options: AnonGamepads) = this()
+  def this(element: Element, options: Gamepads) = this()
 }
 

@@ -5,9 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type ExpectedReturnType = js.UndefOr[
-    java.lang.String | scala.Double | scala.Boolean | js.Symbol | js.Object | scala.Unit | scala.Null
-  ]
   type Proxy = typingsSlinky.mockingoose.mod.Target with org.scalablytyped.runtime.StringDictionary[typingsSlinky.mockingoose.mod.Mock] with (js.Function1[
     /* model */ java.lang.String | (typingsSlinky.mongoose.mod.Model_[_, js.Object]), 
     typingsSlinky.mockingoose.mod.Mock

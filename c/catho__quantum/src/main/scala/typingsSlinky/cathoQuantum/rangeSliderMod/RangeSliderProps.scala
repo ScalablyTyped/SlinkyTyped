@@ -1,9 +1,9 @@
 package typingsSlinky.cathoQuantum.rangeSliderMod
 
 import org.scalajs.dom.raw.HTMLInputElement
-import typingsSlinky.cathoQuantum.AnonBaseFontSizeColors
-import typingsSlinky.cathoQuantum.AnonFrom
-import typingsSlinky.cathoQuantum.AnonLabelValue
+import typingsSlinky.cathoQuantum.anon.BaseFontSizeColors
+import typingsSlinky.cathoQuantum.anon.From
+import typingsSlinky.cathoQuantum.anon.LabelValue
 import typingsSlinky.cathoQuantum.cathoQuantumBooleans.`false`
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.auto
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.inverted
@@ -19,20 +19,20 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RangeSliderProps extends js.Object {
   var `aria-labelledby`: js.UndefOr[String] = js.native
-  var defaultValue: js.UndefOr[Double | AnonFrom] = js.native
+  var defaultValue: js.UndefOr[Double | From] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
-  var marks: js.UndefOr[js.Array[AnonLabelValue]] = js.native
+  var marks: js.UndefOr[js.Array[LabelValue]] = js.native
   var max: js.UndefOr[Double] = js.native
   var min: js.UndefOr[Double] = js.native
   var onChange: js.UndefOr[ChangeEventHandler[HTMLInputElement]] = js.native
   var onChangeCommitted: js.UndefOr[ChangeEventHandler[HTMLInputElement]] = js.native
   var step: js.UndefOr[Double] = js.native
-  var theme: js.UndefOr[AnonBaseFontSizeColors] = js.native
+  var theme: js.UndefOr[BaseFontSizeColors] = js.native
   var tipFormatter: js.UndefOr[
     js.Function2[/* value */ js.UndefOr[Double], /* index */ js.UndefOr[Double], String]
   ] = js.native
   var track: js.UndefOr[normal | `false` | inverted] = js.native
-  var value: js.UndefOr[Double | AnonFrom] = js.native
+  var value: js.UndefOr[Double | From] = js.native
   var valueLabelDisplay: js.UndefOr[auto | on | off] = js.native
 }
 
@@ -61,7 +61,7 @@ object RangeSliderProps {
         ret
     }
     @scala.inline
-    def withDefaultValue(value: Double | AnonFrom): Self = {
+    def withDefaultValue(value: Double | From): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
         ret
@@ -85,7 +85,7 @@ object RangeSliderProps {
         ret
     }
     @scala.inline
-    def withMarks(value: js.Array[AnonLabelValue]): Self = {
+    def withMarks(value: js.Array[LabelValue]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("marks")(value.asInstanceOf[js.Any])
         ret
@@ -157,7 +157,7 @@ object RangeSliderProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonBaseFontSizeColors): Self = {
+    def withTheme(value: BaseFontSizeColors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret
@@ -193,7 +193,7 @@ object RangeSliderProps {
         ret
     }
     @scala.inline
-    def withValue(value: Double | AnonFrom): Self = {
+    def withValue(value: Double | From): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
         ret

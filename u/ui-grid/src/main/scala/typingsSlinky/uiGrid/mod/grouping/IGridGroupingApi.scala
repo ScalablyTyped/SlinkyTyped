@@ -1,6 +1,6 @@
 package typingsSlinky.uiGrid.mod.grouping
 
-import typingsSlinky.uiGrid.AnonAggregationChanged
+import typingsSlinky.uiGrid.anon.AggregationChanged
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IGridGroupingApi[TEntity] extends js.Object {
   // Events
-  var on: AnonAggregationChanged[TEntity] = js.native
+  var on: AggregationChanged[TEntity] = js.native
   // Methods
   /**
     * Sets the aggregation type on a column.

@@ -1,6 +1,6 @@
 package typingsSlinky.playcanvas.mod
 
-import typingsSlinky.playcanvas.AnonAdd
+import typingsSlinky.playcanvas.anon.Add
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,26 +37,26 @@ class AssetReference protected ()
     propertyName: String,
     parent: js.Any,
     registry: typingsSlinky.playcanvas.pc.AssetRegistry,
-    callbacks: AnonAdd
+    callbacks: Add
   ) = this()
   def this(
     propertyName: String,
     parent: typingsSlinky.playcanvas.pc.Asset,
     registry: typingsSlinky.playcanvas.pc.AssetRegistry,
-    callbacks: AnonAdd
+    callbacks: Add
   ) = this()
   def this(
     propertyName: String,
     parent: js.Any,
     registry: typingsSlinky.playcanvas.pc.AssetRegistry,
-    callbacks: AnonAdd,
+    callbacks: Add,
     scope: js.Any
   ) = this()
   def this(
     propertyName: String,
     parent: typingsSlinky.playcanvas.pc.Asset,
     registry: typingsSlinky.playcanvas.pc.AssetRegistry,
-    callbacks: AnonAdd,
+    callbacks: Add,
     scope: js.Any
   ) = this()
 }

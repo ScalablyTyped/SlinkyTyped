@@ -1,7 +1,5 @@
 package typingsSlinky.rollup.mod
 
-import typingsSlinky.rollup.rollupStrings.asset
-import typingsSlinky.rollup.rollupStrings.chunk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,16 +12,8 @@ trait EmittedFile extends js.Object
 
 object EmittedFile {
   @scala.inline
-  def EmittedAsset(`type`: asset): EmittedFile = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[EmittedFile]
-  }
+  implicit def apply(value: EmittedAsset): EmittedFile = value.asInstanceOf[EmittedFile]
   @scala.inline
-  def EmittedChunk(id: String, `type`: chunk): EmittedFile = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[EmittedFile]
-  }
+  implicit def apply(value: EmittedChunk): EmittedFile = value.asInstanceOf[EmittedFile]
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.sharp.mod
 
-import typingsSlinky.sharp.AnonBuffer
+import typingsSlinky.sharp.anon.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AvailableFormatInfo extends js.Object {
   var id: String = js.native
-  var input: AnonBuffer = js.native
-  var output: AnonBuffer = js.native
+  var input: Buffer = js.native
+  var output: Buffer = js.native
 }
 
 object AvailableFormatInfo {
   @scala.inline
-  def apply(id: String, input: AnonBuffer, output: AnonBuffer): AvailableFormatInfo = {
+  def apply(id: String, input: Buffer, output: Buffer): AvailableFormatInfo = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], output = output.asInstanceOf[js.Any])
     __obj.asInstanceOf[AvailableFormatInfo]
   }
@@ -31,13 +31,13 @@ object AvailableFormatInfo {
         ret
     }
     @scala.inline
-    def withInput(value: AnonBuffer): Self = {
+    def withInput(value: Buffer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOutput(value: AnonBuffer): Self = {
+    def withOutput(value: Buffer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
         ret

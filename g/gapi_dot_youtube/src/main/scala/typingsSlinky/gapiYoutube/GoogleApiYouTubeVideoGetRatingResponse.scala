@@ -1,5 +1,6 @@
 package typingsSlinky.gapiYoutube
 
+import typingsSlinky.gapiYoutube.anon.Rating
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +14,7 @@ trait GoogleApiYouTubeVideoGetRatingResponse extends js.Object {
   /**
     * A list of ratings that match the request criteria.
     */
-  var items: js.Array[AnonRatingVideoId] = js.native
+  var items: js.Array[Rating] = js.native
   /**
     * The type of the API response. For this operation, the value will be youtube#videoGetRatingResponse.
     */
@@ -22,7 +23,7 @@ trait GoogleApiYouTubeVideoGetRatingResponse extends js.Object {
 
 object GoogleApiYouTubeVideoGetRatingResponse {
   @scala.inline
-  def apply(etag: String, items: js.Array[AnonRatingVideoId], kind: String): GoogleApiYouTubeVideoGetRatingResponse = {
+  def apply(etag: String, items: js.Array[Rating], kind: String): GoogleApiYouTubeVideoGetRatingResponse = {
     val __obj = js.Dynamic.literal(etag = etag.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleApiYouTubeVideoGetRatingResponse]
   }
@@ -39,7 +40,7 @@ object GoogleApiYouTubeVideoGetRatingResponse {
         ret
     }
     @scala.inline
-    def withItems(value: js.Array[AnonRatingVideoId]): Self = {
+    def withItems(value: js.Array[Rating]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
         ret

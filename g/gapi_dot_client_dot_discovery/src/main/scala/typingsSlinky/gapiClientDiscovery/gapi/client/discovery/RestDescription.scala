@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientDiscovery.gapi.client.discovery
 
-import typingsSlinky.gapiClientDiscovery.AnonOauth2
-import typingsSlinky.gapiClientDiscovery.AnonX16
+import typingsSlinky.gapiClientDiscovery.anon.Oauth2
+import typingsSlinky.gapiClientDiscovery.anon.X16
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RestDescription extends js.Object {
   /** Authentication information. */
-  var auth: js.UndefOr[AnonOauth2] = js.native
+  var auth: js.UndefOr[Oauth2] = js.native
   /** [DEPRECATED] The base path for REST requests. */
   var basePath: js.UndefOr[String] = js.native
   /** [DEPRECATED] The base URL for REST requests. */
@@ -32,7 +32,7 @@ trait RestDescription extends js.Object {
   /** A list of supported features for this API. */
   var features: js.UndefOr[js.Array[String]] = js.native
   /** Links to 16x16 and 32x32 icons representing the API. */
-  var icons: js.UndefOr[AnonX16] = js.native
+  var icons: js.UndefOr[X16] = js.native
   /** The ID of this API. */
   var id: js.UndefOr[String] = js.native
   /** The kind for this response. */
@@ -86,7 +86,7 @@ object RestDescription {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAuth(value: AnonOauth2): Self = {
+    def withAuth(value: Oauth2): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
         ret
@@ -218,7 +218,7 @@ object RestDescription {
         ret
     }
     @scala.inline
-    def withIcons(value: AnonX16): Self = {
+    def withIcons(value: X16): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
         ret

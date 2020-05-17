@@ -9,8 +9,8 @@ import typingsSlinky.angular.mod.IFormController
 import typingsSlinky.angular.mod.IPromise
 import typingsSlinky.angular.mod.IScope
 import typingsSlinky.angular.mod.ITranscludeFunction
-import typingsSlinky.angularFormly.AnonDictkey
-import typingsSlinky.angularFormly.AnonErrorExistsAndShouldBeVisible
+import typingsSlinky.angularFormly.anon.Dictkey
+import typingsSlinky.angularFormly.anon.ErrorExistsAndShouldBeVisible
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -139,7 +139,7 @@ trait IFieldObject extends js.Object {
   		 *
   		 * see http://docs.angular-formly.com/docs/field-configuration-object#ngmodelattrs-object
   		 */
-  var ngModelAttrs: js.UndefOr[AnonDictkey] = js.native
+  var ngModelAttrs: js.UndefOr[Dictkey] = js.native
   /**
   		 * This allows you to place attributes with string values on the ng-model element.
   		 * Easy to use alternative to ngModelAttrs option.
@@ -231,7 +231,7 @@ trait IFieldObject extends js.Object {
   /**
   		 * An object with a few useful properties mostly handy when used in combination with ng-messages
   		 */
-  var validation: js.UndefOr[AnonErrorExistsAndShouldBeVisible] = js.native
+  var validation: js.UndefOr[ErrorExistsAndShouldBeVisible] = js.native
   /**
   		 * An object where the keys are the name of the validator and the values are Formly Expressions;
   		 *
@@ -485,7 +485,7 @@ object IFieldObject {
         ret
     }
     @scala.inline
-    def withNgModelAttrs(value: AnonDictkey): Self = {
+    def withNgModelAttrs(value: Dictkey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ngModelAttrs")(value.asInstanceOf[js.Any])
         ret
@@ -645,7 +645,7 @@ object IFieldObject {
         ret
     }
     @scala.inline
-    def withValidation(value: AnonErrorExistsAndShouldBeVisible): Self = {
+    def withValidation(value: ErrorExistsAndShouldBeVisible): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validation")(value.asInstanceOf[js.Any])
         ret

@@ -1,8 +1,8 @@
 package typingsSlinky.braintreeWeb.mod
 
-import typingsSlinky.braintreeWeb.AnonClient
-import typingsSlinky.braintreeWeb.AnonDisplayName
-import typingsSlinky.braintreeWeb.AnonToken
+import typingsSlinky.braintreeWeb.anon.Client
+import typingsSlinky.braintreeWeb.anon.DisplayName
+import typingsSlinky.braintreeWeb.anon.Token
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ trait ApplePay_ extends js.Object {
     * @param {callback} callback The second argument, `data`, is the {@link ApplePay} instance.
     * @returns {void}
     */
-  def create(options: AnonClient, callback: callback): Unit = js.native
+  def create(options: Client, callback: callback): Unit = js.native
   /**
     * Merges a payment request with Braintree defaults
     * The following properties are assigned to `paymentRequest` if not already defined
@@ -89,7 +89,7 @@ trait ApplePay_ extends js.Object {
     *   };
     * });
     */
-  def performValidation(options: AnonDisplayName, callback: callback): Unit = js.native
+  def performValidation(options: DisplayName, callback: callback): Unit = js.native
   /**
     * Tokenizes an Apple Pay payment.
     * @public
@@ -118,17 +118,17 @@ trait ApplePay_ extends js.Object {
     *  };
     * });
     */
-  def tokenize(options: AnonToken, callback: callback): Unit = js.native
+  def tokenize(options: Token, callback: callback): Unit = js.native
 }
 
 object ApplePay_ {
   @scala.inline
   def apply(
     VERSION: String,
-    create: (AnonClient, callback) => Unit,
+    create: (Client, callback) => Unit,
     createPaymentRequest: ApplePayPaymentRequest => ApplePayPaymentRequest,
-    performValidation: (AnonDisplayName, callback) => Unit,
-    tokenize: (AnonToken, callback) => Unit
+    performValidation: (DisplayName, callback) => Unit,
+    tokenize: (Token, callback) => Unit
   ): ApplePay_ = {
     val __obj = js.Dynamic.literal(VERSION = VERSION.asInstanceOf[js.Any], create = js.Any.fromFunction2(create), createPaymentRequest = js.Any.fromFunction1(createPaymentRequest), performValidation = js.Any.fromFunction2(performValidation), tokenize = js.Any.fromFunction2(tokenize))
     __obj.asInstanceOf[ApplePay_]
@@ -146,7 +146,7 @@ object ApplePay_ {
         ret
     }
     @scala.inline
-    def withCreate(value: (AnonClient, callback) => Unit): Self = {
+    def withCreate(value: (Client, callback) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction2(value))
         ret
@@ -158,13 +158,13 @@ object ApplePay_ {
         ret
     }
     @scala.inline
-    def withPerformValidation(value: (AnonDisplayName, callback) => Unit): Self = {
+    def withPerformValidation(value: (DisplayName, callback) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("performValidation")(js.Any.fromFunction2(value))
         ret
     }
     @scala.inline
-    def withTokenize(value: (AnonToken, callback) => Unit): Self = {
+    def withTokenize(value: (Token, callback) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tokenize")(js.Any.fromFunction2(value))
         ret

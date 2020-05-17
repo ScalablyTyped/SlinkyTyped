@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object TextSettings {
-  type Param = (typingsSlinky.semanticUiProgress.PickImplactive | typingsSlinky.semanticUiProgress.PickImplerrorError | typingsSlinky.semanticUiProgress.PickImplsuccess | typingsSlinky.semanticUiProgress.PickImplwarning | typingsSlinky.semanticUiProgress.PickImplpercent | typingsSlinky.semanticUiProgress.PickImplratio) with typingsSlinky.semanticUiProgress.PartialPickImplkeyofImplActive
+  type Param = (typingsSlinky.semanticUiProgress.anon.PickImplactive | typingsSlinky.semanticUiProgress.anon.PickImplerrorError | typingsSlinky.semanticUiProgress.anon.PickImplsuccess | typingsSlinky.semanticUiProgress.anon.PickImplwarning | typingsSlinky.semanticUiProgress.anon.PickImplpercent | typingsSlinky.semanticUiProgress.anon.PickImplratio) with typingsSlinky.semanticUiProgress.anon.PartialPickImplkeyofImplActive
 }

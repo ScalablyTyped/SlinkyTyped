@@ -51,24 +51,6 @@ object InsightsServiceAccountResponseNodesItem {
         ret
     }
     @scala.inline
-    def withDelta(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delta")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDelta: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delta")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDeltaNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("delta")(null)
-        ret
-    }
-    @scala.inline
     def withGraph_name(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("graph_name")(value.asInstanceOf[js.Any])

@@ -2,12 +2,12 @@ package typingsSlinky.mocha.mod.reporters
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.mocha.Mocha.reporters.Spec
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("mocha", "reporters.spec")
 @js.native
-object spec
-  extends TopLevel[Instantiable0[typingsSlinky.mocha.Mocha_.reporters.Spec_]]
+object spec extends TopLevel[Instantiable0[Spec]]
 

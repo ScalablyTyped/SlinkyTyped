@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeMaterialUi.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.Image
-import typingsSlinky.reactNativeMaterialUi.AnonContent
+import typingsSlinky.reactNativeMaterialUi.anon.Content
 import typingsSlinky.reactNativeMaterialUi.mod.AvatarProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,7 +29,7 @@ object Avatar {
     @scala.inline
     def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline
-    def style(value: AnonContent): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: Content): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def text(value: String): this.type = set("text", value.asInstanceOf[js.Any])
   }

@@ -1,6 +1,5 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,14 +19,6 @@ object CustomFunctionMetadataFormat extends js.Object {
   
   @js.native
   sealed trait openApi extends CustomFunctionMetadataFormat
-  
-  @JSBracketAccess
-  def apply(value: String): js.UndefOr[CustomFunctionMetadataFormat with String] = js.native
-  /* "Invalid" */ @js.native
-  object invalid extends TopLevel[invalid with String]
-  
-  /* "OpenApi" */ @js.native
-  object openApi extends TopLevel[openApi with String]
   
 }
 

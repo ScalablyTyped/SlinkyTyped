@@ -1,8 +1,8 @@
 package typingsSlinky.oracleOraclejet.ojdiagramMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonIconAnonShape
-import typingsSlinky.oracleOraclejet.AnonOpacity
+import typingsSlinky.oracleOraclejet.anon.IconShape
+import typingsSlinky.oracleOraclejet.anon.Opacity
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.auto
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.connected
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.disjoint
@@ -19,10 +19,10 @@ trait ojDiagramNodeSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
   var categories: js.UndefOr[js.Array[String]] = js.native
   var descendantsConnectivity: js.UndefOr[connected | disjoint | unknown] = js.native
-  var icon: js.UndefOr[AnonOpacity] = js.native
+  var icon: js.UndefOr[Opacity] = js.native
   var label: js.UndefOr[String] = js.native
   var labelStyle: js.UndefOr[js.Object] = js.native
-  var overview: js.UndefOr[AnonIconAnonShape] = js.native
+  var overview: js.UndefOr[IconShape] = js.native
   var selectable: js.UndefOr[auto | off] = js.native
   var shortDesc: js.UndefOr[String] = js.native
   var showDisclosure: js.UndefOr[on | off] = js.native
@@ -65,7 +65,7 @@ object ojDiagramNodeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withIcon(value: AnonOpacity): Self = {
+    def withIcon(value: Opacity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
         ret
@@ -101,7 +101,7 @@ object ojDiagramNodeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withOverview(value: AnonIconAnonShape): Self = {
+    def withOverview(value: IconShape): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overview")(value.asInstanceOf[js.Any])
         ret

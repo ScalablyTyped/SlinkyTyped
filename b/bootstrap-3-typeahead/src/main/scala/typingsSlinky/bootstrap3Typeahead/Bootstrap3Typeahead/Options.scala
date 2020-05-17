@@ -1,7 +1,7 @@
 package typingsSlinky.bootstrap3Typeahead.Bootstrap3Typeahead
 
-import typingsSlinky.bootstrap3Typeahead.AnonName
 import typingsSlinky.bootstrap3Typeahead.JQuery
+import typingsSlinky.bootstrap3Typeahead.anon.Name
 import typingsSlinky.bootstrap3Typeahead.bootstrap3TypeaheadStrings.all
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -32,7 +32,7 @@ trait Options extends js.Object {
   /**
     * Method used to get textual representation of an item of the sources
     */
-  var displayText: js.UndefOr[js.Function1[/* item */ String | AnonName, String]] = js.native
+  var displayText: js.UndefOr[js.Function1[/* item */ String | Name, String]] = js.native
   /**
     * Set to true if you want the menu to be the same size than the input it is attached to
     */
@@ -154,7 +154,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withDisplayText(value: /* item */ String | AnonName => String): Self = {
+    def withDisplayText(value: /* item */ String | Name => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("displayText")(js.Any.fromFunction1(value))
         ret

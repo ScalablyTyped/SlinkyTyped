@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ReplacementJson extends js.Object {
+trait ReplacementJson extends FixJson {
   var innerLength: Double = js.native
   var innerStart: Double = js.native
   var innerText: String = js.native

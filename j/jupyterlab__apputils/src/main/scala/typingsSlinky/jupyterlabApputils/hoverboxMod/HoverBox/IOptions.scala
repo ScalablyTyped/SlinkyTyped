@@ -3,7 +3,7 @@ package typingsSlinky.jupyterlabApputils.hoverboxMod.HoverBox
 import org.scalajs.dom.raw.CSSStyleDeclaration
 import org.scalajs.dom.raw.ClientRect
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jupyterlabApputils.AnonHorizontal
+import typingsSlinky.jupyterlabApputils.anon.Horizontal
 import typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.above
 import typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.below
 import typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.forceAbove
@@ -62,7 +62,7 @@ trait IOptions extends js.Object {
     * the cursor, the `vertical` offset accepts `above` and `below` values for
     * the different render modes.
     */
-  var offset: js.UndefOr[AnonHorizontal] = js.native
+  var offset: js.UndefOr[Horizontal] = js.native
   /**
     * If space is available both above and below the anchor, denote which
     * location is privileged. Use forceBelow and forceAbove to mandate where
@@ -122,7 +122,7 @@ object IOptions {
         ret
     }
     @scala.inline
-    def withOffset(value: AnonHorizontal): Self = {
+    def withOffset(value: Horizontal): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
         ret

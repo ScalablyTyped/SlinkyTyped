@@ -1,9 +1,9 @@
 package typingsSlinky.oracleOraclejet.ojinputtextMod
 
-import typingsSlinky.oracleOraclejet.AnonConverterHint
-import typingsSlinky.oracleOraclejet.AnonDefinition
-import typingsSlinky.oracleOraclejet.AnonInstruction
-import typingsSlinky.oracleOraclejet.AnonRegexp
+import typingsSlinky.oracleOraclejet.anon.ConverterHint
+import typingsSlinky.oracleOraclejet.anon.Definition
+import typingsSlinky.oracleOraclejet.anon.Instruction
+import typingsSlinky.oracleOraclejet.anon.Regexp
 import typingsSlinky.oracleOraclejet.ojmessagingMod.^
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.AsyncValidator
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.Converter
@@ -45,9 +45,9 @@ object ojInputTextSettableProperties {
     autofocus: Boolean,
     clearIcon: never | always | conditional,
     disabled: Boolean,
-    displayOptions: AnonConverterHint,
-    help: AnonInstruction,
-    helpHints: AnonDefinition,
+    displayOptions: ConverterHint,
+    help: Instruction,
+    helpHints: Definition,
     labelHint: String,
     list: String,
     messagesCustom: js.Array[^],
@@ -55,7 +55,7 @@ object ojInputTextSettableProperties {
     rawValue: js.Any,
     readonly: Boolean,
     required: Boolean,
-    translations: AnonRegexp,
+    translations: Regexp,
     valid: valid | pending | invalidHidden | invalidShown,
     value: js.Any,
     virtualKeyboard: auto | email | number | search | tel | text | url

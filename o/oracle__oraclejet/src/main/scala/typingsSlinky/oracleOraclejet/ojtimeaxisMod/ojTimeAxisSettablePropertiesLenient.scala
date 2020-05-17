@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojtimeaxisMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
 import typingsSlinky.oracleOraclejet.ojtimeaxisMod.ojTimeAxis.Converters
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.Converter
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.days
@@ -27,7 +27,7 @@ trait ojTimeAxisSettablePropertiesLenient
   var scale: js.UndefOr[seconds | minutes | hours | days | weeks | months | quarters | years] = js.native
   var start: js.UndefOr[String] = js.native
   var trackResize: js.UndefOr[on | off] = js.native
-  var translations: js.UndefOr[AnonLabelAndValue] = js.native
+  var translations: js.UndefOr[LabelAndValue] = js.native
 }
 
 object ojTimeAxisSettablePropertiesLenient {
@@ -103,7 +103,7 @@ object ojTimeAxisSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelAndValue): Self = {
+    def withTranslations(value: LabelAndValue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

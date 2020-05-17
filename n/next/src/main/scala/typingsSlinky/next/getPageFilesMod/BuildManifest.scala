@@ -1,6 +1,6 @@
 package typingsSlinky.next.getPageFilesMod
 
-import typingsSlinky.next.AnonDictpage
+import typingsSlinky.next.anon.Dictpage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait BuildManifest extends js.Object {
   var devFiles: js.Array[String] = js.native
   var lowPriorityFiles: js.Array[String] = js.native
-  var pages: AnonDictpage = js.native
+  var pages: Dictpage = js.native
 }
 
 object BuildManifest {
   @scala.inline
-  def apply(devFiles: js.Array[String], lowPriorityFiles: js.Array[String], pages: AnonDictpage): BuildManifest = {
+  def apply(devFiles: js.Array[String], lowPriorityFiles: js.Array[String], pages: Dictpage): BuildManifest = {
     val __obj = js.Dynamic.literal(devFiles = devFiles.asInstanceOf[js.Any], lowPriorityFiles = lowPriorityFiles.asInstanceOf[js.Any], pages = pages.asInstanceOf[js.Any])
     __obj.asInstanceOf[BuildManifest]
   }
@@ -37,7 +37,7 @@ object BuildManifest {
         ret
     }
     @scala.inline
-    def withPages(value: AnonDictpage): Self = {
+    def withPages(value: Dictpage): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pages")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.winjs.mod.UI
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.winjs.AnonNone
+import typingsSlinky.winjs.anon.None
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +30,7 @@ object ContentDialog extends js.Object {
   /**
     * Specifies the result of dismissing the ContentDialog.
     **/
-  var DismissalResult: AnonNone = js.native
+  var DismissalResult: None = js.native
   /**
     * Indicates that the object is compatibile with declarative processing.
     **/

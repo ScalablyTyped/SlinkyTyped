@@ -5,18 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Box2D.Collision.b2RayCastInput")
 @js.native
-/**
-		* Creates a new ray cast input.
-		* @param p1 Start point of the ray, default = null.
-		* @param p2 End point of the ray, default = null.
-		* @param maxFraction Truncate the ray to reach up to this fraction from p1 to p2.
-		**/
-class b2RayCastInput () extends js.Object {
-  def this(p1: b2Vec2) = this()
-  def this(p1: b2Vec2, p2: b2Vec2) = this()
-  def this(p1: b2Vec2, p2: b2Vec2, maxFraction: Double) = this()
+trait b2RayCastInput extends js.Object {
   /**
   		* Truncate the ray to reach up to this fraction from p1 to p2
   		**/
@@ -29,5 +19,39 @@ class b2RayCastInput () extends js.Object {
   		* The end point of the ray.
   		**/
   var p2: b2Vec2 = js.native
+}
+
+object b2RayCastInput {
+  @scala.inline
+  def apply(maxFraction: Double, p1: b2Vec2, p2: b2Vec2): b2RayCastInput = {
+    val __obj = js.Dynamic.literal(maxFraction = maxFraction.asInstanceOf[js.Any], p1 = p1.asInstanceOf[js.Any], p2 = p2.asInstanceOf[js.Any])
+    __obj.asInstanceOf[b2RayCastInput]
+  }
+  @scala.inline
+  implicit class b2RayCastInputOps[Self <: b2RayCastInput] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMaxFraction(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxFraction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withP1(value: b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withP2(value: b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("p2")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

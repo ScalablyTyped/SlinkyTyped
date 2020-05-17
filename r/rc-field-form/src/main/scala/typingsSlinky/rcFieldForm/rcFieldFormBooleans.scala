@@ -1,5 +1,6 @@
 package typingsSlinky.rcFieldForm
 
+import typingsSlinky.rcFieldForm.fieldMod.ShouldUpdate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +10,7 @@ object rcFieldFormBooleans {
   sealed trait `false` extends js.Object
   
   @js.native
-  sealed trait `true` extends js.Object
+  sealed trait `true` extends ShouldUpdate
   
   @scala.inline
   def `false`: `false` = false.asInstanceOf[`false`]

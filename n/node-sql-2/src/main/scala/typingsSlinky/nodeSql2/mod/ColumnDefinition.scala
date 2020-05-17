@@ -1,6 +1,5 @@
 package typingsSlinky.nodeSql2.mod
 
-import typingsSlinky.nodeSql2.AnonColumn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +11,7 @@ trait ColumnDefinition[Name /* <: String */, Type] extends Named[Name] {
   var jsType: js.UndefOr[Type] = js.native
   var notNull: js.UndefOr[Boolean] = js.native
   var primaryKey: js.UndefOr[Boolean] = js.native
-  var references: js.UndefOr[AnonColumn] = js.native
+  var references: js.UndefOr[typingsSlinky.nodeSql2.anon.Column] = js.native
   var unique: js.UndefOr[Boolean] = js.native
 }
 
@@ -83,7 +82,7 @@ object ColumnDefinition {
         ret
     }
     @scala.inline
-    def withReferences(value: AnonColumn): Self[Name, Type] = {
+    def withReferences(value: typingsSlinky.nodeSql2.anon.Column): Self[Name, Type] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("references")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -58,7 +57,75 @@ trait ListItemPanel extends js.Object {
   var visible: Boolean = js.native
 }
 
-@JSGlobal("__esri.ListItemPanel")
-@js.native
-object ListItemPanel extends TopLevel[ListItemPanelConstructor]
+object ListItemPanel {
+  @scala.inline
+  def apply(
+    className: String,
+    content: Widget_ | HTMLElement | String | js.Array[_],
+    image: String,
+    listItem: ListItem,
+    open: Boolean,
+    title: String,
+    visible: Boolean
+  ): ListItemPanel = {
+    val __obj = js.Dynamic.literal(className = className.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], listItem = listItem.asInstanceOf[js.Any], open = open.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ListItemPanel]
+  }
+  @scala.inline
+  implicit class ListItemPanelOps[Self <: ListItemPanel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("className")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentHTMLElement(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContent(value: Widget_ | HTMLElement | String | js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withListItem(value: ListItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("listItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOpen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

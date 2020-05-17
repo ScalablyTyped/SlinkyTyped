@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.opsworkscmMod
 
-import typingsSlinky.awsSdk.DescribeNodeAssociationSt
+import typingsSlinky.awsSdk.anon.DescribeNodeAssociationSt
 import typingsSlinky.awsSdk.awsSdkStrings.nodeAssociated
 import typingsSlinky.awsSdk.configMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError

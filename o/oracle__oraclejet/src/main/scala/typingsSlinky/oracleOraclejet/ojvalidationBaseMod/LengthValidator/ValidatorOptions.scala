@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojvalidationBaseMod.LengthValidator
 
-import typingsSlinky.oracleOraclejet.AnonMax
-import typingsSlinky.oracleOraclejet.AnonTooLong
+import typingsSlinky.oracleOraclejet.anon.Max
+import typingsSlinky.oracleOraclejet.anon.TooLong
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.codePoint
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.codeUnit
 import scala.scalajs.js
@@ -12,10 +12,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ValidatorOptions extends js.Object {
   var countBy: js.UndefOr[codeUnit | codePoint] = js.native
-  var hint: js.UndefOr[AnonMax] = js.native
+  var hint: js.UndefOr[Max] = js.native
   var max: js.UndefOr[Double] = js.native
-  var messageDetail: js.UndefOr[AnonTooLong] = js.native
-  var messageSummary: js.UndefOr[AnonTooLong] = js.native
+  var messageDetail: js.UndefOr[TooLong] = js.native
+  var messageSummary: js.UndefOr[TooLong] = js.native
   var min: js.UndefOr[Double] = js.native
 }
 
@@ -44,7 +44,7 @@ object ValidatorOptions {
         ret
     }
     @scala.inline
-    def withHint(value: AnonMax): Self = {
+    def withHint(value: Max): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hint")(value.asInstanceOf[js.Any])
         ret
@@ -68,7 +68,7 @@ object ValidatorOptions {
         ret
     }
     @scala.inline
-    def withMessageDetail(value: AnonTooLong): Self = {
+    def withMessageDetail(value: TooLong): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("messageDetail")(value.asInstanceOf[js.Any])
         ret
@@ -80,7 +80,7 @@ object ValidatorOptions {
         ret
     }
     @scala.inline
-    def withMessageSummary(value: AnonTooLong): Self = {
+    def withMessageSummary(value: TooLong): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("messageSummary")(value.asInstanceOf[js.Any])
         ret

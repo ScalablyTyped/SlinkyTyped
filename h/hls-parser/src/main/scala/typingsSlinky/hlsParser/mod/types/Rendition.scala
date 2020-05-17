@@ -1,6 +1,6 @@
 package typingsSlinky.hlsParser.mod.types
 
-import typingsSlinky.hlsParser.AnonAssocLanguage
+import typingsSlinky.hlsParser.anon.AssocLanguage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("hls-parser", "types.Rendition")
 @js.native
 class Rendition[T] protected () extends js.Object {
-  def this(properties: AnonAssocLanguage[T]) = this()
+  def this(properties: AssocLanguage[T]) = this()
   var assocLanguage: js.UndefOr[String] = js.native
   var autoselect: Boolean = js.native
   var channels: js.UndefOr[String] = js.native

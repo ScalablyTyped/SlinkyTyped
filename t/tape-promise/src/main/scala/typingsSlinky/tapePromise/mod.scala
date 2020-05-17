@@ -1,6 +1,7 @@
 package typingsSlinky.tapePromise
 
 import typingsSlinky.tape.mod.TestOptions
+import typingsSlinky.tapePromise.anon.AsyncTapeFunctionNoneopts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabServices.messagesMod.KernelMessage
 
-import typingsSlinky.jupyterlabServices.AnonCommid
+import typingsSlinky.jupyterlabServices.anon.Commid
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.comm_msg
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.iopub
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.shell
@@ -15,18 +15,20 @@ import scala.scalajs.js.annotation._
   * See [Comm msg](https://jupyter-client.readthedocs.io/en/latest/messaging.html#opening-a-comm).
   */
 @js.native
-trait ICommMsgMsg[T /* <: iopub | shell */] extends IMessage[comm_msg] {
+trait ICommMsgMsg[T /* <: iopub | shell */]
+  extends IMessage[comm_msg]
+     with Message {
   @JSName("channel")
   var channel_ICommMsgMsg: T = js.native
   @JSName("content")
-  var content_ICommMsgMsg: AnonCommid = js.native
+  var content_ICommMsgMsg: Commid = js.native
 }
 
 object ICommMsgMsg {
   @scala.inline
   def apply[T](
     channel: T,
-    content: AnonCommid,
+    content: Commid,
     header: IHeader[comm_msg],
     metadata: JSONObject,
     parent_header: IHeader[MessageType] | js.Object
@@ -47,7 +49,7 @@ object ICommMsgMsg {
         ret
     }
     @scala.inline
-    def withContent(value: AnonCommid): Self[T] = {
+    def withContent(value: Commid): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
         ret

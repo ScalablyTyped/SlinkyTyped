@@ -1,5 +1,6 @@
 package typingsSlinky.openlayers.mod.format
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Node
 import typingsSlinky.openlayers.mod.GlobalObject
 import typingsSlinky.openlayers.mod.WFSFeatureCollectionMetadata
@@ -9,7 +10,6 @@ import typingsSlinky.openlayers.mod.olx.format.WFSOptions
 import typingsSlinky.openlayers.mod.olx.format.WFSWriteGetFeatureOptions
 import typingsSlinky.openlayers.mod.olx.format.WFSWriteTransactionOptions
 import typingsSlinky.openlayers.mod.proj.Projection
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,7 +49,7 @@ class WFS () extends XMLFeature {
     * @return FeatureCollection metadata.
     * @api stable
     */
-  def readFeatureCollectionMetadata(source: Document_): WFSFeatureCollectionMetadata = js.native
+  def readFeatureCollectionMetadata(source: Document): WFSFeatureCollectionMetadata = js.native
   def readFeatureCollectionMetadata(source: Node): WFSFeatureCollectionMetadata = js.native
   def readFeatures(source: String): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: String, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
@@ -63,8 +63,8 @@ class WFS () extends XMLFeature {
     * @return Features.
     * @api stable
     */
-  def readFeatures(source: Document_): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
-  def readFeatures(source: Document_, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
+  def readFeatures(source: Document): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
+  def readFeatures(source: Document, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: Node): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: Node, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readProjection(source: String): Projection = js.native
@@ -76,7 +76,7 @@ class WFS () extends XMLFeature {
     * @return Projection.
     * @api stable
     */
-  def readProjection(source: Document_): Projection = js.native
+  def readProjection(source: Document): Projection = js.native
   def readProjection(source: Node): Projection = js.native
   def readTransactionResponse(source: String): WFSTransactionResponse = js.native
   def readTransactionResponse(source: GlobalObject): WFSTransactionResponse = js.native
@@ -87,7 +87,7 @@ class WFS () extends XMLFeature {
     * @return Transaction response.
     * @api stable
     */
-  def readTransactionResponse(source: Document_): WFSTransactionResponse = js.native
+  def readTransactionResponse(source: Document): WFSTransactionResponse = js.native
   def readTransactionResponse(source: Node): WFSTransactionResponse = js.native
   /**
     * Encode format as WFS `GetFeature` and return the Node.

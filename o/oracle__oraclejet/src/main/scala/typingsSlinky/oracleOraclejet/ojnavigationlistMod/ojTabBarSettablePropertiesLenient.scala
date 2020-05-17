@@ -1,8 +1,8 @@
 package typingsSlinky.oracleOraclejet.ojnavigationlistMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonAccessibleReorderAfterItem
-import typingsSlinky.oracleOraclejet.AnonRendererSelectable
+import typingsSlinky.oracleOraclejet.anon.AccessibleReorderAfterItem
+import typingsSlinky.oracleOraclejet.anon.RendererSelectable
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.all
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.bottom
@@ -29,11 +29,11 @@ trait ojTabBarSettablePropertiesLenient[K, D]
   var data: js.UndefOr[DataProvider[K, D]] = js.native
   var display: js.UndefOr[all | icons] = js.native
   var edge: js.UndefOr[top | bottom | start | end] = js.native
-  var item: js.UndefOr[AnonRendererSelectable[K, D]] = js.native
+  var item: js.UndefOr[RendererSelectable[K, D]] = js.native
   var overflow: js.UndefOr[popup | hidden] = js.native
   var reorderable: js.UndefOr[enabled | disabled] = js.native
   var selection: js.UndefOr[js.Any] = js.native
-  var translations: js.UndefOr[AnonAccessibleReorderAfterItem] = js.native
+  var translations: js.UndefOr[AccessibleReorderAfterItem] = js.native
   var truncation: js.UndefOr[none | progressive] = js.native
 }
 
@@ -110,7 +110,7 @@ object ojTabBarSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withItem(value: AnonRendererSelectable[K, D]): Self[K, D] = {
+    def withItem(value: RendererSelectable[K, D]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
         ret
@@ -158,7 +158,7 @@ object ojTabBarSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonAccessibleReorderAfterItem): Self[K, D] = {
+    def withTranslations(value: AccessibleReorderAfterItem): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

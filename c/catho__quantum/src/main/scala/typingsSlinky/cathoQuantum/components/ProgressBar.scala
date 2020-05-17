@@ -2,7 +2,7 @@ package typingsSlinky.cathoQuantum.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonComponentsAnonProgressBar
+import typingsSlinky.cathoQuantum.anon.ComponentsProgressBar
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.neutral
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.primary
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.secondary
@@ -32,7 +32,7 @@ object ProgressBar {
     @scala.inline
     def skin(value: neutral | primary | secondary): this.type = set("skin", value.asInstanceOf[js.Any])
     @scala.inline
-    def theme(value: AnonComponentsAnonProgressBar): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: ComponentsProgressBar): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
     def width(value: String): this.type = set("width", value.asInstanceOf[js.Any])
   }

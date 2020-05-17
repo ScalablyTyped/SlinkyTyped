@@ -1,13 +1,13 @@
 package typingsSlinky.pubnub.mod
 
-import typingsSlinky.pubnub.AnonCustomFields
+import typingsSlinky.pubnub.anon.CustomFields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait GetUserParameters extends js.Object {
-  var include: js.UndefOr[AnonCustomFields] = js.native
+  var include: js.UndefOr[CustomFields] = js.native
   var userId: String = js.native
 }
 
@@ -30,7 +30,7 @@ object GetUserParameters {
         ret
     }
     @scala.inline
-    def withInclude(value: AnonCustomFields): Self = {
+    def withInclude(value: CustomFields): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("include")(value.asInstanceOf[js.Any])
         ret

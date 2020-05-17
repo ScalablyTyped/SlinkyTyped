@@ -11,3 +11,12 @@ import scala.scalajs.js.annotation._
 */
 trait ConcreteFilter extends js.Object
 
+object ConcreteFilter {
+  @scala.inline
+  implicit def apply(value: CategoricalFilter): ConcreteFilter = value.asInstanceOf[ConcreteFilter]
+  @scala.inline
+  implicit def apply(value: QuantitativeFilter): ConcreteFilter = value.asInstanceOf[ConcreteFilter]
+  @scala.inline
+  implicit def apply(value: RelativeDateFilter): ConcreteFilter = value.asInstanceOf[ConcreteFilter]
+}
+

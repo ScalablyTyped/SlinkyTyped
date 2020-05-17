@@ -1,9 +1,5 @@
 package typingsSlinky.chartjsPluginAnnotation.mod
 
-import typingsSlinky.chartjsPluginAnnotation.chartjsPluginAnnotationStrings.box
-import typingsSlinky.chartjsPluginAnnotation.chartjsPluginAnnotationStrings.horizontal
-import typingsSlinky.chartjsPluginAnnotation.chartjsPluginAnnotationStrings.line
-import typingsSlinky.chartjsPluginAnnotation.chartjsPluginAnnotationStrings.vertical
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,22 +12,8 @@ trait AnnotationOptions extends js.Object
 
 object AnnotationOptions {
   @scala.inline
-  def LineAnnotationOptions(mode: horizontal | vertical, scaleID: String, `type`: line, value: Double | String): AnnotationOptions = {
-    val __obj = js.Dynamic.literal(mode = mode.asInstanceOf[js.Any], scaleID = scaleID.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnnotationOptions]
-  }
+  implicit def apply(value: BoxAnnotationOptions): AnnotationOptions = value.asInstanceOf[AnnotationOptions]
   @scala.inline
-  def BoxAnnotationOptions(
-    `type`: box,
-    xMax: Double | String,
-    xMin: Double | String,
-    yMax: Double | String,
-    yMin: Double | String
-  ): AnnotationOptions = {
-    val __obj = js.Dynamic.literal(xMax = xMax.asInstanceOf[js.Any], xMin = xMin.asInstanceOf[js.Any], yMax = yMax.asInstanceOf[js.Any], yMin = yMin.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnnotationOptions]
-  }
+  implicit def apply(value: LineAnnotationOptions): AnnotationOptions = value.asInstanceOf[AnnotationOptions]
 }
 

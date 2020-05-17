@@ -17,3 +17,22 @@ import scala.scalajs.js.annotation._
 */
 trait GraphQLType extends js.Object
 
+object GraphQLType {
+  @scala.inline
+  implicit def apply(value: GraphQLEnumType): GraphQLType = value.asInstanceOf[GraphQLType]
+  @scala.inline
+  implicit def apply(value: GraphQLInputObjectType): GraphQLType = value.asInstanceOf[GraphQLType]
+  @scala.inline
+  implicit def apply(value: GraphQLInterfaceType): GraphQLType = value.asInstanceOf[GraphQLType]
+  @scala.inline
+  implicit def apply(value: GraphQLList): GraphQLType = value.asInstanceOf[GraphQLType]
+  @scala.inline
+  implicit def apply(value: GraphQLNonNull): GraphQLType = value.asInstanceOf[GraphQLType]
+  @scala.inline
+  implicit def apply(value: GraphQLObjectType): GraphQLType = value.asInstanceOf[GraphQLType]
+  @scala.inline
+  implicit def apply(value: GraphQLScalarType): GraphQLType = value.asInstanceOf[GraphQLType]
+  @scala.inline
+  implicit def apply(value: GraphQLUnionType): GraphQLType = value.asInstanceOf[GraphQLType]
+}
+

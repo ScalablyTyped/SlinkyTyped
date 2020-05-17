@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Media.Protection.MediaProtectionServiceCompletion")
 @js.native
-class MediaProtectionServiceCompletion () extends IMediaProtectionServiceCompletion
+trait MediaProtectionServiceCompletion extends IMediaProtectionServiceCompletion
+
+object MediaProtectionServiceCompletion {
+  @scala.inline
+  def apply(complete: Boolean => Unit): MediaProtectionServiceCompletion = {
+    val __obj = js.Dynamic.literal(complete = js.Any.fromFunction1(complete))
+    __obj.asInstanceOf[MediaProtectionServiceCompletion]
+  }
+}
 

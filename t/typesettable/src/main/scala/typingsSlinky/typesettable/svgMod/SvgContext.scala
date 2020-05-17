@@ -2,7 +2,7 @@ package typingsSlinky.typesettable.svgMod
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.SVGElement
-import typingsSlinky.typesettable.AnonWrite
+import typingsSlinky.typesettable.anon.Write
 import typingsSlinky.typesettable.contextsMod.IPenFactoryContext
 import typingsSlinky.typesettable.contextsMod.IRulerFactoryContext
 import typingsSlinky.typesettable.writerMod.ITransform
@@ -21,7 +21,7 @@ class SvgContext protected ()
   var addTitleElement: js.Any = js.native
   var className: js.Any = js.native
   var element: js.Any = js.native
-  def createPen(text: String, transform: ITransform, element: Element): AnonWrite = js.native
+  def createPen(text: String, transform: ITransform, element: Element): Write = js.native
   /* private */ def createSvgLinePen(textBlockGroup: js.Any): js.Any = js.native
   /* private */ def getTextElements(element: js.Any): js.Any = js.native
   def setAddTitleElement(addTitleElement: Boolean): Unit = js.native

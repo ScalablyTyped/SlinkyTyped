@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CustomMarkingProps extends _CalendarMarkingProps {
+trait CustomMarkingProps extends CalendarMarkingProps {
   var markedDates: StringDictionary[CustomMarking] = js.native
   var markingType: custom = js.native
 }

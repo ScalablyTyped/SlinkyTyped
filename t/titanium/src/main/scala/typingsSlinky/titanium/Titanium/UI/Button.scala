@@ -26,9 +26,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A button widget that has four states: normal, disabled, focused and selected.
 		 */
-@JSGlobal("Titanium.UI.Button")
 @js.native
-class Button () extends View {
+trait Button extends View {
   /**
   			 * Specify an attributed string for the label.
   			 */

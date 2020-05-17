@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait AutomationDesktop extends _AutomationOptions {
+trait AutomationDesktop extends AutomationOptions {
   var desktop: `true` = js.native
   var interact: js.UndefOr[`true`] = js.native
 }

@@ -4,14 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Devices.Sensors.SimpleOrientationSensor")
 @js.native
-class SimpleOrientationSensor () extends ISimpleOrientationSensor
+trait SimpleOrientationSensor extends ISimpleOrientationSensor
 
-/* static members */
-@JSGlobal("Windows.Devices.Sensors.SimpleOrientationSensor")
-@js.native
-object SimpleOrientationSensor extends js.Object {
-  def getDefault(): SimpleOrientationSensor = js.native
+object SimpleOrientationSensor {
+  @scala.inline
+  def apply(getCurrentOrientation: () => SimpleOrientation, onorientationchanged: js.Any): SimpleOrientationSensor = {
+    val __obj = js.Dynamic.literal(getCurrentOrientation = js.Any.fromFunction0(getCurrentOrientation), onorientationchanged = onorientationchanged.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SimpleOrientationSensor]
+  }
 }
 

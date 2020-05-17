@@ -1,28 +1,28 @@
 package typingsSlinky.simpleOauth2.mod
 
-import typingsSlinky.simpleOauth2.AnonAuthorizationMethod
-import typingsSlinky.simpleOauth2.AnonAuthorizeHost
-import typingsSlinky.simpleOauth2.AnonId
+import typingsSlinky.simpleOauth2.anon.AuthorizationMethod
+import typingsSlinky.simpleOauth2.anon.AuthorizeHost
+import typingsSlinky.simpleOauth2.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ModuleOptions[ClientIdName /* <: String */] extends js.Object {
-  var auth: AnonAuthorizeHost = js.native
-  var client: AnonId[ClientIdName] = js.native
+  var auth: AuthorizeHost = js.native
+  var client: Id[ClientIdName] = js.native
   /**
     * Used to set global options to the internal http library (wreck).
     * All options except baseUrl are allowed
     * Defaults to header.Accept = "application/json"
     */
   var http: js.UndefOr[js.Object] = js.native
-  var options: js.UndefOr[AnonAuthorizationMethod] = js.native
+  var options: js.UndefOr[AuthorizationMethod] = js.native
 }
 
 object ModuleOptions {
   @scala.inline
-  def apply[ClientIdName](auth: AnonAuthorizeHost, client: AnonId[ClientIdName]): ModuleOptions[ClientIdName] = {
+  def apply[ClientIdName](auth: AuthorizeHost, client: Id[ClientIdName]): ModuleOptions[ClientIdName] = {
     val __obj = js.Dynamic.literal(auth = auth.asInstanceOf[js.Any], client = client.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModuleOptions[ClientIdName]]
   }
@@ -33,13 +33,13 @@ object ModuleOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[ClientIdName] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[ClientIdName] with Other]
     @scala.inline
-    def withAuth(value: AnonAuthorizeHost): Self[ClientIdName] = {
+    def withAuth(value: AuthorizeHost): Self[ClientIdName] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withClient(value: AnonId[ClientIdName]): Self[ClientIdName] = {
+    def withClient(value: Id[ClientIdName]): Self[ClientIdName] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("client")(value.asInstanceOf[js.Any])
         ret
@@ -57,7 +57,7 @@ object ModuleOptions {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonAuthorizationMethod): Self[ClientIdName] = {
+    def withOptions(value: AuthorizationMethod): Self[ClientIdName] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

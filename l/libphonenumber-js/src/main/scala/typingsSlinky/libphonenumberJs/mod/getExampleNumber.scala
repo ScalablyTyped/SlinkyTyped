@@ -1,6 +1,6 @@
 package typingsSlinky.libphonenumberJs.mod
 
-import typingsSlinky.libphonenumberJs.countryinCountryCodeNatio
+import typingsSlinky.libphonenumberJs.anon.countryinCountryCodeNatio
 import typingsSlinky.libphonenumberJs.typesMod.CountryCode
 import scala.scalajs.js
 import scala.scalajs.js.`|`

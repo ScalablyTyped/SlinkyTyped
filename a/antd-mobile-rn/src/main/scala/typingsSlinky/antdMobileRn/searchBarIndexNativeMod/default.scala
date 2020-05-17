@@ -1,7 +1,7 @@
 package typingsSlinky.antdMobileRn.searchBarIndexNativeMod
 
-import typingsSlinky.antdMobileRn.AnonAntLocale
-import typingsSlinky.antdMobileRn.AnonOnBlur
+import typingsSlinky.antdMobileRn.anon.AntLocale
+import typingsSlinky.antdMobileRn.anon.OnBlur
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ class default protected () extends SearchBar {
 @JSImport("antd-mobile-rn/lib/search-bar/index.native", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var contextTypes: AnonAntLocale = js.native
-  var defaultProps: AnonOnBlur = js.native
+  var contextTypes: AntLocale = js.native
+  var defaultProps: OnBlur = js.native
 }
 

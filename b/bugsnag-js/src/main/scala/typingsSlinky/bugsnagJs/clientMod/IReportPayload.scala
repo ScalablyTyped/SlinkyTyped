@@ -1,6 +1,6 @@
 package typingsSlinky.bugsnagJs.clientMod
 
-import typingsSlinky.bugsnagJs.AnonName
+import typingsSlinky.bugsnagJs.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait IReportPayload extends js.Object {
   var apiKey: String = js.native
   var events: js.Array[typingsSlinky.bugsnagJs.reportMod.default] = js.native
-  var notifier: AnonName = js.native
+  var notifier: Name = js.native
 }
 
 object IReportPayload {
   @scala.inline
-  def apply(apiKey: String, events: js.Array[typingsSlinky.bugsnagJs.reportMod.default], notifier: AnonName): IReportPayload = {
+  def apply(apiKey: String, events: js.Array[typingsSlinky.bugsnagJs.reportMod.default], notifier: Name): IReportPayload = {
     val __obj = js.Dynamic.literal(apiKey = apiKey.asInstanceOf[js.Any], events = events.asInstanceOf[js.Any], notifier = notifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[IReportPayload]
   }
@@ -37,7 +37,7 @@ object IReportPayload {
         ret
     }
     @scala.inline
-    def withNotifier(value: AnonName): Self = {
+    def withNotifier(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notifier")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
-import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +12,42 @@ trait RTCSessionDescription extends js.Object {
   def toJSON(): js.Any = js.native
 }
 
-@JSGlobal("RTCSessionDescription")
-@js.native
-object RTCSessionDescription
-  extends Instantiable0[org.scalajs.dom.experimental.webrtc.RTCSessionDescription]
-     with Instantiable1[
-      /* descriptionInitDict */ org.scalajs.dom.experimental.webrtc.RTCSessionDescriptionInit, 
-      org.scalajs.dom.experimental.webrtc.RTCSessionDescription
-    ]
+object RTCSessionDescription {
+  @scala.inline
+  def apply(
+    sdp: java.lang.String,
+    toJSON: () => js.Any,
+    `type`: org.scalajs.dom.experimental.webrtc.RTCSdpType
+  ): RTCSessionDescription = {
+    val __obj = js.Dynamic.literal(sdp = sdp.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON))
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RTCSessionDescription]
+  }
+  @scala.inline
+  implicit class RTCSessionDescriptionOps[Self <: org.scalajs.dom.experimental.webrtc.RTCSessionDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSdp(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sdp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToJSON(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withType(value: org.scalajs.dom.experimental.webrtc.RTCSdpType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

@@ -48,20 +48,22 @@ object mod extends js.Object {
       * @deprecated Use `Cancelable.hasInstance` instead.
       */
     def isCancelable(value: js.Any): /* is @esfx/cancelable.@esfx/cancelable/dist.Cancelable */ Boolean = js.native
-    def isSignaled(): Boolean = js.native
     /**
       * Determines whether `cancelable` is in the signaled state.
       */
+    def isSignaled(): Boolean = js.native
     def isSignaled(cancelable: typingsSlinky.esfxCancelable.distMod.Cancelable): Boolean = js.native
-    def subscribe(cancelable: js.UndefOr[scala.Nothing], onSignaled: js.Function0[Unit]): CancelSubscription = js.native
     /**
       * Subscribes to be notified when a `cancelable` becomes signaled.
       */
-    def subscribe(cancelable: typingsSlinky.esfxCancelable.distMod.Cancelable, onSignaled: js.Function0[Unit]): CancelSubscription = js.native
-    def throwIfSignaled(): Unit = js.native
+    def subscribe(
+      cancelable: js.UndefOr[typingsSlinky.esfxCancelable.distMod.Cancelable],
+      onSignaled: js.Function0[Unit]
+    ): CancelSubscription = js.native
     /**
       * Throws a `CancelError` exception if the provided `cancelable` is in the signaled state.
       */
+    def throwIfSignaled(): Unit = js.native
     def throwIfSignaled(cancelable: typingsSlinky.esfxCancelable.distMod.Cancelable): Unit = js.native
   }
   

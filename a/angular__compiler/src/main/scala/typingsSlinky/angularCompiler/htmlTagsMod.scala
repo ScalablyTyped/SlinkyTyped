@@ -1,5 +1,6 @@
 package typingsSlinky.angularCompiler
 
+import typingsSlinky.angularCompiler.anon.ClosedByChildren
 import typingsSlinky.angularCompiler.tagsMod.TagDefinition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation._
 object htmlTagsMod extends js.Object {
   @js.native
   class HtmlTagDefinition () extends TagDefinition {
-    def this(hasClosedByChildrenImplicitNamespacePrefixContentTypeClosedByParentIsVoidIgnoreFirstLf: AnonClosedByChildren) = this()
+    def this(hasClosedByChildrenImplicitNamespacePrefixContentTypeClosedByParentIsVoidIgnoreFirstLf: ClosedByChildren) = this()
     var closedByChildren: js.Any = js.native
   }
   

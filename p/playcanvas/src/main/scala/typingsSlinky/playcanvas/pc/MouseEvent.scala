@@ -31,10 +31,8 @@ import scala.scalajs.js.annotation._
   * @property {boolean} metaKey True if the meta key was pressed when this event was fired.
   * @property {MouseEvent} event The original browser event.
   */
-@JSGlobal("pc.MouseEvent")
 @js.native
-class MouseEvent protected () extends js.Object {
-  def this(mouse: Mouse, event: MouseEvent) = this()
+trait MouseEvent extends js.Object {
   /**
     * True if the alt key was pressed when this event was fired.
     */
@@ -87,5 +85,106 @@ class MouseEvent protected () extends js.Object {
     * The y co-ordinate of the mouse pointer relative to the element pc.Mouse is attached to.
     */
   var y: Double = js.native
+}
+
+object MouseEvent {
+  @scala.inline
+  def apply(
+    altKey: Boolean,
+    button: Double,
+    ctrlKey: Boolean,
+    dx: Double,
+    dy: Double,
+    element: Element,
+    event: MouseEvent,
+    metaKey: Boolean,
+    shiftKey: Boolean,
+    wheelDelta: Double,
+    x: Double,
+    y: Double
+  ): MouseEvent = {
+    val __obj = js.Dynamic.literal(altKey = altKey.asInstanceOf[js.Any], button = button.asInstanceOf[js.Any], ctrlKey = ctrlKey.asInstanceOf[js.Any], dx = dx.asInstanceOf[js.Any], dy = dy.asInstanceOf[js.Any], element = element.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any], metaKey = metaKey.asInstanceOf[js.Any], shiftKey = shiftKey.asInstanceOf[js.Any], wheelDelta = wheelDelta.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MouseEvent]
+  }
+  @scala.inline
+  implicit class MouseEventOps[Self <: MouseEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAltKey(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("altKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withButton(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("button")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCtrlKey(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ctrlKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEvent(value: MouseEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetaKey(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metaKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShiftKey(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shiftKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWheelDelta(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wheelDelta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

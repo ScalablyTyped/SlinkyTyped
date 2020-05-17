@@ -10,15 +10,8 @@ import scala.scalajs.js.annotation._
   * The formatter creates a textual representation of the time between two points in time.
   * @see https://docs.scriptable.app/relativedatetimeformatter/#-new-relativedatetimeformatter
   */
-@JSGlobal("RelativeDateTimeFormatter")
 @js.native
-/**
-  * _Creates a textual representation of the amount of time between two dates._
-  *
-  * The formatter creates a textual representation of the time between two points in time.
-  * @see https://docs.scriptable.app/relativedatetimeformatter/#-new-relativedatetimeformatter
-  */
-class RelativeDateTimeFormatter () extends js.Object {
+trait RelativeDateTimeFormatter extends js.Object {
   /**
     * _Locale to use when formatting._
     *
@@ -54,5 +47,50 @@ class RelativeDateTimeFormatter () extends js.Object {
     * @see https://docs.scriptable.app/relativedatetimeformatter/#-usenumericdatetimestyle
     */
   def useNumericDateTimeStyle(): Unit = js.native
+}
+
+object RelativeDateTimeFormatter {
+  @scala.inline
+  def apply(
+    locale: String,
+    string: (js.Date, js.Date) => String,
+    useNamedDateTimeStyle: () => Unit,
+    useNumericDateTimeStyle: () => Unit
+  ): RelativeDateTimeFormatter = {
+    val __obj = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any], string = js.Any.fromFunction2(string), useNamedDateTimeStyle = js.Any.fromFunction0(useNamedDateTimeStyle), useNumericDateTimeStyle = js.Any.fromFunction0(useNumericDateTimeStyle))
+    __obj.asInstanceOf[RelativeDateTimeFormatter]
+  }
+  @scala.inline
+  implicit class RelativeDateTimeFormatterOps[Self <: RelativeDateTimeFormatter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withString(value: (js.Date, js.Date) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withUseNamedDateTimeStyle(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useNamedDateTimeStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUseNumericDateTimeStyle(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useNumericDateTimeStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

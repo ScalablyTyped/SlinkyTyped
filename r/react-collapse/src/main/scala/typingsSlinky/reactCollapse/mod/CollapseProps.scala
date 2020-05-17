@@ -3,8 +3,7 @@ package typingsSlinky.reactCollapse.mod
 import slinky.core.TagMod
 import typingsSlinky.react.mod.AllHTMLAttributes
 import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.reactCollapse.AnonCollapse
-import typingsSlinky.reactCollapse.AnonHeight
+import typingsSlinky.reactCollapse.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +18,7 @@ trait CollapseProps
   @JSName("children")
   var children_CollapseProps: TagMod[Any] = js.native
   /** A way to control the initial element style. Will not be valid after the initial render */
-  var initialStyle: js.UndefOr[AnonHeight] = js.native
+  var initialStyle: js.UndefOr[Height] = js.native
   /** Expands or collapses content. */
   var isOpened: Boolean = js.native
   /** Callback function triggered when animation has completed */
@@ -27,7 +26,7 @@ trait CollapseProps
   /** Callback function triggered when animation begins */
   var onWork: js.UndefOr[js.Function1[/* args */ CollapseCallbackArgs, Unit]] = js.native
   /** It is possible to set className for extra div elements that ReactCollapse creates. */
-  var theme: js.UndefOr[AnonCollapse] = js.native
+  var theme: js.UndefOr[typingsSlinky.reactCollapse.anon.Collapse] = js.native
 }
 
 object CollapseProps {
@@ -73,7 +72,7 @@ object CollapseProps {
         ret
     }
     @scala.inline
-    def withInitialStyle(value: AnonHeight): Self = {
+    def withInitialStyle(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("initialStyle")(value.asInstanceOf[js.Any])
         ret
@@ -109,7 +108,7 @@ object CollapseProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonCollapse): Self = {
+    def withTheme(value: typingsSlinky.reactCollapse.anon.Collapse): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents information about a LayoutRequested event. */
-@JSGlobal("Windows.UI.Text.Core.CoreTextLayoutRequest")
 @js.native
-abstract class CoreTextLayoutRequest () extends js.Object {
+trait CoreTextLayoutRequest extends js.Object {
   /** Gets a value that indicates whether the layout request operation is canceled. */
   var isCanceled: Boolean = js.native
   /** Gets an object that represents the layout bounds information requested by the text input server. The application should populate the properties of this object to the layout bounds being requested before returning from the event handler. */
@@ -20,5 +19,50 @@ abstract class CoreTextLayoutRequest () extends js.Object {
     * @return A Deferral object.
     */
   def getDeferral(): Deferral = js.native
+}
+
+object CoreTextLayoutRequest {
+  @scala.inline
+  def apply(
+    getDeferral: () => Deferral,
+    isCanceled: Boolean,
+    layoutBounds: CoreTextLayoutBounds,
+    range: CoreTextRange
+  ): CoreTextLayoutRequest = {
+    val __obj = js.Dynamic.literal(getDeferral = js.Any.fromFunction0(getDeferral), isCanceled = isCanceled.asInstanceOf[js.Any], layoutBounds = layoutBounds.asInstanceOf[js.Any], range = range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CoreTextLayoutRequest]
+  }
+  @scala.inline
+  implicit class CoreTextLayoutRequestOps[Self <: CoreTextLayoutRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetDeferral(value: () => Deferral): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDeferral")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsCanceled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCanceled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLayoutBounds(value: CoreTextLayoutBounds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layoutBounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRange(value: CoreTextRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

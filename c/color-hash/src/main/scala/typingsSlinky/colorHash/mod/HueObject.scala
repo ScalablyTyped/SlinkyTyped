@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait HueObject extends js.Object {
+trait HueObject extends Hue {
   var max: Double = js.native
   var min: Double = js.native
 }

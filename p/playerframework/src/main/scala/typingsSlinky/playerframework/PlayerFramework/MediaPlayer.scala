@@ -14,11 +14,8 @@ import scala.scalajs.js.annotation._
 /**
 	*
 	**/
-@JSGlobal("PlayerFramework.MediaPlayer")
 @js.native
-class MediaPlayer protected () extends js.Object {
-  def this(element: HTMLElement) = this()
-  def this(element: HTMLElement, options: js.Any) = this()
+trait MediaPlayer extends js.Object {
   /**
   		* Gets or sets the current advertising state of the player.
   		**/

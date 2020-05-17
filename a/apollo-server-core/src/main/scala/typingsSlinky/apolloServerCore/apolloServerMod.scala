@@ -1,5 +1,6 @@
 package typingsSlinky.apolloServerCore
 
+import typingsSlinky.apolloServerCore.anon.PartialGraphQLServerOptio
 import typingsSlinky.apolloServerCore.graphqlOptionsMod.GraphQLServerOptions
 import typingsSlinky.apolloServerCore.typesMod.Config
 import typingsSlinky.apolloServerCore.typesMod.FileUploadOptions

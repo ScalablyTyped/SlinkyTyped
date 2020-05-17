@@ -2,7 +2,7 @@ package typingsSlinky.antdMobileRn.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antdMobileRn.AnonTarget
+import typingsSlinky.antdMobileRn.anon.Target
 import typingsSlinky.antdMobileRn.radioStyleIndexNativeMod.IRadioStyle
 import typingsSlinky.reactNative.mod.ImageStyle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -23,7 +23,7 @@ class SharedBuilder_RadioNativeProps_282866953[R <: js.Object] (val args: js.Arr
   @scala.inline
   def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
   @scala.inline
-  def onChange(value: /* e */ AnonTarget => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+  def onChange(value: /* e */ Target => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
   @scala.inline
   def style(value: StyleProp[ImageStyle]): this.type = set("style", value.asInstanceOf[js.Any])
   @scala.inline

@@ -7,8 +7,8 @@ import slinky.web.svg.path.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoColors.mod.InheritedColorProp
 import typingsSlinky.nivoColors.mod.OrdinalColorsInstruction
-import typingsSlinky.nivoCore.AnonDictkey
-import typingsSlinky.nivoCore.AnonId
+import typingsSlinky.nivoCore.anon.Dictkey
+import typingsSlinky.nivoCore.anon.Id
 import typingsSlinky.nivoCore.mod.Box
 import typingsSlinky.nivoCore.mod.Theme
 import typingsSlinky.nivoLegends.mod.LegendProps
@@ -45,7 +45,7 @@ object ResponsivePie {
     @scala.inline
     def cornerRadius(value: Double): this.type = set("cornerRadius", value.asInstanceOf[js.Any])
     @scala.inline
-    def defs(value: js.Array[AnonDictkey]): this.type = set("defs", value.asInstanceOf[js.Any])
+    def defs(value: js.Array[Dictkey]): this.type = set("defs", value.asInstanceOf[js.Any])
     @scala.inline
     def enableRadialLabels(value: Boolean): this.type = set("enableRadialLabels", value.asInstanceOf[js.Any])
     @scala.inline
@@ -53,7 +53,7 @@ object ResponsivePie {
     @scala.inline
     def endAngle(value: Double): this.type = set("endAngle", value.asInstanceOf[js.Any])
     @scala.inline
-    def fill(value: js.Array[AnonId[PieDatum]]): this.type = set("fill", value.asInstanceOf[js.Any])
+    def fill(value: js.Array[Id[PieDatum]]): this.type = set("fill", value.asInstanceOf[js.Any])
     @scala.inline
     def fit(value: Boolean): this.type = set("fit", value.asInstanceOf[js.Any])
     @scala.inline

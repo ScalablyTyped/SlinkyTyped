@@ -35,7 +35,6 @@ package object secretsmanagerMod {
   type RotationEnabledType = scala.Boolean
   type RotationLambdaARNType = java.lang.String
   type SecretARNType = java.lang.String
-  type SecretBinaryType = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.secretsmanagerMod.Blob | java.lang.String
   type SecretIdType = java.lang.String
   type SecretListType = js.Array[typingsSlinky.awsSdk.secretsmanagerMod.SecretListEntry]
   type SecretNameType = java.lang.String
@@ -49,10 +48,4 @@ package object secretsmanagerMod {
   type TagKeyType = java.lang.String
   type TagListType = js.Array[typingsSlinky.awsSdk.secretsmanagerMod.Tag]
   type TagValueType = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2017-10-17`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.secretsmanagerMod._apiVersion | java.lang.String
 }

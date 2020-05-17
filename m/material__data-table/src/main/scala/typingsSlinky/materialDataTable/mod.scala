@@ -2,6 +2,7 @@ package typingsSlinky.materialDataTable
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.materialDataTable.adapterMod.MDCDataTableAdapter
+import typingsSlinky.materialDataTable.anon.PartialMDCDataTableAdapte
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

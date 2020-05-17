@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IExecuteResult
   extends IBaseOutput
-     with _IOutput {
+     with IOutput {
   /**
     * A mime-type keyed dictionary of data.
     */

@@ -4,11 +4,10 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.rcMenu.AnonDomEvent
-import typingsSlinky.rcMenu.AnonHover
-import typingsSlinky.rcMenu.AnonKey
-import typingsSlinky.rcMenu.AnonOpen
-import typingsSlinky.rcMenu.ReactElementisRootMenuboo
+import typingsSlinky.rcMenu.anon.DomEvent
+import typingsSlinky.rcMenu.anon.Hover
+import typingsSlinky.rcMenu.anon.Open
+import typingsSlinky.rcMenu.anon.ReactElementisRootMenuboo
 import typingsSlinky.rcMenu.interfaceMod.BuiltinPlacements
 import typingsSlinky.rcMenu.interfaceMod.MenuInfo
 import typingsSlinky.rcMenu.interfaceMod.MenuMode
@@ -83,21 +82,21 @@ object SubMenu {
     @scala.inline
     def onDestroy(value: /* key */ Key => Unit): this.type = set("onDestroy", js.Any.fromFunction1(value))
     @scala.inline
-    def onItemHover(value: /* info */ AnonHover => Unit): this.type = set("onItemHover", js.Any.fromFunction1(value))
+    def onItemHover(value: /* info */ Hover => Unit): this.type = set("onItemHover", js.Any.fromFunction1(value))
     @scala.inline
-    def onMouseEnter(value: /* info */ AnonKey => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+    def onMouseEnter(value: /* info */ typingsSlinky.rcMenu.anon.Key => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
     @scala.inline
-    def onMouseLeave(value: /* info */ AnonKey => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+    def onMouseLeave(value: /* info */ typingsSlinky.rcMenu.anon.Key => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
     @scala.inline
-    def onOpenChange(value: /* keys */ js.Array[Key] | AnonOpen => Unit): this.type = set("onOpenChange", js.Any.fromFunction1(value))
+    def onOpenChange(value: /* keys */ js.Array[Key] | Open => Unit): this.type = set("onOpenChange", js.Any.fromFunction1(value))
     @scala.inline
     def onSelect(value: /* info */ SelectInfo => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline
-    def onTitleClick(value: /* info */ AnonDomEvent => Unit): this.type = set("onTitleClick", js.Any.fromFunction1(value))
+    def onTitleClick(value: /* info */ DomEvent => Unit): this.type = set("onTitleClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onTitleMouseEnter(value: /* info */ AnonKey => Unit): this.type = set("onTitleMouseEnter", js.Any.fromFunction1(value))
+    def onTitleMouseEnter(value: /* info */ typingsSlinky.rcMenu.anon.Key => Unit): this.type = set("onTitleMouseEnter", js.Any.fromFunction1(value))
     @scala.inline
-    def onTitleMouseLeave(value: /* info */ AnonKey => Unit): this.type = set("onTitleMouseLeave", js.Any.fromFunction1(value))
+    def onTitleMouseLeave(value: /* info */ typingsSlinky.rcMenu.anon.Key => Unit): this.type = set("onTitleMouseLeave", js.Any.fromFunction1(value))
     @scala.inline
     def openKeys(value: js.Array[String]): this.type = set("openKeys", value.asInstanceOf[js.Any])
     @scala.inline

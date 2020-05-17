@@ -2,7 +2,6 @@ package typingsSlinky.heremaps.H.ui
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.heremaps.H.Map_
-import typingsSlinky.heremaps.H.ui.UI.Options
 import typingsSlinky.heremaps.H.util.ICapturable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,16 +10,8 @@ import scala.scalajs.js.annotation._
 /**
   * This class encapsulates map UI functionality.
   */
-@JSGlobal("H.ui.UI")
 @js.native
-class UI_ protected () extends ICapturable {
-  /**
-    * Constructor
-    * @param map {H.Map}
-    * @param opt_options {H.ui.UI.Options=}
-    */
-  def this(map: Map_) = this()
-  def this(map: Map_, opt_options: Options) = this()
+trait UI_ extends ICapturable {
   /**
     * This method adds an info bubble to the UI.
     * @param bubble {H.ui.InfoBubble} - the info bubble to be added

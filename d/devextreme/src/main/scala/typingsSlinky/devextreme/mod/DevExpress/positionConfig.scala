@@ -1,9 +1,10 @@
 package typingsSlinky.devextreme.mod.DevExpress
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonX
-import typingsSlinky.devextreme.AnonXY
-import typingsSlinky.devextreme.AnonY
+import org.scalajs.dom.raw.Window
+import typingsSlinky.devextreme.anon.X
+import typingsSlinky.devextreme.anon.XY
+import typingsSlinky.devextreme.anon.Y
 import typingsSlinky.devextreme.devextremeStrings.`fit flip`
 import typingsSlinky.devextreme.devextremeStrings.`fit flipfit`
 import typingsSlinky.devextreme.devextremeStrings.`fit none`
@@ -27,8 +28,7 @@ import typingsSlinky.devextreme.devextremeStrings.left
 import typingsSlinky.devextreme.devextremeStrings.none
 import typingsSlinky.devextreme.devextremeStrings.right
 import typingsSlinky.devextreme.devextremeStrings.top
-import typingsSlinky.devextreme.mod._Global_.JQuery
-import typingsSlinky.std.Window_
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,24 +37,24 @@ import scala.scalajs.js.annotation._
 trait positionConfig extends js.Object {
   /** The target element position that the widget is positioned against. */
   var at: js.UndefOr[
-    bottom | center | left | (`left bottom`) | (`left top`) | right | (`right bottom`) | (`right top`) | top | AnonX
+    bottom | center | left | (`left bottom`) | (`left top`) | right | (`right bottom`) | (`right top`) | top | X
   ] = js.native
   /** The element within which the widget is positioned. */
-  var boundary: js.UndefOr[String | Element | JQuery | Window_] = js.native
+  var boundary: js.UndefOr[String | Element | JQuery | Window] = js.native
   /** Specifies the horizontal and vertical offset from the window's boundaries. */
-  var boundaryOffset: js.UndefOr[String | AnonY] = js.native
+  var boundaryOffset: js.UndefOr[String | Y] = js.native
   /** Specifies how to move the widget if it overflows the screen. */
   var collision: js.UndefOr[
-    fit | (`fit flip`) | (`fit flipfit`) | (`fit none`) | flip | (`flip fit`) | (`flip none`) | flipfit | (`flipfit fit`) | (`flipfit none`) | none | (`none fit`) | (`none flip`) | (`none flipfit`) | AnonXY
+    fit | (`fit flip`) | (`fit flipfit`) | (`fit none`) | flip | (`flip fit`) | (`flip none`) | flipfit | (`flipfit fit`) | (`flipfit none`) | none | (`none fit`) | (`none flip`) | (`none flipfit`) | XY
   ] = js.native
   /** The position of the widget to align against the target element. */
   var my: js.UndefOr[
-    bottom | center | left | (`left bottom`) | (`left top`) | right | (`right bottom`) | (`right top`) | top | AnonX
+    bottom | center | left | (`left bottom`) | (`left top`) | right | (`right bottom`) | (`right top`) | top | X
   ] = js.native
   /** The target element that the widget is positioned against. */
-  var of: js.UndefOr[String | Element | JQuery | Window_] = js.native
+  var of: js.UndefOr[String | Element | JQuery | Window] = js.native
   /** Specifies horizontal and vertical offset in pixels. */
-  var offset: js.UndefOr[String | AnonY] = js.native
+  var offset: js.UndefOr[String | Y] = js.native
 }
 
 object positionConfig {
@@ -71,7 +71,7 @@ object positionConfig {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
     def withAt(
-      value: bottom | center | left | (`left bottom`) | (`left top`) | right | (`right bottom`) | (`right top`) | top | AnonX
+      value: bottom | center | left | (`left bottom`) | (`left top`) | right | (`right bottom`) | (`right top`) | top | X
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("at")(value.asInstanceOf[js.Any])
@@ -90,7 +90,13 @@ object positionConfig {
         ret
     }
     @scala.inline
-    def withBoundary(value: String | Element | JQuery | Window_): Self = {
+    def withBoundaryWindow(value: Window): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundary")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBoundary(value: String | Element | JQuery | Window): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("boundary")(value.asInstanceOf[js.Any])
         ret
@@ -102,7 +108,7 @@ object positionConfig {
         ret
     }
     @scala.inline
-    def withBoundaryOffset(value: String | AnonY): Self = {
+    def withBoundaryOffset(value: String | Y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("boundaryOffset")(value.asInstanceOf[js.Any])
         ret
@@ -115,7 +121,7 @@ object positionConfig {
     }
     @scala.inline
     def withCollision(
-      value: fit | (`fit flip`) | (`fit flipfit`) | (`fit none`) | flip | (`flip fit`) | (`flip none`) | flipfit | (`flipfit fit`) | (`flipfit none`) | none | (`none fit`) | (`none flip`) | (`none flipfit`) | AnonXY
+      value: fit | (`fit flip`) | (`fit flipfit`) | (`fit none`) | flip | (`flip fit`) | (`flip none`) | flipfit | (`flipfit fit`) | (`flipfit none`) | none | (`none fit`) | (`none flip`) | (`none flipfit`) | XY
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("collision")(value.asInstanceOf[js.Any])
@@ -129,7 +135,7 @@ object positionConfig {
     }
     @scala.inline
     def withMy(
-      value: bottom | center | left | (`left bottom`) | (`left top`) | right | (`right bottom`) | (`right top`) | top | AnonX
+      value: bottom | center | left | (`left bottom`) | (`left top`) | right | (`right bottom`) | (`right top`) | top | X
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("my")(value.asInstanceOf[js.Any])
@@ -148,7 +154,13 @@ object positionConfig {
         ret
     }
     @scala.inline
-    def withOf(value: String | Element | JQuery | Window_): Self = {
+    def withOfWindow(value: Window): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("of")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOf(value: String | Element | JQuery | Window): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("of")(value.asInstanceOf[js.Any])
         ret
@@ -160,7 +172,7 @@ object positionConfig {
         ret
     }
     @scala.inline
-    def withOffset(value: String | AnonY): Self = {
+    def withOffset(value: String | Y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
         ret

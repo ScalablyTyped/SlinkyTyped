@@ -6,21 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a content part of a multi-part transfer request. Each BackgroundTransferContentPart object can represent either a single string of text content or a single file payload, but not both. */
-@JSGlobal("Windows.Networking.BackgroundTransfer.BackgroundTransferContentPart")
 @js.native
-/** Creates a BackgroundTransferContentPart object. */
-class BackgroundTransferContentPart () extends js.Object {
-  /**
-    * Creates a BackgroundTransferContentPart object that identifies the content it represents.
-    * @param name Identifies the content.
-    */
-  def this(name: String) = this()
-  /**
-    * Creates a BackgroundTransferContentPart object that identifies the file content and the name of the file that it represents.
-    * @param name Identifies the content.
-    * @param fileName The fully qualified file name, including the local path.
-    */
-  def this(name: String, fileName: String) = this()
+trait BackgroundTransferContentPart extends js.Object {
   /**
     * Sets the source file for a BackgroundTransferContentPart containing the file for upload.
     * @param value The source file.
@@ -37,5 +24,39 @@ class BackgroundTransferContentPart () extends js.Object {
     * @param value A string value used to represent text information. (e.g. api_sig, api_key, auth_token, etc...)
     */
   def setText(value: String): Unit = js.native
+}
+
+object BackgroundTransferContentPart {
+  @scala.inline
+  def apply(setFile: IStorageFile => Unit, setHeader: (String, String) => Unit, setText: String => Unit): BackgroundTransferContentPart = {
+    val __obj = js.Dynamic.literal(setFile = js.Any.fromFunction1(setFile), setHeader = js.Any.fromFunction2(setHeader), setText = js.Any.fromFunction1(setText))
+    __obj.asInstanceOf[BackgroundTransferContentPart]
+  }
+  @scala.inline
+  implicit class BackgroundTransferContentPartOps[Self <: BackgroundTransferContentPart] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSetFile(value: IStorageFile => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFile")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetHeader(value: (String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setHeader")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetText(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setText")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

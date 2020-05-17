@@ -4,14 +4,66 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("PowerPoint.RulerLevels")
 @js.native
-class RulerLevels protected () extends js.Object {
+trait RulerLevels extends js.Object {
   val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application = js.native
   val Count: Double = js.native
   val Parent: js.Any = js.native
   @JSName("PowerPoint.RulerLevels_typekey")
   var PowerPointDotRulerLevels_typekey: RulerLevels = js.native
   def Item(Index: Double): RulerLevel = js.native
+}
+
+object RulerLevels {
+  @scala.inline
+  def apply(
+    Application: Application,
+    Count: Double,
+    Item: Double => RulerLevel,
+    Parent: js.Any,
+    PowerPointDotRulerLevels_typekey: RulerLevels
+  ): RulerLevels = {
+    val __obj = js.Dynamic.literal(Application = Application.asInstanceOf[js.Any], Count = Count.asInstanceOf[js.Any], Item = js.Any.fromFunction1(Item), Parent = Parent.asInstanceOf[js.Any])
+    __obj.updateDynamic("PowerPoint.RulerLevels_typekey")(PowerPointDotRulerLevels_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RulerLevels]
+  }
+  @scala.inline
+  implicit class RulerLevelsOps[Self <: RulerLevels] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplication(value: Application): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItem(value: Double => RulerLevel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Item")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withParent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPowerPointDotRulerLevels_typekey(value: RulerLevels): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PowerPoint.RulerLevels_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -4,23 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.Arc2")
 @js.native
-class Arc2 protected () extends js.Object {
-  /**
-    * Creates an Arc object from the three given points : start, middle and end.
-    * @param startPoint Defines the start point of the arc
-    * @param midPoint Defines the midlle point of the arc
-    * @param endPoint Defines the end point of the arc
-    */
-  def this(
-    /** Defines the start point of the arc */
-  startPoint: Vector2,
-    /** Defines the mid point of the arc */
-  midPoint: Vector2,
-    /** Defines the end point of the arc */
-  endPoint: Vector2
-  ) = this()
+trait Arc2 extends js.Object {
   /**
     * Defines the angle of the arc (from mid point to end point).
     */
@@ -47,5 +32,78 @@ class Arc2 protected () extends js.Object {
   var startAngle: Angle = js.native
   /** Defines the start point of the arc */
   var startPoint: Vector2 = js.native
+}
+
+object Arc2 {
+  @scala.inline
+  def apply(
+    angle: Angle,
+    centerPoint: Vector2,
+    endPoint: Vector2,
+    midPoint: Vector2,
+    orientation: Orientation,
+    radius: Double,
+    startAngle: Angle,
+    startPoint: Vector2
+  ): Arc2 = {
+    val __obj = js.Dynamic.literal(angle = angle.asInstanceOf[js.Any], centerPoint = centerPoint.asInstanceOf[js.Any], endPoint = endPoint.asInstanceOf[js.Any], midPoint = midPoint.asInstanceOf[js.Any], orientation = orientation.asInstanceOf[js.Any], radius = radius.asInstanceOf[js.Any], startAngle = startAngle.asInstanceOf[js.Any], startPoint = startPoint.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Arc2]
+  }
+  @scala.inline
+  implicit class Arc2Ops[Self <: Arc2] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAngle(value: Angle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCenterPoint(value: Vector2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("centerPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndPoint(value: Vector2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMidPoint(value: Vector2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("midPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrientation(value: Orientation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRadius(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartAngle(value: Angle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartPoint(value: Vector2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

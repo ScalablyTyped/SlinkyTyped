@@ -1,29 +1,27 @@
 package typingsSlinky.babylonjs.indexMod
 
-import typingsSlinky.babylonjs.AnonAngle
-import typingsSlinky.babylonjs.AnonBackUVsDepth
-import typingsSlinky.babylonjs.AnonCap
-import typingsSlinky.babylonjs.AnonClip
-import typingsSlinky.babylonjs.AnonCloseArray
-import typingsSlinky.babylonjs.AnonColorFilter
-import typingsSlinky.babylonjs.AnonDiameterX
-import typingsSlinky.babylonjs.AnonFaceUV
-import typingsSlinky.babylonjs.AnonGapSize
-import typingsSlinky.babylonjs.AnonHoles
-import typingsSlinky.babylonjs.AnonInstance
-import typingsSlinky.babylonjs.AnonInvertUV
-import typingsSlinky.babylonjs.AnonPath
-import typingsSlinky.babylonjs.AnonPoints
-import typingsSlinky.babylonjs.AnonQ
-import typingsSlinky.babylonjs.AnonRadiusFunction
-import typingsSlinky.babylonjs.AnonRadiusX
-import typingsSlinky.babylonjs.AnonSize
-import typingsSlinky.babylonjs.AnonSubdivisionsX
-import typingsSlinky.babylonjs.AnonTessellation
-import typingsSlinky.babylonjs.AnonThickness
-import typingsSlinky.babylonjs.AnonTileHeight
-import typingsSlinky.babylonjs.AnonTileSize
-import typingsSlinky.babylonjs.AnonXmax
+import typingsSlinky.babylonjs.anon.BackUVsDepth
+import typingsSlinky.babylonjs.anon.Cap
+import typingsSlinky.babylonjs.anon.Clip
+import typingsSlinky.babylonjs.anon.CloseArray
+import typingsSlinky.babylonjs.anon.ColorFilter
+import typingsSlinky.babylonjs.anon.DiameterX
+import typingsSlinky.babylonjs.anon.FaceUV
+import typingsSlinky.babylonjs.anon.GapSize
+import typingsSlinky.babylonjs.anon.Holes
+import typingsSlinky.babylonjs.anon.Instance
+import typingsSlinky.babylonjs.anon.InvertUV
+import typingsSlinky.babylonjs.anon.Path
+import typingsSlinky.babylonjs.anon.Points
+import typingsSlinky.babylonjs.anon.Q
+import typingsSlinky.babylonjs.anon.RadiusFunction
+import typingsSlinky.babylonjs.anon.RadiusX
+import typingsSlinky.babylonjs.anon.SubdivisionsX
+import typingsSlinky.babylonjs.anon.Tessellation
+import typingsSlinky.babylonjs.anon.Thickness
+import typingsSlinky.babylonjs.anon.TileHeight
+import typingsSlinky.babylonjs.anon.TileSize
+import typingsSlinky.babylonjs.anon.Xmax
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -53,8 +51,8 @@ object MeshBuilder extends js.Object {
     * @param scene defines the hosting scene
     * @returns the box mesh
     */
-  def CreateBox(name: String, options: AnonBackUVsDepth): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateBox(name: String, options: AnonBackUVsDepth, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateBox(name: String, options: BackUVsDepth): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateBox(name: String, options: BackUVsDepth, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates a cylinder or a cone mesh
     * * The parameter `height` sets the height size (float) of the cylinder/cone (float, default 2).
@@ -83,8 +81,8 @@ object MeshBuilder extends js.Object {
     * @returns the cylinder mesh
     * @see https://doc.babylonjs.com/how_to/set_shapes#cylinder-or-cone
     */
-  def CreateCylinder(name: String, options: AnonCap): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateCylinder(name: String, options: AnonCap, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateCylinder(name: String, options: Cap): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateCylinder(name: String, options: Cap, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates a dashed line mesh
     * * A dashed line mesh is considered as a parametric shape since it has no predefined original shape. Its shape is determined by the passed array of points as an input parameter
@@ -102,8 +100,8 @@ object MeshBuilder extends js.Object {
     * @returns the dashed line mesh
     * @see https://doc.babylonjs.com/how_to/parametric_shapes#dashed-lines
     */
-  def CreateDashedLines(name: String, options: AnonGapSize): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
-  def CreateDashedLines(name: String, options: AnonGapSize, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
+  def CreateDashedLines(name: String, options: GapSize): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
+  def CreateDashedLines(name: String, options: GapSize, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
   /**
     * Creates a decal mesh.
     * A decal is a mesh usually applied as a model onto the surface of another mesh. So don't forget the parameter `sourceMesh` depicting the decal
@@ -118,7 +116,11 @@ object MeshBuilder extends js.Object {
     * @returns the decal mesh
     * @see https://doc.babylonjs.com/how_to/decals
     */
-  def CreateDecal(name: String, sourceMesh: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh, options: AnonAngle): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateDecal(
+    name: String,
+    sourceMesh: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh,
+    options: typingsSlinky.babylonjs.anon.Angle
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates a plane polygonal mesh.  By default, this is a disc
     * * The parameter `radius` sets the radius size (float) of the polygon (default 0.5)
@@ -133,8 +135,8 @@ object MeshBuilder extends js.Object {
     * @returns the plane polygonal mesh
     * @see https://doc.babylonjs.com/how_to/set_shapes#disc-or-regular-polygon
     */
-  def CreateDisc(name: String, options: AnonTessellation): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateDisc(name: String, options: AnonTessellation, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateDisc(name: String, options: Tessellation): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateDisc(name: String, options: Tessellation, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates a ground mesh
     * * The parameters `width` and `height` (floats, default 1) set the width and height sizes of the ground
@@ -146,8 +148,8 @@ object MeshBuilder extends js.Object {
     * @returns the ground mesh
     * @see https://doc.babylonjs.com/how_to/set_shapes#ground
     */
-  def CreateGround(name: String, options: AnonSubdivisionsX): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateGround(name: String, options: AnonSubdivisionsX, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateGround(name: String, options: SubdivisionsX): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateGround(name: String, options: SubdivisionsX, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates a ground mesh from a height map
     * * The parameter `url` sets the URL of the height map image resource.
@@ -167,11 +169,11 @@ object MeshBuilder extends js.Object {
     * @see https://doc.babylonjs.com/babylon101/height_map
     * @see https://doc.babylonjs.com/how_to/set_shapes#ground-from-a-height-map
     */
-  def CreateGroundFromHeightMap(name: String, url: String, options: AnonColorFilter): typingsSlinky.babylonjs.groundMeshMod.GroundMesh = js.native
+  def CreateGroundFromHeightMap(name: String, url: String, options: ColorFilter): typingsSlinky.babylonjs.groundMeshMod.GroundMesh = js.native
   def CreateGroundFromHeightMap(
     name: String,
     url: String,
-    options: AnonColorFilter,
+    options: ColorFilter,
     scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]
   ): typingsSlinky.babylonjs.groundMeshMod.GroundMesh = js.native
   /**
@@ -189,8 +191,8 @@ object MeshBuilder extends js.Object {
     * @returns the icosahedron mesh
     * @see https://doc.babylonjs.com/how_to/polyhedra_shapes#icosphere
     */
-  def CreateIcoSphere(name: String, options: AnonRadiusX): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateIcoSphere(name: String, options: AnonRadiusX, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateIcoSphere(name: String, options: RadiusX): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateIcoSphere(name: String, options: RadiusX, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates lathe mesh.
     * The lathe is a shape with a symetry axis : a 2D model shape is rotated around this axis to design the lathe
@@ -211,8 +213,8 @@ object MeshBuilder extends js.Object {
     * @returns the lathe mesh
     * @see https://doc.babylonjs.com/how_to/parametric_shapes#lathe
     */
-  def CreateLathe(name: String, options: AnonClip): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateLathe(name: String, options: AnonClip, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateLathe(name: String, options: Clip): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateLathe(name: String, options: Clip, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates a line system mesh. A line system is a pool of many lines gathered in a single mesh
     * * A line system mesh is considered as a parametric shape since it has no predefined original shape. Its shape is determined by the passed array of lines as an input parameter
@@ -230,7 +232,7 @@ object MeshBuilder extends js.Object {
     * @param scene defines the hosting scene
     * @returns a new line system mesh
     */
-  def CreateLineSystem(name: String, options: AnonInstance, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
+  def CreateLineSystem(name: String, options: Instance, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
   /**
     * Creates a line mesh
     * A line mesh is considered as a parametric shape since it has no predefined original shape. Its shape is determined by the passed array of points as an input parameter
@@ -247,8 +249,8 @@ object MeshBuilder extends js.Object {
     * @param scene defines the hosting scene
     * @returns a new line mesh
     */
-  def CreateLines(name: String, options: AnonPoints): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
-  def CreateLines(name: String, options: AnonPoints, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
+  def CreateLines(name: String, options: Points): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
+  def CreateLines(name: String, options: Points, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
   /**
     * Creates a plane mesh
     * * The parameter `size` sets the size (float) of both sides of the plane at once (default 1)
@@ -263,8 +265,12 @@ object MeshBuilder extends js.Object {
     * @returns the plane mesh
     * @see https://doc.babylonjs.com/how_to/set_shapes#plane
     */
-  def CreatePlane(name: String, options: AnonSize): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreatePlane(name: String, options: AnonSize, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePlane(name: String, options: typingsSlinky.babylonjs.anon.Size): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePlane(
+    name: String,
+    options: typingsSlinky.babylonjs.anon.Size,
+    scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates a polygon mesh
     * The polygon's shape will depend on the input parameters and is constructed parallel to a ground mesh
@@ -279,11 +285,11 @@ object MeshBuilder extends js.Object {
     * @param earcutInjection can be used to inject your own earcut reference
     * @returns the polygon mesh
     */
-  def CreatePolygon(name: String, options: AnonHoles): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreatePolygon(name: String, options: AnonHoles, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePolygon(name: String, options: Holes): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePolygon(name: String, options: Holes, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreatePolygon(
     name: String,
-    options: AnonHoles,
+    options: Holes,
     scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene],
     earcutInjection: js.Any
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
@@ -306,8 +312,8 @@ object MeshBuilder extends js.Object {
     * @returns the polyhedron mesh
     * @see https://doc.babylonjs.com/how_to/polyhedra_shapes
     */
-  def CreatePolyhedron(name: String, options: AnonFaceUV): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreatePolyhedron(name: String, options: AnonFaceUV, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePolyhedron(name: String, options: FaceUV): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePolyhedron(name: String, options: FaceUV, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates a ribbon mesh. The ribbon is a parametric shape.  It has no predefined shape. Its final shape will depend on the input parameters
     * * The parameter `pathArray` is a required array of paths, what are each an array of successive Vector3. The pathArray parameter depicts the ribbon geometry
@@ -331,8 +337,8 @@ object MeshBuilder extends js.Object {
     * @see https://doc.babylonjs.com/how_to/ribbon_tutorial
     * @see https://doc.babylonjs.com/how_to/parametric_shapes
     */
-  def CreateRibbon(name: String, options: AnonCloseArray): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateRibbon(name: String, options: AnonCloseArray, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateRibbon(name: String, options: CloseArray): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateRibbon(name: String, options: CloseArray, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates a sphere mesh
     * * The parameter `diameter` sets the diameter size (float) of the sphere (default 1)
@@ -349,8 +355,8 @@ object MeshBuilder extends js.Object {
     * @returns the sphere mesh
     * @see https://doc.babylonjs.com/how_to/set_shapes#sphere
     */
-  def CreateSphere(name: String, options: AnonDiameterX): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateSphere(name: String, options: AnonDiameterX, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateSphere(name: String, options: DiameterX): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateSphere(name: String, options: DiameterX, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates a tiled box mesh
     * * faceTiles sets the pattern, tile size and number of tiles for a face
@@ -360,8 +366,8 @@ object MeshBuilder extends js.Object {
     * @param scene defines the hosting scene
     * @returns the tiled box mesh
     */
-  def CreateTiledBox(name: String, options: AnonTileSize): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateTiledBox(name: String, options: AnonTileSize, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTiledBox(name: String, options: TileSize): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTiledBox(name: String, options: TileSize, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates a tiled ground mesh
     * * The parameters `xmin` and `xmax` (floats, default -1 and 1) set the ground minimum and maximum X coordinates
@@ -375,8 +381,8 @@ object MeshBuilder extends js.Object {
     * @returns the tiled ground mesh
     * @see https://doc.babylonjs.com/how_to/set_shapes#tiled-ground
     */
-  def CreateTiledGround(name: String, options: AnonXmax): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateTiledGround(name: String, options: AnonXmax, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTiledGround(name: String, options: Xmax): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTiledGround(name: String, options: Xmax, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates a tiled plane mesh
     * * You can set a limited pattern arrangement with the tiles
@@ -389,8 +395,8 @@ object MeshBuilder extends js.Object {
     * @returns the plane mesh
     * @see https://doc.babylonjs.com/how_to/set_shapes#plane
     */
-  def CreateTiledPlane(name: String, options: AnonTileHeight): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateTiledPlane(name: String, options: AnonTileHeight, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTiledPlane(name: String, options: TileHeight): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTiledPlane(name: String, options: TileHeight, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates a torus mesh
     * * The parameter `diameter` sets the diameter size (float) of the torus (default 1)
@@ -405,8 +411,8 @@ object MeshBuilder extends js.Object {
     * @returns the torus mesh
     * @see https://doc.babylonjs.com/how_to/set_shapes#torus
     */
-  def CreateTorus(name: String, options: AnonThickness): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateTorus(name: String, options: AnonThickness, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTorus(name: String, options: Thickness): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTorus(name: String, options: Thickness, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates a torus knot mesh
     * * The parameter `radius` sets the global radius size (float) of the torus knot (default 2)
@@ -422,8 +428,8 @@ object MeshBuilder extends js.Object {
     * @returns the torus knot mesh
     * @see  https://doc.babylonjs.com/how_to/set_shapes#torus-knot
     */
-  def CreateTorusKnot(name: String, options: AnonQ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateTorusKnot(name: String, options: AnonQ, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTorusKnot(name: String, options: Q): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTorusKnot(name: String, options: Q, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates a tube mesh.
     * The tube is a parametric shape. It has no predefined shape. Its final shape will depend on the input parameters
@@ -446,8 +452,8 @@ object MeshBuilder extends js.Object {
     * @see https://doc.babylonjs.com/how_to/parametric_shapes
     * @see https://doc.babylonjs.com/how_to/set_shapes#tube
     */
-  def CreateTube(name: String, options: AnonRadiusFunction): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateTube(name: String, options: AnonRadiusFunction, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTube(name: String, options: RadiusFunction): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateTube(name: String, options: RadiusFunction, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates an extruded polygon mesh, with depth in the Y direction.
     * * You can set different colors and different images to the top, bottom and extruded side by using the parameters `faceColors` (an array of 3 Color3 elements) and `faceUV` (an array of 3 Vector4 elements)
@@ -458,11 +464,11 @@ object MeshBuilder extends js.Object {
     * @param earcutInjection can be used to inject your own earcut reference
     * @returns the polygon mesh
     */
-  def ExtrudePolygon(name: String, options: AnonHoles): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def ExtrudePolygon(name: String, options: AnonHoles, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudePolygon(name: String, options: Holes): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudePolygon(name: String, options: Holes, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def ExtrudePolygon(
     name: String,
-    options: AnonHoles,
+    options: Holes,
     scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene],
     earcutInjection: js.Any
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
@@ -486,8 +492,8 @@ object MeshBuilder extends js.Object {
     * @see https://doc.babylonjs.com/how_to/parametric_shapes
     * @see https://doc.babylonjs.com/how_to/parametric_shapes#extruded-shapes
     */
-  def ExtrudeShape(name: String, options: AnonInvertUV): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def ExtrudeShape(name: String, options: AnonInvertUV, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudeShape(name: String, options: InvertUV): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudeShape(name: String, options: InvertUV, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates an custom extruded shape mesh.
     * The custom extrusion is a parametric shape. It has no predefined shape. Its final shape will depend on the input parameters.
@@ -514,7 +520,7 @@ object MeshBuilder extends js.Object {
     * @see https://doc.babylonjs.com/how_to/parametric_shapes
     * @see https://doc.babylonjs.com/how_to/parametric_shapes#extruded-shapes
     */
-  def ExtrudeShapeCustom(name: String, options: AnonPath): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def ExtrudeShapeCustom(name: String, options: AnonPath, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudeShapeCustom(name: String, options: Path): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudeShapeCustom(name: String, options: Path, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
 }
 

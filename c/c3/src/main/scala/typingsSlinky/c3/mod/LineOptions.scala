@@ -1,6 +1,6 @@
 package typingsSlinky.c3.mod
 
-import typingsSlinky.c3.Anon1
+import typingsSlinky.c3.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait LineOptions extends js.Object {
     * If `false` set, the region of null data will not be connected and get empty.
     */
   var connectNull: js.UndefOr[Boolean] = js.native
-  var step: js.UndefOr[Anon1] = js.native
+  var step: js.UndefOr[`1`] = js.native
 }
 
 object LineOptions {
@@ -41,7 +41,7 @@ object LineOptions {
         ret
     }
     @scala.inline
-    def withStep(value: Anon1): Self = {
+    def withStep(value: `1`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("step")(value.asInstanceOf[js.Any])
         ret

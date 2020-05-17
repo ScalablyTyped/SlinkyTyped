@@ -1,5 +1,7 @@
 package typingsSlinky.reactDayPicker
 
+import typingsSlinky.reactDayPicker.anon.AddDayToRange
+import typingsSlinky.reactDayPicker.anon.DayMatchesModifier
 import typingsSlinky.reactDayPicker.commonMod.Modifier
 import typingsSlinky.reactDayPicker.commonMod.RangeModifier
 import typingsSlinky.std.Record
@@ -41,11 +43,11 @@ object mod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var DateUtils: AnonAddDayToRange = js.native
+    var DateUtils: AddDayToRange = js.native
     var DayModifiers: typingsSlinky.reactDayPicker.commonMod.DayModifiers = js.native
     var LocaleUtils: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any = js.native
     var Modifiers: typingsSlinky.reactDayPicker.commonMod.Modifiers = js.native
-    var ModifiersUtils: AnonDayMatchesModifier = js.native
+    var ModifiersUtils: DayMatchesModifier = js.native
     var VERSION: String = js.native
   }
   

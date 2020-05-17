@@ -1,5 +1,7 @@
 package typingsSlinky.angularCompiler
 
+import typingsSlinky.angularCompiler.anon.Pipes
+import typingsSlinky.angularCompiler.anon.TypeCompileTypeMetadata
 import typingsSlinky.angularCompiler.astMod.AST
 import typingsSlinky.angularCompiler.compileMetadataMod.CompileDirectiveMetadata
 import typingsSlinky.angularCompiler.compileMetadataMod.CompileDirectiveSummary
@@ -34,23 +36,7 @@ object templateParserMod extends js.Object {
   @js.native
   class TemplateParseResult () extends js.Object {
     def this(templateAst: js.Array[TemplateAst]) = this()
-    def this(templateAst: js.UndefOr[scala.Nothing], usedPipes: js.Array[CompilePipeSummary]) = this()
     def this(templateAst: js.Array[TemplateAst], usedPipes: js.Array[CompilePipeSummary]) = this()
-    def this(
-      templateAst: js.UndefOr[scala.Nothing],
-      usedPipes: js.UndefOr[scala.Nothing],
-      errors: js.Array[ParseError]
-    ) = this()
-    def this(
-      templateAst: js.UndefOr[scala.Nothing],
-      usedPipes: js.Array[CompilePipeSummary],
-      errors: js.Array[ParseError]
-    ) = this()
-    def this(
-      templateAst: js.Array[TemplateAst],
-      usedPipes: js.UndefOr[scala.Nothing],
-      errors: js.Array[ParseError]
-    ) = this()
     def this(
       templateAst: js.Array[TemplateAst],
       usedPipes: js.Array[CompilePipeSummary],
@@ -91,7 +77,7 @@ object templateParserMod extends js.Object {
       schemas: js.Array[SchemaMetadata],
       templateUrl: String,
       preserveWhitespaces: Boolean
-    ): AnonPipes = js.native
+    ): Pipes = js.native
     def parse(
       component: CompileDirectiveMetadata,
       template: ParseTreeResult,
@@ -100,7 +86,7 @@ object templateParserMod extends js.Object {
       schemas: js.Array[SchemaMetadata],
       templateUrl: String,
       preserveWhitespaces: Boolean
-    ): AnonPipes = js.native
+    ): Pipes = js.native
     def tryParse(
       component: CompileDirectiveMetadata,
       template: String,
@@ -130,7 +116,7 @@ object templateParserMod extends js.Object {
   
   def createElementCssSelector(elementName: String, attributes: js.Array[js.Tuple2[String, String]]): CssSelector = js.native
   def isEmptyExpression(ast: AST): Boolean = js.native
-  def removeSummaryDuplicates[T /* <: AnonTypeCompileTypeMetadata */](items: js.Array[T]): js.Array[T] = js.native
+  def removeSummaryDuplicates[T /* <: TypeCompileTypeMetadata */](items: js.Array[T]): js.Array[T] = js.native
   def splitClasses(classAttrValue: String): js.Array[String] = js.native
 }
 

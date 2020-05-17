@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.Networking.NetworkOperators
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Provides details for a radio state change notification. */
+@JSGlobal("Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChangeTriggerDetails")
+@js.native
+abstract class MobileBroadbandRadioStateChangeTriggerDetails ()
+  extends typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators.MobileBroadbandRadioStateChangeTriggerDetails
+

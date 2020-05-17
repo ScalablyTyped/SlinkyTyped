@@ -1,7 +1,7 @@
 package typingsSlinky.rbx.tileMod
 
-import typingsSlinky.rbx.BinVariablesbreakpointsLi
-import typingsSlinky.rbx.KinVariablesbreakpointsto
+import typingsSlinky.rbx.anon.BinVariablesbreakpointsLi
+import typingsSlinky.rbx.anon.KinVariablesbreakpointsto
 import typingsSlinky.rbx.rbxNumbers.`10`
 import typingsSlinky.rbx.rbxNumbers.`11`
 import typingsSlinky.rbx.rbxNumbers.`12`

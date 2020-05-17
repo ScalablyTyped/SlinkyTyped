@@ -2,9 +2,9 @@ package typingsSlinky.grommet.menuMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.grommet.AnonCloseMenu
-import typingsSlinky.grommet.AnonOpacity
-import typingsSlinky.grommet.AnonTop
+import typingsSlinky.grommet.anon.CloseMenu
+import typingsSlinky.grommet.anon.Opacity
+import typingsSlinky.grommet.anon.Top
 import typingsSlinky.grommet.dropMod.DropProps
 import typingsSlinky.grommet.grommetStrings.large
 import typingsSlinky.grommet.grommetStrings.medium
@@ -24,8 +24,8 @@ trait MenuProps extends js.Object {
   var a11yTitle: js.UndefOr[A11yTitleType] = js.native
   var alignSelf: js.UndefOr[AlignSelfType] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
-  var dropAlign: js.UndefOr[AnonTop] = js.native
-  var dropBackground: js.UndefOr[String | AnonOpacity] = js.native
+  var dropAlign: js.UndefOr[Top] = js.native
+  var dropBackground: js.UndefOr[String | Opacity] = js.native
   var dropProps: js.UndefOr[DropProps] = js.native
   var dropTarget: js.UndefOr[js.Object] = js.native
   var gridArea: js.UndefOr[GridAreaType] = js.native
@@ -34,7 +34,7 @@ trait MenuProps extends js.Object {
   var justifyContent: js.UndefOr[JustifyContentType] = js.native
   var label: js.UndefOr[String | TagMod[Any]] = js.native
   var margin: js.UndefOr[MarginType] = js.native
-  var messages: js.UndefOr[AnonCloseMenu] = js.native
+  var messages: js.UndefOr[CloseMenu] = js.native
   var open: js.UndefOr[Boolean] = js.native
   var size: js.UndefOr[small | medium | large | xlarge | String] = js.native
 }
@@ -94,7 +94,7 @@ object MenuProps {
         ret
     }
     @scala.inline
-    def withDropAlign(value: AnonTop): Self = {
+    def withDropAlign(value: Top): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropAlign")(value.asInstanceOf[js.Any])
         ret
@@ -106,7 +106,7 @@ object MenuProps {
         ret
     }
     @scala.inline
-    def withDropBackground(value: String | AnonOpacity): Self = {
+    def withDropBackground(value: String | Opacity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropBackground")(value.asInstanceOf[js.Any])
         ret
@@ -214,7 +214,7 @@ object MenuProps {
         ret
     }
     @scala.inline
-    def withMessages(value: AnonCloseMenu): Self = {
+    def withMessages(value: CloseMenu): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
         ret

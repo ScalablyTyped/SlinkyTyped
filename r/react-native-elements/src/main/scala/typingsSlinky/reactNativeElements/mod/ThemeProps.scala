@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeElements.mod
 
-import typingsSlinky.reactNativeElements.RecursivePartialFullTheme
+import typingsSlinky.reactNativeElements.anon.RecursivePartialFullTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +28,25 @@ trait heatmapStatistics extends js.Object {
   def heatmapStatistics(params: heatmapStatisticsHeatmapStatisticsParams): js.Promise[HeatmapStatisticsResult] = js.native
 }
 
-@JSGlobal("__esri.heatmapStatistics")
-@js.native
-object heatmapStatistics extends TopLevel[heatmapStatistics]
+object heatmapStatistics {
+  @scala.inline
+  def apply(heatmapStatistics: heatmapStatisticsHeatmapStatisticsParams => js.Promise[HeatmapStatisticsResult]): heatmapStatistics = {
+    val __obj = js.Dynamic.literal(heatmapStatistics = js.Any.fromFunction1(heatmapStatistics))
+    __obj.asInstanceOf[heatmapStatistics]
+  }
+  @scala.inline
+  implicit class heatmapStatisticsOps[Self <: heatmapStatistics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeatmapStatistics(value: heatmapStatisticsHeatmapStatisticsParams => js.Promise[HeatmapStatisticsResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heatmapStatistics")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

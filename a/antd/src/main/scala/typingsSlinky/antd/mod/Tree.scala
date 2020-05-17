@@ -1,8 +1,8 @@
 package typingsSlinky.antd.mod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.antd.AnonBlockNode
-import typingsSlinky.antd.TypeofDirectoryTree
+import typingsSlinky.antd.anon.BlockNode
+import typingsSlinky.antd.anon.TypeofDirectoryTree
 import typingsSlinky.antd.treeMod.default
 import typingsSlinky.rcTree.mod.TreeNodeProps
 import scala.scalajs.js
@@ -19,6 +19,6 @@ class Tree () extends default
 object Tree extends js.Object {
   var DirectoryTree: TypeofDirectoryTree = js.native
   var TreeNode: ReactComponentClass[TreeNodeProps] = js.native
-  var defaultProps: AnonBlockNode = js.native
+  var defaultProps: BlockNode = js.native
 }
 

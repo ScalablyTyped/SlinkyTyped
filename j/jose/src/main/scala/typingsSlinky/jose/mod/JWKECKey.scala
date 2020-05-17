@@ -7,9 +7,9 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait JWKECKey
-  extends KeyParameters
-     with JSONWebKey
-     with _ProduceKeyInput {
+  extends ProduceKeyInput
+     with KeyParameters
+     with JSONWebKey {
   var crv: ECCurve = js.native
   var d: js.UndefOr[String] = js.native
   var kty: EC = js.native

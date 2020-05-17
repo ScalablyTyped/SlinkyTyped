@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdk.eksMod
 
-import typingsSlinky.awsSdk.DescribeClusterRequestwai
-import typingsSlinky.awsSdk.DescribeNodegroupRequestw
+import typingsSlinky.awsSdk.anon.DescribeClusterRequestwai
+import typingsSlinky.awsSdk.anon.DescribeNodegroupRequestw
 import typingsSlinky.awsSdk.awsSdkStrings.clusterActive
 import typingsSlinky.awsSdk.awsSdkStrings.clusterDeleted
 import typingsSlinky.awsSdk.awsSdkStrings.nodegroupActive

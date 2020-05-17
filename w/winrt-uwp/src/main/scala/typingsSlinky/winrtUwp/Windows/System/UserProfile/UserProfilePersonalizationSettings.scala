@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides properties and methods to manage the user's desktop wallpaper and lock screen background image. */
-@JSGlobal("Windows.System.UserProfile.UserProfilePersonalizationSettings")
 @js.native
-abstract class UserProfilePersonalizationSettings () extends js.Object {
+trait UserProfilePersonalizationSettings extends js.Object {
   /**
     * Attempts to set the specified image file as the lock screen background image.
     * @param imageFile The image to set as the lock screen background.
@@ -24,16 +23,34 @@ abstract class UserProfilePersonalizationSettings () extends js.Object {
   def trySetWallpaperImageAsync(imageFile: StorageFile): IPromiseWithIAsyncOperation[Boolean] = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.System.UserProfile.UserProfilePersonalizationSettings")
-@js.native
-object UserProfilePersonalizationSettings extends js.Object {
-  /** Gets the current instance of UserProfilePersonalizationSettings . */
-  var current: UserProfilePersonalizationSettings = js.native
-  /**
-    * Gets a value that indicates whether changing the desktop and lock screen images is supported on the current device.
-    * @return true if changing the desktop and lock screen images is supported; otherwise, false.
-    */
-  def isSupported(): Boolean = js.native
+object UserProfilePersonalizationSettings {
+  @scala.inline
+  def apply(
+    trySetLockScreenImageAsync: StorageFile => IPromiseWithIAsyncOperation[Boolean],
+    trySetWallpaperImageAsync: StorageFile => IPromiseWithIAsyncOperation[Boolean]
+  ): UserProfilePersonalizationSettings = {
+    val __obj = js.Dynamic.literal(trySetLockScreenImageAsync = js.Any.fromFunction1(trySetLockScreenImageAsync), trySetWallpaperImageAsync = js.Any.fromFunction1(trySetWallpaperImageAsync))
+    __obj.asInstanceOf[UserProfilePersonalizationSettings]
+  }
+  @scala.inline
+  implicit class UserProfilePersonalizationSettingsOps[Self <: UserProfilePersonalizationSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTrySetLockScreenImageAsync(value: StorageFile => IPromiseWithIAsyncOperation[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trySetLockScreenImageAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTrySetWallpaperImageAsync(value: StorageFile => IPromiseWithIAsyncOperation[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("trySetWallpaperImageAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

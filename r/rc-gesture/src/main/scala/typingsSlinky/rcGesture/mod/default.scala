@@ -1,6 +1,6 @@
 package typingsSlinky.rcGesture.mod
 
-import typingsSlinky.rcGesture.AnonDirection
+import typingsSlinky.rcGesture.anon.Direction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +15,6 @@ class default protected () extends Gesture {
 @JSImport("rc-gesture", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonDirection = js.native
+  var defaultProps: Direction = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.formatjsIntlUtils.numberTypesMod
 
-import typingsSlinky.formatjsIntlUtils.AnonLongShort
+import typingsSlinky.formatjsIntlUtils.anon.LongShort
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RawNumberData extends js.Object {
   var currency: Record[NumberingSystem, RawCurrencyData] = js.native
-  var decimal: Record[NumberingSystem, AnonLongShort] = js.native
+  var decimal: Record[NumberingSystem, LongShort] = js.native
   var nu: js.Array[String] = js.native
   var percent: Record[NumberingSystem, String] = js.native
   var symbols: Record[NumberingSystem, SymbolsData] = js.native
@@ -19,7 +19,7 @@ object RawNumberData {
   @scala.inline
   def apply(
     currency: Record[NumberingSystem, RawCurrencyData],
-    decimal: Record[NumberingSystem, AnonLongShort],
+    decimal: Record[NumberingSystem, LongShort],
     nu: js.Array[String],
     percent: Record[NumberingSystem, String],
     symbols: Record[NumberingSystem, SymbolsData]
@@ -40,7 +40,7 @@ object RawNumberData {
         ret
     }
     @scala.inline
-    def withDecimal(value: Record[NumberingSystem, AnonLongShort]): Self = {
+    def withDecimal(value: Record[NumberingSystem, LongShort]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("decimal")(value.asInstanceOf[js.Any])
         ret

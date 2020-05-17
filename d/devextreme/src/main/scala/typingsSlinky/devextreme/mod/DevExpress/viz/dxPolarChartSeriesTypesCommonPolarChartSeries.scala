@@ -1,8 +1,8 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonBorderColor
-import typingsSlinky.devextreme.AnonColorDashStyle
-import typingsSlinky.devextreme.AnonDisplayMode
+import typingsSlinky.devextreme.anon.BorderColor
+import typingsSlinky.devextreme.anon.ColorDashStyle
+import typingsSlinky.devextreme.anon.DisplayMode
 import typingsSlinky.devextreme.devextremeStrings.allArgumentPoints
 import typingsSlinky.devextreme.devextremeStrings.allSeriesPoints
 import typingsSlinky.devextreme.devextremeStrings.dash
@@ -27,7 +27,7 @@ trait dxPolarChartSeriesTypesCommonPolarChartSeries extends js.Object {
   /** Specifies a fixed angular width for all bars in a series, measured in degrees. Takes precedence over the barPadding option. */
   var barWidth: js.UndefOr[Double] = js.native
   /** An object defining the series border configuration options. */
-  var border: js.UndefOr[AnonColorDashStyle] = js.native
+  var border: js.UndefOr[ColorDashStyle] = js.native
   /** Specifies whether or not to close the chart by joining the end point with the first point. */
   var closed: js.UndefOr[Boolean] = js.native
   /** Specifies a series color. */
@@ -39,7 +39,7 @@ trait dxPolarChartSeriesTypesCommonPolarChartSeries extends js.Object {
     allArgumentPoints | allSeriesPoints | excludePoints | includePoints | nearestPoint | none | onlyPoint
   ] = js.native
   /** An object defining configuration options for a hovered series. */
-  var hoverStyle: js.UndefOr[AnonBorderColor] = js.native
+  var hoverStyle: js.UndefOr[BorderColor] = js.native
   /** Specifies whether the series should ignore null data points. */
   var ignoreEmptyPoints: js.UndefOr[Boolean] = js.native
   /** An object defining the label configuration options. */
@@ -57,7 +57,7 @@ trait dxPolarChartSeriesTypesCommonPolarChartSeries extends js.Object {
     allArgumentPoints | allSeriesPoints | excludePoints | includePoints | none | onlyPoint
   ] = js.native
   /** An object defining configuration options for a selected series. */
-  var selectionStyle: js.UndefOr[AnonBorderColor] = js.native
+  var selectionStyle: js.UndefOr[BorderColor] = js.native
   /** Specifies whether or not to show the series in the chart's legend. */
   var showInLegend: js.UndefOr[Boolean] = js.native
   /** Specifies the name of the stack where the values of the 'stackedBar' series must be located. */
@@ -65,7 +65,7 @@ trait dxPolarChartSeriesTypesCommonPolarChartSeries extends js.Object {
   /** Specifies the name of the data source field that provides data about a point. */
   var tagField: js.UndefOr[String] = js.native
   /** Configures error bars. */
-  var valueErrorBar: js.UndefOr[AnonDisplayMode] = js.native
+  var valueErrorBar: js.UndefOr[DisplayMode] = js.native
   /** Specifies the data source field that provides values for series points. */
   var valueField: js.UndefOr[String] = js.native
   /** Specifies the visibility of a series. */
@@ -123,7 +123,7 @@ object dxPolarChartSeriesTypesCommonPolarChartSeries {
         ret
     }
     @scala.inline
-    def withBorder(value: AnonColorDashStyle): Self = {
+    def withBorder(value: ColorDashStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
         ret
@@ -185,7 +185,7 @@ object dxPolarChartSeriesTypesCommonPolarChartSeries {
         ret
     }
     @scala.inline
-    def withHoverStyle(value: AnonBorderColor): Self = {
+    def withHoverStyle(value: BorderColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hoverStyle")(value.asInstanceOf[js.Any])
         ret
@@ -281,7 +281,7 @@ object dxPolarChartSeriesTypesCommonPolarChartSeries {
         ret
     }
     @scala.inline
-    def withSelectionStyle(value: AnonBorderColor): Self = {
+    def withSelectionStyle(value: BorderColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectionStyle")(value.asInstanceOf[js.Any])
         ret
@@ -329,7 +329,7 @@ object dxPolarChartSeriesTypesCommonPolarChartSeries {
         ret
     }
     @scala.inline
-    def withValueErrorBar(value: AnonDisplayMode): Self = {
+    def withValueErrorBar(value: DisplayMode): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("valueErrorBar")(value.asInstanceOf[js.Any])
         ret

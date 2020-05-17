@@ -1,6 +1,6 @@
 package typingsSlinky.marko.expressMod
 
-import typingsSlinky.express.Typeofm
+import typingsSlinky.express.anon.Typeofm
 import typingsSlinky.expressServeStaticCore.mod.Handler
 import typingsSlinky.serveStatic.mod.ServeStaticOptions
 import scala.scalajs.js

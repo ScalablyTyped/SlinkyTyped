@@ -1,7 +1,7 @@
 package typingsSlinky.openpgp.mod
 
-import typingsSlinky.openpgp.AnonAlgorithm
-import typingsSlinky.openpgp.AnonKeyid
+import typingsSlinky.openpgp.anon.Algorithm
+import typingsSlinky.openpgp.anon.Keyid
 import typingsSlinky.openpgp.mod.enums.compression
 import typingsSlinky.openpgp.mod.packet.List
 import typingsSlinky.openpgp.mod.packet.Literal
@@ -65,9 +65,9 @@ object message extends js.Object {
       * @param passwords (optional) passwords used to decrypt
       * @returns array of object with potential sessionKey, algorithm pairs
       */
-    def decryptSessionKeys(): js.Promise[js.Array[AnonAlgorithm]] = js.native
-    def decryptSessionKeys(privateKeys: js.Array[_]): js.Promise[js.Array[AnonAlgorithm]] = js.native
-    def decryptSessionKeys(privateKeys: js.Array[_], passwords: js.Array[_]): js.Promise[js.Array[AnonAlgorithm]] = js.native
+    def decryptSessionKeys(): js.Promise[js.Array[Algorithm]] = js.native
+    def decryptSessionKeys(privateKeys: js.Array[_]): js.Promise[js.Array[Algorithm]] = js.native
+    def decryptSessionKeys(privateKeys: js.Array[_], passwords: js.Array[_]): js.Promise[js.Array[Algorithm]] = js.native
     /**
       * Encrypt the message either with public keys, passwords, or both at once.
       * @param keys (optional) public key(s) for message encryption
@@ -149,9 +149,9 @@ object message extends js.Object {
       * @param streaming (optional) whether to process data as a stream
       * @returns list of signer's keyid and validity of signature
       */
-    def verify(keys: js.Array[_]): js.Promise[js.Array[AnonKeyid]] = js.native
-    def verify(keys: js.Array[_], date: js.Date): js.Promise[js.Array[AnonKeyid]] = js.native
-    def verify(keys: js.Array[_], date: js.Date, streaming: Boolean): js.Promise[js.Array[AnonKeyid]] = js.native
+    def verify(keys: js.Array[_]): js.Promise[js.Array[Keyid]] = js.native
+    def verify(keys: js.Array[_], date: js.Date): js.Promise[js.Array[Keyid]] = js.native
+    def verify(keys: js.Array[_], date: js.Date, streaming: Boolean): js.Promise[js.Array[Keyid]] = js.native
     /**
       * Verify detached message signature
       * @param keys array of keys to verify signatures
@@ -159,8 +159,8 @@ object message extends js.Object {
       * @param date Verify the signature against the given date, i.e. check signature creation time < date < expiration time
       * @returns list of signer's keyid and validity of signature
       */
-    def verifyDetached(keys: js.Array[_], signature: Signature): js.Promise[js.Array[AnonKeyid]] = js.native
-    def verifyDetached(keys: js.Array[_], signature: Signature, date: js.Date): js.Promise[js.Array[AnonKeyid]] = js.native
+    def verifyDetached(keys: js.Array[_], signature: Signature): js.Promise[js.Array[Keyid]] = js.native
+    def verifyDetached(keys: js.Array[_], signature: Signature, date: js.Date): js.Promise[js.Array[Keyid]] = js.native
   }
   
   /**
@@ -193,7 +193,7 @@ object message extends js.Object {
     literalDataList: js.Array[_],
     keys: js.Array[_],
     date: js.Date
-  ): js.Promise[js.Array[AnonKeyid]] = js.native
+  ): js.Promise[js.Array[Keyid]] = js.native
   /**
     * Create list of objects containing signer's keyid and validity of signature
     * @param signatureList array of signature packets
@@ -203,7 +203,7 @@ object message extends js.Object {
     *        i.e. check signature creation time < date < expiration time
     * @returns list of signer's keyid and validity of signature
     */
-  def createVerificationObjects(signatureList: js.Array[_], literalDataList: js.Array[_], keys: js.Array[_], date: js.Date): js.Promise[js.Array[AnonKeyid]] = js.native
+  def createVerificationObjects(signatureList: js.Array[_], literalDataList: js.Array[_], keys: js.Array[_], date: js.Date): js.Promise[js.Array[Keyid]] = js.native
   /**
     * Encrypt a session key either with public keys, passwords, or both at once.
     * @param sessionKey session key for encryption

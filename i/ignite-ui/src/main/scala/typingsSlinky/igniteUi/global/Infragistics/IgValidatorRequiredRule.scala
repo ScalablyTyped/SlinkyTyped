@@ -1,0 +1,14 @@
+package typingsSlinky.igniteUi.global.Infragistics
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("Infragistics.IgValidatorRequiredRule")
+@js.native
+class IgValidatorRequiredRule protected ()
+  extends typingsSlinky.igniteUi.Infragistics.IgValidatorRequiredRule {
+  def this(groupTypes: js.Array[_]) = this()
+  def this(name: String) = this()
+}
+

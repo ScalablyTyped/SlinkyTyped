@@ -1,5 +1,6 @@
 package typingsSlinky.angularCompiler
 
+import typingsSlinky.angularCompiler.anon.Annotation
 import typingsSlinky.angularCompiler.compileMetadataMod.CompileDirectiveMetadata
 import typingsSlinky.angularCompiler.compileMetadataMod.CompileDirectiveSummary
 import typingsSlinky.angularCompiler.compileMetadataMod.CompileInjectableMetadata
@@ -131,7 +132,7 @@ object metadataResolverMod extends js.Object {
     def getNgModuleMetadata(moduleType: js.Any, throwIfNotFound: Boolean, alreadyCollecting: Set[_]): CompileNgModuleMetadata | Null = js.native
     def getNgModuleSummary(moduleType: js.Any): CompileNgModuleSummary | Null = js.native
     def getNgModuleSummary(moduleType: js.Any, alreadyCollecting: Set[_]): CompileNgModuleSummary | Null = js.native
-    def getNonNormalizedDirectiveMetadata(directiveType: js.Any): AnonAnnotation | Null = js.native
+    def getNonNormalizedDirectiveMetadata(directiveType: js.Any): Annotation | Null = js.native
     def getOrLoadPipeMetadata(pipeType: js.Any): CompilePipeMetadata = js.native
     /**
       * Gets the metadata for the given pipe.

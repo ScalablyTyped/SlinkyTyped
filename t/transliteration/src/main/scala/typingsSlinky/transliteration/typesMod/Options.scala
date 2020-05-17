@@ -12,14 +12,8 @@ trait Options extends js.Object
 
 object Options {
   @scala.inline
-  def OptionsTransliterate(): Options = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Options]
-  }
+  implicit def apply(value: OptionsSlugify): Options = value.asInstanceOf[Options]
   @scala.inline
-  def OptionsSlugify(): Options = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Options]
-  }
+  implicit def apply(value: OptionsTransliterate): Options = value.asInstanceOf[Options]
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.hapiAuthJwt2.mod
 
-import typingsSlinky.hapiAuthJwt2.AnonCredentials
+import typingsSlinky.hapiAuthJwt2.anon.Credentials
 import typingsSlinky.hapiHapi.mod.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ trait RegisterOptions extends js.Object {
     * function which is run once the Token has been decoded (instead of a validate) with signature async function(decoded, request) where:
     */
   var verify: js.UndefOr[
-    js.Function2[/* decoded */ js.Any, /* request */ Request, js.Promise[AnonCredentials]]
+    js.Function2[/* decoded */ js.Any, /* request */ Request, js.Promise[Credentials]]
   ] = js.native
 }
 
@@ -29,7 +29,7 @@ object RegisterOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withVerify(value: (/* decoded */ js.Any, /* request */ Request) => js.Promise[AnonCredentials]): Self = {
+    def withVerify(value: (/* decoded */ js.Any, /* request */ Request) => js.Promise[Credentials]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("verify")(js.Any.fromFunction2(value))
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.stripe.mod.issuing.cardholders
 
-import typingsSlinky.stripe.AnonAddressName
-import typingsSlinky.stripe.AnonPastdue
+import typingsSlinky.stripe.anon.AddressName
+import typingsSlinky.stripe.anon.Pastdue
 import typingsSlinky.stripe.mod.IMetadata
 import typingsSlinky.stripe.mod.IResourceObject
 import typingsSlinky.stripe.stripeStrings.issuingDotcardholder
@@ -18,7 +18,7 @@ trait ICardholder extends IResourceObject {
   /**
     * The cardholder’s billing address.
     */
-  var billing: AnonAddressName = js.native
+  var billing: AddressName = js.native
   /**
     * Additional information about a business_entity cardholder.
     */
@@ -63,7 +63,7 @@ trait ICardholder extends IResourceObject {
   /**
     * Information about verification requirements for the cardholder, including what information needs to be collected.
     */
-  var requirements: AnonPastdue = js.native
+  var requirements: Pastdue = js.native
   /**
     * One of active, inactive, or blocked.
     */
@@ -78,7 +78,7 @@ object ICardholder {
   @scala.inline
   def apply(
     authorization_controls: ICardholderAuthorizationControls,
-    billing: AnonAddressName,
+    billing: AddressName,
     company: ICardholderBusinessEntity,
     created: Double,
     email: String,
@@ -90,7 +90,7 @@ object ICardholder {
     name: String,
     `object`: issuingDotcardholder,
     phone_number: String,
-    requirements: AnonPastdue,
+    requirements: Pastdue,
     status: CardholderStatus,
     `type`: CardholderType
   ): ICardholder = {
@@ -112,7 +112,7 @@ object ICardholder {
         ret
     }
     @scala.inline
-    def withBilling(value: AnonAddressName): Self = {
+    def withBilling(value: AddressName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("billing")(value.asInstanceOf[js.Any])
         ret
@@ -178,7 +178,7 @@ object ICardholder {
         ret
     }
     @scala.inline
-    def withRequirements(value: AnonPastdue): Self = {
+    def withRequirements(value: Pastdue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("requirements")(value.asInstanceOf[js.Any])
         ret

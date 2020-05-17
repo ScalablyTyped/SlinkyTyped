@@ -1,6 +1,6 @@
 package typingsSlinky.jestCore.updateSnapshotsMod
 
-import typingsSlinky.jestCore.AnonKey
+import typingsSlinky.jestCore.anon.Key
 import typingsSlinky.jestCore.jestCoreBooleans.`true`
 import typingsSlinky.jestTypes.configMod.GlobalConfig
 import scala.scalajs.js
@@ -16,7 +16,7 @@ trait UpdateSnapshotsPlugin extends js.Object {
   def apply(
     hooks: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JestHookSubscriber */ js.Any
   ): Unit = js.native
-  def getUsageInfo(): AnonKey | Null = js.native
+  def getUsageInfo(): Key | Null = js.native
   def run(
     _globalConfig: GlobalConfig,
     updateConfigAndRun: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify UpdateConfigCallback */ js.Any
@@ -28,7 +28,7 @@ object UpdateSnapshotsPlugin {
   def apply(
     _hasSnapshotFailure: js.Any,
     apply: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JestHookSubscriber */ js.Any => Unit,
-    getUsageInfo: () => AnonKey | Null,
+    getUsageInfo: () => Key | Null,
     isInternal: `true`,
     run: (GlobalConfig, /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify UpdateConfigCallback */ js.Any) => js.Promise[Boolean]
   ): UpdateSnapshotsPlugin = {
@@ -56,7 +56,7 @@ object UpdateSnapshotsPlugin {
         ret
     }
     @scala.inline
-    def withGetUsageInfo(value: () => AnonKey | Null): Self = {
+    def withGetUsageInfo(value: () => Key | Null): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getUsageInfo")(js.Any.fromFunction0(value))
         ret

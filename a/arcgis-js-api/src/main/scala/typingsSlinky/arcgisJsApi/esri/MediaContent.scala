@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.media
 import typingsSlinky.arcgisJsApi.esri.content.Content
 import scala.scalajs.js
@@ -28,8 +27,4 @@ trait MediaContent
   @JSName("type")
   val type_MediaContent: media = js.native
 }
-
-@JSGlobal("__esri.MediaContent")
-@js.native
-object MediaContent extends TopLevel[MediaContentConstructor]
 

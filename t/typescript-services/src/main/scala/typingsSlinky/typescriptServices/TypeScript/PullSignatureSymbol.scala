@@ -4,13 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("TypeScript.PullSignatureSymbol")
 @js.native
-class PullSignatureSymbol protected ()
+trait PullSignatureSymbol
   extends PullSymbol
      with InstantiableSymbol {
-  def this(kind: PullElementKind) = this()
-  def this(kind: PullElementKind, _isDefinition: Boolean) = this()
   var _allowedToReferenceTypeParameters: js.Any = js.native
   var _instantiationCache: js.Any = js.native
   var _isDefinition: js.Any = js.native
@@ -76,41 +73,5 @@ class PullSignatureSymbol protected ()
   def isGeneric(): Boolean = js.native
   def isStringConstantOverloadSignature(): Boolean = js.native
   def wrapsSomeTypeParameter(typeParameterArgumentMap: TypeArgumentMap): Boolean = js.native
-}
-
-/* static members */
-@JSGlobal("TypeScript.PullSignatureSymbol")
-@js.native
-object PullSignatureSymbol extends js.Object {
-  def getSignatureTypeMemberName(
-    candidateSignature: PullSignatureSymbol,
-    signatures: js.Array[PullSignatureSymbol],
-    scopeSymbol: PullSymbol
-  ): MemberNameArray = js.native
-  def getSignaturesTypeNameEx(signatures: js.Array[PullSignatureSymbol], prefix: String, shortform: Boolean, brackets: Boolean): js.Array[MemberName] = js.native
-  def getSignaturesTypeNameEx(
-    signatures: js.Array[PullSignatureSymbol],
-    prefix: String,
-    shortform: Boolean,
-    brackets: Boolean,
-    scopeSymbol: PullSymbol
-  ): js.Array[MemberName] = js.native
-  def getSignaturesTypeNameEx(
-    signatures: js.Array[PullSignatureSymbol],
-    prefix: String,
-    shortform: Boolean,
-    brackets: Boolean,
-    scopeSymbol: PullSymbol,
-    getPrettyTypeName: Boolean
-  ): js.Array[MemberName] = js.native
-  def getSignaturesTypeNameEx(
-    signatures: js.Array[PullSignatureSymbol],
-    prefix: String,
-    shortform: Boolean,
-    brackets: Boolean,
-    scopeSymbol: PullSymbol,
-    getPrettyTypeName: Boolean,
-    candidateSignature: PullSignatureSymbol
-  ): js.Array[MemberName] = js.native
 }
 

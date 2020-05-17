@@ -1,6 +1,6 @@
 package typingsSlinky.c3.mod
 
-import typingsSlinky.c3.AnonClassValue
+import typingsSlinky.c3.anon.ClassValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,6 +23,6 @@ trait GridOperations extends js.Object {
     * @param params Specifies which grid line to remove. If not given, all of x/y grid lines will be removed. If empty, none will be removed
     */
   def remove(): Unit = js.native
-  def remove(params: AnonClassValue): Unit = js.native
+  def remove(params: ClassValue): Unit = js.native
 }
 

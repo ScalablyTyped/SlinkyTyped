@@ -1,7 +1,7 @@
 package typingsSlinky.forgeApis.mod
 
-import typingsSlinky.forgeApis.AnonFilterDirection
-import typingsSlinky.forgeApis.AnonFilterId
+import typingsSlinky.forgeApis.anon.FilterDirection
+import typingsSlinky.forgeApis.anon.FilterId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ class VersionsApi () extends js.Object {
   def getVersionRefs(
     projectId: String,
     versionId: String,
-    opts: AnonFilterId,
+    opts: FilterId,
     oauth2Client: AuthClient,
     credentials: AuthToken
   ): js.Promise[ApiResponse] = js.native
@@ -36,7 +36,7 @@ class VersionsApi () extends js.Object {
   def getVersionRelationshipsRefs(
     projectId: String,
     versionId: String,
-    opts: AnonFilterDirection,
+    opts: FilterDirection,
     oauth2Client: AuthClient,
     credentials: AuthToken
   ): js.Promise[ApiResponse] = js.native

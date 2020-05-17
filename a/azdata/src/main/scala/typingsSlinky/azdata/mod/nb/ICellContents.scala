@@ -1,6 +1,6 @@
 package typingsSlinky.azdata.mod.nb
 
-import typingsSlinky.azdata.AnonAzdatacellguid
+import typingsSlinky.azdata.anon.Azdatacellguid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait ICellContents extends js.Object {
   var cell_type: CellType = js.native
   var execution_count: js.UndefOr[Double] = js.native
-  var metadata: js.UndefOr[AnonAzdatacellguid] = js.native
+  var metadata: js.UndefOr[Azdatacellguid] = js.native
   var outputs: js.UndefOr[js.Array[ICellOutput]] = js.native
   var source: String | js.Array[String] = js.native
 }
@@ -51,7 +51,7 @@ object ICellContents {
         ret
     }
     @scala.inline
-    def withMetadata(value: AnonAzdatacellguid): Self = {
+    def withMetadata(value: Azdatacellguid): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
         ret

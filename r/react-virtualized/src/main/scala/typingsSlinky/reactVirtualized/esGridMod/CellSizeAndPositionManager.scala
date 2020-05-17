@@ -1,6 +1,6 @@
 package typingsSlinky.reactVirtualized.esGridMod
 
-import typingsSlinky.reactVirtualized.AnonContainerSize
+import typingsSlinky.reactVirtualized.anon.ContainerSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +36,7 @@ trait CellSizeAndPositionManager extends js.Object {
     * @param totalSize Total size (width or height) of all cells
     * @return Offset to use to ensure the specified cell is visible
     */
-  def getUpdatedOffsetForIndex(params: AnonContainerSize): Double = js.native
+  def getUpdatedOffsetForIndex(params: ContainerSize): Double = js.native
   def getVisibleCellRange(params: GetVisibleCellRangeParams): VisibleCellRange = js.native
   /**
     * Clear all cached values for cells after the specified index.
@@ -58,7 +58,7 @@ object CellSizeAndPositionManager {
     getSizeAndPositionOfCell: Double => SizeAndPositionData,
     getSizeAndPositionOfLastMeasuredCell: () => SizeAndPositionData,
     getTotalSize: () => Double,
-    getUpdatedOffsetForIndex: AnonContainerSize => Double,
+    getUpdatedOffsetForIndex: ContainerSize => Double,
     getVisibleCellRange: GetVisibleCellRangeParams => VisibleCellRange,
     resetCell: Double => Unit
   ): CellSizeAndPositionManager = {
@@ -126,7 +126,7 @@ object CellSizeAndPositionManager {
         ret
     }
     @scala.inline
-    def withGetUpdatedOffsetForIndex(value: AnonContainerSize => Double): Self = {
+    def withGetUpdatedOffsetForIndex(value: ContainerSize => Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getUpdatedOffsetForIndex")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,7 @@
 package typingsSlinky.materializeCss.mod
 
-import typingsSlinky.materializeCss.PartialToastOptions
+import typingsSlinky.materializeCss.M.Toast
+import typingsSlinky.materializeCss.anon.PartialToastOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +12,6 @@ object toast extends js.Object {
   /**
     * Create a toast
     */
-  def apply(options: PartialToastOptions): typingsSlinky.materializeCss.M.Toast_ = js.native
+  def apply(options: PartialToastOptions): Toast = js.native
 }
 

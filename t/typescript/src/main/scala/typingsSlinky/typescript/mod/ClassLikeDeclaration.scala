@@ -10,6 +10,13 @@ import scala.scalajs.js.annotation._
 */
 trait ClassLikeDeclaration
   extends DeclarationWithTypeParameterChildren
+     with HasJSDoc
      with ObjectTypeDeclaration
-     with _HasJSDoc
+
+object ClassLikeDeclaration {
+  @scala.inline
+  implicit def apply(value: ClassDeclaration): ClassLikeDeclaration = value.asInstanceOf[ClassLikeDeclaration]
+  @scala.inline
+  implicit def apply(value: ClassExpression): ClassLikeDeclaration = value.asInstanceOf[ClassLikeDeclaration]
+}
 

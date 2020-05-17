@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs
 
+import typingsSlinky.babylonjs.anon.CloseArray
 import typingsSlinky.babylonjs.meshMod.Mesh
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
@@ -39,8 +40,8 @@ object ribbonBuilderMod extends js.Object {
       * @see https://doc.babylonjs.com/how_to/ribbon_tutorial
       * @see https://doc.babylonjs.com/how_to/parametric_shapes
       */
-    def CreateRibbon(name: String, options: AnonCloseArray): Mesh = js.native
-    def CreateRibbon(name: String, options: AnonCloseArray, scene: Nullable[Scene]): Mesh = js.native
+    def CreateRibbon(name: String, options: CloseArray): Mesh = js.native
+    def CreateRibbon(name: String, options: CloseArray, scene: Nullable[Scene]): Mesh = js.native
   }
   
 }

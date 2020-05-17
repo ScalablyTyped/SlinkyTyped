@@ -1,5 +1,6 @@
 package typingsSlinky.blueprintjsCore.alertMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
@@ -9,7 +10,6 @@ import typingsSlinky.blueprintjsCore.propsMod.IProps
 import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -60,7 +60,7 @@ trait IAlertProps
     *
     * If any of the `cancel` props are defined, then either `onCancel` or `onClose` must be defined.
     */
-  var onCancel: js.UndefOr[js.Function1[/* evt */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]], Unit]] = js.native
+  var onCancel: js.UndefOr[js.Function1[/* evt */ js.UndefOr[SyntheticEvent[Event, HTMLElement]], Unit]] = js.native
   /**
     * Handler invoked when the Alert is confirmed or canceled; see `onConfirm` and `onCancel` for more details.
     * First argument is `true` if confirmed, `false` otherwise.
@@ -69,7 +69,7 @@ trait IAlertProps
   var onClose: js.UndefOr[
     js.Function2[
       /* confirmed */ Boolean, 
-      /* evt */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]], 
+      /* evt */ js.UndefOr[SyntheticEvent[Event, HTMLElement]], 
       Unit
     ]
   ] = js.native
@@ -78,7 +78,7 @@ trait IAlertProps
     * - clicking the confirm button
     * - focusing on the confirm button and pressing `enter` or `space`
     */
-  var onConfirm: js.UndefOr[js.Function1[/* evt */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]], Unit]] = js.native
+  var onConfirm: js.UndefOr[js.Function1[/* evt */ js.UndefOr[SyntheticEvent[Event, HTMLElement]], Unit]] = js.native
   /**
     * The container element into which the overlay renders its contents, when `usePortal` is `true`.
     * This prop is ignored if `usePortal` is `false`.
@@ -202,7 +202,7 @@ object IAlertProps {
         ret
     }
     @scala.inline
-    def withOnCancel(value: /* evt */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]] => Unit): Self = {
+    def withOnCancel(value: /* evt */ js.UndefOr[SyntheticEvent[Event, HTMLElement]] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCancel")(js.Any.fromFunction1(value))
         ret
@@ -214,9 +214,7 @@ object IAlertProps {
         ret
     }
     @scala.inline
-    def withOnClose(
-      value: (/* confirmed */ Boolean, /* evt */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]]) => Unit
-    ): Self = {
+    def withOnClose(value: (/* confirmed */ Boolean, /* evt */ js.UndefOr[SyntheticEvent[Event, HTMLElement]]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction2(value))
         ret
@@ -228,7 +226,7 @@ object IAlertProps {
         ret
     }
     @scala.inline
-    def withOnConfirm(value: /* evt */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]] => Unit): Self = {
+    def withOnConfirm(value: /* evt */ js.UndefOr[SyntheticEvent[Event, HTMLElement]] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onConfirm")(js.Any.fromFunction1(value))
         ret

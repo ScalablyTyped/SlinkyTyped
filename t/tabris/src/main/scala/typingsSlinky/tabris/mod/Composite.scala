@@ -1,10 +1,9 @@
 package typingsSlinky.tabris.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.tabris.Anon3
-import typingsSlinky.tabris.AnonLayout
-import typingsSlinky.tabris.OmitCompositeWidgetset
-import typingsSlinky.tabris.OmitWidgetsetAbsoluteBounds
+import typingsSlinky.tabris.anon.OmitCompositeWidgetset
+import typingsSlinky.tabris.anon.OmitWidgetsetAbsoluteBounds
+import typingsSlinky.tabris.anon.`2`
 import typingsSlinky.tabris.tabrisStrings.set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +20,7 @@ class Composite[ChildType /* <: Widget */] () extends Widget {
     * @constant
     */
   @JSName("jsxAttributes")
-  val jsxAttributes_Composite: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with Anon3[ChildType] = js.native
+  val jsxAttributes_Composite: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with `2`[ChildType] = js.native
   /**
     * The layout manager responsible for interpreting the [`layoutData`](./Widget.md#layoutdata) of the
     * child widgets of this Composite.
@@ -85,7 +84,7 @@ class Composite[ChildType /* <: Widget */] () extends Widget {
     * @param props
     */
   /* protected */ def _initLayout(): Unit = js.native
-  /* protected */ def _initLayout(props: AnonLayout): Unit = js.native
+  /* protected */ def _initLayout(props: typingsSlinky.tabris.anon.Layout): Unit = js.native
   /**
     * Called by the framework with a child to be removed from this composite. Triggers the 'removeChild'
     * event. May be overwritten to run any code prior or after the child is removed.

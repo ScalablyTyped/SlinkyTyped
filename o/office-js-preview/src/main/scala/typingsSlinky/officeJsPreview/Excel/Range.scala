@@ -1,12 +1,12 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.RangeData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.RangeLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.RangeUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientResult
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.All
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Blanks
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.ByColumns
@@ -65,9 +65,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.Range")
 @js.native
-class Range () extends ClientObject {
+trait Range extends ClientObject {
   /**
     *
     * Represents the range reference in A1-style. Address value will contain the Sheet reference (e.g. "Sheet1!A1:B4"). Read-only.
@@ -1001,7 +1000,7 @@ class Range () extends ClientObject {
     */
   def load(): Range = js.native
   def load(options: RangeLoadOptions): Range = js.native
-  def load(propertyNamesAndPaths: AnonExpand): Range = js.native
+  def load(propertyNamesAndPaths: Expand): Range = js.native
   def load(propertyNames: String): Range = js.native
   def load(propertyNames: js.Array[String]): Range = js.native
   /**

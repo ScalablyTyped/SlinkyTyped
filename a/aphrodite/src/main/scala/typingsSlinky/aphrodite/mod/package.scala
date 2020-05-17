@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type CSSInputTypes = typingsSlinky.aphrodite.mod.StyleDeclarationValue | typingsSlinky.aphrodite.aphroditeBooleans.`false` | scala.Null | scala.Unit
   type SelectorHandler = js.Function3[
     /* selector */ java.lang.String, 
     /* baseSelector */ java.lang.String, 

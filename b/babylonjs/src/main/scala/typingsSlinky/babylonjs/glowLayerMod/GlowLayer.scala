@@ -1,7 +1,7 @@
 package typingsSlinky.babylonjs.glowLayerMod
 
-import typingsSlinky.babylonjs.PartialIGlowLayerOptions
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
+import typingsSlinky.babylonjs.anon.PartialIGlowLayerOptions
 import typingsSlinky.babylonjs.effectLayerMod.EffectLayer
 import typingsSlinky.babylonjs.materialMod.Material
 import typingsSlinky.babylonjs.mathColorMod.Color4

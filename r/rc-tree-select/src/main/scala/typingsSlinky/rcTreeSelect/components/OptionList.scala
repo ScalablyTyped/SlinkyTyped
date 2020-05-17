@@ -6,7 +6,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticUIEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.rcTreeSelect.AnonSelected
+import typingsSlinky.rcTreeSelect.anon.Selected
 import typingsSlinky.rcTreeSelect.interfaceMod.DataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.FlattenDataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.RawValueType
@@ -26,7 +26,7 @@ object OptionList {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, Ref[js.Any]] {
     @scala.inline
     def defaultActiveFirstOption(value: Boolean): this.type = set("defaultActiveFirstOption", value.asInstanceOf[js.Any])
     @scala.inline
@@ -48,7 +48,7 @@ object OptionList {
     multiple: Boolean,
     onActiveValue: (RawValueType, Double) => Unit,
     onScroll: SyntheticUIEvent[HTMLDivElement] => Unit,
-    onSelect: (RawValueType, AnonSelected) => Unit,
+    onSelect: (RawValueType, Selected) => Unit,
     onToggleOpen: js.UndefOr[Boolean] => Unit,
     open: Boolean,
     options: js.Array[DataNode],

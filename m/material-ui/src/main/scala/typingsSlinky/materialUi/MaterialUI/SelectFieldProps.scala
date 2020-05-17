@@ -1,5 +1,6 @@
 package typingsSlinky.materialUi.MaterialUI
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
@@ -7,7 +8,6 @@ import slinky.web.SyntheticFocusEvent
 import typingsSlinky.materialUi.MaterialUI.Menus.DropDownMenuProps
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.FocusEventHandler
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,7 +40,7 @@ trait SelectFieldProps extends js.Object {
   var onBlur: js.UndefOr[FocusEventHandler[js.Object]] = js.native
   var onChange: js.UndefOr[
     js.Function3[
-      /* e */ SyntheticEvent[Event_, js.Object], 
+      /* e */ SyntheticEvent[Event, js.Object], 
       /* index */ Double, 
       /* menuItemValue */ js.Any, 
       Unit
@@ -354,7 +354,7 @@ object SelectFieldProps {
     }
     @scala.inline
     def withOnChange(
-      value: (/* e */ SyntheticEvent[Event_, js.Object], /* index */ Double, /* menuItemValue */ js.Any) => Unit
+      value: (/* e */ SyntheticEvent[Event, js.Object], /* index */ Double, /* menuItemValue */ js.Any) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction3(value))

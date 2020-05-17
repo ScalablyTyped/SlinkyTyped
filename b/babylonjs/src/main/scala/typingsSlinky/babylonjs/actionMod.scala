@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs
 import typingsSlinky.babylonjs.abstractActionManagerMod.AbstractActionManager
 import typingsSlinky.babylonjs.actionEventMod.ActionEvent
 import typingsSlinky.babylonjs.actionManagerMod.ActionManager
+import typingsSlinky.babylonjs.anon.Name
 import typingsSlinky.babylonjs.conditionMod.Condition
 import typingsSlinky.babylonjs.nodeMod.Node
 import typingsSlinky.babylonjs.observableMod.Observable
@@ -128,8 +129,8 @@ object actionMod extends js.Object {
       * Internal only
       * @hidden
       */
-    def _GetTargetProperty(target: Node): AnonName = js.native
-    def _GetTargetProperty(target: Scene): AnonName = js.native
+    def _GetTargetProperty(target: Node): Name = js.native
+    def _GetTargetProperty(target: Scene): Name = js.native
     /**
       * Internal only
       * @hidden

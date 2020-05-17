@@ -1,6 +1,6 @@
 package typingsSlinky.actionsOnGoogle.browseMod
 
-import typingsSlinky.actionsOnGoogle.richMod._RichResponseItem
+import typingsSlinky.actionsOnGoogle.richMod.RichResponseItem
 import typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsV2UiElementsCarouselBrowse
 import typingsSlinky.actionsOnGoogle.v2Mod.GoogleActionsV2UiElementsCarouselBrowseItem
 import scala.scalajs.js
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("actions-on-google/dist/service/actionssdk/conversation/response/browse", "BrowseCarousel")
 @js.native
 class BrowseCarousel protected ()
-  extends _RichResponseItem
+  extends RichResponseItem
      with GoogleActionsV2UiElementsCarouselBrowse {
   /**
     * @param items BrowseCarousel items

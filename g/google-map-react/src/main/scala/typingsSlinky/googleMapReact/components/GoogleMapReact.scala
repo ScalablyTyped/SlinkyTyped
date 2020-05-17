@@ -3,7 +3,7 @@ package typingsSlinky.googleMapReact.components
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.googleMapReact.AnonMap
+import typingsSlinky.googleMapReact.anon.Map
 import typingsSlinky.googleMapReact.mod.BootstrapURLKeys
 import typingsSlinky.googleMapReact.mod.ChangeEventValue
 import typingsSlinky.googleMapReact.mod.ClickEventValue
@@ -75,7 +75,7 @@ object GoogleMapReact {
     @scala.inline
     def onDragEnd(value: /* map */ js.Any => Unit): this.type = set("onDragEnd", js.Any.fromFunction1(value))
     @scala.inline
-    def onGoogleApiLoaded(value: /* maps */ AnonMap => Unit): this.type = set("onGoogleApiLoaded", js.Any.fromFunction1(value))
+    def onGoogleApiLoaded(value: /* maps */ Map => Unit): this.type = set("onGoogleApiLoaded", js.Any.fromFunction1(value))
     @scala.inline
     def onMapTypeIdChange(value: /* args */ js.Any => Unit): this.type = set("onMapTypeIdChange", js.Any.fromFunction1(value))
     @scala.inline

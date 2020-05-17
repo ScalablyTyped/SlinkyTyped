@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -66,7 +66,7 @@ object IgProgressBar {
         ret
     }
     @scala.inline
-    def withChange(value: (/* event */ Event_, /* ui */ ChangeEventUIParam) => Unit): Self = {
+    def withChange(value: (/* event */ Event, /* ui */ ChangeEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.Any.fromFunction2(value))
         ret

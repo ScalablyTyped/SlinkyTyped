@@ -1,7 +1,7 @@
 package typingsSlinky.reactLazylog.lazyLogMod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactLazylog.PartialLazyLogProps
+import typingsSlinky.reactLazylog.anon.PartialLazyLogProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

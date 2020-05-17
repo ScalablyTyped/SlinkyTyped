@@ -1,6 +1,6 @@
 package typingsSlinky.codemirror.mod
 
-import typingsSlinky.codemirror.AnonFrom
+import typingsSlinky.codemirror.anon.From
 import typingsSlinky.codemirror.codemirrorStrings.beforeCursorEnter
 import typingsSlinky.codemirror.codemirrorStrings.clear
 import typingsSlinky.codemirror.codemirrorStrings.hide
@@ -17,7 +17,7 @@ trait TextMarker extends js.Object {
   def clear(): Unit = js.native
   /** Returns a {from, to} object (both holding document positions), indicating the current position of the marked range,
     or undefined if the marker is no longer in the document. */
-  def find(): AnonFrom = js.native
+  def find(): From = js.native
   /**  Returns an object representing the options for the marker. If copyWidget is given true, it will clone the value of the replacedWith option, if any. */
   def getOptions(copyWidget: Boolean): TextMarkerOptions = js.native
   @JSName("off")

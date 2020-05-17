@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * Helper object for generating large-format notifications that include a lot of text.
 		 */
-@JSGlobal("Titanium.Android.BigTextStyle")
 @js.native
-class BigTextStyle () extends Proxy {
+trait BigTextStyle extends Proxy {
   /**
   			 * Overrides <Titanium.Android.Notification.contentTitle> in the big form of the notification. This defaults to the value passed to <Titanium.Android.Notification.contentTitle>.
   			 */

@@ -1,5 +1,6 @@
 package typingsSlinky.antDesignReactNative
 
+import typingsSlinky.antDesignReactNative.anon.Cascade
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +15,7 @@ object pickerViewMod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var defaultProps: AnonCascade = js.native
+    var defaultProps: Cascade = js.native
   }
   
 }

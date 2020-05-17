@@ -1,6 +1,6 @@
 package typingsSlinky.gestalt.mod
 
-import typingsSlinky.gestalt.AnonCheckedBoolean
+import typingsSlinky.gestalt.anon.CheckedBoolean
 import typingsSlinky.gestalt.gestaltStrings.md
 import typingsSlinky.gestalt.gestaltStrings.sm
 import scala.scalajs.js
@@ -15,12 +15,12 @@ trait RadioButtonProps extends js.Object {
   var name: js.UndefOr[String] = js.native
   var size: js.UndefOr[sm | md] = js.native
   var value: js.UndefOr[String] = js.native
-  def onChange(args: AnonCheckedBoolean): Unit = js.native
+  def onChange(args: CheckedBoolean): Unit = js.native
 }
 
 object RadioButtonProps {
   @scala.inline
-  def apply(id: String, onChange: AnonCheckedBoolean => Unit): RadioButtonProps = {
+  def apply(id: String, onChange: CheckedBoolean => Unit): RadioButtonProps = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
     __obj.asInstanceOf[RadioButtonProps]
   }
@@ -37,7 +37,7 @@ object RadioButtonProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: AnonCheckedBoolean => Unit): Self = {
+    def withOnChange(value: CheckedBoolean => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

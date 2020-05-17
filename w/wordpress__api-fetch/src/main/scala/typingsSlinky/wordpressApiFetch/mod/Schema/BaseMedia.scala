@@ -1,8 +1,8 @@
 package typingsSlinky.wordpressApiFetch.mod.Schema
 
 import typingsSlinky.std.Record
-import typingsSlinky.wordpressApiFetch.AnonDictk
-import typingsSlinky.wordpressApiFetch.AnonHeight
+import typingsSlinky.wordpressApiFetch.anon.Dictk
+import typingsSlinky.wordpressApiFetch.anon.Height
 import typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.file
 import typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.image
 import typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.inherit
@@ -11,7 +11,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait BaseMedia[T /* <: Context */] extends BaseResponse {
+trait BaseMedia[T /* <: Context */]
+  extends BaseResponse
+     with Media[T] {
   var alt_text: String = js.native
   var author: Double = js.native
   var caption: Contextual[T, js.Object, js.Object] = js.native
@@ -23,7 +25,7 @@ trait BaseMedia[T /* <: Context */] extends BaseResponse {
   var guid: Contextual[T, js.Object, js.Object] = js.native
   var id: Double = js.native
   var link: String = js.native
-  var media_details: AnonHeight = js.native
+  var media_details: Height = js.native
   var media_type: file | image = js.native
   var meta: js.Array[_] = js.native
   var mime_type: String = js.native
@@ -43,7 +45,7 @@ trait BaseMedia[T /* <: Context */] extends BaseResponse {
 object BaseMedia {
   @scala.inline
   def apply[T](
-    _links: Record[String, js.Array[AnonDictk]],
+    _links: Record[String, js.Array[Dictk]],
     alt_text: String,
     author: Double,
     caption: Contextual[T, js.Object, js.Object],
@@ -55,7 +57,7 @@ object BaseMedia {
     guid: Contextual[T, js.Object, js.Object],
     id: Double,
     link: String,
-    media_details: AnonHeight,
+    media_details: Height,
     media_type: file | image,
     meta: js.Array[_],
     mime_type: String,
@@ -147,7 +149,7 @@ object BaseMedia {
         ret
     }
     @scala.inline
-    def withMedia_details(value: AnonHeight): Self[T] = {
+    def withMedia_details(value: Height): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("media_details")(value.asInstanceOf[js.Any])
         ret

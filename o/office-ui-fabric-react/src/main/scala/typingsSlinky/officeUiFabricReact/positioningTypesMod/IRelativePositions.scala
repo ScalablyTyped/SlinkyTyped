@@ -1,6 +1,5 @@
 package typingsSlinky.officeUiFabricReact.positioningTypesMod
 
-import typingsSlinky.officeUiFabricReact.AnonPosition
 import typingsSlinky.officeUiFabricReact.directionalHintMod.DirectionalHint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait IRelativePositions extends js.Object {
-  var beakPosition: AnonPosition = js.native
+  var beakPosition: typingsSlinky.officeUiFabricReact.anon.Position = js.native
   var calloutPosition: IPosition = js.native
   var directionalClassName: String = js.native
   var submenuDirection: DirectionalHint = js.native
@@ -17,7 +16,7 @@ trait IRelativePositions extends js.Object {
 object IRelativePositions {
   @scala.inline
   def apply(
-    beakPosition: AnonPosition,
+    beakPosition: typingsSlinky.officeUiFabricReact.anon.Position,
     calloutPosition: IPosition,
     directionalClassName: String,
     submenuDirection: DirectionalHint
@@ -32,7 +31,7 @@ object IRelativePositions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBeakPosition(value: AnonPosition): Self = {
+    def withBeakPosition(value: typingsSlinky.officeUiFabricReact.anon.Position): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beakPosition")(value.asInstanceOf[js.Any])
         ret

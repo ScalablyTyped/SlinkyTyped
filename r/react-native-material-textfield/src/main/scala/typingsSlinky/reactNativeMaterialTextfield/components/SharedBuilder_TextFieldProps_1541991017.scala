@@ -1,11 +1,12 @@
 package typingsSlinky.reactNativeMaterialTextfield.components
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNative.AnonStart
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.Start
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -103,7 +104,6 @@ import typingsSlinky.reactNativeMaterialTextfield.mod.ContentInset
 import typingsSlinky.reactNativeMaterialTextfield.reactNativeMaterialTextfieldStrings.dashed
 import typingsSlinky.reactNativeMaterialTextfield.reactNativeMaterialTextfieldStrings.dotted
 import typingsSlinky.reactNativeMaterialTextfield.reactNativeMaterialTextfieldStrings.solid
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -289,7 +289,7 @@ class SharedBuilder_TextFieldProps_1541991017[R <: js.Object] (val args: js.Arra
   @scala.inline
   def onMoveShouldSetResponderCapture(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onMoveShouldSetResponderCapture", js.Any.fromFunction1(value))
   @scala.inline
-  def onPress(value: /* event */ Event_ => Unit): this.type = set("onPress", js.Any.fromFunction1(value))
+  def onPress(value: /* event */ Event => Unit): this.type = set("onPress", js.Any.fromFunction1(value))
   @scala.inline
   def onResponderEnd(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onResponderEnd", js.Any.fromFunction1(value))
   @scala.inline
@@ -361,7 +361,7 @@ class SharedBuilder_TextFieldProps_1541991017[R <: js.Object] (val args: js.Arra
   @scala.inline
   def selectTextOnFocus(value: Boolean): this.type = set("selectTextOnFocus", value.asInstanceOf[js.Any])
   @scala.inline
-  def selection(value: AnonStart): this.type = set("selection", value.asInstanceOf[js.Any])
+  def selection(value: Start): this.type = set("selection", value.asInstanceOf[js.Any])
   @scala.inline
   def selectionColor(value: String): this.type = set("selectionColor", value.asInstanceOf[js.Any])
   @scala.inline

@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonAccessAccessibility
+import typingsSlinky.astTypes.anon.AccessAccessibility
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.kindsMod.NoopKind
@@ -27,6 +27,6 @@ trait TSDeclareMethodBuilder extends js.Object {
   def apply(key: StringLiteralKind, params: js.Array[PatternKind]): TSDeclareMethod = js.native
   def apply(key: StringLiteralKind, params: js.Array[PatternKind], returnType: NoopKind): TSDeclareMethod = js.native
   def apply(key: StringLiteralKind, params: js.Array[PatternKind], returnType: TSTypeAnnotationKind): TSDeclareMethod = js.native
-  def from(params: AnonAccessAccessibility): TSDeclareMethod = js.native
+  def from(params: AccessAccessibility): TSDeclareMethod = js.native
 }
 

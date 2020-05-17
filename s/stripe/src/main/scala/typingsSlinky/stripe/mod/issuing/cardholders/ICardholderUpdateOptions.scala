@@ -1,7 +1,7 @@
 package typingsSlinky.stripe.mod.issuing.cardholders
 
 import typingsSlinky.std.Exclude
-import typingsSlinky.stripe.AnonAddressICardholderBillingAddress
+import typingsSlinky.stripe.anon.AddressICardholderBillingAddress
 import typingsSlinky.stripe.mod.IOptionsMetadata
 import typingsSlinky.stripe.stripeStrings.blocked
 import scala.scalajs.js
@@ -17,7 +17,7 @@ trait ICardholderUpdateOptions extends js.Object {
   /**
     * The cardholder’s billing address.
     */
-  var billing: js.UndefOr[AnonAddressICardholderBillingAddress] = js.native
+  var billing: js.UndefOr[AddressICardholderBillingAddress] = js.native
   /**
     * Additional information about a business_entity cardholder.
     */
@@ -73,7 +73,7 @@ object ICardholderUpdateOptions {
         ret
     }
     @scala.inline
-    def withBilling(value: AnonAddressICardholderBillingAddress): Self = {
+    def withBilling(value: AddressICardholderBillingAddress): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("billing")(value.asInstanceOf[js.Any])
         ret

@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait GotoStatement
-  extends _Statement
+  extends Statement
      with Base[typingsSlinky.luaparse.luaparseStrings.GotoStatement] {
   var label: Identifier = js.native
 }

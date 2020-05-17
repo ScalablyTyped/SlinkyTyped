@@ -1,6 +1,6 @@
 package typingsSlinky.ranjs.mod
 
-import typingsSlinky.ranjs.AnonDim
+import typingsSlinky.ranjs.anon.Dim
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +12,8 @@ object mc extends js.Object {
   class RWM protected ()
     extends typingsSlinky.ranjs.mod._mc.MCMC {
     def this(logDensity: js.Function1[/* x */ js.Array[Double], Double]) = this()
-    def this(logDensity: js.Function1[/* x */ js.Array[Double], Double], config: AnonDim) = this()
-    def this(logDensity: js.Function1[/* x */ js.Array[Double], Double], config: AnonDim, initialState: State) = this()
+    def this(logDensity: js.Function1[/* x */ js.Array[Double], Double], config: Dim) = this()
+    def this(logDensity: js.Function1[/* x */ js.Array[Double], Double], config: Dim, initialState: State) = this()
   }
   
   def gr(samples: js.Array[js.Array[js.Array[Double]]]): js.Array[js.Array[Double]] = js.native

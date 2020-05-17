@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait URLLike extends _RequestInfo {
+trait URLLike extends RequestInfo {
   var href: String = js.native
 }
 

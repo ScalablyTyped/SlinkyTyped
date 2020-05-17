@@ -1,26 +1,21 @@
 package typingsSlinky.stylelint.mod
 
-import typingsSlinky.stylelint.stylelintBooleans.`true`
+import typingsSlinky.stylelint.anon.Actual
+import typingsSlinky.stylelint.anon.Optional
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.stylelint.AnonActual
-  - typingsSlinky.stylelint.AnonOptional
+  - typingsSlinky.stylelint.anon.Actual
+  - typingsSlinky.stylelint.anon.Optional
 */
 trait ValidateOptionsAssertion extends js.Object
 
 object ValidateOptionsAssertion {
   @scala.inline
-  def AnonActual(actual: js.Any): ValidateOptionsAssertion = {
-    val __obj = js.Dynamic.literal(actual = actual.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ValidateOptionsAssertion]
-  }
+  implicit def apply(value: Actual): ValidateOptionsAssertion = value.asInstanceOf[ValidateOptionsAssertion]
   @scala.inline
-  def AnonOptional(optional: `true`, possible: js.Any): ValidateOptionsAssertion = {
-    val __obj = js.Dynamic.literal(optional = optional.asInstanceOf[js.Any], possible = possible.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ValidateOptionsAssertion]
-  }
+  implicit def apply(value: Optional): ValidateOptionsAssertion = value.asInstanceOf[ValidateOptionsAssertion]
 }
 

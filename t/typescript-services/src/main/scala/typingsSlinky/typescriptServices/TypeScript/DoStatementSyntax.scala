@@ -4,21 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("TypeScript.DoStatementSyntax")
 @js.native
-class DoStatementSyntax protected ()
-  extends SyntaxNode
-     with IIterationStatementSyntax {
-  def this(
-    doKeyword: ISyntaxToken,
-    statement: IStatementSyntax,
-    whileKeyword: ISyntaxToken,
-    openParenToken: ISyntaxToken,
-    condition: IExpressionSyntax,
-    closeParenToken: ISyntaxToken,
-    semicolonToken: ISyntaxToken,
-    parsedInStrictMode: Boolean
-  ) = this()
+trait DoStatementSyntax
+  extends IIterationStatementSyntax
+     with SyntaxNode {
   var closeParenToken: ISyntaxToken = js.native
   var condition: IExpressionSyntax = js.native
   var doKeyword: ISyntaxToken = js.native
@@ -44,12 +33,5 @@ class DoStatementSyntax protected ()
   def withSemicolonToken(semicolonToken: ISyntaxToken): DoStatementSyntax = js.native
   def withStatement(statement: IStatementSyntax): DoStatementSyntax = js.native
   def withWhileKeyword(whileKeyword: ISyntaxToken): DoStatementSyntax = js.native
-}
-
-/* static members */
-@JSGlobal("TypeScript.DoStatementSyntax")
-@js.native
-object DoStatementSyntax extends js.Object {
-  def create1(statement: IStatementSyntax, condition: IExpressionSyntax): DoStatementSyntax = js.native
 }
 

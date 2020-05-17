@@ -1,6 +1,6 @@
 package typingsSlinky.qrcodeSvg.mod
 
-import typingsSlinky.qrcodeSvg.AnonContainer
+import typingsSlinky.qrcodeSvg.anon.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,6 +23,6 @@ trait QRCode extends js.Object {
     * @return The svg string.
     */
   def svg(): String = js.native
-  def svg(opt: AnonContainer): String = js.native
+  def svg(opt: Container): String = js.native
 }
 

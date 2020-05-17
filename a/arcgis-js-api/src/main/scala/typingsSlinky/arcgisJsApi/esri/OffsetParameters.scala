@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`nautical-miles`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.bevelled
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.feet_
@@ -56,8 +55,4 @@ trait OffsetParameters
     */
   var offsetUnit: feet_ | kilometers_ | meters_ | miles_ | `nautical-miles` | yards = js.native
 }
-
-@JSGlobal("__esri.OffsetParameters")
-@js.native
-object OffsetParameters extends TopLevel[OffsetParametersConstructor]
 

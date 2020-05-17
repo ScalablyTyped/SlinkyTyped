@@ -1,19 +1,18 @@
 package typingsSlinky.expoLocation.mod
 
-import typingsSlinky.expoLocation.AnonAccuracy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait LocationData extends js.Object {
-  var coords: AnonAccuracy = js.native
+  var coords: typingsSlinky.expoLocation.anon.Accuracy = js.native
   var timestamp: Double = js.native
 }
 
 object LocationData {
   @scala.inline
-  def apply(coords: AnonAccuracy, timestamp: Double): LocationData = {
+  def apply(coords: typingsSlinky.expoLocation.anon.Accuracy, timestamp: Double): LocationData = {
     val __obj = js.Dynamic.literal(coords = coords.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocationData]
   }
@@ -24,7 +23,7 @@ object LocationData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCoords(value: AnonAccuracy): Self = {
+    def withCoords(value: typingsSlinky.expoLocation.anon.Accuracy): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("coords")(value.asInstanceOf[js.Any])
         ret

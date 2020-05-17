@@ -1,6 +1,6 @@
 package typingsSlinky.schwifty.mod
 
-import typingsSlinky.schwifty.TypeofModel
+import typingsSlinky.schwifty.anon.TypeofModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

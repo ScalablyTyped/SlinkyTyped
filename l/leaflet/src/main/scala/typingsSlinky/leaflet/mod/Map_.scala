@@ -3,8 +3,8 @@ package typingsSlinky.leaflet.mod
 import org.scalablytyped.runtime.Instantiable1
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
+import typingsSlinky.leaflet.anon.namestringHTMLElementDefa
 import typingsSlinky.leaflet.mod.Control_.Attribution
-import typingsSlinky.leaflet.namestringHTMLElementDefa
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientTranslate.gapi.client.translate
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientTranslate.AnonAlt
-import typingsSlinky.gapiClientTranslate.AnonBearertoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientTranslate.anon.Alt
+import typingsSlinky.gapiClientTranslate.anon.Bearertoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,16 +25,16 @@ trait TranslationsResource extends js.Object {
   /** Text translated into the target language. */
   var translatedText: js.UndefOr[String] = js.native
   /** Translates input text, returning translated text. */
-  def list(request: AnonAlt): Request_[TranslationsListResponse] = js.native
+  def list(request: Alt): Request[TranslationsListResponse] = js.native
   /** Translates input text, returning translated text. */
-  def translate(request: AnonBearertoken): Request_[TranslationsListResponse] = js.native
+  def translate(request: Bearertoken): Request[TranslationsListResponse] = js.native
 }
 
 object TranslationsResource {
   @scala.inline
   def apply(
-    list: AnonAlt => Request_[TranslationsListResponse],
-    translate: AnonBearertoken => Request_[TranslationsListResponse]
+    list: Alt => Request[TranslationsListResponse],
+    translate: Bearertoken => Request[TranslationsListResponse]
   ): TranslationsResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list), translate = js.Any.fromFunction1(translate))
     __obj.asInstanceOf[TranslationsResource]
@@ -46,13 +46,13 @@ object TranslationsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withList(value: AnonAlt => Request_[TranslationsListResponse]): Self = {
+    def withList(value: Alt => Request[TranslationsListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withTranslate(value: AnonBearertoken => Request_[TranslationsListResponse]): Self = {
+    def withTranslate(value: Bearertoken => Request[TranslationsListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(js.Any.fromFunction1(value))
         ret

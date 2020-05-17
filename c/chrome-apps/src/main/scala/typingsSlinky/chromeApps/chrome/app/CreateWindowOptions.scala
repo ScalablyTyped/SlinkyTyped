@@ -1,9 +1,8 @@
 package typingsSlinky.chromeApps.chrome.app
 
-import typingsSlinky.chromeApps.AnonFULLSCREEN
+import typingsSlinky.chromeApps.anon.FULLSCREEN
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chrome.integer
-import typingsSlinky.chromeApps.chromeAppsStrings.FULLSCREEN
 import typingsSlinky.chromeApps.chromeAppsStrings.MAXIMIZED
 import typingsSlinky.chromeApps.chromeAppsStrings.MINIMIZED
 import typingsSlinky.chromeApps.chromeAppsStrings.NORMAL
@@ -140,10 +139,10 @@ trait CreateWindowOptions extends ContentBounds {
     */
   var state: js.UndefOr[
     ToStringLiteral[
-      AnonFULLSCREEN, 
-      /* keyof chrome-apps.AnonFULLSCREEN */ NORMAL | FULLSCREEN | MAXIMIZED | MINIMIZED, 
+      FULLSCREEN, 
+      /* keyof chrome-apps.anon.FULLSCREEN */ NORMAL | typingsSlinky.chromeApps.chromeAppsStrings.FULLSCREEN | MAXIMIZED | MINIMIZED, 
       Exclude[
-        /* keyof chrome-apps.AnonFULLSCREEN */ NORMAL | FULLSCREEN | MAXIMIZED | MINIMIZED, 
+        /* keyof chrome-apps.anon.FULLSCREEN */ NORMAL | typingsSlinky.chromeApps.chromeAppsStrings.FULLSCREEN | MAXIMIZED | MINIMIZED, 
         normal_ | fullscreen_ | maximized_ | minimized_
       ]
     ]
@@ -391,10 +390,10 @@ object CreateWindowOptions {
     @scala.inline
     def withState(
       value: ToStringLiteral[
-          AnonFULLSCREEN, 
-          /* keyof chrome-apps.AnonFULLSCREEN */ NORMAL | FULLSCREEN | MAXIMIZED | MINIMIZED, 
+          FULLSCREEN, 
+          /* keyof chrome-apps.anon.FULLSCREEN */ NORMAL | typingsSlinky.chromeApps.chromeAppsStrings.FULLSCREEN | MAXIMIZED | MINIMIZED, 
           Exclude[
-            /* keyof chrome-apps.AnonFULLSCREEN */ NORMAL | FULLSCREEN | MAXIMIZED | MINIMIZED, 
+            /* keyof chrome-apps.anon.FULLSCREEN */ NORMAL | typingsSlinky.chromeApps.chromeAppsStrings.FULLSCREEN | MAXIMIZED | MINIMIZED, 
             normal_ | fullscreen_ | maximized_ | minimized_
           ]
         ]

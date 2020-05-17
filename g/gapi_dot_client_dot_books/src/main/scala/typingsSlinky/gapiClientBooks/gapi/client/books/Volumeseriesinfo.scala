@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClientBooks.AnonIssue
+import typingsSlinky.gapiClientBooks.anon.Issue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait Volumeseriesinfo extends js.Object {
   var kind: js.UndefOr[String] = js.native
   /** Short book title in the context of the series. */
   var shortSeriesBookTitle: js.UndefOr[String] = js.native
-  var volumeSeries: js.UndefOr[js.Array[AnonIssue]] = js.native
+  var volumeSeries: js.UndefOr[js.Array[Issue]] = js.native
 }
 
 object Volumeseriesinfo {
@@ -65,7 +65,7 @@ object Volumeseriesinfo {
         ret
     }
     @scala.inline
-    def withVolumeSeries(value: js.Array[AnonIssue]): Self = {
+    def withVolumeSeries(value: js.Array[Issue]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("volumeSeries")(value.asInstanceOf[js.Any])
         ret

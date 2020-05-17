@@ -1,13 +1,13 @@
 package typingsSlinky.officeUiFabricReact.scrollablePaneTypesMod
 
-import typingsSlinky.officeUiFabricReact.AnonAddSticky
+import typingsSlinky.officeUiFabricReact.anon.AddSticky
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IScrollablePaneContext extends js.Object {
-  var scrollablePane: js.UndefOr[AnonAddSticky] = js.native
+  var scrollablePane: js.UndefOr[AddSticky] = js.native
 }
 
 object IScrollablePaneContext {
@@ -23,7 +23,7 @@ object IScrollablePaneContext {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withScrollablePane(value: AnonAddSticky): Self = {
+    def withScrollablePane(value: AddSticky): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollablePane")(value.asInstanceOf[js.Any])
         ret

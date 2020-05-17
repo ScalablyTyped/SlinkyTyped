@@ -1,0 +1,78 @@
+package typingsSlinky.yandexMaps.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Results extends js.Object {
+  var boundedBy: js.UndefOr[js.Array[js.Array[Double]]] = js.native
+  var results: js.UndefOr[Double] = js.native
+  var skip: js.UndefOr[Double] = js.native
+  var strictBounds: js.UndefOr[Boolean] = js.native
+}
+
+object Results {
+  @scala.inline
+  def apply(): Results = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[Results]
+  }
+  @scala.inline
+  implicit class ResultsOps[Self <: Results] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBoundedBy(value: js.Array[js.Array[Double]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundedBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBoundedBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boundedBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withResults(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResults: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("results")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSkip(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSkip: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withStrictBounds(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strictBounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutStrictBounds: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strictBounds")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

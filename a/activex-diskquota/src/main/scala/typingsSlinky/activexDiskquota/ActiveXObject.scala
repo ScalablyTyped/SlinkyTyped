@@ -3,6 +3,7 @@ package typingsSlinky.activexDiskquota
 import typingsSlinky.activexDiskquota.DiskQuotaTypeLibrary.DiskQuotaControl
 import typingsSlinky.activexDiskquota.activexDiskquotaStrings.OnUserNameChanged
 import typingsSlinky.activexDiskquota.activexDiskquotaStrings.pUser
+import typingsSlinky.activexDiskquota.anon.PUser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,14 +14,14 @@ trait ActiveXObject extends js.Object {
     obj: DiskQuotaControl,
     event: OnUserNameChanged,
     argNames: js.Array[pUser],
-    handler: js.ThisFunction1[/* this */ DiskQuotaControl, /* parameter */ AnonPUser, Unit]
+    handler: js.ThisFunction1[/* this */ DiskQuotaControl, /* parameter */ PUser, Unit]
   ): Unit = js.native
 }
 
 object ActiveXObject {
   @scala.inline
   def apply(
-    on: (DiskQuotaControl, OnUserNameChanged, js.Array[pUser], js.ThisFunction1[/* this */ DiskQuotaControl, /* parameter */ AnonPUser, Unit]) => Unit
+    on: (DiskQuotaControl, OnUserNameChanged, js.Array[pUser], js.ThisFunction1[/* this */ DiskQuotaControl, /* parameter */ PUser, Unit]) => Unit
   ): ActiveXObject = {
     val __obj = js.Dynamic.literal(on = js.Any.fromFunction4(on))
     __obj.asInstanceOf[ActiveXObject]
@@ -33,7 +34,7 @@ object ActiveXObject {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
     def withOn(
-      value: (DiskQuotaControl, OnUserNameChanged, js.Array[pUser], js.ThisFunction1[/* this */ DiskQuotaControl, /* parameter */ AnonPUser, Unit]) => Unit
+      value: (DiskQuotaControl, OnUserNameChanged, js.Array[pUser], js.ThisFunction1[/* this */ DiskQuotaControl, /* parameter */ PUser, Unit]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.Any.fromFunction4(value))

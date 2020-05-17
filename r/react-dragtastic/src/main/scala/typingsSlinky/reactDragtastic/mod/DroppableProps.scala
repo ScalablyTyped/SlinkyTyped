@@ -1,7 +1,7 @@
 package typingsSlinky.reactDragtastic.mod
 
 import slinky.core.TagMod
-import typingsSlinky.reactDragtastic.StateisOverbooleanwillAcc
+import typingsSlinky.reactDragtastic.anon.StateisOverbooleanwillAcc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

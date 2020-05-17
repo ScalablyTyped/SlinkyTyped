@@ -1,8 +1,8 @@
 package typingsSlinky.rollupPluginPostcss.mod
 
 import typingsSlinky.cssnano.mod.CssNanoOptions
-import typingsSlinky.rollupPluginPostcss.AnonCtx
-import typingsSlinky.rollupPluginPostcss.AnonInsertAt
+import typingsSlinky.rollupPluginPostcss.anon.Ctx
+import typingsSlinky.rollupPluginPostcss.anon.InsertAt
 import typingsSlinky.rollupPluginPostcss.rollupPluginPostcssStrings.`inline`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,11 +11,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PostCssPluginOptions extends js.Object {
   var autoModules: js.UndefOr[Boolean] = js.native
-  var config: js.UndefOr[Boolean | AnonCtx] = js.native
+  var config: js.UndefOr[Boolean | Ctx] = js.native
   var exec: js.UndefOr[Boolean] = js.native
   var extensions: js.UndefOr[js.Array[String]] = js.native
   var extract: js.UndefOr[Boolean | String] = js.native
-  var inject: js.UndefOr[Boolean | AnonInsertAt] = js.native
+  var inject: js.UndefOr[Boolean | InsertAt] = js.native
   var loaders: js.UndefOr[js.Array[_]] = js.native
   var minimize: js.UndefOr[Boolean | CssNanoOptions] = js.native
   var modules: js.UndefOr[Boolean | js.Any] = js.native
@@ -54,7 +54,7 @@ object PostCssPluginOptions {
         ret
     }
     @scala.inline
-    def withConfig(value: Boolean | AnonCtx): Self = {
+    def withConfig(value: Boolean | Ctx): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
         ret
@@ -102,7 +102,7 @@ object PostCssPluginOptions {
         ret
     }
     @scala.inline
-    def withInject(value: Boolean | AnonInsertAt): Self = {
+    def withInject(value: Boolean | InsertAt): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("inject")(value.asInstanceOf[js.Any])
         ret

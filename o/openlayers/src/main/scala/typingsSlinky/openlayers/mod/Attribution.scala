@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("openlayers", "Attribution")
 @js.native
-class Attribution protected () extends js.Object {
+class Attribution protected () extends AttributionLike {
   /**
     * @classdesc
     * An attribution for a layer source.

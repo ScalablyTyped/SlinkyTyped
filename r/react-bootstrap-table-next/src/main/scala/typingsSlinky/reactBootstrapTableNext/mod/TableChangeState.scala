@@ -1,8 +1,8 @@
 package typingsSlinky.reactBootstrapTableNext.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.reactBootstrapTableNext.AnonComparator
-import typingsSlinky.reactBootstrapTableNext.AnonDataField
+import typingsSlinky.reactBootstrapTableNext.anon.Comparator
+import typingsSlinky.reactBootstrapTableNext.anon.DataField
 import typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.asc
 import typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.desc
 import scala.scalajs.js
@@ -11,9 +11,9 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait TableChangeState[T] extends js.Object {
-  var cellEdit: AnonDataField = js.native
+  var cellEdit: DataField = js.native
   var data: js.Array[T] = js.native
-  var filters: StringDictionary[AnonComparator] = js.native
+  var filters: StringDictionary[Comparator] = js.native
   var page: Double = js.native
   var sizePerPage: Double = js.native
   var sortField: String = js.native
@@ -23,9 +23,9 @@ trait TableChangeState[T] extends js.Object {
 object TableChangeState {
   @scala.inline
   def apply[T](
-    cellEdit: AnonDataField,
+    cellEdit: DataField,
     data: js.Array[T],
-    filters: StringDictionary[AnonComparator],
+    filters: StringDictionary[Comparator],
     page: Double,
     sizePerPage: Double,
     sortField: String,
@@ -41,7 +41,7 @@ object TableChangeState {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withCellEdit(value: AnonDataField): Self[T] = {
+    def withCellEdit(value: DataField): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cellEdit")(value.asInstanceOf[js.Any])
         ret
@@ -53,7 +53,7 @@ object TableChangeState {
         ret
     }
     @scala.inline
-    def withFilters(value: StringDictionary[AnonComparator]): Self[T] = {
+    def withFilters(value: StringDictionary[Comparator]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
         ret

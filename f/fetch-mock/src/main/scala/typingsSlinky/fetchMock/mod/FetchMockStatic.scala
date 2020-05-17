@@ -1,6 +1,6 @@
 package typingsSlinky.fetchMock.mod
 
-import typingsSlinky.fetchMock.AnonFallbackToNetwork
+import typingsSlinky.fetchMock.anon.FallbackToNetwork
 import typingsSlinky.fetchMock.fetchMockBooleans.`false`
 import typingsSlinky.fetchMock.fetchMockBooleans.`true`
 import scala.scalajs.js
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait FetchMockStatic extends js.Object {
   var MATCHED: `true` = js.native
   var UNMATCHED: `false` = js.native
-  var config: AnonFallbackToNetwork = js.native
+  var config: FallbackToNetwork = js.native
   /**
     * Returns a Boolean indicating whether any calls to fetch matched the
     * given filter.

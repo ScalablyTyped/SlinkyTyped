@@ -17,31 +17,8 @@ class Production protected ()
   ) = this()
   def this(
     name: typingsSlinky.grammarkdown.nodesMod.Identifier,
-    parameterList: js.UndefOr[scala.Nothing],
-    colonToken: typingsSlinky.grammarkdown.nodesMod.Token[ProductionSeperatorKind]
-  ) = this()
-  def this(
-    name: typingsSlinky.grammarkdown.nodesMod.Identifier,
     parameterList: typingsSlinky.grammarkdown.nodesMod.ParameterList,
     colonToken: typingsSlinky.grammarkdown.nodesMod.Token[ProductionSeperatorKind]
-  ) = this()
-  def this(
-    name: typingsSlinky.grammarkdown.nodesMod.Identifier,
-    parameterList: js.UndefOr[scala.Nothing],
-    colonToken: js.UndefOr[scala.Nothing],
-    body: ProductionBody
-  ) = this()
-  def this(
-    name: typingsSlinky.grammarkdown.nodesMod.Identifier,
-    parameterList: js.UndefOr[scala.Nothing],
-    colonToken: typingsSlinky.grammarkdown.nodesMod.Token[ProductionSeperatorKind],
-    body: ProductionBody
-  ) = this()
-  def this(
-    name: typingsSlinky.grammarkdown.nodesMod.Identifier,
-    parameterList: typingsSlinky.grammarkdown.nodesMod.ParameterList,
-    colonToken: js.UndefOr[scala.Nothing],
-    body: ProductionBody
   ) = this()
   def this(
     name: typingsSlinky.grammarkdown.nodesMod.Identifier,

@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Contains methods allowing you to perform or cancel an operation.
   */
-@JSGlobal("ASPxClientAppointmentOperation")
 @js.native
-class ASPxClientAppointmentOperation () extends js.Object {
+trait ASPxClientAppointmentOperation extends js.Object {
   /**
     * Passes parameters to the corresponding callback function to accomplish the operation.
     */
@@ -18,5 +17,33 @@ class ASPxClientAppointmentOperation () extends js.Object {
     * Cancels the operation.
     */
   def Cancel(): Unit = js.native
+}
+
+object ASPxClientAppointmentOperation {
+  @scala.inline
+  def apply(Apply: () => Unit, Cancel: () => Unit): ASPxClientAppointmentOperation = {
+    val __obj = js.Dynamic.literal(Apply = js.Any.fromFunction0(Apply), Cancel = js.Any.fromFunction0(Cancel))
+    __obj.asInstanceOf[ASPxClientAppointmentOperation]
+  }
+  @scala.inline
+  implicit class ASPxClientAppointmentOperationOps[Self <: ASPxClientAppointmentOperation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApply(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Apply")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withCancel(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Cancel")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

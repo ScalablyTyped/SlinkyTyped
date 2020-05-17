@@ -1,12 +1,12 @@
 package typingsSlinky.oracleOraclejet.ojdatetimepickerMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonAmpmWheelLabel
-import typingsSlinky.oracleOraclejet.AnonClass
-import typingsSlinky.oracleOraclejet.AnonConverterHint
-import typingsSlinky.oracleOraclejet.AnonDefinition
-import typingsSlinky.oracleOraclejet.AnonFooterLayout
-import typingsSlinky.oracleOraclejet.AnonInstruction
+import typingsSlinky.oracleOraclejet.anon.AmpmWheelLabel
+import typingsSlinky.oracleOraclejet.anon.Class
+import typingsSlinky.oracleOraclejet.anon.ConverterHint
+import typingsSlinky.oracleOraclejet.anon.Definition
+import typingsSlinky.oracleOraclejet.anon.FooterLayout
+import typingsSlinky.oracleOraclejet.anon.Instruction
 import typingsSlinky.oracleOraclejet.ojmessagingMod.^
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.AsyncValidator
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.Converter
@@ -37,22 +37,22 @@ trait ojInputTimeSettablePropertiesLenient
   var converter: js.UndefOr[Converter[String] | RegisteredConverter] = js.native
   var describedBy: js.UndefOr[String] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
-  var displayOptions: js.UndefOr[AnonConverterHint] = js.native
-  var help: js.UndefOr[AnonInstruction] = js.native
-  var helpHints: js.UndefOr[AnonDefinition] = js.native
+  var displayOptions: js.UndefOr[ConverterHint] = js.native
+  var help: js.UndefOr[Instruction] = js.native
+  var helpHints: js.UndefOr[Definition] = js.native
   var keyboardEdit: js.UndefOr[enabled | disabled] = js.native
   var labelHint: js.UndefOr[String] = js.native
   var max: js.UndefOr[String] = js.native
   var messagesCustom: js.UndefOr[js.Array[^]] = js.native
   var min: js.UndefOr[String] = js.native
-  var pickerAttributes: js.UndefOr[AnonClass] = js.native
+  var pickerAttributes: js.UndefOr[Class] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var rawValue: js.UndefOr[String] = js.native
   var readonly: js.UndefOr[Boolean] = js.native
   var renderMode: js.UndefOr[jet | native] = js.native
   var required: js.UndefOr[Boolean] = js.native
-  var timePicker: js.UndefOr[AnonFooterLayout] = js.native
-  var translations: js.UndefOr[AnonAmpmWheelLabel] = js.native
+  var timePicker: js.UndefOr[FooterLayout] = js.native
+  var translations: js.UndefOr[AmpmWheelLabel] = js.native
   var valid: js.UndefOr[
     typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valid | pending | invalidHidden | invalidShown
   ] = js.native
@@ -145,7 +145,7 @@ object ojInputTimeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withDisplayOptions(value: AnonConverterHint): Self = {
+    def withDisplayOptions(value: ConverterHint): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("displayOptions")(value.asInstanceOf[js.Any])
         ret
@@ -157,7 +157,7 @@ object ojInputTimeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withHelp(value: AnonInstruction): Self = {
+    def withHelp(value: Instruction): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
         ret
@@ -169,7 +169,7 @@ object ojInputTimeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withHelpHints(value: AnonDefinition): Self = {
+    def withHelpHints(value: Definition): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("helpHints")(value.asInstanceOf[js.Any])
         ret
@@ -241,7 +241,7 @@ object ojInputTimeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withPickerAttributes(value: AnonClass): Self = {
+    def withPickerAttributes(value: Class): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pickerAttributes")(value.asInstanceOf[js.Any])
         ret
@@ -313,7 +313,7 @@ object ojInputTimeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTimePicker(value: AnonFooterLayout): Self = {
+    def withTimePicker(value: FooterLayout): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("timePicker")(value.asInstanceOf[js.Any])
         ret
@@ -325,7 +325,7 @@ object ojInputTimeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonAmpmWheelLabel): Self = {
+    def withTranslations(value: AmpmWheelLabel): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

@@ -26,21 +26,14 @@ package object swan {
   	 * whereas this type is for call-site.
   	 */
   type DataValueType[Def] = js.Any
-  // #endregion
-  // #region Compontent组件
-  type DefaultData[V] = js.Object | (js.ThisFunction0[/* this */ V, js.Object])
   type DefaultMethods[V] = org.scalablytyped.runtime.StringDictionary[js.ThisFunction1[/* this */ V, /* repeated */ js.Any, js.Any]]
-  type DefaultProps = js.Object | (typingsSlinky.std.Record[java.lang.String, js.Any])
   type ExtendedComponent[Instance /* <: typingsSlinky.baiduApp.swan.Component[Data, Props] */, Data, Methods, Props] = (typingsSlinky.baiduApp.swan.CombinedInstance[Instance, Data, Methods, Props]) with (typingsSlinky.baiduApp.swan.Component[Data, Props])
-  type FormEvent = typingsSlinky.baiduApp.swan.BuiltInEvent[typingsSlinky.baiduApp.baiduAppStrings.form, typingsSlinky.baiduApp.AnonValue]
+  type FormEvent = typingsSlinky.baiduApp.swan.BuiltInEvent[typingsSlinky.baiduApp.baiduAppStrings.form, typingsSlinky.baiduApp.anon.Value]
   /**
   	 * 指定focus时的光标位置
   	 * @version 1.5.0
   	 */
-  type InputEvent = typingsSlinky.baiduApp.swan.BuiltInEvent[typingsSlinky.baiduApp.baiduAppStrings.input, typingsSlinky.baiduApp.AnonCursor]
-  type Prop[T] = js.Function0[T] | typingsSlinky.baiduApp.AnonInstantiable[T]
-  type PropValidator[T] = typingsSlinky.baiduApp.swan.PropOptions[T] | typingsSlinky.baiduApp.swan.Prop[T] | js.Array[typingsSlinky.baiduApp.swan.Prop[T]]
-  type PropsDefinition[T] = typingsSlinky.baiduApp.swan.ArrayPropsDefinition[T] | typingsSlinky.baiduApp.swan.RecordPropsDefinition[T]
+  type InputEvent = typingsSlinky.baiduApp.swan.BuiltInEvent[typingsSlinky.baiduApp.baiduAppStrings.input, typingsSlinky.baiduApp.anon.Cursor]
   type RecordPropsDefinition[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]: baidu-app.swan.PropValidator<T[K]>}
     */ typingsSlinky.baiduApp.baiduAppStrings.RecordPropsDefinition with org.scalablytyped.runtime.TopLevel[T]

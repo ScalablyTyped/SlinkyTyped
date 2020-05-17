@@ -1,6 +1,6 @@
 package typingsSlinky.xstate.schedulerMod
 
-import typingsSlinky.xstate.PartialSchedulerOptions
+import typingsSlinky.xstate.anon.PartialSchedulerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

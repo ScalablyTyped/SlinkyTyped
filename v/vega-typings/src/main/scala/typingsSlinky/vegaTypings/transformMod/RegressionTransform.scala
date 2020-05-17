@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RegressionTransform extends _Transforms {
+trait RegressionTransform extends Transforms {
   var as: js.UndefOr[(Vector2[String | SignalRef]) | SignalRef] = js.native
   var extent: js.UndefOr[(js.Tuple2[Double, Double]) | SignalRef] = js.native
   var groupby: js.UndefOr[js.Array[FieldRef] | SignalRef] = js.native

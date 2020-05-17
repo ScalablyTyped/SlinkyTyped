@@ -2,7 +2,7 @@ package typingsSlinky.antd.resizableTextAreaMod
 
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.AnonHeight
+import typingsSlinky.antd.anon.Height
 import typingsSlinky.antd.textAreaMod.TextAreaProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -22,7 +22,7 @@ trait ResizableTextArea
   @JSName("componentWillUnmount")
   def componentWillUnmount_MResizableTextArea(): Unit = js.native
   def fixFirefoxAutoScroll(): Unit = js.native
-  def handleResize(size: AnonHeight): Unit = js.native
+  def handleResize(size: Height): Unit = js.native
   def renderTextArea(): ReactElement = js.native
   def resizeOnNextFrame(): Unit = js.native
   def resizeTextarea(): Unit = js.native

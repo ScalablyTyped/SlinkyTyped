@@ -1,6 +1,6 @@
 package typingsSlinky.antvG2.mod
 
-import typingsSlinky.antvG2.AnonStyle
+import typingsSlinky.antvG2.anon.Style
 import typingsSlinky.antvG2.antvG2Strings.bottom
 import typingsSlinky.antvG2.antvG2Strings.click
 import typingsSlinky.antvG2.antvG2Strings.default
@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait CommonTooltipConfig extends js.Object {
-  var crosshairs: js.UndefOr[AnonStyle] = js.native
+  var crosshairs: js.UndefOr[Style] = js.native
   var follow: js.UndefOr[Boolean] = js.native
   var hideMarkers: js.UndefOr[Boolean] = js.native
   var inPlot: js.UndefOr[Boolean] = js.native
@@ -43,7 +43,7 @@ object CommonTooltipConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCrosshairs(value: AnonStyle): Self = {
+    def withCrosshairs(value: Style): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("crosshairs")(value.asInstanceOf[js.Any])
         ret

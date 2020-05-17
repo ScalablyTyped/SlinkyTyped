@@ -1,6 +1,6 @@
 package typingsSlinky.reactBurgerMenu.mod
 
-import typingsSlinky.reactBurgerMenu.PartialCSSStyleDeclaratio
+import typingsSlinky.reactBurgerMenu.anon.PartialCSSStyleDeclaratio
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

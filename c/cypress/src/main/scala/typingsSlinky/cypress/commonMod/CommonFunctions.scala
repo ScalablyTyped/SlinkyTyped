@@ -1,8 +1,8 @@
 package typingsSlinky.cypress.commonMod
 
-import typingsSlinky.cypress.Mocha_.AsyncFunc
-import typingsSlinky.cypress.Mocha_.Func
-import typingsSlinky.cypress.Mocha_.Suite_
+import typingsSlinky.cypress.Mocha.AsyncFunc
+import typingsSlinky.cypress.Mocha.Func
+import typingsSlinky.cypress.Mocha.Suite
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -63,6 +63,6 @@ trait CommonFunctions extends js.Object {
     * This is only present if flag --delay is passed into Mocha. It triggers
     * root suite execution.
     */
-  def runWithSuite(suite: Suite_): js.Function0[Unit] = js.native
+  def runWithSuite(suite: Suite): js.Function0[Unit] = js.native
 }
 

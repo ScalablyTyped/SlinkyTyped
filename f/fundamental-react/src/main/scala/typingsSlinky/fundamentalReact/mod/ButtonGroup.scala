@@ -1,8 +1,8 @@
 package typingsSlinky.fundamentalReact.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.fundamentalReact.PartialButtonGroupProps
-import typingsSlinky.fundamentalReact.WeakValidationMapButtonGr
+import typingsSlinky.fundamentalReact.anon.PartialButtonGroupProps
+import typingsSlinky.fundamentalReact.anon.WeakValidationMapButtonGr
 import typingsSlinky.fundamentalReact.buttonGroupMod.ButtonGroupProps
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap

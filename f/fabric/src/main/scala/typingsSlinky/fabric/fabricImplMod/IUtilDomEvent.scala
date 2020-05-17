@@ -1,8 +1,8 @@
 package typingsSlinky.fabric.fabricImplMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait IUtilDomEvent extends js.Object {
   	 * @param event Event object
   	 * @param upperCanvasEl &lt;canvas> element on which object selection is drawn
   	 */
-  def getPointer(event: Event_, upperCanvasEl: HTMLCanvasElement): Point = js.native
+  def getPointer(event: Event, upperCanvasEl: HTMLCanvasElement): Point = js.native
   /**
   	 * Removes an event listener from an element
   	 */
@@ -29,7 +29,7 @@ object IUtilDomEvent {
   @scala.inline
   def apply(
     addListener: (HTMLElement, String, js.Function) => Unit,
-    getPointer: (Event_, HTMLCanvasElement) => Point,
+    getPointer: (Event, HTMLCanvasElement) => Point,
     removeListener: (HTMLElement, String, js.Function) => Unit
   ): IUtilDomEvent = {
     val __obj = js.Dynamic.literal(addListener = js.Any.fromFunction3(addListener), getPointer = js.Any.fromFunction2(getPointer), removeListener = js.Any.fromFunction3(removeListener))
@@ -48,7 +48,7 @@ object IUtilDomEvent {
         ret
     }
     @scala.inline
-    def withGetPointer(value: (Event_, HTMLCanvasElement) => Point): Self = {
+    def withGetPointer(value: (Event, HTMLCanvasElement) => Point): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getPointer")(js.Any.fromFunction2(value))
         ret

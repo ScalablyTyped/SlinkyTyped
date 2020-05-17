@@ -1,18 +1,18 @@
 package typingsSlinky.recurlyRecurlyJs.paypalMod
 
-import typingsSlinky.recurlyRecurlyJs.AnonDescription
+import typingsSlinky.recurlyRecurlyJs.anon.Description
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait PayPalStartOptions extends js.Object {
-  var options: AnonDescription = js.native
+  var options: Description = js.native
 }
 
 object PayPalStartOptions {
   @scala.inline
-  def apply(options: AnonDescription): PayPalStartOptions = {
+  def apply(options: Description): PayPalStartOptions = {
     val __obj = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
     __obj.asInstanceOf[PayPalStartOptions]
   }
@@ -23,7 +23,7 @@ object PayPalStartOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOptions(value: AnonDescription): Self = {
+    def withOptions(value: Description): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

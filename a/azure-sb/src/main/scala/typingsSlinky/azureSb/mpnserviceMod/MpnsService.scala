@@ -1,6 +1,6 @@
 package typingsSlinky.azureSb.mpnserviceMod
 
-import typingsSlinky.azureSb.AnonHeaders
+import typingsSlinky.azureSb.anon.Headers
 import typingsSlinky.azureSb.mod.Azure.ServiceBus.ListNotificationHubsOptions
 import typingsSlinky.azureSb.mod.Azure.ServiceBus.ResponseCallback
 import scala.scalajs.js
@@ -124,7 +124,7 @@ trait MpnsService extends js.Object {
     payload: String,
     targetName: String,
     notificationClass: String,
-    options: AnonHeaders,
+    options: Headers,
     callback: ResponseCallback
   ): Unit = js.native
   def send(
@@ -139,7 +139,7 @@ trait MpnsService extends js.Object {
     payload: js.Object,
     targetName: String,
     notificationClass: String,
-    options: AnonHeaders,
+    options: Headers,
     callback: ResponseCallback
   ): Unit = js.native
   def send(
@@ -154,7 +154,7 @@ trait MpnsService extends js.Object {
     payload: String,
     targetName: String,
     notificationClass: String,
-    options: AnonHeaders,
+    options: Headers,
     callback: ResponseCallback
   ): Unit = js.native
   def send(
@@ -169,7 +169,7 @@ trait MpnsService extends js.Object {
     payload: js.Object,
     targetName: String,
     notificationClass: String,
-    options: AnonHeaders,
+    options: Headers,
     callback: ResponseCallback
   ): Unit = js.native
   def updatesRawTemplateRegistration(

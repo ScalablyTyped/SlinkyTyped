@@ -9,8 +9,8 @@ import typingsSlinky.ngTable.ngTableNumbers.`4`
 import typingsSlinky.ngTable.ngTableNumbers.`5`
 import typingsSlinky.ngTable.ngTableNumbers.`6`
 import typingsSlinky.ngTable.ngTableNumbers.`7`
-import typingsSlinky.std.AnonCopyWithin
 import typingsSlinky.std.IterableIterator
+import typingsSlinky.std.anon.CopyWithin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +30,7 @@ trait DataResults[T] extends /* n */ NumberDictionary[T] {
     * when they will be absent when used in a 'with' statement.
     */
   @JSName(js.Symbol.unscopables)
-  var unscopables: js.Function0[AnonCopyWithin] = js.native
+  var unscopables: js.Function0[CopyWithin] = js.native
   var visibleColumnCount: Double = js.native
   /**
     * Combines two or more arrays.

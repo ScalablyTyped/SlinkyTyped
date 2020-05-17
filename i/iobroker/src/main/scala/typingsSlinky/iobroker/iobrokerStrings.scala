@@ -1,8 +1,8 @@
 package typingsSlinky.iobroker
 
-import typingsSlinky.iobroker.mod._Global_.ioBroker.CommonType
-import typingsSlinky.iobroker.mod._Global_.ioBroker.LogLevel
-import typingsSlinky.iobroker.mod._Global_.ioBroker.ObjectType
+import typingsSlinky.iobroker.mod.global.ioBroker.CommonType
+import typingsSlinky.iobroker.mod.global.ioBroker.LogLevel
+import typingsSlinky.iobroker.mod.global.ioBroker.ObjectType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

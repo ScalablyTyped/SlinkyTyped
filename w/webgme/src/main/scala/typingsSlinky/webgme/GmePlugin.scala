@@ -4,7 +4,7 @@ import typingsSlinky.std.TemplateStringsArray
 import typingsSlinky.webgme.Blobs.BlobClient
 import typingsSlinky.webgme.Core.DataObject
 import typingsSlinky.webgme.Core.Node
-import typingsSlinky.webgme.Global.GmeLogger
+import typingsSlinky.webgme.Global_.GmeLogger
 import typingsSlinky.webgme.GmeClasses.Project
 import typingsSlinky.webgme.GmeClasses.Result
 import typingsSlinky.webgme.GmeCommon.Metadata
@@ -22,7 +22,7 @@ object GmePlugin extends js.Object {
     The base plugin object from which all plugins should inherit.
     */
   @js.native
-  class PluginBase () extends js.Object {
+  trait PluginBase extends js.Object {
     /**
       * The resolved META nodes based on the active namespace. Index by the fully qualified meta node names
       * with the namespace stripped off at the start.

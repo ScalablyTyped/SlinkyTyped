@@ -5,8 +5,8 @@ import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Blob
-import typingsSlinky.jszip.AnonPromise
-import typingsSlinky.jszip.JSZipFileOptionsdirtrue
+import typingsSlinky.jszip.anon.JSZipFileOptionsdirtrue
+import typingsSlinky.jszip.anon.Promise
 import typingsSlinky.jszip.jszipStrings.array
 import typingsSlinky.jszip.jszipStrings.arraybuffer
 import typingsSlinky.jszip.jszipStrings.base64
@@ -37,7 +37,7 @@ trait JSZip
 Instantiable0[JSZip]
      with Instantiable1[/* data */ InputFileFormat, JSZip]
      with Instantiable2[/* data */ InputFileFormat, /* options */ JSZipLoadOptions, JSZip] {
-  var external: AnonPromise = js.native
+  var external: Promise = js.native
   var files: StringDictionary[JSZipObject] = js.native
   var support: JSZipSupport = js.native
   var version: String = js.native

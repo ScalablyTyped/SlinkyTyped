@@ -1,6 +1,8 @@
 package typingsSlinky.reactIntl
 
 import typingsSlinky.formatjsIntlRelativetimeformat.mod.default
+import typingsSlinky.reactIntl.anon.PickIntlConfiglocaleformaFormats
+import typingsSlinky.reactIntl.anon.TypeofIntlRelativeTimeFor
 import typingsSlinky.std.ConstructorParameters
 import scala.scalajs.js
 import scala.scalajs.js.`|`

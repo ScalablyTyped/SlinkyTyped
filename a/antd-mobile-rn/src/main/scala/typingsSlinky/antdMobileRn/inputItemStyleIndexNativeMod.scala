@@ -1,5 +1,12 @@
 package typingsSlinky.antdMobileRn
 
+import typingsSlinky.antdMobileRn.anon.BorderBottomColor
+import typingsSlinky.antdMobileRn.anon.ColorString
+import typingsSlinky.antdMobileRn.anon.FontSizeHeight
+import typingsSlinky.antdMobileRn.anon.FontSizeMarginLeft
+import typingsSlinky.antdMobileRn.anon.HeightMarginLeft
+import typingsSlinky.antdMobileRn.anon.Padding
+import typingsSlinky.antdMobileRn.anon.TextAlignVertical
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,13 +16,13 @@ import scala.scalajs.js.annotation._
 object inputItemStyleIndexNativeMod extends js.Object {
   @js.native
   object default extends js.Object {
-    var clear: AnonPadding = js.native
-    var container: AnonBorderBottomColor = js.native
-    var errorIcon: AnonHeightMarginLeft = js.native
-    var extra: AnonFontSizeMarginLeft = js.native
-    var input: AnonFontSizeHeight = js.native
-    var inputErrorColor: AnonColorString = js.native
-    var text: AnonTextAlignVertical = js.native
+    var clear: Padding = js.native
+    var container: BorderBottomColor = js.native
+    var errorIcon: HeightMarginLeft = js.native
+    var extra: FontSizeMarginLeft = js.native
+    var input: FontSizeHeight = js.native
+    var inputErrorColor: ColorString = js.native
+    var text: TextAlignVertical = js.native
   }
   
 }

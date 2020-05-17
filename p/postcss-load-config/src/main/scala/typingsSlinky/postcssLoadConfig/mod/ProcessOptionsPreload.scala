@@ -1,6 +1,6 @@
 package typingsSlinky.postcssLoadConfig.mod
 
-import typingsSlinky.postcss.PickProcessOptionsmapfrom
+import typingsSlinky.postcss.anon.PickProcessOptionsmapfrom
 import typingsSlinky.postcss.mod.Builder
 import typingsSlinky.postcss.mod.Node
 import typingsSlinky.postcss.mod.Parser

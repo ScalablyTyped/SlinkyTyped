@@ -1,7 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.std.stdStrings.message
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -88,17 +86,4 @@ trait Worker
   ): Unit = js.native
   def terminate(): Unit = js.native
 }
-
-@JSGlobal("Worker")
-@js.native
-object Worker
-  extends Instantiable1[
-      (/* stringUrl */ java.lang.String) | (/* stringUrl */ org.scalajs.dom.experimental.URL), 
-      org.scalajs.dom.raw.Worker
-    ]
-     with Instantiable2[
-      (/* stringUrl */ java.lang.String) | (/* stringUrl */ org.scalajs.dom.experimental.URL), 
-      /* options */ WorkerOptions, 
-      org.scalajs.dom.raw.Worker
-    ]
 

@@ -1,18 +1,17 @@
 package typingsSlinky.winrtUwp.Windows.Storage.Pickers
 
 import typingsSlinky.std.Array
-import typingsSlinky.winrtUwp.AnonIndex
-import typingsSlinky.winrtUwp.AnonItemsArray
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
+import typingsSlinky.winrtUwp.anon.Index
+import typingsSlinky.winrtUwp.anon.ItemsArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a random-access collection of file name extensions. */
-@JSGlobal("Windows.Storage.Pickers.FileExtensionVector")
 @js.native
-abstract class FileExtensionVector () extends Array[String] {
+trait FileExtensionVector extends Array[String] {
   /** Gets the number of file name extensions in the collection. */
   var size: Double = js.native
   /**
@@ -37,19 +36,19 @@ abstract class FileExtensionVector () extends Array[String] {
     * Retrieves the file name extensions that start at the specified index in the collection.
     * @param startIndex The zero-based index of the start of the file name extensions in the collection to retrieve.
     */
-  def getMany(startIndex: Double): AnonItemsArray = js.native
+  def getMany(startIndex: Double): ItemsArray = js.native
   /**
     * Retrieves an immutable view of the collection of file name extensions.
     * @return The view of the collection.
     */
   def getView(): IVectorView[String] = js.native
-  def indexOf(value: String, extra: js.Any*): AnonIndex = js.native
+  def indexOf(value: String, extra: js.Any*): Index = js.native
   /**
     * Retrieves the index of a specified file name extension in the collection.
     * @param value The file name extension to find in the collection.
     */
   @JSName("indexOf")
-  def indexOf_AnonIndex(value: String): AnonIndex = js.native
+  def indexOf_Index(value: String): Index = js.native
   /**
     * Inserts a file name extension into a collection at a specified index.
     * @param index Zero-based index of the location at which to insert the file name extension.

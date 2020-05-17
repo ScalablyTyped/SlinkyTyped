@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait VariableExpression extends js.Object {
+trait VariableExpression extends Variable {
   var expression: Expression = js.native
   var variable: Term = js.native
 }

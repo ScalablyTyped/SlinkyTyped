@@ -2,8 +2,7 @@ package typingsSlinky.reactNative.mod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactNative.AnonAnimated
-import typingsSlinky.reactNative.AnonAnimatedBoolean
+import typingsSlinky.reactNative.anon.AnimatedBoolean
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,9 +40,9 @@ class ScrollView ()
   def scrollTo(y: Double): Unit = js.native
   def scrollTo(y: Double, x: Double): Unit = js.native
   def scrollTo(y: Double, x: Double, animated: Boolean): Unit = js.native
-  def scrollTo(y: AnonAnimated): Unit = js.native
-  def scrollTo(y: AnonAnimated, x: Double): Unit = js.native
-  def scrollTo(y: AnonAnimated, x: Double, animated: Boolean): Unit = js.native
+  def scrollTo(y: typingsSlinky.reactNative.anon.Animated): Unit = js.native
+  def scrollTo(y: typingsSlinky.reactNative.anon.Animated, x: Double): Unit = js.native
+  def scrollTo(y: typingsSlinky.reactNative.anon.Animated, x: Double, animated: Boolean): Unit = js.native
   /**
     * A helper function that scrolls to the end of the scrollview;
     * If this is a vertical ScrollView, it scrolls to the bottom.
@@ -53,6 +52,6 @@ class ScrollView ()
     * The animated prop defaults to true
     */
   def scrollToEnd(): Unit = js.native
-  def scrollToEnd(options: AnonAnimatedBoolean): Unit = js.native
+  def scrollToEnd(options: AnimatedBoolean): Unit = js.native
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.carbonType.mod
 
-import typingsSlinky.carbonType.AnonFontSize
-import typingsSlinky.carbonType.AnonFontWeightNumber
-import typingsSlinky.carbonType.AnonMozosxfontsmoothing
+import typingsSlinky.carbonType.anon.FontSize
+import typingsSlinky.carbonType.anon.FontWeightNumber
+import typingsSlinky.carbonType.anon.Mozosxfontsmoothing
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,8 +10,8 @@ import scala.scalajs.js.annotation._
 @JSImport("@carbon/type", "reset")
 @js.native
 object reset extends js.Object {
-  var body: AnonMozosxfontsmoothing = js.native
-  var html: AnonFontSize = js.native
-  var strong: AnonFontWeightNumber = js.native
+  var body: Mozosxfontsmoothing = js.native
+  var html: FontSize = js.native
+  var strong: FontWeightNumber = js.native
 }
 

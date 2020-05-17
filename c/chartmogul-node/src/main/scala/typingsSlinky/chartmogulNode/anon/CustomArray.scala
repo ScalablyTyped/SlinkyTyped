@@ -1,0 +1,34 @@
+package typingsSlinky.chartmogulNode.anon
+
+import typingsSlinky.chartmogulNode.mod.Customer.NewCustomAttributes
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait CustomArray extends js.Object {
+  var custom: js.Array[NewCustomAttributes] = js.native
+}
+
+object CustomArray {
+  @scala.inline
+  def apply(custom: js.Array[NewCustomAttributes]): CustomArray = {
+    val __obj = js.Dynamic.literal(custom = custom.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CustomArray]
+  }
+  @scala.inline
+  implicit class CustomArrayOps[Self <: CustomArray] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCustom(value: js.Array[NewCustomAttributes]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

@@ -1,9 +1,9 @@
 package typingsSlinky.cypress.cypressMod.Cypress
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Window
 import typingsSlinky.cypress.cypressStrings.GET
 import typingsSlinky.cypress.cypressStrings.POST
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -77,13 +77,13 @@ trait VisitOptions
     *
     * @param {Window} contentWindow the remote page's window object
     */
-  def onBeforeLoad(win: Window_): Unit = js.native
+  def onBeforeLoad(win: Window): Unit = js.native
   /**
     * Called once your page has fired its load event.
     *
     * @param {Window} contentWindow the remote page's window object
     */
-  def onLoad(win: Window_): Unit = js.native
+  def onLoad(win: Window): Unit = js.native
 }
 
 object VisitOptions {
@@ -95,8 +95,8 @@ object VisitOptions {
     headers: StringDictionary[String],
     log: Boolean,
     method: GET | POST,
-    onBeforeLoad: Window_ => Unit,
-    onLoad: Window_ => Unit,
+    onBeforeLoad: Window => Unit,
+    onLoad: Window => Unit,
     qs: js.Object,
     retryOnNetworkFailure: Boolean,
     retryOnStatusCodeFailure: Boolean,
@@ -137,13 +137,13 @@ object VisitOptions {
         ret
     }
     @scala.inline
-    def withOnBeforeLoad(value: Window_ => Unit): Self = {
+    def withOnBeforeLoad(value: Window => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeLoad")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnLoad(value: Window_ => Unit): Self = {
+    def withOnLoad(value: Window => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction1(value))
         ret

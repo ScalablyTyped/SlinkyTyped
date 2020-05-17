@@ -1,5 +1,11 @@
 package typingsSlinky.bitwise
 
+import typingsSlinky.bitwise.anon.And
+import typingsSlinky.bitwise.anon.Create
+import typingsSlinky.bitwise.anon.GetBit
+import typingsSlinky.bitwise.anon.Read
+import typingsSlinky.bitwise.anon.ToBits
+import typingsSlinky.bitwise.anon.Write
 import typingsSlinky.bitwise.typesMod.Bit
 import typingsSlinky.bitwise.typesMod.UInt4
 import typingsSlinky.bitwise.typesMod.UInt8
@@ -69,12 +75,12 @@ object esmMod extends js.Object {
   
   @js.native
   object default extends js.Object {
-    var bits: AnonAnd = js.native
-    var buffer: AnonCreate = js.native
-    var byte: AnonRead = js.native
-    var integer: AnonGetBit = js.native
-    var nibble: AnonWrite = js.native
-    var string: AnonToBits = js.native
+    var bits: And = js.native
+    var buffer: Create = js.native
+    var byte: Read = js.native
+    var integer: GetBit = js.native
+    var nibble: Write = js.native
+    var string: ToBits = js.native
   }
   
   @js.native

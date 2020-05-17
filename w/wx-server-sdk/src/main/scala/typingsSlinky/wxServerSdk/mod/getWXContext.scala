@@ -1,6 +1,6 @@
 package typingsSlinky.wxServerSdk.mod
 
-import typingsSlinky.wxServerSdk.AnonAPPID
+import typingsSlinky.wxServerSdk.anon.APPID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("wx-server-sdk", "getWXContext")
 @js.native
 object getWXContext extends js.Object {
-  def apply(): AnonAPPID = js.native
+  def apply(): APPID = js.native
 }
 

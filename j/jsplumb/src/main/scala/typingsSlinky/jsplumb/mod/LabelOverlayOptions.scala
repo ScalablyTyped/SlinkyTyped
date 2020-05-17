@@ -1,6 +1,6 @@
 package typingsSlinky.jsplumb.mod
 
-import typingsSlinky.jsplumb.AnonBorderStyle
+import typingsSlinky.jsplumb.anon.BorderStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait LabelOverlayOptions extends OverlayOptions {
   var cssClass: js.UndefOr[String] = js.native
   var label: String = js.native
    // 0.5
-  var labelStyle: js.UndefOr[AnonBorderStyle] = js.native
+  var labelStyle: js.UndefOr[BorderStyle] = js.native
   var location: js.UndefOr[Double] = js.native
 }
 
@@ -45,7 +45,7 @@ object LabelOverlayOptions {
         ret
     }
     @scala.inline
-    def withLabelStyle(value: AnonBorderStyle): Self = {
+    def withLabelStyle(value: BorderStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("labelStyle")(value.asInstanceOf[js.Any])
         ret

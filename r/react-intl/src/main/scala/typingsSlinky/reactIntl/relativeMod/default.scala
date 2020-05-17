@@ -1,7 +1,7 @@
 package typingsSlinky.reactIntl.relativeMod
 
-import typingsSlinky.reactIntl.PartialStateCurrentValueInSeconds
-import typingsSlinky.reactIntl.PickPropsunitvalue
+import typingsSlinky.reactIntl.anon.PartialStateCurrentValueInSeconds
+import typingsSlinky.reactIntl.anon.PickPropsunitvalue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

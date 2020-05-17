@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.created
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.creating
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.disabled
@@ -78,8 +77,4 @@ trait LineOfSightViewModel extends Accessor {
     */
   def stop(): Unit = js.native
 }
-
-@JSGlobal("__esri.LineOfSightViewModel")
-@js.native
-object LineOfSightViewModel extends TopLevel[LineOfSightViewModelConstructor]
 

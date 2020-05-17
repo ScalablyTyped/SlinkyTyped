@@ -1,5 +1,6 @@
 package typingsSlinky.reactAce.components
 
+import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.brace.mod.Annotation
@@ -9,7 +10,6 @@ import typingsSlinky.reactAce.typesMod.IAceOptions
 import typingsSlinky.reactAce.typesMod.ICommand
 import typingsSlinky.reactAce.typesMod.IEditorProps
 import typingsSlinky.reactAce.typesMod.IMarker
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -64,7 +64,7 @@ object Split {
     @scala.inline
     def onBeforeLoad(value: /* ace */ js.Any => Unit): this.type = set("onBeforeLoad", js.Any.fromFunction1(value))
     @scala.inline
-    def onBlur(value: /* value */ Event_ => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    def onBlur(value: /* value */ Event => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
     def onChange(value: (/* value */ js.Array[String], /* event */ js.UndefOr[js.Any]) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
     @scala.inline
@@ -72,7 +72,7 @@ object Split {
     @scala.inline
     def onCursorChange(value: (/* value */ js.Any, /* event */ js.UndefOr[js.Any]) => Unit): this.type = set("onCursorChange", js.Any.fromFunction2(value))
     @scala.inline
-    def onFocus(value: /* value */ Event_ => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    def onFocus(value: /* value */ Event => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
     def onInput(value: /* event */ js.UndefOr[js.Any] => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
     @scala.inline

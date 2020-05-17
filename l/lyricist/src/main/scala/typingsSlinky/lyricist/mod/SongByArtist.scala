@@ -1,6 +1,6 @@
 package typingsSlinky.lyricist.mod
 
-import typingsSlinky.lyricist.AnonHot
+import typingsSlinky.lyricist.anon.Hot
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait SongByArtist extends js.Object {
   var primary_artist: ArtistBrief = js.native
   var pyongs_count: Double = js.native
   var song_art_image_thumbnail_url: String = js.native
-  var stats: AnonHot = js.native
+  var stats: Hot = js.native
   var title: String = js.native
   var title_with_featured: String = js.native
   var url: String = js.native
@@ -41,7 +41,7 @@ object SongByArtist {
     primary_artist: ArtistBrief,
     pyongs_count: Double,
     song_art_image_thumbnail_url: String,
-    stats: AnonHot,
+    stats: Hot,
     title: String,
     title_with_featured: String,
     url: String
@@ -128,7 +128,7 @@ object SongByArtist {
         ret
     }
     @scala.inline
-    def withStats(value: AnonHot): Self = {
+    def withStats(value: Hot): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.vscodeLanguageserverProtocol.protocolMod
 
-import typingsSlinky.vscodeLanguageserverProtocol.AnonFirstTriggerCharacter
+import typingsSlinky.vscodeLanguageserverProtocol.anon.FirstTriggerCharacter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,7 +40,7 @@ trait _ServerCapabilities extends js.Object {
   /**
     * The server provides document formatting on typing.
     */
-  var documentOnTypeFormattingProvider: js.UndefOr[AnonFirstTriggerCharacter] = js.native
+  var documentOnTypeFormattingProvider: js.UndefOr[FirstTriggerCharacter] = js.native
   /**
     * The server provides document range formatting.
     */
@@ -183,7 +183,7 @@ object _ServerCapabilities {
         ret
     }
     @scala.inline
-    def withDocumentOnTypeFormattingProvider(value: AnonFirstTriggerCharacter): Self = {
+    def withDocumentOnTypeFormattingProvider(value: FirstTriggerCharacter): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("documentOnTypeFormattingProvider")(value.asInstanceOf[js.Any])
         ret

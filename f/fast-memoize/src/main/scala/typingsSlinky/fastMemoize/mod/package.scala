@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type CacheCreateFunc[K, V] = js.Function0[typingsSlinky.fastMemoize.AnonGet[K, V]]
+  type CacheCreateFunc[K, V] = js.Function0[typingsSlinky.fastMemoize.anon.Get[K, V]]
   type Func = js.Function1[/* repeated */ js.Any, js.Any]
   type MemoizeFunc = js.Function2[
     /* fn */ typingsSlinky.fastMemoize.mod.Func, 

@@ -2,7 +2,7 @@ package typingsSlinky.rcFieldForm.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.rcFieldForm.AnonSource
+import typingsSlinky.rcFieldForm.anon.Source
 import typingsSlinky.rcFieldForm.fieldMod.FieldProps
 import typingsSlinky.rcFieldForm.fieldMod.ShouldUpdate
 import typingsSlinky.rcFieldForm.fieldMod.default
@@ -38,7 +38,7 @@ object Field {
     @scala.inline
     def rules(value: js.Array[Rule]): this.type = set("rules", value.asInstanceOf[js.Any])
     @scala.inline
-    def shouldUpdateFunction3(value: (/* prevValues */ Store, /* nextValues */ Store, /* info */ AnonSource) => Boolean): this.type = set("shouldUpdate", js.Any.fromFunction3(value))
+    def shouldUpdateFunction3(value: (/* prevValues */ Store, /* nextValues */ Store, /* info */ Source) => Boolean): this.type = set("shouldUpdate", js.Any.fromFunction3(value))
     @scala.inline
     def shouldUpdate(value: ShouldUpdate): this.type = set("shouldUpdate", value.asInstanceOf[js.Any])
     @scala.inline

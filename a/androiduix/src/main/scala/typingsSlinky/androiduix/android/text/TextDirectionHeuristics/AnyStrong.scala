@@ -4,18 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.text.TextDirectionHeuristics.AnyStrong")
 @js.native
-class AnyStrong protected () extends TextDirectionAlgorithm {
-  def this(lookForRtl: Boolean) = this()
+trait AnyStrong extends TextDirectionAlgorithm {
   var mLookForRtl: js.Any = js.native
 }
 
-/* static members */
-@JSGlobal("android.text.TextDirectionHeuristics.AnyStrong")
-@js.native
-object AnyStrong extends js.Object {
-  var INSTANCE_LTR: AnyStrong = js.native
-  var INSTANCE_RTL: AnyStrong = js.native
+object AnyStrong {
+  @scala.inline
+  def apply(checkRtl: (String, Double, Double) => Double, mLookForRtl: js.Any): AnyStrong = {
+    val __obj = js.Dynamic.literal(checkRtl = js.Any.fromFunction3(checkRtl), mLookForRtl = mLookForRtl.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AnyStrong]
+  }
+  @scala.inline
+  implicit class AnyStrongOps[Self <: AnyStrong] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMLookForRtl(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mLookForRtl")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

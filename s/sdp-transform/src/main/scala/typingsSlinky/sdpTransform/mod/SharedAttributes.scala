@@ -1,9 +1,9 @@
 package typingsSlinky.sdpTransform.mod
 
-import typingsSlinky.sdpTransform.AnonAddressTypes
-import typingsSlinky.sdpTransform.AnonHash
-import typingsSlinky.sdpTransform.AnonUri
-import typingsSlinky.sdpTransform.AnonValueString
+import typingsSlinky.sdpTransform.anon.AddressTypes
+import typingsSlinky.sdpTransform.anon.Hash
+import typingsSlinky.sdpTransform.anon.Uri
+import typingsSlinky.sdpTransform.anon.ValueString
 import typingsSlinky.sdpTransform.sdpTransformStrings.inactive
 import typingsSlinky.sdpTransform.sdpTransformStrings.recvonly
 import typingsSlinky.sdpTransform.sdpTransformStrings.sendonly
@@ -22,15 +22,15 @@ trait SharedAttributes extends js.Object {
   // a=inactive
   var direction: js.UndefOr[sendrecv | recvonly | sendonly | inactive] = js.native
   // a=extmap
-  var ext: js.UndefOr[js.Array[AnonUri]] = js.native
-  var fingerprint: js.UndefOr[AnonHash] = js.native
+  var ext: js.UndefOr[js.Array[Uri]] = js.native
+  var fingerprint: js.UndefOr[Hash] = js.native
   var icePwd: js.UndefOr[String] = js.native
   var iceUfrag: js.UndefOr[String] = js.native
-  var invalid: js.UndefOr[js.Array[AnonValueString]] = js.native
+  var invalid: js.UndefOr[js.Array[ValueString]] = js.native
   // a=setup
   var setup: js.UndefOr[String] = js.native
   // a=source-filter: incl IN IP4 239.5.2.31 10.1.15.5
-  var sourceFilter: js.UndefOr[AnonAddressTypes] = js.native
+  var sourceFilter: js.UndefOr[AddressTypes] = js.native
 }
 
 object SharedAttributes {
@@ -70,7 +70,7 @@ object SharedAttributes {
         ret
     }
     @scala.inline
-    def withExt(value: js.Array[AnonUri]): Self = {
+    def withExt(value: js.Array[Uri]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ext")(value.asInstanceOf[js.Any])
         ret
@@ -82,7 +82,7 @@ object SharedAttributes {
         ret
     }
     @scala.inline
-    def withFingerprint(value: AnonHash): Self = {
+    def withFingerprint(value: Hash): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fingerprint")(value.asInstanceOf[js.Any])
         ret
@@ -118,7 +118,7 @@ object SharedAttributes {
         ret
     }
     @scala.inline
-    def withInvalid(value: js.Array[AnonValueString]): Self = {
+    def withInvalid(value: js.Array[ValueString]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("invalid")(value.asInstanceOf[js.Any])
         ret
@@ -142,7 +142,7 @@ object SharedAttributes {
         ret
     }
     @scala.inline
-    def withSourceFilter(value: AnonAddressTypes): Self = {
+    def withSourceFilter(value: AddressTypes): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sourceFilter")(value.asInstanceOf[js.Any])
         ret

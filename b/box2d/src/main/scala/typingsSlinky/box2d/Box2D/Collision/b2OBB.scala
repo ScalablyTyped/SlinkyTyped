@@ -6,9 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Box2D.Collision.b2OBB")
 @js.native
-class b2OBB () extends js.Object {
+trait b2OBB extends js.Object {
   /**
   		* The rotation matrix.
   		**/
@@ -21,5 +20,39 @@ class b2OBB () extends js.Object {
   		* The half-widths.
   		**/
   var extents: b2Vec2 = js.native
+}
+
+object b2OBB {
+  @scala.inline
+  def apply(R: b2Mat22, center: b2Vec2, extents: b2Vec2): b2OBB = {
+    val __obj = js.Dynamic.literal(R = R.asInstanceOf[js.Any], center = center.asInstanceOf[js.Any], extents = extents.asInstanceOf[js.Any])
+    __obj.asInstanceOf[b2OBB]
+  }
+  @scala.inline
+  implicit class b2OBBOps[Self <: b2OBB] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withR(value: b2Mat22): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("R")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCenter(value: b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtents(value: b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extents")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

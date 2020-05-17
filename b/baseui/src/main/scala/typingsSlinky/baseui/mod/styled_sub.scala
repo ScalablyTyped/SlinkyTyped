@@ -1,7 +1,7 @@
 package typingsSlinky.baseui.mod
 
-import typingsSlinky.baseui.AnonClassName
-import typingsSlinky.baseui.AnonTheme
+import typingsSlinky.baseui.anon.ClassName
+import typingsSlinky.baseui.anon.Theme
 import typingsSlinky.baseui.baseuiStrings.sub
 import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.std.Exclude
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation._
 @JSImport("baseui", "styled")
 @js.native
 object styled_sub extends js.Object {
-  def apply[P /* <: js.Object */, T](component: sub, styledFn: js.Function1[/* props */ AnonTheme[T] with P, StyleObject]): StyletronComponent[
+  def apply[P /* <: js.Object */, T](component: sub, styledFn: js.Function1[/* props */ Theme[T] with P, StyleObject]): StyletronComponent[
     (Pick[
       ComponentProps[sub], 
-      Exclude[/* keyof react.react.ComponentProps<'sub'> */ String, AnonClassName]
+      Exclude[/* keyof react.react.ComponentProps<'sub'> */ String, ClassName]
     ]) with P
   ] = js.native
   def apply[P /* <: js.Object */, T](component: sub, styledFn: StyleObject): StyletronComponent[
     (Pick[
       ComponentProps[sub], 
-      Exclude[/* keyof react.react.ComponentProps<'sub'> */ String, AnonClassName]
+      Exclude[/* keyof react.react.ComponentProps<'sub'> */ String, ClassName]
     ]) with P
   ] = js.native
 }

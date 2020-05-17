@@ -1,6 +1,6 @@
 package typingsSlinky.tryghostContentApi.mod
 
-import typingsSlinky.tryghostContentApi.AnonLabel
+import typingsSlinky.tryghostContentApi.anon.Label
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait Settings
   var icon: js.UndefOr[String] = js.native
   var lang: js.UndefOr[String] = js.native
   var logo: js.UndefOr[String] = js.native
-  var navigation: js.UndefOr[js.Array[AnonLabel]] = js.native
+  var navigation: js.UndefOr[js.Array[Label]] = js.native
   var timezone: js.UndefOr[String] = js.native
   var title: js.UndefOr[String] = js.native
   var twitter: js.UndefOr[String] = js.native
@@ -148,7 +148,7 @@ object Settings {
         ret
     }
     @scala.inline
-    def withNavigation(value: js.Array[AnonLabel]): Self = {
+    def withNavigation(value: js.Array[Label]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("navigation")(value.asInstanceOf[js.Any])
         ret

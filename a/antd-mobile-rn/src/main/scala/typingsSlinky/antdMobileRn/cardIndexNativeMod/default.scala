@@ -1,9 +1,9 @@
 package typingsSlinky.antdMobileRn.cardIndexNativeMod
 
-import typingsSlinky.antdMobileRn.AnonFull
-import typingsSlinky.antdMobileRn.TypeofCardBody
-import typingsSlinky.antdMobileRn.TypeofCardFooter
-import typingsSlinky.antdMobileRn.TypeofCardHeader
+import typingsSlinky.antdMobileRn.anon.Full
+import typingsSlinky.antdMobileRn.anon.TypeofCardBody
+import typingsSlinky.antdMobileRn.anon.TypeofCardFooter
+import typingsSlinky.antdMobileRn.anon.TypeofCardHeader
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,6 +19,6 @@ object default extends js.Object {
   var Body: TypeofCardBody = js.native
   var Footer: TypeofCardFooter = js.native
   var Header: TypeofCardHeader = js.native
-  var defaultProps: AnonFull = js.native
+  var defaultProps: Full = js.native
 }
 

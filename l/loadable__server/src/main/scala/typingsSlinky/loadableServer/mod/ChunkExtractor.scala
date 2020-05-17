@@ -1,7 +1,7 @@
 package typingsSlinky.loadableServer.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.loadableServer.AnonDefault
+import typingsSlinky.loadableServer.anon.Default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -77,7 +77,7 @@ class ChunkExtractor protected () extends js.Object {
   /**
   	 * Require the entrypoint of your application as a commonjs module.
   	 */
-  def requireEntrypoint(): AnonDefault = js.native
-  def requireEntrypoint(name: String): AnonDefault = js.native
+  def requireEntrypoint(): Default = js.native
+  def requireEntrypoint(name: String): Default = js.native
 }
 

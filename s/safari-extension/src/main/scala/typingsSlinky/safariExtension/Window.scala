@@ -1,5 +1,6 @@
 package typingsSlinky.safariExtension
 
+import typingsSlinky.safariExtension.anon.Typeofsafari
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

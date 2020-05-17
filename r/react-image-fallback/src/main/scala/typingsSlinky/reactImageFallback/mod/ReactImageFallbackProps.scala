@@ -1,9 +1,9 @@
 package typingsSlinky.reactImageFallback.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLImageElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +13,8 @@ trait ReactImageFallbackProps extends js.Object {
   var fallbackImage: String | ReactElement | (js.Array[ReactElement | String]) = js.native
   var initialImage: js.UndefOr[String | ReactElement] = js.native
   var initialTimeout: js.UndefOr[Double] = js.native
-  var onError: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, HTMLImageElement], Unit]] = js.native
-  var onLoad: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, HTMLImageElement], Unit]] = js.native
+  var onError: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLImageElement], Unit]] = js.native
+  var onLoad: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLImageElement], Unit]] = js.native
   var src: String = js.native
 }
 
@@ -79,7 +79,7 @@ object ReactImageFallbackProps {
         ret
     }
     @scala.inline
-    def withOnError(value: /* event */ SyntheticEvent[Event_, HTMLImageElement] => Unit): Self = {
+    def withOnError(value: /* event */ SyntheticEvent[Event, HTMLImageElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
         ret
@@ -91,7 +91,7 @@ object ReactImageFallbackProps {
         ret
     }
     @scala.inline
-    def withOnLoad(value: /* event */ SyntheticEvent[Event_, HTMLImageElement] => Unit): Self = {
+    def withOnLoad(value: /* event */ SyntheticEvent[Event, HTMLImageElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction1(value))
         ret

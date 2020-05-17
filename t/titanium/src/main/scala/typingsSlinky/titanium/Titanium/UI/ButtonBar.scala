@@ -22,9 +22,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * An iOS button bar component.
 		 */
-@JSGlobal("Titanium.UI.ButtonBar")
 @js.native
-class ButtonBar () extends View {
+trait ButtonBar extends View {
   /**
   			 * Index of the currently selected button.
   			 * @deprecated This property has been deprecated in Titanium SDK 8.0.0 as this property has no effect

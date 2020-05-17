@@ -1,6 +1,6 @@
 package typingsSlinky.naja.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait NajaEventsMap extends js.Object {
   var error: NajaEventListener[ErrorEvent[_]] = js.native
   var init: NajaEventListener[InitEvent] = js.native
   var interaction: NajaEventListener[InteractionEvent] = js.native
-  var load: NajaEventListener[Event_] = js.native
+  var load: NajaEventListener[Event] = js.native
   var start: NajaEventListener[StartEvent] = js.native
   var success: NajaEventListener[SuccessEvent[_]] = js.native
 }
@@ -27,7 +27,7 @@ object NajaEventsMap {
     error: NajaEventListener[ErrorEvent[_]],
     init: NajaEventListener[InitEvent],
     interaction: NajaEventListener[InteractionEvent],
-    load: NajaEventListener[Event_],
+    load: NajaEventListener[Event],
     start: NajaEventListener[StartEvent],
     success: NajaEventListener[SuccessEvent[_]]
   ): NajaEventsMap = {
@@ -113,13 +113,13 @@ object NajaEventsMap {
         ret
     }
     @scala.inline
-    def withLoadFunction1(value: Event_ => js.Promise[Unit] | Unit): Self = {
+    def withLoadFunction1(value: Event => js.Promise[Unit] | Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withLoad(value: NajaEventListener[Event_]): Self = {
+    def withLoad(value: NajaEventListener[Event]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("load")(value.asInstanceOf[js.Any])
         ret

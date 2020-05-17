@@ -1,7 +1,7 @@
 package typingsSlinky.jestHasteMap.mod
 
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.jestHasteMap.TypeofHasteModuleMap
+import typingsSlinky.jestHasteMap.anon.TypeofHasteModuleMap
 import typingsSlinky.jestTypes.configMod.Path
 import scala.scalajs.js
 import scala.scalajs.js.`|`

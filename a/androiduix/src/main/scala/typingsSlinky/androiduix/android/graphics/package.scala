@@ -6,4 +6,5 @@ import scala.scalajs.js.annotation._
 
 package object graphics {
   type Paint = typingsSlinky.androiduix.android.graphics.Paint_
+  type RectF = typingsSlinky.androiduix.android.graphics.Rect
 }

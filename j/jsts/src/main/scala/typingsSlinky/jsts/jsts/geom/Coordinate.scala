@@ -4,17 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("jsts.geom.Coordinate")
 @js.native
-class Coordinate protected () extends js.Object {
-  /**
-    * @constructor
-    */
-  def this(c: Coordinate) = this()
-  /**
-    * @constructor
-    */
-  def this(x: Double, y: Double) = this()
+trait Coordinate extends js.Object {
   /**
     * Gets or sets the x value.
     */
@@ -86,5 +77,78 @@ class Coordinate protected () extends js.Object {
     *          other the <code>Coordinate</code> to copy.
     */
   def setCoordinate(other: Coordinate): Unit = js.native
+}
+
+object Coordinate {
+  @scala.inline
+  def apply(
+    compareTo: Coordinate => Double,
+    distance: Coordinate => Double,
+    equals: Coordinate => Boolean,
+    equals2D: Coordinate => Boolean,
+    setCoordinate: Coordinate => Unit,
+    x: Double,
+    y: Double,
+    z: Double
+  ): Coordinate = {
+    val __obj = js.Dynamic.literal(compareTo = js.Any.fromFunction1(compareTo), distance = js.Any.fromFunction1(distance), equals = js.Any.fromFunction1(equals), equals2D = js.Any.fromFunction1(equals2D), setCoordinate = js.Any.fromFunction1(setCoordinate), x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any], z = z.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Coordinate]
+  }
+  @scala.inline
+  implicit class CoordinateOps[Self <: Coordinate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCompareTo(value: Coordinate => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareTo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDistance(value: Coordinate => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEquals(value: Coordinate => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEquals2D(value: Coordinate => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equals2D")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetCoordinate(value: Coordinate => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setCoordinate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withZ(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("z")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

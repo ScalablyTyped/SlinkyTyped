@@ -7,23 +7,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.WebXREnterExitUIButton")
 @js.native
-class WebXREnterExitUIButton protected () extends js.Object {
-  /**
-    * Creates a WebXREnterExitUIButton
-    * @param element button element
-    * @param sessionMode XR initialization session mode
-    * @param referenceSpaceType the type of reference space to be used
-    */
-  def this(
-    /** button element */
-  element: HTMLElement,
-    /** XR initialization options for the button */
-  sessionMode: XRSessionMode,
-    /** Reference space type */
-  referenceSpaceType: XRReferenceSpaceType
-  ) = this()
+trait WebXREnterExitUIButton extends js.Object {
   /** button element */
   var element: HTMLElement = js.native
   /** Reference space type */
@@ -35,5 +20,50 @@ class WebXREnterExitUIButton protected () extends js.Object {
     * @param activeButton the current active button in the UI
     */
   def update(activeButton: Nullable[WebXREnterExitUIButton]): Unit = js.native
+}
+
+object WebXREnterExitUIButton {
+  @scala.inline
+  def apply(
+    element: HTMLElement,
+    referenceSpaceType: XRReferenceSpaceType,
+    sessionMode: XRSessionMode,
+    update: Nullable[WebXREnterExitUIButton] => Unit
+  ): WebXREnterExitUIButton = {
+    val __obj = js.Dynamic.literal(element = element.asInstanceOf[js.Any], referenceSpaceType = referenceSpaceType.asInstanceOf[js.Any], sessionMode = sessionMode.asInstanceOf[js.Any], update = js.Any.fromFunction1(update))
+    __obj.asInstanceOf[WebXREnterExitUIButton]
+  }
+  @scala.inline
+  implicit class WebXREnterExitUIButtonOps[Self <: WebXREnterExitUIButton] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withElement(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReferenceSpaceType(value: XRReferenceSpaceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referenceSpaceType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSessionMode(value: XRSessionMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: Nullable[WebXREnterExitUIButton] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

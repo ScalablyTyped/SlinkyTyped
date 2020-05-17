@@ -2,21 +2,14 @@ package typingsSlinky.amapJsApiIndoorMap.AMap
 
 import typingsSlinky.amapJsApi.AMap.Layer
 import typingsSlinky.amapJsApiIndoorMap.AMap.IndoorMap.Building
-import typingsSlinky.amapJsApiIndoorMap.AMap.IndoorMap.Options
 import typingsSlinky.amapJsApiIndoorMap.AMap.IndoorMap.SearchResult
 import typingsSlinky.amapJsApiIndoorMap.amapJsApiIndoorMapBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("AMap.IndoorMap")
 @js.native
-/**
-  * 室内地图
-  * @param options 选项
-  */
-class IndoorMap_ () extends Layer {
-  def this(options: Options) = this()
+trait IndoorMap_ extends Layer {
   // internal
   def getFloorBar(): Unit = js.native
   /**

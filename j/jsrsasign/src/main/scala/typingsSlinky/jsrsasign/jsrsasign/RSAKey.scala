@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Tom Wu's RSA Key class and extension */
-@JSGlobal("jsrsasign.RSAKey")
 @js.native
-class RSAKey () extends js.Object {
+trait RSAKey extends js.Object {
   /**
     * read an ASN.1 hexadecimal string of X.509 RSA public key certificate
     * @param h hexadecimal string of X.509 RSA public key certificate
@@ -51,105 +50,69 @@ class RSAKey () extends js.Object {
   def verify(sMsg: String, hSig: String): `0` | `1` = js.native
 }
 
-/* static members */
-@JSGlobal("jsrsasign.RSAKey")
-@js.native
-object RSAKey extends js.Object {
-  /**
-    * static method to get array of hex field values from hexadecimal PKCS#5 RSA private key.
-    * @param sPEMPrivateKey PEM PKCS#1/5 s private key string
-    * @return array of field hex value
-    * @example
-    * RSAKey.getHexValueArrayOfChildrenFromHex("3082...") → ["00", "3b42...", ...]
-    */
-  def getHexValueArrayOfChildrenFromHex(sPEMPrivateKey: String): js.Array[String] = js.native
-  /**
-    * static method to get array of field positions from hexadecimal PKCS#5 RSA private key.
-    * @param sPEMPrivateKey PEM PKCS#1/5 s private key string
-    * @return array of field positions
-    * @example
-    * RSAKey.getPosArrayOfChildrenFromHex("3082...") → [8, 32, ...]
-    */
-  def getPosArrayOfChildrenFromHex(sPEMPrivateKey: String): js.Array[Double] = js.native
-  /**
-    * sign for a message string with RSA private key.
-    * @param s message string to be signed.
-    * @param hashAlg hash algorithm name for signing.
-    * @return returns hexadecimal string of signature value.
-    */
-  def sign(s: String, hashAlg: String): String = js.native
-  /**
-    * sign for a message string with RSA private key by PKCS#1 PSS signing.
-    * @param s message string to be signed.
-    * @param hashAlg hash algorithm name for signing.
-    * @param sLen salt byte length from 0 to (keybytelen - hashbytelen - 2).
-    *        There are two special values:
-    *        * -1: sets the salt length to the digest length
-    *        * -2: sets the salt length to maximum permissible value
-    *           (i.e. keybytelen - hashbytelen - 2)
-    *
-    *        DEFAULT is -1. (NOTE: OpenSSL's default is -2.)
-    * @return returns hexadecimal string of signature value.
-    */
-  def signPSS(s: String, hashAlg: String, sLen: Double): String = js.native
-  /**
-    * sign hash value of message to be signed with RSA private key.
-    * @param sHashHex hexadecimal string of hash value of message to be signed.
-    * @param hashAlg hash algorithm name for signing.
-    * @return returns hexadecimal string of signature value.
-    */
-  def signWithMessageHash(sHashHex: String, hashAlg: String): String = js.native
-  /**
-    * sign hash value of message with RSA private key by PKCS#1 PSS signing.
-    * @param hHash hexadecimal hash value of message to be signed.
-    * @param hashAlg hash algorithm name for signing.
-    * @param sLen salt byte length from 0 to (keybytelen - hashbytelen - 2).
-    *        There are two special values:
-    *        * -1: sets the salt length to the digest length
-    *        * -2: sets the salt length to maximum permissible value
-    *           (i.e. keybytelen - hashbytelen - 2)
-    *
-    *        DEFAULT is -1. (NOTE: OpenSSL's default is -2.)
-    * @return returns hexadecimal string of signature value.
-    */
-  def signWithMessageHashPSS(hHash: String, hashAlg: String, sLen: Double): String = js.native
-  /**
-    * verifies a sigature for a message string with RSA public key by PKCS#1 PSS sign.
-    * @param sMsg message string to be verified.
-    * @param hSig hexadecimal string of signature value
-    * @param hashAlg hash algorithm name
-    * @param sLen salt byte length from 0 to (keybytelen - hashbytelen - 2).
-    *        There are two special values:
-    *        * -1: sets the salt length to the digest length
-    *        * -2: sets the salt length to maximum permissible value
-    *           (i.e. keybytelen - hashbytelen - 2)
-    *
-    *        DEFAULT is -1. (NOTE: OpenSSL's default is -2.)
-    * @return returns true if valid, otherwise false
-    */
-  def verifyPSS(sMsg: String, hSig: String, hashAlg: String, sLen: Double): Boolean = js.native
-  /**
-    * verifies a sigature for a message string with RSA public key.
-    * @param sHashHex hexadecimal hash value of message to be verified.
-    * @param hSig hexadecimal string of siganture.
-    *                 non-hexadecimal charactors including new lines will be ignored.
-    * @return returns 1 if valid, otherwise 0
-    */
-  def verifyWithMessageHash(sHashHex: String, hSig: String): `0` | `1` = js.native
-  /**
-    * verifies a sigature for a hash value of message string with RSA public key by PKCS#1 PSS sign.
-    * @param hHash hexadecimal hash value of message string to be verified.
-    * @param hSig hexadecimal string of signature value
-    * @param hashAlg hash algorithm name
-    * @param sLen salt byte length from 0 to (keybytelen - hashbytelen - 2).
-    *        There are two special values:
-    *        * -1: sets the salt length to the digest length
-    *        * -2: sets the salt length to maximum permissible value
-    *           (i.e. keybytelen - hashbytelen - 2)
-    *
-    *        DEFAULT is -1 (NOTE: OpenSSL's default is -2.)
-    * @return returns true if valid, otherwise false
-    */
-  def verifyWithMessageHashPSS(hHash: String, hSig: String, hashAlg: String, sLen: Double): Boolean = js.native
+object RSAKey {
+  @scala.inline
+  def apply(
+    readCertPubKeyHex: (String, Double) => Unit,
+    readPKCS5PrvKeyHex: String => Unit,
+    readPKCS5PubKeyHex: String => Unit,
+    readPKCS8PrvKeyHex: String => Unit,
+    readPKCS8PubKeyHex: String => Unit,
+    readPrivateKeyFromPEMString: String => Unit,
+    verify: (String, String) => `0` | `1`
+  ): RSAKey = {
+    val __obj = js.Dynamic.literal(readCertPubKeyHex = js.Any.fromFunction2(readCertPubKeyHex), readPKCS5PrvKeyHex = js.Any.fromFunction1(readPKCS5PrvKeyHex), readPKCS5PubKeyHex = js.Any.fromFunction1(readPKCS5PubKeyHex), readPKCS8PrvKeyHex = js.Any.fromFunction1(readPKCS8PrvKeyHex), readPKCS8PubKeyHex = js.Any.fromFunction1(readPKCS8PubKeyHex), readPrivateKeyFromPEMString = js.Any.fromFunction1(readPrivateKeyFromPEMString), verify = js.Any.fromFunction2(verify))
+    __obj.asInstanceOf[RSAKey]
+  }
+  @scala.inline
+  implicit class RSAKeyOps[Self <: RSAKey] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReadCertPubKeyHex(value: (String, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readCertPubKeyHex")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withReadPKCS5PrvKeyHex(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readPKCS5PrvKeyHex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withReadPKCS5PubKeyHex(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readPKCS5PubKeyHex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withReadPKCS8PrvKeyHex(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readPKCS8PrvKeyHex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withReadPKCS8PubKeyHex(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readPKCS8PubKeyHex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withReadPrivateKeyFromPEMString(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readPrivateKeyFromPEMString")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withVerify(value: (String, String) => `0` | `1`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verify")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeSvgCharts.mod
 import typingsSlinky.d3Scale.mod.ScaleBand_
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeSvgCharts.PartialTextProps
+import typingsSlinky.reactNativeSvgCharts.anon.PartialTextProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

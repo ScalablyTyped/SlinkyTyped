@@ -5,17 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("sap.ui.model.analytics.odata4analytics.SortExpression")
 @js.native
-class SortExpression protected () extends js.Object {
-  /**
-    * Create a representation of an order by expression for a given entity type. Itcan be rendered as
-    * value for the $orderby system query option.
-    * @param oModel DataJS object for the OData model containing this entity           type
-    * @param oSchema DataJS object for the schema containing this entity type
-    * @param oEntityType object for the entity type
-    */
-  def this(oModel: js.Any, oSchema: js.Any, oEntityType: EntityType) = this()
+trait SortExpression extends js.Object {
   /**
     * Add a condition to the order by expression. It replaces any previously specifiedsort order for the
     * property.
@@ -55,5 +46,71 @@ class SortExpression protected () extends js.Object {
     * @param sPropertyName The name of the property to be removed from the           condition
     */
   def removeSorter(sPropertyName: String): Unit = js.native
+}
+
+object SortExpression {
+  @scala.inline
+  def apply(
+    addSorter: (String, js.Any) => SortExpression,
+    clear: () => Unit,
+    getEntityType: () => EntityType,
+    getExpressionAsUI5Sorter: () => Sorter,
+    getExpressionsAsUI5SorterArray: () => js.Array[Sorter],
+    getURIOrderByOptionValue: js.Any => String,
+    removeSorter: String => Unit
+  ): SortExpression = {
+    val __obj = js.Dynamic.literal(addSorter = js.Any.fromFunction2(addSorter), clear = js.Any.fromFunction0(clear), getEntityType = js.Any.fromFunction0(getEntityType), getExpressionAsUI5Sorter = js.Any.fromFunction0(getExpressionAsUI5Sorter), getExpressionsAsUI5SorterArray = js.Any.fromFunction0(getExpressionsAsUI5SorterArray), getURIOrderByOptionValue = js.Any.fromFunction1(getURIOrderByOptionValue), removeSorter = js.Any.fromFunction1(removeSorter))
+    __obj.asInstanceOf[SortExpression]
+  }
+  @scala.inline
+  implicit class SortExpressionOps[Self <: SortExpression] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddSorter(value: (String, js.Any) => SortExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addSorter")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withClear(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetEntityType(value: () => EntityType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getEntityType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetExpressionAsUI5Sorter(value: () => Sorter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getExpressionAsUI5Sorter")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetExpressionsAsUI5SorterArray(value: () => js.Array[Sorter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getExpressionsAsUI5SorterArray")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetURIOrderByOptionValue(value: js.Any => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getURIOrderByOptionValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveSorter(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeSorter")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

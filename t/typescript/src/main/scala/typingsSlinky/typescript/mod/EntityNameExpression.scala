@@ -12,3 +12,10 @@ trait EntityNameExpression
   extends DeclarationName
      with EntityNameOrEntityNameExpression
 
+object EntityNameExpression {
+  @scala.inline
+  implicit def apply(value: Identifier): EntityNameExpression = value.asInstanceOf[EntityNameExpression]
+  @scala.inline
+  implicit def apply(value: PropertyAccessEntityNameExpression): EntityNameExpression = value.asInstanceOf[EntityNameExpression]
+}
+

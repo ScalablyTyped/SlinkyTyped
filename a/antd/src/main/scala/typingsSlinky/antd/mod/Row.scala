@@ -1,6 +1,6 @@
 package typingsSlinky.antd.mod
 
-import typingsSlinky.antd.AnonGutter
+import typingsSlinky.antd.anon.Gutter
 import typingsSlinky.antd.libRowMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +14,6 @@ class Row () extends default
 @JSImport("antd", "Row")
 @js.native
 object Row extends js.Object {
-  var defaultProps: AnonGutter = js.native
+  var defaultProps: Gutter = js.native
 }
 

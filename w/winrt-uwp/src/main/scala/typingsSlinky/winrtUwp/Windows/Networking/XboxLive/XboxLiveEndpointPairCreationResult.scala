@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
-@JSGlobal("Windows.Networking.XboxLive.XboxLiveEndpointPairCreationResult")
 @js.native
-abstract class XboxLiveEndpointPairCreationResult () extends js.Object {
+trait XboxLiveEndpointPairCreationResult extends js.Object {
   /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
   var deviceAddress: XboxLiveDeviceAddress = js.native
   /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
@@ -16,5 +15,50 @@ abstract class XboxLiveEndpointPairCreationResult () extends js.Object {
   var isExistingPathEvaluation: Boolean = js.native
   /** This API is not available to all apps. Unless your developer account is specially provisioned by Microsoft, calls to these APIs will fail at runtime. */
   var status: XboxLiveEndpointPairCreationStatus = js.native
+}
+
+object XboxLiveEndpointPairCreationResult {
+  @scala.inline
+  def apply(
+    deviceAddress: XboxLiveDeviceAddress,
+    endpointPair: XboxLiveEndpointPair,
+    isExistingPathEvaluation: Boolean,
+    status: XboxLiveEndpointPairCreationStatus
+  ): XboxLiveEndpointPairCreationResult = {
+    val __obj = js.Dynamic.literal(deviceAddress = deviceAddress.asInstanceOf[js.Any], endpointPair = endpointPair.asInstanceOf[js.Any], isExistingPathEvaluation = isExistingPathEvaluation.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
+    __obj.asInstanceOf[XboxLiveEndpointPairCreationResult]
+  }
+  @scala.inline
+  implicit class XboxLiveEndpointPairCreationResultOps[Self <: XboxLiveEndpointPairCreationResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceAddress(value: XboxLiveDeviceAddress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndpointPair(value: XboxLiveEndpointPair): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endpointPair")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsExistingPathEvaluation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isExistingPathEvaluation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: XboxLiveEndpointPairCreationStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

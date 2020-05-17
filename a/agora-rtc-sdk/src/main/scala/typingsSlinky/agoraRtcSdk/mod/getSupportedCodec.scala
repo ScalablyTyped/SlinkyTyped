@@ -1,7 +1,6 @@
 package typingsSlinky.agoraRtcSdk.mod
 
-import typingsSlinky.agoraRtcSdk.AnonAudio
-import typingsSlinky.agoraRtcSdk.AnonStream
+import typingsSlinky.agoraRtcSdk.anon.Audio
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,7 +45,7 @@ object getSupportedCodec extends js.Object {
     *  });
     * ```
     */
-  def apply(): js.Promise[AnonAudio] = js.native
-  def apply(supportedCodecOptions: AnonStream): js.Promise[AnonAudio] = js.native
+  def apply(): js.Promise[Audio] = js.native
+  def apply(supportedCodecOptions: typingsSlinky.agoraRtcSdk.anon.Stream): js.Promise[Audio] = js.native
 }
 

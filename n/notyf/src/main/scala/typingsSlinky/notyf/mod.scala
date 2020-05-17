@@ -1,5 +1,7 @@
 package typingsSlinky.notyf
 
+import typingsSlinky.notyf.anon.DeepPartialINotyfNotifica
+import typingsSlinky.notyf.anon.PartialINotyfOptions
 import typingsSlinky.notyf.notyfMod.default
 import typingsSlinky.notyf.notyfOptionsMod.INotyfOptions
 import scala.scalajs.js

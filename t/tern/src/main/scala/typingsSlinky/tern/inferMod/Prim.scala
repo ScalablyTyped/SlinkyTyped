@@ -1,7 +1,7 @@
 package typingsSlinky.tern.inferMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.tern.Objnamestring
+import typingsSlinky.tern.anon.Objnamestring
 import typingsSlinky.tern.ternStrings.bool
 import typingsSlinky.tern.ternStrings.number
 import typingsSlinky.tern.ternStrings.string

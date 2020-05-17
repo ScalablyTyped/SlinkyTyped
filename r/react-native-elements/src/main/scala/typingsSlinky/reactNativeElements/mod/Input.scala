@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeElements.mod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactNativeElements.PartialTextInputProps
+import typingsSlinky.reactNativeElements.anon.PartialTextInputProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

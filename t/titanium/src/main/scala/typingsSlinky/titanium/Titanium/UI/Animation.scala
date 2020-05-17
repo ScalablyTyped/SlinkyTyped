@@ -11,9 +11,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * The `Animation` object defines an animation that can be applied to a view.
 		 */
-@JSGlobal("Titanium.UI.Animation")
 @js.native
-class Animation () extends Proxy {
+trait Animation extends Proxy {
   /**
   			 * Coordinate of the view about which to pivot an animation.
   			 */

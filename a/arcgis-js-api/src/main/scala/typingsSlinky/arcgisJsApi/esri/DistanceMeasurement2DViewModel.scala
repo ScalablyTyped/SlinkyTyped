@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`nautical-miles`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`us-feet`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.disabled
@@ -95,7 +94,91 @@ trait DistanceMeasurement2DViewModel extends js.Object {
   def newMeasurement(): Unit = js.native
 }
 
-@JSGlobal("__esri.DistanceMeasurement2DViewModel")
-@js.native
-object DistanceMeasurement2DViewModel extends TopLevel[DistanceMeasurement2DViewModelConstructor]
+object DistanceMeasurement2DViewModel {
+  @scala.inline
+  def apply(
+    clearMeasurement: () => Unit,
+    geodesicDistanceThreshold: Double,
+    measurement: DistanceMeasurement2DViewModelMeasurement,
+    measurementLabel: String,
+    newMeasurement: () => Unit,
+    state: disabled | ready | measuring | measured,
+    unit: metric | imperial | inches | feet_ | `us-feet` | yards | miles_ | `nautical-miles` | meters_ | kilometers_,
+    unitOptions: js.Array[
+      metric | imperial | inches | feet_ | `us-feet` | yards | miles_ | `nautical-miles` | meters_ | kilometers_
+    ],
+    view: MapView
+  ): DistanceMeasurement2DViewModel = {
+    val __obj = js.Dynamic.literal(clearMeasurement = js.Any.fromFunction0(clearMeasurement), geodesicDistanceThreshold = geodesicDistanceThreshold.asInstanceOf[js.Any], measurement = measurement.asInstanceOf[js.Any], measurementLabel = measurementLabel.asInstanceOf[js.Any], newMeasurement = js.Any.fromFunction0(newMeasurement), state = state.asInstanceOf[js.Any], unit = unit.asInstanceOf[js.Any], unitOptions = unitOptions.asInstanceOf[js.Any], view = view.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DistanceMeasurement2DViewModel]
+  }
+  @scala.inline
+  implicit class DistanceMeasurement2DViewModelOps[Self <: DistanceMeasurement2DViewModel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClearMeasurement(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearMeasurement")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGeodesicDistanceThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geodesicDistanceThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMeasurement(value: DistanceMeasurement2DViewModelMeasurement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("measurement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMeasurementLabel(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("measurementLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNewMeasurement(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newMeasurement")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withState(value: disabled | ready | measuring | measured): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnit(
+      value: metric | imperial | inches | feet_ | `us-feet` | yards | miles_ | `nautical-miles` | meters_ | kilometers_
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnitOptions(
+      value: js.Array[
+          metric | imperial | inches | feet_ | `us-feet` | yards | miles_ | `nautical-miles` | meters_ | kilometers_
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unitOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withView(value: MapView): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

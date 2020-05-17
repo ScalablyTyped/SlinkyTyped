@@ -1,7 +1,7 @@
 package typingsSlinky.uirouterAngularjs.mod
 
-import typingsSlinky.uirouterCore.AnonEAGER
-import typingsSlinky.uirouterCore.AnonNOWAIT
+import typingsSlinky.uirouterCore.anon.EAGER
+import typingsSlinky.uirouterCore.anon.NOWAIT
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@uirouter/angularjs", "resolvePolicies")
 @js.native
 object resolvePolicies extends js.Object {
-  var async: AnonNOWAIT = js.native
-  var when: AnonEAGER = js.native
+  var async: NOWAIT = js.native
+  var when: EAGER = js.native
 }
 

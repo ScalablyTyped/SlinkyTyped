@@ -1,19 +1,19 @@
 package typingsSlinky.openfin.writeRequestMod
 
-import typingsSlinky.openfin.AnonHtml
+import typingsSlinky.openfin.anon.Html
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait WriteAnyRequestType extends js.Object {
-  var data: AnonHtml = js.native
+  var data: Html = js.native
   var `type`: js.UndefOr[String] = js.native
 }
 
 object WriteAnyRequestType {
   @scala.inline
-  def apply(data: AnonHtml): WriteAnyRequestType = {
+  def apply(data: Html): WriteAnyRequestType = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     __obj.asInstanceOf[WriteAnyRequestType]
   }
@@ -24,7 +24,7 @@ object WriteAnyRequestType {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withData(value: AnonHtml): Self = {
+    def withData(value: Html): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

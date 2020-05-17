@@ -1,7 +1,7 @@
 package typingsSlinky.greasemonkey.GM
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.greasemonkey.AnonMimetype
+import typingsSlinky.greasemonkey.anon.Mimetype
 import typingsSlinky.greasemonkey.greasemonkeyStrings.end
 import typingsSlinky.greasemonkey.greasemonkeyStrings.idle
 import typingsSlinky.greasemonkey.greasemonkeyStrings.start
@@ -22,7 +22,7 @@ trait ScriptInfo extends js.Object {
     * Each value is an object with keys `name` and `mimetype` and `url`
     * with string values.
     */
-  var resources: StringDictionary[AnonMimetype] = js.native
+  var resources: StringDictionary[Mimetype] = js.native
   /** @default 'end' */
   var runAt: start | end | idle = js.native
   var uuid: String = js.native
@@ -37,7 +37,7 @@ object ScriptInfo {
     includes: js.Array[String],
     matches: js.Array[String],
     name: String,
-    resources: StringDictionary[AnonMimetype],
+    resources: StringDictionary[Mimetype],
     runAt: start | end | idle,
     uuid: String,
     version: String
@@ -82,7 +82,7 @@ object ScriptInfo {
         ret
     }
     @scala.inline
-    def withResources(value: StringDictionary[AnonMimetype]): Self = {
+    def withResources(value: StringDictionary[Mimetype]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
         ret

@@ -1,19 +1,18 @@
 package typingsSlinky.reapop.mod
 
-import typingsSlinky.reapop.AnonButton
-import typingsSlinky.reapop.AnonClassName
-import typingsSlinky.reapop.AnonEnterTimeout
-import typingsSlinky.reapop.AnonMain
+import typingsSlinky.reapop.anon.ClassName
+import typingsSlinky.reapop.anon.EnterTimeout
+import typingsSlinky.reapop.anon.Main
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait NotificationSystemTheme extends js.Object {
-  var notificationClassName: js.UndefOr[AnonButton] = js.native
-  var notificationsContainerClassName: js.UndefOr[AnonMain] = js.native
-  var notificationsContainerTransition: js.UndefOr[AnonEnterTimeout] = js.native
-  var notificationsSystem: js.UndefOr[AnonClassName] = js.native
+  var notificationClassName: js.UndefOr[typingsSlinky.reapop.anon.Button] = js.native
+  var notificationsContainerClassName: js.UndefOr[Main] = js.native
+  var notificationsContainerTransition: js.UndefOr[EnterTimeout] = js.native
+  var notificationsSystem: js.UndefOr[ClassName] = js.native
   var smallScreenMin: js.UndefOr[Double] = js.native
 }
 
@@ -30,7 +29,7 @@ object NotificationSystemTheme {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withNotificationClassName(value: AnonButton): Self = {
+    def withNotificationClassName(value: typingsSlinky.reapop.anon.Button): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notificationClassName")(value.asInstanceOf[js.Any])
         ret
@@ -42,7 +41,7 @@ object NotificationSystemTheme {
         ret
     }
     @scala.inline
-    def withNotificationsContainerClassName(value: AnonMain): Self = {
+    def withNotificationsContainerClassName(value: Main): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notificationsContainerClassName")(value.asInstanceOf[js.Any])
         ret
@@ -54,7 +53,7 @@ object NotificationSystemTheme {
         ret
     }
     @scala.inline
-    def withNotificationsContainerTransition(value: AnonEnterTimeout): Self = {
+    def withNotificationsContainerTransition(value: EnterTimeout): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notificationsContainerTransition")(value.asInstanceOf[js.Any])
         ret
@@ -66,7 +65,7 @@ object NotificationSystemTheme {
         ret
     }
     @scala.inline
-    def withNotificationsSystem(value: AnonClassName): Self = {
+    def withNotificationsSystem(value: ClassName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notificationsSystem")(value.asInstanceOf[js.Any])
         ret

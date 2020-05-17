@@ -5,7 +5,8 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactRef
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.nukaCarousel.AnonContainerClassName
+import typingsSlinky.nukaCarousel.anon.ContainerClassName
+import typingsSlinky.nukaCarousel.anon.slideActioninCarouselSlid
 import typingsSlinky.nukaCarousel.mod.CSSProperties
 import typingsSlinky.nukaCarousel.mod.CarouselCellAlignProp
 import typingsSlinky.nukaCarousel.mod.CarouselControlContainerProp
@@ -18,7 +19,6 @@ import typingsSlinky.nukaCarousel.mod.CarouselSlidesToScrollProp
 import typingsSlinky.nukaCarousel.mod.CarouselTransitionModeProp
 import typingsSlinky.nukaCarousel.mod.default
 import typingsSlinky.nukaCarousel.nukaCarouselStrings.zoom
-import typingsSlinky.nukaCarousel.slideActioninCarouselSlid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -53,7 +53,7 @@ object NukaCarousel {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def defaultControlsConfig(value: AnonContainerClassName): this.type = set("defaultControlsConfig", value.asInstanceOf[js.Any])
+    def defaultControlsConfig(value: ContainerClassName): this.type = set("defaultControlsConfig", value.asInstanceOf[js.Any])
     @scala.inline
     def disableAnimation(value: Boolean): this.type = set("disableAnimation", value.asInstanceOf[js.Any])
     @scala.inline

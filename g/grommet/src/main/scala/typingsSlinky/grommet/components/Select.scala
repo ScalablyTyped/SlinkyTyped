@@ -4,8 +4,8 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.grommet.AnonLeft
-import typingsSlinky.grommet.AnonMultiple
+import typingsSlinky.grommet.anon.Left
+import typingsSlinky.grommet.anon.Multiple
 import typingsSlinky.grommet.dropMod.DropProps
 import typingsSlinky.grommet.grommetStrings.large
 import typingsSlinky.grommet.grommetStrings.medium
@@ -44,7 +44,7 @@ object Select {
     @scala.inline
     def disabledKey(value: String | (js.Function1[/* repeated */ js.Any, _])): this.type = set("disabledKey", value.asInstanceOf[js.Any])
     @scala.inline
-    def dropAlign(value: AnonLeft): this.type = set("dropAlign", value.asInstanceOf[js.Any])
+    def dropAlign(value: Left): this.type = set("dropAlign", value.asInstanceOf[js.Any])
     @scala.inline
     def dropHeight(value: xsmall | small | medium | large | xlarge | String): this.type = set("dropHeight", value.asInstanceOf[js.Any])
     @scala.inline
@@ -72,7 +72,7 @@ object Select {
     @scala.inline
     def margin(value: MarginType): this.type = set("margin", value.asInstanceOf[js.Any])
     @scala.inline
-    def messages(value: AnonMultiple): this.type = set("messages", value.asInstanceOf[js.Any])
+    def messages(value: Multiple): this.type = set("messages", value.asInstanceOf[js.Any])
     @scala.inline
     def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
     @scala.inline

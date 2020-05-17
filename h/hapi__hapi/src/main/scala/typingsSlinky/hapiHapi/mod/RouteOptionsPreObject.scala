@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RouteOptionsPreObject extends js.Object {
+trait RouteOptionsPreObject extends RouteOptionsPreAllOptions {
   /**
     * key name used to assign the response of the method to in request.pre and request.preResponses.
     */

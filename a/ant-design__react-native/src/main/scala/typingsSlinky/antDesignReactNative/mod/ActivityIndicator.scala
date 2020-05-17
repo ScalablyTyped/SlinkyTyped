@@ -1,7 +1,7 @@
 package typingsSlinky.antDesignReactNative.mod
 
-import typingsSlinky.antDesignReactNative.AnonAnimating
 import typingsSlinky.antDesignReactNative.activityIndicatorMod.default
+import typingsSlinky.antDesignReactNative.anon.Animating
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +14,6 @@ class ActivityIndicator () extends default
 @JSImport("@ant-design/react-native", "ActivityIndicator")
 @js.native
 object ActivityIndicator extends js.Object {
-  var defaultProps: AnonAnimating = js.native
+  var defaultProps: Animating = js.native
 }
 

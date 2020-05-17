@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait JSXOpeningFragment
   extends BaseNode
-     with _Node {
+     with Node {
   @JSName("type")
   var type_JSXOpeningFragment: typingsSlinky.estreeJsx.estreeJsxStrings.JSXOpeningFragment = js.native
 }

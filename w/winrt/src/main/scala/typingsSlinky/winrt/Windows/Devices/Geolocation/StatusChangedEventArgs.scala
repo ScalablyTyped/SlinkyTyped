@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Devices.Geolocation.StatusChangedEventArgs")
 @js.native
-class StatusChangedEventArgs () extends IStatusChangedEventArgs
+trait StatusChangedEventArgs extends IStatusChangedEventArgs
+
+object StatusChangedEventArgs {
+  @scala.inline
+  def apply(status: PositionStatus): StatusChangedEventArgs = {
+    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
+    __obj.asInstanceOf[StatusChangedEventArgs]
+  }
+}
 

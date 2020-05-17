@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.CustomOptimization")
 @js.native
-class CustomOptimization () extends SceneOptimization {
+trait CustomOptimization extends SceneOptimization {
   /**
     * Callback called to apply the custom optimization.
     */
@@ -15,5 +14,39 @@ class CustomOptimization () extends SceneOptimization {
     * Callback called to get custom description
     */
   def onGetDescription(): String = js.native
+}
+
+object CustomOptimization {
+  @scala.inline
+  def apply(
+    apply: (Scene, SceneOptimizer) => Boolean,
+    getDescription: () => String,
+    onApply: (Scene, SceneOptimizer) => Boolean,
+    onGetDescription: () => String,
+    priority: Double
+  ): CustomOptimization = {
+    val __obj = js.Dynamic.literal(apply = js.Any.fromFunction2(apply), getDescription = js.Any.fromFunction0(getDescription), onApply = js.Any.fromFunction2(onApply), onGetDescription = js.Any.fromFunction0(onGetDescription), priority = priority.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CustomOptimization]
+  }
+  @scala.inline
+  implicit class CustomOptimizationOps[Self <: CustomOptimization] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnApply(value: (Scene, SceneOptimizer) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onApply")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withOnGetDescription(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onGetDescription")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

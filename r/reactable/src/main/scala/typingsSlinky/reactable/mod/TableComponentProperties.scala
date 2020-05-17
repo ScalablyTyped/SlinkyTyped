@@ -1,6 +1,6 @@
 package typingsSlinky.reactable.mod
 
-import typingsSlinky.reactable.AnonColumn
+import typingsSlinky.reactable.anon.Column
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait TableComponentProperties[T] extends js.Object {
   var columns: js.UndefOr[js.Array[ColumnsType]] = js.native
   var currentPage: js.UndefOr[Double] = js.native
   var data: js.UndefOr[js.Array[T]] = js.native
-  var defaultSort: js.UndefOr[AnonColumn] = js.native
+  var defaultSort: js.UndefOr[Column] = js.native
   var filterBy: js.UndefOr[String] = js.native
   var filterable: js.UndefOr[js.Array[String]] = js.native
   var hideFilterInput: js.UndefOr[Boolean] = js.native
@@ -85,7 +85,7 @@ object TableComponentProperties {
         ret
     }
     @scala.inline
-    def withDefaultSort(value: AnonColumn): Self[T] = {
+    def withDefaultSort(value: Column): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSort")(value.asInstanceOf[js.Any])
         ret

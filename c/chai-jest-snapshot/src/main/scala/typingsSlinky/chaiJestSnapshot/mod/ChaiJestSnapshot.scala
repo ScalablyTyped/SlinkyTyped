@@ -1,7 +1,7 @@
 package typingsSlinky.chaiJestSnapshot.mod
 
-import typingsSlinky.chai.Chai_.ChaiPlugin
-import typingsSlinky.mocha.Mocha_.IBeforeAndAfterContext
+import typingsSlinky.chai.Chai.ChaiPlugin
+import typingsSlinky.mocha.Mocha.IBeforeAndAfterContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

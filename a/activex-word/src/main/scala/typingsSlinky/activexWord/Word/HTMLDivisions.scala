@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Word.HTMLDivisions")
 @js.native
-class HTMLDivisions protected () extends js.Object {
+trait HTMLDivisions extends js.Object {
   val Application: typingsSlinky.activexWord.Word.Application = js.native
   val Count: Double = js.native
   val Creator: Double = js.native

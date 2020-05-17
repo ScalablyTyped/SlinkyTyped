@@ -1,7 +1,7 @@
 package typingsSlinky.reactNative.mod
 
 import slinky.core.SyntheticEvent
-import typingsSlinky.reactNative.AnonStart
+import typingsSlinky.reactNative.anon.Start
 import typingsSlinky.reactNative.reactNativeStrings.characters
 import typingsSlinky.reactNative.reactNativeStrings.none
 import typingsSlinky.reactNative.reactNativeStrings.sentences
@@ -178,7 +178,7 @@ trait TextInputProps
     * The start and end of the text input's selection. Set start and end to
     * the same value to position the cursor.
     */
-  var selection: js.UndefOr[AnonStart] = js.native
+  var selection: js.UndefOr[Start] = js.native
   /**
     * The highlight (and cursor on ios) color of the text input
     */
@@ -565,7 +565,7 @@ object TextInputProps {
         ret
     }
     @scala.inline
-    def withSelection(value: AnonStart): Self = {
+    def withSelection(value: Start): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
         ret

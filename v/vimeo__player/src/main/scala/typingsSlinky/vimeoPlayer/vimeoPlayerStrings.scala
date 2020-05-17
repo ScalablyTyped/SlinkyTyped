@@ -1,7 +1,7 @@
 package typingsSlinky.vimeoPlayer
 
+import typingsSlinky.vimeoPlayer.mod.EventName
 import typingsSlinky.vimeoPlayer.mod.VimeoVideoQuality
-import typingsSlinky.vimeoPlayer.mod._EventName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -56,52 +56,52 @@ object vimeoPlayerStrings {
   sealed trait UnsupportedError extends js.Object
   
   @js.native
-  sealed trait bufferend extends _EventName
+  sealed trait bufferend extends EventName
   
   @js.native
-  sealed trait bufferstart extends _EventName
+  sealed trait bufferstart extends EventName
   
   @js.native
-  sealed trait cuechange extends _EventName
+  sealed trait cuechange extends EventName
   
   @js.native
-  sealed trait cuepoint extends _EventName
+  sealed trait cuepoint extends EventName
   
   @js.native
-  sealed trait ended extends _EventName
+  sealed trait ended extends EventName
   
   @js.native
-  sealed trait error extends _EventName
+  sealed trait error extends EventName
   
   @js.native
-  sealed trait loaded extends _EventName
+  sealed trait loaded extends EventName
   
   @js.native
-  sealed trait pause extends _EventName
+  sealed trait pause extends EventName
   
   @js.native
-  sealed trait play extends _EventName
+  sealed trait play extends EventName
   
   @js.native
-  sealed trait playbackratechange extends _EventName
+  sealed trait playbackratechange extends EventName
   
   @js.native
-  sealed trait progress extends _EventName
+  sealed trait progress extends EventName
   
   @js.native
-  sealed trait seeked extends _EventName
+  sealed trait seeked extends EventName
   
   @js.native
-  sealed trait seeking extends _EventName
+  sealed trait seeking extends EventName
   
   @js.native
-  sealed trait texttrackchange extends _EventName
+  sealed trait texttrackchange extends EventName
   
   @js.native
-  sealed trait timeupdate extends _EventName
+  sealed trait timeupdate extends EventName
   
   @js.native
-  sealed trait volumechange extends _EventName
+  sealed trait volumechange extends EventName
   
   @scala.inline
   def `1080p`: `1080p` = "1080p".asInstanceOf[`1080p`]

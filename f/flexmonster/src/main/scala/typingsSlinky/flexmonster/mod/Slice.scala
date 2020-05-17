@@ -1,8 +1,8 @@
 package typingsSlinky.flexmonster.mod
 
-import typingsSlinky.flexmonster.AnonColumn
-import typingsSlinky.flexmonster.AnonDrillAll
-import typingsSlinky.flexmonster.AnonExpandAll
+import typingsSlinky.flexmonster.anon.Column
+import typingsSlinky.flexmonster.anon.DrillAll
+import typingsSlinky.flexmonster.anon.ExpandAll
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,13 +11,13 @@ import scala.scalajs.js.annotation._
 trait Slice extends js.Object {
   var columns: js.UndefOr[js.Array[Hierarchy]] = js.native
   var drillThrough: js.UndefOr[js.Array[String]] = js.native
-  var drills: js.UndefOr[AnonDrillAll] = js.native
-  var expands: js.UndefOr[AnonExpandAll] = js.native
+  var drills: js.UndefOr[DrillAll] = js.native
+  var expands: js.UndefOr[ExpandAll] = js.native
   var flatOrder: js.UndefOr[js.Array[String]] = js.native
   var measures: js.UndefOr[js.Array[Measure]] = js.native
   var reportFilters: js.UndefOr[js.Array[Hierarchy]] = js.native
   var rows: js.UndefOr[js.Array[Hierarchy]] = js.native
-  var sorting: js.UndefOr[AnonColumn] = js.native
+  var sorting: js.UndefOr[Column] = js.native
 }
 
 object Slice {
@@ -57,7 +57,7 @@ object Slice {
         ret
     }
     @scala.inline
-    def withDrills(value: AnonDrillAll): Self = {
+    def withDrills(value: DrillAll): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("drills")(value.asInstanceOf[js.Any])
         ret
@@ -69,7 +69,7 @@ object Slice {
         ret
     }
     @scala.inline
-    def withExpands(value: AnonExpandAll): Self = {
+    def withExpands(value: ExpandAll): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("expands")(value.asInstanceOf[js.Any])
         ret
@@ -129,7 +129,7 @@ object Slice {
         ret
     }
     @scala.inline
-    def withSorting(value: AnonColumn): Self = {
+    def withSorting(value: Column): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sorting")(value.asInstanceOf[js.Any])
         ret

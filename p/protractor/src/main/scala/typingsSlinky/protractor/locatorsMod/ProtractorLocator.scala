@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ProtractorLocator extends js.Object {
+trait ProtractorLocator extends Locator {
   var column: js.UndefOr[js.Function1[/* index */ String, Locator]] = js.native
   var row: js.UndefOr[js.Function1[/* index */ Double, Locator]] = js.native
   @JSName("toString")

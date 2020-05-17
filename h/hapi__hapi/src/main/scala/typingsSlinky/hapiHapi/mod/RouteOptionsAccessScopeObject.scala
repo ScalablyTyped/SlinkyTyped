@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RouteOptionsAccessScopeObject extends _RouteOptionsAccessObject {
+trait RouteOptionsAccessScopeObject extends RouteOptionsAccessObject {
   var scope: RouteOptionsAccessScope = js.native
 }
 

@@ -1,6 +1,7 @@
 package typingsSlinky.authmosphere
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.authmosphere.anon.Token
 import typingsSlinky.authmosphere.oauthconfigMod.TokenCacheOAuthConfig
 import typingsSlinky.authmosphere.tokenCacheConfigMod.CacheConfig
 import typingsSlinky.authmosphere.tokenCacheConfigMod.TokenCacheOptions

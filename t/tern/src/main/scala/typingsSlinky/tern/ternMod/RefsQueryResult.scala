@@ -1,6 +1,6 @@
 package typingsSlinky.tern.ternMod
 
-import typingsSlinky.tern.AnonEnd
+import typingsSlinky.tern.anon.End
 import typingsSlinky.tern.ternStrings.global
 import typingsSlinky.tern.ternStrings.local
 import scala.scalajs.js
@@ -11,14 +11,14 @@ import scala.scalajs.js.annotation._
 trait RefsQueryResult extends js.Object {
   /** The name of the variable or property */
   var name: String = js.native
-  var refs: js.Array[AnonEnd] = js.native
+  var refs: js.Array[End] = js.native
   /** for variables: a type property holding either "global" or "local". */
   var `type`: js.UndefOr[global | local] = js.native
 }
 
 object RefsQueryResult {
   @scala.inline
-  def apply(name: String, refs: js.Array[AnonEnd]): RefsQueryResult = {
+  def apply(name: String, refs: js.Array[End]): RefsQueryResult = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], refs = refs.asInstanceOf[js.Any])
     __obj.asInstanceOf[RefsQueryResult]
   }
@@ -35,7 +35,7 @@ object RefsQueryResult {
         ret
     }
     @scala.inline
-    def withRefs(value: js.Array[AnonEnd]): Self = {
+    def withRefs(value: js.Array[End]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("refs")(value.asInstanceOf[js.Any])
         ret

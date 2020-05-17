@@ -14,17 +14,17 @@ object SimpleTextEditor {
   
   def apply(p: js.Any): Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Editors.SimpleTextEditor
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Editors.SimpleTextEditor
   ] = new Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Editors.SimpleTextEditor
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Editors.SimpleTextEditor
   ](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: SimpleTextEditor.type): Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Editors.SimpleTextEditor
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Editors.SimpleTextEditor
   ] = new Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Editors.SimpleTextEditor
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Editors.SimpleTextEditor
   ](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -5,9 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.UI.Notifications.TileNotification")
 @js.native
-class TileNotification protected () extends ITileNotification {
-  def this(content: XmlDocument) = this()
+trait TileNotification extends ITileNotification
+
+object TileNotification {
+  @scala.inline
+  def apply(content: XmlDocument, expirationTime: js.Date, tag: String): TileNotification = {
+    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], expirationTime = expirationTime.asInstanceOf[js.Any], tag = tag.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TileNotification]
+  }
 }
 

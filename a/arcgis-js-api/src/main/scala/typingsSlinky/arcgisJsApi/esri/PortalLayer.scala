@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +14,25 @@ trait PortalLayer extends js.Object {
   var portalItem: PortalItem = js.native
 }
 
-@JSGlobal("__esri.PortalLayer")
-@js.native
-object PortalLayer extends TopLevel[PortalLayerConstructor]
+object PortalLayer {
+  @scala.inline
+  def apply(portalItem: PortalItem): PortalLayer = {
+    val __obj = js.Dynamic.literal(portalItem = portalItem.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PortalLayer]
+  }
+  @scala.inline
+  implicit class PortalLayerOps[Self <: PortalLayer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPortalItem(value: PortalItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("portalItem")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

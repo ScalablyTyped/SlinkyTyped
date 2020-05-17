@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object TextSettings {
-  type Param = (typingsSlinky.semanticUiForm.PickImplunspecifiedRule | typingsSlinky.semanticUiForm.PickImplunspecifiedField) with typingsSlinky.semanticUiForm.PartialPickImplkeyofImplUnspecifiedField
+  type Param = (typingsSlinky.semanticUiForm.anon.PickImplunspecifiedRule | typingsSlinky.semanticUiForm.anon.PickImplunspecifiedField) with typingsSlinky.semanticUiForm.anon.PartialPickImplkeyofImplUnspecifiedField
 }

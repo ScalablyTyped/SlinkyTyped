@@ -4,8 +4,8 @@ import org.scalajs.dom.raw.EventListenerOptions
 import typingsSlinky.cssFontLoadingModule.cssFontLoadingModuleStrings.loading
 import typingsSlinky.cssFontLoadingModule.cssFontLoadingModuleStrings.loadingdone
 import typingsSlinky.cssFontLoadingModule.cssFontLoadingModuleStrings.loadingerror
-import typingsSlinky.cssFontLoadingModule.mod._Global_.FontFace
-import typingsSlinky.cssFontLoadingModule.mod._Global_.FontFaceSetLoadEvent
+import typingsSlinky.cssFontLoadingModule.mod.global.FontFace
+import typingsSlinky.cssFontLoadingModule.mod.global.FontFaceSetLoadEvent
 import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.EventTarget
 import typingsSlinky.std.Set

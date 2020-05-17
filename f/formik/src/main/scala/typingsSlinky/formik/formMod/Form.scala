@@ -2,7 +2,7 @@ package typingsSlinky.formik.formMod
 
 import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
-import typingsSlinky.formik.PickFormHTMLAttributesHTM
+import typingsSlinky.formik.anon.PickFormHTMLAttributesHTM
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

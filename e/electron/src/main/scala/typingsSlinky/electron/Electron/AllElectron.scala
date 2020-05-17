@@ -2,20 +2,21 @@ package typingsSlinky.electron.Electron
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.electron.TypeofBrowserView
-import typingsSlinky.electron.TypeofBrowserWindow
-import typingsSlinky.electron.TypeofMenu
-import typingsSlinky.electron.TypeofNativeImage
-import typingsSlinky.electron.TypeofNotification
-import typingsSlinky.electron.TypeofSession
-import typingsSlinky.electron.TypeofTouchBar
-import typingsSlinky.electron.TypeofWebContents
+import typingsSlinky.electron.anon.TypeofBrowserView
+import typingsSlinky.electron.anon.TypeofBrowserWindow
+import typingsSlinky.electron.anon.TypeofMenu
+import typingsSlinky.electron.anon.TypeofNativeImage
+import typingsSlinky.electron.anon.TypeofNotification
+import typingsSlinky.electron.anon.TypeofSession
+import typingsSlinky.electron.anon.TypeofTouchBar
+import typingsSlinky.electron.anon.TypeofWebContents
 import typingsSlinky.electron.electronStrings.host
 import typingsSlinky.electron.electronStrings.hostname
 import typingsSlinky.electron.electronStrings.method
 import typingsSlinky.electron.electronStrings.partition
 import typingsSlinky.electron.electronStrings.path
 import typingsSlinky.electron.electronStrings.port
+import typingsSlinky.electron.electronStrings.protocol
 import typingsSlinky.electron.electronStrings.redirect
 import typingsSlinky.electron.electronStrings.url
 import scala.scalajs.js
@@ -27,12 +28,12 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.electron.Electron.RendererInterface because var conflicts: clipboard, crashReporter, nativeImage, shell. Inlined BrowserWindowProxy, contextBridge, desktopCapturer, ipcRenderer, remote, webFrame, webviewTag */ @js.native
 trait AllElectron extends MainInterface {
   var BrowserWindowProxy: Instantiable0[typingsSlinky.electron.Electron.BrowserWindowProxy] = js.native
-  var contextBridge: ContextBridge_ = js.native
-  var desktopCapturer: DesktopCapturer_ = js.native
-  var ipcRenderer: IpcRenderer_ = js.native
-  var remote: Remote_ = js.native
-  var webFrame: WebFrame_ = js.native
-  var webviewTag: WebviewTag_ = js.native
+  var contextBridge: ContextBridge = js.native
+  var desktopCapturer: DesktopCapturer = js.native
+  var ipcRenderer: IpcRenderer = js.native
+  var remote: Remote = js.native
+  var webFrame: WebFrame = js.native
+  var webviewTag: WebviewTag = js.native
 }
 
 object AllElectron {
@@ -42,7 +43,7 @@ object AllElectron {
     BrowserWindow: TypeofBrowserWindow,
     BrowserWindowProxy: Instantiable0[BrowserWindowProxy],
     ClientRequest: Instantiable1[
-      /* options */ method | url | typingsSlinky.electron.electronStrings.session | partition | typingsSlinky.electron.electronStrings.protocol | host | hostname | port | path | redirect, 
+      /* options */ method | url | typingsSlinky.electron.electronStrings.session | partition | protocol | host | hostname | port | path | redirect, 
       ClientRequest
     ],
     Cookies: Instantiable0[Cookies],
@@ -55,32 +56,32 @@ object AllElectron {
     TouchBar: TypeofTouchBar,
     Tray: Instantiable1[/* image */ NativeImage_ | String, Tray],
     WebRequest: Instantiable0[WebRequest],
-    app: App_,
-    autoUpdater: AutoUpdater_,
-    clipboard: Clipboard_,
-    contentTracing: ContentTracing_,
-    contextBridge: ContextBridge_,
-    crashReporter: CrashReporter_,
-    desktopCapturer: DesktopCapturer_,
-    dialog: Dialog_,
-    globalShortcut: GlobalShortcut_,
-    inAppPurchase: InAppPurchase_,
-    ipcMain: IpcMain_,
-    ipcRenderer: IpcRenderer_,
+    app: App,
+    autoUpdater: AutoUpdater,
+    clipboard: Clipboard,
+    contentTracing: ContentTracing,
+    contextBridge: ContextBridge,
+    crashReporter: CrashReporter,
+    desktopCapturer: DesktopCapturer,
+    dialog: Dialog,
+    globalShortcut: GlobalShortcut,
+    inAppPurchase: InAppPurchase,
+    ipcMain: IpcMain,
+    ipcRenderer: IpcRenderer,
     nativeImage: TypeofNativeImage,
-    net: Net_,
-    netLog: NetLog_,
-    powerMonitor: PowerMonitor_,
-    powerSaveBlocker: PowerSaveBlocker_,
-    protocol: Protocol_,
-    remote: Remote_,
-    screen: Screen_,
+    net: Net,
+    netLog: NetLog,
+    powerMonitor: PowerMonitor,
+    powerSaveBlocker: PowerSaveBlocker,
+    protocol: Protocol,
+    remote: Remote,
+    screen: Screen,
     session: TypeofSession,
-    shell: Shell_,
-    systemPreferences: SystemPreferences_,
+    shell: Shell,
+    systemPreferences: SystemPreferences,
     webContents: TypeofWebContents,
-    webFrame: WebFrame_,
-    webviewTag: WebviewTag_
+    webFrame: WebFrame,
+    webviewTag: WebviewTag
   ): AllElectron = {
     val __obj = js.Dynamic.literal(BrowserView = BrowserView.asInstanceOf[js.Any], BrowserWindow = BrowserWindow.asInstanceOf[js.Any], BrowserWindowProxy = BrowserWindowProxy.asInstanceOf[js.Any], ClientRequest = ClientRequest.asInstanceOf[js.Any], Cookies = Cookies.asInstanceOf[js.Any], Debugger = Debugger.asInstanceOf[js.Any], DownloadItem = DownloadItem.asInstanceOf[js.Any], IncomingMessage = IncomingMessage.asInstanceOf[js.Any], Menu = Menu.asInstanceOf[js.Any], MenuItem = MenuItem.asInstanceOf[js.Any], Notification = Notification.asInstanceOf[js.Any], TouchBar = TouchBar.asInstanceOf[js.Any], Tray = Tray.asInstanceOf[js.Any], WebRequest = WebRequest.asInstanceOf[js.Any], app = app.asInstanceOf[js.Any], autoUpdater = autoUpdater.asInstanceOf[js.Any], clipboard = clipboard.asInstanceOf[js.Any], contentTracing = contentTracing.asInstanceOf[js.Any], contextBridge = contextBridge.asInstanceOf[js.Any], crashReporter = crashReporter.asInstanceOf[js.Any], desktopCapturer = desktopCapturer.asInstanceOf[js.Any], dialog = dialog.asInstanceOf[js.Any], globalShortcut = globalShortcut.asInstanceOf[js.Any], inAppPurchase = inAppPurchase.asInstanceOf[js.Any], ipcMain = ipcMain.asInstanceOf[js.Any], ipcRenderer = ipcRenderer.asInstanceOf[js.Any], nativeImage = nativeImage.asInstanceOf[js.Any], net = net.asInstanceOf[js.Any], netLog = netLog.asInstanceOf[js.Any], powerMonitor = powerMonitor.asInstanceOf[js.Any], powerSaveBlocker = powerSaveBlocker.asInstanceOf[js.Any], protocol = protocol.asInstanceOf[js.Any], remote = remote.asInstanceOf[js.Any], screen = screen.asInstanceOf[js.Any], session = session.asInstanceOf[js.Any], shell = shell.asInstanceOf[js.Any], systemPreferences = systemPreferences.asInstanceOf[js.Any], webContents = webContents.asInstanceOf[js.Any], webFrame = webFrame.asInstanceOf[js.Any], webviewTag = webviewTag.asInstanceOf[js.Any])
     __obj.asInstanceOf[AllElectron]
@@ -98,37 +99,37 @@ object AllElectron {
         ret
     }
     @scala.inline
-    def withContextBridge(value: ContextBridge_): Self = {
+    def withContextBridge(value: ContextBridge): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contextBridge")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withDesktopCapturer(value: DesktopCapturer_): Self = {
+    def withDesktopCapturer(value: DesktopCapturer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("desktopCapturer")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withIpcRenderer(value: IpcRenderer_): Self = {
+    def withIpcRenderer(value: IpcRenderer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ipcRenderer")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withRemote(value: Remote_): Self = {
+    def withRemote(value: Remote): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("remote")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withWebFrame(value: WebFrame_): Self = {
+    def withWebFrame(value: WebFrame): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("webFrame")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withWebviewTag(value: WebviewTag_): Self = {
+    def withWebviewTag(value: WebviewTag): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("webviewTag")(value.asInstanceOf[js.Any])
         ret

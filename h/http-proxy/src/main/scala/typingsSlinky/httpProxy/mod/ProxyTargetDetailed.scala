@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ProxyTargetDetailed extends js.Object {
+trait ProxyTargetDetailed extends ProxyTarget {
   var ca: js.UndefOr[String] = js.native
   var cert: js.UndefOr[String] = js.native
   var ciphers: js.UndefOr[String] = js.native

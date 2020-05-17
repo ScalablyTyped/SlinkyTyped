@@ -1,7 +1,7 @@
 package typingsSlinky.pixiJs.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.pixiJs.AnonFont
+import typingsSlinky.pixiJs.anon.Font
 import typingsSlinky.std.XMLDocument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -37,7 +37,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class BitmapText protected ()
   extends typingsSlinky.pixiJs.PIXI.BitmapText {
-  def this(text: String, style: AnonFont) = this()
+  def this(text: String, style: Font) = this()
 }
 
 /* static members */

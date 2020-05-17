@@ -1,6 +1,6 @@
 package typingsSlinky.jaegerClient.mod
 
-import typingsSlinky.jaegerClient.Typeofprometheus
+import typingsSlinky.jaegerClient.anon.Typeofprometheus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

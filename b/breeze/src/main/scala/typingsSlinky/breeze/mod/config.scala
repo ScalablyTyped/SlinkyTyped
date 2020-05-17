@@ -1,8 +1,8 @@
 package typingsSlinky.breeze.mod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.breeze.breeze.config.AdapterInstancesConfig
 import typingsSlinky.breeze.breeze.promises.IPromiseService
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ object config extends js.Object {
   var ajax: String = js.native
   var dataService: String = js.native
   var functionRegistry: js.Object = js.native
-  var interfaceInitialized: Event_ = js.native
+  var interfaceInitialized: Event = js.native
   var interfaceRegistry: js.Object = js.native
   var objectRegistry: js.Object = js.native
   var stringifyPad: String = js.native

@@ -1,14 +1,14 @@
 package typingsSlinky.rascal.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.rascal.AnonSizeType
+import typingsSlinky.rascal.anon.SizeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Redelivery extends js.Object {
-  var counters: js.UndefOr[StringDictionary[AnonSizeType]] = js.native
+  var counters: js.UndefOr[StringDictionary[SizeType]] = js.native
 }
 
 object Redelivery {
@@ -24,7 +24,7 @@ object Redelivery {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCounters(value: StringDictionary[AnonSizeType]): Self = {
+    def withCounters(value: StringDictionary[SizeType]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("counters")(value.asInstanceOf[js.Any])
         ret

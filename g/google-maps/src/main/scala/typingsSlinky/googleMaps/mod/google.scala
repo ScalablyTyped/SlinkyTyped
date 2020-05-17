@@ -1,6 +1,6 @@
 package typingsSlinky.googleMaps.mod
 
-import typingsSlinky.googleMaps.Typeofmaps
+import typingsSlinky.googleMaps.anon.Typeofmaps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

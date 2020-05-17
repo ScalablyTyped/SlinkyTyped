@@ -1,8 +1,8 @@
 package typingsSlinky.oracleOraclejet.ojdatagridMod.ojDataGrid
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.oracleOraclejet.AnonColumnK
-import typingsSlinky.oracleOraclejet.AnonColumnRow
+import typingsSlinky.oracleOraclejet.anon.ColumnK
+import typingsSlinky.oracleOraclejet.anon.ColumnRow
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.edit
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.navigation
@@ -17,9 +17,9 @@ trait CellContext[K, D] extends js.Object {
   var componentElement: Element = js.native
   var data: D = js.native
   var datasource: (DataProvider[K, D]) | Null = js.native
-  var extents: AnonColumnRow = js.native
-  var indexes: AnonColumnRow = js.native
-  var keys: AnonColumnK[K] = js.native
+  var extents: ColumnRow = js.native
+  var indexes: ColumnRow = js.native
+  var keys: ColumnK[K] = js.native
   var mode: edit | navigation = js.native
   var parentElement: Element = js.native
 }
@@ -30,9 +30,9 @@ object CellContext {
     cell: D,
     componentElement: Element,
     data: D,
-    extents: AnonColumnRow,
-    indexes: AnonColumnRow,
-    keys: AnonColumnK[K],
+    extents: ColumnRow,
+    indexes: ColumnRow,
+    keys: ColumnK[K],
     mode: edit | navigation,
     parentElement: Element
   ): CellContext[K, D] = {
@@ -64,19 +64,19 @@ object CellContext {
         ret
     }
     @scala.inline
-    def withExtents(value: AnonColumnRow): Self[K, D] = {
+    def withExtents(value: ColumnRow): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("extents")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withIndexes(value: AnonColumnRow): Self[K, D] = {
+    def withIndexes(value: ColumnRow): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("indexes")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withKeys(value: AnonColumnK[K]): Self[K, D] = {
+    def withKeys(value: ColumnK[K]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
         ret

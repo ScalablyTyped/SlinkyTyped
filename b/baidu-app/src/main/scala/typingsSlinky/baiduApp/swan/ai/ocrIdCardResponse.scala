@@ -1,7 +1,7 @@
 package typingsSlinky.baiduApp.swan.ai
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.baiduApp.AnonLocation
+import typingsSlinky.baiduApp.anon.Location
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait ocrIdCardResponse extends js.Object {
   var risk_type: String = js.native
    // 识别结果数，表示words_result的元素个数。
   var words_result: // 定位和识别结果
-  StringDictionary[AnonLocation] = js.native
+  StringDictionary[Location] = js.native
    // 唯一的log id，用于问题定位。
   var words_result_num: Double = js.native
 }
@@ -33,7 +33,7 @@ object ocrIdCardResponse {
     log_id: String,
     risk_type: String,
     words_result: // 定位和识别结果
-  StringDictionary[AnonLocation],
+  StringDictionary[Location],
     words_result_num: Double
   ): ocrIdCardResponse = {
     val __obj = js.Dynamic.literal(direction = direction.asInstanceOf[js.Any], edit_tool = edit_tool.asInstanceOf[js.Any], image_status = image_status.asInstanceOf[js.Any], log_id = log_id.asInstanceOf[js.Any], risk_type = risk_type.asInstanceOf[js.Any], words_result = words_result.asInstanceOf[js.Any], words_result_num = words_result_num.asInstanceOf[js.Any])
@@ -77,7 +77,7 @@ object ocrIdCardResponse {
     }
     @scala.inline
     def withWords_result(value: // 定位和识别结果
-    StringDictionary[AnonLocation]): Self = {
+    StringDictionary[Location]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("words_result")(value.asInstanceOf[js.Any])
         ret

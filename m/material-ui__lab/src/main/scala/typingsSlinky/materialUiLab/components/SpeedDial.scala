@@ -1,5 +1,6 @@
 package typingsSlinky.materialUiLab.components
 
+import org.scalajs.dom.raw.Event
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
@@ -8,7 +9,7 @@ import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.withStylesMod.ClassNameMap
-import typingsSlinky.materialUiLab.PartialFabProps
+import typingsSlinky.materialUiLab.anon.PartialFabProps
 import typingsSlinky.materialUiLab.materialUiLabStrings.down
 import typingsSlinky.materialUiLab.materialUiLabStrings.left
 import typingsSlinky.materialUiLab.materialUiLabStrings.right
@@ -19,9 +20,8 @@ import typingsSlinky.materialUiLab.speedDialSpeedDialMod.SpeedDialClassKey
 import typingsSlinky.materialUiLab.speedDialSpeedDialMod.SpeedDialProps
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.reactTransitionGroup.AnonAppear
+import typingsSlinky.reactTransitionGroup.anon.Appear
 import typingsSlinky.reactTransitionGroup.transitionMod.TransitionProps
-import typingsSlinky.std.Event_
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -67,9 +67,9 @@ object SpeedDial {
     @scala.inline
     def innerRefNull: this.type = set("innerRef", null)
     @scala.inline
-    def onClose(value: (/* event */ SyntheticEvent[Event_, js.Object], /* reason */ CloseReason) => Unit): this.type = set("onClose", js.Any.fromFunction2(value))
+    def onClose(value: (/* event */ SyntheticEvent[Event, js.Object], /* reason */ CloseReason) => Unit): this.type = set("onClose", js.Any.fromFunction2(value))
     @scala.inline
-    def onOpen(value: (/* event */ SyntheticEvent[Event_, js.Object], /* reason */ OpenReason) => Unit): this.type = set("onOpen", js.Any.fromFunction2(value))
+    def onOpen(value: (/* event */ SyntheticEvent[Event, js.Object], /* reason */ OpenReason) => Unit): this.type = set("onOpen", js.Any.fromFunction2(value))
     @scala.inline
     def openIconReactElement(value: ReactElement): this.type = set("openIcon", value.asInstanceOf[js.Any])
     @scala.inline
@@ -77,7 +77,7 @@ object SpeedDial {
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
-    def transitionDuration(value: Double | AnonAppear): this.type = set("transitionDuration", value.asInstanceOf[js.Any])
+    def transitionDuration(value: Double | Appear): this.type = set("transitionDuration", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SpeedDialProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("google.earth.GEPlugin")
 @js.native
-class GEPlugin () extends js.Object {
+trait GEPlugin extends js.Object {
   /**
     * Specifies that altitudes are to be interpreted as meters above or below sea level, regardless of the actual elevation of the terrain beneath the object.
     * For example, if you set the altitude of an object to 10 meters with an absolute altitude mode, the object will appear to be at ground level if the terrain beneath is also 10 meters above sea level.
@@ -449,5 +448,694 @@ class GEPlugin () extends js.Object {
     * If the argument is null, then any existing active balloon will be hidden.
     */
   def setBalloon(newActiveBalloon: GEAbstractBalloon): Unit = js.native
+}
+
+object GEPlugin {
+  @scala.inline
+  def apply(
+    ALTITUDE_ABSOLUTE: KmlAltitudeModeEnum,
+    ALTITUDE_CLAMP_TO_GROUND: KmlAltitudeModeEnum,
+    ALTITUDE_CLAMP_TO_SEA_FLOOR: KmlAltitudeModeEnum,
+    ALTITUDE_RELATIVE_TO_GROUND: KmlAltitudeModeEnum,
+    ALTITUDE_RELATIVE_TO_SEA_FLOOR: KmlAltitudeModeEnum,
+    COLOR_INHERIT: KmlColorModeEnum,
+    COLOR_NORMAL: KmlColorModeEnum,
+    COLOR_RANDOM: KmlColorModeEnum,
+    HIT_TEST_BUILDINGS: GEHitTestModeEnum,
+    HIT_TEST_GLOBE: GEHitTestModeEnum,
+    HIT_TEST_TERRAIN: GEHitTestModeEnum,
+    LAYER_BORDERS: String,
+    LAYER_BUILDINGS: String,
+    LAYER_BUILDINGS_LOW_RESOLUTION: String,
+    LAYER_ROADS: String,
+    LAYER_TERRAIN: String,
+    LAYER_TREES: String,
+    LIST_ITEM_CHECK: KmlListItemTypeEnum,
+    LIST_ITEM_CHECK_HIDE_CHILDREN: KmlListItemTypeEnum,
+    LIST_ITEM_CHECK_OFF_ONLY: KmlListItemTypeEnum,
+    LIST_ITEM_RADIO_FOLDER: KmlListItemTypeEnum,
+    MAP_TYPE_EARTH: GEMapTypeEnum,
+    MAP_TYPE_SKY: GEMapTypeEnum,
+    NAVIGATION_CONTROL_LARGE: GENavigationControlEnum,
+    NAVIGATION_CONTROL_SMALL: GENavigationControlEnum,
+    OPTION_HISTORICAL_IMAGERY: GEViewerOptionsTypeEnum,
+    OPTION_STATE_DEFAULT: GEViewerOptionsValueEnum,
+    OPTION_STATE_DISABLED: GEViewerOptionsValueEnum,
+    OPTION_STATE_ENABLED: GEViewerOptionsValueEnum,
+    OPTION_STREET_VIEW: GEViewerOptionsTypeEnum,
+    OPTION_SUNLIGHT: GEViewerOptionsTypeEnum,
+    REFRESH_ON_CHANGE: KmlRefreshModeEnum,
+    REFRESH_ON_EXPIRE: KmlRefreshModeEnum,
+    REFRESH_ON_INTERVAL: KmlRefreshModeEnum,
+    SPEED_TELEPORT: Double,
+    UNITS_FRACTION: KmlUnitsEnum,
+    UNITS_INSET_PIXELS: KmlUnitsEnum,
+    UNITS_PIXELS: KmlUnitsEnum,
+    VIEW_REFRESH_NEVER: KmlViewRefreshModeEnum,
+    VIEW_REFRESH_ON_REGION: KmlViewRefreshModeEnum,
+    VIEW_REFRESH_ON_REQUEST: KmlViewRefreshModeEnum,
+    VIEW_REFRESH_ON_STOP: KmlViewRefreshModeEnum,
+    VISIBILITY_AUTO: GEVisibilityEnum,
+    VISIBILITY_HIDE: GEVisibilityEnum,
+    VISIBILITY_SHOW: GEVisibilityEnum,
+    createCamera: String => KmlCamera,
+    createDocument: String => KmlDocument,
+    createFeatureBalloon: String => GEFeatureBalloon,
+    createFolder: String => KmlFolder,
+    createGroundOverlay: String => KmlGroundOverlay,
+    createHtmlDivBalloon: String => GEHtmlDivBalloon,
+    createHtmlStringBalloon: String => GEHtmlStringBalloon,
+    createIcon: String => KmlIcon,
+    createLatLonAltBox: String => KmlLatLonAltBox,
+    createLatLonBox: String => KmlLatLonBox,
+    createLineString: String => KmlLineString,
+    createLinearRing: String => KmlLinearRing,
+    createLink: String => KmlLink,
+    createLocation: String => KmlLocation,
+    createLod: String => KmlLod,
+    createLookAt: String => KmlLookAt,
+    createModel: String => KmlModel,
+    createMultiGeometry: String => KmlMultiGeometry,
+    createNetworkLink: String => KmlNetworkLink,
+    createOrientation: String => KmlOrientation,
+    createPlacemark: String => KmlPlacemark,
+    createPoint: String => KmlPoint,
+    createPolygon: String => KmlPolygon,
+    createRegion: String => KmlRegion,
+    createScale: String => KmlScale,
+    createScreenOverlay: String => KmlScreenOverlay,
+    createStyle: String => KmlStyle,
+    createStyleMap: String => KmlStyleMap,
+    createTimeSpan: String => KmlTimeSpan,
+    createTimeStamp: String => KmlTimeStamp,
+    createViewerOptions: String => KmlViewerOptions,
+    getBalloon: () => GEAbstractBalloon,
+    getEarthVersion: () => String,
+    getElementById: String => KmlObject,
+    getElementByUrl: String => KmlObject,
+    getElementsByType: () => KmlObjectList[KmlObject],
+    getFeatures: () => GEFeatureContainer,
+    getGlobe: () => GEGlobe,
+    getLayerRoot: () => KmlLayerRoot,
+    getNavigationControl: () => GENavigationControl,
+    getOptions: () => GEOptions,
+    getPhotoOverlayViewer: () => GEPhotoOverlayViewer,
+    getPluginVersion: () => String,
+    getStreamingPercent: () => Double,
+    getSun: () => GESun,
+    getTime: () => GETime,
+    getTourPlayer: () => GETourPlayer,
+    getView: () => GEView,
+    getWindow: () => GEWindow,
+    parseKml: String => KmlObject,
+    setBalloon: GEAbstractBalloon => Unit
+  ): GEPlugin = {
+    val __obj = js.Dynamic.literal(ALTITUDE_ABSOLUTE = ALTITUDE_ABSOLUTE.asInstanceOf[js.Any], ALTITUDE_CLAMP_TO_GROUND = ALTITUDE_CLAMP_TO_GROUND.asInstanceOf[js.Any], ALTITUDE_CLAMP_TO_SEA_FLOOR = ALTITUDE_CLAMP_TO_SEA_FLOOR.asInstanceOf[js.Any], ALTITUDE_RELATIVE_TO_GROUND = ALTITUDE_RELATIVE_TO_GROUND.asInstanceOf[js.Any], ALTITUDE_RELATIVE_TO_SEA_FLOOR = ALTITUDE_RELATIVE_TO_SEA_FLOOR.asInstanceOf[js.Any], COLOR_INHERIT = COLOR_INHERIT.asInstanceOf[js.Any], COLOR_NORMAL = COLOR_NORMAL.asInstanceOf[js.Any], COLOR_RANDOM = COLOR_RANDOM.asInstanceOf[js.Any], HIT_TEST_BUILDINGS = HIT_TEST_BUILDINGS.asInstanceOf[js.Any], HIT_TEST_GLOBE = HIT_TEST_GLOBE.asInstanceOf[js.Any], HIT_TEST_TERRAIN = HIT_TEST_TERRAIN.asInstanceOf[js.Any], LAYER_BORDERS = LAYER_BORDERS.asInstanceOf[js.Any], LAYER_BUILDINGS = LAYER_BUILDINGS.asInstanceOf[js.Any], LAYER_BUILDINGS_LOW_RESOLUTION = LAYER_BUILDINGS_LOW_RESOLUTION.asInstanceOf[js.Any], LAYER_ROADS = LAYER_ROADS.asInstanceOf[js.Any], LAYER_TERRAIN = LAYER_TERRAIN.asInstanceOf[js.Any], LAYER_TREES = LAYER_TREES.asInstanceOf[js.Any], LIST_ITEM_CHECK = LIST_ITEM_CHECK.asInstanceOf[js.Any], LIST_ITEM_CHECK_HIDE_CHILDREN = LIST_ITEM_CHECK_HIDE_CHILDREN.asInstanceOf[js.Any], LIST_ITEM_CHECK_OFF_ONLY = LIST_ITEM_CHECK_OFF_ONLY.asInstanceOf[js.Any], LIST_ITEM_RADIO_FOLDER = LIST_ITEM_RADIO_FOLDER.asInstanceOf[js.Any], MAP_TYPE_EARTH = MAP_TYPE_EARTH.asInstanceOf[js.Any], MAP_TYPE_SKY = MAP_TYPE_SKY.asInstanceOf[js.Any], NAVIGATION_CONTROL_LARGE = NAVIGATION_CONTROL_LARGE.asInstanceOf[js.Any], NAVIGATION_CONTROL_SMALL = NAVIGATION_CONTROL_SMALL.asInstanceOf[js.Any], OPTION_HISTORICAL_IMAGERY = OPTION_HISTORICAL_IMAGERY.asInstanceOf[js.Any], OPTION_STATE_DEFAULT = OPTION_STATE_DEFAULT.asInstanceOf[js.Any], OPTION_STATE_DISABLED = OPTION_STATE_DISABLED.asInstanceOf[js.Any], OPTION_STATE_ENABLED = OPTION_STATE_ENABLED.asInstanceOf[js.Any], OPTION_STREET_VIEW = OPTION_STREET_VIEW.asInstanceOf[js.Any], OPTION_SUNLIGHT = OPTION_SUNLIGHT.asInstanceOf[js.Any], REFRESH_ON_CHANGE = REFRESH_ON_CHANGE.asInstanceOf[js.Any], REFRESH_ON_EXPIRE = REFRESH_ON_EXPIRE.asInstanceOf[js.Any], REFRESH_ON_INTERVAL = REFRESH_ON_INTERVAL.asInstanceOf[js.Any], SPEED_TELEPORT = SPEED_TELEPORT.asInstanceOf[js.Any], UNITS_FRACTION = UNITS_FRACTION.asInstanceOf[js.Any], UNITS_INSET_PIXELS = UNITS_INSET_PIXELS.asInstanceOf[js.Any], UNITS_PIXELS = UNITS_PIXELS.asInstanceOf[js.Any], VIEW_REFRESH_NEVER = VIEW_REFRESH_NEVER.asInstanceOf[js.Any], VIEW_REFRESH_ON_REGION = VIEW_REFRESH_ON_REGION.asInstanceOf[js.Any], VIEW_REFRESH_ON_REQUEST = VIEW_REFRESH_ON_REQUEST.asInstanceOf[js.Any], VIEW_REFRESH_ON_STOP = VIEW_REFRESH_ON_STOP.asInstanceOf[js.Any], VISIBILITY_AUTO = VISIBILITY_AUTO.asInstanceOf[js.Any], VISIBILITY_HIDE = VISIBILITY_HIDE.asInstanceOf[js.Any], VISIBILITY_SHOW = VISIBILITY_SHOW.asInstanceOf[js.Any], createCamera = js.Any.fromFunction1(createCamera), createDocument = js.Any.fromFunction1(createDocument), createFeatureBalloon = js.Any.fromFunction1(createFeatureBalloon), createFolder = js.Any.fromFunction1(createFolder), createGroundOverlay = js.Any.fromFunction1(createGroundOverlay), createHtmlDivBalloon = js.Any.fromFunction1(createHtmlDivBalloon), createHtmlStringBalloon = js.Any.fromFunction1(createHtmlStringBalloon), createIcon = js.Any.fromFunction1(createIcon), createLatLonAltBox = js.Any.fromFunction1(createLatLonAltBox), createLatLonBox = js.Any.fromFunction1(createLatLonBox), createLineString = js.Any.fromFunction1(createLineString), createLinearRing = js.Any.fromFunction1(createLinearRing), createLink = js.Any.fromFunction1(createLink), createLocation = js.Any.fromFunction1(createLocation), createLod = js.Any.fromFunction1(createLod), createLookAt = js.Any.fromFunction1(createLookAt), createModel = js.Any.fromFunction1(createModel), createMultiGeometry = js.Any.fromFunction1(createMultiGeometry), createNetworkLink = js.Any.fromFunction1(createNetworkLink), createOrientation = js.Any.fromFunction1(createOrientation), createPlacemark = js.Any.fromFunction1(createPlacemark), createPoint = js.Any.fromFunction1(createPoint), createPolygon = js.Any.fromFunction1(createPolygon), createRegion = js.Any.fromFunction1(createRegion), createScale = js.Any.fromFunction1(createScale), createScreenOverlay = js.Any.fromFunction1(createScreenOverlay), createStyle = js.Any.fromFunction1(createStyle), createStyleMap = js.Any.fromFunction1(createStyleMap), createTimeSpan = js.Any.fromFunction1(createTimeSpan), createTimeStamp = js.Any.fromFunction1(createTimeStamp), createViewerOptions = js.Any.fromFunction1(createViewerOptions), getBalloon = js.Any.fromFunction0(getBalloon), getEarthVersion = js.Any.fromFunction0(getEarthVersion), getElementById = js.Any.fromFunction1(getElementById), getElementByUrl = js.Any.fromFunction1(getElementByUrl), getElementsByType = js.Any.fromFunction0(getElementsByType), getFeatures = js.Any.fromFunction0(getFeatures), getGlobe = js.Any.fromFunction0(getGlobe), getLayerRoot = js.Any.fromFunction0(getLayerRoot), getNavigationControl = js.Any.fromFunction0(getNavigationControl), getOptions = js.Any.fromFunction0(getOptions), getPhotoOverlayViewer = js.Any.fromFunction0(getPhotoOverlayViewer), getPluginVersion = js.Any.fromFunction0(getPluginVersion), getStreamingPercent = js.Any.fromFunction0(getStreamingPercent), getSun = js.Any.fromFunction0(getSun), getTime = js.Any.fromFunction0(getTime), getTourPlayer = js.Any.fromFunction0(getTourPlayer), getView = js.Any.fromFunction0(getView), getWindow = js.Any.fromFunction0(getWindow), parseKml = js.Any.fromFunction1(parseKml), setBalloon = js.Any.fromFunction1(setBalloon))
+    __obj.asInstanceOf[GEPlugin]
+  }
+  @scala.inline
+  implicit class GEPluginOps[Self <: GEPlugin] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withALTITUDE_ABSOLUTE(value: KmlAltitudeModeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ALTITUDE_ABSOLUTE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withALTITUDE_CLAMP_TO_GROUND(value: KmlAltitudeModeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ALTITUDE_CLAMP_TO_GROUND")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withALTITUDE_CLAMP_TO_SEA_FLOOR(value: KmlAltitudeModeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ALTITUDE_CLAMP_TO_SEA_FLOOR")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withALTITUDE_RELATIVE_TO_GROUND(value: KmlAltitudeModeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ALTITUDE_RELATIVE_TO_GROUND")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withALTITUDE_RELATIVE_TO_SEA_FLOOR(value: KmlAltitudeModeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ALTITUDE_RELATIVE_TO_SEA_FLOOR")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCOLOR_INHERIT(value: KmlColorModeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("COLOR_INHERIT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCOLOR_NORMAL(value: KmlColorModeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("COLOR_NORMAL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCOLOR_RANDOM(value: KmlColorModeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("COLOR_RANDOM")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHIT_TEST_BUILDINGS(value: GEHitTestModeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HIT_TEST_BUILDINGS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHIT_TEST_GLOBE(value: GEHitTestModeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HIT_TEST_GLOBE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHIT_TEST_TERRAIN(value: GEHitTestModeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("HIT_TEST_TERRAIN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLAYER_BORDERS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LAYER_BORDERS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLAYER_BUILDINGS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LAYER_BUILDINGS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLAYER_BUILDINGS_LOW_RESOLUTION(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LAYER_BUILDINGS_LOW_RESOLUTION")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLAYER_ROADS(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LAYER_ROADS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLAYER_TERRAIN(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LAYER_TERRAIN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLAYER_TREES(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LAYER_TREES")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLIST_ITEM_CHECK(value: KmlListItemTypeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LIST_ITEM_CHECK")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLIST_ITEM_CHECK_HIDE_CHILDREN(value: KmlListItemTypeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LIST_ITEM_CHECK_HIDE_CHILDREN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLIST_ITEM_CHECK_OFF_ONLY(value: KmlListItemTypeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LIST_ITEM_CHECK_OFF_ONLY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLIST_ITEM_RADIO_FOLDER(value: KmlListItemTypeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LIST_ITEM_RADIO_FOLDER")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMAP_TYPE_EARTH(value: GEMapTypeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MAP_TYPE_EARTH")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMAP_TYPE_SKY(value: GEMapTypeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MAP_TYPE_SKY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNAVIGATION_CONTROL_LARGE(value: GENavigationControlEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NAVIGATION_CONTROL_LARGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNAVIGATION_CONTROL_SMALL(value: GENavigationControlEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NAVIGATION_CONTROL_SMALL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOPTION_HISTORICAL_IMAGERY(value: GEViewerOptionsTypeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OPTION_HISTORICAL_IMAGERY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOPTION_STATE_DEFAULT(value: GEViewerOptionsValueEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OPTION_STATE_DEFAULT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOPTION_STATE_DISABLED(value: GEViewerOptionsValueEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OPTION_STATE_DISABLED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOPTION_STATE_ENABLED(value: GEViewerOptionsValueEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OPTION_STATE_ENABLED")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOPTION_STREET_VIEW(value: GEViewerOptionsTypeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OPTION_STREET_VIEW")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOPTION_SUNLIGHT(value: GEViewerOptionsTypeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OPTION_SUNLIGHT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withREFRESH_ON_CHANGE(value: KmlRefreshModeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("REFRESH_ON_CHANGE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withREFRESH_ON_EXPIRE(value: KmlRefreshModeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("REFRESH_ON_EXPIRE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withREFRESH_ON_INTERVAL(value: KmlRefreshModeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("REFRESH_ON_INTERVAL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSPEED_TELEPORT(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SPEED_TELEPORT")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUNITS_FRACTION(value: KmlUnitsEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UNITS_FRACTION")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUNITS_INSET_PIXELS(value: KmlUnitsEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UNITS_INSET_PIXELS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUNITS_PIXELS(value: KmlUnitsEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UNITS_PIXELS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVIEW_REFRESH_NEVER(value: KmlViewRefreshModeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VIEW_REFRESH_NEVER")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVIEW_REFRESH_ON_REGION(value: KmlViewRefreshModeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VIEW_REFRESH_ON_REGION")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVIEW_REFRESH_ON_REQUEST(value: KmlViewRefreshModeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VIEW_REFRESH_ON_REQUEST")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVIEW_REFRESH_ON_STOP(value: KmlViewRefreshModeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VIEW_REFRESH_ON_STOP")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVISIBILITY_AUTO(value: GEVisibilityEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VISIBILITY_AUTO")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVISIBILITY_HIDE(value: GEVisibilityEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VISIBILITY_HIDE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVISIBILITY_SHOW(value: GEVisibilityEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("VISIBILITY_SHOW")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreateCamera(value: String => KmlCamera): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createCamera")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateDocument(value: String => KmlDocument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createDocument")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateFeatureBalloon(value: String => GEFeatureBalloon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createFeatureBalloon")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateFolder(value: String => KmlFolder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createFolder")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateGroundOverlay(value: String => KmlGroundOverlay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createGroundOverlay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateHtmlDivBalloon(value: String => GEHtmlDivBalloon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createHtmlDivBalloon")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateHtmlStringBalloon(value: String => GEHtmlStringBalloon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createHtmlStringBalloon")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateIcon(value: String => KmlIcon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createIcon")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateLatLonAltBox(value: String => KmlLatLonAltBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createLatLonAltBox")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateLatLonBox(value: String => KmlLatLonBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createLatLonBox")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateLineString(value: String => KmlLineString): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createLineString")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateLinearRing(value: String => KmlLinearRing): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createLinearRing")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateLink(value: String => KmlLink): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createLink")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateLocation(value: String => KmlLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createLocation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateLod(value: String => KmlLod): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createLod")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateLookAt(value: String => KmlLookAt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createLookAt")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateModel(value: String => KmlModel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createModel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateMultiGeometry(value: String => KmlMultiGeometry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createMultiGeometry")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateNetworkLink(value: String => KmlNetworkLink): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createNetworkLink")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateOrientation(value: String => KmlOrientation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createOrientation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreatePlacemark(value: String => KmlPlacemark): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createPlacemark")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreatePoint(value: String => KmlPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createPoint")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreatePolygon(value: String => KmlPolygon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createPolygon")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateRegion(value: String => KmlRegion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createRegion")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateScale(value: String => KmlScale): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createScale")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateScreenOverlay(value: String => KmlScreenOverlay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createScreenOverlay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateStyle(value: String => KmlStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createStyle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateStyleMap(value: String => KmlStyleMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createStyleMap")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateTimeSpan(value: String => KmlTimeSpan): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTimeSpan")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateTimeStamp(value: String => KmlTimeStamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createTimeStamp")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateViewerOptions(value: String => KmlViewerOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createViewerOptions")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetBalloon(value: () => GEAbstractBalloon): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBalloon")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetEarthVersion(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getEarthVersion")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetElementById(value: String => KmlObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getElementById")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetElementByUrl(value: String => KmlObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getElementByUrl")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetElementsByType(value: () => KmlObjectList[KmlObject]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getElementsByType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetFeatures(value: () => GEFeatureContainer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFeatures")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetGlobe(value: () => GEGlobe): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getGlobe")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLayerRoot(value: () => KmlLayerRoot): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLayerRoot")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetNavigationControl(value: () => GENavigationControl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNavigationControl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetOptions(value: () => GEOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getOptions")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPhotoOverlayViewer(value: () => GEPhotoOverlayViewer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPhotoOverlayViewer")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPluginVersion(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPluginVersion")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetStreamingPercent(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStreamingPercent")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSun(value: () => GESun): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSun")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetTime(value: () => GETime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTime")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetTourPlayer(value: () => GETourPlayer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTourPlayer")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetView(value: () => GEView): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getView")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetWindow(value: () => GEWindow): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getWindow")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withParseKml(value: String => KmlObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parseKml")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetBalloon(value: GEAbstractBalloon => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setBalloon")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

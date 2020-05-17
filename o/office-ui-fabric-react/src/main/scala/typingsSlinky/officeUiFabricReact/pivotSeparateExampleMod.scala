@@ -1,5 +1,6 @@
 package typingsSlinky.officeUiFabricReact
 
+import typingsSlinky.officeUiFabricReact.anon.SelectedKey
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +15,7 @@ object pivotSeparateExampleMod extends js.Object {
     var _getTabId: js.Any = js.native
     var _handleLinkClick: js.Any = js.native
     @JSName("state")
-    var state_PivotSeparateExample: AnonSelectedKey = js.native
+    var state_PivotSeparateExample: SelectedKey = js.native
   }
   
 }

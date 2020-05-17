@@ -13,12 +13,12 @@ trait Navigator extends js.Object {
   var connection: Connection = js.native
   // see https://github.com/apache/cordova-plugin-network-information/blob/dev/doc/index.md#api-change
   // for 
-  var network: AnonConnection = js.native
+  var network: typingsSlinky.cordovaPluginNetworkInformation.anon.Connection = js.native
 }
 
 object Navigator {
   @scala.inline
-  def apply(connection: Connection, network: AnonConnection): Navigator = {
+  def apply(connection: Connection, network: typingsSlinky.cordovaPluginNetworkInformation.anon.Connection): Navigator = {
     val __obj = js.Dynamic.literal(connection = connection.asInstanceOf[js.Any], network = network.asInstanceOf[js.Any])
     __obj.asInstanceOf[Navigator]
   }
@@ -35,7 +35,7 @@ object Navigator {
         ret
     }
     @scala.inline
-    def withNetwork(value: AnonConnection): Self = {
+    def withNetwork(value: typingsSlinky.cordovaPluginNetworkInformation.anon.Connection): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("network")(value.asInstanceOf[js.Any])
         ret

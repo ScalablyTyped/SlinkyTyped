@@ -1,9 +1,9 @@
 package typingsSlinky.dateFns.dateFnsFpMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.dateFns.AnonStep
 import typingsSlinky.dateFns.CurriedFn2
 import typingsSlinky.dateFns.Interval
+import typingsSlinky.dateFns.anon.Step
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,5 +11,5 @@ import scala.scalajs.js.annotation._
 @JSImport("date-fns/fp", "eachDayOfIntervalWithOptions")
 @js.native
 object eachDayOfIntervalWithOptions
-  extends TopLevel[CurriedFn2[AnonStep, Interval, js.Array[js.Date]]]
+  extends TopLevel[CurriedFn2[Step, Interval, js.Array[js.Date]]]
 

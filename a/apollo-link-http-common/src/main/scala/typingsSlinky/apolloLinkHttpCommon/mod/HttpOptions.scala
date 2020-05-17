@@ -1,7 +1,7 @@
 package typingsSlinky.apolloLinkHttpCommon.mod
 
 import typingsSlinky.apolloLink.typesMod.Operation
-import typingsSlinky.apolloLinkHttpCommon.FnCall
+import typingsSlinky.apolloLinkHttpCommon.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

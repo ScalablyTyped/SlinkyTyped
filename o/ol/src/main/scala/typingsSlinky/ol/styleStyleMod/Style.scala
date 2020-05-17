@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Style extends js.Object {
+trait Style extends StyleLike {
   def getFill(): typingsSlinky.ol.fillMod.default = js.native
   def getGeometry(): String | typingsSlinky.ol.geometryMod.default | GeometryFunction = js.native
   def getGeometryFunction(): GeometryFunction = js.native

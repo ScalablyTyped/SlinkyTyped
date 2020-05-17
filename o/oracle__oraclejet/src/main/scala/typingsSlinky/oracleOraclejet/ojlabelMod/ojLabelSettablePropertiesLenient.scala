@@ -1,8 +1,8 @@
 package typingsSlinky.oracleOraclejet.ojlabelMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonDefinitionSource
-import typingsSlinky.oracleOraclejet.AnonTooltipHelp
+import typingsSlinky.oracleOraclejet.anon.DefinitionSource
+import typingsSlinky.oracleOraclejet.anon.TooltipHelp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,10 +12,10 @@ import scala.scalajs.js.annotation._
 trait ojLabelSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
   var `for`: js.UndefOr[String] = js.native
-  var help: js.UndefOr[AnonDefinitionSource] = js.native
+  var help: js.UndefOr[DefinitionSource] = js.native
   var labelId: js.UndefOr[String] = js.native
   var showRequired: js.UndefOr[Boolean] = js.native
-  var translations: js.UndefOr[AnonTooltipHelp] = js.native
+  var translations: js.UndefOr[TooltipHelp] = js.native
 }
 
 object ojLabelSettablePropertiesLenient {
@@ -43,7 +43,7 @@ object ojLabelSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withHelp(value: AnonDefinitionSource): Self = {
+    def withHelp(value: DefinitionSource): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
         ret
@@ -79,7 +79,7 @@ object ojLabelSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonTooltipHelp): Self = {
+    def withTranslations(value: TooltipHelp): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

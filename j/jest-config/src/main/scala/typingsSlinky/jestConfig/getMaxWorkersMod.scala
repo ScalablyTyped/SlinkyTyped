@@ -1,5 +1,7 @@
 package typingsSlinky.jestConfig
 
+import typingsSlinky.jestConfig.anon.PartialPickArgvmaxWorkers
+import typingsSlinky.jestConfig.anon.PartialPickArgvmaxWorkersMaxWorkers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

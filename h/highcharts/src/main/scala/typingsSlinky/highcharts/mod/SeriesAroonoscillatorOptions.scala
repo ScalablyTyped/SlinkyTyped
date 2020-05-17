@@ -95,42 +95,6 @@ object SeriesAroonoscillatorOptions {
         ret
     }
     @scala.inline
-    def withAroonDown(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aroonDown")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAroonDown: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("aroonDown")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataParser(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataParser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataParser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataParser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataURL(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataURL")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withId(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])

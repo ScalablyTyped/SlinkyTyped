@@ -2,7 +2,7 @@ package typingsSlinky.reactSortableHoc.mod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactSortableHoc.AnonCancel
+import typingsSlinky.reactSortableHoc.anon.Cancel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait SortableContainerProps extends js.Object {
   var helperClass: js.UndefOr[String] = js.native
   var helperContainer: js.UndefOr[HTMLElement | HelperContainerGetter] = js.native
   var hideSortableGhost: js.UndefOr[Boolean] = js.native
-  var keyCodes: js.UndefOr[AnonCancel] = js.native
+  var keyCodes: js.UndefOr[Cancel] = js.native
   var keyboardSortingTransitionDuration: js.UndefOr[Double] = js.native
   var lockAxis: js.UndefOr[Axis] = js.native
   var lockOffset: js.UndefOr[Offset | (js.Tuple2[Offset, Offset])] = js.native
@@ -143,7 +143,7 @@ object SortableContainerProps {
         ret
     }
     @scala.inline
-    def withKeyCodes(value: AnonCancel): Self = {
+    def withKeyCodes(value: Cancel): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyCodes")(value.asInstanceOf[js.Any])
         ret

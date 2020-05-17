@@ -2,6 +2,8 @@ package typingsSlinky.parchment
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
+import typingsSlinky.parchment.anon.Instantiable
+import typingsSlinky.parchment.anon.InstantiableBlot
 import typingsSlinky.parchment.blotMod.Blot
 import typingsSlinky.parchment.blotMod.Parent
 import typingsSlinky.parchment.registryMod.BlotConstructor
@@ -24,13 +26,13 @@ object parentMod extends js.Object {
     def appendChild(other: Blot): Unit = js.native
     def build(): Unit = js.native
     def descendant(criteria: js.Function1[/* blot */ Blot, Boolean], index: Double): js.Tuple2[Blot | Null, Double] = js.native
-    def descendant(criteria: AnonInstantiableBlot, index: Double): js.Tuple2[Blot | Null, Double] = js.native
-    def descendant[T](`type`: AnonInstantiable[T], index: Double): js.Tuple2[T, Double] = js.native
+    def descendant(criteria: InstantiableBlot, index: Double): js.Tuple2[Blot | Null, Double] = js.native
+    def descendant[T](`type`: Instantiable[T], index: Double): js.Tuple2[T, Double] = js.native
     @JSName("descendant")
     def descendant_T[T](matcher: js.Function1[/* blot */ Blot, Boolean], index: Double): js.Tuple2[T, Double] = js.native
     def descendants(criteria: js.Function1[/* blot */ Blot, Boolean], index: Double, length: Double): js.Array[Blot] = js.native
-    def descendants(criteria: AnonInstantiableBlot, index: Double, length: Double): js.Array[Blot] = js.native
-    def descendants[T](`type`: AnonInstantiable[T], index: Double, length: Double): js.Array[T] = js.native
+    def descendants(criteria: InstantiableBlot, index: Double, length: Double): js.Array[Blot] = js.native
+    def descendants[T](`type`: Instantiable[T], index: Double, length: Double): js.Array[T] = js.native
     @JSName("descendants")
     def descendants_T[T](matcher: js.Function1[/* blot */ Blot, Boolean], index: Double, length: Double): js.Array[T] = js.native
     def insertBefore(childBlot: Blot): Unit = js.native

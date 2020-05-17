@@ -2,7 +2,7 @@ package typingsSlinky.cathoQuantum.gridMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.cathoQuantum.Anon7
+import typingsSlinky.cathoQuantum.anon.`7`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait RowProps extends js.Object {
   var children: js.Array[TagMod[Any]] | TagMod[Any] = js.native
   var hide: js.UndefOr[BreakpointsType | js.Array[BreakpointsType]] = js.native
   var `no-gutters`: js.UndefOr[Boolean] = js.native
-  var theme: js.UndefOr[Anon7] = js.native
+  var theme: js.UndefOr[`7`] = js.native
 }
 
 object RowProps {
@@ -70,7 +70,7 @@ object RowProps {
         ret
     }
     @scala.inline
-    def withTheme(value: Anon7): Self = {
+    def withTheme(value: `7`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

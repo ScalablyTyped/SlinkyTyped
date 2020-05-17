@@ -1,13 +1,13 @@
 package typingsSlinky.reactBootstrapTable.mod
 
-import typingsSlinky.reactBootstrapTable.AnonComparatorDate
-import typingsSlinky.reactBootstrapTable.AnonDate
+import typingsSlinky.reactBootstrapTable.anon.ComparatorDate
+import typingsSlinky.reactBootstrapTable.anon.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DateFilter extends _Filter {
+trait DateFilter extends Filter {
   /**
   	 * Date filter comparators
   	 */
@@ -15,7 +15,7 @@ trait DateFilter extends _Filter {
   /**
   	 * Default value for the filter.
   	 */
-  var defaultValue: js.UndefOr[AnonDate] = js.native
+  var defaultValue: js.UndefOr[Date] = js.native
   /**
   	 * Delay time in milliseconds after the last key press prior to applying the filter. Defaults to 500ms.
   	 */
@@ -23,7 +23,7 @@ trait DateFilter extends _Filter {
   /**
   	 * CSS Style to use for the select filter.
   	 */
-  var style: js.UndefOr[AnonComparatorDate] = js.native
+  var style: js.UndefOr[ComparatorDate] = js.native
   /**
   	 * Filter type must be 'DateFilter'
   	 */
@@ -62,7 +62,7 @@ object DateFilter {
         ret
     }
     @scala.inline
-    def withDefaultValue(value: AnonDate): Self = {
+    def withDefaultValue(value: Date): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
         ret
@@ -86,7 +86,7 @@ object DateFilter {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonComparatorDate): Self = {
+    def withStyle(value: ComparatorDate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

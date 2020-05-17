@@ -1,6 +1,6 @@
 package typingsSlinky.mailgunJs.mod.validation
 
-import typingsSlinky.mailgunJs.AnonDisplayname
+import typingsSlinky.mailgunJs.anon.Displayname
 import typingsSlinky.mailgunJs.mailgunJsStrings.false_
 import typingsSlinky.mailgunJs.mailgunJsStrings.true_
 import typingsSlinky.mailgunJs.mailgunJsStrings.unknown
@@ -16,7 +16,7 @@ trait ValidateResponse extends js.Object {
   var is_role_address: Boolean = js.native
   var is_valid: Boolean = js.native
   var mailbox_verification: true_ | false_ | unknown | Null = js.native
-  var parts: AnonDisplayname = js.native
+  var parts: Displayname = js.native
 }
 
 object ValidateResponse {
@@ -26,7 +26,7 @@ object ValidateResponse {
     is_disposable_address: Boolean,
     is_role_address: Boolean,
     is_valid: Boolean,
-    parts: AnonDisplayname
+    parts: Displayname
   ): ValidateResponse = {
     val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], is_disposable_address = is_disposable_address.asInstanceOf[js.Any], is_role_address = is_role_address.asInstanceOf[js.Any], is_valid = is_valid.asInstanceOf[js.Any], parts = parts.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValidateResponse]
@@ -62,7 +62,7 @@ object ValidateResponse {
         ret
     }
     @scala.inline
-    def withParts(value: AnonDisplayname): Self = {
+    def withParts(value: Displayname): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parts")(value.asInstanceOf[js.Any])
         ret

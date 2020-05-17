@@ -1,7 +1,7 @@
 package typingsSlinky.jasmineNode.jasmine
 
 import typingsSlinky.jasmine.jasmine.Runner
-import typingsSlinky.jasmineNode.AnonConsolidate
+import typingsSlinky.jasmineNode.anon.Consolidate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait ExecuteSpecsOptions extends js.Object {
   var growl: js.UndefOr[Boolean] = js.native
   var includeStackTrace: js.UndefOr[Boolean] = js.native
   var isVerbose: js.UndefOr[Boolean] = js.native
-  var junitreport: js.UndefOr[AnonConsolidate] = js.native
+  var junitreport: js.UndefOr[Consolidate] = js.native
   var onComplete: js.UndefOr[js.Function1[/* runner */ Runner, Unit]] = js.native
   var regExpSpec: js.RegExp = js.native
   var showColors: js.UndefOr[Boolean] = js.native
@@ -81,7 +81,7 @@ object ExecuteSpecsOptions {
         ret
     }
     @scala.inline
-    def withJunitreport(value: AnonConsolidate): Self = {
+    def withJunitreport(value: Consolidate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("junitreport")(value.asInstanceOf[js.Any])
         ret

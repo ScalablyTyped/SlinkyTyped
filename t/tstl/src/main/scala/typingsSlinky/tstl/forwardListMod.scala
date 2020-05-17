@@ -90,6 +90,20 @@ object forwardListMod extends js.Object {
       */
     def before_begin(): Iterator[T] = js.native
     /**
+      * Iterator to the first element.
+      *
+      * @return Iterator to the first element.
+      */
+    /* InferMemberOverrides */
+    override def begin(): Iterator[T] = js.native
+    /**
+      * Iterator to the end.
+      *
+      * @return Iterator to the end.
+      */
+    /* InferMemberOverrides */
+    override def end(): Iterator[T] = js.native
+    /**
       * Erase elements.
       *
       * @param first Range of the first position to erase after.

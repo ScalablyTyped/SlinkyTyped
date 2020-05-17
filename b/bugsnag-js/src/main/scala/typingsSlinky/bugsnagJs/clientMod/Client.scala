@@ -2,7 +2,7 @@ package typingsSlinky.bugsnagJs.clientMod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable4
-import typingsSlinky.bugsnagJs.AnonInstantiable
+import typingsSlinky.bugsnagJs.anon.Instantiable
 import typingsSlinky.bugsnagJs.commonMod.BeforeSession
 import typingsSlinky.bugsnagJs.commonMod.IConfig
 import typingsSlinky.bugsnagJs.commonMod.IFinalConfig
@@ -20,7 +20,7 @@ class Client () extends js.Object {
     js.UndefOr[/* timestamp */ String], 
     typingsSlinky.bugsnagJs.breadcrumbMod.default
   ] = js.native
-  var BugsnagReport: AnonInstantiable = js.native
+  var BugsnagReport: Instantiable = js.native
   var BugsnagSession: Instantiable0[typingsSlinky.bugsnagJs.sessionMod.default] = js.native
   var app: js.Object = js.native
   var beforeSession: js.Array[BeforeSession] = js.native

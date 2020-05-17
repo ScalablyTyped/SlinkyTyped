@@ -1,6 +1,7 @@
 package typingsSlinky.sipJs
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.sipJs.anon.Error
 import typingsSlinky.sipJs.bodyMod.Body
 import typingsSlinky.sipJs.logMod.LoggerFactory
 import typingsSlinky.sipJs.loggerMod.Logger
@@ -17,15 +18,14 @@ object messagesMod extends js.Object {
   @js.native
   class DigestAuthentication protected ()
     extends typingsSlinky.sipJs.digestAuthenticationMod.DigestAuthentication {
-    def this(loggerFactory: LoggerFactory) = this()
-    def this(loggerFactory: LoggerFactory, username: String) = this()
-    def this(loggerFactory: LoggerFactory, username: js.UndefOr[scala.Nothing], password: String) = this()
     /**
       * Constructor.
       * @param loggerFactory - LoggerFactory.
       * @param username - Username.
       * @param password - Password.
       */
+    def this(loggerFactory: LoggerFactory) = this()
+    def this(loggerFactory: LoggerFactory, username: String) = this()
     def this(loggerFactory: LoggerFactory, username: String, password: String) = this()
   }
   
@@ -117,7 +117,7 @@ object messagesMod extends js.Object {
     options: ResponseOptions
   ): OutgoingResponse = js.native
   def fromBodyLegacy(bodyLegacy: String): Body = js.native
-  def fromBodyLegacy(bodyLegacy: AnonBody): Body = js.native
+  def fromBodyLegacy(bodyLegacy: typingsSlinky.sipJs.anon.Body): Body = js.native
   def getBody(message: Body): js.UndefOr[Body] = js.native
   def getBody(message: typingsSlinky.sipJs.incomingRequestMessageMod.IncomingRequestMessage): js.UndefOr[Body] = js.native
   def getBody(message: typingsSlinky.sipJs.incomingResponseMessageMod.IncomingResponseMessage): js.UndefOr[Body] = js.native
@@ -179,13 +179,13 @@ object messagesMod extends js.Object {
       data: js.Any,
       headerStart: Double,
       headerEnd: Double
-    ): Boolean | AnonError = js.native
+    ): Boolean | Error = js.native
     def parseHeader(
       message: typingsSlinky.sipJs.incomingResponseMessageMod.IncomingResponseMessage,
       data: js.Any,
       headerStart: Double,
       headerEnd: Double
-    ): Boolean | AnonError = js.native
+    ): Boolean | Error = js.native
     def parseMessage(data: String, logger: Logger): js.UndefOr[
         typingsSlinky.sipJs.incomingRequestMessageMod.IncomingRequestMessage | typingsSlinky.sipJs.incomingResponseMessageMod.IncomingResponseMessage
       ] = js.native

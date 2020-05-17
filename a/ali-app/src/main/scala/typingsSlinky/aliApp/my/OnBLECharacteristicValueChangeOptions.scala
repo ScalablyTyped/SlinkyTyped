@@ -1,6 +1,6 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonDeviceId
+import typingsSlinky.aliApp.anon.DeviceId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait OnBLECharacteristicValueChangeOptions
   extends BaseOptions[js.Any, js.Any] {
   @JSName("success")
-  var success_OnBLECharacteristicValueChangeOptions: js.UndefOr[js.Function1[/* res */ AnonDeviceId, Unit]] = js.native
+  var success_OnBLECharacteristicValueChangeOptions: js.UndefOr[js.Function1[/* res */ DeviceId, Unit]] = js.native
 }
 
 object OnBLECharacteristicValueChangeOptions {
@@ -25,7 +25,7 @@ object OnBLECharacteristicValueChangeOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSuccess(value: /* res */ AnonDeviceId => Unit): Self = {
+    def withSuccess(value: /* res */ DeviceId => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

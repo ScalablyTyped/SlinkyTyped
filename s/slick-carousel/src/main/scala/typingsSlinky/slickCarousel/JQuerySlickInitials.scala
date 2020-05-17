@@ -1,5 +1,6 @@
 package typingsSlinky.slickCarousel
 
+import typingsSlinky.slickCarousel.anon.CurX
 import typingsSlinky.std.Number
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -128,7 +129,7 @@ trait JQuerySlickInitials extends js.Object {
   /**
     * Object that contains properties relative to "touch" behavior.
     */
-  var touchObject: AnonCurX = js.native
+  var touchObject: CurX = js.native
   /**
     * Default: false
     */
@@ -153,7 +154,7 @@ object JQuerySlickInitials {
     slideOffset: Double,
     sliding: Boolean,
     swiping: Boolean,
-    touchObject: AnonCurX,
+    touchObject: CurX,
     transformsEnabled: Boolean,
     unslicked: Boolean
   ): JQuerySlickInitials = {
@@ -233,7 +234,7 @@ object JQuerySlickInitials {
         ret
     }
     @scala.inline
-    def withTouchObject(value: AnonCurX): Self = {
+    def withTouchObject(value: CurX): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("touchObject")(value.asInstanceOf[js.Any])
         ret

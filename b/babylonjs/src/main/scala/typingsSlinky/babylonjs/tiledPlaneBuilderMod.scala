@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs
 
+import typingsSlinky.babylonjs.anon.TileHeight
 import typingsSlinky.babylonjs.meshMod.Mesh
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
@@ -37,8 +38,8 @@ object tiledPlaneBuilderMod extends js.Object {
       * @param scene defines the hosting scene
       * @returns the box mesh
       */
-    def CreateTiledPlane(name: String, options: AnonTileHeight): Mesh = js.native
-    def CreateTiledPlane(name: String, options: AnonTileHeight, scene: Nullable[Scene]): Mesh = js.native
+    def CreateTiledPlane(name: String, options: TileHeight): Mesh = js.native
+    def CreateTiledPlane(name: String, options: TileHeight, scene: Nullable[Scene]): Mesh = js.native
   }
   
 }

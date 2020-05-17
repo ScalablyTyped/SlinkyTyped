@@ -21,7 +21,7 @@ import typingsSlinky.braintree.mod.TransactionNotificationKind
 import typingsSlinky.braintree.mod.TransactionProcessorResponseType
 import typingsSlinky.braintree.mod.TransactionSource
 import typingsSlinky.braintree.mod.TransactionStatus
-import typingsSlinky.braintree.mod._WebhookNotificationKind
+import typingsSlinky.braintree.mod.WebhookNotificationKind
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -169,13 +169,13 @@ object braintreeStrings {
   sealed trait avs_and_cvv extends GatewayRejectionReason
   
   @js.native
-  sealed trait check extends _WebhookNotificationKind
+  sealed trait check extends WebhookNotificationKind
   
   @js.native
-  sealed trait connected_merchant_paypal_status_changed extends _WebhookNotificationKind
+  sealed trait connected_merchant_paypal_status_changed extends WebhookNotificationKind
   
   @js.native
-  sealed trait connected_merchant_status_transitioned extends _WebhookNotificationKind
+  sealed trait connected_merchant_status_transitioned extends WebhookNotificationKind
   
   @js.native
   sealed trait control_panel extends SubscriptionSource
@@ -187,10 +187,10 @@ object braintreeStrings {
   sealed trait cvv extends GatewayRejectionReason
   
   @js.native
-  sealed trait disbursement extends _WebhookNotificationKind
+  sealed trait disbursement extends WebhookNotificationKind
   
   @js.native
-  sealed trait disbursement_exception extends _WebhookNotificationKind
+  sealed trait disbursement_exception extends WebhookNotificationKind
   
   @js.native
   sealed trait dispute_lost extends DisputeNotificationKind
@@ -214,10 +214,10 @@ object braintreeStrings {
   sealed trait gateway_rejected extends TransactionStatus
   
   @js.native
-  sealed trait granted_payment_method_revoked extends _WebhookNotificationKind
+  sealed trait granted_payment_method_revoked extends WebhookNotificationKind
   
   @js.native
-  sealed trait grantor_updated_granted_payment_method extends _WebhookNotificationKind
+  sealed trait grantor_updated_granted_payment_method extends WebhookNotificationKind
   
   @js.native
   sealed trait hard_declined extends TransactionProcessorResponseType
@@ -229,22 +229,22 @@ object braintreeStrings {
   sealed trait hold_pending extends EscrowStatus
   
   @js.native
-  sealed trait local_payment_completed extends _WebhookNotificationKind
+  sealed trait local_payment_completed extends WebhookNotificationKind
   
   @js.native
   sealed trait masterpass_card extends PaymentInstrumentType
   
   @js.native
-  sealed trait oauth_access_revoked extends _WebhookNotificationKind
+  sealed trait oauth_access_revoked extends WebhookNotificationKind
   
   @js.native
-  sealed trait partner_merchant_connected extends _WebhookNotificationKind
+  sealed trait partner_merchant_connected extends WebhookNotificationKind
   
   @js.native
-  sealed trait partner_merchant_declined extends _WebhookNotificationKind
+  sealed trait partner_merchant_declined extends WebhookNotificationKind
   
   @js.native
-  sealed trait partner_merchant_disconnected extends _WebhookNotificationKind
+  sealed trait partner_merchant_disconnected extends WebhookNotificationKind
   
   @js.native
   sealed trait payment_method_revoked_by_customer extends js.Object
@@ -256,7 +256,7 @@ object braintreeStrings {
   sealed trait processor_declined extends TransactionStatus
   
   @js.native
-  sealed trait recipient_updated_granted_payment_method extends _WebhookNotificationKind
+  sealed trait recipient_updated_granted_payment_method extends WebhookNotificationKind
   
   @js.native
   sealed trait recurring_ extends SubscriptionSource

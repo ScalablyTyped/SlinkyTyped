@@ -1,5 +1,6 @@
 package typingsSlinky.reactVirtualized
 
+import typingsSlinky.reactVirtualized.anon.Ariareadonly
 import typingsSlinky.reactVirtualized.esGridMod.GridCellRangeRenderer
 import typingsSlinky.reactVirtualized.esGridMod.OverscanIndicesGetter
 import scala.scalajs.js
@@ -20,7 +21,7 @@ object gridMod extends js.Object {
   /* static members */
   @js.native
   object Grid extends js.Object {
-    var defaultProps: AnonAriareadonly = js.native
+    var defaultProps: Ariareadonly = js.native
   }
   
 }

@@ -1,5 +1,7 @@
 package typingsSlinky.readdirEnhanced
 
+import typingsSlinky.readdirEnhanced.anon.Optionsstatsfalse
+import typingsSlinky.readdirEnhanced.anon.Optionsstatstrue
 import typingsSlinky.readdirEnhanced.typesPublicMod.Callback
 import typingsSlinky.readdirEnhanced.typesPublicMod.Stats
 import scala.scalajs.js

@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojnavigationlistMod
 
-import typingsSlinky.oracleOraclejet.AnonDefaultRootLabel
-import typingsSlinky.oracleOraclejet.AnonSelectable
+import typingsSlinky.oracleOraclejet.anon.DefaultRootLabel
+import typingsSlinky.oracleOraclejet.anon.Selectable
 import typingsSlinky.oracleOraclejet.mod.baseComponentSettableProperties
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojkeysetMod.KeySet
@@ -28,12 +28,12 @@ trait ojNavigationListSettableProperties[K, D] extends baseComponentSettableProp
   var edge: top | start = js.native
   var expanded: KeySet[K] = js.native
   var hierarchyMenuThreshold: Double = js.native
-  var item: AnonSelectable[K, D] = js.native
+  var item: Selectable[K, D] = js.native
   var overflow: popup | hidden = js.native
   var rootLabel: String | Null = js.native
   var selection: K = js.native
   @JSName("translations")
-  var translations_ojNavigationListSettableProperties: AnonDefaultRootLabel = js.native
+  var translations_ojNavigationListSettableProperties: DefaultRootLabel = js.native
 }
 
 object ojNavigationListSettableProperties {
@@ -46,10 +46,10 @@ object ojNavigationListSettableProperties {
     edge: top | start,
     expanded: KeySet[K],
     hierarchyMenuThreshold: Double,
-    item: AnonSelectable[K, D],
+    item: Selectable[K, D],
     overflow: popup | hidden,
     selection: K,
-    translations: AnonDefaultRootLabel
+    translations: DefaultRootLabel
   ): ojNavigationListSettableProperties[K, D] = {
     val __obj = js.Dynamic.literal(as = as.asInstanceOf[js.Any], currentItem = currentItem.asInstanceOf[js.Any], display = display.asInstanceOf[js.Any], drillMode = drillMode.asInstanceOf[js.Any], edge = edge.asInstanceOf[js.Any], expanded = expanded.asInstanceOf[js.Any], hierarchyMenuThreshold = hierarchyMenuThreshold.asInstanceOf[js.Any], item = item.asInstanceOf[js.Any], overflow = overflow.asInstanceOf[js.Any], selection = selection.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojNavigationListSettableProperties[K, D]]
@@ -103,7 +103,7 @@ object ojNavigationListSettableProperties {
         ret
     }
     @scala.inline
-    def withItem(value: AnonSelectable[K, D]): Self[K, D] = {
+    def withItem(value: Selectable[K, D]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
         ret
@@ -121,7 +121,7 @@ object ojNavigationListSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonDefaultRootLabel): Self[K, D] = {
+    def withTranslations(value: DefaultRootLabel): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

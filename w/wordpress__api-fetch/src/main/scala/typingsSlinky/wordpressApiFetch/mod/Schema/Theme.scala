@@ -1,18 +1,18 @@
 package typingsSlinky.wordpressApiFetch.mod.Schema
 
-import typingsSlinky.wordpressApiFetch.AnonFormats
+import typingsSlinky.wordpressApiFetch.anon.Formats
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Theme extends js.Object {
-  var theme_supports: AnonFormats = js.native
+  var theme_supports: Formats = js.native
 }
 
 object Theme {
   @scala.inline
-  def apply(theme_supports: AnonFormats): Theme = {
+  def apply(theme_supports: Formats): Theme = {
     val __obj = js.Dynamic.literal(theme_supports = theme_supports.asInstanceOf[js.Any])
     __obj.asInstanceOf[Theme]
   }
@@ -23,7 +23,7 @@ object Theme {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTheme_supports(value: AnonFormats): Self = {
+    def withTheme_supports(value: Formats): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme_supports")(value.asInstanceOf[js.Any])
         ret

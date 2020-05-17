@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientCloudresourcemanager.gapi.client.cloudresourcemanager
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientCloudresourcemanager.AnonAlt
-import typingsSlinky.gapiClientCloudresourcemanager.AnonBearertoken
-import typingsSlinky.gapiClientCloudresourcemanager.AnonCallback
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientCloudresourcemanager.anon.Alt
+import typingsSlinky.gapiClientCloudresourcemanager.anon.Bearertoken
+import typingsSlinky.gapiClientCloudresourcemanager.anon.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait LiensResource extends js.Object {
     *
     * NOTE: Some resources may limit the number of Liens which may be applied.
     */
-  def create(request: AnonAlt): Request_[Lien] = js.native
+  def create(request: Alt): Request[Lien] = js.native
   /**
     * Delete a Lien by `name`.
     *
@@ -27,7 +27,7 @@ trait LiensResource extends js.Object {
     * For example, a Lien with a `parent` of `projects/1234` requires permission
     * `resourcemanager.projects.updateLiens`.
     */
-  def delete(request: AnonBearertoken): Request_[js.Object] = js.native
+  def delete(request: Bearertoken): Request[js.Object] = js.native
   /**
     * List all Liens applied to the `parent` resource.
     *
@@ -35,15 +35,15 @@ trait LiensResource extends js.Object {
     * For example, a Lien with a `parent` of `projects/1234` requires permission
     * `resourcemanager.projects.get`.
     */
-  def list(request: AnonCallback): Request_[ListLiensResponse] = js.native
+  def list(request: Callback): Request[ListLiensResponse] = js.native
 }
 
 object LiensResource {
   @scala.inline
   def apply(
-    create: AnonAlt => Request_[Lien],
-    delete: AnonBearertoken => Request_[js.Object],
-    list: AnonCallback => Request_[ListLiensResponse]
+    create: Alt => Request[Lien],
+    delete: Bearertoken => Request[js.Object],
+    list: Callback => Request[ListLiensResponse]
   ): LiensResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[LiensResource]
@@ -55,19 +55,19 @@ object LiensResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: AnonAlt => Request_[Lien]): Self = {
+    def withCreate(value: Alt => Request[Lien]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonBearertoken => Request_[js.Object]): Self = {
+    def withDelete(value: Bearertoken => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonCallback => Request_[ListLiensResponse]): Self = {
+    def withList(value: Callback => Request[ListLiensResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

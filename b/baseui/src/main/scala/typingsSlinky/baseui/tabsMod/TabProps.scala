@@ -1,12 +1,12 @@
 package typingsSlinky.baseui.tabsMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.KeyboardEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.baseui.baseuiStrings.horizontal
 import typingsSlinky.baseui.baseuiStrings.vertical
 import typingsSlinky.react.mod.Key
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait TabProps extends js.Object {
   var disabled: js.UndefOr[Boolean] = js.native
   var id: js.UndefOr[String] = js.native
   var key: js.UndefOr[Key] = js.native
-  var onClick: js.UndefOr[js.Function1[/* e */ Event_, _]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* e */ Event, _]] = js.native
   var onKeyDown: js.UndefOr[js.Function1[/* e */ KeyboardEvent, _]] = js.native
   var onSelect: js.UndefOr[js.Function0[_]] = js.native
   var overrides: js.UndefOr[TabOverrides[SharedProps]] = js.native
@@ -118,7 +118,7 @@ object TabProps {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* e */ Event_ => _): Self = {
+    def withOnClick(value: /* e */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret

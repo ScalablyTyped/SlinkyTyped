@@ -1,7 +1,7 @@
 package typingsSlinky.jqueryColorpicker.JQueryColorpickerStatic
 
-import typingsSlinky.jqueryColorpicker.AnonA
-import typingsSlinky.jqueryColorpicker.AnonCmyk
+import typingsSlinky.jqueryColorpicker.anon.A
+import typingsSlinky.jqueryColorpicker.anon.Cmyk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +14,12 @@ trait Color extends js.Object {
   def equals(color: Color): Boolean = js.native
   def getAlpha(): Double = js.native
   def getCMYK(): CMYK = js.native
-  def getChannels(): AnonA = js.native
+  def getChannels(): A = js.native
   def getHSL(): HSL = js.native
   def getHSV(): HSV = js.native
   def getLAB(): LAB = js.native
   def getRGB(): RGB = js.native
-  def getSpaces(): AnonCmyk = js.native
+  def getSpaces(): Cmyk = js.native
   def limit(steps: Double): Unit = js.native
   def normalize(): Color = js.native
   def setAlpha(a: Double): Color = js.native
@@ -41,12 +41,12 @@ object Color {
     equals: Color => Boolean,
     getAlpha: () => Double,
     getCMYK: () => CMYK,
-    getChannels: () => AnonA,
+    getChannels: () => A,
     getHSL: () => HSL,
     getHSV: () => HSV,
     getLAB: () => LAB,
     getRGB: () => RGB,
-    getSpaces: () => AnonCmyk,
+    getSpaces: () => Cmyk,
     limit: Double => Unit,
     normalize: () => Color,
     set: Boolean,
@@ -100,7 +100,7 @@ object Color {
         ret
     }
     @scala.inline
-    def withGetChannels(value: () => AnonA): Self = {
+    def withGetChannels(value: () => A): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getChannels")(js.Any.fromFunction0(value))
         ret
@@ -130,7 +130,7 @@ object Color {
         ret
     }
     @scala.inline
-    def withGetSpaces(value: () => AnonCmyk): Self = {
+    def withGetSpaces(value: () => Cmyk): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getSpaces")(js.Any.fromFunction0(value))
         ret

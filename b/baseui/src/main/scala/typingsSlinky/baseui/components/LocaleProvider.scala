@@ -2,7 +2,7 @@ package typingsSlinky.baseui.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
-import typingsSlinky.baseui.PartialLocale
+import typingsSlinky.baseui.anon.PartialLocale
 import typingsSlinky.baseui.mod.LocaleProviderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

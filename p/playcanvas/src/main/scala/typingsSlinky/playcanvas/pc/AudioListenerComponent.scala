@@ -14,9 +14,6 @@ import scala.scalajs.js.annotation._
   * @param {pc.AudioListenerComponentSystem} system - The ComponentSystem that created this Component.
   * @param {pc.Entity} entity - The Entity that this Component is attached to.
   */
-@JSGlobal("pc.AudioListenerComponent")
 @js.native
-class AudioListenerComponent protected () extends Component {
-  def this(system: AudioListenerComponentSystem, entity: Entity) = this()
-}
+trait AudioListenerComponent extends Component
 

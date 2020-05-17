@@ -1,19 +1,19 @@
 package typingsSlinky.reactDataGrid.AdazzleReactDataGrid
 
-import typingsSlinky.reactDataGrid.AnonCallback
+import typingsSlinky.reactDataGrid.anon.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ActionMenu extends js.Object {
-  var actions: js.Array[AnonCallback] = js.native
+  var actions: js.Array[Callback] = js.native
   var icon: String = js.native
 }
 
 object ActionMenu {
   @scala.inline
-  def apply(actions: js.Array[AnonCallback], icon: String): ActionMenu = {
+  def apply(actions: js.Array[Callback], icon: String): ActionMenu = {
     val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], icon = icon.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActionMenu]
   }
@@ -24,7 +24,7 @@ object ActionMenu {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActions(value: js.Array[AnonCallback]): Self = {
+    def withActions(value: js.Array[Callback]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
         ret

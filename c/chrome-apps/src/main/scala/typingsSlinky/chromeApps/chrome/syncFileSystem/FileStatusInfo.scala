@@ -1,8 +1,7 @@
 package typingsSlinky.chromeApps.chrome.syncFileSystem
 
-import typingsSlinky.chromeApps.AnonCONFLICTING
+import typingsSlinky.chromeApps.anon.CONFLICTING
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
-import typingsSlinky.chromeApps.chromeAppsStrings.CONFLICTING
 import typingsSlinky.chromeApps.chromeAppsStrings.PENDING
 import typingsSlinky.chromeApps.chromeAppsStrings.SYNCED
 import typingsSlinky.chromeApps.chromeAppsStrings.conflicting_
@@ -25,10 +24,10 @@ trait FileStatusInfo extends js.Object {
     * @see FileStatus
     */
   var status: ToStringLiteral[
-    AnonCONFLICTING, 
-    /* keyof chrome-apps.AnonCONFLICTING */ SYNCED | PENDING | CONFLICTING, 
+    CONFLICTING, 
+    /* keyof chrome-apps.anon.CONFLICTING */ SYNCED | PENDING | typingsSlinky.chromeApps.chromeAppsStrings.CONFLICTING, 
     Exclude[
-      /* keyof chrome-apps.AnonCONFLICTING */ SYNCED | PENDING | CONFLICTING, 
+      /* keyof chrome-apps.anon.CONFLICTING */ SYNCED | PENDING | typingsSlinky.chromeApps.chromeAppsStrings.CONFLICTING, 
       synced_ | pending_ | conflicting_
     ]
   ] = js.native
@@ -39,10 +38,10 @@ object FileStatusInfo {
   def apply(
     fileEntry: FileEntry,
     status: ToStringLiteral[
-      AnonCONFLICTING, 
-      /* keyof chrome-apps.AnonCONFLICTING */ SYNCED | PENDING | CONFLICTING, 
+      CONFLICTING, 
+      /* keyof chrome-apps.anon.CONFLICTING */ SYNCED | PENDING | typingsSlinky.chromeApps.chromeAppsStrings.CONFLICTING, 
       Exclude[
-        /* keyof chrome-apps.AnonCONFLICTING */ SYNCED | PENDING | CONFLICTING, 
+        /* keyof chrome-apps.anon.CONFLICTING */ SYNCED | PENDING | typingsSlinky.chromeApps.chromeAppsStrings.CONFLICTING, 
         synced_ | pending_ | conflicting_
       ]
     ]
@@ -65,10 +64,10 @@ object FileStatusInfo {
     @scala.inline
     def withStatus(
       value: ToStringLiteral[
-          AnonCONFLICTING, 
-          /* keyof chrome-apps.AnonCONFLICTING */ SYNCED | PENDING | CONFLICTING, 
+          CONFLICTING, 
+          /* keyof chrome-apps.anon.CONFLICTING */ SYNCED | PENDING | typingsSlinky.chromeApps.chromeAppsStrings.CONFLICTING, 
           Exclude[
-            /* keyof chrome-apps.AnonCONFLICTING */ SYNCED | PENDING | CONFLICTING, 
+            /* keyof chrome-apps.anon.CONFLICTING */ SYNCED | PENDING | typingsSlinky.chromeApps.chromeAppsStrings.CONFLICTING, 
             synced_ | pending_ | conflicting_
           ]
         ]

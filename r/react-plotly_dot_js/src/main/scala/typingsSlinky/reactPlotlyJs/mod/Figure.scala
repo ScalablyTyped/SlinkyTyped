@@ -2,7 +2,7 @@ package typingsSlinky.reactPlotlyJs.mod
 
 import typingsSlinky.plotlyJs.mod.Data
 import typingsSlinky.plotlyJs.mod.Frame
-import typingsSlinky.reactPlotlyJs.PartialLayout
+import typingsSlinky.reactPlotlyJs.anon.PartialLayout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

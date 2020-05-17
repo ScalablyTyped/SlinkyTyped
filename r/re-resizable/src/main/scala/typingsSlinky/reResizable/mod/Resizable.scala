@@ -7,12 +7,11 @@ import org.scalajs.dom.raw.TouchEvent
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
-import typingsSlinky.reResizable.AnonEnable
-import typingsSlinky.reResizable.AnonHeight
-import typingsSlinky.reResizable.AnonHeightWidth
-import typingsSlinky.reResizable.AnonMaxHeight
-import typingsSlinky.reResizable.AnonNewHeight
-import typingsSlinky.reResizable.AnonWidth
+import typingsSlinky.reResizable.anon.Height
+import typingsSlinky.reResizable.anon.HeightWidth
+import typingsSlinky.reResizable.anon.MaxHeight
+import typingsSlinky.reResizable.anon.NewHeight
+import typingsSlinky.reResizable.anon.Width
 import typingsSlinky.reResizable.reResizableStrings.column
 import typingsSlinky.reResizable.reResizableStrings.height
 import typingsSlinky.reResizable.reResizableStrings.row
@@ -39,11 +38,11 @@ class Resizable protected ()
   var targetTop: Double = js.native
   def base: js.UndefOr[HTMLElement] = js.native
   def bindEvents(): Unit = js.native
-  def calculateNewMaxFromBoundary(): AnonMaxHeight = js.native
-  def calculateNewMaxFromBoundary(maxWidth: Double): AnonMaxHeight = js.native
-  def calculateNewMaxFromBoundary(maxWidth: Double, maxHeight: Double): AnonMaxHeight = js.native
-  def calculateNewSizeFromAspectRatio(newWidth: Double, newHeight: Double, max: AnonHeightWidth, min: AnonHeightWidth): AnonNewHeight = js.native
-  def calculateNewSizeFromDirection(clientX: Double, clientY: Double): AnonNewHeight = js.native
+  def calculateNewMaxFromBoundary(): MaxHeight = js.native
+  def calculateNewMaxFromBoundary(maxWidth: Double): MaxHeight = js.native
+  def calculateNewMaxFromBoundary(maxWidth: Double, maxHeight: Double): MaxHeight = js.native
+  def calculateNewSizeFromAspectRatio(newWidth: Double, newHeight: Double, max: HeightWidth, min: HeightWidth): NewHeight = js.native
+  def calculateNewSizeFromDirection(clientX: Double, clientY: Double): NewHeight = js.native
   @JSName("componentDidMount")
   def componentDidMount_MResizable(): Unit = js.native
   @JSName("componentWillUnmount")
@@ -56,7 +55,7 @@ class Resizable protected ()
   def createSizeForCssProperty_width(newSize: String, kind: width): Double | String = js.native
   @JSName("createSizeForCssProperty")
   def createSizeForCssProperty_width(newSize: Double, kind: width): Double | String = js.native
-  def getParentSize(): AnonWidth = js.native
+  def getParentSize(): Width = js.native
   def onMouseMove(event: MouseEvent): Unit = js.native
   def onMouseMove(event: TouchEvent): Unit = js.native
   def onMouseUp(event: MouseEvent): Unit = js.native
@@ -70,7 +69,7 @@ class Resizable protected ()
   def renderResizer(): ReactElement | Null = js.native
   def setBoundingClientRect(): Unit = js.native
   def size: NumberSize = js.native
-  def sizeStyle: AnonHeight = js.native
+  def sizeStyle: Height = js.native
   def unbindEvents(): Unit = js.native
   def updateSize(size: Size): Unit = js.native
 }
@@ -79,6 +78,6 @@ class Resizable protected ()
 @JSImport("re-resizable", "Resizable")
 @js.native
 object Resizable extends js.Object {
-  var defaultProps: AnonEnable = js.native
+  var defaultProps: typingsSlinky.reResizable.anon.Enable = js.native
 }
 

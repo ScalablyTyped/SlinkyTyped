@@ -5,7 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.Animated.Value
 import typingsSlinky.reactNavigation.mod.NavigationParams
 import typingsSlinky.reactNavigation.mod.NavigationRoute
-import typingsSlinky.reactNavigationStack.PickPropsscenenavigationp
+import typingsSlinky.reactNavigationStack.anon.PickPropsscenenavigationp
 import typingsSlinky.reactNavigationStack.headerMod.default
 import typingsSlinky.reactNavigationStack.typesMod.HeaderLayoutPreset
 import typingsSlinky.reactNavigationStack.typesMod.HeaderMode

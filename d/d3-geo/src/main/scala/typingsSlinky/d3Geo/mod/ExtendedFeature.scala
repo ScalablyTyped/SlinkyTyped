@@ -8,7 +8,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ExtendedFeature[GeometryType /* <: GeoGeometryObjects | Null */, Properties /* <: GeoJsonProperties */] extends GeoJsonObject {
+trait ExtendedFeature[GeometryType /* <: GeoGeometryObjects | Null */, Properties /* <: GeoJsonProperties */]
+  extends GeoJsonObject
+     with GeoPermissibleObjects {
   var geometry: GeometryType = js.native
   var id: js.UndefOr[String | Double] = js.native
   var properties: Properties = js.native

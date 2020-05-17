@@ -17,7 +17,8 @@ trait OrgsCreateInvitationParams extends js.Object {
     * **Required unless you provide `email`**. GitHub user ID for the person you are inviting.
     */
   var invitee_id: js.UndefOr[Double] = js.native
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
   /**
     * Specify role for new member. Can be one of:
     * \* `admin` - Organization owners with full administrative rights to the organization and complete access to all repositories and teams.
@@ -33,8 +34,9 @@ trait OrgsCreateInvitationParams extends js.Object {
 
 object OrgsCreateInvitationParams {
   @scala.inline
-  def apply(org: String): OrgsCreateInvitationParams = {
-    val __obj = js.Dynamic.literal(org = org.asInstanceOf[js.Any])
+  def apply(org_ : String): OrgsCreateInvitationParams = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrgsCreateInvitationParams]
   }
   @scala.inline
@@ -44,7 +46,7 @@ object OrgsCreateInvitationParams {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

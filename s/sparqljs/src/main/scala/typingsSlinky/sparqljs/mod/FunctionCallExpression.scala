@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait FunctionCallExpression
   extends BaseExpression
-     with _Expression {
+     with Expression {
   var args: js.Array[Expression] = js.native
   var function: String = js.native
   @JSName("type")

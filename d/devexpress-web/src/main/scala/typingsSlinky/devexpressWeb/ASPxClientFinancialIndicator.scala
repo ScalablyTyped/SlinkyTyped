@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents the client-side equivalent of the FinancialIndicator class.
   */
-@JSGlobal("ASPxClientFinancialIndicator")
 @js.native
-class ASPxClientFinancialIndicator () extends ASPxClientIndicator {
+trait ASPxClientFinancialIndicator extends ASPxClientIndicator {
   /**
     * Gets the first point of the financial indicator.
     */
@@ -18,5 +17,39 @@ class ASPxClientFinancialIndicator () extends ASPxClientIndicator {
     * Gets the second point of the financial indicator.
     */
   var point2: ASPxClientFinancialIndicatorPoint = js.native
+}
+
+object ASPxClientFinancialIndicator {
+  @scala.inline
+  def apply(
+    chart: ASPxClientWebChart,
+    name: String,
+    point1: ASPxClientFinancialIndicatorPoint,
+    point2: ASPxClientFinancialIndicatorPoint,
+    series: ASPxClientSeries
+  ): ASPxClientFinancialIndicator = {
+    val __obj = js.Dynamic.literal(chart = chart.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], point1 = point1.asInstanceOf[js.Any], point2 = point2.asInstanceOf[js.Any], series = series.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientFinancialIndicator]
+  }
+  @scala.inline
+  implicit class ASPxClientFinancialIndicatorOps[Self <: ASPxClientFinancialIndicator] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPoint1(value: ASPxClientFinancialIndicatorPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("point1")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPoint2(value: ASPxClientFinancialIndicatorPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("point2")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

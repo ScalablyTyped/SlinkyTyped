@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait JSXEmptyExpression
   extends BaseNode
-     with _Node {
+     with Node {
   @JSName("type")
   var type_JSXEmptyExpression: typingsSlinky.estreeJsx.estreeJsxStrings.JSXEmptyExpression = js.native
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.blueprintjsTable.cellMod
 
-import typingsSlinky.blueprintjsTable.AnonTruncated
+import typingsSlinky.blueprintjsTable.anon.Truncated
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ class Cell ()
 @JSImport("@blueprintjs/table/lib/esm/cell/cell", "Cell")
 @js.native
 object Cell extends js.Object {
-  var defaultProps: AnonTruncated = js.native
+  var defaultProps: Truncated = js.native
   var displayName: String = js.native
 }
 

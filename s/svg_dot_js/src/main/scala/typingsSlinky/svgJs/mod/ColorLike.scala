@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 // color.js
 @js.native
-trait ColorLike extends js.Object {
+trait ColorLike extends ColorAlias {
   var b: Double = js.native
   var g: Double = js.native
   var r: Double = js.native

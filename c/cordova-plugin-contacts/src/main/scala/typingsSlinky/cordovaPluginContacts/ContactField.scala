@@ -1,9 +1,5 @@
 package typingsSlinky.cordovaPluginContacts
 
-import org.scalablytyped.runtime.Instantiable0
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
-import org.scalablytyped.runtime.Instantiable3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,12 +26,38 @@ trait ContactField extends js.Object {
   var value: String = js.native
 }
 
-@JSGlobal("ContactField")
-@js.native
-object ContactField
-  extends /** Constructor for ContactField object */
-Instantiable0[ContactField]
-     with Instantiable1[/* type */ String, ContactField]
-     with Instantiable2[/* type */ String, /* value */ String, ContactField]
-     with Instantiable3[/* type */ String, /* value */ String, /* pref */ Boolean, ContactField]
+object ContactField {
+  @scala.inline
+  def apply(pref: Boolean, `type`: String, value: String): ContactField = {
+    val __obj = js.Dynamic.literal(pref = pref.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ContactField]
+  }
+  @scala.inline
+  implicit class ContactFieldOps[Self <: ContactField] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPref(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pref")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

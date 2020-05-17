@@ -1,6 +1,6 @@
 package typingsSlinky.hapi.mod
 
-import typingsSlinky.hapi.AnonIntegrity
+import typingsSlinky.hapi.anon.Integrity
 import typingsSlinky.hapi.hapiBooleans.`false`
 import typingsSlinky.hapi.hapiStrings.Lax
 import typingsSlinky.hapi.hapiStrings.Strict
@@ -62,7 +62,7 @@ trait ServerStateCookieOptions extends js.Object {
     *  * integrity - algorithm options. Defaults to require('iron').defaults.integrity.
     *  * password - password used for HMAC key generation (must be at least 32 characters long).
     */
-  var sign: js.UndefOr[AnonIntegrity] = js.native
+  var sign: js.UndefOr[Integrity] = js.native
   /** if false, allows any cookie value including values in violation of RFC 6265. Defaults to true. */
   var strictHeader: js.UndefOr[Boolean] = js.native
   /** time-to-live in milliseconds. Defaults to null (session time-life - cookies are deleted when the browser is closed). */
@@ -238,7 +238,7 @@ object ServerStateCookieOptions {
         ret
     }
     @scala.inline
-    def withSign(value: AnonIntegrity): Self = {
+    def withSign(value: Integrity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sign")(value.asInstanceOf[js.Any])
         ret

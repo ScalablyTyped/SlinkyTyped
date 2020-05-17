@@ -27,6 +27,5 @@ object LineHeightSpan extends js.Object {
     ): Unit = js.native
   }
   
-  var `type`: js.Symbol = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.vis.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait TimelineEventPropertiesResult extends js.Object {
   /**
     * The original click event.
     */
-  var event: Event_ = js.native
+  var event: Event = js.native
   /**
     *  The id of the clicked group
     */
@@ -52,7 +52,7 @@ trait TimelineEventPropertiesResult extends js.Object {
 object TimelineEventPropertiesResult {
   @scala.inline
   def apply(
-    event: Event_,
+    event: Event,
     pageX: Double,
     pageY: Double,
     snappedTime: js.Date,
@@ -70,7 +70,7 @@ object TimelineEventPropertiesResult {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEvent(value: Event_): Self = {
+    def withEvent(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
         ret

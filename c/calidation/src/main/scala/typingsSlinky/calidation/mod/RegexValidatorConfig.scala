@@ -5,7 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RegexValidatorConfig extends SimpleValidatorConfig {
+trait RegexValidatorConfig
+  extends SimpleValidatorConfig
+     with RegexValidator {
   var regex: js.RegExp = js.native
 }
 

@@ -1,7 +1,6 @@
 package typingsSlinky.std
 
 import org.scalablytyped.runtime.NumberDictionary
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.std.stdStrings.UInt8Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -334,8 +333,4 @@ trait Uint8Array extends /* index */ NumberDictionary[Double] {
     */
   def values(): IterableIterator[Double] = js.native
 }
-
-@JSGlobal("Uint8Array")
-@js.native
-object Uint8Array extends TopLevel[Uint8ArrayConstructor]
 

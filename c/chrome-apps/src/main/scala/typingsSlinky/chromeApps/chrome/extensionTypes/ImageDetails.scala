@@ -15,14 +15,8 @@ trait ImageDetails extends js.Object
 
 object ImageDetails {
   @scala.inline
-  def ImageDetailsJpeg(): ImageDetails = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[ImageDetails]
-  }
+  implicit def apply(value: ImageDetailsJpeg): ImageDetails = value.asInstanceOf[ImageDetails]
   @scala.inline
-  def ImageDetailsPng(): ImageDetails = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[ImageDetails]
-  }
+  implicit def apply(value: ImageDetailsPng): ImageDetails = value.asInstanceOf[ImageDetails]
 }
 

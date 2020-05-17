@@ -1,6 +1,6 @@
 package typingsSlinky.proxyVerifier.mod
 
-import typingsSlinky.proxyVerifier.AnonCode
+import typingsSlinky.proxyVerifier.anon.Code
 import typingsSlinky.proxyVerifier.proxyVerifierBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait NotWorkingResult extends Result {
-  var error: AnonCode = js.native
+  var error: Code = js.native
   var ok: `false` = js.native
 }
 
 object NotWorkingResult {
   @scala.inline
-  def apply(error: AnonCode, ok: `false`): NotWorkingResult = {
+  def apply(error: Code, ok: `false`): NotWorkingResult = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], ok = ok.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotWorkingResult]
   }
@@ -25,7 +25,7 @@ object NotWorkingResult {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withError(value: AnonCode): Self = {
+    def withError(value: Code): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret

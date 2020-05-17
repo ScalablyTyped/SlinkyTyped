@@ -3,7 +3,7 @@ package typingsSlinky.koaSession.mod
 import typingsSlinky.koa.mod.DefaultContext
 import typingsSlinky.koa.mod.DefaultState
 import typingsSlinky.koa.mod.Middleware
-import typingsSlinky.koaSession.Partialopts
+import typingsSlinky.koaSession.anon.Partialopts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

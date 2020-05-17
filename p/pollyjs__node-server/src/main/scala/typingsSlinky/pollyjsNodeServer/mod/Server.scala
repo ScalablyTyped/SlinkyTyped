@@ -7,7 +7,7 @@ import typingsSlinky.expressServeStaticCore.mod.Request
 import typingsSlinky.expressServeStaticCore.mod.Response
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
-import typingsSlinky.pollyjsNodeServer.PartialConfig
+import typingsSlinky.pollyjsNodeServer.anon.PartialConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -12,7 +12,8 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactDraggable.mod.DraggableData
 import typingsSlinky.reactDraggable.mod.DraggableEvent
 import typingsSlinky.reactDraggable.reactDraggableBooleans.`false`
-import typingsSlinky.reactRnd.AnonX
+import typingsSlinky.reactRnd.anon.X
+import typingsSlinky.reactRnd.anon.xnumberynumberSize
 import typingsSlinky.reactRnd.mod.Grid
 import typingsSlinky.reactRnd.mod.HandleClasses
 import typingsSlinky.reactRnd.mod.HandleComponent
@@ -26,7 +27,6 @@ import typingsSlinky.reactRnd.reactRndStrings.both
 import typingsSlinky.reactRnd.reactRndStrings.none
 import typingsSlinky.reactRnd.reactRndStrings.x
 import typingsSlinky.reactRnd.reactRndStrings.y
-import typingsSlinky.reactRnd.xnumberynumberSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -97,7 +97,7 @@ object Rnd {
       value: (/* e */ MouseEvent | TouchEvent, /* dir */ ResizeDirection, /* elementRef */ HTMLDivElement, /* delta */ ResizableDelta, /* position */ Position) => Unit
     ): this.type = set("onResizeStop", js.Any.fromFunction5(value))
     @scala.inline
-    def position(value: AnonX): this.type = set("position", value.asInstanceOf[js.Any])
+    def position(value: X): this.type = set("position", value.asInstanceOf[js.Any])
     @scala.inline
     def resizeGrid(value: Grid): this.type = set("resizeGrid", value.asInstanceOf[js.Any])
     @scala.inline

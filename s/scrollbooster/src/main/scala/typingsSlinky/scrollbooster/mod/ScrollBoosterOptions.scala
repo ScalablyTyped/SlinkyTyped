@@ -1,5 +1,6 @@
 package typingsSlinky.scrollbooster.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.scrollbooster.scrollboosterStrings.all
 import typingsSlinky.scrollbooster.scrollboosterStrings.horizontal
@@ -8,7 +9,6 @@ import typingsSlinky.scrollbooster.scrollboosterStrings.native
 import typingsSlinky.scrollbooster.scrollboosterStrings.touch
 import typingsSlinky.scrollbooster.scrollboosterStrings.transform
 import typingsSlinky.scrollbooster.scrollboosterStrings.vertical
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,11 +22,11 @@ trait ScrollBoosterOptions extends js.Object {
   var emulateScroll: js.UndefOr[Boolean] = js.native
   var friction: js.UndefOr[Double] = js.native
   var inputsFocus: js.UndefOr[Boolean] = js.native
-  var onClick: js.UndefOr[js.Function2[/* state */ ScrollingState, /* event */ Event_, Unit]] = js.native
+  var onClick: js.UndefOr[js.Function2[/* state */ ScrollingState, /* event */ Event, Unit]] = js.native
   var onUpdate: js.UndefOr[js.Function1[/* state */ ScrollingState, Unit]] = js.native
   var pointerMode: js.UndefOr[touch | mouse | all] = js.native
   var scrollMode: js.UndefOr[transform | native] = js.native
-  var shouldScroll: js.UndefOr[js.Function2[/* state */ ScrollingState, /* event */ Event_, Boolean]] = js.native
+  var shouldScroll: js.UndefOr[js.Function2[/* state */ ScrollingState, /* event */ Event, Boolean]] = js.native
   var textSelection: js.UndefOr[Boolean] = js.native
   var viewport: HTMLElement | Null = js.native
 }
@@ -134,7 +134,7 @@ object ScrollBoosterOptions {
         ret
     }
     @scala.inline
-    def withOnClick(value: (/* state */ ScrollingState, /* event */ Event_) => Unit): Self = {
+    def withOnClick(value: (/* state */ ScrollingState, /* event */ Event) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction2(value))
         ret
@@ -182,7 +182,7 @@ object ScrollBoosterOptions {
         ret
     }
     @scala.inline
-    def withShouldScroll(value: (/* state */ ScrollingState, /* event */ Event_) => Boolean): Self = {
+    def withShouldScroll(value: (/* state */ ScrollingState, /* event */ Event) => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shouldScroll")(js.Any.fromFunction2(value))
         ret

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("tableau.DataTable")
 @js.native
-class DataTable () extends js.Object {
+trait DataTable extends js.Object {
   /** The column information, including the name, data type, and index. */
   def getColumns(): js.Array[Column] = js.native
   /**
@@ -20,5 +19,57 @@ class DataTable () extends js.Object {
   def getName(): String = js.native
   /** The number of rows in the returned data. */
   def getTotalRowCount(): Double = js.native
+}
+
+object DataTable {
+  @scala.inline
+  def apply(
+    getColumns: () => js.Array[Column],
+    getData: () => js.Array[_],
+    getIsSummaryData: () => Boolean,
+    getName: () => String,
+    getTotalRowCount: () => Double
+  ): DataTable = {
+    val __obj = js.Dynamic.literal(getColumns = js.Any.fromFunction0(getColumns), getData = js.Any.fromFunction0(getData), getIsSummaryData = js.Any.fromFunction0(getIsSummaryData), getName = js.Any.fromFunction0(getName), getTotalRowCount = js.Any.fromFunction0(getTotalRowCount))
+    __obj.asInstanceOf[DataTable]
+  }
+  @scala.inline
+  implicit class DataTableOps[Self <: DataTable] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetColumns(value: () => js.Array[Column]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getColumns")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetData(value: () => js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getData")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetIsSummaryData(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getIsSummaryData")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetTotalRowCount(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTotalRowCount")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.awsSdk.acmpcaMod
 
-import typingsSlinky.awsSdk.DescribeCertificateAuthor
-import typingsSlinky.awsSdk.GetCertificateAuthorityCs
-import typingsSlinky.awsSdk.GetCertificateRequestwait
+import typingsSlinky.awsSdk.anon.DescribeCertificateAuthor
+import typingsSlinky.awsSdk.anon.GetCertificateAuthorityCs
+import typingsSlinky.awsSdk.anon.GetCertificateRequestwait
 import typingsSlinky.awsSdk.awsSdkStrings.auditReportCreated
 import typingsSlinky.awsSdk.awsSdkStrings.certificateAuthorityCSRCreated
 import typingsSlinky.awsSdk.awsSdkStrings.certificateIssued

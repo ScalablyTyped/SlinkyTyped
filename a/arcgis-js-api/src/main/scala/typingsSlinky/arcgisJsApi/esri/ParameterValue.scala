@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`data-file`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`feature-record-set-layer`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`linear-unit`
@@ -53,8 +52,4 @@ trait ParameterValue
     */
   var value: js.Any = js.native
 }
-
-@JSGlobal("__esri.ParameterValue")
-@js.native
-object ParameterValue extends TopLevel[ParameterValueConstructor]
 

@@ -1,6 +1,8 @@
 package typingsSlinky.rcMenu
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.rcMenu.anon.BuiltinPlacements
+import typingsSlinky.rcMenu.anon.Disabled
 import typingsSlinky.rcMenu.dividerMod.DividerProps
 import typingsSlinky.rcMenu.menuMod.MenuProps
 import scala.scalajs.js
@@ -31,21 +33,21 @@ object mod extends js.Object {
   /* static members */
   @js.native
   object ItemGroup extends js.Object {
-    var defaultProps: AnonDisabled = js.native
+    var defaultProps: Disabled = js.native
     var isMenuItemGroup: Boolean = js.native
   }
   
   /* static members */
   @js.native
   object MenuItemGroup extends js.Object {
-    var defaultProps: AnonDisabled = js.native
+    var defaultProps: Disabled = js.native
     var isMenuItemGroup: Boolean = js.native
   }
   
   /* static members */
   @js.native
   object default extends js.Object {
-    var defaultProps: AnonBuiltinPlacements = js.native
+    var defaultProps: BuiltinPlacements = js.native
   }
   
 }

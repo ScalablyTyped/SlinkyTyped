@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobileRn.radioPropsTypeMod
 
-import typingsSlinky.antdMobileRn.AnonTarget
+import typingsSlinky.antdMobileRn.anon.Target
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait RadioPropsType extends js.Object {
   var defaultChecked: js.UndefOr[Boolean] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
   var name: js.UndefOr[String] = js.native
-  var onChange: js.UndefOr[js.Function1[/* e */ AnonTarget, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* e */ Target, Unit]] = js.native
   var wrapLabel: js.UndefOr[Boolean] = js.native
 }
 
@@ -76,7 +76,7 @@ object RadioPropsType {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* e */ AnonTarget => Unit): Self = {
+    def withOnChange(value: /* e */ Target => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

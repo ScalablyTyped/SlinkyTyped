@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.indexBundleMod
 
-import typingsSlinky.officeUiFabricReact.AnonHasCondensedHeadline
+import typingsSlinky.officeUiFabricReact.anon.HasCondensedHeadline
 import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubbleProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,6 +17,6 @@ class TeachingBubbleContentBase protected ()
 @JSImport("office-ui-fabric-react/lib/index.bundle", "TeachingBubbleContentBase")
 @js.native
 object TeachingBubbleContentBase extends js.Object {
-  var defaultProps: AnonHasCondensedHeadline = js.native
+  var defaultProps: HasCondensedHeadline = js.native
 }
 

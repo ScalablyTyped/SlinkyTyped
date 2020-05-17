@@ -5,7 +5,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignPro.AnonHref
+import typingsSlinky.antDesignPro.anon.Href
 import typingsSlinky.antDesignPro.antDesignProStrings.`403`
 import typingsSlinky.antDesignPro.antDesignProStrings.`404`
 import typingsSlinky.antDesignPro.antDesignProStrings.`500`
@@ -42,11 +42,11 @@ object Exception {
     @scala.inline
     def img(value: String): this.type = set("img", value.asInstanceOf[js.Any])
     @scala.inline
-    def linkElementFunctionComponent(value: ReactComponentClass[AnonHref]): this.type = set("linkElement", value.asInstanceOf[js.Any])
+    def linkElementFunctionComponent(value: ReactComponentClass[Href]): this.type = set("linkElement", value.asInstanceOf[js.Any])
     @scala.inline
-    def linkElementComponentClass(value: ReactComponentClass[AnonHref]): this.type = set("linkElement", value.asInstanceOf[js.Any])
+    def linkElementComponentClass(value: ReactComponentClass[Href]): this.type = set("linkElement", value.asInstanceOf[js.Any])
     @scala.inline
-    def linkElement(value: String | ReactComponentClass[AnonHref]): this.type = set("linkElement", value.asInstanceOf[js.Any])
+    def linkElement(value: String | ReactComponentClass[Href]): this.type = set("linkElement", value.asInstanceOf[js.Any])
     @scala.inline
     def redirect(value: String): this.type = set("redirect", value.asInstanceOf[js.Any])
     @scala.inline
@@ -59,7 +59,7 @@ object Exception {
     def `type`(value: `403` | `404` | `500`): this.type = set("type", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ExceptionProps[AnonHref]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: ExceptionProps[Href]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Exception.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

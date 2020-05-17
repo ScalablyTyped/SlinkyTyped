@@ -1,13 +1,13 @@
 package typingsSlinky.writeFileAtomic.mod
 
-import typingsSlinky.writeFileAtomic.AnonGid
+import typingsSlinky.writeFileAtomic.anon.Gid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Options extends js.Object {
-  var chown: js.UndefOr[AnonGid] = js.native
+  var chown: js.UndefOr[Gid] = js.native
   var encoding: js.UndefOr[String] = js.native
   var fsync: js.UndefOr[Boolean] = js.native
   var mode: js.UndefOr[Double] = js.native
@@ -26,7 +26,7 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withChown(value: AnonGid): Self = {
+    def withChown(value: Gid): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("chown")(value.asInstanceOf[js.Any])
         ret

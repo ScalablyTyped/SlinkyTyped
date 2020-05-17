@@ -7,25 +7,18 @@ import scala.scalajs.js.annotation._
 /* Inlined std.Pick<react-transition-group.react-transition-group/Transition.TransitionProps, @material-ui/core.@material-ui/core/transitions/transition.TransitionHandlerKeys> */
 @js.native
 trait TransitionHandlerProps extends js.Object {
-  var onEnter: js.Any = js.native
-  var onEntered: js.Any = js.native
-  var onEntering: js.Any = js.native
-  var onExit: js.Any = js.native
-  var onExited: js.Any = js.native
-  var onExiting: js.Any = js.native
+  var onEnter: js.UndefOr[js.Any] = js.native
+  var onEntered: js.UndefOr[js.Any] = js.native
+  var onEntering: js.UndefOr[js.Any] = js.native
+  var onExit: js.UndefOr[js.Any] = js.native
+  var onExited: js.UndefOr[js.Any] = js.native
+  var onExiting: js.UndefOr[js.Any] = js.native
 }
 
 object TransitionHandlerProps {
   @scala.inline
-  def apply(
-    onEnter: js.Any,
-    onEntered: js.Any,
-    onEntering: js.Any,
-    onExit: js.Any,
-    onExited: js.Any,
-    onExiting: js.Any
-  ): TransitionHandlerProps = {
-    val __obj = js.Dynamic.literal(onEnter = onEnter.asInstanceOf[js.Any], onEntered = onEntered.asInstanceOf[js.Any], onEntering = onEntering.asInstanceOf[js.Any], onExit = onExit.asInstanceOf[js.Any], onExited = onExited.asInstanceOf[js.Any], onExiting = onExiting.asInstanceOf[js.Any])
+  def apply(): TransitionHandlerProps = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[TransitionHandlerProps]
   }
   @scala.inline
@@ -41,9 +34,21 @@ object TransitionHandlerProps {
         ret
     }
     @scala.inline
+    def withoutOnEnter: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEnter")(js.undefined)
+        ret
+    }
+    @scala.inline
     def withOnEntered(value: js.Any): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEntered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnEntered: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEntered")(js.undefined)
         ret
     }
     @scala.inline
@@ -53,9 +58,21 @@ object TransitionHandlerProps {
         ret
     }
     @scala.inline
+    def withoutOnEntering: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onEntering")(js.undefined)
+        ret
+    }
+    @scala.inline
     def withOnExit(value: js.Any): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onExit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnExit: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExit")(js.undefined)
         ret
     }
     @scala.inline
@@ -65,9 +82,21 @@ object TransitionHandlerProps {
         ret
     }
     @scala.inline
+    def withoutOnExited: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExited")(js.undefined)
+        ret
+    }
+    @scala.inline
     def withOnExiting(value: js.Any): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onExiting")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutOnExiting: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onExiting")(js.undefined)
         ret
     }
   }

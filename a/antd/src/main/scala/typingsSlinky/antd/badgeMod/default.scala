@@ -1,6 +1,6 @@
 package typingsSlinky.antd.badgeMod
 
-import typingsSlinky.antd.AnonDot
+import typingsSlinky.antd.anon.Dot
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ class default () extends Badge
 @JSImport("antd/lib/badge", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonDot = js.native
+  var defaultProps: Dot = js.native
 }
 

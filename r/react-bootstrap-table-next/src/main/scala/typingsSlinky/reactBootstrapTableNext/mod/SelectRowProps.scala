@@ -1,13 +1,13 @@
 package typingsSlinky.reactBootstrapTableNext.mod
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactBootstrapTableNext.AnonChecked
+import typingsSlinky.reactBootstrapTableNext.anon.Checked
 import typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.left
 import typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.right
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +35,7 @@ trait SelectRowProps[T] extends js.Object {
       /* row */ T, 
       /* isSelected */ Boolean, 
       /* rowIndex */ Double, 
-      /* e */ SyntheticEvent[Event_, Element], 
+      /* e */ SyntheticEvent[Event, Element], 
       Unit | Boolean
     ]
   ] = js.native
@@ -46,14 +46,12 @@ trait SelectRowProps[T] extends js.Object {
     js.Function3[
       /* isSelect */ Boolean, 
       /* rows */ js.Array[T], 
-      /* e */ SyntheticEvent[Event_, Element], 
+      /* e */ SyntheticEvent[Event, Element], 
       Unit | js.Array[Double]
     ]
   ] = js.native
   var selectColumnPosition: js.UndefOr[left | right] = js.native
-  var selectColumnStyle: js.UndefOr[
-    (js.Function1[/* props */ AnonChecked, js.UndefOr[CSSProperties]]) | CSSProperties
-  ] = js.native
+  var selectColumnStyle: js.UndefOr[(js.Function1[/* props */ Checked, js.UndefOr[CSSProperties]]) | CSSProperties] = js.native
   var selected: js.UndefOr[js.Array[Double | String]] = js.native
   var selectionHeaderRenderer: js.UndefOr[ReactElement] = js.native
   var selectionRenderer: js.UndefOr[ReactElement] = js.native
@@ -240,7 +238,7 @@ object SelectRowProps {
     }
     @scala.inline
     def withOnSelect(
-      value: (/* row */ T, /* isSelected */ Boolean, /* rowIndex */ Double, /* e */ SyntheticEvent[Event_, Element]) => Unit | Boolean
+      value: (/* row */ T, /* isSelected */ Boolean, /* rowIndex */ Double, /* e */ SyntheticEvent[Event, Element]) => Unit | Boolean
     ): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction4(value))
@@ -254,7 +252,7 @@ object SelectRowProps {
     }
     @scala.inline
     def withOnSelectAll(
-      value: (/* isSelect */ Boolean, /* rows */ js.Array[T], /* e */ SyntheticEvent[Event_, Element]) => Unit | js.Array[Double]
+      value: (/* isSelect */ Boolean, /* rows */ js.Array[T], /* e */ SyntheticEvent[Event, Element]) => Unit | js.Array[Double]
     ): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectAll")(js.Any.fromFunction3(value))
@@ -279,13 +277,13 @@ object SelectRowProps {
         ret
     }
     @scala.inline
-    def withSelectColumnStyleFunction1(value: /* props */ AnonChecked => js.UndefOr[CSSProperties]): Self[T] = {
+    def withSelectColumnStyleFunction1(value: /* props */ Checked => js.UndefOr[CSSProperties]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectColumnStyle")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withSelectColumnStyle(value: (js.Function1[/* props */ AnonChecked, js.UndefOr[CSSProperties]]) | CSSProperties): Self[T] = {
+    def withSelectColumnStyle(value: (js.Function1[/* props */ Checked, js.UndefOr[CSSProperties]]) | CSSProperties): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectColumnStyle")(value.asInstanceOf[js.Any])
         ret

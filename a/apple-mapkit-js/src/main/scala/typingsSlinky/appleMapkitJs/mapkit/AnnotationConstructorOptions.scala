@@ -1,6 +1,6 @@
 package typingsSlinky.appleMapkitJs.mapkit
 
-import typingsSlinky.appleMapkitJs.AnonHeight
+import typingsSlinky.appleMapkitJs.anon.Height
 import typingsSlinky.std.DOMPoint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -71,7 +71,7 @@ trait AnnotationConstructorOptions extends js.Object {
   /**
     * The desired dimensions of the annotation, in CSS pixels.
     */
-  var size: js.UndefOr[AnonHeight] = js.native
+  var size: js.UndefOr[Height] = js.native
   /**
     * The text to display as a subtitle on the second line of an annotation's
     * callout.
@@ -268,7 +268,7 @@ object AnnotationConstructorOptions {
         ret
     }
     @scala.inline
-    def withSize(value: AnonHeight): Self = {
+    def withSize(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
         ret

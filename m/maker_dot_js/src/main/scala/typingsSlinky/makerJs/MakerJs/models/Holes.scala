@@ -2,33 +2,35 @@ package typingsSlinky.makerJs.MakerJs.models
 
 import typingsSlinky.makerJs.MakerJs.IModel
 import typingsSlinky.makerJs.MakerJs.IPathMap
-import typingsSlinky.makerJs.MakerJs.IPoint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("MakerJs.models.Holes")
 @js.native
-class Holes protected () extends IModel {
-  /**
-    * Create an array of circles of the same radius from an array of center points.
-    *
-    * Example:
-    * ```
-    * //Create some holes from an array of points
-    * var makerjs = require('makerjs');
-    * var model = new makerjs.models.Holes(10, [[0, 0],[50, 0],[25, 40]]);
-    * var svg = makerjs.exporter.toSVG(model);
-    * document.write(svg);
-    * ```
-    *
-    * @param holeRadius Hole radius.
-    * @param points Array of points for origin of each hole.
-    * @param ids Optional array of corresponding path ids for the holes.
-    */
-  def this(holeRadius: Double, points: js.Array[IPoint]) = this()
-  def this(holeRadius: Double, points: js.Array[IPoint], ids: js.Array[String]) = this()
+trait Holes extends IModel {
   @JSName("paths")
   var paths_Holes: IPathMap = js.native
+}
+
+object Holes {
+  @scala.inline
+  def apply(paths: IPathMap): Holes = {
+    val __obj = js.Dynamic.literal(paths = paths.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Holes]
+  }
+  @scala.inline
+  implicit class HolesOps[Self <: Holes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPaths(value: IPathMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -4,18 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("TypeScript.ExternalModuleReferenceSyntax")
 @js.native
-class ExternalModuleReferenceSyntax protected ()
+trait ExternalModuleReferenceSyntax
   extends SyntaxNode
      with IModuleReferenceSyntax {
-  def this(
-    requireKeyword: ISyntaxToken,
-    openParenToken: ISyntaxToken,
-    stringLiteral: ISyntaxToken,
-    closeParenToken: ISyntaxToken,
-    parsedInStrictMode: Boolean
-  ) = this()
   var closeParenToken: ISyntaxToken = js.native
   var openParenToken: ISyntaxToken = js.native
   var requireKeyword: ISyntaxToken = js.native
@@ -30,12 +22,5 @@ class ExternalModuleReferenceSyntax protected ()
   def withOpenParenToken(openParenToken: ISyntaxToken): ExternalModuleReferenceSyntax = js.native
   def withRequireKeyword(requireKeyword: ISyntaxToken): ExternalModuleReferenceSyntax = js.native
   def withStringLiteral(stringLiteral: ISyntaxToken): ExternalModuleReferenceSyntax = js.native
-}
-
-/* static members */
-@JSGlobal("TypeScript.ExternalModuleReferenceSyntax")
-@js.native
-object ExternalModuleReferenceSyntax extends js.Object {
-  def create1(stringLiteral: ISyntaxToken): ExternalModuleReferenceSyntax = js.native
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.reactBootstrapTypeahead.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactRef
@@ -8,7 +9,6 @@ import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings._emp
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.both
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.list
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.listbox
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,16 +26,16 @@ trait InputContainerPropsMultiple[T /* <: TypeaheadModel */] extends js.Object {
   var inputClassName: String = js.native
   var inputRef: LegacyRef[HTMLInputElement] = js.native
   var labelKey: TypeaheadLabelKey[T] = js.native
-  var onBlur: js.Function1[/* e */ Event_, Unit] = js.native
+  var onBlur: js.Function1[/* e */ Event, Unit] = js.native
   var onChange: js.Function1[/* selected */ js.Array[T], Unit] = js.native
-  var onClick: js.Function1[/* e */ Event_, Unit] = js.native
-  var onFocus: js.Function1[/* e */ Event_, Unit] = js.native
-  var onKeyDown: js.Function1[/* e */ Event_, Unit] = js.native
+  var onClick: js.Function1[/* e */ Event, Unit] = js.native
+  var onFocus: js.Function1[/* e */ Event, Unit] = js.native
+  var onKeyDown: js.Function1[/* e */ Event, Unit] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var role: _empty = js.native
   var selected: js.Array[T] = js.native
   var value: String = js.native
-  def onRemove(e: Event_): Unit = js.native
+  def onRemove(e: Event): Unit = js.native
   def renderToken(selectedItem: T, props: TypeaheadMenuProps[T], index: Double): TagMod[Any] = js.native
 }
 
@@ -51,12 +51,12 @@ object InputContainerPropsMultiple {
     disabled: Boolean,
     inputClassName: String,
     labelKey: TypeaheadLabelKey[T],
-    onBlur: /* e */ Event_ => Unit,
+    onBlur: /* e */ Event => Unit,
     onChange: /* selected */ js.Array[T] => Unit,
-    onClick: /* e */ Event_ => Unit,
-    onFocus: /* e */ Event_ => Unit,
-    onKeyDown: /* e */ Event_ => Unit,
-    onRemove: Event_ => Unit,
+    onClick: /* e */ Event => Unit,
+    onFocus: /* e */ Event => Unit,
+    onKeyDown: /* e */ Event => Unit,
+    onRemove: Event => Unit,
     renderToken: (T, TypeaheadMenuProps[T], Double) => TagMod[Any],
     role: _empty,
     selected: js.Array[T],
@@ -137,7 +137,7 @@ object InputContainerPropsMultiple {
         ret
     }
     @scala.inline
-    def withOnBlur(value: /* e */ Event_ => Unit): Self[T] = {
+    def withOnBlur(value: /* e */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
         ret
@@ -149,25 +149,25 @@ object InputContainerPropsMultiple {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* e */ Event_ => Unit): Self[T] = {
+    def withOnClick(value: /* e */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnFocus(value: /* e */ Event_ => Unit): Self[T] = {
+    def withOnFocus(value: /* e */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnKeyDown(value: /* e */ Event_ => Unit): Self[T] = {
+    def withOnKeyDown(value: /* e */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnRemove(value: Event_ => Unit): Self[T] = {
+    def withOnRemove(value: Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRemove")(js.Any.fromFunction1(value))
         ret

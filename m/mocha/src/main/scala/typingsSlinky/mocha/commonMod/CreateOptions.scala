@@ -1,6 +1,6 @@
 package typingsSlinky.mocha.commonMod
 
-import typingsSlinky.mocha.Mocha_.Suite_
+import typingsSlinky.mocha.Mocha.Suite
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait CreateOptions extends js.Object {
   /** Filepath where this Suite resides */
   var file: js.UndefOr[String] = js.native
   /** Suite function */
-  var fn: js.UndefOr[js.ThisFunction0[/* this */ Suite_, Unit]] = js.native
+  var fn: js.UndefOr[js.ThisFunction0[/* this */ Suite, Unit]] = js.native
   /** Is suite exclusive? */
   var isOnly: js.UndefOr[Boolean] = js.native
   /** Is suite pending? */
@@ -50,7 +50,7 @@ object CreateOptions {
         ret
     }
     @scala.inline
-    def withFn(value: js.ThisFunction0[/* this */ Suite_, Unit]): Self = {
+    def withFn(value: js.ThisFunction0[/* this */ Suite, Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fn")(value.asInstanceOf[js.Any])
         ret

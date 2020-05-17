@@ -1,0 +1,33 @@
+package typingsSlinky.screeps.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Fatigue extends js.Object {
+  var fatigue: typingsSlinky.screeps.screepsNumbers.`2` = js.native
+}
+
+object Fatigue {
+  @scala.inline
+  def apply(fatigue: typingsSlinky.screeps.screepsNumbers.`2`): Fatigue = {
+    val __obj = js.Dynamic.literal(fatigue = fatigue.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Fatigue]
+  }
+  @scala.inline
+  implicit class FatigueOps[Self <: Fatigue] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFatigue(value: typingsSlinky.screeps.screepsNumbers.`2`): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fatigue")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

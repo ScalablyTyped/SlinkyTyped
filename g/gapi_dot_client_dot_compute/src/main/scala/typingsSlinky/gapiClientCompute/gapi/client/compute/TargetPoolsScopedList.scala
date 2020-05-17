@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientCompute.gapi.client.compute
 
-import typingsSlinky.gapiClientCompute.AnonCode
+import typingsSlinky.gapiClientCompute.anon.Code
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait TargetPoolsScopedList extends js.Object {
   /** List of target pools contained in this scope. */
   var targetPools: js.UndefOr[js.Array[TargetPool]] = js.native
   /** Informational warning which replaces the list of addresses when the list is empty. */
-  var warning: js.UndefOr[AnonCode] = js.native
+  var warning: js.UndefOr[Code] = js.native
 }
 
 object TargetPoolsScopedList {
@@ -38,7 +38,7 @@ object TargetPoolsScopedList {
         ret
     }
     @scala.inline
-    def withWarning(value: AnonCode): Self = {
+    def withWarning(value: Code): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
         ret

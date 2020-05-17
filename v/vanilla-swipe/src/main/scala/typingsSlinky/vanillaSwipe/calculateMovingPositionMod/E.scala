@@ -1,13 +1,13 @@
 package typingsSlinky.vanillaSwipe.calculateMovingPositionMod
 
-import typingsSlinky.vanillaSwipe.AnonClientX
+import typingsSlinky.vanillaSwipe.anon.ClientX
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait E extends js.Object {
-  var changedTouches: js.UndefOr[js.Array[AnonClientX]] = js.native
+  var changedTouches: js.UndefOr[js.Array[ClientX]] = js.native
   var clientX: Double = js.native
   var clientY: Double = js.native
   var preventDefault: js.UndefOr[js.Function] = js.native
@@ -38,7 +38,7 @@ object E {
         ret
     }
     @scala.inline
-    def withChangedTouches(value: js.Array[AnonClientX]): Self = {
+    def withChangedTouches(value: js.Array[ClientX]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("changedTouches")(value.asInstanceOf[js.Any])
         ret

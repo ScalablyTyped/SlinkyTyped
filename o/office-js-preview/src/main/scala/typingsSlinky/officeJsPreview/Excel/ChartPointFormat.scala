@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartPointFormatData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartPointFormatLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartPointFormatUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.ChartPointFormat")
 @js.native
-class ChartPointFormat () extends ClientObject {
+trait ChartPointFormat extends ClientObject {
   /**
     *
     * Represents the border format of a chart data point, which includes color, style, and weight information. Read-only.
@@ -43,7 +42,7 @@ class ChartPointFormat () extends ClientObject {
     */
   def load(): ChartPointFormat = js.native
   def load(options: ChartPointFormatLoadOptions): ChartPointFormat = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartPointFormat = js.native
+  def load(propertyNamesAndPaths: Expand): ChartPointFormat = js.native
   def load(propertyNames: String): ChartPointFormat = js.native
   def load(propertyNames: js.Array[String]): ChartPointFormat = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

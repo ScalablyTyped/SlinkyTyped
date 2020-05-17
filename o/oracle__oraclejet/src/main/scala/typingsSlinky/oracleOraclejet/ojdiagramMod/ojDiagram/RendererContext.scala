@@ -1,8 +1,8 @@
 package typingsSlinky.oracleOraclejet.ojdiagramMod.ojDiagram
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.oracleOraclejet.AnonElementHeight
-import typingsSlinky.oracleOraclejet.AnonExpanded
+import typingsSlinky.oracleOraclejet.anon.ElementHeight
+import typingsSlinky.oracleOraclejet.anon.Expanded
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,13 +11,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RendererContext[K1, D1] extends js.Object {
   var componentElement: Element = js.native
-  var content: AnonElementHeight = js.native
+  var content: ElementHeight = js.native
   var data: js.Object = js.native
   var id: K1 = js.native
   var itemData: D1 = js.native
   var parentElement: Element = js.native
-  var previousState: AnonExpanded = js.native
-  var state: AnonExpanded = js.native
+  var previousState: Expanded = js.native
+  var state: Expanded = js.native
   var `type`: String = js.native
   def renderDefaultFocus(): Unit = js.native
   def renderDefaultHover(): Unit = js.native
@@ -28,16 +28,16 @@ object RendererContext {
   @scala.inline
   def apply[K1, D1](
     componentElement: Element,
-    content: AnonElementHeight,
+    content: ElementHeight,
     data: js.Object,
     id: K1,
     itemData: D1,
     parentElement: Element,
-    previousState: AnonExpanded,
+    previousState: Expanded,
     renderDefaultFocus: () => Unit,
     renderDefaultHover: () => Unit,
     renderDefaultSelection: () => Unit,
-    state: AnonExpanded,
+    state: Expanded,
     `type`: String
   ): RendererContext[K1, D1] = {
     val __obj = js.Dynamic.literal(componentElement = componentElement.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], itemData = itemData.asInstanceOf[js.Any], parentElement = parentElement.asInstanceOf[js.Any], previousState = previousState.asInstanceOf[js.Any], renderDefaultFocus = js.Any.fromFunction0(renderDefaultFocus), renderDefaultHover = js.Any.fromFunction0(renderDefaultHover), renderDefaultSelection = js.Any.fromFunction0(renderDefaultSelection), state = state.asInstanceOf[js.Any])
@@ -57,7 +57,7 @@ object RendererContext {
         ret
     }
     @scala.inline
-    def withContent(value: AnonElementHeight): Self[K1, D1] = {
+    def withContent(value: ElementHeight): Self[K1, D1] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
         ret
@@ -87,7 +87,7 @@ object RendererContext {
         ret
     }
     @scala.inline
-    def withPreviousState(value: AnonExpanded): Self[K1, D1] = {
+    def withPreviousState(value: Expanded): Self[K1, D1] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("previousState")(value.asInstanceOf[js.Any])
         ret
@@ -111,7 +111,7 @@ object RendererContext {
         ret
     }
     @scala.inline
-    def withState(value: AnonExpanded): Self[K1, D1] = {
+    def withState(value: Expanded): Self[K1, D1] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
         ret

@@ -12,14 +12,8 @@ trait InitialProperties extends js.Object
 
 object InitialProperties {
   @scala.inline
-  def InitialPropertiesHyperCube(qHyperCubeDef: HyperCubeDef): InitialProperties = {
-    val __obj = js.Dynamic.literal(qHyperCubeDef = qHyperCubeDef.asInstanceOf[js.Any])
-    __obj.asInstanceOf[InitialProperties]
-  }
+  implicit def apply(value: InitialPropertiesHyperCube): InitialProperties = value.asInstanceOf[InitialProperties]
   @scala.inline
-  def InitialPropertiesListobject(qListobjectDef: ListobjectDef): InitialProperties = {
-    val __obj = js.Dynamic.literal(qListobjectDef = qListobjectDef.asInstanceOf[js.Any])
-    __obj.asInstanceOf[InitialProperties]
-  }
+  implicit def apply(value: InitialPropertiesListobject): InitialProperties = value.asInstanceOf[InitialProperties]
 }
 

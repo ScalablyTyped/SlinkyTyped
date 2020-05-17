@@ -2,7 +2,7 @@ package typingsSlinky.googleMapsReact.mod
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Node
-import typingsSlinky.googleMapsReact.Typeofgoogle
+import typingsSlinky.googleMapsReact.anon.Typeofgoogle
 import typingsSlinky.googlemaps.google.maps.LatLng
 import typingsSlinky.googlemaps.google.maps.LatLngLiteral
 import typingsSlinky.googlemaps.google.maps.Size

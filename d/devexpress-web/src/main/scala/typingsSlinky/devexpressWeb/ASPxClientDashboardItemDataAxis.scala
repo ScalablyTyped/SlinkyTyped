@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * An axis that contains data points corresponding to the specified value hierarchy.
   */
-@JSGlobal("ASPxClientDashboardItemDataAxis")
 @js.native
-class ASPxClientDashboardItemDataAxis () extends js.Object {
+trait ASPxClientDashboardItemDataAxis extends js.Object {
   /**
     * Gets the dimensions used to create a hierarchy of axis points belonging to the current axis.
     */
@@ -32,5 +31,57 @@ class ASPxClientDashboardItemDataAxis () extends js.Object {
     * Gets the root axis point belonging to the current ASPxClientDashboardItemDataAxis.
     */
   def GetRootPoint(): ASPxClientDashboardItemDataAxisPoint = js.native
+}
+
+object ASPxClientDashboardItemDataAxis {
+  @scala.inline
+  def apply(
+    GetDimensions: () => js.Array[ASPxClientDashboardItemDataDimension],
+    GetPointByUniqueValues: js.Array[_] => ASPxClientDashboardItemDataAxisPoint,
+    GetPoints: () => js.Array[ASPxClientDashboardItemDataAxisPoint],
+    GetPointsByDimension: String => js.Array[ASPxClientDashboardItemDataAxisPoint],
+    GetRootPoint: () => ASPxClientDashboardItemDataAxisPoint
+  ): ASPxClientDashboardItemDataAxis = {
+    val __obj = js.Dynamic.literal(GetDimensions = js.Any.fromFunction0(GetDimensions), GetPointByUniqueValues = js.Any.fromFunction1(GetPointByUniqueValues), GetPoints = js.Any.fromFunction0(GetPoints), GetPointsByDimension = js.Any.fromFunction1(GetPointsByDimension), GetRootPoint = js.Any.fromFunction0(GetRootPoint))
+    __obj.asInstanceOf[ASPxClientDashboardItemDataAxis]
+  }
+  @scala.inline
+  implicit class ASPxClientDashboardItemDataAxisOps[Self <: ASPxClientDashboardItemDataAxis] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetDimensions(value: () => js.Array[ASPxClientDashboardItemDataDimension]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetDimensions")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPointByUniqueValues(value: js.Array[_] => ASPxClientDashboardItemDataAxisPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetPointByUniqueValues")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetPoints(value: () => js.Array[ASPxClientDashboardItemDataAxisPoint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetPoints")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPointsByDimension(value: String => js.Array[ASPxClientDashboardItemDataAxisPoint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetPointsByDimension")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetRootPoint(value: () => ASPxClientDashboardItemDataAxisPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetRootPoint")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a provider of symmetric key algorithms. For more information, see Cryptographic keys. */
-@JSGlobal("Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider")
 @js.native
-abstract class SymmetricKeyAlgorithmProvider () extends js.Object {
+trait SymmetricKeyAlgorithmProvider extends js.Object {
   /** Gets the name of the open symmetric algorithm. */
   var algorithmName: String = js.native
   /** Gets the size, in bytes, of the cipher block for the open algorithm. */
@@ -21,15 +20,37 @@ abstract class SymmetricKeyAlgorithmProvider () extends js.Object {
   def createSymmetricKey(keyMaterial: IBuffer): CryptographicKey = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider")
-@js.native
-object SymmetricKeyAlgorithmProvider extends js.Object {
-  /**
-    * Creates an instance of the SymmetricKeyAlgorithmProvider class and opens the specified algorithm for use.
-    * @param algorithm Algorithm name.
-    * @return Represents a symmetric key algorithm provider.
-    */
-  def openAlgorithm(algorithm: String): SymmetricKeyAlgorithmProvider = js.native
+object SymmetricKeyAlgorithmProvider {
+  @scala.inline
+  def apply(algorithmName: String, blockLength: Double, createSymmetricKey: IBuffer => CryptographicKey): SymmetricKeyAlgorithmProvider = {
+    val __obj = js.Dynamic.literal(algorithmName = algorithmName.asInstanceOf[js.Any], blockLength = blockLength.asInstanceOf[js.Any], createSymmetricKey = js.Any.fromFunction1(createSymmetricKey))
+    __obj.asInstanceOf[SymmetricKeyAlgorithmProvider]
+  }
+  @scala.inline
+  implicit class SymmetricKeyAlgorithmProviderOps[Self <: SymmetricKeyAlgorithmProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlgorithmName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("algorithmName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBlockLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("blockLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreateSymmetricKey(value: IBuffer => CryptographicKey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createSymmetricKey")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientStorage.gapi.client.storage
 
-import typingsSlinky.gapiClientStorage.AnonEncryptionAlgorithm
-import typingsSlinky.gapiClientStorage.AnonEntity
+import typingsSlinky.gapiClientStorage.anon.EncryptionAlgorithm
+import typingsSlinky.gapiClientStorage.anon.Entity
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -31,7 +31,7 @@ trait Object extends js.Object {
     */
   var crc32c: js.UndefOr[String] = js.native
   /** Metadata of customer-supplied encryption key, if the object is encrypted by such a key. */
-  var customerEncryption: js.UndefOr[AnonEncryptionAlgorithm] = js.native
+  var customerEncryption: js.UndefOr[EncryptionAlgorithm] = js.native
   /** HTTP 1.1 Entity tag for the object. */
   var etag: js.UndefOr[String] = js.native
   /** The content generation of this object. Used for object versioning. */
@@ -56,7 +56,7 @@ trait Object extends js.Object {
   /** The name of the object. Required if not specified by URL parameter. */
   var name: js.UndefOr[String] = js.native
   /** The owner of the object. This will always be the uploader of the object. */
-  var owner: js.UndefOr[AnonEntity] = js.native
+  var owner: js.UndefOr[Entity] = js.native
   /** The link to this object. */
   var selfLink: js.UndefOr[String] = js.native
   /** Content-Length of the data in bytes. */
@@ -194,7 +194,7 @@ object Object {
         ret
     }
     @scala.inline
-    def withCustomerEncryption(value: AnonEncryptionAlgorithm): Self = {
+    def withCustomerEncryption(value: EncryptionAlgorithm): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customerEncryption")(value.asInstanceOf[js.Any])
         ret
@@ -326,7 +326,7 @@ object Object {
         ret
     }
     @scala.inline
-    def withOwner(value: AnonEntity): Self = {
+    def withOwner(value: Entity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("owner")(value.asInstanceOf[js.Any])
         ret

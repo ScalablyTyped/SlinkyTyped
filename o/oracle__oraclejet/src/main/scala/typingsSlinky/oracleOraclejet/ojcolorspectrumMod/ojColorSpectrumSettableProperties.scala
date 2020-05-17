@@ -1,9 +1,9 @@
 package typingsSlinky.oracleOraclejet.ojcolorspectrumMod
 
-import typingsSlinky.oracleOraclejet.AnonConverterHint
-import typingsSlinky.oracleOraclejet.AnonDefinition
-import typingsSlinky.oracleOraclejet.AnonInstruction
-import typingsSlinky.oracleOraclejet.AnonLabelHue
+import typingsSlinky.oracleOraclejet.anon.ConverterHint
+import typingsSlinky.oracleOraclejet.anon.Definition
+import typingsSlinky.oracleOraclejet.anon.Instruction
+import typingsSlinky.oracleOraclejet.anon.LabelHue
 import typingsSlinky.oracleOraclejet.ojcolorMod.^
 import typingsSlinky.oracleOraclejet.ojeditablevalueMod.editableValueSettableProperties
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.invalidHidden
@@ -19,20 +19,20 @@ trait ojColorSpectrumSettableProperties extends editableValueSettableProperties[
   var labelledBy: String | Null = js.native
   val transientValue: ^ = js.native
   @JSName("translations")
-  var translations_ojColorSpectrumSettableProperties: AnonLabelHue = js.native
+  var translations_ojColorSpectrumSettableProperties: LabelHue = js.native
 }
 
 object ojColorSpectrumSettableProperties {
   @scala.inline
   def apply(
     disabled: Boolean,
-    displayOptions: AnonConverterHint,
-    help: AnonInstruction,
-    helpHints: AnonDefinition,
+    displayOptions: ConverterHint,
+    help: Instruction,
+    helpHints: Definition,
     labelHint: String,
     messagesCustom: js.Array[typingsSlinky.oracleOraclejet.ojmessagingMod.^],
     transientValue: ^,
-    translations: AnonLabelHue,
+    translations: LabelHue,
     valid: valid | pending | invalidHidden | invalidShown,
     value: ^
   ): ojColorSpectrumSettableProperties = {
@@ -52,7 +52,7 @@ object ojColorSpectrumSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelHue): Self = {
+    def withTranslations(value: LabelHue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

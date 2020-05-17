@@ -2,7 +2,7 @@ package typingsSlinky.reactAsync.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactAsync.AnonState
+import typingsSlinky.reactAsync.anon.State
 import typingsSlinky.reactAsync.mod.AsyncState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,11 +21,11 @@ object IfInitial {
     def persist(value: Boolean): this.type = set("persist", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T](p: AnonState[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[T](p: State[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply[T](state: AsyncState[T]): Builder[T] = {
     val __props = js.Dynamic.literal(state = state.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[AnonState[T]]))
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[State[T]]))
   }
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.hapiHapi.mod
 
-import typingsSlinky.hapiHapi.AnonAccess
+import typingsSlinky.hapiHapi.anon.Access
 import typingsSlinky.hapiHapi.mod.Util.HTTP_METHODS_PARTIAL
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait RequestRoute extends js.Object {
-  var auth: AnonAccess = js.native
+  var auth: Access = js.native
   /** the route internal normalized string representing the normalized path. */
   var fingerprint: String = js.native
   /** the route HTTP method. */
@@ -26,7 +26,7 @@ trait RequestRoute extends js.Object {
 object RequestRoute {
   @scala.inline
   def apply(
-    auth: AnonAccess,
+    auth: Access,
     fingerprint: String,
     method: HTTP_METHODS_PARTIAL,
     path: String,
@@ -43,7 +43,7 @@ object RequestRoute {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAuth(value: AnonAccess): Self = {
+    def withAuth(value: Access): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
         ret

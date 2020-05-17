@@ -1,0 +1,51 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.drawing
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** specifies a 3-dimensional point. */
+@js.native
+trait Position3D extends js.Object {
+  /** the position on the X-Axis in the 3D room in 100th of millimeters */
+  var PositionX: Double = js.native
+  /** the position on the Y-Axis in the 3D room in 100th of millimeters */
+  var PositionY: Double = js.native
+  /** the position on the Z-Axis in the 3D room in 100th of millimeters */
+  var PositionZ: Double = js.native
+}
+
+object Position3D {
+  @scala.inline
+  def apply(PositionX: Double, PositionY: Double, PositionZ: Double): Position3D = {
+    val __obj = js.Dynamic.literal(PositionX = PositionX.asInstanceOf[js.Any], PositionY = PositionY.asInstanceOf[js.Any], PositionZ = PositionZ.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Position3D]
+  }
+  @scala.inline
+  implicit class Position3DOps[Self <: Position3D] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPositionX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PositionX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPositionY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PositionY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPositionZ(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PositionZ")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

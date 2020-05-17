@@ -1,7 +1,7 @@
 package typingsSlinky.hoxy.mod
 
 import typingsSlinky.cheerio.CheerioAPI
-import typingsSlinky.hoxy.PartialSlow
+import typingsSlinky.hoxy.anon.PartialSlow
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.Writable
 import typingsSlinky.std.Record

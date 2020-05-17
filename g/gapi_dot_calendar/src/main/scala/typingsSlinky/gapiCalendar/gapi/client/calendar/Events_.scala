@@ -1,6 +1,6 @@
 package typingsSlinky.gapiCalendar.gapi.client.calendar
 
-import typingsSlinky.gapiCalendar.AnonMethod
+import typingsSlinky.gapiCalendar.anon.Method
 import typingsSlinky.gapiCalendar.gapiCalendarStrings.calendarNumbersignevents
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait Events_ extends js.Object {
   // The user's access role for this calendar. Read-only. Possible values are:
   var accessRole: AccessRole = js.native
-  var defaultReminders: js.Array[AnonMethod] = js.native
+  var defaultReminders: js.Array[Method] = js.native
   var description: String = js.native
   var etag: typingsSlinky.gapiCalendar.gapi.client.calendar.etag = js.native
   var items: js.Array[Event] = js.native
@@ -26,7 +26,7 @@ object Events_ {
   @scala.inline
   def apply(
     accessRole: AccessRole,
-    defaultReminders: js.Array[AnonMethod],
+    defaultReminders: js.Array[Method],
     description: String,
     etag: etag,
     items: js.Array[Event],
@@ -51,7 +51,7 @@ object Events_ {
         ret
     }
     @scala.inline
-    def withDefaultReminders(value: js.Array[AnonMethod]): Self = {
+    def withDefaultReminders(value: js.Array[Method]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defaultReminders")(value.asInstanceOf[js.Any])
         ret

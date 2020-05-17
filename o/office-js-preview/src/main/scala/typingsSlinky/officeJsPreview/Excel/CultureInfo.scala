@@ -1,9 +1,9 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.CultureInfoData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.CultureInfoLoadOptions
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
+import typingsSlinky.officeJsPreview.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,9 +15,8 @@ import scala.scalajs.js.annotation._
   * [Api set: ExcelApi BETA (PREVIEW ONLY)]
   * @beta
   */
-@JSGlobal("Excel.CultureInfo")
 @js.native
-class CultureInfo () extends ClientObject {
+trait CultureInfo extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_CultureInfo: RequestContext = js.native
@@ -52,7 +51,7 @@ class CultureInfo () extends ClientObject {
     */
   def load(): CultureInfo = js.native
   def load(options: CultureInfoLoadOptions): CultureInfo = js.native
-  def load(propertyNamesAndPaths: AnonExpand): CultureInfo = js.native
+  def load(propertyNamesAndPaths: Expand): CultureInfo = js.native
   def load(propertyNames: String): CultureInfo = js.native
   def load(propertyNames: js.Array[String]): CultureInfo = js.native
   /**

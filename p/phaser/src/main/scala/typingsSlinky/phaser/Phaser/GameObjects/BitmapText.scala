@@ -11,12 +11,9 @@ import typingsSlinky.phaser.Phaser.GameObjects.Components.Texture
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Tint
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Transform
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Visible
-import typingsSlinky.phaser.Phaser.Scene
-import typingsSlinky.phaser.Phaser.Textures.Frame
 import typingsSlinky.phaser.Phaser.Types.GameObjects.BitmapText.BitmapFontData
 import typingsSlinky.phaser.Phaser.Types.GameObjects.BitmapText.BitmapTextSize
 import typingsSlinky.phaser.integer
-import typingsSlinky.std.XMLDocument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,9 +39,8 @@ import scala.scalajs.js.annotation._
   * For most use cases it is recommended to use XML. If you wish to use JSON, the formatting should be equal to the result of
   * converting a valid XML file through the popular X2JS library. An online tool for conversion can be found here: {@link http://codebeautify.org/xmltojson|http://codebeautify.org/xmltojson}
   */
-@JSGlobal("Phaser.GameObjects.BitmapText")
 @js.native
-class BitmapText protected ()
+trait BitmapText
   extends GameObject
      with Alpha
      with BlendMode
@@ -57,31 +53,6 @@ class BitmapText protected ()
      with Tint
      with Transform
      with Visible {
-  /**
-    * 
-    * @param scene The Scene to which this Game Object belongs. It can only belong to one Scene at any given time.
-    * @param x The x coordinate of this Game Object in world space.
-    * @param y The y coordinate of this Game Object in world space.
-    * @param font The key of the font to use from the Bitmap Font cache.
-    * @param text The string, or array of strings, to be set as the content of this Bitmap Text.
-    * @param size The font size of this Bitmap Text.
-    * @param align The alignment of the text in a multi-line BitmapText object. Default 0.
-    */
-  def this(scene: Scene, x: Double, y: Double, font: String) = this()
-  def this(scene: Scene, x: Double, y: Double, font: String, text: String) = this()
-  def this(scene: Scene, x: Double, y: Double, font: String, text: js.Array[String]) = this()
-  def this(scene: Scene, x: Double, y: Double, font: String, text: String, size: Double) = this()
-  def this(scene: Scene, x: Double, y: Double, font: String, text: js.Array[String], size: Double) = this()
-  def this(scene: Scene, x: Double, y: Double, font: String, text: String, size: Double, align: integer) = this()
-  def this(
-    scene: Scene,
-    x: Double,
-    y: Double,
-    font: String,
-    text: js.Array[String],
-    size: Double,
-    align: integer
-  ) = this()
   /**
     * Controls the alignment of each line of text in this BitmapText object.
     * 
@@ -229,64 +200,5 @@ class BitmapText protected ()
     */
   def setText(value: String): this.type = js.native
   def setText(value: js.Array[String]): this.type = js.native
-}
-
-/* static members */
-@JSGlobal("Phaser.GameObjects.BitmapText")
-@js.native
-object BitmapText extends js.Object {
-  /**
-    * Center align the text characters in a multi-line BitmapText object.
-    */
-  var ALIGN_CENTER: integer = js.native
-  /**
-    * Left align the text characters in a multi-line BitmapText object.
-    */
-  var ALIGN_LEFT: integer = js.native
-  /**
-    * Right align the text characters in a multi-line BitmapText object.
-    */
-  var ALIGN_RIGHT: integer = js.native
-  /**
-    * Parse an XML Bitmap Font from an Atlas.
-    * 
-    * Adds the parsed Bitmap Font data to the cache with the `fontName` key.
-    * @param scene The Scene to parse the Bitmap Font for.
-    * @param fontName The key of the font to add to the Bitmap Font cache.
-    * @param textureKey The key of the BitmapFont's texture.
-    * @param frameKey The key of the BitmapFont texture's frame.
-    * @param xmlKey The key of the XML data of the font to parse.
-    * @param xSpacing The x-axis spacing to add between each letter.
-    * @param ySpacing The y-axis spacing to add to the line height.
-    */
-  def ParseFromAtlas(scene: Scene, fontName: String, textureKey: String, frameKey: String, xmlKey: String): Boolean = js.native
-  def ParseFromAtlas(
-    scene: Scene,
-    fontName: String,
-    textureKey: String,
-    frameKey: String,
-    xmlKey: String,
-    xSpacing: integer
-  ): Boolean = js.native
-  def ParseFromAtlas(
-    scene: Scene,
-    fontName: String,
-    textureKey: String,
-    frameKey: String,
-    xmlKey: String,
-    xSpacing: integer,
-    ySpacing: integer
-  ): Boolean = js.native
-  /**
-    * Parse an XML font to Bitmap Font data for the Bitmap Font cache.
-    * @param xml The XML Document to parse the font from.
-    * @param xSpacing The x-axis spacing to add between each letter. Default 0.
-    * @param ySpacing The y-axis spacing to add to the line height. Default 0.
-    * @param frame The texture frame to take into account while parsing.
-    */
-  def ParseXMLBitmapFont(xml: XMLDocument): BitmapFontData = js.native
-  def ParseXMLBitmapFont(xml: XMLDocument, xSpacing: integer): BitmapFontData = js.native
-  def ParseXMLBitmapFont(xml: XMLDocument, xSpacing: integer, ySpacing: integer): BitmapFontData = js.native
-  def ParseXMLBitmapFont(xml: XMLDocument, xSpacing: integer, ySpacing: integer, frame: Frame): BitmapFontData = js.native
 }
 

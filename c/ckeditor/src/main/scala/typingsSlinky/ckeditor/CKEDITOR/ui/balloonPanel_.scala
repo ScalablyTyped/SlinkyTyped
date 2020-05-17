@@ -1,14 +1,14 @@
 package typingsSlinky.ckeditor.CKEDITOR.ui
 
 import org.scalablytyped.runtime.NumberDictionary
-import typingsSlinky.ckeditor.AnonFocusElement
-import typingsSlinky.ckeditor.AnonRemoveListenerListenerRegistration
 import typingsSlinky.ckeditor.CKEDITOR.dom.element
 import typingsSlinky.ckeditor.CKEDITOR.listenerRegistration
 import typingsSlinky.ckeditor.CKEDITOR.ui.balloonPanel.parts
 import typingsSlinky.ckeditor.CKEDITOR.ui.balloonPanel.rect
 import typingsSlinky.ckeditor.CKEDITOR.ui.balloonPanel.templateDefinitions
 import typingsSlinky.ckeditor.CKEDITOR.ui.balloonPanel.templates
+import typingsSlinky.ckeditor.anon.FocusElement
+import typingsSlinky.ckeditor.anon.RemoveListenerListenerRegistration
 import typingsSlinky.ckeditor.ckeditorStrings.bottom
 import typingsSlinky.ckeditor.ckeditorStrings.left
 import typingsSlinky.ckeditor.ckeditorStrings.right
@@ -17,10 +17,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("CKEDITOR.ui.balloonPanel")
 @js.native
-class balloonPanel_ () extends js.Object {
-  var activeShowListeners: NumberDictionary[AnonRemoveListenerListenerRegistration] = js.native
+trait balloonPanel_ extends js.Object {
+  var activeShowListeners: NumberDictionary[RemoveListenerListenerRegistration] = js.native
   var editor: typingsSlinky.ckeditor.CKEDITOR.editor = js.native
   var focusables: NumberDictionary[element] = js.native
   var height: String = js.native
@@ -38,8 +37,8 @@ class balloonPanel_ () extends js.Object {
   def addShowListener(listener: js.Function0[listenerRegistration]): listenerRegistration = js.native
   def attach(element: element): Unit = js.native
   def attach(element: element, options: Boolean): Unit = js.native
-  def attach(element: element, options: AnonFocusElement): Unit = js.native
   def attach(element: element, options: element): Unit = js.native
+  def attach(element: element, options: FocusElement): Unit = js.native
   def blur(): Unit = js.native
   def build(): Unit = js.native
   def deactivateShowListener(id: Double): Unit = js.native

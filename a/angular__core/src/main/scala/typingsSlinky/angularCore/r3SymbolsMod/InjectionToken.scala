@@ -68,18 +68,6 @@ object InjectionToken {
         ret.asInstanceOf[js.Dynamic].updateDynamic("_desc")(value.asInstanceOf[js.Any])
         ret
     }
-    @scala.inline
-    def withNgInjectableDef(value: scala.Nothing): Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ngInjectableDef")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutNgInjectableDef: Self[T] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ngInjectableDef")(js.undefined)
-        ret
-    }
   }
   
 }

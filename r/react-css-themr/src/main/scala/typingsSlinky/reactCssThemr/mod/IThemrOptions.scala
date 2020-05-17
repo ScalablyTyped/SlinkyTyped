@@ -1,6 +1,6 @@
 package typingsSlinky.reactCssThemr.mod
 
-import typingsSlinky.reactCssThemr.AnonTheme
+import typingsSlinky.reactCssThemr.anon.Theme
 import typingsSlinky.reactCssThemr.reactCssThemrBooleans.`false`
 import typingsSlinky.reactCssThemr.reactCssThemrStrings.deeply
 import typingsSlinky.reactCssThemr.reactCssThemrStrings.softly
@@ -42,7 +42,7 @@ object IThemrOptions {
         ret
     }
     @scala.inline
-    def withMapThemrProps(value: (js.Object, /* theme */ TReactCSSThemrTheme) => js.Object with AnonTheme): Self = {
+    def withMapThemrProps(value: (js.Object, /* theme */ TReactCSSThemrTheme) => js.Object with Theme): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mapThemrProps")(js.Any.fromFunction2(value))
         ret

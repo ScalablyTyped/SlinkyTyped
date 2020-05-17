@@ -1,90 +1,90 @@
 package typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod
 
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonAddDeployKey
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonAddLabels
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonAddMemberLegacy
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonAddOrUpdateRestrictionsForRepo
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonBlock
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonBlockUser
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonCheckAccountIsAssociatedWithAny
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonCheckWatchingRepoLegacy
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonCreateAuthorization
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonCreateCard
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonCreateComment
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonCreateCommentReply
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonCreateCommit
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonCreateForIssue
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonCreateOrUpdateSecretForRepo
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonCreateSuite
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonDeleteArchiveForAuthenticatedUser
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonEmailLegacy
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonGetAnon29
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonGetAnon88
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonList
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonListConductCodes
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonListTemplates
-import typingsSlinky.octokitPluginRestEndpointMethods.AnonRenderRaw
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.AddDeployKey
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.AddLabels
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.AddMemberLegacy
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.AddOrUpdateRestrictionsForRepo
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.Block
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.BlockUser
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.CheckAccountIsAssociatedWithAny
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.CheckWatchingRepoLegacy
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.CreateAuthorization
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.CreateCard
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.CreateComment
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.CreateCommentReply
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.CreateCommit
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.CreateForIssue
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.CreateOrUpdateSecretForRepo
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.CreateSuite
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.DeleteArchiveForAuthenticatedUser
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.EmailLegacy
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.Get29
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.Get88
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.List
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.ListConductCodes
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.ListTemplates
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.RenderRaw
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait RestEndpointMethods extends js.Object {
-  var actions: AnonCreateOrUpdateSecretForRepo = js.native
-  var activity: AnonCheckWatchingRepoLegacy = js.native
-  var apps: AnonCheckAccountIsAssociatedWithAny = js.native
-  var checks: AnonCreateSuite = js.native
-  var codesOfConduct: AnonListConductCodes = js.native
-  var emojis: AnonGetAnon88 = js.native
-  var gists: AnonCreateComment = js.native
-  var git: AnonCreateCommit = js.native
-  var gitignore: AnonListTemplates = js.native
-  var interactions: AnonAddOrUpdateRestrictionsForRepo = js.native
-  var issues: AnonAddLabels = js.native
-  var licenses: AnonList = js.native
-  var markdown: AnonRenderRaw = js.native
-  var meta: AnonGetAnon29 = js.native
-  var migrations: AnonDeleteArchiveForAuthenticatedUser = js.native
-  var oauthAuthorizations: AnonCreateAuthorization = js.native
-  var orgs: AnonBlockUser = js.native
-  var projects: AnonCreateCard = js.native
-  var pulls: AnonCreateCommentReply = js.native
-  var rateLimit: AnonGetAnon29 = js.native
-  var reactions: AnonCreateForIssue = js.native
-  var repos: AnonAddDeployKey = js.native
-  var search: AnonEmailLegacy = js.native
-  var teams: AnonAddMemberLegacy = js.native
-  var users: AnonBlock = js.native
+  var actions: CreateOrUpdateSecretForRepo = js.native
+  var activity: CheckWatchingRepoLegacy = js.native
+  var apps: CheckAccountIsAssociatedWithAny = js.native
+  var checks: CreateSuite = js.native
+  var codesOfConduct: ListConductCodes = js.native
+  var emojis: Get88 = js.native
+  var gists: CreateComment = js.native
+  var git: CreateCommit = js.native
+  var gitignore: ListTemplates = js.native
+  var interactions: AddOrUpdateRestrictionsForRepo = js.native
+  var issues: AddLabels = js.native
+  var licenses: List = js.native
+  var markdown: RenderRaw = js.native
+  var meta: Get29 = js.native
+  var migrations: DeleteArchiveForAuthenticatedUser = js.native
+  var oauthAuthorizations: CreateAuthorization = js.native
+  var orgs: BlockUser = js.native
+  var projects: CreateCard = js.native
+  var pulls: CreateCommentReply = js.native
+  var rateLimit: Get29 = js.native
+  var reactions: CreateForIssue = js.native
+  var repos: AddDeployKey = js.native
+  var search: EmailLegacy = js.native
+  var teams: AddMemberLegacy = js.native
+  var users: Block = js.native
 }
 
 object RestEndpointMethods {
   @scala.inline
   def apply(
-    actions: AnonCreateOrUpdateSecretForRepo,
-    activity: AnonCheckWatchingRepoLegacy,
-    apps: AnonCheckAccountIsAssociatedWithAny,
-    checks: AnonCreateSuite,
-    codesOfConduct: AnonListConductCodes,
-    emojis: AnonGetAnon88,
-    gists: AnonCreateComment,
-    git: AnonCreateCommit,
-    gitignore: AnonListTemplates,
-    interactions: AnonAddOrUpdateRestrictionsForRepo,
-    issues: AnonAddLabels,
-    licenses: AnonList,
-    markdown: AnonRenderRaw,
-    meta: AnonGetAnon29,
-    migrations: AnonDeleteArchiveForAuthenticatedUser,
-    oauthAuthorizations: AnonCreateAuthorization,
-    orgs: AnonBlockUser,
-    projects: AnonCreateCard,
-    pulls: AnonCreateCommentReply,
-    rateLimit: AnonGetAnon29,
-    reactions: AnonCreateForIssue,
-    repos: AnonAddDeployKey,
-    search: AnonEmailLegacy,
-    teams: AnonAddMemberLegacy,
-    users: AnonBlock
+    actions: CreateOrUpdateSecretForRepo,
+    activity: CheckWatchingRepoLegacy,
+    apps: CheckAccountIsAssociatedWithAny,
+    checks: CreateSuite,
+    codesOfConduct: ListConductCodes,
+    emojis: Get88,
+    gists: CreateComment,
+    git: CreateCommit,
+    gitignore: ListTemplates,
+    interactions: AddOrUpdateRestrictionsForRepo,
+    issues: AddLabels,
+    licenses: List,
+    markdown: RenderRaw,
+    meta: Get29,
+    migrations: DeleteArchiveForAuthenticatedUser,
+    oauthAuthorizations: CreateAuthorization,
+    orgs: BlockUser,
+    projects: CreateCard,
+    pulls: CreateCommentReply,
+    rateLimit: Get29,
+    reactions: CreateForIssue,
+    repos: AddDeployKey,
+    search: EmailLegacy,
+    teams: AddMemberLegacy,
+    users: Block
   ): RestEndpointMethods = {
     val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], activity = activity.asInstanceOf[js.Any], apps = apps.asInstanceOf[js.Any], checks = checks.asInstanceOf[js.Any], codesOfConduct = codesOfConduct.asInstanceOf[js.Any], emojis = emojis.asInstanceOf[js.Any], gists = gists.asInstanceOf[js.Any], git = git.asInstanceOf[js.Any], gitignore = gitignore.asInstanceOf[js.Any], interactions = interactions.asInstanceOf[js.Any], issues = issues.asInstanceOf[js.Any], licenses = licenses.asInstanceOf[js.Any], markdown = markdown.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any], migrations = migrations.asInstanceOf[js.Any], oauthAuthorizations = oauthAuthorizations.asInstanceOf[js.Any], orgs = orgs.asInstanceOf[js.Any], projects = projects.asInstanceOf[js.Any], pulls = pulls.asInstanceOf[js.Any], rateLimit = rateLimit.asInstanceOf[js.Any], reactions = reactions.asInstanceOf[js.Any], repos = repos.asInstanceOf[js.Any], search = search.asInstanceOf[js.Any], teams = teams.asInstanceOf[js.Any], users = users.asInstanceOf[js.Any])
     __obj.asInstanceOf[RestEndpointMethods]
@@ -96,151 +96,151 @@ object RestEndpointMethods {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActions(value: AnonCreateOrUpdateSecretForRepo): Self = {
+    def withActions(value: CreateOrUpdateSecretForRepo): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withActivity(value: AnonCheckWatchingRepoLegacy): Self = {
+    def withActivity(value: CheckWatchingRepoLegacy): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("activity")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withApps(value: AnonCheckAccountIsAssociatedWithAny): Self = {
+    def withApps(value: CheckAccountIsAssociatedWithAny): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("apps")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withChecks(value: AnonCreateSuite): Self = {
+    def withChecks(value: CreateSuite): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("checks")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withCodesOfConduct(value: AnonListConductCodes): Self = {
+    def withCodesOfConduct(value: ListConductCodes): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("codesOfConduct")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withEmojis(value: AnonGetAnon88): Self = {
+    def withEmojis(value: Get88): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emojis")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withGists(value: AnonCreateComment): Self = {
+    def withGists(value: CreateComment): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gists")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withGit(value: AnonCreateCommit): Self = {
+    def withGit(value: CreateCommit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("git")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withGitignore(value: AnonListTemplates): Self = {
+    def withGitignore(value: ListTemplates): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gitignore")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withInteractions(value: AnonAddOrUpdateRestrictionsForRepo): Self = {
+    def withInteractions(value: AddOrUpdateRestrictionsForRepo): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("interactions")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withIssues(value: AnonAddLabels): Self = {
+    def withIssues(value: AddLabels): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("issues")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withLicenses(value: AnonList): Self = {
+    def withLicenses(value: List): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("licenses")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withMarkdown(value: AnonRenderRaw): Self = {
+    def withMarkdown(value: RenderRaw): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markdown")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withMeta(value: AnonGetAnon29): Self = {
+    def withMeta(value: Get29): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withMigrations(value: AnonDeleteArchiveForAuthenticatedUser): Self = {
+    def withMigrations(value: DeleteArchiveForAuthenticatedUser): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("migrations")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOauthAuthorizations(value: AnonCreateAuthorization): Self = {
+    def withOauthAuthorizations(value: CreateAuthorization): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oauthAuthorizations")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOrgs(value: AnonBlockUser): Self = {
+    def withOrgs(value: BlockUser): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("orgs")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withProjects(value: AnonCreateCard): Self = {
+    def withProjects(value: CreateCard): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("projects")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPulls(value: AnonCreateCommentReply): Self = {
+    def withPulls(value: CreateCommentReply): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pulls")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withRateLimit(value: AnonGetAnon29): Self = {
+    def withRateLimit(value: Get29): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rateLimit")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withReactions(value: AnonCreateForIssue): Self = {
+    def withReactions(value: CreateForIssue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("reactions")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withRepos(value: AnonAddDeployKey): Self = {
+    def withRepos(value: AddDeployKey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("repos")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSearch(value: AnonEmailLegacy): Self = {
+    def withSearch(value: EmailLegacy): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("search")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withTeams(value: AnonAddMemberLegacy): Self = {
+    def withTeams(value: AddMemberLegacy): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("teams")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withUsers(value: AnonBlock): Self = {
+    def withUsers(value: Block): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("users")(value.asInstanceOf[js.Any])
         ret

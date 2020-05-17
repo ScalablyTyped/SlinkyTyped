@@ -1,26 +1,26 @@
 package typingsSlinky.vsoNodeApi.workItemTrackingInterfacesMod
 
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonAND
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonAllowedValues
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonArea
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonAreas
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonAsc
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonChildFirst
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonClauses
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonDeleted
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonDoing
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonExtensionFields
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonFail
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonFieldsNone
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonFlat
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonGlobalWorkflow
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonGuid
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonImport
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonLinks
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonLinksOneHopDoesNotContain
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonRemove
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonTree
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonWorkItem
+import typingsSlinky.vsoNodeApi.anon.EnumValuesAND
+import typingsSlinky.vsoNodeApi.anon.EnumValuesAllowedValues
+import typingsSlinky.vsoNodeApi.anon.EnumValuesArea
+import typingsSlinky.vsoNodeApi.anon.EnumValuesAreas
+import typingsSlinky.vsoNodeApi.anon.EnumValuesAsc
+import typingsSlinky.vsoNodeApi.anon.EnumValuesChildFirst
+import typingsSlinky.vsoNodeApi.anon.EnumValuesClauses
+import typingsSlinky.vsoNodeApi.anon.EnumValuesDeleted
+import typingsSlinky.vsoNodeApi.anon.EnumValuesDoing
+import typingsSlinky.vsoNodeApi.anon.EnumValuesExtensionFields
+import typingsSlinky.vsoNodeApi.anon.EnumValuesFail
+import typingsSlinky.vsoNodeApi.anon.EnumValuesFieldsNone
+import typingsSlinky.vsoNodeApi.anon.EnumValuesFlat
+import typingsSlinky.vsoNodeApi.anon.EnumValuesGlobalWorkflow
+import typingsSlinky.vsoNodeApi.anon.EnumValuesGuid
+import typingsSlinky.vsoNodeApi.anon.EnumValuesImport
+import typingsSlinky.vsoNodeApi.anon.EnumValuesLinks
+import typingsSlinky.vsoNodeApi.anon.EnumValuesLinksOneHopDoesNotContain
+import typingsSlinky.vsoNodeApi.anon.EnumValuesRemove
+import typingsSlinky.vsoNodeApi.anon.EnumValuesTree
+import typingsSlinky.vsoNodeApi.anon.EnumValuesWorkItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,37 +32,37 @@ object TypeInfo extends js.Object {
   var AccountRecentActivityWorkItemModel: js.Any = js.native
   var AccountRecentMentionWorkItemModel: js.Any = js.native
   var AccountWorkWorkItemModel: js.Any = js.native
-  var CommentSortOrder: AnonEnumValuesAnonAsc = js.native
-  var FieldType: AnonEnumValuesAnonGuid = js.native
-  var FieldUsage: AnonEnumValuesAnonTree = js.native
-  var GetFieldsExpand: AnonEnumValuesAnonExtensionFields = js.native
-  var LinkChangeType: AnonEnumValuesAnonRemove = js.native
-  var LinkQueryMode: AnonEnumValuesAnonLinksOneHopDoesNotContain = js.native
-  var LogicalOperation: AnonEnumValuesAnonAND = js.native
-  var ProvisioningActionType: AnonEnumValuesAnonImport = js.native
-  var QueryExpand: AnonEnumValuesAnonClauses = js.native
+  var CommentSortOrder: EnumValuesAsc = js.native
+  var FieldType: EnumValuesGuid = js.native
+  var FieldUsage: EnumValuesTree = js.native
+  var GetFieldsExpand: EnumValuesExtensionFields = js.native
+  var LinkChangeType: EnumValuesRemove = js.native
+  var LinkQueryMode: EnumValuesLinksOneHopDoesNotContain = js.native
+  var LogicalOperation: EnumValuesAND = js.native
+  var ProvisioningActionType: EnumValuesImport = js.native
+  var QueryExpand: EnumValuesClauses = js.native
   var QueryHierarchyItem: js.Any = js.native
   var QueryHierarchyItemsResult: js.Any = js.native
-  var QueryOption: AnonEnumValuesAnonDoing = js.native
-  var QueryRecursionOption: AnonEnumValuesAnonChildFirst = js.native
-  var QueryResultType: AnonEnumValuesAnonWorkItem = js.native
-  var QueryType: AnonEnumValuesAnonFlat = js.native
-  var ReportingRevisionsExpand: AnonEnumValuesAnonFieldsNone = js.native
+  var QueryOption: EnumValuesDoing = js.native
+  var QueryRecursionOption: EnumValuesChildFirst = js.native
+  var QueryResultType: EnumValuesWorkItem = js.native
+  var QueryType: EnumValuesFlat = js.native
+  var ReportingRevisionsExpand: EnumValuesFieldsNone = js.native
   var ReportingWorkItemLink: js.Any = js.native
-  var TemplateType: AnonEnumValuesAnonGlobalWorkflow = js.native
-  var TreeNodeStructureType: AnonEnumValuesAnonArea = js.native
-  var TreeStructureGroup: AnonEnumValuesAnonAreas = js.native
+  var TemplateType: EnumValuesGlobalWorkflow = js.native
+  var TreeNodeStructureType: EnumValuesArea = js.native
+  var TreeStructureGroup: EnumValuesAreas = js.native
   var WorkItemClassificationNode: js.Any = js.native
   var WorkItemComment: js.Any = js.native
   var WorkItemComments: js.Any = js.native
-  var WorkItemErrorPolicy: AnonEnumValuesAnonFail = js.native
-  var WorkItemExpand: AnonEnumValuesAnonLinks = js.native
+  var WorkItemErrorPolicy: EnumValuesFail = js.native
+  var WorkItemExpand: EnumValuesLinks = js.native
   var WorkItemField: js.Any = js.native
   var WorkItemHistory: js.Any = js.native
   var WorkItemQueryClause: js.Any = js.native
   var WorkItemQueryResult: js.Any = js.native
-  var WorkItemRecentActivityType: AnonEnumValuesAnonDeleted = js.native
-  var WorkItemTypeFieldsExpandLevel: AnonEnumValuesAnonAllowedValues = js.native
+  var WorkItemRecentActivityType: EnumValuesDeleted = js.native
+  var WorkItemTypeFieldsExpandLevel: EnumValuesAllowedValues = js.native
   var WorkItemTypeTemplateUpdateModel: js.Any = js.native
   var WorkItemUpdate: js.Any = js.native
 }

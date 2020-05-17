@@ -1,19 +1,19 @@
 package typingsSlinky.ts3NodejsLibrary.commandMod.Command
 
-import typingsSlinky.ts3NodejsLibrary.AnonInstantiable
+import typingsSlinky.ts3NodejsLibrary.anon.Instantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ParserArgument extends js.Object {
-  var cmd: AnonInstantiable = js.native
+  var cmd: Instantiable = js.native
   var raw: String = js.native
 }
 
 object ParserArgument {
   @scala.inline
-  def apply(cmd: AnonInstantiable, raw: String): ParserArgument = {
+  def apply(cmd: Instantiable, raw: String): ParserArgument = {
     val __obj = js.Dynamic.literal(cmd = cmd.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParserArgument]
   }
@@ -24,7 +24,7 @@ object ParserArgument {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCmd(value: AnonInstantiable): Self = {
+    def withCmd(value: Instantiable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cmd")(value.asInstanceOf[js.Any])
         ret

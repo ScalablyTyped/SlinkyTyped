@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CurrencyNumberFormatOptions
   extends typingsSlinky.std.Intl.NumberFormatOptions
-     with _NumberFormatOptions {
+     with NumberFormatOptions {
    // Obligatory if style is 'currency'
   @JSName("currencyDisplay")
   var currencyDisplay_CurrencyNumberFormatOptions: js.UndefOr[CurrencyDisplay] = js.native

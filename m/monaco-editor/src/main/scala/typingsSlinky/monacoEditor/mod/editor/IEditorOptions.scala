@@ -1,6 +1,6 @@
 package typingsSlinky.monacoEditor.mod.editor
 
-import typingsSlinky.monacoEditor.AnonComments
+import typingsSlinky.monacoEditor.anon.Comments
 import typingsSlinky.monacoEditor.monacoEditorStrings.`100`
 import typingsSlinky.monacoEditor.monacoEditorStrings.`200`
 import typingsSlinky.monacoEditor.monacoEditorStrings.`300`
@@ -336,7 +336,7 @@ trait IEditorOptions extends js.Object {
     * Enable quick suggestions (shadow suggestions)
     * Defaults to true.
     */
-  var quickSuggestions: js.UndefOr[Boolean | AnonComments] = js.native
+  var quickSuggestions: js.UndefOr[Boolean | Comments] = js.native
   /**
     * Quick suggestions show delay (in ms)
     * Defaults to 500 (ms)
@@ -1255,7 +1255,7 @@ object IEditorOptions {
         ret
     }
     @scala.inline
-    def withQuickSuggestions(value: Boolean | AnonComments): Self = {
+    def withQuickSuggestions(value: Boolean | Comments): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("quickSuggestions")(value.asInstanceOf[js.Any])
         ret

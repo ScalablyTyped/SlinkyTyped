@@ -1,6 +1,6 @@
 package typingsSlinky.apolloTracing.mod
 
-import typingsSlinky.apolloTracing.AnonResolvers
+import typingsSlinky.apolloTracing.anon.Resolvers
 import typingsSlinky.apolloTracing.apolloTracingNumbers.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation._
 trait TracingFormat extends js.Object {
   var duration: Double = js.native
   var endTime: String = js.native
-  var execution: AnonResolvers = js.native
+  var execution: Resolvers = js.native
   var startTime: String = js.native
   var version: `1` = js.native
 }
 
 object TracingFormat {
   @scala.inline
-  def apply(duration: Double, endTime: String, execution: AnonResolvers, startTime: String, version: `1`): TracingFormat = {
+  def apply(duration: Double, endTime: String, execution: Resolvers, startTime: String, version: `1`): TracingFormat = {
     val __obj = js.Dynamic.literal(duration = duration.asInstanceOf[js.Any], endTime = endTime.asInstanceOf[js.Any], execution = execution.asInstanceOf[js.Any], startTime = startTime.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
     __obj.asInstanceOf[TracingFormat]
   }
@@ -40,7 +40,7 @@ object TracingFormat {
         ret
     }
     @scala.inline
-    def withExecution(value: AnonResolvers): Self = {
+    def withExecution(value: Resolvers): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("execution")(value.asInstanceOf[js.Any])
         ret

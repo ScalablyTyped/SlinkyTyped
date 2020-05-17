@@ -1,14 +1,11 @@
 package typingsSlinky.igniteUi.Infragistics
 
-import typingsSlinky.igniteUi.ZoombarProviderDefaultSettings
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Infragistics.ZoombarProviderDefault")
 @js.native
-class ZoombarProviderDefault protected () extends js.Object {
-  def this(settings: ZoombarProviderDefaultSettings) = this()
+trait ZoombarProviderDefault extends js.Object {
   /**
   	 * Will be called before the provider instance is deleted (to unbind jQuery events, etc.)
   	 */

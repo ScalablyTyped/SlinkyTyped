@@ -1,8 +1,7 @@
 package typingsSlinky.playcanvas.pc
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.playcanvas.AnonGamepads
-import typingsSlinky.playcanvas.AnonPad
+import typingsSlinky.playcanvas.anon.Pad
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,11 +23,8 @@ import scala.scalajs.js.annotation._
   * // Register the "fire" action and assign it to both the Enter key and the Spacebar.
   * c.registerKeys("fire", [pc.KEY_ENTER, pc.KEY_SPACE]);
   */
-@JSGlobal("pc.Controller")
 @js.native
-class Controller () extends js.Object {
-  def this(element: Element) = this()
-  def this(element: Element, options: AnonGamepads) = this()
+trait Controller extends js.Object {
   /**
     * @function
     * @name pc.Controller#attach
@@ -69,7 +65,7 @@ class Controller () extends js.Object {
     * @param {object} [options.pad] - The index of the game pad to register for (use pc.PAD_1, etc).
     */
   def registerAxis(): Unit = js.native
-  def registerAxis(options: AnonPad): Unit = js.native
+  def registerAxis(options: Pad): Unit = js.native
   /**
     * @function
     * @name pc.Controller#registerKeys

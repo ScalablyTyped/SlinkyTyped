@@ -1,6 +1,6 @@
 package typingsSlinky.mangopay2NodejsSdk.mod.models
 
-import typingsSlinky.mangopay2NodejsSdk.PartialFilters
+import typingsSlinky.mangopay2NodejsSdk.anon.PartialFilters
 import typingsSlinky.mangopay2NodejsSdk.mod.report.Filters
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -3,7 +3,7 @@ package typingsSlinky.koaSessionMinimal.mod
 import typingsSlinky.koa.mod.DefaultContext
 import typingsSlinky.koa.mod.DefaultState
 import typingsSlinky.koa.mod.Middleware
-import typingsSlinky.koaSessionMinimal.AnonCookie
+import typingsSlinky.koaSessionMinimal.anon.Cookie
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,6 +12,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object ^ extends js.Object {
   def apply(): Middleware[DefaultState, DefaultContext] = js.native
-  def apply(opts: AnonCookie): Middleware[DefaultState, DefaultContext] = js.native
+  def apply(opts: Cookie): Middleware[DefaultState, DefaultContext] = js.native
 }
 

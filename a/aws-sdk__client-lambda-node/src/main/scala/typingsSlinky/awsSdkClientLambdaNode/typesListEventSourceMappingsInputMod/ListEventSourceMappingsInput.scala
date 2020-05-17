@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientLambdaNode.typesListEventSourceMappingsInputMod
 
-import typingsSlinky.awsSdkClientLambdaNode.inputTypesUnionMod._InputTypesUnion
+import typingsSlinky.awsSdkClientLambdaNode.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.httpMod.NodeHttpOptions
 import scala.scalajs.js
@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ListEventSourceMappingsInput extends _InputTypesUnion {
+trait ListEventSourceMappingsInput extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *

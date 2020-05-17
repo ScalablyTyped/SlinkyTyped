@@ -2,8 +2,8 @@ package typingsSlinky.grommet.dropMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.SyntheticKeyboardEvent
-import typingsSlinky.grommet.AnonHorizontal
-import typingsSlinky.grommet.AnonLeft
+import typingsSlinky.grommet.anon.Horizontal
+import typingsSlinky.grommet.anon.Left
 import typingsSlinky.grommet.grommetStrings.auto
 import typingsSlinky.grommet.grommetStrings.hidden
 import typingsSlinky.grommet.grommetStrings.scroll
@@ -16,11 +16,11 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait DropProps extends js.Object {
-  var align: js.UndefOr[AnonLeft] = js.native
+  var align: js.UndefOr[Left] = js.native
   var elevation: js.UndefOr[ElevationType] = js.native
   var onClickOutside: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
   var onEsc: js.UndefOr[KeyboardType] = js.native
-  var overflow: js.UndefOr[auto | hidden | scroll | visible | AnonHorizontal | String] = js.native
+  var overflow: js.UndefOr[auto | hidden | scroll | visible | Horizontal | String] = js.native
   var plain: js.UndefOr[Boolean] = js.native
   var responsive: js.UndefOr[Boolean] = js.native
   var restrictFocus: js.UndefOr[Boolean] = js.native
@@ -41,7 +41,7 @@ object DropProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAlign(value: AnonLeft): Self = {
+    def withAlign(value: Left): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
         ret
@@ -89,7 +89,7 @@ object DropProps {
         ret
     }
     @scala.inline
-    def withOverflow(value: auto | hidden | scroll | visible | AnonHorizontal | String): Self = {
+    def withOverflow(value: auto | hidden | scroll | visible | Horizontal | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(value.asInstanceOf[js.Any])
         ret

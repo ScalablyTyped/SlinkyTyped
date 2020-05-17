@@ -1,5 +1,6 @@
 package typingsSlinky.dirWalkerGen
 
+import typingsSlinky.dirWalkerGen.anon.ExcludeExtensions
 import typingsSlinky.std.IterableIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,6 +9,6 @@ import scala.scalajs.js.annotation._
 @JSImport("dir-walker-gen", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
-  def apply(options: AnonExcludeExtensions): IterableIterator[String] = js.native
+  def apply(options: ExcludeExtensions): IterableIterator[String] = js.native
 }
 

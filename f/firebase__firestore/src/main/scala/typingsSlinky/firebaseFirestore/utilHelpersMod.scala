@@ -1,5 +1,8 @@
 package typingsSlinky.firebaseFirestore
 
+import typingsSlinky.firebaseFirestore.anon.AddedRemoved
+import typingsSlinky.firebaseFirestore.anon.Key
+import typingsSlinky.firebaseFirestore.anon.Removed
 import typingsSlinky.firebaseFirestore.blobMod.Blob
 import typingsSlinky.firebaseFirestore.byteStringMod.ByteString
 import typingsSlinky.firebaseFirestore.collectionsMod.DocumentKeySet_
@@ -122,9 +125,9 @@ object utilHelpersMod extends js.Object {
   def key(path: String): DocumentKey = js.native
   def keySet(keys: DocumentKey*): DocumentKeySet_ = js.native
   def keys(documents: (MaybeDocument | String)*): DocumentKeySet_ = js.native
-  def limboChanges(changes: AnonRemoved): js.Array[LimboDocumentChange] = js.native
-  def localViewChanges(targetId: TargetId, fromCache: Boolean, changes: AnonAddedRemoved): LocalViewChanges = js.native
-  def mapAsArray[K, V](sortedMap: SortedMap[K, V]): js.Array[AnonKey[K, V]] = js.native
+  def limboChanges(changes: Removed): js.Array[LimboDocumentChange] = js.native
+  def localViewChanges(targetId: TargetId, fromCache: Boolean, changes: AddedRemoved): LocalViewChanges = js.native
+  def mapAsArray[K, V](sortedMap: SortedMap[K, V]): js.Array[Key[K, V]] = js.native
   def mask(paths: String*): FieldMask = js.native
   def mutationResult(testVersion: TestSnapshotVersion): MutationResult = js.native
   def noChangeEvent(targetId: Double, snapshotVersion: Double): RemoteEvent = js.native

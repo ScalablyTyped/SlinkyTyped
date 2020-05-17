@@ -1,6 +1,6 @@
 package typingsSlinky.web3Core.mod
 
-import typingsSlinky.web3Core.AnonData
+import typingsSlinky.web3Core.anon.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait EventLog extends js.Object {
   var blockNumber: Double = js.native
   var event: String = js.native
   var logIndex: Double = js.native
-  var raw: js.UndefOr[AnonData] = js.native
+  var raw: js.UndefOr[Data] = js.native
   var returnValues: js.Any = js.native
   var transactionHash: String = js.native
   var transactionIndex: Double = js.native
@@ -88,7 +88,7 @@ object EventLog {
         ret
     }
     @scala.inline
-    def withRaw(value: AnonData): Self = {
+    def withRaw(value: Data): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("raw")(value.asInstanceOf[js.Any])
         ret

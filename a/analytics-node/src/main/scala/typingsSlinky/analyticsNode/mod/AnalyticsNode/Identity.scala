@@ -1,25 +1,21 @@
 package typingsSlinky.analyticsNode.mod.AnalyticsNode
 
+import typingsSlinky.analyticsNode.anon.AnonymousId
+import typingsSlinky.analyticsNode.anon.UserId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.analyticsNode.AnonUserId
-  - typingsSlinky.analyticsNode.AnonAnonymousId
+  - typingsSlinky.analyticsNode.anon.UserId
+  - typingsSlinky.analyticsNode.anon.AnonymousId
 */
 trait Identity extends js.Object
 
 object Identity {
   @scala.inline
-  def AnonUserId(userId: String | Double): Identity = {
-    val __obj = js.Dynamic.literal(userId = userId.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Identity]
-  }
+  implicit def apply(value: AnonymousId): Identity = value.asInstanceOf[Identity]
   @scala.inline
-  def AnonAnonymousId(anonymousId: String | Double): Identity = {
-    val __obj = js.Dynamic.literal(anonymousId = anonymousId.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Identity]
-  }
+  implicit def apply(value: UserId): Identity = value.asInstanceOf[Identity]
 }
 

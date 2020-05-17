@@ -1,5 +1,6 @@
 package typingsSlinky.reactBootstrapTypeahead.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.LegacyRef
@@ -7,7 +8,6 @@ import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.both
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.combobox
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.list
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.listbox
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,11 +25,11 @@ trait InputContainerPropsSingle[T /* <: TypeaheadModel */] extends js.Object {
   var placeholder: String | Null = js.native
   var role: combobox = js.native
   var value: String = js.native
-  def onBlur(e: Event_): Unit = js.native
+  def onBlur(e: Event): Unit = js.native
   def onChange(selected: js.Array[T]): Unit = js.native
-  def onClick(e: Event_): Unit = js.native
-  def onFocus(e: Event_): Unit = js.native
-  def onKeyDown(e: Event_): Unit = js.native
+  def onClick(e: Event): Unit = js.native
+  def onFocus(e: Event): Unit = js.native
+  def onKeyDown(e: Event): Unit = js.native
 }
 
 object InputContainerPropsSingle {
@@ -42,11 +42,11 @@ object InputContainerPropsSingle {
     `aria-owns`: String,
     autoComplete: String,
     disabled: Boolean,
-    onBlur: Event_ => Unit,
+    onBlur: Event => Unit,
     onChange: js.Array[T] => Unit,
-    onClick: Event_ => Unit,
-    onFocus: Event_ => Unit,
-    onKeyDown: Event_ => Unit,
+    onClick: Event => Unit,
+    onFocus: Event => Unit,
+    onKeyDown: Event => Unit,
     role: combobox,
     value: String
   ): InputContainerPropsSingle[T] = {
@@ -107,7 +107,7 @@ object InputContainerPropsSingle {
         ret
     }
     @scala.inline
-    def withOnBlur(value: Event_ => Unit): Self[T] = {
+    def withOnBlur(value: Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
         ret
@@ -119,19 +119,19 @@ object InputContainerPropsSingle {
         ret
     }
     @scala.inline
-    def withOnClick(value: Event_ => Unit): Self[T] = {
+    def withOnClick(value: Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnFocus(value: Event_ => Unit): Self[T] = {
+    def withOnFocus(value: Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnKeyDown(value: Event_ => Unit): Self[T] = {
+    def withOnKeyDown(value: Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction1(value))
         ret

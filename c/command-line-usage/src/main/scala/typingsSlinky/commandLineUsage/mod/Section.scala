@@ -13,14 +13,8 @@ trait Section extends js.Object
 
 object Section {
   @scala.inline
-  def Content(): Section = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Section]
-  }
+  implicit def apply(value: Content): Section = value.asInstanceOf[Section]
   @scala.inline
-  def OptionList(): Section = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Section]
-  }
+  implicit def apply(value: OptionList): Section = value.asInstanceOf[Section]
 }
 

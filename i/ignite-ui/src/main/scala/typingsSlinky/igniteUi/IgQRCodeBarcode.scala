@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -307,7 +307,7 @@ object IgQRCodeBarcode {
         ret
     }
     @scala.inline
-    def withDataChanged(value: (/* event */ Event_, /* ui */ DataChangedEventUIParam) => Unit): Self = {
+    def withDataChanged(value: (/* event */ Event, /* ui */ DataChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataChanged")(js.Any.fromFunction2(value))
         ret
@@ -367,7 +367,7 @@ object IgQRCodeBarcode {
         ret
     }
     @scala.inline
-    def withErrorMessageDisplaying(value: (/* event */ Event_, /* ui */ ErrorMessageDisplayingEventUIParam) => Unit): Self = {
+    def withErrorMessageDisplaying(value: (/* event */ Event, /* ui */ ErrorMessageDisplayingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("errorMessageDisplaying")(js.Any.fromFunction2(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.owaspPasswordStrengthTest.mod
 
-import typingsSlinky.owaspPasswordStrengthTest.PartialTestConfig
+import typingsSlinky.owaspPasswordStrengthTest.anon.PartialTestConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientYoutubeanalytics.gapi.client.youtubeanalytics
 
-import typingsSlinky.gapiClientYoutubeanalytics.AnonColumnType
+import typingsSlinky.gapiClientYoutubeanalytics.anon.ColumnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait ResultTable extends js.Object {
     * example, if the API request contains the parameters dimensions=ageGroup,gender&metrics=viewerPercentage, the API response will return columns in this
     * order: ageGroup,gender,viewerPercentage.
     */
-  var columnHeaders: js.UndefOr[js.Array[AnonColumnType]] = js.native
+  var columnHeaders: js.UndefOr[js.Array[ColumnType]] = js.native
   /** This value specifies the type of data included in the API response. For the query method, the kind property value will be youtubeAnalytics#resultTable. */
   var kind: js.UndefOr[String] = js.native
   /**
@@ -39,7 +39,7 @@ object ResultTable {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withColumnHeaders(value: js.Array[AnonColumnType]): Self = {
+    def withColumnHeaders(value: js.Array[ColumnType]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnHeaders")(value.asInstanceOf[js.Any])
         ret

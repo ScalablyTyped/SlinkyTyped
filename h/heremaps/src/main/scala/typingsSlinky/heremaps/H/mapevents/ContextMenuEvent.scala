@@ -1,7 +1,5 @@
 package typingsSlinky.heremaps.H.mapevents
 
-import typingsSlinky.heremaps.H.Map_
-import typingsSlinky.heremaps.H.map.Object
 import typingsSlinky.heremaps.H.util.ContextItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,21 +15,56 @@ import scala.scalajs.js.annotation._
   * @property type {string} - Name of the dispatched event
   * @property defaultPrevented {boolean} - Indicates if preventDefault was called on the current event
   */
-@JSGlobal("H.mapevents.ContextMenuEvent")
 @js.native
-class ContextMenuEvent protected ()
+trait ContextMenuEvent
   extends typingsSlinky.heremaps.H.util.Event {
-  /**
-    * Constructor
-    * @param viewportX {number} - The x coordinate on the viewport
-    * @param viewportY {number} - The y coordinate on the viewport
-    * @param target {(H.Map | H.map.Object)} - The event's target element
-    * @param originalEvent {Event} - target of the event
-    */
-  def this(viewportX: Double, viewportY: Double, target: Map_, originalEvent: Event) = this()
-  def this(viewportX: Double, viewportY: Double, target: Object, originalEvent: Event) = this()
   var originalEvent: Event = js.native
   var viewportX: js.Array[ContextItem] = js.native
   var viewportY: Double = js.native
+}
+
+object ContextMenuEvent {
+  @scala.inline
+  def apply(
+    currentTarget: js.Any,
+    defaultPrevented: Boolean,
+    originalEvent: Event,
+    preventDefault: () => Unit,
+    stopPropagation: () => Unit,
+    target: js.Any,
+    `type`: String,
+    viewportX: js.Array[ContextItem],
+    viewportY: Double
+  ): ContextMenuEvent = {
+    val __obj = js.Dynamic.literal(currentTarget = currentTarget.asInstanceOf[js.Any], defaultPrevented = defaultPrevented.asInstanceOf[js.Any], originalEvent = originalEvent.asInstanceOf[js.Any], preventDefault = js.Any.fromFunction0(preventDefault), stopPropagation = js.Any.fromFunction0(stopPropagation), target = target.asInstanceOf[js.Any], viewportX = viewportX.asInstanceOf[js.Any], viewportY = viewportY.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ContextMenuEvent]
+  }
+  @scala.inline
+  implicit class ContextMenuEventOps[Self <: ContextMenuEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOriginalEvent(value: Event): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("originalEvent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withViewportX(value: js.Array[ContextItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewportX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withViewportY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewportY")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

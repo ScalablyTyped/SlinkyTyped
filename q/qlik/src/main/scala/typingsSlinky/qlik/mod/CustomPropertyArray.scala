@@ -87,18 +87,6 @@ object CustomPropertyArray {
         ret
     }
     @scala.inline
-    def withComponent(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutComponent: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("component")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withItemTitleRef(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemTitleRef")(value.asInstanceOf[js.Any])

@@ -1,7 +1,7 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin.mod
 
-import typingsSlinky.forkTsCheckerWebpackPlugin.PartialOptions
-import typingsSlinky.forkTsCheckerWebpackPlugin.RecordForkTsCheckerHooksa
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.PartialOptions
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.RecordForkTsCheckerHooksa
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeElements
 
+import typingsSlinky.reactNativeElements.mod.IconType
 import typingsSlinky.reactNativeElements.mod.SocialMediaType
-import typingsSlinky.reactNativeElements.mod._IconType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +32,7 @@ object reactNativeElementsStrings {
   sealed trait angellist extends SocialMediaType
   
   @js.native
-  sealed trait antdesign extends _IconType
+  sealed trait antdesign extends IconType
   
   @js.native
   sealed trait assertive extends js.Object
@@ -110,13 +110,13 @@ object reactNativeElementsStrings {
   sealed trait emailAddress extends js.Object
   
   @js.native
-  sealed trait entypo extends _IconType
+  sealed trait entypo extends IconType
   
   @js.native
   sealed trait error extends js.Object
   
   @js.native
-  sealed trait evilicon extends _IconType
+  sealed trait evilicon extends IconType
   
   @js.native
   sealed trait facebook extends SocialMediaType
@@ -131,13 +131,13 @@ object reactNativeElementsStrings {
   sealed trait flickr extends SocialMediaType
   
   @js.native
-  sealed trait `font-awesome` extends _IconType
+  sealed trait `font-awesome` extends IconType
   
   @js.native
   sealed trait formSheet extends js.Object
   
   @js.native
-  sealed trait foundation extends _IconType
+  sealed trait foundation extends IconType
   
   @js.native
   sealed trait foursquare extends SocialMediaType
@@ -182,7 +182,7 @@ object reactNativeElementsStrings {
   sealed trait instagram extends SocialMediaType
   
   @js.native
-  sealed trait ionicon extends _IconType
+  sealed trait ionicon extends IconType
   
   @js.native
   sealed trait ios extends js.Object
@@ -215,10 +215,10 @@ object reactNativeElementsStrings {
   sealed trait location extends js.Object
   
   @js.native
-  sealed trait material extends _IconType
+  sealed trait material extends IconType
   
   @js.native
-  sealed trait `material-community` extends _IconType
+  sealed trait `material-community` extends IconType
   
   @js.native
   sealed trait medium extends SocialMediaType
@@ -260,7 +260,7 @@ object reactNativeElementsStrings {
   sealed trait none extends js.Object
   
   @js.native
-  sealed trait octicon extends _IconType
+  sealed trait octicon extends IconType
   
   @js.native
   sealed trait off extends js.Object
@@ -335,7 +335,7 @@ object reactNativeElementsStrings {
   sealed trait simple extends js.Object
   
   @js.native
-  sealed trait `simple-line-icon` extends _IconType
+  sealed trait `simple-line-icon` extends IconType
   
   @js.native
   sealed trait slide extends js.Object
@@ -446,7 +446,7 @@ object reactNativeElementsStrings {
   sealed trait youtube extends SocialMediaType
   
   @js.native
-  sealed trait zocial extends _IconType
+  sealed trait zocial extends IconType
   
   @scala.inline
   def RecursivePartial: RecursivePartial = "RecursivePartial".asInstanceOf[RecursivePartial]

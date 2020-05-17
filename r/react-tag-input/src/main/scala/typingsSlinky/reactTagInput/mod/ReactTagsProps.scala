@@ -2,8 +2,8 @@ package typingsSlinky.reactTagInput.mod
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.ReactChild
-import typingsSlinky.reactTagInput.AnonActiveSuggestion
-import typingsSlinky.reactTagInput.AnonId
+import typingsSlinky.reactTagInput.anon.ActiveSuggestion
+import typingsSlinky.reactTagInput.anon.Id
 import typingsSlinky.reactTagInput.reactTagInputNumbers.`1`
 import typingsSlinky.reactTagInput.reactTagInputStrings.`inline`
 import typingsSlinky.reactTagInput.reactTagInputStrings.bottom
@@ -20,9 +20,9 @@ trait ReactTagsProps extends js.Object {
   var allowUnique: js.UndefOr[Boolean] = js.native
   var autocomplete: js.UndefOr[Boolean | `1`] = js.native
   var autofocus: js.UndefOr[Boolean] = js.native
-  var classNames: js.UndefOr[AnonActiveSuggestion] = js.native
+  var classNames: js.UndefOr[ActiveSuggestion] = js.native
   var delimiters: js.UndefOr[js.Array[Double]] = js.native
-  var handleDrag: js.UndefOr[js.Function3[/* tag */ AnonId, /* currPos */ Double, /* newPos */ Double, Unit]] = js.native
+  var handleDrag: js.UndefOr[js.Function3[/* tag */ Id, /* currPos */ Double, /* newPos */ Double, Unit]] = js.native
   var handleFilterSuggestions: js.UndefOr[
     js.Function2[
       /* textInputValue */ String, 
@@ -50,13 +50,13 @@ trait ReactTagsProps extends js.Object {
   var shouldRenderSuggestions: js.UndefOr[js.Function1[/* query */ String, Boolean]] = js.native
   var suggestions: js.UndefOr[js.Array[Tag]] = js.native
   var tags: js.UndefOr[js.Array[Tag]] = js.native
-  def handleAddition(tag: AnonId): Unit = js.native
+  def handleAddition(tag: Id): Unit = js.native
   def handleDelete(i: Double): Unit = js.native
 }
 
 object ReactTagsProps {
   @scala.inline
-  def apply(handleAddition: AnonId => Unit, handleDelete: Double => Unit): ReactTagsProps = {
+  def apply(handleAddition: Id => Unit, handleDelete: Double => Unit): ReactTagsProps = {
     val __obj = js.Dynamic.literal(handleAddition = js.Any.fromFunction1(handleAddition), handleDelete = js.Any.fromFunction1(handleDelete))
     __obj.asInstanceOf[ReactTagsProps]
   }
@@ -67,7 +67,7 @@ object ReactTagsProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withHandleAddition(value: AnonId => Unit): Self = {
+    def withHandleAddition(value: Id => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("handleAddition")(js.Any.fromFunction1(value))
         ret
@@ -151,7 +151,7 @@ object ReactTagsProps {
         ret
     }
     @scala.inline
-    def withClassNames(value: AnonActiveSuggestion): Self = {
+    def withClassNames(value: ActiveSuggestion): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("classNames")(value.asInstanceOf[js.Any])
         ret
@@ -175,7 +175,7 @@ object ReactTagsProps {
         ret
     }
     @scala.inline
-    def withHandleDrag(value: (/* tag */ AnonId, /* currPos */ Double, /* newPos */ Double) => Unit): Self = {
+    def withHandleDrag(value: (/* tag */ Id, /* currPos */ Double, /* newPos */ Double) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("handleDrag")(js.Any.fromFunction3(value))
         ret

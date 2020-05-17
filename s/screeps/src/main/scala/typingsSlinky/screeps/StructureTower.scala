@@ -1,6 +1,6 @@
 package typingsSlinky.screeps
 
-import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.screeps.anon.StoreRESOURCEENERGYfalse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,7 +47,72 @@ trait StructureTower
   def repair(target: Structure[StructureConstant]): ScreepsReturnCode = js.native
 }
 
-@JSGlobal("StructureTower")
-@js.native
-object StructureTower extends TopLevel[StructureTowerConstructor]
+object StructureTower {
+  @scala.inline
+  def apply(
+    attack: AnyCreep => ScreepsReturnCode,
+    destroy: () => ScreepsReturnCode,
+    effects: js.Array[RoomObjectEffect],
+    energy: Double,
+    energyCapacity: Double,
+    heal: AnyCreep => ScreepsReturnCode,
+    hits: Double,
+    hitsMax: Double,
+    id: Id[StructureTower],
+    isActive: () => Boolean,
+    notifyWhenAttacked: Boolean => ScreepsReturnCode,
+    pos: RoomPosition,
+    repair: Structure[StructureConstant] => ScreepsReturnCode,
+    room: Room,
+    store: StoreRESOURCEENERGYfalse,
+    structureType: STRUCTURE_TOWER
+  ): StructureTower = {
+    val __obj = js.Dynamic.literal(attack = js.Any.fromFunction1(attack), destroy = js.Any.fromFunction0(destroy), effects = effects.asInstanceOf[js.Any], energy = energy.asInstanceOf[js.Any], energyCapacity = energyCapacity.asInstanceOf[js.Any], heal = js.Any.fromFunction1(heal), hits = hits.asInstanceOf[js.Any], hitsMax = hitsMax.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isActive = js.Any.fromFunction0(isActive), notifyWhenAttacked = js.Any.fromFunction1(notifyWhenAttacked), pos = pos.asInstanceOf[js.Any], repair = js.Any.fromFunction1(repair), room = room.asInstanceOf[js.Any], store = store.asInstanceOf[js.Any], structureType = structureType.asInstanceOf[js.Any])
+    __obj.asInstanceOf[StructureTower]
+  }
+  @scala.inline
+  implicit class StructureTowerOps[Self <: StructureTower] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttack(value: AnyCreep => ScreepsReturnCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attack")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEnergy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("energy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnergyCapacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("energyCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeal(value: AnyCreep => ScreepsReturnCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heal")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRepair(value: Structure[StructureConstant] => ScreepsReturnCode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repair")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withStore(value: StoreRESOURCEENERGYfalse): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

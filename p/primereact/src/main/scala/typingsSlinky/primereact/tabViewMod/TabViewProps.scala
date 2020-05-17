@@ -1,6 +1,6 @@
 package typingsSlinky.primereact.tabViewMod
 
-import typingsSlinky.primereact.AnonIndex
+import typingsSlinky.primereact.anon.Index
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait TabViewProps extends js.Object {
   var activeIndex: js.UndefOr[Double] = js.native
   var className: js.UndefOr[String] = js.native
   var id: js.UndefOr[String] = js.native
-  var onTabChange: js.UndefOr[js.Function1[/* e */ AnonIndex, Unit]] = js.native
+  var onTabChange: js.UndefOr[js.Function1[/* e */ Index, Unit]] = js.native
   var renderActiveOnly: js.UndefOr[Boolean] = js.native
   var style: js.UndefOr[js.Any] = js.native
 }
@@ -64,7 +64,7 @@ object TabViewProps {
         ret
     }
     @scala.inline
-    def withOnTabChange(value: /* e */ AnonIndex => Unit): Self = {
+    def withOnTabChange(value: /* e */ Index => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTabChange")(js.Any.fromFunction1(value))
         ret

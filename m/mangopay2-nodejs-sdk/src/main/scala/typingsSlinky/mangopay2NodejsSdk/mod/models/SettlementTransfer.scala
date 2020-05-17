@@ -1,6 +1,6 @@
 package typingsSlinky.mangopay2NodejsSdk.mod.models
 
-import typingsSlinky.mangopay2NodejsSdk.PartialSettlementTransfer
+import typingsSlinky.mangopay2NodejsSdk.anon.PartialSettlementTransfer
 import typingsSlinky.mangopay2NodejsSdk.mod.settlementTransfer.SettlementTransferData
 import scala.scalajs.js
 import scala.scalajs.js.`|`

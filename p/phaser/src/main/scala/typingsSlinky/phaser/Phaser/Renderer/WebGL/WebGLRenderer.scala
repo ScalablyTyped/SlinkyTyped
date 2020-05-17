@@ -31,14 +31,8 @@ import scala.scalajs.js.annotation._
   * unexpected behavior. It's recommended that WebGL interaction is done through
   * WebGLRenderer and/or WebGLPipeline.
   */
-@JSGlobal("Phaser.Renderer.WebGL.WebGLRenderer")
 @js.native
-class WebGLRenderer protected () extends js.Object {
-  /**
-    * 
-    * @param game The Game instance which owns this WebGL Renderer.
-    */
-  def this(game: Game) = this()
+trait WebGLRenderer extends js.Object {
   /**
     * A blank 32x32 transparent texture, as used by the Graphics system where needed.
     * This is set in the `boot` method.

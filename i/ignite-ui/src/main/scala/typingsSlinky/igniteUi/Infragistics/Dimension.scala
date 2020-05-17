@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Infragistics.Dimension")
 @js.native
-class Dimension () extends js.Object {
+trait Dimension extends js.Object {
   /**
   	 * Returns the caption of the dimension used when displaying the name of the dimension to the user.
   	 *
@@ -55,5 +54,57 @@ class Dimension () extends js.Object {
   	 * @param value
   	 */
   def uniqueName(value: js.Object): String = js.native
+}
+
+object Dimension {
+  @scala.inline
+  def apply(
+    caption: js.Object => String,
+    description: js.Object => String,
+    dimensionType: js.Object => Double,
+    name: js.Object => String,
+    uniqueName: js.Object => String
+  ): Dimension = {
+    val __obj = js.Dynamic.literal(caption = js.Any.fromFunction1(caption), description = js.Any.fromFunction1(description), dimensionType = js.Any.fromFunction1(dimensionType), name = js.Any.fromFunction1(name), uniqueName = js.Any.fromFunction1(uniqueName))
+    __obj.asInstanceOf[Dimension]
+  }
+  @scala.inline
+  implicit class DimensionOps[Self <: Dimension] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCaption(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDescription(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDimensionType(value: js.Object => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionType")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withName(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUniqueName(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueName")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

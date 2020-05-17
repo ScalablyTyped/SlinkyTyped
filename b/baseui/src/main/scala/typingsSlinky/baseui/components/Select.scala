@@ -1,5 +1,6 @@
 package typingsSlinky.baseui.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
@@ -9,9 +10,9 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonLabelKey
-import typingsSlinky.baseui.AnonOption
-import typingsSlinky.baseui.AnonOptionOption
+import typingsSlinky.baseui.anon.LabelKey
+import typingsSlinky.baseui.anon.Option
+import typingsSlinky.baseui.anon.OptionOption
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
@@ -23,7 +24,6 @@ import typingsSlinky.baseui.selectMod.OptionsT
 import typingsSlinky.baseui.selectMod.SelectOverrides
 import typingsSlinky.baseui.selectMod.SelectProps
 import typingsSlinky.baseui.selectMod.Value
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -65,14 +65,14 @@ object Select {
     def escapeClearsValue(value: Boolean): this.type = set("escapeClearsValue", value.asInstanceOf[js.Any])
     @scala.inline
     def filterOptions(
-      value: (/* options */ Value, /* filterValue */ String, /* excludeOptions */ js.UndefOr[Value], /* newProps */ js.UndefOr[AnonLabelKey]) => Value
+      value: (/* options */ Value, /* filterValue */ String, /* excludeOptions */ js.UndefOr[Value], /* newProps */ js.UndefOr[LabelKey]) => Value
     ): this.type = set("filterOptions", js.Any.fromFunction4(value))
     @scala.inline
     def filterOutSelected(value: Boolean): this.type = set("filterOutSelected", value.asInstanceOf[js.Any])
     @scala.inline
-    def getOptionLabel(value: /* args */ AnonOption => TagMod[Any]): this.type = set("getOptionLabel", js.Any.fromFunction1(value))
+    def getOptionLabel(value: /* args */ Option => TagMod[Any]): this.type = set("getOptionLabel", js.Any.fromFunction1(value))
     @scala.inline
-    def getValueLabel(value: /* args */ AnonOptionOption => TagMod[Any]): this.type = set("getValueLabel", js.Any.fromFunction1(value))
+    def getValueLabel(value: /* args */ OptionOption => TagMod[Any]): this.type = set("getValueLabel", js.Any.fromFunction1(value))
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
@@ -90,7 +90,7 @@ object Select {
     @scala.inline
     def noResultsMsg(value: TagMod[Any]): this.type = set("noResultsMsg", value.asInstanceOf[js.Any])
     @scala.inline
-    def onBlur(value: /* e */ Event_ => _): this.type = set("onBlur", js.Any.fromFunction1(value))
+    def onBlur(value: /* e */ Event => _): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
     def onBlurResetsInput(value: Boolean): this.type = set("onBlurResetsInput", value.asInstanceOf[js.Any])
     @scala.inline
@@ -102,7 +102,7 @@ object Select {
     @scala.inline
     def onFocus(value: SyntheticFocusEvent[HTMLElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
-    def onInputChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit): this.type = set("onInputChange", js.Any.fromFunction1(value))
+    def onInputChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit): this.type = set("onInputChange", js.Any.fromFunction1(value))
     @scala.inline
     def onOpen(value: () => _): this.type = set("onOpen", js.Any.fromFunction0(value))
     @scala.inline

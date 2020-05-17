@@ -1,6 +1,6 @@
 package typingsSlinky.reduxForm.actionsMod
 
-import typingsSlinky.reduxForm.PartialInitializeOptions
+import typingsSlinky.reduxForm.anon.PartialInitializeOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

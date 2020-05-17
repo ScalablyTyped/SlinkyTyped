@@ -1,6 +1,6 @@
 package typingsSlinky.jqueryPin.mod
 
-import typingsSlinky.jqueryPin.AnonBottom
+import typingsSlinky.jqueryPin.anon.Bottom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait Options extends js.Object {
   var activeClass: js.UndefOr[String] = js.native
   var containerSelector: js.UndefOr[String] = js.native
   var minWidth: js.UndefOr[Double] = js.native
-  var padding: js.UndefOr[AnonBottom] = js.native
+  var padding: js.UndefOr[Bottom] = js.native
 }
 
 object Options {
@@ -62,7 +62,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withPadding(value: AnonBottom): Self = {
+    def withPadding(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
         ret

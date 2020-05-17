@@ -1,6 +1,5 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.PartialToTempFilePathOpti
 import typingsSlinky.aliApp.aliAppStrings.alphabetic
 import typingsSlinky.aliApp.aliAppStrings.bevel
 import typingsSlinky.aliApp.aliAppStrings.bottom
@@ -17,6 +16,7 @@ import typingsSlinky.aliApp.aliAppStrings.round
 import typingsSlinky.aliApp.aliAppStrings.square
 import typingsSlinky.aliApp.aliAppStrings.start
 import typingsSlinky.aliApp.aliAppStrings.top
+import typingsSlinky.aliApp.anon.PartialToTempFilePathOpti
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

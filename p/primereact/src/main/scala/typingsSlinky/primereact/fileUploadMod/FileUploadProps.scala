@@ -1,11 +1,11 @@
 package typingsSlinky.primereact.fileUploadMod
 
 import org.scalajs.dom.raw.File
-import typingsSlinky.primereact.AnonFiles
-import typingsSlinky.primereact.AnonFilesAny
-import typingsSlinky.primereact.AnonFilesOriginalEvent
-import typingsSlinky.primereact.AnonFormData
-import typingsSlinky.primereact.AnonProgress
+import typingsSlinky.primereact.anon.Files
+import typingsSlinky.primereact.anon.FilesAny
+import typingsSlinky.primereact.anon.FilesOriginalEvent
+import typingsSlinky.primereact.anon.FormData
+import typingsSlinky.primereact.anon.Progress
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,17 +26,17 @@ trait FileUploadProps extends js.Object {
   var mode: js.UndefOr[String] = js.native
   var multiple: js.UndefOr[Boolean] = js.native
   var name: js.UndefOr[String] = js.native
-  var onBeforeSend: js.UndefOr[js.Function1[/* e */ AnonFormData, Unit]] = js.native
-  var onBeforeUpload: js.UndefOr[js.Function1[/* e */ AnonFormData, Unit]] = js.native
+  var onBeforeSend: js.UndefOr[js.Function1[/* e */ FormData, Unit]] = js.native
+  var onBeforeUpload: js.UndefOr[js.Function1[/* e */ FormData, Unit]] = js.native
   var onClear: js.UndefOr[js.Function0[Unit]] = js.native
-  var onError: js.UndefOr[js.Function1[/* e */ AnonFiles, Unit]] = js.native
-  var onProgress: js.UndefOr[js.Function1[/* e */ AnonProgress, Unit]] = js.native
-  var onSelect: js.UndefOr[js.Function1[/* e */ AnonFilesOriginalEvent, Unit]] = js.native
-  var onUpload: js.UndefOr[js.Function1[/* e */ AnonFiles, Unit]] = js.native
+  var onError: js.UndefOr[js.Function1[/* e */ Files, Unit]] = js.native
+  var onProgress: js.UndefOr[js.Function1[/* e */ Progress, Unit]] = js.native
+  var onSelect: js.UndefOr[js.Function1[/* e */ FilesOriginalEvent, Unit]] = js.native
+  var onUpload: js.UndefOr[js.Function1[/* e */ Files, Unit]] = js.native
   var onValidationFail: js.UndefOr[js.Function1[/* file */ File, Unit]] = js.native
   var previewWidth: js.UndefOr[Double] = js.native
   var style: js.UndefOr[js.Object] = js.native
-  var uploadHandler: js.UndefOr[js.Function1[/* e */ AnonFilesAny, Unit]] = js.native
+  var uploadHandler: js.UndefOr[js.Function1[/* e */ FilesAny, Unit]] = js.native
   var uploadLabel: js.UndefOr[String] = js.native
   var url: js.UndefOr[String] = js.native
   var withCredentials: js.UndefOr[Boolean] = js.native
@@ -223,7 +223,7 @@ object FileUploadProps {
         ret
     }
     @scala.inline
-    def withOnBeforeSend(value: /* e */ AnonFormData => Unit): Self = {
+    def withOnBeforeSend(value: /* e */ FormData => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeSend")(js.Any.fromFunction1(value))
         ret
@@ -235,7 +235,7 @@ object FileUploadProps {
         ret
     }
     @scala.inline
-    def withOnBeforeUpload(value: /* e */ AnonFormData => Unit): Self = {
+    def withOnBeforeUpload(value: /* e */ FormData => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeUpload")(js.Any.fromFunction1(value))
         ret
@@ -259,7 +259,7 @@ object FileUploadProps {
         ret
     }
     @scala.inline
-    def withOnError(value: /* e */ AnonFiles => Unit): Self = {
+    def withOnError(value: /* e */ Files => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
         ret
@@ -271,7 +271,7 @@ object FileUploadProps {
         ret
     }
     @scala.inline
-    def withOnProgress(value: /* e */ AnonProgress => Unit): Self = {
+    def withOnProgress(value: /* e */ Progress => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.Any.fromFunction1(value))
         ret
@@ -283,7 +283,7 @@ object FileUploadProps {
         ret
     }
     @scala.inline
-    def withOnSelect(value: /* e */ AnonFilesOriginalEvent => Unit): Self = {
+    def withOnSelect(value: /* e */ FilesOriginalEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
         ret
@@ -295,7 +295,7 @@ object FileUploadProps {
         ret
     }
     @scala.inline
-    def withOnUpload(value: /* e */ AnonFiles => Unit): Self = {
+    def withOnUpload(value: /* e */ Files => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onUpload")(js.Any.fromFunction1(value))
         ret
@@ -343,7 +343,7 @@ object FileUploadProps {
         ret
     }
     @scala.inline
-    def withUploadHandler(value: /* e */ AnonFilesAny => Unit): Self = {
+    def withUploadHandler(value: /* e */ FilesAny => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("uploadHandler")(js.Any.fromFunction1(value))
         ret

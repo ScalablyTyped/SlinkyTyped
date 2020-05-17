@@ -1,8 +1,8 @@
 package typingsSlinky.primereact.splitButtonMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait SplitButtonProps extends js.Object {
   var menuClassName: js.UndefOr[String] = js.native
   var menuStyle: js.UndefOr[js.Object] = js.native
   var model: js.UndefOr[js.Array[_]] = js.native
-  var onClick: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   var style: js.UndefOr[js.Object] = js.native
   var tabIndex: js.UndefOr[String] = js.native
   var tooltip: js.UndefOr[js.Any] = js.native
@@ -146,7 +146,7 @@ object SplitButtonProps {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* event */ Event_ => Unit): Self = {
+    def withOnClick(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret

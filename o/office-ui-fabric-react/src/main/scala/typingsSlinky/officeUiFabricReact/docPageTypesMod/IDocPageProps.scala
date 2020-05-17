@@ -1,7 +1,7 @@
 package typingsSlinky.officeUiFabricReact.docPageTypesMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.officeUiFabricReact.AnonSection
+import typingsSlinky.officeUiFabricReact.anon.Section
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,7 +42,7 @@ trait IDocPageProps extends js.Object {
     */
   var nativePropsElement: js.UndefOr[String | js.Array[String]] = js.native
   /** Pass through other sections for ComponentPage */
-  var otherSections: js.UndefOr[js.Array[AnonSection]] = js.native
+  var otherSections: js.UndefOr[js.Array[Section]] = js.native
   /** Overview of the component as markdown string */
   var overview: js.UndefOr[String] = js.native
   /** Properties table(s) as markdown string */
@@ -225,7 +225,7 @@ object IDocPageProps {
         ret
     }
     @scala.inline
-    def withOtherSections(value: js.Array[AnonSection]): Self = {
+    def withOtherSections(value: js.Array[Section]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("otherSections")(value.asInstanceOf[js.Any])
         ret

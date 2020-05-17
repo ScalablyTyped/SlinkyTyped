@@ -1,5 +1,6 @@
 package typingsSlinky.reactVirtualized
 
+import typingsSlinky.reactVirtualized.anon.KeyMapper
 import typingsSlinky.reactVirtualized.esMasonryMod.MasonryProps
 import typingsSlinky.reactVirtualized.esMasonryMod.MasonryState
 import typingsSlinky.reactVirtualized.esMasonryMod.Positioner
@@ -20,7 +21,7 @@ object masonryMod extends js.Object {
   /* static members */
   @js.native
   object Masonry extends js.Object {
-    var defaultProps: AnonKeyMapper = js.native
+    var defaultProps: KeyMapper = js.native
     def getDerivedStateFromProps(nextProps: MasonryProps, prevState: MasonryState): MasonryState | Null = js.native
   }
   

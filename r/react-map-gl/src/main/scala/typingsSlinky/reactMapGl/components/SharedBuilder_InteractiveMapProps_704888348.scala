@@ -2,8 +2,8 @@ package typingsSlinky.reactMapGl.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactMapGl.AnonHeight
-import typingsSlinky.reactMapGl.AnonMaxPitch
+import typingsSlinky.reactMapGl.anon.Height
+import typingsSlinky.reactMapGl.anon.MaxPitch
 import typingsSlinky.reactMapGl.mod.ContextViewStateChangeInfo
 import typingsSlinky.reactMapGl.mod.ExtraState
 import typingsSlinky.reactMapGl.mod.MapController
@@ -103,7 +103,7 @@ class SharedBuilder_InteractiveMapProps_704888348[R <: js.Object] (val args: js.
   @scala.inline
   def onNativeClick(value: /* event */ PointerEvent => Unit): this.type = set("onNativeClick", js.Any.fromFunction1(value))
   @scala.inline
-  def onResize(value: /* dimensions */ AnonHeight => Unit): this.type = set("onResize", js.Any.fromFunction1(value))
+  def onResize(value: /* dimensions */ Height => Unit): this.type = set("onResize", js.Any.fromFunction1(value))
   @scala.inline
   def onTouchEnd(value: /* event */ PointerEvent => Unit): this.type = set("onTouchEnd", js.Any.fromFunction1(value))
   @scala.inline
@@ -157,7 +157,7 @@ class SharedBuilder_InteractiveMapProps_704888348[R <: js.Object] (val args: js.
   @scala.inline
   def viewState(value: ViewState): this.type = set("viewState", value.asInstanceOf[js.Any])
   @scala.inline
-  def visibilityConstraints(value: AnonMaxPitch): this.type = set("visibilityConstraints", value.asInstanceOf[js.Any])
+  def visibilityConstraints(value: MaxPitch): this.type = set("visibilityConstraints", value.asInstanceOf[js.Any])
   @scala.inline
   def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
   @scala.inline

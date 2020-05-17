@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Macintosh only */
-@JSGlobal("Excel.Mailer")
 @js.native
-class Mailer protected () extends js.Object {
+trait Mailer extends js.Object {
   val Application: typingsSlinky.activexExcel.Excel.Application = js.native
   var BCCRecipients: js.Any = js.native
   var CCRecipients: js.Any = js.native
@@ -23,5 +22,114 @@ class Mailer protected () extends js.Object {
   var Subject: String = js.native
   var ToRecipients: js.Any = js.native
   var WhichAddress: js.Any = js.native
+}
+
+object Mailer {
+  @scala.inline
+  def apply(
+    Application: Application,
+    BCCRecipients: js.Any,
+    CCRecipients: js.Any,
+    Creator: XlCreator,
+    Enclosures: js.Any,
+    ExcelDotMailer_typekey: Mailer,
+    Parent: js.Any,
+    Received: Boolean,
+    SendDateTime: VarDate,
+    Sender: String,
+    Subject: String,
+    ToRecipients: js.Any,
+    WhichAddress: js.Any
+  ): Mailer = {
+    val __obj = js.Dynamic.literal(Application = Application.asInstanceOf[js.Any], BCCRecipients = BCCRecipients.asInstanceOf[js.Any], CCRecipients = CCRecipients.asInstanceOf[js.Any], Creator = Creator.asInstanceOf[js.Any], Enclosures = Enclosures.asInstanceOf[js.Any], Parent = Parent.asInstanceOf[js.Any], Received = Received.asInstanceOf[js.Any], SendDateTime = SendDateTime.asInstanceOf[js.Any], Sender = Sender.asInstanceOf[js.Any], Subject = Subject.asInstanceOf[js.Any], ToRecipients = ToRecipients.asInstanceOf[js.Any], WhichAddress = WhichAddress.asInstanceOf[js.Any])
+    __obj.updateDynamic("Excel.Mailer_typekey")(ExcelDotMailer_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Mailer]
+  }
+  @scala.inline
+  implicit class MailerOps[Self <: Mailer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplication(value: Application): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBCCRecipients(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BCCRecipients")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCCRecipients(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CCRecipients")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreator(value: XlCreator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnclosures(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Enclosures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExcelDotMailer_typekey(value: Mailer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Excel.Mailer_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReceived(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Received")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSendDateTime(value: VarDate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SendDateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSender(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Sender")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubject(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Subject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToRecipients(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ToRecipients")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWhichAddress(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WhichAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

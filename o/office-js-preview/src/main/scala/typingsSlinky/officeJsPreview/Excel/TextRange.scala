@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.TextRangeData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.TextRangeLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.TextRangeUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@JSGlobal("Excel.TextRange")
 @js.native
-class TextRange () extends ClientObject {
+trait TextRange extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_TextRange: RequestContext = js.native
@@ -53,7 +52,7 @@ class TextRange () extends ClientObject {
     */
   def load(): TextRange = js.native
   def load(options: TextRangeLoadOptions): TextRange = js.native
-  def load(propertyNamesAndPaths: AnonExpand): TextRange = js.native
+  def load(propertyNamesAndPaths: Expand): TextRange = js.native
   def load(propertyNames: String): TextRange = js.native
   def load(propertyNames: js.Array[String]): TextRange = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

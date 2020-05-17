@@ -1,6 +1,6 @@
 package typingsSlinky.busboy.busboy
 
-import typingsSlinky.busboy.AnonFieldNameSize
+import typingsSlinky.busboy.anon.FieldNameSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait BusboyConfig extends js.Object {
   var fileHwm: js.UndefOr[Double] = js.native
   var headers: js.UndefOr[js.Any] = js.native
   var highWaterMark: js.UndefOr[Double] = js.native
-  var limits: js.UndefOr[AnonFieldNameSize] = js.native
+  var limits: js.UndefOr[FieldNameSize] = js.native
   var preservePath: js.UndefOr[Boolean] = js.native
 }
 
@@ -76,7 +76,7 @@ object BusboyConfig {
         ret
     }
     @scala.inline
-    def withLimits(value: AnonFieldNameSize): Self = {
+    def withLimits(value: FieldNameSize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("limits")(value.asInstanceOf[js.Any])
         ret

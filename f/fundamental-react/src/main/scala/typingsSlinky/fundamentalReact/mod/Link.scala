@@ -1,8 +1,8 @@
 package typingsSlinky.fundamentalReact.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.fundamentalReact.PartialLinkProps
-import typingsSlinky.fundamentalReact.WeakValidationMapLinkProp
+import typingsSlinky.fundamentalReact.anon.PartialLinkProps
+import typingsSlinky.fundamentalReact.anon.WeakValidationMapLinkProp
 import typingsSlinky.fundamentalReact.linkMod.LinkProps
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap

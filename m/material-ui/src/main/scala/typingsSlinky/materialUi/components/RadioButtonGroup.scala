@@ -9,7 +9,6 @@ import typingsSlinky.materialUi.materialUiStrings.left
 import typingsSlinky.materialUi.materialUiStrings.right
 import typingsSlinky.materialUi.radioButtonGroupMod.default
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +29,9 @@ object RadioButtonGroup {
     @scala.inline
     def labelPosition(value: left | right): this.type = set("labelPosition", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: (SyntheticEvent[EventTarget with js.Object, Event_], /* selected */ String) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    def onChange(
+      value: (SyntheticEvent[EventTarget with js.Object, org.scalajs.dom.raw.Event], /* selected */ String) => Unit
+    ): this.type = set("onChange", js.Any.fromFunction2(value))
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

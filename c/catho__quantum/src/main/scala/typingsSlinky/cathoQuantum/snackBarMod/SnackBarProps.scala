@@ -2,8 +2,8 @@ package typingsSlinky.cathoQuantum.snackBarMod
 
 import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.cathoQuantum.AnonBaseFontSizeBreakpoints
-import typingsSlinky.cathoQuantum.AnonCallbackFn
+import typingsSlinky.cathoQuantum.anon.BaseFontSizeBreakpoints
+import typingsSlinky.cathoQuantum.anon.CallbackFn
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.error
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.neutral
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.primary
@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait SnackBarProps extends js.Object {
-  var actionTrigger: js.UndefOr[AnonCallbackFn] = js.native
+  var actionTrigger: js.UndefOr[CallbackFn] = js.native
   var closeButtonAriaLabel: js.UndefOr[String] = js.native
   var id: js.UndefOr[String] = js.native
   var inverted: js.UndefOr[Boolean] = js.native
@@ -24,7 +24,7 @@ trait SnackBarProps extends js.Object {
   var secondsToClose: js.UndefOr[Double] = js.native
   var skin: js.UndefOr[primary | success | error | neutral | warning] = js.native
   var text: js.UndefOr[String] = js.native
-  var theme: js.UndefOr[AnonBaseFontSizeBreakpoints] = js.native
+  var theme: js.UndefOr[BaseFontSizeBreakpoints] = js.native
 }
 
 object SnackBarProps {
@@ -40,7 +40,7 @@ object SnackBarProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActionTrigger(value: AnonCallbackFn): Self = {
+    def withActionTrigger(value: CallbackFn): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("actionTrigger")(value.asInstanceOf[js.Any])
         ret
@@ -136,7 +136,7 @@ object SnackBarProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonBaseFontSizeBreakpoints): Self = {
+    def withTheme(value: BaseFontSizeBreakpoints): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

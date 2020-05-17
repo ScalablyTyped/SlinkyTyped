@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.System
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Specifies options for user interface elements such as the application picker that can be invoked by this API. */
+@JSGlobal("Windows.System.LauncherUIOptions")
+@js.native
+abstract class LauncherUIOptions ()
+  extends typingsSlinky.winrtUwp.Windows.System.LauncherUIOptions
+

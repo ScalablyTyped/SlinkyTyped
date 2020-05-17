@@ -1,6 +1,6 @@
 package typingsSlinky.antd.responsiveObserveMod
 
-import typingsSlinky.antd.PartialRecordlgsmxsmdxlxx
+import typingsSlinky.antd.anon.PartialRecordlgsmxsmdxlxx
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

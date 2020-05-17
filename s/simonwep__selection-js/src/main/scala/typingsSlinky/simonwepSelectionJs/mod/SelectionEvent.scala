@@ -3,7 +3,7 @@ package typingsSlinky.simonwepSelectionJs.mod
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
-import typingsSlinky.simonwepSelectionJs.AnonAdded
+import typingsSlinky.simonwepSelectionJs.anon.Added
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SelectionEvent extends js.Object {
   var area: Element = js.native
-  var changed: AnonAdded = js.native
+  var changed: Added = js.native
   var inst: Selection = js.native
   var oe: MouseEvent | TouchEvent = js.native
   var selected: js.Array[Element] = js.native
@@ -21,7 +21,7 @@ object SelectionEvent {
   @scala.inline
   def apply(
     area: Element,
-    changed: AnonAdded,
+    changed: Added,
     inst: Selection,
     oe: MouseEvent | TouchEvent,
     selected: js.Array[Element]
@@ -42,7 +42,7 @@ object SelectionEvent {
         ret
     }
     @scala.inline
-    def withChanged(value: AnonAdded): Self = {
+    def withChanged(value: Added): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("changed")(value.asInstanceOf[js.Any])
         ret

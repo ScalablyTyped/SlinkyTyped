@@ -1,6 +1,6 @@
 package typingsSlinky.oracledb.mod
 
-import typingsSlinky.oracledb.AnonType
+import typingsSlinky.oracledb.anon.Type
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -54,7 +54,7 @@ trait ExecuteOptions extends js.Object {
     *          "HIRE_DETAILS": { type: oracledb.DEFAULT }  // override fetchAsString or fetchAsBuffer
     *      }
     */
-  var fetchInfo: js.UndefOr[Record[String, AnonType]] = js.native
+  var fetchInfo: js.UndefOr[Record[String, Type]] = js.native
   /**
     * The maximum number of rows that are fetched by a query with connection.execute() when not using a ResultSet.
     * Rows beyond this limit are not fetched from the database. A value of 0 means there is no limit.
@@ -143,7 +143,7 @@ object ExecuteOptions {
         ret
     }
     @scala.inline
-    def withFetchInfo(value: Record[String, AnonType]): Self = {
+    def withFetchInfo(value: Record[String, Type]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fetchInfo")(value.asInstanceOf[js.Any])
         ret

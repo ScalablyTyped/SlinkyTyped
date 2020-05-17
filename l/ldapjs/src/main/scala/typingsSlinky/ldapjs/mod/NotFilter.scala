@@ -1,6 +1,5 @@
 package typingsSlinky.ldapjs.mod
 
-import typingsSlinky.ldapjs.AnonFilter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +7,6 @@ import scala.scalajs.js.annotation._
 @JSImport("ldapjs", "NotFilter")
 @js.native
 class NotFilter protected () extends Filter {
-  def this(options: AnonFilter) = this()
+  def this(options: typingsSlinky.ldapjs.anon.Filter) = this()
 }
 

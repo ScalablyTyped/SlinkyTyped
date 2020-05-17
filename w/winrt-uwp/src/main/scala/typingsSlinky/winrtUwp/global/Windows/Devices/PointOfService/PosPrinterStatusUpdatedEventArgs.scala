@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.Devices.PointOfService
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Provides information about the PosPrinter.StatusUpdated event that occurs when the status of a point-of-service printer changes. */
+@JSGlobal("Windows.Devices.PointOfService.PosPrinterStatusUpdatedEventArgs")
+@js.native
+abstract class PosPrinterStatusUpdatedEventArgs ()
+  extends typingsSlinky.winrtUwp.Windows.Devices.PointOfService.PosPrinterStatusUpdatedEventArgs
+

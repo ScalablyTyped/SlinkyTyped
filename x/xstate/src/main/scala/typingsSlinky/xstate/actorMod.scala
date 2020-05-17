@@ -1,5 +1,6 @@
 package typingsSlinky.xstate
 
+import typingsSlinky.xstate.anon.Id
 import typingsSlinky.xstate.typesMod.AnyEventObject
 import typingsSlinky.xstate.typesMod.EventObject
 import typingsSlinky.xstate.typesMod.InvokeDefinition
@@ -18,7 +19,7 @@ object actorMod extends js.Object {
     var state: js.UndefOr[js.Any] = js.native
     var stop: js.UndefOr[js.Function0[js.UndefOr[_]]] = js.native
     def send(event: TEvent): js.Any = js.native
-    def toJSON(): AnonId = js.native
+    def toJSON(): Id = js.native
   }
   
   def createInvocableActor[TC, TE /* <: EventObject */](invokeDefinition: InvokeDefinition[TC, TE]): Actor[_, AnyEventObject] = js.native

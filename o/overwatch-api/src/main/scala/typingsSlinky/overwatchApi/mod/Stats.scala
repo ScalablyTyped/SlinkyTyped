@@ -1,29 +1,29 @@
 package typingsSlinky.overwatchApi.mod
 
-import typingsSlinky.overwatchApi.AnonAssists
-import typingsSlinky.overwatchApi.AnonFrame
+import typingsSlinky.overwatchApi.anon.Assists
+import typingsSlinky.overwatchApi.anon.Frame
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Stats extends js.Object {
-  var endorsement: AnonFrame = js.native
+  var endorsement: Frame = js.native
   var level: Double = js.native
   var portrait: String = js.native
   var `private`: Boolean = js.native
-  var stats: AnonAssists = js.native
+  var stats: Assists = js.native
   var username: String = js.native
 }
 
 object Stats {
   @scala.inline
   def apply(
-    endorsement: AnonFrame,
+    endorsement: Frame,
     level: Double,
     portrait: String,
     `private`: Boolean,
-    stats: AnonAssists,
+    stats: Assists,
     username: String
   ): Stats = {
     val __obj = js.Dynamic.literal(endorsement = endorsement.asInstanceOf[js.Any], level = level.asInstanceOf[js.Any], portrait = portrait.asInstanceOf[js.Any], stats = stats.asInstanceOf[js.Any], username = username.asInstanceOf[js.Any])
@@ -37,7 +37,7 @@ object Stats {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEndorsement(value: AnonFrame): Self = {
+    def withEndorsement(value: Frame): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("endorsement")(value.asInstanceOf[js.Any])
         ret
@@ -61,7 +61,7 @@ object Stats {
         ret
     }
     @scala.inline
-    def withStats(value: AnonAssists): Self = {
+    def withStats(value: Assists): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
         ret

@@ -4,16 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("sap.ui.base.Metadata")
 @js.native
-class Metadata protected () extends js.Object {
-  /**
-    * Creates a new metadata object from the given static infos.Note: throughout this class documentation,
-    * the described subclass of Objectis referenced as <i>the described class</i>.
-    * @param sClassName fully qualified name of the described class
-    * @param oClassInfo info to construct the class and its metadata from
-    */
-  def this(sClassName: String, oClassInfo: js.Any) = this()
+trait Metadata extends js.Object {
   /**
     * Returns an array with the names of all public methods declared by the described classand its
     * ancestors.
@@ -58,5 +50,78 @@ class Metadata protected () extends js.Object {
     * @returns whether this class implements the interface
     */
   def isInstanceOf(sInterface: String): Boolean = js.native
+}
+
+object Metadata {
+  @scala.inline
+  def apply(
+    getAllPublicMethods: () => js.Array[String],
+    getName: () => String,
+    getParent: () => Metadata,
+    getPublicMethods: () => js.Array[String],
+    isAbstract: () => Boolean,
+    isDeprecated: () => Boolean,
+    isFinal: () => Boolean,
+    isInstanceOf: String => Boolean
+  ): Metadata = {
+    val __obj = js.Dynamic.literal(getAllPublicMethods = js.Any.fromFunction0(getAllPublicMethods), getName = js.Any.fromFunction0(getName), getParent = js.Any.fromFunction0(getParent), getPublicMethods = js.Any.fromFunction0(getPublicMethods), isAbstract = js.Any.fromFunction0(isAbstract), isDeprecated = js.Any.fromFunction0(isDeprecated), isFinal = js.Any.fromFunction0(isFinal), isInstanceOf = js.Any.fromFunction1(isInstanceOf))
+    __obj.asInstanceOf[Metadata]
+  }
+  @scala.inline
+  implicit class MetadataOps[Self <: Metadata] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetAllPublicMethods(value: () => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllPublicMethods")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetParent(value: () => Metadata): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getParent")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPublicMethods(value: () => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPublicMethods")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsAbstract(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAbstract")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsDeprecated(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDeprecated")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsFinal(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFinal")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsInstanceOf(value: String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isInstanceOf")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

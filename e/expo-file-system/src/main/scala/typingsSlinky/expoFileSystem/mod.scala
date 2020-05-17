@@ -1,5 +1,9 @@
 package typingsSlinky.expoFileSystem
 
+import typingsSlinky.expoFileSystem.anon.From
+import typingsSlinky.expoFileSystem.anon.Idempotent
+import typingsSlinky.expoFileSystem.anon.Intermediates
+import typingsSlinky.expoFileSystem.anon.Md5
 import typingsSlinky.expoFileSystem.fileSystemTypesMod.DownloadOptions
 import typingsSlinky.expoFileSystem.fileSystemTypesMod.DownloadProgressCallback
 import typingsSlinky.expoFileSystem.fileSystemTypesMod.DownloadResult
@@ -31,7 +35,7 @@ object mod extends js.Object {
   /* import warning: parser.TsParser#tsDeclVar Dropped IArray(bundleDirectory) */ val bundledAssets: String | Null = js.native
   val cacheDirectory: String | Null = js.native
   val documentDirectory: String | Null = js.native
-  def copyAsync(options: AnonFrom): js.Promise[Unit] = js.native
+  def copyAsync(options: From): js.Promise[Unit] = js.native
   def createDownloadResumable(uri: String, fileUri: String): typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable = js.native
   def createDownloadResumable(uri: String, fileUri: String, options: DownloadOptions): typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable = js.native
   def createDownloadResumable(uri: String, fileUri: String, options: DownloadOptions, callback: DownloadProgressCallback): typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable = js.native
@@ -43,17 +47,17 @@ object mod extends js.Object {
     resumeData: String
   ): typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable = js.native
   def deleteAsync(fileUri: String): js.Promise[Unit] = js.native
-  def deleteAsync(fileUri: String, options: AnonIdempotent): js.Promise[Unit] = js.native
+  def deleteAsync(fileUri: String, options: Idempotent): js.Promise[Unit] = js.native
   def downloadAsync(uri: String, fileUri: String): js.Promise[DownloadResult] = js.native
   def downloadAsync(uri: String, fileUri: String, options: DownloadOptions): js.Promise[DownloadResult] = js.native
   def getContentUriAsync(fileUri: String): js.Promise[String] = js.native
   def getFreeDiskStorageAsync(): js.Promise[Double] = js.native
   def getInfoAsync(fileUri: String): js.Promise[FileInfo] = js.native
-  def getInfoAsync(fileUri: String, options: AnonMd5): js.Promise[FileInfo] = js.native
+  def getInfoAsync(fileUri: String, options: Md5): js.Promise[FileInfo] = js.native
   def getTotalDiskCapacityAsync(): js.Promise[Double] = js.native
   def makeDirectoryAsync(fileUri: String): js.Promise[Unit] = js.native
-  def makeDirectoryAsync(fileUri: String, options: AnonIntermediates): js.Promise[Unit] = js.native
-  def moveAsync(options: AnonFrom): js.Promise[Unit] = js.native
+  def makeDirectoryAsync(fileUri: String, options: Intermediates): js.Promise[Unit] = js.native
+  def moveAsync(options: From): js.Promise[Unit] = js.native
   def readAsStringAsync(fileUri: String): js.Promise[String] = js.native
   def readAsStringAsync(fileUri: String, options: ReadingOptions): js.Promise[String] = js.native
   def readDirectoryAsync(fileUri: String): js.Promise[js.Array[String]] = js.native

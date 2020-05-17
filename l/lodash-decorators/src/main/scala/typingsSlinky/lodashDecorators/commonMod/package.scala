@@ -41,5 +41,4 @@ package object commonMod {
   ]) with typingsSlinky.lodashDecorators.commonMod.LodashMethodDecorator
   type LodashDecorator = typingsSlinky.std.MethodDecorator with typingsSlinky.std.PropertyDecorator
   type LodashMethodDecorator = typingsSlinky.std.MethodDecorator
-  type ResolvableFunction = java.lang.String | js.Function
 }

@@ -1,12 +1,12 @@
 package typingsSlinky.popperJs.mod.Popper
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.popperJs.BaseModifierbehaviorBehav
-import typingsSlinky.popperJs.BaseModifierelementstring
-import typingsSlinky.popperJs.BaseModifiergpuAccelerati
-import typingsSlinky.popperJs.BaseModifieroffsetnumbers
-import typingsSlinky.popperJs.BaseModifieronLoadFunctio
-import typingsSlinky.popperJs.BaseModifierpriorityArray
+import typingsSlinky.popperJs.anon.BaseModifierbehaviorBehav
+import typingsSlinky.popperJs.anon.BaseModifierelementstring
+import typingsSlinky.popperJs.anon.BaseModifiergpuAccelerati
+import typingsSlinky.popperJs.anon.BaseModifieroffsetnumbers
+import typingsSlinky.popperJs.anon.BaseModifieronLoadFunctio
+import typingsSlinky.popperJs.anon.BaseModifierpriorityArray
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`

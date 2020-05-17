@@ -1,25 +1,21 @@
 package typingsSlinky.webBluetooth
 
+import typingsSlinky.webBluetooth.anon.AcceptAllDevices
+import typingsSlinky.webBluetooth.anon.Filters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.webBluetooth.AnonFilters
-  - typingsSlinky.webBluetooth.AnonAcceptAllDevices
+  - typingsSlinky.webBluetooth.anon.Filters
+  - typingsSlinky.webBluetooth.anon.AcceptAllDevices
 */
 trait RequestDeviceOptions extends js.Object
 
 object RequestDeviceOptions {
   @scala.inline
-  def AnonFilters(filters: js.Array[BluetoothRequestDeviceFilter]): RequestDeviceOptions = {
-    val __obj = js.Dynamic.literal(filters = filters.asInstanceOf[js.Any])
-    __obj.asInstanceOf[RequestDeviceOptions]
-  }
+  implicit def apply(value: AcceptAllDevices): RequestDeviceOptions = value.asInstanceOf[RequestDeviceOptions]
   @scala.inline
-  def AnonAcceptAllDevices(acceptAllDevices: Boolean): RequestDeviceOptions = {
-    val __obj = js.Dynamic.literal(acceptAllDevices = acceptAllDevices.asInstanceOf[js.Any])
-    __obj.asInstanceOf[RequestDeviceOptions]
-  }
+  implicit def apply(value: Filters): RequestDeviceOptions = value.asInstanceOf[RequestDeviceOptions]
 }
 

@@ -5,8 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  // Crazy typedef needed get _.omit to work properly with Dictionary and NumericDictionary
-  type AnyKindOfDictionary = (typingsSlinky.lodash.mod.Dictionary[js.UndefOr[js.Object | scala.Null]]) | (typingsSlinky.lodash.mod.NumericDictionary[js.UndefOr[js.Object | scala.Null]])
   type ArrayIterator[T, TResult] = js.Function3[/* value */ T, /* index */ scala.Double, /* collection */ js.Array[T], TResult]
   // assignInWith
   type AssignCustomizer = js.Function5[
@@ -59,11 +57,8 @@ package object mod {
     /* stack */ js.Any, 
     js.UndefOr[scala.Boolean]
   ]
-  type IterateeShorthand[T] = typingsSlinky.lodash.mod.PropertyName | (js.Tuple2[typingsSlinky.lodash.mod.PropertyName, js.Any]) | typingsSlinky.lodash.mod.PartialDeep[T]
   /** Common interface between Arrays and jQuery objects */
   type List[T] = typingsSlinky.std.ArrayLike[T]
-  type ListIteratee[T] = (typingsSlinky.lodash.mod.ListIterator[T, typingsSlinky.lodash.mod.NotVoid]) | typingsSlinky.lodash.mod.IterateeShorthand[T]
-  type ListIterateeCustom[T, TResult] = (typingsSlinky.lodash.mod.ListIterator[T, TResult]) | typingsSlinky.lodash.mod.IterateeShorthand[T]
   type ListIterator[T, TResult] = js.Function3[
     /* value */ T, 
     /* index */ scala.Double, 
@@ -90,7 +85,6 @@ package object mod {
   type LoDashImplicitNumberArrayWrapper = typingsSlinky.lodash.mod.LoDashImplicitWrapper[js.Array[scala.Double]]
   type LoDashImplicitObjectWrapper[T] = typingsSlinky.lodash.mod.LoDashImplicitWrapper[T]
   type LoDashImplicitStringWrapper = typingsSlinky.lodash.mod.LoDashImplicitWrapper[java.lang.String]
-  type Many[T] = T | js.Array[T]
   /** @deprecated Use MemoListIterator or MemoObjectIterator instead. */
   type MemoIterator[T, TResult] = js.Function4[
     /* prev */ TResult, 
@@ -135,10 +129,7 @@ package object mod {
     /* source */ js.Any, 
     js.Any
   ]
-  type NotVoid = js.UndefOr[js.Object | scala.Null]
   type NumericDictionary[T] = org.scalablytyped.runtime.NumberDictionary[T]
-  type NumericDictionaryIteratee[T] = (typingsSlinky.lodash.mod.NumericDictionaryIterator[T, typingsSlinky.lodash.mod.NotVoid]) | typingsSlinky.lodash.mod.IterateeShorthand[T]
-  type NumericDictionaryIterateeCustom[T, TResult] = (typingsSlinky.lodash.mod.NumericDictionaryIterator[T, TResult]) | typingsSlinky.lodash.mod.IterateeShorthand[T]
   // NOTE: keys of objects at run time are always strings, even when a NumericDictionary is being iterated.
   type NumericDictionaryIterator[T, TResult] = js.Function3[
     /* value */ T, 
@@ -146,12 +137,6 @@ package object mod {
     /* collection */ typingsSlinky.lodash.mod.NumericDictionary[T], 
     TResult
   ]
-  type ObjectIteratee[TObject] = (typingsSlinky.lodash.mod.ObjectIterator[TObject, typingsSlinky.lodash.mod.NotVoid]) | (typingsSlinky.lodash.mod.IterateeShorthand[
-    /* import warning: importer.ImportType#apply Failed type conversion: TObject[keyof TObject] */ js.Any
-  ])
-  type ObjectIterateeCustom[TObject, TResult] = (typingsSlinky.lodash.mod.ObjectIterator[TObject, TResult]) | (typingsSlinky.lodash.mod.IterateeShorthand[
-    /* import warning: importer.ImportType#apply Failed type conversion: TObject[keyof TObject] */ js.Any
-  ])
   // Note: key should be string, not keyof T, because the actual object may contain extra properties that were not specified in the type.
   type ObjectIterator[TObject, TResult] = js.Function3[
     /* import warning: importer.ImportType#apply Failed type conversion: TObject[keyof TObject] */ /* value */ js.Any, 
@@ -173,7 +158,6 @@ package object mod {
   {[ P in keyof T ]:? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias lodash.lodash.PartialDeep<T[P]> * / object}
     */ typingsSlinky.lodash.lodashStrings.PartialDeep with org.scalablytyped.runtime.TopLevel[js.Any]
   type PartialObject[T] = typingsSlinky.lodash.GlobalPartial[T]
-  type PropertyName = java.lang.String | scala.Double | js.Symbol
   type PropertyPath = typingsSlinky.lodash.mod.Many[typingsSlinky.lodash.mod.PropertyName]
   type ReplaceFunction = js.Function2[/* match */ java.lang.String, /* repeated */ js.Any, java.lang.String]
   // setWith
@@ -184,10 +168,7 @@ package object mod {
     /* string */ java.lang.String, 
     TResult
   ]
-  type ValueIteratee[T] = (js.Function1[/* value */ T, typingsSlinky.lodash.mod.NotVoid]) | typingsSlinky.lodash.mod.IterateeShorthand[T]
-  type ValueIterateeCustom[T, TResult] = (js.Function1[/* value */ T, TResult]) | typingsSlinky.lodash.mod.IterateeShorthand[T]
   type ValueIteratorTypeGuard[T, S /* <: T */] = js.Function1[/* value */ T, /* is S */ scala.Boolean]
-  type ValueKeyIteratee[T] = (js.Function2[/* value */ T, /* key */ java.lang.String, typingsSlinky.lodash.mod.NotVoid]) | typingsSlinky.lodash.mod.IterateeShorthand[T]
   type ValueKeyIterateeTypeGuard[T, S /* <: T */] = js.Function2[/* value */ T, /* key */ java.lang.String, /* is S */ scala.Boolean]
   /** The placeholder, to be used in curried functions */
   type __ = typingsSlinky.lodash.mod.LoDashStatic

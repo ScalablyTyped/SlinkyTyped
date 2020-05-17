@@ -2,7 +2,7 @@ package typingsSlinky.koaJoiRouter.mod
 
 import typingsSlinky.koa.mod.Context
 import typingsSlinky.koa.mod.Next
-import typingsSlinky.koaJoiRouter.AnonContinueOnError
+import typingsSlinky.koaJoiRouter.anon.ContinueOnError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait Config extends js.Object {
   var meta: js.UndefOr[js.Any] = js.native
   var pre: js.UndefOr[Handler] = js.native
-  var validate: js.UndefOr[AnonContinueOnError] = js.native
+  var validate: js.UndefOr[ContinueOnError] = js.native
 }
 
 object Config {
@@ -57,7 +57,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withValidate(value: AnonContinueOnError): Self = {
+    def withValidate(value: ContinueOnError): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(value.asInstanceOf[js.Any])
         ret

@@ -1,24 +1,23 @@
 package typingsSlinky.zapierPlatformCore.mod
 
 import org.scalajs.dom.experimental.ReadableStream
+import org.scalajs.dom.raw.Console
 import typingsSlinky.node.Buffer
-import typingsSlinky.std.Console_
-import typingsSlinky.zapierPlatformCore.AnonExpiredAuthError
-import typingsSlinky.zapierPlatformCore.AnonGet
-import typingsSlinky.zapierPlatformCore.AnonParse
-import typingsSlinky.zapierPlatformCore.HttpRequestOptionsrawtrue
-import typingsSlinky.zapierPlatformCore.HttpRequestOptionsrawtrueAgent
-import typingsSlinky.zapierPlatformCore.HttpRequestOptionsurlstri
+import typingsSlinky.zapierPlatformCore.anon.Get
+import typingsSlinky.zapierPlatformCore.anon.HttpRequestOptionsrawtrue
+import typingsSlinky.zapierPlatformCore.anon.HttpRequestOptionsrawtrueAgent
+import typingsSlinky.zapierPlatformCore.anon.HttpRequestOptionsurlstri
+import typingsSlinky.zapierPlatformCore.anon.Parse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ZObject extends js.Object {
-  var JSON: AnonParse = js.native
-  var console: Console_ = js.native
-  var cursor: AnonGet = js.native
-  var errors: AnonExpiredAuthError = js.native
+  var JSON: Parse = js.native
+  var console: Console = js.native
+  var cursor: Get = js.native
+  var errors: typingsSlinky.zapierPlatformCore.anon.ExpiredAuthError = js.native
   def dehydrate[T](func: js.Function2[/* z */ this.type, /* bundle */ Bundle[T], _], inputData: js.Object): String = js.native
   def generateCallbackUrl(): String = js.native
   /**

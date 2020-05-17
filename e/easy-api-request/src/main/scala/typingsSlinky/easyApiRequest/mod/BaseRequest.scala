@@ -1,7 +1,7 @@
 package typingsSlinky.easyApiRequest.mod
 
 import typingsSlinky.bunyan.mod.^
-import typingsSlinky.easyApiRequest.AnonCb
+import typingsSlinky.easyApiRequest.anon.Cb
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
@@ -20,7 +20,7 @@ trait BaseRequest extends js.Object {
   var req: Request_[ParamsDictionary, _, _, Query] = js.native
   def _do(args: IArguments): js.Any = js.native
   def _do(args: IArguments, `type`: String): js.Any = js.native
-  def _parseOptions(args: IArguments, `type`: String): AnonCb = js.native
+  def _parseOptions(args: IArguments, `type`: String): Cb = js.native
   def _request(): js.Any = js.native
   def _request(opts: js.Any): js.Any = js.native
   def _request(opts: js.Any, cb: js.Any): js.Any = js.native

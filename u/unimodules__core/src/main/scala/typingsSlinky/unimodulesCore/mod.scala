@@ -2,6 +2,7 @@ package typingsSlinky.unimodulesCore
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
+import typingsSlinky.unimodulesCore.anon.CurrentVersion
 import typingsSlinky.unimodulesCore.unimodulesCoreStrings.android
 import typingsSlinky.unimodulesCore.unimodulesCoreStrings.ios
 import typingsSlinky.unimodulesCore.unimodulesCoreStrings.macos
@@ -36,7 +37,7 @@ object mod extends js.Object {
   
   val SyntheticPlatformEmitter: typingsSlinky.unimodulesReactNativeAdapter.syntheticPlatformEmitterMod.SyntheticPlatformEmitter = js.native
   def deprecate(library: String, deprecatedAPI: String): Unit = js.native
-  def deprecate(library: String, deprecatedAPI: String, options: AnonCurrentVersion): Unit = js.native
+  def deprecate(library: String, deprecatedAPI: String, options: CurrentVersion): Unit = js.native
   def requireNativeViewManager[P](viewName: String): ReactComponentClass[P] = js.native
   @js.native
   object NativeModulesProxy extends /* moduleName */ StringDictionary[ProxyNativeModule]

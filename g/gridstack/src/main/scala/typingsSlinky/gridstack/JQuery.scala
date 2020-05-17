@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait JQuery extends js.Object {
+trait JQuery extends GridStackElement {
   @JSName("data")
   def data_gridstack(key: typingsSlinky.gridstack.gridstackStrings.gridstack): GridStack = js.native
   def gridstack(options: GridstackOptions): JQuery = js.native

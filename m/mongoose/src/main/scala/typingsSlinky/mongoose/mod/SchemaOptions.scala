@@ -1,7 +1,7 @@
 package typingsSlinky.mongoose.mod
 
-import typingsSlinky.mongoose.AnonAutoIndexId
-import typingsSlinky.mongoose.AnonJ
+import typingsSlinky.mongoose.anon.AutoIndexId
+import typingsSlinky.mongoose.anon.J
 import typingsSlinky.mongoose.mongooseStrings.`throw`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ trait SchemaOptions extends js.Object {
   /** defaults to true */
   var bufferCommands: js.UndefOr[Boolean] = js.native
   /** defaults to false */
-  var capped: js.UndefOr[Boolean | Double | AnonAutoIndexId] = js.native
+  var capped: js.UndefOr[Boolean | Double | AutoIndexId] = js.native
   /** Sets a default collation for every query and aggregation. */
   var collation: js.UndefOr[CollationOptions] = js.native
   /** no default */
@@ -32,7 +32,7 @@ trait SchemaOptions extends js.Object {
   var minimize: js.UndefOr[Boolean] = js.native
   var read: js.UndefOr[String] = js.native
   /** defaults to true. */
-  var safe: js.UndefOr[Boolean | AnonJ] = js.native
+  var safe: js.UndefOr[Boolean | J] = js.native
   /**
     * By default, Mongoose will automatically
     * select() any populated paths.
@@ -133,7 +133,7 @@ object SchemaOptions {
         ret
     }
     @scala.inline
-    def withCapped(value: Boolean | Double | AnonAutoIndexId): Self = {
+    def withCapped(value: Boolean | Double | AutoIndexId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("capped")(value.asInstanceOf[js.Any])
         ret
@@ -241,7 +241,7 @@ object SchemaOptions {
         ret
     }
     @scala.inline
-    def withSafe(value: Boolean | AnonJ): Self = {
+    def withSafe(value: Boolean | J): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("safe")(value.asInstanceOf[js.Any])
         ret

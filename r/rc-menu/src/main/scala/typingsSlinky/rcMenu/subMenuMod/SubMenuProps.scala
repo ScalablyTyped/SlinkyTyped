@@ -2,11 +2,10 @@ package typingsSlinky.rcMenu.subMenuMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.rcMenu.AnonDomEvent
-import typingsSlinky.rcMenu.AnonHover
-import typingsSlinky.rcMenu.AnonKey
-import typingsSlinky.rcMenu.AnonOpen
-import typingsSlinky.rcMenu.ReactElementisRootMenuboo
+import typingsSlinky.rcMenu.anon.DomEvent
+import typingsSlinky.rcMenu.anon.Hover
+import typingsSlinky.rcMenu.anon.Open
+import typingsSlinky.rcMenu.anon.ReactElementisRootMenuboo
 import typingsSlinky.rcMenu.interfaceMod.BuiltinPlacements
 import typingsSlinky.rcMenu.interfaceMod.DestroyEventHandler
 import typingsSlinky.rcMenu.interfaceMod.HoverEventHandler
@@ -58,7 +57,7 @@ trait SubMenuProps extends js.Object {
   var onMouseLeave: js.UndefOr[MenuHoverEventHandler] = js.native
   var onOpenChange: js.UndefOr[OpenEventHandler] = js.native
   var onSelect: js.UndefOr[SelectEventHandler] = js.native
-  var onTitleClick: js.UndefOr[js.Function1[/* info */ AnonDomEvent, Unit]] = js.native
+  var onTitleClick: js.UndefOr[js.Function1[/* info */ DomEvent, Unit]] = js.native
   var onTitleMouseEnter: js.UndefOr[MenuHoverEventHandler] = js.native
   var onTitleMouseLeave: js.UndefOr[MenuHoverEventHandler] = js.native
   var openKeys: js.UndefOr[js.Array[String]] = js.native
@@ -359,7 +358,7 @@ object SubMenuProps {
         ret
     }
     @scala.inline
-    def withOnItemHover(value: /* info */ AnonHover => Unit): Self = {
+    def withOnItemHover(value: /* info */ Hover => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemHover")(js.Any.fromFunction1(value))
         ret
@@ -371,7 +370,7 @@ object SubMenuProps {
         ret
     }
     @scala.inline
-    def withOnMouseEnter(value: /* info */ AnonKey => Unit): Self = {
+    def withOnMouseEnter(value: /* info */ typingsSlinky.rcMenu.anon.Key => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction1(value))
         ret
@@ -383,7 +382,7 @@ object SubMenuProps {
         ret
     }
     @scala.inline
-    def withOnMouseLeave(value: /* info */ AnonKey => Unit): Self = {
+    def withOnMouseLeave(value: /* info */ typingsSlinky.rcMenu.anon.Key => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.Any.fromFunction1(value))
         ret
@@ -395,7 +394,7 @@ object SubMenuProps {
         ret
     }
     @scala.inline
-    def withOnOpenChange(value: /* keys */ js.Array[Key] | AnonOpen => Unit): Self = {
+    def withOnOpenChange(value: /* keys */ js.Array[Key] | Open => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenChange")(js.Any.fromFunction1(value))
         ret
@@ -419,7 +418,7 @@ object SubMenuProps {
         ret
     }
     @scala.inline
-    def withOnTitleClick(value: /* info */ AnonDomEvent => Unit): Self = {
+    def withOnTitleClick(value: /* info */ DomEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTitleClick")(js.Any.fromFunction1(value))
         ret
@@ -431,7 +430,7 @@ object SubMenuProps {
         ret
     }
     @scala.inline
-    def withOnTitleMouseEnter(value: /* info */ AnonKey => Unit): Self = {
+    def withOnTitleMouseEnter(value: /* info */ typingsSlinky.rcMenu.anon.Key => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTitleMouseEnter")(js.Any.fromFunction1(value))
         ret
@@ -443,7 +442,7 @@ object SubMenuProps {
         ret
     }
     @scala.inline
-    def withOnTitleMouseLeave(value: /* info */ AnonKey => Unit): Self = {
+    def withOnTitleMouseLeave(value: /* info */ typingsSlinky.rcMenu.anon.Key => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTitleMouseLeave")(js.Any.fromFunction1(value))
         ret

@@ -1,5 +1,6 @@
 package typingsSlinky.menubar
 
+import typingsSlinky.menubar.anon.PartialOptions
 import typingsSlinky.menubar.typesMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,5 +1,6 @@
 package typingsSlinky.polished
 
+import typingsSlinky.polished.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -3,15 +3,14 @@ package typingsSlinky.fabric.fabricImplMod
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.SVGElement
-import typingsSlinky.fabric.AnonBaseline
-import typingsSlinky.fabric.AnonCharIndex
-import typingsSlinky.fabric.AnonDeltaY
-import typingsSlinky.fabric.AnonFontFamily
-import typingsSlinky.fabric.AnonGraphemeLines
-import typingsSlinky.fabric.AnonKernedWidth
-import typingsSlinky.fabric.AnonLeft
-import typingsSlinky.fabric.AnonLine
-import typingsSlinky.fabric.AnonNumOfSpaces
+import typingsSlinky.fabric.anon.Baseline
+import typingsSlinky.fabric.anon.CharIndex
+import typingsSlinky.fabric.anon.DeltaY
+import typingsSlinky.fabric.anon.FontFamily
+import typingsSlinky.fabric.anon.GraphemeLines
+import typingsSlinky.fabric.anon.KernedWidth
+import typingsSlinky.fabric.anon.Left
+import typingsSlinky.fabric.anon.NumOfSpaces
 import typingsSlinky.fabric.fabricStrings._empty
 import typingsSlinky.fabric.fabricStrings.italic
 import typingsSlinky.fabric.fabricStrings.normal
@@ -45,7 +44,7 @@ class Text protected () extends Object {
   	 * @private
   	 * @type Array of char grapheme bounding boxes
   	 */
-  var __charBounds: js.UndefOr[js.Array[js.Array[AnonDeltaY]]] = js.native
+  var __charBounds: js.UndefOr[js.Array[js.Array[DeltaY]]] = js.native
   /**
   	 * List of line heights
   	 * @private
@@ -113,7 +112,7 @@ class Text protected () extends Object {
   	 * @type Number
   	 */
   var charSpacing: js.UndefOr[Double] = js.native
-  var cursorOffsetCache: AnonLeft = js.native
+  var cursorOffsetCache: Left = js.native
   /**
   	 * Baseline shift, stlyes only, keep at 0 for the main text object
   	 * @type {Number}
@@ -164,12 +163,12 @@ class Text protected () extends Object {
   	 * Subscript schema object (minimum overlap)
   	 * @type {Object}
   	 */
-  var subscript: js.UndefOr[AnonBaseline] = js.native
+  var subscript: js.UndefOr[Baseline] = js.native
   /**
   	 * Superscript schema object (minimum overlap)
   	 * @type {Object}
   	 */
-  var superscript: js.UndefOr[AnonBaseline] = js.native
+  var superscript: js.UndefOr[Baseline] = js.native
   var text: js.UndefOr[String] = js.native
   /**
   	 * Text alignment. Possible values: "left", "center", "right", "justify",
@@ -219,7 +218,7 @@ class Text protected () extends Object {
   	 * which is only sufficient for Text / IText
   	 * @private
   	 */
-  def _generateStyleMap(textInfo: AnonGraphemeLines): NumberDictionary[AnonLine] = js.native
+  def _generateStyleMap(textInfo: GraphemeLines): NumberDictionary[typingsSlinky.fabric.anon.Line] = js.native
   /**
   	 * @private
   	 * @param {Number} lineIndex index text line
@@ -255,7 +254,7 @@ class Text protected () extends Object {
   	 * @param {Object} [prevCharStyle] style of previous char
   	 * @return {Object} object contained char width anf kerned width
   	 */
-  def _measureChar(_char: String, charStyle: js.Any, previousChar: String, prevCharStyle: js.Any): AnonKernedWidth = js.native
+  def _measureChar(_char: String, charStyle: js.Any, previousChar: String, prevCharStyle: js.Any): KernedWidth = js.native
   /**
   	 * @private
   	 * @param {String} method
@@ -344,8 +343,8 @@ class Text protected () extends Object {
   	 * @param {String} [charStyle.fontStyle] Font style (italic|normal)
   	 */
   def _setTextStyles(ctx: CanvasRenderingContext2D): Unit = js.native
-  def _setTextStyles(ctx: CanvasRenderingContext2D, charStyle: AnonFontFamily): Unit = js.native
-  def _setTextStyles(ctx: CanvasRenderingContext2D, charStyle: AnonFontFamily, forMeasuring: Boolean): Unit = js.native
+  def _setTextStyles(ctx: CanvasRenderingContext2D, charStyle: FontFamily): Unit = js.native
+  def _setTextStyles(ctx: CanvasRenderingContext2D, charStyle: FontFamily, forMeasuring: Boolean): Unit = js.native
   /**
   	 * @private
   	 */
@@ -355,7 +354,7 @@ class Text protected () extends Object {
   	 * @private
   	 * @returns {Object} Lines and text in the text
   	 */
-  def _splitText(): AnonGraphemeLines = js.native
+  def _splitText(): GraphemeLines = js.native
   /**
   	 * Calculate text box height
   	 */
@@ -380,9 +379,9 @@ class Text protected () extends Object {
   	 * @param {Number} [selectionStart] Optional index. When not given, current selectionStart is used.
   	 * @param {Boolean} [skipWrapping] consider the location for unwrapped lines. usefull to manage styles.
   	 */
-  def get2DCursorLocation(): AnonCharIndex = js.native
-  def get2DCursorLocation(selectionStart: Double): AnonCharIndex = js.native
-  def get2DCursorLocation(selectionStart: Double, skipWrapping: Boolean): AnonCharIndex = js.native
+  def get2DCursorLocation(): CharIndex = js.native
+  def get2DCursorLocation(selectionStart: Double): CharIndex = js.native
+  def get2DCursorLocation(selectionStart: Double, skipWrapping: Boolean): CharIndex = js.native
   /**
   	 * return a new object that contains all the style property for a character
   	 * the object returned is newly created
@@ -462,7 +461,7 @@ class Text protected () extends Object {
   	 * @return {Object} object.width total width of characters
   	 * @return {Object} object.numOfSpaces length of chars that match this._reSpacesAndTabs
   	 */
-  def measureLine(lineIndex: Double): AnonNumOfSpaces = js.native
+  def measureLine(lineIndex: Double): NumOfSpaces = js.native
   /**
   	 * Remove a style property or properties from all individual character styles
   	 * in a text object.  Deletes the character style object if it contains no other style

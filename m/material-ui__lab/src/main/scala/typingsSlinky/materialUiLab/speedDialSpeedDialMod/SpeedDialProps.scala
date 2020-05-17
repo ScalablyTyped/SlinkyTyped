@@ -1,19 +1,19 @@
 package typingsSlinky.materialUiLab.speedDialSpeedDialMod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.materialUiCore.AnonClassName
+import typingsSlinky.materialUiCore.anon.ClassName
 import typingsSlinky.materialUiCore.withStylesMod.StyledComponentProps
-import typingsSlinky.materialUiLab.PartialFabProps
+import typingsSlinky.materialUiLab.anon.PartialFabProps
 import typingsSlinky.materialUiLab.materialUiLabStrings.down
 import typingsSlinky.materialUiLab.materialUiLabStrings.left
 import typingsSlinky.materialUiLab.materialUiLabStrings.right
 import typingsSlinky.materialUiLab.materialUiLabStrings.up
-import typingsSlinky.reactTransitionGroup.AnonAppear
+import typingsSlinky.reactTransitionGroup.anon.Appear
 import typingsSlinky.reactTransitionGroup.transitionMod.TransitionProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ import scala.scalajs.js.annotation._
 - Dropped react.react.HTMLAttributes<std.HTMLDivElement> & std.Partial</ * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionHandlerProps * / any> extends any ? std.Pick<react.react.HTMLAttributes<std.HTMLDivElement> & std.Partial</ * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionHandlerProps * / any>, std.Exclude<keyof react.react.HTMLAttributes<std.HTMLDivElement> & std.Partial</ * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionHandlerProps * / any>, 'classes' | 'children'>> : never */ @js.native
 trait SpeedDialProps
   extends StyledComponentProps[SpeedDialClassKey]
-     with AnonClassName {
+     with ClassName {
   /**
     * Props applied to the [`Fab`](/api/fab/) element.
     */
@@ -65,7 +65,7 @@ trait SpeedDialProps
     * @param {string} reason Can be: `"toggle"`, `"blur"`, `"mouseLeave"`, `"escapeKeyDown"`.
     */
   var onClose: js.UndefOr[
-    js.Function2[/* event */ SyntheticEvent[Event_, js.Object], /* reason */ CloseReason, Unit]
+    js.Function2[/* event */ SyntheticEvent[Event, js.Object], /* reason */ CloseReason, Unit]
   ] = js.native
   /**
     * Callback fired when the component requests to be open.
@@ -74,7 +74,7 @@ trait SpeedDialProps
     * @param {string} reason Can be: `"toggle"`, `"focus"`, `"mouseEnter"`.
     */
   var onOpen: js.UndefOr[
-    js.Function2[/* event */ SyntheticEvent[Event_, js.Object], /* reason */ OpenReason, Unit]
+    js.Function2[/* event */ SyntheticEvent[Event, js.Object], /* reason */ OpenReason, Unit]
   ] = js.native
   /**
     * If `true`, the SpeedDial is open.
@@ -88,7 +88,7 @@ trait SpeedDialProps
     * The duration for the transition, in milliseconds.
     * You may specify a single timeout for all transitions, or individually with an object.
     */
-  var transitionDuration: js.UndefOr[Double | AnonAppear] = js.native
+  var transitionDuration: js.UndefOr[Double | Appear] = js.native
 }
 
 object SpeedDialProps {
@@ -224,7 +224,7 @@ object SpeedDialProps {
         ret
     }
     @scala.inline
-    def withOnClose(value: (/* event */ SyntheticEvent[Event_, js.Object], /* reason */ CloseReason) => Unit): Self = {
+    def withOnClose(value: (/* event */ SyntheticEvent[Event, js.Object], /* reason */ CloseReason) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction2(value))
         ret
@@ -236,7 +236,7 @@ object SpeedDialProps {
         ret
     }
     @scala.inline
-    def withOnOpen(value: (/* event */ SyntheticEvent[Event_, js.Object], /* reason */ OpenReason) => Unit): Self = {
+    def withOnOpen(value: (/* event */ SyntheticEvent[Event, js.Object], /* reason */ OpenReason) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOpen")(js.Any.fromFunction2(value))
         ret
@@ -266,7 +266,7 @@ object SpeedDialProps {
         ret
     }
     @scala.inline
-    def withTransitionDuration(value: Double | AnonAppear): Self = {
+    def withTransitionDuration(value: Double | Appear): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("transitionDuration")(value.asInstanceOf[js.Any])
         ret

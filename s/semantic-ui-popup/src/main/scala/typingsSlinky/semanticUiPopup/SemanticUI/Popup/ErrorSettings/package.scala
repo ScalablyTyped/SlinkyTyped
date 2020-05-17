@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object ErrorSettings {
-  type Param = (typingsSlinky.semanticUiPopup.PickImplinvalidPosition | typingsSlinky.semanticUiPopup.PickImplcannotPlace | typingsSlinky.semanticUiPopup.PickImplmethod | typingsSlinky.semanticUiPopup.PickImplnoTransition | typingsSlinky.semanticUiPopup.PickImplnotFound) with typingsSlinky.semanticUiPopup.PartialPickImplkeyofImplCannotPlace
+  type Param = (typingsSlinky.semanticUiPopup.anon.PickImplinvalidPosition | typingsSlinky.semanticUiPopup.anon.PickImplcannotPlace | typingsSlinky.semanticUiPopup.anon.PickImplmethod | typingsSlinky.semanticUiPopup.anon.PickImplnoTransition | typingsSlinky.semanticUiPopup.anon.PickImplnotFound) with typingsSlinky.semanticUiPopup.anon.PartialPickImplkeyofImplCannotPlace
 }

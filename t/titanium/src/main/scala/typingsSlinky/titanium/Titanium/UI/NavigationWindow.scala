@@ -34,9 +34,8 @@ import scala.scalajs.js.annotation._
 		 * A `NavigationWindow` implements a specialized view that manages the navigation of hierarchical
 		 * content.
 		 */
-@JSGlobal("Titanium.UI.NavigationWindow")
 @js.native
-class NavigationWindow () extends Window {
+trait NavigationWindow extends Window {
   /**
   			 * Window to add to this navigation window.
   			 */

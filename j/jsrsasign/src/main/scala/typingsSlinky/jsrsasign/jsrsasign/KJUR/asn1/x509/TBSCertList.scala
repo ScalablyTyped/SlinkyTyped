@@ -35,9 +35,8 @@ import scala.scalajs.js.annotation._
   * //                                  }  OPTIONAL,
   * //        crlExtensions           [0]  EXPLICIT Extensions OPTIONAL
   */
-@JSGlobal("jsrsasign.KJUR.asn1.x509.TBSCertList")
 @js.native
-class TBSCertList () extends ASN1Object {
+trait TBSCertList extends ASN1Object {
   /**
     * add revoked certificate by parameter
     * @param snParam DERInteger parameter for certificate serial number
@@ -78,5 +77,66 @@ class TBSCertList () extends ASN1Object {
     * @see KJUR.asn1.x509.Time
     */
   def setThisUpdateByParam(timeParam: StringParam): Unit = js.native
+}
+
+object TBSCertList {
+  @scala.inline
+  def apply(
+    addRevokedCert: (IntegerParam, StringParam) => Unit,
+    getEncodedHex: () => String,
+    getFreshValueHex: () => String,
+    getLengthHexFromValue: () => String,
+    getValueHex: () => String,
+    hL: String,
+    hT: String,
+    hTLV: String,
+    hV: String,
+    isModified: String,
+    setIssuerByParam: StringParam => Unit,
+    setNextUpdateByParam: StringParam => Unit,
+    setSignatureAlgByParam: NameParam => Unit,
+    setThisUpdateByParam: StringParam => Unit
+  ): TBSCertList = {
+    val __obj = js.Dynamic.literal(addRevokedCert = js.Any.fromFunction2(addRevokedCert), getEncodedHex = js.Any.fromFunction0(getEncodedHex), getFreshValueHex = js.Any.fromFunction0(getFreshValueHex), getLengthHexFromValue = js.Any.fromFunction0(getLengthHexFromValue), getValueHex = js.Any.fromFunction0(getValueHex), hL = hL.asInstanceOf[js.Any], hT = hT.asInstanceOf[js.Any], hTLV = hTLV.asInstanceOf[js.Any], hV = hV.asInstanceOf[js.Any], isModified = isModified.asInstanceOf[js.Any], setIssuerByParam = js.Any.fromFunction1(setIssuerByParam), setNextUpdateByParam = js.Any.fromFunction1(setNextUpdateByParam), setSignatureAlgByParam = js.Any.fromFunction1(setSignatureAlgByParam), setThisUpdateByParam = js.Any.fromFunction1(setThisUpdateByParam))
+    __obj.asInstanceOf[TBSCertList]
+  }
+  @scala.inline
+  implicit class TBSCertListOps[Self <: TBSCertList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddRevokedCert(value: (IntegerParam, StringParam) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addRevokedCert")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetIssuerByParam(value: StringParam => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setIssuerByParam")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetNextUpdateByParam(value: StringParam => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setNextUpdateByParam")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetSignatureAlgByParam(value: NameParam => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSignatureAlgByParam")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetThisUpdateByParam(value: StringParam => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setThisUpdateByParam")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

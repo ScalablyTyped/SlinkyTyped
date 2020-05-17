@@ -1,7 +1,7 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonDelayName
-import typingsSlinky.devextreme.AnonHide
+import typingsSlinky.devextreme.anon.DelayName
+import typingsSlinky.devextreme.anon.Hide
 import typingsSlinky.devextreme.devextremeStrings.none
 import typingsSlinky.devextreme.devextremeStrings.onClick
 import typingsSlinky.devextreme.devextremeStrings.onHover
@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait dxMenuBaseOptions[T] extends HierarchicalCollectionWidgetOptions[T] {
   /** Configures widget visibility animations. This object contains two fields: show and hide. */
-  var animation: js.UndefOr[AnonHide] = js.native
+  var animation: js.UndefOr[Hide] = js.native
   /** Specifies the name of the CSS class to be applied to the root menu level and all submenus. */
   var cssClass: js.UndefOr[String] = js.native
   /** Binds the widget to data. */
@@ -29,7 +29,7 @@ trait dxMenuBaseOptions[T] extends HierarchicalCollectionWidgetOptions[T] {
   /** Specifies the selection mode supported by the menu. */
   var selectionMode: js.UndefOr[none | single_] = js.native
   /** Specifies options of submenu showing and hiding. */
-  var showSubmenuMode: js.UndefOr[AnonDelayName | onClick | onHover] = js.native
+  var showSubmenuMode: js.UndefOr[DelayName | onClick | onHover] = js.native
 }
 
 object dxMenuBaseOptions {
@@ -45,7 +45,7 @@ object dxMenuBaseOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withAnimation(value: AnonHide): Self[T] = {
+    def withAnimation(value: Hide): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
         ret
@@ -117,7 +117,7 @@ object dxMenuBaseOptions {
         ret
     }
     @scala.inline
-    def withShowSubmenuMode(value: AnonDelayName | onClick | onHover): Self[T] = {
+    def withShowSubmenuMode(value: DelayName | onClick | onHover): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("showSubmenuMode")(value.asInstanceOf[js.Any])
         ret

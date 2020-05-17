@@ -1,6 +1,5 @@
 package typingsSlinky.playerframework.PlayerFramework
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,23 +39,6 @@ object MediaErrorCode extends js.Object {
   		**/
   @js.native
   sealed trait unknown extends MediaErrorCode
-  
-  @JSBracketAccess
-  def apply(value: Double): js.UndefOr[MediaErrorCode with Double] = js.native
-  /* 1 */ @js.native
-  object aborted extends TopLevel[aborted with Double]
-  
-  /* 3 */ @js.native
-  object decode extends TopLevel[decode with Double]
-  
-  /* 2 */ @js.native
-  object network extends TopLevel[network with Double]
-  
-  /* 4 */ @js.native
-  object notSupported extends TopLevel[notSupported with Double]
-  
-  /* 0 */ @js.native
-  object unknown extends TopLevel[unknown with Double]
   
 }
 

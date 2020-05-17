@@ -2,7 +2,7 @@ package typingsSlinky.materializeCss.mod
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.materializeCss.MElements
-import typingsSlinky.materializeCss.PartialSliderOptions
+import typingsSlinky.materializeCss.anon.PartialSliderOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

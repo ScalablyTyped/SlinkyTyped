@@ -1,7 +1,7 @@
 package typingsSlinky.nodeHueApi.mod
 
-import typingsSlinky.nodeHueApi.Anon1
-import typingsSlinky.nodeHueApi.AnonAlert
+import typingsSlinky.nodeHueApi.anon.Alert
+import typingsSlinky.nodeHueApi.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +12,8 @@ trait ILight extends js.Object {
   var manufacturername: String = js.native
   var modelid: String = js.native
   var name: String = js.native
-  var pointsymbol: js.UndefOr[Anon1] = js.native
-  var state: AnonAlert = js.native
+  var pointsymbol: js.UndefOr[`1`] = js.native
+  var state: Alert = js.native
   var swversion: String = js.native
   var `type`: String = js.native
   var uniqueid: String = js.native
@@ -25,7 +25,7 @@ object ILight {
     manufacturername: String,
     modelid: String,
     name: String,
-    state: AnonAlert,
+    state: Alert,
     swversion: String,
     `type`: String,
     uniqueid: String
@@ -59,7 +59,7 @@ object ILight {
         ret
     }
     @scala.inline
-    def withState(value: AnonAlert): Self = {
+    def withState(value: Alert): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
         ret
@@ -95,7 +95,7 @@ object ILight {
         ret
     }
     @scala.inline
-    def withPointsymbol(value: Anon1): Self = {
+    def withPointsymbol(value: `1`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointsymbol")(value.asInstanceOf[js.Any])
         ret

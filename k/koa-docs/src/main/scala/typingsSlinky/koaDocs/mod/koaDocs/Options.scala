@@ -1,13 +1,13 @@
 package typingsSlinky.koaDocs.mod.koaDocs
 
-import typingsSlinky.koaDocs.AnonDescription
+import typingsSlinky.koaDocs.anon.Description
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Options extends js.Object {
-  var groups: js.Array[AnonDescription] = js.native
+  var groups: js.Array[Description] = js.native
   var routeHandlers: js.UndefOr[String] = js.native
   var theme: js.UndefOr[String] = js.native
   var title: js.UndefOr[String] = js.native
@@ -16,7 +16,7 @@ trait Options extends js.Object {
 
 object Options {
   @scala.inline
-  def apply(groups: js.Array[AnonDescription], version: String): Options = {
+  def apply(groups: js.Array[Description], version: String): Options = {
     val __obj = js.Dynamic.literal(groups = groups.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
@@ -27,7 +27,7 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGroups(value: js.Array[AnonDescription]): Self = {
+    def withGroups(value: js.Array[Description]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
         ret

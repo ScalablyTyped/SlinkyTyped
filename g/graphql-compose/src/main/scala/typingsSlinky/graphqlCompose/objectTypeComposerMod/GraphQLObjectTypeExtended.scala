@@ -1,7 +1,7 @@
 package typingsSlinky.graphqlCompose.objectTypeComposerMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.graphql.GraphQLObjectTypeConfigan
+import typingsSlinky.graphql.anon.GraphQLObjectTypeConfigan
 import typingsSlinky.graphql.astMod.ObjectTypeDefinitionNode
 import typingsSlinky.graphql.astMod.ObjectTypeExtensionNode
 import typingsSlinky.graphql.definitionMod.GraphQLFieldMap

@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientAnalytics.gapi.client.analytics
 
-import typingsSlinky.gapiClientAnalytics.AnonAccountId
-import typingsSlinky.gapiClientAnalytics.AnonColumnType
-import typingsSlinky.gapiClientAnalytics.AnonConversionPathValue
-import typingsSlinky.gapiClientAnalytics.AnonDimensions
+import typingsSlinky.gapiClientAnalytics.anon.AccountId
+import typingsSlinky.gapiClientAnalytics.anon.ColumnType
+import typingsSlinky.gapiClientAnalytics.anon.ConversionPathValue
+import typingsSlinky.gapiClientAnalytics.anon.Dimensions
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait McfData extends js.Object {
   /** Column headers that list dimension names followed by the metric names. The order of dimensions and metrics is same as specified in the request. */
-  var columnHeaders: js.UndefOr[js.Array[AnonColumnType]] = js.native
+  var columnHeaders: js.UndefOr[js.Array[ColumnType]] = js.native
   /** Determines if the Analytics data contains sampled data. */
   var containsSampledData: js.UndefOr[Boolean] = js.native
   /** Unique ID for this data response. */
@@ -29,14 +29,14 @@ trait McfData extends js.Object {
   /** Link to previous page for this Analytics data query. */
   var previousLink: js.UndefOr[String] = js.native
   /** Information for the view (profile), for which the Analytics data was requested. */
-  var profileInfo: js.UndefOr[AnonAccountId] = js.native
+  var profileInfo: js.UndefOr[AccountId] = js.native
   /** Analytics data request query parameters. */
-  var query: js.UndefOr[AnonDimensions] = js.native
+  var query: js.UndefOr[Dimensions] = js.native
   /**
     * Analytics data rows, where each row contains a list of dimension values followed by the metric values. The order of dimensions and metrics is same as
     * specified in the request.
     */
-  var rows: js.UndefOr[js.Array[js.Array[AnonConversionPathValue]]] = js.native
+  var rows: js.UndefOr[js.Array[js.Array[ConversionPathValue]]] = js.native
   /** The number of samples used to calculate the result. */
   var sampleSize: js.UndefOr[String] = js.native
   /** Total size of the sample space from which the samples were selected. */
@@ -65,7 +65,7 @@ object McfData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withColumnHeaders(value: js.Array[AnonColumnType]): Self = {
+    def withColumnHeaders(value: js.Array[ColumnType]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnHeaders")(value.asInstanceOf[js.Any])
         ret
@@ -149,7 +149,7 @@ object McfData {
         ret
     }
     @scala.inline
-    def withProfileInfo(value: AnonAccountId): Self = {
+    def withProfileInfo(value: AccountId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("profileInfo")(value.asInstanceOf[js.Any])
         ret
@@ -161,7 +161,7 @@ object McfData {
         ret
     }
     @scala.inline
-    def withQuery(value: AnonDimensions): Self = {
+    def withQuery(value: Dimensions): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
         ret
@@ -173,7 +173,7 @@ object McfData {
         ret
     }
     @scala.inline
-    def withRows(value: js.Array[js.Array[AnonConversionPathValue]]): Self = {
+    def withRows(value: js.Array[js.Array[ConversionPathValue]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
         ret

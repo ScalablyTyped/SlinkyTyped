@@ -9,9 +9,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Electron.IncomingMessage")
 @js.native
-class IncomingMessage () extends EventEmitter {
+trait IncomingMessage extends EventEmitter {
   var headers: js.Any = js.native
   var httpVersion: String = js.native
   var httpVersionMajor: Double = js.native

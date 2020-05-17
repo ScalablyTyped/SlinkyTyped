@@ -3,7 +3,7 @@ package typingsSlinky.nivoBar.mod
 import org.scalajs.dom.raw.SVGRectElement
 import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.nivoBar.dataFromindexeskeysLegend
+import typingsSlinky.nivoBar.anon.dataFromindexeskeysLegend
 import typingsSlinky.nivoBar.nivoBarStrings.auto
 import typingsSlinky.nivoBar.nivoBarStrings.grouped
 import typingsSlinky.nivoBar.nivoBarStrings.horizontal
@@ -11,8 +11,8 @@ import typingsSlinky.nivoBar.nivoBarStrings.stacked
 import typingsSlinky.nivoBar.nivoBarStrings.vertical
 import typingsSlinky.nivoColors.mod.InheritedColorProp
 import typingsSlinky.nivoColors.mod.OrdinalColorsInstruction
-import typingsSlinky.nivoCore.AnonDictkey
-import typingsSlinky.nivoCore.AnonId
+import typingsSlinky.nivoCore.anon.Dictkey
+import typingsSlinky.nivoCore.anon.Id
 import typingsSlinky.nivoCore.mod.Box
 import typingsSlinky.nivoCore.mod.CartesianMarkerProps
 import typingsSlinky.nivoCore.mod.Theme
@@ -33,11 +33,11 @@ trait BarSvgProps extends js.Object {
   var borderWidth: js.UndefOr[Double] = js.native
   var colors: js.UndefOr[OrdinalColorsInstruction[_]] = js.native
   var data: js.Array[js.Object] = js.native
-  var defs: js.UndefOr[js.Array[AnonDictkey]] = js.native
+  var defs: js.UndefOr[js.Array[Dictkey]] = js.native
   var enableGridX: js.UndefOr[Boolean] = js.native
   var enableGridY: js.UndefOr[Boolean] = js.native
   var enableLabel: js.UndefOr[Boolean] = js.native
-  var fill: js.UndefOr[js.Array[AnonId[BarDatum]]] = js.native
+  var fill: js.UndefOr[js.Array[Id[BarDatum]]] = js.native
   var groupMode: js.UndefOr[stacked | grouped] = js.native
   var indexBy: js.UndefOr[String | IndexByFunc] = js.native
   var innerPadding: js.UndefOr[Double] = js.native
@@ -201,7 +201,7 @@ object BarSvgProps {
         ret
     }
     @scala.inline
-    def withDefs(value: js.Array[AnonDictkey]): Self = {
+    def withDefs(value: js.Array[Dictkey]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defs")(value.asInstanceOf[js.Any])
         ret
@@ -249,7 +249,7 @@ object BarSvgProps {
         ret
     }
     @scala.inline
-    def withFill(value: js.Array[AnonId[BarDatum]]): Self = {
+    def withFill(value: js.Array[Id[BarDatum]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
         ret

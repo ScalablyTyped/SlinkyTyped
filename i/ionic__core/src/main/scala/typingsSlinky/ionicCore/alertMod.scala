@@ -2,7 +2,7 @@ package typingsSlinky.ionicCore
 
 import typingsSlinky.ionicCore.alertInterfaceMod.AlertButton
 import typingsSlinky.ionicCore.alertInterfaceMod.AlertInput
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonAlertElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonAlertElement
 import typingsSlinky.ionicCore.ionicCoreStrings.ios
 import typingsSlinky.ionicCore.ionicCoreStrings.md
 import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation

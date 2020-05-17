@@ -1,8 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,10 +14,37 @@ trait TextDecoderStream
   val writable_TextDecoderStream: WritableStream[BufferSource] = js.native
 }
 
-@JSGlobal("TextDecoderStream")
-@js.native
-object TextDecoderStream
-  extends Instantiable0[TextDecoderStream]
-     with Instantiable1[/* label */ java.lang.String, TextDecoderStream]
-     with Instantiable2[/* label */ java.lang.String, /* options */ TextDecoderOptions, TextDecoderStream]
+object TextDecoderStream {
+  @scala.inline
+  def apply(
+    encoding: java.lang.String,
+    fatal: scala.Boolean,
+    ignoreBOM: scala.Boolean,
+    readable: org.scalajs.dom.experimental.ReadableStream[java.lang.String],
+    writable: WritableStream[BufferSource]
+  ): TextDecoderStream = {
+    val __obj = js.Dynamic.literal(encoding = encoding.asInstanceOf[js.Any], fatal = fatal.asInstanceOf[js.Any], ignoreBOM = ignoreBOM.asInstanceOf[js.Any], readable = readable.asInstanceOf[js.Any], writable = writable.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TextDecoderStream]
+  }
+  @scala.inline
+  implicit class TextDecoderStreamOps[Self <: TextDecoderStream] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReadable(value: org.scalajs.dom.experimental.ReadableStream[java.lang.String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWritable(value: WritableStream[BufferSource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writable")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

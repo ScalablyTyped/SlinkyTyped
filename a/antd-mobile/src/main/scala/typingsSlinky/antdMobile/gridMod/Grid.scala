@@ -1,7 +1,7 @@
 package typingsSlinky.antdMobile.gridMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.antdMobile.AnonInitialSlideWidth
+import typingsSlinky.antdMobile.anon.InitialSlideWidth
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait Grid
   extends Component[GridProps, js.Any, js.Any] {
   @JSName("state")
-  var state_Grid: AnonInitialSlideWidth = js.native
+  var state_Grid: InitialSlideWidth = js.native
   @JSName("componentDidMount")
   def componentDidMount_MGrid(): Unit = js.native
   def getRows(rowCount: Double, dataLength: Double): js.Array[_] = js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.argparse.mod
 
-import typingsSlinky.argparse.AnonInstantiable
+import typingsSlinky.argparse.anon.Instantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait SubparserOptions extends js.Object {
   var dest: js.UndefOr[String] = js.native
   var help: js.UndefOr[String] = js.native
   var metavar: js.UndefOr[String] = js.native
-  var parserClass: js.UndefOr[AnonInstantiable] = js.native
+  var parserClass: js.UndefOr[Instantiable] = js.native
   var prog: js.UndefOr[String] = js.native
   var title: js.UndefOr[String] = js.native
 }
@@ -90,7 +90,7 @@ object SubparserOptions {
         ret
     }
     @scala.inline
-    def withParserClass(value: AnonInstantiable): Self = {
+    def withParserClass(value: Instantiable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parserClass")(value.asInstanceOf[js.Any])
         ret

@@ -2,7 +2,7 @@ package typingsSlinky.eggMock.mod
 
 import typingsSlinky.egg.mod.Application
 import typingsSlinky.egg.mod.Context
-import typingsSlinky.eggMock.AnonData
+import typingsSlinky.eggMock.anon.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,8 +16,8 @@ trait MockApplication extends Application {
   def mockContext(data: js.Any): Context = js.native
   def mockCookies(cookies: js.Any): MockApplication = js.native
   def mockHeaders(headers: js.Any): MockApplication = js.native
-  def mockHttpclient(mockUrl: String, mockMethod: String, mockResult: AnonData): MockApplication = js.native
-  def mockHttpclient(mockUrl: String, mockMethod: js.Array[String], mockResult: AnonData): MockApplication = js.native
+  def mockHttpclient(mockUrl: String, mockMethod: String, mockResult: Data): MockApplication = js.native
+  def mockHttpclient(mockUrl: String, mockMethod: js.Array[String], mockResult: Data): MockApplication = js.native
   /**
     * Mock service
     */

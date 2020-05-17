@@ -1,6 +1,5 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.ShapeData
 import typingsSlinky.officeJs.Excel.Interfaces.ShapeLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.ShapeUpdateData
@@ -8,6 +7,7 @@ import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.ClientResult
 import typingsSlinky.officeJs.OfficeExtension.EventHandlers
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.Absolute
 import typingsSlinky.officeJs.officeJsStrings.BMP
 import typingsSlinky.officeJs.officeJsStrings.BringForward
@@ -39,9 +39,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@JSGlobal("Excel.Shape")
 @js.native
-class Shape () extends ClientObject {
+trait Shape extends ClientObject {
   /**
     *
     * Returns or sets the alternative description text for a Shape object.
@@ -318,7 +317,7 @@ class Shape () extends ClientObject {
     */
   def load(): Shape = js.native
   def load(options: ShapeLoadOptions): Shape = js.native
-  def load(propertyNamesAndPaths: AnonExpand): Shape = js.native
+  def load(propertyNamesAndPaths: Expand): Shape = js.native
   def load(propertyNames: String): Shape = js.native
   def load(propertyNames: js.Array[String]): Shape = js.native
   /**

@@ -1,7 +1,6 @@
 package typingsSlinky.amapJsApiToolBar.AMap.ToolBar
 
 import typingsSlinky.amapJsApi.AMap.Event_
-import typingsSlinky.amapJsApiToolBar.AnonLnglat
 import typingsSlinky.amapJsApiToolBar.amapJsApiToolBarStrings.`location-failed`
 import typingsSlinky.amapJsApiToolBar.amapJsApiToolBarStrings.`location-success`
 import typingsSlinky.amapJsApiToolBar.amapJsApiToolBarStrings.hide
@@ -9,6 +8,7 @@ import typingsSlinky.amapJsApiToolBar.amapJsApiToolBarStrings.location
 import typingsSlinky.amapJsApiToolBar.amapJsApiToolBarStrings.show
 import typingsSlinky.amapJsApiToolBar.amapJsApiToolBarStrings.zoomin
 import typingsSlinky.amapJsApiToolBar.amapJsApiToolBarStrings.zoomout
+import typingsSlinky.amapJsApiToolBar.anon.Lnglat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait EventMap extends js.Object {
     typingsSlinky.amapJsApiToolBar.amapJsApiToolBarStrings.hide, 
     js.UndefOr[scala.Nothing]
   ] = js.native
-  var location: Event_[typingsSlinky.amapJsApiToolBar.amapJsApiToolBarStrings.location, AnonLnglat] = js.native
+  var location: Event_[typingsSlinky.amapJsApiToolBar.amapJsApiToolBarStrings.location, Lnglat] = js.native
    // TODO geolocation.getCurrentPosition
   var `location-failed`: Event_[
     typingsSlinky.amapJsApiToolBar.amapJsApiToolBarStrings.`location-failed`, 
@@ -41,7 +41,7 @@ object EventMap {
   @scala.inline
   def apply(
     hide: Event_[hide, js.UndefOr[scala.Nothing]],
-    location: Event_[location, AnonLnglat],
+    location: Event_[location, Lnglat],
     `location-failed`: Event_[`location-failed`, js.UndefOr[scala.Nothing]],
     `location-success`: Event_[`location-success`, js.UndefOr[scala.Nothing]],
     show: Event_[show, js.UndefOr[scala.Nothing]],
@@ -65,7 +65,7 @@ object EventMap {
         ret
     }
     @scala.inline
-    def withLocation(value: Event_[location, AnonLnglat]): Self = {
+    def withLocation(value: Event_[location, Lnglat]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
         ret

@@ -4,27 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("createjs.ButtonHelper")
 @js.native
-class ButtonHelper protected () extends js.Object {
-  def this(
-    target: MovieClip,
-    outLabel: js.UndefOr[String],
-    overLabel: js.UndefOr[String],
-    downLabel: js.UndefOr[String],
-    play: js.UndefOr[Boolean],
-    hitArea: js.UndefOr[DisplayObject],
-    hitLabel: js.UndefOr[String]
-  ) = this()
-  def this(
-    target: Sprite,
-    outLabel: js.UndefOr[String],
-    overLabel: js.UndefOr[String],
-    downLabel: js.UndefOr[String],
-    play: js.UndefOr[Boolean],
-    hitArea: js.UndefOr[DisplayObject],
-    hitLabel: js.UndefOr[String]
-  ) = this()
+trait ButtonHelper extends js.Object {
   // properties
   var downLabel: String | Double = js.native
   var enabled: Boolean = js.native
@@ -41,5 +22,78 @@ class ButtonHelper protected () extends js.Object {
     * @deprecated - use the 'enabled' property instead
     */
   def setEnabled(value: Boolean): Unit = js.native
+}
+
+object ButtonHelper {
+  @scala.inline
+  def apply(
+    downLabel: String | Double,
+    enabled: Boolean,
+    getEnabled: () => Boolean,
+    outLabel: String | Double,
+    overLabel: String | Double,
+    play: Boolean,
+    setEnabled: Boolean => Unit,
+    target: MovieClip | Sprite
+  ): ButtonHelper = {
+    val __obj = js.Dynamic.literal(downLabel = downLabel.asInstanceOf[js.Any], enabled = enabled.asInstanceOf[js.Any], getEnabled = js.Any.fromFunction0(getEnabled), outLabel = outLabel.asInstanceOf[js.Any], overLabel = overLabel.asInstanceOf[js.Any], play = play.asInstanceOf[js.Any], setEnabled = js.Any.fromFunction1(setEnabled), target = target.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ButtonHelper]
+  }
+  @scala.inline
+  implicit class ButtonHelperOps[Self <: ButtonHelper] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDownLabel(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("downLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetEnabled(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getEnabled")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOutLabel(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOverLabel(value: String | Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overLabel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlay(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("play")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetEnabled(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setEnabled")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTarget(value: MovieClip | Sprite): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

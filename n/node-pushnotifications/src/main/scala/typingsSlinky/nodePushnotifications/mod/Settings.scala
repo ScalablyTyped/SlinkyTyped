@@ -1,10 +1,10 @@
 package typingsSlinky.nodePushnotifications.mod
 
-import typingsSlinky.nodePushnotifications.AnonAccessToken
-import typingsSlinky.nodePushnotifications.AnonAddress
-import typingsSlinky.nodePushnotifications.AnonClientid
-import typingsSlinky.nodePushnotifications.AnonId
-import typingsSlinky.nodePushnotifications.AnonOptions
+import typingsSlinky.nodePushnotifications.anon.AccessToken
+import typingsSlinky.nodePushnotifications.anon.Address
+import typingsSlinky.nodePushnotifications.anon.Clientid
+import typingsSlinky.nodePushnotifications.anon.Id
+import typingsSlinky.nodePushnotifications.anon.Options
 import typingsSlinky.webPush.mod.RequestOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,19 +13,19 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Settings extends js.Object {
   /** Amazon Device Messaging */
-  var adm: js.UndefOr[AnonClientid] = js.native
+  var adm: js.UndefOr[Clientid] = js.native
   /** Apple Push Notifications */
-  var apn: js.UndefOr[AnonAddress] = js.native
+  var apn: js.UndefOr[Address] = js.native
   /** Google Cloud Messaging  */
-  var gcm: js.UndefOr[AnonId] = js.native
+  var gcm: js.UndefOr[Id] = js.native
   /** Always use FCM? */
   var isAlwaysUseFCM: js.UndefOr[Boolean] = js.native
   /** Microsoft Push Notification Service */
-  var mpns: js.UndefOr[AnonOptions] = js.native
+  var mpns: js.UndefOr[Options] = js.native
   /** Web */
   var web: js.UndefOr[RequestOptions] = js.native
   /** Windows Push Notifications */
-  var wns: js.UndefOr[AnonAccessToken] = js.native
+  var wns: js.UndefOr[AccessToken] = js.native
 }
 
 object Settings {
@@ -41,7 +41,7 @@ object Settings {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAdm(value: AnonClientid): Self = {
+    def withAdm(value: Clientid): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("adm")(value.asInstanceOf[js.Any])
         ret
@@ -53,7 +53,7 @@ object Settings {
         ret
     }
     @scala.inline
-    def withApn(value: AnonAddress): Self = {
+    def withApn(value: Address): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("apn")(value.asInstanceOf[js.Any])
         ret
@@ -65,7 +65,7 @@ object Settings {
         ret
     }
     @scala.inline
-    def withGcm(value: AnonId): Self = {
+    def withGcm(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gcm")(value.asInstanceOf[js.Any])
         ret
@@ -89,7 +89,7 @@ object Settings {
         ret
     }
     @scala.inline
-    def withMpns(value: AnonOptions): Self = {
+    def withMpns(value: Options): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mpns")(value.asInstanceOf[js.Any])
         ret
@@ -113,7 +113,7 @@ object Settings {
         ret
     }
     @scala.inline
-    def withWns(value: AnonAccessToken): Self = {
+    def withWns(value: AccessToken): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("wns")(value.asInstanceOf[js.Any])
         ret

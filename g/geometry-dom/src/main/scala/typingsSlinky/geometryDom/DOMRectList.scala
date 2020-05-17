@@ -1,5 +1,6 @@
 package typingsSlinky.geometryDom
 
+import typingsSlinky.geometryDom.GeometryDom.DOMRect
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,12 +16,12 @@ trait DOMRectList extends js.Object {
     * the DOMRect object at index must be returned.
     * @param index
     */
-  def item(index: Double): typingsSlinky.geometryDom.GeometryDom.DOMRect = js.native
+  def item(index: Double): DOMRect = js.native
 }
 
 object DOMRectList {
   @scala.inline
-  def apply(item: Double => typingsSlinky.geometryDom.GeometryDom.DOMRect, length: Double): DOMRectList = {
+  def apply(item: Double => DOMRect, length: Double): DOMRectList = {
     val __obj = js.Dynamic.literal(item = js.Any.fromFunction1(item), length = length.asInstanceOf[js.Any])
     __obj.asInstanceOf[DOMRectList]
   }
@@ -31,7 +32,7 @@ object DOMRectList {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withItem(value: Double => typingsSlinky.geometryDom.GeometryDom.DOMRect): Self = {
+    def withItem(value: Double => DOMRect): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.Any.fromFunction1(value))
         ret

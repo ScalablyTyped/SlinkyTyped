@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.RangeFontData
 import typingsSlinky.officeJs.Excel.Interfaces.RangeFontLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.RangeFontUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.DoubleAccountant
 import typingsSlinky.officeJs.officeJsStrings.None
 import typingsSlinky.officeJs.officeJsStrings.Single
@@ -20,9 +20,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.RangeFont")
 @js.native
-class RangeFont () extends ClientObject {
+trait RangeFont extends ClientObject {
   /**
     *
     * Represents the bold status of font.
@@ -110,7 +109,7 @@ class RangeFont () extends ClientObject {
     */
   def load(): RangeFont = js.native
   def load(options: RangeFontLoadOptions): RangeFont = js.native
-  def load(propertyNamesAndPaths: AnonExpand): RangeFont = js.native
+  def load(propertyNamesAndPaths: Expand): RangeFont = js.native
   def load(propertyNames: String): RangeFont = js.native
   def load(propertyNames: js.Array[String]): RangeFont = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

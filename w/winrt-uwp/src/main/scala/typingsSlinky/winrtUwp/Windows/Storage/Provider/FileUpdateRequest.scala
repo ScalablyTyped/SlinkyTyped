@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides information about a requested file update so that the app can complete the request. */
-@JSGlobal("Windows.Storage.Provider.FileUpdateRequest")
 @js.native
-abstract class FileUpdateRequest () extends js.Object {
+trait FileUpdateRequest extends js.Object {
   /** Gets the unique identifier used to associate the local version of a file with the corresponding remote version. */
   var contentId: String = js.native
   /** Gets a StorageFile object that represents the locally cached copy of the file to update. */
@@ -28,5 +27,64 @@ abstract class FileUpdateRequest () extends js.Object {
     * @param value The new version of the local file that will represent remote file.
     */
   def updateLocalFile(value: IStorageFile): Unit = js.native
+}
+
+object FileUpdateRequest {
+  @scala.inline
+  def apply(
+    contentId: String,
+    file: StorageFile,
+    getDeferral: () => FileUpdateRequestDeferral,
+    status: FileUpdateStatus,
+    updateLocalFile: IStorageFile => Unit,
+    userInputNeededMessage: String
+  ): FileUpdateRequest = {
+    val __obj = js.Dynamic.literal(contentId = contentId.asInstanceOf[js.Any], file = file.asInstanceOf[js.Any], getDeferral = js.Any.fromFunction0(getDeferral), status = status.asInstanceOf[js.Any], updateLocalFile = js.Any.fromFunction1(updateLocalFile), userInputNeededMessage = userInputNeededMessage.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FileUpdateRequest]
+  }
+  @scala.inline
+  implicit class FileUpdateRequestOps[Self <: FileUpdateRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFile(value: StorageFile): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetDeferral(value: () => FileUpdateRequestDeferral): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDeferral")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStatus(value: FileUpdateStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdateLocalFile(value: IStorageFile => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateLocalFile")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUserInputNeededMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userInputNeededMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

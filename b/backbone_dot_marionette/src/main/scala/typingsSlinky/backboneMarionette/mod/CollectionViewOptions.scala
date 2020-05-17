@@ -2,7 +2,7 @@ package typingsSlinky.backboneMarionette.mod
 
 import typingsSlinky.backbone.mod.Collection
 import typingsSlinky.backbone.mod.Model
-import typingsSlinky.backboneMarionette.TypeofView
+import typingsSlinky.backboneMarionette.anon.TypeofView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

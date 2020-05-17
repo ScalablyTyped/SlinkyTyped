@@ -1,6 +1,6 @@
 package typingsSlinky.knex.mod
 
-import typingsSlinky.knex.AnonPrecision
+import typingsSlinky.knex.anon.Precision
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait TableBuilder extends js.Object {
   def comment(`val`: String): TableBuilder = js.native
   def date(columnName: String): ColumnBuilder = js.native
   def dateTime(columnName: String): ColumnBuilder = js.native
-  def dateTime(columnName: String, options: AnonPrecision): ColumnBuilder = js.native
+  def dateTime(columnName: String, options: Precision): ColumnBuilder = js.native
   def decimal(columnName: String): ColumnBuilder = js.native
   def decimal(columnName: String, precision: Double): ColumnBuilder = js.native
   def decimal(columnName: String, precision: Double, scale: Double): ColumnBuilder = js.native
@@ -63,7 +63,7 @@ trait TableBuilder extends js.Object {
   def text(columnName: String, textType: String): ColumnBuilder = js.native
   def time(columnName: String): ColumnBuilder = js.native
   def timestamp(columnName: String): ColumnBuilder = js.native
-  def timestamp(columnName: String, options: AnonPrecision): ColumnBuilder = js.native
+  def timestamp(columnName: String, options: Precision): ColumnBuilder = js.native
   def timestamp(columnName: String, withoutTz: Boolean): ColumnBuilder = js.native
   def timestamp(columnName: String, withoutTz: Boolean, precision: Double): ColumnBuilder = js.native
   def timestamps(): ColumnBuilder = js.native

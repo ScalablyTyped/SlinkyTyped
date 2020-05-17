@@ -2,7 +2,7 @@ package typingsSlinky.primereact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonDataObject
+import typingsSlinky.primereact.anon.DataObject
 import typingsSlinky.primereact.rowRadioButtonMod.RowRadioButtonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ object RowRadioButton {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.primereact.rowRadioButtonMod.RowRadioButton] {
     @scala.inline
-    def onClick(value: /* e */ AnonDataObject => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    def onClick(value: /* e */ DataObject => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
     def rowData(value: js.Object): this.type = set("rowData", value.asInstanceOf[js.Any])
     @scala.inline

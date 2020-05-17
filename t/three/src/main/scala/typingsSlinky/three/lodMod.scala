@@ -1,5 +1,6 @@
 package typingsSlinky.three
 
+import typingsSlinky.three.anon.Distance
 import typingsSlinky.three.cameraMod.Camera
 import typingsSlinky.three.object3DMod.Object3D
 import scala.scalajs.js
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation._
 object lodMod extends js.Object {
   @js.native
   class LOD () extends Object3D {
-    var levels: js.Array[AnonDistance] = js.native
+    var levels: js.Array[Distance] = js.native
     /**
     	 * @deprecated Use {@link LOD#levels .levels} instead.
     	 */

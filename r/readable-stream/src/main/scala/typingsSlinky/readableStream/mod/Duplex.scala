@@ -8,7 +8,7 @@ import typingsSlinky.node.nodeStrings.end
 import typingsSlinky.node.nodeStrings.pause
 import typingsSlinky.node.nodeStrings.readable
 import typingsSlinky.node.nodeStrings.resume
-import typingsSlinky.readableStream.AnonEnd
+import typingsSlinky.readableStream.anon.End
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -75,11 +75,11 @@ class Duplex ()
   def once_readable(event: readable, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
   def once_resume(event: resume, listener: js.Function0[Unit]): this.type = js.native
-  def pipe[S /* <: WritableStream */](dest: S, pipeOpts: AnonEnd): S = js.native
+  def pipe[S /* <: WritableStream */](dest: S, pipeOpts: End): S = js.native
   /* InferMemberOverrides */
   override def pipe[T /* <: WritableStream */](destination: T): T = js.native
   /* InferMemberOverrides */
-  override def pipe[T /* <: WritableStream */](destination: T, options: typingsSlinky.node.AnonEnd): T = js.native
+  override def pipe[T /* <: WritableStream */](destination: T, options: typingsSlinky.node.anon.End): T = js.native
   /* InferMemberOverrides */
   @JSName("pipe")
   def pipe_T_WritableStream_T[T /* <: WritableStream */](destination: T): T = js.native

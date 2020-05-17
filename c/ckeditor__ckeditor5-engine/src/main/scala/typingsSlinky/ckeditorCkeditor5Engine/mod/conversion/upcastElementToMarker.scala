@@ -1,6 +1,6 @@
 package typingsSlinky.ckeditorCkeditor5Engine.mod.conversion
 
-import typingsSlinky.ckeditorCkeditor5Engine.AnonModelView
+import typingsSlinky.ckeditorCkeditor5Engine.anon.ModelView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@ckeditor/ckeditor5-engine", "conversion.upcastElementToMarker")
 @js.native
 object upcastElementToMarker extends js.Object {
-  def apply(config: AnonModelView): js.Function = js.native
+  def apply(config: ModelView): js.Function = js.native
 }
 

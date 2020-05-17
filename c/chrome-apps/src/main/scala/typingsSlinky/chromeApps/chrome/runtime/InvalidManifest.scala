@@ -1,7 +1,7 @@
 package typingsSlinky.chromeApps.chrome.runtime
 
-import typingsSlinky.chromeApps.AnonAccepttlschannelid
-import typingsSlinky.chromeApps.AnonBackground
+import typingsSlinky.chromeApps.anon.Accepttlschannelid
+import typingsSlinky.chromeApps.anon.Background
 import typingsSlinky.chromeApps.chromeAppsNumbers.`2`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,8 +15,8 @@ trait InvalidManifest
 object InvalidManifest {
   @scala.inline
   def apply(
-    app: AnonBackground,
-    externally_connectable: AnonAccepttlschannelid,
+    app: Background,
+    externally_connectable: Accepttlschannelid,
     manifest_version: `2`,
     name: String,
     version: String

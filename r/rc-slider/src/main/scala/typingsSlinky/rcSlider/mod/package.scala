@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   type Marks = org.scalablytyped.runtime.NumberDictionary[
-    slinky.core.facade.ReactElement | java.lang.String | typingsSlinky.rcSlider.AnonLabel
+    slinky.core.facade.ReactElement | java.lang.String | typingsSlinky.rcSlider.anon.Label
   ]
   type Slider = slinky.core.ReactComponentClass[typingsSlinky.rcSlider.mod.SliderProps]
 }

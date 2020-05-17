@@ -1,13 +1,13 @@
 package typingsSlinky.antd.transferMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLUListElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
-import typingsSlinky.antd.PartialTransferLocale
+import typingsSlinky.antd.anon.PartialTransferLocale
 import typingsSlinky.antd.renderListBodyMod.TransferListBodyProps
 import typingsSlinky.antd.transferListMod.TransferListProps
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +33,7 @@ trait TransferProps extends js.Object {
   var onScroll: js.UndefOr[
     js.Function2[
       /* direction */ TransferDirection, 
-      /* e */ SyntheticEvent[Event_, HTMLUListElement], 
+      /* e */ SyntheticEvent[Event, HTMLUListElement], 
       Unit
     ]
   ] = js.native
@@ -180,7 +180,7 @@ object TransferProps {
     }
     @scala.inline
     def withOnScroll(
-      value: (/* direction */ TransferDirection, /* e */ SyntheticEvent[Event_, HTMLUListElement]) => Unit
+      value: (/* direction */ TransferDirection, /* e */ SyntheticEvent[Event, HTMLUListElement]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.Any.fromFunction2(value))

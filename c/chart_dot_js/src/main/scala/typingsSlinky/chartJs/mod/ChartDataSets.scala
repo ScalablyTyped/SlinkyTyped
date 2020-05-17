@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.CanvasGradient
 import org.scalajs.dom.raw.CanvasPattern
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
-import typingsSlinky.chartJs.AnonChart
 import typingsSlinky.chartJs.chartJsStrings.after
 import typingsSlinky.chartJs.chartJsStrings.before
 import typingsSlinky.chartJs.chartJsStrings.bevel
@@ -93,7 +92,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withBackgroundColorFunction1(value: /* ctx */ AnonChart => ChartColor): Self = {
+    def withBackgroundColorFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => ChartColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("backgroundColor")(js.Any.fromFunction1(value))
         ret
@@ -141,7 +140,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withBorderAlignFunction1(value: /* ctx */ AnonChart => BorderAlignment): Self = {
+    def withBorderAlignFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => BorderAlignment): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("borderAlign")(js.Any.fromFunction1(value))
         ret
@@ -177,7 +176,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withBorderColorFunction1(value: /* ctx */ AnonChart => ChartColor): Self = {
+    def withBorderColorFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => ChartColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("borderColor")(js.Any.fromFunction1(value))
         ret
@@ -237,7 +236,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withBorderSkippedFunction1(value: /* ctx */ AnonChart => PositionType): Self = {
+    def withBorderSkippedFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => PositionType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("borderSkipped")(js.Any.fromFunction1(value))
         ret
@@ -255,7 +254,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withBorderWidthFunction1(value: /* ctx */ AnonChart => BorderWidth): Self = {
+    def withBorderWidthFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => BorderWidth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("borderWidth")(js.Any.fromFunction1(value))
         ret
@@ -345,7 +344,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withHitRadiusFunction1(value: /* ctx */ AnonChart => Double): Self = {
+    def withHitRadiusFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hitRadius")(js.Any.fromFunction1(value))
         ret
@@ -369,7 +368,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withHoverBackgroundColorFunction1(value: /* ctx */ AnonChart => ChartColor): Self = {
+    def withHoverBackgroundColorFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => ChartColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hoverBackgroundColor")(js.Any.fromFunction1(value))
         ret
@@ -399,7 +398,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withHoverBorderColorFunction1(value: /* ctx */ AnonChart => ChartColor): Self = {
+    def withHoverBorderColorFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => ChartColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hoverBorderColor")(js.Any.fromFunction1(value))
         ret
@@ -423,7 +422,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withHoverBorderWidthFunction1(value: /* ctx */ AnonChart => Double): Self = {
+    def withHoverBorderWidthFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hoverBorderWidth")(js.Any.fromFunction1(value))
         ret
@@ -519,7 +518,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withPointBackgroundColorFunction1(value: /* ctx */ AnonChart => ChartColor): Self = {
+    def withPointBackgroundColorFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => ChartColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointBackgroundColor")(js.Any.fromFunction1(value))
         ret
@@ -549,7 +548,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withPointBorderColorFunction1(value: /* ctx */ AnonChart => ChartColor): Self = {
+    def withPointBorderColorFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => ChartColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointBorderColor")(js.Any.fromFunction1(value))
         ret
@@ -573,7 +572,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withPointBorderWidthFunction1(value: /* ctx */ AnonChart => Double): Self = {
+    def withPointBorderWidthFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointBorderWidth")(js.Any.fromFunction1(value))
         ret
@@ -591,7 +590,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withPointHitRadiusFunction1(value: /* ctx */ AnonChart => Double): Self = {
+    def withPointHitRadiusFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointHitRadius")(js.Any.fromFunction1(value))
         ret
@@ -615,7 +614,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withPointHoverBackgroundColorFunction1(value: /* ctx */ AnonChart => ChartColor): Self = {
+    def withPointHoverBackgroundColorFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => ChartColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointHoverBackgroundColor")(js.Any.fromFunction1(value))
         ret
@@ -645,7 +644,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withPointHoverBorderColorFunction1(value: /* ctx */ AnonChart => ChartColor): Self = {
+    def withPointHoverBorderColorFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => ChartColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointHoverBorderColor")(js.Any.fromFunction1(value))
         ret
@@ -669,7 +668,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withPointHoverBorderWidthFunction1(value: /* ctx */ AnonChart => Double): Self = {
+    def withPointHoverBorderWidthFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointHoverBorderWidth")(js.Any.fromFunction1(value))
         ret
@@ -687,7 +686,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withPointHoverRadiusFunction1(value: /* ctx */ AnonChart => Double): Self = {
+    def withPointHoverRadiusFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointHoverRadius")(js.Any.fromFunction1(value))
         ret
@@ -705,7 +704,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withPointRadiusFunction1(value: /* ctx */ AnonChart => Double): Self = {
+    def withPointRadiusFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointRadius")(js.Any.fromFunction1(value))
         ret
@@ -723,7 +722,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withPointRotationFunction1(value: /* ctx */ AnonChart => Double): Self = {
+    def withPointRotationFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointRotation")(js.Any.fromFunction1(value))
         ret
@@ -741,7 +740,9 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withPointStyleFunction1(value: /* ctx */ AnonChart => PointStyle | HTMLImageElement | HTMLCanvasElement): Self = {
+    def withPointStyleFunction1(
+      value: /* ctx */ typingsSlinky.chartJs.anon.Chart => PointStyle | HTMLImageElement | HTMLCanvasElement
+    ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointStyle")(js.Any.fromFunction1(value))
         ret
@@ -773,7 +774,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withRadiusFunction1(value: /* ctx */ AnonChart => Double): Self = {
+    def withRadiusFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("radius")(js.Any.fromFunction1(value))
         ret
@@ -791,7 +792,7 @@ object ChartDataSets {
         ret
     }
     @scala.inline
-    def withRotationFunction1(value: /* ctx */ AnonChart => Double): Self = {
+    def withRotationFunction1(value: /* ctx */ typingsSlinky.chartJs.anon.Chart => Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(js.Any.fromFunction1(value))
         ret

@@ -1,18 +1,18 @@
 package typingsSlinky.hapiJoi.mod
 
-import typingsSlinky.hapiJoi.AnonFrom
+import typingsSlinky.hapiJoi.anon.From
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ExtensionTermManifest extends js.Object {
-  var mapped: AnonFrom = js.native
+  var mapped: From = js.native
 }
 
 object ExtensionTermManifest {
   @scala.inline
-  def apply(mapped: AnonFrom): ExtensionTermManifest = {
+  def apply(mapped: From): ExtensionTermManifest = {
     val __obj = js.Dynamic.literal(mapped = mapped.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExtensionTermManifest]
   }
@@ -23,7 +23,7 @@ object ExtensionTermManifest {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMapped(value: AnonFrom): Self = {
+    def withMapped(value: From): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mapped")(value.asInstanceOf[js.Any])
         ret

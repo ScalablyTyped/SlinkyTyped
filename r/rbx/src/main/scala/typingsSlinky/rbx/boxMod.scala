@@ -1,6 +1,7 @@
 package typingsSlinky.rbx
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.rbx.anon.PreferHelpersPropsOverrid
 import typingsSlinky.rbx.exoticMod.ForwardRefAsExoticComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`

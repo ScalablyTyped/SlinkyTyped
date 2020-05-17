@@ -3,7 +3,7 @@ package typingsSlinky.reactBootstrapTable.mod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Props
-import typingsSlinky.reactBootstrapTable.AnonGetElement
+import typingsSlinky.reactBootstrapTable.anon.GetElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -107,7 +107,7 @@ trait TableHeaderColumnProps extends Props[TableHeaderColumn] {
   	 * The function should return either a JSX element for the field, or false to default back to the standard edit
   	 * element.
   	 */
-  var customInsertEditor: js.UndefOr[AnonGetElement] = js.native
+  var customInsertEditor: js.UndefOr[GetElement] = js.native
   /**
   	 * Set the text alignment in the column, possible values are 'left', 'center', 'right', 'start' and 'end'.
   	 */
@@ -507,7 +507,7 @@ object TableHeaderColumnProps {
         ret
     }
     @scala.inline
-    def withCustomInsertEditor(value: AnonGetElement): Self = {
+    def withCustomInsertEditor(value: GetElement): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customInsertEditor")(value.asInstanceOf[js.Any])
         ret

@@ -10,7 +10,7 @@ import typingsSlinky.popperJs.mod.Modifiers
 import typingsSlinky.popperJs.mod.Placement
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.MouseEventHandler
-import typingsSlinky.reactstrap.AnonHide
+import typingsSlinky.reactstrap.anon.Hide
 import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +23,7 @@ trait PopoverProps
   var boundariesElement: js.UndefOr[Boundary | Element] = js.native
   var container: js.UndefOr[String | HTMLElement | ReactRef[HTMLElement]] = js.native
   var cssModule: js.UndefOr[CSSModule] = js.native
-  var delay: js.UndefOr[Double | AnonHide] = js.native
+  var delay: js.UndefOr[Double | Hide] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
   var fade: js.UndefOr[Boolean] = js.native
   var flip: js.UndefOr[Boolean] = js.native
@@ -123,7 +123,7 @@ object PopoverProps {
         ret
     }
     @scala.inline
-    def withDelay(value: Double | AnonHide): Self = {
+    def withDelay(value: Double | Hide): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
         ret

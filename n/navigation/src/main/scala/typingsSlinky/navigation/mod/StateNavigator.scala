@@ -1,7 +1,7 @@
 package typingsSlinky.navigation.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.navigation.AnonCrumbs
+import typingsSlinky.navigation.anon.Crumbs
 import typingsSlinky.navigation.navigationStrings.add
 import typingsSlinky.navigation.navigationStrings.none
 import typingsSlinky.navigation.navigationStrings.replace
@@ -239,7 +239,7 @@ class StateNavigator () extends js.Object {
     * Parses the url out into State and Navigation Data
     * @param url The url to parse
     */
-  def parseLink(url: String): AnonCrumbs = js.native
+  def parseLink(url: String): Crumbs = js.native
   /**
     * Navigates to the current State
     * @param navigationData The NavigationData to be passed to the current

@@ -1,6 +1,5 @@
 package typingsSlinky.tabris
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,8 +14,4 @@ trait EventTarget extends js.Object {
   def removeEventListener(`type`: String, listener: EventListener): Unit = js.native
   def removeEventListener(`type`: String, listener: EventListener, useCapture: Boolean): Unit = js.native
 }
-
-@JSGlobal("EventTarget")
-@js.native
-object EventTarget extends Instantiable0[EventTarget]
 

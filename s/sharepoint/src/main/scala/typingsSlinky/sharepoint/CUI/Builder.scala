@@ -5,7 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("CUI.Builder")
 @js.native
-class Builder () extends IDisposable
+trait Builder extends IDisposable
+
+object Builder {
+  @scala.inline
+  def apply(dispose: () => scala.Unit): Builder = {
+    val __obj = js.Dynamic.literal(dispose = js.Any.fromFunction0(dispose))
+    __obj.asInstanceOf[Builder]
+  }
+}
 

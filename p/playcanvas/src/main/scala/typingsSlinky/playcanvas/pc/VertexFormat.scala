@@ -60,24 +60,6 @@ import scala.scalajs.js.annotation._
   *     { semantic: pc.SEMANTIC_COLOR, components: 4, type: pc.TYPE_UINT8, normalize: true }
   * ]);
   */
-@JSGlobal("pc.VertexFormat")
 @js.native
-class VertexFormat protected () extends js.Object {
-  def this(graphicsDevice: GraphicsDevice, description: js.Array[js.Object]) = this()
-}
-
-/* static members */
-@JSGlobal("pc.VertexFormat")
-@js.native
-object VertexFormat extends js.Object {
-  /**
-    * @field
-    * @static
-    * @readonly
-    * @name pc.VertexFormat.defaultInstancingFormat
-    * @type {pc.VertexFormat}
-    * @description Returns {@link pc.VertexFormat} used to store matrices of type {@link pc.Mat4} for hardware instancing.
-    */
-  val defaultInstancingFormat: VertexFormat = js.native
-}
+trait VertexFormat extends js.Object
 

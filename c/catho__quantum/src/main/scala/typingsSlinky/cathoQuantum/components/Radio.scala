@@ -3,7 +3,7 @@ package typingsSlinky.cathoQuantum.components
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonColorsSpacing
+import typingsSlinky.cathoQuantum.anon.ColorsSpacing
 import typingsSlinky.cathoQuantum.radioGroupMod.RadioProps
 import typingsSlinky.react.mod.ChangeEvent
 import scala.scalajs.js
@@ -28,7 +28,7 @@ object Radio {
     @scala.inline
     def onChange(value: ChangeEvent[HTMLInputElement] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def theme(value: AnonColorsSpacing): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: ColorsSpacing): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: RadioProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

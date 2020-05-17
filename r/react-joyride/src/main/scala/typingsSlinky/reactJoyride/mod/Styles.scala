@@ -1,7 +1,7 @@
 package typingsSlinky.reactJoyride.mod
 
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactJoyride.AnonArrowColor
+import typingsSlinky.reactJoyride.anon.ArrowColor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait Styles extends js.Object {
   var buttonClose: js.UndefOr[CSSProperties] = js.native
   var buttonNext: js.UndefOr[CSSProperties] = js.native
   var buttonSkip: js.UndefOr[CSSProperties] = js.native
-  var options: js.UndefOr[AnonArrowColor] = js.native
+  var options: js.UndefOr[ArrowColor] = js.native
   var overlay: js.UndefOr[CSSProperties] = js.native
   var overlayLegacy: js.UndefOr[CSSProperties] = js.native
   var overlayLegacyCenter: js.UndefOr[CSSProperties] = js.native
@@ -126,7 +126,7 @@ object Styles {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonArrowColor): Self = {
+    def withOptions(value: ArrowColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

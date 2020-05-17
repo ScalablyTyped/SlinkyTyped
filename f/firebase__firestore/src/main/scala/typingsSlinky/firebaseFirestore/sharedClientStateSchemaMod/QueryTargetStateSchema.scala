@@ -1,6 +1,6 @@
 package typingsSlinky.firebaseFirestore.sharedClientStateSchemaMod
 
-import typingsSlinky.firebaseFirestore.AnonCode
+import typingsSlinky.firebaseFirestore.anon.Code
 import typingsSlinky.firebaseFirestore.sharedClientStateSyncerMod.QueryTargetState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait QueryTargetStateSchema extends js.Object {
-  var error: js.UndefOr[AnonCode] = js.native
+  var error: js.UndefOr[Code] = js.native
   var state: QueryTargetState = js.native
   var updateTimeMs: Double = js.native
 }
@@ -38,7 +38,7 @@ object QueryTargetStateSchema {
         ret
     }
     @scala.inline
-    def withError(value: AnonCode): Self = {
+    def withError(value: Code): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret

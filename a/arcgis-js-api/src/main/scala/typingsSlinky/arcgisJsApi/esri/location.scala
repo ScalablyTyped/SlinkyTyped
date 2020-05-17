@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,7 +41,25 @@ trait location extends js.Object {
   def createRenderer(params: locationCreateRendererParams): js.Promise[locationRendererResult] = js.native
 }
 
-@JSGlobal("__esri.location")
-@js.native
-object location extends TopLevel[location]
+object location {
+  @scala.inline
+  def apply(createRenderer: locationCreateRendererParams => js.Promise[locationRendererResult]): location = {
+    val __obj = js.Dynamic.literal(createRenderer = js.Any.fromFunction1(createRenderer))
+    __obj.asInstanceOf[location]
+  }
+  @scala.inline
+  implicit class locationOps[Self <: location] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateRenderer(value: locationCreateRendererParams => js.Promise[locationRendererResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

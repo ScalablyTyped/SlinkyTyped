@@ -1,9 +1,9 @@
 package typingsSlinky.tstl.mod
 
-import typingsSlinky.tstl.PickILockablelockunlock
-import typingsSlinky.tstl.PickILockabletrylockunloc
-import typingsSlinky.tstl.PickITimedLockabletrylock
-import typingsSlinky.tstl.PickITimedLockabletrylockTrylockuntil
+import typingsSlinky.tstl.anon.PickILockablelockunlock
+import typingsSlinky.tstl.anon.PickILockabletrylockunloc
+import typingsSlinky.tstl.anon.PickITimedLockabletrylock
+import typingsSlinky.tstl.anon.PickITimedLockabletrylockTrylockuntil
 import typingsSlinky.tstl.uniqueLockMod.Closure
 import typingsSlinky.tstl.uniqueLockMod.IMutex
 import scala.scalajs.js

@@ -8,16 +8,8 @@ import scala.scalajs.js.annotation._
   * A location on a map when the Earth's surface is projected onto a
   * two-dimensional surface.
   */
-@JSGlobal("mapkit.MapPoint")
 @js.native
-class MapPoint protected () extends js.Object {
-  /**
-    * Initializes a MapPoint object.
-    *
-    * @param x The point along the east-west axis of the map projection.
-    * @param  The point along the north-south axis of the map projection.
-    */
-  def this(x: Double, y: Double) = this()
+trait MapPoint extends js.Object {
   /**
     * The location of the point along the x-axis of the map.
     */
@@ -41,5 +33,57 @@ class MapPoint protected () extends js.Object {
     * to a map point.
     */
   def toCoordinate(): Coordinate = js.native
+}
+
+object MapPoint {
+  @scala.inline
+  def apply(
+    copy: () => MapPoint,
+    equals: MapPoint => Boolean,
+    toCoordinate: () => Coordinate,
+    x: Double,
+    y: Double
+  ): MapPoint = {
+    val __obj = js.Dynamic.literal(copy = js.Any.fromFunction0(copy), equals = js.Any.fromFunction1(equals), toCoordinate = js.Any.fromFunction0(toCoordinate), x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MapPoint]
+  }
+  @scala.inline
+  implicit class MapPointOps[Self <: MapPoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCopy(value: () => MapPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withEquals(value: MapPoint => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withToCoordinate(value: () => Coordinate): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toCoordinate")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

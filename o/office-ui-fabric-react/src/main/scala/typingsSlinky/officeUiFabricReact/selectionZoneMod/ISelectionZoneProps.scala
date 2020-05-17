@@ -1,7 +1,7 @@
 package typingsSlinky.officeUiFabricReact.selectionZoneMod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.std.Event_
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey
 import typingsSlinky.uifabricUtilities.selectionTypesMod.ISelection
 import typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionMode
@@ -41,7 +41,7 @@ trait ISelectionZoneProps extends ClassAttributes[SelectionZone] {
     js.Function3[
       /* item */ js.UndefOr[js.Any], 
       /* index */ js.UndefOr[Double], 
-      /* ev */ js.UndefOr[Event_], 
+      /* ev */ js.UndefOr[Event], 
       Unit | Boolean
     ]
   ] = js.native
@@ -53,7 +53,7 @@ trait ISelectionZoneProps extends ClassAttributes[SelectionZone] {
     js.Function3[
       /* item */ js.UndefOr[IObjectWithKey], 
       /* index */ js.UndefOr[Double], 
-      /* ev */ js.UndefOr[Event_], 
+      /* ev */ js.UndefOr[Event], 
       Unit
     ]
   ] = js.native
@@ -154,7 +154,7 @@ object ISelectionZoneProps {
     }
     @scala.inline
     def withOnItemContextMenu(
-      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event_]) => Unit | Boolean
+      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event]) => Unit | Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemContextMenu")(js.Any.fromFunction3(value))
@@ -168,7 +168,7 @@ object ISelectionZoneProps {
     }
     @scala.inline
     def withOnItemInvoked(
-      value: (/* item */ js.UndefOr[IObjectWithKey], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event_]) => Unit
+      value: (/* item */ js.UndefOr[IObjectWithKey], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemInvoked")(js.Any.fromFunction3(value))

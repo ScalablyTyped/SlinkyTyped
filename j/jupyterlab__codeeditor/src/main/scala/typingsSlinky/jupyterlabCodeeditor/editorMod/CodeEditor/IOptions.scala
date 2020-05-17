@@ -1,8 +1,8 @@
 package typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jupyterlabCodeeditor.PartialIConfig
-import typingsSlinky.jupyterlabCodeeditor.PartialISelectionStyle
+import typingsSlinky.jupyterlabCodeeditor.anon.PartialIConfig
+import typingsSlinky.jupyterlabCodeeditor.anon.PartialISelectionStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

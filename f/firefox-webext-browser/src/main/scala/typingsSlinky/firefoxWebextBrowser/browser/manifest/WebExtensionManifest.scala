@@ -2,20 +2,20 @@ package typingsSlinky.firefoxWebextBrowser.browser.manifest
 
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.firefoxWebextBrowser.AnonApiscript
-import typingsSlinky.firefoxWebextBrowser.AnonBookmarks
-import typingsSlinky.firefoxWebextBrowser.AnonBrowserstyle
-import typingsSlinky.firefoxWebextBrowser.AnonDefaultarea
-import typingsSlinky.firefoxWebextBrowser.AnonDefaulticon
-import typingsSlinky.firefoxWebextBrowser.AnonDefaultpanel
-import typingsSlinky.firefoxWebextBrowser.AnonEdge
-import typingsSlinky.firefoxWebextBrowser.AnonGecko
-import typingsSlinky.firefoxWebextBrowser.AnonHomepage
-import typingsSlinky.firefoxWebextBrowser.AnonKeyword
-import typingsSlinky.firefoxWebextBrowser.AnonNameUrl
-import typingsSlinky.firefoxWebextBrowser.AnonPage
-import typingsSlinky.firefoxWebextBrowser.AnonPersistent
-import typingsSlinky.firefoxWebextBrowser.AnonSuggestedkey
+import typingsSlinky.firefoxWebextBrowser.anon.Apiscript
+import typingsSlinky.firefoxWebextBrowser.anon.Bookmarks
+import typingsSlinky.firefoxWebextBrowser.anon.Browserstyle
+import typingsSlinky.firefoxWebextBrowser.anon.Defaultarea
+import typingsSlinky.firefoxWebextBrowser.anon.Defaulticon
+import typingsSlinky.firefoxWebextBrowser.anon.Defaultpanel
+import typingsSlinky.firefoxWebextBrowser.anon.Edge
+import typingsSlinky.firefoxWebextBrowser.anon.Gecko
+import typingsSlinky.firefoxWebextBrowser.anon.Homepage
+import typingsSlinky.firefoxWebextBrowser.anon.Keyword
+import typingsSlinky.firefoxWebextBrowser.anon.NameUrl
+import typingsSlinky.firefoxWebextBrowser.anon.Page
+import typingsSlinky.firefoxWebextBrowser.anon.Persistent
+import typingsSlinky.firefoxWebextBrowser.anon.Suggestedkey
 import typingsSlinky.firefoxWebextBrowser.browser.experiments.ExperimentAPI
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,19 +24,19 @@ import scala.scalajs.js.annotation._
 /** Represents a WebExtension manifest.json file */
 @js.native
 trait WebExtensionManifest extends js.Object {
-  var applications: js.UndefOr[AnonGecko] = js.native
+  var applications: js.UndefOr[Gecko] = js.native
   var author: js.UndefOr[String] = js.native
-  var background: js.UndefOr[AnonPage | AnonPersistent] = js.native
-  var browser_action: js.UndefOr[AnonDefaultarea] = js.native
-  var browser_specific_settings: js.UndefOr[AnonEdge] = js.native
-  var chrome_settings_overrides: js.UndefOr[AnonHomepage] = js.native
-  var chrome_url_overrides: js.UndefOr[AnonBookmarks] = js.native
-  var commands: js.UndefOr[StringDictionary[AnonSuggestedkey]] = js.native
+  var background: js.UndefOr[Page | Persistent] = js.native
+  var browser_action: js.UndefOr[Defaultarea] = js.native
+  var browser_specific_settings: js.UndefOr[Edge] = js.native
+  var chrome_settings_overrides: js.UndefOr[Homepage] = js.native
+  var chrome_url_overrides: js.UndefOr[Bookmarks] = js.native
+  var commands: js.UndefOr[StringDictionary[Suggestedkey]] = js.native
   var content_scripts: js.UndefOr[js.Array[ContentScript]] = js.native
   var content_security_policy: js.UndefOr[String] = js.native
   var default_locale: js.UndefOr[String] = js.native
   var description: js.UndefOr[String] = js.native
-  var developer: js.UndefOr[AnonNameUrl] = js.native
+  var developer: js.UndefOr[NameUrl] = js.native
   var devtools_page: js.UndefOr[ExtensionURL] = js.native
   var experiment_apis: js.UndefOr[StringDictionary[ExperimentAPI]] = js.native
   var hidden: js.UndefOr[Boolean] = js.native
@@ -47,17 +47,17 @@ trait WebExtensionManifest extends js.Object {
   var minimum_chrome_version: js.UndefOr[String] = js.native
   var minimum_opera_version: js.UndefOr[String] = js.native
   var name: String = js.native
-  var omnibox: js.UndefOr[AnonKeyword] = js.native
+  var omnibox: js.UndefOr[Keyword] = js.native
   var optional_permissions: js.UndefOr[js.Array[OptionalPermissionOrOrigin]] = js.native
-  var options_ui: js.UndefOr[AnonBrowserstyle] = js.native
-  var page_action: js.UndefOr[AnonDefaulticon] = js.native
+  var options_ui: js.UndefOr[Browserstyle] = js.native
+  var page_action: js.UndefOr[Defaulticon] = js.native
   var permissions: js.UndefOr[js.Array[PermissionOrOrigin]] = js.native
   /** A list of protocol handler definitions. */
   var protocol_handlers: js.UndefOr[js.Array[ProtocolHandler]] = js.native
   var short_name: js.UndefOr[String] = js.native
-  var sidebar_action: js.UndefOr[AnonDefaultpanel] = js.native
+  var sidebar_action: js.UndefOr[Defaultpanel] = js.native
   var theme_experiment: js.UndefOr[ThemeExperiment] = js.native
-  var user_scripts: js.UndefOr[AnonApiscript] = js.native
+  var user_scripts: js.UndefOr[Apiscript] = js.native
   var version: String = js.native
   var web_accessible_resources: js.UndefOr[js.Array[String]] = js.native
 }
@@ -93,7 +93,7 @@ object WebExtensionManifest {
         ret
     }
     @scala.inline
-    def withApplications(value: AnonGecko): Self = {
+    def withApplications(value: Gecko): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("applications")(value.asInstanceOf[js.Any])
         ret
@@ -117,7 +117,7 @@ object WebExtensionManifest {
         ret
     }
     @scala.inline
-    def withBackground(value: AnonPage | AnonPersistent): Self = {
+    def withBackground(value: Page | Persistent): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
         ret
@@ -129,7 +129,7 @@ object WebExtensionManifest {
         ret
     }
     @scala.inline
-    def withBrowser_action(value: AnonDefaultarea): Self = {
+    def withBrowser_action(value: Defaultarea): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("browser_action")(value.asInstanceOf[js.Any])
         ret
@@ -141,7 +141,7 @@ object WebExtensionManifest {
         ret
     }
     @scala.inline
-    def withBrowser_specific_settings(value: AnonEdge): Self = {
+    def withBrowser_specific_settings(value: Edge): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("browser_specific_settings")(value.asInstanceOf[js.Any])
         ret
@@ -153,7 +153,7 @@ object WebExtensionManifest {
         ret
     }
     @scala.inline
-    def withChrome_settings_overrides(value: AnonHomepage): Self = {
+    def withChrome_settings_overrides(value: Homepage): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("chrome_settings_overrides")(value.asInstanceOf[js.Any])
         ret
@@ -165,7 +165,7 @@ object WebExtensionManifest {
         ret
     }
     @scala.inline
-    def withChrome_url_overrides(value: AnonBookmarks): Self = {
+    def withChrome_url_overrides(value: Bookmarks): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("chrome_url_overrides")(value.asInstanceOf[js.Any])
         ret
@@ -177,7 +177,7 @@ object WebExtensionManifest {
         ret
     }
     @scala.inline
-    def withCommands(value: StringDictionary[AnonSuggestedkey]): Self = {
+    def withCommands(value: StringDictionary[Suggestedkey]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(value.asInstanceOf[js.Any])
         ret
@@ -237,7 +237,7 @@ object WebExtensionManifest {
         ret
     }
     @scala.inline
-    def withDeveloper(value: AnonNameUrl): Self = {
+    def withDeveloper(value: NameUrl): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("developer")(value.asInstanceOf[js.Any])
         ret
@@ -345,7 +345,7 @@ object WebExtensionManifest {
         ret
     }
     @scala.inline
-    def withOmnibox(value: AnonKeyword): Self = {
+    def withOmnibox(value: Keyword): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("omnibox")(value.asInstanceOf[js.Any])
         ret
@@ -369,7 +369,7 @@ object WebExtensionManifest {
         ret
     }
     @scala.inline
-    def withOptions_ui(value: AnonBrowserstyle): Self = {
+    def withOptions_ui(value: Browserstyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options_ui")(value.asInstanceOf[js.Any])
         ret
@@ -381,7 +381,7 @@ object WebExtensionManifest {
         ret
     }
     @scala.inline
-    def withPage_action(value: AnonDefaulticon): Self = {
+    def withPage_action(value: Defaulticon): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("page_action")(value.asInstanceOf[js.Any])
         ret
@@ -429,7 +429,7 @@ object WebExtensionManifest {
         ret
     }
     @scala.inline
-    def withSidebar_action(value: AnonDefaultpanel): Self = {
+    def withSidebar_action(value: Defaultpanel): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sidebar_action")(value.asInstanceOf[js.Any])
         ret
@@ -453,7 +453,7 @@ object WebExtensionManifest {
         ret
     }
     @scala.inline
-    def withUser_scripts(value: AnonApiscript): Self = {
+    def withUser_scripts(value: Apiscript): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("user_scripts")(value.asInstanceOf[js.Any])
         ret

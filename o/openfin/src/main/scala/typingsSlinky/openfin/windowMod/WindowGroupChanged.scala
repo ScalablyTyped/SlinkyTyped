@@ -1,6 +1,6 @@
 package typingsSlinky.openfin.windowMod
 
-import typingsSlinky.openfin.AnonAppUuid
+import typingsSlinky.openfin.anon.AppUuid
 import typingsSlinky.openfin.eventsBaseMod.WindowEvent
 import typingsSlinky.openfin.openfinStrings.disband
 import typingsSlinky.openfin.openfinStrings.join
@@ -17,10 +17,10 @@ import scala.scalajs.js.annotation._
 trait WindowGroupChanged[Topic, Type] extends WindowEvent[Topic, Type] {
   var memberOf: source | target | nothing = js.native
   var reason: leave | join | merge | disband = js.native
-  var sourceGroup: js.Array[AnonAppUuid] = js.native
+  var sourceGroup: js.Array[AppUuid] = js.native
   var sourceWindowAppUuid: String = js.native
   var sourceWindowName: String = js.native
-  var targetGroup: js.Array[AnonAppUuid] = js.native
+  var targetGroup: js.Array[AppUuid] = js.native
   var targetWindowAppUuid: String = js.native
   var targetWindowName: String = js.native
 }
@@ -31,10 +31,10 @@ object WindowGroupChanged {
     memberOf: source | target | nothing,
     name: String,
     reason: leave | join | merge | disband,
-    sourceGroup: js.Array[AnonAppUuid],
+    sourceGroup: js.Array[AppUuid],
     sourceWindowAppUuid: String,
     sourceWindowName: String,
-    targetGroup: js.Array[AnonAppUuid],
+    targetGroup: js.Array[AppUuid],
     targetWindowAppUuid: String,
     targetWindowName: String,
     topic: Topic,
@@ -64,7 +64,7 @@ object WindowGroupChanged {
         ret
     }
     @scala.inline
-    def withSourceGroup(value: js.Array[AnonAppUuid]): Self[Topic, Type] = {
+    def withSourceGroup(value: js.Array[AppUuid]): Self[Topic, Type] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sourceGroup")(value.asInstanceOf[js.Any])
         ret
@@ -82,7 +82,7 @@ object WindowGroupChanged {
         ret
     }
     @scala.inline
-    def withTargetGroup(value: js.Array[AnonAppUuid]): Self[Topic, Type] = {
+    def withTargetGroup(value: js.Array[AppUuid]): Self[Topic, Type] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("targetGroup")(value.asInstanceOf[js.Any])
         ret

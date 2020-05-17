@@ -1,6 +1,6 @@
 package typingsSlinky.weixinApp.wx
 
-import typingsSlinky.weixinApp.AnonFiles
+import typingsSlinky.weixinApp.anon.Files
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait ReaddirOptions
   var dirPath: String = js.native
    // 要读取的目录路径
   @JSName("success")
-  var success_ReaddirOptions: js.UndefOr[js.Function1[/* res */ AnonFiles, Unit]] = js.native
+  var success_ReaddirOptions: js.UndefOr[js.Function1[/* res */ Files, Unit]] = js.native
 }
 
 object ReaddirOptions {
@@ -33,7 +33,7 @@ object ReaddirOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonFiles => Unit): Self = {
+    def withSuccess(value: /* res */ Files => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

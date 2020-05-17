@@ -1,0 +1,52 @@
+package typingsSlinky.ionic.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait PromptToInstall extends js.Object {
+  var promptToInstall: js.UndefOr[Boolean] = js.native
+  var promptToInstallRefusalMsg: js.UndefOr[String] = js.native
+}
+
+object PromptToInstall {
+  @scala.inline
+  def apply(): PromptToInstall = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[PromptToInstall]
+  }
+  @scala.inline
+  implicit class PromptToInstallOps[Self <: PromptToInstall] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPromptToInstall(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promptToInstall")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPromptToInstall: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promptToInstall")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPromptToInstallRefusalMsg(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promptToInstallRefusalMsg")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPromptToInstallRefusalMsg: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("promptToInstallRefusalMsg")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

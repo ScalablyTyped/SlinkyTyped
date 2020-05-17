@@ -1,7 +1,7 @@
 package typingsSlinky.reactTransitionGroup.transitionMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.reactTransitionGroup.AnonAppear
+import typingsSlinky.reactTransitionGroup.anon.Appear
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,12 +35,12 @@ trait TimeoutProps
     * - enter defaults to `0`
     * - exit defaults to `0`
     */
-  var timeout: Double | AnonAppear = js.native
+  var timeout: Double | Appear = js.native
 }
 
 object TimeoutProps {
   @scala.inline
-  def apply(timeout: Double | AnonAppear): TimeoutProps = {
+  def apply(timeout: Double | Appear): TimeoutProps = {
     val __obj = js.Dynamic.literal(timeout = timeout.asInstanceOf[js.Any])
     __obj.asInstanceOf[TimeoutProps]
   }
@@ -51,7 +51,7 @@ object TimeoutProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTimeout(value: Double | AnonAppear): Self = {
+    def withTimeout(value: Double | Appear): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
         ret

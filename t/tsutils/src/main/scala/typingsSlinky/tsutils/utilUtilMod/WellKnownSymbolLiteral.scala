@@ -1,6 +1,6 @@
 package typingsSlinky.tsutils.utilUtilMod
 
-import typingsSlinky.tsutils.IdentifiertextSymbolescap
+import typingsSlinky.tsutils.anon.IdentifiertextSymbolescap
 import typingsSlinky.typescript.mod.PropertyAccessExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,6 +1,6 @@
 package typingsSlinky.jweixin.mod
 
-import typingsSlinky.jweixin.AnonCardList
+import typingsSlinky.jweixin.anon.CardList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ trait IchooseCard extends BaseParams {
   var timestamp: Double = js.native
    // 卡券签名
   @JSName("success")
-  def success_MIchooseCard(res: AnonCardList): Unit = js.native
+  def success_MIchooseCard(res: CardList): Unit = js.native
 }
 
 object IchooseCard {
@@ -35,7 +35,7 @@ object IchooseCard {
     nonceStr: String,
     shopId: String,
     signType: String,
-    success: AnonCardList => Unit,
+    success: CardList => Unit,
     timestamp: Double
   ): IchooseCard = {
     val __obj = js.Dynamic.literal(cardId = cardId.asInstanceOf[js.Any], cardSign = cardSign.asInstanceOf[js.Any], cardType = cardType.asInstanceOf[js.Any], nonceStr = nonceStr.asInstanceOf[js.Any], shopId = shopId.asInstanceOf[js.Any], signType = signType.asInstanceOf[js.Any], success = js.Any.fromFunction1(success), timestamp = timestamp.asInstanceOf[js.Any])
@@ -84,7 +84,7 @@ object IchooseCard {
         ret
     }
     @scala.inline
-    def withSuccess(value: AnonCardList => Unit): Self = {
+    def withSuccess(value: CardList => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

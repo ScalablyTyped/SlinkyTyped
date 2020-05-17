@@ -1,15 +1,12 @@
 package typingsSlinky.materializeCss.M
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.materializeCss.MElements
-import typingsSlinky.materializeCss.PartialTapTargetOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("M.TapTarget")
 @js.native
-class TapTarget () extends Component[TapTargetOptions] {
+trait TapTarget extends Component[TapTargetOptions] {
   /**
     * If the tap target is open
     */
@@ -24,23 +21,44 @@ class TapTarget () extends Component[TapTargetOptions] {
   def open(): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("M.TapTarget")
-@js.native
-object TapTarget extends js.Object {
-  /**
-    * Get Instance
-    */
-  def getInstance(elem: Element): TapTarget = js.native
-  /**
-    * Init TapTargets
-    */
-  def init(els: MElements): js.Array[TapTarget] = js.native
-  def init(els: MElements, options: PartialTapTargetOptions): js.Array[TapTarget] = js.native
-  /**
-    * Init TapTarget
-    */
-  def init(els: Element): TapTarget = js.native
-  def init(els: Element, options: PartialTapTargetOptions): TapTarget = js.native
+object TapTarget {
+  @scala.inline
+  def apply(
+    close: () => Unit,
+    destroy: () => Unit,
+    el: Element,
+    isOpen: Boolean,
+    open: () => Unit,
+    options: TapTargetOptions
+  ): TapTarget = {
+    val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), destroy = js.Any.fromFunction0(destroy), el = el.asInstanceOf[js.Any], isOpen = isOpen.asInstanceOf[js.Any], open = js.Any.fromFunction0(open), options = options.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TapTarget]
+  }
+  @scala.inline
+  implicit class TapTargetOps[Self <: TapTarget] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsOpen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOpen(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

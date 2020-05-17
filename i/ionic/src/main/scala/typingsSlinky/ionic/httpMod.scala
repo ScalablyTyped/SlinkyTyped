@@ -1,5 +1,6 @@
 package typingsSlinky.ionic
 
+import typingsSlinky.ionic.anon.Req
 import typingsSlinky.ionic.definitionsMod.APIResponse
 import typingsSlinky.ionic.definitionsMod.APIResponseSuccess
 import typingsSlinky.ionic.definitionsMod.IClient
@@ -41,7 +42,7 @@ object httpMod extends js.Object {
     var reqgen_Original: PaginatorRequestGenerator = js.native
     /* protected */ def guard(res: APIResponseSuccess): /* is T */ Boolean = js.native
     def next(): IteratorResult[js.Promise[T], _] = js.native
-    /* protected */ def reqgen(): js.Promise[AnonReq] = js.native
+    /* protected */ def reqgen(): js.Promise[Req] = js.native
   }
   
   @js.native
@@ -65,7 +66,7 @@ object httpMod extends js.Object {
     /* protected */ def guard(res: APIResponseSuccess): /* is T */ Boolean = js.native
     def isPageTokenResponseMeta(meta: js.Any): /* is ionic.ionic/definitions.APIResponsePageTokenMeta */ Boolean = js.native
     def next(): IteratorResult[js.Promise[T], _] = js.native
-    /* protected */ def reqgen(): js.Promise[AnonReq] = js.native
+    /* protected */ def reqgen(): js.Promise[Req] = js.native
   }
   
   val CONTENT_TYPE_JSON: /* "application/json" */ String = js.native

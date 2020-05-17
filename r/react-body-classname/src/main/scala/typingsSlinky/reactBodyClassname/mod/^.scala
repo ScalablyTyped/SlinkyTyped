@@ -1,7 +1,7 @@
 package typingsSlinky.reactBodyClassname.mod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactBodyClassname.AnonClassName
+import typingsSlinky.reactBodyClassname.anon.ClassName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("react-body-classname", JSImport.Namespace)
 @js.native
 class ^ ()
-  extends Component[AnonClassName, js.Object, js.Any]
+  extends Component[ClassName, js.Object, js.Any]
 
 @JSImport("react-body-classname", JSImport.Namespace)
 @js.native

@@ -1,5 +1,6 @@
 package typingsSlinky.baseui.inputMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
@@ -7,7 +8,6 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.baseui.baseuiStrings.change_
 import typingsSlinky.react.mod.FormEventHandler
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -63,7 +63,7 @@ object StatefulContainerProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit): Self = {
+    def withOnChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientAnalytics.gapi.client.analytics
 
-import typingsSlinky.gapiClientAnalytics.AnonHref
+import typingsSlinky.gapiClientAnalytics.anon.Href
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait CustomDataSource extends js.Object {
   /** Account ID to which this custom data source belongs. */
   var accountId: js.UndefOr[String] = js.native
-  var childLink: js.UndefOr[AnonHref] = js.native
+  var childLink: js.UndefOr[Href] = js.native
   /** Time this custom data source was created. */
   var created: js.UndefOr[String] = js.native
   /** Description of custom data source. */
@@ -22,7 +22,7 @@ trait CustomDataSource extends js.Object {
   /** Name of this custom data source. */
   var name: js.UndefOr[String] = js.native
   /** Parent link for this custom data source. Points to the web property to which this custom data source belongs. */
-  var parentLink: js.UndefOr[AnonHref] = js.native
+  var parentLink: js.UndefOr[Href] = js.native
   /** IDs of views (profiles) linked to the custom data source. */
   var profilesLinked: js.UndefOr[js.Array[String]] = js.native
   /** Collection of schema headers of the custom data source. */
@@ -64,7 +64,7 @@ object CustomDataSource {
         ret
     }
     @scala.inline
-    def withChildLink(value: AnonHref): Self = {
+    def withChildLink(value: Href): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("childLink")(value.asInstanceOf[js.Any])
         ret
@@ -148,7 +148,7 @@ object CustomDataSource {
         ret
     }
     @scala.inline
-    def withParentLink(value: AnonHref): Self = {
+    def withParentLink(value: Href): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parentLink")(value.asInstanceOf[js.Any])
         ret

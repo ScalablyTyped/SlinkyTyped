@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("InputStream")
 @js.native
-abstract class InputStream () extends js.Object {
+trait InputStream extends js.Object {
   /**
     * Closes the stream, releasing resources related to it. Once the stream is closed, all other operations will fail.
     * Closing a stream multiple times is allowed and will not result in an error.
@@ -23,5 +22,43 @@ abstract class InputStream () extends js.Object {
     * containing the incomplete data.
     */
   def readAll(size: Double): js.Promise[ArrayBuffer] = js.native
+}
+
+object InputStream {
+  @scala.inline
+  def apply(
+    close: () => js.Promise[Unit],
+    read: Double => js.Promise[ArrayBuffer],
+    readAll: Double => js.Promise[ArrayBuffer]
+  ): InputStream = {
+    val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), read = js.Any.fromFunction1(read), readAll = js.Any.fromFunction1(readAll))
+    __obj.asInstanceOf[InputStream]
+  }
+  @scala.inline
+  implicit class InputStreamOps[Self <: InputStream] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClose(value: () => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRead(value: Double => js.Promise[ArrayBuffer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withReadAll(value: Double => js.Promise[ArrayBuffer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readAll")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

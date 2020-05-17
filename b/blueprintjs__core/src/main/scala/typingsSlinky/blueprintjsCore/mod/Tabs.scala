@@ -1,9 +1,9 @@
 package typingsSlinky.blueprintjsCore.mod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.blueprintjsCore.AnonSelectedTabId
-import typingsSlinky.blueprintjsCore.PartialITabsProps
-import typingsSlinky.blueprintjsCore.TypeofTab
+import typingsSlinky.blueprintjsCore.anon.PartialITabsProps
+import typingsSlinky.blueprintjsCore.anon.SelectedTabId
+import typingsSlinky.blueprintjsCore.anon.TypeofTab
 import typingsSlinky.blueprintjsCore.tabsMod.ITabsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,6 +25,6 @@ object Tabs extends js.Object {
   var Tab: TypeofTab = js.native
   var defaultProps: PartialITabsProps = js.native
   var displayName: String = js.native
-  def getDerivedStateFromProps(hasSelectedTabId: ITabsProps): AnonSelectedTabId = js.native
+  def getDerivedStateFromProps(hasSelectedTabId: ITabsProps): SelectedTabId = js.native
 }
 

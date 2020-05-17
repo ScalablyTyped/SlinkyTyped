@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientPrediction.gapi.client.prediction
 
-import typingsSlinky.gapiClientPrediction.AnonClassWeightedAccuracy
+import typingsSlinky.gapiClientPrediction.anon.ClassWeightedAccuracy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait Insert2 extends js.Object {
   /** What kind of resource this is. */
   var kind: js.UndefOr[String] = js.native
   /** Model metadata. */
-  var modelInfo: js.UndefOr[AnonClassWeightedAccuracy] = js.native
+  var modelInfo: js.UndefOr[ClassWeightedAccuracy] = js.native
   /** Type of predictive model (CLASSIFICATION or REGRESSION). */
   var modelType: js.UndefOr[String] = js.native
   /** A URL to re-request this resource. */
@@ -80,7 +80,7 @@ object Insert2 {
         ret
     }
     @scala.inline
-    def withModelInfo(value: AnonClassWeightedAccuracy): Self = {
+    def withModelInfo(value: ClassWeightedAccuracy): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modelInfo")(value.asInstanceOf[js.Any])
         ret

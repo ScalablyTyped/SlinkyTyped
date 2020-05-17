@@ -1,6 +1,6 @@
 package typingsSlinky.ionRangeslider.mod
 
-import typingsSlinky.ionRangeslider.mod._Global_.JQuery
+import typingsSlinky.ionRangeslider.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

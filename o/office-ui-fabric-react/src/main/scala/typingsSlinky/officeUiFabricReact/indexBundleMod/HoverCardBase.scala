@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.indexBundleMod
 
-import typingsSlinky.officeUiFabricReact.AnonCardDismissDelay
+import typingsSlinky.officeUiFabricReact.anon.CardDismissDelay
 import typingsSlinky.officeUiFabricReact.hoverCardTypesMod.IHoverCardProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,6 +17,6 @@ class HoverCardBase protected ()
 @JSImport("office-ui-fabric-react/lib/index.bundle", "HoverCardBase")
 @js.native
 object HoverCardBase extends js.Object {
-  var defaultProps: AnonCardDismissDelay = js.native
+  var defaultProps: CardDismissDelay = js.native
 }
 

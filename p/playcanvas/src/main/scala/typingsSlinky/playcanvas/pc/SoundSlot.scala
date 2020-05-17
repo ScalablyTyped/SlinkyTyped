@@ -1,7 +1,6 @@
 package typingsSlinky.playcanvas.pc
 
 import org.scalajs.dom.raw.AudioNode
-import typingsSlinky.playcanvas.AnonAsset
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,10 +37,8 @@ import scala.scalajs.js.annotation._
   * @property {boolean} isStopped Returns true if the slot is currently stopped.
   * @property {pc.SoundInstance[]} instances An array that contains all the {@link pc.SoundInstance}s currently being played by the slot.
   */
-@JSGlobal("pc.SoundSlot")
 @js.native
-class SoundSlot protected () extends EventHandler {
-  def this(component: SoundComponent, name: String, options: AnonAsset) = this()
+trait SoundSlot extends EventHandler {
   /**
     * The asset id.
     */

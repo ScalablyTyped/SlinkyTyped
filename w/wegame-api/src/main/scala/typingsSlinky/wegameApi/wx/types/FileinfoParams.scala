@@ -1,7 +1,7 @@
 package typingsSlinky.wegameApi.wx.types
 
-import typingsSlinky.wegameApi.AnonDigest
-import typingsSlinky.wegameApi.AnonErrMsg
+import typingsSlinky.wegameApi.anon.Digest
+import typingsSlinky.wegameApi.anon.ErrMsg
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation._
 @js.native
 trait FileinfoParams extends js.Object {
   var complete: js.UndefOr[js.Function0[Unit]] = js.native
-  var fail: js.UndefOr[js.Function1[/* res */ AnonErrMsg, Unit]] = js.native
+  var fail: js.UndefOr[js.Function1[/* res */ ErrMsg, Unit]] = js.native
   var filePath: String = js.native
-  var success: js.UndefOr[js.Function1[/* res */ AnonDigest, Unit]] = js.native
+  var success: js.UndefOr[js.Function1[/* res */ Digest, Unit]] = js.native
 }
 
 object FileinfoParams {
@@ -45,7 +45,7 @@ object FileinfoParams {
         ret
     }
     @scala.inline
-    def withFail(value: /* res */ AnonErrMsg => Unit): Self = {
+    def withFail(value: /* res */ ErrMsg => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction1(value))
         ret
@@ -57,7 +57,7 @@ object FileinfoParams {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonDigest => Unit): Self = {
+    def withSuccess(value: /* res */ Digest => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

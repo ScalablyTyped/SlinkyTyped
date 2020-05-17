@@ -1,6 +1,14 @@
 package typingsSlinky.firebaseFirestore
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.firebaseFirestore.anon.Acknowledged
+import typingsSlinky.firebaseFirestore.anon.AffectsRemoved
+import typingsSlinky.firebaseFirestore.anon.ErrorCode
+import typingsSlinky.firebaseFirestore.anon.ExpectUserCallback
+import typingsSlinky.firebaseFirestore.anon.QueryResumeToken
+import typingsSlinky.firebaseFirestore.anon.ResumeToken
+import typingsSlinky.firebaseFirestore.anon.RunBackoffTimer
+import typingsSlinky.firebaseFirestore.anon.Steps
 import typingsSlinky.firebaseFirestore.coreQueryMod.Query
 import typingsSlinky.firebaseFirestore.coreTargetIdGeneratorMod.TargetIdGenerator
 import typingsSlinky.firebaseFirestore.coreTargetMod.Target
@@ -82,8 +90,8 @@ object specsSpecBuilderMod extends js.Object {
     def disableNetwork(): this.type = js.native
     def enableNetwork(): this.type = js.native
     /** Overrides the currently expected set of active targets. */
-    def expectActiveTargets(targets: AnonQueryResumeToken*): this.type = js.native
-    def expectEvents(query: Query, events: AnonErrorCode): this.type = js.native
+    def expectActiveTargets(targets: QueryResumeToken*): this.type = js.native
+    def expectEvents(query: Query, events: ErrorCode): this.type = js.native
     def expectIsShutdown(): this.type = js.native
     /**
       * Expects a document to be in limbo. A targetId is assigned if it's not in
@@ -100,7 +108,7 @@ object specsSpecBuilderMod extends js.Object {
     def expectSnapshotsInSyncEvent(count: Double): this.type = js.native
     /** Removes a query that is no longer active in any tab. */
     def expectUnlisten(query: Query): this.type = js.native
-    def expectUserCallbacks(docs: AnonAcknowledged): this.type = js.native
+    def expectUserCallbacks(docs: Acknowledged): this.type = js.native
     /**
       * Verifies the total number of requests sent to the watch backend since test
       * initialization.
@@ -117,7 +125,7 @@ object specsSpecBuilderMod extends js.Object {
       * expectUserCallback defaults to true if omitted.
       */
     def failWrite(doc: String, error: RpcError): this.type = js.native
-    def failWrite(doc: String, error: RpcError, options: AnonExpectUserCallback): this.type = js.native
+    def failWrite(doc: String, error: RpcError, options: ExpectUserCallback): this.type = js.native
     /* private */ def limboIdGenerator: js.Any = js.native
     /* private */ def limboMapping: js.Any = js.native
     /* protected */ def nextStep(): Unit = js.native
@@ -138,7 +146,7 @@ object specsSpecBuilderMod extends js.Object {
     /**
       * Exports the spec steps as a JSON object that be used in the spec runner.
       */
-    def toJSON(): AnonSteps = js.native
+    def toJSON(): Steps = js.native
     def userAddsSnapshotsInSyncListener(): this.type = js.native
     def userDeletes(key: String): this.type = js.native
     def userListens(query: Query): this.type = js.native
@@ -162,12 +170,12 @@ object specsSpecBuilderMod extends js.Object {
     def watchRemovesLimboTarget(doc: Document): this.type = js.native
     def watchRemovesLimboTarget(doc: NoDocument): this.type = js.native
     def watchResets(queries: Query*): this.type = js.native
-    def watchSends(targets: AnonAffectsRemoved, docs: MaybeDocument*): this.type = js.native
+    def watchSends(targets: AffectsRemoved, docs: MaybeDocument*): this.type = js.native
     def watchSnapshots(version: TestSnapshotVersion): this.type = js.native
     def watchSnapshots(version: TestSnapshotVersion, targets: js.Array[Query]): this.type = js.native
     def watchSnapshots(version: TestSnapshotVersion, targets: js.Array[Query], resumeToken: String): this.type = js.native
     def watchStreamCloses(error: Code): this.type = js.native
-    def watchStreamCloses(error: Code, opts: AnonRunBackoffTimer): this.type = js.native
+    def watchStreamCloses(error: Code, opts: RunBackoffTimer): this.type = js.native
     def withGCEnabled(gcEnabled: Boolean): this.type = js.native
     /**
       * Acks a write with a version and optional additional options.
@@ -175,7 +183,7 @@ object specsSpecBuilderMod extends js.Object {
       * expectUserCallback defaults to true if omitted.
       */
     def writeAcks(doc: String, version: TestSnapshotVersion): this.type = js.native
-    def writeAcks(doc: String, version: TestSnapshotVersion, options: AnonExpectUserCallback): this.type = js.native
+    def writeAcks(doc: String, version: TestSnapshotVersion, options: ExpectUserCallback): this.type = js.native
   }
   
   def client(num: Double): MultiClientSpecBuilder = js.native
@@ -189,7 +197,7 @@ object specsSpecBuilderMod extends js.Object {
     var queryToSpec: js.Any = js.native
   }
   
-  type ActiveTargetMap = StringDictionary[AnonResumeToken]
+  type ActiveTargetMap = StringDictionary[ResumeToken]
   type LimboMap = StringDictionary[TargetId]
 }
 

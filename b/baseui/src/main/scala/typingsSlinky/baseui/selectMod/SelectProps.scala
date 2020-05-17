@@ -1,5 +1,6 @@
 package typingsSlinky.baseui.selectMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
@@ -7,9 +8,8 @@ import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
-import typingsSlinky.baseui.AnonLabelKey
-import typingsSlinky.baseui.AnonOption
-import typingsSlinky.baseui.AnonOptionOption
+import typingsSlinky.baseui.anon.LabelKey
+import typingsSlinky.baseui.anon.OptionOption
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
@@ -18,7 +18,6 @@ import typingsSlinky.baseui.baseuiStrings.search
 import typingsSlinky.baseui.baseuiStrings.select
 import typingsSlinky.react.mod.FocusEventHandler
 import typingsSlinky.react.mod.FormEventHandler
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,13 +42,13 @@ trait SelectProps extends js.Object {
       /* options */ Value, 
       /* filterValue */ String, 
       /* excludeOptions */ js.UndefOr[Value], 
-      /* newProps */ js.UndefOr[AnonLabelKey], 
+      /* newProps */ js.UndefOr[LabelKey], 
       Value
     ]
   ] = js.native
   var filterOutSelected: js.UndefOr[Boolean] = js.native
-  var getOptionLabel: js.UndefOr[js.Function1[/* args */ AnonOption, TagMod[Any]]] = js.native
-  var getValueLabel: js.UndefOr[js.Function1[/* args */ AnonOptionOption, TagMod[Any]]] = js.native
+  var getOptionLabel: js.UndefOr[js.Function1[/* args */ typingsSlinky.baseui.anon.Option, TagMod[Any]]] = js.native
+  var getValueLabel: js.UndefOr[js.Function1[/* args */ OptionOption, TagMod[Any]]] = js.native
   var id: js.UndefOr[String] = js.native
   var isLoading: js.UndefOr[Boolean] = js.native
   var labelKey: js.UndefOr[String] = js.native
@@ -57,7 +56,7 @@ trait SelectProps extends js.Object {
   var mountNode: js.UndefOr[HTMLElement] = js.native
   var multi: js.UndefOr[Boolean] = js.native
   var noResultsMsg: js.UndefOr[TagMod[Any]] = js.native
-  var onBlur: js.UndefOr[js.Function1[/* e */ Event_, _]] = js.native
+  var onBlur: js.UndefOr[js.Function1[/* e */ Event, _]] = js.native
   var onBlurResetsInput: js.UndefOr[Boolean] = js.native
   var onChange: js.UndefOr[js.Function1[/* params */ OnChangeParams, _]] = js.native
   var onClose: js.UndefOr[js.Function0[_]] = js.native
@@ -250,7 +249,7 @@ object SelectProps {
     }
     @scala.inline
     def withFilterOptions(
-      value: (/* options */ Value, /* filterValue */ String, /* excludeOptions */ js.UndefOr[Value], /* newProps */ js.UndefOr[AnonLabelKey]) => Value
+      value: (/* options */ Value, /* filterValue */ String, /* excludeOptions */ js.UndefOr[Value], /* newProps */ js.UndefOr[LabelKey]) => Value
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filterOptions")(js.Any.fromFunction4(value))
@@ -275,7 +274,7 @@ object SelectProps {
         ret
     }
     @scala.inline
-    def withGetOptionLabel(value: /* args */ AnonOption => TagMod[Any]): Self = {
+    def withGetOptionLabel(value: /* args */ typingsSlinky.baseui.anon.Option => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getOptionLabel")(js.Any.fromFunction1(value))
         ret
@@ -287,7 +286,7 @@ object SelectProps {
         ret
     }
     @scala.inline
-    def withGetValueLabel(value: /* args */ AnonOptionOption => TagMod[Any]): Self = {
+    def withGetValueLabel(value: /* args */ OptionOption => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getValueLabel")(js.Any.fromFunction1(value))
         ret
@@ -389,7 +388,7 @@ object SelectProps {
         ret
     }
     @scala.inline
-    def withOnBlur(value: /* e */ Event_ => _): Self = {
+    def withOnBlur(value: /* e */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
         ret
@@ -461,7 +460,7 @@ object SelectProps {
         ret
     }
     @scala.inline
-    def withOnInputChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit): Self = {
+    def withOnInputChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInputChange")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.reactBootstrapTableNext.mod
 
-import typingsSlinky.reactBootstrapTableNext.AnonActive
+import typingsSlinky.reactBootstrapTableNext.anon.Active
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait PageListRendererOptions extends js.Object {
   /**
     * current page
     */
-  var pages: js.Array[AnonActive] = js.native
+  var pages: js.Array[Active] = js.native
   /**
     * call it when you need to change page
     */
@@ -19,7 +19,7 @@ trait PageListRendererOptions extends js.Object {
 
 object PageListRendererOptions {
   @scala.inline
-  def apply(onPageChange: (Double, Double) => Unit, pages: js.Array[AnonActive]): PageListRendererOptions = {
+  def apply(onPageChange: (Double, Double) => Unit, pages: js.Array[Active]): PageListRendererOptions = {
     val __obj = js.Dynamic.literal(onPageChange = js.Any.fromFunction2(onPageChange), pages = pages.asInstanceOf[js.Any])
     __obj.asInstanceOf[PageListRendererOptions]
   }
@@ -36,7 +36,7 @@ object PageListRendererOptions {
         ret
     }
     @scala.inline
-    def withPages(value: js.Array[AnonActive]): Self = {
+    def withPages(value: js.Array[Active]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pages")(value.asInstanceOf[js.Any])
         ret

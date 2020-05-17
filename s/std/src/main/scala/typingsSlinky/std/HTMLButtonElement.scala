@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -69,9 +68,4 @@ trait HTMLButtonElement extends HTMLElement {
     */
   def setCustomValidity(error: java.lang.String): Unit = js.native
 }
-
-@JSGlobal("HTMLButtonElement")
-@js.native
-object HTMLButtonElement
-  extends Instantiable0[org.scalajs.dom.raw.HTMLButtonElement]
 

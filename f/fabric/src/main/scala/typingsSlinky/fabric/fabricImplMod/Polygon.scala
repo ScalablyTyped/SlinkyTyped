@@ -1,7 +1,7 @@
 package typingsSlinky.fabric.fabricImplMod
 
 import org.scalajs.dom.raw.SVGElement
-import typingsSlinky.fabric.AnonX
+import typingsSlinky.fabric.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +14,8 @@ class Polygon protected () extends Polyline {
   	 * @param points Array of points
   	 * @param [options] Options object
   	 */
-  def this(points: js.Array[AnonX]) = this()
-  def this(points: js.Array[AnonX], options: IPolylineOptions) = this()
+  def this(points: js.Array[X]) = this()
+  def this(points: js.Array[X], options: IPolylineOptions) = this()
 }
 
 /* static members */

@@ -1,7 +1,7 @@
 package typingsSlinky.gitlab.snippetsMod
 
+import typingsSlinky.gitlab.anon.publicbooleanPaginatedReq
 import typingsSlinky.gitlab.infrastructureMod.BaseService
-import typingsSlinky.gitlab.publicbooleanPaginatedReq
 import typingsSlinky.gitlab.requestHelperMod.BaseRequestOptions
 import typingsSlinky.gitlab.requestHelperMod.GetResponse
 import typingsSlinky.gitlab.requestHelperMod.Sudo

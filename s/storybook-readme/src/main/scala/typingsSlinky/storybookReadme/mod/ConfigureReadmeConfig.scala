@@ -1,17 +1,17 @@
 package typingsSlinky.storybookReadme.mod
 
 import slinky.core.TagMod
-import typingsSlinky.storybookReadme.AnonChildren
+import typingsSlinky.storybookReadme.anon.Children
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ConfigureReadmeConfig extends js.Object {
-  var DocPreview: js.UndefOr[js.Function1[/* props */ AnonChildren, TagMod[Any]]] = js.native
-  var FooterPreview: js.UndefOr[js.Function1[/* props */ AnonChildren, TagMod[Any]]] = js.native
-  var HeaderPreview: js.UndefOr[js.Function1[/* props */ AnonChildren, TagMod[Any]]] = js.native
-  var StoryPreview: js.UndefOr[js.Function1[/* props */ AnonChildren, TagMod[Any]]] = js.native
+  var DocPreview: js.UndefOr[js.Function1[/* props */ Children, TagMod[Any]]] = js.native
+  var FooterPreview: js.UndefOr[js.Function1[/* props */ Children, TagMod[Any]]] = js.native
+  var HeaderPreview: js.UndefOr[js.Function1[/* props */ Children, TagMod[Any]]] = js.native
+  var StoryPreview: js.UndefOr[js.Function1[/* props */ Children, TagMod[Any]]] = js.native
   var footer: js.UndefOr[String] = js.native
   var header: js.UndefOr[String] = js.native
 }
@@ -29,7 +29,7 @@ object ConfigureReadmeConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDocPreview(value: /* props */ AnonChildren => TagMod[Any]): Self = {
+    def withDocPreview(value: /* props */ Children => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DocPreview")(js.Any.fromFunction1(value))
         ret
@@ -41,7 +41,7 @@ object ConfigureReadmeConfig {
         ret
     }
     @scala.inline
-    def withFooterPreview(value: /* props */ AnonChildren => TagMod[Any]): Self = {
+    def withFooterPreview(value: /* props */ Children => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("FooterPreview")(js.Any.fromFunction1(value))
         ret
@@ -53,7 +53,7 @@ object ConfigureReadmeConfig {
         ret
     }
     @scala.inline
-    def withHeaderPreview(value: /* props */ AnonChildren => TagMod[Any]): Self = {
+    def withHeaderPreview(value: /* props */ Children => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("HeaderPreview")(js.Any.fromFunction1(value))
         ret
@@ -65,7 +65,7 @@ object ConfigureReadmeConfig {
         ret
     }
     @scala.inline
-    def withStoryPreview(value: /* props */ AnonChildren => TagMod[Any]): Self = {
+    def withStoryPreview(value: /* props */ Children => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("StoryPreview")(js.Any.fromFunction1(value))
         ret

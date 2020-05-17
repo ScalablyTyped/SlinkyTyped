@@ -1,6 +1,6 @@
 package typingsSlinky.saslAnonymous.mod
 
-import typingsSlinky.saslAnonymous.TypeofAnonymousMechanism
+import typingsSlinky.saslAnonymous.anon.TypeofAnonymousMechanism
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

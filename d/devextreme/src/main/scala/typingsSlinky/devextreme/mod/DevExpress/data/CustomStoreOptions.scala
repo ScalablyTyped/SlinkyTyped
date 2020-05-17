@@ -1,10 +1,10 @@
 package typingsSlinky.devextreme.mod.DevExpress.data
 
-import typingsSlinky.devextreme.AnonFilter
+import typingsSlinky.devextreme.anon.Filter
 import typingsSlinky.devextreme.devextremeStrings.processed
 import typingsSlinky.devextreme.devextremeStrings.raw
-import typingsSlinky.devextreme.mod._Global_.JQueryPromise
-import typingsSlinky.devextreme.mod._Global_.Promise
+import typingsSlinky.devextreme.mod.global.JQueryPromise
+import typingsSlinky.devextreme.mod.global.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,9 +28,7 @@ trait CustomStoreOptions extends StoreOptions[CustomStore] {
     js.Function1[/* key */ js.Any | String | Double, Promise[Unit] | JQueryPromise[Unit]]
   ] = js.native
   /** Specifies a custom implementation of the totalCount(options) method. */
-  var totalCount: js.UndefOr[
-    js.Function1[/* loadOptions */ AnonFilter, Promise[Double] | JQueryPromise[Double]]
-  ] = js.native
+  var totalCount: js.UndefOr[js.Function1[/* loadOptions */ Filter, Promise[Double] | JQueryPromise[Double]]] = js.native
   /** Specifies a custom implementation of the update(key, values) method. */
   var update: js.UndefOr[
     js.Function2[
@@ -128,7 +126,7 @@ object CustomStoreOptions {
         ret
     }
     @scala.inline
-    def withTotalCount(value: /* loadOptions */ AnonFilter => Promise[Double] | JQueryPromise[Double]): Self = {
+    def withTotalCount(value: /* loadOptions */ Filter => Promise[Double] | JQueryPromise[Double]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("totalCount")(js.Any.fromFunction1(value))
         ret

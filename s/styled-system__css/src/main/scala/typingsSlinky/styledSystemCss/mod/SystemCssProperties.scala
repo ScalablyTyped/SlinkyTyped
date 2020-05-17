@@ -395,7 +395,7 @@ import scala.scalajs.js.annotation._
 
 /* Inlined {[ K in keyof @styled-system/css.@styled-system/css.AllSystemCSSProperties ]: @styled-system/css.@styled-system/css.ResponsiveStyleValue<@styled-system/css.@styled-system/css.AllSystemCSSProperties[K]> | (theme : any): @styled-system/css.@styled-system/css.ResponsiveStyleValue<@styled-system/css.@styled-system/css.AllSystemCSSProperties[K]> | @styled-system/css.@styled-system/css.SystemStyleObject} */
 @js.native
-trait SystemCssProperties extends _SystemStyleObject {
+trait SystemCssProperties extends SystemStyleObject {
   var alignContent: ResponsiveStyleValue[js.UndefOr[AlignContentProperty]] | (js.Function1[/* theme */ js.Any, ResponsiveStyleValue[js.UndefOr[AlignContentProperty]]]) | SystemStyleObject = js.native
   var alignItems: ResponsiveStyleValue[js.UndefOr[AlignItemsProperty]] | (js.Function1[/* theme */ js.Any, ResponsiveStyleValue[js.UndefOr[AlignItemsProperty]]]) | SystemStyleObject = js.native
   var alignSelf: ResponsiveStyleValue[js.UndefOr[AlignSelfProperty]] | (js.Function1[/* theme */ js.Any, ResponsiveStyleValue[js.UndefOr[AlignSelfProperty]]]) | SystemStyleObject = js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.mapboxGl.mod
 
-import typingsSlinky.mapboxGl.AnonCompact
+import typingsSlinky.mapboxGl.anon.Compact
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("mapbox-gl", "AttributionControl")
 @js.native
 class AttributionControl () extends Evented {
-  def this(options: AnonCompact) = this()
+  def this(options: Compact) = this()
 }
 

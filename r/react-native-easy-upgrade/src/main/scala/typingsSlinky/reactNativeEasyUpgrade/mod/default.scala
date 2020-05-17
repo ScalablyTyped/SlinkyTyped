@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeEasyUpgrade.mod
 
-import typingsSlinky.reactNativeEasyUpgrade.PartialOptions
+import typingsSlinky.reactNativeEasyUpgrade.anon.PartialOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

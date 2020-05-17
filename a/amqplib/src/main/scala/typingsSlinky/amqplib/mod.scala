@@ -1,6 +1,8 @@
 package typingsSlinky.amqplib
 
 import typingsSlinky.amqplib.amqplibBooleans.`false`
+import typingsSlinky.amqplib.anon.Mechanism
+import typingsSlinky.amqplib.anon.Password
 import typingsSlinky.amqplib.propertiesMod.ConsumeMessage
 import typingsSlinky.amqplib.propertiesMod.GetMessage
 import typingsSlinky.amqplib.propertiesMod.Message
@@ -111,8 +113,8 @@ object mod extends js.Object {
   def connect(url: Connect, socketOptions: js.Any): ^[Connection] = js.native
   @js.native
   object credentials extends js.Object {
-    def external(): AnonMechanism = js.native
-    def plain(username: String, password: String): AnonPassword = js.native
+    def external(): Mechanism = js.native
+    def plain(username: String, password: String): Password = js.native
   }
   
 }

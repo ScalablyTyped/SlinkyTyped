@@ -3,7 +3,7 @@ package typingsSlinky.jestConsole
 import typingsSlinky.jestConsole.typesMod.LogMessage
 import typingsSlinky.jestConsole.typesMod.LogType
 import typingsSlinky.node.NodeJS.WritableStream
-import typingsSlinky.std.Console_
+import typingsSlinky.std.Console
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object customConsoleMod extends js.Object {
   @js.native
-  trait CustomConsole extends Console_ {
+  trait CustomConsole extends Console {
     var _counters: js.Any = js.native
     var _formatBuffer: js.Any = js.native
     var _groupDepth: js.Any = js.native

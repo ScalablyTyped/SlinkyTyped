@@ -1,8 +1,8 @@
 package typingsSlinky.highcharts.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.highcharts.boostMod.highchartsAugmentingMod.Chart
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -624,7 +624,7 @@ class Chart_ protected () extends js.Object {
     *        internally as a response to window resize.
     */
   def reflow(): Unit = js.native
-  def reflow(e: Event_): Unit = js.native
+  def reflow(e: Event): Unit = js.native
   def removeAnnotation(idOrAnnotation: String): Unit = js.native
   /**
     * Remove an annotation from the chart.

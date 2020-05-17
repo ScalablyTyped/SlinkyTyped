@@ -1,8 +1,8 @@
 package typingsSlinky.hexo.mod.extend
 
 import typingsSlinky.connect.mod.Server
-import typingsSlinky.hexo.AnonDictkey
-import typingsSlinky.hexo.AnonPath
+import typingsSlinky.hexo.anon.Dictkey
+import typingsSlinky.hexo.anon.Path
 import typingsSlinky.hexo.hexoStrings.after_clean
 import typingsSlinky.hexo.hexoStrings.after_generate
 import typingsSlinky.hexo.hexoStrings.after_init
@@ -57,25 +57,21 @@ trait Filter_ extends js.Object {
     * Executed after a post is rendered. Refer to post rendering to learn the execution steps.
     */
   @JSName("register")
-  def register_afterpostrender(`type`: after_post_render, fn: js.Function1[/* data */ AnonDictkey, AnonDictkey | Unit]): Unit = js.native
+  def register_afterpostrender(`type`: after_post_render, fn: js.Function1[/* data */ Dictkey, Dictkey | Unit]): Unit = js.native
   @JSName("register")
-  def register_afterpostrender(
-    `type`: after_post_render,
-    fn: js.Function1[/* data */ AnonDictkey, AnonDictkey | Unit],
-    priority: Double
-  ): Unit = js.native
+  def register_afterpostrender(`type`: after_post_render, fn: js.Function1[/* data */ Dictkey, Dictkey | Unit], priority: Double): Unit = js.native
   /**
     * Executed after rendering finishes. You can see rendering for more info.
     */
   @JSName("register")
   def register_afterrenderhtml(
     `type`: after_renderColonhtml,
-    fn: js.Function2[/* result */ String, /* data */ AnonPath, String | Unit]
+    fn: js.Function2[/* result */ String, /* data */ Path, String | Unit]
   ): Unit = js.native
   @JSName("register")
   def register_afterrenderhtml(
     `type`: after_renderColonhtml,
-    fn: js.Function2[/* result */ String, /* data */ AnonPath, String | Unit],
+    fn: js.Function2[/* result */ String, /* data */ Path, String | Unit],
     priority: Double
   ): Unit = js.native
   /**
@@ -96,13 +92,9 @@ trait Filter_ extends js.Object {
     * Executed before a post is rendered. Refer to post rendering to learn the execution steps.
     */
   @JSName("register")
-  def register_beforepostrender(`type`: before_post_render, fn: js.Function1[/* data */ AnonDictkey, AnonDictkey | Unit]): Unit = js.native
+  def register_beforepostrender(`type`: before_post_render, fn: js.Function1[/* data */ Dictkey, Dictkey | Unit]): Unit = js.native
   @JSName("register")
-  def register_beforepostrender(
-    `type`: before_post_render,
-    fn: js.Function1[/* data */ AnonDictkey, AnonDictkey | Unit],
-    priority: Double
-  ): Unit = js.native
+  def register_beforepostrender(`type`: before_post_render, fn: js.Function1[/* data */ Dictkey, Dictkey | Unit], priority: Double): Unit = js.native
   /**
     * Executed when creating a post to determine the path of new posts.
     */

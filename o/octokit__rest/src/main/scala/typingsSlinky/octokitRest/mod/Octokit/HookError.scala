@@ -1,7 +1,7 @@
 package typingsSlinky.octokitRest.mod.Octokit
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.octokitRest.AnonField
+import typingsSlinky.octokitRest.anon.Field
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait HookError extends js.Object {
   var documentation_url: js.UndefOr[String] = js.native
-  var errors: js.UndefOr[js.Array[AnonField]] = js.native
+  var errors: js.UndefOr[js.Array[Field]] = js.native
   var headers: StringDictionary[String] = js.native
   var message: String = js.native
   var name: String = js.native
@@ -67,7 +67,7 @@ object HookError {
         ret
     }
     @scala.inline
-    def withErrors(value: js.Array[AnonField]): Self = {
+    def withErrors(value: js.Array[Field]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
         ret

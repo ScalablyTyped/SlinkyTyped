@@ -1,13 +1,13 @@
 package typingsSlinky.googleVisualization.google.visualization
 
-import typingsSlinky.googleVisualization.AnonColor1
+import typingsSlinky.googleVisualization.anon.Color1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ChartBoxStyle extends js.Object {
-  var gradient: js.UndefOr[AnonColor1] = js.native
+  var gradient: js.UndefOr[Color1] = js.native
   var rx: js.UndefOr[Double] = js.native
   var ry: js.UndefOr[Double] = js.native
   var stroke: js.UndefOr[String] = js.native
@@ -27,7 +27,7 @@ object ChartBoxStyle {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGradient(value: AnonColor1): Self = {
+    def withGradient(value: Color1): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gradient")(value.asInstanceOf[js.Any])
         ret

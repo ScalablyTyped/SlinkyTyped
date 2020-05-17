@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
+import typingsSlinky.babylonjs.anon.AxisMeshNames
 import typingsSlinky.babylonjs.gamepadMod.StickValues
 import typingsSlinky.babylonjs.observableMod.Observable
 import typingsSlinky.babylonjs.poseEnabledControllerMod.ExtendedGamepadButton
@@ -21,7 +22,7 @@ object windowsMotionControllerMod extends js.Object {
       */
     def this(vrGamepad: js.Any) = this()
     var _loadedMeshInfo: js.Any = js.native
-    val _mapping: AnonAxisMeshNames = js.native
+    val _mapping: AxisMeshNames = js.native
     var createMeshInfo: js.Any = js.native
     /**
       * Fired when the trackpad on this controller is clicked

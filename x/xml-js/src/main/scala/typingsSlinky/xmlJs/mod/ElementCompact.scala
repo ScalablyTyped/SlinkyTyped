@@ -1,7 +1,6 @@
 package typingsSlinky.xmlJs.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.xmlJs.AnonAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +11,7 @@ trait ElementCompact
   var _attributes: js.UndefOr[Attributes] = js.native
   var _cdata: js.UndefOr[String] = js.native
   var _comment: js.UndefOr[String] = js.native
-  var _declaration: js.UndefOr[AnonAttributes] = js.native
+  var _declaration: js.UndefOr[typingsSlinky.xmlJs.anon.Attributes] = js.native
   var _doctype: js.UndefOr[String] = js.native
   var _instruction: js.UndefOr[StringDictionary[String]] = js.native
   var _text: js.UndefOr[String | Double] = js.native
@@ -67,7 +66,7 @@ object ElementCompact {
         ret
     }
     @scala.inline
-    def with_declaration(value: AnonAttributes): Self = {
+    def with_declaration(value: typingsSlinky.xmlJs.anon.Attributes): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("_declaration")(value.asInstanceOf[js.Any])
         ret

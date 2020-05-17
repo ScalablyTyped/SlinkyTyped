@@ -1,6 +1,6 @@
 package typingsSlinky.weixinApp.wx
 
-import typingsSlinky.weixinApp.AnonSupportMode
+import typingsSlinky.weixinApp.anon.SupportMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait CheckIsSupportSoterAuthenticationOptions
   extends BaseOptions[js.Any, js.Any] {
   @JSName("success")
-  var success_CheckIsSupportSoterAuthenticationOptions: js.UndefOr[js.Function1[/* res */ AnonSupportMode, Unit]] = js.native
+  var success_CheckIsSupportSoterAuthenticationOptions: js.UndefOr[js.Function1[/* res */ SupportMode, Unit]] = js.native
 }
 
 object CheckIsSupportSoterAuthenticationOptions {
@@ -25,7 +25,7 @@ object CheckIsSupportSoterAuthenticationOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSuccess(value: /* res */ AnonSupportMode => Unit): Self = {
+    def withSuccess(value: /* res */ SupportMode => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

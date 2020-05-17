@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait KeyLabelObject extends js.Object {
+trait KeyLabelObject extends ColumnsType {
   var key: String = js.native
   var label: String = js.native
 }

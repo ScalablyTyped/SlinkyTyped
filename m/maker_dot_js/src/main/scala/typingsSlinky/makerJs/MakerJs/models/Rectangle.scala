@@ -1,6 +1,5 @@
 package typingsSlinky.makerJs.MakerJs.models
 
-import typingsSlinky.makerJs.MakerJs.IMeasure
 import typingsSlinky.makerJs.MakerJs.IModel
 import typingsSlinky.makerJs.MakerJs.IPathMap
 import typingsSlinky.makerJs.MakerJs.IPoint
@@ -8,63 +7,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("MakerJs.models.Rectangle")
 @js.native
-class Rectangle protected () extends IModel {
-  /**
-    * Create a rectangle from a measurement.
-    *
-    * Example:
-    * ```
-    * //Create a rectangle from a measurement.
-    * var makerjs = require('makerjs');
-    * var e = new makerjs.models.Ellipse(17, 10); // draw an ellipse so we have something to measure.
-    * var m = makerjs.measure.modelExtents(e);    // measure the ellipse.
-    * var r = new makerjs.models.Rectangle(m);    // draws a rectangle surrounding the ellipse.
-    * var svg = makerjs.exporter.toSVG({ models: { e: e, r: r }});
-    * document.write(svg);
-    * ```
-    *
-    * @param measurement IMeasure object. See http://microsoft.github.io/maker.js/docs/api/modules/makerjs.measure.html#pathextents and http://microsoft.github.io/maker.js/docs/api/modules/makerjs.measure.html#modelextents to get measurements of paths and models.
-    */
-  def this(measurement: IMeasure) = this()
-  /**
-    * Create a rectangle which will surround a model.
-    *
-    * Example:
-    * ```
-    * //Create a rectangle which will surround a model
-    * var makerjs = require('makerjs');
-    * var e = new makerjs.models.Ellipse(17, 10); // draw an ellipse so we have something to surround.
-    * var r = new makerjs.models.Rectangle(e, 3); // draws a rectangle surrounding the ellipse by 3 units.
-    * var svg = makerjs.exporter.toSVG({ models: { e: e, r: r }});
-    * document.write(svg);
-    * ```
-    *
-    * @param modelToSurround IModel object.
-    * @param margin Optional distance from the model.
-    */
-  def this(modelToSurround: IModel) = this()
-  def this(modelToSurround: IModel, margin: Double) = this()
-  /**
-    * Create a rectangle from width and height.
-    *
-    * Example:
-    * ```
-    * //Create a rectangle from width and height
-    * var makerjs = require('makerjs');
-    * var model = new makerjs.models.Rectangle(50, 100);
-    * var svg = makerjs.exporter.toSVG(model);
-    * document.write(svg);
-    * ```
-    *
-    * @param width Width of the rectangle.
-    * @param height Height of the rectangle.
-    */
-  def this(width: Double, height: Double) = this()
+trait Rectangle extends IModel {
   @JSName("origin")
   var origin_Rectangle: IPoint = js.native
   @JSName("paths")
   var paths_Rectangle: IPathMap = js.native
+}
+
+object Rectangle {
+  @scala.inline
+  def apply(origin: IPoint, paths: IPathMap): Rectangle = {
+    val __obj = js.Dynamic.literal(origin = origin.asInstanceOf[js.Any], paths = paths.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Rectangle]
+  }
+  @scala.inline
+  implicit class RectangleOps[Self <: Rectangle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOrigin(value: IPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaths(value: IPathMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

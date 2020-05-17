@@ -1,12 +1,12 @@
 package typingsSlinky.reactFlipMove.mod.FlipMove
 
-import typingsSlinky.reactFlipMove.PartialCSSStyleDeclaratio
+import typingsSlinky.reactFlipMove.anon.PartialCSSStyleDeclaratio
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Animation extends _AnimationProp {
+trait Animation extends AnimationProp {
   var from: PartialCSSStyleDeclaratio = js.native
   var to: PartialCSSStyleDeclaratio = js.native
 }

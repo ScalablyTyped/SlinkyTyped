@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientMl.gapi.client.ml
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientMl.AnonAccesstoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientMl.anon.Accesstoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,23 +17,23 @@ trait ProjectsResource extends js.Object {
     * the Google Cloud Storage location where you put your model training code
     * for training the model with Google Cloud Machine Learning.
     */
-  def getConfig(request: AnonAccesstoken): Request_[GoogleCloudMlV1GetConfigResponse] = js.native
+  def getConfig(request: Accesstoken): Request[GoogleCloudMlV1GetConfigResponse] = js.native
   /**
     * Performs prediction on the data in the request.
     *
     * &#42;&#42;&#42;&#42; REMOVE FROM GENERATED DOCUMENTATION
     */
-  def predict(request: AnonAccesstoken): Request_[GoogleApiHttpBody] = js.native
+  def predict(request: Accesstoken): Request[GoogleApiHttpBody] = js.native
 }
 
 object ProjectsResource {
   @scala.inline
   def apply(
-    getConfig: AnonAccesstoken => Request_[GoogleCloudMlV1GetConfigResponse],
+    getConfig: Accesstoken => Request[GoogleCloudMlV1GetConfigResponse],
     jobs: JobsResource,
     models: ModelsResource,
     operations: OperationsResource,
-    predict: AnonAccesstoken => Request_[GoogleApiHttpBody]
+    predict: Accesstoken => Request[GoogleApiHttpBody]
   ): ProjectsResource = {
     val __obj = js.Dynamic.literal(getConfig = js.Any.fromFunction1(getConfig), jobs = jobs.asInstanceOf[js.Any], models = models.asInstanceOf[js.Any], operations = operations.asInstanceOf[js.Any], predict = js.Any.fromFunction1(predict))
     __obj.asInstanceOf[ProjectsResource]
@@ -45,7 +45,7 @@ object ProjectsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetConfig(value: AnonAccesstoken => Request_[GoogleCloudMlV1GetConfigResponse]): Self = {
+    def withGetConfig(value: Accesstoken => Request[GoogleCloudMlV1GetConfigResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getConfig")(js.Any.fromFunction1(value))
         ret
@@ -69,7 +69,7 @@ object ProjectsResource {
         ret
     }
     @scala.inline
-    def withPredict(value: AnonAccesstoken => Request_[GoogleApiHttpBody]): Self = {
+    def withPredict(value: Accesstoken => Request[GoogleApiHttpBody]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("predict")(js.Any.fromFunction1(value))
         ret

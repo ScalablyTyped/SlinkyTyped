@@ -4,9 +4,9 @@ import typingsSlinky.graphql.definitionMod.GraphQLArgumentConfig
 import typingsSlinky.graphql.definitionMod.GraphQLFieldConfig
 import typingsSlinky.graphql.definitionMod.GraphQLInputType
 import typingsSlinky.graphql.definitionMod.GraphQLOutputType
-import typingsSlinky.graphqlCompose.AnonParams
-import typingsSlinky.graphqlCompose.AnonProjection
-import typingsSlinky.graphqlCompose.PartialComposeArgumentCon
+import typingsSlinky.graphqlCompose.anon.Params
+import typingsSlinky.graphqlCompose.anon.PartialComposeArgumentCon
+import typingsSlinky.graphqlCompose.anon.Projection
 import typingsSlinky.graphqlCompose.definitionsMod.Extensions
 import typingsSlinky.graphqlCompose.inputTypeComposerMod.InputTypeComposer
 import typingsSlinky.graphqlCompose.objectTypeComposerMod.ComposeArgumentConfig
@@ -22,7 +22,8 @@ import scala.scalajs.js.annotation._
 
 @JSImport("graphql-compose/lib/Resolver", "Resolver")
 @js.native
-class Resolver[TSource, TContext, TArgs, TReturn] protected () extends js.Object {
+class Resolver[TSource, TContext, TArgs, TReturn] protected ()
+  extends ComposeOutputType[js.Any, TContext] {
   def this(opts: ResolverOpts[TSource, TContext, TArgs, _], schemaComposer: SchemaComposer[TContext]) = this()
   var args: ComposeFieldConfigArgumentMap[_] = js.native
   var description: String | Unit = js.native
@@ -39,8 +40,8 @@ class Resolver[TSource, TContext, TArgs, TReturn] protected () extends js.Object
   def clone[TNewSource, TNewArgs](opts: ResolverOpts[TNewSource, TContext, TNewArgs, _]): Resolver[TNewSource, TContext, TNewArgs, _] = js.native
   def cloneArg(argName: String, newTypeName: String): this.type = js.native
   def debug(): Resolver[TSource, TContext, TArgs, _] = js.native
-  def debug(filterDotPaths: AnonParams): Resolver[TSource, TContext, TArgs, _] = js.native
-  def debug(filterDotPaths: AnonParams, opts: ResolveDebugOpts): Resolver[TSource, TContext, TArgs, _] = js.native
+  def debug(filterDotPaths: Params): Resolver[TSource, TContext, TArgs, _] = js.native
+  def debug(filterDotPaths: Params, opts: ResolveDebugOpts): Resolver[TSource, TContext, TArgs, _] = js.native
   def debugExecTime(): Resolver[TSource, TContext, TArgs, _] = js.native
   def debugParams(): Resolver[TSource, TContext, TArgs, _] = js.native
   def debugParams(filterPaths: String): Resolver[TSource, TContext, TArgs, _] = js.native
@@ -70,7 +71,7 @@ class Resolver[TSource, TContext, TArgs, TReturn] protected () extends js.Object
     * -----------------------------------------------
     */
   def getFieldConfig(): GraphQLFieldConfig[TSource, TContext, TArgs] = js.native
-  def getFieldConfig(opts: AnonProjection): GraphQLFieldConfig[TSource, TContext, TArgs] = js.native
+  def getFieldConfig(opts: Projection): GraphQLFieldConfig[TSource, TContext, TArgs] = js.native
   def getKind(): ResolverKinds | Unit = js.native
   /**
     * -----------------------------------------------

@@ -1,7 +1,7 @@
 package typingsSlinky.bulmaCalendar.mod
 
-import typingsSlinky.bulmaCalendar.AnonEnd
-import typingsSlinky.bulmaCalendar.AnonEndDate
+import typingsSlinky.bulmaCalendar.anon.End
+import typingsSlinky.bulmaCalendar.anon.EndDate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,11 +15,11 @@ trait bulmaCalendar extends js.Object {
   /**
     * Get selected date
     */
-  def date: AnonEnd = js.native
+  def date: End = js.native
   /**
     * Set date
     */
-  def date(date: AnonEnd): js.Any = js.native
+  def date(date: End): js.Any = js.native
   /**
     * Get date format pattern
     */
@@ -152,7 +152,7 @@ trait bulmaCalendar extends js.Object {
     *
     * @returns Date picker selected date (if not range calendar then endDate is undefined)
     */
-  def value(): AnonEndDate = js.native
-  def value(value: String): AnonEndDate = js.native
+  def value(): EndDate = js.native
+  def value(value: String): EndDate = js.native
 }
 

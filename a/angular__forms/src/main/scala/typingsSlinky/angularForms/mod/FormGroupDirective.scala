@@ -1,8 +1,8 @@
 package typingsSlinky.angularForms.mod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.angularCore.mod.EventEmitter
 import typingsSlinky.angularCore.mod.OnChanges
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -112,7 +112,7 @@ class FormGroupDirective protected ()
     *
     * @param $event The "submit" event object
     */
-  def onSubmit($event: Event_): Boolean = js.native
+  def onSubmit($event: Event): Boolean = js.native
   /**
     * @description
     * Removes the `FormControlName` instance from the internal list of directives

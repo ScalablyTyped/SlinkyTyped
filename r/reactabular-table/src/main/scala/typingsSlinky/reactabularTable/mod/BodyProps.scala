@@ -1,7 +1,7 @@
 package typingsSlinky.reactabularTable.mod
 
-import typingsSlinky.reactabularTable.AnonRowIndexNumber
-import typingsSlinky.reactabularTable.PartialCSSStyleDeclaratio
+import typingsSlinky.reactabularTable.anon.PartialCSSStyleDeclaratio
+import typingsSlinky.reactabularTable.anon.RowIndexNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait BodyProps extends js.Object {
   var className: js.UndefOr[String] = js.native
-  var onRow: js.UndefOr[js.Function2[/* row */ js.Any, /* props */ AnonRowIndexNumber, _]] = js.native
+  var onRow: js.UndefOr[js.Function2[/* row */ js.Any, /* props */ RowIndexNumber, _]] = js.native
   var rowKey: String = js.native
   var rows: js.Array[_] = js.native
   var style: js.UndefOr[PartialCSSStyleDeclaratio] = js.native
@@ -52,7 +52,7 @@ object BodyProps {
         ret
     }
     @scala.inline
-    def withOnRow(value: (/* row */ js.Any, /* props */ AnonRowIndexNumber) => _): Self = {
+    def withOnRow(value: (/* row */ js.Any, /* props */ RowIndexNumber) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRow")(js.Any.fromFunction2(value))
         ret

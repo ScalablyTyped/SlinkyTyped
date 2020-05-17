@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.OmitRefreshCompositeset
+import typingsSlinky.tabris.anon.OmitRefreshCompositeset
 import typingsSlinky.tabris.tabrisStrings.refreshEnabled
 import typingsSlinky.tabris.tabrisStrings.refreshIndicator
 import typingsSlinky.tabris.tabrisStrings.refreshMessage

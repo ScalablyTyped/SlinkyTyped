@@ -3,8 +3,8 @@ package typingsSlinky.multer.mod
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
-import typingsSlinky.multer.AnonFieldNameSize
-import typingsSlinky.multer.mod._Global_.Express.Multer.File
+import typingsSlinky.multer.anon.FieldNameSize
+import typingsSlinky.multer.mod.global.Express.Multer.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,7 +41,7 @@ trait Options extends js.Object {
     * passed to Busboy directly, and the details of properties can be found
     * at https://github.com/mscdex/busboy#busboy-methods.
     */
-  var limits: js.UndefOr[AnonFieldNameSize] = js.native
+  var limits: js.UndefOr[FieldNameSize] = js.native
   /** Preserve the full path of the original filename rather than the basename. (Default: false) */
   var preservePath: js.UndefOr[Boolean] = js.native
   /**
@@ -90,7 +90,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withLimits(value: AnonFieldNameSize): Self = {
+    def withLimits(value: FieldNameSize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("limits")(value.asInstanceOf[js.Any])
         ret

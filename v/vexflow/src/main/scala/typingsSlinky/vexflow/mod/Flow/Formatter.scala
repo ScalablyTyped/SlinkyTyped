@@ -1,7 +1,7 @@
 package typingsSlinky.vexflow.mod.Flow
 
-import typingsSlinky.vexflow.AnonAlignrests
 import typingsSlinky.vexflow.Vex.IRenderContext
+import typingsSlinky.vexflow.anon.Alignrests
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,7 +38,7 @@ object Formatter extends js.Object {
     ctx: IRenderContext,
     stave: typingsSlinky.vexflow.Vex.Flow.Stave,
     notes: js.Array[typingsSlinky.vexflow.Vex.Flow.Note],
-    params: AnonAlignrests
+    params: Alignrests
   ): typingsSlinky.vexflow.Vex.Flow.BoundingBox = js.native
   def FormatAndDrawTab(
     ctx: IRenderContext,
@@ -71,7 +71,7 @@ object Formatter extends js.Object {
     tabnotes: js.Array[typingsSlinky.vexflow.Vex.Flow.TabNote],
     notes: js.Array[typingsSlinky.vexflow.Vex.Flow.Note],
     autobeam: Boolean,
-    params: AnonAlignrests
+    params: Alignrests
   ): Unit = js.native
 }
 

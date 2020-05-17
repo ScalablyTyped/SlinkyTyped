@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCore
 
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonModalElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonModalElement
 import typingsSlinky.ionicCore.mod.ComponentRef
 import typingsSlinky.ionicCore.modalInterfaceMod.ModalOptions
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayController

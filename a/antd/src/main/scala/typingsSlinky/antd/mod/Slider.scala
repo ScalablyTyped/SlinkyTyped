@@ -1,6 +1,6 @@
 package typingsSlinky.antd.mod
 
-import typingsSlinky.antd.AnonTipFormatter
+import typingsSlinky.antd.anon.TipFormatter
 import typingsSlinky.antd.sliderMod.SliderProps
 import typingsSlinky.antd.sliderMod.default
 import scala.scalajs.js
@@ -17,6 +17,6 @@ class Slider protected () extends default {
 @JSImport("antd", "Slider")
 @js.native
 object Slider extends js.Object {
-  var defaultProps: AnonTipFormatter = js.native
+  var defaultProps: TipFormatter = js.native
 }
 

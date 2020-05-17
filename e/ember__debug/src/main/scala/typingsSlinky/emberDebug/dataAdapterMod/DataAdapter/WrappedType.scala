@@ -1,19 +1,19 @@
 package typingsSlinky.emberDebug.dataAdapterMod.DataAdapter
 
-import typingsSlinky.emberDebug.AnonColumns
+import typingsSlinky.emberDebug.anon.Columns
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait WrappedType extends js.Object {
-  var `type`: AnonColumns = js.native
+  var `type`: Columns = js.native
   def release(): Unit = js.native
 }
 
 object WrappedType {
   @scala.inline
-  def apply(release: () => Unit, `type`: AnonColumns): WrappedType = {
+  def apply(release: () => Unit, `type`: Columns): WrappedType = {
     val __obj = js.Dynamic.literal(release = js.Any.fromFunction0(release))
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[WrappedType]
@@ -31,7 +31,7 @@ object WrappedType {
         ret
     }
     @scala.inline
-    def withType(value: AnonColumns): Self = {
+    def withType(value: Columns): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
         ret

@@ -1,17 +1,17 @@
 package typingsSlinky.gapiClientClassroom.gapi.client.classroom
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientClassroom.AnonAlt
-import typingsSlinky.gapiClientClassroom.AnonCallback
-import typingsSlinky.gapiClientClassroom.AnonCourseIdFields
-import typingsSlinky.gapiClientClassroom.AnonUserId
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientClassroom.anon.Alt
+import typingsSlinky.gapiClientClassroom.anon.Callback
+import typingsSlinky.gapiClientClassroom.anon.CourseIdFields
+import typingsSlinky.gapiClientClassroom.anon.UserId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait TeachersResource extends js.Object {
-  def create(request: AnonAlt, body: Teacher): Request_[Teacher] = js.native
+  def create(request: Alt, body: Teacher): Request[Teacher] = js.native
   /**
     * Creates a teacher of a course.
     *
@@ -29,7 +29,7 @@ trait TeachersResource extends js.Object {
     * &#42; `ALREADY_EXISTS` if the user is already a teacher or student in the
     * course.
     */
-  def create(request: AnonCourseIdFields): Request_[Teacher] = js.native
+  def create(request: CourseIdFields): Request[Teacher] = js.native
   /**
     * Deletes a teacher of a course.
     *
@@ -42,8 +42,8 @@ trait TeachersResource extends js.Object {
     * &#42; `FAILED_PRECONDITION` if the requested ID belongs to the primary teacher
     * of this course.
     */
-  def delete(): Request_[js.Object] = js.native
-  def delete(request: AnonUserId): Request_[js.Object] = js.native
+  def delete(): Request[js.Object] = js.native
+  def delete(request: UserId): Request[js.Object] = js.native
   /**
     * Returns a teacher of a course.
     *
@@ -54,8 +54,8 @@ trait TeachersResource extends js.Object {
     * &#42; `NOT_FOUND` if no teacher of this course has the requested ID or if the
     * course does not exist.
     */
-  def get(): Request_[Teacher] = js.native
-  def get(request: AnonUserId): Request_[Teacher] = js.native
+  def get(): Request[Teacher] = js.native
+  def get(request: UserId): Request[Teacher] = js.native
   /**
     * Returns a list of teachers of this course that the requester
     * is permitted to view.
@@ -65,7 +65,7 @@ trait TeachersResource extends js.Object {
     * &#42; `NOT_FOUND` if the course does not exist.
     * &#42; `PERMISSION_DENIED` for access errors.
     */
-  def list(): Request_[ListTeachersResponse] = js.native
-  def list(request: AnonCallback): Request_[ListTeachersResponse] = js.native
+  def list(): Request[ListTeachersResponse] = js.native
+  def list(request: Callback): Request[ListTeachersResponse] = js.native
 }
 

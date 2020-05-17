@@ -2,20 +2,21 @@ package typingsSlinky.electron.Electron
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.electron.TypeofBrowserView
-import typingsSlinky.electron.TypeofBrowserWindow
-import typingsSlinky.electron.TypeofMenu
-import typingsSlinky.electron.TypeofNativeImage
-import typingsSlinky.electron.TypeofNotification
-import typingsSlinky.electron.TypeofSession
-import typingsSlinky.electron.TypeofTouchBar
-import typingsSlinky.electron.TypeofWebContents
+import typingsSlinky.electron.anon.TypeofBrowserView
+import typingsSlinky.electron.anon.TypeofBrowserWindow
+import typingsSlinky.electron.anon.TypeofMenu
+import typingsSlinky.electron.anon.TypeofNativeImage
+import typingsSlinky.electron.anon.TypeofNotification
+import typingsSlinky.electron.anon.TypeofSession
+import typingsSlinky.electron.anon.TypeofTouchBar
+import typingsSlinky.electron.anon.TypeofWebContents
 import typingsSlinky.electron.electronStrings.host
 import typingsSlinky.electron.electronStrings.hostname
 import typingsSlinky.electron.electronStrings.method
 import typingsSlinky.electron.electronStrings.partition
 import typingsSlinky.electron.electronStrings.path
 import typingsSlinky.electron.electronStrings.port
+import typingsSlinky.electron.electronStrings.protocol
 import typingsSlinky.electron.electronStrings.redirect
 import typingsSlinky.electron.electronStrings.url
 import scala.scalajs.js
@@ -27,7 +28,7 @@ trait MainInterface extends CommonInterface {
   var BrowserView: TypeofBrowserView = js.native
   var BrowserWindow: TypeofBrowserWindow = js.native
   var ClientRequest: Instantiable1[
-    /* options */ method | url | typingsSlinky.electron.electronStrings.session | partition | typingsSlinky.electron.electronStrings.protocol | host | hostname | port | path | redirect, 
+    /* options */ method | url | typingsSlinky.electron.electronStrings.session | partition | protocol | host | hostname | port | path | redirect, 
     typingsSlinky.electron.Electron.ClientRequest
   ] = js.native
   var Cookies: Instantiable0[typingsSlinky.electron.Electron.Cookies] = js.native
@@ -40,21 +41,21 @@ trait MainInterface extends CommonInterface {
   var TouchBar: TypeofTouchBar = js.native
   var Tray: Instantiable1[/* image */ NativeImage_ | String, typingsSlinky.electron.Electron.Tray] = js.native
   var WebRequest: Instantiable0[typingsSlinky.electron.Electron.WebRequest] = js.native
-  var app: App_ = js.native
-  var autoUpdater: AutoUpdater_ = js.native
-  var contentTracing: ContentTracing_ = js.native
-  var dialog: Dialog_ = js.native
-  var globalShortcut: GlobalShortcut_ = js.native
-  var inAppPurchase: InAppPurchase_ = js.native
-  var ipcMain: IpcMain_ = js.native
-  var net: Net_ = js.native
-  var netLog: NetLog_ = js.native
-  var powerMonitor: PowerMonitor_ = js.native
-  var powerSaveBlocker: PowerSaveBlocker_ = js.native
-  var protocol: Protocol_ = js.native
-  var screen: Screen_ = js.native
+  var app: App = js.native
+  var autoUpdater: AutoUpdater = js.native
+  var contentTracing: ContentTracing = js.native
+  var dialog: Dialog = js.native
+  var globalShortcut: GlobalShortcut = js.native
+  var inAppPurchase: InAppPurchase = js.native
+  var ipcMain: IpcMain = js.native
+  var net: Net = js.native
+  var netLog: NetLog = js.native
+  var powerMonitor: PowerMonitor = js.native
+  var powerSaveBlocker: PowerSaveBlocker = js.native
+  var protocol: Protocol = js.native
+  var screen: Screen = js.native
   var session: TypeofSession = js.native
-  var systemPreferences: SystemPreferences_ = js.native
+  var systemPreferences: SystemPreferences = js.native
   var webContents: TypeofWebContents = js.native
 }
 
@@ -64,7 +65,7 @@ object MainInterface {
     BrowserView: TypeofBrowserView,
     BrowserWindow: TypeofBrowserWindow,
     ClientRequest: Instantiable1[
-      /* options */ method | url | typingsSlinky.electron.electronStrings.session | partition | typingsSlinky.electron.electronStrings.protocol | host | hostname | port | path | redirect, 
+      /* options */ method | url | typingsSlinky.electron.electronStrings.session | partition | protocol | host | hostname | port | path | redirect, 
       ClientRequest
     ],
     Cookies: Instantiable0[Cookies],
@@ -77,25 +78,25 @@ object MainInterface {
     TouchBar: TypeofTouchBar,
     Tray: Instantiable1[/* image */ NativeImage_ | String, Tray],
     WebRequest: Instantiable0[WebRequest],
-    app: App_,
-    autoUpdater: AutoUpdater_,
-    clipboard: Clipboard_,
-    contentTracing: ContentTracing_,
-    crashReporter: CrashReporter_,
-    dialog: Dialog_,
-    globalShortcut: GlobalShortcut_,
-    inAppPurchase: InAppPurchase_,
-    ipcMain: IpcMain_,
+    app: App,
+    autoUpdater: AutoUpdater,
+    clipboard: Clipboard,
+    contentTracing: ContentTracing,
+    crashReporter: CrashReporter,
+    dialog: Dialog,
+    globalShortcut: GlobalShortcut,
+    inAppPurchase: InAppPurchase,
+    ipcMain: IpcMain,
     nativeImage: TypeofNativeImage,
-    net: Net_,
-    netLog: NetLog_,
-    powerMonitor: PowerMonitor_,
-    powerSaveBlocker: PowerSaveBlocker_,
-    protocol: Protocol_,
-    screen: Screen_,
+    net: Net,
+    netLog: NetLog,
+    powerMonitor: PowerMonitor,
+    powerSaveBlocker: PowerSaveBlocker,
+    protocol: Protocol,
+    screen: Screen,
     session: TypeofSession,
-    shell: Shell_,
-    systemPreferences: SystemPreferences_,
+    shell: Shell,
+    systemPreferences: SystemPreferences,
     webContents: TypeofWebContents
   ): MainInterface = {
     val __obj = js.Dynamic.literal(BrowserView = BrowserView.asInstanceOf[js.Any], BrowserWindow = BrowserWindow.asInstanceOf[js.Any], ClientRequest = ClientRequest.asInstanceOf[js.Any], Cookies = Cookies.asInstanceOf[js.Any], Debugger = Debugger.asInstanceOf[js.Any], DownloadItem = DownloadItem.asInstanceOf[js.Any], IncomingMessage = IncomingMessage.asInstanceOf[js.Any], Menu = Menu.asInstanceOf[js.Any], MenuItem = MenuItem.asInstanceOf[js.Any], Notification = Notification.asInstanceOf[js.Any], TouchBar = TouchBar.asInstanceOf[js.Any], Tray = Tray.asInstanceOf[js.Any], WebRequest = WebRequest.asInstanceOf[js.Any], app = app.asInstanceOf[js.Any], autoUpdater = autoUpdater.asInstanceOf[js.Any], clipboard = clipboard.asInstanceOf[js.Any], contentTracing = contentTracing.asInstanceOf[js.Any], crashReporter = crashReporter.asInstanceOf[js.Any], dialog = dialog.asInstanceOf[js.Any], globalShortcut = globalShortcut.asInstanceOf[js.Any], inAppPurchase = inAppPurchase.asInstanceOf[js.Any], ipcMain = ipcMain.asInstanceOf[js.Any], nativeImage = nativeImage.asInstanceOf[js.Any], net = net.asInstanceOf[js.Any], netLog = netLog.asInstanceOf[js.Any], powerMonitor = powerMonitor.asInstanceOf[js.Any], powerSaveBlocker = powerSaveBlocker.asInstanceOf[js.Any], protocol = protocol.asInstanceOf[js.Any], screen = screen.asInstanceOf[js.Any], session = session.asInstanceOf[js.Any], shell = shell.asInstanceOf[js.Any], systemPreferences = systemPreferences.asInstanceOf[js.Any], webContents = webContents.asInstanceOf[js.Any])
@@ -122,7 +123,7 @@ object MainInterface {
     @scala.inline
     def withClientRequest(
       value: Instantiable1[
-          /* options */ method | url | typingsSlinky.electron.electronStrings.session | partition | typingsSlinky.electron.electronStrings.protocol | host | hostname | port | path | redirect, 
+          /* options */ method | url | typingsSlinky.electron.electronStrings.session | partition | protocol | host | hostname | port | path | redirect, 
           ClientRequest
         ]
     ): Self = {
@@ -191,79 +192,79 @@ object MainInterface {
         ret
     }
     @scala.inline
-    def withApp(value: App_): Self = {
+    def withApp(value: App): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("app")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withAutoUpdater(value: AutoUpdater_): Self = {
+    def withAutoUpdater(value: AutoUpdater): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("autoUpdater")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withContentTracing(value: ContentTracing_): Self = {
+    def withContentTracing(value: ContentTracing): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentTracing")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withDialog(value: Dialog_): Self = {
+    def withDialog(value: Dialog): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dialog")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withGlobalShortcut(value: GlobalShortcut_): Self = {
+    def withGlobalShortcut(value: GlobalShortcut): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("globalShortcut")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withInAppPurchase(value: InAppPurchase_): Self = {
+    def withInAppPurchase(value: InAppPurchase): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("inAppPurchase")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withIpcMain(value: IpcMain_): Self = {
+    def withIpcMain(value: IpcMain): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ipcMain")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withNet(value: Net_): Self = {
+    def withNet(value: Net): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("net")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withNetLog(value: NetLog_): Self = {
+    def withNetLog(value: NetLog): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("netLog")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPowerMonitor(value: PowerMonitor_): Self = {
+    def withPowerMonitor(value: PowerMonitor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("powerMonitor")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPowerSaveBlocker(value: PowerSaveBlocker_): Self = {
+    def withPowerSaveBlocker(value: PowerSaveBlocker): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("powerSaveBlocker")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withProtocol(value: Protocol_): Self = {
+    def withProtocol(value: Protocol): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("protocol")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withScreen(value: Screen_): Self = {
+    def withScreen(value: Screen): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("screen")(value.asInstanceOf[js.Any])
         ret
@@ -275,7 +276,7 @@ object MainInterface {
         ret
     }
     @scala.inline
-    def withSystemPreferences(value: SystemPreferences_): Self = {
+    def withSystemPreferences(value: SystemPreferences): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("systemPreferences")(value.asInstanceOf[js.Any])
         ret

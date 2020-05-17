@@ -1,7 +1,7 @@
 package typingsSlinky.antd.mod
 
-import typingsSlinky.antd.AnonType
-import typingsSlinky.antd.TypeofRadioGroup
+import typingsSlinky.antd.anon.Type
+import typingsSlinky.antd.anon.TypeofRadioGroup
 import typingsSlinky.antd.radioButtonMod.RadioButtonProps
 import typingsSlinky.antd.radioInterfaceMod.RadioGroupContextProps
 import typingsSlinky.antd.radioMod.default
@@ -23,6 +23,6 @@ object Radio extends js.Object {
   var Button: ForwardRefExoticComponent[RadioButtonProps with RefAttributes[_]] = js.native
   var Group: TypeofRadioGroup = js.native
   var contextType: Context[RadioGroupContextProps | Null] = js.native
-  var defaultProps: AnonType = js.native
+  var defaultProps: Type = js.native
 }
 

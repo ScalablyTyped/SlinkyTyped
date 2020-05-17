@@ -1,8 +1,8 @@
 package typingsSlinky.blueprintjsTable.resizableMod
 
 import typingsSlinky.blueprintjsCore.mod.AbstractPureComponent2
-import typingsSlinky.blueprintjsTable.AnonIsResizable
-import typingsSlinky.blueprintjsTable.AnonSize
+import typingsSlinky.blueprintjsTable.anon.IsResizable
+import typingsSlinky.blueprintjsTable.anon.Size
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +28,7 @@ class Resizable ()
 @JSImport("@blueprintjs/table/lib/esm/interactions/resizable", "Resizable")
 @js.native
 object Resizable extends js.Object {
-  var defaultProps: AnonIsResizable = js.native
-  def getDerivedStateFromProps(hasSize: IResizableProps, prevState: IResizeableState): AnonSize = js.native
+  var defaultProps: IsResizable = js.native
+  def getDerivedStateFromProps(hasSize: IResizableProps, prevState: IResizeableState): Size = js.native
 }
 

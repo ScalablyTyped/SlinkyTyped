@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdkClientS3Browser.typesListMultipartUploadsOutputMod
 
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.url
-import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientS3Browser.typesCommonPrefixMod.UnmarshalledCommonPrefix
 import typingsSlinky.awsSdkClientS3Browser.typesMultipartUploadMod.UnmarshalledMultipartUpload
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ListMultipartUploadsOutput
   extends MetadataBearer
-     with _OutputTypesUnion {
+     with OutputTypesUnion {
   /**
     * <p>Name of the bucket to which the multipart upload was initiated.</p>
     */

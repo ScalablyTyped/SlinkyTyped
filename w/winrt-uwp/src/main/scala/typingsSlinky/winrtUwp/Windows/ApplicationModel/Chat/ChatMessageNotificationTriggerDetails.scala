@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the message notification triggered from a registered background task. A chat app can receive notifications of incoming messages or send events by setting a task trigger and task entry point. */
-@JSGlobal("Windows.ApplicationModel.Chat.ChatMessageNotificationTriggerDetails")
 @js.native
-abstract class ChatMessageNotificationTriggerDetails () extends js.Object {
+trait ChatMessageNotificationTriggerDetails extends js.Object {
   /** Gets the message associated with the notification. This is either an incoming message or an outgoing message with a send status event. */
   var chatMessage: ChatMessage = js.native
   /** Gets a Boolean value indicating if the background task should issue a toast notification for the message. */
@@ -18,5 +17,57 @@ abstract class ChatMessageNotificationTriggerDetails () extends js.Object {
   var shouldUpdateBadge: Boolean = js.native
   /** Gets a Boolean value indicating that the background task should update the app's tile count for the message. */
   var shouldUpdateDetailText: Boolean = js.native
+}
+
+object ChatMessageNotificationTriggerDetails {
+  @scala.inline
+  def apply(
+    chatMessage: ChatMessage,
+    shouldDisplayToast: Boolean,
+    shouldUpdateActionCenter: Boolean,
+    shouldUpdateBadge: Boolean,
+    shouldUpdateDetailText: Boolean
+  ): ChatMessageNotificationTriggerDetails = {
+    val __obj = js.Dynamic.literal(chatMessage = chatMessage.asInstanceOf[js.Any], shouldDisplayToast = shouldDisplayToast.asInstanceOf[js.Any], shouldUpdateActionCenter = shouldUpdateActionCenter.asInstanceOf[js.Any], shouldUpdateBadge = shouldUpdateBadge.asInstanceOf[js.Any], shouldUpdateDetailText = shouldUpdateDetailText.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ChatMessageNotificationTriggerDetails]
+  }
+  @scala.inline
+  implicit class ChatMessageNotificationTriggerDetailsOps[Self <: ChatMessageNotificationTriggerDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChatMessage(value: ChatMessage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chatMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShouldDisplayToast(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldDisplayToast")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShouldUpdateActionCenter(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldUpdateActionCenter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShouldUpdateBadge(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldUpdateBadge")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShouldUpdateDetailText(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldUpdateDetailText")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

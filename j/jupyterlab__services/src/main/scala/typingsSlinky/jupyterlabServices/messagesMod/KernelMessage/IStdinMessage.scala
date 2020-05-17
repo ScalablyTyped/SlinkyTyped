@@ -1,24 +1,24 @@
 package typingsSlinky.jupyterlabServices.messagesMod.KernelMessage
 
-import typingsSlinky.jupyterlabServices.AnonAllowstdin
-import typingsSlinky.jupyterlabServices.AnonArguments
-import typingsSlinky.jupyterlabServices.AnonBody
-import typingsSlinky.jupyterlabServices.AnonCode
-import typingsSlinky.jupyterlabServices.AnonCodeString
-import typingsSlinky.jupyterlabServices.AnonCommid
-import typingsSlinky.jupyterlabServices.AnonCursorpos
-import typingsSlinky.jupyterlabServices.AnonData
-import typingsSlinky.jupyterlabServices.AnonEname
-import typingsSlinky.jupyterlabServices.AnonEvent
-import typingsSlinky.jupyterlabServices.AnonExecutioncount
-import typingsSlinky.jupyterlabServices.AnonExecutionstate
-import typingsSlinky.jupyterlabServices.AnonMetadata
-import typingsSlinky.jupyterlabServices.AnonName
-import typingsSlinky.jupyterlabServices.AnonPassword
-import typingsSlinky.jupyterlabServices.AnonTarget
-import typingsSlinky.jupyterlabServices.AnonTransient
-import typingsSlinky.jupyterlabServices.AnonTransientAnonDisplayidString
-import typingsSlinky.jupyterlabServices.AnonWait
+import typingsSlinky.jupyterlabServices.anon.Allowstdin
+import typingsSlinky.jupyterlabServices.anon.Arguments
+import typingsSlinky.jupyterlabServices.anon.Body
+import typingsSlinky.jupyterlabServices.anon.Code
+import typingsSlinky.jupyterlabServices.anon.CodeString
+import typingsSlinky.jupyterlabServices.anon.Commid
+import typingsSlinky.jupyterlabServices.anon.Cursorpos
+import typingsSlinky.jupyterlabServices.anon.Data
+import typingsSlinky.jupyterlabServices.anon.Ename
+import typingsSlinky.jupyterlabServices.anon.Event
+import typingsSlinky.jupyterlabServices.anon.Executioncount
+import typingsSlinky.jupyterlabServices.anon.Executionstate
+import typingsSlinky.jupyterlabServices.anon.Metadata
+import typingsSlinky.jupyterlabServices.anon.Name
+import typingsSlinky.jupyterlabServices.anon.Password
+import typingsSlinky.jupyterlabServices.anon.Target
+import typingsSlinky.jupyterlabServices.anon.Transient
+import typingsSlinky.jupyterlabServices.anon.TransientDisplayidString
+import typingsSlinky.jupyterlabServices.anon.Wait
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.stdin
 import typingsSlinky.phosphorCoreutils.jsonMod.JSONObject
 import scala.scalajs.js
@@ -38,9 +38,9 @@ object IStdinMessage {
   @scala.inline
   def apply[T](
     channel: stdin,
-    content: AnonWait | AnonCommid | (ReplyContent[
+    content: Wait | Commid | (ReplyContent[
       ICommInfoReply | ICompleteReply | IHistoryReply | IInfoReply | IInputReply | IInspectReply | IIsCompleteReplyIncomplete | IIsCompleteReplyOther
-    ]) | AnonTarget | AnonData | AnonCode | AnonMetadata | AnonEname | AnonExecutioncount | (ReplyContent[IExecuteReply] with IExecuteCount) | AnonAllowstdin | AnonTransient | IHistoryRequestRange | IHistoryRequestSearch | IHistoryRequestTail | js.Object | AnonPassword | AnonCursorpos | AnonCodeString | AnonExecutionstate | AnonName | ((/* import warning: importer.ImportType#apply Failed type conversion: @jupyterlab/services.@jupyterlab/services/lib/kernel/messages.KernelMessage.IDisplayDataMsg['content'] */ js.Any) with AnonTransientAnonDisplayidString) | AnonArguments | AnonBody | AnonEvent,
+    ]) | Target | Data | Code | Metadata | Ename | Executioncount | (ReplyContent[IExecuteReply] with IExecuteCount) | Allowstdin | Transient | IHistoryRequestRange | IHistoryRequestSearch | IHistoryRequestTail | js.Object | Password | Cursorpos | CodeString | Executionstate | Name | ((/* import warning: importer.ImportType#apply Failed type conversion: @jupyterlab/services.@jupyterlab/services/lib/kernel/messages.KernelMessage.IDisplayDataMsg['content'] */ js.Any) with TransientDisplayidString) | Arguments | Body | Event,
     header: IHeader[T],
     metadata: JSONObject,
     parent_header: IHeader[MessageType] | js.Object

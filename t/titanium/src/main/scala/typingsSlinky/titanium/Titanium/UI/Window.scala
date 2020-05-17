@@ -42,9 +42,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * The Window is an empty drawing surface or container.
 		 */
-@JSGlobal("Titanium.UI.Window")
 @js.native
-class Window () extends View {
+trait Window extends View {
   /**
   			 * Contains a reference to the Android Activity object associated with this window.
   			 */

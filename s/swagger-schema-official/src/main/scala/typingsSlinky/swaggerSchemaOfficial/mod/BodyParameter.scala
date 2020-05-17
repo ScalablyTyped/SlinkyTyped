@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 
 /* Inlined swagger-schema-official.swagger-schema-official.BaseParameter & {  in  :'body',   schema ? :swagger-schema-official.swagger-schema-official.Schema} */
 @js.native
-trait BodyParameter extends js.Object {
+trait BodyParameter extends Parameter {
   var description: js.UndefOr[String] = js.native
   var in: (body | query | path | header | formData) with body = js.native
   var name: String = js.native

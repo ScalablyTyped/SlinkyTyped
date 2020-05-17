@@ -1,7 +1,7 @@
 package typingsSlinky.reactEasyCrop.mod
 
-import typingsSlinky.reactEasyCrop.AnonContainerClassName
-import typingsSlinky.reactEasyCrop.AnonContainerStyle
+import typingsSlinky.reactEasyCrop.anon.ContainerClassName
+import typingsSlinky.reactEasyCrop.anon.ContainerStyle
 import typingsSlinky.reactEasyCrop.reactEasyCropStrings.rect
 import typingsSlinky.reactEasyCrop.reactEasyCropStrings.round
 import scala.scalajs.js
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CropperProps extends js.Object {
   var aspect: js.UndefOr[Double] = js.native
-  var classes: js.UndefOr[AnonContainerClassName] = js.native
+  var classes: js.UndefOr[ContainerClassName] = js.native
   var crop: Location = js.native
   var cropShape: js.UndefOr[rect | round] = js.native
   var cropSize: js.UndefOr[Size] = js.native
@@ -30,7 +30,7 @@ trait CropperProps extends js.Object {
   var restrictPosition: js.UndefOr[Boolean] = js.native
   var rotation: js.UndefOr[Double] = js.native
   var showGrid: js.UndefOr[Boolean] = js.native
-  var style: js.UndefOr[AnonContainerStyle] = js.native
+  var style: js.UndefOr[ContainerStyle] = js.native
   var zoom: js.UndefOr[Double] = js.native
   var zoomSpeed: js.UndefOr[Double] = js.native
   def onCropChange(location: Location): Unit = js.native
@@ -79,7 +79,7 @@ object CropperProps {
         ret
     }
     @scala.inline
-    def withClasses(value: AnonContainerClassName): Self = {
+    def withClasses(value: ContainerClassName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
         ret
@@ -283,7 +283,7 @@ object CropperProps {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonContainerStyle): Self = {
+    def withStyle(value: ContainerStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

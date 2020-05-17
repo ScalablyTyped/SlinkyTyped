@@ -1,23 +1,13 @@
 package typingsSlinky.babylonjs.BABYLON
 
 import org.scalajs.dom.raw.PointerEvent
-import typingsSlinky.babylonjs.AnonOffsetX
+import typingsSlinky.babylonjs.anon.OffsetX
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.FreeCameraMouseInput")
 @js.native
-/**
-  * Manage the mouse inputs to control the movement of a free camera.
-  * @see http://doc.babylonjs.com/how_to/customizing_camera_inputs
-  * @param touchEnabled Defines if touch is enabled or not
-  */
-class FreeCameraMouseInput () extends ICameraInput[FreeCamera] {
-  def this(/**
-    * Define if touch is enabled in the mouse input
-    */
-  touchEnabled: Boolean) = this()
+trait FreeCameraMouseInput extends ICameraInput[FreeCamera] {
   /**
     * @hidden
     * If the camera should be rotated automatically based on pointer movement
@@ -42,7 +32,7 @@ class FreeCameraMouseInput () extends ICameraInput[FreeCamera] {
   /**
     * Observable for when a pointer move event occurs containing the move offset
     */
-  var onPointerMovedObservable: Observable[AnonOffsetX] = js.native
+  var onPointerMovedObservable: Observable[OffsetX] = js.native
   var previousPosition: js.Any = js.native
   /**
     * Define if touch is enabled in the mouse input

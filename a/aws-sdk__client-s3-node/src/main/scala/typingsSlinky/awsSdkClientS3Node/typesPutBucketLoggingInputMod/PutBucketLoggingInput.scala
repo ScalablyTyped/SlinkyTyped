@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientS3Node.typesPutBucketLoggingInputMod
 
-import typingsSlinky.awsSdkClientS3Node.inputTypesUnionMod._InputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientS3Node.typesBucketLoggingStatusMod.BucketLoggingStatus
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.httpMod.NodeHttpOptions
@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PutBucketLoggingInput extends _InputTypesUnion {
+trait PutBucketLoggingInput extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *

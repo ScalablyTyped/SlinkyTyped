@@ -1,10 +1,10 @@
 package typingsSlinky.mcustomscrollbar.MCustomScrollbar
 
-import typingsSlinky.mcustomscrollbar.AnonAlwaysTriggerOffsets
-import typingsSlinky.mcustomscrollbar.AnonAutoExpandHorizontalScroll
-import typingsSlinky.mcustomscrollbar.AnonAxis
-import typingsSlinky.mcustomscrollbar.AnonEnable
-import typingsSlinky.mcustomscrollbar.AnonScrollAmount
+import typingsSlinky.mcustomscrollbar.anon.AlwaysTriggerOffsets
+import typingsSlinky.mcustomscrollbar.anon.AutoExpandHorizontalScroll
+import typingsSlinky.mcustomscrollbar.anon.Axis
+import typingsSlinky.mcustomscrollbar.anon.Enable
+import typingsSlinky.mcustomscrollbar.anon.ScrollAmount
 import typingsSlinky.mcustomscrollbar.mcustomscrollbarStrings.inside
 import typingsSlinky.mcustomscrollbar.mcustomscrollbarStrings.outside
 import typingsSlinky.mcustomscrollbar.mcustomscrollbarStrings.x
@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait CustomScrollbarOptions extends js.Object {
-  var advanced: js.UndefOr[AnonAutoExpandHorizontalScroll] = js.native
+  var advanced: js.UndefOr[AutoExpandHorizontalScroll] = js.native
   /**
     * Always keep scrollbar(s) visible, even when there’s nothing to scroll.
     * 0 – disable (default)
@@ -44,7 +44,7 @@ trait CustomScrollbarOptions extends js.Object {
   /**
     * All of the following callbacks option have examples in the callback demo - http://manos.malihu.gr/tuts/custom-scrollbar-plugin/callbacks_example.html
     */
-  var callbacks: js.UndefOr[AnonAlwaysTriggerOffsets] = js.native
+  var callbacks: js.UndefOr[AlwaysTriggerOffsets] = js.native
   /**
     * Enable or disable content touch-swipe scrolling for touch-enabled devices.
     * To completely disable, set contentTouchScroll: false.
@@ -58,7 +58,7 @@ trait CustomScrollbarOptions extends js.Object {
   /**
     * Keyboard support 
     */
-  var keyboard: js.UndefOr[AnonEnable] = js.native
+  var keyboard: js.UndefOr[Enable] = js.native
   /**
     * Enable or disable applying scrollbar(s) on all elements matching the current selector, now and in the future.
     * Set live: true when you need to add scrollbar(s) on elements that do not yet exist in the page. 
@@ -74,12 +74,12 @@ trait CustomScrollbarOptions extends js.Object {
   /**
     * Mouse wheel support
     */
-  var mouseWheel: js.UndefOr[AnonAxis] = js.native
+  var mouseWheel: js.UndefOr[Axis] = js.native
   /**
     * Mouse wheel scrolling pixels amount, value in pixels (integer) or "auto" (script calculates and sets pixels amount according to content length)
     */
   var mouseWheelPixels: js.UndefOr[js.Any] = js.native
-  var scrollButtons: js.UndefOr[AnonScrollAmount] = js.native
+  var scrollButtons: js.UndefOr[ScrollAmount] = js.native
   /**
     * Scrolling inertia (easing), value in milliseconds (0 for no scrolling inertia)
     */
@@ -142,7 +142,7 @@ object CustomScrollbarOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAdvanced(value: AnonAutoExpandHorizontalScroll): Self = {
+    def withAdvanced(value: AutoExpandHorizontalScroll): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("advanced")(value.asInstanceOf[js.Any])
         ret
@@ -202,7 +202,7 @@ object CustomScrollbarOptions {
         ret
     }
     @scala.inline
-    def withAxis(value: x | y | yx): Self = {
+    def withAxis(value: typingsSlinky.mcustomscrollbar.mcustomscrollbarStrings.x | y | yx): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
         ret
@@ -214,7 +214,7 @@ object CustomScrollbarOptions {
         ret
     }
     @scala.inline
-    def withCallbacks(value: AnonAlwaysTriggerOffsets): Self = {
+    def withCallbacks(value: AlwaysTriggerOffsets): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("callbacks")(value.asInstanceOf[js.Any])
         ret
@@ -250,7 +250,7 @@ object CustomScrollbarOptions {
         ret
     }
     @scala.inline
-    def withKeyboard(value: AnonEnable): Self = {
+    def withKeyboard(value: Enable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(value.asInstanceOf[js.Any])
         ret
@@ -286,7 +286,7 @@ object CustomScrollbarOptions {
         ret
     }
     @scala.inline
-    def withMouseWheel(value: AnonAxis): Self = {
+    def withMouseWheel(value: Axis): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mouseWheel")(value.asInstanceOf[js.Any])
         ret
@@ -310,7 +310,7 @@ object CustomScrollbarOptions {
         ret
     }
     @scala.inline
-    def withScrollButtons(value: AnonScrollAmount): Self = {
+    def withScrollButtons(value: ScrollAmount): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollButtons")(value.asInstanceOf[js.Any])
         ret

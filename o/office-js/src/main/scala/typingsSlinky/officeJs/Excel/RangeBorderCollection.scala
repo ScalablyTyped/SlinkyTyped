@@ -23,9 +23,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.RangeBorderCollection")
 @js.native
-class RangeBorderCollection () extends ClientObject {
+trait RangeBorderCollection extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_RangeBorderCollection: RequestContext = js.native

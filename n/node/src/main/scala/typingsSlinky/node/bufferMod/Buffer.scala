@@ -2,11 +2,11 @@ package typingsSlinky.node.bufferMod
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.node.AnonToPrimitive
-import typingsSlinky.node.AnonValueOf
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.ArrayBufferView
 import typingsSlinky.node.SharedArrayBuffer
+import typingsSlinky.node.anon.ToPrimitive
+import typingsSlinky.node.anon.ValueOf
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -116,17 +116,17 @@ object Buffer
     */
   def from(data: js.Array[Double]): typingsSlinky.node.Buffer = js.native
   def from(data: js.typedarray.Uint8Array): typingsSlinky.node.Buffer = js.native
-  def from(obj: AnonToPrimitive): typingsSlinky.node.Buffer = js.native
-  def from(obj: AnonToPrimitive, byteOffset: Double): typingsSlinky.node.Buffer = js.native
-  def from(obj: AnonToPrimitive, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
+  def from(obj: ToPrimitive): typingsSlinky.node.Buffer = js.native
+  def from(obj: ToPrimitive, byteOffset: Double): typingsSlinky.node.Buffer = js.native
+  def from(obj: ToPrimitive, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
   /**
     * Creates a new buffer containing the coerced value of an object
     * A `TypeError` will be thrown if {obj} has not mentioned methods or is not of other type appropriate for `Buffer.from()` variants.
     * @param obj An object supporting `Symbol.toPrimitive` or `valueOf()`.
     */
-  def from(obj: AnonValueOf): typingsSlinky.node.Buffer = js.native
-  def from(obj: AnonValueOf, byteOffset: Double): typingsSlinky.node.Buffer = js.native
-  def from(obj: AnonValueOf, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
+  def from(obj: ValueOf): typingsSlinky.node.Buffer = js.native
+  def from(obj: ValueOf, byteOffset: Double): typingsSlinky.node.Buffer = js.native
+  def from(obj: ValueOf, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
   /**
     * Creates a new Buffer containing the given JavaScript string {str}.
     * If provided, the {encoding} parameter identifies the character encoding.

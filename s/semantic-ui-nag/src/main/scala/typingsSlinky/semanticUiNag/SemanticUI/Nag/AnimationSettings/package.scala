@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object AnimationSettings {
-  type Param = (typingsSlinky.semanticUiNag.PickImplshow | typingsSlinky.semanticUiNag.PickImplhide) with typingsSlinky.semanticUiNag.PartialPickImplkeyofImplHide
+  type Param = (typingsSlinky.semanticUiNag.anon.PickImplshow | typingsSlinky.semanticUiNag.anon.PickImplhide) with typingsSlinky.semanticUiNag.anon.PartialPickImplkeyofImplHide
 }

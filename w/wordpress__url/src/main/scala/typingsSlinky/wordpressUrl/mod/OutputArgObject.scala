@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait OutputArgObject
   extends /* key */ StringDictionary[OutputArg]
-     with _OutputArg
+     with OutputArg
 
 object OutputArgObject {
   @scala.inline

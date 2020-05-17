@@ -1,6 +1,6 @@
 package typingsSlinky.chaiAlmost.mod
 
-import typingsSlinky.chai.Chai_.ChaiPlugin
+import typingsSlinky.chai.Chai.ChaiPlugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

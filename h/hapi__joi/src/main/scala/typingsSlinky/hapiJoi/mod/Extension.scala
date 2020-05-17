@@ -1,7 +1,7 @@
 package typingsSlinky.hapiJoi.mod
 
-import typingsSlinky.hapiJoi.AnonBuild
-import typingsSlinky.hapiJoi.AnonTo
+import typingsSlinky.hapiJoi.anon.Build
+import typingsSlinky.hapiJoi.anon.To
 import typingsSlinky.std.Record
 import typingsSlinky.std.ThisType
 import scala.scalajs.js
@@ -15,10 +15,10 @@ trait Extension extends js.Object {
   /**
     * undocumented options
     */
-  var cast: js.UndefOr[Record[String, AnonTo]] = js.native
+  var cast: js.UndefOr[Record[String, To]] = js.native
   var coerce: js.UndefOr[CoerceFunction | CoerceObject] = js.native
   var flags: js.UndefOr[Record[String, ExtensionFlag]] = js.native
-  var manifest: js.UndefOr[AnonBuild] = js.native
+  var manifest: js.UndefOr[Build] = js.native
   var messages: js.UndefOr[LanguageMessages | String] = js.native
   var modifiers: js.UndefOr[Record[String, js.Function2[/* rule */ _, /* enabled */ js.UndefOr[Boolean], _]]] = js.native
   var overrides: js.UndefOr[Record[String, js.Function1[/* value */ _, Schema]]] = js.native
@@ -75,7 +75,7 @@ object Extension {
         ret
     }
     @scala.inline
-    def withCast(value: Record[String, AnonTo]): Self = {
+    def withCast(value: Record[String, To]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cast")(value.asInstanceOf[js.Any])
         ret
@@ -117,7 +117,7 @@ object Extension {
         ret
     }
     @scala.inline
-    def withManifest(value: AnonBuild): Self = {
+    def withManifest(value: Build): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("manifest")(value.asInstanceOf[js.Any])
         ret

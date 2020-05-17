@@ -1,6 +1,6 @@
 package typingsSlinky.qlik.mod
 
-import typingsSlinky.qlik.AnonData
+import typingsSlinky.qlik.anon.Data
 import typingsSlinky.qlik.qlikStrings.accordion
 import typingsSlinky.qlik.qlikStrings.items
 import scala.scalajs.js
@@ -10,13 +10,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Definition extends js.Object {
   var component: accordion = js.native
-  var items: AnonData = js.native
+  var items: Data = js.native
   var `type`: items = js.native
 }
 
 object Definition {
   @scala.inline
-  def apply(component: accordion, items: AnonData, `type`: items): Definition = {
+  def apply(component: accordion, items: Data, `type`: items): Definition = {
     val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Definition]
@@ -34,7 +34,7 @@ object Definition {
         ret
     }
     @scala.inline
-    def withItems(value: AnonData): Self = {
+    def withItems(value: Data): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
         ret

@@ -1,5 +1,6 @@
 package typingsSlinky.isSvg
 
+import typingsSlinky.isSvg.anon.Call
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +13,7 @@ object mod extends js.Object {
   // declare function isSvg(input: string | Buffer): boolean;
   // export = isSvg;
   @JSName("default")
-  var default_Original: AnonCall = js.native
+  var default_Original: Call = js.native
   /**
   	Check if a string or buffer is [SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics).
   	@param input - The data to check.

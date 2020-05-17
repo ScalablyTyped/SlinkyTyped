@@ -6,13 +6,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Specifies the texture resource used in a 2D texture material. */
-@JSGlobal("Windows.Graphics.Printing3D.Printing3DTextureResource")
 @js.native
-/** Creates an instance of the Printing3DTextureResource class. */
-class Printing3DTextureResource () extends js.Object {
+trait Printing3DTextureResource extends js.Object {
   /** Gets or sets the name of the texture resource. */
   var name: String = js.native
   /** Gets or sets the image stream of the texture resource. */
   var textureData: IRandomAccessStreamWithContentType = js.native
+}
+
+object Printing3DTextureResource {
+  @scala.inline
+  def apply(name: String, textureData: IRandomAccessStreamWithContentType): Printing3DTextureResource = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], textureData = textureData.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Printing3DTextureResource]
+  }
+  @scala.inline
+  implicit class Printing3DTextureResourceOps[Self <: Printing3DTextureResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextureData(value: IRandomAccessStreamWithContentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textureData")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

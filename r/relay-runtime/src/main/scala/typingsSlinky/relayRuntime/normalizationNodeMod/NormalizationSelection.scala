@@ -1,7 +1,5 @@
 package typingsSlinky.relayRuntime.normalizationNodeMod
 
-import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.relayRuntime.AnonFragmentName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,61 +16,16 @@ trait NormalizationSelection extends js.Object
 
 object NormalizationSelection {
   @scala.inline
-  def NormalizationLinkedHandle(handle: String, key: String, kind: String, name: String): NormalizationSelection = {
-    val __obj = js.Dynamic.literal(handle = handle.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NormalizationSelection]
-  }
+  implicit def apply(value: NormalizationClientExtension): NormalizationSelection = value.asInstanceOf[NormalizationSelection]
   @scala.inline
-  def NormalizationInlineFragment(kind: String, selections: js.Array[NormalizationSelection], `type`: String): NormalizationSelection = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NormalizationSelection]
-  }
+  implicit def apply(value: NormalizationCondition): NormalizationSelection = value.asInstanceOf[NormalizationSelection]
   @scala.inline
-  def NormalizationMatchField(
-    args: js.Array[NormalizationArgument],
-    kind: String,
-    matchesByType: StringDictionary[AnonFragmentName],
-    name: String
-  ): NormalizationSelection = {
-    val __obj = js.Dynamic.literal(args = args.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], matchesByType = matchesByType.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NormalizationSelection]
-  }
+  implicit def apply(value: NormalizationField): NormalizationSelection = value.asInstanceOf[NormalizationSelection]
   @scala.inline
-  def NormalizationLinkedField(
-    args: js.Array[NormalizationArgument],
-    kind: String,
-    name: String,
-    plural: Boolean,
-    selections: js.Array[NormalizationSelection]
-  ): NormalizationSelection = {
-    val __obj = js.Dynamic.literal(args = args.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], plural = plural.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NormalizationSelection]
-  }
+  implicit def apply(value: NormalizationHandle): NormalizationSelection = value.asInstanceOf[NormalizationSelection]
   @scala.inline
-  def NormalizationCondition(
-    condition: String,
-    kind: String,
-    passingValue: Boolean,
-    selections: js.Array[NormalizationSelection]
-  ): NormalizationSelection = {
-    val __obj = js.Dynamic.literal(condition = condition.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], passingValue = passingValue.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NormalizationSelection]
-  }
+  implicit def apply(value: NormalizationInlineFragment): NormalizationSelection = value.asInstanceOf[NormalizationSelection]
   @scala.inline
-  def NormalizationClientExtension(kind: String, selections: js.Array[NormalizationSelection]): NormalizationSelection = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NormalizationSelection]
-  }
-  @scala.inline
-  def NormalizationScalarField(kind: String, name: String): NormalizationSelection = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NormalizationSelection]
-  }
-  @scala.inline
-  def NormalizationScalarHandle(handle: String, key: String, kind: String, name: String): NormalizationSelection = {
-    val __obj = js.Dynamic.literal(handle = handle.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NormalizationSelection]
-  }
+  implicit def apply(value: NormalizationMatchField): NormalizationSelection = value.asInstanceOf[NormalizationSelection]
 }
 

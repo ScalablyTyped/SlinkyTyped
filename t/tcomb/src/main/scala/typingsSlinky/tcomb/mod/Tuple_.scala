@@ -1,6 +1,6 @@
 package typingsSlinky.tcomb.mod
 
-import typingsSlinky.tcomb.AnonTypes
+import typingsSlinky.tcomb.anon.Types
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Tuple_[T] extends Type[T] {
   @JSName("meta")
-  var meta_Tuple_ : AnonTypes = js.native
+  var meta_Tuple_ : Types = js.native
   @JSName("update")
   var update_Original: Update_[T] = js.native
   def update(instance: T, spec: UpdatePatch): T = js.native

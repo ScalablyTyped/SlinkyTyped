@@ -8,7 +8,7 @@ import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNavigation.mod.NavigationParams
 import typingsSlinky.reactNavigation.mod.NavigationRoute
-import typingsSlinky.reactNavigationStack.PickPropsstylechildrensce
+import typingsSlinky.reactNavigationStack.anon.PickPropsstylechildrensce
 import typingsSlinky.reactNavigationStack.stackViewCardMod.default
 import typingsSlinky.reactNavigationStack.typesMod.NavigationStackProp
 import typingsSlinky.reactNavigationStack.typesMod.Scene

@@ -52,9 +52,8 @@ import scala.scalajs.js.annotation._
 		 * A list view is used to present information, organized in to sections and items,
 		 * in a vertically-scrolling view.
 		 */
-@JSGlobal("Titanium.UI.ListView")
 @js.native
-class ListView () extends View {
+trait ListView extends View {
   /**
   			 * Determines whether multiple items of this list view can be selected at the same time while editing the table.
   			 */

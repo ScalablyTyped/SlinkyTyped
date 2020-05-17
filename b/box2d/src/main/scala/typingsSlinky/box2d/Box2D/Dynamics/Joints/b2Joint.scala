@@ -6,9 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Box2D.Dynamics.Joints.b2Joint")
 @js.native
-class b2Joint () extends js.Object {
+trait b2Joint extends js.Object {
   /**
   		* Get the anchor point on bodyA in world coordinates.
   		* @return Anchor A point.
@@ -66,5 +65,99 @@ class b2Joint () extends js.Object {
   		* @param data Your custom data.
   		**/
   def SetUserData(data: js.Any): Unit = js.native
+}
+
+object b2Joint {
+  @scala.inline
+  def apply(
+    GetAnchorA: () => b2Vec2,
+    GetAnchorB: () => b2Vec2,
+    GetBodyA: () => b2Body,
+    GetBodyB: () => b2Body,
+    GetNext: () => b2Joint,
+    GetReactionForce: Double => b2Vec2,
+    GetReactionTorque: Double => Double,
+    GetType: () => Double,
+    GetUserData: () => js.Any,
+    IsActive: () => Boolean,
+    SetUserData: js.Any => Unit
+  ): b2Joint = {
+    val __obj = js.Dynamic.literal(GetAnchorA = js.Any.fromFunction0(GetAnchorA), GetAnchorB = js.Any.fromFunction0(GetAnchorB), GetBodyA = js.Any.fromFunction0(GetBodyA), GetBodyB = js.Any.fromFunction0(GetBodyB), GetNext = js.Any.fromFunction0(GetNext), GetReactionForce = js.Any.fromFunction1(GetReactionForce), GetReactionTorque = js.Any.fromFunction1(GetReactionTorque), GetType = js.Any.fromFunction0(GetType), GetUserData = js.Any.fromFunction0(GetUserData), IsActive = js.Any.fromFunction0(IsActive), SetUserData = js.Any.fromFunction1(SetUserData))
+    __obj.asInstanceOf[b2Joint]
+  }
+  @scala.inline
+  implicit class b2JointOps[Self <: b2Joint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetAnchorA(value: () => b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetAnchorA")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetAnchorB(value: () => b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetAnchorB")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetBodyA(value: () => b2Body): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetBodyA")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetBodyB(value: () => b2Body): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetBodyB")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetNext(value: () => b2Joint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetNext")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetReactionForce(value: Double => b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetReactionForce")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetReactionTorque(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetReactionTorque")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetType(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetUserData(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetUserData")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsActive(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsActive")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetUserData(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetUserData")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

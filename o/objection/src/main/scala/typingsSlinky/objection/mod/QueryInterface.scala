@@ -2,7 +2,7 @@ package typingsSlinky.objection.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.knex.mod.JoinClause
-import typingsSlinky.objection.AnonColumn
+import typingsSlinky.objection.anon.Column
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -1795,7 +1795,7 @@ trait QueryInterface[QM /* <: Model */, RM, RV] extends js.Object {
   def orWhereRaw(sql: String, bindings: js.Any*): QueryBuilder[QM, RM, RV] = js.native
   def orWhereRaw(sql: String, bindings: js.Any): QueryBuilder[QM, RM, RV] = js.native
   // Order by
-  def orderBy(columns: js.Array[AnonColumn | String]): QueryBuilder[QM, RM, RV] = js.native
+  def orderBy(columns: js.Array[Column | String]): QueryBuilder[QM, RM, RV] = js.native
   // Order by
   def orderBy(column: ColumnRef): QueryBuilder[QM, RM, RV] = js.native
   def orderBy(column: ColumnRef, order: String): QueryBuilder[QM, RM, RV] = js.native

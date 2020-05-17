@@ -1,6 +1,6 @@
 package typingsSlinky.angularOdataResources.OData
 
-import typingsSlinky.angularOdataResources.AnonMethod
+import typingsSlinky.angularOdataResources.anon.Method
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IResourceOptions extends js.Object {
   var isodatav4: js.UndefOr[Boolean] = js.native
-  var odata: js.UndefOr[AnonMethod] = js.native
+  var odata: js.UndefOr[Method] = js.native
   /**
     * If true then the trailing slashes from any calculated URL will be stripped (defaults to true)
     */
@@ -43,7 +43,7 @@ object IResourceOptions {
         ret
     }
     @scala.inline
-    def withOdata(value: AnonMethod): Self = {
+    def withOdata(value: Method): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("odata")(value.asInstanceOf[js.Any])
         ret

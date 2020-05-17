@@ -5,8 +5,8 @@ import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.nivoColors.mod.InheritedColorProp
 import typingsSlinky.nivoColors.mod.OrdinalColorsInstruction
-import typingsSlinky.nivoCore.AnonDictkey
-import typingsSlinky.nivoCore.AnonId
+import typingsSlinky.nivoCore.anon.Dictkey
+import typingsSlinky.nivoCore.anon.Id
 import typingsSlinky.nivoCore.mod.Box
 import typingsSlinky.nivoCore.mod.Theme
 import typingsSlinky.nivoLegends.mod.LegendProps
@@ -23,11 +23,11 @@ trait PieSvgProps extends js.Object {
   var colors: js.UndefOr[OrdinalColorsInstruction[PieDatum]] = js.native
   var cornerRadius: js.UndefOr[Double] = js.native
   var data: js.Array[PieDatum] = js.native
-  var defs: js.UndefOr[js.Array[AnonDictkey]] = js.native
+  var defs: js.UndefOr[js.Array[Dictkey]] = js.native
   var enableRadialLabels: js.UndefOr[Boolean] = js.native
   var enableSlicesLabels: js.UndefOr[Boolean] = js.native
   var endAngle: js.UndefOr[Double] = js.native
-  var fill: js.UndefOr[js.Array[AnonId[PieDatum]]] = js.native
+  var fill: js.UndefOr[js.Array[Id[PieDatum]]] = js.native
   var fit: js.UndefOr[Boolean] = js.native
   var innerRadius: js.UndefOr[Double] = js.native
   var isInteractive: js.UndefOr[Boolean] = js.native
@@ -149,7 +149,7 @@ object PieSvgProps {
         ret
     }
     @scala.inline
-    def withDefs(value: js.Array[AnonDictkey]): Self = {
+    def withDefs(value: js.Array[Dictkey]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defs")(value.asInstanceOf[js.Any])
         ret
@@ -197,7 +197,7 @@ object PieSvgProps {
         ret
     }
     @scala.inline
-    def withFill(value: js.Array[AnonId[PieDatum]]): Self = {
+    def withFill(value: js.Array[Id[PieDatum]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
         ret

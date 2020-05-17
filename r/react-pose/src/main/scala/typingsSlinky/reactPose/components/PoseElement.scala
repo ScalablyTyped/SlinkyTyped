@@ -5,7 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.popmotionPose.typesMod.DomPopmotionConfig
 import typingsSlinky.popmotionPose.typesMod.DomPopmotionPoser
-import typingsSlinky.reactPose.AnonCurrent
+import typingsSlinky.reactPose.anon.Current
 import typingsSlinky.reactPose.typesMod.ChildRegistration
 import typingsSlinky.reactPose.typesMod.ConfigFactory
 import typingsSlinky.reactPose.typesMod.CurrentPose
@@ -35,7 +35,7 @@ object PoseElement {
     @scala.inline
     def innerRefFunction1(value: /* el */ Element => js.Any): this.type = set("innerRef", js.Any.fromFunction1(value))
     @scala.inline
-    def innerRef(value: AnonCurrent | RefFunc): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRef(value: Current | RefFunc): this.type = set("innerRef", value.asInstanceOf[js.Any])
     @scala.inline
     def onPoseComplete(value: /* pose */ CurrentPose => _): this.type = set("onPoseComplete", js.Any.fromFunction1(value))
     @scala.inline

@@ -5,8 +5,8 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.ImageSourcePropType
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeVideoPlayer.AnonControlButton
-import typingsSlinky.reactNativeVideoPlayer.AnonUri
+import typingsSlinky.reactNativeVideoPlayer.anon.ControlButton
+import typingsSlinky.reactNativeVideoPlayer.anon.Uri
 import typingsSlinky.reactNativeVideoPlayer.mod.VideoPlayerProps
 import typingsSlinky.reactNativeVideoPlayer.mod.default
 import typingsSlinky.reactNativeVideoPlayer.reactNativeVideoPlayerStrings.contain
@@ -31,7 +31,7 @@ object ReactNativeVideoPlayer {
     @scala.inline
     def controlsTimeout(value: Double): this.type = set("controlsTimeout", value.asInstanceOf[js.Any])
     @scala.inline
-    def customStyles(value: AnonControlButton): this.type = set("customStyles", value.asInstanceOf[js.Any])
+    def customStyles(value: ControlButton): this.type = set("customStyles", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultMuted(value: Boolean): this.type = set("defaultMuted", value.asInstanceOf[js.Any])
     @scala.inline
@@ -83,7 +83,7 @@ object ReactNativeVideoPlayer {
     @scala.inline
     def thumbnail(value: ImageSourcePropType): this.type = set("thumbnail", value.asInstanceOf[js.Any])
     @scala.inline
-    def video(value: AnonUri | Double): this.type = set("video", value.asInstanceOf[js.Any])
+    def video(value: Uri | Double): this.type = set("video", value.asInstanceOf[js.Any])
     @scala.inline
     def videoHeight(value: Double): this.type = set("videoHeight", value.asInstanceOf[js.Any])
     @scala.inline

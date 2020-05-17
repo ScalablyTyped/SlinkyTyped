@@ -6,8 +6,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Point
-  extends GeoJsonObject
-     with Geometry {
+  extends Geometry
+     with GeoJsonObject {
   var coordinates: Position = js.native
   @JSName("type")
   var type_Point: typingsSlinky.geojson.geojsonStrings.Point = js.native

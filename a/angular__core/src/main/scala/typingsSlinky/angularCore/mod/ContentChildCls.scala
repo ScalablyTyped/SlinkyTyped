@@ -1,6 +1,6 @@
 package typingsSlinky.angularCore.mod
 
-import typingsSlinky.angularCore.AnonRead
+import typingsSlinky.angularCore.anon.Read
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
 @JSImport("@angular/core", "ContentChild")
 @js.native
 class ContentChildCls protected () extends Query {
-  def this(selector: String, opts: AnonRead) = this()
-  def this(selector: js.Function, opts: AnonRead) = this()
-  def this(selector: Type[_], opts: AnonRead) = this()
+  def this(selector: String, opts: Read) = this()
+  def this(selector: js.Function, opts: Read) = this()
+  def this(selector: Type[_], opts: Read) = this()
 }
 

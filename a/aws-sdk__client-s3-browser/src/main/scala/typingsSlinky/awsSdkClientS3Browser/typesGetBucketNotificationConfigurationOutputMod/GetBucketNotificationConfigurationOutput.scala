@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientS3Browser.typesGetBucketNotificationConfigurationOutputMod
 
-import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientS3Browser.typesLambdaFunctionConfigurationMod.UnmarshalledLambdaFunctionConfiguration
 import typingsSlinky.awsSdkClientS3Browser.typesQueueConfigurationMod.UnmarshalledQueueConfiguration
 import typingsSlinky.awsSdkClientS3Browser.typesTopicConfigurationMod.UnmarshalledTopicConfiguration
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetBucketNotificationConfigurationOutput
   extends MetadataBearer
-     with _OutputTypesUnion {
+     with OutputTypesUnion {
   /**
     * _LambdaFunctionConfigurationList shape
     */

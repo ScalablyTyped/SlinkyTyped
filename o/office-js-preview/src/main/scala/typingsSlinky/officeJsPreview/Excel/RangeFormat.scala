@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.RangeFormatData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.RangeFormatLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.RangeFormatUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Bottom
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Center
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.CenterAcrossSelection
@@ -29,9 +29,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.RangeFormat")
 @js.native
-class RangeFormat () extends ClientObject {
+trait RangeFormat extends ClientObject {
   /**
     *
     * Indicates if text is automatically indented when text alignment is set to equal distribution.
@@ -184,7 +183,7 @@ class RangeFormat () extends ClientObject {
     */
   def load(): RangeFormat = js.native
   def load(options: RangeFormatLoadOptions): RangeFormat = js.native
-  def load(propertyNamesAndPaths: AnonExpand): RangeFormat = js.native
+  def load(propertyNamesAndPaths: Expand): RangeFormat = js.native
   def load(propertyNames: String): RangeFormat = js.native
   def load(propertyNames: js.Array[String]): RangeFormat = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

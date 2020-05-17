@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,9 +46,4 @@ trait SVGFEMergeElement
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
-
-@JSGlobal("SVGFEMergeElement")
-@js.native
-object SVGFEMergeElement
-  extends Instantiable0[org.scalajs.dom.raw.SVGFEMergeElement]
 

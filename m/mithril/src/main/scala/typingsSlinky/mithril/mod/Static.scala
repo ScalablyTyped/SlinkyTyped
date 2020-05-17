@@ -1,12 +1,11 @@
 package typingsSlinky.mithril.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.mithril.AnonParams
-import typingsSlinky.mithril.AnonUrl
-import typingsSlinky.mithril.Fn0
-import typingsSlinky.mithril.FnCallElementComponent
-import typingsSlinky.mithril.FnCallUrlOptions
-import typingsSlinky.mithril.JsonpOptionsurlstring
+import typingsSlinky.mithril.anon.Fn0
+import typingsSlinky.mithril.anon.FnCallElementComponent
+import typingsSlinky.mithril.anon.FnCallUrlOptions
+import typingsSlinky.mithril.anon.JsonpOptionsurlstring
+import typingsSlinky.mithril.anon.Url
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,13 +35,13 @@ trait Static extends Hyperscript {
   def mount(element: Element): Unit = js.native
   def mount(element: Element, component: ComponentTypes[_, _]): Unit = js.native
   /** Parse path name */
-  def parsePathname(url: String): AnonParams = js.native
+  def parsePathname(url: String): typingsSlinky.mithril.anon.Params = js.native
   /** Returns an object with key/value pairs parsed from a string of the form: ?a=1&b=2 */
   def parseQueryString(queryString: String): Params = js.native
   /** Manually triggers an asynchronous redraw of mounted components. */
   def redraw(): Unit = js.native
   def render(el: Element, vnodes: Children): Unit = js.native
-  def request[T](options: RequestOptions[T] with AnonUrl): js.Promise[T] = js.native
+  def request[T](options: RequestOptions[T] with Url): js.Promise[T] = js.native
   def request[T](url: String): js.Promise[T] = js.native
   def request[T](url: String, options: RequestOptions[T]): js.Promise[T] = js.native
   /** Creates application routes and mounts Components and/or RouteResolvers to a DOM element. */

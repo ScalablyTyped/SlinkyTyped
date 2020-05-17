@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.pickerMixinMod
 
-import typingsSlinky.antDesignReactNative.AnonContextType
+import typingsSlinky.antDesignReactNative.anon.ContextType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@ant-design/react-native/lib/picker/PickerMixin", JSImport.Default)
 @js.native
 object default extends js.Object {
-  def apply(ComposedComponent: js.Any): AnonContextType = js.native
+  def apply(ComposedComponent: js.Any): ContextType = js.native
 }
 

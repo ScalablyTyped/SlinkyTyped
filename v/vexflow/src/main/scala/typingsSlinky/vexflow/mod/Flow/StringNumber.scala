@@ -1,6 +1,6 @@
 package typingsSlinky.vexflow.mod.Flow
 
-import typingsSlinky.vexflow.AnonLeftshift
+import typingsSlinky.vexflow.anon.Leftshift
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,6 +20,6 @@ class StringNumber protected ()
 @js.native
 object StringNumber extends js.Object {
   val CATEGORY: String = js.native
-  def format(nums: js.Array[typingsSlinky.vexflow.Vex.Flow.StringNumber], state: AnonLeftshift): Boolean = js.native
+  def format(nums: js.Array[typingsSlinky.vexflow.Vex.Flow.StringNumber], state: Leftshift): Boolean = js.native
 }
 

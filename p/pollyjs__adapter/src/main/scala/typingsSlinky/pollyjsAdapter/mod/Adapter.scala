@@ -1,6 +1,6 @@
 package typingsSlinky.pollyjsAdapter.mod
 
-import typingsSlinky.pollyjsAdapter.AnonBody
+import typingsSlinky.pollyjsAdapter.anon.Body
 import typingsSlinky.pollyjsCore.mod.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation._
 trait Adapter extends js.Object {
   def connect(): Unit = js.native
   def disconnect(): Unit = js.native
-  def passthroughRequest(pollyRequest: Request): js.Promise[AnonBody] = js.native
+  def passthroughRequest(pollyRequest: Request): js.Promise[Body] = js.native
 }
 
 object Adapter {
   @scala.inline
-  def apply(connect: () => Unit, disconnect: () => Unit, passthroughRequest: Request => js.Promise[AnonBody]): Adapter = {
+  def apply(connect: () => Unit, disconnect: () => Unit, passthroughRequest: Request => js.Promise[Body]): Adapter = {
     val __obj = js.Dynamic.literal(connect = js.Any.fromFunction0(connect), disconnect = js.Any.fromFunction0(disconnect), passthroughRequest = js.Any.fromFunction1(passthroughRequest))
     __obj.asInstanceOf[Adapter]
   }
@@ -38,7 +38,7 @@ object Adapter {
         ret
     }
     @scala.inline
-    def withPassthroughRequest(value: Request => js.Promise[AnonBody]): Self = {
+    def withPassthroughRequest(value: Request => js.Promise[Body]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("passthroughRequest")(js.Any.fromFunction1(value))
         ret

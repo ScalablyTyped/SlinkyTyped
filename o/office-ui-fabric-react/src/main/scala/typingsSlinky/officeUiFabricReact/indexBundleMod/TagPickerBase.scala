@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.indexBundleMod
 
-import typingsSlinky.officeUiFabricReact.AnonOnRenderItem
+import typingsSlinky.officeUiFabricReact.anon.OnRenderItem
 import typingsSlinky.officeUiFabricReact.tagPickerTypesMod.ITagPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,6 +17,6 @@ class TagPickerBase protected ()
 @JSImport("office-ui-fabric-react/lib/index.bundle", "TagPickerBase")
 @js.native
 object TagPickerBase extends js.Object {
-  var defaultProps: AnonOnRenderItem = js.native
+  var defaultProps: OnRenderItem = js.native
 }
 

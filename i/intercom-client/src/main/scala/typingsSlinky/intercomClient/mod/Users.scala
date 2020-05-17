@@ -1,8 +1,8 @@
 package typingsSlinky.intercomClient.mod
 
-import typingsSlinky.intercomClient.AnonIdNumber
-import typingsSlinky.intercomClient.AnonSegmentid
-import typingsSlinky.intercomClient.PartialCreateUpdateUser
+import typingsSlinky.intercomClient.anon.IdNumber
+import typingsSlinky.intercomClient.anon.PartialCreateUpdateUser
+import typingsSlinky.intercomClient.anon.Segmentid
 import typingsSlinky.intercomClient.scrollMod.Scroll
 import typingsSlinky.intercomClient.userMod.List
 import typingsSlinky.intercomClient.userMod.User
@@ -23,12 +23,12 @@ class Users () extends js.Object {
   def find(identifier: UserIdentifier, cb: callback[ApiResponse[User]]): Unit = js.native
   def list(): js.Promise[ApiResponse[List]] = js.native
   def list(cb: callback[ApiResponse[List]]): Unit = js.native
-  def listBy(params: AnonSegmentid): js.Promise[ApiResponse[List]] = js.native
-  def listBy(params: AnonSegmentid, cb: callback[ApiResponse[List]]): Unit = js.native
-  def requestPermanentDeletion(id: String): js.Promise[AnonIdNumber] = js.native
-  def requestPermanentDeletion(id: String, cb: callback[AnonIdNumber]): Unit = js.native
-  def requestPermanentDeletionByParams(identifier: UserIdentifier): js.Promise[AnonIdNumber] = js.native
-  def requestPermanentDeletionByParams(identifier: UserIdentifier, cb: callback[AnonIdNumber]): Unit = js.native
+  def listBy(params: Segmentid): js.Promise[ApiResponse[List]] = js.native
+  def listBy(params: Segmentid, cb: callback[ApiResponse[List]]): Unit = js.native
+  def requestPermanentDeletion(id: String): js.Promise[IdNumber] = js.native
+  def requestPermanentDeletion(id: String, cb: callback[IdNumber]): Unit = js.native
+  def requestPermanentDeletionByParams(identifier: UserIdentifier): js.Promise[IdNumber] = js.native
+  def requestPermanentDeletionByParams(identifier: UserIdentifier, cb: callback[IdNumber]): Unit = js.native
   def update(user: UserIdentifier with PartialCreateUpdateUser): js.Promise[ApiResponse[User]] = js.native
   def update(user: UserIdentifier with PartialCreateUpdateUser, cb: callback[ApiResponse[User]]): Unit = js.native
 }

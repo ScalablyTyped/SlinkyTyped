@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ErrorPOJO extends js.Object {
+trait ErrorPOJO extends ErrorLike {
   var message: js.UndefOr[String] = js.native
   var name: js.UndefOr[String] = js.native
   var stack: js.UndefOr[String] = js.native

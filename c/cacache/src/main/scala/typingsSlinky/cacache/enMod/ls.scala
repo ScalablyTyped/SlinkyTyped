@@ -1,6 +1,6 @@
 package typingsSlinky.cacache.enMod
 
-import typingsSlinky.cacache.CacheObjectsizenumber
+import typingsSlinky.cacache.anon.CacheObjectsizenumber
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.std.Record
 import scala.scalajs.js

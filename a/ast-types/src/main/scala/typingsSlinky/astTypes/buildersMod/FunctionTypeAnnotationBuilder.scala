@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonRest
+import typingsSlinky.astTypes.anon.Rest
 import typingsSlinky.astTypes.kindsMod.FlowTypeKind
 import typingsSlinky.astTypes.kindsMod.FunctionTypeParamKind
 import typingsSlinky.astTypes.kindsMod.TypeParameterDeclarationKind
@@ -25,6 +25,6 @@ trait FunctionTypeAnnotationBuilder extends js.Object {
     rest: FunctionTypeParamKind,
     typeParameters: TypeParameterDeclarationKind
   ): FunctionTypeAnnotation = js.native
-  def from(params: AnonRest): FunctionTypeAnnotation = js.native
+  def from(params: Rest): FunctionTypeAnnotation = js.native
 }
 

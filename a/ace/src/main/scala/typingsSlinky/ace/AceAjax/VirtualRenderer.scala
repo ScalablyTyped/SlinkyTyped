@@ -1,7 +1,5 @@
 package typingsSlinky.ace.AceAjax
 
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
 import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -281,14 +279,465 @@ trait VirtualRenderer extends OptionProvider {
   def visualizeFocus(): Unit = js.native
 }
 
-@JSGlobal("AceAjax.VirtualRenderer")
-@js.native
-object VirtualRenderer
-  extends /**
-  * Constructs a new `VirtualRenderer` within the `container` specified, applying the given `theme`.
-  * @param container The root element of the editor
-  * @param theme The starting theme
-  **/
-Instantiable1[/* container */ HTMLElement, VirtualRenderer]
-     with Instantiable2[/* container */ HTMLElement, /* theme */ String, VirtualRenderer]
+object VirtualRenderer {
+  @scala.inline
+  def apply(
+    addGutterDecoration: () => Unit,
+    adjustWrapLimit: () => Unit,
+    characterWidth: Double,
+    destroy: () => Unit,
+    getAnimatedScroll: () => Boolean,
+    getContainerElement: () => HTMLElement,
+    getFirstFullyVisibleRow: () => Double,
+    getFirstVisibleRow: () => Double,
+    getHScrollBarAlwaysVisible: () => Boolean,
+    getLastFullyVisibleRow: () => Double,
+    getLastVisibleRow: () => Double,
+    getMouseEventTarget: () => HTMLElement,
+    getOption: String => js.Any,
+    getOptions: () => js.Any,
+    getPrintMarginColumn: () => Boolean,
+    getScrollBottomRow: () => Double,
+    getScrollLeft: () => Double,
+    getScrollTop: () => Double,
+    getScrollTopRow: () => Double,
+    getShowGutter: () => Boolean,
+    getShowInvisibles: () => Boolean,
+    getShowPrintMargin: () => Boolean,
+    getTextAreaContainer: () => HTMLElement,
+    getTheme: () => String,
+    hideComposition: () => Unit,
+    hideCursor: () => Unit,
+    isScrollableBy: (Double, Double) => Boolean,
+    lineHeight: Double,
+    onResize: (Boolean, Double, Double, Double) => Unit,
+    removeGutterDecoration: () => Unit,
+    screenToTextCoordinates: (Double, Double) => Unit,
+    scrollBy: (Double, Double) => Unit,
+    scrollCursorIntoView: () => Unit,
+    scrollToLine: (Double, Boolean, Boolean, js.Function) => Unit,
+    scrollToRow: Double => Unit,
+    scrollToX: Double => Double,
+    scrollToY: Double => Double,
+    scroller: js.Any,
+    setAnimatedScroll: Boolean => Unit,
+    setAnnotations: js.Array[_] => Unit,
+    setCompositionText: String => Unit,
+    setHScrollBarAlwaysVisible: Boolean => Unit,
+    setOption: (String, js.Any) => Unit,
+    setOptions: js.Any => Unit,
+    setPadding: Double => Unit,
+    setPrintMarginColumn: Boolean => Unit,
+    setScrollMargin: (Double, Double, Double, Double) => Unit,
+    setSession: IEditSession => Unit,
+    setShowGutter: Boolean => Unit,
+    setShowInvisibles: Boolean => Unit,
+    setShowPrintMargin: Boolean => Unit,
+    setStyle: String => Unit,
+    setTheme: String => Unit,
+    showComposition: Double => Unit,
+    showCursor: () => Unit,
+    textToScreenCoordinates: (Double, Double) => js.Any,
+    unsetStyle: String => Unit,
+    updateBackMarkers: () => Unit,
+    updateBreakpoints: () => Unit,
+    updateCursor: () => Unit,
+    updateFontSize: () => Unit,
+    updateFrontMarkers: () => Unit,
+    updateFull: Boolean => Unit,
+    updateLines: (Double, Double) => Unit,
+    updateText: () => Unit,
+    visualizeBlur: () => Unit,
+    visualizeFocus: () => Unit
+  ): VirtualRenderer = {
+    val __obj = js.Dynamic.literal(addGutterDecoration = js.Any.fromFunction0(addGutterDecoration), adjustWrapLimit = js.Any.fromFunction0(adjustWrapLimit), characterWidth = characterWidth.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), getAnimatedScroll = js.Any.fromFunction0(getAnimatedScroll), getContainerElement = js.Any.fromFunction0(getContainerElement), getFirstFullyVisibleRow = js.Any.fromFunction0(getFirstFullyVisibleRow), getFirstVisibleRow = js.Any.fromFunction0(getFirstVisibleRow), getHScrollBarAlwaysVisible = js.Any.fromFunction0(getHScrollBarAlwaysVisible), getLastFullyVisibleRow = js.Any.fromFunction0(getLastFullyVisibleRow), getLastVisibleRow = js.Any.fromFunction0(getLastVisibleRow), getMouseEventTarget = js.Any.fromFunction0(getMouseEventTarget), getOption = js.Any.fromFunction1(getOption), getOptions = js.Any.fromFunction0(getOptions), getPrintMarginColumn = js.Any.fromFunction0(getPrintMarginColumn), getScrollBottomRow = js.Any.fromFunction0(getScrollBottomRow), getScrollLeft = js.Any.fromFunction0(getScrollLeft), getScrollTop = js.Any.fromFunction0(getScrollTop), getScrollTopRow = js.Any.fromFunction0(getScrollTopRow), getShowGutter = js.Any.fromFunction0(getShowGutter), getShowInvisibles = js.Any.fromFunction0(getShowInvisibles), getShowPrintMargin = js.Any.fromFunction0(getShowPrintMargin), getTextAreaContainer = js.Any.fromFunction0(getTextAreaContainer), getTheme = js.Any.fromFunction0(getTheme), hideComposition = js.Any.fromFunction0(hideComposition), hideCursor = js.Any.fromFunction0(hideCursor), isScrollableBy = js.Any.fromFunction2(isScrollableBy), lineHeight = lineHeight.asInstanceOf[js.Any], onResize = js.Any.fromFunction4(onResize), removeGutterDecoration = js.Any.fromFunction0(removeGutterDecoration), screenToTextCoordinates = js.Any.fromFunction2(screenToTextCoordinates), scrollBy = js.Any.fromFunction2(scrollBy), scrollCursorIntoView = js.Any.fromFunction0(scrollCursorIntoView), scrollToLine = js.Any.fromFunction4(scrollToLine), scrollToRow = js.Any.fromFunction1(scrollToRow), scrollToX = js.Any.fromFunction1(scrollToX), scrollToY = js.Any.fromFunction1(scrollToY), scroller = scroller.asInstanceOf[js.Any], setAnimatedScroll = js.Any.fromFunction1(setAnimatedScroll), setAnnotations = js.Any.fromFunction1(setAnnotations), setCompositionText = js.Any.fromFunction1(setCompositionText), setHScrollBarAlwaysVisible = js.Any.fromFunction1(setHScrollBarAlwaysVisible), setOption = js.Any.fromFunction2(setOption), setOptions = js.Any.fromFunction1(setOptions), setPadding = js.Any.fromFunction1(setPadding), setPrintMarginColumn = js.Any.fromFunction1(setPrintMarginColumn), setScrollMargin = js.Any.fromFunction4(setScrollMargin), setSession = js.Any.fromFunction1(setSession), setShowGutter = js.Any.fromFunction1(setShowGutter), setShowInvisibles = js.Any.fromFunction1(setShowInvisibles), setShowPrintMargin = js.Any.fromFunction1(setShowPrintMargin), setStyle = js.Any.fromFunction1(setStyle), setTheme = js.Any.fromFunction1(setTheme), showComposition = js.Any.fromFunction1(showComposition), showCursor = js.Any.fromFunction0(showCursor), textToScreenCoordinates = js.Any.fromFunction2(textToScreenCoordinates), unsetStyle = js.Any.fromFunction1(unsetStyle), updateBackMarkers = js.Any.fromFunction0(updateBackMarkers), updateBreakpoints = js.Any.fromFunction0(updateBreakpoints), updateCursor = js.Any.fromFunction0(updateCursor), updateFontSize = js.Any.fromFunction0(updateFontSize), updateFrontMarkers = js.Any.fromFunction0(updateFrontMarkers), updateFull = js.Any.fromFunction1(updateFull), updateLines = js.Any.fromFunction2(updateLines), updateText = js.Any.fromFunction0(updateText), visualizeBlur = js.Any.fromFunction0(visualizeBlur), visualizeFocus = js.Any.fromFunction0(visualizeFocus))
+    __obj.asInstanceOf[VirtualRenderer]
+  }
+  @scala.inline
+  implicit class VirtualRendererOps[Self <: VirtualRenderer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddGutterDecoration(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addGutterDecoration")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withAdjustWrapLimit(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adjustWrapLimit")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withCharacterWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("characterWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestroy(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetAnimatedScroll(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAnimatedScroll")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetContainerElement(value: () => HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getContainerElement")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetFirstFullyVisibleRow(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFirstFullyVisibleRow")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetFirstVisibleRow(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFirstVisibleRow")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetHScrollBarAlwaysVisible(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getHScrollBarAlwaysVisible")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLastFullyVisibleRow(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLastFullyVisibleRow")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLastVisibleRow(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLastVisibleRow")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMouseEventTarget(value: () => HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMouseEventTarget")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPrintMarginColumn(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPrintMarginColumn")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetScrollBottomRow(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScrollBottomRow")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetScrollLeft(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScrollLeft")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetScrollTop(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScrollTop")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetScrollTopRow(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScrollTopRow")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetShowGutter(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getShowGutter")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetShowInvisibles(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getShowInvisibles")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetShowPrintMargin(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getShowPrintMargin")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetTextAreaContainer(value: () => HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTextAreaContainer")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetTheme(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTheme")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHideComposition(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideComposition")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHideCursor(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hideCursor")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsScrollableBy(value: (Double, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isScrollableBy")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withLineHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnResize(value: (Boolean, Double, Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onResize")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveGutterDecoration(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeGutterDecoration")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withScreenToTextCoordinates(value: (Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenToTextCoordinates")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withScrollBy(value: (Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollBy")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withScrollCursorIntoView(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollCursorIntoView")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withScrollToLine(value: (Double, Boolean, Boolean, js.Function) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToLine")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withScrollToRow(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToRow")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withScrollToX(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToX")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withScrollToY(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrollToY")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withScroller(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scroller")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetAnimatedScroll(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAnimatedScroll")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetAnnotations(value: js.Array[_] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAnnotations")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetCompositionText(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setCompositionText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetHScrollBarAlwaysVisible(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setHScrollBarAlwaysVisible")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetPadding(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setPadding")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetPrintMarginColumn(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setPrintMarginColumn")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetScrollMargin(value: (Double, Double, Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setScrollMargin")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withSetSession(value: IEditSession => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSession")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetShowGutter(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setShowGutter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetShowInvisibles(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setShowInvisibles")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetShowPrintMargin(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setShowPrintMargin")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetStyle(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStyle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetTheme(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTheme")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withShowComposition(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showComposition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withShowCursor(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showCursor")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withTextToScreenCoordinates(value: (Double, Double) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textToScreenCoordinates")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withUnsetStyle(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unsetStyle")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateBackMarkers(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateBackMarkers")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateBreakpoints(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateBreakpoints")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateCursor(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateCursor")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateFontSize(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateFontSize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateFrontMarkers(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateFrontMarkers")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateFull(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateFull")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateLines(value: (Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateLines")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateText(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateText")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withVisualizeBlur(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visualizeBlur")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withVisualizeFocus(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visualizeFocus")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
+}
 

@@ -1,6 +1,6 @@
 package typingsSlinky.mapboxGl.mod
 
-import typingsSlinky.mapboxGl.AnonLat
+import typingsSlinky.mapboxGl.anon.Lat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,13 +10,13 @@ import scala.scalajs.js.annotation._
 trait CameraForBoundsResult extends js.Object {
   var bearing: Double = js.native
   /** Map center */
-  var center: AnonLat = js.native
+  var center: Lat = js.native
   var zoom: Double = js.native
 }
 
 object CameraForBoundsResult {
   @scala.inline
-  def apply(bearing: Double, center: AnonLat, zoom: Double): CameraForBoundsResult = {
+  def apply(bearing: Double, center: Lat, zoom: Double): CameraForBoundsResult = {
     val __obj = js.Dynamic.literal(bearing = bearing.asInstanceOf[js.Any], center = center.asInstanceOf[js.Any], zoom = zoom.asInstanceOf[js.Any])
     __obj.asInstanceOf[CameraForBoundsResult]
   }
@@ -33,7 +33,7 @@ object CameraForBoundsResult {
         ret
     }
     @scala.inline
-    def withCenter(value: AnonLat): Self = {
+    def withCenter(value: Lat): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
         ret

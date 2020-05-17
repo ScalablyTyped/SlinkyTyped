@@ -1,6 +1,6 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonDark
+import typingsSlinky.vscode.anon.Dark
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait WorkspaceEditEntryMetadata extends js.Object {
   /**
   		 * The icon path or [ThemeIcon](#ThemeIcon) for the edit.
   		 */
-  var iconPath: js.UndefOr[Uri | AnonDark | ThemeIcon] = js.native
+  var iconPath: js.UndefOr[Uri | Dark | ThemeIcon] = js.native
   /**
   		 * A human-readable string which is rendered prominent.
   		 */
@@ -62,7 +62,7 @@ object WorkspaceEditEntryMetadata {
         ret
     }
     @scala.inline
-    def withIconPath(value: Uri | AnonDark | ThemeIcon): Self = {
+    def withIconPath(value: Uri | Dark | ThemeIcon): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("iconPath")(value.asInstanceOf[js.Any])
         ret

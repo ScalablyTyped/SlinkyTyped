@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Storage.Search.StorageItemQueryResult")
 @js.native
-class StorageItemQueryResult () extends IStorageItemQueryResult
+trait StorageItemQueryResult extends IStorageItemQueryResult
 

@@ -4,15 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("AMap.LayerGroup")
 @js.native
-class LayerGroup[L] protected () extends Layer {
-  /**
-    * 图层集合
-    * @param layers 集合中的图层
-    */
-  def this(layers: L) = this()
-  def this(layers: js.Array[L]) = this()
+trait LayerGroup[L] extends Layer {
   /**
     * 添加单个图层到集合中，不支持添加重复的图层
     * @param layer 图层

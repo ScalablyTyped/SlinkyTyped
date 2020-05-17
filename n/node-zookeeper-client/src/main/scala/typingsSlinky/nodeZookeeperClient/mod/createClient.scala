@@ -1,6 +1,6 @@
 package typingsSlinky.nodeZookeeperClient.mod
 
-import typingsSlinky.nodeZookeeperClient.PartialOption
+import typingsSlinky.nodeZookeeperClient.anon.PartialOption
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

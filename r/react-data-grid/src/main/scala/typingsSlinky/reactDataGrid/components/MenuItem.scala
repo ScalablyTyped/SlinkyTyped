@@ -12,7 +12,19 @@ object MenuItem {
   @js.native
   object component extends js.Object
   
-  def apply(p: js.Any): Default[tag.type, typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Menu.MenuItem] = new Default[tag.type, typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Menu.MenuItem](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: MenuItem.type): Default[tag.type, typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Menu.MenuItem] = new Default[tag.type, typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Menu.MenuItem](js.Array(this.component, js.Dictionary.empty))()
+  def apply(p: js.Any): Default[
+    tag.type, 
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Menu.MenuItem
+  ] = new Default[
+    tag.type, 
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Menu.MenuItem
+  ](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: MenuItem.type): Default[
+    tag.type, 
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Menu.MenuItem
+  ] = new Default[
+    tag.type, 
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Menu.MenuItem
+  ](js.Array(this.component, js.Dictionary.empty))()
 }
 

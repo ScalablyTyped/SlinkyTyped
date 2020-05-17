@@ -11,7 +11,9 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.jsplumb.jsplumbStrings.ContinuousRight
   - typingsSlinky.jsplumb.jsplumbStrings.ContinuousTop
 */
-trait AnchorContinuousId extends _AnchorId
+trait AnchorContinuousId
+  extends AnchorContinuousSpec
+     with AnchorId
 
 object AnchorContinuousId {
   @scala.inline

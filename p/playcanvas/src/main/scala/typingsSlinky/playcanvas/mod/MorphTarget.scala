@@ -1,6 +1,6 @@
 package typingsSlinky.playcanvas.mod
 
-import typingsSlinky.playcanvas.AnonAabb
+import typingsSlinky.playcanvas.anon.Aabb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,6 +24,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class MorphTarget protected ()
   extends typingsSlinky.playcanvas.pc.MorphTarget {
-  def this(options: AnonAabb) = this()
+  def this(options: Aabb) = this()
 }
 

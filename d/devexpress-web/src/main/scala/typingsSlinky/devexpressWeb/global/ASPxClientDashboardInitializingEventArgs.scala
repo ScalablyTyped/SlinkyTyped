@@ -1,0 +1,14 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Provides data for the ASPxClientDashboard.DashboardInitializing event.
+  */
+@JSGlobal("ASPxClientDashboardInitializingEventArgs")
+@js.native
+class ASPxClientDashboardInitializingEventArgs ()
+  extends typingsSlinky.devexpressWeb.ASPxClientDashboardInitializingEventArgs
+

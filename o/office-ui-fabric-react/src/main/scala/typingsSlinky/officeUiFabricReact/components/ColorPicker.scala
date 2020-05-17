@@ -1,5 +1,6 @@
 package typingsSlinky.officeUiFabricReact.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactRef
@@ -11,7 +12,6 @@ import typingsSlinky.officeUiFabricReact.colorPickerTypesMod.IColorPickerStrings
 import typingsSlinky.officeUiFabricReact.colorPickerTypesMod.IColorPickerStyleProps
 import typingsSlinky.officeUiFabricReact.colorPickerTypesMod.IColorPickerStyles
 import typingsSlinky.officeUiFabricReact.interfacesMod.IColor
-import typingsSlinky.std.Event_
 import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -48,7 +48,7 @@ object ColorPicker {
     @scala.inline
     def hexLabel(value: String): this.type = set("hexLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: (/* ev */ SyntheticEvent[Event_, HTMLElement], /* color */ IColor) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    def onChange(value: (/* ev */ SyntheticEvent[Event, HTMLElement], /* color */ IColor) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
     @scala.inline
     def redLabel(value: String): this.type = set("redLabel", value.asInstanceOf[js.Any])
     @scala.inline

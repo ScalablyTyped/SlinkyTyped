@@ -1,5 +1,7 @@
 package typingsSlinky.expressValidator
 
+import typingsSlinky.expressValidator.anon.CheckFalsy
+import typingsSlinky.expressValidator.anon.Max
 import typingsSlinky.expressValidator.baseMod.CustomValidator
 import typingsSlinky.expressValidator.baseMod.DynamicMessageCreator
 import typingsSlinky.expressValidator.expressValidatorStrings.ES
@@ -39,7 +41,7 @@ object validatorsMod extends js.Object {
     def custom(validator: CustomValidator): Return = js.native
     def equals(comparison: String): Return = js.native
     def exists(): Return = js.native
-    def exists(options: AnonCheckFalsy): Return = js.native
+    def exists(options: CheckFalsy): Return = js.native
     def isAfter(): Return = js.native
     def isAfter(date: String): Return = js.native
     def isAlpha(): Return = js.native
@@ -47,7 +49,7 @@ object validatorsMod extends js.Object {
     def isAlphanumeric(): Return = js.native
     def isAlphanumeric(locale: AlphanumericLocale): Return = js.native
     def isArray(): Return = js.native
-    def isArray(options: AnonMax): Return = js.native
+    def isArray(options: Max): Return = js.native
     def isAscii(): Return = js.native
     def isBIC(): Return = js.native
     def isBase32(): Return = js.native

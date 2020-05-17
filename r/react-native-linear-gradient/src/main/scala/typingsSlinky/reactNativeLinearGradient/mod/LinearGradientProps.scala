@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeLinearGradient.mod
 
 import typingsSlinky.reactNative.mod.ViewProps
-import typingsSlinky.reactNativeLinearGradient.AnonX
+import typingsSlinky.reactNativeLinearGradient.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,11 +9,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LinearGradientProps extends ViewProps {
   var angle: js.UndefOr[Double] = js.native
-  var angleCenter: js.UndefOr[AnonX] = js.native
+  var angleCenter: js.UndefOr[X] = js.native
   var colors: js.Array[String | Double] = js.native
-  var end: js.UndefOr[AnonX] = js.native
+  var end: js.UndefOr[X] = js.native
   var locations: js.UndefOr[js.Array[Double]] = js.native
-  var start: js.UndefOr[AnonX] = js.native
+  var start: js.UndefOr[X] = js.native
   var useAngle: js.UndefOr[Boolean] = js.native
 }
 
@@ -48,7 +48,7 @@ object LinearGradientProps {
         ret
     }
     @scala.inline
-    def withAngleCenter(value: AnonX): Self = {
+    def withAngleCenter(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("angleCenter")(value.asInstanceOf[js.Any])
         ret
@@ -60,7 +60,7 @@ object LinearGradientProps {
         ret
     }
     @scala.inline
-    def withEnd(value: AnonX): Self = {
+    def withEnd(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
         ret
@@ -84,7 +84,7 @@ object LinearGradientProps {
         ret
     }
     @scala.inline
-    def withStart(value: AnonX): Self = {
+    def withStart(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
         ret

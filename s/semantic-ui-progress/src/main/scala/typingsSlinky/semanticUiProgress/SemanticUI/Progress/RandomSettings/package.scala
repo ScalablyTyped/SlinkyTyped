@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object RandomSettings {
-  type Param = (typingsSlinky.semanticUiProgress.PickImplmin | typingsSlinky.semanticUiProgress.PickImplmax) with typingsSlinky.semanticUiProgress.PartialPickImplkeyofImplMax
+  type Param = (typingsSlinky.semanticUiProgress.anon.PickImplmin | typingsSlinky.semanticUiProgress.anon.PickImplmax) with typingsSlinky.semanticUiProgress.anon.PartialPickImplkeyofImplMax
 }

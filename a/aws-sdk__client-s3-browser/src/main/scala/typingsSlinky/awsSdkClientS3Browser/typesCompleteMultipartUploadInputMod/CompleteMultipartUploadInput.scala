@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdkClientS3Browser.typesCompleteMultipartUploadInputMod
 
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.requester_
-import typingsSlinky.awsSdkClientS3Browser.inputTypesUnionMod._InputTypesUnion
+import typingsSlinky.awsSdkClientS3Browser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientS3Browser.typesCompletedMultipartUploadMod.CompletedMultipartUpload
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.httpMod.BrowserHttpOptions
@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CompleteMultipartUploadInput extends _InputTypesUnion {
+trait CompleteMultipartUploadInput extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *

@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojtableMod.ojTable
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.oracleOraclejet.Anon22
+import typingsSlinky.oracleOraclejet.anon.`22`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,18 +11,13 @@ import scala.scalajs.js.annotation._
 trait FooterRendererContext[K, D] extends js.Object {
   var columnIndex: Double = js.native
   var componentElement: Element = js.native
-  var footerContext: Anon22[K, D] = js.native
+  var footerContext: `22`[K, D] = js.native
   var parentElement: Element = js.native
 }
 
 object FooterRendererContext {
   @scala.inline
-  def apply[K, D](
-    columnIndex: Double,
-    componentElement: Element,
-    footerContext: Anon22[K, D],
-    parentElement: Element
-  ): FooterRendererContext[K, D] = {
+  def apply[K, D](columnIndex: Double, componentElement: Element, footerContext: `22`[K, D], parentElement: Element): FooterRendererContext[K, D] = {
     val __obj = js.Dynamic.literal(columnIndex = columnIndex.asInstanceOf[js.Any], componentElement = componentElement.asInstanceOf[js.Any], footerContext = footerContext.asInstanceOf[js.Any], parentElement = parentElement.asInstanceOf[js.Any])
     __obj.asInstanceOf[FooterRendererContext[K, D]]
   }
@@ -45,7 +40,7 @@ object FooterRendererContext {
         ret
     }
     @scala.inline
-    def withFooterContext(value: Anon22[K, D]): Self[K, D] = {
+    def withFooterContext(value: `22`[K, D]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("footerContext")(value.asInstanceOf[js.Any])
         ret

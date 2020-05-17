@@ -1,11 +1,11 @@
 package typingsSlinky.jupyterlabApputils.commandlinkerMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.jupyterlabApputils.commandlinkerMod.CommandLinker.IOptions
 import typingsSlinky.phosphorCoreutils.jsonMod.JSONObject
 import typingsSlinky.phosphorDisposable.mod.IDisposable
 import typingsSlinky.phosphorVirtualdom.mod.ElementDataset
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -70,7 +70,7 @@ class CommandLinker_ protected () extends IDisposable {
     * called in response to events on the panel's DOM node. It should
     * not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
   /**
     * Populate the `dataset` attribute within the collection of attributes used
     * to instantiate a virtual DOM node with the values necessary for its

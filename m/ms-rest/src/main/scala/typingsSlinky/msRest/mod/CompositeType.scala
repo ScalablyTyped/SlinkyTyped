@@ -1,6 +1,6 @@
 package typingsSlinky.msRest.mod
 
-import typingsSlinky.msRest.AnonClassName
+import typingsSlinky.msRest.anon.ClassName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CompositeType extends Mapper {
   @JSName("type")
-  var type_CompositeType: AnonClassName = js.native
+  var type_CompositeType: ClassName = js.native
 }
 
 object CompositeType {
   @scala.inline
-  def apply(name: MapperType, required: Boolean, serializedName: String, `type`: AnonClassName): CompositeType = {
+  def apply(name: MapperType, required: Boolean, serializedName: String, `type`: ClassName): CompositeType = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], required = required.asInstanceOf[js.Any], serializedName = serializedName.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompositeType]
@@ -25,7 +25,7 @@ object CompositeType {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withType(value: AnonClassName): Self = {
+    def withType(value: ClassName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.primereact.selectButtonMod
 
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ trait SelectButtonProps extends js.Object {
   var disabled: js.UndefOr[Boolean] = js.native
   var id: js.UndefOr[String] = js.native
   var multiple: js.UndefOr[Boolean] = js.native
-  var onChange: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
   var optionLabel: js.UndefOr[String] = js.native
   var options: js.UndefOr[js.Array[_]] = js.native
   var style: js.UndefOr[js.Object] = js.native
@@ -109,7 +109,7 @@ object SelectButtonProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* e */ AnonValue => Unit): Self = {
+    def withOnChange(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

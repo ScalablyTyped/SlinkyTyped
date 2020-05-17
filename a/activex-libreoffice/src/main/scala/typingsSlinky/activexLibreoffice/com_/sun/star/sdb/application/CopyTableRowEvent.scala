@@ -1,0 +1,56 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.sdb.application
+
+import typingsSlinky.activexLibreoffice.com_.sun.star.lang.EventObject
+import typingsSlinky.activexLibreoffice.com_.sun.star.sdbc.XResultSet
+import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * specifies an event happening while copying table data between databases.
+  *
+  * Whenever this event is fired to an {@link XCopyTableListener} , {@link com.sun.star.lang.EventObject.Source} contains the wizard instance which
+  * actually does the copying.
+  * @see CopyTableWizard
+  */
+@js.native
+trait CopyTableRowEvent extends EventObject {
+  /**
+    * denotes the error which happened while copying the data.
+    *
+    * Usually, this contains an instance of {@link com.sun.star.sdbc.SQLException} .
+    */
+  var Error: js.Any = js.native
+  /** contains the result set which is being copied by the wizard currently. */
+  var SourceData: XResultSet = js.native
+}
+
+object CopyTableRowEvent {
+  @scala.inline
+  def apply(Error: js.Any, Source: XInterface, SourceData: XResultSet): CopyTableRowEvent = {
+    val __obj = js.Dynamic.literal(Error = Error.asInstanceOf[js.Any], Source = Source.asInstanceOf[js.Any], SourceData = SourceData.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CopyTableRowEvent]
+  }
+  @scala.inline
+  implicit class CopyTableRowEventOps[Self <: CopyTableRowEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withError(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Error")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceData(value: XResultSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SourceData")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

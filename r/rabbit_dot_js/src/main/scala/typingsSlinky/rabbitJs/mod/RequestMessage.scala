@@ -1,6 +1,6 @@
 package typingsSlinky.rabbitJs.mod
 
-import typingsSlinky.rabbitJs.AnonCorrelationId
+import typingsSlinky.rabbitJs.anon.CorrelationId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RequestMessage extends js.Object {
   var content: js.Any = js.native
-  var properties: AnonCorrelationId = js.native
+  var properties: CorrelationId = js.native
 }
 
 object RequestMessage {
   @scala.inline
-  def apply(content: js.Any, properties: AnonCorrelationId): RequestMessage = {
+  def apply(content: js.Any, properties: CorrelationId): RequestMessage = {
     val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestMessage]
   }
@@ -30,7 +30,7 @@ object RequestMessage {
         ret
     }
     @scala.inline
-    def withProperties(value: AnonCorrelationId): Self = {
+    def withProperties(value: CorrelationId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
         ret

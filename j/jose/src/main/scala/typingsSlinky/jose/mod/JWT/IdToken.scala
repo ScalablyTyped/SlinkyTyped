@@ -19,12 +19,11 @@ object IdToken extends js.Object {
     key: ConsumeKeyInputWithNone,
     options: VerifyOptions[`false`] with VerifyProfileOptions[id_token]
   ): js.Object = js.native
-  def verify(jwt: String, key: NoneKey, options: VerifyOptions[`true`] with VerifyProfileOptions[id_token]): completeResult[NoneKey] = js.native
-  @JSName("verify")
-  def verify_completeResult(
+  def verify(
     jwt: String,
     key: ConsumeKeyInput,
     options: VerifyOptions[`true`] with VerifyProfileOptions[id_token]
   ): completeResult[Key] = js.native
+  def verify(jwt: String, key: NoneKey, options: VerifyOptions[`true`] with VerifyProfileOptions[id_token]): completeResult[NoneKey] = js.native
 }
 

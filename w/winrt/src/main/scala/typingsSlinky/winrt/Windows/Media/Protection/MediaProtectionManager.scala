@@ -1,10 +1,23 @@
 package typingsSlinky.winrt.Windows.Media.Protection
 
+import typingsSlinky.winrt.Windows.Foundation.Collections.IPropertySet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Media.Protection.MediaProtectionManager")
 @js.native
-class MediaProtectionManager () extends IMediaProtectionManager
+trait MediaProtectionManager extends IMediaProtectionManager
+
+object MediaProtectionManager {
+  @scala.inline
+  def apply(
+    oncomponentloadfailed: js.Any,
+    onrebootneeded: js.Any,
+    onservicerequested: js.Any,
+    properties: IPropertySet
+  ): MediaProtectionManager = {
+    val __obj = js.Dynamic.literal(oncomponentloadfailed = oncomponentloadfailed.asInstanceOf[js.Any], onrebootneeded = onrebootneeded.asInstanceOf[js.Any], onservicerequested = onservicerequested.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MediaProtectionManager]
+  }
+}
 

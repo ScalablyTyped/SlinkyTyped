@@ -1,6 +1,6 @@
 package typingsSlinky.log4js.mod
 
-import typingsSlinky.log4js.AnonWorker
+import typingsSlinky.log4js.anon.Worker
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LoggingEvent extends js.Object {
   var categoryName: String = js.native
-  var cluster: js.UndefOr[AnonWorker] = js.native
+  var cluster: js.UndefOr[Worker] = js.native
   var context: js.Any = js.native
   	// level of message
   var data: js.Array[_] = js.native
@@ -75,7 +75,7 @@ object LoggingEvent {
         ret
     }
     @scala.inline
-    def withCluster(value: AnonWorker): Self = {
+    def withCluster(value: Worker): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cluster")(value.asInstanceOf[js.Any])
         ret

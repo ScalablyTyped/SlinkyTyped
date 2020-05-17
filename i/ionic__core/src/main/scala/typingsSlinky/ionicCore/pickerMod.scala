@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCore
 
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonPickerElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonPickerElement
 import typingsSlinky.ionicCore.ionicCoreStrings.ios
 import typingsSlinky.ionicCore.ionicCoreStrings.md
 import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation

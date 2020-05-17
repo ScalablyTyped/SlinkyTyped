@@ -3,7 +3,7 @@ package typingsSlinky.antDesignPro.noticeIconMod
 import org.scalajs.dom.raw.MouseEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antDesignPro.AnonDictkey
+import typingsSlinky.antDesignPro.anon.Dictkey
 import typingsSlinky.antDesignPro.noticeIconTabMod.NoticeIconData
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -17,7 +17,7 @@ trait NoticeIconProps extends js.Object {
   var clearClose: js.UndefOr[Boolean] = js.native
   var count: js.UndefOr[Double] = js.native
   var loading: js.UndefOr[Boolean] = js.native
-  var locale: js.UndefOr[AnonDictkey] = js.native
+  var locale: js.UndefOr[Dictkey] = js.native
   var onClear: js.UndefOr[js.Function1[/* tabName */ String, Unit]] = js.native
   var onItemClick: js.UndefOr[js.Function2[/* item */ NoticeIconData, /* tabProps */ NoticeIconProps, Unit]] = js.native
   var onPopupVisibleChange: js.UndefOr[js.Function1[/* visible */ Boolean, Unit]] = js.native
@@ -106,7 +106,7 @@ object NoticeIconProps {
         ret
     }
     @scala.inline
-    def withLocale(value: AnonDictkey): Self = {
+    def withLocale(value: Dictkey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
         ret

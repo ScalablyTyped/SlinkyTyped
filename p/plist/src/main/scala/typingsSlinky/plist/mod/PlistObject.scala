@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PlistObject
   extends /* x */ StringDictionary[PlistValue]
-     with _PlistValue
+     with PlistValue
 
 object PlistObject {
   @scala.inline

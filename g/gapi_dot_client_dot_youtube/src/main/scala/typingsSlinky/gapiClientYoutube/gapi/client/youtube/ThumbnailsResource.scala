@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientYoutube.gapi.client.youtube
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientYoutube.AnonVideoId
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientYoutube.anon.VideoId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ThumbnailsResource extends js.Object {
   /** Uploads a custom video thumbnail to YouTube and sets it for a video. */
-  def set(request: AnonVideoId): Request_[ThumbnailSetResponse] = js.native
+  def set(request: VideoId): Request[ThumbnailSetResponse] = js.native
 }
 
 object ThumbnailsResource {
   @scala.inline
-  def apply(set: AnonVideoId => Request_[ThumbnailSetResponse]): ThumbnailsResource = {
+  def apply(set: VideoId => Request[ThumbnailSetResponse]): ThumbnailsResource = {
     val __obj = js.Dynamic.literal(set = js.Any.fromFunction1(set))
     __obj.asInstanceOf[ThumbnailsResource]
   }
@@ -25,7 +25,7 @@ object ThumbnailsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSet(value: AnonVideoId => Request_[ThumbnailSetResponse]): Self = {
+    def withSet(value: VideoId => Request[ThumbnailSetResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.powerAssert.mod
 
-import typingsSlinky.powerAssert.TypeofpowerAssert
+import typingsSlinky.powerAssert.anon.TypeofpowerAssert
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

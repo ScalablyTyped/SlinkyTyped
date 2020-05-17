@@ -1,6 +1,6 @@
 package typingsSlinky.qiniuJs.mod
 
-import typingsSlinky.qiniuJs.PartialImageView2Options
+import typingsSlinky.qiniuJs.anon.PartialImageView2Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

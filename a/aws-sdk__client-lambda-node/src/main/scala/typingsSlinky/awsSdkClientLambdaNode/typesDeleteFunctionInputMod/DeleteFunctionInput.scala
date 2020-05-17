@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientLambdaNode.typesDeleteFunctionInputMod
 
-import typingsSlinky.awsSdkClientLambdaNode.inputTypesUnionMod._InputTypesUnion
+import typingsSlinky.awsSdkClientLambdaNode.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.httpMod.NodeHttpOptions
 import scala.scalajs.js
@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DeleteFunctionInput extends _InputTypesUnion {
+trait DeleteFunctionInput extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *

@@ -1,20 +1,15 @@
 package typingsSlinky.vexflow.Vex.Flow
 
-import typingsSlinky.vexflow.AnonAccidental
-import typingsSlinky.vexflow.AnonClef
-import typingsSlinky.vexflow.AnonFillStyle_
-import typingsSlinky.vexflow.AnonHighestline
-import typingsSlinky.vexflow.AnonLeftshift
-import typingsSlinky.vexflow.AnonX
 import typingsSlinky.vexflow.Vex.Flow.Modifier.Position
+import typingsSlinky.vexflow.anon.FillStyle_
+import typingsSlinky.vexflow.anon.Highestline
+import typingsSlinky.vexflow.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Vex.Flow.StaveNote")
 @js.native
-class StaveNote protected () extends StemmableNote {
-  def this(note_struct: AnonClef) = this()
+trait StaveNote extends StemmableNote {
   var x_shift: Double = js.native
   def addAccidental(index: Double, accidental: Accidental): StaveNote = js.native
   def addAnnotation(index: Double, annotation: Annotation): StaveNote = js.native
@@ -42,11 +37,11 @@ class StaveNote protected () extends StemmableNote {
   @JSName("getDots")
   def getDots_Array(): js.Array[Dot] = js.native
   def getKeyLine(index: Double): Double = js.native
-  def getKeyProps(): js.Array[AnonAccidental] = js.native
+  def getKeyProps(): js.Array[typingsSlinky.vexflow.anon.Accidental] = js.native
   def getKeys(): js.Array[String] = js.native
-  def getModifierStartXY(position: Position, index: Double): AnonX = js.native
+  def getModifierStartXY(position: Position, index: Double): X = js.native
   def getNoteHeadBeginX(): Double = js.native
-  def getNoteHeadBounds(): AnonHighestline = js.native
+  def getNoteHeadBounds(): Highestline = js.native
   def getNoteHeadEndX(): Double = js.native
   def getTieLeftX(): Double = js.native
   def getTieRightX(): Double = js.native
@@ -54,25 +49,12 @@ class StaveNote protected () extends StemmableNote {
   def isChord(): Boolean = js.native
   def isDisplaced(): Boolean = js.native
   def setKeyLine(index: Double, line: Double): StaveNote = js.native
-  def setKeyStyle(index: Double, style: AnonFillStyle_): StaveNote = js.native
+  def setKeyStyle(index: Double, style: FillStyle_): StaveNote = js.native
   def setNoteDisplaced(displaced: Boolean): StaveNote = js.native
   @JSName("setStave")
   def setStave_StaveNote(stave: Stave): StaveNote = js.native
    // inconsistent type: void -> StaveNote
-  def setStemStyle(style: AnonFillStyle_): Unit = js.native
-  def setStyle(style: AnonFillStyle_): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("Vex.Flow.StaveNote")
-@js.native
-object StaveNote extends js.Object {
-  val CATEGORY: String = js.native
-  var DEBUG: Boolean = js.native
-  val STEM_DOWN: Double = js.native
-  val STEM_UP: Double = js.native
-  def format(notes: js.Array[StaveNote], state: AnonLeftshift): Boolean = js.native
-  def formatByY(notes: js.Array[StaveNote], state: AnonLeftshift): Unit = js.native
-  def postFormat(notes: js.Array[StaveNote]): Boolean = js.native
+  def setStemStyle(style: FillStyle_): Unit = js.native
+  def setStyle(style: FillStyle_): Unit = js.native
 }
 

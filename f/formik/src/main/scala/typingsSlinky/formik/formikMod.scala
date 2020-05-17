@@ -1,11 +1,16 @@
 package typingsSlinky.formik
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLFormElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.web.SyntheticFocusEvent
+import typingsSlinky.formik.anon.Dirty
+import typingsSlinky.formik.anon.EnableReinitialize
+import typingsSlinky.formik.anon.Error
+import typingsSlinky.formik.anon.Errors
 import typingsSlinky.formik.typesMod.FormikActions
 import typingsSlinky.formik.typesMod.FormikConfig
 import typingsSlinky.formik.typesMod.FormikErrors
@@ -14,7 +19,6 @@ import typingsSlinky.formik.typesMod.FormikTouched
 import typingsSlinky.formik.typesMod.FormikValues
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.Component
-import typingsSlinky.std.Event_
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -41,16 +45,16 @@ object formikMod extends js.Object {
     def componentWillUnmount_MFormik(): Unit = js.native
     def executeSubmit(): Unit = js.native
     def getFormikActions(): FormikActions[Values] = js.native
-    def getFormikBag(): AnonError[Values] = js.native
-    def getFormikComputedProps(): AnonDirty[Values] = js.native
-    def getFormikContext(): AnonErrors[Values] = js.native
+    def getFormikBag(): Error[Values] = js.native
+    def getFormikComputedProps(): Dirty[Values] = js.native
+    def getFormikContext(): Errors[Values] = js.native
     def handleBlur(eventOrPath: String): Unit | (js.Function1[/* e */ js.UndefOr[SyntheticFocusEvent[_]], Unit]) = js.native
     def handleBlur(eventOrPath: SyntheticFocusEvent[_]): Unit | (js.Function1[/* e */ js.UndefOr[SyntheticFocusEvent[_]], Unit]) = js.native
     def handleChange(eventOrPath: String): Unit | (js.Function1[/* eventOrValue */ js.Any, Unit]) = js.native
     def handleChange(eventOrPath: ChangeEvent[_]): Unit | (js.Function1[/* eventOrValue */ js.Any, Unit]) = js.native
     def handleReset(): Unit = js.native
     def handleSubmit(): Unit = js.native
-    def handleSubmit(e: SyntheticEvent[EventTarget with HTMLFormElement, Event_]): Unit = js.native
+    def handleSubmit(e: SyntheticEvent[EventTarget with HTMLFormElement, Event]): Unit = js.native
     def registerField(name: String, Comp: ReactComponentClass[_]): Unit = js.native
     def resetForm(): Unit = js.native
     def resetForm(nextValues: Values): Unit = js.native
@@ -90,7 +94,7 @@ object formikMod extends js.Object {
   /* static members */
   @js.native
   object Formik extends js.Object {
-    var defaultProps: AnonEnableReinitialize = js.native
+    var defaultProps: EnableReinitialize = js.native
   }
   
 }

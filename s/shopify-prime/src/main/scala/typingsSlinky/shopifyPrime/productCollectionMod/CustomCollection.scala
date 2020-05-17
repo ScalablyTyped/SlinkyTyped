@@ -1,6 +1,6 @@
 package typingsSlinky.shopifyPrime.productCollectionMod
 
-import typingsSlinky.shopifyPrime.AnonId
+import typingsSlinky.shopifyPrime.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait CustomCollection extends ProductCollection {
     * product_id - Required when adding a new item
     * id - Required when shifting the position of a product that was previously added to the collection
     */
-  var collects: js.Array[AnonId] = js.native
+  var collects: js.Array[Id] = js.native
   /**
     * "key": "new"
     * "value": "newvalue"
@@ -38,7 +38,7 @@ trait CustomCollection extends ProductCollection {
 
 object CustomCollection {
   @scala.inline
-  def apply(collects: js.Array[AnonId]): CustomCollection = {
+  def apply(collects: js.Array[Id]): CustomCollection = {
     val __obj = js.Dynamic.literal(collects = collects.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomCollection]
   }
@@ -49,7 +49,7 @@ object CustomCollection {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCollects(value: js.Array[AnonId]): Self = {
+    def withCollects(value: js.Array[Id]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("collects")(value.asInstanceOf[js.Any])
         ret

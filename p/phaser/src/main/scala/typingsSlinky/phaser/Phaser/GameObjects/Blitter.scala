@@ -11,7 +11,6 @@ import typingsSlinky.phaser.Phaser.GameObjects.Components.Size
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Texture
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Transform
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Visible
-import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.Phaser.Structs.List
 import typingsSlinky.phaser.Phaser.Textures.Frame
 import typingsSlinky.phaser.integer
@@ -34,9 +33,8 @@ import scala.scalajs.js.annotation._
   * If you have a need to blast a large volume of frames around the screen then Blitter objects are well worth
   * investigating. They are especially useful for using as a base for your own special effects systems.
   */
-@JSGlobal("Phaser.GameObjects.Blitter")
 @js.native
-class Blitter protected ()
+trait Blitter
   extends GameObject
      with Alpha
      with BlendMode
@@ -48,20 +46,6 @@ class Blitter protected ()
      with Texture
      with Transform
      with Visible {
-  /**
-    * 
-    * @param scene The Scene to which this Game Object belongs. It can only belong to one Scene at any given time.
-    * @param x The x coordinate of this Game Object in world space. Default 0.
-    * @param y The y coordinate of this Game Object in world space. Default 0.
-    * @param texture The key of the texture this Game Object will use for rendering. The Texture must already exist in the Texture Manager. Default '__DEFAULT'.
-    * @param frame The Frame of the Texture that this Game Object will use. Only set if the Texture has multiple frames, such as a Texture Atlas or Sprite Sheet. Default 0.
-    */
-  def this(scene: Scene) = this()
-  def this(scene: Scene, x: Double) = this()
-  def this(scene: Scene, x: Double, y: Double) = this()
-  def this(scene: Scene, x: Double, y: Double, texture: String) = this()
-  def this(scene: Scene, x: Double, y: Double, texture: String, frame: String) = this()
-  def this(scene: Scene, x: Double, y: Double, texture: String, frame: integer) = this()
   /**
     * The children of this Blitter.
     * This List contains all of the Bob objects created by the Blitter.

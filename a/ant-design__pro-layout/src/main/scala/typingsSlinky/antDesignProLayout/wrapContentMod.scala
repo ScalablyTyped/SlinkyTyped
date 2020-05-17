@@ -1,5 +1,7 @@
 package typingsSlinky.antDesignProLayout
 
+import typingsSlinky.antDesignProLayout.anon.Children
+import typingsSlinky.antDesignProLayout.anon.ContentHeight
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +12,7 @@ import scala.scalajs.js.annotation._
 object wrapContentMod extends js.Object {
   @js.native
   trait ResizeObserverContent
-    extends Component[AnonChildren, AnonContentHeight, js.Any] {
+    extends Component[Children, ContentHeight, js.Any] {
     def resize(): js.Any = js.native
   }
   

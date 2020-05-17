@@ -1,10 +1,6 @@
 package typingsSlinky.aframe.mod
 
-import typingsSlinky.aframe.AnonComponentName
-import typingsSlinky.aframe.AnonEl
-import typingsSlinky.aframe.AnonId
-import typingsSlinky.aframe.AnonName
-import typingsSlinky.aframe.AnonState
+import org.scalajs.dom.raw.Event
 import typingsSlinky.aframe.aframeStrings.`child-attached`
 import typingsSlinky.aframe.aframeStrings.`child-detached`
 import typingsSlinky.aframe.aframeStrings.componentchanged
@@ -18,8 +14,12 @@ import typingsSlinky.aframe.aframeStrings.scale
 import typingsSlinky.aframe.aframeStrings.schemachanged
 import typingsSlinky.aframe.aframeStrings.stateadded
 import typingsSlinky.aframe.aframeStrings.stateremoved
+import typingsSlinky.aframe.anon.ComponentName
+import typingsSlinky.aframe.anon.El
+import typingsSlinky.aframe.anon.Id
+import typingsSlinky.aframe.anon.Name
+import typingsSlinky.aframe.anon.State
 import typingsSlinky.std.EventListener
-import typingsSlinky.std.Event_
 import typingsSlinky.three.mod.Object3D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -34,98 +34,86 @@ trait Entity[C] extends ANode {
   var sceneEl: js.UndefOr[Scene] = js.native
   // addEventListener specific usages
   @JSName("addEventListener")
-  def addEventListener_childattached(
-    `type`: `child-attached`,
-    listener: js.Function1[/* event */ Event_ with DetailEvent[AnonEl], Unit]
-  ): Unit = js.native
+  def addEventListener_childattached(`type`: `child-attached`, listener: js.Function1[/* event */ Event with DetailEvent[El], Unit]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_childattached(
     `type`: `child-attached`,
-    listener: js.Function1[/* event */ Event_ with DetailEvent[AnonEl], Unit],
+    listener: js.Function1[/* event */ Event with DetailEvent[El], Unit],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_childdetached(`type`: `child-detached`, listener: js.Function1[/* event */ Event with DetailEvent[El], Unit]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_childdetached(
     `type`: `child-detached`,
-    listener: js.Function1[/* event */ Event_ with DetailEvent[AnonEl], Unit]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_childdetached(
-    `type`: `child-detached`,
-    listener: js.Function1[/* event */ Event_ with DetailEvent[AnonEl], Unit],
+    listener: js.Function1[/* event */ Event with DetailEvent[El], Unit],
     useCapture: Boolean
   ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_componentchanged(`type`: componentchanged, listener: js.Function1[/* event */ Event with DetailEvent[Id], Unit]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_componentchanged(
     `type`: componentchanged,
-    listener: js.Function1[/* event */ Event_ with DetailEvent[AnonId], Unit]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_componentchanged(
-    `type`: componentchanged,
-    listener: js.Function1[/* event */ Event_ with DetailEvent[AnonId], Unit],
+    listener: js.Function1[/* event */ Event with DetailEvent[Id], Unit],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_componentremoved(
-    `type`: componentremoved,
-    listener: js.Function1[/* event */ Event_ with DetailEvent[AnonName], Unit]
-  ): Unit = js.native
+  def addEventListener_componentremoved(`type`: componentremoved, listener: js.Function1[/* event */ Event with DetailEvent[Name], Unit]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_componentremoved(
     `type`: componentremoved,
-    listener: js.Function1[/* event */ Event_ with DetailEvent[AnonName], Unit],
+    listener: js.Function1[/* event */ Event with DetailEvent[Name], Unit],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_loaded(`type`: loaded, listener: js.Function1[/* event */ Event_ with EventListener, Unit]): Unit = js.native
+  def addEventListener_loaded(`type`: loaded, listener: js.Function1[/* event */ Event with EventListener, Unit]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loaded(
     `type`: loaded,
-    listener: js.Function1[/* event */ Event_ with EventListener, Unit],
+    listener: js.Function1[/* event */ Event with EventListener, Unit],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_pause(`type`: pause, listener: js.Function1[/* event */ Event_ with EventListener, Unit]): Unit = js.native
+  def addEventListener_pause(`type`: pause, listener: js.Function1[/* event */ Event with EventListener, Unit]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pause(
     `type`: pause,
-    listener: js.Function1[/* event */ Event_ with EventListener, Unit],
+    listener: js.Function1[/* event */ Event with EventListener, Unit],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_play(`type`: play, listener: js.Function1[/* event */ Event_ with EventListener, Unit]): Unit = js.native
+  def addEventListener_play(`type`: play, listener: js.Function1[/* event */ Event with EventListener, Unit]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_play(
     `type`: play,
-    listener: js.Function1[/* event */ Event_ with EventListener, Unit],
+    listener: js.Function1[/* event */ Event with EventListener, Unit],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_schemachanged(
     `type`: schemachanged,
-    listener: js.Function1[/* event */ Event_ with DetailEvent[AnonComponentName], Unit]
+    listener: js.Function1[/* event */ Event with DetailEvent[ComponentName], Unit]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_schemachanged(
     `type`: schemachanged,
-    listener: js.Function1[/* event */ Event_ with DetailEvent[AnonComponentName], Unit],
+    listener: js.Function1[/* event */ Event with DetailEvent[ComponentName], Unit],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_stateadded(`type`: stateadded, listener: js.Function1[/* event */ Event_ with DetailEvent[AnonState], Unit]): Unit = js.native
+  def addEventListener_stateadded(`type`: stateadded, listener: js.Function1[/* event */ Event with DetailEvent[State], Unit]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_stateadded(
     `type`: stateadded,
-    listener: js.Function1[/* event */ Event_ with DetailEvent[AnonState], Unit],
+    listener: js.Function1[/* event */ Event with DetailEvent[State], Unit],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_stateremoved(`type`: stateremoved, listener: js.Function1[/* event */ Event_ with DetailEvent[AnonState], Unit]): Unit = js.native
+  def addEventListener_stateremoved(`type`: stateremoved, listener: js.Function1[/* event */ Event with DetailEvent[State], Unit]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_stateremoved(
     `type`: stateremoved,
-    listener: js.Function1[/* event */ Event_ with DetailEvent[AnonState], Unit],
+    listener: js.Function1[/* event */ Event with DetailEvent[State], Unit],
     useCapture: Boolean
   ): Unit = js.native
   def addState(name: String): Unit = js.native

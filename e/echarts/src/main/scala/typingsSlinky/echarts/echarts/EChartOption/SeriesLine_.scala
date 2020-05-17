@@ -1,14 +1,14 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonAnimationDelayUpdate
-import typingsSlinky.echarts.AnonAnimationDuration
-import typingsSlinky.echarts.AnonAnimationThreshold
-import typingsSlinky.echarts.AnonBorderRadius
-import typingsSlinky.echarts.AnonColorOpacity
-import typingsSlinky.echarts.AnonDictunknownPropertyBorderColor
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonLabelAnonBorderRadius
-import typingsSlinky.echarts.AnonShadowBlur
+import typingsSlinky.echarts.anon.AnimationDelayUpdate
+import typingsSlinky.echarts.anon.AnimationDuration
+import typingsSlinky.echarts.anon.AnimationThreshold
+import typingsSlinky.echarts.anon.BorderRadius
+import typingsSlinky.echarts.anon.ColorOpacity
+import typingsSlinky.echarts.anon.DictunknownPropertyBorderColor
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.LabelBorderRadius
+import typingsSlinky.echarts.anon.ShadowBlur
 import typingsSlinky.echarts.echarts.EChartOption.SeriesLine.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -145,7 +145,7 @@ trait SeriesLine_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-line.areaStyle
     */
-  var areaStyle: js.UndefOr[AnonColorOpacity] = js.native
+  var areaStyle: js.UndefOr[ColorOpacity] = js.native
   /**
     * Whether to clip the overflowing part, which defaults to clip.
     *
@@ -399,7 +399,7 @@ trait SeriesLine_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-line.emphasis
     */
-  var emphasis: js.UndefOr[AnonLabelAnonBorderRadius] = js.native
+  var emphasis: js.UndefOr[LabelBorderRadius] = js.native
   /**
     * Define what is encoded to for each dimension of `data`.
     * For example:
@@ -461,7 +461,7 @@ trait SeriesLine_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-line.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonDictunknownPropertyBorderColor] = js.native
+  var itemStyle: js.UndefOr[DictunknownPropertyBorderColor] = js.native
   /**
     * Text label of , to explain some data information about graphic
     * item like value, name and so on.
@@ -473,7 +473,7 @@ trait SeriesLine_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-line.label
     */
-  var label: js.UndefOr[AnonBorderRadius] = js.native
+  var label: js.UndefOr[BorderRadius] = js.native
   /**
     * Whether to enable highlighting chart when
     * [legend](https://echarts.apache.org/en/option.html#legend)
@@ -491,7 +491,7 @@ trait SeriesLine_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-line.lineStyle
     */
-  var lineStyle: js.UndefOr[AnonShadowBlur] = js.native
+  var lineStyle: js.UndefOr[ShadowBlur] = js.native
   /**
     * Used to mark an area in chart.
     * For example, mark a time interval.
@@ -499,21 +499,21 @@ trait SeriesLine_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-line.markArea
     */
-  var markArea: js.UndefOr[AnonAnimationDelayUpdate] = js.native
+  var markArea: js.UndefOr[AnimationDelayUpdate] = js.native
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-line.markLine
     */
-  var markLine: js.UndefOr[AnonAnimationThreshold] = js.native
+  var markLine: js.UndefOr[AnimationThreshold] = js.native
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-line.markPoint
     */
-  var markPoint: js.UndefOr[AnonAnimationDuration] = js.native
+  var markPoint: js.UndefOr[AnimationDuration] = js.native
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -812,7 +812,7 @@ trait SeriesLine_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-line.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * @default
     * "line"
@@ -981,7 +981,7 @@ object SeriesLine_ {
         ret
     }
     @scala.inline
-    def withAreaStyle(value: AnonColorOpacity): Self = {
+    def withAreaStyle(value: ColorOpacity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("areaStyle")(value.asInstanceOf[js.Any])
         ret
@@ -1081,7 +1081,7 @@ object SeriesLine_ {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonLabelAnonBorderRadius): Self = {
+    def withEmphasis(value: LabelBorderRadius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -1129,7 +1129,7 @@ object SeriesLine_ {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonDictunknownPropertyBorderColor): Self = {
+    def withItemStyle(value: DictunknownPropertyBorderColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -1141,7 +1141,7 @@ object SeriesLine_ {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonBorderRadius): Self = {
+    def withLabel(value: BorderRadius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -1165,7 +1165,7 @@ object SeriesLine_ {
         ret
     }
     @scala.inline
-    def withLineStyle(value: AnonShadowBlur): Self = {
+    def withLineStyle(value: ShadowBlur): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
         ret
@@ -1177,7 +1177,7 @@ object SeriesLine_ {
         ret
     }
     @scala.inline
-    def withMarkArea(value: AnonAnimationDelayUpdate): Self = {
+    def withMarkArea(value: AnimationDelayUpdate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(value.asInstanceOf[js.Any])
         ret
@@ -1189,7 +1189,7 @@ object SeriesLine_ {
         ret
     }
     @scala.inline
-    def withMarkLine(value: AnonAnimationThreshold): Self = {
+    def withMarkLine(value: AnimationThreshold): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(value.asInstanceOf[js.Any])
         ret
@@ -1201,7 +1201,7 @@ object SeriesLine_ {
         ret
     }
     @scala.inline
-    def withMarkPoint(value: AnonAnimationDuration): Self = {
+    def withMarkPoint(value: AnimationDuration): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(value.asInstanceOf[js.Any])
         ret
@@ -1405,7 +1405,7 @@ object SeriesLine_ {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

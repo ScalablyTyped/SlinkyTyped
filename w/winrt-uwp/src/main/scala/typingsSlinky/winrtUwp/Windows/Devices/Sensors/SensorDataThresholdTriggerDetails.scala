@@ -5,12 +5,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data for what sensor triggered the data threshold monitoring task. */
-@JSGlobal("Windows.Devices.Sensors.SensorDataThresholdTriggerDetails")
 @js.native
-abstract class SensorDataThresholdTriggerDetails () extends js.Object {
+trait SensorDataThresholdTriggerDetails extends js.Object {
   /** Gets the device identifier for the device that activated the threshold trigger. */
   var deviceId: String = js.native
   /** Gets the type of sensor associated with the threshold trigger. */
   var sensorType: SensorType = js.native
+}
+
+object SensorDataThresholdTriggerDetails {
+  @scala.inline
+  def apply(deviceId: String, sensorType: SensorType): SensorDataThresholdTriggerDetails = {
+    val __obj = js.Dynamic.literal(deviceId = deviceId.asInstanceOf[js.Any], sensorType = sensorType.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SensorDataThresholdTriggerDetails]
+  }
+  @scala.inline
+  implicit class SensorDataThresholdTriggerDetailsOps[Self <: SensorDataThresholdTriggerDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSensorType(value: SensorType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sensorType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

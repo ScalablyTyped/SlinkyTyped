@@ -1,6 +1,6 @@
 package typingsSlinky.pg.mod
 
-import typingsSlinky.pg.TypeofarrayParser
+import typingsSlinky.pg.anon.TypeofarrayParser
 import typingsSlinky.pgTypes.mod.TypeParser
 import scala.scalajs.js
 import scala.scalajs.js.`|`

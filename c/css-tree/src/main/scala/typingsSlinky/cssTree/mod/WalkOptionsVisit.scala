@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait WalkOptionsVisit[NodeType /* <: CssNode */] extends js.Object {
+trait WalkOptionsVisit[NodeType /* <: CssNode */] extends WalkOptions {
   var enter: js.UndefOr[EnterOrLeaveFn[NodeType]] = js.native
   var leave: js.UndefOr[EnterOrLeaveFn[NodeType]] = js.native
   var reverse: js.UndefOr[Boolean] = js.native

@@ -4,18 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.SceneOptimization")
 @js.native
-/**
-  * Creates the SceneOptimization object
-  * @param priority defines the priority of this optimization (0 by default which means first in the list)
-  * @param desc defines the description associated with the optimization
-  */
-class SceneOptimization () extends js.Object {
-  def this(/**
-    * Defines the priority of this optimization (0 by default which means first in the list)
-    */
-  priority: Double) = this()
+trait SceneOptimization extends js.Object {
   /**
     * Defines the priority of this optimization (0 by default which means first in the list)
     */
@@ -33,5 +23,39 @@ class SceneOptimization () extends js.Object {
     * @returns description string
     */
   def getDescription(): String = js.native
+}
+
+object SceneOptimization {
+  @scala.inline
+  def apply(apply: (Scene, SceneOptimizer) => Boolean, getDescription: () => String, priority: Double): SceneOptimization = {
+    val __obj = js.Dynamic.literal(apply = js.Any.fromFunction2(apply), getDescription = js.Any.fromFunction0(getDescription), priority = priority.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SceneOptimization]
+  }
+  @scala.inline
+  implicit class SceneOptimizationOps[Self <: SceneOptimization] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApply(value: (Scene, SceneOptimizer) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apply")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetDescription(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDescription")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPriority(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("priority")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

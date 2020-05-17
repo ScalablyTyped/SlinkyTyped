@@ -5,12 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Box2D.Collision.b2Manifold")
 @js.native
-/**
-		* Creates a new manifold.
-		**/
-class b2Manifold () extends js.Object {
+trait b2Manifold extends js.Object {
   /**
   		* Not used for Type e_points
   		**/
@@ -47,21 +43,76 @@ class b2Manifold () extends js.Object {
   def Set(m: b2Manifold): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("Box2D.Collision.b2Manifold")
-@js.native
-object b2Manifold extends js.Object {
-  /**
-  		* Circles
-  		**/
-  var e_circles: Double = js.native
-  /**
-  		* Face A
-  		**/
-  var e_faceA: Double = js.native
-  /**
-  		* Face B
-  		**/
-  var e_faceB: Double = js.native
+object b2Manifold {
+  @scala.inline
+  def apply(
+    Copy: () => b2Manifold,
+    Reset: () => Unit,
+    Set: b2Manifold => Unit,
+    m_localPlaneNormal: b2Vec2,
+    m_localPoint: b2Vec2,
+    m_pointCount: Double,
+    m_points: js.Array[b2ManifoldPoint],
+    m_type: Double
+  ): b2Manifold = {
+    val __obj = js.Dynamic.literal(Copy = js.Any.fromFunction0(Copy), Reset = js.Any.fromFunction0(Reset), Set = js.Any.fromFunction1(Set), m_localPlaneNormal = m_localPlaneNormal.asInstanceOf[js.Any], m_localPoint = m_localPoint.asInstanceOf[js.Any], m_pointCount = m_pointCount.asInstanceOf[js.Any], m_points = m_points.asInstanceOf[js.Any], m_type = m_type.asInstanceOf[js.Any])
+    __obj.asInstanceOf[b2Manifold]
+  }
+  @scala.inline
+  implicit class b2ManifoldOps[Self <: b2Manifold] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCopy(value: () => b2Manifold): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Copy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withReset(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Reset")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSet(value: b2Manifold => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Set")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withM_localPlaneNormal(value: b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m_localPlaneNormal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withM_localPoint(value: b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m_localPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withM_pointCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m_pointCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withM_points(value: js.Array[b2ManifoldPoint]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m_points")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withM_type(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("m_type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

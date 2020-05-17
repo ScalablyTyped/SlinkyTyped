@@ -2,13 +2,14 @@ package typingsSlinky.jqueryColorpicker
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.jqueryColorpicker.JQueryColorpickerStatic.RGB
+import typingsSlinky.jqueryColorpicker.anon.Instantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait JQueryColorpickerStatic_ extends js.Object {
-  var Color: AnonInstantiable = js.native
+  var Color: Instantiable = js.native
   var limits: StringDictionary[js.Function1[/* color */ js.Any, Unit]] = js.native
   var parsers: StringDictionary[js.Function1[/* color */ js.Any, _]] = js.native
   var parts: StringDictionary[js.Function1[/* inst */ js.Any, _]] = js.native
@@ -21,7 +22,7 @@ trait JQueryColorpickerStatic_ extends js.Object {
 object JQueryColorpickerStatic_ {
   @scala.inline
   def apply(
-    Color: AnonInstantiable,
+    Color: Instantiable,
     limits: StringDictionary[js.Function1[/* color */ js.Any, Unit]],
     parsers: StringDictionary[js.Function1[/* color */ js.Any, _]],
     parts: StringDictionary[js.Function1[/* inst */ js.Any, _]],
@@ -40,7 +41,7 @@ object JQueryColorpickerStatic_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withColor(value: AnonInstantiable): Self = {
+    def withColor(value: Instantiable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Color")(value.asInstanceOf[js.Any])
         ret

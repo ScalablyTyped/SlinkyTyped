@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Updates cost and usage information for a mobile broadband profile. */
-@JSGlobal("Windows.Networking.NetworkOperators.ProvisionedProfile")
 @js.native
-abstract class ProvisionedProfile () extends js.Object {
+trait ProvisionedProfile extends js.Object {
   /**
     * Called by the application to update the cost for a specific profile.
     * @param value Updates the cost for the profile.
@@ -19,5 +18,33 @@ abstract class ProvisionedProfile () extends js.Object {
     * @param value Updates the usage for a profile.
     */
   def updateUsage(value: ProfileUsage): Unit = js.native
+}
+
+object ProvisionedProfile {
+  @scala.inline
+  def apply(updateCost: NetworkCostType => Unit, updateUsage: ProfileUsage => Unit): ProvisionedProfile = {
+    val __obj = js.Dynamic.literal(updateCost = js.Any.fromFunction1(updateCost), updateUsage = js.Any.fromFunction1(updateUsage))
+    __obj.asInstanceOf[ProvisionedProfile]
+  }
+  @scala.inline
+  implicit class ProvisionedProfileOps[Self <: ProvisionedProfile] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUpdateCost(value: NetworkCostType => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateCost")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateUsage(value: ProfileUsage => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateUsage")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

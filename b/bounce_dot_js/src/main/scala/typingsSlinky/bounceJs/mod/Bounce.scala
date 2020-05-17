@@ -2,8 +2,8 @@ package typingsSlinky.bounceJs.mod
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.jquery.JQuery
 import typingsSlinky.jquery.JQueryPromise
-import typingsSlinky.jquery.JQuery_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +12,8 @@ import scala.scalajs.js.annotation._
 trait Bounce extends js.Object {
   def applyTo(elements: js.Array[Element]): Unit = js.native
   def applyTo(elements: js.Array[Element], options: AnimationOptions): Unit = js.native
-  def applyTo(elements: JQuery_[HTMLElement]): JQueryPromise[Unit] = js.native
-  def applyTo(elements: JQuery_[HTMLElement], options: AnimationOptions): JQueryPromise[Unit] = js.native
+  def applyTo(elements: JQuery[HTMLElement]): JQueryPromise[Unit] = js.native
+  def applyTo(elements: JQuery[HTMLElement], options: AnimationOptions): JQueryPromise[Unit] = js.native
   def applyTo(element: Element): Unit = js.native
   def applyTo(element: Element, options: AnimationOptions): Unit = js.native
   def define(name: String): Bounce = js.native

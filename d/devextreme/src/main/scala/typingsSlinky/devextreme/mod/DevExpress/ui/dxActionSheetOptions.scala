@@ -1,10 +1,10 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonElementModel
+import typingsSlinky.devextreme.anon.ElementModel
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ trait dxActionSheetOptions extends CollectionWidgetOptions[dxActionSheet] {
   @JSName("items")
   var items_dxActionSheetOptions: js.UndefOr[js.Array[String | dxActionSheetItem | _]] = js.native
   /** A function that is executed when the Cancel button is clicked or tapped. */
-  var onCancelClick: js.UndefOr[(js.Function1[/* e */ AnonElementModel, _]) | String] = js.native
+  var onCancelClick: js.UndefOr[(js.Function1[/* e */ ElementModel, _]) | String] = js.native
   /** Specifies whether or not to display the Cancel button in action sheet. */
   var showCancelButton: js.UndefOr[Boolean] = js.native
   /** A Boolean value specifying whether or not the title of the action sheet is visible. */
@@ -84,13 +84,13 @@ object dxActionSheetOptions {
         ret
     }
     @scala.inline
-    def withOnCancelClickFunction1(value: /* e */ AnonElementModel => _): Self = {
+    def withOnCancelClickFunction1(value: /* e */ ElementModel => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCancelClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnCancelClick(value: (js.Function1[/* e */ AnonElementModel, _]) | String): Self = {
+    def withOnCancelClick(value: (js.Function1[/* e */ ElementModel, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCancelClick")(value.asInstanceOf[js.Any])
         ret

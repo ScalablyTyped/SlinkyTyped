@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.ChartTrendlineFormatData
 import typingsSlinky.officeJs.Excel.Interfaces.ChartTrendlineFormatLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.ChartTrendlineFormatUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.7]
   */
-@JSGlobal("Excel.ChartTrendlineFormat")
 @js.native
-class ChartTrendlineFormat () extends ClientObject {
+trait ChartTrendlineFormat extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_ChartTrendlineFormat: RequestContext = js.native
@@ -36,7 +35,7 @@ class ChartTrendlineFormat () extends ClientObject {
     */
   def load(): ChartTrendlineFormat = js.native
   def load(options: ChartTrendlineFormatLoadOptions): ChartTrendlineFormat = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartTrendlineFormat = js.native
+  def load(propertyNamesAndPaths: Expand): ChartTrendlineFormat = js.native
   def load(propertyNames: String): ChartTrendlineFormat = js.native
   def load(propertyNames: js.Array[String]): ChartTrendlineFormat = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

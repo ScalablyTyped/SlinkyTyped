@@ -2,7 +2,7 @@ package typingsSlinky.rdflib.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.experimental.Response
-import typingsSlinky.rdflib.AnonHTMLHandler
+import typingsSlinky.rdflib.anon.HTMLHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,6 +34,6 @@ class Fetcher_ protected () extends js.Object {
 @js.native
 object Fetcher_ extends js.Object {
   var CONTENT_TYPE_BY_EXT: StringDictionary[String] = js.native
-  var HANDLERS: AnonHTMLHandler = js.native
+  var HANDLERS: HTMLHandler = js.native
 }
 

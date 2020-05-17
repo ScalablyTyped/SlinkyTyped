@@ -7,16 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Serves as a base for classes that are used as arguments for events generated on the client side.
   */
-@JSGlobal("ASPxClientFileManagerActionEventArgsBase")
 @js.native
-class ASPxClientFileManagerActionEventArgsBase protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientFileManagerActionEventArgsBase class with the specified settings.
-    * @param fullName A string value that specifies the new full item's name. Initializes the ASPxClientFileManagerActionEventArgsBase.fullName property.
-    * @param name A string value that specifies the item's name. Initializes the ASPxClientFileManagerActionEventArgsBase.name property.
-    * @param isFolder true if the processed  item is a folder; otherwise, false. Initializes the ASPxClientFileManagerActionEventArgsBase.isFolder property.
-    */
-  def this(fullName: String, name: String, isFolder: Boolean) = this()
+trait ASPxClientFileManagerActionEventArgsBase extends ASPxClientEventArgs {
   /**
     * Gets the full name of the item currently being processed.
     */
@@ -29,5 +21,39 @@ class ASPxClientFileManagerActionEventArgsBase protected () extends ASPxClientEv
     * Gets the name of the currently processed item.
     */
   var name: String = js.native
+}
+
+object ASPxClientFileManagerActionEventArgsBase {
+  @scala.inline
+  def apply(fullName: String, isFolder: Boolean, name: String): ASPxClientFileManagerActionEventArgsBase = {
+    val __obj = js.Dynamic.literal(fullName = fullName.asInstanceOf[js.Any], isFolder = isFolder.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientFileManagerActionEventArgsBase]
+  }
+  @scala.inline
+  implicit class ASPxClientFileManagerActionEventArgsBaseOps[Self <: ASPxClientFileManagerActionEventArgsBase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFullName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fullName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsFolder(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFolder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

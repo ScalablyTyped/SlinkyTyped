@@ -1,7 +1,7 @@
 package typingsSlinky.reactFileInput.mod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait FileInputProps extends js.Object {
   var disabled: js.UndefOr[Boolean] = js.native
   var name: String = js.native
   var placeholder: String = js.native
-  def onChange(event: SyntheticEvent[Event_, _]): Unit = js.native
+  def onChange(event: SyntheticEvent[Event, _]): Unit = js.native
 }
 
 object FileInputProps {
@@ -22,7 +22,7 @@ object FileInputProps {
     accept: String,
     className: String,
     name: String,
-    onChange: SyntheticEvent[Event_, _] => Unit,
+    onChange: SyntheticEvent[Event, _] => Unit,
     placeholder: String
   ): FileInputProps = {
     val __obj = js.Dynamic.literal(accept = accept.asInstanceOf[js.Any], className = className.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), placeholder = placeholder.asInstanceOf[js.Any])
@@ -53,7 +53,7 @@ object FileInputProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: SyntheticEvent[Event_, _] => Unit): Self = {
+    def withOnChange(value: SyntheticEvent[Event, _] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

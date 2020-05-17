@@ -1,6 +1,6 @@
 package typingsSlinky.nano.mod
 
-import typingsSlinky.nano.AnonFields
+import typingsSlinky.nano.anon.Fields
 import typingsSlinky.nano.nanoStrings.json
 import typingsSlinky.nano.nanoStrings.text
 import scala.scalajs.js
@@ -13,7 +13,7 @@ trait CreateIndexRequest extends js.Object {
   // Name of the design document in which the index will be created.
   var ddoc: js.UndefOr[String] = js.native
   // JSON object describing the index to create
-  var index: AnonFields = js.native
+  var index: Fields = js.native
   // Name of the index. If no name is provided, a name will be generated automatically.
   var name: js.UndefOr[String] = js.native
   // This field sets whether the created index will be a partitioned or global index.
@@ -24,7 +24,7 @@ trait CreateIndexRequest extends js.Object {
 
 object CreateIndexRequest {
   @scala.inline
-  def apply(index: AnonFields): CreateIndexRequest = {
+  def apply(index: Fields): CreateIndexRequest = {
     val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateIndexRequest]
   }
@@ -35,7 +35,7 @@ object CreateIndexRequest {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withIndex(value: AnonFields): Self = {
+    def withIndex(value: Fields): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
         ret

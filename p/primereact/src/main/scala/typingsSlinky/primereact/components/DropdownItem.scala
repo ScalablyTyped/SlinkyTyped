@@ -3,7 +3,7 @@ package typingsSlinky.primereact.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonOption
+import typingsSlinky.primereact.anon.Option
 import typingsSlinky.primereact.dropdownItemMod.DropdownItemProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +19,7 @@ object DropdownItem {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.primereact.dropdownItemMod.DropdownItem] {
     @scala.inline
-    def onClick(value: /* e */ AnonOption => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    def onClick(value: /* e */ Option => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
     def option(value: js.Object): this.type = set("option", value.asInstanceOf[js.Any])
     @scala.inline

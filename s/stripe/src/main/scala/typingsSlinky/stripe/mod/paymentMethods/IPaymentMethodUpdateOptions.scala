@@ -1,7 +1,7 @@
 package typingsSlinky.stripe.mod.paymentMethods
 
-import typingsSlinky.stripe.AnonAddress
-import typingsSlinky.stripe.AnonExpmonth
+import typingsSlinky.stripe.anon.Address
+import typingsSlinky.stripe.anon.Expmonth
 import typingsSlinky.stripe.mod.IMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,8 +10,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IPaymentMethodUpdateOptions extends js.Object {
   /** Billing information associated with the PaymentMethod that may be used or required by particular types of payment methods. */
-  var billing_details: js.UndefOr[AnonAddress] = js.native
-  var card: js.UndefOr[AnonExpmonth] = js.native
+  var billing_details: js.UndefOr[Address] = js.native
+  var card: js.UndefOr[Expmonth] = js.native
   /** Set of key-value pairs that you can attach to an object. This can be useful for storing additional information about the object in a structured format. */
   var metadata: js.UndefOr[IMetadata] = js.native
 }
@@ -29,7 +29,7 @@ object IPaymentMethodUpdateOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBilling_details(value: AnonAddress): Self = {
+    def withBilling_details(value: Address): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("billing_details")(value.asInstanceOf[js.Any])
         ret
@@ -41,7 +41,7 @@ object IPaymentMethodUpdateOptions {
         ret
     }
     @scala.inline
-    def withCard(value: AnonExpmonth): Self = {
+    def withCard(value: Expmonth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("card")(value.asInstanceOf[js.Any])
         ret

@@ -1,14 +1,9 @@
 package typingsSlinky.webix.webix
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait AutoScroll extends js.Object
-
-@JSGlobal("webix.AutoScroll")
-@js.native
-object AutoScroll extends TopLevel[AutoScroll]
 

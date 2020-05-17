@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object notificationMod {
   type HolderReadyCallback = js.Function2[
     /* div */ org.scalajs.dom.raw.HTMLDivElement, 
-    /* noticeProps */ typingsSlinky.rcNotification.NoticePropskeyKey, 
+    /* noticeProps */ typingsSlinky.rcNotification.anon.NoticePropskeyKey, 
     scala.Unit
   ]
   type NoticeFunc = js.Function1[

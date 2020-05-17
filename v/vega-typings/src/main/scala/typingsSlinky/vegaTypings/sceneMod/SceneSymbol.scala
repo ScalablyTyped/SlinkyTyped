@@ -1,6 +1,6 @@
 package typingsSlinky.vegaTypings.sceneMod
 
-import typingsSlinky.vegaTypings.AnonRole
+import typingsSlinky.vegaTypings.anon.Role
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait SceneSymbol extends js.Object {
   var bounds: Bounds = js.native
   var datum: js.UndefOr[js.Object] = js.native
   var fill: String = js.native
-  var mark: AnonRole = js.native
+  var mark: Role = js.native
   var shape: String = js.native
   var size: Double = js.native
   var strokeWidth: Double = js.native
@@ -24,7 +24,7 @@ object SceneSymbol {
   def apply(
     bounds: Bounds,
     fill: String,
-    mark: AnonRole,
+    mark: Role,
     shape: String,
     size: Double,
     strokeWidth: Double,
@@ -53,7 +53,7 @@ object SceneSymbol {
         ret
     }
     @scala.inline
-    def withMark(value: AnonRole): Self = {
+    def withMark(value: Role): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mark")(value.asInstanceOf[js.Any])
         ret

@@ -5,12 +5,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a segment in a composition string. See Remarks for an illustration. */
-@JSGlobal("Windows.UI.Text.Core.CoreTextCompositionSegment")
 @js.native
-abstract class CoreTextCompositionSegment () extends js.Object {
+trait CoreTextCompositionSegment extends js.Object {
   /** Gets a string that represents the state of the user input after IME-processing but before final conversion. */
   var preconversionString: String = js.native
   /** Gets an object that represents the range that defines this composition segment. */
   var range: CoreTextRange = js.native
+}
+
+object CoreTextCompositionSegment {
+  @scala.inline
+  def apply(preconversionString: String, range: CoreTextRange): CoreTextCompositionSegment = {
+    val __obj = js.Dynamic.literal(preconversionString = preconversionString.asInstanceOf[js.Any], range = range.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CoreTextCompositionSegment]
+  }
+  @scala.inline
+  implicit class CoreTextCompositionSegmentOps[Self <: CoreTextCompositionSegment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPreconversionString(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preconversionString")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRange(value: CoreTextRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

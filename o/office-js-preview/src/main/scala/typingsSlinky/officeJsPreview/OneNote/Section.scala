@@ -1,10 +1,10 @@
 package typingsSlinky.officeJsPreview.OneNote
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientResult
 import typingsSlinky.officeJsPreview.OneNote.Interfaces.SectionData
 import typingsSlinky.officeJsPreview.OneNote.Interfaces.SectionLoadOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.After
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Before
 import scala.scalajs.js
@@ -17,9 +17,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: OneNoteApi 1.1]
   */
-@JSGlobal("OneNote.Section")
 @js.native
-class Section () extends ClientObject {
+trait Section extends ClientObject {
   /**
     *
     * The client url of the section. Read only
@@ -168,8 +167,8 @@ class Section () extends ClientObject {
   def load(): Section = js.native
   def load(option: String): Section = js.native
   def load(option: js.Array[String]): Section = js.native
-  def load(option: AnonExpand): Section = js.native
   def load(option: SectionLoadOptions): Section = js.native
+  def load(option: Expand): Section = js.native
   /**
     * Overrides the JavaScript `toJSON()` method in order to provide more useful output when an API object is passed to `JSON.stringify()`. (`JSON.stringify`, in turn, calls the `toJSON` method of the object that is passed to it.)
     * Whereas the original OneNote.Section object is an API object, the `toJSON` method returns a plain JavaScript object (typed as `OneNote.Interfaces.SectionData`) that contains shallow copies of any loaded child properties from the original object.

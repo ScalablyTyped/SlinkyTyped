@@ -8,11 +8,11 @@ import scala.scalajs.js.annotation._
 trait PropertyAssignment
   extends ObjectLiteralElement
      with JSDocContainer
+     with BindingOrAssignmentElement
      with HasExpressionInitializer
+     with HasJSDoc
      with ObjectLiteralElementLike
-     with VariableLikeDeclaration
-     with _BindingOrAssignmentElement
-     with _HasJSDoc {
+     with VariableLikeDeclaration {
   var initializer: Expression = js.native
   @JSName("kind")
   var kind_PropertyAssignment: typingsSlinky.typescript.mod.SyntaxKind.PropertyAssignment = js.native

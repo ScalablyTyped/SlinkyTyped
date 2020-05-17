@@ -1,6 +1,6 @@
 package typingsSlinky.lightpick.mod.Options
 
-import typingsSlinky.lightpick.PartialPluralizeFnLocale
+import typingsSlinky.lightpick.anon.PartialPluralizeFnLocale
 import typingsSlinky.lightpick.mod.Options.Locale.Buttons
 import typingsSlinky.lightpick.mod.Options.Locale.PluralizeFn
 import typingsSlinky.lightpick.mod.Options.Locale.PluralizeFnLocale

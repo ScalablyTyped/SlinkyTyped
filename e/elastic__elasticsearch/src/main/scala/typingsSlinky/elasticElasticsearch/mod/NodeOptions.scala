@@ -1,6 +1,6 @@
 package typingsSlinky.elasticElasticsearch.mod
 
-import typingsSlinky.elasticElasticsearch.AnonData
+import typingsSlinky.elasticElasticsearch.anon.Data
 import typingsSlinky.elasticElasticsearch.connectionMod.AgentOptions
 import typingsSlinky.node.tlsMod.ConnectionOptions
 import typingsSlinky.node.urlMod.URL_
@@ -14,7 +14,7 @@ trait NodeOptions extends js.Object {
   var agent: js.UndefOr[AgentOptions] = js.native
   var headers: js.UndefOr[anyObject] = js.native
   var id: js.UndefOr[String] = js.native
-  var roles: js.UndefOr[AnonData] = js.native
+  var roles: js.UndefOr[Data] = js.native
   var ssl: js.UndefOr[ConnectionOptions] = js.native
   var url: URL_ = js.native
 }
@@ -74,7 +74,7 @@ object NodeOptions {
         ret
     }
     @scala.inline
-    def withRoles(value: AnonData): Self = {
+    def withRoles(value: Data): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("roles")(value.asInstanceOf[js.Any])
         ret

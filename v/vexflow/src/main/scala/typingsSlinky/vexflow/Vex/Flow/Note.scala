@@ -1,16 +1,13 @@
 package typingsSlinky.vexflow.Vex.Flow
 
-import typingsSlinky.vexflow.AnonExtraLeftPx_
-import typingsSlinky.vexflow.AnonType
-import typingsSlinky.vexflow.AnonX
+import typingsSlinky.vexflow.anon.ExtraLeftPx_
+import typingsSlinky.vexflow.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Vex.Flow.Note")
 @js.native
-class Note protected () extends Tickable {
-  def this(note_struct: AnonType) = this()
+trait Note extends Tickable {
   var preFormatted: Boolean = js.native
   def addModifier(modifier: Modifier, index: Double): Note = js.native
   def addStroke(index: Double, stroke: Stroke): Note = js.native
@@ -23,8 +20,8 @@ class Note protected () extends Tickable {
   def getGlyph(): Glyph = js.native
   def getLineForRest(): Double = js.native
   def getLineNumber(): Double = js.native
-  def getMetrics(): AnonExtraLeftPx_ = js.native
-  def getModifierStartXY(): AnonX = js.native
+  def getMetrics(): ExtraLeftPx_ = js.native
+  def getModifierStartXY(): X = js.native
   def getNoteType(): String = js.native
   def getPlayNote(): js.Any = js.native
   def getStave(): Stave = js.native
@@ -44,11 +41,5 @@ class Note protected () extends Tickable {
   def setStave(stave: Stave): Note = js.native
   def setWidth(width: Double): Unit = js.native
   def setYs(ys: js.Array[Double]): Note = js.native
-}
-
-@JSGlobal("Vex.Flow.Note")
-@js.native
-object Note extends js.Object {
-  val CATEGORY: String = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.javascriptObfuscator.espreeMod
 
-import typingsSlinky.javascriptObfuscator.AnonGlobalReturn
+import typingsSlinky.javascriptObfuscator.anon.GlobalReturn
 import typingsSlinky.javascriptObfuscator.javascriptObfuscatorNumbers.`10`
 import typingsSlinky.javascriptObfuscator.javascriptObfuscatorNumbers.`2015`
 import typingsSlinky.javascriptObfuscator.javascriptObfuscatorNumbers.`2016`
@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ParseOptions extends js.Object {
   var comment: js.UndefOr[Boolean] = js.native
-  var ecmaFeatures: js.UndefOr[AnonGlobalReturn] = js.native
+  var ecmaFeatures: js.UndefOr[GlobalReturn] = js.native
   var ecmaVersion: js.UndefOr[
     `3` | `5` | `6` | `7` | `8` | `9` | `10` | `2015` | `2016` | `2017` | `2018` | `2019`
   ] = js.native
@@ -54,7 +54,7 @@ object ParseOptions {
         ret
     }
     @scala.inline
-    def withEcmaFeatures(value: AnonGlobalReturn): Self = {
+    def withEcmaFeatures(value: GlobalReturn): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ecmaFeatures")(value.asInstanceOf[js.Any])
         ret

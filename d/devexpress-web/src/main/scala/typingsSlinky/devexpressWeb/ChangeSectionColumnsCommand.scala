@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * A command to change the settings of individual section columns.
   */
-@JSGlobal("ChangeSectionColumnsCommand")
 @js.native
-class ChangeSectionColumnsCommand () extends js.Object {
+trait ChangeSectionColumnsCommand extends js.Object {
   /**
     * Executes the ChangeSectionColumnsCommand command with the specified parameter. true if the command has been successfully executed; false if the command execution has failed.
     * @param columns An array of SectionColumn objects.
@@ -19,5 +18,33 @@ class ChangeSectionColumnsCommand () extends js.Object {
     * Gets information about the command's state.
     */
   def getState(): CommandState[js.Array[SectionColumn]] = js.native
+}
+
+object ChangeSectionColumnsCommand {
+  @scala.inline
+  def apply(execute: js.Array[SectionColumn] => Boolean, getState: () => CommandState[js.Array[SectionColumn]]): ChangeSectionColumnsCommand = {
+    val __obj = js.Dynamic.literal(execute = js.Any.fromFunction1(execute), getState = js.Any.fromFunction0(getState))
+    __obj.asInstanceOf[ChangeSectionColumnsCommand]
+  }
+  @scala.inline
+  implicit class ChangeSectionColumnsCommandOps[Self <: ChangeSectionColumnsCommand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExecute(value: js.Array[SectionColumn] => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetState(value: () => CommandState[js.Array[SectionColumn]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getState")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

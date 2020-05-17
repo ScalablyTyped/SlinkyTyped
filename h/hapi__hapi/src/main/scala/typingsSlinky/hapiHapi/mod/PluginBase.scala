@@ -1,6 +1,6 @@
 package typingsSlinky.hapiHapi.mod
 
-import typingsSlinky.hapiHapi.AnonHapi
+import typingsSlinky.hapiHapi.anon.Hapi
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait PluginBase[T] extends js.Object {
     * Allows defining semver requirements for node and hapi.
     * @default Allows all.
     */
-  var requirements: js.UndefOr[AnonHapi] = js.native
+  var requirements: js.UndefOr[Hapi] = js.native
   /**
     * (required) the registration function with the signature async function(server, options) where:
     * * server - the server object with a plugin-specific server.realm.
@@ -81,7 +81,7 @@ object PluginBase {
         ret
     }
     @scala.inline
-    def withRequirements(value: AnonHapi): Self[T] = {
+    def withRequirements(value: Hapi): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("requirements")(value.asInstanceOf[js.Any])
         ret

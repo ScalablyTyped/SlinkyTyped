@@ -1,14 +1,14 @@
 package typingsSlinky.reactPlyr.mod
 
-import typingsSlinky.reactPlyr.AnonActive
-import typingsSlinky.reactPlyr.AnonControls
-import typingsSlinky.reactPlyr.AnonDefault
-import typingsSlinky.reactPlyr.AnonEnabled
-import typingsSlinky.reactPlyr.AnonFocused
-import typingsSlinky.reactPlyr.AnonKey
-import typingsSlinky.reactPlyr.AnonKind
-import typingsSlinky.reactPlyr.AnonOptions
-import typingsSlinky.reactPlyr.AnonSize
+import typingsSlinky.reactPlyr.anon.Active
+import typingsSlinky.reactPlyr.anon.Controls
+import typingsSlinky.reactPlyr.anon.Default
+import typingsSlinky.reactPlyr.anon.Enabled
+import typingsSlinky.reactPlyr.anon.Focused
+import typingsSlinky.reactPlyr.anon.Key
+import typingsSlinky.reactPlyr.anon.Kind
+import typingsSlinky.reactPlyr.anon.Options
+import typingsSlinky.reactPlyr.anon.Size
 import typingsSlinky.reactPlyr.reactPlyrStrings.audio
 import typingsSlinky.reactPlyr.reactPlyrStrings.video
 import typingsSlinky.reactPlyr.reactPlyrStrings.vimeo
@@ -22,7 +22,7 @@ trait Props extends js.Object {
   var autopause: js.UndefOr[Boolean] = js.native
   var autoplay: js.UndefOr[Boolean] = js.native
   var blankVideo: js.UndefOr[String] = js.native
-  var captions: js.UndefOr[js.Array[AnonKind]] = js.native
+  var captions: js.UndefOr[js.Array[Kind]] = js.native
   var className: js.UndefOr[String] = js.native
   var clickToPlay: js.UndefOr[Boolean] = js.native
   var controls: js.UndefOr[js.Array[String]] = js.native
@@ -31,14 +31,14 @@ trait Props extends js.Object {
   var displayDuration: js.UndefOr[Boolean] = js.native
   var duration: js.UndefOr[Double] = js.native
   var enabled: js.UndefOr[Boolean] = js.native
-  var fullscreen: js.UndefOr[AnonEnabled] = js.native
+  var fullscreen: js.UndefOr[Enabled] = js.native
   var hideControls: js.UndefOr[Boolean] = js.native
   var iconPrefix: js.UndefOr[String] = js.native
   var iconUrl: js.UndefOr[String] = js.native
   var invertTime: js.UndefOr[Boolean] = js.native
-  var keyboard: js.UndefOr[AnonFocused] = js.native
+  var keyboard: js.UndefOr[Focused] = js.native
   var loadSprite: js.UndefOr[Boolean] = js.native
-  var loop: js.UndefOr[AnonActive] = js.native
+  var loop: js.UndefOr[Active] = js.native
   var muted: js.UndefOr[Boolean] = js.native
   var onCaptionsDisabled: js.UndefOr[js.Function0[Unit]] = js.native
   var onCaptionsEnabled: js.UndefOr[js.Function0[Unit]] = js.native
@@ -53,17 +53,17 @@ trait Props extends js.Object {
   var onTimeUpdate: js.UndefOr[js.Function1[/* time */ js.UndefOr[Double], Unit]] = js.native
   var onVolumeChange: js.UndefOr[js.Function1[/* params */ OnVolumeChangeParam, Unit]] = js.native
   var poster: js.UndefOr[String] = js.native
-  var quality: js.UndefOr[AnonDefault] = js.native
+  var quality: js.UndefOr[Default] = js.native
   var ratio: js.UndefOr[String] = js.native
   var resetOnEnd: js.UndefOr[Boolean] = js.native
   var seekTime: js.UndefOr[Double] = js.native
   var settings: js.UndefOr[js.Array[String]] = js.native
-  var sources: js.UndefOr[js.Array[AnonSize]] = js.native
-  var speed: js.UndefOr[AnonOptions] = js.native
-  var storage: js.UndefOr[AnonKey] = js.native
+  var sources: js.UndefOr[js.Array[Size]] = js.native
+  var speed: js.UndefOr[Options] = js.native
+  var storage: js.UndefOr[Key] = js.native
   var title: js.UndefOr[String] = js.native
   var toggleInvert: js.UndefOr[Boolean] = js.native
-  var tooltips: js.UndefOr[AnonControls] = js.native
+  var tooltips: js.UndefOr[Controls] = js.native
   var `type`: js.UndefOr[youtube | vimeo | video | audio] = js.native
   var url: js.UndefOr[String] = js.native
   var videoId: js.UndefOr[String] = js.native
@@ -119,7 +119,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withCaptions(value: js.Array[AnonKind]): Self = {
+    def withCaptions(value: js.Array[Kind]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("captions")(value.asInstanceOf[js.Any])
         ret
@@ -227,7 +227,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withFullscreen(value: AnonEnabled): Self = {
+    def withFullscreen(value: Enabled): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fullscreen")(value.asInstanceOf[js.Any])
         ret
@@ -287,7 +287,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withKeyboard(value: AnonFocused): Self = {
+    def withKeyboard(value: Focused): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyboard")(value.asInstanceOf[js.Any])
         ret
@@ -311,7 +311,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withLoop(value: AnonActive): Self = {
+    def withLoop(value: Active): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loop")(value.asInstanceOf[js.Any])
         ret
@@ -491,7 +491,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withQuality(value: AnonDefault): Self = {
+    def withQuality(value: Default): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("quality")(value.asInstanceOf[js.Any])
         ret
@@ -551,7 +551,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withSources(value: js.Array[AnonSize]): Self = {
+    def withSources(value: js.Array[Size]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sources")(value.asInstanceOf[js.Any])
         ret
@@ -563,7 +563,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withSpeed(value: AnonOptions): Self = {
+    def withSpeed(value: Options): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("speed")(value.asInstanceOf[js.Any])
         ret
@@ -575,7 +575,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withStorage(value: AnonKey): Self = {
+    def withStorage(value: Key): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(value.asInstanceOf[js.Any])
         ret
@@ -611,7 +611,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withTooltips(value: AnonControls): Self = {
+    def withTooltips(value: Controls): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltips")(value.asInstanceOf[js.Any])
         ret

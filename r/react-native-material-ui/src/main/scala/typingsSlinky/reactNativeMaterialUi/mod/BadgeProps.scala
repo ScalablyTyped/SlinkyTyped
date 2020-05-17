@@ -1,8 +1,7 @@
 package typingsSlinky.reactNativeMaterialUi.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactNativeMaterialUi.AnonColor
-import typingsSlinky.reactNativeMaterialUi.AnonStrokeContainer
+import typingsSlinky.reactNativeMaterialUi.anon.StrokeContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,10 +10,10 @@ import scala.scalajs.js.annotation._
 trait BadgeProps extends js.Object {
   var accent: js.UndefOr[Boolean] = js.native
   var children: js.UndefOr[ReactElement] = js.native
-  var icon: js.UndefOr[String | AnonColor] = js.native
+  var icon: js.UndefOr[String | typingsSlinky.reactNativeMaterialUi.anon.Color] = js.native
   var size: js.UndefOr[Double] = js.native
   var stroke: js.UndefOr[Double] = js.native
-  var style: js.UndefOr[AnonStrokeContainer] = js.native
+  var style: js.UndefOr[StrokeContainer] = js.native
   var text: js.UndefOr[String] = js.native
 }
 
@@ -55,7 +54,7 @@ object BadgeProps {
         ret
     }
     @scala.inline
-    def withIcon(value: String | AnonColor): Self = {
+    def withIcon(value: String | typingsSlinky.reactNativeMaterialUi.anon.Color): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
         ret
@@ -91,7 +90,7 @@ object BadgeProps {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonStrokeContainer): Self = {
+    def withStyle(value: StrokeContainer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCliFramework.mod
 
-import typingsSlinky.ionicCliFramework.RequiredCommandMetadataCo
+import typingsSlinky.ionicCliFramework.anon.RequiredCommandMetadataCo
 import typingsSlinky.ionicCliFramework.helpMod.CommandHelpSchema
 import scala.scalajs.js
 import scala.scalajs.js.`|`

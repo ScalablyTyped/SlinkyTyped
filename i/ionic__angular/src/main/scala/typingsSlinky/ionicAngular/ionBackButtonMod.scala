@@ -1,8 +1,8 @@
 package typingsSlinky.ionicAngular
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.ionicAngular.ionRouterOutletMod.IonRouterOutlet
 import typingsSlinky.ionicAngular.navControllerMod.NavController
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ object ionBackButtonMod extends js.Object {
     /**
       * @internal
       */
-    def onClick(ev: Event_): Unit = js.native
+    def onClick(ev: Event): Unit = js.native
   }
   
 }

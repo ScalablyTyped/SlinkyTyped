@@ -2,7 +2,7 @@ package typingsSlinky.gestalt.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.AnonPathString
+import typingsSlinky.gestalt.anon.PathString
 import typingsSlinky.gestalt.gestaltStrings.blue
 import typingsSlinky.gestalt.gestaltStrings.darkGray
 import typingsSlinky.gestalt.gestaltStrings.gray
@@ -37,7 +37,7 @@ object Pog {
     @scala.inline
     def bgColor(value: transparent | lightGray | white | gray | blue | transparentDarkGray): this.type = set("bgColor", value.asInstanceOf[js.Any])
     @scala.inline
-    def dangerouslySetSvgPath(value: AnonPathString): this.type = set("dangerouslySetSvgPath", value.asInstanceOf[js.Any])
+    def dangerouslySetSvgPath(value: PathString): this.type = set("dangerouslySetSvgPath", value.asInstanceOf[js.Any])
     @scala.inline
     def focused(value: Boolean): this.type = set("focused", value.asInstanceOf[js.Any])
     @scala.inline

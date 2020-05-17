@@ -1,5 +1,6 @@
 package typingsSlinky.openlayers.mod.format
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Node
 import typingsSlinky.openlayers.mod.GlobalObject
 import typingsSlinky.openlayers.mod.geom.Geometry
@@ -7,7 +8,6 @@ import typingsSlinky.openlayers.mod.olx.format.GeoJSONOptions
 import typingsSlinky.openlayers.mod.olx.format.ReadOptions
 import typingsSlinky.openlayers.mod.olx.format.WriteOptions
 import typingsSlinky.openlayers.mod.proj.Projection
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,8 +43,8 @@ class GeoJSON () extends JSONFeature {
     * @return Feature.
     * @api stable
     */
-  def readFeature(source: Document_): typingsSlinky.openlayers.mod.Feature = js.native
-  def readFeature(source: Document_, opt_options: ReadOptions): typingsSlinky.openlayers.mod.Feature = js.native
+  def readFeature(source: Document): typingsSlinky.openlayers.mod.Feature = js.native
+  def readFeature(source: Document, opt_options: ReadOptions): typingsSlinky.openlayers.mod.Feature = js.native
   def readFeature(source: Node): typingsSlinky.openlayers.mod.Feature = js.native
   def readFeature(source: Node, opt_options: ReadOptions): typingsSlinky.openlayers.mod.Feature = js.native
   def readFeatures(source: String): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
@@ -60,8 +60,8 @@ class GeoJSON () extends JSONFeature {
     * @return Features.
     * @api stable
     */
-  def readFeatures(source: Document_): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
-  def readFeatures(source: Document_, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
+  def readFeatures(source: Document): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
+  def readFeatures(source: Document, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: Node): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: Node, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readGeometry(source: String): Geometry = js.native
@@ -76,8 +76,8 @@ class GeoJSON () extends JSONFeature {
     * @return Geometry.
     * @api stable
     */
-  def readGeometry(source: Document_): Geometry = js.native
-  def readGeometry(source: Document_, opt_options: ReadOptions): Geometry = js.native
+  def readGeometry(source: Document): Geometry = js.native
+  def readGeometry(source: Document, opt_options: ReadOptions): Geometry = js.native
   def readGeometry(source: Node): Geometry = js.native
   def readGeometry(source: Node, opt_options: ReadOptions): Geometry = js.native
   def readProjection(source: String): Projection = js.native
@@ -89,7 +89,7 @@ class GeoJSON () extends JSONFeature {
     * @return Projection.
     * @api stable
     */
-  def readProjection(source: Document_): Projection = js.native
+  def readProjection(source: Document): Projection = js.native
   def readProjection(source: Node): Projection = js.native
   /**
     * Encode a feature as a GeoJSON Feature string.

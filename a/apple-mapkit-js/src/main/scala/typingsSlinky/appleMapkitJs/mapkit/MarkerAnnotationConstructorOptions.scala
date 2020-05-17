@@ -1,6 +1,6 @@
 package typingsSlinky.appleMapkitJs.mapkit
 
-import typingsSlinky.appleMapkitJs.Anon1
+import typingsSlinky.appleMapkitJs.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait MarkerAnnotationConstructorOptions extends AnnotationConstructorOptions {
   /**
     * The image to display in the marker balloon.
     */
-  var glyphImage: js.UndefOr[Anon1] = js.native
+  var glyphImage: js.UndefOr[`1`] = js.native
   /**
     * The text to display in the marker balloon.
     */
@@ -77,7 +77,7 @@ object MarkerAnnotationConstructorOptions {
         ret
     }
     @scala.inline
-    def withGlyphImage(value: Anon1): Self = {
+    def withGlyphImage(value: `1`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("glyphImage")(value.asInstanceOf[js.Any])
         ret

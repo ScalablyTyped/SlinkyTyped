@@ -1,6 +1,6 @@
 package typingsSlinky.hlsParser.mod.types
 
-import typingsSlinky.hlsParser.BasePlaylistConstructorPrCurrentVariant
+import typingsSlinky.hlsParser.anon.BasePlaylistConstructorPrCurrentVariant
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

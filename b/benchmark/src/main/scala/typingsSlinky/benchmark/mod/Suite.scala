@@ -1,6 +1,6 @@
 package typingsSlinky.benchmark.mod
 
-import typingsSlinky.benchmark.AnonName
+import typingsSlinky.benchmark.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,6 +61,6 @@ class Suite () extends js.Object {
 @JSImport("benchmark", "Suite")
 @js.native
 object Suite extends js.Object {
-  var options: AnonName = js.native
+  var options: Name = js.native
 }
 

@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartTitleData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartTitleLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartTitleUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Automatic
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Bottom
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Center
@@ -24,9 +24,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.ChartTitle")
 @js.native
-class ChartTitle () extends ClientObject {
+trait ChartTitle extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_ChartTitle: RequestContext = js.native
@@ -137,7 +136,7 @@ class ChartTitle () extends ClientObject {
     */
   def load(): ChartTitle = js.native
   def load(options: ChartTitleLoadOptions): ChartTitle = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartTitle = js.native
+  def load(propertyNamesAndPaths: Expand): ChartTitle = js.native
   def load(propertyNames: String): ChartTitle = js.native
   def load(propertyNames: js.Array[String]): ChartTitle = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

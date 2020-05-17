@@ -5,7 +5,7 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeElements.PartialTextProperties
+import typingsSlinky.reactNativeElements.anon.PartialTextProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

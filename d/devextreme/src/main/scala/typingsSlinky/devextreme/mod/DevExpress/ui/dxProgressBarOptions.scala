@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonComponentElementEvent
+import typingsSlinky.devextreme.anon.ComponentElementEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait dxProgressBarOptions extends dxTrackBarOptions[dxProgressBar] {
   /** A function that is executed when the value reaches the maximum. */
-  var onComplete: js.UndefOr[js.Function1[/* e */ AnonComponentElementEvent, _]] = js.native
+  var onComplete: js.UndefOr[js.Function1[/* e */ ComponentElementEvent, _]] = js.native
   /** Specifies whether or not the widget displays a progress status. */
   var showStatus: js.UndefOr[Boolean] = js.native
   /** Specifies a format for the progress status. */
@@ -31,7 +31,7 @@ object dxProgressBarOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnComplete(value: /* e */ AnonComponentElementEvent => _): Self = {
+    def withOnComplete(value: /* e */ ComponentElementEvent => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onComplete")(js.Any.fromFunction1(value))
         ret

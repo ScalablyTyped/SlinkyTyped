@@ -3,7 +3,7 @@ package typingsSlinky.seleniumStandalone.mod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.node.httpMod.RequestOptions
 import typingsSlinky.node.urlMod.URL_
-import typingsSlinky.seleniumStandalone.AnonArch
+import typingsSlinky.seleniumStandalone.anon.Arch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait InstallOpts extends js.Object {
   var basePath: js.UndefOr[String] = js.native
   var baseURL: js.UndefOr[String] = js.native
   var cb: js.UndefOr[js.Function1[/* error */ js.Error, Unit]] = js.native
-  var drivers: js.UndefOr[StringDictionary[AnonArch]] = js.native
+  var drivers: js.UndefOr[StringDictionary[Arch]] = js.native
   var logger: js.UndefOr[js.Function1[/* message */ String, Unit]] = js.native
   var progressCb: js.UndefOr[
     js.Function3[/* totalLength */ Double, /* progressLength */ Double, /* chunkLength */ Double, Unit]
@@ -71,7 +71,7 @@ object InstallOpts {
         ret
     }
     @scala.inline
-    def withDrivers(value: StringDictionary[AnonArch]): Self = {
+    def withDrivers(value: StringDictionary[Arch]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("drivers")(value.asInstanceOf[js.Any])
         ret

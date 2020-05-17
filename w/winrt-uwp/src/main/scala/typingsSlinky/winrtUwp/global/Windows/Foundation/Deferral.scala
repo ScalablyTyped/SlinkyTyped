@@ -1,0 +1,19 @@
+package typingsSlinky.winrtUwp.global.Windows.Foundation
+
+import typingsSlinky.winrtUwp.Windows.Foundation.DeferralCompletedHandler
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Stores a DeferralCompletedHandler to be invoked upon completion of the deferral and manipulates the state of the deferral. */
+@JSGlobal("Windows.Foundation.Deferral")
+@js.native
+class Deferral protected ()
+  extends typingsSlinky.winrtUwp.Windows.Foundation.Deferral {
+  /**
+    * Initializes a new Deferral object and specifies a DeferralCompletedHandler to be called upon completion of the deferral.
+    * @param handler A DeferralCompletedHandler to be called upon completion of the deferral.
+    */
+  def this(handler: DeferralCompletedHandler) = this()
+}
+

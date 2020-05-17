@@ -1,6 +1,6 @@
 package typingsSlinky.friendlyErrorsWebpackPlugin.mod
 
-import typingsSlinky.friendlyErrorsWebpackPlugin.AnonMessages
+import typingsSlinky.friendlyErrorsWebpackPlugin.anon.Messages
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait Options extends js.Object {
   ] = js.native
   var additionalTransformers: js.UndefOr[js.Array[js.Function1[/* error */ _, _]]] = js.native
   var clearConsole: js.UndefOr[Boolean] = js.native
-  var compilationSuccessInfo: js.UndefOr[AnonMessages] = js.native
+  var compilationSuccessInfo: js.UndefOr[Messages] = js.native
   var onErrors: js.UndefOr[js.Function2[/* severity */ Severity, /* errors */ String, Unit]] = js.native
 }
 
@@ -71,7 +71,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withCompilationSuccessInfo(value: AnonMessages): Self = {
+    def withCompilationSuccessInfo(value: Messages): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("compilationSuccessInfo")(value.asInstanceOf[js.Any])
         ret

@@ -1,8 +1,8 @@
 package typingsSlinky.awsSdk.rdsMod
 
-import typingsSlinky.awsSdk.DescribeDBClusterSnapshot
-import typingsSlinky.awsSdk.DescribeDBInstancesMessagFilters
-import typingsSlinky.awsSdk.DescribeDBSnapshotsMessag
+import typingsSlinky.awsSdk.anon.DescribeDBClusterSnapshot
+import typingsSlinky.awsSdk.anon.DescribeDBInstancesMessagFilters
+import typingsSlinky.awsSdk.anon.DescribeDBSnapshotsMessag
 import typingsSlinky.awsSdk.awsSdkStrings.dBClusterSnapshotAvailable
 import typingsSlinky.awsSdk.awsSdkStrings.dBClusterSnapshotDeleted
 import typingsSlinky.awsSdk.awsSdkStrings.dBInstanceAvailable

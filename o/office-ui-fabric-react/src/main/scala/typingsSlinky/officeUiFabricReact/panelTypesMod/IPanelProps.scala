@@ -1,5 +1,6 @@
 package typingsSlinky.officeUiFabricReact.panelTypesMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
@@ -10,7 +11,6 @@ import typingsSlinky.officeUiFabricReact.layerTypesMod.ILayerProps
 import typingsSlinky.officeUiFabricReact.overlayTypesMod.IOverlayProps
 import typingsSlinky.officeUiFabricReact.panelBaseMod.PanelBase
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.std.Event_
 import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -129,7 +129,7 @@ trait IPanelProps extends HTMLAttributes[PanelBase] {
     * A callback function for when the panel is closed, before the animation completes.
     * If the panel should NOT be dismissed based on some keyboard event, then simply call ev.preventDefault() on it
     */
-  var onDismiss: js.UndefOr[js.Function1[/* ev */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]], Unit]] = js.native
+  var onDismiss: js.UndefOr[js.Function1[/* ev */ js.UndefOr[SyntheticEvent[Event, HTMLElement]], Unit]] = js.native
   /**
     * A callback function which is called **after** the Panel is dismissed and the animation is complete.
     * (If you need to update the Panel's `isOpen` prop in response to a dismiss event, use `onDismiss` instead.)
@@ -459,7 +459,7 @@ object IPanelProps {
         ret
     }
     @scala.inline
-    def withOnDismiss(value: /* ev */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]] => Unit): Self = {
+    def withOnDismiss(value: /* ev */ js.UndefOr[SyntheticEvent[Event, HTMLElement]] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDismiss")(js.Any.fromFunction1(value))
         ret

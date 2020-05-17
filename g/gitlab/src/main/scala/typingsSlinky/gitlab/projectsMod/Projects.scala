@@ -1,14 +1,14 @@
 package typingsSlinky.gitlab.projectsMod
 
+import typingsSlinky.gitlab.anon.forkedFromIdnumberBaseReq
+import typingsSlinky.gitlab.anon.metadataUploadMetadataSud
+import typingsSlinky.gitlab.anon.userIdnumberBaseRequestOp
 import typingsSlinky.gitlab.eventsMod.EventOptions
-import typingsSlinky.gitlab.forkedFromIdnumberBaseReq
 import typingsSlinky.gitlab.infrastructureMod.BaseService
-import typingsSlinky.gitlab.metadataUploadMetadataSud
 import typingsSlinky.gitlab.requestHelperMod.BaseRequestOptions
 import typingsSlinky.gitlab.requestHelperMod.GetResponse
 import typingsSlinky.gitlab.requestHelperMod.PaginatedRequestOptions
 import typingsSlinky.gitlab.requestHelperMod.Sudo
-import typingsSlinky.gitlab.userIdnumberBaseRequestOp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,7 @@
 package typingsSlinky.googleAppsScript.GoogleAppsScript.Base
 
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Byte
+import typingsSlinky.googleAppsScript.GoogleAppsScript.URLFetch.Payload
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +10,9 @@ import scala.scalajs.js.annotation._
   * A data interchange object for Apps Script services.
   */
 @js.native
-trait Blob extends BlobSource {
+trait Blob
+  extends BlobSource
+     with Payload {
   def copyBlob(): Blob = js.native
   /** @deprecated DO NOT USE */ def getAllBlobs(): js.Array[Blob] = js.native
   def getBytes(): js.Array[Byte] = js.native

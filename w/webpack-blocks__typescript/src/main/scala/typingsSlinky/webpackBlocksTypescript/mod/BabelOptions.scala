@@ -1,6 +1,6 @@
 package typingsSlinky.webpackBlocksTypescript.mod
 
-import typingsSlinky.webpackBlocksTypescript.AnonModules
+import typingsSlinky.webpackBlocksTypescript.anon.Modules
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait BabelOptions extends js.Object {
   var babelrc: js.UndefOr[Boolean] = js.native
-  var presets: js.UndefOr[js.Array[js.Array[AnonModules | String]]] = js.native
+  var presets: js.UndefOr[js.Array[js.Array[Modules | String]]] = js.native
 }
 
 object BabelOptions {
@@ -36,7 +36,7 @@ object BabelOptions {
         ret
     }
     @scala.inline
-    def withPresets(value: js.Array[js.Array[AnonModules | String]]): Self = {
+    def withPresets(value: js.Array[js.Array[Modules | String]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("presets")(value.asInstanceOf[js.Any])
         ret

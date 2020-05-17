@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TextExpressionData
   extends BaseExpressionData
-     with _ExpressionData {
+     with ExpressionData {
   var childNodeIndex: Double = js.native
 }
 

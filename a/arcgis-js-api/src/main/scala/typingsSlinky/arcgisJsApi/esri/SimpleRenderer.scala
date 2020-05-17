@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.simple
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -32,8 +31,4 @@ trait SimpleRenderer
   @JSName("type")
   val type_SimpleRenderer: simple = js.native
 }
-
-@JSGlobal("__esri.SimpleRenderer")
-@js.native
-object SimpleRenderer extends TopLevel[SimpleRendererConstructor]
 

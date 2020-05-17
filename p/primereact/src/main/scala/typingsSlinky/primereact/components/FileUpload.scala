@@ -3,11 +3,11 @@ package typingsSlinky.primereact.components
 import org.scalajs.dom.raw.File
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonFiles
-import typingsSlinky.primereact.AnonFilesAny
-import typingsSlinky.primereact.AnonFilesOriginalEvent
-import typingsSlinky.primereact.AnonFormData
-import typingsSlinky.primereact.AnonProgress
+import typingsSlinky.primereact.anon.Files
+import typingsSlinky.primereact.anon.FilesAny
+import typingsSlinky.primereact.anon.FilesOriginalEvent
+import typingsSlinky.primereact.anon.FormData
+import typingsSlinky.primereact.anon.Progress
 import typingsSlinky.primereact.fileUploadMod.FileUploadProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -51,19 +51,19 @@ object FileUpload {
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def onBeforeSend(value: /* e */ AnonFormData => Unit): this.type = set("onBeforeSend", js.Any.fromFunction1(value))
+    def onBeforeSend(value: /* e */ FormData => Unit): this.type = set("onBeforeSend", js.Any.fromFunction1(value))
     @scala.inline
-    def onBeforeUpload(value: /* e */ AnonFormData => Unit): this.type = set("onBeforeUpload", js.Any.fromFunction1(value))
+    def onBeforeUpload(value: /* e */ FormData => Unit): this.type = set("onBeforeUpload", js.Any.fromFunction1(value))
     @scala.inline
     def onClear(value: () => Unit): this.type = set("onClear", js.Any.fromFunction0(value))
     @scala.inline
-    def onError(value: /* e */ AnonFiles => Unit): this.type = set("onError", js.Any.fromFunction1(value))
+    def onError(value: /* e */ Files => Unit): this.type = set("onError", js.Any.fromFunction1(value))
     @scala.inline
-    def onProgress(value: /* e */ AnonProgress => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
+    def onProgress(value: /* e */ Progress => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
     @scala.inline
-    def onSelect(value: /* e */ AnonFilesOriginalEvent => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    def onSelect(value: /* e */ FilesOriginalEvent => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline
-    def onUpload(value: /* e */ AnonFiles => Unit): this.type = set("onUpload", js.Any.fromFunction1(value))
+    def onUpload(value: /* e */ Files => Unit): this.type = set("onUpload", js.Any.fromFunction1(value))
     @scala.inline
     def onValidationFail(value: /* file */ File => Unit): this.type = set("onValidationFail", js.Any.fromFunction1(value))
     @scala.inline
@@ -71,7 +71,7 @@ object FileUpload {
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
-    def uploadHandler(value: /* e */ AnonFilesAny => Unit): this.type = set("uploadHandler", js.Any.fromFunction1(value))
+    def uploadHandler(value: /* e */ FilesAny => Unit): this.type = set("uploadHandler", js.Any.fromFunction1(value))
     @scala.inline
     def uploadLabel(value: String): this.type = set("uploadLabel", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,5 +1,6 @@
 package typingsSlinky.chalkPipe
 
+import typingsSlinky.chalkPipe.anon.ChalksupportsColorColorSu
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

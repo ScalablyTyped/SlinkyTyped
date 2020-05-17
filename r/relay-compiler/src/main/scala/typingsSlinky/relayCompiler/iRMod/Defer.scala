@@ -1,6 +1,6 @@
 package typingsSlinky.relayCompiler.iRMod
 
-import typingsSlinky.relayCompiler.AnonFragmentTypeCondition
+import typingsSlinky.relayCompiler.anon.FragmentTypeCondition
 import typingsSlinky.relayCompiler.irvisitorMod.VisitNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ trait Defer
   var kind: typingsSlinky.relayCompiler.relayCompilerStrings.Defer = js.native
   var label: String = js.native
   var loc: Location = js.native
-  var metadata: js.UndefOr[AnonFragmentTypeCondition | Null] = js.native
+  var metadata: js.UndefOr[FragmentTypeCondition | Null] = js.native
   var selections: js.Array[Selection] = js.native
 }
 
@@ -74,7 +74,7 @@ object Defer {
         ret
     }
     @scala.inline
-    def withMetadata(value: AnonFragmentTypeCondition): Self = {
+    def withMetadata(value: FragmentTypeCondition): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
         ret

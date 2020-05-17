@@ -1,8 +1,8 @@
 package typingsSlinky.postmanCollection.mod
 
-import typingsSlinky.postmanCollection.AnonDisabled
-import typingsSlinky.postmanCollection.AnonIgnoreOwnVariables
-import typingsSlinky.postmanCollection.AnonVariables
+import typingsSlinky.postmanCollection.anon.Disabled
+import typingsSlinky.postmanCollection.anon.IgnoreOwnVariables
+import typingsSlinky.postmanCollection.anon.Variables
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,16 +13,16 @@ import scala.scalajs.js.annotation._
 @js.native
 class Property[TDefinition /* <: js.Object */] () extends PropertyBase[TDefinition] {
   def this(definition: TDefinition) = this()
-  def this(definition: AnonDisabled[TDefinition]) = this()
+  def this(definition: Disabled[TDefinition]) = this()
   var disabled: js.UndefOr[Boolean] = js.native
   var id: js.UndefOr[String] = js.native
   var name: js.UndefOr[String] = js.native
   def describe(content: String): Unit = js.native
   def describe(content: String, `type`: String): Unit = js.native
   def toObjectResolved(scope: Null, overrides: js.Array[_]): TDefinition = js.native
-  def toObjectResolved(scope: Null, overrides: js.Array[_], options: AnonIgnoreOwnVariables): TDefinition = js.native
-  def toObjectResolved(scope: AnonVariables, overrides: js.Array[_]): TDefinition = js.native
-  def toObjectResolved(scope: AnonVariables, overrides: js.Array[_], options: AnonIgnoreOwnVariables): TDefinition = js.native
+  def toObjectResolved(scope: Null, overrides: js.Array[_], options: IgnoreOwnVariables): TDefinition = js.native
+  def toObjectResolved(scope: Variables, overrides: js.Array[_]): TDefinition = js.native
+  def toObjectResolved(scope: Variables, overrides: js.Array[_], options: IgnoreOwnVariables): TDefinition = js.native
 }
 
 /* static members */

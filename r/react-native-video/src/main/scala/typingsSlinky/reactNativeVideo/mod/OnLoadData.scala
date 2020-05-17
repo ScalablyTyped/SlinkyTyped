@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeVideo.mod
 
-import typingsSlinky.reactNativeVideo.AnonHeight
+import typingsSlinky.reactNativeVideo.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait OnLoadData extends js.Object {
   var canStepForward: Boolean = js.native
   var currentTime: Double = js.native
   var duration: Double = js.native
-  var naturalSize: AnonHeight = js.native
+  var naturalSize: Height = js.native
 }
 
 object OnLoadData {
@@ -29,7 +29,7 @@ object OnLoadData {
     canStepForward: Boolean,
     currentTime: Double,
     duration: Double,
-    naturalSize: AnonHeight
+    naturalSize: Height
   ): OnLoadData = {
     val __obj = js.Dynamic.literal(canPlayFastForward = canPlayFastForward.asInstanceOf[js.Any], canPlayReverse = canPlayReverse.asInstanceOf[js.Any], canPlaySlowForward = canPlaySlowForward.asInstanceOf[js.Any], canPlaySlowReverse = canPlaySlowReverse.asInstanceOf[js.Any], canStepBackward = canStepBackward.asInstanceOf[js.Any], canStepForward = canStepForward.asInstanceOf[js.Any], currentTime = currentTime.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any], naturalSize = naturalSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[OnLoadData]
@@ -89,7 +89,7 @@ object OnLoadData {
         ret
     }
     @scala.inline
-    def withNaturalSize(value: AnonHeight): Self = {
+    def withNaturalSize(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("naturalSize")(value.asInstanceOf[js.Any])
         ret

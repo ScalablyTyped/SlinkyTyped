@@ -1,6 +1,5 @@
 package typingsSlinky.googleAppsScriptOauth2.GoogleAppsScriptOAuth2
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,14 +21,6 @@ object StateParameterLocation extends js.Object {
     */
   @js.native
   sealed trait REDIRECT_URL extends StateParameterLocation
-  
-  @JSBracketAccess
-  def apply(value: Double): js.UndefOr[StateParameterLocation with Double] = js.native
-  /* 0 */ @js.native
-  object AUTHORIZATION_URL extends TopLevel[AUTHORIZATION_URL with Double]
-  
-  /* 1 */ @js.native
-  object REDIRECT_URL extends TopLevel[REDIRECT_URL with Double]
   
 }
 

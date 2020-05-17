@@ -1,18 +1,18 @@
 package typingsSlinky.xummApi.mod
 
-import typingsSlinky.xummApi.AnonCode
+import typingsSlinky.xummApi.anon.Code
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait XummApiError extends js.Object {
-  var error: AnonCode = js.native
+  var error: Code = js.native
 }
 
 object XummApiError {
   @scala.inline
-  def apply(error: AnonCode): XummApiError = {
+  def apply(error: Code): XummApiError = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any])
     __obj.asInstanceOf[XummApiError]
   }
@@ -23,7 +23,7 @@ object XummApiError {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withError(value: AnonCode): Self = {
+    def withError(value: Code): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret

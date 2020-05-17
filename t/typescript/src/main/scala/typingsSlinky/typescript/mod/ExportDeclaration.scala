@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 trait ExportDeclaration
   extends DeclarationStatement
      with JSDocContainer
-     with _HasJSDoc {
+     with HasJSDoc {
   /** Will not be assigned in the case of `export * from "foo";` */
   var exportClause: js.UndefOr[NamedExportBindings] = js.native
   var isTypeOnly: Boolean = js.native

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait InputParams
   extends SharedEditorParams
-     with _EditorParams {
+     with EditorParams {
   /**Changes input type to 'search' and shows an 'X' clear button to clear the cell value easily */
   var search: js.UndefOr[Boolean] = js.native
 }

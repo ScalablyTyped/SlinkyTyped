@@ -2,7 +2,7 @@ package typingsSlinky.gestalt.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.AnonName
+import typingsSlinky.gestalt.anon.Name
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
 import typingsSlinky.gestalt.gestaltStrings.sm
@@ -28,7 +28,7 @@ object GroupAvatar {
   
   def withProps(p: GroupAvatarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(collaborators: js.Array[AnonName]): Builder = {
+  def apply(collaborators: js.Array[Name]): Builder = {
     val __props = js.Dynamic.literal(collaborators = collaborators.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[GroupAvatarProps]))
   }

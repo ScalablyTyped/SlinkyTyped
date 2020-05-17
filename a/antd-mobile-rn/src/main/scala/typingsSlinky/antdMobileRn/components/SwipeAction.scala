@@ -2,7 +2,7 @@ package typingsSlinky.antdMobileRn.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antdMobileRn.AnonClassName
+import typingsSlinky.antdMobileRn.anon.ClassName
 import typingsSlinky.antdMobileRn.swipeActionIndexNativeMod.SwipeActionProps
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
@@ -25,13 +25,13 @@ object SwipeAction {
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def left(value: js.Array[AnonClassName[TextStyle]]): this.type = set("left", value.asInstanceOf[js.Any])
+    def left(value: js.Array[ClassName[TextStyle]]): this.type = set("left", value.asInstanceOf[js.Any])
     @scala.inline
     def onClose(value: () => Unit): this.type = set("onClose", js.Any.fromFunction0(value))
     @scala.inline
     def onOpen(value: () => Unit): this.type = set("onOpen", js.Any.fromFunction0(value))
     @scala.inline
-    def right(value: js.Array[AnonClassName[TextStyle]]): this.type = set("right", value.asInstanceOf[js.Any])
+    def right(value: js.Array[ClassName[TextStyle]]): this.type = set("right", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

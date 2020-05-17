@@ -1,5 +1,6 @@
 package typingsSlinky.react.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.TagMod
 import slinky.web.SyntheticAnimationEvent
@@ -13,8 +14,7 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
-import typingsSlinky.react.AnonHtml
-import typingsSlinky.std.Event_
+import typingsSlinky.react.anon.Html
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DOMAttributes[T] extends js.Object {
   var children: js.UndefOr[TagMod[Any]] = js.native
-  var dangerouslySetInnerHTML: js.UndefOr[AnonHtml] = js.native
+  var dangerouslySetInnerHTML: js.UndefOr[Html] = js.native
   // Media Events
   var onAbort: js.UndefOr[ReactEventHandler[T]] = js.native
   var onAnimationEnd: js.UndefOr[AnimationEventHandler[T]] = js.native
@@ -151,7 +151,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withDangerouslySetInnerHTML(value: AnonHtml): Self[T] = {
+    def withDangerouslySetInnerHTML(value: Html): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetInnerHTML")(value.asInstanceOf[js.Any])
         ret
@@ -163,7 +163,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnAbort(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnAbort(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAbort")(js.Any.fromFunction1(value))
         ret
@@ -223,7 +223,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnBeforeInput(value: slinky.core.SyntheticEvent[EventTarget with T, Event_] => Unit): Self[T] = {
+    def withOnBeforeInput(value: slinky.core.SyntheticEvent[EventTarget with T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeInput")(js.Any.fromFunction1(value))
         ret
@@ -247,7 +247,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnCanPlay(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnCanPlay(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlay")(js.Any.fromFunction1(value))
         ret
@@ -259,7 +259,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnCanPlayThrough(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnCanPlayThrough(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlayThrough")(js.Any.fromFunction1(value))
         ret
@@ -271,7 +271,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnChange(value: slinky.core.SyntheticEvent[EventTarget with T, Event_] => Unit): Self[T] = {
+    def withOnChange(value: slinky.core.SyntheticEvent[EventTarget with T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -475,7 +475,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnDurationChange(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnDurationChange(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDurationChange")(js.Any.fromFunction1(value))
         ret
@@ -487,7 +487,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnEmptied(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnEmptied(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEmptied")(js.Any.fromFunction1(value))
         ret
@@ -499,7 +499,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnEncrypted(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnEncrypted(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEncrypted")(js.Any.fromFunction1(value))
         ret
@@ -511,7 +511,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnEnded(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnEnded(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEnded")(js.Any.fromFunction1(value))
         ret
@@ -523,7 +523,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnError(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnError(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
         ret
@@ -547,7 +547,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnInput(value: slinky.core.SyntheticEvent[EventTarget with T, Event_] => Unit): Self[T] = {
+    def withOnInput(value: slinky.core.SyntheticEvent[EventTarget with T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInput")(js.Any.fromFunction1(value))
         ret
@@ -559,7 +559,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnInvalid(value: slinky.core.SyntheticEvent[EventTarget with T, Event_] => Unit): Self[T] = {
+    def withOnInvalid(value: slinky.core.SyntheticEvent[EventTarget with T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInvalid")(js.Any.fromFunction1(value))
         ret
@@ -607,7 +607,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnLoad(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnLoad(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction1(value))
         ret
@@ -619,7 +619,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnLoadStart(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnLoadStart(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadStart")(js.Any.fromFunction1(value))
         ret
@@ -631,7 +631,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnLoadedData(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnLoadedData(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedData")(js.Any.fromFunction1(value))
         ret
@@ -643,7 +643,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnLoadedMetadata(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnLoadedMetadata(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedMetadata")(js.Any.fromFunction1(value))
         ret
@@ -751,7 +751,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnPause(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnPause(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.Any.fromFunction1(value))
         ret
@@ -763,7 +763,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnPlay(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnPlay(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.Any.fromFunction1(value))
         ret
@@ -775,7 +775,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnPlaying(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnPlaying(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaying")(js.Any.fromFunction1(value))
         ret
@@ -883,7 +883,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnProgress(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnProgress(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.Any.fromFunction1(value))
         ret
@@ -895,7 +895,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnRateChange(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnRateChange(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRateChange")(js.Any.fromFunction1(value))
         ret
@@ -907,7 +907,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnReset(value: slinky.core.SyntheticEvent[EventTarget with T, Event_] => Unit): Self[T] = {
+    def withOnReset(value: slinky.core.SyntheticEvent[EventTarget with T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onReset")(js.Any.fromFunction1(value))
         ret
@@ -931,7 +931,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnSeeked(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnSeeked(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeked")(js.Any.fromFunction1(value))
         ret
@@ -943,7 +943,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnSeeking(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnSeeking(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeking")(js.Any.fromFunction1(value))
         ret
@@ -955,7 +955,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnSelect(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnSelect(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
         ret
@@ -967,7 +967,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnStalled(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnStalled(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onStalled")(js.Any.fromFunction1(value))
         ret
@@ -979,7 +979,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnSubmit(value: slinky.core.SyntheticEvent[EventTarget with T, Event_] => Unit): Self[T] = {
+    def withOnSubmit(value: slinky.core.SyntheticEvent[EventTarget with T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(js.Any.fromFunction1(value))
         ret
@@ -991,7 +991,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnSuspend(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnSuspend(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSuspend")(js.Any.fromFunction1(value))
         ret
@@ -1003,7 +1003,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnTimeUpdate(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnTimeUpdate(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTimeUpdate")(js.Any.fromFunction1(value))
         ret
@@ -1075,7 +1075,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnVolumeChange(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnVolumeChange(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onVolumeChange")(js.Any.fromFunction1(value))
         ret
@@ -1087,7 +1087,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnWaiting(value: slinky.core.SyntheticEvent[Event_, T] => Unit): Self[T] = {
+    def withOnWaiting(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onWaiting")(js.Any.fromFunction1(value))
         ret

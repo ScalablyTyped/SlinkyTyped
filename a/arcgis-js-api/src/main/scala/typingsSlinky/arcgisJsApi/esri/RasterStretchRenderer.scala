@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`histogram-equalization`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`min-max`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`percent-clip`
@@ -119,8 +118,4 @@ trait RasterStretchRenderer
     */
   var useGamma: Boolean = js.native
 }
-
-@JSGlobal("__esri.RasterStretchRenderer")
-@js.native
-object RasterStretchRenderer extends TopLevel[RasterStretchRendererConstructor]
 

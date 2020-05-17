@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.arcgisJsApi.IHandle
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`bottom-center`
@@ -302,8 +301,4 @@ trait Popup
     */
   def triggerAction(actionIndex: Double): Unit = js.native
 }
-
-@JSGlobal("__esri.Popup")
-@js.native
-object Popup extends TopLevel[PopupConstructor]
 

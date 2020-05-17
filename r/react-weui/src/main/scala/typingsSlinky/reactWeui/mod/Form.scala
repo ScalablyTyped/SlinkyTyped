@@ -1,6 +1,5 @@
 package typingsSlinky.reactWeui.mod
 
-import typingsSlinky.reactWeui.AnonCheckbox
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,7 @@ class Form protected () extends js.Object {
 @JSImport("react-weui", "Form")
 @js.native
 object Form extends js.Object {
-  var defaultProps: AnonCheckbox = js.native
+  var defaultProps: typingsSlinky.reactWeui.anon.Checkbox = js.native
   @js.native
   object propTypes extends js.Object {
     @js.native

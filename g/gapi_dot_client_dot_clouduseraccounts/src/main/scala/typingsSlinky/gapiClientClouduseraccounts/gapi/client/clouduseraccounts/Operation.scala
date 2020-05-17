@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientClouduseraccounts.gapi.client.clouduseraccounts
 
-import typingsSlinky.gapiClientClouduseraccounts.AnonData
-import typingsSlinky.gapiClientClouduseraccounts.AnonErrors
+import typingsSlinky.gapiClientClouduseraccounts.anon.Data
+import typingsSlinky.gapiClientClouduseraccounts.anon.Errors
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait Operation extends js.Object {
   /** [Output Only] The time that this operation was completed. This value is in RFC3339 text format. */
   var endTime: js.UndefOr[String] = js.native
   /** [Output Only] If errors are generated during processing of the operation, this field will be populated. */
-  var error: js.UndefOr[AnonErrors] = js.native
+  var error: js.UndefOr[Errors] = js.native
   /** [Output Only] If the operation fails, this field contains the HTTP error message that was returned, such as NOT FOUND. */
   var httpErrorMessage: js.UndefOr[String] = js.native
   /**
@@ -58,7 +58,7 @@ trait Operation extends js.Object {
   /** [Output Only] User who requested the operation, for example: user@example.com. */
   var user: js.UndefOr[String] = js.native
   /** [Output Only] If warning messages are generated during processing of the operation, this field will be populated. */
-  var warnings: js.UndefOr[js.Array[AnonData]] = js.native
+  var warnings: js.UndefOr[js.Array[Data]] = js.native
   /** [Output Only] The URL of the zone where the operation resides. Only available when performing per-zone operations. */
   var zone: js.UndefOr[String] = js.native
 }
@@ -124,7 +124,7 @@ object Operation {
         ret
     }
     @scala.inline
-    def withError(value: AnonErrors): Self = {
+    def withError(value: Errors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret
@@ -328,7 +328,7 @@ object Operation {
         ret
     }
     @scala.inline
-    def withWarnings(value: js.Array[AnonData]): Self = {
+    def withWarnings(value: js.Array[Data]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(value.asInstanceOf[js.Any])
         ret

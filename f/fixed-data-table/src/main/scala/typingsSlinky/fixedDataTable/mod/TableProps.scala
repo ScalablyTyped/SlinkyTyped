@@ -1,8 +1,8 @@
 package typingsSlinky.fixedDataTable.mod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import typingsSlinky.react.mod.Props
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -64,34 +64,34 @@ trait TableProps extends Props[Table] {
     * Callback that is called when a row is clicked.
     */
   var onRowClick: js.UndefOr[
-    js.Function2[/* event */ SyntheticEvent[Event_, Table], /* rowIndex */ Double, Unit]
+    js.Function2[/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double, Unit]
   ] = js.native
   /**
     * Callback that is called when a row is double clicked.
     */
   var onRowDoubleClick: js.UndefOr[
-    js.Function2[/* event */ SyntheticEvent[Event_, Table], /* rowIndex */ Double, Unit]
+    js.Function2[/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double, Unit]
   ] = js.native
   /**
     * Callback that is called when a mouse-down event happens
     * on a row.
     */
   var onRowMouseDown: js.UndefOr[
-    js.Function2[/* event */ SyntheticEvent[Event_, Table], /* rowIndex */ Double, Unit]
+    js.Function2[/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double, Unit]
   ] = js.native
   /**
     * Callback that is called when a mouse-enter event happens
     * on a row.
     */
   var onRowMouseEnter: js.UndefOr[
-    js.Function2[/* event */ SyntheticEvent[Event_, Table], /* rowIndex */ Double, Unit]
+    js.Function2[/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double, Unit]
   ] = js.native
   /**
     * Callback that is called when a mouse-leave event happens
     * on a row.
     */
   var onRowMouseLeave: js.UndefOr[
-    js.Function2[/* event */ SyntheticEvent[Event_, Table], /* rowIndex */ Double, Unit]
+    js.Function2[/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double, Unit]
   ] = js.native
   /**
     * Callback that is called when scrolling ends or stops with
@@ -301,7 +301,7 @@ object TableProps {
         ret
     }
     @scala.inline
-    def withOnRowClick(value: (/* event */ SyntheticEvent[Event_, Table], /* rowIndex */ Double) => Unit): Self = {
+    def withOnRowClick(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowClick")(js.Any.fromFunction2(value))
         ret
@@ -313,7 +313,7 @@ object TableProps {
         ret
     }
     @scala.inline
-    def withOnRowDoubleClick(value: (/* event */ SyntheticEvent[Event_, Table], /* rowIndex */ Double) => Unit): Self = {
+    def withOnRowDoubleClick(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowDoubleClick")(js.Any.fromFunction2(value))
         ret
@@ -325,7 +325,7 @@ object TableProps {
         ret
     }
     @scala.inline
-    def withOnRowMouseDown(value: (/* event */ SyntheticEvent[Event_, Table], /* rowIndex */ Double) => Unit): Self = {
+    def withOnRowMouseDown(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowMouseDown")(js.Any.fromFunction2(value))
         ret
@@ -337,7 +337,7 @@ object TableProps {
         ret
     }
     @scala.inline
-    def withOnRowMouseEnter(value: (/* event */ SyntheticEvent[Event_, Table], /* rowIndex */ Double) => Unit): Self = {
+    def withOnRowMouseEnter(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowMouseEnter")(js.Any.fromFunction2(value))
         ret
@@ -349,7 +349,7 @@ object TableProps {
         ret
     }
     @scala.inline
-    def withOnRowMouseLeave(value: (/* event */ SyntheticEvent[Event_, Table], /* rowIndex */ Double) => Unit): Self = {
+    def withOnRowMouseLeave(value: (/* event */ SyntheticEvent[Event, Table], /* rowIndex */ Double) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowMouseLeave")(js.Any.fromFunction2(value))
         ret

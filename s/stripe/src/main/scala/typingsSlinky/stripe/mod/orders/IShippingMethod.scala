@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.orders
 
-import typingsSlinky.stripe.AnonEarliest
+import typingsSlinky.stripe.anon.Earliest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait IShippingMethod extends js.Object {
   /**
     * The estimated delivery date for the given shipping method. Can be either a specific date or a range.
     */
-  var delivery_estimate: AnonEarliest = js.native
+  var delivery_estimate: Earliest = js.native
   /**
     * Description of the line item, meant to be displayable to the user (e.g., "Express shipping").
     */
@@ -29,7 +29,7 @@ trait IShippingMethod extends js.Object {
 
 object IShippingMethod {
   @scala.inline
-  def apply(amount: Double, currency: String, delivery_estimate: AnonEarliest, description: String, id: String): IShippingMethod = {
+  def apply(amount: Double, currency: String, delivery_estimate: Earliest, description: String, id: String): IShippingMethod = {
     val __obj = js.Dynamic.literal(amount = amount.asInstanceOf[js.Any], currency = currency.asInstanceOf[js.Any], delivery_estimate = delivery_estimate.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
     __obj.asInstanceOf[IShippingMethod]
   }
@@ -52,7 +52,7 @@ object IShippingMethod {
         ret
     }
     @scala.inline
-    def withDelivery_estimate(value: AnonEarliest): Self = {
+    def withDelivery_estimate(value: Earliest): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delivery_estimate")(value.asInstanceOf[js.Any])
         ret

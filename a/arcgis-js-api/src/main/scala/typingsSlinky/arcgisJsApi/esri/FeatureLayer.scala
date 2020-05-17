@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.FormData
 import org.scalajs.dom.raw.HTMLFormElement
 import typingsSlinky.arcgisJsApi.IHandle
@@ -491,8 +490,4 @@ trait FeatureLayer
     */
   def updateAttachment(feature: Graphic, attachmentId: Double, attachment: HTMLFormElement): js.Promise[FeatureEditResult] = js.native
 }
-
-@JSGlobal("__esri.FeatureLayer")
-@js.native
-object FeatureLayer extends TopLevel[FeatureLayerConstructor]
 

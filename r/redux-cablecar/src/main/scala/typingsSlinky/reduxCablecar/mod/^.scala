@@ -3,7 +3,7 @@ package typingsSlinky.reduxCablecar.mod
 import typingsSlinky.redux.mod.AnyAction
 import typingsSlinky.redux.mod.Dispatch
 import typingsSlinky.redux.mod.Middleware
-import typingsSlinky.reduxCablecar.AnonConnect
+import typingsSlinky.reduxCablecar.anon.Connect
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +11,6 @@ import scala.scalajs.js.annotation._
 @JSImport("redux-cablecar", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
-  var default: (Middleware[js.Object, _, Dispatch[AnyAction]]) with AnonConnect = js.native
+  var default: (Middleware[js.Object, _, Dispatch[AnyAction]]) with Connect = js.native
 }
 

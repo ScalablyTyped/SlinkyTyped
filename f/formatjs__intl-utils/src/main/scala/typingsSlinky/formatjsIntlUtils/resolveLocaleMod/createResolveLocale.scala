@@ -1,7 +1,7 @@
 package typingsSlinky.formatjsIntlUtils.resolveLocaleMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.formatjsIntlUtils.AnonDictk
+import typingsSlinky.formatjsIntlUtils.anon.Dictk
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,7 @@ object createResolveLocale extends js.Object {
     */ typingsSlinky.formatjsIntlUtils.formatjsIntlUtilsStrings.createResolveLocale with TopLevel[js.Any] */](getDefaultLocale: js.Function0[String]): js.Function5[
     /* availableLocales */ js.Array[String], 
     /* requestedLocales */ js.Array[String], 
-    /* options */ AnonDictk, 
+    /* options */ Dictk, 
     /* relevantExtensionKeys */ js.Array[K], 
     /* localeData */ Record[String, D], 
     ResolveLocaleResult

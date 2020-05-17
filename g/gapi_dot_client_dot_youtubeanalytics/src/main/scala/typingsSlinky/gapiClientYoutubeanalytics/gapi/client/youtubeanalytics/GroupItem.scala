@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientYoutubeanalytics.gapi.client.youtubeanalytics
 
-import typingsSlinky.gapiClientYoutubeanalytics.AnonId
+import typingsSlinky.gapiClientYoutubeanalytics.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait GroupItem extends js.Object {
   var groupId: js.UndefOr[String] = js.native
   var id: js.UndefOr[String] = js.native
   var kind: js.UndefOr[String] = js.native
-  var resource: js.UndefOr[AnonId] = js.native
+  var resource: js.UndefOr[Id] = js.native
 }
 
 object GroupItem {
@@ -75,7 +75,7 @@ object GroupItem {
         ret
     }
     @scala.inline
-    def withResource(value: AnonId): Self = {
+    def withResource(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
         ret

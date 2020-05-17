@@ -1,19 +1,19 @@
 package typingsSlinky.graphqlRelay.mod
 
-import typingsSlinky.graphqlRelay.AnonType
+import typingsSlinky.graphqlRelay.anon.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait BackwardConnectionArgs_ extends js.Object {
-  var before: AnonType = js.native
-  var last: AnonType = js.native
+  var before: Type = js.native
+  var last: Type = js.native
 }
 
 object BackwardConnectionArgs_ {
   @scala.inline
-  def apply(before: AnonType, last: AnonType): BackwardConnectionArgs_ = {
+  def apply(before: Type, last: Type): BackwardConnectionArgs_ = {
     val __obj = js.Dynamic.literal(before = before.asInstanceOf[js.Any], last = last.asInstanceOf[js.Any])
     __obj.asInstanceOf[BackwardConnectionArgs_]
   }
@@ -24,13 +24,13 @@ object BackwardConnectionArgs_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBefore(value: AnonType): Self = {
+    def withBefore(value: Type): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("before")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withLast(value: AnonType): Self = {
+    def withLast(value: Type): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("last")(value.asInstanceOf[js.Any])
         ret

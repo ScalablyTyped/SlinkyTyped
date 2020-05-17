@@ -1,14 +1,14 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.Anon2
-import typingsSlinky.echarts.AnonAnimationDelay
-import typingsSlinky.echarts.AnonAnimationDelayAnimationDelayUpdate
-import typingsSlinky.echarts.AnonAnimationDelayUpdate
-import typingsSlinky.echarts.AnonAnimationDuration
-import typingsSlinky.echarts.AnonBorderRadius
-import typingsSlinky.echarts.AnonBorderType
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonLabelAnonBorderRadius
+import typingsSlinky.echarts.anon.AnimationDelay
+import typingsSlinky.echarts.anon.AnimationDelayAnimationDelayUpdate
+import typingsSlinky.echarts.anon.AnimationDelayUpdate
+import typingsSlinky.echarts.anon.AnimationDuration
+import typingsSlinky.echarts.anon.BorderRadius
+import typingsSlinky.echarts.anon.BorderType
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.LabelBorderRadius
+import typingsSlinky.echarts.anon.`2`
 import typingsSlinky.echarts.echarts.EChartOption.SeriesPictorialBar.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -150,7 +150,7 @@ trait SeriesPictorialBar_ extends js.Object {
     * "cubicOut"
     * @see https://echarts.apache.org/en/option.html#series-pictorialBar.animationEasingUpdate
     */
-  var animationEasingUpdate: js.UndefOr[Anon2] = js.native
+  var animationEasingUpdate: js.UndefOr[`2`] = js.native
   /**
     * Whether to set graphic number threshold to animation.
     * Animation will be disabled when graphic number is larger than
@@ -452,7 +452,7 @@ trait SeriesPictorialBar_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-pictorialBar.emphasis
     */
-  var emphasis: js.UndefOr[AnonLabelAnonBorderRadius] = js.native
+  var emphasis: js.UndefOr[LabelBorderRadius] = js.native
   /**
     * Define what is encoded to for each dimension of `data`.
     * For example:
@@ -509,7 +509,7 @@ trait SeriesPictorialBar_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pictorialBar.hoverAnimation
     */
-  var hoverAnimation: js.UndefOr[AnonAnimationDelayAnimationDelayUpdate] = js.native
+  var hoverAnimation: js.UndefOr[AnimationDelayAnimationDelayUpdate] = js.native
   /**
     * Component ID, not specified by default.
     * If specified, it can be used to refer the component in option
@@ -526,7 +526,7 @@ trait SeriesPictorialBar_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pictorialBar.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBorderType] = js.native
+  var itemStyle: js.UndefOr[BorderType] = js.native
   /**
     * Text label of , to explain some data information about graphic
     * item like value, name and so on.
@@ -538,7 +538,7 @@ trait SeriesPictorialBar_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pictorialBar.label
     */
-  var label: js.UndefOr[AnonBorderRadius] = js.native
+  var label: js.UndefOr[BorderRadius] = js.native
   /**
     * Whether to enable highlighting chart when
     * [legend](https://echarts.apache.org/en/option.html#legend)
@@ -557,21 +557,21 @@ trait SeriesPictorialBar_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pictorialBar.markArea
     */
-  var markArea: js.UndefOr[AnonAnimationDelayUpdate] = js.native
+  var markArea: js.UndefOr[AnimationDelayUpdate] = js.native
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-pictorialBar.markLine
     */
-  var markLine: js.UndefOr[AnonAnimationDelay] = js.native
+  var markLine: js.UndefOr[AnimationDelay] = js.native
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-pictorialBar.markPoint
     */
-  var markPoint: js.UndefOr[AnonAnimationDuration] = js.native
+  var markPoint: js.UndefOr[AnimationDuration] = js.native
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -1128,7 +1128,7 @@ trait SeriesPictorialBar_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pictorialBar.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * @default
     * "pictorialBar"
@@ -1249,7 +1249,7 @@ object SeriesPictorialBar_ {
         ret
     }
     @scala.inline
-    def withAnimationEasingUpdate(value: Anon2): Self = {
+    def withAnimationEasingUpdate(value: `2`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("animationEasingUpdate")(value.asInstanceOf[js.Any])
         ret
@@ -1385,7 +1385,7 @@ object SeriesPictorialBar_ {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonLabelAnonBorderRadius): Self = {
+    def withEmphasis(value: LabelBorderRadius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -1409,7 +1409,7 @@ object SeriesPictorialBar_ {
         ret
     }
     @scala.inline
-    def withHoverAnimation(value: AnonAnimationDelayAnimationDelayUpdate): Self = {
+    def withHoverAnimation(value: AnimationDelayAnimationDelayUpdate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hoverAnimation")(value.asInstanceOf[js.Any])
         ret
@@ -1433,7 +1433,7 @@ object SeriesPictorialBar_ {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonBorderType): Self = {
+    def withItemStyle(value: BorderType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -1445,7 +1445,7 @@ object SeriesPictorialBar_ {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonBorderRadius): Self = {
+    def withLabel(value: BorderRadius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -1469,7 +1469,7 @@ object SeriesPictorialBar_ {
         ret
     }
     @scala.inline
-    def withMarkArea(value: AnonAnimationDelayUpdate): Self = {
+    def withMarkArea(value: AnimationDelayUpdate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(value.asInstanceOf[js.Any])
         ret
@@ -1481,7 +1481,7 @@ object SeriesPictorialBar_ {
         ret
     }
     @scala.inline
-    def withMarkLine(value: AnonAnimationDelay): Self = {
+    def withMarkLine(value: AnimationDelay): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(value.asInstanceOf[js.Any])
         ret
@@ -1493,7 +1493,7 @@ object SeriesPictorialBar_ {
         ret
     }
     @scala.inline
-    def withMarkPoint(value: AnonAnimationDuration): Self = {
+    def withMarkPoint(value: AnimationDuration): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(value.asInstanceOf[js.Any])
         ret
@@ -1661,7 +1661,7 @@ object SeriesPictorialBar_ {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.reactSketchapp.mod
 
-import typingsSlinky.reactSketchapp.AnonHeight
+import typingsSlinky.reactSketchapp.anon.Height
 import typingsSlinky.reactSketchapp.reactSketchappStrings.`column-reverse`
 import typingsSlinky.reactSketchapp.reactSketchappStrings.`flex-end`
 import typingsSlinky.reactSketchapp.reactSketchappStrings.`flex-start`
@@ -83,7 +83,7 @@ trait Style extends js.Object {
   var position: js.UndefOr[absolute | relative] = js.native
   var right: js.UndefOr[Double] = js.native
   var shadowColor: js.UndefOr[Color] = js.native
-  var shadowOffset: js.UndefOr[AnonHeight] = js.native
+  var shadowOffset: js.UndefOr[Height] = js.native
   var shadowOpacity: js.UndefOr[Double] = js.native
   var shadowRadius: js.UndefOr[Double] = js.native
   var top: js.UndefOr[Double] = js.native
@@ -752,7 +752,7 @@ object Style {
         ret
     }
     @scala.inline
-    def withShadowOffset(value: AnonHeight): Self = {
+    def withShadowOffset(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffset")(value.asInstanceOf[js.Any])
         ret

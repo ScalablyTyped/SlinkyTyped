@@ -1,14 +1,14 @@
 package typingsSlinky.rxjs.ajaxObservableMod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.rxjs.subscriberMod.Subscriber
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("rxjs/internal/observable/dom/AjaxObservable", "AjaxSubscriber")
 @js.native
-class AjaxSubscriber[T] protected () extends Subscriber[Event_] {
+class AjaxSubscriber[T] protected () extends Subscriber[Event] {
   def this(destination: Subscriber[T], request: AjaxRequest) = this()
   var done: js.Any = js.native
   var getHeader: js.Any = js.native

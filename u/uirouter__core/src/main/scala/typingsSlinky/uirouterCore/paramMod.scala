@@ -1,6 +1,8 @@
 package typingsSlinky.uirouterCore
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.uirouterCore.anon.DefaultValue
+import typingsSlinky.uirouterCore.anon.From
 import typingsSlinky.uirouterCore.libUrlMod.UrlConfig
 import typingsSlinky.uirouterCore.paramTypeMod.ParamType
 import typingsSlinky.uirouterCore.paramsInterfaceMod.RawParams
@@ -19,7 +21,7 @@ object paramMod extends js.Object {
   class Param protected () extends js.Object {
     def this(id: String, `type`: ParamType, location: DefType, urlConfig: UrlConfig, state: StateDeclaration) = this()
     /** Cache the default value if it is a static value */
-    var _defaultValueCache: AnonDefaultValue = js.native
+    var _defaultValueCache: DefaultValue = js.native
     var array: Boolean = js.native
     var config: js.Any = js.native
     var dynamic: Boolean = js.native
@@ -28,7 +30,7 @@ object paramMod extends js.Object {
     var isOptional: Boolean = js.native
     var location: DefType = js.native
     var raw: Boolean = js.native
-    var replace: js.Array[AnonFrom] = js.native
+    var replace: js.Array[From] = js.native
     var squash: Boolean | String = js.native
     var `type`: ParamType = js.native
     def isDefaultValue(value: js.Any): Boolean = js.native

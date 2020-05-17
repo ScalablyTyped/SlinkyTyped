@@ -5,7 +5,7 @@ import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -33,8 +33,8 @@ import typingsSlinky.reactNative.reactNativeStrings.polite
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.yes
-import typingsSlinky.reactNativeElements.PartialAvatarProps
-import typingsSlinky.reactNativeElements.PartialIconProps
+import typingsSlinky.reactNativeElements.anon.PartialAvatarProps
+import typingsSlinky.reactNativeElements.anon.PartialIconProps
 import typingsSlinky.reactNativeElements.mod.BadgeProps
 import typingsSlinky.reactNativeElements.mod.ButtonGroupProps
 import typingsSlinky.reactNativeElements.mod.CheckBoxProps

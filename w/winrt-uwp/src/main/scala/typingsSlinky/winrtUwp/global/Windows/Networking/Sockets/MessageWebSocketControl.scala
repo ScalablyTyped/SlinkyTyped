@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.Networking.Sockets
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Provides socket control data on a MessageWebSocket . */
+@JSGlobal("Windows.Networking.Sockets.MessageWebSocketControl")
+@js.native
+abstract class MessageWebSocketControl ()
+  extends typingsSlinky.winrtUwp.Windows.Networking.Sockets.MessageWebSocketControl
+

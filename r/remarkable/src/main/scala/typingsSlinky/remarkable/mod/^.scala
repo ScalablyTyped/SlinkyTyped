@@ -1,6 +1,6 @@
 package typingsSlinky.remarkable.mod
 
-import typingsSlinky.remarkable.TypeofUtils
+import typingsSlinky.remarkable.anon.TypeofUtils
 import typingsSlinky.remarkable.libMod.Options
 import typingsSlinky.remarkable.remarkableStrings.commonmark
 import typingsSlinky.remarkable.remarkableStrings.full

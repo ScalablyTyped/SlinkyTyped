@@ -12,9 +12,34 @@ trait TransformationMethod extends js.Object {
   def onFocusChanged(view: View, sourceText: String, focused: Boolean, direction: Double, previouslyFocusedRect: Rect): Unit = js.native
 }
 
-@JSGlobal("android.text.method.TransformationMethod")
-@js.native
-object TransformationMethod extends js.Object {
-  def isImpl(obj: js.Any): Boolean = js.native
+object TransformationMethod {
+  @scala.inline
+  def apply(
+    getTransformation: (String, View) => String,
+    onFocusChanged: (View, String, Boolean, Double, Rect) => Unit
+  ): TransformationMethod = {
+    val __obj = js.Dynamic.literal(getTransformation = js.Any.fromFunction2(getTransformation), onFocusChanged = js.Any.fromFunction5(onFocusChanged))
+    __obj.asInstanceOf[TransformationMethod]
+  }
+  @scala.inline
+  implicit class TransformationMethodOps[Self <: TransformationMethod] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetTransformation(value: (String, View) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTransformation")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withOnFocusChanged(value: (View, String, Boolean, Double, Rect) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusChanged")(js.Any.fromFunction5(value))
+        ret
+    }
+  }
+  
 }
 

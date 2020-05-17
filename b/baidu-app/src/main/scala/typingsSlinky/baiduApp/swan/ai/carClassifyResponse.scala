@@ -1,22 +1,22 @@
 package typingsSlinky.baiduApp.swan.ai
 
-import typingsSlinky.baiduApp.AnonHeight
-import typingsSlinky.baiduApp.AnonName
+import typingsSlinky.baiduApp.anon.Height
+import typingsSlinky.baiduApp.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait carClassifyResponse extends js.Object {
-  var location_result: AnonHeight = js.native
+  var location_result: Height = js.native
   var log_id: Double = js.native
    // 	唯一的log id，用于问题定位。
-  var result: js.Array[AnonName] = js.native
+  var result: js.Array[Name] = js.native
 }
 
 object carClassifyResponse {
   @scala.inline
-  def apply(location_result: AnonHeight, log_id: Double, result: js.Array[AnonName]): carClassifyResponse = {
+  def apply(location_result: Height, log_id: Double, result: js.Array[Name]): carClassifyResponse = {
     val __obj = js.Dynamic.literal(location_result = location_result.asInstanceOf[js.Any], log_id = log_id.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any])
     __obj.asInstanceOf[carClassifyResponse]
   }
@@ -27,7 +27,7 @@ object carClassifyResponse {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withLocation_result(value: AnonHeight): Self = {
+    def withLocation_result(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("location_result")(value.asInstanceOf[js.Any])
         ret
@@ -39,7 +39,7 @@ object carClassifyResponse {
         ret
     }
     @scala.inline
-    def withResult(value: js.Array[AnonName]): Self = {
+    def withResult(value: js.Array[Name]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
         ret

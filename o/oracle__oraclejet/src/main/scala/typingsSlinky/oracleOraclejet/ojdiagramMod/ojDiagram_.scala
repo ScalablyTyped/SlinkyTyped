@@ -3,12 +3,12 @@ package typingsSlinky.oracleOraclejet.ojdiagramMod
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.Anon5
-import typingsSlinky.oracleOraclejet.AnonAnimationDuration
-import typingsSlinky.oracleOraclejet.AnonDrop
-import typingsSlinky.oracleOraclejet.AnonHalign
-import typingsSlinky.oracleOraclejet.AnonInsertSVGElement
-import typingsSlinky.oracleOraclejet.AnonLabelClearSelection
+import typingsSlinky.oracleOraclejet.anon.AnimationDuration
+import typingsSlinky.oracleOraclejet.anon.Drop
+import typingsSlinky.oracleOraclejet.anon.Halign
+import typingsSlinky.oracleOraclejet.anon.InsertSVGElement
+import typingsSlinky.oracleOraclejet.anon.LabelClearSelection
+import typingsSlinky.oracleOraclejet.anon.`5`
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojdiagramMod.ojDiagram.RendererContext
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponent
@@ -105,14 +105,14 @@ trait ojDiagram_[K1, K2, D1, D2] extends dvtBaseComponent[ojDiagramSettablePrope
   var animationOnDataChange: auto | none = js.native
   var animationOnDisplay: auto | none = js.native
   var as: String = js.native
-  var dnd: AnonDrop = js.native
+  var dnd: Drop = js.native
   var expanded: KeySet[K1] = js.native
-  var focusRenderer: (js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]) | Null = js.native
+  var focusRenderer: (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
   var hiddenCategories: js.Array[String] = js.native
   var highlightMatch: any | all = js.native
   var highlightedCategories: js.Array[String] = js.native
   var hoverBehavior: dim | none = js.native
-  var hoverRenderer: (js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]) | Null = js.native
+  var hoverRenderer: (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
   var linkData: (DataProvider[K2, D2]) | Null = js.native
   var linkHighlightMode: linkAndNodes | link = js.native
   var maxZoom: Double = js.native
@@ -154,19 +154,19 @@ trait ojDiagram_[K1, K2, D1, D2] extends dvtBaseComponent[ojDiagramSettablePrope
   var onTouchResponseChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var onZoomRendererChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var onZoomingChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var overview: AnonHalign = js.native
+  var overview: Halign = js.native
   var panDirection: x | y | auto = js.native
   var panning: auto | none = js.native
   var promotedLinkBehavior: none | full | `lazy` = js.native
   var selection: js.Array[K1 | K2] = js.native
   var selectionMode: single | multiple | none = js.native
-  var selectionRenderer: (js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]) | Null = js.native
-  var styleDefaults: AnonAnimationDuration = js.native
-  var tooltip: Anon5[K1, K2, D1, D2] = js.native
+  var selectionRenderer: (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
+  var styleDefaults: AnimationDuration = js.native
+  var tooltip: `5`[K1, K2, D1, D2] = js.native
   var touchResponse: touchStart | auto = js.native
   @JSName("translations")
-  var translations_ojDiagram_ : AnonLabelClearSelection = js.native
-  var zoomRenderer: (js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]) | Null = js.native
+  var translations_ojDiagram_ : LabelClearSelection = js.native
+  var zoomRenderer: (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
   var zooming: auto | none = js.native
   def addEventListener(
     `type`: animationOnDataChangeChanged,
@@ -461,11 +461,11 @@ trait ojDiagram_[K1, K2, D1, D2] extends dvtBaseComponent[ojDiagramSettablePrope
   @JSName("getProperty")
   def getProperty_as(property: as): String = js.native
   @JSName("getProperty")
-  def getProperty_dnd(property: dnd): AnonDrop = js.native
+  def getProperty_dnd(property: dnd): Drop = js.native
   @JSName("getProperty")
   def getProperty_expanded(property: expanded): KeySet[K1] = js.native
   @JSName("getProperty")
-  def getProperty_focusRenderer(property: focusRenderer): (js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]) | Null = js.native
+  def getProperty_focusRenderer(property: focusRenderer): (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
   @JSName("getProperty")
   def getProperty_hiddenCategories(property: hiddenCategories): js.Array[String] = js.native
   @JSName("getProperty")
@@ -475,7 +475,7 @@ trait ojDiagram_[K1, K2, D1, D2] extends dvtBaseComponent[ojDiagramSettablePrope
   @JSName("getProperty")
   def getProperty_hoverBehavior(property: hoverBehavior): dim | none = js.native
   @JSName("getProperty")
-  def getProperty_hoverRenderer(property: hoverRenderer): (js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]) | Null = js.native
+  def getProperty_hoverRenderer(property: hoverRenderer): (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
   @JSName("getProperty")
   def getProperty_linkData(property: linkData): (DataProvider[K2, D2]) | Null = js.native
   @JSName("getProperty")
@@ -489,7 +489,7 @@ trait ojDiagram_[K1, K2, D1, D2] extends dvtBaseComponent[ojDiagramSettablePrope
   @JSName("getProperty")
   def getProperty_nodeHighlightMode(property: nodeHighlightMode): nodeAndIncomingLinks | nodeAndOutgoingLinks | nodeAndLinks | node = js.native
   @JSName("getProperty")
-  def getProperty_overview(property: overview): AnonHalign = js.native
+  def getProperty_overview(property: overview): Halign = js.native
   @JSName("getProperty")
   def getProperty_panDirection(property: panDirection): x | y | auto = js.native
   @JSName("getProperty")
@@ -501,19 +501,19 @@ trait ojDiagram_[K1, K2, D1, D2] extends dvtBaseComponent[ojDiagramSettablePrope
   @JSName("getProperty")
   def getProperty_selectionMode(property: selectionMode): single | multiple | none = js.native
   @JSName("getProperty")
-  def getProperty_selectionRenderer(property: selectionRenderer): (js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]) | Null = js.native
+  def getProperty_selectionRenderer(property: selectionRenderer): (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
   @JSName("getProperty")
-  def getProperty_styleDefaults(property: styleDefaults): AnonAnimationDuration = js.native
+  def getProperty_styleDefaults(property: styleDefaults): AnimationDuration = js.native
   @JSName("getProperty")
-  def getProperty_tooltip(property: tooltip): Anon5[K1, K2, D1, D2] = js.native
+  def getProperty_tooltip(property: tooltip): `5`[K1, K2, D1, D2] = js.native
   @JSName("getProperty")
   def getProperty_touchResponse(property: touchResponse): touchStart | auto = js.native
   @JSName("getProperty")
-  def getProperty_zoomRenderer(property: zoomRenderer): (js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]) | Null = js.native
+  def getProperty_zoomRenderer(property: zoomRenderer): (js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]) | Null = js.native
   @JSName("getProperty")
   def getProperty_zooming(property: zooming): auto | none = js.native
   def layout(param0: DvtDiagramLayoutContext): Unit = js.native
-  def renderer(context: RendererContext[K1, D1]): AnonInsertSVGElement = js.native
+  def renderer(context: RendererContext[K1, D1]): InsertSVGElement = js.native
   def setProperties(properties: ojDiagramSettablePropertiesLenient[K1, K2, D1, D2]): Unit = js.native
   def setProperty(property: animationOnDataChange, value: auto): Unit = js.native
   def setProperty(property: animationOnDataChange, value: none): Unit = js.native
@@ -547,7 +547,7 @@ trait ojDiagram_[K1, K2, D1, D2] extends dvtBaseComponent[ojDiagramSettablePrope
   @JSName("setProperty")
   def setProperty_as(property: as, value: String): Unit = js.native
   @JSName("setProperty")
-  def setProperty_dnd(property: dnd, value: AnonDrop): Unit = js.native
+  def setProperty_dnd(property: dnd, value: Drop): Unit = js.native
   @JSName("setProperty")
   def setProperty_expanded(property: expanded, value: KeySet[K1]): Unit = js.native
   @JSName("setProperty")
@@ -555,7 +555,7 @@ trait ojDiagram_[K1, K2, D1, D2] extends dvtBaseComponent[ojDiagramSettablePrope
   @JSName("setProperty")
   def setProperty_focusRenderer(
     property: focusRenderer,
-    value: js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]
+    value: js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]
   ): Unit = js.native
   @JSName("setProperty")
   def setProperty_hiddenCategories(property: hiddenCategories, value: js.Array[String]): Unit = js.native
@@ -566,7 +566,7 @@ trait ojDiagram_[K1, K2, D1, D2] extends dvtBaseComponent[ojDiagramSettablePrope
   @JSName("setProperty")
   def setProperty_hoverRenderer(
     property: hoverRenderer,
-    value: js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]
+    value: js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]
   ): Unit = js.native
   @JSName("setProperty")
   def setProperty_linkData(property: linkData): Unit = js.native
@@ -581,7 +581,7 @@ trait ojDiagram_[K1, K2, D1, D2] extends dvtBaseComponent[ojDiagramSettablePrope
   @JSName("setProperty")
   def setProperty_nodeData(property: nodeData, value: DataProvider[K1, D1]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_overview(property: overview, value: AnonHalign): Unit = js.native
+  def setProperty_overview(property: overview, value: Halign): Unit = js.native
   @JSName("setProperty")
   def setProperty_selection(property: selection, value: js.Array[K1 | K2]): Unit = js.native
   @JSName("setProperty")
@@ -589,20 +589,20 @@ trait ojDiagram_[K1, K2, D1, D2] extends dvtBaseComponent[ojDiagramSettablePrope
   @JSName("setProperty")
   def setProperty_selectionRenderer(
     property: selectionRenderer,
-    value: js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]
+    value: js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]
   ): Unit = js.native
   @JSName("setProperty")
-  def setProperty_styleDefaults(property: styleDefaults, value: AnonAnimationDuration): Unit = js.native
+  def setProperty_styleDefaults(property: styleDefaults, value: AnimationDuration): Unit = js.native
   @JSName("setProperty")
-  def setProperty_tooltip(property: tooltip, value: Anon5[K1, K2, D1, D2]): Unit = js.native
+  def setProperty_tooltip(property: tooltip, value: `5`[K1, K2, D1, D2]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonLabelClearSelection): Unit = js.native
+  def setProperty_translations(property: translations, value: LabelClearSelection): Unit = js.native
   @JSName("setProperty")
   def setProperty_zoomRenderer(property: zoomRenderer): Unit = js.native
   @JSName("setProperty")
   def setProperty_zoomRenderer(
     property: zoomRenderer,
-    value: js.Function1[/* context */ RendererContext[K1, D1], AnonInsertSVGElement | Unit]
+    value: js.Function1[/* context */ RendererContext[K1, D1], InsertSVGElement | Unit]
   ): Unit = js.native
 }
 

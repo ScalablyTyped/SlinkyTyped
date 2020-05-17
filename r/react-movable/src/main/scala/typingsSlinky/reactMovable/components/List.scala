@@ -3,10 +3,10 @@ package typingsSlinky.reactMovable.components
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactMovable.AnonChildren
-import typingsSlinky.reactMovable.AnonElements
-import typingsSlinky.reactMovable.AnonIndex
-import typingsSlinky.reactMovable.AnonNewIndex
+import typingsSlinky.reactMovable.anon.Children
+import typingsSlinky.reactMovable.anon.Elements
+import typingsSlinky.reactMovable.anon.Index
+import typingsSlinky.reactMovable.anon.NewIndex
 import typingsSlinky.reactMovable.listMod.default
 import typingsSlinky.reactMovable.typesMod.IProps
 import typingsSlinky.reactMovable.typesMod.IVoiceover
@@ -24,17 +24,17 @@ object List {
     extends AnyVal
        with StBuildingComponent[tag.type, default[js.Any]] {
     @scala.inline
-    def beforeDrag(value: /* params */ AnonElements => Unit): this.type = set("beforeDrag", js.Any.fromFunction1(value))
+    def beforeDrag(value: /* params */ Elements => Unit): this.type = set("beforeDrag", js.Any.fromFunction1(value))
   }
   
   def withProps[Value](p: IProps[Value]): Builder[Value] = new Builder[Value](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply[Value](
     lockVertically: Boolean,
-    onChange: AnonNewIndex => Unit,
+    onChange: NewIndex => Unit,
     removableByMove: Boolean,
-    renderItem: AnonIndex[Value] => TagMod[Any],
-    renderList: AnonChildren => TagMod[Any],
+    renderItem: Index[Value] => TagMod[Any],
+    renderList: Children => TagMod[Any],
     transitionDuration: Double,
     values: js.Array[Value],
     voiceover: IVoiceover

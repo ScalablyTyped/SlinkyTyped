@@ -1,7 +1,5 @@
 package typingsSlinky.vegaTypings.encodeMod
 
-import typingsSlinky.vegaTypings.vegaTypingsStrings.linear
-import typingsSlinky.vegaTypings.vegaTypingsStrings.radial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,14 +12,8 @@ trait Gradient extends js.Object
 
 object Gradient {
   @scala.inline
-  def LinearGradient(gradient: linear, stops: js.Array[GradientStop]): Gradient = {
-    val __obj = js.Dynamic.literal(gradient = gradient.asInstanceOf[js.Any], stops = stops.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Gradient]
-  }
+  implicit def apply(value: LinearGradient): Gradient = value.asInstanceOf[Gradient]
   @scala.inline
-  def RadialGradient(gradient: radial, stops: js.Array[GradientStop]): Gradient = {
-    val __obj = js.Dynamic.literal(gradient = gradient.asInstanceOf[js.Any], stops = stops.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Gradient]
-  }
+  implicit def apply(value: RadialGradient): Gradient = value.asInstanceOf[Gradient]
 }
 

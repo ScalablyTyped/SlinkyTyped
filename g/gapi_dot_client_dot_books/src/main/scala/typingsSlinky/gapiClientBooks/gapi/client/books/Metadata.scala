@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClientBooks.AnonDownloadurl
+import typingsSlinky.gapiClientBooks.anon.Downloadurl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Metadata extends js.Object {
   /** A list of offline dictionary metadata. */
-  var items: js.UndefOr[js.Array[AnonDownloadurl]] = js.native
+  var items: js.UndefOr[js.Array[Downloadurl]] = js.native
   /** Resource type. */
   var kind: js.UndefOr[String] = js.native
 }
@@ -26,7 +26,7 @@ object Metadata {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withItems(value: js.Array[AnonDownloadurl]): Self = {
+    def withItems(value: js.Array[Downloadurl]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
         ret

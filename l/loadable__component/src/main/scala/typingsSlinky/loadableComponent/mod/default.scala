@@ -1,6 +1,6 @@
 package typingsSlinky.loadableComponent.mod
 
-import typingsSlinky.loadableComponent.FnCall
+import typingsSlinky.loadableComponent.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

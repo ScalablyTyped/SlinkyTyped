@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojdialogMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonLabelCloseIcon
+import typingsSlinky.oracleOraclejet.anon.LabelCloseIcon
 import typingsSlinky.oracleOraclejet.ojdialogMod.ojDialog.Position
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`title-bar`
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.escape
@@ -28,7 +28,7 @@ trait ojDialogSettablePropertiesLenient
   var position: js.UndefOr[Position] = js.native
   var resizeBehavior: js.UndefOr[resizable | none] = js.native
   var role: js.UndefOr[String] = js.native
-  var translations: js.UndefOr[AnonLabelCloseIcon] = js.native
+  var translations: js.UndefOr[LabelCloseIcon] = js.native
 }
 
 object ojDialogSettablePropertiesLenient {
@@ -140,7 +140,7 @@ object ojDialogSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelCloseIcon): Self = {
+    def withTranslations(value: LabelCloseIcon): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Devices.Enumeration.DeviceInformationCollection")
 @js.native
-class DeviceInformationCollection () extends IVectorView[DeviceInformation]
+trait DeviceInformationCollection extends IVectorView[DeviceInformation]
 

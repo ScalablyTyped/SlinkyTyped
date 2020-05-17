@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
   * test. It is returned by {@link Item#hitTest} and
   * {@link Project#hitTest}.
   */
-@JSGlobal("paper.HitResult")
 @js.native
-class HitResult () extends js.Object {
+trait HitResult extends js.Object {
   /** 
     * If the HitResult has a type of 'pixel', this property refers to the color
     * of the pixel on the {@link Raster} that was hit.
@@ -47,5 +46,70 @@ class HitResult () extends js.Object {
     * point, the type would be `'segment'`.
     */
   var `type`: String = js.native
+}
+
+object HitResult {
+  @scala.inline
+  def apply(item: Item, location: CurveLocation, name: String, point: Point, segment: Segment, `type`: String): HitResult = {
+    val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], point = point.asInstanceOf[js.Any], segment = segment.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[HitResult]
+  }
+  @scala.inline
+  implicit class HitResultOps[Self <: HitResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItem(value: Item): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocation(value: CurveLocation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPoint(value: Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("point")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSegment(value: Segment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("segment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColorNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(null)
+        ret
+    }
+  }
+  
 }
 

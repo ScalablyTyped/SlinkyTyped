@@ -1,13 +1,13 @@
 package typingsSlinky.jestRuntime.mod
 
-import typingsSlinky.std.Console_
+import org.scalajs.dom.raw.Console
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait HasteMapOptions extends js.Object {
-  var console: js.UndefOr[Console_] = js.native
+  var console: js.UndefOr[Console] = js.native
   var maxWorkers: Double = js.native
   var resetCache: Boolean = js.native
   var watch: js.UndefOr[Boolean] = js.native
@@ -45,7 +45,7 @@ object HasteMapOptions {
         ret
     }
     @scala.inline
-    def withConsole(value: Console_): Self = {
+    def withConsole(value: Console): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("console")(value.asInstanceOf[js.Any])
         ret

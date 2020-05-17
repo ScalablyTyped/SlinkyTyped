@@ -1,15 +1,15 @@
 package typingsSlinky.betterScroll.mod
 
-import typingsSlinky.betterScroll.AnonFn
+import typingsSlinky.betterScroll.anon.Fn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait EaseOption extends js.Object {
-  var bounce: js.UndefOr[AnonFn] = js.native
-  var swipe: js.UndefOr[AnonFn] = js.native
-  var swipeBounce: js.UndefOr[AnonFn] = js.native
+  var bounce: js.UndefOr[Fn] = js.native
+  var swipe: js.UndefOr[Fn] = js.native
+  var swipeBounce: js.UndefOr[Fn] = js.native
 }
 
 object EaseOption {
@@ -25,7 +25,7 @@ object EaseOption {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBounce(value: AnonFn): Self = {
+    def withBounce(value: Fn): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bounce")(value.asInstanceOf[js.Any])
         ret
@@ -37,7 +37,7 @@ object EaseOption {
         ret
     }
     @scala.inline
-    def withSwipe(value: AnonFn): Self = {
+    def withSwipe(value: Fn): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("swipe")(value.asInstanceOf[js.Any])
         ret
@@ -49,7 +49,7 @@ object EaseOption {
         ret
     }
     @scala.inline
-    def withSwipeBounce(value: AnonFn): Self = {
+    def withSwipeBounce(value: Fn): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("swipeBounce")(value.asInstanceOf[js.Any])
         ret

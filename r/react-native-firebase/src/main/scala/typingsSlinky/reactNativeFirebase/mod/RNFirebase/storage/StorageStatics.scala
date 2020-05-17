@@ -1,13 +1,13 @@
 package typingsSlinky.reactNativeFirebase.mod.RNFirebase.storage
 
-import typingsSlinky.reactNativeFirebase.AnonCACHESDIRECTORYPATH
+import typingsSlinky.reactNativeFirebase.anon.CACHESDIRECTORYPATH
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait StorageStatics extends js.Object {
-  var Native: js.UndefOr[AnonCACHESDIRECTORYPATH] = js.native
+  var Native: js.UndefOr[CACHESDIRECTORYPATH] = js.native
   var TaskEvent: typingsSlinky.reactNativeFirebase.mod.RNFirebase.storage.TaskEvent = js.native
   var TaskState: typingsSlinky.reactNativeFirebase.mod.RNFirebase.storage.TaskState = js.native
 }
@@ -37,7 +37,7 @@ object StorageStatics {
         ret
     }
     @scala.inline
-    def withNative(value: AnonCACHESDIRECTORYPATH): Self = {
+    def withNative(value: CACHESDIRECTORYPATH): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Native")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.ckeditorCkeditor5Engine.mod.conversion
 
-import typingsSlinky.ckeditorCkeditor5Engine.AnonAttribute
+import typingsSlinky.ckeditorCkeditor5Engine.anon.Attribute
 import typingsSlinky.ckeditorCkeditor5Engine.mod.view.Element
 import typingsSlinky.ckeditorCkeditor5Engine.mod.view.ElementDefinition
 import typingsSlinky.ckeditorCkeditor5Engine.mod.view.MatcherPattern
@@ -47,7 +47,7 @@ object ConverterDefinition {
         ret
     }
     @scala.inline
-    def withUpcastAlsoFunction1(value: /* element */ Element => Null | AnonAttribute): Self = {
+    def withUpcastAlsoFunction1(value: /* element */ Element => Null | Attribute): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("upcastAlso")(js.Any.fromFunction1(value))
         ret

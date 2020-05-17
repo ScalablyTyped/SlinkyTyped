@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait JSONObject
-  extends /* key */ StringDictionary[Serializable]
-     with _Serializable
+  extends Serializable
+     with /* key */ StringDictionary[Serializable]
 
 object JSONObject {
   @scala.inline

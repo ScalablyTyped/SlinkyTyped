@@ -1,6 +1,6 @@
 package typingsSlinky.oracleOraclejet.ojlegendMod
 
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponentSettableProperties
 import typingsSlinky.oracleOraclejet.ojkeysetMod.KeySet
@@ -39,7 +39,7 @@ trait ojLegendSettableProperties[K, D] extends dvtBaseComponentSettablePropertie
   var symbolWidth: Double = js.native
   var textStyle: js.UndefOr[js.Object] = js.native
   @JSName("translations")
-  var translations_ojLegendSettableProperties: AnonLabelAndValue = js.native
+  var translations_ojLegendSettableProperties: LabelAndValue = js.native
   var valign: middle | bottom | top = js.native
 }
 
@@ -59,7 +59,7 @@ object ojLegendSettableProperties {
     symbolHeight: Double,
     symbolWidth: Double,
     trackResize: on | off,
-    translations: AnonLabelAndValue,
+    translations: LabelAndValue,
     valign: middle | bottom | top
   ): ojLegendSettableProperties[K, D] = {
     val __obj = js.Dynamic.literal(as = as.asInstanceOf[js.Any], drilling = drilling.asInstanceOf[js.Any], halign = halign.asInstanceOf[js.Any], hiddenCategories = hiddenCategories.asInstanceOf[js.Any], hideAndShowBehavior = hideAndShowBehavior.asInstanceOf[js.Any], highlightedCategories = highlightedCategories.asInstanceOf[js.Any], hoverBehavior = hoverBehavior.asInstanceOf[js.Any], hoverBehaviorDelay = hoverBehaviorDelay.asInstanceOf[js.Any], orientation = orientation.asInstanceOf[js.Any], scrolling = scrolling.asInstanceOf[js.Any], symbolHeight = symbolHeight.asInstanceOf[js.Any], symbolWidth = symbolWidth.asInstanceOf[js.Any], trackResize = trackResize.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any], valign = valign.asInstanceOf[js.Any])
@@ -144,7 +144,7 @@ object ojLegendSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelAndValue): Self[K, D] = {
+    def withTranslations(value: LabelAndValue): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

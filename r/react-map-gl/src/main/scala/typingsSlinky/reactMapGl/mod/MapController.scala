@@ -1,6 +1,6 @@
 package typingsSlinky.reactMapGl.mod
 
-import typingsSlinky.reactMapGl.PartialMapState
+import typingsSlinky.reactMapGl.anon.PartialMapState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

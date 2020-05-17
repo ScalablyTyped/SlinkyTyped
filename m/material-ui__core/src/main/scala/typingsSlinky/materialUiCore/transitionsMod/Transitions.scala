@@ -1,6 +1,6 @@
 package typingsSlinky.materialUiCore.transitionsMod
 
-import typingsSlinky.materialUiCore.Partialdurationnumberstri
+import typingsSlinky.materialUiCore.anon.Partialdurationnumberstri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.sparkpost.mod
 
-import typingsSlinky.sparkpost.AnonEmailrfc822
+import typingsSlinky.sparkpost.anon.Emailrfc822
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CreateTemplate extends js.Object {
   /** Content that will be used to construct a message  yes  For a full description, see the Content Attributes. Maximum length - 20 MBs */
-  var content: CreateTemplateContent | AnonEmailrfc822 = js.native
+  var content: CreateTemplateContent | Emailrfc822 = js.native
   /** Detailed description of the template  no  Maximum length - 1024 bytes */
   var description: js.UndefOr[String] = js.native
   /**
@@ -29,7 +29,7 @@ trait CreateTemplate extends js.Object {
 
 object CreateTemplate {
   @scala.inline
-  def apply(content: CreateTemplateContent | AnonEmailrfc822): CreateTemplate = {
+  def apply(content: CreateTemplateContent | Emailrfc822): CreateTemplate = {
     val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateTemplate]
   }
@@ -40,7 +40,7 @@ object CreateTemplate {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContent(value: CreateTemplateContent | AnonEmailrfc822): Self = {
+    def withContent(value: CreateTemplateContent | Emailrfc822): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
         ret

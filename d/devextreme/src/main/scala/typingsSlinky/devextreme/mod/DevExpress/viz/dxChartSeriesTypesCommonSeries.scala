@@ -1,7 +1,7 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonColorLevel
-import typingsSlinky.devextreme.AnonDisplayMode
+import typingsSlinky.devextreme.anon.ColorLevel
+import typingsSlinky.devextreme.anon.DisplayMode
 import typingsSlinky.devextreme.devextremeStrings.allArgumentPoints
 import typingsSlinky.devextreme.devextremeStrings.allSeriesPoints
 import typingsSlinky.devextreme.devextremeStrings.dash
@@ -75,7 +75,7 @@ trait dxChartSeriesTypesCommonSeries extends js.Object {
   /** Coupled with the rangeValue1Field option, specifies which data source field provides values for a range-like series. */
   var rangeValue2Field: js.UndefOr[String] = js.native
   /** Specifies reduction options for financial series. */
-  var reduction: js.UndefOr[AnonColorLevel] = js.native
+  var reduction: js.UndefOr[ColorLevel] = js.native
   /** Specifies series elements to be highlighted when a user selects a series. */
   var selectionMode: js.UndefOr[
     allArgumentPoints | allSeriesPoints | excludePoints | includePoints | none | onlyPoint
@@ -91,7 +91,7 @@ trait dxChartSeriesTypesCommonSeries extends js.Object {
   /** Specifies which data source field provides auxiliary data for series points. */
   var tagField: js.UndefOr[String] = js.native
   /** Configures error bars. */
-  var valueErrorBar: js.UndefOr[AnonDisplayMode] = js.native
+  var valueErrorBar: js.UndefOr[DisplayMode] = js.native
   /** Specifies which data source field provides values for series points. */
   var valueField: js.UndefOr[String] = js.native
   /** Specifies whether the series is visible or not. */
@@ -427,7 +427,7 @@ object dxChartSeriesTypesCommonSeries {
         ret
     }
     @scala.inline
-    def withReduction(value: AnonColorLevel): Self = {
+    def withReduction(value: ColorLevel): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("reduction")(value.asInstanceOf[js.Any])
         ret
@@ -511,7 +511,7 @@ object dxChartSeriesTypesCommonSeries {
         ret
     }
     @scala.inline
-    def withValueErrorBar(value: AnonDisplayMode): Self = {
+    def withValueErrorBar(value: DisplayMode): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("valueErrorBar")(value.asInstanceOf[js.Any])
         ret

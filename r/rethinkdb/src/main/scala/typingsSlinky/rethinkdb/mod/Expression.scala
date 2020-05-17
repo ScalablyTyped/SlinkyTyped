@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation._
 trait Expression[T]
   extends Writeable
      with Operation[T]
-     with HasFields[Expression[Double]] {
+     with HasFields[Expression[Double]]
+     with IndexFunction[T] {
   def apply(prop: String): Expression[_] = js.native
   def add(n: Double): Expression[Double] = js.native
   def add(n: Expression[Double]): Expression[Double] = js.native

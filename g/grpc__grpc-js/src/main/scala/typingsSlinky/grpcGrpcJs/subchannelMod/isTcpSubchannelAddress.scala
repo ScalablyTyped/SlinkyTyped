@@ -1,0 +1,12 @@
+package typingsSlinky.grpcGrpcJs.subchannelMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@grpc/grpc-js/build/src/subchannel", "isTcpSubchannelAddress")
+@js.native
+object isTcpSubchannelAddress extends js.Object {
+  def apply(address: SubchannelAddress): /* is @grpc/grpc-js.@grpc/grpc-js/build/src/subchannel.TcpSubchannelAddress */ Boolean = js.native
+}
+

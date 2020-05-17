@@ -1,6 +1,6 @@
 package typingsSlinky.imap.mod
 
-import typingsSlinky.imap.AnonNew
+import typingsSlinky.imap.anon.New
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait Box extends js.Object {
   /** array - A list of system-defined flags applicable for this mailbox. Flags in this list but not in permFlags may be stored for the current session only. Additional server implementation-specific flags may also be available. */
   var flags: js.Array[String] = js.native
   /** Contains various message counts for this mailbox: */
-  var messages: AnonNew = js.native
+  var messages: New = js.native
   /** The name of this mailbox. */
   var name: String = js.native
   /** True if new keywords can be added to messages in this mailbox. */
@@ -31,7 +31,7 @@ object Box {
   @scala.inline
   def apply(
     flags: js.Array[String],
-    messages: AnonNew,
+    messages: New,
     name: String,
     newKeywords: Boolean,
     permFlags: js.Array[String],
@@ -55,7 +55,7 @@ object Box {
         ret
     }
     @scala.inline
-    def withMessages(value: AnonNew): Self = {
+    def withMessages(value: New): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
         ret

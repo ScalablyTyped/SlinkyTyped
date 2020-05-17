@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobile.modalModalMod
 
-import typingsSlinky.antdMobile.PartialHTMLPropsHTMLDivEl
+import typingsSlinky.antdMobile.anon.PartialHTMLPropsHTMLDivEl
 import typingsSlinky.antdMobile.modalPropsTypeMod.ModalPropsType
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js

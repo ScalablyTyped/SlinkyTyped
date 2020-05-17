@@ -21,9 +21,8 @@ import scala.scalajs.js.annotation._
   * // fire event
   * obj.fire('hello', 'world');
   */
-@JSGlobal("pc.EventHandler")
 @js.native
-class EventHandler () extends js.Object {
+trait EventHandler extends js.Object {
   /**
     * @function
     * @name pc.EventHandler#fire

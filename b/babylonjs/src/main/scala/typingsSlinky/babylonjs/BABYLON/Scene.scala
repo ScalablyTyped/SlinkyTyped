@@ -4,25 +4,17 @@ import org.scalajs.dom.raw.File
 import org.scalajs.dom.raw.PointerEvent
 import org.scalajs.dom.raw.PointerEventInit
 import org.scalajs.dom.raw.ProgressEvent
-import typingsSlinky.babylonjs.AnonAnimationsOriginalValue
-import typingsSlinky.babylonjs.AnonMaxMin
-import typingsSlinky.babylonjs.AnonTotalWeight
-import typingsSlinky.babylonjs.PartialIEnvironmentHelperBackgroundYRotation
+import typingsSlinky.babylonjs.anon.AnimationsOriginalValue
+import typingsSlinky.babylonjs.anon.MaxMin
+import typingsSlinky.babylonjs.anon.PartialIEnvironmentHelperBackgroundYRotation
+import typingsSlinky.babylonjs.anon.TotalWeight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babylonjs.BABYLON.IAnimatable because var conflicts: animations. Inlined  */ @JSGlobal("BABYLON.Scene")
-@js.native
-class Scene protected () extends AbstractScene {
-  /**
-    * Creates a new Scene
-    * @param engine defines the engine to use to render this scene
-    * @param options defines the scene options
-    */
-  def this(engine: Engine) = this()
-  def this(engine: Engine, options: SceneOptions) = this()
+- typingsSlinky.babylonjs.BABYLON.IAnimatable because var conflicts: animations. Inlined  */ @js.native
+trait Scene extends AbstractScene {
   /** @hidden */
   var _activeAnimatables: js.Array[Animatable] = js.native
   /** @hidden */
@@ -958,9 +950,9 @@ class Scene protected () extends AbstractScene {
   /** @hidden */
   def _processLateAnimationBindings(): Unit = js.native
   /** @hidden */
-  def _processLateAnimationBindingsForMatrices(holder: AnonTotalWeight): js.Any = js.native
+  def _processLateAnimationBindingsForMatrices(holder: TotalWeight): js.Any = js.native
   /** @hidden */
-  def _processLateAnimationBindingsForQuaternions(holder: AnonAnimationsOriginalValue, refQuaternion: Quaternion): Quaternion = js.native
+  def _processLateAnimationBindingsForQuaternions(holder: AnimationsOriginalValue, refQuaternion: Quaternion): Quaternion = js.native
   /** @hidden */
   def _readFile(file: File, onSuccess: js.Function1[/* data */ String | js.typedarray.ArrayBuffer, Unit]): IFileRequest = js.native
   def _readFile(
@@ -2134,8 +2126,8 @@ class Scene protected () extends AbstractScene {
     * @param filterPredicate the predicate - which meshes should be included when calculating the world size
     * @returns {{ min: Vector3; max: Vector3 }} min and max vectors
     */
-  def getWorldExtends(): AnonMaxMin = js.native
-  def getWorldExtends(filterPredicate: js.Function1[/* mesh */ AbstractMesh, Boolean]): AnonMaxMin = js.native
+  def getWorldExtends(): MaxMin = js.native
+  def getWorldExtends(filterPredicate: js.Function1[/* mesh */ AbstractMesh, Boolean]): MaxMin = js.native
   /**
     * Default image processing configuration used either in the rendering
     * Forward main pass or through the imageProcessingPostProcess if present.
@@ -2701,59 +2693,5 @@ class Scene protected () extends AbstractScene {
     * @returns A promise that resolves when the scene is ready
     */
   def whenReadyAsync(): js.Promise[Unit] = js.native
-}
-
-/* static members */
-@JSGlobal("BABYLON.Scene")
-@js.native
-object Scene extends js.Object {
-  /** The fog density is following an exponential function */
-  val FOGMODE_EXP: Double = js.native
-  /** The fog density is following an exponential function faster than FOGMODE_EXP */
-  val FOGMODE_EXP2: Double = js.native
-  /** The fog density is following a linear function. */
-  val FOGMODE_LINEAR: Double = js.native
-  /** The fog is deactivated */
-  val FOGMODE_NONE: Double = js.native
-  /**
-    * Gets or sets the maximum deltatime when deterministic lock step is enabled
-    * @see http://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
-    */
-  var MaxDeltaTime: Double = js.native
-  /**
-    * Gets or sets the minimum deltatime when deterministic lock step is enabled
-    * @see http://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
-    */
-  var MinDeltaTime: Double = js.native
-  /**
-    * Factory used to create the a collision coordinator.
-    * @returns The collision coordinator
-    */
-  def CollisionCoordinatorFactory(): ICollisionCoordinator = js.native
-  /**
-    * Factory used to create the default material.
-    * @param name The name of the material to create
-    * @param scene The scene to create the material for
-    * @returns The default material
-    */
-  def DefaultMaterialFactory(scene: Scene): Material = js.native
-  /**
-    * Time in milliseconds to wait to raise long press events if button is still pressed. Default is 300 ms
-    */
-  def DoubleClickDelay: Double = js.native
-  def DoubleClickDelay(value: Double): js.Any = js.native
-  /**
-    * Gets or sets the distance in pixel that you have to move to prevent some events. Default is 10 pixels
-    */
-  def DragMovementThreshold: Double = js.native
-  def DragMovementThreshold(value: Double): js.Any = js.native
-  /** If you need to check double click without raising a single click at first click, enable this flag */
-  def ExclusiveDoubleClickMode: Boolean = js.native
-  def ExclusiveDoubleClickMode(value: Boolean): js.Any = js.native
-  /**
-    * Time in milliseconds to wait to raise long press events if button is still pressed. Default is 500 ms
-    */
-  def LongPressDelay: Double = js.native
-  def LongPressDelay(value: Double): js.Any = js.native
 }
 

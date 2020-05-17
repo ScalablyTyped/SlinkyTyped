@@ -1,9 +1,9 @@
 package typingsSlinky.officeUiFabricReact.components
 
+import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.officeUiFabricReact.selectionZoneMod.ISelectionZoneProps
-import typingsSlinky.std.Event_
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey
 import typingsSlinky.uifabricUtilities.selectionTypesMod.ISelection
 import typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionMode
@@ -32,11 +32,11 @@ object SelectionZone {
     def layout(value: js.Object): this.type = set("layout", value.asInstanceOf[js.Any])
     @scala.inline
     def onItemContextMenu(
-      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event_]) => Unit | Boolean
+      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event]) => Unit | Boolean
     ): this.type = set("onItemContextMenu", js.Any.fromFunction3(value))
     @scala.inline
     def onItemInvoked(
-      value: (/* item */ js.UndefOr[IObjectWithKey], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event_]) => Unit
+      value: (/* item */ js.UndefOr[IObjectWithKey], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event]) => Unit
     ): this.type = set("onItemInvoked", js.Any.fromFunction3(value))
     @scala.inline
     def selectionMode(value: SelectionMode): this.type = set("selectionMode", value.asInstanceOf[js.Any])

@@ -1,6 +1,6 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonDispose
+import typingsSlinky.vscode.anon.Dispose
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,7 +43,7 @@ trait ExtensionContext extends js.Object {
   		 * An array to which disposables can be added. When this
   		 * extension is deactivated the disposables will be disposed.
   		 */
-  val subscriptions: js.Array[AnonDispose] = js.native
+  val subscriptions: js.Array[Dispose] = js.native
   /**
   		 * A memento object that stores state in the context
   		 * of the currently opened [workspace](#workspace.workspaceFolders).
@@ -66,7 +66,7 @@ object ExtensionContext {
     globalState: Memento,
     globalStoragePath: String,
     logPath: String,
-    subscriptions: js.Array[AnonDispose],
+    subscriptions: js.Array[Dispose],
     workspaceState: Memento
   ): ExtensionContext = {
     val __obj = js.Dynamic.literal(asAbsolutePath = js.Any.fromFunction1(asAbsolutePath), extensionPath = extensionPath.asInstanceOf[js.Any], globalState = globalState.asInstanceOf[js.Any], globalStoragePath = globalStoragePath.asInstanceOf[js.Any], logPath = logPath.asInstanceOf[js.Any], subscriptions = subscriptions.asInstanceOf[js.Any], workspaceState = workspaceState.asInstanceOf[js.Any])
@@ -109,7 +109,7 @@ object ExtensionContext {
         ret
     }
     @scala.inline
-    def withSubscriptions(value: js.Array[AnonDispose]): Self = {
+    def withSubscriptions(value: js.Array[Dispose]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("subscriptions")(value.asInstanceOf[js.Any])
         ret

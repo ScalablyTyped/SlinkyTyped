@@ -1,8 +1,8 @@
 package typingsSlinky.blueprintjsSelect.multiSelectMod
 
 import slinky.core.TagMod
-import typingsSlinky.blueprintjsSelect.PartialIPopoverProps
-import typingsSlinky.blueprintjsSelect.PartialITagInputProps
+import typingsSlinky.blueprintjsSelect.anon.PartialIPopoverProps
+import typingsSlinky.blueprintjsSelect.anon.PartialITagInputProps
 import typingsSlinky.blueprintjsSelect.listItemsPropsMod.IListItemsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

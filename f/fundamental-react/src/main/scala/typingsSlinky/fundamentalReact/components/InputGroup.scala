@@ -2,7 +2,7 @@ package typingsSlinky.fundamentalReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.fundamentalReact.AnonState
+import typingsSlinky.fundamentalReact.anon.State
 import typingsSlinky.fundamentalReact.inputGroupMod.InputGroupProps
 import typingsSlinky.fundamentalReact.inputGroupMod.default
 import scala.scalajs.js
@@ -29,7 +29,7 @@ object InputGroup {
     @scala.inline
     def props(value: js.Any): this.type = set("props", value.asInstanceOf[js.Any])
     @scala.inline
-    def validationState(value: AnonState): this.type = set("validationState", value.asInstanceOf[js.Any])
+    def validationState(value: State): this.type = set("validationState", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: InputGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

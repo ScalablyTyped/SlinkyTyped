@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +12,4 @@ trait CustomElementRegistry extends js.Object {
   def upgrade(root: org.scalajs.dom.raw.Node): Unit = js.native
   def whenDefined(name: java.lang.String): js.Promise[Unit] = js.native
 }
-
-@JSGlobal("CustomElementRegistry")
-@js.native
-object CustomElementRegistry extends Instantiable0[CustomElementRegistry]
 

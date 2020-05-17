@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Excel.ChartArea")
 @js.native
-class ChartArea protected () extends js.Object {
+trait ChartArea extends js.Object {
   val Application: typingsSlinky.activexExcel.Excel.Application = js.native
   var AutoScaleFont: js.Any = js.native
   val Border: typingsSlinky.activexExcel.Excel.Border = js.native
@@ -30,5 +29,177 @@ class ChartArea protected () extends js.Object {
   def ClearFormats(): js.Any = js.native
   def Copy(): js.Any = js.native
   def Select(): js.Any = js.native
+}
+
+object ChartArea {
+  @scala.inline
+  def apply(
+    Application: Application,
+    AutoScaleFont: js.Any,
+    Border: Border,
+    Clear: () => js.Any,
+    ClearContents: () => js.Any,
+    ClearFormats: () => js.Any,
+    Copy: () => js.Any,
+    Creator: XlCreator,
+    ExcelDotChartArea_typekey: ChartArea,
+    Fill: ChartFillFormat,
+    Font: Font,
+    Format: ChartFormat,
+    Height: Double,
+    Interior: Interior,
+    Left: Double,
+    Name: String,
+    Parent: js.Any,
+    RoundedCorners: Boolean,
+    Select: () => js.Any,
+    Shadow: Boolean,
+    Top: Double,
+    Width: Double
+  ): ChartArea = {
+    val __obj = js.Dynamic.literal(Application = Application.asInstanceOf[js.Any], AutoScaleFont = AutoScaleFont.asInstanceOf[js.Any], Border = Border.asInstanceOf[js.Any], Clear = js.Any.fromFunction0(Clear), ClearContents = js.Any.fromFunction0(ClearContents), ClearFormats = js.Any.fromFunction0(ClearFormats), Copy = js.Any.fromFunction0(Copy), Creator = Creator.asInstanceOf[js.Any], Fill = Fill.asInstanceOf[js.Any], Font = Font.asInstanceOf[js.Any], Format = Format.asInstanceOf[js.Any], Height = Height.asInstanceOf[js.Any], Interior = Interior.asInstanceOf[js.Any], Left = Left.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Parent = Parent.asInstanceOf[js.Any], RoundedCorners = RoundedCorners.asInstanceOf[js.Any], Select = js.Any.fromFunction0(Select), Shadow = Shadow.asInstanceOf[js.Any], Top = Top.asInstanceOf[js.Any], Width = Width.asInstanceOf[js.Any])
+    __obj.updateDynamic("Excel.ChartArea_typekey")(ExcelDotChartArea_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ChartArea]
+  }
+  @scala.inline
+  implicit class ChartAreaOps[Self <: ChartArea] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplication(value: Application): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutoScaleFont(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoScaleFont")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBorder(value: Border): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Border")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClear(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Clear")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withClearContents(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClearContents")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withClearFormats(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClearFormats")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withCopy(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Copy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withCreator(value: XlCreator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExcelDotChartArea_typekey(value: ChartArea): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Excel.ChartArea_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFill(value: ChartFillFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Fill")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFont(value: Font): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Font")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFormat(value: ChartFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInterior(value: Interior): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Interior")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLeft(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoundedCorners(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RoundedCorners")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSelect(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Select")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withShadow(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Shadow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Top")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Width")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

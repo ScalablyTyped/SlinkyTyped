@@ -1,18 +1,18 @@
 package typingsSlinky.wxServerSdk.mod
 
-import typingsSlinky.wxServerSdk.AnonTotal
+import typingsSlinky.wxServerSdk.anon.Total
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CountCollectionResult extends js.Object {
-  var stats: AnonTotal = js.native
+  var stats: Total = js.native
 }
 
 object CountCollectionResult {
   @scala.inline
-  def apply(stats: AnonTotal): CountCollectionResult = {
+  def apply(stats: Total): CountCollectionResult = {
     val __obj = js.Dynamic.literal(stats = stats.asInstanceOf[js.Any])
     __obj.asInstanceOf[CountCollectionResult]
   }
@@ -23,7 +23,7 @@ object CountCollectionResult {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withStats(value: AnonTotal): Self = {
+    def withStats(value: Total): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
         ret

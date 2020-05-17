@@ -1,6 +1,6 @@
 package typingsSlinky.reactNavigationStack.touchableItemMod
 
-import typingsSlinky.reactNavigationStack.AnonBorderless
+import typingsSlinky.reactNavigationStack.anon.Borderless
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ class default () extends TouchableItem
 @JSImport("react-navigation-stack/lib/typescript/views/TouchableItem", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonBorderless = js.native
+  var defaultProps: Borderless = js.native
 }
 

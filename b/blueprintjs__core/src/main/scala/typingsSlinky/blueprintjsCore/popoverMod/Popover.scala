@@ -1,7 +1,7 @@
 package typingsSlinky.blueprintjsCore.popoverMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.blueprintjsCore.IPopoverPropschildrenReac
+import typingsSlinky.blueprintjsCore.anon.IPopoverPropschildrenReac
 import typingsSlinky.blueprintjsCore.commonMod.AbstractPureComponent2
 import scala.scalajs.js
 import scala.scalajs.js.`|`

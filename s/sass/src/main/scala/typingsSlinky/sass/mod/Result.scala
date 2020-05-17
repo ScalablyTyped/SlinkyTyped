@@ -1,7 +1,7 @@
 package typingsSlinky.sass.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.sass.AnonDuration
+import typingsSlinky.sass.anon.Duration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,12 +18,12 @@ trait Result extends js.Object {
     * The source map.
     */
   var map: js.UndefOr[Buffer] = js.native
-  var stats: AnonDuration = js.native
+  var stats: Duration = js.native
 }
 
 object Result {
   @scala.inline
-  def apply(css: Buffer, stats: AnonDuration): Result = {
+  def apply(css: Buffer, stats: Duration): Result = {
     val __obj = js.Dynamic.literal(css = css.asInstanceOf[js.Any], stats = stats.asInstanceOf[js.Any])
     __obj.asInstanceOf[Result]
   }
@@ -40,7 +40,7 @@ object Result {
         ret
     }
     @scala.inline
-    def withStats(value: AnonDuration): Self = {
+    def withStats(value: Duration): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
         ret

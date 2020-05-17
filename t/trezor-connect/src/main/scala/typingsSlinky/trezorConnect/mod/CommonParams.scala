@@ -1,6 +1,6 @@
 package typingsSlinky.trezorConnect.mod
 
-import typingsSlinky.trezorConnect.AnonInstance
+import typingsSlinky.trezorConnect.anon.Instance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CommonParams extends js.Object {
   var allowSeedlessDevice: js.UndefOr[Boolean] = js.native
-  var device: js.UndefOr[AnonInstance] = js.native
+  var device: js.UndefOr[Instance] = js.native
   var keepSession: js.UndefOr[Boolean] = js.native
   var useEmptyPassphrase: js.UndefOr[Boolean] = js.native
 }
@@ -38,7 +38,7 @@ object CommonParams {
         ret
     }
     @scala.inline
-    def withDevice(value: AnonInstance): Self = {
+    def withDevice(value: Instance): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("device")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.openseadragon.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait TileSourceOptions extends js.Object {
   var maxLevel: js.UndefOr[Double] = js.native
   var minLevel: js.UndefOr[Double] = js.native
   var referenceStripThumbnailUrl: js.UndefOr[String] = js.native
-  var success: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var success: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   var tileHeight: js.UndefOr[Double] = js.native
   var tileOverlap: js.UndefOr[Double] = js.native
   var tileSize: js.UndefOr[Double] = js.native
@@ -120,7 +120,7 @@ object TileSourceOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* event */ Event_ => Unit): Self = {
+    def withSuccess(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

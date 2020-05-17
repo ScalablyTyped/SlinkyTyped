@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a client-side equivalent of the navbar's NavBarItem object.
   */
-@JSGlobal("ASPxClientNavBarItem")
 @js.native
-class ASPxClientNavBarItem () extends js.Object {
+trait ASPxClientNavBarItem extends js.Object {
   /**
     * Gets the group to which the current item belongs.
     */
@@ -71,5 +70,120 @@ class ASPxClientNavBarItem () extends js.Object {
     * @param value true is the item is visible; otherwise, false.
     */
   def SetVisible(value: Boolean): Unit = js.native
+}
+
+object ASPxClientNavBarItem {
+  @scala.inline
+  def apply(
+    GetEnabled: () => Boolean,
+    GetImageUrl: () => String,
+    GetNavigateUrl: () => String,
+    GetText: () => String,
+    GetVisible: () => Boolean,
+    SetEnabled: Boolean => Unit,
+    SetImageUrl: String => Unit,
+    SetNavigateUrl: String => Unit,
+    SetText: String => Unit,
+    SetVisible: Boolean => Unit,
+    group: ASPxClientNavBarGroup,
+    index: Double,
+    name: String,
+    navBar: ASPxClientNavBar
+  ): ASPxClientNavBarItem = {
+    val __obj = js.Dynamic.literal(GetEnabled = js.Any.fromFunction0(GetEnabled), GetImageUrl = js.Any.fromFunction0(GetImageUrl), GetNavigateUrl = js.Any.fromFunction0(GetNavigateUrl), GetText = js.Any.fromFunction0(GetText), GetVisible = js.Any.fromFunction0(GetVisible), SetEnabled = js.Any.fromFunction1(SetEnabled), SetImageUrl = js.Any.fromFunction1(SetImageUrl), SetNavigateUrl = js.Any.fromFunction1(SetNavigateUrl), SetText = js.Any.fromFunction1(SetText), SetVisible = js.Any.fromFunction1(SetVisible), group = group.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], navBar = navBar.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientNavBarItem]
+  }
+  @scala.inline
+  implicit class ASPxClientNavBarItemOps[Self <: ASPxClientNavBarItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetEnabled(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetEnabled")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetImageUrl(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetImageUrl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetNavigateUrl(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetNavigateUrl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetText(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetText")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetVisible(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetVisible")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetEnabled(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetEnabled")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetImageUrl(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetImageUrl")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetNavigateUrl(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetNavigateUrl")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetText(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetVisible(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetVisible")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGroup(value: ASPxClientNavBarGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNavBar(value: ASPxClientNavBar): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navBar")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

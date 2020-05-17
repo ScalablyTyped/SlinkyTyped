@@ -1,9 +1,9 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.PageBreakData
 import typingsSlinky.officeJs.Excel.Interfaces.PageBreakLoadOptions
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
+import typingsSlinky.officeJs.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,9 +11,8 @@ import scala.scalajs.js.annotation._
 /**
   * [Api set: ExcelApi 1.9]
   */
-@JSGlobal("Excel.PageBreak")
 @js.native
-class PageBreak () extends ClientObject {
+trait PageBreak extends ClientObject {
   /**
     *
     * Represents the column index for the page break
@@ -50,7 +49,7 @@ class PageBreak () extends ClientObject {
     */
   def load(): PageBreak = js.native
   def load(options: PageBreakLoadOptions): PageBreak = js.native
-  def load(propertyNamesAndPaths: AnonExpand): PageBreak = js.native
+  def load(propertyNamesAndPaths: Expand): PageBreak = js.native
   def load(propertyNames: String): PageBreak = js.native
   def load(propertyNames: js.Array[String]): PageBreak = js.native
   /**

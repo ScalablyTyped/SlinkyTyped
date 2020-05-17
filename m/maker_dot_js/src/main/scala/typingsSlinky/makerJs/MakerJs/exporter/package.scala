@@ -22,5 +22,5 @@ package object exporter {
   /**
     * Map of MakerJs unit system to SVG unit system
     */
-  type svgUnitConversion = org.scalablytyped.runtime.StringDictionary[typingsSlinky.makerJs.AnonScaleConversion]
+  type svgUnitConversion = org.scalablytyped.runtime.StringDictionary[typingsSlinky.makerJs.anon.ScaleConversion]
 }

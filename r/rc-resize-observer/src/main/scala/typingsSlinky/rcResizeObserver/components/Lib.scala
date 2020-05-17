@@ -2,7 +2,7 @@ package typingsSlinky.rcResizeObserver.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.rcResizeObserver.AnonHeight
+import typingsSlinky.rcResizeObserver.anon.Height
 import typingsSlinky.rcResizeObserver.mod.ResizeObserverProps
 import typingsSlinky.rcResizeObserver.mod.default
 import scala.scalajs.js
@@ -21,7 +21,7 @@ object Lib {
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def onResize(value: /* size */ AnonHeight => Unit): this.type = set("onResize", js.Any.fromFunction1(value))
+    def onResize(value: /* size */ Height => Unit): this.type = set("onResize", js.Any.fromFunction1(value))
   }
   
   def withProps(p: ResizeObserverProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

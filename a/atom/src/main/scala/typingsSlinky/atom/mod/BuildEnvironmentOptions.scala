@@ -1,7 +1,7 @@
 package typingsSlinky.atom.mod
 
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Document
+import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,14 +16,14 @@ trait BuildEnvironmentOptions extends js.Object {
   /** A path to the configuration directory (usually ~/.atom). */
   var configDirPath: js.UndefOr[String] = js.native
   /** A document global. */
-  var document: js.UndefOr[Document_] = js.native
+  var document: js.UndefOr[Document] = js.native
   /**
     *  A boolean indicating whether the Atom environment should save or load state
     *  from the file system. You probably want this to be false.
     */
   var enablePersistence: js.UndefOr[Boolean] = js.native
   /** A window global. */
-  var window: js.UndefOr[Window_] = js.native
+  var window: js.UndefOr[Window] = js.native
 }
 
 object BuildEnvironmentOptions {
@@ -63,7 +63,7 @@ object BuildEnvironmentOptions {
         ret
     }
     @scala.inline
-    def withDocument(value: Document_): Self = {
+    def withDocument(value: Document): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
         ret
@@ -87,7 +87,7 @@ object BuildEnvironmentOptions {
         ret
     }
     @scala.inline
-    def withWindow(value: Window_): Self = {
+    def withWindow(value: Window): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("window")(value.asInstanceOf[js.Any])
         ret

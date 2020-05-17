@@ -10,9 +10,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides access to sync functionality for an AppointmentCalendar object. */
-@JSGlobal("Windows.ApplicationModel.Appointments.AppointmentCalendarSyncManager")
 @js.native
-abstract class AppointmentCalendarSyncManager () extends js.Object {
+trait AppointmentCalendarSyncManager extends js.Object {
   /** Gets the last date and time that a sync with the AppointmentCalendar server was attempted. */
   var lastAttemptedSyncTime: js.Date = js.native
   /** Gets the last date and time that a sync with the AppointmentCalendar server was successful. */

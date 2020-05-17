@@ -2,7 +2,7 @@ package typingsSlinky.fundamentalReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.fundamentalReact.AnonState
+import typingsSlinky.fundamentalReact.anon.State
 import typingsSlinky.fundamentalReact.formInputMod.FormInputProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -36,7 +36,7 @@ object FormInput {
     @scala.inline
     def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
     @scala.inline
-    def validationState(value: AnonState): this.type = set("validationState", value.asInstanceOf[js.Any])
+    def validationState(value: State): this.type = set("validationState", value.asInstanceOf[js.Any])
     @scala.inline
     def value(value: String | Double): this.type = set("value", value.asInstanceOf[js.Any])
   }

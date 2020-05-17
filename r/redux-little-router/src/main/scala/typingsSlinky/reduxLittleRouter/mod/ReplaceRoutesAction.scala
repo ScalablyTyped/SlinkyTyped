@@ -1,19 +1,19 @@
 package typingsSlinky.reduxLittleRouter.mod
 
-import typingsSlinky.reduxLittleRouter.AnonOptions
+import typingsSlinky.reduxLittleRouter.anon.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ReplaceRoutesAction extends RouterActions {
-  var payload: AnonOptions = js.native
+  var payload: Options = js.native
   var `type`: /* "ROUTER_REPLACE_ROUTES" */ String = js.native
 }
 
 object ReplaceRoutesAction {
   @scala.inline
-  def apply(payload: AnonOptions, `type`: /* "ROUTER_REPLACE_ROUTES" */ String): ReplaceRoutesAction = {
+  def apply(payload: Options, `type`: /* "ROUTER_REPLACE_ROUTES" */ String): ReplaceRoutesAction = {
     val __obj = js.Dynamic.literal(payload = payload.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReplaceRoutesAction]
@@ -25,7 +25,7 @@ object ReplaceRoutesAction {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPayload(value: AnonOptions): Self = {
+    def withPayload(value: Options): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
         ret

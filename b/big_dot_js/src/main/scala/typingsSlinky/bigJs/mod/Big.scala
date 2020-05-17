@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Big extends js.Object {
+trait Big extends BigSource {
   /**
     * Returns an array of single digits
     */

@@ -5,12 +5,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides information about a closing event. */
-@JSGlobal("Windows.Storage.Pickers.Provider.PickerClosingEventArgs")
 @js.native
-abstract class PickerClosingEventArgs () extends js.Object {
+trait PickerClosingEventArgs extends js.Object {
   /** Gets a pickerClosingOperation object that is used to respond to a closing event. */
   var closingOperation: PickerClosingOperation = js.native
   /** Gets a value that indicates whether the file picker is closing because the user cancelled it. */
   var isCanceled: Boolean = js.native
+}
+
+object PickerClosingEventArgs {
+  @scala.inline
+  def apply(closingOperation: PickerClosingOperation, isCanceled: Boolean): PickerClosingEventArgs = {
+    val __obj = js.Dynamic.literal(closingOperation = closingOperation.asInstanceOf[js.Any], isCanceled = isCanceled.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PickerClosingEventArgs]
+  }
+  @scala.inline
+  implicit class PickerClosingEventArgsOps[Self <: PickerClosingEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClosingOperation(value: PickerClosingOperation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closingOperation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsCanceled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCanceled")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.nivoLine.nivoLineStrings.mesh
   - typingsSlinky.nivoLine.nivoLineStrings.legends
 */
-trait LineLayerType extends js.Object
+trait LineLayerType extends Layer
 
 object LineLayerType {
   @scala.inline

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SpacesOptions
   extends BaseS3Options
-     with _AllPublishOptions {
+     with AllPublishOptions {
   /**
     * The space name.
     */

@@ -1,5 +1,15 @@
 package typingsSlinky.tstl
 
+import typingsSlinky.tstl.anon.PickILockablelock
+import typingsSlinky.tstl.anon.PickILockablelockunlock
+import typingsSlinky.tstl.anon.PickILockabletrylock
+import typingsSlinky.tstl.anon.PickILockabletrylockunloc
+import typingsSlinky.tstl.anon.PickISharedLockablelocksh
+import typingsSlinky.tstl.anon.PickISharedLockabletryloc
+import typingsSlinky.tstl.anon.PickISharedTimedLockablet
+import typingsSlinky.tstl.anon.PickISharedTimedLockabletTrylockshareduntil
+import typingsSlinky.tstl.anon.PickITimedLockabletrylock
+import typingsSlinky.tstl.anon.PickITimedLockabletrylockTrylockuntil
 import typingsSlinky.tstl.sharedLockMod.Closure
 import typingsSlinky.tstl.sharedLockMod.IMutex
 import scala.scalajs.js

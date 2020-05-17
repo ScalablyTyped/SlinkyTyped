@@ -1,5 +1,6 @@
 package typingsSlinky.rcCheckbox.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
@@ -8,7 +9,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcCheckbox.mod.Props
 import typingsSlinky.rcCheckbox.mod.default
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +39,7 @@ object RcCheckbox {
     @scala.inline
     def onBlur(value: /* e */ SyntheticFocusEvent[HTMLInputElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: /* e */ Event_ => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ Event => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def onClick(value: /* e */ SyntheticMouseEvent[HTMLInputElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline

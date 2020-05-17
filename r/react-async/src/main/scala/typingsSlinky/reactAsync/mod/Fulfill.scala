@@ -1,6 +1,6 @@
 package typingsSlinky.reactAsync.mod
 
-import typingsSlinky.reactAsync.AnonDictmeta
+import typingsSlinky.reactAsync.anon.Dictmeta
 import typingsSlinky.reactAsync.reactAsyncStrings.fulfill
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,14 +9,14 @@ import scala.scalajs.js.annotation._
 /* Inlined react-async.react-async.AbstractAction & {  type  :'fulfill',   payload  :T} */
 @js.native
 trait Fulfill[T] extends AsyncAction[T] {
-  var meta: AnonDictmeta = js.native
+  var meta: Dictmeta = js.native
   var payload: T = js.native
   var `type`: String with fulfill = js.native
 }
 
 object Fulfill {
   @scala.inline
-  def apply[T](meta: AnonDictmeta, payload: T, `type`: String with fulfill): Fulfill[T] = {
+  def apply[T](meta: Dictmeta, payload: T, `type`: String with fulfill): Fulfill[T] = {
     val __obj = js.Dynamic.literal(meta = meta.asInstanceOf[js.Any], payload = payload.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Fulfill[T]]
@@ -28,7 +28,7 @@ object Fulfill {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withMeta(value: AnonDictmeta): Self[T] = {
+    def withMeta(value: Dictmeta): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
         ret

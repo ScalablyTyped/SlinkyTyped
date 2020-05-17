@@ -2,7 +2,7 @@ package typingsSlinky.wavesurferJs.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.wavesurferJs.AnonXhr
+import typingsSlinky.wavesurferJs.anon.Xhr
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait WaveSurferUtil extends js.Object {
   var Observer: typingsSlinky.wavesurferJs.mod.Observer = js.native
-  def ajax(options: AnonXhr): Observer = js.native
+  def ajax(options: Xhr): Observer = js.native
   def extend(dest: js.Object, sources: js.Object*): js.Object = js.native
   def frame(fn: js.Function1[/* repeated */ js.Any, Unit]): js.Function1[/* repeated */ js.Any, Double] = js.native
   def getId(): String = js.native
@@ -25,7 +25,7 @@ object WaveSurferUtil {
   @scala.inline
   def apply(
     Observer: Observer,
-    ajax: AnonXhr => Observer,
+    ajax: Xhr => Observer,
     extend: (js.Object, /* repeated */ js.Object) => js.Object,
     frame: js.Function1[/* repeated */ js.Any, Unit] => js.Function1[/* repeated */ js.Any, Double],
     getId: () => String,
@@ -51,7 +51,7 @@ object WaveSurferUtil {
         ret
     }
     @scala.inline
-    def withAjax(value: AnonXhr => Observer): Self = {
+    def withAjax(value: Xhr => Observer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ajax")(js.Any.fromFunction1(value))
         ret

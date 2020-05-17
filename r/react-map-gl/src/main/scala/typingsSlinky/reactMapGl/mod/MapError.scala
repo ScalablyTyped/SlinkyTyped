@@ -1,13 +1,13 @@
 package typingsSlinky.reactMapGl.mod
 
-import typingsSlinky.reactMapGl.AnonMessage
+import typingsSlinky.reactMapGl.anon.Message
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait MapError extends js.Object {
-  var error: js.UndefOr[AnonMessage] = js.native
+  var error: js.UndefOr[Message] = js.native
   var status: Double = js.native
 }
 
@@ -30,7 +30,7 @@ object MapError {
         ret
     }
     @scala.inline
-    def withError(value: AnonMessage): Self = {
+    def withError(value: Message): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret

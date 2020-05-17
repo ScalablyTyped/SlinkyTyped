@@ -1,6 +1,6 @@
 package typingsSlinky.three.textGeometryMod
 
-import typingsSlinky.three.AnonBevelEnabled
+import typingsSlinky.three.anon.BevelEnabled
 import typingsSlinky.three.extrudeGeometryMod.ExtrudeBufferGeometry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,6 +11,6 @@ import scala.scalajs.js.annotation._
 class TextBufferGeometry protected () extends ExtrudeBufferGeometry {
   def this(text: String) = this()
   def this(text: String, parameters: TextGeometryParameters) = this()
-  var parameters: AnonBevelEnabled = js.native
+  var parameters: BevelEnabled = js.native
 }
 

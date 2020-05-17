@@ -1,10 +1,10 @@
 package typingsSlinky.grommet.boxMod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.grommet.AnonDelay
-import typingsSlinky.grommet.AnonGrow
-import typingsSlinky.grommet.AnonHorizontal
-import typingsSlinky.grommet.AnonMax
+import typingsSlinky.grommet.anon.Delay
+import typingsSlinky.grommet.anon.Grow
+import typingsSlinky.grommet.anon.Horizontal
+import typingsSlinky.grommet.anon.Max
 import typingsSlinky.grommet.grommetStrings.`column-reverse`
 import typingsSlinky.grommet.grommetStrings.`row-responsive`
 import typingsSlinky.grommet.grommetStrings.`row-reverse`
@@ -67,8 +67,8 @@ trait BoxProps extends js.Object {
   var alignContent: js.UndefOr[AlignContentType] = js.native
   var alignSelf: js.UndefOr[AlignSelfType] = js.native
   var animation: js.UndefOr[
-    fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | AnonDelay | (js.Array[
-      fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | AnonDelay
+    fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | Delay | (js.Array[
+      fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | Delay
     ])
   ] = js.native
   var as: js.UndefOr[PolymorphicType] = js.native
@@ -78,21 +78,21 @@ trait BoxProps extends js.Object {
   var direction: js.UndefOr[row | column | `row-responsive` | `row-reverse` | `column-reverse`] = js.native
   var elevation: js.UndefOr[ElevationType] = js.native
   var fill: js.UndefOr[FillType] = js.native
-  var flex: js.UndefOr[grow | shrink | Boolean | AnonGrow] = js.native
+  var flex: js.UndefOr[grow | shrink | Boolean | Grow] = js.native
   var focusIndicator: js.UndefOr[Boolean] = js.native
   var gap: js.UndefOr[GapType] = js.native
   var gridArea: js.UndefOr[GridAreaType] = js.native
-  var height: js.UndefOr[xxsmall | xsmall | small | medium | large | xlarge | xxlarge | String | AnonMax] = js.native
+  var height: js.UndefOr[xxsmall | xsmall | small | medium | large | xlarge | xxlarge | String | Max] = js.native
   var hoverIndicator: js.UndefOr[BackgroundType | Boolean] = js.native
   var justify: js.UndefOr[around | between | center | end | evenly | start | stretch] = js.native
   var margin: js.UndefOr[MarginType] = js.native
   var onClick: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
-  var overflow: js.UndefOr[auto | hidden | scroll | visible | AnonHorizontal | String] = js.native
+  var overflow: js.UndefOr[auto | hidden | scroll | visible | Horizontal | String] = js.native
   var pad: js.UndefOr[PadType] = js.native
   var responsive: js.UndefOr[Boolean] = js.native
   var round: js.UndefOr[RoundType] = js.native
   var tag: js.UndefOr[PolymorphicType] = js.native
-  var width: js.UndefOr[xxsmall | xsmall | small | medium | large | xlarge | xxlarge | String | AnonMax] = js.native
+  var width: js.UndefOr[xxsmall | xsmall | small | medium | large | xlarge | xxlarge | String | Max] = js.native
   var wrap: js.UndefOr[Boolean | reverse] = js.native
 }
 
@@ -158,8 +158,8 @@ object BoxProps {
     }
     @scala.inline
     def withAnimation(
-      value: fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | AnonDelay | (js.Array[
-          fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | AnonDelay
+      value: fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | Delay | (js.Array[
+          fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | Delay
         ])
     ): Self = {
         val ret = this.duplicate
@@ -269,7 +269,7 @@ object BoxProps {
         ret
     }
     @scala.inline
-    def withFlex(value: grow | shrink | Boolean | AnonGrow): Self = {
+    def withFlex(value: grow | shrink | Boolean | Grow): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("flex")(value.asInstanceOf[js.Any])
         ret
@@ -317,7 +317,7 @@ object BoxProps {
         ret
     }
     @scala.inline
-    def withHeight(value: xxsmall | xsmall | small | medium | large | xlarge | xxlarge | String | AnonMax): Self = {
+    def withHeight(value: xxsmall | xsmall | small | medium | large | xlarge | xxlarge | String | Max): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
         ret
@@ -377,7 +377,7 @@ object BoxProps {
         ret
     }
     @scala.inline
-    def withOverflow(value: auto | hidden | scroll | visible | AnonHorizontal | String): Self = {
+    def withOverflow(value: auto | hidden | scroll | visible | Horizontal | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(value.asInstanceOf[js.Any])
         ret
@@ -449,7 +449,7 @@ object BoxProps {
         ret
     }
     @scala.inline
-    def withWidth(value: xxsmall | xsmall | small | medium | large | xlarge | xxlarge | String | AnonMax): Self = {
+    def withWidth(value: xxsmall | xsmall | small | medium | large | xlarge | xxlarge | String | Max): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
         ret

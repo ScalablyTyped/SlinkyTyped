@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojganttMod
 
-import typingsSlinky.oracleOraclejet.AnonEnd
-import typingsSlinky.oracleOraclejet.AnonValue
+import typingsSlinky.oracleOraclejet.anon.End
+import typingsSlinky.oracleOraclejet.anon.Value
 import typingsSlinky.oracleOraclejet.mod.JetSettableProperties
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.auto
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.end
@@ -19,14 +19,14 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ojGanttTaskSettableProperties extends JetSettableProperties {
-  var baseline: AnonEnd = js.native
+  var baseline: End = js.native
   var borderRadius: String = js.native
   var end: String = js.native
   var height: Double | Null = js.native
   var label: String = js.native
   var labelPosition: start | innerCenter | innerStart | innerEnd | end | none = js.native
   var labelStyle: js.Object = js.native
-  var progress: AnonValue = js.native
+  var progress: Value = js.native
   var rowId: js.UndefOr[js.Any] = js.native
   var shortDesc: String | Null = js.native
   var start: String = js.native
@@ -38,13 +38,13 @@ trait ojGanttTaskSettableProperties extends JetSettableProperties {
 object ojGanttTaskSettableProperties {
   @scala.inline
   def apply(
-    baseline: AnonEnd,
+    baseline: End,
     borderRadius: String,
     end: String,
     label: String,
     labelPosition: start | innerCenter | innerStart | innerEnd | end | none,
     labelStyle: js.Object,
-    progress: AnonValue,
+    progress: Value,
     start: String,
     svgClassName: String,
     svgStyle: js.Object,
@@ -61,7 +61,7 @@ object ojGanttTaskSettableProperties {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBaseline(value: AnonEnd): Self = {
+    def withBaseline(value: End): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("baseline")(value.asInstanceOf[js.Any])
         ret
@@ -97,7 +97,7 @@ object ojGanttTaskSettableProperties {
         ret
     }
     @scala.inline
-    def withProgress(value: AnonValue): Self = {
+    def withProgress(value: Value): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
         ret

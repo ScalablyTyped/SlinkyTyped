@@ -3,6 +3,8 @@ package typingsSlinky.graphqlBinding
 import typingsSlinky.graphql.astMod.DocumentNode
 import typingsSlinky.graphql.definitionMod.GraphQLResolveInfo
 import typingsSlinky.graphql.mod.GraphQLSchema
+import typingsSlinky.graphqlBinding.anon.InputSchemaPath
+import typingsSlinky.graphqlBinding.anon.Schema
 import typingsSlinky.graphqlBinding.distTypesMod.BindingOptions
 import typingsSlinky.graphqlBinding.distTypesMod.FragmentReplacement
 import typingsSlinky.graphqlBinding.distTypesMod.Operation
@@ -29,19 +31,19 @@ object mod extends js.Object {
   @js.native
   class FlowGenerator protected ()
     extends typingsSlinky.graphqlBinding.flowGeneratorMod.FlowGenerator {
-    def this(hasSchemaInputSchemaPathOutputBindingPathIsDefaultExport: AnonInputSchemaPath) = this()
+    def this(hasSchemaInputSchemaPathOutputBindingPathIsDefaultExport: InputSchemaPath) = this()
   }
   
   @js.native
   class Generator protected ()
     extends typingsSlinky.graphqlBinding.generatorMod.Generator {
-    def this(hasSchemaInputSchemaPathOutputBindingPathIsDefaultExport: AnonInputSchemaPath) = this()
+    def this(hasSchemaInputSchemaPathOutputBindingPathIsDefaultExport: InputSchemaPath) = this()
   }
   
   @js.native
   class TypescriptGenerator protected ()
     extends typingsSlinky.graphqlBinding.typescriptGeneratorMod.TypescriptGenerator {
-    def this(hasSchemaInputSchemaPathOutputBindingPathIsDefaultExport: AnonInputSchemaPath) = this()
+    def this(hasSchemaInputSchemaPathOutputBindingPathIsDefaultExport: InputSchemaPath) = this()
   }
   
   def addFragmentToInfo(info: GraphQLResolveInfo, fragment: String): GraphQLResolveInfo = js.native
@@ -57,6 +59,6 @@ object mod extends js.Object {
     /* info */ GraphQLResolveInfo, 
     _
   ] = js.native
-  def makeBindingClass[T](hasSchema: AnonSchema): T = js.native
+  def makeBindingClass[T](hasSchema: Schema): T = js.native
 }
 

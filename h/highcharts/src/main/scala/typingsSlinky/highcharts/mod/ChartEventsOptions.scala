@@ -1,6 +1,6 @@
 package typingsSlinky.highcharts.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -144,7 +144,7 @@ object ChartEventsOptions {
         ret
     }
     @scala.inline
-    def withAfterPrint(value: (/* chart */ Chart_, /* event */ Event_) => Unit): Self = {
+    def withAfterPrint(value: (/* chart */ Chart_, /* event */ Event) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterPrint")(js.Any.fromFunction2(value))
         ret
@@ -156,7 +156,7 @@ object ChartEventsOptions {
         ret
     }
     @scala.inline
-    def withBeforePrint(value: (/* chart */ Chart_, /* event */ Event_) => Unit): Self = {
+    def withBeforePrint(value: (/* chart */ Chart_, /* event */ Event) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforePrint")(js.Any.fromFunction2(value))
         ret

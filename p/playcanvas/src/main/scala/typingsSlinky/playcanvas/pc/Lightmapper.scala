@@ -14,16 +14,8 @@ import scala.scalajs.js.annotation._
   * @param {pc.ForwardRenderer} renderer - The renderer.
   * @param {pc.AssetRegistry} assets - Registry of assets to lightmap.
   */
-@JSGlobal("pc.Lightmapper")
 @js.native
-class Lightmapper protected () extends js.Object {
-  def this(
-    device: GraphicsDevice,
-    root: Entity,
-    scene: Scene,
-    renderer: ForwardRenderer,
-    assets: AssetRegistry
-  ) = this()
+trait Lightmapper extends js.Object {
   /**
     * @function
     * @name pc.Lightmapper#bake

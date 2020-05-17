@@ -6,21 +6,21 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait RTCDataChannelEventMap extends js.Object {
-  var bufferedamountlow: Event_ = js.native
-  var close: Event_ = js.native
+  var bufferedamountlow: org.scalajs.dom.raw.Event = js.native
+  var close: org.scalajs.dom.raw.Event = js.native
   var error: RTCErrorEvent = js.native
   var message: org.scalajs.dom.raw.MessageEvent = js.native
-  var open: Event_ = js.native
+  var open: org.scalajs.dom.raw.Event = js.native
 }
 
 object RTCDataChannelEventMap {
   @scala.inline
   def apply(
-    bufferedamountlow: Event_,
-    close: Event_,
+    bufferedamountlow: org.scalajs.dom.raw.Event,
+    close: org.scalajs.dom.raw.Event,
     error: RTCErrorEvent,
     message: org.scalajs.dom.raw.MessageEvent,
-    open: Event_
+    open: org.scalajs.dom.raw.Event
   ): RTCDataChannelEventMap = {
     val __obj = js.Dynamic.literal(bufferedamountlow = bufferedamountlow.asInstanceOf[js.Any], close = close.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], open = open.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCDataChannelEventMap]
@@ -32,13 +32,13 @@ object RTCDataChannelEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBufferedamountlow(value: Event_): Self = {
+    def withBufferedamountlow(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bufferedamountlow")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withClose(value: Event_): Self = {
+    def withClose(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("close")(value.asInstanceOf[js.Any])
         ret
@@ -56,7 +56,7 @@ object RTCDataChannelEventMap {
         ret
     }
     @scala.inline
-    def withOpen(value: Event_): Self = {
+    def withOpen(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
         ret

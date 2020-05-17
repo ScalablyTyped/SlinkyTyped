@@ -1,6 +1,7 @@
 package typingsSlinky.gulpTypescript
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.gulpTypescript.anon.Typeofts
 import typingsSlinky.gulpTypescript.inputMod.File
 import typingsSlinky.gulpTypescript.reporterMod.TypeScriptError
 import typingsSlinky.typescript.mod.Diagnostic

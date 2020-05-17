@@ -6,8 +6,8 @@ import org.scalajs.dom.experimental.webrtc.RTCSessionDescription
 import org.scalajs.dom.experimental.webrtc.RTCSessionDescriptionInit
 import org.scalajs.dom.experimental.webrtc.RTCSignalingState
 import org.scalajs.dom.experimental.webrtc.RTCStatsReport
+import org.scalajs.dom.raw.Event
 import typingsSlinky.std.EventTarget
-import typingsSlinky.std.Event_
 import typingsSlinky.std.RTCAnswerOptions
 import typingsSlinky.std.RTCPeerConnectionErrorCallback
 import typingsSlinky.std.RTCPeerConnectionState
@@ -23,7 +23,7 @@ trait RTCPeerConnection extends EventTarget {
   val currentLocalDescription: RTCSessionDescription | Null = js.native
   val currentRemoteDescription: RTCSessionDescription | Null = js.native
   val localDescription: RTCSessionDescription | Null = js.native
-  var onconnectionstatechange: PeerConnectionEventHandler[Event_] = js.native
+  var onconnectionstatechange: PeerConnectionEventHandler[Event] = js.native
   var ondatachannel: PeerConnectionEventHandler[RTCDataChannelEvent] = js.native
   var onicecandidateerror: PeerConnectionEventHandler[RTCPeerConnectionIceErrorEvent] = js.native
   var ontrack: PeerConnectionEventHandler[RTCTrackEvent] = js.native

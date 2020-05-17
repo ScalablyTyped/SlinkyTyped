@@ -1,0 +1,77 @@
+package typingsSlinky.awsSdkClientCodecommitNode.getMergeConflictsExceptionsUnionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.typesCommitDoesNotExistExceptionMod.CommitDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesCommitRequiredExceptionMod.CommitRequiredException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidCommitExceptionMod.InvalidCommitException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidDestinationCommitSpecifierExceptionMod.InvalidDestinationCommitSpecifierException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidMergeOptionExceptionMod.InvalidMergeOptionException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidSourceCommitSpecifierExceptionMod.InvalidSourceCommitSpecifierException
+import typingsSlinky.awsSdkClientCodecommitNode.typesMergeOptionRequiredExceptionMod.MergeOptionRequiredException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+import typingsSlinky.awsSdkClientCodecommitNode.typesTipsDivergenceExceededExceptionMod.TipsDivergenceExceededException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesMergeOptionRequiredExceptionMod.MergeOptionRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidMergeOptionExceptionMod.InvalidMergeOptionException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidDestinationCommitSpecifierExceptionMod.InvalidDestinationCommitSpecifierException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidSourceCommitSpecifierExceptionMod.InvalidSourceCommitSpecifierException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesCommitRequiredExceptionMod.CommitRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesCommitDoesNotExistExceptionMod.CommitDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidCommitExceptionMod.InvalidCommitException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesTipsDivergenceExceededExceptionMod.TipsDivergenceExceededException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+*/
+trait GetMergeConflictsExceptionsUnion extends js.Object
+
+object GetMergeConflictsExceptionsUnion {
+  @scala.inline
+  implicit def apply(value: CommitDoesNotExistException): GetMergeConflictsExceptionsUnion = value.asInstanceOf[GetMergeConflictsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: CommitRequiredException): GetMergeConflictsExceptionsUnion = value.asInstanceOf[GetMergeConflictsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionIntegrityChecksFailedException): GetMergeConflictsExceptionsUnion = value.asInstanceOf[GetMergeConflictsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyAccessDeniedException): GetMergeConflictsExceptionsUnion = value.asInstanceOf[GetMergeConflictsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyDisabledException): GetMergeConflictsExceptionsUnion = value.asInstanceOf[GetMergeConflictsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyNotFoundException): GetMergeConflictsExceptionsUnion = value.asInstanceOf[GetMergeConflictsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyUnavailableException): GetMergeConflictsExceptionsUnion = value.asInstanceOf[GetMergeConflictsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidCommitException): GetMergeConflictsExceptionsUnion = value.asInstanceOf[GetMergeConflictsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidDestinationCommitSpecifierException): GetMergeConflictsExceptionsUnion = value.asInstanceOf[GetMergeConflictsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidMergeOptionException): GetMergeConflictsExceptionsUnion = value.asInstanceOf[GetMergeConflictsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidRepositoryNameException): GetMergeConflictsExceptionsUnion = value.asInstanceOf[GetMergeConflictsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidSourceCommitSpecifierException): GetMergeConflictsExceptionsUnion = value.asInstanceOf[GetMergeConflictsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: MergeOptionRequiredException): GetMergeConflictsExceptionsUnion = value.asInstanceOf[GetMergeConflictsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryDoesNotExistException): GetMergeConflictsExceptionsUnion = value.asInstanceOf[GetMergeConflictsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryNameRequiredException): GetMergeConflictsExceptionsUnion = value.asInstanceOf[GetMergeConflictsExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: TipsDivergenceExceededException): GetMergeConflictsExceptionsUnion = value.asInstanceOf[GetMergeConflictsExceptionsUnion]
+}
+

@@ -1,6 +1,6 @@
 package typingsSlinky.reactRelay.useBlockingPaginationFragmentMod
 
-import typingsSlinky.reactRelay.AnonOnComplete
+import typingsSlinky.reactRelay.anon.OnComplete
 import typingsSlinky.reactRelay.useLoadMoreFunctionMod.LoadMoreFn
 import typingsSlinky.reactRelay.useRefetchableFragmentNodeMod.Options
 import typingsSlinky.reactRelay.useRefetchableFragmentNodeMod.RefetchFnDynamic
@@ -26,8 +26,8 @@ object ReturnType {
     data: TFragmentData,
     hasNext: Boolean,
     hasPrevious: Boolean,
-    loadNext: (/* count */ Double, /* options */ js.UndefOr[AnonOnComplete]) => Disposable,
-    loadPrevious: (/* count */ Double, /* options */ js.UndefOr[AnonOnComplete]) => Disposable,
+    loadNext: (/* count */ Double, /* options */ js.UndefOr[OnComplete]) => Disposable,
+    loadPrevious: (/* count */ Double, /* options */ js.UndefOr[OnComplete]) => Disposable,
     refetch: RefetchFnDynamic[TQuery, TKey, Options]
   ): ReturnType[TQuery, TKey, TFragmentData] = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], hasNext = hasNext.asInstanceOf[js.Any], hasPrevious = hasPrevious.asInstanceOf[js.Any], loadNext = js.Any.fromFunction2(loadNext), loadPrevious = js.Any.fromFunction2(loadPrevious), refetch = refetch.asInstanceOf[js.Any])
@@ -58,13 +58,13 @@ object ReturnType {
         ret
     }
     @scala.inline
-    def withLoadNext(value: (/* count */ Double, /* options */ js.UndefOr[AnonOnComplete]) => Disposable): Self[TQuery, TKey, TFragmentData] = {
+    def withLoadNext(value: (/* count */ Double, /* options */ js.UndefOr[OnComplete]) => Disposable): Self[TQuery, TKey, TFragmentData] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loadNext")(js.Any.fromFunction2(value))
         ret
     }
     @scala.inline
-    def withLoadPrevious(value: (/* count */ Double, /* options */ js.UndefOr[AnonOnComplete]) => Disposable): Self[TQuery, TKey, TFragmentData] = {
+    def withLoadPrevious(value: (/* count */ Double, /* options */ js.UndefOr[OnComplete]) => Disposable): Self[TQuery, TKey, TFragmentData] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loadPrevious")(js.Any.fromFunction2(value))
         ret

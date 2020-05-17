@@ -1,8 +1,8 @@
 package typingsSlinky.amqpConnectionManager.mod
 
-import typingsSlinky.amqpConnectionManager.AnonName
 import typingsSlinky.amqpConnectionManager.amqpConnectionManagerStrings.close
 import typingsSlinky.amqpConnectionManager.amqpConnectionManagerStrings.error
+import typingsSlinky.amqpConnectionManager.anon.Name
 import typingsSlinky.amqplib.propertiesMod.Message
 import typingsSlinky.amqplib.propertiesMod.Options.Publish
 import typingsSlinky.amqplib.propertiesMod.Replies.Empty
@@ -29,7 +29,7 @@ trait ChannelWrapper extends EventEmitter {
     listener: js.Function0[Unit]
   ): this.type = js.native
   @JSName("addListener")
-  def addListener_error(event: error, listener: js.Function2[/* err */ js.Error, /* info */ AnonName, Unit]): this.type = js.native
+  def addListener_error(event: error, listener: js.Function2[/* err */ js.Error, /* info */ Name, Unit]): this.type = js.native
   /**
   	 * Adds a new 'setup handler'. setup(channel, [cb]) is a function to call when a new underlying channel is created -
   	 * handy for asserting exchanges and queues exists, and whatnot. The channel object here is a ConfirmChannel from amqplib.
@@ -62,7 +62,7 @@ trait ChannelWrapper extends EventEmitter {
     listener: js.Function0[Unit]
   ): this.type = js.native
   @JSName("on")
-  def on_error(event: error, listener: js.Function2[/* err */ js.Error, /* info */ AnonName, Unit]): this.type = js.native
+  def on_error(event: error, listener: js.Function2[/* err */ js.Error, /* info */ Name, Unit]): this.type = js.native
   @JSName("once")
   def once_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("once")
@@ -71,7 +71,7 @@ trait ChannelWrapper extends EventEmitter {
     listener: js.Function0[Unit]
   ): this.type = js.native
   @JSName("once")
-  def once_error(event: error, listener: js.Function2[/* err */ js.Error, /* info */ AnonName, Unit]): this.type = js.native
+  def once_error(event: error, listener: js.Function2[/* err */ js.Error, /* info */ Name, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")
@@ -80,7 +80,7 @@ trait ChannelWrapper extends EventEmitter {
     listener: js.Function0[Unit]
   ): this.type = js.native
   @JSName("prependListener")
-  def prependListener_error(event: error, listener: js.Function2[/* err */ js.Error, /* info */ AnonName, Unit]): this.type = js.native
+  def prependListener_error(event: error, listener: js.Function2[/* err */ js.Error, /* info */ Name, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependOnceListener")
@@ -89,7 +89,7 @@ trait ChannelWrapper extends EventEmitter {
     listener: js.Function0[Unit]
   ): this.type = js.native
   @JSName("prependOnceListener")
-  def prependOnceListener_error(event: error, listener: js.Function2[/* err */ js.Error, /* info */ AnonName, Unit]): this.type = js.native
+  def prependOnceListener_error(event: error, listener: js.Function2[/* err */ js.Error, /* info */ Name, Unit]): this.type = js.native
   def publish(exchange: String, routingKey: String, content: js.Object): js.Promise[Unit] = js.native
   def publish(exchange: String, routingKey: String, content: js.Object, options: Publish): js.Promise[Unit] = js.native
   def publish(

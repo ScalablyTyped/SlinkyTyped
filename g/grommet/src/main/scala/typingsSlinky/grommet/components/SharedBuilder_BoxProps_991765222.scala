@@ -2,10 +2,10 @@ package typingsSlinky.grommet.components
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.grommet.AnonDelay
-import typingsSlinky.grommet.AnonGrow
-import typingsSlinky.grommet.AnonHorizontal
-import typingsSlinky.grommet.AnonMax
+import typingsSlinky.grommet.anon.Delay
+import typingsSlinky.grommet.anon.Grow
+import typingsSlinky.grommet.anon.Horizontal
+import typingsSlinky.grommet.anon.Max
 import typingsSlinky.grommet.grommetStrings.`column-reverse`
 import typingsSlinky.grommet.grommetStrings.`row-responsive`
 import typingsSlinky.grommet.grommetStrings.`row-reverse`
@@ -75,8 +75,8 @@ class SharedBuilder_BoxProps_991765222 (val args: js.Array[js.Any])
   def alignSelf(value: AlignSelfType): this.type = set("alignSelf", value.asInstanceOf[js.Any])
   @scala.inline
   def animation(
-    value: fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | AnonDelay | (js.Array[
-      fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | AnonDelay
+    value: fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | Delay | (js.Array[
+      fadeIn | fadeOut | jiggle | pulse | slideUp | slideDown | slideLeft | slideRight | zoomIn | zoomOut | Delay
     ])
   ): this.type = set("animation", value.asInstanceOf[js.Any])
   @scala.inline
@@ -98,7 +98,7 @@ class SharedBuilder_BoxProps_991765222 (val args: js.Array[js.Any])
   @scala.inline
   def fill(value: FillType): this.type = set("fill", value.asInstanceOf[js.Any])
   @scala.inline
-  def flex(value: grow | shrink | Boolean | AnonGrow): this.type = set("flex", value.asInstanceOf[js.Any])
+  def flex(value: grow | shrink | Boolean | Grow): this.type = set("flex", value.asInstanceOf[js.Any])
   @scala.inline
   def focusIndicator(value: Boolean): this.type = set("focusIndicator", value.asInstanceOf[js.Any])
   @scala.inline
@@ -106,7 +106,7 @@ class SharedBuilder_BoxProps_991765222 (val args: js.Array[js.Any])
   @scala.inline
   def gridArea(value: GridAreaType): this.type = set("gridArea", value.asInstanceOf[js.Any])
   @scala.inline
-  def height(value: xxsmall | xsmall | small | medium | large | xlarge | xxlarge | String | AnonMax): this.type = set("height", value.asInstanceOf[js.Any])
+  def height(value: xxsmall | xsmall | small | medium | large | xlarge | xxlarge | String | Max): this.type = set("height", value.asInstanceOf[js.Any])
   @scala.inline
   def hoverIndicator(value: BackgroundType | Boolean): this.type = set("hoverIndicator", value.asInstanceOf[js.Any])
   @scala.inline
@@ -116,7 +116,7 @@ class SharedBuilder_BoxProps_991765222 (val args: js.Array[js.Any])
   @scala.inline
   def onClick(value: /* repeated */ js.Any => _): this.type = set("onClick", js.Any.fromFunction1(value))
   @scala.inline
-  def overflow(value: auto | hidden | scroll | visible | AnonHorizontal | String): this.type = set("overflow", value.asInstanceOf[js.Any])
+  def overflow(value: auto | hidden | scroll | visible | Horizontal | String): this.type = set("overflow", value.asInstanceOf[js.Any])
   @scala.inline
   def pad(value: PadType): this.type = set("pad", value.asInstanceOf[js.Any])
   @scala.inline
@@ -130,7 +130,7 @@ class SharedBuilder_BoxProps_991765222 (val args: js.Array[js.Any])
   @scala.inline
   def tag(value: PolymorphicType): this.type = set("tag", value.asInstanceOf[js.Any])
   @scala.inline
-  def width(value: xxsmall | xsmall | small | medium | large | xlarge | xxlarge | String | AnonMax): this.type = set("width", value.asInstanceOf[js.Any])
+  def width(value: xxsmall | xsmall | small | medium | large | xlarge | xxlarge | String | Max): this.type = set("width", value.asInstanceOf[js.Any])
   @scala.inline
   def wrap(value: Boolean | reverse): this.type = set("wrap", value.asInstanceOf[js.Any])
 }

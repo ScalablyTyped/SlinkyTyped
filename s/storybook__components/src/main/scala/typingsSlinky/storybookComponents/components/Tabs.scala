@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.storybookComponents.AnonOnSelect
+import typingsSlinky.storybookComponents.anon.OnSelect
 import typingsSlinky.storybookComponents.tabsMod.TabsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +22,7 @@ object Tabs {
     @scala.inline
     def absolute(value: Boolean): this.type = set("absolute", value.asInstanceOf[js.Any])
     @scala.inline
-    def actions(value: AnonOnSelect): this.type = set("actions", value.asInstanceOf[js.Any])
+    def actions(value: OnSelect): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def backgroundColor(value: String): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline

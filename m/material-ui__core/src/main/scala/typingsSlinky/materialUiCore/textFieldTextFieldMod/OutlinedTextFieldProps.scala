@@ -1,6 +1,6 @@
 package typingsSlinky.materialUiCore.textFieldTextFieldMod
 
-import typingsSlinky.materialUiCore.PartialOutlinedInputProps
+import typingsSlinky.materialUiCore.anon.PartialOutlinedInputProps
 import typingsSlinky.materialUiCore.inputBaseInputBaseMod.InputBaseComponentProps
 import typingsSlinky.materialUiCore.materialUiCoreStrings.outlined
 import scala.scalajs.js

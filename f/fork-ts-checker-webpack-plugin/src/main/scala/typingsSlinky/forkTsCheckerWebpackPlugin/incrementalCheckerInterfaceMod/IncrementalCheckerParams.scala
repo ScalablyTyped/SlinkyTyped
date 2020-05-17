@@ -1,6 +1,6 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin.incrementalCheckerInterfaceMod
 
-import typingsSlinky.forkTsCheckerWebpackPlugin.Typeofts
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.Typeofts
 import typingsSlinky.forkTsCheckerWebpackPlugin.normalizedMessageMod.NormalizedMessage
 import typingsSlinky.tslint.mod.RuleFailure
 import typingsSlinky.typescript.mod.CompilerOptions

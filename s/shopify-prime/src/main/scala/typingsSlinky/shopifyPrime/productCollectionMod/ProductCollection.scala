@@ -1,6 +1,6 @@
 package typingsSlinky.shopifyPrime.productCollectionMod
 
-import typingsSlinky.shopifyPrime.AnonAttachment
+import typingsSlinky.shopifyPrime.anon.Attachment
 import typingsSlinky.shopifyPrime.baseMod.ShopifyObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +22,7 @@ trait ProductCollection extends ShopifyObject {
     * - attachment: An image attached to a shop's theme returned as Base64-encoded binary data.
     * - src: Source URL that specifies the location of the image.
     */
-  var image: js.UndefOr[AnonAttachment] = js.native
+  var image: js.UndefOr[Attachment] = js.native
   /**
     * This can have two different types of values, depending on whether the collection has been published (i.e., made visible to customers):
     * - If the collection is published, this value is the date and time when it was published. The API returns this value in ISO 8601 format.
@@ -98,7 +98,7 @@ object ProductCollection {
         ret
     }
     @scala.inline
-    def withImage(value: AnonAttachment): Self = {
+    def withImage(value: Attachment): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
         ret

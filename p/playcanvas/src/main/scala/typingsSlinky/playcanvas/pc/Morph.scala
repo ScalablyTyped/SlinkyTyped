@@ -10,10 +10,8 @@ import scala.scalajs.js.annotation._
   * @classdesc Contains a list of pc.MorphTarget, a combined AABB and some associated data.
   * @param {pc.MorphTarget[]} targets - A list of morph targets.
   */
-@JSGlobal("pc.Morph")
 @js.native
-class Morph protected () extends js.Object {
-  def this(targets: js.Array[MorphTarget]) = this()
+trait Morph extends js.Object {
   /**
     * @function
     * @name pc.Morph#addTarget
@@ -36,5 +34,43 @@ class Morph protected () extends js.Object {
     * @param {pc.MorphTarget} target - A morph target to delete.
     */
   def removeTarget(target: MorphTarget): Unit = js.native
+}
+
+object Morph {
+  @scala.inline
+  def apply(
+    addTarget: MorphTarget => Unit,
+    getTarget: Double => MorphTarget,
+    removeTarget: MorphTarget => Unit
+  ): Morph = {
+    val __obj = js.Dynamic.literal(addTarget = js.Any.fromFunction1(addTarget), getTarget = js.Any.fromFunction1(getTarget), removeTarget = js.Any.fromFunction1(removeTarget))
+    __obj.asInstanceOf[Morph]
+  }
+  @scala.inline
+  implicit class MorphOps[Self <: Morph] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddTarget(value: MorphTarget => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addTarget")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetTarget(value: Double => MorphTarget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTarget")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveTarget(value: MorphTarget => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeTarget")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

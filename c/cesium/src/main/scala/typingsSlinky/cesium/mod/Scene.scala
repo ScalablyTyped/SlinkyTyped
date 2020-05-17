@@ -1,7 +1,7 @@
 package typingsSlinky.cesium.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.cesium.AnonContextOptions
+import typingsSlinky.cesium.anon.ContextOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "Scene")
 @js.native
 class Scene () extends js.Object {
-  def this(options: AnonContextOptions) = this()
+  def this(options: ContextOptions) = this()
   var backgroundColor: Color = js.native
   val camera: Camera = js.native
   val canvas: Element = js.native

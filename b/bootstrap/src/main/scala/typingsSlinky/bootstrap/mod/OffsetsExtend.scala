@@ -1,6 +1,6 @@
 package typingsSlinky.bootstrap.mod
 
-import typingsSlinky.bootstrap.PartialOffset
+import typingsSlinky.bootstrap.anon.PartialOffset
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

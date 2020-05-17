@@ -1,0 +1,103 @@
+package typingsSlinky.instagramPrivateApi.commonTypesMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_timeline
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.newsfeed
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.profile
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.media_view_profile
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.video_view_profile
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.photo_view_profile
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.followers
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.following
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_followers
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_following
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.comment_likers
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.comment_owner
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_contextual_post
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_contextual_hashtag
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_contextual_location
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_contextual_newsfeed_multi_media_liked
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.likers_likers_media_view_profile
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.likers_likers_photo_view_profile
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.likers_likers_video_view_profile
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_likers_self_likers_media_view_profile
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_likers_self_likers_photo_view_profile
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_likers_self_likers_video_view_profile
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story_camera_music_overlay_post_capture
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story_camera_music_overlay_pre_capture
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story_viewer_profile
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story_viewer_default
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.find_friends_contacts
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.explore_people
+  - typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.igtv_feed_timeline
+  - java.lang.String
+*/
+trait IgAppModule extends js.Object
+
+object IgAppModule {
+  @scala.inline
+  def feed_timeline: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_timeline = "feed_timeline".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_timeline]
+  @scala.inline
+  def newsfeed: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.newsfeed = "newsfeed".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.newsfeed]
+  @scala.inline
+  def profile: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.profile = "profile".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.profile]
+  @scala.inline
+  def media_view_profile: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.media_view_profile = "media_view_profile".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.media_view_profile]
+  @scala.inline
+  def video_view_profile: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.video_view_profile = "video_view_profile".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.video_view_profile]
+  @scala.inline
+  def photo_view_profile: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.photo_view_profile = "photo_view_profile".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.photo_view_profile]
+  @scala.inline
+  def followers: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.followers = "followers".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.followers]
+  @scala.inline
+  def following: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.following = "following".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.following]
+  @scala.inline
+  def self_followers: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_followers = "self_followers".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_followers]
+  @scala.inline
+  def self_following: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_following = "self_following".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_following]
+  @scala.inline
+  def comment_likers: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.comment_likers = "comment_likers".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.comment_likers]
+  @scala.inline
+  def comment_owner: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.comment_owner = "comment_owner".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.comment_owner]
+  @scala.inline
+  def feed_contextual_post: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_contextual_post = "feed_contextual_post".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_contextual_post]
+  @scala.inline
+  def feed_contextual_hashtag: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_contextual_hashtag = "feed_contextual_hashtag".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_contextual_hashtag]
+  @scala.inline
+  def feed_contextual_location: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_contextual_location = "feed_contextual_location".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_contextual_location]
+  @scala.inline
+  def feed_contextual_newsfeed_multi_media_liked: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_contextual_newsfeed_multi_media_liked = "feed_contextual_newsfeed_multi_media_liked".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.feed_contextual_newsfeed_multi_media_liked]
+  @scala.inline
+  def likers_likers_media_view_profile: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.likers_likers_media_view_profile = "likers_likers_media_view_profile".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.likers_likers_media_view_profile]
+  @scala.inline
+  def likers_likers_photo_view_profile: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.likers_likers_photo_view_profile = "likers_likers_photo_view_profile".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.likers_likers_photo_view_profile]
+  @scala.inline
+  def likers_likers_video_view_profile: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.likers_likers_video_view_profile = "likers_likers_video_view_profile".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.likers_likers_video_view_profile]
+  @scala.inline
+  def self_likers_self_likers_media_view_profile: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_likers_self_likers_media_view_profile = "self_likers_self_likers_media_view_profile".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_likers_self_likers_media_view_profile]
+  @scala.inline
+  def self_likers_self_likers_photo_view_profile: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_likers_self_likers_photo_view_profile = "self_likers_self_likers_photo_view_profile".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_likers_self_likers_photo_view_profile]
+  @scala.inline
+  def self_likers_self_likers_video_view_profile: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_likers_self_likers_video_view_profile = "self_likers_self_likers_video_view_profile".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.self_likers_self_likers_video_view_profile]
+  @scala.inline
+  def story_camera_music_overlay_post_capture: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story_camera_music_overlay_post_capture = "story_camera_music_overlay_post_capture".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story_camera_music_overlay_post_capture]
+  @scala.inline
+  def story_camera_music_overlay_pre_capture: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story_camera_music_overlay_pre_capture = "story_camera_music_overlay_pre_capture".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story_camera_music_overlay_pre_capture]
+  @scala.inline
+  def story_viewer_profile: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story_viewer_profile = "story_viewer_profile".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story_viewer_profile]
+  @scala.inline
+  def story_viewer_default: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story_viewer_default = "story_viewer_default".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.story_viewer_default]
+  @scala.inline
+  def find_friends_contacts: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.find_friends_contacts = "find_friends_contacts".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.find_friends_contacts]
+  @scala.inline
+  def explore_people: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.explore_people = "explore_people".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.explore_people]
+  @scala.inline
+  def igtv_feed_timeline: typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.igtv_feed_timeline = "igtv_feed_timeline".asInstanceOf[typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.igtv_feed_timeline]
+  @scala.inline
+  implicit def apply(value: String): IgAppModule = value.asInstanceOf[IgAppModule]
+}
+

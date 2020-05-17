@@ -1,7 +1,7 @@
 package typingsSlinky.firefoxWebextBrowser.browser.experiments
 
-import typingsSlinky.firefoxWebextBrowser.AnonEvents
-import typingsSlinky.firefoxWebextBrowser.AnonPaths
+import typingsSlinky.firefoxWebextBrowser.anon.Events
+import typingsSlinky.firefoxWebextBrowser.anon.Paths
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
 /* experiments types */
 @js.native
 trait ExperimentAPI extends js.Object {
-  var child: js.UndefOr[AnonPaths] = js.native
-  var parent: js.UndefOr[AnonEvents] = js.native
+  var child: js.UndefOr[Paths] = js.native
+  var parent: js.UndefOr[Events] = js.native
   var schema: ExperimentURL = js.native
 }
 
@@ -33,7 +33,7 @@ object ExperimentAPI {
         ret
     }
     @scala.inline
-    def withChild(value: AnonPaths): Self = {
+    def withChild(value: Paths): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("child")(value.asInstanceOf[js.Any])
         ret
@@ -45,7 +45,7 @@ object ExperimentAPI {
         ret
     }
     @scala.inline
-    def withParent(value: AnonEvents): Self = {
+    def withParent(value: Events): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
         ret

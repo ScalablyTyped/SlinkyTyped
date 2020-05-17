@@ -1,6 +1,6 @@
 package typingsSlinky.stellarSdk.horizonApiMod.Horizon
 
-import typingsSlinky.stellarSdk.AnonOperations
+import typingsSlinky.stellarSdk.anon.Operations
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TransactionFailedExtras extends js.Object {
   var envelope_xdr: String = js.native
-  var result_codes: AnonOperations = js.native
+  var result_codes: Operations = js.native
   var result_xdr: String = js.native
 }
 
 object TransactionFailedExtras {
   @scala.inline
-  def apply(envelope_xdr: String, result_codes: AnonOperations, result_xdr: String): TransactionFailedExtras = {
+  def apply(envelope_xdr: String, result_codes: Operations, result_xdr: String): TransactionFailedExtras = {
     val __obj = js.Dynamic.literal(envelope_xdr = envelope_xdr.asInstanceOf[js.Any], result_codes = result_codes.asInstanceOf[js.Any], result_xdr = result_xdr.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransactionFailedExtras]
   }
@@ -31,7 +31,7 @@ object TransactionFailedExtras {
         ret
     }
     @scala.inline
-    def withResult_codes(value: AnonOperations): Self = {
+    def withResult_codes(value: Operations): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("result_codes")(value.asInstanceOf[js.Any])
         ret

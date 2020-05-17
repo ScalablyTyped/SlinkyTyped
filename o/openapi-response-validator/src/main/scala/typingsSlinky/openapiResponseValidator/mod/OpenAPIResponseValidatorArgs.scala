@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.ajv.mod.ErrorObject
 import typingsSlinky.ajv.mod.FormatDefinition
 import typingsSlinky.ajv.mod.FormatValidator
-import typingsSlinky.openapiResponseValidator.AnonSchema
+import typingsSlinky.openapiResponseValidator.anon.Schema
 import typingsSlinky.openapiTypes.mod.IJsonSchema
 import typingsSlinky.openapiTypes.mod.OpenAPIV3.ComponentsObject
 import scala.scalajs.js
@@ -25,7 +25,7 @@ trait OpenAPIResponseValidatorArgs extends js.Object {
   ] = js.native
   var externalSchemas: StringDictionary[IJsonSchema] = js.native
   var loggingKey: String = js.native
-  var responses: StringDictionary[AnonSchema] = js.native
+  var responses: StringDictionary[Schema] = js.native
 }
 
 object OpenAPIResponseValidatorArgs {
@@ -35,7 +35,7 @@ object OpenAPIResponseValidatorArgs {
     definitions: StringDictionary[IJsonSchema],
     externalSchemas: StringDictionary[IJsonSchema],
     loggingKey: String,
-    responses: StringDictionary[AnonSchema]
+    responses: StringDictionary[Schema]
   ): OpenAPIResponseValidatorArgs = {
     val __obj = js.Dynamic.literal(customFormats = customFormats.asInstanceOf[js.Any], definitions = definitions.asInstanceOf[js.Any], externalSchemas = externalSchemas.asInstanceOf[js.Any], loggingKey = loggingKey.asInstanceOf[js.Any], responses = responses.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenAPIResponseValidatorArgs]
@@ -71,7 +71,7 @@ object OpenAPIResponseValidatorArgs {
         ret
     }
     @scala.inline
-    def withResponses(value: StringDictionary[AnonSchema]): Self = {
+    def withResponses(value: StringDictionary[Schema]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("responses")(value.asInstanceOf[js.Any])
         ret

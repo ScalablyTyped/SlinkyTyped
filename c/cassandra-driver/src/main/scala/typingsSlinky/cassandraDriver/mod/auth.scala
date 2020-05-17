@@ -1,6 +1,6 @@
 package typingsSlinky.cassandraDriver.mod
 
-import typingsSlinky.cassandraDriver.AnonAuthorizationId
+import typingsSlinky.cassandraDriver.anon.AuthorizationId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ object auth extends js.Object {
   @js.native
   class DseGssapiAuthProvider ()
     extends typingsSlinky.cassandraDriver.authMod.auth.DseGssapiAuthProvider {
-    def this(gssOptions: AnonAuthorizationId) = this()
+    def this(gssOptions: AuthorizationId) = this()
   }
   
   @js.native

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DaysOfWeekModifier extends _Modifier {
+trait DaysOfWeekModifier extends Modifier {
   var daysOfWeek: js.Array[Double] = js.native
 }
 

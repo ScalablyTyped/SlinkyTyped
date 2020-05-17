@@ -1,7 +1,8 @@
 package typingsSlinky.reactInputCalendar.reactInputCalendar
 
+import org.scalajs.dom.raw.Event
+import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -64,7 +65,7 @@ trait ReactInputCalendarProps extends js.Object {
     */
   var onBlur: js.UndefOr[
     js.Function2[
-      /* event */ SyntheticEvent[Event_, ReactInputCalendar], 
+      /* event */ SyntheticEvent[Event, ReactComponentClass[ReactInputCalendarProps]], 
       /* computableDate */ String, 
       Unit
     ]
@@ -76,7 +77,12 @@ trait ReactInputCalendarProps extends js.Object {
   /**
     * Set a function that will be triggered when the input field is focused.
     */
-  var onFocus: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, ReactInputCalendar], Unit]] = js.native
+  var onFocus: js.UndefOr[
+    js.Function1[
+      /* event */ SyntheticEvent[Event, ReactComponentClass[ReactInputCalendarProps]], 
+      Unit
+    ]
+  ] = js.native
   /**
     * Setting this value to true makes the calendar widget open when the iput field is focused.
     */
@@ -239,7 +245,7 @@ object ReactInputCalendarProps {
     }
     @scala.inline
     def withOnBlur(
-      value: (/* event */ SyntheticEvent[Event_, ReactInputCalendar], /* computableDate */ String) => Unit
+      value: (/* event */ SyntheticEvent[Event, ReactComponentClass[ReactInputCalendarProps]], /* computableDate */ String) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction2(value))
@@ -264,7 +270,7 @@ object ReactInputCalendarProps {
         ret
     }
     @scala.inline
-    def withOnFocus(value: /* event */ SyntheticEvent[Event_, ReactInputCalendar] => Unit): Self = {
+    def withOnFocus(value: /* event */ SyntheticEvent[Event, ReactComponentClass[ReactInputCalendarProps]] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
         ret

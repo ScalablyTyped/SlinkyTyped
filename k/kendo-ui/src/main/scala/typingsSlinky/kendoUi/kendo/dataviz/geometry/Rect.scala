@@ -1,20 +1,12 @@
 package typingsSlinky.kendoUi.kendo.dataviz.geometry
 
-import typingsSlinky.kendoUi.kendo.Observable_
+import typingsSlinky.kendoUi.kendo.Observable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.dataviz.geometry.Rect")
 @js.native
-class Rect protected () extends Observable_ {
-  def this(origin: js.Any, size: js.Any) = this()
-  def this(origin: js.Any, size: typingsSlinky.kendoUi.kendo.geometry.Size) = this()
-  def this(origin: typingsSlinky.kendoUi.kendo.geometry.Point, size: js.Any) = this()
-  def this(
-    origin: typingsSlinky.kendoUi.kendo.geometry.Point,
-    size: typingsSlinky.kendoUi.kendo.geometry.Size
-  ) = this()
+trait Rect extends Observable {
   var options: RectOptions = js.native
   var origin: typingsSlinky.kendoUi.kendo.geometry.Point = js.native
   var size: typingsSlinky.kendoUi.kendo.geometry.Size = js.native
@@ -33,16 +25,5 @@ class Rect protected () extends Observable_ {
   def topLeft(): typingsSlinky.kendoUi.kendo.geometry.Point = js.native
   def topRight(): typingsSlinky.kendoUi.kendo.geometry.Point = js.native
   def width(): Double = js.native
-}
-
-/* static members */
-@JSGlobal("kendo.dataviz.geometry.Rect")
-@js.native
-object Rect extends js.Object {
-  def fromPoints(
-    pointA: typingsSlinky.kendoUi.kendo.geometry.Point,
-    pointB: typingsSlinky.kendoUi.kendo.geometry.Point
-  ): typingsSlinky.kendoUi.kendo.geometry.Rect = js.native
-  def union(rectA: typingsSlinky.kendoUi.kendo.geometry.Rect, rectB: typingsSlinky.kendoUi.kendo.geometry.Rect): typingsSlinky.kendoUi.kendo.geometry.Rect = js.native
 }
 

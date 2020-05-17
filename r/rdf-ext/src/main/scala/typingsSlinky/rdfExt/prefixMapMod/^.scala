@@ -8,7 +8,9 @@ import scala.scalajs.js.annotation._
 
 @JSImport("rdf-ext/lib/PrefixMap", JSImport.Namespace)
 @js.native
-class ^ protected () extends PrefixMap {
+class ^ protected ()
+  extends PrefixMap
+     with typingsSlinky.rdfExt.dataFactoryMod.Prefixes {
   def this(factory: DataFactory[Quad, Quad], prefixes: Prefixes) = this()
 }
 

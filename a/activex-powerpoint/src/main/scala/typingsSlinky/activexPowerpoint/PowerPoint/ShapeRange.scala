@@ -19,9 +19,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("PowerPoint.ShapeRange")
 @js.native
-class ShapeRange protected () extends js.Object {
+trait ShapeRange extends js.Object {
   val ActionSettings: typingsSlinky.activexPowerpoint.PowerPoint.ActionSettings = js.native
   val Adjustments: typingsSlinky.activexPowerpoint.PowerPoint.Adjustments = js.native
   var AlternativeText: String = js.native

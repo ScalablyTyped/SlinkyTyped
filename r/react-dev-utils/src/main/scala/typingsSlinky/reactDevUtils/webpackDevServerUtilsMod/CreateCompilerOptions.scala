@@ -1,6 +1,6 @@
 package typingsSlinky.reactDevUtils.webpackDevServerUtilsMod
 
-import typingsSlinky.reactDevUtils.AnonCall
+import typingsSlinky.reactDevUtils.anon.Call
 import typingsSlinky.webpack.mod.Compiler_
 import typingsSlinky.webpack.mod.Compiler_.Handler
 import typingsSlinky.webpack.mod.Compiler_.Watching
@@ -35,7 +35,7 @@ trait CreateCompilerOptions extends js.Object {
     * Takes the `require('webpack')` entry point.
     */
   @JSName("webpack")
-  var webpack_Original: AnonCall = js.native
+  var webpack_Original: Call = js.native
   /**
     * Takes the `require('webpack')` entry point.
     */

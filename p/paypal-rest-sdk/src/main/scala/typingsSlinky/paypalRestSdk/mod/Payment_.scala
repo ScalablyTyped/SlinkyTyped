@@ -1,7 +1,7 @@
 package typingsSlinky.paypalRestSdk.mod
 
-import typingsSlinky.paypalRestSdk.AnonCancelurl
-import typingsSlinky.paypalRestSdk.AnonPaymentmethod
+import typingsSlinky.paypalRestSdk.anon.Cancelurl
+import typingsSlinky.paypalRestSdk.anon.Paymentmethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,8 +15,8 @@ trait Payment_ extends js.Object {
   var intent: String = js.native
   val links: js.UndefOr[js.Array[Link]] = js.native
   var note_to_payer: js.UndefOr[String] = js.native
-  var payer: AnonPaymentmethod = js.native
-  var redirect_urls: js.UndefOr[AnonCancelurl] = js.native
+  var payer: Paymentmethod = js.native
+  var redirect_urls: js.UndefOr[Cancelurl] = js.native
   val state: js.UndefOr[String] = js.native
   var transactions: js.Array[Transaction] = js.native
   val update_time: js.UndefOr[String] = js.native
@@ -24,7 +24,7 @@ trait Payment_ extends js.Object {
 
 object Payment_ {
   @scala.inline
-  def apply(intent: String, payer: AnonPaymentmethod, transactions: js.Array[Transaction]): Payment_ = {
+  def apply(intent: String, payer: Paymentmethod, transactions: js.Array[Transaction]): Payment_ = {
     val __obj = js.Dynamic.literal(intent = intent.asInstanceOf[js.Any], payer = payer.asInstanceOf[js.Any], transactions = transactions.asInstanceOf[js.Any])
     __obj.asInstanceOf[Payment_]
   }
@@ -41,7 +41,7 @@ object Payment_ {
         ret
     }
     @scala.inline
-    def withPayer(value: AnonPaymentmethod): Self = {
+    def withPayer(value: Paymentmethod): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("payer")(value.asInstanceOf[js.Any])
         ret
@@ -125,7 +125,7 @@ object Payment_ {
         ret
     }
     @scala.inline
-    def withRedirect_urls(value: AnonCancelurl): Self = {
+    def withRedirect_urls(value: Cancelurl): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("redirect_urls")(value.asInstanceOf[js.Any])
         ret

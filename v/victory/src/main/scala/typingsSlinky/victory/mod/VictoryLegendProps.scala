@@ -1,9 +1,9 @@
 package typingsSlinky.victory.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.victory.AnonLeft
-import typingsSlinky.victory.AnonName
-import typingsSlinky.victory.OmitBlockPropsleftright
+import typingsSlinky.victory.anon.Left
+import typingsSlinky.victory.anon.Name
+import typingsSlinky.victory.anon.OmitBlockPropsleftright
 import typingsSlinky.victory.victoryStrings.data
 import typingsSlinky.victory.victoryStrings.horizontal
 import typingsSlinky.victory.victoryStrings.labels
@@ -61,7 +61,7 @@ trait VictoryLegendProps
     * The data prop must be given as an array.
     */
   @JSName("data")
-  var data_VictoryLegendProps: js.UndefOr[js.Array[AnonName]] = js.native
+  var data_VictoryLegendProps: js.UndefOr[js.Array[Name]] = js.native
   /**
     * VictoryLegend uses the standard eventKey prop to specify how event targets
     * are addressed. This prop is not commonly used.
@@ -83,7 +83,7 @@ trait VictoryLegendProps
     * gutters are between columns. When orientation is vertical, gutters
     * are the space between rows.
     */
-  var gutter: js.UndefOr[Double | AnonLeft] = js.native
+  var gutter: js.UndefOr[Double | Left] = js.native
   /**
     * The itemsPerRow prop determines how many items to render in each row
     * of a horizontal legend, or in each column of a vertical legend. This
@@ -214,7 +214,7 @@ object VictoryLegendProps {
         ret
     }
     @scala.inline
-    def withData(value: js.Array[AnonName]): Self = {
+    def withData(value: js.Array[Name]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret
@@ -268,7 +268,7 @@ object VictoryLegendProps {
         ret
     }
     @scala.inline
-    def withGutter(value: Double | AnonLeft): Self = {
+    def withGutter(value: Double | Left): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gutter")(value.asInstanceOf[js.Any])
         ret

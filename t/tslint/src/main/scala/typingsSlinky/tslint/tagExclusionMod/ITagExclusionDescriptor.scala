@@ -1,6 +1,6 @@
 package typingsSlinky.tslint.tagExclusionMod
 
-import typingsSlinky.tslint.AnonContent
+import typingsSlinky.tslint.anon.Content
 import typingsSlinky.tslint.exclusionDescriptorsMod.ExclusionDescriptor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ITagExclusionDescriptor extends ExclusionDescriptor {
-  var tags: js.UndefOr[AnonContent] = js.native
+  var tags: js.UndefOr[Content] = js.native
 }
 
 object ITagExclusionDescriptor {
@@ -24,7 +24,7 @@ object ITagExclusionDescriptor {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTags(value: AnonContent): Self = {
+    def withTags(value: Content): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
         ret

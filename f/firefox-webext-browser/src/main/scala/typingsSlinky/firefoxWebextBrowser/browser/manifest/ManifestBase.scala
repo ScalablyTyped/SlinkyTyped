@@ -1,7 +1,7 @@
 package typingsSlinky.firefoxWebextBrowser.browser.manifest
 
-import typingsSlinky.firefoxWebextBrowser.AnonEdge
-import typingsSlinky.firefoxWebextBrowser.AnonGecko
+import typingsSlinky.firefoxWebextBrowser.anon.Edge
+import typingsSlinky.firefoxWebextBrowser.anon.Gecko
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation._
 /** Common properties for all manifest.json files */
 @js.native
 trait ManifestBase extends js.Object {
-  var applications: js.UndefOr[AnonGecko] = js.native
+  var applications: js.UndefOr[Gecko] = js.native
   var author: js.UndefOr[String] = js.native
-  var browser_specific_settings: js.UndefOr[AnonEdge] = js.native
+  var browser_specific_settings: js.UndefOr[Edge] = js.native
   var description: js.UndefOr[String] = js.native
   var homepage_url: js.UndefOr[String] = js.native
   var manifest_version: Double = js.native
@@ -51,7 +51,7 @@ object ManifestBase {
         ret
     }
     @scala.inline
-    def withApplications(value: AnonGecko): Self = {
+    def withApplications(value: Gecko): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("applications")(value.asInstanceOf[js.Any])
         ret
@@ -75,7 +75,7 @@ object ManifestBase {
         ret
     }
     @scala.inline
-    def withBrowser_specific_settings(value: AnonEdge): Self = {
+    def withBrowser_specific_settings(value: Edge): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("browser_specific_settings")(value.asInstanceOf[js.Any])
         ret

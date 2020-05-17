@@ -1,13 +1,13 @@
 package typingsSlinky.pulumiAws.lambdaMixinsMod
 
-import typingsSlinky.pulumiAws.AnonCodePathOptions
+import typingsSlinky.pulumiAws.anon.CodePathOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped {[ P in @pulumi/aws.@pulumi/aws/utils.Diff<keyof @pulumi/aws.@pulumi/aws/lambda/function.FunctionArgs, keyof @pulumi/aws.AnonCodePathOptions> ]: @pulumi/aws.@pulumi/aws/lambda/function.FunctionArgs[P]} */ @js.native
-trait CallbackFunctionArgs[E, R] extends AnonCodePathOptions {
+- Dropped {[ P in @pulumi/aws.@pulumi/aws/utils.Diff<keyof @pulumi/aws.@pulumi/aws/lambda/function.FunctionArgs, keyof @pulumi/aws.anon.CodePathOptions> ]: @pulumi/aws.@pulumi/aws/lambda/function.FunctionArgs[P]} */ @js.native
+trait CallbackFunctionArgs[E, R] extends CodePathOptions {
   /**
     * The Javascript callback to use as the entrypoint for the AWS Lambda out of.  Either
     * [callback] or [callbackFactory] must be provided.

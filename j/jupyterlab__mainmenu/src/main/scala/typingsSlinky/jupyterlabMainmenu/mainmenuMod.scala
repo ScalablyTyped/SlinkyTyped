@@ -1,5 +1,6 @@
 package typingsSlinky.jupyterlabMainmenu
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.jupyterlabMainmenu.editMod.EditMenu
 import typingsSlinky.jupyterlabMainmenu.fileMod.FileMenu
 import typingsSlinky.jupyterlabMainmenu.helpMod.HelpMenu
@@ -19,7 +20,6 @@ import typingsSlinky.phosphorWidgets.widgetMod.Widget
 import typingsSlinky.phosphorWidgets.widgetMod.Widget.ChildMessage
 import typingsSlinky.phosphorWidgets.widgetMod.Widget.Flag
 import typingsSlinky.phosphorWidgets.widgetMod.Widget.ResizeMessage
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -178,7 +178,7 @@ object mainmenuMod extends js.Object {
       * should not be called directly by user code.
       */
     /* InferMemberOverrides */
-    override def handleEvent(event: Event_): Unit = js.native
+    override def handleEvent(event: Event): Unit = js.native
     /**
       * Test whether the widget's DOM node has the given class name.
       *

@@ -2,7 +2,7 @@ package typingsSlinky.reactShare.mod
 
 import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
-import typingsSlinky.reactShare.CommonShareButtonPropsmed
+import typingsSlinky.reactShare.anon.CommonShareButtonPropsmed
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

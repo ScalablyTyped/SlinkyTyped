@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,9 +49,4 @@ trait SVGFEOffsetElement
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
-
-@JSGlobal("SVGFEOffsetElement")
-@js.native
-object SVGFEOffsetElement
-  extends Instantiable0[org.scalajs.dom.raw.SVGFEOffsetElement]
 

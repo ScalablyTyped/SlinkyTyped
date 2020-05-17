@@ -1,7 +1,7 @@
 package typingsSlinky.mongodb.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.mongodb.AnonCaseSensitive
+import typingsSlinky.mongodb.anon.CaseSensitive
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ trait RootQuerySelector[T]
   var $or: js.UndefOr[js.Array[FilterQuery[T]]] = js.native
   /** https://docs.mongodb.com/manual/reference/operator/query/text */
   @JSName("$text")
-  var $text: js.UndefOr[AnonCaseSensitive] = js.native
+  var $text: js.UndefOr[CaseSensitive] = js.native
   /** https://docs.mongodb.com/manual/reference/operator/query/where/#op._S_where */
   @JSName("$where")
   var $where: js.UndefOr[String | js.Function] = js.native
@@ -92,7 +92,7 @@ object RootQuerySelector {
         ret
     }
     @scala.inline
-    def with$text(value: AnonCaseSensitive): Self[T] = {
+    def with$text(value: CaseSensitive): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("$text")(value.asInstanceOf[js.Any])
         ret

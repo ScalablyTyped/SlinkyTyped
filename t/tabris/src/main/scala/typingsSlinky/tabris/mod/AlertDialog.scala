@@ -1,8 +1,8 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.Anon1
-import typingsSlinky.tabris.AnonCancel
-import typingsSlinky.tabris.OmitAlertDialogset
+import typingsSlinky.tabris.anon.Cancel
+import typingsSlinky.tabris.anon.OmitAlertDialogset
+import typingsSlinky.tabris.anon.`0`
 import typingsSlinky.tabris.tabrisStrings.buttons
 import typingsSlinky.tabris.tabrisStrings.message
 import typingsSlinky.tabris.tabrisStrings.set
@@ -20,12 +20,12 @@ class AlertDialog () extends Popup {
     * `neutral`. If no text is given for a button it will not be displayed. Example: `{ok: 'Yes', cancel:
     * 'No'}` shows 'Yes' and 'No', but no 'neutral' button.
     */
-  var buttons: AnonCancel = js.native
+  var buttons: Cancel = js.native
   /**
     * @constant
     */
   @JSName("jsxAttributes")
-  val jsxAttributes_AlertDialog: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with Anon1 = js.native
+  val jsxAttributes_AlertDialog: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with `0` = js.native
   /**
     * The message to display inside the dialog.
     */

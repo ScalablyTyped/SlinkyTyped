@@ -1,24 +1,24 @@
 package typingsSlinky.rcFieldForm.interfaceMod
 
-import typingsSlinky.rcFieldForm.AnonArray
-import typingsSlinky.rcFieldForm.AnonFormat
-import typingsSlinky.rcFieldForm.AnonLen
-import typingsSlinky.rcFieldForm.AnonMismatch
+import typingsSlinky.rcFieldForm.anon.Array
+import typingsSlinky.rcFieldForm.anon.Format
+import typingsSlinky.rcFieldForm.anon.Len
+import typingsSlinky.rcFieldForm.anon.Mismatch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ValidateMessages extends js.Object {
-  var array: js.UndefOr[AnonLen] = js.native
-  var date: js.UndefOr[AnonFormat] = js.native
+  var array: js.UndefOr[Len] = js.native
+  var date: js.UndefOr[Format] = js.native
   var default: js.UndefOr[ValidateMessage] = js.native
   var enum: js.UndefOr[ValidateMessage] = js.native
-  var number: js.UndefOr[AnonLen] = js.native
-  var pattern: js.UndefOr[AnonMismatch] = js.native
+  var number: js.UndefOr[Len] = js.native
+  var pattern: js.UndefOr[Mismatch] = js.native
   var required: js.UndefOr[ValidateMessage] = js.native
-  var string: js.UndefOr[AnonLen] = js.native
-  var types: js.UndefOr[AnonArray] = js.native
+  var string: js.UndefOr[Len] = js.native
+  var types: js.UndefOr[Array] = js.native
   var whitespace: js.UndefOr[ValidateMessage] = js.native
 }
 
@@ -35,7 +35,7 @@ object ValidateMessages {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withArray(value: AnonLen): Self = {
+    def withArray(value: Len): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("array")(value.asInstanceOf[js.Any])
         ret
@@ -47,7 +47,7 @@ object ValidateMessages {
         ret
     }
     @scala.inline
-    def withDate(value: AnonFormat): Self = {
+    def withDate(value: Format): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
         ret
@@ -95,7 +95,7 @@ object ValidateMessages {
         ret
     }
     @scala.inline
-    def withNumber(value: AnonLen): Self = {
+    def withNumber(value: Len): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
         ret
@@ -107,7 +107,7 @@ object ValidateMessages {
         ret
     }
     @scala.inline
-    def withPattern(value: AnonMismatch): Self = {
+    def withPattern(value: Mismatch): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pattern")(value.asInstanceOf[js.Any])
         ret
@@ -137,7 +137,7 @@ object ValidateMessages {
         ret
     }
     @scala.inline
-    def withString(value: AnonLen): Self = {
+    def withString(value: Len): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("string")(value.asInstanceOf[js.Any])
         ret
@@ -149,7 +149,7 @@ object ValidateMessages {
         ret
     }
     @scala.inline
-    def withTypes(value: AnonArray): Self = {
+    def withTypes(value: Array): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
         ret

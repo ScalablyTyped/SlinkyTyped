@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientAnalytics.gapi.client.analytics
 
-import typingsSlinky.gapiClientAnalytics.AnonHref
-import typingsSlinky.gapiClientAnalytics.AnonName
+import typingsSlinky.gapiClientAnalytics.anon.Href
+import typingsSlinky.gapiClientAnalytics.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,7 +52,7 @@ trait Experiment extends js.Object {
     */
   var optimizationType: js.UndefOr[String] = js.native
   /** Parent link for an experiment. Points to the view (profile) to which this experiment belongs. */
-  var parentLink: js.UndefOr[AnonHref] = js.native
+  var parentLink: js.UndefOr[Href] = js.native
   /** View (Profile) ID to which this experiment belongs. This field is read-only. */
   var profileId: js.UndefOr[String] = js.native
   /**
@@ -100,7 +100,7 @@ trait Experiment extends js.Object {
     * Array of variations. The first variation in the array is the original. The number of variations may not change once an experiment is in the RUNNING
     * state. At least two variations are required before status can be set to RUNNING.
     */
-  var variations: js.UndefOr[js.Array[AnonName]] = js.native
+  var variations: js.UndefOr[js.Array[Name]] = js.native
   /** Web property ID to which this experiment belongs. The web property ID is of the form UA-XXXXX-YY. This field is read-only. */
   var webPropertyId: js.UndefOr[String] = js.native
   /**
@@ -281,7 +281,7 @@ object Experiment {
         ret
     }
     @scala.inline
-    def withParentLink(value: AnonHref): Self = {
+    def withParentLink(value: Href): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parentLink")(value.asInstanceOf[js.Any])
         ret
@@ -413,7 +413,7 @@ object Experiment {
         ret
     }
     @scala.inline
-    def withVariations(value: js.Array[AnonName]): Self = {
+    def withVariations(value: js.Array[Name]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("variations")(value.asInstanceOf[js.Any])
         ret

@@ -1,28 +1,13 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Events that occurs in relation to ICE candidates with the target, usually an RTCPeerConnection. Only one event is of this type: icecandidate. */
 @js.native
-trait RTCPeerConnectionIceEvent extends Event_ {
+trait RTCPeerConnectionIceEvent extends Event {
   val candidate: org.scalajs.dom.experimental.webrtc.RTCIceCandidate | Null = js.native
   val url: java.lang.String | Null = js.native
 }
-
-@JSGlobal("RTCPeerConnectionIceEvent")
-@js.native
-object RTCPeerConnectionIceEvent
-  extends Instantiable1[
-      /* type */ java.lang.String, 
-      org.scalajs.dom.experimental.webrtc.RTCPeerConnectionIceEvent
-    ]
-     with Instantiable2[
-      /* type */ java.lang.String, 
-      /* eventInitDict */ org.scalajs.dom.experimental.webrtc.RTCPeerConnectionIceEventInit, 
-      org.scalajs.dom.experimental.webrtc.RTCPeerConnectionIceEvent
-    ]
 

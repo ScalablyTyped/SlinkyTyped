@@ -2,8 +2,8 @@ package typingsSlinky.grommet.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.grommet.AnonColorOpacity
-import typingsSlinky.grommet.AnonHighlight
+import typingsSlinky.grommet.anon.ColorOpacity
+import typingsSlinky.grommet.anon.Highlight
 import typingsSlinky.grommet.grommetStrings.bar
 import typingsSlinky.grommet.grommetStrings.circle
 import typingsSlinky.grommet.grommetStrings.full
@@ -35,7 +35,7 @@ object Meter {
     @scala.inline
     def alignSelf(value: AlignSelfType): this.type = set("alignSelf", value.asInstanceOf[js.Any])
     @scala.inline
-    def background(value: String | AnonColorOpacity): this.type = set("background", value.asInstanceOf[js.Any])
+    def background(value: String | ColorOpacity): this.type = set("background", value.asInstanceOf[js.Any])
     @scala.inline
     def gridArea(value: GridAreaType): this.type = set("gridArea", value.asInstanceOf[js.Any])
     @scala.inline
@@ -51,7 +51,7 @@ object Meter {
     @scala.inline
     def `type`(value: bar | circle): this.type = set("type", value.asInstanceOf[js.Any])
     @scala.inline
-    def values(value: js.Array[AnonHighlight]): this.type = set("values", value.asInstanceOf[js.Any])
+    def values(value: js.Array[Highlight]): this.type = set("values", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: MeterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

@@ -1,6 +1,6 @@
 package typingsSlinky.ariClient.mod
 
-import typingsSlinky.ariClient.AnonFormatLang
+import typingsSlinky.ariClient.anon.FormatLang
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,10 +15,10 @@ trait Sound extends Resource {
   def get(callback: js.Function2[/* err */ js.Error, /* sound */ this.type, Unit]): Unit = js.native
   def list(): js.Promise[js.Array[Sound]] = js.native
   def list(callback: js.Function2[/* err */ js.Error, /* sounds */ js.Array[this.type], Unit]): Unit = js.native
-  def list(params: AnonFormatLang): js.Promise[js.Array[Sound]] = js.native
+  def list(params: FormatLang): js.Promise[js.Array[Sound]] = js.native
   /* Methods */
   def list(
-    params: AnonFormatLang,
+    params: FormatLang,
     callback: js.Function2[/* err */ js.Error, /* sounds */ js.Array[this.type], Unit]
   ): Unit = js.native
 }

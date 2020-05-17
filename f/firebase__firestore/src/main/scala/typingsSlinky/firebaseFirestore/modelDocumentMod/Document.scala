@@ -20,39 +20,8 @@ class Document protected () extends MaybeDocument {
     key: DocumentKey,
     version: SnapshotVersion,
     options: DocumentOptions,
-    objectValue: js.UndefOr[scala.Nothing],
-    proto: typingsSlinky.firebaseFirestore.firestoreProtoApiMod.firestoreV1ApiClientInterfaces.Document
-  ) = this()
-  def this(
-    key: DocumentKey,
-    version: SnapshotVersion,
-    options: DocumentOptions,
     objectValue: ObjectValue,
     proto: typingsSlinky.firebaseFirestore.firestoreProtoApiMod.firestoreV1ApiClientInterfaces.Document
-  ) = this()
-  def this(
-    key: DocumentKey,
-    version: SnapshotVersion,
-    options: DocumentOptions,
-    objectValue: js.UndefOr[scala.Nothing],
-    proto: js.UndefOr[scala.Nothing],
-    converter: js.Function1[/* value */ Value, FieldValue]
-  ) = this()
-  def this(
-    key: DocumentKey,
-    version: SnapshotVersion,
-    options: DocumentOptions,
-    objectValue: js.UndefOr[scala.Nothing],
-    proto: typingsSlinky.firebaseFirestore.firestoreProtoApiMod.firestoreV1ApiClientInterfaces.Document,
-    converter: js.Function1[/* value */ Value, FieldValue]
-  ) = this()
-  def this(
-    key: DocumentKey,
-    version: SnapshotVersion,
-    options: DocumentOptions,
-    objectValue: ObjectValue,
-    proto: js.UndefOr[scala.Nothing],
-    converter: js.Function1[/* value */ Value, FieldValue]
   ) = this()
   def this(
     key: DocumentKey,

@@ -1,5 +1,6 @@
 package typingsSlinky.sketchapp
 
+import typingsSlinky.sketchapp.anon.Name
 import typingsSlinky.sketchapp.sketchappStrings.fontDescriptor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SketchMSFontAttribute extends js.Object {
   var _class: fontDescriptor = js.native
-  var attributes: AnonName = js.native
+  var attributes: Name = js.native
 }
 
 object SketchMSFontAttribute {
   @scala.inline
-  def apply(_class: fontDescriptor, attributes: AnonName): SketchMSFontAttribute = {
+  def apply(_class: fontDescriptor, attributes: Name): SketchMSFontAttribute = {
     val __obj = js.Dynamic.literal(_class = _class.asInstanceOf[js.Any], attributes = attributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SketchMSFontAttribute]
   }
@@ -30,7 +31,7 @@ object SketchMSFontAttribute {
         ret
     }
     @scala.inline
-    def withAttributes(value: AnonName): Self = {
+    def withAttributes(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
         ret

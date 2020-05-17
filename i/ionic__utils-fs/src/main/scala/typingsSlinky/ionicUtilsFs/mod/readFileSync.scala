@@ -1,9 +1,9 @@
 package typingsSlinky.ionicUtilsFs.mod
 
-import typingsSlinky.node.AnonEncodingFlag
-import typingsSlinky.node.AnonFlag
-import typingsSlinky.node.AnonFlagString
 import typingsSlinky.node.Buffer
+import typingsSlinky.node.anon.EncodingFlag
+import typingsSlinky.node.anon.Flag
+import typingsSlinky.node.anon.FlagString
 import typingsSlinky.node.fsMod.PathLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,9 +14,9 @@ import scala.scalajs.js.annotation._
 object readFileSync extends js.Object {
   def apply(path: Double): String | Buffer = js.native
   def apply(path: Double, options: String): String = js.native
-  def apply(path: Double, options: AnonEncodingFlag): String = js.native
-  def apply(path: Double, options: AnonFlag): Buffer = js.native
-  def apply(path: Double, options: AnonFlagString): String | Buffer = js.native
+  def apply(path: Double, options: EncodingFlag): String = js.native
+  def apply(path: Double, options: Flag): Buffer = js.native
+  def apply(path: Double, options: FlagString): String | Buffer = js.native
   /**
     * Synchronously reads the entire contents of a file.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -35,8 +35,8 @@ object readFileSync extends js.Object {
     * @param options Either the encoding for the result, or an object that contains the encoding and an optional flag.
     * If a flag is not provided, it defaults to `'r'`.
     */
-  def apply(path: PathLike, options: AnonEncodingFlag): String = js.native
-  def apply(path: PathLike, options: AnonFlag): Buffer = js.native
-  def apply(path: PathLike, options: AnonFlagString): String | Buffer = js.native
+  def apply(path: PathLike, options: EncodingFlag): String = js.native
+  def apply(path: PathLike, options: Flag): Buffer = js.native
+  def apply(path: PathLike, options: FlagString): String | Buffer = js.native
 }
 

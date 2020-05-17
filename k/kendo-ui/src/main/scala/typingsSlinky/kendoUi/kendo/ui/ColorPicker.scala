@@ -1,17 +1,13 @@
 package typingsSlinky.kendoUi.kendo.ui
 
-import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.JQuery
 import typingsSlinky.kendoUi.kendo.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.ui.ColorPicker")
 @js.native
-class ColorPicker protected () extends Widget {
-  def this(element: Element) = this()
-  def this(element: Element, options: ColorPickerOptions) = this()
+trait ColorPicker extends Widget {
   @JSName("options")
   var options_ColorPicker: ColorPickerOptions = js.native
   var wrapper: JQuery = js.native
@@ -28,13 +24,5 @@ class ColorPicker protected () extends Widget {
   def value(color: String): Unit = js.native
   @JSName("value")
   def value_Unit(): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("kendo.ui.ColorPicker")
-@js.native
-object ColorPicker extends js.Object {
-  var fn: ColorPicker = js.native
-  def extend(proto: js.Object): ColorPicker = js.native
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.primereact.checkboxCheckboxMod
 
-import typingsSlinky.primereact.AnonChecked
+import org.scalajs.dom.raw.Event
+import typingsSlinky.primereact.anon.Checked
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,20 +16,20 @@ trait CheckboxProps extends js.Object {
   var id: js.UndefOr[String] = js.native
   var inputId: js.UndefOr[String] = js.native
   var name: js.UndefOr[String] = js.native
-  var onContextMenu: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onMouseDown: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onContextMenu: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onMouseDown: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   var readOnly: js.UndefOr[Boolean] = js.native
   var required: js.UndefOr[Boolean] = js.native
   var style: js.UndefOr[js.Object] = js.native
   var tooltip: js.UndefOr[js.Any] = js.native
   var tooltipOptions: js.UndefOr[TooltipOptions] = js.native
   var value: js.UndefOr[js.Any] = js.native
-  def onChange(e: AnonChecked): Unit = js.native
+  def onChange(e: Checked): Unit = js.native
 }
 
 object CheckboxProps {
   @scala.inline
-  def apply(onChange: AnonChecked => Unit): CheckboxProps = {
+  def apply(onChange: Checked => Unit): CheckboxProps = {
     val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
     __obj.asInstanceOf[CheckboxProps]
   }
@@ -40,7 +40,7 @@ object CheckboxProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnChange(value: AnonChecked => Unit): Self = {
+    def withOnChange(value: Checked => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -130,7 +130,7 @@ object CheckboxProps {
         ret
     }
     @scala.inline
-    def withOnContextMenu(value: /* event */ Event_ => Unit): Self = {
+    def withOnContextMenu(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(js.Any.fromFunction1(value))
         ret
@@ -142,7 +142,7 @@ object CheckboxProps {
         ret
     }
     @scala.inline
-    def withOnMouseDown(value: /* event */ Event_ => Unit): Self = {
+    def withOnMouseDown(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(js.Any.fromFunction1(value))
         ret

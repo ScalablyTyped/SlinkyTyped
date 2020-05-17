@@ -1,6 +1,6 @@
 package typingsSlinky.request.mod
 
-import typingsSlinky.request.AnonBody
+import typingsSlinky.request.anon.Body
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Multipart extends js.Object {
   var chunked: js.UndefOr[Boolean] = js.native
-  var data: js.UndefOr[js.Array[AnonBody]] = js.native
+  var data: js.UndefOr[js.Array[Body]] = js.native
 }
 
 object Multipart {
@@ -36,7 +36,7 @@ object Multipart {
         ret
     }
     @scala.inline
-    def withData(value: js.Array[AnonBody]): Self = {
+    def withData(value: js.Array[Body]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

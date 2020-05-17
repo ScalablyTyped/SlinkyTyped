@@ -1,14 +1,14 @@
 package typingsSlinky.reactTooltip.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLSpanElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactTooltip.AnonLeft
+import typingsSlinky.reactTooltip.anon.Left
 import typingsSlinky.reactTooltip.reactTooltipStrings.div
 import typingsSlinky.reactTooltip.reactTooltipStrings.span
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -73,15 +73,15 @@ trait TooltipProps extends js.Object {
   // Callback to override the tooltip position
   var overridePosition: js.UndefOr[
     js.Function8[
-      /* position */ AnonLeft, 
-      /* currentEvent */ Event_, 
+      /* position */ Left, 
+      /* currentEvent */ Event, 
       /* currentTarget */ EventTarget, 
       /* refNode */ Null | HTMLDivElement | HTMLSpanElement, 
       /* place */ Place, 
       /* desiredPlace */ Place, 
       /* effect */ Effect, 
       /* offset */ Offset, 
-      AnonLeft
+      Left
     ]
   ] = js.native
   // Placement of tooltip
@@ -444,7 +444,7 @@ object TooltipProps {
     }
     @scala.inline
     def withOverridePosition(
-      value: (/* position */ AnonLeft, /* currentEvent */ Event_, /* currentTarget */ EventTarget, /* refNode */ Null | HTMLDivElement | HTMLSpanElement, /* place */ Place, /* desiredPlace */ Place, /* effect */ Effect, /* offset */ Offset) => AnonLeft
+      value: (/* position */ Left, /* currentEvent */ Event, /* currentTarget */ EventTarget, /* refNode */ Null | HTMLDivElement | HTMLSpanElement, /* place */ Place, /* desiredPlace */ Place, /* effect */ Effect, /* offset */ Offset) => Left
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overridePosition")(js.Any.fromFunction8(value))

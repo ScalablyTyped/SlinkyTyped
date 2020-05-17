@@ -1,10 +1,10 @@
 package typingsSlinky.zapierPlatformCore.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.zapierPlatformCore.AnonId
-import typingsSlinky.zapierPlatformCore.AnonIsFillingDynamicDropdown
-import typingsSlinky.zapierPlatformCore.PartialmethodHttpMethodqu
-import typingsSlinky.zapierPlatformCore.PartialmethodHttpMethodquContent
+import typingsSlinky.zapierPlatformCore.anon.Id
+import typingsSlinky.zapierPlatformCore.anon.IsFillingDynamicDropdown
+import typingsSlinky.zapierPlatformCore.anon.PartialmethodHttpMethodqu
+import typingsSlinky.zapierPlatformCore.anon.PartialmethodHttpMethodquContent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,9 +15,9 @@ trait Bundle[InputData] extends js.Object {
   var cleanedRequest: js.UndefOr[PartialmethodHttpMethodquContent | js.Any] = js.native
   var inputData: InputData = js.native
   var inputDataRaw: StringDictionary[String] = js.native
-  var meta: AnonIsFillingDynamicDropdown = js.native
+  var meta: IsFillingDynamicDropdown = js.native
   var rawRequest: js.UndefOr[PartialmethodHttpMethodqu] = js.native
-  var subscribeData: js.UndefOr[AnonId] = js.native
+  var subscribeData: js.UndefOr[Id] = js.native
   var targetUrl: js.UndefOr[String] = js.native
 }
 
@@ -27,7 +27,7 @@ object Bundle {
     authData: StringDictionary[String],
     inputData: InputData,
     inputDataRaw: StringDictionary[String],
-    meta: AnonIsFillingDynamicDropdown
+    meta: IsFillingDynamicDropdown
   ): Bundle[InputData] = {
     val __obj = js.Dynamic.literal(authData = authData.asInstanceOf[js.Any], inputData = inputData.asInstanceOf[js.Any], inputDataRaw = inputDataRaw.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any])
     __obj.asInstanceOf[Bundle[InputData]]
@@ -57,7 +57,7 @@ object Bundle {
         ret
     }
     @scala.inline
-    def withMeta(value: AnonIsFillingDynamicDropdown): Self[InputData] = {
+    def withMeta(value: IsFillingDynamicDropdown): Self[InputData] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
         ret
@@ -87,7 +87,7 @@ object Bundle {
         ret
     }
     @scala.inline
-    def withSubscribeData(value: AnonId): Self[InputData] = {
+    def withSubscribeData(value: Id): Self[InputData] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("subscribeData")(value.asInstanceOf[js.Any])
         ret

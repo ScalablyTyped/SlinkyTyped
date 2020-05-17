@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdkClientS3Node.typesGetObjectAclOutputMod
 
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.requester_
-import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientS3Node.typesGrantMod.UnmarshalledGrant
 import typingsSlinky.awsSdkClientS3Node.typesOwnerMod.UnmarshalledOwner
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetObjectAclOutput
   extends MetadataBearer
-     with _OutputTypesUnion {
+     with OutputTypesUnion {
   /**
     * <p>A list of grants.</p>
     */

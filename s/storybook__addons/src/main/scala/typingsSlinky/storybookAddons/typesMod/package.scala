@@ -16,7 +16,6 @@ package object typesMod {
     typingsSlinky.std.ReturnType[typingsSlinky.storybookAddons.typesMod.StoryFn[StoryFnReturnType]]
   ]
   type LoadFn = js.Function0[js.Any]
-  type Loadable = typingsSlinky.storybookAddons.typesMod.RequireContext | js.Array[typingsSlinky.storybookAddons.typesMod.RequireContext] | typingsSlinky.storybookAddons.typesMod.LoadFn
   type MakeDecoratorResult = js.Function1[/* args */ js.Any, js.Any]
   type RequireContext = js.Any
   type StoryFn[ReturnType] = js.Function1[
@@ -30,5 +29,4 @@ package object typesMod {
     /* settings */ typingsSlinky.storybookAddons.typesMod.WrapperSettings, 
     js.Any
   ]
-  type Types_ = typingsSlinky.storybookAddons.typesMod.types | java.lang.String
 }

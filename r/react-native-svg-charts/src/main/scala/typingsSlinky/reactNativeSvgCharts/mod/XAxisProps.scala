@@ -1,13 +1,13 @@
 package typingsSlinky.reactNativeSvgCharts.mod
 
-import typingsSlinky.reactNativeSvgCharts.AnonLeft
+import typingsSlinky.reactNativeSvgCharts.anon.Left
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait XAxisProps[T] extends AxisProps[T] {
-  var contentInset: js.UndefOr[AnonLeft] = js.native
+  var contentInset: js.UndefOr[Left] = js.native
   var xAccessor: js.UndefOr[AccessorFunction[T, _]] = js.native
 }
 
@@ -24,7 +24,7 @@ object XAxisProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withContentInset(value: AnonLeft): Self[T] = {
+    def withContentInset(value: Left): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentInset")(value.asInstanceOf[js.Any])
         ret

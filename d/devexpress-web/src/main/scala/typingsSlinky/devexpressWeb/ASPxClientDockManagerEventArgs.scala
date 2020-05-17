@@ -7,16 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for events which concern manipulations on panels.
   */
-@JSGlobal("ASPxClientDockManagerEventArgs")
 @js.native
-class ASPxClientDockManagerEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * For internal use only.
-    */
-  def this(panel: ASPxClientDockPanel) = this()
+trait ASPxClientDockManagerEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the panel currently being processed.
     */
   var panel: ASPxClientDockPanel = js.native
+}
+
+object ASPxClientDockManagerEventArgs {
+  @scala.inline
+  def apply(panel: ASPxClientDockPanel): ASPxClientDockManagerEventArgs = {
+    val __obj = js.Dynamic.literal(panel = panel.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientDockManagerEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientDockManagerEventArgsOps[Self <: ASPxClientDockManagerEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPanel(value: ASPxClientDockPanel): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panel")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,9 +1,8 @@
 package typingsSlinky.reactNativeCommunityCli.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.reactNativeCommunityCli.AnonAssets
-import typingsSlinky.reactNativeCommunityCli.AnonDictname
-import typingsSlinky.reactNativeCommunityCli.AnonPlatforms
+import typingsSlinky.reactNativeCommunityCli.anon.Assets
+import typingsSlinky.reactNativeCommunityCli.anon.Dictname
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,11 +15,11 @@ trait Config_ extends js.Object {
   // An array of commands that are present in 3rd party packages
   var commands: js.Array[Command] = js.native
   // Map of the dependencies that are present in the project
-  var dependencies: StringDictionary[AnonAssets] = js.native
+  var dependencies: StringDictionary[Assets] = js.native
   // Haste configuration resolved based on available plugins
-  var haste: AnonPlatforms = js.native
+  var haste: typingsSlinky.reactNativeCommunityCli.anon.Platforms = js.native
   // Map of available platforms (built-ins and dynamically loaded)
-  var platforms: AnonDictname = js.native
+  var platforms: Dictname = js.native
   // Object that contains configuration for a project (null, when platform not available)
   var project: Record[String, _] = js.native
   // Path to React Native source
@@ -34,9 +33,9 @@ object Config_ {
   def apply(
     assets: js.Array[String],
     commands: js.Array[Command],
-    dependencies: StringDictionary[AnonAssets],
-    haste: AnonPlatforms,
-    platforms: AnonDictname,
+    dependencies: StringDictionary[Assets],
+    haste: typingsSlinky.reactNativeCommunityCli.anon.Platforms,
+    platforms: Dictname,
     project: Record[String, _],
     reactNativePath: String,
     root: String
@@ -63,19 +62,19 @@ object Config_ {
         ret
     }
     @scala.inline
-    def withDependencies(value: StringDictionary[AnonAssets]): Self = {
+    def withDependencies(value: StringDictionary[Assets]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withHaste(value: AnonPlatforms): Self = {
+    def withHaste(value: typingsSlinky.reactNativeCommunityCli.anon.Platforms): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("haste")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPlatforms(value: AnonDictname): Self = {
+    def withPlatforms(value: Dictname): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("platforms")(value.asInstanceOf[js.Any])
         ret

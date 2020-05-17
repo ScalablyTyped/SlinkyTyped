@@ -14,13 +14,8 @@ import scala.scalajs.js.annotation._
   * @example
   * var v = new pc.Vec2(1, 2);
   */
-@JSGlobal("pc.Vec2")
 @js.native
-class Vec2 () extends js.Object {
-  def this(x: js.Array[Double]) = this()
-  def this(x: Double) = this()
-  def this(x: js.Array[Double], y: Double) = this()
-  def this(x: Double, y: Double) = this()
+trait Vec2 extends js.Object {
   /**
     * @field
     * @name pc.Vec2#x
@@ -302,63 +297,146 @@ class Vec2 () extends js.Object {
   def sub2(lhs: Vec2, rhs: Vec2): Vec2 = js.native
 }
 
-/* static members */
-@JSGlobal("pc.Vec2")
-@js.native
-object Vec2 extends js.Object {
-  /**
-    * @field
-    * @static
-    * @readonly
-    * @name pc.Vec2.DOWN
-    * @type {pc.Vec2}
-    * @description A constant vector set to [0, -1].
-    */
-  val DOWN: Vec2 = js.native
-  /**
-    * @field
-    * @static
-    * @readonly
-    * @name pc.Vec2.LEFT
-    * @type {pc.Vec2}
-    * @description A constant vector set to [-1, 0].
-    */
-  val LEFT: Vec2 = js.native
-  /**
-    * @field
-    * @static
-    * @readonly
-    * @name pc.Vec2.ONE
-    * @type {pc.Vec2}
-    * @description A constant vector set to [1, 1].
-    */
-  val ONE: Vec2 = js.native
-  /**
-    * @field
-    * @static
-    * @readonly
-    * @name pc.Vec2.RIGHT
-    * @type {pc.Vec2}
-    * @description A constant vector set to [1, 0].
-    */
-  val RIGHT: Vec2 = js.native
-  /**
-    * @field
-    * @static
-    * @readonly
-    * @name pc.Vec2.UP
-    * @type {pc.Vec2}
-    * @description A constant vector set to [0, 1].
-    */
-  val UP: Vec2 = js.native
-  /**
-    * @field
-    * @static
-    * @readonly
-    * @name pc.Vec2.ZERO
-    * @type {pc.Vec2}
-    * @description A constant vector set to [0, 0].
-    */
-  val ZERO: Vec2 = js.native
+object Vec2 {
+  @scala.inline
+  def apply(
+    add: Vec2 => Vec2,
+    add2: (Vec2, Vec2) => Vec2,
+    copy: Vec2 => Vec2,
+    distance: Vec2 => Double,
+    dot: Vec2 => Double,
+    equals: Vec2 => Boolean,
+    length: () => Double,
+    lengthSq: () => Double,
+    lerp: (Vec2, Vec2, Double) => Vec2,
+    mul: Vec2 => Vec2,
+    mul2: (Vec2, Vec2) => Vec2,
+    normalize: () => Vec2,
+    scale: Double => Vec2,
+    set: (Double, Double) => Vec2,
+    sub: Vec2 => Vec2,
+    sub2: (Vec2, Vec2) => Vec2,
+    x: Double,
+    y: Double
+  ): Vec2 = {
+    val __obj = js.Dynamic.literal(add = js.Any.fromFunction1(add), add2 = js.Any.fromFunction2(add2), copy = js.Any.fromFunction1(copy), distance = js.Any.fromFunction1(distance), dot = js.Any.fromFunction1(dot), equals = js.Any.fromFunction1(equals), length = js.Any.fromFunction0(length), lengthSq = js.Any.fromFunction0(lengthSq), lerp = js.Any.fromFunction3(lerp), mul = js.Any.fromFunction1(mul), mul2 = js.Any.fromFunction2(mul2), normalize = js.Any.fromFunction0(normalize), scale = js.Any.fromFunction1(scale), set = js.Any.fromFunction2(set), sub = js.Any.fromFunction1(sub), sub2 = js.Any.fromFunction2(sub2), x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Vec2]
+  }
+  @scala.inline
+  implicit class Vec2Ops[Self <: Vec2] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdd(value: Vec2 => Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAdd2(value: (Vec2, Vec2) => Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add2")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withCopy(value: Vec2 => Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDistance(value: Vec2 => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("distance")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDot(value: Vec2 => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dot")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEquals(value: Vec2 => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLength(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withLengthSq(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lengthSq")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withLerp(value: (Vec2, Vec2, Double) => Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lerp")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withMul(value: Vec2 => Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mul")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMul2(value: (Vec2, Vec2) => Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mul2")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withNormalize(value: () => Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withScale(value: Double => Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet(value: (Double, Double) => Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSub(value: Vec2 => Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sub")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSub2(value: (Vec2, Vec2) => Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sub2")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

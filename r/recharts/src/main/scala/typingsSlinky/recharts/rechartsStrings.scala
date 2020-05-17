@@ -1,20 +1,20 @@
 package typingsSlinky.recharts
 
 import typingsSlinky.recharts.mod.AnimationEasingType
+import typingsSlinky.recharts.mod.AxisDomain
+import typingsSlinky.recharts.mod.AxisInterval
+import typingsSlinky.recharts.mod.BaseValueType
 import typingsSlinky.recharts.mod.IconType
 import typingsSlinky.recharts.mod.IfOverflowType
 import typingsSlinky.recharts.mod.LayoutType
 import typingsSlinky.recharts.mod.LegendType
+import typingsSlinky.recharts.mod.LineType
 import typingsSlinky.recharts.mod.PickedCSSStyleDeclarationKeys
+import typingsSlinky.recharts.mod.PolarRadiusAxisDomain
 import typingsSlinky.recharts.mod.PositionType
 import typingsSlinky.recharts.mod.ReferenceLinePosition
 import typingsSlinky.recharts.mod.ScaleType
 import typingsSlinky.recharts.mod.StackOffsetType
-import typingsSlinky.recharts.mod._AxisDomain
-import typingsSlinky.recharts.mod._AxisInterval
-import typingsSlinky.recharts.mod._BaseValueType
-import typingsSlinky.recharts.mod._LineType
-import typingsSlinky.recharts.mod._PolarRadiusAxisDomain
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,10 +28,10 @@ object rechartsStrings {
   
   @js.native
   sealed trait auto
-    extends ScaleType
-       with _AxisDomain
-       with _BaseValueType
-       with _PolarRadiusAxisDomain
+    extends AxisDomain
+       with BaseValueType
+       with PolarRadiusAxisDomain
+       with ScaleType
   
   @js.native
   sealed trait band extends ScaleType
@@ -40,13 +40,13 @@ object rechartsStrings {
   sealed trait baselineShift extends PickedCSSStyleDeclarationKeys
   
   @js.native
-  sealed trait basis extends _LineType
+  sealed trait basis extends LineType
   
   @js.native
-  sealed trait basisClosed extends _LineType
+  sealed trait basisClosed extends LineType
   
   @js.native
-  sealed trait basisOpen extends _LineType
+  sealed trait basisOpen extends LineType
   
   @js.native
   sealed trait bold extends js.Object
@@ -105,15 +105,15 @@ object rechartsStrings {
   
   @js.native
   sealed trait dataMax
-    extends _AxisDomain
-       with _BaseValueType
-       with _PolarRadiusAxisDomain
+    extends AxisDomain
+       with BaseValueType
+       with PolarRadiusAxisDomain
   
   @js.native
   sealed trait dataMin
-    extends _AxisDomain
-       with _BaseValueType
-       with _PolarRadiusAxisDomain
+    extends AxisDomain
+       with BaseValueType
+       with PolarRadiusAxisDomain
   
   @js.native
   sealed trait diameter extends js.Object
@@ -268,11 +268,11 @@ object rechartsStrings {
   @js.native
   sealed trait linear
     extends AnimationEasingType
+       with LineType
        with ScaleType
-       with _LineType
   
   @js.native
-  sealed trait linearClosed extends _LineType
+  sealed trait linearClosed extends LineType
   
   @js.native
   sealed trait log extends ScaleType
@@ -293,16 +293,16 @@ object rechartsStrings {
   sealed trait middle extends ReferenceLinePosition
   
   @js.native
-  sealed trait monotone extends _LineType
+  sealed trait monotone extends LineType
   
   @js.native
-  sealed trait monotoneX extends _LineType
+  sealed trait monotoneX extends LineType
   
   @js.native
-  sealed trait monotoneY extends _LineType
+  sealed trait monotoneY extends LineType
   
   @js.native
-  sealed trait natural extends _LineType
+  sealed trait natural extends LineType
   
   @js.native
   sealed trait none
@@ -354,13 +354,13 @@ object rechartsStrings {
   sealed trait pow extends ScaleType
   
   @js.native
-  sealed trait preserveEnd extends _AxisInterval
+  sealed trait preserveEnd extends AxisInterval
   
   @js.native
-  sealed trait preserveStart extends _AxisInterval
+  sealed trait preserveStart extends AxisInterval
   
   @js.native
-  sealed trait preserveStartEnd extends _AxisInterval
+  sealed trait preserveStartEnd extends AxisInterval
   
   @js.native
   sealed trait quantile extends ScaleType
@@ -405,13 +405,13 @@ object rechartsStrings {
   sealed trait start extends ReferenceLinePosition
   
   @js.native
-  sealed trait step extends _LineType
+  sealed trait step extends LineType
   
   @js.native
-  sealed trait stepAfter extends _LineType
+  sealed trait stepAfter extends LineType
   
   @js.native
-  sealed trait stepBefore extends _LineType
+  sealed trait stepBefore extends LineType
   
   @js.native
   sealed trait stopColor extends PickedCSSStyleDeclarationKeys

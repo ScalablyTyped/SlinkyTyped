@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.AutoRotationBehavior")
 @js.native
-class AutoRotationBehavior () extends Behavior[ArcRotateCamera] {
+trait AutoRotationBehavior extends Behavior[ArcRotateCamera] {
   /**
     *  Applies any current user interaction to the camera. Takes into account maximum alpha rotation.
     */

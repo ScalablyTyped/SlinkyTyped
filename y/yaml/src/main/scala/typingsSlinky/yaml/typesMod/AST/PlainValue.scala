@@ -14,5 +14,7 @@ trait PlainValue
   var cstNode_PlainValue: js.UndefOr[typingsSlinky.yaml.parseCstMod.CST.PlainValue] = js.native
   @JSName("type")
   var type_PlainValue: PLAIN = js.native
+  /* InferMemberOverrides */
+  override def toJSON(arg: js.Any, ctx: NodeToJsonContext): js.Any = js.native
 }
 

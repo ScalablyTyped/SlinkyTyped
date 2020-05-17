@@ -4,9 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.UI.Input.Spatial.SpatialInteractionSourceEventArgs")
 @js.native
-abstract class SpatialInteractionSourceEventArgs () extends js.Object {
+trait SpatialInteractionSourceEventArgs extends js.Object {
   var state: js.Any = js.native
+}
+
+object SpatialInteractionSourceEventArgs {
+  @scala.inline
+  def apply(state: js.Any): SpatialInteractionSourceEventArgs = {
+    val __obj = js.Dynamic.literal(state = state.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SpatialInteractionSourceEventArgs]
+  }
+  @scala.inline
+  implicit class SpatialInteractionSourceEventArgsOps[Self <: SpatialInteractionSourceEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withState(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

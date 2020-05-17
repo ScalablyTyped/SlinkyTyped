@@ -1,6 +1,6 @@
 package typingsSlinky.playcanvas.mod
 
-import typingsSlinky.playcanvas.AnonAutoResolve
+import typingsSlinky.playcanvas.anon.AutoResolve
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,6 +49,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class RenderTarget protected ()
   extends typingsSlinky.playcanvas.pc.RenderTarget {
-  def this(options: AnonAutoResolve) = this()
+  def this(options: AutoResolve) = this()
 }
 

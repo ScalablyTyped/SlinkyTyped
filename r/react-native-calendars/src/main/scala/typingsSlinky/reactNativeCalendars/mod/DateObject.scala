@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DateObject extends js.Object {
+trait DateObject extends TCalendarDate {
   var dateString: String = js.native
   var day: Double = js.native
   var month: Double = js.native

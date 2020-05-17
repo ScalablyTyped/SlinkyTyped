@@ -2,7 +2,7 @@ package typingsSlinky.baseui.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonContent
+import typingsSlinky.baseui.anon.Content
 import typingsSlinky.baseui.tableMod.FilterProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,7 +26,7 @@ object Filter {
     @scala.inline
     def onSelectAll(value: () => _): this.type = set("onSelectAll", js.Any.fromFunction0(value))
     @scala.inline
-    def overrides(value: AnonContent): this.type = set("overrides", value.asInstanceOf[js.Any])
+    def overrides(value: Content): this.type = set("overrides", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: FilterProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

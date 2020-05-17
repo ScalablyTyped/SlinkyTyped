@@ -1,18 +1,18 @@
 package typingsSlinky.paypalCordovaPlugin.PayPalCordovaPlugin
 
-import typingsSlinky.paypalCordovaPlugin.AnonAuthorizationid
+import typingsSlinky.paypalCordovaPlugin.anon.Authorizationid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SinglePaymentResult extends BaseResult {
-  var response: AnonAuthorizationid = js.native
+  var response: Authorizationid = js.native
 }
 
 object SinglePaymentResult {
   @scala.inline
-  def apply(client: Client, response: AnonAuthorizationid, response_type: String): SinglePaymentResult = {
+  def apply(client: Client, response: Authorizationid, response_type: String): SinglePaymentResult = {
     val __obj = js.Dynamic.literal(client = client.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any], response_type = response_type.asInstanceOf[js.Any])
     __obj.asInstanceOf[SinglePaymentResult]
   }
@@ -23,7 +23,7 @@ object SinglePaymentResult {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withResponse(value: AnonAuthorizationid): Self = {
+    def withResponse(value: Authorizationid): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
         ret

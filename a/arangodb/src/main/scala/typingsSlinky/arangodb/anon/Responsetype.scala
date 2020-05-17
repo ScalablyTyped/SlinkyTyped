@@ -1,0 +1,39 @@
+package typingsSlinky.arangodb.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Responsetype extends js.Object {
+  var response_type: js.UndefOr[String] = js.native
+}
+
+object Responsetype {
+  @scala.inline
+  def apply(): Responsetype = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[Responsetype]
+  }
+  @scala.inline
+  implicit class ResponsetypeOps[Self <: Responsetype] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withResponse_type(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("response_type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutResponse_type: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("response_type")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

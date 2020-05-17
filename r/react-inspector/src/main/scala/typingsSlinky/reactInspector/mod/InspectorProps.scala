@@ -1,6 +1,5 @@
 package typingsSlinky.reactInspector.mod
 
-import typingsSlinky.reactInspector.reactInspectorBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,14 +12,8 @@ trait InspectorProps extends js.Object
 
 object InspectorProps {
   @scala.inline
-  def InspectorAsTableProps(table: `true`): InspectorProps = {
-    val __obj = js.Dynamic.literal(table = table.asInstanceOf[js.Any])
-    __obj.asInstanceOf[InspectorProps]
-  }
+  implicit def apply(value: InspectorAsTableProps): InspectorProps = value.asInstanceOf[InspectorProps]
   @scala.inline
-  def InspectorAsTreeProps(): InspectorProps = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[InspectorProps]
-  }
+  implicit def apply(value: InspectorAsTreeProps): InspectorProps = value.asInstanceOf[InspectorProps]
 }
 

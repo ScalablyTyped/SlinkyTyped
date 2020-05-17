@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Graphics.Printing.OptionDetails.PrintTaskOptionChangedEventArgs")
 @js.native
-class PrintTaskOptionChangedEventArgs () extends IPrintTaskOptionChangedEventArgs
+trait PrintTaskOptionChangedEventArgs extends IPrintTaskOptionChangedEventArgs
+
+object PrintTaskOptionChangedEventArgs {
+  @scala.inline
+  def apply(optionId: js.Any): PrintTaskOptionChangedEventArgs = {
+    val __obj = js.Dynamic.literal(optionId = optionId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PrintTaskOptionChangedEventArgs]
+  }
+}
 

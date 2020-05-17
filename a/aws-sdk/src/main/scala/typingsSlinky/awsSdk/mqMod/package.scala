@@ -5,61 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mqMod {
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.CREATION_IN_PROGRESS
-    - typingsSlinky.awsSdk.awsSdkStrings.CREATION_FAILED
-    - typingsSlinky.awsSdk.awsSdkStrings.DELETION_IN_PROGRESS
-    - typingsSlinky.awsSdk.awsSdkStrings.RUNNING
-    - typingsSlinky.awsSdk.awsSdkStrings.REBOOT_IN_PROGRESS
-    - java.lang.String
-  */
-  type BrokerState = typingsSlinky.awsSdk.mqMod._BrokerState | java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.EBS
-    - typingsSlinky.awsSdk.awsSdkStrings.EFS
-    - java.lang.String
-  */
-  type BrokerStorageType = typingsSlinky.awsSdk.mqMod._BrokerStorageType | java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.CREATE
-    - typingsSlinky.awsSdk.awsSdkStrings.UPDATE
-    - typingsSlinky.awsSdk.awsSdkStrings.DELETE
-    - java.lang.String
-  */
-  type ChangeType = typingsSlinky.awsSdk.mqMod._ChangeType | java.lang.String
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.mqMod.ClientApiVersions
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.MONDAY
-    - typingsSlinky.awsSdk.awsSdkStrings.TUESDAY
-    - typingsSlinky.awsSdk.awsSdkStrings.WEDNESDAY
-    - typingsSlinky.awsSdk.awsSdkStrings.THURSDAY
-    - typingsSlinky.awsSdk.awsSdkStrings.FRIDAY
-    - typingsSlinky.awsSdk.awsSdkStrings.SATURDAY
-    - typingsSlinky.awsSdk.awsSdkStrings.SUNDAY
-    - java.lang.String
-  */
-  type DayOfWeek = typingsSlinky.awsSdk.mqMod._DayOfWeek | java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.SINGLE_INSTANCE
-    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE_STANDBY_MULTI_AZ
-    - java.lang.String
-  */
-  type DeploymentMode = typingsSlinky.awsSdk.mqMod._DeploymentMode | java.lang.String
-  type EngineType = typingsSlinky.awsSdk.awsSdkStrings.ACTIVEMQ | java.lang.String
   type MaxResults = scala.Double
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.DISALLOWED_ELEMENT_REMOVED
-    - typingsSlinky.awsSdk.awsSdkStrings.DISALLOWED_ATTRIBUTE_REMOVED
-    - typingsSlinky.awsSdk.awsSdkStrings.INVALID_ATTRIBUTE_VALUE_REMOVED
-    - java.lang.String
-  */
-  type SanitizationWarningReason = typingsSlinky.awsSdk.mqMod._SanitizationWarningReason | java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2017-11-27`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.mqMod._apiVersion | java.lang.String
   type boolean = scala.Boolean
   type integer = scala.Double
   type integerMin5Max100 = scala.Double

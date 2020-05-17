@@ -1,8 +1,8 @@
 package typingsSlinky.stripeV3.stripe.elements
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.stripeV3.AnonBase
-import typingsSlinky.stripeV3.AnonComplete
+import typingsSlinky.stripeV3.anon.Base
+import typingsSlinky.stripeV3.anon.Complete
 import typingsSlinky.stripeV3.stripe.paymentRequest.StripePaymentRequest
 import typingsSlinky.stripeV3.stripeV3Strings.default
 import typingsSlinky.stripeV3.stripeV3Strings.solid
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ElementsOptions extends js.Object {
-  var classes: js.UndefOr[AnonBase] = js.native
+  var classes: js.UndefOr[Base] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
   var hideIcon: js.UndefOr[Boolean] = js.native
   var hidePostalCode: js.UndefOr[Boolean] = js.native
@@ -20,7 +20,7 @@ trait ElementsOptions extends js.Object {
   var paymentRequest: js.UndefOr[StripePaymentRequest] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var placeholderCountry: js.UndefOr[String] = js.native
-  var style: js.UndefOr[AnonComplete] = js.native
+  var style: js.UndefOr[Complete] = js.native
   var supportedCountries: js.UndefOr[js.Array[String]] = js.native
   var value: js.UndefOr[String | StringDictionary[String]] = js.native
 }
@@ -38,7 +38,7 @@ object ElementsOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClasses(value: AnonBase): Self = {
+    def withClasses(value: Base): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
         ret
@@ -134,7 +134,7 @@ object ElementsOptions {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonComplete): Self = {
+    def withStyle(value: Complete): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

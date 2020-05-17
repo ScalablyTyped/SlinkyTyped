@@ -4,7 +4,7 @@ import typingsSlinky.angularCommon.mod.Location
 import typingsSlinky.angularRouter.mod.Router
 import typingsSlinky.angularRouter.mod.UrlSerializer
 import typingsSlinky.angularRouter.mod.UrlTree
-import typingsSlinky.ionicAngular.AnonAnimation
+import typingsSlinky.ionicAngular.anon.Animation
 import typingsSlinky.ionicAngular.ionRouterOutletMod.IonRouterOutlet
 import typingsSlinky.ionicAngular.ionicAngularStrings.back
 import typingsSlinky.ionicAngular.ionicAngularStrings.forward
@@ -39,7 +39,7 @@ class NavController protected () extends js.Object {
   /**
     * @internal
     */
-  def consumeTransition(): AnonAnimation = js.native
+  def consumeTransition(): Animation = js.native
   /**
     * This method uses Angular's [Router](https://angular.io/api/router/Router) under the hood,
     * it's equivalent to calling:

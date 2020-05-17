@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.DataBarConditionalFormatData
 import typingsSlinky.officeJs.Excel.Interfaces.DataBarConditionalFormatLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.DataBarConditionalFormatUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.Automatic
 import typingsSlinky.officeJs.officeJsStrings.CellMidPoint
 import typingsSlinky.officeJs.officeJsStrings.Context
@@ -22,9 +22,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.6]
   */
-@JSGlobal("Excel.DataBarConditionalFormat")
 @js.native
-class DataBarConditionalFormat () extends ClientObject {
+trait DataBarConditionalFormat extends ClientObject {
   /**
     *
     * HTML color code representing the color of the Axis line, of the form #RRGGBB (e.g. "FFA500") or as a named HTML color (e.g. "orange").
@@ -94,7 +93,7 @@ class DataBarConditionalFormat () extends ClientObject {
     */
   def load(): DataBarConditionalFormat = js.native
   def load(options: DataBarConditionalFormatLoadOptions): DataBarConditionalFormat = js.native
-  def load(propertyNamesAndPaths: AnonExpand): DataBarConditionalFormat = js.native
+  def load(propertyNamesAndPaths: Expand): DataBarConditionalFormat = js.native
   def load(propertyNames: String): DataBarConditionalFormat = js.native
   def load(propertyNames: js.Array[String]): DataBarConditionalFormat = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

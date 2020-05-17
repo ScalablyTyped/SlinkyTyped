@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.rekognitionMod
 
-import typingsSlinky.awsSdk.DescribeProjectVersionsRe
+import typingsSlinky.awsSdk.anon.DescribeProjectVersionsRe
 import typingsSlinky.awsSdk.awsSdkStrings.projectVersionRunning
 import typingsSlinky.awsSdk.awsSdkStrings.projectVersionTrainingCompleted
 import typingsSlinky.awsSdk.configMod.ConfigBase

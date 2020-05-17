@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Enables a camera settings app to handle the activation parameters for the app. */
-@JSGlobal("Windows.ApplicationModel.Activation.CameraSettingsActivatedEventArgs")
 @js.native
-abstract class CameraSettingsActivatedEventArgs () extends js.Object {
+trait CameraSettingsActivatedEventArgs extends js.Object {
   /** Gets the activation type. */
   var kind: ActivationKind = js.native
   /** Gets the execution state of the app before it was activated. */
@@ -18,5 +17,57 @@ abstract class CameraSettingsActivatedEventArgs () extends js.Object {
   var videoDeviceController: js.Any = js.native
   /** Gets the object that implements additional extended settings for the camera. */
   var videoDeviceExtension: js.Any = js.native
+}
+
+object CameraSettingsActivatedEventArgs {
+  @scala.inline
+  def apply(
+    kind: ActivationKind,
+    previousExecutionState: ApplicationExecutionState,
+    splashScreen: SplashScreen,
+    videoDeviceController: js.Any,
+    videoDeviceExtension: js.Any
+  ): CameraSettingsActivatedEventArgs = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], previousExecutionState = previousExecutionState.asInstanceOf[js.Any], splashScreen = splashScreen.asInstanceOf[js.Any], videoDeviceController = videoDeviceController.asInstanceOf[js.Any], videoDeviceExtension = videoDeviceExtension.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CameraSettingsActivatedEventArgs]
+  }
+  @scala.inline
+  implicit class CameraSettingsActivatedEventArgsOps[Self <: CameraSettingsActivatedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: ActivationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreviousExecutionState(value: ApplicationExecutionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousExecutionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSplashScreen(value: SplashScreen): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splashScreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVideoDeviceController(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoDeviceController")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVideoDeviceExtension(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoDeviceExtension")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

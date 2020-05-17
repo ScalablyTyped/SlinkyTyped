@@ -1,6 +1,6 @@
 package typingsSlinky.googlepay.google.payments.api
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,12 +26,12 @@ trait ButtonOptions extends js.Object {
     * callback](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#The_event_listener_callback)
     * to call when a click event is delivered to the `<button>` target.
     */
-  def onClick(event: Event_): Unit = js.native
+  def onClick(event: Event): Unit = js.native
 }
 
 object ButtonOptions {
   @scala.inline
-  def apply(onClick: Event_ => Unit): ButtonOptions = {
+  def apply(onClick: Event => Unit): ButtonOptions = {
     val __obj = js.Dynamic.literal(onClick = js.Any.fromFunction1(onClick))
     __obj.asInstanceOf[ButtonOptions]
   }
@@ -42,7 +42,7 @@ object ButtonOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnClick(value: Event_ => Unit): Self = {
+    def withOnClick(value: Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret

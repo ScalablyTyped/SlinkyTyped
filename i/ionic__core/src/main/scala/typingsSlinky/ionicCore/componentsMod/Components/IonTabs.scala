@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCore.componentsMod.Components
 
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonTabElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonTabElement
 import typingsSlinky.ionicCore.interfaceMod.RouteID
 import typingsSlinky.ionicCore.interfaceMod.RouteWrite
 import scala.scalajs.js

@@ -1,13 +1,13 @@
 package typingsSlinky.jquery
 
-import typingsSlinky.jquery.JQuery_._Falsy
+import typingsSlinky.jquery.JQuery.Falsy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object jqueryNumbers {
   @js.native
-  sealed trait `0` extends _Falsy
+  sealed trait `0` extends Falsy
   
   @js.native
   sealed trait `1` extends js.Object

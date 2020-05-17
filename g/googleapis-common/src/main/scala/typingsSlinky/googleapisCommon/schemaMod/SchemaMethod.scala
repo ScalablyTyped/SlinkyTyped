@@ -1,8 +1,8 @@
 package typingsSlinky.googleapisCommon.schemaMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.googleapisCommon.AnonProtocols
-import typingsSlinky.googleapisCommon.AnonRef
+import typingsSlinky.googleapisCommon.anon.Protocols
+import typingsSlinky.googleapisCommon.anon.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,12 +13,12 @@ trait SchemaMethod extends js.Object {
   var fragment: String = js.native
   var httpMethod: HttpMethod = js.native
   var id: String = js.native
-  var mediaUpload: AnonProtocols = js.native
+  var mediaUpload: Protocols = js.native
   var parameterOrder: js.UndefOr[js.Array[String]] = js.native
   var parameters: js.UndefOr[StringDictionary[SchemaParameter]] = js.native
   var path: String = js.native
-  var request: AnonRef = js.native
-  var response: AnonRef = js.native
+  var request: Ref = js.native
+  var response: Ref = js.native
   var sampleUrl: String = js.native
   var scopes: js.Array[String] = js.native
 }
@@ -30,10 +30,10 @@ object SchemaMethod {
     fragment: String,
     httpMethod: HttpMethod,
     id: String,
-    mediaUpload: AnonProtocols,
+    mediaUpload: Protocols,
     path: String,
-    request: AnonRef,
-    response: AnonRef,
+    request: Ref,
+    response: Ref,
     sampleUrl: String,
     scopes: js.Array[String]
   ): SchemaMethod = {
@@ -71,7 +71,7 @@ object SchemaMethod {
         ret
     }
     @scala.inline
-    def withMediaUpload(value: AnonProtocols): Self = {
+    def withMediaUpload(value: Protocols): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mediaUpload")(value.asInstanceOf[js.Any])
         ret
@@ -83,13 +83,13 @@ object SchemaMethod {
         ret
     }
     @scala.inline
-    def withRequest(value: AnonRef): Self = {
+    def withRequest(value: Ref): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withResponse(value: AnonRef): Self = {
+    def withResponse(value: Ref): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
         ret

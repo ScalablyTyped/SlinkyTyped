@@ -1,14 +1,12 @@
 package typingsSlinky.officeJs.OneNote
 
+import typingsSlinky.officeJs.OfficeExtension.ClientRequestContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("OneNote.RequestContext")
 @js.native
-class RequestContext ()
-  extends typingsSlinky.officeJs.OfficeCore.RequestContext {
-  def this(url: String) = this()
+trait RequestContext extends ClientRequestContext {
   val application: Application = js.native
 }
 

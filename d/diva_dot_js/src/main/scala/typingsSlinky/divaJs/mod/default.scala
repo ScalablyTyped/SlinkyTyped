@@ -1,6 +1,6 @@
 package typingsSlinky.divaJs.mod
 
-import typingsSlinky.divaJs.PartialOptionsobjectDatas
+import typingsSlinky.divaJs.anon.PartialOptionsobjectDatas
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,12 +1,12 @@
 package typingsSlinky.firebaseMessaging
 
-import typingsSlinky.std.Event_
+import typingsSlinky.std.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ExtendableEvent extends Event_ {
+trait ExtendableEvent extends Event {
   def waitUntil(f: js.Promise[_]): Unit = js.native
 }
 

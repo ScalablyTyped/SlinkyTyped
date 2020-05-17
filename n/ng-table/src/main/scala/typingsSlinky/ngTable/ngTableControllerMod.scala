@@ -7,6 +7,10 @@ import typingsSlinky.angular.mod.IDocumentService
 import typingsSlinky.angular.mod.IParseService
 import typingsSlinky.angular.mod.IRootScopeService
 import typingsSlinky.angular.mod.ITimeoutService
+import typingsSlinky.ngTable.anon.Columns
+import typingsSlinky.ngTable.anon.Disabled
+import typingsSlinky.ngTable.anon.Header
+import typingsSlinky.ngTable.anon.Show
 import typingsSlinky.ngTable.coreMod.NgTableEventsChannel
 import typingsSlinky.ngTable.coreMod.NgTableParams
 import typingsSlinky.ngTable.ngTableColumnMod.NgTableColumn
@@ -30,9 +34,9 @@ object ngTableControllerMod extends js.Object {
     @JSName("$data")
     var $data: js.UndefOr[DataResults[T]] = js.native
     @JSName("$filterRow")
-    var $filterRow: AnonDisabled = js.native
+    var $filterRow: Disabled = js.native
     @JSName("$groupRow")
-    var $groupRow: AnonShow = js.native
+    var $groupRow: Show = js.native
     @JSName("$groups")
     var $groups: js.UndefOr[GroupedDataResults[T]] = js.native
     @JSName("$loading")
@@ -40,7 +44,7 @@ object ngTableControllerMod extends js.Object {
     var pages: js.Array[IPageButton] = js.native
     var params: NgTableParams[T] = js.native
     var show_filter: Boolean = js.native
-    var templates: AnonHeader = js.native
+    var templates: Header = js.native
   }
   
   @js.native
@@ -77,7 +81,7 @@ object ngTableControllerMod extends js.Object {
     /* private */ def getVisibleColumns(): js.Any = js.native
     def loadFilterData($columns: js.Array[IColumnDef]): Unit = js.native
     /* private */ def onDataReloadStatusChange(newStatus: js.Any): js.Any = js.native
-    def parseNgTableDynamicExpr(attr: String): AnonColumns = js.native
+    def parseNgTableDynamicExpr(attr: String): Columns = js.native
     def setupBindingsToInternalScope(tableParamsExpr: String): Unit = js.native
     /* private */ def setupFilterRowBindingsToInternalScope(): js.Any = js.native
     /* private */ def setupGroupRowBindingsToInternalScope(): js.Any = js.native

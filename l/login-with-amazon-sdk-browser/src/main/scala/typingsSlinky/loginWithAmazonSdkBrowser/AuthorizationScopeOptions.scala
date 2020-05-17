@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.profileColonuser_id
   - typingsSlinky.loginWithAmazonSdkBrowser.loginWithAmazonSdkBrowserStrings.postal_code
 */
-trait AuthorizationScopeOptions extends js.Object
+trait AuthorizationScopeOptions extends AuthorizeScope
 
 object AuthorizationScopeOptions {
   @scala.inline

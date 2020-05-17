@@ -1,6 +1,5 @@
 package typingsSlinky.expressWinston.mod
 
-import typingsSlinky.winston.mod.Logger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,14 +12,8 @@ trait LoggerOptions extends js.Object
 
 object LoggerOptions {
   @scala.inline
-  def LoggerOptionsWithTransports(transports: js.Array[typingsSlinky.winstonTransport.mod.^]): LoggerOptions = {
-    val __obj = js.Dynamic.literal(transports = transports.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LoggerOptions]
-  }
+  implicit def apply(value: LoggerOptionsWithTransports): LoggerOptions = value.asInstanceOf[LoggerOptions]
   @scala.inline
-  def LoggerOptionsWithWinstonInstance(winstonInstance: Logger): LoggerOptions = {
-    val __obj = js.Dynamic.literal(winstonInstance = winstonInstance.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LoggerOptions]
-  }
+  implicit def apply(value: LoggerOptionsWithWinstonInstance): LoggerOptions = value.asInstanceOf[LoggerOptions]
 }
 

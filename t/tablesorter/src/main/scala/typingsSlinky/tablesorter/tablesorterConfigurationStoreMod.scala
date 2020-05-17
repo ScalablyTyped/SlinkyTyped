@@ -1,14 +1,14 @@
 package typingsSlinky.tablesorter
 
 import org.scalablytyped.runtime.NumberDictionary
-import typingsSlinky.jquery.JQuery_.Selector
+import typingsSlinky.jquery.JQuery.Selector
 import typingsSlinky.tablesorter.coreThemeMod.CoreTheme
 import typingsSlinky.tablesorter.emptySortingMod.EmptySorting
 import typingsSlinky.tablesorter.globalizeSettingsMod.GlobalizeSettings
 import typingsSlinky.tablesorter.initializationEventHandlerMod.InitializationEventHandler
 import typingsSlinky.tablesorter.mappedSettingsMod.MappedSettings
-import typingsSlinky.tablesorter.mod._Global_.HTMLElement
-import typingsSlinky.tablesorter.mod._Global_.JQuery
+import typingsSlinky.tablesorter.mod.global.HTMLElement
+import typingsSlinky.tablesorter.mod.global.JQuery
 import typingsSlinky.tablesorter.numberSorterMod.NumberSorter
 import typingsSlinky.tablesorter.pagerConfigurationStoreMod.PagerConfigurationStore
 import typingsSlinky.tablesorter.parserMod.Parser

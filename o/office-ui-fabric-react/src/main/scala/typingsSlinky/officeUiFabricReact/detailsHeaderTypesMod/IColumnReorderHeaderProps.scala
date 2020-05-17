@@ -1,7 +1,7 @@
 package typingsSlinky.officeUiFabricReact.detailsHeaderTypesMod
 
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.officeUiFabricReact.AnonDropLocation
+import typingsSlinky.officeUiFabricReact.anon.DropLocation
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IColumnReorderOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +13,7 @@ trait IColumnReorderHeaderProps extends IColumnReorderOptions {
     * Need this to check whether the dragEnd has happened on
     * corresponding list or outside of the list
     */
-  var onColumnDragEnd: js.UndefOr[js.Function2[/* props */ AnonDropLocation, /* event */ MouseEvent, Unit]] = js.native
+  var onColumnDragEnd: js.UndefOr[js.Function2[/* props */ DropLocation, /* event */ MouseEvent, Unit]] = js.native
 }
 
 object IColumnReorderHeaderProps {
@@ -29,7 +29,7 @@ object IColumnReorderHeaderProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnColumnDragEnd(value: (/* props */ AnonDropLocation, /* event */ MouseEvent) => Unit): Self = {
+    def withOnColumnDragEnd(value: (/* props */ DropLocation, /* event */ MouseEvent) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onColumnDragEnd")(js.Any.fromFunction2(value))
         ret

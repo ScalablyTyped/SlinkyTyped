@@ -3,6 +3,7 @@ package typingsSlinky.phosphorVirtualdom.mod
 import org.scalajs.dom.raw.ClipboardEvent
 import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.ErrorEvent
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.KeyboardEvent
@@ -11,7 +12,6 @@ import org.scalajs.dom.raw.PointerEvent
 import org.scalajs.dom.raw.ProgressEvent
 import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
-import typingsSlinky.std.Event_
 import typingsSlinky.std.MediaStreamErrorEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -110,13 +110,13 @@ trait ElementAttrs extends js.Object {
   val onabort: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ UIEvent, _]] = js.native
   val onauxclick: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.native
   val onblur: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ FocusEvent, _]] = js.native
-  val oncanplay: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
-  val oncanplaythrough: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
-  val onchange: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
+  val oncanplay: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
+  val oncanplaythrough: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
+  val onchange: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
   val onclick: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.native
   val oncontextmenu: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.native
   val oncopy: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ ClipboardEvent, _]] = js.native
-  val oncuechange: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
+  val oncuechange: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
   val oncut: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ ClipboardEvent, _]] = js.native
   val ondblclick: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.native
   val ondrag: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]] = js.native
@@ -127,21 +127,21 @@ trait ElementAttrs extends js.Object {
   val ondragover: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]] = js.native
   val ondragstart: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]] = js.native
   val ondrop: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ DragEvent, _]] = js.native
-  val ondurationchange: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
-  val onemptied: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
+  val ondurationchange: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
+  val onemptied: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
   val onended: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MediaStreamErrorEvent, _]] = js.native
   val onerror: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ ErrorEvent, _]] = js.native
   val onfocus: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ FocusEvent, _]] = js.native
-  val oninput: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
-  val oninvalid: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
+  val oninput: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
+  val oninvalid: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
   val onkeydown: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ KeyboardEvent, _]] = js.native
   val onkeypress: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ KeyboardEvent, _]] = js.native
   val onkeyup: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ KeyboardEvent, _]] = js.native
-  val onload: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
-  val onloadeddata: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
-  val onloadedmetadata: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
-  val onloadend: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
-  val onloadstart: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
+  val onload: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
+  val onloadeddata: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
+  val onloadedmetadata: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
+  val onloadend: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
+  val onloadstart: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
   val onmousedown: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.native
   val onmouseenter: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.native
   val onmouseleave: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.native
@@ -151,9 +151,9 @@ trait ElementAttrs extends js.Object {
   val onmouseup: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ MouseEvent, _]] = js.native
   val onmousewheel: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ WheelEvent, _]] = js.native
   val onpaste: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ ClipboardEvent, _]] = js.native
-  val onpause: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
-  val onplay: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
-  val onplaying: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
+  val onpause: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
+  val onplay: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
+  val onplaying: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
   val onpointercancel: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.native
   val onpointerdown: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.native
   val onpointerenter: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.native
@@ -163,19 +163,19 @@ trait ElementAttrs extends js.Object {
   val onpointerover: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.native
   val onpointerup: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ PointerEvent, _]] = js.native
   val onprogress: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ ProgressEvent, _]] = js.native
-  val onratechange: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
-  val onreset: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
+  val onratechange: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
+  val onreset: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
   val onscroll: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ UIEvent, _]] = js.native
-  val onseeked: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
-  val onseeking: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
+  val onseeked: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
+  val onseeking: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
   val onselect: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ UIEvent, _]] = js.native
-  val onselectstart: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
-  val onstalled: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
-  val onsubmit: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
-  val onsuspend: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
-  val ontimeupdate: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
-  val onvolumechange: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
-  val onwaiting: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]] = js.native
+  val onselectstart: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
+  val onstalled: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
+  val onsubmit: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
+  val onsuspend: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
+  val ontimeupdate: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
+  val onvolumechange: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
+  val onwaiting: js.UndefOr[js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]] = js.native
   val optimum: js.UndefOr[String] = js.native
   val pattern: js.UndefOr[String] = js.native
   val placeholder: js.UndefOr[String] = js.native
@@ -1057,7 +1057,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOncanplay(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOncanplay(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oncanplay")(value.asInstanceOf[js.Any])
         ret
@@ -1069,7 +1069,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOncanplaythrough(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOncanplaythrough(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oncanplaythrough")(value.asInstanceOf[js.Any])
         ret
@@ -1081,7 +1081,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOnchange(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOnchange(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onchange")(value.asInstanceOf[js.Any])
         ret
@@ -1129,7 +1129,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOncuechange(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOncuechange(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oncuechange")(value.asInstanceOf[js.Any])
         ret
@@ -1261,7 +1261,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOndurationchange(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOndurationchange(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ondurationchange")(value.asInstanceOf[js.Any])
         ret
@@ -1273,7 +1273,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOnemptied(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOnemptied(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onemptied")(value.asInstanceOf[js.Any])
         ret
@@ -1321,7 +1321,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOninput(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOninput(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oninput")(value.asInstanceOf[js.Any])
         ret
@@ -1333,7 +1333,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOninvalid(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOninvalid(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oninvalid")(value.asInstanceOf[js.Any])
         ret
@@ -1381,7 +1381,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOnload(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOnload(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onload")(value.asInstanceOf[js.Any])
         ret
@@ -1393,7 +1393,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOnloadeddata(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOnloadeddata(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onloadeddata")(value.asInstanceOf[js.Any])
         ret
@@ -1405,7 +1405,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOnloadedmetadata(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOnloadedmetadata(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onloadedmetadata")(value.asInstanceOf[js.Any])
         ret
@@ -1417,7 +1417,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOnloadend(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOnloadend(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onloadend")(value.asInstanceOf[js.Any])
         ret
@@ -1429,7 +1429,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOnloadstart(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOnloadstart(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onloadstart")(value.asInstanceOf[js.Any])
         ret
@@ -1549,7 +1549,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOnpause(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOnpause(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onpause")(value.asInstanceOf[js.Any])
         ret
@@ -1561,7 +1561,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOnplay(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOnplay(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onplay")(value.asInstanceOf[js.Any])
         ret
@@ -1573,7 +1573,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOnplaying(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOnplaying(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onplaying")(value.asInstanceOf[js.Any])
         ret
@@ -1693,7 +1693,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOnratechange(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOnratechange(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onratechange")(value.asInstanceOf[js.Any])
         ret
@@ -1705,7 +1705,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOnreset(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOnreset(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onreset")(value.asInstanceOf[js.Any])
         ret
@@ -1729,7 +1729,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOnseeked(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOnseeked(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onseeked")(value.asInstanceOf[js.Any])
         ret
@@ -1741,7 +1741,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOnseeking(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOnseeking(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onseeking")(value.asInstanceOf[js.Any])
         ret
@@ -1765,7 +1765,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOnselectstart(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOnselectstart(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onselectstart")(value.asInstanceOf[js.Any])
         ret
@@ -1777,7 +1777,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOnstalled(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOnstalled(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onstalled")(value.asInstanceOf[js.Any])
         ret
@@ -1789,7 +1789,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOnsubmit(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOnsubmit(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onsubmit")(value.asInstanceOf[js.Any])
         ret
@@ -1801,7 +1801,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOnsuspend(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOnsuspend(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onsuspend")(value.asInstanceOf[js.Any])
         ret
@@ -1813,7 +1813,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOntimeupdate(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOntimeupdate(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ontimeupdate")(value.asInstanceOf[js.Any])
         ret
@@ -1825,7 +1825,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOnvolumechange(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOnvolumechange(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onvolumechange")(value.asInstanceOf[js.Any])
         ret
@@ -1837,7 +1837,7 @@ object ElementAttrs {
         ret
     }
     @scala.inline
-    def withOnwaiting(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event_, _]): Self = {
+    def withOnwaiting(value: js.ThisFunction1[/* this */ HTMLElement, /* event */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onwaiting")(value.asInstanceOf[js.Any])
         ret

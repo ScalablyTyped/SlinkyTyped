@@ -1,7 +1,7 @@
 package typingsSlinky.mocha.commonMod
 
-import typingsSlinky.mocha.Mocha_
-import typingsSlinky.mocha.Mocha_.Test_
+import typingsSlinky.mocha.Mocha
+import typingsSlinky.mocha.Mocha.Test
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait TestFunctions extends js.Object {
   /**
     * Exclusive test-case.
     */
-  def only(mocha: Mocha_, test: Test_): Test_ = js.native
+  def only(mocha: Mocha, test: Test): Test = js.native
   /**
     * Number of retry attempts
     */
@@ -24,7 +24,7 @@ trait TestFunctions extends js.Object {
 
 object TestFunctions {
   @scala.inline
-  def apply(only: (Mocha_, Test_) => Test_, retries: Double => Unit, skip: String => Unit): TestFunctions = {
+  def apply(only: (Mocha, Test) => Test, retries: Double => Unit, skip: String => Unit): TestFunctions = {
     val __obj = js.Dynamic.literal(only = js.Any.fromFunction2(only), retries = js.Any.fromFunction1(retries), skip = js.Any.fromFunction1(skip))
     __obj.asInstanceOf[TestFunctions]
   }
@@ -35,7 +35,7 @@ object TestFunctions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnly(value: (Mocha_, Test_) => Test_): Self = {
+    def withOnly(value: (Mocha, Test) => Test): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("only")(js.Any.fromFunction2(value))
         ret

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`nautical-miles`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`square-centimeters`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`square-decimeters`
@@ -98,8 +97,4 @@ trait geodesicUtils extends js.Object {
     */
   def pointFromDistance(point: Point, distance: Double, azimuth: Double): Point = js.native
 }
-
-@JSGlobal("__esri.geodesicUtils")
-@js.native
-object geodesicUtils extends TopLevel[geodesicUtils]
 

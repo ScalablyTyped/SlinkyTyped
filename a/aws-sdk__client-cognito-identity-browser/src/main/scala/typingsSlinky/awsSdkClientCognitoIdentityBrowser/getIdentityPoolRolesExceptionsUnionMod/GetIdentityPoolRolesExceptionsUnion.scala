@@ -1,0 +1,37 @@
+package typingsSlinky.awsSdkClientCognitoIdentityBrowser.getIdentityPoolRolesExceptionsUnionMod
+
+import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesInternalErrorExceptionMod.InternalErrorException
+import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesInvalidParameterExceptionMod.InvalidParameterException
+import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesNotAuthorizedExceptionMod.NotAuthorizedException
+import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesResourceConflictExceptionMod.ResourceConflictException
+import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesResourceNotFoundExceptionMod.ResourceNotFoundException
+import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesTooManyRequestsExceptionMod.TooManyRequestsException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesInvalidParameterExceptionMod.InvalidParameterException
+  - typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesResourceNotFoundExceptionMod.ResourceNotFoundException
+  - typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesNotAuthorizedExceptionMod.NotAuthorizedException
+  - typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesResourceConflictExceptionMod.ResourceConflictException
+  - typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesTooManyRequestsExceptionMod.TooManyRequestsException
+  - typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesInternalErrorExceptionMod.InternalErrorException
+*/
+trait GetIdentityPoolRolesExceptionsUnion extends js.Object
+
+object GetIdentityPoolRolesExceptionsUnion {
+  @scala.inline
+  implicit def apply(value: InternalErrorException): GetIdentityPoolRolesExceptionsUnion = value.asInstanceOf[GetIdentityPoolRolesExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidParameterException): GetIdentityPoolRolesExceptionsUnion = value.asInstanceOf[GetIdentityPoolRolesExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: NotAuthorizedException): GetIdentityPoolRolesExceptionsUnion = value.asInstanceOf[GetIdentityPoolRolesExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: ResourceConflictException): GetIdentityPoolRolesExceptionsUnion = value.asInstanceOf[GetIdentityPoolRolesExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: ResourceNotFoundException): GetIdentityPoolRolesExceptionsUnion = value.asInstanceOf[GetIdentityPoolRolesExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: TooManyRequestsException): GetIdentityPoolRolesExceptionsUnion = value.asInstanceOf[GetIdentityPoolRolesExceptionsUnion]
+}
+

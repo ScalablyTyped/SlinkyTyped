@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.ChartPlotAreaFormatData
 import typingsSlinky.officeJs.Excel.Interfaces.ChartPlotAreaFormatLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.ChartPlotAreaFormatUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.8]
   */
-@JSGlobal("Excel.ChartPlotAreaFormat")
 @js.native
-class ChartPlotAreaFormat () extends ClientObject {
+trait ChartPlotAreaFormat extends ClientObject {
   /**
     *
     * Represents the border attributes of a chart plotArea.
@@ -43,7 +42,7 @@ class ChartPlotAreaFormat () extends ClientObject {
     */
   def load(): ChartPlotAreaFormat = js.native
   def load(options: ChartPlotAreaFormatLoadOptions): ChartPlotAreaFormat = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartPlotAreaFormat = js.native
+  def load(propertyNamesAndPaths: Expand): ChartPlotAreaFormat = js.native
   def load(propertyNames: String): ChartPlotAreaFormat = js.native
   def load(propertyNames: js.Array[String]): ChartPlotAreaFormat = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

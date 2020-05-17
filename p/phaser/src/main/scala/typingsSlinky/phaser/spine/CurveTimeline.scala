@@ -4,10 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("spine.CurveTimeline")
 @js.native
-abstract class CurveTimeline protected () extends Timeline {
-  def this(frameCount: Double) = this()
+trait CurveTimeline extends Timeline {
   var curves: js.Any = js.native
   def getCurvePercent(frameIndex: Double, percent: Double): Double = js.native
   def getCurveType(frameIndex: Double): Double = js.native
@@ -17,13 +15,71 @@ abstract class CurveTimeline protected () extends Timeline {
   def setStepped(frameIndex: Double): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("spine.CurveTimeline")
-@js.native
-object CurveTimeline extends js.Object {
-  var BEZIER: Double = js.native
-  var BEZIER_SIZE: Double = js.native
-  var LINEAR: Double = js.native
-  var STEPPED: Double = js.native
+object CurveTimeline {
+  @scala.inline
+  def apply(
+    apply: (Skeleton, Double, Double, js.Array[Event], Double, MixBlend, MixDirection) => Unit,
+    curves: js.Any,
+    getCurvePercent: (Double, Double) => Double,
+    getCurveType: Double => Double,
+    getFrameCount: () => Double,
+    getPropertyId: () => Double,
+    setCurve: (Double, Double, Double, Double, Double) => Unit,
+    setLinear: Double => Unit,
+    setStepped: Double => Unit
+  ): CurveTimeline = {
+    val __obj = js.Dynamic.literal(apply = js.Any.fromFunction7(apply), curves = curves.asInstanceOf[js.Any], getCurvePercent = js.Any.fromFunction2(getCurvePercent), getCurveType = js.Any.fromFunction1(getCurveType), getFrameCount = js.Any.fromFunction0(getFrameCount), getPropertyId = js.Any.fromFunction0(getPropertyId), setCurve = js.Any.fromFunction5(setCurve), setLinear = js.Any.fromFunction1(setLinear), setStepped = js.Any.fromFunction1(setStepped))
+    __obj.asInstanceOf[CurveTimeline]
+  }
+  @scala.inline
+  implicit class CurveTimelineOps[Self <: CurveTimeline] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurves(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("curves")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetCurvePercent(value: (Double, Double) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurvePercent")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetCurveType(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurveType")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetFrameCount(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFrameCount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetCurve(value: (Double, Double, Double, Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setCurve")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withSetLinear(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setLinear")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetStepped(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStepped")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

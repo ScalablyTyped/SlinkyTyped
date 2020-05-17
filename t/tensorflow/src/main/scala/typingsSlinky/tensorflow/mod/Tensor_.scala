@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Tensor_ extends js.Object {
+trait Tensor_ extends SessionRunResult {
   var shape: js.Array[Double] = js.native
   var `type`: Types = js.native
   var value: Buffer | TensorValue = js.native

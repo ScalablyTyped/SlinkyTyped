@@ -1,6 +1,6 @@
 package typingsSlinky.karmaViewport.mod.karmaAugmentingMod
 
-import typingsSlinky.karmaViewport.PartialViewportConfigurat
+import typingsSlinky.karmaViewport.anon.PartialViewportConfigurat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

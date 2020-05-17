@@ -1,6 +1,6 @@
 package typingsSlinky.doublearray.doublearray
 
-import typingsSlinky.doublearray.AnonAll
+import typingsSlinky.doublearray.anon.All
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DoubleArray extends js.Object {
   var bc: BaseAndCheck = js.native
-  def calc(): AnonAll = js.native
+  def calc(): All = js.native
   def commonPrefixSearch(key: String): KeyValue = js.native
   def contain(key: String): Boolean = js.native
   def dump(): String = js.native
@@ -21,7 +21,7 @@ object DoubleArray {
   @scala.inline
   def apply(
     bc: BaseAndCheck,
-    calc: () => AnonAll,
+    calc: () => All,
     commonPrefixSearch: String => KeyValue,
     contain: String => Boolean,
     dump: () => String,
@@ -45,7 +45,7 @@ object DoubleArray {
         ret
     }
     @scala.inline
-    def withCalc(value: () => AnonAll): Self = {
+    def withCalc(value: () => All): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("calc")(js.Any.fromFunction0(value))
         ret

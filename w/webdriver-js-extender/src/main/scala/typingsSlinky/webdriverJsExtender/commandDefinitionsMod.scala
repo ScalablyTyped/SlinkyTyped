@@ -1,6 +1,7 @@
 package typingsSlinky.webdriverJsExtender
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.webdriverJsExtender.anon.Altitude
 import typingsSlinky.webdriverJsExtender.commandDefinitionMod.CommandDefinition
 import typingsSlinky.webdriverJsExtender.webdriverJsExtenderStrings.LANDSCAPE
 import typingsSlinky.webdriverJsExtender.webdriverJsExtenderStrings.PORTRAIT
@@ -18,7 +19,7 @@ object commandDefinitionsMod extends js.Object {
   var getCurrentContext: CommandDefinition[String] = js.native
   var getCurrentDeviceActivity: CommandDefinition[String] = js.native
   var getDeviceTime: CommandDefinition[String] = js.native
-  var getGeolocation: CommandDefinition[AnonAltitude] = js.native
+  var getGeolocation: CommandDefinition[Altitude] = js.native
   var getNetworkConnection: CommandDefinition[Double] = js.native
   var getScreenOrientation: CommandDefinition[LANDSCAPE | PORTRAIT] = js.native
   var hideSoftKeyboard: CommandDefinition[Unit] = js.native

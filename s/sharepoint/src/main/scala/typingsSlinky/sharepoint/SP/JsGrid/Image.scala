@@ -6,19 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("SP.JsGrid.Image")
 @js.native
-class Image protected () extends js.Object {
-  /** optOuterCssNames and optImgCssNames are strings that contain css class names separated by spaces.
-    optImgCssNames are applied to the img tag.
-    if bIsClustered, image is rendered inside div, and optOuterCssNames are applied to the div. */
-  def this(
-    imgSrc: String,
-    bIsClustered: Boolean,
-    optOuterCssNames: String,
-    optImgCssNames: String,
-    bIsAnimated: Boolean
-  ) = this()
+trait Image extends js.Object {
   var bIsAnimated: Boolean = js.native
   var bIsClustered: Boolean = js.native
   var imgCssNames: String = js.native
@@ -27,5 +16,64 @@ class Image protected () extends js.Object {
   /** Renders the image with specified alternative text and on-click handler.
     If bHideTooltip == false, then alternative text is also shown as the tooltip (title attribute). */
   def Render(altText: String, clickFn: js.Function1[/* eventInfo */ DomEvent, Unit], bHideTooltip: Boolean): HTMLElement = js.native
+}
+
+object Image {
+  @scala.inline
+  def apply(
+    Render: (String, js.Function1[/* eventInfo */ DomEvent, Unit], Boolean) => HTMLElement,
+    bIsAnimated: Boolean,
+    bIsClustered: Boolean,
+    imgCssNames: String,
+    imgSrc: String,
+    optOuterCssNames: String
+  ): Image = {
+    val __obj = js.Dynamic.literal(Render = js.Any.fromFunction3(Render), bIsAnimated = bIsAnimated.asInstanceOf[js.Any], bIsClustered = bIsClustered.asInstanceOf[js.Any], imgCssNames = imgCssNames.asInstanceOf[js.Any], imgSrc = imgSrc.asInstanceOf[js.Any], optOuterCssNames = optOuterCssNames.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Image]
+  }
+  @scala.inline
+  implicit class ImageOps[Self <: Image] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRender(value: (String, js.Function1[/* eventInfo */ DomEvent, Unit], Boolean) => HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Render")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withBIsAnimated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bIsAnimated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBIsClustered(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bIsClustered")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImgCssNames(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imgCssNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImgSrc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imgSrc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOptOuterCssNames(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("optOuterCssNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

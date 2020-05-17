@@ -12,10 +12,8 @@ import scala.scalajs.js.annotation._
   * @param {Array<number[]>} [curveKeys] - An array of arrays of keys (pairs of numbers with
   * the time first and value second).
   */
-@JSGlobal("pc.CurveSet")
 @js.native
-class CurveSet () extends js.Object {
-  def this(curveKeys: js.Array[js.Array[Double]]) = this()
+trait CurveSet extends js.Object {
   /**
     * @readonly
     * @name pc.CurveSet#length

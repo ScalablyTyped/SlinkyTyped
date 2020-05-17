@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartLegendEntryData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartLegendEntryLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartLegendEntryUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.7]
   */
-@JSGlobal("Excel.ChartLegendEntry")
 @js.native
-class ChartLegendEntry () extends ClientObject {
+trait ChartLegendEntry extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_ChartLegendEntry: RequestContext = js.native
@@ -71,7 +70,7 @@ class ChartLegendEntry () extends ClientObject {
     */
   def load(): ChartLegendEntry = js.native
   def load(options: ChartLegendEntryLoadOptions): ChartLegendEntry = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartLegendEntry = js.native
+  def load(propertyNamesAndPaths: Expand): ChartLegendEntry = js.native
   def load(propertyNames: String): ChartLegendEntry = js.native
   def load(propertyNames: js.Array[String]): ChartLegendEntry = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

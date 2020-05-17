@@ -1,25 +1,21 @@
 package typingsSlinky.koaJoiRouter.mod
 
+import typingsSlinky.koaJoiRouter.anon.Body
+import typingsSlinky.koaJoiRouter.anon.Headers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.koaJoiRouter.AnonBody
-  - typingsSlinky.koaJoiRouter.AnonHeaders
+  - typingsSlinky.koaJoiRouter.anon.Body
+  - typingsSlinky.koaJoiRouter.anon.Headers
 */
 trait OutputValidation extends js.Object
 
 object OutputValidation {
   @scala.inline
-  def AnonBody(): OutputValidation = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[OutputValidation]
-  }
+  implicit def apply(value: Body): OutputValidation = value.asInstanceOf[OutputValidation]
   @scala.inline
-  def AnonHeaders(): OutputValidation = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[OutputValidation]
-  }
+  implicit def apply(value: Headers): OutputValidation = value.asInstanceOf[OutputValidation]
 }
 

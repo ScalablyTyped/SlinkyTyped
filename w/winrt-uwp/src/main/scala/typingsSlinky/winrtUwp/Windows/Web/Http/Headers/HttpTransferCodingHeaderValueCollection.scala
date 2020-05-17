@@ -1,18 +1,17 @@
 package typingsSlinky.winrtUwp.Windows.Web.Http.Headers
 
 import typingsSlinky.std.Array
-import typingsSlinky.winrtUwp.AnonIndex
-import typingsSlinky.winrtUwp.AnonItemsHttpTransferCodingHeaderValue
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
+import typingsSlinky.winrtUwp.anon.Index
+import typingsSlinky.winrtUwp.anon.ItemsHttpTransferCodingHeaderValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the value of the Transfer-Encoding HTTP header on an HTTP request. */
-@JSGlobal("Windows.Web.Http.Headers.HttpTransferCodingHeaderValueCollection")
 @js.native
-abstract class HttpTransferCodingHeaderValueCollection () extends Array[HttpTransferCodingHeaderValue] {
+trait HttpTransferCodingHeaderValueCollection extends Array[HttpTransferCodingHeaderValue] {
   /** Gets the number of HttpTransferCodingHeaderValue objects in the collection. */
   var size: Double = js.native
   /**
@@ -37,19 +36,13 @@ abstract class HttpTransferCodingHeaderValueCollection () extends Array[HttpTran
     * Retrieves the HttpTransferCodingHeaderValue items that start at the specified index in the collection.
     * @param startIndex The zero-based index of the start of the HttpTransferCodingHeaderValue items in the HttpTransferCodingHeaderValueCollection .
     */
-  def getMany(startIndex: Double): AnonItemsHttpTransferCodingHeaderValue = js.native
+  def getMany(startIndex: Double): ItemsHttpTransferCodingHeaderValue = js.native
   /**
     * Returns an immutable view of the HttpTransferCodingHeaderValueCollection .
     * @return The view of the HttpTransferCodingHeaderValueCollection .
     */
   def getView(): IVectorView[HttpTransferCodingHeaderValue] = js.native
-  def indexOf(value: HttpTransferCodingHeaderValue, extra: js.Any*): AnonIndex = js.native
-  /**
-    * Retrieves the index of an HttpTransferCodingHeaderValue in the collection.
-    * @param value The HttpTransferCodingHeaderValue to find in the HttpTransferCodingHeaderValueCollection .
-    */
-  @JSName("indexOf")
-  def indexOf_AnonIndex(value: HttpTransferCodingHeaderValue): AnonIndex = js.native
+  def indexOf(value: HttpTransferCodingHeaderValue, extra: js.Any*): Index = js.native
   /**
     * Determines the index of a specific item in the collection.
     * @param item The object to locate in the collection.
@@ -58,6 +51,12 @@ abstract class HttpTransferCodingHeaderValueCollection () extends Array[HttpTran
   /* hack */
   @JSName("indexOf")
   def indexOf_Double(item: HttpTransferCodingHeaderValue): Double = js.native
+  /**
+    * Retrieves the index of an HttpTransferCodingHeaderValue in the collection.
+    * @param value The HttpTransferCodingHeaderValue to find in the HttpTransferCodingHeaderValueCollection .
+    */
+  @JSName("indexOf")
+  def indexOf_Index(value: HttpTransferCodingHeaderValue): Index = js.native
   /**
     * Inserts an HttpTransferCodingHeaderValue into the collection at the specified index.
     * @param index The zero-based index at which value should be inserted.

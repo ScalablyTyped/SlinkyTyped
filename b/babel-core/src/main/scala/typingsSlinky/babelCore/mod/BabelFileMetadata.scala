@@ -1,20 +1,20 @@
 package typingsSlinky.babelCore.mod
 
-import typingsSlinky.babelCore.AnonLoc
+import typingsSlinky.babelCore.anon.Loc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait BabelFileMetadata extends js.Object {
-  var marked: js.Array[AnonLoc] = js.native
+  var marked: js.Array[Loc] = js.native
   var modules: BabelFileModulesMetadata = js.native
   var usedHelpers: js.Array[String] = js.native
 }
 
 object BabelFileMetadata {
   @scala.inline
-  def apply(marked: js.Array[AnonLoc], modules: BabelFileModulesMetadata, usedHelpers: js.Array[String]): BabelFileMetadata = {
+  def apply(marked: js.Array[Loc], modules: BabelFileModulesMetadata, usedHelpers: js.Array[String]): BabelFileMetadata = {
     val __obj = js.Dynamic.literal(marked = marked.asInstanceOf[js.Any], modules = modules.asInstanceOf[js.Any], usedHelpers = usedHelpers.asInstanceOf[js.Any])
     __obj.asInstanceOf[BabelFileMetadata]
   }
@@ -25,7 +25,7 @@ object BabelFileMetadata {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMarked(value: js.Array[AnonLoc]): Self = {
+    def withMarked(value: js.Array[Loc]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("marked")(value.asInstanceOf[js.Any])
         ret

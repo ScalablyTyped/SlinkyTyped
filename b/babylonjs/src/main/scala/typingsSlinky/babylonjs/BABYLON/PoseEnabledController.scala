@@ -4,16 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.PoseEnabledController")
 @js.native
-class PoseEnabledController protected ()
+trait PoseEnabledController
   extends Gamepad
      with PoseControlled {
-  /**
-    * Creates a new PoseEnabledController from a gamepad
-    * @param browserGamepad the gamepad that the PoseEnabledController should be created from
-    */
-  def this(browserGamepad: js.Any) = this()
   var _calculatedPosition: Vector3 = js.native
   var _calculatedRotation: js.Any = js.native
   var _deviceRoomPosition: js.Any = js.native
@@ -90,15 +84,5 @@ class PoseEnabledController protected ()
     * The mesh that is attached to the controller
     */
   def mesh: Nullable[AbstractMesh] = js.native
-}
-
-/* static members */
-@JSGlobal("BABYLON.PoseEnabledController")
-@js.native
-object PoseEnabledController extends js.Object {
-  /**
-    * Name of the child mesh that can be used to cast a ray from the controller
-    */
-  val POINTING_POSE: String = js.native
 }
 

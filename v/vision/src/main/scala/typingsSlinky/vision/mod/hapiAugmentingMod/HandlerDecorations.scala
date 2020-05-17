@@ -1,6 +1,6 @@
 package typingsSlinky.vision.mod.hapiAugmentingMod
 
-import typingsSlinky.vision.AnonContext
+import typingsSlinky.vision.anon.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait HandlerDecorations extends js.Object {
     * (these can be overriden by values explicitly set via the options).
     * @see {@link https://github.com/hapijs/vision/blob/master/API.md#the-view-handler}
     */
-  var view: js.UndefOr[String | AnonContext] = js.native
+  var view: js.UndefOr[String | Context] = js.native
 }
 
 object HandlerDecorations {
@@ -32,7 +32,7 @@ object HandlerDecorations {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withView(value: String | AnonContext): Self = {
+    def withView(value: String | Context): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
         ret

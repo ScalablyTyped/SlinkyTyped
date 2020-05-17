@@ -41,9 +41,8 @@ import scala.scalajs.js.annotation._
 		 * A table view is used to present information, organized in sections and rows, in a
 		 * vertically-scrolling view.
 		 */
-@JSGlobal("Titanium.UI.TableView")
 @js.native
-class TableView () extends View {
+trait TableView extends View {
   /**
   			 * Determines whether multiple items of this table view can be selected at the same time while editing the table.
   			 */

@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IQuery extends _IMinecraftObject {
+trait IQuery extends IMinecraftObject {
   /**
     * The type of the object
     */

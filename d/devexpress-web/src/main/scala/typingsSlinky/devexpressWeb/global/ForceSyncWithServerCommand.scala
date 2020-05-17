@@ -1,0 +1,14 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * A command to force synchronizing the server document model with the client model and execute a callback function if it is necessary.
+  */
+@JSGlobal("ForceSyncWithServerCommand")
+@js.native
+class ForceSyncWithServerCommand ()
+  extends typingsSlinky.devexpressWeb.ForceSyncWithServerCommand
+

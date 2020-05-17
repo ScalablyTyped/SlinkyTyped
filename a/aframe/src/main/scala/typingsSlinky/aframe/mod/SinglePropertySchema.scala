@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SinglePropertySchema[T] extends js.Object {
+trait SinglePropertySchema[T] extends Schema_[T] {
   var default: js.UndefOr[T] = js.native
   var parse: js.UndefOr[js.Function1[/* value */ String, T]] = js.native
   var stringify: js.UndefOr[js.Function1[/* value */ T, String]] = js.native

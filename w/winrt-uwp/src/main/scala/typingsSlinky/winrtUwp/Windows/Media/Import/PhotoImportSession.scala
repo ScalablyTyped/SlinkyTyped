@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a photo import session with a photo import source. */
-@JSGlobal("Windows.Media.Import.PhotoImportSession")
 @js.native
-abstract class PhotoImportSession () extends js.Object {
+trait PhotoImportSession extends js.Object {
   /** Gets or sets a value specifying whether the session date should be appended to the destination folder name. */
   var appendSessionDateToDestinationFolder: Boolean = js.native
   /** Gets or sets the prefix for the destination file name. */
@@ -31,5 +30,80 @@ abstract class PhotoImportSession () extends js.Object {
     * @return An asynchronous operation that returns a PhotoImportFindItemsResult on successful completion.
     */
   def findItemsAsync(contentTypeFilter: PhotoImportContentTypeFilter, itemSelectionMode: PhotoImportItemSelectionMode): IPromiseWithIAsyncOperationWithProgress[PhotoImportFindItemsResult, Double] = js.native
+}
+
+object PhotoImportSession {
+  @scala.inline
+  def apply(
+    appendSessionDateToDestinationFolder: Boolean,
+    close: () => Unit,
+    destinationFileNamePrefix: String,
+    destinationFolder: IStorageFolder,
+    findItemsAsync: (PhotoImportContentTypeFilter, PhotoImportItemSelectionMode) => IPromiseWithIAsyncOperationWithProgress[PhotoImportFindItemsResult, Double],
+    sessionId: String,
+    source: PhotoImportSource,
+    subfolderCreationMode: PhotoImportSubfolderCreationMode
+  ): PhotoImportSession = {
+    val __obj = js.Dynamic.literal(appendSessionDateToDestinationFolder = appendSessionDateToDestinationFolder.asInstanceOf[js.Any], close = js.Any.fromFunction0(close), destinationFileNamePrefix = destinationFileNamePrefix.asInstanceOf[js.Any], destinationFolder = destinationFolder.asInstanceOf[js.Any], findItemsAsync = js.Any.fromFunction2(findItemsAsync), sessionId = sessionId.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], subfolderCreationMode = subfolderCreationMode.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PhotoImportSession]
+  }
+  @scala.inline
+  implicit class PhotoImportSessionOps[Self <: PhotoImportSession] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppendSessionDateToDestinationFolder(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendSessionDateToDestinationFolder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDestinationFileNamePrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationFileNamePrefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestinationFolder(value: IStorageFolder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destinationFolder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFindItemsAsync(
+      value: (PhotoImportContentTypeFilter, PhotoImportItemSelectionMode) => IPromiseWithIAsyncOperationWithProgress[PhotoImportFindItemsResult, Double]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findItemsAsync")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSessionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSource(value: PhotoImportSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubfolderCreationMode(value: PhotoImportSubfolderCreationMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subfolderCreationMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

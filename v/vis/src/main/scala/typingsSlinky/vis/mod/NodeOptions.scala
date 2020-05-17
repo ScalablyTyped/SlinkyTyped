@@ -1,11 +1,11 @@
 package typingsSlinky.vis.mod
 
-import typingsSlinky.vis.AnonAlign
-import typingsSlinky.vis.AnonBorderDashes
-import typingsSlinky.vis.AnonBottom
-import typingsSlinky.vis.AnonCode
-import typingsSlinky.vis.AnonMaximum
-import typingsSlinky.vis.AnonX
+import typingsSlinky.vis.anon.Align
+import typingsSlinky.vis.anon.BorderDashes
+import typingsSlinky.vis.anon.Bottom
+import typingsSlinky.vis.anon.Code
+import typingsSlinky.vis.anon.Maximum
+import typingsSlinky.vis.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,22 +16,22 @@ trait NodeOptions extends js.Object {
   var borderWidthSelected: js.UndefOr[Double] = js.native
   var brokenImage: js.UndefOr[String] = js.native
   var color: js.UndefOr[String | Color] = js.native
-  var fixed: js.UndefOr[Boolean | AnonX] = js.native
-  var font: js.UndefOr[String | AnonAlign] = js.native
+  var fixed: js.UndefOr[Boolean | X] = js.native
+  var font: js.UndefOr[String | Align] = js.native
   var group: js.UndefOr[String] = js.native
   var hidden: js.UndefOr[Boolean] = js.native
-  var icon: js.UndefOr[AnonCode] = js.native
+  var icon: js.UndefOr[Code] = js.native
   var image: js.UndefOr[String | Image] = js.native
   var label: js.UndefOr[String] = js.native
   var labelHighlightBold: js.UndefOr[Boolean] = js.native
   var level: js.UndefOr[Double] = js.native
-  var margin: js.UndefOr[AnonBottom] = js.native
+  var margin: js.UndefOr[Bottom] = js.native
   var mass: js.UndefOr[Double] = js.native
   var physics: js.UndefOr[Boolean] = js.native
   var scaling: js.UndefOr[OptionsScaling] = js.native
   var shadow: js.UndefOr[Boolean | OptionsShadow] = js.native
   var shape: js.UndefOr[String] = js.native
-  var shapeProperties: js.UndefOr[AnonBorderDashes] = js.native
+  var shapeProperties: js.UndefOr[BorderDashes] = js.native
   var size: js.UndefOr[Double] = js.native
   var title: js.UndefOr[String] = js.native
   var value: js.UndefOr[Double] = js.native
@@ -40,7 +40,7 @@ trait NodeOptions extends js.Object {
     * The node's label's lines will be broken on spaces to stay below the maximum and the node's width
     * will be set to the minimum if less than the value.
     */
-  var widthConstraint: js.UndefOr[Double | Boolean | AnonMaximum] = js.native
+  var widthConstraint: js.UndefOr[Double | Boolean | Maximum] = js.native
   var x: js.UndefOr[Double] = js.native
   var y: js.UndefOr[Double] = js.native
 }
@@ -106,7 +106,7 @@ object NodeOptions {
         ret
     }
     @scala.inline
-    def withFixed(value: Boolean | AnonX): Self = {
+    def withFixed(value: Boolean | X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fixed")(value.asInstanceOf[js.Any])
         ret
@@ -118,7 +118,7 @@ object NodeOptions {
         ret
     }
     @scala.inline
-    def withFont(value: String | AnonAlign): Self = {
+    def withFont(value: String | Align): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
         ret
@@ -154,7 +154,7 @@ object NodeOptions {
         ret
     }
     @scala.inline
-    def withIcon(value: AnonCode): Self = {
+    def withIcon(value: Code): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
         ret
@@ -214,7 +214,7 @@ object NodeOptions {
         ret
     }
     @scala.inline
-    def withMargin(value: AnonBottom): Self = {
+    def withMargin(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
         ret
@@ -286,7 +286,7 @@ object NodeOptions {
         ret
     }
     @scala.inline
-    def withShapeProperties(value: AnonBorderDashes): Self = {
+    def withShapeProperties(value: BorderDashes): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shapeProperties")(value.asInstanceOf[js.Any])
         ret
@@ -334,7 +334,7 @@ object NodeOptions {
         ret
     }
     @scala.inline
-    def withWidthConstraint(value: Double | Boolean | AnonMaximum): Self = {
+    def withWidthConstraint(value: Double | Boolean | Maximum): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("widthConstraint")(value.asInstanceOf[js.Any])
         ret

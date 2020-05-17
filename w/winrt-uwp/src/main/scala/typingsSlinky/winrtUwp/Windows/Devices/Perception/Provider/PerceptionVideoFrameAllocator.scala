@@ -1,30 +1,13 @@
 package typingsSlinky.winrtUwp.Windows.Devices.Perception.Provider
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Size
-import typingsSlinky.winrtUwp.Windows.Graphics.Imaging.BitmapAlphaMode
-import typingsSlinky.winrtUwp.Windows.Graphics.Imaging.BitmapPixelFormat
 import typingsSlinky.winrtUwp.Windows.Media.VideoFrame
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An allocator that can create PerceptionFrames directly which can be written into or copied from Windows::Media::VideoFrame into a PerceptionFrame. */
-@JSGlobal("Windows.Devices.Perception.Provider.PerceptionVideoFrameAllocator")
 @js.native
-class PerceptionVideoFrameAllocator protected () extends js.Object {
-  /**
-    * Initializes a new PerceptionVideoFrameAllocator with the required properties for use by the IPerceptionFrameProvider to create PerceptionFrames published via PerceptionFrameProviderManagerService::PublishFrameForProvider.
-    * @param maxOutstandingFrameCountForWrite This is the number of buffers in flight required by the FrameProvider to produce its * frames at framerate. The suggestion is at least 2.
-    * @param format The Windows::Graphics::Imaging::BitmapPixelFormat describing the format of the bytes of the frame.
-    * @param resolution The resolution in pixels of the frame.
-    * @param alpha The Windows::Graphics::Imaging::BitmapAlphaMode describing how transparency is handled in the pixels.
-    */
-  def this(
-    maxOutstandingFrameCountForWrite: Double,
-    format: BitmapPixelFormat,
-    resolution: Size,
-    alpha: BitmapAlphaMode
-  ) = this()
+trait PerceptionVideoFrameAllocator extends js.Object {
   /**
     * Creates an empty PerceptionFrame with the properties specified when creating the PerceptionVideoFrameAllocator.
     * @return The empty frame with the properties specified when creating the PerceptionVideoFrameAllocator.
@@ -38,5 +21,43 @@ class PerceptionVideoFrameAllocator protected () extends js.Object {
     * @return The resulting filled PerceptionFrame.
     */
   def copyFromVideoFrame(frame: VideoFrame): PerceptionFrame = js.native
+}
+
+object PerceptionVideoFrameAllocator {
+  @scala.inline
+  def apply(
+    allocateFrame: () => PerceptionFrame,
+    close: () => Unit,
+    copyFromVideoFrame: VideoFrame => PerceptionFrame
+  ): PerceptionVideoFrameAllocator = {
+    val __obj = js.Dynamic.literal(allocateFrame = js.Any.fromFunction0(allocateFrame), close = js.Any.fromFunction0(close), copyFromVideoFrame = js.Any.fromFunction1(copyFromVideoFrame))
+    __obj.asInstanceOf[PerceptionVideoFrameAllocator]
+  }
+  @scala.inline
+  implicit class PerceptionVideoFrameAllocatorOps[Self <: PerceptionVideoFrameAllocator] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllocateFrame(value: () => PerceptionFrame): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allocateFrame")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withCopyFromVideoFrame(value: VideoFrame => PerceptionFrame): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyFromVideoFrame")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

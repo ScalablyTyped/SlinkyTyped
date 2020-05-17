@@ -1,6 +1,6 @@
 package typingsSlinky.clmtrackr.mod
 
-import typingsSlinky.clmtrackr.AnonUseWebWorkers
+import typingsSlinky.clmtrackr.anon.UseWebWorkers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait TrackerParams extends js.Object {
   /** whether to use constant velocity model when fitting (default is true) */
   var constantVelocity: js.UndefOr[Boolean] = js.native
   /** object with parameters for facedetection : */
-  var faceDetection: js.UndefOr[AnonUseWebWorkers] = js.native
+  var faceDetection: js.UndefOr[UseWebWorkers] = js.native
   /** threshold for when to assume we've lost tracking (default is 0.50) */
   var scoreThreshold: js.UndefOr[Double] = js.native
   /** the size of the searchwindow around each point (default is 11) */
@@ -46,7 +46,7 @@ object TrackerParams {
         ret
     }
     @scala.inline
-    def withFaceDetection(value: AnonUseWebWorkers): Self = {
+    def withFaceDetection(value: UseWebWorkers): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("faceDetection")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +17,25 @@ trait supportJsonUtils extends js.Object {
   def fromJSON(json: js.Any): Renderer = js.native
 }
 
-@JSGlobal("__esri.supportJsonUtils")
-@js.native
-object supportJsonUtils extends TopLevel[supportJsonUtils]
+object supportJsonUtils {
+  @scala.inline
+  def apply(fromJSON: js.Any => Renderer): supportJsonUtils = {
+    val __obj = js.Dynamic.literal(fromJSON = js.Any.fromFunction1(fromJSON))
+    __obj.asInstanceOf[supportJsonUtils]
+  }
+  @scala.inline
+  implicit class supportJsonUtilsOps[Self <: supportJsonUtils] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFromJSON(value: js.Any => Renderer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromJSON")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

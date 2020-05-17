@@ -1,5 +1,7 @@
 package typingsSlinky.babylonjs
 
+import typingsSlinky.babylonjs.anon.Ratio
+import typingsSlinky.babylonjs.anon.Width
 import typingsSlinky.babylonjs.renderTargetTextureMod.RenderTargetTexture
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
@@ -18,8 +20,8 @@ object multiviewRenderTargetMod extends js.Object {
       */
     def this(scene: Scene) = this()
     def this(scene: Scene, size: Double) = this()
-    def this(scene: Scene, size: AnonRatio) = this()
-    def this(scene: Scene, size: AnonWidth) = this()
+    def this(scene: Scene, size: Ratio) = this()
+    def this(scene: Scene, size: Width) = this()
   }
   
 }

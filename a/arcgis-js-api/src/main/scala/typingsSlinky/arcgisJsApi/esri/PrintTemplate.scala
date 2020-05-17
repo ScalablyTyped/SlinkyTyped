@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`a3-landscape`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`a3-portrait`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`a4-landscape`
@@ -106,8 +105,4 @@ trait PrintTemplate extends Accessor {
     */
   var showLabels: Boolean = js.native
 }
-
-@JSGlobal("__esri.PrintTemplate")
-@js.native
-object PrintTemplate extends TopLevel[PrintTemplateConstructor]
 

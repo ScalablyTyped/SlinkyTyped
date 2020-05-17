@@ -1,8 +1,8 @@
 package typingsSlinky.mochaSugarFree.mod
 
 import typingsSlinky.mocha.mod.Test_
-import typingsSlinky.mochaSugarFree.OptionsasyncfalsefnTestCa
-import typingsSlinky.mochaSugarFree.OptionsasynctruefnTestCas
+import typingsSlinky.mochaSugarFree.anon.OptionsasyncfalsefnTestCa
+import typingsSlinky.mochaSugarFree.anon.OptionsasynctruefnTestCas
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

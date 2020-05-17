@@ -1,6 +1,6 @@
 package typingsSlinky.easyJsend.Express
 
-import typingsSlinky.easyJsend.AnonLimit
+import typingsSlinky.easyJsend.anon.Limit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MakePartialInput extends js.Object {
   var model: js.Any = js.native
-  var opts: AnonLimit = js.native
+  var opts: Limit = js.native
   var result: js.Any = js.native
   var search: js.Object = js.native
 }
 
 object MakePartialInput {
   @scala.inline
-  def apply(model: js.Any, opts: AnonLimit, result: js.Any, search: js.Object): MakePartialInput = {
+  def apply(model: js.Any, opts: Limit, result: js.Any, search: js.Object): MakePartialInput = {
     val __obj = js.Dynamic.literal(model = model.asInstanceOf[js.Any], opts = opts.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any], search = search.asInstanceOf[js.Any])
     __obj.asInstanceOf[MakePartialInput]
   }
@@ -32,7 +32,7 @@ object MakePartialInput {
         ret
     }
     @scala.inline
-    def withOpts(value: AnonLimit): Self = {
+    def withOpts(value: Limit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("opts")(value.asInstanceOf[js.Any])
         ret

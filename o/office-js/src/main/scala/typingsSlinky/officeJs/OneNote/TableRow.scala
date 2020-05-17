@@ -1,9 +1,9 @@
 package typingsSlinky.officeJs.OneNote
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OneNote.Interfaces.TableRowData
 import typingsSlinky.officeJs.OneNote.Interfaces.TableRowLoadOptions
+import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.After
 import typingsSlinky.officeJs.officeJsStrings.Before
 import scala.scalajs.js
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: OneNoteApi 1.1]
   */
-@JSGlobal("OneNote.TableRow")
 @js.native
-class TableRow () extends ClientObject {
+trait TableRow extends ClientObject {
   /**
     *
     * Gets the number of cells in the row. Read-only.
@@ -110,8 +109,8 @@ class TableRow () extends ClientObject {
   def load(): TableRow = js.native
   def load(option: String): TableRow = js.native
   def load(option: js.Array[String]): TableRow = js.native
-  def load(option: AnonExpand): TableRow = js.native
   def load(option: TableRowLoadOptions): TableRow = js.native
+  def load(option: Expand): TableRow = js.native
   /**
     *
     * Sets the shading color of all cells in the row.

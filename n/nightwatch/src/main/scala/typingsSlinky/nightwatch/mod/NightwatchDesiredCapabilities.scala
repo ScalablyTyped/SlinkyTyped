@@ -1,6 +1,6 @@
 package typingsSlinky.nightwatch.mod
 
-import typingsSlinky.nightwatch.AnonBrowser
+import typingsSlinky.nightwatch.anon.Browser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -57,7 +57,7 @@ trait NightwatchDesiredCapabilities extends js.Object {
     * Available values for most loggers are "OFF", "SEVERE", "WARNING", "INFO", "CONFIG", "FINE", "FINER", "FINEST", "ALL".
     * This produces a JSON object looking something like: {"loggingPrefs": {"driver": "INFO", "server": "OFF", "browser": "FINE"}}.
     */
-  var loggingPrefs: js.UndefOr[AnonBrowser] = js.native
+  var loggingPrefs: js.UndefOr[Browser] = js.native
   /**
     * Whether the session is capable of generating native events when simulating user input.
     */
@@ -235,7 +235,7 @@ object NightwatchDesiredCapabilities {
         ret
     }
     @scala.inline
-    def withLoggingPrefs(value: AnonBrowser): Self = {
+    def withLoggingPrefs(value: Browser): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loggingPrefs")(value.asInstanceOf[js.Any])
         ret

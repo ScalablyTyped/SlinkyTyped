@@ -2,7 +2,7 @@ package typingsSlinky.formol.mod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.formol.AnonDictk
+import typingsSlinky.formol.anon.Dictk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SwitchButtonProps extends js.Object {
   var className: js.UndefOr[String] = js.native
-  var i18n: js.UndefOr[AnonDictk] = js.native
+  var i18n: js.UndefOr[Dictk] = js.native
   var leftLabel: js.UndefOr[TagMod[Any]] = js.native
   var rightLabel: js.UndefOr[TagMod[Any]] = js.native
   var `type`: js.UndefOr[String] = js.native
@@ -41,7 +41,7 @@ object SwitchButtonProps {
         ret
     }
     @scala.inline
-    def withI18n(value: AnonDictk): Self = {
+    def withI18n(value: Dictk): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("i18n")(value.asInstanceOf[js.Any])
         ret

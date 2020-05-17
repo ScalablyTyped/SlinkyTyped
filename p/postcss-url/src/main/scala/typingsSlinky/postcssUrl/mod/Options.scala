@@ -1,8 +1,8 @@
 package typingsSlinky.postcssUrl.mod
 
-import typingsSlinky.postcssUrl.AnonAbsolutePath
-import typingsSlinky.postcssUrl.AnonAppend
-import typingsSlinky.postcssUrl.AnonFile
+import typingsSlinky.postcssUrl.anon.AbsolutePath
+import typingsSlinky.postcssUrl.anon.Append
+import typingsSlinky.postcssUrl.anon.File
 import typingsSlinky.postcssUrl.postcssUrlStrings.`inline`
 import typingsSlinky.postcssUrl.postcssUrlStrings.copy
 import typingsSlinky.postcssUrl.postcssUrlStrings.rebase
@@ -33,7 +33,7 @@ trait Options extends js.Object {
   /**
     * Hash options
     */
-  var hashOptions: js.UndefOr[AnonAppend] = js.native
+  var hashOptions: js.UndefOr[Append] = js.native
   /**
     * Do not warn when an SVG URL with a fragment is inlined.
     * PostCSS-URL does not support partial inlining.
@@ -110,7 +110,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withFallback(value: (/* asset */ AnonAbsolutePath, /* dir */ AnonFile) => String): Self = {
+    def withFallback(value: (/* asset */ AbsolutePath, /* dir */ File) => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fallback")(js.Any.fromFunction2(value))
         ret
@@ -146,7 +146,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withHashOptions(value: AnonAppend): Self = {
+    def withHashOptions(value: Append): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hashOptions")(value.asInstanceOf[js.Any])
         ret
@@ -206,7 +206,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withUrlFunction2(value: (/* asset */ AnonAbsolutePath, /* dir */ AnonFile) => String): Self = {
+    def withUrlFunction2(value: (/* asset */ AbsolutePath, /* dir */ File) => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("url")(js.Any.fromFunction2(value))
         ret

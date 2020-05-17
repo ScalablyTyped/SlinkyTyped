@@ -1,7 +1,7 @@
 package typingsSlinky.browserfs.overlayFSMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.browserfs.AnonReadable
+import typingsSlinky.browserfs.anon.Readable
 import typingsSlinky.browserfs.fileFlagMod.FileFlag
 import typingsSlinky.browserfs.fileMod.File
 import typingsSlinky.browserfs.fileSystemMod.BFSCallback
@@ -63,7 +63,7 @@ class UnlockedOverlayFS protected ()
   /* InferMemberOverrides */
   override def existsSync(p: String): Boolean = js.native
   def getDeletionLog(): String = js.native
-  def getOverlayedFileSystems(): AnonReadable = js.native
+  def getOverlayedFileSystems(): Readable = js.native
   /**
     * Called once to load up metadata stored on the writable file system.
     */

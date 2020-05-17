@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeMaterialUi.mod
 
-import typingsSlinky.reactNativeMaterialUi.AnonDefaultActionsContainer
+import typingsSlinky.reactNativeMaterialUi.anon.DefaultActionsContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DialogDefaultActionsProps extends js.Object {
   var actions: js.Array[String] = js.native
-  var style: js.UndefOr[AnonDefaultActionsContainer] = js.native
+  var style: js.UndefOr[DefaultActionsContainer] = js.native
   def onActionPress(action: String): Unit = js.native
 }
 
@@ -37,7 +37,7 @@ object DialogDefaultActionsProps {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonDefaultActionsContainer): Self = {
+    def withStyle(value: DefaultActionsContainer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

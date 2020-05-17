@@ -1,6 +1,6 @@
 package typingsSlinky.autobahn.mod
 
-import typingsSlinky.when.When.Promise_
+import typingsSlinky.when.When.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,6 +18,6 @@ trait IRegistration extends js.Object {
   def endpoint(args: js.Array[_]): Unit = js.native
   def endpoint(args: js.Array[_], kwargs: js.Any): Unit = js.native
   def endpoint(args: js.Array[_], kwargs: js.Any, details: IInvocation): Unit = js.native
-  def unregister(): Promise_[_] = js.native
+  def unregister(): Promise[_] = js.native
 }
 

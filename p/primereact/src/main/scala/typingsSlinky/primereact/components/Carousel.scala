@@ -2,7 +2,7 @@ package typingsSlinky.primereact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonPage
+import typingsSlinky.primereact.anon.Page
 import typingsSlinky.primereact.carouselCarouselMod.CarouselProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -42,7 +42,7 @@ object Carousel {
     @scala.inline
     def numVisible(value: Double): this.type = set("numVisible", value.asInstanceOf[js.Any])
     @scala.inline
-    def onPageChange(value: /* e */ AnonPage => Unit): this.type = set("onPageChange", js.Any.fromFunction1(value))
+    def onPageChange(value: /* e */ Page => Unit): this.type = set("onPageChange", js.Any.fromFunction1(value))
     @scala.inline
     def orientation(value: String): this.type = set("orientation", value.asInstanceOf[js.Any])
     @scala.inline

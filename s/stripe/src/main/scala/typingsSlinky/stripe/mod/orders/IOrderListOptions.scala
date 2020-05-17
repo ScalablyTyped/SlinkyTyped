@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.orders
 
-import typingsSlinky.stripe.AnonFulfilled
+import typingsSlinky.stripe.anon.Fulfilled
 import typingsSlinky.stripe.mod.IListOptionsCreated
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +23,7 @@ trait IOrderListOptions extends IListOptionsCreated {
   /**
     * Filter orders based on when they were "paid", "fulfilled", "canceled", or "returned"
     */
-  var status_transitions: js.UndefOr[AnonFulfilled] = js.native
+  var status_transitions: js.UndefOr[Fulfilled] = js.native
 }
 
 object IOrderListOptions {
@@ -69,7 +69,7 @@ object IOrderListOptions {
         ret
     }
     @scala.inline
-    def withStatus_transitions(value: AnonFulfilled): Self = {
+    def withStatus_transitions(value: Fulfilled): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("status_transitions")(value.asInstanceOf[js.Any])
         ret

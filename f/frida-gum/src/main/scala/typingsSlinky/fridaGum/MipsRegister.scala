@@ -73,7 +73,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.fridaGum.fridaGumStrings.`30`
   - typingsSlinky.fridaGum.fridaGumStrings.`31`
 */
-trait MipsRegister extends _MipsCallArgument
+trait MipsRegister extends MipsCallArgument
 
 object MipsRegister {
   @scala.inline

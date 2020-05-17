@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @JSImport("jsrsasign", "KJUR.asn1.DERNull")
 @js.native
 class DERNull ()
-  extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.DERNull
+  extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ASN1Object
 

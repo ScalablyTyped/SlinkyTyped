@@ -1,7 +1,7 @@
 package typingsSlinky.antdMobile.mod
 
-import typingsSlinky.antdMobile.AnonPrefixCls
-import typingsSlinky.antdMobile.TypeofDefaultTabBar
+import typingsSlinky.antdMobile.anon.PrefixCls
+import typingsSlinky.antdMobile.anon.TypeofDefaultTabBar
 import typingsSlinky.antdMobile.tabsMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,6 +16,6 @@ class Tabs () extends default
 @js.native
 object Tabs extends js.Object {
   var DefaultTabBar: TypeofDefaultTabBar = js.native
-  var defaultProps: AnonPrefixCls = js.native
+  var defaultProps: PrefixCls = js.native
 }
 

@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SelectElement
   extends BaseElement[select]
-     with _MessageFormatElement {
+     with MessageFormatElement {
   var options: Record[String, PluralOrSelectOption] = js.native
 }
 

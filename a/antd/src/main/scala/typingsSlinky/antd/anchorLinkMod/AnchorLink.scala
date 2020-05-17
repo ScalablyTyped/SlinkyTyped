@@ -3,7 +3,7 @@ package typingsSlinky.antd.anchorLinkMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.AnonAntAnchorAntAnchor
+import typingsSlinky.antd.anon.AntAnchorAntAnchor
 import typingsSlinky.antd.contextMod.ConfigConsumerProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 trait AnchorLink
   extends Component[AnchorLinkProps, js.Any, js.Any] {
   @JSName("context")
-  var context_AnchorLink: AnonAntAnchorAntAnchor = js.native
+  var context_AnchorLink: AntAnchorAntAnchor = js.native
   @JSName("componentDidMount")
   def componentDidMount_MAnchorLink(): Unit = js.native
   @JSName("componentDidUpdate")

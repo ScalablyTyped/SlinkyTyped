@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Comment
   extends Base[typingsSlinky.luaparse.luaparseStrings.Comment]
-     with _Node {
+     with Node {
   var raw: String = js.native
   var value: String = js.native
 }

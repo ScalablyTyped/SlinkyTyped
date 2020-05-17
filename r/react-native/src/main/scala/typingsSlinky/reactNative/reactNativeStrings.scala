@@ -11,6 +11,7 @@ import typingsSlinky.reactNative.mod.AppStateEvent
 import typingsSlinky.reactNative.mod.AppStateStatus
 import typingsSlinky.reactNative.mod.CameraRollAssetType
 import typingsSlinky.reactNative.mod.CameraRollGroupType
+import typingsSlinky.reactNative.mod.ColorSchemeName
 import typingsSlinky.reactNative.mod.DataDetectorTypes
 import typingsSlinky.reactNative.mod.FlexAlignType
 import typingsSlinky.reactNative.mod.FontVariant
@@ -29,7 +30,6 @@ import typingsSlinky.reactNative.mod.ReturnKeyTypeIOS
 import typingsSlinky.reactNative.mod.ReturnKeyTypeOptions
 import typingsSlinky.reactNative.mod.StatusBarAnimation
 import typingsSlinky.reactNative.mod.StatusBarStyle
-import typingsSlinky.reactNative.mod._ColorSchemeName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -432,7 +432,7 @@ object reactNativeStrings {
   sealed trait creditCardNumber extends js.Object
   
   @js.native
-  sealed trait dark extends _ColorSchemeName
+  sealed trait dark extends ColorSchemeName
   
   @js.native
   sealed trait `dark-content` extends StatusBarStyle
@@ -754,7 +754,7 @@ object reactNativeStrings {
   sealed trait left extends js.Object
   
   @js.native
-  sealed trait light extends _ColorSchemeName
+  sealed trait light extends ColorSchemeName
   
   @js.native
   sealed trait `light-content` extends StatusBarStyle

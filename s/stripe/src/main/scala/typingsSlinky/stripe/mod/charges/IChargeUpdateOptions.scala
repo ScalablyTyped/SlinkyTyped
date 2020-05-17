@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.charges
 
-import typingsSlinky.stripe.AnonUserreport
+import typingsSlinky.stripe.anon.Userreport
 import typingsSlinky.stripe.mod.IDataOptionsWithMetadata
 import typingsSlinky.stripe.mod.IShippingInformation
 import scala.scalajs.js
@@ -18,7 +18,7 @@ trait IChargeUpdateOptions extends IDataOptionsWithMetadata {
   /**
     * A set of key/value pairs you can attach to a charge giving information about its riskiness.
     */
-  var fraud_details: js.UndefOr[AnonUserreport] = js.native
+  var fraud_details: js.UndefOr[Userreport] = js.native
   /**
     * This is the email address that the receipt for this charge will be sent to.
     * If this field is updated, then a new email receipt will be sent to the updated address.
@@ -63,7 +63,7 @@ object IChargeUpdateOptions {
         ret
     }
     @scala.inline
-    def withFraud_details(value: AnonUserreport): Self = {
+    def withFraud_details(value: Userreport): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fraud_details")(value.asInstanceOf[js.Any])
         ret

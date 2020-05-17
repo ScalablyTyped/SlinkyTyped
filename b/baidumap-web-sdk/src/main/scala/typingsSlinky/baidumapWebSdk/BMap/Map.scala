@@ -1,23 +1,14 @@
 package typingsSlinky.baidumapWebSdk.BMap
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.baidumapWebSdk.AnonOverlay
-import typingsSlinky.baidumapWebSdk.AnonPixel
-import typingsSlinky.baidumapWebSdk.AnonPoint
-import typingsSlinky.baidumapWebSdk.AnonSize
-import typingsSlinky.baidumapWebSdk.AnonSpots
-import typingsSlinky.baidumapWebSdk.AnonTarget
+import typingsSlinky.baidumapWebSdk.anon.Spots
+import typingsSlinky.baidumapWebSdk.anon.Target
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BMap.Map")
 @js.native
-class Map protected () extends js.Object {
-  def this(container: String) = this()
-  def this(container: HTMLElement) = this()
-  def this(container: String, opts: MapOptions) = this()
-  def this(container: HTMLElement, opts: MapOptions) = this()
+trait Map extends js.Object {
   def addContextMenu(menu: ContextMenu): Unit = js.native
   def addControl(control: Control): Unit = js.native
   def addEventListener(event: String, handler: Callback): Unit = js.native
@@ -63,39 +54,39 @@ class Map protected () extends js.Object {
   def getViewport(view: js.Array[Point], viewportOptions: ViewportOptions): Viewport = js.native
   def getZoom(): Double = js.native
   def highResolutionEnabled(): Boolean = js.native
-  def onaddcontrol(event: AnonTarget): Unit = js.native
-  def onaddoverlay(event: AnonTarget): Unit = js.native
-  def onaddtilelayer(event: AnonTarget): Unit = js.native
-  def onclearoverlays(event: AnonTarget): Unit = js.native
-  def onclick(event: AnonOverlay): Unit = js.native
-  def ondblclick(event: AnonPixel): Unit = js.native
-  def ondragend(event: AnonPixel): Unit = js.native
-  def ondragging(event: AnonPixel): Unit = js.native
-  def ondragstart(event: AnonPixel): Unit = js.native
-  def onhotspotclick(event: AnonSpots): Unit = js.native
-  def onhotspotout(event: AnonSpots): Unit = js.native
-  def onhotspotover(event: AnonSpots): Unit = js.native
-  def onload(event: AnonPoint): Unit = js.native
-  def onlongpress(event: AnonPixel): Unit = js.native
-  def onmaptypechange(event: AnonTarget): Unit = js.native
-  def onmousemove(event: AnonOverlay): Unit = js.native
-  def onmouseout(event: AnonTarget): Unit = js.native
-  def onmouseover(event: AnonTarget): Unit = js.native
-  def onmoveend(event: AnonTarget): Unit = js.native
-  def onmovestart(event: AnonTarget): Unit = js.native
-  def onmoving(event: AnonTarget): Unit = js.native
-  def onremovecontrol(event: AnonTarget): Unit = js.native
-  def onremoveoverlay(event: AnonTarget): Unit = js.native
-  def onremovetilelayer(event: AnonTarget): Unit = js.native
-  def onresize(event: AnonSize): Unit = js.native
-  def onrightclick(event: AnonOverlay): Unit = js.native
-  def onrightdblclick(event: AnonOverlay): Unit = js.native
-  def ontilesloaded(event: AnonTarget): Unit = js.native
-  def ontouchend(event: AnonPixel): Unit = js.native
-  def ontouchmove(event: AnonPixel): Unit = js.native
-  def ontouchstart(event: AnonPixel): Unit = js.native
-  def onzoomend(event: AnonTarget): Unit = js.native
-  def onzoomstart(event: AnonTarget): Unit = js.native
+  def onaddcontrol(event: Target): Unit = js.native
+  def onaddoverlay(event: Target): Unit = js.native
+  def onaddtilelayer(event: Target): Unit = js.native
+  def onclearoverlays(event: Target): Unit = js.native
+  def onclick(event: typingsSlinky.baidumapWebSdk.anon.Overlay): Unit = js.native
+  def ondblclick(event: typingsSlinky.baidumapWebSdk.anon.Pixel): Unit = js.native
+  def ondragend(event: typingsSlinky.baidumapWebSdk.anon.Pixel): Unit = js.native
+  def ondragging(event: typingsSlinky.baidumapWebSdk.anon.Pixel): Unit = js.native
+  def ondragstart(event: typingsSlinky.baidumapWebSdk.anon.Pixel): Unit = js.native
+  def onhotspotclick(event: Spots): Unit = js.native
+  def onhotspotout(event: Spots): Unit = js.native
+  def onhotspotover(event: Spots): Unit = js.native
+  def onload(event: typingsSlinky.baidumapWebSdk.anon.Point): Unit = js.native
+  def onlongpress(event: typingsSlinky.baidumapWebSdk.anon.Pixel): Unit = js.native
+  def onmaptypechange(event: Target): Unit = js.native
+  def onmousemove(event: typingsSlinky.baidumapWebSdk.anon.Overlay): Unit = js.native
+  def onmouseout(event: Target): Unit = js.native
+  def onmouseover(event: Target): Unit = js.native
+  def onmoveend(event: Target): Unit = js.native
+  def onmovestart(event: Target): Unit = js.native
+  def onmoving(event: Target): Unit = js.native
+  def onremovecontrol(event: Target): Unit = js.native
+  def onremoveoverlay(event: Target): Unit = js.native
+  def onremovetilelayer(event: Target): Unit = js.native
+  def onresize(event: typingsSlinky.baidumapWebSdk.anon.Size): Unit = js.native
+  def onrightclick(event: typingsSlinky.baidumapWebSdk.anon.Overlay): Unit = js.native
+  def onrightdblclick(event: typingsSlinky.baidumapWebSdk.anon.Overlay): Unit = js.native
+  def ontilesloaded(event: Target): Unit = js.native
+  def ontouchend(event: typingsSlinky.baidumapWebSdk.anon.Pixel): Unit = js.native
+  def ontouchmove(event: typingsSlinky.baidumapWebSdk.anon.Pixel): Unit = js.native
+  def ontouchstart(event: typingsSlinky.baidumapWebSdk.anon.Pixel): Unit = js.native
+  def onzoomend(event: Target): Unit = js.native
+  def onzoomstart(event: Target): Unit = js.native
   def openInfoWindow(infoWnd: InfoWindow, point: Point): Unit = js.native
   def overlayPixelToPoint(pixel: Pixel): Point = js.native
   def panBy(x: Double, y: Double): Unit = js.native

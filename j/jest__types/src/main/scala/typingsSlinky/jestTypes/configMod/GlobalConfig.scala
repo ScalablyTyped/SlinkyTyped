@@ -1,7 +1,7 @@
 package typingsSlinky.jestTypes.configMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.jestTypes.AnonConfig
+import typingsSlinky.jestTypes.anon.Config
 import typingsSlinky.jestTypes.jestTypesStrings.`json-summary`
 import typingsSlinky.jestTypes.jestTypesStrings.`text-lcov`
 import typingsSlinky.jestTypes.jestTypesStrings.`text-summary`
@@ -76,7 +76,7 @@ trait GlobalConfig extends js.Object {
   var verbose: js.UndefOr[Boolean | Null] = js.native
   var watch: Boolean = js.native
   var watchAll: Boolean = js.native
-  var watchPlugins: js.UndefOr[js.Array[AnonConfig] | Null] = js.native
+  var watchPlugins: js.UndefOr[js.Array[Config] | Null] = js.native
   var watchman: Boolean = js.native
 }
 
@@ -600,7 +600,7 @@ object GlobalConfig {
         ret
     }
     @scala.inline
-    def withWatchPlugins(value: js.Array[AnonConfig]): Self = {
+    def withWatchPlugins(value: js.Array[Config]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("watchPlugins")(value.asInstanceOf[js.Any])
         ret

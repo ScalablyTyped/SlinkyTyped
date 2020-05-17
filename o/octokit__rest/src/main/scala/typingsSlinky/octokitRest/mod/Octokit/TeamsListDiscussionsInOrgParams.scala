@@ -12,7 +12,8 @@ trait TeamsListDiscussionsInOrgParams extends js.Object {
     * Sorts the discussion comments by the date they were created. To return the oldest comments first, set to `asc`. Can be one of `asc` or `desc`.
     */
   var direction: js.UndefOr[asc | desc] = js.native
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
   /**
     * Page number of the results to fetch.
     */
@@ -26,8 +27,9 @@ trait TeamsListDiscussionsInOrgParams extends js.Object {
 
 object TeamsListDiscussionsInOrgParams {
   @scala.inline
-  def apply(org: String, team_slug: String): TeamsListDiscussionsInOrgParams = {
-    val __obj = js.Dynamic.literal(org = org.asInstanceOf[js.Any], team_slug = team_slug.asInstanceOf[js.Any])
+  def apply(org_ : String, team_slug: String): TeamsListDiscussionsInOrgParams = {
+    val __obj = js.Dynamic.literal(team_slug = team_slug.asInstanceOf[js.Any])
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[TeamsListDiscussionsInOrgParams]
   }
   @scala.inline
@@ -37,7 +39,7 @@ object TeamsListDiscussionsInOrgParams {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

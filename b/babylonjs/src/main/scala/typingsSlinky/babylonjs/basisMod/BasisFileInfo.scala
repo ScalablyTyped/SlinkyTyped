@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.basisMod
 
-import typingsSlinky.babylonjs.AnonLevels
+import typingsSlinky.babylonjs.anon.Levels
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,12 +17,12 @@ trait BasisFileInfo extends js.Object {
   /**
     * Info about each image of the basis file
     */
-  var images: js.Array[AnonLevels] = js.native
+  var images: js.Array[Levels] = js.native
 }
 
 object BasisFileInfo {
   @scala.inline
-  def apply(hasAlpha: Boolean, images: js.Array[AnonLevels]): BasisFileInfo = {
+  def apply(hasAlpha: Boolean, images: js.Array[Levels]): BasisFileInfo = {
     val __obj = js.Dynamic.literal(hasAlpha = hasAlpha.asInstanceOf[js.Any], images = images.asInstanceOf[js.Any])
     __obj.asInstanceOf[BasisFileInfo]
   }
@@ -39,7 +39,7 @@ object BasisFileInfo {
         ret
     }
     @scala.inline
-    def withImages(value: js.Array[AnonLevels]): Self = {
+    def withImages(value: js.Array[Levels]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("images")(value.asInstanceOf[js.Any])
         ret

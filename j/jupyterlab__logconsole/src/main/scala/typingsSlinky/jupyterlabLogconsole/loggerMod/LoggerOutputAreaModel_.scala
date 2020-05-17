@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabLogconsole.loggerMod
 
-import typingsSlinky.jupyterlabLogconsole.AnonLastModel
+import typingsSlinky.jupyterlabLogconsole.anon.LastModel
 import typingsSlinky.jupyterlabLogconsole.loggerMod.LoggerOutputAreaModel.IOptions
 import typingsSlinky.jupyterlabOutputarea.mod.OutputAreaModel
 import scala.scalajs.js
@@ -29,6 +29,6 @@ class LoggerOutputAreaModel_ protected () extends OutputAreaModel {
     * We combine if the two outputs are in the same second, which is the
     * resolution for our time display.
     */
-  /* protected */ def shouldCombine(options: AnonLastModel): Boolean = js.native
+  /* protected */ def shouldCombine(options: LastModel): Boolean = js.native
 }
 

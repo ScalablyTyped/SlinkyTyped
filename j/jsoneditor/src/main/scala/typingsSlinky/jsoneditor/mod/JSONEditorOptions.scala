@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ace.AceAjax.Ace
 import typingsSlinky.ajv.mod.Ajv
-import typingsSlinky.jsoneditor.AnonPath
+import typingsSlinky.jsoneditor.anon.Path
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -147,7 +147,7 @@ trait JSONEditorOptions extends js.Object {
     * The function must either return a string containing CSS class names, or return undefined in order to do nothing for a specific node.
     * In order to update css classes when they depend on external state, you can call `editor.refresh()`.
     */
-  var onClassName: js.UndefOr[js.Function1[/* classNameParams */ AnonPath, js.UndefOr[String]]] = js.native
+  var onClassName: js.UndefOr[js.Function1[/* classNameParams */ Path, js.UndefOr[String]]] = js.native
   /**
     * Callback function triggered when the user clicks a color. Can be used to implement a custom color picker.
     * @param parent An HTML element where the color picker can be attached. JSONEditor comes with a built-in color picker,
@@ -590,7 +590,7 @@ object JSONEditorOptions {
         ret
     }
     @scala.inline
-    def withOnClassName(value: /* classNameParams */ AnonPath => js.UndefOr[String]): Self = {
+    def withOnClassName(value: /* classNameParams */ Path => js.UndefOr[String]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClassName")(js.Any.fromFunction1(value))
         ret

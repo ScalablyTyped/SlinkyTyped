@@ -26,18 +26,6 @@ object ParallelMachineConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): (Self[TContext, TStateSchema, TEvent]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[TContext, TStateSchema, TEvent]) with Other]
     @scala.inline
-    def withInitial(value: scala.Nothing): Self[TContext, TStateSchema, TEvent] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initial")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitial: Self[TContext, TStateSchema, TEvent] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initial")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withType(value: parallel): Self[TContext, TStateSchema, TEvent] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])

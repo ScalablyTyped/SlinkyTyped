@@ -1,5 +1,7 @@
 package typingsSlinky.apolloReact
 
+import typingsSlinky.apolloReact.anon.Children
+import typingsSlinky.apolloReact.anon.Client
 import typingsSlinky.apolloReact.graphqlMod.OperationOption
 import typingsSlinky.redux.mod.Func0
 import typingsSlinky.redux.mod.Func1
@@ -65,8 +67,8 @@ object mod extends js.Object {
   /* static members */
   @js.native
   object ApolloProvider extends js.Object {
-    var childContextTypes: AnonClient = js.native
-    var propTypes: AnonChildren = js.native
+    var childContextTypes: Client = js.native
+    var propTypes: Children = js.native
   }
   
 }

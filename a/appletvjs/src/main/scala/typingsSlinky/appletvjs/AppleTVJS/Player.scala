@@ -1,19 +1,18 @@
 package typingsSlinky.appletvjs.AppleTVJS
 
-import typingsSlinky.std.Document_
+import org.scalajs.dom.raw.Document
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("AppleTVJS.Player")
 @js.native
-class Player () extends js.Object {
+trait Player extends js.Object {
   /** The currently selected media item in the playlist. */
   var currentMediaItem: MediaItem = js.native
   /** The next media item in the playlist. */
   var nextMediaItem: MediaItem = js.native
   /** The annotations for a video created by placing a DOM document over the video. */
-  var overlayDocument: Document_ = js.native
+  var overlayDocument: Document = js.native
   /**
   		 * The current state of the player.
   		 *

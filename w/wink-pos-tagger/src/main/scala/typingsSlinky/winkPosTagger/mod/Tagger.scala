@@ -1,6 +1,6 @@
 package typingsSlinky.winkPosTagger.mod
 
-import typingsSlinky.winkPosTagger.AnonLemma
+import typingsSlinky.winkPosTagger.anon.Lemma
 import typingsSlinky.winkTokenizer.mod.Token
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,7 @@ trait Tagger extends js.Object {
   	 * @param config configuration object
   	 * @returns object with active configuration
   	 */
-  def defineConfig(config: js.Any): AnonLemma = js.native
+  def defineConfig(config: js.Any): Lemma = js.native
   /**
   	 * Tags the input tokens with their pos.
   	 * In order to pos tag a sentence directly, use tagSentence API instead
@@ -48,7 +48,7 @@ trait Tagger extends js.Object {
 object Tagger {
   @scala.inline
   def apply(
-    defineConfig: js.Any => AnonLemma,
+    defineConfig: js.Any => Lemma,
     tag: js.Array[Token] => js.Array[PosTaggedToken],
     tagRawTokens: js.Array[String] => js.Array[PosTaggedToken],
     tagSentence: String => js.Array[PosTaggedToken],
@@ -64,7 +64,7 @@ object Tagger {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDefineConfig(value: js.Any => AnonLemma): Self = {
+    def withDefineConfig(value: js.Any => Lemma): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defineConfig")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonRadius
+import typingsSlinky.cesium.anon.Radius
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "SphereGeometry")
 @js.native
 class SphereGeometry () extends Packable {
-  def this(options: AnonRadius) = this()
+  def this(options: Radius) = this()
 }
 
 /* static members */

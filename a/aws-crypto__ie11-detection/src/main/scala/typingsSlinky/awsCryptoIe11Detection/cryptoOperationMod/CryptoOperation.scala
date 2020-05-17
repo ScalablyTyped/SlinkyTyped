@@ -1,7 +1,7 @@
 package typingsSlinky.awsCryptoIe11Detection.cryptoOperationMod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.awsCryptoIe11Detection.keyMod.Key
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,10 +13,10 @@ trait CryptoOperation extends js.Object {
   val result: js.UndefOr[js.typedarray.ArrayBuffer] = js.native
   def abort(): Unit = js.native
   def finish(): Unit = js.native
-  def onabort(event: Event_): Unit = js.native
-  def oncomplete(event: Event_): Unit = js.native
-  def onerror(event: Event_): Unit = js.native
-  def onprogress(event: Event_): Unit = js.native
+  def onabort(event: Event): Unit = js.native
+  def oncomplete(event: Event): Unit = js.native
+  def onerror(event: Event): Unit = js.native
+  def onprogress(event: Event): Unit = js.native
   def process(buffer: js.typedarray.ArrayBufferView): Unit = js.native
 }
 
@@ -27,10 +27,10 @@ object CryptoOperation {
     algorithm: String,
     finish: () => Unit,
     key: Key,
-    onabort: Event_ => Unit,
-    oncomplete: Event_ => Unit,
-    onerror: Event_ => Unit,
-    onprogress: Event_ => Unit,
+    onabort: Event => Unit,
+    oncomplete: Event => Unit,
+    onerror: Event => Unit,
+    onprogress: Event => Unit,
     process: js.typedarray.ArrayBufferView => Unit
   ): CryptoOperation = {
     val __obj = js.Dynamic.literal(abort = js.Any.fromFunction0(abort), algorithm = algorithm.asInstanceOf[js.Any], finish = js.Any.fromFunction0(finish), key = key.asInstanceOf[js.Any], onabort = js.Any.fromFunction1(onabort), oncomplete = js.Any.fromFunction1(oncomplete), onerror = js.Any.fromFunction1(onerror), onprogress = js.Any.fromFunction1(onprogress), process = js.Any.fromFunction1(process))
@@ -67,25 +67,25 @@ object CryptoOperation {
         ret
     }
     @scala.inline
-    def withOnabort(value: Event_ => Unit): Self = {
+    def withOnabort(value: Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onabort")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOncomplete(value: Event_ => Unit): Self = {
+    def withOncomplete(value: Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oncomplete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnerror(value: Event_ => Unit): Self = {
+    def withOnerror(value: Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onerror")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnprogress(value: Event_ => Unit): Self = {
+    def withOnprogress(value: Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onprogress")(js.Any.fromFunction1(value))
         ret

@@ -1,5 +1,6 @@
 package typingsSlinky.phosphorWidgets.scrollbarMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.phosphorSignaling.mod.ISignal
 import typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.decrement
@@ -7,7 +8,6 @@ import typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.increment
 import typingsSlinky.phosphorWidgets.scrollbarMod.ScrollBar.IOptions
 import typingsSlinky.phosphorWidgets.scrollbarMod.ScrollBar.Orientation
 import typingsSlinky.phosphorWidgets.widgetMod.Widget
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -160,6 +160,6 @@ class ScrollBar_ () extends Widget {
     *
     * This should not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
 }
 

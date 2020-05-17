@@ -5,6 +5,7 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import typingsSlinky.jss.mod.GenerateId
 import typingsSlinky.jss.mod.JssOptions
+import typingsSlinky.materialUiStyles.anon.NameProps
 import typingsSlinky.materialUiStyles.createGenerateClassNameCreateGenerateClassNameMod.GenerateClassNameOptions
 import typingsSlinky.materialUiStyles.getThemePropsGetThemePropsMod.ThemeWithProps
 import typingsSlinky.materialUiStyles.getThemePropsGetThemePropsMod.ThemedProps
@@ -38,7 +39,7 @@ import typingsSlinky.react.mod.ComponentClass
 import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.react.mod.Context
 import typingsSlinky.react.mod.FunctionComponent
-import typingsSlinky.react.mod._Global_.JSX.LibraryManagedAttributes
+import typingsSlinky.react.mod.global.JSX.LibraryManagedAttributes
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -64,7 +65,7 @@ object mod extends js.Object {
   def createGenerateClassName(): GenerateId = js.native
   def createGenerateClassName(options: GenerateClassNameOptions): GenerateId = js.native
   def createStyles[ClassKey /* <: String */, Props /* <: js.Object */](styles: StyleRules[Props, ClassKey]): StyleRules[Props, ClassKey] = js.native
-  def getThemeProps[Theme /* <: ThemeWithProps[_] */, Props, Name /* <: /* keyof any */ String */](params: AnonName[Props, Name, Theme]): Props with (ThemedProps[Theme, Name]) = js.native
+  def getThemeProps[Theme /* <: ThemeWithProps[_] */, Props, Name /* <: /* keyof any */ String */](params: NameProps[Props, Name, Theme]): Props with (ThemedProps[Theme, Name]) = js.native
   def jssPreset(): JssOptions = js.native
   def makeStyles[Theme, ClassKey /* <: String */](style: Styles[Theme, js.Object, ClassKey]): js.Function1[/* props */ js.UndefOr[js.Any], ClassNameMap[ClassKey]] = js.native
   @JSName("makeStyles")

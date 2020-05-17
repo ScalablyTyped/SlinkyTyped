@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientBigquerydatatransfer.gapi.client.bigquerydatatransfer
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientBigquerydatatransfer.AnonBearertoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientBigquerydatatransfer.anon.Bearertoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TransferLogsResource extends js.Object {
   /** Returns user facing log messages for the data transfer run. */
-  def list(request: AnonBearertoken): Request_[ListTransferLogsResponse] = js.native
+  def list(request: Bearertoken): Request[ListTransferLogsResponse] = js.native
 }
 
 object TransferLogsResource {
   @scala.inline
-  def apply(list: AnonBearertoken => Request_[ListTransferLogsResponse]): TransferLogsResource = {
+  def apply(list: Bearertoken => Request[ListTransferLogsResponse]): TransferLogsResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[TransferLogsResource]
   }
@@ -25,7 +25,7 @@ object TransferLogsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withList(value: AnonBearertoken => Request_[ListTransferLogsResponse]): Self = {
+    def withList(value: Bearertoken => Request[ListTransferLogsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

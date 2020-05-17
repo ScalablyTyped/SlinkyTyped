@@ -1,6 +1,5 @@
 package typingsSlinky.antdMobileRn.listItemNativeMod
 
-import typingsSlinky.antdMobileRn.AnonBrief
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait BriefProps
   extends typingsSlinky.antdMobileRn.listPropsTypeMod.BriefProps {
-  var styles: js.UndefOr[AnonBrief] = js.native
+  var styles: js.UndefOr[typingsSlinky.antdMobileRn.anon.Brief] = js.native
 }
 
 object BriefProps {
@@ -24,7 +23,7 @@ object BriefProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withStyles(value: AnonBrief): Self = {
+    def withStyles(value: typingsSlinky.antdMobileRn.anon.Brief): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
         ret

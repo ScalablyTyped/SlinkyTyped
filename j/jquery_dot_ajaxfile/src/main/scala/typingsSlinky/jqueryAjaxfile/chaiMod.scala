@@ -1,7 +1,7 @@
 package typingsSlinky.jqueryAjaxfile
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.jqueryAjaxfile.Chai_.ChaiStatic
+import typingsSlinky.jqueryAjaxfile.Chai.ChaiStatic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

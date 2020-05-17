@@ -1,17 +1,16 @@
 package typingsSlinky.reactForm.components
 
+import org.scalajs.dom.raw.Event
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactForm.AnonFormApi
-import typingsSlinky.reactForm.FormPropschildrenpropsFor
-import typingsSlinky.reactForm.mod.FormApi
+import typingsSlinky.reactForm.anon.FormApi
+import typingsSlinky.reactForm.anon.FormPropschildrenpropsFor
 import typingsSlinky.reactForm.mod.FormErrors
 import typingsSlinky.reactForm.mod.FormState
 import typingsSlinky.reactForm.mod.FormValues
 import typingsSlinky.reactForm.mod.RenderReturn
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +25,11 @@ object Form {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactForm.mod.Form] {
     @scala.inline
-    def componentFunctionComponent(value: ReactComponentClass[AnonFormApi]): this.type = set("component", value.asInstanceOf[js.Any])
+    def componentFunctionComponent(value: ReactComponentClass[FormApi]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
-    def componentComponentClass(value: ReactComponentClass[AnonFormApi]): this.type = set("component", value.asInstanceOf[js.Any])
+    def componentComponentClass(value: ReactComponentClass[FormApi]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
-    def component(value: ReactComponentClass[AnonFormApi]): this.type = set("component", value.asInstanceOf[js.Any])
+    def component(value: ReactComponentClass[FormApi]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline
     def defaultValues(value: FormValues): this.type = set("defaultValues", value.asInstanceOf[js.Any])
     @scala.inline
@@ -40,19 +39,19 @@ object Form {
     @scala.inline
     def formDidUpdate(value: /* formState */ FormState => Unit): this.type = set("formDidUpdate", js.Any.fromFunction1(value))
     @scala.inline
-    def getApi(value: /* formApi */ FormApi => Unit): this.type = set("getApi", js.Any.fromFunction1(value))
+    def getApi(value: /* formApi */ typingsSlinky.reactForm.mod.FormApi => Unit): this.type = set("getApi", js.Any.fromFunction1(value))
     @scala.inline
     def onSubmit(
-      value: (/* values */ FormValues, /* submissionEvent */ SyntheticEvent[Event_, _], /* formApi */ FormApi) => Unit
+      value: (/* values */ FormValues, /* submissionEvent */ SyntheticEvent[Event, _], /* formApi */ typingsSlinky.reactForm.mod.FormApi) => Unit
     ): this.type = set("onSubmit", js.Any.fromFunction3(value))
     @scala.inline
-    def onSubmitFailure(value: (/* errors */ FormErrors, /* formApi */ FormApi) => Unit): this.type = set("onSubmitFailure", js.Any.fromFunction2(value))
+    def onSubmitFailure(value: (/* errors */ FormErrors, /* formApi */ typingsSlinky.reactForm.mod.FormApi) => Unit): this.type = set("onSubmitFailure", js.Any.fromFunction2(value))
     @scala.inline
-    def preSubmit(value: (/* values */ FormValues, /* formApi */ FormApi) => FormValues): this.type = set("preSubmit", js.Any.fromFunction2(value))
+    def preSubmit(value: (/* values */ FormValues, /* formApi */ typingsSlinky.reactForm.mod.FormApi) => FormValues): this.type = set("preSubmit", js.Any.fromFunction2(value))
     @scala.inline
     def preValidate(value: /* values */ FormValues => FormValues): this.type = set("preValidate", js.Any.fromFunction1(value))
     @scala.inline
-    def render(value: /* formApi */ FormApi => RenderReturn): this.type = set("render", js.Any.fromFunction1(value))
+    def render(value: /* formApi */ typingsSlinky.reactForm.mod.FormApi => RenderReturn): this.type = set("render", js.Any.fromFunction1(value))
     @scala.inline
     def validateError(value: /* values */ FormValues => FormErrors): this.type = set("validateError", js.Any.fromFunction1(value))
     @scala.inline

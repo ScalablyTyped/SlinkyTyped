@@ -11,10 +11,8 @@ import scala.scalajs.js.annotation._
   * @memberof PIXI
   * @extends PIXI.ObjectRenderer
   */
-@JSGlobal("PIXI.TilingSpriteRenderer")
 @js.native
-class TilingSpriteRenderer protected () extends ObjectRenderer {
-  def this(renderer: Renderer) = this()
+trait TilingSpriteRenderer extends ObjectRenderer {
   /**
     * The WebGL state in which this renderer will work.
     *
@@ -27,5 +25,41 @@ class TilingSpriteRenderer protected () extends ObjectRenderer {
     * @param {PIXI.TilingSprite} ts tilingSprite to be rendered
     */
   def render(ts: TilingSprite): Unit = js.native
+}
+
+object TilingSpriteRenderer {
+  @scala.inline
+  def apply(
+    destroy: () => Unit,
+    flush: () => Unit,
+    render: TilingSprite => Unit,
+    renderer: Renderer,
+    start: () => Unit,
+    state: State,
+    stop: () => Unit
+  ): TilingSpriteRenderer = {
+    val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), flush = js.Any.fromFunction0(flush), render = js.Any.fromFunction1(render), renderer = renderer.asInstanceOf[js.Any], start = js.Any.fromFunction0(start), state = state.asInstanceOf[js.Any], stop = js.Any.fromFunction0(stop))
+    __obj.asInstanceOf[TilingSpriteRenderer]
+  }
+  @scala.inline
+  implicit class TilingSpriteRendererOps[Self <: TilingSpriteRenderer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRender(value: TilingSprite => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withState(value: State): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

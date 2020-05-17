@@ -1,7 +1,7 @@
 package typingsSlinky.apolloClient.queriesMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.apolloClient.AnonFetchMoreForQueryId
+import typingsSlinky.apolloClient.anon.FetchMoreForQueryId
 import typingsSlinky.graphql.executeMod.ExecutionResult
 import typingsSlinky.graphql.executeMod.ExecutionResultDataDefault
 import scala.scalajs.js
@@ -14,7 +14,7 @@ class QueryStore () extends js.Object {
   var store: js.Any = js.native
   def get(queryId: String): QueryStoreValue = js.native
   def getStore(): StringDictionary[QueryStoreValue] = js.native
-  def initQuery(query: AnonFetchMoreForQueryId): Unit = js.native
+  def initQuery(query: FetchMoreForQueryId): Unit = js.native
   def markQueryError(queryId: String, error: js.Error): Unit = js.native
   def markQueryError(queryId: String, error: js.Error, fetchMoreForQueryId: String): Unit = js.native
   def markQueryResult(queryId: String, result: ExecutionResult[ExecutionResultDataDefault]): Unit = js.native

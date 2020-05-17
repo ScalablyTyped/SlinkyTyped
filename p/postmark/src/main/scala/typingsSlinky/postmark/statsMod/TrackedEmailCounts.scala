@@ -1,19 +1,19 @@
 package typingsSlinky.postmark.statsMod
 
-import typingsSlinky.postmark.AnonTracked
+import typingsSlinky.postmark.anon.Tracked
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait TrackedEmailCounts extends js.Object {
-  var Days: js.Array[AnonTracked] = js.native
+  var Days: js.Array[Tracked] = js.native
   var Tracked: Double = js.native
 }
 
 object TrackedEmailCounts {
   @scala.inline
-  def apply(Days: js.Array[AnonTracked], Tracked: Double): TrackedEmailCounts = {
+  def apply(Days: js.Array[Tracked], Tracked: Double): TrackedEmailCounts = {
     val __obj = js.Dynamic.literal(Days = Days.asInstanceOf[js.Any], Tracked = Tracked.asInstanceOf[js.Any])
     __obj.asInstanceOf[TrackedEmailCounts]
   }
@@ -24,7 +24,7 @@ object TrackedEmailCounts {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDays(value: js.Array[AnonTracked]): Self = {
+    def withDays(value: js.Array[Tracked]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Days")(value.asInstanceOf[js.Any])
         ret

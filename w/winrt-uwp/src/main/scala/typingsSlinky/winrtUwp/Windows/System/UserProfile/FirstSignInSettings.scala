@@ -1,16 +1,15 @@
 package typingsSlinky.winrtUwp.Windows.System.UserProfile
 
-import typingsSlinky.winrtUwp.AnonSecond
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IKeyValuePair
+import typingsSlinky.winrtUwp.anon.Second
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a collection of settings that a user can opt-in to during the first run experience. */
-@JSGlobal("Windows.System.UserProfile.FirstSignInSettings")
 @js.native
-abstract class FirstSignInSettings () extends js.Object {
+trait FirstSignInSettings extends js.Object {
   /** Returns the number of elements in the map. */
   var size: Double = js.native
   /**
@@ -33,17 +32,58 @@ abstract class FirstSignInSettings () extends js.Object {
   /**
     * Splits the map view into two views.
     */
-  def split(): AnonSecond = js.native
+  def split(): Second = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.System.UserProfile.FirstSignInSettings")
-@js.native
-object FirstSignInSettings extends js.Object {
-  /**
-    * Gets the default instance of the settings.
-    * @return The default instance of the settings.
-    */
-  def getDefault(): FirstSignInSettings = js.native
+object FirstSignInSettings {
+  @scala.inline
+  def apply(
+    first: () => IIterator[IKeyValuePair[_, _]],
+    hasKey: String => Boolean,
+    lookup: String => js.Any,
+    size: Double,
+    split: () => Second
+  ): FirstSignInSettings = {
+    val __obj = js.Dynamic.literal(first = js.Any.fromFunction0(first), hasKey = js.Any.fromFunction1(hasKey), lookup = js.Any.fromFunction1(lookup), size = size.asInstanceOf[js.Any], split = js.Any.fromFunction0(split))
+    __obj.asInstanceOf[FirstSignInSettings]
+  }
+  @scala.inline
+  implicit class FirstSignInSettingsOps[Self <: FirstSignInSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFirst(value: () => IIterator[IKeyValuePair[_, _]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHasKey(value: String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasKey")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLookup(value: String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lookup")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSplit(value: () => Second): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("split")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

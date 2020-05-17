@@ -7,7 +7,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TouchAction extends TouchActionSync {
+trait TouchAction
+  extends TouchActionSync
+     with TouchActions {
   var element: js.UndefOr[Element] = js.native
 }
 

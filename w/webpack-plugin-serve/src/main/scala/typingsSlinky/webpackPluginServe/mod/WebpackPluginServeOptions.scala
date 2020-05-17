@@ -6,9 +6,9 @@ import typingsSlinky.koa.mod.DefaultState
 import typingsSlinky.koa.mod.^
 import typingsSlinky.node.http2Mod.SecureServerOptions
 import typingsSlinky.node.http2Mod.ServerOptions
-import typingsSlinky.webpackPluginServe.AnonAddress
-import typingsSlinky.webpackPluginServe.AnonApp
-import typingsSlinky.webpackPluginServe.AnonLevel
+import typingsSlinky.webpackPluginServe.anon.Address
+import typingsSlinky.webpackPluginServe.anon.App
+import typingsSlinky.webpackPluginServe.anon.Level
 import typingsSlinky.webpackPluginServe.webpackPluginServeStrings.minimal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait WebpackPluginServeOptions extends js.Object {
-  var client: js.UndefOr[AnonAddress] = js.native
+  var client: js.UndefOr[Address] = js.native
   var compress: js.UndefOr[Boolean] = js.native
   var historyFallback: js.UndefOr[Boolean | Options] = js.native
   var hmr: js.UndefOr[Boolean] = js.native
@@ -24,11 +24,11 @@ trait WebpackPluginServeOptions extends js.Object {
   var http2: js.UndefOr[Boolean | ServerOptions | SecureServerOptions] = js.native
   var https: js.UndefOr[typingsSlinky.node.httpsMod.ServerOptions] = js.native
   var liveReload: js.UndefOr[Boolean] = js.native
-  var log: js.UndefOr[AnonLevel] = js.native
+  var log: js.UndefOr[Level] = js.native
   var middleware: js.UndefOr[
     js.Function2[/* app */ ^[DefaultState, DefaultContext], /* builtins */ Builtins, Unit]
   ] = js.native
-  var open: js.UndefOr[Boolean | AnonApp] = js.native
+  var open: js.UndefOr[Boolean | App] = js.native
   var port: js.UndefOr[Double | js.Promise[Double]] = js.native
   var progress: js.UndefOr[Boolean | minimal] = js.native
   var static: js.UndefOr[String | js.Array[String] | StaticObject] = js.native
@@ -49,7 +49,7 @@ object WebpackPluginServeOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClient(value: AnonAddress): Self = {
+    def withClient(value: Address): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("client")(value.asInstanceOf[js.Any])
         ret
@@ -145,7 +145,7 @@ object WebpackPluginServeOptions {
         ret
     }
     @scala.inline
-    def withLog(value: AnonLevel): Self = {
+    def withLog(value: Level): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
         ret
@@ -169,7 +169,7 @@ object WebpackPluginServeOptions {
         ret
     }
     @scala.inline
-    def withOpen(value: Boolean | AnonApp): Self = {
+    def withOpen(value: Boolean | App): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("open")(value.asInstanceOf[js.Any])
         ret

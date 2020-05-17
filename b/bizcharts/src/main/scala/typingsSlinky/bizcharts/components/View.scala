@@ -2,7 +2,7 @@ package typingsSlinky.bizcharts.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.bizcharts.AnonX
+import typingsSlinky.bizcharts.anon.X
 import typingsSlinky.bizcharts.mod.ViewProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,13 +22,13 @@ object View {
     @scala.inline
     def data(value: js.Any): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
-    def end(value: AnonX): this.type = set("end", value.asInstanceOf[js.Any])
+    def end(value: X): this.type = set("end", value.asInstanceOf[js.Any])
     @scala.inline
     def filter(value: js.Array[_]): this.type = set("filter", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
-    def start(value: AnonX): this.type = set("start", value.asInstanceOf[js.Any])
+    def start(value: X): this.type = set("start", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ViewProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

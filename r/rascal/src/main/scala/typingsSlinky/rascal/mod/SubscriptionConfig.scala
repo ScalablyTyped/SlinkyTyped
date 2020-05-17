@@ -1,7 +1,7 @@
 package typingsSlinky.rascal.mod
 
 import typingsSlinky.amqplib.propertiesMod.Options.Consume
-import typingsSlinky.rascal.AnonLimit
+import typingsSlinky.rascal.anon.Limit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait SubscriptionConfig extends js.Object {
   var prefetch: js.UndefOr[Double] = js.native
   var queue: js.UndefOr[String] = js.native
   var recovery: js.UndefOr[js.Any] = js.native
-  var redeliveries: js.UndefOr[AnonLimit] = js.native
+  var redeliveries: js.UndefOr[Limit] = js.native
   var retry: js.UndefOr[RetryConfig | Boolean] = js.native
   var vhost: js.UndefOr[String] = js.native
 }
@@ -156,7 +156,7 @@ object SubscriptionConfig {
         ret
     }
     @scala.inline
-    def withRedeliveries(value: AnonLimit): Self = {
+    def withRedeliveries(value: Limit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("redeliveries")(value.asInstanceOf[js.Any])
         ret

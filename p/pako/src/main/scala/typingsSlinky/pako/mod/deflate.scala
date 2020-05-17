@@ -1,6 +1,6 @@
 package typingsSlinky.pako.mod
 
-import typingsSlinky.pako.DeflateFunctionOptionstos
+import typingsSlinky.pako.anon.DeflateFunctionOptionstos
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

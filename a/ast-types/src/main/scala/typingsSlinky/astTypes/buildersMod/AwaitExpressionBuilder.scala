@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonAll
+import typingsSlinky.astTypes.anon.All
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.AwaitExpression
 import scala.scalajs.js
@@ -13,6 +13,6 @@ trait AwaitExpressionBuilder extends js.Object {
   def apply(argument: Null, all: Boolean): AwaitExpression = js.native
   def apply(argument: ExpressionKind): AwaitExpression = js.native
   def apply(argument: ExpressionKind, all: Boolean): AwaitExpression = js.native
-  def from(params: AnonAll): AwaitExpression = js.native
+  def from(params: All): AwaitExpression = js.native
 }
 

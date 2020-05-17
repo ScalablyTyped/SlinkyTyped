@@ -1,5 +1,7 @@
 package typingsSlinky.grommetIcons
 
+import typingsSlinky.grommetIcons.anon.Colors
+import typingsSlinky.grommetIcons.anon.Size
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +11,8 @@ import scala.scalajs.js.annotation._
 object themesMod extends js.Object {
   @js.native
   object base extends js.Object {
-    var global: AnonColors = js.native
-    var icon: AnonSize = js.native
+    var global: Colors = js.native
+    var icon: Size = js.native
   }
   
 }

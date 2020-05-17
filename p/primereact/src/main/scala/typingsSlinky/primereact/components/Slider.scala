@@ -2,7 +2,7 @@ package typingsSlinky.primereact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonOriginalEventEventValue
+import typingsSlinky.primereact.anon.OriginalEventEventValue
 import typingsSlinky.primereact.sliderMod.SliderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -30,9 +30,9 @@ object Slider {
     @scala.inline
     def min(value: Double): this.type = set("min", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* e */ AnonOriginalEventEventValue => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ OriginalEventEventValue => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onSlideEnd(value: /* e */ AnonOriginalEventEventValue => Unit): this.type = set("onSlideEnd", js.Any.fromFunction1(value))
+    def onSlideEnd(value: /* e */ OriginalEventEventValue => Unit): this.type = set("onSlideEnd", js.Any.fromFunction1(value))
     @scala.inline
     def orientation(value: String): this.type = set("orientation", value.asInstanceOf[js.Any])
     @scala.inline

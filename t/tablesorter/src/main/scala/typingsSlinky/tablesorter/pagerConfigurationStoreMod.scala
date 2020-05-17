@@ -1,10 +1,10 @@
 package typingsSlinky.tablesorter
 
-import typingsSlinky.jquery.JQuery_.Ajax.SuccessCallback
-import typingsSlinky.jquery.JQuery_.Ajax.SuccessTextStatus
-import typingsSlinky.jquery.JQuery_.jqXHR
-import typingsSlinky.tablesorter.mod._Global_.HTMLElement
-import typingsSlinky.tablesorter.mod._Global_.JQuery
+import typingsSlinky.jquery.JQuery.Ajax.SuccessCallback
+import typingsSlinky.jquery.JQuery.Ajax.SuccessTextStatus
+import typingsSlinky.jquery.JQuery.jqXHR
+import typingsSlinky.tablesorter.mod.global.HTMLElement
+import typingsSlinky.tablesorter.mod.global.JQuery
 import typingsSlinky.tablesorter.pagerConfigurationMod.PagerConfiguration
 import typingsSlinky.tablesorter.pagerDataPartMod.PagerDataPart
 import typingsSlinky.tablesorter.pagerMemoryMod.PagerMemory

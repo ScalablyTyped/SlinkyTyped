@@ -1,6 +1,6 @@
 package typingsSlinky.baseui.dndListMod
 
-import typingsSlinky.baseui.AnonNewIndex
+import typingsSlinky.baseui.anon.NewIndex
 import typingsSlinky.baseui.baseuiStrings.change_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait StatefulListProps extends js.Object {
   var initialState: js.UndefOr[State] = js.native
-  var onChange: js.UndefOr[js.Function1[/* params */ AnonNewIndex, _]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* params */ NewIndex, _]] = js.native
   var overrides: js.UndefOr[ListOverrides] = js.native
   var removable: js.UndefOr[Boolean] = js.native
   var removableByMove: js.UndefOr[Boolean] = js.native
@@ -41,7 +41,7 @@ object StatefulListProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* params */ AnonNewIndex => _): Self = {
+    def withOnChange(value: /* params */ NewIndex => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

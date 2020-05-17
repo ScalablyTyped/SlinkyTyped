@@ -3,7 +3,7 @@ package typingsSlinky.fabric.fabricImplMod
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLVideoElement
 import org.scalajs.dom.raw.SVGElement
-import typingsSlinky.fabric.AnonHeight
+import typingsSlinky.fabric.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -92,7 +92,7 @@ class Image () extends Object {
   	 * Returns original size of an image
   	 * @return Object with "width" and "height" properties
   	 */
-  def getOriginalSize(): AnonHeight = js.native
+  def getOriginalSize(): Height = js.native
   /**
   	 * Returns source of an image
   	 * @return Source of an image

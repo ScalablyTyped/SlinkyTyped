@@ -1,19 +1,19 @@
 package typingsSlinky.stripeV2.stripe
 
-import typingsSlinky.stripeV2.AnonBankname
+import typingsSlinky.stripeV2.anon.Bankname
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait StripeBankTokenResponse extends StripeTokenResponse {
-  var bank_account: AnonBankname = js.native
+  var bank_account: Bankname = js.native
 }
 
 object StripeBankTokenResponse {
   @scala.inline
   def apply(
-    bank_account: AnonBankname,
+    bank_account: Bankname,
     client_ip: String,
     created: Double,
     id: String,
@@ -34,7 +34,7 @@ object StripeBankTokenResponse {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBank_account(value: AnonBankname): Self = {
+    def withBank_account(value: Bankname): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bank_account")(value.asInstanceOf[js.Any])
         ret

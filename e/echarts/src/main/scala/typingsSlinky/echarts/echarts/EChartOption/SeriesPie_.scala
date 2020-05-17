@@ -1,13 +1,13 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonAnimationDurationUpdate
-import typingsSlinky.echarts.AnonAnimationEasing
-import typingsSlinky.echarts.AnonAnimationEasingUpdate
-import typingsSlinky.echarts.AnonDictunknownPropertyBorderColor
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonLabelAnonFontWeight
-import typingsSlinky.echarts.AnonLength2
-import typingsSlinky.echarts.AnonTextBorderWidth
+import typingsSlinky.echarts.anon.AnimationDurationUpdate
+import typingsSlinky.echarts.anon.AnimationEasing
+import typingsSlinky.echarts.anon.AnimationEasingUpdate
+import typingsSlinky.echarts.anon.DictunknownPropertyBorderColor
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.LabelFontWeight
+import typingsSlinky.echarts.anon.Length2
+import typingsSlinky.echarts.anon.TextBorderWidth
 import typingsSlinky.echarts.echarts.EChartOption.SeriesPie.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -251,7 +251,7 @@ trait SeriesPie_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-pie.emphasis
     */
-  var emphasis: js.UndefOr[AnonLabelAnonFontWeight] = js.native
+  var emphasis: js.UndefOr[LabelFontWeight] = js.native
   /**
     * Whether to enable the zoom animation effects when hovering sectors.
     *
@@ -286,7 +286,7 @@ trait SeriesPie_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonDictunknownPropertyBorderColor] = js.native
+  var itemStyle: js.UndefOr[DictunknownPropertyBorderColor] = js.native
   /**
     * Text label of pie chart, to explain some data information about
     * graphic item like value, name and so on.
@@ -298,7 +298,7 @@ trait SeriesPie_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.label
     */
-  var label: js.UndefOr[AnonTextBorderWidth] = js.native
+  var label: js.UndefOr[TextBorderWidth] = js.native
   /**
     * The style of visual guide line. Will show when
     * [label position](https://echarts.apache.org/en/option.html#series-pie.label.position)
@@ -309,7 +309,7 @@ trait SeriesPie_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.labelLine
     */
-  var labelLine: js.UndefOr[AnonLength2] = js.native
+  var labelLine: js.UndefOr[Length2] = js.native
   /**
     * Whether to enable highlighting chart when
     * [legend](https://echarts.apache.org/en/option.html#legend)
@@ -328,21 +328,21 @@ trait SeriesPie_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.markArea
     */
-  var markArea: js.UndefOr[AnonAnimationEasingUpdate] = js.native
+  var markArea: js.UndefOr[AnimationEasingUpdate] = js.native
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.markLine
     */
-  var markLine: js.UndefOr[AnonAnimationEasing] = js.native
+  var markLine: js.UndefOr[AnimationEasing] = js.native
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.markPoint
     */
-  var markPoint: js.UndefOr[AnonAnimationDurationUpdate] = js.native
+  var markPoint: js.UndefOr[AnimationDurationUpdate] = js.native
   /**
     * The minimum angle of sector (0 ~ 360).
     * It prevents some sector from being too small when value is small,
@@ -478,7 +478,7 @@ trait SeriesPie_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * @default
     * "pie"
@@ -713,7 +713,7 @@ object SeriesPie_ {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonLabelAnonFontWeight): Self = {
+    def withEmphasis(value: LabelFontWeight): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -761,7 +761,7 @@ object SeriesPie_ {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonDictunknownPropertyBorderColor): Self = {
+    def withItemStyle(value: DictunknownPropertyBorderColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -773,7 +773,7 @@ object SeriesPie_ {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonTextBorderWidth): Self = {
+    def withLabel(value: TextBorderWidth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -785,7 +785,7 @@ object SeriesPie_ {
         ret
     }
     @scala.inline
-    def withLabelLine(value: AnonLength2): Self = {
+    def withLabelLine(value: Length2): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("labelLine")(value.asInstanceOf[js.Any])
         ret
@@ -809,7 +809,7 @@ object SeriesPie_ {
         ret
     }
     @scala.inline
-    def withMarkArea(value: AnonAnimationEasingUpdate): Self = {
+    def withMarkArea(value: AnimationEasingUpdate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(value.asInstanceOf[js.Any])
         ret
@@ -821,7 +821,7 @@ object SeriesPie_ {
         ret
     }
     @scala.inline
-    def withMarkLine(value: AnonAnimationEasing): Self = {
+    def withMarkLine(value: AnimationEasing): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(value.asInstanceOf[js.Any])
         ret
@@ -833,7 +833,7 @@ object SeriesPie_ {
         ret
     }
     @scala.inline
-    def withMarkPoint(value: AnonAnimationDurationUpdate): Self = {
+    def withMarkPoint(value: AnimationDurationUpdate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(value.asInstanceOf[js.Any])
         ret
@@ -977,7 +977,7 @@ object SeriesPie_ {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.figlet.mod
 
-import typingsSlinky.figlet.PartialDefaults
+import typingsSlinky.figlet.anon.PartialDefaults
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

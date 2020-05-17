@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait HSLColor extends _Color {
+trait HSLColor extends Color {
   var a: js.UndefOr[Double] = js.native
   var h: Double = js.native
   var l: Double = js.native

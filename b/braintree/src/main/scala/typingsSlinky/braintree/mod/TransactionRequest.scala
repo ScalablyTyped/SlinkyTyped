@@ -1,12 +1,12 @@
 package typingsSlinky.braintree.mod
 
-import typingsSlinky.braintree.AnonAddBillingAddressToPaymentMethod
-import typingsSlinky.braintree.AnonCavv
-import typingsSlinky.braintree.AnonCompany
-import typingsSlinky.braintree.AnonCountryCodeNumeric
-import typingsSlinky.braintree.AnonCvv
-import typingsSlinky.braintree.AnonEmail
-import typingsSlinky.braintree.AnonPreviousNetworkTransactionId
+import typingsSlinky.braintree.anon.AddBillingAddressToPaymentMethod
+import typingsSlinky.braintree.anon.Cavv
+import typingsSlinky.braintree.anon.Company
+import typingsSlinky.braintree.anon.CountryCodeNumeric
+import typingsSlinky.braintree.anon.Cvv
+import typingsSlinky.braintree.anon.Email
+import typingsSlinky.braintree.anon.PreviousNetworkTransactionId
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,21 +15,21 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TransactionRequest extends js.Object {
   var amount: String = js.native
-  var billing: js.UndefOr[AnonCountryCodeNumeric] = js.native
+  var billing: js.UndefOr[CountryCodeNumeric] = js.native
   var billingAddressId: js.UndefOr[String] = js.native
   var channel: js.UndefOr[String] = js.native
-  var creditCard: js.UndefOr[AnonCvv] = js.native
+  var creditCard: js.UndefOr[Cvv] = js.native
   var customFields: js.UndefOr[Record[String, _]] = js.native
-  var customer: js.UndefOr[AnonEmail] = js.native
+  var customer: js.UndefOr[Email] = js.native
   var customerId: js.UndefOr[String] = js.native
   var descriptor: js.UndefOr[Descriptor] = js.native
   var deviceData: js.UndefOr[String] = js.native
   var deviceSessionId: js.UndefOr[String] = js.native
   var discountAmount: js.UndefOr[String] = js.native
-  var externalVault: js.UndefOr[AnonPreviousNetworkTransactionId] = js.native
+  var externalVault: js.UndefOr[PreviousNetworkTransactionId] = js.native
   var lineItems: js.UndefOr[js.Array[TransactionLineItem]] = js.native
   var merchantAccountId: js.UndefOr[String] = js.native
-  var options: js.UndefOr[AnonAddBillingAddressToPaymentMethod] = js.native
+  var options: js.UndefOr[AddBillingAddressToPaymentMethod] = js.native
   var orderId: js.UndefOr[String] = js.native
   var paymentMethodNonce: js.UndefOr[String] = js.native
   var paymentMethodToken: js.UndefOr[String] = js.native
@@ -43,13 +43,13 @@ trait TransactionRequest extends js.Object {
   var sharedPaymentMethodNonce: js.UndefOr[String] = js.native
   var sharedPaymentMethodToken: js.UndefOr[String] = js.native
   var sharedShippingAddressId: js.UndefOr[String] = js.native
-  var shipping: js.UndefOr[AnonCompany] = js.native
+  var shipping: js.UndefOr[Company] = js.native
   var shippingAddressId: js.UndefOr[String] = js.native
   var shippingAmount: js.UndefOr[String] = js.native
   var shipsFromPostalCode: js.UndefOr[String] = js.native
   var taxAmount: js.UndefOr[String] = js.native
   var taxExempt: js.UndefOr[Boolean] = js.native
-  var threeDSecurePassThru: js.UndefOr[AnonCavv] = js.native
+  var threeDSecurePassThru: js.UndefOr[Cavv] = js.native
   var transactionSource: js.UndefOr[TransactionRequestSource] = js.native
 }
 
@@ -72,7 +72,7 @@ object TransactionRequest {
         ret
     }
     @scala.inline
-    def withBilling(value: AnonCountryCodeNumeric): Self = {
+    def withBilling(value: CountryCodeNumeric): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("billing")(value.asInstanceOf[js.Any])
         ret
@@ -108,7 +108,7 @@ object TransactionRequest {
         ret
     }
     @scala.inline
-    def withCreditCard(value: AnonCvv): Self = {
+    def withCreditCard(value: Cvv): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("creditCard")(value.asInstanceOf[js.Any])
         ret
@@ -132,7 +132,7 @@ object TransactionRequest {
         ret
     }
     @scala.inline
-    def withCustomer(value: AnonEmail): Self = {
+    def withCustomer(value: Email): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customer")(value.asInstanceOf[js.Any])
         ret
@@ -204,7 +204,7 @@ object TransactionRequest {
         ret
     }
     @scala.inline
-    def withExternalVault(value: AnonPreviousNetworkTransactionId): Self = {
+    def withExternalVault(value: PreviousNetworkTransactionId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("externalVault")(value.asInstanceOf[js.Any])
         ret
@@ -240,7 +240,7 @@ object TransactionRequest {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonAddBillingAddressToPaymentMethod): Self = {
+    def withOptions(value: AddBillingAddressToPaymentMethod): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret
@@ -396,7 +396,7 @@ object TransactionRequest {
         ret
     }
     @scala.inline
-    def withShipping(value: AnonCompany): Self = {
+    def withShipping(value: Company): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shipping")(value.asInstanceOf[js.Any])
         ret
@@ -468,7 +468,7 @@ object TransactionRequest {
         ret
     }
     @scala.inline
-    def withThreeDSecurePassThru(value: AnonCavv): Self = {
+    def withThreeDSecurePassThru(value: Cavv): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("threeDSecurePassThru")(value.asInstanceOf[js.Any])
         ret

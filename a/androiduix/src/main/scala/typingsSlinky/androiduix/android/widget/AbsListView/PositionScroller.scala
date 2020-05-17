@@ -5,10 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.widget.AbsListView.PositionScroller")
 @js.native
-class PositionScroller protected () extends Runnable {
-  def this(arg: typingsSlinky.androiduix.android.widget.AbsListView) = this()
+trait PositionScroller extends Runnable {
   var _AbsListView_this: typingsSlinky.androiduix.android.widget.AbsListView = js.native
   var mBoundPos: js.Any = js.native
   var mExtraScroll: js.Any = js.native
@@ -25,17 +23,5 @@ class PositionScroller protected () extends Runnable {
   def startWithOffset(position: Double, offset: Double): Unit = js.native
   def startWithOffset(position: Double, offset: Double, duration: Double): Unit = js.native
   def stop(): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("android.widget.AbsListView.PositionScroller")
-@js.native
-object PositionScroller extends js.Object {
-  var MOVE_DOWN_BOUND: js.Any = js.native
-  var MOVE_DOWN_POS: js.Any = js.native
-  var MOVE_OFFSET: js.Any = js.native
-  var MOVE_UP_BOUND: js.Any = js.native
-  var MOVE_UP_POS: js.Any = js.native
-  var SCROLL_DURATION: js.Any = js.native
 }
 

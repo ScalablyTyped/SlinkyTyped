@@ -1,13 +1,13 @@
 package typingsSlinky.gapiPlus.gapi.client.plus.people
 
-import typingsSlinky.gapiPlus.AnonCoverInfo
-import typingsSlinky.gapiPlus.AnonDepartment
-import typingsSlinky.gapiPlus.AnonFamilyName
-import typingsSlinky.gapiPlus.AnonLabel
-import typingsSlinky.gapiPlus.AnonMax
-import typingsSlinky.gapiPlus.AnonPrimary
-import typingsSlinky.gapiPlus.AnonType
-import typingsSlinky.gapiPlus.AnonUrl
+import typingsSlinky.gapiPlus.anon.CoverInfo
+import typingsSlinky.gapiPlus.anon.Department
+import typingsSlinky.gapiPlus.anon.FamilyName
+import typingsSlinky.gapiPlus.anon.Label
+import typingsSlinky.gapiPlus.anon.Max
+import typingsSlinky.gapiPlus.anon.Primary
+import typingsSlinky.gapiPlus.anon.Type
+import typingsSlinky.gapiPlus.anon.Url
 import typingsSlinky.gapiPlus.gapiPlusStrings.plusNumbersignperson
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,33 +16,33 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Person extends js.Object {
   var aboutMe: String = js.native
-  var ageRange: AnonMax = js.native
+  var ageRange: Max = js.native
   var birthday: String = js.native
   var braggingRights: String = js.native
   var circledByCount: Double = js.native
-  var cover: AnonCoverInfo = js.native
+  var cover: CoverInfo = js.native
   var displayName: String = js.native
   var domain: String = js.native
-  var emails: js.Array[AnonType] = js.native
+  var emails: js.Array[Type] = js.native
   var etag: String = js.native
   var gender: String = js.native
   var id: String = js.native
-  var image: AnonUrl = js.native
+  var image: Url = js.native
   var isPlusUser: Boolean = js.native
   var kind: plusNumbersignperson = js.native
   var language: String = js.native
-  var name: AnonFamilyName = js.native
+  var name: FamilyName = js.native
   var nickname: String = js.native
   var objectType: String = js.native
   var occupation: String = js.native
-  var organizations: js.Array[AnonDepartment] = js.native
-  var placesLived: js.Array[AnonPrimary] = js.native
+  var organizations: js.Array[Department] = js.native
+  var placesLived: js.Array[Primary] = js.native
   var plusOneCount: Double = js.native
   var relationshipStatus: String = js.native
   var skills: String = js.native
   var tagline: String = js.native
   var url: String = js.native
-  var urls: js.Array[AnonLabel] = js.native
+  var urls: js.Array[Label] = js.native
   var verified: Boolean = js.native
 }
 
@@ -50,33 +50,33 @@ object Person {
   @scala.inline
   def apply(
     aboutMe: String,
-    ageRange: AnonMax,
+    ageRange: Max,
     birthday: String,
     braggingRights: String,
     circledByCount: Double,
-    cover: AnonCoverInfo,
+    cover: CoverInfo,
     displayName: String,
     domain: String,
-    emails: js.Array[AnonType],
+    emails: js.Array[Type],
     etag: String,
     gender: String,
     id: String,
-    image: AnonUrl,
+    image: Url,
     isPlusUser: Boolean,
     kind: plusNumbersignperson,
     language: String,
-    name: AnonFamilyName,
+    name: FamilyName,
     nickname: String,
     objectType: String,
     occupation: String,
-    organizations: js.Array[AnonDepartment],
-    placesLived: js.Array[AnonPrimary],
+    organizations: js.Array[Department],
+    placesLived: js.Array[Primary],
     plusOneCount: Double,
     relationshipStatus: String,
     skills: String,
     tagline: String,
     url: String,
-    urls: js.Array[AnonLabel],
+    urls: js.Array[Label],
     verified: Boolean
   ): Person = {
     val __obj = js.Dynamic.literal(aboutMe = aboutMe.asInstanceOf[js.Any], ageRange = ageRange.asInstanceOf[js.Any], birthday = birthday.asInstanceOf[js.Any], braggingRights = braggingRights.asInstanceOf[js.Any], circledByCount = circledByCount.asInstanceOf[js.Any], cover = cover.asInstanceOf[js.Any], displayName = displayName.asInstanceOf[js.Any], domain = domain.asInstanceOf[js.Any], emails = emails.asInstanceOf[js.Any], etag = etag.asInstanceOf[js.Any], gender = gender.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], isPlusUser = isPlusUser.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], language = language.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nickname = nickname.asInstanceOf[js.Any], objectType = objectType.asInstanceOf[js.Any], occupation = occupation.asInstanceOf[js.Any], organizations = organizations.asInstanceOf[js.Any], placesLived = placesLived.asInstanceOf[js.Any], plusOneCount = plusOneCount.asInstanceOf[js.Any], relationshipStatus = relationshipStatus.asInstanceOf[js.Any], skills = skills.asInstanceOf[js.Any], tagline = tagline.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], urls = urls.asInstanceOf[js.Any], verified = verified.asInstanceOf[js.Any])
@@ -95,7 +95,7 @@ object Person {
         ret
     }
     @scala.inline
-    def withAgeRange(value: AnonMax): Self = {
+    def withAgeRange(value: Max): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ageRange")(value.asInstanceOf[js.Any])
         ret
@@ -119,7 +119,7 @@ object Person {
         ret
     }
     @scala.inline
-    def withCover(value: AnonCoverInfo): Self = {
+    def withCover(value: CoverInfo): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cover")(value.asInstanceOf[js.Any])
         ret
@@ -137,7 +137,7 @@ object Person {
         ret
     }
     @scala.inline
-    def withEmails(value: js.Array[AnonType]): Self = {
+    def withEmails(value: js.Array[Type]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emails")(value.asInstanceOf[js.Any])
         ret
@@ -161,7 +161,7 @@ object Person {
         ret
     }
     @scala.inline
-    def withImage(value: AnonUrl): Self = {
+    def withImage(value: Url): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
         ret
@@ -185,7 +185,7 @@ object Person {
         ret
     }
     @scala.inline
-    def withName(value: AnonFamilyName): Self = {
+    def withName(value: FamilyName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
         ret
@@ -209,13 +209,13 @@ object Person {
         ret
     }
     @scala.inline
-    def withOrganizations(value: js.Array[AnonDepartment]): Self = {
+    def withOrganizations(value: js.Array[Department]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("organizations")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPlacesLived(value: js.Array[AnonPrimary]): Self = {
+    def withPlacesLived(value: js.Array[Primary]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("placesLived")(value.asInstanceOf[js.Any])
         ret
@@ -251,7 +251,7 @@ object Person {
         ret
     }
     @scala.inline
-    def withUrls(value: js.Array[AnonLabel]): Self = {
+    def withUrls(value: js.Array[Label]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("urls")(value.asInstanceOf[js.Any])
         ret

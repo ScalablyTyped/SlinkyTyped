@@ -1,6 +1,6 @@
 package typingsSlinky.xstate.typesMod
 
-import typingsSlinky.xstate.Anon0
+import typingsSlinky.xstate.anon.`0`
 import typingsSlinky.xstate.stateNodeMod.StateNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Edge[TContext, TEvent /* <: EventObject */, TEventType /* <: /* import warning: importer.ImportType#apply Failed type conversion: TEvent['type'] */ js.Any */] extends js.Object {
   var actions: js.Array[Action[TContext, TEvent]] = js.native
-  var cond: js.UndefOr[Condition[TContext, TEvent with (Anon0[TEventType, TEvent])]] = js.native
+  var cond: js.UndefOr[Condition[TContext, TEvent with (`0`[TEventType, TEvent])]] = js.native
   var event: TEventType = js.native
   var meta: js.UndefOr[MetaObject] = js.native
   var source: StateNode[TContext, _, TEvent, _] = js.native
@@ -67,14 +67,14 @@ object Edge {
     }
     @scala.inline
     def withCondFunction3(
-      value: (TContext, TEvent with (Anon0[TEventType, TEvent]), /* meta */ GuardMeta[TContext, TEvent with (Anon0[TEventType, TEvent])]) => Boolean
+      value: (TContext, TEvent with (`0`[TEventType, TEvent]), /* meta */ GuardMeta[TContext, TEvent with (`0`[TEventType, TEvent])]) => Boolean
     ): Self[TContext, TEvent, TEventType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cond")(js.Any.fromFunction3(value))
         ret
     }
     @scala.inline
-    def withCond(value: Condition[TContext, TEvent with (Anon0[TEventType, TEvent])]): Self[TContext, TEvent, TEventType] = {
+    def withCond(value: Condition[TContext, TEvent with (`0`[TEventType, TEvent])]): Self[TContext, TEvent, TEventType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cond")(value.asInstanceOf[js.Any])
         ret

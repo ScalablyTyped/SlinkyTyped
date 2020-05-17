@@ -17,12 +17,6 @@ package object rdsdataserviceMod {
   type BoxedLong = scala.Double
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.rdsdataserviceMod.ClientApiVersions
   type DbName = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.DOUBLE_OR_LONG
-    - typingsSlinky.awsSdk.awsSdkStrings.STRING
-    - java.lang.String
-  */
-  type DecimalReturnType = typingsSlinky.awsSdk.rdsdataserviceMod._DecimalReturnType | java.lang.String
   type DoubleArray = js.Array[typingsSlinky.awsSdk.rdsdataserviceMod.BoxedDouble]
   type FieldList = js.Array[typingsSlinky.awsSdk.rdsdataserviceMod.Field]
   type Id = java.lang.String
@@ -42,20 +36,5 @@ package object rdsdataserviceMod {
   type String = java.lang.String
   type StringArray = js.Array[typingsSlinky.awsSdk.rdsdataserviceMod.String]
   type TransactionStatus = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.DATE
-    - typingsSlinky.awsSdk.awsSdkStrings.DECIMAL
-    - typingsSlinky.awsSdk.awsSdkStrings.TIME
-    - typingsSlinky.awsSdk.awsSdkStrings.TIMESTAMP
-    - java.lang.String
-  */
-  type TypeHint = typingsSlinky.awsSdk.rdsdataserviceMod._TypeHint | java.lang.String
   type UpdateResults = js.Array[typingsSlinky.awsSdk.rdsdataserviceMod.UpdateResult]
-  type _Blob = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.rdsdataserviceMod.Blob | java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2018-08-01`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.rdsdataserviceMod._apiVersion | java.lang.String
 }

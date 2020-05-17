@@ -1,6 +1,7 @@
 package typingsSlinky.prosemirrorInputrules
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.prosemirrorInputrules.anon.Rules
 import typingsSlinky.prosemirrorModel.mod.Node
 import typingsSlinky.prosemirrorModel.mod.NodeType
 import typingsSlinky.prosemirrorModel.mod.Schema
@@ -52,7 +53,7 @@ object mod extends js.Object {
   var openDoubleQuote: InputRule[js.Any] = js.native
   var openSingleQuote: InputRule[js.Any] = js.native
   var smartQuotes: js.Array[InputRule[js.Any]] = js.native
-  def inputRules[S /* <: Schema[_, _] */](config: AnonRules[S]): Plugin[S, _] = js.native
+  def inputRules[S /* <: Schema[_, _] */](config: Rules[S]): Plugin[S, _] = js.native
   def textblockTypeInputRule[S /* <: Schema[_, _] */](regexp: js.RegExp, nodeType: NodeType[S]): InputRule[S] = js.native
   def textblockTypeInputRule[S /* <: Schema[_, _] */](
     regexp: js.RegExp,

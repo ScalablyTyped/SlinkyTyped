@@ -1,8 +1,8 @@
 package typingsSlinky.playcanvas.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.playcanvas.AnonPreventDefault
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Window
+import typingsSlinky.playcanvas.anon.PreventDefault
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,8 +27,8 @@ import scala.scalajs.js.annotation._
 class Keyboard ()
   extends typingsSlinky.playcanvas.pc.Keyboard {
   def this(element: Element) = this()
-  def this(element: Window_) = this()
-  def this(element: Element, options: AnonPreventDefault) = this()
-  def this(element: Window_, options: AnonPreventDefault) = this()
+  def this(element: Window) = this()
+  def this(element: Element, options: PreventDefault) = this()
+  def this(element: Window, options: PreventDefault) = this()
 }
 

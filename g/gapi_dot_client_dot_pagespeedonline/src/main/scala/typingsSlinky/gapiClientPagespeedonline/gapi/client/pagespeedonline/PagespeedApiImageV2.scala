@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientPagespeedonline.gapi.client.pagespeedonline
 
-import typingsSlinky.gapiClientPagespeedonline.AnonHeight
+import typingsSlinky.gapiClientPagespeedonline.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait PagespeedApiImageV2 extends js.Object {
   /** Mime type of image data (e.g. "image/jpeg"). */
   var mime_type: js.UndefOr[String] = js.native
   /** The region of the page that is captured by this image, with dimensions measured in CSS pixels. */
-  var page_rect: js.UndefOr[AnonHeight] = js.native
+  var page_rect: js.UndefOr[Height] = js.native
   /** Width of screenshot in pixels. */
   var width: js.UndefOr[Double] = js.native
 }
@@ -82,7 +82,7 @@ object PagespeedApiImageV2 {
         ret
     }
     @scala.inline
-    def withPage_rect(value: AnonHeight): Self = {
+    def withPage_rect(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("page_rect")(value.asInstanceOf[js.Any])
         ret

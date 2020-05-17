@@ -2,6 +2,7 @@ package typingsSlinky.reactFocusLock
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
+import typingsSlinky.reactFocusLock.anon.ReactFocusLockPropsReactN
 import typingsSlinky.reactFocusLock.interfacesMod.AutoFocusProps
 import typingsSlinky.reactFocusLock.interfacesMod.FreeFocusProps
 import typingsSlinky.reactFocusLock.interfacesMod.InFocusGuardProps

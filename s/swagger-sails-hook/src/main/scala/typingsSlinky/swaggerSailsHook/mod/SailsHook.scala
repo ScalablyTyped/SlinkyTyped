@@ -1,6 +1,6 @@
 package typingsSlinky.swaggerSailsHook.mod
 
-import typingsSlinky.swaggerSailsHook.AnonAfter
+import typingsSlinky.swaggerSailsHook.anon.After
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait SailsHook extends js.Object {
   		 * It handles any unhandled requests (any routes that aren't bound in the app via a
   		 * custom route configuration or a blueprint) via the swagger middleware.
   		 */
-  var routes: AnonAfter = js.native
+  var routes: After = js.native
   /**
   		 * Perform startup tasks.
   		 * All Sails configuration is guaranteed to be completed before a hook’s initialize function runs.
@@ -30,7 +30,7 @@ trait SailsHook extends js.Object {
 
 object SailsHook {
   @scala.inline
-  def apply(initialize: js.Function0[_] => Unit, routes: AnonAfter): SailsHook = {
+  def apply(initialize: js.Function0[_] => Unit, routes: After): SailsHook = {
     val __obj = js.Dynamic.literal(initialize = js.Any.fromFunction1(initialize), routes = routes.asInstanceOf[js.Any])
     __obj.asInstanceOf[SailsHook]
   }
@@ -47,7 +47,7 @@ object SailsHook {
         ret
     }
     @scala.inline
-    def withRoutes(value: AnonAfter): Self = {
+    def withRoutes(value: After): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("routes")(value.asInstanceOf[js.Any])
         ret

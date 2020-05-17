@@ -3,9 +3,9 @@ package typingsSlinky.reactDates.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactDates.AnonEndDate
-import typingsSlinky.reactDates.AnonIsVisible
-import typingsSlinky.reactDates.AnonStartDate
+import typingsSlinky.reactDates.anon.EndDate
+import typingsSlinky.reactDates.anon.IsVisible
+import typingsSlinky.reactDates.anon.StartDate
 import typingsSlinky.reactDates.mod.AnchorDirectionShape
 import typingsSlinky.reactDates.mod.CalendarInfoPositionShape
 import typingsSlinky.reactDates.mod.DateRangePickerCls
@@ -120,7 +120,7 @@ object DateRangePicker {
     @scala.inline
     def numberOfMonths(value: Double): this.type = set("numberOfMonths", value.asInstanceOf[js.Any])
     @scala.inline
-    def onClose(value: /* final */ AnonStartDate => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
+    def onClose(value: /* final */ StartDate => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
     @scala.inline
     def onNextMonthClick(value: /* newCurrentMonth */ momentObj => Unit): this.type = set("onNextMonthClick", js.Any.fromFunction1(value))
     @scala.inline
@@ -142,7 +142,7 @@ object DateRangePicker {
     @scala.inline
     def renderDayContents(value: /* day */ momentObj => String | ReactElement): this.type = set("renderDayContents", js.Any.fromFunction1(value))
     @scala.inline
-    def renderMonthElement(value: /* props */ AnonIsVisible => String | ReactElement): this.type = set("renderMonthElement", js.Any.fromFunction1(value))
+    def renderMonthElement(value: /* props */ IsVisible => String | ReactElement): this.type = set("renderMonthElement", js.Any.fromFunction1(value))
     @scala.inline
     def renderMonthText(value: /* day */ momentObj => String | ReactElement): this.type = set("renderMonthText", js.Any.fromFunction1(value))
     @scala.inline
@@ -181,7 +181,7 @@ object DateRangePicker {
   @scala.inline
   def apply(
     endDateId: String,
-    onDatesChange: AnonEndDate => Unit,
+    onDatesChange: EndDate => Unit,
     onFocusChange: js.UndefOr[FocusedInputShape] => Unit,
     startDateId: String
   ): Builder = {

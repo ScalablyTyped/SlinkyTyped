@@ -1,6 +1,6 @@
 package typingsSlinky.seleniumWebdriver.mod
 
-import typingsSlinky.seleniumWebdriver.PartialIRectangle
+import typingsSlinky.seleniumWebdriver.anon.PartialIRectangle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

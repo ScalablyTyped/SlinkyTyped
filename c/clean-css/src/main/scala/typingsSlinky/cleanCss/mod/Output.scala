@@ -1,6 +1,6 @@
 package typingsSlinky.cleanCss.mod
 
-import typingsSlinky.cleanCss.AnonEfficiency
+import typingsSlinky.cleanCss.anon.Efficiency
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait Output extends js.Object {
   /**
     * Contains statistics on the minify process
     */
-  var stats: AnonEfficiency = js.native
+  var stats: Efficiency = js.native
   /**
     * Optimized output CSS as a string
     */
@@ -37,7 +37,7 @@ object Output {
   def apply(
     errors: js.Array[String],
     sourceMap: String,
-    stats: AnonEfficiency,
+    stats: Efficiency,
     styles: String,
     warnings: js.Array[String]
   ): Output = {
@@ -63,7 +63,7 @@ object Output {
         ret
     }
     @scala.inline
-    def withStats(value: AnonEfficiency): Self = {
+    def withStats(value: Efficiency): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
         ret

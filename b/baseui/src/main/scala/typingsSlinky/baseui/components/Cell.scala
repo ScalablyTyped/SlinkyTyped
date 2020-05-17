@@ -2,7 +2,6 @@ package typingsSlinky.baseui.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonCell
 import typingsSlinky.baseui.layoutGridMod.ALIGNMENT
 import typingsSlinky.baseui.layoutGridMod.CellProps
 import typingsSlinky.baseui.layoutGridMod.Responsive
@@ -24,7 +23,7 @@ object Cell {
     @scala.inline
     def order(value: Responsive[Double]): this.type = set("order", value.asInstanceOf[js.Any])
     @scala.inline
-    def overrides(value: AnonCell): this.type = set("overrides", value.asInstanceOf[js.Any])
+    def overrides(value: typingsSlinky.baseui.anon.Cell): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline
     def skip(value: Responsive[Double]): this.type = set("skip", value.asInstanceOf[js.Any])
     @scala.inline

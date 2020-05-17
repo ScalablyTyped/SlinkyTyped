@@ -1,6 +1,6 @@
 package typingsSlinky.ionic.cordovaConfigMod
 
-import typingsSlinky.ionic.RequiredProjectIntegratio
+import typingsSlinky.ionic.anon.RequiredProjectIntegratio
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

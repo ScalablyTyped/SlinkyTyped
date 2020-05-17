@@ -12,14 +12,8 @@ trait PolicyOptionVariants[T] extends js.Object
 
 object PolicyOptionVariants {
   @scala.inline
-  def PolicyOptions[T](): PolicyOptionVariants[T] = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[PolicyOptionVariants[T]]
-  }
+  implicit def apply[T](value: DecoratedPolicyOptions[T]): PolicyOptionVariants[T] = value.asInstanceOf[PolicyOptionVariants[T]]
   @scala.inline
-  def DecoratedPolicyOptions[T](): PolicyOptionVariants[T] = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[PolicyOptionVariants[T]]
-  }
+  implicit def apply[T](value: PolicyOptions[T]): PolicyOptionVariants[T] = value.asInstanceOf[PolicyOptionVariants[T]]
 }
 

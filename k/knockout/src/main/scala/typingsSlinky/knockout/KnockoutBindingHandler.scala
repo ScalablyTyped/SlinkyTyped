@@ -2,6 +2,7 @@ package typingsSlinky.knockout
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Node
+import typingsSlinky.knockout.anon.ControlsDescendantBindings
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +18,7 @@ trait KnockoutBindingHandler[E /* <: Node */, V, VM]
       /* allBindingsAccessor */ KnockoutAllBindingsAccessor, 
       /* viewModel */ VM, 
       /* bindingContext */ KnockoutBindingContext, 
-      Unit | AnonControlsDescendantBindings
+      Unit | ControlsDescendantBindings
     ]
   ] = js.native
   var options: js.UndefOr[js.Any] = js.native
@@ -67,7 +68,7 @@ object KnockoutBindingHandler {
     }
     @scala.inline
     def withInit(
-      value: (/* element */ E, /* valueAccessor */ js.Function0[V], /* allBindingsAccessor */ KnockoutAllBindingsAccessor, /* viewModel */ VM, /* bindingContext */ KnockoutBindingContext) => Unit | AnonControlsDescendantBindings
+      value: (/* element */ E, /* valueAccessor */ js.Function0[V], /* allBindingsAccessor */ KnockoutAllBindingsAccessor, /* viewModel */ VM, /* bindingContext */ KnockoutBindingContext) => Unit | ControlsDescendantBindings
     ): Self[E, V, VM] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("init")(js.Any.fromFunction5(value))

@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import typingsSlinky.std.stdStrings.Event
 import typingsSlinky.std.stdStrings.Events
 import typingsSlinky.std.stdStrings.MouseEvents
 import typingsSlinky.std.stdStrings.MutationEvents
@@ -13,7 +12,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait DocumentEvent extends js.Object {
-  def createEvent(eventInterface: java.lang.String): Event_ = js.native
+  def createEvent(eventInterface: java.lang.String): org.scalajs.dom.raw.Event = js.native
   @JSName("createEvent")
   def createEvent_AnimationEvent(eventInterface: typingsSlinky.std.stdStrings.AnimationEvent): org.scalajs.dom.raw.AnimationEvent = js.native
   @JSName("createEvent")
@@ -41,9 +40,9 @@ trait DocumentEvent extends js.Object {
   @JSName("createEvent")
   def createEvent_ErrorEvent(eventInterface: typingsSlinky.std.stdStrings.ErrorEvent): org.scalajs.dom.raw.ErrorEvent = js.native
   @JSName("createEvent")
-  def createEvent_Event(eventInterface: Event): Event_ = js.native
+  def createEvent_Event(eventInterface: typingsSlinky.std.stdStrings.Event): org.scalajs.dom.raw.Event = js.native
   @JSName("createEvent")
-  def createEvent_Events(eventInterface: Events): Event_ = js.native
+  def createEvent_Events(eventInterface: Events): org.scalajs.dom.raw.Event = js.native
   @JSName("createEvent")
   def createEvent_FocusEvent(eventInterface: typingsSlinky.std.stdStrings.FocusEvent): org.scalajs.dom.raw.FocusEvent = js.native
   @JSName("createEvent")

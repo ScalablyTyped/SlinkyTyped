@@ -1,12 +1,12 @@
 package typingsSlinky.got.mod
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.got.GotInstanceGotBodyFnnull
-import typingsSlinky.got.GotInstanceGotBodyFnstrin
-import typingsSlinky.got.GotInstanceGotFormFnnull
-import typingsSlinky.got.GotInstanceGotFormFnstrin
-import typingsSlinky.got.GotInstanceGotJSONFn
-import typingsSlinky.got.Recordgetpostputpatchhead
+import typingsSlinky.got.anon.GotInstanceGotBodyFnnull
+import typingsSlinky.got.anon.GotInstanceGotBodyFnstrin
+import typingsSlinky.got.anon.GotInstanceGotFormFnnull
+import typingsSlinky.got.anon.GotInstanceGotFormFnstrin
+import typingsSlinky.got.anon.GotInstanceGotJSONFn
+import typingsSlinky.got.anon.Recordgetpostputpatchhead
 import typingsSlinky.node.streamMod.Duplex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -47,13 +47,13 @@ object ^ extends js.Object {
   def delete(url: GotUrl, options: GotBodyOptions[Null | String]): GotPromise[String] = js.native
   def delete(url: GotUrl, options: GotFormOptions[Null | String]): GotPromise[String] = js.native
   def delete(url: GotUrl, options: GotJSONOptions): GotPromise[_] = js.native
-  def extend(options: GotBodyOptions[String]): GotInstanceGotBodyFnstrin = js.native
-  def extend(options: GotFormOptions[Null]): GotInstanceGotFormFnnull = js.native
+  def extend(options: GotBodyOptions[Null]): GotInstanceGotBodyFnnull = js.native
+  def extend(options: GotFormOptions[String]): GotInstanceGotFormFnstrin = js.native
   def extend(options: GotJSONOptions): GotInstanceGotJSONFn = js.native
   @JSName("extend")
-  def extend_GotInstanceGotBodyFnnull(options: GotBodyOptions[Null]): GotInstanceGotBodyFnnull = js.native
+  def extend_GotInstanceGotBodyFnstrin(options: GotBodyOptions[String]): GotInstanceGotBodyFnstrin = js.native
   @JSName("extend")
-  def extend_GotInstanceGotFormFnstrin(options: GotFormOptions[String]): GotInstanceGotFormFnstrin = js.native
+  def extend_GotInstanceGotFormFnnull(options: GotFormOptions[Null]): GotInstanceGotFormFnnull = js.native
   def get(url: GotUrl): GotPromise[String] = js.native
   def get(url: GotUrl, options: GotBodyOptions[Null | String]): GotPromise[String] = js.native
   def get(url: GotUrl, options: GotFormOptions[Null | String]): GotPromise[String] = js.native

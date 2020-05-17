@@ -1,6 +1,6 @@
 package typingsSlinky.hapiHapi.mod
 
-import typingsSlinky.hapiHapi.AnonArtifacts
+import typingsSlinky.hapiHapi.anon.Artifacts
 import typingsSlinky.hapiShot.mod.RequestOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +19,7 @@ trait ServerInjectOptions extends RequestOptions {
   /**
     * Authentication bypass options.
     */
-  var auth: js.UndefOr[AnonArtifacts] = js.native
+  var auth: js.UndefOr[Artifacts] = js.native
   /**
     * sets the initial value of request.plugins, defaults to {}.
     */
@@ -63,7 +63,7 @@ object ServerInjectOptions {
         ret
     }
     @scala.inline
-    def withAuth(value: AnonArtifacts): Self = {
+    def withAuth(value: Artifacts): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
         ret

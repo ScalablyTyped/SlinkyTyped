@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait IConnectorCls[TContext]
-  extends Instantiable0[js.Any]
+  extends IConnector[TContext]
+     with Instantiable0[js.Any]
      with Instantiable1[/* context */ TContext, js.Any]
 

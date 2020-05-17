@@ -1,5 +1,6 @@
 package typingsSlinky.jestCore
 
+import typingsSlinky.jestCore.anon.ChangedFilesPromise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object runJestMod extends js.Object {
   def default(
-    hasContextsGlobalConfigOutputStreamTestWatcherJestHooksStartRunChangedFilesPromiseOnCompleteFailedTestsCacheFilter: AnonChangedFilesPromise
+    hasContextsGlobalConfigOutputStreamTestWatcherJestHooksStartRunChangedFilesPromiseOnCompleteFailedTestsCacheFilter: ChangedFilesPromise
   ): js.Promise[Unit | Null] = js.native
 }
 

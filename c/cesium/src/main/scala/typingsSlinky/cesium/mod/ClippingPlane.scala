@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonDistance
+import typingsSlinky.cesium.anon.Distance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "ClippingPlane")
 @js.native
 class ClippingPlane protected () extends js.Object {
-  def this(option: AnonDistance) = this()
+  def this(option: Distance) = this()
   var distance: Double = js.native
   var normal: Cartesian3 = js.native
 }

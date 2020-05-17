@@ -3,8 +3,8 @@ package typingsSlinky.antd.directoryTreeMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.AnonEvent
-import typingsSlinky.antd.AnonExpanded
+import typingsSlinky.antd.anon.Event
+import typingsSlinky.antd.anon.Expanded
 import typingsSlinky.antd.contextMod.ConfigConsumerProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -30,8 +30,8 @@ trait DirectoryTree
     event: SyntheticMouseEvent[HTMLElement],
     node: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify EventDataNode */ js.Any
   ): Unit = js.native
-  def onExpand(expandedKeys: js.Array[String], info: AnonExpanded): Unit = js.native
-  def onSelect(keys: js.Array[String], event: AnonEvent): Unit = js.native
+  def onExpand(expandedKeys: js.Array[String], info: Expanded): Unit = js.native
+  def onSelect(keys: js.Array[String], event: Event): Unit = js.native
   def renderDirectoryTree(hasGetPrefixClsDirection: ConfigConsumerProps): ReactElement = js.native
   def setTreeRef(node: typingsSlinky.antd.treeTreeMod.default): Unit = js.native
   def setUncontrolledState(state: DirectoryTreeState): Unit = js.native

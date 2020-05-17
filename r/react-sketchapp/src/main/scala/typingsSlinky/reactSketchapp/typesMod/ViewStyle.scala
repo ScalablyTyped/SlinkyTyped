@@ -1,6 +1,6 @@
 package typingsSlinky.reactSketchapp.typesMod
 
-import typingsSlinky.reactSketchapp.AnonWidth
+import typingsSlinky.reactSketchapp.anon.Width
 import typingsSlinky.reactSketchapp.reactSketchappStrings.`column-reverse`
 import typingsSlinky.reactSketchapp.reactSketchappStrings.`flex-end`
 import typingsSlinky.reactSketchapp.reactSketchappStrings.`flex-start`
@@ -86,7 +86,7 @@ trait ViewStyle extends js.Object {
   var right: js.UndefOr[Double] = js.native
   var shadowColor: js.UndefOr[Color] = js.native
   var shadowInner: js.UndefOr[Boolean] = js.native
-  var shadowOffset: js.UndefOr[AnonWidth] = js.native
+  var shadowOffset: js.UndefOr[Width] = js.native
   var shadowOpacity: js.UndefOr[Double] = js.native
   var shadowRadius: js.UndefOr[Double] = js.native
   var shadowSpread: js.UndefOr[Double] = js.native
@@ -854,7 +854,7 @@ object ViewStyle {
         ret
     }
     @scala.inline
-    def withShadowOffset(value: AnonWidth): Self = {
+    def withShadowOffset(value: Width): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffset")(value.asInstanceOf[js.Any])
         ret

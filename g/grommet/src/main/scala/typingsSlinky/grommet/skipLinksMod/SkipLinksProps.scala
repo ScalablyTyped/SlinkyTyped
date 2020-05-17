@@ -1,7 +1,7 @@
 package typingsSlinky.grommet.skipLinksMod
 
 import slinky.core.TagMod
-import typingsSlinky.grommet.AnonSkipTo
+import typingsSlinky.grommet.anon.SkipTo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SkipLinksProps extends js.Object {
   var children: TagMod[Any] = js.native
-  var messages: js.UndefOr[AnonSkipTo] = js.native
+  var messages: js.UndefOr[SkipTo] = js.native
 }
 
 object SkipLinksProps {
@@ -37,7 +37,7 @@ object SkipLinksProps {
         ret
     }
     @scala.inline
-    def withMessages(value: AnonSkipTo): Self = {
+    def withMessages(value: SkipTo): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.AnonChildrenString
-import typingsSlinky.tabris.OmitSwitchset
+import typingsSlinky.tabris.anon.ChildrenString
+import typingsSlinky.tabris.anon.OmitSwitchset
 import typingsSlinky.tabris.tabrisStrings.checked
 import typingsSlinky.tabris.tabrisStrings.set
 import typingsSlinky.tabris.tabrisStrings.thumbOffColor
@@ -24,7 +24,7 @@ class Switch () extends Widget {
     * @constant
     */
   @JSName("jsxAttributes")
-  val jsxAttributes_Switch: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with AnonChildrenString = js.native
+  val jsxAttributes_Switch: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with ChildrenString = js.native
   /**
     * Fired when the [*checked*](#checked) property has changed.
     */

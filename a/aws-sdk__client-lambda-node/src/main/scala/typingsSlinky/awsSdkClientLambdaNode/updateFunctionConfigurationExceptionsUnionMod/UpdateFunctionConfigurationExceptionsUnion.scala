@@ -1,0 +1,37 @@
+package typingsSlinky.awsSdkClientLambdaNode.updateFunctionConfigurationExceptionsUnionMod
+
+import typingsSlinky.awsSdkClientLambdaNode.typesInvalidParameterValueExceptionMod.InvalidParameterValueException
+import typingsSlinky.awsSdkClientLambdaNode.typesPreconditionFailedExceptionMod.PreconditionFailedException
+import typingsSlinky.awsSdkClientLambdaNode.typesResourceConflictExceptionMod.ResourceConflictException
+import typingsSlinky.awsSdkClientLambdaNode.typesResourceNotFoundExceptionMod.ResourceNotFoundException
+import typingsSlinky.awsSdkClientLambdaNode.typesServiceExceptionMod.ServiceException
+import typingsSlinky.awsSdkClientLambdaNode.typesTooManyRequestsExceptionMod.TooManyRequestsException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.awsSdkClientLambdaNode.typesServiceExceptionMod.ServiceException
+  - typingsSlinky.awsSdkClientLambdaNode.typesResourceNotFoundExceptionMod.ResourceNotFoundException
+  - typingsSlinky.awsSdkClientLambdaNode.typesInvalidParameterValueExceptionMod.InvalidParameterValueException
+  - typingsSlinky.awsSdkClientLambdaNode.typesTooManyRequestsExceptionMod.TooManyRequestsException
+  - typingsSlinky.awsSdkClientLambdaNode.typesResourceConflictExceptionMod.ResourceConflictException
+  - typingsSlinky.awsSdkClientLambdaNode.typesPreconditionFailedExceptionMod.PreconditionFailedException
+*/
+trait UpdateFunctionConfigurationExceptionsUnion extends js.Object
+
+object UpdateFunctionConfigurationExceptionsUnion {
+  @scala.inline
+  implicit def apply(value: InvalidParameterValueException): UpdateFunctionConfigurationExceptionsUnion = value.asInstanceOf[UpdateFunctionConfigurationExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: PreconditionFailedException): UpdateFunctionConfigurationExceptionsUnion = value.asInstanceOf[UpdateFunctionConfigurationExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: ResourceConflictException): UpdateFunctionConfigurationExceptionsUnion = value.asInstanceOf[UpdateFunctionConfigurationExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: ResourceNotFoundException): UpdateFunctionConfigurationExceptionsUnion = value.asInstanceOf[UpdateFunctionConfigurationExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: ServiceException): UpdateFunctionConfigurationExceptionsUnion = value.asInstanceOf[UpdateFunctionConfigurationExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: TooManyRequestsException): UpdateFunctionConfigurationExceptionsUnion = value.asInstanceOf[UpdateFunctionConfigurationExceptionsUnion]
+}
+

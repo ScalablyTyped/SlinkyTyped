@@ -1,22 +1,22 @@
 package typingsSlinky.numbro.mod.numbro
 
-import typingsSlinky.numbro.AnonCode
-import typingsSlinky.numbro.AnonDecimal
-import typingsSlinky.numbro.AnonFourDigits
-import typingsSlinky.numbro.AnonMillion
+import typingsSlinky.numbro.anon.Code
+import typingsSlinky.numbro.anon.Decimal
+import typingsSlinky.numbro.anon.FourDigits
+import typingsSlinky.numbro.anon.Million
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait NumbroLanguage extends js.Object {
-  var abbreviations: AnonMillion = js.native
+  var abbreviations: Million = js.native
   var byteFormat: js.UndefOr[Format] = js.native
-  var currency: AnonCode = js.native
+  var currency: Code = js.native
   var currencyFormat: js.UndefOr[Format] = js.native
   var defaults: js.UndefOr[Format] = js.native
-  var delimiters: AnonDecimal = js.native
-  var formats: AnonFourDigits = js.native
+  var delimiters: Decimal = js.native
+  var formats: FourDigits = js.native
   var languageTag: String = js.native
   var ordinalFormat: js.UndefOr[Format] = js.native
   var percentageFormat: js.UndefOr[Format] = js.native
@@ -27,10 +27,10 @@ trait NumbroLanguage extends js.Object {
 object NumbroLanguage {
   @scala.inline
   def apply(
-    abbreviations: AnonMillion,
-    currency: AnonCode,
-    delimiters: AnonDecimal,
-    formats: AnonFourDigits,
+    abbreviations: Million,
+    currency: Code,
+    delimiters: Decimal,
+    formats: FourDigits,
     languageTag: String,
     ordinal: Double => String
   ): NumbroLanguage = {
@@ -44,25 +44,25 @@ object NumbroLanguage {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAbbreviations(value: AnonMillion): Self = {
+    def withAbbreviations(value: Million): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("abbreviations")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withCurrency(value: AnonCode): Self = {
+    def withCurrency(value: Code): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withDelimiters(value: AnonDecimal): Self = {
+    def withDelimiters(value: Decimal): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delimiters")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withFormats(value: AnonFourDigits): Self = {
+    def withFormats(value: FourDigits): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formats")(value.asInstanceOf[js.Any])
         ret

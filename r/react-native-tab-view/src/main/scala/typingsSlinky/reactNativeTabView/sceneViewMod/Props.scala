@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeTabView.sceneViewMod
 import slinky.core.TagMod
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeTabView.AnonLoading
+import typingsSlinky.reactNativeTabView.anon.Loading
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.enter
 import typingsSlinky.reactNativeTabView.typesMod.Layout
 import typingsSlinky.reactNativeTabView.typesMod.Listener
@@ -25,7 +25,7 @@ trait Props[T /* <: Route */] extends js.Object {
   var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
   @JSName("addListener")
   def addListener_enter(`type`: enter, listener: Listener): Unit = js.native
-  def children(props: AnonLoading): TagMod[Any] = js.native
+  def children(props: Loading): TagMod[Any] = js.native
   def jumpTo(key: String): Unit = js.native
   @JSName("removeListener")
   def removeListener_enter(`type`: enter, listener: Listener): Unit = js.native
@@ -35,7 +35,7 @@ object Props {
   @scala.inline
   def apply[T](
     addListener: (enter, Listener) => Unit,
-    children: AnonLoading => TagMod[Any],
+    children: Loading => TagMod[Any],
     index: Double,
     jumpTo: String => Unit,
     layout: Layout,
@@ -62,7 +62,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withChildren(value: AnonLoading => TagMod[Any]): Self[T] = {
+    def withChildren(value: Loading => TagMod[Any]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.Any.fromFunction1(value))
         ret

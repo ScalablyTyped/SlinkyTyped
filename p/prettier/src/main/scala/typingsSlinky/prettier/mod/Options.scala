@@ -1,6 +1,6 @@
 package typingsSlinky.prettier.mod
 
-import typingsSlinky.prettier.RecordBuiltInParserNameBu
+import typingsSlinky.prettier.anon.RecordBuiltInParserNameBu
 import typingsSlinky.prettier.prettierStrings.`as-needed`
 import typingsSlinky.prettier.prettierStrings.all
 import typingsSlinky.prettier.prettierStrings.always

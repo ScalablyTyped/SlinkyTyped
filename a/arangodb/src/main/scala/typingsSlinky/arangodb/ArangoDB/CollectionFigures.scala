@@ -1,27 +1,27 @@
 package typingsSlinky.arangodb.ArangoDB
 
-import typingsSlinky.arangodb.AnonBytesRead
-import typingsSlinky.arangodb.AnonCount
-import typingsSlinky.arangodb.AnonDeletion
-import typingsSlinky.arangodb.AnonFileSize
+import typingsSlinky.arangodb.anon.BytesRead
+import typingsSlinky.arangodb.anon.Count
+import typingsSlinky.arangodb.anon.Deletion
+import typingsSlinky.arangodb.anon.FileSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CollectionFigures extends js.Object {
-  var alive: AnonCount = js.native
-  var attributes: AnonCount = js.native
-  var compactionStatus: AnonBytesRead = js.native
-  var compactors: AnonFileSize = js.native
-  var datafiles: AnonFileSize = js.native
-  var dead: AnonDeletion = js.native
+  var alive: Count = js.native
+  var attributes: Count = js.native
+  var compactionStatus: BytesRead = js.native
+  var compactors: FileSize = js.native
+  var datafiles: FileSize = js.native
+  var dead: Deletion = js.native
   var documentReferences: Double = js.native
-  var indexes: AnonCount = js.native
-  var journals: AnonFileSize = js.native
+  var indexes: Count = js.native
+  var journals: FileSize = js.native
   var lastTick: Double = js.native
-  var shapefiles: AnonFileSize = js.native
-  var shapes: AnonCount = js.native
+  var shapefiles: FileSize = js.native
+  var shapes: Count = js.native
   var uncollectedLogfileEntries: Double = js.native
   var waitingFor: String = js.native
 }
@@ -29,18 +29,18 @@ trait CollectionFigures extends js.Object {
 object CollectionFigures {
   @scala.inline
   def apply(
-    alive: AnonCount,
-    attributes: AnonCount,
-    compactionStatus: AnonBytesRead,
-    compactors: AnonFileSize,
-    datafiles: AnonFileSize,
-    dead: AnonDeletion,
+    alive: Count,
+    attributes: Count,
+    compactionStatus: BytesRead,
+    compactors: FileSize,
+    datafiles: FileSize,
+    dead: Deletion,
     documentReferences: Double,
-    indexes: AnonCount,
-    journals: AnonFileSize,
+    indexes: Count,
+    journals: FileSize,
     lastTick: Double,
-    shapefiles: AnonFileSize,
-    shapes: AnonCount,
+    shapefiles: FileSize,
+    shapes: Count,
     uncollectedLogfileEntries: Double,
     waitingFor: String
   ): CollectionFigures = {
@@ -54,37 +54,37 @@ object CollectionFigures {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAlive(value: AnonCount): Self = {
+    def withAlive(value: Count): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("alive")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withAttributes(value: AnonCount): Self = {
+    def withAttributes(value: Count): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withCompactionStatus(value: AnonBytesRead): Self = {
+    def withCompactionStatus(value: BytesRead): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("compactionStatus")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withCompactors(value: AnonFileSize): Self = {
+    def withCompactors(value: FileSize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("compactors")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withDatafiles(value: AnonFileSize): Self = {
+    def withDatafiles(value: FileSize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("datafiles")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withDead(value: AnonDeletion): Self = {
+    def withDead(value: Deletion): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dead")(value.asInstanceOf[js.Any])
         ret
@@ -96,13 +96,13 @@ object CollectionFigures {
         ret
     }
     @scala.inline
-    def withIndexes(value: AnonCount): Self = {
+    def withIndexes(value: Count): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("indexes")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withJournals(value: AnonFileSize): Self = {
+    def withJournals(value: FileSize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("journals")(value.asInstanceOf[js.Any])
         ret
@@ -114,13 +114,13 @@ object CollectionFigures {
         ret
     }
     @scala.inline
-    def withShapefiles(value: AnonFileSize): Self = {
+    def withShapefiles(value: FileSize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shapefiles")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withShapes(value: AnonCount): Self = {
+    def withShapes(value: Count): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shapes")(value.asInstanceOf[js.Any])
         ret

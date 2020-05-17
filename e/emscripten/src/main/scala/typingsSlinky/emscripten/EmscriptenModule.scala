@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.WebGLRenderingContext
 import typingsSlinky.emscripten.Emscripten.EnvironmentType
 import typingsSlinky.emscripten.Emscripten.WebAssemblyExports
 import typingsSlinky.emscripten.Emscripten.WebAssemblyImports
+import typingsSlinky.emscripten.WebAssembly.Module
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -60,10 +61,7 @@ trait EmscriptenModule extends js.Object {
   def addOnPreRun(cb: js.Function0[_]): Unit = js.native
   def destroy(`object`: js.Object): Unit = js.native
   def getPreloadedPackage(remotePackageName: String, remotePackageSize: Double): js.typedarray.ArrayBuffer = js.native
-  def instantiateWasm(
-    imports: WebAssemblyImports,
-    successCallback: js.Function1[/* module */ typingsSlinky.emscripten.WebAssembly.Module, Unit]
-  ): WebAssemblyExports = js.native
+  def instantiateWasm(imports: WebAssemblyImports, successCallback: js.Function1[/* module */ Module, Unit]): WebAssemblyExports = js.native
   def locateFile(url: String, scriptDirectory: String): String = js.native
   def onAbort(what: js.Any): Unit = js.native
   def onCustomMessage(event: MessageEvent): Unit = js.native

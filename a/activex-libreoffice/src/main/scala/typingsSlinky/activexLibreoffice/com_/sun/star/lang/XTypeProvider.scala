@@ -1,0 +1,84 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.lang
+
+import typingsSlinky.activexLibreoffice.`type`
+import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
+import typingsSlinky.std.SafeArray
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** interface to get information about the types (usually interface types) supported by an object. */
+@js.native
+trait XTypeProvider extends XInterface {
+  /**
+    * Obsolete unique identifier.
+    *
+    * Originally returned a sequence of bytes which, when non-empty, was used as an ID to distinguish unambiguously between two sets of types, for example
+    * to realise hashing functionality when the object is introspected. Two objects that returned the same non-empty ID had to return the same set of types
+    * in {@link getTypes()} . (If a unique ID could not be provided, this method was always allowed to return an empty sequence, though).
+    * @deprecated DeprecatedThis feature should no longer be used, and implementations are encouraged to always return an empty sequence.
+    */
+  val ImplementationId: SafeArray[Double] = js.native
+  /** returns a sequence of all types (usually interface types) provided by the object. */
+  val Types: SafeArray[`type`] = js.native
+  /**
+    * Obsolete unique identifier.
+    *
+    * Originally returned a sequence of bytes which, when non-empty, was used as an ID to distinguish unambiguously between two sets of types, for example
+    * to realise hashing functionality when the object is introspected. Two objects that returned the same non-empty ID had to return the same set of types
+    * in {@link getTypes()} . (If a unique ID could not be provided, this method was always allowed to return an empty sequence, though).
+    * @deprecated DeprecatedThis feature should no longer be used, and implementations are encouraged to always return an empty sequence.
+    */
+  def getImplementationId(): SafeArray[Double] = js.native
+  /** returns a sequence of all types (usually interface types) provided by the object. */
+  def getTypes(): SafeArray[`type`] = js.native
+}
+
+object XTypeProvider {
+  @scala.inline
+  def apply(
+    ImplementationId: SafeArray[Double],
+    Types: SafeArray[`type`],
+    acquire: () => Unit,
+    getImplementationId: () => SafeArray[Double],
+    getTypes: () => SafeArray[`type`],
+    queryInterface: `type` => js.Any,
+    release: () => Unit
+  ): XTypeProvider = {
+    val __obj = js.Dynamic.literal(ImplementationId = ImplementationId.asInstanceOf[js.Any], Types = Types.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), getImplementationId = js.Any.fromFunction0(getImplementationId), getTypes = js.Any.fromFunction0(getTypes), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release))
+    __obj.asInstanceOf[XTypeProvider]
+  }
+  @scala.inline
+  implicit class XTypeProviderOps[Self <: XTypeProvider] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withImplementationId(value: SafeArray[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImplementationId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTypes(value: SafeArray[`type`]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Types")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetImplementationId(value: () => SafeArray[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getImplementationId")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetTypes(value: () => SafeArray[`type`]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTypes")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
+}
+

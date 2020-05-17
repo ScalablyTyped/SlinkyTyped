@@ -6,13 +6,15 @@ import typingsSlinky.amapJsApi.AMap.Icon
 import typingsSlinky.amapJsApi.AMap.LocationValue
 import typingsSlinky.amapJsApi.AMap.MarkerShape
 import typingsSlinky.amapJsApi.AMap.Pixel
+import typingsSlinky.amapJsApi.ReferOverlayOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Options[ExtraData]
-  extends typingsSlinky.amapJsApi.AMap.Overlay.Options[ExtraData] {
+  extends typingsSlinky.amapJsApi.AMap.Overlay.Options[ExtraData]
+     with ReferOverlayOptions[js.Any] {
   /**
     * 标记锚点
     */

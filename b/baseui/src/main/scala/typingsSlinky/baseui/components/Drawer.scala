@@ -5,7 +5,7 @@ import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonCloseSource
+import typingsSlinky.baseui.anon.CloseSource
 import typingsSlinky.baseui.baseuiStrings.auto
 import typingsSlinky.baseui.baseuiStrings.bottom
 import typingsSlinky.baseui.baseuiStrings.default_
@@ -43,7 +43,7 @@ object Drawer {
     @scala.inline
     def onBackdropClick(value: /* event */ SyntheticMouseEvent[HTMLElement] => _): this.type = set("onBackdropClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onClose(value: /* args */ AnonCloseSource => _): this.type = set("onClose", js.Any.fromFunction1(value))
+    def onClose(value: /* args */ CloseSource => _): this.type = set("onClose", js.Any.fromFunction1(value))
     @scala.inline
     def onEscapeKeyDown(value: /* event */ SyntheticKeyboardEvent[HTMLElement] => _): this.type = set("onEscapeKeyDown", js.Any.fromFunction1(value))
     @scala.inline

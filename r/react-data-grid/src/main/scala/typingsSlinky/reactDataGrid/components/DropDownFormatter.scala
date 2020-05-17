@@ -14,17 +14,17 @@ object DropDownFormatter {
   
   def apply(p: js.Any): Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Formatters.DropDownFormatter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Formatters.DropDownFormatter
   ] = new Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Formatters.DropDownFormatter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Formatters.DropDownFormatter
   ](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: DropDownFormatter.type): Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Formatters.DropDownFormatter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Formatters.DropDownFormatter
   ] = new Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Formatters.DropDownFormatter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Formatters.DropDownFormatter
   ](js.Array(this.component, js.Dictionary.empty))()
 }
 

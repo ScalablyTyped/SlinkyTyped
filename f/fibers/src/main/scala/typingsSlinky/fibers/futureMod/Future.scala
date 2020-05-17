@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Future[T] extends js.Object {
+trait Future[T] extends FutureOrFutureArray {
   /**
     * "detach" this future. Basically this is useful if you want to run a task in a future, you
     * aren't interested in its return value, but if it throws you don't want the exception to be

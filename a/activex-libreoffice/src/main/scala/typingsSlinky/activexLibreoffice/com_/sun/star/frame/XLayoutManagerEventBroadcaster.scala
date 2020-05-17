@@ -1,0 +1,61 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.frame
+
+import typingsSlinky.activexLibreoffice.`type`
+import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * makes it possible to receive events from a layout manager.
+  * @see com.sun.star.frame.LayoutManager
+  * @since OOo 2.0
+  */
+@js.native
+trait XLayoutManagerEventBroadcaster extends XInterface {
+  /**
+    * adds a layout manager event listener to the object's listener list.
+    * @param aLayoutManagerListener a listener that wants to receive events regarding user interface elements that are controlled by a layout manager.
+    */
+  def addLayoutManagerEventListener(aLayoutManagerListener: XLayoutManagerListener): Unit = js.native
+  /**
+    * removes a layout manager event listener from the object's listener list.
+    * @param aLayoutManagerListener a listener that don't want to receive events regarding user interface elements that are controlled by a layout manager.
+    */
+  def removeLayoutManagerEventListener(aLayoutManagerListener: XLayoutManagerListener): Unit = js.native
+}
+
+object XLayoutManagerEventBroadcaster {
+  @scala.inline
+  def apply(
+    acquire: () => Unit,
+    addLayoutManagerEventListener: XLayoutManagerListener => Unit,
+    queryInterface: `type` => js.Any,
+    release: () => Unit,
+    removeLayoutManagerEventListener: XLayoutManagerListener => Unit
+  ): XLayoutManagerEventBroadcaster = {
+    val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addLayoutManagerEventListener = js.Any.fromFunction1(addLayoutManagerEventListener), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeLayoutManagerEventListener = js.Any.fromFunction1(removeLayoutManagerEventListener))
+    __obj.asInstanceOf[XLayoutManagerEventBroadcaster]
+  }
+  @scala.inline
+  implicit class XLayoutManagerEventBroadcasterOps[Self <: XLayoutManagerEventBroadcaster] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddLayoutManagerEventListener(value: XLayoutManagerListener => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addLayoutManagerEventListener")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveLayoutManagerEventListener(value: XLayoutManagerListener => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeLayoutManagerEventListener")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
+

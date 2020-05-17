@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a base for the ASPxClientTabControl and ASPxClientPageControl objects.
   */
-@JSGlobal("ASPxClientTabControlBase")
 @js.native
-class ASPxClientTabControlBase () extends ASPxClientControl {
+trait ASPxClientTabControlBase extends ASPxClientControl {
   /**
     * Fires on the client side after the active tab has been changed within a tab control.
     */
@@ -70,5 +69,135 @@ class ASPxClientTabControlBase () extends ASPxClientControl {
     * @param index An integer value specifying the index of the tab to select.
     */
   def SetActiveTabIndex(index: Double): Unit = js.native
+}
+
+object ASPxClientTabControlBase {
+  @scala.inline
+  def apply(
+    ActiveTabChanged: ASPxClientEvent[ASPxClientTabControlTabEventHandler[ASPxClientTabControlBase]],
+    ActiveTabChanging: ASPxClientEvent[ASPxClientTabControlTabCancelEventHandler[ASPxClientTabControlBase]],
+    AdjustControl: () => Unit,
+    AdjustSize: () => Unit,
+    BeginCallback: ASPxClientEvent[ASPxClientBeginCallbackEventHandler[ASPxClientTabControlBase]],
+    CallbackError: ASPxClientEvent[ASPxClientCallbackErrorEventHandler[ASPxClientTabControlBase]],
+    EndCallback: ASPxClientEvent[ASPxClientEndCallbackEventHandler[ASPxClientTabControlBase]],
+    GetActiveTab: () => ASPxClientTab,
+    GetActiveTabIndex: () => Double,
+    GetClientVisible: () => Boolean,
+    GetHeight: () => Double,
+    GetMainElement: () => js.Any,
+    GetParentControl: () => js.Any,
+    GetTab: Double => ASPxClientTab,
+    GetTabByName: String => ASPxClientTab,
+    GetTabCount: () => Double,
+    GetVisible: () => Boolean,
+    GetWidth: () => Double,
+    InCallback: () => Boolean,
+    Init: ASPxClientEvent[ASPxClientEventHandler[ASPxClientControlBase]],
+    SendMessageToAssistiveTechnology: String => Unit,
+    SetActiveTab: ASPxClientTab => Unit,
+    SetActiveTabIndex: Double => Unit,
+    SetClientVisible: Boolean => Unit,
+    SetHeight: Double => Unit,
+    SetVisible: Boolean => Unit,
+    SetWidth: Double => Unit,
+    TabClick: ASPxClientEvent[ASPxClientTabControlTabClickEventHandler[ASPxClientTabControlBase]],
+    name: String
+  ): ASPxClientTabControlBase = {
+    val __obj = js.Dynamic.literal(ActiveTabChanged = ActiveTabChanged.asInstanceOf[js.Any], ActiveTabChanging = ActiveTabChanging.asInstanceOf[js.Any], AdjustControl = js.Any.fromFunction0(AdjustControl), AdjustSize = js.Any.fromFunction0(AdjustSize), BeginCallback = BeginCallback.asInstanceOf[js.Any], CallbackError = CallbackError.asInstanceOf[js.Any], EndCallback = EndCallback.asInstanceOf[js.Any], GetActiveTab = js.Any.fromFunction0(GetActiveTab), GetActiveTabIndex = js.Any.fromFunction0(GetActiveTabIndex), GetClientVisible = js.Any.fromFunction0(GetClientVisible), GetHeight = js.Any.fromFunction0(GetHeight), GetMainElement = js.Any.fromFunction0(GetMainElement), GetParentControl = js.Any.fromFunction0(GetParentControl), GetTab = js.Any.fromFunction1(GetTab), GetTabByName = js.Any.fromFunction1(GetTabByName), GetTabCount = js.Any.fromFunction0(GetTabCount), GetVisible = js.Any.fromFunction0(GetVisible), GetWidth = js.Any.fromFunction0(GetWidth), InCallback = js.Any.fromFunction0(InCallback), Init = Init.asInstanceOf[js.Any], SendMessageToAssistiveTechnology = js.Any.fromFunction1(SendMessageToAssistiveTechnology), SetActiveTab = js.Any.fromFunction1(SetActiveTab), SetActiveTabIndex = js.Any.fromFunction1(SetActiveTabIndex), SetClientVisible = js.Any.fromFunction1(SetClientVisible), SetHeight = js.Any.fromFunction1(SetHeight), SetVisible = js.Any.fromFunction1(SetVisible), SetWidth = js.Any.fromFunction1(SetWidth), TabClick = TabClick.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientTabControlBase]
+  }
+  @scala.inline
+  implicit class ASPxClientTabControlBaseOps[Self <: ASPxClientTabControlBase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActiveTabChanged(value: ASPxClientEvent[ASPxClientTabControlTabEventHandler[ASPxClientTabControlBase]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveTabChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActiveTabChanging(value: ASPxClientEvent[ASPxClientTabControlTabCancelEventHandler[ASPxClientTabControlBase]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ActiveTabChanging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdjustSize(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AdjustSize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withBeginCallback(value: ASPxClientEvent[ASPxClientBeginCallbackEventHandler[ASPxClientTabControlBase]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BeginCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCallbackError(value: ASPxClientEvent[ASPxClientCallbackErrorEventHandler[ASPxClientTabControlBase]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CallbackError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndCallback(value: ASPxClientEvent[ASPxClientEndCallbackEventHandler[ASPxClientTabControlBase]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("EndCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetActiveTab(value: () => ASPxClientTab): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetActiveTab")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetActiveTabIndex(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetActiveTabIndex")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetTab(value: Double => ASPxClientTab): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetTab")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetTabByName(value: String => ASPxClientTab): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetTabByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetTabCount(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetTabCount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetActiveTab(value: ASPxClientTab => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetActiveTab")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetActiveTabIndex(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetActiveTabIndex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTabClick(value: ASPxClientEvent[ASPxClientTabControlTabClickEventHandler[ASPxClientTabControlBase]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TabClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

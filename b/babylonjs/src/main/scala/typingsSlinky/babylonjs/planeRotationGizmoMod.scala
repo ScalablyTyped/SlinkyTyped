@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs
 
+import typingsSlinky.babylonjs.anon.SnapDistance
 import typingsSlinky.babylonjs.gizmoMod.Gizmo
 import typingsSlinky.babylonjs.mathColorMod.Color3
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
@@ -55,7 +56,7 @@ object planeRotationGizmoMod extends js.Object {
       * Event that fires each time the gizmo snaps to a new location.
       * * snapDistance is the the change in distance
       */
-    var onSnapObservable: Observable[AnonSnapDistance] = js.native
+    var onSnapObservable: Observable[SnapDistance] = js.native
     /**
       * Rotation distance in radians that the gizmo will snap to (Default: 0)
       */

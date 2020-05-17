@@ -1,6 +1,6 @@
 package typingsSlinky.onfleetNodeOnfleet.tasksMod
 
-import typingsSlinky.onfleetNodeOnfleet.AnonCompleteAfter
+import typingsSlinky.onfleetNodeOnfleet.anon.CompleteAfter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait CloneTaskOptions extends js.Object {
   var includeBarCodes: Boolean = js.native
   var includeDependencies: Boolean = js.native
   var includeMetadata: Boolean = js.native
-  var overrides: js.UndefOr[AnonCompleteAfter] = js.native
+  var overrides: js.UndefOr[CompleteAfter] = js.native
 }
 
 object CloneTaskOptions {
@@ -44,7 +44,7 @@ object CloneTaskOptions {
         ret
     }
     @scala.inline
-    def withOverrides(value: AnonCompleteAfter): Self = {
+    def withOverrides(value: CompleteAfter): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
         ret

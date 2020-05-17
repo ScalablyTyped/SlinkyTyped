@@ -1,6 +1,6 @@
 package typingsSlinky.vexflow.mod.Flow
 
-import typingsSlinky.vexflow.AnonDurationLine
+import typingsSlinky.vexflow.anon.DurationLine
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Crescendo protected ()
   extends typingsSlinky.vexflow.Vex.Flow.Crescendo {
-  def this(note_struct: AnonDurationLine) = this()
+  def this(note_struct: DurationLine) = this()
 }
 
 /* static members */

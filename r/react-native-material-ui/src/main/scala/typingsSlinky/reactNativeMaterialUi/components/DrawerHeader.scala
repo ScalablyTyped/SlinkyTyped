@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeMaterialUi.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.Image
-import typingsSlinky.reactNativeMaterialUi.AnonContainerContentContainer
+import typingsSlinky.reactNativeMaterialUi.anon.ContainerContentContainer
 import typingsSlinky.reactNativeMaterialUi.mod.Drawer.Header
 import typingsSlinky.reactNativeMaterialUi.mod.DrawerHeaderProps
 import scala.scalajs.js
@@ -24,7 +24,7 @@ object DrawerHeader {
     @scala.inline
     def image(value: js.Array[Image]): this.type = set("image", value.asInstanceOf[js.Any])
     @scala.inline
-    def style(value: AnonContainerContentContainer): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: ContainerContentContainer): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: DrawerHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

@@ -5,11 +5,11 @@ import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNative.AnonAverageItemLength
-import typingsSlinky.reactNative.AnonChanged
-import typingsSlinky.reactNative.AnonDistanceFromEnd
-import typingsSlinky.reactNative.AnonIndex
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.AverageItemLength
+import typingsSlinky.reactNative.anon.Changed
+import typingsSlinky.reactNative.anon.DistanceFromEnd
+import typingsSlinky.reactNative.anon.Index
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -182,7 +182,7 @@ object ReactNativeDraggableFlatlist {
     @scala.inline
     def getItemCount(value: /* data */ js.Any => Double): this.type = set("getItemCount", js.Any.fromFunction1(value))
     @scala.inline
-    def getItemLayout(value: (/* data */ js.Any, /* index */ Double) => AnonIndex): this.type = set("getItemLayout", js.Any.fromFunction2(value))
+    def getItemLayout(value: (/* data */ js.Any, /* index */ Double) => Index): this.type = set("getItemLayout", js.Any.fromFunction2(value))
     @scala.inline
     def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
     @scala.inline
@@ -238,7 +238,7 @@ object ReactNativeDraggableFlatlist {
     @scala.inline
     def onContentSizeChange(value: (/* w */ Double, /* h */ Double) => Unit): this.type = set("onContentSizeChange", js.Any.fromFunction2(value))
     @scala.inline
-    def onEndReached(value: /* info */ AnonDistanceFromEnd => Unit): this.type = set("onEndReached", js.Any.fromFunction1(value))
+    def onEndReached(value: /* info */ DistanceFromEnd => Unit): this.type = set("onEndReached", js.Any.fromFunction1(value))
     @scala.inline
     def onEndReachedNull: this.type = set("onEndReached", null)
     @scala.inline
@@ -290,7 +290,7 @@ object ReactNativeDraggableFlatlist {
     @scala.inline
     def onScrollEndDrag(value: SyntheticEvent[NodeHandle, NativeScrollEvent] => Unit): this.type = set("onScrollEndDrag", js.Any.fromFunction1(value))
     @scala.inline
-    def onScrollToIndexFailed(value: /* info */ AnonAverageItemLength => Unit): this.type = set("onScrollToIndexFailed", js.Any.fromFunction1(value))
+    def onScrollToIndexFailed(value: /* info */ AverageItemLength => Unit): this.type = set("onScrollToIndexFailed", js.Any.fromFunction1(value))
     @scala.inline
     def onScrollToTop(value: SyntheticEvent[NodeHandle, NativeScrollEvent] => Unit): this.type = set("onScrollToTop", js.Any.fromFunction1(value))
     @scala.inline
@@ -308,7 +308,7 @@ object ReactNativeDraggableFlatlist {
     @scala.inline
     def onTouchStart(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchStart", js.Any.fromFunction1(value))
     @scala.inline
-    def onViewableItemsChanged(value: /* info */ AnonChanged => Unit): this.type = set("onViewableItemsChanged", js.Any.fromFunction1(value))
+    def onViewableItemsChanged(value: /* info */ Changed => Unit): this.type = set("onViewableItemsChanged", js.Any.fromFunction1(value))
     @scala.inline
     def onViewableItemsChangedNull: this.type = set("onViewableItemsChanged", null)
     @scala.inline

@@ -1,6 +1,6 @@
 package typingsSlinky.neverbounce.mod
 
-import typingsSlinky.neverbounce.AnonContentType
+import typingsSlinky.neverbounce.anon.ContentType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ConfigOptions extends js.Object {
   var acceptedType: js.UndefOr[String] = js.native
-  var headers: js.UndefOr[AnonContentType] = js.native
+  var headers: js.UndefOr[ContentType] = js.native
   var host: js.UndefOr[String] = js.native
   var port: js.UndefOr[Double] = js.native
 }
@@ -38,7 +38,7 @@ object ConfigOptions {
         ret
     }
     @scala.inline
-    def withHeaders(value: AnonContentType): Self = {
+    def withHeaders(value: ContentType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
         ret

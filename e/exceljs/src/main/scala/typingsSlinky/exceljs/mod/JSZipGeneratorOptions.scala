@@ -1,6 +1,6 @@
 package typingsSlinky.exceljs.mod
 
-import typingsSlinky.exceljs.AnonLevel
+import typingsSlinky.exceljs.anon.Level
 import typingsSlinky.exceljs.exceljsStrings.DEFLATE
 import typingsSlinky.exceljs.exceljsStrings.STORE
 import scala.scalajs.js
@@ -13,7 +13,7 @@ trait JSZipGeneratorOptions extends js.Object {
   	 * @default DEFLATE
   	 */
   var compression: STORE | DEFLATE = js.native
-  var compressionOptions: Null | AnonLevel = js.native
+  var compressionOptions: Null | Level = js.native
 }
 
 object JSZipGeneratorOptions {
@@ -35,7 +35,7 @@ object JSZipGeneratorOptions {
         ret
     }
     @scala.inline
-    def withCompressionOptions(value: AnonLevel): Self = {
+    def withCompressionOptions(value: Level): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("compressionOptions")(value.asInstanceOf[js.Any])
         ret

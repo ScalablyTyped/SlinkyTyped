@@ -1,7 +1,7 @@
 package typingsSlinky.gulpUtil.mod.File
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.vinyl.ConstructorOptionscontent
+import typingsSlinky.vinyl.anon.ConstructorOptionscontent
 import typingsSlinky.vinyl.mod.FileConstructor
 import typingsSlinky.vinyl.mod.NullFile
 import scala.scalajs.js

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait INotyfIcon extends js.Object {
   var className: String = js.native
-  var tagName: /* keyof notyf.ElementTagNameMap */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 172 */ js.Any = js.native
+  var tagName: /* keyof notyf.anon.ElementTagNameMap */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 172 */ js.Any = js.native
   var text: String = js.native
 }
 
@@ -15,7 +15,7 @@ object INotyfIcon {
   @scala.inline
   def apply(
     className: String,
-    tagName: /* keyof notyf.ElementTagNameMap */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 172 */ js.Any,
+    tagName: /* keyof notyf.anon.ElementTagNameMap */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 172 */ js.Any,
     text: String
   ): INotyfIcon = {
     val __obj = js.Dynamic.literal(className = className.asInstanceOf[js.Any], tagName = tagName.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
@@ -35,7 +35,7 @@ object INotyfIcon {
     }
     @scala.inline
     def withTagName(
-      value: /* keyof notyf.ElementTagNameMap */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 172 */ js.Any
+      value: /* keyof notyf.anon.ElementTagNameMap */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 172 */ js.Any
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tagName")(value.asInstanceOf[js.Any])

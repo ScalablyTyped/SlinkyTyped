@@ -1,16 +1,17 @@
 package typingsSlinky.socketclusterServer.serverMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.agSimpleBroker.mod.SimpleExchange
 import typingsSlinky.asyncStreamEmitter.mod.AsyncStreamEmitter
 import typingsSlinky.jsonwebtoken.mod.Secret
 import typingsSlinky.node.httpMod.OutgoingHttpHeaders
 import typingsSlinky.node.httpMod.Server
 import typingsSlinky.scAuth.mod.SCAuthEngine
-import typingsSlinky.socketclusterServer.AnonAlgorithm
-import typingsSlinky.socketclusterServer.AnonAlgorithms
-import typingsSlinky.socketclusterServer.AnonError
-import typingsSlinky.socketclusterServer.AnonSocket
-import typingsSlinky.socketclusterServer.AnonWarning
+import typingsSlinky.socketclusterServer.anon.Algorithm
+import typingsSlinky.socketclusterServer.anon.Algorithms
+import typingsSlinky.socketclusterServer.anon.Error
+import typingsSlinky.socketclusterServer.anon.Socket
+import typingsSlinky.socketclusterServer.anon.Warning
 import typingsSlinky.socketclusterServer.socketclusterServerNumbers.`1`
 import typingsSlinky.socketclusterServer.socketclusterServerNumbers.`2`
 import typingsSlinky.socketclusterServer.socketclusterServerStrings.authentication
@@ -29,7 +30,7 @@ import typingsSlinky.socketclusterServer.socketclusterServerStrings.outbound
 import typingsSlinky.socketclusterServer.socketclusterServerStrings.subscription
 import typingsSlinky.socketclusterServer.socketclusterServerStrings.unsubscription
 import typingsSlinky.socketclusterServer.socketclusterServerStrings.warning
-import typingsSlinky.ws.AnonOrigin
+import typingsSlinky.ws.anon.Origin
 import typingsSlinky.ws.mod.VerifyClientCallbackAsync
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -46,13 +47,13 @@ trait AGServer
   var ackTimeout: Double = js.native
   var allowClientPublish: Boolean = js.native
   var auth: SCAuthEngine = js.native
-  var brokerEngine: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AGSimpleBroker */ js.Any = js.native
+  var brokerEngine: typingsSlinky.agSimpleBroker.mod.^ = js.native
   var clients: StringDictionary[typingsSlinky.socketclusterServer.serversocketMod.^] = js.native
   var clientsCount: Double = js.native
   var codec: CodecEngine = js.native
-  var defaultSignatureOptions: AnonAlgorithm = js.native
-  var defaultVerificationOptions: AnonAlgorithms = js.native
-  var exchange: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AGSimpleBroker.SimpleExchange */ js.Any = js.native
+  var defaultSignatureOptions: Algorithm = js.native
+  var defaultVerificationOptions: Algorithms = js.native
+  var exchange: SimpleExchange = js.native
   var handshakeTimeout: Double = js.native
   var httpServer: Server = js.native
   var isReady: Boolean = js.native
@@ -93,15 +94,15 @@ trait AGServer
   @JSName("emit")
   def emit_disconnection(eventName: disconnection, data: DisconnectionData): Unit = js.native
   @JSName("emit")
-  def emit_error(eventName: error, data: AnonError): Unit = js.native
+  def emit_error(eventName: error, data: Error): Unit = js.native
   @JSName("emit")
-  def emit_handshake(eventName: handshake, data: AnonSocket): Unit = js.native
+  def emit_handshake(eventName: handshake, data: Socket): Unit = js.native
   @JSName("emit")
   def emit_subscription(eventName: subscription, data: SubscriptionData): Unit = js.native
   @JSName("emit")
   def emit_unsubscription(eventName: unsubscription, data: UnsubscriptionData): Unit = js.native
   @JSName("emit")
-  def emit_warning(eventName: warning, data: AnonWarning): Unit = js.native
+  def emit_warning(eventName: warning, data: Warning): Unit = js.native
   def generateId(): String = js.native
   def getPath(): String = js.native
   def hasMiddleware(`type`: Middlewares): Boolean = js.native
@@ -122,15 +123,15 @@ trait AGServer
   @JSName("listener")
   def listener_disconnection(eventName: disconnection): typingsSlinky.consumableStream.mod.^[DisconnectionData] = js.native
   @JSName("listener")
-  def listener_error(eventName: error): typingsSlinky.consumableStream.mod.^[AnonError] = js.native
+  def listener_error(eventName: error): typingsSlinky.consumableStream.mod.^[Error] = js.native
   @JSName("listener")
-  def listener_handshake(eventName: handshake): typingsSlinky.consumableStream.mod.^[AnonSocket] = js.native
+  def listener_handshake(eventName: handshake): typingsSlinky.consumableStream.mod.^[Socket] = js.native
   @JSName("listener")
   def listener_subscription(eventName: subscription): typingsSlinky.consumableStream.mod.^[SubscriptionData] = js.native
   @JSName("listener")
   def listener_unsubscription(eventName: unsubscription): typingsSlinky.consumableStream.mod.^[UnsubscriptionData] = js.native
   @JSName("listener")
-  def listener_warning(eventName: warning): typingsSlinky.consumableStream.mod.^[AnonWarning] = js.native
+  def listener_warning(eventName: warning): typingsSlinky.consumableStream.mod.^[Warning] = js.native
   def removeMiddleware(`type`: Middlewares): Unit = js.native
   def setAuthEngine(authEngine: SCAuthEngine): Unit = js.native
   def setCodecEngine(codecEngine: CodecEngine): Unit = js.native
@@ -143,7 +144,7 @@ trait AGServer
   @JSName("setMiddleware")
   def setMiddleware_outbound(`type`: outbound, middleware: outboundMiddlewareFunction): Unit = js.native
   def verifyHandshake(
-    info: AnonOrigin,
+    info: Origin,
     callback: js.Function4[
       /* res */ Boolean, 
       /* code */ js.UndefOr[Double], 

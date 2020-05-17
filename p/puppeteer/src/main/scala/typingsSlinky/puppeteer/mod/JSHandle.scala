@@ -7,7 +7,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait JSHandle[T] extends JSEvalable[T] {
+trait JSHandle[T]
+  extends JSEvalable[T]
+     with SerializableOrJSHandle {
   /**
     * Returns a ElementHandle
     */

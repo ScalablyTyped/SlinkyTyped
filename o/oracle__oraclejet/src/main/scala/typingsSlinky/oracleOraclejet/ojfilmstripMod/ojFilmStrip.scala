@@ -2,8 +2,8 @@ package typingsSlinky.oracleOraclejet.ojfilmstripMod
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.AnonId
-import typingsSlinky.oracleOraclejet.AnonLabelAccArrowNextPage
+import typingsSlinky.oracleOraclejet.anon.Id
+import typingsSlinky.oracleOraclejet.anon.LabelAccArrowNextPage
 import typingsSlinky.oracleOraclejet.mod.baseComponent
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.adjacent
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.arrowPlacement
@@ -36,7 +36,7 @@ import scala.scalajs.js.annotation._
 trait ojFilmStrip extends baseComponent[ojFilmStripSettableProperties] {
   var arrowPlacement: adjacent | overlay = js.native
   var arrowVisibility: visible | hidden | hover | auto = js.native
-  var currentItem: AnonId = js.native
+  var currentItem: Id = js.native
   var looping: off | page = js.native
   var maxItemsPerPage: Double = js.native
   var onArrowPlacementChanged: (js.Function1[CustomEvent, _]) | Null = js.native
@@ -47,7 +47,7 @@ trait ojFilmStrip extends baseComponent[ojFilmStripSettableProperties] {
   var onOrientationChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var orientation: horizontal | vertical = js.native
   @JSName("translations")
-  var translations_ojFilmStrip: AnonLabelAccArrowNextPage = js.native
+  var translations_ojFilmStrip: LabelAccArrowNextPage = js.native
   def addEventListener(`type`: arrowPlacementChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: arrowPlacementChanged,
@@ -94,7 +94,7 @@ trait ojFilmStrip extends baseComponent[ojFilmStripSettableProperties] {
   @JSName("getProperty")
   def getProperty_arrowVisibility(property: arrowVisibility): visible | hidden | hover | auto = js.native
   @JSName("getProperty")
-  def getProperty_currentItem(property: currentItem): AnonId = js.native
+  def getProperty_currentItem(property: currentItem): Id = js.native
   @JSName("getProperty")
   def getProperty_looping(property: looping): off | page = js.native
   @JSName("getProperty")
@@ -113,10 +113,10 @@ trait ojFilmStrip extends baseComponent[ojFilmStripSettableProperties] {
   def setProperty(property: orientation, value: horizontal): Unit = js.native
   def setProperty(property: orientation, value: vertical): Unit = js.native
   @JSName("setProperty")
-  def setProperty_currentItem(property: currentItem, value: AnonId): Unit = js.native
+  def setProperty_currentItem(property: currentItem, value: Id): Unit = js.native
   @JSName("setProperty")
   def setProperty_maxItemsPerPage(property: maxItemsPerPage, value: Double): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonLabelAccArrowNextPage): Unit = js.native
+  def setProperty_translations(property: translations, value: LabelAccArrowNextPage): Unit = js.native
 }
 

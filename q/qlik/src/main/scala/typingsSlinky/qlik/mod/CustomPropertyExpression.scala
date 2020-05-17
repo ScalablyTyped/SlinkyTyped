@@ -62,18 +62,6 @@ object CustomPropertyExpression {
         ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(js.undefined)
         ret
     }
-    @scala.inline
-    def withType(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
   }
   
 }

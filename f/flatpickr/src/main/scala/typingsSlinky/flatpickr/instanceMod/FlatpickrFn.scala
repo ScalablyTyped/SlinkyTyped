@@ -1,9 +1,9 @@
 package typingsSlinky.flatpickr.instanceMod
 
 import org.scalajs.dom.raw.Node
-import typingsSlinky.flatpickr.PartialParsedOptions
-import typingsSlinky.flatpickr.globalsMod._Global_.Date
-import typingsSlinky.flatpickr.kinkeyCustomLocaledefault
+import typingsSlinky.flatpickr.anon.PartialParsedOptions
+import typingsSlinky.flatpickr.anon.kinkeyCustomLocaledefault
+import typingsSlinky.flatpickr.globalsMod.global.Date
 import typingsSlinky.flatpickr.localeMod.CustomLocale
 import typingsSlinky.flatpickr.optionsMod.DateOption
 import typingsSlinky.flatpickr.optionsMod.Options

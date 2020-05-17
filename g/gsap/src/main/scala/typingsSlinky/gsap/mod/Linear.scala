@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("gsap", "Linear")
 @js.native
 class Linear ()
-  extends typingsSlinky.gsap.gsap.Linear
+  extends typingsSlinky.gsap.gsap.Ease
 
 /* static members */
 @JSImport("gsap", "Linear")

@@ -1,7 +1,7 @@
 package typingsSlinky.datatablesNetButtons.DataTables
 
+import org.scalajs.dom.raw.Window
 import typingsSlinky.datatablesNet.JQuery
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -181,7 +181,7 @@ object ButtonSettings {
         ret
     }
     @scala.inline
-    def withCustomize(value: /* win */ Window_ | String => Unit): Self = {
+    def withCustomize(value: /* win */ Window | String => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customize")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.webPush.mod
 
-import typingsSlinky.webPush.AnonAuth
+import typingsSlinky.webPush.anon.Auth
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PushSubscription extends js.Object {
   var endpoint: String = js.native
-  var keys: AnonAuth = js.native
+  var keys: Auth = js.native
 }
 
 object PushSubscription {
   @scala.inline
-  def apply(endpoint: String, keys: AnonAuth): PushSubscription = {
+  def apply(endpoint: String, keys: Auth): PushSubscription = {
     val __obj = js.Dynamic.literal(endpoint = endpoint.asInstanceOf[js.Any], keys = keys.asInstanceOf[js.Any])
     __obj.asInstanceOf[PushSubscription]
   }
@@ -30,7 +30,7 @@ object PushSubscription {
         ret
     }
     @scala.inline
-    def withKeys(value: AnonAuth): Self = {
+    def withKeys(value: Auth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
         ret

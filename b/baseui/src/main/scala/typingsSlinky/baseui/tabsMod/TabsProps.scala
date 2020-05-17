@@ -1,8 +1,8 @@
 package typingsSlinky.baseui.tabsMod
 
 import slinky.core.TagMod
-import typingsSlinky.baseui.AnonActiveKey
-import typingsSlinky.baseui.SharedPropsactiveboolean
+import typingsSlinky.baseui.anon.ActiveKey
+import typingsSlinky.baseui.anon.SharedPropsactiveboolean
 import typingsSlinky.baseui.baseuiStrings.horizontal
 import typingsSlinky.baseui.baseuiStrings.vertical
 import typingsSlinky.react.mod.Key
@@ -15,7 +15,7 @@ trait TabsProps extends js.Object {
   var activeKey: js.UndefOr[Key] = js.native
   var children: TagMod[Any] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
-  var onChange: js.UndefOr[js.Function1[/* args */ AnonActiveKey, _]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* args */ ActiveKey, _]] = js.native
   var orientation: js.UndefOr[horizontal | vertical] = js.native
   var overrides: js.UndefOr[TabsOverrides[SharedPropsactiveboolean]] = js.native
   var renderAll: js.UndefOr[Boolean] = js.native
@@ -70,7 +70,7 @@ object TabsProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* args */ AnonActiveKey => _): Self = {
+    def withOnChange(value: /* args */ ActiveKey => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

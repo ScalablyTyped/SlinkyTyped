@@ -1,8 +1,8 @@
 package typingsSlinky.sade.mod
 
-import typingsSlinky.sade.AnonArgs
-import typingsSlinky.sade.ReadonlyCommandOptions
-import typingsSlinky.sade.ReadonlyParseOptions
+import typingsSlinky.sade.anon.Args
+import typingsSlinky.sade.anon.ReadonlyCommandOptions
+import typingsSlinky.sade.anon.ReadonlyParseOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,8 +20,8 @@ trait Sade extends js.Object {
   def option(str: String, desc: String): Sade = js.native
   def option(str: String, desc: String, `val`: String): Sade = js.native
   def option(str: String, desc: String, `val`: Double): Sade = js.native
-  def parse(arr: js.Array[String]): AnonArgs | Unit = js.native
-  def parse(arr: js.Array[String], opts: ReadonlyParseOptions): AnonArgs | Unit = js.native
+  def parse(arr: js.Array[String]): Args | Unit = js.native
+  def parse(arr: js.Array[String], opts: ReadonlyParseOptions): Args | Unit = js.native
   def version(str: String): Sade = js.native
 }
 

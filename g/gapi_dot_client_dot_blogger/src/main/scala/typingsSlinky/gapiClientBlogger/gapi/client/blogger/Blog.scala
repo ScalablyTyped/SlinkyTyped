@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientBlogger.gapi.client.blogger
 
-import typingsSlinky.gapiClientBlogger.AnonCountry
-import typingsSlinky.gapiClientBlogger.AnonItems
-import typingsSlinky.gapiClientBlogger.AnonSelfLink
+import typingsSlinky.gapiClientBlogger.anon.Country
+import typingsSlinky.gapiClientBlogger.anon.Items
+import typingsSlinky.gapiClientBlogger.anon.SelfLink
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,13 +18,13 @@ trait Blog extends js.Object {
   /** The kind of this entry. Always blogger#blog */
   var kind: js.UndefOr[String] = js.native
   /** The locale this Blog is set to. */
-  var locale: js.UndefOr[AnonCountry] = js.native
+  var locale: js.UndefOr[Country] = js.native
   /** The name of this blog. This is displayed as the title. */
   var name: js.UndefOr[String] = js.native
   /** The container of pages in this blog. */
-  var pages: js.UndefOr[AnonSelfLink] = js.native
+  var pages: js.UndefOr[SelfLink] = js.native
   /** The container of posts in this blog. */
-  var posts: js.UndefOr[AnonItems] = js.native
+  var posts: js.UndefOr[Items] = js.native
   /** RFC 3339 date-time when this blog was published. */
   var published: js.UndefOr[String] = js.native
   /** The API REST URL to fetch this resource from. */
@@ -98,7 +98,7 @@ object Blog {
         ret
     }
     @scala.inline
-    def withLocale(value: AnonCountry): Self = {
+    def withLocale(value: Country): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
         ret
@@ -122,7 +122,7 @@ object Blog {
         ret
     }
     @scala.inline
-    def withPages(value: AnonSelfLink): Self = {
+    def withPages(value: SelfLink): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pages")(value.asInstanceOf[js.Any])
         ret
@@ -134,7 +134,7 @@ object Blog {
         ret
     }
     @scala.inline
-    def withPosts(value: AnonItems): Self = {
+    def withPosts(value: Items): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("posts")(value.asInstanceOf[js.Any])
         ret

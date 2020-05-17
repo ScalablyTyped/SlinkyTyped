@@ -1,10 +1,10 @@
 package typingsSlinky.primereact.components
 
+import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonMap
+import typingsSlinky.primereact.anon.Map
 import typingsSlinky.primereact.gmapMod.GMapProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,19 +21,19 @@ object GMap {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def onMapClick(value: /* event */ Event_ => Unit): this.type = set("onMapClick", js.Any.fromFunction1(value))
+    def onMapClick(value: /* event */ Event => Unit): this.type = set("onMapClick", js.Any.fromFunction1(value))
     @scala.inline
     def onMapDragEnd(value: () => Unit): this.type = set("onMapDragEnd", js.Any.fromFunction0(value))
     @scala.inline
     def onMapReady(value: /* map */ js.Any => Unit): this.type = set("onMapReady", js.Any.fromFunction1(value))
     @scala.inline
-    def onOverlayClick(value: /* e */ AnonMap => Unit): this.type = set("onOverlayClick", js.Any.fromFunction1(value))
+    def onOverlayClick(value: /* e */ Map => Unit): this.type = set("onOverlayClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onOverlayDrag(value: /* event */ Event_ => Unit): this.type = set("onOverlayDrag", js.Any.fromFunction1(value))
+    def onOverlayDrag(value: /* event */ Event => Unit): this.type = set("onOverlayDrag", js.Any.fromFunction1(value))
     @scala.inline
-    def onOverlayDragEnd(value: /* event */ Event_ => Unit): this.type = set("onOverlayDragEnd", js.Any.fromFunction1(value))
+    def onOverlayDragEnd(value: /* event */ Event => Unit): this.type = set("onOverlayDragEnd", js.Any.fromFunction1(value))
     @scala.inline
-    def onOverlayDragStart(value: /* event */ Event_ => Unit): this.type = set("onOverlayDragStart", js.Any.fromFunction1(value))
+    def onOverlayDragStart(value: /* event */ Event => Unit): this.type = set("onOverlayDragStart", js.Any.fromFunction1(value))
     @scala.inline
     def onZoomChanged(value: () => Unit): this.type = set("onZoomChanged", js.Any.fromFunction0(value))
     @scala.inline

@@ -1,6 +1,6 @@
 package typingsSlinky.openpgp.mod
 
-import typingsSlinky.openpgp.AnonPassphrase
+import typingsSlinky.openpgp.anon.Passphrase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +33,7 @@ trait KeyOptions extends js.Object {
     * (optional) options for each subkey, default to main key options. e.g. [ {sign: true, passphrase: '123'}]
     *            sign parameter defaults to false, and indicates whether the subkey should sign rather than encrypt
     */
-  var subkeys: js.UndefOr[js.Array[AnonPassphrase]] = js.native
+  var subkeys: js.UndefOr[js.Array[Passphrase]] = js.native
   /**
     * array of user IDs e.g. [ { name:'Phil Zimmermann', email:'phil@openpgp.org' }]
     */
@@ -119,7 +119,7 @@ object KeyOptions {
         ret
     }
     @scala.inline
-    def withSubkeys(value: js.Array[AnonPassphrase]): Self = {
+    def withSubkeys(value: js.Array[Passphrase]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("subkeys")(value.asInstanceOf[js.Any])
         ret

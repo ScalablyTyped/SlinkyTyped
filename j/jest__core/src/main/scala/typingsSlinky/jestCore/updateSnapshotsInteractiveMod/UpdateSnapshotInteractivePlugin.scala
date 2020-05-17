@@ -1,6 +1,6 @@
 package typingsSlinky.jestCore.updateSnapshotsInteractiveMod
 
-import typingsSlinky.jestCore.AnonKey
+import typingsSlinky.jestCore.anon.Key
 import typingsSlinky.jestCore.jestCoreBooleans.`true`
 import typingsSlinky.jestTestResult.typesMod.AggregatedResult
 import typingsSlinky.jestTestResult.typesMod.AssertionLocation
@@ -20,7 +20,7 @@ trait UpdateSnapshotInteractivePlugin extends js.Object {
     hooks: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JestHookSubscriber */ js.Any
   ): Unit = js.native
   def getFailedSnapshotTestAssertions(testResults: AggregatedResult): js.Array[AssertionLocation] = js.native
-  def getUsageInfo(): AnonKey | Null = js.native
+  def getUsageInfo(): Key | Null = js.native
   def onKey(key: String): Unit = js.native
   def run(_globalConfig: GlobalConfig, updateConfigAndRun: js.Function): js.Promise[Unit] = js.native
 }
@@ -32,7 +32,7 @@ object UpdateSnapshotInteractivePlugin {
     _snapshotInteractiveMode: js.Any,
     apply: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JestHookSubscriber */ js.Any => Unit,
     getFailedSnapshotTestAssertions: AggregatedResult => js.Array[AssertionLocation],
-    getUsageInfo: () => AnonKey | Null,
+    getUsageInfo: () => Key | Null,
     isInternal: `true`,
     onKey: String => Unit,
     run: (GlobalConfig, js.Function) => js.Promise[Unit]
@@ -73,7 +73,7 @@ object UpdateSnapshotInteractivePlugin {
         ret
     }
     @scala.inline
-    def withGetUsageInfo(value: () => AnonKey | Null): Self = {
+    def withGetUsageInfo(value: () => Key | Null): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getUsageInfo")(js.Any.fromFunction0(value))
         ret

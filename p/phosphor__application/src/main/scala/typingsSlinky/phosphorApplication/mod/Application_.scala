@@ -1,5 +1,6 @@
 package typingsSlinky.phosphorApplication.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.phosphorApplication.mod.Application.IOptions
@@ -8,7 +9,6 @@ import typingsSlinky.phosphorCommands.mod.CommandRegistry
 import typingsSlinky.phosphorCoreutils.mod.Token
 import typingsSlinky.phosphorWidgets.mod.ContextMenu
 import typingsSlinky.phosphorWidgets.mod.Widget
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -113,7 +113,7 @@ class Application_[T /* <: Widget */] protected () extends js.Object {
     *
     * A subclass may reimplement this method as needed.
     */
-  /* protected */ def evtResize(event: Event_): Unit = js.native
+  /* protected */ def evtResize(event: Event): Unit = js.native
   /**
     * Handle the DOM events for the application.
     *
@@ -124,7 +124,7 @@ class Application_[T /* <: Widget */] protected () extends js.Object {
     * called in response to events registered for the application. It
     * should not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
   /**
     * Test whether a plugin is registered with the application.
     *

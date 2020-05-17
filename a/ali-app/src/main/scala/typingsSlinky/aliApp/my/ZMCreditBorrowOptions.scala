@@ -1,10 +1,10 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonResultStatus
 import typingsSlinky.aliApp.aliAppStrings.TINYAPP
 import typingsSlinky.aliApp.aliAppStrings.WINDOWS
 import typingsSlinky.aliApp.aliAppStrings.alipay
 import typingsSlinky.aliApp.aliAppStrings.merchant
+import typingsSlinky.aliApp.anon.ResultStatus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -133,7 +133,7 @@ trait ZMCreditBorrowOptions
   		 */
   var rent_unit: String = js.native
   @JSName("success")
-  var success_ZMCreditBorrowOptions: js.UndefOr[js.Function1[/* res */ AnonResultStatus, Unit]] = js.native
+  var success_ZMCreditBorrowOptions: js.UndefOr[js.Function1[/* res */ ResultStatus, Unit]] = js.native
 }
 
 object ZMCreditBorrowOptions {
@@ -350,7 +350,7 @@ object ZMCreditBorrowOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonResultStatus => Unit): Self = {
+    def withSuccess(value: /* res */ ResultStatus => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

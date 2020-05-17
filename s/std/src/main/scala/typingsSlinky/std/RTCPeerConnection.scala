@@ -1,7 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
-import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.std.stdStrings.connectionstatechange
 import typingsSlinky.std.stdStrings.datachannel
 import typingsSlinky.std.stdStrings.icecandidate
@@ -28,7 +26,7 @@ trait RTCPeerConnection extends EventTarget {
   val idpErrorInfo: java.lang.String | Null = js.native
   val idpLoginUrl: java.lang.String | Null = js.native
   val localDescription: org.scalajs.dom.experimental.webrtc.RTCSessionDescription | Null = js.native
-  var onconnectionstatechange: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
+  var onconnectionstatechange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
   var ondatachannel: (js.ThisFunction1[
     /* this */ this.type, 
     /* ev */ org.scalajs.dom.experimental.webrtc.RTCDataChannelEvent, 
@@ -40,10 +38,10 @@ trait RTCPeerConnection extends EventTarget {
     _
   ]) | Null = js.native
   var onicecandidateerror: (js.ThisFunction1[/* this */ this.type, /* ev */ RTCPeerConnectionIceErrorEvent, _]) | Null = js.native
-  var oniceconnectionstatechange: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
-  var onicegatheringstatechange: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
-  var onnegotiationneeded: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
-  var onsignalingstatechange: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
+  var oniceconnectionstatechange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onicegatheringstatechange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onnegotiationneeded: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onsignalingstatechange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
   var onstatsended: (js.ThisFunction1[/* this */ this.type, /* ev */ RTCStatsEvent, _]) | Null = js.native
   var ontrack: (js.ThisFunction1[/* this */ this.type, /* ev */ RTCTrackEvent, _]) | Null = js.native
   val peerIdentity: js.Promise[org.scalajs.dom.experimental.webrtc.RTCIdentityAssertion] = js.native
@@ -55,18 +53,18 @@ trait RTCPeerConnection extends EventTarget {
   @JSName("addEventListener")
   def addEventListener_connectionstatechange(
     `type`: connectionstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_connectionstatechange(
     `type`: connectionstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_connectionstatechange(
     `type`: connectionstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -147,63 +145,69 @@ trait RTCPeerConnection extends EventTarget {
   @JSName("addEventListener")
   def addEventListener_iceconnectionstatechange(
     `type`: iceconnectionstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_iceconnectionstatechange(
     `type`: iceconnectionstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_iceconnectionstatechange(
     `type`: iceconnectionstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_icegatheringstatechange(
     `type`: icegatheringstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_icegatheringstatechange(
     `type`: icegatheringstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_icegatheringstatechange(
     `type`: icegatheringstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_negotiationneeded(`type`: negotiationneeded, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_negotiationneeded(
-    `type`: negotiationneeded,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_negotiationneeded(
     `type`: negotiationneeded,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_negotiationneeded(
+    `type`: negotiationneeded,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    options: scala.Boolean
+  ): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_negotiationneeded(
+    `type`: negotiationneeded,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_signalingstatechange(`type`: signalingstatechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_signalingstatechange(
+    `type`: signalingstatechange,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_signalingstatechange(
     `type`: signalingstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_signalingstatechange(
     `type`: signalingstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -264,18 +268,18 @@ trait RTCPeerConnection extends EventTarget {
   @JSName("removeEventListener")
   def removeEventListener_connectionstatechange(
     `type`: connectionstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_connectionstatechange(
     `type`: connectionstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_connectionstatechange(
     `type`: connectionstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -356,63 +360,69 @@ trait RTCPeerConnection extends EventTarget {
   @JSName("removeEventListener")
   def removeEventListener_iceconnectionstatechange(
     `type`: iceconnectionstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_iceconnectionstatechange(
     `type`: iceconnectionstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_iceconnectionstatechange(
     `type`: iceconnectionstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_icegatheringstatechange(
     `type`: icegatheringstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_icegatheringstatechange(
     `type`: icegatheringstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_icegatheringstatechange(
     `type`: icegatheringstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: org.scalajs.dom.raw.EventListenerOptions
-  ): Unit = js.native
-  @JSName("removeEventListener")
-  def removeEventListener_negotiationneeded(`type`: negotiationneeded, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
-  @JSName("removeEventListener")
-  def removeEventListener_negotiationneeded(
-    `type`: negotiationneeded,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
-    options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_negotiationneeded(
     `type`: negotiationneeded,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_negotiationneeded(
+    `type`: negotiationneeded,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    options: scala.Boolean
+  ): Unit = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_negotiationneeded(
+    `type`: negotiationneeded,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_signalingstatechange(`type`: signalingstatechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_signalingstatechange(
+    `type`: signalingstatechange,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_signalingstatechange(
     `type`: signalingstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_signalingstatechange(
     `type`: signalingstatechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -449,17 +459,5 @@ trait RTCPeerConnection extends EventTarget {
   def setIdentityProvider(provider: java.lang.String, options: RTCIdentityProviderOptions): Unit = js.native
   def setLocalDescription(description: org.scalajs.dom.experimental.webrtc.RTCSessionDescriptionInit): js.Promise[Unit] = js.native
   def setRemoteDescription(description: org.scalajs.dom.experimental.webrtc.RTCSessionDescriptionInit): js.Promise[Unit] = js.native
-}
-
-@JSGlobal("RTCPeerConnection")
-@js.native
-object RTCPeerConnection
-  extends Instantiable0[org.scalajs.dom.experimental.webrtc.RTCPeerConnection]
-     with Instantiable1[
-      /* configuration */ org.scalajs.dom.experimental.webrtc.RTCConfiguration, 
-      org.scalajs.dom.experimental.webrtc.RTCPeerConnection
-    ] {
-  def generateCertificate(keygenAlgorithm: AlgorithmIdentifier): js.Promise[RTCCertificate] = js.native
-  def getDefaultIceServers(): js.Array[org.scalajs.dom.experimental.webrtc.RTCIceServer] = js.native
 }
 

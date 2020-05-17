@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.issuing.authorizations
 
-import typingsSlinky.stripe.AnonEntity
+import typingsSlinky.stripe.anon.Entity
 import typingsSlinky.stripe.stripeStrings.account_compliance_disabled
 import typingsSlinky.stripe.stripeStrings.account_inactive
 import typingsSlinky.stripe.stripeStrings.authentication_failed
@@ -49,7 +49,7 @@ trait RequestHistory extends js.Object {
   /**
     * When an authorization is declined due to authorization_controls, this array contains details about the authorization controls that were violated. Otherwise, it is empty.
     */
-  var violated_authorization_controls: AnonEntity = js.native
+  var violated_authorization_controls: Entity = js.native
 }
 
 object RequestHistory {
@@ -62,7 +62,7 @@ object RequestHistory {
     held_amount: Double,
     held_currency: String,
     reason: authentication_failed | authorization_controls | card_active | card_inactive | insufficient_funds | account_compliance_disabled | account_inactive | suspected_fraud | webhook_approved | webhook_declined | webhook_timeout,
-    violated_authorization_controls: AnonEntity
+    violated_authorization_controls: Entity
   ): RequestHistory = {
     val __obj = js.Dynamic.literal(approved = approved.asInstanceOf[js.Any], authorized_amount = authorized_amount.asInstanceOf[js.Any], authorized_currency = authorized_currency.asInstanceOf[js.Any], created = created.asInstanceOf[js.Any], held_amount = held_amount.asInstanceOf[js.Any], held_currency = held_currency.asInstanceOf[js.Any], reason = reason.asInstanceOf[js.Any], violated_authorization_controls = violated_authorization_controls.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequestHistory]
@@ -118,7 +118,7 @@ object RequestHistory {
         ret
     }
     @scala.inline
-    def withViolated_authorization_controls(value: AnonEntity): Self = {
+    def withViolated_authorization_controls(value: Entity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("violated_authorization_controls")(value.asInstanceOf[js.Any])
         ret

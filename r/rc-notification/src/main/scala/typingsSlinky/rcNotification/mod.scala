@@ -1,5 +1,7 @@
 package typingsSlinky.rcNotification
 
+import typingsSlinky.rcNotification.anon.Animation
+import typingsSlinky.rcNotification.anon.NotificationPropsgetConta
 import typingsSlinky.rcNotification.notificationMod.NotificationInstance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +17,7 @@ object mod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var defaultProps: AnonAnimation = js.native
+    var defaultProps: Animation = js.native
     def newInstance(
       properties: NotificationPropsgetConta,
       callback: js.Function1[/* instance */ NotificationInstance, Unit]

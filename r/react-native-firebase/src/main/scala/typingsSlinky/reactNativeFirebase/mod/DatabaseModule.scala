@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeFirebase.mod
 
-import typingsSlinky.reactNativeFirebase.AnonTIMESTAMP
+import typingsSlinky.reactNativeFirebase.anon.TIMESTAMP
 import typingsSlinky.reactNativeFirebase.mod.RNFirebase.database.Database
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DatabaseModule extends js.Object {
   /** @see https://www.firebase.com/docs/java-api/javadoc/com/firebase/client/ServerValue.html#TIMESTAMP */
-  var ServerValue: AnonTIMESTAMP = js.native
+  var ServerValue: TIMESTAMP = js.native
   var nativeModuleExists: Boolean = js.native
   def apply(): Database = js.native
 }

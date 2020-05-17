@@ -7,17 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the client events  concerned with column processing, and that allow the event's processing to be passed to the server side.
   */
-@JSGlobal("ASPxClientGridViewColumnProcessingModeEventArgs")
 @js.native
-class ASPxClientGridViewColumnProcessingModeEventArgs protected () extends ASPxClientProcessingModeEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientGridViewColumnProcessingModeEventArgs class with the specified setting.
-    * @param column A ASPxClientGridViewColumn object representing the column related to the event.
-    */
-  def this(column: ASPxClientGridViewColumn) = this()
+trait ASPxClientGridViewColumnProcessingModeEventArgs extends ASPxClientProcessingModeEventArgs {
   /**
     * Gets a grid column related to the event.
     */
   var column: ASPxClientGridViewColumn = js.native
+}
+
+object ASPxClientGridViewColumnProcessingModeEventArgs {
+  @scala.inline
+  def apply(column: ASPxClientGridViewColumn, processOnServer: Boolean): ASPxClientGridViewColumnProcessingModeEventArgs = {
+    val __obj = js.Dynamic.literal(column = column.asInstanceOf[js.Any], processOnServer = processOnServer.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientGridViewColumnProcessingModeEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientGridViewColumnProcessingModeEventArgsOps[Self <: ASPxClientGridViewColumnProcessingModeEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumn(value: ASPxClientGridViewColumn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

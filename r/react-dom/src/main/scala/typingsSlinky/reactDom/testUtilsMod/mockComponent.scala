@@ -1,6 +1,6 @@
 package typingsSlinky.reactDom.testUtilsMod
 
-import typingsSlinky.reactDom.TypeofReactTestUtils
+import typingsSlinky.reactDom.anon.TypeofReactTestUtils
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

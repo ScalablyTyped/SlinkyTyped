@@ -13,9 +13,6 @@ package object Animated {
   type Base = typingsSlinky.reactNative.mod.Animated.Animated
   type ComponentProps[T] = js.Any
   type EndCallback = js.Function1[/* result */ typingsSlinky.reactNative.mod.Animated.EndResult, scala.Unit]
-  type Mapping = (org.scalablytyped.runtime.StringDictionary[
-    /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias react-native.react-native.Animated.Mapping */ js.Object
-  ]) | typingsSlinky.reactNative.mod.Animated.AnimatedValue
-  type ValueListenerCallback = js.Function1[/* state */ typingsSlinky.reactNative.AnonValue, scala.Unit]
-  type ValueXYListenerCallback = js.Function1[/* value */ typingsSlinky.reactNative.AnonX, scala.Unit]
+  type ValueListenerCallback = js.Function1[/* state */ typingsSlinky.reactNative.anon.Value, scala.Unit]
+  type ValueXYListenerCallback = js.Function1[/* value */ typingsSlinky.reactNative.anon.X, scala.Unit]
 }

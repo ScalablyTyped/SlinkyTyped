@@ -1,7 +1,7 @@
 package typingsSlinky.angularForms.mod
 
 import typingsSlinky.angularCore.mod.ModuleWithProviders
-import typingsSlinky.angularForms.AnonWarnOnDeprecatedNgFormSelector
+import typingsSlinky.angularForms.anon.WarnOnDeprecatedNgFormSelector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,6 +22,6 @@ object FormsModule extends js.Object {
     * * `warnOnDeprecatedNgFormSelector` Configures when to emit a warning when the deprecated
     * `ngForm` selector is used.
     */
-  def withConfig(opts: AnonWarnOnDeprecatedNgFormSelector): ModuleWithProviders[FormsModule] = js.native
+  def withConfig(opts: WarnOnDeprecatedNgFormSelector): ModuleWithProviders[FormsModule] = js.native
 }
 

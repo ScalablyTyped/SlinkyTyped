@@ -5,7 +5,7 @@ import typingsSlinky.jestConsole.typesMod.LogEntry
 import typingsSlinky.jestConsole.typesMod.LogMessage
 import typingsSlinky.jestConsole.typesMod.LogType
 import typingsSlinky.jestSourceMap.typesMod.SourceMapRegistry
-import typingsSlinky.std.Console_
+import typingsSlinky.std.Console
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object bufferedConsoleMod extends js.Object {
   @js.native
-  trait BufferedConsole extends Console_ {
+  trait BufferedConsole extends Console {
     var _buffer: js.Any = js.native
     var _counters: js.Any = js.native
     var _getSourceMaps: js.Any = js.native

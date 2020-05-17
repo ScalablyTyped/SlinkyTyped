@@ -2,7 +2,7 @@ package typingsSlinky.reactCircularProgressbar.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactCircularProgressbar.AnonBackground
+import typingsSlinky.reactCircularProgressbar.anon.Background
 import typingsSlinky.reactCircularProgressbar.circularProgressbarWithChildrenMod.CircularProgressbarWithChildrenProps
 import typingsSlinky.reactCircularProgressbar.typesMod.CircularProgressbarStyles
 import scala.scalajs.js
@@ -27,7 +27,7 @@ object CircularProgressbarWithChildren {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def classes(value: AnonBackground): this.type = set("classes", value.asInstanceOf[js.Any])
+    def classes(value: Background): this.type = set("classes", value.asInstanceOf[js.Any])
     @scala.inline
     def counterClockwise(value: Boolean): this.type = set("counterClockwise", value.asInstanceOf[js.Any])
     @scala.inline

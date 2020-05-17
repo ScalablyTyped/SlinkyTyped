@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait EJSONableCustomType extends js.Object {
+trait EJSONableCustomType extends EJSONableProperty {
   @JSName("clone")
   var clone_FEJSONableCustomType: js.UndefOr[js.Function0[this.type]] = js.native
   @JSName("equals")

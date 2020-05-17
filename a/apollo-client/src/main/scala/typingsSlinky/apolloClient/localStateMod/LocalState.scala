@@ -1,8 +1,8 @@
 package typingsSlinky.apolloClient.localStateMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.apolloClient.AnonCache
-import typingsSlinky.apolloClient.AnonContext
+import typingsSlinky.apolloClient.anon.Cache
+import typingsSlinky.apolloClient.anon.Context
 import typingsSlinky.apolloClient.typesMod.OperationVariables
 import typingsSlinky.apolloClient.typesMod.Resolvers
 import typingsSlinky.graphql.astMod.ASTNode
@@ -33,9 +33,9 @@ class LocalState[TCacheShape] protected () extends js.Object {
   def clientQuery(document: DocumentNode): DocumentNode | Null = js.native
   def getFragmentMatcher(): FragmentMatcher = js.native
   def getResolvers(): Resolvers = js.native
-  def prepareContext(): AnonCache[TCacheShape] = js.native
-  def prepareContext(context: js.Object): AnonCache[TCacheShape] = js.native
-  def runResolvers[TData](hasDocumentRemoteResultContextVariablesOnlyRunForcedResolvers: AnonContext[TData]): js.Promise[ExecutionResult[TData]] = js.native
+  def prepareContext(): Cache[TCacheShape] = js.native
+  def prepareContext(context: js.Object): Cache[TCacheShape] = js.native
+  def runResolvers[TData](hasDocumentRemoteResultContextVariablesOnlyRunForcedResolvers: Context[TData]): js.Promise[ExecutionResult[TData]] = js.native
   def serverQuery(document: DocumentNode): DocumentNode | Null = js.native
   def setFragmentMatcher(fragmentMatcher: FragmentMatcher): Unit = js.native
   def setResolvers(resolvers: js.Array[Resolvers]): Unit = js.native

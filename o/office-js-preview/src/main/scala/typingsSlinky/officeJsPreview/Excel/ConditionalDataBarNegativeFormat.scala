@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ConditionalDataBarNegativeFormatData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ConditionalDataBarNegativeFormatLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ConditionalDataBarNegativeFormatUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.6]
   */
-@JSGlobal("Excel.ConditionalDataBarNegativeFormat")
 @js.native
-class ConditionalDataBarNegativeFormat () extends ClientObject {
+trait ConditionalDataBarNegativeFormat extends ClientObject {
   /**
     *
     * HTML color code representing the color of the border line, of the form #RRGGBB (e.g. "FFA500") or as a named HTML color (e.g. "orange").
@@ -58,7 +57,7 @@ class ConditionalDataBarNegativeFormat () extends ClientObject {
     */
   def load(): ConditionalDataBarNegativeFormat = js.native
   def load(options: ConditionalDataBarNegativeFormatLoadOptions): ConditionalDataBarNegativeFormat = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ConditionalDataBarNegativeFormat = js.native
+  def load(propertyNamesAndPaths: Expand): ConditionalDataBarNegativeFormat = js.native
   def load(propertyNames: String): ConditionalDataBarNegativeFormat = js.native
   def load(propertyNames: js.Array[String]): ConditionalDataBarNegativeFormat = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

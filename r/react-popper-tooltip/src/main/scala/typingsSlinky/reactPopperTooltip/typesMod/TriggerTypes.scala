@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.reactPopperTooltip.reactPopperTooltipStrings.hover
   - typingsSlinky.reactPopperTooltip.reactPopperTooltipStrings.focus
 */
-trait TriggerTypes extends js.Object
+trait TriggerTypes extends Trigger
 
 object TriggerTypes {
   @scala.inline

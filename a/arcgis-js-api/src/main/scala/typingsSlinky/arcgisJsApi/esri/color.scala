@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -244,7 +243,62 @@ trait color extends js.Object {
   def createVisualVariable(params: colorCreateVisualVariableParams): js.Promise[VisualVariableResult] = js.native
 }
 
-@JSGlobal("__esri.color")
-@js.native
-object color extends TopLevel[color]
+object color {
+  @scala.inline
+  def apply(
+    createAgeRenderer: colorCreateAgeRendererParams => js.Promise[AgeRendererResult],
+    createClassBreaksRenderer: colorCreateClassBreaksRendererParams => js.Promise[ClassBreaksRendererResult],
+    createContinuousRenderer: colorCreateContinuousRendererParams => js.Promise[ContinuousRendererResult],
+    createPCContinuousRenderer: colorCreatePCContinuousRendererParams => js.Promise[PCContinuousRendererResult],
+    createPCTrueColorRenderer: colorCreatePCTrueColorRendererParams => js.Promise[PCTrueColorRendererResult],
+    createVisualVariable: colorCreateVisualVariableParams => js.Promise[VisualVariableResult]
+  ): color = {
+    val __obj = js.Dynamic.literal(createAgeRenderer = js.Any.fromFunction1(createAgeRenderer), createClassBreaksRenderer = js.Any.fromFunction1(createClassBreaksRenderer), createContinuousRenderer = js.Any.fromFunction1(createContinuousRenderer), createPCContinuousRenderer = js.Any.fromFunction1(createPCContinuousRenderer), createPCTrueColorRenderer = js.Any.fromFunction1(createPCTrueColorRenderer), createVisualVariable = js.Any.fromFunction1(createVisualVariable))
+    __obj.asInstanceOf[color]
+  }
+  @scala.inline
+  implicit class colorOps[Self <: color] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateAgeRenderer(value: colorCreateAgeRendererParams => js.Promise[AgeRendererResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createAgeRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateClassBreaksRenderer(value: colorCreateClassBreaksRendererParams => js.Promise[ClassBreaksRendererResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createClassBreaksRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateContinuousRenderer(value: colorCreateContinuousRendererParams => js.Promise[ContinuousRendererResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createContinuousRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreatePCContinuousRenderer(value: colorCreatePCContinuousRendererParams => js.Promise[PCContinuousRendererResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createPCContinuousRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreatePCTrueColorRenderer(value: colorCreatePCTrueColorRendererParams => js.Promise[PCTrueColorRendererResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createPCTrueColorRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateVisualVariable(value: colorCreateVisualVariableParams => js.Promise[VisualVariableResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createVisualVariable")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

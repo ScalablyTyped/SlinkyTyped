@@ -1,5 +1,6 @@
 package typingsSlinky.gapiPagespeedonline
 
+import typingsSlinky.gapiPagespeedonline.anon.Header
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,12 +22,12 @@ trait GoogleApiPageSpeedOnlineRuleResource extends js.Object {
   /**
     * List of blocks of URLs. Each block may contain a heading and a list of URLs. Each URL may optionally include additional details.
     */
-  var urlBlocks: js.Array[AnonHeader] = js.native
+  var urlBlocks: js.Array[Header] = js.native
 }
 
 object GoogleApiPageSpeedOnlineRuleResource {
   @scala.inline
-  def apply(localizedRuleName: String, ruleImpact: Double, ruleScore: Double, urlBlocks: js.Array[AnonHeader]): GoogleApiPageSpeedOnlineRuleResource = {
+  def apply(localizedRuleName: String, ruleImpact: Double, ruleScore: Double, urlBlocks: js.Array[Header]): GoogleApiPageSpeedOnlineRuleResource = {
     val __obj = js.Dynamic.literal(localizedRuleName = localizedRuleName.asInstanceOf[js.Any], ruleImpact = ruleImpact.asInstanceOf[js.Any], ruleScore = ruleScore.asInstanceOf[js.Any], urlBlocks = urlBlocks.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleApiPageSpeedOnlineRuleResource]
   }
@@ -55,7 +56,7 @@ object GoogleApiPageSpeedOnlineRuleResource {
         ret
     }
     @scala.inline
-    def withUrlBlocks(value: js.Array[AnonHeader]): Self = {
+    def withUrlBlocks(value: js.Array[Header]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("urlBlocks")(value.asInstanceOf[js.Any])
         ret

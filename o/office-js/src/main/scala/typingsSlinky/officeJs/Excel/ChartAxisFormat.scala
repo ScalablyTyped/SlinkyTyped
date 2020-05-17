@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.ChartAxisFormatData
 import typingsSlinky.officeJs.Excel.Interfaces.ChartAxisFormatLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.ChartAxisFormatUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.ChartAxisFormat")
 @js.native
-class ChartAxisFormat () extends ClientObject {
+trait ChartAxisFormat extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_ChartAxisFormat: RequestContext = js.native
@@ -50,7 +49,7 @@ class ChartAxisFormat () extends ClientObject {
     */
   def load(): ChartAxisFormat = js.native
   def load(options: ChartAxisFormatLoadOptions): ChartAxisFormat = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartAxisFormat = js.native
+  def load(propertyNamesAndPaths: Expand): ChartAxisFormat = js.native
   def load(propertyNames: String): ChartAxisFormat = js.native
   def load(propertyNames: js.Array[String]): ChartAxisFormat = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

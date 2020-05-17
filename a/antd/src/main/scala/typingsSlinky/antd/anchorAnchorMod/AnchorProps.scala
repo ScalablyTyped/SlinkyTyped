@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.AnonHref
+import typingsSlinky.antd.anon.Href
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,9 +22,7 @@ trait AnchorProps extends js.Object {
   var offsetTop: js.UndefOr[Double] = js.native
   /** Listening event when scrolling change active link */
   var onChange: js.UndefOr[js.Function1[/* currentActiveLink */ String, Unit]] = js.native
-  var onClick: js.UndefOr[
-    js.Function2[/* e */ SyntheticMouseEvent[HTMLElement], /* link */ AnonHref, Unit]
-  ] = js.native
+  var onClick: js.UndefOr[js.Function2[/* e */ SyntheticMouseEvent[HTMLElement], /* link */ Href, Unit]] = js.native
   var prefixCls: js.UndefOr[String] = js.native
   var showInkInFixed: js.UndefOr[Boolean] = js.native
   var style: js.UndefOr[CSSProperties] = js.native
@@ -147,7 +145,7 @@ object AnchorProps {
         ret
     }
     @scala.inline
-    def withOnClick(value: (/* e */ SyntheticMouseEvent[HTMLElement], /* link */ AnonHref) => Unit): Self = {
+    def withOnClick(value: (/* e */ SyntheticMouseEvent[HTMLElement], /* link */ Href) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction2(value))
         ret

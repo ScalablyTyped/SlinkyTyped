@@ -2,7 +2,7 @@ package typingsSlinky.antDesignPro.loginTabMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antDesignPro.AnonAddTab
+import typingsSlinky.antDesignPro.anon.AddTab
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,12 +11,12 @@ import scala.scalajs.js.annotation._
 trait LoginTabProps extends js.Object {
   var key: js.UndefOr[String] = js.native
   var tab: js.UndefOr[TagMod[Any]] = js.native
-  var tabUtil: AnonAddTab = js.native
+  var tabUtil: AddTab = js.native
 }
 
 object LoginTabProps {
   @scala.inline
-  def apply(tabUtil: AnonAddTab): LoginTabProps = {
+  def apply(tabUtil: AddTab): LoginTabProps = {
     val __obj = js.Dynamic.literal(tabUtil = tabUtil.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoginTabProps]
   }
@@ -27,7 +27,7 @@ object LoginTabProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTabUtil(value: AnonAddTab): Self = {
+    def withTabUtil(value: AddTab): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tabUtil")(value.asInstanceOf[js.Any])
         ret

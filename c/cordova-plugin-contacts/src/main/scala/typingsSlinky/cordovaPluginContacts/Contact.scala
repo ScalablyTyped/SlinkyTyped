@@ -1,6 +1,5 @@
 package typingsSlinky.cordovaPluginContacts
 
-import org.scalablytyped.runtime.Instantiable14
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,25 +28,34 @@ trait Contact extends ContactProperties {
   ): Unit = js.native
 }
 
-@JSGlobal("Contact")
-@js.native
-object Contact
-  extends /** Constructor of Contact object */
-Instantiable14[
-      js.UndefOr[/* id */ String], 
-      js.UndefOr[/* displayName */ String], 
-      js.UndefOr[/* name */ ContactName], 
-      js.UndefOr[/* nickname */ String], 
-      js.UndefOr[/* phoneNumbers */ js.Array[ContactField]], 
-      js.UndefOr[/* emails */ js.Array[ContactField]], 
-      js.UndefOr[/* addresses */ js.Array[ContactAddress]], 
-      js.UndefOr[/* ims */ js.Array[ContactField]], 
-      js.UndefOr[/* organizations */ js.Array[ContactOrganization]], 
-      js.UndefOr[/* birthday */ js.Date], 
-      js.UndefOr[/* note */ String], 
-      js.UndefOr[/* photos */ js.Array[ContactField]], 
-      js.UndefOr[/* categories */ ContactField], 
-      js.UndefOr[/* urls */ js.Array[ContactField]], 
-      Contact
-    ]
+object Contact {
+  @scala.inline
+  def apply(
+    remove: (js.Function0[Unit], js.Function1[/* error */ js.Error, Unit]) => Unit,
+    save: (js.Function1[Contact, Unit], js.Function1[/* error */ js.Error, Unit]) => Unit
+  ): Contact = {
+    val __obj = js.Dynamic.literal(remove = js.Any.fromFunction2(remove), save = js.Any.fromFunction2(save))
+    __obj.asInstanceOf[Contact]
+  }
+  @scala.inline
+  implicit class ContactOps[Self <: Contact] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRemove(value: (js.Function0[Unit], js.Function1[/* error */ js.Error, Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSave(value: (js.Function1[Contact, Unit], js.Function1[/* error */ js.Error, Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("save")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
+}
 

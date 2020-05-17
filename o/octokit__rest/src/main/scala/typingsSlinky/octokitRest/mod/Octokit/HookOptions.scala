@@ -1,7 +1,7 @@
 package typingsSlinky.octokitRest.mod.Octokit
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.octokitRest.AnonCompress
+import typingsSlinky.octokitRest.anon.Compress
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait HookOptions
   var headers: StringDictionary[String] = js.native
   var method: String = js.native
   // See https://github.com/bitinn/node-fetch#options
-  var request: AnonCompress = js.native
+  var request: Compress = js.native
   var url: String = js.native
 }
 
@@ -25,7 +25,7 @@ object HookOptions {
     data: js.Any,
     headers: StringDictionary[String],
     method: String,
-    request: AnonCompress,
+    request: Compress,
     url: String
   ): HookOptions = {
     val __obj = js.Dynamic.literal(baseUrl = baseUrl.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], headers = headers.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], request = request.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
@@ -62,7 +62,7 @@ object HookOptions {
         ret
     }
     @scala.inline
-    def withRequest(value: AnonCompress): Self = {
+    def withRequest(value: Compress): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
         ret

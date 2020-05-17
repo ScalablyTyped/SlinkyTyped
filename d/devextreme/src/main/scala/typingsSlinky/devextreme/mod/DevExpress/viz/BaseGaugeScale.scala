@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonColorLength
+import typingsSlinky.devextreme.anon.ColorLength
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait BaseGaugeScale extends js.Object {
   /** Specifies common options for scale labels. */
   var label: js.UndefOr[BaseGaugeScaleLabel] = js.native
   /** Specifies options of the gauge's minor ticks. */
-  var minorTick: js.UndefOr[AnonColorLength] = js.native
+  var minorTick: js.UndefOr[ColorLength] = js.native
   /** Specifies an interval between minor ticks. */
   var minorTickInterval: js.UndefOr[Double] = js.native
   /** Specifies the minimum distance between two neighboring major ticks in pixels. */
@@ -27,7 +27,7 @@ trait BaseGaugeScale extends js.Object {
   /** Specifies the start value for the scale of the gauge. */
   var startValue: js.UndefOr[Double] = js.native
   /** Specifies options of the gauge's major ticks. */
-  var tick: js.UndefOr[AnonColorLength] = js.native
+  var tick: js.UndefOr[ColorLength] = js.native
   /** Specifies an interval between major ticks. */
   var tickInterval: js.UndefOr[Double] = js.native
 }
@@ -105,7 +105,7 @@ object BaseGaugeScale {
         ret
     }
     @scala.inline
-    def withMinorTick(value: AnonColorLength): Self = {
+    def withMinorTick(value: ColorLength): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("minorTick")(value.asInstanceOf[js.Any])
         ret
@@ -153,7 +153,7 @@ object BaseGaugeScale {
         ret
     }
     @scala.inline
-    def withTick(value: AnonColorLength): Self = {
+    def withTick(value: ColorLength): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(value.asInstanceOf[js.Any])
         ret

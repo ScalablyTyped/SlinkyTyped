@@ -273,24 +273,6 @@ object TimelineFeedResponseCarouselMediaItem {
         ret.asInstanceOf[js.Dynamic].updateDynamic("usertags")(js.undefined)
         ret
     }
-    @scala.inline
-    def withVideo_subtitles_uri(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video_subtitles_uri")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutVideo_subtitles_uri: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video_subtitles_uri")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withVideo_subtitles_uriNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("video_subtitles_uri")(null)
-        ret
-    }
   }
   
 }

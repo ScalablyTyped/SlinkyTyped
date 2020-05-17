@@ -8,9 +8,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides functionality for managing the low shutter lag photo sequence mode on the capture device. */
-@JSGlobal("Windows.Media.Devices.LowLagPhotoSequenceControl")
 @js.native
-abstract class LowLagPhotoSequenceControl () extends js.Object {
+trait LowLagPhotoSequenceControl extends js.Object {
   /** Gets or sets the desired size for thumbnails, which is the largest length of the image, either width or height. */
   var desiredThumbnailSize: Double = js.native
   /** Gets a value that specifies if hardware acceleration is supported for thumbnails in photo sequence mode. */
@@ -40,5 +39,99 @@ abstract class LowLagPhotoSequenceControl () extends js.Object {
     * @return The highest concurrent frames per second.
     */
   def getHighestConcurrentFrameRate(captureProperties: IMediaEncodingProperties): MediaRatio = js.native
+}
+
+object LowLagPhotoSequenceControl {
+  @scala.inline
+  def apply(
+    desiredThumbnailSize: Double,
+    getCurrentFrameRate: () => MediaRatio,
+    getHighestConcurrentFrameRate: IMediaEncodingProperties => MediaRatio,
+    hardwareAcceleratedThumbnailSupported: Double,
+    maxPastPhotos: Double,
+    maxPhotosPerSecond: Double,
+    pastPhotoLimit: Double,
+    photosPerSecondLimit: Double,
+    supported: Boolean,
+    thumbnailEnabled: Boolean,
+    thumbnailFormat: MediaThumbnailFormat
+  ): LowLagPhotoSequenceControl = {
+    val __obj = js.Dynamic.literal(desiredThumbnailSize = desiredThumbnailSize.asInstanceOf[js.Any], getCurrentFrameRate = js.Any.fromFunction0(getCurrentFrameRate), getHighestConcurrentFrameRate = js.Any.fromFunction1(getHighestConcurrentFrameRate), hardwareAcceleratedThumbnailSupported = hardwareAcceleratedThumbnailSupported.asInstanceOf[js.Any], maxPastPhotos = maxPastPhotos.asInstanceOf[js.Any], maxPhotosPerSecond = maxPhotosPerSecond.asInstanceOf[js.Any], pastPhotoLimit = pastPhotoLimit.asInstanceOf[js.Any], photosPerSecondLimit = photosPerSecondLimit.asInstanceOf[js.Any], supported = supported.asInstanceOf[js.Any], thumbnailEnabled = thumbnailEnabled.asInstanceOf[js.Any], thumbnailFormat = thumbnailFormat.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LowLagPhotoSequenceControl]
+  }
+  @scala.inline
+  implicit class LowLagPhotoSequenceControlOps[Self <: LowLagPhotoSequenceControl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDesiredThumbnailSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredThumbnailSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetCurrentFrameRate(value: () => MediaRatio): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentFrameRate")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetHighestConcurrentFrameRate(value: IMediaEncodingProperties => MediaRatio): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getHighestConcurrentFrameRate")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHardwareAcceleratedThumbnailSupported(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hardwareAcceleratedThumbnailSupported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxPastPhotos(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPastPhotos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxPhotosPerSecond(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxPhotosPerSecond")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPastPhotoLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pastPhotoLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPhotosPerSecondLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("photosPerSecondLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSupported(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supported")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThumbnailEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThumbnailFormat(value: MediaThumbnailFormat): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnailFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

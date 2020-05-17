@@ -1,6 +1,6 @@
 package typingsSlinky.angularStrap.mgcrea.ngStrap.dropdown
 
-import typingsSlinky.angularStrap.AnonHide
+import typingsSlinky.angularStrap.anon.Hide
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait IDropdownOptions extends js.Object {
   var animation: js.UndefOr[String] = js.native
   var container: js.UndefOr[String | Boolean] = js.native
-  var delay: js.UndefOr[Double | AnonHide] = js.native
+  var delay: js.UndefOr[Double | Hide] = js.native
   var html: js.UndefOr[Boolean] = js.native
   var onBeforeHide: js.UndefOr[js.Function1[/* dropdown */ IDropdown, Unit]] = js.native
   var onBeforeShow: js.UndefOr[js.Function1[/* dropdown */ IDropdown, Unit]] = js.native
@@ -58,7 +58,7 @@ object IDropdownOptions {
         ret
     }
     @scala.inline
-    def withDelay(value: Double | AnonHide): Self = {
+    def withDelay(value: Double | Hide): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.braintree.mod
 
-import typingsSlinky.braintree.AnonCustomerId
+import typingsSlinky.braintree.anon.CustomerId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,16 +11,12 @@ trait PaymentMethodNotification
      with WebhookNotification {
   @JSName("kind")
   var kind_PaymentMethodNotification: PaymentMethodNotificationKind = js.native
-  var revokedPaymentMethodMetadata: AnonCustomerId = js.native
+  var revokedPaymentMethodMetadata: CustomerId = js.native
 }
 
 object PaymentMethodNotification {
   @scala.inline
-  def apply(
-    kind: PaymentMethodNotificationKind,
-    revokedPaymentMethodMetadata: AnonCustomerId,
-    timestamp: js.Date
-  ): PaymentMethodNotification = {
+  def apply(kind: PaymentMethodNotificationKind, revokedPaymentMethodMetadata: CustomerId, timestamp: js.Date): PaymentMethodNotification = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], revokedPaymentMethodMetadata = revokedPaymentMethodMetadata.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaymentMethodNotification]
   }
@@ -37,7 +33,7 @@ object PaymentMethodNotification {
         ret
     }
     @scala.inline
-    def withRevokedPaymentMethodMetadata(value: AnonCustomerId): Self = {
+    def withRevokedPaymentMethodMetadata(value: CustomerId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("revokedPaymentMethodMetadata")(value.asInstanceOf[js.Any])
         ret

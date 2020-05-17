@@ -1,5 +1,6 @@
 package typingsSlinky.navermaps.naver.maps
 
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +11,12 @@ trait PointerEvent extends js.Object {
   var feature: Feature = js.native
   var offset: Point = js.native
   var point: Point = js.native
-  var pointerEvent: DOMEvent = js.native
+  var pointerEvent: Event = js.native
 }
 
 object PointerEvent {
   @scala.inline
-  def apply(coord: Coord, feature: Feature, offset: Point, point: Point, pointerEvent: DOMEvent): PointerEvent = {
+  def apply(coord: Coord, feature: Feature, offset: Point, point: Point, pointerEvent: Event): PointerEvent = {
     val __obj = js.Dynamic.literal(coord = coord.asInstanceOf[js.Any], feature = feature.asInstanceOf[js.Any], offset = offset.asInstanceOf[js.Any], point = point.asInstanceOf[js.Any], pointerEvent = pointerEvent.asInstanceOf[js.Any])
     __obj.asInstanceOf[PointerEvent]
   }
@@ -50,7 +51,7 @@ object PointerEvent {
         ret
     }
     @scala.inline
-    def withPointerEvent(value: DOMEvent): Self = {
+    def withPointerEvent(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointerEvent")(value.asInstanceOf[js.Any])
         ret

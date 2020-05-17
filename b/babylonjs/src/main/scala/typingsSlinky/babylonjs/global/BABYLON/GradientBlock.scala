@@ -1,0 +1,17 @@
+package typingsSlinky.babylonjs.global.BABYLON
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("BABYLON.GradientBlock")
+@js.native
+class GradientBlock protected ()
+  extends typingsSlinky.babylonjs.BABYLON.GradientBlock {
+  /**
+    * Creates a new GradientBlock
+    * @param name defines the block name
+    */
+  def this(name: String) = this()
+}
+

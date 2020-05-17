@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientCompute.gapi.client.compute
 
-import typingsSlinky.gapiClientCompute.AnonErrors
+import typingsSlinky.gapiClientCompute.anon.Errors
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ManagedInstanceLastAttempt extends js.Object {
   /** [Output Only] Encountered errors during the last attempt to create or delete the instance. */
-  var errors: js.UndefOr[AnonErrors] = js.native
+  var errors: js.UndefOr[Errors] = js.native
 }
 
 object ManagedInstanceLastAttempt {
@@ -24,7 +24,7 @@ object ManagedInstanceLastAttempt {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withErrors(value: AnonErrors): Self = {
+    def withErrors(value: Errors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("errors")(value.asInstanceOf[js.Any])
         ret

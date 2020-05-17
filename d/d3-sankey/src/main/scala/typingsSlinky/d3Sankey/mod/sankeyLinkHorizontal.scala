@@ -1,6 +1,6 @@
 package typingsSlinky.d3Sankey.mod
 
-import typingsSlinky.d3Sankey.SankeyLinkIndex
+import typingsSlinky.d3Sankey.anon.SankeyLinkIndex
 import typingsSlinky.d3Shape.mod.Link
 import scala.scalajs.js
 import scala.scalajs.js.`|`

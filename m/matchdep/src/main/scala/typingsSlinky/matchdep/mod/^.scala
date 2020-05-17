@@ -1,0 +1,27 @@
+package typingsSlinky.matchdep.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("matchdep", JSImport.Namespace)
+@js.native
+object ^ extends js.Object {
+  def filter(pattern: String): js.Array[String] = js.native
+  def filter(pattern: String, config: FilterConfig): js.Array[String] = js.native
+  def filter(pattern: js.Array[String]): js.Array[String] = js.native
+  def filter(pattern: js.Array[String], config: FilterConfig): js.Array[String] = js.native
+  def filterAll(pattern: String): js.Array[String] = js.native
+  def filterAll(pattern: String, config: FilterConfig): js.Array[String] = js.native
+  def filterAll(pattern: js.Array[String]): js.Array[String] = js.native
+  def filterAll(pattern: js.Array[String], config: FilterConfig): js.Array[String] = js.native
+  def filterDev(pattern: String): js.Array[String] = js.native
+  def filterDev(pattern: String, config: FilterConfig): js.Array[String] = js.native
+  def filterDev(pattern: js.Array[String]): js.Array[String] = js.native
+  def filterDev(pattern: js.Array[String], config: FilterConfig): js.Array[String] = js.native
+  def filterPeer(pattern: String): js.Array[String] = js.native
+  def filterPeer(pattern: String, config: FilterConfig): js.Array[String] = js.native
+  def filterPeer(pattern: js.Array[String]): js.Array[String] = js.native
+  def filterPeer(pattern: js.Array[String], config: FilterConfig): js.Array[String] = js.native
+}
+

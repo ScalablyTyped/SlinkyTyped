@@ -1,7 +1,7 @@
 package typingsSlinky.blueprintjsSelect.multiSelectMod
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.blueprintjsSelect.AnonFill
+import typingsSlinky.blueprintjsSelect.anon.Fill
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -28,7 +28,7 @@ class MultiSelect[T] ()
 @JSImport("@blueprintjs/select/lib/esm/components/select/multiSelect", "MultiSelect")
 @js.native
 object MultiSelect extends js.Object {
-  var defaultProps: AnonFill = js.native
+  var defaultProps: Fill = js.native
   var displayName: String = js.native
   def ofType[T](): Instantiable1[/* props */ IMultiSelectProps[T], MultiSelect[T]] = js.native
 }

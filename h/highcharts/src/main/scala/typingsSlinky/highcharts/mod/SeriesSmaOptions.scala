@@ -95,30 +95,6 @@ object SeriesSmaOptions {
         ret
     }
     @scala.inline
-    def withDataParser(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataParser")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataParser: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataParser")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDataURL(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataURL")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDataURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("dataURL")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withId(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
@@ -188,18 +164,6 @@ object SeriesSmaOptions {
     def withoutTreemap: Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("treemap")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withUseOhlcData(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useOhlcData")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUseOhlcData: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("useOhlcData")(js.undefined)
         ret
     }
     @scala.inline

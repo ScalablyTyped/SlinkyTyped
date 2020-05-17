@@ -5,7 +5,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.AnonScrollToFirstRowOnChange
+import typingsSlinky.antd.anon.ScrollToFirstRowOnChange
 import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.antd.antdStrings.ltr
 import typingsSlinky.antd.antdStrings.rtl
@@ -20,7 +20,7 @@ import typingsSlinky.antd.tableInterfaceMod.TableLocale
 import typingsSlinky.antd.tableInterfaceMod.TablePaginationConfig
 import typingsSlinky.antd.tableInterfaceMod.TableRowSelection
 import typingsSlinky.antd.tableTableMod.TableProps
-import typingsSlinky.rcTable.AnonX
+import typingsSlinky.rcTable.anon.X
 import typingsSlinky.rcTable.interfaceMod.ColumnType
 import typingsSlinky.rcTable.interfaceMod.ExpandableConfig
 import typingsSlinky.rcTable.interfaceMod.GetRowKey
@@ -128,7 +128,7 @@ object Table {
     @scala.inline
     def rowSelection(value: TableRowSelection[RecordType]): this.type = set("rowSelection", value.asInstanceOf[js.Any])
     @scala.inline
-    def scroll(value: js.UndefOr[AnonX] with AnonScrollToFirstRowOnChange): this.type = set("scroll", value.asInstanceOf[js.Any])
+    def scroll(value: js.UndefOr[X] with ScrollToFirstRowOnChange): this.type = set("scroll", value.asInstanceOf[js.Any])
     @scala.inline
     def showHeader(value: Boolean): this.type = set("showHeader", value.asInstanceOf[js.Any])
     @scala.inline

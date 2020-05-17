@@ -1,13 +1,13 @@
 package typingsSlinky.immutable.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.immutable.Immutable.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait OrderedSet[T]
-  extends typingsSlinky.immutable.Immutable.Set_[T] {
+trait OrderedSet[T] extends Set[T] {
   /**
     * Returns a new OrderedSet with only the values for which the `predicate`
     * function returns true.

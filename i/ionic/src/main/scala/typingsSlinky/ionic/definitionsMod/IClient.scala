@@ -1,6 +1,6 @@
 package typingsSlinky.ionic.definitionsMod
 
-import typingsSlinky.ionic.AnonReq
+import typingsSlinky.ionic.anon.Req
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait IClient extends js.Object {
   var config: IConfig = js.native
   def `do`(req: SuperAgentRequest): js.Promise[APIResponseSuccess] = js.native
-  def make(method: HttpMethod, path: String): js.Promise[AnonReq] = js.native
+  def make(method: HttpMethod, path: String): js.Promise[Req] = js.native
   def paginate[T /* <: Response[js.Array[js.Object]] */](args: PaginateArgs[T]): IPaginator[T, PaginatorState] = js.native
 }
 
@@ -18,7 +18,7 @@ object IClient {
   def apply(
     config: IConfig,
     `do`: SuperAgentRequest => js.Promise[APIResponseSuccess],
-    make: (HttpMethod, String) => js.Promise[AnonReq],
+    make: (HttpMethod, String) => js.Promise[Req],
     paginate: PaginateArgs[js.Any] => IPaginator[js.Any, PaginatorState]
   ): IClient = {
     val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any], make = js.Any.fromFunction2(make), paginate = js.Any.fromFunction1(paginate))
@@ -44,7 +44,7 @@ object IClient {
         ret
     }
     @scala.inline
-    def withMake(value: (HttpMethod, String) => js.Promise[AnonReq]): Self = {
+    def withMake(value: (HttpMethod, String) => js.Promise[Req]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("make")(js.Any.fromFunction2(value))
         ret

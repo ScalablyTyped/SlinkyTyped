@@ -1,6 +1,6 @@
 package typingsSlinky.ioredis.mod
 
-import typingsSlinky.ioredis.AnonLua
+import typingsSlinky.ioredis.anon.Lua
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Commander extends js.Object {
   def createBuiltinCommand(commandName: String): js.Object = js.native
-  def defineCommand(name: String, definition: AnonLua): Unit = js.native
+  def defineCommand(name: String, definition: Lua): Unit = js.native
   def getBuiltinCommands(): js.Array[String] = js.native
   def sendCommand(): Unit = js.native
 }
@@ -17,7 +17,7 @@ object Commander {
   @scala.inline
   def apply(
     createBuiltinCommand: String => js.Object,
-    defineCommand: (String, AnonLua) => Unit,
+    defineCommand: (String, Lua) => Unit,
     getBuiltinCommands: () => js.Array[String],
     sendCommand: () => Unit
   ): Commander = {
@@ -37,7 +37,7 @@ object Commander {
         ret
     }
     @scala.inline
-    def withDefineCommand(value: (String, AnonLua) => Unit): Self = {
+    def withDefineCommand(value: (String, Lua) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defineCommand")(js.Any.fromFunction2(value))
         ret

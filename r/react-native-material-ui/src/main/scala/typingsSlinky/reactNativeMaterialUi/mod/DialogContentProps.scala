@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeMaterialUi.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactNativeMaterialUi.AnonContentContainer
+import typingsSlinky.reactNativeMaterialUi.anon.ContentContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DialogContentProps extends js.Object {
   var children: ReactElement = js.native
-  var style: js.UndefOr[AnonContentContainer] = js.native
+  var style: js.UndefOr[ContentContainer] = js.native
 }
 
 object DialogContentProps {
@@ -31,7 +31,7 @@ object DialogContentProps {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonContentContainer): Self = {
+    def withStyle(value: ContentContainer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

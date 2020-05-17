@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonDeclarations
+import typingsSlinky.astTypes.anon.Declarations
 import typingsSlinky.astTypes.astTypesStrings.`var`
 import typingsSlinky.astTypes.astTypesStrings.const
 import typingsSlinky.astTypes.astTypesStrings.let
@@ -16,6 +16,6 @@ trait VariableDeclarationBuilder extends js.Object {
   def apply(kind: `var`, declarations: js.Array[VariableDeclaratorKind | IdentifierKind]): VariableDeclaration = js.native
   def apply(kind: const, declarations: js.Array[VariableDeclaratorKind | IdentifierKind]): VariableDeclaration = js.native
   def apply(kind: let, declarations: js.Array[VariableDeclaratorKind | IdentifierKind]): VariableDeclaration = js.native
-  def from(params: AnonDeclarations): VariableDeclaration = js.native
+  def from(params: Declarations): VariableDeclaration = js.native
 }
 

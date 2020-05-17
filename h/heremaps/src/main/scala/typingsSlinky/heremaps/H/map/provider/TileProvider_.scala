@@ -3,7 +3,6 @@ package typingsSlinky.heremaps.H.map.provider
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
-import typingsSlinky.heremaps.H.map.provider.TileProvider.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,14 +17,8 @@ import scala.scalajs.js.annotation._
   * @property max {number} - Maximum zoom level at which provider can server data, set at construction time
   * @property uid {string} - Provider instance unique identifier, generated at construction time
   */
-@JSGlobal("H.map.provider.TileProvider")
 @js.native
-class TileProvider_ protected () extends Provider {
-  /**
-    * Constructor
-    * @param options {H.map.provider.TileProvider.Options} - The options to instantiate this TileProvider
-    */
-  def this(options: Options) = this()
+trait TileProvider_ extends Provider {
   var cancelTile: js.Any = js.native
   var cancelTileByKey: js.Any = js.native
   var requestTile: js.Any = js.native

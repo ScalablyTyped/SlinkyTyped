@@ -1,6 +1,6 @@
 package typingsSlinky.sinon.mod
 
-import typingsSlinky.sinon.PartialSinonExposeOptions
+import typingsSlinky.sinon.anon.PartialSinonExposeOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,7 @@
 package typingsSlinky.dayjs.mod
 
 import typingsSlinky.dayjs.ILocale
-import typingsSlinky.dayjs.PartialILocale
+import typingsSlinky.dayjs.anon.PartialILocale
 import typingsSlinky.dayjs.isoWeekMod.ISOUnitType
 import typingsSlinky.dayjs.toObjectMod.DayjsObject
 import scala.scalajs.js
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("dayjs", "Dayjs")
 @js.native
-class Dayjs () extends js.Object {
+class Dayjs () extends ConfigType {
   def this(config: ConfigType) = this()
   def add(value: Double, unit: OpUnitType): Dayjs = js.native
   def add(value: Double, unit: QUnitType): typingsSlinky.dayjs.quarterOfYearMod.dayjsAugmentingMod.Dayjs = js.native

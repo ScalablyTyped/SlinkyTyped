@@ -1,8 +1,8 @@
 package typingsSlinky.jqueryFileupload
 
-import typingsSlinky.jquery.JQuery_.Deferred.CallbackBase
-import typingsSlinky.jquery.JQuery_.PromiseBase
-import typingsSlinky.jquery.JQuery_.TypeOrArray
+import typingsSlinky.jquery.JQuery.Deferred.CallbackBase
+import typingsSlinky.jquery.JQuery.PromiseBase
+import typingsSlinky.jquery.JQuery.TypeOrArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

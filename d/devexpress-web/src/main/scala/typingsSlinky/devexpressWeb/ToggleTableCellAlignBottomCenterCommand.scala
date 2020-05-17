@@ -7,12 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * A command to apply bottom-center alignment for the selected table cells.
   */
-@JSGlobal("ToggleTableCellAlignBottomCenterCommand")
 @js.native
-class ToggleTableCellAlignBottomCenterCommand () extends CommandWithBooleanStateBase {
+trait ToggleTableCellAlignBottomCenterCommand extends CommandWithBooleanStateBase {
   /**
     * Executes the ToggleTableCellAlignBottomCenterCommand command.
     */
   def execute(): Boolean = js.native
+}
+
+object ToggleTableCellAlignBottomCenterCommand {
+  @scala.inline
+  def apply(execute: () => Boolean, getState: () => CommandState[Boolean]): ToggleTableCellAlignBottomCenterCommand = {
+    val __obj = js.Dynamic.literal(execute = js.Any.fromFunction0(execute), getState = js.Any.fromFunction0(getState))
+    __obj.asInstanceOf[ToggleTableCellAlignBottomCenterCommand]
+  }
+  @scala.inline
+  implicit class ToggleTableCellAlignBottomCenterCommandOps[Self <: ToggleTableCellAlignBottomCenterCommand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExecute(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

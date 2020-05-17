@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientPrediction.gapi.client.prediction
 
-import typingsSlinky.gapiClientPrediction.AnonConfusionMatrix
-import typingsSlinky.gapiClientPrediction.AnonFeatures
+import typingsSlinky.gapiClientPrediction.anon.ConfusionMatrix
+import typingsSlinky.gapiClientPrediction.anon.Features
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Analyze extends js.Object {
   /** Description of the data the model was trained on. */
-  var dataDescription: js.UndefOr[AnonFeatures] = js.native
+  var dataDescription: js.UndefOr[Features] = js.native
   /** List of errors with the data. */
   var errors: js.UndefOr[js.Array[Record[String, String]]] = js.native
   /** The unique name for the predictive model. */
@@ -18,7 +18,7 @@ trait Analyze extends js.Object {
   /** What kind of resource this is. */
   var kind: js.UndefOr[String] = js.native
   /** Description of the model. */
-  var modelDescription: js.UndefOr[AnonConfusionMatrix] = js.native
+  var modelDescription: js.UndefOr[ConfusionMatrix] = js.native
   /** A URL to re-request this resource. */
   var selfLink: js.UndefOr[String] = js.native
 }
@@ -36,7 +36,7 @@ object Analyze {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDataDescription(value: AnonFeatures): Self = {
+    def withDataDescription(value: Features): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataDescription")(value.asInstanceOf[js.Any])
         ret
@@ -84,7 +84,7 @@ object Analyze {
         ret
     }
     @scala.inline
-    def withModelDescription(value: AnonConfusionMatrix): Self = {
+    def withModelDescription(value: ConfusionMatrix): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modelDescription")(value.asInstanceOf[js.Any])
         ret

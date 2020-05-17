@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeChartsWrapper.components
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -29,12 +29,11 @@ import typingsSlinky.reactNative.reactNativeStrings.polite
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.yes
-import typingsSlinky.reactNativeChartsWrapper.AnonAction
-import typingsSlinky.reactNativeChartsWrapper.AnonColor
-import typingsSlinky.reactNativeChartsWrapper.AnonDataIndex
-import typingsSlinky.reactNativeChartsWrapper.AnonDigits
-import typingsSlinky.reactNativeChartsWrapper.AnonDurationX
-import typingsSlinky.reactNativeChartsWrapper.AnonY
+import typingsSlinky.reactNativeChartsWrapper.anon.Action
+import typingsSlinky.reactNativeChartsWrapper.anon.DataIndex
+import typingsSlinky.reactNativeChartsWrapper.anon.Digits
+import typingsSlinky.reactNativeChartsWrapper.anon.DurationX
+import typingsSlinky.reactNativeChartsWrapper.anon.Y
 import typingsSlinky.reactNativeChartsWrapper.mod.ChartDescription
 import typingsSlinky.reactNativeChartsWrapper.mod.ChartLegend
 import typingsSlinky.reactNativeChartsWrapper.mod.Color
@@ -82,7 +81,7 @@ object PieChart {
     @scala.inline
     def accessible(value: Boolean): this.type = set("accessible", value.asInstanceOf[js.Any])
     @scala.inline
-    def animation(value: AnonDurationX): this.type = set("animation", value.asInstanceOf[js.Any])
+    def animation(value: DurationX): this.type = set("animation", value.asInstanceOf[js.Any])
     @scala.inline
     def centerText(value: String): this.type = set("centerText", value.asInstanceOf[js.Any])
     @scala.inline
@@ -110,7 +109,7 @@ object PieChart {
     @scala.inline
     def highlightPerTapEnabled(value: Boolean): this.type = set("highlightPerTapEnabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def highlights(value: js.Array[AnonDataIndex]): this.type = set("highlights", value.asInstanceOf[js.Any])
+    def highlights(value: js.Array[DataIndex]): this.type = set("highlights", value.asInstanceOf[js.Any])
     @scala.inline
     def hitSlop(value: Insets): this.type = set("hitSlop", value.asInstanceOf[js.Any])
     @scala.inline
@@ -126,7 +125,7 @@ object PieChart {
     @scala.inline
     def logEnabled(value: Boolean): this.type = set("logEnabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def marker(value: AnonDigits): this.type = set("marker", value.asInstanceOf[js.Any])
+    def marker(value: Digits): this.type = set("marker", value.asInstanceOf[js.Any])
     @scala.inline
     def maxAngle(value: Double): this.type = set("maxAngle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -144,7 +143,7 @@ object PieChart {
     @scala.inline
     def onAccessibilityTap(value: () => Unit): this.type = set("onAccessibilityTap", js.Any.fromFunction0(value))
     @scala.inline
-    def onChange(value: SyntheticEvent[NodeHandle, AnonAction] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: SyntheticEvent[NodeHandle, Action] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def onLayout(value: /* event */ LayoutChangeEvent => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
     @scala.inline
@@ -170,7 +169,7 @@ object PieChart {
     @scala.inline
     def onResponderTerminationRequest(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onResponderTerminationRequest", js.Any.fromFunction1(value))
     @scala.inline
-    def onSelect(value: SyntheticEvent[NodeHandle, AnonY | Null] => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    def onSelect(value: SyntheticEvent[NodeHandle, Y | Null] => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline
     def onStartShouldSetResponder(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onStartShouldSetResponder", js.Any.fromFunction1(value))
     @scala.inline
@@ -202,7 +201,7 @@ object PieChart {
     @scala.inline
     def styleNull: this.type = set("style", null)
     @scala.inline
-    def styledCenterText(value: AnonColor): this.type = set("styledCenterText", value.asInstanceOf[js.Any])
+    def styledCenterText(value: typingsSlinky.reactNativeChartsWrapper.anon.Color): this.type = set("styledCenterText", value.asInstanceOf[js.Any])
     @scala.inline
     def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
     @scala.inline

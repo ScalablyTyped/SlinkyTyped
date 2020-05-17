@@ -1,6 +1,6 @@
 package typingsSlinky.cassandraDriver.mod.token
 
-import typingsSlinky.cassandraDriver.AnonCode
+import typingsSlinky.cassandraDriver.anon.Code
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,18 +9,13 @@ import scala.scalajs.js.annotation._
 trait Token extends js.Object {
   def compare(other: Token): Double = js.native
   def equals(other: Token): Boolean = js.native
-  def getType(): AnonCode = js.native
+  def getType(): Code = js.native
   def getValue(): js.Any = js.native
 }
 
 object Token {
   @scala.inline
-  def apply(
-    compare: Token => Double,
-    equals: Token => Boolean,
-    getType: () => AnonCode,
-    getValue: () => js.Any
-  ): Token = {
+  def apply(compare: Token => Double, equals: Token => Boolean, getType: () => Code, getValue: () => js.Any): Token = {
     val __obj = js.Dynamic.literal(compare = js.Any.fromFunction1(compare), equals = js.Any.fromFunction1(equals), getType = js.Any.fromFunction0(getType), getValue = js.Any.fromFunction0(getValue))
     __obj.asInstanceOf[Token]
   }
@@ -43,7 +38,7 @@ object Token {
         ret
     }
     @scala.inline
-    def withGetType(value: () => AnonCode): Self = {
+    def withGetType(value: () => Code): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getType")(js.Any.fromFunction0(value))
         ret

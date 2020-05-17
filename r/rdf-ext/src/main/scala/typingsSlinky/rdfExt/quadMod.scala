@@ -1,5 +1,6 @@
 package typingsSlinky.rdfExt
 
+import typingsSlinky.rdfExt.anon.Graph
 import typingsSlinky.rdfExt.blankNodeMod.BlankNodeExt
 import typingsSlinky.rdfExt.defaultGraphMod.DefaultGraphExt
 import typingsSlinky.rdfExt.literalMod.LiteralExt
@@ -24,7 +25,7 @@ object quadMod extends js.Object {
     @JSName("subject")
     var subject_QuadExt: NamedNodeExt | BlankNodeExt | VariableExt = js.native
     def toCanonical(): String = js.native
-    def toJSON(): AnonGraph = js.native
+    def toJSON(): Graph = js.native
   }
   
 }

@@ -1,13 +1,13 @@
 package typingsSlinky.httpLinkDataloader.typesMod
 
-import typingsSlinky.httpLinkDataloader.AnonColumn
+import typingsSlinky.httpLinkDataloader.anon.Column
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait GraphQLError extends js.Object {
-  var locations: js.UndefOr[js.Array[AnonColumn]] = js.native
+  var locations: js.UndefOr[js.Array[Column]] = js.native
   var message: String = js.native
   var path: js.UndefOr[js.Array[String]] = js.native
 }
@@ -31,7 +31,7 @@ object GraphQLError {
         ret
     }
     @scala.inline
-    def withLocations(value: js.Array[AnonColumn]): Self = {
+    def withLocations(value: js.Array[Column]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("locations")(value.asInstanceOf[js.Any])
         ret

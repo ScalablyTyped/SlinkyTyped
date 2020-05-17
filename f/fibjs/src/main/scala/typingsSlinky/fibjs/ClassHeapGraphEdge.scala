@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 	* @brief HeapGraphEdge表示两个HeapGraphNode节点间的关联，从上游节点到下游节点
 	* @detail 
 	*/
-@JSGlobal("Class_HeapGraphEdge")
 @js.native
-class ClassHeapGraphEdge () extends ClassObject {
+trait ClassHeapGraphEdge extends ClassObject {
   /**
   	 * class prop 
   	 *

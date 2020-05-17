@@ -1,19 +1,19 @@
 package typingsSlinky.fslightboxReact
 
-import typingsSlinky.fslightboxReact.mod._SourceType
+import typingsSlinky.fslightboxReact.mod.SourceType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object fslightboxReactStrings {
   @js.native
-  sealed trait image extends _SourceType
+  sealed trait image extends SourceType
   
   @js.native
-  sealed trait video extends _SourceType
+  sealed trait video extends SourceType
   
   @js.native
-  sealed trait youtube extends _SourceType
+  sealed trait youtube extends SourceType
   
   @scala.inline
   def image: image = "image".asInstanceOf[image]

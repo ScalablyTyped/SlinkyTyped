@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientScheduler.CellClick event.
   */
-@JSGlobal("ASPxClientSchedulerCellClickEventArgs")
 @js.native
-class ASPxClientSchedulerCellClickEventArgs () extends ASPxClientEventArgs {
+trait ASPxClientSchedulerCellClickEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the HTML element that the event was triggered on.
     */
@@ -22,5 +21,39 @@ class ASPxClientSchedulerCellClickEventArgs () extends ASPxClientEventArgs {
     * Gets the resource identifier associated with the cell related to the event.
     */
   var resource: String = js.native
+}
+
+object ASPxClientSchedulerCellClickEventArgs {
+  @scala.inline
+  def apply(htmlElement: js.Any, interval: ASPxClientTimeInterval, resource: String): ASPxClientSchedulerCellClickEventArgs = {
+    val __obj = js.Dynamic.literal(htmlElement = htmlElement.asInstanceOf[js.Any], interval = interval.asInstanceOf[js.Any], resource = resource.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientSchedulerCellClickEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientSchedulerCellClickEventArgsOps[Self <: ASPxClientSchedulerCellClickEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHtmlElement(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInterval(value: ASPxClientTimeInterval): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResource(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resource")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

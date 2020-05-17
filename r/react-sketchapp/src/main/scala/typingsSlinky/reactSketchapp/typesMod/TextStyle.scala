@@ -1,6 +1,6 @@
 package typingsSlinky.reactSketchapp.typesMod
 
-import typingsSlinky.reactSketchapp.AnonWidth
+import typingsSlinky.reactSketchapp.anon.Width
 import typingsSlinky.reactSketchapp.reactSketchappStrings.auto
 import typingsSlinky.reactSketchapp.reactSketchappStrings.center
 import typingsSlinky.reactSketchapp.reactSketchappStrings.italic
@@ -29,7 +29,7 @@ trait TextStyle extends js.Object {
   var textAlign: js.UndefOr[auto | left | right | center | justify] = js.native
   var textDecoration: js.UndefOr[String] = js.native
   var textShadowColor: js.UndefOr[Color] = js.native
-  var textShadowOffset: js.UndefOr[AnonWidth] = js.native
+  var textShadowOffset: js.UndefOr[Width] = js.native
   var textShadowOpacity: js.UndefOr[Double] = js.native
   var textShadowRadius: js.UndefOr[Double] = js.native
   var textShadowSpread: js.UndefOr[Double] = js.native
@@ -182,7 +182,7 @@ object TextStyle {
         ret
     }
     @scala.inline
-    def withTextShadowOffset(value: AnonWidth): Self = {
+    def withTextShadowOffset(value: Width): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("textShadowOffset")(value.asInstanceOf[js.Any])
         ret

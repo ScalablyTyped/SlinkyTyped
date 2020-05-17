@@ -1,11 +1,11 @@
 package typingsSlinky.oracleOraclejet.ojgaugeMod
 
-import typingsSlinky.oracleOraclejet.Anon10
-import typingsSlinky.oracleOraclejet.Anon11
-import typingsSlinky.oracleOraclejet.AnonBorderColorBorderRadius
-import typingsSlinky.oracleOraclejet.AnonConverterPosition
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
-import typingsSlinky.oracleOraclejet.AnonPositionStyle
+import typingsSlinky.oracleOraclejet.anon.BorderColorBorderRadius
+import typingsSlinky.oracleOraclejet.anon.ConverterPosition
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
+import typingsSlinky.oracleOraclejet.anon.PositionStyle
+import typingsSlinky.oracleOraclejet.anon.`10`
+import typingsSlinky.oracleOraclejet.anon.`11`
 import typingsSlinky.oracleOraclejet.ojgaugeMod.ojStatusMeterGauge.ReferenceLine
 import typingsSlinky.oracleOraclejet.ojgaugeMod.ojStatusMeterGauge.Threshold
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.all
@@ -30,16 +30,16 @@ trait ojStatusMeterGaugeSettableProperties extends dvtBaseGaugeSettablePropertie
   var animationOnDisplay: auto | none = js.native
   var borderColor: String = js.native
   var borderRadius: String = js.native
-  var center: Anon10 = js.native
+  var center: `10` = js.native
   var color: String = js.native
   var indicatorSize: Double = js.native
   var innerRadius: Double = js.native
-  var label: AnonPositionStyle = js.native
+  var label: PositionStyle = js.native
   var max: Double = js.native
-  var metricLabel: AnonConverterPosition = js.native
+  var metricLabel: ConverterPosition = js.native
   var min: Double = js.native
   var orientation: circular | vertical | horizontal = js.native
-  var plotArea: AnonBorderColorBorderRadius = js.native
+  var plotArea: BorderColorBorderRadius = js.native
   var readonly: Boolean = js.native
   var referenceLines: js.Array[ReferenceLine] = js.native
   var startAngle: Double = js.native
@@ -48,7 +48,7 @@ trait ojStatusMeterGaugeSettableProperties extends dvtBaseGaugeSettablePropertie
   var svgStyle: js.Object = js.native
   var thresholdDisplay: currentOnly | all | onIndicator = js.native
   var thresholds: js.Array[Threshold] = js.native
-  var tooltip: Anon11 = js.native
+  var tooltip: `11` = js.native
   val transientValue: Double | Null = js.native
   var value: Double | Null = js.native
   var visualEffects: none | auto = js.native
@@ -62,16 +62,16 @@ object ojStatusMeterGaugeSettableProperties {
     animationOnDisplay: auto | none,
     borderColor: String,
     borderRadius: String,
-    center: Anon10,
+    center: `10`,
     color: String,
     indicatorSize: Double,
     innerRadius: Double,
-    label: AnonPositionStyle,
+    label: PositionStyle,
     max: Double,
-    metricLabel: AnonConverterPosition,
+    metricLabel: ConverterPosition,
     min: Double,
     orientation: circular | vertical | horizontal,
-    plotArea: AnonBorderColorBorderRadius,
+    plotArea: BorderColorBorderRadius,
     readonly: Boolean,
     referenceLines: js.Array[ReferenceLine],
     startAngle: Double,
@@ -79,9 +79,9 @@ object ojStatusMeterGaugeSettableProperties {
     svgStyle: js.Object,
     thresholdDisplay: currentOnly | all | onIndicator,
     thresholds: js.Array[Threshold],
-    tooltip: Anon11,
+    tooltip: `11`,
     trackResize: on | off,
-    translations: AnonLabelAndValue,
+    translations: LabelAndValue,
     visualEffects: none | auto
   ): ojStatusMeterGaugeSettableProperties = {
     val __obj = js.Dynamic.literal(angleExtent = angleExtent.asInstanceOf[js.Any], animationOnDataChange = animationOnDataChange.asInstanceOf[js.Any], animationOnDisplay = animationOnDisplay.asInstanceOf[js.Any], borderColor = borderColor.asInstanceOf[js.Any], borderRadius = borderRadius.asInstanceOf[js.Any], center = center.asInstanceOf[js.Any], color = color.asInstanceOf[js.Any], indicatorSize = indicatorSize.asInstanceOf[js.Any], innerRadius = innerRadius.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], max = max.asInstanceOf[js.Any], metricLabel = metricLabel.asInstanceOf[js.Any], min = min.asInstanceOf[js.Any], orientation = orientation.asInstanceOf[js.Any], plotArea = plotArea.asInstanceOf[js.Any], readonly = readonly.asInstanceOf[js.Any], referenceLines = referenceLines.asInstanceOf[js.Any], startAngle = startAngle.asInstanceOf[js.Any], svgClassName = svgClassName.asInstanceOf[js.Any], svgStyle = svgStyle.asInstanceOf[js.Any], thresholdDisplay = thresholdDisplay.asInstanceOf[js.Any], thresholds = thresholds.asInstanceOf[js.Any], tooltip = tooltip.asInstanceOf[js.Any], trackResize = trackResize.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any], visualEffects = visualEffects.asInstanceOf[js.Any])
@@ -124,7 +124,7 @@ object ojStatusMeterGaugeSettableProperties {
         ret
     }
     @scala.inline
-    def withCenter(value: Anon10): Self = {
+    def withCenter(value: `10`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
         ret
@@ -148,7 +148,7 @@ object ojStatusMeterGaugeSettableProperties {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonPositionStyle): Self = {
+    def withLabel(value: PositionStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -160,7 +160,7 @@ object ojStatusMeterGaugeSettableProperties {
         ret
     }
     @scala.inline
-    def withMetricLabel(value: AnonConverterPosition): Self = {
+    def withMetricLabel(value: ConverterPosition): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metricLabel")(value.asInstanceOf[js.Any])
         ret
@@ -178,7 +178,7 @@ object ojStatusMeterGaugeSettableProperties {
         ret
     }
     @scala.inline
-    def withPlotArea(value: AnonBorderColorBorderRadius): Self = {
+    def withPlotArea(value: BorderColorBorderRadius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("plotArea")(value.asInstanceOf[js.Any])
         ret
@@ -226,7 +226,7 @@ object ojStatusMeterGaugeSettableProperties {
         ret
     }
     @scala.inline
-    def withTooltip(value: Anon11): Self = {
+    def withTooltip(value: `11`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

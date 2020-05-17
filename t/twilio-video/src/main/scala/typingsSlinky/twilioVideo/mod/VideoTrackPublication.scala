@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait VideoTrackPublication extends js.Object
 
+object VideoTrackPublication {
+  @scala.inline
+  implicit def apply(value: LocalVideoTrackPublication): VideoTrackPublication = value.asInstanceOf[VideoTrackPublication]
+  @scala.inline
+  implicit def apply(value: RemoteVideoTrackPublication): VideoTrackPublication = value.asInstanceOf[VideoTrackPublication]
+}
+

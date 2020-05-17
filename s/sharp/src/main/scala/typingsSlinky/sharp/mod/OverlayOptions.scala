@@ -1,7 +1,6 @@
 package typingsSlinky.sharp.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.sharp.AnonCreate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +14,7 @@ trait OverlayOptions extends js.Object {
   /** gravity at which to place the overlay. (optional, default 'centre') */
   var gravity: js.UndefOr[Gravity_] = js.native
   /** Buffer containing image data, String containing the path to an image file, or Create object  */
-  var input: js.UndefOr[String | Buffer | AnonCreate] = js.native
+  var input: js.UndefOr[String | Buffer | typingsSlinky.sharp.anon.Create] = js.native
   /** the pixel offset from the left edge. */
   var left: js.UndefOr[Double] = js.native
   /** Set to true to avoid premultipling the image below. Equivalent to the --premultiplied vips option. */
@@ -77,7 +76,7 @@ object OverlayOptions {
         ret
     }
     @scala.inline
-    def withInput(value: String | Buffer | AnonCreate): Self = {
+    def withInput(value: String | Buffer | typingsSlinky.sharp.anon.Create): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
         ret

@@ -1,5 +1,6 @@
 package typingsSlinky.ionic
 
+import typingsSlinky.ionic.anon.PartialCommandMetadata
 import typingsSlinky.ionic.definitionsMod.BaseBuildOptions
 import typingsSlinky.ionic.definitionsMod.BuildOptions
 import typingsSlinky.ionic.definitionsMod.CommandMetadataOption

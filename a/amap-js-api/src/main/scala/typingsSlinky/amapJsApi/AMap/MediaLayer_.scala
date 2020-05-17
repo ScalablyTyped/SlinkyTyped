@@ -1,19 +1,13 @@
 package typingsSlinky.amapJsApi.AMap
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.amapJsApi.AMap.MediaLayer.Options
-import typingsSlinky.amapJsApi.PartialOptions
+import typingsSlinky.amapJsApi.anon.PartialOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("AMap.MediaLayer")
 @js.native
-/**
-  * @param options 图层选项
-  */
-abstract class MediaLayer_[E /* <: HTMLElement */] () extends Layer {
-  def this(options: Options) = this()
+trait MediaLayer_[E /* <: HTMLElement */] extends Layer {
   /**
     * 获取显示的范围
     */

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.landscape
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.large
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.medium
@@ -68,7 +67,48 @@ trait BreakpointsOwner extends js.Object {
   var widthBreakpoint: xsmall | small | medium | large | xlarge = js.native
 }
 
-@JSGlobal("__esri.BreakpointsOwner")
-@js.native
-object BreakpointsOwner extends TopLevel[BreakpointsOwnerConstructor]
+object BreakpointsOwner {
+  @scala.inline
+  def apply(
+    breakpoints: BreakpointsOwnerBreakpoints,
+    heightBreakpoint: xsmall | small | medium | large | xlarge,
+    orientation: landscape | portrait,
+    widthBreakpoint: xsmall | small | medium | large | xlarge
+  ): BreakpointsOwner = {
+    val __obj = js.Dynamic.literal(breakpoints = breakpoints.asInstanceOf[js.Any], heightBreakpoint = heightBreakpoint.asInstanceOf[js.Any], orientation = orientation.asInstanceOf[js.Any], widthBreakpoint = widthBreakpoint.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BreakpointsOwner]
+  }
+  @scala.inline
+  implicit class BreakpointsOwnerOps[Self <: BreakpointsOwner] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBreakpoints(value: BreakpointsOwnerBreakpoints): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("breakpoints")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeightBreakpoint(value: xsmall | small | medium | large | xlarge): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("heightBreakpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrientation(value: landscape | portrait): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("orientation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidthBreakpoint(value: xsmall | small | medium | large | xlarge): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("widthBreakpoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

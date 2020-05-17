@@ -3,7 +3,7 @@ package typingsSlinky.reactMarkdown.mod
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
-import typingsSlinky.reactMarkdown.PartialRemarkParseOptions
+import typingsSlinky.reactMarkdown.anon.PartialRemarkParseOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

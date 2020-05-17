@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait ForInitializer extends js.Object
 
+object ForInitializer {
+  @scala.inline
+  implicit def apply(value: Expression): ForInitializer = value.asInstanceOf[ForInitializer]
+  @scala.inline
+  implicit def apply(value: VariableDeclarationList): ForInitializer = value.asInstanceOf[ForInitializer]
+}
+

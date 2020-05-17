@@ -5,7 +5,7 @@ import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeElements.PartialImageProps
+import typingsSlinky.reactNativeElements.anon.PartialImageProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

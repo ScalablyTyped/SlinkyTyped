@@ -1,7 +1,5 @@
 package typingsSlinky.webidl2.mod
 
-import typingsSlinky.webidl2.webidl2Booleans.`false`
-import typingsSlinky.webidl2.webidl2Booleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,14 +12,8 @@ trait IDLTypeDescription extends js.Object
 
 object IDLTypeDescription {
   @scala.inline
-  def SingleTypeDescription(idlType: String, nullable: Boolean, sequence: Boolean, union: `false`): IDLTypeDescription = {
-    val __obj = js.Dynamic.literal(idlType = idlType.asInstanceOf[js.Any], nullable = nullable.asInstanceOf[js.Any], sequence = sequence.asInstanceOf[js.Any], union = union.asInstanceOf[js.Any])
-    __obj.asInstanceOf[IDLTypeDescription]
-  }
+  implicit def apply(value: SingleTypeDescription): IDLTypeDescription = value.asInstanceOf[IDLTypeDescription]
   @scala.inline
-  def UnionTypeDescription(idlType: js.Array[IDLTypeDescription], nullable: Boolean, sequence: Boolean, union: `true`): IDLTypeDescription = {
-    val __obj = js.Dynamic.literal(idlType = idlType.asInstanceOf[js.Any], nullable = nullable.asInstanceOf[js.Any], sequence = sequence.asInstanceOf[js.Any], union = union.asInstanceOf[js.Any])
-    __obj.asInstanceOf[IDLTypeDescription]
-  }
+  implicit def apply(value: UnionTypeDescription): IDLTypeDescription = value.asInstanceOf[IDLTypeDescription]
 }
 

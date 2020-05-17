@@ -1,7 +1,7 @@
 package typingsSlinky.gestalt.mod
 
-import typingsSlinky.gestalt.AnonActiveTabIndex
-import typingsSlinky.gestalt.AnonHref
+import typingsSlinky.gestalt.anon.ActiveTabIndex
+import typingsSlinky.gestalt.anon.Href
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
 import scala.scalajs.js
@@ -12,14 +12,14 @@ import scala.scalajs.js.annotation._
 trait TabsProps extends js.Object {
   var activeTabIndex: Double = js.native
   var size: js.UndefOr[md | lg] = js.native
-  var tabs: js.Array[AnonHref] = js.native
+  var tabs: js.Array[Href] = js.native
   var wrap: js.UndefOr[Boolean] = js.native
-  def onChange(args: AnonActiveTabIndex): Unit = js.native
+  def onChange(args: ActiveTabIndex): Unit = js.native
 }
 
 object TabsProps {
   @scala.inline
-  def apply(activeTabIndex: Double, onChange: AnonActiveTabIndex => Unit, tabs: js.Array[AnonHref]): TabsProps = {
+  def apply(activeTabIndex: Double, onChange: ActiveTabIndex => Unit, tabs: js.Array[Href]): TabsProps = {
     val __obj = js.Dynamic.literal(activeTabIndex = activeTabIndex.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), tabs = tabs.asInstanceOf[js.Any])
     __obj.asInstanceOf[TabsProps]
   }
@@ -36,13 +36,13 @@ object TabsProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: AnonActiveTabIndex => Unit): Self = {
+    def withOnChange(value: ActiveTabIndex => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withTabs(value: js.Array[AnonHref]): Self = {
+    def withTabs(value: js.Array[Href]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tabs")(value.asInstanceOf[js.Any])
         ret

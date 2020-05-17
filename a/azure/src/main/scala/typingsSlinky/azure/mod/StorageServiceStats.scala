@@ -1,18 +1,18 @@
 package typingsSlinky.azure.mod
 
-import typingsSlinky.azure.AnonLastSyncTime
+import typingsSlinky.azure.anon.LastSyncTime
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait StorageServiceStats extends js.Object {
-  var GeoReplication: AnonLastSyncTime = js.native
+  var GeoReplication: LastSyncTime = js.native
 }
 
 object StorageServiceStats {
   @scala.inline
-  def apply(GeoReplication: AnonLastSyncTime): StorageServiceStats = {
+  def apply(GeoReplication: LastSyncTime): StorageServiceStats = {
     val __obj = js.Dynamic.literal(GeoReplication = GeoReplication.asInstanceOf[js.Any])
     __obj.asInstanceOf[StorageServiceStats]
   }
@@ -23,7 +23,7 @@ object StorageServiceStats {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGeoReplication(value: AnonLastSyncTime): Self = {
+    def withGeoReplication(value: LastSyncTime): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("GeoReplication")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.cordovaSqliteStorage
 
-import typingsSlinky.cordovaSqliteStorage.SQLitePlugin_.SQLite
+import typingsSlinky.cordovaSqliteStorage.SQLitePlugin.SQLite
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

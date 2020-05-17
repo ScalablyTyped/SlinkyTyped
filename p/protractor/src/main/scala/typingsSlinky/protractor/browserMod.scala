@@ -2,6 +2,7 @@ package typingsSlinky.protractor
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.blockingProxy.mod.BPClient
+import typingsSlinky.protractor.anon.Args
 import typingsSlinky.protractor.debuggerMod.DebugHelper
 import typingsSlinky.protractor.elementMod.ElementArrayFinder
 import typingsSlinky.protractor.elementMod.ElementFinder
@@ -11,6 +12,7 @@ import typingsSlinky.protractor.locatorsMod.ProtractorBy
 import typingsSlinky.protractor.pluginsMod.Plugins
 import typingsSlinky.seleniumWebdriver.mod.WebDriver
 import typingsSlinky.seleniumWebdriver.mod.WebElement
+import typingsSlinky.seleniumWebdriver.mod.WebElementPromise
 import typingsSlinky.webdriverJsExtender.mod.ExtendedWebDriver
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -137,7 +139,7 @@ object browserMod extends js.Object {
       * @type {Array<{name: string, script: function|string, args:
       * Array.<string>}>}
       */
-    var mockModules_ : js.Array[AnonArgs] = js.native
+    var mockModules_ : js.Array[Args] = js.native
     /**
       * If true, Protractor will interpret any angular apps it comes across as
       * hybrid angular1/angular2 apps.
@@ -333,6 +335,20 @@ object browserMod extends js.Object {
       */
     def explore(): Unit = js.native
     def explore(opt_debugPort: Double): Unit = js.native
+    /**
+      * Waits for Angular to finish rendering before searching for elements.
+      * @see webdriver.WebDriver.findElement
+      * @returns {!webdriver.WebElementPromise} A promise that will be resolved to
+      *      the located {@link webdriver.WebElement}.
+      */
+    def findElement(locator: Locator): WebElementPromise = js.native
+    /**
+      * Waits for Angular to finish rendering before searching for elements.
+      * @see webdriver.WebDriver.findElements
+      * @returns {!webdriver.promise.Promise} A promise that will be resolved to an
+      *     array of the located {@link webdriver.WebElement}s.
+      */
+    def findElements(locator: Locator): js.Promise[js.Array[WebElement]] = js.native
     /**
       * Fork another instance of browser for use in interactive tests.
       *

@@ -22,7 +22,7 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.expressServeStaticCore.mod.IRouter because Inheritance from two classes. Inlined param, param, all, all, all, all_Original, get, get, get, get_Original, post, post, post, post_Original, put, put, put, put_Original, delete, delete, delete, delete_Original, patch, patch, patch, patch_Original, options, options, options, options_Original, head, head, head, head_Original, checkout, checkout, checkout, checkout_Original, connect, connect, connect, connect_Original, copy, copy, copy, copy_Original, lock, lock, lock, lock_Original, merge, merge, merge, merge_Original, mkactivity, mkactivity, mkactivity, mkactivity_Original, mkcol, mkcol, mkcol, mkcol_Original, move, move, move, move_Original, `m-search`, `m-search`, `m-search`, `m-search_Original`, notify, notify, notify, notify_Original, propfind, propfind, propfind, propfind_Original, proppatch, proppatch, proppatch, proppatch_Original, purge, purge, purge, purge_Original, report, report, report, report_Original, search, search, search, search_Original, subscribe, subscribe, subscribe, subscribe_Original, trace, trace, trace, trace_Original, unlock, unlock, unlock, unlock_Original, unsubscribe, unsubscribe, unsubscribe, unsubscribe_Original, use, use, use, use, use, use_Original, route, stack */ @js.native
 trait Application
   extends EventEmitter
-     with typingsSlinky.expressServeStaticCore.mod._Global_.Express.Application {
+     with typingsSlinky.expressServeStaticCore.mod.global.Express.Application {
   /**
     * Used to get all registered routes in Express Application
     */

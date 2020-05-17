@@ -3,8 +3,7 @@ package typingsSlinky.baseui.components
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonId
-import typingsSlinky.baseui.AnonSelect
+import typingsSlinky.baseui.anon.Id
 import typingsSlinky.baseui.datepickerMod.TimezonePickerProps
 import typingsSlinky.baseui.selectMod.Option
 import scala.scalajs.js
@@ -29,9 +28,9 @@ object TimezonePicker {
     @scala.inline
     def mapLabels(value: /* args */ Option => TagMod[Any]): this.type = set("mapLabels", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: /* value */ AnonId => _): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* value */ Id => _): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def overrides(value: AnonSelect): this.type = set("overrides", value.asInstanceOf[js.Any])
+    def overrides(value: typingsSlinky.baseui.anon.Select): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline
     def positive(value: Boolean): this.type = set("positive", value.asInstanceOf[js.Any])
     @scala.inline

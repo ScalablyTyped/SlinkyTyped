@@ -2,7 +2,7 @@ package typingsSlinky.antd.descriptionsMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.PartialRecordBreakpointnu
+import typingsSlinky.antd.anon.PartialRecordBreakpointnu
 import typingsSlinky.antd.antdStrings.horizontal
 import typingsSlinky.antd.antdStrings.middle
 import typingsSlinky.antd.antdStrings.small

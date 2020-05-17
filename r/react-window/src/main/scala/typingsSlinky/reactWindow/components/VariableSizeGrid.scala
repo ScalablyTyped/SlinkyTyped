@@ -7,7 +7,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.reactWindow.AnonColumnIndex
+import typingsSlinky.reactWindow.anon.ColumnIndex
 import typingsSlinky.reactWindow.mod.CSSDirection
 import typingsSlinky.reactWindow.mod.GridOnItemsRenderedProps
 import typingsSlinky.reactWindow.mod.GridOnScrollProps
@@ -57,7 +57,7 @@ object VariableSizeGrid {
     @scala.inline
     def itemData(value: js.Any): this.type = set("itemData", value.asInstanceOf[js.Any])
     @scala.inline
-    def itemKey(value: /* params */ AnonColumnIndex => Key): this.type = set("itemKey", js.Any.fromFunction1(value))
+    def itemKey(value: /* params */ ColumnIndex => Key): this.type = set("itemKey", js.Any.fromFunction1(value))
     @scala.inline
     def onItemsRendered(value: /* props */ GridOnItemsRenderedProps => _): this.type = set("onItemsRendered", js.Any.fromFunction1(value))
     @scala.inline

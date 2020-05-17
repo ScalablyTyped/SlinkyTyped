@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.xstate.typesMod._Action because Already inherited */ @js.native
+- typingsSlinky.xstate.typesMod.Action because Already inherited */ @js.native
 trait SendAction[TContext, TEvent /* <: EventObject */] extends ActionObject[TContext, TEvent] {
   var delay: js.UndefOr[Double | String | (DelayExpr[TContext, TEvent])] = js.native
   var event: TEvent | (SendExpr[TContext, TEvent]) = js.native

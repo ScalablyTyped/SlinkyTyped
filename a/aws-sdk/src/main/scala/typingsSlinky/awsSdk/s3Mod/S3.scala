@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdk.s3Mod
 
-import typingsSlinky.awsSdk.HeadBucketRequestwaiterWa
-import typingsSlinky.awsSdk.HeadObjectRequestwaiterWa
+import typingsSlinky.awsSdk.anon.HeadBucketRequestwaiterWa
+import typingsSlinky.awsSdk.anon.HeadObjectRequestwaiterWa
 import typingsSlinky.awsSdk.awsSdkStrings.bucketExists
 import typingsSlinky.awsSdk.awsSdkStrings.bucketNotExists
 import typingsSlinky.awsSdk.awsSdkStrings.objectExists

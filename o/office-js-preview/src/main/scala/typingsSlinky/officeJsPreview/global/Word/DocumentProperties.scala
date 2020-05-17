@@ -1,0 +1,17 @@
+package typingsSlinky.officeJsPreview.global.Word
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  *
+  * Represents document properties.
+  *
+  * [Api set: WordApi 1.3]
+  */
+@JSGlobal("Word.DocumentProperties")
+@js.native
+class DocumentProperties ()
+  extends typingsSlinky.officeJsPreview.Word.DocumentProperties
+

@@ -3,7 +3,7 @@ package typingsSlinky.reactOnsenui.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameFixedWidth
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameFixedWidth
 import typingsSlinky.reactOnsenui.mod.ModifiersNumber
 import typingsSlinky.reactOnsenui.mod.ModifiersString
 import typingsSlinky.reactOnsenui.reactOnsenuiNumbers.`180`

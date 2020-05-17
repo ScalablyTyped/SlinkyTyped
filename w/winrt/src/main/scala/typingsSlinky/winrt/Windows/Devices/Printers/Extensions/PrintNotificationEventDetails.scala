@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Devices.Printers.Extensions.PrintNotificationEventDetails")
 @js.native
-class PrintNotificationEventDetails () extends IPrintNotificationEventDetails
+trait PrintNotificationEventDetails extends IPrintNotificationEventDetails
+
+object PrintNotificationEventDetails {
+  @scala.inline
+  def apply(eventData: String, printerName: String): PrintNotificationEventDetails = {
+    val __obj = js.Dynamic.literal(eventData = eventData.asInstanceOf[js.Any], printerName = printerName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PrintNotificationEventDetails]
+  }
+}
 

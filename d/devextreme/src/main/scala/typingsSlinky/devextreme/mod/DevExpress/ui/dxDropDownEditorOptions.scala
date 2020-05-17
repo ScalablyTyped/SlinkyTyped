@@ -1,14 +1,14 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonComponentT
-import typingsSlinky.devextreme.AnonIcon
+import typingsSlinky.devextreme.anon.ComponentT
+import typingsSlinky.devextreme.anon.Icon
 import typingsSlinky.devextreme.devextremeStrings.clear
 import typingsSlinky.devextreme.devextremeStrings.dropDown
 import typingsSlinky.devextreme.devextremeStrings.instantly
 import typingsSlinky.devextreme.devextremeStrings.useButtons
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,12 +26,12 @@ trait dxDropDownEditorOptions[T] extends dxTextBoxOptions[T] {
   var deferRendering: js.UndefOr[Boolean] = js.native
   /** Specifies a custom template for the drop-down button. */
   var dropDownButtonTemplate: js.UndefOr[
-    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* buttonData */ AnonIcon, /* contentElement */ dxElement, String | Element | JQuery])
+    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* buttonData */ Icon, /* contentElement */ dxElement, String | Element | JQuery])
   ] = js.native
   /** A function that is executed once the drop-down editor is closed. */
-  var onClosed: js.UndefOr[js.Function1[/* e */ AnonComponentT[T], _]] = js.native
+  var onClosed: js.UndefOr[js.Function1[/* e */ ComponentT[T], _]] = js.native
   /** A function that is executed once the drop-down editor is opened. */
-  var onOpened: js.UndefOr[js.Function1[/* e */ AnonComponentT[T], _]] = js.native
+  var onOpened: js.UndefOr[js.Function1[/* e */ ComponentT[T], _]] = js.native
   /** Specifies whether a user can open the drop-down list by clicking a text field. */
   var openOnFieldClick: js.UndefOr[Boolean] = js.native
   /** Specifies whether or not the drop-down editor is displayed. */
@@ -101,7 +101,7 @@ object dxDropDownEditorOptions {
         ret
     }
     @scala.inline
-    def withDropDownButtonTemplateFunction2(value: (/* buttonData */ AnonIcon, /* contentElement */ dxElement) => String | Element | JQuery): Self[T] = {
+    def withDropDownButtonTemplateFunction2(value: (/* buttonData */ Icon, /* contentElement */ dxElement) => String | Element | JQuery): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownButtonTemplate")(js.Any.fromFunction2(value))
         ret
@@ -114,7 +114,7 @@ object dxDropDownEditorOptions {
     }
     @scala.inline
     def withDropDownButtonTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* buttonData */ AnonIcon, /* contentElement */ dxElement, String | Element | JQuery])
+      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* buttonData */ Icon, /* contentElement */ dxElement, String | Element | JQuery])
     ): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownButtonTemplate")(value.asInstanceOf[js.Any])
@@ -127,7 +127,7 @@ object dxDropDownEditorOptions {
         ret
     }
     @scala.inline
-    def withOnClosed(value: /* e */ AnonComponentT[T] => _): Self[T] = {
+    def withOnClosed(value: /* e */ ComponentT[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClosed")(js.Any.fromFunction1(value))
         ret
@@ -139,7 +139,7 @@ object dxDropDownEditorOptions {
         ret
     }
     @scala.inline
-    def withOnOpened(value: /* e */ AnonComponentT[T] => _): Self[T] = {
+    def withOnOpened(value: /* e */ ComponentT[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOpened")(js.Any.fromFunction1(value))
         ret

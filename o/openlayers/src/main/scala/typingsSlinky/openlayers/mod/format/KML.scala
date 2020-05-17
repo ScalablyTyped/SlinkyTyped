@@ -1,12 +1,12 @@
 package typingsSlinky.openlayers.mod.format
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Node
 import typingsSlinky.openlayers.mod.GlobalObject
 import typingsSlinky.openlayers.mod.olx.format.KMLOptions
 import typingsSlinky.openlayers.mod.olx.format.ReadOptions
 import typingsSlinky.openlayers.mod.olx.format.WriteOptions
 import typingsSlinky.openlayers.mod.proj.Projection
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,8 +49,8 @@ class KML () extends XMLFeature {
     * @return Feature.
     * @api stable
     */
-  def readFeature(source: Document_): typingsSlinky.openlayers.mod.Feature = js.native
-  def readFeature(source: Document_, opt_options: ReadOptions): typingsSlinky.openlayers.mod.Feature = js.native
+  def readFeature(source: Document): typingsSlinky.openlayers.mod.Feature = js.native
+  def readFeature(source: Document, opt_options: ReadOptions): typingsSlinky.openlayers.mod.Feature = js.native
   def readFeature(source: Node): typingsSlinky.openlayers.mod.Feature = js.native
   def readFeature(source: Node, opt_options: ReadOptions): typingsSlinky.openlayers.mod.Feature = js.native
   def readFeatures(source: String): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
@@ -67,8 +67,8 @@ class KML () extends XMLFeature {
     * @return Features.
     * @api stable
     */
-  def readFeatures(source: Document_): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
-  def readFeatures(source: Document_, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
+  def readFeatures(source: Document): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
+  def readFeatures(source: Document, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: Node): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readFeatures(source: Node, opt_options: ReadOptions): js.Array[typingsSlinky.openlayers.mod.Feature] = js.native
   def readName(source: String): String = js.native
@@ -79,7 +79,7 @@ class KML () extends XMLFeature {
     * @return Name.
     * @api stable
     */
-  def readName(source: Document_): String = js.native
+  def readName(source: Document): String = js.native
   def readName(source: Node): String = js.native
   def readNetworkLinks(source: String): js.Array[GlobalObject] = js.native
   /**
@@ -89,7 +89,7 @@ class KML () extends XMLFeature {
     * @return Network links.
     * @api
     */
-  def readNetworkLinks(source: Document_): js.Array[GlobalObject] = js.native
+  def readNetworkLinks(source: Document): js.Array[GlobalObject] = js.native
   def readNetworkLinks(source: Node): js.Array[GlobalObject] = js.native
   def readProjection(source: String): Projection = js.native
   def readProjection(source: GlobalObject): Projection = js.native
@@ -100,7 +100,7 @@ class KML () extends XMLFeature {
     * @return Projection.
     * @api stable
     */
-  def readProjection(source: Document_): Projection = js.native
+  def readProjection(source: Document): Projection = js.native
   def readProjection(source: Node): Projection = js.native
   /**
     * Encode an array of features in the KML format. GeometryCollections, MultiPoints,

@@ -2,7 +2,7 @@ package typingsSlinky.vscodeLanguageclient.clientMod
 
 import typingsSlinky.vscode.mod.OutputChannel
 import typingsSlinky.vscode.mod.WorkspaceFolder
-import typingsSlinky.vscodeLanguageclient.AnonCode2Protocol
+import typingsSlinky.vscodeLanguageclient.anon.Code2Protocol
 import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.DocumentSelector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,7 +25,7 @@ trait LanguageClientOptions extends js.Object {
     */
   var stdioEncoding: js.UndefOr[String] = js.native
   var synchronize: js.UndefOr[SynchronizeOptions] = js.native
-  var uriConverters: js.UndefOr[AnonCode2Protocol] = js.native
+  var uriConverters: js.UndefOr[Code2Protocol] = js.native
   var workspaceFolder: js.UndefOr[WorkspaceFolder] = js.native
 }
 
@@ -182,7 +182,7 @@ object LanguageClientOptions {
         ret
     }
     @scala.inline
-    def withUriConverters(value: AnonCode2Protocol): Self = {
+    def withUriConverters(value: Code2Protocol): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("uriConverters")(value.asInstanceOf[js.Any])
         ret

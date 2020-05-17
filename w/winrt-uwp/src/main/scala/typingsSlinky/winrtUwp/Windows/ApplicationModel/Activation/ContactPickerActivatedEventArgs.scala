@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data when an app is activated because it uses the Contact Picker. */
-@JSGlobal("Windows.ApplicationModel.Activation.ContactPickerActivatedEventArgs")
 @js.native
-abstract class ContactPickerActivatedEventArgs () extends js.Object {
+trait ContactPickerActivatedEventArgs extends js.Object {
   /** Gets the letterbox UI of the contact picker that is displayed when the user wants to pick contacts that are provided by the app. */
   var contactPickerUI: ContactPickerUI = js.native
   /** Gets the activation type. */
@@ -17,5 +16,50 @@ abstract class ContactPickerActivatedEventArgs () extends js.Object {
   var previousExecutionState: ApplicationExecutionState = js.native
   /** Gets the splash screen object which provides information about the transition from the splash screen to the activated app. */
   var splashScreen: SplashScreen = js.native
+}
+
+object ContactPickerActivatedEventArgs {
+  @scala.inline
+  def apply(
+    contactPickerUI: ContactPickerUI,
+    kind: ActivationKind,
+    previousExecutionState: ApplicationExecutionState,
+    splashScreen: SplashScreen
+  ): ContactPickerActivatedEventArgs = {
+    val __obj = js.Dynamic.literal(contactPickerUI = contactPickerUI.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], previousExecutionState = previousExecutionState.asInstanceOf[js.Any], splashScreen = splashScreen.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ContactPickerActivatedEventArgs]
+  }
+  @scala.inline
+  implicit class ContactPickerActivatedEventArgsOps[Self <: ContactPickerActivatedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContactPickerUI(value: ContactPickerUI): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contactPickerUI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKind(value: ActivationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreviousExecutionState(value: ApplicationExecutionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousExecutionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSplashScreen(value: SplashScreen): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splashScreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

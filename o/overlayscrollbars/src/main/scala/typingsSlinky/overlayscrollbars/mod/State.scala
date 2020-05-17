@@ -1,10 +1,10 @@
 package typingsSlinky.overlayscrollbars.mod
 
-import typingsSlinky.overlayscrollbars.AnonB
-import typingsSlinky.overlayscrollbars.AnonHeight
-import typingsSlinky.overlayscrollbars.AnonXBoolean
-import typingsSlinky.overlayscrollbars.AnonXNumber
-import typingsSlinky.overlayscrollbars.AnonXs
+import typingsSlinky.overlayscrollbars.anon.B
+import typingsSlinky.overlayscrollbars.anon.Height
+import typingsSlinky.overlayscrollbars.anon.XBoolean
+import typingsSlinky.overlayscrollbars.anon.XNumber
+import typingsSlinky.overlayscrollbars.anon.Xs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,17 +12,17 @@ import scala.scalajs.js.annotation._
 @js.native
 trait State extends js.Object {
   var autoUpdate: Boolean = js.native
-  var contentScrollSize: AnonHeight = js.native
+  var contentScrollSize: Height = js.native
   var destroyed: Boolean = js.native
   var documentMixed: Boolean = js.native
-  var hasOverflow: AnonXBoolean = js.native
+  var hasOverflow: XBoolean = js.native
   var heightAuto: Boolean = js.native
-  var hideOverflow: AnonXs = js.native
-  var hostSize: AnonHeight = js.native
-  var overflowAmount: AnonXNumber = js.native
-  var padding: AnonB = js.native
+  var hideOverflow: Xs = js.native
+  var hostSize: Height = js.native
+  var overflowAmount: XNumber = js.native
+  var padding: B = js.native
   var sleeping: Boolean = js.native
-  var viewportSize: AnonHeight = js.native
+  var viewportSize: Height = js.native
   var widthAuto: Boolean = js.native
 }
 
@@ -30,17 +30,17 @@ object State {
   @scala.inline
   def apply(
     autoUpdate: Boolean,
-    contentScrollSize: AnonHeight,
+    contentScrollSize: Height,
     destroyed: Boolean,
     documentMixed: Boolean,
-    hasOverflow: AnonXBoolean,
+    hasOverflow: XBoolean,
     heightAuto: Boolean,
-    hideOverflow: AnonXs,
-    hostSize: AnonHeight,
-    overflowAmount: AnonXNumber,
-    padding: AnonB,
+    hideOverflow: Xs,
+    hostSize: Height,
+    overflowAmount: XNumber,
+    padding: B,
     sleeping: Boolean,
-    viewportSize: AnonHeight,
+    viewportSize: Height,
     widthAuto: Boolean
   ): State = {
     val __obj = js.Dynamic.literal(autoUpdate = autoUpdate.asInstanceOf[js.Any], contentScrollSize = contentScrollSize.asInstanceOf[js.Any], destroyed = destroyed.asInstanceOf[js.Any], documentMixed = documentMixed.asInstanceOf[js.Any], hasOverflow = hasOverflow.asInstanceOf[js.Any], heightAuto = heightAuto.asInstanceOf[js.Any], hideOverflow = hideOverflow.asInstanceOf[js.Any], hostSize = hostSize.asInstanceOf[js.Any], overflowAmount = overflowAmount.asInstanceOf[js.Any], padding = padding.asInstanceOf[js.Any], sleeping = sleeping.asInstanceOf[js.Any], viewportSize = viewportSize.asInstanceOf[js.Any], widthAuto = widthAuto.asInstanceOf[js.Any])
@@ -59,7 +59,7 @@ object State {
         ret
     }
     @scala.inline
-    def withContentScrollSize(value: AnonHeight): Self = {
+    def withContentScrollSize(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentScrollSize")(value.asInstanceOf[js.Any])
         ret
@@ -77,7 +77,7 @@ object State {
         ret
     }
     @scala.inline
-    def withHasOverflow(value: AnonXBoolean): Self = {
+    def withHasOverflow(value: XBoolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hasOverflow")(value.asInstanceOf[js.Any])
         ret
@@ -89,25 +89,25 @@ object State {
         ret
     }
     @scala.inline
-    def withHideOverflow(value: AnonXs): Self = {
+    def withHideOverflow(value: Xs): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hideOverflow")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withHostSize(value: AnonHeight): Self = {
+    def withHostSize(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hostSize")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOverflowAmount(value: AnonXNumber): Self = {
+    def withOverflowAmount(value: XNumber): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overflowAmount")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPadding(value: AnonB): Self = {
+    def withPadding(value: B): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
         ret
@@ -119,7 +119,7 @@ object State {
         ret
     }
     @scala.inline
-    def withViewportSize(value: AnonHeight): Self = {
+    def withViewportSize(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("viewportSize")(value.asInstanceOf[js.Any])
         ret

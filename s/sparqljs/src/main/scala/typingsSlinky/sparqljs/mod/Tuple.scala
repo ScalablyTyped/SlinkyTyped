@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Tuple
   extends Array[Expression]
-     with _Expression
+     with Expression
 

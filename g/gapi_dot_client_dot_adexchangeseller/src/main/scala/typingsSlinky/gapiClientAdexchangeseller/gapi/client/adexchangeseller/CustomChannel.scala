@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientAdexchangeseller.gapi.client.adexchangeseller
 
-import typingsSlinky.gapiClientAdexchangeseller.AnonAdsAppearOn
+import typingsSlinky.gapiClientAdexchangeseller.anon.AdsAppearOn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait CustomChannel extends js.Object {
   /** Name of this custom channel. */
   var name: js.UndefOr[String] = js.native
   /** The targeting information of this custom channel, if activated. */
-  var targetingInfo: js.UndefOr[AnonAdsAppearOn] = js.native
+  var targetingInfo: js.UndefOr[AdsAppearOn] = js.native
 }
 
 object CustomChannel {
@@ -80,7 +80,7 @@ object CustomChannel {
         ret
     }
     @scala.inline
-    def withTargetingInfo(value: AnonAdsAppearOn): Self = {
+    def withTargetingInfo(value: AdsAppearOn): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("targetingInfo")(value.asInstanceOf[js.Any])
         ret

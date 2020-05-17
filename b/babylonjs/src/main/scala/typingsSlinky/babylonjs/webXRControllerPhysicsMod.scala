@@ -1,5 +1,8 @@
 package typingsSlinky.babylonjs
 
+import typingsSlinky.babylonjs.anon.Friction
+import typingsSlinky.babylonjs.anon.ImpostorSize
+import typingsSlinky.babylonjs.anon.ImpostorType
 import typingsSlinky.babylonjs.physicsImpostorMod.PhysicsImpostor
 import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.babylonjs.webXRAbstractFeatureMod.WebXRAbstractFeature
@@ -22,11 +25,11 @@ object webXRControllerPhysicsMod extends js.Object {
     /**
       * Optional parameters for the headset impostor
       */
-    var headsetImpostorParams: js.UndefOr[AnonFriction] = js.native
+    var headsetImpostorParams: js.UndefOr[Friction] = js.native
     /**
       * The physics properties of the future impostors
       */
-    var physicsProperties: js.UndefOr[AnonImpostorSize] = js.native
+    var physicsProperties: js.UndefOr[ImpostorSize] = js.native
     /**
       * the xr input to use with this pointer selection
       */
@@ -80,7 +83,7 @@ object webXRControllerPhysicsMod extends js.Object {
       * Update the physics properties provided in the constructor
       * @param newProperties the new properties object
       */
-    def setPhysicsProperties(newProperties: AnonImpostorType): Unit = js.native
+    def setPhysicsProperties(newProperties: ImpostorType): Unit = js.native
   }
   
   /* static members */

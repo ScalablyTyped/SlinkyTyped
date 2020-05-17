@@ -3,7 +3,7 @@ package typingsSlinky.reactElemental.mod
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -20,7 +20,7 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
-import typingsSlinky.reactElemental.AnonDisabled
+import typingsSlinky.reactElemental.anon.Disabled
 import typingsSlinky.reactElemental.reactElementalStrings.`additions text`
 import typingsSlinky.reactElemental.reactElementalStrings.`inline`
 import typingsSlinky.reactElemental.reactElementalStrings.additions
@@ -271,7 +271,7 @@ trait RadioGroupProps extends js.Object {
   var color: js.UndefOr[String] = js.native
   var contentEditable: js.UndefOr[Booleanish | inherit] = js.native
   var contextMenu: js.UndefOr[String] = js.native
-  var dangerouslySetInnerHTML: js.UndefOr[AnonHtml] = js.native
+  var dangerouslySetInnerHTML: js.UndefOr[Html] = js.native
   var datatype: js.UndefOr[String] = js.native
   // React-specific Attributes
   var defaultChecked: js.UndefOr[Boolean] = js.native
@@ -394,7 +394,7 @@ trait RadioGroupProps extends js.Object {
   var onWaiting: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.native
   // Wheel Events
   var onWheel: js.UndefOr[WheelEventHandler[HTMLDivElement]] = js.native
-  val options: js.UndefOr[js.Array[AnonDisabled]] = js.native
+  val options: js.UndefOr[js.Array[Disabled]] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var prefix: js.UndefOr[String] = js.native
   var property: js.UndefOr[String] = js.native

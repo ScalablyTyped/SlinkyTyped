@@ -1,7 +1,7 @@
 package typingsSlinky.exceljs.mod
 
-import typingsSlinky.exceljs.PartialBorder
-import typingsSlinky.exceljs.PartialBorderDiagonal
+import typingsSlinky.exceljs.anon.PartialBorder
+import typingsSlinky.exceljs.anon.PartialBorderDiagonal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

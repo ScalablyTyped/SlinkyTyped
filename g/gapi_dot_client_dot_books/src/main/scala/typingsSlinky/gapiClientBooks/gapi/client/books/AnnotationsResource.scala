@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientBooks.AnonAltAnnotationId
-import typingsSlinky.gapiClientBooks.AnonFieldsKey
-import typingsSlinky.gapiClientBooks.AnonLayerIds
-import typingsSlinky.gapiClientBooks.AnonShowOnlySummaryInResponse
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientBooks.anon.AltAnnotationId
+import typingsSlinky.gapiClientBooks.anon.FieldsKey
+import typingsSlinky.gapiClientBooks.anon.LayerIds
+import typingsSlinky.gapiClientBooks.anon.ShowOnlySummaryInResponse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,25 +12,25 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AnnotationsResource extends js.Object {
   /** Deletes an annotation. */
-  def delete(request: AnonAltAnnotationId): Request_[Unit] = js.native
+  def delete(request: AltAnnotationId): Request[Unit] = js.native
   /** Inserts a new annotation. */
-  def insert(request: AnonShowOnlySummaryInResponse): Request_[Annotation] = js.native
+  def insert(request: ShowOnlySummaryInResponse): Request[Annotation] = js.native
   /** Retrieves a list of annotations, possibly filtered. */
-  def list(request: AnonLayerIds): Request_[Annotations] = js.native
+  def list(request: LayerIds): Request[Annotations] = js.native
   /** Gets the summary of specified layers. */
-  def summary(request: AnonFieldsKey): Request_[AnnotationsSummary] = js.native
+  def summary(request: FieldsKey): Request[AnnotationsSummary] = js.native
   /** Updates an existing annotation. */
-  def update(request: AnonAltAnnotationId): Request_[Annotation] = js.native
+  def update(request: AltAnnotationId): Request[Annotation] = js.native
 }
 
 object AnnotationsResource {
   @scala.inline
   def apply(
-    delete: AnonAltAnnotationId => Request_[Unit],
-    insert: AnonShowOnlySummaryInResponse => Request_[Annotation],
-    list: AnonLayerIds => Request_[Annotations],
-    summary: AnonFieldsKey => Request_[AnnotationsSummary],
-    update: AnonAltAnnotationId => Request_[Annotation]
+    delete: AltAnnotationId => Request[Unit],
+    insert: ShowOnlySummaryInResponse => Request[Annotation],
+    list: LayerIds => Request[Annotations],
+    summary: FieldsKey => Request[AnnotationsSummary],
+    update: AltAnnotationId => Request[Annotation]
   ): AnnotationsResource = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), summary = js.Any.fromFunction1(summary), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[AnnotationsResource]
@@ -42,31 +42,31 @@ object AnnotationsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDelete(value: AnonAltAnnotationId => Request_[Unit]): Self = {
+    def withDelete(value: AltAnnotationId => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withInsert(value: AnonShowOnlySummaryInResponse => Request_[Annotation]): Self = {
+    def withInsert(value: ShowOnlySummaryInResponse => Request[Annotation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonLayerIds => Request_[Annotations]): Self = {
+    def withList(value: LayerIds => Request[Annotations]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withSummary(value: AnonFieldsKey => Request_[AnnotationsSummary]): Self = {
+    def withSummary(value: FieldsKey => Request[AnnotationsSummary]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonAltAnnotationId => Request_[Annotation]): Self = {
+    def withUpdate(value: AltAnnotationId => Request[Annotation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

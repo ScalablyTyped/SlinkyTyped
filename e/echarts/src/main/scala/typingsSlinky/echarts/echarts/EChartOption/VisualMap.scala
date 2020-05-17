@@ -1,5 +1,7 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
+import typingsSlinky.echarts.echarts.VisualMap.Continuous
+import typingsSlinky.echarts.echarts.VisualMap.Piecewise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,14 +14,8 @@ trait VisualMap extends js.Object
 
 object VisualMap {
   @scala.inline
-  def Continuous(): VisualMap = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[VisualMap]
-  }
+  implicit def apply(value: Continuous): VisualMap = value.asInstanceOf[VisualMap]
   @scala.inline
-  def Piecewise(): VisualMap = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[VisualMap]
-  }
+  implicit def apply(value: Piecewise): VisualMap = value.asInstanceOf[VisualMap]
 }
 

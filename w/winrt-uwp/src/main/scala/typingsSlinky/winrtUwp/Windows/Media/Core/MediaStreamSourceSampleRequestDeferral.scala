@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides a way for the application to asynchronously report that it has completed retrieving the MediaStreamSample . */
-@JSGlobal("Windows.Media.Core.MediaStreamSourceSampleRequestDeferral")
 @js.native
-abstract class MediaStreamSourceSampleRequestDeferral () extends js.Object {
+trait MediaStreamSourceSampleRequestDeferral extends js.Object {
   /** Reports that the application has completed retrieving the MediaStreamSample . */
   def complete(): Unit = js.native
+}
+
+object MediaStreamSourceSampleRequestDeferral {
+  @scala.inline
+  def apply(complete: () => Unit): MediaStreamSourceSampleRequestDeferral = {
+    val __obj = js.Dynamic.literal(complete = js.Any.fromFunction0(complete))
+    __obj.asInstanceOf[MediaStreamSourceSampleRequestDeferral]
+  }
+  @scala.inline
+  implicit class MediaStreamSourceSampleRequestDeferralOps[Self <: MediaStreamSourceSampleRequestDeferral] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComplete(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -20,31 +20,51 @@ trait ActiveXObject extends js.Object {
     obj: CommandBarEvents,
     event: Click,
     argNames: js.Tuple3[CommandBarControl, handled, CancelDefault],
-    handler: js.ThisFunction1[/* this */ CommandBarEvents, /* parameter */ AnonCancelDefault, Unit]
+    handler: js.ThisFunction1[
+      /* this */ CommandBarEvents, 
+      /* parameter */ typingsSlinky.activexVbide.anon.CancelDefault, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ReferencesEvents,
     event: ItemAdded,
     argNames: js.Array[Reference],
-    handler: js.ThisFunction1[/* this */ ReferencesEvents, /* parameter */ AnonReference, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ReferencesEvents, 
+      /* parameter */ typingsSlinky.activexVbide.anon.Reference, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: ReferencesEvents,
     event: ItemRemoved,
     argNames: js.Array[Reference],
-    handler: js.ThisFunction1[/* this */ ReferencesEvents, /* parameter */ AnonReference, Unit]
+    handler: js.ThisFunction1[
+      /* this */ ReferencesEvents, 
+      /* parameter */ typingsSlinky.activexVbide.anon.Reference, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: References,
     event: ItemAdded,
     argNames: js.Array[Reference],
-    handler: js.ThisFunction1[/* this */ References, /* parameter */ AnonReference, Unit]
+    handler: js.ThisFunction1[
+      /* this */ References, 
+      /* parameter */ typingsSlinky.activexVbide.anon.Reference, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: References,
     event: ItemRemoved,
     argNames: js.Array[Reference],
-    handler: js.ThisFunction1[/* this */ References, /* parameter */ AnonReference, Unit]
+    handler: js.ThisFunction1[
+      /* this */ References, 
+      /* parameter */ typingsSlinky.activexVbide.anon.Reference, 
+      Unit
+    ]
   ): Unit = js.native
 }
 

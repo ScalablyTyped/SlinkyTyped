@@ -1,7 +1,7 @@
 package typingsSlinky.nwGui.mod
 
 import org.scalajs.dom.raw.HTMLIFrameElement
-import typingsSlinky.nwGui.AnonDatatype
+import typingsSlinky.nwGui.anon.Datatype
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ class Window () extends EventEmitter {
   var zoomLevel: Double = js.native
   def blur(): Unit = js.native
   def capturePage(callback: js.Function): Unit = js.native
-  def capturePage(callback: js.Function, config_object: AnonDatatype): Unit = js.native
+  def capturePage(callback: js.Function, config_object: Datatype): Unit = js.native
   def capturePage(callback: js.Function, imageformat: String): Unit = js.native
   def close(): Unit = js.native
   def close(force: Boolean): Unit = js.native

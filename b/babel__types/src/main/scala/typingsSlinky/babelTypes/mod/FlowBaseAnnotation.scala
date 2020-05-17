@@ -1,15 +1,5 @@
 package typingsSlinky.babelTypes.mod
 
-import typingsSlinky.babelTypes.babelTypesStrings.AnyTypeAnnotation
-import typingsSlinky.babelTypes.babelTypesStrings.BooleanTypeAnnotation
-import typingsSlinky.babelTypes.babelTypesStrings.EmptyTypeAnnotation
-import typingsSlinky.babelTypes.babelTypesStrings.MixedTypeAnnotation
-import typingsSlinky.babelTypes.babelTypesStrings.NullLiteralTypeAnnotation
-import typingsSlinky.babelTypes.babelTypesStrings.NumberTypeAnnotation
-import typingsSlinky.babelTypes.babelTypesStrings.StringTypeAnnotation
-import typingsSlinky.babelTypes.babelTypesStrings.SymbolTypeAnnotation
-import typingsSlinky.babelTypes.babelTypesStrings.ThisTypeAnnotation
-import typingsSlinky.babelTypes.babelTypesStrings.VoidTypeAnnotation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,68 +16,28 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.ThisTypeAnnotation_
   - typingsSlinky.babelTypes.mod.VoidTypeAnnotation_
 */
-trait FlowBaseAnnotation extends _Node
+trait FlowBaseAnnotation extends Node
 
 object FlowBaseAnnotation {
   @scala.inline
-  def NullLiteralTypeAnnotation_(`type`: NullLiteralTypeAnnotation): FlowBaseAnnotation = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowBaseAnnotation]
-  }
+  implicit def apply(value: AnyTypeAnnotation_): FlowBaseAnnotation = value.asInstanceOf[FlowBaseAnnotation]
   @scala.inline
-  def SymbolTypeAnnotation_(`type`: SymbolTypeAnnotation): FlowBaseAnnotation = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowBaseAnnotation]
-  }
+  implicit def apply(value: BooleanTypeAnnotation_): FlowBaseAnnotation = value.asInstanceOf[FlowBaseAnnotation]
   @scala.inline
-  def BooleanTypeAnnotation_(`type`: BooleanTypeAnnotation): FlowBaseAnnotation = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowBaseAnnotation]
-  }
+  implicit def apply(value: EmptyTypeAnnotation_): FlowBaseAnnotation = value.asInstanceOf[FlowBaseAnnotation]
   @scala.inline
-  def AnyTypeAnnotation_(`type`: AnyTypeAnnotation): FlowBaseAnnotation = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowBaseAnnotation]
-  }
+  implicit def apply(value: MixedTypeAnnotation_): FlowBaseAnnotation = value.asInstanceOf[FlowBaseAnnotation]
   @scala.inline
-  def VoidTypeAnnotation_(`type`: VoidTypeAnnotation): FlowBaseAnnotation = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowBaseAnnotation]
-  }
+  implicit def apply(value: NullLiteralTypeAnnotation_): FlowBaseAnnotation = value.asInstanceOf[FlowBaseAnnotation]
   @scala.inline
-  def NumberTypeAnnotation_(`type`: NumberTypeAnnotation): FlowBaseAnnotation = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowBaseAnnotation]
-  }
+  implicit def apply(value: NumberTypeAnnotation_): FlowBaseAnnotation = value.asInstanceOf[FlowBaseAnnotation]
   @scala.inline
-  def StringTypeAnnotation_(`type`: StringTypeAnnotation): FlowBaseAnnotation = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowBaseAnnotation]
-  }
+  implicit def apply(value: StringTypeAnnotation_): FlowBaseAnnotation = value.asInstanceOf[FlowBaseAnnotation]
   @scala.inline
-  def MixedTypeAnnotation_(`type`: MixedTypeAnnotation): FlowBaseAnnotation = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowBaseAnnotation]
-  }
+  implicit def apply(value: SymbolTypeAnnotation_): FlowBaseAnnotation = value.asInstanceOf[FlowBaseAnnotation]
   @scala.inline
-  def ThisTypeAnnotation_(`type`: ThisTypeAnnotation): FlowBaseAnnotation = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowBaseAnnotation]
-  }
+  implicit def apply(value: ThisTypeAnnotation_): FlowBaseAnnotation = value.asInstanceOf[FlowBaseAnnotation]
   @scala.inline
-  def EmptyTypeAnnotation_(`type`: EmptyTypeAnnotation): FlowBaseAnnotation = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowBaseAnnotation]
-  }
+  implicit def apply(value: VoidTypeAnnotation_): FlowBaseAnnotation = value.asInstanceOf[FlowBaseAnnotation]
 }
 

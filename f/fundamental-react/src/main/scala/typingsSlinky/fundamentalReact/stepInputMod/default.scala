@@ -1,8 +1,8 @@
 package typingsSlinky.fundamentalReact.stepInputMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.fundamentalReact.PartialStepInputProps
-import typingsSlinky.fundamentalReact.WeakValidationMapStepInpu
+import typingsSlinky.fundamentalReact.anon.PartialStepInputProps
+import typingsSlinky.fundamentalReact.anon.WeakValidationMapStepInpu
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.StepInput
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap

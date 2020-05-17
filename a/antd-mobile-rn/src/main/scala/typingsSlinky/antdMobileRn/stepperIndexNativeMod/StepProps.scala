@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobileRn.stepperIndexNativeMod
 
-import typingsSlinky.antdMobileRn.AnonDisabledStepTextColor
+import typingsSlinky.antdMobileRn.anon.DisabledStepTextColor
 import typingsSlinky.antdMobileRn.stepperPropsTypeMod.StepPropsType
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait StepProps extends StepPropsType {
   var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var styles: js.UndefOr[AnonDisabledStepTextColor] = js.native
+  var styles: js.UndefOr[DisabledStepTextColor] = js.native
 }
 
 object StepProps {
@@ -45,7 +45,7 @@ object StepProps {
         ret
     }
     @scala.inline
-    def withStyles(value: AnonDisabledStepTextColor): Self = {
+    def withStyles(value: DisabledStepTextColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
         ret

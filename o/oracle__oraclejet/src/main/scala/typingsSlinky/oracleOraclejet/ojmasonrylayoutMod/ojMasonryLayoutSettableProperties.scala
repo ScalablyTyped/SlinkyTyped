@@ -1,6 +1,6 @@
 package typingsSlinky.oracleOraclejet.ojmasonrylayoutMod
 
-import typingsSlinky.oracleOraclejet.AnonLabelCut
+import typingsSlinky.oracleOraclejet.anon.LabelCut
 import typingsSlinky.oracleOraclejet.mod.baseComponentSettableProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation._
 trait ojMasonryLayoutSettableProperties extends baseComponentSettableProperties {
   var reorderHandle: String | Null = js.native
   @JSName("translations")
-  var translations_ojMasonryLayoutSettableProperties: AnonLabelCut = js.native
+  var translations_ojMasonryLayoutSettableProperties: LabelCut = js.native
 }
 
 object ojMasonryLayoutSettableProperties {
   @scala.inline
-  def apply(translations: AnonLabelCut): ojMasonryLayoutSettableProperties = {
+  def apply(translations: LabelCut): ojMasonryLayoutSettableProperties = {
     val __obj = js.Dynamic.literal(translations = translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojMasonryLayoutSettableProperties]
   }
@@ -26,7 +26,7 @@ object ojMasonryLayoutSettableProperties {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTranslations(value: AnonLabelCut): Self = {
+    def withTranslations(value: LabelCut): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

@@ -4,14 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.OctreeSceneComponent")
 @js.native
-class OctreeSceneComponent protected () extends js.Object {
-  /**
-    * Creates a new instance of the component for the given scene
-    * @param scene Defines the scene to register the component in
-    */
-  def this(scene: Scene) = this()
+trait OctreeSceneComponent extends js.Object {
   var _tempRay: js.Any = js.native
   /**
     * Indicates if the meshes have been checked to make sure they are isEnabled()
@@ -63,5 +57,99 @@ class OctreeSceneComponent protected () extends js.Object {
     * Registers the component in a given scene
     */
   def register(): Unit = js.native
+}
+
+object OctreeSceneComponent {
+  @scala.inline
+  def apply(
+    _tempRay: js.Any,
+    checksIsEnabled: Boolean,
+    dispose: () => Unit,
+    getActiveMeshCandidates: () => ISmartArrayLike[AbstractMesh],
+    getActiveSubMeshCandidates: AbstractMesh => ISmartArrayLike[SubMesh],
+    getCollidingSubMeshCandidates: (AbstractMesh, Collider) => ISmartArrayLike[SubMesh],
+    getIntersectingSubMeshCandidates: (AbstractMesh, Ray) => ISmartArrayLike[SubMesh],
+    name: String,
+    rebuild: () => Unit,
+    register: () => Unit,
+    scene: Scene
+  ): OctreeSceneComponent = {
+    val __obj = js.Dynamic.literal(_tempRay = _tempRay.asInstanceOf[js.Any], checksIsEnabled = checksIsEnabled.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), getActiveMeshCandidates = js.Any.fromFunction0(getActiveMeshCandidates), getActiveSubMeshCandidates = js.Any.fromFunction1(getActiveSubMeshCandidates), getCollidingSubMeshCandidates = js.Any.fromFunction2(getCollidingSubMeshCandidates), getIntersectingSubMeshCandidates = js.Any.fromFunction2(getIntersectingSubMeshCandidates), name = name.asInstanceOf[js.Any], rebuild = js.Any.fromFunction0(rebuild), register = js.Any.fromFunction0(register), scene = scene.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OctreeSceneComponent]
+  }
+  @scala.inline
+  implicit class OctreeSceneComponentOps[Self <: OctreeSceneComponent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_tempRay(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_tempRay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChecksIsEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("checksIsEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDispose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispose")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetActiveMeshCandidates(value: () => ISmartArrayLike[AbstractMesh]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getActiveMeshCandidates")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetActiveSubMeshCandidates(value: AbstractMesh => ISmartArrayLike[SubMesh]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getActiveSubMeshCandidates")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetCollidingSubMeshCandidates(value: (AbstractMesh, Collider) => ISmartArrayLike[SubMesh]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCollidingSubMeshCandidates")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetIntersectingSubMeshCandidates(value: (AbstractMesh, Ray) => ISmartArrayLike[SubMesh]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getIntersectingSubMeshCandidates")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRebuild(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rebuild")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRegister(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("register")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withScene(value: Scene): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scene")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,13 +1,13 @@
 package typingsSlinky.cardValidator.mod
 
-import typingsSlinky.cardValidator.AnonName
+import typingsSlinky.cardValidator.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Card extends js.Object {
-  var code: AnonName = js.native
+  var code: Name = js.native
   var gaps: js.Array[Double] = js.native
   var isAmex: Boolean = js.native
   var lengths: js.Array[Double] = js.native
@@ -19,7 +19,7 @@ trait Card extends js.Object {
 object Card {
   @scala.inline
   def apply(
-    code: AnonName,
+    code: Name,
     gaps: js.Array[Double],
     isAmex: Boolean,
     lengths: js.Array[Double],
@@ -38,7 +38,7 @@ object Card {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCode(value: AnonName): Self = {
+    def withCode(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
         ret

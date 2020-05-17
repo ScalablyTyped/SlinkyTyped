@@ -10,15 +10,8 @@ import scala.scalajs.js.annotation._
   * To convert between dates and their textual representation, use the `string()` and `date()` functions.
   * @see https://docs.scriptable.app/dateformatter/#-new-dateformatter
   */
-@JSGlobal("DateFormatter")
 @js.native
-/**
-  * _Converts between texts and strings._
-  *
-  * To convert between dates and their textual representation, use the `string()` and `date()` functions.
-  * @see https://docs.scriptable.app/dateformatter/#-new-dateformatter
-  */
-class DateFormatter () extends js.Object {
+trait DateFormatter extends js.Object {
   /**
     * _Date format to be used by the formatter._
     *
@@ -177,5 +170,120 @@ class DateFormatter () extends js.Object {
     * @see https://docs.scriptable.app/dateformatter/#-useshorttimestyle
     */
   def useShortTimeStyle(): Unit = js.native
+}
+
+object DateFormatter {
+  @scala.inline
+  def apply(
+    date: String => String,
+    dateFormat: String,
+    locale: String,
+    string: js.Date => String,
+    useFullDateStyle: () => Unit,
+    useFullTimeStyle: () => Unit,
+    useLongDateStyle: () => Unit,
+    useLongTimeStyle: () => Unit,
+    useMediumDateStyle: () => Unit,
+    useMediumTimeStyle: () => Unit,
+    useNoDateStyle: () => Unit,
+    useNoTimeStyle: () => Unit,
+    useShortDateStyle: () => Unit,
+    useShortTimeStyle: () => Unit
+  ): DateFormatter = {
+    val __obj = js.Dynamic.literal(date = js.Any.fromFunction1(date), dateFormat = dateFormat.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], string = js.Any.fromFunction1(string), useFullDateStyle = js.Any.fromFunction0(useFullDateStyle), useFullTimeStyle = js.Any.fromFunction0(useFullTimeStyle), useLongDateStyle = js.Any.fromFunction0(useLongDateStyle), useLongTimeStyle = js.Any.fromFunction0(useLongTimeStyle), useMediumDateStyle = js.Any.fromFunction0(useMediumDateStyle), useMediumTimeStyle = js.Any.fromFunction0(useMediumTimeStyle), useNoDateStyle = js.Any.fromFunction0(useNoDateStyle), useNoTimeStyle = js.Any.fromFunction0(useNoTimeStyle), useShortDateStyle = js.Any.fromFunction0(useShortDateStyle), useShortTimeStyle = js.Any.fromFunction0(useShortTimeStyle))
+    __obj.asInstanceOf[DateFormatter]
+  }
+  @scala.inline
+  implicit class DateFormatterOps[Self <: DateFormatter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDate(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDateFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateFormat")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocale(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withString(value: js.Date => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("string")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUseFullDateStyle(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useFullDateStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUseFullTimeStyle(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useFullTimeStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUseLongDateStyle(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useLongDateStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUseLongTimeStyle(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useLongTimeStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUseMediumDateStyle(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useMediumDateStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUseMediumTimeStyle(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useMediumTimeStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUseNoDateStyle(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useNoDateStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUseNoTimeStyle(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useNoTimeStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUseShortDateStyle(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useShortDateStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUseShortTimeStyle(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useShortTimeStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

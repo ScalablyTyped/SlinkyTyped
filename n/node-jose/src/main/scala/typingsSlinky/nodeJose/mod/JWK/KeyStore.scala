@@ -1,7 +1,7 @@
 package typingsSlinky.nodeJose.mod.JWK
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.nodeJose.PartialKeyStoreGetOptions
+import typingsSlinky.nodeJose.anon.PartialKeyStoreGetOptions
 import typingsSlinky.nodeJose.nodeJoseStrings.`private`
 import typingsSlinky.nodeJose.nodeJoseStrings.json
 import typingsSlinky.nodeJose.nodeJoseStrings.pem

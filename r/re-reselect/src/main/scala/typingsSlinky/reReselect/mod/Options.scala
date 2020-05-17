@@ -1,6 +1,6 @@
 package typingsSlinky.reReselect.mod
 
-import typingsSlinky.reReselect.AnonInputSelectors
+import typingsSlinky.reReselect.anon.InputSelectors
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,7 +50,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withKeySelectorCreator(value: /* selectorInputs */ AnonInputSelectors[D, C, S] => KeySelector[S]): Self[S, C, D] = {
+    def withKeySelectorCreator(value: /* selectorInputs */ InputSelectors[D, C, S] => KeySelector[S]): Self[S, C, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keySelectorCreator")(js.Any.fromFunction1(value))
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.babylonjs.mod
 
-import typingsSlinky.babylonjs.AnonRatio
-import typingsSlinky.babylonjs.AnonWidth
+import typingsSlinky.babylonjs.anon.Ratio
+import typingsSlinky.babylonjs.anon.Width
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,26 +26,16 @@ class MirrorTexture protected ()
     * @param generateDepthBuffer
     */
   def this(name: String, size: Double, scene: typingsSlinky.babylonjs.sceneMod.Scene) = this()
-  def this(name: String, size: AnonRatio, scene: typingsSlinky.babylonjs.sceneMod.Scene) = this()
-  def this(name: String, size: AnonWidth, scene: typingsSlinky.babylonjs.sceneMod.Scene) = this()
+  def this(name: String, size: Ratio, scene: typingsSlinky.babylonjs.sceneMod.Scene) = this()
+  def this(name: String, size: Width, scene: typingsSlinky.babylonjs.sceneMod.Scene) = this()
   def this(
     name: String,
     size: Double,
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     generateMipMaps: Boolean
   ) = this()
-  def this(
-    name: String,
-    size: AnonRatio,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
-    generateMipMaps: Boolean
-  ) = this()
-  def this(
-    name: String,
-    size: AnonWidth,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
-    generateMipMaps: Boolean
-  ) = this()
+  def this(name: String, size: Ratio, scene: typingsSlinky.babylonjs.sceneMod.Scene, generateMipMaps: Boolean) = this()
+  def this(name: String, size: Width, scene: typingsSlinky.babylonjs.sceneMod.Scene, generateMipMaps: Boolean) = this()
   def this(
     name: String,
     size: Double,
@@ -55,14 +45,14 @@ class MirrorTexture protected ()
   ) = this()
   def this(
     name: String,
-    size: AnonRatio,
+    size: Ratio,
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     generateMipMaps: Boolean,
     `type`: Double
   ) = this()
   def this(
     name: String,
-    size: AnonWidth,
+    size: Width,
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     generateMipMaps: Boolean,
     `type`: Double
@@ -77,7 +67,7 @@ class MirrorTexture protected ()
   ) = this()
   def this(
     name: String,
-    size: AnonRatio,
+    size: Ratio,
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     generateMipMaps: Boolean,
     `type`: Double,
@@ -85,7 +75,7 @@ class MirrorTexture protected ()
   ) = this()
   def this(
     name: String,
-    size: AnonWidth,
+    size: Width,
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     generateMipMaps: Boolean,
     `type`: Double,
@@ -102,7 +92,7 @@ class MirrorTexture protected ()
   ) = this()
   def this(
     name: String,
-    size: AnonRatio,
+    size: Ratio,
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     generateMipMaps: Boolean,
     `type`: Double,
@@ -111,7 +101,7 @@ class MirrorTexture protected ()
   ) = this()
   def this(
     name: String,
-    size: AnonWidth,
+    size: Width,
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     generateMipMaps: Boolean,
     `type`: Double,

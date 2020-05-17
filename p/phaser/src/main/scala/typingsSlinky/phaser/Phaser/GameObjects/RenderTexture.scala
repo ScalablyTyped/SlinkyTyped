@@ -22,7 +22,6 @@ import typingsSlinky.phaser.Phaser.GameObjects.Components.Transform
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Visible
 import typingsSlinky.phaser.Phaser.Renderer.Canvas.CanvasRenderer
 import typingsSlinky.phaser.Phaser.Renderer.WebGL.WebGLRenderer
-import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.Phaser.Textures.Texture
 import typingsSlinky.phaser.Phaser.Textures.TextureManager
 import typingsSlinky.phaser.Phaser.Types.Renderer.Snapshot.SnapshotCallback
@@ -43,9 +42,8 @@ import scala.scalajs.js.annotation._
   * is a technical limitation of WebGL. To get around it, create your shape as a texture in an art package, then draw that
   * to the Render Texture.
   */
-@JSGlobal("Phaser.GameObjects.RenderTexture")
 @js.native
-class RenderTexture protected ()
+trait RenderTexture
   extends GameObject
      with Alpha
      with BlendMode
@@ -61,19 +59,6 @@ class RenderTexture protected ()
      with Tint
      with Transform
      with Visible {
-  /**
-    * 
-    * @param scene The Scene to which this Game Object belongs. A Game Object can only belong to one Scene at a time.
-    * @param x The horizontal position of this Game Object in the world. Default 0.
-    * @param y The vertical position of this Game Object in the world. Default 0.
-    * @param width The width of the Render Texture. Default 32.
-    * @param height The height of the Render Texture. Default 32.
-    */
-  def this(scene: Scene) = this()
-  def this(scene: Scene, x: Double) = this()
-  def this(scene: Scene, x: Double, y: Double) = this()
-  def this(scene: Scene, x: Double, y: Double, width: integer) = this()
-  def this(scene: Scene, x: Double, y: Double, width: integer, height: integer) = this()
   /**
     * An internal Camera that can be used to move around the Render Texture.
     * Control it just like you would any Scene Camera. The difference is that it only impacts the placement of what

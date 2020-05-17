@@ -2,7 +2,7 @@ package typingsSlinky.baseui.pinCodeMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.baseui.AnonValues
+import typingsSlinky.baseui.anon.Values
 import typingsSlinky.baseui.baseuiStrings.change_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait StatefulContainerProps extends js.Object {
   var children: js.UndefOr[TagMod[Any]] = js.native
   var initialState: js.UndefOr[State] = js.native
-  var onChange: js.UndefOr[js.Function1[/* args */ AnonValues, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* args */ Values, Unit]] = js.native
   var stateReducer: js.UndefOr[js.Function3[change_, /* nextState */ State, /* currentState */ State, State]] = js.native
 }
 
@@ -59,7 +59,7 @@ object StatefulContainerProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* args */ AnonValues => Unit): Self = {
+    def withOnChange(value: /* args */ Values => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

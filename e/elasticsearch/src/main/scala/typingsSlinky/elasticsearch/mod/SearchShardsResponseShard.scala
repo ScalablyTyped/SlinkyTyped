@@ -1,13 +1,13 @@
 package typingsSlinky.elasticsearch.mod
 
-import typingsSlinky.elasticsearch.AnonId
+import typingsSlinky.elasticsearch.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SearchShardsResponseShard extends js.Object {
-  var allocation_id: AnonId = js.native
+  var allocation_id: Id = js.native
   var index: String = js.native
   var node: String = js.native
   var primary: Boolean = js.native
@@ -19,7 +19,7 @@ trait SearchShardsResponseShard extends js.Object {
 object SearchShardsResponseShard {
   @scala.inline
   def apply(
-    allocation_id: AnonId,
+    allocation_id: Id,
     index: String,
     node: String,
     primary: Boolean,
@@ -37,7 +37,7 @@ object SearchShardsResponseShard {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAllocation_id(value: AnonId): Self = {
+    def withAllocation_id(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("allocation_id")(value.asInstanceOf[js.Any])
         ret

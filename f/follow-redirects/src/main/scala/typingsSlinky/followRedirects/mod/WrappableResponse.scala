@@ -1,20 +1,20 @@
 package typingsSlinky.followRedirects.mod
 
-import typingsSlinky.followRedirects.AnonLocation
+import typingsSlinky.followRedirects.anon.Location
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait WrappableResponse extends js.Object {
-  var headers: AnonLocation = js.native
+  var headers: Location = js.native
   var statusCode: js.UndefOr[Double] = js.native
   def destroy(): js.Any = js.native
 }
 
 object WrappableResponse {
   @scala.inline
-  def apply(destroy: () => js.Any, headers: AnonLocation): WrappableResponse = {
+  def apply(destroy: () => js.Any, headers: Location): WrappableResponse = {
     val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), headers = headers.asInstanceOf[js.Any])
     __obj.asInstanceOf[WrappableResponse]
   }
@@ -31,7 +31,7 @@ object WrappableResponse {
         ret
     }
     @scala.inline
-    def withHeaders(value: AnonLocation): Self = {
+    def withHeaders(value: Location): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
         ret

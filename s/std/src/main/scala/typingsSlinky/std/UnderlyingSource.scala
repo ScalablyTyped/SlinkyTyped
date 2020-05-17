@@ -60,18 +60,6 @@ object UnderlyingSource {
         ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.undefined)
         ret
     }
-    @scala.inline
-    def withType(value: scala.Nothing): Self[R] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self[R] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
   }
   
 }

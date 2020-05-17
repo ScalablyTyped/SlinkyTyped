@@ -1,8 +1,8 @@
 package typingsSlinky.node.netMod
 
-import typingsSlinky.node.AnonEnd
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.WritableStream
+import typingsSlinky.node.anon.End
 import typingsSlinky.node.childProcessMod.SendHandle
 import typingsSlinky.node.nodeStrings.close
 import typingsSlinky.node.nodeStrings.data
@@ -111,7 +111,7 @@ class Socket ()
   /* InferMemberOverrides */
   override def pipe[T /* <: WritableStream */](destination: T): T = js.native
   /* InferMemberOverrides */
-  override def pipe[T /* <: WritableStream */](destination: T, options: AnonEnd): T = js.native
+  override def pipe[T /* <: WritableStream */](destination: T, options: End): T = js.native
   @JSName("prependListener")
   def prependListener_close(event: close, listener: js.Function1[/* had_error */ Boolean, Unit]): this.type = js.native
   @JSName("prependListener")

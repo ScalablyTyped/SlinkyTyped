@@ -2,7 +2,7 @@ package typingsSlinky.blueprintjsCore.menuItemMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.blueprintjsCore.PartialIPopoverProps
+import typingsSlinky.blueprintjsCore.anon.PartialIPopoverProps
 import typingsSlinky.blueprintjsCore.propsMod.IActionProps
 import typingsSlinky.blueprintjsCore.propsMod.ILinkProps
 import scala.scalajs.js

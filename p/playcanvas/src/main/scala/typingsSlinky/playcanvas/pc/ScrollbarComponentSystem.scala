@@ -12,9 +12,6 @@ import scala.scalajs.js.annotation._
   * @description Create a new ScrollbarComponentSystem.
   * @param {pc.Application} app - The application.
   */
-@JSGlobal("pc.ScrollbarComponentSystem")
 @js.native
-class ScrollbarComponentSystem protected () extends ComponentSystem {
-  def this(app: Application) = this()
-}
+trait ScrollbarComponentSystem extends ComponentSystem
 

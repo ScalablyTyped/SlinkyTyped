@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeMaterialUi.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactNativeMaterialUi.AnonLabels
+import typingsSlinky.reactNativeMaterialUi.anon.Labels
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ToolBarRightElement extends js.Object {
   var actions: js.UndefOr[js.Array[ReactElement | String]] = js.native
-  var menu: js.UndefOr[AnonLabels] = js.native
+  var menu: js.UndefOr[Labels] = js.native
 }
 
 object ToolBarRightElement {
@@ -37,7 +37,7 @@ object ToolBarRightElement {
         ret
     }
     @scala.inline
-    def withMenu(value: AnonLabels): Self = {
+    def withMenu(value: Labels): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
         ret

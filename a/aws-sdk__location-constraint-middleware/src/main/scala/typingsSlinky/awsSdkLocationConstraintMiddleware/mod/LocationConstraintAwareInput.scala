@@ -1,13 +1,13 @@
 package typingsSlinky.awsSdkLocationConstraintMiddleware.mod
 
-import typingsSlinky.awsSdkLocationConstraintMiddleware.AnonLocationConstraint
+import typingsSlinky.awsSdkLocationConstraintMiddleware.anon.LocationConstraint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait LocationConstraintAwareInput extends js.Object {
-  var CreateBucketConfiguration: js.UndefOr[AnonLocationConstraint] = js.native
+  var CreateBucketConfiguration: js.UndefOr[LocationConstraint] = js.native
 }
 
 object LocationConstraintAwareInput {
@@ -23,7 +23,7 @@ object LocationConstraintAwareInput {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreateBucketConfiguration(value: AnonLocationConstraint): Self = {
+    def withCreateBucketConfiguration(value: LocationConstraint): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("CreateBucketConfiguration")(value.asInstanceOf[js.Any])
         ret

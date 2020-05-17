@@ -1,9 +1,5 @@
 package typingsSlinky.antd.generateCalendarMod
 
-import typingsSlinky.antd.antdStrings.date
-import typingsSlinky.antd.antdStrings.time
-import typingsSlinky.rcPicker.interfaceMod.PickerMode
-import typingsSlinky.std.Exclude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,19 +13,10 @@ trait PickerProps[DateType] extends js.Object
 
 object PickerProps {
   @scala.inline
-  def PickerPanelBaseProps[DateType](picker: Exclude[PickerMode, date | time]): PickerProps[DateType] = {
-    val __obj = js.Dynamic.literal(picker = picker.asInstanceOf[js.Any])
-    __obj.asInstanceOf[PickerProps[DateType]]
-  }
+  implicit def apply[DateType](value: PickerPanelBaseProps[DateType]): PickerProps[DateType] = value.asInstanceOf[PickerProps[DateType]]
   @scala.inline
-  def PickerPanelDateProps[DateType](): PickerProps[DateType] = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[PickerProps[DateType]]
-  }
+  implicit def apply[DateType](value: PickerPanelDateProps[DateType]): PickerProps[DateType] = value.asInstanceOf[PickerProps[DateType]]
   @scala.inline
-  def PickerPanelTimeProps[DateType](picker: time): PickerProps[DateType] = {
-    val __obj = js.Dynamic.literal(picker = picker.asInstanceOf[js.Any])
-    __obj.asInstanceOf[PickerProps[DateType]]
-  }
+  implicit def apply[DateType](value: PickerPanelTimeProps[DateType]): PickerProps[DateType] = value.asInstanceOf[PickerProps[DateType]]
 }
 

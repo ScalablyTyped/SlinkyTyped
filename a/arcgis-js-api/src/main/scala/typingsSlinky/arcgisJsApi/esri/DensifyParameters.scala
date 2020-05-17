@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`nautical-miles`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.feet_
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.kilometers_
@@ -46,8 +45,4 @@ trait DensifyParameters extends Accessor {
     */
   def toJSON(): js.Any = js.native
 }
-
-@JSGlobal("__esri.DensifyParameters")
-@js.native
-object DensifyParameters extends TopLevel[DensifyParametersConstructor]
 

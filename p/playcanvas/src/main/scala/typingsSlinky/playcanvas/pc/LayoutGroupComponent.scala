@@ -70,10 +70,8 @@ import scala.scalajs.js.annotation._
   * {@link pc.LayoutGroupComponent#widthFitting} or {@link pc.LayoutGroupComponent#heightFitting}
   * mode of {@link pc.FITTING_BOTH} will be coerced to {@link pc.FITTING_STRETCH}.
   */
-@JSGlobal("pc.LayoutGroupComponent")
 @js.native
-class LayoutGroupComponent protected () extends Component {
-  def this(system: LayoutGroupComponentSystem, entity: Entity) = this()
+trait LayoutGroupComponent extends Component {
   /**
     * Specifies the horizontal and vertical alignment of
     * child elements. Values range from 0 to 1 where [0, 0] is the bottom left and

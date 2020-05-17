@@ -1,12 +1,12 @@
 package typingsSlinky.officeJsPreview.OneNote
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientResult
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJsPreview.OneNote.Interfaces.PageData
 import typingsSlinky.officeJsPreview.OneNote.Interfaces.PageLoadOptions
 import typingsSlinky.officeJsPreview.OneNote.Interfaces.PageUpdateData
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.After
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Before
 import scala.scalajs.js
@@ -19,9 +19,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: OneNoteApi 1.1]
   */
-@JSGlobal("OneNote.Page")
 @js.native
-class Page () extends ClientObject {
+trait Page extends ClientObject {
   /**
     *
     * Gets the ClassNotebookPageSource to the page.
@@ -186,8 +185,8 @@ class Page () extends ClientObject {
   def load(): Page = js.native
   def load(option: String): Page = js.native
   def load(option: js.Array[String]): Page = js.native
-  def load(option: AnonExpand): Page = js.native
   def load(option: PageLoadOptions): Page = js.native
+  def load(option: Expand): Page = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.
     *
     * @remarks

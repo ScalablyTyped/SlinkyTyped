@@ -3,9 +3,9 @@ package typingsSlinky.materialUi.MaterialUI.DatePicker
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.materialUi.AnonCall
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.utils
+import typingsSlinky.materialUi.anon.Call
 import typingsSlinky.materialUi.materialUiStrings.`inline`
 import typingsSlinky.materialUi.materialUiStrings.dialog
 import typingsSlinky.materialUi.materialUiStrings.landscape
@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DatePickerDialogProps extends js.Object {
   // <Container/> is the element that get the 'other' properties
-  var DateTimeFormat: js.UndefOr[AnonCall] = js.native
+  var DateTimeFormat: js.UndefOr[Call] = js.native
   var animation: js.UndefOr[ReactComponentClass[PopoverAnimationProps]] = js.native
   var autoOk: js.UndefOr[Boolean] = js.native
   var cancelLabel: js.UndefOr[TagMod[Any]] = js.native
@@ -52,7 +52,7 @@ object DatePickerDialogProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDateTimeFormat(value: AnonCall): Self = {
+    def withDateTimeFormat(value: Call): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DateTimeFormat")(value.asInstanceOf[js.Any])
         ret

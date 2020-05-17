@@ -1,14 +1,14 @@
 package typingsSlinky.rcTreeSelect
 
 import typingsSlinky.rcTreeSelect.interfaceMod.SelectSource
-import typingsSlinky.rcTreeSelect.useKeyValueMappingMod._SkipType
+import typingsSlinky.rcTreeSelect.useKeyValueMappingMod.SkipType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object rcTreeSelectStrings {
   @js.native
-  sealed trait checkbox extends _SkipType
+  sealed trait checkbox extends SkipType
   
   @js.native
   sealed trait clear extends SelectSource
@@ -20,7 +20,7 @@ object rcTreeSelectStrings {
   sealed trait option extends SelectSource
   
   @js.native
-  sealed trait select extends _SkipType
+  sealed trait select extends SkipType
   
   @js.native
   sealed trait selection extends SelectSource

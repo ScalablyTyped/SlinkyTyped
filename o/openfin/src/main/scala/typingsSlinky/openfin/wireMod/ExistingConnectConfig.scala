@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ExistingConnectConfig
   extends ConfigWithUuid
-     with _ConnectConfig {
+     with ConnectConfig
+     with InternalConnectConfig {
   @JSName("address")
   var address_ExistingConnectConfig: String = js.native
 }

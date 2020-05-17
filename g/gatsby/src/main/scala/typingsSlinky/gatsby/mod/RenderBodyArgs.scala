@@ -3,7 +3,7 @@ package typingsSlinky.gatsby.mod
 import org.scalajs.dom.raw.HTMLBodyElement
 import org.scalajs.dom.raw.HTMLHtmlElement
 import slinky.core.TagMod
-import typingsSlinky.gatsby.AnonDel
+import typingsSlinky.gatsby.anon.Del
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,7 +25,7 @@ object RenderBodyArgs {
   def apply(
     actions: Actions,
     boundActionCreators: Actions,
-    cache: AnonDel,
+    cache: Del,
     createContentDigest: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof createContentDigest */ js.Any,
     createNodeId: js.Function,
     emitter: EventEmitter,

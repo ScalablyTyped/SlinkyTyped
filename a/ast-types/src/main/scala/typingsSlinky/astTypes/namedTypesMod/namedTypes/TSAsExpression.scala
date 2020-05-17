@@ -1,7 +1,7 @@
 package typingsSlinky.astTypes.namedTypesMod.namedTypes
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.astTypes.AnonParenthesized
+import typingsSlinky.astTypes.anon.Parenthesized
 import typingsSlinky.astTypes.kindsMod.CommentKind
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.kindsMod.NodeKind
@@ -25,7 +25,7 @@ trait TSAsExpression
      with PrintableKind {
   var comments: js.UndefOr[js.Array[CommentKind]] = js.native
   var expression: ExpressionKind = js.native
-  var extra: js.UndefOr[AnonParenthesized | Null] = js.native
+  var extra: js.UndefOr[Parenthesized | Null] = js.native
   var loc: js.UndefOr[SourceLocationKind] = js.native
   var `type`: typingsSlinky.astTypes.astTypesStrings.TSAsExpression = js.native
   var typeAnnotation: TSTypeKind = js.native

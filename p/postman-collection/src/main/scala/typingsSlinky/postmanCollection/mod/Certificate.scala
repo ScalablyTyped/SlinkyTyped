@@ -1,6 +1,6 @@
 package typingsSlinky.postmanCollection.mod
 
-import typingsSlinky.postmanCollection.AnonSrc
+import typingsSlinky.postmanCollection.anon.Src
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +12,8 @@ import scala.scalajs.js.annotation._
 @js.native
 class Certificate protected () extends Property[CertificateDefinition] {
   def this(options: CertificateDefinition) = this()
-  var cert: js.UndefOr[AnonSrc | String] = js.native
-  var key: js.UndefOr[AnonSrc | String] = js.native
+  var cert: js.UndefOr[Src | String] = js.native
+  var key: js.UndefOr[Src | String] = js.native
   var matches: js.UndefOr[js.Array[String] | UrlMatchPatternList] = js.native
   var passphrase: js.UndefOr[String] = js.native
   def canApplyTo(url: String): Boolean = js.native

@@ -1,7 +1,7 @@
 package typingsSlinky.obloUtil
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait ObloUtilStatic extends js.Object {
   def padZero(l: Double, n: Double): String = js.native
   def readDate(dateStr: String): js.Date = js.native
   def replicate[X](n: Double, x: X): js.Array[X] = js.native
-  def setAttr($elt: JQuery_[HTMLElement], attrName: String, isSet: Boolean): Unit = js.native
+  def setAttr($elt: JQuery[HTMLElement], attrName: String, isSet: Boolean): Unit = js.native
   def showDate(date: js.Date): String = js.native
   def showJSON(json: js.Any): String = js.native
   def showJSON(json: js.Any, indentStr: String): String = js.native

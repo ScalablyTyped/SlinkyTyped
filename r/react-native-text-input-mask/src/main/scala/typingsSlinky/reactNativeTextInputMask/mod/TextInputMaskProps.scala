@@ -13,10 +13,10 @@ import typingsSlinky.reactNative.mod.TextInputScrollEventData
 import typingsSlinky.reactNative.mod.TextInputSelectionChangeEventData
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewProps
-import typingsSlinky.reactNativeTextInputMask.AnonEnd
-import typingsSlinky.reactNativeTextInputMask.AnonNativeEvent
-import typingsSlinky.reactNativeTextInputMask.AnonNativeEventAnonContentSizeAnonHeight
-import typingsSlinky.reactNativeTextInputMask.AnonNativeEventAnonText
+import typingsSlinky.reactNativeTextInputMask.anon.End
+import typingsSlinky.reactNativeTextInputMask.anon.NativeEvent
+import typingsSlinky.reactNativeTextInputMask.anon.NativeEventContentSizeHeight
+import typingsSlinky.reactNativeTextInputMask.anon.NativeEventText
 import typingsSlinky.reactNativeTextInputMask.reactNativeTextInputMaskStrings.characters
 import typingsSlinky.reactNativeTextInputMask.reactNativeTextInputMaskStrings.none
 import typingsSlinky.reactNativeTextInputMask.reactNativeTextInputMaskStrings.sentences
@@ -110,7 +110,7 @@ trait TextInputMaskProps
   /**
     * Callback that is called when the text input's text changes.
     */
-  var onChange: js.UndefOr[js.Function1[/* event */ AnonNativeEvent, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* event */ NativeEvent, Unit]] = js.native
   var onChangeText: onChangeTextCallback = js.native
   /**
     * Callback that is called when the text input's content size changes.
@@ -119,11 +119,11 @@ trait TextInputMaskProps
     *
     * Only called for multiline text inputs.
     */
-  var onContentSizeChange: js.UndefOr[js.Function1[/* event */ AnonNativeEventAnonContentSizeAnonHeight, Unit]] = js.native
+  var onContentSizeChange: js.UndefOr[js.Function1[/* event */ NativeEventContentSizeHeight, Unit]] = js.native
   /**
     * Callback that is called when text input ends.
     */
-  var onEndEditing: js.UndefOr[js.Function1[/* event */ AnonNativeEventAnonText, Unit]] = js.native
+  var onEndEditing: js.UndefOr[js.Function1[/* event */ NativeEventText, Unit]] = js.native
   /**
     * Callback that is called when the text input is focused
     */
@@ -154,7 +154,7 @@ trait TextInputMaskProps
   /**
     * Callback that is called when the text input's submit button is pressed.
     */
-  var onSubmitEditing: js.UndefOr[js.Function1[/* event */ AnonNativeEventAnonText, Unit]] = js.native
+  var onSubmitEditing: js.UndefOr[js.Function1[/* event */ NativeEventText, Unit]] = js.native
   /**
     * The string that will be rendered before text input has been entered
     */
@@ -181,7 +181,7 @@ trait TextInputMaskProps
     * The start and end of the text input's selection. Set start and end to
     * the same value to position the cursor.
     */
-  var selection: js.UndefOr[AnonEnd] = js.native
+  var selection: js.UndefOr[End] = js.native
   /**
     * The highlight (and cursor on ios) color of the text input
     */
@@ -400,7 +400,7 @@ object TextInputMaskProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* event */ AnonNativeEvent => Unit): Self = {
+    def withOnChange(value: /* event */ NativeEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -412,7 +412,7 @@ object TextInputMaskProps {
         ret
     }
     @scala.inline
-    def withOnContentSizeChange(value: /* event */ AnonNativeEventAnonContentSizeAnonHeight => Unit): Self = {
+    def withOnContentSizeChange(value: /* event */ NativeEventContentSizeHeight => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContentSizeChange")(js.Any.fromFunction1(value))
         ret
@@ -424,7 +424,7 @@ object TextInputMaskProps {
         ret
     }
     @scala.inline
-    def withOnEndEditing(value: /* event */ AnonNativeEventAnonText => Unit): Self = {
+    def withOnEndEditing(value: /* event */ NativeEventText => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEndEditing")(js.Any.fromFunction1(value))
         ret
@@ -484,7 +484,7 @@ object TextInputMaskProps {
         ret
     }
     @scala.inline
-    def withOnSubmitEditing(value: /* event */ AnonNativeEventAnonText => Unit): Self = {
+    def withOnSubmitEditing(value: /* event */ NativeEventText => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmitEditing")(js.Any.fromFunction1(value))
         ret
@@ -556,7 +556,7 @@ object TextInputMaskProps {
         ret
     }
     @scala.inline
-    def withSelection(value: AnonEnd): Self = {
+    def withSelection(value: End): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
         ret

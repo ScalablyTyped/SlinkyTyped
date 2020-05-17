@@ -3,6 +3,9 @@ package typingsSlinky.officeUiFabricReact
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.officeUiFabricReact.anon.CheckboxVisibility
+import typingsSlinky.officeUiFabricReact.anon.CollapseAllVisibility
+import typingsSlinky.officeUiFabricReact.anon.IsSelectedOnFocus
 import typingsSlinky.officeUiFabricReact.detailsColumnTypesMod.IDetailsColumnProps
 import typingsSlinky.officeUiFabricReact.detailsHeaderTypesMod.IDetailsHeaderBaseProps
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IColumn
@@ -133,13 +136,13 @@ object detailsListMod extends js.Object {
   /* static members */
   @js.native
   object DetailsHeaderBase extends js.Object {
-    var defaultProps: AnonCollapseAllVisibility = js.native
+    var defaultProps: CollapseAllVisibility = js.native
   }
   
   /* static members */
   @js.native
   object DetailsListBase extends js.Object {
-    var defaultProps: AnonCheckboxVisibility = js.native
+    var defaultProps: CheckboxVisibility = js.native
   }
   
   @js.native
@@ -200,7 +203,7 @@ object detailsListMod extends js.Object {
   /* static members */
   @js.native
   object SelectionZone extends js.Object {
-    var defaultProps: AnonIsSelectedOnFocus = js.native
+    var defaultProps: IsSelectedOnFocus = js.native
     def getDerivedStateFromProps(nextProps: ISelectionZoneProps, prevState: ISelectionZoneState): ISelectionZoneState = js.native
   }
   

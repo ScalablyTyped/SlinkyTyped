@@ -1,0 +1,18 @@
+package typingsSlinky.winrtUwp.global.Windows.Foundation
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Represents a reference counted memory buffer. */
+@JSGlobal("Windows.Foundation.MemoryBuffer")
+@js.native
+class MemoryBuffer protected ()
+  extends typingsSlinky.winrtUwp.Windows.Foundation.MemoryBuffer {
+  /**
+    * Initializes a new MemoryBuffer instance with the specified capacity.
+    * @param capacity The desired size of the new memory buffer.
+    */
+  def this(capacity: Double) = this()
+}
+

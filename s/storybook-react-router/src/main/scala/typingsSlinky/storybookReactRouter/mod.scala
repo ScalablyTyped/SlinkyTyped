@@ -6,6 +6,7 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactRouter.mod.MemoryRouterProps
 import typingsSlinky.storybookAddons.typesMod.DecoratorFunction
+import typingsSlinky.storybookReactRouter.anon.Links
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,16 +16,16 @@ import scala.scalajs.js.annotation._
 object mod extends js.Object {
   @js.native
   class StoryRouter protected ()
-    extends Component[AnonLinks, js.Object, js.Any] {
-    def this(props: AnonLinks) = this()
-    def this(props: AnonLinks, context: js.Any) = this()
+    extends Component[Links, js.Object, js.Any] {
+    def this(props: Links) = this()
+    def this(props: Links, context: js.Any) = this()
   }
   
   def default(): DecoratorFunction[ReactElement] = js.native
   def default(links: js.Object): DecoratorFunction[ReactElement] = js.native
   def default(links: js.Object, routerProps: MemoryRouterProps): DecoratorFunction[ReactElement] = js.native
   @js.native
-  object StoryRouter extends TopLevel[ReactComponentClass[AnonLinks]]
+  object StoryRouter extends TopLevel[ReactComponentClass[Links]]
   
 }
 

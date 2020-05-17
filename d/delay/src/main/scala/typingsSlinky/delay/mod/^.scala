@@ -1,7 +1,7 @@
 package typingsSlinky.delay.mod
 
-import typingsSlinky.delay.AnonClearTimeout
-import typingsSlinky.delay.Optionsvalueunknown
+import typingsSlinky.delay.anon.ClearTimeout
+import typingsSlinky.delay.anon.Optionsvalueunknown
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ object ^ extends js.Object {
   	*/
   def apply(milliseconds: Double): ClearablePromise[Unit] = js.native
   def apply(milliseconds: Double, options: Options): ClearablePromise[Unit] = js.native
-  def createWithTimers(timers: AnonClearTimeout): Delay = js.native
+  def createWithTimers(timers: ClearTimeout): Delay = js.native
   /**
   	Create a promise which rejects after the specified `milliseconds`.
   	@param milliseconds - Milliseconds to delay the promise.

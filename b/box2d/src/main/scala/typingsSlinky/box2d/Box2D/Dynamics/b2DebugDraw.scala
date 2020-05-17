@@ -8,12 +8,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Box2D.Dynamics.b2DebugDraw")
 @js.native
-/**
-		* Constructor.
-		**/
-class b2DebugDraw () extends js.Object {
+trait b2DebugDraw extends js.Object {
   /**
   		* Append flags to the current flags.
   		* @param flags Flags to add.
@@ -139,33 +135,174 @@ class b2DebugDraw () extends js.Object {
   def SetXFormScale(xformScale: Double): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("Box2D.Dynamics.b2DebugDraw")
-@js.native
-object b2DebugDraw extends js.Object {
-  /**
-  		* Draw axis aligned bounding boxes.
-  		**/
-  var e_aabbBit: Double = js.native
-  /**
-  		* Draw center of mass frame.
-  		**/
-  var e_centerOfMassBit: Double = js.native
-  /**
-  		* Draw controllers.
-  		**/
-  var e_controllerBit: Double = js.native
-  /**
-  		* Draw joint connections.
-  		**/
-  var e_jointBit: Double = js.native
-  /**
-  		* Draw broad-phase pairs.
-  		**/
-  var e_pairBit: Double = js.native
-  /**
-  		* Draw shapes.
-  		**/
-  var e_shapeBit: Double = js.native
+object b2DebugDraw {
+  @scala.inline
+  def apply(
+    AppendFlags: Double => Unit,
+    ClearFlags: Double => Unit,
+    DrawCircle: (b2Vec2, Double, b2Color) => Unit,
+    DrawPolygon: (js.Array[b2Vec2], Double, b2Color) => Unit,
+    DrawSegment: (b2Vec2, b2Vec2, b2Color) => Unit,
+    DrawSolidCircle: (b2Vec2, Double, b2Vec2, b2Color) => Unit,
+    DrawSolidPolygon: (js.Array[b2Vec2], Double, b2Color) => Unit,
+    DrawTransform: b2Transform => Unit,
+    GetAlpha: () => Double,
+    GetDrawScale: () => Double,
+    GetFillAlpha: () => Double,
+    GetFlags: () => Double,
+    GetLineThickness: () => Double,
+    GetSprite: () => CanvasRenderingContext2D,
+    GetXFormScale: () => Double,
+    SetAlpha: Double => Unit,
+    SetDrawScale: Double => Unit,
+    SetFillAlpha: Double => Unit,
+    SetFlags: Double => Unit,
+    SetLineThickness: Double => Unit,
+    SetSprite: CanvasRenderingContext2D => Unit,
+    SetXFormScale: Double => Unit
+  ): b2DebugDraw = {
+    val __obj = js.Dynamic.literal(AppendFlags = js.Any.fromFunction1(AppendFlags), ClearFlags = js.Any.fromFunction1(ClearFlags), DrawCircle = js.Any.fromFunction3(DrawCircle), DrawPolygon = js.Any.fromFunction3(DrawPolygon), DrawSegment = js.Any.fromFunction3(DrawSegment), DrawSolidCircle = js.Any.fromFunction4(DrawSolidCircle), DrawSolidPolygon = js.Any.fromFunction3(DrawSolidPolygon), DrawTransform = js.Any.fromFunction1(DrawTransform), GetAlpha = js.Any.fromFunction0(GetAlpha), GetDrawScale = js.Any.fromFunction0(GetDrawScale), GetFillAlpha = js.Any.fromFunction0(GetFillAlpha), GetFlags = js.Any.fromFunction0(GetFlags), GetLineThickness = js.Any.fromFunction0(GetLineThickness), GetSprite = js.Any.fromFunction0(GetSprite), GetXFormScale = js.Any.fromFunction0(GetXFormScale), SetAlpha = js.Any.fromFunction1(SetAlpha), SetDrawScale = js.Any.fromFunction1(SetDrawScale), SetFillAlpha = js.Any.fromFunction1(SetFillAlpha), SetFlags = js.Any.fromFunction1(SetFlags), SetLineThickness = js.Any.fromFunction1(SetLineThickness), SetSprite = js.Any.fromFunction1(SetSprite), SetXFormScale = js.Any.fromFunction1(SetXFormScale))
+    __obj.asInstanceOf[b2DebugDraw]
+  }
+  @scala.inline
+  implicit class b2DebugDrawOps[Self <: b2DebugDraw] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppendFlags(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AppendFlags")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withClearFlags(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ClearFlags")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDrawCircle(value: (b2Vec2, Double, b2Color) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DrawCircle")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withDrawPolygon(value: (js.Array[b2Vec2], Double, b2Color) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DrawPolygon")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withDrawSegment(value: (b2Vec2, b2Vec2, b2Color) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DrawSegment")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withDrawSolidCircle(value: (b2Vec2, Double, b2Vec2, b2Color) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DrawSolidCircle")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withDrawSolidPolygon(value: (js.Array[b2Vec2], Double, b2Color) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DrawSolidPolygon")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withDrawTransform(value: b2Transform => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DrawTransform")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetAlpha(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetAlpha")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDrawScale(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetDrawScale")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetFillAlpha(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetFillAlpha")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetFlags(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetFlags")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLineThickness(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetLineThickness")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSprite(value: () => CanvasRenderingContext2D): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetSprite")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetXFormScale(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetXFormScale")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetAlpha(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetAlpha")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetDrawScale(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetDrawScale")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetFillAlpha(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetFillAlpha")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetFlags(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetFlags")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetLineThickness(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetLineThickness")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetSprite(value: CanvasRenderingContext2D => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetSprite")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetXFormScale(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetXFormScale")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

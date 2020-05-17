@@ -1,7 +1,7 @@
 package typingsSlinky.antdMobile.mod
 
-import typingsSlinky.antdMobile.AnonAntLocale
-import typingsSlinky.antdMobile.AnonLocale
+import typingsSlinky.antdMobile.anon.AntLocale
+import typingsSlinky.antdMobile.anon.Locale
 import typingsSlinky.antdMobile.localeProviderMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,7 @@ class LocaleProvider () extends default
 @JSImport("antd-mobile", "LocaleProvider")
 @js.native
 object LocaleProvider extends js.Object {
-  var childContextTypes: AnonAntLocale = js.native
-  var propTypes: AnonLocale = js.native
+  var childContextTypes: AntLocale = js.native
+  var propTypes: Locale = js.native
 }
 

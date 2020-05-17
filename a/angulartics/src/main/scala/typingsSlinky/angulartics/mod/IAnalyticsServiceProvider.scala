@@ -2,14 +2,14 @@ package typingsSlinky.angulartics.mod
 
 import typingsSlinky.angular.mod.ILocationService
 import typingsSlinky.angular.mod.IServiceProvider
-import typingsSlinky.angulartics.AnonBufferFlushDelay
+import typingsSlinky.angulartics.anon.BufferFlushDelay
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IAnalyticsServiceProvider extends IServiceProvider {
-  var settings: AnonBufferFlushDelay = js.native
+  var settings: BufferFlushDelay = js.native
   def developerMode(value: Boolean): Unit = js.native
   def excludeRoutes(value: js.Array[String]): Unit = js.native
   def firstPageview(value: Boolean): Unit = js.native
@@ -56,7 +56,7 @@ object IAnalyticsServiceProvider {
     registerSetUsername: js.Function1[/* username */ String, _] => Unit,
     registerTransactionTrack: js.Any => Unit,
     registerUserTimings: js.Function1[/* properties */ js.Any, _] => Unit,
-    settings: AnonBufferFlushDelay,
+    settings: BufferFlushDelay,
     trackExceptions: Boolean => Unit,
     trackRoutes: Boolean => Unit,
     trackStates: Boolean => Unit,
@@ -176,7 +176,7 @@ object IAnalyticsServiceProvider {
         ret
     }
     @scala.inline
-    def withSettings(value: AnonBufferFlushDelay): Self = {
+    def withSettings(value: BufferFlushDelay): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("settings")(value.asInstanceOf[js.Any])
         ret

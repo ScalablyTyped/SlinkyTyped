@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,9 +25,4 @@ trait HTMLMetaElement extends HTMLElement {
   /** @deprecated */
   var scheme: java.lang.String = js.native
 }
-
-@JSGlobal("HTMLMetaElement")
-@js.native
-object HTMLMetaElement
-  extends Instantiable0[org.scalajs.dom.raw.HTMLMetaElement]
 

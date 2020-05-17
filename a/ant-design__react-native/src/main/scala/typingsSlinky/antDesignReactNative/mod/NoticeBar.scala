@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.mod
 
-import typingsSlinky.antDesignReactNative.AnonOnPress
+import typingsSlinky.antDesignReactNative.anon.OnPress
 import typingsSlinky.antDesignReactNative.noticeBarMod.NoticeNativeProps
 import typingsSlinky.antDesignReactNative.noticeBarMod.default
 import scala.scalajs.js
@@ -17,6 +17,6 @@ class NoticeBar protected () extends default {
 @JSImport("@ant-design/react-native", "NoticeBar")
 @js.native
 object NoticeBar extends js.Object {
-  var defaultProps: AnonOnPress = js.native
+  var defaultProps: OnPress = js.native
 }
 

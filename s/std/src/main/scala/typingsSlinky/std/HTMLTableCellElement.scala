@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -66,9 +65,4 @@ trait HTMLTableCellElement extends HTMLElement {
   /** @deprecated */
   var width: java.lang.String = js.native
 }
-
-@JSGlobal("HTMLTableCellElement")
-@js.native
-object HTMLTableCellElement
-  extends Instantiable0[org.scalajs.dom.raw.HTMLTableCellElement]
 

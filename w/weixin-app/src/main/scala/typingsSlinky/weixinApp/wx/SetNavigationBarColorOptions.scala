@@ -1,6 +1,6 @@
 package typingsSlinky.weixinApp.wx
 
-import typingsSlinky.weixinApp.AnonDuration
+import typingsSlinky.weixinApp.anon.Duration
 import typingsSlinky.weixinApp.weixinAppStrings.Numbersign000000
 import typingsSlinky.weixinApp.weixinAppStrings.Numbersignffffff
 import scala.scalajs.js
@@ -13,7 +13,7 @@ trait SetNavigationBarColorOptions
   /**
   		 * 动画效果
   		 */
-  var animation: js.UndefOr[AnonDuration] = js.native
+  var animation: js.UndefOr[Duration] = js.native
   /**
   		 * 背景颜色值，有效值为十六进制颜色
   		 */
@@ -49,7 +49,7 @@ object SetNavigationBarColorOptions {
         ret
     }
     @scala.inline
-    def withAnimation(value: AnonDuration): Self = {
+    def withAnimation(value: Duration): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
         ret

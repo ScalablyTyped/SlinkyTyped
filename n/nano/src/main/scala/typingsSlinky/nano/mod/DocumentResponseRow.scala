@@ -1,6 +1,6 @@
 package typingsSlinky.nano.mod
 
-import typingsSlinky.nano.AnonRev
+import typingsSlinky.nano.anon.Rev
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait DocumentResponseRow[D] extends DocumentResponseRowMeta {
 
 object DocumentResponseRow {
   @scala.inline
-  def apply[D](id: String, key: String, value: AnonRev): DocumentResponseRow[D] = {
+  def apply[D](id: String, key: String, value: Rev): DocumentResponseRow[D] = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentResponseRow[D]]
   }

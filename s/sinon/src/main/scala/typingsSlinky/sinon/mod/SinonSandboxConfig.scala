@@ -1,6 +1,6 @@
 package typingsSlinky.sinon.mod
 
-import typingsSlinky.sinon.PartialSinonFakeTimersCon
+import typingsSlinky.sinon.anon.PartialSinonFakeTimersCon
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

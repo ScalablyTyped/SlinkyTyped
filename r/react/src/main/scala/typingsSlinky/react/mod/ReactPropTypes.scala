@@ -2,13 +2,13 @@ package typingsSlinky.react.mod
 
 import typingsSlinky.propTypes.mod.ReactElementLike
 import typingsSlinky.propTypes.mod.ReactNodeLike
-import typingsSlinky.react.Fn0
-import typingsSlinky.react.Fn1
-import typingsSlinky.react.Fn2
-import typingsSlinky.react.Fn3
-import typingsSlinky.react.FnCall
-import typingsSlinky.react.FnCallType
-import typingsSlinky.react.FnCallTypes
+import typingsSlinky.react.anon.Fn0
+import typingsSlinky.react.anon.Fn1
+import typingsSlinky.react.anon.Fn2
+import typingsSlinky.react.anon.Fn3
+import typingsSlinky.react.anon.FnCall
+import typingsSlinky.react.anon.FnCallType
+import typingsSlinky.react.anon.FnCallTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,5 @@
 package typingsSlinky.phaser
 
-import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.spine.Animation
 import typingsSlinky.phaser.spine.AnimationState
 import typingsSlinky.phaser.spine.AnimationStateData
@@ -19,21 +18,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("SpineGameObject")
 @js.native
-class SpineGameObject protected () extends js.Object {
-  def this(scene: Scene, pluginManager: SpinePlugin, x: Double, y: Double) = this()
-  def this(scene: Scene, pluginManager: SpinePlugin, x: Double, y: Double, key: String) = this()
-  def this(scene: Scene, pluginManager: SpinePlugin, x: Double, y: Double, key: String, animationName: String) = this()
-  def this(
-    scene: Scene,
-    pluginManager: SpinePlugin,
-    x: Double,
-    y: Double,
-    key: String,
-    animationName: String,
-    loop: Boolean
-  ) = this()
+trait SpineGameObject extends js.Object {
   var alpha: Double = js.native
   val blendMode: Double = js.native
   var blue: Double = js.native

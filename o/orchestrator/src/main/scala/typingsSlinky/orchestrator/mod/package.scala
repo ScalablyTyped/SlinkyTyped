@@ -13,11 +13,10 @@ package object mod {
   ]
   /** The module export of the sequencify package: https://www.npmjs.com/package/sequencify */
   type Sequencify = js.Function2[
-    /* tasks */ js.Array[typingsSlinky.orchestrator.AnonDep], 
+    /* tasks */ js.Array[typingsSlinky.orchestrator.anon.Dep], 
     /* names */ js.Array[java.lang.String], 
-    typingsSlinky.orchestrator.AnonMissingTasks
+    typingsSlinky.orchestrator.anon.MissingTasks
   ]
-  type Strings = java.lang.String | js.Array[java.lang.String]
   /** A task, can either call a callback to indicate task completion or return a promise or a stream: (task is marked complete when promise.then() resolves/fails or stream ends)
     */
   type TaskFunc = js.Function1[

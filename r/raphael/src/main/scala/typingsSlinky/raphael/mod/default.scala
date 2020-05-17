@@ -2,9 +2,9 @@ package typingsSlinky.raphael.mod
 
 import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Window
 import typingsSlinky.raphael.raphaelStrings.SVG
 import typingsSlinky.raphael.raphaelStrings.VML
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation._
   * @return A new raphael paper that can be used for drawing shapes to the canvas.
   */
 class default () extends RaphaelPaper[SVG | VML] {
-  def this(onReadyCallback: js.ThisFunction0[/* this */ Window_, Unit]) = this()
+  def this(onReadyCallback: js.ThisFunction0[/* this */ Window, Unit]) = this()
   def this(container: String, width: Double, height: Double) = this()
   /**
     * Creates a canvas object on which to draw. You must do this first, as all future calls to drawing methods

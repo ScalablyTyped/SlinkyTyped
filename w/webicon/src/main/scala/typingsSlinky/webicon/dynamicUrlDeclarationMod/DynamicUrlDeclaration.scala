@@ -1,13 +1,16 @@
 package typingsSlinky.webicon.dynamicUrlDeclarationMod
 
 import typingsSlinky.webicon.staticUrlDeclarationMod.StaticUrlDeclaration
+import typingsSlinky.webicon.urlConfigMod.UrlConfig
 import typingsSlinky.webicon.urlDeclarationBaseMod.UrlDeclarationBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DynamicUrlDeclaration[T] extends UrlDeclarationBase {
+trait DynamicUrlDeclaration[T]
+  extends UrlDeclarationBase
+     with UrlConfig[T] {
   /**
     * Either the actual url or a function for generating the url.
     */

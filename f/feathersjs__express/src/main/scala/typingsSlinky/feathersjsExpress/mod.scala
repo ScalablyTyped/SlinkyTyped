@@ -3,7 +3,7 @@ package typingsSlinky.feathersjsExpress
 import typingsSlinky.bodyParser.mod.OptionsJson
 import typingsSlinky.bodyParser.mod.OptionsUrlencoded
 import typingsSlinky.connect.mod.NextHandleFunction
-import typingsSlinky.express.Typeofm
+import typingsSlinky.express.anon.Typeofm
 import typingsSlinky.express.mod.Application_
 import typingsSlinky.express.mod.ErrorRequestHandler
 import typingsSlinky.express.mod.IRouterHandler
@@ -18,6 +18,10 @@ import typingsSlinky.expressServeStaticCore.mod.Request
 import typingsSlinky.expressServeStaticCore.mod.RequestHandler
 import typingsSlinky.expressServeStaticCore.mod.RequestHandlerParams
 import typingsSlinky.expressServeStaticCore.mod.Response
+import typingsSlinky.feathersjsExpress.anon.Html
+import typingsSlinky.feathersjsExpress.anon.PartialServiceMethodsanyS
+import typingsSlinky.feathersjsExpress.anon.Typeofexpress
+import typingsSlinky.feathersjsExpress.anon.Typeofself
 import typingsSlinky.feathersjsExpress.feathersjsExpressStrings.use
 import typingsSlinky.serveStatic.mod.ServeStaticOptions
 import typingsSlinky.std.Exclude
@@ -49,7 +53,7 @@ object mod extends js.Object {
   def Router(): typingsSlinky.expressServeStaticCore.mod.Router = js.native
   def Router(options: RouterOptions): typingsSlinky.expressServeStaticCore.mod.Router = js.native
   def errorHandler(): ErrorRequestHandler[ParamsDictionary, _, _, Query] = js.native
-  def errorHandler(options: AnonHtml): ErrorRequestHandler[ParamsDictionary, _, _, Query] = js.native
+  def errorHandler(options: Html): ErrorRequestHandler[ParamsDictionary, _, _, Query] = js.native
   def notFound(): typingsSlinky.express.mod.RequestHandler[ParamsDictionary, _, _, Query] = js.native
   /**
     * This is a built-in middleware function in Express. It parses incoming requests with JSON payloads and is based on body-parser.

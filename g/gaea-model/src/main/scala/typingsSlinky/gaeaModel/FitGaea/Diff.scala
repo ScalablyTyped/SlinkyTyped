@@ -1,11 +1,11 @@
 package typingsSlinky.gaeaModel.FitGaea
 
-import typingsSlinky.gaeaModel.AnonBeforeName
-import typingsSlinky.gaeaModel.AnonComponentInfo
-import typingsSlinky.gaeaModel.AnonIndex
-import typingsSlinky.gaeaModel.AnonNewIndex
-import typingsSlinky.gaeaModel.AnonNewValue
-import typingsSlinky.gaeaModel.AnonSourceIndex
+import typingsSlinky.gaeaModel.anon.BeforeName
+import typingsSlinky.gaeaModel.anon.ComponentInfo
+import typingsSlinky.gaeaModel.anon.Index
+import typingsSlinky.gaeaModel.anon.NewIndex
+import typingsSlinky.gaeaModel.anon.NewValue
+import typingsSlinky.gaeaModel.anon.SourceIndex
 import typingsSlinky.gaeaModel.gaeaModelStrings.add
 import typingsSlinky.gaeaModel.gaeaModelStrings.addCombo
 import typingsSlinky.gaeaModel.gaeaModelStrings.addSource
@@ -22,27 +22,27 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Diff extends js.Object {
   // 新增操作
-  var add: js.UndefOr[AnonIndex] = js.native
+  var add: js.UndefOr[Index] = js.native
   // 新增组合
-  var addCombo: js.UndefOr[AnonComponentInfo] = js.native
+  var addCombo: js.UndefOr[ComponentInfo] = js.native
   // 新增模板
-  var addSource: js.UndefOr[AnonComponentInfo] = js.native
+  var addSource: js.UndefOr[ComponentInfo] = js.native
   // 内部交换顺序
-  var exchange: js.UndefOr[AnonNewIndex] = js.native
+  var exchange: js.UndefOr[NewIndex] = js.native
   // 操作组件的 mapUniqueKey
   var mapUniqueKey: String = js.native
   // 移动到另一个父元素
-  var move: js.UndefOr[AnonSourceIndex] = js.native
+  var move: js.UndefOr[SourceIndex] = js.native
   // 粘贴操作
   var paste: js.UndefOr[DiffRemove] = js.native
   // 删除组件
   var remove: js.UndefOr[DiffRemove] = js.native
   // 重置组件
-  var reset: js.UndefOr[AnonBeforeName] = js.native
+  var reset: js.UndefOr[BeforeName] = js.native
   // 操作类型
   var `type`: add | move | remove | exchange | update | paste | reset | addCombo | addSource = js.native
   // 更新操作
-  var update: js.UndefOr[AnonNewValue] = js.native
+  var update: js.UndefOr[NewValue] = js.native
 }
 
 object Diff {
@@ -74,7 +74,7 @@ object Diff {
         ret
     }
     @scala.inline
-    def withAdd(value: AnonIndex): Self = {
+    def withAdd(value: Index): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("add")(value.asInstanceOf[js.Any])
         ret
@@ -86,7 +86,7 @@ object Diff {
         ret
     }
     @scala.inline
-    def withAddCombo(value: AnonComponentInfo): Self = {
+    def withAddCombo(value: ComponentInfo): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addCombo")(value.asInstanceOf[js.Any])
         ret
@@ -98,7 +98,7 @@ object Diff {
         ret
     }
     @scala.inline
-    def withAddSource(value: AnonComponentInfo): Self = {
+    def withAddSource(value: ComponentInfo): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addSource")(value.asInstanceOf[js.Any])
         ret
@@ -110,7 +110,7 @@ object Diff {
         ret
     }
     @scala.inline
-    def withExchange(value: AnonNewIndex): Self = {
+    def withExchange(value: NewIndex): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("exchange")(value.asInstanceOf[js.Any])
         ret
@@ -122,7 +122,7 @@ object Diff {
         ret
     }
     @scala.inline
-    def withMove(value: AnonSourceIndex): Self = {
+    def withMove(value: SourceIndex): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("move")(value.asInstanceOf[js.Any])
         ret
@@ -158,7 +158,7 @@ object Diff {
         ret
     }
     @scala.inline
-    def withReset(value: AnonBeforeName): Self = {
+    def withReset(value: BeforeName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(value.asInstanceOf[js.Any])
         ret
@@ -170,7 +170,7 @@ object Diff {
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonNewValue): Self = {
+    def withUpdate(value: NewValue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(value.asInstanceOf[js.Any])
         ret

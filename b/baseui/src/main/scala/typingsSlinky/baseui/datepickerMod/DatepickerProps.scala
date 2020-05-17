@@ -1,10 +1,10 @@
 package typingsSlinky.baseui.datepickerMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.baseui.AnonBeginDate
-import typingsSlinky.baseui.AnonDate
-import typingsSlinky.baseui.AnonDateDate
-import typingsSlinky.baseui.AnonDateEvent
+import typingsSlinky.baseui.anon.BeginDate
+import typingsSlinky.baseui.anon.Date
+import typingsSlinky.baseui.anon.DateDate
+import typingsSlinky.baseui.anon.DateEvent
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.horizontal
@@ -42,18 +42,18 @@ trait DatepickerProps extends js.Object {
   var mountNode: js.UndefOr[HTMLElement] = js.native
   var onChange: js.UndefOr[typingsSlinky.baseui.datepickerMod.onChange] = js.native
   var onClose: js.UndefOr[js.Function0[_]] = js.native
-  var onDayClick: js.UndefOr[js.Function1[/* args */ AnonDateEvent, _]] = js.native
-  var onDayMouseLeave: js.UndefOr[js.Function1[/* args */ AnonDateEvent, _]] = js.native
-  var onDayMouseOver: js.UndefOr[js.Function1[/* args */ AnonDateEvent, _]] = js.native
-  var onMonthChange: js.UndefOr[js.Function1[/* args */ AnonDateDate, _]] = js.native
-  var onYearChange: js.UndefOr[js.Function1[/* args */ AnonDateDate, _]] = js.native
+  var onDayClick: js.UndefOr[js.Function1[/* args */ DateEvent, _]] = js.native
+  var onDayMouseLeave: js.UndefOr[js.Function1[/* args */ DateEvent, _]] = js.native
+  var onDayMouseOver: js.UndefOr[js.Function1[/* args */ DateEvent, _]] = js.native
+  var onMonthChange: js.UndefOr[js.Function1[/* args */ DateDate, _]] = js.native
+  var onYearChange: js.UndefOr[js.Function1[/* args */ DateDate, _]] = js.native
   var orientation: js.UndefOr[horizontal | vertical] = js.native
   var overrides: js.UndefOr[DatepickerOverrides[SharedStylePropsT]] = js.native
   var peekNextMonth: js.UndefOr[Boolean] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var positive: js.UndefOr[Boolean] = js.native
   var quickSelect: js.UndefOr[Boolean] = js.native
-  var quickSelectOptions: js.UndefOr[js.Array[AnonBeginDate]] = js.native
+  var quickSelectOptions: js.UndefOr[js.Array[BeginDate]] = js.native
   var range: js.UndefOr[Boolean] = js.native
   var required: js.UndefOr[Boolean] = js.native
   var size: js.UndefOr[mini | default_ | compact | large_] = js.native
@@ -310,7 +310,7 @@ object DatepickerProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* args */ AnonDate => js.Any): Self = {
+    def withOnChange(value: /* args */ Date => js.Any): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -334,7 +334,7 @@ object DatepickerProps {
         ret
     }
     @scala.inline
-    def withOnDayClick(value: /* args */ AnonDateEvent => _): Self = {
+    def withOnDayClick(value: /* args */ DateEvent => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDayClick")(js.Any.fromFunction1(value))
         ret
@@ -346,7 +346,7 @@ object DatepickerProps {
         ret
     }
     @scala.inline
-    def withOnDayMouseLeave(value: /* args */ AnonDateEvent => _): Self = {
+    def withOnDayMouseLeave(value: /* args */ DateEvent => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDayMouseLeave")(js.Any.fromFunction1(value))
         ret
@@ -358,7 +358,7 @@ object DatepickerProps {
         ret
     }
     @scala.inline
-    def withOnDayMouseOver(value: /* args */ AnonDateEvent => _): Self = {
+    def withOnDayMouseOver(value: /* args */ DateEvent => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDayMouseOver")(js.Any.fromFunction1(value))
         ret
@@ -370,7 +370,7 @@ object DatepickerProps {
         ret
     }
     @scala.inline
-    def withOnMonthChange(value: /* args */ AnonDateDate => _): Self = {
+    def withOnMonthChange(value: /* args */ DateDate => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMonthChange")(js.Any.fromFunction1(value))
         ret
@@ -382,7 +382,7 @@ object DatepickerProps {
         ret
     }
     @scala.inline
-    def withOnYearChange(value: /* args */ AnonDateDate => _): Self = {
+    def withOnYearChange(value: /* args */ DateDate => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onYearChange")(js.Any.fromFunction1(value))
         ret
@@ -466,7 +466,7 @@ object DatepickerProps {
         ret
     }
     @scala.inline
-    def withQuickSelectOptions(value: js.Array[AnonBeginDate]): Self = {
+    def withQuickSelectOptions(value: js.Array[BeginDate]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("quickSelectOptions")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.honeybadger.mod
 
-import typingsSlinky.std.Console_
+import org.scalajs.dom.raw.Console
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait ConfigureOptions extends js.Object {
   var environment: js.UndefOr[String] = js.native
   var filters: js.UndefOr[js.Array[String]] = js.native
   var hostname: js.UndefOr[String] = js.native
-  var logger: js.UndefOr[Console_] = js.native
+  var logger: js.UndefOr[Console] = js.native
   var projectRoot: js.UndefOr[String] = js.native
 }
 
@@ -96,7 +96,7 @@ object ConfigureOptions {
         ret
     }
     @scala.inline
-    def withLogger(value: Console_): Self = {
+    def withLogger(value: Console): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
         ret

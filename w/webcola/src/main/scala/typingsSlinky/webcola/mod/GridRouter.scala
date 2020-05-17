@@ -1,6 +1,6 @@
 package typingsSlinky.webcola.mod
 
-import typingsSlinky.webcola.AnonArrowpath
+import typingsSlinky.webcola.anon.Arrowpath
 import typingsSlinky.webcola.gridrouterMod.NodeAccessor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,7 +29,7 @@ object GridRouter extends js.Object {
     cornerradius: Double,
     arrowwidth: Double,
     arrowheight: Double
-  ): AnonArrowpath = js.native
+  ): Arrowpath = js.native
   def getSegmentSets(routes: js.Any, x: js.Any, y: js.Any): js.Array[_] = js.native
   def makeSegments(path: js.Array[typingsSlinky.webcola.geomMod.Point]): js.Array[js.Array[typingsSlinky.webcola.geomMod.Point]] = js.native
   def nudgeSegments(

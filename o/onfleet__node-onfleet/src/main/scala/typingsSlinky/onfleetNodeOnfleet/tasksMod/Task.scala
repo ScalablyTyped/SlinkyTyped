@@ -1,6 +1,6 @@
 package typingsSlinky.onfleetNodeOnfleet.tasksMod
 
-import typingsSlinky.onfleetNodeOnfleet.PartialCreateTaskProps
+import typingsSlinky.onfleetNodeOnfleet.anon.PartialCreateTaskProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

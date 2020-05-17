@@ -1,6 +1,6 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonFail
+import typingsSlinky.aliApp.anon.Fail
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait TextRiskIdentificationOptions
   		 */
   var content: String = js.native
   @JSName("success")
-  var success_TextRiskIdentificationOptions: js.UndefOr[js.Function1[/* res */ AnonFail, Unit]] = js.native
+  var success_TextRiskIdentificationOptions: js.UndefOr[js.Function1[/* res */ Fail, Unit]] = js.native
   /**
   		 * 识别类型：keyword 表示关键词、0 表示广告、1表示涉政、2表示涉黄、3表示低俗辱骂
   		 */
@@ -46,7 +46,7 @@ object TextRiskIdentificationOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonFail => Unit): Self = {
+    def withSuccess(value: /* res */ Fail => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

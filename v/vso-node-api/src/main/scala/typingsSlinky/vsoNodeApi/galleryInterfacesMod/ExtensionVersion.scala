@@ -1,6 +1,6 @@
 package typingsSlinky.vsoNodeApi.galleryInterfacesMod
 
-import typingsSlinky.vsoNodeApi.AnonKeyValue
+import typingsSlinky.vsoNodeApi.anon.KeyValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait ExtensionVersion extends js.Object {
   var files: js.Array[ExtensionFile] = js.native
   var flags: ExtensionVersionFlags = js.native
   var lastUpdated: js.Date = js.native
-  var properties: js.Array[AnonKeyValue] = js.native
+  var properties: js.Array[KeyValue] = js.native
   var validationResultMessage: String = js.native
   var version: String = js.native
   var versionDescription: String = js.native
@@ -28,7 +28,7 @@ object ExtensionVersion {
     files: js.Array[ExtensionFile],
     flags: ExtensionVersionFlags,
     lastUpdated: js.Date,
-    properties: js.Array[AnonKeyValue],
+    properties: js.Array[KeyValue],
     validationResultMessage: String,
     version: String,
     versionDescription: String
@@ -79,7 +79,7 @@ object ExtensionVersion {
         ret
     }
     @scala.inline
-    def withProperties(value: js.Array[AnonKeyValue]): Self = {
+    def withProperties(value: js.Array[KeyValue]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
         ret

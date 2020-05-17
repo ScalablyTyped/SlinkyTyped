@@ -4,7 +4,7 @@ import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -32,7 +32,7 @@ import typingsSlinky.reactNative.reactNativeStrings.polite
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.yes
-import typingsSlinky.reactNativePhotoView.AnonX
+import typingsSlinky.reactNativePhotoView.anon.X
 import typingsSlinky.reactNativePhotoView.mod.ReactNativePhotoViewProps
 import typingsSlinky.reactNativePhotoView.mod.default
 import typingsSlinky.reactNativePhotoView.reactNativePhotoViewStrings.center
@@ -154,7 +154,7 @@ object ReactNativePhotoView {
     @scala.inline
     def onStartShouldSetResponderCapture(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onStartShouldSetResponderCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onTap(value: (/* point */ AnonX, /* target */ js.UndefOr[ReactElement]) => Unit): this.type = set("onTap", js.Any.fromFunction2(value))
+    def onTap(value: (/* point */ X, /* target */ js.UndefOr[ReactElement]) => Unit): this.type = set("onTap", js.Any.fromFunction2(value))
     @scala.inline
     def onTouchCancel(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))
     @scala.inline
@@ -166,7 +166,7 @@ object ReactNativePhotoView {
     @scala.inline
     def onTouchStart(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchStart", js.Any.fromFunction1(value))
     @scala.inline
-    def onViewTap(value: (/* point */ AnonX, /* target */ js.UndefOr[ReactElement]) => Unit): this.type = set("onViewTap", js.Any.fromFunction2(value))
+    def onViewTap(value: (/* point */ X, /* target */ js.UndefOr[ReactElement]) => Unit): this.type = set("onViewTap", js.Any.fromFunction2(value))
     @scala.inline
     def pointerEvents(value: `box-none` | none | `box-only` | auto): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
     @scala.inline

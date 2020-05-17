@@ -1,6 +1,6 @@
 package typingsSlinky.carbonIconHelpers.mod
 
-import typingsSlinky.carbonIconHelpers.AnonHeight
+import typingsSlinky.carbonIconHelpers.anon.Height
 import typingsSlinky.carbonIconHelpers.carbonIconHelpersStrings.rect
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Rect extends js.Object {
-  var attrs: AnonHeight = js.native
+  var attrs: Height = js.native
   var elem: rect = js.native
 }
 
 object Rect {
   @scala.inline
-  def apply(attrs: AnonHeight, elem: rect): Rect = {
+  def apply(attrs: Height, elem: rect): Rect = {
     val __obj = js.Dynamic.literal(attrs = attrs.asInstanceOf[js.Any], elem = elem.asInstanceOf[js.Any])
     __obj.asInstanceOf[Rect]
   }
@@ -25,7 +25,7 @@ object Rect {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAttrs(value: AnonHeight): Self = {
+    def withAttrs(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("attrs")(value.asInstanceOf[js.Any])
         ret

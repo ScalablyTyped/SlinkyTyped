@@ -1,7 +1,7 @@
 package typingsSlinky.gatsby.mod
 
-import typingsSlinky.gatsby.AnonOptions
-import typingsSlinky.gatsby.AnonPrefix
+import typingsSlinky.gatsby.anon.Options
+import typingsSlinky.gatsby.anon.Prefix
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,14 +15,14 @@ trait GatsbyConfig extends js.Object {
   /** It’s common for sites to be hosted somewhere other than the root of their domain. Say we have a Gatsby site at `example.com/blog/`. In this case, we would need a prefix (`/blog`) added to all paths on the site. */
   var pathPrefix: js.UndefOr[String] = js.native
   /** Plugins are Node.js packages that implement Gatsby APIs. The config file accepts an array of plugins. Some plugins may need only to be listed by name, while others may take options. */
-  var plugins: js.UndefOr[js.Array[String | AnonOptions]] = js.native
+  var plugins: js.UndefOr[js.Array[String | Options]] = js.native
   /** Gatsby uses the ES6 Promise API. Because some browsers don't support this, Gatsby includes a Promise polyfill by default. If you'd like to provide your own Promise polyfill, you can set `polyfill` to false.*/
   var polyfill: js.UndefOr[Boolean] = js.native
   /**
     * Setting the proxy config option will tell the develop server to proxy any unknown requests to your specified server.
     * @see https://www.gatsbyjs.org/docs/api-proxy/
     * */
-  var proxy: js.UndefOr[AnonPrefix] = js.native
+  var proxy: js.UndefOr[Prefix] = js.native
   /** When you want to reuse common pieces of data across the site (for example, your site title), you can store that here. */
   var siteMetadata: js.UndefOr[Record[String, _]] = js.native
 }
@@ -76,7 +76,7 @@ object GatsbyConfig {
         ret
     }
     @scala.inline
-    def withPlugins(value: js.Array[String | AnonOptions]): Self = {
+    def withPlugins(value: js.Array[String | Options]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("plugins")(value.asInstanceOf[js.Any])
         ret
@@ -100,7 +100,7 @@ object GatsbyConfig {
         ret
     }
     @scala.inline
-    def withProxy(value: AnonPrefix): Self = {
+    def withProxy(value: Prefix): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("proxy")(value.asInstanceOf[js.Any])
         ret

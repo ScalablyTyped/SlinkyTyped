@@ -9,9 +9,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides access to the messages stored on an SMS Device and information about the message store. */
-@JSGlobal("Windows.Devices.Sms.SmsDeviceMessageStore")
 @js.native
-abstract class SmsDeviceMessageStore () extends js.Object {
+trait SmsDeviceMessageStore extends js.Object {
   /** Indicates the maximum number of messages that can be stored in the device store. The client can use this value to determine how to maintain enough space in the device store to receive new messages from the network. */
   var maxMessages: Double = js.native
   /**
@@ -38,5 +37,57 @@ abstract class SmsDeviceMessageStore () extends js.Object {
     * @return Returns a new message operation object that is used to start and track the asynchronous operation.
     */
   def getMessagesAsync(messageFilter: SmsMessageFilter): IPromiseWithIAsyncOperationWithProgress[IVectorView[_], Double] = js.native
+}
+
+object SmsDeviceMessageStore {
+  @scala.inline
+  def apply(
+    deleteMessageAsync: Double => IPromiseWithIAsyncAction,
+    deleteMessagesAsync: SmsMessageFilter => IPromiseWithIAsyncAction,
+    getMessageAsync: Double => IPromiseWithIAsyncOperation[ISmsMessage],
+    getMessagesAsync: SmsMessageFilter => IPromiseWithIAsyncOperationWithProgress[IVectorView[_], Double],
+    maxMessages: Double
+  ): SmsDeviceMessageStore = {
+    val __obj = js.Dynamic.literal(deleteMessageAsync = js.Any.fromFunction1(deleteMessageAsync), deleteMessagesAsync = js.Any.fromFunction1(deleteMessagesAsync), getMessageAsync = js.Any.fromFunction1(getMessageAsync), getMessagesAsync = js.Any.fromFunction1(getMessagesAsync), maxMessages = maxMessages.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SmsDeviceMessageStore]
+  }
+  @scala.inline
+  implicit class SmsDeviceMessageStoreOps[Self <: SmsDeviceMessageStore] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeleteMessageAsync(value: Double => IPromiseWithIAsyncAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteMessageAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDeleteMessagesAsync(value: SmsMessageFilter => IPromiseWithIAsyncAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteMessagesAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetMessageAsync(value: Double => IPromiseWithIAsyncOperation[ISmsMessage]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMessageAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetMessagesAsync(value: SmsMessageFilter => IPromiseWithIAsyncOperationWithProgress[IVectorView[_], Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMessagesAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMaxMessages(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxMessages")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,15 +1,15 @@
 package typingsSlinky.steamLogin.mod
 
-import typingsSlinky.steamLogin.AnonAvatar
-import typingsSlinky.steamLogin.AnonLarge
+import typingsSlinky.steamLogin.anon.Avatar
+import typingsSlinky.steamLogin.anon.Large
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SteamUser extends js.Object {
-  var _json: AnonAvatar = js.native
-  var avatar: AnonLarge = js.native
+  var _json: Avatar = js.native
+  var avatar: Large = js.native
   var name: String = js.native
   var profile: String = js.native
   var steamid: String = js.native
@@ -18,14 +18,7 @@ trait SteamUser extends js.Object {
 
 object SteamUser {
   @scala.inline
-  def apply(
-    _json: AnonAvatar,
-    avatar: AnonLarge,
-    name: String,
-    profile: String,
-    steamid: String,
-    username: String
-  ): SteamUser = {
+  def apply(_json: Avatar, avatar: Large, name: String, profile: String, steamid: String, username: String): SteamUser = {
     val __obj = js.Dynamic.literal(_json = _json.asInstanceOf[js.Any], avatar = avatar.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], profile = profile.asInstanceOf[js.Any], steamid = steamid.asInstanceOf[js.Any], username = username.asInstanceOf[js.Any])
     __obj.asInstanceOf[SteamUser]
   }
@@ -36,13 +29,13 @@ object SteamUser {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_json(value: AnonAvatar): Self = {
+    def with_json(value: Avatar): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("_json")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withAvatar(value: AnonLarge): Self = {
+    def withAvatar(value: Large): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("avatar")(value.asInstanceOf[js.Any])
         ret

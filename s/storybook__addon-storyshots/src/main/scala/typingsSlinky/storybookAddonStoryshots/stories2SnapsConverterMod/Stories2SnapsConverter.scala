@@ -1,7 +1,7 @@
 package typingsSlinky.storybookAddonStoryshots.stories2SnapsConverterMod
 
-import typingsSlinky.storybookAddonStoryshots.AnonFileName
-import typingsSlinky.storybookAddonStoryshots.PartialStories2SnapsConve
+import typingsSlinky.storybookAddonStoryshots.anon.FileName
+import typingsSlinky.storybookAddonStoryshots.anon.PartialStories2SnapsConve
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ class Stories2SnapsConverter () extends js.Object {
   var options: Stories2SnapsConverterOptions = js.native
   def getPossibleStoriesFiles(storyshotFile: String): js.Array[String] = js.native
   def getSnapshotExtension(): String = js.native
-  def getSnapshotFileName(context: AnonFileName): String = js.native
+  def getSnapshotFileName(context: FileName): String = js.native
   def getStoryshotFile(fileName: String): String = js.native
 }
 

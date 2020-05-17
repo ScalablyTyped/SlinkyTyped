@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,8 +33,4 @@ trait Lighting
     */
   var displayUTCOffset: Double = js.native
 }
-
-@JSGlobal("__esri.Lighting")
-@js.native
-object Lighting extends TopLevel[LightingConstructor]
 

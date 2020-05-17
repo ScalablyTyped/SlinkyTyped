@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientMirror.gapi.client.mirror
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientMirror.AnonAlt
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientMirror.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SettingsResource extends js.Object {
   /** Gets a single setting by ID. */
-  def get(request: AnonAlt): Request_[Setting] = js.native
+  def get(request: Alt): Request[Setting] = js.native
 }
 
 object SettingsResource {
   @scala.inline
-  def apply(get: AnonAlt => Request_[Setting]): SettingsResource = {
+  def apply(get: Alt => Request[Setting]): SettingsResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get))
     __obj.asInstanceOf[SettingsResource]
   }
@@ -25,7 +25,7 @@ object SettingsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonAlt => Request_[Setting]): Self = {
+    def withGet(value: Alt => Request[Setting]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret

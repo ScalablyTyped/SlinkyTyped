@@ -17,3 +17,24 @@ import scala.scalajs.js.annotation._
 */
 trait OutputType extends js.Object
 
+object OutputType {
+  @scala.inline
+  def base64: typingsSlinky.jszip.jszipStrings.base64 = "base64".asInstanceOf[typingsSlinky.jszip.jszipStrings.base64]
+  @scala.inline
+  def text: typingsSlinky.jszip.jszipStrings.text = "text".asInstanceOf[typingsSlinky.jszip.jszipStrings.text]
+  @scala.inline
+  def string: typingsSlinky.jszip.jszipStrings.string = "string".asInstanceOf[typingsSlinky.jszip.jszipStrings.string]
+  @scala.inline
+  def binarystring: typingsSlinky.jszip.jszipStrings.binarystring = "binarystring".asInstanceOf[typingsSlinky.jszip.jszipStrings.binarystring]
+  @scala.inline
+  def array: typingsSlinky.jszip.jszipStrings.array = "array".asInstanceOf[typingsSlinky.jszip.jszipStrings.array]
+  @scala.inline
+  def uint8array: typingsSlinky.jszip.jszipStrings.uint8array = "uint8array".asInstanceOf[typingsSlinky.jszip.jszipStrings.uint8array]
+  @scala.inline
+  def arraybuffer: typingsSlinky.jszip.jszipStrings.arraybuffer = "arraybuffer".asInstanceOf[typingsSlinky.jszip.jszipStrings.arraybuffer]
+  @scala.inline
+  def blob: typingsSlinky.jszip.jszipStrings.blob = "blob".asInstanceOf[typingsSlinky.jszip.jszipStrings.blob]
+  @scala.inline
+  def nodebuffer: typingsSlinky.jszip.jszipStrings.nodebuffer = "nodebuffer".asInstanceOf[typingsSlinky.jszip.jszipStrings.nodebuffer]
+}
+

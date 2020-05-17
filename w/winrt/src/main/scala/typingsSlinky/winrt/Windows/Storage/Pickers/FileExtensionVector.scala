@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Storage.Pickers.FileExtensionVector")
 @js.native
-class FileExtensionVector () extends IVector[String]
+trait FileExtensionVector extends IVector[String]
 

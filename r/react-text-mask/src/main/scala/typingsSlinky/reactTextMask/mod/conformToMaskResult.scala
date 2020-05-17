@@ -1,6 +1,6 @@
 package typingsSlinky.reactTextMask.mod
 
-import typingsSlinky.reactTextMask.AnonSomeCharsRejected
+import typingsSlinky.reactTextMask.anon.SomeCharsRejected
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait conformToMaskResult extends js.Object {
   var conformedValue: String = js.native
-  var meta: AnonSomeCharsRejected = js.native
+  var meta: SomeCharsRejected = js.native
 }
 
 object conformToMaskResult {
   @scala.inline
-  def apply(conformedValue: String, meta: AnonSomeCharsRejected): conformToMaskResult = {
+  def apply(conformedValue: String, meta: SomeCharsRejected): conformToMaskResult = {
     val __obj = js.Dynamic.literal(conformedValue = conformedValue.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any])
     __obj.asInstanceOf[conformToMaskResult]
   }
@@ -30,7 +30,7 @@ object conformToMaskResult {
         ret
     }
     @scala.inline
-    def withMeta(value: AnonSomeCharsRejected): Self = {
+    def withMeta(value: SomeCharsRejected): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
         ret

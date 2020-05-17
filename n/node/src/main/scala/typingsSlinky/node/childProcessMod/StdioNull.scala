@@ -1,5 +1,6 @@
 package typingsSlinky.node.childProcessMod
 
+import typingsSlinky.node.streamMod.Stream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,4 +11,13 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.node.streamMod.Stream
 */
 trait StdioNull extends js.Object
+
+object StdioNull {
+  @scala.inline
+  def inherit: typingsSlinky.node.nodeStrings.inherit = "inherit".asInstanceOf[typingsSlinky.node.nodeStrings.inherit]
+  @scala.inline
+  def ignore: typingsSlinky.node.nodeStrings.ignore = "ignore".asInstanceOf[typingsSlinky.node.nodeStrings.ignore]
+  @scala.inline
+  implicit def apply(value: Stream): StdioNull = value.asInstanceOf[StdioNull]
+}
 

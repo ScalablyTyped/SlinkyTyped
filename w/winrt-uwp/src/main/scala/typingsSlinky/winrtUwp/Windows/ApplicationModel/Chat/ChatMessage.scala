@@ -7,10 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a chat message. */
-@JSGlobal("Windows.ApplicationModel.Chat.ChatMessage")
 @js.native
-/** Creates a new instance of the ChatMessage class. */
-class ChatMessage () extends js.Object {
+trait ChatMessage extends js.Object {
   /** Gets a list of chat message attachments. */
   var attachments: IVector[ChatMessageAttachment] = js.native
   /** Gets or sets the body of the chat message. */
@@ -65,5 +63,211 @@ class ChatMessage () extends js.Object {
   var transportFriendlyName: String = js.native
   /** Gets or sets the transport ID of the message. */
   var transportId: String = js.native
+}
+
+object ChatMessage {
+  @scala.inline
+  def apply(
+    attachments: IVector[ChatMessageAttachment],
+    body: String,
+    estimatedDownloadSize: Double,
+    from: String,
+    id: String,
+    isAutoReply: Boolean,
+    isForwardingDisabled: Boolean,
+    isIncoming: Boolean,
+    isRead: Boolean,
+    isReceivedDuringQuietHours: Boolean,
+    isReplyDisabled: Boolean,
+    isSeen: Boolean,
+    isSimMessage: Boolean,
+    localTimestamp: js.Date,
+    messageKind: ChatMessageKind,
+    messageOperatorKind: ChatMessageOperatorKind,
+    networkTimestamp: js.Date,
+    recipientSendStatuses: IMapView[String, ChatMessageStatus],
+    recipients: IVector[String],
+    recipientsDeliveryInfos: IVector[ChatRecipientDeliveryInfo],
+    remoteId: String,
+    shouldSuppressNotification: Boolean,
+    status: ChatMessageStatus,
+    subject: String,
+    threadingInfo: ChatConversationThreadingInfo,
+    transportFriendlyName: String,
+    transportId: String
+  ): ChatMessage = {
+    val __obj = js.Dynamic.literal(attachments = attachments.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], estimatedDownloadSize = estimatedDownloadSize.asInstanceOf[js.Any], from = from.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isAutoReply = isAutoReply.asInstanceOf[js.Any], isForwardingDisabled = isForwardingDisabled.asInstanceOf[js.Any], isIncoming = isIncoming.asInstanceOf[js.Any], isRead = isRead.asInstanceOf[js.Any], isReceivedDuringQuietHours = isReceivedDuringQuietHours.asInstanceOf[js.Any], isReplyDisabled = isReplyDisabled.asInstanceOf[js.Any], isSeen = isSeen.asInstanceOf[js.Any], isSimMessage = isSimMessage.asInstanceOf[js.Any], localTimestamp = localTimestamp.asInstanceOf[js.Any], messageKind = messageKind.asInstanceOf[js.Any], messageOperatorKind = messageOperatorKind.asInstanceOf[js.Any], networkTimestamp = networkTimestamp.asInstanceOf[js.Any], recipientSendStatuses = recipientSendStatuses.asInstanceOf[js.Any], recipients = recipients.asInstanceOf[js.Any], recipientsDeliveryInfos = recipientsDeliveryInfos.asInstanceOf[js.Any], remoteId = remoteId.asInstanceOf[js.Any], shouldSuppressNotification = shouldSuppressNotification.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any], threadingInfo = threadingInfo.asInstanceOf[js.Any], transportFriendlyName = transportFriendlyName.asInstanceOf[js.Any], transportId = transportId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ChatMessage]
+  }
+  @scala.inline
+  implicit class ChatMessageOps[Self <: ChatMessage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttachments(value: IVector[ChatMessageAttachment]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBody(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEstimatedDownloadSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("estimatedDownloadSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFrom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsAutoReply(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAutoReply")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsForwardingDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isForwardingDisabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsIncoming(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isIncoming")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsRead(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRead")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsReceivedDuringQuietHours(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isReceivedDuringQuietHours")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsReplyDisabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isReplyDisabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsSeen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSeen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsSimMessage(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSimMessage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocalTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessageKind(value: ChatMessageKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageKind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessageOperatorKind(value: ChatMessageOperatorKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("messageOperatorKind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNetworkTimestamp(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkTimestamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRecipientSendStatuses(value: IMapView[String, ChatMessageStatus]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientSendStatuses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRecipients(value: IVector[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipients")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRecipientsDeliveryInfos(value: IVector[ChatRecipientDeliveryInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipientsDeliveryInfos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoteId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShouldSuppressNotification(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldSuppressNotification")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: ChatMessageStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubject(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subject")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThreadingInfo(value: ChatConversationThreadingInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("threadingInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTransportFriendlyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transportFriendlyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTransportId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transportId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

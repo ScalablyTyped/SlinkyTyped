@@ -52,18 +52,6 @@ object ParsedDomain {
         ret
     }
     @scala.inline
-    def withError(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutError: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withSld(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sld")(value.asInstanceOf[js.Any])

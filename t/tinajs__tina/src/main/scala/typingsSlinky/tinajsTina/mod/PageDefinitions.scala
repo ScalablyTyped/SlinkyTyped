@@ -1,6 +1,6 @@
 package typingsSlinky.tinajsTina.mod
 
-import typingsSlinky.tinajsTina.PartialPageDefinitions
+import typingsSlinky.tinajsTina.anon.PartialPageDefinitions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

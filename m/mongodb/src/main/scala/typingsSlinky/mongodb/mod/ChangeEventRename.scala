@@ -1,7 +1,7 @@
 package typingsSlinky.mongodb.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.mongodb.AnonColl
+import typingsSlinky.mongodb.anon.Coll
 import typingsSlinky.mongodb.mongodbStrings.rename
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ trait ChangeEventRename[TSchema /* <: StringDictionary[js.Any] */]
   extends ChangeEventBase[TSchema]
      with ChangeEvent[TSchema] {
   var operationType: rename = js.native
-  var to: AnonColl = js.native
+  var to: Coll = js.native
 }
 
 object ChangeEventRename {
@@ -20,9 +20,9 @@ object ChangeEventRename {
   def apply[TSchema](
     _id: ResumeToken,
     clusterTime: typingsSlinky.bson.mod.Timestamp,
-    ns: AnonColl,
+    ns: Coll,
     operationType: rename,
-    to: AnonColl
+    to: Coll
   ): ChangeEventRename[TSchema] = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], clusterTime = clusterTime.asInstanceOf[js.Any], ns = ns.asInstanceOf[js.Any], operationType = operationType.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChangeEventRename[TSchema]]
@@ -40,7 +40,7 @@ object ChangeEventRename {
         ret
     }
     @scala.inline
-    def withTo(value: AnonColl): Self[TSchema] = {
+    def withTo(value: Coll): Self[TSchema] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
         ret

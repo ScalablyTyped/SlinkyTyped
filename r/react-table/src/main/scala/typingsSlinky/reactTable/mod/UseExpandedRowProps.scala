@@ -1,6 +1,6 @@
 package typingsSlinky.reactTable.mod
 
-import typingsSlinky.reactTable.PartialTableExpandedToggl
+import typingsSlinky.reactTable.anon.PartialTableExpandedToggl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Instruction")
 @js.native
-class Instruction () extends js.Object {
+trait Instruction extends js.Object {
   /**
     * Address (EIP) of this instruction.
     */
@@ -33,20 +32,62 @@ class Instruction () extends js.Object {
   var size: Double = js.native
 }
 
-/* static members */
-@JSGlobal("Instruction")
-@js.native
-object Instruction extends js.Object {
-  /**
-    * Parses the instruction at the `target` address in memory.
-    *
-    * Note that on 32-bit ARM this address must have its least significant bit
-    * set to 0 for ARM functions, and 1 for Thumb functions. Frida takes care
-    * of this detail for you if you get the address from a Frida API, for
-    * example `Module.getExportByName()`.
-    *
-    * @param target Memory location containing instruction to parse.
-    */
-  def parse(target: NativePointerValue): Instruction | X86Instruction | ArmInstruction | Arm64Instruction | MipsInstruction = js.native
+object Instruction {
+  @scala.inline
+  def apply(
+    address: NativePointer,
+    groups: js.Array[String],
+    mnemonic: String,
+    next: NativePointer,
+    opStr: String,
+    size: Double
+  ): Instruction = {
+    val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], groups = groups.asInstanceOf[js.Any], mnemonic = mnemonic.asInstanceOf[js.Any], next = next.asInstanceOf[js.Any], opStr = opStr.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Instruction]
+  }
+  @scala.inline
+  implicit class InstructionOps[Self <: Instruction] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddress(value: NativePointer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGroups(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMnemonic(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mnemonic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNext(value: NativePointer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("next")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOpStr(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opStr")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

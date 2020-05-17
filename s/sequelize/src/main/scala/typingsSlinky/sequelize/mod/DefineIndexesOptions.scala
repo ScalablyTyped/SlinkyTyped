@@ -1,6 +1,6 @@
 package typingsSlinky.sequelize.mod
 
-import typingsSlinky.sequelize.AnonAttribute
+import typingsSlinky.sequelize.anon.Attribute
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +24,7 @@ trait DefineIndexesOptions extends js.Object {
     * (field name), `length` (create a prefix index of length chars), `order` (the direction the column
     * should be sorted in), `collate` (the collation (sort order) for the column)
     */
-  var fields: js.UndefOr[js.Array[String | fn | AnonAttribute]] = js.native
+  var fields: js.UndefOr[js.Array[String | fn | Attribute]] = js.native
   /**
     * The method to create the index by (`USING` statement in SQL). BTREE and HASH are supported by mysql and
     * postgres, and postgres additionally supports GIST and GIN.
@@ -83,7 +83,7 @@ object DefineIndexesOptions {
         ret
     }
     @scala.inline
-    def withFields(value: js.Array[String | fn | AnonAttribute]): Self = {
+    def withFields(value: js.Array[String | fn | Attribute]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fields")(value.asInstanceOf[js.Any])
         ret

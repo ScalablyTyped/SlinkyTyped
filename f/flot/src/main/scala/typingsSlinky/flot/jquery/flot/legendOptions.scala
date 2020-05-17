@@ -1,7 +1,7 @@
 package typingsSlinky.flot.jquery.flot
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait legendOptions extends js.Object {
          //null or color
   var backgroundOpacity: js.UndefOr[Double] = js.native
     // between 0 and 1
-  var container: js.UndefOr[JQuery_[HTMLElement]] = js.native
+  var container: js.UndefOr[JQuery[HTMLElement]] = js.native
    //  null or (fn: string, series object -> string)
   var labelBoxBorderColor: js.UndefOr[js.Any] = js.native
   var labelFormatter: js.UndefOr[js.Function2[/* label */ String, /* series */ js.Any, String]] = js.native
@@ -64,7 +64,7 @@ object legendOptions {
         ret
     }
     @scala.inline
-    def withContainer(value: JQuery_[HTMLElement]): Self = {
+    def withContainer(value: JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
         ret

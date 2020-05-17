@@ -1,7 +1,7 @@
 package typingsSlinky.vexJs.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IVexOptions extends js.Object {
   var afterClose: js.UndefOr[js.Function0[Unit]] = js.native
-  var afterOpen: js.UndefOr[js.Function1[/* vexContent */ JQuery_[HTMLElement], Unit]] = js.native
-  var appendLocation: js.UndefOr[HTMLElement | JQuery_[HTMLElement] | String] = js.native
+  var afterOpen: js.UndefOr[js.Function1[/* vexContent */ JQuery[HTMLElement], Unit]] = js.native
+  var appendLocation: js.UndefOr[HTMLElement | JQuery[HTMLElement] | String] = js.native
   var className: js.UndefOr[String] = js.native
   var closeCSS: js.UndefOr[ICSSAttributes] = js.native
   var closeClassName: js.UndefOr[String] = js.native
@@ -50,7 +50,7 @@ object IVexOptions {
         ret
     }
     @scala.inline
-    def withAfterOpen(value: /* vexContent */ JQuery_[HTMLElement] => Unit): Self = {
+    def withAfterOpen(value: /* vexContent */ JQuery[HTMLElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterOpen")(js.Any.fromFunction1(value))
         ret
@@ -68,7 +68,7 @@ object IVexOptions {
         ret
     }
     @scala.inline
-    def withAppendLocation(value: HTMLElement | JQuery_[HTMLElement] | String): Self = {
+    def withAppendLocation(value: HTMLElement | JQuery[HTMLElement] | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("appendLocation")(value.asInstanceOf[js.Any])
         ret

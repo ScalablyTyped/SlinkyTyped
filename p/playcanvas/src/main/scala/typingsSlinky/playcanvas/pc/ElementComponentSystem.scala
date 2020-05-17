@@ -11,9 +11,6 @@ import scala.scalajs.js.annotation._
   * @classdesc Manages creation of {@link pc.ElementComponent}s.
   * @param {pc.Application} app - The application.
   */
-@JSGlobal("pc.ElementComponentSystem")
 @js.native
-class ElementComponentSystem protected () extends ComponentSystem {
-  def this(app: Application) = this()
-}
+trait ElementComponentSystem extends ComponentSystem
 

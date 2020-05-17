@@ -7,7 +7,7 @@ import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.experimental.Response
 import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.FormData
-import typingsSlinky.reduxApiMiddleware.FnCall
+import typingsSlinky.reduxApiMiddleware.anon.FnCall
 import typingsSlinky.reduxApiMiddleware.reduxApiMiddlewareStrings.DELETE
 import typingsSlinky.reduxApiMiddleware.reduxApiMiddlewareStrings.GET
 import typingsSlinky.reduxApiMiddleware.reduxApiMiddlewareStrings.HEAD

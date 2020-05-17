@@ -6,8 +6,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ComponentSelector
-  extends _CSSInterpolation
-     with _Interpolation[js.Any] {
+  extends CSSInterpolation
+     with Interpolation[js.Any] {
   var __emotion_styles: js.Any = js.native
 }
 

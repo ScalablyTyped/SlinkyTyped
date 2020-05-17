@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonIndent
+import typingsSlinky.devextreme.anon.Indent
 import typingsSlinky.devextreme.devextremeStrings.Bright
 import typingsSlinky.devextreme.devextremeStrings.Carmine
 import typingsSlinky.devextreme.devextremeStrings.Default
@@ -60,7 +60,7 @@ trait CommonIndicator extends js.Object {
   /** Specifies the spindle's diameter in pixels for the indicator of a needle-like type. */
   var spindleSize: js.UndefOr[Double] = js.native
   /** Specifies the appearance of the text displayed in an indicator of the rangeBar type. */
-  var text: js.UndefOr[AnonIndent] = js.native
+  var text: js.UndefOr[Indent] = js.native
   /** Specifies the orientation of the rangeBar indicator. Applies only if the geometry.orientation option is "horizontal". */
   var verticalOrientation: js.UndefOr[bottom | top] = js.native
   /** Specifies the width of an indicator in pixels. */
@@ -262,7 +262,7 @@ object CommonIndicator {
         ret
     }
     @scala.inline
-    def withText(value: AnonIndent): Self = {
+    def withText(value: Indent): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
         ret

@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents information about a TextRequested event. */
-@JSGlobal("Windows.UI.Text.Core.CoreTextTextRequest")
 @js.native
-abstract class CoreTextTextRequest () extends js.Object {
+trait CoreTextTextRequest extends js.Object {
   /** Gets a value that indicates whether the text request operation is canceled. */
   var isCanceled: Boolean = js.native
   /** Gets a value that indicates the range of text being requested by the text input server. The server populates this property before raising the event. */
@@ -20,5 +19,45 @@ abstract class CoreTextTextRequest () extends js.Object {
     * @return A Deferral object.
     */
   def getDeferral(): Deferral = js.native
+}
+
+object CoreTextTextRequest {
+  @scala.inline
+  def apply(getDeferral: () => Deferral, isCanceled: Boolean, range: CoreTextRange, text: String): CoreTextTextRequest = {
+    val __obj = js.Dynamic.literal(getDeferral = js.Any.fromFunction0(getDeferral), isCanceled = isCanceled.asInstanceOf[js.Any], range = range.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CoreTextTextRequest]
+  }
+  @scala.inline
+  implicit class CoreTextTextRequestOps[Self <: CoreTextTextRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetDeferral(value: () => Deferral): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDeferral")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsCanceled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCanceled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRange(value: CoreTextRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

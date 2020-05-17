@@ -1,7 +1,7 @@
 package typingsSlinky.blueprintjsTable.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.blueprintjsTable.ValidationMapIColumnInter
+import typingsSlinky.blueprintjsTable.anon.ValidationMapIColumnInter
 import typingsSlinky.blueprintjsTable.columnHeaderCellMod.IColumnHeaderCellProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

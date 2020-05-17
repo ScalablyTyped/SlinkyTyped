@@ -3,7 +3,7 @@ package typingsSlinky.antd.generateCalendarMod
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.AnonLang
+import typingsSlinky.antd.anon.Lang
 import typingsSlinky.antd.antdStrings.large
 import typingsSlinky.antd.antdStrings.ltr
 import typingsSlinky.antd.antdStrings.rtl
@@ -38,7 +38,7 @@ trait PickerPanelTimeProps[DateType] extends PickerProps[DateType] {
   var hideDisabledOptions: js.UndefOr[Boolean] = js.native
   var hideHeader: js.UndefOr[Boolean] = js.native
   var hourStep: js.UndefOr[Double] = js.native
-  var locale: js.UndefOr[AnonLang] = js.native
+  var locale: js.UndefOr[Lang] = js.native
   var minuteStep: js.UndefOr[Double] = js.native
   var mode: js.UndefOr[PanelMode] = js.native
   var monthCellRender: js.UndefOr[MonthCellRender[DateType]] = js.native
@@ -250,7 +250,7 @@ object PickerPanelTimeProps {
         ret
     }
     @scala.inline
-    def withLocale(value: AnonLang): Self[DateType] = {
+    def withLocale(value: Lang): Self[DateType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
         ret

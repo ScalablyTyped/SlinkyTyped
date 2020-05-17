@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientDiscovery.gapi.client.discovery
 
-import typingsSlinky.gapiClientDiscovery.AnonDescription
+import typingsSlinky.gapiClientDiscovery.anon.Description
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait DirectoryList extends js.Object {
   /** Indicate the version of the Discovery API used to generate this doc. */
   var discoveryVersion: js.UndefOr[String] = js.native
   /** The individual directory entries. One entry per api/version pair. */
-  var items: js.UndefOr[js.Array[AnonDescription]] = js.native
+  var items: js.UndefOr[js.Array[Description]] = js.native
   /** The kind for this response. */
   var kind: js.UndefOr[String] = js.native
 }
@@ -40,7 +40,7 @@ object DirectoryList {
         ret
     }
     @scala.inline
-    def withItems(value: js.Array[AnonDescription]): Self = {
+    def withItems(value: js.Array[Description]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
         ret

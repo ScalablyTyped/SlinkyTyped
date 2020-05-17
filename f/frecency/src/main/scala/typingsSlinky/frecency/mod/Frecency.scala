@@ -1,9 +1,9 @@
 package typingsSlinky.frecency.mod
 
-import typingsSlinky.frecency.AnonFrecencyScore
-import typingsSlinky.frecency.AnonKeepScores
-import typingsSlinky.frecency.AnonSearchQuery
-import typingsSlinky.frecency.AnonSearchResults
+import typingsSlinky.frecency.anon.FrecencyScore
+import typingsSlinky.frecency.anon.KeepScores
+import typingsSlinky.frecency.anon.SearchQuery
+import typingsSlinky.frecency.anon.SearchResults
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,17 +11,17 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Frecency[T] extends js.Object {
   var sort: js.Function1[
-    (/* arg */ AnonKeepScores[T]) | (/* arg */ AnonSearchResults[T]), 
-    js.Array[(T with AnonFrecencyScore) | T]
+    (/* arg */ KeepScores[T]) | (/* arg */ SearchResults[T]), 
+    js.Array[(T with FrecencyScore) | T]
   ] = js.native
-  def save(arg: AnonSearchQuery[T]): Unit = js.native
+  def save(arg: SearchQuery[T]): Unit = js.native
 }
 
 object Frecency {
   @scala.inline
   def apply[T](
-    save: AnonSearchQuery[T] => Unit,
-    sort: (/* arg */ AnonKeepScores[T]) | (/* arg */ AnonSearchResults[T]) => js.Array[(T with AnonFrecencyScore) | T]
+    save: SearchQuery[T] => Unit,
+    sort: (/* arg */ KeepScores[T]) | (/* arg */ SearchResults[T]) => js.Array[(T with FrecencyScore) | T]
   ): Frecency[T] = {
     val __obj = js.Dynamic.literal(save = js.Any.fromFunction1(save), sort = js.Any.fromFunction1(sort))
     __obj.asInstanceOf[Frecency[T]]
@@ -33,14 +33,14 @@ object Frecency {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withSave(value: AnonSearchQuery[T] => Unit): Self[T] = {
+    def withSave(value: SearchQuery[T] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("save")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
     def withSort(
-      value: (/* arg */ AnonKeepScores[T]) | (/* arg */ AnonSearchResults[T]) => js.Array[(T with AnonFrecencyScore) | T]
+      value: (/* arg */ KeepScores[T]) | (/* arg */ SearchResults[T]) => js.Array[(T with FrecencyScore) | T]
     ): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(js.Any.fromFunction1(value))

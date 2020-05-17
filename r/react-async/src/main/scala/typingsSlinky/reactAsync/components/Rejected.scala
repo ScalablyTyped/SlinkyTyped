@@ -1,6 +1,6 @@
 package typingsSlinky.reactAsync.components
 
-import typingsSlinky.reactAsync.AnonChildrenPersist
+import typingsSlinky.reactAsync.anon.ChildrenPersist
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ object Rejected {
   @js.native
   object component extends js.Object
   
-  def withProps[T](p: AnonChildrenPersist[T]): SharedBuilder_AnonChildrenPersist_425814917[T] = new SharedBuilder_AnonChildrenPersist_425814917[T](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make[T](companion: Rejected.type): SharedBuilder_AnonChildrenPersist_425814917[T] = new SharedBuilder_AnonChildrenPersist_425814917[T](js.Array(this.component, js.Dictionary.empty))()
+  def withProps[T](p: ChildrenPersist[T]): SharedBuilder_ChildrenPersist_12507261[T] = new SharedBuilder_ChildrenPersist_12507261[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[T](companion: Rejected.type): SharedBuilder_ChildrenPersist_12507261[T] = new SharedBuilder_ChildrenPersist_12507261[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

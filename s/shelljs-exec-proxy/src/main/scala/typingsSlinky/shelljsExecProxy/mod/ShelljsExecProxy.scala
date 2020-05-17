@@ -3,8 +3,8 @@ package typingsSlinky.shelljsExecProxy.mod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.node.NodeJS.ProcessEnv
 import typingsSlinky.node.childProcessMod.ChildProcess
-import typingsSlinky.shelljs.ExecOptionsasyncfalse
-import typingsSlinky.shelljs.ExecOptionsasynctrue
+import typingsSlinky.shelljs.anon.ExecOptionsasyncfalse
+import typingsSlinky.shelljs.anon.ExecOptionsasynctrue
 import typingsSlinky.shelljs.mod.ExecCallback
 import typingsSlinky.shelljs.mod.ExecOptions
 import typingsSlinky.shelljs.mod.HeadOptions

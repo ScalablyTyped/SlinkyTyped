@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeChartsWrapper.mod
 
-import typingsSlinky.reactNativeChartsWrapper.AnonAngle
+import typingsSlinky.reactNativeChartsWrapper.anon.Angle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait LineRadarConfig extends js.Object {
   var drawFilled: js.UndefOr[Boolean] = js.native
   var fillAlpha: js.UndefOr[Double] = js.native
   var fillColor: js.UndefOr[Color] = js.native
-  var fillGradient: js.UndefOr[AnonAngle] = js.native
+  var fillGradient: js.UndefOr[Angle] = js.native
   var lineWidth: js.UndefOr[Double] = js.native
 }
 
@@ -63,7 +63,7 @@ object LineRadarConfig {
         ret
     }
     @scala.inline
-    def withFillGradient(value: AnonAngle): Self = {
+    def withFillGradient(value: Angle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fillGradient")(value.asInstanceOf[js.Any])
         ret

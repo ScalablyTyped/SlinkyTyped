@@ -3,7 +3,7 @@ package typingsSlinky.reactMarkdown.components
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactMarkdown.PartialRemarkParseOptions
+import typingsSlinky.reactMarkdown.anon.PartialRemarkParseOptions
 import typingsSlinky.reactMarkdown.mod.LinkTargetResolver
 import typingsSlinky.reactMarkdown.mod.MarkdownAbstractSyntaxTree
 import typingsSlinky.reactMarkdown.mod.MdastPlugin

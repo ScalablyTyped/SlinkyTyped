@@ -1,7 +1,7 @@
 package typingsSlinky.sendgrid.mod.SendGrid.Helpers.Mail
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.sendgrid.AnonCc
+import typingsSlinky.sendgrid.anon.Cc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +24,7 @@ trait Personalization extends js.Object {
   def getTos(): js.Array[Email] = js.native
   def setSendAt(sendAt: Double): Unit = js.native
   def setSubject(subject: String): Unit = js.native
-  def toJSON(): AnonCc = js.native
+  def toJSON(): Cc = js.native
 }
 
 object Personalization {
@@ -46,7 +46,7 @@ object Personalization {
     getTos: () => js.Array[Email],
     setSendAt: Double => Unit,
     setSubject: String => Unit,
-    toJSON: () => AnonCc
+    toJSON: () => Cc
   ): Personalization = {
     val __obj = js.Dynamic.literal(addBcc = js.Any.fromFunction1(addBcc), addCc = js.Any.fromFunction1(addCc), addCustomArg = js.Any.fromFunction1(addCustomArg), addHeader = js.Any.fromFunction1(addHeader), addSubstitution = js.Any.fromFunction1(addSubstitution), addTo = js.Any.fromFunction1(addTo), getBccs = js.Any.fromFunction0(getBccs), getCcs = js.Any.fromFunction0(getCcs), getCustomArgs = js.Any.fromFunction0(getCustomArgs), getHeaders = js.Any.fromFunction0(getHeaders), getSendAt = js.Any.fromFunction0(getSendAt), getSubject = js.Any.fromFunction0(getSubject), getSubstitutions = js.Any.fromFunction0(getSubstitutions), getTos = js.Any.fromFunction0(getTos), setSendAt = js.Any.fromFunction1(setSendAt), setSubject = js.Any.fromFunction1(setSubject), toJSON = js.Any.fromFunction0(toJSON))
     __obj.asInstanceOf[Personalization]
@@ -154,7 +154,7 @@ object Personalization {
         ret
     }
     @scala.inline
-    def withToJSON(value: () => AnonCc): Self = {
+    def withToJSON(value: () => Cc): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
         ret

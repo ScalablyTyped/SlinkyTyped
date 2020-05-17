@@ -1,8 +1,8 @@
 package typingsSlinky.babylonjs.animatableMod
 
-import typingsSlinky.babylonjs.AnonAnimations
-import typingsSlinky.babylonjs.AnonOriginalValue
 import typingsSlinky.babylonjs.animationMod.Animation
+import typingsSlinky.babylonjs.anon.Animations
+import typingsSlinky.babylonjs.anon.OriginalValue
 import typingsSlinky.babylonjs.mathVectorMod.Quaternion
 import typingsSlinky.babylonjs.nodeMod.Node
 import typingsSlinky.babylonjs.runtimeAnimationMod.RuntimeAnimation
@@ -24,9 +24,9 @@ object babylonjsSceneAugmentingMod extends js.Object {
     /** @hidden */
     def _processLateAnimationBindings(): Unit = js.native
     /** @hidden */
-    def _processLateAnimationBindingsForMatrices(holder: AnonAnimations): js.Any = js.native
+    def _processLateAnimationBindingsForMatrices(holder: Animations): js.Any = js.native
     /** @hidden */
-    def _processLateAnimationBindingsForQuaternions(holder: AnonOriginalValue, refQuaternion: Quaternion): Quaternion = js.native
+    def _processLateAnimationBindingsForQuaternions(holder: OriginalValue, refQuaternion: Quaternion): Quaternion = js.native
     /** @hidden */
     def _registerTargetForLateAnimationBinding(runtimeAnimation: RuntimeAnimation, originalValue: js.Any): Unit = js.native
     /**

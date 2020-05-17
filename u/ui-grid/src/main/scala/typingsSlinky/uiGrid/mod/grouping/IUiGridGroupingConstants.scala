@@ -1,6 +1,6 @@
 package typingsSlinky.uiGrid.mod.grouping
 
-import typingsSlinky.uiGrid.AnonAVG_
+import typingsSlinky.uiGrid.anon.AVG_
 import typingsSlinky.uiGrid.mod.ISharedTreeConstants
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,7 @@ object IUiGridGroupingConstants {
   def apply(
     COLLAPSED: String,
     EXPANDED: String,
-    aggregation: AnonAVG_,
+    aggregation: AVG_,
     featureName: String,
     rowHeaderColName: String
   ): IUiGridGroupingConstants = {

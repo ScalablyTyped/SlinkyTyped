@@ -1,7 +1,7 @@
 package typingsSlinky.formstate.typesMod
 
-import typingsSlinky.formstate.AnonHasError
-import typingsSlinky.formstate.AnonValue
+import typingsSlinky.formstate.anon.HasError
+import typingsSlinky.formstate.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait Validatable[TValue] extends js.Object {
   var validating: Boolean = js.native
   def disableAutoValidation(): Unit = js.native
   def enableAutoValidation(): Unit = js.native
-  def validate(): js.Promise[AnonHasError | AnonValue[TValue]] = js.native
+  def validate(): js.Promise[HasError | Value[TValue]] = js.native
 }
 
 object Validatable {
@@ -25,7 +25,7 @@ object Validatable {
     disableAutoValidation: () => Unit,
     enableAutoValidation: () => Unit,
     hasError: Boolean,
-    validate: () => js.Promise[AnonHasError | AnonValue[TValue]],
+    validate: () => js.Promise[HasError | Value[TValue]],
     validating: Boolean
   ): Validatable[TValue] = {
     val __obj = js.Dynamic.literal($ = $.asInstanceOf[js.Any], disableAutoValidation = js.Any.fromFunction0(disableAutoValidation), enableAutoValidation = js.Any.fromFunction0(enableAutoValidation), hasError = hasError.asInstanceOf[js.Any], validate = js.Any.fromFunction0(validate), validating = validating.asInstanceOf[js.Any])
@@ -62,7 +62,7 @@ object Validatable {
         ret
     }
     @scala.inline
-    def withValidate(value: () => js.Promise[AnonHasError | AnonValue[TValue]]): Self[TValue] = {
+    def withValidate(value: () => js.Promise[HasError | Value[TValue]]): Self[TValue] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(js.Any.fromFunction0(value))
         ret

@@ -19,11 +19,6 @@ object mod extends js.Object {
     def this(info: typingsSlinky.appBuilderLib.packagerMod.Packager, buildVersion: String) = this()
     def this(
       info: typingsSlinky.appBuilderLib.packagerMod.Packager,
-      buildVersion: js.UndefOr[scala.Nothing],
-      platformSpecificOptions: PlatformSpecificBuildOptions
-    ) = this()
-    def this(
-      info: typingsSlinky.appBuilderLib.packagerMod.Packager,
       buildVersion: String,
       platformSpecificOptions: PlatformSpecificBuildOptions
     ) = this()

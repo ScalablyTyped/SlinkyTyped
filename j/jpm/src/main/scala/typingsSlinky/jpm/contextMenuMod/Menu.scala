@@ -1,7 +1,7 @@
 package typingsSlinky.jpm.contextMenuMod
 
 import org.scalajs.dom.experimental.URL
-import typingsSlinky.jpm.AnonContentScript
+import typingsSlinky.jpm.anon.ContentScript
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,6 +23,6 @@ trait Menu extends ItemMenuSeparator {
 @JSImport("sdk/context-menu", "Menu")
 @js.native
 object Menu extends js.Object {
-  def apply(options: AnonContentScript): Menu = js.native
+  def apply(options: ContentScript): Menu = js.native
 }
 

@@ -7,12 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * A command to toggle justified paragraph alignment on and off.
   */
-@JSGlobal("ToggleParagraphAlignmentJustifyCommand")
 @js.native
-class ToggleParagraphAlignmentJustifyCommand () extends CommandWithBooleanStateBase {
+trait ToggleParagraphAlignmentJustifyCommand extends CommandWithBooleanStateBase {
   /**
     * Executes the ToggleParagraphAlignmentJustifyCommand command.
     */
   def execute(): Boolean = js.native
+}
+
+object ToggleParagraphAlignmentJustifyCommand {
+  @scala.inline
+  def apply(execute: () => Boolean, getState: () => CommandState[Boolean]): ToggleParagraphAlignmentJustifyCommand = {
+    val __obj = js.Dynamic.literal(execute = js.Any.fromFunction0(execute), getState = js.Any.fromFunction0(getState))
+    __obj.asInstanceOf[ToggleParagraphAlignmentJustifyCommand]
+  }
+  @scala.inline
+  implicit class ToggleParagraphAlignmentJustifyCommandOps[Self <: ToggleParagraphAlignmentJustifyCommand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExecute(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

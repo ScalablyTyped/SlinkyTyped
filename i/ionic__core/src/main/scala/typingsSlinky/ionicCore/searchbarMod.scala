@@ -2,7 +2,7 @@ package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.KeyboardEvent
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonSearchbarElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonSearchbarElement
 import typingsSlinky.ionicCore.ionicCoreStrings.decimal
 import typingsSlinky.ionicCore.ionicCoreStrings.email
 import typingsSlinky.ionicCore.ionicCoreStrings.none

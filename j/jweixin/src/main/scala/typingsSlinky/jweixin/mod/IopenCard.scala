@@ -1,18 +1,18 @@
 package typingsSlinky.jweixin.mod
 
-import typingsSlinky.jweixin.AnonCardId
+import typingsSlinky.jweixin.anon.CardId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IopenCard extends BaseParams {
-  var cardList: js.Array[AnonCardId] = js.native
+  var cardList: js.Array[CardId] = js.native
 }
 
 object IopenCard {
   @scala.inline
-  def apply(cardList: js.Array[AnonCardId]): IopenCard = {
+  def apply(cardList: js.Array[CardId]): IopenCard = {
     val __obj = js.Dynamic.literal(cardList = cardList.asInstanceOf[js.Any])
     __obj.asInstanceOf[IopenCard]
   }
@@ -23,7 +23,7 @@ object IopenCard {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCardList(value: js.Array[AnonCardId]): Self = {
+    def withCardList(value: js.Array[CardId]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cardList")(value.asInstanceOf[js.Any])
         ret

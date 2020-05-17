@@ -1,6 +1,6 @@
 package typingsSlinky.slug.mod
 
-import typingsSlinky.slug.AnonPretty
+import typingsSlinky.slug.anon.Pretty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 object defaults extends js.Object {
   var charmap: CharMap_ = js.native
   var mode: String = js.native
-  var modes: AnonPretty = js.native
+  var modes: Pretty = js.native
   var multicharmap: CharMap_ = js.native
 }
 

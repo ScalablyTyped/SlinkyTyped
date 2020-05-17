@@ -85,7 +85,7 @@ object Sound extends js.Object {
     */
   @js.native
   class NoAudioSound protected ()
-    extends typingsSlinky.phaser.Phaser.Sound.NoAudioSound {
+    extends typingsSlinky.phaser.Phaser.Sound.BaseSound {
     /**
       * 
       * @param manager Reference to the current sound manager instance.
@@ -106,7 +106,7 @@ object Sound extends js.Object {
     */
   @js.native
   class NoAudioSoundManager protected ()
-    extends typingsSlinky.phaser.Phaser.Sound.NoAudioSoundManager {
+    extends typingsSlinky.phaser.Phaser.Sound.BaseSoundManager {
     /**
       * 
       * @param game Reference to the current game instance.

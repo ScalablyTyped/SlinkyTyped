@@ -13,7 +13,6 @@ package object mod {
   ]
   type StackIndex = scala.Double
   type StyleObjectFn[P /* <: js.Object */] = js.Function1[/* props */ P, typingsSlinky.styletronStandard.mod.StyleObject]
-  type StyleProp[P /* <: js.Object */] = typingsSlinky.styletronStandard.mod.StyleObject | typingsSlinky.styletronReact.mod.StyleObjectFn[P]
   type StyletronBase = slinky.core.facade.ReactElement
   type StyletronDriver = js.Function2[
     /* style */ typingsSlinky.styletronStandard.mod.StyleObject, 

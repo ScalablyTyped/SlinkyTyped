@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Used to provide the details about a change to the properties of a phone line. */
-@JSGlobal("Windows.ApplicationModel.Calls.Background.PhoneLineChangedTriggerDetails")
 @js.native
-abstract class PhoneLineChangedTriggerDetails () extends js.Object {
+trait PhoneLineChangedTriggerDetails extends js.Object {
   /** Gets a PhoneLineChangeKind value that indicates if the phone line was added, removed, or changed. */
   var changeType: PhoneLineChangeKind = js.native
   /** Gets the ID of the phone line that was added, removed, or changed. */
@@ -18,5 +17,43 @@ abstract class PhoneLineChangedTriggerDetails () extends js.Object {
     * @return Returns true if any of the properties indicated by the lineProperty parameter have changed on the phone line.
     */
   def hasLinePropertyChanged(lineProperty: PhoneLineProperties): Boolean = js.native
+}
+
+object PhoneLineChangedTriggerDetails {
+  @scala.inline
+  def apply(
+    changeType: PhoneLineChangeKind,
+    hasLinePropertyChanged: PhoneLineProperties => Boolean,
+    lineId: String
+  ): PhoneLineChangedTriggerDetails = {
+    val __obj = js.Dynamic.literal(changeType = changeType.asInstanceOf[js.Any], hasLinePropertyChanged = js.Any.fromFunction1(hasLinePropertyChanged), lineId = lineId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PhoneLineChangedTriggerDetails]
+  }
+  @scala.inline
+  implicit class PhoneLineChangedTriggerDetailsOps[Self <: PhoneLineChangedTriggerDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChangeType(value: PhoneLineChangeKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHasLinePropertyChanged(value: PhoneLineProperties => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasLinePropertyChanged")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLineId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

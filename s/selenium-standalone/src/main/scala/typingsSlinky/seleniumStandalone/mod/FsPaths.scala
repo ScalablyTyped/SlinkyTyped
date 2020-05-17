@@ -1,7 +1,7 @@
 package typingsSlinky.seleniumStandalone.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.seleniumStandalone.AnonDictx
+import typingsSlinky.seleniumStandalone.anon.Dictx
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,11 +9,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait FsPaths
   extends /* x */ StringDictionary[js.Any] {
-  var chrome: js.UndefOr[AnonDictx] = js.native
-  var edge: js.UndefOr[AnonDictx] = js.native
-  var firefox: js.UndefOr[AnonDictx] = js.native
-  var ie: js.UndefOr[AnonDictx] = js.native
-  var selenium: js.UndefOr[AnonDictx] = js.native
+  var chrome: js.UndefOr[Dictx] = js.native
+  var edge: js.UndefOr[Dictx] = js.native
+  var firefox: js.UndefOr[Dictx] = js.native
+  var ie: js.UndefOr[Dictx] = js.native
+  var selenium: js.UndefOr[Dictx] = js.native
 }
 
 object FsPaths {
@@ -29,7 +29,7 @@ object FsPaths {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withChrome(value: AnonDictx): Self = {
+    def withChrome(value: Dictx): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("chrome")(value.asInstanceOf[js.Any])
         ret
@@ -41,7 +41,7 @@ object FsPaths {
         ret
     }
     @scala.inline
-    def withEdge(value: AnonDictx): Self = {
+    def withEdge(value: Dictx): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("edge")(value.asInstanceOf[js.Any])
         ret
@@ -53,7 +53,7 @@ object FsPaths {
         ret
     }
     @scala.inline
-    def withFirefox(value: AnonDictx): Self = {
+    def withFirefox(value: Dictx): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("firefox")(value.asInstanceOf[js.Any])
         ret
@@ -65,7 +65,7 @@ object FsPaths {
         ret
     }
     @scala.inline
-    def withIe(value: AnonDictx): Self = {
+    def withIe(value: Dictx): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ie")(value.asInstanceOf[js.Any])
         ret
@@ -77,7 +77,7 @@ object FsPaths {
         ret
     }
     @scala.inline
-    def withSelenium(value: AnonDictx): Self = {
+    def withSelenium(value: Dictx): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selenium")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,5 @@
 package typingsSlinky.playcanvas.pc
 
-import typingsSlinky.playcanvas.AnonForceWebAudioApi
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,10 +15,8 @@ import scala.scalajs.js.annotation._
   * @param {boolean} [options.forceWebAudioApi] - Always use the Web Audio API even check indicates that it if not available.
   * @property {number} volume Global volume for the manager. All {@link pc.SoundInstance}s will scale their volume with this volume. Valid between [0, 1].
   */
-@JSGlobal("pc.SoundManager")
 @js.native
-class SoundManager () extends EventHandler {
-  def this(options: AnonForceWebAudioApi) = this()
+trait SoundManager extends EventHandler {
   /**
     * Global volume for the manager. All {@link pc.SoundInstance}s will scale their volume with this volume. Valid between [0, 1].
     */

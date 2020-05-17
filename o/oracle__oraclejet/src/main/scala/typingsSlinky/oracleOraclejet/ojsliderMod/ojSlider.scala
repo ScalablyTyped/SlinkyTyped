@@ -2,7 +2,7 @@ package typingsSlinky.oracleOraclejet.ojsliderMod
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.AnonInvalidStep
+import typingsSlinky.oracleOraclejet.anon.InvalidStep
 import typingsSlinky.oracleOraclejet.ojeditablevalueMod.editableValue
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`type`
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.fromMax
@@ -44,7 +44,7 @@ trait ojSlider extends editableValue[Double | Null, ojSliderSettableProperties, 
   var step: Double | Null = js.native
   val transientValue: Double = js.native
   @JSName("translations")
-  var translations_ojSlider: AnonInvalidStep = js.native
+  var translations_ojSlider: InvalidStep = js.native
   var `type`: fromMin | fromMax | single = js.native
   def addEventListener(`type`: orientationChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
@@ -123,7 +123,7 @@ trait ojSlider extends editableValue[Double | Null, ojSliderSettableProperties, 
   @JSName("setProperty")
   def setProperty_transientValue(property: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.transientValue, value: Double): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonInvalidStep): Unit = js.native
+  def setProperty_translations(property: translations, value: InvalidStep): Unit = js.native
   @JSName("setProperty")
   def setProperty_value(property: value): Unit = js.native
   @JSName("setProperty")

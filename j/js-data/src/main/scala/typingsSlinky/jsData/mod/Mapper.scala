@@ -1,6 +1,6 @@
 package typingsSlinky.jsData.mod
 
-import typingsSlinky.jsData.TypeofRecord
+import typingsSlinky.jsData.anon.TypeofRecord
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

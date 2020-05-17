@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonBaseScreenSpaceError
+import typingsSlinky.cesium.anon.BaseScreenSpaceError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "Cesium3DTileset")
 @js.native
 class Cesium3DTileset protected () extends js.Object {
-  def this(Cesium3DTilesetItem: AnonBaseScreenSpaceError) = this()
+  def this(Cesium3DTilesetItem: BaseScreenSpaceError) = this()
   var allTilesLoaded: Event[js.Array[_]] = js.native
   val asset: js.Any = js.native
   val baseScreenSpaceError: Double = js.native

@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * Cookie object used to manage the system cookie store and HTTP client cookie store.
 		 */
-@JSGlobal("Titanium.Network.Cookie")
 @js.native
-class Cookie () extends Proxy {
+trait Cookie extends Proxy {
   /**
   			 * The comment describing the purpose of this cookie
   			 */

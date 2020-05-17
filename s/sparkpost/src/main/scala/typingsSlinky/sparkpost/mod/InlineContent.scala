@@ -1,6 +1,6 @@
 package typingsSlinky.sparkpost.mod
 
-import typingsSlinky.sparkpost.AnonEmail
+import typingsSlinky.sparkpost.anon.Email
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait InlineContent extends js.Object {
   /** JSON array of attachments. */
   var attachments: js.UndefOr[js.Array[Attachment]] = js.native
   /** "deals@company.com" or JSON object composed of the “name” and “email” fields “from” : { “name” : “My Company”, “email” : "deals@company.com" } used to compose the email’s “From” header */
-  var from: js.UndefOr[String | AnonEmail] = js.native
+  var from: js.UndefOr[String | Email] = js.native
   /** JSON dictionary containing headers other than “Subject”, “From”, “To”, and “Reply-To” */
   var headers: js.UndefOr[js.Any] = js.native
   /** HTML content for the email’s text/html MIME part  At a minimum, html, text, or push is required. */
@@ -52,7 +52,7 @@ object InlineContent {
         ret
     }
     @scala.inline
-    def withFrom(value: String | AnonEmail): Self = {
+    def withFrom(value: String | Email): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
         ret

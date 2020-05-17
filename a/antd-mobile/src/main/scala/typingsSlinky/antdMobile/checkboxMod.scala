@@ -1,5 +1,6 @@
 package typingsSlinky.antdMobile
 
+import typingsSlinky.antdMobile.anon.WrapLabel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +17,7 @@ object checkboxMod extends js.Object {
   object default extends js.Object {
     var AgreeItem: js.Any = js.native
     var CheckboxItem: js.Any = js.native
-    var defaultProps: AnonWrapLabel = js.native
+    var defaultProps: WrapLabel = js.native
   }
   
 }

@@ -1,8 +1,8 @@
 package typingsSlinky.cytoscape.mod
 
-import typingsSlinky.cytoscape.AnonComponents
-import typingsSlinky.cytoscape.AnonComponentsCut
-import typingsSlinky.cytoscape.AnonCut
+import typingsSlinky.cytoscape.anon.Components
+import typingsSlinky.cytoscape.anon.ComponentsCut
+import typingsSlinky.cytoscape.anon.Cut
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -87,31 +87,31 @@ trait CollectionAlgorithms extends js.Object {
     * as well as their respective cut vertices, using an algorithm due to Hopcroft and Tarjan.
     * http://js.cytoscape.org/#eles.hopcroftTarjanBiconnected
     */
-  def hopcroftTarjanBiconnected(): AnonCut = js.native
+  def hopcroftTarjanBiconnected(): Cut = js.native
   /**
     * Finds the biconnected components in an undirected graph,
     * as well as their respective cut vertices, using an algorithm due to Hopcroft and Tarjan.
     * http://js.cytoscape.org/#eles.hopcroftTarjanBiconnected
     */
-  def hopcroftTarjanBiconnectedComponents(): AnonCut = js.native
+  def hopcroftTarjanBiconnectedComponents(): Cut = js.native
   /**
     * Finds the biconnected components in an undirected graph,
     * as well as their respective cut vertices, using an algorithm due to Hopcroft and Tarjan.
     * http://js.cytoscape.org/#eles.hopcroftTarjanBiconnected
     */
-  def htb(): AnonCut = js.native
+  def htb(): Cut = js.native
   /**
     * Finds the biconnected components in an undirected graph,
     * as well as their respective cut vertices, using an algorithm due to Hopcroft and Tarjan.
     * http://js.cytoscape.org/#eles.hopcroftTarjanBiconnected
     */
-  def htbc(): AnonCut = js.native
+  def htbc(): Cut = js.native
   /**
     * Finds the minimum cut in a graph using the Karger-Stein algorithm.
     * The optimal result is found with a high probability, but without guarantee.
     * http://js.cytoscape.org/#eles.kargerStein
     */
-  def kargerStein(): AnonComponents = js.native
+  def kargerStein(): Components = js.native
   /**
     * Perform Kruskal's algorithm on the elements in the collection,
     * returning the minimum spanning tree, assuming undirected edges.
@@ -127,22 +127,22 @@ trait CollectionAlgorithms extends js.Object {
     * Finds the strongly connected components of a directed graph using Tarjan's algorithm.
     * http://js.cytoscape.org/#eles.tarjanStronglyConnected
     */
-  def tarjanStronglyConnected(): AnonComponentsCut = js.native
+  def tarjanStronglyConnected(): ComponentsCut = js.native
   /**
     * Finds the strongly connected components of a directed graph using Tarjan's algorithm.
     * http://js.cytoscape.org/#eles.tarjanStronglyConnected
     */
-  def tarjanStronglyConnectedComponents(): AnonComponentsCut = js.native
+  def tarjanStronglyConnectedComponents(): ComponentsCut = js.native
   /**
     * Finds the strongly connected components of a directed graph using Tarjan's algorithm.
     * http://js.cytoscape.org/#eles.tarjanStronglyConnected
     */
-  def tsc(): AnonComponentsCut = js.native
+  def tsc(): ComponentsCut = js.native
   /**
     * Finds the strongly connected components of a directed graph using Tarjan's algorithm.
     * http://js.cytoscape.org/#eles.tarjanStronglyConnected
     */
-  def tscc(): AnonComponentsCut = js.native
+  def tscc(): ComponentsCut = js.native
 }
 
 object CollectionAlgorithms {
@@ -161,17 +161,17 @@ object CollectionAlgorithms {
     dfs: SearchFirstOptions => SearchFirstResult,
     dijkstra: SearchDijkstraOptions => SearchDijkstraResult,
     floydWarshall: SearchFloydWarshallOptions => SearchFloydWarshallResult,
-    hopcroftTarjanBiconnected: () => AnonCut,
-    hopcroftTarjanBiconnectedComponents: () => AnonCut,
-    htb: () => AnonCut,
-    htbc: () => AnonCut,
-    kargerStein: () => AnonComponents,
+    hopcroftTarjanBiconnected: () => Cut,
+    hopcroftTarjanBiconnectedComponents: () => Cut,
+    htb: () => Cut,
+    htbc: () => Cut,
+    kargerStein: () => Components,
     kruskal: js.Function1[/* edge */ EdgeCollection, Double] => CollectionReturnValue,
     pageRank: SearchPageRankOptions => SearchPageRankResult,
-    tarjanStronglyConnected: () => AnonComponentsCut,
-    tarjanStronglyConnectedComponents: () => AnonComponentsCut,
-    tsc: () => AnonComponentsCut,
-    tscc: () => AnonComponentsCut
+    tarjanStronglyConnected: () => ComponentsCut,
+    tarjanStronglyConnectedComponents: () => ComponentsCut,
+    tsc: () => ComponentsCut,
+    tscc: () => ComponentsCut
   ): CollectionAlgorithms = {
     val __obj = js.Dynamic.literal(aStar = js.Any.fromFunction1(aStar), bellmanFord = js.Any.fromFunction1(bellmanFord), betweennessCentrality = js.Any.fromFunction1(betweennessCentrality), bfs = js.Any.fromFunction1(bfs), breadthFirstSearch = js.Any.fromFunction1(breadthFirstSearch), closenessCentrality = js.Any.fromFunction1(closenessCentrality), closenessCentralityNormalized = js.Any.fromFunction1(closenessCentralityNormalized), degreeCentrality = js.Any.fromFunction1(degreeCentrality), degreeCentralityNormalized = js.Any.fromFunction1(degreeCentralityNormalized), depthFirstSearch = js.Any.fromFunction1(depthFirstSearch), dfs = js.Any.fromFunction1(dfs), dijkstra = js.Any.fromFunction1(dijkstra), floydWarshall = js.Any.fromFunction1(floydWarshall), hopcroftTarjanBiconnected = js.Any.fromFunction0(hopcroftTarjanBiconnected), hopcroftTarjanBiconnectedComponents = js.Any.fromFunction0(hopcroftTarjanBiconnectedComponents), htb = js.Any.fromFunction0(htb), htbc = js.Any.fromFunction0(htbc), kargerStein = js.Any.fromFunction0(kargerStein), kruskal = js.Any.fromFunction1(kruskal), pageRank = js.Any.fromFunction1(pageRank), tarjanStronglyConnected = js.Any.fromFunction0(tarjanStronglyConnected), tarjanStronglyConnectedComponents = js.Any.fromFunction0(tarjanStronglyConnectedComponents), tsc = js.Any.fromFunction0(tsc), tscc = js.Any.fromFunction0(tscc))
     __obj.asInstanceOf[CollectionAlgorithms]
@@ -267,31 +267,31 @@ object CollectionAlgorithms {
         ret
     }
     @scala.inline
-    def withHopcroftTarjanBiconnected(value: () => AnonCut): Self = {
+    def withHopcroftTarjanBiconnected(value: () => Cut): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hopcroftTarjanBiconnected")(js.Any.fromFunction0(value))
         ret
     }
     @scala.inline
-    def withHopcroftTarjanBiconnectedComponents(value: () => AnonCut): Self = {
+    def withHopcroftTarjanBiconnectedComponents(value: () => Cut): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hopcroftTarjanBiconnectedComponents")(js.Any.fromFunction0(value))
         ret
     }
     @scala.inline
-    def withHtb(value: () => AnonCut): Self = {
+    def withHtb(value: () => Cut): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("htb")(js.Any.fromFunction0(value))
         ret
     }
     @scala.inline
-    def withHtbc(value: () => AnonCut): Self = {
+    def withHtbc(value: () => Cut): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("htbc")(js.Any.fromFunction0(value))
         ret
     }
     @scala.inline
-    def withKargerStein(value: () => AnonComponents): Self = {
+    def withKargerStein(value: () => Components): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("kargerStein")(js.Any.fromFunction0(value))
         ret
@@ -309,25 +309,25 @@ object CollectionAlgorithms {
         ret
     }
     @scala.inline
-    def withTarjanStronglyConnected(value: () => AnonComponentsCut): Self = {
+    def withTarjanStronglyConnected(value: () => ComponentsCut): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tarjanStronglyConnected")(js.Any.fromFunction0(value))
         ret
     }
     @scala.inline
-    def withTarjanStronglyConnectedComponents(value: () => AnonComponentsCut): Self = {
+    def withTarjanStronglyConnectedComponents(value: () => ComponentsCut): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tarjanStronglyConnectedComponents")(js.Any.fromFunction0(value))
         ret
     }
     @scala.inline
-    def withTsc(value: () => AnonComponentsCut): Self = {
+    def withTsc(value: () => ComponentsCut): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tsc")(js.Any.fromFunction0(value))
         ret
     }
     @scala.inline
-    def withTscc(value: () => AnonComponentsCut): Self = {
+    def withTscc(value: () => ComponentsCut): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tscc")(js.Any.fromFunction0(value))
         ret

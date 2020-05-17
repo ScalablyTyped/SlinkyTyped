@@ -1,6 +1,6 @@
 package typingsSlinky.luxon.mod
 
-import typingsSlinky.luxon.AnonIncludeConfig
+import typingsSlinky.luxon.anon.IncludeConfig
 import typingsSlinky.std.Intl.ResolvedDateTimeFormatOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -92,7 +92,7 @@ class DateTime () extends js.Object {
   def toLocaleString(options: LocaleOptions with DateTimeFormatOptions): String = js.native
   def toMillis(): Double = js.native
   def toObject(): DateObject = js.native
-  def toObject(options: AnonIncludeConfig): DateObject = js.native
+  def toObject(options: IncludeConfig): DateObject = js.native
   def toRFC2822(): String = js.native
   def toRelative(): String | Null = js.native
   def toRelative(options: ToRelativeOptions): String | Null = js.native

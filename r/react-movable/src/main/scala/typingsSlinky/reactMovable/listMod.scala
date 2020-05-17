@@ -1,6 +1,7 @@
 package typingsSlinky.reactMovable
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
@@ -8,9 +9,11 @@ import slinky.core.facade.ReactRef
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticWheelEvent
 import typingsSlinky.react.mod.Component
+import typingsSlinky.reactMovable.anon.InitialX
+import typingsSlinky.reactMovable.anon.LockVertically
+import typingsSlinky.reactMovable.anon.ScrollingSpeed
 import typingsSlinky.reactMovable.typesMod.IProps
 import typingsSlinky.reactMovable.typesMod.TEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +35,7 @@ object listMod extends js.Object {
     var listRef: ReactRef[HTMLElement] = js.native
     var needle: Double = js.native
     @JSName("state")
-    var state_List: AnonInitialX = js.native
+    var state_List: InitialX = js.native
     var topOffsets: js.Array[Double] = js.native
     def animateItems(needle: Double, movedItem: Double, offset: Double): Unit = js.native
     def animateItems(needle: Double, movedItem: Double, offset: Double, animateMovedItem: Boolean): Unit = js.native
@@ -41,7 +44,7 @@ object listMod extends js.Object {
     @JSName("componentDidMount")
     def componentDidMount_MList(): Unit = js.native
     @JSName("componentDidUpdate")
-    def componentDidUpdate_MList(_prevProps: js.Any, prevState: AnonScrollingSpeed): Unit = js.native
+    def componentDidUpdate_MList(_prevProps: js.Any, prevState: ScrollingSpeed): Unit = js.native
     @JSName("componentWillUnmount")
     def componentWillUnmount_MList(): Unit = js.native
     def doScrolling(): Unit = js.native
@@ -59,7 +62,7 @@ object listMod extends js.Object {
     def onStart(target: HTMLElement, clientX: Double, clientY: Double, index: Double): Unit = js.native
     def onTouchMove(e: TouchEvent): Unit = js.native
     def onWheel(e: SyntheticWheelEvent[Element]): Unit = js.native
-    def schdOnEnd(e: Event_): Unit = js.native
+    def schdOnEnd(e: Event): Unit = js.native
     def schdOnMouseMove(e: MouseEvent): Unit = js.native
     def schdOnTouchMove(e: TouchEvent): Unit = js.native
   }
@@ -72,7 +75,7 @@ object listMod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var defaultProps: AnonLockVertically = js.native
+    var defaultProps: LockVertically = js.native
   }
   
 }

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,10 +31,25 @@ trait uniqueValues extends js.Object {
   def uniqueValues(params: uniqueValuesUniqueValuesParams): js.Promise[UniqueValuesResult] = js.native
 }
 
-@JSGlobal("__esri.uniqueValues")
-@js.native
-object uniqueValues
-  extends TopLevel[
-      js.Function1[/* params */ uniqueValuesUniqueValuesParams, js.Promise[UniqueValuesResult]]
-    ]
+object uniqueValues {
+  @scala.inline
+  def apply(uniqueValues: uniqueValuesUniqueValuesParams => js.Promise[UniqueValuesResult]): uniqueValues = {
+    val __obj = js.Dynamic.literal(uniqueValues = js.Any.fromFunction1(uniqueValues))
+    __obj.asInstanceOf[uniqueValues]
+  }
+  @scala.inline
+  implicit class uniqueValuesOps[Self <: uniqueValues] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUniqueValues(value: uniqueValuesUniqueValuesParams => js.Promise[UniqueValuesResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueValues")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

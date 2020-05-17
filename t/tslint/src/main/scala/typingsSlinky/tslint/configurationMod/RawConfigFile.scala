@@ -1,6 +1,6 @@
 package typingsSlinky.tslint.configurationMod
 
-import typingsSlinky.tslint.PartialexcludeArraystring
+import typingsSlinky.tslint.anon.PartialexcludeArraystring
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

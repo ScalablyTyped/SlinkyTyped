@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * The 3D Matrix is an object for holding values for a 3D affine transform.
 		 */
-@JSGlobal("Titanium.UI.Matrix3D")
 @js.native
-class Matrix3D () extends Proxy {
+trait Matrix3D extends Proxy {
   /**
   			 * The entry at position [1,1] in the matrix.
   			 */

@@ -1,7 +1,7 @@
 package typingsSlinky.seen.mod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.std.EventListener
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +30,7 @@ object MouseEventOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDrag(value: /* evt */ Event_ => Unit): Self = {
+    def withDrag(value: /* evt */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(js.Any.fromFunction1(value))
         ret
@@ -42,7 +42,7 @@ object MouseEventOptions {
         ret
     }
     @scala.inline
-    def withDragEnd(value: /* evt */ Event_ => Unit): Self = {
+    def withDragEnd(value: /* evt */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragEnd")(js.Any.fromFunction1(value))
         ret
@@ -54,7 +54,7 @@ object MouseEventOptions {
         ret
     }
     @scala.inline
-    def withDragStart(value: /* evt */ Event_ => Unit): Self = {
+    def withDragStart(value: /* evt */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragStart")(js.Any.fromFunction1(value))
         ret
@@ -66,7 +66,7 @@ object MouseEventOptions {
         ret
     }
     @scala.inline
-    def withMouseDown(value: /* evt */ Event_ => Unit): Self = {
+    def withMouseDown(value: /* evt */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mouseDown")(js.Any.fromFunction1(value))
         ret
@@ -78,7 +78,7 @@ object MouseEventOptions {
         ret
     }
     @scala.inline
-    def withMouseMove(value: /* evt */ Event_ => Unit): Self = {
+    def withMouseMove(value: /* evt */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mouseMove")(js.Any.fromFunction1(value))
         ret
@@ -90,7 +90,7 @@ object MouseEventOptions {
         ret
     }
     @scala.inline
-    def withMouseUp(value: /* evt */ Event_ => Unit): Self = {
+    def withMouseUp(value: /* evt */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mouseUp")(js.Any.fromFunction1(value))
         ret
@@ -102,7 +102,7 @@ object MouseEventOptions {
         ret
     }
     @scala.inline
-    def withMouseWheel(value: /* evt */ Event_ => Unit): Self = {
+    def withMouseWheel(value: /* evt */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mouseWheel")(js.Any.fromFunction1(value))
         ret

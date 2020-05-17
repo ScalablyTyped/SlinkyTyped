@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Serves as the base type for the ASPxClientMenu and ASPxClientPopupMenu objects.
   */
-@JSGlobal("ASPxClientMenuBase")
 @js.native
-class ASPxClientMenuBase () extends ASPxClientControl {
+trait ASPxClientMenuBase extends ASPxClientControl {
   /**
     * Occurs on the client side when a submenu closes.
     */
@@ -59,13 +58,112 @@ class ASPxClientMenuBase () extends ASPxClientControl {
   def SetSelectedItem(item: ASPxClientMenuItem): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("ASPxClientMenuBase")
-@js.native
-object ASPxClientMenuBase extends js.Object {
-  /**
-    * Returns a collection of client menu objects.
-    */
-  def GetMenuCollection(): ASPxClientMenuCollection = js.native
+object ASPxClientMenuBase {
+  @scala.inline
+  def apply(
+    AdjustControl: () => Unit,
+    CloseUp: ASPxClientEvent[ASPxClientMenuItemEventHandler[ASPxClientMenuBase]],
+    GetClientVisible: () => Boolean,
+    GetHeight: () => Double,
+    GetItem: Double => ASPxClientMenuItem,
+    GetItemByName: String => ASPxClientMenuItem,
+    GetItemCount: () => Double,
+    GetMainElement: () => js.Any,
+    GetParentControl: () => js.Any,
+    GetRootItem: () => ASPxClientMenuItem,
+    GetSelectedItem: () => ASPxClientMenuItem,
+    GetVisible: () => Boolean,
+    GetWidth: () => Double,
+    InCallback: () => Boolean,
+    Init: ASPxClientEvent[ASPxClientEventHandler[ASPxClientControlBase]],
+    ItemClick: ASPxClientEvent[ASPxClientMenuItemClickEventHandler[ASPxClientMenuBase]],
+    ItemMouseOut: ASPxClientEvent[ASPxClientMenuItemMouseEventHandler[ASPxClientMenuBase]],
+    ItemMouseOver: ASPxClientEvent[ASPxClientMenuItemMouseEventHandler[ASPxClientMenuBase]],
+    PopUp: ASPxClientEvent[ASPxClientMenuItemEventHandler[ASPxClientMenuBase]],
+    SendMessageToAssistiveTechnology: String => Unit,
+    SetClientVisible: Boolean => Unit,
+    SetHeight: Double => Unit,
+    SetSelectedItem: ASPxClientMenuItem => Unit,
+    SetVisible: Boolean => Unit,
+    SetWidth: Double => Unit,
+    name: String
+  ): ASPxClientMenuBase = {
+    val __obj = js.Dynamic.literal(AdjustControl = js.Any.fromFunction0(AdjustControl), CloseUp = CloseUp.asInstanceOf[js.Any], GetClientVisible = js.Any.fromFunction0(GetClientVisible), GetHeight = js.Any.fromFunction0(GetHeight), GetItem = js.Any.fromFunction1(GetItem), GetItemByName = js.Any.fromFunction1(GetItemByName), GetItemCount = js.Any.fromFunction0(GetItemCount), GetMainElement = js.Any.fromFunction0(GetMainElement), GetParentControl = js.Any.fromFunction0(GetParentControl), GetRootItem = js.Any.fromFunction0(GetRootItem), GetSelectedItem = js.Any.fromFunction0(GetSelectedItem), GetVisible = js.Any.fromFunction0(GetVisible), GetWidth = js.Any.fromFunction0(GetWidth), InCallback = js.Any.fromFunction0(InCallback), Init = Init.asInstanceOf[js.Any], ItemClick = ItemClick.asInstanceOf[js.Any], ItemMouseOut = ItemMouseOut.asInstanceOf[js.Any], ItemMouseOver = ItemMouseOver.asInstanceOf[js.Any], PopUp = PopUp.asInstanceOf[js.Any], SendMessageToAssistiveTechnology = js.Any.fromFunction1(SendMessageToAssistiveTechnology), SetClientVisible = js.Any.fromFunction1(SetClientVisible), SetHeight = js.Any.fromFunction1(SetHeight), SetSelectedItem = js.Any.fromFunction1(SetSelectedItem), SetVisible = js.Any.fromFunction1(SetVisible), SetWidth = js.Any.fromFunction1(SetWidth), name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientMenuBase]
+  }
+  @scala.inline
+  implicit class ASPxClientMenuBaseOps[Self <: ASPxClientMenuBase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloseUp(value: ASPxClientEvent[ASPxClientMenuItemEventHandler[ASPxClientMenuBase]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CloseUp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetItem(value: Double => ASPxClientMenuItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetItemByName(value: String => ASPxClientMenuItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetItemByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetItemCount(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetItemCount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRootItem(value: () => ASPxClientMenuItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetRootItem")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSelectedItem(value: () => ASPxClientMenuItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetSelectedItem")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withItemClick(value: ASPxClientEvent[ASPxClientMenuItemClickEventHandler[ASPxClientMenuBase]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItemMouseOut(value: ASPxClientEvent[ASPxClientMenuItemMouseEventHandler[ASPxClientMenuBase]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemMouseOut")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItemMouseOver(value: ASPxClientEvent[ASPxClientMenuItemMouseEventHandler[ASPxClientMenuBase]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemMouseOver")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPopUp(value: ASPxClientEvent[ASPxClientMenuItemEventHandler[ASPxClientMenuBase]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PopUp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetSelectedItem(value: ASPxClientMenuItem => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetSelectedItem")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

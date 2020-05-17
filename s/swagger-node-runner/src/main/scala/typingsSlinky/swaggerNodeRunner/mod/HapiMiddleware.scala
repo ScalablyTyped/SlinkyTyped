@@ -1,6 +1,6 @@
 package typingsSlinky.swaggerNodeRunner.mod
 
-import typingsSlinky.swaggerNodeRunner.AnonRegister
+import typingsSlinky.swaggerNodeRunner.anon.Register
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +10,12 @@ trait HapiMiddleware extends Middleware {
   /** Back-reference to Config object of `Runner` that has created this middleware */
   var config: ConfigInternal = js.native
   /** Hapi Plugin */
-  var plugin: AnonRegister = js.native
+  var plugin: Register = js.native
 }
 
 object HapiMiddleware {
   @scala.inline
-  def apply(config: ConfigInternal, plugin: AnonRegister, runner: Runner): HapiMiddleware = {
+  def apply(config: ConfigInternal, plugin: Register, runner: Runner): HapiMiddleware = {
     val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any], plugin = plugin.asInstanceOf[js.Any], runner = runner.asInstanceOf[js.Any])
     __obj.asInstanceOf[HapiMiddleware]
   }
@@ -32,7 +32,7 @@ object HapiMiddleware {
         ret
     }
     @scala.inline
-    def withPlugin(value: AnonRegister): Self = {
+    def withPlugin(value: Register): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("plugin")(value.asInstanceOf[js.Any])
         ret

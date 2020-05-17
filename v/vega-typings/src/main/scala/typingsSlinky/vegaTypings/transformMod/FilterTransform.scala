@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait FilterTransform extends _Transforms {
+trait FilterTransform extends Transforms {
   var expr: ExprString = js.native
   var `type`: filter = js.native
 }

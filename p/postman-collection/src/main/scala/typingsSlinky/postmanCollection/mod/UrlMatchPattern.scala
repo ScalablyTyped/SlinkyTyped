@@ -1,7 +1,7 @@
 package typingsSlinky.postmanCollection.mod
 
-import typingsSlinky.postmanCollection.AnonHost
-import typingsSlinky.postmanCollection.AnonPattern
+import typingsSlinky.postmanCollection.anon.Host
+import typingsSlinky.postmanCollection.anon.Pattern
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,20 +10,20 @@ import scala.scalajs.js.annotation._
 @js.native
 class UrlMatchPattern protected () extends js.Object {
   def this(options: String) = this()
-  def this(options: AnonPattern) = this()
+  def this(options: Pattern) = this()
   var pattern: js.UndefOr[String] = js.native
-  def createMatchPattern(): js.UndefOr[AnonHost] = js.native
+  def createMatchPattern(): js.UndefOr[Host] = js.native
   def getProtocols(): js.Array[String] = js.native
   def globPatternToRegexp(pattern: String): js.RegExp = js.native
-  def matchAbsoluteHostPattern(matchRegexObject: AnonHost, remote: String): Boolean = js.native
-  def matchAnyHost(matchRegexObject: AnonHost): Boolean = js.native
-  def matchSuffixHostPattern(matchRegexObject: AnonHost, remote: String): Boolean = js.native
+  def matchAbsoluteHostPattern(matchRegexObject: Host, remote: String): Boolean = js.native
+  def matchAnyHost(matchRegexObject: Host): Boolean = js.native
+  def matchSuffixHostPattern(matchRegexObject: Host, remote: String): Boolean = js.native
   def test(urlStr: String): Boolean = js.native
   def testHost(host: String): Boolean = js.native
   def testPath(path: String): Boolean = js.native
   def testProtocol(protocol: String): Boolean = js.native
-  def toJSON(): AnonPattern = js.native
-  def update(options: AnonPattern): Unit = js.native
+  def toJSON(): Pattern = js.native
+  def update(options: Pattern): Unit = js.native
 }
 
 /* static members */

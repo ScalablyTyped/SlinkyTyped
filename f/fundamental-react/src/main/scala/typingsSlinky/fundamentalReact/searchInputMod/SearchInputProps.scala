@@ -2,8 +2,8 @@ package typingsSlinky.fundamentalReact.searchInputMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLInputElement
-import typingsSlinky.fundamentalReact.AnonCallback
-import typingsSlinky.fundamentalReact.AnonText
+import typingsSlinky.fundamentalReact.anon.Callback
+import typingsSlinky.fundamentalReact.anon.Text
 import typingsSlinky.react.mod.ChangeEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,8 +26,8 @@ trait SearchInputProps
   var placeholder: js.UndefOr[String] = js.native
   var popoverProps: js.UndefOr[js.Any] = js.native
   var searchBtnProps: js.UndefOr[js.Any] = js.native
-  var searchList: js.UndefOr[js.Array[AnonCallback]] = js.native
-  var validationState: js.UndefOr[AnonText] = js.native
+  var searchList: js.UndefOr[js.Array[Callback]] = js.native
+  var validationState: js.UndefOr[Text] = js.native
 }
 
 object SearchInputProps {
@@ -211,7 +211,7 @@ object SearchInputProps {
         ret
     }
     @scala.inline
-    def withSearchList(value: js.Array[AnonCallback]): Self = {
+    def withSearchList(value: js.Array[Callback]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("searchList")(value.asInstanceOf[js.Any])
         ret
@@ -223,7 +223,7 @@ object SearchInputProps {
         ret
     }
     @scala.inline
-    def withValidationState(value: AnonText): Self = {
+    def withValidationState(value: Text): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validationState")(value.asInstanceOf[js.Any])
         ret

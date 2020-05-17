@@ -1,13 +1,13 @@
 package typingsSlinky.antd.components
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Window
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.backTopMod.BackTopProps
 import typingsSlinky.antd.backTopMod.default
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +30,7 @@ object BackTop {
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
-    def target(value: () => HTMLElement | Window_): this.type = set("target", js.Any.fromFunction0(value))
+    def target(value: () => HTMLElement | Window): this.type = set("target", js.Any.fromFunction0(value))
     @scala.inline
     def visibilityHeight(value: Double): this.type = set("visibilityHeight", value.asInstanceOf[js.Any])
     @scala.inline

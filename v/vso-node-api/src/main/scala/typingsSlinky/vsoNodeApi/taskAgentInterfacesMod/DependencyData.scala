@@ -1,6 +1,6 @@
 package typingsSlinky.vsoNodeApi.taskAgentInterfacesMod
 
-import typingsSlinky.vsoNodeApi.AnonKeyString
+import typingsSlinky.vsoNodeApi.anon.KeyString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DependencyData extends js.Object {
   var input: String = js.native
-  var map: js.Array[AnonKeyString] = js.native
+  var map: js.Array[KeyString] = js.native
 }
 
 object DependencyData {
   @scala.inline
-  def apply(input: String, map: js.Array[AnonKeyString]): DependencyData = {
+  def apply(input: String, map: js.Array[KeyString]): DependencyData = {
     val __obj = js.Dynamic.literal(input = input.asInstanceOf[js.Any], map = map.asInstanceOf[js.Any])
     __obj.asInstanceOf[DependencyData]
   }
@@ -30,7 +30,7 @@ object DependencyData {
         ret
     }
     @scala.inline
-    def withMap(value: js.Array[AnonKeyString]): Self = {
+    def withMap(value: js.Array[KeyString]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
         ret

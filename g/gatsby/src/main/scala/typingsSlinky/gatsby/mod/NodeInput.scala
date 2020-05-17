@@ -1,7 +1,7 @@
 package typingsSlinky.gatsby.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.gatsby.AnonContent
+import typingsSlinky.gatsby.anon.Content
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,13 +11,13 @@ trait NodeInput
   extends /* key */ StringDictionary[js.Any] {
   var children: js.UndefOr[js.Array[String]] = js.native
   var id: String = js.native
-  var internal: AnonContent = js.native
+  var internal: Content = js.native
   var parent: js.UndefOr[String] = js.native
 }
 
 object NodeInput {
   @scala.inline
-  def apply(id: String, internal: AnonContent): NodeInput = {
+  def apply(id: String, internal: Content): NodeInput = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], internal = internal.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeInput]
   }
@@ -34,7 +34,7 @@ object NodeInput {
         ret
     }
     @scala.inline
-    def withInternal(value: AnonContent): Self = {
+    def withInternal(value: Content): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("internal")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.reactBeautifulDnd.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait SensorAPI extends js.Object {
   var tryGetLock: TryGetLock = js.native
   def canGetLock(id: DraggableId): Boolean = js.native
-  def findClosestDraggableId(event: Event_): DraggableId | Null = js.native
+  def findClosestDraggableId(event: Event): DraggableId | Null = js.native
   def findOptionsForDraggable(id: DraggableId): DraggableOptions | Null = js.native
   def isLockClaimed(): Boolean = js.native
   def tryReleaseLock(): Unit = js.native
@@ -19,7 +19,7 @@ object SensorAPI {
   @scala.inline
   def apply(
     canGetLock: DraggableId => Boolean,
-    findClosestDraggableId: Event_ => DraggableId | Null,
+    findClosestDraggableId: Event => DraggableId | Null,
     findOptionsForDraggable: DraggableId => DraggableOptions | Null,
     isLockClaimed: () => Boolean,
     tryGetLock: (/* draggableId */ DraggableId, /* forceStop */ js.UndefOr[js.Function0[Unit]], /* options */ js.UndefOr[TryGetLockOptions]) => PreDragActions | Null,
@@ -41,7 +41,7 @@ object SensorAPI {
         ret
     }
     @scala.inline
-    def withFindClosestDraggableId(value: Event_ => DraggableId | Null): Self = {
+    def withFindClosestDraggableId(value: Event => DraggableId | Null): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("findClosestDraggableId")(js.Any.fromFunction1(value))
         ret

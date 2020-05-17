@@ -1,6 +1,6 @@
 package typingsSlinky.dagreD3.mod
 
-import typingsSlinky.dagre.AnonCompound
+import typingsSlinky.dagre.anon.Compound
 import typingsSlinky.dagre.mod.EdgeFn
 import typingsSlinky.dagre.mod.WeightFn
 import scala.scalajs.js
@@ -13,7 +13,7 @@ object graphlib extends js.Object {
   @js.native
   class Graph[T] ()
     extends typingsSlinky.dagre.mod.graphlib.Graph[T] {
-    def this(opt: AnonCompound) = this()
+    def this(opt: Compound) = this()
   }
   
   @js.native

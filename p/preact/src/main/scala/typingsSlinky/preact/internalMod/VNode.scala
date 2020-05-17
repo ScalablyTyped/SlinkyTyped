@@ -1,7 +1,7 @@
 package typingsSlinky.preact.internalMod
 
 import org.scalajs.dom.raw.Text
-import typingsSlinky.preact.AnonChildren
+import typingsSlinky.preact.anon.Children
 import typingsSlinky.preact.mod.ComponentType
 import typingsSlinky.preact.mod.Key
 import scala.scalajs.js
@@ -28,7 +28,7 @@ trait VNode[P]
 
 object VNode {
   @scala.inline
-  def apply[P](key: Key, props: P with AnonChildren, `type`: ComponentType[P] | String): VNode[P] = {
+  def apply[P](key: Key, props: P with Children, `type`: ComponentType[P] | String): VNode[P] = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[VNode[P]]
@@ -121,18 +121,6 @@ object VNode {
     def with_parentNull: Self[P] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("_parent")(null)
-        ret
-    }
-    @scala.inline
-    def withConstructor(value: scala.Nothing): Self[P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constructor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutConstructor: Self[P] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("constructor")(js.undefined)
         ret
     }
   }

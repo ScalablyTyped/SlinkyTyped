@@ -6,7 +6,7 @@ import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
-import typingsSlinky.baseui.AnonValues
+import typingsSlinky.baseui.anon.Values
 import typingsSlinky.baseui.baseuiStrings.both
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
@@ -59,12 +59,12 @@ trait PinCodeProps extends js.Object {
   var startEnhancer: js.UndefOr[(js.Function1[/* args */ SharedProps, TagMod[Any]]) | TagMod[Any]] = js.native
   var `type`: js.UndefOr[String] = js.native
   var values: js.Array[String] = js.native
-  def onChange(args: AnonValues): Unit = js.native
+  def onChange(args: Values): Unit = js.native
 }
 
 object PinCodeProps {
   @scala.inline
-  def apply(onChange: AnonValues => Unit, values: js.Array[String]): PinCodeProps = {
+  def apply(onChange: Values => Unit, values: js.Array[String]): PinCodeProps = {
     val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange), values = values.asInstanceOf[js.Any])
     __obj.asInstanceOf[PinCodeProps]
   }
@@ -75,7 +75,7 @@ object PinCodeProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnChange(value: AnonValues => Unit): Self = {
+    def withOnChange(value: Values => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

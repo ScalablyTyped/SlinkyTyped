@@ -1,6 +1,6 @@
 package typingsSlinky.openfin.windowOptionMod
 
-import typingsSlinky.openfin.AnonBottom
+import typingsSlinky.openfin.anon.Bottom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ResizeRegion extends js.Object {
   var bottomRightCorner: js.UndefOr[Double] = js.native
-  var sides: js.UndefOr[AnonBottom] = js.native
+  var sides: js.UndefOr[Bottom] = js.native
   var size: js.UndefOr[Double] = js.native
 }
 
@@ -37,7 +37,7 @@ object ResizeRegion {
         ret
     }
     @scala.inline
-    def withSides(value: AnonBottom): Self = {
+    def withSides(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sides")(value.asInstanceOf[js.Any])
         ret

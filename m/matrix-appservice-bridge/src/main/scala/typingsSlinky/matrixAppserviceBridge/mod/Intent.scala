@@ -1,7 +1,7 @@
 package typingsSlinky.matrixAppserviceBridge.mod
 
-import typingsSlinky.matrixAppserviceBridge.AnonCreateAsClient
-import typingsSlinky.matrixAppserviceBridge.AnonRoomalias
+import typingsSlinky.matrixAppserviceBridge.anon.CreateAsClient
+import typingsSlinky.matrixAppserviceBridge.anon.Roomalias
 import typingsSlinky.matrixAppserviceBridge.matrixAppserviceBridgeStrings.offline
 import typingsSlinky.matrixAppserviceBridge.matrixAppserviceBridgeStrings.online
 import typingsSlinky.matrixAppserviceBridge.matrixAppserviceBridgeStrings.unavailable
@@ -17,7 +17,7 @@ class Intent protected () extends js.Object {
   def this(client: MatrixClient, botClient: MatrixClient, opts: js.Object) = this()
   def ban(roomId: String, target: String, reason: String): js.Promise[Unit] = js.native
   def createAlias(alias: String, roomId: String): js.Promise[Unit] = js.native
-  def createRoom(opts: AnonCreateAsClient): js.Promise[AnonRoomalias] = js.native
+  def createRoom(opts: CreateAsClient): js.Promise[Roomalias] = js.native
   def getClient(): MatrixClient = js.native
   def getEvent(roomId: String, eventId: String): js.Promise[_] = js.native
   def getEvent(roomId: String, eventId: String, useCache: Boolean): js.Promise[_] = js.native

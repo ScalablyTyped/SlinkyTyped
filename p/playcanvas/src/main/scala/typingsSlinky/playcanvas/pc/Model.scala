@@ -18,9 +18,8 @@ import scala.scalajs.js.annotation._
   * @property {pc.SkinInstance[]} skinInstances An array of SkinInstances contained in this model.
   * @property {pc.MorphInstance[]} morphInstances An array of MorphInstances contained in this model.
   */
-@JSGlobal("pc.Model")
 @js.native
-class Model () extends js.Object {
+trait Model extends js.Object {
   /**
     * The root node of the model's graph node hierarchy.
     */
@@ -60,5 +59,64 @@ class Model () extends js.Object {
     * }
     */
   def generateWireframe(): Unit = js.native
+}
+
+object Model {
+  @scala.inline
+  def apply(
+    destroy: () => Unit,
+    generateWireframe: () => Unit,
+    graph: GraphNode,
+    meshInstances: js.Array[MeshInstance],
+    morphInstances: js.Array[MorphInstance],
+    skinInstances: js.Array[SkinInstance]
+  ): Model = {
+    val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), generateWireframe = js.Any.fromFunction0(generateWireframe), graph = graph.asInstanceOf[js.Any], meshInstances = meshInstances.asInstanceOf[js.Any], morphInstances = morphInstances.asInstanceOf[js.Any], skinInstances = skinInstances.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Model]
+  }
+  @scala.inline
+  implicit class ModelOps[Self <: Model] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDestroy(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGenerateWireframe(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("generateWireframe")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGraph(value: GraphNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("graph")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMeshInstances(value: js.Array[MeshInstance]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meshInstances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMorphInstances(value: js.Array[MorphInstance]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("morphInstances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSkinInstances(value: js.Array[SkinInstance]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skinInstances")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

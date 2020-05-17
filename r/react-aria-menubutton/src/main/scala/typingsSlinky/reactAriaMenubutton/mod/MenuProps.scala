@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.AllHTMLAttributes
 import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.reactAriaMenubutton.AnonIsOpen
+import typingsSlinky.reactAriaMenubutton.anon.IsOpen
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait MenuProps[T /* <: HTMLElement */]
   extends AllHTMLAttributes[T]
      with ClassAttributes[T] {
   @JSName("children")
-  var children_MenuProps: ReactElement | (js.Function1[/* hasIsOpen */ AnonIsOpen, ReactElement]) = js.native
+  var children_MenuProps: ReactElement | (js.Function1[/* hasIsOpen */ IsOpen, ReactElement]) = js.native
   /**
   	 * The HTML tag for this element. Default: 'span'.
   	 */
@@ -25,7 +25,7 @@ trait MenuProps[T /* <: HTMLElement */]
 
 object MenuProps {
   @scala.inline
-  def apply[T](children: ReactElement | (js.Function1[/* hasIsOpen */ AnonIsOpen, ReactElement])): MenuProps[T] = {
+  def apply[T](children: ReactElement | (js.Function1[/* hasIsOpen */ IsOpen, ReactElement])): MenuProps[T] = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
     __obj.asInstanceOf[MenuProps[T]]
   }
@@ -42,13 +42,13 @@ object MenuProps {
         ret
     }
     @scala.inline
-    def withChildrenFunction1(value: /* hasIsOpen */ AnonIsOpen => ReactElement): Self[T] = {
+    def withChildrenFunction1(value: /* hasIsOpen */ IsOpen => ReactElement): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withChildren(value: ReactElement | (js.Function1[/* hasIsOpen */ AnonIsOpen, ReactElement])): Self[T] = {
+    def withChildren(value: ReactElement | (js.Function1[/* hasIsOpen */ IsOpen, ReactElement])): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
         ret

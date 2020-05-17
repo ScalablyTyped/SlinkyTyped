@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RegistrationEventResponse extends _EventResponse {
+trait RegistrationEventResponse extends EventResponse {
   /**
   		 * The registration ID provided by the 3rd party remote push service.
   		 */

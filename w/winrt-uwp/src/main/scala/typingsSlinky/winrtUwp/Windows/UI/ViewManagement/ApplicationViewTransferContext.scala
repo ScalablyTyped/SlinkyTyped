@@ -4,16 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.UI.ViewManagement.ApplicationViewTransferContext")
 @js.native
-abstract class ApplicationViewTransferContext () extends js.Object {
+trait ApplicationViewTransferContext extends js.Object {
    /* unmapped type */ var viewId: js.Any = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.UI.ViewManagement.ApplicationViewTransferContext")
-@js.native
-object ApplicationViewTransferContext extends js.Object {
-  var dataPackageFormatId: js.Any = js.native
+object ApplicationViewTransferContext {
+  @scala.inline
+  def apply(viewId: js.Any): ApplicationViewTransferContext = {
+    val __obj = js.Dynamic.literal(viewId = viewId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ApplicationViewTransferContext]
+  }
+  @scala.inline
+  implicit class ApplicationViewTransferContextOps[Self <: ApplicationViewTransferContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withViewId(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientAnalytics.gapi.client.analytics
 
-import typingsSlinky.gapiClientAnalytics.AnonHref
+import typingsSlinky.gapiClientAnalytics.anon.Href
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ trait CustomMetric extends js.Object {
   /** Name of the custom metric. */
   var name: js.UndefOr[String] = js.native
   /** Parent link for the custom metric. Points to the property to which the custom metric belongs. */
-  var parentLink: js.UndefOr[AnonHref] = js.native
+  var parentLink: js.UndefOr[Href] = js.native
   /** Scope of the custom metric: HIT or PRODUCT. */
   var scope: js.UndefOr[String] = js.native
   /** Link for the custom metric */
@@ -160,7 +160,7 @@ object CustomMetric {
         ret
     }
     @scala.inline
-    def withParentLink(value: AnonHref): Self = {
+    def withParentLink(value: Href): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parentLink")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonComponentDate
+import typingsSlinky.devextreme.anon.ComponentDate
 import typingsSlinky.devextreme.devextremeStrings.calendar
 import typingsSlinky.devextreme.devextremeStrings.century
 import typingsSlinky.devextreme.devextremeStrings.date
@@ -31,7 +31,7 @@ trait dxDateBoxOptions extends dxDropDownEditorOptions[dxDateBox] {
   /** Specifies the date-time value serialization format. Use it only if you do not specify the value at design time. */
   var dateSerializationFormat: js.UndefOr[String] = js.native
   /** Specifies dates to be disabled. Applies only if pickerType is "calendar". */
-  var disabledDates: js.UndefOr[js.Array[js.Date] | (js.Function1[/* data */ AnonComponentDate, Boolean])] = js.native
+  var disabledDates: js.UndefOr[js.Array[js.Date] | (js.Function1[/* data */ ComponentDate, Boolean])] = js.native
   /** Specifies the date display format. Ignored if the pickerType option is "native" */
   var displayFormat: js.UndefOr[format] = js.native
   /** Specifies the interval between neighboring values in the popup list in minutes. */
@@ -146,13 +146,13 @@ object dxDateBoxOptions {
         ret
     }
     @scala.inline
-    def withDisabledDatesFunction1(value: /* data */ AnonComponentDate => Boolean): Self = {
+    def withDisabledDatesFunction1(value: /* data */ ComponentDate => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDates")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDisabledDates(value: js.Array[js.Date] | (js.Function1[/* data */ AnonComponentDate, Boolean])): Self = {
+    def withDisabledDates(value: js.Array[js.Date] | (js.Function1[/* data */ ComponentDate, Boolean])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDates")(value.asInstanceOf[js.Any])
         ret

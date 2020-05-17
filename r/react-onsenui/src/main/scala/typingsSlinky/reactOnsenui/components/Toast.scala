@@ -3,7 +3,7 @@ package typingsSlinky.reactOnsenui.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameOnDeviceBackButton
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameOnDeviceBackButton
 import typingsSlinky.reactOnsenui.mod.AnimationOptions
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.ascend
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.default

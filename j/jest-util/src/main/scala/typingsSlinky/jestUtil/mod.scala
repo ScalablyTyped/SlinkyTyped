@@ -4,10 +4,11 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.Window
 import typingsSlinky.callsites.mod.CallSite
 import typingsSlinky.jestConsole.mod.CustomConsole
 import typingsSlinky.jestConsole.typesMod.LogEntry
-import typingsSlinky.jestFakeTimers.AnonConfig
+import typingsSlinky.jestFakeTimers.anon.Config
 import typingsSlinky.jestFakeTimers.mod.JestFakeTimers
 import typingsSlinky.jestTestResult.typesMod.AggregatedResult
 import typingsSlinky.jestTestResult.typesMod.CodeCoverageFormatter
@@ -16,13 +17,18 @@ import typingsSlinky.jestTestResult.typesMod.FormattedTestResults
 import typingsSlinky.jestTypes.configMod.ConfigGlobals
 import typingsSlinky.jestTypes.configMod.Glob
 import typingsSlinky.jestTypes.configMod.Path
+import typingsSlinky.jestUtil.anon.FnCall
+import typingsSlinky.jestUtil.anon.FnCallResultsCodeCoverageFormatterReporter
+import typingsSlinky.jestUtil.anon.FnCallValueOptionsCycles
+import typingsSlinky.jestUtil.anon.TypeofBufferedConsole
+import typingsSlinky.jestUtil.anon.TypeofpreRunMessage
+import typingsSlinky.jestUtil.anon.TypeofspecialChars
 import typingsSlinky.jestUtil.deepCyclicCopyMod.DeepCyclicCopyOptions
 import typingsSlinky.jestUtil.errorWithStackMod.default
 import typingsSlinky.node.NodeJS.Global
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.std.Record
 import typingsSlinky.std.WeakMap
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,13 +43,12 @@ object mod extends js.Object {
   
   @js.native
   class ErrorWithStack protected () extends default {
-    def this(message: js.UndefOr[scala.Nothing], callsite: js.Function) = this()
-    def this(message: String, callsite: js.Function) = this()
+    def this(message: js.UndefOr[String], callsite: js.Function) = this()
   }
   
   @js.native
   class FakeTimers[TimerRef] protected () extends JestFakeTimers[TimerRef] {
-    def this(hasGlobalModuleMockerTimerConfigConfigMaxLoops: AnonConfig[/* import warning: RewrittenClass.unapply cls was tparam TimerRef */ _]) = this()
+    def this(hasGlobalModuleMockerTimerConfigConfigMaxLoops: Config[/* import warning: RewrittenClass.unapply cls was tparam TimerRef */ _]) = this()
   }
   
   @js.native
@@ -98,7 +103,7 @@ object mod extends js.Object {
   def pluralize(word: String, count: Double): String = js.native
   def replacePathSepForGlob(path: Path): Glob = js.native
   def setGlobal(globalToMutate: Global, key: String, value: js.Any): Unit = js.native
-  def setGlobal(globalToMutate: Window_, key: String, value: js.Any): Unit = js.native
+  def setGlobal(globalToMutate: Window, key: String, value: js.Any): Unit = js.native
   def testPathPatternToRegExp(testPathPattern: String): js.RegExp = js.native
   @js.native
   object Console extends TopLevel[
@@ -108,14 +113,14 @@ object mod extends js.Object {
   @js.native
   object ErrorWithStack
     extends TopLevel[
-          Instantiable2[/* message */ js.UndefOr[String], /* callsite */ js.Function, default]
+          Instantiable2[js.UndefOr[/* message */ String], /* callsite */ js.Function, default]
         ]
   
   @js.native
   object FakeTimers
     extends TopLevel[
           Instantiable1[
-            /* hasGlobalModuleMockerTimerConfigConfigMaxLoops */ AnonConfig[/* import warning: RewrittenClass.unapply cls was tparam TimerRef */ js.Any], 
+            /* hasGlobalModuleMockerTimerConfigConfigMaxLoops */ Config[/* import warning: RewrittenClass.unapply cls was tparam TimerRef */ js.Any], 
             JestFakeTimers[js.Object]
           ]
         ]

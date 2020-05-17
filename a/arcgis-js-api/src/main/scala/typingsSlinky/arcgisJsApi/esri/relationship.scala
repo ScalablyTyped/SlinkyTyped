@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -101,7 +100,34 @@ trait relationship extends js.Object {
   def updateRenderer(params: relationshipUpdateRendererParams): js.Promise[UniqueValueRenderer] = js.native
 }
 
-@JSGlobal("__esri.relationship")
-@js.native
-object relationship extends TopLevel[relationship]
+object relationship {
+  @scala.inline
+  def apply(
+    createRenderer: relationshipCreateRendererParams => js.Promise[relationshipRendererResult],
+    updateRenderer: relationshipUpdateRendererParams => js.Promise[UniqueValueRenderer]
+  ): relationship = {
+    val __obj = js.Dynamic.literal(createRenderer = js.Any.fromFunction1(createRenderer), updateRenderer = js.Any.fromFunction1(updateRenderer))
+    __obj.asInstanceOf[relationship]
+  }
+  @scala.inline
+  implicit class relationshipOps[Self <: relationship] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateRenderer(value: relationshipCreateRendererParams => js.Promise[relationshipRendererResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateRenderer(value: relationshipUpdateRendererParams => js.Promise[UniqueValueRenderer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

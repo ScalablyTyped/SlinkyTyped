@@ -8,7 +8,7 @@ import typingsSlinky.devextreme.devextremeStrings.before
 import typingsSlinky.devextreme.devextremeStrings.center
 import typingsSlinky.devextreme.devextremeStrings.inMenu
 import typingsSlinky.devextreme.devextremeStrings.never
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

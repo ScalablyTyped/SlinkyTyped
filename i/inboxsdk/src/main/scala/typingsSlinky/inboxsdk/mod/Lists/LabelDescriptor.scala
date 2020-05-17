@@ -12,14 +12,8 @@ trait LabelDescriptor extends js.Object
 
 object LabelDescriptor {
   @scala.inline
-  def LabelDescriptorHtml(iconHtml: String, title: String): LabelDescriptor = {
-    val __obj = js.Dynamic.literal(iconHtml = iconHtml.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LabelDescriptor]
-  }
+  implicit def apply(value: LabelDescriptorHtml): LabelDescriptor = value.asInstanceOf[LabelDescriptor]
   @scala.inline
-  def LabelDescriptorUrl(iconUrl: String, title: String): LabelDescriptor = {
-    val __obj = js.Dynamic.literal(iconUrl = iconUrl.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LabelDescriptor]
-  }
+  implicit def apply(value: LabelDescriptorUrl): LabelDescriptor = value.asInstanceOf[LabelDescriptor]
 }
 

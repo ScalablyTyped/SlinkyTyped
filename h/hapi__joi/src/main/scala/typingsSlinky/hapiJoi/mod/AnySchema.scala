@@ -1,6 +1,6 @@
 package typingsSlinky.hapiJoi.mod
 
-import typingsSlinky.hapiJoi.AnonOverride
+import typingsSlinky.hapiJoi.anon.Override
 import typingsSlinky.hapiJoi.hapiJoiStrings.map
 import typingsSlinky.hapiJoi.hapiJoiStrings.number
 import typingsSlinky.hapiJoi.hapiJoiStrings.set
@@ -12,8 +12,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait AnySchema
-  extends SchemaInternals
-     with _Schema {
+  extends Schema
+     with SchemaInternals {
   /**
     * Starts a ruleset in order to apply multiple rule options. The set ends when `rule()`, `keep()`, `message()`, or `warn()` is called.
     */
@@ -136,7 +136,7 @@ trait AnySchema
     * Annotates the key with an example value, must be valid.
     */
   def example(value: js.Any): this.type = js.native
-  def example(value: js.Any, options: AnonOverride): this.type = js.native
+  def example(value: js.Any, options: Override): this.type = js.native
   /**
     * Marks a key as required which will not allow undefined as value. All keys are optional by default.
     */

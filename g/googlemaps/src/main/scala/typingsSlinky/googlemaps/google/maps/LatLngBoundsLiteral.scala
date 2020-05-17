@@ -1,12 +1,12 @@
 package typingsSlinky.googlemaps.google.maps
 
-import typingsSlinky.googlemaps.google.maps.places._LocationBias
+import typingsSlinky.googlemaps.google.maps.places.LocationBias
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LatLngBoundsLiteral extends _LocationBias {
+trait LatLngBoundsLiteral extends LocationBias {
   var east: Double = js.native
   var north: Double = js.native
   var south: Double = js.native

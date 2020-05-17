@@ -1,8 +1,8 @@
 package typingsSlinky.sourceMap.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.sourceMap.MappedPositionbiasnumber
-import typingsSlinky.sourceMap.Positionbiasnumber
+import typingsSlinky.sourceMap.anon.MappedPositionbiasnumber
+import typingsSlinky.sourceMap.anon.Positionbiasnumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

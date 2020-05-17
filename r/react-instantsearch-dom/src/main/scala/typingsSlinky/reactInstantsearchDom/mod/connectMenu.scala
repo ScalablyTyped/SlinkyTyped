@@ -3,7 +3,7 @@ package typingsSlinky.reactInstantsearchDom.mod
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.ComponentType
 import typingsSlinky.react.mod.StatelessComponent
-import typingsSlinky.reactInstantsearchCore.PartialMenuProvided
+import typingsSlinky.reactInstantsearchCore.anon.PartialMenuProvided
 import typingsSlinky.reactInstantsearchCore.mod.MenuExposed
 import typingsSlinky.reactInstantsearchCore.mod.MenuProvided
 import typingsSlinky.reactInstantsearchCore.mod.Omit

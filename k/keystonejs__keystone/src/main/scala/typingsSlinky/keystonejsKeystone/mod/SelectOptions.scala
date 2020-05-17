@@ -1,7 +1,7 @@
 package typingsSlinky.keystonejsKeystone.mod
 
 import typingsSlinky.keystonejsFields.mod.FieldType
-import typingsSlinky.keystonejsKeystone.AnonLabel
+import typingsSlinky.keystonejsKeystone.anon.Label
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.keystonejsKeystone.mod.AllFieldsOptions because Already inherited */ @js.native
 trait SelectOptions extends BaseFieldOptions {
   // TODO: use a named type
-  var options: String | (js.Array[AnonLabel | String]) = js.native
+  var options: String | (js.Array[Label | String]) = js.native
 }
 
 object SelectOptions {
   @scala.inline
-  def apply(options: String | (js.Array[AnonLabel | String]), `type`: FieldType): SelectOptions = {
+  def apply(options: String | (js.Array[Label | String]), `type`: FieldType): SelectOptions = {
     val __obj = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SelectOptions]
@@ -27,7 +27,7 @@ object SelectOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOptions(value: String | (js.Array[AnonLabel | String])): Self = {
+    def withOptions(value: String | (js.Array[Label | String])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait JSXSpreadAttribute
   extends BaseNode
-     with _Node {
+     with Node {
   var argument: Expression = js.native
   @JSName("type")
   var type_JSXSpreadAttribute: typingsSlinky.estreeJsx.estreeJsxStrings.JSXSpreadAttribute = js.native

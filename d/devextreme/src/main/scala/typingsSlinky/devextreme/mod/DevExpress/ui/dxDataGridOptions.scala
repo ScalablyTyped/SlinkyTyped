@@ -1,31 +1,31 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonAllowCollapsing
-import typingsSlinky.devextreme.AnonAllowColumnDragging
-import typingsSlinky.devextreme.AnonAllowExportSelectedData
-import typingsSlinky.devextreme.AnonAutoExpandAll
-import typingsSlinky.devextreme.AnonCalculateCustomSummary
-import typingsSlinky.devextreme.AnonCancelColumn
-import typingsSlinky.devextreme.AnonCellElement
-import typingsSlinky.devextreme.AnonColumnIndex
-import typingsSlinky.devextreme.AnonColumns
-import typingsSlinky.devextreme.AnonComponentDxDataGrid
-import typingsSlinky.devextreme.AnonDataField
-import typingsSlinky.devextreme.AnonDisabled
-import typingsSlinky.devextreme.AnonDisplayValue
-import typingsSlinky.devextreme.AnonElementFileName
-import typingsSlinky.devextreme.AnonFiltering
-import typingsSlinky.devextreme.AnonFormat
-import typingsSlinky.devextreme.AnonGroupColumn
-import typingsSlinky.devextreme.AnonGroupIndex
-import typingsSlinky.devextreme.AnonIsExpanded
-import typingsSlinky.devextreme.AnonIsNewRow
-import typingsSlinky.devextreme.AnonIsSelected
-import typingsSlinky.devextreme.AnonItems
-import typingsSlinky.devextreme.AnonNewRowIndex
-import typingsSlinky.devextreme.AnonRow
-import typingsSlinky.devextreme.AnonRowElement
+import typingsSlinky.devextreme.anon.AllowCollapsing
+import typingsSlinky.devextreme.anon.AllowColumnDragging
+import typingsSlinky.devextreme.anon.AllowExportSelectedData
+import typingsSlinky.devextreme.anon.AutoExpandAll
+import typingsSlinky.devextreme.anon.CalculateCustomSummary
+import typingsSlinky.devextreme.anon.CancelColumn
+import typingsSlinky.devextreme.anon.CellElement
+import typingsSlinky.devextreme.anon.ColumnIndex
+import typingsSlinky.devextreme.anon.Columns
+import typingsSlinky.devextreme.anon.ComponentDxDataGrid
+import typingsSlinky.devextreme.anon.DataField
+import typingsSlinky.devextreme.anon.Disabled
+import typingsSlinky.devextreme.anon.DisplayValue
+import typingsSlinky.devextreme.anon.ElementFileName
+import typingsSlinky.devextreme.anon.Filtering
+import typingsSlinky.devextreme.anon.Format
+import typingsSlinky.devextreme.anon.GroupColumn
+import typingsSlinky.devextreme.anon.GroupIndex
+import typingsSlinky.devextreme.anon.IsExpanded
+import typingsSlinky.devextreme.anon.IsNewRow
+import typingsSlinky.devextreme.anon.IsSelected
+import typingsSlinky.devextreme.anon.Items
+import typingsSlinky.devextreme.anon.NewRowIndex
+import typingsSlinky.devextreme.anon.Row
+import typingsSlinky.devextreme.anon.RowElement
 import typingsSlinky.devextreme.devextremeStrings.auto
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import scala.scalajs.js
@@ -51,53 +51,53 @@ trait dxDataGridOptions extends GridBaseOptions[dxDataGrid] {
   @JSName("editing")
   var editing_dxDataGridOptions: js.UndefOr[dxDataGridEditing] = js.native
   /** Configures client-side exporting. */
-  var export: js.UndefOr[AnonAllowExportSelectedData] = js.native
+  var export: js.UndefOr[AllowExportSelectedData] = js.native
   /** Configures the group panel. */
-  var groupPanel: js.UndefOr[AnonAllowColumnDragging] = js.native
+  var groupPanel: js.UndefOr[AllowColumnDragging] = js.native
   /** Configures grouping. */
-  var grouping: js.UndefOr[AnonAllowCollapsing] = js.native
+  var grouping: js.UndefOr[AllowCollapsing] = js.native
   /** Specifies which data field provides keys for data items. Applies only if data is a simple array. */
   var keyExpr: js.UndefOr[String | js.Array[String]] = js.native
   /** Allows you to build a master-detail interface in the grid. */
-  var masterDetail: js.UndefOr[AnonAutoExpandAll] = js.native
+  var masterDetail: js.UndefOr[AutoExpandAll] = js.native
   /** A function that is executed when a cell is clicked or tapped. Executed before onRowClick. */
-  var onCellClick: js.UndefOr[(js.Function1[/* e */ AnonCellElement, _]) | String] = js.native
+  var onCellClick: js.UndefOr[(js.Function1[/* e */ CellElement, _]) | String] = js.native
   /** A function that is executed when a cell is double-clicked or double-tapped. Executed before onRowDblClick. */
-  var onCellDblClick: js.UndefOr[js.Function1[/* e */ AnonColumnIndex, _]] = js.native
+  var onCellDblClick: js.UndefOr[js.Function1[/* e */ ColumnIndex, _]] = js.native
   /** A function that is executed after the pointer enters or leaves a cell. */
-  var onCellHoverChanged: js.UndefOr[js.Function1[/* e */ AnonDisplayValue, _]] = js.native
+  var onCellHoverChanged: js.UndefOr[js.Function1[/* e */ DisplayValue, _]] = js.native
   /** A function that is executed after a cell is created. */
-  var onCellPrepared: js.UndefOr[js.Function1[/* e */ AnonIsExpanded, _]] = js.native
+  var onCellPrepared: js.UndefOr[js.Function1[/* e */ IsExpanded, _]] = js.native
   /** A function that is executed before the context menu is rendered. */
-  var onContextMenuPreparing: js.UndefOr[js.Function1[/* e */ AnonItems, _]] = js.native
+  var onContextMenuPreparing: js.UndefOr[js.Function1[/* e */ Items, _]] = js.native
   /** A function that is executed before a cell or row switches to the editing state. */
-  var onEditingStart: js.UndefOr[js.Function1[/* e */ AnonCancelColumn, _]] = js.native
+  var onEditingStart: js.UndefOr[js.Function1[/* e */ CancelColumn, _]] = js.native
   /** A function that is executed after an editor is created. Not executed for cells with an editCellTemplate. */
-  var onEditorPrepared: js.UndefOr[js.Function1[/* options */ AnonDataField, _]] = js.native
+  var onEditorPrepared: js.UndefOr[js.Function1[/* options */ DataField, _]] = js.native
   /** A function used to customize or replace default editors. Not executed for cells with an editCellTemplate. */
-  var onEditorPreparing: js.UndefOr[js.Function1[/* e */ AnonDisabled, _]] = js.native
+  var onEditorPreparing: js.UndefOr[js.Function1[/* e */ Disabled, _]] = js.native
   /** A function that is executed after data is exported. */
-  var onExported: js.UndefOr[js.Function1[/* e */ AnonComponentDxDataGrid, _]] = js.native
+  var onExported: js.UndefOr[js.Function1[/* e */ ComponentDxDataGrid, _]] = js.native
   /** A function that is executed before data is exported. */
-  var onExporting: js.UndefOr[js.Function1[/* e */ AnonElementFileName, _]] = js.native
+  var onExporting: js.UndefOr[js.Function1[/* e */ ElementFileName, _]] = js.native
   /** A function that is executed before a file with exported data is saved to the user's local storage. */
-  var onFileSaving: js.UndefOr[js.Function1[/* e */ AnonFormat, _]] = js.native
+  var onFileSaving: js.UndefOr[js.Function1[/* e */ Format, _]] = js.native
   /** A function that is executed after the focused cell changes. */
-  var onFocusedCellChanged: js.UndefOr[js.Function1[/* e */ AnonRow, _]] = js.native
+  var onFocusedCellChanged: js.UndefOr[js.Function1[/* e */ Row, _]] = js.native
   /** A function that is executed before the focused cell changes. */
-  var onFocusedCellChanging: js.UndefOr[js.Function1[/* e */ AnonColumns, _]] = js.native
+  var onFocusedCellChanging: js.UndefOr[js.Function1[/* e */ Columns, _]] = js.native
   /** A function that is executed after the focused row changes. Applies only when focusedRowEnabled is true. */
-  var onFocusedRowChanged: js.UndefOr[js.Function1[/* e */ AnonRowElement, _]] = js.native
+  var onFocusedRowChanged: js.UndefOr[js.Function1[/* e */ RowElement, _]] = js.native
   /** A function that is executed before the focused row changes. Applies only when focusedRowEnabled is true. */
-  var onFocusedRowChanging: js.UndefOr[js.Function1[/* e */ AnonNewRowIndex, _]] = js.native
+  var onFocusedRowChanging: js.UndefOr[js.Function1[/* e */ NewRowIndex, _]] = js.native
   /** A function that is executed when a row is clicked or tapped. */
-  var onRowClick: js.UndefOr[(js.Function1[/* e */ AnonGroupIndex, _]) | String] = js.native
+  var onRowClick: js.UndefOr[(js.Function1[/* e */ GroupIndex, _]) | String] = js.native
   /** A function that is executed when a row is double-clicked or double-tapped. Executed after onCellDblClick. */
-  var onRowDblClick: js.UndefOr[js.Function1[/* e */ AnonIsNewRow, _]] = js.native
+  var onRowDblClick: js.UndefOr[js.Function1[/* e */ IsNewRow, _]] = js.native
   /** A function that is executed after a row is created. */
-  var onRowPrepared: js.UndefOr[js.Function1[/* e */ AnonIsSelected, _]] = js.native
+  var onRowPrepared: js.UndefOr[js.Function1[/* e */ IsSelected, _]] = js.native
   /** Notifies the DataGrid of the server's data processing operations. */
-  var remoteOperations: js.UndefOr[Boolean | AnonFiltering | auto] = js.native
+  var remoteOperations: js.UndefOr[Boolean | Filtering | auto] = js.native
   /** Specifies a custom template for rows. */
   var rowTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* rowElement */ dxElement, /* rowInfo */ js.Any, _])
@@ -111,9 +111,9 @@ trait dxDataGridOptions extends GridBaseOptions[dxDataGrid] {
   @JSName("selection")
   var selection_dxDataGridOptions: js.UndefOr[dxDataGridSelection] = js.native
   /** Allows you to sort groups according to the values of group summary items. */
-  var sortByGroupSummaryInfo: js.UndefOr[js.Array[AnonGroupColumn]] = js.native
+  var sortByGroupSummaryInfo: js.UndefOr[js.Array[GroupColumn]] = js.native
   /** Specifies the options of the grid summary. */
-  var summary: js.UndefOr[AnonCalculateCustomSummary] = js.native
+  var summary: js.UndefOr[CalculateCustomSummary] = js.native
 }
 
 object dxDataGridOptions {
@@ -177,7 +177,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withExport(value: AnonAllowExportSelectedData): Self = {
+    def withExport(value: AllowExportSelectedData): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("export")(value.asInstanceOf[js.Any])
         ret
@@ -189,7 +189,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withGroupPanel(value: AnonAllowColumnDragging): Self = {
+    def withGroupPanel(value: AllowColumnDragging): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("groupPanel")(value.asInstanceOf[js.Any])
         ret
@@ -201,7 +201,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withGrouping(value: AnonAllowCollapsing): Self = {
+    def withGrouping(value: AllowCollapsing): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("grouping")(value.asInstanceOf[js.Any])
         ret
@@ -225,7 +225,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withMasterDetail(value: AnonAutoExpandAll): Self = {
+    def withMasterDetail(value: AutoExpandAll): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("masterDetail")(value.asInstanceOf[js.Any])
         ret
@@ -237,13 +237,13 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withOnCellClickFunction1(value: /* e */ AnonCellElement => _): Self = {
+    def withOnCellClickFunction1(value: /* e */ CellElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCellClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnCellClick(value: (js.Function1[/* e */ AnonCellElement, _]) | String): Self = {
+    def withOnCellClick(value: (js.Function1[/* e */ CellElement, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCellClick")(value.asInstanceOf[js.Any])
         ret
@@ -255,7 +255,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withOnCellDblClick(value: /* e */ AnonColumnIndex => _): Self = {
+    def withOnCellDblClick(value: /* e */ ColumnIndex => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCellDblClick")(js.Any.fromFunction1(value))
         ret
@@ -267,7 +267,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withOnCellHoverChanged(value: /* e */ AnonDisplayValue => _): Self = {
+    def withOnCellHoverChanged(value: /* e */ DisplayValue => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCellHoverChanged")(js.Any.fromFunction1(value))
         ret
@@ -279,7 +279,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withOnCellPrepared(value: /* e */ AnonIsExpanded => _): Self = {
+    def withOnCellPrepared(value: /* e */ IsExpanded => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCellPrepared")(js.Any.fromFunction1(value))
         ret
@@ -291,7 +291,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withOnContextMenuPreparing(value: /* e */ AnonItems => _): Self = {
+    def withOnContextMenuPreparing(value: /* e */ Items => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenuPreparing")(js.Any.fromFunction1(value))
         ret
@@ -303,7 +303,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withOnEditingStart(value: /* e */ AnonCancelColumn => _): Self = {
+    def withOnEditingStart(value: /* e */ CancelColumn => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEditingStart")(js.Any.fromFunction1(value))
         ret
@@ -315,7 +315,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withOnEditorPrepared(value: /* options */ AnonDataField => _): Self = {
+    def withOnEditorPrepared(value: /* options */ DataField => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEditorPrepared")(js.Any.fromFunction1(value))
         ret
@@ -327,7 +327,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withOnEditorPreparing(value: /* e */ AnonDisabled => _): Self = {
+    def withOnEditorPreparing(value: /* e */ Disabled => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEditorPreparing")(js.Any.fromFunction1(value))
         ret
@@ -339,7 +339,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withOnExported(value: /* e */ AnonComponentDxDataGrid => _): Self = {
+    def withOnExported(value: /* e */ ComponentDxDataGrid => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onExported")(js.Any.fromFunction1(value))
         ret
@@ -351,7 +351,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withOnExporting(value: /* e */ AnonElementFileName => _): Self = {
+    def withOnExporting(value: /* e */ ElementFileName => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onExporting")(js.Any.fromFunction1(value))
         ret
@@ -363,7 +363,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withOnFileSaving(value: /* e */ AnonFormat => _): Self = {
+    def withOnFileSaving(value: /* e */ Format => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFileSaving")(js.Any.fromFunction1(value))
         ret
@@ -375,7 +375,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withOnFocusedCellChanged(value: /* e */ AnonRow => _): Self = {
+    def withOnFocusedCellChanged(value: /* e */ Row => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusedCellChanged")(js.Any.fromFunction1(value))
         ret
@@ -387,7 +387,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withOnFocusedCellChanging(value: /* e */ AnonColumns => _): Self = {
+    def withOnFocusedCellChanging(value: /* e */ Columns => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusedCellChanging")(js.Any.fromFunction1(value))
         ret
@@ -399,7 +399,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withOnFocusedRowChanged(value: /* e */ AnonRowElement => _): Self = {
+    def withOnFocusedRowChanged(value: /* e */ RowElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusedRowChanged")(js.Any.fromFunction1(value))
         ret
@@ -411,7 +411,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withOnFocusedRowChanging(value: /* e */ AnonNewRowIndex => _): Self = {
+    def withOnFocusedRowChanging(value: /* e */ NewRowIndex => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocusedRowChanging")(js.Any.fromFunction1(value))
         ret
@@ -423,13 +423,13 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withOnRowClickFunction1(value: /* e */ AnonGroupIndex => _): Self = {
+    def withOnRowClickFunction1(value: /* e */ GroupIndex => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnRowClick(value: (js.Function1[/* e */ AnonGroupIndex, _]) | String): Self = {
+    def withOnRowClick(value: (js.Function1[/* e */ GroupIndex, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowClick")(value.asInstanceOf[js.Any])
         ret
@@ -441,7 +441,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withOnRowDblClick(value: /* e */ AnonIsNewRow => _): Self = {
+    def withOnRowDblClick(value: /* e */ IsNewRow => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowDblClick")(js.Any.fromFunction1(value))
         ret
@@ -453,7 +453,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withOnRowPrepared(value: /* e */ AnonIsSelected => _): Self = {
+    def withOnRowPrepared(value: /* e */ IsSelected => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowPrepared")(js.Any.fromFunction1(value))
         ret
@@ -465,7 +465,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withRemoteOperations(value: Boolean | AnonFiltering | auto): Self = {
+    def withRemoteOperations(value: Boolean | Filtering | auto): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("remoteOperations")(value.asInstanceOf[js.Any])
         ret
@@ -539,7 +539,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withSortByGroupSummaryInfo(value: js.Array[AnonGroupColumn]): Self = {
+    def withSortByGroupSummaryInfo(value: js.Array[GroupColumn]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sortByGroupSummaryInfo")(value.asInstanceOf[js.Any])
         ret
@@ -551,7 +551,7 @@ object dxDataGridOptions {
         ret
     }
     @scala.inline
-    def withSummary(value: AnonCalculateCustomSummary): Self = {
+    def withSummary(value: CalculateCustomSummary): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
         ret

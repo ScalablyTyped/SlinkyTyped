@@ -1,6 +1,6 @@
 package typingsSlinky.jsreportChromePdf.mod
 
-import typingsSlinky.jsreportChromePdf.AnonHeight
+import typingsSlinky.jsreportChromePdf.anon.Height
 import typingsSlinky.jsreportChromePdf.jsreportChromePdfStrings.base64
 import typingsSlinky.jsreportChromePdf.jsreportChromePdfStrings.binary
 import typingsSlinky.jsreportChromePdf.jsreportChromePdfStrings.jpeg
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 // https://github.com/puppeteer/puppeteer/blob/v1.11.0/docs/api.md#pagescreenshotoptions
 @js.native
 trait ChromeImage extends js.Object {
-  var clip: AnonHeight = js.native
+  var clip: Height = js.native
   var encoding: base64 | binary = js.native
   	// 0-100
   var fullPage: Boolean = js.native
@@ -26,7 +26,7 @@ trait ChromeImage extends js.Object {
 object ChromeImage {
   @scala.inline
   def apply(
-    clip: AnonHeight,
+    clip: Height,
     encoding: base64 | binary,
     fullPage: Boolean,
     omitBackground: Boolean,
@@ -45,7 +45,7 @@ object ChromeImage {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClip(value: AnonHeight): Self = {
+    def withClip(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("clip")(value.asInstanceOf[js.Any])
         ret

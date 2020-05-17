@@ -1,9 +1,9 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesLine
 
-import typingsSlinky.echarts.AnonBarBorderWidth
-import typingsSlinky.echarts.AnonDistance
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonItemStyleAnonBarBorderWidth
+import typingsSlinky.echarts.anon.BarBorderWidth
+import typingsSlinky.echarts.anon.Distance
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.ItemStyleBarBorderWidth
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,21 +13,21 @@ trait DataObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-line.data.emphasis
     */
-  var emphasis: js.UndefOr[AnonItemStyleAnonBarBorderWidth] = js.native
+  var emphasis: js.UndefOr[ItemStyleBarBorderWidth] = js.native
   /**
     * The style of the symbol of single data point.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-line.data.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBarBorderWidth] = js.native
+  var itemStyle: js.UndefOr[BarBorderWidth] = js.native
   /**
     * The style of the text of single data point.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-line.data.label
     */
-  var label: js.UndefOr[AnonDistance] = js.native
+  var label: js.UndefOr[Distance] = js.native
   /**
     * The name of data item.
     *
@@ -135,7 +135,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-line.data.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * The value of a single data item.
     *
@@ -158,7 +158,7 @@ object DataObject {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEmphasis(value: AnonItemStyleAnonBarBorderWidth): Self = {
+    def withEmphasis(value: ItemStyleBarBorderWidth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -170,7 +170,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonBarBorderWidth): Self = {
+    def withItemStyle(value: BarBorderWidth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -182,7 +182,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonDistance): Self = {
+    def withLabel(value: Distance): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -266,7 +266,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

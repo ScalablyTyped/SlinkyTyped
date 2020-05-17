@@ -1,5 +1,6 @@
 package typingsSlinky.spotifyWebPlaybackSdk
 
+import typingsSlinky.spotifyWebPlaybackSdk.anon.TypeofSpotify
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

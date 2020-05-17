@@ -1,0 +1,77 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.geometry
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * This structure contains the relevant data for a cubic Bezier curve.
+  *
+  * The data is stored integer-valued. The last point of the segment is taken from the first point of the following segment, and thus not included herein.
+  * That is, when forming a polygon out of cubic Bezier segments, each two consecutive IntegerBezierSegment2Ds define the actual curve, with the very last
+  * segment providing only the end point of the last curve, and the remaining members ignored.
+  * @see com.sun.star.rendering.XBezierPolyPolygon2D
+  * @since OOo 2.0
+  */
+@js.native
+trait IntegerBezierSegment2D extends js.Object {
+  var C1x: Double = js.native
+  var C1y: Double = js.native
+  var C2x: Double = js.native
+  var C2y: Double = js.native
+  var Px: Double = js.native
+  var Py: Double = js.native
+}
+
+object IntegerBezierSegment2D {
+  @scala.inline
+  def apply(C1x: Double, C1y: Double, C2x: Double, C2y: Double, Px: Double, Py: Double): IntegerBezierSegment2D = {
+    val __obj = js.Dynamic.literal(C1x = C1x.asInstanceOf[js.Any], C1y = C1y.asInstanceOf[js.Any], C2x = C2x.asInstanceOf[js.Any], C2y = C2y.asInstanceOf[js.Any], Px = Px.asInstanceOf[js.Any], Py = Py.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IntegerBezierSegment2D]
+  }
+  @scala.inline
+  implicit class IntegerBezierSegment2DOps[Self <: IntegerBezierSegment2D] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withC1x(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("C1x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withC1y(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("C1y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withC2x(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("C2x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withC2y(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("C2y")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Px")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Py")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

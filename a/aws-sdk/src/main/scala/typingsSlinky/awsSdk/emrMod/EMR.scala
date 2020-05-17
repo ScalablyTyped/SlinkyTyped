@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdk.emrMod
 
-import typingsSlinky.awsSdk.DescribeClusterInputwaite
-import typingsSlinky.awsSdk.DescribeStepInputwaiterWa
+import typingsSlinky.awsSdk.anon.DescribeClusterInputwaite
+import typingsSlinky.awsSdk.anon.DescribeStepInputwaiterWa
 import typingsSlinky.awsSdk.awsSdkStrings.clusterRunning
 import typingsSlinky.awsSdk.awsSdkStrings.clusterTerminated
 import typingsSlinky.awsSdk.awsSdkStrings.stepComplete

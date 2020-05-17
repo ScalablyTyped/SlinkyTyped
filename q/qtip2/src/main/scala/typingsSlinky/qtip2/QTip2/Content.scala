@@ -1,8 +1,7 @@
 package typingsSlinky.qtip2.QTip2
 
-import typingsSlinky.qtip2.AnonText
+import org.scalajs.dom.raw.Event
 import typingsSlinky.qtip2.JQuery
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +11,7 @@ trait Content extends js.Object {
   var attr: js.UndefOr[String] = js.native
   var button: js.UndefOr[String | JQuery | Boolean] = js.native
   var text: js.UndefOr[Text] = js.native
-  var title: js.UndefOr[Title | AnonText] = js.native
+  var title: js.UndefOr[Title | typingsSlinky.qtip2.anon.Text] = js.native
 }
 
 object Content {
@@ -52,7 +51,7 @@ object Content {
         ret
     }
     @scala.inline
-    def withTextFunction2(value: (/* event */ Event_, /* api */ Api) => Unit): Self = {
+    def withTextFunction2(value: (/* event */ Event, /* api */ Api) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.Any.fromFunction2(value))
         ret
@@ -70,13 +69,13 @@ object Content {
         ret
     }
     @scala.inline
-    def withTitleFunction2(value: (/* event */ Event_, /* api */ Api) => Unit): Self = {
+    def withTitleFunction2(value: (/* event */ Event, /* api */ Api) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.Any.fromFunction2(value))
         ret
     }
     @scala.inline
-    def withTitle(value: Title | AnonText): Self = {
+    def withTitle(value: Title | typingsSlinky.qtip2.anon.Text): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
         ret

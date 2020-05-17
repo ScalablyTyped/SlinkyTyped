@@ -1,6 +1,6 @@
 package typingsSlinky.jestReporters.statusMod
 
-import typingsSlinky.jestReporters.AnonClear
+import typingsSlinky.jestReporters.anon.Clear
 import typingsSlinky.jestReporters.typesMod.ReporterOnStartOptions
 import typingsSlinky.jestTestResult.typesMod.AggregatedResult
 import typingsSlinky.jestTestResult.typesMod.TestResult
@@ -24,7 +24,7 @@ trait Status extends js.Object {
   var _interval: js.UndefOr[js.Any] = js.native
   var _showStatus: js.Any = js.native
   var _tick: js.Any = js.native
-  def get(): AnonClear = js.native
+  def get(): Clear = js.native
   def onChange(callback: js.Function0[Unit]): Unit = js.native
   def runFinished(): Unit = js.native
   def runStarted(aggregatedResults: AggregatedResult, options: ReporterOnStartOptions): Unit = js.native
@@ -44,7 +44,7 @@ object Status {
     _estimatedTime: js.Any,
     _showStatus: js.Any,
     _tick: js.Any,
-    get: () => AnonClear,
+    get: () => Clear,
     onChange: js.Function0[Unit] => Unit,
     runFinished: () => Unit,
     runStarted: (AggregatedResult, ReporterOnStartOptions) => Unit,
@@ -115,7 +115,7 @@ object Status {
         ret
     }
     @scala.inline
-    def withGet(value: () => AnonClear): Self = {
+    def withGet(value: () => Clear): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction0(value))
         ret

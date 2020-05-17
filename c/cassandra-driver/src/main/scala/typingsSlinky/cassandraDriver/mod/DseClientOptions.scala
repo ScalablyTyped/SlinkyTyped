@@ -1,6 +1,6 @@
 package typingsSlinky.cassandraDriver.mod
 
-import typingsSlinky.cassandraDriver.AnonEnabled
+import typingsSlinky.cassandraDriver.anon.Enabled
 import typingsSlinky.cassandraDriver.typesMod.types.Uuid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ trait DseClientOptions extends ClientOptions {
   var applicationVersion: js.UndefOr[String] = js.native
   var graphOptions: js.UndefOr[GraphOptions] = js.native
   var id: js.UndefOr[Uuid] = js.native
-  var monitorReporting: js.UndefOr[AnonEnabled] = js.native
+  var monitorReporting: js.UndefOr[Enabled] = js.native
 }
 
 object DseClientOptions {
@@ -76,7 +76,7 @@ object DseClientOptions {
         ret
     }
     @scala.inline
-    def withMonitorReporting(value: AnonEnabled): Self = {
+    def withMonitorReporting(value: Enabled): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("monitorReporting")(value.asInstanceOf[js.Any])
         ret

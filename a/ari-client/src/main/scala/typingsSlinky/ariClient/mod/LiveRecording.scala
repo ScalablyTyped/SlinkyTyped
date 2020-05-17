@@ -1,6 +1,6 @@
 package typingsSlinky.ariClient.mod
 
-import typingsSlinky.ariClient.AnonDestinationRecordingNameString
+import typingsSlinky.ariClient.anon.DestinationRecordingNameString
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,9 +19,9 @@ trait LiveRecording extends Resource {
   var target_uri: String = js.native
   def cancel(): js.Promise[Unit] = js.native
   def cancel(callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def copyStored(params: AnonDestinationRecordingNameString): js.Promise[StoredRecording] = js.native
+  def copyStored(params: DestinationRecordingNameString): js.Promise[StoredRecording] = js.native
   def copyStored(
-    params: AnonDestinationRecordingNameString,
+    params: DestinationRecordingNameString,
     callback: js.Function2[/* err */ js.Error, /* storedrecording */ StoredRecording, Unit]
   ): Unit = js.native
   def deleteStored(): js.Promise[Unit] = js.native

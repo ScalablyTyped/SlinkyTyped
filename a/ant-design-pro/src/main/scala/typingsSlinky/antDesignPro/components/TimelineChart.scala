@@ -2,8 +2,8 @@ package typingsSlinky.antDesignPro.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignPro.AnonY1
-import typingsSlinky.antDesignPro.AnonY2
+import typingsSlinky.antDesignPro.anon.Y1
+import typingsSlinky.antDesignPro.anon.Y2
 import typingsSlinky.antDesignPro.timelineChartMod.ITimelineChartProps
 import typingsSlinky.antDesignPro.timelineChartMod.default
 import typingsSlinky.react.mod.CSSProperties
@@ -30,7 +30,7 @@ object TimelineChart {
   
   def withProps(p: ITimelineChartProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(data: js.Array[AnonY1], titleMap: AnonY2): Builder = {
+  def apply(data: js.Array[Y1], titleMap: Y2): Builder = {
     val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], titleMap = titleMap.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[ITimelineChartProps]))
   }

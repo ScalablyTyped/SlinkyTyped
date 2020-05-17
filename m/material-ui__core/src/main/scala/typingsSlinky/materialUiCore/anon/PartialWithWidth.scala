@@ -1,0 +1,41 @@
+package typingsSlinky.materialUiCore.anon
+
+import typingsSlinky.materialUiCore.createBreakpointsMod.Breakpoint
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Inlined std.Partial<@material-ui/core.@material-ui/core/withWidth.WithWidth> */
+@js.native
+trait PartialWithWidth extends js.Object {
+  var width: js.UndefOr[Breakpoint] = js.native
+}
+
+object PartialWithWidth {
+  @scala.inline
+  def apply(): PartialWithWidth = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[PartialWithWidth]
+  }
+  @scala.inline
+  implicit class PartialWithWidthOps[Self <: PartialWithWidth] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWidth(value: Breakpoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutWidth: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

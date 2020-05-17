@@ -1,8 +1,7 @@
 package typingsSlinky.gapiClientSlides.gapi.client.slides
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientSlides.AnonBearertoken
-import typingsSlinky.gapiClientSlides.AnonCallback
+import typingsSlinky.gapiClientSlides.anon.Bearertoken
+import typingsSlinky.gapiClientSlides.anon.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,23 +32,23 @@ trait PresentationsResource extends js.Object {
     * the updates in your request are guaranteed to be applied together
     * atomically.
     */
-  def batchUpdate(request: AnonBearertoken): Request_[BatchUpdatePresentationResponse] = js.native
+  def batchUpdate(request: Bearertoken): typingsSlinky.gapiClient.gapi.client.Request[BatchUpdatePresentationResponse] = js.native
   /**
     * Creates a new presentation using the title given in the request. Other
     * fields in the request are ignored.
     * Returns the created presentation.
     */
-  def create(request: AnonCallback): Request_[Presentation] = js.native
+  def create(request: Callback): typingsSlinky.gapiClient.gapi.client.Request[Presentation] = js.native
   /** Gets the latest version of the specified presentation. */
-  def get(request: AnonBearertoken): Request_[Presentation] = js.native
+  def get(request: Bearertoken): typingsSlinky.gapiClient.gapi.client.Request[Presentation] = js.native
 }
 
 object PresentationsResource {
   @scala.inline
   def apply(
-    batchUpdate: AnonBearertoken => Request_[BatchUpdatePresentationResponse],
-    create: AnonCallback => Request_[Presentation],
-    get: AnonBearertoken => Request_[Presentation],
+    batchUpdate: Bearertoken => typingsSlinky.gapiClient.gapi.client.Request[BatchUpdatePresentationResponse],
+    create: Callback => typingsSlinky.gapiClient.gapi.client.Request[Presentation],
+    get: Bearertoken => typingsSlinky.gapiClient.gapi.client.Request[Presentation],
     pages: PagesResource
   ): PresentationsResource = {
     val __obj = js.Dynamic.literal(batchUpdate = js.Any.fromFunction1(batchUpdate), create = js.Any.fromFunction1(create), get = js.Any.fromFunction1(get), pages = pages.asInstanceOf[js.Any])
@@ -62,19 +61,21 @@ object PresentationsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBatchUpdate(value: AnonBearertoken => Request_[BatchUpdatePresentationResponse]): Self = {
+    def withBatchUpdate(
+      value: Bearertoken => typingsSlinky.gapiClient.gapi.client.Request[BatchUpdatePresentationResponse]
+    ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("batchUpdate")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withCreate(value: AnonCallback => Request_[Presentation]): Self = {
+    def withCreate(value: Callback => typingsSlinky.gapiClient.gapi.client.Request[Presentation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonBearertoken => Request_[Presentation]): Self = {
+    def withGet(value: Bearertoken => typingsSlinky.gapiClient.gapi.client.Request[Presentation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret

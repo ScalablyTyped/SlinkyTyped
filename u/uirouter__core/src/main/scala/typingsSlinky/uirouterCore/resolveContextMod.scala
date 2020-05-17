@@ -1,5 +1,6 @@
 package typingsSlinky.uirouterCore
 
+import typingsSlinky.uirouterCore.anon.Token
 import typingsSlinky.uirouterCore.interfaceMod.UIInjector
 import typingsSlinky.uirouterCore.pathNodeMod.PathNode
 import typingsSlinky.uirouterCore.resolvableMod.Resolvable
@@ -61,9 +62,9 @@ object resolveContextMod extends js.Object {
       * @param trans
       * @returns {Promise<any>|any}
       */
-    def resolvePath(): js.Promise[js.Array[AnonToken]] = js.native
-    def resolvePath(when: PolicyWhen): js.Promise[js.Array[AnonToken]] = js.native
-    def resolvePath(when: PolicyWhen, trans: Transition): js.Promise[js.Array[AnonToken]] = js.native
+    def resolvePath(): js.Promise[js.Array[Token]] = js.native
+    def resolvePath(when: PolicyWhen): js.Promise[js.Array[Token]] = js.native
+    def resolvePath(when: PolicyWhen, trans: Transition): js.Promise[js.Array[Token]] = js.native
     /**
       * Returns a ResolveContext that includes a portion of this one
       *

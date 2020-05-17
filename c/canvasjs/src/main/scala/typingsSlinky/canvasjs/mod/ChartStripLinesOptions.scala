@@ -1,6 +1,6 @@
 package typingsSlinky.canvasjs.mod
 
-import typingsSlinky.canvasjs.AnonAxis
+import typingsSlinky.canvasjs.anon.Axis
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -70,7 +70,7 @@ trait ChartStripLinesOptions extends js.Object {
   /**
     * A custom formatter function that returns stripLine’s label.
     */
-  var labelFormatter: js.UndefOr[js.Function1[/* e */ js.UndefOr[AnonAxis], String]] = js.native
+  var labelFormatter: js.UndefOr[js.Function1[/* e */ js.UndefOr[Axis], String]] = js.native
   /**
     * labelMaxWidth defines the maximum width of labels after which they get wrapped or clipped depending on labelWrap’s value.
     * It overrides the labelMaxWidth value set at axis level.
@@ -272,7 +272,7 @@ object ChartStripLinesOptions {
         ret
     }
     @scala.inline
-    def withLabelFormatter(value: /* e */ js.UndefOr[AnonAxis] => String): Self = {
+    def withLabelFormatter(value: /* e */ js.UndefOr[Axis] => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("labelFormatter")(js.Any.fromFunction1(value))
         ret

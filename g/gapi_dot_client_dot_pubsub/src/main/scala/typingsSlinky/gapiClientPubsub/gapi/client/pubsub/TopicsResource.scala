@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientPubsub.gapi.client.pubsub
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientPubsub.AnonAccesstoken
-import typingsSlinky.gapiClientPubsub.AnonBearertoken
-import typingsSlinky.gapiClientPubsub.AnonCallback
-import typingsSlinky.gapiClientPubsub.AnonKey
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientPubsub.anon.Accesstoken
+import typingsSlinky.gapiClientPubsub.anon.Bearertoken
+import typingsSlinky.gapiClientPubsub.anon.Callback
+import typingsSlinky.gapiClientPubsub.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 trait TopicsResource extends js.Object {
   var subscriptions: SubscriptionsResource = js.native
   /** Creates the given topic with the given name. */
-  def create(request: AnonBearertoken): Request_[Topic] = js.native
+  def create(request: Bearertoken): Request[Topic] = js.native
   /**
     * Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
     * does not exist. After a topic is deleted, a new topic may be created with
@@ -21,28 +21,28 @@ trait TopicsResource extends js.Object {
     * configuration or subscriptions. Existing subscriptions to this topic are
     * not deleted, but their `topic` field is set to `_deleted-topic_`.
     */
-  def delete(request: AnonKey): Request_[js.Object] = js.native
+  def delete(request: Key): Request[js.Object] = js.native
   /** Gets the configuration of a topic. */
-  def get(request: AnonKey): Request_[Topic] = js.native
+  def get(request: Key): Request[Topic] = js.native
   /**
     * Gets the access control policy for a resource.
     * Returns an empty policy if the resource exists and does not have a policy
     * set.
     */
-  def getIamPolicy(request: AnonAccesstoken): Request_[Policy] = js.native
+  def getIamPolicy(request: Accesstoken): Request[Policy] = js.native
   /** Lists matching topics. */
-  def list(request: AnonCallback): Request_[ListTopicsResponse] = js.native
+  def list(request: Callback): Request[ListTopicsResponse] = js.native
   /**
     * Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
     * does not exist. The message payload must not be empty; it must contain
     * either a non-empty data field, or at least one attribute.
     */
-  def publish(request: AnonKey): Request_[PublishResponse] = js.native
+  def publish(request: Key): Request[PublishResponse] = js.native
   /**
     * Sets the access control policy on the specified resource. Replaces any
     * existing policy.
     */
-  def setIamPolicy(request: AnonAccesstoken): Request_[Policy] = js.native
+  def setIamPolicy(request: Accesstoken): Request[Policy] = js.native
   /**
     * Returns permissions that a caller has on the specified resource.
     * If the resource does not exist, this will return an empty set of
@@ -52,21 +52,21 @@ trait TopicsResource extends js.Object {
     * UIs and command-line tools, not for authorization checking. This operation
     * may "fail open" without warning.
     */
-  def testIamPermissions(request: AnonAccesstoken): Request_[TestIamPermissionsResponse] = js.native
+  def testIamPermissions(request: Accesstoken): Request[TestIamPermissionsResponse] = js.native
 }
 
 object TopicsResource {
   @scala.inline
   def apply(
-    create: AnonBearertoken => Request_[Topic],
-    delete: AnonKey => Request_[js.Object],
-    get: AnonKey => Request_[Topic],
-    getIamPolicy: AnonAccesstoken => Request_[Policy],
-    list: AnonCallback => Request_[ListTopicsResponse],
-    publish: AnonKey => Request_[PublishResponse],
-    setIamPolicy: AnonAccesstoken => Request_[Policy],
+    create: Bearertoken => Request[Topic],
+    delete: Key => Request[js.Object],
+    get: Key => Request[Topic],
+    getIamPolicy: Accesstoken => Request[Policy],
+    list: Callback => Request[ListTopicsResponse],
+    publish: Key => Request[PublishResponse],
+    setIamPolicy: Accesstoken => Request[Policy],
     subscriptions: SubscriptionsResource,
-    testIamPermissions: AnonAccesstoken => Request_[TestIamPermissionsResponse]
+    testIamPermissions: Accesstoken => Request[TestIamPermissionsResponse]
   ): TopicsResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), getIamPolicy = js.Any.fromFunction1(getIamPolicy), list = js.Any.fromFunction1(list), publish = js.Any.fromFunction1(publish), setIamPolicy = js.Any.fromFunction1(setIamPolicy), subscriptions = subscriptions.asInstanceOf[js.Any], testIamPermissions = js.Any.fromFunction1(testIamPermissions))
     __obj.asInstanceOf[TopicsResource]
@@ -78,43 +78,43 @@ object TopicsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: AnonBearertoken => Request_[Topic]): Self = {
+    def withCreate(value: Bearertoken => Request[Topic]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonKey => Request_[js.Object]): Self = {
+    def withDelete(value: Key => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonKey => Request_[Topic]): Self = {
+    def withGet(value: Key => Request[Topic]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGetIamPolicy(value: AnonAccesstoken => Request_[Policy]): Self = {
+    def withGetIamPolicy(value: Accesstoken => Request[Policy]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getIamPolicy")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonCallback => Request_[ListTopicsResponse]): Self = {
+    def withList(value: Callback => Request[ListTopicsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPublish(value: AnonKey => Request_[PublishResponse]): Self = {
+    def withPublish(value: Key => Request[PublishResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("publish")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withSetIamPolicy(value: AnonAccesstoken => Request_[Policy]): Self = {
+    def withSetIamPolicy(value: Accesstoken => Request[Policy]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("setIamPolicy")(js.Any.fromFunction1(value))
         ret
@@ -126,7 +126,7 @@ object TopicsResource {
         ret
     }
     @scala.inline
-    def withTestIamPermissions(value: AnonAccesstoken => Request_[TestIamPermissionsResponse]): Self = {
+    def withTestIamPermissions(value: Accesstoken => Request[TestIamPermissionsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("testIamPermissions")(js.Any.fromFunction1(value))
         ret

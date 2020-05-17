@@ -1,18 +1,18 @@
 package typingsSlinky.collections.sortedSetMod.internal
 
-import typingsSlinky.collections.AnonDone
+import typingsSlinky.collections.anon.Done
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Iterator[T] extends js.Object {
-  def next(): AnonDone[T] = js.native
+  def next(): Done[T] = js.native
 }
 
 object Iterator {
   @scala.inline
-  def apply[T](next: () => AnonDone[T]): Iterator[T] = {
+  def apply[T](next: () => Done[T]): Iterator[T] = {
     val __obj = js.Dynamic.literal(next = js.Any.fromFunction0(next))
     __obj.asInstanceOf[Iterator[T]]
   }
@@ -23,7 +23,7 @@ object Iterator {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withNext(value: () => AnonDone[T]): Self[T] = {
+    def withNext(value: () => Done[T]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("next")(js.Any.fromFunction0(value))
         ret

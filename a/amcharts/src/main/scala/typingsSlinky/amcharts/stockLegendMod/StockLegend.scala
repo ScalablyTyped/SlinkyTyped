@@ -1,7 +1,7 @@
 package typingsSlinky.amcharts.stockLegendMod
 
-import typingsSlinky.amcharts.AnonDataItem
 import typingsSlinky.amcharts.amLegendMod.AmLegend
+import typingsSlinky.amcharts.anon.DataItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ trait StockLegend extends AmLegend {
 object StockLegend {
   @scala.inline
   def apply(
-    addListener: (String, js.Function1[/* e */ AnonDataItem, Unit]) => Unit,
+    addListener: (String, js.Function1[/* e */ DataItem, Unit]) => Unit,
     align: String,
     autoMargins: Boolean,
     backgroundAlpha: Double,

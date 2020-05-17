@@ -1,25 +1,29 @@
 package typingsSlinky.promiseFs
 
-import typingsSlinky.node.Anon5
-import typingsSlinky.node.Anon6
-import typingsSlinky.node.Anon7
-import typingsSlinky.node.AnonAutoClose
-import typingsSlinky.node.AnonBufferTBuffer
-import typingsSlinky.node.AnonEmitClose
-import typingsSlinky.node.AnonEncodingBufferEncoding
-import typingsSlinky.node.AnonEncodingNull
-import typingsSlinky.node.AnonEncodingPersistent
-import typingsSlinky.node.AnonFlagMode
-import typingsSlinky.node.AnonFlagString
-import typingsSlinky.node.AnonInterval
-import typingsSlinky.node.AnonPersistent
-import typingsSlinky.node.AnonRecursive
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
-import typingsSlinky.node.MakeDirectoryOptionsrecur
-import typingsSlinky.node.MakeDirectoryOptionsrecurMode
 import typingsSlinky.node.NodeJS.ArrayBufferView
 import typingsSlinky.node.NodeJS.ErrnoException
+import typingsSlinky.node.anon.AutoClose
+import typingsSlinky.node.anon.BufferTBuffer
+import typingsSlinky.node.anon.EmitClose
+import typingsSlinky.node.anon.Encoding
+import typingsSlinky.node.anon.EncodingBufferEncoding
+import typingsSlinky.node.anon.EncodingNull
+import typingsSlinky.node.anon.EncodingPersistent
+import typingsSlinky.node.anon.FlagMode
+import typingsSlinky.node.anon.FlagString
+import typingsSlinky.node.anon.Interval
+import typingsSlinky.node.anon.MakeDirectoryOptionsrecur
+import typingsSlinky.node.anon.MakeDirectoryOptionsrecurMode
+import typingsSlinky.node.anon.Persistent
+import typingsSlinky.node.anon.Recursive
+import typingsSlinky.node.anon.`2`
+import typingsSlinky.node.anon.`3`
+import typingsSlinky.node.anon.`4`
+import typingsSlinky.node.anon.`5`
+import typingsSlinky.node.anon.`6`
+import typingsSlinky.node.anon.`7`
 import typingsSlinky.node.fsMod.FSWatcher
 import typingsSlinky.node.fsMod.MakeDirectoryOptions
 import typingsSlinky.node.fsMod.NoParamCallback
@@ -34,6 +38,32 @@ import typingsSlinky.node.fsMod.WriteFileOptions
 import typingsSlinky.node.fsMod.WriteVResult
 import typingsSlinky.node.fsMod.promises.FileHandle
 import typingsSlinky.node.fsMod.symlink.Type
+import typingsSlinky.promiseFs.anon.BufferBytesRead
+import typingsSlinky.promiseFs.anon.BufferBytesWritten
+import typingsSlinky.promiseFs.anon.BufferDataView
+import typingsSlinky.promiseFs.anon.BufferDataViewBytesWrittenNumber
+import typingsSlinky.promiseFs.anon.BufferFloat32Array
+import typingsSlinky.promiseFs.anon.BufferFloat32ArrayBytesWrittenNumber
+import typingsSlinky.promiseFs.anon.BufferFloat64Array
+import typingsSlinky.promiseFs.anon.BufferFloat64ArrayBytesWrittenNumber
+import typingsSlinky.promiseFs.anon.BufferInt16Array
+import typingsSlinky.promiseFs.anon.BufferInt16ArrayBytesWrittenNumber
+import typingsSlinky.promiseFs.anon.BufferInt32Array
+import typingsSlinky.promiseFs.anon.BufferInt32ArrayBytesWrittenNumber
+import typingsSlinky.promiseFs.anon.BufferInt8Array
+import typingsSlinky.promiseFs.anon.BufferInt8ArrayBytesWrittenNumber
+import typingsSlinky.promiseFs.anon.BufferString
+import typingsSlinky.promiseFs.anon.BufferUint16Array
+import typingsSlinky.promiseFs.anon.BufferUint32Array
+import typingsSlinky.promiseFs.anon.BytesRead
+import typingsSlinky.promiseFs.anon.BytesWritten
+import typingsSlinky.promiseFs.anon.BytesWrittenNumber
+import typingsSlinky.promiseFs.anon.EncodingFlag
+import typingsSlinky.promiseFs.anon.EncodingWithFileTypes
+import typingsSlinky.promiseFs.anon.Flag
+import typingsSlinky.promiseFs.anon.WithFileTypes
+import typingsSlinky.promiseFs.anon.`0`
+import typingsSlinky.promiseFs.anon.`1`
 import typingsSlinky.promiseFs.promiseFsStrings.buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -135,7 +165,7 @@ object mod extends js.Object {
     */
   def createReadStream(path: PathLike): typingsSlinky.node.fsMod.ReadStream = js.native
   def createReadStream(path: PathLike, options: String): typingsSlinky.node.fsMod.ReadStream = js.native
-  def createReadStream(path: PathLike, options: AnonAutoClose): typingsSlinky.node.fsMod.ReadStream = js.native
+  def createReadStream(path: PathLike, options: AutoClose): typingsSlinky.node.fsMod.ReadStream = js.native
   /**
     * Returns a new `WriteStream` object.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -143,7 +173,7 @@ object mod extends js.Object {
     */
   def createWriteStream(path: PathLike): typingsSlinky.node.fsMod.WriteStream = js.native
   def createWriteStream(path: PathLike, options: String): typingsSlinky.node.fsMod.WriteStream = js.native
-  def createWriteStream(path: PathLike, options: AnonEmitClose): typingsSlinky.node.fsMod.WriteStream = js.native
+  def createWriteStream(path: PathLike, options: EmitClose): typingsSlinky.node.fsMod.WriteStream = js.native
   /**
     * Synchronously tests whether or not the given path exists by checking with the file system.
     * @param path A path to a file or directory. If a URL is provided, it must use the `file:` protocol.
@@ -282,15 +312,15 @@ object mod extends js.Object {
     */
   def mkdtempSync(prefix: String): String = js.native
   def mkdtempSync(prefix: String, options: String): String | Buffer = js.native
+  def mkdtempSync(prefix: String, options: BufferEncoding): String = js.native
+  def mkdtempSync(prefix: String, options: Encoding): String = js.native
   /**
     * Synchronously creates a unique temporary directory.
     * Generates six random characters to be appended behind a required prefix to create a unique temporary directory.
     * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
     */
-  def mkdtempSync(prefix: String, options: typingsSlinky.node.Anon2): Buffer = js.native
-  def mkdtempSync(prefix: String, options: typingsSlinky.node.Anon3): String | Buffer = js.native
-  def mkdtempSync(prefix: String, options: typingsSlinky.node.AnonEncoding): String = js.native
-  def mkdtempSync(prefix: String, options: BufferEncoding): String = js.native
+  def mkdtempSync(prefix: String, options: `2`): Buffer = js.native
+  def mkdtempSync(prefix: String, options: `3`): String | Buffer = js.native
   /**
     * Synchronously creates a unique temporary directory.
     * Generates six random characters to be appended behind a required prefix to create a unique temporary directory.
@@ -319,47 +349,47 @@ object mod extends js.Object {
   def openSync(path: PathLike, flags: Double, mode: Double): Double = js.native
   def opendirSync(path: String): typingsSlinky.node.fsMod.Dir = js.native
   def opendirSync(path: String, options: OpenDirOptions): typingsSlinky.node.fsMod.Dir = js.native
-  def read(fd: Double, buffer: js.typedarray.DataView, offset: Double, length: Double): js.Promise[AnonBufferDataView] = js.native
-  def read(fd: Double, buffer: js.typedarray.DataView, offset: Double, length: Double, position: Double): js.Promise[AnonBufferDataView] = js.native
-  def read(fd: Double, buffer: js.typedarray.Float32Array, offset: Double, length: Double): js.Promise[AnonBufferFloat32Array] = js.native
-  def read(fd: Double, buffer: js.typedarray.Float32Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferFloat32Array] = js.native
-  def read(fd: Double, buffer: js.typedarray.Float64Array, offset: Double, length: Double): js.Promise[AnonBufferFloat64Array] = js.native
-  def read(fd: Double, buffer: js.typedarray.Float64Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferFloat64Array] = js.native
-  def read(fd: Double, buffer: js.typedarray.Int16Array, offset: Double, length: Double): js.Promise[AnonBufferInt16Array] = js.native
-  def read(fd: Double, buffer: js.typedarray.Int16Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferInt16Array] = js.native
-  def read(fd: Double, buffer: js.typedarray.Int32Array, offset: Double, length: Double): js.Promise[AnonBufferInt32Array] = js.native
-  def read(fd: Double, buffer: js.typedarray.Int32Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferInt32Array] = js.native
-  def read(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double): js.Promise[AnonBufferInt8Array] = js.native
-  def read(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferInt8Array] = js.native
-  def read(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double): js.Promise[AnonBufferBytesRead] = js.native
-  def read(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferBytesRead] = js.native
-  def read(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double): js.Promise[AnonBufferUint32Array] = js.native
-  def read(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferUint32Array] = js.native
-  def read(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double): js.Promise[AnonBuffer] = js.native
-  def read(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double, position: Double): js.Promise[AnonBuffer] = js.native
-  def read(fd: Double, buffer: js.typedarray.Uint8ClampedArray, offset: Double, length: Double): js.Promise[AnonBytesRead] = js.native
+  def read(fd: Double, buffer: js.typedarray.DataView, offset: Double, length: Double): js.Promise[BufferDataView] = js.native
+  def read(fd: Double, buffer: js.typedarray.DataView, offset: Double, length: Double, position: Double): js.Promise[BufferDataView] = js.native
+  def read(fd: Double, buffer: js.typedarray.Float32Array, offset: Double, length: Double): js.Promise[BufferFloat32Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Float32Array, offset: Double, length: Double, position: Double): js.Promise[BufferFloat32Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Float64Array, offset: Double, length: Double): js.Promise[BufferFloat64Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Float64Array, offset: Double, length: Double, position: Double): js.Promise[BufferFloat64Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Int16Array, offset: Double, length: Double): js.Promise[BufferInt16Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Int16Array, offset: Double, length: Double, position: Double): js.Promise[BufferInt16Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Int32Array, offset: Double, length: Double): js.Promise[BufferInt32Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Int32Array, offset: Double, length: Double, position: Double): js.Promise[BufferInt32Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double): js.Promise[BufferInt8Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double, position: Double): js.Promise[BufferInt8Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double): js.Promise[BufferBytesRead] = js.native
+  def read(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double, position: Double): js.Promise[BufferBytesRead] = js.native
+  def read(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double): js.Promise[BufferUint32Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double, position: Double): js.Promise[BufferUint32Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double): js.Promise[typingsSlinky.promiseFs.anon.Buffer] = js.native
+  def read(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double, position: Double): js.Promise[typingsSlinky.promiseFs.anon.Buffer] = js.native
+  def read(fd: Double, buffer: js.typedarray.Uint8ClampedArray, offset: Double, length: Double): js.Promise[BytesRead] = js.native
   def read(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
     offset: Double,
     length: Double,
     position: Double
-  ): js.Promise[AnonBytesRead] = js.native
+  ): js.Promise[BytesRead] = js.native
   def readFile(path: Double): js.Promise[Buffer] = js.native
   def readFile(path: Double, options: String): js.Promise[String] = js.native
-  def readFile(path: Double, options: AnonEncoding): js.Promise[Buffer] = js.native
-  def readFile(path: Double, options: AnonEncodingFlag): js.Promise[String | Buffer] = js.native
-  def readFile(path: Double, options: AnonFlag): js.Promise[String] = js.native
+  def readFile(path: Double, options: typingsSlinky.promiseFs.anon.Encoding): js.Promise[Buffer] = js.native
+  def readFile(path: Double, options: EncodingFlag): js.Promise[String | Buffer] = js.native
+  def readFile(path: Double, options: Flag): js.Promise[String] = js.native
   def readFile(path: PathLike): js.Promise[Buffer] = js.native
   def readFile(path: PathLike, options: String): js.Promise[String] = js.native
-  def readFile(path: PathLike, options: AnonEncoding): js.Promise[Buffer] = js.native
-  def readFile(path: PathLike, options: AnonEncodingFlag): js.Promise[String | Buffer] = js.native
-  def readFile(path: PathLike, options: AnonFlag): js.Promise[String] = js.native
+  def readFile(path: PathLike, options: typingsSlinky.promiseFs.anon.Encoding): js.Promise[Buffer] = js.native
+  def readFile(path: PathLike, options: EncodingFlag): js.Promise[String | Buffer] = js.native
+  def readFile(path: PathLike, options: Flag): js.Promise[String] = js.native
   def readFileSync(path: Double): String | Buffer = js.native
   def readFileSync(path: Double, options: String): String = js.native
-  def readFileSync(path: Double, options: typingsSlinky.node.AnonEncodingFlag): String = js.native
-  def readFileSync(path: Double, options: typingsSlinky.node.AnonFlag): Buffer = js.native
-  def readFileSync(path: Double, options: AnonFlagString): String | Buffer = js.native
+  def readFileSync(path: Double, options: typingsSlinky.node.anon.EncodingFlag): String = js.native
+  def readFileSync(path: Double, options: typingsSlinky.node.anon.Flag): Buffer = js.native
+  def readFileSync(path: Double, options: FlagString): String | Buffer = js.native
   /**
     * Synchronously reads the entire contents of a file.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -378,9 +408,9 @@ object mod extends js.Object {
     * @param options Either the encoding for the result, or an object that contains the encoding and an optional flag.
     * If a flag is not provided, it defaults to `'r'`.
     */
-  def readFileSync(path: PathLike, options: typingsSlinky.node.AnonEncodingFlag): String = js.native
-  def readFileSync(path: PathLike, options: typingsSlinky.node.AnonFlag): Buffer = js.native
-  def readFileSync(path: PathLike, options: AnonFlagString): String | Buffer = js.native
+  def readFileSync(path: PathLike, options: typingsSlinky.node.anon.EncodingFlag): String = js.native
+  def readFileSync(path: PathLike, options: typingsSlinky.node.anon.Flag): Buffer = js.native
+  def readFileSync(path: PathLike, options: FlagString): String | Buffer = js.native
   @JSName("readFileSync")
   def readFileSync_Buffer(path: Double): Buffer = js.native
   /**
@@ -415,10 +445,10 @@ object mod extends js.Object {
   def readdir(path: PathLike): js.Promise[js.Array[String]] = js.native
   def readdir(path: PathLike, options: String): js.Promise[js.Array[Buffer | String]] = js.native
   def readdir(path: PathLike, options: BufferEncoding): js.Promise[js.Array[String]] = js.native
-  def readdir(path: PathLike, options: Anon0): js.Promise[js.Array[Buffer | String]] = js.native
-  def readdir(path: PathLike, options: Anon1): js.Promise[js.Array[typingsSlinky.node.fsMod.Dirent]] = js.native
-  def readdir(path: PathLike, options: AnonEncodingWithFileTypes): js.Promise[js.Array[Buffer]] = js.native
-  def readdir(path: PathLike, options: AnonWithFileTypes): js.Promise[js.Array[String]] = js.native
+  def readdir(path: PathLike, options: EncodingWithFileTypes): js.Promise[js.Array[Buffer]] = js.native
+  def readdir(path: PathLike, options: WithFileTypes): js.Promise[js.Array[String]] = js.native
+  def readdir(path: PathLike, options: `0`): js.Promise[js.Array[Buffer | String]] = js.native
+  def readdir(path: PathLike, options: `1`): js.Promise[js.Array[typingsSlinky.node.fsMod.Dirent]] = js.native
   /**
     * Synchronous readdir(3) - read a directory.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -426,21 +456,21 @@ object mod extends js.Object {
     */
   def readdirSync(path: PathLike): js.Array[String] = js.native
   def readdirSync(path: PathLike, options: String): js.Array[Buffer | String] = js.native
-  def readdirSync(path: PathLike, options: typingsSlinky.node.Anon4): js.Array[Buffer | String] = js.native
-  /**
-    * Synchronous readdir(3) - read a directory.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * @param options If called with `withFileTypes: true` the result data will be an array of Dirent.
-    */
-  def readdirSync(path: PathLike, options: Anon5): js.Array[typingsSlinky.node.fsMod.Dirent] = js.native
+  def readdirSync(path: PathLike, options: BufferEncoding): js.Array[String] = js.native
   /**
     * Synchronous readdir(3) - read a directory.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
     * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
     */
-  def readdirSync(path: PathLike, options: typingsSlinky.node.AnonEncodingWithFileTypes): js.Array[Buffer] = js.native
-  def readdirSync(path: PathLike, options: typingsSlinky.node.AnonWithFileTypes): js.Array[String] = js.native
-  def readdirSync(path: PathLike, options: BufferEncoding): js.Array[String] = js.native
+  def readdirSync(path: PathLike, options: typingsSlinky.node.anon.EncodingWithFileTypes): js.Array[Buffer] = js.native
+  def readdirSync(path: PathLike, options: typingsSlinky.node.anon.WithFileTypes): js.Array[String] = js.native
+  def readdirSync(path: PathLike, options: `4`): js.Array[Buffer | String] = js.native
+  /**
+    * Synchronous readdir(3) - read a directory.
+    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
+    * @param options If called with `withFileTypes: true` the result data will be an array of Dirent.
+    */
+  def readdirSync(path: PathLike, options: `5`): js.Array[typingsSlinky.node.fsMod.Dirent] = js.native
   @JSName("readdirSync")
   def readdirSync_buffer(path: PathLike, options: buffer): js.Array[Buffer] = js.native
   @JSName("readdir")
@@ -448,9 +478,9 @@ object mod extends js.Object {
   def readlink(path: PathLike): js.Promise[String] = js.native
   def readlink(path: PathLike, options: String): js.Promise[String | Buffer] = js.native
   def readlink(path: PathLike, options: BufferEncoding): js.Promise[String] = js.native
-  def readlink(path: PathLike, options: Anon2): js.Promise[String] = js.native
-  def readlink(path: PathLike, options: Anon3): js.Promise[Buffer] = js.native
-  def readlink(path: PathLike, options: Anon4): js.Promise[String | Buffer] = js.native
+  def readlink(path: PathLike, options: typingsSlinky.promiseFs.anon.`2`): js.Promise[String] = js.native
+  def readlink(path: PathLike, options: typingsSlinky.promiseFs.anon.`3`): js.Promise[Buffer] = js.native
+  def readlink(path: PathLike, options: typingsSlinky.promiseFs.anon.`4`): js.Promise[String | Buffer] = js.native
   /**
     * Synchronous readlink(2) - read value of a symbolic link.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -458,15 +488,15 @@ object mod extends js.Object {
     */
   def readlinkSync(path: PathLike): String = js.native
   def readlinkSync(path: PathLike, options: String): String | Buffer = js.native
+  def readlinkSync(path: PathLike, options: BufferEncoding): String = js.native
+  def readlinkSync(path: PathLike, options: Encoding): String = js.native
   /**
     * Synchronous readlink(2) - read value of a symbolic link.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
     * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
     */
-  def readlinkSync(path: PathLike, options: typingsSlinky.node.Anon2): Buffer = js.native
-  def readlinkSync(path: PathLike, options: typingsSlinky.node.Anon3): String | Buffer = js.native
-  def readlinkSync(path: PathLike, options: typingsSlinky.node.AnonEncoding): String = js.native
-  def readlinkSync(path: PathLike, options: BufferEncoding): String = js.native
+  def readlinkSync(path: PathLike, options: `2`): Buffer = js.native
+  def readlinkSync(path: PathLike, options: `3`): String | Buffer = js.native
   /**
     * Synchronous readlink(2) - read value of a symbolic link.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -486,9 +516,9 @@ object mod extends js.Object {
   def realpath(path: PathLike): js.Promise[String] = js.native
   def realpath(path: PathLike, options: String): js.Promise[String | Buffer] = js.native
   def realpath(path: PathLike, options: BufferEncoding): js.Promise[String] = js.native
-  def realpath(path: PathLike, options: Anon2): js.Promise[String] = js.native
-  def realpath(path: PathLike, options: Anon3): js.Promise[Buffer] = js.native
-  def realpath(path: PathLike, options: Anon4): js.Promise[String | Buffer] = js.native
+  def realpath(path: PathLike, options: typingsSlinky.promiseFs.anon.`2`): js.Promise[String] = js.native
+  def realpath(path: PathLike, options: typingsSlinky.promiseFs.anon.`3`): js.Promise[Buffer] = js.native
+  def realpath(path: PathLike, options: typingsSlinky.promiseFs.anon.`4`): js.Promise[String | Buffer] = js.native
   @JSName("realpath")
   def realpath_buffer(path: PathLike, options: buffer): js.Promise[Buffer] = js.native
   def rename(oldPath: PathLike, newPath: PathLike): js.Promise[Unit] = js.native
@@ -574,13 +604,17 @@ object mod extends js.Object {
   def utimesSync(path: PathLike, atime: js.Date, mtime: String): Unit = js.native
   def utimesSync(path: PathLike, atime: js.Date, mtime: Double): Unit = js.native
   def utimesSync(path: PathLike, atime: js.Date, mtime: js.Date): Unit = js.native
+  /**
+    * Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`.
+    * @param filename A path to a file or directory. If a URL is provided, it must use the `file:` protocol.
+    * URL support is _experimental_.
+    * @param options Either the encoding for the filename provided to the listener, or an object optionally specifying encoding, persistent, and recursive options.
+    * If `encoding` is not supplied, the default of `'utf8'` is used.
+    * If `persistent` is not supplied, the default of `true` is used.
+    * If `recursive` is not supplied, the default of `false` is used.
+    */
   def watch(filename: PathLike): FSWatcher = js.native
   def watch(filename: PathLike, listener: js.Function2[/* event */ String, /* filename */ String, _]): FSWatcher = js.native
-  def watch(
-    filename: PathLike,
-    options: js.UndefOr[scala.Nothing],
-    listener: js.Function2[/* event */ String, /* filename */ String, Unit]
-  ): FSWatcher = js.native
   def watch(filename: PathLike, options: String): FSWatcher = js.native
   def watch(
     filename: PathLike,
@@ -592,51 +626,6 @@ object mod extends js.Object {
     options: Null,
     listener: js.Function2[/* event */ String, Buffer | (/* filename */ String), Unit]
   ): FSWatcher = js.native
-  /**
-    * Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`.
-    * @param filename A path to a file or directory. If a URL is provided, it must use the `file:` protocol.
-    * URL support is _experimental_.
-    * @param options Either the encoding for the filename provided to the listener, or an object optionally specifying encoding, persistent, and recursive options.
-    * If `encoding` is not supplied, the default of `'utf8'` is used.
-    * If `persistent` is not supplied, the default of `true` is used.
-    * If `recursive` is not supplied, the default of `false` is used.
-    */
-  def watch(filename: PathLike, options: AnonEncodingPersistent): FSWatcher = js.native
-  def watch(
-    filename: PathLike,
-    options: AnonEncodingPersistent,
-    listener: js.Function2[/* event */ String, /* filename */ String | Buffer, Unit]
-  ): FSWatcher = js.native
-  /**
-    * Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`.
-    * @param filename A path to a file or directory. If a URL is provided, it must use the `file:` protocol.
-    * URL support is _experimental_.
-    * @param options Either the encoding for the filename provided to the listener, or an object optionally specifying encoding, persistent, and recursive options.
-    * If `encoding` is not supplied, the default of `'utf8'` is used.
-    * If `persistent` is not supplied, the default of `true` is used.
-    * If `recursive` is not supplied, the default of `false` is used.
-    */
-  def watch(filename: PathLike, options: AnonPersistent): FSWatcher = js.native
-  def watch(
-    filename: PathLike,
-    options: AnonPersistent,
-    listener: js.Function2[/* event */ String, /* filename */ String, Unit]
-  ): FSWatcher = js.native
-  /**
-    * Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`.
-    * @param filename A path to a file or directory. If a URL is provided, it must use the `file:` protocol.
-    * URL support is _experimental_.
-    * @param options Either the encoding for the filename provided to the listener, or an object optionally specifying encoding, persistent, and recursive options.
-    * If `encoding` is not supplied, the default of `'utf8'` is used.
-    * If `persistent` is not supplied, the default of `true` is used.
-    * If `recursive` is not supplied, the default of `false` is used.
-    */
-  def watch(filename: PathLike, options: AnonRecursive): FSWatcher = js.native
-  def watch(
-    filename: PathLike,
-    options: AnonRecursive,
-    listener: js.Function2[/* event */ String, /* filename */ Buffer, Unit]
-  ): FSWatcher = js.native
   def watch(filename: PathLike, options: BufferEncoding): FSWatcher = js.native
   def watch(
     filename: PathLike,
@@ -644,6 +633,42 @@ object mod extends js.Object {
     listener: js.Function2[/* event */ String, /* filename */ String, Unit]
   ): FSWatcher = js.native
   /**
+    * Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`.
+    * @param filename A path to a file or directory. If a URL is provided, it must use the `file:` protocol.
+    * URL support is _experimental_.
+    * @param options Either the encoding for the filename provided to the listener, or an object optionally specifying encoding, persistent, and recursive options.
+    * If `encoding` is not supplied, the default of `'utf8'` is used.
+    * If `persistent` is not supplied, the default of `true` is used.
+    * If `recursive` is not supplied, the default of `false` is used.
+    */
+  def watch(filename: PathLike, options: EncodingPersistent): FSWatcher = js.native
+  def watch(
+    filename: PathLike,
+    options: EncodingPersistent,
+    listener: js.Function2[/* event */ String, /* filename */ String | Buffer, Unit]
+  ): FSWatcher = js.native
+  def watch(filename: PathLike, options: Persistent): FSWatcher = js.native
+  def watch(
+    filename: PathLike,
+    options: Persistent,
+    listener: js.Function2[/* event */ String, /* filename */ String, Unit]
+  ): FSWatcher = js.native
+  /**
+    * Watch for changes on `filename`, where `filename` is either a file or a directory, returning an `FSWatcher`.
+    * @param filename A path to a file or directory. If a URL is provided, it must use the `file:` protocol.
+    * URL support is _experimental_.
+    * @param options Either the encoding for the filename provided to the listener, or an object optionally specifying encoding, persistent, and recursive options.
+    * If `encoding` is not supplied, the default of `'utf8'` is used.
+    * If `persistent` is not supplied, the default of `true` is used.
+    * If `recursive` is not supplied, the default of `false` is used.
+    */
+  def watch(filename: PathLike, options: Recursive): FSWatcher = js.native
+  def watch(
+    filename: PathLike,
+    options: Recursive,
+    listener: js.Function2[/* event */ String, /* filename */ Buffer, Unit]
+  ): FSWatcher = js.native
+  /**
     * Watch for changes on `filename`. The callback `listener` will be called each time the file is accessed.
     * @param filename A path to a file or directory. If a URL is provided, it must use the `file:` protocol.
     * URL support is _experimental_.
@@ -656,21 +681,12 @@ object mod extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  def watchFile(
-    filename: PathLike,
-    options: js.UndefOr[scala.Nothing],
-    listener: js.Function2[
-      /* curr */ typingsSlinky.node.fsMod.Stats, 
-      /* prev */ typingsSlinky.node.fsMod.Stats, 
-      Unit
-    ]
-  ): Unit = js.native
   /**
     * Watch for changes on `filename`. The callback `listener` will be called each time the file is accessed.
     */
   def watchFile(
     filename: PathLike,
-    options: AnonInterval,
+    options: js.UndefOr[Interval],
     listener: js.Function2[
       /* curr */ typingsSlinky.node.fsMod.Stats, 
       /* prev */ typingsSlinky.node.fsMod.Stats, 
@@ -685,57 +701,57 @@ object mod extends js.Object {
     options: buffer,
     listener: js.Function2[/* event */ String, /* filename */ Buffer, Unit]
   ): FSWatcher = js.native
-  def write(fd: Double): js.Promise[AnonBytesWritten] = js.native
-  def write(fd: Double, buffer: js.typedarray.DataView): js.Promise[AnonBufferDataViewBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.DataView, offset: Double): js.Promise[AnonBufferDataViewBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.DataView, offset: Double, length: Double): js.Promise[AnonBufferDataViewBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.DataView, offset: Double, length: Double, position: Double): js.Promise[AnonBufferDataViewBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Float32Array): js.Promise[AnonBufferFloat32ArrayBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Float32Array, offset: Double): js.Promise[AnonBufferFloat32ArrayBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Float32Array, offset: Double, length: Double): js.Promise[AnonBufferFloat32ArrayBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Float32Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferFloat32ArrayBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Float64Array): js.Promise[AnonBufferFloat64ArrayBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Float64Array, offset: Double): js.Promise[AnonBufferFloat64ArrayBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Float64Array, offset: Double, length: Double): js.Promise[AnonBufferFloat64ArrayBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Float64Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferFloat64ArrayBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Int16Array): js.Promise[AnonBufferInt16ArrayBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Int16Array, offset: Double): js.Promise[AnonBufferInt16ArrayBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Int16Array, offset: Double, length: Double): js.Promise[AnonBufferInt16ArrayBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Int16Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferInt16ArrayBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Int32Array): js.Promise[AnonBufferInt32ArrayBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Int32Array, offset: Double): js.Promise[AnonBufferInt32ArrayBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Int32Array, offset: Double, length: Double): js.Promise[AnonBufferInt32ArrayBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Int32Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferInt32ArrayBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Int8Array): js.Promise[AnonBufferInt8ArrayBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Int8Array, offset: Double): js.Promise[AnonBufferInt8ArrayBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double): js.Promise[AnonBufferInt8ArrayBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferInt8ArrayBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Uint16Array): js.Promise[AnonBufferUint16Array] = js.native
-  def write(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double): js.Promise[AnonBufferUint16Array] = js.native
-  def write(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double): js.Promise[AnonBufferUint16Array] = js.native
-  def write(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferUint16Array] = js.native
-  def write(fd: Double, buffer: js.typedarray.Uint32Array): js.Promise[AnonBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double): js.Promise[AnonBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double): js.Promise[AnonBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double, position: Double): js.Promise[AnonBytesWrittenNumber] = js.native
-  def write(fd: Double, buffer: js.typedarray.Uint8Array): js.Promise[AnonBytesWritten] = js.native
-  def write(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double): js.Promise[AnonBytesWritten] = js.native
-  def write(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double): js.Promise[AnonBytesWritten] = js.native
-  def write(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double, position: Double): js.Promise[AnonBytesWritten] = js.native
-  def write(fd: Double, buffer: js.typedarray.Uint8ClampedArray): js.Promise[AnonBufferBytesWritten] = js.native
-  def write(fd: Double, buffer: js.typedarray.Uint8ClampedArray, offset: Double): js.Promise[AnonBufferBytesWritten] = js.native
-  def write(fd: Double, buffer: js.typedarray.Uint8ClampedArray, offset: Double, length: Double): js.Promise[AnonBufferBytesWritten] = js.native
+  def write(fd: Double): js.Promise[BytesWritten] = js.native
+  def write(fd: Double, buffer: js.typedarray.DataView): js.Promise[BufferDataViewBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.DataView, offset: Double): js.Promise[BufferDataViewBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.DataView, offset: Double, length: Double): js.Promise[BufferDataViewBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.DataView, offset: Double, length: Double, position: Double): js.Promise[BufferDataViewBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Float32Array): js.Promise[BufferFloat32ArrayBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Float32Array, offset: Double): js.Promise[BufferFloat32ArrayBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Float32Array, offset: Double, length: Double): js.Promise[BufferFloat32ArrayBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Float32Array, offset: Double, length: Double, position: Double): js.Promise[BufferFloat32ArrayBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Float64Array): js.Promise[BufferFloat64ArrayBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Float64Array, offset: Double): js.Promise[BufferFloat64ArrayBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Float64Array, offset: Double, length: Double): js.Promise[BufferFloat64ArrayBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Float64Array, offset: Double, length: Double, position: Double): js.Promise[BufferFloat64ArrayBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Int16Array): js.Promise[BufferInt16ArrayBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Int16Array, offset: Double): js.Promise[BufferInt16ArrayBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Int16Array, offset: Double, length: Double): js.Promise[BufferInt16ArrayBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Int16Array, offset: Double, length: Double, position: Double): js.Promise[BufferInt16ArrayBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Int32Array): js.Promise[BufferInt32ArrayBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Int32Array, offset: Double): js.Promise[BufferInt32ArrayBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Int32Array, offset: Double, length: Double): js.Promise[BufferInt32ArrayBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Int32Array, offset: Double, length: Double, position: Double): js.Promise[BufferInt32ArrayBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Int8Array): js.Promise[BufferInt8ArrayBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Int8Array, offset: Double): js.Promise[BufferInt8ArrayBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double): js.Promise[BufferInt8ArrayBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double, position: Double): js.Promise[BufferInt8ArrayBytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Uint16Array): js.Promise[BufferUint16Array] = js.native
+  def write(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double): js.Promise[BufferUint16Array] = js.native
+  def write(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double): js.Promise[BufferUint16Array] = js.native
+  def write(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double, position: Double): js.Promise[BufferUint16Array] = js.native
+  def write(fd: Double, buffer: js.typedarray.Uint32Array): js.Promise[BytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double): js.Promise[BytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double): js.Promise[BytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double, position: Double): js.Promise[BytesWrittenNumber] = js.native
+  def write(fd: Double, buffer: js.typedarray.Uint8Array): js.Promise[BytesWritten] = js.native
+  def write(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double): js.Promise[BytesWritten] = js.native
+  def write(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double): js.Promise[BytesWritten] = js.native
+  def write(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double, position: Double): js.Promise[BytesWritten] = js.native
+  def write(fd: Double, buffer: js.typedarray.Uint8ClampedArray): js.Promise[BufferBytesWritten] = js.native
+  def write(fd: Double, buffer: js.typedarray.Uint8ClampedArray, offset: Double): js.Promise[BufferBytesWritten] = js.native
+  def write(fd: Double, buffer: js.typedarray.Uint8ClampedArray, offset: Double, length: Double): js.Promise[BufferBytesWritten] = js.native
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
     offset: Double,
     length: Double,
     position: Double
-  ): js.Promise[AnonBufferBytesWritten] = js.native
-  def write(fd: Double, string: js.Any): js.Promise[AnonBufferString] = js.native
-  def write(fd: Double, string: js.Any, position: Double): js.Promise[AnonBufferString] = js.native
-  def write(fd: Double, string: js.Any, position: Double, encoding: String): js.Promise[AnonBufferString] = js.native
-  def write(fd: Double, string: js.Any, position: Null, encoding: String): js.Promise[AnonBufferString] = js.native
+  ): js.Promise[BufferBytesWritten] = js.native
+  def write(fd: Double, string: js.Any): js.Promise[BufferString] = js.native
+  def write(fd: Double, string: js.Any, position: Double): js.Promise[BufferString] = js.native
+  def write(fd: Double, string: js.Any, position: Double, encoding: String): js.Promise[BufferString] = js.native
+  def write(fd: Double, string: js.Any, position: Null, encoding: String): js.Promise[BufferString] = js.native
   def writeFile(path: Double, data: js.Any): js.Promise[Unit] = js.native
   def writeFile(path: Double, data: js.Any, options: WriteFileOptions): js.Promise[Unit] = js.native
   def writeFile(path: PathLike, data: js.Any): js.Promise[Unit] = js.native
@@ -966,50 +982,20 @@ object mod extends js.Object {
       * Generates six random characters to be appended behind a required prefix to create a unique temporary directory.
       */
     def apply(prefix: String, callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ String, Unit]): Unit = js.native
+    /**
+      * Asynchronously creates a unique temporary directory.
+      * Generates six random characters to be appended behind a required prefix to create a unique temporary directory.
+      * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
+      */
     def apply(
       prefix: String,
-      options: js.UndefOr[scala.Nothing],
+      options: js.UndefOr[`3` | BufferEncoding | Encoding | Null | String],
       callback: js.Function2[ErrnoException | Null, Buffer | (/* folder */ String), Unit]
     ): Unit = js.native
     def apply(
       prefix: String,
-      options: String,
-      callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ String | Buffer, Unit]
-    ): Unit = js.native
-    def apply(
-      prefix: String,
-      options: Null,
-      callback: js.Function2[ErrnoException | Null, Buffer | (/* folder */ String), Unit]
-    ): Unit = js.native
-    def apply(
-      prefix: String,
-      options: typingsSlinky.node.Anon2,
+      options: `2`,
       callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ Buffer, Unit]
-    ): Unit = js.native
-    /**
-      * Asynchronously creates a unique temporary directory.
-      * Generates six random characters to be appended behind a required prefix to create a unique temporary directory.
-      * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
-      */
-    def apply(
-      prefix: String,
-      options: typingsSlinky.node.Anon3,
-      callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ String | Buffer, Unit]
-    ): Unit = js.native
-    /**
-      * Asynchronously creates a unique temporary directory.
-      * Generates six random characters to be appended behind a required prefix to create a unique temporary directory.
-      * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
-      */
-    def apply(
-      prefix: String,
-      options: typingsSlinky.node.AnonEncoding,
-      callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ String, Unit]
-    ): Unit = js.native
-    def apply(
-      prefix: String,
-      options: BufferEncoding,
-      callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ String, Unit]
     ): Unit = js.native
     /**
       * Asynchronously creates a unique temporary directory.
@@ -1030,19 +1016,19 @@ object mod extends js.Object {
     def promisify(prefix: String): js.Promise[String] = js.native
     @JSName("__promisify__")
     def promisify(prefix: String, options: String): js.Promise[String | Buffer] = js.native
+    @JSName("__promisify__")
+    def promisify(prefix: String, options: BufferEncoding): js.Promise[String] = js.native
+    @JSName("__promisify__")
+    def promisify(prefix: String, options: Encoding): js.Promise[String] = js.native
     /**
       * Asynchronously creates a unique temporary directory.
       * Generates six random characters to be appended behind a required prefix to create a unique temporary directory.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
     @JSName("__promisify__")
-    def promisify(prefix: String, options: typingsSlinky.node.Anon2): js.Promise[Buffer] = js.native
+    def promisify(prefix: String, options: `2`): js.Promise[Buffer] = js.native
     @JSName("__promisify__")
-    def promisify(prefix: String, options: typingsSlinky.node.Anon3): js.Promise[String | Buffer] = js.native
-    @JSName("__promisify__")
-    def promisify(prefix: String, options: typingsSlinky.node.AnonEncoding): js.Promise[String] = js.native
-    @JSName("__promisify__")
-    def promisify(prefix: String, options: BufferEncoding): js.Promise[String] = js.native
+    def promisify(prefix: String, options: `3`): js.Promise[String | Buffer] = js.native
     @JSName("__promisify__")
     def promisify_buffer(prefix: String, options: buffer): js.Promise[Buffer] = js.native
   }
@@ -1087,10 +1073,10 @@ object mod extends js.Object {
       */
     def appendFile(path: PathLike, data: js.Any): js.Promise[Unit] = js.native
     def appendFile(path: PathLike, data: js.Any, options: String): js.Promise[Unit] = js.native
-    def appendFile(path: PathLike, data: js.Any, options: AnonFlagMode): js.Promise[Unit] = js.native
+    def appendFile(path: PathLike, data: js.Any, options: FlagMode): js.Promise[Unit] = js.native
     def appendFile(path: FileHandle, data: js.Any): js.Promise[Unit] = js.native
     def appendFile(path: FileHandle, data: js.Any, options: String): js.Promise[Unit] = js.native
-    def appendFile(path: FileHandle, data: js.Any, options: AnonFlagMode): js.Promise[Unit] = js.native
+    def appendFile(path: FileHandle, data: js.Any, options: FlagMode): js.Promise[Unit] = js.native
     /**
       * Asynchronous chmod(2) - Change permissions of a file.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -1213,15 +1199,15 @@ object mod extends js.Object {
       */
     def mkdtemp(prefix: String): js.Promise[String] = js.native
     def mkdtemp(prefix: String, options: String): js.Promise[String | Buffer] = js.native
+    def mkdtemp(prefix: String, options: BufferEncoding): js.Promise[String] = js.native
+    def mkdtemp(prefix: String, options: Encoding): js.Promise[String] = js.native
     /**
       * Asynchronously creates a unique temporary directory.
       * Generates six random characters to be appended behind a required `prefix` to create a unique temporary directory.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    def mkdtemp(prefix: String, options: typingsSlinky.node.Anon2): js.Promise[Buffer] = js.native
-    def mkdtemp(prefix: String, options: typingsSlinky.node.Anon3): js.Promise[String | Buffer] = js.native
-    def mkdtemp(prefix: String, options: typingsSlinky.node.AnonEncoding): js.Promise[String] = js.native
-    def mkdtemp(prefix: String, options: BufferEncoding): js.Promise[String] = js.native
+    def mkdtemp(prefix: String, options: `2`): js.Promise[Buffer] = js.native
+    def mkdtemp(prefix: String, options: `3`): js.Promise[String | Buffer] = js.native
     @JSName("mkdtemp")
     def mkdtemp_buffer(prefix: String, options: buffer): js.Promise[Buffer] = js.native
     /**
@@ -1247,14 +1233,14 @@ object mod extends js.Object {
       * @param position The offset from the beginning of the file from which data should be read. If
       * `null`, data will be read from the current position.
       */
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double, position: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Null, position: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double, position: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Null, position: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer): js.Promise[BufferTBuffer[TBuffer]] = js.native
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double): js.Promise[BufferTBuffer[TBuffer]] = js.native
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double): js.Promise[BufferTBuffer[TBuffer]] = js.native
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double, position: Double): js.Promise[BufferTBuffer[TBuffer]] = js.native
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Null, position: Double): js.Promise[BufferTBuffer[TBuffer]] = js.native
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double): js.Promise[BufferTBuffer[TBuffer]] = js.native
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double, position: Double): js.Promise[BufferTBuffer[TBuffer]] = js.native
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Null, position: Double): js.Promise[BufferTBuffer[TBuffer]] = js.native
     /**
       * Asynchronously reads the entire contents of a file.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -1264,7 +1250,7 @@ object mod extends js.Object {
       */
     def readFile(path: PathLike): js.Promise[Buffer] = js.native
     def readFile(path: PathLike, options: String): js.Promise[String | Buffer] = js.native
-    def readFile(path: PathLike, options: Anon6): js.Promise[String | Buffer] = js.native
+    def readFile(path: PathLike, options: BufferEncoding): js.Promise[String] = js.native
     /**
       * Asynchronously reads the entire contents of a file.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -1272,15 +1258,15 @@ object mod extends js.Object {
       * @param options An object that may contain an optional flag.
       * If a flag is not provided, it defaults to `'r'`.
       */
-    def readFile(path: PathLike, options: AnonEncodingBufferEncoding): js.Promise[String] = js.native
-    def readFile(path: PathLike, options: AnonEncodingNull): js.Promise[Buffer] = js.native
-    def readFile(path: PathLike, options: BufferEncoding): js.Promise[String] = js.native
+    def readFile(path: PathLike, options: EncodingBufferEncoding): js.Promise[String] = js.native
+    def readFile(path: PathLike, options: EncodingNull): js.Promise[Buffer] = js.native
+    def readFile(path: PathLike, options: `6`): js.Promise[String | Buffer] = js.native
     def readFile(path: FileHandle): js.Promise[Buffer] = js.native
     def readFile(path: FileHandle, options: String): js.Promise[String | Buffer] = js.native
-    def readFile(path: FileHandle, options: Anon6): js.Promise[String | Buffer] = js.native
-    def readFile(path: FileHandle, options: AnonEncodingBufferEncoding): js.Promise[String] = js.native
-    def readFile(path: FileHandle, options: AnonEncodingNull): js.Promise[Buffer] = js.native
     def readFile(path: FileHandle, options: BufferEncoding): js.Promise[String] = js.native
+    def readFile(path: FileHandle, options: EncodingBufferEncoding): js.Promise[String] = js.native
+    def readFile(path: FileHandle, options: EncodingNull): js.Promise[Buffer] = js.native
+    def readFile(path: FileHandle, options: `6`): js.Promise[String | Buffer] = js.native
     /**
       * Asynchronous readdir(3) - read a directory.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -1288,21 +1274,21 @@ object mod extends js.Object {
       */
     def readdir(path: PathLike): js.Promise[js.Array[String]] = js.native
     def readdir(path: PathLike, options: String): js.Promise[js.Array[Buffer | String]] = js.native
-    def readdir(path: PathLike, options: typingsSlinky.node.Anon4): js.Promise[js.Array[Buffer | String]] = js.native
-    /**
-      * Asynchronous readdir(3) - read a directory.
-      * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-      * @param options If called with `withFileTypes: true` the result data will be an array of Dirent.
-      */
-    def readdir(path: PathLike, options: Anon5): js.Promise[js.Array[typingsSlinky.node.fsMod.Dirent]] = js.native
-    def readdir(path: PathLike, options: Anon7): js.Promise[js.Array[String]] = js.native
+    def readdir(path: PathLike, options: BufferEncoding): js.Promise[js.Array[String]] = js.native
     /**
       * Asynchronous readdir(3) - read a directory.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    def readdir(path: PathLike, options: typingsSlinky.node.AnonEncodingWithFileTypes): js.Promise[js.Array[Buffer]] = js.native
-    def readdir(path: PathLike, options: BufferEncoding): js.Promise[js.Array[String]] = js.native
+    def readdir(path: PathLike, options: typingsSlinky.node.anon.EncodingWithFileTypes): js.Promise[js.Array[Buffer]] = js.native
+    def readdir(path: PathLike, options: `4`): js.Promise[js.Array[Buffer | String]] = js.native
+    /**
+      * Asynchronous readdir(3) - read a directory.
+      * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
+      * @param options If called with `withFileTypes: true` the result data will be an array of Dirent.
+      */
+    def readdir(path: PathLike, options: `5`): js.Promise[js.Array[typingsSlinky.node.fsMod.Dirent]] = js.native
+    def readdir(path: PathLike, options: `7`): js.Promise[js.Array[String]] = js.native
     @JSName("readdir")
     def readdir_buffer(path: PathLike, options: buffer): js.Promise[js.Array[Buffer]] = js.native
     /**
@@ -1312,15 +1298,15 @@ object mod extends js.Object {
       */
     def readlink(path: PathLike): js.Promise[String] = js.native
     def readlink(path: PathLike, options: String): js.Promise[String | Buffer] = js.native
+    def readlink(path: PathLike, options: BufferEncoding): js.Promise[String] = js.native
+    def readlink(path: PathLike, options: Encoding): js.Promise[String] = js.native
     /**
       * Asynchronous readlink(2) - read value of a symbolic link.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    def readlink(path: PathLike, options: typingsSlinky.node.Anon2): js.Promise[Buffer] = js.native
-    def readlink(path: PathLike, options: typingsSlinky.node.Anon3): js.Promise[String | Buffer] = js.native
-    def readlink(path: PathLike, options: typingsSlinky.node.AnonEncoding): js.Promise[String] = js.native
-    def readlink(path: PathLike, options: BufferEncoding): js.Promise[String] = js.native
+    def readlink(path: PathLike, options: `2`): js.Promise[Buffer] = js.native
+    def readlink(path: PathLike, options: `3`): js.Promise[String | Buffer] = js.native
     @JSName("readlink")
     def readlink_buffer(path: PathLike, options: buffer): js.Promise[Buffer] = js.native
     /**
@@ -1330,15 +1316,15 @@ object mod extends js.Object {
       */
     def realpath(path: PathLike): js.Promise[String] = js.native
     def realpath(path: PathLike, options: String): js.Promise[String | Buffer] = js.native
+    def realpath(path: PathLike, options: BufferEncoding): js.Promise[String] = js.native
+    def realpath(path: PathLike, options: Encoding): js.Promise[String] = js.native
     /**
       * Asynchronous realpath(3) - return the canonicalized absolute pathname.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    def realpath(path: PathLike, options: typingsSlinky.node.Anon2): js.Promise[Buffer] = js.native
-    def realpath(path: PathLike, options: typingsSlinky.node.Anon3): js.Promise[String | Buffer] = js.native
-    def realpath(path: PathLike, options: typingsSlinky.node.AnonEncoding): js.Promise[String] = js.native
-    def realpath(path: PathLike, options: BufferEncoding): js.Promise[String] = js.native
+    def realpath(path: PathLike, options: `2`): js.Promise[Buffer] = js.native
+    def realpath(path: PathLike, options: `3`): js.Promise[String | Buffer] = js.native
     @JSName("realpath")
     def realpath_buffer(path: PathLike, options: buffer): js.Promise[Buffer] = js.native
     /**
@@ -1405,10 +1391,10 @@ object mod extends js.Object {
       * @param position The offset from the beginning of the file where this data should be written. If not supplied, defaults to the current position.
       * @param encoding The expected string encoding.
       */
-    def write(handle: FileHandle, string: js.Any): js.Promise[typingsSlinky.node.AnonBufferString] = js.native
-    def write(handle: FileHandle, string: js.Any, position: Double): js.Promise[typingsSlinky.node.AnonBufferString] = js.native
-    def write(handle: FileHandle, string: js.Any, position: Double, encoding: String): js.Promise[typingsSlinky.node.AnonBufferString] = js.native
-    def write(handle: FileHandle, string: js.Any, position: Null, encoding: String): js.Promise[typingsSlinky.node.AnonBufferString] = js.native
+    def write(handle: FileHandle, string: js.Any): js.Promise[typingsSlinky.node.anon.BufferString] = js.native
+    def write(handle: FileHandle, string: js.Any, position: Double): js.Promise[typingsSlinky.node.anon.BufferString] = js.native
+    def write(handle: FileHandle, string: js.Any, position: Double, encoding: String): js.Promise[typingsSlinky.node.anon.BufferString] = js.native
+    def write(handle: FileHandle, string: js.Any, position: Null, encoding: String): js.Promise[typingsSlinky.node.anon.BufferString] = js.native
     /**
       * Asynchronously writes `buffer` to the file referenced by the supplied `FileHandle`.
       * It is unsafe to call `fsPromises.write()` multiple times on the same file without waiting for the `Promise`
@@ -1419,14 +1405,14 @@ object mod extends js.Object {
       * @param length The number of bytes to write. If not supplied, defaults to `buffer.length - offset`.
       * @param position The offset from the beginning of the file where this data should be written. If not supplied, defaults to the current position.
       */
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer): js.Promise[typingsSlinky.node.AnonBytesWrittenNumber[TBuffer]] = js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double): js.Promise[typingsSlinky.node.AnonBytesWrittenNumber[TBuffer]] = js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double): js.Promise[typingsSlinky.node.AnonBytesWrittenNumber[TBuffer]] = js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double, position: Double): js.Promise[typingsSlinky.node.AnonBytesWrittenNumber[TBuffer]] = js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Null, position: Double): js.Promise[typingsSlinky.node.AnonBytesWrittenNumber[TBuffer]] = js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double): js.Promise[typingsSlinky.node.AnonBytesWrittenNumber[TBuffer]] = js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double, position: Double): js.Promise[typingsSlinky.node.AnonBytesWrittenNumber[TBuffer]] = js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Null, position: Double): js.Promise[typingsSlinky.node.AnonBytesWrittenNumber[TBuffer]] = js.native
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer): js.Promise[typingsSlinky.node.anon.BytesWrittenNumber[TBuffer]] = js.native
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double): js.Promise[typingsSlinky.node.anon.BytesWrittenNumber[TBuffer]] = js.native
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double): js.Promise[typingsSlinky.node.anon.BytesWrittenNumber[TBuffer]] = js.native
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double, position: Double): js.Promise[typingsSlinky.node.anon.BytesWrittenNumber[TBuffer]] = js.native
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Null, position: Double): js.Promise[typingsSlinky.node.anon.BytesWrittenNumber[TBuffer]] = js.native
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double): js.Promise[typingsSlinky.node.anon.BytesWrittenNumber[TBuffer]] = js.native
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double, position: Double): js.Promise[typingsSlinky.node.anon.BytesWrittenNumber[TBuffer]] = js.native
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Null, position: Double): js.Promise[typingsSlinky.node.anon.BytesWrittenNumber[TBuffer]] = js.native
     /**
       * Asynchronously writes data to a file, replacing the file if it already exists.
       * It is unsafe to call `fsPromises.writeFile()` multiple times on the same file without waiting for the `Promise` to be resolved (or rejected).
@@ -1442,10 +1428,10 @@ object mod extends js.Object {
       */
     def writeFile(path: PathLike, data: js.Any): js.Promise[Unit] = js.native
     def writeFile(path: PathLike, data: js.Any, options: String): js.Promise[Unit] = js.native
-    def writeFile(path: PathLike, data: js.Any, options: AnonFlagMode): js.Promise[Unit] = js.native
+    def writeFile(path: PathLike, data: js.Any, options: FlagMode): js.Promise[Unit] = js.native
     def writeFile(path: FileHandle, data: js.Any): js.Promise[Unit] = js.native
     def writeFile(path: FileHandle, data: js.Any, options: String): js.Promise[Unit] = js.native
-    def writeFile(path: FileHandle, data: js.Any, options: AnonFlagMode): js.Promise[Unit] = js.native
+    def writeFile(path: FileHandle, data: js.Any, options: FlagMode): js.Promise[Unit] = js.native
   }
   
   @js.native
@@ -1486,22 +1472,22 @@ object mod extends js.Object {
       */
     def apply(path: PathLike): String = js.native
     def apply(path: PathLike, options: String): String | Buffer = js.native
+    def apply(path: PathLike, options: BufferEncoding): String = js.native
+    def apply(path: PathLike, options: Encoding): String = js.native
     /**
       * Synchronous realpath(3) - return the canonicalized absolute pathname.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    def apply(path: PathLike, options: typingsSlinky.node.Anon2): Buffer = js.native
-    def apply(path: PathLike, options: typingsSlinky.node.Anon3): String | Buffer = js.native
-    def apply(path: PathLike, options: typingsSlinky.node.AnonEncoding): String = js.native
-    def apply(path: PathLike, options: BufferEncoding): String = js.native
+    def apply(path: PathLike, options: `2`): Buffer = js.native
+    def apply(path: PathLike, options: `3`): String | Buffer = js.native
     def apply(path: PathLike, options: buffer): Buffer = js.native
     def native(path: PathLike): String = js.native
     def native(path: PathLike, options: String): String | Buffer = js.native
-    def native(path: PathLike, options: typingsSlinky.node.Anon2): Buffer = js.native
-    def native(path: PathLike, options: typingsSlinky.node.Anon3): String | Buffer = js.native
-    def native(path: PathLike, options: typingsSlinky.node.AnonEncoding): String = js.native
     def native(path: PathLike, options: BufferEncoding): String = js.native
+    def native(path: PathLike, options: Encoding): String = js.native
+    def native(path: PathLike, options: `2`): Buffer = js.native
+    def native(path: PathLike, options: `3`): String | Buffer = js.native
     @JSName("native")
     def native_Union(path: PathLike): String | Buffer = js.native
     @JSName("native")
@@ -1517,8 +1503,6 @@ object mod extends js.Object {
       * @param path A path to the new symlink. If a URL is provided, it must use the `file:` protocol.
       */
     def apply(target: PathLike, path: PathLike, callback: NoParamCallback): Unit = js.native
-    def apply(target: PathLike, path: PathLike, `type`: js.UndefOr[scala.Nothing], callback: NoParamCallback): Unit = js.native
-    def apply(target: PathLike, path: PathLike, `type`: Null, callback: NoParamCallback): Unit = js.native
     /**
       * Asynchronous symlink(2) - Create a new symbolic link to an existing file.
       * @param target A path to an existing file. If a URL is provided, it must use the `file:` protocol.
@@ -1526,7 +1510,7 @@ object mod extends js.Object {
       * @param type May be set to `'dir'`, `'file'`, or `'junction'` (default is `'file'`) and is only available on Windows (ignored on other platforms).
       * When using `'junction'`, the `target` argument will automatically be normalized to an absolute path.
       */
-    def apply(target: PathLike, path: PathLike, `type`: Type, callback: NoParamCallback): Unit = js.native
+    def apply(target: PathLike, path: PathLike, `type`: js.UndefOr[Null | Type], callback: NoParamCallback): Unit = js.native
     /**
       * Asynchronous symlink(2) - Create a new symbolic link to an existing file.
       * @param target A path to an existing file. If a URL is provided, it must use the `file:` protocol.
@@ -1549,14 +1533,12 @@ object mod extends js.Object {
       * URL support is _experimental_.
       */
     def apply(path: PathLike, callback: NoParamCallback): Unit = js.native
-    def apply(path: PathLike, len: js.UndefOr[scala.Nothing], callback: NoParamCallback): Unit = js.native
     /**
       * Asynchronous truncate(2) - Truncate a file to a specified length.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param len If not specified, defaults to `0`.
       */
-    def apply(path: PathLike, len: Double, callback: NoParamCallback): Unit = js.native
-    def apply(path: PathLike, len: Null, callback: NoParamCallback): Unit = js.native
+    def apply(path: PathLike, len: js.UndefOr[Double | Null], callback: NoParamCallback): Unit = js.native
     /**
       * Asynchronous truncate(2) - Truncate a file to a specified length.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.

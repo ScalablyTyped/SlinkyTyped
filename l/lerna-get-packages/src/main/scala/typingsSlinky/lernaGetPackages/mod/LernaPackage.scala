@@ -1,6 +1,6 @@
 package typingsSlinky.lernaGetPackages.mod
 
-import typingsSlinky.lernaGetPackages.AnonConfig
+import typingsSlinky.lernaGetPackages.anon.Config
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LernaPackage extends js.Object {
   @JSName("package")
-  var _package: AnonConfig = js.native
+  var _package: Config = js.native
   var location: String = js.native
 }
 
 object LernaPackage {
   @scala.inline
-  def apply(_package: AnonConfig, location: String): LernaPackage = {
+  def apply(_package: Config, location: String): LernaPackage = {
     val __obj = js.Dynamic.literal(location = location.asInstanceOf[js.Any])
     __obj.updateDynamic("package")(_package.asInstanceOf[js.Any])
     __obj.asInstanceOf[LernaPackage]
@@ -26,7 +26,7 @@ object LernaPackage {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_package(value: AnonConfig): Self = {
+    def with_package(value: Config): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("package")(value.asInstanceOf[js.Any])
         ret

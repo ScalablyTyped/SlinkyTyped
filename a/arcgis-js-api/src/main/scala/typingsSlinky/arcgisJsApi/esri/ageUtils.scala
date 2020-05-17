@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +21,25 @@ trait ageUtils extends js.Object {
   def getAgeExpressions(params: ageUtilsGetAgeExpressionsParams): AgeExpressionsResult = js.native
 }
 
-@JSGlobal("__esri.ageUtils")
-@js.native
-object ageUtils extends TopLevel[ageUtils]
+object ageUtils {
+  @scala.inline
+  def apply(getAgeExpressions: ageUtilsGetAgeExpressionsParams => AgeExpressionsResult): ageUtils = {
+    val __obj = js.Dynamic.literal(getAgeExpressions = js.Any.fromFunction1(getAgeExpressions))
+    __obj.asInstanceOf[ageUtils]
+  }
+  @scala.inline
+  implicit class ageUtilsOps[Self <: ageUtils] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetAgeExpressions(value: ageUtilsGetAgeExpressionsParams => AgeExpressionsResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAgeExpressions")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

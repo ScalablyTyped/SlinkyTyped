@@ -1,6 +1,6 @@
 package typingsSlinky.qtip2.QTip2
 
-import typingsSlinky.qtip2.AnonText
+import org.scalajs.dom.raw.Event
 import typingsSlinky.qtip2.JQuery
 import typingsSlinky.qtip2.qtip2Strings.content
 import typingsSlinky.qtip2.qtip2Strings.contentDotattr
@@ -54,7 +54,6 @@ import typingsSlinky.qtip2.qtip2Strings.styleDottip
 import typingsSlinky.qtip2.qtip2Strings.styleDotwidget
 import typingsSlinky.qtip2.qtip2Strings.styleDotwidth
 import typingsSlinky.qtip2.qtip2Strings.suppress
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -65,14 +64,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Api extends js.Object {
   def blur(): Api = js.native
-  def blur(event: Event_): Api = js.native
+  def blur(event: Event): Api = js.native
   def destroy(): Api = js.native
   def destroy(immediate: Boolean): Api = js.native
   def disable(): Api = js.native
   def disable(state: Boolean): Api = js.native
   def enable(): Api = js.native
   def focus(): Api = js.native
-  def focus(event: Event_): Api = js.native
+  def focus(event: Event): Api = js.native
   def get(propertyName: String): js.Any = js.native
   @JSName("get")
   def get_content(propertyName: content): Content = js.native
@@ -175,10 +174,10 @@ trait Api extends js.Object {
   @JSName("get")
   def get_suppress(propertyName: suppress): Boolean = js.native
   def hide(): Api = js.native
-  def hide(event: Event_): Api = js.native
+  def hide(event: Event): Api = js.native
   def reposition(): Api = js.native
-  def reposition(event: Event_): Api = js.native
-  def reposition(event: Event_, effect: Boolean): Api = js.native
+  def reposition(event: Event): Api = js.native
+  def reposition(event: Event, effect: Boolean): Api = js.native
   def set(properties: QTipOptions): Api = js.native
   def set(propertyName: String, value: js.Any): Api = js.native
   @JSName("set")
@@ -196,9 +195,9 @@ trait Api extends js.Object {
   @JSName("set")
   def set_contenttext(propertyName: contentDottext, value: Text): Api = js.native
   @JSName("set")
-  def set_contenttitle(propertyName: contentDottitle, value: AnonText): Api = js.native
-  @JSName("set")
   def set_contenttitle(propertyName: contentDottitle, value: Title): Api = js.native
+  @JSName("set")
+  def set_contenttitle(propertyName: contentDottitle, value: typingsSlinky.qtip2.anon.Text): Api = js.native
   @JSName("set")
   def set_events(propertyName: events, value: Events): Api = js.native
   @JSName("set")
@@ -347,9 +346,9 @@ trait Api extends js.Object {
   @JSName("set")
   def set_suppress(propertyName: suppress, value: Boolean): Api = js.native
   def show(): Api = js.native
-  def show(event: Event_): Api = js.native
+  def show(event: Event): Api = js.native
   def toggle(): Api = js.native
   def toggle(state: Boolean): Api = js.native
-  def toggle(state: Boolean, event: Event_): Api = js.native
+  def toggle(state: Boolean, event: Event): Api = js.native
 }
 

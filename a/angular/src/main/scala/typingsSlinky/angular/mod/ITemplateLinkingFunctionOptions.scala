@@ -1,8 +1,8 @@
 package typingsSlinky.angular.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.angular.AnonInstance
 import typingsSlinky.angular.JQuery
+import typingsSlinky.angular.anon.Instance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait ITemplateLinkingFunctionOptions extends js.Object {
   var futureParentElement: js.UndefOr[JQuery] = js.native
   var parentBoundTranscludeFn: js.UndefOr[ITranscludeFunction] = js.native
-  var transcludeControllers: js.UndefOr[StringDictionary[AnonInstance]] = js.native
+  var transcludeControllers: js.UndefOr[StringDictionary[Instance]] = js.native
 }
 
 object ITemplateLinkingFunctionOptions {
@@ -51,7 +51,7 @@ object ITemplateLinkingFunctionOptions {
         ret
     }
     @scala.inline
-    def withTranscludeControllers(value: StringDictionary[AnonInstance]): Self = {
+    def withTranscludeControllers(value: StringDictionary[Instance]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("transcludeControllers")(value.asInstanceOf[js.Any])
         ret

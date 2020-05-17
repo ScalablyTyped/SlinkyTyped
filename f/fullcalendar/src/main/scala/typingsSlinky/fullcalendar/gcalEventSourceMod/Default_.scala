@@ -1,6 +1,6 @@
 package typingsSlinky.fullcalendar.gcalEventSourceMod
 
-import typingsSlinky.fullcalendar.AnonDescription
+import typingsSlinky.fullcalendar.anon.Description
 import typingsSlinky.fullcalendar.mod.EventSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ class Default_ () extends EventSource {
   def applyMiscProps(rawProps: js.Any): Unit = js.native
   def buildRequestParams(start: js.Any, end: js.Any, timezone: js.Any): js.Any = js.native
   def buildUrl(): String = js.native
-  def gcalItemToRawEventDef(item: js.Any, gcalTimezone: js.Any): AnonDescription = js.native
+  def gcalItemToRawEventDef(item: js.Any, gcalTimezone: js.Any): Description = js.native
   def gcalItemsToRawEventDefs(items: js.Any, gcalTimezone: js.Any): js.Any = js.native
   def getPrimitive(): js.Any = js.native
   def reportError(message: js.Any): Unit = js.native

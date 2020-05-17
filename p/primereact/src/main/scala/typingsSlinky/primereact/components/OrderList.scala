@@ -3,7 +3,7 @@ package typingsSlinky.primereact.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.orderListMod.OrderListProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -31,7 +31,7 @@ object OrderList {
     @scala.inline
     def listStyle(value: js.Object): this.type = set("listStyle", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* e */ AnonValue => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ Value => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def responsive(value: Boolean): this.type = set("responsive", value.asInstanceOf[js.Any])
     @scala.inline

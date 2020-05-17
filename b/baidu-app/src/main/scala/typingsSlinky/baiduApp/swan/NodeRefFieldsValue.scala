@@ -1,34 +1,34 @@
 package typingsSlinky.baiduApp.swan
 
-import typingsSlinky.baiduApp.AnonBottom
-import typingsSlinky.baiduApp.AnonDataset
-import typingsSlinky.baiduApp.AnonId
-import typingsSlinky.baiduApp.AnonPropertiesAny
-import typingsSlinky.baiduApp.AnonScrollLeft
-import typingsSlinky.baiduApp.AnonWidth
+import typingsSlinky.baiduApp.anon.Bottom
+import typingsSlinky.baiduApp.anon.Dataset
+import typingsSlinky.baiduApp.anon.Id
+import typingsSlinky.baiduApp.anon.PropertiesAny
+import typingsSlinky.baiduApp.anon.ScrollLeft
+import typingsSlinky.baiduApp.anon.Width
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait NodeRefFieldsValue extends js.Object {
-  var dataset: AnonDataset = js.native
-  var id: AnonId = js.native
-  var properties: AnonPropertiesAny = js.native
-  var rect: AnonBottom = js.native
-  var scrollOffset: AnonScrollLeft = js.native
-  var size: AnonWidth = js.native
+  var dataset: Dataset = js.native
+  var id: Id = js.native
+  var properties: PropertiesAny = js.native
+  var rect: Bottom = js.native
+  var scrollOffset: ScrollLeft = js.native
+  var size: Width = js.native
 }
 
 object NodeRefFieldsValue {
   @scala.inline
   def apply(
-    dataset: AnonDataset,
-    id: AnonId,
-    properties: AnonPropertiesAny,
-    rect: AnonBottom,
-    scrollOffset: AnonScrollLeft,
-    size: AnonWidth
+    dataset: Dataset,
+    id: Id,
+    properties: PropertiesAny,
+    rect: Bottom,
+    scrollOffset: ScrollLeft,
+    size: Width
   ): NodeRefFieldsValue = {
     val __obj = js.Dynamic.literal(dataset = dataset.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], rect = rect.asInstanceOf[js.Any], scrollOffset = scrollOffset.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeRefFieldsValue]
@@ -40,37 +40,37 @@ object NodeRefFieldsValue {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDataset(value: AnonDataset): Self = {
+    def withDataset(value: Dataset): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataset")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withId(value: AnonId): Self = {
+    def withId(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withProperties(value: AnonPropertiesAny): Self = {
+    def withProperties(value: PropertiesAny): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withRect(value: AnonBottom): Self = {
+    def withRect(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rect")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withScrollOffset(value: AnonScrollLeft): Self = {
+    def withScrollOffset(value: ScrollLeft): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollOffset")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSize(value: AnonWidth): Self = {
+    def withSize(value: Width): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
         ret

@@ -2,35 +2,35 @@ package typingsSlinky.makerJs.MakerJs.models
 
 import typingsSlinky.makerJs.MakerJs.IModel
 import typingsSlinky.makerJs.MakerJs.IModelMap
-import typingsSlinky.makerJs.MakerJs.IPathArc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("MakerJs.models.EllipticArc")
 @js.native
-class EllipticArc protected () extends IModel {
-  /**
-    * Class for Elliptic Arc created by distorting a circular arc.
-    *
-    * @param arc The circular arc to use as the basis of the elliptic arc.
-    * @param distortX The x scale of the ellipse.
-    * @param distortY The y scale of the ellipse.
-    * @param accuracy Optional accuracy of the underlying BezierCurve.
-    */
-  def this(arc: IPathArc, distortX: Double, distortY: Double) = this()
-  def this(arc: IPathArc, distortX: Double, distortY: Double, accuracy: Double) = this()
-  /**
-    * Class for Elliptic Arc created by distorting a circular arc.
-    *
-    * @param arc The circular arc to use as the basis of the elliptic arc.
-    * @param radiusX The x radius of the ellipse.
-    * @param radiusY The y radius of the ellipse.
-    * @param accuracy Optional accuracy of the underlying BezierCurve.
-    */
-  def this(startAngle: Double, endAngle: Double, radiusX: Double, radiusY: Double) = this()
-  def this(startAngle: Double, endAngle: Double, radiusX: Double, radiusY: Double, accuracy: Double) = this()
+trait EllipticArc extends IModel {
   @JSName("models")
   var models_EllipticArc: IModelMap = js.native
+}
+
+object EllipticArc {
+  @scala.inline
+  def apply(models: IModelMap): EllipticArc = {
+    val __obj = js.Dynamic.literal(models = models.asInstanceOf[js.Any])
+    __obj.asInstanceOf[EllipticArc]
+  }
+  @scala.inline
+  implicit class EllipticArcOps[Self <: EllipticArc] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withModels(value: IModelMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("models")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.fundamentalReact.listMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLAnchorElement
 import slinky.core.SyntheticEvent
@@ -62,7 +63,7 @@ import typingsSlinky.fundamentalReact.fundamentalReactStrings.tree
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.url
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.vertical
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.yes
-import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -81,7 +82,6 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -287,7 +287,7 @@ trait ListProps extends js.Object {
   var compact: js.UndefOr[Boolean] = js.native
   var contentEditable: js.UndefOr[Booleanish | inherit] = js.native
   var contextMenu: js.UndefOr[String] = js.native
-  var dangerouslySetInnerHTML: js.UndefOr[AnonHtml] = js.native
+  var dangerouslySetInnerHTML: js.UndefOr[Html] = js.native
   var datatype: js.UndefOr[String] = js.native
   // React-specific Attributes
   var defaultChecked: js.UndefOr[Boolean] = js.native
@@ -1163,7 +1163,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withDangerouslySetInnerHTML(value: AnonHtml): Self = {
+    def withDangerouslySetInnerHTML(value: Html): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetInnerHTML")(value.asInstanceOf[js.Any])
         ret
@@ -1391,7 +1391,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnAbort(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnAbort(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAbort")(js.Any.fromFunction1(value))
         ret
@@ -1451,7 +1451,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnBeforeInput(value: SyntheticEvent[EventTarget with HTMLAnchorElement, Event_] => Unit): Self = {
+    def withOnBeforeInput(value: SyntheticEvent[EventTarget with HTMLAnchorElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeInput")(js.Any.fromFunction1(value))
         ret
@@ -1475,7 +1475,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnCanPlay(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnCanPlay(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlay")(js.Any.fromFunction1(value))
         ret
@@ -1487,7 +1487,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnCanPlayThrough(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnCanPlayThrough(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlayThrough")(js.Any.fromFunction1(value))
         ret
@@ -1499,7 +1499,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: SyntheticEvent[EventTarget with HTMLAnchorElement, Event_] => Unit): Self = {
+    def withOnChange(value: SyntheticEvent[EventTarget with HTMLAnchorElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -1703,7 +1703,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnDurationChange(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnDurationChange(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDurationChange")(js.Any.fromFunction1(value))
         ret
@@ -1715,7 +1715,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnEmptied(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnEmptied(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEmptied")(js.Any.fromFunction1(value))
         ret
@@ -1727,7 +1727,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnEncrypted(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnEncrypted(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEncrypted")(js.Any.fromFunction1(value))
         ret
@@ -1739,7 +1739,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnEnded(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnEnded(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEnded")(js.Any.fromFunction1(value))
         ret
@@ -1751,7 +1751,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnError(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnError(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
         ret
@@ -1775,7 +1775,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnInput(value: SyntheticEvent[EventTarget with HTMLAnchorElement, Event_] => Unit): Self = {
+    def withOnInput(value: SyntheticEvent[EventTarget with HTMLAnchorElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInput")(js.Any.fromFunction1(value))
         ret
@@ -1787,7 +1787,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnInvalid(value: SyntheticEvent[EventTarget with HTMLAnchorElement, Event_] => Unit): Self = {
+    def withOnInvalid(value: SyntheticEvent[EventTarget with HTMLAnchorElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInvalid")(js.Any.fromFunction1(value))
         ret
@@ -1835,7 +1835,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnLoad(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnLoad(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction1(value))
         ret
@@ -1847,7 +1847,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnLoadStart(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnLoadStart(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadStart")(js.Any.fromFunction1(value))
         ret
@@ -1859,7 +1859,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnLoadedData(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnLoadedData(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedData")(js.Any.fromFunction1(value))
         ret
@@ -1871,7 +1871,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnLoadedMetadata(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnLoadedMetadata(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedMetadata")(js.Any.fromFunction1(value))
         ret
@@ -1979,7 +1979,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnPause(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnPause(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.Any.fromFunction1(value))
         ret
@@ -1991,7 +1991,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnPlay(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnPlay(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.Any.fromFunction1(value))
         ret
@@ -2003,7 +2003,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnPlaying(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnPlaying(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaying")(js.Any.fromFunction1(value))
         ret
@@ -2111,7 +2111,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnProgress(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnProgress(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.Any.fromFunction1(value))
         ret
@@ -2123,7 +2123,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnRateChange(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnRateChange(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRateChange")(js.Any.fromFunction1(value))
         ret
@@ -2135,7 +2135,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnReset(value: SyntheticEvent[EventTarget with HTMLAnchorElement, Event_] => Unit): Self = {
+    def withOnReset(value: SyntheticEvent[EventTarget with HTMLAnchorElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onReset")(js.Any.fromFunction1(value))
         ret
@@ -2159,7 +2159,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnSeeked(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnSeeked(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeked")(js.Any.fromFunction1(value))
         ret
@@ -2171,7 +2171,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnSeeking(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnSeeking(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeking")(js.Any.fromFunction1(value))
         ret
@@ -2183,7 +2183,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnSelect(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnSelect(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
         ret
@@ -2195,7 +2195,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnStalled(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnStalled(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onStalled")(js.Any.fromFunction1(value))
         ret
@@ -2207,7 +2207,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnSubmit(value: SyntheticEvent[EventTarget with HTMLAnchorElement, Event_] => Unit): Self = {
+    def withOnSubmit(value: SyntheticEvent[EventTarget with HTMLAnchorElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(js.Any.fromFunction1(value))
         ret
@@ -2219,7 +2219,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnSuspend(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnSuspend(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSuspend")(js.Any.fromFunction1(value))
         ret
@@ -2231,7 +2231,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnTimeUpdate(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnTimeUpdate(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTimeUpdate")(js.Any.fromFunction1(value))
         ret
@@ -2303,7 +2303,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnVolumeChange(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnVolumeChange(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onVolumeChange")(js.Any.fromFunction1(value))
         ret
@@ -2315,7 +2315,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnWaiting(value: SyntheticEvent[Event_, HTMLAnchorElement] => Unit): Self = {
+    def withOnWaiting(value: SyntheticEvent[Event, HTMLAnchorElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onWaiting")(js.Any.fromFunction1(value))
         ret

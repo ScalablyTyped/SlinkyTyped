@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ActionSubscribersObject[P, S] extends js.Object {
+trait ActionSubscribersObject[P, S] extends SubscribeActionOptions[P, S] {
   var after: js.UndefOr[ActionSubscriber[P, S]] = js.native
   var before: js.UndefOr[ActionSubscriber[P, S]] = js.native
 }

@@ -19,9 +19,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.6]
   */
-@JSGlobal("Excel.ConditionalRangeBorderCollection")
 @js.native
-class ConditionalRangeBorderCollection () extends ClientObject {
+trait ConditionalRangeBorderCollection extends ClientObject {
   /**
     *
     * Gets the bottom border. Read-only.

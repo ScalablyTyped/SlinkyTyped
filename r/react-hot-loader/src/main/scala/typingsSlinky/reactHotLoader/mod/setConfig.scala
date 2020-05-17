@@ -1,6 +1,6 @@
 package typingsSlinky.reactHotLoader.mod
 
-import typingsSlinky.reactHotLoader.PartialConfig
+import typingsSlinky.reactHotLoader.anon.PartialConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

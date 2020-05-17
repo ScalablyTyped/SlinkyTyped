@@ -1,5 +1,6 @@
 package typingsSlinky.safeBuffer
 
+import typingsSlinky.safeBuffer.anon.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -138,7 +139,7 @@ object mod extends js.Object {
     def swap16(): Buffer = js.native
     def swap32(): Buffer = js.native
     def swap64(): Buffer = js.native
-    def toJSON(): AnonData = js.native
+    def toJSON(): Data = js.native
     def toString(encoding: String): String = js.native
     def toString(encoding: String, start: Double): String = js.native
     def toString(encoding: String, start: Double, end: Double): String = js.native

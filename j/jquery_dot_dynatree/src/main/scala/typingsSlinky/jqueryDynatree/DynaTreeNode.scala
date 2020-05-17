@@ -1,7 +1,7 @@
 package typingsSlinky.jqueryDynatree
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.jquery.JQueryAjaxSettings
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait DynaTreeNode extends js.Object {
   def expand(flag: Boolean): Unit = js.native
   def focus(): Unit = js.native
   def getChildren(): js.Array[DynaTreeNode] = js.native
-  def getEventTargetType(event: Event_): String = js.native
+  def getEventTargetType(event: Event): String = js.native
   def getLevel(): Double = js.native
   def getNextSibling(): DynaTreeNode = js.native
   def getParent(): DynaTreeNode = js.native

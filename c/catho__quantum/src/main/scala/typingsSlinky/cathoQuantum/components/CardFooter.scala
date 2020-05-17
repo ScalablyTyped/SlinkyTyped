@@ -1,7 +1,7 @@
 package typingsSlinky.cathoQuantum.components
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.cathoQuantum.AnonThemeAnonSpacingObject
+import typingsSlinky.cathoQuantum.anon.ThemeSpacingObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +12,8 @@ object CardFooter {
     @js.native
     object component extends js.Object
     
-    def withProps(p: ReactComponentClass[AnonThemeAnonSpacingObject]): SharedBuilder_ComponentType_410571564 = new SharedBuilder_ComponentType_410571564(js.Array(this.component, p.asInstanceOf[js.Any]))
-    implicit def make(companion: ComponentClass.type): SharedBuilder_ComponentType_410571564 = new SharedBuilder_ComponentType_410571564(js.Array(this.component, js.Dictionary.empty))()
+    def withProps(p: ReactComponentClass[ThemeSpacingObject]): SharedBuilder_ComponentType467443597 = new SharedBuilder_ComponentType467443597(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: ComponentClass.type): SharedBuilder_ComponentType467443597 = new SharedBuilder_ComponentType467443597(js.Array(this.component, js.Dictionary.empty))()
   }
   
   object FunctionComponent {
@@ -21,8 +21,8 @@ object CardFooter {
     @js.native
     object component extends js.Object
     
-    def withProps(p: ReactComponentClass[AnonThemeAnonSpacingObject]): SharedBuilder_ComponentType_410571564 = new SharedBuilder_ComponentType_410571564(js.Array(this.component, p.asInstanceOf[js.Any]))
-    implicit def make(companion: FunctionComponent.type): SharedBuilder_ComponentType_410571564 = new SharedBuilder_ComponentType_410571564(js.Array(this.component, js.Dictionary.empty))()
+    def withProps(p: ReactComponentClass[ThemeSpacingObject]): SharedBuilder_ComponentType467443597 = new SharedBuilder_ComponentType467443597(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: FunctionComponent.type): SharedBuilder_ComponentType467443597 = new SharedBuilder_ComponentType467443597(js.Array(this.component, js.Dictionary.empty))()
   }
   
 }

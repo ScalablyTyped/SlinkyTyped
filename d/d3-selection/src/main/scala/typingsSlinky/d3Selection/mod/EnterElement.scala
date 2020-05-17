@@ -1,17 +1,17 @@
 package typingsSlinky.d3Selection.mod
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.NodeListOf
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait EnterElement extends js.Object {
+trait EnterElement extends BaseType {
   var namespaceURI: String = js.native
-  var ownerDocument: Document_ = js.native
+  var ownerDocument: Document = js.native
   def appendChild(newChild: Node): Node = js.native
   def insertBefore(newChild: Node, refChild: Node): Node = js.native
   def querySelector(selectors: String): Element = js.native
@@ -24,7 +24,7 @@ object EnterElement {
     appendChild: Node => Node,
     insertBefore: (Node, Node) => Node,
     namespaceURI: String,
-    ownerDocument: Document_,
+    ownerDocument: Document,
     querySelector: String => Element,
     querySelectorAll: String => NodeListOf[Element with Node]
   ): EnterElement = {
@@ -56,7 +56,7 @@ object EnterElement {
         ret
     }
     @scala.inline
-    def withOwnerDocument(value: Document_): Self = {
+    def withOwnerDocument(value: Document): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ownerDocument")(value.asInstanceOf[js.Any])
         ret

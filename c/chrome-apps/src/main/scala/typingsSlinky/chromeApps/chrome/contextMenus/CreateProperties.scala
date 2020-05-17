@@ -1,13 +1,11 @@
 package typingsSlinky.chromeApps.chrome.contextMenus
 
-import typingsSlinky.chromeApps.AnonALL
-import typingsSlinky.chromeApps.AnonCHECKBOX
+import typingsSlinky.chromeApps.anon.ALL
+import typingsSlinky.chromeApps.anon.CHECKBOX
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chrome.integer
-import typingsSlinky.chromeApps.chromeAppsStrings.ALL
 import typingsSlinky.chromeApps.chromeAppsStrings.AUDIO
 import typingsSlinky.chromeApps.chromeAppsStrings.BROWSER_ACTION
-import typingsSlinky.chromeApps.chromeAppsStrings.CHECKBOX
 import typingsSlinky.chromeApps.chromeAppsStrings.EDITABLE
 import typingsSlinky.chromeApps.chromeAppsStrings.FRAME
 import typingsSlinky.chromeApps.chromeAppsStrings.IMAGE
@@ -58,10 +56,10 @@ trait CreateProperties extends js.Object {
   var contexts: js.UndefOr[
     js.Array[
       ToStringLiteral[
-        AnonALL, 
-        /* keyof chrome-apps.AnonALL */ ALL | PAGE | FRAME | SELECTION | LINK | EDITABLE | IMAGE | VIDEO | AUDIO | LAUNCHER | BROWSER_ACTION | PAGE_ACTION, 
+        ALL, 
+        /* keyof chrome-apps.anon.ALL */ typingsSlinky.chromeApps.chromeAppsStrings.ALL | PAGE | FRAME | SELECTION | LINK | EDITABLE | IMAGE | VIDEO | AUDIO | LAUNCHER | BROWSER_ACTION | PAGE_ACTION, 
         Exclude[
-          /* keyof chrome-apps.AnonALL */ ALL | PAGE | FRAME | SELECTION | LINK | EDITABLE | IMAGE | VIDEO | AUDIO | LAUNCHER | BROWSER_ACTION | PAGE_ACTION, 
+          /* keyof chrome-apps.anon.ALL */ typingsSlinky.chromeApps.chromeAppsStrings.ALL | PAGE | FRAME | SELECTION | LINK | EDITABLE | IMAGE | VIDEO | AUDIO | LAUNCHER | BROWSER_ACTION | PAGE_ACTION, 
           browser_action_ | selection_ | video_ | launcher_ | image_ | editable_ | page_action_ | page_ | audio_ | frame_ | all__ | link_
         ]
       ]
@@ -116,10 +114,10 @@ trait CreateProperties extends js.Object {
     */
   var `type`: js.UndefOr[
     ToStringLiteral[
-      AnonCHECKBOX, 
-      /* keyof chrome-apps.AnonCHECKBOX */ NORMAL | CHECKBOX | RADIO | SEPARATOR, 
+      CHECKBOX, 
+      /* keyof chrome-apps.anon.CHECKBOX */ NORMAL | typingsSlinky.chromeApps.chromeAppsStrings.CHECKBOX | RADIO | SEPARATOR, 
       Exclude[
-        /* keyof chrome-apps.AnonCHECKBOX */ NORMAL | CHECKBOX | RADIO | SEPARATOR, 
+        /* keyof chrome-apps.anon.CHECKBOX */ NORMAL | typingsSlinky.chromeApps.chromeAppsStrings.CHECKBOX | RADIO | SEPARATOR, 
         normal_ | checkbox_ | radio_ | separator_
       ]
     ]
@@ -159,10 +157,10 @@ object CreateProperties {
     def withContexts(
       value: js.Array[
           ToStringLiteral[
-            AnonALL, 
-            /* keyof chrome-apps.AnonALL */ ALL | PAGE | FRAME | SELECTION | LINK | EDITABLE | IMAGE | VIDEO | AUDIO | LAUNCHER | BROWSER_ACTION | PAGE_ACTION, 
+            ALL, 
+            /* keyof chrome-apps.anon.ALL */ typingsSlinky.chromeApps.chromeAppsStrings.ALL | PAGE | FRAME | SELECTION | LINK | EDITABLE | IMAGE | VIDEO | AUDIO | LAUNCHER | BROWSER_ACTION | PAGE_ACTION, 
             Exclude[
-              /* keyof chrome-apps.AnonALL */ ALL | PAGE | FRAME | SELECTION | LINK | EDITABLE | IMAGE | VIDEO | AUDIO | LAUNCHER | BROWSER_ACTION | PAGE_ACTION, 
+              /* keyof chrome-apps.anon.ALL */ typingsSlinky.chromeApps.chromeAppsStrings.ALL | PAGE | FRAME | SELECTION | LINK | EDITABLE | IMAGE | VIDEO | AUDIO | LAUNCHER | BROWSER_ACTION | PAGE_ACTION, 
               browser_action_ | selection_ | video_ | launcher_ | image_ | editable_ | page_action_ | page_ | audio_ | frame_ | all__ | link_
             ]
           ]
@@ -265,10 +263,10 @@ object CreateProperties {
     @scala.inline
     def withType(
       value: ToStringLiteral[
-          AnonCHECKBOX, 
-          /* keyof chrome-apps.AnonCHECKBOX */ NORMAL | CHECKBOX | RADIO | SEPARATOR, 
+          CHECKBOX, 
+          /* keyof chrome-apps.anon.CHECKBOX */ NORMAL | typingsSlinky.chromeApps.chromeAppsStrings.CHECKBOX | RADIO | SEPARATOR, 
           Exclude[
-            /* keyof chrome-apps.AnonCHECKBOX */ NORMAL | CHECKBOX | RADIO | SEPARATOR, 
+            /* keyof chrome-apps.anon.CHECKBOX */ NORMAL | typingsSlinky.chromeApps.chromeAppsStrings.CHECKBOX | RADIO | SEPARATOR, 
             normal_ | checkbox_ | radio_ | separator_
           ]
         ]

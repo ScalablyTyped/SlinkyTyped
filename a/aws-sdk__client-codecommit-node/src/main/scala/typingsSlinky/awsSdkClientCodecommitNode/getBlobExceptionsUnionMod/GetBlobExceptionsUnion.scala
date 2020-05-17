@@ -1,0 +1,61 @@
+package typingsSlinky.awsSdkClientCodecommitNode.getBlobExceptionsUnionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.typesBlobIdDoesNotExistExceptionMod.BlobIdDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesBlobIdRequiredExceptionMod.BlobIdRequiredException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+import typingsSlinky.awsSdkClientCodecommitNode.typesFileTooLargeExceptionMod.FileTooLargeException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidBlobIdExceptionMod.InvalidBlobIdException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesBlobIdRequiredExceptionMod.BlobIdRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidBlobIdExceptionMod.InvalidBlobIdException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesBlobIdDoesNotExistExceptionMod.BlobIdDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesFileTooLargeExceptionMod.FileTooLargeException
+*/
+trait GetBlobExceptionsUnion extends js.Object
+
+object GetBlobExceptionsUnion {
+  @scala.inline
+  implicit def apply(value: BlobIdDoesNotExistException): GetBlobExceptionsUnion = value.asInstanceOf[GetBlobExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: BlobIdRequiredException): GetBlobExceptionsUnion = value.asInstanceOf[GetBlobExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionIntegrityChecksFailedException): GetBlobExceptionsUnion = value.asInstanceOf[GetBlobExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyAccessDeniedException): GetBlobExceptionsUnion = value.asInstanceOf[GetBlobExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyDisabledException): GetBlobExceptionsUnion = value.asInstanceOf[GetBlobExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyNotFoundException): GetBlobExceptionsUnion = value.asInstanceOf[GetBlobExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyUnavailableException): GetBlobExceptionsUnion = value.asInstanceOf[GetBlobExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: FileTooLargeException): GetBlobExceptionsUnion = value.asInstanceOf[GetBlobExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidBlobIdException): GetBlobExceptionsUnion = value.asInstanceOf[GetBlobExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidRepositoryNameException): GetBlobExceptionsUnion = value.asInstanceOf[GetBlobExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryDoesNotExistException): GetBlobExceptionsUnion = value.asInstanceOf[GetBlobExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryNameRequiredException): GetBlobExceptionsUnion = value.asInstanceOf[GetBlobExceptionsUnion]
+}
+

@@ -1,5 +1,6 @@
 package typingsSlinky.jupyterlabDocregistry
 
+import typingsSlinky.jupyterlabDocregistry.anon.PartialIFileType
 import typingsSlinky.jupyterlabDocregistry.contextMod.Context.IOptions
 import typingsSlinky.jupyterlabDocregistry.registryMod.DocumentRegistry.IFileType
 import typingsSlinky.jupyterlabDocregistry.registryMod.DocumentRegistry.IModel

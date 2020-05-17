@@ -1,6 +1,6 @@
 package typingsSlinky.vexflow.mod.Flow
 
-import typingsSlinky.vexflow.AnonAutostem
+import typingsSlinky.vexflow.anon.Autostem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class GraceNote protected ()
   extends typingsSlinky.vexflow.Vex.Flow.GraceNote {
-  def this(note_struct: AnonAutostem) = this()
+  def this(note_struct: Autostem) = this()
 }
 
 /* static members */

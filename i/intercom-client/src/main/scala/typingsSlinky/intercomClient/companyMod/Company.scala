@@ -1,7 +1,7 @@
 package typingsSlinky.intercomClient.companyMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.intercomClient.AnonName
+import typingsSlinky.intercomClient.anon.Name
 import typingsSlinky.intercomClient.intercomClientStrings.company
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +17,7 @@ trait Company extends js.Object {
   var industry: js.UndefOr[String] = js.native
   var monthly_spend: js.UndefOr[Double] = js.native
   var name: js.UndefOr[String] = js.native
-  var plan: js.UndefOr[String | AnonName] = js.native
+  var plan: js.UndefOr[String | Name] = js.native
   var remote_created_at: js.UndefOr[Double] = js.native
   var session_count: js.UndefOr[Double] = js.native
   var size: js.UndefOr[Double] = js.native
@@ -137,7 +137,7 @@ object Company {
         ret
     }
     @scala.inline
-    def withPlan(value: String | AnonName): Self = {
+    def withPlan(value: String | Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("plan")(value.asInstanceOf[js.Any])
         ret

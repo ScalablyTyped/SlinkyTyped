@@ -3,7 +3,7 @@ package typingsSlinky.antd.tableTableMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.AnonScrollToFirstRowOnChange
+import typingsSlinky.antd.anon.ScrollToFirstRowOnChange
 import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.antd.antdStrings.ltr
 import typingsSlinky.antd.antdStrings.rtl
@@ -18,7 +18,7 @@ import typingsSlinky.antd.tableInterfaceMod.TableCurrentDataSource
 import typingsSlinky.antd.tableInterfaceMod.TableLocale
 import typingsSlinky.antd.tableInterfaceMod.TablePaginationConfig
 import typingsSlinky.antd.tableInterfaceMod.TableRowSelection
-import typingsSlinky.rcTable.AnonX
+import typingsSlinky.rcTable.anon.X
 import typingsSlinky.rcTable.interfaceMod.ColumnType
 import typingsSlinky.rcTable.interfaceMod.ExpandableConfig
 import typingsSlinky.rcTable.interfaceMod.ExpandedRowRender
@@ -84,7 +84,7 @@ trait TableProps[RecordType] extends js.Object {
   var rowClassName: js.UndefOr[String | RowClassName[RecordType]] = js.native
   var rowKey: js.UndefOr[String | GetRowKey[RecordType]] = js.native
   var rowSelection: js.UndefOr[TableRowSelection[RecordType]] = js.native
-  var scroll: js.UndefOr[js.UndefOr[AnonX] with AnonScrollToFirstRowOnChange] = js.native
+  var scroll: js.UndefOr[js.UndefOr[X] with ScrollToFirstRowOnChange] = js.native
   var showHeader: js.UndefOr[Boolean] = js.native
   var size: js.UndefOr[SizeType] = js.native
   var sortDirections: js.UndefOr[js.Array[SortOrder]] = js.native
@@ -563,7 +563,7 @@ object TableProps {
         ret
     }
     @scala.inline
-    def withScroll(value: js.UndefOr[AnonX] with AnonScrollToFirstRowOnChange): Self[RecordType] = {
+    def withScroll(value: js.UndefOr[X] with ScrollToFirstRowOnChange): Self[RecordType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scroll")(value.asInstanceOf[js.Any])
         ret

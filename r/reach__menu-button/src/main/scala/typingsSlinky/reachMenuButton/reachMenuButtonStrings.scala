@@ -1,16 +1,16 @@
 package typingsSlinky.reachMenuButton
 
-import typingsSlinky.reachMenuButton.mod._SupportedMenuLinkComponent
+import typingsSlinky.reachMenuButton.mod.SupportedMenuLinkComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object reachMenuButtonStrings {
   @js.native
-  sealed trait a extends _SupportedMenuLinkComponent
+  sealed trait a extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait abbr extends _SupportedMenuLinkComponent
+  sealed trait abbr extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait additions extends js.Object
@@ -19,253 +19,253 @@ object reachMenuButtonStrings {
   sealed trait `additions text` extends js.Object
   
   @js.native
-  sealed trait address extends _SupportedMenuLinkComponent
+  sealed trait address extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait all extends js.Object
   
   @js.native
-  sealed trait animate extends _SupportedMenuLinkComponent
+  sealed trait animate extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait animateMotion extends _SupportedMenuLinkComponent
+  sealed trait animateMotion extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait animateTransform extends _SupportedMenuLinkComponent
+  sealed trait animateTransform extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait area extends _SupportedMenuLinkComponent
+  sealed trait area extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait article extends _SupportedMenuLinkComponent
+  sealed trait article extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait ascending extends js.Object
   
   @js.native
-  sealed trait aside extends _SupportedMenuLinkComponent
+  sealed trait aside extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait assertive extends js.Object
   
   @js.native
-  sealed trait audio extends _SupportedMenuLinkComponent
+  sealed trait audio extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait b extends _SupportedMenuLinkComponent
+  sealed trait b extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait base extends _SupportedMenuLinkComponent
+  sealed trait base extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait bdi extends _SupportedMenuLinkComponent
+  sealed trait bdi extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait bdo extends _SupportedMenuLinkComponent
+  sealed trait bdo extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait big extends _SupportedMenuLinkComponent
+  sealed trait big extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait blockquote extends _SupportedMenuLinkComponent
+  sealed trait blockquote extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait body extends _SupportedMenuLinkComponent
+  sealed trait body extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait both extends js.Object
   
   @js.native
-  sealed trait br extends _SupportedMenuLinkComponent
+  sealed trait br extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait button extends _SupportedMenuLinkComponent
+  sealed trait button extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait canvas extends _SupportedMenuLinkComponent
+  sealed trait canvas extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait caption extends _SupportedMenuLinkComponent
+  sealed trait caption extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait circle extends _SupportedMenuLinkComponent
+  sealed trait circle extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait cite extends _SupportedMenuLinkComponent
+  sealed trait cite extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait clipPath extends _SupportedMenuLinkComponent
+  sealed trait clipPath extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait code extends _SupportedMenuLinkComponent
+  sealed trait code extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait col extends _SupportedMenuLinkComponent
+  sealed trait col extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait colgroup extends _SupportedMenuLinkComponent
+  sealed trait colgroup extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait copy extends js.Object
   
   @js.native
-  sealed trait data extends _SupportedMenuLinkComponent
+  sealed trait data extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait datalist extends _SupportedMenuLinkComponent
+  sealed trait datalist extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait date extends js.Object
   
   @js.native
-  sealed trait dd extends _SupportedMenuLinkComponent
+  sealed trait dd extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait decimal extends js.Object
   
   @js.native
-  sealed trait defs extends _SupportedMenuLinkComponent
+  sealed trait defs extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait del extends _SupportedMenuLinkComponent
+  sealed trait del extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait desc extends _SupportedMenuLinkComponent
+  sealed trait desc extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait descending extends js.Object
   
   @js.native
-  sealed trait details extends _SupportedMenuLinkComponent
+  sealed trait details extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait dfn extends _SupportedMenuLinkComponent
+  sealed trait dfn extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait dialog extends _SupportedMenuLinkComponent
+  sealed trait dialog extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait div extends _SupportedMenuLinkComponent
+  sealed trait div extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait dl extends _SupportedMenuLinkComponent
+  sealed trait dl extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait dt extends _SupportedMenuLinkComponent
+  sealed trait dt extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait ellipse extends _SupportedMenuLinkComponent
+  sealed trait ellipse extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait em extends _SupportedMenuLinkComponent
+  sealed trait em extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait email extends js.Object
   
   @js.native
-  sealed trait embed extends _SupportedMenuLinkComponent
+  sealed trait embed extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait execute extends js.Object
   
   @js.native
-  sealed trait feBlend extends _SupportedMenuLinkComponent
+  sealed trait feBlend extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feColorMatrix extends _SupportedMenuLinkComponent
+  sealed trait feColorMatrix extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feComponentTransfer extends _SupportedMenuLinkComponent
+  sealed trait feComponentTransfer extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feComposite extends _SupportedMenuLinkComponent
+  sealed trait feComposite extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feConvolveMatrix extends _SupportedMenuLinkComponent
+  sealed trait feConvolveMatrix extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feDiffuseLighting extends _SupportedMenuLinkComponent
+  sealed trait feDiffuseLighting extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feDisplacementMap extends _SupportedMenuLinkComponent
+  sealed trait feDisplacementMap extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feDistantLight extends _SupportedMenuLinkComponent
+  sealed trait feDistantLight extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feDropShadow extends _SupportedMenuLinkComponent
+  sealed trait feDropShadow extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feFlood extends _SupportedMenuLinkComponent
+  sealed trait feFlood extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feFuncA extends _SupportedMenuLinkComponent
+  sealed trait feFuncA extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feFuncB extends _SupportedMenuLinkComponent
+  sealed trait feFuncB extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feFuncG extends _SupportedMenuLinkComponent
+  sealed trait feFuncG extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feFuncR extends _SupportedMenuLinkComponent
+  sealed trait feFuncR extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feGaussianBlur extends _SupportedMenuLinkComponent
+  sealed trait feGaussianBlur extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feImage extends _SupportedMenuLinkComponent
+  sealed trait feImage extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feMerge extends _SupportedMenuLinkComponent
+  sealed trait feMerge extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feMergeNode extends _SupportedMenuLinkComponent
+  sealed trait feMergeNode extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feMorphology extends _SupportedMenuLinkComponent
+  sealed trait feMorphology extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feOffset extends _SupportedMenuLinkComponent
+  sealed trait feOffset extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait fePointLight extends _SupportedMenuLinkComponent
+  sealed trait fePointLight extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feSpecularLighting extends _SupportedMenuLinkComponent
+  sealed trait feSpecularLighting extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feSpotLight extends _SupportedMenuLinkComponent
+  sealed trait feSpotLight extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feTile extends _SupportedMenuLinkComponent
+  sealed trait feTile extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait feTurbulence extends _SupportedMenuLinkComponent
+  sealed trait feTurbulence extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait fieldset extends _SupportedMenuLinkComponent
+  sealed trait fieldset extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait figcaption extends _SupportedMenuLinkComponent
+  sealed trait figcaption extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait figure extends _SupportedMenuLinkComponent
+  sealed trait figure extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait filter extends _SupportedMenuLinkComponent
+  sealed trait filter extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait footer extends _SupportedMenuLinkComponent
+  sealed trait footer extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait foreignObject extends _SupportedMenuLinkComponent
+  sealed trait foreignObject extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait form extends _SupportedMenuLinkComponent
+  sealed trait form extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait g extends _SupportedMenuLinkComponent
+  sealed trait g extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait grammar extends js.Object
@@ -274,52 +274,52 @@ object reachMenuButtonStrings {
   sealed trait grid extends js.Object
   
   @js.native
-  sealed trait h1 extends _SupportedMenuLinkComponent
+  sealed trait h1 extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait h2 extends _SupportedMenuLinkComponent
+  sealed trait h2 extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait h3 extends _SupportedMenuLinkComponent
+  sealed trait h3 extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait h4 extends _SupportedMenuLinkComponent
+  sealed trait h4 extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait h5 extends _SupportedMenuLinkComponent
+  sealed trait h5 extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait h6 extends _SupportedMenuLinkComponent
+  sealed trait h6 extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait head extends _SupportedMenuLinkComponent
+  sealed trait head extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait header extends _SupportedMenuLinkComponent
+  sealed trait header extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait hgroup extends _SupportedMenuLinkComponent
+  sealed trait hgroup extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait horizontal extends js.Object
   
   @js.native
-  sealed trait hr extends _SupportedMenuLinkComponent
+  sealed trait hr extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait html extends _SupportedMenuLinkComponent
+  sealed trait html extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait i extends _SupportedMenuLinkComponent
+  sealed trait i extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait iframe extends _SupportedMenuLinkComponent
+  sealed trait iframe extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait image extends _SupportedMenuLinkComponent
+  sealed trait image extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait img extends _SupportedMenuLinkComponent
+  sealed trait img extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait inherit extends js.Object
@@ -328,34 +328,34 @@ object reachMenuButtonStrings {
   sealed trait `inline` extends js.Object
   
   @js.native
-  sealed trait input extends _SupportedMenuLinkComponent
+  sealed trait input extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait ins extends _SupportedMenuLinkComponent
+  sealed trait ins extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait kbd extends _SupportedMenuLinkComponent
+  sealed trait kbd extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait keygen extends _SupportedMenuLinkComponent
+  sealed trait keygen extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait label extends _SupportedMenuLinkComponent
+  sealed trait label extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait legend extends _SupportedMenuLinkComponent
+  sealed trait legend extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait li extends _SupportedMenuLinkComponent
+  sealed trait li extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait line extends _SupportedMenuLinkComponent
+  sealed trait line extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait linearGradient extends _SupportedMenuLinkComponent
+  sealed trait linearGradient extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait link extends _SupportedMenuLinkComponent
+  sealed trait link extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait list extends js.Object
@@ -367,34 +367,34 @@ object reachMenuButtonStrings {
   sealed trait location extends js.Object
   
   @js.native
-  sealed trait main extends _SupportedMenuLinkComponent
+  sealed trait main extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait map extends _SupportedMenuLinkComponent
+  sealed trait map extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait mark extends _SupportedMenuLinkComponent
+  sealed trait mark extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait marker extends _SupportedMenuLinkComponent
+  sealed trait marker extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait mask extends _SupportedMenuLinkComponent
+  sealed trait mask extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait menu extends _SupportedMenuLinkComponent
+  sealed trait menu extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait menuitem extends _SupportedMenuLinkComponent
+  sealed trait menuitem extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait meta extends _SupportedMenuLinkComponent
+  sealed trait meta extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait metadata extends _SupportedMenuLinkComponent
+  sealed trait metadata extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait meter extends _SupportedMenuLinkComponent
+  sealed trait meter extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait mixed extends js.Object
@@ -403,136 +403,136 @@ object reachMenuButtonStrings {
   sealed trait move extends js.Object
   
   @js.native
-  sealed trait mpath extends _SupportedMenuLinkComponent
+  sealed trait mpath extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait nav extends _SupportedMenuLinkComponent
+  sealed trait nav extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait no extends js.Object
   
   @js.native
-  sealed trait noindex extends _SupportedMenuLinkComponent
+  sealed trait noindex extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait none extends js.Object
   
   @js.native
-  sealed trait noscript extends _SupportedMenuLinkComponent
+  sealed trait noscript extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait numeric extends js.Object
   
   @js.native
-  sealed trait `object` extends _SupportedMenuLinkComponent
+  sealed trait `object` extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait off extends js.Object
   
   @js.native
-  sealed trait ol extends _SupportedMenuLinkComponent
+  sealed trait ol extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait on extends js.Object
   
   @js.native
-  sealed trait optgroup extends _SupportedMenuLinkComponent
+  sealed trait optgroup extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait option extends _SupportedMenuLinkComponent
+  sealed trait option extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait other extends js.Object
   
   @js.native
-  sealed trait output extends _SupportedMenuLinkComponent
+  sealed trait output extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait p extends _SupportedMenuLinkComponent
+  sealed trait p extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait page extends js.Object
   
   @js.native
-  sealed trait param extends _SupportedMenuLinkComponent
+  sealed trait param extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait path extends _SupportedMenuLinkComponent
+  sealed trait path extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait pattern extends _SupportedMenuLinkComponent
+  sealed trait pattern extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait picture extends _SupportedMenuLinkComponent
+  sealed trait picture extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait polite extends js.Object
   
   @js.native
-  sealed trait polygon extends _SupportedMenuLinkComponent
+  sealed trait polygon extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait polyline extends _SupportedMenuLinkComponent
+  sealed trait polyline extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait popup extends js.Object
   
   @js.native
-  sealed trait pre extends _SupportedMenuLinkComponent
+  sealed trait pre extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait progress extends _SupportedMenuLinkComponent
+  sealed trait progress extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait q extends _SupportedMenuLinkComponent
+  sealed trait q extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait radialGradient extends _SupportedMenuLinkComponent
+  sealed trait radialGradient extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait rect extends _SupportedMenuLinkComponent
+  sealed trait rect extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait removals extends js.Object
   
   @js.native
-  sealed trait rp extends _SupportedMenuLinkComponent
+  sealed trait rp extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait rt extends _SupportedMenuLinkComponent
+  sealed trait rt extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait ruby extends _SupportedMenuLinkComponent
+  sealed trait ruby extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait s extends _SupportedMenuLinkComponent
+  sealed trait s extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait samp extends _SupportedMenuLinkComponent
+  sealed trait samp extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait script extends _SupportedMenuLinkComponent
+  sealed trait script extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait search extends js.Object
   
   @js.native
-  sealed trait section extends _SupportedMenuLinkComponent
+  sealed trait section extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait select extends _SupportedMenuLinkComponent
+  sealed trait select extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait slot extends _SupportedMenuLinkComponent
+  sealed trait slot extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait small extends _SupportedMenuLinkComponent
+  sealed trait small extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait source extends _SupportedMenuLinkComponent
+  sealed trait source extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait span extends _SupportedMenuLinkComponent
+  sealed trait span extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait spelling extends js.Object
@@ -541,112 +541,112 @@ object reachMenuButtonStrings {
   sealed trait step extends js.Object
   
   @js.native
-  sealed trait stop extends _SupportedMenuLinkComponent
+  sealed trait stop extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait strong extends _SupportedMenuLinkComponent
+  sealed trait strong extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait style extends _SupportedMenuLinkComponent
+  sealed trait style extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait sub extends _SupportedMenuLinkComponent
+  sealed trait sub extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait summary extends _SupportedMenuLinkComponent
+  sealed trait summary extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait sup extends _SupportedMenuLinkComponent
+  sealed trait sup extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait svg extends _SupportedMenuLinkComponent
+  sealed trait svg extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait switch extends _SupportedMenuLinkComponent
+  sealed trait switch extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait symbol extends _SupportedMenuLinkComponent
+  sealed trait symbol extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait table extends _SupportedMenuLinkComponent
+  sealed trait table extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait tbody extends _SupportedMenuLinkComponent
+  sealed trait tbody extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait td extends _SupportedMenuLinkComponent
+  sealed trait td extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait tel extends js.Object
   
   @js.native
-  sealed trait template extends _SupportedMenuLinkComponent
+  sealed trait template extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait text extends _SupportedMenuLinkComponent
+  sealed trait text extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait textPath extends _SupportedMenuLinkComponent
+  sealed trait textPath extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait textarea extends _SupportedMenuLinkComponent
+  sealed trait textarea extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait tfoot extends _SupportedMenuLinkComponent
+  sealed trait tfoot extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait th extends _SupportedMenuLinkComponent
+  sealed trait th extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait thead extends _SupportedMenuLinkComponent
+  sealed trait thead extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait time extends _SupportedMenuLinkComponent
+  sealed trait time extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait title extends _SupportedMenuLinkComponent
+  sealed trait title extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait tr extends _SupportedMenuLinkComponent
+  sealed trait tr extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait track extends _SupportedMenuLinkComponent
+  sealed trait track extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait tree extends js.Object
   
   @js.native
-  sealed trait tspan extends _SupportedMenuLinkComponent
+  sealed trait tspan extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait u extends _SupportedMenuLinkComponent
+  sealed trait u extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait ul extends _SupportedMenuLinkComponent
+  sealed trait ul extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait url extends js.Object
   
   @js.native
-  sealed trait use extends _SupportedMenuLinkComponent
+  sealed trait use extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait `var` extends _SupportedMenuLinkComponent
+  sealed trait `var` extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait vertical extends js.Object
   
   @js.native
-  sealed trait video extends _SupportedMenuLinkComponent
+  sealed trait video extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait view extends _SupportedMenuLinkComponent
+  sealed trait view extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait wbr extends _SupportedMenuLinkComponent
+  sealed trait wbr extends SupportedMenuLinkComponent
   
   @js.native
-  sealed trait webview extends _SupportedMenuLinkComponent
+  sealed trait webview extends SupportedMenuLinkComponent
   
   @js.native
   sealed trait yes extends js.Object

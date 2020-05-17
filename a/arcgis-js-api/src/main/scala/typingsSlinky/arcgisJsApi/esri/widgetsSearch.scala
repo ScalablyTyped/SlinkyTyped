@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.IHandle
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`search-blur`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`search-clear`
@@ -292,8 +291,4 @@ trait widgetsSearch
   def suggest(): js.Promise[SuggestResponse] = js.native
   def suggest(value: String): js.Promise[SuggestResponse] = js.native
 }
-
-@JSGlobal("__esri.widgetsSearch")
-@js.native
-object widgetsSearch extends TopLevel[widgetsSearchConstructor]
 

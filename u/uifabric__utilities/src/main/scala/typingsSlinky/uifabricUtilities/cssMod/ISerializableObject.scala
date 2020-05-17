@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ISerializableObject extends js.Object {
+trait ISerializableObject extends ICssInput {
   @JSName("toString")
   var toString_FISerializableObject: js.UndefOr[js.Function0[String]] = js.native
 }

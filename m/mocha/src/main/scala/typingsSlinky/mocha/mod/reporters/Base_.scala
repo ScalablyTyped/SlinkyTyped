@@ -1,11 +1,12 @@
 package typingsSlinky.mocha.mod.reporters
 
-import typingsSlinky.mocha.Mocha_.IRunner
-import typingsSlinky.mocha.Mocha_.MochaOptions
-import typingsSlinky.mocha.Mocha_.Runner
-import typingsSlinky.mocha.Mocha_.Test_
-import typingsSlinky.mocha.Mocha_.reporters.Base_.ColorMap
-import typingsSlinky.mocha.Mocha_.reporters.Base_.SymbolMap
+import typingsSlinky.mocha.Mocha.IRunner
+import typingsSlinky.mocha.Mocha.MochaOptions
+import typingsSlinky.mocha.Mocha.Runner
+import typingsSlinky.mocha.Mocha.Test
+import typingsSlinky.mocha.Mocha.reporters.Base
+import typingsSlinky.mocha.Mocha.reporters.Base.ColorMap
+import typingsSlinky.mocha.Mocha.reporters.Base.SymbolMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,8 +21,7 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("mocha", "reporters.Base")
 @js.native
-class Base_ protected ()
-  extends typingsSlinky.mocha.Mocha_.reporters.Base_ {
+class Base_ protected () extends Base {
   /** @deprecated Use the overload that accepts `Mocha.Runner` instead. */
   def this(runner: IRunner) = this()
   def this(runner: Runner) = this()
@@ -73,7 +73,7 @@ object Base_ extends js.Object {
     *
     * @see https://mochajs.org/api/Mocha.reporters.Base.html#.exports.list1
     */
-  def list(failures: js.Array[Test_]): Unit = js.native
+  def list(failures: js.Array[Test]): Unit = js.native
   /**
     * ANSI TTY control sequences common among reporters.
     *

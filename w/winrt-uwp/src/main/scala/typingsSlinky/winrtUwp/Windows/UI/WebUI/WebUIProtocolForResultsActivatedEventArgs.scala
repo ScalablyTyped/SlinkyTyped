@@ -11,9 +11,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Describes the activation arguments when an app is launched via LaunchUriForResultsAsync . */
-@JSGlobal("Windows.UI.WebUI.WebUIProtocolForResultsActivatedEventArgs")
 @js.native
-abstract class WebUIProtocolForResultsActivatedEventArgs () extends js.Object {
+trait WebUIProtocolForResultsActivatedEventArgs extends js.Object {
   /** Gets the app activation operation. */
   var activatedOperation: ActivatedOperation = js.native
   /** Gets the family name of the caller's package. */
@@ -32,5 +31,85 @@ abstract class WebUIProtocolForResultsActivatedEventArgs () extends js.Object {
   var splashScreen: SplashScreen = js.native
   /** Gets the Uniform Resource Identifier (URI) for which the app was activated. */
   var uri: Uri = js.native
+}
+
+object WebUIProtocolForResultsActivatedEventArgs {
+  @scala.inline
+  def apply(
+    activatedOperation: ActivatedOperation,
+    callerPackageFamilyName: String,
+    currentlyShownApplicationViewId: Double,
+    data: ValueSet,
+    kind: ActivationKind,
+    previousExecutionState: ApplicationExecutionState,
+    protocolForResultsOperation: ProtocolForResultsOperation,
+    splashScreen: SplashScreen,
+    uri: Uri
+  ): WebUIProtocolForResultsActivatedEventArgs = {
+    val __obj = js.Dynamic.literal(activatedOperation = activatedOperation.asInstanceOf[js.Any], callerPackageFamilyName = callerPackageFamilyName.asInstanceOf[js.Any], currentlyShownApplicationViewId = currentlyShownApplicationViewId.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], previousExecutionState = previousExecutionState.asInstanceOf[js.Any], protocolForResultsOperation = protocolForResultsOperation.asInstanceOf[js.Any], splashScreen = splashScreen.asInstanceOf[js.Any], uri = uri.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebUIProtocolForResultsActivatedEventArgs]
+  }
+  @scala.inline
+  implicit class WebUIProtocolForResultsActivatedEventArgsOps[Self <: WebUIProtocolForResultsActivatedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActivatedOperation(value: ActivatedOperation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activatedOperation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCallerPackageFamilyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callerPackageFamilyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentlyShownApplicationViewId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentlyShownApplicationViewId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withData(value: ValueSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKind(value: ActivationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreviousExecutionState(value: ApplicationExecutionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousExecutionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProtocolForResultsOperation(value: ProtocolForResultsOperation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocolForResultsOperation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSplashScreen(value: SplashScreen): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splashScreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUri(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uri")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.sdpTransform.mod
 
-import typingsSlinky.sdpTransform.AnonIp
-import typingsSlinky.sdpTransform.AnonLimit
+import typingsSlinky.sdpTransform.anon.Ip
+import typingsSlinky.sdpTransform.anon.Limit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SharedDescriptionFields extends js.Object {
   // b=AS:4000
-  var bandwidth: js.UndefOr[js.Array[AnonLimit]] = js.native
+  var bandwidth: js.UndefOr[js.Array[Limit]] = js.native
   // c=IN IP4 10.47.197.26
-  var connection: js.UndefOr[AnonIp] = js.native
+  var connection: js.UndefOr[Ip] = js.native
   // i=
   var description: js.UndefOr[String] = js.native
 }
@@ -29,7 +29,7 @@ object SharedDescriptionFields {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBandwidth(value: js.Array[AnonLimit]): Self = {
+    def withBandwidth(value: js.Array[Limit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bandwidth")(value.asInstanceOf[js.Any])
         ret
@@ -41,7 +41,7 @@ object SharedDescriptionFields {
         ret
     }
     @scala.inline
-    def withConnection(value: AnonIp): Self = {
+    def withConnection(value: Ip): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("connection")(value.asInstanceOf[js.Any])
         ret

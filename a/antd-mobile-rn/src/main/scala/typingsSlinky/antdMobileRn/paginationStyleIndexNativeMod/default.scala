@@ -1,12 +1,12 @@
 package typingsSlinky.antdMobileRn.paginationStyleIndexNativeMod
 
-import typingsSlinky.antdMobileRn.AnonAlignItemsString
-import typingsSlinky.antdMobileRn.AnonBackgroundColorBorderRadius
-import typingsSlinky.antdMobileRn.AnonBackgroundColorString
-import typingsSlinky.antdMobileRn.AnonColorStringFontSizeNumber
-import typingsSlinky.antdMobileRn.AnonFlexDirectionJustifyContent
-import typingsSlinky.antdMobileRn.AnonFlexDirectionString
-import typingsSlinky.antdMobileRn.AnonMarginHorizontal
+import typingsSlinky.antdMobileRn.anon.AlignItemsString
+import typingsSlinky.antdMobileRn.anon.BackgroundColorBorderRadius
+import typingsSlinky.antdMobileRn.anon.BackgroundColorString
+import typingsSlinky.antdMobileRn.anon.ColorStringFontSizeNumber
+import typingsSlinky.antdMobileRn.anon.FlexDirectionJustifyContent
+import typingsSlinky.antdMobileRn.anon.FlexDirectionString
+import typingsSlinky.antdMobileRn.anon.MarginHorizontal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,13 +14,13 @@ import scala.scalajs.js.annotation._
 @JSImport("antd-mobile-rn/lib/pagination/style/index.native", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var activeTextStyle: AnonColorStringFontSizeNumber = js.native
-  var container: AnonAlignItemsString = js.native
-  var indicatorStyle: AnonFlexDirectionString = js.native
-  var numberStyle: AnonFlexDirectionJustifyContent = js.native
-  var pointActiveStyle: AnonBackgroundColorString = js.native
-  var pointStyle: AnonBackgroundColorBorderRadius = js.native
-  var spaceStyle: AnonMarginHorizontal = js.native
-  var totalStyle: AnonColorStringFontSizeNumber = js.native
+  var activeTextStyle: ColorStringFontSizeNumber = js.native
+  var container: AlignItemsString = js.native
+  var indicatorStyle: FlexDirectionString = js.native
+  var numberStyle: FlexDirectionJustifyContent = js.native
+  var pointActiveStyle: BackgroundColorString = js.native
+  var pointStyle: BackgroundColorBorderRadius = js.native
+  var spaceStyle: MarginHorizontal = js.native
+  var totalStyle: ColorStringFontSizeNumber = js.native
 }
 

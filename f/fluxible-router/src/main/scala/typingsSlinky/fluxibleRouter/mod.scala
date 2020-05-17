@@ -2,6 +2,8 @@ package typingsSlinky.fluxibleRouter
 
 import typingsSlinky.fluxible.baseStoreMod.^
 import typingsSlinky.fluxible.mod.FluxibleContext
+import typingsSlinky.fluxibleRouter.anon.TypeofComponent
+import typingsSlinky.fluxibleRouter.anon.TypeofRouteStore
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

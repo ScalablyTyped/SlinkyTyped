@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientBlogger.gapi.client.blogger
 
-import typingsSlinky.gapiClientBlogger.AnonDisplayName
-import typingsSlinky.gapiClientBlogger.AnonId
+import typingsSlinky.gapiClientBlogger.anon.DisplayName
+import typingsSlinky.gapiClientBlogger.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Page extends js.Object {
   /** The author of this Page. */
-  var author: js.UndefOr[AnonDisplayName] = js.native
+  var author: js.UndefOr[DisplayName] = js.native
   /** Data about the blog containing this Page. */
-  var blog: js.UndefOr[AnonId] = js.native
+  var blog: js.UndefOr[Id] = js.native
   /** The body content of this Page, in HTML. */
   var content: js.UndefOr[String] = js.native
   /** Etag of the resource. */
@@ -47,7 +47,7 @@ object Page {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAuthor(value: AnonDisplayName): Self = {
+    def withAuthor(value: DisplayName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
         ret
@@ -59,7 +59,7 @@ object Page {
         ret
     }
     @scala.inline
-    def withBlog(value: AnonId): Self = {
+    def withBlog(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("blog")(value.asInstanceOf[js.Any])
         ret

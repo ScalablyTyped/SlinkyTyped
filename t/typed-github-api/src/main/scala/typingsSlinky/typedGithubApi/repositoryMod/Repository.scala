@@ -1,6 +1,6 @@
 package typingsSlinky.typedGithubApi.repositoryMod
 
-import typingsSlinky.typedGithubApi.AnonAdmin
+import typingsSlinky.typedGithubApi.anon.Admin
 import typingsSlinky.typedGithubApi.userMod.UserSummary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -59,7 +59,7 @@ trait Repository extends js.Object {
   var notifications_url: String = js.native
   var open_issues_count: Double = js.native
   var owner: UserSummary = js.native
-  var permissions: AnonAdmin = js.native
+  var permissions: Admin = js.native
   var `private`: Boolean = js.native
   var pulls_url: String = js.native
   var pushed_at: js.Date = js.native
@@ -135,7 +135,7 @@ object Repository {
     notifications_url: String,
     open_issues_count: Double,
     owner: UserSummary,
-    permissions: AnonAdmin,
+    permissions: Admin,
     `private`: Boolean,
     pulls_url: String,
     pushed_at: js.Date,
@@ -468,7 +468,7 @@ object Repository {
         ret
     }
     @scala.inline
-    def withPermissions(value: AnonAdmin): Self = {
+    def withPermissions(value: Admin): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
         ret

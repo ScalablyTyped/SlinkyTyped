@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SwitchCase_
   extends BaseNode
-     with _Node {
+     with Node {
   var consequent: js.Array[Statement] = js.native
   var test: Expression | Null = js.native
   @JSName("type")

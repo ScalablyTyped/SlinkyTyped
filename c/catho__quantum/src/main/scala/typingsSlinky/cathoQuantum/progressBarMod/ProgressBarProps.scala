@@ -1,6 +1,6 @@
 package typingsSlinky.cathoQuantum.progressBarMod
 
-import typingsSlinky.cathoQuantum.AnonComponentsAnonProgressBar
+import typingsSlinky.cathoQuantum.anon.ComponentsProgressBar
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.neutral
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.primary
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.secondary
@@ -15,7 +15,7 @@ trait ProgressBarProps extends js.Object {
   var progressPercent: js.UndefOr[Double] = js.native
   var progressText: js.UndefOr[Double] = js.native
   var skin: js.UndefOr[neutral | primary | secondary] = js.native
-  var theme: js.UndefOr[AnonComponentsAnonProgressBar] = js.native
+  var theme: js.UndefOr[ComponentsProgressBar] = js.native
   var width: js.UndefOr[String] = js.native
 }
 
@@ -92,7 +92,7 @@ object ProgressBarProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonComponentsAnonProgressBar): Self = {
+    def withTheme(value: ComponentsProgressBar): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

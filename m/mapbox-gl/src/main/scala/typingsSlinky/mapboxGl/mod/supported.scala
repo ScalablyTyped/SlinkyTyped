@@ -1,6 +1,6 @@
 package typingsSlinky.mapboxGl.mod
 
-import typingsSlinky.mapboxGl.AnonFailIfMajorPerformanceCaveat
+import typingsSlinky.mapboxGl.anon.FailIfMajorPerformanceCaveat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object supported extends js.Object {
   def apply(): Boolean = js.native
-  def apply(options: AnonFailIfMajorPerformanceCaveat): Boolean = js.native
+  def apply(options: FailIfMajorPerformanceCaveat): Boolean = js.native
 }
 

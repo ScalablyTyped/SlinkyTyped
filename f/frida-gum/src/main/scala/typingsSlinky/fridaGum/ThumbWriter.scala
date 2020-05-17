@@ -7,18 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Generates machine code for arm.
   */
-@JSGlobal("ThumbWriter")
 @js.native
-class ThumbWriter protected () extends js.Object {
-  /**
-    * Creates a new code writer for generating ARM machine code
-    * written directly to memory at `codeAddress`.
-    *
-    * @param codeAddress Memory address to write generated code to.
-    * @param options Options for customizing code generation.
-    */
-  def this(codeAddress: NativePointerValue) = this()
-  def this(codeAddress: NativePointerValue, options: ThumbWriterOptions) = this()
+trait ThumbWriter extends js.Object {
   /**
     * Memory location of the first byte of output.
     */
@@ -50,8 +40,8 @@ class ThumbWriter protected () extends js.Object {
     * Puts an ADD instruction.
     */
   def putAddRegImm(dstReg: ArmRegister, immValue: Double): Unit = js.native
-  def putAddRegImm(dstReg: ArmRegister, immValue: Int64_): Unit = js.native
-  def putAddRegImm(dstReg: ArmRegister, immValue: UInt64_): Unit = js.native
+  def putAddRegImm(dstReg: ArmRegister, immValue: Int64): Unit = js.native
+  def putAddRegImm(dstReg: ArmRegister, immValue: UInt64): Unit = js.native
   /**
     * Puts an ADD instruction.
     */
@@ -60,8 +50,8 @@ class ThumbWriter protected () extends js.Object {
     * Puts an ADD instruction.
     */
   def putAddRegRegImm(dstReg: ArmRegister, leftReg: ArmRegister, rightValue: Double): Unit = js.native
-  def putAddRegRegImm(dstReg: ArmRegister, leftReg: ArmRegister, rightValue: Int64_): Unit = js.native
-  def putAddRegRegImm(dstReg: ArmRegister, leftReg: ArmRegister, rightValue: UInt64_): Unit = js.native
+  def putAddRegRegImm(dstReg: ArmRegister, leftReg: ArmRegister, rightValue: Int64): Unit = js.native
+  def putAddRegRegImm(dstReg: ArmRegister, leftReg: ArmRegister, rightValue: UInt64): Unit = js.native
   /**
     * Puts an ADD instruction.
     */
@@ -180,8 +170,8 @@ class ThumbWriter protected () extends js.Object {
     * Puts an LDR instruction.
     */
   def putLdrRegRegOffset(dstReg: ArmRegister, srcReg: ArmRegister, srcOffset: Double): Unit = js.native
-  def putLdrRegRegOffset(dstReg: ArmRegister, srcReg: ArmRegister, srcOffset: Int64_): Unit = js.native
-  def putLdrRegRegOffset(dstReg: ArmRegister, srcReg: ArmRegister, srcOffset: UInt64_): Unit = js.native
+  def putLdrRegRegOffset(dstReg: ArmRegister, srcReg: ArmRegister, srcOffset: Int64): Unit = js.native
+  def putLdrRegRegOffset(dstReg: ArmRegister, srcReg: ArmRegister, srcOffset: UInt64): Unit = js.native
   /**
     * Puts an LDR instruction.
     */
@@ -222,14 +212,14 @@ class ThumbWriter protected () extends js.Object {
     * Puts a STR instruction.
     */
   def putStrRegRegOffset(srcReg: ArmRegister, dstReg: ArmRegister, dstOffset: Double): Unit = js.native
-  def putStrRegRegOffset(srcReg: ArmRegister, dstReg: ArmRegister, dstOffset: Int64_): Unit = js.native
-  def putStrRegRegOffset(srcReg: ArmRegister, dstReg: ArmRegister, dstOffset: UInt64_): Unit = js.native
+  def putStrRegRegOffset(srcReg: ArmRegister, dstReg: ArmRegister, dstOffset: Int64): Unit = js.native
+  def putStrRegRegOffset(srcReg: ArmRegister, dstReg: ArmRegister, dstOffset: UInt64): Unit = js.native
   /**
     * Puts a SUB instruction.
     */
   def putSubRegImm(dstReg: ArmRegister, immValue: Double): Unit = js.native
-  def putSubRegImm(dstReg: ArmRegister, immValue: Int64_): Unit = js.native
-  def putSubRegImm(dstReg: ArmRegister, immValue: UInt64_): Unit = js.native
+  def putSubRegImm(dstReg: ArmRegister, immValue: Int64): Unit = js.native
+  def putSubRegImm(dstReg: ArmRegister, immValue: UInt64): Unit = js.native
   /**
     * Puts a SUB instruction.
     */
@@ -238,8 +228,8 @@ class ThumbWriter protected () extends js.Object {
     * Puts a SUB instruction.
     */
   def putSubRegRegImm(dstReg: ArmRegister, leftReg: ArmRegister, rightValue: Double): Unit = js.native
-  def putSubRegRegImm(dstReg: ArmRegister, leftReg: ArmRegister, rightValue: Int64_): Unit = js.native
-  def putSubRegRegImm(dstReg: ArmRegister, leftReg: ArmRegister, rightValue: UInt64_): Unit = js.native
+  def putSubRegRegImm(dstReg: ArmRegister, leftReg: ArmRegister, rightValue: Int64): Unit = js.native
+  def putSubRegRegImm(dstReg: ArmRegister, leftReg: ArmRegister, rightValue: UInt64): Unit = js.native
   /**
     * Puts a SUB instruction.
     */

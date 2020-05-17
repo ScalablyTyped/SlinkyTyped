@@ -1,6 +1,6 @@
 package typingsSlinky.mongoose.mod
 
-import typingsSlinky.mongoose.Typeofmongoose
+import typingsSlinky.mongoose.anon.Typeofmongoose
 import typingsSlinky.node.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`decimal-degrees`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`nautical-miles`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`width-and-depth`
@@ -142,8 +141,4 @@ trait SizeVariable extends VisualVariable {
     */
   def flipSizes(): Unit = js.native
 }
-
-@JSGlobal("__esri.SizeVariable")
-@js.native
-object SizeVariable extends TopLevel[SizeVariableConstructor]
 

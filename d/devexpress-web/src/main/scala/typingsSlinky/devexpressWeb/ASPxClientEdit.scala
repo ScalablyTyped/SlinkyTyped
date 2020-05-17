@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Serves as the base object for all the editors that support validation.
   */
-@JSGlobal("ASPxClientEdit")
 @js.native
-class ASPxClientEdit () extends ASPxClientEditBase {
+trait ASPxClientEdit extends ASPxClientEditBase {
   /**
     * Fires on the client side when the editor receives input focus.
     */
@@ -67,84 +66,132 @@ class ASPxClientEdit () extends ASPxClientEditBase {
   def Validate(): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("ASPxClientEdit")
-@js.native
-object ASPxClientEdit extends js.Object {
-  /**
-    * Verifies whether the editors in a specified visibility state, which are located within a specified container and belong to a specific validation group, are valid. true if the editors are valid; otherwise, false.
-    * @param container An HTML element specifying the container of editors to be validated.
-    * @param validationGroup A string value that specifies the validation group's name.
-    * @param checkInvisibleEditors true to check both visible and invisible editors that belong to the specified container; false to check only visible editors.
-    */
-  def AreEditorsValid(): Boolean = js.native
-  def AreEditorsValid(container: String): Boolean = js.native
-  def AreEditorsValid(container: String, validationGroup: String): Boolean = js.native
-  def AreEditorsValid(container: String, validationGroup: String, checkInvisibleEditors: Boolean): Boolean = js.native
-  def AreEditorsValid(container: js.Any): Boolean = js.native
-  def AreEditorsValid(container: js.Any, validationGroup: String): Boolean = js.native
-  def AreEditorsValid(container: js.Any, validationGroup: String, checkInvisibleEditors: Boolean): Boolean = js.native
-  /**
-    * Attaches a handler to the ASPxClientEdit's event indicating whether the editor has been changed since the previous state.
-    * @param handler An object representing a handler.
-    * @param predicate An ASPxClientControlPredicate object representing the predicate criteria.
-    */
-  def AttachEditorModificationListener(handler: js.Any, predicate: ASPxClientControlPredicate): Unit = js.native
-  /**
-    * Assigns a null value to all editors in a specified visibility state, which are located within a specified container and belong to a specific validation group.
-    * @param container An HTML element specifying the container of editors to be validated.
-    * @param validationGroup A string value specifying the validation group's name.
-    * @param clearInvisibleEditors true to clear both visible and invisible editors that belong to the specified container and group; false to clear only visible editors.
-    */
-  def ClearEditorsInContainer(container: js.Any): Unit = js.native
-  def ClearEditorsInContainer(container: js.Any, validationGroup: String): Unit = js.native
-  def ClearEditorsInContainer(container: js.Any, validationGroup: String, clearInvisibleEditors: Boolean): Unit = js.native
-  /**
-    * Assigns a null value to all editors which are located within the specified container object, and belonging to a specific validation group, dependent on the visibility state specified.
-    * @param containerId A string value specifying the editor container's identifier.
-    * @param validationGroup A string value specifying the validatiion group's name.
-    * @param clearInvisibleEditors true to clear both visible and invisible editors that belong to the specified container and group; false to clear only visible editors.
-    */
-  def ClearEditorsInContainerById(containerId: String): Unit = js.native
-  def ClearEditorsInContainerById(containerId: String, validationGroup: String): Unit = js.native
-  def ClearEditorsInContainerById(containerId: String, validationGroup: String, clearInvisibleEditors: Boolean): Unit = js.native
-  /**
-    * Assigns a null value to all editors which belong to a specific validation group, dependent on the visibility state specified.
-    * @param validationGroup A string value specifying the validation group's name.
-    * @param clearInvisibleEditors true to clear both visible and invisible editors that belong to the specified validation group; false to clear only visible editors.
-    */
-  def ClearGroup(validationGroup: String): Unit = js.native
-  def ClearGroup(validationGroup: String, clearInvisibleEditors: Boolean): Unit = js.native
-  /**
-    * Detaches a handler from the editor's event if the editor meets the predicate criteria.
-    * @param handler An object representing a handler.
-    * @param predicate An ASPxClientControlPredicate object representing a predicate criteria.
-    */
-  def DetachEditorModificationListener(handler: js.Any, predicate: ASPxClientControlPredicate): Unit = js.native
-  /**
-    * Performs validation of all editors in a specified visibility state, which are located within a specified container and belong to a specific validation group. true if the specified editors pass validation; otherwise, false.
-    * @param container An HTML element specifying the container of editors to be validated.
-    * @param validationGroup A string value that specifies the validation group's name.
-    * @param validateInvisibleEditors true to validate both visible and invisible editors that belong to the specified container and group; false to validate only visible editors.
-    */
-  def ValidateEditorsInContainer(container: js.Any): Boolean = js.native
-  def ValidateEditorsInContainer(container: js.Any, validationGroup: String): Boolean = js.native
-  def ValidateEditorsInContainer(container: js.Any, validationGroup: String, validateInvisibleEditors: Boolean): Boolean = js.native
-  /**
-    * Performs validation of the editors which are located within the specified container and belong to a specific validation group, dependent on the visibility state specified. true if the specified editors pass validation; otherwise, false.
-    * @param containerId A string value specifying the editor container's identifier.
-    * @param validationGroup A string value that specifies the validation group's name.
-    * @param validateInvisibleEditors true to validate both visible and invisible editors that belong to the specified container and group; false to validate only visible editors.
-    */
-  def ValidateEditorsInContainerById(containerId: String): Boolean = js.native
-  def ValidateEditorsInContainerById(containerId: String, validationGroup: String): Boolean = js.native
-  def ValidateEditorsInContainerById(containerId: String, validationGroup: String, validateInvisibleEditors: Boolean): Boolean = js.native
-  /**
-    * Performs validation of editors contained within the specified validation group, dependent on the editor visibility state specified. true if editors of the specified validation group pass validation; otherwise, false.
-    * @param validationGroup A string value specifying the validation group's name.
-    * @param validateInvisibleEditors true to validate both visible and invisible editors that belong to the specified validation group; false to validate only visible editors.
-    */
-  def ValidateGroup(validationGroup: String): Boolean = js.native
-  def ValidateGroup(validationGroup: String, validateInvisibleEditors: Boolean): Boolean = js.native
+object ASPxClientEdit {
+  @scala.inline
+  def apply(
+    AdjustControl: () => Unit,
+    Focus: () => Unit,
+    GetCaption: () => String,
+    GetClientVisible: () => Boolean,
+    GetEnabled: () => Boolean,
+    GetErrorText: () => String,
+    GetHeight: () => Double,
+    GetInputElement: () => js.Any,
+    GetIsValid: () => Boolean,
+    GetMainElement: () => js.Any,
+    GetParentControl: () => js.Any,
+    GetReadOnly: () => Boolean,
+    GetValue: () => js.Any,
+    GetVisible: () => Boolean,
+    GetWidth: () => Double,
+    GotFocus: ASPxClientEvent[ASPxClientEventHandler[ASPxClientEdit]],
+    InCallback: () => Boolean,
+    Init: ASPxClientEvent[ASPxClientEventHandler[ASPxClientControlBase]],
+    LostFocus: ASPxClientEvent[ASPxClientEventHandler[ASPxClientEdit]],
+    SendMessageToAssistiveTechnology: String => Unit,
+    SetCaption: String => Unit,
+    SetClientVisible: Boolean => Unit,
+    SetEnabled: Boolean => Unit,
+    SetErrorText: String => Unit,
+    SetHeight: Double => Unit,
+    SetIsValid: Boolean => Unit,
+    SetReadOnly: Boolean => Unit,
+    SetValue: js.Any => Unit,
+    SetVisible: Boolean => Unit,
+    SetWidth: Double => Unit,
+    Validate: () => Unit,
+    Validation: ASPxClientEvent[ASPxClientEditValidationEventHandler[ASPxClientEdit]],
+    ValueChanged: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientEdit]],
+    name: String
+  ): ASPxClientEdit = {
+    val __obj = js.Dynamic.literal(AdjustControl = js.Any.fromFunction0(AdjustControl), Focus = js.Any.fromFunction0(Focus), GetCaption = js.Any.fromFunction0(GetCaption), GetClientVisible = js.Any.fromFunction0(GetClientVisible), GetEnabled = js.Any.fromFunction0(GetEnabled), GetErrorText = js.Any.fromFunction0(GetErrorText), GetHeight = js.Any.fromFunction0(GetHeight), GetInputElement = js.Any.fromFunction0(GetInputElement), GetIsValid = js.Any.fromFunction0(GetIsValid), GetMainElement = js.Any.fromFunction0(GetMainElement), GetParentControl = js.Any.fromFunction0(GetParentControl), GetReadOnly = js.Any.fromFunction0(GetReadOnly), GetValue = js.Any.fromFunction0(GetValue), GetVisible = js.Any.fromFunction0(GetVisible), GetWidth = js.Any.fromFunction0(GetWidth), GotFocus = GotFocus.asInstanceOf[js.Any], InCallback = js.Any.fromFunction0(InCallback), Init = Init.asInstanceOf[js.Any], LostFocus = LostFocus.asInstanceOf[js.Any], SendMessageToAssistiveTechnology = js.Any.fromFunction1(SendMessageToAssistiveTechnology), SetCaption = js.Any.fromFunction1(SetCaption), SetClientVisible = js.Any.fromFunction1(SetClientVisible), SetEnabled = js.Any.fromFunction1(SetEnabled), SetErrorText = js.Any.fromFunction1(SetErrorText), SetHeight = js.Any.fromFunction1(SetHeight), SetIsValid = js.Any.fromFunction1(SetIsValid), SetReadOnly = js.Any.fromFunction1(SetReadOnly), SetValue = js.Any.fromFunction1(SetValue), SetVisible = js.Any.fromFunction1(SetVisible), SetWidth = js.Any.fromFunction1(SetWidth), Validate = js.Any.fromFunction0(Validate), Validation = Validation.asInstanceOf[js.Any], ValueChanged = ValueChanged.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientEdit]
+  }
+  @scala.inline
+  implicit class ASPxClientEditOps[Self <: ASPxClientEdit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFocus(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Focus")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetErrorText(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetErrorText")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetInputElement(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetInputElement")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetIsValid(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetIsValid")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetReadOnly(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetReadOnly")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGotFocus(value: ASPxClientEvent[ASPxClientEventHandler[ASPxClientEdit]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GotFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLostFocus(value: ASPxClientEvent[ASPxClientEventHandler[ASPxClientEdit]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LostFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetErrorText(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetErrorText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetIsValid(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetIsValid")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetReadOnly(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetReadOnly")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withValidate(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Validate")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withValidation(value: ASPxClientEvent[ASPxClientEditValidationEventHandler[ASPxClientEdit]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Validation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValueChanged(value: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientEdit]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ValueChanged")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

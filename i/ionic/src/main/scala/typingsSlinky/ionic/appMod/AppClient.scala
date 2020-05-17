@@ -1,7 +1,7 @@
 package typingsSlinky.ionic.appMod
 
-import typingsSlinky.ionic.AnonBranches
-import typingsSlinky.ionic.PartialPaginateArgsRespon
+import typingsSlinky.ionic.anon.Branches
+import typingsSlinky.ionic.anon.PartialPaginateArgsRespon
 import typingsSlinky.ionic.definitionsMod.App
 import typingsSlinky.ionic.definitionsMod.AppAssociation
 import typingsSlinky.ionic.definitionsMod.IPaginator
@@ -25,7 +25,7 @@ class AppClient protected ()
   def this(token: String, e: AppClientDeps) = this()
   val e: AppClientDeps = js.native
   val token: String = js.native
-  def createAssociation(id: String, association: AnonBranches): js.Promise[AppAssociation] = js.native
+  def createAssociation(id: String, association: Branches): js.Promise[AppAssociation] = js.native
   def deleteAssociation(id: String): js.Promise[Unit] = js.native
   def load(id: String): js.Promise[App] = js.native
   def paginate(args: PartialPaginateArgsRespon): IPaginator[Response[js.Array[App]], PaginatorState] = js.native

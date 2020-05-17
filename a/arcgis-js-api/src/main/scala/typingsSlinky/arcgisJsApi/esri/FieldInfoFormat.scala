@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`day-short-month-year-long-time-24`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`day-short-month-year-long-time`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`day-short-month-year-short-time-24`
@@ -80,8 +79,4 @@ trait FieldInfoFormat
     */
   var places: Double = js.native
 }
-
-@JSGlobal("__esri.FieldInfoFormat")
-@js.native
-object FieldInfoFormat extends TopLevel[FieldInfoFormatConstructor]
 

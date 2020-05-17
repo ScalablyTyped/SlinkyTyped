@@ -12,9 +12,6 @@ import scala.scalajs.js.annotation._
   * @description Create a new ParticleSystemComponentSystem.
   * @param {pc.Application} app - The Application.
   */
-@JSGlobal("pc.ParticleSystemComponentSystem")
 @js.native
-class ParticleSystemComponentSystem protected () extends ComponentSystem {
-  def this(app: Application) = this()
-}
+trait ParticleSystemComponentSystem extends ComponentSystem
 

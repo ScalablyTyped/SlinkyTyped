@@ -18,8 +18,8 @@ import typingsSlinky.reactDataGrid.AdazzleReactDataGrid.OnRowExpandToggle
 import typingsSlinky.reactDataGrid.AdazzleReactDataGrid.RowUpdateEvent
 import typingsSlinky.reactDataGrid.AdazzleReactDataGrid.ScrollState
 import typingsSlinky.reactDataGrid.AdazzleReactDataGrid.SubRowDetails
-import typingsSlinky.reactDataGrid.AnonEnableShiftSelect
-import typingsSlinky.reactDataGrid.AnonIdx
+import typingsSlinky.reactDataGrid.anon.EnableShiftSelect
+import typingsSlinky.reactDataGrid.anon.Idx
 import typingsSlinky.reactDataGrid.mod.^
 import typingsSlinky.reactDataGrid.reactDataGridStrings.ASC
 import typingsSlinky.reactDataGrid.reactDataGridStrings.DESC
@@ -81,11 +81,11 @@ object ReactDataGrid {
     @scala.inline
     def onCellCopyPaste(value: /* e */ CellCopyPasteEvent => Unit): this.type = set("onCellCopyPaste", js.Any.fromFunction1(value))
     @scala.inline
-    def onCellDeSelected(value: /* coordinates */ AnonIdx => Unit): this.type = set("onCellDeSelected", js.Any.fromFunction1(value))
+    def onCellDeSelected(value: /* coordinates */ Idx => Unit): this.type = set("onCellDeSelected", js.Any.fromFunction1(value))
     @scala.inline
     def onCellExpand(value: /* e */ CellExpandEvent[T] => Unit): this.type = set("onCellExpand", js.Any.fromFunction1(value))
     @scala.inline
-    def onCellSelected(value: /* coordinates */ AnonIdx => Unit): this.type = set("onCellSelected", js.Any.fromFunction1(value))
+    def onCellSelected(value: /* coordinates */ Idx => Unit): this.type = set("onCellSelected", js.Any.fromFunction1(value))
     @scala.inline
     def onCellsDragged(value: /* e */ CellDragEvent => Unit): this.type = set("onCellsDragged", js.Any.fromFunction1(value))
     @scala.inline
@@ -135,7 +135,7 @@ object ReactDataGrid {
     @scala.inline
     def rowScrollTimeout(value: Double): this.type = set("rowScrollTimeout", value.asInstanceOf[js.Any])
     @scala.inline
-    def rowSelection(value: AnonEnableShiftSelect[T]): this.type = set("rowSelection", value.asInstanceOf[js.Any])
+    def rowSelection(value: EnableShiftSelect[T]): this.type = set("rowSelection", value.asInstanceOf[js.Any])
     @scala.inline
     def selectAllRendererFunctionComponent(value: ReactComponentClass[_]): this.type = set("selectAllRenderer", value.asInstanceOf[js.Any])
     @scala.inline

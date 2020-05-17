@@ -1,7 +1,7 @@
 package typingsSlinky.highcharts.mod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.highcharts.highchartsStrings.drilldown
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait DrilldownEventObject extends js.Object {
   /**
     * The original browser event (usually click) that triggered the drilldown.
     */
-  var originalEvent: js.UndefOr[Event_] = js.native
+  var originalEvent: js.UndefOr[Event] = js.native
   /**
     * The originating point.
     */
@@ -94,7 +94,7 @@ object DrilldownEventObject {
         ret
     }
     @scala.inline
-    def withOriginalEvent(value: Event_): Self = {
+    def withOriginalEvent(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("originalEvent")(value.asInstanceOf[js.Any])
         ret

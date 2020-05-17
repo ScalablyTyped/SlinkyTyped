@@ -4,8 +4,8 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.mongodb.mod.CollectionCreateOptions
 import typingsSlinky.mongodb.mod.Db
 import typingsSlinky.mongodb.mod.DefaultSchema
-import typingsSlinky.mongoose.ConnectionthenPromiseConn
-import typingsSlinky.mongoose.PickConnectionOptionsauto
+import typingsSlinky.mongoose.anon.ConnectionthenPromiseConn
+import typingsSlinky.mongoose.anon.PickConnectionOptionsauto
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -125,13 +125,13 @@ trait ConnectionBase extends EventEmitter {
     */
   def openUri(uri: String): js.Promise[Connection_] = js.native
   def openUri(uri: String, callback: js.Function2[/* err */ js.Any, /* conn */ js.UndefOr[Connection_], Unit]): Connection_ = js.native
-  def openUri(uri: String, options: ConnectionOptions): js.Promise[Connection_] = js.native
+  def openUri(uri: String, options: ConnectionOptions): ConnectionthenPromiseConn = js.native
   def openUri(
     uri: String,
     options: ConnectionOptions,
     callback: js.Function2[/* err */ js.Any, /* conn */ js.UndefOr[Connection_], Unit]
   ): ConnectionthenPromiseConn = js.native
   @JSName("openUri")
-  def openUri_ConnectionthenPromiseConn(uri: String, options: ConnectionOptions): ConnectionthenPromiseConn = js.native
+  def openUri_Promise(uri: String, options: ConnectionOptions): js.Promise[Connection_] = js.native
 }
 

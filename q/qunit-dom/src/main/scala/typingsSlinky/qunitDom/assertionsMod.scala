@@ -1,7 +1,9 @@
 package typingsSlinky.qunitDom
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.qunitDom.mod._Global_.Assert
+import typingsSlinky.qunitDom.anon.Any
+import typingsSlinky.qunitDom.anon.Count
+import typingsSlinky.qunitDom.mod.global.Assert
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -166,8 +168,8 @@ object assertionsMod extends js.Object {
       *
       * @see {@link #doesNotExist}
       */
-    def exists(options: AnonCount): Unit = js.native
-    def exists(options: AnonCount, message: String): Unit = js.native
+    def exists(options: Count): Unit = js.native
+    def exists(options: Count, message: String): Unit = js.native
     /**
       * Assert that the `textContent` property of an {@link HTMLElement} is not empty.
       *
@@ -220,8 +222,8 @@ object assertionsMod extends js.Object {
       */
     def hasAttribute(name: String, value: String): Unit = js.native
     def hasAttribute(name: String, value: String, message: String): Unit = js.native
-    def hasAttribute(name: String, value: AnonAny): Unit = js.native
-    def hasAttribute(name: String, value: AnonAny, message: String): Unit = js.native
+    def hasAttribute(name: String, value: Any): Unit = js.native
+    def hasAttribute(name: String, value: Any, message: String): Unit = js.native
     def hasAttribute(name: String, value: js.RegExp): Unit = js.native
     def hasAttribute(name: String, value: js.RegExp, message: String): Unit = js.native
     /**
@@ -348,8 +350,8 @@ object assertionsMod extends js.Object {
       */
     def hasText(expected: String): Unit = js.native
     def hasText(expected: String, message: String): Unit = js.native
-    def hasText(expected: AnonAny): Unit = js.native
-    def hasText(expected: AnonAny, message: String): Unit = js.native
+    def hasText(expected: Any): Unit = js.native
+    def hasText(expected: Any, message: String): Unit = js.native
     def hasText(expected: js.RegExp): Unit = js.native
     def hasText(expected: js.RegExp, message: String): Unit = js.native
     def hasTextContaining(expected: String): Unit = js.native
@@ -372,8 +374,8 @@ object assertionsMod extends js.Object {
       */
     def hasValue(expected: String): Unit = js.native
     def hasValue(expected: String, message: String): Unit = js.native
-    def hasValue(expected: AnonAny): Unit = js.native
-    def hasValue(expected: AnonAny, message: String): Unit = js.native
+    def hasValue(expected: Any): Unit = js.native
+    def hasValue(expected: Any, message: String): Unit = js.native
     def hasValue(expected: js.RegExp): Unit = js.native
     def hasValue(expected: js.RegExp, message: String): Unit = js.native
     /**
@@ -570,8 +572,8 @@ object assertionsMod extends js.Object {
       *
       * @see {@link #isNotVisible}
       */
-    def isVisible(options: AnonCount): Unit = js.native
-    def isVisible(options: AnonCount, message: String): Unit = js.native
+    def isVisible(options: Count): Unit = js.native
+    def isVisible(options: Count, message: String): Unit = js.native
     def lacksAttribute(name: String): Unit = js.native
     def lacksAttribute(name: String, message: String): Unit = js.native
     def lacksClass(expected: String): Unit = js.native
@@ -594,8 +596,8 @@ object assertionsMod extends js.Object {
     def matchesSelector(compareSelector: String, message: String): Unit = js.native
     def matchesText(expected: String): Unit = js.native
     def matchesText(expected: String, message: String): Unit = js.native
-    def matchesText(expected: AnonAny): Unit = js.native
-    def matchesText(expected: AnonAny, message: String): Unit = js.native
+    def matchesText(expected: Any): Unit = js.native
+    def matchesText(expected: Any, message: String): Unit = js.native
     def matchesText(expected: js.RegExp): Unit = js.native
     def matchesText(expected: js.RegExp, message: String): Unit = js.native
     /**

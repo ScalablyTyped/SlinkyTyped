@@ -26,11 +26,11 @@ trait BaseQuad extends js.Object {
     * @see Quad_Subject
     */
   var subject: Term = js.native
-  def equals(): Boolean = js.native
   /**
     * @param other The term to compare with.
     * @return True if and only if the argument is a) of the same type b) has all components equal.
     */
+  def equals(): Boolean = js.native
   def equals(other: BaseQuad): Boolean = js.native
 }
 

@@ -1,10 +1,5 @@
 package typingsSlinky.vueTemplateCompiler.mod
 
-import typingsSlinky.std.Record
-import typingsSlinky.vueTemplateCompiler.AnonName
-import typingsSlinky.vueTemplateCompiler.vueTemplateCompilerNumbers.`1`
-import typingsSlinky.vueTemplateCompiler.vueTemplateCompilerNumbers.`2`
-import typingsSlinky.vueTemplateCompiler.vueTemplateCompilerNumbers.`3`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,28 +13,10 @@ trait ASTNode extends js.Object
 
 object ASTNode {
   @scala.inline
-  def ASTElement(
-    attrsList: js.Array[AnonName],
-    attrsMap: Record[String, _],
-    children: js.Array[ASTNode],
-    tag: String,
-    `type`: `1`
-  ): ASTNode = {
-    val __obj = js.Dynamic.literal(attrsList = attrsList.asInstanceOf[js.Any], attrsMap = attrsMap.asInstanceOf[js.Any], children = children.asInstanceOf[js.Any], tag = tag.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ASTNode]
-  }
+  implicit def apply(value: ASTElement): ASTNode = value.asInstanceOf[ASTNode]
   @scala.inline
-  def ASTText(text: String, `type`: `3`): ASTNode = {
-    val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ASTNode]
-  }
+  implicit def apply(value: ASTExpression): ASTNode = value.asInstanceOf[ASTNode]
   @scala.inline
-  def ASTExpression(expression: String, text: String, tokens: js.Array[String | (Record[String, _])], `type`: `2`): ASTNode = {
-    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any], tokens = tokens.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ASTNode]
-  }
+  implicit def apply(value: ASTText): ASTNode = value.asInstanceOf[ASTNode]
 }
 

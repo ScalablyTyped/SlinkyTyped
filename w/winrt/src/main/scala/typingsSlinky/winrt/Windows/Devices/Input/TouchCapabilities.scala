@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Devices.Input.TouchCapabilities")
 @js.native
-class TouchCapabilities () extends ITouchCapabilities
+trait TouchCapabilities extends ITouchCapabilities
+
+object TouchCapabilities {
+  @scala.inline
+  def apply(contacts: Double, touchPresent: Double): TouchCapabilities = {
+    val __obj = js.Dynamic.literal(contacts = contacts.asInstanceOf[js.Any], touchPresent = touchPresent.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TouchCapabilities]
+  }
+}
 

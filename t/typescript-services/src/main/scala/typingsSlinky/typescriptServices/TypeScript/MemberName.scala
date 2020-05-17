@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("TypeScript.MemberName")
 @js.native
-class MemberName () extends js.Object {
+trait MemberName extends js.Object {
   var prefix: String = js.native
   var suffix: String = js.native
   def isArray(): Boolean = js.native
@@ -14,14 +13,55 @@ class MemberName () extends js.Object {
   def isString(): Boolean = js.native
 }
 
-/* static members */
-@JSGlobal("TypeScript.MemberName")
-@js.native
-object MemberName extends js.Object {
-  def create(entry: MemberName, prefix: String, suffix: String): MemberName = js.native
-  def create(text: String): MemberName = js.native
-  def memberNameToString(memberName: MemberName): String = js.native
-  def memberNameToString(memberName: MemberName, markerInfo: js.Array[Double]): String = js.native
-  def memberNameToString(memberName: MemberName, markerInfo: js.Array[Double], markerBaseLength: Double): String = js.native
+object MemberName {
+  @scala.inline
+  def apply(
+    isArray: () => Boolean,
+    isMarker: () => Boolean,
+    isString: () => Boolean,
+    prefix: String,
+    suffix: String
+  ): MemberName = {
+    val __obj = js.Dynamic.literal(isArray = js.Any.fromFunction0(isArray), isMarker = js.Any.fromFunction0(isMarker), isString = js.Any.fromFunction0(isString), prefix = prefix.asInstanceOf[js.Any], suffix = suffix.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MemberName]
+  }
+  @scala.inline
+  implicit class MemberNameOps[Self <: MemberName] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsArray(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isArray")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsMarker(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isMarker")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsString(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isString")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuffix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suffix")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

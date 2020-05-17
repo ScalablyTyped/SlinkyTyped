@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojgaugeMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.off
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.on
 import scala.scalajs.js
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 trait dvtBaseGaugeSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
   var trackResize: js.UndefOr[on | off] = js.native
-  var translations: js.UndefOr[AnonLabelAndValue] = js.native
+  var translations: js.UndefOr[LabelAndValue] = js.native
 }
 
 object dvtBaseGaugeSettablePropertiesLenient {
@@ -41,7 +41,7 @@ object dvtBaseGaugeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelAndValue): Self = {
+    def withTranslations(value: LabelAndValue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

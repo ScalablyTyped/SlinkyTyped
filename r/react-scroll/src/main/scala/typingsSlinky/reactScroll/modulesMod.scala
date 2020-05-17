@@ -1,6 +1,7 @@
 package typingsSlinky.reactScroll
 
 import typingsSlinky.react.mod.Component
+import typingsSlinky.reactScroll.anon.Smooth
 import typingsSlinky.reactScroll.buttonMod.ButtonProps
 import typingsSlinky.reactScroll.elementMod.ElementProps
 import typingsSlinky.reactScroll.linkMod.LinkProps
@@ -41,7 +42,7 @@ object modulesMod extends js.Object {
   @js.native
   object animateScroll extends js.Object {
     def animateTopScroll(y: Double, options: js.Any, to: String, target: js.Any): Unit = js.native
-    def getAnimationType(options: AnonSmooth): js.Function1[/* x */ Double, Double] = js.native
+    def getAnimationType(options: Smooth): js.Function1[/* x */ Double, Double] = js.native
     def scrollMore(toY: Double): Unit = js.native
     def scrollMore(toY: Double, options: js.Any): Unit = js.native
     def scrollTo(toY: Double): Unit = js.native

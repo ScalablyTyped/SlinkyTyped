@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("gsap", "Sine")
 @js.native
 class Sine ()
-  extends typingsSlinky.gsap.gsap.Sine
+  extends typingsSlinky.gsap.gsap.Ease
 
 /* static members */
 @JSImport("gsap", "Sine")

@@ -1,6 +1,6 @@
 package typingsSlinky.signale.mod
 
-import typingsSlinky.node.processMod._Global_.NodeJS.WriteStream
+import typingsSlinky.node.processMod.global.NodeJS.WriteStream
 import typingsSlinky.std.Map
 import typingsSlinky.std.Partial
 import typingsSlinky.std.Record

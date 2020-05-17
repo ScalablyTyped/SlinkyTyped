@@ -1,5 +1,6 @@
 package typingsSlinky.semanticUiReact.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
@@ -21,7 +22,6 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.bottom
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.left
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.right
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.top
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -112,22 +112,22 @@ object Dropdown {
     @scala.inline
     def onBlur(value: (/* event */ SyntheticKeyboardEvent[HTMLElement], /* data */ DropdownProps) => Unit): this.type = set("onBlur", js.Any.fromFunction2(value))
     @scala.inline
-    def onChange(value: (/* event */ SyntheticEvent[Event_, HTMLElement], /* data */ DropdownProps) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+    def onChange(value: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
     @scala.inline
     def onClick(value: (/* event */ SyntheticKeyboardEvent[HTMLElement], /* data */ DropdownProps) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
     @scala.inline
-    def onClose(value: (/* event */ SyntheticEvent[Event_, HTMLElement], /* data */ DropdownProps) => Unit): this.type = set("onClose", js.Any.fromFunction2(value))
+    def onClose(value: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps) => Unit): this.type = set("onClose", js.Any.fromFunction2(value))
     @scala.inline
-    def onFocus(value: (/* event */ SyntheticEvent[Event_, HTMLElement], /* data */ DropdownProps) => Unit): this.type = set("onFocus", js.Any.fromFunction2(value))
+    def onFocus(value: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps) => Unit): this.type = set("onFocus", js.Any.fromFunction2(value))
     @scala.inline
     def onLabelClick(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ LabelProps) => Unit): this.type = set("onLabelClick", js.Any.fromFunction2(value))
     @scala.inline
     def onMouseDown(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ DropdownProps) => Unit): this.type = set("onMouseDown", js.Any.fromFunction2(value))
     @scala.inline
-    def onOpen(value: (/* event */ SyntheticEvent[Event_, HTMLElement], /* data */ DropdownProps) => Unit): this.type = set("onOpen", js.Any.fromFunction2(value))
+    def onOpen(value: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownProps) => Unit): this.type = set("onOpen", js.Any.fromFunction2(value))
     @scala.inline
     def onSearchChange(
-      value: (/* event */ SyntheticEvent[Event_, HTMLElement], /* data */ DropdownOnSearchChangeData) => Unit
+      value: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ DropdownOnSearchChangeData) => Unit
     ): this.type = set("onSearchChange", js.Any.fromFunction2(value))
     @scala.inline
     def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])

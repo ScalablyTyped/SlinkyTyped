@@ -1,8 +1,8 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonDate
-import typingsSlinky.devextreme.AnonView
+import typingsSlinky.devextreme.anon.Date
+import typingsSlinky.devextreme.anon.View
 import typingsSlinky.devextreme.devextremeNumbers.`0`
 import typingsSlinky.devextreme.devextremeNumbers.`1`
 import typingsSlinky.devextreme.devextremeNumbers.`2`
@@ -15,7 +15,7 @@ import typingsSlinky.devextreme.devextremeStrings.decade
 import typingsSlinky.devextreme.devextremeStrings.month
 import typingsSlinky.devextreme.devextremeStrings.year
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ trait dxCalendarOptions extends EditorOptions[dxCalendar] {
   /** Specifies a custom template for calendar cells. */
   var cellTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
-      /* itemData */ AnonDate, 
+      /* itemData */ Date, 
       /* itemIndex */ Double, 
       /* itemElement */ dxElement, 
       String | Element | JQuery
@@ -34,7 +34,7 @@ trait dxCalendarOptions extends EditorOptions[dxCalendar] {
   /** Specifies the date-time value serialization format. Use it only if you do not specify the value at design time. */
   var dateSerializationFormat: js.UndefOr[String] = js.native
   /** Specifies dates to be disabled. */
-  var disabledDates: js.UndefOr[js.Array[js.Date] | (js.Function1[/* data */ AnonView, Boolean])] = js.native
+  var disabledDates: js.UndefOr[js.Array[js.Date] | (js.Function1[/* data */ View, Boolean])] = js.native
   /** Specifies the first day of a week. */
   var firstDayOfWeek: js.UndefOr[`0` | `1` | `2` | `3` | `4` | `5` | `6`] = js.native
   /** The latest date the widget allows to select. */
@@ -76,7 +76,7 @@ object dxCalendarOptions {
     }
     @scala.inline
     def withCellTemplateFunction3(
-      value: (/* itemData */ AnonDate, /* itemIndex */ Double, /* itemElement */ dxElement) => String | Element | JQuery
+      value: (/* itemData */ Date, /* itemIndex */ Double, /* itemElement */ dxElement) => String | Element | JQuery
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cellTemplate")(js.Any.fromFunction3(value))
@@ -85,7 +85,7 @@ object dxCalendarOptions {
     @scala.inline
     def withCellTemplate(
       value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
-          /* itemData */ AnonDate, 
+          /* itemData */ Date, 
           /* itemIndex */ Double, 
           /* itemElement */ dxElement, 
           String | Element | JQuery
@@ -114,13 +114,13 @@ object dxCalendarOptions {
         ret
     }
     @scala.inline
-    def withDisabledDatesFunction1(value: /* data */ AnonView => Boolean): Self = {
+    def withDisabledDatesFunction1(value: /* data */ View => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDates")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDisabledDates(value: js.Array[js.Date] | (js.Function1[/* data */ AnonView, Boolean])): Self = {
+    def withDisabledDates(value: js.Array[js.Date] | (js.Function1[/* data */ View, Boolean])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("disabledDates")(value.asInstanceOf[js.Any])
         ret

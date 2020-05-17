@@ -1,7 +1,7 @@
 package typingsSlinky.sequelize.mod
 
-import typingsSlinky.sequelize.AnonExclude
-import typingsSlinky.sequelize.AnonLevel
+import typingsSlinky.sequelize.anon.Exclude
+import typingsSlinky.sequelize.anon.Level
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait FindOptions[T]
     * `Sequelize.literal`, `Sequelize.fn` and so on), and the second is the name you want the attribute to
     * have in the returned instance
     */
-  var attributes: js.UndefOr[FindOptionsAttributesArray | AnonExclude] = js.native
+  var attributes: js.UndefOr[FindOptionsAttributesArray | Exclude] = js.native
   /**
     * Apply DISTINCT(col) for FindAndCount(all)
     */
@@ -51,7 +51,7 @@ trait FindOptions[T]
     * Postgres also supports transaction.LOCK.KEY_SHARE, transaction.LOCK.NO_KEY_UPDATE and specific model
     * locks with joins. See [transaction.LOCK for an example](transaction#lock)
     */
-  var lock: js.UndefOr[TransactionLockLevel | AnonLevel] = js.native
+  var lock: js.UndefOr[TransactionLockLevel | Level] = js.native
   /**
     * Skip the results;
     */
@@ -109,7 +109,7 @@ object FindOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withAttributes(value: FindOptionsAttributesArray | AnonExclude): Self[T] = {
+    def withAttributes(value: FindOptionsAttributesArray | Exclude): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
         ret
@@ -181,7 +181,7 @@ object FindOptions {
         ret
     }
     @scala.inline
-    def withLock(value: TransactionLockLevel | AnonLevel): Self[T] = {
+    def withLock(value: TransactionLockLevel | Level): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lock")(value.asInstanceOf[js.Any])
         ret

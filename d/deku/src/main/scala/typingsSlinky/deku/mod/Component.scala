@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Component extends js.Object {
+trait Component extends Thunk {
   var onCreate: js.UndefOr[js.Function1[/* model */ Model, _]] = js.native
   var onRemove: js.UndefOr[js.Function1[/* model */ Model, _]] = js.native
   var onUpdate: js.UndefOr[js.Function1[/* model */ Model, _]] = js.native

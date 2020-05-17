@@ -1,6 +1,7 @@
 package typingsSlinky.slimerjs
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.slimerjs.anon.Architecture
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait SystemModule extends js.Object {
   var args: js.Array[String] = js.native
   var env: StringDictionary[String] = js.native
-  var os: AnonArchitecture = js.native
+  var os: Architecture = js.native
   var pid: Double = js.native
   var platform: String = js.native
   var standarderr: Std = js.native
@@ -25,7 +26,7 @@ object SystemModule {
   def apply(
     args: js.Array[String],
     env: StringDictionary[String],
-    os: AnonArchitecture,
+    os: Architecture,
     pid: Double,
     platform: String,
     standarderr: Std,
@@ -57,7 +58,7 @@ object SystemModule {
         ret
     }
     @scala.inline
-    def withOs(value: AnonArchitecture): Self = {
+    def withOs(value: Architecture): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("os")(value.asInstanceOf[js.Any])
         ret

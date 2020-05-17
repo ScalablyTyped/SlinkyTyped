@@ -1,5 +1,6 @@
 package typingsSlinky.baseui.tagMod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.baseui.baseuiStrings.accent
@@ -12,7 +13,6 @@ import typingsSlinky.baseui.baseuiStrings.positive
 import typingsSlinky.baseui.baseuiStrings.primary
 import typingsSlinky.baseui.baseuiStrings.solid
 import typingsSlinky.baseui.baseuiStrings.warning
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,10 +26,10 @@ trait TagProps extends js.Object {
   var isFocused: js.UndefOr[Boolean] = js.native
   var isHovered: js.UndefOr[Boolean] = js.native
   var kind: js.UndefOr[custom_ | accent | primary | neutral | positive | warning | negative] = js.native
-  var onActionClick: js.UndefOr[js.Function2[/* e */ Event_, /* children */ js.UndefOr[TagMod[Any]], _]] = js.native
-  var onActionKeyDown: js.UndefOr[js.Function2[/* e */ Event_, /* children */ js.UndefOr[TagMod[Any]], _]] = js.native
-  var onClick: js.UndefOr[js.Function1[/* event */ Event_, _]] = js.native
-  var onKeyDown: js.UndefOr[js.Function1[/* event */ Event_, _]] = js.native
+  var onActionClick: js.UndefOr[js.Function2[/* e */ Event, /* children */ js.UndefOr[TagMod[Any]], _]] = js.native
+  var onActionKeyDown: js.UndefOr[js.Function2[/* e */ Event, /* children */ js.UndefOr[TagMod[Any]], _]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* event */ Event, _]] = js.native
+  var onKeyDown: js.UndefOr[js.Function1[/* event */ Event, _]] = js.native
   var overrides: js.UndefOr[TagOverrides] = js.native
   var title: js.UndefOr[String] = js.native
   var variant: js.UndefOr[solid | light | outlined] = js.native
@@ -138,7 +138,7 @@ object TagProps {
         ret
     }
     @scala.inline
-    def withOnActionClick(value: (/* e */ Event_, /* children */ js.UndefOr[TagMod[Any]]) => _): Self = {
+    def withOnActionClick(value: (/* e */ Event, /* children */ js.UndefOr[TagMod[Any]]) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onActionClick")(js.Any.fromFunction2(value))
         ret
@@ -150,7 +150,7 @@ object TagProps {
         ret
     }
     @scala.inline
-    def withOnActionKeyDown(value: (/* e */ Event_, /* children */ js.UndefOr[TagMod[Any]]) => _): Self = {
+    def withOnActionKeyDown(value: (/* e */ Event, /* children */ js.UndefOr[TagMod[Any]]) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onActionKeyDown")(js.Any.fromFunction2(value))
         ret
@@ -162,7 +162,7 @@ object TagProps {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* event */ Event_ => _): Self = {
+    def withOnClick(value: /* event */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret
@@ -174,7 +174,7 @@ object TagProps {
         ret
     }
     @scala.inline
-    def withOnKeyDown(value: /* event */ Event_ => _): Self = {
+    def withOnKeyDown(value: /* event */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction1(value))
         ret

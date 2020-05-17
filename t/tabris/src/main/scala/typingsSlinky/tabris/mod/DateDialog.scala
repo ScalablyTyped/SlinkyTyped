@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.OmitDateDialogset
+import typingsSlinky.tabris.anon.OmitDateDialogset
 import typingsSlinky.tabris.tabrisStrings.date
 import typingsSlinky.tabris.tabrisStrings.maxDate
 import typingsSlinky.tabris.tabrisStrings.minDate

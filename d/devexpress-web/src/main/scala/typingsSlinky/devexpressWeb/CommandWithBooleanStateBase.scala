@@ -7,12 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Serves as a base for commands with the Boolean state.
   */
-@JSGlobal("CommandWithBooleanStateBase")
 @js.native
-abstract class CommandWithBooleanStateBase () extends CommandBase {
+trait CommandWithBooleanStateBase extends CommandBase {
   /**
     * Gets information about the command's state.
     */
   def getState(): CommandState[Boolean] = js.native
+}
+
+object CommandWithBooleanStateBase {
+  @scala.inline
+  def apply(getState: () => CommandState[Boolean]): CommandWithBooleanStateBase = {
+    val __obj = js.Dynamic.literal(getState = js.Any.fromFunction0(getState))
+    __obj.asInstanceOf[CommandWithBooleanStateBase]
+  }
+  @scala.inline
+  implicit class CommandWithBooleanStateBaseOps[Self <: CommandWithBooleanStateBase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetState(value: () => CommandState[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getState")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

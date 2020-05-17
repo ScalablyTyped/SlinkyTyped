@@ -1,8 +1,8 @@
 package typingsSlinky.reactPlacesAutocomplete.mod
 
 import slinky.core.TagMod
-import typingsSlinky.reactPlacesAutocomplete.AnonBounds
-import typingsSlinky.reactPlacesAutocomplete.Readonlyloadingbooleansug
+import typingsSlinky.reactPlacesAutocomplete.anon.Bounds
+import typingsSlinky.reactPlacesAutocomplete.anon.Readonlyloadingbooleansug
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait PropTypes extends js.Object {
     js.Function2[/* status */ String, /* clearSuggestion */ js.Function0[Unit], Unit]
   ] = js.native
   var onSelect: js.UndefOr[js.Function2[/* address */ String, /* placeID */ String, Unit]] = js.native
-  var searchOptions: js.UndefOr[AnonBounds] = js.native
+  var searchOptions: js.UndefOr[Bounds] = js.native
   var shouldFetchSuggestions: js.UndefOr[Boolean] = js.native
   var value: js.UndefOr[String] = js.native
   def children(opts: Readonlyloadingbooleansug): TagMod[Any] = js.native
@@ -114,7 +114,7 @@ object PropTypes {
         ret
     }
     @scala.inline
-    def withSearchOptions(value: AnonBounds): Self = {
+    def withSearchOptions(value: Bounds): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("searchOptions")(value.asInstanceOf[js.Any])
         ret

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AggregateExpression
   extends BaseExpression
-     with _Expression {
+     with Expression {
   var aggregation: String = js.native
   var expression: Expression = js.native
   var separator: js.UndefOr[String] = js.native

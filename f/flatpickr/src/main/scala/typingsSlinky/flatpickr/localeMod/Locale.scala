@@ -1,7 +1,7 @@
 package typingsSlinky.flatpickr.localeMod
 
-import typingsSlinky.flatpickr.AnonLonghand
-import typingsSlinky.flatpickr.AnonShorthand
+import typingsSlinky.flatpickr.anon.Longhand
+import typingsSlinky.flatpickr.anon.Shorthand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,13 +13,13 @@ trait Locale extends js.Object {
   var firstDayOfWeek: Double = js.native
   var hourAriaLabel: String = js.native
   var minuteAriaLabel: String = js.native
-  var months: AnonShorthand = js.native
+  var months: Shorthand = js.native
   var rangeSeparator: String = js.native
   var scrollTitle: String = js.native
   var time_24hr: Boolean = js.native
   var toggleTitle: String = js.native
   var weekAbbreviation: String = js.native
-  var weekdays: AnonLonghand = js.native
+  var weekdays: Longhand = js.native
   var yearAriaLabel: String = js.native
   def ordinal(nth: Double): String = js.native
 }
@@ -32,14 +32,14 @@ object Locale {
     firstDayOfWeek: Double,
     hourAriaLabel: String,
     minuteAriaLabel: String,
-    months: AnonShorthand,
+    months: Shorthand,
     ordinal: Double => String,
     rangeSeparator: String,
     scrollTitle: String,
     time_24hr: Boolean,
     toggleTitle: String,
     weekAbbreviation: String,
-    weekdays: AnonLonghand,
+    weekdays: Longhand,
     yearAriaLabel: String
   ): Locale = {
     val __obj = js.Dynamic.literal(amPM = amPM.asInstanceOf[js.Any], daysInMonth = daysInMonth.asInstanceOf[js.Any], firstDayOfWeek = firstDayOfWeek.asInstanceOf[js.Any], hourAriaLabel = hourAriaLabel.asInstanceOf[js.Any], minuteAriaLabel = minuteAriaLabel.asInstanceOf[js.Any], months = months.asInstanceOf[js.Any], ordinal = js.Any.fromFunction1(ordinal), rangeSeparator = rangeSeparator.asInstanceOf[js.Any], scrollTitle = scrollTitle.asInstanceOf[js.Any], time_24hr = time_24hr.asInstanceOf[js.Any], toggleTitle = toggleTitle.asInstanceOf[js.Any], weekAbbreviation = weekAbbreviation.asInstanceOf[js.Any], weekdays = weekdays.asInstanceOf[js.Any], yearAriaLabel = yearAriaLabel.asInstanceOf[js.Any])
@@ -84,7 +84,7 @@ object Locale {
         ret
     }
     @scala.inline
-    def withMonths(value: AnonShorthand): Self = {
+    def withMonths(value: Shorthand): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("months")(value.asInstanceOf[js.Any])
         ret
@@ -126,7 +126,7 @@ object Locale {
         ret
     }
     @scala.inline
-    def withWeekdays(value: AnonLonghand): Self = {
+    def withWeekdays(value: Longhand): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("weekdays")(value.asInstanceOf[js.Any])
         ret

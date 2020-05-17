@@ -2,9 +2,9 @@ package typingsSlinky.oracleOraclejet.ojrouterMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.knockout.KnockoutObservable
-import typingsSlinky.oracleOraclejet.AnonHasChanged
-import typingsSlinky.oracleOraclejet.AnonHistoryUpdate
-import typingsSlinky.oracleOraclejet.AnonLifecycleListener
+import typingsSlinky.oracleOraclejet.anon.HasChanged
+import typingsSlinky.oracleOraclejet.anon.HistoryUpdate
+import typingsSlinky.oracleOraclejet.anon.LifecycleListener
 import typingsSlinky.oracleOraclejet.ojrouterMod.RouterState.ConfigOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 trait Router extends js.Object {
   var defaultStateId: js.UndefOr[String] = js.native
   val direction: js.UndefOr[String] = js.native
-  val moduleConfig: AnonLifecycleListener = js.native
+  val moduleConfig: LifecycleListener = js.native
   val name: String = js.native
   @JSName("observableModuleConfig")
   val observableModuleConfig_Original: KnockoutObservable[ModuleConfigType] = js.native
@@ -30,11 +30,11 @@ trait Router extends js.Object {
   def getChildRouter(name: String): js.UndefOr[Router] = js.native
   def getCurrentChildRouter(): js.UndefOr[Router] = js.native
   def getState(stateId: String): js.UndefOr[RouterState] = js.native
-  def go(): js.Promise[AnonHasChanged] = js.native
-  def go(stateIdPath: String): js.Promise[AnonHasChanged] = js.native
-  def go(stateIdPath: String, options: AnonHistoryUpdate): js.Promise[AnonHasChanged] = js.native
-  def go(stateIdPath: js.Array[String]): js.Promise[AnonHasChanged] = js.native
-  def go(stateIdPath: js.Array[String], options: AnonHistoryUpdate): js.Promise[AnonHasChanged] = js.native
+  def go(): js.Promise[HasChanged] = js.native
+  def go(stateIdPath: String): js.Promise[HasChanged] = js.native
+  def go(stateIdPath: String, options: HistoryUpdate): js.Promise[HasChanged] = js.native
+  def go(stateIdPath: js.Array[String]): js.Promise[HasChanged] = js.native
+  def go(stateIdPath: js.Array[String], options: HistoryUpdate): js.Promise[HasChanged] = js.native
   def observableModuleConfig(): ModuleConfigType = js.native
   def observableModuleConfig(value: ModuleConfigType): Unit = js.native
   def retrieve(): js.Any = js.native

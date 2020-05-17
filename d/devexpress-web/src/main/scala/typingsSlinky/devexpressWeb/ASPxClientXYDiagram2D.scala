@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents the client-side equivalent of the XYDiagram2D class.
   */
-@JSGlobal("ASPxClientXYDiagram2D")
 @js.native
-class ASPxClientXYDiagram2D () extends ASPxClientXYDiagramBase {
+trait ASPxClientXYDiagram2D extends ASPxClientXYDiagramBase {
   /**
     * Provides access to a default pane object.
     */
@@ -53,5 +52,76 @@ class ASPxClientXYDiagram2D () extends ASPxClientXYDiagramBase {
     * @param screenY The vertical coordinate that is related to the top-left angle of the chart.
     */
   def ShowCrosshair(screenX: Double, screenY: Double): Unit = js.native
+}
+
+object ASPxClientXYDiagram2D {
+  @scala.inline
+  def apply(
+    DiagramToPoint: (js.Any, js.Any, ASPxClientAxis2D, ASPxClientAxis2D, ASPxClientXYDiagramPane) => ASPxClientControlCoordinates,
+    PointToDiagram: (Double, Double) => ASPxClientDiagramCoordinates,
+    ShowCrosshair: (Double, Double) => Unit,
+    axisX: ASPxClientAxisBase,
+    axisY: ASPxClientAxisBase,
+    chart: ASPxClientWebChart,
+    defaultPane: ASPxClientXYDiagramPane,
+    panes: js.Array[ASPxClientXYDiagramPane],
+    secondaryAxesX: js.Array[ASPxClientAxis],
+    secondaryAxesY: js.Array[ASPxClientAxis]
+  ): ASPxClientXYDiagram2D = {
+    val __obj = js.Dynamic.literal(DiagramToPoint = js.Any.fromFunction5(DiagramToPoint), PointToDiagram = js.Any.fromFunction2(PointToDiagram), ShowCrosshair = js.Any.fromFunction2(ShowCrosshair), axisX = axisX.asInstanceOf[js.Any], axisY = axisY.asInstanceOf[js.Any], chart = chart.asInstanceOf[js.Any], defaultPane = defaultPane.asInstanceOf[js.Any], panes = panes.asInstanceOf[js.Any], secondaryAxesX = secondaryAxesX.asInstanceOf[js.Any], secondaryAxesY = secondaryAxesY.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientXYDiagram2D]
+  }
+  @scala.inline
+  implicit class ASPxClientXYDiagram2DOps[Self <: ASPxClientXYDiagram2D] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDiagramToPoint(
+      value: (js.Any, js.Any, ASPxClientAxis2D, ASPxClientAxis2D, ASPxClientXYDiagramPane) => ASPxClientControlCoordinates
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiagramToPoint")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withPointToDiagram(value: (Double, Double) => ASPxClientDiagramCoordinates): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PointToDiagram")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withShowCrosshair(value: (Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowCrosshair")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withDefaultPane(value: ASPxClientXYDiagramPane): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPane")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPanes(value: js.Array[ASPxClientXYDiagramPane]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("panes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSecondaryAxesX(value: js.Array[ASPxClientAxis]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondaryAxesX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSecondaryAxesY(value: js.Array[ASPxClientAxis]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("secondaryAxesY")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

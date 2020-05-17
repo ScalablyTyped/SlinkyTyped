@@ -1,7 +1,7 @@
 package typingsSlinky.nodeHueApi.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.nodeHueApi.AnonDictkey
+import typingsSlinky.nodeHueApi.anon.Dictkey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait ISensor extends js.Object {
   var manufacturername: String = js.native
   var modelid: String = js.native
   var name: String = js.native
-  var state: AnonDictkey = js.native
+  var state: Dictkey = js.native
   var swversion: String = js.native
   var `type`: String = js.native
   var uniqueid: js.UndefOr[String] = js.native
@@ -26,7 +26,7 @@ object ISensor {
     manufacturername: String,
     modelid: String,
     name: String,
-    state: AnonDictkey,
+    state: Dictkey,
     swversion: String,
     `type`: String
   ): ISensor = {
@@ -65,7 +65,7 @@ object ISensor {
         ret
     }
     @scala.inline
-    def withState(value: AnonDictkey): Self = {
+    def withState(value: Dictkey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
         ret

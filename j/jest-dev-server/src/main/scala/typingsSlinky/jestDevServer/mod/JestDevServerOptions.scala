@@ -1,6 +1,6 @@
 package typingsSlinky.jestDevServer.mod
 
-import typingsSlinky.jestDevServer.PartialWaitOnOptions
+import typingsSlinky.jestDevServer.anon.PartialWaitOnOptions
 import typingsSlinky.jestDevServer.jestDevServerStrings.ask
 import typingsSlinky.jestDevServer.jestDevServerStrings.error
 import typingsSlinky.jestDevServer.jestDevServerStrings.http

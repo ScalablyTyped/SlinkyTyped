@@ -9,7 +9,9 @@ import scala.scalajs.js.annotation._
 
 @JSImport("@ember/object/mixin", JSImport.Default)
 @js.native
-class default[T, Base] () extends Mixin[T, Base]
+class default[T, Base] ()
+  extends Mixin[T, Base]
+     with MixinOrLiteral[T, Base]
 
 /* static members */
 @JSImport("@ember/object/mixin", JSImport.Default)

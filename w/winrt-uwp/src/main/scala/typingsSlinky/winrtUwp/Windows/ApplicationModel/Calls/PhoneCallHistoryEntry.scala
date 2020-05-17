@@ -5,10 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A collection of information about a phone call for the call history. */
-@JSGlobal("Windows.ApplicationModel.Calls.PhoneCallHistoryEntry")
 @js.native
-/** Creates a new PhoneCallHistoryEntry object. */
-class PhoneCallHistoryEntry () extends js.Object {
+trait PhoneCallHistoryEntry extends js.Object {
   /** Gets or sets the address book information for this phone call. */
   var address: PhoneCallHistoryEntryAddress = js.native
   /** Gets or sets the duration of the call. */
@@ -45,5 +43,148 @@ class PhoneCallHistoryEntry () extends js.Object {
   var sourceIdKind: PhoneCallHistorySourceIdKind = js.native
   /** Gets or sets the start time for this history entry. */
   var startTime: js.Date = js.native
+}
+
+object PhoneCallHistoryEntry {
+  @scala.inline
+  def apply(
+    address: PhoneCallHistoryEntryAddress,
+    duration: Double,
+    id: String,
+    isCallerIdBlocked: Boolean,
+    isEmergency: Boolean,
+    isIncoming: Boolean,
+    isMissed: Boolean,
+    isRinging: Boolean,
+    isSeen: Boolean,
+    isSuppressed: Boolean,
+    isVoicemail: Boolean,
+    media: PhoneCallHistoryEntryMedia,
+    otherAppReadAccess: PhoneCallHistoryEntryOtherAppReadAccess,
+    remoteId: String,
+    sourceDisplayName: String,
+    sourceId: String,
+    sourceIdKind: PhoneCallHistorySourceIdKind,
+    startTime: js.Date
+  ): PhoneCallHistoryEntry = {
+    val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isCallerIdBlocked = isCallerIdBlocked.asInstanceOf[js.Any], isEmergency = isEmergency.asInstanceOf[js.Any], isIncoming = isIncoming.asInstanceOf[js.Any], isMissed = isMissed.asInstanceOf[js.Any], isRinging = isRinging.asInstanceOf[js.Any], isSeen = isSeen.asInstanceOf[js.Any], isSuppressed = isSuppressed.asInstanceOf[js.Any], isVoicemail = isVoicemail.asInstanceOf[js.Any], media = media.asInstanceOf[js.Any], otherAppReadAccess = otherAppReadAccess.asInstanceOf[js.Any], remoteId = remoteId.asInstanceOf[js.Any], sourceDisplayName = sourceDisplayName.asInstanceOf[js.Any], sourceId = sourceId.asInstanceOf[js.Any], sourceIdKind = sourceIdKind.asInstanceOf[js.Any], startTime = startTime.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PhoneCallHistoryEntry]
+  }
+  @scala.inline
+  implicit class PhoneCallHistoryEntryOps[Self <: PhoneCallHistoryEntry] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddress(value: PhoneCallHistoryEntryAddress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsCallerIdBlocked(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCallerIdBlocked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsEmergency(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEmergency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsIncoming(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isIncoming")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsMissed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isMissed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsRinging(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRinging")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsSeen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSeen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsSuppressed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSuppressed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsVoicemail(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isVoicemail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMedia(value: PhoneCallHistoryEntryMedia): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("media")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOtherAppReadAccess(value: PhoneCallHistoryEntryOtherAppReadAccess): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("otherAppReadAccess")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoteId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceDisplayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSourceIdKind(value: PhoneCallHistorySourceIdKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sourceIdKind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartTime(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

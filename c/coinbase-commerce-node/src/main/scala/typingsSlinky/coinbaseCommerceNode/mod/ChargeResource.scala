@@ -1,9 +1,9 @@
 package typingsSlinky.coinbaseCommerceNode.mod
 
-import typingsSlinky.coinbaseCommerceNode.AnonBlock
-import typingsSlinky.coinbaseCommerceNode.AnonContext
-import typingsSlinky.coinbaseCommerceNode.AnonId
-import typingsSlinky.coinbaseCommerceNode.PartialRecordCryptoNamest
+import typingsSlinky.coinbaseCommerceNode.anon.Block
+import typingsSlinky.coinbaseCommerceNode.anon.Context
+import typingsSlinky.coinbaseCommerceNode.anon.Id
+import typingsSlinky.coinbaseCommerceNode.anon.PartialRecordCryptoNamest
 import typingsSlinky.coinbaseCommerceNode.coinbaseCommerceNodeStrings.charge
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +23,7 @@ trait ChargeResource extends BaseCharge {
   /**
     * Associated checkout resource.
     */
-  var checkout: js.UndefOr[AnonId] = js.native
+  var checkout: js.UndefOr[Id] = js.native
   /**
     * User fiendly primary key.
     */
@@ -60,7 +60,7 @@ trait ChargeResource extends BaseCharge {
   /**
     * Array of charge payment objects.
     */
-  var payments: js.Array[AnonBlock] = js.native
+  var payments: js.Array[Block] = js.native
   /**
     * Charge price information object.
     */
@@ -72,7 +72,7 @@ trait ChargeResource extends BaseCharge {
   /**
     * Array of status update objects.
     */
-  var timeline: js.Array[AnonContext] = js.native
+  var timeline: js.Array[Context] = js.native
 }
 
 object ChargeResource {
@@ -87,11 +87,11 @@ object ChargeResource {
     id: String,
     metadata: KeyVal,
     name: String,
-    payments: js.Array[AnonBlock],
+    payments: js.Array[Block],
     pricing: Pricing,
     pricing_type: PricingType,
     resource: charge,
-    timeline: js.Array[AnonContext]
+    timeline: js.Array[Context]
   ): ChargeResource = {
     val __obj = js.Dynamic.literal(addresses = addresses.asInstanceOf[js.Any], code = code.asInstanceOf[js.Any], created_at = created_at.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], expires_at = expires_at.asInstanceOf[js.Any], hosted_url = hosted_url.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], payments = payments.asInstanceOf[js.Any], pricing = pricing.asInstanceOf[js.Any], pricing_type = pricing_type.asInstanceOf[js.Any], resource = resource.asInstanceOf[js.Any], timeline = timeline.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChargeResource]
@@ -145,7 +145,7 @@ object ChargeResource {
         ret
     }
     @scala.inline
-    def withPayments(value: js.Array[AnonBlock]): Self = {
+    def withPayments(value: js.Array[Block]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("payments")(value.asInstanceOf[js.Any])
         ret
@@ -163,13 +163,13 @@ object ChargeResource {
         ret
     }
     @scala.inline
-    def withTimeline(value: js.Array[AnonContext]): Self = {
+    def withTimeline(value: js.Array[Context]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("timeline")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withCheckout(value: AnonId): Self = {
+    def withCheckout(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("checkout")(value.asInstanceOf[js.Any])
         ret

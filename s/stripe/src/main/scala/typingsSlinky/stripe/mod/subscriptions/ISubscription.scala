@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.subscriptions
 
-import typingsSlinky.stripe.AnonAmountgte
+import typingsSlinky.stripe.anon.Amountgte
 import typingsSlinky.stripe.mod.IList
 import typingsSlinky.stripe.mod.IMetadata
 import typingsSlinky.stripe.mod.IResourceObject
@@ -40,7 +40,7 @@ trait ISubscription extends IResourceObject {
   /**
     * Define thresholds at which an invoice will be sent, and the subscription advanced to a new billing period.
     */
-  var billing_thresholds: Null | AnonAmountgte = js.native
+  var billing_thresholds: Null | Amountgte = js.native
   /**
     * A date in the future at which the subscription will automatically get canceled.
     */
@@ -332,7 +332,7 @@ object ISubscription {
         ret
     }
     @scala.inline
-    def withBilling_thresholds(value: AnonAmountgte): Self = {
+    def withBilling_thresholds(value: Amountgte): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("billing_thresholds")(value.asInstanceOf[js.Any])
         ret

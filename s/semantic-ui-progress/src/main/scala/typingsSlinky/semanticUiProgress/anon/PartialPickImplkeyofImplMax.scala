@@ -1,0 +1,53 @@
+package typingsSlinky.semanticUiProgress.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Inlined std.Partial<std.Pick<semantic-ui-progress.SemanticUI.Progress.RandomSettings._Impl, keyof semantic-ui-progress.SemanticUI.Progress.RandomSettings._Impl>> */
+@js.native
+trait PartialPickImplkeyofImplMax extends js.Object {
+  var max: js.UndefOr[Double] = js.native
+  var min: js.UndefOr[Double] = js.native
+}
+
+object PartialPickImplkeyofImplMax {
+  @scala.inline
+  def apply(): PartialPickImplkeyofImplMax = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[PartialPickImplkeyofImplMax]
+  }
+  @scala.inline
+  implicit class PartialPickImplkeyofImplMaxOps[Self <: PartialPickImplkeyofImplMax] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMax(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMax: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMin: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.undefined)
+        ret
+    }
+  }
+  
+}
+

@@ -8,7 +8,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
-import typingsSlinky.reResizable.AnonX
+import typingsSlinky.reResizable.anon.X
 import typingsSlinky.reResizable.reResizableStrings.parent
 import typingsSlinky.reResizable.reResizableStrings.window
 import typingsSlinky.reResizable.resizerMod.Direction
@@ -43,7 +43,7 @@ trait ResizableProps extends js.Object {
   var resizeRatio: js.UndefOr[Double] = js.native
   var scale: js.UndefOr[Double] = js.native
   var size: js.UndefOr[Size] = js.native
-  var snap: js.UndefOr[AnonX] = js.native
+  var snap: js.UndefOr[X] = js.native
   var snapGap: js.UndefOr[Double] = js.native
   var style: js.UndefOr[CSSProperties] = js.native
 }
@@ -367,7 +367,7 @@ object ResizableProps {
         ret
     }
     @scala.inline
-    def withSnap(value: AnonX): Self = {
+    def withSnap(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("snap")(value.asInstanceOf[js.Any])
         ret

@@ -32,30 +32,6 @@ object AtomicStateNodeConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): (Self[TContext, TEvent]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[TContext, TEvent]) with Other]
     @scala.inline
-    def withInitial(value: scala.Nothing): Self[TContext, TEvent] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initial")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutInitial: Self[TContext, TEvent] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("initial")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withOnDone(value: scala.Nothing): Self[TContext, TEvent] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDone")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutOnDone: Self[TContext, TEvent] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onDone")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withParallel(value: `false`): Self[TContext, TEvent] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parallel")(value.asInstanceOf[js.Any])
@@ -65,18 +41,6 @@ object AtomicStateNodeConfig {
     def withoutParallel: Self[TContext, TEvent] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parallel")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStates(value: scala.Nothing): Self[TContext, TEvent] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("states")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStates: Self[TContext, TEvent] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("states")(js.undefined)
         ret
     }
   }

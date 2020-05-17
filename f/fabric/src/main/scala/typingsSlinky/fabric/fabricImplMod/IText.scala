@@ -1,12 +1,12 @@
 package typingsSlinky.fabric.fabricImplMod
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.fabric.AnonCharHeight
-import typingsSlinky.fabric.AnonSelectionEnd
-import typingsSlinky.fabric.AnonX
-import typingsSlinky.std.Event_
+import typingsSlinky.fabric.anon.CharHeight
+import typingsSlinky.fabric.anon.SelectionEnd
+import typingsSlinky.fabric.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -128,11 +128,11 @@ class IText protected () extends Text {
   	 * @private
   	 * @return {Object} style contains style for hiddenTextarea
   	 */
-  def _calcTextareaPosition(): AnonCharHeight = js.native
+  def _calcTextareaPosition(): CharHeight = js.native
   /**
   	 * @private
   	 */
-  def _getNewSelectionStartFromOffset(mouseOffset: AnonX, prevWidth: Double, width: Double, index: Double, jlen: Double): Double = js.native
+  def _getNewSelectionStartFromOffset(mouseOffset: X, prevWidth: Double, width: Double, index: Double, jlen: Double): Double = js.native
   /**
   	 * Default event handler for the basic functionalities needed on _mouseDown
   	 * can be overridden to do something different.
@@ -199,11 +199,11 @@ class IText protected () extends Text {
   /**
   	 * convert from fabric to textarea values
   	 */
-  def fromGraphemeToStringSelection(start: Double, end: Double, _text: String): AnonSelectionEnd = js.native
+  def fromGraphemeToStringSelection(start: Double, end: Double, _text: String): SelectionEnd = js.native
   /**
   	 * convert from textarea to grapheme indexes
   	 */
-  def fromStringToGraphemeSelection(start: Double, end: Double, text: String): AnonSelectionEnd = js.native
+  def fromStringToGraphemeSelection(start: Double, end: Double, text: String): SelectionEnd = js.native
   /**
   	 * High level function to know the color of the cursor.
   	 * the currentChar is the one that precedes the cursor
@@ -224,8 +224,8 @@ class IText protected () extends Text {
   	 * @param {Boolean} isRight
   	 * @return {Number}
   	 */
-  def getDownCursorOffset(e: Event_): Double = js.native
-  def getDownCursorOffset(e: Event_, isRight: Boolean): Double = js.native
+  def getDownCursorOffset(e: Event): Double = js.native
+  def getDownCursorOffset(e: Event, isRight: Boolean): Double = js.native
   /**
   	 * Returns selected text
   	 * @return {String}
@@ -236,14 +236,14 @@ class IText protected () extends Text {
   	 * @param {Event} e Event object
   	 * @return {Number} Index of a character
   	 */
-  def getSelectionStartFromPointer(e: Event_): Double = js.native
+  def getSelectionStartFromPointer(e: Event): Double = js.native
   /**
   	 * @param {Event} e Event object
   	 * @param {Boolean} isRight
   	 * @return {Number}
   	 */
-  def getUpCursorOffset(e: Event_): Double = js.native
-  def getUpCursorOffset(e: Event_, isRight: Boolean): Double = js.native
+  def getUpCursorOffset(e: Event): Double = js.native
+  def getUpCursorOffset(e: Event, isRight: Boolean): Double = js.native
   /**
   	 * Initializes "added" event handler
   	 */
@@ -325,42 +325,42 @@ class IText protected () extends Text {
   	 * Moves cursor down
   	 * @param {Event} e Event object
   	 */
-  def moveCursorDown(e: Event_): Unit = js.native
+  def moveCursorDown(e: Event): Unit = js.native
   /**
   	 * Moves cursor left
   	 * @param {Event} e Event object
   	 */
-  def moveCursorLeft(e: Event_): Unit = js.native
+  def moveCursorLeft(e: Event): Unit = js.native
   /**
   	 * Moves cursor left while keeping selection
   	 * @param {Event} e
   	 */
-  def moveCursorLeftWithShift(e: Event_): Unit = js.native
+  def moveCursorLeftWithShift(e: Event): Unit = js.native
   /**
   	 * Moves cursor left without keeping selection
   	 * @param {Event} e
   	 */
-  def moveCursorLeftWithoutShift(e: Event_): Unit = js.native
+  def moveCursorLeftWithoutShift(e: Event): Unit = js.native
   /**
   	 * Moves cursor right
   	 * @param {Event} e Event object
   	 */
-  def moveCursorRight(e: Event_): Unit = js.native
+  def moveCursorRight(e: Event): Unit = js.native
   /**
   	 * Moves cursor right while keeping selection
   	 * @param {Event} e
   	 */
-  def moveCursorRightWithShift(e: Event_): Unit = js.native
+  def moveCursorRightWithShift(e: Event): Unit = js.native
   /**
   	 * Moves cursor right without keeping selection
   	 * @param {Event} e Event object
   	 */
-  def moveCursorRightWithoutShift(e: Event_): Unit = js.native
+  def moveCursorRightWithoutShift(e: Event): Unit = js.native
   /**
   	 * Moves cursor up
   	 * @param {Event} e Event object
   	 */
-  def moveCursorUp(e: Event_): Unit = js.native
+  def moveCursorUp(e: Event): Unit = js.native
   /**
   	 * Moves cursor with shift
   	 * @param {Number} offset
@@ -383,19 +383,19 @@ class IText protected () extends Text {
   	 * Handles onInput event
   	 * @param {Event} e Event object
   	 */
-  def onInput(e: Event_): Unit = js.native
+  def onInput(e: Event): Unit = js.native
   /**
   	 * Handles keyup event
   	 * @param {Event} e Event object
   	 */
-  def onKeyDown(e: Event_): Unit = js.native
+  def onKeyDown(e: Event): Unit = js.native
   /**
   	 * Handles keyup event
   	 * We handle KeyUp because ie11 and edge have difficulties copy/pasting
   	 * if a copy/cut event fired, keyup is dismissed
   	 * @param {Event} e Event object
   	 */
-  def onKeyUp(e: Event_): Unit = js.native
+  def onKeyUp(e: Event): Unit = js.native
   /**
   	 * Pastes text
   	 */
@@ -459,7 +459,7 @@ class IText protected () extends Text {
   	 * Changes cursor location in a text depending on passed pointer (x/y) object
   	 * @param {Event} e Event object
   	 */
-  def setCursorByClick(e: Event_): Unit = js.native
+  def setCursorByClick(e: Event): Unit = js.native
   /**
   	 * Sets selection end (right boundary of a selection)
   	 * @param {Number} index Index to set selection end to

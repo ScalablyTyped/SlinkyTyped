@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Response[ResBody]
   extends ServerResponse
-     with typingsSlinky.expressServeStaticCore.mod._Global_.Express.Response {
+     with typingsSlinky.expressServeStaticCore.mod.global.Express.Response {
   @JSName("app")
   var app_Original: Application = js.native
   var charset: String = js.native

@@ -12,5 +12,4 @@ package object mod {
     /* result */ typingsSlinky.uuid1345.mod.UUID, 
     scala.Unit
   ]
-  type UuidTypes = java.lang.String | typingsSlinky.node.Buffer | typingsSlinky.uuid1345.mod.UUID
 }

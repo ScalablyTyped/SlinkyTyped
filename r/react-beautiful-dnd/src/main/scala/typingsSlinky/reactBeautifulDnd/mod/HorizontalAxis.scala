@@ -85,7 +85,7 @@ object HorizontalAxis {
         ret
     }
     @scala.inline
-    def withLine(value: x): Self = {
+    def withLine(value: typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.x): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("line")(value.asInstanceOf[js.Any])
         ret

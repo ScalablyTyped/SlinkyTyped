@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientWebmasters.gapi.client.webmasters
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientWebmasters.AnonCategory
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientWebmasters.anon.Category
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UrlcrawlerrorscountsResource extends js.Object {
   /** Retrieves a time series of the number of URL crawl errors per error category and platform. */
-  def query(request: AnonCategory): Request_[UrlCrawlErrorsCountsQueryResponse] = js.native
+  def query(request: Category): Request[UrlCrawlErrorsCountsQueryResponse] = js.native
 }
 
 object UrlcrawlerrorscountsResource {
   @scala.inline
-  def apply(query: AnonCategory => Request_[UrlCrawlErrorsCountsQueryResponse]): UrlcrawlerrorscountsResource = {
+  def apply(query: Category => Request[UrlCrawlErrorsCountsQueryResponse]): UrlcrawlerrorscountsResource = {
     val __obj = js.Dynamic.literal(query = js.Any.fromFunction1(query))
     __obj.asInstanceOf[UrlcrawlerrorscountsResource]
   }
@@ -25,7 +25,7 @@ object UrlcrawlerrorscountsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withQuery(value: AnonCategory => Request_[UrlCrawlErrorsCountsQueryResponse]): Self = {
+    def withQuery(value: Category => Request[UrlCrawlErrorsCountsQueryResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.Any.fromFunction1(value))
         ret

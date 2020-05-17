@@ -131,649 +131,240 @@ trait Resource extends js.Object
 
 object Resource {
   @scala.inline
-  def AppointmentResponse(appointment: Reference, participantStatus: code): Resource = {
-    val __obj = js.Dynamic.literal(appointment = appointment.asInstanceOf[js.Any], participantStatus = participantStatus.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def GuidanceResponse(module: Reference, status: code): Resource = {
-    val __obj = js.Dynamic.literal(module = module.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Condition(subject: Reference): Resource = {
-    val __obj = js.Dynamic.literal(subject = subject.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def MessageHeader(event: Coding, source: MessageHeaderSource, timestamp: instant): Resource = {
-    val __obj = js.Dynamic.literal(event = event.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def AuditEvent(agent: js.Array[AuditEventAgent], recorded: instant, source: AuditEventSource, `type`: Coding): Resource = {
-    val __obj = js.Dynamic.literal(agent = agent.asInstanceOf[js.Any], recorded = recorded.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def ImmunizationRecommendation(patient: Reference, recommendation: js.Array[ImmunizationRecommendationRecommendation]): Resource = {
-    val __obj = js.Dynamic.literal(patient = patient.asInstanceOf[js.Any], recommendation = recommendation.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Encounter(status: code): Resource = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Measure(status: code): Resource = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Patient(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Provenance(agent: js.Array[ProvenanceAgent], recorded: instant, target: js.Array[Reference]): Resource = {
-    val __obj = js.Dynamic.literal(agent = agent.asInstanceOf[js.Any], recorded = recorded.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Group(actual: Boolean, `type`: code): Resource = {
-    val __obj = js.Dynamic.literal(actual = actual.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def DiagnosticReport(code: CodeableConcept, status: code): Resource = {
-    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def DataElement(element: js.Array[ElementDefinition], status: code): Resource = {
-    val __obj = js.Dynamic.literal(element = element.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Endpoint(address: uri, connectionType: Coding, payloadType: js.Array[CodeableConcept], status: code): Resource = {
-    val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], connectionType = connectionType.asInstanceOf[js.Any], payloadType = payloadType.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Procedure(status: code, subject: Reference): Resource = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def MedicationStatement(status: code, subject: Reference, taken: code): Resource = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any], taken = taken.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Basic(code: CodeableConcept): Resource = {
-    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def VisionPrescription(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def ServiceDefinition(status: code): Resource = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def DeviceComponent(identifier: Identifier, `type`: CodeableConcept): Resource = {
-    val __obj = js.Dynamic.literal(identifier = identifier.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def CompartmentDefinition(code: code, name: String, search: Boolean, status: code, url: uri): Resource = {
-    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], search = search.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def RiskAssessment(status: code): Resource = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Schedule(actor: js.Array[Reference]): Resource = {
-    val __obj = js.Dynamic.literal(actor = actor.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def NamingSystem(date: dateTime, kind: code, name: String, status: code, uniqueId: js.Array[NamingSystemUniqueId]): Resource = {
-    val __obj = js.Dynamic.literal(date = date.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], uniqueId = uniqueId.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Immunization(
-    notGiven: Boolean,
-    patient: Reference,
-    primarySource: Boolean,
-    status: code,
-    vaccineCode: CodeableConcept
-  ): Resource = {
-    val __obj = js.Dynamic.literal(notGiven = notGiven.asInstanceOf[js.Any], patient = patient.asInstanceOf[js.Any], primarySource = primarySource.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], vaccineCode = vaccineCode.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Substance(code: CodeableConcept): Resource = {
-    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Medication(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Observation(code: CodeableConcept, status: code): Resource = {
-    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def ReferralRequest(intent: code, status: code, subject: Reference): Resource = {
-    val __obj = js.Dynamic.literal(intent = intent.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Linkage(item: js.Array[LinkageItem]): Resource = {
-    val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Device(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def DocumentManifest(content: js.Array[DocumentManifestContent], status: code): Resource = {
-    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def ResearchStudy(status: code): Resource = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def TestReport(result: code, status: code, testScript: Reference): Resource = {
-    val __obj = js.Dynamic.literal(result = result.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], testScript = testScript.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def NutritionOrder(dateTime: dateTime, patient: Reference): Resource = {
-    val __obj = js.Dynamic.literal(dateTime = dateTime.asInstanceOf[js.Any], patient = patient.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Parameters(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def ProcessRequest(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Contract(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def EpisodeOfCare(patient: Reference, status: code): Resource = {
-    val __obj = js.Dynamic.literal(patient = patient.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Organization(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def DetectedIssue(status: code): Resource = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def QuestionnaireResponse(status: code): Resource = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Practitioner(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def SupplyRequest(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def ActivityDefinition(status: code): Resource = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Slot(end: instant, schedule: Reference, start: instant, status: code): Resource = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], schedule = schedule.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def BodySite(patient: Reference): Resource = {
-    val __obj = js.Dynamic.literal(patient = patient.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def SearchParameter(
-    base: js.Array[code],
-    code: code,
-    description: markdown,
-    name: String,
-    status: code,
-    `type`: code,
-    url: uri
-  ): Resource = {
-    val __obj = js.Dynamic.literal(base = base.asInstanceOf[js.Any], code = code.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Appointment(participant: js.Array[AppointmentParticipant], status: code): Resource = {
-    val __obj = js.Dynamic.literal(participant = participant.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Questionnaire(status: code): Resource = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def DocumentReference(
-    content: js.Array[DocumentReferenceContent],
-    indexed: instant,
-    status: code,
-    `type`: CodeableConcept
-  ): Resource = {
-    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], indexed = indexed.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def CapabilityStatement(
-    acceptUnknown: code,
-    date: dateTime,
-    fhirVersion: id,
-    format: js.Array[code],
-    kind: code,
-    status: code
-  ): Resource = {
-    val __obj = js.Dynamic.literal(acceptUnknown = acceptUnknown.asInstanceOf[js.Any], date = date.asInstanceOf[js.Any], fhirVersion = fhirVersion.asInstanceOf[js.Any], format = format.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def MedicationAdministration(status: code, subject: Reference): Resource = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def ClinicalImpression(status: code, subject: Reference): Resource = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def DomainResource(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Composition(
-    author: js.Array[Reference],
-    date: dateTime,
-    status: code,
-    subject: Reference,
-    title: String,
-    `type`: CodeableConcept
-  ): Resource = {
-    val __obj = js.Dynamic.literal(author = author.asInstanceOf[js.Any], date = date.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def MeasureReport(measure: Reference, period: Period, status: code, `type`: code): Resource = {
-    val __obj = js.Dynamic.literal(measure = measure.asInstanceOf[js.Any], period = period.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def EligibilityRequest(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def ConceptMap(status: code): Resource = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def MessageDefinition(date: dateTime, event: Coding, status: code): Resource = {
-    val __obj = js.Dynamic.literal(date = date.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def ChargeItem(code: CodeableConcept, status: code, subject: Reference): Resource = {
-    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Communication(status: code): Resource = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def ImagingStudy(patient: Reference, uid: oid): Resource = {
-    val __obj = js.Dynamic.literal(patient = patient.asInstanceOf[js.Any], uid = uid.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Consent(patient: Reference, status: code): Resource = {
-    val __obj = js.Dynamic.literal(patient = patient.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def PractitionerRole(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Account(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def GraphDefinition(name: String, start: code, status: code): Resource = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def MedicationDispense(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Person(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def DeviceRequest(intent: CodeableConcept, subject: Reference): Resource = {
-    val __obj = js.Dynamic.literal(intent = intent.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def OperationOutcome(issue: js.Array[OperationOutcomeIssue]): Resource = {
-    val __obj = js.Dynamic.literal(issue = issue.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def CodeSystem(content: code, status: code): Resource = {
-    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def TestScript(name: String, status: code, url: uri): Resource = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Subscription(channel: SubscriptionChannel, criteria: String, reason: String, status: code): Resource = {
-    val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], criteria = criteria.asInstanceOf[js.Any], reason = reason.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def EnrollmentResponse(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def ClaimResponse(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def ImplementationGuide(name: String, status: code, url: uri): Resource = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Library(status: code, `type`: CodeableConcept): Resource = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def AdverseEvent(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def StructureMap(group: js.Array[StructureMapGroup], name: String, status: code, url: uri): Resource = {
-    val __obj = js.Dynamic.literal(group = group.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def EnrollmentRequest(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Goal(description: CodeableConcept, status: code): Resource = {
-    val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Sequence(coordinateSystem: integer): Resource = {
-    val __obj = js.Dynamic.literal(coordinateSystem = coordinateSystem.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Bundle(`type`: code): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def StructureDefinition(`abstract`: Boolean, kind: code, name: String, status: code, `type`: code, url: uri): Resource = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
-    __obj.updateDynamic("abstract")(`abstract`.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def CommunicationRequest(status: code): Resource = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Flag(code: CodeableConcept, status: code, subject: Reference): Resource = {
-    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Specimen(subject: Reference): Resource = {
-    val __obj = js.Dynamic.literal(subject = subject.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def SupplyDelivery(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def ProcessResponse(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Task(intent: code, status: code): Resource = {
-    val __obj = js.Dynamic.literal(intent = intent.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def PaymentReconciliation(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def ResearchSubject(individual: Reference, status: code, study: Reference): Resource = {
-    val __obj = js.Dynamic.literal(individual = individual.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], study = study.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Binary(content: base64Binary, contentType: code): Resource = {
-    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], contentType = contentType.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Claim(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def DeviceUseStatement(device: Reference, status: code, subject: Reference): Resource = {
-    val __obj = js.Dynamic.literal(device = device.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def PaymentNotice(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def RelatedPerson(patient: Reference): Resource = {
-    val __obj = js.Dynamic.literal(patient = patient.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def OperationDefinition(
-    code: code,
-    instance: Boolean,
-    kind: code,
-    name: String,
-    status: code,
-    system: Boolean,
-    `type`: Boolean
-  ): Resource = {
-    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], instance = instance.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], system = system.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def HealthcareService(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def ValueSet(status: code): Resource = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def RequestGroup(intent: code, status: code): Resource = {
-    val __obj = js.Dynamic.literal(intent = intent.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Media(content: Attachment, `type`: code): Resource = {
-    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def ExpansionProfile(status: code): Resource = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def CarePlan(intent: code, status: code, subject: Reference): Resource = {
-    val __obj = js.Dynamic.literal(intent = intent.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def List(mode: code, status: code): Resource = {
-    val __obj = js.Dynamic.literal(mode = mode.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def ExplanationOfBenefit(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def DeviceMetric(category: code, identifier: Identifier, `type`: CodeableConcept): Resource = {
-    val __obj = js.Dynamic.literal(category = category.asInstanceOf[js.Any], identifier = identifier.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def AllergyIntolerance(patient: Reference, verificationStatus: code): Resource = {
-    val __obj = js.Dynamic.literal(patient = patient.asInstanceOf[js.Any], verificationStatus = verificationStatus.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def MedicationRequest(intent: code, subject: Reference): Resource = {
-    val __obj = js.Dynamic.literal(intent = intent.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def ProcedureRequest(code: CodeableConcept, intent: code, status: code, subject: Reference): Resource = {
-    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], intent = intent.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def ImagingManifest(patient: Reference, study: js.Array[ImagingManifestStudy]): Resource = {
-    val __obj = js.Dynamic.literal(patient = patient.asInstanceOf[js.Any], study = study.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Coverage(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def Location(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def PlanDefinition(status: code): Resource = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def CareTeam(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def FamilyMemberHistory(patient: Reference, relationship: CodeableConcept, status: code): Resource = {
-    val __obj = js.Dynamic.literal(patient = patient.asInstanceOf[js.Any], relationship = relationship.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Resource]
-  }
-  @scala.inline
-  def EligibilityResponse(): Resource = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Resource]
-  }
+  implicit def apply(value: Account): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: ActivityDefinition): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: AdverseEvent): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: AllergyIntolerance): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Appointment): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: AppointmentResponse): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: AuditEvent): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Basic): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Binary): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: BodySite): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Bundle): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: CapabilityStatement): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: CarePlan): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: CareTeam): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: ChargeItem): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Claim): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: ClaimResponse): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: ClinicalImpression): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: CodeSystem): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Communication): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: CommunicationRequest): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: CompartmentDefinition): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Composition): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: ConceptMap): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Condition): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Consent): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Contract): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Coverage): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: DataElement): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: DetectedIssue): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Device): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: DeviceComponent): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: DeviceMetric): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: DeviceRequest): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: DeviceUseStatement): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: DiagnosticReport): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: DocumentManifest): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: DocumentReference): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: DomainResource): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: EligibilityRequest): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: EligibilityResponse): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Encounter): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Endpoint): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: EnrollmentRequest): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: EnrollmentResponse): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: EpisodeOfCare): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: ExpansionProfile): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: ExplanationOfBenefit): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: FamilyMemberHistory): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Flag): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Goal): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: GraphDefinition): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Group): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: GuidanceResponse): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: HealthcareService): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: ImagingManifest): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: ImagingStudy): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Immunization): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: ImmunizationRecommendation): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: ImplementationGuide): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Library): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Linkage): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: List): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Location): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Measure): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: MeasureReport): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Media): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Medication): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: MedicationAdministration): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: MedicationDispense): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: MedicationRequest): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: MedicationStatement): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: MessageDefinition): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: MessageHeader): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: NamingSystem): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: NutritionOrder): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Observation): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: OperationDefinition): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: OperationOutcome): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Organization): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Parameters): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Patient): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: PaymentNotice): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: PaymentReconciliation): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Person): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: PlanDefinition): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Practitioner): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: PractitionerRole): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Procedure): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: ProcedureRequest): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: ProcessRequest): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: ProcessResponse): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Provenance): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Questionnaire): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: QuestionnaireResponse): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: ReferralRequest): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: RelatedPerson): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: RequestGroup): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: ResearchStudy): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: ResearchSubject): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: RiskAssessment): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Schedule): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: SearchParameter): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Sequence): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: ServiceDefinition): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Slot): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Specimen): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: StructureDefinition): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: StructureMap): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Subscription): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Substance): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: SupplyDelivery): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: SupplyRequest): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: Task): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: TestReport): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: TestScript): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: ValueSet): Resource = value.asInstanceOf[Resource]
+  @scala.inline
+  implicit def apply(value: VisionPrescription): Resource = value.asInstanceOf[Resource]
 }
 

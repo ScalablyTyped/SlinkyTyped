@@ -1,7 +1,7 @@
 package typingsSlinky.amqp.mod
 
-import typingsSlinky.amqp.AnonApplicationName
-import typingsSlinky.amqp.AnonCaFile
+import typingsSlinky.amqp.anon.ApplicationName
+import typingsSlinky.amqp.anon.CaFile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ConnectionOptions extends js.Object {
   var authMechanism: js.UndefOr[String] = js.native
-  var clientProperties: js.UndefOr[AnonApplicationName] = js.native
+  var clientProperties: js.UndefOr[ApplicationName] = js.native
   var connectionTimeout: js.UndefOr[Double] = js.native
   var defaultExchangeName: js.UndefOr[String] = js.native
   var heartbeat: js.UndefOr[Double] = js.native
@@ -30,7 +30,7 @@ trait ConnectionOptions extends js.Object {
   var reconnectBackoffTime: js.UndefOr[Double] = js.native
   /** Default: 120000 */
   var reconnectExponentialLimit: js.UndefOr[Double] = js.native
-  var ssl: js.UndefOr[AnonCaFile] = js.native
+  var ssl: js.UndefOr[CaFile] = js.native
   var url: js.UndefOr[String] = js.native
   /** Default: node-amqp/package.json version */
   var version: js.UndefOr[String] = js.native
@@ -62,7 +62,7 @@ object ConnectionOptions {
         ret
     }
     @scala.inline
-    def withClientProperties(value: AnonApplicationName): Self = {
+    def withClientProperties(value: ApplicationName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("clientProperties")(value.asInstanceOf[js.Any])
         ret
@@ -242,7 +242,7 @@ object ConnectionOptions {
         ret
     }
     @scala.inline
-    def withSsl(value: AnonCaFile): Self = {
+    def withSsl(value: CaFile): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ssl")(value.asInstanceOf[js.Any])
         ret

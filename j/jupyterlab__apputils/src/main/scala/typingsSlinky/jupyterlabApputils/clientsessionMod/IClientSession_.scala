@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabApputils.clientsessionMod
 
-import typingsSlinky.jupyterlabApputils.PartialIModel
+import typingsSlinky.jupyterlabApputils.anon.PartialIModel
 import typingsSlinky.jupyterlabApputils.clientsessionMod.IClientSession.IKernelPreference
 import typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.`type`
 import typingsSlinky.jupyterlabApputils.jupyterlabApputilsStrings.name

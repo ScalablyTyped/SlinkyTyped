@@ -2,8 +2,8 @@ package typingsSlinky.grommet.selectMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.grommet.AnonLeft
-import typingsSlinky.grommet.AnonMultiple
+import typingsSlinky.grommet.anon.Left
+import typingsSlinky.grommet.anon.Multiple
 import typingsSlinky.grommet.dropMod.DropProps
 import typingsSlinky.grommet.grommetStrings.large
 import typingsSlinky.grommet.grommetStrings.medium
@@ -27,7 +27,7 @@ trait SelectProps extends js.Object {
   var closeOnChange: js.UndefOr[Boolean] = js.native
   var disabled: js.UndefOr[Boolean | (js.Array[Double | String | js.Object])] = js.native
   var disabledKey: js.UndefOr[String | (js.Function1[/* repeated */ js.Any, _])] = js.native
-  var dropAlign: js.UndefOr[AnonLeft] = js.native
+  var dropAlign: js.UndefOr[Left] = js.native
   var dropHeight: js.UndefOr[xsmall | small | medium | large | xlarge | String] = js.native
   var dropProps: js.UndefOr[DropProps] = js.native
   var dropTarget: js.UndefOr[js.Object] = js.native
@@ -38,7 +38,7 @@ trait SelectProps extends js.Object {
   var id: js.UndefOr[String] = js.native
   var labelKey: js.UndefOr[String | (js.Function1[/* repeated */ js.Any, _])] = js.native
   var margin: js.UndefOr[MarginType] = js.native
-  var messages: js.UndefOr[AnonMultiple] = js.native
+  var messages: js.UndefOr[Multiple] = js.native
   var multiple: js.UndefOr[Boolean] = js.native
   var name: js.UndefOr[String] = js.native
   var onChange: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit]] = js.native
@@ -156,7 +156,7 @@ object SelectProps {
         ret
     }
     @scala.inline
-    def withDropAlign(value: AnonLeft): Self = {
+    def withDropAlign(value: Left): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropAlign")(value.asInstanceOf[js.Any])
         ret
@@ -306,7 +306,7 @@ object SelectProps {
         ret
     }
     @scala.inline
-    def withMessages(value: AnonMultiple): Self = {
+    def withMessages(value: Multiple): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
         ret

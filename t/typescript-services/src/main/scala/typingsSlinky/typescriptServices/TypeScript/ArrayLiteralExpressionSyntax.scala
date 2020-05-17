@@ -4,17 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("TypeScript.ArrayLiteralExpressionSyntax")
 @js.native
-class ArrayLiteralExpressionSyntax protected ()
-  extends SyntaxNode
-     with IPrimaryExpressionSyntax {
-  def this(
-    openBracketToken: ISyntaxToken,
-    expressions: ISeparatedSyntaxList,
-    closeBracketToken: ISyntaxToken,
-    parsedInStrictMode: Boolean
-  ) = this()
+trait ArrayLiteralExpressionSyntax
+  extends IPrimaryExpressionSyntax
+     with SyntaxNode {
   var closeBracketToken: ISyntaxToken = js.native
   var expressions: ISeparatedSyntaxList = js.native
   var openBracketToken: ISyntaxToken = js.native
@@ -25,13 +18,5 @@ class ArrayLiteralExpressionSyntax protected ()
   def withExpression(expression: IExpressionSyntax): ArrayLiteralExpressionSyntax = js.native
   def withExpressions(expressions: ISeparatedSyntaxList): ArrayLiteralExpressionSyntax = js.native
   def withOpenBracketToken(openBracketToken: ISyntaxToken): ArrayLiteralExpressionSyntax = js.native
-}
-
-/* static members */
-@JSGlobal("TypeScript.ArrayLiteralExpressionSyntax")
-@js.native
-object ArrayLiteralExpressionSyntax extends js.Object {
-  def create(openBracketToken: ISyntaxToken, closeBracketToken: ISyntaxToken): ArrayLiteralExpressionSyntax = js.native
-  def create1(): ArrayLiteralExpressionSyntax = js.native
 }
 

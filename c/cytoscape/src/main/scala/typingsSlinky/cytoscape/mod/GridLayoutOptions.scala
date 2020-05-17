@@ -1,6 +1,6 @@
 package typingsSlinky.cytoscape.mod
 
-import typingsSlinky.cytoscape.AnonCol
+import typingsSlinky.cytoscape.anon.Col
 import typingsSlinky.cytoscape.cytoscapeStrings.grid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +23,7 @@ trait GridLayoutOptions extends ShapedLayoutOptions {
   // force num of rows in the grid
   var rows: js.UndefOr[Double] = js.native
   // returns { row, col } for element
-  def position(node: NodeSingular): AnonCol = js.native
+  def position(node: NodeSingular): Col = js.native
 }
 
 object GridLayoutOptions {
@@ -33,7 +33,7 @@ object GridLayoutOptions {
     fit: Boolean,
     name: grid,
     nodeDimensionsIncludeLabels: Boolean,
-    position: NodeSingular => AnonCol
+    position: NodeSingular => Col
   ): GridLayoutOptions = {
     val __obj = js.Dynamic.literal(condense = condense.asInstanceOf[js.Any], fit = fit.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nodeDimensionsIncludeLabels = nodeDimensionsIncludeLabels.asInstanceOf[js.Any], position = js.Any.fromFunction1(position))
     __obj.asInstanceOf[GridLayoutOptions]
@@ -57,7 +57,7 @@ object GridLayoutOptions {
         ret
     }
     @scala.inline
-    def withPosition(value: NodeSingular => AnonCol): Self = {
+    def withPosition(value: NodeSingular => Col): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("position")(js.Any.fromFunction1(value))
         ret

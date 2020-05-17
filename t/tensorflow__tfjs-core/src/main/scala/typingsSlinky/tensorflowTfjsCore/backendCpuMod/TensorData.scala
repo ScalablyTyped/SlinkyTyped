@@ -1,6 +1,6 @@
 package typingsSlinky.tensorflowTfjsCore.backendCpuMod
 
-import typingsSlinky.tensorflowTfjsCore.AnonImagReal
+import typingsSlinky.tensorflowTfjsCore.anon.ImagReal
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.BackendValues
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import scala.scalajs.js
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait TensorData[D /* <: DataType */] extends js.Object {
-  var complexTensors: js.UndefOr[AnonImagReal] = js.native
+  var complexTensors: js.UndefOr[ImagReal] = js.native
   var dtype: D = js.native
   var values: js.UndefOr[BackendValues] = js.native
 }
@@ -33,7 +33,7 @@ object TensorData {
         ret
     }
     @scala.inline
-    def withComplexTensors(value: AnonImagReal): Self[D] = {
+    def withComplexTensors(value: ImagReal): Self[D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("complexTensors")(value.asInstanceOf[js.Any])
         ret

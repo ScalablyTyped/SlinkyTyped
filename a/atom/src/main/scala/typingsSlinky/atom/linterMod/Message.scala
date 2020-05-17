@@ -1,7 +1,7 @@
 package typingsSlinky.atom.linterMod
 
-import typingsSlinky.atom.AnonFile
-import typingsSlinky.atom.AnonPosition
+import typingsSlinky.atom.anon.File
+import typingsSlinky.atom.anon.Position
 import typingsSlinky.atom.atomStrings.error
 import typingsSlinky.atom.atomStrings.info
 import typingsSlinky.atom.atomStrings.warning
@@ -23,9 +23,9 @@ trait Message extends js.Object {
   /** Optionally override the displayed linter name. Defaults to provider name. */
   var linterName: js.UndefOr[String] = js.native
   /** The location of the issue (aka where to highlight). */
-  var location: AnonFile = js.native
+  var location: File = js.native
   /** A reference to a different location in the editor. */
-  var reference: js.UndefOr[AnonPosition] = js.native
+  var reference: js.UndefOr[Position] = js.native
   /** The severity level for the message. */
   var severity: error | warning | info = js.native
   /** Possible solutions (which the user can invoke at will). */
@@ -36,7 +36,7 @@ trait Message extends js.Object {
 
 object Message {
   @scala.inline
-  def apply(excerpt: String, location: AnonFile, severity: error | warning | info): Message = {
+  def apply(excerpt: String, location: File, severity: error | warning | info): Message = {
     val __obj = js.Dynamic.literal(excerpt = excerpt.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], severity = severity.asInstanceOf[js.Any])
     __obj.asInstanceOf[Message]
   }
@@ -53,7 +53,7 @@ object Message {
         ret
     }
     @scala.inline
-    def withLocation(value: AnonFile): Self = {
+    def withLocation(value: File): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
         ret
@@ -107,7 +107,7 @@ object Message {
         ret
     }
     @scala.inline
-    def withReference(value: AnonPosition): Self = {
+    def withReference(value: Position): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("reference")(value.asInstanceOf[js.Any])
         ret

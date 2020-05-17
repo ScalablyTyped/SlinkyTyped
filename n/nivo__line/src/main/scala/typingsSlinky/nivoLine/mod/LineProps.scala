@@ -311,7 +311,7 @@ object LineProps {
         ret
     }
     @scala.inline
-    def withEnableSlices(value: x | y | `false`): Self = {
+    def withEnableSlices(value: typingsSlinky.nivoLine.nivoLineStrings.x | y | `false`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("enableSlices")(value.asInstanceOf[js.Any])
         ret

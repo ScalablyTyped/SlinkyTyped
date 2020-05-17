@@ -2,7 +2,7 @@ package typingsSlinky.gestalt.mod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.gestalt.AnonStyle
+import typingsSlinky.gestalt.anon.Style
 import typingsSlinky.gestalt.gestaltNumbers.`0.1`
 import typingsSlinky.gestalt.gestaltNumbers.`0.2`
 import typingsSlinky.gestalt.gestaltNumbers.`0.3`
@@ -89,7 +89,7 @@ trait BoxProps extends js.Object {
     blue | darkGray | darkWash | eggplant | gray | green | lightGray | lightWash | maroon | midnight | navy | olive | orange | orchid | pine | purple | red | transparent | transparentDarkGray | watermelon | white
   ] = js.native
   var column: js.UndefOr[UnsignedUpTo12] = js.native
-  var dangerouslySetInlineStyle: js.UndefOr[AnonStyle] = js.native
+  var dangerouslySetInlineStyle: js.UndefOr[Style] = js.native
   var direction: js.UndefOr[row | column] = js.native
   var display: js.UndefOr[none | flex | block | inlineBlock | visuallyHidden] = js.native
   var fit: js.UndefOr[Boolean] = js.native
@@ -279,7 +279,7 @@ object BoxProps {
         ret
     }
     @scala.inline
-    def withDangerouslySetInlineStyle(value: AnonStyle): Self = {
+    def withDangerouslySetInlineStyle(value: Style): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetInlineStyle")(value.asInstanceOf[js.Any])
         ret

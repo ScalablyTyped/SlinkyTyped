@@ -1,5 +1,7 @@
 package typingsSlinky.octokitRequest
 
+import typingsSlinky.octokitRequest.anon.Data
+import typingsSlinky.octokitRequest.anon.Redirect
 import typingsSlinky.std.ReturnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +13,7 @@ object fetchWrapperMod extends js.Object {
   def default(
     requestOptions: (ReturnType[
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify EndpointInterface */ _
-    ]) with AnonRedirect
-  ): js.Promise[AnonData] = js.native
+    ]) with Redirect
+  ): js.Promise[Data] = js.native
 }
 

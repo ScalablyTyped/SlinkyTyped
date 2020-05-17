@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Storage.SetVersionDeferral")
 @js.native
-class SetVersionDeferral () extends ISetVersionDeferral
+trait SetVersionDeferral extends ISetVersionDeferral
+
+object SetVersionDeferral {
+  @scala.inline
+  def apply(complete: () => Unit): SetVersionDeferral = {
+    val __obj = js.Dynamic.literal(complete = js.Any.fromFunction0(complete))
+    __obj.asInstanceOf[SetVersionDeferral]
+  }
+}
 

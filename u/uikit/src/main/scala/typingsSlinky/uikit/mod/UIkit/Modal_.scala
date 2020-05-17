@@ -1,6 +1,6 @@
 package typingsSlinky.uikit.mod.UIkit
 
-import typingsSlinky.uikit.AnonCancel
+import typingsSlinky.uikit.anon.Cancel
 import typingsSlinky.uikit.mod.UIkitElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Modal_ extends js.Object {
-  var labels: AnonCancel = js.native
+  var labels: Cancel = js.native
   def apply(element: UIkitElement): UIkitModalElement = js.native
   def apply(element: UIkitElement, options: UIkitModalOptions): UIkitModalElement = js.native
   def alert(message: String): js.Promise[Unit] = js.native

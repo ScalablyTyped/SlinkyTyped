@@ -1,12 +1,12 @@
 package typingsSlinky.antd.components
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Window
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.affixMod.AffixProps
 import typingsSlinky.antd.affixMod.default
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +33,7 @@ object Affix {
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
-    def target(value: () => Window_ | HTMLElement | Null): this.type = set("target", js.Any.fromFunction0(value))
+    def target(value: () => Window | HTMLElement | Null): this.type = set("target", js.Any.fromFunction0(value))
   }
   
   def withProps(p: AffixProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

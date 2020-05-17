@@ -1,6 +1,7 @@
 package typingsSlinky.appBuilderLib
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.appBuilderLib.anon.Packages
 import typingsSlinky.appBuilderLib.archiveMod.ArchiveOptions
 import typingsSlinky.appBuilderLib.coreMod.Target
 import typingsSlinky.appBuilderLib.platformPackagerMod.PlatformPackager
@@ -18,6 +19,6 @@ object differentialUpdateInfoBuilderMod extends js.Object {
   def configureDifferentialAwareArchiveOptions(archiveOptions: ArchiveOptions): ArchiveOptions = js.native
   def createBlockmap(file: String, target: Target, packager: PlatformPackager[_]): js.Promise[BlockMapDataHolder] = js.native
   def createBlockmap(file: String, target: Target, packager: PlatformPackager[_], safeArtifactName: String): js.Promise[BlockMapDataHolder] = js.native
-  def createNsisWebDifferentialUpdateInfo(artifactPath: String, packageFiles: StringDictionary[PackageFileInfo]): AnonPackages | Null = js.native
+  def createNsisWebDifferentialUpdateInfo(artifactPath: String, packageFiles: StringDictionary[PackageFileInfo]): Packages | Null = js.native
 }
 

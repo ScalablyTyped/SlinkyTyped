@@ -1,6 +1,6 @@
 package typingsSlinky.passportAzureAd.oidcStrategyMod
 
-import typingsSlinky.passportAzureAd.AnonFamilyName
+import typingsSlinky.passportAzureAd.anon.FamilyName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait IProfile extends js.Object {
   var _raw: js.UndefOr[String] = js.native
   var displayName: js.UndefOr[String] = js.native
   var emails: js.UndefOr[js.Any] = js.native
-  var name: js.UndefOr[AnonFamilyName] = js.native
+  var name: js.UndefOr[FamilyName] = js.native
   var oid: js.UndefOr[String] = js.native
   var sub: js.UndefOr[String] = js.native
   var upn: js.UndefOr[String] = js.native
@@ -78,7 +78,7 @@ object IProfile {
         ret
     }
     @scala.inline
-    def withName(value: AnonFamilyName): Self = {
+    def withName(value: FamilyName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
         ret

@@ -2,7 +2,7 @@ package typingsSlinky.reactNative.mod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.reactNative.keyinPermissionPermission
+import typingsSlinky.reactNative.anon.keyinPermissionPermission
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

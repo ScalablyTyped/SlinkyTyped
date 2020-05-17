@@ -2,7 +2,7 @@ package typingsSlinky.angularFileUpload.mod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.angularFileUpload.PartialFileUploaderOption
+import typingsSlinky.angularFileUpload.anon.PartialFileUploaderOption
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

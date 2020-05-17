@@ -1,6 +1,6 @@
 package typingsSlinky.gulpPugI18n.mod
 
-import typingsSlinky.gulpPugI18n.AnonDefault
+import typingsSlinky.gulpPugI18n.anon.Default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait Options
   extends typingsSlinky.pug.mod.Options {
   var data: js.UndefOr[js.Any] = js.native
-  var i18n: AnonDefault = js.native
+  var i18n: Default = js.native
 }
 
 object Options {
   @scala.inline
-  def apply(i18n: AnonDefault): Options = {
+  def apply(i18n: Default): Options = {
     val __obj = js.Dynamic.literal(i18n = i18n.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
@@ -25,7 +25,7 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withI18n(value: AnonDefault): Self = {
+    def withI18n(value: Default): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("i18n")(value.asInstanceOf[js.Any])
         ret

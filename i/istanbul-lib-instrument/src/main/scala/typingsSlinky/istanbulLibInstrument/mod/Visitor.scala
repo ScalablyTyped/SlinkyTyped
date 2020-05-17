@@ -1,6 +1,6 @@
 package typingsSlinky.istanbulLibInstrument.mod
 
-import typingsSlinky.istanbulLibInstrument.AnonFileCoverage
+import typingsSlinky.istanbulLibInstrument.anon.FileCoverage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Visitor extends js.Object {
   def enter(path: String): Unit = js.native
-  def exit(path: String): AnonFileCoverage = js.native
+  def exit(path: String): FileCoverage = js.native
 }
 
 object Visitor {
   @scala.inline
-  def apply(enter: String => Unit, exit: String => AnonFileCoverage): Visitor = {
+  def apply(enter: String => Unit, exit: String => FileCoverage): Visitor = {
     val __obj = js.Dynamic.literal(enter = js.Any.fromFunction1(enter), exit = js.Any.fromFunction1(exit))
     __obj.asInstanceOf[Visitor]
   }
@@ -30,7 +30,7 @@ object Visitor {
         ret
     }
     @scala.inline
-    def withExit(value: String => AnonFileCoverage): Self = {
+    def withExit(value: String => FileCoverage): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("exit")(js.Any.fromFunction1(value))
         ret

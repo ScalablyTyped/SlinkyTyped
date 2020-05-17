@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Microsoft Disk Quota */
-@JSGlobal("DiskQuotaTypeLibrary.DiskQuotaControl")
 @js.native
-class DiskQuotaControl protected () extends js.Object {
+trait DiskQuotaControl extends js.Object {
   /** Default quota limit applied to new volume users (byte value) */
   var DefaultQuotaLimit: Double = js.native
   /** Default quota limit applied to new volume users (text string) */
@@ -46,5 +45,156 @@ class DiskQuotaControl protected () extends js.Object {
   def ShutdownNameResolution(): Unit = js.native
   /** Translates a user logon name to a security ID */
   def TranslateLogonNameToSID(LogonName: String): String = js.native
+}
+
+object DiskQuotaControl {
+  @scala.inline
+  def apply(
+    AddUser: String => DIDiskQuotaUser,
+    DefaultQuotaLimit: Double,
+    DefaultQuotaLimitText: String,
+    DefaultQuotaThreshold: Double,
+    DefaultQuotaThresholdText: String,
+    DeleteUser: DIDiskQuotaUser => Unit,
+    DiskQuotaTypeLibraryDotDiskQuotaControl_typekey: DiskQuotaControl,
+    FindUser: String => DIDiskQuotaUser,
+    GiveUserNameResolutionPriority: DIDiskQuotaUser => Unit,
+    Initialize: (String, Boolean) => Unit,
+    InvalidateSidNameCache: () => Unit,
+    LogQuotaLimit: Boolean,
+    LogQuotaThreshold: Boolean,
+    QuotaFileIncomplete: Boolean,
+    QuotaFileRebuilding: Boolean,
+    QuotaState: QuotaStateConstants,
+    ShutdownNameResolution: () => Unit,
+    TranslateLogonNameToSID: String => String,
+    UserNameResolution: UserNameResolutionConstants
+  ): DiskQuotaControl = {
+    val __obj = js.Dynamic.literal(AddUser = js.Any.fromFunction1(AddUser), DefaultQuotaLimit = DefaultQuotaLimit.asInstanceOf[js.Any], DefaultQuotaLimitText = DefaultQuotaLimitText.asInstanceOf[js.Any], DefaultQuotaThreshold = DefaultQuotaThreshold.asInstanceOf[js.Any], DefaultQuotaThresholdText = DefaultQuotaThresholdText.asInstanceOf[js.Any], DeleteUser = js.Any.fromFunction1(DeleteUser), FindUser = js.Any.fromFunction1(FindUser), GiveUserNameResolutionPriority = js.Any.fromFunction1(GiveUserNameResolutionPriority), Initialize = js.Any.fromFunction2(Initialize), InvalidateSidNameCache = js.Any.fromFunction0(InvalidateSidNameCache), LogQuotaLimit = LogQuotaLimit.asInstanceOf[js.Any], LogQuotaThreshold = LogQuotaThreshold.asInstanceOf[js.Any], QuotaFileIncomplete = QuotaFileIncomplete.asInstanceOf[js.Any], QuotaFileRebuilding = QuotaFileRebuilding.asInstanceOf[js.Any], QuotaState = QuotaState.asInstanceOf[js.Any], ShutdownNameResolution = js.Any.fromFunction0(ShutdownNameResolution), TranslateLogonNameToSID = js.Any.fromFunction1(TranslateLogonNameToSID), UserNameResolution = UserNameResolution.asInstanceOf[js.Any])
+    __obj.updateDynamic("DiskQuotaTypeLibrary.DiskQuotaControl_typekey")(DiskQuotaTypeLibraryDotDiskQuotaControl_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DiskQuotaControl]
+  }
+  @scala.inline
+  implicit class DiskQuotaControlOps[Self <: DiskQuotaControl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddUser(value: String => DIDiskQuotaUser): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddUser")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDefaultQuotaLimit(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultQuotaLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultQuotaLimitText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultQuotaLimitText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultQuotaThreshold(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultQuotaThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultQuotaThresholdText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DefaultQuotaThresholdText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeleteUser(value: DIDiskQuotaUser => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DeleteUser")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDiskQuotaTypeLibraryDotDiskQuotaControl_typekey(value: DiskQuotaControl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DiskQuotaTypeLibrary.DiskQuotaControl_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFindUser(value: String => DIDiskQuotaUser): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FindUser")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGiveUserNameResolutionPriority(value: DIDiskQuotaUser => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GiveUserNameResolutionPriority")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInitialize(value: (String, Boolean) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Initialize")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withInvalidateSidNameCache(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InvalidateSidNameCache")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withLogQuotaLimit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogQuotaLimit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLogQuotaThreshold(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LogQuotaThreshold")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQuotaFileIncomplete(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QuotaFileIncomplete")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQuotaFileRebuilding(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QuotaFileRebuilding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQuotaState(value: QuotaStateConstants): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("QuotaState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShutdownNameResolution(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShutdownNameResolution")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withTranslateLogonNameToSID(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TranslateLogonNameToSID")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUserNameResolution(value: UserNameResolutionConstants): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserNameResolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

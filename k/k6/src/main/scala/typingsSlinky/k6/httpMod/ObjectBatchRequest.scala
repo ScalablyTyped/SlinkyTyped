@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ObjectBatchRequest extends js.Object {
+trait ObjectBatchRequest extends BatchRequest {
   /** Request body. */
   var body: js.UndefOr[RequestBody | Null] = js.native
   /** Request method. */

@@ -12,13 +12,19 @@ sealed trait ActionType extends js.Object
 @js.native
 object ActionType extends js.Object {
   @js.native
-  sealed trait Fulfilled extends ActionType
+  sealed trait Fulfilled
+    extends ActionType
+       with FulfilledActionType
   
   @js.native
-  sealed trait Pending extends ActionType
+  sealed trait Pending
+    extends ActionType
+       with PendingActionType
   
   @js.native
-  sealed trait Rejected extends ActionType
+  sealed trait Rejected
+    extends ActionType
+       with RejectedActionType
   
   @JSBracketAccess
   def apply(value: String): js.UndefOr[ActionType with String] = js.native

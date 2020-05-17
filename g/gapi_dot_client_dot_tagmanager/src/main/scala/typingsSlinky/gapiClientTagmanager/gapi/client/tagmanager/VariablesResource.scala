@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientTagmanager.gapi.client.tagmanager
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientTagmanager.AnonAlt
-import typingsSlinky.gapiClientTagmanager.AnonFields
-import typingsSlinky.gapiClientTagmanager.AnonFingerprint
-import typingsSlinky.gapiClientTagmanager.AnonKey
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientTagmanager.anon.Alt
+import typingsSlinky.gapiClientTagmanager.anon.Fields
+import typingsSlinky.gapiClientTagmanager.anon.Fingerprint
+import typingsSlinky.gapiClientTagmanager.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,28 +12,28 @@ import scala.scalajs.js.annotation._
 @js.native
 trait VariablesResource extends js.Object {
   /** Creates a GTM Variable. */
-  def create(request: AnonAlt): Request_[Variable] = js.native
+  def create(request: Alt): Request[Variable] = js.native
   /** Deletes a GTM Variable. */
-  def delete(request: AnonFields): Request_[Unit] = js.native
+  def delete(request: Fields): Request[Unit] = js.native
   /** Gets a GTM Variable. */
-  def get(request: AnonFields): Request_[Variable] = js.native
+  def get(request: Fields): Request[Variable] = js.native
   /** Lists all GTM Variables of a Container. */
-  def list(request: AnonKey): Request_[ListVariablesResponse] = js.native
+  def list(request: Key): Request[ListVariablesResponse] = js.native
   /** Reverts changes to a GTM Variable in a GTM Workspace. */
-  def revert(request: AnonFingerprint): Request_[RevertVariableResponse] = js.native
+  def revert(request: Fingerprint): Request[RevertVariableResponse] = js.native
   /** Updates a GTM Variable. */
-  def update(request: AnonFingerprint): Request_[Variable] = js.native
+  def update(request: Fingerprint): Request[Variable] = js.native
 }
 
 object VariablesResource {
   @scala.inline
   def apply(
-    create: AnonAlt => Request_[Variable],
-    delete: AnonFields => Request_[Unit],
-    get: AnonFields => Request_[Variable],
-    list: AnonKey => Request_[ListVariablesResponse],
-    revert: AnonFingerprint => Request_[RevertVariableResponse],
-    update: AnonFingerprint => Request_[Variable]
+    create: Alt => Request[Variable],
+    delete: Fields => Request[Unit],
+    get: Fields => Request[Variable],
+    list: Key => Request[ListVariablesResponse],
+    revert: Fingerprint => Request[RevertVariableResponse],
+    update: Fingerprint => Request[Variable]
   ): VariablesResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), revert = js.Any.fromFunction1(revert), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[VariablesResource]
@@ -45,37 +45,37 @@ object VariablesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: AnonAlt => Request_[Variable]): Self = {
+    def withCreate(value: Alt => Request[Variable]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonFields => Request_[Unit]): Self = {
+    def withDelete(value: Fields => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonFields => Request_[Variable]): Self = {
+    def withGet(value: Fields => Request[Variable]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonKey => Request_[ListVariablesResponse]): Self = {
+    def withList(value: Key => Request[ListVariablesResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withRevert(value: AnonFingerprint => Request_[RevertVariableResponse]): Self = {
+    def withRevert(value: Fingerprint => Request[RevertVariableResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("revert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonFingerprint => Request_[Variable]): Self = {
+    def withUpdate(value: Fingerprint => Request[Variable]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Defines a field in the document.
   */
-@JSGlobal("Field")
 @js.native
-class Field () extends js.Object {
+trait Field extends js.Object {
   /**
     * Gets the text buffer interval occupied by the field code element.
     */
@@ -54,5 +53,99 @@ class Field () extends js.Object {
     * Gets the field's start position in a document.
     */
   val start: Double = js.native
+}
+
+object Field {
+  @scala.inline
+  def apply(
+    codeInterval: Interval,
+    hyperlinkAnchor: String,
+    hyperlinkTip: String,
+    hyperlinkUri: String,
+    index: Double,
+    interval: Interval,
+    isHyperlink: Boolean,
+    length: Double,
+    resultInterval: Interval,
+    showCode: Boolean,
+    start: Double
+  ): Field = {
+    val __obj = js.Dynamic.literal(codeInterval = codeInterval.asInstanceOf[js.Any], hyperlinkAnchor = hyperlinkAnchor.asInstanceOf[js.Any], hyperlinkTip = hyperlinkTip.asInstanceOf[js.Any], hyperlinkUri = hyperlinkUri.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], interval = interval.asInstanceOf[js.Any], isHyperlink = isHyperlink.asInstanceOf[js.Any], length = length.asInstanceOf[js.Any], resultInterval = resultInterval.asInstanceOf[js.Any], showCode = showCode.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Field]
+  }
+  @scala.inline
+  implicit class FieldOps[Self <: Field] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCodeInterval(value: Interval): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("codeInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHyperlinkAnchor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hyperlinkAnchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHyperlinkTip(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hyperlinkTip")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHyperlinkUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hyperlinkUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInterval(value: Interval): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsHyperlink(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isHyperlink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResultInterval(value: Interval): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resultInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShowCode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStart(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

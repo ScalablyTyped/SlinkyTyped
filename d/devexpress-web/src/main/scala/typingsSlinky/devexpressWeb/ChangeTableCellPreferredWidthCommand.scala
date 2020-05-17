@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * A command to change the preferred cell width of the selected table rows.
   */
-@JSGlobal("ChangeTableCellPreferredWidthCommand")
 @js.native
-class ChangeTableCellPreferredWidthCommand () extends CommandBase {
+trait ChangeTableCellPreferredWidthCommand extends CommandBase {
   /**
     * Executes the ChangeTableCellPreferredWidthCommand command with the specified parameter. true if the command has been successfully executed; false if the command execution has failed.
     * @param preferredWidth A TableWidthUnit object specifying preferred width of the selected table rows.
@@ -19,5 +18,33 @@ class ChangeTableCellPreferredWidthCommand () extends CommandBase {
     * Gets information about the command's state.
     */
   def getState(): CommandState[TableWidthUnit] = js.native
+}
+
+object ChangeTableCellPreferredWidthCommand {
+  @scala.inline
+  def apply(execute: TableWidthUnit => Boolean, getState: () => CommandState[TableWidthUnit]): ChangeTableCellPreferredWidthCommand = {
+    val __obj = js.Dynamic.literal(execute = js.Any.fromFunction1(execute), getState = js.Any.fromFunction0(getState))
+    __obj.asInstanceOf[ChangeTableCellPreferredWidthCommand]
+  }
+  @scala.inline
+  implicit class ChangeTableCellPreferredWidthCommandOps[Self <: ChangeTableCellPreferredWidthCommand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExecute(value: TableWidthUnit => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetState(value: () => CommandState[TableWidthUnit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getState")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

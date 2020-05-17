@@ -1,6 +1,6 @@
 package typingsSlinky.hapiJoi.mod
 
-import typingsSlinky.hapiJoi.AnonGlobal
+import typingsSlinky.hapiJoi.anon.Global
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,7 +38,7 @@ trait ReferenceOptions extends HierarchySeparatorOptions {
   /**
     * overrides default prefix characters.
     */
-  var prefix: js.UndefOr[AnonGlobal] = js.native
+  var prefix: js.UndefOr[Global] = js.native
 }
 
 object ReferenceOptions {
@@ -114,7 +114,7 @@ object ReferenceOptions {
         ret
     }
     @scala.inline
-    def withPrefix(value: AnonGlobal): Self = {
+    def withPrefix(value: Global): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
         ret

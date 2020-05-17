@@ -1,8 +1,8 @@
 package typingsSlinky.antDesignReactNative.defaultTabBarMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.antDesignReactNative.AnonActiveTab
-import typingsSlinky.antDesignReactNative.AnonTab
+import typingsSlinky.antDesignReactNative.anon.ActiveTab
+import typingsSlinky.antDesignReactNative.anon.Tab
 import typingsSlinky.antDesignReactNative.libStyleMod.Theme
 import typingsSlinky.antDesignReactNative.tabsPropsTypeMod.TabData
 import typingsSlinky.react.mod.Component
@@ -28,7 +28,7 @@ class DefaultTabBar protected ()
   def onContainerLayout(e: LayoutChangeEvent): Unit = js.native
   def onPress(index: Double): Unit = js.native
   def onTabContainerLayout(e: LayoutChangeEvent): Unit = js.native
-  def renderTab(tab: TabData, index: Double, width: Double, onLayoutHandler: js.Any, styles: AnonTab, theme: Theme): ReactElement = js.native
+  def renderTab(tab: TabData, index: Double, width: Double, onLayoutHandler: js.Any, styles: Tab, theme: Theme): ReactElement = js.native
   def updateTabPanel(position: Double, pageOffset: Double): Unit = js.native
   def updateTabUnderline(position: Double, pageOffset: Double, tabCount: Double): Unit = js.native
   def updateView(offset: js.Any): Unit = js.native
@@ -38,6 +38,6 @@ class DefaultTabBar protected ()
 @JSImport("@ant-design/react-native/lib/tabs/DefaultTabBar", "DefaultTabBar")
 @js.native
 object DefaultTabBar extends js.Object {
-  var defaultProps: AnonActiveTab = js.native
+  var defaultProps: ActiveTab = js.native
 }
 

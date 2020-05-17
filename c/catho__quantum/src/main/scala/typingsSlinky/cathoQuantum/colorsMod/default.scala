@@ -1,6 +1,6 @@
 package typingsSlinky.cathoQuantum.colorsMod
 
-import typingsSlinky.cathoQuantum.ColorsTones0string1000str
+import typingsSlinky.cathoQuantum.anon.ColorsTones0string1000str
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,7 @@
 package typingsSlinky.blueprintjsCore.toasterMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.blueprintjsCore.AnonToasts
+import typingsSlinky.blueprintjsCore.anon.Toasts
 import typingsSlinky.blueprintjsCore.commonMod.AbstractPureComponent2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,7 +20,7 @@ class Toaster ()
   var isNewToastKey: js.Any = js.native
   var renderToast: js.Any = js.native
   @JSName("state")
-  var state_Toaster: AnonToasts = js.native
+  var state_Toaster: Toasts = js.native
   var toastId: js.Any = js.native
   def dismiss(key: String, timeoutExpired: Boolean): Unit = js.native
 }

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.multipoint
 import typingsSlinky.arcgisJsApi.esri.geometry.Geometry
 import scala.scalajs.js
@@ -65,8 +64,4 @@ trait Multipoint
     */
   def setPoint(index: Double, point: Point): Multipoint = js.native
 }
-
-@JSGlobal("__esri.Multipoint")
-@js.native
-object Multipoint extends TopLevel[MultipointConstructor]
 

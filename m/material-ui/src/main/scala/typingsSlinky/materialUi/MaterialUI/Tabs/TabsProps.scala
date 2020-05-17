@@ -1,10 +1,10 @@
 package typingsSlinky.materialUi.MaterialUI.Tabs
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait TabsProps extends js.Object {
   var onChange: js.UndefOr[
     js.Function3[
       /* value */ js.Any, 
-      SyntheticEvent[EventTarget with js.Object, Event_], 
+      SyntheticEvent[EventTarget with js.Object, Event], 
       /* tab */ Tab, 
       Unit
     ]
@@ -105,7 +105,7 @@ object TabsProps {
     }
     @scala.inline
     def withOnChange(
-      value: (/* value */ js.Any, SyntheticEvent[EventTarget with js.Object, Event_], /* tab */ Tab) => Unit
+      value: (/* value */ js.Any, SyntheticEvent[EventTarget with js.Object, Event], /* tab */ Tab) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction3(value))

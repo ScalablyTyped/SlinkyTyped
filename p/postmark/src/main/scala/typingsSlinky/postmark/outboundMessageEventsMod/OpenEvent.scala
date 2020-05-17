@@ -1,6 +1,6 @@
 package typingsSlinky.postmark.outboundMessageEventsMod
 
-import typingsSlinky.postmark.AnonSummary
+import typingsSlinky.postmark.anon.Summary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait OpenEvent extends MessageEvent {
   @JSName("Details")
-  var Details_OpenEvent: AnonSummary = js.native
+  var Details_OpenEvent: Summary = js.native
 }
 
 object OpenEvent {
   @scala.inline
-  def apply(Details: AnonSummary, ReceivedAt: String, Recipient: String, Type: String): OpenEvent = {
+  def apply(Details: Summary, ReceivedAt: String, Recipient: String, Type: String): OpenEvent = {
     val __obj = js.Dynamic.literal(Details = Details.asInstanceOf[js.Any], ReceivedAt = ReceivedAt.asInstanceOf[js.Any], Recipient = Recipient.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenEvent]
   }
@@ -24,7 +24,7 @@ object OpenEvent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDetails(value: AnonSummary): Self = {
+    def withDetails(value: Summary): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Details")(value.asInstanceOf[js.Any])
         ret

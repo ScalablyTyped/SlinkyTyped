@@ -1,13 +1,12 @@
 package typingsSlinky.kendoUi.kendo.dataviz.geometry
 
-import typingsSlinky.kendoUi.kendo.Observable_
+import typingsSlinky.kendoUi.kendo.Observable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.dataviz.geometry.Transformation")
 @js.native
-class Transformation () extends Observable_ {
+trait Transformation extends Observable {
   var options: TransformationOptions = js.native
   def equals(other: typingsSlinky.kendoUi.kendo.geometry.Transformation): Boolean = js.native
   def matrix(): typingsSlinky.kendoUi.kendo.geometry.Matrix = js.native

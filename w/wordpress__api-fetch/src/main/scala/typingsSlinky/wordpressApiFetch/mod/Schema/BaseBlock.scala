@@ -1,17 +1,19 @@
 package typingsSlinky.wordpressApiFetch.mod.Schema
 
 import typingsSlinky.std.Record
-import typingsSlinky.wordpressApiFetch.AnonBlockversion
-import typingsSlinky.wordpressApiFetch.AnonDictk
-import typingsSlinky.wordpressApiFetch.AnonProtectedRaw
-import typingsSlinky.wordpressApiFetch.AnonRawString
+import typingsSlinky.wordpressApiFetch.anon.Blockversion
+import typingsSlinky.wordpressApiFetch.anon.Dictk
+import typingsSlinky.wordpressApiFetch.anon.ProtectedRaw
+import typingsSlinky.wordpressApiFetch.anon.RawString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait BaseBlock[T /* <: Context */] extends BaseResponse {
-  var content: AnonProtectedRaw with (js.Object | AnonBlockversion) = js.native
+trait BaseBlock[T /* <: Context */]
+  extends BaseResponse
+     with Block[T] {
+  var content: ProtectedRaw with (js.Object | Blockversion) = js.native
   var date: String = js.native
   var date_gmt: String = js.native
   var guid: Contextual[T, js.Object, js.Object] = js.native
@@ -23,15 +25,15 @@ trait BaseBlock[T /* <: Context */] extends BaseResponse {
   var slug: String = js.native
   var status: PostStatus = js.native
   var template: String = js.native
-  var title: AnonRawString | js.Array[js.Any] = js.native
+  var title: RawString | js.Array[js.Any] = js.native
   var `type`: String = js.native
 }
 
 object BaseBlock {
   @scala.inline
   def apply[T](
-    _links: Record[String, js.Array[AnonDictk]],
-    content: AnonProtectedRaw with (js.Object | AnonBlockversion),
+    _links: Record[String, js.Array[Dictk]],
+    content: ProtectedRaw with (js.Object | Blockversion),
     date: String,
     date_gmt: String,
     guid: Contextual[T, js.Object, js.Object],
@@ -43,7 +45,7 @@ object BaseBlock {
     slug: String,
     status: PostStatus,
     template: String,
-    title: AnonRawString | js.Array[js.Any],
+    title: RawString | js.Array[js.Any],
     `type`: String
   ): BaseBlock[T] = {
     val __obj = js.Dynamic.literal(_links = _links.asInstanceOf[js.Any], content = content.asInstanceOf[js.Any], date = date.asInstanceOf[js.Any], date_gmt = date_gmt.asInstanceOf[js.Any], guid = guid.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], link = link.asInstanceOf[js.Any], modified = modified.asInstanceOf[js.Any], modified_gmt = modified_gmt.asInstanceOf[js.Any], password = password.asInstanceOf[js.Any], slug = slug.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
@@ -57,7 +59,7 @@ object BaseBlock {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withContent(value: AnonProtectedRaw with (js.Object | AnonBlockversion)): Self[T] = {
+    def withContent(value: ProtectedRaw with (js.Object | Blockversion)): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
         ret
@@ -129,7 +131,7 @@ object BaseBlock {
         ret
     }
     @scala.inline
-    def withTitle(value: AnonRawString | js.Array[js.Any]): Self[T] = {
+    def withTitle(value: RawString | js.Array[js.Any]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
         ret

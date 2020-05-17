@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`picture-marker`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,10 +9,10 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.arcgisJsApi.esri.Symbol2D3D because Already inherited
 - typingsSlinky.arcgisJsApi.esri.symbols.Symbol2D3D because Already inherited */ @js.native
 trait PictureMarkerSymbol
-  extends MarkerSymbol
+  extends Symbol2D
+     with MarkerSymbol
      with typingsSlinky.arcgisJsApi.esri.symbols.MarkerSymbol
      with typingsSlinky.arcgisJsApi.esri.symbols.Symbol2D
-     with Symbol2D
      with symbolsMarkerSymbol {
   /**
     * The height of the image in points. This value may be autocast with a string expressing size in points or pixels (e.g. `12px`).  The maximum allowed height of a picture marker symbol is 200px. If you set any value higher than 200px, then the image will be scaled down to a height of 200px while preserving the aspect ratio of the image.
@@ -54,8 +53,4 @@ trait PictureMarkerSymbol
     */
   var width: Double = js.native
 }
-
-@JSGlobal("__esri.PictureMarkerSymbol")
-@js.native
-object PictureMarkerSymbol extends TopLevel[PictureMarkerSymbolConstructor]
 

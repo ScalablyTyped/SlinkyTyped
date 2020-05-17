@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.AbstractScene")
 @js.native
-abstract class AbstractScene () extends js.Object {
+trait AbstractScene extends js.Object {
   /**
     * ActionManagers available on the scene.
     */
@@ -177,49 +176,261 @@ abstract class AbstractScene () extends js.Object {
   def removeReflectionProbe(toRemove: ReflectionProbe): Double = js.native
 }
 
-/* static members */
-@JSGlobal("BABYLON.AbstractScene")
-@js.native
-object AbstractScene extends js.Object {
-  /**
-    * Stores the list of available parsers in the application.
-    */
-  var _BabylonFileParsers: js.Any = js.native
-  /**
-    * Stores the list of available individual parsers in the application.
-    */
-  var _IndividualBabylonFileParsers: js.Any = js.native
-  /**
-    * Adds n individual parser in the list of available ones
-    * @param name Defines the name of the parser
-    * @param parser Defines the parser to add
-    */
-  def AddIndividualParser(name: String, parser: IndividualBabylonFileParser): Unit = js.native
-  /**
-    * Adds a parser in the list of available ones
-    * @param name Defines the name of the parser
-    * @param parser Defines the parser to add
-    */
-  def AddParser(name: String, parser: BabylonFileParser): Unit = js.native
-  /**
-    * Gets an individual parser from the list of avaialble ones
-    * @param name Defines the name of the parser
-    * @returns the requested parser or null
-    */
-  def GetIndividualParser(name: String): Nullable[IndividualBabylonFileParser] = js.native
-  /**
-    * Gets a general parser from the list of avaialble ones
-    * @param name Defines the name of the parser
-    * @returns the requested parser or null
-    */
-  def GetParser(name: String): Nullable[BabylonFileParser] = js.native
-  /**
-    * Parser json data and populate both a scene and its associated container object
-    * @param jsonData Defines the data to parse
-    * @param scene Defines the scene to parse the data for
-    * @param container Defines the container attached to the parsing sequence
-    * @param rootUrl Defines the root url of the data
-    */
-  def Parse(jsonData: js.Any, scene: Scene, container: AssetContainer, rootUrl: String): Unit = js.native
+object AbstractScene {
+  @scala.inline
+  def apply(
+    actionManagers: js.Array[AbstractActionManager],
+    addEffectLayer: EffectLayer => Unit,
+    addLensFlareSystem: LensFlareSystem => Unit,
+    addReflectionProbe: ReflectionProbe => Unit,
+    animationGroups: js.Array[AnimationGroup],
+    animations: js.Array[Animation],
+    cameras: js.Array[Camera],
+    effectLayers: js.Array[EffectLayer],
+    geometries: js.Array[Geometry],
+    getGlowLayerByName: String => Nullable[GlowLayer],
+    getHighlightLayerByName: String => Nullable[HighlightLayer],
+    getLensFlareSystemByID: String => Nullable[LensFlareSystem],
+    getLensFlareSystemByName: String => Nullable[LensFlareSystem],
+    getNodes: () => js.Array[Node],
+    layers: js.Array[Layer],
+    lensFlareSystems: js.Array[LensFlareSystem],
+    lights: js.Array[Light],
+    materials: js.Array[Material],
+    meshes: js.Array[AbstractMesh],
+    morphTargetManagers: js.Array[MorphTargetManager],
+    multiMaterials: js.Array[MultiMaterial],
+    particleSystems: js.Array[IParticleSystem],
+    proceduralTextures: js.Array[ProceduralTexture],
+    reflectionProbes: js.Array[ReflectionProbe],
+    removeEffectLayer: EffectLayer => Double,
+    removeLensFlareSystem: LensFlareSystem => Double,
+    removeReflectionProbe: ReflectionProbe => Double,
+    rootNodes: js.Array[Node],
+    skeletons: js.Array[Skeleton],
+    textures: js.Array[BaseTexture],
+    transformNodes: js.Array[TransformNode]
+  ): AbstractScene = {
+    val __obj = js.Dynamic.literal(actionManagers = actionManagers.asInstanceOf[js.Any], addEffectLayer = js.Any.fromFunction1(addEffectLayer), addLensFlareSystem = js.Any.fromFunction1(addLensFlareSystem), addReflectionProbe = js.Any.fromFunction1(addReflectionProbe), animationGroups = animationGroups.asInstanceOf[js.Any], animations = animations.asInstanceOf[js.Any], cameras = cameras.asInstanceOf[js.Any], effectLayers = effectLayers.asInstanceOf[js.Any], geometries = geometries.asInstanceOf[js.Any], getGlowLayerByName = js.Any.fromFunction1(getGlowLayerByName), getHighlightLayerByName = js.Any.fromFunction1(getHighlightLayerByName), getLensFlareSystemByID = js.Any.fromFunction1(getLensFlareSystemByID), getLensFlareSystemByName = js.Any.fromFunction1(getLensFlareSystemByName), getNodes = js.Any.fromFunction0(getNodes), layers = layers.asInstanceOf[js.Any], lensFlareSystems = lensFlareSystems.asInstanceOf[js.Any], lights = lights.asInstanceOf[js.Any], materials = materials.asInstanceOf[js.Any], meshes = meshes.asInstanceOf[js.Any], morphTargetManagers = morphTargetManagers.asInstanceOf[js.Any], multiMaterials = multiMaterials.asInstanceOf[js.Any], particleSystems = particleSystems.asInstanceOf[js.Any], proceduralTextures = proceduralTextures.asInstanceOf[js.Any], reflectionProbes = reflectionProbes.asInstanceOf[js.Any], removeEffectLayer = js.Any.fromFunction1(removeEffectLayer), removeLensFlareSystem = js.Any.fromFunction1(removeLensFlareSystem), removeReflectionProbe = js.Any.fromFunction1(removeReflectionProbe), rootNodes = rootNodes.asInstanceOf[js.Any], skeletons = skeletons.asInstanceOf[js.Any], textures = textures.asInstanceOf[js.Any], transformNodes = transformNodes.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AbstractScene]
+  }
+  @scala.inline
+  implicit class AbstractSceneOps[Self <: AbstractScene] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActionManagers(value: js.Array[AbstractActionManager]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("actionManagers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAddEffectLayer(value: EffectLayer => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addEffectLayer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAddLensFlareSystem(value: LensFlareSystem => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addLensFlareSystem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAddReflectionProbe(value: ReflectionProbe => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addReflectionProbe")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAnimationGroups(value: js.Array[AnimationGroup]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animationGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAnimations(value: js.Array[Animation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("animations")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCameras(value: js.Array[Camera]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cameras")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEffectLayers(value: js.Array[EffectLayer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("effectLayers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGeometries(value: js.Array[Geometry]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("geometries")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetGlowLayerByName(value: String => Nullable[GlowLayer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getGlowLayerByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetHighlightLayerByName(value: String => Nullable[HighlightLayer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getHighlightLayerByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetLensFlareSystemByID(value: String => Nullable[LensFlareSystem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLensFlareSystemByID")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetLensFlareSystemByName(value: String => Nullable[LensFlareSystem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLensFlareSystemByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetNodes(value: () => js.Array[Node]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNodes")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withLayers(value: js.Array[Layer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLensFlareSystems(value: js.Array[LensFlareSystem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lensFlareSystems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLights(value: js.Array[Light]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lights")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaterials(value: js.Array[Material]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("materials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMeshes(value: js.Array[AbstractMesh]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meshes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMorphTargetManagers(value: js.Array[MorphTargetManager]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("morphTargetManagers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMultiMaterials(value: js.Array[MultiMaterial]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiMaterials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParticleSystems(value: js.Array[IParticleSystem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("particleSystems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProceduralTextures(value: js.Array[ProceduralTexture]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("proceduralTextures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReflectionProbes(value: js.Array[ReflectionProbe]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reflectionProbes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoveEffectLayer(value: EffectLayer => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeEffectLayer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveLensFlareSystem(value: LensFlareSystem => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeLensFlareSystem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveReflectionProbe(value: ReflectionProbe => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeReflectionProbe")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRootNodes(value: js.Array[Node]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rootNodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSkeletons(value: js.Array[Skeleton]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skeletons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextures(value: js.Array[BaseTexture]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTransformNodes(value: js.Array[TransformNode]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("transformNodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnvironmentTexture(value: Nullable[BaseTexture]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentTexture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnvironmentTextureNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("environmentTexture")(null)
+        ret
+    }
+    @scala.inline
+    def withSounds(value: Nullable[js.Array[Sound]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sounds")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSoundsNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sounds")(null)
+        ret
+    }
+  }
+  
 }
 

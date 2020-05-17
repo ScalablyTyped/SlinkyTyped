@@ -1,6 +1,6 @@
 package typingsSlinky.preact.mod
 
-import typingsSlinky.preact.AnonChildren
+import typingsSlinky.preact.anon.Children
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 // Preact Virtual DOM
 // -----------------------------------
 @js.native
-trait VNode[P] extends js.Object {
+trait VNode[P] extends ComponentChild {
   /**
   		 * The time that the rendering of this `vnode` was completed. Will only be
   		 * set when the devtools are attached.
@@ -17,7 +17,7 @@ trait VNode[P] extends js.Object {
   		 */
   var endTime: js.UndefOr[Double] = js.native
   var key: Key = js.native
-  var props: P with AnonChildren = js.native
+  var props: P with Children = js.native
   /**
   		 * ref is not guaranteed by React.ReactElement, for compatiblity reasons
   		 * with popular react libs we define it as optional too
@@ -34,7 +34,7 @@ trait VNode[P] extends js.Object {
 
 object VNode {
   @scala.inline
-  def apply[P](key: Key, props: P with AnonChildren, `type`: ComponentType[P] | String): VNode[P] = {
+  def apply[P](key: Key, props: P with Children, `type`: ComponentType[P] | String): VNode[P] = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[VNode[P]]
@@ -52,7 +52,7 @@ object VNode {
         ret
     }
     @scala.inline
-    def withProps(value: P with AnonChildren): Self[P] = {
+    def withProps(value: P with Children): Self[P] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("props")(value.asInstanceOf[js.Any])
         ret

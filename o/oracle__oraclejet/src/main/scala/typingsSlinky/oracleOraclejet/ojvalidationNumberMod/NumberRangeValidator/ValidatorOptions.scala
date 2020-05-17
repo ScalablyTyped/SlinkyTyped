@@ -1,8 +1,8 @@
 package typingsSlinky.oracleOraclejet.ojvalidationNumberMod.NumberRangeValidator
 
-import typingsSlinky.oracleOraclejet.AnonExactRangeOverflow
-import typingsSlinky.oracleOraclejet.AnonMax
-import typingsSlinky.oracleOraclejet.AnonRangeOverflowRangeUnderflow
+import typingsSlinky.oracleOraclejet.anon.ExactRangeOverflow
+import typingsSlinky.oracleOraclejet.anon.Max
+import typingsSlinky.oracleOraclejet.anon.RangeOverflowRangeUnderflow
 import typingsSlinky.oracleOraclejet.ojvalidationNumberMod.NumberConverter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,10 +12,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ValidatorOptions extends js.Object {
   var converter: js.UndefOr[NumberConverter] = js.native
-  var hint: js.UndefOr[AnonMax] = js.native
+  var hint: js.UndefOr[Max] = js.native
   var max: js.UndefOr[Double] = js.native
-  var messageDetail: js.UndefOr[AnonExactRangeOverflow] = js.native
-  var messageSummary: js.UndefOr[AnonRangeOverflowRangeUnderflow] = js.native
+  var messageDetail: js.UndefOr[ExactRangeOverflow] = js.native
+  var messageSummary: js.UndefOr[RangeOverflowRangeUnderflow] = js.native
   var min: js.UndefOr[Double] = js.native
 }
 
@@ -44,7 +44,7 @@ object ValidatorOptions {
         ret
     }
     @scala.inline
-    def withHint(value: AnonMax): Self = {
+    def withHint(value: Max): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hint")(value.asInstanceOf[js.Any])
         ret
@@ -68,7 +68,7 @@ object ValidatorOptions {
         ret
     }
     @scala.inline
-    def withMessageDetail(value: AnonExactRangeOverflow): Self = {
+    def withMessageDetail(value: ExactRangeOverflow): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("messageDetail")(value.asInstanceOf[js.Any])
         ret
@@ -80,7 +80,7 @@ object ValidatorOptions {
         ret
     }
     @scala.inline
-    def withMessageSummary(value: AnonRangeOverflowRangeUnderflow): Self = {
+    def withMessageSummary(value: RangeOverflowRangeUnderflow): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("messageSummary")(value.asInstanceOf[js.Any])
         ret

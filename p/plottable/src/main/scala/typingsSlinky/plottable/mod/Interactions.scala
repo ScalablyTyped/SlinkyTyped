@@ -1,6 +1,6 @@
 package typingsSlinky.plottable.mod
 
-import typingsSlinky.plottable.AnonX
+import typingsSlinky.plottable.anon.X
 import typingsSlinky.plottable.interfacesMod.Point
 import typingsSlinky.plottable.scaleMod.TransformableScale
 import scala.scalajs.js
@@ -64,7 +64,7 @@ object Interactions extends js.Object {
       */
     var _PIXELS_PER_LINE: js.Any = js.native
     /* private */ def _pointDistance(point1: js.Any, point2: js.Any): js.Any = js.native
-    def centerPoint(point1: Point, point2: Point): AnonX = js.native
+    def centerPoint(point1: Point, point2: Point): X = js.native
   }
   
 }

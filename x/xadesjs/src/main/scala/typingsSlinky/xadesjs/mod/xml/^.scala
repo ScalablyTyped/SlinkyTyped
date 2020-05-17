@@ -1,7 +1,7 @@
 package typingsSlinky.xadesjs.mod.xml
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.xadesjs.AnonAttributeNames
+import typingsSlinky.xadesjs.anon.AttributeNames
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -104,6 +104,6 @@ object ^ extends js.Object {
   var XMLTimeStamp: Instantiable0[typingsSlinky.xadesjs.xmlMod.XMLTimeStamp] = js.native
   var XMLTimeStampCollection: Instantiable0[typingsSlinky.xadesjs.xmlMod.XMLTimeStampCollection] = js.native
   var XadesDateTime: Instantiable0[typingsSlinky.xadesjs.xmlMod.XadesDateTime] = js.native
-  var XmlXades: AnonAttributeNames = js.native
+  var XmlXades: AttributeNames = js.native
 }
 

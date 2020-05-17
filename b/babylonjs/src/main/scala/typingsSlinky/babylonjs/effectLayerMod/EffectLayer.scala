@@ -1,8 +1,8 @@
 package typingsSlinky.babylonjs.effectLayerMod
 
-import typingsSlinky.babylonjs.AnonColor
-import typingsSlinky.babylonjs.PartialIEffectLayerOption
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
+import typingsSlinky.babylonjs.anon.Color
+import typingsSlinky.babylonjs.anon.PartialIEffectLayerOption
 import typingsSlinky.babylonjs.baseTextureMod.BaseTexture
 import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.effectMod.Effect
@@ -38,7 +38,7 @@ abstract class EffectLayer protected () extends js.Object {
   var _disposeTextureAndPostProcesses: js.Any = js.native
   var _effectLayerMapGenerationEffect: js.Any = js.native
   var _effectLayerOptions: js.Any = js.native
-  var _emissiveTextureAndColor: AnonColor = js.native
+  var _emissiveTextureAndColor: Color = js.native
   var _engine: Engine = js.native
   /**
     * Generates the index buffer of the full screen quad blending to the main canvas.

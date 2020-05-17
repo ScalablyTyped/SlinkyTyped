@@ -1,7 +1,5 @@
 package typingsSlinky.svgParser.mod
 
-import typingsSlinky.svgParser.svgParserStrings.element
-import typingsSlinky.svgParser.svgParserStrings.text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,16 +12,8 @@ trait Node extends js.Object
 
 object Node {
   @scala.inline
-  def TextNode(`type`: text): Node = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Node]
-  }
+  implicit def apply(value: ElementNode): Node = value.asInstanceOf[Node]
   @scala.inline
-  def ElementNode(children: js.Array[Node | String], `type`: element): Node = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Node]
-  }
+  implicit def apply(value: TextNode): Node = value.asInstanceOf[Node]
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.evernote.mod.Types
 
-import typingsSlinky.evernote.AnonExpungeWhichSharedNotebookRestrictions
+import typingsSlinky.evernote.anon.ExpungeWhichSharedNotebookRestrictions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("evernote", "Types.NotebookRestrictions")
 @js.native
 class NotebookRestrictions () extends js.Object {
-  def this(args: AnonExpungeWhichSharedNotebookRestrictions) = this()
+  def this(args: ExpungeWhichSharedNotebookRestrictions) = this()
   var expungeWhichSharedNotebookRestrictions: js.UndefOr[SharedNotebookInstanceRestrictions] = js.native
   var noCreateNotes: js.UndefOr[Boolean] = js.native
   var noCreateSharedNotebooks: js.UndefOr[Boolean] = js.native

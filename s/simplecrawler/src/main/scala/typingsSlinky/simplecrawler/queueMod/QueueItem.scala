@@ -1,6 +1,6 @@
 package typingsSlinky.simplecrawler.queueMod
 
-import typingsSlinky.simplecrawler.AnonActualDataSize
+import typingsSlinky.simplecrawler.anon.ActualDataSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait QueueItem extends js.Object {
   var port: Double = js.native
   var protocol: String = js.native
   var referrer: String = js.native
-  var stateData: AnonActualDataSize = js.native
+  var stateData: ActualDataSize = js.native
   var status: QueueItemStatus = js.native
   var uriPath: String = js.native
   var url: String = js.native
@@ -32,7 +32,7 @@ object QueueItem {
     port: Double,
     protocol: String,
     referrer: String,
-    stateData: AnonActualDataSize,
+    stateData: ActualDataSize,
     status: QueueItemStatus,
     uriPath: String,
     url: String
@@ -95,7 +95,7 @@ object QueueItem {
         ret
     }
     @scala.inline
-    def withStateData(value: AnonActualDataSize): Self = {
+    def withStateData(value: ActualDataSize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stateData")(value.asInstanceOf[js.Any])
         ret

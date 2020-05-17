@@ -1,9 +1,12 @@
 package typingsSlinky.tabulatorTables
 
 import typingsSlinky.tabulatorTables.Tabulator.Align
+import typingsSlinky.tabulatorTables.Tabulator.ColumnCalc
 import typingsSlinky.tabulatorTables.Tabulator.ColumnDefinitionAlign
 import typingsSlinky.tabulatorTables.Tabulator.DownloadType
+import typingsSlinky.tabulatorTables.Tabulator.Editor
 import typingsSlinky.tabulatorTables.Tabulator.FilterType
+import typingsSlinky.tabulatorTables.Tabulator.Formatter
 import typingsSlinky.tabulatorTables.Tabulator.HistoryAction
 import typingsSlinky.tabulatorTables.Tabulator.HttpMethod
 import typingsSlinky.tabulatorTables.Tabulator.RowRangeLookup
@@ -13,9 +16,6 @@ import typingsSlinky.tabulatorTables.Tabulator.SortDirection
 import typingsSlinky.tabulatorTables.Tabulator.StandardValidatorType
 import typingsSlinky.tabulatorTables.Tabulator.VerticalAlign
 import typingsSlinky.tabulatorTables.Tabulator.VisibleRowRangeLookup
-import typingsSlinky.tabulatorTables.Tabulator._ColumnCalc
-import typingsSlinky.tabulatorTables.Tabulator._Editor
-import typingsSlinky.tabulatorTables.Tabulator._Formatter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -69,10 +69,10 @@ object tabulatorTablesStrings {
   sealed trait asc extends SortDirection
   
   @js.native
-  sealed trait autocomplete extends _Editor
+  sealed trait autocomplete extends Editor
   
   @js.native
-  sealed trait avg extends _ColumnCalc
+  sealed trait avg extends ColumnCalc
   
   @js.native
   sealed trait boolean extends js.Object
@@ -86,10 +86,10 @@ object tabulatorTablesStrings {
        with VerticalAlign
   
   @js.native
-  sealed trait buttonCross extends _Formatter
+  sealed trait buttonCross extends Formatter
   
   @js.native
-  sealed trait buttonTick extends _Formatter
+  sealed trait buttonTick extends Formatter
   
   @js.native
   sealed trait cell extends js.Object
@@ -114,13 +114,13 @@ object tabulatorTablesStrings {
   sealed trait collapse extends js.Object
   
   @js.native
-  sealed trait color extends _Formatter
+  sealed trait color extends Formatter
   
   @js.native
   sealed trait columns extends js.Object
   
   @js.native
-  sealed trait concat extends _ColumnCalc
+  sealed trait concat extends ColumnCalc
   
   @js.native
   sealed trait cookie extends js.Object
@@ -129,7 +129,7 @@ object tabulatorTablesStrings {
   sealed trait copy extends js.Object
   
   @js.native
-  sealed trait count extends _ColumnCalc
+  sealed trait count extends ColumnCalc
   
   @js.native
   sealed trait csv extends DownloadType
@@ -141,10 +141,10 @@ object tabulatorTablesStrings {
   sealed trait date extends js.Object
   
   @js.native
-  sealed trait datetime extends _Formatter
+  sealed trait datetime extends Formatter
   
   @js.native
-  sealed trait datetimediff extends _Formatter
+  sealed trait datetimediff extends Formatter
   
   @js.native
   sealed trait days extends js.Object
@@ -198,7 +198,7 @@ object tabulatorTablesStrings {
   sealed trait group extends js.Object
   
   @js.native
-  sealed trait handle extends _Formatter
+  sealed trait handle extends Formatter
   
   @js.native
   sealed trait header extends js.Object
@@ -218,19 +218,19 @@ object tabulatorTablesStrings {
   @js.native
   sealed trait html
     extends DownloadType
-       with _Formatter
+       with Formatter
   
   @js.native
   sealed trait hybrid extends js.Object
   
   @js.native
-  sealed trait image extends _Formatter
+  sealed trait image extends Formatter
   
   @js.native
   sealed trait in extends FilterType
   
   @js.native
-  sealed trait input extends _Editor
+  sealed trait input extends Editor
   
   @js.native
   sealed trait insert extends js.Object
@@ -263,7 +263,7 @@ object tabulatorTablesStrings {
   sealed trait like extends FilterType
   
   @js.native
-  sealed trait link extends _Formatter
+  sealed trait link extends Formatter
   
   @js.native
   sealed trait load extends js.Object
@@ -272,10 +272,10 @@ object tabulatorTablesStrings {
   sealed trait local extends js.Object
   
   @js.native
-  sealed trait lookup extends _Formatter
+  sealed trait lookup extends Formatter
   
   @js.native
-  sealed trait max extends _ColumnCalc
+  sealed trait max extends ColumnCalc
   
   @js.native
   sealed trait middle
@@ -283,13 +283,13 @@ object tabulatorTablesStrings {
        with VerticalAlign
   
   @js.native
-  sealed trait min extends _ColumnCalc
+  sealed trait min extends ColumnCalc
   
   @js.native
   sealed trait minutes extends js.Object
   
   @js.native
-  sealed trait money extends _Formatter
+  sealed trait money extends Formatter
   
   @js.native
   sealed trait months extends js.Object
@@ -301,7 +301,7 @@ object tabulatorTablesStrings {
   sealed trait next extends js.Object
   
   @js.native
-  sealed trait number extends _Editor
+  sealed trait number extends Editor
   
   @js.native
   sealed trait numeric extends StandardValidatorType
@@ -319,7 +319,7 @@ object tabulatorTablesStrings {
   sealed trait plain extends js.Object
   
   @js.native
-  sealed trait plaintext extends _Formatter
+  sealed trait plaintext extends Formatter
   
   @js.native
   sealed trait portrait extends js.Object
@@ -328,10 +328,10 @@ object tabulatorTablesStrings {
   sealed trait prev extends js.Object
   
   @js.native
-  sealed trait progress extends _Formatter
+  sealed trait progress extends Formatter
   
   @js.native
-  sealed trait range extends _Editor
+  sealed trait range extends Editor
   
   @js.native
   sealed trait regex extends FilterType
@@ -346,7 +346,7 @@ object tabulatorTablesStrings {
   sealed trait required extends StandardValidatorType
   
   @js.native
-  sealed trait responsiveCollapse extends _Formatter
+  sealed trait responsiveCollapse extends Formatter
   
   @js.native
   sealed trait right
@@ -364,10 +364,10 @@ object tabulatorTablesStrings {
   sealed trait rowMoved extends HistoryAction
   
   @js.native
-  sealed trait rowSelection extends _Formatter
+  sealed trait rowSelection extends Formatter
   
   @js.native
-  sealed trait rownum extends _Formatter
+  sealed trait rownum extends Formatter
   
   @js.native
   sealed trait scroll extends js.Object
@@ -376,7 +376,7 @@ object tabulatorTablesStrings {
   sealed trait seconds extends js.Object
   
   @js.native
-  sealed trait select extends _Editor
+  sealed trait select extends Editor
   
   @js.native
   sealed trait selected extends RowRangeLookup
@@ -386,27 +386,27 @@ object tabulatorTablesStrings {
   
   @js.native
   sealed trait star
-    extends _Editor
-       with _Formatter
+    extends Editor
+       with Formatter
   
   @js.native
   sealed trait string extends StandardValidatorType
   
   @js.native
-  sealed trait sum extends _ColumnCalc
+  sealed trait sum extends ColumnCalc
   
   @js.native
   sealed trait table extends js.Object
   
   @js.native
   sealed trait textarea
-    extends _Editor
-       with _Formatter
+    extends Editor
+       with Formatter
   
   @js.native
   sealed trait tickCross
-    extends _Editor
-       with _Formatter
+    extends Editor
+       with Formatter
   
   @js.native
   sealed trait time extends js.Object
@@ -417,7 +417,7 @@ object tabulatorTablesStrings {
        with VerticalAlign
   
   @js.native
-  sealed trait traffic extends _Formatter
+  sealed trait traffic extends Formatter
   
   @js.native
   sealed trait unique extends StandardValidatorType

@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.dynamodbMod
 
-import typingsSlinky.awsSdk.DescribeTableInputwaiterW
+import typingsSlinky.awsSdk.anon.DescribeTableInputwaiterW
 import typingsSlinky.awsSdk.awsSdkStrings.tableExists
 import typingsSlinky.awsSdk.awsSdkStrings.tableNotExists
 import typingsSlinky.awsSdk.configMod.ConfigBase

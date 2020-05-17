@@ -1,6 +1,6 @@
 package typingsSlinky.wxJsSdkDt.wx
 
-import typingsSlinky.wxJsSdkDt.AnonCardList
+import typingsSlinky.wxJsSdkDt.anon.CardList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AddCardConfig extends js.Object {
   var cardList: js.Array[Card] = js.native
-  var success: js.UndefOr[js.Function1[/* res */ AnonCardList, Unit]] = js.native
+  var success: js.UndefOr[js.Function1[/* res */ CardList, Unit]] = js.native
 }
 
 object AddCardConfig {
@@ -30,7 +30,7 @@ object AddCardConfig {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonCardList => Unit): Self = {
+    def withSuccess(value: /* res */ CardList => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

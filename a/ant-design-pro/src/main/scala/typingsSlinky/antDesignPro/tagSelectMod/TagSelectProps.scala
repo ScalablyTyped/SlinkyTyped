@@ -1,7 +1,7 @@
 package typingsSlinky.antDesignPro.tagSelectMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.antDesignPro.AnonCollapseText
+import typingsSlinky.antDesignPro.anon.CollapseText
 import typingsSlinky.antDesignPro.tagSelectOptionMod.TagSelectOptionProps
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TagSelectProps extends js.Object {
   var Option: TagSelectOptionProps = js.native
-  var actionsText: js.UndefOr[AnonCollapseText] = js.native
+  var actionsText: js.UndefOr[CollapseText] = js.native
   var children: ReactElement | js.Array[ReactElement] = js.native
   var className: String = js.native
   var expandable: js.UndefOr[Boolean] = js.native
@@ -58,7 +58,7 @@ object TagSelectProps {
         ret
     }
     @scala.inline
-    def withActionsText(value: AnonCollapseText): Self = {
+    def withActionsText(value: CollapseText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("actionsText")(value.asInstanceOf[js.Any])
         ret

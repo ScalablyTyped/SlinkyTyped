@@ -2,7 +2,7 @@ package typingsSlinky.antDesignProLayout.headerMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antDesignProLayout.AnonDefaultOpenAll
+import typingsSlinky.antDesignProLayout.anon.DefaultOpenAll
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.realDark
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.sidemenu
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.topmenu
@@ -34,7 +34,7 @@ trait HeaderViewProps extends js.Object {
   var isMobile: js.UndefOr[Boolean] = js.native
   var layout: js.UndefOr[sidemenu | topmenu] = js.native
   var logo: js.UndefOr[TagMod[Any]] = js.native
-  var menu: js.UndefOr[AnonDefaultOpenAll] = js.native
+  var menu: js.UndefOr[DefaultOpenAll] = js.native
   var menuHeaderRender: js.UndefOr[
     WithFalse[
       js.Function3[
@@ -252,7 +252,7 @@ object HeaderViewProps {
         ret
     }
     @scala.inline
-    def withMenu(value: AnonDefaultOpenAll): Self = {
+    def withMenu(value: DefaultOpenAll): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
         ret

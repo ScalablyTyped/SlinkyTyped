@@ -5,7 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IndexedAccessType extends Type {
+trait IndexedAccessType
+  extends Type
+     with TypeVariable {
   var constraint: js.UndefOr[Type] = js.native
   var indexType: Type = js.native
   var objectType: Type = js.native

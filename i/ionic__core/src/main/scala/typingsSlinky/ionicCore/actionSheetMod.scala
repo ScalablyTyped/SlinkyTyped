@@ -1,7 +1,7 @@
 package typingsSlinky.ionicCore
 
 import typingsSlinky.ionicCore.actionSheetInterfaceMod.ActionSheetButton
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonActionSheetElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonActionSheetElement
 import typingsSlinky.ionicCore.ionicCoreStrings.ios
 import typingsSlinky.ionicCore.ionicCoreStrings.md
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayEventDetail

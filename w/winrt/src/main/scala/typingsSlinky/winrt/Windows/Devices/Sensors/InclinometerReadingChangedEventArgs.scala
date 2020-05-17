@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Devices.Sensors.InclinometerReadingChangedEventArgs")
 @js.native
-class InclinometerReadingChangedEventArgs () extends IInclinometerReadingChangedEventArgs
+trait InclinometerReadingChangedEventArgs extends IInclinometerReadingChangedEventArgs
+
+object InclinometerReadingChangedEventArgs {
+  @scala.inline
+  def apply(reading: InclinometerReading): InclinometerReadingChangedEventArgs = {
+    val __obj = js.Dynamic.literal(reading = reading.asInstanceOf[js.Any])
+    __obj.asInstanceOf[InclinometerReadingChangedEventArgs]
+  }
+}
 

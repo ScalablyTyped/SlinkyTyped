@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object jest {
-  type AndNot[T] = T with typingsSlinky.jest.AnonNot[T]
+  type AndNot[T] = T with typingsSlinky.jest.anon.Not[T]
   type ArgsType[T] = js.Any
   type ConstructorArgsType[T] = js.Any
   type ConstructorPropertyNames[T] = (/* import warning: importer.ImportType#apply Failed type conversion: {[ K in keyof T ]: T[K] extends new (args : ...any): any? K : never}[keyof T] */ js.Any) with java.lang.String
@@ -45,7 +45,7 @@ package object jest {
     typingsSlinky.jest.mod.jest.ExtendedMatchers[TMatchers, scala.Unit, TActual], 
     typingsSlinky.jest.mod.jest.ExtendedMatchers[TMatchers, js.Promise[scala.Unit], TActual]
   ]
-  type JestMatchersShape[TNonPromise /* <: js.Object */, TPromise /* <: js.Object */] = typingsSlinky.jest.AnonRejects[TPromise] with typingsSlinky.jest.mod.jest.AndNot[TNonPromise]
+  type JestMatchersShape[TNonPromise /* <: js.Object */, TPromise /* <: js.Object */] = typingsSlinky.jest.anon.Rejects[TPromise] with typingsSlinky.jest.mod.jest.AndNot[TNonPromise]
   type Lifecycle = js.Function2[
     /* fn */ typingsSlinky.jest.mod.jest.ProvidesCallback, 
     /* timeout */ js.UndefOr[scala.Double], 
@@ -93,7 +93,7 @@ package object jest {
   type NonAsyncMatchers[TMatchers /* <: typingsSlinky.jest.mod.jest.ExpectExtendMap */] = /* import warning: importer.ImportType#apply Failed type conversion: {[ K in keyof TMatchers ]: std.ReturnType<TMatchers[K]> extends std.Promise<jest.jest.jest.CustomMatcherResult>? never : K}[keyof TMatchers] */ js.Any
   // see https://github.com/Microsoft/TypeScript/issues/25215
   type NonFunctionPropertyNames[T] = (/* import warning: importer.ImportType#apply Failed type conversion: {[ K in keyof T ]: T[K] extends (args : ...any): any? never : K}[keyof T] */ js.Any) with java.lang.String
-  type NonPromiseMatchers[T /* <: typingsSlinky.jest.JestMatchersShape */] = typingsSlinky.jest.mod.jest.Omit[
+  type NonPromiseMatchers[T /* <: typingsSlinky.jest.anon.JestMatchersShape */] = typingsSlinky.jest.mod.jest.Omit[
     T, 
     typingsSlinky.jest.jestStrings.resolves | typingsSlinky.jest.jestStrings.rejects | typingsSlinky.jest.jestStrings.not
   ]
@@ -103,14 +103,13 @@ package object jest {
   type Omit[T, K /* <: /* keyof any */ java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
   type Parameters[T /* <: js.Function1[/* repeated */ js.Any, _] */] = js.Any
   type PrintLabel = js.Function1[/* string */ java.lang.String, java.lang.String]
-  type PromiseMatchers[T /* <: typingsSlinky.jest.JestMatchersShape */] = typingsSlinky.jest.mod.jest.Omit[
+  type PromiseMatchers[T /* <: typingsSlinky.jest.anon.JestMatchersShape */] = typingsSlinky.jest.mod.jest.Omit[
     /* import warning: importer.ImportType#apply Failed type conversion: T['resolves'] */ js.Any, 
     typingsSlinky.jest.jestStrings.not
   ]
   type ProvidesCallback = js.Function1[/* cb */ typingsSlinky.jest.mod.jest.DoneCallback, js.Any]
   type RejectedValue[T] = js.Any
   type RemoveFirstFromTuple[T /* <: js.Array[_] */] = js.Array[js.Any]
-  type ResolvedValue[T] = js.Any | T
   type SnapshotSerializerPlugin = typingsSlinky.prettyFormat.mod.Plugin
   /**
     * Represents a function that has been spied on.

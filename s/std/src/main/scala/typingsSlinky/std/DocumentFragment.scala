@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,9 +10,4 @@ trait DocumentFragment
   extends Node
      with NonElementParentNode
      with ParentNode
-
-@JSGlobal("DocumentFragment")
-@js.native
-object DocumentFragment
-  extends Instantiable0[org.scalajs.dom.raw.DocumentFragment]
 

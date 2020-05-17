@@ -2,6 +2,7 @@ package typingsSlinky.typedoc
 
 import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.typedoc.abstractMod.ReflectionKind
+import typingsSlinky.typedoc.anon.TypeofType
 import typingsSlinky.typedoc.libUtilsMod.AbstractComponent
 import typingsSlinky.typedoc.modelsMod.Reflection
 import typingsSlinky.typedoc.modelsMod.Type

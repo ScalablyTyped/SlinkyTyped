@@ -3,14 +3,14 @@ package typingsSlinky.grommet.dataTableMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.grommet.AnonAlign
-import typingsSlinky.grommet.AnonBackground
-import typingsSlinky.grommet.AnonBody
-import typingsSlinky.grommet.AnonDatum
-import typingsSlinky.grommet.AnonDirection
-import typingsSlinky.grommet.AnonExpand
-import typingsSlinky.grommet.AnonFooter
-import typingsSlinky.grommet.AnonHeader
+import typingsSlinky.grommet.anon.Align
+import typingsSlinky.grommet.anon.Background
+import typingsSlinky.grommet.anon.Body
+import typingsSlinky.grommet.anon.Datum
+import typingsSlinky.grommet.anon.Direction
+import typingsSlinky.grommet.anon.Expand
+import typingsSlinky.grommet.anon.Footer
+import typingsSlinky.grommet.anon.Header
 import typingsSlinky.grommet.grommetStrings.all
 import typingsSlinky.grommet.grommetStrings.bottom
 import typingsSlinky.grommet.grommetStrings.horizontal
@@ -37,26 +37,26 @@ import scala.scalajs.js.annotation._
 trait DataTableProps extends js.Object {
   var a11yTitle: js.UndefOr[A11yTitleType] = js.native
   var alignSelf: js.UndefOr[AlignSelfType] = js.native
-  var background: js.UndefOr[String | AnonBody] = js.native
-  var border: js.UndefOr[Boolean | top | left | bottom | right | horizontal | vertical | all | AnonFooter] = js.native
-  var columns: js.UndefOr[js.Array[AnonAlign]] = js.native
+  var background: js.UndefOr[String | Body] = js.native
+  var border: js.UndefOr[Boolean | top | left | bottom | right | horizontal | vertical | all | Footer] = js.native
+  var columns: js.UndefOr[js.Array[Align]] = js.native
   var data: js.UndefOr[js.Array[js.Object]] = js.native
   var gridArea: js.UndefOr[GridAreaType] = js.native
-  var groupBy: js.UndefOr[String | AnonExpand] = js.native
+  var groupBy: js.UndefOr[String | Expand] = js.native
   var margin: js.UndefOr[MarginType] = js.native
   var onClickRow: js.UndefOr[
-    js.Function1[(/* event */ AnonDatum) | (/* event */ SyntheticMouseEvent[Element]), Unit]
+    js.Function1[(/* event */ Datum) | (/* event */ SyntheticMouseEvent[Element]), Unit]
   ] = js.native
   var onMore: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
   var onSearch: js.UndefOr[js.Function1[/* search */ String, Unit]] = js.native
-  var onSort: js.UndefOr[js.Function1[/* sort */ AnonDirection, Unit]] = js.native
-  var pad: js.UndefOr[none | xxsmall | xsmall | small | medium | large | xlarge | AnonHeader | String] = js.native
+  var onSort: js.UndefOr[js.Function1[/* sort */ Direction, Unit]] = js.native
+  var pad: js.UndefOr[none | xxsmall | xsmall | small | medium | large | xlarge | Header | String] = js.native
   var primaryKey: js.UndefOr[String] = js.native
   var replace: js.UndefOr[Boolean] = js.native
   var resizeable: js.UndefOr[Boolean] = js.native
-  var rowProps: js.UndefOr[StringDictionary[AnonBackground]] = js.native
+  var rowProps: js.UndefOr[StringDictionary[Background]] = js.native
   var size: js.UndefOr[small | medium | large | xlarge | String] = js.native
-  var sort: js.UndefOr[AnonDirection] = js.native
+  var sort: js.UndefOr[Direction] = js.native
   var sortable: js.UndefOr[Boolean] = js.native
   var step: js.UndefOr[Double] = js.native
 }
@@ -98,7 +98,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withBackground(value: String | AnonBody): Self = {
+    def withBackground(value: String | Body): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
         ret
@@ -110,7 +110,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withBorder(value: Boolean | top | left | bottom | right | horizontal | vertical | all | AnonFooter): Self = {
+    def withBorder(value: Boolean | top | left | bottom | right | horizontal | vertical | all | Footer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
         ret
@@ -122,7 +122,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withColumns(value: js.Array[AnonAlign]): Self = {
+    def withColumns(value: js.Array[Align]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columns")(value.asInstanceOf[js.Any])
         ret
@@ -158,7 +158,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withGroupBy(value: String | AnonExpand): Self = {
+    def withGroupBy(value: String | Expand): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("groupBy")(value.asInstanceOf[js.Any])
         ret
@@ -182,7 +182,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnClickRow(value: (/* event */ AnonDatum) | (/* event */ SyntheticMouseEvent[Element]) => Unit): Self = {
+    def withOnClickRow(value: (/* event */ Datum) | (/* event */ SyntheticMouseEvent[Element]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClickRow")(js.Any.fromFunction1(value))
         ret
@@ -218,7 +218,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withOnSort(value: /* sort */ AnonDirection => Unit): Self = {
+    def withOnSort(value: /* sort */ Direction => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSort")(js.Any.fromFunction1(value))
         ret
@@ -230,7 +230,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withPad(value: none | xxsmall | xsmall | small | medium | large | xlarge | AnonHeader | String): Self = {
+    def withPad(value: none | xxsmall | xsmall | small | medium | large | xlarge | Header | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pad")(value.asInstanceOf[js.Any])
         ret
@@ -278,7 +278,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withRowProps(value: StringDictionary[AnonBackground]): Self = {
+    def withRowProps(value: StringDictionary[Background]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowProps")(value.asInstanceOf[js.Any])
         ret
@@ -302,7 +302,7 @@ object DataTableProps {
         ret
     }
     @scala.inline
-    def withSort(value: AnonDirection): Self = {
+    def withSort(value: Direction): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
         ret

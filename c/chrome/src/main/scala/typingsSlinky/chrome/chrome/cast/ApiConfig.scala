@@ -4,41 +4,69 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("chrome.cast.ApiConfig")
 @js.native
-class ApiConfig protected () extends js.Object {
-  /**
-    * @param {!chrome.cast.SessionRequest} sessionRequest
-    * @param {function(!chrome.cast.Session)} sessionListener
-    * @param {function(!chrome.cast.ReceiverAvailability,Array<Object>)}
-    *     receiverListener
-    * @param {chrome.cast.AutoJoinPolicy=} opt_autoJoinPolicy
-    * @param {chrome.cast.DefaultActionPolicy=} opt_defaultActionPolicy
-    * @constructor
-    * @see https://developers.google.com/cast/docs/reference/chrome/chrome.cast.ApiConfig
-    */
-  def this(
-    sessionRequest: SessionRequest,
-    sessionListener: js.Function1[/* session */ Session, Unit],
-    receiverListener: js.Function1[/* receiverAvailability */ ReceiverAvailability, Unit]
-  ) = this()
-  def this(
-    sessionRequest: SessionRequest,
-    sessionListener: js.Function1[/* session */ Session, Unit],
-    receiverListener: js.Function1[/* receiverAvailability */ ReceiverAvailability, Unit],
-    autoJoinPolicy: AutoJoinPolicy
-  ) = this()
-  def this(
-    sessionRequest: SessionRequest,
-    sessionListener: js.Function1[/* session */ Session, Unit],
-    receiverListener: js.Function1[/* receiverAvailability */ ReceiverAvailability, Unit],
-    autoJoinPolicy: AutoJoinPolicy,
-    defaultActionPolicy: DefaultActionPolicy
-  ) = this()
+trait ApiConfig extends js.Object {
   var autoJoinPolicy: js.UndefOr[AutoJoinPolicy] = js.native
   var defaultActionPolicy: DefaultActionPolicy = js.native
   var sessionRequest: SessionRequest = js.native
   def receiverListener(receiverAvailability: ReceiverAvailability): Unit = js.native
   def sessionListener(session: Session): Unit = js.native
+}
+
+object ApiConfig {
+  @scala.inline
+  def apply(
+    defaultActionPolicy: DefaultActionPolicy,
+    receiverListener: ReceiverAvailability => Unit,
+    sessionListener: Session => Unit,
+    sessionRequest: SessionRequest
+  ): ApiConfig = {
+    val __obj = js.Dynamic.literal(defaultActionPolicy = defaultActionPolicy.asInstanceOf[js.Any], receiverListener = js.Any.fromFunction1(receiverListener), sessionListener = js.Any.fromFunction1(sessionListener), sessionRequest = sessionRequest.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ApiConfig]
+  }
+  @scala.inline
+  implicit class ApiConfigOps[Self <: ApiConfig] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDefaultActionPolicy(value: DefaultActionPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultActionPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReceiverListener(value: ReceiverAvailability => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("receiverListener")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSessionListener(value: Session => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionListener")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSessionRequest(value: SessionRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionRequest")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAutoJoinPolicy(value: AutoJoinPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoJoinPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutAutoJoinPolicy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoJoinPolicy")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

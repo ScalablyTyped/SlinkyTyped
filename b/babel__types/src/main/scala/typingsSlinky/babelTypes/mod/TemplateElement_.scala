@@ -1,6 +1,6 @@
 package typingsSlinky.babelTypes.mod
 
-import typingsSlinky.babelTypes.AnonCooked
+import typingsSlinky.babelTypes.anon.Cooked
 import typingsSlinky.babelTypes.babelTypesStrings.TemplateElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,16 +9,16 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TemplateElement_
   extends BaseNode
-     with _Node {
+     with Node {
   var tail: Boolean = js.native
   @JSName("type")
   var type_TemplateElement_ : TemplateElement = js.native
-  var value: AnonCooked = js.native
+  var value: Cooked = js.native
 }
 
 object TemplateElement_ {
   @scala.inline
-  def apply(tail: Boolean, `type`: TemplateElement, value: AnonCooked): TemplateElement_ = {
+  def apply(tail: Boolean, `type`: TemplateElement, value: Cooked): TemplateElement_ = {
     val __obj = js.Dynamic.literal(tail = tail.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TemplateElement_]
@@ -42,7 +42,7 @@ object TemplateElement_ {
         ret
     }
     @scala.inline
-    def withValue(value: AnonCooked): Self = {
+    def withValue(value: Cooked): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
         ret

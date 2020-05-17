@@ -3,9 +3,9 @@ package typingsSlinky.victory.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.victory.Anon1
-import typingsSlinky.victory.AnonXBoolean
-import typingsSlinky.victory.AnonY
+import typingsSlinky.victory.anon.XBoolean
+import typingsSlinky.victory.anon.Y
+import typingsSlinky.victory.anon.`1`
 import typingsSlinky.victory.mod.AnimatePropTypeInterface
 import typingsSlinky.victory.mod.D3Scale
 import typingsSlinky.victory.mod.FlyoutProps
@@ -35,7 +35,7 @@ object Flyout {
     @scala.inline
     def animate(value: Boolean | AnimatePropTypeInterface): this.type = set("animate", value.asInstanceOf[js.Any])
     @scala.inline
-    def center(value: AnonY): this.type = set("center", value.asInstanceOf[js.Any])
+    def center(value: Y): this.type = set("center", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -63,9 +63,9 @@ object Flyout {
     @scala.inline
     def index(value: Double): this.type = set("index", value.asInstanceOf[js.Any])
     @scala.inline
-    def maxDomain(value: Double | AnonY): this.type = set("maxDomain", value.asInstanceOf[js.Any])
+    def maxDomain(value: Double | Y): this.type = set("maxDomain", value.asInstanceOf[js.Any])
     @scala.inline
-    def minDomain(value: Double | AnonY): this.type = set("minDomain", value.asInstanceOf[js.Any])
+    def minDomain(value: Double | Y): this.type = set("minDomain", value.asInstanceOf[js.Any])
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
@@ -85,11 +85,11 @@ object Flyout {
     @scala.inline
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
     @scala.inline
-    def scale(value: ScalePropType | D3Scale | Anon1): this.type = set("scale", value.asInstanceOf[js.Any])
+    def scale(value: ScalePropType | D3Scale | `1`): this.type = set("scale", value.asInstanceOf[js.Any])
     @scala.inline
     def shapeRendering(value: String): this.type = set("shapeRendering", value.asInstanceOf[js.Any])
     @scala.inline
-    def singleQuadrantDomainPadding(value: Boolean | AnonXBoolean): this.type = set("singleQuadrantDomainPadding", value.asInstanceOf[js.Any])
+    def singleQuadrantDomainPadding(value: Boolean | XBoolean): this.type = set("singleQuadrantDomainPadding", value.asInstanceOf[js.Any])
     @scala.inline
     def standalone(value: Boolean): this.type = set("standalone", value.asInstanceOf[js.Any])
     @scala.inline

@@ -3,6 +3,9 @@ package typingsSlinky.antd
 import org.scalablytyped.runtime.Instantiable0
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
+import typingsSlinky.antd.anon.Accept
+import typingsSlinky.antd.anon.FileList
+import typingsSlinky.antd.anon.Percent
 import typingsSlinky.antd.contextMod.ConfigConsumerProps
 import typingsSlinky.antd.uploadInterfaceMod.RcFile
 import typingsSlinky.antd.uploadInterfaceMod.UploadChangeParam
@@ -33,7 +36,7 @@ object uploadUploadMod extends js.Object {
     def onChange(info: UploadChangeParam[UploadFile[_]]): Unit = js.native
     def onError(error: js.Error, response: js.Any, file: UploadFile[_]): Unit = js.native
     def onFileDrop(e: DragEvent[HTMLDivElement]): Unit = js.native
-    def onProgress(e: AnonPercent, file: UploadFile[_]): Unit = js.native
+    def onProgress(e: Percent, file: UploadFile[_]): Unit = js.native
     def onStart(file: RcFile): Unit = js.native
     def onSuccess(response: js.Any, file: UploadFile[_], xhr: js.Any): Unit = js.native
     def renderUpload(hasGetPrefixClsDirection: ConfigConsumerProps): ReactElement = js.native
@@ -50,8 +53,8 @@ object uploadUploadMod extends js.Object {
   @js.native
   object default extends js.Object {
     var Dragger: Instantiable0[typingsSlinky.antd.draggerMod.default] = js.native
-    var defaultProps: AnonAccept = js.native
-    def getDerivedStateFromProps(nextProps: UploadProps): AnonFileList | Null = js.native
+    var defaultProps: Accept = js.native
+    def getDerivedStateFromProps(nextProps: UploadProps): FileList | Null = js.native
   }
   
 }

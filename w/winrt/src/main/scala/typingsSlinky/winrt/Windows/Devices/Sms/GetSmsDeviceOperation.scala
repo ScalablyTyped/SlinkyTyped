@@ -1,23 +1,22 @@
 package typingsSlinky.winrt.Windows.Devices.Sms
 
-import typingsSlinky.winrt.AnonCompletedAsyncOperationCompletedHandlerGetResults
 import typingsSlinky.winrt.Windows.Foundation.AsyncOperationCompletedHandler
 import typingsSlinky.winrt.Windows.Foundation.AsyncStatus
 import typingsSlinky.winrt.Windows.Foundation.IAsyncInfo
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperation
+import typingsSlinky.winrt.anon.CompletedAsyncOperationCompletedHandlerGetResults
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Devices.Sms.GetSmsDeviceOperation")
 @js.native
-class GetSmsDeviceOperation ()
+trait GetSmsDeviceOperation
   extends IAsyncOperation[SmsDevice]
      with IAsyncInfo {
   @JSName("completed")
   var completed_Original: AsyncOperationCompletedHandler[SmsDevice] = js.native
   @JSName("operation")
-  var operation_GetSmsDeviceOperation: AnonCompletedAsyncOperationCompletedHandlerGetResults = js.native
+  var operation_GetSmsDeviceOperation: CompletedAsyncOperationCompletedHandlerGetResults = js.native
   /* InferMemberOverrides */
   override def cancel(): Unit = js.native
   def completed(asyncInfo: IAsyncOperation[SmsDevice], asyncStatus: AsyncStatus): Unit = js.native

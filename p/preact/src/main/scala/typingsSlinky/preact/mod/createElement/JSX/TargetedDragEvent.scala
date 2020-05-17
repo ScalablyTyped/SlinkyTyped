@@ -2,7 +2,7 @@ package typingsSlinky.preact.mod.createElement.JSX
 
 import org.scalajs.dom.raw.DataTransfer
 import org.scalajs.dom.raw.EventTarget
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,7 +40,7 @@ trait TargetedDragEvent[Target /* <: EventTarget */] extends js.Object {
     /* typeArg */ String, 
     /* canBubbleArg */ Boolean, 
     /* cancelableArg */ Boolean, 
-    /* viewArg */ Window_, 
+    /* viewArg */ Window, 
     /* detailArg */ Double, 
     /* screenXArg */ Double, 
     /* screenYArg */ Double, 
@@ -77,7 +77,7 @@ trait TargetedDragEvent[Target /* <: EventTarget */] extends js.Object {
   var target: js.UndefOr[EventTarget] = js.native
   var timeStamp: Double = js.native
   var `type`: String = js.native
-  var view: js.UndefOr[Window_] = js.native
+  var view: js.UndefOr[Window] = js.native
   var which: Double = js.native
   var x: Double = js.native
   var y: Double = js.native
@@ -88,7 +88,7 @@ trait TargetedDragEvent[Target /* <: EventTarget */] extends js.Object {
     typeArg: String,
     canBubbleArg: Boolean,
     cancelableArg: Boolean,
-    viewArg: Window_,
+    viewArg: Window,
     detailArg: Double,
     screenXArg: Double,
     screenYArg: Double,

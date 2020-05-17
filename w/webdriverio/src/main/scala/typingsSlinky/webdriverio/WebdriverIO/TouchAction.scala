@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TouchAction extends js.Object {
+trait TouchAction extends TouchActions {
   var action: ActionTypes = js.native
   var element: js.UndefOr[Element] = js.native
   var ms: js.UndefOr[Double] = js.native

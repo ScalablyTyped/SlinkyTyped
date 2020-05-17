@@ -1,7 +1,9 @@
 package typingsSlinky.googleCloudStorage.storageMod
 
+import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.googleAuthLibrary.googleauthMod.GoogleAuthOptions
 import typingsSlinky.std.PromiseConstructor
+import typingsSlinky.std.global.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +17,21 @@ trait StorageOptions extends GoogleAuthOptions {
   var apiEndpoint: js.UndefOr[String] = js.native
   var autoRetry: js.UndefOr[Boolean] = js.native
   var maxRetries: js.UndefOr[Double] = js.native
-  var promise: js.UndefOr[PromiseConstructor] = js.native
+  var promise: js.UndefOr[
+    PromiseConstructor with (Instantiable1[
+      /* executor */ js.Function2[
+        /* resolve */ js.Function1[
+          /* value */ js.UndefOr[
+            (/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any) | (js.Thenable[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any])
+          ], 
+          Unit
+        ], 
+        /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
+        Unit
+      ], 
+      Promise[js.Object]
+    ])
+  ] = js.native
 }
 
 object StorageOptions {
@@ -67,7 +83,21 @@ object StorageOptions {
         ret
     }
     @scala.inline
-    def withPromise(value: PromiseConstructor): Self = {
+    def withPromise(
+      value: PromiseConstructor with (Instantiable1[
+          /* executor */ js.Function2[
+            /* resolve */ js.Function1[
+              /* value */ js.UndefOr[
+                (/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any) | (js.Thenable[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any])
+              ], 
+              Unit
+            ], 
+            /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
+            Unit
+          ], 
+          Promise[js.Object]
+        ])
+    ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("promise")(value.asInstanceOf[js.Any])
         ret

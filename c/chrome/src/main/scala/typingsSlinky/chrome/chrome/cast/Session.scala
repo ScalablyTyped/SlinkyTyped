@@ -1,6 +1,6 @@
 package typingsSlinky.chrome.chrome.cast
 
-import typingsSlinky.chrome.AnonName
+import typingsSlinky.chrome.anon.Name
 import typingsSlinky.chrome.chrome.cast.media.LoadRequest
 import typingsSlinky.chrome.chrome.cast.media.Media
 import typingsSlinky.chrome.chrome.cast.media.QueueLoadRequest
@@ -8,30 +8,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("chrome.cast.Session")
 @js.native
-class Session protected () extends js.Object {
-  /**
-    * @param {string} sessionId
-    * @param {string} appId
-    * @param {string} displayName
-    * @param {!Array<chrome.cast.Image>} appImages
-    * @param {!chrome.cast.Receiver} receiver
-    * @constructor
-    * @see https://developers.google.com/cast/docs/reference/chrome/chrome.cast.Session
-    */
-  def this(
-    sessionId: String,
-    appId: String,
-    displayName: String,
-    appImages: js.Array[Image],
-    receiver: Receiver
-  ) = this()
+trait Session extends js.Object {
   var appId: String = js.native
   var appImages: js.Array[Image] = js.native
   var displayName: String = js.native
   var media: js.Array[Media] = js.native
-  var namespaces: js.Array[AnonName] = js.native
+  var namespaces: js.Array[Name] = js.native
   var receiver: Receiver = js.native
   var senderApps: js.Array[SenderApplication] = js.native
   var sessionId: String = js.native

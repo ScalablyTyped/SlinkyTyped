@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojmessagesMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonAriaLiveRegion
+import typingsSlinky.oracleOraclejet.anon.AriaLiveRegion
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojmessageMod.ojMessage.DisplayOptions
 import typingsSlinky.oracleOraclejet.ojmessageMod.ojMessage.Message
@@ -20,7 +20,7 @@ trait ojMessagesSettablePropertiesLenient
   var displayOptions: js.UndefOr[DisplayOptions] = js.native
   var messages: js.UndefOr[js.Array[Message] | (DataProvider[_, Message])] = js.native
   var position: js.UndefOr[Position] = js.native
-  var translations: js.UndefOr[AnonAriaLiveRegion] = js.native
+  var translations: js.UndefOr[AriaLiveRegion] = js.native
 }
 
 object ojMessagesSettablePropertiesLenient {
@@ -84,7 +84,7 @@ object ojMessagesSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonAriaLiveRegion): Self = {
+    def withTranslations(value: AriaLiveRegion): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

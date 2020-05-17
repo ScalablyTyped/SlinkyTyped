@@ -7,17 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientFileManager.HighlightItemTemplate event.
   */
-@JSGlobal("ASPxClientFileManagerHighlightItemTemplateEventArgs")
 @js.native
-class ASPxClientFileManagerHighlightItemTemplateEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientFileManagerHighlightItemTemplateEventArgs class.
-    * @param filterValue A string that is a filter value specified by the filter box.
-    * @param itemName A string that is the name of an item currently being processed.
-    * @param templateElement An object that is an element containing the template.
-    * @param highlightCssClassName A string that is the name of the cascading style sheet (CSS) class associated with an item in highlighted state.
-    */
-  def this(filterValue: String, itemName: String, templateElement: js.Any, highlightCssClassName: String) = this()
+trait ASPxClientFileManagerHighlightItemTemplateEventArgs extends ASPxClientEventArgs {
   /**
     * Gets a string that is a filter value specified by the filter box.
     */
@@ -34,5 +25,45 @@ class ASPxClientFileManagerHighlightItemTemplateEventArgs protected () extends A
     * Gets an element containing the item template.
     */
   var templateElement: String = js.native
+}
+
+object ASPxClientFileManagerHighlightItemTemplateEventArgs {
+  @scala.inline
+  def apply(filterValue: String, highlightCssClassName: String, itemName: String, templateElement: String): ASPxClientFileManagerHighlightItemTemplateEventArgs = {
+    val __obj = js.Dynamic.literal(filterValue = filterValue.asInstanceOf[js.Any], highlightCssClassName = highlightCssClassName.asInstanceOf[js.Any], itemName = itemName.asInstanceOf[js.Any], templateElement = templateElement.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientFileManagerHighlightItemTemplateEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientFileManagerHighlightItemTemplateEventArgsOps[Self <: ASPxClientFileManagerHighlightItemTemplateEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFilterValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHighlightCssClassName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightCssClassName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItemName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTemplateElement(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("templateElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

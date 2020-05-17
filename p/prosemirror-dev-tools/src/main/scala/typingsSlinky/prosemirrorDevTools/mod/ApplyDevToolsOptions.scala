@@ -1,6 +1,6 @@
 package typingsSlinky.prosemirrorDevTools.mod
 
-import typingsSlinky.prosemirrorDevTools.TypeofEditorState
+import typingsSlinky.prosemirrorDevTools.anon.TypeofEditorState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

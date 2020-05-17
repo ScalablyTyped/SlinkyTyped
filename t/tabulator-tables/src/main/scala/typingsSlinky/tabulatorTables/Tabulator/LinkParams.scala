@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LinkParams extends _FormatterParams {
+trait LinkParams extends FormatterParams {
   var download: js.UndefOr[Boolean] = js.native
   var label: js.UndefOr[String] = js.native
   // Link

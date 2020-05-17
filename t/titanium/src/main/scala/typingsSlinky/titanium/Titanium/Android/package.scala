@@ -26,6 +26,10 @@ package object Android {
   		 */
   type MenuItemExpandEvent = typingsSlinky.titanium.Titanium.Android.MenuItemBaseEvent
   /**
+  		 * Module for managing notifications.
+  		 */
+  type NotificationManager = typingsSlinky.titanium.Titanium.Module
+  /**
   		 * Fired when the bound service instance starts.
   		 */
   type QuickSettingsServiceStartEvent = typingsSlinky.titanium.Titanium.Android.QuickSettingsServiceBaseEvent

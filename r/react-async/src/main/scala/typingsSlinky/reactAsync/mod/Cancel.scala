@@ -1,6 +1,6 @@
 package typingsSlinky.reactAsync.mod
 
-import typingsSlinky.reactAsync.AnonDictmeta
+import typingsSlinky.reactAsync.anon.Dictmeta
 import typingsSlinky.reactAsync.reactAsyncStrings.cancel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,13 +10,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Cancel
   extends AsyncAction[js.Any] {
-  var meta: AnonDictmeta = js.native
+  var meta: Dictmeta = js.native
   var `type`: String with cancel = js.native
 }
 
 object Cancel {
   @scala.inline
-  def apply(meta: AnonDictmeta, `type`: String with cancel): Cancel = {
+  def apply(meta: Dictmeta, `type`: String with cancel): Cancel = {
     val __obj = js.Dynamic.literal(meta = meta.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Cancel]
@@ -28,7 +28,7 @@ object Cancel {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMeta(value: AnonDictmeta): Self = {
+    def withMeta(value: Dictmeta): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
         ret

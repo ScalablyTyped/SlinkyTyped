@@ -2,7 +2,7 @@ package typingsSlinky.cathoQuantum.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonBreakpointsObject
+import typingsSlinky.cathoQuantum.anon.BreakpointsObject
 import typingsSlinky.cathoQuantum.gridMod.HideProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,7 +24,7 @@ object Hide {
     @scala.inline
     def small(value: Boolean): this.type = set("small", value.asInstanceOf[js.Any])
     @scala.inline
-    def theme(value: AnonBreakpointsObject): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: BreakpointsObject): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
     def xlarge(value: Boolean): this.type = set("xlarge", value.asInstanceOf[js.Any])
     @scala.inline

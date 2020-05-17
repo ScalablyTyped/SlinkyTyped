@@ -24,9 +24,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A table view row is an individual item in a table, organized into table view sections.
 		 */
-@JSGlobal("Titanium.UI.TableViewRow")
 @js.native
-class TableViewRow () extends View {
+trait TableViewRow extends View {
   /**
   			 * Class name for the row.
   			 */

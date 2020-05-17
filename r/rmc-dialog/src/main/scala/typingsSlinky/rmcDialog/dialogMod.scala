@@ -2,6 +2,7 @@ package typingsSlinky.rmcDialog
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
+import typingsSlinky.rmcDialog.anon.AfterClose
 import typingsSlinky.rmcDialog.idialogproptypesMod.IDialogPropTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -39,7 +40,7 @@ object dialogMod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var defaultProps: AnonAfterClose = js.native
+    var defaultProps: AfterClose = js.native
   }
   
 }

@@ -1,14 +1,33 @@
 package typingsSlinky.igniteUi.Infragistics
 
-import typingsSlinky.igniteUi.ResponsiveModeSettings
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Infragistics.ResponsiveMode")
 @js.native
-class ResponsiveMode protected () extends js.Object {
-  def this(settings: ResponsiveModeSettings) = this()
+trait ResponsiveMode extends js.Object {
   def isActive(): Unit = js.native
+}
+
+object ResponsiveMode {
+  @scala.inline
+  def apply(isActive: () => Unit): ResponsiveMode = {
+    val __obj = js.Dynamic.literal(isActive = js.Any.fromFunction0(isActive))
+    __obj.asInstanceOf[ResponsiveMode]
+  }
+  @scala.inline
+  implicit class ResponsiveModeOps[Self <: ResponsiveMode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsActive(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isActive")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

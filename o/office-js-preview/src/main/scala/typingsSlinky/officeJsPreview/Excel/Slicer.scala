@@ -1,12 +1,12 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.SlicerData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.SlicerLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.SlicerUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientResult
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Ascending
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.DataSourceOrder
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Descending
@@ -20,9 +20,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.10]
   */
-@JSGlobal("Excel.Slicer")
 @js.native
-class Slicer () extends ClientObject {
+trait Slicer extends ClientObject {
   /**
     *
     * Represents the caption of slicer.
@@ -155,7 +154,7 @@ class Slicer () extends ClientObject {
     */
   def load(): Slicer = js.native
   def load(options: SlicerLoadOptions): Slicer = js.native
-  def load(propertyNamesAndPaths: AnonExpand): Slicer = js.native
+  def load(propertyNamesAndPaths: Expand): Slicer = js.native
   def load(propertyNames: String): Slicer = js.native
   def load(propertyNames: js.Array[String]): Slicer = js.native
   /**

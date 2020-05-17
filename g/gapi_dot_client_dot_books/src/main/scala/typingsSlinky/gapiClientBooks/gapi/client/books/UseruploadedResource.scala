@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientBooks.AnonStartIndex
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientBooks.anon.StartIndex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UseruploadedResource extends js.Object {
   /** Return a list of books uploaded by the current user. */
-  def list(request: AnonStartIndex): Request_[Volumes] = js.native
+  def list(request: StartIndex): Request[Volumes] = js.native
 }
 
 object UseruploadedResource {
   @scala.inline
-  def apply(list: AnonStartIndex => Request_[Volumes]): UseruploadedResource = {
+  def apply(list: StartIndex => Request[Volumes]): UseruploadedResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[UseruploadedResource]
   }
@@ -25,7 +25,7 @@ object UseruploadedResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withList(value: AnonStartIndex => Request_[Volumes]): Self = {
+    def withList(value: StartIndex => Request[Volumes]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

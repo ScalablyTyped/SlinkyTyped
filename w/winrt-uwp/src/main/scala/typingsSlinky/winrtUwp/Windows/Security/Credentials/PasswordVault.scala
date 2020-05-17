@@ -6,10 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a Credential Locker of credentials. The contents of the locker are specific to the app or service. Apps and services don't have access to credentials associated with other apps or services. */
-@JSGlobal("Windows.Security.Credentials.PasswordVault")
 @js.native
-/** Creates and initializes a new instance of the PasswordVault object. */
-class PasswordVault () extends js.Object {
+trait PasswordVault extends js.Object {
   /**
     * Adds a credential to the Credential Locker.
     * @param credential The credential to be added.
@@ -44,5 +42,64 @@ class PasswordVault () extends js.Object {
     * @return When this method returns, contains an IVectorView output of credential objects that match the search criteria. This output is a snapshot and not dynamic. If the results are used for updating or deleting credentials, those changes won't be reflected in the previous output.
     */
   def retrieveAll(): IVectorView[PasswordCredential] = js.native
+}
+
+object PasswordVault {
+  @scala.inline
+  def apply(
+    add: PasswordCredential => Unit,
+    findAllByResource: String => IVectorView[PasswordCredential],
+    findAllByUserName: String => IVectorView[PasswordCredential],
+    remove: PasswordCredential => Unit,
+    retrieve: (String, String) => PasswordCredential,
+    retrieveAll: () => IVectorView[PasswordCredential]
+  ): PasswordVault = {
+    val __obj = js.Dynamic.literal(add = js.Any.fromFunction1(add), findAllByResource = js.Any.fromFunction1(findAllByResource), findAllByUserName = js.Any.fromFunction1(findAllByUserName), remove = js.Any.fromFunction1(remove), retrieve = js.Any.fromFunction2(retrieve), retrieveAll = js.Any.fromFunction0(retrieveAll))
+    __obj.asInstanceOf[PasswordVault]
+  }
+  @scala.inline
+  implicit class PasswordVaultOps[Self <: PasswordVault] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdd(value: PasswordCredential => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFindAllByResource(value: String => IVectorView[PasswordCredential]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findAllByResource")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFindAllByUserName(value: String => IVectorView[PasswordCredential]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findAllByUserName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemove(value: PasswordCredential => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRetrieve(value: (String, String) => PasswordCredential): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retrieve")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRetrieveAll(value: () => IVectorView[PasswordCredential]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("retrieveAll")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs
 
+import typingsSlinky.babylonjs.anon.Min
 import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.observableMod.Observable
 import typingsSlinky.babylonjs.observableMod.Observer
@@ -31,7 +32,7 @@ object minMaxReducerMod extends js.Object {
     /**
       * Observable triggered when the computation has been performed
       */
-    var onAfterReductionPerformed: Observable[AnonMin] = js.native
+    var onAfterReductionPerformed: Observable[Min] = js.native
     /**
       * Activates the reduction computation.
       * When activated, the observers registered in onAfterReductionPerformed are

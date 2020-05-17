@@ -6,7 +6,8 @@ import typingsSlinky.node.NodeJS.Signals
 import typingsSlinky.node.bufferMod.TranscodeEncoding
 import typingsSlinky.node.childProcessMod.SerializationType
 import typingsSlinky.node.childProcessMod.StdioNull
-import typingsSlinky.node.childProcessMod._StdioOptions
+import typingsSlinky.node.childProcessMod.StdioOptions
+import typingsSlinky.node.childProcessMod.StdioPipe
 import typingsSlinky.node.cryptoMod.CipherCCMTypes
 import typingsSlinky.node.cryptoMod.CipherGCMTypes
 import typingsSlinky.node.cryptoMod.ECDHKeyFormat
@@ -717,7 +718,7 @@ object nodeStrings {
   @js.native
   sealed trait ignore
     extends StdioNull
-       with _StdioOptions
+       with StdioOptions
   
   @js.native
   sealed trait information extends js.Object
@@ -725,7 +726,7 @@ object nodeStrings {
   @js.native
   sealed trait inherit
     extends StdioNull
-       with _StdioOptions
+       with StdioOptions
   
   @js.native
   sealed trait inspectorNotification extends js.Object
@@ -819,7 +820,9 @@ object nodeStrings {
   sealed trait ping extends js.Object
   
   @js.native
-  sealed trait pipe extends _StdioOptions
+  sealed trait pipe
+    extends StdioOptions
+       with StdioPipe
   
   @js.native
   sealed trait pkcs1 extends js.Object

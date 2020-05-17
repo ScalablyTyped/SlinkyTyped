@@ -5,16 +5,67 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("CUI.Control")
 @js.native
-class Control protected ()
+trait Control
   extends IDisposable
      with IMenuItem {
-  def this(root: Root, id: String, properties: ControlProperties) = this()
   def createComponentForDisplayMode(displayMode: String): js.Any = js.native
   def get_enabled(): Boolean = js.native
   def get_id(): String = js.native
   def get_root(): Root = js.native
   def set_enabled(enabled: Boolean): Boolean = js.native
+}
+
+object Control {
+  @scala.inline
+  def apply(
+    createComponentForDisplayMode: String => js.Any,
+    dispose: () => scala.Unit,
+    get_enabled: () => Boolean,
+    get_id: () => String,
+    get_root: () => Root,
+    set_enabled: Boolean => Boolean
+  ): Control = {
+    val __obj = js.Dynamic.literal(createComponentForDisplayMode = js.Any.fromFunction1(createComponentForDisplayMode), dispose = js.Any.fromFunction0(dispose), get_enabled = js.Any.fromFunction0(get_enabled), get_id = js.Any.fromFunction0(get_id), get_root = js.Any.fromFunction0(get_root), set_enabled = js.Any.fromFunction1(set_enabled))
+    __obj.asInstanceOf[Control]
+  }
+  @scala.inline
+  implicit class ControlOps[Self <: Control] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateComponentForDisplayMode(value: String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createComponentForDisplayMode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet_enabled(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_enabled")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_id(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_id")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_root(value: () => Root): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_root")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSet_enabled(value: Boolean => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_enabled")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

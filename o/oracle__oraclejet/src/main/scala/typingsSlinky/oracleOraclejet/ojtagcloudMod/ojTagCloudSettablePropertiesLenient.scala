@@ -1,9 +1,9 @@
 package typingsSlinky.oracleOraclejet.ojtagcloudMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.Anon24
-import typingsSlinky.oracleOraclejet.AnonHoverBehaviorDelay
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
+import typingsSlinky.oracleOraclejet.anon.HoverBehaviorDelay
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
+import typingsSlinky.oracleOraclejet.anon.`24`
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.all
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.any
@@ -36,11 +36,11 @@ trait ojTagCloudSettablePropertiesLenient[K, D]
   var layout: js.UndefOr[cloud | rectangular] = js.native
   var selection: js.UndefOr[js.Array[K]] = js.native
   var selectionMode: js.UndefOr[single | multiple | none] = js.native
-  var styleDefaults: js.UndefOr[AnonHoverBehaviorDelay] = js.native
-  var tooltip: js.UndefOr[Anon24[K]] = js.native
+  var styleDefaults: js.UndefOr[HoverBehaviorDelay] = js.native
+  var tooltip: js.UndefOr[`24`[K]] = js.native
   var touchResponse: js.UndefOr[touchStart | auto] = js.native
   var trackResize: js.UndefOr[on | off] = js.native
-  var translations: js.UndefOr[AnonLabelAndValue] = js.native
+  var translations: js.UndefOr[LabelAndValue] = js.native
 }
 
 object ojTagCloudSettablePropertiesLenient {
@@ -188,7 +188,7 @@ object ojTagCloudSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withStyleDefaults(value: AnonHoverBehaviorDelay): Self[K, D] = {
+    def withStyleDefaults(value: HoverBehaviorDelay): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styleDefaults")(value.asInstanceOf[js.Any])
         ret
@@ -200,7 +200,7 @@ object ojTagCloudSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTooltip(value: Anon24[K]): Self[K, D] = {
+    def withTooltip(value: `24`[K]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
@@ -236,7 +236,7 @@ object ojTagCloudSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelAndValue): Self[K, D] = {
+    def withTranslations(value: LabelAndValue): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

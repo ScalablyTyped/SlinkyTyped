@@ -10,15 +10,8 @@ import scala.scalajs.js.annotation._
   * Constructs a new canvas to draw images, shapes and texts on.
   * @see https://docs.scriptable.app/drawcontext/#-new-drawcontext
   */
-@JSGlobal("DrawContext")
 @js.native
-/**
-  * _Context for drawing images._
-  *
-  * Constructs a new canvas to draw images, shapes and texts on.
-  * @see https://docs.scriptable.app/drawcontext/#-new-drawcontext
-  */
-class DrawContext () extends js.Object {
+trait DrawContext extends js.Object {
   /**
     * _Determines whether the context is opaque._
     *
@@ -221,5 +214,197 @@ class DrawContext () extends js.Object {
     * @see https://docs.scriptable.app/drawcontext/#-strokerect
     */
   def strokeRect(rect: Rect): Unit = js.native
+}
+
+object DrawContext {
+  @scala.inline
+  def apply(
+    addPath: Path => Unit,
+    drawImageAtPoint: (Image, Point) => Unit,
+    drawImageInRect: (Image, Rect) => Unit,
+    drawText: (String, Point) => Unit,
+    drawTextInRect: (String, Rect) => Unit,
+    fill: Rect => Unit,
+    fillEllipse: Rect => Unit,
+    fillPath: () => Unit,
+    fillRect: Rect => Unit,
+    getImage: () => Image,
+    opaque: Boolean,
+    respectScreenScale: Boolean,
+    setFillColor: Color => Unit,
+    setFontSize: Double => Unit,
+    setLineWidth: Double => Unit,
+    setStrokeColor: Color => Unit,
+    setTextAlignedCenter: () => Unit,
+    setTextAlignedLeft: () => Unit,
+    setTextAlignedRight: () => Unit,
+    setTextColor: Color => Unit,
+    size: Size,
+    stroke: Rect => Unit,
+    strokeEllipse: Rect => Unit,
+    strokePath: () => Unit,
+    strokeRect: Rect => Unit
+  ): DrawContext = {
+    val __obj = js.Dynamic.literal(addPath = js.Any.fromFunction1(addPath), drawImageAtPoint = js.Any.fromFunction2(drawImageAtPoint), drawImageInRect = js.Any.fromFunction2(drawImageInRect), drawText = js.Any.fromFunction2(drawText), drawTextInRect = js.Any.fromFunction2(drawTextInRect), fill = js.Any.fromFunction1(fill), fillEllipse = js.Any.fromFunction1(fillEllipse), fillPath = js.Any.fromFunction0(fillPath), fillRect = js.Any.fromFunction1(fillRect), getImage = js.Any.fromFunction0(getImage), opaque = opaque.asInstanceOf[js.Any], respectScreenScale = respectScreenScale.asInstanceOf[js.Any], setFillColor = js.Any.fromFunction1(setFillColor), setFontSize = js.Any.fromFunction1(setFontSize), setLineWidth = js.Any.fromFunction1(setLineWidth), setStrokeColor = js.Any.fromFunction1(setStrokeColor), setTextAlignedCenter = js.Any.fromFunction0(setTextAlignedCenter), setTextAlignedLeft = js.Any.fromFunction0(setTextAlignedLeft), setTextAlignedRight = js.Any.fromFunction0(setTextAlignedRight), setTextColor = js.Any.fromFunction1(setTextColor), size = size.asInstanceOf[js.Any], stroke = js.Any.fromFunction1(stroke), strokeEllipse = js.Any.fromFunction1(strokeEllipse), strokePath = js.Any.fromFunction0(strokePath), strokeRect = js.Any.fromFunction1(strokeRect))
+    __obj.asInstanceOf[DrawContext]
+  }
+  @scala.inline
+  implicit class DrawContextOps[Self <: DrawContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddPath(value: Path => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addPath")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDrawImageAtPoint(value: (Image, Point) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawImageAtPoint")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withDrawImageInRect(value: (Image, Rect) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawImageInRect")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withDrawText(value: (String, Point) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawText")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withDrawTextInRect(value: (String, Rect) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawTextInRect")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withFill(value: Rect => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFillEllipse(value: Rect => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillEllipse")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFillPath(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillPath")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withFillRect(value: Rect => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fillRect")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetImage(value: () => Image): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getImage")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOpaque(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("opaque")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRespectScreenScale(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("respectScreenScale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetFillColor(value: Color => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFillColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetFontSize(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFontSize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetLineWidth(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setLineWidth")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetStrokeColor(value: Color => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStrokeColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetTextAlignedCenter(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTextAlignedCenter")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetTextAlignedLeft(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTextAlignedLeft")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetTextAlignedRight(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTextAlignedRight")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetTextColor(value: Color => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTextColor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSize(value: Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStroke(value: Rect => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stroke")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withStrokeEllipse(value: Rect => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeEllipse")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withStrokePath(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokePath")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStrokeRect(value: Rect => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("strokeRect")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

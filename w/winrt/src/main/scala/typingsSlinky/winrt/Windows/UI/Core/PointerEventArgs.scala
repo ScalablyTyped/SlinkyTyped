@@ -1,10 +1,25 @@
 package typingsSlinky.winrt.Windows.UI.Core
 
+import typingsSlinky.winrt.Windows.Foundation.Collections.IVector
+import typingsSlinky.winrt.Windows.System.VirtualKeyModifiers
+import typingsSlinky.winrt.Windows.UI.Input.PointerPoint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.UI.Core.PointerEventArgs")
 @js.native
-class PointerEventArgs () extends IPointerEventArgs
+trait PointerEventArgs extends IPointerEventArgs
+
+object PointerEventArgs {
+  @scala.inline
+  def apply(
+    currentPoint: PointerPoint,
+    getIntermediatePoints: () => IVector[PointerPoint],
+    handled: Boolean,
+    keyModifiers: VirtualKeyModifiers
+  ): PointerEventArgs = {
+    val __obj = js.Dynamic.literal(currentPoint = currentPoint.asInstanceOf[js.Any], getIntermediatePoints = js.Any.fromFunction0(getIntermediatePoints), handled = handled.asInstanceOf[js.Any], keyModifiers = keyModifiers.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PointerEventArgs]
+  }
+}
 

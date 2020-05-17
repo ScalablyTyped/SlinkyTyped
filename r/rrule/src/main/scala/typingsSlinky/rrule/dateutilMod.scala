@@ -1,5 +1,6 @@
 package typingsSlinky.rrule
 
+import typingsSlinky.rrule.anon.PickDategetTime
 import typingsSlinky.rrule.datetimeMod.Time
 import scala.scalajs.js
 import scala.scalajs.js.`|`

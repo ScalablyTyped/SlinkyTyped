@@ -1,9 +1,9 @@
 package typingsSlinky.fsPromise.mod
 
-import typingsSlinky.mz.Anon2
-import typingsSlinky.mz.Anon3
-import typingsSlinky.mz.AnonEncodingWithFileTypes
-import typingsSlinky.mz.AnonWithFileTypes
+import typingsSlinky.mz.anon.EncodingWithFileTypes
+import typingsSlinky.mz.anon.WithFileTypes
+import typingsSlinky.mz.anon.`2`
+import typingsSlinky.mz.anon.`3`
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.ErrnoException
@@ -26,53 +26,28 @@ object readdir extends js.Object {
   ): Unit = js.native
   def apply(
     path: PathLike,
-    options: js.UndefOr[scala.Nothing],
+    options: js.UndefOr[`2` | BufferEncoding | Null | String | WithFileTypes],
     callback: js.Function2[ErrnoException | Null, /* files */ js.Array[Buffer | String], Unit]
   ): Unit = js.native
   def apply(path: PathLike, options: String): js.Promise[js.Array[Buffer | String]] = js.native
+  def apply(path: PathLike, options: EncodingWithFileTypes): js.Promise[js.Array[Buffer]] = js.native
   def apply(
     path: PathLike,
-    options: String,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[Buffer | String], Unit]
+    options: EncodingWithFileTypes,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[Buffer], Unit]
   ): Unit = js.native
+  def apply(path: PathLike, options: WithFileTypes): js.Promise[js.Array[String]] = js.native
+  def apply(path: PathLike, options: `2`): js.Promise[js.Array[Buffer | String]] = js.native
+  def apply(path: PathLike, options: `3`): js.Promise[js.Array[typingsSlinky.node.fsMod.Dirent]] = js.native
   def apply(
     path: PathLike,
-    options: Null,
-    callback: js.Function2[ErrnoException | Null, /* files */ js.Array[Buffer | String], Unit]
-  ): Unit = js.native
-  def apply(path: PathLike, options: Anon2): js.Promise[js.Array[Buffer | String]] = js.native
-  def apply(
-    path: PathLike,
-    options: Anon2,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[Buffer | String], Unit]
-  ): Unit = js.native
-  def apply(path: PathLike, options: Anon3): js.Promise[js.Array[typingsSlinky.node.fsMod.Dirent]] = js.native
-  def apply(
-    path: PathLike,
-    options: Anon3,
+    options: `3`,
     callback: js.Function2[
       /* err */ ErrnoException | Null, 
       /* files */ js.Array[typingsSlinky.node.fsMod.Dirent], 
       Unit
     ]
   ): Unit = js.native
-  def apply(path: PathLike, options: AnonEncodingWithFileTypes): js.Promise[js.Array[Buffer]] = js.native
-  def apply(
-    path: PathLike,
-    options: AnonEncodingWithFileTypes,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[Buffer], Unit]
-  ): Unit = js.native
-  def apply(path: PathLike, options: AnonWithFileTypes): js.Promise[js.Array[String]] = js.native
-  def apply(
-    path: PathLike,
-    options: AnonWithFileTypes,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[String], Unit]
-  ): Unit = js.native
   def apply(path: PathLike, options: BufferEncoding): js.Promise[js.Array[String]] = js.native
-  def apply(
-    path: PathLike,
-    options: BufferEncoding,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[String], Unit]
-  ): Unit = js.native
 }
 

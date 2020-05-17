@@ -1,7 +1,7 @@
 package typingsSlinky.reactRelay.mod
 
 import slinky.core.TagMod
-import typingsSlinky.reactRelay.AnonError
+import typingsSlinky.reactRelay.anon.Error
 import typingsSlinky.relayRuntime.readerNodeMod.ReaderFragment
 import typingsSlinky.relayRuntime.relayConcreteNodeMod.ConcreteRequest
 import typingsSlinky.relayRuntime.relayModernGraphQLTagMod.GraphQLTaggedNode
@@ -15,14 +15,14 @@ trait QueryRendererProps[TOperation /* <: OperationType */] extends js.Object {
   var environment: typingsSlinky.relayRuntime.relayStoreTypesMod.Environment = js.native
   var query: js.UndefOr[GraphQLTaggedNode | Null] = js.native
   var variables: /* import warning: importer.ImportType#apply Failed type conversion: TOperation['variables'] */ js.Any = js.native
-  def render(renderProps: AnonError[TOperation]): TagMod[Any] = js.native
+  def render(renderProps: Error[TOperation]): TagMod[Any] = js.native
 }
 
 object QueryRendererProps {
   @scala.inline
   def apply[TOperation](
     environment: typingsSlinky.relayRuntime.relayStoreTypesMod.Environment,
-    render: AnonError[TOperation] => TagMod[Any],
+    render: Error[TOperation] => TagMod[Any],
     variables: /* import warning: importer.ImportType#apply Failed type conversion: TOperation['variables'] */ js.Any
   ): QueryRendererProps[TOperation] = {
     val __obj = js.Dynamic.literal(environment = environment.asInstanceOf[js.Any], render = js.Any.fromFunction1(render), variables = variables.asInstanceOf[js.Any])
@@ -41,7 +41,7 @@ object QueryRendererProps {
         ret
     }
     @scala.inline
-    def withRender(value: AnonError[TOperation] => TagMod[Any]): Self[TOperation] = {
+    def withRender(value: Error[TOperation] => TagMod[Any]): Self[TOperation] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.Any.fromFunction1(value))
         ret

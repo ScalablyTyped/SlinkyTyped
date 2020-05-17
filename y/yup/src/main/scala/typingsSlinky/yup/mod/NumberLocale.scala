@@ -1,10 +1,10 @@
 package typingsSlinky.yup.mod
 
-import typingsSlinky.yup.AnonLess
-import typingsSlinky.yup.AnonMax
-import typingsSlinky.yup.AnonMin
-import typingsSlinky.yup.AnonMore
-import typingsSlinky.yup.PartialTestMessageParams
+import typingsSlinky.yup.anon.Less
+import typingsSlinky.yup.anon.Max
+import typingsSlinky.yup.anon.Min
+import typingsSlinky.yup.anon.More
+import typingsSlinky.yup.anon.PartialTestMessageParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +12,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait NumberLocale extends js.Object {
   var integer: js.UndefOr[TestOptionsMessage[js.Object, _]] = js.native
-  var lessThan: js.UndefOr[TestOptionsMessage[AnonLess, _]] = js.native
-  var max: js.UndefOr[TestOptionsMessage[AnonMax, _]] = js.native
-  var min: js.UndefOr[TestOptionsMessage[AnonMin, _]] = js.native
-  var moreThan: js.UndefOr[TestOptionsMessage[AnonMore, _]] = js.native
-  var negative: js.UndefOr[TestOptionsMessage[AnonLess, _]] = js.native
-  var positive: js.UndefOr[TestOptionsMessage[AnonMore, _]] = js.native
+  var lessThan: js.UndefOr[TestOptionsMessage[Less, _]] = js.native
+  var max: js.UndefOr[TestOptionsMessage[Max, _]] = js.native
+  var min: js.UndefOr[TestOptionsMessage[Min, _]] = js.native
+  var moreThan: js.UndefOr[TestOptionsMessage[More, _]] = js.native
+  var negative: js.UndefOr[TestOptionsMessage[Less, _]] = js.native
+  var positive: js.UndefOr[TestOptionsMessage[More, _]] = js.native
 }
 
 object NumberLocale {
@@ -51,13 +51,13 @@ object NumberLocale {
         ret
     }
     @scala.inline
-    def withLessThanFunction1(value: /* params */ AnonLess with PartialTestMessageParams => _): Self = {
+    def withLessThanFunction1(value: /* params */ Less with PartialTestMessageParams => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lessThan")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withLessThan(value: TestOptionsMessage[AnonLess, _]): Self = {
+    def withLessThan(value: TestOptionsMessage[Less, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lessThan")(value.asInstanceOf[js.Any])
         ret
@@ -69,13 +69,13 @@ object NumberLocale {
         ret
     }
     @scala.inline
-    def withMaxFunction1(value: /* params */ AnonMax with PartialTestMessageParams => _): Self = {
+    def withMaxFunction1(value: /* params */ Max with PartialTestMessageParams => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withMax(value: TestOptionsMessage[AnonMax, _]): Self = {
+    def withMax(value: TestOptionsMessage[Max, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("max")(value.asInstanceOf[js.Any])
         ret
@@ -87,13 +87,13 @@ object NumberLocale {
         ret
     }
     @scala.inline
-    def withMinFunction1(value: /* params */ AnonMin with PartialTestMessageParams => _): Self = {
+    def withMinFunction1(value: /* params */ Min with PartialTestMessageParams => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withMin(value: TestOptionsMessage[AnonMin, _]): Self = {
+    def withMin(value: TestOptionsMessage[Min, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("min")(value.asInstanceOf[js.Any])
         ret
@@ -105,13 +105,13 @@ object NumberLocale {
         ret
     }
     @scala.inline
-    def withMoreThanFunction1(value: /* params */ AnonMore with PartialTestMessageParams => _): Self = {
+    def withMoreThanFunction1(value: /* params */ More with PartialTestMessageParams => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("moreThan")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withMoreThan(value: TestOptionsMessage[AnonMore, _]): Self = {
+    def withMoreThan(value: TestOptionsMessage[More, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("moreThan")(value.asInstanceOf[js.Any])
         ret
@@ -123,13 +123,13 @@ object NumberLocale {
         ret
     }
     @scala.inline
-    def withNegativeFunction1(value: /* params */ AnonLess with PartialTestMessageParams => _): Self = {
+    def withNegativeFunction1(value: /* params */ Less with PartialTestMessageParams => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("negative")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withNegative(value: TestOptionsMessage[AnonLess, _]): Self = {
+    def withNegative(value: TestOptionsMessage[Less, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("negative")(value.asInstanceOf[js.Any])
         ret
@@ -141,13 +141,13 @@ object NumberLocale {
         ret
     }
     @scala.inline
-    def withPositiveFunction1(value: /* params */ AnonMore with PartialTestMessageParams => _): Self = {
+    def withPositiveFunction1(value: /* params */ More with PartialTestMessageParams => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("positive")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPositive(value: TestOptionsMessage[AnonMore, _]): Self = {
+    def withPositive(value: TestOptionsMessage[More, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("positive")(value.asInstanceOf[js.Any])
         ret

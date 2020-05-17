@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientS3Node.typesPutBucketNotificationOutputMod
 
-import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PutBucketNotificationOutput
   extends MetadataBearer
-     with _OutputTypesUnion
+     with OutputTypesUnion
 
 object PutBucketNotificationOutput {
   @scala.inline

@@ -6,14 +6,18 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait RTCIceTransportEventMap extends js.Object {
-  var gatheringstatechange: Event_ = js.native
-  var selectedcandidatepairchange: Event_ = js.native
-  var statechange: Event_ = js.native
+  var gatheringstatechange: org.scalajs.dom.raw.Event = js.native
+  var selectedcandidatepairchange: org.scalajs.dom.raw.Event = js.native
+  var statechange: org.scalajs.dom.raw.Event = js.native
 }
 
 object RTCIceTransportEventMap {
   @scala.inline
-  def apply(gatheringstatechange: Event_, selectedcandidatepairchange: Event_, statechange: Event_): RTCIceTransportEventMap = {
+  def apply(
+    gatheringstatechange: org.scalajs.dom.raw.Event,
+    selectedcandidatepairchange: org.scalajs.dom.raw.Event,
+    statechange: org.scalajs.dom.raw.Event
+  ): RTCIceTransportEventMap = {
     val __obj = js.Dynamic.literal(gatheringstatechange = gatheringstatechange.asInstanceOf[js.Any], selectedcandidatepairchange = selectedcandidatepairchange.asInstanceOf[js.Any], statechange = statechange.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCIceTransportEventMap]
   }
@@ -24,19 +28,19 @@ object RTCIceTransportEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGatheringstatechange(value: Event_): Self = {
+    def withGatheringstatechange(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gatheringstatechange")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSelectedcandidatepairchange(value: Event_): Self = {
+    def withSelectedcandidatepairchange(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectedcandidatepairchange")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withStatechange(value: Event_): Self = {
+    def withStatechange(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("statechange")(value.asInstanceOf[js.Any])
         ret

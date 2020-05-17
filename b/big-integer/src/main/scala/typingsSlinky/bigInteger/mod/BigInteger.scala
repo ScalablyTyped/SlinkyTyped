@@ -1,12 +1,12 @@
 package typingsSlinky.bigInteger.mod
 
-import typingsSlinky.bigInteger.AnonQuotient
+import typingsSlinky.bigInteger.anon.Quotient
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait BigInteger extends js.Object {
+trait BigInteger extends BigNumber {
   /**
     * Returns the absolute value of a bigInt.
     */
@@ -44,7 +44,7 @@ trait BigInteger extends js.Object {
     * Performs division and returns an object with two properties: quotient and remainder.
     * The sign of the remainder will match the sign of the dividend.
     */
-  def divmod(number: BigNumber): AnonQuotient = js.native
+  def divmod(number: BigNumber): Quotient = js.native
   /**
     * Alias for the equals method.
     */

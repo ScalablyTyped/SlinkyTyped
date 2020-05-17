@@ -1,19 +1,19 @@
 package typingsSlinky.psl.mod
 
-import typingsSlinky.psl.AnonCode
+import typingsSlinky.psl.anon.Code
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ParseError extends js.Object {
-  var error: AnonCode = js.native
+  var error: Code = js.native
   var input: String = js.native
 }
 
 object ParseError {
   @scala.inline
-  def apply(error: AnonCode, input: String): ParseError = {
+  def apply(error: Code, input: String): ParseError = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParseError]
   }
@@ -24,7 +24,7 @@ object ParseError {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withError(value: AnonCode): Self = {
+    def withError(value: Code): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret

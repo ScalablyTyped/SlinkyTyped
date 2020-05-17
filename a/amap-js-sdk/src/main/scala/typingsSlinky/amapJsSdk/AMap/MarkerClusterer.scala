@@ -7,11 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * 用于地图上加载大量点标记，提高地图的绘制和显示性能。
   */
-@JSGlobal("AMap.MarkerClusterer")
 @js.native
-class MarkerClusterer protected () extends EventBindable {
-  def this(map: Map, markers: js.Array[Marker]) = this()
-  def this(map: Map, markers: js.Array[Marker], opt: MarkerClustererOptions) = this()
+trait MarkerClusterer extends EventBindable {
   /**
     * 添加一个需进行聚合的点标记
     * @param marker
@@ -102,5 +99,164 @@ class MarkerClusterer protected () extends EventBindable {
     * @param styles
     */
   def setStyles(styles: js.Array[_]): Unit = js.native
+}
+
+object MarkerClusterer {
+  @scala.inline
+  def apply(
+    addMarker: Marker => Unit,
+    addMarkers: js.Array[Marker] => Unit,
+    clearMarkers: () => Unit,
+    getClustersCount: () => Double,
+    getGridSize: () => Double,
+    getMap: () => Map,
+    getMarkers: () => js.Array[Marker],
+    getMaxZoom: () => Double,
+    getMinClusterSize: () => Double,
+    getStyles: () => js.Array[_],
+    isAverageCenter: () => Boolean,
+    off: (String, EventCallback) => Unit,
+    on: (String, EventCallback) => Unit,
+    removeMarker: Marker => Unit,
+    removeMarkers: js.Array[Marker] => Unit,
+    setAverageCenter: Boolean => Unit,
+    setGridSize: Double => Unit,
+    setMap: Map => Unit,
+    setMarkers: js.Array[Marker] => Unit,
+    setMaxZoom: Double => Unit,
+    setMinClusterSize: Double => Unit,
+    setStyles: js.Array[_] => Unit
+  ): MarkerClusterer = {
+    val __obj = js.Dynamic.literal(addMarker = js.Any.fromFunction1(addMarker), addMarkers = js.Any.fromFunction1(addMarkers), clearMarkers = js.Any.fromFunction0(clearMarkers), getClustersCount = js.Any.fromFunction0(getClustersCount), getGridSize = js.Any.fromFunction0(getGridSize), getMap = js.Any.fromFunction0(getMap), getMarkers = js.Any.fromFunction0(getMarkers), getMaxZoom = js.Any.fromFunction0(getMaxZoom), getMinClusterSize = js.Any.fromFunction0(getMinClusterSize), getStyles = js.Any.fromFunction0(getStyles), isAverageCenter = js.Any.fromFunction0(isAverageCenter), off = js.Any.fromFunction2(off), on = js.Any.fromFunction2(on), removeMarker = js.Any.fromFunction1(removeMarker), removeMarkers = js.Any.fromFunction1(removeMarkers), setAverageCenter = js.Any.fromFunction1(setAverageCenter), setGridSize = js.Any.fromFunction1(setGridSize), setMap = js.Any.fromFunction1(setMap), setMarkers = js.Any.fromFunction1(setMarkers), setMaxZoom = js.Any.fromFunction1(setMaxZoom), setMinClusterSize = js.Any.fromFunction1(setMinClusterSize), setStyles = js.Any.fromFunction1(setStyles))
+    __obj.asInstanceOf[MarkerClusterer]
+  }
+  @scala.inline
+  implicit class MarkerClustererOps[Self <: MarkerClusterer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddMarker(value: Marker => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addMarker")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAddMarkers(value: js.Array[Marker] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addMarkers")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withClearMarkers(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clearMarkers")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetClustersCount(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getClustersCount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetGridSize(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getGridSize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMap(value: () => Map): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMap")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMarkers(value: () => js.Array[Marker]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMarkers")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMaxZoom(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxZoom")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMinClusterSize(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMinClusterSize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetStyles(value: () => js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStyles")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsAverageCenter(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAverageCenter")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveMarker(value: Marker => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeMarker")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveMarkers(value: js.Array[Marker] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeMarkers")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetAverageCenter(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAverageCenter")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetGridSize(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setGridSize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetMap(value: Map => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMap")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetMarkers(value: js.Array[Marker] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMarkers")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetMaxZoom(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMaxZoom")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetMinClusterSize(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMinClusterSize")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetStyles(value: js.Array[_] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStyles")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

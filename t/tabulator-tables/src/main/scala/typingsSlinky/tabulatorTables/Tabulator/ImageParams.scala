@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ImageParams extends _FormatterParams {
+trait ImageParams extends FormatterParams {
   // Image
   var height: js.UndefOr[String] = js.native
   var width: js.UndefOr[String] = js.native

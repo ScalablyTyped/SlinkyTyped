@@ -1,7 +1,7 @@
 package typingsSlinky.intercomClient.userMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.intercomClient.PartialCompanyremoveboole
+import typingsSlinky.intercomClient.anon.PartialCompanyremoveboole
 import typingsSlinky.intercomClient.intercomClientStrings.contact
 import typingsSlinky.intercomClient.intercomClientStrings.user
 import scala.scalajs.js

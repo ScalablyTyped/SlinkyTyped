@@ -1,7 +1,7 @@
 package typingsSlinky.reactRedux.mod
 
 import typingsSlinky.react.mod.Context
-import typingsSlinky.reactRedux.Fn1
+import typingsSlinky.reactRedux.anon.Fn1
 import typingsSlinky.redux.mod.AnyAction
 import scala.scalajs.js
 import scala.scalajs.js.`|`

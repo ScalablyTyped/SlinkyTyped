@@ -1,5 +1,6 @@
 package typingsSlinky.appBuilderLib
 
+import typingsSlinky.appBuilderLib.anon.Provider
 import typingsSlinky.appBuilderLib.packagerMod.Packager
 import typingsSlinky.appBuilderLib.platformPackagerMod.PlatformPackager
 import typingsSlinky.appBuilderLib.platformSpecificBuildOptionsMod.PlatformSpecificBuildOptions
@@ -43,40 +44,16 @@ object publishManagerMod extends js.Object {
     options: PublishOptions,
     packager: Packager
   ): Publisher | Null = js.native
-  def getAppUpdatePublishConfiguration(packager: PlatformPackager[_], arch: Arch, errorIfCannot: Boolean): js.Promise[AnonProvider | Null] = js.native
+  def getAppUpdatePublishConfiguration(packager: PlatformPackager[_], arch: Arch, errorIfCannot: Boolean): js.Promise[Provider | Null] = js.native
   def getPublishConfigs(
     platformPackager: PlatformPackager[_],
-    targetSpecificOptions: js.UndefOr[scala.Nothing],
+    targetSpecificOptions: js.UndefOr[Null | PlatformSpecificBuildOptions],
     arch: Null,
     errorIfCannot: Boolean
   ): js.Promise[js.Array[PublishConfiguration] | Null] = js.native
   def getPublishConfigs(
     platformPackager: PlatformPackager[_],
-    targetSpecificOptions: js.UndefOr[scala.Nothing],
-    arch: Arch,
-    errorIfCannot: Boolean
-  ): js.Promise[js.Array[PublishConfiguration] | Null] = js.native
-  def getPublishConfigs(
-    platformPackager: PlatformPackager[_],
-    targetSpecificOptions: Null,
-    arch: Null,
-    errorIfCannot: Boolean
-  ): js.Promise[js.Array[PublishConfiguration] | Null] = js.native
-  def getPublishConfigs(
-    platformPackager: PlatformPackager[_],
-    targetSpecificOptions: Null,
-    arch: Arch,
-    errorIfCannot: Boolean
-  ): js.Promise[js.Array[PublishConfiguration] | Null] = js.native
-  def getPublishConfigs(
-    platformPackager: PlatformPackager[_],
-    targetSpecificOptions: PlatformSpecificBuildOptions,
-    arch: Null,
-    errorIfCannot: Boolean
-  ): js.Promise[js.Array[PublishConfiguration] | Null] = js.native
-  def getPublishConfigs(
-    platformPackager: PlatformPackager[_],
-    targetSpecificOptions: PlatformSpecificBuildOptions,
+    targetSpecificOptions: js.UndefOr[Null | PlatformSpecificBuildOptions],
     arch: Arch,
     errorIfCannot: Boolean
   ): js.Promise[js.Array[PublishConfiguration] | Null] = js.native

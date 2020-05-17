@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignProLayout.libSettingDrawerMod
 
-import typingsSlinky.antDesignProLayout.AnonDefaultOpenAll
+import typingsSlinky.antDesignProLayout.anon.DefaultOpenAll
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.realDark
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.sidemenu
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.topmenu
@@ -20,7 +20,7 @@ trait SettingDrawerState extends js.Object {
   var iconfontUrl: js.UndefOr[String] = js.native
   var language: js.UndefOr[String] = js.native
   var layout: js.UndefOr[sidemenu | topmenu] = js.native
-  var menu: js.UndefOr[AnonDefaultOpenAll] = js.native
+  var menu: js.UndefOr[DefaultOpenAll] = js.native
   var navTheme: js.UndefOr[
     (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MenuTheme */ js.Any) | realDark
   ] = js.native
@@ -137,7 +137,7 @@ object SettingDrawerState {
         ret
     }
     @scala.inline
-    def withMenu(value: AnonDefaultOpenAll): Self = {
+    def withMenu(value: DefaultOpenAll): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
         ret

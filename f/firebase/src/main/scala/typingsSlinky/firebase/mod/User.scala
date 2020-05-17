@@ -1,6 +1,6 @@
 package typingsSlinky.firebase.mod
 
-import typingsSlinky.firebase.AnonDisplayName
+import typingsSlinky.firebase.anon.DisplayName
 import typingsSlinky.firebase.mod.User.MultiFactorUser
 import typingsSlinky.firebase.mod.auth.ActionCodeSettings
 import typingsSlinky.firebase.mod.auth.ApplicationVerifier
@@ -753,7 +753,7 @@ trait User extends UserInfo {
     * @param profile The profile's
     *     displayName and photoURL to update.
     */
-  def updateProfile(profile: AnonDisplayName): js.Promise[Unit] = js.native
+  def updateProfile(profile: DisplayName): js.Promise[Unit] = js.native
   /**
     * Sends a verification email to a new email address. The user's email will be
     * updated to the new one after being verified.

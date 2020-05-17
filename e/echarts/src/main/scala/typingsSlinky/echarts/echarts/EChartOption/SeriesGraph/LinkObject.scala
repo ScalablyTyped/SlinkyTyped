@@ -1,8 +1,8 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesGraph
 
-import typingsSlinky.echarts.AnonFontStyle
-import typingsSlinky.echarts.AnonLabelLineStyle
-import typingsSlinky.echarts.AnonShadowColor
+import typingsSlinky.echarts.anon.FontStyle
+import typingsSlinky.echarts.anon.LabelLineStyle
+import typingsSlinky.echarts.anon.ShadowColor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,18 +12,18 @@ trait LinkObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-graph.links.emphasis
     */
-  var emphasis: js.UndefOr[AnonLabelLineStyle] = js.native
+  var emphasis: js.UndefOr[LabelLineStyle] = js.native
   /**
     * @see https://echarts.apache.org/en/option.html#series-graph.links.label
     */
-  var label: js.UndefOr[AnonFontStyle] = js.native
+  var label: js.UndefOr[FontStyle] = js.native
   /**
     * Line style of edges.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.links.lineStyle
     */
-  var lineStyle: js.UndefOr[AnonShadowColor] = js.native
+  var lineStyle: js.UndefOr[ShadowColor] = js.native
   /**
     * [name of source node](https://echarts.apache.org/en/option.html#series-graph.data.name)
     * on edge
@@ -80,7 +80,7 @@ object LinkObject {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEmphasis(value: AnonLabelLineStyle): Self = {
+    def withEmphasis(value: LabelLineStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -92,7 +92,7 @@ object LinkObject {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonFontStyle): Self = {
+    def withLabel(value: FontStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -104,7 +104,7 @@ object LinkObject {
         ret
     }
     @scala.inline
-    def withLineStyle(value: AnonShadowColor): Self = {
+    def withLineStyle(value: ShadowColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
         ret

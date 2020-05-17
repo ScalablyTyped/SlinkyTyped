@@ -11,7 +11,7 @@ import typingsSlinky.nivoCore.mod.Box
 import typingsSlinky.nivoCore.mod.CssMixBlendMode
 import typingsSlinky.nivoCore.mod.Theme
 import typingsSlinky.nivoLegends.mod.LegendProps
-import typingsSlinky.nivoSankey.AnonLinks
+import typingsSlinky.nivoSankey.anon.Links
 import typingsSlinky.nivoSankey.mod.AccessorFunc
 import typingsSlinky.nivoSankey.mod.Data
 import typingsSlinky.nivoSankey.mod.LabelFormatter
@@ -129,7 +129,7 @@ object ResponsiveSankey {
   
   def withProps(p: Data with SankeyProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(data: AnonLinks): Builder = {
+  def apply(data: Links): Builder = {
     val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[Data with SankeyProps]))
   }

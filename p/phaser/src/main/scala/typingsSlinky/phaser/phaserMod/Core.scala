@@ -1,7 +1,6 @@
 package typingsSlinky.phaser.phaserMod
 
 import typingsSlinky.phaser.Phaser.Types.Core.FPSConfig
-import typingsSlinky.phaser.Phaser.Types.Core.GameConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +18,7 @@ object Core extends js.Object {
     */
   class Config ()
     extends typingsSlinky.phaser.Phaser.Core.Config {
-    def this(GameConfig: GameConfig) = this()
+    def this(GameConfig: typingsSlinky.phaser.Phaser.Types.Core.GameConfig) = this()
   }
   
   /**

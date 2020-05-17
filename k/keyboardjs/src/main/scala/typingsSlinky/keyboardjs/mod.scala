@@ -1,9 +1,9 @@
 package typingsSlinky.keyboardjs
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLFormElement
-import typingsSlinky.std.Document_
+import org.scalajs.dom.raw.Window
 import typingsSlinky.std.KeyboardEvent
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -48,10 +48,10 @@ object mod extends js.Object {
   def unbind(keyCombo: js.Array[String], pressed: Callback): Unit = js.native
   def unbind(keyCombo: js.Array[String], pressed: Callback, released: Callback): Unit = js.native
   def watch(): Unit = js.native
-  def watch(myDoc: Document_): Unit = js.native
+  def watch(myDoc: Document): Unit = js.native
   def watch(myDoc: HTMLFormElement): Unit = js.native
-  def watch(myWin: Window_, myDoc: Document_): Unit = js.native
-  def watch(myWin: Window_, myDoc: HTMLFormElement): Unit = js.native
+  def watch(myWin: Window, myDoc: Document): Unit = js.native
+  def watch(myWin: Window, myDoc: HTMLFormElement): Unit = js.native
   def withContext(identifier: String, inContextCallBack: js.Function0[Unit]): Unit = js.native
   /**
     * Callback function when a keyCombo is triggered.

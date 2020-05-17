@@ -1,10 +1,10 @@
 package typingsSlinky.electron.originalFsMod
 
-import typingsSlinky.node.AnonEncodingFlag
-import typingsSlinky.node.AnonFlag
-import typingsSlinky.node.AnonFlagString
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ErrnoException
+import typingsSlinky.node.anon.EncodingFlag
+import typingsSlinky.node.anon.Flag
+import typingsSlinky.node.anon.FlagString
 import typingsSlinky.node.fsMod.PathLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,29 +17,18 @@ object readFile extends js.Object {
   def apply(path: Double, callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]): Unit = js.native
   def apply(
     path: Double,
-    options: js.UndefOr[scala.Nothing],
+    options: js.UndefOr[Flag | FlagString | Null | String],
     callback: js.Function2[ErrnoException | Null, Buffer | String, Unit]
   ): Unit = js.native
   def apply(
     path: Double,
     options: String,
-    callback: js.Function2[ErrnoException | Null, Buffer | (/* data */ String), Unit]
-  ): Unit = js.native
-  def apply(path: Double, options: Null, callback: js.Function2[ErrnoException | Null, Buffer | String, Unit]): Unit = js.native
-  def apply(
-    path: Double,
-    options: AnonEncodingFlag,
     callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String, Unit]
   ): Unit = js.native
   def apply(
     path: Double,
-    options: AnonFlagString,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String | Buffer, Unit]
-  ): Unit = js.native
-  def apply(
-    path: Double,
-    options: AnonFlag,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]
+    options: EncodingFlag,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String, Unit]
   ): Unit = js.native
   /**
     * Asynchronously reads the entire contents of a file.
@@ -47,21 +36,13 @@ object readFile extends js.Object {
     * If a file descriptor is provided, the underlying file will _not_ be closed automatically.
     */
   def apply(path: PathLike, callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]): Unit = js.native
-  def apply(
-    path: PathLike,
-    options: js.UndefOr[scala.Nothing],
-    callback: js.Function2[ErrnoException | Null, Buffer | String, Unit]
-  ): Unit = js.native
-  def apply(
-    path: PathLike,
-    options: String,
-    callback: js.Function2[ErrnoException | Null, Buffer | (/* data */ String), Unit]
-  ): Unit = js.native
-  def apply(
-    path: PathLike,
-    options: Null,
-    callback: js.Function2[ErrnoException | Null, Buffer | String, Unit]
-  ): Unit = js.native
+  /**
+    * Asynchronously reads the entire contents of a file.
+    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
+    * If a file descriptor is provided, the underlying file will _not_ be closed automatically.
+    * @param options An object that may contain an optional flag.
+    * If a flag is not provided, it defaults to `'r'`.
+    */
   /**
     * Asynchronously reads the entire contents of a file.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -72,7 +53,12 @@ object readFile extends js.Object {
     */
   def apply(
     path: PathLike,
-    options: AnonEncodingFlag,
+    options: js.UndefOr[Flag | FlagString | Null | String],
+    callback: js.Function2[ErrnoException | Null, Buffer | String, Unit]
+  ): Unit = js.native
+  def apply(
+    path: PathLike,
+    options: String,
     callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String, Unit]
   ): Unit = js.native
   /**
@@ -85,31 +71,19 @@ object readFile extends js.Object {
     */
   def apply(
     path: PathLike,
-    options: AnonFlagString,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String | Buffer, Unit]
-  ): Unit = js.native
-  /**
-    * Asynchronously reads the entire contents of a file.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * If a file descriptor is provided, the underlying file will _not_ be closed automatically.
-    * @param options An object that may contain an optional flag.
-    * If a flag is not provided, it defaults to `'r'`.
-    */
-  def apply(
-    path: PathLike,
-    options: AnonFlag,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]
+    options: EncodingFlag,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String, Unit]
   ): Unit = js.native
   @JSName("__promisify__")
   def promisify(path: Double): js.Promise[Buffer] = js.native
   @JSName("__promisify__")
   def promisify(path: Double, options: String): js.Promise[String] = js.native
   @JSName("__promisify__")
-  def promisify(path: Double, options: AnonEncodingFlag): js.Promise[String] = js.native
+  def promisify(path: Double, options: EncodingFlag): js.Promise[String] = js.native
   @JSName("__promisify__")
-  def promisify(path: Double, options: AnonFlag): js.Promise[Buffer] = js.native
+  def promisify(path: Double, options: Flag): js.Promise[Buffer] = js.native
   @JSName("__promisify__")
-  def promisify(path: Double, options: AnonFlagString): js.Promise[String | Buffer] = js.native
+  def promisify(path: Double, options: FlagString): js.Promise[String | Buffer] = js.native
   /**
     * Asynchronously reads the entire contents of a file.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -138,10 +112,10 @@ object readFile extends js.Object {
     * If a flag is not provided, it defaults to `'r'`.
     */
   @JSName("__promisify__")
-  def promisify(path: PathLike, options: AnonEncodingFlag): js.Promise[String] = js.native
+  def promisify(path: PathLike, options: EncodingFlag): js.Promise[String] = js.native
   @JSName("__promisify__")
-  def promisify(path: PathLike, options: AnonFlag): js.Promise[Buffer] = js.native
+  def promisify(path: PathLike, options: Flag): js.Promise[Buffer] = js.native
   @JSName("__promisify__")
-  def promisify(path: PathLike, options: AnonFlagString): js.Promise[String | Buffer] = js.native
+  def promisify(path: PathLike, options: FlagString): js.Promise[String | Buffer] = js.native
 }
 

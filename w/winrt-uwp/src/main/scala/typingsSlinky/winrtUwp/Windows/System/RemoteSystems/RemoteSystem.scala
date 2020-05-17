@@ -1,17 +1,14 @@
 package typingsSlinky.winrtUwp.Windows.System.RemoteSystems
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterable
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
-import typingsSlinky.winrtUwp.Windows.Networking.HostName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This class manages the attributes of a discovered remote system (device) and provides the capabilities to discover remote systems as part of Project Rome. */
-@JSGlobal("Windows.System.RemoteSystems.RemoteSystem")
 @js.native
-abstract class RemoteSystem () extends js.Object {
+trait RemoteSystem extends js.Object {
   /** A list of the applications on this remote system that have registered with the Connected Devices Platform. */
   var apps: IVectorView[RemoteSystemApp] = js.native
   /** Gets the machine name of the given remote system. */
@@ -36,19 +33,97 @@ abstract class RemoteSystem () extends js.Object {
   def getCapabilitySupportedAsync(capabilityName: String): IPromiseWithIAsyncOperation[Boolean] = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.System.RemoteSystems.RemoteSystem")
-@js.native
-object RemoteSystem extends js.Object {
-  /** Returns a RemoteSystemWatcher object with no filters. */
-  def createWatcher(): RemoteSystemWatcher = js.native
-  /** Returns a RemoteSystemWatcher object that filters the remote systems it can see. The filters parameter determines which remote systems will be seen. */
-  def createWatcher(filters: IIterable[IRemoteSystemFilter]): RemoteSystemWatcher = js.native
-  /** Attempts to discover a single remote system specified by the HostName parameter. */
-  def findByHostNameAsync(host: HostName): IPromiseWithIAsyncOperation[RemoteSystem] = js.native
-  /** Checks whether the client device is authorized to discover other users' devices or just same-user devices. */
-  def isAuthorizationKindEnabled(kind: RemoteSystemAuthorizationKind): Boolean = js.native
-  /** Gets the status of the calling app's access to the Remote Systems feature. This method should always be called before an app attempts to discover or otherwise interact with remote systems. */
-  def requestAccessAsync(): IPromiseWithIAsyncOperation[RemoteSystemAccessStatus] = js.native
+object RemoteSystem {
+  @scala.inline
+  def apply(
+    apps: IVectorView[RemoteSystemApp],
+    displayName: String,
+    getCapabilitySupportedAsync: String => IPromiseWithIAsyncOperation[Boolean],
+    id: String,
+    isAvailableByProximity: Boolean,
+    isAvailableBySpatialProximity: Boolean,
+    kind: String,
+    manufacturerDisplayName: String,
+    modelDisplayName: String,
+    platform: RemoteSystemPlatform,
+    status: RemoteSystemStatus
+  ): RemoteSystem = {
+    val __obj = js.Dynamic.literal(apps = apps.asInstanceOf[js.Any], displayName = displayName.asInstanceOf[js.Any], getCapabilitySupportedAsync = js.Any.fromFunction1(getCapabilitySupportedAsync), id = id.asInstanceOf[js.Any], isAvailableByProximity = isAvailableByProximity.asInstanceOf[js.Any], isAvailableBySpatialProximity = isAvailableBySpatialProximity.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], manufacturerDisplayName = manufacturerDisplayName.asInstanceOf[js.Any], modelDisplayName = modelDisplayName.asInstanceOf[js.Any], platform = platform.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RemoteSystem]
+  }
+  @scala.inline
+  implicit class RemoteSystemOps[Self <: RemoteSystem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApps(value: IVectorView[RemoteSystemApp]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("apps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetCapabilitySupportedAsync(value: String => IPromiseWithIAsyncOperation[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCapabilitySupportedAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsAvailableByProximity(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAvailableByProximity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsAvailableBySpatialProximity(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAvailableBySpatialProximity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withManufacturerDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturerDisplayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withModelDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelDisplayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPlatform(value: RemoteSystemPlatform): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("platform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: RemoteSystemStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

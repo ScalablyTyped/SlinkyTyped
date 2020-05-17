@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
 import typingsSlinky.jsonSchema.mod.JSONSchema6
-import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -21,7 +21,7 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
-import typingsSlinky.reactJsonschemaForm.AnonDefinitions
+import typingsSlinky.reactJsonschemaForm.anon.Definitions
 import typingsSlinky.reactJsonschemaForm.reactJsonschemaFormStrings.`additions text`
 import typingsSlinky.reactJsonschemaForm.reactJsonschemaFormStrings.`inline`
 import typingsSlinky.reactJsonschemaForm.reactJsonschemaFormStrings.additions
@@ -134,7 +134,7 @@ trait FieldProps[T]
   var color: js.UndefOr[String] = js.native
   var contentEditable: js.UndefOr[Booleanish | inherit] = js.native
   var contextMenu: js.UndefOr[String] = js.native
-  var dangerouslySetInnerHTML: js.UndefOr[AnonHtml] = js.native
+  var dangerouslySetInnerHTML: js.UndefOr[Html] = js.native
   var datatype: js.UndefOr[String] = js.native
   var defaultChecked: js.UndefOr[Boolean] = js.native
   var defaultValue: js.UndefOr[String | Double | js.Array[String]] = js.native
@@ -240,7 +240,7 @@ trait FieldProps[T]
   var property: js.UndefOr[String] = js.native
   var radioGroup: js.UndefOr[String] = js.native
   var readonly: Boolean = js.native
-  var registry: AnonDefinitions = js.native
+  var registry: Definitions = js.native
   var required: Boolean = js.native
   var resource: js.UndefOr[String] = js.native
   var results: js.UndefOr[Double] = js.native

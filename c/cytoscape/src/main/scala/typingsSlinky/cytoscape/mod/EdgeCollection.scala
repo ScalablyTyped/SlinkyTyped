@@ -26,5 +26,5 @@ trait EdgeCollection
      with CollectionBuildingFiltering[EdgeSingular, EdgeSingular]
      with CollectionAlgorithms
      with EdgeCollectionTraversing
-     with _CollectionArgument
+     with CollectionArgument
 

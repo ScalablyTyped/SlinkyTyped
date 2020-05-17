@@ -48,19 +48,14 @@ import typingsSlinky.androiduix.android.widget.TextView.OnEditorActionListener
 import typingsSlinky.androiduix.androidui.attr.AttrBinder.ClassBinderMap
 import typingsSlinky.androiduix.java_.lang.Runnable
 import typingsSlinky.androiduix.java_.util.ArrayList
-import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.widget.CheckedTextView")
 @js.native
-class CheckedTextView protected ()
+trait CheckedTextView
   extends TextView
      with Checkable {
-  def this(context: Context) = this()
-  def this(context: Context, bindElement: HTMLElement) = this()
-  def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String]) = this()
   var mBasePadding: js.Any = js.native
   var mCheckMarkDrawable: js.Any = js.native
   var mCheckMarkResource: js.Any = js.native
@@ -1442,12 +1437,5 @@ class CheckedTextView protected ()
   override def willNotCacheDrawing(): Boolean = js.native
   /* InferMemberOverrides */
   override def willNotDraw(): Boolean = js.native
-}
-
-/* static members */
-@JSGlobal("android.widget.CheckedTextView")
-@js.native
-object CheckedTextView extends js.Object {
-  var CHECKED_STATE_SET: js.Any = js.native
 }
 

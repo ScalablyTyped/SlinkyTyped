@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
   * The FilterInfo object is a container that describes a Filter object without requiring a Filter to be Added to the process chain. See the FilterInfos
   * property on the ImageProcess object for details on accessing FilterInfo objects.
   */
-@JSGlobal("WIA.FilterInfo")
 @js.native
-class FilterInfo protected () extends js.Object {
+trait FilterInfo extends js.Object {
   /** Returns a technical Description of what the filter does and how to use it in a filter chain */
   val Description: String = js.native
   /** Returns the FilterID for this filter */
@@ -19,5 +18,46 @@ class FilterInfo protected () extends js.Object {
   val Name: String = js.native
   @JSName("WIA.FilterInfo_typekey")
   var WIADotFilterInfo_typekey: FilterInfo = js.native
+}
+
+object FilterInfo {
+  @scala.inline
+  def apply(Description: String, FilterID: String, Name: String, WIADotFilterInfo_typekey: FilterInfo): FilterInfo = {
+    val __obj = js.Dynamic.literal(Description = Description.asInstanceOf[js.Any], FilterID = FilterID.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
+    __obj.updateDynamic("WIA.FilterInfo_typekey")(WIADotFilterInfo_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FilterInfo]
+  }
+  @scala.inline
+  implicit class FilterInfoOps[Self <: FilterInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFilterID(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWIADotFilterInfo_typekey(value: FilterInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WIA.FilterInfo_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

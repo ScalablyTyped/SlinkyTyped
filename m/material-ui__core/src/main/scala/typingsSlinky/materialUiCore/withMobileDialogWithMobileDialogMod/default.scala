@@ -1,7 +1,7 @@
 package typingsSlinky.materialUiCore.withMobileDialogWithMobileDialogMod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.materialUiCore.PartialWithWidth
+import typingsSlinky.materialUiCore.anon.PartialWithWidth
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

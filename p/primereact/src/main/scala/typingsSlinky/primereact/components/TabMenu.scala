@@ -2,7 +2,7 @@ package typingsSlinky.primereact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.menuItemMod.MenuItem
 import typingsSlinky.primereact.tabMenuMod.TabMenuProps
 import scala.scalajs.js
@@ -27,7 +27,7 @@ object TabMenu {
     @scala.inline
     def model(value: js.Array[MenuItem]): this.type = set("model", value.asInstanceOf[js.Any])
     @scala.inline
-    def onTabChange(value: /* e */ AnonValue => Unit): this.type = set("onTabChange", js.Any.fromFunction1(value))
+    def onTabChange(value: /* e */ Value => Unit): this.type = set("onTabChange", js.Any.fromFunction1(value))
     @scala.inline
     def style(value: js.Any): this.type = set("style", value.asInstanceOf[js.Any])
   }

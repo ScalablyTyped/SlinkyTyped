@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IMessageHook extends js.Object {
+trait IMessageHook extends MessageHook {
   /**
     * Intercept a message sent to a message handler.
     *

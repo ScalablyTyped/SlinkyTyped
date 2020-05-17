@@ -1,7 +1,7 @@
 package typingsSlinky.angularCompiler.viewCompilerMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.angularCompiler.AnonClassAttr
+import typingsSlinky.angularCompiler.anon.ClassAttr
 import typingsSlinky.angularCompiler.outputAstMod.Expression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ trait ParsedHostBindings extends js.Object {
   var attributes: StringDictionary[Expression] = js.native
   var listeners: StringDictionary[String] = js.native
   var properties: StringDictionary[String] = js.native
-  var specialAttributes: AnonClassAttr = js.native
+  var specialAttributes: ClassAttr = js.native
 }
 
 object ParsedHostBindings {
@@ -21,7 +21,7 @@ object ParsedHostBindings {
     attributes: StringDictionary[Expression],
     listeners: StringDictionary[String],
     properties: StringDictionary[String],
-    specialAttributes: AnonClassAttr
+    specialAttributes: ClassAttr
   ): ParsedHostBindings = {
     val __obj = js.Dynamic.literal(attributes = attributes.asInstanceOf[js.Any], listeners = listeners.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], specialAttributes = specialAttributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParsedHostBindings]
@@ -51,7 +51,7 @@ object ParsedHostBindings {
         ret
     }
     @scala.inline
-    def withSpecialAttributes(value: AnonClassAttr): Self = {
+    def withSpecialAttributes(value: ClassAttr): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("specialAttributes")(value.asInstanceOf[js.Any])
         ret

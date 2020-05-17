@@ -1,45 +1,33 @@
 package typingsSlinky.sharepoint.SPAnimation
 
-import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("SPAnimation.Object")
 @js.native
-class Object protected () extends js.Object {
-  def this(animationID: ID, delay: Double, element: js.Array[HTMLElement], finalState: State) = this()
-  def this(animationID: ID, delay: Double, element: HTMLElement, finalState: State) = this()
-  def this(
-    animationID: ID,
-    delay: Double,
-    element: js.Array[HTMLElement],
-    finalState: State,
-    finishFunc: js.Function1[/* data */ js.Any, Unit]
-  ) = this()
-  def this(
-    animationID: ID,
-    delay: Double,
-    element: HTMLElement,
-    finalState: State,
-    finishFunc: js.Function1[/* data */ js.Any, Unit]
-  ) = this()
-  def this(
-    animationID: ID,
-    delay: Double,
-    element: js.Array[HTMLElement],
-    finalState: State,
-    finishFunc: js.Function1[/* data */ js.Any, Unit],
-    data: js.Any
-  ) = this()
-  def this(
-    animationID: ID,
-    delay: Double,
-    element: HTMLElement,
-    finalState: State,
-    finishFunc: js.Function1[/* data */ js.Any, Unit],
-    data: js.Any
-  ) = this()
+trait Object extends js.Object {
   def RunAnimation(): Unit = js.native
+}
+
+object Object {
+  @scala.inline
+  def apply(RunAnimation: () => Unit): Object = {
+    val __obj = js.Dynamic.literal(RunAnimation = js.Any.fromFunction0(RunAnimation))
+    __obj.asInstanceOf[Object]
+  }
+  @scala.inline
+  implicit class ObjectOps[Self <: Object] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRunAnimation(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RunAnimation")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.argparse.mod
 
-import typingsSlinky.argparse.Anon0
+import typingsSlinky.argparse.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait ArgumentParserOptions extends js.Object {
   var debug: js.UndefOr[Boolean] = js.native
   var description: js.UndefOr[String] = js.native
   var epilog: js.UndefOr[String] = js.native
-  var formatterClass: js.UndefOr[Anon0] = js.native
+  var formatterClass: js.UndefOr[`0`] = js.native
   var parents: js.UndefOr[js.Array[ArgumentParser]] = js.native
   var prefixChars: js.UndefOr[String] = js.native
   var prog: js.UndefOr[String] = js.native
@@ -93,7 +93,7 @@ object ArgumentParserOptions {
         ret
     }
     @scala.inline
-    def withFormatterClass(value: Anon0): Self = {
+    def withFormatterClass(value: `0`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formatterClass")(value.asInstanceOf[js.Any])
         ret

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Infragistics.Hierarchy")
 @js.native
-class Hierarchy () extends js.Object {
+trait Hierarchy extends js.Object {
   /**
   	 * Returns the unique name of the 'All' member for the hierarchy.
   	 *
@@ -71,5 +70,85 @@ class Hierarchy () extends js.Object {
   	 * @param value
   	 */
   def uniqueName(value: js.Object): String = js.native
+}
+
+object Hierarchy {
+  @scala.inline
+  def apply(
+    allMember: js.Object => String,
+    caption: js.Object => String,
+    defaultMember: js.Object => String,
+    description: js.Object => String,
+    dimensionUniqueName: js.Object => String,
+    hierarchyDisplayFolder: js.Object => String,
+    hierarchyOrigin: js.Object => Double,
+    name: js.Object => String,
+    uniqueName: js.Object => String
+  ): Hierarchy = {
+    val __obj = js.Dynamic.literal(allMember = js.Any.fromFunction1(allMember), caption = js.Any.fromFunction1(caption), defaultMember = js.Any.fromFunction1(defaultMember), description = js.Any.fromFunction1(description), dimensionUniqueName = js.Any.fromFunction1(dimensionUniqueName), hierarchyDisplayFolder = js.Any.fromFunction1(hierarchyDisplayFolder), hierarchyOrigin = js.Any.fromFunction1(hierarchyOrigin), name = js.Any.fromFunction1(name), uniqueName = js.Any.fromFunction1(uniqueName))
+    __obj.asInstanceOf[Hierarchy]
+  }
+  @scala.inline
+  implicit class HierarchyOps[Self <: Hierarchy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllMember(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allMember")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCaption(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDefaultMember(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultMember")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDescription(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDimensionUniqueName(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionUniqueName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHierarchyDisplayFolder(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchyDisplayFolder")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHierarchyOrigin(value: js.Object => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchyOrigin")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withName(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUniqueName(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueName")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

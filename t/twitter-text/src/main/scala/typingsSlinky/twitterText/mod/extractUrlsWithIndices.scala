@@ -1,6 +1,6 @@
 package typingsSlinky.twitterText.mod
 
-import typingsSlinky.twitterText.AnonExtractUrlsWithoutProtocol
+import typingsSlinky.twitterText.anon.ExtractUrlsWithoutProtocol
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object extractUrlsWithIndices extends js.Object {
   def apply(text: String): js.Array[UrlWithIndices] = js.native
-  def apply(text: String, options: AnonExtractUrlsWithoutProtocol): js.Array[UrlWithIndices] = js.native
+  def apply(text: String, options: ExtractUrlsWithoutProtocol): js.Array[UrlWithIndices] = js.native
 }
 

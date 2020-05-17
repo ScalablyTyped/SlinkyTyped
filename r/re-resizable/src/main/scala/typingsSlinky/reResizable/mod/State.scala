@@ -1,6 +1,6 @@
 package typingsSlinky.reResizable.mod
 
-import typingsSlinky.reResizable.AnonY
+import typingsSlinky.reResizable.anon.Y
 import typingsSlinky.reResizable.resizerMod.Direction
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -14,7 +14,7 @@ trait State extends js.Object {
   var flexBasis: js.UndefOr[String | Double] = js.native
   var height: Double | String = js.native
   var isResizing: Boolean = js.native
-  var original: AnonY = js.native
+  var original: Y = js.native
   var width: Double | String = js.native
 }
 
@@ -25,7 +25,7 @@ object State {
     direction: Direction,
     height: Double | String,
     isResizing: Boolean,
-    original: AnonY,
+    original: Y,
     width: Double | String
   ): State = {
     val __obj = js.Dynamic.literal(backgroundStyle = backgroundStyle.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], isResizing = isResizing.asInstanceOf[js.Any], original = original.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
@@ -62,7 +62,7 @@ object State {
         ret
     }
     @scala.inline
-    def withOriginal(value: AnonY): Self = {
+    def withOriginal(value: Y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("original")(value.asInstanceOf[js.Any])
         ret

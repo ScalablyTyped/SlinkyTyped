@@ -1,6 +1,6 @@
 package typingsSlinky.libphonenumberJs.mod
 
-import typingsSlinky.libphonenumberJs.AnonDefaultCountryCountryCode
+import typingsSlinky.libphonenumberJs.anon.DefaultCountryCountryCode
 import typingsSlinky.libphonenumberJs.typesMod.CountryCode
 import typingsSlinky.libphonenumberJs.typesMod.NumberFoundLegacy
 import typingsSlinky.std.IterableIterator
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object searchParsedNumbers extends js.Object {
   def apply(text: String): IterableIterator[NumberFoundLegacy] = js.native
-  def apply(text: String, options: AnonDefaultCountryCountryCode): IterableIterator[NumberFoundLegacy] = js.native
+  def apply(text: String, options: DefaultCountryCountryCode): IterableIterator[NumberFoundLegacy] = js.native
   def apply(text: String, options: CountryCode): IterableIterator[NumberFoundLegacy] = js.native
 }
 

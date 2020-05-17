@@ -1,6 +1,6 @@
 package typingsSlinky.fundamentalReact.selectMod
 
-import typingsSlinky.fundamentalReact.AnonState
+import typingsSlinky.fundamentalReact.anon.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait SelectProps extends js.Object {
   var id: js.UndefOr[String] = js.native
   var onClick: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
   var placeholder: js.UndefOr[String] = js.native
-  var validationState: js.UndefOr[AnonState] = js.native
+  var validationState: js.UndefOr[State] = js.native
 }
 
 object SelectProps {
@@ -114,7 +114,7 @@ object SelectProps {
         ret
     }
     @scala.inline
-    def withValidationState(value: AnonState): Self = {
+    def withValidationState(value: State): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validationState")(value.asInstanceOf[js.Any])
         ret

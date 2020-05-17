@@ -3,7 +3,7 @@ package typingsSlinky.reactOnsenui.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameStyle
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameStyle
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.bottom
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.center
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.top

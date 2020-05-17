@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TimeUnitTransform extends _Transforms {
+trait TimeUnitTransform extends Transforms {
   var as: js.UndefOr[(Vector2[String | SignalRef]) | SignalRef] = js.native
   var field: FieldRef = js.native
   var interval: js.UndefOr[Boolean | SignalRef] = js.native

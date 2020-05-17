@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.qlik.qlikStrings.ts_
   - typingsSlinky.qlik.qlikStrings.`ts-TR`
 */
-trait Turkish extends _ALL
+trait Turkish extends ALL
 
 object Turkish {
   @scala.inline

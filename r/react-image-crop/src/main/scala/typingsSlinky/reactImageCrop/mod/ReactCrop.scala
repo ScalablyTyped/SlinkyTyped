@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.MouseEvent
 import slinky.core.TagMod
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactImageCrop.AnonHeight
+import typingsSlinky.reactImageCrop.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait ReactCrop
   def crossOverCheck(): Unit = js.native
   def dragCrop(): Crop = js.native
   def getCropStyle(): CSSProperties = js.native
-  def getNewSize(): AnonHeight = js.native
+  def getNewSize(): Height = js.native
   def makeNewCrop(): Crop = js.native
   def onComponentKeyDown(e: MouseEvent): Unit = js.native
   def onComponentMouseTouchDown(e: MouseEvent): Unit = js.native

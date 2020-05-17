@@ -148,7 +148,6 @@ package object esri {
   type CollectionBeforeChangesEventHandler[T] = js.Function1[/* event */ typingsSlinky.arcgisJsApi.esri.CollectionBeforeEvent[T], scala.Unit]
   type CollectionBeforeRemoveEventHandler[T] = js.Function1[/* event */ typingsSlinky.arcgisJsApi.esri.CollectionBeforeEvent[T], scala.Unit]
   type CollectionChangeEventHandler[T] = js.Function1[/* event */ typingsSlinky.arcgisJsApi.esri.CollectionChangeEvent[T], scala.Unit]
-  type CollectionProperties[T] = js.Array[T] | typingsSlinky.arcgisJsApi.esri.Collection[T]
   type ColorSizeSliderMaxChangeEventHandler = js.Function1[
     /* event */ typingsSlinky.arcgisJsApi.esri.ColorSizeSliderMaxChangeEvent, 
     scala.Unit
@@ -195,7 +194,6 @@ package object esri {
     /* index */ js.UndefOr[scala.Double], 
     scala.Unit
   ]
-  type DateProperties = scala.Double | java.lang.String | js.Date
   type EasingFunction = js.Function2[/* t */ scala.Double, /* duration */ scala.Double, scala.Double]
   type ElevationLayerLayerviewCreateErrorEventHandler = js.Function1[
     /* event */ typingsSlinky.arcgisJsApi.esri.ElevationLayerLayerviewCreateErrorEvent, 
@@ -302,37 +300,6 @@ package object esri {
     /* goToParameters */ js.Any, 
     scala.Unit
   ]
-  /* Rewritten from type alias, can be one of: 
-    - js.Array[
-  scala.Double | typingsSlinky.arcgisJsApi.esri.Geometry_ | typingsSlinky.arcgisJsApi.esri.Graphic]
-    - typingsSlinky.arcgisJsApi.esri.Geometry_
-    - typingsSlinky.arcgisJsApi.esri.Collection[
-  typingsSlinky.arcgisJsApi.esri.Geometry_ | typingsSlinky.arcgisJsApi.esri.Graphic]
-    - typingsSlinky.arcgisJsApi.esri.Graphic
-    - typingsSlinky.arcgisJsApi.esri.Viewpoint
-    - js.Any
-  */
-  type GoToTarget2D = typingsSlinky.arcgisJsApi.esri._GoToTarget2D | (js.Array[
-    scala.Double | typingsSlinky.arcgisJsApi.esri.Geometry_ | typingsSlinky.arcgisJsApi.esri.Graphic
-  ]) | (typingsSlinky.arcgisJsApi.esri.Collection[
-    typingsSlinky.arcgisJsApi.esri.Geometry_ | typingsSlinky.arcgisJsApi.esri.Graphic
-  ]) | js.Any
-  /* Rewritten from type alias, can be one of: 
-    - js.Array[
-  scala.Double | typingsSlinky.arcgisJsApi.esri.Geometry_ | typingsSlinky.arcgisJsApi.esri.Graphic]
-    - typingsSlinky.arcgisJsApi.esri.Geometry_
-    - typingsSlinky.arcgisJsApi.esri.Collection[
-  typingsSlinky.arcgisJsApi.esri.Geometry_ | typingsSlinky.arcgisJsApi.esri.Graphic]
-    - typingsSlinky.arcgisJsApi.esri.Graphic
-    - typingsSlinky.arcgisJsApi.esri.Camera
-    - typingsSlinky.arcgisJsApi.esri.Viewpoint
-    - js.Any
-  */
-  type GoToTarget3D = typingsSlinky.arcgisJsApi.esri._GoToTarget3D | (js.Array[
-    scala.Double | typingsSlinky.arcgisJsApi.esri.Geometry_ | typingsSlinky.arcgisJsApi.esri.Graphic
-  ]) | (typingsSlinky.arcgisJsApi.esri.Collection[
-    typingsSlinky.arcgisJsApi.esri.Geometry_ | typingsSlinky.arcgisJsApi.esri.Graphic
-  ]) | js.Any
   type GraphicsLayerLayerviewCreateErrorEventHandler = js.Function1[
     /* event */ typingsSlinky.arcgisJsApi.esri.GraphicsLayerLayerviewCreateErrorEvent, 
     scala.Unit

@@ -2,7 +2,7 @@ package typingsSlinky.apolloEnv
 
 import typingsSlinky.node.NodeJS.Dict
 import typingsSlinky.node.urlMod.URL_
-import typingsSlinky.nodeFetch.AnonSize
+import typingsSlinky.nodeFetch.anon.Size
 import typingsSlinky.nodeFetch.mod.BodyInit
 import typingsSlinky.nodeFetch.mod.HeadersInit
 import typingsSlinky.nodeFetch.mod.RequestInfo
@@ -19,7 +19,7 @@ object fetchMod extends js.Object {
   class Body ()
     extends typingsSlinky.apolloEnv.fetchFetchMod.Body {
     def this(body: js.Any) = this()
-    def this(body: js.Any, opts: AnonSize) = this()
+    def this(body: js.Any, opts: Size) = this()
   }
   
   @js.native

@@ -9,10 +9,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a 3D Manufacturing Format (3MF) package. */
-@JSGlobal("Windows.Graphics.Printing3D.Printing3D3MFPackage")
 @js.native
-/** Creates a Printing3D3MFPackage object. */
-class Printing3D3MFPackage () extends js.Object {
+trait Printing3D3MFPackage extends js.Object {
   /** Gets or sets an XML stream to the 3D model in the 3D Manufacturing Format (3MF) package. */
   var modelPart: IRandomAccessStream = js.native
   /** Gets or sets a stream to the print ticket in the 3D Manufacturing Format (3MF) package. */
@@ -40,15 +38,69 @@ class Printing3D3MFPackage () extends js.Object {
   def saveModelToPackageAsync(value: Printing3DModel): IPromiseWithIAsyncAction = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Graphics.Printing3D.Printing3D3MFPackage")
-@js.native
-object Printing3D3MFPackage extends js.Object {
-  /**
-    * Creates a Printing3D3MFPackage object from a 3D Manufacturing Format (3MF) file stream.
-    * @param value A 3MF file stream.
-    * @return A Printing3D3MFPackage created from the specified 3MF package stream.
-    */
-  def loadAsync(value: IRandomAccessStream): IPromiseWithIAsyncOperation[Printing3D3MFPackage] = js.native
+object Printing3D3MFPackage {
+  @scala.inline
+  def apply(
+    loadModelFromPackageAsync: IRandomAccessStream => IPromiseWithIAsyncOperation[Printing3DModel],
+    modelPart: IRandomAccessStream,
+    printTicket: IRandomAccessStream,
+    saveAsync: () => IPromiseWithIAsyncOperation[IRandomAccessStream],
+    saveModelToPackageAsync: Printing3DModel => IPromiseWithIAsyncAction,
+    textures: IVector[Printing3DTextureResource],
+    thumbnail: Printing3DTextureResource
+  ): Printing3D3MFPackage = {
+    val __obj = js.Dynamic.literal(loadModelFromPackageAsync = js.Any.fromFunction1(loadModelFromPackageAsync), modelPart = modelPart.asInstanceOf[js.Any], printTicket = printTicket.asInstanceOf[js.Any], saveAsync = js.Any.fromFunction0(saveAsync), saveModelToPackageAsync = js.Any.fromFunction1(saveModelToPackageAsync), textures = textures.asInstanceOf[js.Any], thumbnail = thumbnail.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Printing3D3MFPackage]
+  }
+  @scala.inline
+  implicit class Printing3D3MFPackageOps[Self <: Printing3D3MFPackage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLoadModelFromPackageAsync(value: IRandomAccessStream => IPromiseWithIAsyncOperation[Printing3DModel]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadModelFromPackageAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withModelPart(value: IRandomAccessStream): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelPart")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrintTicket(value: IRandomAccessStream): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("printTicket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSaveAsync(value: () => IPromiseWithIAsyncOperation[IRandomAccessStream]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("saveAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSaveModelToPackageAsync(value: Printing3DModel => IPromiseWithIAsyncAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("saveModelToPackageAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTextures(value: IVector[Printing3DTextureResource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThumbnail(value: Printing3DTextureResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

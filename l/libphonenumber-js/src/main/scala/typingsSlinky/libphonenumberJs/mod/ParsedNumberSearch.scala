@@ -1,6 +1,6 @@
 package typingsSlinky.libphonenumberJs.mod
 
-import typingsSlinky.libphonenumberJs.AnonDefaultCountryCountryCode
+import typingsSlinky.libphonenumberJs.anon.DefaultCountryCountryCode
 import typingsSlinky.libphonenumberJs.typesMod.NumberFoundLegacy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class ParsedNumberSearch protected () extends js.Object {
   def this(text: String) = this()
-  def this(text: String, options: AnonDefaultCountryCountryCode) = this()
+  def this(text: String, options: DefaultCountryCountryCode) = this()
   def hasNext(): Boolean = js.native
   def next(): js.UndefOr[NumberFoundLegacy] = js.native
 }

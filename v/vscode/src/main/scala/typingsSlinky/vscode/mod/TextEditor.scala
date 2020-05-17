@@ -1,7 +1,7 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonUndoStopAfter
 import typingsSlinky.vscode.Thenable
+import typingsSlinky.vscode.anon.UndoStopAfter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,7 +47,7 @@ trait TextEditor extends js.Object {
   		 * @return A promise that resolves with a value indicating if the edits could be applied.
   		 */
   def edit(callback: js.Function1[/* editBuilder */ TextEditorEdit, Unit]): Thenable[Boolean] = js.native
-  def edit(callback: js.Function1[/* editBuilder */ TextEditorEdit, Unit], options: AnonUndoStopAfter): Thenable[Boolean] = js.native
+  def edit(callback: js.Function1[/* editBuilder */ TextEditorEdit, Unit], options: UndoStopAfter): Thenable[Boolean] = js.native
   /**
   		 * ~~Hide the text editor.~~
   		 *
@@ -68,11 +68,11 @@ trait TextEditor extends js.Object {
   		 */
   def insertSnippet(snippet: SnippetString): Thenable[Boolean] = js.native
   def insertSnippet(snippet: SnippetString, location: js.Array[Position | Range]): Thenable[Boolean] = js.native
-  def insertSnippet(snippet: SnippetString, location: js.Array[Position | Range], options: AnonUndoStopAfter): Thenable[Boolean] = js.native
+  def insertSnippet(snippet: SnippetString, location: js.Array[Position | Range], options: UndoStopAfter): Thenable[Boolean] = js.native
   def insertSnippet(snippet: SnippetString, location: Position): Thenable[Boolean] = js.native
-  def insertSnippet(snippet: SnippetString, location: Position, options: AnonUndoStopAfter): Thenable[Boolean] = js.native
+  def insertSnippet(snippet: SnippetString, location: Position, options: UndoStopAfter): Thenable[Boolean] = js.native
   def insertSnippet(snippet: SnippetString, location: Range): Thenable[Boolean] = js.native
-  def insertSnippet(snippet: SnippetString, location: Range, options: AnonUndoStopAfter): Thenable[Boolean] = js.native
+  def insertSnippet(snippet: SnippetString, location: Range, options: UndoStopAfter): Thenable[Boolean] = js.native
   /**
   		 * Scroll as indicated by `revealType` in order to reveal the given range.
   		 *

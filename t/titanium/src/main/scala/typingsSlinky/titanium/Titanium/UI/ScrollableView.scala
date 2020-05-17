@@ -29,9 +29,8 @@ import scala.scalajs.js.annotation._
 		 * A view that encapsulates a horizontally-scrolling set of child views, known as pages, navigable
 		 * using its built-in horizontal swipe gestures.
 		 */
-@JSGlobal("Titanium.UI.ScrollableView")
 @js.native
-class ScrollableView () extends View {
+trait ScrollableView extends View {
   /**
   			 * Number of pages to cache (pre-render).
   			 */

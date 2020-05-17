@@ -1,7 +1,7 @@
 package typingsSlinky.reactAce.aceMod
 
-import typingsSlinky.reactAce.PartialIAceEditorProps
-import typingsSlinky.reactAce.ValidationMapIAceEditorPr
+import typingsSlinky.reactAce.anon.PartialIAceEditorProps
+import typingsSlinky.reactAce.anon.ValidationMapIAceEditorPr
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

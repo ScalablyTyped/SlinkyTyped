@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ShapeFillData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ShapeFillLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ShapeFillUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Gradient
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Mixed
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.NoFill
@@ -22,9 +22,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@JSGlobal("Excel.ShapeFill")
 @js.native
-class ShapeFill () extends ClientObject {
+trait ShapeFill extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_ShapeFill: RequestContext = js.native
@@ -62,7 +61,7 @@ class ShapeFill () extends ClientObject {
     */
   def load(): ShapeFill = js.native
   def load(options: ShapeFillLoadOptions): ShapeFill = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ShapeFill = js.native
+  def load(propertyNamesAndPaths: Expand): ShapeFill = js.native
   def load(propertyNames: String): ShapeFill = js.native
   def load(propertyNames: js.Array[String]): ShapeFill = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

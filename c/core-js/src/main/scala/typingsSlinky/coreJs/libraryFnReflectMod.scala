@@ -1,5 +1,6 @@
 package typingsSlinky.coreJs
 
+import typingsSlinky.coreJs.anon.FnCall
 import typingsSlinky.std.ArrayLike
 import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.PropertyKey

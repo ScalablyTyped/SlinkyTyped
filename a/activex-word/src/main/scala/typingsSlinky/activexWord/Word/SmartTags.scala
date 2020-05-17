@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Word.SmartTags")
 @js.native
-class SmartTags protected () extends js.Object {
+trait SmartTags extends js.Object {
   val Application: typingsSlinky.activexWord.Word.Application = js.native
   val Count: Double = js.native
   val Creator: Double = js.native

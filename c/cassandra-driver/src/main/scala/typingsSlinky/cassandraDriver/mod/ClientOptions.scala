@@ -1,12 +1,12 @@
 package typingsSlinky.cassandraDriver.mod
 
-import typingsSlinky.cassandraDriver.AnonAddressResolution
-import typingsSlinky.cassandraDriver.AnonCoalescingThreshold
-import typingsSlinky.cassandraDriver.AnonCopyBuffer
-import typingsSlinky.cassandraDriver.AnonCoreConnectionsPerHost
-import typingsSlinky.cassandraDriver.AnonMaxSchemaAgreementWaitSeconds
-import typingsSlinky.cassandraDriver.AnonPassword
-import typingsSlinky.cassandraDriver.AnonSecureConnectBundle
+import typingsSlinky.cassandraDriver.anon.AddressResolution
+import typingsSlinky.cassandraDriver.anon.CoalescingThreshold
+import typingsSlinky.cassandraDriver.anon.CopyBuffer
+import typingsSlinky.cassandraDriver.anon.CoreConnectionsPerHost
+import typingsSlinky.cassandraDriver.anon.MaxSchemaAgreementWaitSeconds
+import typingsSlinky.cassandraDriver.anon.Password
+import typingsSlinky.cassandraDriver.anon.SecureConnectBundle
 import typingsSlinky.cassandraDriver.authMod.auth.AuthProvider
 import typingsSlinky.cassandraDriver.metricsMod.metrics.ClientMetrics
 import typingsSlinky.cassandraDriver.trackerMod.tracker.RequestTracker
@@ -18,17 +18,17 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ClientOptions extends js.Object {
   var authProvider: js.UndefOr[AuthProvider] = js.native
-  var cloud: js.UndefOr[AnonSecureConnectBundle] = js.native
+  var cloud: js.UndefOr[SecureConnectBundle] = js.native
   var contactPoints: js.UndefOr[js.Array[String]] = js.native
-  var credentials: js.UndefOr[AnonPassword] = js.native
-  var encoding: js.UndefOr[AnonCopyBuffer] = js.native
+  var credentials: js.UndefOr[Password] = js.native
+  var encoding: js.UndefOr[CopyBuffer] = js.native
   var isMetadataSyncEnabled: js.UndefOr[Boolean] = js.native
   var keyspace: js.UndefOr[String] = js.native
   var localDataCenter: js.UndefOr[String] = js.native
   var maxPrepared: js.UndefOr[Double] = js.native
   var metrics: js.UndefOr[ClientMetrics] = js.native
-  var policies: js.UndefOr[AnonAddressResolution] = js.native
-  var pooling: js.UndefOr[AnonCoreConnectionsPerHost] = js.native
+  var policies: js.UndefOr[AddressResolution] = js.native
+  var pooling: js.UndefOr[CoreConnectionsPerHost] = js.native
   var prepareOnAllHosts: js.UndefOr[Boolean] = js.native
   var profiles: js.UndefOr[js.Array[ExecutionProfile]] = js.native
   var promiseFactory: js.UndefOr[
@@ -40,12 +40,12 @@ trait ClientOptions extends js.Object {
       js.Promise[_]
     ]
   ] = js.native
-  var protocolOptions: js.UndefOr[AnonMaxSchemaAgreementWaitSeconds] = js.native
+  var protocolOptions: js.UndefOr[MaxSchemaAgreementWaitSeconds] = js.native
   var queryOptions: js.UndefOr[QueryOptions] = js.native
   var rePrepareOnUp: js.UndefOr[Boolean] = js.native
   var refreshSchemaDelay: js.UndefOr[Double] = js.native
   var requestTracker: js.UndefOr[RequestTracker] = js.native
-  var socketOptions: js.UndefOr[AnonCoalescingThreshold] = js.native
+  var socketOptions: js.UndefOr[CoalescingThreshold] = js.native
   var sslOptions: js.UndefOr[ConnectionOptions] = js.native
 }
 
@@ -74,7 +74,7 @@ object ClientOptions {
         ret
     }
     @scala.inline
-    def withCloud(value: AnonSecureConnectBundle): Self = {
+    def withCloud(value: SecureConnectBundle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cloud")(value.asInstanceOf[js.Any])
         ret
@@ -98,7 +98,7 @@ object ClientOptions {
         ret
     }
     @scala.inline
-    def withCredentials(value: AnonPassword): Self = {
+    def withCredentials(value: Password): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(value.asInstanceOf[js.Any])
         ret
@@ -110,7 +110,7 @@ object ClientOptions {
         ret
     }
     @scala.inline
-    def withEncoding(value: AnonCopyBuffer): Self = {
+    def withEncoding(value: CopyBuffer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("encoding")(value.asInstanceOf[js.Any])
         ret
@@ -182,7 +182,7 @@ object ClientOptions {
         ret
     }
     @scala.inline
-    def withPolicies(value: AnonAddressResolution): Self = {
+    def withPolicies(value: AddressResolution): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("policies")(value.asInstanceOf[js.Any])
         ret
@@ -194,7 +194,7 @@ object ClientOptions {
         ret
     }
     @scala.inline
-    def withPooling(value: AnonCoreConnectionsPerHost): Self = {
+    def withPooling(value: CoreConnectionsPerHost): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pooling")(value.asInstanceOf[js.Any])
         ret
@@ -247,7 +247,7 @@ object ClientOptions {
         ret
     }
     @scala.inline
-    def withProtocolOptions(value: AnonMaxSchemaAgreementWaitSeconds): Self = {
+    def withProtocolOptions(value: MaxSchemaAgreementWaitSeconds): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("protocolOptions")(value.asInstanceOf[js.Any])
         ret
@@ -307,7 +307,7 @@ object ClientOptions {
         ret
     }
     @scala.inline
-    def withSocketOptions(value: AnonCoalescingThreshold): Self = {
+    def withSocketOptions(value: CoalescingThreshold): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("socketOptions")(value.asInstanceOf[js.Any])
         ret

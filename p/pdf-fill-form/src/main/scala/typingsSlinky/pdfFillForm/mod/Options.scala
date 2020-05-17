@@ -12,14 +12,8 @@ trait Options extends js.Object
 
 object Options {
   @scala.inline
-  def PdfOptions(): Options = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Options]
-  }
+  implicit def apply(value: ImgPdfOptions): Options = value.asInstanceOf[Options]
   @scala.inline
-  def ImgPdfOptions(): Options = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Options]
-  }
+  implicit def apply(value: PdfOptions): Options = value.asInstanceOf[Options]
 }
 

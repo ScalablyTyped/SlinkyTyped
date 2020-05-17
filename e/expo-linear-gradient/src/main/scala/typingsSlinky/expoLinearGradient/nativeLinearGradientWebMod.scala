@@ -1,6 +1,8 @@
 package typingsSlinky.expoLinearGradient
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.expoLinearGradient.anon.OnLayout
+import typingsSlinky.expoLinearGradient.anon.TypeofView
 import typingsSlinky.react.mod.ComponentProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,6 +13,6 @@ import scala.scalajs.js.annotation._
 object nativeLinearGradientWebMod extends js.Object {
   val default: ReactComponentClass[Props] = js.native
   type Point = js.Tuple2[Double, Double]
-  type Props = AnonOnLayout with ComponentProps[TypeofView]
+  type Props = OnLayout with ComponentProps[TypeofView]
 }
 

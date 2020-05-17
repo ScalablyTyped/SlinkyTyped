@@ -1,6 +1,5 @@
 package typingsSlinky.titanium.Titanium.Android
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.titanium.Titanium.Proxy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -138,11 +137,4 @@ trait R extends Proxy {
   			 */
   val xml: js.Any = js.native
 }
-
-/**
-		 * Accessor for Android system resources.
-		 */
-@JSGlobal("Titanium.Android.R")
-@js.native
-object R extends TopLevel[R]
 

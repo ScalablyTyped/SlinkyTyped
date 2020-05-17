@@ -1,0 +1,76 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.xml.crypto.sax
+
+import typingsSlinky.activexLibreoffice.`type`
+import typingsSlinky.activexLibreoffice.com_.sun.star.xml.sax.XDocumentHandler
+import typingsSlinky.activexLibreoffice.com_.sun.star.xml.wrapper.XXMLElementWrapper
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Interface of Security SAX Event Keeper.
+  *
+  * This interface is an extension of the {@link XSAXEventKeeper} interface, some security related features are added.
+  */
+@js.native
+trait XSecuritySAXEventKeeper extends XSAXEventKeeper {
+  /**
+    * Adds a new element collector on the next element in the SAX event stream.
+    * @param priority the priority of the element collector. See ConstOfPriority
+    * @param modifyElement a flag representing whether the element collector will modify the content of its element after notification
+    * @returns the keeper id of the new element collector
+    */
+  def addSecurityElementCollector(priority: ElementMarkPriority, modifyElement: Boolean): Double = js.native
+  /**
+    * Sets security id for an element mark.
+    * @param id the keeper id of the element collector to be set
+    * @param securityId the security id to be set
+    */
+  def setSecurityId(id: Double, securityId: Double): Unit = js.native
+}
+
+object XSecuritySAXEventKeeper {
+  @scala.inline
+  def apply(
+    CurrentBlockingNode: XXMLElementWrapper,
+    acquire: () => Unit,
+    addBlocker: () => Double,
+    addElementCollector: () => Double,
+    addSecurityElementCollector: (ElementMarkPriority, Boolean) => Double,
+    getCurrentBlockingNode: () => XXMLElementWrapper,
+    getElement: Double => XXMLElementWrapper,
+    isBlocking: () => Boolean,
+    printBufferNodeTree: () => String,
+    queryInterface: `type` => js.Any,
+    release: () => Unit,
+    removeBlocker: Double => Unit,
+    removeElementCollector: Double => Unit,
+    setElement: (Double, XXMLElementWrapper) => Unit,
+    setNextHandler: XDocumentHandler => XDocumentHandler,
+    setSecurityId: (Double, Double) => Unit
+  ): XSecuritySAXEventKeeper = {
+    val __obj = js.Dynamic.literal(CurrentBlockingNode = CurrentBlockingNode.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addBlocker = js.Any.fromFunction0(addBlocker), addElementCollector = js.Any.fromFunction0(addElementCollector), addSecurityElementCollector = js.Any.fromFunction2(addSecurityElementCollector), getCurrentBlockingNode = js.Any.fromFunction0(getCurrentBlockingNode), getElement = js.Any.fromFunction1(getElement), isBlocking = js.Any.fromFunction0(isBlocking), printBufferNodeTree = js.Any.fromFunction0(printBufferNodeTree), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeBlocker = js.Any.fromFunction1(removeBlocker), removeElementCollector = js.Any.fromFunction1(removeElementCollector), setElement = js.Any.fromFunction2(setElement), setNextHandler = js.Any.fromFunction1(setNextHandler), setSecurityId = js.Any.fromFunction2(setSecurityId))
+    __obj.asInstanceOf[XSecuritySAXEventKeeper]
+  }
+  @scala.inline
+  implicit class XSecuritySAXEventKeeperOps[Self <: XSecuritySAXEventKeeper] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddSecurityElementCollector(value: (ElementMarkPriority, Boolean) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addSecurityElementCollector")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetSecurityId(value: (Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSecurityId")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
+}
+

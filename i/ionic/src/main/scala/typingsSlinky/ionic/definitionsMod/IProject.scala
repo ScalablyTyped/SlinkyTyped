@@ -1,6 +1,6 @@
 package typingsSlinky.ionic.definitionsMod
 
-import typingsSlinky.ionic.RequiredProjectIntegratio
+import typingsSlinky.ionic.anon.RequiredProjectIntegratio
 import typingsSlinky.ionic.libBuildMod.BuildRunner
 import typingsSlinky.ionic.libGenerateMod.GenerateRunner
 import typingsSlinky.ionic.libProjectMod.ProjectDetailsResult

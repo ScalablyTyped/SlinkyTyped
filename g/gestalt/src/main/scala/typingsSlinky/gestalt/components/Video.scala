@@ -2,14 +2,14 @@ package typingsSlinky.gestalt.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.Anon4
-import typingsSlinky.gestalt.Anon5
-import typingsSlinky.gestalt.AnonDuration
-import typingsSlinky.gestalt.AnonFullscreen
-import typingsSlinky.gestalt.AnonLoaded
-import typingsSlinky.gestalt.AnonSrc
-import typingsSlinky.gestalt.AnonTime
-import typingsSlinky.gestalt.AnonVolume
+import typingsSlinky.gestalt.anon.Duration
+import typingsSlinky.gestalt.anon.Fullscreen
+import typingsSlinky.gestalt.anon.Loaded
+import typingsSlinky.gestalt.anon.Src
+import typingsSlinky.gestalt.anon.Time
+import typingsSlinky.gestalt.anon.Volume
+import typingsSlinky.gestalt.anon.`4`
+import typingsSlinky.gestalt.anon.`5`
 import typingsSlinky.gestalt.gestaltStrings.auto
 import typingsSlinky.gestalt.gestaltStrings.metadata
 import typingsSlinky.gestalt.gestaltStrings.none
@@ -44,25 +44,25 @@ object Video {
     @scala.inline
     def loop(value: Boolean): this.type = set("loop", value.asInstanceOf[js.Any])
     @scala.inline
-    def onDurationChange(value: /* args */ AnonDuration => Unit): this.type = set("onDurationChange", js.Any.fromFunction1(value))
+    def onDurationChange(value: /* args */ Duration => Unit): this.type = set("onDurationChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onEnded(value: /* args */ Anon4 => Unit): this.type = set("onEnded", js.Any.fromFunction1(value))
+    def onEnded(value: /* args */ `4` => Unit): this.type = set("onEnded", js.Any.fromFunction1(value))
     @scala.inline
-    def onFullscreenChange(value: /* args */ AnonFullscreen => Unit): this.type = set("onFullscreenChange", js.Any.fromFunction1(value))
+    def onFullscreenChange(value: /* args */ Fullscreen => Unit): this.type = set("onFullscreenChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoadedChange(value: /* args */ AnonLoaded => Unit): this.type = set("onLoadedChange", js.Any.fromFunction1(value))
+    def onLoadedChange(value: /* args */ Loaded => Unit): this.type = set("onLoadedChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onPause(value: /* args */ Anon5 => Unit): this.type = set("onPause", js.Any.fromFunction1(value))
+    def onPause(value: /* args */ `5` => Unit): this.type = set("onPause", js.Any.fromFunction1(value))
     @scala.inline
-    def onPlay(value: /* args */ Anon5 => Unit): this.type = set("onPlay", js.Any.fromFunction1(value))
+    def onPlay(value: /* args */ `5` => Unit): this.type = set("onPlay", js.Any.fromFunction1(value))
     @scala.inline
-    def onReady(value: /* args */ Anon4 => Unit): this.type = set("onReady", js.Any.fromFunction1(value))
+    def onReady(value: /* args */ `4` => Unit): this.type = set("onReady", js.Any.fromFunction1(value))
     @scala.inline
-    def onSeek(value: /* args */ Anon4 => Unit): this.type = set("onSeek", js.Any.fromFunction1(value))
+    def onSeek(value: /* args */ `4` => Unit): this.type = set("onSeek", js.Any.fromFunction1(value))
     @scala.inline
-    def onTimeChange(value: /* args */ AnonTime => Unit): this.type = set("onTimeChange", js.Any.fromFunction1(value))
+    def onTimeChange(value: /* args */ Time => Unit): this.type = set("onTimeChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onVolumeChange(value: /* args */ AnonVolume => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
+    def onVolumeChange(value: /* args */ Volume => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
     @scala.inline
     def playbackRate(value: Double): this.type = set("playbackRate", value.asInstanceOf[js.Any])
     @scala.inline
@@ -79,7 +79,7 @@ object Video {
   
   def withProps(p: VideoProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(aspectRatio: Double, captions: String, src: String | js.Array[AnonSrc]): Builder = {
+  def apply(aspectRatio: Double, captions: String, src: String | js.Array[Src]): Builder = {
     val __props = js.Dynamic.literal(aspectRatio = aspectRatio.asInstanceOf[js.Any], captions = captions.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[VideoProps]))
   }

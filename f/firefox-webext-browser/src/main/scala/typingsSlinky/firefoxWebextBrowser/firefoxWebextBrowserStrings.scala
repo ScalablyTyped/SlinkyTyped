@@ -4,10 +4,10 @@ import typingsSlinky.firefoxWebextBrowser.browser.activityLog.UndefinedType
 import typingsSlinky.firefoxWebextBrowser.browser.activityLog.UndefinedViewType
 import typingsSlinky.firefoxWebextBrowser.browser.bookmarks.BookmarkTreeNodeType
 import typingsSlinky.firefoxWebextBrowser.browser.browserSettings.ContextMenuMouseEvent
-import typingsSlinky.firefoxWebextBrowser.browser.browserSettings.ImageAnimationBehavior_
+import typingsSlinky.firefoxWebextBrowser.browser.browserSettings.ImageAnimationBehavior
 import typingsSlinky.firefoxWebextBrowser.browser.captivePortal.Status
 import typingsSlinky.firefoxWebextBrowser.browser.captivePortal.UndefinedState
-import typingsSlinky.firefoxWebextBrowser.browser.clipboard._SetImageData
+import typingsSlinky.firefoxWebextBrowser.browser.clipboard.SetImageData
 import typingsSlinky.firefoxWebextBrowser.browser.contextMenus.ContextType
 import typingsSlinky.firefoxWebextBrowser.browser.contextMenus.ItemType
 import typingsSlinky.firefoxWebextBrowser.browser.contextMenus.OnClickDataModifiers
@@ -513,9 +513,9 @@ object firefoxWebextBrowserStrings {
   
   @js.native
   sealed trait devtools
-    extends WindowType
+    extends _Permission
+       with WindowType
        with typingsSlinky.firefoxWebextBrowser.browser.tabs.WindowType
-       with _Permission
   
   @js.native
   sealed trait devtools_child extends APIChildScope
@@ -742,7 +742,7 @@ object firefoxWebextBrowserStrings {
   @js.native
   sealed trait jpeg
     extends ImageFormat
-       with _SetImageData
+       with SetImageData
   
   @js.native
   sealed trait js_ extends ProfilerFeature
@@ -917,14 +917,14 @@ object firefoxWebextBrowserStrings {
   
   @js.native
   sealed trait none
-    extends ImageAnimationBehavior_
+    extends ImageAnimationBehavior
        with ProxyConfigProxyType
   
   @js.native
   sealed trait normal
     extends CreateType
        with ExtensionInstallType
-       with ImageAnimationBehavior_
+       with ImageAnimationBehavior
        with ItemType
        with typingsSlinky.firefoxWebextBrowser.browser.menus.ItemType
        with WindowState
@@ -959,7 +959,7 @@ object firefoxWebextBrowserStrings {
   sealed trait offline extends _ResolveFlags
   
   @js.native
-  sealed trait once extends ImageAnimationBehavior_
+  sealed trait once extends ImageAnimationBehavior
   
   @js.native
   sealed trait openbsd extends PlatformOs
@@ -1025,7 +1025,7 @@ object firefoxWebextBrowserStrings {
   @js.native
   sealed trait png
     extends ImageFormat
-       with _SetImageData
+       with SetImageData
   
   @js.native
   sealed trait policy_compliant extends CertificateTransparencyStatus
@@ -1058,8 +1058,8 @@ object firefoxWebextBrowserStrings {
   
   @js.native
   sealed trait privacy
-    extends ProfilerFeature
-       with _Permission
+    extends _Permission
+       with ProfilerFeature
   
   @js.native
   sealed trait private_browsing extends TrackingProtectionModeOption
@@ -1287,8 +1287,8 @@ object firefoxWebextBrowserStrings {
   
   @js.native
   sealed trait theme
-    extends ExtensionType
-       with _Permission
+    extends _Permission
+       with ExtensionType
   
   @js.native
   sealed trait threads extends ProfilerFeature

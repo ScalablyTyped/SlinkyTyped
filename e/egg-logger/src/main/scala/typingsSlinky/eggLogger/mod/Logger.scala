@@ -1,6 +1,6 @@
 package typingsSlinky.eggLogger.mod
 
-import typingsSlinky.eggLogger.AnonExcludes
+import typingsSlinky.eggLogger.anon.Excludes
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,7 +27,7 @@ class Logger[T /* <: LoggerOptions */] protected () extends Map[String, Transpor
     * @param {Object} [options] - { excludes: [] }
     */
   def duplicate(level: LoggerLevel, logger: Logger[LoggerOptions]): Unit = js.native
-  def duplicate(level: LoggerLevel, logger: Logger[LoggerOptions], options: AnonExcludes): Unit = js.native
+  def duplicate(level: LoggerLevel, logger: Logger[LoggerOptions], options: Excludes): Unit = js.native
   /**
     * enable a transport
     * @param {String} name - transport name

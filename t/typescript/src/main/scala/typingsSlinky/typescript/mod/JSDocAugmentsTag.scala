@@ -1,6 +1,6 @@
 package typingsSlinky.typescript.mod
 
-import typingsSlinky.typescript.ExpressionWithTypeArgumen
+import typingsSlinky.typescript.anon.ExpressionWithTypeArgumen
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

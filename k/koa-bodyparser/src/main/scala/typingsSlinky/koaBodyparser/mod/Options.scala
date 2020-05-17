@@ -1,7 +1,7 @@
 package typingsSlinky.koaBodyparser.mod
 
 import typingsSlinky.koa.mod.Context
-import typingsSlinky.koaBodyparser.AnonForm
+import typingsSlinky.koaBodyparser.anon.Form
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ trait Options extends js.Object {
   /**
     * support extend types
     */
-  var extendTypes: js.UndefOr[AnonForm] = js.native
+  var extendTypes: js.UndefOr[Form] = js.native
   /**
     * limit of the urlencoded body. If the body ends up being larger than this limit
     * a 413 error code is returned. Default is 56kb
@@ -96,7 +96,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withExtendTypes(value: AnonForm): Self = {
+    def withExtendTypes(value: Form): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("extendTypes")(value.asInstanceOf[js.Any])
         ret

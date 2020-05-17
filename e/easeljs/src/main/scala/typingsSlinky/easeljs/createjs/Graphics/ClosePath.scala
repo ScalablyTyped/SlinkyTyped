@@ -1,0 +1,9 @@
+package typingsSlinky.easeljs.createjs.Graphics
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ClosePath extends js.Object
+

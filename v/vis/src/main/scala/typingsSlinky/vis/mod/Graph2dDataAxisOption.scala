@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Graph2dDataAxisOption extends js.Object {
+trait Graph2dDataAxisOption extends Graph2dOptionDataAxis {
   var alignZeros: js.UndefOr[Boolean] = js.native
   var iconWidth: js.UndefOr[Double] = js.native
   var icons: js.UndefOr[Boolean] = js.native

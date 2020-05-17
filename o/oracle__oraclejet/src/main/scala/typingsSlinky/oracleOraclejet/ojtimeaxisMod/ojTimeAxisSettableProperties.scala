@@ -1,6 +1,6 @@
 package typingsSlinky.oracleOraclejet.ojtimeaxisMod
 
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponentSettableProperties
 import typingsSlinky.oracleOraclejet.ojtimeaxisMod.ojTimeAxis.Converters
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.Converter
@@ -25,7 +25,7 @@ trait ojTimeAxisSettableProperties extends dvtBaseComponentSettableProperties {
   var scale: seconds | minutes | hours | days | weeks | months | quarters | years = js.native
   var start: String = js.native
   @JSName("translations")
-  var translations_ojTimeAxisSettableProperties: AnonLabelAndValue = js.native
+  var translations_ojTimeAxisSettableProperties: LabelAndValue = js.native
 }
 
 object ojTimeAxisSettableProperties {
@@ -36,7 +36,7 @@ object ojTimeAxisSettableProperties {
     scale: seconds | minutes | hours | days | weeks | months | quarters | years,
     start: String,
     trackResize: on | off,
-    translations: AnonLabelAndValue
+    translations: LabelAndValue
   ): ojTimeAxisSettableProperties = {
     val __obj = js.Dynamic.literal(converter = converter.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], scale = scale.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], trackResize = trackResize.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojTimeAxisSettableProperties]
@@ -72,7 +72,7 @@ object ojTimeAxisSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelAndValue): Self = {
+    def withTranslations(value: LabelAndValue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

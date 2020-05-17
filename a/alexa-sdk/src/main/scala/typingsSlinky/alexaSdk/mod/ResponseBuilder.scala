@@ -1,7 +1,7 @@
 package typingsSlinky.alexaSdk.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.alexaSdk.AnonSubtitle
+import typingsSlinky.alexaSdk.anon.Subtitle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -111,7 +111,7 @@ class ResponseBuilder protected () extends js.Object {
     * @returns ResponseBuilder
     */
   def playVideo(source: String): ResponseBuilder = js.native
-  def playVideo(source: String, metadata: AnonSubtitle): ResponseBuilder = js.native
+  def playVideo(source: String, metadata: Subtitle): ResponseBuilder = js.native
   /**
     * Creates a Display RenderTemplate Directive
     * Use a template builder to generate a template object

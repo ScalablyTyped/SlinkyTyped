@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Networking.Proximity.ConnectionRequestedEventArgs")
 @js.native
-class ConnectionRequestedEventArgs () extends IConnectionRequestedEventArgs
+trait ConnectionRequestedEventArgs extends IConnectionRequestedEventArgs
+
+object ConnectionRequestedEventArgs {
+  @scala.inline
+  def apply(peerInformation: PeerInformation): ConnectionRequestedEventArgs = {
+    val __obj = js.Dynamic.literal(peerInformation = peerInformation.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ConnectionRequestedEventArgs]
+  }
+}
 

@@ -1,6 +1,6 @@
 package typingsSlinky.evernote.mod
 
-import typingsSlinky.evernote.AnonChina
+import typingsSlinky.evernote.anon.China
 import typingsSlinky.evernote.mod.Types.LinkedNotebook
 import typingsSlinky.oauth.mod.OAuth
 import typingsSlinky.oauth.mod.oauth1tokenCallback
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @JSImport("evernote", "Client")
 @js.native
 class Client protected () extends js.Object {
-  def this(config: AnonChina) = this()
+  def this(config: China) = this()
   def getAccessToken(oauthToken: String, oauthTokenSecret: String, oauthVerifier: String, callback: oauth1tokenCallback): Unit = js.native
   def getAuthorizeUrl(oauthToken: String): String = js.native
   def getBusinessNoteStore(): NoteStoreClient = js.native

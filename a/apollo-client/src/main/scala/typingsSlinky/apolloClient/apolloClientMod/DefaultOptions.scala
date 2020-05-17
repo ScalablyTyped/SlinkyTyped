@@ -1,8 +1,8 @@
 package typingsSlinky.apolloClient.apolloClientMod
 
-import typingsSlinky.apolloClient.PartialMutationOptionskey
-import typingsSlinky.apolloClient.PartialQueryOptionsOperat
-import typingsSlinky.apolloClient.PartialWatchQueryOptionsO
+import typingsSlinky.apolloClient.anon.PartialMutationOptionskey
+import typingsSlinky.apolloClient.anon.PartialQueryOptionsOperat
+import typingsSlinky.apolloClient.anon.PartialWatchQueryOptionsO
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

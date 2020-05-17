@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs.thinEngineMod
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Blob
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.ProgressEvent
 import org.scalajs.dom.raw.WebGLBuffer
@@ -10,22 +11,22 @@ import org.scalajs.dom.raw.WebGLFramebuffer
 import org.scalajs.dom.raw.WebGLRenderbuffer
 import org.scalajs.dom.raw.WebGLShader
 import org.scalajs.dom.raw.WebGLTexture
-import typingsSlinky.babylonjs.AnonCapture
-import typingsSlinky.babylonjs.AnonCaptureConstraint
-import typingsSlinky.babylonjs.AnonFramebufferHeight
-import typingsSlinky.babylonjs.AnonHeight
-import typingsSlinky.babylonjs.AnonMag
-import typingsSlinky.babylonjs.AnonRenderer
 import typingsSlinky.babylonjs.CanvasRenderingContext2D
 import typingsSlinky.babylonjs.HTMLCanvasElement
 import typingsSlinky.babylonjs.HTMLVideoElement
 import typingsSlinky.babylonjs.ImageBitmap
-import typingsSlinky.babylonjs.PartialRenderTargetCreati
 import typingsSlinky.babylonjs.WebGLProgram
 import typingsSlinky.babylonjs.WebGLRenderingContext
 import typingsSlinky.babylonjs.WebGLUniformLocation
 import typingsSlinky.babylonjs.Window
 import typingsSlinky.babylonjs.alphaCullingStateMod.AlphaState
+import typingsSlinky.babylonjs.anon.Capture
+import typingsSlinky.babylonjs.anon.CaptureConstraint
+import typingsSlinky.babylonjs.anon.FramebufferHeight
+import typingsSlinky.babylonjs.anon.Height
+import typingsSlinky.babylonjs.anon.Mag
+import typingsSlinky.babylonjs.anon.PartialRenderTargetCreati
+import typingsSlinky.babylonjs.anon.Renderer
 import typingsSlinky.babylonjs.baseTextureMod.BaseTexture
 import typingsSlinky.babylonjs.bufferMod.VertexBuffer
 import typingsSlinky.babylonjs.dataBufferMod.DataBuffer
@@ -59,7 +60,6 @@ import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.babylonjs.uniformBufferMod.UniformBuffer
 import typingsSlinky.babylonjs.webGLPipelineContextMod.WebGLPipelineContext
 import typingsSlinky.babylonjs.webRequestMod.WebRequest
-import typingsSlinky.std.Document_
 import typingsSlinky.std.OffscreenCanvas
 import typingsSlinky.std.OffscreenCanvasRenderingContext2D
 import typingsSlinky.std.WebGL2RenderingContext
@@ -323,7 +323,7 @@ class ThinEngine protected () extends js.Object {
   def _createDepthStencilCubeTexture(size: Double, options: DepthTextureCreationOptions): InternalTexture = js.native
   /** @hidden */
   def _createDepthStencilTexture(size: Double, options: DepthTextureCreationOptions): InternalTexture = js.native
-  def _createDepthStencilTexture(size: AnonHeight, options: DepthTextureCreationOptions): InternalTexture = js.native
+  def _createDepthStencilTexture(size: Height, options: DepthTextureCreationOptions): InternalTexture = js.native
   /* protected */ def _createShaderProgram(
     pipelineContext: WebGLPipelineContext,
     vertexShader: WebGLShader,
@@ -354,7 +354,7 @@ class ThinEngine protected () extends js.Object {
   /** @hidden */
   def _getRGBAMultiSampleBufferFormat(`type`: Double): Double = js.native
   /** @hidden */
-  def _getSamplingParameters(samplingMode: Double, generateMipMaps: Boolean): AnonMag = js.native
+  def _getSamplingParameters(samplingMode: Double, generateMipMaps: Boolean): Mag = js.native
   /** @hidden */
   def _getUnpackAlignement(): Double = js.native
   /** @hidden */
@@ -521,7 +521,7 @@ class ThinEngine protected () extends js.Object {
   ): Unit = js.native
   def _setupDepthStencilTexture(
     internalTexture: InternalTexture,
-    size: AnonHeight,
+    size: Height,
     generateStencil: Boolean,
     bilinearFiltering: Boolean,
     comparisonFunction: Double
@@ -724,135 +724,6 @@ class ThinEngine protected () extends js.Object {
     * This can help preventing texture load conflict due to name collision.
     */
   def clearInternalTexturesCache(): Unit = js.native
-  def createCubeTexture(
-    rootUrl: String,
-    scene: Nullable[Scene],
-    files: Nullable[js.Array[String]],
-    noMipmap: js.UndefOr[scala.Nothing],
-    onLoad: Nullable[js.Function1[/* data */ js.UndefOr[_], Unit]],
-    onError: Nullable[
-      js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[_], Unit]
-    ],
-    format: js.UndefOr[scala.Nothing],
-    forcedExtension: js.Any,
-    createPolynomials: Boolean,
-    lodScale: Double,
-    lodOffset: Double,
-    fallback: Nullable[InternalTexture]
-  ): InternalTexture = js.native
-  def createCubeTexture(
-    rootUrl: String,
-    scene: Nullable[Scene],
-    files: Nullable[js.Array[String]],
-    noMipmap: js.UndefOr[scala.Nothing],
-    onLoad: Nullable[js.Function1[/* data */ js.UndefOr[_], Unit]],
-    onError: Nullable[
-      js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[_], Unit]
-    ],
-    format: Double,
-    forcedExtension: js.Any,
-    createPolynomials: Boolean,
-    lodScale: Double,
-    lodOffset: Double,
-    fallback: Nullable[InternalTexture]
-  ): InternalTexture = js.native
-  def createCubeTexture(
-    rootUrl: String,
-    scene: Nullable[Scene],
-    files: Nullable[js.Array[String]],
-    noMipmap: Boolean,
-    onLoad: Nullable[js.Function1[/* data */ js.UndefOr[_], Unit]],
-    onError: Nullable[
-      js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[_], Unit]
-    ],
-    format: js.UndefOr[scala.Nothing],
-    forcedExtension: js.Any
-  ): InternalTexture = js.native
-  def createCubeTexture(
-    rootUrl: String,
-    scene: Nullable[Scene],
-    files: Nullable[js.Array[String]],
-    noMipmap: Boolean,
-    onLoad: Nullable[js.Function1[/* data */ js.UndefOr[_], Unit]],
-    onError: Nullable[
-      js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[_], Unit]
-    ],
-    format: js.UndefOr[scala.Nothing],
-    forcedExtension: js.Any,
-    createPolynomials: Boolean,
-    lodScale: Double,
-    lodOffset: Double
-  ): InternalTexture = js.native
-  def createCubeTexture(
-    rootUrl: String,
-    scene: Nullable[Scene],
-    files: Nullable[js.Array[String]],
-    noMipmap: Boolean,
-    onLoad: Nullable[js.Function1[/* data */ js.UndefOr[_], Unit]],
-    onError: Nullable[
-      js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[_], Unit]
-    ],
-    format: js.UndefOr[scala.Nothing],
-    forcedExtension: js.Any,
-    createPolynomials: Boolean,
-    lodScale: Double,
-    lodOffset: Double,
-    fallback: Nullable[InternalTexture]
-  ): InternalTexture = js.native
-  /**
-    * Creates a cube texture
-    * @param rootUrl defines the url where the files to load is located
-    * @param scene defines the current scene
-    * @param files defines the list of files to load (1 per face)
-    * @param noMipmap defines a boolean indicating that no mipmaps shall be generated (false by default)
-    * @param onLoad defines an optional callback raised when the texture is loaded
-    * @param onError defines an optional callback raised if there is an issue to load the texture
-    * @param format defines the format of the data
-    * @param forcedExtension defines the extension to use to pick the right loader
-    * @returns the cube texture as an InternalTexture
-    */
-  def createCubeTexture(
-    rootUrl: String,
-    scene: Nullable[Scene],
-    files: Nullable[js.Array[String]],
-    noMipmap: Boolean,
-    onLoad: Nullable[js.Function1[/* data */ js.UndefOr[_], Unit]],
-    onError: Nullable[
-      js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[_], Unit]
-    ],
-    format: Double,
-    forcedExtension: js.Any
-  ): InternalTexture = js.native
-  /**
-    * Creates a cube texture
-    * @param rootUrl defines the url where the files to load is located
-    * @param scene defines the current scene
-    * @param files defines the list of files to load (1 per face)
-    * @param noMipmap defines a boolean indicating that no mipmaps shall be generated (false by default)
-    * @param onLoad defines an optional callback raised when the texture is loaded
-    * @param onError defines an optional callback raised if there is an issue to load the texture
-    * @param format defines the format of the data
-    * @param forcedExtension defines the extension to use to pick the right loader
-    * @param createPolynomials if a polynomial sphere should be created for the cube texture
-    * @param lodScale defines the scale applied to environment texture. This manages the range of LOD level used for IBL according to the roughness
-    * @param lodOffset defines the offset applied to environment texture. This manages first LOD level used for IBL according to the roughness
-    * @returns the cube texture as an InternalTexture
-    */
-  def createCubeTexture(
-    rootUrl: String,
-    scene: Nullable[Scene],
-    files: Nullable[js.Array[String]],
-    noMipmap: Boolean,
-    onLoad: Nullable[js.Function1[/* data */ js.UndefOr[_], Unit]],
-    onError: Nullable[
-      js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[_], Unit]
-    ],
-    format: Double,
-    forcedExtension: js.Any,
-    createPolynomials: Boolean,
-    lodScale: Double,
-    lodOffset: Double
-  ): InternalTexture = js.native
   /**
     * Creates a cube texture
     * @param rootUrl defines the url where the files to load is located
@@ -873,17 +744,71 @@ class ThinEngine protected () extends js.Object {
     rootUrl: String,
     scene: Nullable[Scene],
     files: Nullable[js.Array[String]],
-    noMipmap: Boolean,
+    noMipmap: js.UndefOr[Boolean],
     onLoad: Nullable[js.Function1[/* data */ js.UndefOr[_], Unit]],
     onError: Nullable[
       js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[_], Unit]
     ],
-    format: Double,
+    format: js.UndefOr[Double],
     forcedExtension: js.Any,
     createPolynomials: Boolean,
     lodScale: Double,
     lodOffset: Double,
     fallback: Nullable[InternalTexture]
+  ): InternalTexture = js.native
+  /**
+    * Creates a cube texture
+    * @param rootUrl defines the url where the files to load is located
+    * @param scene defines the current scene
+    * @param files defines the list of files to load (1 per face)
+    * @param noMipmap defines a boolean indicating that no mipmaps shall be generated (false by default)
+    * @param onLoad defines an optional callback raised when the texture is loaded
+    * @param onError defines an optional callback raised if there is an issue to load the texture
+    * @param format defines the format of the data
+    * @param forcedExtension defines the extension to use to pick the right loader
+    * @returns the cube texture as an InternalTexture
+    */
+  def createCubeTexture(
+    rootUrl: String,
+    scene: Nullable[Scene],
+    files: Nullable[js.Array[String]],
+    noMipmap: Boolean,
+    onLoad: Nullable[js.Function1[/* data */ js.UndefOr[_], Unit]],
+    onError: Nullable[
+      js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[_], Unit]
+    ],
+    format: js.UndefOr[Double],
+    forcedExtension: js.Any
+  ): InternalTexture = js.native
+  /**
+    * Creates a cube texture
+    * @param rootUrl defines the url where the files to load is located
+    * @param scene defines the current scene
+    * @param files defines the list of files to load (1 per face)
+    * @param noMipmap defines a boolean indicating that no mipmaps shall be generated (false by default)
+    * @param onLoad defines an optional callback raised when the texture is loaded
+    * @param onError defines an optional callback raised if there is an issue to load the texture
+    * @param format defines the format of the data
+    * @param forcedExtension defines the extension to use to pick the right loader
+    * @param createPolynomials if a polynomial sphere should be created for the cube texture
+    * @param lodScale defines the scale applied to environment texture. This manages the range of LOD level used for IBL according to the roughness
+    * @param lodOffset defines the offset applied to environment texture. This manages first LOD level used for IBL according to the roughness
+    * @returns the cube texture as an InternalTexture
+    */
+  def createCubeTexture(
+    rootUrl: String,
+    scene: Nullable[Scene],
+    files: Nullable[js.Array[String]],
+    noMipmap: Boolean,
+    onLoad: Nullable[js.Function1[/* data */ js.UndefOr[_], Unit]],
+    onError: Nullable[
+      js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[_], Unit]
+    ],
+    format: js.UndefOr[Double],
+    forcedExtension: js.Any,
+    createPolynomials: Boolean,
+    lodScale: Double,
+    lodOffset: Double
   ): InternalTexture = js.native
   /**
     * Creates a depth stencil texture.
@@ -893,7 +818,7 @@ class ThinEngine protected () extends js.Object {
     * @returns The texture
     */
   def createDepthStencilTexture(size: Double, options: DepthTextureCreationOptions): InternalTexture = js.native
-  def createDepthStencilTexture(size: AnonHeight, options: DepthTextureCreationOptions): InternalTexture = js.native
+  def createDepthStencilTexture(size: Height, options: DepthTextureCreationOptions): InternalTexture = js.native
   /**
     * Creates a dynamic texture
     * @param width defines the width of the texture
@@ -1268,8 +1193,8 @@ class ThinEngine protected () extends js.Object {
     */
   def createRenderTargetTexture(size: Double, options: Boolean): InternalTexture = js.native
   def createRenderTargetTexture(size: Double, options: RenderTargetCreationOptions): InternalTexture = js.native
-  def createRenderTargetTexture(size: AnonHeight, options: Boolean): InternalTexture = js.native
-  def createRenderTargetTexture(size: AnonHeight, options: RenderTargetCreationOptions): InternalTexture = js.native
+  def createRenderTargetTexture(size: Height, options: Boolean): InternalTexture = js.native
+  def createRenderTargetTexture(size: Height, options: RenderTargetCreationOptions): InternalTexture = js.native
   /**
     * Creates a webGL program
     * @param pipelineContext  defines the pipeline context to attach to
@@ -1467,7 +1392,7 @@ class ThinEngine protected () extends js.Object {
     * Will fallback to the gl object
     * @param dimensions the framebuffer width and height that will be used.
     */
-  def framebufferDimensionsObject(dimensions: Nullable[AnonFramebufferHeight]): js.Any = js.native
+  def framebufferDimensionsObject(dimensions: Nullable[FramebufferHeight]): js.Any = js.native
   /**
     * Gets the current alpha equation.
     * @returns the current alpha equation
@@ -1511,7 +1436,7 @@ class ThinEngine protected () extends js.Object {
     * Gets an object containing information about the current webGL context
     * @returns an object containing the vender, the renderer and the version of the current webGL context
     */
-  def getGlInfo(): AnonRenderer = js.native
+  def getGlInfo(): Renderer = js.native
   /**
     * Gets the current hardware scaling level.
     * By default the hardware scaling level is computed from the window device ratio.
@@ -1523,7 +1448,7 @@ class ThinEngine protected () extends js.Object {
     * Gets host document
     * @returns the host document object
     */
-  def getHostDocument(): Nullable[Document_] = js.native
+  def getHostDocument(): Nullable[Document] = js.native
   /**
     * Gets host window
     * @returns the host window object
@@ -2018,7 +1943,7 @@ object ThinEngine extends js.Object {
     */
   var CollisionsEpsilon: Double = js.native
   /** Use this array to turn off some WebGL2 features on known buggy browsers version */
-  var ExceptionList: js.Array[AnonCapture | AnonCaptureConstraint] = js.native
+  var ExceptionList: js.Array[Capture | CaptureConstraint] = js.native
   /** @hidden */
   var _TextureLoaders: js.Array[IInternalTextureLoader] = js.native
   var _isSupported: js.Any = js.native

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait KDETransform extends _Transforms {
+trait KDETransform extends Transforms {
   var as: js.UndefOr[(Vector2[String | SignalRef]) | SignalRef] = js.native
   var bandwidth: js.UndefOr[Double | SignalRef] = js.native
   var counts: js.UndefOr[Boolean | SignalRef] = js.native

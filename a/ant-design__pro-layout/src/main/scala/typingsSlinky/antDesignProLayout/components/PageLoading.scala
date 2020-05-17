@@ -2,7 +2,7 @@ package typingsSlinky.antDesignProLayout.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignProLayout.AnonTip
+import typingsSlinky.antDesignProLayout.anon.Tip
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ object PageLoading {
     def tip(value: String): this.type = set("tip", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AnonTip): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: Tip): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: PageLoading.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

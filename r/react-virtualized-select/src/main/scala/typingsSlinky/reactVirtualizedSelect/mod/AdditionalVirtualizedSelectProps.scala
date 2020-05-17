@@ -2,7 +2,7 @@ package typingsSlinky.reactVirtualizedSelect.mod
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactVirtualizedSelect.AnonOption
+import typingsSlinky.reactVirtualizedSelect.anon.Option
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AdditionalVirtualizedSelectProps[TValue] extends js.Object {
   var maxHeight: js.UndefOr[Double] = js.native
-  var optionHeight: js.UndefOr[Double | (js.Function1[/* options */ AnonOption[TValue], Double])] = js.native
+  var optionHeight: js.UndefOr[Double | (js.Function1[/* options */ Option[TValue], Double])] = js.native
   var optionRenderer: js.UndefOr[js.Function1[/* options */ VirtualizedOptionRenderOptions[TValue], ReactElement]] = js.native
   var selectComponent: js.UndefOr[ReactComponentClass[_]] = js.native
 }
@@ -40,13 +40,13 @@ object AdditionalVirtualizedSelectProps {
         ret
     }
     @scala.inline
-    def withOptionHeightFunction1(value: /* options */ AnonOption[TValue] => Double): Self[TValue] = {
+    def withOptionHeightFunction1(value: /* options */ Option[TValue] => Double): Self[TValue] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("optionHeight")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOptionHeight(value: Double | (js.Function1[/* options */ AnonOption[TValue], Double])): Self[TValue] = {
+    def withOptionHeight(value: Double | (js.Function1[/* options */ Option[TValue], Double])): Self[TValue] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("optionHeight")(value.asInstanceOf[js.Any])
         ret

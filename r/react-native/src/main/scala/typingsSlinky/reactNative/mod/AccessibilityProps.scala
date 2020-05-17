@@ -1,7 +1,7 @@
 package typingsSlinky.reactNative.mod
 
 import slinky.core.SyntheticEvent
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

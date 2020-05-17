@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonBodyComments
+import typingsSlinky.astTypes.anon.BodyComments
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.kindsMod.PatternKind
 import typingsSlinky.astTypes.kindsMod.StatementKind
@@ -14,6 +14,6 @@ import scala.scalajs.js.annotation._
 trait ForOfStatementBuilder extends js.Object {
   def apply(left: PatternKind, right: ExpressionKind, body: StatementKind): ForOfStatement = js.native
   def apply(left: VariableDeclarationKind, right: ExpressionKind, body: StatementKind): ForOfStatement = js.native
-  def from(params: AnonBodyComments): ForOfStatement = js.native
+  def from(params: BodyComments): ForOfStatement = js.native
 }
 

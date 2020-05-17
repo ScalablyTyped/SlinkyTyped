@@ -5,7 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.moment.mod.Moment
 import typingsSlinky.momentRange.mod.DateRange
-import typingsSlinky.reactDaterangePicker.MomentRangeNoneinpMomentI
+import typingsSlinky.reactDaterangePicker.anon.MomentRangeNoneinpMomentI
 import typingsSlinky.reactDaterangePicker.mod.DateRangePicker
 import typingsSlinky.reactDaterangePicker.mod.DateState
 import typingsSlinky.reactDaterangePicker.mod.OnSelectCallbackParam

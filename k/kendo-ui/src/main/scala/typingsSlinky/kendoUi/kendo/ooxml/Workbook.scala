@@ -1,15 +1,13 @@
 package typingsSlinky.kendoUi.kendo.ooxml
 
 import typingsSlinky.kendoUi.JQueryPromise
-import typingsSlinky.kendoUi.kendo.Observable_
+import typingsSlinky.kendoUi.kendo.Observable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.ooxml.Workbook")
 @js.native
-class Workbook () extends Observable_ {
-  def this(options: WorkbookOptions) = this()
+trait Workbook extends Observable {
   var options: WorkbookOptions = js.native
   var sheets: js.Array[WorkbookSheet] = js.native
   def toDataURL(): String = js.native

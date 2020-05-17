@@ -1,6 +1,8 @@
 package typingsSlinky.angularCompiler
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.angularCompiler.anon.Ctor
+import typingsSlinky.angularCompiler.anon.FilePath
 import typingsSlinky.angularCompiler.compileReflectorMod.CompileReflector
 import typingsSlinky.angularCompiler.outputAstMod.ExternalReference
 import typingsSlinky.angularCompiler.srcSummaryResolverMod.SummaryResolver
@@ -19,19 +21,19 @@ object staticReflectorMod extends js.Object {
     def this(
       summaryResolver: SummaryResolver[StaticSymbol],
       symbolResolver: StaticSymbolResolver,
-      knownMetadataClasses: js.Array[AnonCtor]
+      knownMetadataClasses: js.Array[Ctor]
     ) = this()
     def this(
       summaryResolver: SummaryResolver[StaticSymbol],
       symbolResolver: StaticSymbolResolver,
-      knownMetadataClasses: js.Array[AnonCtor],
-      knownMetadataFunctions: js.Array[AnonFilePath]
+      knownMetadataClasses: js.Array[Ctor],
+      knownMetadataFunctions: js.Array[FilePath]
     ) = this()
     def this(
       summaryResolver: SummaryResolver[StaticSymbol],
       symbolResolver: StaticSymbolResolver,
-      knownMetadataClasses: js.Array[AnonCtor],
-      knownMetadataFunctions: js.Array[AnonFilePath],
+      knownMetadataClasses: js.Array[Ctor],
+      knownMetadataFunctions: js.Array[FilePath],
       errorRecorder: js.Function2[/* error */ js.Any, /* fileName */ js.UndefOr[String], Unit]
     ) = this()
     var ANALYZE_FOR_ENTRY_COMPONENTS: js.Any = js.native

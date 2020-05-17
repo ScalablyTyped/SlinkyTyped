@@ -1,6 +1,6 @@
 package typingsSlinky.archiver.mod
 
-import typingsSlinky.archiver.PartialEntryData
+import typingsSlinky.archiver.anon.PartialEntryData
 import typingsSlinky.archiver.archiverBooleans.`false`
 import typingsSlinky.archiver.archiverStrings.close
 import typingsSlinky.archiver.archiverStrings.data

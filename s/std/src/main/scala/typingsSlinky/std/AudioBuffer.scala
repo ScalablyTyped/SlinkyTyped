@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +17,4 @@ trait AudioBuffer extends js.Object {
   def copyToChannel(source: js.typedarray.Float32Array, channelNumber: Double, bufferOffset: Double): Unit = js.native
   def getChannelData(channel: Double): js.typedarray.Float32Array = js.native
 }
-
-@JSGlobal("AudioBuffer")
-@js.native
-object AudioBuffer
-  extends Instantiable1[/* options */ AudioBufferOptions, org.scalajs.dom.raw.AudioBuffer]
 

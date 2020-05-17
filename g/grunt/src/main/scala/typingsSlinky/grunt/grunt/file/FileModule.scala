@@ -1,6 +1,6 @@
 package typingsSlinky.grunt.grunt.file
 
-import typingsSlinky.grunt.AnonForce
+import typingsSlinky.grunt.anon.Force
 import typingsSlinky.grunt.minimatch.IMinimatchOptions
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
@@ -41,7 +41,7 @@ trait FileModule extends js.Object {
     * @return true if the files could be deleted, otherwise false.
     */
   def delete(filepath: String): Boolean = js.native
-  def delete(filepath: String, options: AnonForce): Boolean = js.native
+  def delete(filepath: String, options: Force): Boolean = js.native
   /**
     * Are all descendant path(s) contained within the specified ancestor path?
     */

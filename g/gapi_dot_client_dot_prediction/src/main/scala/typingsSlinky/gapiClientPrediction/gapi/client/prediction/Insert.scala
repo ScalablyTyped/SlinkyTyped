@@ -1,6 +1,5 @@
 package typingsSlinky.gapiClientPrediction.gapi.client.prediction
 
-import typingsSlinky.gapiClientPrediction.AnonOutput
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +20,7 @@ trait Insert extends js.Object {
   /** Google storage location of the pmml model file. */
   var storagePMMLModelLocation: js.UndefOr[String] = js.native
   /** Instances to train model on. */
-  var trainingInstances: js.UndefOr[js.Array[AnonOutput]] = js.native
+  var trainingInstances: js.UndefOr[js.Array[typingsSlinky.gapiClientPrediction.anon.Output]] = js.native
   /** A class weighting function, which allows the importance weights for class labels to be specified (Categorical models only). */
   var utility: js.UndefOr[js.Array[Record[String, Double]]] = js.native
 }
@@ -111,7 +110,7 @@ object Insert {
         ret
     }
     @scala.inline
-    def withTrainingInstances(value: js.Array[AnonOutput]): Self = {
+    def withTrainingInstances(value: js.Array[typingsSlinky.gapiClientPrediction.anon.Output]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("trainingInstances")(value.asInstanceOf[js.Any])
         ret

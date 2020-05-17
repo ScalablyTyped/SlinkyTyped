@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`bing-maps`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -61,8 +60,4 @@ trait BingMapsLayer extends BaseTileLayer {
   @JSName("type")
   val type_BingMapsLayer: `bing-maps` = js.native
 }
-
-@JSGlobal("__esri.BingMapsLayer")
-@js.native
-object BingMapsLayer extends TopLevel[BingMapsLayerConstructor]
 

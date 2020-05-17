@@ -1,18 +1,18 @@
 package typingsSlinky.reactGoogleLoginComponent.mod
 
-import typingsSlinky.reactGoogleLoginComponent.AnonAccesstoken
+import typingsSlinky.reactGoogleLoginComponent.anon.Accesstoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait GoogleLoginInfo extends js.Object {
-  def getAuthResponse(): AnonAccesstoken = js.native
+  def getAuthResponse(): Accesstoken = js.native
 }
 
 object GoogleLoginInfo {
   @scala.inline
-  def apply(getAuthResponse: () => AnonAccesstoken): GoogleLoginInfo = {
+  def apply(getAuthResponse: () => Accesstoken): GoogleLoginInfo = {
     val __obj = js.Dynamic.literal(getAuthResponse = js.Any.fromFunction0(getAuthResponse))
     __obj.asInstanceOf[GoogleLoginInfo]
   }
@@ -23,7 +23,7 @@ object GoogleLoginInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetAuthResponse(value: () => AnonAccesstoken): Self = {
+    def withGetAuthResponse(value: () => Accesstoken): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getAuthResponse")(js.Any.fromFunction0(value))
         ret

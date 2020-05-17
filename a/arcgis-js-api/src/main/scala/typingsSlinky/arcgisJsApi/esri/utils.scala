@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +28,34 @@ trait utils extends js.Object {
   def getDeviationValues(standardDeviation: Double, average: Double, count: Double): js.Array[Double] = js.native
 }
 
-@JSGlobal("__esri.utils")
-@js.native
-object utils extends TopLevel[utils]
+object utils {
+  @scala.inline
+  def apply(
+    formatDateLabel: Double => String,
+    getDeviationValues: (Double, Double, Double) => js.Array[Double]
+  ): utils = {
+    val __obj = js.Dynamic.literal(formatDateLabel = js.Any.fromFunction1(formatDateLabel), getDeviationValues = js.Any.fromFunction3(getDeviationValues))
+    __obj.asInstanceOf[utils]
+  }
+  @scala.inline
+  implicit class utilsOps[Self <: utils] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormatDateLabel(value: Double => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formatDateLabel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetDeviationValues(value: (Double, Double, Double) => js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDeviationValues")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
+}
 

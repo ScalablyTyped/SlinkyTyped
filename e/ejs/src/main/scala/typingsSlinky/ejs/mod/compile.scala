@@ -1,9 +1,9 @@
 package typingsSlinky.ejs.mod
 
-import typingsSlinky.ejs.Optionsasyncfalseclientfa
-import typingsSlinky.ejs.Optionsasyncfalseclienttr
-import typingsSlinky.ejs.Optionsasynctrueclientfal
-import typingsSlinky.ejs.Optionsasynctrueclienttru
+import typingsSlinky.ejs.anon.Optionsasyncfalseclientfa
+import typingsSlinky.ejs.anon.Optionsasyncfalseclienttr
+import typingsSlinky.ejs.anon.Optionsasynctrueclientfal
+import typingsSlinky.ejs.anon.Optionsasynctrueclienttru
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

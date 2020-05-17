@@ -1,7 +1,7 @@
 package typingsSlinky.freedom.freedom
 
-import typingsSlinky.freedom.AnonRemoveEventListener
-import typingsSlinky.freedom.AnonViews
+import typingsSlinky.freedom.anon.RemoveEventListener
+import typingsSlinky.freedom.anon.Views
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,14 +11,14 @@ import scala.scalajs.js.annotation._
 // created for.
 @js.native
 trait CoreProviderParentApp extends js.Object {
-  var config: AnonViews = js.native
-  var global: AnonRemoveEventListener = js.native
+  var config: Views = js.native
+  var global: RemoveEventListener = js.native
   var manifestId: String = js.native
 }
 
 object CoreProviderParentApp {
   @scala.inline
-  def apply(config: AnonViews, global: AnonRemoveEventListener, manifestId: String): CoreProviderParentApp = {
+  def apply(config: Views, global: RemoveEventListener, manifestId: String): CoreProviderParentApp = {
     val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any], global = global.asInstanceOf[js.Any], manifestId = manifestId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CoreProviderParentApp]
   }
@@ -29,13 +29,13 @@ object CoreProviderParentApp {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withConfig(value: AnonViews): Self = {
+    def withConfig(value: Views): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withGlobal(value: AnonRemoveEventListener): Self = {
+    def withGlobal(value: RemoveEventListener): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("global")(value.asInstanceOf[js.Any])
         ret

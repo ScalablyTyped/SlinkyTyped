@@ -16,10 +16,4 @@ package object mobileanalyticsMod {
   type String0to1000Chars = java.lang.String
   type String10Chars = java.lang.String
   type String50Chars = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2014-06-05`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.mobileanalyticsMod._apiVersion | java.lang.String
 }

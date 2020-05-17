@@ -4,12 +4,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Excel.HeaderFooter")
 @js.native
-class HeaderFooter protected () extends js.Object {
+trait HeaderFooter extends js.Object {
   @JSName("Excel.HeaderFooter_typekey")
   var ExcelDotHeaderFooter_typekey: HeaderFooter = js.native
   val Picture: Graphic = js.native
   var Text: String = js.native
+}
+
+object HeaderFooter {
+  @scala.inline
+  def apply(ExcelDotHeaderFooter_typekey: HeaderFooter, Picture: Graphic, Text: String): HeaderFooter = {
+    val __obj = js.Dynamic.literal(Picture = Picture.asInstanceOf[js.Any], Text = Text.asInstanceOf[js.Any])
+    __obj.updateDynamic("Excel.HeaderFooter_typekey")(ExcelDotHeaderFooter_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[HeaderFooter]
+  }
+  @scala.inline
+  implicit class HeaderFooterOps[Self <: HeaderFooter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExcelDotHeaderFooter_typekey(value: HeaderFooter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Excel.HeaderFooter_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPicture(value: Graphic): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Picture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Text")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

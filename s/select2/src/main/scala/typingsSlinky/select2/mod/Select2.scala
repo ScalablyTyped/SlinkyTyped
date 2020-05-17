@@ -1,8 +1,7 @@
 package typingsSlinky.select2.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.select2.AnonOptions
-import typingsSlinky.select2.mod._Global_.JQuery
+import typingsSlinky.select2.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +18,7 @@ trait Select2 extends js.Object {
   var $selection: JQuery[HTMLElement] = js.native
   var dropdown: js.Any = js.native
   var id: String = js.native
-  var options: AnonOptions = js.native
+  var options: typingsSlinky.select2.anon.Options = js.native
   var results: js.Any = js.native
   var selection: js.Any = js.native
 }
@@ -33,7 +32,7 @@ object Select2 {
     $selection: JQuery[HTMLElement],
     dropdown: js.Any,
     id: String,
-    options: AnonOptions,
+    options: typingsSlinky.select2.anon.Options,
     results: js.Any,
     selection: js.Any
   ): Select2 = {
@@ -83,7 +82,7 @@ object Select2 {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonOptions): Self = {
+    def withOptions(value: typingsSlinky.select2.anon.Options): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

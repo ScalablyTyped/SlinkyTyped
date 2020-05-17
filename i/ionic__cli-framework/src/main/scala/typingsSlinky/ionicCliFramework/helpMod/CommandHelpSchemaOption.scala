@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCliFramework.helpMod
 
-import typingsSlinky.ionicCliFramework.AnonValueString
+import typingsSlinky.ionicCliFramework.anon.ValueString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait CommandHelpSchemaOption extends js.Object {
   val default: js.UndefOr[String | Boolean] = js.native
   val groups: js.Array[String] = js.native
   val name: String = js.native
-  val spec: AnonValueString = js.native
+  val spec: ValueString = js.native
   val summary: String = js.native
   val `type`: String = js.native
 }
@@ -22,7 +22,7 @@ object CommandHelpSchemaOption {
     aliases: js.Array[String],
     groups: js.Array[String],
     name: String,
-    spec: AnonValueString,
+    spec: ValueString,
     summary: String,
     `type`: String
   ): CommandHelpSchemaOption = {
@@ -55,7 +55,7 @@ object CommandHelpSchemaOption {
         ret
     }
     @scala.inline
-    def withSpec(value: AnonValueString): Self = {
+    def withSpec(value: ValueString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("spec")(value.asInstanceOf[js.Any])
         ret

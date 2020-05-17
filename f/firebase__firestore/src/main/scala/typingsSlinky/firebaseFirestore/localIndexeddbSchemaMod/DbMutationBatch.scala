@@ -35,41 +35,7 @@ class DbMutationBatch protected () extends js.Object {
     *
     * These mutations are never sent to the backend.
     */
-  baseMutations: js.UndefOr[scala.Nothing],
-    /**
-    * A list of mutations to apply. All mutations will be applied atomically.
-    *
-    * Mutations are serialized via JsonProtoSerializer.toMutation().
-    */
-  mutations: js.Array[Write]
-  ) = this()
-  def this(
-    /**
-    * The normalized user ID to which this batch belongs.
-    */
-  userId: String,
-    /**
-    * An identifier for this batch, allocated using an auto-generated key.
-    */
-  batchId: BatchId,
-    /**
-    * The local write time of the batch, stored as milliseconds since the
-    * epoch.
-    */
-  localWriteTimeMs: Double,
-    /**
-    * A list of "mutations" that represent a partial base state from when this
-    * write batch was initially created. During local application of the write
-    * batch, these baseMutations are applied prior to the real writes in order
-    * to override certain document fields from the remote document cache. This
-    * is necessary in the case of non-idempotent writes (e.g. `increment()`
-    * transforms) to make sure that the local view of the modified documents
-    * doesn't flicker if the remote document cache receives the result of the
-    * non-idempotent write before the write is removed from the queue.
-    *
-    * These mutations are never sent to the backend.
-    */
-  baseMutations: js.Array[Write],
+  baseMutations: js.UndefOr[js.Array[Write]],
     /**
     * A list of mutations to apply. All mutations will be applied atomically.
     *

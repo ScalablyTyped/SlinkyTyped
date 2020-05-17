@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TcpipForwardGlobalRequest extends _GlobalRequest {
+trait TcpipForwardGlobalRequest extends GlobalRequest {
   /**
     * The IP address to start/stop binding to.
     */

@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Devices.Enumeration.Pnp.PnpObjectCollection")
 @js.native
-class PnpObjectCollection () extends IVectorView[PnpObject]
+trait PnpObjectCollection extends IVectorView[PnpObject]
 

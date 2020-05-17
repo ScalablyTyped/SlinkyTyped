@@ -4,9 +4,9 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.reactBigCalendar.AnonAllDay
-import typingsSlinky.reactBigCalendar.AnonAllDayEnd
-import typingsSlinky.reactBigCalendar.AnonDirection
+import typingsSlinky.reactBigCalendar.anon.AllDay
+import typingsSlinky.reactBigCalendar.anon.AllDayEnd
+import typingsSlinky.reactBigCalendar.anon.Direction
 import typingsSlinky.reactBigCalendar.mod.Components_
 import typingsSlinky.reactBigCalendar.reactBigCalendarBooleans.`false`
 import typingsSlinky.reactBigCalendar.reactBigCalendarBooleans.`true`
@@ -24,10 +24,10 @@ trait withDragAndDropProps[TEvent /* <: js.Object */] extends js.Object {
   var draggableAccessor: js.UndefOr[(/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, Boolean])] = js.native
   var elementProps: js.UndefOr[HTMLAttributes[HTMLElement]] = js.native
   var onDragOver: js.UndefOr[js.Function1[/* event */ DragEvent[Element], Unit]] = js.native
-  var onDragStart: js.UndefOr[js.Function1[/* args */ AnonDirection[TEvent], Unit]] = js.native
-  var onDropFromOutside: js.UndefOr[js.Function1[/* args */ AnonAllDayEnd, Unit]] = js.native
-  var onEventDrop: js.UndefOr[js.Function1[/* args */ AnonAllDay[TEvent], Unit]] = js.native
-  var onEventResize: js.UndefOr[js.Function1[/* args */ AnonAllDay[TEvent], Unit]] = js.native
+  var onDragStart: js.UndefOr[js.Function1[/* args */ Direction[TEvent], Unit]] = js.native
+  var onDropFromOutside: js.UndefOr[js.Function1[/* args */ AllDayEnd, Unit]] = js.native
+  var onEventDrop: js.UndefOr[js.Function1[/* args */ AllDay[TEvent], Unit]] = js.native
+  var onEventResize: js.UndefOr[js.Function1[/* args */ AllDay[TEvent], Unit]] = js.native
   var resizable: js.UndefOr[Boolean] = js.native
   var resizableAccessor: js.UndefOr[(/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, Boolean])] = js.native
   var selectable: js.UndefOr[`true` | `false` | ignoreEvents] = js.native
@@ -113,7 +113,7 @@ object withDragAndDropProps {
         ret
     }
     @scala.inline
-    def withOnDragStart(value: /* args */ AnonDirection[TEvent] => Unit): Self[TEvent] = {
+    def withOnDragStart(value: /* args */ Direction[TEvent] => Unit): Self[TEvent] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDragStart")(js.Any.fromFunction1(value))
         ret
@@ -125,7 +125,7 @@ object withDragAndDropProps {
         ret
     }
     @scala.inline
-    def withOnDropFromOutside(value: /* args */ AnonAllDayEnd => Unit): Self[TEvent] = {
+    def withOnDropFromOutside(value: /* args */ AllDayEnd => Unit): Self[TEvent] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDropFromOutside")(js.Any.fromFunction1(value))
         ret
@@ -137,7 +137,7 @@ object withDragAndDropProps {
         ret
     }
     @scala.inline
-    def withOnEventDrop(value: /* args */ AnonAllDay[TEvent] => Unit): Self[TEvent] = {
+    def withOnEventDrop(value: /* args */ AllDay[TEvent] => Unit): Self[TEvent] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEventDrop")(js.Any.fromFunction1(value))
         ret
@@ -149,7 +149,7 @@ object withDragAndDropProps {
         ret
     }
     @scala.inline
-    def withOnEventResize(value: /* args */ AnonAllDay[TEvent] => Unit): Self[TEvent] = {
+    def withOnEventResize(value: /* args */ AllDay[TEvent] => Unit): Self[TEvent] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEventResize")(js.Any.fromFunction1(value))
         ret

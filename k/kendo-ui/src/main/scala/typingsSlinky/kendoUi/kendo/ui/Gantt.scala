@@ -12,11 +12,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.ui.Gantt")
 @js.native
-class Gantt protected () extends Widget {
-  def this(element: Element) = this()
-  def this(element: Element, options: GanttOptions) = this()
+trait Gantt extends Widget {
   var dataSource: DataSource = js.native
   var dependencies: GanttDependencyDataSource = js.native
   @JSName("options")
@@ -47,13 +44,5 @@ class Gantt protected () extends Widget {
   def view(`type`: String): Unit = js.native
   @JSName("view")
   def view_GanttView(): GanttView = js.native
-}
-
-/* static members */
-@JSGlobal("kendo.ui.Gantt")
-@js.native
-object Gantt extends js.Object {
-  var fn: Gantt = js.native
-  def extend(proto: js.Object): Gantt = js.native
 }
 

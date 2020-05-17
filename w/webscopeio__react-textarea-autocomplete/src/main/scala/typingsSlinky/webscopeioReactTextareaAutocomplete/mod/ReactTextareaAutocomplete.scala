@@ -1,7 +1,7 @@
 package typingsSlinky.webscopeioReactTextareaAutocomplete.mod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.webscopeioReactTextareaAutocomplete.AnonSelectionEnd
+import typingsSlinky.webscopeioReactTextareaAutocomplete.anon.SelectionEnd
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait ReactTextareaAutocomplete[TItem /* <: String | js.Object */]
   /**
     * Returns selectionStart and selectionEnd of the textarea.
     */
-  def getSelectionPosition(): AnonSelectionEnd = js.native
+  def getSelectionPosition(): SelectionEnd = js.native
   /**
     * Sets the caret position to the integer value passed as the argument.
     * @param position caret position to set.

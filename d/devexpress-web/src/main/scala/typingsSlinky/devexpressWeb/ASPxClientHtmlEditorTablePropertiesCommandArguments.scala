@@ -7,15 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Contains settings related to the ASPxClientCommandConsts.TABLEPROPERTIES_DIALOG_COMMAND command parameter.
   */
-@JSGlobal("ASPxClientHtmlEditorTablePropertiesCommandArguments")
 @js.native
-class ASPxClientHtmlEditorTablePropertiesCommandArguments protected () extends ASPxClientHtmlEditorCommandArguments {
-  /**
-    * Initializes a new instance of the ASPxClientHtmlEditorTablePropertiesCommandArguments class with specified settings.
-    * @param htmlEditor The HTML editor executing a command.
-    * @param selectedElement An object containing the currently selected element in the HTML editor.
-    */
-  def this(htmlEditor: ASPxClientHtmlEditor, selectedElement: js.Any) = this()
+trait ASPxClientHtmlEditorTablePropertiesCommandArguments extends ASPxClientHtmlEditorCommandArguments {
   /**
     * Determines the position of the target table element.
     */
@@ -44,5 +37,72 @@ class ASPxClientHtmlEditorTablePropertiesCommandArguments protected () extends A
     * Gets or sets the table's summary.
     */
   var summary: String = js.native
+}
+
+object ASPxClientHtmlEditorTablePropertiesCommandArguments {
+  @scala.inline
+  def apply(
+    align: String,
+    caption: String,
+    cellPadding: Double,
+    cellSpacing: Double,
+    headers: String,
+    selectedElement: js.Any,
+    styleSettings: ASPxClientHtmlEditorCommandStyleSettings,
+    summary: String
+  ): ASPxClientHtmlEditorTablePropertiesCommandArguments = {
+    val __obj = js.Dynamic.literal(align = align.asInstanceOf[js.Any], caption = caption.asInstanceOf[js.Any], cellPadding = cellPadding.asInstanceOf[js.Any], cellSpacing = cellSpacing.asInstanceOf[js.Any], headers = headers.asInstanceOf[js.Any], selectedElement = selectedElement.asInstanceOf[js.Any], styleSettings = styleSettings.asInstanceOf[js.Any], summary = summary.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientHtmlEditorTablePropertiesCommandArguments]
+  }
+  @scala.inline
+  implicit class ASPxClientHtmlEditorTablePropertiesCommandArgumentsOps[Self <: ASPxClientHtmlEditorTablePropertiesCommandArguments] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlign(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCaption(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCellPadding(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellPadding")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCellSpacing(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cellSpacing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStyleSettings(value: ASPxClientHtmlEditorCommandStyleSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("styleSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSummary(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("summary")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -54,9 +54,8 @@ object routeOutletMod extends js.Object {
     var swipeHandler: js.UndefOr[SwipeGestureHandler] = js.native
     var transition: js.Any = js.native
     var waitPromise: js.UndefOr[js.Any] = js.native
-    def commit(enteringEl: HTMLElement): js.Promise[Boolean] = js.native
-    def commit(enteringEl: HTMLElement, leavingEl: js.UndefOr[scala.Nothing], opts: RouterOutletOptions): js.Promise[Boolean] = js.native
     /** @internal */
+    def commit(enteringEl: HTMLElement): js.Promise[Boolean] = js.native
     def commit(enteringEl: HTMLElement, leavingEl: HTMLElement): js.Promise[Boolean] = js.native
     def commit(enteringEl: HTMLElement, leavingEl: HTMLElement, opts: RouterOutletOptions): js.Promise[Boolean] = js.native
     @JSName("componentWillLoad")

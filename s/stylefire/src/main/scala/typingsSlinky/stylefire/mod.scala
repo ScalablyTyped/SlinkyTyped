@@ -1,7 +1,7 @@
 package typingsSlinky.stylefire
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Window
 import typingsSlinky.stylefire.buildMod.SVGAttrs
 import typingsSlinky.stylefire.svgTypesMod.Dimensions
 import typingsSlinky.stylefire.svgTypesMod.SVGState
@@ -22,27 +22,6 @@ object mod extends js.Object {
   def buildSVGAttrs(
     hasAttrXAttrYOriginXOriginYPathLengthPathSpacingPathOffsetState: State with SVGState,
     dimensions: Dimensions
-  ): SVGAttrs = js.native
-  def buildSVGAttrs(
-    hasAttrXAttrYOriginXOriginYPathLengthPathSpacingPathOffsetState: State with SVGState,
-    dimensions: Dimensions,
-    totalPathLength: js.UndefOr[scala.Nothing],
-    cssBuilder: js.Function1[/* state */ State, ResolvedState]
-  ): SVGAttrs = js.native
-  def buildSVGAttrs(
-    hasAttrXAttrYOriginXOriginYPathLengthPathSpacingPathOffsetState: State with SVGState,
-    dimensions: Dimensions,
-    totalPathLength: js.UndefOr[scala.Nothing],
-    cssBuilder: js.Function1[/* state */ State, ResolvedState],
-    attrs: SVGAttrs
-  ): SVGAttrs = js.native
-  def buildSVGAttrs(
-    hasAttrXAttrYOriginXOriginYPathLengthPathSpacingPathOffsetState: State with SVGState,
-    dimensions: Dimensions,
-    totalPathLength: js.UndefOr[scala.Nothing],
-    cssBuilder: js.Function1[/* state */ State, ResolvedState],
-    attrs: SVGAttrs,
-    isDashCase: Boolean
   ): SVGAttrs = js.native
   def buildSVGAttrs(
     hasAttrXAttrYOriginXOriginYPathLengthPathSpacingPathOffsetState: State with SVGState,
@@ -84,8 +63,8 @@ object mod extends js.Object {
   def default(nodeOrSelector: String, props: Props): Styler = js.native
   def default(nodeOrSelector: Element): Styler = js.native
   def default(nodeOrSelector: Element, props: Props): Styler = js.native
-  def default(nodeOrSelector: Window_): Styler = js.native
-  def default(nodeOrSelector: Window_, props: Props): Styler = js.native
+  def default(nodeOrSelector: Window): Styler = js.native
+  def default(nodeOrSelector: Window, props: Props): Styler = js.native
   def isTransformProp(key: String): Boolean = js.native
 }
 

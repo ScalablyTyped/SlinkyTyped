@@ -14,3 +14,14 @@ trait RendererWithVisualVariables
   extends typingsSlinky.arcgisJsApi.esri.renderers.Renderer
      with renderersRenderer
 
+object RendererWithVisualVariables {
+  @scala.inline
+  implicit def apply(value: ClassBreaksRenderer): RendererWithVisualVariables = value.asInstanceOf[RendererWithVisualVariables]
+  @scala.inline
+  implicit def apply(value: DotDensityRenderer): RendererWithVisualVariables = value.asInstanceOf[RendererWithVisualVariables]
+  @scala.inline
+  implicit def apply(value: SimpleRenderer): RendererWithVisualVariables = value.asInstanceOf[RendererWithVisualVariables]
+  @scala.inline
+  implicit def apply(value: UniqueValueRenderer): RendererWithVisualVariables = value.asInstanceOf[RendererWithVisualVariables]
+}
+

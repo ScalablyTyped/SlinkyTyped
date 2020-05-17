@@ -1,6 +1,6 @@
 package typingsSlinky.storybookReactNative.previewMod
 
-import typingsSlinky.storybookReactNative.AnonBackgroundColor
+import typingsSlinky.storybookReactNative.anon.BackgroundColor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait Params extends js.Object {
   var shouldDisableKeyboardAvoidingView: Boolean = js.native
   var shouldPersistSelection: Boolean = js.native
   var tabOpen: Double = js.native
-  var theme: AnonBackgroundColor = js.native
+  var theme: BackgroundColor = js.native
 }
 
 object Params {
@@ -40,7 +40,7 @@ object Params {
     shouldDisableKeyboardAvoidingView: Boolean,
     shouldPersistSelection: Boolean,
     tabOpen: Double,
-    theme: AnonBackgroundColor
+    theme: BackgroundColor
   ): Params = {
     val __obj = js.Dynamic.literal(disableWebsockets = disableWebsockets.asInstanceOf[js.Any], host = host.asInstanceOf[js.Any], initialSelection = initialSelection.asInstanceOf[js.Any], isUIHidden = isUIHidden.asInstanceOf[js.Any], keyboardAvoidingViewVerticalOffset = keyboardAvoidingViewVerticalOffset.asInstanceOf[js.Any], onDeviceUI = onDeviceUI.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any], query = query.asInstanceOf[js.Any], resetStorybook = resetStorybook.asInstanceOf[js.Any], secured = secured.asInstanceOf[js.Any], shouldDisableKeyboardAvoidingView = shouldDisableKeyboardAvoidingView.asInstanceOf[js.Any], shouldPersistSelection = shouldPersistSelection.asInstanceOf[js.Any], tabOpen = tabOpen.asInstanceOf[js.Any], theme = theme.asInstanceOf[js.Any])
     __obj.asInstanceOf[Params]
@@ -130,7 +130,7 @@ object Params {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonBackgroundColor): Self = {
+    def withTheme(value: BackgroundColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

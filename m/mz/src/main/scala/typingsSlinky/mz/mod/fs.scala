@@ -1,48 +1,47 @@
 package typingsSlinky.mz.mod
 
-import typingsSlinky.mz.Anon0
-import typingsSlinky.mz.Anon1
-import typingsSlinky.mz.AnonBuffer
-import typingsSlinky.mz.AnonBufferBytesRead
-import typingsSlinky.mz.AnonBufferDataView
-import typingsSlinky.mz.AnonBufferFloat32Array
-import typingsSlinky.mz.AnonBufferFloat64Array
-import typingsSlinky.mz.AnonBufferInt16Array
-import typingsSlinky.mz.AnonBufferInt32Array
-import typingsSlinky.mz.AnonBufferInt8Array
-import typingsSlinky.mz.AnonBufferUint32Array
-import typingsSlinky.mz.AnonBytesRead
-import typingsSlinky.mz.AnonEncoding
-import typingsSlinky.mz.AnonEncodingFlag
-import typingsSlinky.mz.AnonEncodingPersistent
-import typingsSlinky.mz.AnonEncodingWithFileTypes
-import typingsSlinky.mz.AnonFlag
-import typingsSlinky.mz.AnonFlagString
-import typingsSlinky.mz.AnonInterval
-import typingsSlinky.mz.AnonPersistent
-import typingsSlinky.mz.AnonRecursive
-import typingsSlinky.mz.AnonWithFileTypes
+import typingsSlinky.mz.anon.BufferBytesRead
+import typingsSlinky.mz.anon.BufferDataView
+import typingsSlinky.mz.anon.BufferFloat32Array
+import typingsSlinky.mz.anon.BufferFloat64Array
+import typingsSlinky.mz.anon.BufferInt16Array
+import typingsSlinky.mz.anon.BufferInt32Array
+import typingsSlinky.mz.anon.BufferInt8Array
+import typingsSlinky.mz.anon.BufferUint32Array
+import typingsSlinky.mz.anon.BytesRead
+import typingsSlinky.mz.anon.Encoding
+import typingsSlinky.mz.anon.EncodingFlag
+import typingsSlinky.mz.anon.EncodingPersistent
+import typingsSlinky.mz.anon.EncodingWithFileTypes
+import typingsSlinky.mz.anon.Flag
+import typingsSlinky.mz.anon.FlagString
+import typingsSlinky.mz.anon.Interval
+import typingsSlinky.mz.anon.Persistent
+import typingsSlinky.mz.anon.Recursive
+import typingsSlinky.mz.anon.WithFileTypes
+import typingsSlinky.mz.anon.`0`
+import typingsSlinky.mz.anon.`1`
 import typingsSlinky.mz.mzStrings.buffer
-import typingsSlinky.node.Anon2
-import typingsSlinky.node.Anon3
-import typingsSlinky.node.Anon4
-import typingsSlinky.node.Anon5
-import typingsSlinky.node.Anon6
-import typingsSlinky.node.Anon7
-import typingsSlinky.node.AnonAutoClose
-import typingsSlinky.node.AnonBufferString
-import typingsSlinky.node.AnonBufferTBuffer
-import typingsSlinky.node.AnonBytesWrittenNumber
-import typingsSlinky.node.AnonEmitClose
-import typingsSlinky.node.AnonEncodingBufferEncoding
-import typingsSlinky.node.AnonEncodingNull
-import typingsSlinky.node.AnonFlagMode
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
-import typingsSlinky.node.MakeDirectoryOptionsrecur
-import typingsSlinky.node.MakeDirectoryOptionsrecurMode
 import typingsSlinky.node.NodeJS.ArrayBufferView
 import typingsSlinky.node.NodeJS.ErrnoException
+import typingsSlinky.node.anon.AutoClose
+import typingsSlinky.node.anon.BufferString
+import typingsSlinky.node.anon.BufferTBuffer
+import typingsSlinky.node.anon.BytesWrittenNumber
+import typingsSlinky.node.anon.EmitClose
+import typingsSlinky.node.anon.EncodingBufferEncoding
+import typingsSlinky.node.anon.EncodingNull
+import typingsSlinky.node.anon.FlagMode
+import typingsSlinky.node.anon.MakeDirectoryOptionsrecur
+import typingsSlinky.node.anon.MakeDirectoryOptionsrecurMode
+import typingsSlinky.node.anon.`2`
+import typingsSlinky.node.anon.`3`
+import typingsSlinky.node.anon.`4`
+import typingsSlinky.node.anon.`5`
+import typingsSlinky.node.anon.`6`
+import typingsSlinky.node.anon.`7`
 import typingsSlinky.node.fsMod.FSWatcher
 import typingsSlinky.node.fsMod.MakeDirectoryOptions
 import typingsSlinky.node.fsMod.NoParamCallback
@@ -87,9 +86,8 @@ object fs extends js.Object {
   
   def access(path: PathLike): js.Promise[Unit] = js.native
   def access(path: PathLike, callback: NoParamCallback): Unit = js.native
-  def access(path: PathLike, mode: js.UndefOr[scala.Nothing], callback: NoParamCallback): Unit = js.native
+  def access(path: PathLike, mode: js.UndefOr[Double], callback: NoParamCallback): Unit = js.native
   def access(path: PathLike, mode: Double): js.Promise[Unit] = js.native
-  def access(path: PathLike, mode: Double, callback: NoParamCallback): Unit = js.native
   /**
     * Synchronously tests a user's permissions for the file specified by path.
     * @param path A path to a file or directory. If a URL is provided, it must use the `file:` protocol.
@@ -169,7 +167,7 @@ object fs extends js.Object {
     */
   def createReadStream(path: PathLike): typingsSlinky.node.fsMod.ReadStream = js.native
   def createReadStream(path: PathLike, options: String): typingsSlinky.node.fsMod.ReadStream = js.native
-  def createReadStream(path: PathLike, options: AnonAutoClose): typingsSlinky.node.fsMod.ReadStream = js.native
+  def createReadStream(path: PathLike, options: AutoClose): typingsSlinky.node.fsMod.ReadStream = js.native
   /**
     * Returns a new `WriteStream` object.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -177,7 +175,7 @@ object fs extends js.Object {
     */
   def createWriteStream(path: PathLike): typingsSlinky.node.fsMod.WriteStream = js.native
   def createWriteStream(path: PathLike, options: String): typingsSlinky.node.fsMod.WriteStream = js.native
-  def createWriteStream(path: PathLike, options: AnonEmitClose): typingsSlinky.node.fsMod.WriteStream = js.native
+  def createWriteStream(path: PathLike, options: EmitClose): typingsSlinky.node.fsMod.WriteStream = js.native
   def exists(path: PathLike): js.Promise[Boolean] = js.native
   def exists(
     path: PathLike,
@@ -229,10 +227,8 @@ object fs extends js.Object {
   def fsyncSync(fd: Double): Unit = js.native
   def ftruncate(fd: Double): js.Promise[Unit] = js.native
   def ftruncate(fd: Double, callback: NoParamCallback): Unit = js.native
-  def ftruncate(fd: Double, len: js.UndefOr[scala.Nothing], callback: NoParamCallback): Unit = js.native
+  def ftruncate(fd: Double, len: js.UndefOr[Double | Null], callback: NoParamCallback): Unit = js.native
   def ftruncate(fd: Double, len: Double): js.Promise[Unit] = js.native
-  def ftruncate(fd: Double, len: Double, callback: NoParamCallback): Unit = js.native
-  def ftruncate(fd: Double, len: Null, callback: NoParamCallback): Unit = js.native
   /**
     * Synchronous ftruncate(2) - Truncate a file to a specified length.
     * @param fd A file descriptor.
@@ -311,14 +307,14 @@ object fs extends js.Object {
   def lstatSync(path: PathLike): typingsSlinky.node.fsMod.Stats = js.native
   def mkdir(path: PathLike): js.Promise[Unit] = js.native
   def mkdir(path: PathLike, callback: NoParamCallback): Unit = js.native
-  def mkdir(path: PathLike, options: js.UndefOr[scala.Nothing], callback: NoParamCallback): Unit = js.native
+  def mkdir(
+    path: PathLike,
+    options: js.UndefOr[Double | MakeDirectoryOptions | Null | String],
+    callback: NoParamCallback
+  ): Unit = js.native
   def mkdir(path: PathLike, options: String): js.Promise[Unit] = js.native
-  def mkdir(path: PathLike, options: String, callback: NoParamCallback): Unit = js.native
   def mkdir(path: PathLike, options: Double): js.Promise[Unit] = js.native
-  def mkdir(path: PathLike, options: Double, callback: NoParamCallback): Unit = js.native
-  def mkdir(path: PathLike, options: Null, callback: NoParamCallback): Unit = js.native
   def mkdir(path: PathLike, options: MakeDirectoryOptions): js.Promise[Unit] = js.native
-  def mkdir(path: PathLike, options: MakeDirectoryOptions, callback: NoParamCallback): Unit = js.native
   /**
     * Synchronous mkdir(2) - create a directory.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -353,44 +349,19 @@ object fs extends js.Object {
   def mkdtemp(prefix: String, callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ String, Unit]): Unit = js.native
   def mkdtemp(
     prefix: String,
-    options: js.UndefOr[scala.Nothing],
+    options: js.UndefOr[`1` | BufferEncoding | Encoding | Null | String],
     callback: js.Function2[ErrnoException | Null, Buffer | (/* folder */ String), Unit]
   ): Unit = js.native
   def mkdtemp(prefix: String, options: String): js.Promise[String | Buffer] = js.native
+  def mkdtemp(prefix: String, options: Encoding): js.Promise[String] = js.native
+  def mkdtemp(prefix: String, options: `0`): js.Promise[Buffer] = js.native
   def mkdtemp(
     prefix: String,
-    options: String,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ String | Buffer, Unit]
-  ): Unit = js.native
-  def mkdtemp(
-    prefix: String,
-    options: Null,
-    callback: js.Function2[ErrnoException | Null, Buffer | (/* folder */ String), Unit]
-  ): Unit = js.native
-  def mkdtemp(prefix: String, options: Anon0): js.Promise[Buffer] = js.native
-  def mkdtemp(
-    prefix: String,
-    options: Anon0,
+    options: `0`,
     callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ Buffer, Unit]
   ): Unit = js.native
-  def mkdtemp(prefix: String, options: Anon1): js.Promise[String | Buffer] = js.native
-  def mkdtemp(
-    prefix: String,
-    options: Anon1,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ String | Buffer, Unit]
-  ): Unit = js.native
-  def mkdtemp(prefix: String, options: AnonEncoding): js.Promise[String] = js.native
-  def mkdtemp(
-    prefix: String,
-    options: AnonEncoding,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ String, Unit]
-  ): Unit = js.native
+  def mkdtemp(prefix: String, options: `1`): js.Promise[String | Buffer] = js.native
   def mkdtemp(prefix: String, options: BufferEncoding): js.Promise[String] = js.native
-  def mkdtemp(
-    prefix: String,
-    options: BufferEncoding,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ String, Unit]
-  ): Unit = js.native
   /**
     * Synchronously creates a unique temporary directory.
     * Generates six random characters to be appended behind a required prefix to create a unique temporary directory.
@@ -398,15 +369,15 @@ object fs extends js.Object {
     */
   def mkdtempSync(prefix: String): String = js.native
   def mkdtempSync(prefix: String, options: String): String | Buffer = js.native
+  def mkdtempSync(prefix: String, options: BufferEncoding): String = js.native
+  def mkdtempSync(prefix: String, options: typingsSlinky.node.anon.Encoding): String = js.native
   /**
     * Synchronously creates a unique temporary directory.
     * Generates six random characters to be appended behind a required prefix to create a unique temporary directory.
     * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
     */
-  def mkdtempSync(prefix: String, options: Anon2): Buffer = js.native
-  def mkdtempSync(prefix: String, options: Anon3): String | Buffer = js.native
-  def mkdtempSync(prefix: String, options: typingsSlinky.node.AnonEncoding): String = js.native
-  def mkdtempSync(prefix: String, options: BufferEncoding): String = js.native
+  def mkdtempSync(prefix: String, options: `2`): Buffer = js.native
+  def mkdtempSync(prefix: String, options: `3`): String | Buffer = js.native
   /**
     * Synchronously creates a unique temporary directory.
     * Generates six random characters to be appended behind a required prefix to create a unique temporary directory.
@@ -433,29 +404,11 @@ object fs extends js.Object {
   def open(
     path: PathLike,
     flags: String,
-    mode: js.UndefOr[scala.Nothing],
-    callback: js.Function2[/* err */ ErrnoException | Null, /* fd */ Double, Unit]
+    mode: js.UndefOr[Double | Null | String],
+    callback: js.Function2[ErrnoException | Null, /* fd */ Double, Unit]
   ): Unit = js.native
   def open(path: PathLike, flags: String, mode: String): js.Promise[Double] = js.native
-  def open(
-    path: PathLike,
-    flags: String,
-    mode: String,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* fd */ Double, Unit]
-  ): Unit = js.native
   def open(path: PathLike, flags: String, mode: Double): js.Promise[Double] = js.native
-  def open(
-    path: PathLike,
-    flags: String,
-    mode: Double,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* fd */ Double, Unit]
-  ): Unit = js.native
-  def open(
-    path: PathLike,
-    flags: String,
-    mode: Null,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* fd */ Double, Unit]
-  ): Unit = js.native
   def open(path: PathLike, flags: Double): js.Promise[Double] = js.native
   def open(
     path: PathLike,
@@ -465,29 +418,11 @@ object fs extends js.Object {
   def open(
     path: PathLike,
     flags: Double,
-    mode: js.UndefOr[scala.Nothing],
-    callback: js.Function2[/* err */ ErrnoException | Null, /* fd */ Double, Unit]
+    mode: js.UndefOr[Double | Null | String],
+    callback: js.Function2[ErrnoException | Null, /* fd */ Double, Unit]
   ): Unit = js.native
   def open(path: PathLike, flags: Double, mode: String): js.Promise[Double] = js.native
-  def open(
-    path: PathLike,
-    flags: Double,
-    mode: String,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* fd */ Double, Unit]
-  ): Unit = js.native
   def open(path: PathLike, flags: Double, mode: Double): js.Promise[Double] = js.native
-  def open(
-    path: PathLike,
-    flags: Double,
-    mode: Double,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* fd */ Double, Unit]
-  ): Unit = js.native
-  def open(
-    path: PathLike,
-    flags: Double,
-    mode: Null,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* fd */ Double, Unit]
-  ): Unit = js.native
   /**
     * Synchronous open(2) - open and possibly create a file, returning a file descriptor..
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -501,8 +436,8 @@ object fs extends js.Object {
   def openSync(path: PathLike, flags: Double, mode: Double): Double = js.native
   def opendirSync(path: String): typingsSlinky.node.fsMod.Dir = js.native
   def opendirSync(path: String, options: OpenDirOptions): typingsSlinky.node.fsMod.Dir = js.native
-  def read(fd: Double, buffer: js.typedarray.DataView, offset: Double, length: Double): js.Promise[AnonBufferDataView] = js.native
-  def read(fd: Double, buffer: js.typedarray.DataView, offset: Double, length: Double, position: Double): js.Promise[AnonBufferDataView] = js.native
+  def read(fd: Double, buffer: js.typedarray.DataView, offset: Double, length: Double): js.Promise[BufferDataView] = js.native
+  def read(fd: Double, buffer: js.typedarray.DataView, offset: Double, length: Double, position: Double): js.Promise[BufferDataView] = js.native
   def read(
     fd: Double,
     buffer: js.typedarray.DataView,
@@ -529,8 +464,8 @@ object fs extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  def read(fd: Double, buffer: js.typedarray.Float32Array, offset: Double, length: Double): js.Promise[AnonBufferFloat32Array] = js.native
-  def read(fd: Double, buffer: js.typedarray.Float32Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferFloat32Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Float32Array, offset: Double, length: Double): js.Promise[BufferFloat32Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Float32Array, offset: Double, length: Double, position: Double): js.Promise[BufferFloat32Array] = js.native
   def read(
     fd: Double,
     buffer: js.typedarray.Float32Array,
@@ -557,8 +492,8 @@ object fs extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  def read(fd: Double, buffer: js.typedarray.Float64Array, offset: Double, length: Double): js.Promise[AnonBufferFloat64Array] = js.native
-  def read(fd: Double, buffer: js.typedarray.Float64Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferFloat64Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Float64Array, offset: Double, length: Double): js.Promise[BufferFloat64Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Float64Array, offset: Double, length: Double, position: Double): js.Promise[BufferFloat64Array] = js.native
   def read(
     fd: Double,
     buffer: js.typedarray.Float64Array,
@@ -585,8 +520,8 @@ object fs extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  def read(fd: Double, buffer: js.typedarray.Int16Array, offset: Double, length: Double): js.Promise[AnonBufferInt16Array] = js.native
-  def read(fd: Double, buffer: js.typedarray.Int16Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferInt16Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Int16Array, offset: Double, length: Double): js.Promise[BufferInt16Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Int16Array, offset: Double, length: Double, position: Double): js.Promise[BufferInt16Array] = js.native
   def read(
     fd: Double,
     buffer: js.typedarray.Int16Array,
@@ -613,8 +548,8 @@ object fs extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  def read(fd: Double, buffer: js.typedarray.Int32Array, offset: Double, length: Double): js.Promise[AnonBufferInt32Array] = js.native
-  def read(fd: Double, buffer: js.typedarray.Int32Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferInt32Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Int32Array, offset: Double, length: Double): js.Promise[BufferInt32Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Int32Array, offset: Double, length: Double, position: Double): js.Promise[BufferInt32Array] = js.native
   def read(
     fd: Double,
     buffer: js.typedarray.Int32Array,
@@ -641,8 +576,8 @@ object fs extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  def read(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double): js.Promise[AnonBufferInt8Array] = js.native
-  def read(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferInt8Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double): js.Promise[BufferInt8Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double, position: Double): js.Promise[BufferInt8Array] = js.native
   def read(
     fd: Double,
     buffer: js.typedarray.Int8Array,
@@ -669,8 +604,8 @@ object fs extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  def read(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double): js.Promise[AnonBufferBytesRead] = js.native
-  def read(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferBytesRead] = js.native
+  def read(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double): js.Promise[BufferBytesRead] = js.native
+  def read(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double, position: Double): js.Promise[BufferBytesRead] = js.native
   def read(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
@@ -697,8 +632,8 @@ object fs extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  def read(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double): js.Promise[AnonBufferUint32Array] = js.native
-  def read(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferUint32Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double): js.Promise[BufferUint32Array] = js.native
+  def read(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double, position: Double): js.Promise[BufferUint32Array] = js.native
   def read(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
@@ -725,8 +660,8 @@ object fs extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  def read(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double): js.Promise[AnonBuffer] = js.native
-  def read(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double, position: Double): js.Promise[AnonBuffer] = js.native
+  def read(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double): js.Promise[typingsSlinky.mz.anon.Buffer] = js.native
+  def read(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double, position: Double): js.Promise[typingsSlinky.mz.anon.Buffer] = js.native
   def read(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
@@ -753,14 +688,14 @@ object fs extends js.Object {
       Unit
     ]
   ): Unit = js.native
-  def read(fd: Double, buffer: js.typedarray.Uint8ClampedArray, offset: Double, length: Double): js.Promise[AnonBytesRead] = js.native
+  def read(fd: Double, buffer: js.typedarray.Uint8ClampedArray, offset: Double, length: Double): js.Promise[BytesRead] = js.native
   def read(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
     offset: Double,
     length: Double,
     position: Double
-  ): js.Promise[AnonBytesRead] = js.native
+  ): js.Promise[BytesRead] = js.native
   def read(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -791,75 +726,49 @@ object fs extends js.Object {
   def readFile(path: Double, callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]): Unit = js.native
   def readFile(
     path: Double,
-    options: js.UndefOr[scala.Nothing],
+    options: js.UndefOr[Flag | FlagString | Null | String],
     callback: js.Function2[ErrnoException | Null, Buffer | String, Unit]
   ): Unit = js.native
   def readFile(path: Double, options: String): js.Promise[String] = js.native
   def readFile(
     path: Double,
     options: String,
-    callback: js.Function2[ErrnoException | Null, Buffer | (/* data */ String), Unit]
-  ): Unit = js.native
-  def readFile(path: Double, options: Null, callback: js.Function2[ErrnoException | Null, Buffer | String, Unit]): Unit = js.native
-  def readFile(path: Double, options: AnonEncodingFlag): js.Promise[String] = js.native
-  def readFile(
-    path: Double,
-    options: AnonEncodingFlag,
     callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String, Unit]
   ): Unit = js.native
-  def readFile(path: Double, options: AnonFlag): js.Promise[Buffer] = js.native
-  def readFile(path: Double, options: AnonFlagString): js.Promise[String | Buffer] = js.native
+  def readFile(path: Double, options: EncodingFlag): js.Promise[String] = js.native
   def readFile(
     path: Double,
-    options: AnonFlagString,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String | Buffer, Unit]
+    options: EncodingFlag,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String, Unit]
   ): Unit = js.native
-  def readFile(
-    path: Double,
-    options: AnonFlag,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]
-  ): Unit = js.native
+  def readFile(path: Double, options: Flag): js.Promise[Buffer] = js.native
+  def readFile(path: Double, options: FlagString): js.Promise[String | Buffer] = js.native
   def readFile(path: PathLike): js.Promise[Buffer] = js.native
   def readFile(path: PathLike, callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]): Unit = js.native
   def readFile(
     path: PathLike,
-    options: js.UndefOr[scala.Nothing],
+    options: js.UndefOr[Flag | FlagString | Null | String],
     callback: js.Function2[ErrnoException | Null, Buffer | String, Unit]
   ): Unit = js.native
   def readFile(path: PathLike, options: String): js.Promise[String] = js.native
   def readFile(
     path: PathLike,
     options: String,
-    callback: js.Function2[ErrnoException | Null, Buffer | (/* data */ String), Unit]
-  ): Unit = js.native
-  def readFile(
-    path: PathLike,
-    options: Null,
-    callback: js.Function2[ErrnoException | Null, Buffer | String, Unit]
-  ): Unit = js.native
-  def readFile(path: PathLike, options: AnonEncodingFlag): js.Promise[String] = js.native
-  def readFile(
-    path: PathLike,
-    options: AnonEncodingFlag,
     callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String, Unit]
   ): Unit = js.native
-  def readFile(path: PathLike, options: AnonFlag): js.Promise[Buffer] = js.native
-  def readFile(path: PathLike, options: AnonFlagString): js.Promise[String | Buffer] = js.native
+  def readFile(path: PathLike, options: EncodingFlag): js.Promise[String] = js.native
   def readFile(
     path: PathLike,
-    options: AnonFlagString,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String | Buffer, Unit]
+    options: EncodingFlag,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String, Unit]
   ): Unit = js.native
-  def readFile(
-    path: PathLike,
-    options: AnonFlag,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]
-  ): Unit = js.native
+  def readFile(path: PathLike, options: Flag): js.Promise[Buffer] = js.native
+  def readFile(path: PathLike, options: FlagString): js.Promise[String | Buffer] = js.native
   def readFileSync(path: Double): String | Buffer = js.native
   def readFileSync(path: Double, options: String): String = js.native
-  def readFileSync(path: Double, options: typingsSlinky.node.AnonEncodingFlag): String = js.native
-  def readFileSync(path: Double, options: typingsSlinky.node.AnonFlag): Buffer = js.native
-  def readFileSync(path: Double, options: typingsSlinky.node.AnonFlagString): String | Buffer = js.native
+  def readFileSync(path: Double, options: typingsSlinky.node.anon.EncodingFlag): String = js.native
+  def readFileSync(path: Double, options: typingsSlinky.node.anon.Flag): Buffer = js.native
+  def readFileSync(path: Double, options: typingsSlinky.node.anon.FlagString): String | Buffer = js.native
   /**
     * Synchronously reads the entire contents of a file.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -878,9 +787,9 @@ object fs extends js.Object {
     * @param options Either the encoding for the result, or an object that contains the encoding and an optional flag.
     * If a flag is not provided, it defaults to `'r'`.
     */
-  def readFileSync(path: PathLike, options: typingsSlinky.node.AnonEncodingFlag): String = js.native
-  def readFileSync(path: PathLike, options: typingsSlinky.node.AnonFlag): Buffer = js.native
-  def readFileSync(path: PathLike, options: typingsSlinky.node.AnonFlagString): String | Buffer = js.native
+  def readFileSync(path: PathLike, options: typingsSlinky.node.anon.EncodingFlag): String = js.native
+  def readFileSync(path: PathLike, options: typingsSlinky.node.anon.Flag): Buffer = js.native
+  def readFileSync(path: PathLike, options: typingsSlinky.node.anon.FlagString): String | Buffer = js.native
   @JSName("readFileSync")
   def readFileSync_Buffer(path: Double): Buffer = js.native
   /**
@@ -919,54 +828,29 @@ object fs extends js.Object {
   ): Unit = js.native
   def readdir(
     path: PathLike,
-    options: js.UndefOr[scala.Nothing],
+    options: js.UndefOr[typingsSlinky.mz.anon.`2` | BufferEncoding | Null | String | WithFileTypes],
     callback: js.Function2[ErrnoException | Null, /* files */ js.Array[Buffer | String], Unit]
   ): Unit = js.native
   def readdir(path: PathLike, options: String): js.Promise[js.Array[Buffer | String]] = js.native
+  def readdir(path: PathLike, options: EncodingWithFileTypes): js.Promise[js.Array[Buffer]] = js.native
   def readdir(
     path: PathLike,
-    options: String,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[Buffer | String], Unit]
+    options: EncodingWithFileTypes,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[Buffer], Unit]
   ): Unit = js.native
+  def readdir(path: PathLike, options: WithFileTypes): js.Promise[js.Array[String]] = js.native
+  def readdir(path: PathLike, options: typingsSlinky.mz.anon.`2`): js.Promise[js.Array[Buffer | String]] = js.native
+  def readdir(path: PathLike, options: typingsSlinky.mz.anon.`3`): js.Promise[js.Array[typingsSlinky.node.fsMod.Dirent]] = js.native
   def readdir(
     path: PathLike,
-    options: Null,
-    callback: js.Function2[ErrnoException | Null, /* files */ js.Array[Buffer | String], Unit]
-  ): Unit = js.native
-  def readdir(path: PathLike, options: typingsSlinky.mz.Anon2): js.Promise[js.Array[Buffer | String]] = js.native
-  def readdir(
-    path: PathLike,
-    options: typingsSlinky.mz.Anon2,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[Buffer | String], Unit]
-  ): Unit = js.native
-  def readdir(path: PathLike, options: typingsSlinky.mz.Anon3): js.Promise[js.Array[typingsSlinky.node.fsMod.Dirent]] = js.native
-  def readdir(
-    path: PathLike,
-    options: typingsSlinky.mz.Anon3,
+    options: typingsSlinky.mz.anon.`3`,
     callback: js.Function2[
       /* err */ ErrnoException | Null, 
       /* files */ js.Array[typingsSlinky.node.fsMod.Dirent], 
       Unit
     ]
   ): Unit = js.native
-  def readdir(path: PathLike, options: AnonEncodingWithFileTypes): js.Promise[js.Array[Buffer]] = js.native
-  def readdir(
-    path: PathLike,
-    options: AnonEncodingWithFileTypes,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[Buffer], Unit]
-  ): Unit = js.native
-  def readdir(path: PathLike, options: AnonWithFileTypes): js.Promise[js.Array[String]] = js.native
-  def readdir(
-    path: PathLike,
-    options: AnonWithFileTypes,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[String], Unit]
-  ): Unit = js.native
   def readdir(path: PathLike, options: BufferEncoding): js.Promise[js.Array[String]] = js.native
-  def readdir(
-    path: PathLike,
-    options: BufferEncoding,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* files */ js.Array[String], Unit]
-  ): Unit = js.native
   /**
     * Synchronous readdir(3) - read a directory.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -974,21 +858,21 @@ object fs extends js.Object {
     */
   def readdirSync(path: PathLike): js.Array[String] = js.native
   def readdirSync(path: PathLike, options: String): js.Array[Buffer | String] = js.native
-  def readdirSync(path: PathLike, options: Anon4): js.Array[Buffer | String] = js.native
-  /**
-    * Synchronous readdir(3) - read a directory.
-    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-    * @param options If called with `withFileTypes: true` the result data will be an array of Dirent.
-    */
-  def readdirSync(path: PathLike, options: Anon5): js.Array[typingsSlinky.node.fsMod.Dirent] = js.native
+  def readdirSync(path: PathLike, options: BufferEncoding): js.Array[String] = js.native
   /**
     * Synchronous readdir(3) - read a directory.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
     * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
     */
-  def readdirSync(path: PathLike, options: typingsSlinky.node.AnonEncodingWithFileTypes): js.Array[Buffer] = js.native
-  def readdirSync(path: PathLike, options: typingsSlinky.node.AnonWithFileTypes): js.Array[String] = js.native
-  def readdirSync(path: PathLike, options: BufferEncoding): js.Array[String] = js.native
+  def readdirSync(path: PathLike, options: typingsSlinky.node.anon.EncodingWithFileTypes): js.Array[Buffer] = js.native
+  def readdirSync(path: PathLike, options: typingsSlinky.node.anon.WithFileTypes): js.Array[String] = js.native
+  def readdirSync(path: PathLike, options: `4`): js.Array[Buffer | String] = js.native
+  /**
+    * Synchronous readdir(3) - read a directory.
+    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
+    * @param options If called with `withFileTypes: true` the result data will be an array of Dirent.
+    */
+  def readdirSync(path: PathLike, options: `5`): js.Array[typingsSlinky.node.fsMod.Dirent] = js.native
   @JSName("readdirSync")
   def readdirSync_buffer(path: PathLike, options: buffer): js.Array[Buffer] = js.native
   @JSName("readdir")
@@ -1006,44 +890,19 @@ object fs extends js.Object {
   ): Unit = js.native
   def readlink(
     path: PathLike,
-    options: js.UndefOr[scala.Nothing],
+    options: js.UndefOr[`1` | BufferEncoding | Encoding | Null | String],
     callback: js.Function2[ErrnoException | Null, Buffer | (/* linkString */ String), Unit]
   ): Unit = js.native
   def readlink(path: PathLike, options: String): js.Promise[String | Buffer] = js.native
+  def readlink(path: PathLike, options: Encoding): js.Promise[String] = js.native
+  def readlink(path: PathLike, options: `0`): js.Promise[Buffer] = js.native
   def readlink(
     path: PathLike,
-    options: String,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* linkString */ String | Buffer, Unit]
-  ): Unit = js.native
-  def readlink(
-    path: PathLike,
-    options: Null,
-    callback: js.Function2[ErrnoException | Null, Buffer | (/* linkString */ String), Unit]
-  ): Unit = js.native
-  def readlink(path: PathLike, options: Anon0): js.Promise[Buffer] = js.native
-  def readlink(
-    path: PathLike,
-    options: Anon0,
+    options: `0`,
     callback: js.Function2[/* err */ ErrnoException | Null, /* linkString */ Buffer, Unit]
   ): Unit = js.native
-  def readlink(path: PathLike, options: Anon1): js.Promise[String | Buffer] = js.native
-  def readlink(
-    path: PathLike,
-    options: Anon1,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* linkString */ String | Buffer, Unit]
-  ): Unit = js.native
-  def readlink(path: PathLike, options: AnonEncoding): js.Promise[String] = js.native
-  def readlink(
-    path: PathLike,
-    options: AnonEncoding,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* linkString */ String, Unit]
-  ): Unit = js.native
+  def readlink(path: PathLike, options: `1`): js.Promise[String | Buffer] = js.native
   def readlink(path: PathLike, options: BufferEncoding): js.Promise[String] = js.native
-  def readlink(
-    path: PathLike,
-    options: BufferEncoding,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* linkString */ String, Unit]
-  ): Unit = js.native
   /**
     * Synchronous readlink(2) - read value of a symbolic link.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -1051,15 +910,15 @@ object fs extends js.Object {
     */
   def readlinkSync(path: PathLike): String = js.native
   def readlinkSync(path: PathLike, options: String): String | Buffer = js.native
+  def readlinkSync(path: PathLike, options: BufferEncoding): String = js.native
+  def readlinkSync(path: PathLike, options: typingsSlinky.node.anon.Encoding): String = js.native
   /**
     * Synchronous readlink(2) - read value of a symbolic link.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
     * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
     */
-  def readlinkSync(path: PathLike, options: Anon2): Buffer = js.native
-  def readlinkSync(path: PathLike, options: Anon3): String | Buffer = js.native
-  def readlinkSync(path: PathLike, options: typingsSlinky.node.AnonEncoding): String = js.native
-  def readlinkSync(path: PathLike, options: BufferEncoding): String = js.native
+  def readlinkSync(path: PathLike, options: `2`): Buffer = js.native
+  def readlinkSync(path: PathLike, options: `3`): String | Buffer = js.native
   /**
     * Synchronous readlink(2) - read value of a symbolic link.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -1114,10 +973,8 @@ object fs extends js.Object {
   def statSync(path: PathLike): typingsSlinky.node.fsMod.Stats = js.native
   def symlink(target: PathLike, path: PathLike): js.Promise[Unit] = js.native
   def symlink(target: PathLike, path: PathLike, callback: NoParamCallback): Unit = js.native
-  def symlink(target: PathLike, path: PathLike, `type`: js.UndefOr[scala.Nothing], callback: NoParamCallback): Unit = js.native
+  def symlink(target: PathLike, path: PathLike, `type`: js.UndefOr[Null | Type], callback: NoParamCallback): Unit = js.native
   def symlink(target: PathLike, path: PathLike, `type`: String): js.Promise[Unit] = js.native
-  def symlink(target: PathLike, path: PathLike, `type`: Null, callback: NoParamCallback): Unit = js.native
-  def symlink(target: PathLike, path: PathLike, `type`: Type, callback: NoParamCallback): Unit = js.native
   /**
     * Synchronous symlink(2) - Create a new symbolic link to an existing file.
     * @param target A path to an existing file. If a URL is provided, it must use the `file:` protocol.
@@ -1129,10 +986,8 @@ object fs extends js.Object {
   def symlinkSync(target: PathLike, path: PathLike, `type`: Type): Unit = js.native
   def truncate(path: PathLike): js.Promise[Unit] = js.native
   def truncate(path: PathLike, callback: NoParamCallback): Unit = js.native
-  def truncate(path: PathLike, len: js.UndefOr[scala.Nothing], callback: NoParamCallback): Unit = js.native
+  def truncate(path: PathLike, len: js.UndefOr[Double | Null], callback: NoParamCallback): Unit = js.native
   def truncate(path: PathLike, len: Double): js.Promise[Unit] = js.native
-  def truncate(path: PathLike, len: Double, callback: NoParamCallback): Unit = js.native
-  def truncate(path: PathLike, len: Null, callback: NoParamCallback): Unit = js.native
   /**
     * Synchronous truncate(2) - Truncate a file to a specified length.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -1191,11 +1046,6 @@ object fs extends js.Object {
   def utimesSync(path: PathLike, atime: js.Date, mtime: js.Date): Unit = js.native
   def watch(filename: PathLike): FSWatcher = js.native
   def watch(filename: PathLike, listener: js.Function2[/* event */ String, /* filename */ String, _]): FSWatcher = js.native
-  def watch(
-    filename: PathLike,
-    options: js.UndefOr[scala.Nothing],
-    listener: js.Function2[/* event */ String, /* filename */ String, Unit]
-  ): FSWatcher = js.native
   def watch(filename: PathLike, options: String): FSWatcher = js.native
   def watch(
     filename: PathLike,
@@ -1207,22 +1057,22 @@ object fs extends js.Object {
     options: Null,
     listener: js.Function2[/* event */ String, Buffer | (/* filename */ String), Unit]
   ): FSWatcher = js.native
-  def watch(filename: PathLike, options: AnonEncodingPersistent): FSWatcher = js.native
+  def watch(filename: PathLike, options: EncodingPersistent): FSWatcher = js.native
   def watch(
     filename: PathLike,
-    options: AnonEncodingPersistent,
+    options: EncodingPersistent,
     listener: js.Function2[/* event */ String, /* filename */ String | Buffer, Unit]
   ): FSWatcher = js.native
-  def watch(filename: PathLike, options: AnonPersistent): FSWatcher = js.native
+  def watch(filename: PathLike, options: Persistent): FSWatcher = js.native
   def watch(
     filename: PathLike,
-    options: AnonPersistent,
+    options: Persistent,
     listener: js.Function2[/* event */ String, /* filename */ String, Unit]
   ): FSWatcher = js.native
-  def watch(filename: PathLike, options: AnonRecursive): FSWatcher = js.native
+  def watch(filename: PathLike, options: Recursive): FSWatcher = js.native
   def watch(
     filename: PathLike,
-    options: AnonRecursive,
+    options: Recursive,
     listener: js.Function2[/* event */ String, /* filename */ Buffer, Unit]
   ): FSWatcher = js.native
   def watch(filename: PathLike, options: BufferEncoding): FSWatcher = js.native
@@ -1241,16 +1091,7 @@ object fs extends js.Object {
   ): Unit = js.native
   def watchFile(
     filename: PathLike,
-    options: js.UndefOr[scala.Nothing],
-    listener: js.Function2[
-      /* curr */ typingsSlinky.node.fsMod.Stats, 
-      /* prev */ typingsSlinky.node.fsMod.Stats, 
-      Unit
-    ]
-  ): Unit = js.native
-  def watchFile(
-    filename: PathLike,
-    options: AnonInterval,
+    options: js.UndefOr[Interval],
     listener: js.Function2[
       /* curr */ typingsSlinky.node.fsMod.Stats, 
       /* prev */ typingsSlinky.node.fsMod.Stats, 
@@ -1280,25 +1121,15 @@ object fs extends js.Object {
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
-    offset: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
+    offset: js.UndefOr[Double | Null],
+    callback: js.Function3[ErrnoException | Null, /* written */ Double, /* buffer */ js.typedarray.DataView, Unit]
   ): Unit = js.native
   def write(
     fd: Double,
     buffer: js.typedarray.DataView,
-    offset: js.UndefOr[scala.Nothing],
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
+    offset: js.UndefOr[Double | Null],
+    length: js.UndefOr[Double | Null],
+    callback: js.Function3[ErrnoException | Null, /* written */ Double, /* buffer */ js.typedarray.DataView, Unit]
   ): Unit = js.native
   def write(
     fd: Double,
@@ -1306,134 +1137,11 @@ object fs extends js.Object {
     offset: js.UndefOr[Double | Null],
     length: js.UndefOr[Double | Null],
     position: js.UndefOr[Double | Null],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: js.UndefOr[scala.Nothing],
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: js.UndefOr[scala.Nothing],
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
+    callback: js.Function3[ErrnoException | Null, /* written */ Double, /* buffer */ js.typedarray.DataView, Unit]
   ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.DataView, offset: Double): js.Promise[js.Tuple2[Double, js.typedarray.DataView]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Double,
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.DataView, offset: Double, length: Double): js.Promise[js.Tuple2[Double, js.typedarray.DataView]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.DataView, offset: Double, length: Double, position: Double): js.Promise[js.Tuple2[Double, js.typedarray.DataView]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Null,
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.DataView,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.DataView, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Float32Array): js.Promise[js.Tuple2[Double, js.typedarray.Float32Array]] = js.native
   def write(
     fd: Double,
@@ -1448,9 +1156,9 @@ object fs extends js.Object {
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
-    offset: js.UndefOr[scala.Nothing],
+    offset: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Float32Array, 
       Unit
@@ -1459,10 +1167,10 @@ object fs extends js.Object {
   def write(
     fd: Double,
     buffer: js.typedarray.Float32Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: js.UndefOr[scala.Nothing],
+    offset: js.UndefOr[Double | Null],
+    length: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Float32Array, 
       Unit
@@ -1475,133 +1183,15 @@ object fs extends js.Object {
     length: js.UndefOr[Double | Null],
     position: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Float32Array, 
       Unit
     ]
   ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Float32Array, offset: Double): js.Promise[js.Tuple2[Double, js.typedarray.Float32Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Double,
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Float32Array, offset: Double, length: Double): js.Promise[js.Tuple2[Double, js.typedarray.Float32Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Float32Array, offset: Double, length: Double, position: Double): js.Promise[js.Tuple2[Double, js.typedarray.Float32Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Null,
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float32Array,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float32Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Float64Array): js.Promise[js.Tuple2[Double, js.typedarray.Float64Array]] = js.native
   def write(
     fd: Double,
@@ -1616,9 +1206,9 @@ object fs extends js.Object {
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
-    offset: js.UndefOr[scala.Nothing],
+    offset: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Float64Array, 
       Unit
@@ -1627,10 +1217,10 @@ object fs extends js.Object {
   def write(
     fd: Double,
     buffer: js.typedarray.Float64Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: js.UndefOr[scala.Nothing],
+    offset: js.UndefOr[Double | Null],
+    length: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Float64Array, 
       Unit
@@ -1643,133 +1233,15 @@ object fs extends js.Object {
     length: js.UndefOr[Double | Null],
     position: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Float64Array, 
       Unit
     ]
   ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Float64Array, offset: Double): js.Promise[js.Tuple2[Double, js.typedarray.Float64Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Double,
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Float64Array, offset: Double, length: Double): js.Promise[js.Tuple2[Double, js.typedarray.Float64Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Float64Array, offset: Double, length: Double, position: Double): js.Promise[js.Tuple2[Double, js.typedarray.Float64Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Null,
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Float64Array,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Float64Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Int16Array): js.Promise[js.Tuple2[Double, js.typedarray.Int16Array]] = js.native
   def write(
     fd: Double,
@@ -1784,9 +1256,9 @@ object fs extends js.Object {
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
-    offset: js.UndefOr[scala.Nothing],
+    offset: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Int16Array, 
       Unit
@@ -1795,10 +1267,10 @@ object fs extends js.Object {
   def write(
     fd: Double,
     buffer: js.typedarray.Int16Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: js.UndefOr[scala.Nothing],
+    offset: js.UndefOr[Double | Null],
+    length: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Int16Array, 
       Unit
@@ -1811,133 +1283,15 @@ object fs extends js.Object {
     length: js.UndefOr[Double | Null],
     position: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Int16Array, 
       Unit
     ]
   ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Int16Array, offset: Double): js.Promise[js.Tuple2[Double, js.typedarray.Int16Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Double,
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Int16Array, offset: Double, length: Double): js.Promise[js.Tuple2[Double, js.typedarray.Int16Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Int16Array, offset: Double, length: Double, position: Double): js.Promise[js.Tuple2[Double, js.typedarray.Int16Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Null,
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int16Array,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int16Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Int32Array): js.Promise[js.Tuple2[Double, js.typedarray.Int32Array]] = js.native
   def write(
     fd: Double,
@@ -1952,9 +1306,9 @@ object fs extends js.Object {
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
-    offset: js.UndefOr[scala.Nothing],
+    offset: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Int32Array, 
       Unit
@@ -1963,10 +1317,10 @@ object fs extends js.Object {
   def write(
     fd: Double,
     buffer: js.typedarray.Int32Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: js.UndefOr[scala.Nothing],
+    offset: js.UndefOr[Double | Null],
+    length: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Int32Array, 
       Unit
@@ -1979,133 +1333,15 @@ object fs extends js.Object {
     length: js.UndefOr[Double | Null],
     position: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Int32Array, 
       Unit
     ]
   ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Int32Array, offset: Double): js.Promise[js.Tuple2[Double, js.typedarray.Int32Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Double,
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Int32Array, offset: Double, length: Double): js.Promise[js.Tuple2[Double, js.typedarray.Int32Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Int32Array, offset: Double, length: Double, position: Double): js.Promise[js.Tuple2[Double, js.typedarray.Int32Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Null,
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int32Array,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int32Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Int8Array): js.Promise[js.Tuple2[Double, js.typedarray.Int8Array]] = js.native
   def write(
     fd: Double,
@@ -2120,9 +1356,9 @@ object fs extends js.Object {
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
-    offset: js.UndefOr[scala.Nothing],
+    offset: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Int8Array, 
       Unit
@@ -2131,10 +1367,10 @@ object fs extends js.Object {
   def write(
     fd: Double,
     buffer: js.typedarray.Int8Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: js.UndefOr[scala.Nothing],
+    offset: js.UndefOr[Double | Null],
+    length: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Int8Array, 
       Unit
@@ -2147,133 +1383,15 @@ object fs extends js.Object {
     length: js.UndefOr[Double | Null],
     position: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Int8Array, 
       Unit
     ]
   ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Int8Array, offset: Double): js.Promise[js.Tuple2[Double, js.typedarray.Int8Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Double,
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double): js.Promise[js.Tuple2[Double, js.typedarray.Int8Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Int8Array, offset: Double, length: Double, position: Double): js.Promise[js.Tuple2[Double, js.typedarray.Int8Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Null,
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Int8Array,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Int8Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Uint16Array): js.Promise[js.Tuple2[Double, js.typedarray.Uint16Array]] = js.native
   def write(
     fd: Double,
@@ -2288,9 +1406,9 @@ object fs extends js.Object {
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
-    offset: js.UndefOr[scala.Nothing],
+    offset: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
@@ -2299,10 +1417,10 @@ object fs extends js.Object {
   def write(
     fd: Double,
     buffer: js.typedarray.Uint16Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: js.UndefOr[scala.Nothing],
+    offset: js.UndefOr[Double | Null],
+    length: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
@@ -2315,133 +1433,15 @@ object fs extends js.Object {
     length: js.UndefOr[Double | Null],
     position: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
     ]
   ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double): js.Promise[js.Tuple2[Double, js.typedarray.Uint16Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Double,
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double): js.Promise[js.Tuple2[Double, js.typedarray.Uint16Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Uint16Array, offset: Double, length: Double, position: Double): js.Promise[js.Tuple2[Double, js.typedarray.Uint16Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Null,
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint16Array,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint16Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Uint32Array): js.Promise[js.Tuple2[Double, js.typedarray.Uint32Array]] = js.native
   def write(
     fd: Double,
@@ -2456,9 +1456,9 @@ object fs extends js.Object {
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
-    offset: js.UndefOr[scala.Nothing],
+    offset: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
@@ -2467,10 +1467,10 @@ object fs extends js.Object {
   def write(
     fd: Double,
     buffer: js.typedarray.Uint32Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: js.UndefOr[scala.Nothing],
+    offset: js.UndefOr[Double | Null],
+    length: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
@@ -2483,133 +1483,15 @@ object fs extends js.Object {
     length: js.UndefOr[Double | Null],
     position: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
     ]
   ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double): js.Promise[js.Tuple2[Double, js.typedarray.Uint32Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Double,
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double): js.Promise[js.Tuple2[Double, js.typedarray.Uint32Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Uint32Array, offset: Double, length: Double, position: Double): js.Promise[js.Tuple2[Double, js.typedarray.Uint32Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Null,
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint32Array,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint32Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Uint8Array): js.Promise[js.Tuple2[Double, js.typedarray.Uint8Array]] = js.native
   def write(
     fd: Double,
@@ -2624,9 +1506,9 @@ object fs extends js.Object {
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
-    offset: js.UndefOr[scala.Nothing],
+    offset: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
@@ -2635,10 +1517,10 @@ object fs extends js.Object {
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: js.UndefOr[scala.Nothing],
+    offset: js.UndefOr[Double | Null],
+    length: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
@@ -2651,133 +1533,15 @@ object fs extends js.Object {
     length: js.UndefOr[Double | Null],
     position: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: js.UndefOr[scala.Nothing],
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
     ]
   ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double): js.Promise[js.Tuple2[Double, js.typedarray.Uint8Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Double,
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double): js.Promise[js.Tuple2[Double, js.typedarray.Uint8Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Uint8Array, offset: Double, length: Double, position: Double): js.Promise[js.Tuple2[Double, js.typedarray.Uint8Array]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Null,
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8Array,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8Array, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Uint8ClampedArray): js.Promise[js.Tuple2[Double, js.typedarray.Uint8ClampedArray]] = js.native
   def write(
     fd: Double,
@@ -2792,9 +1556,9 @@ object fs extends js.Object {
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
-    offset: js.UndefOr[scala.Nothing],
+    offset: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
@@ -2803,10 +1567,10 @@ object fs extends js.Object {
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
-    offset: js.UndefOr[scala.Nothing],
-    length: js.UndefOr[scala.Nothing],
+    offset: js.UndefOr[Double | Null],
+    length: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
@@ -2819,73 +1583,14 @@ object fs extends js.Object {
     length: js.UndefOr[Double | Null],
     position: js.UndefOr[Double | Null],
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: js.UndefOr[scala.Nothing],
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: js.UndefOr[scala.Nothing],
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      ErrnoException | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
     ]
   ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Uint8ClampedArray, offset: Double): js.Promise[js.Tuple2[Double, js.typedarray.Uint8ClampedArray]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Double,
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(fd: Double, buffer: js.typedarray.Uint8ClampedArray, offset: Double, length: Double): js.Promise[js.Tuple2[Double, js.typedarray.Uint8ClampedArray]] = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = js.native
   def write(
     fd: Double,
     buffer: js.typedarray.Uint8ClampedArray,
@@ -2895,148 +1600,21 @@ object fs extends js.Object {
   ): js.Promise[js.Tuple2[Double, js.typedarray.Uint8ClampedArray]] = js.native
   def write(
     fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Double,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Null,
-    length: js.UndefOr[scala.Nothing],
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Null,
-    length: Double,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    buffer: js.typedarray.Uint8ClampedArray,
-    offset: Null,
-    length: Null,
-    callback: js.Function3[
-      /* err */ ErrnoException | Null, 
-      /* written */ Double, 
-      /* buffer */ js.typedarray.Uint8ClampedArray, 
-      Unit
-    ]
-  ): Unit = js.native
-  def write(
-    fd: Double,
     data: js.Any,
     callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
   ): Unit = js.native
   def write(
     fd: Double,
     data: js.Any,
-    position: js.UndefOr[scala.Nothing],
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
+    position: js.UndefOr[Double | Null],
+    callback: js.Function3[ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
   ): Unit = js.native
   def write(
     fd: Double,
     data: js.Any,
-    position: js.UndefOr[scala.Nothing],
-    encoding: js.UndefOr[scala.Nothing],
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    data: js.Any,
-    position: js.UndefOr[scala.Nothing],
-    encoding: String,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    data: js.Any,
-    position: js.UndefOr[scala.Nothing],
-    encoding: Null,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    data: js.Any,
-    position: Double,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    data: js.Any,
-    position: Double,
-    encoding: js.UndefOr[scala.Nothing],
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    data: js.Any,
-    position: Double,
-    encoding: String,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    data: js.Any,
-    position: Double,
-    encoding: Null,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    data: js.Any,
-    position: Null,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    data: js.Any,
-    position: Null,
-    encoding: js.UndefOr[scala.Nothing],
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    data: js.Any,
-    position: Null,
-    encoding: String,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
-  ): Unit = js.native
-  def write(
-    fd: Double,
-    data: js.Any,
-    position: Null,
-    encoding: Null,
-    callback: js.Function3[/* err */ ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
+    position: js.UndefOr[Double | Null],
+    encoding: js.UndefOr[Null | String],
+    callback: js.Function3[ErrnoException | Null, /* written */ Double, /* str */ String, Unit]
   ): Unit = js.native
   def write(fd: Double, string: js.Any): js.Promise[js.Tuple2[Double, String]] = js.native
   def write(fd: Double, string: js.Any, position: Double): js.Promise[js.Tuple2[Double, String]] = js.native
@@ -3276,10 +1854,10 @@ object fs extends js.Object {
       */
     def appendFile(path: PathLike, data: js.Any): js.Promise[Unit] = js.native
     def appendFile(path: PathLike, data: js.Any, options: String): js.Promise[Unit] = js.native
-    def appendFile(path: PathLike, data: js.Any, options: AnonFlagMode): js.Promise[Unit] = js.native
+    def appendFile(path: PathLike, data: js.Any, options: FlagMode): js.Promise[Unit] = js.native
     def appendFile(path: FileHandle, data: js.Any): js.Promise[Unit] = js.native
     def appendFile(path: FileHandle, data: js.Any, options: String): js.Promise[Unit] = js.native
-    def appendFile(path: FileHandle, data: js.Any, options: AnonFlagMode): js.Promise[Unit] = js.native
+    def appendFile(path: FileHandle, data: js.Any, options: FlagMode): js.Promise[Unit] = js.native
     /**
       * Asynchronous chmod(2) - Change permissions of a file.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -3402,15 +1980,15 @@ object fs extends js.Object {
       */
     def mkdtemp(prefix: String): js.Promise[String] = js.native
     def mkdtemp(prefix: String, options: String): js.Promise[String | Buffer] = js.native
+    def mkdtemp(prefix: String, options: BufferEncoding): js.Promise[String] = js.native
+    def mkdtemp(prefix: String, options: typingsSlinky.node.anon.Encoding): js.Promise[String] = js.native
     /**
       * Asynchronously creates a unique temporary directory.
       * Generates six random characters to be appended behind a required `prefix` to create a unique temporary directory.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    def mkdtemp(prefix: String, options: Anon2): js.Promise[Buffer] = js.native
-    def mkdtemp(prefix: String, options: Anon3): js.Promise[String | Buffer] = js.native
-    def mkdtemp(prefix: String, options: typingsSlinky.node.AnonEncoding): js.Promise[String] = js.native
-    def mkdtemp(prefix: String, options: BufferEncoding): js.Promise[String] = js.native
+    def mkdtemp(prefix: String, options: `2`): js.Promise[Buffer] = js.native
+    def mkdtemp(prefix: String, options: `3`): js.Promise[String | Buffer] = js.native
     @JSName("mkdtemp")
     def mkdtemp_buffer(prefix: String, options: buffer): js.Promise[Buffer] = js.native
     /**
@@ -3436,14 +2014,14 @@ object fs extends js.Object {
       * @param position The offset from the beginning of the file from which data should be read. If
       * `null`, data will be read from the current position.
       */
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double, position: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Null, position: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double, position: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
-    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Null, position: Double): js.Promise[AnonBufferTBuffer[TBuffer]] = js.native
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer): js.Promise[BufferTBuffer[TBuffer]] = js.native
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double): js.Promise[BufferTBuffer[TBuffer]] = js.native
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double): js.Promise[BufferTBuffer[TBuffer]] = js.native
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double, position: Double): js.Promise[BufferTBuffer[TBuffer]] = js.native
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Null, position: Double): js.Promise[BufferTBuffer[TBuffer]] = js.native
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double): js.Promise[BufferTBuffer[TBuffer]] = js.native
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double, position: Double): js.Promise[BufferTBuffer[TBuffer]] = js.native
+    def read[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Null, position: Double): js.Promise[BufferTBuffer[TBuffer]] = js.native
     /**
       * Asynchronously reads the entire contents of a file.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -3453,7 +2031,7 @@ object fs extends js.Object {
       */
     def readFile(path: PathLike): js.Promise[Buffer] = js.native
     def readFile(path: PathLike, options: String): js.Promise[String | Buffer] = js.native
-    def readFile(path: PathLike, options: Anon6): js.Promise[String | Buffer] = js.native
+    def readFile(path: PathLike, options: BufferEncoding): js.Promise[String] = js.native
     /**
       * Asynchronously reads the entire contents of a file.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -3461,15 +2039,15 @@ object fs extends js.Object {
       * @param options An object that may contain an optional flag.
       * If a flag is not provided, it defaults to `'r'`.
       */
-    def readFile(path: PathLike, options: AnonEncodingBufferEncoding): js.Promise[String] = js.native
-    def readFile(path: PathLike, options: AnonEncodingNull): js.Promise[Buffer] = js.native
-    def readFile(path: PathLike, options: BufferEncoding): js.Promise[String] = js.native
+    def readFile(path: PathLike, options: EncodingBufferEncoding): js.Promise[String] = js.native
+    def readFile(path: PathLike, options: EncodingNull): js.Promise[Buffer] = js.native
+    def readFile(path: PathLike, options: `6`): js.Promise[String | Buffer] = js.native
     def readFile(path: FileHandle): js.Promise[Buffer] = js.native
     def readFile(path: FileHandle, options: String): js.Promise[String | Buffer] = js.native
-    def readFile(path: FileHandle, options: Anon6): js.Promise[String | Buffer] = js.native
-    def readFile(path: FileHandle, options: AnonEncodingBufferEncoding): js.Promise[String] = js.native
-    def readFile(path: FileHandle, options: AnonEncodingNull): js.Promise[Buffer] = js.native
     def readFile(path: FileHandle, options: BufferEncoding): js.Promise[String] = js.native
+    def readFile(path: FileHandle, options: EncodingBufferEncoding): js.Promise[String] = js.native
+    def readFile(path: FileHandle, options: EncodingNull): js.Promise[Buffer] = js.native
+    def readFile(path: FileHandle, options: `6`): js.Promise[String | Buffer] = js.native
     /**
       * Asynchronous readdir(3) - read a directory.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -3477,21 +2055,21 @@ object fs extends js.Object {
       */
     def readdir(path: PathLike): js.Promise[js.Array[String]] = js.native
     def readdir(path: PathLike, options: String): js.Promise[js.Array[Buffer | String]] = js.native
-    def readdir(path: PathLike, options: Anon4): js.Promise[js.Array[Buffer | String]] = js.native
-    /**
-      * Asynchronous readdir(3) - read a directory.
-      * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
-      * @param options If called with `withFileTypes: true` the result data will be an array of Dirent.
-      */
-    def readdir(path: PathLike, options: Anon5): js.Promise[js.Array[typingsSlinky.node.fsMod.Dirent]] = js.native
-    def readdir(path: PathLike, options: Anon7): js.Promise[js.Array[String]] = js.native
+    def readdir(path: PathLike, options: BufferEncoding): js.Promise[js.Array[String]] = js.native
     /**
       * Asynchronous readdir(3) - read a directory.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    def readdir(path: PathLike, options: typingsSlinky.node.AnonEncodingWithFileTypes): js.Promise[js.Array[Buffer]] = js.native
-    def readdir(path: PathLike, options: BufferEncoding): js.Promise[js.Array[String]] = js.native
+    def readdir(path: PathLike, options: typingsSlinky.node.anon.EncodingWithFileTypes): js.Promise[js.Array[Buffer]] = js.native
+    def readdir(path: PathLike, options: `4`): js.Promise[js.Array[Buffer | String]] = js.native
+    /**
+      * Asynchronous readdir(3) - read a directory.
+      * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
+      * @param options If called with `withFileTypes: true` the result data will be an array of Dirent.
+      */
+    def readdir(path: PathLike, options: `5`): js.Promise[js.Array[typingsSlinky.node.fsMod.Dirent]] = js.native
+    def readdir(path: PathLike, options: `7`): js.Promise[js.Array[String]] = js.native
     @JSName("readdir")
     def readdir_buffer(path: PathLike, options: buffer): js.Promise[js.Array[Buffer]] = js.native
     /**
@@ -3501,15 +2079,15 @@ object fs extends js.Object {
       */
     def readlink(path: PathLike): js.Promise[String] = js.native
     def readlink(path: PathLike, options: String): js.Promise[String | Buffer] = js.native
+    def readlink(path: PathLike, options: BufferEncoding): js.Promise[String] = js.native
+    def readlink(path: PathLike, options: typingsSlinky.node.anon.Encoding): js.Promise[String] = js.native
     /**
       * Asynchronous readlink(2) - read value of a symbolic link.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    def readlink(path: PathLike, options: Anon2): js.Promise[Buffer] = js.native
-    def readlink(path: PathLike, options: Anon3): js.Promise[String | Buffer] = js.native
-    def readlink(path: PathLike, options: typingsSlinky.node.AnonEncoding): js.Promise[String] = js.native
-    def readlink(path: PathLike, options: BufferEncoding): js.Promise[String] = js.native
+    def readlink(path: PathLike, options: `2`): js.Promise[Buffer] = js.native
+    def readlink(path: PathLike, options: `3`): js.Promise[String | Buffer] = js.native
     @JSName("readlink")
     def readlink_buffer(path: PathLike, options: buffer): js.Promise[Buffer] = js.native
     /**
@@ -3519,15 +2097,15 @@ object fs extends js.Object {
       */
     def realpath(path: PathLike): js.Promise[String] = js.native
     def realpath(path: PathLike, options: String): js.Promise[String | Buffer] = js.native
+    def realpath(path: PathLike, options: BufferEncoding): js.Promise[String] = js.native
+    def realpath(path: PathLike, options: typingsSlinky.node.anon.Encoding): js.Promise[String] = js.native
     /**
       * Asynchronous realpath(3) - return the canonicalized absolute pathname.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    def realpath(path: PathLike, options: Anon2): js.Promise[Buffer] = js.native
-    def realpath(path: PathLike, options: Anon3): js.Promise[String | Buffer] = js.native
-    def realpath(path: PathLike, options: typingsSlinky.node.AnonEncoding): js.Promise[String] = js.native
-    def realpath(path: PathLike, options: BufferEncoding): js.Promise[String] = js.native
+    def realpath(path: PathLike, options: `2`): js.Promise[Buffer] = js.native
+    def realpath(path: PathLike, options: `3`): js.Promise[String | Buffer] = js.native
     @JSName("realpath")
     def realpath_buffer(path: PathLike, options: buffer): js.Promise[Buffer] = js.native
     /**
@@ -3594,10 +2172,10 @@ object fs extends js.Object {
       * @param position The offset from the beginning of the file where this data should be written. If not supplied, defaults to the current position.
       * @param encoding The expected string encoding.
       */
-    def write(handle: FileHandle, string: js.Any): js.Promise[AnonBufferString] = js.native
-    def write(handle: FileHandle, string: js.Any, position: Double): js.Promise[AnonBufferString] = js.native
-    def write(handle: FileHandle, string: js.Any, position: Double, encoding: String): js.Promise[AnonBufferString] = js.native
-    def write(handle: FileHandle, string: js.Any, position: Null, encoding: String): js.Promise[AnonBufferString] = js.native
+    def write(handle: FileHandle, string: js.Any): js.Promise[BufferString] = js.native
+    def write(handle: FileHandle, string: js.Any, position: Double): js.Promise[BufferString] = js.native
+    def write(handle: FileHandle, string: js.Any, position: Double, encoding: String): js.Promise[BufferString] = js.native
+    def write(handle: FileHandle, string: js.Any, position: Null, encoding: String): js.Promise[BufferString] = js.native
     /**
       * Asynchronously writes `buffer` to the file referenced by the supplied `FileHandle`.
       * It is unsafe to call `fsPromises.write()` multiple times on the same file without waiting for the `Promise`
@@ -3608,14 +2186,14 @@ object fs extends js.Object {
       * @param length The number of bytes to write. If not supplied, defaults to `buffer.length - offset`.
       * @param position The offset from the beginning of the file where this data should be written. If not supplied, defaults to the current position.
       */
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double, position: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Null, position: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double, position: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
-    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Null, position: Double): js.Promise[AnonBytesWrittenNumber[TBuffer]] = js.native
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer): js.Promise[BytesWrittenNumber[TBuffer]] = js.native
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double): js.Promise[BytesWrittenNumber[TBuffer]] = js.native
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double): js.Promise[BytesWrittenNumber[TBuffer]] = js.native
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Double, position: Double): js.Promise[BytesWrittenNumber[TBuffer]] = js.native
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Double, length: Null, position: Double): js.Promise[BytesWrittenNumber[TBuffer]] = js.native
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double): js.Promise[BytesWrittenNumber[TBuffer]] = js.native
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Double, position: Double): js.Promise[BytesWrittenNumber[TBuffer]] = js.native
+    def write[TBuffer /* <: js.typedarray.Uint8Array */](handle: FileHandle, buffer: TBuffer, offset: Null, length: Null, position: Double): js.Promise[BytesWrittenNumber[TBuffer]] = js.native
     /**
       * Asynchronously writes data to a file, replacing the file if it already exists.
       * It is unsafe to call `fsPromises.writeFile()` multiple times on the same file without waiting for the `Promise` to be resolved (or rejected).
@@ -3631,10 +2209,10 @@ object fs extends js.Object {
       */
     def writeFile(path: PathLike, data: js.Any): js.Promise[Unit] = js.native
     def writeFile(path: PathLike, data: js.Any, options: String): js.Promise[Unit] = js.native
-    def writeFile(path: PathLike, data: js.Any, options: AnonFlagMode): js.Promise[Unit] = js.native
+    def writeFile(path: PathLike, data: js.Any, options: FlagMode): js.Promise[Unit] = js.native
     def writeFile(path: FileHandle, data: js.Any): js.Promise[Unit] = js.native
     def writeFile(path: FileHandle, data: js.Any, options: String): js.Promise[Unit] = js.native
-    def writeFile(path: FileHandle, data: js.Any, options: AnonFlagMode): js.Promise[Unit] = js.native
+    def writeFile(path: FileHandle, data: js.Any, options: FlagMode): js.Promise[Unit] = js.native
   }
   
   @js.native
@@ -3675,38 +2253,18 @@ object fs extends js.Object {
     ): Unit = js.native
     def apply(
       path: PathLike,
-      options: js.UndefOr[scala.Nothing],
+      options: js.UndefOr[`1` | BufferEncoding | Encoding | Null | String],
       callback: js.Function2[ErrnoException | Null, Buffer | (/* resolvedPath */ String), Unit]
     ): Unit = js.native
     def apply(path: PathLike, options: String): js.Promise[String | Buffer] = js.native
+    def apply(path: PathLike, options: Encoding): js.Promise[String] = js.native
+    def apply(path: PathLike, options: `0`): js.Promise[Buffer] = js.native
     def apply(
       path: PathLike,
-      options: String,
-      callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ String | Buffer, Unit]
-    ): Unit = js.native
-    def apply(
-      path: PathLike,
-      options: Null,
-      callback: js.Function2[ErrnoException | Null, Buffer | (/* resolvedPath */ String), Unit]
-    ): Unit = js.native
-    def apply(path: PathLike, options: Anon0): js.Promise[Buffer] = js.native
-    def apply(
-      path: PathLike,
-      options: Anon0,
+      options: `0`,
       callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ Buffer, Unit]
     ): Unit = js.native
-    def apply(path: PathLike, options: Anon1): js.Promise[String | Buffer] = js.native
-    def apply(
-      path: PathLike,
-      options: Anon1,
-      callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ String | Buffer, Unit]
-    ): Unit = js.native
-    def apply(path: PathLike, options: AnonEncoding): js.Promise[String] = js.native
-    def apply(
-      path: PathLike,
-      options: AnonEncoding,
-      callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ String, Unit]
-    ): Unit = js.native
+    def apply(path: PathLike, options: `1`): js.Promise[String | Buffer] = js.native
     def apply(path: PathLike, options: buffer): js.Promise[Buffer] = js.native
     def apply(
       path: PathLike,
@@ -3714,11 +2272,6 @@ object fs extends js.Object {
       callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ Buffer, Unit]
     ): Unit = js.native
     def apply(path: PathLike, options: BufferEncoding): js.Promise[String] = js.native
-    def apply(
-      path: PathLike,
-      options: BufferEncoding,
-      callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ String, Unit]
-    ): Unit = js.native
     def native(path: PathLike): js.Promise[String] = js.native
     def native(
       path: PathLike,
@@ -3726,44 +2279,19 @@ object fs extends js.Object {
     ): Unit = js.native
     def native(
       path: PathLike,
-      options: js.UndefOr[scala.Nothing],
+      options: js.UndefOr[`1` | BufferEncoding | Encoding | Null | String],
       callback: js.Function2[ErrnoException | Null, Buffer | (/* resolvedPath */ String), Unit]
     ): Unit = js.native
     def native(path: PathLike, options: String): js.Promise[String | Buffer] = js.native
+    def native(path: PathLike, options: Encoding): js.Promise[String] = js.native
+    def native(path: PathLike, options: `0`): js.Promise[Buffer] = js.native
     def native(
       path: PathLike,
-      options: String,
-      callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ String | Buffer, Unit]
-    ): Unit = js.native
-    def native(
-      path: PathLike,
-      options: Null,
-      callback: js.Function2[ErrnoException | Null, Buffer | (/* resolvedPath */ String), Unit]
-    ): Unit = js.native
-    def native(path: PathLike, options: Anon0): js.Promise[Buffer] = js.native
-    def native(
-      path: PathLike,
-      options: Anon0,
+      options: `0`,
       callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ Buffer, Unit]
     ): Unit = js.native
-    def native(path: PathLike, options: Anon1): js.Promise[String | Buffer] = js.native
-    def native(
-      path: PathLike,
-      options: Anon1,
-      callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ String | Buffer, Unit]
-    ): Unit = js.native
-    def native(path: PathLike, options: AnonEncoding): js.Promise[String] = js.native
-    def native(
-      path: PathLike,
-      options: AnonEncoding,
-      callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ String, Unit]
-    ): Unit = js.native
+    def native(path: PathLike, options: `1`): js.Promise[String | Buffer] = js.native
     def native(path: PathLike, options: BufferEncoding): js.Promise[String] = js.native
-    def native(
-      path: PathLike,
-      options: BufferEncoding,
-      callback: js.Function2[/* err */ ErrnoException | Null, /* resolvedPath */ String, Unit]
-    ): Unit = js.native
     @JSName("native")
     def native_buffer(path: PathLike, options: buffer): js.Promise[Buffer] = js.native
     @JSName("native")
@@ -3784,21 +2312,21 @@ object fs extends js.Object {
     def apply(path: PathLike): String = js.native
     def apply(path: PathLike, options: String): String | Buffer = js.native
     def apply(path: PathLike, options: buffer): Buffer = js.native
+    def apply(path: PathLike, options: BufferEncoding): String = js.native
+    def apply(path: PathLike, options: typingsSlinky.node.anon.Encoding): String = js.native
     /**
       * Synchronous realpath(3) - return the canonicalized absolute pathname.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
       */
-    def apply(path: PathLike, options: Anon2): Buffer = js.native
-    def apply(path: PathLike, options: Anon3): String | Buffer = js.native
-    def apply(path: PathLike, options: typingsSlinky.node.AnonEncoding): String = js.native
-    def apply(path: PathLike, options: BufferEncoding): String = js.native
+    def apply(path: PathLike, options: `2`): Buffer = js.native
+    def apply(path: PathLike, options: `3`): String | Buffer = js.native
     def native(path: PathLike): String = js.native
     def native(path: PathLike, options: String): String | Buffer = js.native
-    def native(path: PathLike, options: Anon2): Buffer = js.native
-    def native(path: PathLike, options: Anon3): String | Buffer = js.native
-    def native(path: PathLike, options: typingsSlinky.node.AnonEncoding): String = js.native
     def native(path: PathLike, options: BufferEncoding): String = js.native
+    def native(path: PathLike, options: typingsSlinky.node.anon.Encoding): String = js.native
+    def native(path: PathLike, options: `2`): Buffer = js.native
+    def native(path: PathLike, options: `3`): String | Buffer = js.native
     @JSName("native")
     def native_Union(path: PathLike): String | Buffer = js.native
     @JSName("native")

@@ -7,7 +7,7 @@ import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.officeUiFabricReact.PartialIContextualMenuIte
+import typingsSlinky.officeUiFabricReact.anon.PartialIContextualMenuIte
 import typingsSlinky.officeUiFabricReact.contextualMenuClassNamesMod.IMenuItemClassNames
 import typingsSlinky.officeUiFabricReact.contextualMenuItemTypesMod.IContextualMenuItemProps
 import typingsSlinky.officeUiFabricReact.contextualMenuItemTypesMod.IContextualMenuRenderItem

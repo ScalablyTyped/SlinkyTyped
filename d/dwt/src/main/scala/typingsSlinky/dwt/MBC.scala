@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("MBC")
 @js.native
-class MBC () extends js.Object {
+trait MBC extends js.Object {
   /**
     * Tell this painter the directory where you place`cv-wasm.js` and`cv-wasm.wasm`.
     
@@ -35,5 +34,33 @@ class MBC () extends js.Object {
   ```
     */
   def loadCvScriptAsync(): Unit = js.native
+}
+
+object MBC {
+  @scala.inline
+  def apply(cvFolder: String, loadCvScriptAsync: () => Unit): MBC = {
+    val __obj = js.Dynamic.literal(cvFolder = cvFolder.asInstanceOf[js.Any], loadCvScriptAsync = js.Any.fromFunction0(loadCvScriptAsync))
+    __obj.asInstanceOf[MBC]
+  }
+  @scala.inline
+  implicit class MBCOps[Self <: MBC] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCvFolder(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cvFolder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoadCvScriptAsync(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadCvScriptAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -18,7 +18,7 @@ object Checkboxes {
   def withProps(p: CheckboxesTypeProps): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(
-    isInline: Boolean,
+    isInline: scala.Boolean,
     knob: CheckboxesTypeKnob,
     onChange: CheckboxesTypeKnobValue => CheckboxesTypeKnobValue
   ): Default[tag.type, default] = {

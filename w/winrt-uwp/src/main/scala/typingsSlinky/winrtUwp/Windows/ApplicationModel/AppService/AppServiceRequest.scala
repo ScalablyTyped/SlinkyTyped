@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a message that the endpoint for one app service sends to another app service. */
-@JSGlobal("Windows.ApplicationModel.AppService.AppServiceRequest")
 @js.native
-abstract class AppServiceRequest () extends js.Object {
+trait AppServiceRequest extends js.Object {
   /** Gets the message that request from the app service contains. */
   var message: ValueSet = js.native
   /**
@@ -18,5 +17,36 @@ abstract class AppServiceRequest () extends js.Object {
     * @return An asynchronous operation to send the response.
     */
   def sendResponseAsync(message: ValueSet): IPromiseWithIAsyncOperation[AppServiceResponseStatus] = js.native
+}
+
+object AppServiceRequest {
+  @scala.inline
+  def apply(
+    message: ValueSet,
+    sendResponseAsync: ValueSet => IPromiseWithIAsyncOperation[AppServiceResponseStatus]
+  ): AppServiceRequest = {
+    val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], sendResponseAsync = js.Any.fromFunction1(sendResponseAsync))
+    __obj.asInstanceOf[AppServiceRequest]
+  }
+  @scala.inline
+  implicit class AppServiceRequestOps[Self <: AppServiceRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMessage(value: ValueSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSendResponseAsync(value: ValueSet => IPromiseWithIAsyncOperation[AppServiceResponseStatus]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendResponseAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.reactLottie.mod
 
-import typingsSlinky.reactLottie.AnonClassName
+import typingsSlinky.reactLottie.anon.ClassName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait Options extends js.Object {
     * or the number of loops that should be completed before the animation ends
     */
   var loop: js.UndefOr[Boolean | Double] = js.native
-  var rendererSettings: js.UndefOr[AnonClassName] = js.native
+  var rendererSettings: js.UndefOr[ClassName] = js.native
 }
 
 object Options {
@@ -66,7 +66,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withRendererSettings(value: AnonClassName): Self = {
+    def withRendererSettings(value: ClassName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rendererSettings")(value.asInstanceOf[js.Any])
         ret

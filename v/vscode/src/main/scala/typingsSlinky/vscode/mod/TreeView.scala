@@ -1,7 +1,7 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonExpand
 import typingsSlinky.vscode.Thenable
+import typingsSlinky.vscode.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -79,6 +79,6 @@ trait TreeView[T] extends Disposable {
   		 * **NOTE:** [TreeDataProvider](#TreeDataProvider) is required to implement [getParent](#TreeDataProvider.getParent) method to access this API.
   		 */
   def reveal(element: T): Thenable[Unit] = js.native
-  def reveal(element: T, options: AnonExpand): Thenable[Unit] = js.native
+  def reveal(element: T, options: Expand): Thenable[Unit] = js.native
 }
 

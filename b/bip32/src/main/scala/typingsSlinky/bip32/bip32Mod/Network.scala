@@ -1,6 +1,6 @@
 package typingsSlinky.bip32.bip32Mod
 
-import typingsSlinky.bip32.AnonPrivate
+import typingsSlinky.bip32.anon.Private
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Network extends js.Object {
   var bech32: js.UndefOr[String] = js.native
-  var bip32: AnonPrivate = js.native
+  var bip32: Private = js.native
   var messagePrefix: js.UndefOr[String] = js.native
   var pubKeyHash: js.UndefOr[Double] = js.native
   var scriptHash: js.UndefOr[Double] = js.native
@@ -17,7 +17,7 @@ trait Network extends js.Object {
 
 object Network {
   @scala.inline
-  def apply(bip32: AnonPrivate, wif: Double): Network = {
+  def apply(bip32: Private, wif: Double): Network = {
     val __obj = js.Dynamic.literal(bip32 = bip32.asInstanceOf[js.Any], wif = wif.asInstanceOf[js.Any])
     __obj.asInstanceOf[Network]
   }
@@ -28,7 +28,7 @@ object Network {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBip32(value: AnonPrivate): Self = {
+    def withBip32(value: Private): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bip32")(value.asInstanceOf[js.Any])
         ret

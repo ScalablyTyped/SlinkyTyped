@@ -6,4 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object ui {
   type balloonPanel = typingsSlinky.ckeditor.CKEDITOR.ui.balloonPanel_
+  type menuButton = typingsSlinky.ckeditor.CKEDITOR.ui.button
+  type panel = typingsSlinky.ckeditor.CKEDITOR.ui.panel_
+  type panelButton = typingsSlinky.ckeditor.CKEDITOR.ui.button
 }

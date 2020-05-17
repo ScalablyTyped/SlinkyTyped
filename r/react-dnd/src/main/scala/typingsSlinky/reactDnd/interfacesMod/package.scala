@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object interfacesMod {
-  type DndComponentClass[C /* <: slinky.core.ReactComponentClass[_] */, P] = (slinky.core.ReactComponentClass[typingsSlinky.react.mod._Global_.JSX.LibraryManagedAttributes[C, P]]) with (typingsSlinky.hoistNonReactStatics.mod.NonReactStatics[C, js.Object]) with typingsSlinky.reactDnd.AnonDecoratedComponent[C]
+  type DndComponentClass[C /* <: slinky.core.ReactComponentClass[_] */, P] = (slinky.core.ReactComponentClass[typingsSlinky.react.mod.global.JSX.LibraryManagedAttributes[C, P]]) with (typingsSlinky.hoistNonReactStatics.mod.NonReactStatics[C, js.Object]) with typingsSlinky.reactDnd.anon.DecoratedComponent[C]
   type DndComponentEnhancer[CollectedProps] = js.Function1[
     /* component */ js.Any, 
     typingsSlinky.reactDnd.interfacesMod.DndComponentClass[

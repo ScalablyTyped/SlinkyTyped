@@ -29,9 +29,8 @@ import scala.scalajs.js.annotation._
 		 * A dashboard view is an iOS Springboard-like view of <Titanium.UI.DashboardItem> items that may
 		 * be deleted and reordered by the user using its built-in edit mode.
 		 */
-@JSGlobal("Titanium.UI.DashboardView")
 @js.native
-class DashboardView () extends View {
+trait DashboardView extends View {
   /**
   			 * The number of columns of items in the view.
   			 */

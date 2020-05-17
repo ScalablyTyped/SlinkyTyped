@@ -1,6 +1,7 @@
 package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.officeUiFabricReact.anon.Compact
 import typingsSlinky.officeUiFabricReact.groupFooterTypesMod.IGroupFooterProps
 import typingsSlinky.officeUiFabricReact.groupHeaderTypesMod.IGroupHeaderProps
 import typingsSlinky.officeUiFabricReact.groupShowAllTypesMod.IGroupShowAllProps
@@ -44,7 +45,7 @@ object libGroupedListMod extends js.Object {
   /* static members */
   @js.native
   object GroupedListBase extends js.Object {
-    var defaultProps: AnonCompact = js.native
+    var defaultProps: Compact = js.native
   }
   
 }

@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.remarkable.libMod._Token because Already inherited */ @js.native
+- typingsSlinky.remarkable.libMod.Token because Already inherited */ @js.native
 trait OrderedListCloseToken extends TagToken {
   @JSName("type")
   var type_OrderedListCloseToken: ordered_list_close = js.native

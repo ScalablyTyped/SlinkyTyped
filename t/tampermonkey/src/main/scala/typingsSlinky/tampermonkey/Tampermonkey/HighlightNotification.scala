@@ -33,18 +33,6 @@ object HighlightNotification {
         ret.asInstanceOf[js.Dynamic].updateDynamic("highlight")(value.asInstanceOf[js.Any])
         ret
     }
-    @scala.inline
-    def withText(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutText: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("text")(js.undefined)
-        ret
-    }
   }
   
 }

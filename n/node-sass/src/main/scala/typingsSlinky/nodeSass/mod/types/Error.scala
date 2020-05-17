@@ -1,15 +1,15 @@
 package typingsSlinky.nodeSass.mod.types
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.nodeSass.mod._ImporterReturnType
+import typingsSlinky.nodeSass.mod.ImporterReturnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Error
-  extends ReturnValue
-     with _ImporterReturnType {
+  extends ImporterReturnType
+     with ReturnValue {
   /**
   		 * This property doesn't exist, but its presence forces the typescript
   		 * compiler to properly type check this type. Without it, it seems to

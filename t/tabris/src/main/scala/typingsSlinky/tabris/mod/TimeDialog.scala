@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.OmitTimeDialogset
+import typingsSlinky.tabris.anon.OmitTimeDialogset
 import typingsSlinky.tabris.tabrisStrings.date
 import scala.scalajs.js
 import scala.scalajs.js.`|`

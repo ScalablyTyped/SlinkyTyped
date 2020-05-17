@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +12,4 @@ trait SVGForeignObjectElement extends SVGGraphicsElement {
   val x: org.scalajs.dom.raw.SVGAnimatedLength = js.native
   val y: org.scalajs.dom.raw.SVGAnimatedLength = js.native
 }
-
-@JSGlobal("SVGForeignObjectElement")
-@js.native
-object SVGForeignObjectElement extends Instantiable0[SVGForeignObjectElement]
 

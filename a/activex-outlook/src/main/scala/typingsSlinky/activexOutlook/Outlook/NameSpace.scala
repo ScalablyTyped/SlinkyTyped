@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Outlook.NameSpace")
 @js.native
-class NameSpace protected () extends js.Object {
+trait NameSpace extends js.Object {
   val Accounts: typingsSlinky.activexOutlook.Outlook.Accounts = js.native
   val AddressLists: typingsSlinky.activexOutlook.Outlook.AddressLists = js.native
   val Application: typingsSlinky.activexOutlook.Outlook.Application = js.native

@@ -3,7 +3,7 @@ package typingsSlinky.baseui.modalMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.baseui.AnonCloseSource
+import typingsSlinky.baseui.anon.CloseSource
 import typingsSlinky.baseui.baseuiStrings.alertdialog
 import typingsSlinky.baseui.baseuiStrings.auto
 import typingsSlinky.baseui.baseuiStrings.default_
@@ -22,7 +22,7 @@ trait ModalProps extends js.Object {
   var closeable: js.UndefOr[Boolean] = js.native
   var isOpen: js.UndefOr[Boolean] = js.native
   var mountNode: js.UndefOr[HTMLElement] = js.native
-  var onClose: js.UndefOr[js.Function1[/* args */ AnonCloseSource, _]] = js.native
+  var onClose: js.UndefOr[js.Function1[/* args */ CloseSource, _]] = js.native
   var overrides: js.UndefOr[ModalOverrides] = js.native
   var role: js.UndefOr[dialog | alertdialog] = js.native
   var size: js.UndefOr[default_ | full | auto] = js.native
@@ -120,7 +120,7 @@ object ModalProps {
         ret
     }
     @scala.inline
-    def withOnClose(value: /* args */ AnonCloseSource => _): Self = {
+    def withOnClose(value: /* args */ CloseSource => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction1(value))
         ret

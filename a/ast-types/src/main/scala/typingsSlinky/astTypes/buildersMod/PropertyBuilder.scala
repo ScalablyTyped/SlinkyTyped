@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonComputed
+import typingsSlinky.astTypes.anon.Computed
 import typingsSlinky.astTypes.astTypesStrings.get
 import typingsSlinky.astTypes.astTypesStrings.init
 import typingsSlinky.astTypes.astTypesStrings.set
@@ -33,6 +33,6 @@ trait PropertyBuilder extends js.Object {
   def apply(kind: set, key: IdentifierKind, value: PatternKind): Property = js.native
   def apply(kind: set, key: LiteralKind, value: ExpressionKind): Property = js.native
   def apply(kind: set, key: LiteralKind, value: PatternKind): Property = js.native
-  def from(params: AnonComputed): Property = js.native
+  def from(params: Computed): Property = js.native
 }
 

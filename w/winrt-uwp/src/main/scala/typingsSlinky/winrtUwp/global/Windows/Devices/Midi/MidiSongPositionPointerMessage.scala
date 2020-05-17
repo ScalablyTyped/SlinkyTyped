@@ -1,0 +1,18 @@
+package typingsSlinky.winrtUwp.global.Windows.Devices.Midi
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Represents a MIDI message that specifies a song position pointer. */
+@JSGlobal("Windows.Devices.Midi.MidiSongPositionPointerMessage")
+@js.native
+class MidiSongPositionPointerMessage protected ()
+  extends typingsSlinky.winrtUwp.Windows.Devices.Midi.MidiSongPositionPointerMessage {
+  /**
+    * Creates a new MidiSongPositionPointerMessage object.
+    * @param beats The song position pointer encoded in a 14-bit value from 0-16383.
+    */
+  def this(beats: Double) = this()
+}
+

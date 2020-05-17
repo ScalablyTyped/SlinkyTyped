@@ -1,7 +1,7 @@
 package typingsSlinky.jestJasmine2.specMod
 
-import typingsSlinky.jestJasmine2.AnonAfters
-import typingsSlinky.jestJasmine2.AnonCancel
+import typingsSlinky.jestJasmine2.anon.Afters
+import typingsSlinky.jestJasmine2.anon.Cancel
 import typingsSlinky.jestJasmine2.jestJasmine2Strings.disabled
 import typingsSlinky.jestJasmine2.jestJasmine2Strings.failed
 import typingsSlinky.jestJasmine2.jestJasmine2Strings.passed
@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Spec extends js.Object {
-  var currentRun: js.UndefOr[ReturnType[js.Function1[/* options */ Options, AnonCancel]]] = js.native
+  var currentRun: js.UndefOr[ReturnType[js.Function1[/* options */ Options, Cancel]]] = js.native
   var description: String = js.native
   var disabled: js.UndefOr[Boolean] = js.native
   var expand: js.UndefOr[Boolean] = js.native
@@ -25,7 +25,7 @@ trait Spec extends js.Object {
   var initError: js.Error = js.native
   var markedPending: js.UndefOr[Boolean] = js.native
   var markedTodo: js.UndefOr[Boolean] = js.native
-  var queueRunnerFactory: js.Function1[/* options */ Options, AnonCancel] = js.native
+  var queueRunnerFactory: js.Function1[/* options */ Options, Cancel] = js.native
   var queueableFn: QueueableFn = js.native
   var result: SpecResult = js.native
   var throwOnExpectationFailure: Boolean = js.native
@@ -35,7 +35,7 @@ trait Spec extends js.Object {
     data: typingsSlinky.jestJasmine2.expectationResultFactoryMod.Options,
     isError: Boolean
   ): Unit = js.native
-  def beforeAndAfterFns(): AnonAfters = js.native
+  def beforeAndAfterFns(): Afters = js.native
   def cancel(): Unit = js.native
   def disable(): Unit = js.native
   def execute(onComplete: js.Function, enabled: Boolean): Unit = js.native

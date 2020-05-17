@@ -9,9 +9,9 @@ trait PropertySignature
   extends TypeElement
      with JSDocContainer
      with HasExpressionInitializer
+     with HasJSDoc
      with HasType
-     with VariableLikeDeclaration
-     with _HasJSDoc {
+     with VariableLikeDeclaration {
   var initializer: js.UndefOr[Expression] = js.native
   @JSName("kind")
   var kind_PropertySignature: typingsSlinky.typescript.mod.SyntaxKind.PropertySignature = js.native

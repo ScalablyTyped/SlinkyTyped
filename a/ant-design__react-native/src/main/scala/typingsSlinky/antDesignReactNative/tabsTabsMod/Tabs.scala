@@ -6,9 +6,8 @@ import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antDesignReactNative.AnonAnimated
-import typingsSlinky.antDesignReactNative.AnonComponent
-import typingsSlinky.antDesignReactNative.TypeofDefaultTabBar
+import typingsSlinky.antDesignReactNative.anon.Animated
+import typingsSlinky.antDesignReactNative.anon.TypeofDefaultTabBar
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.horizontal
 import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.vertical
 import typingsSlinky.antDesignReactNative.tabsPropsTypeMod.PropsType
@@ -31,7 +30,7 @@ class Tabs protected ()
   /** compatible for different between react and preact in `setState`. */
   var nextCurrentTab: js.Any = js.native
   var prevCurrentTab: Double = js.native
-  var scrollView: AnonComponent = js.native
+  var scrollView: typingsSlinky.antDesignReactNative.anon.Component = js.native
   var tabCache: NumberDictionary[TagMod[Any]] = js.native
   var viewPager: default | Null = js.native
   @JSName("componentDidMount")
@@ -65,7 +64,7 @@ class Tabs protected ()
     /* allPrefix */ js.UndefOr[String], 
     StringDictionary[TagMod[Any]]
   ] = js.native
-  def getTabBarBaseProps(): AnonAnimated = js.native
+  def getTabBarBaseProps(): Animated = js.native
   def getTabIndex(props: PropsType): Double = js.native
   def goToTab(index: Double): Boolean = js.native
   def goToTab(index: Double, force: Boolean): Boolean = js.native

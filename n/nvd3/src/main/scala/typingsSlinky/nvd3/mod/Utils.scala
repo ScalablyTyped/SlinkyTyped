@@ -1,6 +1,6 @@
 package typingsSlinky.nvd3.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait Utils extends js.Object {
   def getColor(arg: js.Any): js.Array[String] = js.native
   def state(): State = js.native
   /* Binds callback function to run when window is resized */
-  def windowResize(listener: js.Function1[/* ev */ Event_, _]): Unit = js.native
+  def windowResize(listener: js.Function1[/* ev */ Event, _]): Unit = js.native
   /* Gets the browser window size */
   def windowSize(): Size = js.native
 }
@@ -25,7 +25,7 @@ object Utils {
     getColor: js.Any => js.Array[String],
     state: () => State,
     symbolMap: SymbolMap,
-    windowResize: js.Function1[/* ev */ Event_, _] => Unit,
+    windowResize: js.Function1[/* ev */ Event, _] => Unit,
     windowSize: () => Size
   ): Utils = {
     val __obj = js.Dynamic.literal(defaultColor = js.Any.fromFunction0(defaultColor), getColor = js.Any.fromFunction1(getColor), state = js.Any.fromFunction0(state), symbolMap = symbolMap.asInstanceOf[js.Any], windowResize = js.Any.fromFunction1(windowResize), windowSize = js.Any.fromFunction0(windowSize))
@@ -62,7 +62,7 @@ object Utils {
         ret
     }
     @scala.inline
-    def withWindowResize(value: js.Function1[/* ev */ Event_, _] => Unit): Self = {
+    def withWindowResize(value: js.Function1[/* ev */ Event, _] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("windowResize")(js.Any.fromFunction1(value))
         ret

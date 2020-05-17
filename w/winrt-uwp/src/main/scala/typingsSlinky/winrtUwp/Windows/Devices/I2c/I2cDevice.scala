@@ -1,14 +1,12 @@
 package typingsSlinky.winrtUwp.Windows.Devices.I2c
 
-import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a communications channel to a device on an inter-integrated circuit (I²C) bus. */
-@JSGlobal("Windows.Devices.I2c.I2cDevice")
 @js.native
-abstract class I2cDevice () extends js.Object {
+trait I2cDevice extends js.Object {
   /** Gets the connection settings used for communication with the inter-integrated circuit (I²C) device. */
   var connectionSettings: I2cConnectionSettings = js.native
   /** Gets the plug and play device identifier of the inter-integrated circuit (I²C) bus controller for the device. */
@@ -52,27 +50,83 @@ abstract class I2cDevice () extends js.Object {
   def writeReadPartial(writeBuffer: js.Array[Double], readBuffer: js.Array[Double]): I2cTransferResult = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Devices.I2c.I2cDevice")
-@js.native
-object I2cDevice extends js.Object {
-  /**
-    * Retrieves an I2cDevice object asynchronously for the inter-integrated circuit (I²C) bus controller that has the specified plug and play device identifier, using the specified connection settings.
-    * @param deviceId The plug and play device identifier of the I²C bus controller for which you want to create an I2cDevice object.
-    * @param settings The connection settings to use for communication with the I²C bus controller that deviceId specifies.
-    * @return An asynchronous operation that returns the I2cDevice object.
-    */
-  def fromIdAsync(deviceId: String, settings: I2cConnectionSettings): IPromiseWithIAsyncOperation[I2cDevice] = js.native
-  /**
-    * Retrieves an Advanced Query Syntax (AQS) string for all of the inter-integrated circuit (I²C) bus controllers on the system. You can use this string with the DeviceInformation.FindAllAsync method to get DeviceInformation objects for those bus controllers.
-    * @return An AQS string for all of the I²C bus controllers on the system, which you can use with the DeviceInformation.FindAllAsync method to get DeviceInformation objects for those bus controllers.
-    */
-  def getDeviceSelector(): String = js.native
-  /**
-    * Retrieves an Advanced Query Syntax (AQS) string for the inter-integrated circuit (I²C) bus that has the specified friendly name. You can use this string with the DeviceInformation.FindAllAsync method to get a DeviceInformation object for that bus.
-    * @param friendlyName A friendly name for the particular I²C bus on a particular hardware platform for which you want to get the AQS string.
-    * @return An AQS string for the I²C bus that friendlyName specifies, which you can use with the DeviceInformation.FindAllAsync method to get a DeviceInformation object for that bus.
-    */
-  def getDeviceSelector(friendlyName: String): String = js.native
+object I2cDevice {
+  @scala.inline
+  def apply(
+    close: () => Unit,
+    connectionSettings: I2cConnectionSettings,
+    deviceId: String,
+    read: js.Array[Double] => Unit,
+    readPartial: js.Array[Double] => I2cTransferResult,
+    write: js.Array[Double] => Unit,
+    writePartial: js.Array[Double] => I2cTransferResult,
+    writeRead: (js.Array[Double], js.Array[Double]) => Unit,
+    writeReadPartial: (js.Array[Double], js.Array[Double]) => I2cTransferResult
+  ): I2cDevice = {
+    val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), connectionSettings = connectionSettings.asInstanceOf[js.Any], deviceId = deviceId.asInstanceOf[js.Any], read = js.Any.fromFunction1(read), readPartial = js.Any.fromFunction1(readPartial), write = js.Any.fromFunction1(write), writePartial = js.Any.fromFunction1(writePartial), writeRead = js.Any.fromFunction2(writeRead), writeReadPartial = js.Any.fromFunction2(writeReadPartial))
+    __obj.asInstanceOf[I2cDevice]
+  }
+  @scala.inline
+  implicit class I2cDeviceOps[Self <: I2cDevice] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withConnectionSettings(value: I2cConnectionSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectionSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeviceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRead(value: js.Array[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("read")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withReadPartial(value: js.Array[Double] => I2cTransferResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readPartial")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWrite(value: js.Array[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("write")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWritePartial(value: js.Array[Double] => I2cTransferResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writePartial")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWriteRead(value: (js.Array[Double], js.Array[Double]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeRead")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withWriteReadPartial(value: (js.Array[Double], js.Array[Double]) => I2cTransferResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeReadPartial")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

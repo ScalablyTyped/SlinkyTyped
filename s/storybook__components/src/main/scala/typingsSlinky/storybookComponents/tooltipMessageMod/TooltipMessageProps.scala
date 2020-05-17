@@ -2,7 +2,7 @@ package typingsSlinky.storybookComponents.tooltipMessageMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.storybookComponents.AnonHref
+import typingsSlinky.storybookComponents.anon.Href
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TooltipMessageProps extends js.Object {
   var desc: js.UndefOr[TagMod[Any]] = js.native
-  var links: js.UndefOr[js.Array[AnonHref]] = js.native
+  var links: js.UndefOr[js.Array[Href]] = js.native
   var title: js.UndefOr[TagMod[Any]] = js.native
 }
 
@@ -45,7 +45,7 @@ object TooltipMessageProps {
         ret
     }
     @scala.inline
-    def withLinks(value: js.Array[AnonHref]): Self = {
+    def withLinks(value: js.Array[Href]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
         ret

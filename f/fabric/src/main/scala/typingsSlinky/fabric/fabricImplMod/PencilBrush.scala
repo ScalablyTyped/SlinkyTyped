@@ -1,6 +1,6 @@
 package typingsSlinky.fabric.fabricImplMod
 
-import typingsSlinky.fabric.AnonX
+import typingsSlinky.fabric.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,9 +12,9 @@ class PencilBrush () extends BaseBrush {
   	 * Converts points to SVG path
   	 * @param points Array of points
   	 */
-  def convertPointsToSVGPath(points: js.Array[AnonX]): js.Array[String] = js.native
-  def convertPointsToSVGPath(points: js.Array[AnonX], minX: Double): js.Array[String] = js.native
-  def convertPointsToSVGPath(points: js.Array[AnonX], minX: Double, minY: Double): js.Array[String] = js.native
+  def convertPointsToSVGPath(points: js.Array[X]): js.Array[String] = js.native
+  def convertPointsToSVGPath(points: js.Array[X], minX: Double): js.Array[String] = js.native
+  def convertPointsToSVGPath(points: js.Array[X], minX: Double, minY: Double): js.Array[String] = js.native
   /**
   	 * Creates fabric.Path object to add on canvas
   	 * @param pathData Path data

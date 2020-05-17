@@ -14,20 +14,8 @@ import scala.scalajs.js.annotation._
   * An Impact.js compatible physics body.
   * This re-creates the properties you'd get on an Entity and the math needed to update them.
   */
-@JSGlobal("Phaser.Physics.Impact.Body")
 @js.native
-class Body protected () extends js.Object {
-  /**
-    * 
-    * @param world [description]
-    * @param x [description]
-    * @param y [description]
-    * @param sx [description] Default 16.
-    * @param sy [description] Default 16.
-    */
-  def this(world: World, x: Double, y: Double) = this()
-  def this(world: World, x: Double, y: Double, sx: Double) = this()
-  def this(world: World, x: Double, y: Double, sx: Double, sy: Double) = this()
+trait Body extends js.Object {
   /**
     * [description]
     */

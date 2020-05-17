@@ -1,6 +1,6 @@
 package typingsSlinky.ionicReact.ionToastMod
 
-import typingsSlinky.ionicReact.AnonIos
+import typingsSlinky.ionicReact.anon.Ios
 import typingsSlinky.ionicReact.ionicReactStrings.cancel
 import typingsSlinky.ionicReact.ionicReactStrings.end
 import typingsSlinky.ionicReact.ionicReactStrings.start
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 trait ToastButton extends js.Object {
   var cssClass: js.UndefOr[String | js.Array[String]] = js.native
   var handler: js.UndefOr[js.Function0[Boolean | Unit | js.Promise[Boolean]]] = js.native
-  var icon: js.UndefOr[AnonIos | String] = js.native
+  var icon: js.UndefOr[Ios | String] = js.native
   var role: js.UndefOr[cancel | String] = js.native
   var side: js.UndefOr[start | end] = js.native
   var text: js.UndefOr[String] = js.native
@@ -56,7 +56,7 @@ object ToastButton {
         ret
     }
     @scala.inline
-    def withIcon(value: AnonIos | String): Self = {
+    def withIcon(value: Ios | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
         ret

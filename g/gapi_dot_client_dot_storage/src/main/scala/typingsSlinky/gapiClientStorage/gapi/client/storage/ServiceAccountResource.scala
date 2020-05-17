@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientStorage.gapi.client.storage
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientStorage.AnonProjectId
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientStorage.anon.ProjectId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ServiceAccountResource extends js.Object {
   /** Get the email address of this project's Google Cloud Storage service account. */
-  def get(request: AnonProjectId): Request_[ServiceAccount] = js.native
+  def get(request: ProjectId): Request[ServiceAccount] = js.native
 }
 
 object ServiceAccountResource {
   @scala.inline
-  def apply(get: AnonProjectId => Request_[ServiceAccount]): ServiceAccountResource = {
+  def apply(get: ProjectId => Request[ServiceAccount]): ServiceAccountResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get))
     __obj.asInstanceOf[ServiceAccountResource]
   }
@@ -25,7 +25,7 @@ object ServiceAccountResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonProjectId => Request_[ServiceAccount]): Self = {
+    def withGet(value: ProjectId => Request[ServiceAccount]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret

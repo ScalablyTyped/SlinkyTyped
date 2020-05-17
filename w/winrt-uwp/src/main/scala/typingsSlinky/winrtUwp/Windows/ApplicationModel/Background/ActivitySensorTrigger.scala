@@ -8,14 +8,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a trigger that is activated when the ActivitySensor receives input. This is used when your application needs to respond to the activity sensor. */
-@JSGlobal("Windows.ApplicationModel.Background.ActivitySensorTrigger")
 @js.native
-class ActivitySensorTrigger protected () extends js.Object {
-  /**
-    * Creates an instance of the ActivitySensorTrigger class with an initial MinimumReportInterval .
-    * @param reportIntervalInMilliseconds The initial report interval to use for MinimumReportInterval .
-    */
-  def this(reportIntervalInMilliseconds: Double) = this()
+trait ActivitySensorTrigger extends js.Object {
   /** Gets the minimum supported report interval for the sensor trigger. */
   var minimumReportInterval: Double = js.native
   /** Gets the report interval for the trigger. */
@@ -24,5 +18,50 @@ class ActivitySensorTrigger protected () extends js.Object {
   var subscribedActivities: IVector[ActivityType] = js.native
   /** Gets the list of supported activities you can subscribe to. */
   var supportedActivities: IVectorView[ActivityType] = js.native
+}
+
+object ActivitySensorTrigger {
+  @scala.inline
+  def apply(
+    minimumReportInterval: Double,
+    reportInterval: Double,
+    subscribedActivities: IVector[ActivityType],
+    supportedActivities: IVectorView[ActivityType]
+  ): ActivitySensorTrigger = {
+    val __obj = js.Dynamic.literal(minimumReportInterval = minimumReportInterval.asInstanceOf[js.Any], reportInterval = reportInterval.asInstanceOf[js.Any], subscribedActivities = subscribedActivities.asInstanceOf[js.Any], supportedActivities = supportedActivities.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ActivitySensorTrigger]
+  }
+  @scala.inline
+  implicit class ActivitySensorTriggerOps[Self <: ActivitySensorTrigger] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMinimumReportInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("minimumReportInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReportInterval(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reportInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubscribedActivities(value: IVector[ActivityType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subscribedActivities")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSupportedActivities(value: IVectorView[ActivityType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedActivities")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

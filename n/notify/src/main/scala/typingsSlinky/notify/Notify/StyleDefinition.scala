@@ -1,6 +1,6 @@
 package typingsSlinky.notify.Notify
 
-import typingsSlinky.notify.AnonDictclassName
+import typingsSlinky.notify.anon.DictclassName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait StyleDefinition extends js.Object {
     * Defines the available classes in this style. The "base" property will be applied to every
     * notification with this style.
     */
-  var classes: js.UndefOr[AnonDictclassName] = js.native
+  var classes: js.UndefOr[DictclassName] = js.native
   /**
     * All notifications will have this CSS applied to it.
     */
@@ -50,7 +50,7 @@ object StyleDefinition {
         ret
     }
     @scala.inline
-    def withClasses(value: AnonDictclassName): Self = {
+    def withClasses(value: DictclassName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
         ret

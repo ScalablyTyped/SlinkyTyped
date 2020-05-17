@@ -18,6 +18,7 @@ import typingsSlinky.xstate.typesMod.StateNodesConfig
 import typingsSlinky.xstate.typesMod.StateSchema
 import typingsSlinky.xstate.typesMod.StateValue
 import typingsSlinky.xstate.typesMod.StateValueMap
+import typingsSlinky.xstate.typesMod.TransitionConfigTargetShortcut
 import typingsSlinky.xstate.typesMod.TransitionDefinition
 import typingsSlinky.xstate.typesMod.TransitionDefinitionMap
 import typingsSlinky.xstate.typesMod.Typestate
@@ -38,7 +39,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object stateNodeMod extends js.Object {
   @js.native
-  class StateNode[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: EventObject */, TTypestate /* <: Typestate[TContext] */] protected () extends js.Object {
+  class StateNode[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: EventObject */, TTypestate /* <: Typestate[TContext] */] protected () extends TransitionConfigTargetShortcut[TContext, TEvent] {
     def this(/**
       * The raw config used to create the machine.
       */
@@ -305,14 +306,6 @@ object stateNodeMod extends js.Object {
       */
     def target: js.UndefOr[StateValue] = js.native
     def toJSON(): StateNodeDefinition[TContext, TStateSchema, TEvent] = js.native
-    def transition(state: js.UndefOr[scala.Nothing], event: Event[TEvent]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
-    def transition(state: js.UndefOr[scala.Nothing], event: Event[TEvent], context: TContext): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
-    def transition(state: js.UndefOr[scala.Nothing], event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
-    def transition(
-      state: js.UndefOr[scala.Nothing],
-      event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent],
-      context: TContext
-    ): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
     /**
       * Determines the next state given the current `state` and sent `event`.
       *
@@ -320,22 +313,21 @@ object stateNodeMod extends js.Object {
       * @param event The event that was sent at the current state
       * @param context The current context (extended state) of the current state
       */
-    def transition(state: String, event: Event[TEvent]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
-    def transition(state: String, event: Event[TEvent], context: TContext): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
-    def transition(state: String, event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
-    def transition(state: String, event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent], context: TContext): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
-    def transition(state: State[TContext, TEvent, _, _], event: Event[TEvent]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
-    def transition(state: State[TContext, TEvent, _, _], event: Event[TEvent], context: TContext): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
-    def transition(state: State[TContext, TEvent, _, _], event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
+    def transition(state: js.UndefOr[(State[TContext, TEvent, _, _]) | StateValueMap | String], event: Event[TEvent]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
     def transition(
-      state: State[TContext, TEvent, _, _],
+      state: js.UndefOr[(State[TContext, TEvent, _, _]) | StateValueMap | String],
+      event: Event[TEvent],
+      context: TContext
+    ): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
+    def transition(
+      state: js.UndefOr[(State[TContext, TEvent, _, _]) | StateValueMap | String],
+      event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent]
+    ): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
+    def transition(
+      state: js.UndefOr[(State[TContext, TEvent, _, _]) | StateValueMap | String],
       event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent],
       context: TContext
     ): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
-    def transition(state: StateValueMap, event: Event[TEvent]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
-    def transition(state: StateValueMap, event: Event[TEvent], context: TContext): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
-    def transition(state: StateValueMap, event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
-    def transition(state: StateValueMap, event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent], context: TContext): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
     /**
       * All the transitions that can be taken from this state node.
       */

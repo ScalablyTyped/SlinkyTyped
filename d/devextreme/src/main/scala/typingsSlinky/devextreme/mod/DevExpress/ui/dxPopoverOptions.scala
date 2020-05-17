@@ -1,13 +1,13 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonDelay
+import typingsSlinky.devextreme.anon.Delay
 import typingsSlinky.devextreme.devextremeStrings.bottom
 import typingsSlinky.devextreme.devextremeStrings.left
 import typingsSlinky.devextreme.devextremeStrings.right
 import typingsSlinky.devextreme.devextremeStrings.top
 import typingsSlinky.devextreme.mod.DevExpress.positionConfig
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,12 +18,12 @@ trait dxPopoverOptions[T] extends dxPopupOptions[T] {
   @JSName("animation")
   var animation_dxPopoverOptions: js.UndefOr[dxPopoverAnimation] = js.native
   /** Specifies options of popover hiding. */
-  var hideEvent: js.UndefOr[AnonDelay | String] = js.native
+  var hideEvent: js.UndefOr[Delay | String] = js.native
   /** An object defining widget positioning options. */
   @JSName("position")
   var position_dxPopoverOptions: js.UndefOr[bottom | left | right | top | positionConfig] = js.native
   /** Specifies options for displaying the widget. */
-  var showEvent: js.UndefOr[AnonDelay | String] = js.native
+  var showEvent: js.UndefOr[Delay | String] = js.native
   /** The target element associated with the widget. */
   var target: js.UndefOr[String | Element | JQuery] = js.native
 }
@@ -53,7 +53,7 @@ object dxPopoverOptions {
         ret
     }
     @scala.inline
-    def withHideEvent(value: AnonDelay | String): Self[T] = {
+    def withHideEvent(value: Delay | String): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hideEvent")(value.asInstanceOf[js.Any])
         ret
@@ -77,7 +77,7 @@ object dxPopoverOptions {
         ret
     }
     @scala.inline
-    def withShowEvent(value: AnonDelay | String): Self[T] = {
+    def withShowEvent(value: Delay | String): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("showEvent")(value.asInstanceOf[js.Any])
         ret

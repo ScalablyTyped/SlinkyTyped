@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DurationObjectInput extends js.Object {
+trait DurationObjectInput extends DurationInput {
   var day: js.UndefOr[Double] = js.native
   var days: js.UndefOr[Double] = js.native
   var hour: js.UndefOr[Double] = js.native

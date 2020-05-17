@@ -1,9 +1,9 @@
 package typingsSlinky.fabric.fabricImplMod
 
 import org.scalajs.dom.raw.SVGElement
-import typingsSlinky.fabric.AnonAxis1
-import typingsSlinky.fabric.AnonCenter
-import typingsSlinky.fabric.AnonX1
+import typingsSlinky.fabric.anon.Axis1
+import typingsSlinky.fabric.anon.Center
+import typingsSlinky.fabric.anon.X1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,11 +46,11 @@ class Line () extends Object {
   	 * Recalculates line points given width and height
   	 * @private
   	 */
-  def calcLinePoints(): AnonX1 = js.native
+  def calcLinePoints(): X1 = js.native
   /**
   	 * Produces a function that calculates distance from canvas edge to Line origin.
   	 */
-  def makeEdgeToOriginGetter(propertyNames: AnonAxis1, originValues: AnonCenter): js.Function = js.native
+  def makeEdgeToOriginGetter(propertyNames: Axis1, originValues: Center): js.Function = js.native
 }
 
 /* static members */

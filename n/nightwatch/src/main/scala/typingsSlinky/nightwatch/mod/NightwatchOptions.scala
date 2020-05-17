@@ -1,6 +1,6 @@
 package typingsSlinky.nightwatch.mod
 
-import typingsSlinky.nightwatch.AnonCliargs
+import typingsSlinky.nightwatch.anon.Cliargs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -65,7 +65,7 @@ trait NightwatchOptions extends js.Object {
   /**
     * Allows for webdriver config (mostly the same as selenium)
     */
-  var webdriver: js.UndefOr[AnonCliargs] = js.native
+  var webdriver: js.UndefOr[Cliargs] = js.native
 }
 
 object NightwatchOptions {
@@ -225,7 +225,7 @@ object NightwatchOptions {
         ret
     }
     @scala.inline
-    def withWebdriver(value: AnonCliargs): Self = {
+    def withWebdriver(value: Cliargs): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("webdriver")(value.asInstanceOf[js.Any])
         ret

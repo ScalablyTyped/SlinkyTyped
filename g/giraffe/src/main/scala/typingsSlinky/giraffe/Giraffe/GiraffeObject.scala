@@ -8,19 +8,19 @@ import scala.scalajs.js.annotation._
 trait GiraffeObject extends js.Object {
   var afterDispose: js.UndefOr[js.Function0[js.Any]] = js.native
   var afterInitialize: js.UndefOr[js.Function0[js.Any]] = js.native
-  var app: App_ = js.native
+  var app: App = js.native
   var appEvents: js.UndefOr[StringMap] = js.native
   var beforeDispose: js.UndefOr[js.Function0[js.Any]] = js.native
   var beforeInitialize: js.UndefOr[js.Function0[js.Any]] = js.native
   var dataEvents: js.UndefOr[StringMap] = js.native
-  var defaultOptions: js.UndefOr[DefaultOptions_] = js.native
+  var defaultOptions: js.UndefOr[DefaultOptions] = js.native
   var dispose: js.UndefOr[js.Function0[js.Any]] = js.native
   var initialize: js.UndefOr[js.Function0[js.Any]] = js.native
 }
 
 object GiraffeObject {
   @scala.inline
-  def apply(app: App_): GiraffeObject = {
+  def apply(app: App): GiraffeObject = {
     val __obj = js.Dynamic.literal(app = app.asInstanceOf[js.Any])
     __obj.asInstanceOf[GiraffeObject]
   }
@@ -31,7 +31,7 @@ object GiraffeObject {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withApp(value: App_): Self = {
+    def withApp(value: App): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("app")(value.asInstanceOf[js.Any])
         ret
@@ -109,7 +109,7 @@ object GiraffeObject {
         ret
     }
     @scala.inline
-    def withDefaultOptions(value: DefaultOptions_): Self = {
+    def withDefaultOptions(value: DefaultOptions): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defaultOptions")(value.asInstanceOf[js.Any])
         ret

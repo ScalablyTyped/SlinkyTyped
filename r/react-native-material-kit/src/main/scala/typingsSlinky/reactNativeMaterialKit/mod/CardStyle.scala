@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeMaterialKit.mod
 
-import typingsSlinky.reactNativeMaterialKit.AnonHeight
+import typingsSlinky.reactNativeMaterialKit.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait CardStyle extends js.Object {
   var borderRadius: js.UndefOr[Double] = js.native
   var borderWidth: js.UndefOr[Double] = js.native
   var shadowColor: js.UndefOr[String] = js.native
-  var shadowOffset: js.UndefOr[AnonHeight] = js.native
+  var shadowOffset: js.UndefOr[Height] = js.native
   var shadowOpacity: js.UndefOr[Double] = js.native
   var shadowRadius: js.UndefOr[Double] = js.native
 }
@@ -90,7 +90,7 @@ object CardStyle {
         ret
     }
     @scala.inline
-    def withShadowOffset(value: AnonHeight): Self = {
+    def withShadowOffset(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffset")(value.asInstanceOf[js.Any])
         ret

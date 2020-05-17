@@ -1,6 +1,6 @@
 package typingsSlinky.mocha
 
-import typingsSlinky.mocha.Mocha_.MochaOptions
+import typingsSlinky.mocha.Mocha.MochaOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

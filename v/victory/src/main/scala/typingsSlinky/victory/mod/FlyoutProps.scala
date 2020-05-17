@@ -1,7 +1,7 @@
 package typingsSlinky.victory.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.victory.AnonY
+import typingsSlinky.victory.anon.Y
 import typingsSlinky.victory.victoryStrings.bottom
 import typingsSlinky.victory.victoryStrings.left
 import typingsSlinky.victory.victoryStrings.right
@@ -19,7 +19,7 @@ trait FlyoutProps extends VictoryCommonProps {
   /**
     * the center coordinates of the flyout
     */
-  var center: js.UndefOr[AnonY] = js.native
+  var center: js.UndefOr[Y] = js.native
   /**
     * the class name that will be applied to the rendered element
     */
@@ -129,7 +129,7 @@ object FlyoutProps {
         ret
     }
     @scala.inline
-    def withCenter(value: AnonY): Self = {
+    def withCenter(value: Y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
         ret

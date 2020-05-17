@@ -1,6 +1,6 @@
 package typingsSlinky.weixinApp.wx
 
-import typingsSlinky.weixinApp.AnonCityName
+import typingsSlinky.weixinApp.anon.CityName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait ChooseAddressOptions
   extends BaseOptions[js.Any, js.Any] {
   @JSName("success")
-  var success_ChooseAddressOptions: js.UndefOr[js.Function1[/* res */ AnonCityName, Unit]] = js.native
+  var success_ChooseAddressOptions: js.UndefOr[js.Function1[/* res */ CityName, Unit]] = js.native
 }
 
 object ChooseAddressOptions {
@@ -26,7 +26,7 @@ object ChooseAddressOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSuccess(value: /* res */ AnonCityName => Unit): Self = {
+    def withSuccess(value: /* res */ CityName => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

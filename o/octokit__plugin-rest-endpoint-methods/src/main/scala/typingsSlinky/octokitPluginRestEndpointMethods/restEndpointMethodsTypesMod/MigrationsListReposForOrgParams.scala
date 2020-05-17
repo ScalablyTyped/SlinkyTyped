@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MigrationsListReposForOrgParams extends js.Object {
   var migration_id: Double = js.native
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
   /**
     * Page number of the results to fetch.
     */
@@ -20,8 +21,9 @@ trait MigrationsListReposForOrgParams extends js.Object {
 
 object MigrationsListReposForOrgParams {
   @scala.inline
-  def apply(migration_id: Double, org: String): MigrationsListReposForOrgParams = {
-    val __obj = js.Dynamic.literal(migration_id = migration_id.asInstanceOf[js.Any], org = org.asInstanceOf[js.Any])
+  def apply(migration_id: Double, org_ : String): MigrationsListReposForOrgParams = {
+    val __obj = js.Dynamic.literal(migration_id = migration_id.asInstanceOf[js.Any])
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[MigrationsListReposForOrgParams]
   }
   @scala.inline
@@ -37,7 +39,7 @@ object MigrationsListReposForOrgParams {
         ret
     }
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

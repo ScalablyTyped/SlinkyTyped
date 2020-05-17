@@ -1,14 +1,12 @@
 package typingsSlinky.winrtUwp.Windows.Networking.Sockets
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IMapView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides information on the transferred socket from the Socket Broker. */
-@JSGlobal("Windows.Networking.Sockets.SocketActivityInformation")
 @js.native
-abstract class SocketActivityInformation () extends js.Object {
+trait SocketActivityInformation extends js.Object {
   /** Get the context associated while transferring ownership of the socket. */
   var context: SocketActivityContext = js.native
   /** Based on the socket type, the app can reclaim the ownership of the appropriate DatagramSocket . */
@@ -25,11 +23,69 @@ abstract class SocketActivityInformation () extends js.Object {
   var taskId: String = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Networking.Sockets.SocketActivityInformation")
-@js.native
-object SocketActivityInformation extends js.Object {
-  /** Gets a list of all the sockets transferred to the socket brokering service by this app. */
-  var allSockets: IMapView[String, SocketActivityInformation] = js.native
+object SocketActivityInformation {
+  @scala.inline
+  def apply(
+    context: SocketActivityContext,
+    datagramSocket: DatagramSocket,
+    id: String,
+    socketKind: SocketActivityKind,
+    streamSocket: StreamSocket,
+    streamSocketListener: StreamSocketListener,
+    taskId: String
+  ): SocketActivityInformation = {
+    val __obj = js.Dynamic.literal(context = context.asInstanceOf[js.Any], datagramSocket = datagramSocket.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], socketKind = socketKind.asInstanceOf[js.Any], streamSocket = streamSocket.asInstanceOf[js.Any], streamSocketListener = streamSocketListener.asInstanceOf[js.Any], taskId = taskId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SocketActivityInformation]
+  }
+  @scala.inline
+  implicit class SocketActivityInformationOps[Self <: SocketActivityInformation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContext(value: SocketActivityContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDatagramSocket(value: DatagramSocket): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datagramSocket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSocketKind(value: SocketActivityKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("socketKind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStreamSocket(value: StreamSocket): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamSocket")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStreamSocketListener(value: StreamSocketListener): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streamSocketListener")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTaskId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("taskId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

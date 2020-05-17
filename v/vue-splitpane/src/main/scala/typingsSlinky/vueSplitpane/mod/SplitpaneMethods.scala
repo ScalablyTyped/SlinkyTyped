@@ -1,6 +1,6 @@
 package typingsSlinky.vueSplitpane.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,13 +9,13 @@ import scala.scalajs.js.annotation._
 trait SplitpaneMethods extends js.Object {
   def onClick(): Unit = js.native
   def onMouseDown(): Unit = js.native
-  def onMouseMove(e: Event_): Unit = js.native
+  def onMouseMove(e: Event): Unit = js.native
   def onMouseUp(): Unit = js.native
 }
 
 object SplitpaneMethods {
   @scala.inline
-  def apply(onClick: () => Unit, onMouseDown: () => Unit, onMouseMove: Event_ => Unit, onMouseUp: () => Unit): SplitpaneMethods = {
+  def apply(onClick: () => Unit, onMouseDown: () => Unit, onMouseMove: Event => Unit, onMouseUp: () => Unit): SplitpaneMethods = {
     val __obj = js.Dynamic.literal(onClick = js.Any.fromFunction0(onClick), onMouseDown = js.Any.fromFunction0(onMouseDown), onMouseMove = js.Any.fromFunction1(onMouseMove), onMouseUp = js.Any.fromFunction0(onMouseUp))
     __obj.asInstanceOf[SplitpaneMethods]
   }
@@ -38,7 +38,7 @@ object SplitpaneMethods {
         ret
     }
     @scala.inline
-    def withOnMouseMove(value: Event_ => Unit): Self = {
+    def withOnMouseMove(value: Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(js.Any.fromFunction1(value))
         ret

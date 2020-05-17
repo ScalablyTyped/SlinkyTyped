@@ -1,5 +1,10 @@
 package typingsSlinky.zui
 
+import typingsSlinky.zui.anon.Crop
+import typingsSlinky.zui.anon.Error
+import typingsSlinky.zui.anon.Height
+import typingsSlinky.zui.anon.Id
+import typingsSlinky.zui.anon.Maxfilesize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +29,7 @@ trait UploaderOption extends js.Object {
   var fileList: js.UndefOr[String] = js.native
   var fileTemplate: js.UndefOr[String] = js.native
   var file_data_name: js.UndefOr[String] = js.native
-  var filters: js.UndefOr[AnonMaxfilesize] = js.native
+  var filters: js.UndefOr[Maxfilesize] = js.native
   var flash_swf_url: js.UndefOr[String] = js.native
   var headers: js.UndefOr[js.Object] = js.native
   var lang: js.UndefOr[String] = js.native
@@ -35,7 +40,7 @@ trait UploaderOption extends js.Object {
   var multipart_params: js.UndefOr[js.Object | CallBack] = js.native
   var onBeforeUpload: js.UndefOr[js.Function1[/* file */ FileObj, Unit]] = js.native
   var onChunkUploaded: js.UndefOr[js.Function2[/* file */ FileObj, /* responseObject */ ResponseObject, Unit]] = js.native
-  var onError: js.UndefOr[js.Function1[/* error */ AnonError, Unit]] = js.native
+  var onError: js.UndefOr[js.Function1[/* error */ Error, Unit]] = js.native
   var onFileUploaded: js.UndefOr[js.Function2[/* file */ FileObj, /* responseObject */ ResponseObject, Unit]] = js.native
   var onFilesAdded: js.UndefOr[js.Function1[/* fiels */ js.Array[FileObj], Unit]] = js.native
   var onFilesRemoved: js.UndefOr[js.Function1[/* files */ js.Array[FileObj], Unit]] = js.native
@@ -46,20 +51,20 @@ trait UploaderOption extends js.Object {
   var onUploadFile: js.UndefOr[js.Function1[/* file */ FileObj, Unit]] = js.native
   var onUploadProgress: js.UndefOr[js.Function1[/* file */ FileObj, Unit]] = js.native
   var previewImageIcon: js.UndefOr[Boolean] = js.native
-  var previewImageSize: js.UndefOr[AnonHeight] = js.native
+  var previewImageSize: js.UndefOr[Height] = js.native
   var qiniu: js.UndefOr[js.Object] = js.native
   var removeUploaded: js.UndefOr[Boolean] = js.native
   var rename: js.UndefOr[Boolean] = js.native
   var renameActionOnDone: js.UndefOr[Boolean] = js.native
   var renameByClick: js.UndefOr[Boolean] = js.native
   var renameExtension: js.UndefOr[Boolean] = js.native
-  var resize: js.UndefOr[AnonCrop] = js.native
+  var resize: js.UndefOr[Crop] = js.native
   var responseHandler: js.UndefOr[Boolean | CallBack] = js.native
   var runtimes: js.UndefOr[String] = js.native
   var sendFileId: js.UndefOr[Boolean] = js.native
   var sendFileName: js.UndefOr[Boolean] = js.native
   var silverlight_xap_url: js.UndefOr[String] = js.native
-  var staticFiles: js.UndefOr[js.Array[AnonId]] = js.native
+  var staticFiles: js.UndefOr[js.Array[Id]] = js.native
   var statusCreator: js.UndefOr[
     js.Function3[/* total */ UploadProgress, /* state */ STATUS, /* uploader */ Uploader, Unit]
   ] = js.native
@@ -243,7 +248,7 @@ object UploaderOption {
         ret
     }
     @scala.inline
-    def withFilters(value: AnonMaxfilesize): Self = {
+    def withFilters(value: Maxfilesize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
         ret
@@ -381,7 +386,7 @@ object UploaderOption {
         ret
     }
     @scala.inline
-    def withOnError(value: /* error */ AnonError => Unit): Self = {
+    def withOnError(value: /* error */ Error => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
         ret
@@ -513,7 +518,7 @@ object UploaderOption {
         ret
     }
     @scala.inline
-    def withPreviewImageSize(value: AnonHeight): Self = {
+    def withPreviewImageSize(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("previewImageSize")(value.asInstanceOf[js.Any])
         ret
@@ -597,7 +602,7 @@ object UploaderOption {
         ret
     }
     @scala.inline
-    def withResize(value: AnonCrop): Self = {
+    def withResize(value: Crop): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resize")(value.asInstanceOf[js.Any])
         ret
@@ -675,7 +680,7 @@ object UploaderOption {
         ret
     }
     @scala.inline
-    def withStaticFiles(value: js.Array[AnonId]): Self = {
+    def withStaticFiles(value: js.Array[Id]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("staticFiles")(value.asInstanceOf[js.Any])
         ret

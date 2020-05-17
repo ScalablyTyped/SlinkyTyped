@@ -7,7 +7,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.ButtonPropsautoFocusboole
+import typingsSlinky.baseui.anon.ButtonPropsautoFocusboole
 import typingsSlinky.baseui.baseuiStrings.button
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_

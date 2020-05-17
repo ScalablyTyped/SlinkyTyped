@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("google.earth.GEOptions")
 @js.native
-class GEOptions () extends js.Object {
+trait GEOptions extends js.Object {
   /**
     * Show or hide the blue atmosphere that appears around the perimeter of the Earth.
     * On by default.
@@ -150,5 +149,225 @@ class GEOptions () extends js.Object {
     * The values passed and returned with an object's getters and setters are always metric.
     */
   def setUnitsFeetMiles(unitsFeetMiles: Boolean): Unit = js.native
+}
+
+object GEOptions {
+  @scala.inline
+  def apply(
+    getAtmosphereVisibility: () => Boolean,
+    getAutoGroundLevelViewEnabled: () => Boolean,
+    getBuildingHighlightingEnabled: () => Boolean,
+    getBuildingSelectionEnabled: () => Boolean,
+    getFadeInOutEnabled: () => Boolean,
+    getFlyToSpeed: () => Double,
+    getGridVisibility: () => Boolean,
+    getMouseNavigationEnabled: () => Boolean,
+    getOverviewMapVisibility: () => Boolean,
+    getScaleLegendVisibility: () => Boolean,
+    getScrollWheelZoomSpeed: () => Double,
+    getStatusBarVisibility: () => Boolean,
+    getTerrainExaggeration: () => Double,
+    getUnitsFeetMiles: () => Boolean,
+    setAtmosphereVisibility: Boolean => Unit,
+    setAutoGroundLevelViewEnabled: Boolean => Unit,
+    setBuildingHighlightingEnabled: Boolean => Unit,
+    setBuildingSelectionEnabled: Boolean => Unit,
+    setFadeInOutEnabled: Boolean => Unit,
+    setFlyToSpeed: Double => Unit,
+    setGridVisibility: Boolean => Unit,
+    setMapType: GEMapTypeEnum => Unit,
+    setMouseNavigationEnabled: Boolean => Unit,
+    setOverviewMapVisibility: Boolean => Unit,
+    setScaleLegendVisibility: Boolean => Unit,
+    setScrollWheelZoomSpeed: Double => Unit,
+    setStatusBarVisibility: Boolean => Unit,
+    setTerrainExaggeration: Double => Unit,
+    setUnitsFeetMiles: Boolean => Unit
+  ): GEOptions = {
+    val __obj = js.Dynamic.literal(getAtmosphereVisibility = js.Any.fromFunction0(getAtmosphereVisibility), getAutoGroundLevelViewEnabled = js.Any.fromFunction0(getAutoGroundLevelViewEnabled), getBuildingHighlightingEnabled = js.Any.fromFunction0(getBuildingHighlightingEnabled), getBuildingSelectionEnabled = js.Any.fromFunction0(getBuildingSelectionEnabled), getFadeInOutEnabled = js.Any.fromFunction0(getFadeInOutEnabled), getFlyToSpeed = js.Any.fromFunction0(getFlyToSpeed), getGridVisibility = js.Any.fromFunction0(getGridVisibility), getMouseNavigationEnabled = js.Any.fromFunction0(getMouseNavigationEnabled), getOverviewMapVisibility = js.Any.fromFunction0(getOverviewMapVisibility), getScaleLegendVisibility = js.Any.fromFunction0(getScaleLegendVisibility), getScrollWheelZoomSpeed = js.Any.fromFunction0(getScrollWheelZoomSpeed), getStatusBarVisibility = js.Any.fromFunction0(getStatusBarVisibility), getTerrainExaggeration = js.Any.fromFunction0(getTerrainExaggeration), getUnitsFeetMiles = js.Any.fromFunction0(getUnitsFeetMiles), setAtmosphereVisibility = js.Any.fromFunction1(setAtmosphereVisibility), setAutoGroundLevelViewEnabled = js.Any.fromFunction1(setAutoGroundLevelViewEnabled), setBuildingHighlightingEnabled = js.Any.fromFunction1(setBuildingHighlightingEnabled), setBuildingSelectionEnabled = js.Any.fromFunction1(setBuildingSelectionEnabled), setFadeInOutEnabled = js.Any.fromFunction1(setFadeInOutEnabled), setFlyToSpeed = js.Any.fromFunction1(setFlyToSpeed), setGridVisibility = js.Any.fromFunction1(setGridVisibility), setMapType = js.Any.fromFunction1(setMapType), setMouseNavigationEnabled = js.Any.fromFunction1(setMouseNavigationEnabled), setOverviewMapVisibility = js.Any.fromFunction1(setOverviewMapVisibility), setScaleLegendVisibility = js.Any.fromFunction1(setScaleLegendVisibility), setScrollWheelZoomSpeed = js.Any.fromFunction1(setScrollWheelZoomSpeed), setStatusBarVisibility = js.Any.fromFunction1(setStatusBarVisibility), setTerrainExaggeration = js.Any.fromFunction1(setTerrainExaggeration), setUnitsFeetMiles = js.Any.fromFunction1(setUnitsFeetMiles))
+    __obj.asInstanceOf[GEOptions]
+  }
+  @scala.inline
+  implicit class GEOptionsOps[Self <: GEOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetAtmosphereVisibility(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAtmosphereVisibility")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetAutoGroundLevelViewEnabled(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAutoGroundLevelViewEnabled")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetBuildingHighlightingEnabled(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBuildingHighlightingEnabled")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetBuildingSelectionEnabled(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBuildingSelectionEnabled")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetFadeInOutEnabled(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFadeInOutEnabled")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetFlyToSpeed(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFlyToSpeed")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetGridVisibility(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getGridVisibility")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMouseNavigationEnabled(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMouseNavigationEnabled")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetOverviewMapVisibility(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getOverviewMapVisibility")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetScaleLegendVisibility(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScaleLegendVisibility")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetScrollWheelZoomSpeed(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getScrollWheelZoomSpeed")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetStatusBarVisibility(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStatusBarVisibility")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetTerrainExaggeration(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTerrainExaggeration")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetUnitsFeetMiles(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getUnitsFeetMiles")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetAtmosphereVisibility(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAtmosphereVisibility")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetAutoGroundLevelViewEnabled(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAutoGroundLevelViewEnabled")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetBuildingHighlightingEnabled(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setBuildingHighlightingEnabled")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetBuildingSelectionEnabled(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setBuildingSelectionEnabled")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetFadeInOutEnabled(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFadeInOutEnabled")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetFlyToSpeed(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFlyToSpeed")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetGridVisibility(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setGridVisibility")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetMapType(value: GEMapTypeEnum => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMapType")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetMouseNavigationEnabled(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMouseNavigationEnabled")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetOverviewMapVisibility(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setOverviewMapVisibility")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetScaleLegendVisibility(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setScaleLegendVisibility")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetScrollWheelZoomSpeed(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setScrollWheelZoomSpeed")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetStatusBarVisibility(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStatusBarVisibility")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetTerrainExaggeration(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTerrainExaggeration")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetUnitsFeetMiles(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setUnitsFeetMiles")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,25 +1,21 @@
 package typingsSlinky.vegaTypings.markMod
 
+import typingsSlinky.vegaTypings.anon.Aggregate
+import typingsSlinky.vegaTypings.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.vegaTypings.AnonName
-  - typingsSlinky.vegaTypings.AnonAggregate
+  - typingsSlinky.vegaTypings.anon.Name
+  - typingsSlinky.vegaTypings.anon.Aggregate
 */
 trait Facet extends js.Object
 
 object Facet {
   @scala.inline
-  def AnonName(data: String, field: String, name: String): Facet = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], field = field.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Facet]
-  }
+  implicit def apply(value: Aggregate): Facet = value.asInstanceOf[Facet]
   @scala.inline
-  def AnonAggregate(data: String, groupby: String | js.Array[String], name: String): Facet = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], groupby = groupby.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Facet]
-  }
+  implicit def apply(value: Name): Facet = value.asInstanceOf[Facet]
 }
 

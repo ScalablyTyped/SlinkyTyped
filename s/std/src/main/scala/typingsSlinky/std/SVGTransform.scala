@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,16 +25,133 @@ trait SVGTransform extends js.Object {
   def setTranslate(tx: Double, ty: Double): Unit = js.native
 }
 
-@JSGlobal("SVGTransform")
-@js.native
-object SVGTransform
-  extends Instantiable0[org.scalajs.dom.raw.SVGTransform] {
-  val SVG_TRANSFORM_MATRIX: Double = js.native
-  val SVG_TRANSFORM_ROTATE: Double = js.native
-  val SVG_TRANSFORM_SCALE: Double = js.native
-  val SVG_TRANSFORM_SKEWX: Double = js.native
-  val SVG_TRANSFORM_SKEWY: Double = js.native
-  val SVG_TRANSFORM_TRANSLATE: Double = js.native
-  val SVG_TRANSFORM_UNKNOWN: Double = js.native
+object SVGTransform {
+  @scala.inline
+  def apply(
+    SVG_TRANSFORM_MATRIX: Double,
+    SVG_TRANSFORM_ROTATE: Double,
+    SVG_TRANSFORM_SCALE: Double,
+    SVG_TRANSFORM_SKEWX: Double,
+    SVG_TRANSFORM_SKEWY: Double,
+    SVG_TRANSFORM_TRANSLATE: Double,
+    SVG_TRANSFORM_UNKNOWN: Double,
+    angle: Double,
+    matrix: org.scalajs.dom.raw.SVGMatrix,
+    setMatrix: org.scalajs.dom.raw.SVGMatrix => Unit,
+    setRotate: (Double, Double, Double) => Unit,
+    setScale: (Double, Double) => Unit,
+    setSkewX: Double => Unit,
+    setSkewY: Double => Unit,
+    setTranslate: (Double, Double) => Unit,
+    `type`: Double
+  ): SVGTransform = {
+    val __obj = js.Dynamic.literal(SVG_TRANSFORM_MATRIX = SVG_TRANSFORM_MATRIX.asInstanceOf[js.Any], SVG_TRANSFORM_ROTATE = SVG_TRANSFORM_ROTATE.asInstanceOf[js.Any], SVG_TRANSFORM_SCALE = SVG_TRANSFORM_SCALE.asInstanceOf[js.Any], SVG_TRANSFORM_SKEWX = SVG_TRANSFORM_SKEWX.asInstanceOf[js.Any], SVG_TRANSFORM_SKEWY = SVG_TRANSFORM_SKEWY.asInstanceOf[js.Any], SVG_TRANSFORM_TRANSLATE = SVG_TRANSFORM_TRANSLATE.asInstanceOf[js.Any], SVG_TRANSFORM_UNKNOWN = SVG_TRANSFORM_UNKNOWN.asInstanceOf[js.Any], angle = angle.asInstanceOf[js.Any], matrix = matrix.asInstanceOf[js.Any], setMatrix = js.Any.fromFunction1(setMatrix), setRotate = js.Any.fromFunction3(setRotate), setScale = js.Any.fromFunction2(setScale), setSkewX = js.Any.fromFunction1(setSkewX), setSkewY = js.Any.fromFunction1(setSkewY), setTranslate = js.Any.fromFunction2(setTranslate))
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SVGTransform]
+  }
+  @scala.inline
+  implicit class SVGTransformOps[Self <: org.scalajs.dom.raw.SVGTransform] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSVG_TRANSFORM_MATRIX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG_TRANSFORM_MATRIX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSVG_TRANSFORM_ROTATE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG_TRANSFORM_ROTATE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSVG_TRANSFORM_SCALE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG_TRANSFORM_SCALE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSVG_TRANSFORM_SKEWX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG_TRANSFORM_SKEWX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSVG_TRANSFORM_SKEWY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG_TRANSFORM_SKEWY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSVG_TRANSFORM_TRANSLATE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG_TRANSFORM_TRANSLATE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSVG_TRANSFORM_UNKNOWN(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SVG_TRANSFORM_UNKNOWN")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAngle(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("angle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMatrix(value: org.scalajs.dom.raw.SVGMatrix): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matrix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetMatrix(value: org.scalajs.dom.raw.SVGMatrix => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMatrix")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetRotate(value: (Double, Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setRotate")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withSetScale(value: (Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setScale")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetSkewX(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSkewX")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetSkewY(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSkewY")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetTranslate(value: (Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTranslate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

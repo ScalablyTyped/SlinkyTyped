@@ -2,7 +2,7 @@ package typingsSlinky.reactNativeMultiSlider.mod
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeMultiSlider.AnonBorderRadius
+import typingsSlinky.reactNativeMultiSlider.anon.BorderRadius
 import typingsSlinky.reactNativeMultiSlider.reactNativeMultiSliderStrings.horizontal
 import typingsSlinky.reactNativeMultiSlider.reactNativeMultiSliderStrings.vertical
 import scala.scalajs.js
@@ -94,7 +94,7 @@ trait MultiSliderProps extends js.Object {
     * Slip displacement If finger leaves the marker measures distance before responder cuts out and changes are no
     * longer registered, if not given marker will be active until pressed released.
     */
-  var touchDimensions: js.UndefOr[AnonBorderRadius] = js.native
+  var touchDimensions: js.UndefOr[BorderRadius] = js.native
   /**
     * Customise the track
     *
@@ -309,7 +309,7 @@ object MultiSliderProps {
         ret
     }
     @scala.inline
-    def withTouchDimensions(value: AnonBorderRadius): Self = {
+    def withTouchDimensions(value: BorderRadius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("touchDimensions")(value.asInstanceOf[js.Any])
         ret

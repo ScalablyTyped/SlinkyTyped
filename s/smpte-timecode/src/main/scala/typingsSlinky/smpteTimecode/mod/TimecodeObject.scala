@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TimecodeObject extends js.Object {
+trait TimecodeObject extends TIMECODE {
   var frames: Double = js.native
   var hours: Double = js.native
   var minutes: Double = js.native

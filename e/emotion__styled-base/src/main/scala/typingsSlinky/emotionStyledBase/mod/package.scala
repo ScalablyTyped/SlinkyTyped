@@ -11,6 +11,5 @@ package object mod {
     ExtraProps, 
     Theme
   ]
-  type JSXInEl = typingsSlinky.react.mod._Global_.JSX.IntrinsicElements
-  type WithTheme[P, T] = (P with typingsSlinky.emotionStyledBase.AnonThemeT[T]) | (P with typingsSlinky.emotionStyledBase.AnonThemeExclude)
+  type JSXInEl = typingsSlinky.react.mod.global.JSX.IntrinsicElements
 }

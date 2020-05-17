@@ -4,7 +4,6 @@ import typingsSlinky.phaser.Phaser.GameObjects.Graphics
 import typingsSlinky.phaser.Phaser.Geom.Point
 import typingsSlinky.phaser.Phaser.Geom.Rectangle
 import typingsSlinky.phaser.Phaser.Math.Vector2
-import typingsSlinky.phaser.Phaser.Types.Curves.EllipseCurveConfig
 import typingsSlinky.phaser.Phaser.Types.Curves.JSONCurve
 import typingsSlinky.phaser.Phaser.Types.Curves.JSONEllipseCurve
 import typingsSlinky.phaser.Phaser.Types.Curves.JSONPath
@@ -20,16 +19,7 @@ object Curves extends js.Object {
     * A higher-order Bézier curve constructed of four points.
     */
   @js.native
-  class CubicBezier protected () extends Curve {
-    def this(p0: js.Array[Vector2], p1: Vector2, p2: Vector2, p3: Vector2) = this()
-    /**
-      * 
-      * @param p0 Start point, or an array of point pairs.
-      * @param p1 Control Point 1.
-      * @param p2 Control Point 2.
-      * @param p3 End Point.
-      */
-    def this(p0: Vector2, p1: Vector2, p2: Vector2, p3: Vector2) = this()
+  trait CubicBezier extends Curve {
     /**
       * The start point of this curve.
       */
@@ -70,12 +60,7 @@ object Curves extends js.Object {
     * Based on the three.js Curve classes created by [zz85](http://www.lab4games.net/zz85/blog)
     */
   @js.native
-  class Curve protected () extends js.Object {
-    /**
-      * 
-      * @param type The curve type.
-      */
-    def this(`type`: String) = this()
+  trait Curve extends js.Object {
     /**
       * For a curve on a Path, `false` means the Path will ignore this curve.
       */
@@ -246,28 +231,7 @@ object Curves extends js.Object {
     * See https://en.wikipedia.org/wiki/Elliptic_curve for more details.
     */
   @js.native
-  class Ellipse protected () extends Curve {
-    /**
-      * 
-      * @param x The x coordinate of the ellipse, or an Ellipse Curve configuration object. Default 0.
-      * @param y The y coordinate of the ellipse. Default 0.
-      * @param xRadius The horizontal radius of ellipse. Default 0.
-      * @param yRadius The vertical radius of ellipse. Default 0.
-      * @param startAngle The start angle of the ellipse, in degrees. Default 0.
-      * @param endAngle The end angle of the ellipse, in degrees. Default 360.
-      * @param clockwise Whether the ellipse angles are given as clockwise (`true`) or counter-clockwise (`false`). Default false.
-      * @param rotation The rotation of the ellipse, in degrees. Default 0.
-      */
-    def this(
-      x: js.UndefOr[Double | EllipseCurveConfig],
-      y: js.UndefOr[Double],
-      xRadius: js.UndefOr[Double],
-      yRadius: js.UndefOr[Double],
-      startAngle: js.UndefOr[integer],
-      endAngle: js.UndefOr[integer],
-      clockwise: js.UndefOr[Boolean],
-      rotation: js.UndefOr[integer]
-    ) = this()
+  trait Ellipse extends Curve {
     /**
       * The rotation of the ellipse, relative to the center, in degrees.
       */
@@ -370,16 +334,7 @@ object Curves extends js.Object {
     * A LineCurve is a "curve" comprising exactly two points (a line segment).
     */
   @js.native
-  class Line protected () extends Curve {
-    def this(p0: js.Array[Double]) = this()
-    /**
-      * 
-      * @param p0 The first endpoint.
-      * @param p1 The second endpoint.
-      */
-    def this(p0: Vector2) = this()
-    def this(p0: js.Array[Double], p1: Vector2) = this()
-    def this(p0: Vector2, p1: Vector2) = this()
+  trait Line extends Curve {
     /**
       * The first endpoint.
       */
@@ -416,14 +371,7 @@ object Curves extends js.Object {
     * A MoveTo Curve is a very simple curve consisting of only a single point. Its intended use is to move the ending point in a Path.
     */
   @js.native
-  /**
-    * 
-    * @param x `x` pixel coordinate.
-    * @param y `y` pixel coordinate.
-    */
-  class MoveTo () extends js.Object {
-    def this(x: Double) = this()
-    def this(x: Double, y: Double) = this()
+  trait MoveTo extends js.Object {
     /**
       * Denotes that this Curve does not influence the bounds, points, and drawing of its parent Path. Must be `false` or some methods in the parent Path will throw errors.
       */
@@ -468,14 +416,7 @@ object Curves extends js.Object {
     * have to be an uninterrupted curve. Only the order of the Curves influences the actual points on the Path.
     */
   @js.native
-  /**
-    * 
-    * @param x The X coordinate of the Path's starting point or a {@link Phaser.Types.Curves.JSONPath}. Default 0.
-    * @param y The Y coordinate of the Path's starting point. Default 0.
-    */
-  class Path () extends js.Object {
-    def this(x: Double) = this()
-    def this(x: Double, y: Double) = this()
+  trait Path extends js.Object {
     /**
       * Automatically closes the path.
       */
@@ -723,15 +664,7 @@ object Curves extends js.Object {
     * [description]
     */
   @js.native
-  class QuadraticBezier protected () extends Curve {
-    def this(p0: js.Array[Double], p1: Vector2, p2: Vector2) = this()
-    /**
-      * 
-      * @param p0 Start point, or an array of point pairs.
-      * @param p1 Control Point 1.
-      * @param p2 Control Point 2.
-      */
-    def this(p0: Vector2, p1: Vector2, p2: Vector2) = this()
+  trait QuadraticBezier extends Curve {
     /**
       * [description]
       */
@@ -766,12 +699,7 @@ object Curves extends js.Object {
     * Create a smooth 2d spline curve from a series of points.
     */
   @js.native
-  /**
-    * 
-    * @param points The points that configure the curve.
-    */
-  class Spline () extends Curve {
-    def this(points: js.Array[js.Array[Double] | Double | Vector2]) = this()
+  trait Spline extends Curve {
     /**
       * The Vector2 points that configure the curve.
       */
@@ -803,56 +731,6 @@ object Curves extends js.Object {
       * Exports a JSON object containing this curve data.
       */
     def toJSON(): JSONCurve = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object CubicBezier extends js.Object {
-    /**
-      * Generates a curve from a JSON object.
-      * @param data The JSON object containing this curve data.
-      */
-    def fromJSON(data: JSONCurve): CubicBezier = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object Ellipse extends js.Object {
-    /**
-      * Creates a curve from the provided Ellipse Curve Configuration object.
-      * @param data The JSON object containing this curve data.
-      */
-    def fromJSON(data: JSONEllipseCurve): Ellipse = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object Line extends js.Object {
-    /**
-      * Configures this line from a JSON representation.
-      * @param data The JSON object containing this curve data.
-      */
-    def fromJSON(data: JSONCurve): Line = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object QuadraticBezier extends js.Object {
-    /**
-      * Creates a curve from a JSON object, e. g. created by `toJSON`.
-      * @param data The JSON object containing this curve data.
-      */
-    def fromJSON(data: JSONCurve): QuadraticBezier = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object Spline extends js.Object {
-    /**
-      * Imports a JSON object containing this curve data.
-      * @param data The JSON object containing this curve data.
-      */
-    def fromJSON(data: JSONCurve): Spline = js.native
   }
   
 }

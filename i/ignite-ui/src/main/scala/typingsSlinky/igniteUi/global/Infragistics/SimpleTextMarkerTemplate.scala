@@ -1,0 +1,15 @@
+package typingsSlinky.igniteUi.global.Infragistics
+
+import typingsSlinky.igniteUi.SimpleTextMarkerTemplateSettings
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("Infragistics.SimpleTextMarkerTemplate")
+@js.native
+class SimpleTextMarkerTemplate protected ()
+  extends typingsSlinky.igniteUi.Infragistics.SimpleTextMarkerTemplate {
+  def this(requireThis: Boolean) = this()
+  def this(settings: SimpleTextMarkerTemplateSettings) = this()
+}
+

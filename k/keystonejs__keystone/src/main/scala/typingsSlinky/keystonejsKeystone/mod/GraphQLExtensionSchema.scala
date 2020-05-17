@@ -1,6 +1,6 @@
 package typingsSlinky.keystonejsKeystone.mod
 
-import typingsSlinky.keystonejsKeystone.AnonType
+import typingsSlinky.keystonejsKeystone.anon.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait GraphQLExtensionSchema extends js.Object {
   var mutations: js.UndefOr[js.Array[GraphQLExtension[_, _]]] = js.native
   var queries: js.UndefOr[js.Array[GraphQLExtension[_, _]]] = js.native
-  var types: js.UndefOr[js.Array[AnonType]] = js.native
+  var types: js.UndefOr[js.Array[Type]] = js.native
 }
 
 object GraphQLExtensionSchema {
@@ -49,7 +49,7 @@ object GraphQLExtensionSchema {
         ret
     }
     @scala.inline
-    def withTypes(value: js.Array[AnonType]): Self = {
+    def withTypes(value: js.Array[Type]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
         ret

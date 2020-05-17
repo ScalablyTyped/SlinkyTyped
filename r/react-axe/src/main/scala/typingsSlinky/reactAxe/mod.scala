@@ -1,6 +1,8 @@
 package typingsSlinky.reactAxe
 
 import typingsSlinky.axeCore.mod.Spec
+import typingsSlinky.reactAxe.anon.TypeofReact
+import typingsSlinky.reactAxe.anon.TypeofReactDOM
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

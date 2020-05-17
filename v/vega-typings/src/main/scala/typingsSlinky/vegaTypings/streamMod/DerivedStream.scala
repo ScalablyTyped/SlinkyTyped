@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait DerivedStream
-  extends _Stream
+  extends Stream
      with StreamParameters {
   var stream: Stream = js.native
 }

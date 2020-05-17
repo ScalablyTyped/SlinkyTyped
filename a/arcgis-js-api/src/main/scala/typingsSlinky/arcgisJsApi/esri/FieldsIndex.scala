@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,7 +43,48 @@ trait FieldsIndex extends js.Object {
   def isDateField(fieldName: String): Boolean = js.native
 }
 
-@JSGlobal("__esri.FieldsIndex")
-@js.native
-object FieldsIndex extends TopLevel[FieldsIndexConstructor]
+object FieldsIndex {
+  @scala.inline
+  def apply(
+    dateFields: js.Array[_ | Field],
+    get: String => Field,
+    has: String => Boolean,
+    isDateField: String => Boolean
+  ): FieldsIndex = {
+    val __obj = js.Dynamic.literal(dateFields = dateFields.asInstanceOf[js.Any], get = js.Any.fromFunction1(get), has = js.Any.fromFunction1(has), isDateField = js.Any.fromFunction1(isDateField))
+    __obj.asInstanceOf[FieldsIndex]
+  }
+  @scala.inline
+  implicit class FieldsIndexOps[Self <: FieldsIndex] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDateFields(value: js.Array[_ | Field]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGet(value: String => Field): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHas(value: String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("has")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsDateField(value: String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDateField")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

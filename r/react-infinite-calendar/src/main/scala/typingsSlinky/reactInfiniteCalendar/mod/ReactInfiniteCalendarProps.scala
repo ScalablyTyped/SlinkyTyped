@@ -1,10 +1,10 @@
 package typingsSlinky.reactInfiniteCalendar.mod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.reactInfiniteCalendar.AnonAccentColor
-import typingsSlinky.reactInfiniteCalendar.AnonBlank
-import typingsSlinky.reactInfiniteCalendar.AnonEnd
-import typingsSlinky.reactInfiniteCalendar.AnonHideYearsOnSelect
+import typingsSlinky.reactInfiniteCalendar.anon.AccentColor
+import typingsSlinky.reactInfiniteCalendar.anon.Blank
+import typingsSlinky.reactInfiniteCalendar.anon.End
+import typingsSlinky.reactInfiniteCalendar.anon.HideYearsOnSelect
 import typingsSlinky.reactInfiniteCalendar.reactInfiniteCalendarBooleans.`false`
 import typingsSlinky.reactInfiniteCalendar.reactInfiniteCalendarNumbers.`0`
 import typingsSlinky.reactInfiniteCalendar.reactInfiniteCalendarNumbers.`1`
@@ -29,12 +29,12 @@ trait ReactInfiniteCalendarProps extends js.Object {
   var disabledDates: js.UndefOr[js.Array[DateType]] = js.native
   var disabledDays: js.UndefOr[js.Array[`0` | `1` | `2` | `3` | `4` | `5` | `6`]] = js.native
   var display: js.UndefOr[days | years] = js.native
-  var displayOptions: js.UndefOr[AnonHideYearsOnSelect] = js.native
+  var displayOptions: js.UndefOr[HideYearsOnSelect] = js.native
   var height: js.UndefOr[Double | auto] = js.native
   var interpolateSelection: js.UndefOr[
     js.Function2[/* date */ js.Date, /* selected */ js.Array[js.Date], js.Array[js.Date]]
   ] = js.native
-  var locale: js.UndefOr[AnonBlank] = js.native
+  var locale: js.UndefOr[Blank] = js.native
   var max: js.UndefOr[DateType] = js.native
   var maxDate: js.UndefOr[DateType] = js.native
   var min: js.UndefOr[DateType] = js.native
@@ -43,9 +43,9 @@ trait ReactInfiniteCalendarProps extends js.Object {
   var onScrollEnd: js.UndefOr[js.Function1[/* scrollTop */ Double, Unit]] = js.native
   var onSelect: js.UndefOr[DateSelectFunction | RangedSelectFunction] = js.native
   var rowHeight: js.UndefOr[Double] = js.native
-  var selected: js.UndefOr[DateType | `false` | AnonEnd] = js.native
+  var selected: js.UndefOr[DateType | `false` | End] = js.native
   var tabIndex: js.UndefOr[Double] = js.native
-  var theme: js.UndefOr[AnonAccentColor] = js.native
+  var theme: js.UndefOr[AccentColor] = js.native
   var width: js.UndefOr[Double | auto | `100Percentsign`] = js.native
 }
 
@@ -134,7 +134,7 @@ object ReactInfiniteCalendarProps {
         ret
     }
     @scala.inline
-    def withDisplayOptions(value: AnonHideYearsOnSelect): Self = {
+    def withDisplayOptions(value: HideYearsOnSelect): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("displayOptions")(value.asInstanceOf[js.Any])
         ret
@@ -170,7 +170,7 @@ object ReactInfiniteCalendarProps {
         ret
     }
     @scala.inline
-    def withLocale(value: AnonBlank): Self = {
+    def withLocale(value: Blank): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
         ret
@@ -296,7 +296,7 @@ object ReactInfiniteCalendarProps {
         ret
     }
     @scala.inline
-    def withSelected(value: DateType | `false` | AnonEnd): Self = {
+    def withSelected(value: DateType | `false` | End): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(value.asInstanceOf[js.Any])
         ret
@@ -320,7 +320,7 @@ object ReactInfiniteCalendarProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonAccentColor): Self = {
+    def withTheme(value: AccentColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

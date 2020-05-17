@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.elbMod
 
-import typingsSlinky.awsSdk.DescribeEndPointStateInpu
+import typingsSlinky.awsSdk.anon.DescribeEndPointStateInpu
 import typingsSlinky.awsSdk.awsSdkStrings.anyInstanceInService
 import typingsSlinky.awsSdk.awsSdkStrings.instanceDeregistered
 import typingsSlinky.awsSdk.awsSdkStrings.instanceInService

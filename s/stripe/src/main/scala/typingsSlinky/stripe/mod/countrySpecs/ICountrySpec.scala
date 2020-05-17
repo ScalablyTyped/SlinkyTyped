@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.countrySpecs
 
-import typingsSlinky.stripe.AnonCompany
+import typingsSlinky.stripe.anon.Company
 import typingsSlinky.stripe.mod.IResourceObject
 import typingsSlinky.stripe.stripeStrings.country_spec
 import scala.scalajs.js
@@ -31,7 +31,7 @@ trait ICountrySpec extends IResourceObject {
     * Lists the types of verification data needed to keep an account open. Includes 'minimum' fields, which every account must eventually
     * provide, as well as a 'additional' fields, which are only required for some merchants.
     */
-  var verification_fields: AnonCompany = js.native
+  var verification_fields: Company = js.native
 }
 
 object ICountrySpec {
@@ -42,7 +42,7 @@ object ICountrySpec {
     `object`: country_spec,
     supported_payment_currencies: js.Array[String],
     supported_payment_methods: js.Array[String],
-    verification_fields: AnonCompany
+    verification_fields: Company
   ): ICountrySpec = {
     val __obj = js.Dynamic.literal(default_currency = default_currency.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], supported_payment_currencies = supported_payment_currencies.asInstanceOf[js.Any], supported_payment_methods = supported_payment_methods.asInstanceOf[js.Any], verification_fields = verification_fields.asInstanceOf[js.Any])
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
@@ -79,7 +79,7 @@ object ICountrySpec {
         ret
     }
     @scala.inline
-    def withVerification_fields(value: AnonCompany): Self = {
+    def withVerification_fields(value: Company): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("verification_fields")(value.asInstanceOf[js.Any])
         ret

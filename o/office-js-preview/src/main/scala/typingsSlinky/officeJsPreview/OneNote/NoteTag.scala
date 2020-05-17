@@ -1,9 +1,9 @@
 package typingsSlinky.officeJsPreview.OneNote
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OneNote.Interfaces.NoteTagData
 import typingsSlinky.officeJsPreview.OneNote.Interfaces.NoteTagLoadOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Address
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Completed
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Contact
@@ -32,9 +32,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: OneNoteApi 1.1]
   */
-@JSGlobal("OneNote.NoteTag")
 @js.native
-class NoteTag () extends ClientObject {
+trait NoteTag extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_NoteTag: RequestContext = js.native
@@ -77,8 +76,8 @@ class NoteTag () extends ClientObject {
   def load(): NoteTag = js.native
   def load(option: String): NoteTag = js.native
   def load(option: js.Array[String]): NoteTag = js.native
-  def load(option: AnonExpand): NoteTag = js.native
   def load(option: NoteTagLoadOptions): NoteTag = js.native
+  def load(option: Expand): NoteTag = js.native
   /**
     * Overrides the JavaScript `toJSON()` method in order to provide more useful output when an API object is passed to `JSON.stringify()`. (`JSON.stringify`, in turn, calls the `toJSON` method of the object that is passed to it.)
     * Whereas the original OneNote.NoteTag object is an API object, the `toJSON` method returns a plain JavaScript object (typed as `OneNote.Interfaces.NoteTagData`) that contains shallow copies of any loaded child properties from the original object.

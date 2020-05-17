@@ -1,17 +1,12 @@
 package typingsSlinky.igniteUi.Infragistics
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.igniteUi.DataSourceSettings
-import typingsSlinky.igniteUi.MashupDataSourceMashupSettings
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Infragistics.MashupDataSource")
 @js.native
-class MashupDataSource protected () extends js.Object {
-  def this(mashupSettings: MashupDataSourceMashupSettings) = this()
-  def this(settings: DataSourceSettings) = this()
+trait MashupDataSource extends js.Object {
   /**
   	 * Adds a new node to the tree data source. Creates a transaction that can be committed / rolled back
   	 *

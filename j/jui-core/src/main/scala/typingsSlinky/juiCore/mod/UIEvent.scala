@@ -1,7 +1,7 @@
 package typingsSlinky.juiCore.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait UIEvent extends UICore {
   /**
     * Get the child element of the root element
     */
-  def find(selector: js.Any): JQuery_[HTMLElement] = js.native
+  def find(selector: js.Any): JQuery[HTMLElement] = js.native
 }
 
 object UIEvent {
@@ -23,7 +23,7 @@ object UIEvent {
     callDelay: (String, js.Function0[Unit]) => Unit,
     destroy: () => Unit,
     emit: (String, js.Function0[Unit]) => js.Any,
-    find: js.Any => JQuery_[HTMLElement],
+    find: js.Any => JQuery[HTMLElement],
     off: String => Unit,
     on: (String, js.Function0[Unit]) => Unit,
     setOption: (String, js.Any) => Unit,
@@ -39,7 +39,7 @@ object UIEvent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFind(value: js.Any => JQuery_[HTMLElement]): Self = {
+    def withFind(value: js.Any => JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("find")(js.Any.fromFunction1(value))
         ret

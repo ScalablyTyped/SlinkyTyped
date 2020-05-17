@@ -1,9 +1,9 @@
 package typingsSlinky.tabris.mod
 
 import org.scalablytyped.runtime.NumberDictionary
-import typingsSlinky.tabris.Anon6
-import typingsSlinky.tabris.Anon7
-import typingsSlinky.tabris.AnonOpacity
+import typingsSlinky.tabris.anon.Opacity
+import typingsSlinky.tabris.anon.`6`
+import typingsSlinky.tabris.anon.`7`
 import typingsSlinky.tabris.tabrisStrings.set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,10 +11,12 @@ import scala.scalajs.js.annotation._
 
 @JSImport("tabris", "WidgetCollection")
 @js.native
-class WidgetCollection[WidgetType /* <: Widget */] () extends /**
+class WidgetCollection[WidgetType /* <: Widget */] ()
+  extends /**
   * @constant
   */
-/* key */ NumberDictionary[WidgetType] {
+/* key */ NumberDictionary[WidgetType]
+     with JSXChildren[WidgetType] {
   def this(widgets: js.Array[Widget]) = this()
   /**
     * The widget this WidgetCollection was created from. Corresponds to the ':host' selector.
@@ -24,7 +26,7 @@ class WidgetCollection[WidgetType /* <: Widget */] () extends /**
   /**
     * @constant
     */
-  val jsxAttributes: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with Anon7[WidgetType] = js.native
+  val jsxAttributes: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with `7`[WidgetType] = js.native
   /**
     * Contains the number of widgets in the collection.
     * @constant
@@ -35,7 +37,7 @@ class WidgetCollection[WidgetType /* <: Widget */] () extends /**
     * @param properties The properties and target values to animate.
     * @param options Configures the animation itself.
     */
-  def animate(properties: AnonOpacity, options: AnimationOptions): Unit = js.native
+  def animate(properties: Opacity, options: AnimationOptions): Unit = js.native
   /**
     * Appends all widgets in this collection to the given parent widget.
     * @param parent The parent widget to append to.
@@ -107,12 +109,12 @@ class WidgetCollection[WidgetType /* <: Widget */] () extends /**
     * @param selector A selector expression or a predicate function to filter the results.
     */
   def last[Result /* <: WidgetType */](): js.UndefOr[Result] = js.native
+  def last[U /* <: Widget */](constructor: `6`[U]): U = js.native
+  def last[Result /* <: WidgetType */](selector: Selector[WidgetType, Result]): js.UndefOr[Result] = js.native
   /**
     * Returns the last widget in the collection that is an instance of the given class.
     * @param constructor A class to filter the results.
     */
-  def last[U /* <: Widget */](constructor: Anon6[U]): U = js.native
-  def last[Result /* <: WidgetType */](selector: Selector[WidgetType, Result]): js.UndefOr[Result] = js.native
   @JSName("last")
   def last_U_Widget_U[U /* <: Widget */](): U = js.native
   /**

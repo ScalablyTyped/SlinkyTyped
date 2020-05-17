@@ -1,6 +1,6 @@
 package typingsSlinky.projectOxford.mod.FaceResponses
 
-import typingsSlinky.projectOxford.AnonPitch
+import typingsSlinky.projectOxford.anon.Pitch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait Attributes extends js.Object {
   var age: Double = js.native
   var gender: String = js.native
-  var headPose: AnonPitch = js.native
+  var headPose: Pitch = js.native
 }
 
 object Attributes {
   @scala.inline
-  def apply(age: Double, gender: String, headPose: AnonPitch): Attributes = {
+  def apply(age: Double, gender: String, headPose: Pitch): Attributes = {
     val __obj = js.Dynamic.literal(age = age.asInstanceOf[js.Any], gender = gender.asInstanceOf[js.Any], headPose = headPose.asInstanceOf[js.Any])
     __obj.asInstanceOf[Attributes]
   }
@@ -37,7 +37,7 @@ object Attributes {
         ret
     }
     @scala.inline
-    def withHeadPose(value: AnonPitch): Self = {
+    def withHeadPose(value: Pitch): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headPose")(value.asInstanceOf[js.Any])
         ret

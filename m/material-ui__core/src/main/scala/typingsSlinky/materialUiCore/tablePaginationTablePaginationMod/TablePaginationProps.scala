@@ -7,9 +7,9 @@ import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.materialUiCore.PartialClassNameMapTableP
-import typingsSlinky.materialUiCore.PartialIconButtonProps
-import typingsSlinky.materialUiCore.PartialSelectProps
+import typingsSlinky.materialUiCore.anon.PartialClassNameMapTableP
+import typingsSlinky.materialUiCore.anon.PartialIconButtonProps
+import typingsSlinky.materialUiCore.anon.PartialSelectProps
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`inline`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.additions
@@ -69,7 +69,7 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
 import typingsSlinky.materialUiCore.tableCellTableCellMod.Padding
 import typingsSlinky.materialUiCore.tableCellTableCellMod.SortDirection
 import typingsSlinky.materialUiCore.tablePaginationActionsMod.TablePaginationActionsProps
-import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -163,7 +163,7 @@ trait TablePaginationProps extends js.Object {
   var contentEditable: js.UndefOr[Booleanish | inherit] = js.native
   var contextMenu: js.UndefOr[String] = js.native
   var count: Double = js.native
-  var dangerouslySetInnerHTML: js.UndefOr[AnonHtml] = js.native
+  var dangerouslySetInnerHTML: js.UndefOr[Html] = js.native
   var datatype: js.UndefOr[String] = js.native
   var defaultChecked: js.UndefOr[Boolean] = js.native
   var defaultValue: js.UndefOr[String | Double | js.Array[String]] = js.native

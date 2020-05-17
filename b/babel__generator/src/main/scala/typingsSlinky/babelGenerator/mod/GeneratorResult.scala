@@ -1,6 +1,6 @@
 package typingsSlinky.babelGenerator.mod
 
-import typingsSlinky.babelGenerator.AnonFile
+import typingsSlinky.babelGenerator.anon.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GeneratorResult extends js.Object {
   var code: String = js.native
-  var map: AnonFile | Null = js.native
+  var map: File | Null = js.native
 }
 
 object GeneratorResult {
@@ -30,7 +30,7 @@ object GeneratorResult {
         ret
     }
     @scala.inline
-    def withMap(value: AnonFile): Self = {
+    def withMap(value: File): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("map")(value.asInstanceOf[js.Any])
         ret

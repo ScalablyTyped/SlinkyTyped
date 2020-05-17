@@ -1,18 +1,18 @@
 package typingsSlinky.firebaseInstallations.commonMod
 
-import typingsSlinky.firebaseInstallations.AnonCode
+import typingsSlinky.firebaseInstallations.anon.Code
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ErrorResponse extends js.Object {
-  var error: AnonCode = js.native
+  var error: Code = js.native
 }
 
 object ErrorResponse {
   @scala.inline
-  def apply(error: AnonCode): ErrorResponse = {
+  def apply(error: Code): ErrorResponse = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any])
     __obj.asInstanceOf[ErrorResponse]
   }
@@ -23,7 +23,7 @@ object ErrorResponse {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withError(value: AnonCode): Self = {
+    def withError(value: Code): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret

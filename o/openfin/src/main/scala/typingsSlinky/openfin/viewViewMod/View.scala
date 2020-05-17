@@ -1,7 +1,7 @@
 package typingsSlinky.openfin.viewViewMod
 
-import typingsSlinky.openfin.PartialViewOptions
-import typingsSlinky.openfin.PickBoundsheightwidthtopl
+import typingsSlinky.openfin.anon.PartialViewOptions
+import typingsSlinky.openfin.anon.PickBoundsheightwidthtopl
 import typingsSlinky.openfin.identityMod.Identity
 import typingsSlinky.openfin.viewMod.ViewEvents
 import typingsSlinky.openfin.webcontentsWebcontentsMod.WebContents

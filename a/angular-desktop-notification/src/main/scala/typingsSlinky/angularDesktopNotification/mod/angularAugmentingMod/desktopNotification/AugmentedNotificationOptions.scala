@@ -1,8 +1,8 @@
 package typingsSlinky.angularDesktopNotification.mod.angularAugmentingMod.desktopNotification
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.std.EventListener
-import typingsSlinky.std.Event_
 import typingsSlinky.std.NotificationOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -73,7 +73,7 @@ object AugmentedNotificationOptions {
         ret
     }
     @scala.inline
-    def withOnError(value: /* evt */ Event_ => Unit): Self = {
+    def withOnError(value: /* evt */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
         ret

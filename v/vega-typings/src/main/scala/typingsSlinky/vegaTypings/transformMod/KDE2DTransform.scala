@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait KDE2DTransform extends _Transforms {
+trait KDE2DTransform extends Transforms {
   var as: js.UndefOr[String | SignalRef] = js.native
   var bandwidth: js.UndefOr[(js.Array[Double | SignalRef]) | SignalRef] = js.native
   var cellSize: js.UndefOr[Double | SignalRef] = js.native

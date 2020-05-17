@@ -2,13 +2,13 @@ package typingsSlinky.tablesorter.tablesorterConfigurationMod
 
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalajs.dom.raw.Element
-import typingsSlinky.jquery.JQuery_.Selector
+import typingsSlinky.jquery.JQuery.Selector
 import typingsSlinky.tablesorter.coreThemeMod.CoreTheme
 import typingsSlinky.tablesorter.emptySortingMod.EmptySorting
 import typingsSlinky.tablesorter.globalizeSettingsMod.GlobalizeSettings
 import typingsSlinky.tablesorter.initializationEventHandlerMod.InitializationEventHandler
 import typingsSlinky.tablesorter.mappedSettingsMod.MappedSettings
-import typingsSlinky.tablesorter.mod._Global_.JQuery
+import typingsSlinky.tablesorter.mod.global.JQuery
 import typingsSlinky.tablesorter.numberSorterMod.NumberSorter
 import typingsSlinky.tablesorter.relativeSortDefinitionMod.RelativeSortDefinition
 import typingsSlinky.tablesorter.renderHeaderEventHandlerMod.RenderHeaderEventHandler
@@ -949,7 +949,7 @@ object TablesorterConfiguration {
     }
     @scala.inline
     def withSortMultiSortKey(
-      value: altKey | button | buttons | clientX | clientY | ctrlKey | metaKey | movementX | movementY | offsetX | offsetY | pageX | pageY | relatedTarget | screenX | screenY | shiftKey | x | y
+      value: altKey | button | buttons | clientX | clientY | ctrlKey | metaKey | movementX | movementY | offsetX | offsetY | pageX | pageY | relatedTarget | screenX | screenY | shiftKey | typingsSlinky.tablesorter.tablesorterStrings.x | y
     ): Self[TElement] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sortMultiSortKey")(value.asInstanceOf[js.Any])
@@ -975,7 +975,7 @@ object TablesorterConfiguration {
     }
     @scala.inline
     def withSortResetKey(
-      value: altKey | button | buttons | clientX | clientY | ctrlKey | metaKey | movementX | movementY | offsetX | offsetY | pageX | pageY | relatedTarget | screenX | screenY | shiftKey | x | y
+      value: altKey | button | buttons | clientX | clientY | ctrlKey | metaKey | movementX | movementY | offsetX | offsetY | pageX | pageY | relatedTarget | screenX | screenY | shiftKey | typingsSlinky.tablesorter.tablesorterStrings.x | y
     ): Self[TElement] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sortResetKey")(value.asInstanceOf[js.Any])

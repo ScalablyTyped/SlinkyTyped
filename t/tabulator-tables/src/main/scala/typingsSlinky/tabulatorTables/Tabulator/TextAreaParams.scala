@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TextAreaParams
   extends SharedEditorParams
-     with _EditorParams {
+     with EditorParams {
   var verticalNavigation: js.UndefOr[editor | table | hybrid] = js.native
 }
 

@@ -2,6 +2,8 @@ package typingsSlinky.rmcDialog
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
+import typingsSlinky.rmcDialog.anon.OnClose
+import typingsSlinky.rmcDialog.anon.Visible
 import typingsSlinky.rmcDialog.idialogproptypesMod.IDialogPropTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,7 +29,7 @@ object mod extends js.Object {
     def renderDialog(visible: js.Any): Unit = js.native
     def saveRef(node: js.Any): Unit = js.native
     @JSName("shouldComponentUpdate")
-    def shouldComponentUpdate_MDialogWrap(hasVisible: AnonVisible): Boolean = js.native
+    def shouldComponentUpdate_MDialogWrap(hasVisible: Visible): Boolean = js.native
   }
   
   @js.native
@@ -36,7 +38,7 @@ object mod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var defaultProps: AnonOnClose = js.native
+    var defaultProps: OnClose = js.native
   }
   
 }

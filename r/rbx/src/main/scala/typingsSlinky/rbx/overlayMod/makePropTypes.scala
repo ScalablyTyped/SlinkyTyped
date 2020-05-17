@@ -1,7 +1,7 @@
 package typingsSlinky.rbx.overlayMod
 
 import typingsSlinky.propTypes.mod.ValidationMap
-import typingsSlinky.rbx.PartialVariablesDefinitio
+import typingsSlinky.rbx.anon.PartialVariablesDefinitio
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

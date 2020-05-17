@@ -2,11 +2,11 @@ package typingsSlinky.reactAsync.mod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactAsync.AnonChildren
-import typingsSlinky.reactAsync.AnonChildrenPersist
-import typingsSlinky.reactAsync.AnonChildrenSettledChildren
-import typingsSlinky.reactAsync.AnonInitial
-import typingsSlinky.reactAsync.AnonPersist
+import typingsSlinky.reactAsync.anon.Children
+import typingsSlinky.reactAsync.anon.ChildrenPersist
+import typingsSlinky.reactAsync.anon.ChildrenSettledChildren
+import typingsSlinky.reactAsync.anon.Initial
+import typingsSlinky.reactAsync.anon.Persist
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,12 +19,12 @@ class Async[T] ()
 @JSImport("react-async", "Async")
 @js.native
 object Async extends js.Object {
-  def Fulfilled[T](props: AnonPersist[T]): ReactElement = js.native
-  def Initial[T](props: AnonChildren[T]): ReactElement = js.native
-  def Loading[T](props: AnonInitial[T]): ReactElement = js.native
-  def Pending[T](props: AnonInitial[T]): ReactElement = js.native
-  def Rejected[T](props: AnonChildrenPersist[T]): ReactElement = js.native
-  def Resolved[T](props: AnonPersist[T]): ReactElement = js.native
-  def Settled[T](props: AnonChildrenSettledChildren[T]): ReactElement = js.native
+  def Fulfilled[T](props: Persist[T]): ReactElement = js.native
+  def Initial[T](props: Children[T]): ReactElement = js.native
+  def Loading[T](props: Initial[T]): ReactElement = js.native
+  def Pending[T](props: Initial[T]): ReactElement = js.native
+  def Rejected[T](props: ChildrenPersist[T]): ReactElement = js.native
+  def Resolved[T](props: Persist[T]): ReactElement = js.native
+  def Settled[T](props: ChildrenSettledChildren[T]): ReactElement = js.native
 }
 

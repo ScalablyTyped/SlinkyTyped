@@ -6,12 +6,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A Wi-FI Direct connection request received by a WiFiDirectConnectionListener . */
-@JSGlobal("Windows.Devices.WiFiDirect.WiFiDirectConnectionRequest")
 @js.native
-abstract class WiFiDirectConnectionRequest () extends js.Object {
+trait WiFiDirectConnectionRequest extends js.Object {
   /** Gets device information for the endpoint making the Wi-Fi Direct connection request. */
   var deviceInformation: DeviceInformation = js.native
   /** Closes the WiFiDirectConnectionRequest object. */
   def close(): Unit = js.native
+}
+
+object WiFiDirectConnectionRequest {
+  @scala.inline
+  def apply(close: () => Unit, deviceInformation: DeviceInformation): WiFiDirectConnectionRequest = {
+    val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), deviceInformation = deviceInformation.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WiFiDirectConnectionRequest]
+  }
+  @scala.inline
+  implicit class WiFiDirectConnectionRequestOps[Self <: WiFiDirectConnectionRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDeviceInformation(value: DeviceInformation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceInformation")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

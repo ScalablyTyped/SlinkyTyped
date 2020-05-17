@@ -1,7 +1,7 @@
 package typingsSlinky.pkgcloud.mod.storage
 
-import typingsSlinky.node.processMod._Global_.NodeJS.ReadStream
-import typingsSlinky.node.processMod._Global_.NodeJS.WriteStream
+import typingsSlinky.node.processMod.global.NodeJS.ReadStream
+import typingsSlinky.node.processMod.global.NodeJS.WriteStream
 import typingsSlinky.pkgcloud.mod.ClientError
 import typingsSlinky.pkgcloud.mod.ProviderOptions
 import scala.scalajs.js

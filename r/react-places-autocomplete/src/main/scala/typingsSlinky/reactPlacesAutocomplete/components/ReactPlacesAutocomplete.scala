@@ -2,7 +2,7 @@ package typingsSlinky.reactPlacesAutocomplete.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactPlacesAutocomplete.AnonBounds
+import typingsSlinky.reactPlacesAutocomplete.anon.Bounds
 import typingsSlinky.reactPlacesAutocomplete.mod.PropTypes
 import typingsSlinky.reactPlacesAutocomplete.mod.default
 import scala.scalajs.js
@@ -31,7 +31,7 @@ object ReactPlacesAutocomplete {
     @scala.inline
     def onSelect(value: (/* address */ String, /* placeID */ String) => Unit): this.type = set("onSelect", js.Any.fromFunction2(value))
     @scala.inline
-    def searchOptions(value: AnonBounds): this.type = set("searchOptions", value.asInstanceOf[js.Any])
+    def searchOptions(value: Bounds): this.type = set("searchOptions", value.asInstanceOf[js.Any])
     @scala.inline
     def shouldFetchSuggestions(value: Boolean): this.type = set("shouldFetchSuggestions", value.asInstanceOf[js.Any])
     @scala.inline

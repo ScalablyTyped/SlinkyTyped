@@ -1,12 +1,12 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonAnimationAnimationDelay
-import typingsSlinky.echarts.AnonAreaColorEmphasis
-import typingsSlinky.echarts.AnonBorderWidth
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonMin
-import typingsSlinky.echarts.AnonPrecision
-import typingsSlinky.echarts.AnonSymbolSize
+import typingsSlinky.echarts.anon.AnimationAnimationDelay
+import typingsSlinky.echarts.anon.AreaColorEmphasis
+import typingsSlinky.echarts.anon.BorderWidth
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.Min
+import typingsSlinky.echarts.anon.Precision
+import typingsSlinky.echarts.anon.SymbolSize
 import typingsSlinky.echarts.echarts.EChartOption.SeriesMap.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -180,7 +180,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonAreaColorEmphasis] = js.native
+  var itemStyle: js.UndefOr[AreaColorEmphasis] = js.native
   /**
     * Text label of , to explain some data information about graphic
     * item like value, name and so on.
@@ -192,7 +192,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.label
     */
-  var label: js.UndefOr[AnonBorderWidth] = js.native
+  var label: js.UndefOr[BorderWidth] = js.native
   /**
     * `layoutCenter` and `layoutSize` provides layout strategy other
     * than `left/right/top/bottom/width/height`.
@@ -305,21 +305,21 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.markArea
     */
-  var markArea: js.UndefOr[AnonAnimationAnimationDelay] = js.native
+  var markArea: js.UndefOr[AnimationAnimationDelay] = js.native
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-map.markLine
     */
-  var markLine: js.UndefOr[AnonPrecision] = js.native
+  var markLine: js.UndefOr[Precision] = js.native
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-map.markPoint
     */
-  var markPoint: js.UndefOr[AnonSymbolSize] = js.native
+  var markPoint: js.UndefOr[SymbolSize] = js.native
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -376,7 +376,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.scaleLimit
     */
-  var scaleLimit: js.UndefOr[AnonMin] = js.native
+  var scaleLimit: js.UndefOr[Min] = js.native
   /**
     * Selected mode decides whether multiple selecting is supported.
     * By default, `false` is used for disabling selection.
@@ -434,7 +434,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * Distance between component and the top side of the container.
     *
@@ -610,7 +610,7 @@ object SeriesMap_ {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonAreaColorEmphasis): Self = {
+    def withItemStyle(value: AreaColorEmphasis): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -622,7 +622,7 @@ object SeriesMap_ {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonBorderWidth): Self = {
+    def withLabel(value: BorderWidth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -694,7 +694,7 @@ object SeriesMap_ {
         ret
     }
     @scala.inline
-    def withMarkArea(value: AnonAnimationAnimationDelay): Self = {
+    def withMarkArea(value: AnimationAnimationDelay): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(value.asInstanceOf[js.Any])
         ret
@@ -706,7 +706,7 @@ object SeriesMap_ {
         ret
     }
     @scala.inline
-    def withMarkLine(value: AnonPrecision): Self = {
+    def withMarkLine(value: Precision): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(value.asInstanceOf[js.Any])
         ret
@@ -718,7 +718,7 @@ object SeriesMap_ {
         ret
     }
     @scala.inline
-    def withMarkPoint(value: AnonSymbolSize): Self = {
+    def withMarkPoint(value: SymbolSize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(value.asInstanceOf[js.Any])
         ret
@@ -778,7 +778,7 @@ object SeriesMap_ {
         ret
     }
     @scala.inline
-    def withScaleLimit(value: AnonMin): Self = {
+    def withScaleLimit(value: Min): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scaleLimit")(value.asInstanceOf[js.Any])
         ret
@@ -838,7 +838,7 @@ object SeriesMap_ {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

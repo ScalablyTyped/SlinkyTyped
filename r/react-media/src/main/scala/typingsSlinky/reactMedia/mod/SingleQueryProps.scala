@@ -1,8 +1,8 @@
 package typingsSlinky.reactMedia.mod
 
+import org.scalajs.dom.raw.Window
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait SingleQueryProps extends js.Object {
   var onChange: js.UndefOr[js.Function1[/* matches */ Boolean, Unit]] = js.native
   var query: MediaQueryValue = js.native
   var render: js.UndefOr[js.Function0[TagMod[Any]]] = js.native
-  var targetWindow: js.UndefOr[Window_] = js.native
+  var targetWindow: js.UndefOr[Window] = js.native
 }
 
 object SingleQueryProps {
@@ -97,7 +97,7 @@ object SingleQueryProps {
         ret
     }
     @scala.inline
-    def withTargetWindow(value: Window_): Self = {
+    def withTargetWindow(value: Window): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("targetWindow")(value.asInstanceOf[js.Any])
         ret

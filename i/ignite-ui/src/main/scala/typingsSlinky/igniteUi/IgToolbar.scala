@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -159,7 +159,7 @@ object IgToolbar {
         ret
     }
     @scala.inline
-    def withCollapsed(value: (/* event */ Event_, /* ui */ CollapsedEventUIParam) => Unit): Self = {
+    def withCollapsed(value: (/* event */ Event, /* ui */ CollapsedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("collapsed")(js.Any.fromFunction2(value))
         ret
@@ -171,7 +171,7 @@ object IgToolbar {
         ret
     }
     @scala.inline
-    def withCollapsing(value: (/* event */ Event_, /* ui */ CollapsingEventUIParam) => Unit): Self = {
+    def withCollapsing(value: (/* event */ Event, /* ui */ CollapsingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("collapsing")(js.Any.fromFunction2(value))
         ret
@@ -207,7 +207,7 @@ object IgToolbar {
         ret
     }
     @scala.inline
-    def withExpanded(value: (/* event */ Event_, /* ui */ ExpandedEventUIParam) => Unit): Self = {
+    def withExpanded(value: (/* event */ Event, /* ui */ ExpandedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(js.Any.fromFunction2(value))
         ret
@@ -219,7 +219,7 @@ object IgToolbar {
         ret
     }
     @scala.inline
-    def withExpanding(value: (/* event */ Event_, /* ui */ ExpandingEventUIParam) => Unit): Self = {
+    def withExpanding(value: (/* event */ Event, /* ui */ ExpandingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("expanding")(js.Any.fromFunction2(value))
         ret
@@ -255,7 +255,7 @@ object IgToolbar {
         ret
     }
     @scala.inline
-    def withItemAdded(value: (/* event */ Event_, /* ui */ ItemAddedEventUIParam) => Unit): Self = {
+    def withItemAdded(value: (/* event */ Event, /* ui */ ItemAddedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemAdded")(js.Any.fromFunction2(value))
         ret
@@ -267,7 +267,7 @@ object IgToolbar {
         ret
     }
     @scala.inline
-    def withItemDisable(value: (/* event */ Event_, /* ui */ ItemDisableEventUIParam) => Unit): Self = {
+    def withItemDisable(value: (/* event */ Event, /* ui */ ItemDisableEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemDisable")(js.Any.fromFunction2(value))
         ret
@@ -279,7 +279,7 @@ object IgToolbar {
         ret
     }
     @scala.inline
-    def withItemEnabled(value: (/* event */ Event_, /* ui */ ItemEnabledEventUIParam) => Unit): Self = {
+    def withItemEnabled(value: (/* event */ Event, /* ui */ ItemEnabledEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemEnabled")(js.Any.fromFunction2(value))
         ret
@@ -291,7 +291,7 @@ object IgToolbar {
         ret
     }
     @scala.inline
-    def withItemRemoved(value: (/* event */ Event_, /* ui */ ItemRemovedEventUIParam) => Unit): Self = {
+    def withItemRemoved(value: (/* event */ Event, /* ui */ ItemRemovedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemRemoved")(js.Any.fromFunction2(value))
         ret
@@ -363,7 +363,7 @@ object IgToolbar {
         ret
     }
     @scala.inline
-    def withToolbarButtonClick(value: (/* event */ Event_, /* ui */ ToolbarButtonClickEventUIParam) => Unit): Self = {
+    def withToolbarButtonClick(value: (/* event */ Event, /* ui */ ToolbarButtonClickEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarButtonClick")(js.Any.fromFunction2(value))
         ret
@@ -375,7 +375,7 @@ object IgToolbar {
         ret
     }
     @scala.inline
-    def withToolbarComboOpening(value: (/* event */ Event_, /* ui */ ToolbarComboOpeningEventUIParam) => Unit): Self = {
+    def withToolbarComboOpening(value: (/* event */ Event, /* ui */ ToolbarComboOpeningEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarComboOpening")(js.Any.fromFunction2(value))
         ret
@@ -387,7 +387,7 @@ object IgToolbar {
         ret
     }
     @scala.inline
-    def withToolbarComboSelected(value: (/* event */ Event_, /* ui */ ToolbarComboSelectedEventUIParam) => Unit): Self = {
+    def withToolbarComboSelected(value: (/* event */ Event, /* ui */ ToolbarComboSelectedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarComboSelected")(js.Any.fromFunction2(value))
         ret
@@ -399,7 +399,7 @@ object IgToolbar {
         ret
     }
     @scala.inline
-    def withToolbarCustomItemClick(value: (/* event */ Event_, /* ui */ ToolbarCustomItemClickEventUIParam) => Unit): Self = {
+    def withToolbarCustomItemClick(value: (/* event */ Event, /* ui */ ToolbarCustomItemClickEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toolbarCustomItemClick")(js.Any.fromFunction2(value))
         ret
@@ -423,7 +423,7 @@ object IgToolbar {
         ret
     }
     @scala.inline
-    def withWindowResized(value: (/* event */ Event_, /* ui */ WindowResizedEventUIParam) => Unit): Self = {
+    def withWindowResized(value: (/* event */ Event, /* ui */ WindowResizedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("windowResized")(js.Any.fromFunction2(value))
         ret

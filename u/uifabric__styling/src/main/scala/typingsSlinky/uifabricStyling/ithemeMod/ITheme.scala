@@ -1,6 +1,6 @@
 package typingsSlinky.uifabricStyling.ithemeMod
 
-import typingsSlinky.uifabricStyling.PinISchemeNamesIScheme
+import typingsSlinky.uifabricStyling.anon.PinISchemeNamesIScheme
 import typingsSlinky.uifabricStyling.ieffectsMod.IEffects
 import typingsSlinky.uifabricStyling.ifontstylesMod.IFontStyles
 import typingsSlinky.uifabricStyling.ipaletteMod.IPalette

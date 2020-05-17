@@ -1,6 +1,6 @@
 package typingsSlinky.browserSync.mod
 
-import typingsSlinky.browserSync.AnonFn
+import typingsSlinky.browserSync.anon.Fn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait SnippetOptions extends js.Object {
   var async: js.UndefOr[Boolean] = js.native
   var blacklist: js.UndefOr[js.Array[String]] = js.native
-  var rule: js.UndefOr[AnonFn] = js.native
+  var rule: js.UndefOr[Fn] = js.native
   var whitelist: js.UndefOr[js.Array[String]] = js.native
 }
 
@@ -50,7 +50,7 @@ object SnippetOptions {
         ret
     }
     @scala.inline
-    def withRule(value: AnonFn): Self = {
+    def withRule(value: Fn): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rule")(value.asInstanceOf[js.Any])
         ret

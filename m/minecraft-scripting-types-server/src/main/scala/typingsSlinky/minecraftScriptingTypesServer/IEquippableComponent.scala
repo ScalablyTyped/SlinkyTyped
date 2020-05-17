@@ -1,5 +1,6 @@
 package typingsSlinky.minecraftScriptingTypesServer
 
+import typingsSlinky.minecraftScriptingTypesServer.anon.Accepteditems
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +13,12 @@ trait IEquippableComponent extends js.Object {
   /**
     * FIXME - UNDOCUMENTED - NO DESCRIPTION FROM MOJANG
     */
-  var slots: js.Array[AnonAccepteditems] = js.native
+  var slots: js.Array[Accepteditems] = js.native
 }
 
 object IEquippableComponent {
   @scala.inline
-  def apply(slots: js.Array[AnonAccepteditems]): IEquippableComponent = {
+  def apply(slots: js.Array[Accepteditems]): IEquippableComponent = {
     val __obj = js.Dynamic.literal(slots = slots.asInstanceOf[js.Any])
     __obj.asInstanceOf[IEquippableComponent]
   }
@@ -28,7 +29,7 @@ object IEquippableComponent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSlots(value: js.Array[AnonAccepteditems]): Self = {
+    def withSlots(value: js.Array[Accepteditems]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("slots")(value.asInstanceOf[js.Any])
         ret

@@ -1,19 +1,19 @@
 package typingsSlinky.rbx.responsiveMod
 
-import typingsSlinky.rbx.AnonOnly
-import typingsSlinky.rbx.AnonOnlyBoolean
-import typingsSlinky.rbx.AnonOnlyBooleanValue
-import typingsSlinky.rbx.AnonOnlyValue
+import typingsSlinky.rbx.anon.Only
+import typingsSlinky.rbx.anon.OnlyBoolean
+import typingsSlinky.rbx.anon.OnlyBooleanValue
+import typingsSlinky.rbx.anon.OnlyValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ResponsiveBreakpointProps extends js.Object {
-  var display: js.UndefOr[AnonOnly] = js.native
-  var hide: js.UndefOr[AnonOnlyValue] = js.native
-  var textAlign: js.UndefOr[AnonOnlyBoolean] = js.native
-  var textSize: js.UndefOr[AnonOnlyBooleanValue] = js.native
+  var display: js.UndefOr[Only] = js.native
+  var hide: js.UndefOr[OnlyValue] = js.native
+  var textAlign: js.UndefOr[OnlyBoolean] = js.native
+  var textSize: js.UndefOr[OnlyBooleanValue] = js.native
 }
 
 object ResponsiveBreakpointProps {
@@ -29,7 +29,7 @@ object ResponsiveBreakpointProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDisplay(value: AnonOnly): Self = {
+    def withDisplay(value: Only): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
         ret
@@ -41,7 +41,7 @@ object ResponsiveBreakpointProps {
         ret
     }
     @scala.inline
-    def withHide(value: AnonOnlyValue): Self = {
+    def withHide(value: OnlyValue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(value.asInstanceOf[js.Any])
         ret
@@ -53,7 +53,7 @@ object ResponsiveBreakpointProps {
         ret
     }
     @scala.inline
-    def withTextAlign(value: AnonOnlyBoolean): Self = {
+    def withTextAlign(value: OnlyBoolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("textAlign")(value.asInstanceOf[js.Any])
         ret
@@ -65,7 +65,7 @@ object ResponsiveBreakpointProps {
         ret
     }
     @scala.inline
-    def withTextSize(value: AnonOnlyBooleanValue): Self = {
+    def withTextSize(value: OnlyBooleanValue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("textSize")(value.asInstanceOf[js.Any])
         ret

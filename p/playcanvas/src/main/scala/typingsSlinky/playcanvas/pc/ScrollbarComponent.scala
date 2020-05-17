@@ -26,10 +26,8 @@ import scala.scalajs.js.annotation._
   * @property {pc.Entity} handleEntity The entity to be used as the scrollbar handle. This entity must
   * have a Scrollbar component.
   */
-@JSGlobal("pc.ScrollbarComponent")
 @js.native
-class ScrollbarComponent protected () extends Component {
-  def this(system: ScrollbarComponentSystem, entity: Entity) = this()
+trait ScrollbarComponent extends Component {
   /**
     * The entity to be used as the scrollbar handle. This entity must
     * have a Scrollbar component.

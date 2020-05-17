@@ -3,7 +3,7 @@ package typingsSlinky.baseui.menuMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactRef
-import typingsSlinky.baseui.AnonItem
+import typingsSlinky.baseui.anon.Item
 import typingsSlinky.baseui.baseuiStrings.click
 import typingsSlinky.baseui.baseuiStrings.focus
 import typingsSlinky.baseui.baseuiStrings.mouseEnter
@@ -134,7 +134,7 @@ object StatefulContainerProps {
         ret
     }
     @scala.inline
-    def withOnItemSelect(value: /* args */ AnonItem => js.Any): Self = {
+    def withOnItemSelect(value: /* args */ Item => js.Any): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemSelect")(js.Any.fromFunction1(value))
         ret

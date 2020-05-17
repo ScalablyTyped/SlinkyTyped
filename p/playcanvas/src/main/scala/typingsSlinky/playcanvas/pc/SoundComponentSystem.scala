@@ -18,10 +18,8 @@ import scala.scalajs.js.annotation._
   * @property {AudioContext} context Gets the AudioContext currently used by the sound manager. Requires Web Audio API support.
   * @property {pc.SoundManager} manager Gets / sets the sound manager.
   */
-@JSGlobal("pc.SoundComponentSystem")
 @js.native
-class SoundComponentSystem protected () extends ComponentSystem {
-  def this(app: Application, manager: SoundManager) = this()
+trait SoundComponentSystem extends ComponentSystem {
   /**
     * Gets the AudioContext currently used by the sound manager. Requires Web Audio API support.
     */

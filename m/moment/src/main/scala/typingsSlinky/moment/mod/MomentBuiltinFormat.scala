@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait MomentBuiltinFormat extends js.Object {
+trait MomentBuiltinFormat extends MomentFormatSpecification {
   var __momentBuiltinFormatBrand: js.Any = js.native
 }
 

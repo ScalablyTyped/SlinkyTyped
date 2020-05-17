@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobileRn.mod
 
-import typingsSlinky.antdMobileRn.AnonAutoHeight
+import typingsSlinky.antdMobileRn.anon.AutoHeight
 import typingsSlinky.antdMobileRn.textareaItemIndexNativeMod.TextareaItemNativeProps
 import typingsSlinky.antdMobileRn.textareaItemIndexNativeMod.default
 import scala.scalajs.js
@@ -17,6 +17,6 @@ class TextareaItem protected () extends default {
 @JSImport("antd-mobile-rn", "TextareaItem")
 @js.native
 object TextareaItem extends js.Object {
-  var defaultProps: AnonAutoHeight = js.native
+  var defaultProps: AutoHeight = js.native
 }
 

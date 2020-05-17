@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("GlideLocale")
 @js.native
-class GlideLocale () extends js.Object {
+trait GlideLocale extends js.Object {
   /**
     * Returns the decimal separator.
     *
@@ -32,18 +31,31 @@ class GlideLocale () extends js.Object {
   def getGroupingSeparator(): String = js.native
 }
 
-/* static members */
-@JSGlobal("GlideLocale")
-@js.native
-object GlideLocale extends js.Object {
-  /**
-    * Returns the GlideLocale object.
-    *
-    * @returns The GlideLocale object.
-    * @example
-    *
-    * var locale = GlideLocale.get();
-    */
-  def get(): GlideLocale = js.native
+object GlideLocale {
+  @scala.inline
+  def apply(getDecimalSeparator: () => String, getGroupingSeparator: () => String): GlideLocale = {
+    val __obj = js.Dynamic.literal(getDecimalSeparator = js.Any.fromFunction0(getDecimalSeparator), getGroupingSeparator = js.Any.fromFunction0(getGroupingSeparator))
+    __obj.asInstanceOf[GlideLocale]
+  }
+  @scala.inline
+  implicit class GlideLocaleOps[Self <: GlideLocale] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetDecimalSeparator(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDecimalSeparator")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetGroupingSeparator(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getGroupingSeparator")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -12,7 +12,7 @@ object Toolbar {
   @js.native
   object component extends js.Object
   
-  def apply(p: js.Any): Default[tag.type, typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Toolbar] = new Default[tag.type, typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Toolbar](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Toolbar.type): Default[tag.type, typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Toolbar] = new Default[tag.type, typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Toolbar](js.Array(this.component, js.Dictionary.empty))()
+  def apply(p: js.Any): Default[tag.type, typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Toolbar] = new Default[tag.type, typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Toolbar](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Toolbar.type): Default[tag.type, typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Toolbar] = new Default[tag.type, typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Toolbar](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -1,15 +1,15 @@
 package typingsSlinky.zingchart.mod
 
-import typingsSlinky.zingchart.AnonCustomitems
-import typingsSlinky.zingchart.AnonEnabled
+import typingsSlinky.zingchart.anon.Customitems
+import typingsSlinky.zingchart.anon.Enabled
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait gui extends js.Object {
-  var behaviors: js.UndefOr[js.Array[AnonEnabled]] = js.native
-  var `context-menu`: js.UndefOr[AnonCustomitems] = js.native
+  var behaviors: js.UndefOr[js.Array[Enabled]] = js.native
+  var `context-menu`: js.UndefOr[Customitems] = js.native
 }
 
 object gui {
@@ -25,7 +25,7 @@ object gui {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBehaviors(value: js.Array[AnonEnabled]): Self = {
+    def withBehaviors(value: js.Array[Enabled]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("behaviors")(value.asInstanceOf[js.Any])
         ret
@@ -37,7 +37,7 @@ object gui {
         ret
     }
     @scala.inline
-    def `withContext-menu`(value: AnonCustomitems): Self = {
+    def `withContext-menu`(value: Customitems): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("context-menu")(value.asInstanceOf[js.Any])
         ret

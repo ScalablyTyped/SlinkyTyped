@@ -1,7 +1,7 @@
 package typingsSlinky.giphyApi.mod
 
-import typingsSlinky.giphyApi.AnonCount
-import typingsSlinky.giphyApi.AnonMsg
+import typingsSlinky.giphyApi.anon.Count
+import typingsSlinky.giphyApi.anon.Msg
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait MultiResponse extends BaseResponse {
 
 object MultiResponse {
   @scala.inline
-  def apply(data: js.Array[GIFObject], meta: AnonMsg, pagination: AnonCount): MultiResponse = {
+  def apply(data: js.Array[GIFObject], meta: Msg, pagination: Count): MultiResponse = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any], pagination = pagination.asInstanceOf[js.Any])
     __obj.asInstanceOf[MultiResponse]
   }

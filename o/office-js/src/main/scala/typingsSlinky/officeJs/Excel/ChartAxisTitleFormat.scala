@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.ChartAxisTitleFormatData
 import typingsSlinky.officeJs.Excel.Interfaces.ChartAxisTitleFormatLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.ChartAxisTitleFormatUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.ChartAxisTitleFormat")
 @js.native
-class ChartAxisTitleFormat () extends ClientObject {
+trait ChartAxisTitleFormat extends ClientObject {
   /**
     *
     * Represents the border format, which includes color, linestyle, and weight.
@@ -50,7 +49,7 @@ class ChartAxisTitleFormat () extends ClientObject {
     */
   def load(): ChartAxisTitleFormat = js.native
   def load(options: ChartAxisTitleFormatLoadOptions): ChartAxisTitleFormat = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartAxisTitleFormat = js.native
+  def load(propertyNamesAndPaths: Expand): ChartAxisTitleFormat = js.native
   def load(propertyNames: String): ChartAxisTitleFormat = js.native
   def load(propertyNames: js.Array[String]): ChartAxisTitleFormat = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

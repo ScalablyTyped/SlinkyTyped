@@ -6,7 +6,7 @@ import typingsSlinky.express.mod.Response_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.formidable.mod.Files
-import typingsSlinky.server.keyinLogLevelLogFn
+import typingsSlinky.server.anon.keyinLogLevelLogFn
 import typingsSlinky.server.optionsMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`

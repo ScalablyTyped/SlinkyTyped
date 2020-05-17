@@ -13,7 +13,6 @@ import typingsSlinky.phaser.Phaser.Physics.Impact.Components.Gravity
 import typingsSlinky.phaser.Phaser.Physics.Impact.Components.Offset
 import typingsSlinky.phaser.Phaser.Physics.Impact.Components.SetGameObject
 import typingsSlinky.phaser.Phaser.Physics.Impact.Components.Velocity
-import typingsSlinky.phaser.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,9 +26,8 @@ import scala.scalajs.js.annotation._
   * Image and a Sprite is that you cannot animate an Image as they do not have the Animation component.
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.phaser.Phaser.GameObjects.Components.Texture because var conflicts: frame, texture. Inlined  */ @JSGlobal("Phaser.Physics.Impact.ImpactImage")
-@js.native
-class ImpactImage protected ()
+- typingsSlinky.phaser.Phaser.GameObjects.Components.Texture because var conflicts: frame, texture. Inlined  */ @js.native
+trait ImpactImage
   extends Image
      with Acceleration
      with BodyScale
@@ -43,17 +41,6 @@ class ImpactImage protected ()
      with Offset
      with SetGameObject
      with Velocity {
-  /**
-    * 
-    * @param world The physics world of the Impact physics system.
-    * @param x The horizontal position of this Game Object in the world.
-    * @param y The vertical position of this Game Object in the world.
-    * @param texture The key of the Texture this Game Object will use to render with, as stored in the Texture Manager.
-    * @param frame An optional frame from the Texture this Game Object is rendering with.
-    */
-  def this(world: World, x: Double, y: Double, texture: String) = this()
-  def this(world: World, x: Double, y: Double, texture: String, frame: String) = this()
-  def this(world: World, x: Double, y: Double, texture: String, frame: integer) = this()
   /**
     * The acceleration is the rate of change of the velocity. Measured in pixels per second squared.
     */

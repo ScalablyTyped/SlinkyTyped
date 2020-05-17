@@ -1,6 +1,6 @@
 package typingsSlinky.serverless.serviceMod
 
-import typingsSlinky.serverless.AnonCompiledCloudFormationTemplate
+import typingsSlinky.serverless.anon.CompiledCloudFormationTemplate
 import typingsSlinky.serverless.mod.Event
 import typingsSlinky.serverless.mod.FunctionDefinition
 import scala.scalajs.js
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Service extends js.Object {
   var custom: Custom = js.native
-  var provider: AnonCompiledCloudFormationTemplate = js.native
+  var provider: CompiledCloudFormationTemplate = js.native
   def getAllEventsInFunction(functionName: String): js.Array[Event] = js.native
   def getAllFunctions(): js.Array[String] = js.native
   def getAllFunctionsNames(): js.Array[String] = js.native
@@ -36,7 +36,7 @@ object Service {
     getServiceName: () => String,
     load: js.Object => js.Promise[_],
     mergeResourceArrays: () => Unit,
-    provider: AnonCompiledCloudFormationTemplate,
+    provider: CompiledCloudFormationTemplate,
     setFunctionNames: js.Object => Unit,
     update: js.Object => js.Object,
     validate: () => Service
@@ -105,7 +105,7 @@ object Service {
         ret
     }
     @scala.inline
-    def withProvider(value: AnonCompiledCloudFormationTemplate): Self = {
+    def withProvider(value: CompiledCloudFormationTemplate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("provider")(value.asInstanceOf[js.Any])
         ret

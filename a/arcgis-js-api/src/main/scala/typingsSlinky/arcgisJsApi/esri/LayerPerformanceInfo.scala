@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,7 +43,55 @@ trait LayerPerformanceInfo extends js.Object {
   var totalNumberOfFeatures: Double = js.native
 }
 
-@JSGlobal("__esri.LayerPerformanceInfo")
-@js.native
-object LayerPerformanceInfo extends TopLevel[LayerPerformanceInfo]
+object LayerPerformanceInfo {
+  @scala.inline
+  def apply(
+    displayedNumberOfFeatures: Double,
+    layer: Layer,
+    maximumNumberOfFeatures: Double,
+    memory: Double,
+    totalNumberOfFeatures: Double
+  ): LayerPerformanceInfo = {
+    val __obj = js.Dynamic.literal(displayedNumberOfFeatures = displayedNumberOfFeatures.asInstanceOf[js.Any], layer = layer.asInstanceOf[js.Any], maximumNumberOfFeatures = maximumNumberOfFeatures.asInstanceOf[js.Any], memory = memory.asInstanceOf[js.Any], totalNumberOfFeatures = totalNumberOfFeatures.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LayerPerformanceInfo]
+  }
+  @scala.inline
+  implicit class LayerPerformanceInfoOps[Self <: LayerPerformanceInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDisplayedNumberOfFeatures(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayedNumberOfFeatures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLayer(value: Layer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaximumNumberOfFeatures(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumNumberOfFeatures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMemory(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("memory")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTotalNumberOfFeatures(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("totalNumberOfFeatures")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

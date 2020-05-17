@@ -1,7 +1,7 @@
 package typingsSlinky.webBluetooth
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.std.EventTarget
-import typingsSlinky.std.Event_
 import typingsSlinky.webBluetooth.webBluetoothStrings.advertisementreceived
 import typingsSlinky.webBluetooth.webBluetoothStrings.gattserverdisconnected
 import scala.scalajs.js
@@ -20,25 +20,22 @@ trait BluetoothDevice
   val uuids: js.UndefOr[js.Array[String]] = js.native
   val watchingAdvertisements: Boolean = js.native
   @JSName("addEventListener")
-  def addEventListener_advertisementreceived(
-    `type`: advertisementreceived,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]
-  ): Unit = js.native
+  def addEventListener_advertisementreceived(`type`: advertisementreceived, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_advertisementreceived(
     `type`: advertisementreceived,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_gattserverdisconnected(
     `type`: gattserverdisconnected,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_gattserverdisconnected(
     `type`: gattserverdisconnected,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
     useCapture: Boolean
   ): Unit = js.native
   def unwatchAdvertisements(): Unit = js.native

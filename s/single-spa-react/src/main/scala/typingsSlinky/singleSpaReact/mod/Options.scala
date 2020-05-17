@@ -2,8 +2,8 @@ package typingsSlinky.singleSpaReact.mod
 
 import org.scalajs.dom.raw.Element
 import slinky.core.ReactComponentClass
-import typingsSlinky.singleSpaReact.TypeofReact
-import typingsSlinky.singleSpaReact.TypeofReactDOM
+import typingsSlinky.singleSpaReact.anon.TypeofReact
+import typingsSlinky.singleSpaReact.anon.TypeofReactDOM
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

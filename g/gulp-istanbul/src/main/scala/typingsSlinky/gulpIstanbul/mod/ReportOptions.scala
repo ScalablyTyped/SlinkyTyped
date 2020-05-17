@@ -1,6 +1,6 @@
 package typingsSlinky.gulpIstanbul.mod
 
-import typingsSlinky.gulpIstanbul.AnonDir
+import typingsSlinky.gulpIstanbul.anon.Dir
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait ReportOptions extends js.Object {
   var coverageVariable: js.UndefOr[String] = js.native
   var dir: js.UndefOr[String] = js.native
-  var reportOpts: js.UndefOr[AnonDir] = js.native
+  var reportOpts: js.UndefOr[Dir] = js.native
   var reporters: js.UndefOr[js.Array[String]] = js.native
 }
 
@@ -50,7 +50,7 @@ object ReportOptions {
         ret
     }
     @scala.inline
-    def withReportOpts(value: AnonDir): Self = {
+    def withReportOpts(value: Dir): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("reportOpts")(value.asInstanceOf[js.Any])
         ret

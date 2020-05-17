@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IInspectReplyMsg
   extends IShellMessage[inspect_reply]
-     with _Message {
+     with Message {
   @JSName("content")
   var content_IInspectReplyMsg: ReplyContent[IInspectReply] = js.native
   @JSName("parent_header")

@@ -1,6 +1,6 @@
 package typingsSlinky.awsLambda.codepipelineCloudwatchActionMod
 
-import typingsSlinky.awsLambda.AnonExecutionid
+import typingsSlinky.awsLambda.anon.Executionid
 import typingsSlinky.awsLambda.awsLambdaStrings.`CodePipeline Action Execution State Change`
 import typingsSlinky.awsLambda.awsLambdaStrings.awsDotcodepipeline
 import typingsSlinky.awsLambda.codepipelineCloudwatchMod.CodePipelineCloudWatchEvent
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CodePipelineCloudWatchActionEvent extends CodePipelineCloudWatchEvent {
   var account: String = js.native
-  var detail: AnonExecutionid = js.native
+  var detail: Executionid = js.native
   var `detail-type`: `CodePipeline Action Execution State Change` = js.native
   var id: String = js.native
   var region: String = js.native
@@ -25,7 +25,7 @@ object CodePipelineCloudWatchActionEvent {
   @scala.inline
   def apply(
     account: String,
-    detail: AnonExecutionid,
+    detail: Executionid,
     `detail-type`: `CodePipeline Action Execution State Change`,
     id: String,
     region: String,
@@ -51,7 +51,7 @@ object CodePipelineCloudWatchActionEvent {
         ret
     }
     @scala.inline
-    def withDetail(value: AnonExecutionid): Self = {
+    def withDetail(value: Executionid): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("detail")(value.asInstanceOf[js.Any])
         ret

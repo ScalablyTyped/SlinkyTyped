@@ -25,7 +25,6 @@ package object mergeSerializationMod {
     typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Maximum, 
     typingsSlinky.tensorflowTfjsLayers.topologyConfigMod.LayerConfig
   ]
-  type MergeLayerSerialization = typingsSlinky.tensorflowTfjsLayers.mergeSerializationMod.AddLayerSerialization | typingsSlinky.tensorflowTfjsLayers.mergeSerializationMod.MultiplyLayerSerialization | typingsSlinky.tensorflowTfjsLayers.mergeSerializationMod.AverageLayerSerialization | typingsSlinky.tensorflowTfjsLayers.mergeSerializationMod.MaximumLayerSerialization | typingsSlinky.tensorflowTfjsLayers.mergeSerializationMod.MinimumLayerSerialization | typingsSlinky.tensorflowTfjsLayers.mergeSerializationMod.ConcatenateLayerSerialization | typingsSlinky.tensorflowTfjsLayers.mergeSerializationMod.DotLayerSerialization
   type MinimumLayerSerialization = typingsSlinky.tensorflowTfjsLayers.topologyConfigMod.BaseLayerSerialization[
     typingsSlinky.tensorflowTfjsLayers.tensorflowTfjsLayersStrings.Minimum, 
     typingsSlinky.tensorflowTfjsLayers.topologyConfigMod.LayerConfig

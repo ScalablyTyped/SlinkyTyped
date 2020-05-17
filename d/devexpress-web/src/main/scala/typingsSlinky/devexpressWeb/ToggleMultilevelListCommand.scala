@@ -7,12 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * A command to toggle between the multilevel list style and normal text.
   */
-@JSGlobal("ToggleMultilevelListCommand")
 @js.native
-class ToggleMultilevelListCommand () extends CommandWithBooleanStateBase {
+trait ToggleMultilevelListCommand extends CommandWithBooleanStateBase {
   /**
     * Executes the ToggleMultilevelListCommand command.
     */
   def execute(): Boolean = js.native
+}
+
+object ToggleMultilevelListCommand {
+  @scala.inline
+  def apply(execute: () => Boolean, getState: () => CommandState[Boolean]): ToggleMultilevelListCommand = {
+    val __obj = js.Dynamic.literal(execute = js.Any.fromFunction0(execute), getState = js.Any.fromFunction0(getState))
+    __obj.asInstanceOf[ToggleMultilevelListCommand]
+  }
+  @scala.inline
+  implicit class ToggleMultilevelListCommandOps[Self <: ToggleMultilevelListCommand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExecute(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("execute")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

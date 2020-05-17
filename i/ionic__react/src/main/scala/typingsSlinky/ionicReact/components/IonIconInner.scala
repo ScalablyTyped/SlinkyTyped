@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.AnimationEvent
 import org.scalajs.dom.raw.ClipboardEvent
 import org.scalajs.dom.raw.CompositionEvent
 import org.scalajs.dom.raw.DragEvent
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.KeyboardEvent
@@ -18,7 +19,7 @@ import slinky.core.SyntheticEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.ionicReact.PickIonicReactExternalProAbout
+import typingsSlinky.ionicReact.anon.PickIonicReactExternalProAbout
 import typingsSlinky.ionicReact.ionicReactStrings.`additions text`
 import typingsSlinky.ionicReact.ionicReactStrings.`inline`
 import typingsSlinky.ionicReact.ionicReactStrings.additions
@@ -58,10 +59,9 @@ import typingsSlinky.ionicReact.ionicReactStrings.time
 import typingsSlinky.ionicReact.ionicReactStrings.tree
 import typingsSlinky.ionicReact.ionicReactStrings.vertical
 import typingsSlinky.ionicReact.ionicReactStrings.yes
-import typingsSlinky.ionicons.componentsMod._Global_.HTMLIonIconElement
-import typingsSlinky.react.AnonHtml
+import typingsSlinky.ionicons.componentsMod.global.HTMLIonIconElement
+import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -74,7 +74,7 @@ object IonIconInner {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, Ref[js.Any]] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -194,7 +194,7 @@ object IonIconInner {
     @scala.inline
     def contextMenu(value: String): this.type = set("contextMenu", value.asInstanceOf[js.Any])
     @scala.inline
-    def dangerouslySetInnerHTML(value: AnonHtml): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
+    def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
     @scala.inline
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
@@ -244,7 +244,9 @@ object IonIconInner {
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def onAbort(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
+    def onAbort(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
+    @scala.inline
+    def onAbortCapture(value: js.Any): this.type = set("onAbortCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onAnimationEnd(value: /* event */ AnimationEvent => Unit): this.type = set("onAnimationEnd", js.Any.fromFunction1(value))
     @scala.inline
@@ -260,19 +262,27 @@ object IonIconInner {
     @scala.inline
     def onAuxClick(value: /* event */ MouseEvent => Unit): this.type = set("onAuxClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onBeforeInput(value: SyntheticEvent[EventTarget with HTMLIonIconElement, Event_] => Unit): this.type = set("onBeforeInput", js.Any.fromFunction1(value))
+    def onAuxClickCapture(value: js.Any): this.type = set("onAuxClickCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBeforeInput(value: SyntheticEvent[EventTarget with HTMLIonIconElement, Event] => Unit): this.type = set("onBeforeInput", js.Any.fromFunction1(value))
+    @scala.inline
+    def onBeforeInputCapture(value: js.Any): this.type = set("onBeforeInputCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onBlur(value: /* event */ FocusEvent => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
     def onBlurCapture(value: /* event */ FocusEvent => Unit): this.type = set("onBlurCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onCanPlay(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onCanPlay", js.Any.fromFunction1(value))
+    def onCanPlay(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onCanPlay", js.Any.fromFunction1(value))
     @scala.inline
-    def onCanPlayThrough(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
+    def onCanPlayCapture(value: js.Any): this.type = set("onCanPlayCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* event */ Event_ => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onCanPlayThrough(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
     @scala.inline
-    def onChangeCapture(value: /* event */ Event_ => Unit): this.type = set("onChangeCapture", js.Any.fromFunction1(value))
+    def onCanPlayThroughCapture(value: js.Any): this.type = set("onCanPlayThroughCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: /* event */ Event => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChangeCapture(value: /* event */ Event => Unit): this.type = set("onChangeCapture", js.Any.fromFunction1(value))
     @scala.inline
     def onClick(value: /* event */ MouseEvent => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
@@ -308,6 +318,8 @@ object IonIconInner {
     @scala.inline
     def onDoubleClick(value: SyntheticMouseEvent[HTMLIonIconElement] => Unit): this.type = set("onDoubleClick", js.Any.fromFunction1(value))
     @scala.inline
+    def onDoubleClickCapture(value: js.Any): this.type = set("onDoubleClickCapture", value.asInstanceOf[js.Any])
+    @scala.inline
     def onDrag(value: /* event */ DragEvent => Unit): this.type = set("onDrag", js.Any.fromFunction1(value))
     @scala.inline
     def onDragCapture(value: /* event */ DragEvent => Unit): this.type = set("onDragCapture", js.Any.fromFunction1(value))
@@ -340,17 +352,25 @@ object IonIconInner {
     @scala.inline
     def onDropCapture(value: /* event */ DragEvent => Unit): this.type = set("onDropCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onDurationChange(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onDurationChange", js.Any.fromFunction1(value))
+    def onDurationChange(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onDurationChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onEmptied(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onEmptied", js.Any.fromFunction1(value))
+    def onDurationChangeCapture(value: js.Any): this.type = set("onDurationChangeCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onEncrypted(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onEncrypted", js.Any.fromFunction1(value))
+    def onEmptied(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onEmptied", js.Any.fromFunction1(value))
     @scala.inline
-    def onEnded(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onEnded", js.Any.fromFunction1(value))
+    def onEmptiedCapture(value: js.Any): this.type = set("onEmptiedCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onError(value: /* event */ Event_ => Unit): this.type = set("onError", js.Any.fromFunction1(value))
+    def onEncrypted(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onEncrypted", js.Any.fromFunction1(value))
     @scala.inline
-    def onErrorCapture(value: /* event */ Event_ => Unit): this.type = set("onErrorCapture", js.Any.fromFunction1(value))
+    def onEncryptedCapture(value: js.Any): this.type = set("onEncryptedCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onEnded(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onEnded", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEndedCapture(value: js.Any): this.type = set("onEndedCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onError(value: /* event */ Event => Unit): this.type = set("onError", js.Any.fromFunction1(value))
+    @scala.inline
+    def onErrorCapture(value: /* event */ Event => Unit): this.type = set("onErrorCapture", js.Any.fromFunction1(value))
     @scala.inline
     def onFocus(value: /* event */ FocusEvent => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
@@ -360,13 +380,13 @@ object IonIconInner {
     @scala.inline
     def onGotPointerCaptureCapture(value: /* event */ PointerEvent => Unit): this.type = set("onGotPointerCaptureCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onInput(value: /* event */ Event_ => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
+    def onInput(value: /* event */ Event => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
     @scala.inline
-    def onInputCapture(value: /* event */ Event_ => Unit): this.type = set("onInputCapture", js.Any.fromFunction1(value))
+    def onInputCapture(value: /* event */ Event => Unit): this.type = set("onInputCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onInvalid(value: /* event */ Event_ => Unit): this.type = set("onInvalid", js.Any.fromFunction1(value))
+    def onInvalid(value: /* event */ Event => Unit): this.type = set("onInvalid", js.Any.fromFunction1(value))
     @scala.inline
-    def onInvalidCapture(value: /* event */ Event_ => Unit): this.type = set("onInvalidCapture", js.Any.fromFunction1(value))
+    def onInvalidCapture(value: /* event */ Event => Unit): this.type = set("onInvalidCapture", js.Any.fromFunction1(value))
     @scala.inline
     def onKeyDown(value: /* event */ KeyboardEvent => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
     @scala.inline
@@ -380,15 +400,21 @@ object IonIconInner {
     @scala.inline
     def onKeyUpCapture(value: /* event */ KeyboardEvent => Unit): this.type = set("onKeyUpCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoad(value: /* event */ Event_ => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
+    def onLoad(value: /* event */ Event => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoadCapture(value: /* event */ Event_ => Unit): this.type = set("onLoadCapture", js.Any.fromFunction1(value))
+    def onLoadCapture(value: /* event */ Event => Unit): this.type = set("onLoadCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoadStart(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onLoadStart", js.Any.fromFunction1(value))
+    def onLoadStart(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onLoadStart", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoadedData(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onLoadedData", js.Any.fromFunction1(value))
+    def onLoadStartCapture(value: js.Any): this.type = set("onLoadStartCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onLoadedMetadata(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onLoadedMetadata", js.Any.fromFunction1(value))
+    def onLoadedData(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onLoadedData", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoadedDataCapture(value: js.Any): this.type = set("onLoadedDataCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onLoadedMetadata(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onLoadedMetadata", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoadedMetadataCapture(value: js.Any): this.type = set("onLoadedMetadataCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onLostPointerCapture(value: /* event */ PointerEvent => Unit): this.type = set("onLostPointerCapture", js.Any.fromFunction1(value))
     @scala.inline
@@ -422,11 +448,17 @@ object IonIconInner {
     @scala.inline
     def onPasteCapture(value: /* event */ ClipboardEvent => Unit): this.type = set("onPasteCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onPause(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onPause", js.Any.fromFunction1(value))
+    def onPause(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onPause", js.Any.fromFunction1(value))
     @scala.inline
-    def onPlay(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onPlay", js.Any.fromFunction1(value))
+    def onPauseCapture(value: js.Any): this.type = set("onPauseCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onPlaying(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onPlaying", js.Any.fromFunction1(value))
+    def onPlay(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onPlay", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPlayCapture(value: js.Any): this.type = set("onPlayCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onPlaying(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onPlaying", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPlayingCapture(value: js.Any): this.type = set("onPlayingCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onPointerCancel(value: /* event */ PointerEvent => Unit): this.type = set("onPointerCancel", js.Any.fromFunction1(value))
     @scala.inline
@@ -460,33 +492,49 @@ object IonIconInner {
     @scala.inline
     def onPointerUpCapture(value: /* event */ PointerEvent => Unit): this.type = set("onPointerUpCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onProgress(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
+    def onProgress(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
     @scala.inline
-    def onRateChange(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onRateChange", js.Any.fromFunction1(value))
+    def onProgressCapture(value: js.Any): this.type = set("onProgressCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onReset(value: /* event */ Event_ => Unit): this.type = set("onReset", js.Any.fromFunction1(value))
+    def onRateChange(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onRateChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onResetCapture(value: /* event */ Event_ => Unit): this.type = set("onResetCapture", js.Any.fromFunction1(value))
+    def onRateChangeCapture(value: js.Any): this.type = set("onRateChangeCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onReset(value: /* event */ Event => Unit): this.type = set("onReset", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResetCapture(value: /* event */ Event => Unit): this.type = set("onResetCapture", js.Any.fromFunction1(value))
     @scala.inline
     def onScroll(value: /* event */ UIEvent => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
     @scala.inline
     def onScrollCapture(value: /* event */ UIEvent => Unit): this.type = set("onScrollCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onSeeked(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onSeeked", js.Any.fromFunction1(value))
+    def onSeeked(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onSeeked", js.Any.fromFunction1(value))
     @scala.inline
-    def onSeeking(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onSeeking", js.Any.fromFunction1(value))
+    def onSeekedCapture(value: js.Any): this.type = set("onSeekedCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onSelect(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    def onSeeking(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onSeeking", js.Any.fromFunction1(value))
     @scala.inline
-    def onStalled(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onStalled", js.Any.fromFunction1(value))
+    def onSeekingCapture(value: js.Any): this.type = set("onSeekingCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onSubmit(value: /* event */ Event_ => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))
+    def onSelect(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline
-    def onSubmitCapture(value: /* event */ Event_ => Unit): this.type = set("onSubmitCapture", js.Any.fromFunction1(value))
+    def onSelectCapture(value: js.Any): this.type = set("onSelectCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onSuspend(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onSuspend", js.Any.fromFunction1(value))
+    def onStalled(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onStalled", js.Any.fromFunction1(value))
     @scala.inline
-    def onTimeUpdate(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onTimeUpdate", js.Any.fromFunction1(value))
+    def onStalledCapture(value: js.Any): this.type = set("onStalledCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onSubmit(value: /* event */ Event => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSubmitCapture(value: /* event */ Event => Unit): this.type = set("onSubmitCapture", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSuspend(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onSuspend", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSuspendCapture(value: js.Any): this.type = set("onSuspendCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onTimeUpdate(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onTimeUpdate", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTimeUpdateCapture(value: js.Any): this.type = set("onTimeUpdateCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onTouchCancel(value: /* event */ TouchEvent => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))
     @scala.inline
@@ -508,9 +556,13 @@ object IonIconInner {
     @scala.inline
     def onTransitionEndCapture(value: /* event */ TransitionEvent => Unit): this.type = set("onTransitionEndCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onVolumeChange(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
+    def onVolumeChange(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onWaiting(value: SyntheticEvent[Event_, HTMLIonIconElement] => Unit): this.type = set("onWaiting", js.Any.fromFunction1(value))
+    def onVolumeChangeCapture(value: js.Any): this.type = set("onVolumeChangeCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onWaiting(value: SyntheticEvent[Event, HTMLIonIconElement] => Unit): this.type = set("onWaiting", js.Any.fromFunction1(value))
+    @scala.inline
+    def onWaitingCapture(value: js.Any): this.type = set("onWaitingCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onWheel(value: /* event */ WheelEvent => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     @scala.inline
@@ -560,37 +612,6 @@ object IonIconInner {
   }
   
   def withProps(p: PickIonicReactExternalProAbout): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  @scala.inline
-  def apply(
-    onAbortCapture: js.Any,
-    onAuxClickCapture: js.Any,
-    onBeforeInputCapture: js.Any,
-    onCanPlayCapture: js.Any,
-    onCanPlayThroughCapture: js.Any,
-    onDoubleClickCapture: js.Any,
-    onDurationChangeCapture: js.Any,
-    onEmptiedCapture: js.Any,
-    onEncryptedCapture: js.Any,
-    onEndedCapture: js.Any,
-    onLoadStartCapture: js.Any,
-    onLoadedDataCapture: js.Any,
-    onLoadedMetadataCapture: js.Any,
-    onPauseCapture: js.Any,
-    onPlayCapture: js.Any,
-    onPlayingCapture: js.Any,
-    onProgressCapture: js.Any,
-    onRateChangeCapture: js.Any,
-    onSeekedCapture: js.Any,
-    onSeekingCapture: js.Any,
-    onSelectCapture: js.Any,
-    onStalledCapture: js.Any,
-    onSuspendCapture: js.Any,
-    onTimeUpdateCapture: js.Any,
-    onVolumeChangeCapture: js.Any,
-    onWaitingCapture: js.Any
-  ): Builder = {
-    val __props = js.Dynamic.literal(onAbortCapture = onAbortCapture.asInstanceOf[js.Any], onAuxClickCapture = onAuxClickCapture.asInstanceOf[js.Any], onBeforeInputCapture = onBeforeInputCapture.asInstanceOf[js.Any], onCanPlayCapture = onCanPlayCapture.asInstanceOf[js.Any], onCanPlayThroughCapture = onCanPlayThroughCapture.asInstanceOf[js.Any], onDoubleClickCapture = onDoubleClickCapture.asInstanceOf[js.Any], onDurationChangeCapture = onDurationChangeCapture.asInstanceOf[js.Any], onEmptiedCapture = onEmptiedCapture.asInstanceOf[js.Any], onEncryptedCapture = onEncryptedCapture.asInstanceOf[js.Any], onEndedCapture = onEndedCapture.asInstanceOf[js.Any], onLoadStartCapture = onLoadStartCapture.asInstanceOf[js.Any], onLoadedDataCapture = onLoadedDataCapture.asInstanceOf[js.Any], onLoadedMetadataCapture = onLoadedMetadataCapture.asInstanceOf[js.Any], onPauseCapture = onPauseCapture.asInstanceOf[js.Any], onPlayCapture = onPlayCapture.asInstanceOf[js.Any], onPlayingCapture = onPlayingCapture.asInstanceOf[js.Any], onProgressCapture = onProgressCapture.asInstanceOf[js.Any], onRateChangeCapture = onRateChangeCapture.asInstanceOf[js.Any], onSeekedCapture = onSeekedCapture.asInstanceOf[js.Any], onSeekingCapture = onSeekingCapture.asInstanceOf[js.Any], onSelectCapture = onSelectCapture.asInstanceOf[js.Any], onStalledCapture = onStalledCapture.asInstanceOf[js.Any], onSuspendCapture = onSuspendCapture.asInstanceOf[js.Any], onTimeUpdateCapture = onTimeUpdateCapture.asInstanceOf[js.Any], onVolumeChangeCapture = onVolumeChangeCapture.asInstanceOf[js.Any], onWaitingCapture = onWaitingCapture.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PickIonicReactExternalProAbout]))
-  }
+  implicit def make(companion: IonIconInner.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

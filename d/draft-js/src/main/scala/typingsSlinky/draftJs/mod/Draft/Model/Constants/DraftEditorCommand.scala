@@ -5,6 +5,7 @@ import typingsSlinky.draftJs.draftJsStrings.code_
 import typingsSlinky.draftJs.draftJsStrings.italic_
 import typingsSlinky.draftJs.draftJsStrings.strikethrough_
 import typingsSlinky.draftJs.draftJsStrings.underline_
+import typingsSlinky.draftJs.mod.Draft.Component.Base.EditorCommand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,7 +35,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.draftJs.draftJsStrings.`secondary-cut`
   - typingsSlinky.draftJs.draftJsStrings.`secondary-paste`
 */
-trait DraftEditorCommand extends js.Object
+trait DraftEditorCommand extends EditorCommand
 
 object DraftEditorCommand {
   @scala.inline

@@ -3,7 +3,7 @@ package typingsSlinky.reactNavigationDrawer.components
 import slinky.core.TagMod
 import typingsSlinky.reactNavigation.mod.NavigationParams
 import typingsSlinky.reactNavigation.mod.NavigationRoute
-import typingsSlinky.reactNavigationDrawer.AnonFocused
+import typingsSlinky.reactNavigationDrawer.anon.Focused
 import typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.left
 import typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.right
 import typingsSlinky.reactNavigationDrawer.typesMod.DrawerNavigatorItemsProps
@@ -23,7 +23,7 @@ object DrawerItems {
     drawerPosition: left | right,
     getLabel: Scene => TagMod[Any],
     items: js.Array[NavigationRoute[NavigationParams]],
-    onItemPress: AnonFocused => Unit,
+    onItemPress: Focused => Unit,
     renderIcon: Scene => TagMod[Any],
     screenProps: js.Any
   ): SharedBuilder_DrawerNavigatorItemsProps644699346[typingsSlinky.reactNavigationDrawer.mod.DrawerItems] = {

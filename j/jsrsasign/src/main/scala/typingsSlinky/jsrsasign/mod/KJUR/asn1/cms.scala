@@ -1,15 +1,15 @@
 package typingsSlinky.jsrsasign.mod.KJUR.asn1
 
-import typingsSlinky.jsrsasign.AnonArray
-import typingsSlinky.jsrsasign.AnonCertString
-import typingsSlinky.jsrsasign.AnonCerts
-import typingsSlinky.jsrsasign.AnonCms
-import typingsSlinky.jsrsasign.AnonHex
-import typingsSlinky.jsrsasign.AnonIsValid
-import typingsSlinky.jsrsasign.AnonIssuer
-import typingsSlinky.jsrsasign.AnonName
-import typingsSlinky.jsrsasign.AnonOidString
-import typingsSlinky.jsrsasign.AnonSorted
+import typingsSlinky.jsrsasign.anon.Array
+import typingsSlinky.jsrsasign.anon.CertString
+import typingsSlinky.jsrsasign.anon.Certs
+import typingsSlinky.jsrsasign.anon.Cms
+import typingsSlinky.jsrsasign.anon.Hex
+import typingsSlinky.jsrsasign.anon.IsValid
+import typingsSlinky.jsrsasign.anon.Issuer
+import typingsSlinky.jsrsasign.anon.Name
+import typingsSlinky.jsrsasign.anon.OidString
+import typingsSlinky.jsrsasign.anon.Sorted
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ASN1ObjectParam
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ArrayParam
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.StringParam
@@ -89,7 +89,7 @@ object cms extends js.Object {
   @js.native
   class AttributeList ()
     extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cms.AttributeList {
-    def this(params: AnonSorted) = this()
+    def this(params: Sorted) = this()
   }
   
   /**
@@ -132,9 +132,9 @@ object cms extends js.Object {
     */
   @js.native
   class ContentType ()
-    extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cms.ContentType {
-    def this(params: AnonName) = this()
-    def this(params: AnonOidString) = this()
+    extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cms.Attribute {
+    def this(params: Name) = this()
+    def this(params: OidString) = this()
   }
   
   /**
@@ -184,8 +184,8 @@ object cms extends js.Object {
   class IssuerAndSerialNumber ()
     extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cms.IssuerAndSerialNumber {
     def this(params: String) = this()
-    def this(params: AnonCertString) = this()
-    def this(params: AnonIssuer) = this()
+    def this(params: CertString) = this()
+    def this(params: Issuer) = this()
   }
   
   /**
@@ -204,8 +204,8 @@ object cms extends js.Object {
     */
   @js.native
   class MessageDigest ()
-    extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cms.MessageDigest {
-    def this(params: AnonHex) = this()
+    extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cms.Attribute {
+    def this(params: Hex) = this()
   }
   
   /**
@@ -330,7 +330,7 @@ object cms extends js.Object {
   @js.native
   class SigningCertificateV2 ()
     extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cms.SigningCertificateV2 {
-    def this(params: AnonArray) = this()
+    def this(params: Array) = this()
     def this(params: ArrayParam[String]) = this()
   }
   
@@ -356,7 +356,7 @@ object cms extends js.Object {
     */
   @js.native
   class SigningTime ()
-    extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cms.SigningTime {
+    extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cms.Attribute {
     def this(params: StringParam) = this()
     def this(params: TypeParam) = this()
   }
@@ -387,7 +387,7 @@ object cms extends js.Object {
       * });
       */
     def SignedData(): typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cms.SignedData = js.native
-    def SignedData(param: AnonCerts): typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cms.SignedData = js.native
+    def SignedData(param: Certs): typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cms.SignedData = js.native
     /**
       * verify SignedData specified by JSON parameters
       *
@@ -412,8 +412,8 @@ object cms extends js.Object {
       *   ]
       * }
       */
-    def verifySignedData(): AnonIsValid = js.native
-    def verifySignedData(param: AnonCms): AnonIsValid = js.native
+    def verifySignedData(): IsValid = js.native
+    def verifySignedData(param: Cms): IsValid = js.native
   }
   
 }

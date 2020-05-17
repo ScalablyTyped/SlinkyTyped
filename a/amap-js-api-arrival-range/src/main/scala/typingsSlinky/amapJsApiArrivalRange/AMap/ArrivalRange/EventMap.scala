@@ -1,20 +1,20 @@
 package typingsSlinky.amapJsApiArrivalRange.AMap.ArrivalRange
 
 import typingsSlinky.amapJsApi.AMap.Event_
-import typingsSlinky.amapJsApiArrivalRange.AnonInfo
 import typingsSlinky.amapJsApiArrivalRange.amapJsApiArrivalRangeStrings.error
+import typingsSlinky.amapJsApiArrivalRange.anon.Info
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait EventMap extends js.Object {
-  var error: Event_[typingsSlinky.amapJsApiArrivalRange.amapJsApiArrivalRangeStrings.error, AnonInfo] = js.native
+  var error: Event_[typingsSlinky.amapJsApiArrivalRange.amapJsApiArrivalRangeStrings.error, Info] = js.native
 }
 
 object EventMap {
   @scala.inline
-  def apply(error: Event_[error, AnonInfo]): EventMap = {
+  def apply(error: Event_[error, Info]): EventMap = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventMap]
   }
@@ -25,7 +25,7 @@ object EventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withError(value: Event_[error, AnonInfo]): Self = {
+    def withError(value: Event_[error, Info]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret

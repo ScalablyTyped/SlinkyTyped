@@ -2,8 +2,8 @@ package typingsSlinky.reactNavigationMaterialBottomTabs.typesMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactNavigationMaterialBottomTabs.AnonDefaultHandler
-import typingsSlinky.reactNavigationMaterialBottomTabs.AnonFocused
+import typingsSlinky.reactNavigationMaterialBottomTabs.anon.DefaultHandler
+import typingsSlinky.reactNavigationMaterialBottomTabs.anon.Focused
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,9 +13,9 @@ trait NavigationMaterialBottomTabOptions extends js.Object {
   var tabBarAccessibilityLabel: js.UndefOr[String] = js.native
   var tabBarBadge: js.UndefOr[Boolean | Double | String] = js.native
   var tabBarColor: js.UndefOr[String] = js.native
-  var tabBarIcon: js.UndefOr[TagMod[Any] | (js.Function1[/* props */ AnonFocused, TagMod[Any]])] = js.native
+  var tabBarIcon: js.UndefOr[TagMod[Any] | (js.Function1[/* props */ Focused, TagMod[Any]])] = js.native
   var tabBarLabel: js.UndefOr[TagMod[Any]] = js.native
-  var tabBarOnPress: js.UndefOr[js.Function1[/* props */ AnonDefaultHandler, Unit]] = js.native
+  var tabBarOnPress: js.UndefOr[js.Function1[/* props */ DefaultHandler, Unit]] = js.native
   var tabBarTestID: js.UndefOr[String] = js.native
   var tabBarVisible: js.UndefOr[Boolean] = js.native
   var title: js.UndefOr[String] = js.native
@@ -76,13 +76,13 @@ object NavigationMaterialBottomTabOptions {
         ret
     }
     @scala.inline
-    def withTabBarIconFunction1(value: /* props */ AnonFocused => TagMod[Any]): Self = {
+    def withTabBarIconFunction1(value: /* props */ Focused => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tabBarIcon")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withTabBarIcon(value: TagMod[Any] | (js.Function1[/* props */ AnonFocused, TagMod[Any]])): Self = {
+    def withTabBarIcon(value: TagMod[Any] | (js.Function1[/* props */ Focused, TagMod[Any]])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tabBarIcon")(value.asInstanceOf[js.Any])
         ret
@@ -112,7 +112,7 @@ object NavigationMaterialBottomTabOptions {
         ret
     }
     @scala.inline
-    def withTabBarOnPress(value: /* props */ AnonDefaultHandler => Unit): Self = {
+    def withTabBarOnPress(value: /* props */ DefaultHandler => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tabBarOnPress")(js.Any.fromFunction1(value))
         ret

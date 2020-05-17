@@ -1,10 +1,10 @@
 package typingsSlinky.agoraRtcSdk.mod
 
-import typingsSlinky.agoraRtcSdk.AnonForceturn
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.h264_
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.live
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.rtc
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.vp8_
+import typingsSlinky.agoraRtcSdk.anon.Forceturn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -85,7 +85,7 @@ trait ClientConfig extends js.Object {
     *
     * Enterprise users with a company firewall can use this property to pass audio and video data to the Agora SD-RTN through the TURN Server.
     */
-  var turnServer: js.UndefOr[AnonForceturn] = js.native
+  var turnServer: js.UndefOr[Forceturn] = js.native
 }
 
 object ClientConfig {
@@ -125,7 +125,7 @@ object ClientConfig {
         ret
     }
     @scala.inline
-    def withTurnServer(value: AnonForceturn): Self = {
+    def withTurnServer(value: Forceturn): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("turnServer")(value.asInstanceOf[js.Any])
         ret

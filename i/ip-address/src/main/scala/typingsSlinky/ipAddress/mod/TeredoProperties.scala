@@ -1,6 +1,6 @@
 package typingsSlinky.ipAddress.mod
 
-import typingsSlinky.ipAddress.AnonGroupIndividual
+import typingsSlinky.ipAddress.anon.GroupIndividual
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait TeredoProperties extends js.Object {
   var client4: Address4 = js.native
   var coneNat: Boolean = js.native
   var flags: String = js.native
-  var microsoft: AnonGroupIndividual = js.native
+  var microsoft: GroupIndividual = js.native
   var prefix: String = js.native
   var server4: Address4 = js.native
   var udpPort: String = js.native
@@ -22,7 +22,7 @@ object TeredoProperties {
     client4: Address4,
     coneNat: Boolean,
     flags: String,
-    microsoft: AnonGroupIndividual,
+    microsoft: GroupIndividual,
     prefix: String,
     server4: Address4,
     udpPort: String
@@ -55,7 +55,7 @@ object TeredoProperties {
         ret
     }
     @scala.inline
-    def withMicrosoft(value: AnonGroupIndividual): Self = {
+    def withMicrosoft(value: GroupIndividual): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("microsoft")(value.asInstanceOf[js.Any])
         ret

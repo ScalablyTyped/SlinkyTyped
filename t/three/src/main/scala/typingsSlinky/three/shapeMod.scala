@@ -1,5 +1,6 @@
 package typingsSlinky.three
 
+import typingsSlinky.three.anon.Holes
 import typingsSlinky.three.extrudeGeometryMod.ExtrudeGeometry
 import typingsSlinky.three.pathMod.Path
 import typingsSlinky.three.shapeGeometryMod.ShapeGeometry
@@ -18,7 +19,7 @@ object shapeMod extends js.Object {
     /**
     	 * @deprecated Use {@link Shape#extractPoints .extractPoints()} instead.
     	 */
-    def extractAllPoints(divisions: Double): AnonHoles = js.native
+    def extractAllPoints(divisions: Double): Holes = js.native
     def extractPoints(divisions: Double): js.Array[Vector2] = js.native
     /**
     	 * @deprecated Use {@link ExtrudeGeometry ExtrudeGeometry()} instead.

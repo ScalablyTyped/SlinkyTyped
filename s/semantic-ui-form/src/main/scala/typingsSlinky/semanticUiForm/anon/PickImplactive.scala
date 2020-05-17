@@ -1,0 +1,34 @@
+package typingsSlinky.semanticUiForm.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Inlined std.Pick<semantic-ui-form.SemanticUI.Form.ClassNameSettings._Impl, 'active'> */
+@js.native
+trait PickImplactive extends js.Object {
+  var active: String = js.native
+}
+
+object PickImplactive {
+  @scala.inline
+  def apply(active: String): PickImplactive = {
+    val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PickImplactive]
+  }
+  @scala.inline
+  implicit class PickImplactiveOps[Self <: PickImplactive] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

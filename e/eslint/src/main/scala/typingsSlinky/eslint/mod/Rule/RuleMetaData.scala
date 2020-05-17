@@ -1,7 +1,7 @@
 package typingsSlinky.eslint.mod.Rule
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.eslint.AnonCategory
+import typingsSlinky.eslint.anon.Category
 import typingsSlinky.eslint.eslintStrings.code
 import typingsSlinky.eslint.eslintStrings.layout
 import typingsSlinky.eslint.eslintStrings.problem
@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RuleMetaData extends js.Object {
   var deprecated: js.UndefOr[Boolean] = js.native
-  var docs: js.UndefOr[AnonCategory] = js.native
+  var docs: js.UndefOr[Category] = js.native
   var fixable: js.UndefOr[code | whitespace] = js.native
   var messages: js.UndefOr[StringDictionary[String]] = js.native
   var schema: js.UndefOr[JSONSchema4 | js.Array[JSONSchema4]] = js.native
@@ -47,7 +47,7 @@ object RuleMetaData {
         ret
     }
     @scala.inline
-    def withDocs(value: AnonCategory): Self = {
+    def withDocs(value: Category): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("docs")(value.asInstanceOf[js.Any])
         ret

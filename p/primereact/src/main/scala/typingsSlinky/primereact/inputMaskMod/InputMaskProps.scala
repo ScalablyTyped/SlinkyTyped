@@ -1,8 +1,8 @@
 package typingsSlinky.primereact.inputMaskMod
 
-import typingsSlinky.primereact.AnonValue
+import org.scalajs.dom.raw.Event
+import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,8 +17,8 @@ trait InputMaskProps extends js.Object {
   var mask: js.UndefOr[String] = js.native
   var maxlength: js.UndefOr[Double] = js.native
   var name: js.UndefOr[String] = js.native
-  var onChange: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
-  var onComplete: js.UndefOr[js.Function1[/* e */ Event_, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
+  var onComplete: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var readonly: js.UndefOr[Boolean] = js.native
   var required: js.UndefOr[Boolean] = js.native
@@ -142,7 +142,7 @@ object InputMaskProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* e */ AnonValue => Unit): Self = {
+    def withOnChange(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -154,7 +154,7 @@ object InputMaskProps {
         ret
     }
     @scala.inline
-    def withOnComplete(value: /* e */ Event_ => Unit): Self = {
+    def withOnComplete(value: /* e */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onComplete")(js.Any.fromFunction1(value))
         ret

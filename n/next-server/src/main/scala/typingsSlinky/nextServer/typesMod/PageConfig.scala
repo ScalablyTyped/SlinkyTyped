@@ -1,6 +1,6 @@
 package typingsSlinky.nextServer.typesMod
 
-import typingsSlinky.nextServer.AnonBodyParser
+import typingsSlinky.nextServer.anon.BodyParser
 import typingsSlinky.nextServer.nextServerStrings.hybrid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PageConfig extends js.Object {
   var amp: js.UndefOr[Boolean | hybrid] = js.native
-  var api: js.UndefOr[AnonBodyParser] = js.native
+  var api: js.UndefOr[BodyParser] = js.native
   var experimentalPrerender: js.UndefOr[Boolean] = js.native
 }
 
@@ -38,7 +38,7 @@ object PageConfig {
         ret
     }
     @scala.inline
-    def withApi(value: AnonBodyParser): Self = {
+    def withApi(value: BodyParser): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("api")(value.asInstanceOf[js.Any])
         ret

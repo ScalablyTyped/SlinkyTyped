@@ -2,8 +2,8 @@ package typingsSlinky.theming.mod
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Context
-import typingsSlinky.theming.AnonTheme
-import typingsSlinky.theming.AnonThemeNonNullable
+import typingsSlinky.theming.anon.ThemeNonNullable
+import typingsSlinky.theming.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ object Theming {
     ThemeProvider: ThemeProviderFactory[Theme],
     context: Context[Theme],
     useTheme: () => Theme,
-    withTheme: /* comp */ ReactComponentClass[AnonTheme[Theme]] => ReactComponentClass[AnonTheme[Theme] with AnonThemeNonNullable[Theme]]
+    withTheme: /* comp */ ReactComponentClass[ThemeNonNullable[Theme]] => ReactComponentClass[ThemeNonNullable[Theme] with `0`[Theme]]
   ): Theming[Theme] = {
     val __obj = js.Dynamic.literal(ThemeProvider = ThemeProvider.asInstanceOf[js.Any], context = context.asInstanceOf[js.Any], useTheme = js.Any.fromFunction0(useTheme), withTheme = js.Any.fromFunction1(withTheme))
     __obj.asInstanceOf[Theming[Theme]]
@@ -65,7 +65,7 @@ object Theming {
     }
     @scala.inline
     def withWithTheme(
-      value: /* comp */ ReactComponentClass[AnonTheme[Theme]] => ReactComponentClass[AnonTheme[Theme] with AnonThemeNonNullable[Theme]]
+      value: /* comp */ ReactComponentClass[ThemeNonNullable[Theme]] => ReactComponentClass[ThemeNonNullable[Theme] with `0`[Theme]]
     ): Self[Theme] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("withTheme")(js.Any.fromFunction1(value))

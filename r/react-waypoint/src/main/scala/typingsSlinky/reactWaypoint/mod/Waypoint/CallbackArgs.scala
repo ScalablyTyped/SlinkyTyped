@@ -1,6 +1,6 @@
 package typingsSlinky.reactWaypoint.mod.Waypoint
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait CallbackArgs extends js.Object {
     * The native scroll event that triggered the callback.
     * May be missing if the callback wasn't triggered as the result of a scroll
     */
-  var event: js.UndefOr[Event_] = js.native
+  var event: js.UndefOr[Event] = js.native
   /*
     * The position that the waypoint had before.
     * One of Waypoint.below, Waypoint.above, Waypoint.inside, and Waypoint.invisible.
@@ -85,7 +85,7 @@ object CallbackArgs {
         ret
     }
     @scala.inline
-    def withEvent(value: Event_): Self = {
+    def withEvent(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
         ret

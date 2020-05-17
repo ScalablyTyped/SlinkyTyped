@@ -10,9 +10,8 @@ import scala.scalajs.js.annotation._
   * the only parameter passed to these functions and contains information about
   * the keyboard event.
   */
-@JSGlobal("paper.KeyEvent")
 @js.native
-class KeyEvent () extends Event {
+trait KeyEvent extends Event {
   /** 
     * The character representation of the key that caused this key event,
     * taking into account the current key-modifiers (e.g. shift, control,
@@ -28,5 +27,49 @@ class KeyEvent () extends Event {
     * The type of mouse event.
     */
   var `type`: String = js.native
+}
+
+object KeyEvent {
+  @scala.inline
+  def apply(
+    character: String,
+    key: String,
+    modifiers: js.Any,
+    preventDefault: () => Unit,
+    stop: () => Unit,
+    stopPropagation: () => Unit,
+    timeStamp: Double,
+    `type`: String
+  ): KeyEvent = {
+    val __obj = js.Dynamic.literal(character = character.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], modifiers = modifiers.asInstanceOf[js.Any], preventDefault = js.Any.fromFunction0(preventDefault), stop = js.Any.fromFunction0(stop), stopPropagation = js.Any.fromFunction0(stopPropagation), timeStamp = timeStamp.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[KeyEvent]
+  }
+  @scala.inline
+  implicit class KeyEventOps[Self <: KeyEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCharacter(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("character")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

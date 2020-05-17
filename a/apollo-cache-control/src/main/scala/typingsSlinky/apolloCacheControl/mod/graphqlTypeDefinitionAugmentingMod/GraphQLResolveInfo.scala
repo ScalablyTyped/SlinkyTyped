@@ -1,18 +1,18 @@
 package typingsSlinky.apolloCacheControl.mod.graphqlTypeDefinitionAugmentingMod
 
-import typingsSlinky.apolloCacheControl.AnonCacheHint
+import typingsSlinky.apolloCacheControl.anon.CacheHint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait GraphQLResolveInfo extends js.Object {
-  var cacheControl: AnonCacheHint = js.native
+  var cacheControl: CacheHint = js.native
 }
 
 object GraphQLResolveInfo {
   @scala.inline
-  def apply(cacheControl: AnonCacheHint): GraphQLResolveInfo = {
+  def apply(cacheControl: CacheHint): GraphQLResolveInfo = {
     val __obj = js.Dynamic.literal(cacheControl = cacheControl.asInstanceOf[js.Any])
     __obj.asInstanceOf[GraphQLResolveInfo]
   }
@@ -23,7 +23,7 @@ object GraphQLResolveInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCacheControl(value: AnonCacheHint): Self = {
+    def withCacheControl(value: CacheHint): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cacheControl")(value.asInstanceOf[js.Any])
         ret

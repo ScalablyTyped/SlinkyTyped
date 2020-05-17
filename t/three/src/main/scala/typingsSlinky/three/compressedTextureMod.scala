@@ -1,6 +1,7 @@
 package typingsSlinky.three
 
 import org.scalajs.dom.raw.ImageData
+import typingsSlinky.three.anon.HeightWidth
 import typingsSlinky.three.constantsMod.CompressedPixelFormat
 import typingsSlinky.three.constantsMod.Mapping
 import typingsSlinky.three.constantsMod.TextureDataType
@@ -32,7 +33,7 @@ object compressedTextureMod extends js.Object {
       encoding: js.UndefOr[TextureEncoding]
     ) = this()
     @JSName("image")
-    var image_CompressedTexture: AnonHeightWidth = js.native
+    var image_CompressedTexture: HeightWidth = js.native
   }
   
 }

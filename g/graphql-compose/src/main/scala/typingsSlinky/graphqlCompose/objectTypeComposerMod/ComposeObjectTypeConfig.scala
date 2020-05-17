@@ -11,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ComposeObjectTypeConfig[TSource, TContext] extends js.Object {
+trait ComposeObjectTypeConfig[TSource, TContext] extends ObjectTypeComposeDefinition[TSource, TContext] {
   var description: js.UndefOr[String | Null] = js.native
   var extensions: js.UndefOr[Extensions] = js.native
   var fields: js.UndefOr[Thunk[ComposeFieldConfigMap[TSource, TContext]]] = js.native

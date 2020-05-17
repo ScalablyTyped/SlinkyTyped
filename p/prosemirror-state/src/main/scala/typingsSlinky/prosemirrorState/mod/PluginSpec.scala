@@ -1,7 +1,7 @@
 package typingsSlinky.prosemirrorState.mod
 
 import typingsSlinky.prosemirrorModel.mod.Schema
-import typingsSlinky.prosemirrorState.AnonDestroy
+import typingsSlinky.prosemirrorState.anon.Destroy
 import typingsSlinky.prosemirrorView.mod.EditorProps
 import typingsSlinky.prosemirrorView.mod.EditorView
 import scala.scalajs.js
@@ -56,7 +56,7 @@ trait PluginSpec[T, S /* <: Schema[_, _] */] extends js.Object {
     * will be called when the plugin's state is associated with an
     * editor view.
     */
-  var view: js.UndefOr[(js.Function1[/* p */ EditorView[S], AnonDestroy[S]]) | Null] = js.native
+  var view: js.UndefOr[(js.Function1[/* p */ EditorView[S], Destroy[S]]) | Null] = js.native
 }
 
 object PluginSpec {
@@ -164,7 +164,7 @@ object PluginSpec {
         ret
     }
     @scala.inline
-    def withView(value: /* p */ EditorView[S] => AnonDestroy[S]): Self[T, S] = {
+    def withView(value: /* p */ EditorView[S] => Destroy[S]): Self[T, S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("view")(js.Any.fromFunction1(value))
         ret

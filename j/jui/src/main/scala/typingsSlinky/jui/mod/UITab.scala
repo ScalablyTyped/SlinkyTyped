@@ -1,6 +1,6 @@
 package typingsSlinky.jui.mod
 
-import typingsSlinky.jui.AnonDrag
+import typingsSlinky.jui.anon.Drag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UITab extends js.Object {
   def apply(selector: js.Any): this.type = js.native
-  def apply(selector: js.Any, options: AnonDrag): this.type = js.native
+  def apply(selector: js.Any, options: Drag): this.type = js.native
   /**
     * Gets the index of the currently enabled tab
     *

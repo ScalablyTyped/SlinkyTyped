@@ -1,13 +1,13 @@
 package typingsSlinky.postmanCollection.mod
 
-import typingsSlinky.postmanCollection.AnonId
+import typingsSlinky.postmanCollection.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CollectionDefinition extends ItemGroupDefinition {
-  var info: js.UndefOr[AnonId] = js.native
+  var info: js.UndefOr[Id] = js.native
   var variable: js.UndefOr[js.Array[VariableDefinition]] = js.native
 }
 
@@ -24,7 +24,7 @@ object CollectionDefinition {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withInfo(value: AnonId): Self = {
+    def withInfo(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
         ret

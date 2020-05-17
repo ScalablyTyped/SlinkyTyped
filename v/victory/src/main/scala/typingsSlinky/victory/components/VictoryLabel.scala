@@ -4,7 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DOMAttributes
-import typingsSlinky.victory.AnonX
+import typingsSlinky.victory.anon.X
 import typingsSlinky.victory.mod.CallbackArgs
 import typingsSlinky.victory.mod.StringOrNumberOrCallback
 import typingsSlinky.victory.mod.TextAnchorType
@@ -55,7 +55,7 @@ object VictoryLabel {
     @scala.inline
     def lineHeight(value: StringOrNumberOrCallback): this.type = set("lineHeight", value.asInstanceOf[js.Any])
     @scala.inline
-    def origin(value: AnonX): this.type = set("origin", value.asInstanceOf[js.Any])
+    def origin(value: X): this.type = set("origin", value.asInstanceOf[js.Any])
     @scala.inline
     def polar(value: Boolean): this.type = set("polar", value.asInstanceOf[js.Any])
     @scala.inline

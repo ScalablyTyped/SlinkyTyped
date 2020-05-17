@@ -5,7 +5,7 @@ import typingsSlinky.actionsOnGoogle.browseMod.BrowseCarouselItemOptions
 import typingsSlinky.actionsOnGoogle.browseMod.BrowseCarouselOptions
 import typingsSlinky.actionsOnGoogle.buttonMod.ButtonOptions
 import typingsSlinky.actionsOnGoogle.commonMod.JsonObject
-import typingsSlinky.actionsOnGoogle.conversationConversationMod._Response
+import typingsSlinky.actionsOnGoogle.conversationConversationMod.Response
 import typingsSlinky.actionsOnGoogle.htmlMod.HtmlResponseOptions
 import typingsSlinky.actionsOnGoogle.imageMod.ImageOptions
 import typingsSlinky.actionsOnGoogle.linkoutMod.LinkOutSuggestionOptions
@@ -89,7 +89,7 @@ object responseMod extends js.Object {
   @js.native
   class Image protected ()
     extends typingsSlinky.actionsOnGoogle.imageMod.Image
-       with _Response {
+       with Response {
     /**
       * @param options Image options
       * @public
@@ -110,7 +110,7 @@ object responseMod extends js.Object {
   @js.native
   class MediaObject protected ()
     extends typingsSlinky.actionsOnGoogle.responseMediaMod.MediaObject
-       with _Response {
+       with Response {
     def this(options: String) = this()
     /**
       * @param options MediaObject options or just a string for the url
@@ -162,7 +162,7 @@ object responseMod extends js.Object {
   @js.native
   class RichResponse protected ()
     extends typingsSlinky.actionsOnGoogle.richMod.RichResponse
-       with _Response {
+       with Response {
     /**
       * @param items RichResponse items
       * @public
@@ -194,7 +194,7 @@ object responseMod extends js.Object {
   @js.native
   class Suggestions protected ()
     extends typingsSlinky.actionsOnGoogle.suggestionMod.Suggestions
-       with _Response {
+       with Response {
     /**
       * @param suggestions Texts of the suggestions.
       * @public

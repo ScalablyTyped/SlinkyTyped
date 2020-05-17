@@ -1,6 +1,6 @@
 package typingsSlinky.jsforce.streamingMod
 
-import typingsSlinky.jsforce.AnonCreatedDate
+import typingsSlinky.jsforce.anon.CreatedDate
 import typingsSlinky.jsforce.recordMod.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait StreamingMessage extends js.Object {
-  var event: AnonCreatedDate = js.native
+  var event: CreatedDate = js.native
   var sobject: Record[_] = js.native
 }
 
 object StreamingMessage {
   @scala.inline
-  def apply(event: AnonCreatedDate, sobject: Record[_]): StreamingMessage = {
+  def apply(event: CreatedDate, sobject: Record[_]): StreamingMessage = {
     val __obj = js.Dynamic.literal(event = event.asInstanceOf[js.Any], sobject = sobject.asInstanceOf[js.Any])
     __obj.asInstanceOf[StreamingMessage]
   }
@@ -25,7 +25,7 @@ object StreamingMessage {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEvent(value: AnonCreatedDate): Self = {
+    def withEvent(value: CreatedDate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
         ret

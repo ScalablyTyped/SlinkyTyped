@@ -4,12 +4,46 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Outlook._DocSiteControl")
 @js.native
-class DocSiteControl protected () extends js.Object {
+trait DocSiteControl extends js.Object {
   @JSName("Outlook._DocSiteControl_typekey")
   var OutlookDot_DocSiteControl_typekey: DocSiteControl = js.native
   var ReadOnly: Double = js.native
   var SuppressAttachments: Double = js.native
+}
+
+object DocSiteControl {
+  @scala.inline
+  def apply(OutlookDot_DocSiteControl_typekey: DocSiteControl, ReadOnly: Double, SuppressAttachments: Double): DocSiteControl = {
+    val __obj = js.Dynamic.literal(ReadOnly = ReadOnly.asInstanceOf[js.Any], SuppressAttachments = SuppressAttachments.asInstanceOf[js.Any])
+    __obj.updateDynamic("Outlook._DocSiteControl_typekey")(OutlookDot_DocSiteControl_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DocSiteControl]
+  }
+  @scala.inline
+  implicit class DocSiteControlOps[Self <: DocSiteControl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOutlookDot_DocSiteControl_typekey(value: DocSiteControl): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Outlook._DocSiteControl_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReadOnly(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ReadOnly")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuppressAttachments(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SuppressAttachments")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

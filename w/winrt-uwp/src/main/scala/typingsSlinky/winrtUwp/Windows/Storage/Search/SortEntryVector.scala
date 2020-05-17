@@ -1,18 +1,17 @@
 package typingsSlinky.winrtUwp.Windows.Storage.Search
 
 import typingsSlinky.std.Array
-import typingsSlinky.winrtUwp.AnonIndex
-import typingsSlinky.winrtUwp.AnonItemsSortEntry
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
+import typingsSlinky.winrtUwp.anon.Index
+import typingsSlinky.winrtUwp.anon.ItemsSortEntry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides access to the sorting criteria of the query results as a collection of SortEntry objects. */
-@JSGlobal("Windows.Storage.Search.SortEntryVector")
 @js.native
-abstract class SortEntryVector () extends Array[SortEntry] {
+trait SortEntryVector extends Array[SortEntry] {
   /** Gets the number of sort entries in the collection. */
   var size: Double = js.native
   /**
@@ -37,19 +36,19 @@ abstract class SortEntryVector () extends Array[SortEntry] {
     * Retrieves the sort entries that start at the specified index in the collection.
     * @param startIndex The zero-based index of the start of the sort entries in the collection to retrieve.
     */
-  def getMany(startIndex: Double): AnonItemsSortEntry = js.native
+  def getMany(startIndex: Double): ItemsSortEntry = js.native
   /**
     * Retrieves an immutable view of the collection of sort entries.
     * @return The view of the collection.
     */
   def getView(): IVectorView[SortEntry] = js.native
-  def indexOf(value: SortEntry, extra: js.Any*): AnonIndex = js.native
+  def indexOf(value: SortEntry, extra: js.Any*): Index = js.native
   /**
     * Retrieves the index of a specified sort entry in the collection.
     * @param value The sort entry to find in the collection.
     */
   @JSName("indexOf")
-  def indexOf_AnonIndex(value: SortEntry): AnonIndex = js.native
+  def indexOf_Index(value: SortEntry): Index = js.native
   /**
     * Inserts a sort entry into the collection at a specified index.
     * @param index The zero-based index of the location to insert the sort entry.

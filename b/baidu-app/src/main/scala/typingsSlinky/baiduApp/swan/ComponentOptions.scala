@@ -1,8 +1,8 @@
 package typingsSlinky.baiduApp.swan
 
-import typingsSlinky.baiduApp.PartialLifetimes
-import typingsSlinky.baiduApp.PartialPageLifetimes
-import typingsSlinky.baiduApp.PartialaddGlobalClassbool
+import typingsSlinky.baiduApp.anon.PartialLifetimes
+import typingsSlinky.baiduApp.anon.PartialPageLifetimes
+import typingsSlinky.baiduApp.anon.PartialaddGlobalClassbool
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

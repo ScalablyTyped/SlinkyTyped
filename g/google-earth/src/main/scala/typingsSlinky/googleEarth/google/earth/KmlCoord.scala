@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("google.earth.KmlCoord")
 @js.native
-class KmlCoord () extends js.Object {
+trait KmlCoord extends js.Object {
   /**
     * Distance from the earth's surface.
     */
@@ -39,5 +38,71 @@ class KmlCoord () extends js.Object {
     * Values east of the Meridian range from 0 to 180 degrees.
     */
   def setLongitude(longitude: Double): Unit = js.native
+}
+
+object KmlCoord {
+  @scala.inline
+  def apply(
+    getAltitude: () => Double,
+    getLatitude: () => Double,
+    getLongitude: () => Double,
+    setAltitude: Double => Unit,
+    setLatLngAlt: (Double, Double, Double) => Unit,
+    setLatitude: Double => Unit,
+    setLongitude: Double => Unit
+  ): KmlCoord = {
+    val __obj = js.Dynamic.literal(getAltitude = js.Any.fromFunction0(getAltitude), getLatitude = js.Any.fromFunction0(getLatitude), getLongitude = js.Any.fromFunction0(getLongitude), setAltitude = js.Any.fromFunction1(setAltitude), setLatLngAlt = js.Any.fromFunction3(setLatLngAlt), setLatitude = js.Any.fromFunction1(setLatitude), setLongitude = js.Any.fromFunction1(setLongitude))
+    __obj.asInstanceOf[KmlCoord]
+  }
+  @scala.inline
+  implicit class KmlCoordOps[Self <: KmlCoord] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetAltitude(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAltitude")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLatitude(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLatitude")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLongitude(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLongitude")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetAltitude(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAltitude")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetLatLngAlt(value: (Double, Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setLatLngAlt")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withSetLatitude(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setLatitude")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetLongitude(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setLongitude")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

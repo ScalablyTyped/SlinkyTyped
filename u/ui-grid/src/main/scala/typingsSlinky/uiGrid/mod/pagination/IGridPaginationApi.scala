@@ -1,6 +1,6 @@
 package typingsSlinky.uiGrid.mod.pagination
 
-import typingsSlinky.uiGrid.AnonPaginationChanged
+import typingsSlinky.uiGrid.anon.PaginationChanged
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IGridPaginationApi extends js.Object {
   // Events
-  var on: AnonPaginationChanged = js.native
+  var on: PaginationChanged = js.native
   // Methods
   /**
     * Get the current page
@@ -41,7 +41,7 @@ object IGridPaginationApi {
     getPage: () => Double,
     getTotalPages: () => Double,
     nextPage: () => Unit,
-    on: AnonPaginationChanged,
+    on: PaginationChanged,
     previousPage: () => Unit,
     seek: Double => Unit
   ): IGridPaginationApi = {
@@ -73,7 +73,7 @@ object IGridPaginationApi {
         ret
     }
     @scala.inline
-    def withOn(value: AnonPaginationChanged): Self = {
+    def withOn(value: PaginationChanged): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
         ret

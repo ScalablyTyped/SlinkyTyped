@@ -1,7 +1,7 @@
 package typingsSlinky.webpackBlocksUglify.mod
 
 import typingsSlinky.uglifyJs.mod.MinifyOptions
-import typingsSlinky.webpackBlocksUglify.AnonCode
+import typingsSlinky.webpackBlocksUglify.anon.Code
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait Options extends js.Object {
   var exclude: js.UndefOr[TestType | js.Array[TestType]] = js.native
   var extractComments: js.UndefOr[Boolean | String | js.RegExp | ExtractCommentsFunction] = js.native
   var include: js.UndefOr[TestType | js.Array[TestType]] = js.native
-  var minify: js.UndefOr[js.Function2[/* file */ js.Any, /* sourceMap */ js.Any, AnonCode]] = js.native
+  var minify: js.UndefOr[js.Function2[/* file */ js.Any, /* sourceMap */ js.Any, Code]] = js.native
   var parallel: js.UndefOr[Boolean | Double] = js.native
   var sourceMap: js.UndefOr[Boolean] = js.native
   var test: js.UndefOr[TestType | js.Array[TestType]] = js.native
@@ -131,7 +131,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withMinify(value: (/* file */ js.Any, /* sourceMap */ js.Any) => AnonCode): Self = {
+    def withMinify(value: (/* file */ js.Any, /* sourceMap */ js.Any) => Code): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("minify")(js.Any.fromFunction2(value))
         ret

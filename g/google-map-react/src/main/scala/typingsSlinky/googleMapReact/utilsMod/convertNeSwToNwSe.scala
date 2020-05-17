@@ -1,7 +1,7 @@
 package typingsSlinky.googleMapReact.utilsMod
 
-import typingsSlinky.googleMapReact.AnonNe
-import typingsSlinky.googleMapReact.AnonNw
+import typingsSlinky.googleMapReact.anon.Ne
+import typingsSlinky.googleMapReact.anon.Nw
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @JSImport("google-map-react/utils", "convertNeSwToNwSe")
 @js.native
 object convertNeSwToNwSe extends js.Object {
-  def apply(boundCorder: AnonNe): AnonNw = js.native
+  def apply(boundCorder: Ne): Nw = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.sharepoint.SP.JsGrid
 
-import typingsSlinky.sharepoint.AnonBottom
+import typingsSlinky.sharepoint.anon.Bottom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 // tslint:disable-next-line: interface-name
 @js.native
 trait IEditActorCellContext extends js.Object {
-  var cellExpandSpace: AnonBottom = js.native
+  var cellExpandSpace: Bottom = js.native
   var column: ColumnInfo = js.native
   var field: GridField = js.native
   var fieldKey: String = js.native
@@ -22,7 +22,7 @@ object IEditActorCellContext {
   @scala.inline
   def apply(
     SetCurrentValue: js.Any => Unit,
-    cellExpandSpace: AnonBottom,
+    cellExpandSpace: Bottom,
     column: ColumnInfo,
     field: GridField,
     fieldKey: String,
@@ -46,7 +46,7 @@ object IEditActorCellContext {
         ret
     }
     @scala.inline
-    def withCellExpandSpace(value: AnonBottom): Self = {
+    def withCellExpandSpace(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cellExpandSpace")(value.asInstanceOf[js.Any])
         ret

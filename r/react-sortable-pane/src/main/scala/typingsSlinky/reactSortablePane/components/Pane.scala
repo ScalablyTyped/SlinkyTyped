@@ -3,7 +3,7 @@ package typingsSlinky.reactSortablePane.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactSortablePane.AnonHeight
+import typingsSlinky.reactSortablePane.anon.Height
 import typingsSlinky.reactSortablePane.paneMod.IsPaneResizable
 import typingsSlinky.reactSortablePane.paneMod.PaneProps
 import typingsSlinky.reactSortablePane.paneMod.PaneSize
@@ -23,7 +23,7 @@ object Pane {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def defaultSize(value: AnonHeight): this.type = set("defaultSize", value.asInstanceOf[js.Any])
+    def defaultSize(value: Height): this.type = set("defaultSize", value.asInstanceOf[js.Any])
     @scala.inline
     def grid(value: js.Tuple2[Double, Double]): this.type = set("grid", value.asInstanceOf[js.Any])
     @scala.inline
@@ -39,7 +39,7 @@ object Pane {
     @scala.inline
     def resizable(value: IsPaneResizable): this.type = set("resizable", value.asInstanceOf[js.Any])
     @scala.inline
-    def size(value: AnonHeight): this.type = set("size", value.asInstanceOf[js.Any])
+    def size(value: Height): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }

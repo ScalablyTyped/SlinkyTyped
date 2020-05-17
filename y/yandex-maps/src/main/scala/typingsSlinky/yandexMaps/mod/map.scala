@@ -1,7 +1,7 @@
 package typingsSlinky.yandexMaps.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.yandexMaps.AnonTrafficImageZIndex
+import typingsSlinky.yandexMaps.anon.TrafficImageZIndex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -115,7 +115,7 @@ object map extends js.Object {
       extends ILayer
          with IParentOnMap {
       def this(map: Map_) = this()
-      def this(map: Map_, options: AnonTrafficImageZIndex) = this()
+      def this(map: Map_, options: TrafficImageZIndex) = this()
       def add(`object`: js.Object): this.type = js.native
       def each(callback: js.Function1[/* layer */ ILayer, Unit]): Unit = js.native
       def each(callback: js.Function1[/* layer */ ILayer, Unit], context: js.Object): Unit = js.native

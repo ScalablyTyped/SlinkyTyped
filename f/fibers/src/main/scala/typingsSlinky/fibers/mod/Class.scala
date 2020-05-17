@@ -1,6 +1,6 @@
 package typingsSlinky.fibers.mod
 
-import typingsSlinky.fibers.futureMod._Global_.Function
+import typingsSlinky.fibers.futureMod.global.Function
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

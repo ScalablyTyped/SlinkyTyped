@@ -1,7 +1,7 @@
 package typingsSlinky.antvG2.mod
 
 import org.scalajs.dom.raw.HTMLDivElement
-import typingsSlinky.antvG2.AnonBottom
+import typingsSlinky.antvG2.anon.Bottom
 import typingsSlinky.antvG2.mod.Styles.background
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +19,7 @@ trait ChartProps extends js.Object {
   var forceFit: js.UndefOr[Boolean] = js.native
   var height: Double = js.native
   var padding: js.UndefOr[
-    AnonBottom | Double | String | (js.Tuple4[Double | String, Double | String, Double | String, Double | String]) | (js.Tuple2[String, String])
+    Bottom | Double | String | (js.Tuple4[Double | String, Double | String, Double | String, Double | String]) | (js.Tuple2[String, String])
   ] = js.native
   var pixelRatio: js.UndefOr[Double] = js.native
   var plotBackground: js.UndefOr[background] = js.native
@@ -110,7 +110,7 @@ object ChartProps {
     }
     @scala.inline
     def withPadding(
-      value: AnonBottom | Double | String | (js.Tuple4[Double | String, Double | String, Double | String, Double | String]) | (js.Tuple2[String, String])
+      value: Bottom | Double | String | (js.Tuple4[Double | String, Double | String, Double | String, Double | String]) | (js.Tuple2[String, String])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])

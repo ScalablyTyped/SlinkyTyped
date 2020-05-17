@@ -1,7 +1,7 @@
 package typingsSlinky.astTypes.namedTypesMod.namedTypes
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.astTypes.AnonFlags
+import typingsSlinky.astTypes.anon.Flags
 import typingsSlinky.astTypes.kindsMod.CommentKind
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.kindsMod.LiteralKind
@@ -23,7 +23,7 @@ trait JSXText
      with PrintableKind {
   var comments: js.UndefOr[js.Array[CommentKind]] = js.native
   var loc: js.UndefOr[SourceLocationKind] = js.native
-  var regex: js.UndefOr[AnonFlags] = js.native
+  var regex: js.UndefOr[Flags] = js.native
   var `type`: typingsSlinky.astTypes.astTypesStrings.JSXText = js.native
   var value: String = js.native
 }

@@ -7,9 +7,9 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait BgpPattern
-  extends Pattern
-     with Quads
-     with _Expression {
+  extends Expression
+     with Pattern
+     with Quads {
   var triples: js.Array[Triple] = js.native
   var `type`: bgp = js.native
 }

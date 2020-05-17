@@ -3,7 +3,7 @@ package typingsSlinky.awsSdkClientS3Node.typesGetBucketVersioningOutputMod
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.Disabled
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.Enabled
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.Suspended
-import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetBucketVersioningOutput
   extends MetadataBearer
-     with _OutputTypesUnion {
+     with OutputTypesUnion {
   /**
     * <p>Specifies whether MFA delete is enabled in the bucket versioning configuration. This element is only returned if the bucket has been configured with MFA delete. If the bucket has never been so configured, this element is not returned.</p>
     */

@@ -24,9 +24,8 @@ import scala.scalajs.js.annotation._
   * // Notify the material that it has been modified
   * material.update();
   */
-@JSGlobal("pc.BasicMaterial")
 @js.native
-class BasicMaterial () extends Material {
+trait BasicMaterial extends Material {
   /**
     * The flat color of the material (RGBA, where each component is 0 to 1).
     */

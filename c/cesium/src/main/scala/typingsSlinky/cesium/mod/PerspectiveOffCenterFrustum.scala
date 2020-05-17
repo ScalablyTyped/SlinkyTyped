@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonBottom
+import typingsSlinky.cesium.anon.Bottom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "PerspectiveOffCenterFrustum")
 @js.native
 class PerspectiveOffCenterFrustum () extends Frustum {
-  def this(options: AnonBottom) = this()
+  def this(options: Bottom) = this()
   var bottom: Double = js.native
   val infiniteProjectionMatrix: Matrix4 = js.native
   var left: Double = js.native

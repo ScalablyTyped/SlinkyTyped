@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait AlexOptions extends js.Object {
+trait AlexOptions extends Config {
   /** an array of rules (the default is []) */
   var allow: js.UndefOr[js.Array[String]] = js.native
   /**

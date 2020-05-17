@@ -10,21 +10,8 @@ import scala.scalajs.js.annotation._
   * @author Jeongho Nam <http://samchon.org>
   */
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify protocol.Entity * / any */ @JSGlobal("bws.packer.Product")
-@js.native
-/**
-  * Default Constructor.
-  */
-class Product () extends Instance {
-  /**
-    * Construct from members.
-    *
-    * @param name Name, identifier of the Product.
-    * @param width Width, length on the X-axis in 3D.
-    * @param height Height, length on the Y-axis in 3D.
-    * @param length Length, length on the Z-axis in 3D.
-    */
-  def this(name: String, width: Double, height: Double, length: Double) = this()
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify protocol.Entity * / any */ @js.native
+trait Product extends Instance {
   /**
     * Height of the Product, length on the Y-axis in 3D.
     */
@@ -55,5 +42,81 @@ class Product () extends Instance {
     * @inheritdoc
     */
   def toXML(): js.Any = js.native
+}
+
+object Product {
+  @scala.inline
+  def apply(
+    TAG: () => String,
+    TYPE: () => String,
+    getHeight: () => Double,
+    getLength: () => Double,
+    getName: () => String,
+    getVolume: () => Double,
+    getWidth: () => Double,
+    height: Double,
+    key: () => js.Any,
+    length: Double,
+    name: String,
+    setHeight: Double => Unit,
+    setLength: Double => Unit,
+    setName: String => Unit,
+    setWidth: Double => Unit,
+    toXML: () => js.Any,
+    width: Double
+  ): Product = {
+    val __obj = js.Dynamic.literal(TAG = js.Any.fromFunction0(TAG), TYPE = js.Any.fromFunction0(TYPE), getHeight = js.Any.fromFunction0(getHeight), getLength = js.Any.fromFunction0(getLength), getName = js.Any.fromFunction0(getName), getVolume = js.Any.fromFunction0(getVolume), getWidth = js.Any.fromFunction0(getWidth), height = height.asInstanceOf[js.Any], key = js.Any.fromFunction0(key), length = length.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], setHeight = js.Any.fromFunction1(setHeight), setLength = js.Any.fromFunction1(setLength), setName = js.Any.fromFunction1(setName), setWidth = js.Any.fromFunction1(setWidth), toXML = js.Any.fromFunction0(toXML), width = width.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Product]
+  }
+  @scala.inline
+  implicit class ProductOps[Self <: Product] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTAG(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TAG")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKey(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToXML(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toXML")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

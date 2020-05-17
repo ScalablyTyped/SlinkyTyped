@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +11,4 @@ trait XPathExpression extends js.Object {
   def evaluate(contextNode: org.scalajs.dom.raw.Node, `type`: Double): org.scalajs.dom.raw.XPathResult = js.native
   def evaluate(contextNode: org.scalajs.dom.raw.Node, `type`: Double, result: org.scalajs.dom.raw.XPathResult): org.scalajs.dom.raw.XPathResult = js.native
 }
-
-@JSGlobal("XPathExpression")
-@js.native
-object XPathExpression extends Instantiable0[XPathExpression]
 

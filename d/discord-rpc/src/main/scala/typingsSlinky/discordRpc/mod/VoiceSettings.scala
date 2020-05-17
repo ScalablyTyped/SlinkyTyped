@@ -1,7 +1,7 @@
 package typingsSlinky.discordRpc.mod
 
-import typingsSlinky.discordRpc.AnonAutoThreshold
-import typingsSlinky.discordRpc.AnonDevice
+import typingsSlinky.discordRpc.anon.AutoThreshold
+import typingsSlinky.discordRpc.anon.Device
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,11 +11,11 @@ trait VoiceSettings extends js.Object {
   var automaticGainControl: Boolean = js.native
   var deaf: Boolean = js.native
   var echoCancellation: Boolean = js.native
-  var input: js.UndefOr[AnonDevice] = js.native
-  var mode: js.UndefOr[AnonAutoThreshold] = js.native
+  var input: js.UndefOr[Device] = js.native
+  var mode: js.UndefOr[AutoThreshold] = js.native
   var mute: Boolean = js.native
   var noiseSuppression: Boolean = js.native
-  var output: js.UndefOr[AnonDevice] = js.native
+  var output: js.UndefOr[Device] = js.native
   var qos: Boolean = js.native
   var silenceWarning: Boolean = js.native
 }
@@ -83,7 +83,7 @@ object VoiceSettings {
         ret
     }
     @scala.inline
-    def withInput(value: AnonDevice): Self = {
+    def withInput(value: Device): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
         ret
@@ -95,7 +95,7 @@ object VoiceSettings {
         ret
     }
     @scala.inline
-    def withMode(value: AnonAutoThreshold): Self = {
+    def withMode(value: AutoThreshold): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
         ret
@@ -107,7 +107,7 @@ object VoiceSettings {
         ret
     }
     @scala.inline
-    def withOutput(value: AnonDevice): Self = {
+    def withOutput(value: Device): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("output")(value.asInstanceOf[js.Any])
         ret

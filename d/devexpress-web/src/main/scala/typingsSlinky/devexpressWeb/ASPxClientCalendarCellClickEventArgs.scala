@@ -7,17 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientDateEdit.CalendarCellClick event.
   */
-@JSGlobal("ASPxClientCalendarCellClickEventArgs")
 @js.native
-class ASPxClientCalendarCellClickEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientCalendarCellClickEventArgs class.
-    * @param date A DateTime object representing the clicked date cell.
-    */
-  def this(date: js.Date) = this()
+trait ASPxClientCalendarCellClickEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the date that relates to the processed calendar's cell click.
     */
   var date: js.Date = js.native
+}
+
+object ASPxClientCalendarCellClickEventArgs {
+  @scala.inline
+  def apply(date: js.Date): ASPxClientCalendarCellClickEventArgs = {
+    val __obj = js.Dynamic.literal(date = date.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientCalendarCellClickEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientCalendarCellClickEventArgsOps[Self <: ASPxClientCalendarCellClickEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

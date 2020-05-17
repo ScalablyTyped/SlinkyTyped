@@ -1,6 +1,6 @@
 package typingsSlinky.nodemailer.dkimMod
 
-import typingsSlinky.nodemailer.AnonKey
+import typingsSlinky.nodemailer.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +14,12 @@ trait SingleKeyOptions
   /** is the DKIM key selector */
   var keySelector: String = js.native
   /** is the private key for the selector in PEM format */
-  var privateKey: String | AnonKey = js.native
+  var privateKey: String | Key = js.native
 }
 
 object SingleKeyOptions {
   @scala.inline
-  def apply(domainName: String, keySelector: String, privateKey: String | AnonKey): SingleKeyOptions = {
+  def apply(domainName: String, keySelector: String, privateKey: String | Key): SingleKeyOptions = {
     val __obj = js.Dynamic.literal(domainName = domainName.asInstanceOf[js.Any], keySelector = keySelector.asInstanceOf[js.Any], privateKey = privateKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[SingleKeyOptions]
   }
@@ -42,7 +42,7 @@ object SingleKeyOptions {
         ret
     }
     @scala.inline
-    def withPrivateKey(value: String | AnonKey): Self = {
+    def withPrivateKey(value: String | Key): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("privateKey")(value.asInstanceOf[js.Any])
         ret

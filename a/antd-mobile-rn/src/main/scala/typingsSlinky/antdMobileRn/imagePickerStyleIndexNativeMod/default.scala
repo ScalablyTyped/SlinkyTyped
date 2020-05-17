@@ -1,14 +1,14 @@
 package typingsSlinky.antdMobileRn.imagePickerStyleIndexNativeMod
 
-import typingsSlinky.antdMobileRn.AnonAlignItemsBorderRadius
-import typingsSlinky.antdMobileRn.AnonBackgroundColorColor
-import typingsSlinky.antdMobileRn.AnonBorderColor
-import typingsSlinky.antdMobileRn.AnonBorderRadiusOverflow
-import typingsSlinky.antdMobileRn.AnonFlexWrap
-import typingsSlinky.antdMobileRn.AnonFontWeight
-import typingsSlinky.antdMobileRn.AnonHeightWidth
-import typingsSlinky.antdMobileRn.AnonJustifyContent
-import typingsSlinky.antdMobileRn.AnonMarginBottom
+import typingsSlinky.antdMobileRn.anon.AlignItemsBorderRadius
+import typingsSlinky.antdMobileRn.anon.BackgroundColorColor
+import typingsSlinky.antdMobileRn.anon.BorderColor
+import typingsSlinky.antdMobileRn.anon.BorderRadiusOverflow
+import typingsSlinky.antdMobileRn.anon.FlexWrap
+import typingsSlinky.antdMobileRn.anon.FontWeight
+import typingsSlinky.antdMobileRn.anon.HeightWidth
+import typingsSlinky.antdMobileRn.anon.JustifyContent
+import typingsSlinky.antdMobileRn.anon.MarginBottom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,15 +16,15 @@ import scala.scalajs.js.annotation._
 @JSImport("antd-mobile-rn/lib/image-picker/style/index.native", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var closeText: AnonFontWeight = js.native
-  var closeWrap: AnonJustifyContent = js.native
-  var container: AnonFlexWrap = js.native
-  var image: AnonBorderRadiusOverflow = js.native
-  var item: AnonMarginBottom = js.native
-  var plusText: AnonBackgroundColorColor = js.native
-  var plusWrap: AnonAlignItemsBorderRadius = js.native
-  var plusWrapHighlight: AnonBorderColor = js.native
-  var plusWrapNormal: AnonBorderColor = js.native
-  var size: AnonHeightWidth = js.native
+  var closeText: FontWeight = js.native
+  var closeWrap: JustifyContent = js.native
+  var container: FlexWrap = js.native
+  var image: BorderRadiusOverflow = js.native
+  var item: MarginBottom = js.native
+  var plusText: BackgroundColorColor = js.native
+  var plusWrap: AlignItemsBorderRadius = js.native
+  var plusWrapHighlight: BorderColor = js.native
+  var plusWrapNormal: BorderColor = js.native
+  var size: HeightWidth = js.native
 }
 

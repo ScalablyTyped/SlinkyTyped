@@ -13,3 +13,10 @@ trait BindingPattern
      with DeclarationName
      with DestructuringPattern
 
+object BindingPattern {
+  @scala.inline
+  implicit def apply(value: ArrayBindingPattern): BindingPattern = value.asInstanceOf[BindingPattern]
+  @scala.inline
+  implicit def apply(value: ObjectBindingPattern): BindingPattern = value.asInstanceOf[BindingPattern]
+}
+

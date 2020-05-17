@@ -1,7 +1,7 @@
 package typingsSlinky.openGraph.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.openGraph.AnonAlternate
+import typingsSlinky.openGraph.anon.Alternate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait Data
   /** An image URL which should represent your object within the graph. */
   var image: js.UndefOr[String | js.Array[String] | ImageVideoMetadata] = js.native
   /** The locale these tags are marked up in. Of the format `language_TERRITORY`. Default is `en_US`. */
-  var locale: js.UndefOr[String | js.Array[String] | AnonAlternate] = js.native
+  var locale: js.UndefOr[String | js.Array[String] | Alternate] = js.native
   /** If your object is part of a larger web site, the name which should be displayed for the overall site. e.g., "IMDb". */
   var site_name: js.UndefOr[String | js.Array[String]] = js.native
   /** The title of your object as it should appear within the graph, e.g., "The Rock". */
@@ -101,7 +101,7 @@ object Data {
         ret
     }
     @scala.inline
-    def withLocale(value: String | js.Array[String] | AnonAlternate): Self = {
+    def withLocale(value: String | js.Array[String] | Alternate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
         ret

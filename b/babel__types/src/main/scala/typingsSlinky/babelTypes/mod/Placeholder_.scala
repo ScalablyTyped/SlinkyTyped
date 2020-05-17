@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Placeholder_
   extends BaseNode
-     with _Node {
+     with Node {
   var expectedNode: Identifier | StringLiteral | typingsSlinky.babelTypes.babelTypesStrings.Expression | typingsSlinky.babelTypes.babelTypesStrings.Statement | typingsSlinky.babelTypes.babelTypesStrings.Declaration | BlockStatement | ClassBody | typingsSlinky.babelTypes.babelTypesStrings.Pattern = js.native
   var name: Identifier_ = js.native
   @JSName("type")

@@ -1,10 +1,10 @@
 package typingsSlinky.expoConstants.constantsTypesMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.expoConstants.AnonDev
-import typingsSlinky.expoConstants.AnonDictkey
-import typingsSlinky.expoConstants.AnonIcon
-import typingsSlinky.expoConstants.AnonTool
+import typingsSlinky.expoConstants.anon.Dev
+import typingsSlinky.expoConstants.anon.Dictkey
+import typingsSlinky.expoConstants.anon.Icon
+import typingsSlinky.expoConstants.anon.Tool
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,16 +15,16 @@ trait AppManifest
   var bundleUrl: String = js.native
   var debuggerHost: js.UndefOr[String] = js.native
   var description: js.UndefOr[String] = js.native
-  var developer: js.UndefOr[AnonTool] = js.native
+  var developer: js.UndefOr[Tool] = js.native
   var entryPoint: js.UndefOr[String] = js.native
   var icon: js.UndefOr[String] = js.native
-  var loading: js.UndefOr[AnonIcon] = js.native
+  var loading: js.UndefOr[Icon] = js.native
   var logUrl: js.UndefOr[String] = js.native
   var mainModuleName: js.UndefOr[String] = js.native
   var name: js.UndefOr[String] = js.native
-  var notification: js.UndefOr[AnonDictkey] = js.native
+  var notification: js.UndefOr[Dictkey] = js.native
   var orientation: js.UndefOr[String] = js.native
-  var packagerOpts: js.UndefOr[AnonDev] = js.native
+  var packagerOpts: js.UndefOr[Dev] = js.native
   var primaryColor: js.UndefOr[String] = js.native
   /** Published Apps Only */
   var revisionId: js.UndefOr[String] = js.native
@@ -77,7 +77,7 @@ object AppManifest {
         ret
     }
     @scala.inline
-    def withDeveloper(value: AnonTool): Self = {
+    def withDeveloper(value: Tool): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("developer")(value.asInstanceOf[js.Any])
         ret
@@ -113,7 +113,7 @@ object AppManifest {
         ret
     }
     @scala.inline
-    def withLoading(value: AnonIcon): Self = {
+    def withLoading(value: Icon): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
         ret
@@ -161,7 +161,7 @@ object AppManifest {
         ret
     }
     @scala.inline
-    def withNotification(value: AnonDictkey): Self = {
+    def withNotification(value: Dictkey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notification")(value.asInstanceOf[js.Any])
         ret
@@ -185,7 +185,7 @@ object AppManifest {
         ret
     }
     @scala.inline
-    def withPackagerOpts(value: AnonDev): Self = {
+    def withPackagerOpts(value: Dev): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("packagerOpts")(value.asInstanceOf[js.Any])
         ret

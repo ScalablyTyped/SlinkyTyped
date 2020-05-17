@@ -1,11 +1,11 @@
 package typingsSlinky.semanticUiReact.formFormMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLFormElement
 import slinky.core.SyntheticEvent
 import typingsSlinky.react.mod.FormHTMLAttributes
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.equal
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ trait StrictFormProps extends FormHTMLAttributes[HTMLFormElement] {
   /** The HTML form submit handler. */
   @JSName("onSubmit")
   var onSubmit_StrictFormProps: js.UndefOr[
-    js.Function2[SyntheticEvent[EventTarget with HTMLFormElement, Event_], /* data */ FormProps, Unit]
+    js.Function2[SyntheticEvent[EventTarget with HTMLFormElement, Event], /* data */ FormProps, Unit]
   ] = js.native
   /** A comment can contain a form to reply to a comment. This may have arbitrary content. */
   var reply: js.UndefOr[Boolean] = js.native
@@ -100,7 +100,7 @@ object StrictFormProps {
         ret
     }
     @scala.inline
-    def withOnSubmit(value: (SyntheticEvent[EventTarget with HTMLFormElement, Event_], /* data */ FormProps) => Unit): Self = {
+    def withOnSubmit(value: (SyntheticEvent[EventTarget with HTMLFormElement, Event], /* data */ FormProps) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(js.Any.fromFunction2(value))
         ret

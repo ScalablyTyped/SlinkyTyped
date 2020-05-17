@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientIam.gapi.client.iam
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientIam.AnonOauthtoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientIam.anon.Oauthtoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +12,12 @@ trait PermissionsResource extends js.Object {
     * Lists the permissions testable on a resource.
     * A permission is testable if it can be tested for an identity on a resource.
     */
-  def queryTestablePermissions(request: AnonOauthtoken): Request_[QueryTestablePermissionsResponse] = js.native
+  def queryTestablePermissions(request: Oauthtoken): Request[QueryTestablePermissionsResponse] = js.native
 }
 
 object PermissionsResource {
   @scala.inline
-  def apply(queryTestablePermissions: AnonOauthtoken => Request_[QueryTestablePermissionsResponse]): PermissionsResource = {
+  def apply(queryTestablePermissions: Oauthtoken => Request[QueryTestablePermissionsResponse]): PermissionsResource = {
     val __obj = js.Dynamic.literal(queryTestablePermissions = js.Any.fromFunction1(queryTestablePermissions))
     __obj.asInstanceOf[PermissionsResource]
   }
@@ -28,7 +28,7 @@ object PermissionsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withQueryTestablePermissions(value: AnonOauthtoken => Request_[QueryTestablePermissionsResponse]): Self = {
+    def withQueryTestablePermissions(value: Oauthtoken => Request[QueryTestablePermissionsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("queryTestablePermissions")(js.Any.fromFunction1(value))
         ret

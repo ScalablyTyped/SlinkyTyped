@@ -2,6 +2,7 @@ package typingsSlinky.tensorflowTfjsCore
 
 import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.experimental.Response
+import typingsSlinky.tensorflowTfjsCore.anon.KeptDims
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.FlatVector
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.NumericDataType
@@ -126,8 +127,8 @@ object distUtilMod extends js.Object {
   def shuffle(array: js.typedarray.Uint32Array): Unit = js.native
   def sizeFromShape(shape: js.Array[Double]): Double = js.native
   def sizeToSquarishShape(size: Double): js.Tuple2[Double, Double] = js.native
-  def squeezeShape(shape: js.Array[Double]): AnonKeptDims = js.native
-  def squeezeShape(shape: js.Array[Double], axis: js.Array[Double]): AnonKeptDims = js.native
+  def squeezeShape(shape: js.Array[Double]): KeptDims = js.native
+  def squeezeShape(shape: js.Array[Double], axis: js.Array[Double]): KeptDims = js.native
   def sum(arr: js.Array[Double]): Double = js.native
   def tanh(x: Double): Double = js.native
   def toNestedArray(shape: js.Array[Double], a: TypedArray): Double | js.Array[_] = js.native

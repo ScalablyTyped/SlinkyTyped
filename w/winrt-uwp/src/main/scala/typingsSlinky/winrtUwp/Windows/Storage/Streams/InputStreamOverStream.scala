@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides a Windows Runtime input stream for an IStream base implementation. */
-@JSGlobal("Windows.Storage.Streams.InputStreamOverStream")
 @js.native
-abstract class InputStreamOverStream () extends js.Object {
+trait InputStreamOverStream extends js.Object {
   /** Closes the current stream and releases system resources. */
   def close(): Unit = js.native
   /**
@@ -19,5 +18,38 @@ abstract class InputStreamOverStream () extends js.Object {
     * @return The asynchronous operation.
     */
   def readAsync(buffer: IBuffer, count: Double, options: InputStreamOptions): IPromiseWithIAsyncOperationWithProgress[IBuffer, Double] = js.native
+}
+
+object InputStreamOverStream {
+  @scala.inline
+  def apply(
+    close: () => Unit,
+    readAsync: (IBuffer, Double, InputStreamOptions) => IPromiseWithIAsyncOperationWithProgress[IBuffer, Double]
+  ): InputStreamOverStream = {
+    val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), readAsync = js.Any.fromFunction3(readAsync))
+    __obj.asInstanceOf[InputStreamOverStream]
+  }
+  @scala.inline
+  implicit class InputStreamOverStreamOps[Self <: InputStreamOverStream] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withReadAsync(
+      value: (IBuffer, Double, InputStreamOptions) => IPromiseWithIAsyncOperationWithProgress[IBuffer, Double]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readAsync")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

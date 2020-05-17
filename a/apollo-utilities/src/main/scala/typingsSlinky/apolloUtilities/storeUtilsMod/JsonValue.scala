@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait JsonValue extends _StoreValue {
+trait JsonValue extends StoreValue {
   var json: js.Any = js.native
   var `type`: json = js.native
 }

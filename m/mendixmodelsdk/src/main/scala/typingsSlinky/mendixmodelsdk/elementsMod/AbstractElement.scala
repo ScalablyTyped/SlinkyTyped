@@ -14,7 +14,8 @@ import scala.scalajs.js.annotation._
 @js.native
 abstract class AbstractElement protected ()
   extends Structure
-     with Container {
+     with Container
+     with IContainer {
   def this(model: AbstractModel, structureTypeName: String, id: String, isPartial: Boolean) = this()
   def this(
     model: AbstractModel,

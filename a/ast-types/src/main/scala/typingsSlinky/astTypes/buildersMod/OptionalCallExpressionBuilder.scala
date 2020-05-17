@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonTypeArguments
+import typingsSlinky.astTypes.anon.TypeArguments
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.kindsMod.SpreadElementKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.OptionalCallExpression
@@ -16,6 +16,6 @@ trait OptionalCallExpressionBuilder extends js.Object {
     argumentsParam: js.Array[ExpressionKind | SpreadElementKind],
     optional: Boolean
   ): OptionalCallExpression = js.native
-  def from(params: AnonTypeArguments): OptionalCallExpression = js.native
+  def from(params: TypeArguments): OptionalCallExpression = js.native
 }
 

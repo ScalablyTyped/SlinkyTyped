@@ -4,22 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("ModuleMap")
 @js.native
-/**
-  * Creates a new module map optimized for determining which module a given memory address belongs to, if any.
-  * Takes a snapshot of the currently loaded modules when created, which may be refreshed by calling `update()`.
-  *
-  * The `filter` argument is optional and allows you to pass a function used for filtering the list of modules.
-  * This is useful if you e.g. only care about modules owned by the application itself, and allows you to quickly
-  * check if an address belongs to one of its modules. The filter function is given the module's details and must
-  * return true for each module that should be kept in the map. It is called for each loaded module every time the
-  * map is updated.
-  *
-  * @param filter Filter function to decide which modules are kept in the map.
-  */
-class ModuleMap () extends js.Object {
-  def this(filter: ModuleMapFilter) = this()
+trait ModuleMap extends js.Object {
   /**
     * Looks up a module by address. Returns null if not found.
     *
@@ -77,5 +63,85 @@ class ModuleMap () extends js.Object {
     * call to `update()`.
     */
   def values(): js.Array[Module] = js.native
+}
+
+object ModuleMap {
+  @scala.inline
+  def apply(
+    find: NativePointerValue => Module | Null,
+    findName: NativePointerValue => String | Null,
+    findPath: NativePointerValue => String | Null,
+    get: NativePointerValue => Module,
+    getName: NativePointerValue => String,
+    getPath: NativePointerValue => String,
+    has: NativePointerValue => Boolean,
+    update: () => Unit,
+    values: () => js.Array[Module]
+  ): ModuleMap = {
+    val __obj = js.Dynamic.literal(find = js.Any.fromFunction1(find), findName = js.Any.fromFunction1(findName), findPath = js.Any.fromFunction1(findPath), get = js.Any.fromFunction1(get), getName = js.Any.fromFunction1(getName), getPath = js.Any.fromFunction1(getPath), has = js.Any.fromFunction1(has), update = js.Any.fromFunction0(update), values = js.Any.fromFunction0(values))
+    __obj.asInstanceOf[ModuleMap]
+  }
+  @scala.inline
+  implicit class ModuleMapOps[Self <: ModuleMap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFind(value: NativePointerValue => Module | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("find")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFindName(value: NativePointerValue => String | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFindPath(value: NativePointerValue => String | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findPath")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: NativePointerValue => Module): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetName(value: NativePointerValue => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetPath(value: NativePointerValue => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPath")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHas(value: NativePointerValue => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("has")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withValues(value: () => js.Array[Module]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

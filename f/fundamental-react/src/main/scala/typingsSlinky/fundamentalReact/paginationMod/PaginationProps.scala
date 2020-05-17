@@ -1,7 +1,7 @@
 package typingsSlinky.fundamentalReact.paginationMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.fundamentalReact.AnonNext
+import typingsSlinky.fundamentalReact.anon.Next
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait PaginationProps
   var itemsPerPage: js.UndefOr[Double] = js.native
   var itemsTotal: Double = js.native
   var linkProps: js.UndefOr[js.Any] = js.native
-  var localizedText: js.UndefOr[AnonNext] = js.native
+  var localizedText: js.UndefOr[Next] = js.native
   var nextProps: js.UndefOr[js.Any] = js.native
   var prevProps: js.UndefOr[js.Any] = js.native
   var totalText: js.UndefOr[String] = js.native
@@ -134,7 +134,7 @@ object PaginationProps {
         ret
     }
     @scala.inline
-    def withLocalizedText(value: AnonNext): Self = {
+    def withLocalizedText(value: Next): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("localizedText")(value.asInstanceOf[js.Any])
         ret

@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartFontData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartFontLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartFontUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.None
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Single
 import scala.scalajs.js
@@ -18,9 +18,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.ChartFont")
 @js.native
-class ChartFont () extends ClientObject {
+trait ChartFont extends ClientObject {
   /**
     *
     * Represents the bold status of font.
@@ -73,7 +72,7 @@ class ChartFont () extends ClientObject {
     */
   def load(): ChartFont = js.native
   def load(options: ChartFontLoadOptions): ChartFont = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartFont = js.native
+  def load(propertyNamesAndPaths: Expand): ChartFont = js.native
   def load(propertyNames: String): ChartFont = js.native
   def load(propertyNames: js.Array[String]): ChartFont = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

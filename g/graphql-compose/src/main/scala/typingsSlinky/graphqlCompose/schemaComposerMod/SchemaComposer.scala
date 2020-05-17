@@ -154,8 +154,9 @@ class SchemaComposer[TContext] ()
     */
   def createTempTC(typeOrSDL: js.Any): (ObjectTypeComposer[_, TContext]) | InputTypeComposer[TContext] | EnumTypeComposer[TContext] | (InterfaceTypeComposer[_, TContext]) | (UnionTypeComposer[_, TContext]) | ScalarTypeComposer[TContext] = js.native
   def createUnionTC[TSource](typeDef: UnionTypeComposeDefinition[TSource, TContext]): UnionTypeComposer[TSource, TContext] = js.native
-  def getAnyTC(typeName: AnyType[_] | GraphQLType): (ObjectTypeComposer[_, TContext]) | InputTypeComposer[TContext] | EnumTypeComposer[TContext] | (InterfaceTypeComposer[_, TContext]) | (UnionTypeComposer[_, TContext]) | ScalarTypeComposer[TContext] = js.native
   def getAnyTC(typeName: String): (ObjectTypeComposer[_, TContext]) | InputTypeComposer[TContext] | EnumTypeComposer[TContext] | (InterfaceTypeComposer[_, TContext]) | (UnionTypeComposer[_, TContext]) | ScalarTypeComposer[TContext] = js.native
+  def getAnyTC(typeName: GraphQLType): (ObjectTypeComposer[_, TContext]) | InputTypeComposer[TContext] | EnumTypeComposer[TContext] | (InterfaceTypeComposer[_, TContext]) | (UnionTypeComposer[_, TContext]) | ScalarTypeComposer[TContext] = js.native
+  def getAnyTC(typeName: AnyType[_]): (ObjectTypeComposer[_, TContext]) | InputTypeComposer[TContext] | EnumTypeComposer[TContext] | (InterfaceTypeComposer[_, TContext]) | (UnionTypeComposer[_, TContext]) | ScalarTypeComposer[TContext] = js.native
   def getDirective(name: String): GraphQLDirective = js.native
   def getDirectives(): js.Array[GraphQLDirective] = js.native
   def getETC(typeName: js.Any): EnumTypeComposer[TContext] = js.native

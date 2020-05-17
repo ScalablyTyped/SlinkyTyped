@@ -1,7 +1,7 @@
 package typingsSlinky.amqpRpc.mod
 
-import typingsSlinky.amqpRpc.AnonAutoDelete
-import typingsSlinky.amqpRpc.AnonDefaultExchangeName
+import typingsSlinky.amqpRpc.anon.AutoDelete
+import typingsSlinky.amqpRpc.anon.DefaultExchangeName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +12,8 @@ trait Options extends js.Object {
   var connection: js.UndefOr[js.Any] = js.native
   var exchange: js.UndefOr[String] = js.native
   var exchangeInstance: js.UndefOr[js.Any] = js.native
-  var exchange_options: js.UndefOr[AnonAutoDelete] = js.native
-  var ipml_options: js.UndefOr[AnonDefaultExchangeName] = js.native
+  var exchange_options: js.UndefOr[AutoDelete] = js.native
+  var ipml_options: js.UndefOr[DefaultExchangeName] = js.native
   var url: js.UndefOr[String] = js.native
 }
 
@@ -78,7 +78,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withExchange_options(value: AnonAutoDelete): Self = {
+    def withExchange_options(value: AutoDelete): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("exchange_options")(value.asInstanceOf[js.Any])
         ret
@@ -90,7 +90,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withIpml_options(value: AnonDefaultExchangeName): Self = {
+    def withIpml_options(value: DefaultExchangeName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ipml_options")(value.asInstanceOf[js.Any])
         ret

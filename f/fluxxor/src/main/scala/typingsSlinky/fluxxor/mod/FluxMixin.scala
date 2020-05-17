@@ -1,6 +1,6 @@
 package typingsSlinky.fluxxor.mod
 
-import typingsSlinky.fluxxor.TypeofReact
+import typingsSlinky.fluxxor.anon.TypeofReact
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

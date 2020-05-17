@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Networking.Connectivity.NetworkItem")
 @js.native
-class NetworkItem () extends INetworkItem
+trait NetworkItem extends INetworkItem
+
+object NetworkItem {
+  @scala.inline
+  def apply(getNetworkTypes: () => NetworkTypes, networkId: String): NetworkItem = {
+    val __obj = js.Dynamic.literal(getNetworkTypes = js.Any.fromFunction0(getNetworkTypes), networkId = networkId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NetworkItem]
+  }
+}
 

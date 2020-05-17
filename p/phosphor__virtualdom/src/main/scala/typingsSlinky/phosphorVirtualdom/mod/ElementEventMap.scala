@@ -3,6 +3,7 @@ package typingsSlinky.phosphorVirtualdom.mod
 import org.scalajs.dom.raw.ClipboardEvent
 import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.ErrorEvent
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
@@ -10,7 +11,6 @@ import org.scalajs.dom.raw.PointerEvent
 import org.scalajs.dom.raw.ProgressEvent
 import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
-import typingsSlinky.std.Event_
 import typingsSlinky.std.MediaStreamErrorEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,13 +21,13 @@ trait ElementEventMap extends js.Object {
   var onabort: UIEvent = js.native
   var onauxclick: MouseEvent = js.native
   var onblur: FocusEvent = js.native
-  var oncanplay: Event_ = js.native
-  var oncanplaythrough: Event_ = js.native
-  var onchange: Event_ = js.native
+  var oncanplay: Event = js.native
+  var oncanplaythrough: Event = js.native
+  var onchange: Event = js.native
   var onclick: MouseEvent = js.native
   var oncontextmenu: PointerEvent = js.native
   var oncopy: ClipboardEvent = js.native
-  var oncuechange: Event_ = js.native
+  var oncuechange: Event = js.native
   var oncut: ClipboardEvent = js.native
   var ondblclick: MouseEvent = js.native
   var ondrag: DragEvent = js.native
@@ -38,21 +38,21 @@ trait ElementEventMap extends js.Object {
   var ondragover: DragEvent = js.native
   var ondragstart: DragEvent = js.native
   var ondrop: DragEvent = js.native
-  var ondurationchange: Event_ = js.native
-  var onemptied: Event_ = js.native
+  var ondurationchange: Event = js.native
+  var onemptied: Event = js.native
   var onended: MediaStreamErrorEvent = js.native
   var onerror: ErrorEvent = js.native
   var onfocus: FocusEvent = js.native
-  var oninput: Event_ = js.native
-  var oninvalid: Event_ = js.native
+  var oninput: Event = js.native
+  var oninvalid: Event = js.native
   var onkeydown: KeyboardEvent = js.native
   var onkeypress: KeyboardEvent = js.native
   var onkeyup: KeyboardEvent = js.native
-  var onload: Event_ = js.native
-  var onloadeddata: Event_ = js.native
-  var onloadedmetadata: Event_ = js.native
-  var onloadend: Event_ = js.native
-  var onloadstart: Event_ = js.native
+  var onload: Event = js.native
+  var onloadeddata: Event = js.native
+  var onloadedmetadata: Event = js.native
+  var onloadend: Event = js.native
+  var onloadstart: Event = js.native
   var onmousedown: MouseEvent = js.native
   var onmouseenter: MouseEvent = js.native
   var onmouseleave: MouseEvent = js.native
@@ -62,9 +62,9 @@ trait ElementEventMap extends js.Object {
   var onmouseup: MouseEvent = js.native
   var onmousewheel: WheelEvent = js.native
   var onpaste: ClipboardEvent = js.native
-  var onpause: Event_ = js.native
-  var onplay: Event_ = js.native
-  var onplaying: Event_ = js.native
+  var onpause: Event = js.native
+  var onplay: Event = js.native
+  var onplaying: Event = js.native
   var onpointercancel: PointerEvent = js.native
   var onpointerdown: PointerEvent = js.native
   var onpointerenter: PointerEvent = js.native
@@ -74,19 +74,19 @@ trait ElementEventMap extends js.Object {
   var onpointerover: PointerEvent = js.native
   var onpointerup: PointerEvent = js.native
   var onprogress: ProgressEvent = js.native
-  var onratechange: Event_ = js.native
-  var onreset: Event_ = js.native
+  var onratechange: Event = js.native
+  var onreset: Event = js.native
   var onscroll: UIEvent = js.native
-  var onseeked: Event_ = js.native
-  var onseeking: Event_ = js.native
+  var onseeked: Event = js.native
+  var onseeking: Event = js.native
   var onselect: UIEvent = js.native
-  var onselectstart: Event_ = js.native
-  var onstalled: Event_ = js.native
-  var onsubmit: Event_ = js.native
-  var onsuspend: Event_ = js.native
-  var ontimeupdate: Event_ = js.native
-  var onvolumechange: Event_ = js.native
-  var onwaiting: Event_ = js.native
+  var onselectstart: Event = js.native
+  var onstalled: Event = js.native
+  var onsubmit: Event = js.native
+  var onsuspend: Event = js.native
+  var ontimeupdate: Event = js.native
+  var onvolumechange: Event = js.native
+  var onwaiting: Event = js.native
 }
 
 object ElementEventMap {
@@ -95,13 +95,13 @@ object ElementEventMap {
     onabort: UIEvent,
     onauxclick: MouseEvent,
     onblur: FocusEvent,
-    oncanplay: Event_,
-    oncanplaythrough: Event_,
-    onchange: Event_,
+    oncanplay: Event,
+    oncanplaythrough: Event,
+    onchange: Event,
     onclick: MouseEvent,
     oncontextmenu: PointerEvent,
     oncopy: ClipboardEvent,
-    oncuechange: Event_,
+    oncuechange: Event,
     oncut: ClipboardEvent,
     ondblclick: MouseEvent,
     ondrag: DragEvent,
@@ -112,21 +112,21 @@ object ElementEventMap {
     ondragover: DragEvent,
     ondragstart: DragEvent,
     ondrop: DragEvent,
-    ondurationchange: Event_,
-    onemptied: Event_,
+    ondurationchange: Event,
+    onemptied: Event,
     onended: MediaStreamErrorEvent,
     onerror: ErrorEvent,
     onfocus: FocusEvent,
-    oninput: Event_,
-    oninvalid: Event_,
+    oninput: Event,
+    oninvalid: Event,
     onkeydown: KeyboardEvent,
     onkeypress: KeyboardEvent,
     onkeyup: KeyboardEvent,
-    onload: Event_,
-    onloadeddata: Event_,
-    onloadedmetadata: Event_,
-    onloadend: Event_,
-    onloadstart: Event_,
+    onload: Event,
+    onloadeddata: Event,
+    onloadedmetadata: Event,
+    onloadend: Event,
+    onloadstart: Event,
     onmousedown: MouseEvent,
     onmouseenter: MouseEvent,
     onmouseleave: MouseEvent,
@@ -136,9 +136,9 @@ object ElementEventMap {
     onmouseup: MouseEvent,
     onmousewheel: WheelEvent,
     onpaste: ClipboardEvent,
-    onpause: Event_,
-    onplay: Event_,
-    onplaying: Event_,
+    onpause: Event,
+    onplay: Event,
+    onplaying: Event,
     onpointercancel: PointerEvent,
     onpointerdown: PointerEvent,
     onpointerenter: PointerEvent,
@@ -148,19 +148,19 @@ object ElementEventMap {
     onpointerover: PointerEvent,
     onpointerup: PointerEvent,
     onprogress: ProgressEvent,
-    onratechange: Event_,
-    onreset: Event_,
+    onratechange: Event,
+    onreset: Event,
     onscroll: UIEvent,
-    onseeked: Event_,
-    onseeking: Event_,
+    onseeked: Event,
+    onseeking: Event,
     onselect: UIEvent,
-    onselectstart: Event_,
-    onstalled: Event_,
-    onsubmit: Event_,
-    onsuspend: Event_,
-    ontimeupdate: Event_,
-    onvolumechange: Event_,
-    onwaiting: Event_
+    onselectstart: Event,
+    onstalled: Event,
+    onsubmit: Event,
+    onsuspend: Event,
+    ontimeupdate: Event,
+    onvolumechange: Event,
+    onwaiting: Event
   ): ElementEventMap = {
     val __obj = js.Dynamic.literal(onabort = onabort.asInstanceOf[js.Any], onauxclick = onauxclick.asInstanceOf[js.Any], onblur = onblur.asInstanceOf[js.Any], oncanplay = oncanplay.asInstanceOf[js.Any], oncanplaythrough = oncanplaythrough.asInstanceOf[js.Any], onchange = onchange.asInstanceOf[js.Any], onclick = onclick.asInstanceOf[js.Any], oncontextmenu = oncontextmenu.asInstanceOf[js.Any], oncopy = oncopy.asInstanceOf[js.Any], oncuechange = oncuechange.asInstanceOf[js.Any], oncut = oncut.asInstanceOf[js.Any], ondblclick = ondblclick.asInstanceOf[js.Any], ondrag = ondrag.asInstanceOf[js.Any], ondragend = ondragend.asInstanceOf[js.Any], ondragenter = ondragenter.asInstanceOf[js.Any], ondragexit = ondragexit.asInstanceOf[js.Any], ondragleave = ondragleave.asInstanceOf[js.Any], ondragover = ondragover.asInstanceOf[js.Any], ondragstart = ondragstart.asInstanceOf[js.Any], ondrop = ondrop.asInstanceOf[js.Any], ondurationchange = ondurationchange.asInstanceOf[js.Any], onemptied = onemptied.asInstanceOf[js.Any], onended = onended.asInstanceOf[js.Any], onerror = onerror.asInstanceOf[js.Any], onfocus = onfocus.asInstanceOf[js.Any], oninput = oninput.asInstanceOf[js.Any], oninvalid = oninvalid.asInstanceOf[js.Any], onkeydown = onkeydown.asInstanceOf[js.Any], onkeypress = onkeypress.asInstanceOf[js.Any], onkeyup = onkeyup.asInstanceOf[js.Any], onload = onload.asInstanceOf[js.Any], onloadeddata = onloadeddata.asInstanceOf[js.Any], onloadedmetadata = onloadedmetadata.asInstanceOf[js.Any], onloadend = onloadend.asInstanceOf[js.Any], onloadstart = onloadstart.asInstanceOf[js.Any], onmousedown = onmousedown.asInstanceOf[js.Any], onmouseenter = onmouseenter.asInstanceOf[js.Any], onmouseleave = onmouseleave.asInstanceOf[js.Any], onmousemove = onmousemove.asInstanceOf[js.Any], onmouseout = onmouseout.asInstanceOf[js.Any], onmouseover = onmouseover.asInstanceOf[js.Any], onmouseup = onmouseup.asInstanceOf[js.Any], onmousewheel = onmousewheel.asInstanceOf[js.Any], onpaste = onpaste.asInstanceOf[js.Any], onpause = onpause.asInstanceOf[js.Any], onplay = onplay.asInstanceOf[js.Any], onplaying = onplaying.asInstanceOf[js.Any], onpointercancel = onpointercancel.asInstanceOf[js.Any], onpointerdown = onpointerdown.asInstanceOf[js.Any], onpointerenter = onpointerenter.asInstanceOf[js.Any], onpointerleave = onpointerleave.asInstanceOf[js.Any], onpointermove = onpointermove.asInstanceOf[js.Any], onpointerout = onpointerout.asInstanceOf[js.Any], onpointerover = onpointerover.asInstanceOf[js.Any], onpointerup = onpointerup.asInstanceOf[js.Any], onprogress = onprogress.asInstanceOf[js.Any], onratechange = onratechange.asInstanceOf[js.Any], onreset = onreset.asInstanceOf[js.Any], onscroll = onscroll.asInstanceOf[js.Any], onseeked = onseeked.asInstanceOf[js.Any], onseeking = onseeking.asInstanceOf[js.Any], onselect = onselect.asInstanceOf[js.Any], onselectstart = onselectstart.asInstanceOf[js.Any], onstalled = onstalled.asInstanceOf[js.Any], onsubmit = onsubmit.asInstanceOf[js.Any], onsuspend = onsuspend.asInstanceOf[js.Any], ontimeupdate = ontimeupdate.asInstanceOf[js.Any], onvolumechange = onvolumechange.asInstanceOf[js.Any], onwaiting = onwaiting.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElementEventMap]
@@ -190,19 +190,19 @@ object ElementEventMap {
         ret
     }
     @scala.inline
-    def withOncanplay(value: Event_): Self = {
+    def withOncanplay(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oncanplay")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOncanplaythrough(value: Event_): Self = {
+    def withOncanplaythrough(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oncanplaythrough")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOnchange(value: Event_): Self = {
+    def withOnchange(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onchange")(value.asInstanceOf[js.Any])
         ret
@@ -226,7 +226,7 @@ object ElementEventMap {
         ret
     }
     @scala.inline
-    def withOncuechange(value: Event_): Self = {
+    def withOncuechange(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oncuechange")(value.asInstanceOf[js.Any])
         ret
@@ -292,13 +292,13 @@ object ElementEventMap {
         ret
     }
     @scala.inline
-    def withOndurationchange(value: Event_): Self = {
+    def withOndurationchange(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ondurationchange")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOnemptied(value: Event_): Self = {
+    def withOnemptied(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onemptied")(value.asInstanceOf[js.Any])
         ret
@@ -322,13 +322,13 @@ object ElementEventMap {
         ret
     }
     @scala.inline
-    def withOninput(value: Event_): Self = {
+    def withOninput(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oninput")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOninvalid(value: Event_): Self = {
+    def withOninvalid(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oninvalid")(value.asInstanceOf[js.Any])
         ret
@@ -352,31 +352,31 @@ object ElementEventMap {
         ret
     }
     @scala.inline
-    def withOnload(value: Event_): Self = {
+    def withOnload(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onload")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOnloadeddata(value: Event_): Self = {
+    def withOnloadeddata(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onloadeddata")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOnloadedmetadata(value: Event_): Self = {
+    def withOnloadedmetadata(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onloadedmetadata")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOnloadend(value: Event_): Self = {
+    def withOnloadend(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onloadend")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOnloadstart(value: Event_): Self = {
+    def withOnloadstart(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onloadstart")(value.asInstanceOf[js.Any])
         ret
@@ -436,19 +436,19 @@ object ElementEventMap {
         ret
     }
     @scala.inline
-    def withOnpause(value: Event_): Self = {
+    def withOnpause(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onpause")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOnplay(value: Event_): Self = {
+    def withOnplay(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onplay")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOnplaying(value: Event_): Self = {
+    def withOnplaying(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onplaying")(value.asInstanceOf[js.Any])
         ret
@@ -508,13 +508,13 @@ object ElementEventMap {
         ret
     }
     @scala.inline
-    def withOnratechange(value: Event_): Self = {
+    def withOnratechange(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onratechange")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOnreset(value: Event_): Self = {
+    def withOnreset(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onreset")(value.asInstanceOf[js.Any])
         ret
@@ -526,13 +526,13 @@ object ElementEventMap {
         ret
     }
     @scala.inline
-    def withOnseeked(value: Event_): Self = {
+    def withOnseeked(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onseeked")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOnseeking(value: Event_): Self = {
+    def withOnseeking(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onseeking")(value.asInstanceOf[js.Any])
         ret
@@ -544,43 +544,43 @@ object ElementEventMap {
         ret
     }
     @scala.inline
-    def withOnselectstart(value: Event_): Self = {
+    def withOnselectstart(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onselectstart")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOnstalled(value: Event_): Self = {
+    def withOnstalled(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onstalled")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOnsubmit(value: Event_): Self = {
+    def withOnsubmit(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onsubmit")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOnsuspend(value: Event_): Self = {
+    def withOnsuspend(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onsuspend")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOntimeupdate(value: Event_): Self = {
+    def withOntimeupdate(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ontimeupdate")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOnvolumechange(value: Event_): Self = {
+    def withOnvolumechange(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onvolumechange")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOnwaiting(value: Event_): Self = {
+    def withOnwaiting(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onwaiting")(value.asInstanceOf[js.Any])
         ret

@@ -41,6 +41,7 @@
 | [activex-infopath](./a/activex-infopath) | - | - |
 | [activex-interop](./a/activex-interop) | - | - |
 | [activex-iwshruntimelibrar](./a/activex-iwshruntimelibrary) | - | - |
+| [activex-libreoffice](./a/activex-libreoffice) | - | - |
 | [activex-msforms](./a/activex-msforms) | - | - |
 | [activex-mshtml](./a/activex-mshtml) | - | - |
 | [activex-msxml2](./a/activex-msxml2) | - | - |
@@ -373,6 +374,7 @@
 | [asciify](./a/asciify) | Plain text awesomizer. A hybrid npm module and CLI | ascii, art, figlet, banner, text |
 | [asenv](./a/asenv) | NODE_ENV accessor | NODE_ENV |
 | [askmethat-rating](./a/askmethat-rating) | Simple plugin providing to use fonts as rating | rating, font, askmethat, plugin, font-awesome, glyphicon |
+| [asmcrypto_dot_js](./a/asmcrypto_dot_js) | Asm.js implementation of WebCrypto API | - |
 | [asn1](./a/asn1) | Contains parsers and serializers for ASN.1 (curren | - |
 | [asn1js](./a/asn1js) | asn1js is a pure JavaScript library implementing t | asn1, parser, asn.1, ber, der, sequence, set, bitstring, octetstring, utctime, utf8string, bmpstring, universalstring, generalizedtime |
 | [aspnet-identity-pw](./a/aspnet-identity-pw) | Utility for hashing and validating passwords using | ASP.NET, Identity, password, hash |
@@ -1139,6 +1141,7 @@
 | [combinations](./c/combinations) | find all combinations from array | combination, combo, array |
 | [combine-reducers](./c/combine-reducers) | A stand-alone, Redux compatible implementation of  | Redux, flux, combineReducers |
 | [combine-source-map](./c/combine-source-map) | Add source maps of multiple files, offset them and | source, map, sourcemap, bundle, combine, cat, sourceMappingUrl, browserify |
+| [combined-stream](./c/combined-stream) | A stream that emits multiple other streams one aft | - |
 | [combokeys](./c/combokeys) | Handles keyboard shortcuts in the browser | keyboard, shortcuts, events, browser |
 | [cometd](./c/cometd) | Comet and WebSocket library for web messaging | comet, websocket, messaging, pubsub, publish, subscribe, rpc, p2p, peer-to-peer |
 | [command-exists](./c/command-exists) | check whether a command line command exists in the | cli, command, exists |
@@ -1229,7 +1232,6 @@
 | [continuation-local-storag](./c/continuation-local-storage) | userland implementation of https://github.com/joye | threading, shared, context, domains, tracing, logging |
 | [contract-proxy-kit](./c/contract-proxy-kit) | Enable batched transactions and contract account i | gnosis, safe, proxy, sdk, ethereum, smart, contract, batch, transaction, wallet |
 | [conventional-changelog-co](./c/conventional-changelog-config-spec) | a spec describing the config options supported by  | conventional-changelog, conventional, changelog, spec |
-| [conventional-changelog-wr](./c/conventional-changelog-writer) | Write logs based on conventional commits and templ | conventional-changelog-writer, changelog, conventional, commits, templates, writer, writing, logs |
 | [conventional-commits-pars](./c/conventional-commits-parser) | Parse raw conventional commits | conventional-commits-parser, changelog, conventional, parser, parsing, logs |
 | [conventional-recommended-](./c/conventional-recommended-bump) | Get a recommended version bump based on convention | conventional-recommended-bump, recommend, conventional, bump |
 | [convert-hrtime](./c/convert-hrtime) | Convert the result of process.hrtime() to seconds, | process, hrtime, time, highres, perf, performance, bench, benchmark, measure, seconds, milliseconds, nanoseconds |
@@ -1641,7 +1643,6 @@
 | [docx-templates](./d/docx-templates) | Template-based docx report creation | docx, office, word, ms-word, report, template |
 | [dogapi](./d/dogapi) | Datadog API Node.JS Client | datadog, api, datadog api, dog, dogapi, dog api |
 | [doge-seed](./d/doge-seed) | Dank mnemonic seed phrases | bitcoin, cryptocurrency, seed, phrase, bip39 |
-| [dojo](./d/dojo) | Dojo core is a powerful, lightweight library that  | JavaScript, Dojo, Toolkit |
 | [dom-align](./d/dom-align) | Align DOM Node Flexibly | dom, align |
 | [dom-clipboard-api](./d/dom-clipboard-api) | - | - |
 | [dom-helpers](./d/dom-helpers) | tiny modular DOM lib for ie9+ | dom-helpers, react-component, dom, api, cross-browser, style, event, height, width, dom-helpers, class, classlist, css |
@@ -1947,7 +1948,6 @@
 | [esm](./e/esm) | Tomorrow's ECMAScript modules today | commonjs, ecmascript, export, import, modules, node, require |
 | [esprima](./e/esprima) | ECMAScript parsing infrastructure for multipurpose | ast, ecmascript, esprima, javascript, parser, syntax |
 | [esprima-walk](./e/esprima-walk) | Walk the primary nodes of an esprima parse tree -  | esprima, parse, parser, source, code, ast, syntax, tree, walk, walker, traverse, fast, quick, quickly, performant, performance |
-| [espruino](./e/espruino) | Command Line Interface and library for Communicati | espruino, microcontroller, uc, embedded |
 | [esquery](./e/esquery) | A query library for ECMAScript AST using a CSS sel | ast, ecmascript, javascript, query |
 | [esrever](./e/esrever) | A fully Unicode-aware string reverser written in J | string, reverse, unicode |
 | [esri-leaflet](./e/esri-leaflet) | Leaflet plugins for consuming ArcGIS Online and Ar | arcgis, esri, esri leaflet, gis, leaflet plugin, mapping |
@@ -2701,6 +2701,7 @@
 | [google-cloud__precise-dat](./g/google-cloud__precise-date) | A simple utility for precise-dateing functions and | nano, date, time, precise |
 | [google-cloud__projectify](./g/google-cloud__projectify) | A simple utility for replacing the projectid token | - |
 | [google-cloud__promisify](./g/google-cloud__promisify) | A simple utility for promisifying functions and cl | - |
+| [google-cloud__pubsub](./g/google-cloud__pubsub) | Cloud Pub/Sub Client Library for Node.js | google apis client, google api client, google apis, google api, google, google cloud platform, google cloud, cloud, google pubsub, pubsub |
 | [google-cloud__storage](./g/google-cloud__storage) | Cloud Storage Client Library for Node.js | google apis client, google api client, google apis, google api, google, google cloud platform, google cloud, cloud, google storage, storage |
 | [google-cloud__tasks](./g/google-cloud__tasks) | Cloud Tasks API client for Node.js | google apis client, google api client, google apis, google api, google, google cloud platform, google cloud, cloud, google cloud-tasks, cloud-tasks, Cloud Tasks API |
 | [google-cloud__text-to-spe](./g/google-cloud__text-to-speech) | Cloud Text-to-Speech API client for Node.js | google apis client, google api client, google apis, google api, google, google cloud platform, google cloud, cloud, google texttospeech, texttospeech, Cloud Text-to-Speech API |
@@ -2708,6 +2709,7 @@
 | [google-drive-realtime-api](./g/google-drive-realtime-api) | - | - |
 | [google-earth](./g/google-earth) | - | - |
 | [google-fonts](./g/google-fonts) | A small helper library for embedding Google Fonts  | google, fonts, webfonts, inline, embed, append |
+| [google-gax](./g/google-gax) | Google API Extensions | grpc |
 | [google-images](./g/google-images) | Search images using Google Custom Search Engine AP | google, images, google images, image search |
 | [google-libphonenumber](./g/google-libphonenumber) | The up-to-date and reliable Google's libphonenumbe | browserify, e164, format, formatting, international, libphonenumber, number, phone, phonenumber, rfc3966, standardize, wrapper |
 | [google-map-react](./g/google-map-react) | isomorphic google map react component, allows rend | react, reactjs, google, map, maps, isomorphic, render, component, javascript, react-component |
@@ -2726,7 +2728,6 @@
 | [google_dot_picker](./g/google_dot_picker) | - | - |
 | [google_dot_script_dot_cli](./g/google_dot_script_dot_client-side) | - | - |
 | [google_dot_visualization](./g/google_dot_visualization) | - | - |
-| [googleapis](./g/googleapis) | Google APIs Client Library for Node.js | google, api, google apis, client, client library |
 | [googleapis-common](./g/googleapis-common) | A common tooling library used by the googleapis np | - |
 | [googlemaps](./g/googlemaps) | A simple way to query the Google Maps API from Nod | map, geo, google, api, googlemaps, google maps, google-maps, node google maps |
 | [googlemaps_dot_infobubble](./g/googlemaps_dot_infobubble) | - | - |
@@ -2792,6 +2793,7 @@
 | [growing-io](./g/growing-io) | - | - |
 | [grpc](./g/grpc) | gRPC Library for Node | - |
 | [grpc-error](./g/grpc-error) | Utility Error class suitable for gRPC error respon | protocol buffer, protobuf, grpc |
+| [grpc__grpc-js](./g/grpc__grpc-js) | gRPC Library for Node - pure JS implementation | - |
 | [grpc__proto-loader](./g/grpc__proto-loader) | gRPC utility library for loading .proto files | - |
 | [grunt](./g/grunt) | The JavaScript Task Runner | task, async, cli, minify, uglify, build, lodash, unit, test, qunit, nodeunit, server, init, scaffold, make, jake, tool |
 | [gsap](./g/gsap) | GSAP is a JavaScript library for building high-per | GSAP, GreenSock, animation, MotionPathPlugin, motion, motionPath, easing, JavaScript, PixiPlugin, CustomEase, SVG, 3D, 2D, transform, morph, morphing, tweening |
@@ -3170,6 +3172,7 @@
 | [imgur-rest-api](./i/imgur-rest-api) | - | - |
 | [immediate](./i/immediate) | A cross browser microtask library | - |
 | [immer](./i/immer) | Create your next immutable state by mutating the c | immutable, mutable, copy-on-write |
+| [immutability-helper](./i/immutability-helper) | mutate a copy of data without changing the origina | immutability |
 | [immutable](./i/immutable) | Immutable Data Collections | immutable, persistent, lazy, data, datastructure, functional, collection, stateless, sequence, iteration |
 | [imperium](./i/imperium) | Imperium is a role-based user's authorizations (AC | node acl, acl, auth, authorization, user acl, security, imperium |
 | [import-fresh](./i/import-fresh) | Import a module while bypassing the cache | require, cache, uncache, uncached, module, fresh, bypass |
@@ -3519,6 +3522,7 @@
 | [jimp__png](./j/jimp__png) | Default Jimp png encoder/decoder. | - |
 | [jimp__tiff](./j/jimp__tiff) | Default Jimp tiff encoder/decoder. | - |
 | [jimp__types](./j/jimp__types) | Default Jimp encoder/decoders. | - |
+| [jimp__utils](./j/jimp__utils) | Utils for jimp extensions. | - |
 | [jira-client](./j/jira-client) | Wrapper for the JIRA API | - |
 | [jju](./j/jju) | a set of utilities to work with JSON / JSON5 docum | json, json5, parser, serializer, data |
 | [jjv](./j/jjv) | A simple and extensible json-schema validator writ | - |
@@ -3529,6 +3533,7 @@
 | [joi](./j/joi) | Object schema validation | hapi, schema, validation |
 | [joi-password-complexity](./j/joi-password-complexity) | Joi validation for password complexity requirement | Joi, validation, password, complexity |
 | [joigoose](./j/joigoose) | Joi validation for your Mongoose models without th | joi, mongoose, validation, schema, model, hapi |
+| [jointjs](./j/jointjs) | JavaScript diagramming library | diagram, flowchart, graph, visualization |
 | [josa](./j/josa) | Handles josa selection for dynamically generated s | 한글, 한국어, 문법, 조사, Korean, Hangul, Hangeul, syntax, grammar, josa |
 | [jose](./j/jose) | JSON Web Almost Everything - JWA, JWS, JWE, JWK, J | access token, access_token, compact, decode, decrypt, ec, ecdsa, eddsa, electron, encrypt, flattened, general, id token, id_token, jose, json web token, jsonwebtoken, jwa, jwe, jwk, jwks, jws, jwt, logout token, logout_token, oct, okp, rsa, secp256k1, sign, validate, verify |
 | [jotform-css_dot_js](./j/jotform-css_dot_js) | A lightweight, battle tested, fast, CSS parser in  | - |
@@ -4153,7 +4158,6 @@
 | [ldapjs-client](./l/ldapjs-client) | LDAP js client | LDAP, ldap, client, simple, promised, async |
 | [ldclient-js](./l/ldclient-js) | LaunchDarkly SDK for JavaScript | launchdarkly, analytics, client |
 | [ldclient-js-common](./l/ldclient-js-common) | LaunchDarkly SDK for JavaScript - common code | launchdarkly, analytics, client |
-| [leadfoot](./l/leadfoot) | Leadfoot. A JavaScript client library that brings  | javascript, test, functional, selenium, webdriver, sauce labs, browserstack, testingbot |
 | [leaflet](./l/leaflet) | JavaScript library for mobile-friendly interactive | gis, map |
 | [leaflet-areaselect](./l/leaflet-areaselect) | - | - |
 | [leaflet-curve](./l/leaflet-curve) | A Leaflet plugin for drawing Bézier curves and oth | leaflet, Bezier, curve, SVG |
@@ -4789,6 +4793,7 @@
 | [merge-objects](./m/merge-objects) | Merge two objects and concatenate arrays that are  | merge, object, extend, concat, array, mixin |
 | [merge-stream](./m/merge-stream) | Create a stream that emits events from multiple ot | - |
 | [merge2](./m/merge2) | Merge multiple streams into one stream in sequence | merge2, multiple, sequence, parallel, merge, stream, merge stream, sync |
+| [mergerino](./m/mergerino) | immutable state merge util | immutable, merge, state |
 | [merkle](./m/merkle) | Javascript implementation of merkle trees | hash trees, cryptography |
 | [mermaid](./m/mermaid) | Markdownish syntax for generating flowcharts, sequ | diagram, markdown, flowchart, sequence diagram, gantt, class diagram, git graph |
 | [mersenne-twister](./m/mersenne-twister) | Mersenne twister pseudorandom number generator | random, mersenne, twister, mersennetwister, generator, seed |
@@ -6081,6 +6086,7 @@
 | [rangyinputs](./r/rangyinputs) | A small jQuery plug-in for selection and caret man | input, selection, caret, textarea, jquery |
 | [ranjs](./r/ranjs) | Library for generating various random variables. | random, generator, distributions, mcmc, statistics, test |
 | [raphael](./r/raphael) | JavaScript Vector Library | svg, vml, javascript |
+| [rappid](./r/rappid) | - | - |
 | [rascal](./r/rascal) | A config driven wrapper for amqplib supporting mul | amqplib, amqp, rabbitmq, callback, promise, await, async |
 | [rasha](./r/rasha) | 💯 PEM-to-JWK and JWK-to-PEM for RSA keys in a lig | zero-dependency, PEM-to-JWK, JWK-to-PEM, RSA, 2048, 4096, asn1, x509, JWK-to-SSH, PEM-to-SSH |
 | [raspi](./r/raspi) | Provides access to Raspberry Pi peripherals from N | raspberry pi, robotics, nodebots |
@@ -6375,6 +6381,10 @@
 | [react-input-calendar](./r/react-input-calendar) | Datepicker widget react component | react, datepicker, calendar, input-datepicker, input-calendar, react-input-calendar, react-calendar, react-datepicker, react-component |
 | [react-input-mask](./r/react-input-mask) | Masked input component for React | react, input, mask, masked, react-component |
 | [react-inspector](./r/react-inspector) | Power of Browser DevTools inspectors right inside  | devtools, inspector, object, object-inspector, react, react-component, reactjs, table, table-inspector, table-view, tableview, tree, tree-view, treeview, ui, view |
+| [react-instantsearch](./r/react-instantsearch) | ⚡ Lightning-fast search for React and React Native | algolia, components, fast, instantsearch, react, react-dom, react-native, search |
+| [react-instantsearch-core](./r/react-instantsearch-core) | ⚡ Lightning-fast search for React, by Algolia | algolia, components, fast, instantsearch, react, search |
+| [react-instantsearch-dom](./r/react-instantsearch-dom) | ⚡ Lightning-fast search for React DOM, by Algolia | algolia, components, fast, instantsearch, react, react-dom, search |
+| [react-instantsearch-nativ](./r/react-instantsearch-native) | ⚡ Lightning-fast search for React Native, by Algol | algolia, components, fast, instantsearch, react, react-native, search |
 | [react-interactive](./r/react-interactive) | React Interactive | react, interactive, touch, hover, active, focus, keyboard |
 | [react-intl](./r/react-intl) | Internationalize React apps. This library provides | intl, i18n, internationalization, locale, localization, globalization, react, reactjs, format, formatting, translate, translation |
 | [react-intl-redux](./r/react-intl-redux) | Redux binding for React Intl | react, reactjs, react-intl, react-redux, intl, i18n, redux |
@@ -6424,6 +6434,7 @@
 | [react-mixin](./r/react-mixin) | - | react, mixin, es6, class, smart-mixin |
 | [react-modal](./r/react-modal) | Accessible modal dialog component for React.JS | react, react-component, modal, dialog |
 | [react-monaco-editor](./r/react-monaco-editor) | Monaco Editor for React | monaco, editor, react, vscode |
+| [react-mosaic-component](./r/react-mosaic-component) | A React Tiling Window Manager | ui, react, component, typescript, tiling-window-manager, window-manager |
 | [react-motion](./r/react-motion) | A spring that solves your animation problems. | react, component, react-component, transitiongroup, spring, tween, motion, animation, transition, ui |
 | [react-motion-loop](./r/react-motion-loop) | Looping animation for react-motion Spring | component, react-component, react, react-motion, loop-animation |
 | [react-motion-slider](./r/react-motion-slider) | Slider/Carousel powered by React Motion. | react, component, slider, carousel |
@@ -7041,6 +7052,7 @@
 | [rox-node](./r/rox-node) | Rollout.io ROX JS SDK Node | feature-flag, feature-flags, remote-configuration, remote-variable, rollout, rox, flags, flag, configuration, remote-control, rollout.io |
 | [rox-react-native](./r/rox-react-native) | Rollout.io ROX JS SDK Client | feature-flag, feature-flags, remote-configuration, remote-variable, rollout, rox, flags, flag, configuration, remote-control, rollout.io |
 | [royalslider](./r/royalslider) | - | - |
+| [rpio](./r/rpio) | High performance GPIO/i2c/PWM/SPI module for Raspb | bcm2835, gpio, gpiomem, i2c, mmap, pi, pwm, raspberry, raspberrypi, raspberry pi, rpi, spi |
 | [rrc](./r/rrc) | React Router v4 helper components | react-router, context, component |
 | [rrule](./r/rrule) | JavaScript library for working with recurrence rul | dates, recurrences, calendar, icalendar, rfc |
 | [rsmq](./r/rsmq) | A really simple message queue based on Redis | queue, messagequeue, jobs, message-queue, redis |
@@ -8572,7 +8584,6 @@
 | [worker-threads-pool](./w/worker-threads-pool) | Easily manage a pool of Node.js Worker Threads | pool, worker, workers, thread, threads, worker_threads, parallel |
 | [workerpool](./w/workerpool) | Offload tasks to a pool of workers on node.js and  | worker, web worker, cluster, pool, isomorphic |
 | [wouter](./w/wouter) | A minimalistic routing for React and Preact. Nothi | react, preact, router, tiny, routing, hooks, useLocation |
-| [wpapi](./w/wpapi) | An isomorphic JavaScript client for interacting wi | api, client, cms, wordpress |
 | [wrap-ansi](./w/wrap-ansi) | Wordwrap a string with ANSI escape codes | wrap, break, wordwrap, wordbreak, linewrap, ansi, styles, color, colour, colors, terminal, console, cli, string, tty, escape, formatting, rgb, 256, shell, xterm, log, logging, command-line, text |
 | [wreck](./w/wreck) | HTTP Client Utilities | utilities, http, client |
 | [wrench](./w/wrench) | Recursive filesystem (and other) operations that N | - |
@@ -8590,6 +8601,7 @@
 | [wx-server-sdk](./w/wx-server-sdk) | mini program cloud server sdk | - |
 | [wyt](./w/wyt) | A time-based rate limiter using promises | throttle, throttling, time, interval, rate limit, rate-limit, ratelimit, rate, limit, limiter, promise, concurrency, async, await, bottleneck |
 | [x-editable](./x/x-editable) | In-place editing with Twitter Bootstrap, jQuery UI | - |
+| [x-ray](./x/x-ray) | structure any website | api, cheerio, scrape, scraper, structure, web |
 | [x-ray-crawler](./x/x-ray-crawler) | x-ray's crawler | x-ray, crawler, request, scrape, scraper |
 | [x2js](./x/x2js) | Transforms between XML string and JavaScript objec | xml, convert, transform, mapping, map |
 | [x509_dot_js](./x/x509_dot_js) | parsing of x509 certificates and keys in javascrip | x509, ssl, certificates |

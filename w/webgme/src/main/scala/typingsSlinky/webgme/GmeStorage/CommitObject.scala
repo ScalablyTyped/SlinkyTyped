@@ -1,12 +1,13 @@
 package typingsSlinky.webgme.GmeStorage
 
 import typingsSlinky.webgme.Core.ObjectHash
+import typingsSlinky.webgme.GmeCommon.LoadObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CommitObject extends js.Object {
+trait CommitObject extends LoadObject {
   /**
     * Hash of the commit object, a.k.a commitHash.
     */

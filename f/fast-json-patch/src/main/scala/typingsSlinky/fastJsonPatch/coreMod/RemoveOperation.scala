@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RemoveOperation
   extends BaseOperation
-     with _Operation {
+     with Operation {
   var op: remove = js.native
 }
 

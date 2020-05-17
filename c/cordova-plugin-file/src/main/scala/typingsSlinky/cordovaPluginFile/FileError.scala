@@ -1,6 +1,5 @@
 package typingsSlinky.cordovaPluginFile
 
-import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,20 +10,25 @@ trait FileError extends js.Object {
   var code: Double = js.native
 }
 
-@JSGlobal("FileError")
-@js.native
-object FileError extends Instantiable1[/* code */ Double, FileError] {
-  var ABORT_ERR: Double = js.native
-  var ENCODING_ERR: Double = js.native
-  var INVALID_MODIFICATION_ERR: Double = js.native
-  var INVALID_STATE_ERR: Double = js.native
-  var NOT_FOUND_ERR: Double = js.native
-  var NOT_READABLE_ERR: Double = js.native
-  var NO_MODIFICATION_ALLOWED_ERR: Double = js.native
-  var PATH_EXISTS_ERR: Double = js.native
-  var QUOTA_EXCEEDED_ERR: Double = js.native
-  var SECURITY_ERR: Double = js.native
-  var SYNTAX_ERR: Double = js.native
-  var TYPE_MISMATCH_ERR: Double = js.native
+object FileError {
+  @scala.inline
+  def apply(code: Double): FileError = {
+    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FileError]
+  }
+  @scala.inline
+  implicit class FileErrorOps[Self <: FileError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

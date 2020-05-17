@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   type Firebase = typingsSlinky.reactNativeFirebase.mod.Firebase_
-  type FirebaseModuleAndStatics[M, S] = typingsSlinky.reactNativeFirebase.AnonCall[M] with S
+  type FirebaseModuleAndStatics[M, S] = typingsSlinky.reactNativeFirebase.anon.Call[M] with S
 }

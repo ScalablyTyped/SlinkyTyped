@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data about an ItemRemoved event. */
-@JSGlobal("Windows.Storage.AccessCache.ItemRemovedEventArgs")
 @js.native
-abstract class ItemRemovedEventArgs () extends js.Object {
+trait ItemRemovedEventArgs extends js.Object {
   /** Gets information about the StorageFile or StorageFolder that was removed from the StorageItemMostRecentlyUsedList . */
   var removedEntry: AccessListEntry = js.native
+}
+
+object ItemRemovedEventArgs {
+  @scala.inline
+  def apply(removedEntry: AccessListEntry): ItemRemovedEventArgs = {
+    val __obj = js.Dynamic.literal(removedEntry = removedEntry.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ItemRemovedEventArgs]
+  }
+  @scala.inline
+  implicit class ItemRemovedEventArgsOps[Self <: ItemRemovedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRemovedEntry(value: AccessListEntry): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removedEntry")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

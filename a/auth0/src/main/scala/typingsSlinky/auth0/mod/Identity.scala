@@ -1,6 +1,6 @@
 package typingsSlinky.auth0.mod
 
-import typingsSlinky.auth0.AnonEmail
+import typingsSlinky.auth0.anon.Email
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait Identity extends js.Object {
   var access_token: js.UndefOr[String] = js.native
   var connection: String = js.native
   var isSocial: Boolean = js.native
-  var profileData: js.UndefOr[AnonEmail] = js.native
+  var profileData: js.UndefOr[Email] = js.native
   var provider: String = js.native
   var user_id: String = js.native
 }
@@ -64,7 +64,7 @@ object Identity {
         ret
     }
     @scala.inline
-    def withProfileData(value: AnonEmail): Self = {
+    def withProfileData(value: Email): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("profileData")(value.asInstanceOf[js.Any])
         ret

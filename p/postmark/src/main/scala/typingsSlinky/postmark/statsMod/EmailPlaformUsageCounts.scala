@@ -1,13 +1,13 @@
 package typingsSlinky.postmark.statsMod
 
-import typingsSlinky.postmark.AnonDesktop
+import typingsSlinky.postmark.anon.Desktop
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait EmailPlaformUsageCounts extends js.Object {
-  var Days: js.Array[AnonDesktop] = js.native
+  var Days: js.Array[Desktop] = js.native
   var Desktop: js.UndefOr[Double] = js.native
   var Mobile: js.UndefOr[Double] = js.native
   var Unknown: js.UndefOr[Double] = js.native
@@ -16,7 +16,7 @@ trait EmailPlaformUsageCounts extends js.Object {
 
 object EmailPlaformUsageCounts {
   @scala.inline
-  def apply(Days: js.Array[AnonDesktop]): EmailPlaformUsageCounts = {
+  def apply(Days: js.Array[Desktop]): EmailPlaformUsageCounts = {
     val __obj = js.Dynamic.literal(Days = Days.asInstanceOf[js.Any])
     __obj.asInstanceOf[EmailPlaformUsageCounts]
   }
@@ -27,7 +27,7 @@ object EmailPlaformUsageCounts {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDays(value: js.Array[AnonDesktop]): Self = {
+    def withDays(value: js.Array[Desktop]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Days")(value.asInstanceOf[js.Any])
         ret

@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait ArrayBindingOrAssignmentPattern extends BindingOrAssignmentPattern
 
+object ArrayBindingOrAssignmentPattern {
+  @scala.inline
+  implicit def apply(value: ArrayBindingPattern): ArrayBindingOrAssignmentPattern = value.asInstanceOf[ArrayBindingOrAssignmentPattern]
+  @scala.inline
+  implicit def apply(value: ArrayLiteralExpression): ArrayBindingOrAssignmentPattern = value.asInstanceOf[ArrayBindingOrAssignmentPattern]
+}
+

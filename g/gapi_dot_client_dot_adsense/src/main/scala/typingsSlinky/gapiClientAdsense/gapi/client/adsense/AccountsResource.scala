@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientAdsense.gapi.client.adsense
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAdsense.AnonAlt
-import typingsSlinky.gapiClientAdsense.AnonTree
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAdsense.anon.Alt
+import typingsSlinky.gapiClientAdsense.anon.Tree
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +18,9 @@ trait AccountsResource extends js.Object {
   var savedadstyles: SavedadstylesResource = js.native
   var urlchannels: UrlchannelsResource = js.native
   /** Get information about the selected AdSense account. */
-  def get(request: AnonTree): Request_[Account] = js.native
+  def get(request: Tree): Request[Account] = js.native
   /** List all accounts available to this AdSense account. */
-  def list(request: AnonAlt): Request_[Accounts] = js.native
+  def list(request: Alt): Request[Accounts] = js.native
 }
 
 object AccountsResource {
@@ -30,8 +30,8 @@ object AccountsResource {
     adunits: AdunitsResource,
     alerts: AlertsResource,
     customchannels: CustomchannelsResource,
-    get: AnonTree => Request_[Account],
-    list: AnonAlt => Request_[Accounts],
+    get: Tree => Request[Account],
+    list: Alt => Request[Accounts],
     payments: PaymentsResource,
     reports: ReportsResource,
     savedadstyles: SavedadstylesResource,
@@ -71,13 +71,13 @@ object AccountsResource {
         ret
     }
     @scala.inline
-    def withGet(value: AnonTree => Request_[Account]): Self = {
+    def withGet(value: Tree => Request[Account]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonAlt => Request_[Accounts]): Self = {
+    def withList(value: Alt => Request[Accounts]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

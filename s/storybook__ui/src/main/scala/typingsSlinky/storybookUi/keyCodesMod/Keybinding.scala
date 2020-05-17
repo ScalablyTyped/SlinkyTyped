@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait Keybinding extends js.Object
 
+object Keybinding {
+  @scala.inline
+  implicit def apply(value: ChordKeybinding): Keybinding = value.asInstanceOf[Keybinding]
+  @scala.inline
+  implicit def apply(value: SimpleKeybinding): Keybinding = value.asInstanceOf[Keybinding]
+}
+

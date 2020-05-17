@@ -1,0 +1,131 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.awt.grid
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * An interface to a control that displays a tabular data.
+  * @see UnoControlGrid
+  * @since OOo 3.3
+  */
+@js.native
+trait XGridControl extends js.Object {
+  /**
+    * returns the column index of the currently active cell
+    *
+    * If the grid control's does not contain any cells (which happens if the grid column model does not contain any columns, or if grid data model does not
+    * contain any rows), then `-1` is returned.
+    */
+  val CurrentColumn: Double = js.native
+  /**
+    * returns the row index of the currently active cell
+    *
+    * If the grid control's does not contain any cells (which happens if the grid column model does not contain any columns, or if grid data model does not
+    * contain any rows), then `-1` is returned.
+    */
+  val CurrentRow: Double = js.native
+  /**
+    * retrieves the column which a given point belongs to
+    * @param X the ordinate of the point, in pixel coordinates.
+    * @param Y the abscissa of the point, in pixel coordinates.
+    * @returns the index of the column which the point lies in, or -1 if no column is under the given point.
+    */
+  def getColumnAtPoint(X: Double, Y: Double): Double = js.native
+  /**
+    * returns the column index of the currently active cell
+    *
+    * If the grid control's does not contain any cells (which happens if the grid column model does not contain any columns, or if grid data model does not
+    * contain any rows), then `-1` is returned.
+    */
+  def getCurrentColumn(): Double = js.native
+  /**
+    * returns the row index of the currently active cell
+    *
+    * If the grid control's does not contain any cells (which happens if the grid column model does not contain any columns, or if grid data model does not
+    * contain any rows), then `-1` is returned.
+    */
+  def getCurrentRow(): Double = js.native
+  /**
+    * retrieves the row which a given point belongs to
+    * @param X the ordinate of the point, in pixel coordinates.
+    * @param Y the abscissa of the point, in pixel coordinates.
+    * @returns the index of the row which the point lies in, or -1 if no row is under the given point.
+    */
+  def getRowAtPoint(X: Double, Y: Double): Double = js.native
+  /**
+    * moves the cursor to the given cell
+    * @param ColumnIndex the column index of the cell to activate.
+    * @param RowIndex the row index of the cell to activate.
+    * @throws com::sun::star::lang::IndexOutOfBoundsException if either `ColumnIndex` or `RowIndex` are out of range.
+    * @throws com::sun::star::util::VetoException if moving the cursor to another cell is vetoed.
+    */
+  def goToCell(ColumnIndex: Double, RowIndex: Double): Unit = js.native
+}
+
+object XGridControl {
+  @scala.inline
+  def apply(
+    CurrentColumn: Double,
+    CurrentRow: Double,
+    getColumnAtPoint: (Double, Double) => Double,
+    getCurrentColumn: () => Double,
+    getCurrentRow: () => Double,
+    getRowAtPoint: (Double, Double) => Double,
+    goToCell: (Double, Double) => Unit
+  ): XGridControl = {
+    val __obj = js.Dynamic.literal(CurrentColumn = CurrentColumn.asInstanceOf[js.Any], CurrentRow = CurrentRow.asInstanceOf[js.Any], getColumnAtPoint = js.Any.fromFunction2(getColumnAtPoint), getCurrentColumn = js.Any.fromFunction0(getCurrentColumn), getCurrentRow = js.Any.fromFunction0(getCurrentRow), getRowAtPoint = js.Any.fromFunction2(getRowAtPoint), goToCell = js.Any.fromFunction2(goToCell))
+    __obj.asInstanceOf[XGridControl]
+  }
+  @scala.inline
+  implicit class XGridControlOps[Self <: XGridControl] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrentColumn(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentRow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CurrentRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetColumnAtPoint(value: (Double, Double) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getColumnAtPoint")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetCurrentColumn(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentColumn")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetCurrentRow(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentRow")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRowAtPoint(value: (Double, Double) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRowAtPoint")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGoToCell(value: (Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("goToCell")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
+}
+

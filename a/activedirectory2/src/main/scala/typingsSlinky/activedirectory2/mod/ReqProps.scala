@@ -1,11 +1,11 @@
 package typingsSlinky.activedirectory2.mod
 
-import typingsSlinky.activedirectory2.AnonCa
 import typingsSlinky.activedirectory2.activedirectory2Numbers.`0`
 import typingsSlinky.activedirectory2.activedirectory2Numbers.`10`
 import typingsSlinky.activedirectory2.activedirectory2Strings.base
 import typingsSlinky.activedirectory2.activedirectory2Strings.one
 import typingsSlinky.activedirectory2.activedirectory2Strings.sub
+import typingsSlinky.activedirectory2.anon.Ca
 import typingsSlinky.ldapjs.mod.Filter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -32,7 +32,7 @@ object ReqProps {
     includeMembership: js.Array[MembershipType],
     sizeLimit: `0`,
     timeLimit: `10`,
-    tlsOptions: AnonCa,
+    tlsOptions: Ca,
     url: String
   ): ReqProps = {
     val __obj = js.Dynamic.literal(attributes = attributes.asInstanceOf[js.Any], filter = filter.asInstanceOf[js.Any], includeMembership = includeMembership.asInstanceOf[js.Any], sizeLimit = sizeLimit.asInstanceOf[js.Any], timeLimit = timeLimit.asInstanceOf[js.Any], tlsOptions = tlsOptions.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])

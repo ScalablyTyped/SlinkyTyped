@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SqlQuerySpec extends js.Object {
+trait SqlQuerySpec extends DocumentQuery {
   /** The array of SqlParameters. */
   var parameters: js.Array[SqlParameter] = js.native
   /** The body of the query. */

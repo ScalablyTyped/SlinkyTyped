@@ -5,24 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("sap.ui.model.analytics.odata4analytics.DimensionMemberSetRequest")
 @js.native
-class DimensionMemberSetRequest protected () extends js.Object {
-  /**
-    * Create a request object for interaction with a dimension value help. Such avalue help is served by
-    * either the query result entity set, in which case thereturned dimension members are limited to those
-    * also used in the query resultdata. Or, the value help is populated by a master data entity set, if
-    * madeavailable by the service. In this case, the result will include all validmembers for that
-    * dimension.
-    * @param oDimension Description of a dimension
-    * @param oParameterizationRequest (optional) Request object for           interactions with the
-    * parameterization of the query result or (not           yet supported) master data entity set Such an
-    * object is required           if the entity set holding the dimension members includes          
-    * parameters.
-    * @param bUseMasterData (optional) Indicates use of master data for           determining the
-    * dimension members.
-    */
-  def this(oDimension: Dimension, oParameterizationRequest: ParameterizationRequest, bUseMasterData: Boolean) = this()
+trait DimensionMemberSetRequest extends js.Object {
   /**
     * Get the filter expression for this request.Expressions are represented by separate objects. If none
     * exists so far, anew expression object gets created.
@@ -97,5 +81,99 @@ class DimensionMemberSetRequest protected () extends js.Object {
     * @param oSorter The sort object to be associated with this request.
     */
   def setSortExpression(oSorter: SortExpression): Unit = js.native
+}
+
+object DimensionMemberSetRequest {
+  @scala.inline
+  def apply(
+    getFilterExpression: () => FilterExpression,
+    getResultPageBoundaries: () => js.Any,
+    getSortExpression: () => SortExpression,
+    getURIQueryOptionValue: String => String,
+    getURIToDimensionMemberEntitySet: String => String,
+    getURIToDimensionMemberEntries: String => String,
+    setFilterExpression: FilterExpression => Unit,
+    setParameterizationRequest: js.Any => Unit,
+    setRequestOptions: Boolean => Unit,
+    setResultPageBoundaries: (Number, Number) => Unit,
+    setSortExpression: SortExpression => Unit
+  ): DimensionMemberSetRequest = {
+    val __obj = js.Dynamic.literal(getFilterExpression = js.Any.fromFunction0(getFilterExpression), getResultPageBoundaries = js.Any.fromFunction0(getResultPageBoundaries), getSortExpression = js.Any.fromFunction0(getSortExpression), getURIQueryOptionValue = js.Any.fromFunction1(getURIQueryOptionValue), getURIToDimensionMemberEntitySet = js.Any.fromFunction1(getURIToDimensionMemberEntitySet), getURIToDimensionMemberEntries = js.Any.fromFunction1(getURIToDimensionMemberEntries), setFilterExpression = js.Any.fromFunction1(setFilterExpression), setParameterizationRequest = js.Any.fromFunction1(setParameterizationRequest), setRequestOptions = js.Any.fromFunction1(setRequestOptions), setResultPageBoundaries = js.Any.fromFunction2(setResultPageBoundaries), setSortExpression = js.Any.fromFunction1(setSortExpression))
+    __obj.asInstanceOf[DimensionMemberSetRequest]
+  }
+  @scala.inline
+  implicit class DimensionMemberSetRequestOps[Self <: DimensionMemberSetRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetFilterExpression(value: () => FilterExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFilterExpression")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetResultPageBoundaries(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getResultPageBoundaries")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSortExpression(value: () => SortExpression): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSortExpression")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetURIQueryOptionValue(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getURIQueryOptionValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetURIToDimensionMemberEntitySet(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getURIToDimensionMemberEntitySet")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetURIToDimensionMemberEntries(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getURIToDimensionMemberEntries")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetFilterExpression(value: FilterExpression => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFilterExpression")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetParameterizationRequest(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setParameterizationRequest")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetRequestOptions(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setRequestOptions")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetResultPageBoundaries(value: (Number, Number) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setResultPageBoundaries")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetSortExpression(value: SortExpression => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSortExpression")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

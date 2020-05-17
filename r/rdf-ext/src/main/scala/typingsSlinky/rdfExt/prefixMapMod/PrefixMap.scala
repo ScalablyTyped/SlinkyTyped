@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PrefixMap extends js.Object {
+trait PrefixMap extends Prefixes {
   var factory: DataFactory[Quad, Quad] = js.native
   var map: Record[String, NamedNode] = js.native
   def addAll(prefixes: PrefixesRecord): this.type = js.native

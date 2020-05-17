@@ -1,6 +1,6 @@
 package typingsSlinky.sipJs.messagerOptionsMod
 
-import typingsSlinky.sipJs.AnonFromDisplayName
+import typingsSlinky.sipJs.anon.FromDisplayName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait MessagerOptions extends js.Object {
   /** Array of extra headers added to the MESSAGE. */
   var extraHeaders: js.UndefOr[js.Array[String]] = js.native
   /** @deprecated TODO: provide alternative. */
-  var params: js.UndefOr[AnonFromDisplayName] = js.native
+  var params: js.UndefOr[FromDisplayName] = js.native
 }
 
 object MessagerOptions {
@@ -38,7 +38,7 @@ object MessagerOptions {
         ret
     }
     @scala.inline
-    def withParams(value: AnonFromDisplayName): Self = {
+    def withParams(value: FromDisplayName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
         ret

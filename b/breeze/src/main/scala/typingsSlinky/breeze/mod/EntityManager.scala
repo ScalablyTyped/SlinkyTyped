@@ -1,6 +1,5 @@
 package typingsSlinky.breeze.mod
 
-import typingsSlinky.breeze.AnonMergeStrategy
 import typingsSlinky.breeze.breeze.EntityManagerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,8 +18,8 @@ class EntityManager ()
 @js.native
 object EntityManager extends js.Object {
   def importEntities(exportedData: js.Object): typingsSlinky.breeze.breeze.EntityManager = js.native
-  def importEntities(exportedData: js.Object, config: AnonMergeStrategy): typingsSlinky.breeze.breeze.EntityManager = js.native
+  def importEntities(exportedData: js.Object, config: typingsSlinky.breeze.anon.MergeStrategy): typingsSlinky.breeze.breeze.EntityManager = js.native
   def importEntities(exportedString: String): typingsSlinky.breeze.breeze.EntityManager = js.native
-  def importEntities(exportedString: String, config: AnonMergeStrategy): typingsSlinky.breeze.breeze.EntityManager = js.native
+  def importEntities(exportedString: String, config: typingsSlinky.breeze.anon.MergeStrategy): typingsSlinky.breeze.breeze.EntityManager = js.native
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonColorDashStyle
-import typingsSlinky.devextreme.AnonColorVisible
+import typingsSlinky.devextreme.anon.ColorDashStyle
+import typingsSlinky.devextreme.anon.ColorVisible
 import typingsSlinky.devextreme.devextremeStrings.center
 import typingsSlinky.devextreme.devextremeStrings.inside
 import typingsSlinky.devextreme.devextremeStrings.left
@@ -22,9 +22,9 @@ trait dxChartSeriesTypesCommonSeriesLabel extends js.Object {
   /** Colors the point labels' background. The default color is inherited from the points. */
   var backgroundColor: js.UndefOr[String] = js.native
   /** Configures the borders of point labels. */
-  var border: js.UndefOr[AnonColorDashStyle] = js.native
+  var border: js.UndefOr[ColorDashStyle] = js.native
   /** Configures the label connectors. */
-  var connector: js.UndefOr[AnonColorVisible] = js.native
+  var connector: js.UndefOr[ColorVisible] = js.native
   /** Customizes the text displayed by point labels. */
   var customizeText: js.UndefOr[js.Function1[/* pointInfo */ js.Any, String]] = js.native
   /** Specifies font options for point labels. */
@@ -100,7 +100,7 @@ object dxChartSeriesTypesCommonSeriesLabel {
         ret
     }
     @scala.inline
-    def withBorder(value: AnonColorDashStyle): Self = {
+    def withBorder(value: ColorDashStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
         ret
@@ -112,7 +112,7 @@ object dxChartSeriesTypesCommonSeriesLabel {
         ret
     }
     @scala.inline
-    def withConnector(value: AnonColorVisible): Self = {
+    def withConnector(value: ColorVisible): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("connector")(value.asInstanceOf[js.Any])
         ret

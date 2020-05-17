@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * The Titanium binding of [Android RemoteViews](https://developer.android.com/reference/android/widget/RemoteViews.html).
 		 */
-@JSGlobal("Titanium.Android.RemoteViews")
 @js.native
-class RemoteViews () extends Proxy {
+trait RemoteViews extends Proxy {
   /**
   			 * Android layout resource ID for the view to display. Required.
   			 */

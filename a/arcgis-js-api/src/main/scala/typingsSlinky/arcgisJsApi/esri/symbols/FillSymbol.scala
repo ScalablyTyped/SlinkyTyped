@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait FillSymbol extends js.Object
 
+object FillSymbol {
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.PictureFillSymbol): FillSymbol = value.asInstanceOf[FillSymbol]
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.SimpleFillSymbol): FillSymbol = value.asInstanceOf[FillSymbol]
+}
+

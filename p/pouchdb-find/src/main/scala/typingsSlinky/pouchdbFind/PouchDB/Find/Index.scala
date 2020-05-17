@@ -1,6 +1,6 @@
 package typingsSlinky.pouchdbFind.PouchDB.Find
 
-import typingsSlinky.pouchdbFind.AnonFields
+import typingsSlinky.pouchdbFind.anon.Fields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait Index extends js.Object {
   /** Design document name (i.e. the part after '_design/', auto-generated if you don't include it */
   var ddoc: String | Null = js.native
-  var `def`: AnonFields = js.native
+  var `def`: Fields = js.native
   /** Name of the index, auto-generated if you don't include it */
   var name: String = js.native
   /** Only supports 'json' */
@@ -18,7 +18,7 @@ trait Index extends js.Object {
 
 object Index {
   @scala.inline
-  def apply(`def`: AnonFields, name: String, `type`: String): Index = {
+  def apply(`def`: Fields, name: String, `type`: String): Index = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("def")(`def`.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
@@ -31,7 +31,7 @@ object Index {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDef(value: AnonFields): Self = {
+    def withDef(value: Fields): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("def")(value.asInstanceOf[js.Any])
         ret

@@ -5,7 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ComputedPropertyGetterObj[T] extends _ComputedPropertyObj[T] {
+trait ComputedPropertyGetterObj[T]
+  extends ComputedPropertyObj[T]
+     with ComputedPropertyGetter[T] {
   def get(key: String): T = js.native
 }
 

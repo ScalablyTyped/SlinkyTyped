@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ConstrainBooleanParameters extends js.Object {
+trait ConstrainBooleanParameters extends ConstrainBoolean {
   var exact: js.UndefOr[scala.Boolean] = js.native
   var ideal: js.UndefOr[scala.Boolean] = js.native
 }

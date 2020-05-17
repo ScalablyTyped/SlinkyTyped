@@ -1,6 +1,6 @@
 package typingsSlinky.terminalLink.mod
 
-import typingsSlinky.terminalLink.AnonCall
+import typingsSlinky.terminalLink.anon.Call
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ object ^ extends js.Object {
   	*/
   val isSupported: Boolean = js.native
   @JSName("stderr")
-  val stderr_Original: AnonCall = js.native
+  val stderr_Original: Call = js.native
   /**
   	Create a clickable link in the terminal's stdout.
   	[Supported terminals.](https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda)

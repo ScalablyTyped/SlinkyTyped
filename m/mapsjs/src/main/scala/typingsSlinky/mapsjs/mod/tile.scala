@@ -2,16 +2,16 @@ package typingsSlinky.mapsjs.mod
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.mapsjs.AnonBackgroundColorStr
-import typingsSlinky.mapsjs.AnonBleedRatio
-import typingsSlinky.mapsjs.AnonBounds
-import typingsSlinky.mapsjs.AnonColor
-import typingsSlinky.mapsjs.AnonData
-import typingsSlinky.mapsjs.AnonDataFormat
-import typingsSlinky.mapsjs.AnonDescriptor
-import typingsSlinky.mapsjs.AnonEndpointCollection
-import typingsSlinky.mapsjs.AnonGeometryFieldName
-import typingsSlinky.mapsjs.AnonRenderBitmap
+import typingsSlinky.mapsjs.anon.BackgroundColorStr
+import typingsSlinky.mapsjs.anon.BleedRatio
+import typingsSlinky.mapsjs.anon.Bounds
+import typingsSlinky.mapsjs.anon.Color
+import typingsSlinky.mapsjs.anon.Data
+import typingsSlinky.mapsjs.anon.DataFormat
+import typingsSlinky.mapsjs.anon.Descriptor
+import typingsSlinky.mapsjs.anon.EndpointCollection
+import typingsSlinky.mapsjs.anon.GeometryFieldName
+import typingsSlinky.mapsjs.anon.RenderBitmap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,13 +21,13 @@ import scala.scalajs.js.annotation._
 object tile extends js.Object {
   @js.native
   class descriptorLocal protected () extends js.Object {
-    def this(options: AnonGeometryFieldName) = this()
+    def this(options: GeometryFieldName) = this()
   }
   
   @js.native
   class descriptorMDNRestFeature protected () extends js.Object {
     def this(mapId: String, layerId: String) = this()
-    def this(mapId: String, layerId: String, options: AnonBleedRatio) = this()
+    def this(mapId: String, layerId: String, options: BleedRatio) = this()
     /**
     		 * Gets the bleed ratio.
     		 * @returns {number} The current bleed ratio.
@@ -109,7 +109,7 @@ object tile extends js.Object {
   @js.native
   class descriptorMDNRestMap protected () extends js.Object {
     def this(mapId: String) = this()
-    def this(mapId: String, options: AnonBackgroundColorStr) = this()
+    def this(mapId: String, options: BackgroundColorStr) = this()
     /**
     		 * Gets map image background color.
     		 * @returns {string} CSS style string for the map image background color.
@@ -145,7 +145,7 @@ object tile extends js.Object {
     		 * where color is the CSS style string of the outline color and 
     		 * thickness is the outline thickness in pixels.
     		 */
-    def getLayerOutline(layerId: String): AnonColor = js.native
+    def getLayerOutline(layerId: String): Color = js.native
     /**
     		 * Gets a layer's visibility.
     		 * @param {string} layerId The MapDotNet map layer ID.
@@ -333,7 +333,7 @@ object tile extends js.Object {
     		 * collection respectively, and ulX and ulY are the offset in pixels
     		 * of the upper left tile from the upper left target extents.
     		 */
-    def compose(extentsMapUnits: envelope, extentsDeviceUnits: envelope): AnonEndpointCollection = js.native
+    def compose(extentsMapUnits: envelope, extentsDeviceUnits: envelope): EndpointCollection = js.native
     /**
       * Unbind all associations with this tile layer to facilitate garbage collection
       */
@@ -517,7 +517,7 @@ object tile extends js.Object {
   
   @js.native
   class layerOptions protected () extends js.Object {
-    def this(id: String, options: AnonDescriptor) = this()
+    def this(id: String, options: Descriptor) = this()
     /**
     		 * Gets ID associated with the underlying tile layer.
     		 * @returns {string} ID of the layer.
@@ -580,7 +580,7 @@ object tile extends js.Object {
   
   @js.native
   class renderer () extends js.Object {
-    def this(options: AnonRenderBitmap) = this()
+    def this(options: RenderBitmap) = this()
     /**
     		 * Sets the render bitmap function which takes a bitmap image and
     		 * a canvas context and renders the image to the canvas context.
@@ -785,7 +785,7 @@ object tile extends js.Object {
   
   @js.native
   class requestorBing () extends requestor {
-    def this(options: AnonDataFormat) = this()
+    def this(options: DataFormat) = this()
     /**
     		 * Gets the Bing key associated with this requestor.
     		 * @returns {string} The Bing key for this requestor.
@@ -839,7 +839,7 @@ object tile extends js.Object {
   
   @js.native
   class requestorLocal () extends requestor {
-    def this(options: AnonData) = this()
+    def this(options: Data) = this()
     /** 
     		 * Returns your source data parsed into theformat { Shapes: [],
       * Values: [], Bounds: [] } This may be useful for doing client-side 
@@ -848,7 +848,7 @@ object tile extends js.Object {
       * do a quick spatial check for complex polygons.
     		 * @returns {object} Parsed data object in the form {Shapes, Values, Bounds}.
     		 */
-    def getParsedData(): AnonBounds = js.native
+    def getParsedData(): Bounds = js.native
     /** 
     		 * Gets the unparsed source data.
     		 * @returns {object} Array of source data objects.
@@ -865,7 +865,7 @@ object tile extends js.Object {
   @js.native
   class requestorMDNRest protected () extends requestor {
     def this(endpoint: String) = this()
-    def this(endpoint: String, options: AnonDataFormat) = this()
+    def this(endpoint: String, options: DataFormat) = this()
     /**
     		 * Gets uri endpoint for the MapDotNet REST service.
     		 * @returns {string} Uri endpoint for the MapDotNet REST service.
@@ -876,7 +876,7 @@ object tile extends js.Object {
   @js.native
   class requestorOpen protected () extends requestor {
     def this(endpoint: String, subdomains: js.Array[String]) = this()
-    def this(endpoint: String, subdomains: js.Array[String], options: AnonDataFormat) = this()
+    def this(endpoint: String, subdomains: js.Array[String], options: DataFormat) = this()
   }
   
   @js.native

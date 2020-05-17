@@ -1,10 +1,10 @@
 package typingsSlinky.reactBootstrapTable2Filter.mod
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactBootstrapTableNext.mod.TableColumnFilterProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait TextFilterProps[T /* <: js.Object */] extends js.Object {
   var delay: js.UndefOr[Double] = js.native
   var getFilter: js.UndefOr[js.Function1[/* filter */ TableColumnFilterProps[_, _], Unit]] = js.native
   var id: js.UndefOr[String] = js.native
-  var onClick: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event_, Element], Unit]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event, Element], Unit]] = js.native
   var onFilter: js.UndefOr[js.Function1[/* filterValue */ TableColumnFilterProps[_, _], Unit | js.Array[T]]] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var style: js.UndefOr[CSSProperties] = js.native
@@ -122,7 +122,7 @@ object TextFilterProps {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* e */ SyntheticEvent[Event_, Element] => Unit): Self[T] = {
+    def withOnClick(value: /* e */ SyntheticEvent[Event, Element] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret

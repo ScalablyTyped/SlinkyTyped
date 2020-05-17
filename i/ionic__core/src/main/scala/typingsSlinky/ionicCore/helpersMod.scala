@@ -2,7 +2,8 @@ package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.UIEvent
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonLabelElement
+import typingsSlinky.ionicCore.anon.X
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonLabelElement
 import typingsSlinky.ionicCore.mod.Side
 import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
 import scala.scalajs.js
@@ -22,16 +23,14 @@ object helpersMod extends js.Object {
   def hasShadowDom(el: HTMLElement): Boolean = js.native
   def isEndSide(side: Side): Boolean = js.native
   def now(ev: UIEvent): Double = js.native
-  def pointerCoord(ev: js.Any): AnonX = js.native
+  def pointerCoord(ev: js.Any): X = js.native
   def raf(h: js.Any): js.Any = js.native
   def renderHiddenInput(
     always: Boolean,
     container: HTMLElement,
     name: String,
-    value: js.UndefOr[scala.Nothing],
+    value: js.UndefOr[Null | String],
     disabled: Boolean
   ): Unit = js.native
-  def renderHiddenInput(always: Boolean, container: HTMLElement, name: String, value: String, disabled: Boolean): Unit = js.native
-  def renderHiddenInput(always: Boolean, container: HTMLElement, name: String, value: Null, disabled: Boolean): Unit = js.native
 }
 

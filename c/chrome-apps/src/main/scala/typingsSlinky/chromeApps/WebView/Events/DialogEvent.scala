@@ -1,7 +1,7 @@
 package typingsSlinky.chromeApps.WebView.Events
 
 import typingsSlinky.chromeApps.WebView.DialogController
-import typingsSlinky.std.Event_
+import typingsSlinky.std.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
   * The default behavior is to cancel the dialog.
   */
 @js.native
-trait DialogEvent extends Event_ {
+trait DialogEvent extends Event {
   /**
     * An interface that can be used to respond to the guest's modal request.
     */

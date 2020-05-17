@@ -2,19 +2,16 @@ package typingsSlinky.minappEnv.DB
 
 import typingsSlinky.minappEnv.OQ
 import typingsSlinky.minappEnv.Promise
-import typingsSlinky.minappEnv.RQIGetDocumentOptions
-import typingsSlinky.minappEnv.RQIRemoveSingleDocumentOp
-import typingsSlinky.minappEnv.RQISetSingleDocumentOptio
-import typingsSlinky.minappEnv.RQIUpdateSingleDocumentOp
+import typingsSlinky.minappEnv.anon.RQIGetDocumentOptions
+import typingsSlinky.minappEnv.anon.RQIRemoveSingleDocumentOp
+import typingsSlinky.minappEnv.anon.RQISetSingleDocumentOptio
+import typingsSlinky.minappEnv.anon.RQIUpdateSingleDocumentOp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("DB.DocumentReference")
 @js.native
-class DocumentReference protected () extends js.Object {
-  protected def this(docId: String, database: Database) = this()
-  protected def this(docId: Double, database: Database) = this()
+trait DocumentReference extends js.Object {
   def field(`object`: js.Object): this.type = js.native
   // get(options?: IGetDocumentOptions): Promise<IQuerySingleResult> | void
   // set(options?: ISetSingleDocumentOptions): Promise<ISetResult> | void

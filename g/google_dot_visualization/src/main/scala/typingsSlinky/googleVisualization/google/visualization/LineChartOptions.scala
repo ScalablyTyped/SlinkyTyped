@@ -1,8 +1,8 @@
 package typingsSlinky.googleVisualization.google.visualization
 
 import org.scalablytyped.runtime.NumberDictionary
-import typingsSlinky.googleVisualization.AnonStyle
-import typingsSlinky.googleVisualization.AnonType
+import typingsSlinky.googleVisualization.anon.Style
+import typingsSlinky.googleVisualization.anon.Type
 import typingsSlinky.googleVisualization.googleVisualizationStrings.function
 import typingsSlinky.googleVisualization.googleVisualizationStrings.none
 import scala.scalajs.js
@@ -21,7 +21,7 @@ trait LineChartOptions extends js.Object {
   var crosshair: js.UndefOr[ChartCrosshair] = js.native
   var curveType: js.UndefOr[none | function] = js.native
   var dataOpacity: js.UndefOr[Double] = js.native
-  var domainAxis: js.UndefOr[AnonType] = js.native
+  var domainAxis: js.UndefOr[Type] = js.native
   var enableInteractivity: js.UndefOr[Boolean] = js.native
   var explorer: js.UndefOr[ChartExplorer] = js.native
   var focusTarget: js.UndefOr[String] = js.native
@@ -31,7 +31,7 @@ trait LineChartOptions extends js.Object {
   var height: js.UndefOr[Double] = js.native
   var interpolateNulls: js.UndefOr[Boolean] = js.native
   var interval: js.UndefOr[js.Any] = js.native
-  var intervals: js.UndefOr[AnonStyle] = js.native
+  var intervals: js.UndefOr[Style] = js.native
   var legend: js.UndefOr[ChartLegend | none] = js.native
   var lineWidth: js.UndefOr[Double] = js.native
   var min: js.UndefOr[Double] = js.native
@@ -186,7 +186,7 @@ object LineChartOptions {
         ret
     }
     @scala.inline
-    def withDomainAxis(value: AnonType): Self = {
+    def withDomainAxis(value: Type): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("domainAxis")(value.asInstanceOf[js.Any])
         ret
@@ -306,7 +306,7 @@ object LineChartOptions {
         ret
     }
     @scala.inline
-    def withIntervals(value: AnonStyle): Self = {
+    def withIntervals(value: Style): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("intervals")(value.asInstanceOf[js.Any])
         ret

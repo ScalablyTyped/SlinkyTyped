@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -42,7 +41,54 @@ trait Widgette extends js.Object {
   def on(`type`: String, listener: js.Function): js.Any = js.native
 }
 
-@JSGlobal("__esri.Widgette")
-@js.native
-object Widgette extends TopLevel[WidgetteConstructor]
+object Widgette {
+  @scala.inline
+  def apply(
+    container: String | HTMLElement,
+    destroy: () => Unit,
+    on: (String, js.Function) => js.Any,
+    visible: Boolean
+  ): Widgette = {
+    val __obj = js.Dynamic.literal(container = container.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), on = js.Any.fromFunction2(on), visible = visible.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Widgette]
+  }
+  @scala.inline
+  implicit class WidgetteOps[Self <: Widgette] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainerHTMLElement(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContainer(value: String | HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("container")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestroy(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOn(value: (String, js.Function) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

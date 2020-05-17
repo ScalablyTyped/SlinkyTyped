@@ -1,7 +1,7 @@
 package typingsSlinky.relayRuntime.relayDeclarativeMutationConfigMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.relayRuntime.AnonFilters
+import typingsSlinky.relayRuntime.anon.Filters
 import typingsSlinky.relayRuntime.relayRuntimeStrings.RANGE_ADD
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait RangeAddConfig extends DeclarativeMutationConfig {
-  var connectionInfo: js.UndefOr[js.Array[AnonFilters]] = js.native
+  var connectionInfo: js.UndefOr[js.Array[Filters]] = js.native
   var connectionName: js.UndefOr[String] = js.native
   var edgeName: String = js.native
   var parentID: js.UndefOr[String] = js.native
@@ -44,7 +44,7 @@ object RangeAddConfig {
         ret
     }
     @scala.inline
-    def withConnectionInfo(value: js.Array[AnonFilters]): Self = {
+    def withConnectionInfo(value: js.Array[Filters]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("connectionInfo")(value.asInstanceOf[js.Any])
         ret

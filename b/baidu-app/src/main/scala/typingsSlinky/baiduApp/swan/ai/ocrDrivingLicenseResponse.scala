@@ -1,7 +1,7 @@
 package typingsSlinky.baiduApp.swan.ai
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.baiduApp.AnonWords
+import typingsSlinky.baiduApp.anon.Words
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation._
 trait ocrDrivingLicenseResponse extends js.Object {
   var log_id: String = js.native
    // 识别结果数，表示 words_result 的元素个数。
-  var words_result: StringDictionary[AnonWords] = js.native
+  var words_result: StringDictionary[Words] = js.native
    // 唯一的log id，用于问题定位。
   var words_result_num: Double = js.native
 }
 
 object ocrDrivingLicenseResponse {
   @scala.inline
-  def apply(log_id: String, words_result: StringDictionary[AnonWords], words_result_num: Double): ocrDrivingLicenseResponse = {
+  def apply(log_id: String, words_result: StringDictionary[Words], words_result_num: Double): ocrDrivingLicenseResponse = {
     val __obj = js.Dynamic.literal(log_id = log_id.asInstanceOf[js.Any], words_result = words_result.asInstanceOf[js.Any], words_result_num = words_result_num.asInstanceOf[js.Any])
     __obj.asInstanceOf[ocrDrivingLicenseResponse]
   }
@@ -34,7 +34,7 @@ object ocrDrivingLicenseResponse {
         ret
     }
     @scala.inline
-    def withWords_result(value: StringDictionary[AnonWords]): Self = {
+    def withWords_result(value: StringDictionary[Words]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("words_result")(value.asInstanceOf[js.Any])
         ret

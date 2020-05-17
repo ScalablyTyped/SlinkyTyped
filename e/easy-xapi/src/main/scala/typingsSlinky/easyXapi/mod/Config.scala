@@ -1,6 +1,6 @@
 package typingsSlinky.easyXapi.mod
 
-import typingsSlinky.easyXapi.AnonLevel
+import typingsSlinky.easyXapi.anon.Level
 import typingsSlinky.express.mod.Application_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Config extends js.Object {
-  var log: AnonLevel = js.native
+  var log: Level = js.native
   var name: String = js.native
   var port: Double = js.native
   var root: String = js.native
@@ -18,7 +18,7 @@ trait Config extends js.Object {
 
 object Config {
   @scala.inline
-  def apply(log: AnonLevel, mount: Application_ => Unit, name: String, port: Double, root: String): Config = {
+  def apply(log: Level, mount: Application_ => Unit, name: String, port: Double, root: String): Config = {
     val __obj = js.Dynamic.literal(log = log.asInstanceOf[js.Any], mount = js.Any.fromFunction1(mount), name = name.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any], root = root.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config]
   }
@@ -29,7 +29,7 @@ object Config {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withLog(value: AnonLevel): Self = {
+    def withLog(value: Level): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
         ret

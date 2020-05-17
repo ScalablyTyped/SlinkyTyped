@@ -1,13 +1,13 @@
 package typingsSlinky.officeUiFabricReact.dropdownControlledExampleMod
 
-import typingsSlinky.officeUiFabricReact.AnonKey
+import typingsSlinky.officeUiFabricReact.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IDropdownControlledExampleState extends js.Object {
-  var selectedItem: js.UndefOr[AnonKey] = js.native
+  var selectedItem: js.UndefOr[Key] = js.native
 }
 
 object IDropdownControlledExampleState {
@@ -23,7 +23,7 @@ object IDropdownControlledExampleState {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSelectedItem(value: AnonKey): Self = {
+    def withSelectedItem(value: Key): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectedItem")(value.asInstanceOf[js.Any])
         ret

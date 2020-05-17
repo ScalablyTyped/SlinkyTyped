@@ -24,9 +24,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * Android service for creating custom quick settings tiles and handling user's interaction with them.
 		 */
-@JSGlobal("Titanium.Android.QuickSettingsService")
 @js.native
-class QuickSettingsService () extends Service {
+trait QuickSettingsService extends Service {
   @JSName("addEventListener")
   def addEventListener_startlistening(
     name: startlistening,

@@ -1,5 +1,6 @@
 package typingsSlinky.baseui.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
 import slinky.web.html.input.tag
@@ -9,7 +10,6 @@ import typingsSlinky.baseui.phoneInputMod.State
 import typingsSlinky.baseui.phoneInputMod.StateChange
 import typingsSlinky.baseui.phoneInputMod.StatefulPhoneInputContainerProps
 import typingsSlinky.baseui.selectMod.OnChangeParams
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +32,7 @@ object StatefulPhoneInputContainer {
     @scala.inline
     def onCountryChange(value: /* event */ OnChangeParams => _): this.type = set("onCountryChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onTextChange(value: /* event */ SyntheticEvent[Event_, HTMLInputElement] => _): this.type = set("onTextChange", js.Any.fromFunction1(value))
+    def onTextChange(value: /* event */ SyntheticEvent[Event, HTMLInputElement] => _): this.type = set("onTextChange", js.Any.fromFunction1(value))
     @scala.inline
     def overrides(value: PhoneInputOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline

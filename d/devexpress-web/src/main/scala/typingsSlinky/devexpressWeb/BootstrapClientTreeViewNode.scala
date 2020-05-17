@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a client-side equivalent of the TreeView's BootstrapTreeViewNode object.
   */
-@JSGlobal("BootstrapClientTreeViewNode")
 @js.native
-class BootstrapClientTreeViewNode () extends ASPxClientTreeViewNode {
+trait BootstrapClientTreeViewNode extends ASPxClientTreeViewNode {
   /**
     * Gets the current node's parent node.
     */
@@ -47,5 +46,100 @@ class BootstrapClientTreeViewNode () extends ASPxClientTreeViewNode {
     * @param cssClass A string containing the name of a CSS class.
     */
   def SetIconCssClass(cssClass: String): Unit = js.native
+}
+
+object BootstrapClientTreeViewNode {
+  @scala.inline
+  def apply(
+    GetBadgeIconCssClass: () => String,
+    GetBadgeText: () => String,
+    GetCheckState: () => String,
+    GetChecked: () => Boolean,
+    GetEnabled: () => Boolean,
+    GetExpanded: () => Boolean,
+    GetHtmlElement: () => js.Any,
+    GetIconCssClass: () => String,
+    GetImageUrl: () => String,
+    GetNavigateUrl: () => String,
+    GetNode: Double => ASPxClientTreeViewNode,
+    GetNodeByName: String => ASPxClientTreeViewNode,
+    GetNodeByText: String => ASPxClientTreeViewNode,
+    GetNodeCount: () => Double,
+    GetText: () => String,
+    GetVisible: () => Boolean,
+    SetBadgeIconCssClass: String => Unit,
+    SetBadgeText: String => Unit,
+    SetChecked: Boolean => Unit,
+    SetEnabled: Boolean => Unit,
+    SetExpanded: Boolean => Unit,
+    SetIconCssClass: String => Unit,
+    SetImageUrl: String => Unit,
+    SetNavigateUrl: String => Unit,
+    SetText: String => Unit,
+    SetVisible: Boolean => Unit,
+    index: Double,
+    name: String,
+    parent: BootstrapClientTreeViewNode,
+    treeView: BootstrapClientTreeView
+  ): BootstrapClientTreeViewNode = {
+    val __obj = js.Dynamic.literal(GetBadgeIconCssClass = js.Any.fromFunction0(GetBadgeIconCssClass), GetBadgeText = js.Any.fromFunction0(GetBadgeText), GetCheckState = js.Any.fromFunction0(GetCheckState), GetChecked = js.Any.fromFunction0(GetChecked), GetEnabled = js.Any.fromFunction0(GetEnabled), GetExpanded = js.Any.fromFunction0(GetExpanded), GetHtmlElement = js.Any.fromFunction0(GetHtmlElement), GetIconCssClass = js.Any.fromFunction0(GetIconCssClass), GetImageUrl = js.Any.fromFunction0(GetImageUrl), GetNavigateUrl = js.Any.fromFunction0(GetNavigateUrl), GetNode = js.Any.fromFunction1(GetNode), GetNodeByName = js.Any.fromFunction1(GetNodeByName), GetNodeByText = js.Any.fromFunction1(GetNodeByText), GetNodeCount = js.Any.fromFunction0(GetNodeCount), GetText = js.Any.fromFunction0(GetText), GetVisible = js.Any.fromFunction0(GetVisible), SetBadgeIconCssClass = js.Any.fromFunction1(SetBadgeIconCssClass), SetBadgeText = js.Any.fromFunction1(SetBadgeText), SetChecked = js.Any.fromFunction1(SetChecked), SetEnabled = js.Any.fromFunction1(SetEnabled), SetExpanded = js.Any.fromFunction1(SetExpanded), SetIconCssClass = js.Any.fromFunction1(SetIconCssClass), SetImageUrl = js.Any.fromFunction1(SetImageUrl), SetNavigateUrl = js.Any.fromFunction1(SetNavigateUrl), SetText = js.Any.fromFunction1(SetText), SetVisible = js.Any.fromFunction1(SetVisible), index = index.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], treeView = treeView.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BootstrapClientTreeViewNode]
+  }
+  @scala.inline
+  implicit class BootstrapClientTreeViewNodeOps[Self <: BootstrapClientTreeViewNode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetBadgeIconCssClass(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetBadgeIconCssClass")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetBadgeText(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetBadgeText")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetIconCssClass(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetIconCssClass")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetBadgeIconCssClass(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetBadgeIconCssClass")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetBadgeText(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetBadgeText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetIconCssClass(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetIconCssClass")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withParent(value: BootstrapClientTreeViewNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTreeView(value: BootstrapClientTreeView): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("treeView")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

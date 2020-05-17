@@ -26,7 +26,7 @@ package object mod {
     typingsSlinky.reactIntl.reactIntlStrings.localeMatcher
   ]) with typingsSlinky.reactIntl.mod.CustomFormatConfig
   type Omit[T, K /* <: /* keyof any */ java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
-  type WithIntlProps[P] = (typingsSlinky.reactIntl.mod.Omit[P, typingsSlinky.reactIntl.reactIntlStrings.intl]) with typingsSlinky.reactIntl.AnonForwardedRef
+  type WithIntlProps[P] = (typingsSlinky.reactIntl.mod.Omit[P, typingsSlinky.reactIntl.reactIntlStrings.intl]) with typingsSlinky.reactIntl.anon.ForwardedRef
   type WrappedComponentProps[IntlPropName /* <: java.lang.String */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ k in IntlPropName ]: react-intl.react-intl.IntlShape}
     */ typingsSlinky.reactIntl.reactIntlStrings.WrappedComponentProps with org.scalablytyped.runtime.TopLevel[js.Any]

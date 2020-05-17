@@ -1,6 +1,6 @@
 package typingsSlinky.jestCore.testPathPatternMod
 
-import typingsSlinky.jestCore.AnonKey
+import typingsSlinky.jestCore.anon.Key
 import typingsSlinky.jestCore.jestCoreBooleans.`true`
 import typingsSlinky.jestTypes.configMod.GlobalConfig
 import scala.scalajs.js
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait TestPathPatternPlugin extends js.Object {
   var _prompt: js.Any = js.native
   var isInternal: `true` = js.native
-  def getUsageInfo(): AnonKey = js.native
+  def getUsageInfo(): Key = js.native
   def onKey(key: String): Unit = js.native
   def run(
     globalConfig: GlobalConfig,
@@ -24,7 +24,7 @@ object TestPathPatternPlugin {
   @scala.inline
   def apply(
     _prompt: js.Any,
-    getUsageInfo: () => AnonKey,
+    getUsageInfo: () => Key,
     isInternal: `true`,
     onKey: String => Unit,
     run: (GlobalConfig, /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify UpdateConfigCallback */ js.Any) => js.Promise[Unit]
@@ -45,7 +45,7 @@ object TestPathPatternPlugin {
         ret
     }
     @scala.inline
-    def withGetUsageInfo(value: () => AnonKey): Self = {
+    def withGetUsageInfo(value: () => Key): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getUsageInfo")(js.Any.fromFunction0(value))
         ret

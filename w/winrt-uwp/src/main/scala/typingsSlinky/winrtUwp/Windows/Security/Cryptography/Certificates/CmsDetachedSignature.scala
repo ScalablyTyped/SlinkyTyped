@@ -1,23 +1,15 @@
 package typingsSlinky.winrtUwp.Windows.Security.Cryptography.Certificates
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterable
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
-import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IInputStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a detached signature for a signed CMS message. */
-@JSGlobal("Windows.Security.Cryptography.Certificates.CmsDetachedSignature")
 @js.native
-class CmsDetachedSignature protected () extends js.Object {
-  /**
-    * Creates a new instance of the CmsDetachedSignature class for the specified signed CMS message.
-    * @param inputBlob A signed CMS message blob.
-    */
-  def this(inputBlob: IBuffer) = this()
+trait CmsDetachedSignature extends js.Object {
   /** Gets the list of certificates that are used for chain building for the signer certificate. */
   var certificates: IVectorView[Certificate] = js.native
   /** Gets the list of signers that are used for creating or verifying the signature. */
@@ -30,17 +22,41 @@ class CmsDetachedSignature protected () extends js.Object {
   def verifySignatureAsync(data: IInputStream): IPromiseWithIAsyncOperation[SignatureValidationResult] = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Security.Cryptography.Certificates.CmsDetachedSignature")
-@js.native
-object CmsDetachedSignature extends js.Object {
-  /**
-    * Signs the specified input data using the specified signer information and creates a detached signed CMS message.
-    * @param data The input data to be signed.
-    * @param signers The signer information used to compute the signature.
-    * @param certificates The list of certificates to build the chain for the signer certificates.
-    * @return An asynchronous operation to retrieve the detached signed CMS message.
-    */
-  def generateSignatureAsync(data: IInputStream, signers: IIterable[CmsSignerInfo], certificates: IIterable[Certificate]): IPromiseWithIAsyncOperation[IBuffer] = js.native
+object CmsDetachedSignature {
+  @scala.inline
+  def apply(
+    certificates: IVectorView[Certificate],
+    signers: IVectorView[CmsSignerInfo],
+    verifySignatureAsync: IInputStream => IPromiseWithIAsyncOperation[SignatureValidationResult]
+  ): CmsDetachedSignature = {
+    val __obj = js.Dynamic.literal(certificates = certificates.asInstanceOf[js.Any], signers = signers.asInstanceOf[js.Any], verifySignatureAsync = js.Any.fromFunction1(verifySignatureAsync))
+    __obj.asInstanceOf[CmsDetachedSignature]
+  }
+  @scala.inline
+  implicit class CmsDetachedSignatureOps[Self <: CmsDetachedSignature] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCertificates(value: IVectorView[Certificate]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("certificates")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSigners(value: IVectorView[CmsSignerInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVerifySignatureAsync(value: IInputStream => IPromiseWithIAsyncOperation[SignatureValidationResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verifySignatureAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

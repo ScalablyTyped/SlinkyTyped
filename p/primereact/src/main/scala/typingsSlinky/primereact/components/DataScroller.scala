@@ -3,7 +3,7 @@ package typingsSlinky.primereact.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonFirst
+import typingsSlinky.primereact.anon.First
 import typingsSlinky.primereact.dataScrollerMod.DataScrollerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -37,7 +37,7 @@ object DataScroller {
     @scala.inline
     def loader(value: js.Any): this.type = set("loader", value.asInstanceOf[js.Any])
     @scala.inline
-    def onLazyLoad(value: /* e */ AnonFirst => Unit): this.type = set("onLazyLoad", js.Any.fromFunction1(value))
+    def onLazyLoad(value: /* e */ First => Unit): this.type = set("onLazyLoad", js.Any.fromFunction1(value))
     @scala.inline
     def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
     @scala.inline

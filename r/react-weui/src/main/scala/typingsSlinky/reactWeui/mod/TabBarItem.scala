@@ -1,6 +1,6 @@
 package typingsSlinky.reactWeui.mod
 
-import typingsSlinky.reactWeui.AnonActiveIcon
+import typingsSlinky.reactWeui.anon.ActiveIcon
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ class TabBarItem protected () extends js.Object {
 @JSImport("react-weui", "TabBarItem")
 @js.native
 object TabBarItem extends js.Object {
-  var defaultProps: AnonActiveIcon = js.native
+  var defaultProps: ActiveIcon = js.native
   @js.native
   object propTypes extends js.Object {
     @js.native

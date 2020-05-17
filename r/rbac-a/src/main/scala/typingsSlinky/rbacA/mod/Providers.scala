@@ -1,6 +1,6 @@
 package typingsSlinky.rbacA.mod
 
-import typingsSlinky.rbacA.AnonInstantiable
+import typingsSlinky.rbacA.anon.Instantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object Providers extends js.Object {
   /** Basic JSON permissions provider */
-  var JsonProvider: AnonInstantiable = js.native
+  var JsonProvider: Instantiable = js.native
 }
 

@@ -12,14 +12,8 @@ trait csrfOptionsBlacklistOrWhitelist extends js.Object
 
 object csrfOptionsBlacklistOrWhitelist {
   @scala.inline
-  def csrfOptionsBlacklist(): csrfOptionsBlacklistOrWhitelist = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[csrfOptionsBlacklistOrWhitelist]
-  }
+  implicit def apply(value: csrfOptionsBlacklist): csrfOptionsBlacklistOrWhitelist = value.asInstanceOf[csrfOptionsBlacklistOrWhitelist]
   @scala.inline
-  def csrfOptionsWhitelist(): csrfOptionsBlacklistOrWhitelist = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[csrfOptionsBlacklistOrWhitelist]
-  }
+  implicit def apply(value: csrfOptionsWhitelist): csrfOptionsBlacklistOrWhitelist = value.asInstanceOf[csrfOptionsBlacklistOrWhitelist]
 }
 

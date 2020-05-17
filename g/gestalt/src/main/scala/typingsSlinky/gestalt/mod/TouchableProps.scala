@@ -2,8 +2,7 @@ package typingsSlinky.gestalt.mod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.gestalt.Anon3
-import typingsSlinky.gestalt.AnonEventSyntheticEvent
+import typingsSlinky.gestalt.anon.EventSyntheticEvent
 import typingsSlinky.gestalt.gestaltNumbers.`0`
 import typingsSlinky.gestalt.gestaltNumbers.`1`
 import typingsSlinky.gestalt.gestaltNumbers.`2`
@@ -33,15 +32,15 @@ trait TouchableProps extends js.Object {
   var fullHeight: js.UndefOr[Boolean] = js.native
   var fullWidth: js.UndefOr[Boolean] = js.native
   var mouseCursor: js.UndefOr[copy | grab | grabbing | move | noDrop | pointer | zoomIn | zoomOut] = js.native
-  var onMouseEnter: js.UndefOr[js.Function1[/* args */ AnonEventSyntheticEvent, Unit]] = js.native
-  var onMouseLeave: js.UndefOr[js.Function1[/* args */ AnonEventSyntheticEvent, Unit]] = js.native
+  var onMouseEnter: js.UndefOr[js.Function1[/* args */ EventSyntheticEvent, Unit]] = js.native
+  var onMouseLeave: js.UndefOr[js.Function1[/* args */ EventSyntheticEvent, Unit]] = js.native
   var rounding: js.UndefOr[pill | circle | `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8`] = js.native
-  def onTouch(args: Anon3): Unit = js.native
+  def onTouch(args: typingsSlinky.gestalt.anon.`3`): Unit = js.native
 }
 
 object TouchableProps {
   @scala.inline
-  def apply(onTouch: Anon3 => Unit): TouchableProps = {
+  def apply(onTouch: typingsSlinky.gestalt.anon.`3` => Unit): TouchableProps = {
     val __obj = js.Dynamic.literal(onTouch = js.Any.fromFunction1(onTouch))
     __obj.asInstanceOf[TouchableProps]
   }
@@ -52,7 +51,7 @@ object TouchableProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnTouch(value: Anon3 => Unit): Self = {
+    def withOnTouch(value: typingsSlinky.gestalt.anon.`3` => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTouch")(js.Any.fromFunction1(value))
         ret
@@ -112,7 +111,7 @@ object TouchableProps {
         ret
     }
     @scala.inline
-    def withOnMouseEnter(value: /* args */ AnonEventSyntheticEvent => Unit): Self = {
+    def withOnMouseEnter(value: /* args */ EventSyntheticEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction1(value))
         ret
@@ -124,7 +123,7 @@ object TouchableProps {
         ret
     }
     @scala.inline
-    def withOnMouseLeave(value: /* args */ AnonEventSyntheticEvent => Unit): Self = {
+    def withOnMouseLeave(value: /* args */ EventSyntheticEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.Any.fromFunction1(value))
         ret

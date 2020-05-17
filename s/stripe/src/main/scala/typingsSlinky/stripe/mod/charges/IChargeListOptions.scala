@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.charges
 
-import typingsSlinky.stripe.AnonObject
+import typingsSlinky.stripe.anon.Object
 import typingsSlinky.stripe.mod.IListOptionsCreated
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ trait IChargeListOptions extends IListOptionsCreated {
     * A filter on the list based on the source of the charge. The value can be a
     * dictionary with the following options:
     */
-  var source: js.UndefOr[AnonObject] = js.native
+  var source: js.UndefOr[Object] = js.native
 }
 
 object IChargeListOptions {
@@ -44,7 +44,7 @@ object IChargeListOptions {
         ret
     }
     @scala.inline
-    def withSource(value: AnonObject): Self = {
+    def withSource(value: Object): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
         ret

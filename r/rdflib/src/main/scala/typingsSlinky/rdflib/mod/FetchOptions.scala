@@ -1,6 +1,6 @@
 package typingsSlinky.rdflib.mod
 
-import typingsSlinky.rdflib.FnCall
+import typingsSlinky.rdflib.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

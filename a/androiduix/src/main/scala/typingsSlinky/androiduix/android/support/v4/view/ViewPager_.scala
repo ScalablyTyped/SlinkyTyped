@@ -1,7 +1,5 @@
 package typingsSlinky.androiduix.android.support.v4.view
 
-import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.androiduix.android.content.Context
 import typingsSlinky.androiduix.android.graphics.drawable.Drawable
 import typingsSlinky.androiduix.android.support.v4.view.ViewPager.OnAdapterChangeListener
 import typingsSlinky.androiduix.android.support.v4.view.ViewPager.OnPageChangeListener
@@ -13,12 +11,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.support.v4.view.ViewPager")
 @js.native
-class ViewPager_ protected () extends ViewGroup {
-  def this(context: Context) = this()
-  def this(context: Context, bindElement: HTMLElement) = this()
-  def this(context: Context, bindElement: HTMLElement, defStyle: js.Any) = this()
+trait ViewPager_ extends ViewGroup {
   var mActivePointerId: js.Any = js.native
   var mAdapter: js.Any = js.native
   var mAdapterChangeListener: js.Any = js.native

@@ -1,7 +1,7 @@
 package typingsSlinky.glob.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.glob.AnonIsDirectory
+import typingsSlinky.glob.anon.IsDirectory
 import typingsSlinky.glob.globBooleans.`false`
 import typingsSlinky.glob.globStrings.DIR
 import typingsSlinky.glob.globStrings.FILE
@@ -27,7 +27,7 @@ trait IOptions
   var root: js.UndefOr[String] = js.native
   var silent: js.UndefOr[Boolean] = js.native
   var stat: js.UndefOr[Boolean] = js.native
-  var statCache: js.UndefOr[StringDictionary[js.UndefOr[`false` | AnonIsDirectory]]] = js.native
+  var statCache: js.UndefOr[StringDictionary[js.UndefOr[`false` | IsDirectory]]] = js.native
   var strict: js.UndefOr[Boolean] = js.native
   var symlinks: js.UndefOr[StringDictionary[js.UndefOr[Boolean]]] = js.native
   var sync: js.UndefOr[Boolean] = js.native
@@ -226,7 +226,7 @@ object IOptions {
         ret
     }
     @scala.inline
-    def withStatCache(value: StringDictionary[js.UndefOr[`false` | AnonIsDirectory]]): Self = {
+    def withStatCache(value: StringDictionary[js.UndefOr[`false` | IsDirectory]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("statCache")(value.asInstanceOf[js.Any])
         ret

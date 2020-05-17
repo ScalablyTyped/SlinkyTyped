@@ -1,6 +1,5 @@
 package typingsSlinky.miniprogramWxs
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -115,8 +114,202 @@ trait Math extends js.Object {
   def tan(x: Double): Double = js.native
 }
 
-/** An intrinsic object that provides basic mathematics functionality and constants. */
-@JSGlobal("Math")
-@js.native
-object Math extends TopLevel[Math]
+object Math {
+  @scala.inline
+  def apply(
+    E: Double,
+    LN10: Double,
+    LN2: Double,
+    LOG10E: Double,
+    LOG2E: Double,
+    PI: Double,
+    SQRT1_2: Double,
+    SQRT2: Double,
+    abs: Double => Double,
+    acos: Double => Double,
+    asin: Double => Double,
+    atan: Double => Double,
+    atan2: (Double, Double) => Double,
+    ceil: Double => Double,
+    cos: Double => Double,
+    exp: Double => Double,
+    floor: Double => Double,
+    log: Double => Double,
+    max: /* repeated */ Double => Double,
+    min: /* repeated */ Double => Double,
+    pow: (Double, Double) => Double,
+    random: () => Double,
+    round: Double => Double,
+    sin: Double => Double,
+    sqrt: Double => Double,
+    tan: Double => Double
+  ): Math = {
+    val __obj = js.Dynamic.literal(E = E.asInstanceOf[js.Any], LN10 = LN10.asInstanceOf[js.Any], LN2 = LN2.asInstanceOf[js.Any], LOG10E = LOG10E.asInstanceOf[js.Any], LOG2E = LOG2E.asInstanceOf[js.Any], PI = PI.asInstanceOf[js.Any], SQRT1_2 = SQRT1_2.asInstanceOf[js.Any], SQRT2 = SQRT2.asInstanceOf[js.Any], abs = js.Any.fromFunction1(abs), acos = js.Any.fromFunction1(acos), asin = js.Any.fromFunction1(asin), atan = js.Any.fromFunction1(atan), atan2 = js.Any.fromFunction2(atan2), ceil = js.Any.fromFunction1(ceil), cos = js.Any.fromFunction1(cos), exp = js.Any.fromFunction1(exp), floor = js.Any.fromFunction1(floor), log = js.Any.fromFunction1(log), max = js.Any.fromFunction1(max), min = js.Any.fromFunction1(min), pow = js.Any.fromFunction2(pow), random = js.Any.fromFunction0(random), round = js.Any.fromFunction1(round), sin = js.Any.fromFunction1(sin), sqrt = js.Any.fromFunction1(sqrt), tan = js.Any.fromFunction1(tan))
+    __obj.asInstanceOf[Math]
+  }
+  @scala.inline
+  implicit class MathOps[Self <: Math] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("E")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLN10(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LN10")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLN2(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LN2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOG10E(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOG10E")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOG2E(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOG2E")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPI(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSQRT1_2(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SQRT1_2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSQRT2(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SQRT2")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAbs(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abs")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAcos(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acos")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAsin(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("asin")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAtan(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("atan")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAtan2(value: (Double, Double) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("atan2")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withCeil(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ceil")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCos(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cos")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withExp(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exp")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFloor(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("floor")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLog(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("log")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMax(value: /* repeated */ Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("max")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMin(value: /* repeated */ Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("min")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPow(value: (Double, Double) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pow")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRandom(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("random")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRound(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("round")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSin(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sin")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSqrt(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sqrt")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTan(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tan")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

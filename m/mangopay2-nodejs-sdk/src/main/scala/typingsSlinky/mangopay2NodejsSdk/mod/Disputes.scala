@@ -1,6 +1,6 @@
 package typingsSlinky.mangopay2NodejsSdk.mod
 
-import typingsSlinky.mangopay2NodejsSdk.PartialDisputeDocumentDat
+import typingsSlinky.mangopay2NodejsSdk.anon.PartialDisputeDocumentDat
 import typingsSlinky.mangopay2NodejsSdk.mod.dispute.DisputeData
 import typingsSlinky.mangopay2NodejsSdk.mod.dispute.UpdateDispute
 import typingsSlinky.mangopay2NodejsSdk.mod.disputeDocument.CreateDisputeDocument

@@ -1,7 +1,7 @@
 package typingsSlinky.ckeditorCkeditor5Core.mod.editor
 
-import typingsSlinky.ckeditorCkeditor5Core.Anon0
-import typingsSlinky.ckeditorCkeditor5Core.AnonPriority
+import typingsSlinky.ckeditorCkeditor5Core.anon.Priority
+import typingsSlinky.ckeditorCkeditor5Core.anon.`0`
 import typingsSlinky.ckeditorCkeditor5Core.ckeditorCkeditor5CoreStrings.destroyed
 import typingsSlinky.ckeditorCkeditor5Core.ckeditorCkeditor5CoreStrings.initializing
 import typingsSlinky.ckeditorCkeditor5Core.ckeditorCkeditor5CoreStrings.ready
@@ -40,9 +40,9 @@ class Editor () extends Observable {
   def destroy(): js.Promise[Unit] = js.native
   def execute(commandName: String, commandParams: js.Any*): Unit = js.native
   def initPlugins(): js.Promise[Unit] = js.native
-  def listenTo(emitter: Emitter, event: String, callback: js.Function, options: AnonPriority): Unit = js.native
-  def on(event: String, callback: js.Function, options: Anon0): Unit = js.native
-  def once(event: String, callback: js.Function, options: Anon0): Unit = js.native
+  def listenTo(emitter: Emitter, event: String, callback: js.Function, options: Priority): Unit = js.native
+  def on(event: String, callback: js.Function, options: `0`): Unit = js.native
+  def once(event: String, callback: js.Function, options: `0`): Unit = js.native
   def t(str: String): String = js.native
   def t(str: String, values: js.Array[String]): String = js.native
 }

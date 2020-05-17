@@ -1,6 +1,6 @@
 package typingsSlinky.angularStrap.mgcrea.ngStrap.select
 
-import typingsSlinky.angularStrap.AnonHide
+import typingsSlinky.angularStrap.anon.Hide
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait ISelectOptions extends js.Object {
   var allText: js.UndefOr[String] = js.native
   var animation: js.UndefOr[String] = js.native
   var container: js.UndefOr[String | Boolean] = js.native
-  var delay: js.UndefOr[Double | AnonHide] = js.native
+  var delay: js.UndefOr[Double | Hide] = js.native
   var html: js.UndefOr[Boolean] = js.native
   var iconCheckmark: js.UndefOr[String] = js.native
   var id: js.UndefOr[String] = js.native
@@ -92,7 +92,7 @@ object ISelectOptions {
         ret
     }
     @scala.inline
-    def withDelay(value: Double | AnonHide): Self = {
+    def withDelay(value: Double | Hide): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
         ret

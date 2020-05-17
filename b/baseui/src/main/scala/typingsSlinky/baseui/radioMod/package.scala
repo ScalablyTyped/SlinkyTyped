@@ -9,7 +9,7 @@ package object radioMod {
     /* stateType */ java.lang.String, 
     /* nextState */ typingsSlinky.baseui.radioMod.State, 
     /* currentState */ typingsSlinky.baseui.radioMod.State, 
-    /* event */ slinky.core.SyntheticEvent[typingsSlinky.std.Event_, org.scalajs.dom.raw.HTMLInputElement], 
+    /* event */ slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, org.scalajs.dom.raw.HTMLInputElement], 
     typingsSlinky.baseui.radioMod.State
   ]
 }

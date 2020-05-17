@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Devices.Printers.Extensions.PrintTaskConfigurationSaveRequestedDeferral")
 @js.native
-class PrintTaskConfigurationSaveRequestedDeferral () extends IPrintTaskConfigurationSaveRequestedDeferral
+trait PrintTaskConfigurationSaveRequestedDeferral extends IPrintTaskConfigurationSaveRequestedDeferral
+
+object PrintTaskConfigurationSaveRequestedDeferral {
+  @scala.inline
+  def apply(complete: () => Unit): PrintTaskConfigurationSaveRequestedDeferral = {
+    val __obj = js.Dynamic.literal(complete = js.Any.fromFunction0(complete))
+    __obj.asInstanceOf[PrintTaskConfigurationSaveRequestedDeferral]
+  }
+}
 

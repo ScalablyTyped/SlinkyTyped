@@ -1,0 +1,17 @@
+package typingsSlinky.officeJs.global.Word
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  *
+  * Contains a collection of {@link Word.List} objects.
+  *
+  * [Api set: WordApi 1.3]
+  */
+@JSGlobal("Word.ListCollection")
+@js.native
+class ListCollection ()
+  extends typingsSlinky.officeJs.Word.ListCollection
+

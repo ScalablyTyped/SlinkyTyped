@@ -3,8 +3,8 @@ package typingsSlinky.antd.configProviderMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.AnonGhost
-import typingsSlinky.antd.AnonValidateMessages
+import typingsSlinky.antd.anon.Ghost
+import typingsSlinky.antd.anon.ValidateMessages
 import typingsSlinky.antd.antdStrings.ltr
 import typingsSlinky.antd.antdStrings.rtl
 import typingsSlinky.antd.contextMod.CSPConfig
@@ -22,10 +22,10 @@ trait ConfigProviderProps extends js.Object {
   var componentSize: js.UndefOr[SizeType] = js.native
   var csp: js.UndefOr[CSPConfig] = js.native
   var direction: js.UndefOr[ltr | rtl] = js.native
-  var form: js.UndefOr[AnonValidateMessages] = js.native
+  var form: js.UndefOr[ValidateMessages] = js.native
   var getPopupContainer: js.UndefOr[js.Function1[/* triggerNode */ HTMLElement, HTMLElement]] = js.native
   var locale: js.UndefOr[Locale] = js.native
-  var pageHeader: js.UndefOr[AnonGhost] = js.native
+  var pageHeader: js.UndefOr[Ghost] = js.native
   var prefixCls: js.UndefOr[String] = js.native
   var renderEmpty: js.UndefOr[RenderEmptyHandler] = js.native
 }
@@ -109,7 +109,7 @@ object ConfigProviderProps {
         ret
     }
     @scala.inline
-    def withForm(value: AnonValidateMessages): Self = {
+    def withForm(value: ValidateMessages): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("form")(value.asInstanceOf[js.Any])
         ret
@@ -145,7 +145,7 @@ object ConfigProviderProps {
         ret
     }
     @scala.inline
-    def withPageHeader(value: AnonGhost): Self = {
+    def withPageHeader(value: Ghost): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pageHeader")(value.asInstanceOf[js.Any])
         ret

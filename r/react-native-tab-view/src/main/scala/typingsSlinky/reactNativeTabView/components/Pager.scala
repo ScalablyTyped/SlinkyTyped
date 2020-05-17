@@ -5,8 +5,8 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.reactNativeGestureHandler.mod.PanGestureHandler
-import typingsSlinky.reactNativeTabView.AnonDamping
-import typingsSlinky.reactNativeTabView.AnonDuration
+import typingsSlinky.reactNativeTabView.anon.Damping
+import typingsSlinky.reactNativeTabView.anon.Duration
 import typingsSlinky.reactNativeTabView.pagerMod.Props
 import typingsSlinky.reactNativeTabView.pagerMod.default
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.`on-drag`
@@ -48,9 +48,9 @@ object Pager {
     layout: Layout,
     navigationState: NavigationState[T],
     onIndexChange: Double => Unit,
-    springConfig: AnonDamping,
+    springConfig: Damping,
     swipeEnabled: Boolean,
-    timingConfig: AnonDuration
+    timingConfig: Duration
   ): Builder[T] = {
     val __props = js.Dynamic.literal(gestureHandlerProps = gestureHandlerProps.asInstanceOf[js.Any], keyboardDismissMode = keyboardDismissMode.asInstanceOf[js.Any], layout = layout.asInstanceOf[js.Any], navigationState = navigationState.asInstanceOf[js.Any], onIndexChange = js.Any.fromFunction1(onIndexChange), springConfig = springConfig.asInstanceOf[js.Any], swipeEnabled = swipeEnabled.asInstanceOf[js.Any], timingConfig = timingConfig.asInstanceOf[js.Any])
     new Builder[T](js.Array(this.component, __props.asInstanceOf[Props[T]]))

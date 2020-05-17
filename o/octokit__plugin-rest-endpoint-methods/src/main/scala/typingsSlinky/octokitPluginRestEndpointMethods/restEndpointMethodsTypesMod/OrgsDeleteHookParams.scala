@@ -7,13 +7,15 @@ import scala.scalajs.js.annotation._
 @js.native
 trait OrgsDeleteHookParams extends js.Object {
   var hook_id: Double = js.native
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
 }
 
 object OrgsDeleteHookParams {
   @scala.inline
-  def apply(hook_id: Double, org: String): OrgsDeleteHookParams = {
-    val __obj = js.Dynamic.literal(hook_id = hook_id.asInstanceOf[js.Any], org = org.asInstanceOf[js.Any])
+  def apply(hook_id: Double, org_ : String): OrgsDeleteHookParams = {
+    val __obj = js.Dynamic.literal(hook_id = hook_id.asInstanceOf[js.Any])
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrgsDeleteHookParams]
   }
   @scala.inline
@@ -29,7 +31,7 @@ object OrgsDeleteHookParams {
         ret
     }
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

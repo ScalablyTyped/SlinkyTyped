@@ -1,24 +1,24 @@
 package typingsSlinky.oracleOraclejet.ojmoduleElementMod
 
-import typingsSlinky.oracleOraclejet.AnonInsertNewView
-import typingsSlinky.oracleOraclejet.AnonIsInitial
+import typingsSlinky.oracleOraclejet.anon.InsertNewView
+import typingsSlinky.oracleOraclejet.anon.IsInitial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ModuleElementAnimation extends js.Object {
-  def animate(context: AnonInsertNewView): js.Promise[_] = js.native
-  def canAnimate(context: AnonIsInitial): Boolean = js.native
-  def prepareAnimation(context: AnonIsInitial): js.Object = js.native
+  def animate(context: InsertNewView): js.Promise[_] = js.native
+  def canAnimate(context: IsInitial): Boolean = js.native
+  def prepareAnimation(context: IsInitial): js.Object = js.native
 }
 
 object ModuleElementAnimation {
   @scala.inline
   def apply(
-    animate: AnonInsertNewView => js.Promise[_],
-    canAnimate: AnonIsInitial => Boolean,
-    prepareAnimation: AnonIsInitial => js.Object
+    animate: InsertNewView => js.Promise[_],
+    canAnimate: IsInitial => Boolean,
+    prepareAnimation: IsInitial => js.Object
   ): ModuleElementAnimation = {
     val __obj = js.Dynamic.literal(animate = js.Any.fromFunction1(animate), canAnimate = js.Any.fromFunction1(canAnimate), prepareAnimation = js.Any.fromFunction1(prepareAnimation))
     __obj.asInstanceOf[ModuleElementAnimation]
@@ -30,19 +30,19 @@ object ModuleElementAnimation {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAnimate(value: AnonInsertNewView => js.Promise[_]): Self = {
+    def withAnimate(value: InsertNewView => js.Promise[_]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withCanAnimate(value: AnonIsInitial => Boolean): Self = {
+    def withCanAnimate(value: IsInitial => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("canAnimate")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPrepareAnimation(value: AnonIsInitial => js.Object): Self = {
+    def withPrepareAnimation(value: IsInitial => js.Object): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("prepareAnimation")(js.Any.fromFunction1(value))
         ret

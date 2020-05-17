@@ -2,7 +2,7 @@ package typingsSlinky.oracleOraclejet.ojtimeaxisMod
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponent
 import typingsSlinky.oracleOraclejet.ojtimeaxisMod.ojTimeAxis.Converters
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.Converter
@@ -38,7 +38,7 @@ trait ojTimeAxis_ extends dvtBaseComponent[ojTimeAxisSettableProperties] {
   var scale: seconds | minutes | hours | days | weeks | months | quarters | years = js.native
   var start: String = js.native
   @JSName("translations")
-  var translations_ojTimeAxis_ : AnonLabelAndValue = js.native
+  var translations_ojTimeAxis_ : LabelAndValue = js.native
   def addEventListener(`type`: scaleChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: scaleChanged,
@@ -95,6 +95,6 @@ trait ojTimeAxis_ extends dvtBaseComponent[ojTimeAxisSettableProperties] {
   @JSName("setProperty")
   def setProperty_start(property: start, value: String): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonLabelAndValue): Unit = js.native
+  def setProperty_translations(property: translations, value: LabelAndValue): Unit = js.native
 }
 

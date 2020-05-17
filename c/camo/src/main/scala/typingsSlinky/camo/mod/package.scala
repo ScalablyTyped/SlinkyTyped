@@ -9,6 +9,4 @@ package object mod {
   type SchemaTypeConstructor = typingsSlinky.camo.mod.TypeOrArrayOfType[
     typingsSlinky.std.ArrayBufferConstructor | typingsSlinky.std.ArrayConstructor | typingsSlinky.std.BooleanConstructor | typingsSlinky.std.DateConstructor | typingsSlinky.std.NumberConstructor | typingsSlinky.std.ObjectConstructor | typingsSlinky.std.StringConstructor
   ]
-  type SchemaTypeExtended = typingsSlinky.camo.mod.SchemaTypeConstructor | typingsSlinky.camo.mod.SchemaTypeOptions[typingsSlinky.camo.mod.SchemaType]
-  type TypeOrArrayOfType[Type] = Type | js.Array[Type]
 }

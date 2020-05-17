@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.inputNumberMod
 
-import typingsSlinky.antDesignReactNative.AnonDisabledStepTextColor
+import typingsSlinky.antDesignReactNative.anon.DisabledStepTextColor
 import typingsSlinky.antDesignReactNative.libStyleMod.Theme
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
@@ -28,14 +28,14 @@ trait InputNumberProps extends js.Object {
   var readOnly: js.UndefOr[Boolean] = js.native
   var step: js.UndefOr[String | Double] = js.native
   var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var styles: ReturnType[js.Function1[/* theme */ Theme, AnonDisabledStepTextColor]] = js.native
+  var styles: ReturnType[js.Function1[/* theme */ Theme, DisabledStepTextColor]] = js.native
   var upStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
   var value: js.UndefOr[Double] = js.native
 }
 
 object InputNumberProps {
   @scala.inline
-  def apply(styles: ReturnType[js.Function1[/* theme */ Theme, AnonDisabledStepTextColor]]): InputNumberProps = {
+  def apply(styles: ReturnType[js.Function1[/* theme */ Theme, DisabledStepTextColor]]): InputNumberProps = {
     val __obj = js.Dynamic.literal(styles = styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[InputNumberProps]
   }
@@ -46,7 +46,7 @@ object InputNumberProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withStyles(value: ReturnType[js.Function1[/* theme */ Theme, AnonDisabledStepTextColor]]): Self = {
+    def withStyles(value: ReturnType[js.Function1[/* theme */ Theme, DisabledStepTextColor]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
         ret

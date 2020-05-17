@@ -1,5 +1,6 @@
 package typingsSlinky.auth0Lock
 
+import typingsSlinky.auth0Lock.anon.Hint
 import typingsSlinky.auth0Lock.auth0LockStrings.`false`
 import typingsSlinky.auth0Lock.auth0LockStrings.`true`
 import typingsSlinky.auth0Lock.auth0LockStrings.checkbox
@@ -14,7 +15,7 @@ trait Auth0LockAdditionalCheckboxSignUpField extends Auth0LockAdditionalSignUpFi
   var placeholder: String = js.native
   var prefill: `true` | `false` = js.native
   var `type`: js.UndefOr[checkbox] = js.native
-  var validator: js.UndefOr[js.Function1[/* input */ String, AnonHint]] = js.native
+  var validator: js.UndefOr[js.Function1[/* input */ String, Hint]] = js.native
 }
 
 object Auth0LockAdditionalCheckboxSignUpField {
@@ -72,7 +73,7 @@ object Auth0LockAdditionalCheckboxSignUpField {
         ret
     }
     @scala.inline
-    def withValidator(value: /* input */ String => AnonHint): Self = {
+    def withValidator(value: /* input */ String => Hint): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validator")(js.Any.fromFunction1(value))
         ret

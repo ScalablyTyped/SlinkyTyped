@@ -1,18 +1,18 @@
 package typingsSlinky.qiniuJs.mod
 
-import typingsSlinky.qiniuJs.AnonLoaded
+import typingsSlinky.qiniuJs.anon.Loaded
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Next extends js.Object {
-  var total: AnonLoaded = js.native
+  var total: Loaded = js.native
 }
 
 object Next {
   @scala.inline
-  def apply(total: AnonLoaded): Next = {
+  def apply(total: Loaded): Next = {
     val __obj = js.Dynamic.literal(total = total.asInstanceOf[js.Any])
     __obj.asInstanceOf[Next]
   }
@@ -23,7 +23,7 @@ object Next {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTotal(value: AnonLoaded): Self = {
+    def withTotal(value: Loaded): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
         ret

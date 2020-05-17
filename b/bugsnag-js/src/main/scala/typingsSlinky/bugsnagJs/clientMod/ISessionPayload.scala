@@ -1,6 +1,6 @@
 package typingsSlinky.bugsnagJs.clientMod
 
-import typingsSlinky.bugsnagJs.AnonName
+import typingsSlinky.bugsnagJs.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,14 +9,14 @@ import scala.scalajs.js.annotation._
 trait ISessionPayload extends js.Object {
   var app: js.UndefOr[js.Object] = js.native
   var device: js.UndefOr[js.Object] = js.native
-  var notifier: AnonName = js.native
+  var notifier: Name = js.native
   var sessions: js.Array[ISession] = js.native
   var user: js.UndefOr[js.Object] = js.native
 }
 
 object ISessionPayload {
   @scala.inline
-  def apply(notifier: AnonName, sessions: js.Array[ISession]): ISessionPayload = {
+  def apply(notifier: Name, sessions: js.Array[ISession]): ISessionPayload = {
     val __obj = js.Dynamic.literal(notifier = notifier.asInstanceOf[js.Any], sessions = sessions.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISessionPayload]
   }
@@ -27,7 +27,7 @@ object ISessionPayload {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withNotifier(value: AnonName): Self = {
+    def withNotifier(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notifier")(value.asInstanceOf[js.Any])
         ret

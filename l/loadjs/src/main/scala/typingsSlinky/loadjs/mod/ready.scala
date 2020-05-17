@@ -1,6 +1,6 @@
 package typingsSlinky.loadjs.mod
 
-import typingsSlinky.loadjs.Typeofloadjs
+import typingsSlinky.loadjs.anon.Typeofloadjs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

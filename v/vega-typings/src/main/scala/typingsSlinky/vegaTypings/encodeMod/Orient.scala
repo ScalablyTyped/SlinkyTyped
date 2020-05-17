@@ -1,5 +1,6 @@
 package typingsSlinky.vegaTypings.encodeMod
 
+import typingsSlinky.vegaTypings.valuesMod.OrientValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.vegaTypings.vegaTypingsStrings.top
   - typingsSlinky.vegaTypings.vegaTypingsStrings.bottom
 */
-trait Orient extends js.Object
+trait Orient extends OrientValue
 
 object Orient {
   @scala.inline

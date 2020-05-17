@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientDeploymentmanager.gapi.client.deploymentmanager
 
-import typingsSlinky.gapiClientDeploymentmanager.AnonData
-import typingsSlinky.gapiClientDeploymentmanager.AnonErrors
+import typingsSlinky.gapiClientDeploymentmanager.anon.Data
+import typingsSlinky.gapiClientDeploymentmanager.anon.Errors
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait ResourceUpdate extends js.Object {
   /** The Access Control Policy to set on this resource after updating the resource itself. */
   var accessControl: js.UndefOr[ResourceAccessControl] = js.native
   /** Output only. If errors are generated during update of the resource, this field will be populated. */
-  var error: js.UndefOr[AnonErrors] = js.native
+  var error: js.UndefOr[Errors] = js.native
   /** Output only. The expanded properties of the resource with reference values expanded. Returned as serialized YAML. */
   var finalProperties: js.UndefOr[String] = js.native
   /** Output only. The intent of the resource: PREVIEW, UPDATE, or CANCEL. */
@@ -23,7 +23,7 @@ trait ResourceUpdate extends js.Object {
   /** Output only. The state of the resource. */
   var state: js.UndefOr[String] = js.native
   /** Output only. If warning messages are generated during processing of this resource, this field will be populated. */
-  var warnings: js.UndefOr[js.Array[AnonData]] = js.native
+  var warnings: js.UndefOr[js.Array[Data]] = js.native
 }
 
 object ResourceUpdate {
@@ -51,7 +51,7 @@ object ResourceUpdate {
         ret
     }
     @scala.inline
-    def withError(value: AnonErrors): Self = {
+    def withError(value: Errors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret
@@ -123,7 +123,7 @@ object ResourceUpdate {
         ret
     }
     @scala.inline
-    def withWarnings(value: js.Array[AnonData]): Self = {
+    def withWarnings(value: js.Array[Data]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(value.asInstanceOf[js.Any])
         ret

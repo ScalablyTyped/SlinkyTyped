@@ -3,7 +3,7 @@ package typingsSlinky.primereact.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.pickListItemMod.PickListItemProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,7 @@ object PickListItem {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def onClick(value: /* e */ AnonValue => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    def onClick(value: /* e */ Value => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
     def selected(value: Boolean): this.type = set("selected", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,6 +1,6 @@
 package typingsSlinky.idyll.mod
 
-import typingsSlinky.idyll.AnonCompiler
+import typingsSlinky.idyll.anon.Compiler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +31,7 @@ trait Options extends js.Object {
   /**
     * used internally by IdyllInstance
     */
-  var inputConfig: js.UndefOr[AnonCompiler] = js.native
+  var inputConfig: js.UndefOr[Compiler] = js.native
   /**
     * the idyll file to be compiled into
     */
@@ -153,7 +153,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withInputConfig(value: AnonCompiler): Self = {
+    def withInputConfig(value: Compiler): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("inputConfig")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.googleMapReact.mod
 
 import org.scalajs.dom.raw.HTMLDivElement
-import typingsSlinky.googleMapReact.AnonMap
+import typingsSlinky.googleMapReact.anon.Map
 import typingsSlinky.react.mod.HTMLProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -40,7 +40,7 @@ trait Props extends js.Object {
   var onClick: js.UndefOr[js.Function1[/* value */ ClickEventValue, _]] = js.native
   var onDrag: js.UndefOr[js.Function1[/* map */ js.Any, Unit]] = js.native
   var onDragEnd: js.UndefOr[js.Function1[/* map */ js.Any, Unit]] = js.native
-  var onGoogleApiLoaded: js.UndefOr[js.Function1[/* maps */ AnonMap, Unit]] = js.native
+  var onGoogleApiLoaded: js.UndefOr[js.Function1[/* maps */ Map, Unit]] = js.native
   var onMapTypeIdChange: js.UndefOr[js.Function1[/* args */ js.Any, Unit]] = js.native
   var onTilesLoaded: js.UndefOr[js.Function0[Unit]] = js.native
   var onZoomAnimationEnd: js.UndefOr[js.Function1[/* args */ js.Any, Unit]] = js.native
@@ -342,7 +342,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withOnGoogleApiLoaded(value: /* maps */ AnonMap => Unit): Self = {
+    def withOnGoogleApiLoaded(value: /* maps */ Map => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onGoogleApiLoaded")(js.Any.fromFunction1(value))
         ret

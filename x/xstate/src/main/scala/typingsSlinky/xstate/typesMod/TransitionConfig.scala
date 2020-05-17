@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TransitionConfig[TContext, TEvent /* <: EventObject */] extends js.Object {
+trait TransitionConfig[TContext, TEvent /* <: EventObject */] extends Transition[TContext, TEvent] {
   var actions: js.UndefOr[Actions[TContext, TEvent]] = js.native
   var cond: js.UndefOr[Condition[TContext, TEvent]] = js.native
   var in: js.UndefOr[StateValue] = js.native

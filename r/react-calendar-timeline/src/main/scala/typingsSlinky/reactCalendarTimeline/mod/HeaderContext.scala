@@ -1,19 +1,19 @@
 package typingsSlinky.reactCalendarTimeline.mod
 
-import typingsSlinky.reactCalendarTimeline.AnonStartTime
+import typingsSlinky.reactCalendarTimeline.anon.StartTime
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait HeaderContext extends js.Object {
-  var intervals: js.Array[AnonStartTime] = js.native
+  var intervals: js.Array[StartTime] = js.native
   var unit: String = js.native
 }
 
 object HeaderContext {
   @scala.inline
-  def apply(intervals: js.Array[AnonStartTime], unit: String): HeaderContext = {
+  def apply(intervals: js.Array[StartTime], unit: String): HeaderContext = {
     val __obj = js.Dynamic.literal(intervals = intervals.asInstanceOf[js.Any], unit = unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[HeaderContext]
   }
@@ -24,7 +24,7 @@ object HeaderContext {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withIntervals(value: js.Array[AnonStartTime]): Self = {
+    def withIntervals(value: js.Array[StartTime]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("intervals")(value.asInstanceOf[js.Any])
         ret

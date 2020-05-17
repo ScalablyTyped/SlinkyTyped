@@ -2,6 +2,7 @@ package typingsSlinky.amcharts
 
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.amcharts.anon.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -335,7 +336,7 @@ object amChartMod extends js.Object {
       * Dispatched when chart is build for the first time or after validateData() method was called.
       * If the type is "init". Dispatched when chart is build for the first time.
       */
-    def addListener(`type`: String, handler: js.Function1[/* e */ AnonType, Unit]): Unit = js.native
+    def addListener(`type`: String, handler: js.Function1[/* e */ Type, Unit]): Unit = js.native
     /**
       * Adds title to the top of the chart. Pie, Radar positions are updated so that they won't overlap.
       * Plot area of Serial/XY chart is also updated unless autoMargins property is set to false.

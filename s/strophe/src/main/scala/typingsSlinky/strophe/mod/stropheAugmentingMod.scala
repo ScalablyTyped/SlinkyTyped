@@ -1,8 +1,8 @@
 package typingsSlinky.strophe.mod
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Text
-import typingsSlinky.std.Document_
 import typingsSlinky.strophe.mod.Strophe.ConnectionOptions
 import typingsSlinky.strophe.mod.Strophe.LogLevel
 import typingsSlinky.strophe.mod.Strophe.SASLMechanism
@@ -380,7 +380,7 @@ object stropheAugmentingMod extends js.Object {
     *  Returns:
     *    The currently used DOM document.
     */
-  def xmlGenerator(): Document_ = js.native
+  def xmlGenerator(): Document = js.native
   /** Function: xmlHtmlNode
     *  Creates an XML DOM html node.
     *
@@ -390,7 +390,7 @@ object stropheAugmentingMod extends js.Object {
     *  Returns:
     *    A new XML DOM text node.
     */
-  def xmlHtmlNode(html: String): Document_ = js.native
+  def xmlHtmlNode(html: String): Document = js.native
   /** Function: xmlTextNode
     *  Creates an XML DOM text node.
     *

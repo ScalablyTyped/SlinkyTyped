@@ -1,6 +1,5 @@
 package typingsSlinky.tabris
 
-import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.tabris.tabrisStrings.message
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,8 +22,4 @@ trait MessagePort extends EventTarget {
   def postMessage(message: js.Any, transfer: js.Array[_]): Unit = js.native
   def start(): Unit = js.native
 }
-
-@JSGlobal("MessagePort")
-@js.native
-object MessagePort extends Instantiable0[MessagePort]
 

@@ -3,14 +3,14 @@ package typingsSlinky.ionicCore
 import typingsSlinky.ionicCore.actionSheetInterfaceMod.ActionSheetOptions
 import typingsSlinky.ionicCore.alertInterfaceMod.AlertOptions
 import typingsSlinky.ionicCore.animationInterfaceMod.Animation
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonActionSheetElement
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonAlertElement
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonLoadingElement
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonMenuElement
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonModalElement
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonPickerElement
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonPopoverElement
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonToastElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonActionSheetElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonAlertElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonLoadingElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonMenuElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonModalElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonPickerElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonPopoverElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonToastElement
 import typingsSlinky.ionicCore.gestureMod.Gesture
 import typingsSlinky.ionicCore.gestureMod.GestureConfig
 import typingsSlinky.ionicCore.ionicCoreStrings.android
@@ -63,7 +63,6 @@ object typesMod extends js.Object {
     def create(options: ActionSheetOptions): js.Promise[HTMLIonActionSheetElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
-    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonActionSheetElement]] = js.native
@@ -74,7 +73,6 @@ object typesMod extends js.Object {
     def create(options: AlertOptions): js.Promise[HTMLIonAlertElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
-    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonAlertElement]] = js.native
@@ -85,7 +83,6 @@ object typesMod extends js.Object {
     def create(options: LoadingOptions): js.Promise[HTMLIonLoadingElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
-    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonLoadingElement]] = js.native
@@ -127,7 +124,6 @@ object typesMod extends js.Object {
     def create(options: ModalOptions[ComponentRef]): js.Promise[HTMLIonModalElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
-    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonModalElement]] = js.native
@@ -138,7 +134,6 @@ object typesMod extends js.Object {
     def create(options: PickerOptions): js.Promise[HTMLIonPickerElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
-    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonPickerElement]] = js.native
@@ -149,7 +144,6 @@ object typesMod extends js.Object {
     def create(options: PopoverOptions[ComponentRef]): js.Promise[HTMLIonPopoverElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
-    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonPopoverElement]] = js.native
@@ -160,7 +154,6 @@ object typesMod extends js.Object {
     def create(options: ToastOptions): js.Promise[HTMLIonToastElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
-    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonToastElement]] = js.native

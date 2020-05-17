@@ -1,8 +1,5 @@
 package typingsSlinky.babelTypes.mod
 
-import typingsSlinky.babelTypes.babelTypesStrings.ExpressionStatement
-import typingsSlinky.babelTypes.babelTypesStrings.ParenthesizedExpression
-import typingsSlinky.babelTypes.babelTypesStrings.TypeCastExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,26 +9,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.ParenthesizedExpression_
   - typingsSlinky.babelTypes.mod.TypeCastExpression_
 */
-trait ExpressionWrapper extends _Node
+trait ExpressionWrapper extends Node
 
 object ExpressionWrapper {
   @scala.inline
-  def ExpressionStatement_(expression: Expression, `type`: ExpressionStatement): ExpressionWrapper = {
-    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ExpressionWrapper]
-  }
+  implicit def apply(value: ExpressionStatement_): ExpressionWrapper = value.asInstanceOf[ExpressionWrapper]
   @scala.inline
-  def ParenthesizedExpression_(expression: Expression, `type`: ParenthesizedExpression): ExpressionWrapper = {
-    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ExpressionWrapper]
-  }
+  implicit def apply(value: ParenthesizedExpression_): ExpressionWrapper = value.asInstanceOf[ExpressionWrapper]
   @scala.inline
-  def TypeCastExpression_(expression: Expression, `type`: TypeCastExpression, typeAnnotation: TypeAnnotation_): ExpressionWrapper = {
-    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any], typeAnnotation = typeAnnotation.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ExpressionWrapper]
-  }
+  implicit def apply(value: TypeCastExpression_): ExpressionWrapper = value.asInstanceOf[ExpressionWrapper]
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.c3.mod
 
-import typingsSlinky.c3.AnonPosition
+import typingsSlinky.c3.anon.Position
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait AxisConfiguration extends js.Object {
     * Valid horizontal axis positions: inner-right (default), inner-center, inner-left, outer-right, outer-center, outer-left
     * Valid vertical axis positions: inner-top, inner-middle, inner-bottom, outer-top, outer-middle, outer-bottom
     */
-  var label: js.UndefOr[String | AnonPosition] = js.native
+  var label: js.UndefOr[String | Position] = js.native
   /**
     * Set max value of the axis.
     */
@@ -62,7 +62,7 @@ object AxisConfiguration {
         ret
     }
     @scala.inline
-    def withLabel(value: String | AnonPosition): Self = {
+    def withLabel(value: String | Position): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret

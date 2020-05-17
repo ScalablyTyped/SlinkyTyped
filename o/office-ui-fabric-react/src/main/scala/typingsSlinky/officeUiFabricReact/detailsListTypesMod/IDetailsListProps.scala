@@ -1,11 +1,12 @@
 package typingsSlinky.officeUiFabricReact.detailsListTypesMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.officeUiFabricReact.AnonCallback
+import typingsSlinky.officeUiFabricReact.anon.Callback
 import typingsSlinky.officeUiFabricReact.detailsFooterTypesMod.IDetailsFooterProps
 import typingsSlinky.officeUiFabricReact.detailsHeaderTypesMod.IDetailsHeaderProps
 import typingsSlinky.officeUiFabricReact.detailsListBaseMod.DetailsListBase
@@ -17,7 +18,6 @@ import typingsSlinky.officeUiFabricReact.listTypesMod.IListProps
 import typingsSlinky.officeUiFabricReact.selectionZoneMod.ISelectionZoneProps
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
 import typingsSlinky.officeUiFabricReact.withViewportMod.IWithViewportProps
-import typingsSlinky.std.Event_
 import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -187,7 +187,7 @@ trait IDetailsListProps
     js.Function3[
       /* item */ js.UndefOr[js.Any], 
       /* index */ js.UndefOr[Double], 
-      /* ev */ js.UndefOr[Event_], 
+      /* ev */ js.UndefOr[Event], 
       Unit | Boolean
     ]
   ] = js.native
@@ -196,7 +196,7 @@ trait IDetailsListProps
     js.Function3[
       /* item */ js.UndefOr[js.Any], 
       /* index */ js.UndefOr[Double], 
-      /* ev */ js.UndefOr[Event_], 
+      /* ev */ js.UndefOr[Event], 
       Unit
     ]
   ] = js.native
@@ -259,7 +259,7 @@ trait IDetailsListProps
     */
   var onShouldVirtualize: js.UndefOr[js.Function1[/* props */ IListProps[_], Boolean]] = js.native
   /** Event names and corresponding callbacks that will be registered to rendered row elements. */
-  var rowElementEventMap: js.UndefOr[js.Array[AnonCallback]] = js.native
+  var rowElementEventMap: js.UndefOr[js.Array[Callback]] = js.native
   /** Optional selection model to track selection state.  */
   var selection: js.UndefOr[ISelection[IObjectWithKey]] = js.native
   /** Controls how/if the details list manages selection. Options include none, single, multiple */
@@ -780,7 +780,7 @@ object IDetailsListProps {
     }
     @scala.inline
     def withOnItemContextMenu(
-      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event_]) => Unit | Boolean
+      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event]) => Unit | Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemContextMenu")(js.Any.fromFunction3(value))
@@ -794,7 +794,7 @@ object IDetailsListProps {
     }
     @scala.inline
     def withOnItemInvoked(
-      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event_]) => Unit
+      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemInvoked")(js.Any.fromFunction3(value))
@@ -929,7 +929,7 @@ object IDetailsListProps {
         ret
     }
     @scala.inline
-    def withRowElementEventMap(value: js.Array[AnonCallback]): Self = {
+    def withRowElementEventMap(value: js.Array[Callback]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowElementEventMap")(value.asInstanceOf[js.Any])
         ret

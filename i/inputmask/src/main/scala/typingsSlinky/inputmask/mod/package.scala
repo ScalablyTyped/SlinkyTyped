@@ -11,7 +11,6 @@ package object mod {
     /* pos */ scala.Double, 
     /* strict */ scala.Boolean, 
     /* opts */ typingsSlinky.inputmask.mod.Options, 
-    scala.Boolean | typingsSlinky.inputmask.AnonC
+    scala.Boolean | typingsSlinky.inputmask.anon.C
   ]
-  type Range = typingsSlinky.inputmask.AnonEnd | (js.Tuple2[java.lang.String, java.lang.String])
 }

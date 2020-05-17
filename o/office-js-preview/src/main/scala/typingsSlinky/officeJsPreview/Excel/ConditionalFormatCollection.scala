@@ -23,9 +23,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.6]
   */
-@JSGlobal("Excel.ConditionalFormatCollection")
 @js.native
-class ConditionalFormatCollection () extends ClientObject {
+trait ConditionalFormatCollection extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_ConditionalFormatCollection: RequestContext = js.native

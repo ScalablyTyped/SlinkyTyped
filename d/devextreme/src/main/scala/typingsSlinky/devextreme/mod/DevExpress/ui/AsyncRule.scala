@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonColumn
+import typingsSlinky.devextreme.anon.Column
 import typingsSlinky.devextreme.devextremeStrings.async
 import typingsSlinky.devextreme.devextremeStrings.compare
 import typingsSlinky.devextreme.devextremeStrings.custom
@@ -10,8 +10,8 @@ import typingsSlinky.devextreme.devextremeStrings.pattern
 import typingsSlinky.devextreme.devextremeStrings.range
 import typingsSlinky.devextreme.devextremeStrings.required
 import typingsSlinky.devextreme.devextremeStrings.stringLength
-import typingsSlinky.devextreme.mod._Global_.JQueryPromise
-import typingsSlinky.devextreme.mod._Global_.Promise
+import typingsSlinky.devextreme.mod.global.JQueryPromise
+import typingsSlinky.devextreme.mod.global.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ trait AsyncRule extends js.Object {
     required | numeric | range | stringLength | custom | compare | pattern | email | async
   ] = js.native
   /** A function that validates the target value. */
-  var validationCallback: js.UndefOr[js.Function1[/* options */ AnonColumn, Promise[_] | JQueryPromise[_]]] = js.native
+  var validationCallback: js.UndefOr[js.Function1[/* options */ Column, Promise[_] | JQueryPromise[_]]] = js.native
 }
 
 object AsyncRule {
@@ -93,7 +93,7 @@ object AsyncRule {
         ret
     }
     @scala.inline
-    def withValidationCallback(value: /* options */ AnonColumn => Promise[_] | JQueryPromise[_]): Self = {
+    def withValidationCallback(value: /* options */ Column => Promise[_] | JQueryPromise[_]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validationCallback")(js.Any.fromFunction1(value))
         ret

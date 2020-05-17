@@ -1,6 +1,6 @@
 package typingsSlinky.antd.mod
 
-import typingsSlinky.antd.AnonVisibilityHeight
+import typingsSlinky.antd.anon.VisibilityHeight
 import typingsSlinky.antd.backTopMod.BackTopProps
 import typingsSlinky.antd.backTopMod.default
 import scala.scalajs.js
@@ -17,6 +17,6 @@ class BackTop protected () extends default {
 @JSImport("antd", "BackTop")
 @js.native
 object BackTop extends js.Object {
-  var defaultProps: AnonVisibilityHeight = js.native
+  var defaultProps: VisibilityHeight = js.native
 }
 

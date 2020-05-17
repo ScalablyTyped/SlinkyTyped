@@ -15,7 +15,6 @@ package object mod {
       scala.Null | typingsSlinky.webpackBlocksDevServer.webpackBlocksDevServerBooleans.`false` | java.lang.String
     ]
   ]
-  type ProxyType = js.Object | typingsSlinky.webpackBlocksDevServer.mod.ProxyFunction
   type RewritesToFunction = js.Function1[
     /* context */ typingsSlinky.webpackBlocksDevServer.mod.ContextObject, 
     java.lang.String

@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdkClientGlacierNode.typesUploadMultipartPartInputMod
 
+import typingsSlinky.awsSdkClientGlacierNode.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.httpMod.NodeHttpOptions
 import scala.scalajs.js
@@ -7,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait UploadMultipartPartInput[StreamType] extends js.Object {
+trait UploadMultipartPartInput[StreamType] extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *

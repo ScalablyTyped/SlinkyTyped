@@ -1,6 +1,6 @@
 package typingsSlinky.playcanvas.mod
 
-import typingsSlinky.playcanvas.AnonRadius
+import typingsSlinky.playcanvas.anon.Radius
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,6 +27,6 @@ object createSphere extends js.Object {
     * @returns {pc.Mesh} A new sphere-shaped mesh.
     */
   def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice): typingsSlinky.playcanvas.pc.Mesh = js.native
-  def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice, opts: AnonRadius): typingsSlinky.playcanvas.pc.Mesh = js.native
+  def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice, opts: Radius): typingsSlinky.playcanvas.pc.Mesh = js.native
 }
 

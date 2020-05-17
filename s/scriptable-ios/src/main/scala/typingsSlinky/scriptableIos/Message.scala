@@ -10,15 +10,8 @@ import scala.scalajs.js.annotation._
   * Constructs a message to be sent either as a text message or an iMessage.
   * @see https://docs.scriptable.app/message/#-new-message
   */
-@JSGlobal("Message")
 @js.native
-/**
-  * _Sends a message._
-  *
-  * Constructs a message to be sent either as a text message or an iMessage.
-  * @see https://docs.scriptable.app/message/#-new-message
-  */
-class Message () extends js.Object {
+trait Message extends js.Object {
   /**
     * _Body of the message._
     *
@@ -63,5 +56,64 @@ class Message () extends js.Object {
     * @see https://docs.scriptable.app/message/#-send
     */
   def send(): js.Promise[Unit] = js.native
+}
+
+object Message {
+  @scala.inline
+  def apply(
+    addDataAttachment: (Data, String, String) => Unit,
+    addFileAttachment: String => Unit,
+    addImageAttachment: Image => Unit,
+    body: String,
+    recipients: js.Array[String],
+    send: () => js.Promise[Unit]
+  ): Message = {
+    val __obj = js.Dynamic.literal(addDataAttachment = js.Any.fromFunction3(addDataAttachment), addFileAttachment = js.Any.fromFunction1(addFileAttachment), addImageAttachment = js.Any.fromFunction1(addImageAttachment), body = body.asInstanceOf[js.Any], recipients = recipients.asInstanceOf[js.Any], send = js.Any.fromFunction0(send))
+    __obj.asInstanceOf[Message]
+  }
+  @scala.inline
+  implicit class MessageOps[Self <: Message] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddDataAttachment(value: (Data, String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addDataAttachment")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withAddFileAttachment(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addFileAttachment")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAddImageAttachment(value: Image => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addImageAttachment")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withBody(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRecipients(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recipients")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSend(value: () => js.Promise[Unit]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("send")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

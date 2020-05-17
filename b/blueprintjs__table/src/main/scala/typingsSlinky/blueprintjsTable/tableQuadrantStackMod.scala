@@ -1,15 +1,16 @@
 package typingsSlinky.blueprintjsTable
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import typingsSlinky.blueprintjsCore.mod.AbstractComponent2
 import typingsSlinky.blueprintjsCore.propsMod.IProps
+import typingsSlinky.blueprintjsTable.anon.PartialITableQuadrantStac
 import typingsSlinky.blueprintjsTable.esmRegionsMod.TableLoadingOption
 import typingsSlinky.blueprintjsTable.gridMod.Grid
 import typingsSlinky.blueprintjsTable.tableQuadrantMod.QuadrantType
 import typingsSlinky.react.mod.EventHandler
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -142,7 +143,7 @@ object tableQuadrantStackMod extends js.Object {
     /**
       * An optional callback invoked the quadrants are scrolled.
       */
-    var onScroll: js.UndefOr[EventHandler[SyntheticEvent[Event_, HTMLElement]]] = js.native
+    var onScroll: js.UndefOr[EventHandler[SyntheticEvent[Event, HTMLElement]]] = js.native
     /**
       * A callback that receives a `ref` to the main-quadrant element.
       */

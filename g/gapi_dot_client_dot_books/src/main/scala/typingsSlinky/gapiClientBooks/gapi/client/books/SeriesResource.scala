@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientBooks.AnonSeriesid
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientBooks.anon.Seriesid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation._
 trait SeriesResource extends js.Object {
   var membership: MembershipResource = js.native
   /** Returns Series metadata for the given series ids. */
-  def get(request: AnonSeriesid): Request_[Series] = js.native
+  def get(request: Seriesid): Request[Series] = js.native
 }
 
 object SeriesResource {
   @scala.inline
-  def apply(get: AnonSeriesid => Request_[Series], membership: MembershipResource): SeriesResource = {
+  def apply(get: Seriesid => Request[Series], membership: MembershipResource): SeriesResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), membership = membership.asInstanceOf[js.Any])
     __obj.asInstanceOf[SeriesResource]
   }
@@ -26,7 +26,7 @@ object SeriesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonSeriesid => Request_[Series]): Self = {
+    def withGet(value: Seriesid => Request[Series]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret

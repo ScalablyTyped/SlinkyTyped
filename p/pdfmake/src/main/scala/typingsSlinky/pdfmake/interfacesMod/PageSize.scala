@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait PageSize extends js.Object
 
+object PageSize {
+  @scala.inline
+  implicit def apply(value: CustomPageSize): PageSize = value.asInstanceOf[PageSize]
+  @scala.inline
+  implicit def apply(value: PredefinedPageSize): PageSize = value.asInstanceOf[PageSize]
+}
+

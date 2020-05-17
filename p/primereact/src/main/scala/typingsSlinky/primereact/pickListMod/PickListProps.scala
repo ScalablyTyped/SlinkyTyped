@@ -1,8 +1,8 @@
 package typingsSlinky.primereact.pickListMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.primereact.AnonSource
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.Source
+import typingsSlinky.primereact.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,13 +13,13 @@ trait PickListProps extends js.Object {
   var id: js.UndefOr[String] = js.native
   var itemTemplate: js.UndefOr[js.Function1[/* item */ js.Any, js.UndefOr[ReactElement]]] = js.native
   var metaKeySelection: js.UndefOr[Boolean] = js.native
-  var onChange: js.UndefOr[js.Function1[/* e */ AnonSource, Unit]] = js.native
-  var onMoveAllToSource: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
-  var onMoveAllToTarget: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
-  var onMoveToSource: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
-  var onMoveToTarget: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
-  var onSourceSelect: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
-  var onTargetSelect: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* e */ Source, Unit]] = js.native
+  var onMoveAllToSource: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
+  var onMoveAllToTarget: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
+  var onMoveToSource: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
+  var onMoveToTarget: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
+  var onSourceSelect: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
+  var onTargetSelect: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
   var responsive: js.UndefOr[Boolean] = js.native
   var showSourceControls: js.UndefOr[Boolean] = js.native
   var showTargetControls: js.UndefOr[Boolean] = js.native
@@ -94,7 +94,7 @@ object PickListProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* e */ AnonSource => Unit): Self = {
+    def withOnChange(value: /* e */ Source => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -106,7 +106,7 @@ object PickListProps {
         ret
     }
     @scala.inline
-    def withOnMoveAllToSource(value: /* e */ AnonValue => Unit): Self = {
+    def withOnMoveAllToSource(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMoveAllToSource")(js.Any.fromFunction1(value))
         ret
@@ -118,7 +118,7 @@ object PickListProps {
         ret
     }
     @scala.inline
-    def withOnMoveAllToTarget(value: /* e */ AnonValue => Unit): Self = {
+    def withOnMoveAllToTarget(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMoveAllToTarget")(js.Any.fromFunction1(value))
         ret
@@ -130,7 +130,7 @@ object PickListProps {
         ret
     }
     @scala.inline
-    def withOnMoveToSource(value: /* e */ AnonValue => Unit): Self = {
+    def withOnMoveToSource(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMoveToSource")(js.Any.fromFunction1(value))
         ret
@@ -142,7 +142,7 @@ object PickListProps {
         ret
     }
     @scala.inline
-    def withOnMoveToTarget(value: /* e */ AnonValue => Unit): Self = {
+    def withOnMoveToTarget(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMoveToTarget")(js.Any.fromFunction1(value))
         ret
@@ -154,7 +154,7 @@ object PickListProps {
         ret
     }
     @scala.inline
-    def withOnSourceSelect(value: /* e */ AnonValue => Unit): Self = {
+    def withOnSourceSelect(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSourceSelect")(js.Any.fromFunction1(value))
         ret
@@ -166,7 +166,7 @@ object PickListProps {
         ret
     }
     @scala.inline
-    def withOnTargetSelect(value: /* e */ AnonValue => Unit): Self = {
+    def withOnTargetSelect(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTargetSelect")(js.Any.fromFunction1(value))
         ret

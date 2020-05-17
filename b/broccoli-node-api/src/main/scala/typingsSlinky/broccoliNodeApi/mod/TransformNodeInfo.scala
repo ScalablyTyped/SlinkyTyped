@@ -1,6 +1,6 @@
 package typingsSlinky.broccoliNodeApi.mod
 
-import typingsSlinky.broccoliNodeApi.AnonCachePath
+import typingsSlinky.broccoliNodeApi.anon.CachePath
 import typingsSlinky.broccoliNodeApi.broccoliNodeApiStrings.transform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -67,7 +67,7 @@ trait TransformNodeInfo extends NodeInfoCommon[transform] {
     If a `cachePath` is not needed/desired, a plugin can opt-out of its creation
     via the `needsCache` flag metioned below.
     */
-  def setup(features: FeatureSet, options: AnonCachePath): Unit = js.native
+  def setup(features: FeatureSet, options: CachePath): Unit = js.native
 }
 
 object TransformNodeInfo {
@@ -80,7 +80,7 @@ object TransformNodeInfo {
     needsCache: Boolean,
     nodeType: transform,
     persistentOutput: Boolean,
-    setup: (FeatureSet, AnonCachePath) => Unit,
+    setup: (FeatureSet, CachePath) => Unit,
     trackInputChanges: Boolean,
     volatile: Boolean
   ): TransformNodeInfo = {
@@ -118,7 +118,7 @@ object TransformNodeInfo {
         ret
     }
     @scala.inline
-    def withSetup(value: (FeatureSet, AnonCachePath) => Unit): Self = {
+    def withSetup(value: (FeatureSet, CachePath) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("setup")(js.Any.fromFunction2(value))
         ret

@@ -1,9 +1,5 @@
 package typingsSlinky.expo.aRMod
 
-import typingsSlinky.expo.AnonLength
-import typingsSlinky.expo.aRMod.AnchorType.Face
-import typingsSlinky.expo.aRMod.AnchorType.Image
-import typingsSlinky.expo.aRMod.AnchorType.Plane
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,28 +14,12 @@ trait Anchor extends js.Object
 
 object Anchor {
   @scala.inline
-  def BaseAnchor(id: String, transform: Matrix, `type`: AnchorType): Anchor = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], transform = transform.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Anchor]
-  }
+  implicit def apply(value: BaseAnchor): Anchor = value.asInstanceOf[Anchor]
   @scala.inline
-  def PlaneAnchor(center: Vector3, extent: AnonLength, id: String, transform: Matrix, `type`: AnchorType with Plane): Anchor = {
-    val __obj = js.Dynamic.literal(center = center.asInstanceOf[js.Any], extent = extent.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], transform = transform.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Anchor]
-  }
+  implicit def apply(value: FaceAnchor): Anchor = value.asInstanceOf[Anchor]
   @scala.inline
-  def ImageAnchor(id: String, transform: Matrix, `type`: AnchorType with Image): Anchor = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], transform = transform.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Anchor]
-  }
+  implicit def apply(value: ImageAnchor): Anchor = value.asInstanceOf[Anchor]
   @scala.inline
-  def FaceAnchor(id: String, isTracked: Boolean, transform: Matrix, `type`: AnchorType with Face): Anchor = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], isTracked = isTracked.asInstanceOf[js.Any], transform = transform.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Anchor]
-  }
+  implicit def apply(value: PlaneAnchor): Anchor = value.asInstanceOf[Anchor]
 }
 

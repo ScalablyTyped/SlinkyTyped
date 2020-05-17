@@ -1,6 +1,6 @@
 package typingsSlinky.reactNative.mod
 
-import typingsSlinky.reactNative.AnonHighlight
+import typingsSlinky.reactNative.anon.Highlight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait ListRenderItemInfo[ItemT] extends js.Object {
   var index: Double = js.native
   var item: ItemT = js.native
-  var separators: AnonHighlight = js.native
+  var separators: Highlight = js.native
 }
 
 object ListRenderItemInfo {
   @scala.inline
-  def apply[ItemT](index: Double, item: ItemT, separators: AnonHighlight): ListRenderItemInfo[ItemT] = {
+  def apply[ItemT](index: Double, item: ItemT, separators: Highlight): ListRenderItemInfo[ItemT] = {
     val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], item = item.asInstanceOf[js.Any], separators = separators.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListRenderItemInfo[ItemT]]
   }
@@ -37,7 +37,7 @@ object ListRenderItemInfo {
         ret
     }
     @scala.inline
-    def withSeparators(value: AnonHighlight): Self[ItemT] = {
+    def withSeparators(value: Highlight): Self[ItemT] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("separators")(value.asInstanceOf[js.Any])
         ret

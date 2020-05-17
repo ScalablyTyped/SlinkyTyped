@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides base functionality for the ASPxClientScheduler's forms.
   */
-@JSGlobal("ASPxClientFormBase")
 @js.native
-class ASPxClientFormBase () extends js.Object {
+trait ASPxClientFormBase extends js.Object {
   /**
     * Occurs when the form has been closed.
     */
@@ -24,5 +23,43 @@ class ASPxClientFormBase () extends js.Object {
     * @param isVisible true to display the element; false to hide the element.
     */
   def SetVisibleCore(element: js.Any, isVisible: Boolean): Unit = js.native
+}
+
+object ASPxClientFormBase {
+  @scala.inline
+  def apply(
+    Close: () => Unit,
+    FormClosed: ASPxClientEvent[ASPxClientEventHandler[ASPxClientFormBase]],
+    SetVisibleCore: (js.Any, Boolean) => Unit
+  ): ASPxClientFormBase = {
+    val __obj = js.Dynamic.literal(Close = js.Any.fromFunction0(Close), FormClosed = FormClosed.asInstanceOf[js.Any], SetVisibleCore = js.Any.fromFunction2(SetVisibleCore))
+    __obj.asInstanceOf[ASPxClientFormBase]
+  }
+  @scala.inline
+  implicit class ASPxClientFormBaseOps[Self <: ASPxClientFormBase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withFormClosed(value: ASPxClientEvent[ASPxClientEventHandler[ASPxClientFormBase]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FormClosed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetVisibleCore(value: (js.Any, Boolean) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetVisibleCore")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

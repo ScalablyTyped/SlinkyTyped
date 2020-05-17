@@ -1,7 +1,7 @@
 package typingsSlinky.postcss.mod
 
-import typingsSlinky.postcss.FnCall
-import typingsSlinky.postcss.FnCallOnrejected
+import typingsSlinky.postcss.anon.FnCall
+import typingsSlinky.postcss.anon.FnCallOnrejected
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -78,14 +78,6 @@ trait LazyResult extends js.Object {
     * @param onRejected Called if any plugin throws an error.
     */
   def `then`[TResult1, TResult2](): js.Promise[TResult1 | TResult2] = js.native
-  /**
-    * Processes input CSS through synchronous and asynchronous plugins.
-    * @param onRejected Called if any plugin throws an error.
-    */
-  def `then`[TResult1, TResult2](
-    onfulfilled: js.UndefOr[scala.Nothing],
-    onrejected: js.Function1[/* reason */ js.Any, TResult2 | js.Thenable[TResult2]]
-  ): js.Promise[TResult1 | TResult2] = js.native
   /**
     * Processes input CSS through synchronous and asynchronous plugins.
     * @param onRejected Called if any plugin throws an error.

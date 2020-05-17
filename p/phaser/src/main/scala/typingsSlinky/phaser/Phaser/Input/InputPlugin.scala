@@ -46,14 +46,8 @@ import scala.scalajs.js.annotation._
   * 
   * Please also see the Input examples and tutorials for further information.
   */
-@JSGlobal("Phaser.Input.InputPlugin")
 @js.native
-class InputPlugin protected () extends EventEmitter {
-  /**
-    * 
-    * @param scene A reference to the Scene that this Input Plugin is responsible for.
-    */
-  def this(scene: Scene) = this()
+trait InputPlugin extends EventEmitter {
   /**
     * The current active input Pointer.
     */

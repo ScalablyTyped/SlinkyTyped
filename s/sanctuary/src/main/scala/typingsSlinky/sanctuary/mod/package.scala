@@ -37,7 +37,6 @@ package object mod {
   type Monoid[A] = typingsSlinky.sanctuary.mod.Semigroup[A]
   type NonNegativeInteger = scala.Double
   type NonZeroFiniteNumber = scala.Double
-  type Nullable[A] = A | scala.Null
   type Ord[A] = typingsSlinky.sanctuary.mod.Setoid[A]
   type Pair[A, B] = js.Tuple2[A, B]
   type Plus[A] = typingsSlinky.sanctuary.mod.Alt[A]

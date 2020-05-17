@@ -1,8 +1,8 @@
 package typingsSlinky.chromeApps.chrome.runtime
 
-import typingsSlinky.chromeApps.AnonAccepttlschannelid
-import typingsSlinky.chromeApps.AnonAlwaysupdate
-import typingsSlinky.chromeApps.AnonBackground
+import typingsSlinky.chromeApps.anon.Accepttlschannelid
+import typingsSlinky.chromeApps.anon.Alwaysupdate
+import typingsSlinky.chromeApps.anon.Background
 import typingsSlinky.chromeApps.chromeAppsBooleans.`true`
 import typingsSlinky.chromeApps.chromeAppsNumbers.`2`
 import scala.scalajs.js
@@ -18,7 +18,7 @@ trait ValidKioskManifest
   extends PartialManifest
      with Manifest {
   /** Kiosk settings */
-  var kiosk: js.UndefOr[AnonAlwaysupdate] = js.native
+  var kiosk: js.UndefOr[Alwaysupdate] = js.native
   /**
     * Enable this app to be used as a kiosk app.
     */
@@ -37,8 +37,8 @@ trait ValidKioskManifest
 object ValidKioskManifest {
   @scala.inline
   def apply(
-    app: AnonBackground,
-    externally_connectable: AnonAccepttlschannelid,
+    app: Background,
+    externally_connectable: Accepttlschannelid,
     kiosk_enabled: `true`,
     manifest_version: `2`,
     name: String,
@@ -60,7 +60,7 @@ object ValidKioskManifest {
         ret
     }
     @scala.inline
-    def withKiosk(value: AnonAlwaysupdate): Self = {
+    def withKiosk(value: Alwaysupdate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("kiosk")(value.asInstanceOf[js.Any])
         ret

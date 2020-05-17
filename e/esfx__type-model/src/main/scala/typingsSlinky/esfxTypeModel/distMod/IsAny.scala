@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait IsAny[A] extends js.Object
 
+object IsAny {
+  @scala.inline
+  def `false`[A]: typingsSlinky.esfxTypeModel.esfxTypeModelBooleans.`false` = false.asInstanceOf[typingsSlinky.esfxTypeModel.esfxTypeModelBooleans.`false`]
+  @scala.inline
+  def `true`[A]: typingsSlinky.esfxTypeModel.esfxTypeModelBooleans.`true` = true.asInstanceOf[typingsSlinky.esfxTypeModel.esfxTypeModelBooleans.`true`]
+}
+

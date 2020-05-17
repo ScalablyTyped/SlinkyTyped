@@ -1,6 +1,5 @@
 package typingsSlinky.tabris
 
-import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.tabris.tabrisStrings.error
 import typingsSlinky.tabris.tabrisStrings.message
 import typingsSlinky.tabris.tabrisStrings.messageerror
@@ -45,8 +44,4 @@ trait Worker extends EventTarget {
   def postMessage(data: js.Any, transferList: js.Array[_]): Unit = js.native
   def terminate(): Unit = js.native
 }
-
-@JSGlobal("Worker")
-@js.native
-object Worker extends Instantiable1[/* scriptPath */ String, Worker]
 

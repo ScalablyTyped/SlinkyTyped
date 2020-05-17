@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientBigquery.gapi.client.bigquery
 
-import typingsSlinky.gapiClientBigquery.AnonFriendlyName
+import typingsSlinky.gapiClientBigquery.anon.FriendlyName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait ProjectList extends js.Object {
   /** A token to request the next page of results. */
   var nextPageToken: js.UndefOr[String] = js.native
   /** Projects to which you have at least READ access. */
-  var projects: js.UndefOr[js.Array[AnonFriendlyName]] = js.native
+  var projects: js.UndefOr[js.Array[FriendlyName]] = js.native
   /** The total number of projects in the list. */
   var totalItems: js.UndefOr[Double] = js.native
 }
@@ -68,7 +68,7 @@ object ProjectList {
         ret
     }
     @scala.inline
-    def withProjects(value: js.Array[AnonFriendlyName]): Self = {
+    def withProjects(value: js.Array[FriendlyName]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("projects")(value.asInstanceOf[js.Any])
         ret

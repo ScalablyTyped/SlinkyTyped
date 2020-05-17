@@ -8,18 +8,8 @@ import scala.scalajs.js.annotation._
 /**
   * Defines a section of a Hub.
   **/
-@JSGlobal("WinJS.UI.HubSection")
 @js.native
-//#region Constructors
-/**
-  * Creates a new HubSection.
-  * @constructor
-  * @param element The DOM element hosts the new HubSection.
-  * @param options An object that contains one or more property/value pairs to apply to the new control. Each property of the options object corresponds to one of the control's properties or events.
-  **/
-class HubSection () extends js.Object {
-  def this(element: HTMLElement) = this()
-  def this(element: HTMLElement, options: js.Any) = this()
+trait HubSection extends js.Object {
   //#endregion Methods
   //#region Properties
   /**
@@ -46,17 +36,55 @@ class HubSection () extends js.Object {
   def dispose(): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("WinJS.UI.HubSection")
-@js.native
-object HubSection extends js.Object {
-  /**
-    * This object supports the WinJS infrastructure and is not intended to be used directly from your code.
-    **/
-  var isDeclarativeControlContainer: js.Any = js.native
-  /**
-    * Indicates that the object is compatibile with declarative processing.
-    **/
-  var supportedForProcessing: Boolean = js.native
+object HubSection {
+  @scala.inline
+  def apply(
+    contentElement: HTMLElement,
+    dispose: () => Unit,
+    element: HTMLElement,
+    header: String,
+    isHeaderStatic: Boolean
+  ): HubSection = {
+    val __obj = js.Dynamic.literal(contentElement = contentElement.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), element = element.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], isHeaderStatic = isHeaderStatic.asInstanceOf[js.Any])
+    __obj.asInstanceOf[HubSection]
+  }
+  @scala.inline
+  implicit class HubSectionOps[Self <: HubSection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentElement(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDispose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispose")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withElement(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeader(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsHeaderStatic(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isHeaderStatic")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

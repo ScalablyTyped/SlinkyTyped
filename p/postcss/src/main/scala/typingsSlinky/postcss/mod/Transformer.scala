@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Transformer
   extends TransformCallback
-     with _AcceptedPlugin {
+     with AcceptedPlugin {
   var postcssPlugin: js.UndefOr[String] = js.native
   var postcssVersion: js.UndefOr[String] = js.native
   /* InferMemberOverrides */

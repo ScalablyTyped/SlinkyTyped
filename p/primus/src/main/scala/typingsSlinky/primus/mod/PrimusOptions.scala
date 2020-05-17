@@ -1,7 +1,7 @@
 package typingsSlinky.primus.mod
 
 import typingsSlinky.node.httpMod.IncomingMessage
-import typingsSlinky.primus.AnonAuthenticate
+import typingsSlinky.primus.anon.Authenticate
 import typingsSlinky.primus.primusStrings.browserchannel
 import typingsSlinky.primus.primusStrings.engineDotio
 import typingsSlinky.primus.primusStrings.faye
@@ -48,7 +48,7 @@ object PrimusOptions {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
     def withAuthorization(
-      value: (/* req */ IncomingMessage, /* done */ js.Function1[/* err */ js.UndefOr[String | js.Error | AnonAuthenticate], Unit]) => Unit
+      value: (/* req */ IncomingMessage, /* done */ js.Function1[/* err */ js.UndefOr[String | js.Error | Authenticate], Unit]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("authorization")(js.Any.fromFunction2(value))

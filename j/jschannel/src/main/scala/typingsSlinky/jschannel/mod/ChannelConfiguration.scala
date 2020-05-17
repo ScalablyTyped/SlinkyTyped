@@ -1,6 +1,6 @@
 package typingsSlinky.jschannel.mod
 
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,12 +16,12 @@ trait ChannelConfiguration extends js.Object {
   var reconnect: js.UndefOr[Boolean] = js.native
   var remote: js.UndefOr[String | js.Array[String]] = js.native
   var scope: String = js.native
-  var window: Window_ = js.native
+  var window: Window = js.native
 }
 
 object ChannelConfiguration {
   @scala.inline
-  def apply(origin: String, scope: String, window: Window_): ChannelConfiguration = {
+  def apply(origin: String, scope: String, window: Window): ChannelConfiguration = {
     val __obj = js.Dynamic.literal(origin = origin.asInstanceOf[js.Any], scope = scope.asInstanceOf[js.Any], window = window.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChannelConfiguration]
   }
@@ -44,7 +44,7 @@ object ChannelConfiguration {
         ret
     }
     @scala.inline
-    def withWindow(value: Window_): Self = {
+    def withWindow(value: Window): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("window")(value.asInstanceOf[js.Any])
         ret

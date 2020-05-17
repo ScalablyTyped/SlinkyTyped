@@ -22,7 +22,6 @@ package object mod {
   type ClientRequestOptions = typingsSlinky.nes.clientMod.ClientRequestOptions
   type ClientSubscribeFlags = typingsSlinky.nes.clientMod.ClientSubscribeFlags
   type Handler = typingsSlinky.nes.clientMod.Handler
-  type ServerOnSubscribe = typingsSlinky.nes.mod.ServerOnSubscribeWithParams | typingsSlinky.nes.mod.ServerOnSubscribeWithoutParams
   type ServerOnSubscribeWithParams = js.Function3[
     /* socket */ typingsSlinky.nes.mod.Socket, 
     /* path */ java.lang.String, 
@@ -34,7 +33,6 @@ package object mod {
     /* path */ java.lang.String, 
     js.Promise[js.Any]
   ]
-  type ServerOnUnSubscribe = typingsSlinky.nes.mod.ServerOnUnSubscribeWithParams | typingsSlinky.nes.mod.ServerOnUnSubscribeWithoutParams
   type ServerOnUnSubscribeWithParams = js.Function3[
     /* socket */ typingsSlinky.nes.mod.Socket, 
     /* path */ java.lang.String, 

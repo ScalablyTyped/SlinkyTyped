@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TensorContainerObject
   extends /* x */ StringDictionary[TensorContainer]
-     with _TensorContainer
+     with TensorContainer
 
 object TensorContainerObject {
   @scala.inline

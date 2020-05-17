@@ -5,18 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.babylonjs.BABYLON.PoseControlled because var conflicts: position, rotationQuaternion. Inlined devicePosition, deviceRotationQuaternion, rawPose, deviceScaleFactor, updateFromDevice */ @JSGlobal("BABYLON.WebVRFreeCamera")
-@js.native
-class WebVRFreeCamera protected () extends FreeCamera {
-  /**
-    * Instantiates a WebVRFreeCamera.
-    * @param name The name of the WebVRFreeCamera
-    * @param position The starting anchor position for the camera
-    * @param scene The scene the camera belongs to
-    * @param webVROptions a set of customizable options for the webVRCamera
-    */
-  def this(name: String, position: Vector3, scene: Scene) = this()
-  def this(name: String, position: Vector3, scene: Scene, webVROptions: WebVROptions) = this()
+- typingsSlinky.babylonjs.BABYLON.PoseControlled because var conflicts: position, rotationQuaternion. Inlined devicePosition, deviceRotationQuaternion, rawPose, deviceScaleFactor, updateFromDevice */ @js.native
+trait WebVRFreeCamera extends FreeCamera {
   var _attached: js.Any = js.native
   var _correctPositionIfNotTrackPosition: js.Any = js.native
   var _defaultHeight: js.UndefOr[js.Any] = js.native

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("PowerPoint.MotionEffect")
 @js.native
-class MotionEffect protected () extends js.Object {
+trait MotionEffect extends js.Object {
   val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application = js.native
   var ByX: Double = js.native
   var ByY: Double = js.native
@@ -18,5 +17,93 @@ class MotionEffect protected () extends js.Object {
   var PowerPointDotMotionEffect_typekey: MotionEffect = js.native
   var ToX: Double = js.native
   var ToY: Double = js.native
+}
+
+object MotionEffect {
+  @scala.inline
+  def apply(
+    Application: Application,
+    ByX: Double,
+    ByY: Double,
+    FromX: Double,
+    FromY: Double,
+    Parent: js.Any,
+    Path: String,
+    PowerPointDotMotionEffect_typekey: MotionEffect,
+    ToX: Double,
+    ToY: Double
+  ): MotionEffect = {
+    val __obj = js.Dynamic.literal(Application = Application.asInstanceOf[js.Any], ByX = ByX.asInstanceOf[js.Any], ByY = ByY.asInstanceOf[js.Any], FromX = FromX.asInstanceOf[js.Any], FromY = FromY.asInstanceOf[js.Any], Parent = Parent.asInstanceOf[js.Any], Path = Path.asInstanceOf[js.Any], ToX = ToX.asInstanceOf[js.Any], ToY = ToY.asInstanceOf[js.Any])
+    __obj.updateDynamic("PowerPoint.MotionEffect_typekey")(PowerPointDotMotionEffect_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MotionEffect]
+  }
+  @scala.inline
+  implicit class MotionEffectOps[Self <: MotionEffect] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplication(value: Application): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withByX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ByX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withByY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ByY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFromX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FromX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFromY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FromY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPowerPointDotMotionEffect_typekey(value: MotionEffect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PowerPoint.MotionEffect_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ToX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ToY")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

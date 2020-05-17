@@ -1,6 +1,6 @@
 package typingsSlinky.evernote.mod.NoteStore
 
-import typingsSlinky.evernote.AnonChunkHighUSN
+import typingsSlinky.evernote.anon.ChunkHighUSN
 import typingsSlinky.evernote.mod.Types.Guid
 import typingsSlinky.evernote.mod.Types.LinkedNotebook
 import typingsSlinky.evernote.mod.Types.Note
@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
 @JSImport("evernote", "NoteStore.SyncChunk")
 @js.native
 class SyncChunk () extends js.Object {
-  def this(args: AnonChunkHighUSN) = this()
+  def this(args: ChunkHighUSN) = this()
   var chunkHighUSN: js.UndefOr[Double] = js.native
   var currentTime: js.UndefOr[Timestamp] = js.native
   var expungedLinkedNotebooks: js.UndefOr[js.Array[Guid]] = js.native

@@ -1,7 +1,7 @@
 package typingsSlinky.antDesignIconsSvg.helpersMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.antDesignIconsSvg.AnonPrimaryColor
+import typingsSlinky.antDesignIconsSvg.anon.PrimaryColor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait HelperRenderOptions extends js.Object {
   var extraSVGAttrs: js.UndefOr[StringDictionary[String]] = js.native
-  var placeholders: js.UndefOr[AnonPrimaryColor] = js.native
+  var placeholders: js.UndefOr[PrimaryColor] = js.native
 }
 
 object HelperRenderOptions {
@@ -37,7 +37,7 @@ object HelperRenderOptions {
         ret
     }
     @scala.inline
-    def withPlaceholders(value: AnonPrimaryColor): Self = {
+    def withPlaceholders(value: PrimaryColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("placeholders")(value.asInstanceOf[js.Any])
         ret

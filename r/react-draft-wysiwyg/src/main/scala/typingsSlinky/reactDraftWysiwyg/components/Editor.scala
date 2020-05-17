@@ -1,5 +1,6 @@
 package typingsSlinky.reactDraftWysiwyg.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
@@ -11,7 +12,6 @@ import typingsSlinky.reactDraftWysiwyg.mod.ContentBlock
 import typingsSlinky.reactDraftWysiwyg.mod.EditorProps
 import typingsSlinky.reactDraftWysiwyg.mod.EditorState
 import typingsSlinky.reactDraftWysiwyg.mod.RawDraftContentState
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -74,7 +74,7 @@ object Editor {
     @scala.inline
     def mention(value: js.Object): this.type = set("mention", value.asInstanceOf[js.Any])
     @scala.inline
-    def onBlur(value: SyntheticEvent[EventTarget with js.Object, Event_] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    def onBlur(value: SyntheticEvent[EventTarget with js.Object, Event] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
     def onChange(value: /* contentState */ RawDraftContentState => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
@@ -82,7 +82,7 @@ object Editor {
     @scala.inline
     def onEditorStateChange(value: /* editorState */ EditorState => Unit): this.type = set("onEditorStateChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onFocus(value: SyntheticEvent[EventTarget with js.Object, Event_] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    def onFocus(value: SyntheticEvent[EventTarget with js.Object, Event] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
     def onTab(value: SyntheticKeyboardEvent[js.Object] => Unit): this.type = set("onTab", js.Any.fromFunction1(value))
     @scala.inline

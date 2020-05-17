@@ -1,8 +1,8 @@
 package typingsSlinky.vsoNodeApi.dashboardInterfacesMod
 
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonCollectionUser
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonCreate
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonEdit
+import typingsSlinky.vsoNodeApi.anon.EnumValuesCollectionUser
+import typingsSlinky.vsoNodeApi.anon.EnumValuesCreate
+import typingsSlinky.vsoNodeApi.anon.EnumValuesEdit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,12 +11,12 @@ import scala.scalajs.js.annotation._
 @js.native
 object TypeInfo extends js.Object {
   var DashboardGroup: js.Any = js.native
-  var DashboardScope: AnonEnumValuesAnonCollectionUser = js.native
-  var GroupMemberPermission: AnonEnumValuesAnonEdit = js.native
-  var TeamDashboardPermission: AnonEnumValuesAnonCreate = js.native
+  var DashboardScope: EnumValuesCollectionUser = js.native
+  var GroupMemberPermission: EnumValuesEdit = js.native
+  var TeamDashboardPermission: EnumValuesCreate = js.native
   var WidgetMetadata: js.Any = js.native
   var WidgetMetadataResponse: js.Any = js.native
-  var WidgetScope: AnonEnumValuesAnonCollectionUser = js.native
+  var WidgetScope: EnumValuesCollectionUser = js.native
   var WidgetTypesResponse: js.Any = js.native
 }
 

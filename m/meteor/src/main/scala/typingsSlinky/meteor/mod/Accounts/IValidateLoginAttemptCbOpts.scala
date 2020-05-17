@@ -2,7 +2,7 @@ package typingsSlinky.meteor.mod.Accounts
 
 import typingsSlinky.meteor.Meteor.Connection
 import typingsSlinky.meteor.Meteor.Error
-import typingsSlinky.meteor.Meteor.User_
+import typingsSlinky.meteor.Meteor.User
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait IValidateLoginAttemptCbOpts extends js.Object {
   var methodArguments: js.Array[_] = js.native
   var methodName: String = js.native
   var `type`: String = js.native
-  var user: User_ = js.native
+  var user: User = js.native
 }
 
 object IValidateLoginAttemptCbOpts {
@@ -27,7 +27,7 @@ object IValidateLoginAttemptCbOpts {
     methodArguments: js.Array[_],
     methodName: String,
     `type`: String,
-    user: User_
+    user: User
   ): IValidateLoginAttemptCbOpts = {
     val __obj = js.Dynamic.literal(allowed = allowed.asInstanceOf[js.Any], connection = connection.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], methodArguments = methodArguments.asInstanceOf[js.Any], methodName = methodName.asInstanceOf[js.Any], user = user.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
@@ -76,7 +76,7 @@ object IValidateLoginAttemptCbOpts {
         ret
     }
     @scala.inline
-    def withUser(value: User_): Self = {
+    def withUser(value: User): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
         ret

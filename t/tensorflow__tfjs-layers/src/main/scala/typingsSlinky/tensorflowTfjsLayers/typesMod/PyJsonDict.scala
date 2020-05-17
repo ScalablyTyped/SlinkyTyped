@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PyJsonDict
   extends /* key */ StringDictionary[PyJsonValue]
-     with _PyJsonValue
+     with PyJsonValue
 
 object PyJsonDict {
   @scala.inline

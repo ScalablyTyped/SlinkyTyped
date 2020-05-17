@@ -11,9 +11,8 @@ import scala.scalajs.js.annotation._
   * @class
   * @memberof PIXI.interaction
   */
-@JSGlobal("PIXI.interaction.InteractionEvent")
 @js.native
-class InteractionEvent () extends js.Object {
+trait InteractionEvent extends js.Object {
   /**
     * The object whose event listener’s callback is currently being invoked.
     *
@@ -57,5 +56,72 @@ class InteractionEvent () extends js.Object {
     *
     */
   def stopPropagation(): Unit = js.native
+}
+
+object InteractionEvent {
+  @scala.inline
+  def apply(
+    currentTarget: DisplayObject,
+    data: InteractionData,
+    reset: () => Unit,
+    stopPropagation: () => Unit,
+    stopped: Boolean,
+    target: DisplayObject,
+    `type`: String
+  ): InteractionEvent = {
+    val __obj = js.Dynamic.literal(currentTarget = currentTarget.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], reset = js.Any.fromFunction0(reset), stopPropagation = js.Any.fromFunction0(stopPropagation), stopped = stopped.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[InteractionEvent]
+  }
+  @scala.inline
+  implicit class InteractionEventOps[Self <: InteractionEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrentTarget(value: DisplayObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withData(value: InteractionData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReset(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStopPropagation(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPropagation")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStopped(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopped")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTarget(value: DisplayObject): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

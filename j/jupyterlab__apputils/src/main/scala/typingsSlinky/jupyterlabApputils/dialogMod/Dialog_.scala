@@ -1,12 +1,12 @@
 package typingsSlinky.jupyterlabApputils.dialogMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.jupyterlabApputils.dialogMod.Dialog.IOptions
 import typingsSlinky.jupyterlabApputils.dialogMod.Dialog.IResult
 import typingsSlinky.phosphorWidgets.mod.Widget
-import typingsSlinky.std.Event_
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -63,7 +63,7 @@ class Dialog_[T] () extends Widget {
     * called in response to events on the panel's DOM node. It should
     * not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
   /**
     * Launch the dialog as a modal window.
     *

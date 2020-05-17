@@ -1,19 +1,19 @@
 package typingsSlinky.pdfjsDist.mod
 
-import typingsSlinky.pdfjsDist.AnonCMapData
-import typingsSlinky.pdfjsDist.AnonName
+import typingsSlinky.pdfjsDist.anon.CMapData
+import typingsSlinky.pdfjsDist.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CMapReader extends js.Object {
-  def fetch(params: AnonName): js.Promise[AnonCMapData] = js.native
+  def fetch(params: Name): js.Promise[CMapData] = js.native
 }
 
 object CMapReader {
   @scala.inline
-  def apply(fetch: AnonName => js.Promise[AnonCMapData]): CMapReader = {
+  def apply(fetch: Name => js.Promise[CMapData]): CMapReader = {
     val __obj = js.Dynamic.literal(fetch = js.Any.fromFunction1(fetch))
     __obj.asInstanceOf[CMapReader]
   }
@@ -24,7 +24,7 @@ object CMapReader {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFetch(value: AnonName => js.Promise[AnonCMapData]): Self = {
+    def withFetch(value: Name => js.Promise[CMapData]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fetch")(js.Any.fromFunction1(value))
         ret

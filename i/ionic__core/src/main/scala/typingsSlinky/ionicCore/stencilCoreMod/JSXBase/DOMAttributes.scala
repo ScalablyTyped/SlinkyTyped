@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.AnimationEvent
 import org.scalajs.dom.raw.ClipboardEvent
 import org.scalajs.dom.raw.CompositionEvent
 import org.scalajs.dom.raw.DragEvent
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
@@ -12,7 +13,6 @@ import org.scalajs.dom.raw.TouchEvent
 import org.scalajs.dom.raw.TransitionEvent
 import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,8 +31,8 @@ trait DOMAttributes[T] extends js.Object {
   var onBlur: js.UndefOr[js.Function1[/* event */ FocusEvent, Unit]] = js.native
   var onBlurCapture: js.UndefOr[js.Function1[/* event */ FocusEvent, Unit]] = js.native
   // Form Events
-  var onChange: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onChangeCapture: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onChangeCapture: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   var onClick: js.UndefOr[js.Function1[/* event */ MouseEvent, Unit]] = js.native
   var onClickCapture: js.UndefOr[js.Function1[/* event */ MouseEvent, Unit]] = js.native
   // Composition Events
@@ -67,18 +67,18 @@ trait DOMAttributes[T] extends js.Object {
   var onDragStartCapture: js.UndefOr[js.Function1[/* event */ DragEvent, Unit]] = js.native
   var onDrop: js.UndefOr[js.Function1[/* event */ DragEvent, Unit]] = js.native
   var onDropCapture: js.UndefOr[js.Function1[/* event */ DragEvent, Unit]] = js.native
-  var onError: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onError: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
    // also a Media Event
-  var onErrorCapture: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onErrorCapture: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   // Focus Events
   var onFocus: js.UndefOr[js.Function1[/* event */ FocusEvent, Unit]] = js.native
   var onFocusCapture: js.UndefOr[js.Function1[/* event */ FocusEvent, Unit]] = js.native
   var onGotPointerCapture: js.UndefOr[js.Function1[/* event */ PointerEvent, Unit]] = js.native
   var onGotPointerCaptureCapture: js.UndefOr[js.Function1[/* event */ PointerEvent, Unit]] = js.native
-  var onInput: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onInputCapture: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onInvalid: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onInvalidCapture: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onInput: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onInputCapture: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onInvalid: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onInvalidCapture: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
    // also a Media Event
   // Keyboard Events
   var onKeyDown: js.UndefOr[js.Function1[/* event */ KeyboardEvent, Unit]] = js.native
@@ -88,8 +88,8 @@ trait DOMAttributes[T] extends js.Object {
   var onKeyUp: js.UndefOr[js.Function1[/* event */ KeyboardEvent, Unit]] = js.native
   var onKeyUpCapture: js.UndefOr[js.Function1[/* event */ KeyboardEvent, Unit]] = js.native
   // Image Events
-  var onLoad: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onLoadCapture: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onLoad: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onLoadCapture: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   var onLostPointerCapture: js.UndefOr[js.Function1[/* event */ PointerEvent, Unit]] = js.native
   var onLostPointerCaptureCapture: js.UndefOr[js.Function1[/* event */ PointerEvent, Unit]] = js.native
   var onMouseDown: js.UndefOr[js.Function1[/* event */ MouseEvent, Unit]] = js.native
@@ -123,13 +123,13 @@ trait DOMAttributes[T] extends js.Object {
   var onPointerOverCapture: js.UndefOr[js.Function1[/* event */ PointerEvent, Unit]] = js.native
   var onPointerUp: js.UndefOr[js.Function1[/* event */ PointerEvent, Unit]] = js.native
   var onPointerUpCapture: js.UndefOr[js.Function1[/* event */ PointerEvent, Unit]] = js.native
-  var onReset: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onResetCapture: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onReset: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onResetCapture: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   // UI Events
   var onScroll: js.UndefOr[js.Function1[/* event */ UIEvent, Unit]] = js.native
   var onScrollCapture: js.UndefOr[js.Function1[/* event */ UIEvent, Unit]] = js.native
-  var onSubmit: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onSubmitCapture: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onSubmit: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onSubmitCapture: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   // Touch Events
   var onTouchCancel: js.UndefOr[js.Function1[/* event */ TouchEvent, Unit]] = js.native
   var onTouchCancelCapture: js.UndefOr[js.Function1[/* event */ TouchEvent, Unit]] = js.native
@@ -270,7 +270,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* event */ Event_ => Unit): Self[T] = {
+    def withOnChange(value: /* event */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -282,7 +282,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnChangeCapture(value: /* event */ Event_ => Unit): Self[T] = {
+    def withOnChangeCapture(value: /* event */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChangeCapture")(js.Any.fromFunction1(value))
         ret
@@ -678,7 +678,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnError(value: /* event */ Event_ => Unit): Self[T] = {
+    def withOnError(value: /* event */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
         ret
@@ -690,7 +690,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnErrorCapture(value: /* event */ Event_ => Unit): Self[T] = {
+    def withOnErrorCapture(value: /* event */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onErrorCapture")(js.Any.fromFunction1(value))
         ret
@@ -750,7 +750,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnInput(value: /* event */ Event_ => Unit): Self[T] = {
+    def withOnInput(value: /* event */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInput")(js.Any.fromFunction1(value))
         ret
@@ -762,7 +762,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnInputCapture(value: /* event */ Event_ => Unit): Self[T] = {
+    def withOnInputCapture(value: /* event */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInputCapture")(js.Any.fromFunction1(value))
         ret
@@ -774,7 +774,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnInvalid(value: /* event */ Event_ => Unit): Self[T] = {
+    def withOnInvalid(value: /* event */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInvalid")(js.Any.fromFunction1(value))
         ret
@@ -786,7 +786,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnInvalidCapture(value: /* event */ Event_ => Unit): Self[T] = {
+    def withOnInvalidCapture(value: /* event */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInvalidCapture")(js.Any.fromFunction1(value))
         ret
@@ -870,7 +870,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnLoad(value: /* event */ Event_ => Unit): Self[T] = {
+    def withOnLoad(value: /* event */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction1(value))
         ret
@@ -882,7 +882,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnLoadCapture(value: /* event */ Event_ => Unit): Self[T] = {
+    def withOnLoadCapture(value: /* event */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadCapture")(js.Any.fromFunction1(value))
         ret
@@ -1278,7 +1278,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnReset(value: /* event */ Event_ => Unit): Self[T] = {
+    def withOnReset(value: /* event */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onReset")(js.Any.fromFunction1(value))
         ret
@@ -1290,7 +1290,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnResetCapture(value: /* event */ Event_ => Unit): Self[T] = {
+    def withOnResetCapture(value: /* event */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onResetCapture")(js.Any.fromFunction1(value))
         ret
@@ -1326,7 +1326,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnSubmit(value: /* event */ Event_ => Unit): Self[T] = {
+    def withOnSubmit(value: /* event */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(js.Any.fromFunction1(value))
         ret
@@ -1338,7 +1338,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnSubmitCapture(value: /* event */ Event_ => Unit): Self[T] = {
+    def withOnSubmitCapture(value: /* event */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmitCapture")(js.Any.fromFunction1(value))
         ret

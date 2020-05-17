@@ -1,6 +1,6 @@
 package typingsSlinky.popmotionPose
 
-import typingsSlinky.popmotionPose.typesMod._Draggable
+import typingsSlinky.popmotionPose.typesMod.Draggable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,10 +61,10 @@ object popmotionPoseStrings {
   sealed trait tween extends js.Object
   
   @js.native
-  sealed trait x extends _Draggable
+  sealed trait x extends Draggable
   
   @js.native
-  sealed trait y extends _Draggable
+  sealed trait y extends Draggable
   
   @scala.inline
   def BoundingBox: BoundingBox = "BoundingBox".asInstanceOf[BoundingBox]

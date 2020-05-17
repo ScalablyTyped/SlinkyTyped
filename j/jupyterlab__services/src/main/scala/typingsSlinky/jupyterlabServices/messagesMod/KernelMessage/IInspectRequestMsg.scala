@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabServices.messagesMod.KernelMessage
 
-import typingsSlinky.jupyterlabServices.AnonCursorpos
+import typingsSlinky.jupyterlabServices.anon.Cursorpos
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.inspect_request
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.shell
 import typingsSlinky.phosphorCoreutils.jsonMod.JSONObject
@@ -18,16 +18,16 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IInspectRequestMsg
   extends IShellMessage[inspect_request]
-     with _Message {
+     with Message {
   @JSName("content")
-  var content_IInspectRequestMsg: AnonCursorpos = js.native
+  var content_IInspectRequestMsg: Cursorpos = js.native
 }
 
 object IInspectRequestMsg {
   @scala.inline
   def apply(
     channel: shell,
-    content: AnonCursorpos,
+    content: Cursorpos,
     header: IHeader[inspect_request],
     metadata: JSONObject,
     parent_header: IHeader[MessageType] | js.Object
@@ -42,7 +42,7 @@ object IInspectRequestMsg {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContent(value: AnonCursorpos): Self = {
+    def withContent(value: Cursorpos): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
         ret

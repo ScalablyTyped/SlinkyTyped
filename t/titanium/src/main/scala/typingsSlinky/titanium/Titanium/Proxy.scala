@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 /**
 	 * The base for all Titanium objects.
 	 */
-@JSGlobal("Titanium.Proxy")
 @js.native
-class Proxy () extends js.Object {
+trait Proxy extends js.Object {
   /**
   		 * The name of the API that this proxy corresponds to.
   		 */

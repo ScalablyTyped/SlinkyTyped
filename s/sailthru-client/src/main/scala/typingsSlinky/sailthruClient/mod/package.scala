@@ -10,6 +10,4 @@ package object mod {
     /* response */ typingsSlinky.sailthruClient.mod.SailthruResponse, 
     scala.Unit
   ]
-  type SailthruError = typingsSlinky.sailthruClient.AnonError | scala.Null
-  type SailthruResponse = js.Object | java.lang.String
 }

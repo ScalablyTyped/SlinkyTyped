@@ -49,19 +49,14 @@ import typingsSlinky.androiduix.android.widget.TextView.OnEditorActionListener
 import typingsSlinky.androiduix.androidui.attr.AttrBinder.ClassBinderMap
 import typingsSlinky.androiduix.java_.lang.Runnable
 import typingsSlinky.androiduix.java_.util.ArrayList
-import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.widget.CompoundButton")
 @js.native
-abstract class CompoundButton_ protected ()
-  extends Button
+trait CompoundButton_
+  extends TextView
      with Checkable {
-  def this(context: Context) = this()
-  def this(context: Context, bindElement: HTMLElement) = this()
-  def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String]) = this()
   var mBroadcasting: js.Any = js.native
   var mButtonDrawable: js.Any = js.native
   var mButtonResource: js.Any = js.native

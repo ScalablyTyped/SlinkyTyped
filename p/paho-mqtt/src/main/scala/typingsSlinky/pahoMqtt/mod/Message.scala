@@ -1,6 +1,6 @@
 package typingsSlinky.pahoMqtt.mod
 
-import typingsSlinky.pahoMqtt.mod._Global_.Paho.MQTT.TypedArray
+import typingsSlinky.pahoMqtt.mod.global.Paho.MQTT.TypedArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @JSImport("paho-mqtt", "Message")
 @js.native
 class Message protected ()
-  extends typingsSlinky.pahoMqtt.mod._Global_.Paho.MQTT.Message {
+  extends typingsSlinky.pahoMqtt.mod.global.Paho.MQTT.Message {
   /**
     * @param payload The message data to be sent.
     */

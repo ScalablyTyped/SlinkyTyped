@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeMaps.components
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -31,11 +31,11 @@ import typingsSlinky.reactNative.reactNativeStrings.polite
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.yes
-import typingsSlinky.reactNativeMaps.Anon0
-import typingsSlinky.reactNativeMaps.AnonAction
-import typingsSlinky.reactNativeMaps.AnonActionId
-import typingsSlinky.reactNativeMaps.AnonCoordinate
-import typingsSlinky.reactNativeMaps.AnonId
+import typingsSlinky.reactNativeMaps.anon.Action
+import typingsSlinky.reactNativeMaps.anon.ActionId
+import typingsSlinky.reactNativeMaps.anon.Coordinate
+import typingsSlinky.reactNativeMaps.anon.Id
+import typingsSlinky.reactNativeMaps.anon.`0`
 import typingsSlinky.reactNativeMaps.mod.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -114,15 +114,15 @@ class SharedBuilder_MarkerProps278311419[R <: js.Object] (val args: js.Array[js.
   @scala.inline
   def onAccessibilityTap(value: () => Unit): this.type = set("onAccessibilityTap", js.Any.fromFunction0(value))
   @scala.inline
-  def onCalloutPress(value: SyntheticEvent[NodeHandle, Anon0 with AnonCoordinate] => Unit): this.type = set("onCalloutPress", js.Any.fromFunction1(value))
+  def onCalloutPress(value: SyntheticEvent[NodeHandle, `0` with Coordinate] => Unit): this.type = set("onCalloutPress", js.Any.fromFunction1(value))
   @scala.inline
-  def onDeselect(value: SyntheticEvent[NodeHandle, AnonActionId with AnonCoordinate] => Unit): this.type = set("onDeselect", js.Any.fromFunction1(value))
+  def onDeselect(value: SyntheticEvent[NodeHandle, ActionId with Coordinate] => Unit): this.type = set("onDeselect", js.Any.fromFunction1(value))
   @scala.inline
-  def onDrag(value: SyntheticEvent[NodeHandle, js.Object with AnonCoordinate] => Unit): this.type = set("onDrag", js.Any.fromFunction1(value))
+  def onDrag(value: SyntheticEvent[NodeHandle, js.Object with Coordinate] => Unit): this.type = set("onDrag", js.Any.fromFunction1(value))
   @scala.inline
-  def onDragEnd(value: SyntheticEvent[NodeHandle, js.Object with AnonCoordinate] => Unit): this.type = set("onDragEnd", js.Any.fromFunction1(value))
+  def onDragEnd(value: SyntheticEvent[NodeHandle, js.Object with Coordinate] => Unit): this.type = set("onDragEnd", js.Any.fromFunction1(value))
   @scala.inline
-  def onDragStart(value: SyntheticEvent[NodeHandle, js.Object with AnonCoordinate] => Unit): this.type = set("onDragStart", js.Any.fromFunction1(value))
+  def onDragStart(value: SyntheticEvent[NodeHandle, js.Object with Coordinate] => Unit): this.type = set("onDragStart", js.Any.fromFunction1(value))
   @scala.inline
   def onLayout(value: /* event */ LayoutChangeEvent => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
   @scala.inline
@@ -132,7 +132,7 @@ class SharedBuilder_MarkerProps278311419[R <: js.Object] (val args: js.Array[js.
   @scala.inline
   def onMoveShouldSetResponderCapture(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onMoveShouldSetResponderCapture", js.Any.fromFunction1(value))
   @scala.inline
-  def onPress(value: SyntheticEvent[NodeHandle, AnonAction with AnonCoordinate] => Unit): this.type = set("onPress", js.Any.fromFunction1(value))
+  def onPress(value: SyntheticEvent[NodeHandle, Action with Coordinate] => Unit): this.type = set("onPress", js.Any.fromFunction1(value))
   @scala.inline
   def onResponderEnd(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onResponderEnd", js.Any.fromFunction1(value))
   @scala.inline
@@ -150,7 +150,7 @@ class SharedBuilder_MarkerProps278311419[R <: js.Object] (val args: js.Array[js.
   @scala.inline
   def onResponderTerminationRequest(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onResponderTerminationRequest", js.Any.fromFunction1(value))
   @scala.inline
-  def onSelect(value: SyntheticEvent[NodeHandle, AnonId with AnonCoordinate] => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+  def onSelect(value: SyntheticEvent[NodeHandle, Id with Coordinate] => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
   @scala.inline
   def onStartShouldSetResponder(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onStartShouldSetResponder", js.Any.fromFunction1(value))
   @scala.inline

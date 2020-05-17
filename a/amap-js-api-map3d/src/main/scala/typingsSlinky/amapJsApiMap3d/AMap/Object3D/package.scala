@@ -5,6 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object Object3D {
-  type Prism = typingsSlinky.amapJsApiMap3d.AMap.Object3D.Prism_
-  type ThinLine = typingsSlinky.amapJsApiMap3d.AMap.Object3D.ThinLine_
+  type Prism = typingsSlinky.amapJsApiMap3d.AMap.Object3D.MeshAcceptLights
+  type ThinLine = typingsSlinky.amapJsApiMap3d.AMap.Object3D.Line
+  // tslint:disable-next-line
+  type Wall = typingsSlinky.amapJsApiMap3d.AMap.Object3D.Prism
 }

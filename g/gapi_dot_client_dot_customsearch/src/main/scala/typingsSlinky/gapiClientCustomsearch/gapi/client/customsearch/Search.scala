@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientCustomsearch.gapi.client.customsearch
 
-import typingsSlinky.gapiClientCustomsearch.AnonCorrectedQuery
-import typingsSlinky.gapiClientCustomsearch.AnonFormattedSearchTime
-import typingsSlinky.gapiClientCustomsearch.AnonTemplate
+import typingsSlinky.gapiClientCustomsearch.anon.CorrectedQuery
+import typingsSlinky.gapiClientCustomsearch.anon.FormattedSearchTime
+import typingsSlinky.gapiClientCustomsearch.anon.Template
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,9 +15,9 @@ trait Search extends js.Object {
   var kind: js.UndefOr[String] = js.native
   var promotions: js.UndefOr[js.Array[Promotion]] = js.native
   var queries: js.UndefOr[Record[String, js.Array[Query]]] = js.native
-  var searchInformation: js.UndefOr[AnonFormattedSearchTime] = js.native
-  var spelling: js.UndefOr[AnonCorrectedQuery] = js.native
-  var url: js.UndefOr[AnonTemplate] = js.native
+  var searchInformation: js.UndefOr[FormattedSearchTime] = js.native
+  var spelling: js.UndefOr[CorrectedQuery] = js.native
+  var url: js.UndefOr[Template] = js.native
 }
 
 object Search {
@@ -93,7 +93,7 @@ object Search {
         ret
     }
     @scala.inline
-    def withSearchInformation(value: AnonFormattedSearchTime): Self = {
+    def withSearchInformation(value: FormattedSearchTime): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("searchInformation")(value.asInstanceOf[js.Any])
         ret
@@ -105,7 +105,7 @@ object Search {
         ret
     }
     @scala.inline
-    def withSpelling(value: AnonCorrectedQuery): Self = {
+    def withSpelling(value: CorrectedQuery): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("spelling")(value.asInstanceOf[js.Any])
         ret
@@ -117,7 +117,7 @@ object Search {
         ret
     }
     @scala.inline
-    def withUrl(value: AnonTemplate): Self = {
+    def withUrl(value: Template): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
         ret

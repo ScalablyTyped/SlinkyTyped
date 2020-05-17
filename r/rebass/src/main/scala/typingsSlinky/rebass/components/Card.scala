@@ -42,7 +42,7 @@ object Card {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, Ref[js.Any]] {
     @scala.inline
     def alignSelf(value: ResponsiveValue[AlignSelfProperty, RequiredTheme]): this.type = set("alignSelf", value.asInstanceOf[js.Any])
     @scala.inline

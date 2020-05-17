@@ -1,0 +1,24 @@
+package typingsSlinky.phonegap.global
+
+import org.scalablytyped.runtime.Instantiable3
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("ContactField")
+@js.native
+class ContactField protected ()
+  extends typingsSlinky.phonegap.ContactField {
+  def this(`type`: String, calue: String, perf: Boolean) = this()
+}
+
+@JSGlobal("ContactField")
+@js.native
+object ContactField
+  extends Instantiable3[
+      /* type */ String, 
+      /* calue */ String, 
+      /* perf */ Boolean, 
+      typingsSlinky.phonegap.ContactField
+    ]
+

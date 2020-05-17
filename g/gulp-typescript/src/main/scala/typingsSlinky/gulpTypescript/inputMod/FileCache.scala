@@ -1,6 +1,6 @@
 package typingsSlinky.gulpTypescript.inputMod
 
-import typingsSlinky.gulpTypescript.Typeofts
+import typingsSlinky.gulpTypescript.anon.Typeofts
 import typingsSlinky.gulpTypescript.typesMod.VinylFile
 import typingsSlinky.typescript.mod.CompilerOptions
 import scala.scalajs.js

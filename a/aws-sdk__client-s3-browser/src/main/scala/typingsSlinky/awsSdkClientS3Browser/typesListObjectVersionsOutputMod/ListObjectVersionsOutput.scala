@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdkClientS3Browser.typesListObjectVersionsOutputMod
 
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.url
-import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientS3Browser.typesCommonPrefixMod.UnmarshalledCommonPrefix
 import typingsSlinky.awsSdkClientS3Browser.typesDeleteMarkerEntryMod.UnmarshalledDeleteMarkerEntry
 import typingsSlinky.awsSdkClientS3Browser.typesObjectVersionMod.UnmarshalledObjectVersion
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ListObjectVersionsOutput
   extends MetadataBearer
-     with _OutputTypesUnion {
+     with OutputTypesUnion {
   /**
     * _CommonPrefixList shape
     */

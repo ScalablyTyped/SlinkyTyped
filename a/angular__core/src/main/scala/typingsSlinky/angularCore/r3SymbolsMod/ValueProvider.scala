@@ -23,7 +23,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ValueProvider
   extends ValueSansProvider
-     with _StaticProvider {
+     with StaticProvider {
   /**
     * When true, injector returns an array of instances. This is useful to allow multiple
     * providers spread across many files to provide configuration information to a common token.

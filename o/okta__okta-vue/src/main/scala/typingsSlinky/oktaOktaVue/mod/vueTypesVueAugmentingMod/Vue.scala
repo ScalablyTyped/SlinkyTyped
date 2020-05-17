@@ -1,6 +1,6 @@
 package typingsSlinky.oktaOktaVue.mod.vueTypesVueAugmentingMod
 
-import typingsSlinky.oktaOktaVue.AnonAuthRedirectGuard
+import typingsSlinky.oktaOktaVue.anon.AuthRedirectGuard
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Vue extends js.Object {
   @JSName("$auth")
-  var $auth: AnonAuthRedirectGuard = js.native
+  var $auth: AuthRedirectGuard = js.native
 }
 
 object Vue {
   @scala.inline
-  def apply($auth: AnonAuthRedirectGuard): Vue = {
+  def apply($auth: AuthRedirectGuard): Vue = {
     val __obj = js.Dynamic.literal($auth = $auth.asInstanceOf[js.Any])
     __obj.asInstanceOf[Vue]
   }
@@ -24,7 +24,7 @@ object Vue {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with$auth(value: AnonAuthRedirectGuard): Self = {
+    def with$auth(value: AuthRedirectGuard): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("$auth")(value.asInstanceOf[js.Any])
         ret

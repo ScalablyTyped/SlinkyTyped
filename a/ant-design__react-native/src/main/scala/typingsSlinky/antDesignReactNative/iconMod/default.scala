@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.iconMod
 
-import typingsSlinky.antDesignReactNative.AnonSize
+import typingsSlinky.antDesignReactNative.anon.Size
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ class default () extends Icon
 @JSImport("@ant-design/react-native/lib/icon", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonSize = js.native
+  var defaultProps: Size = js.native
   var displayName: String = js.native
 }
 

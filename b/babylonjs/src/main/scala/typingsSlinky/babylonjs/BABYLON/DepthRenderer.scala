@@ -4,20 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.DepthRenderer")
 @js.native
-class DepthRenderer protected () extends js.Object {
-  /**
-    * Instantiates a depth renderer
-    * @param scene The scene the renderer belongs to
-    * @param type The texture type of the depth map (default: Engine.TEXTURETYPE_FLOAT)
-    * @param camera The camera to be used to render the depth map (default: scene's active camera)
-    * @param storeNonLinearDepth Defines whether the depth is stored linearly like in Babylon Shadows or directly like glFragCoord.z
-    */
-  def this(scene: Scene) = this()
-  def this(scene: Scene, `type`: Double) = this()
-  def this(scene: Scene, `type`: Double, camera: Nullable[Camera]) = this()
-  def this(scene: Scene, `type`: Double, camera: Nullable[Camera], storeNonLinearDepth: Boolean) = this()
+trait DepthRenderer extends js.Object {
   var _cachedDefines: js.Any = js.native
   var _camera: js.Any = js.native
   val _clearColor: js.Any = js.native
@@ -53,11 +41,111 @@ class DepthRenderer protected () extends js.Object {
   def isReady(subMesh: SubMesh, useInstances: Boolean): Boolean = js.native
 }
 
-/* static members */
-@JSGlobal("BABYLON.DepthRenderer")
-@js.native
-object DepthRenderer extends js.Object {
-  /** @hidden */
-  def _SceneComponentInitialization(scene: Scene): Unit = js.native
+object DepthRenderer {
+  @scala.inline
+  def apply(
+    _cachedDefines: js.Any,
+    _camera: js.Any,
+    _clearColor: js.Any,
+    _depthMap: js.Any,
+    _effect: js.Any,
+    _scene: js.Any,
+    _storeNonLinearDepth: js.Any,
+    dispose: () => Unit,
+    enabled: Boolean,
+    getDepthMap: () => RenderTargetTexture,
+    isPacked: Boolean,
+    isReady: (SubMesh, Boolean) => Boolean,
+    useOnlyInActiveCamera: Boolean
+  ): DepthRenderer = {
+    val __obj = js.Dynamic.literal(_cachedDefines = _cachedDefines.asInstanceOf[js.Any], _camera = _camera.asInstanceOf[js.Any], _clearColor = _clearColor.asInstanceOf[js.Any], _depthMap = _depthMap.asInstanceOf[js.Any], _effect = _effect.asInstanceOf[js.Any], _scene = _scene.asInstanceOf[js.Any], _storeNonLinearDepth = _storeNonLinearDepth.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), enabled = enabled.asInstanceOf[js.Any], getDepthMap = js.Any.fromFunction0(getDepthMap), isPacked = isPacked.asInstanceOf[js.Any], isReady = js.Any.fromFunction2(isReady), useOnlyInActiveCamera = useOnlyInActiveCamera.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DepthRenderer]
+  }
+  @scala.inline
+  implicit class DepthRendererOps[Self <: DepthRenderer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_cachedDefines(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_cachedDefines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_camera(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_camera")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_clearColor(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_clearColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_depthMap(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_depthMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_effect(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_effect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_scene(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_scene")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_storeNonLinearDepth(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_storeNonLinearDepth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDispose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispose")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetDepthMap(value: () => RenderTargetTexture): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDepthMap")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsPacked(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPacked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsReady(value: (SubMesh, Boolean) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isReady")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withUseOnlyInActiveCamera(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useOnlyInActiveCamera")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

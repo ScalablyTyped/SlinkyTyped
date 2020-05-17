@@ -1,20 +1,20 @@
 package typingsSlinky.oracleOraclejet.ojchartMod
 
-import typingsSlinky.oracleOraclejet.AnonAlignTickMarks
-import typingsSlinky.oracleOraclejet.AnonAnimationDownColor
-import typingsSlinky.oracleOraclejet.AnonAxisLine
-import typingsSlinky.oracleOraclejet.AnonBackgroundColor
-import typingsSlinky.oracleOraclejet.AnonBaselineScaling
-import typingsSlinky.oracleOraclejet.AnonBorderWidth
-import typingsSlinky.oracleOraclejet.AnonClose
-import typingsSlinky.oracleOraclejet.AnonComponentName
-import typingsSlinky.oracleOraclejet.AnonContent
-import typingsSlinky.oracleOraclejet.AnonConverter
-import typingsSlinky.oracleOraclejet.AnonDrag
-import typingsSlinky.oracleOraclejet.AnonInsert
-import typingsSlinky.oracleOraclejet.AnonPreventDefault
-import typingsSlinky.oracleOraclejet.AnonRenderer
-import typingsSlinky.oracleOraclejet.AnonX
+import typingsSlinky.oracleOraclejet.anon.AlignTickMarks
+import typingsSlinky.oracleOraclejet.anon.AnimationDownColor
+import typingsSlinky.oracleOraclejet.anon.AxisLine
+import typingsSlinky.oracleOraclejet.anon.BackgroundColor
+import typingsSlinky.oracleOraclejet.anon.BaselineScaling
+import typingsSlinky.oracleOraclejet.anon.BorderWidth
+import typingsSlinky.oracleOraclejet.anon.Close
+import typingsSlinky.oracleOraclejet.anon.ComponentName
+import typingsSlinky.oracleOraclejet.anon.Content
+import typingsSlinky.oracleOraclejet.anon.Converter
+import typingsSlinky.oracleOraclejet.anon.Drag
+import typingsSlinky.oracleOraclejet.anon.Insert
+import typingsSlinky.oracleOraclejet.anon.PreventDefault
+import typingsSlinky.oracleOraclejet.anon.Renderer
+import typingsSlinky.oracleOraclejet.anon.X
 import typingsSlinky.oracleOraclejet.ojchartMod.ojChart.DataLabelContext
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponentSettableProperties
@@ -86,8 +86,8 @@ trait ojChartSettableProperties[K, D] extends dvtBaseComponentSettableProperties
   var data: (DataProvider[K, D]) | Null = js.native
   var dataCursor: off | on | auto = js.native
   var dataCursorBehavior: smooth | snap | auto = js.native
-  var dataCursorPosition: AnonX = js.native
-  var dnd: AnonDrag = js.native
+  var dataCursorPosition: X = js.native
+  var dnd: Drag = js.native
   var dragMode: pan | zoom | select | off | user = js.native
   var drilling: on | seriesOnly | groupsOnly | off = js.native
   var groupComparator: (js.Function2[/* param0 */ js.Object, /* param1 */ js.Object, Double]) | Null = js.native
@@ -97,12 +97,12 @@ trait ojChartSettableProperties[K, D] extends dvtBaseComponentSettableProperties
   var highlightedCategories: js.Array[String] = js.native
   var hoverBehavior: dim | none = js.native
   var initialZooming: first | last | none = js.native
-  var legend: AnonBackgroundColor = js.native
+  var legend: BackgroundColor = js.native
   var orientation: horizontal | vertical = js.native
   var otherThreshold: Double = js.native
-  var overview: AnonContent = js.native
-  var pieCenter: AnonConverter = js.native
-  var plotArea: AnonBorderWidth = js.native
+  var overview: Content = js.native
+  var pieCenter: Converter = js.native
+  var plotArea: BorderWidth = js.native
   var polarGridShape: polygon | circle = js.native
   var selection: js.Array[K] = js.native
   var selectionMode: single | multiple | none = js.native
@@ -112,20 +112,20 @@ trait ojChartSettableProperties[K, D] extends dvtBaseComponentSettableProperties
   var splitterPosition: Double = js.native
   var stack: on | off = js.native
   var stackLabel: on | off = js.native
-  var styleDefaults: AnonAnimationDownColor = js.native
+  var styleDefaults: AnimationDownColor = js.native
   var timeAxisType: enabled | mixedFrequency | skipGaps | disabled | auto = js.native
-  var tooltip: AnonRenderer = js.native
+  var tooltip: Renderer = js.native
   var touchResponse: touchStart | auto = js.native
   @JSName("translations")
-  var translations_ojChartSettableProperties: AnonComponentName = js.native
+  var translations_ojChartSettableProperties: ComponentName = js.native
   var `type`: line | area | lineWithArea | stock | boxPlot | combo | pie | scatter | bubble | funnel | pyramid | bar = js.native
-  var valueFormats: AnonClose = js.native
-  var xAxis: AnonAxisLine = js.native
-  var y2Axis: AnonAlignTickMarks = js.native
-  var yAxis: AnonBaselineScaling = js.native
+  var valueFormats: Close = js.native
+  var xAxis: AxisLine = js.native
+  var y2Axis: AlignTickMarks = js.native
+  var yAxis: BaselineScaling = js.native
   var zoomAndScroll: delayedScrollOnly | liveScrollOnly | delayed | live | off = js.native
   var zoomDirection: x | y | auto = js.native
-  def dataLabel(context: DataLabelContext): AnonInsert | AnonPreventDefault = js.native
+  def dataLabel(context: DataLabelContext): Insert | PreventDefault = js.native
 }
 
 object ojChartSettableProperties {
@@ -137,9 +137,9 @@ object ojChartSettableProperties {
     coordinateSystem: polar | cartesian,
     dataCursor: off | on | auto,
     dataCursorBehavior: smooth | snap | auto,
-    dataCursorPosition: AnonX,
-    dataLabel: DataLabelContext => AnonInsert | AnonPreventDefault,
-    dnd: AnonDrag,
+    dataCursorPosition: X,
+    dataLabel: DataLabelContext => Insert | PreventDefault,
+    dnd: Drag,
     dragMode: pan | zoom | select | off | user,
     drilling: on | seriesOnly | groupsOnly | off,
     hiddenCategories: js.Array[String],
@@ -148,12 +148,12 @@ object ojChartSettableProperties {
     highlightedCategories: js.Array[String],
     hoverBehavior: dim | none,
     initialZooming: first | last | none,
-    legend: AnonBackgroundColor,
+    legend: BackgroundColor,
     orientation: horizontal | vertical,
     otherThreshold: Double,
-    overview: AnonContent,
-    pieCenter: AnonConverter,
-    plotArea: AnonBorderWidth,
+    overview: Content,
+    pieCenter: Converter,
+    plotArea: BorderWidth,
     polarGridShape: polygon | circle,
     selection: js.Array[K],
     selectionMode: single | multiple | none,
@@ -162,17 +162,17 @@ object ojChartSettableProperties {
     splitterPosition: Double,
     stack: on | off,
     stackLabel: on | off,
-    styleDefaults: AnonAnimationDownColor,
+    styleDefaults: AnimationDownColor,
     timeAxisType: enabled | mixedFrequency | skipGaps | disabled | auto,
-    tooltip: AnonRenderer,
+    tooltip: Renderer,
     touchResponse: touchStart | auto,
     trackResize: on | off,
-    translations: AnonComponentName,
+    translations: ComponentName,
     `type`: line | area | lineWithArea | stock | boxPlot | combo | pie | scatter | bubble | funnel | pyramid | bar,
-    valueFormats: AnonClose,
-    xAxis: AnonAxisLine,
-    y2Axis: AnonAlignTickMarks,
-    yAxis: AnonBaselineScaling,
+    valueFormats: Close,
+    xAxis: AxisLine,
+    y2Axis: AlignTickMarks,
+    yAxis: BaselineScaling,
     zoomAndScroll: delayedScrollOnly | liveScrollOnly | delayed | live | off,
     zoomDirection: x | y | auto
   ): ojChartSettableProperties[K, D] = {
@@ -223,19 +223,19 @@ object ojChartSettableProperties {
         ret
     }
     @scala.inline
-    def withDataCursorPosition(value: AnonX): Self[K, D] = {
+    def withDataCursorPosition(value: X): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataCursorPosition")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withDataLabel(value: DataLabelContext => AnonInsert | AnonPreventDefault): Self[K, D] = {
+    def withDataLabel(value: DataLabelContext => Insert | PreventDefault): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataLabel")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDnd(value: AnonDrag): Self[K, D] = {
+    def withDnd(value: Drag): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dnd")(value.asInstanceOf[js.Any])
         ret
@@ -289,7 +289,7 @@ object ojChartSettableProperties {
         ret
     }
     @scala.inline
-    def withLegend(value: AnonBackgroundColor): Self[K, D] = {
+    def withLegend(value: BackgroundColor): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(value.asInstanceOf[js.Any])
         ret
@@ -307,19 +307,19 @@ object ojChartSettableProperties {
         ret
     }
     @scala.inline
-    def withOverview(value: AnonContent): Self[K, D] = {
+    def withOverview(value: Content): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overview")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPieCenter(value: AnonConverter): Self[K, D] = {
+    def withPieCenter(value: Converter): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pieCenter")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPlotArea(value: AnonBorderWidth): Self[K, D] = {
+    def withPlotArea(value: BorderWidth): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("plotArea")(value.asInstanceOf[js.Any])
         ret
@@ -373,7 +373,7 @@ object ojChartSettableProperties {
         ret
     }
     @scala.inline
-    def withStyleDefaults(value: AnonAnimationDownColor): Self[K, D] = {
+    def withStyleDefaults(value: AnimationDownColor): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styleDefaults")(value.asInstanceOf[js.Any])
         ret
@@ -385,7 +385,7 @@ object ojChartSettableProperties {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonRenderer): Self[K, D] = {
+    def withTooltip(value: Renderer): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
@@ -397,7 +397,7 @@ object ojChartSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonComponentName): Self[K, D] = {
+    def withTranslations(value: ComponentName): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret
@@ -411,25 +411,25 @@ object ojChartSettableProperties {
         ret
     }
     @scala.inline
-    def withValueFormats(value: AnonClose): Self[K, D] = {
+    def withValueFormats(value: Close): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("valueFormats")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withXAxis(value: AnonAxisLine): Self[K, D] = {
+    def withXAxis(value: AxisLine): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("xAxis")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withY2Axis(value: AnonAlignTickMarks): Self[K, D] = {
+    def withY2Axis(value: AlignTickMarks): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("y2Axis")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withYAxis(value: AnonBaselineScaling): Self[K, D] = {
+    def withYAxis(value: BaselineScaling): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("yAxis")(value.asInstanceOf[js.Any])
         ret
@@ -441,7 +441,7 @@ object ojChartSettableProperties {
         ret
     }
     @scala.inline
-    def withZoomDirection(value: x | y | auto): Self[K, D] = {
+    def withZoomDirection(value: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.x | y | auto): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("zoomDirection")(value.asInstanceOf[js.Any])
         ret

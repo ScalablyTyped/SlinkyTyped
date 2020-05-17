@@ -1,6 +1,6 @@
 package typingsSlinky.modesl.mod
 
-import typingsSlinky.modesl.AnonHIGH
+import typingsSlinky.modesl.anon.HIGH
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,6 +26,6 @@ class Event protected () extends js.Object {
 @JSImport("modesl", "Event")
 @js.native
 object Event extends js.Object {
-  val PRIORITY: AnonHIGH = js.native
+  val PRIORITY: HIGH = js.native
 }
 

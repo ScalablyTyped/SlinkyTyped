@@ -2,12 +2,13 @@ package typingsSlinky.reactInputCalendar
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.reactInputCalendar.reactInputCalendar.ReactInputCalendar
+import slinky.core.ReactComponentClass
+import typingsSlinky.reactInputCalendar.reactInputCalendar.ReactInputCalendarProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("react-input-calendar", JSImport.Namespace)
 @js.native
-object mod extends TopLevel[Instantiable0[ReactInputCalendar]]
+object mod extends TopLevel[Instantiable0[ReactComponentClass[ReactInputCalendarProps]]]
 

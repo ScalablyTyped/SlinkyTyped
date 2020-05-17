@@ -1,7 +1,6 @@
 package typingsSlinky.i18nJs.mod
 
-import typingsSlinky.i18nJs.AnonMessage
-import typingsSlinky.i18nJs.AnonScope
+import typingsSlinky.i18nJs.anon.Message
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TranslateOptions extends InterpolateOptions {
   var defaultValue: js.UndefOr[String] = js.native
-  var defaults: js.UndefOr[js.Array[AnonMessage | AnonScope]] = js.native
+  var defaults: js.UndefOr[js.Array[Message | typingsSlinky.i18nJs.anon.Scope]] = js.native
   var message: js.UndefOr[String] = js.native
   var scope: js.UndefOr[Scope] = js.native
 }
@@ -39,7 +38,7 @@ object TranslateOptions {
         ret
     }
     @scala.inline
-    def withDefaults(value: js.Array[AnonMessage | AnonScope]): Self = {
+    def withDefaults(value: js.Array[Message | typingsSlinky.i18nJs.anon.Scope]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defaults")(value.asInstanceOf[js.Any])
         ret

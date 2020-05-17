@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,9 +14,4 @@ trait Attr extends Node {
   val specified: scala.Boolean = js.native
   var value: java.lang.String = js.native
 }
-
-@JSGlobal("Attr")
-@js.native
-object Attr
-  extends Instantiable0[org.scalajs.dom.raw.Attr]
 

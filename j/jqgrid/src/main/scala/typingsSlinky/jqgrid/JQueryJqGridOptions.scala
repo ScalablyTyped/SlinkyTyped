@@ -1,5 +1,6 @@
 package typingsSlinky.jqgrid
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.jqgrid.jqgridStrings.GET
 import typingsSlinky.jqgrid.jqgridStrings.POST
 import typingsSlinky.jqgrid.jqgridStrings.asc
@@ -13,7 +14,6 @@ import typingsSlinky.jqgrid.jqgridStrings.jsonstring
 import typingsSlinky.jqgrid.jqgridStrings.local
 import typingsSlinky.jqgrid.jqgridStrings.xml
 import typingsSlinky.jqgrid.jqgridStrings.xmlstring
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -120,7 +120,7 @@ trait JQueryJqGridOptions extends js.Object {
     * @returns {} 
     */
   var onRightClickRow: js.UndefOr[
-    js.Function4[/* rowid */ js.Any, /* iRow */ Double, /* iCol */ Double, /* e */ Event_, Unit]
+    js.Function4[/* rowid */ js.Any, /* iRow */ Double, /* iCol */ Double, /* e */ Event, Unit]
   ] = js.native
   /**
     * Raised immediately after row was clicked.
@@ -129,7 +129,7 @@ trait JQueryJqGridOptions extends js.Object {
     * @param e  is the event object. Can be used when multiselect is set to true. true if the row is selected, false if the row is deselected.
     * @returns {} 
     */
-  var onSelectRow: js.UndefOr[js.Function3[/* id */ String, /* status */ js.Any, /* e */ Event_, Unit]] = js.native
+  var onSelectRow: js.UndefOr[js.Function3[/* id */ String, /* status */ js.Any, /* e */ Event, Unit]] = js.native
   /**
     * Defines that we want to use a pager bar to navigate through the records.
     * This must be a valid HTML element; in our example we gave the div the id of "pager", but any name is acceptable.
@@ -400,7 +400,7 @@ object JQueryJqGridOptions {
         ret
     }
     @scala.inline
-    def withOnRightClickRow(value: (/* rowid */ js.Any, /* iRow */ Double, /* iCol */ Double, /* e */ Event_) => Unit): Self = {
+    def withOnRightClickRow(value: (/* rowid */ js.Any, /* iRow */ Double, /* iCol */ Double, /* e */ Event) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRightClickRow")(js.Any.fromFunction4(value))
         ret
@@ -412,7 +412,7 @@ object JQueryJqGridOptions {
         ret
     }
     @scala.inline
-    def withOnSelectRow(value: (/* id */ String, /* status */ js.Any, /* e */ Event_) => Unit): Self = {
+    def withOnSelectRow(value: (/* id */ String, /* status */ js.Any, /* e */ Event) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectRow")(js.Any.fromFunction3(value))
         ret

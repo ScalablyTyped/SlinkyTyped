@@ -1,6 +1,6 @@
 package typingsSlinky.babelTemplate.mod
 
-import typingsSlinky.babelTemplate.FnCall
+import typingsSlinky.babelTemplate.anon.FnCall
 import typingsSlinky.babelTypes.mod.Expression
 import typingsSlinky.babelTypes.mod.Program_
 import typingsSlinky.babelTypes.mod.Statement

@@ -1,15 +1,12 @@
 package typingsSlinky.materializeCss.M
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.materializeCss.MElements
-import typingsSlinky.materializeCss.PartialDropdownOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("M.Dropdown")
 @js.native
-class Dropdown () extends Component[DropdownOptions] {
+trait Dropdown extends Component[DropdownOptions] {
   /**
     * The DOM element of the dropdown
     */
@@ -44,23 +41,79 @@ class Dropdown () extends Component[DropdownOptions] {
   def recalculateDimensions(): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("M.Dropdown")
-@js.native
-object Dropdown extends js.Object {
-  /**
-    * Get Instance
-    */
-  def getInstance(elem: Element): Dropdown = js.native
-  /**
-    * Init Dropdowns
-    */
-  def init(els: MElements): js.Array[Dropdown] = js.native
-  def init(els: MElements, options: PartialDropdownOptions): js.Array[Dropdown] = js.native
-  /**
-    * Init Dropdown
-    */
-  def init(els: Element): Dropdown = js.native
-  def init(els: Element, options: PartialDropdownOptions): Dropdown = js.native
+object Dropdown {
+  @scala.inline
+  def apply(
+    close: () => Unit,
+    destroy: () => Unit,
+    dropdownEl: Element,
+    el: Element,
+    focusedIndex: Double,
+    id: String,
+    isOpen: Boolean,
+    isScrollable: Boolean,
+    open: () => Unit,
+    options: DropdownOptions,
+    recalculateDimensions: () => Unit
+  ): Dropdown = {
+    val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), destroy = js.Any.fromFunction0(destroy), dropdownEl = dropdownEl.asInstanceOf[js.Any], el = el.asInstanceOf[js.Any], focusedIndex = focusedIndex.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isOpen = isOpen.asInstanceOf[js.Any], isScrollable = isScrollable.asInstanceOf[js.Any], open = js.Any.fromFunction0(open), options = options.asInstanceOf[js.Any], recalculateDimensions = js.Any.fromFunction0(recalculateDimensions))
+    __obj.asInstanceOf[Dropdown]
+  }
+  @scala.inline
+  implicit class DropdownOps[Self <: Dropdown] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDropdownEl(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropdownEl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFocusedIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusedIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsOpen(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isOpen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsScrollable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isScrollable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOpen(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRecalculateDimensions(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recalculateDimensions")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

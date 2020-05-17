@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.mod
 
-import typingsSlinky.babylonjs.Partialcapacitynumberrand
+import typingsSlinky.babylonjs.anon.Partialcapacitynumberrand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

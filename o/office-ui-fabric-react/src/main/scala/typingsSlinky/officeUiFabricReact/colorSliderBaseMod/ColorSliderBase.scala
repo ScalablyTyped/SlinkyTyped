@@ -1,8 +1,8 @@
 package typingsSlinky.officeUiFabricReact.colorSliderBaseMod
 
-import typingsSlinky.officeUiFabricReact.PartialIColorSliderProps
-import typingsSlinky.officeUiFabricReact.ReadonlyIColorSliderProps
-import typingsSlinky.officeUiFabricReact.ReadonlyIColorSliderState
+import typingsSlinky.officeUiFabricReact.anon.PartialIColorSliderProps
+import typingsSlinky.officeUiFabricReact.anon.ReadonlyIColorSliderProps
+import typingsSlinky.officeUiFabricReact.anon.ReadonlyIColorSliderState
 import typingsSlinky.officeUiFabricReact.colorSliderTypesMod.IColorSlider
 import typingsSlinky.officeUiFabricReact.colorSliderTypesMod.IColorSliderProps
 import typingsSlinky.react.mod.Component

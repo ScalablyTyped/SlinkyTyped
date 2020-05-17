@@ -1,7 +1,7 @@
 package typingsSlinky.stripe.mod.issuing.cardholders
 
-import typingsSlinky.stripe.AnonDay
-import typingsSlinky.stripe.AnonDocumentAnonFront
+import typingsSlinky.stripe.anon.Day
+import typingsSlinky.stripe.anon.DocumentFront
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait ICardholderIndividual extends js.Object {
   /**
     * The date of birth of this cardholder.
     */
-  var dob: AnonDay = js.native
+  var dob: Day = js.native
   /**
     * The first name of this cardholder.
     */
@@ -23,12 +23,12 @@ trait ICardholderIndividual extends js.Object {
   /**
     * Government-issued ID document for this cardholder.
     */
-  var verification: js.UndefOr[AnonDocumentAnonFront] = js.native
+  var verification: js.UndefOr[DocumentFront] = js.native
 }
 
 object ICardholderIndividual {
   @scala.inline
-  def apply(dob: AnonDay, first_name: String, last_name: String): ICardholderIndividual = {
+  def apply(dob: Day, first_name: String, last_name: String): ICardholderIndividual = {
     val __obj = js.Dynamic.literal(dob = dob.asInstanceOf[js.Any], first_name = first_name.asInstanceOf[js.Any], last_name = last_name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICardholderIndividual]
   }
@@ -39,7 +39,7 @@ object ICardholderIndividual {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDob(value: AnonDay): Self = {
+    def withDob(value: Day): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dob")(value.asInstanceOf[js.Any])
         ret
@@ -57,7 +57,7 @@ object ICardholderIndividual {
         ret
     }
     @scala.inline
-    def withVerification(value: AnonDocumentAnonFront): Self = {
+    def withVerification(value: DocumentFront): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("verification")(value.asInstanceOf[js.Any])
         ret

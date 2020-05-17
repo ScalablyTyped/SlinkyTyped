@@ -2,7 +2,7 @@ package typingsSlinky.xstyledSystem.mod
 
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
-import typingsSlinky.xstyledSystem.TypeofReact
+import typingsSlinky.xstyledSystem.anon.TypeofReact
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

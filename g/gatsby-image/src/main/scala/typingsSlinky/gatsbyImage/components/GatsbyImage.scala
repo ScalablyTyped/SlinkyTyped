@@ -2,7 +2,7 @@ package typingsSlinky.gatsbyImage.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gatsbyImage.AnonWasCached
+import typingsSlinky.gatsbyImage.anon.WasCached
 import typingsSlinky.gatsbyImage.gatsbyImageStrings.`lazy`
 import typingsSlinky.gatsbyImage.gatsbyImageStrings.auto
 import typingsSlinky.gatsbyImage.gatsbyImageStrings.eager
@@ -56,7 +56,7 @@ object GatsbyImage {
     @scala.inline
     def onLoad(value: () => Unit): this.type = set("onLoad", js.Any.fromFunction0(value))
     @scala.inline
-    def onStartLoad(value: /* param */ AnonWasCached => Unit): this.type = set("onStartLoad", js.Any.fromFunction1(value))
+    def onStartLoad(value: /* param */ WasCached => Unit): this.type = set("onStartLoad", js.Any.fromFunction1(value))
     @scala.inline
     def placeholderClassName(value: String): this.type = set("placeholderClassName", value.asInstanceOf[js.Any])
     @scala.inline

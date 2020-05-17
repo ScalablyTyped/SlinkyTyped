@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait ReadPreferenceOrMode extends js.Object
 
+object ReadPreferenceOrMode {
+  @scala.inline
+  implicit def apply(value: ReadPreference): ReadPreferenceOrMode = value.asInstanceOf[ReadPreferenceOrMode]
+  @scala.inline
+  implicit def apply(value: ReadPreferenceMode): ReadPreferenceOrMode = value.asInstanceOf[ReadPreferenceOrMode]
+}
+

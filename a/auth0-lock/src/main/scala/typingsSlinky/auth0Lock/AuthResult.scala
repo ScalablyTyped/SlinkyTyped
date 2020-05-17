@@ -1,5 +1,6 @@
 package typingsSlinky.auth0Lock
 
+import typingsSlinky.auth0Lock.anon.Aud
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +11,7 @@ trait AuthResult extends js.Object {
   var appState: js.UndefOr[js.Any] = js.native
   var expiresIn: Double = js.native
   var idToken: String = js.native
-  var idTokenPayload: AnonAud = js.native
+  var idTokenPayload: Aud = js.native
   var refreshToken: js.UndefOr[String] = js.native
   var scope: js.UndefOr[String] = js.native
   var state: String = js.native
@@ -23,7 +24,7 @@ object AuthResult {
     accessToken: String,
     expiresIn: Double,
     idToken: String,
-    idTokenPayload: AnonAud,
+    idTokenPayload: Aud,
     state: String,
     tokenType: String
   ): AuthResult = {
@@ -55,7 +56,7 @@ object AuthResult {
         ret
     }
     @scala.inline
-    def withIdTokenPayload(value: AnonAud): Self = {
+    def withIdTokenPayload(value: Aud): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("idTokenPayload")(value.asInstanceOf[js.Any])
         ret

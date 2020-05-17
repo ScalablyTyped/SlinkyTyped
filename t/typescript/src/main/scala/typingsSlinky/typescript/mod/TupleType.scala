@@ -6,6 +6,8 @@ import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.typescript.mod.FlowType because Already inherited
+- typingsSlinky.typescript.mod.StructuredType because Already inherited
+- typingsSlinky.typescript.mod.BaseType because Already inherited
 - typingsSlinky.typescript.mod.Type because Already inherited
 - typingsSlinky.typescript.mod.ObjectType because Already inherited
 - typingsSlinky.typescript.mod.TypeReference because var conflicts: aliasSymbol, aliasTypeArguments, flags, objectFlags, pattern, symbol. Inlined target, node, typeArguments */ @js.native

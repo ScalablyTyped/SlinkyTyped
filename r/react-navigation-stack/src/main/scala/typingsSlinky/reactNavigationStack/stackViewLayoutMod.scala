@@ -5,6 +5,7 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
+import typingsSlinky.reactNavigationStack.anon.PickPropsmodeheaderModehe
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.card
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.modal
 import typingsSlinky.reactNavigationStack.typesMod.HeaderBackgroundTransitionPreset

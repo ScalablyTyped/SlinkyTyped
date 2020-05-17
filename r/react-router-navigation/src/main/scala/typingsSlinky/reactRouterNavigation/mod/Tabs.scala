@@ -2,7 +2,7 @@ package typingsSlinky.reactRouterNavigation.mod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactRouterNavigation.AnonKey
+import typingsSlinky.reactRouterNavigation.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("react-router-navigation", "Tabs")
 @js.native
 class Tabs ()
-  extends Component[TabBarComponentProps, AnonKey, js.Any] {
+  extends Component[TabBarComponentProps, Key, js.Any] {
   @JSName("props")
   var props_Tabs: TabBarComponentProps = js.native
   def renderFooter(sceneProps: TabSubViewProps): ReactElement | Null = js.native

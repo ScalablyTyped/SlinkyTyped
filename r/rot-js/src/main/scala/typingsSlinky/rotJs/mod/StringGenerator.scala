@@ -1,6 +1,6 @@
 package typingsSlinky.rotJs.mod
 
-import typingsSlinky.rotJs.PartialOptionsOrder
+import typingsSlinky.rotJs.anon.PartialOptionsOrder
 import typingsSlinky.rotJs.stringgeneratorMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,8 +1,8 @@
 package typingsSlinky.paypalRestSdk.mod.invoice
 
-import typingsSlinky.paypalRestSdk.AnonAddress
-import typingsSlinky.paypalRestSdk.AnonCancelledby
-import typingsSlinky.paypalRestSdk.AnonOther
+import typingsSlinky.paypalRestSdk.anon.Address
+import typingsSlinky.paypalRestSdk.anon.Cancelledby
+import typingsSlinky.paypalRestSdk.anon.Other
 import typingsSlinky.paypalRestSdk.mod.Currency
 import typingsSlinky.paypalRestSdk.mod.Link
 import typingsSlinky.paypalRestSdk.mod.Phone
@@ -26,20 +26,20 @@ trait Invoice extends js.Object {
   var logo_url: js.UndefOr[String] = js.native
   var merchant_info: js.UndefOr[Merchant] = js.native
   var merchant_memo: js.UndefOr[String] = js.native
-  val metadata: js.UndefOr[AnonCancelledby] = js.native
+  val metadata: js.UndefOr[Cancelledby] = js.native
   var minimum_amount_due: js.UndefOr[Currency] = js.native
   var note: js.UndefOr[String] = js.native
   var number: js.UndefOr[String] = js.native
-  val paid_amount: js.UndefOr[AnonOther] = js.native
-  val payment_summary: js.UndefOr[AnonOther] = js.native
+  val paid_amount: js.UndefOr[Other] = js.native
+  val payment_summary: js.UndefOr[Other] = js.native
   var payment_term: js.UndefOr[PaymentTerm] = js.native
   val payments: js.UndefOr[js.Array[PaymentDetail]] = js.native
   var phone: js.UndefOr[Phone] = js.native
   var reference: js.UndefOr[String] = js.native
-  val refunded_amount: js.UndefOr[AnonOther] = js.native
+  val refunded_amount: js.UndefOr[Other] = js.native
   val refunds: js.UndefOr[js.Array[Detail]] = js.native
   var shipping_cost: js.UndefOr[ShippingCost] = js.native
-  var shipping_info: js.UndefOr[AnonAddress] = js.native
+  var shipping_info: js.UndefOr[Address] = js.native
   val status: js.UndefOr[String] = js.native
   var tax_calculated_after_discount: js.UndefOr[Boolean] = js.native
   var tax_inclusive: js.UndefOr[Boolean] = js.native
@@ -230,7 +230,7 @@ object Invoice {
         ret
     }
     @scala.inline
-    def withMetadata(value: AnonCancelledby): Self = {
+    def withMetadata(value: Cancelledby): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
         ret
@@ -278,7 +278,7 @@ object Invoice {
         ret
     }
     @scala.inline
-    def withPaid_amount(value: AnonOther): Self = {
+    def withPaid_amount(value: Other): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("paid_amount")(value.asInstanceOf[js.Any])
         ret
@@ -290,7 +290,7 @@ object Invoice {
         ret
     }
     @scala.inline
-    def withPayment_summary(value: AnonOther): Self = {
+    def withPayment_summary(value: Other): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("payment_summary")(value.asInstanceOf[js.Any])
         ret
@@ -350,7 +350,7 @@ object Invoice {
         ret
     }
     @scala.inline
-    def withRefunded_amount(value: AnonOther): Self = {
+    def withRefunded_amount(value: Other): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("refunded_amount")(value.asInstanceOf[js.Any])
         ret
@@ -386,7 +386,7 @@ object Invoice {
         ret
     }
     @scala.inline
-    def withShipping_info(value: AnonAddress): Self = {
+    def withShipping_info(value: Address): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shipping_info")(value.asInstanceOf[js.Any])
         ret

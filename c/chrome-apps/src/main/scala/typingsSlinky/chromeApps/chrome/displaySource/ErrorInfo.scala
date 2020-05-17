@@ -1,6 +1,6 @@
 package typingsSlinky.chromeApps.chrome.displaySource
 
-import typingsSlinky.chromeApps.AnonCAPABILITIESNEGOTIATIONERROR
+import typingsSlinky.chromeApps.anon.CAPABILITIESNEGOTIATIONERROR
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chromeAppsStrings.CAPABILITIES_NEGOTIATION_ERROR
 import typingsSlinky.chromeApps.chromeAppsStrings.CONNECTION_ERROR
@@ -22,10 +22,10 @@ trait ErrorInfo extends js.Object {
   var description: js.UndefOr[String] = js.native
   /** @see ErrorType */
   var `type`: ToStringLiteral[
-    AnonCAPABILITIESNEGOTIATIONERROR, 
-    /* keyof chrome-apps.AnonCAPABILITIESNEGOTIATIONERROR */ CONNECTION_ERROR | CAPABILITIES_NEGOTIATION_ERROR | MEDIA_PIPELINE_ERROR | TIMEOUT_ERROR | UNKNOWN_ERROR, 
+    CAPABILITIESNEGOTIATIONERROR, 
+    /* keyof chrome-apps.anon.CAPABILITIESNEGOTIATIONERROR */ CONNECTION_ERROR | CAPABILITIES_NEGOTIATION_ERROR | MEDIA_PIPELINE_ERROR | TIMEOUT_ERROR | UNKNOWN_ERROR, 
     Exclude[
-      /* keyof chrome-apps.AnonCAPABILITIESNEGOTIATIONERROR */ CONNECTION_ERROR | CAPABILITIES_NEGOTIATION_ERROR | MEDIA_PIPELINE_ERROR | TIMEOUT_ERROR | UNKNOWN_ERROR, 
+      /* keyof chrome-apps.anon.CAPABILITIESNEGOTIATIONERROR */ CONNECTION_ERROR | CAPABILITIES_NEGOTIATION_ERROR | MEDIA_PIPELINE_ERROR | TIMEOUT_ERROR | UNKNOWN_ERROR, 
       unknown_error_ | media_pipeline_error_ | connection_error_ | capabilities_negotiation_error_ | timeout_error_
     ]
   ] = js.native
@@ -35,10 +35,10 @@ object ErrorInfo {
   @scala.inline
   def apply(
     `type`: ToStringLiteral[
-      AnonCAPABILITIESNEGOTIATIONERROR, 
-      /* keyof chrome-apps.AnonCAPABILITIESNEGOTIATIONERROR */ CONNECTION_ERROR | CAPABILITIES_NEGOTIATION_ERROR | MEDIA_PIPELINE_ERROR | TIMEOUT_ERROR | UNKNOWN_ERROR, 
+      CAPABILITIESNEGOTIATIONERROR, 
+      /* keyof chrome-apps.anon.CAPABILITIESNEGOTIATIONERROR */ CONNECTION_ERROR | CAPABILITIES_NEGOTIATION_ERROR | MEDIA_PIPELINE_ERROR | TIMEOUT_ERROR | UNKNOWN_ERROR, 
       Exclude[
-        /* keyof chrome-apps.AnonCAPABILITIESNEGOTIATIONERROR */ CONNECTION_ERROR | CAPABILITIES_NEGOTIATION_ERROR | MEDIA_PIPELINE_ERROR | TIMEOUT_ERROR | UNKNOWN_ERROR, 
+        /* keyof chrome-apps.anon.CAPABILITIESNEGOTIATIONERROR */ CONNECTION_ERROR | CAPABILITIES_NEGOTIATION_ERROR | MEDIA_PIPELINE_ERROR | TIMEOUT_ERROR | UNKNOWN_ERROR, 
         unknown_error_ | media_pipeline_error_ | connection_error_ | capabilities_negotiation_error_ | timeout_error_
       ]
     ]
@@ -56,10 +56,10 @@ object ErrorInfo {
     @scala.inline
     def withType(
       value: ToStringLiteral[
-          AnonCAPABILITIESNEGOTIATIONERROR, 
-          /* keyof chrome-apps.AnonCAPABILITIESNEGOTIATIONERROR */ CONNECTION_ERROR | CAPABILITIES_NEGOTIATION_ERROR | MEDIA_PIPELINE_ERROR | TIMEOUT_ERROR | UNKNOWN_ERROR, 
+          CAPABILITIESNEGOTIATIONERROR, 
+          /* keyof chrome-apps.anon.CAPABILITIESNEGOTIATIONERROR */ CONNECTION_ERROR | CAPABILITIES_NEGOTIATION_ERROR | MEDIA_PIPELINE_ERROR | TIMEOUT_ERROR | UNKNOWN_ERROR, 
           Exclude[
-            /* keyof chrome-apps.AnonCAPABILITIESNEGOTIATIONERROR */ CONNECTION_ERROR | CAPABILITIES_NEGOTIATION_ERROR | MEDIA_PIPELINE_ERROR | TIMEOUT_ERROR | UNKNOWN_ERROR, 
+            /* keyof chrome-apps.anon.CAPABILITIESNEGOTIATIONERROR */ CONNECTION_ERROR | CAPABILITIES_NEGOTIATION_ERROR | MEDIA_PIPELINE_ERROR | TIMEOUT_ERROR | UNKNOWN_ERROR, 
             unknown_error_ | media_pipeline_error_ | connection_error_ | capabilities_negotiation_error_ | timeout_error_
           ]
         ]

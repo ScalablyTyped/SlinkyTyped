@@ -1,6 +1,6 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonDocument
+import typingsSlinky.vscode.anon.Document
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait DocumentColorProvider extends js.Object {
   		 * @return An array of color presentations or a thenable that resolves to such. The lack of a result
   		 * can be signaled by returning `undefined`, `null`, or an empty array.
   		 */
-  def provideColorPresentations(color: Color, context: AnonDocument, token: CancellationToken): ProviderResult[js.Array[ColorPresentation]] = js.native
+  def provideColorPresentations(color: Color, context: Document, token: CancellationToken): ProviderResult[js.Array[ColorPresentation]] = js.native
   /**
   		 * Provide colors for the given document.
   		 *
@@ -31,7 +31,7 @@ trait DocumentColorProvider extends js.Object {
 object DocumentColorProvider {
   @scala.inline
   def apply(
-    provideColorPresentations: (Color, AnonDocument, CancellationToken) => ProviderResult[js.Array[ColorPresentation]],
+    provideColorPresentations: (Color, Document, CancellationToken) => ProviderResult[js.Array[ColorPresentation]],
     provideDocumentColors: (TextDocument, CancellationToken) => ProviderResult[js.Array[ColorInformation]]
   ): DocumentColorProvider = {
     val __obj = js.Dynamic.literal(provideColorPresentations = js.Any.fromFunction3(provideColorPresentations), provideDocumentColors = js.Any.fromFunction2(provideDocumentColors))
@@ -44,7 +44,7 @@ object DocumentColorProvider {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withProvideColorPresentations(value: (Color, AnonDocument, CancellationToken) => ProviderResult[js.Array[ColorPresentation]]): Self = {
+    def withProvideColorPresentations(value: (Color, Document, CancellationToken) => ProviderResult[js.Array[ColorPresentation]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("provideColorPresentations")(js.Any.fromFunction3(value))
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.reactResizable.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.reactResizable.AnonHeight
+import typingsSlinky.reactResizable.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation._
 trait ResizeCallbackData extends js.Object {
   var handle: ResizeHandle = js.native
   var node: HTMLElement = js.native
-  var size: AnonHeight = js.native
+  var size: Height = js.native
 }
 
 object ResizeCallbackData {
   @scala.inline
-  def apply(handle: ResizeHandle, node: HTMLElement, size: AnonHeight): ResizeCallbackData = {
+  def apply(handle: ResizeHandle, node: HTMLElement, size: Height): ResizeCallbackData = {
     val __obj = js.Dynamic.literal(handle = handle.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResizeCallbackData]
   }
@@ -38,7 +38,7 @@ object ResizeCallbackData {
         ret
     }
     @scala.inline
-    def withSize(value: AnonHeight): Self = {
+    def withSize(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
         ret

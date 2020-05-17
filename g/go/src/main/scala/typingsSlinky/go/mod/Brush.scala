@@ -19,7 +19,7 @@ import scala.scalajs.js.annotation._
   * Construct a solid color Brush that holds the given color information.
   * @param {string=} color a well-formed CSS string describing a solid color brush; if not supplied uses 'black'.
   */
-class Brush () extends js.Object {
+class Brush () extends BrushLike {
   def this(color: String) = this()
   /**
     * Construct a Brush class of a given type.

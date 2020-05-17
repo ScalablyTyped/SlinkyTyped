@@ -1,13 +1,13 @@
 package typingsSlinky.inversify.interfacesMod.interfaces
 
-import typingsSlinky.inversify.AnonInstantiable
+import typingsSlinky.inversify.anon.Instantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait BindingToSyntax[T] extends js.Object {
-  def to(constructor: AnonInstantiable[T]): BindingInWhenOnSyntax[T] = js.native
+  def to(constructor: Instantiable[T]): BindingInWhenOnSyntax[T] = js.native
   def toAutoFactory[T2](serviceIdentifier: ServiceIdentifier[T2]): BindingWhenOnSyntax[T] = js.native
   def toConstantValue(value: T): BindingWhenOnSyntax[T] = js.native
   def toConstructor[T2](constructor: Newable[T2]): BindingWhenOnSyntax[T] = js.native
@@ -22,7 +22,7 @@ trait BindingToSyntax[T] extends js.Object {
 object BindingToSyntax {
   @scala.inline
   def apply[T](
-    to: AnonInstantiable[T] => BindingInWhenOnSyntax[T],
+    to: Instantiable[T] => BindingInWhenOnSyntax[T],
     toAutoFactory: ServiceIdentifier[js.Any] => BindingWhenOnSyntax[T],
     toConstantValue: T => BindingWhenOnSyntax[T],
     toConstructor: Newable[js.Any] => BindingWhenOnSyntax[T],
@@ -43,7 +43,7 @@ object BindingToSyntax {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withTo(value: AnonInstantiable[T] => BindingInWhenOnSyntax[T]): Self[T] = {
+    def withTo(value: Instantiable[T] => BindingInWhenOnSyntax[T]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("to")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.babelCore.mod
 
-import typingsSlinky.babelCore.ReadonlyPartialConfig
+import typingsSlinky.babelCore.anon.ReadonlyPartialConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
   * _Manages image data._
   * @see https://docs.scriptable.app/image
   */
-@JSGlobal("Image")
 @js.native
-class Image () extends js.Object {
+trait Image extends js.Object {
   /**
     * _Size of the image in pixels._
     * @see https://docs.scriptable.app/image/#size
@@ -18,25 +17,25 @@ class Image () extends js.Object {
   var size: Size = js.native
 }
 
-/* static members */
-@JSGlobal("Image")
-@js.native
-object Image extends js.Object {
-  /**
-    * _Creates image from raw data._
-    *
-    * Loads an image from the raw data. If the image could not be read, the function will return null.
-    * @param data - Data to read image from.
-    * @see https://docs.scriptable.app/image/#fromdata
-    */
-  def fromData(data: Data): Image = js.native
-  /**
-    * _Creates image from file._
-    *
-    * Loads an image from the specified file path. If the image could not be read, the function will return null.
-    * @param filePath - File path to read image from.
-    * @see https://docs.scriptable.app/image/#fromfile
-    */
-  def fromFile(filePath: String): Image = js.native
+object Image {
+  @scala.inline
+  def apply(size: Size): Image = {
+    val __obj = js.Dynamic.literal(size = size.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Image]
+  }
+  @scala.inline
+  implicit class ImageOps[Self <: Image] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSize(value: Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

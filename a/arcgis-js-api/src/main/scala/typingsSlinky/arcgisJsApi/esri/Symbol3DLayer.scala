@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`object`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.extrude
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.fill
@@ -36,8 +35,4 @@ trait Symbol3DLayer
     */
   val `type`: icon | `object` | line | path | fill | water | extrude | text = js.native
 }
-
-@JSGlobal("__esri.Symbol3DLayer")
-@js.native
-object Symbol3DLayer extends TopLevel[Symbol3DLayerConstructor]
 

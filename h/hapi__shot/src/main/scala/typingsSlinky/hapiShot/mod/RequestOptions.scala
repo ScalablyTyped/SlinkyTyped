@@ -1,6 +1,6 @@
 package typingsSlinky.hapiShot.mod
 
-import typingsSlinky.hapiShot.AnonClose
+import typingsSlinky.hapiShot.anon.Close
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.Stream
 import scala.scalajs.js
@@ -20,7 +20,7 @@ trait RequestOptions extends js.Object {
   /** an optional string specifying the client remote address. Defaults to '127.0.0.1'. */
   var remoteAddress: js.UndefOr[String] = js.native
   /** an object containing flags to simulate various conditions: */
-  var simulate: js.UndefOr[AnonClose] = js.native
+  var simulate: js.UndefOr[Close] = js.native
   /** a string specifying the request URL. */
   var url: String = js.native
   /** Optional flag to validate this options object. Defaults to true. */
@@ -106,7 +106,7 @@ object RequestOptions {
         ret
     }
     @scala.inline
-    def withSimulate(value: AnonClose): Self = {
+    def withSimulate(value: Close): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("simulate")(value.asInstanceOf[js.Any])
         ret

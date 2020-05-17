@@ -3,7 +3,7 @@ package typingsSlinky.vue.optionsMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
 import typingsSlinky.std.Record
-import typingsSlinky.vue.AnonEvent
+import typingsSlinky.vue.anon.Event
 import typingsSlinky.vue.vnodeMod.VNode
 import typingsSlinky.vue.vueMod.CreateElement
 import typingsSlinky.vue.vueMod.Vue
@@ -13,7 +13,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ComponentOptions[V /* <: Vue */, Data, Methods, Computed, PropsDef, Props] extends js.Object {
+trait ComponentOptions[V /* <: Vue */, Data, Methods, Computed, PropsDef, Props] extends Component[Data, Methods, Computed, PropsDef] {
   var activated: js.UndefOr[js.Function0[Unit]] = js.native
   var beforeCreate: js.UndefOr[js.ThisFunction0[/* this */ V, Unit]] = js.native
   var beforeDestroy: js.UndefOr[js.Function0[Unit]] = js.native
@@ -59,7 +59,7 @@ trait ComponentOptions[V /* <: Vue */, Data, Methods, Computed, PropsDef, Props]
       ]) | VueConstructor[Vue]
     ]
   ] = js.native
-  var model: js.UndefOr[AnonEvent] = js.native
+  var model: js.UndefOr[Event] = js.native
   var mounted: js.UndefOr[js.Function0[Unit]] = js.native
   var name: js.UndefOr[String] = js.native
   var parent: js.UndefOr[Vue] = js.native
@@ -382,7 +382,7 @@ object ComponentOptions {
         ret
     }
     @scala.inline
-    def withModel(value: AnonEvent): Self[V, Data, Methods, Computed, PropsDef, Props] = {
+    def withModel(value: Event): Self[V, Data, Methods, Computed, PropsDef, Props] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.keystonejsAppAdminUi.mod
 
-import typingsSlinky.keystonejsAppAdminUi.AnonAuthentication
+import typingsSlinky.keystonejsAppAdminUi.anon.Authentication
 import typingsSlinky.keystonejsKeystone.mod.BaseAuthStrategy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +13,7 @@ trait AdminUIOptions[ListNames /* <: String */, UserType /* <: js.Object */] ext
   var authStrategy: js.UndefOr[BaseAuthStrategy] = js.native
   var enableDefaultRoute: js.UndefOr[Boolean] = js.native
   var graphiqlPath: js.UndefOr[String] = js.native
-  var isAccessAllowed: js.UndefOr[js.Function1[/* opts */ AnonAuthentication[UserType, ListNames], Boolean]] = js.native
+  var isAccessAllowed: js.UndefOr[js.Function1[/* opts */ Authentication[UserType, ListNames], Boolean]] = js.native
   var pages: js.UndefOr[js.Array[_]] = js.native
   var schemaName: js.UndefOr[String] = js.native
 }
@@ -91,7 +91,7 @@ object AdminUIOptions {
         ret
     }
     @scala.inline
-    def withIsAccessAllowed(value: /* opts */ AnonAuthentication[UserType, ListNames] => Boolean): Self[ListNames, UserType] = {
+    def withIsAccessAllowed(value: /* opts */ Authentication[UserType, ListNames] => Boolean): Self[ListNames, UserType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("isAccessAllowed")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.multerGridfsStorage.mod
 
-import typingsSlinky.multerGridfsStorage.AnonFilename
+import typingsSlinky.multerGridfsStorage.anon.Filename
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,6 +16,6 @@ class ^ protected () extends MulterGridfsStorage {
 @js.native
 object ^ extends js.Object {
   var cache: Cache = js.native
-  def generateBytes(): js.Promise[AnonFilename] = js.native
+  def generateBytes(): js.Promise[Filename] = js.native
 }
 

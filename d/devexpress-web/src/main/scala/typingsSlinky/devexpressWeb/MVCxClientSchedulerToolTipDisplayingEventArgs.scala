@@ -7,15 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the MVCxClientScheduler.ToolTipDisplaying event.
   */
-@JSGlobal("MVCxClientSchedulerToolTipDisplayingEventArgs")
 @js.native
-class MVCxClientSchedulerToolTipDisplayingEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes new instance of the MVCxClientSchedulerToolTipDisplayingEventArgs class with the specified settings.
-    * @param toolTip A MVCxClientSchedulerTemplateToolTip object that is a tooltip.
-    * @param data An ASPxClientSchedulerToolTipData object that is the tooltip data.
-    */
-  def this(toolTip: MVCxClientSchedulerTemplateToolTip, data: ASPxClientSchedulerToolTipData) = this()
+trait MVCxClientSchedulerToolTipDisplayingEventArgs extends ASPxClientEventArgs {
   /**
     * Gets information about the tooltip related to the event.
     */
@@ -24,5 +17,33 @@ class MVCxClientSchedulerToolTipDisplayingEventArgs protected () extends ASPxCli
     * Gets the tooltip related to the event.
     */
   var toolTip: MVCxClientSchedulerTemplateToolTip = js.native
+}
+
+object MVCxClientSchedulerToolTipDisplayingEventArgs {
+  @scala.inline
+  def apply(data: ASPxClientSchedulerToolTipData, toolTip: MVCxClientSchedulerTemplateToolTip): MVCxClientSchedulerToolTipDisplayingEventArgs = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], toolTip = toolTip.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MVCxClientSchedulerToolTipDisplayingEventArgs]
+  }
+  @scala.inline
+  implicit class MVCxClientSchedulerToolTipDisplayingEventArgsOps[Self <: MVCxClientSchedulerToolTipDisplayingEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withData(value: ASPxClientSchedulerToolTipData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToolTip(value: MVCxClientSchedulerTemplateToolTip): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toolTip")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

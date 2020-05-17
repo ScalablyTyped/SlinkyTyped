@@ -1,6 +1,6 @@
 package typingsSlinky.acmeClient.mod
 
-import typingsSlinky.acmeClient.AnonProduction
+import typingsSlinky.acmeClient.anon.Production
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("acme-client", "directory")
 @js.native
 object directory extends js.Object {
-  var letsencrypt: AnonProduction = js.native
+  var letsencrypt: Production = js.native
 }
 

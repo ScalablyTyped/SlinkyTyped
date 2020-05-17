@@ -1,10 +1,10 @@
 package typingsSlinky.reactAriaMenubutton.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import typingsSlinky.react.mod.AllHTMLAttributes
 import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +35,7 @@ trait WrapperProps[T /* <: HTMLElement */]
   	 * It will be passed the value of the selected `MenuItem` and
   	 * the React `SyntheticEvent`.
   	 */
-  var onSelection: js.UndefOr[js.Function2[/* value */ js.Any, /* event */ SyntheticEvent[Event_, T], _]] = js.native
+  var onSelection: js.UndefOr[js.Function2[/* value */ js.Any, /* event */ SyntheticEvent[Event, T], _]] = js.native
   var tag: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: T['tagName'] */ js.Any
   ] = js.native
@@ -90,7 +90,7 @@ object WrapperProps {
         ret
     }
     @scala.inline
-    def withOnSelection(value: (/* value */ js.Any, /* event */ SyntheticEvent[Event_, T]) => _): Self[T] = {
+    def withOnSelection(value: (/* value */ js.Any, /* event */ SyntheticEvent[Event, T]) => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelection")(js.Any.fromFunction2(value))
         ret

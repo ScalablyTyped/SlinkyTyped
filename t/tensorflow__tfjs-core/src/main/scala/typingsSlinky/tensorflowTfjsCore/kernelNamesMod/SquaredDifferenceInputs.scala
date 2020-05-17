@@ -7,14 +7,14 @@ import scala.scalajs.js.annotation._
 /* Inlined std.Pick<@tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/kernel_registry.NamedTensorInfoMap, 'a' | 'b'> */
 @js.native
 trait SquaredDifferenceInputs extends js.Object {
-  var a: js.Any = js.native
-  var b: js.Any = js.native
+  var a: js.UndefOr[js.Any] = js.native
+  var b: js.UndefOr[js.Any] = js.native
 }
 
 object SquaredDifferenceInputs {
   @scala.inline
-  def apply(a: js.Any, b: js.Any): SquaredDifferenceInputs = {
-    val __obj = js.Dynamic.literal(a = a.asInstanceOf[js.Any], b = b.asInstanceOf[js.Any])
+  def apply(): SquaredDifferenceInputs = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[SquaredDifferenceInputs]
   }
   @scala.inline
@@ -30,9 +30,21 @@ object SquaredDifferenceInputs {
         ret
     }
     @scala.inline
+    def withoutA: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("a")(js.undefined)
+        ret
+    }
+    @scala.inline
     def withB(value: js.Any): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("b")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutB: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("b")(js.undefined)
         ret
     }
   }

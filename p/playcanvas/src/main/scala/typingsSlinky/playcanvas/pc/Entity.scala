@@ -63,11 +63,8 @@ import scala.scalajs.js.annotation._
   * // Or use rotateLocal
   * entity.rotateLocal(0, 90, 0);
   */
-@JSGlobal("pc.Entity")
 @js.native
-class Entity () extends GraphNode {
-  def this(name: String) = this()
-  def this(name: String, app: Application) = this()
+trait Entity extends GraphNode {
   /**
     * Gets the {@link pc.AnimationComponent} attached to this entity. [read only]
     */

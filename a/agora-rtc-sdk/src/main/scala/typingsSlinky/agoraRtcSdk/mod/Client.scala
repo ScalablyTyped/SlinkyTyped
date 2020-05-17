@@ -1,21 +1,5 @@
 package typingsSlinky.agoraRtcSdk.mod
 
-import typingsSlinky.agoraRtcSdk.Anon0
-import typingsSlinky.agoraRtcSdk.AnonAttr
-import typingsSlinky.agoraRtcSdk.AnonBitrate
-import typingsSlinky.agoraRtcSdk.AnonCode
-import typingsSlinky.agoraRtcSdk.AnonCodeNumber
-import typingsSlinky.agoraRtcSdk.AnonCurState
-import typingsSlinky.agoraRtcSdk.AnonForceturn
-import typingsSlinky.agoraRtcSdk.AnonReason
-import typingsSlinky.agoraRtcSdk.AnonRole
-import typingsSlinky.agoraRtcSdk.AnonState
-import typingsSlinky.agoraRtcSdk.AnonStreamStream
-import typingsSlinky.agoraRtcSdk.AnonSuccess
-import typingsSlinky.agoraRtcSdk.AnonType
-import typingsSlinky.agoraRtcSdk.AnonUid
-import typingsSlinky.agoraRtcSdk.AnonVideo
-import typingsSlinky.agoraRtcSdk.agoraRtcSdkNumbers.`0`
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkNumbers.`1`
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkNumbers.`2`
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.`active-speaker`
@@ -64,6 +48,21 @@ import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.liveTranscodingUpdated
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.onTokenPrivilegeDidExpire
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.onTokenPrivilegeWillExpire
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.streamInjectedStatus
+import typingsSlinky.agoraRtcSdk.anon.Attr
+import typingsSlinky.agoraRtcSdk.anon.Bitrate
+import typingsSlinky.agoraRtcSdk.anon.Code
+import typingsSlinky.agoraRtcSdk.anon.CodeNumber
+import typingsSlinky.agoraRtcSdk.anon.CurState
+import typingsSlinky.agoraRtcSdk.anon.Forceturn
+import typingsSlinky.agoraRtcSdk.anon.Reason
+import typingsSlinky.agoraRtcSdk.anon.Role
+import typingsSlinky.agoraRtcSdk.anon.State
+import typingsSlinky.agoraRtcSdk.anon.StreamStream
+import typingsSlinky.agoraRtcSdk.anon.Success
+import typingsSlinky.agoraRtcSdk.anon.Type
+import typingsSlinky.agoraRtcSdk.anon.Uid
+import typingsSlinky.agoraRtcSdk.anon.Video
+import typingsSlinky.agoraRtcSdk.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -711,7 +710,7 @@ trait Client extends js.Object {
     * <br>&emsp;&emsp;&emsp;*3.0.0*
     */
   @JSName("on")
-  def on_channelmediarelayevent(event: `channel-media-relay-event`, callback: js.Function1[/* evt */ AnonCodeNumber, Unit]): Unit = js.native
+  def on_channelmediarelayevent(event: `channel-media-relay-event`, callback: js.Function1[/* evt */ CodeNumber, Unit]): Unit = js.native
   /**
     * Occurs when the state of the media stream relay changes.
     *
@@ -721,7 +720,7 @@ trait Client extends js.Object {
     * The SDK reports the state and error code of the current media relay in this callback.
     */
   @JSName("on")
-  def on_channelmediarelaystate(event: `channel-media-relay-state`, callback: js.Function1[/* evt */ AnonState, Unit]): Unit = js.native
+  def on_channelmediarelaystate(event: `channel-media-relay-state`, callback: js.Function1[/* evt */ State, Unit]): Unit = js.native
   /**
     * This callback notifies the peer user that he/she is banned from the channel. Only the banned users receive this callback.
     *
@@ -755,7 +754,7 @@ trait Client extends js.Object {
     * ```
     */
   @JSName("on")
-  def on_clientrolechanged(event: `client-role-changed`, callback: js.Function1[/* evt */ AnonRole, Unit]): Unit = js.native
+  def on_clientrolechanged(event: `client-role-changed`, callback: js.Function1[/* evt */ Role, Unit]): Unit = js.native
   /**
     * Occurs when the network connection state changes.
     *
@@ -779,7 +778,7 @@ trait Client extends js.Object {
     * ```
     */
   @JSName("on")
-  def on_connectionstatechange(event: `connection-state-change`, callback: js.Function1[/* evt */ AnonCurState, Unit]): Unit = js.native
+  def on_connectionstatechange(event: `connection-state-change`, callback: js.Function1[/* evt */ CurState, Unit]): Unit = js.native
   /**
     * Occurs when encryption or decryption fails during publishing or subscribing to a stream.
     *
@@ -804,7 +803,7 @@ trait Client extends js.Object {
     * <br>&emsp;&emsp;&emsp;*3.0.0*
     */
   @JSName("on")
-  def on_disablelocalvideo(event: `disable-local-video`, callback: js.Function1[/* evt */ AnonUid, Unit]): Unit = js.native
+  def on_disablelocalvideo(event: `disable-local-video`, callback: js.Function1[/* evt */ Uid, Unit]): Unit = js.native
   /**
     * Occurs when a remote user of the Native SDK calls `enableLocalVideo(true)` to enable video capture.
     *
@@ -812,7 +811,7 @@ trait Client extends js.Object {
     * <br>&emsp;&emsp;&emsp;*3.0.0*
     */
   @JSName("on")
-  def on_enablelocalvideo(event: `enable-local-video`, callback: js.Function1[/* evt */ AnonUid, Unit]): Unit = js.native
+  def on_enablelocalvideo(event: `enable-local-video`, callback: js.Function1[/* evt */ Uid, Unit]): Unit = js.native
   /**
     * Occurs when an error message is reported and requires error handling.
     *
@@ -828,7 +827,7 @@ trait Client extends js.Object {
     * ```
     */
   @JSName("on")
-  def on_error(event: error, callback: js.Function1[/* evt */ AnonType, Unit]): Unit = js.native
+  def on_error(event: error, callback: js.Function1[/* evt */ Type, Unit]): Unit = js.native
   /**
     * Reports exception events in the channel.
     *
@@ -851,7 +850,7 @@ trait Client extends js.Object {
     * ```
     */
   @JSName("on")
-  def on_exception(event: exception, callback: js.Function1[/* evt */ AnonCode, Unit]): Unit = js.native
+  def on_exception(event: exception, callback: js.Function1[/* evt */ Code, Unit]): Unit = js.native
   /**
     * Occurs when the first remote audio frame is decoded.
     *
@@ -1034,7 +1033,7 @@ trait Client extends js.Object {
     * ```
     */
   @JSName("on")
-  def on_peerleave(event: `peer-leave`, callback: js.Function1[/* evt */ AnonReason, Unit]): Unit = js.native
+  def on_peerleave(event: `peer-leave`, callback: js.Function1[/* evt */ Reason, Unit]): Unit = js.native
   /**
     * Occurs when a remote user or host joins the channel.
     *
@@ -1059,7 +1058,7 @@ trait Client extends js.Object {
     *
     */
   @JSName("on")
-  def on_peeronline(event: `peer-online`, callback: js.Function1[/* evt */ AnonUid, Unit]): Unit = js.native
+  def on_peeronline(event: `peer-online`, callback: js.Function1[/* evt */ Uid, Unit]): Unit = js.native
   /**
     * Occurs when an audio output device is added or removed.
     * @example **Sample code**
@@ -1126,7 +1125,7 @@ trait Client extends js.Object {
     * you can monitor the stream switch between a high stream and low stream in the `stream-type-changed` callback.
     */
   @JSName("on")
-  def on_streamfallback(event: `stream-fallback`, callback: js.Function1[/* evt */ AnonAttr, Unit]): Unit = js.native
+  def on_streamfallback(event: `stream-fallback`, callback: js.Function1[/* evt */ Attr, Unit]): Unit = js.native
   /**
     * Occurs when the local stream is published.
     * @example **Sample code**
@@ -1152,7 +1151,7 @@ trait Client extends js.Object {
     * ```
     */
   @JSName("on")
-  def on_streamreconnectend(event: `stream-reconnect-end`, callback: js.Function1[/* evt */ AnonSuccess, Unit]): Unit = js.native
+  def on_streamreconnectend(event: `stream-reconnect-end`, callback: js.Function1[/* evt */ Success, Unit]): Unit = js.native
   /**
     * Occurs when the SDK starts republishing or re-subscribing to a stream.
     *
@@ -1165,7 +1164,7 @@ trait Client extends js.Object {
     * ```
     */
   @JSName("on")
-  def on_streamreconnectstart(event: `stream-reconnect-start`, callback: js.Function1[/* evt */ Anon0, Unit]): Unit = js.native
+  def on_streamreconnectstart(event: `stream-reconnect-start`, callback: js.Function1[/* evt */ `0`, Unit]): Unit = js.native
   /**
     * Occurs when the remote stream is removed; for example, a peer user calls {@link Client.unpublish}.
     * @example **Sample code**
@@ -1222,7 +1221,7 @@ trait Client extends js.Object {
     * When a remote stream calls the [[addTrack]] or [[removeTrack]] method, the SDK triggers this callback.
     */
   @JSName("on")
-  def on_streamupdated(event: `stream-updated`, callback: js.Function1[/* evt */ AnonStreamStream, Unit]): Unit = js.native
+  def on_streamupdated(event: `stream-updated`, callback: js.Function1[/* evt */ StreamStream, Unit]): Unit = js.native
   /**
     * Occurs when the peer user unmutes the audio.
     * @example **Sample code**
@@ -1449,7 +1448,7 @@ trait Client extends js.Object {
     * - Screen sharing supports the high-video stream only.
     * @param param Sets the video profile of the low-video stream.
     */
-  def setLowStreamParameter(param: AnonBitrate): Unit = js.native
+  def setLowStreamParameter(param: Bitrate): Unit = js.native
   def setProxyServer(): Unit = js.native
   /**
     * Deploys a Proxy Server
@@ -1493,7 +1492,7 @@ trait Client extends js.Object {
     * - 1: Low-bitrate, low-resolution video stream.
     */
   @JSName("setRemoteVideoStreamType")
-  def setRemoteVideoStreamType_0(stream: Stream, streamType: `0`): Unit = js.native
+  def setRemoteVideoStreamType_0(stream: Stream, streamType: typingsSlinky.agoraRtcSdk.agoraRtcSdkNumbers.`0`): Unit = js.native
   @JSName("setRemoteVideoStreamType")
   def setRemoteVideoStreamType_1(stream: Stream, streamType: `1`): Unit = js.native
   /**
@@ -1524,7 +1523,7 @@ trait Client extends js.Object {
     * ```
     */
   @JSName("setStreamFallbackOption")
-  def setStreamFallbackOption_0(stream: Stream, fallbackType: `0`): Unit = js.native
+  def setStreamFallbackOption_0(stream: Stream, fallbackType: typingsSlinky.agoraRtcSdk.agoraRtcSdkNumbers.`0`): Unit = js.native
   @JSName("setStreamFallbackOption")
   def setStreamFallbackOption_1(stream: Stream, fallbackType: `1`): Unit = js.native
   @JSName("setStreamFallbackOption")
@@ -1541,7 +1540,7 @@ trait Client extends js.Object {
     * @example `client.setTurnServer(config);`
     * @param turnServer The TURN server settings.
     */
-  def setTurnServer(turnServer: AnonForceturn): Unit = js.native
+  def setTurnServer(turnServer: Forceturn): Unit = js.native
   /**
     * Starts relaying media streams across channels.
     *
@@ -1707,8 +1706,8 @@ trait Client extends js.Object {
     * ```
     */
   def subscribe(stream: Stream): Unit = js.native
-  def subscribe(stream: Stream, options: AnonVideo): Unit = js.native
-  def subscribe(stream: Stream, options: AnonVideo, onFailure: js.Function1[/* err */ String, Unit]): Unit = js.native
+  def subscribe(stream: Stream, options: Video): Unit = js.native
+  def subscribe(stream: Stream, options: Video, onFailure: js.Function1[/* err */ String, Unit]): Unit = js.native
   /**
     * Unpublishes the Local Stream
     *

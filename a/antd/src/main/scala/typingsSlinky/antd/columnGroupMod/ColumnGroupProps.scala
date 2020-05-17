@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.AnonCompare
+import typingsSlinky.antd.anon.Compare
 import typingsSlinky.antd.tableInterfaceMod.ColumnFilterItem
 import typingsSlinky.antd.tableInterfaceMod.ColumnTitle
 import typingsSlinky.antd.tableInterfaceMod.ColumnTitleProps
@@ -66,7 +66,7 @@ trait ColumnGroupProps[RecordType] extends js.Object {
   var rowSpan: js.UndefOr[Double] = js.native
   var sortDirections: js.UndefOr[js.Array[SortOrder]] = js.native
   var sortOrder: js.UndefOr[SortOrder] = js.native
-  var sorter: js.UndefOr[Boolean | CompareFn[RecordType] | AnonCompare[RecordType]] = js.native
+  var sorter: js.UndefOr[Boolean | CompareFn[RecordType] | Compare[RecordType]] = js.native
   var title: js.UndefOr[ColumnTitle[RecordType]] = js.native
   var width: js.UndefOr[Double | String] = js.native
 }
@@ -442,7 +442,7 @@ object ColumnGroupProps {
         ret
     }
     @scala.inline
-    def withSorter(value: Boolean | CompareFn[RecordType] | AnonCompare[RecordType]): Self[RecordType] = {
+    def withSorter(value: Boolean | CompareFn[RecordType] | Compare[RecordType]): Self[RecordType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sorter")(value.asInstanceOf[js.Any])
         ret

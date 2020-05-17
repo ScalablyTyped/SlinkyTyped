@@ -5,8 +5,8 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.httpMod.Agent
 import typingsSlinky.node.streamMod.Stream
 import typingsSlinky.npmPackageArg.mod.Result
-import typingsSlinky.npmRegistryFetch.PartialAuthOptions
-import typingsSlinky.npmRegistryFetch.PartialFetchRetryOptions
+import typingsSlinky.npmRegistryFetch.anon.PartialAuthOptions
+import typingsSlinky.npmRegistryFetch.anon.PartialFetchRetryOptions
 import typingsSlinky.npmlog.mod.Logger
 import typingsSlinky.ssri.mod.Integrity
 import typingsSlinky.std.Record

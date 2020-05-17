@@ -14,17 +14,17 @@ object DraggableContainer {
   
   def apply(p: js.Any): Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.DraggableHeader.DraggableContainer
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.DraggableHeader.DraggableContainer
   ] = new Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.DraggableHeader.DraggableContainer
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.DraggableHeader.DraggableContainer
   ](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: DraggableContainer.type): Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.DraggableHeader.DraggableContainer
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.DraggableHeader.DraggableContainer
   ] = new Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.DraggableHeader.DraggableContainer
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.DraggableHeader.DraggableContainer
   ](js.Array(this.component, js.Dictionary.empty))()
 }
 

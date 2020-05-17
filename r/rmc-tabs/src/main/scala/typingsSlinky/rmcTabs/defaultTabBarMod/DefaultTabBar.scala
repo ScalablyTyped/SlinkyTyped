@@ -3,8 +3,8 @@ package typingsSlinky.rmcTabs.defaultTabBarMod
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
-import typingsSlinky.rmcTabs.AnonOnPanEnd
-import typingsSlinky.rmcTabs.AnonShowNext
+import typingsSlinky.rmcTabs.anon.OnPanEnd
+import typingsSlinky.rmcTabs.anon.ShowNext
 import typingsSlinky.rmcTabs.modelsMod.Models.TabData
 import typingsSlinky.rmcTabs.rmcTabsStrings.bottom
 import typingsSlinky.rmcTabs.rmcTabsStrings.left
@@ -20,11 +20,11 @@ class DefaultTabBar protected ()
   extends Component[PropsType, StateType, js.Any] {
   def this(props: PropsType) = this()
   var layout: HTMLDivElement = js.native
-  var onPan: AnonOnPanEnd = js.native
+  var onPan: OnPanEnd = js.native
   @JSName("componentWillReceiveProps")
   def componentWillReceiveProps_MDefaultTabBar(nextProps: PropsType): Unit = js.native
   def getTabSize(page: Double, tabLength: Double): Double = js.native
-  def getTransformByIndex(props: PropsType): AnonShowNext = js.native
+  def getTransformByIndex(props: PropsType): ShowNext = js.native
   def isTabBarVertical(): Boolean = js.native
   @JSName("isTabBarVertical")
   def isTabBarVertical_bottom(position: bottom): Boolean = js.native

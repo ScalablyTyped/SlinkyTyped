@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`map-image`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.bmp
@@ -182,8 +181,4 @@ trait MapImageLayer
     */
   def loadAll(): js.Promise[Sublayer] = js.native
 }
-
-@JSGlobal("__esri.MapImageLayer")
-@js.native
-object MapImageLayer extends TopLevel[MapImageLayerConstructor]
 

@@ -1,16 +1,16 @@
 package typingsSlinky.baseui.paginationMod
 
-import typingsSlinky.baseui.AnonEventAny
-import typingsSlinky.baseui.AnonNextPage
+import typingsSlinky.baseui.anon.EventAny
+import typingsSlinky.baseui.anon.NextPage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Callbacks extends js.Object {
-  var onNextClick: js.UndefOr[js.Function1[/* args */ AnonEventAny, _]] = js.native
-  var onPageChange: js.UndefOr[js.Function1[/* args */ AnonNextPage, _]] = js.native
-  var onPrevClick: js.UndefOr[js.Function1[/* args */ AnonEventAny, _]] = js.native
+  var onNextClick: js.UndefOr[js.Function1[/* args */ EventAny, _]] = js.native
+  var onPageChange: js.UndefOr[js.Function1[/* args */ NextPage, _]] = js.native
+  var onPrevClick: js.UndefOr[js.Function1[/* args */ EventAny, _]] = js.native
 }
 
 object Callbacks {
@@ -26,7 +26,7 @@ object Callbacks {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnNextClick(value: /* args */ AnonEventAny => _): Self = {
+    def withOnNextClick(value: /* args */ EventAny => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onNextClick")(js.Any.fromFunction1(value))
         ret
@@ -38,7 +38,7 @@ object Callbacks {
         ret
     }
     @scala.inline
-    def withOnPageChange(value: /* args */ AnonNextPage => _): Self = {
+    def withOnPageChange(value: /* args */ NextPage => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPageChange")(js.Any.fromFunction1(value))
         ret
@@ -50,7 +50,7 @@ object Callbacks {
         ret
     }
     @scala.inline
-    def withOnPrevClick(value: /* args */ AnonEventAny => _): Self = {
+    def withOnPrevClick(value: /* args */ EventAny => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPrevClick")(js.Any.fromFunction1(value))
         ret

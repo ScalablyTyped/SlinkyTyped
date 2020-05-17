@@ -1,13 +1,13 @@
 package typingsSlinky.rcPicker.generateMod
 
-import typingsSlinky.rcPicker.AnonFormat
+import typingsSlinky.rcPicker.anon.Format
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait GenerateConfig[DateType] extends js.Object {
-  var locale: AnonFormat[DateType] = js.native
+  var locale: Format[DateType] = js.native
   def addDate(value: DateType, diff: Double): DateType = js.native
   def addMonth(value: DateType, diff: Double): DateType = js.native
   def addYear(value: DateType, diff: Double): DateType = js.native
@@ -45,7 +45,7 @@ object GenerateConfig {
     getYear: DateType => Double,
     isAfter: (DateType, DateType) => Boolean,
     isValidate: DateType => Boolean,
-    locale: AnonFormat[DateType],
+    locale: Format[DateType],
     setDate: (DateType, Double) => DateType,
     setHour: (DateType, Double) => DateType,
     setMinute: (DateType, Double) => DateType,
@@ -141,7 +141,7 @@ object GenerateConfig {
         ret
     }
     @scala.inline
-    def withLocale(value: AnonFormat[DateType]): Self[DateType] = {
+    def withLocale(value: Format[DateType]): Self[DateType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
         ret

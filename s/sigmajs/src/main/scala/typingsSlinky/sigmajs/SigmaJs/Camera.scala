@@ -1,7 +1,7 @@
 package typingsSlinky.sigmajs.SigmaJs
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.sigmajs.AnonX
+import typingsSlinky.sigmajs.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,9 +13,9 @@ trait Camera extends js.Object {
   var readPrefix: String = js.native
   var x: Double = js.native
   var y: Double = js.native
-  def cameraPosition(x: Double, y: Double): AnonX = js.native
+  def cameraPosition(x: Double, y: Double): X = js.native
   def goTo(settings: StringDictionary[js.Any]): Unit = js.native
-  def graphPosition(x: Double, y: Double): AnonX = js.native
+  def graphPosition(x: Double, y: Double): X = js.native
   def settings(setting: String): js.Any = js.native
 }
 
@@ -23,9 +23,9 @@ object Camera {
   @scala.inline
   def apply(
     angle: Double,
-    cameraPosition: (Double, Double) => AnonX,
+    cameraPosition: (Double, Double) => X,
     goTo: StringDictionary[js.Any] => Unit,
-    graphPosition: (Double, Double) => AnonX,
+    graphPosition: (Double, Double) => X,
     ratio: Double,
     readPrefix: String,
     settings: String => js.Any,
@@ -48,7 +48,7 @@ object Camera {
         ret
     }
     @scala.inline
-    def withCameraPosition(value: (Double, Double) => AnonX): Self = {
+    def withCameraPosition(value: (Double, Double) => X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cameraPosition")(js.Any.fromFunction2(value))
         ret
@@ -60,7 +60,7 @@ object Camera {
         ret
     }
     @scala.inline
-    def withGraphPosition(value: (Double, Double) => AnonX): Self = {
+    def withGraphPosition(value: (Double, Double) => X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("graphPosition")(js.Any.fromFunction2(value))
         ret

@@ -1,10 +1,10 @@
 package typingsSlinky.rcCheckbox.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait Props extends js.Object {
   var id: js.UndefOr[String] = js.native
   var name: js.UndefOr[String] = js.native
   var onBlur: js.UndefOr[js.Function1[/* e */ SyntheticFocusEvent[HTMLInputElement], Unit]] = js.native
-  var onChange: js.UndefOr[js.Function1[/* e */ Event_, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
   var onClick: js.UndefOr[js.Function1[/* e */ SyntheticMouseEvent[HTMLInputElement], Unit]] = js.native
   var onFocus: js.UndefOr[js.Function1[/* e */ SyntheticFocusEvent[HTMLInputElement], Unit]] = js.native
   var prefixCls: js.UndefOr[String] = js.native
@@ -139,7 +139,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* e */ Event_ => Unit): Self = {
+    def withOnChange(value: /* e */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

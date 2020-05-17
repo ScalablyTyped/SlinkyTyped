@@ -15,7 +15,6 @@ import typingsSlinky.phaser.Phaser.GameObjects.Components.TextureCrop
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Tint
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Transform
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Visible
-import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.Phaser.Textures.CanvasTexture
 import typingsSlinky.phaser.Phaser.Textures.Texture
 import typingsSlinky.phaser.Phaser.Textures.TextureSource
@@ -74,9 +73,8 @@ import scala.scalajs.js.annotation._
   * https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement
   * https://developer.mozilla.org/en-US/docs/Web/Media/Formats
   */
-@JSGlobal("Phaser.GameObjects.Video")
 @js.native
-class Video protected ()
+trait Video
   extends GameObject
      with Alpha
      with BlendMode
@@ -92,15 +90,6 @@ class Video protected ()
      with Tint
      with Transform
      with Visible {
-  /**
-    * 
-    * @param scene The Scene to which this Game Object belongs. A Game Object can only belong to one Scene at a time.
-    * @param x The horizontal position of this Game Object in the world.
-    * @param y The vertical position of this Game Object in the world.
-    * @param key Optional key of the Video this Game Object will play, as stored in the Video Cache.
-    */
-  def this(scene: Scene, x: Double, y: Double) = this()
-  def this(scene: Scene, x: Double, y: Double, key: String) = this()
   /**
     * An object containing in and out markers for sequence playback.
     */

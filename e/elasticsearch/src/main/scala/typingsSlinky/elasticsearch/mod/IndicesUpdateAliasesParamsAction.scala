@@ -1,17 +1,16 @@
 package typingsSlinky.elasticsearch.mod
 
-import typingsSlinky.elasticsearch.AnonAlias
-import typingsSlinky.elasticsearch.AnonIndexString
-import typingsSlinky.elasticsearch.AnonIndices
+import typingsSlinky.elasticsearch.anon.Alias
+import typingsSlinky.elasticsearch.anon.IndexString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IndicesUpdateAliasesParamsAction extends js.Object {
-  var add: js.UndefOr[AnonAlias] = js.native
-  var remove: js.UndefOr[AnonIndices] = js.native
-  var remove_index: js.UndefOr[AnonIndexString] = js.native
+  var add: js.UndefOr[Alias] = js.native
+  var remove: js.UndefOr[typingsSlinky.elasticsearch.anon.Indices] = js.native
+  var remove_index: js.UndefOr[IndexString] = js.native
 }
 
 object IndicesUpdateAliasesParamsAction {
@@ -27,7 +26,7 @@ object IndicesUpdateAliasesParamsAction {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAdd(value: AnonAlias): Self = {
+    def withAdd(value: Alias): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("add")(value.asInstanceOf[js.Any])
         ret
@@ -39,7 +38,7 @@ object IndicesUpdateAliasesParamsAction {
         ret
     }
     @scala.inline
-    def withRemove(value: AnonIndices): Self = {
+    def withRemove(value: typingsSlinky.elasticsearch.anon.Indices): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(value.asInstanceOf[js.Any])
         ret
@@ -51,7 +50,7 @@ object IndicesUpdateAliasesParamsAction {
         ret
     }
     @scala.inline
-    def withRemove_index(value: AnonIndexString): Self = {
+    def withRemove_index(value: IndexString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("remove_index")(value.asInstanceOf[js.Any])
         ret

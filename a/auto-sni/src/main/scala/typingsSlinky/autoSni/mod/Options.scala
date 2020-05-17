@@ -1,6 +1,6 @@
 package typingsSlinky.autoSni.mod
 
-import typingsSlinky.autoSni.AnonHttp
+import typingsSlinky.autoSni.anon.Http
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait Options extends js.Object {
   var debug: js.UndefOr[Boolean] = js.native
   var domains: js.Array[String | js.Array[String]] = js.native
   var email: String = js.native
-  var ports: js.UndefOr[AnonHttp] = js.native
+  var ports: js.UndefOr[Http] = js.native
 }
 
 object Options {
@@ -57,7 +57,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withPorts(value: AnonHttp): Self = {
+    def withPorts(value: Http): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ports")(value.asInstanceOf[js.Any])
         ret

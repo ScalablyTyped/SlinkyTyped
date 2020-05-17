@@ -11,16 +11,15 @@ package object mod {
     js.Any
   ]
   type CreateWriteStreamOptions = typingsSlinky.std.Extract[
-    /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<write.FnCall>[1] */ js.Any, 
+    /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<write.anon.FnCall>[1] */ js.Any, 
     typingsSlinky.std.Record[java.lang.String, js.Any]
   ]
-  type Data = java.lang.String | typingsSlinky.node.Buffer | js.typedarray.Uint8Array
   type Options = (typingsSlinky.std.Omit[
     typingsSlinky.node.fsMod.WriteFileOptions, 
     typingsSlinky.write.writeStrings.encoding
-  ]) with typingsSlinky.write.OmitMakeDirectoryOptionsr with typingsSlinky.write.mod.CommonOptions
+  ]) with typingsSlinky.write.anon.OmitMakeDirectoryOptionsr with typingsSlinky.write.mod.CommonOptions
   type StreamOptions = (typingsSlinky.std.Omit[
     typingsSlinky.write.mod.CreateWriteStreamOptions, 
     typingsSlinky.write.writeStrings.encoding
-  ]) with typingsSlinky.write.OmitMakeDirectoryOptionsr with typingsSlinky.write.mod.CommonOptions
+  ]) with typingsSlinky.write.anon.OmitMakeDirectoryOptionsr with typingsSlinky.write.mod.CommonOptions
 }

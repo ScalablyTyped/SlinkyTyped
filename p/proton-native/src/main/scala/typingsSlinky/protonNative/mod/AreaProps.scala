@@ -1,6 +1,6 @@
 package typingsSlinky.protonNative.mod
 
-import typingsSlinky.protonNative.AnonButtons
+import typingsSlinky.protonNative.anon.Buttons
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +30,7 @@ trait AreaProps extends AreaBaseProps {
   /**
     * Called when the mouse is moved over the area
     */
-  var onMouseMove: js.UndefOr[js.Function1[/* event */ AnonButtons, Unit]] = js.native
+  var onMouseMove: js.UndefOr[js.Function1[/* event */ Buttons, Unit]] = js.native
   /**
     * **Not working at the moment.**
     *
@@ -116,7 +116,7 @@ object AreaProps {
         ret
     }
     @scala.inline
-    def withOnMouseMove(value: /* event */ AnonButtons => Unit): Self = {
+    def withOnMouseMove(value: /* event */ Buttons => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(js.Any.fromFunction1(value))
         ret

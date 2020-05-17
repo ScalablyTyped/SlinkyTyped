@@ -4,7 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactDataGrid.AdazzleReactDataGrid.ExcelColumn
 import typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.AutoCompleteTokensEditorProps
-import typingsSlinky.reactDataGrid.AnonCaption
+import typingsSlinky.reactDataGrid.anon.Caption
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ object AutoCompleteTokensEditor {
     extends AnyVal
        with StBuildingComponent[
           tag.type, 
-          typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Editors.AutoCompleteTokensEditor
+          typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Editors.AutoCompleteTokensEditor
         ] {
     @scala.inline
     def column(value: ExcelColumn): this.type = set("column", value.asInstanceOf[js.Any])
@@ -29,7 +29,7 @@ object AutoCompleteTokensEditor {
   
   def withProps(p: AutoCompleteTokensEditorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(options: js.Array[String | AnonCaption]): Builder = {
+  def apply(options: js.Array[String | Caption]): Builder = {
     val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[AutoCompleteTokensEditorProps]))
   }

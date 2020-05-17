@@ -1,6 +1,6 @@
 package typingsSlinky.expressMysqlSession.mod
 
-import typingsSlinky.expressMysqlSession.PartialSchema
+import typingsSlinky.expressMysqlSession.anon.PartialSchema
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

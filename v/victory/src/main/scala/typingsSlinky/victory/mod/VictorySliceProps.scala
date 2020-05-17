@@ -1,8 +1,8 @@
 package typingsSlinky.victory.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.victory.AnonActive
-import typingsSlinky.victory.AnonEndAngle
+import typingsSlinky.victory.anon.Active
+import typingsSlinky.victory.anon.EndAngle
 import typingsSlinky.victory.victoryStrings.cornerRadius
 import typingsSlinky.victory.victoryStrings.padAngle
 import typingsSlinky.victory.victoryStrings.radius
@@ -31,7 +31,7 @@ trait VictorySliceProps extends VictoryCommonProps {
     * When this prop is given as a function
     * it will be called with datum and active.
     */
-  var innerRadius: js.UndefOr[Double | (js.Function1[/* props */ AnonActive, Double])] = js.native
+  var innerRadius: js.UndefOr[Double | (js.Function1[/* props */ Active, Double])] = js.native
   /**
     * the angular padding to add to the slice.
     * When this prop is given as a function it will be called with
@@ -62,7 +62,7 @@ trait VictorySliceProps extends VictoryCommonProps {
     * an object specifying the `startAngle`, `endAngle`, `padAngle`,
     * and `data` of the slice
     */
-  var slice: AnonEndAngle = js.native
+  var slice: EndAngle = js.native
   /**
     * the end angle the slice.
     * When this prop is given as a function it will be called
@@ -83,7 +83,7 @@ trait VictorySliceProps extends VictoryCommonProps {
 
 object VictorySliceProps {
   @scala.inline
-  def apply(slice: AnonEndAngle): VictorySliceProps = {
+  def apply(slice: EndAngle): VictorySliceProps = {
     val __obj = js.Dynamic.literal(slice = slice.asInstanceOf[js.Any])
     __obj.asInstanceOf[VictorySliceProps]
   }
@@ -94,7 +94,7 @@ object VictorySliceProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSlice(value: AnonEndAngle): Self = {
+    def withSlice(value: EndAngle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("slice")(value.asInstanceOf[js.Any])
         ret
@@ -130,13 +130,13 @@ object VictorySliceProps {
         ret
     }
     @scala.inline
-    def withInnerRadiusFunction1(value: /* props */ AnonActive => Double): Self = {
+    def withInnerRadiusFunction1(value: /* props */ Active => Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withInnerRadius(value: Double | (js.Function1[/* props */ AnonActive, Double])): Self = {
+    def withInnerRadius(value: Double | (js.Function1[/* props */ Active, Double])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("innerRadius")(value.asInstanceOf[js.Any])
         ret

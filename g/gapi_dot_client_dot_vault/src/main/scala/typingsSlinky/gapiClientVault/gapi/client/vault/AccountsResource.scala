@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientVault.gapi.client.vault
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientVault.AnonAccesstoken
-import typingsSlinky.gapiClientVault.AnonAccountId
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientVault.anon.Accesstoken
+import typingsSlinky.gapiClientVault.anon.AccountId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,27 +14,27 @@ trait AccountsResource extends js.Object {
     * has no held_org_unit set. Attempting to add an account to an OU-based
     * hold will result in an error.
     */
-  def create(request: AnonAccesstoken): Request_[HeldAccount] = js.native
+  def create(request: Accesstoken): Request[HeldAccount] = js.native
   /**
     * Removes a HeldAccount from a hold. If this request leaves the hold with
     * no held accounts, the hold will not apply to any accounts.
     */
-  def delete(request: AnonAccountId): Request_[js.Object] = js.native
+  def delete(request: AccountId): Request[js.Object] = js.native
   /**
     * Lists HeldAccounts for a hold. This will only list individually specified
     * held accounts. If the hold is on an OU, then use
     * <a href="https://developers.google.com/admin-sdk/">Admin SDK</a>
     * to enumerate its members.
     */
-  def list(request: AnonAccesstoken): Request_[ListHeldAccountsResponse] = js.native
+  def list(request: Accesstoken): Request[ListHeldAccountsResponse] = js.native
 }
 
 object AccountsResource {
   @scala.inline
   def apply(
-    create: AnonAccesstoken => Request_[HeldAccount],
-    delete: AnonAccountId => Request_[js.Object],
-    list: AnonAccesstoken => Request_[ListHeldAccountsResponse]
+    create: Accesstoken => Request[HeldAccount],
+    delete: AccountId => Request[js.Object],
+    list: Accesstoken => Request[ListHeldAccountsResponse]
   ): AccountsResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[AccountsResource]
@@ -46,19 +46,19 @@ object AccountsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: AnonAccesstoken => Request_[HeldAccount]): Self = {
+    def withCreate(value: Accesstoken => Request[HeldAccount]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonAccountId => Request_[js.Object]): Self = {
+    def withDelete(value: AccountId => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonAccesstoken => Request_[ListHeldAccountsResponse]): Self = {
+    def withList(value: Accesstoken => Request[ListHeldAccountsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

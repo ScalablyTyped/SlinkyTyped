@@ -3,9 +3,9 @@ package typingsSlinky.devextreme.mod.DevExpress.viz
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.SVGElement
 import org.scalajs.dom.raw.SVGGElement
-import typingsSlinky.devextreme.AnonBlur
-import typingsSlinky.devextreme.AnonCornerRadius
-import typingsSlinky.devextreme.AnonUrl
+import typingsSlinky.devextreme.anon.Blur
+import typingsSlinky.devextreme.anon.CornerRadius
+import typingsSlinky.devextreme.anon.Url
 import typingsSlinky.devextreme.devextremeStrings.breakWord
 import typingsSlinky.devextreme.devextremeStrings.custom
 import typingsSlinky.devextreme.devextremeStrings.ellipsis
@@ -16,7 +16,7 @@ import typingsSlinky.devextreme.devextremeStrings.normal
 import typingsSlinky.devextreme.devextremeStrings.text
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.core.template
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,7 +34,7 @@ trait dxChartCommonAnnotationConfig extends js.Object {
   /** Specifies the name of the value axis on which the value is specified. Useful for a multi-axis chart. */
   var axis: js.UndefOr[String] = js.native
   /** Configures the appearance of the annotation's border. */
-  var border: js.UndefOr[AnonCornerRadius] = js.native
+  var border: js.UndefOr[CornerRadius] = js.native
   /** Specifies the color that fills the annotation. */
   var color: js.UndefOr[String] = js.native
   /** Customizes the text and appearance of the annotation's tooltip. */
@@ -48,7 +48,7 @@ trait dxChartCommonAnnotationConfig extends js.Object {
   /** Specifies the annotation's height in pixels. */
   var height: js.UndefOr[Double] = js.native
   /** Configures the image to be displayed in the annotation. Applies only if the type is "image". */
-  var image: js.UndefOr[String | AnonUrl] = js.native
+  var image: js.UndefOr[String | Url] = js.native
   /** Moves the annotation horizontally. */
   var offsetX: js.UndefOr[Double] = js.native
   /** Moves the annotation vertically. */
@@ -62,7 +62,7 @@ trait dxChartCommonAnnotationConfig extends js.Object {
   /** Anchors the annotation to a series point. Accepts the name of the point's series. */
   var series: js.UndefOr[String] = js.native
   /** Configures the annotation's shadows. */
-  var shadow: js.UndefOr[AnonBlur] = js.native
+  var shadow: js.UndefOr[Blur] = js.native
   /** Specifies a custom template for the annotation. */
   var template: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
@@ -178,7 +178,7 @@ object dxChartCommonAnnotationConfig {
         ret
     }
     @scala.inline
-    def withBorder(value: AnonCornerRadius): Self = {
+    def withBorder(value: CornerRadius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
         ret
@@ -262,7 +262,7 @@ object dxChartCommonAnnotationConfig {
         ret
     }
     @scala.inline
-    def withImage(value: String | AnonUrl): Self = {
+    def withImage(value: String | Url): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
         ret
@@ -346,7 +346,7 @@ object dxChartCommonAnnotationConfig {
         ret
     }
     @scala.inline
-    def withShadow(value: AnonBlur): Self = {
+    def withShadow(value: Blur): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shadow")(value.asInstanceOf[js.Any])
         ret

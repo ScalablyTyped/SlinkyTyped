@@ -12,14 +12,8 @@ trait ConsumerProps[T] extends js.Object
 
 object ConsumerProps {
   @scala.inline
-  def ConsumerPropsExplicitRender[T](): ConsumerProps[T] = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[ConsumerProps[T]]
-  }
+  implicit def apply[T](value: ConsumerPropsExplicitRender[T]): ConsumerProps[T] = value.asInstanceOf[ConsumerProps[T]]
   @scala.inline
-  def ConsumerPropsImplicitRender[T](): ConsumerProps[T] = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[ConsumerProps[T]]
-  }
+  implicit def apply[T](value: ConsumerPropsImplicitRender[T]): ConsumerProps[T] = value.asInstanceOf[ConsumerProps[T]]
 }
 

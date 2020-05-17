@@ -1,22 +1,22 @@
 package typingsSlinky.inboxsdk.mod.Common
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.inboxsdk.inboxsdkStrings.escape
 import typingsSlinky.inboxsdk.inboxsdkStrings.outsideInteraction
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait PreAutoCloseEvent extends js.Object {
-  var cause: Event_ = js.native
+  var cause: Event = js.native
   var `type`: outsideInteraction | escape = js.native
   def cancel(): Unit = js.native
 }
 
 object PreAutoCloseEvent {
   @scala.inline
-  def apply(cancel: () => Unit, cause: Event_, `type`: outsideInteraction | escape): PreAutoCloseEvent = {
+  def apply(cancel: () => Unit, cause: Event, `type`: outsideInteraction | escape): PreAutoCloseEvent = {
     val __obj = js.Dynamic.literal(cancel = js.Any.fromFunction0(cancel), cause = cause.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PreAutoCloseEvent]
@@ -34,7 +34,7 @@ object PreAutoCloseEvent {
         ret
     }
     @scala.inline
-    def withCause(value: Event_): Self = {
+    def withCause(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cause")(value.asInstanceOf[js.Any])
         ret

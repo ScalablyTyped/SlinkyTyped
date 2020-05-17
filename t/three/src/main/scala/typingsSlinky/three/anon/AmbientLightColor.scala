@@ -1,0 +1,124 @@
+package typingsSlinky.three.anon
+
+import typingsSlinky.three.uniformsLibMod.IUniform
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait AmbientLightColor extends js.Object {
+  var ambientLightColor: IUniform = js.native
+  var directionalLights: Properties = js.native
+  var directionalShadowMap: IUniform = js.native
+  var directionalShadowMatrix: IUniform = js.native
+  var hemisphereLights: PropertiesDirection = js.native
+  var pointLights: PropertiesValue = js.native
+  var pointShadowMap: IUniform = js.native
+  var pointShadowMatrix: IUniform = js.native
+  var rectAreaLights: PropertiesHeight = js.native
+  var spotLights: Value = js.native
+  var spotShadowMap: IUniform = js.native
+  var spotShadowMatrix: IUniform = js.native
+}
+
+object AmbientLightColor {
+  @scala.inline
+  def apply(
+    ambientLightColor: IUniform,
+    directionalLights: Properties,
+    directionalShadowMap: IUniform,
+    directionalShadowMatrix: IUniform,
+    hemisphereLights: PropertiesDirection,
+    pointLights: PropertiesValue,
+    pointShadowMap: IUniform,
+    pointShadowMatrix: IUniform,
+    rectAreaLights: PropertiesHeight,
+    spotLights: Value,
+    spotShadowMap: IUniform,
+    spotShadowMatrix: IUniform
+  ): AmbientLightColor = {
+    val __obj = js.Dynamic.literal(ambientLightColor = ambientLightColor.asInstanceOf[js.Any], directionalLights = directionalLights.asInstanceOf[js.Any], directionalShadowMap = directionalShadowMap.asInstanceOf[js.Any], directionalShadowMatrix = directionalShadowMatrix.asInstanceOf[js.Any], hemisphereLights = hemisphereLights.asInstanceOf[js.Any], pointLights = pointLights.asInstanceOf[js.Any], pointShadowMap = pointShadowMap.asInstanceOf[js.Any], pointShadowMatrix = pointShadowMatrix.asInstanceOf[js.Any], rectAreaLights = rectAreaLights.asInstanceOf[js.Any], spotLights = spotLights.asInstanceOf[js.Any], spotShadowMap = spotShadowMap.asInstanceOf[js.Any], spotShadowMatrix = spotShadowMatrix.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AmbientLightColor]
+  }
+  @scala.inline
+  implicit class AmbientLightColorOps[Self <: AmbientLightColor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAmbientLightColor(value: IUniform): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ambientLightColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDirectionalLights(value: Properties): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directionalLights")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDirectionalShadowMap(value: IUniform): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directionalShadowMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDirectionalShadowMatrix(value: IUniform): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("directionalShadowMatrix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHemisphereLights(value: PropertiesDirection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hemisphereLights")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPointLights(value: PropertiesValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointLights")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPointShadowMap(value: IUniform): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointShadowMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPointShadowMatrix(value: IUniform): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointShadowMatrix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRectAreaLights(value: PropertiesHeight): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rectAreaLights")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpotLights(value: Value): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spotLights")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpotShadowMap(value: IUniform): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spotShadowMap")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSpotShadowMatrix(value: IUniform): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("spotShadowMatrix")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

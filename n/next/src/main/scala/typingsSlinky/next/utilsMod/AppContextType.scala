@@ -1,7 +1,7 @@
 package typingsSlinky.next.utilsMod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.next.AppInitialPropsnamestring
+import typingsSlinky.next.anon.AppInitialPropsnamestring
 import typingsSlinky.next.routerMod.NextRouter
 import scala.scalajs.js
 import scala.scalajs.js.`|`

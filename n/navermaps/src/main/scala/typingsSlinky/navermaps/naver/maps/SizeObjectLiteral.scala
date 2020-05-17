@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SizeObjectLiteral extends js.Object {
+trait SizeObjectLiteral extends SizeLiteral {
   var height: Double = js.native
   var width: Double = js.native
 }

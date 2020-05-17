@@ -1,0 +1,125 @@
+package typingsSlinky.awsSdkClientCodecommitNode.putFileExceptionsUnionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.typesBranchDoesNotExistExceptionMod.BranchDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesBranchNameIsTagNameExceptionMod.BranchNameIsTagNameException
+import typingsSlinky.awsSdkClientCodecommitNode.typesBranchNameRequiredExceptionMod.BranchNameRequiredException
+import typingsSlinky.awsSdkClientCodecommitNode.typesCommitMessageLengthExceededExceptionMod.CommitMessageLengthExceededException
+import typingsSlinky.awsSdkClientCodecommitNode.typesDirectoryNameConflictsWithFileNameExceptionMod.DirectoryNameConflictsWithFileNameException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+import typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+import typingsSlinky.awsSdkClientCodecommitNode.typesFileContentRequiredExceptionMod.FileContentRequiredException
+import typingsSlinky.awsSdkClientCodecommitNode.typesFileContentSizeLimitExceededExceptionMod.FileContentSizeLimitExceededException
+import typingsSlinky.awsSdkClientCodecommitNode.typesFileNameConflictsWithDirectoryNameExceptionMod.FileNameConflictsWithDirectoryNameException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidBranchNameExceptionMod.InvalidBranchNameException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidDeletionParameterExceptionMod.InvalidDeletionParameterException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidEmailExceptionMod.InvalidEmailException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidFileModeExceptionMod.InvalidFileModeException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidParentCommitIdExceptionMod.InvalidParentCommitIdException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidPathExceptionMod.InvalidPathException
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+import typingsSlinky.awsSdkClientCodecommitNode.typesNameLengthExceededExceptionMod.NameLengthExceededException
+import typingsSlinky.awsSdkClientCodecommitNode.typesParentCommitDoesNotExistExceptionMod.ParentCommitDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesParentCommitIdOutdatedExceptionMod.ParentCommitIdOutdatedException
+import typingsSlinky.awsSdkClientCodecommitNode.typesParentCommitIdRequiredExceptionMod.ParentCommitIdRequiredException
+import typingsSlinky.awsSdkClientCodecommitNode.typesPathRequiredExceptionMod.PathRequiredException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+import typingsSlinky.awsSdkClientCodecommitNode.typesSameFileContentExceptionMod.SameFileContentException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesParentCommitIdRequiredExceptionMod.ParentCommitIdRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidParentCommitIdExceptionMod.InvalidParentCommitIdException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesParentCommitDoesNotExistExceptionMod.ParentCommitDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesParentCommitIdOutdatedExceptionMod.ParentCommitIdOutdatedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesFileContentRequiredExceptionMod.FileContentRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesFileContentSizeLimitExceededExceptionMod.FileContentSizeLimitExceededException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesPathRequiredExceptionMod.PathRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidPathExceptionMod.InvalidPathException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesBranchNameRequiredExceptionMod.BranchNameRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidBranchNameExceptionMod.InvalidBranchNameException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesBranchDoesNotExistExceptionMod.BranchDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesBranchNameIsTagNameExceptionMod.BranchNameIsTagNameException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidFileModeExceptionMod.InvalidFileModeException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesNameLengthExceededExceptionMod.NameLengthExceededException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidEmailExceptionMod.InvalidEmailException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesCommitMessageLengthExceededExceptionMod.CommitMessageLengthExceededException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidDeletionParameterExceptionMod.InvalidDeletionParameterException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionIntegrityChecksFailedExceptionMod.EncryptionIntegrityChecksFailedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyAccessDeniedExceptionMod.EncryptionKeyAccessDeniedException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyDisabledExceptionMod.EncryptionKeyDisabledException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyNotFoundExceptionMod.EncryptionKeyNotFoundException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesEncryptionKeyUnavailableExceptionMod.EncryptionKeyUnavailableException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesSameFileContentExceptionMod.SameFileContentException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesFileNameConflictsWithDirectoryNameExceptionMod.FileNameConflictsWithDirectoryNameException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesDirectoryNameConflictsWithFileNameExceptionMod.DirectoryNameConflictsWithFileNameException
+*/
+trait PutFileExceptionsUnion extends js.Object
+
+object PutFileExceptionsUnion {
+  @scala.inline
+  implicit def apply(value: BranchDoesNotExistException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: BranchNameIsTagNameException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: BranchNameRequiredException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: CommitMessageLengthExceededException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: DirectoryNameConflictsWithFileNameException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionIntegrityChecksFailedException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyAccessDeniedException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyDisabledException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyNotFoundException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: EncryptionKeyUnavailableException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: FileContentRequiredException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: FileContentSizeLimitExceededException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: FileNameConflictsWithDirectoryNameException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidBranchNameException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidDeletionParameterException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidEmailException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidFileModeException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidParentCommitIdException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidPathException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidRepositoryNameException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: NameLengthExceededException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: ParentCommitDoesNotExistException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: ParentCommitIdOutdatedException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: ParentCommitIdRequiredException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: PathRequiredException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryDoesNotExistException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryNameRequiredException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: SameFileContentException): PutFileExceptionsUnion = value.asInstanceOf[PutFileExceptionsUnion]
+}
+

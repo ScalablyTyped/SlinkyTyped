@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("vscode", "RelativePattern")
 @js.native
-class RelativePattern protected () extends js.Object {
+class RelativePattern protected () extends GlobPattern {
   def this(base: String, pattern: String) = this()
   /**
   		 * Creates a new relative pattern object with a base path and pattern to match. This pattern

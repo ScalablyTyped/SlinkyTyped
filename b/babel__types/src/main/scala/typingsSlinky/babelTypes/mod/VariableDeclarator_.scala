@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait VariableDeclarator_
   extends BaseNode
-     with _Node {
+     with Node {
   var definite: Boolean | Null = js.native
   var id: LVal = js.native
   var init: Expression | Null = js.native

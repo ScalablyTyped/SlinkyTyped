@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobileRn.mod
 
-import typingsSlinky.antdMobileRn.AnonAppearTransition
+import typingsSlinky.antdMobileRn.anon.AppearTransition
 import typingsSlinky.antdMobileRn.progressIndexNativeMod.ProgressProps
 import typingsSlinky.antdMobileRn.progressIndexNativeMod.default
 import scala.scalajs.js
@@ -17,6 +17,6 @@ class Progress protected () extends default {
 @JSImport("antd-mobile-rn", "Progress")
 @js.native
 object Progress extends js.Object {
-  var defaultProps: AnonAppearTransition = js.native
+  var defaultProps: AppearTransition = js.native
 }
 

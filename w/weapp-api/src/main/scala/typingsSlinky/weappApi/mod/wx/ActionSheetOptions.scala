@@ -1,6 +1,6 @@
 package typingsSlinky.weappApi.mod.wx
 
-import typingsSlinky.weappApi.AnonTapIndex
+import typingsSlinky.weappApi.anon.TapIndex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -71,7 +71,7 @@ object ActionSheetOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonTapIndex => Unit): Self = {
+    def withSuccess(value: /* res */ TapIndex => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

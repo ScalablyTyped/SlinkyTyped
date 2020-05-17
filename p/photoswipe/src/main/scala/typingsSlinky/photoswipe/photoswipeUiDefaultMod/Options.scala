@@ -1,7 +1,7 @@
 package typingsSlinky.photoswipe.photoswipeUiDefaultMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.photoswipe.AnonBottom
+import typingsSlinky.photoswipe.anon.Bottom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,7 +47,7 @@ trait Options
     *
     * Default {top: 44, bottom: "auto"}.
     */
-  var barsSize: js.UndefOr[AnonBottom] = js.native
+  var barsSize: js.UndefOr[Bottom] = js.native
   /**
     * Whether to show the caption.
     *
@@ -251,7 +251,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withBarsSize(value: AnonBottom): Self = {
+    def withBarsSize(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("barsSize")(value.asInstanceOf[js.Any])
         ret

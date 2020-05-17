@@ -1,6 +1,6 @@
 package typingsSlinky.bulmaCalendar.mod
 
-import typingsSlinky.bulmaCalendar.AnonDate
+import typingsSlinky.bulmaCalendar.anon.Date
 import typingsSlinky.bulmaCalendar.bulmaCalendarStrings.`inline`
 import typingsSlinky.bulmaCalendar.bulmaCalendarStrings.bottom
 import typingsSlinky.bulmaCalendar.bulmaCalendarStrings.date
@@ -98,7 +98,7 @@ trait BulmaCalendarOptions extends js.Object {
     * @default 'top'
     */
   var headerPosition: js.UndefOr[top | bottom] = js.native
-  var icons: js.UndefOr[AnonDate] = js.native
+  var icons: js.UndefOr[Date] = js.native
   /**
     * Range capability (start and end date/time selection
     *
@@ -416,7 +416,7 @@ object BulmaCalendarOptions {
         ret
     }
     @scala.inline
-    def withIcons(value: AnonDate): Self = {
+    def withIcons(value: Date): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
         ret

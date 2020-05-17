@@ -2,7 +2,7 @@ package typingsSlinky.reactNativeElements.mod
 
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
-import typingsSlinky.reactNativeElements.bottomnumberleftnumberrig
+import typingsSlinky.reactNativeElements.anon.bottomnumberleftnumberrig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

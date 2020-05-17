@@ -1,6 +1,6 @@
 package typingsSlinky.reactWeui.mod
 
-import typingsSlinky.reactWeui.AnonAutocomplete
+import typingsSlinky.reactWeui.anon.Autocomplete
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ class SearchBar protected () extends js.Object {
 @JSImport("react-weui", "SearchBar")
 @js.native
 object SearchBar extends js.Object {
-  var defaultProps: AnonAutocomplete = js.native
+  var defaultProps: Autocomplete = js.native
   @js.native
   object propTypes extends js.Object {
     @js.native

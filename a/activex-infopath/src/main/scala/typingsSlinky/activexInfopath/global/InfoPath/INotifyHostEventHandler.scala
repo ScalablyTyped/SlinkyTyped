@@ -1,0 +1,11 @@
+package typingsSlinky.activexInfopath.global.InfoPath
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("InfoPath.INotifyHostEventHandler")
+@js.native
+class INotifyHostEventHandler protected ()
+  extends typingsSlinky.activexInfopath.InfoPath.INotifyHostEventHandler
+

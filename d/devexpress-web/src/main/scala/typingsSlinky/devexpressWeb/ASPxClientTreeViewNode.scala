@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a client-side equivalent of the ASPxTreeView's TreeViewNode object.
   */
-@JSGlobal("ASPxClientTreeViewNode")
 @js.native
-class ASPxClientTreeViewNode () extends js.Object {
+trait ASPxClientTreeViewNode extends js.Object {
   /**
     * Gets the node's index within the parent's collection of nodes.
     */
@@ -116,5 +115,190 @@ class ASPxClientTreeViewNode () extends js.Object {
     * @param value true if the node is visible; otherwise, false.
     */
   def SetVisible(value: Boolean): Unit = js.native
+}
+
+object ASPxClientTreeViewNode {
+  @scala.inline
+  def apply(
+    GetCheckState: () => String,
+    GetChecked: () => Boolean,
+    GetEnabled: () => Boolean,
+    GetExpanded: () => Boolean,
+    GetHtmlElement: () => js.Any,
+    GetImageUrl: () => String,
+    GetNavigateUrl: () => String,
+    GetNode: Double => ASPxClientTreeViewNode,
+    GetNodeByName: String => ASPxClientTreeViewNode,
+    GetNodeByText: String => ASPxClientTreeViewNode,
+    GetNodeCount: () => Double,
+    GetText: () => String,
+    GetVisible: () => Boolean,
+    SetChecked: Boolean => Unit,
+    SetEnabled: Boolean => Unit,
+    SetExpanded: Boolean => Unit,
+    SetImageUrl: String => Unit,
+    SetNavigateUrl: String => Unit,
+    SetText: String => Unit,
+    SetVisible: Boolean => Unit,
+    index: Double,
+    name: String,
+    parent: ASPxClientTreeViewNode,
+    treeView: ASPxClientTreeView
+  ): ASPxClientTreeViewNode = {
+    val __obj = js.Dynamic.literal(GetCheckState = js.Any.fromFunction0(GetCheckState), GetChecked = js.Any.fromFunction0(GetChecked), GetEnabled = js.Any.fromFunction0(GetEnabled), GetExpanded = js.Any.fromFunction0(GetExpanded), GetHtmlElement = js.Any.fromFunction0(GetHtmlElement), GetImageUrl = js.Any.fromFunction0(GetImageUrl), GetNavigateUrl = js.Any.fromFunction0(GetNavigateUrl), GetNode = js.Any.fromFunction1(GetNode), GetNodeByName = js.Any.fromFunction1(GetNodeByName), GetNodeByText = js.Any.fromFunction1(GetNodeByText), GetNodeCount = js.Any.fromFunction0(GetNodeCount), GetText = js.Any.fromFunction0(GetText), GetVisible = js.Any.fromFunction0(GetVisible), SetChecked = js.Any.fromFunction1(SetChecked), SetEnabled = js.Any.fromFunction1(SetEnabled), SetExpanded = js.Any.fromFunction1(SetExpanded), SetImageUrl = js.Any.fromFunction1(SetImageUrl), SetNavigateUrl = js.Any.fromFunction1(SetNavigateUrl), SetText = js.Any.fromFunction1(SetText), SetVisible = js.Any.fromFunction1(SetVisible), index = index.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], treeView = treeView.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientTreeViewNode]
+  }
+  @scala.inline
+  implicit class ASPxClientTreeViewNodeOps[Self <: ASPxClientTreeViewNode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetCheckState(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetCheckState")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetChecked(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetChecked")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetEnabled(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetEnabled")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetExpanded(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetExpanded")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetHtmlElement(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetHtmlElement")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetImageUrl(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetImageUrl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetNavigateUrl(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetNavigateUrl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetNode(value: Double => ASPxClientTreeViewNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetNode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetNodeByName(value: String => ASPxClientTreeViewNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetNodeByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetNodeByText(value: String => ASPxClientTreeViewNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetNodeByText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetNodeCount(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetNodeCount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetText(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetText")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetVisible(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetVisible")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetChecked(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetChecked")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetEnabled(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetEnabled")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetExpanded(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetExpanded")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetImageUrl(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetImageUrl")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetNavigateUrl(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetNavigateUrl")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetText(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetVisible(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetVisible")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("index")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParent(value: ASPxClientTreeViewNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTreeView(value: ASPxClientTreeView): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("treeView")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

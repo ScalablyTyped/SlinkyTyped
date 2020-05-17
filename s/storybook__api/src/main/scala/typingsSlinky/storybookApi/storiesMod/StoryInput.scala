@@ -1,6 +1,6 @@
 package typingsSlinky.storybookApi.storiesMod
 
-import typingsSlinky.storybookApi.AnonDictparameterName
+import typingsSlinky.storybookApi.anon.DictparameterName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait StoryInput extends js.Object {
   var isLeaf: Boolean = js.native
   var kind: String = js.native
   var name: String = js.native
-  var parameters: AnonDictparameterName = js.native
+  var parameters: DictparameterName = js.native
 }
 
 object StoryInput {
@@ -23,7 +23,7 @@ object StoryInput {
     isLeaf: Boolean,
     kind: String,
     name: String,
-    parameters: AnonDictparameterName
+    parameters: DictparameterName
   ): StoryInput = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isLeaf = isLeaf.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parameters = parameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[StoryInput]
@@ -65,7 +65,7 @@ object StoryInput {
         ret
     }
     @scala.inline
-    def withParameters(value: AnonDictparameterName): Self = {
+    def withParameters(value: DictparameterName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parameters")(value.asInstanceOf[js.Any])
         ret

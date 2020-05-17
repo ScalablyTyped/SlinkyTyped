@@ -1,6 +1,6 @@
 package typingsSlinky.weixinApp.wx
 
-import typingsSlinky.weixinApp.AnonSize
+import typingsSlinky.weixinApp.anon.Size
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait FsGetFileInfoOptions
   var filePath: String = js.native
    // 要读取的文件路径
   @JSName("success")
-  var success_FsGetFileInfoOptions: js.UndefOr[js.Function1[/* res */ AnonSize, Unit]] = js.native
+  var success_FsGetFileInfoOptions: js.UndefOr[js.Function1[/* res */ Size, Unit]] = js.native
 }
 
 object FsGetFileInfoOptions {
@@ -33,7 +33,7 @@ object FsGetFileInfoOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonSize => Unit): Self = {
+    def withSuccess(value: /* res */ Size => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

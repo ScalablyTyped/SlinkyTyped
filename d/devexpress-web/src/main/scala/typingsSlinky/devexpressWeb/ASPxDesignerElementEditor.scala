@@ -4,12 +4,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("ASPxDesignerElementEditor")
 @js.native
-class ASPxDesignerElementEditor () extends js.Object {
+trait ASPxDesignerElementEditor extends js.Object {
   var content: String = js.native
   var editorType: js.Any = js.native
   var extendedOptions: js.Any = js.native
   var header: String = js.native
+}
+
+object ASPxDesignerElementEditor {
+  @scala.inline
+  def apply(content: String, editorType: js.Any, extendedOptions: js.Any, header: String): ASPxDesignerElementEditor = {
+    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], editorType = editorType.asInstanceOf[js.Any], extendedOptions = extendedOptions.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxDesignerElementEditor]
+  }
+  @scala.inline
+  implicit class ASPxDesignerElementEditorOps[Self <: ASPxDesignerElementEditor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEditorType(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("editorType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtendedOptions(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeader(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

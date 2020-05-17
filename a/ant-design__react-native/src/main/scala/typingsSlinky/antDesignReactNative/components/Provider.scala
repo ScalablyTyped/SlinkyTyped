@@ -2,8 +2,8 @@ package typingsSlinky.antDesignReactNative.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignReactNative.PartialLocale
-import typingsSlinky.antDesignReactNative.PartialTheme
+import typingsSlinky.antDesignReactNative.anon.PartialLocale
+import typingsSlinky.antDesignReactNative.anon.PartialTheme
 import typingsSlinky.antDesignReactNative.providerMod.ProviderProps
 import typingsSlinky.antDesignReactNative.providerMod.default
 import scala.scalajs.js

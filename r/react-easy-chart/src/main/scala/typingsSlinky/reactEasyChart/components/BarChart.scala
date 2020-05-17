@@ -3,8 +3,8 @@ package typingsSlinky.reactEasyChart.components
 import org.scalajs.dom.raw.MouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactEasyChart.AnonBottom
-import typingsSlinky.reactEasyChart.AnonX
+import typingsSlinky.reactEasyChart.anon.Bottom
+import typingsSlinky.reactEasyChart.anon.X
 import typingsSlinky.reactEasyChart.mod.BarChartProps
 import typingsSlinky.reactEasyChart.mod.BarData
 import typingsSlinky.reactEasyChart.mod.LineData
@@ -27,7 +27,7 @@ object BarChart {
     @scala.inline
     def axes(value: Boolean): this.type = set("axes", value.asInstanceOf[js.Any])
     @scala.inline
-    def axisLabels(value: AnonX): this.type = set("axisLabels", value.asInstanceOf[js.Any])
+    def axisLabels(value: X): this.type = set("axisLabels", value.asInstanceOf[js.Any])
     @scala.inline
     def barWidth(value: Double): this.type = set("barWidth", value.asInstanceOf[js.Any])
     @scala.inline
@@ -45,7 +45,7 @@ object BarChart {
     @scala.inline
     def lineData(value: js.Array[LineData]): this.type = set("lineData", value.asInstanceOf[js.Any])
     @scala.inline
-    def margin(value: AnonBottom): this.type = set("margin", value.asInstanceOf[js.Any])
+    def margin(value: Bottom): this.type = set("margin", value.asInstanceOf[js.Any])
     @scala.inline
     def mouseMoveHandler(value: (/* data */ BarData, /* mouseEvent */ MouseEvent) => _): this.type = set("mouseMoveHandler", js.Any.fromFunction2(value))
     @scala.inline

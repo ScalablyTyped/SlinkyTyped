@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SyncExpectationResult extends js.Object {
+trait SyncExpectationResult extends ExpectationResult {
   var pass: Boolean = js.native
   def message(): String = js.native
 }

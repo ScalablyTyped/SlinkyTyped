@@ -1,7 +1,5 @@
 package typingsSlinky.reduxPersist.typesMod
 
-import typingsSlinky.reduxPersist.reduxPersistStrings.persistSlashREGISTER
-import typingsSlinky.reduxPersist.reduxPersistStrings.persistSlashREHYDRATE
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,16 +12,8 @@ trait PersistorAction extends js.Object
 
 object PersistorAction {
   @scala.inline
-  def RehydrateAction(key: String, `type`: persistSlashREHYDRATE): PersistorAction = {
-    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[PersistorAction]
-  }
+  implicit def apply(value: RegisterAction): PersistorAction = value.asInstanceOf[PersistorAction]
   @scala.inline
-  def RegisterAction(key: String, `type`: persistSlashREGISTER): PersistorAction = {
-    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[PersistorAction]
-  }
+  implicit def apply(value: RehydrateAction): PersistorAction = value.asInstanceOf[PersistorAction]
 }
 

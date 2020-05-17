@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object definitionsMod {
-  type APIResponseData = js.Object | js.Array[js.Object] | java.lang.String
   type CommandInstanceInfo = typingsSlinky.ionicCliFramework.definitionsMod.CommandInstanceInfo[
     typingsSlinky.ionic.definitionsMod.ICommand, 
     typingsSlinky.ionic.definitionsMod.INamespace, 
@@ -39,8 +38,8 @@ package object definitionsMod {
     /* res */ typingsSlinky.ionic.definitionsMod.APIResponseSuccess, 
     /* is T */ scala.Boolean
   ]
-  type PaginatorRequestGenerator = js.Function0[js.Promise[typingsSlinky.ionic.AnonReq]]
+  type PaginatorRequestGenerator = js.Function0[js.Promise[typingsSlinky.ionic.anon.Req]]
   type ResourcesConfig = org.scalablytyped.runtime.StringDictionary[typingsSlinky.ionic.definitionsMod.ResourcesPlatform]
-  type ResourcesPlatform = org.scalablytyped.runtime.StringDictionary[typingsSlinky.ionic.AnonImages]
+  type ResourcesPlatform = org.scalablytyped.runtime.StringDictionary[typingsSlinky.ionic.anon.Images]
   type SuperAgentRequest = typingsSlinky.superagent.mod.SuperAgentRequest
 }

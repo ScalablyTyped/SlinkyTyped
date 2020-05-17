@@ -1,6 +1,6 @@
 package typingsSlinky.ionicReact.ionActionSheetMod
 
-import typingsSlinky.ionicReact.AnonIos
+import typingsSlinky.ionicReact.anon.Ios
 import typingsSlinky.ionicReact.ionicReactStrings.cancel
 import typingsSlinky.ionicReact.ionicReactStrings.destructive
 import typingsSlinky.ionicReact.ionicReactStrings.selected
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 trait ActionSheetButton extends js.Object {
   var cssClass: js.UndefOr[String | js.Array[String]] = js.native
   var handler: js.UndefOr[js.Function0[Boolean | Unit | js.Promise[Boolean]]] = js.native
-  var icon: js.UndefOr[AnonIos | String] = js.native
+  var icon: js.UndefOr[Ios | String] = js.native
   var role: js.UndefOr[cancel | destructive | selected | String] = js.native
   var text: js.UndefOr[String] = js.native
 }
@@ -55,7 +55,7 @@ object ActionSheetButton {
         ret
     }
     @scala.inline
-    def withIcon(value: AnonIos | String): Self = {
+    def withIcon(value: Ios | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
         ret

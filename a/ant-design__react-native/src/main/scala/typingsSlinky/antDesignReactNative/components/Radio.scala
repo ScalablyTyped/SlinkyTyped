@@ -2,7 +2,7 @@ package typingsSlinky.antDesignReactNative.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignReactNative.AnonTarget
+import typingsSlinky.antDesignReactNative.anon.Target
 import typingsSlinky.antDesignReactNative.radioMod.default
 import typingsSlinky.antDesignReactNative.radioRadioMod.RadioNativeProps
 import typingsSlinky.antDesignReactNative.radioStyleMod.RadioStyle
@@ -31,7 +31,7 @@ object Radio {
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* e */ AnonTarget => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ Target => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def style(value: StyleProp[TextStyle]): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

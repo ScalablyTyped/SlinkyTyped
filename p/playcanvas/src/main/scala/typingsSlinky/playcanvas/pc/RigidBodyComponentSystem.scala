@@ -17,10 +17,8 @@ import scala.scalajs.js.annotation._
   * @property {pc.Vec3} gravity The world space vector representing global gravity in the physics simulation.
   * Defaults to [0, -9.81, 0] which is an approximation of the gravitational force on Earth.
   */
-@JSGlobal("pc.RigidBodyComponentSystem")
 @js.native
-class RigidBodyComponentSystem protected () extends ComponentSystem {
-  def this(app: Application) = this()
+trait RigidBodyComponentSystem extends ComponentSystem {
   /**
     * The world space vector representing global gravity in the physics simulation.
     * Defaults to [0, -9.81, 0] which is an approximation of the gravitational force on Earth.

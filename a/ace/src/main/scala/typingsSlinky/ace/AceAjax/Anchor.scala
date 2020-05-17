@@ -1,6 +1,5 @@
 package typingsSlinky.ace.AceAjax
 
-import org.scalablytyped.runtime.Instantiable3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,14 +37,62 @@ trait Anchor extends js.Object {
   def setPosition(row: Double, column: Double, noClip: Boolean): Unit = js.native
 }
 
-@JSGlobal("AceAjax.Anchor")
-@js.native
-object Anchor
-  extends /**
-  * Creates a new `Anchor` and associates it with a document.
-  * @param doc The document to associate with the anchor
-  * @param row The starting row position
-  * @param column The starting column position
-  **/
-Instantiable3[/* doc */ Document, /* row */ Double, /* column */ Double, Anchor]
+object Anchor {
+  @scala.inline
+  def apply(
+    detach: () => Unit,
+    getDocument: () => Document,
+    getPosition: () => Position,
+    on: (String, js.Function1[/* e */ js.Any, _]) => Unit,
+    onChange: js.Any => Unit,
+    setPosition: (Double, Double, Boolean) => Unit
+  ): Anchor = {
+    val __obj = js.Dynamic.literal(detach = js.Any.fromFunction0(detach), getDocument = js.Any.fromFunction0(getDocument), getPosition = js.Any.fromFunction0(getPosition), on = js.Any.fromFunction2(on), onChange = js.Any.fromFunction1(onChange), setPosition = js.Any.fromFunction3(setPosition))
+    __obj.asInstanceOf[Anchor]
+  }
+  @scala.inline
+  implicit class AnchorOps[Self <: Anchor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDetach(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("detach")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDocument(value: () => Document): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDocument")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPosition(value: () => Position): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPosition")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOn(value: (String, js.Function1[/* e */ js.Any, _]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetPosition(value: (Double, Double, Boolean) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setPosition")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
+}
 

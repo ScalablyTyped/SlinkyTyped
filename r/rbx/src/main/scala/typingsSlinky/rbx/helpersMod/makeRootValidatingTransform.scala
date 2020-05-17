@@ -1,8 +1,8 @@
 package typingsSlinky.rbx.helpersMod
 
-import typingsSlinky.rbx.AnonDatatooltip
-import typingsSlinky.rbx.PartialVariablesDefinitio
-import typingsSlinky.rbx.classNamestringundefinedB
+import typingsSlinky.rbx.anon.Datatooltip
+import typingsSlinky.rbx.anon.PartialVariablesDefinitio
+import typingsSlinky.rbx.anon.classNamestringundefinedB
 import typingsSlinky.rbx.rbxStrings.backgroundColor
 import typingsSlinky.rbx.rbxStrings.badge
 import typingsSlinky.rbx.rbxStrings.badgeColor
@@ -49,10 +49,10 @@ object makeRootValidatingTransform extends js.Object {
     /* props */ classNamestringundefinedB, 
     /* componentName */ String, 
     /* location */ js.UndefOr[String], 
-    AnonDatatooltip with (Pick[
+    Datatooltip with (Pick[
       classNamestringundefinedB, 
       Exclude[
-        /* keyof rbx.classNamestringundefinedB */ className | badge | badgeColor | badgeOutlined | badgeRounded | badgeSize | clearfix | pull | marginless | paddingless | radiusless | relative | shadowless | unselectable | clipped | overlay | responsive | tooltip | tooltipActive | tooltipColor | tooltipMultiline | tooltipPosition | tooltipResponsive | backgroundColor | italic | textAlign | textColor | textSize | textTransform | textWeight | hidden | invisible | srOnly, 
+        /* keyof rbx.anon.classNamestringundefinedB */ className | badge | badgeColor | badgeOutlined | badgeRounded | badgeSize | clearfix | pull | marginless | paddingless | radiusless | relative | shadowless | unselectable | clipped | overlay | responsive | tooltip | tooltipActive | tooltipColor | tooltipMultiline | tooltipPosition | tooltipResponsive | backgroundColor | italic | textAlign | textColor | textSize | textTransform | textWeight | hidden | invisible | srOnly, 
         hidden | overlay | italic | relative | tooltip | badge | badgeColor | badgeOutlined | badgeRounded | badgeSize | clearfix | pull | marginless | paddingless | radiusless | shadowless | unselectable | clipped | responsive | textAlign | textSize | tooltipActive | tooltipColor | tooltipMultiline | tooltipPosition | tooltipResponsive | backgroundColor | textColor | textTransform | textWeight | invisible | srOnly
       ]
     ])

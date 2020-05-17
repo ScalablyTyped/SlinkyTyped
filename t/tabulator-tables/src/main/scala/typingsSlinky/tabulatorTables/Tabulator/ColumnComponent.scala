@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ColumnComponent extends _ColumnLookup {
+trait ColumnComponent extends ColumnLookup {
   /** The delete function deletes the column, removing it from the table*/
   def delete(): js.Promise[Unit] = js.native
   /** The getCells function returns an array of CellComponent objects, one for each cell in the column.*/

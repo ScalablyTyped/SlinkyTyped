@@ -1,5 +1,6 @@
 package typingsSlinky.octokitPluginPaginateRest
 
+import typingsSlinky.octokitPluginPaginateRest.anon.Paginate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +13,7 @@ object mod extends js.Object {
     var VERSION: String = js.native
     def apply(
       octokit: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Octokit */ js.Any
-    ): AnonPaginate = js.native
+    ): Paginate = js.native
   }
   
 }

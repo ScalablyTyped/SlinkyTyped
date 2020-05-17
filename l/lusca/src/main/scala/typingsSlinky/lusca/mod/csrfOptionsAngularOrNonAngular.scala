@@ -1,6 +1,5 @@
 package typingsSlinky.lusca.mod
 
-import typingsSlinky.lusca.luscaBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,14 +12,8 @@ trait csrfOptionsAngularOrNonAngular extends js.Object
 
 object csrfOptionsAngularOrNonAngular {
   @scala.inline
-  def csrfOptionsAngular(angular: `true`): csrfOptionsAngularOrNonAngular = {
-    val __obj = js.Dynamic.literal(angular = angular.asInstanceOf[js.Any])
-    __obj.asInstanceOf[csrfOptionsAngularOrNonAngular]
-  }
+  implicit def apply(value: csrfOptionsAngular): csrfOptionsAngularOrNonAngular = value.asInstanceOf[csrfOptionsAngularOrNonAngular]
   @scala.inline
-  def csrfOptionsNonAngular(): csrfOptionsAngularOrNonAngular = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[csrfOptionsAngularOrNonAngular]
-  }
+  implicit def apply(value: csrfOptionsNonAngular): csrfOptionsAngularOrNonAngular = value.asInstanceOf[csrfOptionsAngularOrNonAngular]
 }
 

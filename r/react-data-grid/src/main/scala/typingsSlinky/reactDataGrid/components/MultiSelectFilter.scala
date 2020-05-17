@@ -14,17 +14,17 @@ object MultiSelectFilter {
   
   def apply(p: js.Any): Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Filters.MultiSelectFilter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Filters.MultiSelectFilter
   ] = new Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Filters.MultiSelectFilter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Filters.MultiSelectFilter
   ](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: MultiSelectFilter.type): Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Filters.MultiSelectFilter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Filters.MultiSelectFilter
   ] = new Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Filters.MultiSelectFilter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Filters.MultiSelectFilter
   ](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.mqttPacket.mod
 
-import typingsSlinky.mqttPacket.AnonServerReference
+import typingsSlinky.mqttPacket.anon.ServerReference
 import typingsSlinky.mqttPacket.mqttPacketStrings.disconnect
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ trait IDisconnectPacket
      with Packet {
   @JSName("cmd")
   var cmd_IDisconnectPacket: disconnect = js.native
-  var properties: js.UndefOr[AnonServerReference] = js.native
+  var properties: js.UndefOr[ServerReference] = js.native
 }
 
 object IDisconnectPacket {
@@ -34,7 +34,7 @@ object IDisconnectPacket {
         ret
     }
     @scala.inline
-    def withProperties(value: AnonServerReference): Self = {
+    def withProperties(value: ServerReference): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
         ret

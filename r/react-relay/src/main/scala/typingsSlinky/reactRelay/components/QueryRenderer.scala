@@ -3,8 +3,7 @@ package typingsSlinky.reactRelay.components
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactRelay.AnonCacheConfig
-import typingsSlinky.reactRelay.AnonError
+import typingsSlinky.reactRelay.anon.Error
 import typingsSlinky.reactRelay.mod.FetchPolicy
 import typingsSlinky.reactRelay.mod.QueryRendererProps
 import typingsSlinky.relayRuntime.readerNodeMod.ReaderFragment
@@ -40,15 +39,15 @@ object QueryRenderer {
     def queryNull: this.type = set("query", null)
   }
   
-  def withProps[TOperation <: OperationType](p: AnonCacheConfig with QueryRendererProps[TOperation]): Builder[TOperation] = new Builder[TOperation](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[TOperation <: OperationType](p: typingsSlinky.reactRelay.anon.CacheConfig with QueryRendererProps[TOperation]): Builder[TOperation] = new Builder[TOperation](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply[TOperation <: OperationType](
     environment: Environment,
-    render: AnonError[TOperation] => TagMod[Any],
+    render: Error[TOperation] => TagMod[Any],
     variables: /* import warning: importer.ImportType#apply Failed type conversion: TOperation['variables'] */ js.Any
   ): Builder[TOperation] = {
     val __props = js.Dynamic.literal(environment = environment.asInstanceOf[js.Any], render = js.Any.fromFunction1(render), variables = variables.asInstanceOf[js.Any])
-    new Builder[TOperation](js.Array(this.component, __props.asInstanceOf[AnonCacheConfig with QueryRendererProps[TOperation]]))
+    new Builder[TOperation](js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactRelay.anon.CacheConfig with QueryRendererProps[TOperation]]))
   }
 }
 

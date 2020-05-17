@@ -8,8 +8,8 @@ package object chui {
   /**
     * Interface of the JQuery extension of the W3C event object
     */
-  type BaseJQueryEventObject = typingsSlinky.std.Event_
-  type JQueryInputEventObject = typingsSlinky.chui.BaseJQueryEventObject
-  type JQueryKeyEventObject = typingsSlinky.chui.JQueryInputEventObject
-  type JQueryMouseEventObject = typingsSlinky.chui.JQueryInputEventObject
+  type BaseJQueryEventObject = org.scalajs.dom.raw.Event
+  type JQueryInputEventObject = org.scalajs.dom.raw.Event
+  type JQueryKeyEventObject = org.scalajs.dom.raw.Event
+  type JQueryMouseEventObject = org.scalajs.dom.raw.Event
 }

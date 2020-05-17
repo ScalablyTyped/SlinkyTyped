@@ -1,7 +1,7 @@
 package typingsSlinky.jestJasmine2.specMod
 
-import typingsSlinky.jestJasmine2.AnonAfters
-import typingsSlinky.jestJasmine2.AnonCancel
+import typingsSlinky.jestJasmine2.anon.Afters
+import typingsSlinky.jestJasmine2.anon.Cancel
 import typingsSlinky.jestJasmine2.queueRunnerMod.Options
 import typingsSlinky.jestJasmine2.queueRunnerMod.QueueableFn
 import typingsSlinky.jestTypes.configMod.Path
@@ -13,10 +13,10 @@ import scala.scalajs.js.annotation._
 trait Attributes extends js.Object {
   var description: String = js.native
   var id: String = js.native
-  var queueRunnerFactory: js.Function1[/* options */ Options, AnonCancel] = js.native
+  var queueRunnerFactory: js.Function1[/* options */ Options, Cancel] = js.native
   var queueableFn: QueueableFn = js.native
   var throwOnExpectationFailure: js.Any = js.native
-  def beforeAndAfterFns(): AnonAfters = js.native
+  def beforeAndAfterFns(): Afters = js.native
   def getSpecName(spec: Spec): String = js.native
   def getTestPath(): Path = js.native
   def onStart(context: Spec): Unit = js.native
@@ -27,13 +27,13 @@ trait Attributes extends js.Object {
 object Attributes {
   @scala.inline
   def apply(
-    beforeAndAfterFns: () => AnonAfters,
+    beforeAndAfterFns: () => Afters,
     description: String,
     getSpecName: Spec => String,
     getTestPath: () => Path,
     id: String,
     onStart: Spec => Unit,
-    queueRunnerFactory: /* options */ Options => AnonCancel,
+    queueRunnerFactory: /* options */ Options => Cancel,
     queueableFn: QueueableFn,
     resultCallback: SpecResult => Unit,
     throwOnExpectationFailure: js.Any,
@@ -49,7 +49,7 @@ object Attributes {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBeforeAndAfterFns(value: () => AnonAfters): Self = {
+    def withBeforeAndAfterFns(value: () => Afters): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeAndAfterFns")(js.Any.fromFunction0(value))
         ret
@@ -85,7 +85,7 @@ object Attributes {
         ret
     }
     @scala.inline
-    def withQueueRunnerFactory(value: /* options */ Options => AnonCancel): Self = {
+    def withQueueRunnerFactory(value: /* options */ Options => Cancel): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("queueRunnerFactory")(js.Any.fromFunction1(value))
         ret

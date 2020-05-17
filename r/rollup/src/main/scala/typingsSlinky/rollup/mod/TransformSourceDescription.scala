@@ -5,7 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TransformSourceDescription extends SourceDescription {
+trait TransformSourceDescription
+  extends SourceDescription
+     with TransformResult {
   var dependencies: js.UndefOr[js.Array[String]] = js.native
 }
 

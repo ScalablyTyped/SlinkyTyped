@@ -1,6 +1,5 @@
 package typingsSlinky.ace.AceAjax
 
-import org.scalablytyped.runtime.Instantiable2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,13 +12,25 @@ trait Tokenizer extends js.Object {
   def getLineTokens(): js.Any = js.native
 }
 
-@JSGlobal("AceAjax.Tokenizer")
-@js.native
-object Tokenizer
-  extends /**
-  * Constructs a new tokenizer based on the given rules and flags.
-  * @param rules The highlighting rules
-  * @param flag Any additional regular expression flags to pass (like "i" for case insensitive)
-  **/
-Instantiable2[/* rules */ js.Any, /* flag */ String, Tokenizer]
+object Tokenizer {
+  @scala.inline
+  def apply(getLineTokens: () => js.Any): Tokenizer = {
+    val __obj = js.Dynamic.literal(getLineTokens = js.Any.fromFunction0(getLineTokens))
+    __obj.asInstanceOf[Tokenizer]
+  }
+  @scala.inline
+  implicit class TokenizerOps[Self <: Tokenizer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetLineTokens(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLineTokens")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
+}
 

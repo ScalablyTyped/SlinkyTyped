@@ -1,8 +1,8 @@
 package typingsSlinky.dateFns.fpMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.dateFns.AnonLocaleUseAdditionalDayOfYearTokens
 import typingsSlinky.dateFns.CurriedFn4
+import typingsSlinky.dateFns.anon.LocaleUseAdditionalDayOfYearTokens
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +11,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object parseWithOptions
   extends TopLevel[
-      CurriedFn4[AnonLocaleUseAdditionalDayOfYearTokens, js.Date | Double, String, String, js.Date]
+      CurriedFn4[LocaleUseAdditionalDayOfYearTokens, js.Date | Double, String, String, js.Date]
     ]
 

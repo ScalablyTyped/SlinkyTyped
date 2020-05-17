@@ -1,0 +1,163 @@
+package typingsSlinky.reactNativePermissions.anon
+
+import typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.iosDotpermissionDotBLUETOOTH_PERIPHERAL
+import typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.iosDotpermissionDotCALENDARS
+import typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.iosDotpermissionDotCAMERA
+import typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.iosDotpermissionDotCONTACTS
+import typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.iosDotpermissionDotFACE_ID
+import typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.iosDotpermissionDotLOCATION_ALWAYS
+import typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.iosDotpermissionDotLOCATION_WHEN_IN_USE
+import typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.iosDotpermissionDotMEDIA_LIBRARY
+import typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.iosDotpermissionDotMICROPHONE
+import typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.iosDotpermissionDotMOTION
+import typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.iosDotpermissionDotPHOTO_LIBRARY
+import typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.iosDotpermissionDotREMINDERS
+import typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.iosDotpermissionDotSIRI
+import typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.iosDotpermissionDotSPEECH_RECOGNITION
+import typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.iosDotpermissionDotSTOREKIT
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Inlined std.Readonly<{  BLUETOOTH_PERIPHERAL  :'ios.permission.BLUETOOTH_PERIPHERAL',   CALENDARS  :'ios.permission.CALENDARS',   CAMERA  :'ios.permission.CAMERA',   CONTACTS  :'ios.permission.CONTACTS',   FACE_ID  :'ios.permission.FACE_ID',   LOCATION_ALWAYS  :'ios.permission.LOCATION_ALWAYS',   LOCATION_WHEN_IN_USE  :'ios.permission.LOCATION_WHEN_IN_USE',   MEDIA_LIBRARY  :'ios.permission.MEDIA_LIBRARY',   MICROPHONE  :'ios.permission.MICROPHONE',   MOTION  :'ios.permission.MOTION',   PHOTO_LIBRARY  :'ios.permission.PHOTO_LIBRARY',   REMINDERS  :'ios.permission.REMINDERS',   SIRI  :'ios.permission.SIRI',   SPEECH_RECOGNITION  :'ios.permission.SPEECH_RECOGNITION',   STOREKIT  :'ios.permission.STOREKIT'}> */
+@js.native
+trait ReadonlyBLUETOOTHPERIPHER extends js.Object {
+  val BLUETOOTH_PERIPHERAL: iosDotpermissionDotBLUETOOTH_PERIPHERAL = js.native
+  val CALENDARS: iosDotpermissionDotCALENDARS = js.native
+  val CAMERA: iosDotpermissionDotCAMERA = js.native
+  val CONTACTS: iosDotpermissionDotCONTACTS = js.native
+  val FACE_ID: iosDotpermissionDotFACE_ID = js.native
+  val LOCATION_ALWAYS: iosDotpermissionDotLOCATION_ALWAYS = js.native
+  val LOCATION_WHEN_IN_USE: iosDotpermissionDotLOCATION_WHEN_IN_USE = js.native
+  val MEDIA_LIBRARY: iosDotpermissionDotMEDIA_LIBRARY = js.native
+  val MICROPHONE: iosDotpermissionDotMICROPHONE = js.native
+  val MOTION: iosDotpermissionDotMOTION = js.native
+  val PHOTO_LIBRARY: iosDotpermissionDotPHOTO_LIBRARY = js.native
+  val REMINDERS: iosDotpermissionDotREMINDERS = js.native
+  val SIRI: iosDotpermissionDotSIRI = js.native
+  val SPEECH_RECOGNITION: iosDotpermissionDotSPEECH_RECOGNITION = js.native
+  val STOREKIT: iosDotpermissionDotSTOREKIT = js.native
+}
+
+object ReadonlyBLUETOOTHPERIPHER {
+  @scala.inline
+  def apply(
+    BLUETOOTH_PERIPHERAL: iosDotpermissionDotBLUETOOTH_PERIPHERAL,
+    CALENDARS: iosDotpermissionDotCALENDARS,
+    CAMERA: iosDotpermissionDotCAMERA,
+    CONTACTS: iosDotpermissionDotCONTACTS,
+    FACE_ID: iosDotpermissionDotFACE_ID,
+    LOCATION_ALWAYS: iosDotpermissionDotLOCATION_ALWAYS,
+    LOCATION_WHEN_IN_USE: iosDotpermissionDotLOCATION_WHEN_IN_USE,
+    MEDIA_LIBRARY: iosDotpermissionDotMEDIA_LIBRARY,
+    MICROPHONE: iosDotpermissionDotMICROPHONE,
+    MOTION: iosDotpermissionDotMOTION,
+    PHOTO_LIBRARY: iosDotpermissionDotPHOTO_LIBRARY,
+    REMINDERS: iosDotpermissionDotREMINDERS,
+    SIRI: iosDotpermissionDotSIRI,
+    SPEECH_RECOGNITION: iosDotpermissionDotSPEECH_RECOGNITION,
+    STOREKIT: iosDotpermissionDotSTOREKIT
+  ): ReadonlyBLUETOOTHPERIPHER = {
+    val __obj = js.Dynamic.literal(BLUETOOTH_PERIPHERAL = BLUETOOTH_PERIPHERAL.asInstanceOf[js.Any], CALENDARS = CALENDARS.asInstanceOf[js.Any], CAMERA = CAMERA.asInstanceOf[js.Any], CONTACTS = CONTACTS.asInstanceOf[js.Any], FACE_ID = FACE_ID.asInstanceOf[js.Any], LOCATION_ALWAYS = LOCATION_ALWAYS.asInstanceOf[js.Any], LOCATION_WHEN_IN_USE = LOCATION_WHEN_IN_USE.asInstanceOf[js.Any], MEDIA_LIBRARY = MEDIA_LIBRARY.asInstanceOf[js.Any], MICROPHONE = MICROPHONE.asInstanceOf[js.Any], MOTION = MOTION.asInstanceOf[js.Any], PHOTO_LIBRARY = PHOTO_LIBRARY.asInstanceOf[js.Any], REMINDERS = REMINDERS.asInstanceOf[js.Any], SIRI = SIRI.asInstanceOf[js.Any], SPEECH_RECOGNITION = SPEECH_RECOGNITION.asInstanceOf[js.Any], STOREKIT = STOREKIT.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ReadonlyBLUETOOTHPERIPHER]
+  }
+  @scala.inline
+  implicit class ReadonlyBLUETOOTHPERIPHEROps[Self <: ReadonlyBLUETOOTHPERIPHER] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBLUETOOTH_PERIPHERAL(value: iosDotpermissionDotBLUETOOTH_PERIPHERAL): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BLUETOOTH_PERIPHERAL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCALENDARS(value: iosDotpermissionDotCALENDARS): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CALENDARS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCAMERA(value: iosDotpermissionDotCAMERA): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CAMERA")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCONTACTS(value: iosDotpermissionDotCONTACTS): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CONTACTS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFACE_ID(value: iosDotpermissionDotFACE_ID): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FACE_ID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOCATION_ALWAYS(value: iosDotpermissionDotLOCATION_ALWAYS): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOCATION_ALWAYS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLOCATION_WHEN_IN_USE(value: iosDotpermissionDotLOCATION_WHEN_IN_USE): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LOCATION_WHEN_IN_USE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMEDIA_LIBRARY(value: iosDotpermissionDotMEDIA_LIBRARY): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MEDIA_LIBRARY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMICROPHONE(value: iosDotpermissionDotMICROPHONE): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MICROPHONE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMOTION(value: iosDotpermissionDotMOTION): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MOTION")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPHOTO_LIBRARY(value: iosDotpermissionDotPHOTO_LIBRARY): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PHOTO_LIBRARY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withREMINDERS(value: iosDotpermissionDotREMINDERS): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("REMINDERS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSIRI(value: iosDotpermissionDotSIRI): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SIRI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSPEECH_RECOGNITION(value: iosDotpermissionDotSPEECH_RECOGNITION): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SPEECH_RECOGNITION")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSTOREKIT(value: iosDotpermissionDotSTOREKIT): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("STOREKIT")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

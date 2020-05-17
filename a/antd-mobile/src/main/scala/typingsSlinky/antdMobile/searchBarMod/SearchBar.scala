@@ -1,5 +1,6 @@
 package typingsSlinky.antdMobile.searchBarMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLFormElement
 import org.scalajs.dom.raw.HTMLInputElement
@@ -7,7 +8,6 @@ import slinky.core.SyntheticEvent
 import typingsSlinky.antdMobile.searchBarPropsTypeMod.SearchBarState
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.Component
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,6 +40,6 @@ trait SearchBar
   def onChange(e: ChangeEvent[HTMLInputElement]): Unit = js.native
   def onClear(): Unit = js.native
   def onFocus(): Unit = js.native
-  def onSubmit(e: SyntheticEvent[EventTarget with HTMLFormElement, Event_]): Unit = js.native
+  def onSubmit(e: SyntheticEvent[EventTarget with HTMLFormElement, Event]): Unit = js.native
 }
 

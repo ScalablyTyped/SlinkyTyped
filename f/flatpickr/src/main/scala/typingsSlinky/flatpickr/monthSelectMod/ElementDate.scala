@@ -1,6 +1,6 @@
 package typingsSlinky.flatpickr.monthSelectMod
 
-import typingsSlinky.flatpickr.globalsMod._Global_.Date
+import typingsSlinky.flatpickr.globalsMod.global.Date
 import typingsSlinky.std.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`

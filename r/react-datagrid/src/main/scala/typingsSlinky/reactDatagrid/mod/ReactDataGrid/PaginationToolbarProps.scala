@@ -1,13 +1,13 @@
 package typingsSlinky.reactDatagrid.mod.ReactDataGrid
 
-import typingsSlinky.reactDatagrid.AnonDisabledStyle
+import typingsSlinky.reactDatagrid.anon.DisabledStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait PaginationToolbarProps extends js.Object {
-  var iconProps: AnonDisabledStyle = js.native
+  var iconProps: DisabledStyle = js.native
   var iconSize: Double = js.native
   /**
     * Available page sizes.
@@ -26,7 +26,7 @@ trait PaginationToolbarProps extends js.Object {
 object PaginationToolbarProps {
   @scala.inline
   def apply(
-    iconProps: AnonDisabledStyle,
+    iconProps: DisabledStyle,
     iconSize: Double,
     pageSizes: js.Array[Double],
     showPageSize: Boolean,
@@ -42,7 +42,7 @@ object PaginationToolbarProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withIconProps(value: AnonDisabledStyle): Self = {
+    def withIconProps(value: DisabledStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("iconProps")(value.asInstanceOf[js.Any])
         ret

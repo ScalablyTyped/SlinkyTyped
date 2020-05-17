@@ -7,14 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientCardView.BatchEditTemplateCellFocused event.
   */
-@JSGlobal("ASPxClientCardViewBatchEditTemplateCellFocusedEventArgs")
 @js.native
-class ASPxClientCardViewBatchEditTemplateCellFocusedEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientCardViewBatchEditTemplateCellFocusedEventArgs class with the specified column.
-    * @param column An ASPxClientCardViewColumn object that is the processed CardView column. This value is assigned to the ASPxClientCardViewBatchEditTemplateCellFocusedEventArgs.column property.
-    */
-  def this(column: ASPxClientCardViewColumn) = this()
+trait ASPxClientCardViewBatchEditTemplateCellFocusedEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the currently processed column.
     */
@@ -23,5 +17,33 @@ class ASPxClientCardViewBatchEditTemplateCellFocusedEventArgs protected () exten
     * Gets or sets a value specifying whether the event was handled.
     */
   var handled: Boolean = js.native
+}
+
+object ASPxClientCardViewBatchEditTemplateCellFocusedEventArgs {
+  @scala.inline
+  def apply(column: ASPxClientCardViewColumn, handled: Boolean): ASPxClientCardViewBatchEditTemplateCellFocusedEventArgs = {
+    val __obj = js.Dynamic.literal(column = column.asInstanceOf[js.Any], handled = handled.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientCardViewBatchEditTemplateCellFocusedEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientCardViewBatchEditTemplateCellFocusedEventArgsOps[Self <: ASPxClientCardViewBatchEditTemplateCellFocusedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumn(value: ASPxClientCardViewColumn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHandled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handled")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

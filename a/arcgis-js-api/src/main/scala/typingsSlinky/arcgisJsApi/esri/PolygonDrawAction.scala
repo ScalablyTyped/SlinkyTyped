@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.IHandle
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`cursor-update`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`draw-complete`
@@ -75,8 +74,4 @@ trait PolygonDrawAction extends DrawAction {
   @JSName("on")
   def on_vertexremove(name: `vertex-remove`, eventHandler: PolygonDrawActionVertexRemoveEventHandler): IHandle = js.native
 }
-
-@JSGlobal("__esri.PolygonDrawAction")
-@js.native
-object PolygonDrawAction extends TopLevel[PolygonDrawActionConstructor]
 

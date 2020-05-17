@@ -1,7 +1,8 @@
 package typingsSlinky.ionicCore
 
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonTabElement
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonTabsElement
+import typingsSlinky.ionicCore.anon.Tab
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonTabElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonTabsElement
 import typingsSlinky.ionicCore.interfaceMod.NavOutlet
 import typingsSlinky.ionicCore.interfaceMod.RouteWrite
 import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
@@ -23,11 +24,11 @@ object tabsMod extends js.Object {
     /**
       * Emitted when the navigation has finished transitioning to a new component.
       */
-    var ionTabsDidChange: EventEmitter[AnonTab] = js.native
+    var ionTabsDidChange: EventEmitter[Tab] = js.native
     /**
       * Emitted when the navigation is about to transition to a new component.
       */
-    var ionTabsWillChange: EventEmitter[AnonTab] = js.native
+    var ionTabsWillChange: EventEmitter[Tab] = js.native
     var leavingTab: js.UndefOr[js.Any] = js.native
     var notifyRouter: js.Any = js.native
     var onTabClicked: js.Any = js.native

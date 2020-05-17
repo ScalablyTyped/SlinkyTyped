@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.memFs.mod.Store
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.yeomanEnvironment.TypeofGenerator
+import typingsSlinky.yeomanEnvironment.anon.TypeofGenerator
 import typingsSlinky.yeomanGenerator.mod.Storage
 import scala.scalajs.js
 import scala.scalajs.js.`|`

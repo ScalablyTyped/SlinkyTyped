@@ -15,3 +15,20 @@ import scala.scalajs.js.annotation._
 */
 trait HasExpressionInitializer extends HasInitializer
 
+object HasExpressionInitializer {
+  @scala.inline
+  implicit def apply(value: BindingElement): HasExpressionInitializer = value.asInstanceOf[HasExpressionInitializer]
+  @scala.inline
+  implicit def apply(value: EnumMember): HasExpressionInitializer = value.asInstanceOf[HasExpressionInitializer]
+  @scala.inline
+  implicit def apply(value: ParameterDeclaration): HasExpressionInitializer = value.asInstanceOf[HasExpressionInitializer]
+  @scala.inline
+  implicit def apply(value: PropertyAssignment): HasExpressionInitializer = value.asInstanceOf[HasExpressionInitializer]
+  @scala.inline
+  implicit def apply(value: PropertyDeclaration): HasExpressionInitializer = value.asInstanceOf[HasExpressionInitializer]
+  @scala.inline
+  implicit def apply(value: PropertySignature): HasExpressionInitializer = value.asInstanceOf[HasExpressionInitializer]
+  @scala.inline
+  implicit def apply(value: VariableDeclaration): HasExpressionInitializer = value.asInstanceOf[HasExpressionInitializer]
+}
+

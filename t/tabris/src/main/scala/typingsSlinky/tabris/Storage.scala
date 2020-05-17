@@ -13,9 +13,8 @@ import scala.scalajs.js.annotation._
   * The `localStorage` is only meant to store relatively short strings. To store larger amounts of data
   * it is recommended to use the [FileSystem](./fs.html) API.
   */
-@JSGlobal("Storage")
 @js.native
-class Storage protected () extends js.Object {
+trait Storage extends js.Object {
   /**
     * The number of items in the storage.
     * @constant
@@ -47,5 +46,64 @@ class Storage protected () extends js.Object {
     * @param value
     */
   def setItem(key: String, value: String): Unit = js.native
+}
+
+object Storage {
+  @scala.inline
+  def apply(
+    clear: () => Unit,
+    getItem: String => String | Null,
+    key: Double => String,
+    length: Double,
+    removeItem: String => Unit,
+    setItem: (String, String) => Unit
+  ): Storage = {
+    val __obj = js.Dynamic.literal(clear = js.Any.fromFunction0(clear), getItem = js.Any.fromFunction1(getItem), key = js.Any.fromFunction1(key), length = length.asInstanceOf[js.Any], removeItem = js.Any.fromFunction1(removeItem), setItem = js.Any.fromFunction2(setItem))
+    __obj.asInstanceOf[Storage]
+  }
+  @scala.inline
+  implicit class StorageOps[Self <: Storage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClear(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetItem(value: String => String | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withKey(value: Double => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoveItem(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetItem(value: (String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setItem")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

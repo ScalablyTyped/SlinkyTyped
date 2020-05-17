@@ -1,6 +1,6 @@
 package typingsSlinky.firebaseFirestore.firestoreProtoApiMod.firestoreV1ApiClientInterfaces
 
-import typingsSlinky.firebaseFirestore.AnonNanos
+import typingsSlinky.firebaseFirestore.anon.Nanos
 import typingsSlinky.firebaseFirestore.firestoreProtoApiMod.ValueNullValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ trait Value extends js.Object {
   var nullValue: js.UndefOr[ValueNullValue] = js.native
   var referenceValue: js.UndefOr[String] = js.native
   var stringValue: js.UndefOr[String] = js.native
-  var timestampValue: js.UndefOr[String | AnonNanos] = js.native
+  var timestampValue: js.UndefOr[String | Nanos] = js.native
 }
 
 object Value {
@@ -160,7 +160,7 @@ object Value {
         ret
     }
     @scala.inline
-    def withTimestampValue(value: String | AnonNanos): Self = {
+    def withTimestampValue(value: String | Nanos): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("timestampValue")(value.asInstanceOf[js.Any])
         ret

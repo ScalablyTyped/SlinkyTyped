@@ -7,16 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientFileManager.ErrorOccurred event.
   */
-@JSGlobal("ASPxClientFileManagerErrorEventArgs")
 @js.native
-class ASPxClientFileManagerErrorEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientFileManagerErrorEventArgs class.
-    * @param commandName A string value that specifies the name of the processed command.
-    * @param errorText A string value that specifies the error description.
-    * @param errorCode An integer value that specifies the error code.
-    */
-  def this(commandName: String, errorText: String, errorCode: Double) = this()
+trait ASPxClientFileManagerErrorEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the name of the processed command.
     */
@@ -33,5 +25,45 @@ class ASPxClientFileManagerErrorEventArgs protected () extends ASPxClientEventAr
     * Gets or sets a value specifying whether an event error message is sent to the ASPxClientFileManager.ErrorAlertDisplaying event.
     */
   var showAlert: Boolean = js.native
+}
+
+object ASPxClientFileManagerErrorEventArgs {
+  @scala.inline
+  def apply(commandName: String, errorCode: Double, errorText: String, showAlert: Boolean): ASPxClientFileManagerErrorEventArgs = {
+    val __obj = js.Dynamic.literal(commandName = commandName.asInstanceOf[js.Any], errorCode = errorCode.asInstanceOf[js.Any], errorText = errorText.asInstanceOf[js.Any], showAlert = showAlert.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientFileManagerErrorEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientFileManagerErrorEventArgsOps[Self <: ASPxClientFileManagerErrorEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommandName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commandName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withErrorCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withErrorText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShowAlert(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showAlert")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,9 +1,9 @@
 package typingsSlinky.onfleetNodeOnfleet.tasksMod
 
-import typingsSlinky.onfleetNodeOnfleet.AnonActions
-import typingsSlinky.onfleetNodeOnfleet.AnonChecksum
-import typingsSlinky.onfleetNodeOnfleet.AnonOrganization
-import typingsSlinky.onfleetNodeOnfleet.AnonRecipientName
+import typingsSlinky.onfleetNodeOnfleet.anon.Actions
+import typingsSlinky.onfleetNodeOnfleet.anon.Checksum
+import typingsSlinky.onfleetNodeOnfleet.anon.Organization
+import typingsSlinky.onfleetNodeOnfleet.anon.RecipientName
 import typingsSlinky.onfleetNodeOnfleet.destinationsMod.OnfleetDestination
 import typingsSlinky.onfleetNodeOnfleet.metadataMod.OnfleetMetadata
 import typingsSlinky.onfleetNodeOnfleet.recipientsMod.OnfleetRecipient
@@ -23,8 +23,8 @@ object UpdateTaskResult {
   def apply(
     completeAfter: Double,
     completeBefore: Double,
-    completionDetails: AnonActions,
-    container: AnonOrganization,
+    completionDetails: Actions,
+    container: Organization,
     creator: String,
     dependencies: js.Array[String],
     destination: OnfleetDestination,
@@ -33,12 +33,12 @@ object UpdateTaskResult {
     executor: String,
     feedback: js.Array[_],
     id: String,
-    identity: AnonChecksum,
+    identity: Checksum,
     merchant: String,
     metadata: js.Array[OnfleetMetadata],
     notes: String,
     organization: String,
-    overrides: AnonRecipientName,
+    overrides: RecipientName,
     pickupTask: Boolean,
     quantity: Double,
     recipients: js.Array[OnfleetRecipient],

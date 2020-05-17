@@ -1,6 +1,6 @@
 package typingsSlinky.openui5.sap.ui.model.analytics
 
-import typingsSlinky.openui5.TypeofFilterType
+import typingsSlinky.openui5.anon.TypeofFilterType
 import typingsSlinky.openui5.sap.ui.model.Context
 import typingsSlinky.openui5.sap.ui.model.Filter
 import typingsSlinky.openui5.sap.ui.model.TreeBinding
@@ -9,9 +9,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("sap.ui.model.analytics.AnalyticalBinding")
 @js.native
-class AnalyticalBinding () extends TreeBinding {
+trait AnalyticalBinding extends TreeBinding {
   /**
     * Sets filters for matching only a subset of the entities in the bound OData entity set.Invoking this
     * function resets the state of the binding. Subsequent data requests such as calls to

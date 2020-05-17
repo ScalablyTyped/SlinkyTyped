@@ -1,6 +1,6 @@
 package typingsSlinky.angularCommon.testingTestingMod
 
-import typingsSlinky.angularCommon.AnonIgnoreCancelled
+import typingsSlinky.angularCommon.anon.IgnoreCancelled
 import typingsSlinky.angularCommon.httpHttpMod.HttpBackend
 import typingsSlinky.angularCommon.httpHttpMod.HttpEvent
 import typingsSlinky.angularCommon.httpMod.HttpRequest
@@ -124,6 +124,6 @@ class ɵangularPackagesCommonHttpTestingTestingA () extends HttpBackend {
     * were not explicitly matched.
     */
   def verify(): Unit = js.native
-  def verify(opts: AnonIgnoreCancelled): Unit = js.native
+  def verify(opts: IgnoreCancelled): Unit = js.native
 }
 

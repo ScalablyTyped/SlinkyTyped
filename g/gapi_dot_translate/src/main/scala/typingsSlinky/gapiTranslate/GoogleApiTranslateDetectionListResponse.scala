@@ -1,17 +1,18 @@
 package typingsSlinky.gapiTranslate
 
+import typingsSlinky.gapiTranslate.anon.Detections
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait GoogleApiTranslateDetectionListResponse extends js.Object {
-  var data: AnonDetections = js.native
+  var data: Detections = js.native
 }
 
 object GoogleApiTranslateDetectionListResponse {
   @scala.inline
-  def apply(data: AnonDetections): GoogleApiTranslateDetectionListResponse = {
+  def apply(data: Detections): GoogleApiTranslateDetectionListResponse = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleApiTranslateDetectionListResponse]
   }
@@ -22,7 +23,7 @@ object GoogleApiTranslateDetectionListResponse {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withData(value: AnonDetections): Self = {
+    def withData(value: Detections): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

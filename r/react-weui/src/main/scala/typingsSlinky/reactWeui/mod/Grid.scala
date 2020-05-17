@@ -1,6 +1,5 @@
 package typingsSlinky.reactWeui.mod
 
-import typingsSlinky.reactWeui.AnonIcon
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +15,7 @@ class Grid protected () extends js.Object {
 @JSImport("react-weui", "Grid")
 @js.native
 object Grid extends js.Object {
-  var defaultProps: AnonIcon = js.native
+  var defaultProps: typingsSlinky.reactWeui.anon.Icon = js.native
   @js.native
   object propTypes extends js.Object {
     @js.native

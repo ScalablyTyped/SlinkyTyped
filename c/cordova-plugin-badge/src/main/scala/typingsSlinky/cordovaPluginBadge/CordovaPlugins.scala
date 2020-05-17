@@ -1,17 +1,18 @@
 package typingsSlinky.cordovaPluginBadge
 
+import typingsSlinky.cordovaPluginBadge.anon.Badge
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CordovaPlugins extends js.Object {
-  var notification: AnonBadge = js.native
+  var notification: Badge = js.native
 }
 
 object CordovaPlugins {
   @scala.inline
-  def apply(notification: AnonBadge): CordovaPlugins = {
+  def apply(notification: Badge): CordovaPlugins = {
     val __obj = js.Dynamic.literal(notification = notification.asInstanceOf[js.Any])
     __obj.asInstanceOf[CordovaPlugins]
   }
@@ -22,7 +23,7 @@ object CordovaPlugins {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withNotification(value: AnonBadge): Self = {
+    def withNotification(value: Badge): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notification")(value.asInstanceOf[js.Any])
         ret

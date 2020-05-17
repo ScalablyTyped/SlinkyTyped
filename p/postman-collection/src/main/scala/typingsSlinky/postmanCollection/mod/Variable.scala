@@ -1,7 +1,7 @@
 package typingsSlinky.postmanCollection.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.postmanCollection.AnonAny
+import typingsSlinky.postmanCollection.anon.Any
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +31,7 @@ class Variable () extends Property[VariableDefinition] {
 @JSImport("postman-collection", "Variable")
 @js.native
 object Variable extends js.Object {
-  var types: AnonAny = js.native
+  var types: Any = js.native
   def isVariable(obj: js.Any): Boolean = js.native
 }
 

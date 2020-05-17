@@ -1,7 +1,7 @@
 package typingsSlinky.wordpressApiFetch.mod.Schema
 
 import typingsSlinky.std.Record
-import typingsSlinky.wordpressApiFetch.AnonDictk
+import typingsSlinky.wordpressApiFetch.anon.Dictk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +24,7 @@ trait BaseCategory
 object BaseCategory {
   @scala.inline
   def apply(
-    _links: Record[String, js.Array[AnonDictk]],
+    _links: Record[String, js.Array[Dictk]],
     count: Double,
     description: String,
     id: Double,

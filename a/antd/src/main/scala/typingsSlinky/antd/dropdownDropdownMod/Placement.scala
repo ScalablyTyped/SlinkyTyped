@@ -14,3 +14,18 @@ import scala.scalajs.js.annotation._
 */
 trait Placement extends js.Object
 
+object Placement {
+  @scala.inline
+  def topLeft: typingsSlinky.antd.antdStrings.topLeft = "topLeft".asInstanceOf[typingsSlinky.antd.antdStrings.topLeft]
+  @scala.inline
+  def topCenter: typingsSlinky.antd.antdStrings.topCenter = "topCenter".asInstanceOf[typingsSlinky.antd.antdStrings.topCenter]
+  @scala.inline
+  def topRight: typingsSlinky.antd.antdStrings.topRight = "topRight".asInstanceOf[typingsSlinky.antd.antdStrings.topRight]
+  @scala.inline
+  def bottomLeft: typingsSlinky.antd.antdStrings.bottomLeft = "bottomLeft".asInstanceOf[typingsSlinky.antd.antdStrings.bottomLeft]
+  @scala.inline
+  def bottomCenter: typingsSlinky.antd.antdStrings.bottomCenter = "bottomCenter".asInstanceOf[typingsSlinky.antd.antdStrings.bottomCenter]
+  @scala.inline
+  def bottomRight: typingsSlinky.antd.antdStrings.bottomRight = "bottomRight".asInstanceOf[typingsSlinky.antd.antdStrings.bottomRight]
+}
+

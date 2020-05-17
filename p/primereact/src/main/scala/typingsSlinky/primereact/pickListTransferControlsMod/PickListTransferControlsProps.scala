@@ -1,13 +1,13 @@
 package typingsSlinky.primereact.pickListTransferControlsMod
 
-import typingsSlinky.primereact.AnonTarget
+import typingsSlinky.primereact.anon.Target
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait PickListTransferControlsProps extends js.Object {
-  var onTransfer: js.UndefOr[js.Function1[/* e */ AnonTarget, Unit]] = js.native
+  var onTransfer: js.UndefOr[js.Function1[/* e */ Target, Unit]] = js.native
   var source: js.UndefOr[js.Array[_]] = js.native
   var sourceSelection: js.UndefOr[js.Array[_]] = js.native
   var target: js.UndefOr[js.Array[_]] = js.native
@@ -27,7 +27,7 @@ object PickListTransferControlsProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnTransfer(value: /* e */ AnonTarget => Unit): Self = {
+    def withOnTransfer(value: /* e */ Target => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTransfer")(js.Any.fromFunction1(value))
         ret

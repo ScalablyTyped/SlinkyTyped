@@ -1,6 +1,6 @@
 package typingsSlinky.gestalt.mod
 
-import typingsSlinky.gestalt.AnonEvent
+import typingsSlinky.gestalt.anon.Event
 import typingsSlinky.gestalt.gestaltStrings.blue
 import typingsSlinky.gestalt.gestaltStrings.button
 import typingsSlinky.gestalt.gestaltStrings.darkGray
@@ -25,7 +25,7 @@ trait ButtonProps extends js.Object {
   var disabled: js.UndefOr[Boolean] = js.native
   var `inline`: js.UndefOr[Boolean] = js.native
   var name: js.UndefOr[String] = js.native
-  var onClick: js.UndefOr[js.Function1[/* args */ AnonEvent, Unit]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* args */ Event, Unit]] = js.native
   var size: js.UndefOr[sm | md | lg] = js.native
   var text: String = js.native
   var textColor: js.UndefOr[blue | red | darkGray | white] = js.native
@@ -135,7 +135,7 @@ object ButtonProps {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* args */ AnonEvent => Unit): Self = {
+    def withOnClick(value: /* args */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret

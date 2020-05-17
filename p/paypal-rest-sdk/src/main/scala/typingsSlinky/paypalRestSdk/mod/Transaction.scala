@@ -1,7 +1,7 @@
 package typingsSlinky.paypalRestSdk.mod
 
-import typingsSlinky.paypalRestSdk.AnonAllowedpaymentmethod
-import typingsSlinky.paypalRestSdk.AnonItems
+import typingsSlinky.paypalRestSdk.anon.Allowedpaymentmethod
+import typingsSlinky.paypalRestSdk.anon.Items
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +12,12 @@ trait Transaction extends js.Object {
   var custom: js.UndefOr[String] = js.native
   var description: js.UndefOr[String] = js.native
   var invoice_number: js.UndefOr[String] = js.native
-  var item_list: js.UndefOr[AnonItems] = js.native
+  var item_list: js.UndefOr[Items] = js.native
   var note_to_payee: js.UndefOr[String] = js.native
   var notify_url: js.UndefOr[String] = js.native
   var order_url: js.UndefOr[String] = js.native
   var payee: js.UndefOr[Payee] = js.native
-  var payment_options: js.UndefOr[AnonAllowedpaymentmethod] = js.native
+  var payment_options: js.UndefOr[Allowedpaymentmethod] = js.native
   var purchase_order: js.UndefOr[String] = js.native
   var reference_id: js.UndefOr[String] = js.native
   val related_resources: js.UndefOr[js.Array[RelatedResources]] = js.native
@@ -79,7 +79,7 @@ object Transaction {
         ret
     }
     @scala.inline
-    def withItem_list(value: AnonItems): Self = {
+    def withItem_list(value: Items): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("item_list")(value.asInstanceOf[js.Any])
         ret
@@ -139,7 +139,7 @@ object Transaction {
         ret
     }
     @scala.inline
-    def withPayment_options(value: AnonAllowedpaymentmethod): Self = {
+    def withPayment_options(value: Allowedpaymentmethod): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("payment_options")(value.asInstanceOf[js.Any])
         ret

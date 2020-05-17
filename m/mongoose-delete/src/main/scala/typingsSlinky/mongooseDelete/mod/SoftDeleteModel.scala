@@ -1,6 +1,9 @@
 package typingsSlinky.mongooseDelete.mod
 
 import typingsSlinky.mongodb.mod.FindAndModifyWriteOpResultObject
+import typingsSlinky.mongoose.anon.rawResulttrueQueryFindOneArrayFilters
+import typingsSlinky.mongoose.anon.rawResulttrueupserttruene
+import typingsSlinky.mongoose.anon.upserttruenewtrueQueryFin
 import typingsSlinky.mongoose.mod.Document
 import typingsSlinky.mongoose.mod.FilterQuery
 import typingsSlinky.mongoose.mod.ModelUpdateOptions
@@ -9,21 +12,18 @@ import typingsSlinky.mongoose.mod.Query
 import typingsSlinky.mongoose.mod.QueryFindOneAndUpdateOptions
 import typingsSlinky.mongoose.mod.Types.ObjectId
 import typingsSlinky.mongoose.mod.UpdateQuery
-import typingsSlinky.mongoose.rawResulttrueQueryFindOneArrayFilters
-import typingsSlinky.mongoose.rawResulttrueupserttruene
-import typingsSlinky.mongoose.upserttruenewtrueQueryFin
-import typingsSlinky.mongooseDelete.DocumentQueryArrayanyanyAll
-import typingsSlinky.mongooseDelete.DocumentQueryanyanyAll
-import typingsSlinky.mongooseDelete.DocumentQueryanynullanyAll
-import typingsSlinky.mongooseDelete.Fn0
-import typingsSlinky.mongooseDelete.FnCall
-import typingsSlinky.mongooseDelete.FnCallConditionsDocOptionsCallback
-import typingsSlinky.mongooseDelete.FnCallConditionsProjectionOptionsCallback
-import typingsSlinky.mongooseDelete.FnCallConditionsUpdateOptionsCallback
-import typingsSlinky.mongooseDelete.QueryFindAndModifyWriteOpAnd
-import typingsSlinky.mongooseDelete.QueryFindAndModifyWriteOpBatchSize
-import typingsSlinky.mongooseDelete.Queryany
-import typingsSlinky.mongooseDelete.Querynumber
+import typingsSlinky.mongooseDelete.anon.DocumentQueryArrayanyanyAll
+import typingsSlinky.mongooseDelete.anon.DocumentQueryanyanyAll
+import typingsSlinky.mongooseDelete.anon.DocumentQueryanynullanyAll
+import typingsSlinky.mongooseDelete.anon.Fn0
+import typingsSlinky.mongooseDelete.anon.FnCall
+import typingsSlinky.mongooseDelete.anon.FnCallConditionsDocOptionsCallback
+import typingsSlinky.mongooseDelete.anon.FnCallConditionsProjectionOptionsCallback
+import typingsSlinky.mongooseDelete.anon.FnCallConditionsUpdateOptionsCallback
+import typingsSlinky.mongooseDelete.anon.QueryFindAndModifyWriteOpAnd
+import typingsSlinky.mongooseDelete.anon.QueryFindAndModifyWriteOpBatchSize
+import typingsSlinky.mongooseDelete.anon.Queryany
+import typingsSlinky.mongooseDelete.anon.Querynumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -171,15 +171,6 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model_[T, Query
     callback: js.Function3[/* err */ js.Any, /* doc */ js.Any | Null, /* res */ js.Any, Unit]
   ): DocumentQueryanynullanyAll = js.native
   /** Find One And Update only deleted documents */
-  def findOneAndUpdateDeleted(conditions: FilterQuery[_], update: UpdateQuery[_], options: QueryFindOneAndUpdateOptions): DocumentQueryanynullanyAll = js.native
-  /** Find One And Update only deleted documents */
-  def findOneAndUpdateDeleted(
-    conditions: FilterQuery[_],
-    update: UpdateQuery[_],
-    options: QueryFindOneAndUpdateOptions,
-    callback: js.Function3[/* err */ js.Any, /* doc */ js.Any | Null, /* res */ js.Any, Unit]
-  ): DocumentQueryanynullanyAll = js.native
-  /** Find One And Update only deleted documents */
   def findOneAndUpdateDeleted(conditions: FilterQuery[_], update: UpdateQuery[_], options: rawResulttrueQueryFindOneArrayFilters): QueryFindAndModifyWriteOpBatchSize = js.native
   /** Find One And Update only deleted documents */
   def findOneAndUpdateDeleted(
@@ -216,6 +207,15 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model_[T, Query
     options: upserttruenewtrueQueryFin,
     callback: js.Function3[/* err */ js.Any, /* doc */ js.Any, /* res */ js.Any, Unit]
   ): DocumentQueryanyanyAll = js.native
+  /** Find One And Update only deleted documents */
+  def findOneAndUpdateDeleted(conditions: FilterQuery[_], update: UpdateQuery[_], options: QueryFindOneAndUpdateOptions): DocumentQueryanynullanyAll = js.native
+  /** Find One And Update only deleted documents */
+  def findOneAndUpdateDeleted(
+    conditions: FilterQuery[_],
+    update: UpdateQuery[_],
+    options: QueryFindOneAndUpdateOptions,
+    callback: js.Function3[/* err */ js.Any, /* doc */ js.Any | Null, /* res */ js.Any, Unit]
+  ): DocumentQueryanynullanyAll = js.native
   /** Find One And Update all documents including deleted */
   def findOneAndUpdateWithDeleted(): DocumentQueryanynullanyAll = js.native
   /** Find One And Update all documents including deleted */
@@ -224,15 +224,6 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model_[T, Query
   def findOneAndUpdateWithDeleted(
     conditions: FilterQuery[_],
     update: UpdateQuery[_],
-    callback: js.Function3[/* err */ js.Any, /* doc */ js.Any | Null, /* res */ js.Any, Unit]
-  ): DocumentQueryanynullanyAll = js.native
-  /** Find One And Update all documents including deleted */
-  def findOneAndUpdateWithDeleted(conditions: FilterQuery[_], update: UpdateQuery[_], options: QueryFindOneAndUpdateOptions): DocumentQueryanynullanyAll = js.native
-  /** Find One And Update all documents including deleted */
-  def findOneAndUpdateWithDeleted(
-    conditions: FilterQuery[_],
-    update: UpdateQuery[_],
-    options: QueryFindOneAndUpdateOptions,
     callback: js.Function3[/* err */ js.Any, /* doc */ js.Any | Null, /* res */ js.Any, Unit]
   ): DocumentQueryanynullanyAll = js.native
   /** Find One And Update all documents including deleted */
@@ -272,6 +263,15 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model_[T, Query
     options: upserttruenewtrueQueryFin,
     callback: js.Function3[/* err */ js.Any, /* doc */ js.Any, /* res */ js.Any, Unit]
   ): DocumentQueryanyanyAll = js.native
+  /** Find One And Update all documents including deleted */
+  def findOneAndUpdateWithDeleted(conditions: FilterQuery[_], update: UpdateQuery[_], options: QueryFindOneAndUpdateOptions): DocumentQueryanynullanyAll = js.native
+  /** Find One And Update all documents including deleted */
+  def findOneAndUpdateWithDeleted(
+    conditions: FilterQuery[_],
+    update: UpdateQuery[_],
+    options: QueryFindOneAndUpdateOptions,
+    callback: js.Function3[/* err */ js.Any, /* doc */ js.Any | Null, /* res */ js.Any, Unit]
+  ): DocumentQueryanynullanyAll = js.native
   /** Find One only deleted documents */
   def findOneDeleted(): DocumentQueryanynullanyAll = js.native
   /** Find One only deleted documents */

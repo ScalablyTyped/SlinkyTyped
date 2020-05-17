@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LocaleMessageArray
   extends /* index */ NumberDictionary[LocaleMessage]
-     with _LocaleMessage
+     with LocaleMessage
 
 object LocaleMessageArray {
   @scala.inline

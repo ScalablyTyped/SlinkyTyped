@@ -9,7 +9,7 @@ package object choiceGroupOptionTypesMod {
     /* evt */ js.UndefOr[
       slinky.core.SyntheticEvent[
         org.scalajs.dom.raw.EventTarget with (org.scalajs.dom.raw.HTMLElement | org.scalajs.dom.raw.HTMLInputElement), 
-        typingsSlinky.std.Event_
+        org.scalajs.dom.raw.Event
       ]
     ], 
     /* props */ js.UndefOr[typingsSlinky.officeUiFabricReact.choiceGroupTypesMod.IChoiceGroupOption], 

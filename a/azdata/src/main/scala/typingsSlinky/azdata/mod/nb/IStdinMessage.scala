@@ -1,6 +1,6 @@
 package typingsSlinky.azdata.mod.nb
 
-import typingsSlinky.azdata.AnonPassword
+import typingsSlinky.azdata.anon.Password
 import typingsSlinky.azdata.azdataStrings.stdin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation._
 trait IStdinMessage extends IMessage {
   var channel: stdin = js.native
   @JSName("content")
-  var content_IStdinMessage: AnonPassword = js.native
+  var content_IStdinMessage: Password = js.native
 }
 
 object IStdinMessage {
   @scala.inline
   def apply(
     channel: stdin,
-    content: AnonPassword,
+    content: Password,
     header: IHeader,
     parent_header: IHeader | js.Object,
     `type`: Channel
@@ -39,7 +39,7 @@ object IStdinMessage {
         ret
     }
     @scala.inline
-    def withContent(value: AnonPassword): Self = {
+    def withContent(value: Password): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
         ret

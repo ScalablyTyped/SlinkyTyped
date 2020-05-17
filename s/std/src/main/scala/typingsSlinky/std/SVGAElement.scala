@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -48,9 +47,4 @@ trait SVGAElement
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
 }
-
-@JSGlobal("SVGAElement")
-@js.native
-object SVGAElement
-  extends Instantiable0[org.scalajs.dom.raw.SVGAElement]
 

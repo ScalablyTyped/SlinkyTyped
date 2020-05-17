@@ -2,7 +2,7 @@ package typingsSlinky.rcSteps.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.rcSteps.AnonError
+import typingsSlinky.rcSteps.anon.Error
 import typingsSlinky.rcSteps.mod.StepsProps
 import typingsSlinky.rcSteps.mod.default
 import typingsSlinky.rcSteps.rcStepsStrings.error
@@ -36,7 +36,7 @@ object RcSteps {
     @scala.inline
     def iconPrefix(value: String): this.type = set("iconPrefix", value.asInstanceOf[js.Any])
     @scala.inline
-    def icons(value: AnonError): this.type = set("icons", value.asInstanceOf[js.Any])
+    def icons(value: Error): this.type = set("icons", value.asInstanceOf[js.Any])
     @scala.inline
     def initial(value: Double): this.type = set("initial", value.asInstanceOf[js.Any])
     @scala.inline

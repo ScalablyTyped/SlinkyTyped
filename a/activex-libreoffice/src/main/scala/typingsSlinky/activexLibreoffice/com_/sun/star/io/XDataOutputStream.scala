@@ -1,0 +1,120 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.io
+
+import typingsSlinky.activexLibreoffice.LibreOffice.SeqEquiv
+import typingsSlinky.activexLibreoffice.`type`
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * makes it possible to write machine-independent simple data types to a stream.
+  * @see com.sun.star.io.XDataInputStream
+  */
+@js.native
+trait XDataOutputStream extends XOutputStream {
+  /** writes a boolean. It is an 8-bit value. 0 means FALSE; all other values mean TRUE. */
+  def writeBoolean(Value: Boolean): Unit = js.native
+  /** writes an 8-bit byte. */
+  def writeByte(Value: Double): Unit = js.native
+  /** writes a 16-bit character. */
+  def writeChar(Value: String): Unit = js.native
+  /** writes a 64-bit IEEE double. */
+  def writeDouble(Value: Double): Unit = js.native
+  /** writes a 32-bit IEEE float. */
+  def writeFloat(Value: Double): Unit = js.native
+  /** writes a 64-bit big endian integer. */
+  def writeHyper(Value: Double): Unit = js.native
+  /** writes a 32-bit big endian integer. */
+  def writeLong(Value: Double): Unit = js.native
+  /** writes a 16-bit big endian integer. */
+  def writeShort(Value: Double): Unit = js.native
+  /** writes a string in UTF format. */
+  def writeUTF(Value: String): Unit = js.native
+}
+
+object XDataOutputStream {
+  @scala.inline
+  def apply(
+    acquire: () => Unit,
+    closeOutput: () => Unit,
+    flush: () => Unit,
+    queryInterface: `type` => js.Any,
+    release: () => Unit,
+    writeBoolean: Boolean => Unit,
+    writeByte: Double => Unit,
+    writeBytes: SeqEquiv[Double] => Unit,
+    writeChar: String => Unit,
+    writeDouble: Double => Unit,
+    writeFloat: Double => Unit,
+    writeHyper: Double => Unit,
+    writeLong: Double => Unit,
+    writeShort: Double => Unit,
+    writeUTF: String => Unit
+  ): XDataOutputStream = {
+    val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), closeOutput = js.Any.fromFunction0(closeOutput), flush = js.Any.fromFunction0(flush), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), writeBoolean = js.Any.fromFunction1(writeBoolean), writeByte = js.Any.fromFunction1(writeByte), writeBytes = js.Any.fromFunction1(writeBytes), writeChar = js.Any.fromFunction1(writeChar), writeDouble = js.Any.fromFunction1(writeDouble), writeFloat = js.Any.fromFunction1(writeFloat), writeHyper = js.Any.fromFunction1(writeHyper), writeLong = js.Any.fromFunction1(writeLong), writeShort = js.Any.fromFunction1(writeShort), writeUTF = js.Any.fromFunction1(writeUTF))
+    __obj.asInstanceOf[XDataOutputStream]
+  }
+  @scala.inline
+  implicit class XDataOutputStreamOps[Self <: XDataOutputStream] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWriteBoolean(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeBoolean")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWriteByte(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeByte")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWriteChar(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeChar")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWriteDouble(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeDouble")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWriteFloat(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeFloat")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWriteHyper(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeHyper")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWriteLong(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeLong")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWriteShort(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeShort")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWriteUTF(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeUTF")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
+

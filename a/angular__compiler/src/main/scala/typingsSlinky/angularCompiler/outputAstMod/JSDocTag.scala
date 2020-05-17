@@ -1,25 +1,21 @@
 package typingsSlinky.angularCompiler.outputAstMod
 
+import typingsSlinky.angularCompiler.anon.TagName
+import typingsSlinky.angularCompiler.anon.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.angularCompiler.AnonTagName
-  - typingsSlinky.angularCompiler.AnonText
+  - typingsSlinky.angularCompiler.anon.TagName
+  - typingsSlinky.angularCompiler.anon.Text
 */
 trait JSDocTag extends js.Object
 
 object JSDocTag {
   @scala.inline
-  def AnonTagName(tagName: JSDocTagName | String): JSDocTag = {
-    val __obj = js.Dynamic.literal(tagName = tagName.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JSDocTag]
-  }
+  implicit def apply(value: TagName): JSDocTag = value.asInstanceOf[JSDocTag]
   @scala.inline
-  def AnonText(text: String): JSDocTag = {
-    val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JSDocTag]
-  }
+  implicit def apply(value: Text): JSDocTag = value.asInstanceOf[JSDocTag]
 }
 

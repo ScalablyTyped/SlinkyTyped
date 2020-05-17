@@ -1,6 +1,6 @@
 package typingsSlinky.typescript.mod
 
-import typingsSlinky.typescript.AnonConfig
+import typingsSlinky.typescript.anon.Config
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +11,6 @@ object readConfigFile extends js.Object {
   def apply(
     fileName: java.lang.String,
     readFile: js.Function1[/* path */ java.lang.String, js.UndefOr[java.lang.String]]
-  ): AnonConfig = js.native
+  ): Config = js.native
 }
 

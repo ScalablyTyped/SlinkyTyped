@@ -1,6 +1,7 @@
 package typingsSlinky.agGrid.gridOptionsWrapperMod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
@@ -29,7 +30,6 @@ import typingsSlinky.agGrid.iDatasourceMod.IDatasource
 import typingsSlinky.agGrid.iServerSideDatasourceMod.IServerSideDatasource
 import typingsSlinky.agGrid.iViewportDatasourceMod.IViewportDatasource
 import typingsSlinky.agGrid.rowNodeMod.RowNode
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -89,7 +89,7 @@ class GridOptionsWrapper () extends js.Object {
   def getDefaultExportParams(): BaseExportParams = js.native
   def getDefaultGroupSortComparator(): js.Function2[/* nodeA */ RowNode, /* nodeB */ RowNode, Double] = js.native
   /* private */ def getDefaultRowHeight(): js.Any = js.native
-  def getDocument(): Document_ = js.native
+  def getDocument(): Document = js.native
   def getDoesDataFlowerFunc(): js.Function1[/* data */ js.Any, Boolean] = js.native
   def getDomData(element: Node, key: String): js.Any = js.native
   def getFloatingFiltersHeight(): Double = js.native

@@ -10,9 +10,8 @@ import scala.scalajs.js.annotation._
 		 * An action bar is a window feature that identifies the application and user location,
 		 * and provides user actions and navigation modes.
 		 */
-@JSGlobal("Titanium.Android.ActionBar")
 @js.native
-class ActionBar () extends Proxy {
+trait ActionBar extends Proxy {
   /**
   			 * The background image for the action bar, specified as a local file path or URL.
   			 */

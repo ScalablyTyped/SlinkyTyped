@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("MatterJS.CompositesFactory")
 @js.native
-class CompositesFactory () extends js.Object {
+trait CompositesFactory extends js.Object {
   /**
     * Creates a composite with simple car setup of bodies and constraints.
     * @method car
@@ -130,5 +129,73 @@ class CompositesFactory () extends js.Object {
     rowGap: Double,
     callback: js.Function
   ): CompositeType = js.native
+}
+
+object CompositesFactory {
+  @scala.inline
+  def apply(
+    car: (Double, Double, Double, Double, Double) => CompositeType,
+    chain: (CompositeType, Double, Double, Double, Double, js.Any) => CompositeType,
+    mesh: (CompositeType, Double, Double, Boolean, js.Any) => CompositeType,
+    newtonsCradle: (Double, Double, Double, Double, Double) => CompositeType,
+    pyramid: (Double, Double, Double, Double, Double, Double, js.Function) => CompositeType,
+    softBody: (Double, Double, Double, Double, Double, Double, Boolean, Double, js.Any, js.Any) => CompositeType,
+    stack: (Double, Double, Double, Double, Double, Double, js.Function) => CompositeType
+  ): CompositesFactory = {
+    val __obj = js.Dynamic.literal(car = js.Any.fromFunction5(car), chain = js.Any.fromFunction6(chain), mesh = js.Any.fromFunction5(mesh), newtonsCradle = js.Any.fromFunction5(newtonsCradle), pyramid = js.Any.fromFunction7(pyramid), softBody = js.Any.fromFunction10(softBody), stack = js.Any.fromFunction7(stack))
+    __obj.asInstanceOf[CompositesFactory]
+  }
+  @scala.inline
+  implicit class CompositesFactoryOps[Self <: CompositesFactory] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCar(value: (Double, Double, Double, Double, Double) => CompositeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("car")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withChain(value: (CompositeType, Double, Double, Double, Double, js.Any) => CompositeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("chain")(js.Any.fromFunction6(value))
+        ret
+    }
+    @scala.inline
+    def withMesh(value: (CompositeType, Double, Double, Boolean, js.Any) => CompositeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mesh")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withNewtonsCradle(value: (Double, Double, Double, Double, Double) => CompositeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newtonsCradle")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withPyramid(value: (Double, Double, Double, Double, Double, Double, js.Function) => CompositeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pyramid")(js.Any.fromFunction7(value))
+        ret
+    }
+    @scala.inline
+    def withSoftBody(
+      value: (Double, Double, Double, Double, Double, Double, Boolean, Double, js.Any, js.Any) => CompositeType
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("softBody")(js.Any.fromFunction10(value))
+        ret
+    }
+    @scala.inline
+    def withStack(value: (Double, Double, Double, Double, Double, Double, js.Function) => CompositeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(js.Any.fromFunction7(value))
+        ret
+    }
+  }
+  
 }
 

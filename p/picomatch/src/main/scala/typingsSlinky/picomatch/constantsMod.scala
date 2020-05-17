@@ -1,5 +1,11 @@
 package typingsSlinky.picomatch
 
+import typingsSlinky.picomatch.anon.Alnum
+import typingsSlinky.picomatch.anon.Close
+import typingsSlinky.picomatch.anon.DOTLITERAL
+import typingsSlinky.picomatch.anon.DOTSSLASH
+import typingsSlinky.picomatch.anon.STAR
+import typingsSlinky.picomatch.anon._empty
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -55,7 +61,7 @@ object constantsMod extends js.Object {
   var CHAR_VERTICAL_LINE: Double = js.native
   var CHAR_ZERO_WIDTH_NOBREAK_SPACE: Double = js.native
   var MAX_LENGTH: Double = js.native
-  var POSIX_REGEX_SOURCE: AnonAlnum = js.native
+  var POSIX_REGEX_SOURCE: Alnum = js.native
   // regular expressions
   var REGEX_BACKSLASH: js.RegExp = js.native
   var REGEX_NON_SPECIAL_CHARS: js.RegExp = js.native
@@ -63,9 +69,9 @@ object constantsMod extends js.Object {
   var REGEX_SPECIAL_CHARS: js.RegExp = js.native
   var REGEX_SPECIAL_CHARS_BACKREF: js.RegExp = js.native
   var REGEX_SPECIAL_CHARS_GLOBAL: js.RegExp = js.native
-  var REPLACEMENTS: Anon = js.native
+  var REPLACEMENTS: _empty = js.native
   var SEP: String = js.native
-  def extGlobChars(chars: AnonSTAR): Record[String, AnonClose] = js.native
-  def globChars[T /* <: Boolean */](win32: T): AnonDOTSSLASH | AnonDOTLITERAL = js.native
+  def extGlobChars(chars: STAR): Record[String, Close] = js.native
+  def globChars[T /* <: Boolean */](win32: T): DOTSSLASH | DOTLITERAL = js.native
 }
 

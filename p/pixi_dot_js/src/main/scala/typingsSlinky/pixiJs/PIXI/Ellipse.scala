@@ -10,13 +10,8 @@ import scala.scalajs.js.annotation._
   * @class
   * @memberof PIXI
   */
-@JSGlobal("PIXI.Ellipse")
 @js.native
-class Ellipse () extends js.Object {
-  def this(x: Double) = this()
-  def this(x: Double, y: Double) = this()
-  def this(x: Double, y: Double, halfWidth: Double) = this()
-  def this(x: Double, y: Double, halfWidth: Double, halfHeight: Double) = this()
+trait Ellipse extends js.Object {
   /**
     * @member {number} PIXI.Ellipse#height
     * @default 0
@@ -60,5 +55,72 @@ class Ellipse () extends js.Object {
     * @return {PIXI.Rectangle} the framing rectangle
     */
   def getBounds(): Rectangle = js.native
+}
+
+object Ellipse {
+  @scala.inline
+  def apply(
+    contains: (Double, Double) => Boolean,
+    getBounds: () => Rectangle,
+    height: Double,
+    `type`: Double,
+    width: Double,
+    x: Double,
+    y: Double
+  ): Ellipse = {
+    val __obj = js.Dynamic.literal(contains = js.Any.fromFunction2(contains), getBounds = js.Any.fromFunction0(getBounds), height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Ellipse]
+  }
+  @scala.inline
+  implicit class EllipseOps[Self <: Ellipse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContains(value: (Double, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetBounds(value: () => Rectangle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBounds")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

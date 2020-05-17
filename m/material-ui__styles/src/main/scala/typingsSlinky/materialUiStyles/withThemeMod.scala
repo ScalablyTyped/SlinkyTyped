@@ -12,7 +12,7 @@ import typingsSlinky.materialUiTypes.mod.PropInjector
 import typingsSlinky.react.mod.ComponentClass
 import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.react.mod.FunctionComponent
-import typingsSlinky.react.mod._Global_.JSX.LibraryManagedAttributes
+import typingsSlinky.react.mod.global.JSX.LibraryManagedAttributes
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,13 +1,13 @@
 package typingsSlinky.officeJs.Word
 
-import typingsSlinky.officeJs.AnonExpand
-import typingsSlinky.officeJs.AnonIgnorePunct
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.ClientResult
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJs.Word.Interfaces.TableData
 import typingsSlinky.officeJs.Word.Interfaces.TableLoadOptions
 import typingsSlinky.officeJs.Word.Interfaces.TableUpdateData
+import typingsSlinky.officeJs.anon.Expand
+import typingsSlinky.officeJs.anon.IgnorePunct
 import typingsSlinky.officeJs.officeJsStrings.After
 import typingsSlinky.officeJs.officeJsStrings.All
 import typingsSlinky.officeJs.officeJsStrings.Before
@@ -40,9 +40,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: WordApi 1.3]
   */
-@JSGlobal("Word.Table")
 @js.native
-class Table () extends ClientObject {
+trait Table extends ClientObject {
   /**
     *
     * Gets or sets the alignment of the table against the page column. The value can be 'Left', 'Centered', or 'Right'.
@@ -616,8 +615,8 @@ class Table () extends ClientObject {
   def load(): Table = js.native
   def load(option: String): Table = js.native
   def load(option: js.Array[String]): Table = js.native
-  def load(option: AnonExpand): Table = js.native
   def load(option: TableLoadOptions): Table = js.native
+  def load(option: Expand): Table = js.native
   /**
     *
     * Performs a search with the specified SearchOptions on the scope of the table object. The search results are a collection of range objects.
@@ -628,8 +627,8 @@ class Table () extends ClientObject {
     * @param searchOptions Optional. Options for the search.
     */
   def search(searchText: String): RangeCollection = js.native
-  def search(searchText: String, searchOptions: AnonIgnorePunct): RangeCollection = js.native
   def search(searchText: String, searchOptions: SearchOptions): RangeCollection = js.native
+  def search(searchText: String, searchOptions: IgnorePunct): RangeCollection = js.native
   /**
     *
     * Selects the table, or the position at the start or end of the table, and navigates the Word UI to it.

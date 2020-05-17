@@ -1,6 +1,6 @@
 package typingsSlinky.yandexMaps.mod.control
 
-import typingsSlinky.yandexMaps.AnonPosition
+import typingsSlinky.yandexMaps.anon.Position
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IRulerControlParameters extends js.Object {
   var data: js.UndefOr[js.Object] = js.native
-  var options: js.UndefOr[AnonPosition] = js.native
+  var options: js.UndefOr[Position] = js.native
   var state: js.UndefOr[js.Object] = js.native
 }
 
@@ -37,7 +37,7 @@ object IRulerControlParameters {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonPosition): Self = {
+    def withOptions(value: Position): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

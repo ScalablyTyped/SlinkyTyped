@@ -1,6 +1,6 @@
 package typingsSlinky.diagnosticChannelPublishers.mysqlPubMod
 
-import typingsSlinky.diagnosticChannelPublishers.AnonConnection
+import typingsSlinky.diagnosticChannelPublishers.anon.Connection
 import typingsSlinky.std.IArguments
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,12 +11,12 @@ trait IMysqlData extends js.Object {
   var callbackArgs: IArguments = js.native
   var duration: Double = js.native
   var err: js.Error = js.native
-  var query: AnonConnection = js.native
+  var query: Connection = js.native
 }
 
 object IMysqlData {
   @scala.inline
-  def apply(callbackArgs: IArguments, duration: Double, err: js.Error, query: AnonConnection): IMysqlData = {
+  def apply(callbackArgs: IArguments, duration: Double, err: js.Error, query: Connection): IMysqlData = {
     val __obj = js.Dynamic.literal(callbackArgs = callbackArgs.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any], err = err.asInstanceOf[js.Any], query = query.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMysqlData]
   }
@@ -45,7 +45,7 @@ object IMysqlData {
         ret
     }
     @scala.inline
-    def withQuery(value: AnonConnection): Self = {
+    def withQuery(value: Connection): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
         ret

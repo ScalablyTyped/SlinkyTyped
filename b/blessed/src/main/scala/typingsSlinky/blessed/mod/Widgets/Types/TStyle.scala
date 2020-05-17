@@ -1,6 +1,6 @@
 package typingsSlinky.blessed.mod.Widgets.Types
 
-import typingsSlinky.blessed.AnonBg
+import typingsSlinky.blessed.anon.Bg
 import typingsSlinky.blessed.blessedStrings.bg
 import typingsSlinky.blessed.blessedStrings.line
 import scala.scalajs.js
@@ -20,8 +20,8 @@ trait TStyle extends js.Object {
   var inverse: js.UndefOr[Boolean] = js.native
   var invisible: js.UndefOr[Boolean] = js.native
   var label: js.UndefOr[String] = js.native
-  var scrollbar: js.UndefOr[AnonBg] = js.native
-  var track: js.UndefOr[AnonBg] = js.native
+  var scrollbar: js.UndefOr[Bg] = js.native
+  var track: js.UndefOr[Bg] = js.native
   var transparent: js.UndefOr[Boolean] = js.native
   var `type`: js.UndefOr[String] = js.native
   var underline: js.UndefOr[Boolean] = js.native
@@ -172,7 +172,7 @@ object TStyle {
         ret
     }
     @scala.inline
-    def withScrollbar(value: AnonBg): Self = {
+    def withScrollbar(value: Bg): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollbar")(value.asInstanceOf[js.Any])
         ret
@@ -184,7 +184,7 @@ object TStyle {
         ret
     }
     @scala.inline
-    def withTrack(value: AnonBg): Self = {
+    def withTrack(value: Bg): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("track")(value.asInstanceOf[js.Any])
         ret

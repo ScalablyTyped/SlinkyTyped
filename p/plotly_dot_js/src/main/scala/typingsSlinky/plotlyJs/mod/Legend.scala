@@ -1,6 +1,6 @@
 package typingsSlinky.plotlyJs.mod
 
-import typingsSlinky.plotlyJs.PartialFont
+import typingsSlinky.plotlyJs.anon.PartialFont
 import typingsSlinky.plotlyJs.plotlyJsStrings.auto
 import typingsSlinky.plotlyJs.plotlyJsStrings.bottom
 import typingsSlinky.plotlyJs.plotlyJsStrings.center

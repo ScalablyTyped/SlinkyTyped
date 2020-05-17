@@ -4,19 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("gapi.drive.realtime.Collaborator")
 @js.native
-class Collaborator protected () extends js.Object {
-  def this(
-    sessionId: String,
-    userId: String,
-    displayName: String,
-    color: String,
-    isMe: Boolean,
-    isAnonymous: Boolean,
-    photoUrl: String,
-    permissionId: String
-  ) = this()
+trait Collaborator extends js.Object {
   // The HTML color associated with this collaborator. When possible, collaborators are assigned unique colors.
   var color: String = js.native
   // The display name for this collaborator.
@@ -38,5 +27,78 @@ class Collaborator protected () extends js.Object {
   // except the Drive API permission APIs. For an ID which is compatible with the Drive API permission APIs,
   // use the permissionId property.
   var userId: String = js.native
+}
+
+object Collaborator {
+  @scala.inline
+  def apply(
+    color: String,
+    displayName: String,
+    isAnonymous: Boolean,
+    isMe: Boolean,
+    permissionId: String,
+    photoUrl: String,
+    sessionId: String,
+    userId: String
+  ): Collaborator = {
+    val __obj = js.Dynamic.literal(color = color.asInstanceOf[js.Any], displayName = displayName.asInstanceOf[js.Any], isAnonymous = isAnonymous.asInstanceOf[js.Any], isMe = isMe.asInstanceOf[js.Any], permissionId = permissionId.asInstanceOf[js.Any], photoUrl = photoUrl.asInstanceOf[js.Any], sessionId = sessionId.asInstanceOf[js.Any], userId = userId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Collaborator]
+  }
+  @scala.inline
+  implicit class CollaboratorOps[Self <: Collaborator] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsAnonymous(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAnonymous")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsMe(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isMe")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPermissionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("permissionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPhotoUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("photoUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSessionId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sessionId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

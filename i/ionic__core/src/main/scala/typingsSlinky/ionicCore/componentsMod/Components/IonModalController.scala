@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCore.componentsMod.Components
 
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonModalElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonModalElement
 import typingsSlinky.ionicCore.mod.ComponentRef
 import typingsSlinky.ionicCore.modalInterfaceMod.ModalOptions
 import scala.scalajs.js
@@ -22,7 +22,6 @@ trait IonModalController extends js.Object {
     */
   def dismiss(): js.Promise[Boolean] = js.native
   def dismiss(data: js.Any): js.Promise[Boolean] = js.native
-  def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
   def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
   def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
   /**

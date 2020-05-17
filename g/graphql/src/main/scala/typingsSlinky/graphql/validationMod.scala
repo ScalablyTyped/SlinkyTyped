@@ -1,5 +1,6 @@
 package typingsSlinky.graphql
 
+import typingsSlinky.graphql.anon.MaxErrors
 import typingsSlinky.graphql.astMod.DocumentNode
 import typingsSlinky.graphql.graphQLErrorMod.GraphQLError
 import typingsSlinky.graphql.schemaMod.GraphQLSchema
@@ -75,7 +76,7 @@ object validationMod extends js.Object {
     documentAST: DocumentNode,
     rules: js.Array[ValidationRule],
     typeInfo: TypeInfo,
-    options: AnonMaxErrors
+    options: MaxErrors
   ): js.Array[GraphQLError] = js.native
 }
 

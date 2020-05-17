@@ -1,17 +1,17 @@
 package typingsSlinky.reactOverlays.overlayMod
 
-import typingsSlinky.reactOverlays.AnonArialabelledby
-import typingsSlinky.reactOverlays.AnonRef
+import typingsSlinky.reactOverlays.anon.Arialabelledby
+import typingsSlinky.reactOverlays.anon.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait OverlayRenderProps extends js.Object {
-  var arrowProps: AnonRef = js.native
+  var arrowProps: Ref = js.native
   var outOfBoundaries: js.UndefOr[Boolean] = js.native
   var placement: Placements = js.native
-  var props: AnonArialabelledby = js.native
+  var props: Arialabelledby = js.native
   var show: Boolean = js.native
   def scheduleUpdate(): Unit = js.native
 }
@@ -19,9 +19,9 @@ trait OverlayRenderProps extends js.Object {
 object OverlayRenderProps {
   @scala.inline
   def apply(
-    arrowProps: AnonRef,
+    arrowProps: Ref,
     placement: Placements,
-    props: AnonArialabelledby,
+    props: Arialabelledby,
     scheduleUpdate: () => Unit,
     show: Boolean
   ): OverlayRenderProps = {
@@ -35,7 +35,7 @@ object OverlayRenderProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withArrowProps(value: AnonRef): Self = {
+    def withArrowProps(value: Ref): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("arrowProps")(value.asInstanceOf[js.Any])
         ret
@@ -47,7 +47,7 @@ object OverlayRenderProps {
         ret
     }
     @scala.inline
-    def withProps(value: AnonArialabelledby): Self = {
+    def withProps(value: Arialabelledby): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("props")(value.asInstanceOf[js.Any])
         ret

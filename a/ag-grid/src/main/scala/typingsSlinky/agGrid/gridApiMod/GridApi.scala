@@ -5,8 +5,8 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.Touch
-import typingsSlinky.agGrid.AnonColId
 import typingsSlinky.agGrid.alignedGridsServiceMod.AlignedGridsService
+import typingsSlinky.agGrid.anon.ColId
 import typingsSlinky.agGrid.clientSideRowModelMod.RowDataTransaction
 import typingsSlinky.agGrid.clientSideRowModelMod.RowNodeTransaction
 import typingsSlinky.agGrid.colDefMod.ColDef
@@ -172,7 +172,7 @@ class GridApi () extends js.Object {
   def getSelectedNodes(): js.Array[RowNode] = js.native
   def getSelectedNodesById(): NumberDictionary[RowNode] = js.native
   def getSelectedRows(): js.Array[_] = js.native
-  def getSortModel(): js.Array[AnonColId] = js.native
+  def getSortModel(): js.Array[ColId] = js.native
   def getValue(colKey: String, rowNode: RowNode): js.Any = js.native
   def getValue(colKey: Column, rowNode: RowNode): js.Any = js.native
   def getVerticalPixelRange(): js.Any = js.native

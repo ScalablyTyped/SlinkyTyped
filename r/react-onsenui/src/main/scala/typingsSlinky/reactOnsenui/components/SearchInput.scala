@@ -1,10 +1,10 @@
 package typingsSlinky.reactOnsenui.components
 
+import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameValue
-import typingsSlinky.std.Event_
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ object SearchInput {
     @scala.inline
     def modifier(value: String): this.type = set("modifier", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* e */ Event_ => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ Event => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

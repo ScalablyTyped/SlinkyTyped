@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientTranslate.gapi.client.translate
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientTranslate.AnonAccesstoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientTranslate.anon.Accesstoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,12 +17,12 @@ trait LanguagesResource extends js.Object {
   /** Human readable name of the language localized to the target language. */
   var name: js.UndefOr[String] = js.native
   /** Returns a list of supported languages for translation. */
-  def list(request: AnonAccesstoken): Request_[LanguagesListResponse] = js.native
+  def list(request: Accesstoken): Request[LanguagesListResponse] = js.native
 }
 
 object LanguagesResource {
   @scala.inline
-  def apply(list: AnonAccesstoken => Request_[LanguagesListResponse]): LanguagesResource = {
+  def apply(list: Accesstoken => Request[LanguagesListResponse]): LanguagesResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[LanguagesResource]
   }
@@ -33,7 +33,7 @@ object LanguagesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withList(value: AnonAccesstoken => Request_[LanguagesListResponse]): Self = {
+    def withList(value: Accesstoken => Request[LanguagesListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

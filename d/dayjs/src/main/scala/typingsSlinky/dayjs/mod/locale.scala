@@ -1,7 +1,7 @@
 package typingsSlinky.dayjs.mod
 
 import typingsSlinky.dayjs.ILocale
-import typingsSlinky.dayjs.PartialILocale
+import typingsSlinky.dayjs.anon.PartialILocale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

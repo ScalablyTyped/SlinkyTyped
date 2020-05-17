@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("java.util.ArrayDeque")
 @js.native
-class ArrayDeque[E] () extends ArrayList[E] {
+trait ArrayDeque[E] extends ArrayList[E] {
   def addFirst(e: E): Unit = js.native
   def addLast(e: E): Unit = js.native
   /* private */ def delete(i: js.Any): js.Any = js.native

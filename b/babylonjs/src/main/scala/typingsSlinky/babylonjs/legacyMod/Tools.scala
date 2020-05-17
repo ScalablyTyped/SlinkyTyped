@@ -4,11 +4,11 @@ import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.File
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.ProgressEvent
-import typingsSlinky.babylonjs.AnonCrossOrigin
-import typingsSlinky.babylonjs.AnonHandler
 import typingsSlinky.babylonjs.HTMLCanvasElement
 import typingsSlinky.babylonjs.ImageBitmap
 import typingsSlinky.babylonjs.Window
+import typingsSlinky.babylonjs.anon.CrossOrigin
+import typingsSlinky.babylonjs.anon.Handler
 import typingsSlinky.babylonjs.fileRequestMod.IFileRequest
 import typingsSlinky.babylonjs.iofflineproviderMod.IOfflineProvider
 import typingsSlinky.babylonjs.screenshotSizeMod.IScreenshotSize
@@ -855,7 +855,7 @@ object Tools extends js.Object {
     * @param windowElement defines the Window object to use
     * @param events defines the events to register
     */
-  def RegisterTopRootEvents(windowElement: Window, events: js.Array[AnonHandler]): Unit = js.native
+  def RegisterTopRootEvents(windowElement: Window, events: js.Array[Handler]): Unit = js.native
   /**
     * Use this object to register external classes like custom textures or material
     * to allow the laoders to instantiate them
@@ -867,8 +867,8 @@ object Tools extends js.Object {
     * @param url define the url we are trying
     * @param element define the dom element where to configure the cors policy
     */
-  def SetCorsBehavior(url: String, element: AnonCrossOrigin): Unit = js.native
-  def SetCorsBehavior(url: js.Array[String], element: AnonCrossOrigin): Unit = js.native
+  def SetCorsBehavior(url: String, element: CrossOrigin): Unit = js.native
+  def SetCorsBehavior(url: js.Array[String], element: CrossOrigin): Unit = js.native
   /**
     * Polyfill for setImmediate
     * @param action defines the action to execute after the current execution block
@@ -919,7 +919,7 @@ object Tools extends js.Object {
     * @param windowElement defines the Window object to use
     * @param events defines the events to unregister
     */
-  def UnregisterTopRootEvents(windowElement: Window, events: js.Array[AnonHandler]): Unit = js.native
+  def UnregisterTopRootEvents(windowElement: Window, events: js.Array[Handler]): Unit = js.native
   /**
     * Gets or sets a global variable indicating if fallback texture must be used when a texture cannot be loaded
     * @ignorenaming

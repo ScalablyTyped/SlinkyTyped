@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object ClassNameSettings {
-  type Param = (typingsSlinky.semanticUiPopup.PickImplloading | typingsSlinky.semanticUiPopup.PickImplpopupPopup | typingsSlinky.semanticUiPopup.PickImplposition | typingsSlinky.semanticUiPopup.PickImplvisible | typingsSlinky.semanticUiPopup.PickImplpopupVisible) with typingsSlinky.semanticUiPopup.PartialPickImplkeyofImplLoading
+  type Param = (typingsSlinky.semanticUiPopup.anon.PickImplloading | typingsSlinky.semanticUiPopup.anon.PickImplpopupPopup | typingsSlinky.semanticUiPopup.anon.PickImplposition | typingsSlinky.semanticUiPopup.anon.PickImplvisible | typingsSlinky.semanticUiPopup.anon.PickImplpopupVisible) with typingsSlinky.semanticUiPopup.anon.PartialPickImplkeyofImplLoading
 }

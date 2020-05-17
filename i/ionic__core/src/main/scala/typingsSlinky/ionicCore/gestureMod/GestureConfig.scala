@@ -62,7 +62,7 @@ object GestureConfig {
         ret
     }
     @scala.inline
-    def withDirection(value: x | y): Self = {
+    def withDirection(value: typingsSlinky.ionicCore.ionicCoreStrings.x | y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
         ret

@@ -13,17 +13,17 @@ package object mod {
   type DiffChangeHandler = typingsSlinky.reactMonacoEditor.mod.ChangeHandler
   type DiffEditorDidMount = js.Function2[
     /* editor */ typingsSlinky.monacoEditor.mod.editor.IStandaloneDiffEditor, 
-    /* monaco */ typingsSlinky.reactMonacoEditor.TypeofmonacoEditor, 
+    /* monaco */ typingsSlinky.reactMonacoEditor.anon.TypeofmonacoEditor, 
     scala.Unit
   ]
-  type DiffEditorWillMount = js.Function1[/* monaco */ typingsSlinky.reactMonacoEditor.TypeofmonacoEditor, scala.Unit]
+  type DiffEditorWillMount = js.Function1[/* monaco */ typingsSlinky.reactMonacoEditor.anon.TypeofmonacoEditor, scala.Unit]
   type EditorDidMount = js.Function2[
     /* editor */ typingsSlinky.monacoEditor.mod.editor.IStandaloneCodeEditor, 
-    /* monaco */ typingsSlinky.reactMonacoEditor.TypeofmonacoEditor, 
+    /* monaco */ typingsSlinky.reactMonacoEditor.anon.TypeofmonacoEditor, 
     scala.Unit
   ]
   type EditorWillMount = js.Function1[
-    /* monaco */ typingsSlinky.reactMonacoEditor.TypeofmonacoEditor, 
+    /* monaco */ typingsSlinky.reactMonacoEditor.anon.TypeofmonacoEditor, 
     scala.Unit | typingsSlinky.monacoEditor.mod.editor.IEditorConstructionOptions
   ]
 }

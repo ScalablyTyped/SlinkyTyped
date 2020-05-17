@@ -1,9 +1,9 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesTreemap
 
-import typingsSlinky.echarts.AnonBorderColorSaturation
-import typingsSlinky.echarts.AnonEllipsis
-import typingsSlinky.echarts.AnonTextShadowOffsetX
-import typingsSlinky.echarts.AnonUpperLabel
+import typingsSlinky.echarts.anon.BorderColorSaturation
+import typingsSlinky.echarts.anon.Ellipsis
+import typingsSlinky.echarts.anon.TextShadowOffsetX
+import typingsSlinky.echarts.anon.UpperLabel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -203,7 +203,7 @@ trait DataObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-treemap.data.emphasis
     */
-  var emphasis: js.UndefOr[AnonUpperLabel] = js.native
+  var emphasis: js.UndefOr[UpperLabel] = js.native
   /**
     * `id` is not mandatory.
     * But if using API, id is used to locate node.
@@ -233,7 +233,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.data.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBorderColorSaturation] = js.native
+  var itemStyle: js.UndefOr[BorderColorSaturation] = js.native
   /**
     * `label` decribes the style of the label in each node.
     *
@@ -256,7 +256,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.data.label
     */
-  var label: js.UndefOr[AnonEllipsis] = js.native
+  var label: js.UndefOr[Ellipsis] = js.native
   /**
     * Show the description text in rectangle.
     *
@@ -310,7 +310,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.data.upperLabel
     */
-  var upperLabel: js.UndefOr[AnonTextShadowOffsetX] = js.native
+  var upperLabel: js.UndefOr[TextShadowOffsetX] = js.native
   /**
     * The value of this node, indicating the area size.
     *
@@ -507,7 +507,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonUpperLabel): Self = {
+    def withEmphasis(value: UpperLabel): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -531,7 +531,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonBorderColorSaturation): Self = {
+    def withItemStyle(value: BorderColorSaturation): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -543,7 +543,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonEllipsis): Self = {
+    def withLabel(value: Ellipsis): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -567,7 +567,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withUpperLabel(value: AnonTextShadowOffsetX): Self = {
+    def withUpperLabel(value: TextShadowOffsetX): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("upperLabel")(value.asInstanceOf[js.Any])
         ret

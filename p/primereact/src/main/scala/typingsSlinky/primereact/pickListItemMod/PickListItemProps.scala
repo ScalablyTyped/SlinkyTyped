@@ -1,7 +1,7 @@
 package typingsSlinky.primereact.pickListItemMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PickListItemProps extends js.Object {
   var className: js.UndefOr[String] = js.native
-  var onClick: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
   var selected: js.UndefOr[Boolean] = js.native
   var template: js.UndefOr[js.Function1[/* item */ js.Any, js.UndefOr[ReactElement]]] = js.native
   var value: js.UndefOr[js.Any] = js.native
@@ -40,7 +40,7 @@ object PickListItemProps {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* e */ AnonValue => Unit): Self = {
+    def withOnClick(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret

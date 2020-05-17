@@ -6,8 +6,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait MultiLineString
-  extends GeoJsonObject
-     with Geometry {
+  extends Geometry
+     with GeoJsonObject {
   var coordinates: js.Array[js.Array[Position]] = js.native
   @JSName("type")
   var type_MultiLineString: typingsSlinky.geojson.geojsonStrings.MultiLineString = js.native

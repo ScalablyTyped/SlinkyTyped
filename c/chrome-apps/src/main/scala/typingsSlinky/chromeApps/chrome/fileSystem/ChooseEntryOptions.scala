@@ -1,10 +1,5 @@
 package typingsSlinky.chromeApps.chrome.fileSystem
 
-import typingsSlinky.chromeApps.chromeAppsBooleans.`true`
-import typingsSlinky.chromeApps.chromeAppsStrings.openDirectory
-import typingsSlinky.chromeApps.chromeAppsStrings.openFile
-import typingsSlinky.chromeApps.chromeAppsStrings.openWritableFile
-import typingsSlinky.chromeApps.chromeAppsStrings.saveFile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,33 +15,14 @@ trait ChooseEntryOptions extends js.Object
 
 object ChooseEntryOptions {
   @scala.inline
-  def ChooseSaveFileEntryOptions(`type`: saveFile): ChooseEntryOptions = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ChooseEntryOptions]
-  }
+  implicit def apply(value: ChooseDirectoryEntryOptions): ChooseEntryOptions = value.asInstanceOf[ChooseEntryOptions]
   @scala.inline
-  def ChooseEntryOptionsBase(): ChooseEntryOptions = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[ChooseEntryOptions]
-  }
+  implicit def apply(value: ChooseEntryOptionsBase): ChooseEntryOptions = value.asInstanceOf[ChooseEntryOptions]
   @scala.inline
-  def ChooseMultipleFilesEntryOptions(acceptsMultiple: `true`, `type`: openFile | openWritableFile): ChooseEntryOptions = {
-    val __obj = js.Dynamic.literal(acceptsMultiple = acceptsMultiple.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ChooseEntryOptions]
-  }
+  implicit def apply(value: ChooseFileEntryOptions): ChooseEntryOptions = value.asInstanceOf[ChooseEntryOptions]
   @scala.inline
-  def ChooseFileEntryOptions(`type`: openFile | openWritableFile): ChooseEntryOptions = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ChooseEntryOptions]
-  }
+  implicit def apply(value: ChooseMultipleFilesEntryOptions): ChooseEntryOptions = value.asInstanceOf[ChooseEntryOptions]
   @scala.inline
-  def ChooseDirectoryEntryOptions(`type`: openDirectory): ChooseEntryOptions = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ChooseEntryOptions]
-  }
+  implicit def apply(value: ChooseSaveFileEntryOptions): ChooseEntryOptions = value.asInstanceOf[ChooseEntryOptions]
 }
 

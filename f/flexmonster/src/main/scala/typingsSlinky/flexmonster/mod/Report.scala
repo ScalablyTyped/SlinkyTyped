@@ -1,6 +1,6 @@
 package typingsSlinky.flexmonster.mod
 
-import typingsSlinky.flexmonster.AnonColumns
+import typingsSlinky.flexmonster.anon.Columns
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait Report extends js.Object {
   var localization: js.UndefOr[js.Object | String] = js.native
   var options: js.UndefOr[Options] = js.native
   var slice: js.UndefOr[Slice] = js.native
-  var tableSizes: js.UndefOr[AnonColumns] = js.native
+  var tableSizes: js.UndefOr[Columns] = js.native
   var version: js.UndefOr[String] = js.native
 }
 
@@ -115,7 +115,7 @@ object Report {
         ret
     }
     @scala.inline
-    def withTableSizes(value: AnonColumns): Self = {
+    def withTableSizes(value: Columns): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tableSizes")(value.asInstanceOf[js.Any])
         ret

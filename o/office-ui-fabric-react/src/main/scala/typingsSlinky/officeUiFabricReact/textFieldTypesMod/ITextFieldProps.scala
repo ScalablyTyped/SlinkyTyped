@@ -1,6 +1,7 @@
 package typingsSlinky.officeUiFabricReact.textFieldTypesMod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
@@ -9,7 +10,6 @@ import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.officeUiFabricReact.iconTypesMod.IIconProps
 import typingsSlinky.react.mod.AllHTMLAttributes
-import typingsSlinky.std.Event_
 import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -111,7 +111,7 @@ trait ITextFieldProps extends AllHTMLAttributes[HTMLInputElement | HTMLTextAreaE
   @JSName("onChange")
   var onChange_ITextFieldProps: js.UndefOr[
     js.Function2[
-      SyntheticEvent[EventTarget with (HTMLInputElement | HTMLTextAreaElement), Event_], 
+      SyntheticEvent[EventTarget with (HTMLInputElement | HTMLTextAreaElement), Event], 
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
@@ -409,7 +409,7 @@ object ITextFieldProps {
     }
     @scala.inline
     def withOnChange(
-      value: (SyntheticEvent[EventTarget with (HTMLInputElement | HTMLTextAreaElement), Event_], /* newValue */ js.UndefOr[String]) => Unit
+      value: (SyntheticEvent[EventTarget with (HTMLInputElement | HTMLTextAreaElement), Event], /* newValue */ js.UndefOr[String]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))

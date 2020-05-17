@@ -1,6 +1,6 @@
 package typingsSlinky.johnnyFive.mod
 
-import typingsSlinky.johnnyFive.AnonAbbr
+import typingsSlinky.johnnyFive.anon.Abbr
 import typingsSlinky.johnnyFive.johnnyFiveStrings.change
 import typingsSlinky.johnnyFive.johnnyFiveStrings.data
 import scala.scalajs.js
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Compass protected () extends js.Object {
   def this(option: CompassOption) = this()
-  val bearing: AnonAbbr = js.native
+  val bearing: Abbr = js.native
   val heading: Double = js.native
   def on(event: String, cb: js.Function0[Unit]): this.type = js.native
   @JSName("on")

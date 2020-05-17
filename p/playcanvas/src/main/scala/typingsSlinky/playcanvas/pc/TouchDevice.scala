@@ -14,10 +14,8 @@ import scala.scalajs.js.annotation._
   * @description Create a new touch device and attach it to an element.
   * @param {Element} element - The element to attach listen for events on.
   */
-@JSGlobal("pc.TouchDevice")
 @js.native
-class TouchDevice protected () extends EventHandler {
-  def this(element: Element) = this()
+trait TouchDevice extends EventHandler {
   /**
     * @function
     * @name pc.TouchDevice#attach

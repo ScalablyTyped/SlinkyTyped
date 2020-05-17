@@ -6,5 +6,4 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   type Id = scala.Double
-  type Timer = typingsSlinky.node.NodeJS.Timer | scala.Double
 }

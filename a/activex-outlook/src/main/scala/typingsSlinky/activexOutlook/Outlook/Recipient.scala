@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Outlook.Recipient")
 @js.native
-class Recipient protected () extends js.Object {
+trait Recipient extends js.Object {
   val Address: String = js.native
   var AddressEntry: typingsSlinky.activexOutlook.Outlook.AddressEntry = js.native
   val Application: typingsSlinky.activexOutlook.Outlook.Application = js.native

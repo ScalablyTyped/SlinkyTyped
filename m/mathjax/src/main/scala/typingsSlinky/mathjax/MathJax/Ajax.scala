@@ -1,6 +1,5 @@
 package typingsSlinky.mathjax.MathJax
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -72,7 +71,123 @@ trait Ajax extends js.Object {
   def loadTimeout(file: String): Unit = js.native
 }
 
-@JSGlobal("MathJax.Ajax")
-@js.native
-object Ajax extends TopLevel[Ajax]
+object Ajax {
+  @scala.inline
+  def apply(
+    Load: (String, js.Any) => js.Any,
+    LoadHook: (String, js.Any) => js.Any,
+    Preloading: /* repeated */ js.Any => Unit,
+    Require: (String, js.Any) => js.Any,
+    STATUS: STATUS,
+    Styles: (js.Any, js.Any) => js.Any,
+    fileURL: String => String,
+    loadComplete: String => Unit,
+    loadError: String => Unit,
+    loadHooks: js.Any,
+    loadTimeout: String => Unit,
+    loaded: js.Any,
+    loading: Boolean
+  ): Ajax = {
+    val __obj = js.Dynamic.literal(Load = js.Any.fromFunction2(Load), LoadHook = js.Any.fromFunction2(LoadHook), Preloading = js.Any.fromFunction1(Preloading), Require = js.Any.fromFunction2(Require), STATUS = STATUS.asInstanceOf[js.Any], Styles = js.Any.fromFunction2(Styles), fileURL = js.Any.fromFunction1(fileURL), loadComplete = js.Any.fromFunction1(loadComplete), loadError = js.Any.fromFunction1(loadError), loadHooks = loadHooks.asInstanceOf[js.Any], loadTimeout = js.Any.fromFunction1(loadTimeout), loaded = loaded.asInstanceOf[js.Any], loading = loading.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Ajax]
+  }
+  @scala.inline
+  implicit class AjaxOps[Self <: Ajax] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLoad(value: (String, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Load")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withLoadHook(value: (String, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("LoadHook")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withPreloading(value: /* repeated */ js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Preloading")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRequire(value: (String, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Require")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSTATUS(value: STATUS): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("STATUS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStyles(value: (js.Any, js.Any) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Styles")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withFileURL(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileURL")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLoadComplete(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadComplete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLoadError(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadError")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLoadHooks(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadHooks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoadTimeout(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadTimeout")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLoaded(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loaded")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoading(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimeout(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTimeout: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(js.undefined)
+        ret
+    }
+  }
+  
+}
 

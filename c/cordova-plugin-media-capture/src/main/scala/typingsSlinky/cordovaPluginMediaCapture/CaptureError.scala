@@ -1,6 +1,5 @@
 package typingsSlinky.cordovaPluginMediaCapture
 
-import org.scalablytyped.runtime.Instantiable2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,15 +24,31 @@ trait CaptureError extends js.Object {
   var message: String = js.native
 }
 
-@JSGlobal("CaptureError")
-@js.native
-object CaptureError extends /** Constructor for CaptureError  */
-Instantiable2[/* code */ Double, /* message */ String, CaptureError] {
-  var CAPTURE_APPLICATION_BUSY: Double = js.native
-  var CAPTURE_INTERNAL_ERR: Double = js.native
-  var CAPTURE_INVALID_ARGUMENT: Double = js.native
-  var CAPTURE_NOT_SUPPORTED: Double = js.native
-  var CAPTURE_NO_MEDIA_FILES: Double = js.native
-  var CAPTURE_PERMISSION_DENIED: Double = js.native
+object CaptureError {
+  @scala.inline
+  def apply(code: Double, message: String): CaptureError = {
+    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CaptureError]
+  }
+  @scala.inline
+  implicit class CaptureErrorOps[Self <: CaptureError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMessage(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("message")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

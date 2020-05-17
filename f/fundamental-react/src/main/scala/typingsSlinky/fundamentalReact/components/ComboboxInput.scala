@@ -6,7 +6,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.fundamentalReact.AnonState
+import typingsSlinky.fundamentalReact.anon.State
 import typingsSlinky.fundamentalReact.comboboxInputMod.ComboboxInputProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -40,7 +40,7 @@ object ComboboxInput {
     @scala.inline
     def popoverProps(value: js.Object): this.type = set("popoverProps", value.asInstanceOf[js.Any])
     @scala.inline
-    def validationState(value: AnonState): this.type = set("validationState", value.asInstanceOf[js.Any])
+    def validationState(value: State): this.type = set("validationState", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ComboboxInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

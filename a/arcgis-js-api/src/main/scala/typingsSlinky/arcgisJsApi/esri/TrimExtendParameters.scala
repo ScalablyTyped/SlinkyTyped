@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`default-curve-extension`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`keep-end-attributes`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`no-end-attributes`
@@ -46,8 +45,4 @@ trait TrimExtendParameters
     */
   var trimExtendTo: Polyline = js.native
 }
-
-@JSGlobal("__esri.TrimExtendParameters")
-@js.native
-object TrimExtendParameters extends TopLevel[TrimExtendParametersConstructor]
 

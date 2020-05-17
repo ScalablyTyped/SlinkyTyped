@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("two.js", "LinearGradient")
 @js.native
-class LinearGradient protected () extends _Color {
+class LinearGradient protected () extends Color {
   def this(x1: Double, y1: Double, x2: Double, y2: Double, stops: js.Array[Stop]) = this()
   var left: Vector = js.native
   var right: Vector = js.native

@@ -1,18 +1,18 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonAnimationDurationUpdate
-import typingsSlinky.echarts.AnonAnimationEasing
-import typingsSlinky.echarts.AnonAnimationEasingUpdate
-import typingsSlinky.echarts.AnonBorderType
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonItemStyleAnonBorderType
-import typingsSlinky.echarts.AnonLengthLineStyle
-import typingsSlinky.echarts.AnonLengthShow
-import typingsSlinky.echarts.AnonLineStyleShow
-import typingsSlinky.echarts.AnonOffsetCenter
-import typingsSlinky.echarts.AnonRich
-import typingsSlinky.echarts.AnonSplitNumber
-import typingsSlinky.echarts.AnonTextBorderColor
+import typingsSlinky.echarts.anon.AnimationDurationUpdate
+import typingsSlinky.echarts.anon.AnimationEasing
+import typingsSlinky.echarts.anon.AnimationEasingUpdate
+import typingsSlinky.echarts.anon.BorderType
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.ItemStyleBorderType
+import typingsSlinky.echarts.anon.LengthLineStyle
+import typingsSlinky.echarts.anon.LengthShow
+import typingsSlinky.echarts.anon.LineStyleShow
+import typingsSlinky.echarts.anon.OffsetCenter
+import typingsSlinky.echarts.anon.Rich
+import typingsSlinky.echarts.anon.SplitNumber
+import typingsSlinky.echarts.anon.TextBorderColor
 import typingsSlinky.echarts.echarts.EChartOption.SeriesGauge.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -133,21 +133,21 @@ trait SeriesGauge_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-gauge.axisLabel
     */
-  var axisLabel: js.UndefOr[AnonRich] = js.native
+  var axisLabel: js.UndefOr[Rich] = js.native
   /**
     * The related configuration about the axis line of gauge chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-gauge.axisLine
     */
-  var axisLine: js.UndefOr[AnonLineStyleShow] = js.native
+  var axisLine: js.UndefOr[LineStyleShow] = js.native
   /**
     * The tick line style.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-gauge.axisTick
     */
-  var axisTick: js.UndefOr[AnonSplitNumber] = js.native
+  var axisTick: js.UndefOr[SplitNumber] = js.native
   /**
     * Whether the scale in gauge chart increases clockwise.
     *
@@ -182,11 +182,11 @@ trait SeriesGauge_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-gauge.detail
     */
-  var detail: js.UndefOr[AnonTextBorderColor] = js.native
+  var detail: js.UndefOr[TextBorderColor] = js.native
   /**
     * @see https://echarts.apache.org/en/option.html#series-gauge.emphasis
     */
-  var emphasis: js.UndefOr[AnonItemStyleAnonBorderType] = js.native
+  var emphasis: js.UndefOr[ItemStyleBorderType] = js.native
   /**
     * The end angle of gauge chart.
     *
@@ -211,7 +211,7 @@ trait SeriesGauge_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-gauge.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBorderType] = js.native
+  var itemStyle: js.UndefOr[BorderType] = js.native
   /**
     * Used to mark an area in chart.
     * For example, mark a time interval.
@@ -219,21 +219,21 @@ trait SeriesGauge_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-gauge.markArea
     */
-  var markArea: js.UndefOr[AnonAnimationEasingUpdate] = js.native
+  var markArea: js.UndefOr[AnimationEasingUpdate] = js.native
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-gauge.markLine
     */
-  var markLine: js.UndefOr[AnonAnimationEasing] = js.native
+  var markLine: js.UndefOr[AnimationEasing] = js.native
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-gauge.markPoint
     */
-  var markPoint: js.UndefOr[AnonAnimationDurationUpdate] = js.native
+  var markPoint: js.UndefOr[AnimationDurationUpdate] = js.native
   /**
     * The maximum data value which map to
     * [maxAngle](https://echarts.apache.org/en/option.html#series-gauge.maxAngle)
@@ -271,7 +271,7 @@ trait SeriesGauge_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-gauge.pointer
     */
-  var pointer: js.UndefOr[AnonLengthShow] = js.native
+  var pointer: js.UndefOr[LengthShow] = js.native
   /**
     * The radius of gauge chart.
     * It can be a percentage value of the smaller of container half
@@ -291,7 +291,7 @@ trait SeriesGauge_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-gauge.splitLine
     */
-  var splitLine: js.UndefOr[AnonLengthLineStyle] = js.native
+  var splitLine: js.UndefOr[LengthLineStyle] = js.native
   /**
     * The number of split segments of gauge chart scale.
     *
@@ -319,14 +319,14 @@ trait SeriesGauge_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-gauge.title
     */
-  var title: js.UndefOr[AnonOffsetCenter] = js.native
+  var title: js.UndefOr[OffsetCenter] = js.native
   /**
     * tooltip settings in this series.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-gauge.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * @default
     * "gauge"
@@ -444,7 +444,7 @@ object SeriesGauge_ {
         ret
     }
     @scala.inline
-    def withAxisLabel(value: AnonRich): Self = {
+    def withAxisLabel(value: Rich): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("axisLabel")(value.asInstanceOf[js.Any])
         ret
@@ -456,7 +456,7 @@ object SeriesGauge_ {
         ret
     }
     @scala.inline
-    def withAxisLine(value: AnonLineStyleShow): Self = {
+    def withAxisLine(value: LineStyleShow): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("axisLine")(value.asInstanceOf[js.Any])
         ret
@@ -468,7 +468,7 @@ object SeriesGauge_ {
         ret
     }
     @scala.inline
-    def withAxisTick(value: AnonSplitNumber): Self = {
+    def withAxisTick(value: SplitNumber): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("axisTick")(value.asInstanceOf[js.Any])
         ret
@@ -508,7 +508,7 @@ object SeriesGauge_ {
         ret
     }
     @scala.inline
-    def withDetail(value: AnonTextBorderColor): Self = {
+    def withDetail(value: TextBorderColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("detail")(value.asInstanceOf[js.Any])
         ret
@@ -520,7 +520,7 @@ object SeriesGauge_ {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonItemStyleAnonBorderType): Self = {
+    def withEmphasis(value: ItemStyleBorderType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -556,7 +556,7 @@ object SeriesGauge_ {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonBorderType): Self = {
+    def withItemStyle(value: BorderType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -568,7 +568,7 @@ object SeriesGauge_ {
         ret
     }
     @scala.inline
-    def withMarkArea(value: AnonAnimationEasingUpdate): Self = {
+    def withMarkArea(value: AnimationEasingUpdate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(value.asInstanceOf[js.Any])
         ret
@@ -580,7 +580,7 @@ object SeriesGauge_ {
         ret
     }
     @scala.inline
-    def withMarkLine(value: AnonAnimationEasing): Self = {
+    def withMarkLine(value: AnimationEasing): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(value.asInstanceOf[js.Any])
         ret
@@ -592,7 +592,7 @@ object SeriesGauge_ {
         ret
     }
     @scala.inline
-    def withMarkPoint(value: AnonAnimationDurationUpdate): Self = {
+    def withMarkPoint(value: AnimationDurationUpdate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(value.asInstanceOf[js.Any])
         ret
@@ -640,7 +640,7 @@ object SeriesGauge_ {
         ret
     }
     @scala.inline
-    def withPointer(value: AnonLengthShow): Self = {
+    def withPointer(value: LengthShow): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointer")(value.asInstanceOf[js.Any])
         ret
@@ -664,7 +664,7 @@ object SeriesGauge_ {
         ret
     }
     @scala.inline
-    def withSplitLine(value: AnonLengthLineStyle): Self = {
+    def withSplitLine(value: LengthLineStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("splitLine")(value.asInstanceOf[js.Any])
         ret
@@ -700,7 +700,7 @@ object SeriesGauge_ {
         ret
     }
     @scala.inline
-    def withTitle(value: AnonOffsetCenter): Self = {
+    def withTitle(value: OffsetCenter): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
         ret
@@ -712,7 +712,7 @@ object SeriesGauge_ {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

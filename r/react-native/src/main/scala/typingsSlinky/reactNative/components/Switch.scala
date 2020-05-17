@@ -3,8 +3,8 @@ package typingsSlinky.reactNative.components
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNative.AnonFalse
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.False
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -159,7 +159,7 @@ object Switch {
     @scala.inline
     def tintColor(value: String): this.type = set("tintColor", value.asInstanceOf[js.Any])
     @scala.inline
-    def trackColor(value: AnonFalse): this.type = set("trackColor", value.asInstanceOf[js.Any])
+    def trackColor(value: False): this.type = set("trackColor", value.asInstanceOf[js.Any])
     @scala.inline
     def tvParallaxMagnification(value: Double): this.type = set("tvParallaxMagnification", value.asInstanceOf[js.Any])
     @scala.inline

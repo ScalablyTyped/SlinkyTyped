@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeChartsWrapper.mod
 
-import typingsSlinky.reactNativeChartsWrapper.AnonEnabled
+import typingsSlinky.reactNativeChartsWrapper.anon.Enabled
 import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.INSIDE_CHART
 import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.OUTSIDE_CHART
 import scala.scalajs.js
@@ -15,7 +15,7 @@ trait yAxis extends Axis {
   var position: js.UndefOr[OUTSIDE_CHART | INSIDE_CHART] = js.native
   var spaceBottom: js.UndefOr[Double] = js.native
   var spaceTop: js.UndefOr[Double] = js.native
-  var zeroLine: js.UndefOr[AnonEnabled] = js.native
+  var zeroLine: js.UndefOr[Enabled] = js.native
 }
 
 object yAxis {
@@ -103,7 +103,7 @@ object yAxis {
         ret
     }
     @scala.inline
-    def withZeroLine(value: AnonEnabled): Self = {
+    def withZeroLine(value: Enabled): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("zeroLine")(value.asInstanceOf[js.Any])
         ret

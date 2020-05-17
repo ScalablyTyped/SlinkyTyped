@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait JSXIdentifier
   extends BaseNode
-     with _Node {
+     with Node {
   var name: String = js.native
   @JSName("type")
   var type_JSXIdentifier: typingsSlinky.estreeJsx.estreeJsxStrings.JSXIdentifier = js.native

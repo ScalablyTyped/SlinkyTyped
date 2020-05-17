@@ -1,8 +1,8 @@
 package typingsSlinky.winjs.WinJS.UI
 
-import typingsSlinky.winjs.AnonItem
 import typingsSlinky.winjs.WinJS.Promise
 import typingsSlinky.winjs.WinJS.Utilities.IPosition
+import typingsSlinky.winjs.anon.Item
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,7 +34,7 @@ trait IZoomableView[T] extends js.Object {
     * Retrieves the current item of the zoomed in or zoomed out child of the custom control.
     * @returns An object that represents the selected item. This return value must be a Promise for the following: item, position.
     **/
-  def getCurrentItem(): Promise[AnonItem[T]] = js.native
+  def getCurrentItem(): Promise[Item[T]] = js.native
   /**
     * Retrieves the panning axis of the zoomed-in or zoomed-out child of the custom control.
     * @returns Identifies the panning axis of the child control. Implementation specific.
@@ -65,7 +65,7 @@ object IZoomableView {
     beginZoom: () => Unit,
     configureForZoom: (Boolean, Boolean, js.Function, Double) => Unit,
     endZoom: Boolean => Unit,
-    getCurrentItem: () => Promise[AnonItem[T]],
+    getCurrentItem: () => Promise[Item[T]],
     getPanAxis: () => String,
     handlePointer: String => Unit,
     positionItem: (T, IPosition) => Unit,
@@ -99,7 +99,7 @@ object IZoomableView {
         ret
     }
     @scala.inline
-    def withGetCurrentItem(value: () => Promise[AnonItem[T]]): Self[T] = {
+    def withGetCurrentItem(value: () => Promise[Item[T]]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentItem")(js.Any.fromFunction0(value))
         ret

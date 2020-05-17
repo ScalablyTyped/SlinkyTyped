@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobile.swipeActionPropsTypeMod
 
-import typingsSlinky.antdMobile.AnonOnPress
+import typingsSlinky.antdMobile.anon.OnPress
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,10 +10,10 @@ trait SwipeActionPropsType[T] extends js.Object {
   /** whether button is disabled*/
   var autoClose: js.UndefOr[Boolean] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
-  var left: js.UndefOr[js.Array[AnonOnPress[T]]] = js.native
+  var left: js.UndefOr[js.Array[OnPress[T]]] = js.native
   var onClose: js.UndefOr[js.Function0[Unit]] = js.native
   var onOpen: js.UndefOr[js.Function0[Unit]] = js.native
-  var right: js.UndefOr[js.Array[AnonOnPress[T]]] = js.native
+  var right: js.UndefOr[js.Array[OnPress[T]]] = js.native
   var title: js.UndefOr[String] = js.native
 }
 
@@ -54,7 +54,7 @@ object SwipeActionPropsType {
         ret
     }
     @scala.inline
-    def withLeft(value: js.Array[AnonOnPress[T]]): Self[T] = {
+    def withLeft(value: js.Array[OnPress[T]]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
         ret
@@ -90,7 +90,7 @@ object SwipeActionPropsType {
         ret
     }
     @scala.inline
-    def withRight(value: js.Array[AnonOnPress[T]]): Self[T] = {
+    def withRight(value: js.Array[OnPress[T]]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
         ret

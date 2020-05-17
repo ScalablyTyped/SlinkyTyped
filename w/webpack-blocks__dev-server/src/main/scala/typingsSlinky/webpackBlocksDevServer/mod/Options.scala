@@ -1,7 +1,6 @@
 package typingsSlinky.webpackBlocksDevServer.mod
 
-import typingsSlinky.webpackBlocksDevServer.AnonErrors
-import typingsSlinky.webpackBlocksDevServer.AnonString
+import typingsSlinky.webpackBlocksDevServer.anon.Errors
 import typingsSlinky.webpackBlocksDevServer.webpackBlocksDevServerStrings.`errors-only`
 import typingsSlinky.webpackBlocksDevServer.webpackBlocksDevServerStrings.debug
 import typingsSlinky.webpackBlocksDevServer.webpackBlocksDevServerStrings.error
@@ -44,11 +43,11 @@ trait Options extends js.Object {
   var `inline`: js.UndefOr[Boolean] = js.native
   var `lazy`: js.UndefOr[Boolean] = js.native
   var liveReload: js.UndefOr[Boolean] = js.native
-  var mimeTypes: js.UndefOr[AnonString] = js.native
+  var mimeTypes: js.UndefOr[typingsSlinky.webpackBlocksDevServer.anon.String] = js.native
   var noInfo: js.UndefOr[Boolean] = js.native
   var open: js.UndefOr[Boolean | String] = js.native
   var openPage: js.UndefOr[String] = js.native
-  var overlay: js.UndefOr[Boolean | AnonErrors] = js.native
+  var overlay: js.UndefOr[Boolean | Errors] = js.native
   var pfx: js.UndefOr[String] = js.native
   var pfxPassphrase: js.UndefOr[String] = js.native
   var port: js.UndefOr[Double] = js.native
@@ -360,7 +359,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withMimeTypes(value: AnonString): Self = {
+    def withMimeTypes(value: typingsSlinky.webpackBlocksDevServer.anon.String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mimeTypes")(value.asInstanceOf[js.Any])
         ret
@@ -408,7 +407,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withOverlay(value: Boolean | AnonErrors): Self = {
+    def withOverlay(value: Boolean | Errors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
         ret

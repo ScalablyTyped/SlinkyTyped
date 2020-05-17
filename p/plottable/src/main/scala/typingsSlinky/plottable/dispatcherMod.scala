@@ -1,8 +1,8 @@
 package typingsSlinky.plottable
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +28,7 @@ object dispatcherMod extends js.Object {
       * eventname is a DOM event name like "mouseup", "touchstart", etc. The
       * callback is simply registered to the event callback with bubbling.
       */
-    var _eventToProcessingFunction: StringDictionary[js.Function1[/* e */ Event_, _]] = js.native
+    var _eventToProcessingFunction: StringDictionary[js.Function1[/* e */ Event, _]] = js.native
     /* protected */ def _addCallbackForEvent(eventName: String, callback: js.Function): Unit = js.native
     /* protected */ def _callCallbacksForEvent(eventName: String, args: js.Any*): Unit = js.native
     /* private */ def _connect(): js.Any = js.native

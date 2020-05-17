@@ -1,6 +1,6 @@
 package typingsSlinky.cypress
 
-import typingsSlinky.cypress.JQuery_._Falsy
+import typingsSlinky.cypress.JQuery.Falsy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ object cypressNumbers {
   sealed trait `-1` extends js.Object
   
   @js.native
-  sealed trait `0` extends _Falsy
+  sealed trait `0` extends Falsy
   
   @js.native
   sealed trait `1` extends js.Object

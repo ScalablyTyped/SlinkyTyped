@@ -6,10 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Vex.Flow.PedalMarking")
 @js.native
-class PedalMarking_ protected () extends js.Object {
-  def this(notes: js.Array[Note]) = this()
+trait PedalMarking_ extends js.Object {
   def draw(): Unit = js.native
   def drawBracketed(): Unit = js.native
   def drawText(): Unit = js.native

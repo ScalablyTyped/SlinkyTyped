@@ -1,7 +1,7 @@
 package typingsSlinky.std
 
 import org.scalablytyped.runtime.NumberDictionary
-import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.std.anon.CopyWithin
 import typingsSlinky.std.stdNumbers.`0`
 import typingsSlinky.std.stdNumbers.`1`
 import typingsSlinky.std.stdNumbers.`2`
@@ -28,7 +28,7 @@ trait Array[T] extends /* n */ NumberDictionary[T] {
     * when they will be absent when used in a 'with' statement.
     */
   @JSName(js.Symbol.unscopables)
-  var unscopables: js.Function0[AnonCopyWithin] = js.native
+  var unscopables: js.Function0[CopyWithin] = js.native
   /**
     * Combines two or more arrays.
     * @param items Additional items to add to the end of array1.
@@ -449,8 +449,4 @@ trait Array[T] extends /* n */ NumberDictionary[T] {
     */
   def values(): IterableIterator[T] = js.native
 }
-
-@JSGlobal("Array")
-@js.native
-object Array extends TopLevel[ArrayConstructor]
 

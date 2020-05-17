@@ -1,5 +1,6 @@
 package typingsSlinky.baseui.checkboxMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
@@ -10,7 +11,6 @@ import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.FocusEventHandler
 import typingsSlinky.react.mod.FormEventHandler
 import typingsSlinky.react.mod.MouseEventHandler
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -96,7 +96,7 @@ object StatefulContainerProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit): Self = {
+    def withOnChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -157,7 +157,7 @@ object StatefulContainerProps {
     }
     @scala.inline
     def withStateReducer(
-      value: (/* stateType */ String, /* nextState */ CheckboxState, /* currentState */ CheckboxState, /* event */ SyntheticEvent[Event_, HTMLInputElement]) => CheckboxState
+      value: (/* stateType */ String, /* nextState */ CheckboxState, /* currentState */ CheckboxState, /* event */ SyntheticEvent[Event, HTMLInputElement]) => CheckboxState
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stateReducer")(js.Any.fromFunction4(value))

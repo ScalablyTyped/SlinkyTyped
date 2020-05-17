@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PartitionTransform extends _Transforms {
+trait PartitionTransform extends Transforms {
   var as: js.UndefOr[(Vector6[String | SignalRef]) | SignalRef] = js.native
   var field: js.UndefOr[FieldRef] = js.native
   var padding: js.UndefOr[Double | SignalRef] = js.native

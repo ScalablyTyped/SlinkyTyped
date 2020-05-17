@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonMinimumHeights
+import typingsSlinky.cesium.anon.MinimumHeights
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "WallOutlineGeometry")
 @js.native
 class WallOutlineGeometry protected () extends Packable {
-  def this(options: AnonMinimumHeights) = this()
+  def this(options: MinimumHeights) = this()
 }
 
 /* static members */

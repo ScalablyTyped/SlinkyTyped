@@ -6,11 +6,9 @@ import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeGestureHandler.mod.PanGestureHandler
-import typingsSlinky.reactNativeTabView.AnonDamping
-import typingsSlinky.reactNativeTabView.AnonDuration
-import typingsSlinky.reactNativeTabView.AnonHeight
-import typingsSlinky.reactNativeTabView.AnonNavigationState
-import typingsSlinky.reactNativeTabView.AnonRoute
+import typingsSlinky.reactNativeTabView.anon.Damping
+import typingsSlinky.reactNativeTabView.anon.Duration
+import typingsSlinky.reactNativeTabView.anon.Height
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.`on-drag`
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.auto
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.bottom
@@ -27,7 +25,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Props[T /* <: Route */] extends js.Object {
   var gestureHandlerProps: ComponentProps[Instantiable0[PanGestureHandler]] = js.native
-  var initialLayout: js.UndefOr[AnonHeight] = js.native
+  var initialLayout: js.UndefOr[Height] = js.native
   var keyboardDismissMode: none | `on-drag` | auto = js.native
   var `lazy`: Boolean = js.native
   var lazyPreloadDistance: Double = js.native
@@ -39,18 +37,18 @@ trait Props[T /* <: Route */] extends js.Object {
   ] = js.native
   var removeClippedSubviews: js.UndefOr[Boolean] = js.native
   var sceneContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var springConfig: AnonDamping = js.native
+  var springConfig: Damping = js.native
   var springVelocityScale: js.UndefOr[Double] = js.native
   var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
   var swipeEnabled: Boolean = js.native
   var swipeVelocityImpact: js.UndefOr[Double] = js.native
   var tabBarPosition: top | bottom = js.native
-  var timingConfig: AnonDuration = js.native
+  var timingConfig: Duration = js.native
   def onIndexChange(index: Double): Unit = js.native
-  def renderLazyPlaceholder(props: AnonRoute[T]): TagMod[Any] = js.native
+  def renderLazyPlaceholder(props: typingsSlinky.reactNativeTabView.anon.Route[T]): TagMod[Any] = js.native
   def renderPager(props: typingsSlinky.reactNativeTabView.pagerMod.Props[T]): TagMod[Any] = js.native
-  def renderScene(props: SceneRendererProps with AnonRoute[T]): TagMod[Any] = js.native
-  def renderTabBar(props: SceneRendererProps with AnonNavigationState[T]): TagMod[Any] = js.native
+  def renderScene(props: SceneRendererProps with typingsSlinky.reactNativeTabView.anon.Route[T]): TagMod[Any] = js.native
+  def renderTabBar(props: SceneRendererProps with typingsSlinky.reactNativeTabView.anon.NavigationState[T]): TagMod[Any] = js.native
 }
 
 object Props {
@@ -62,14 +60,14 @@ object Props {
     lazyPreloadDistance: Double,
     navigationState: NavigationState[T],
     onIndexChange: Double => Unit,
-    renderLazyPlaceholder: AnonRoute[T] => TagMod[Any],
+    renderLazyPlaceholder: typingsSlinky.reactNativeTabView.anon.Route[T] => TagMod[Any],
     renderPager: typingsSlinky.reactNativeTabView.pagerMod.Props[T] => TagMod[Any],
-    renderScene: SceneRendererProps with AnonRoute[T] => TagMod[Any],
-    renderTabBar: SceneRendererProps with AnonNavigationState[T] => TagMod[Any],
-    springConfig: AnonDamping,
+    renderScene: SceneRendererProps with typingsSlinky.reactNativeTabView.anon.Route[T] => TagMod[Any],
+    renderTabBar: SceneRendererProps with typingsSlinky.reactNativeTabView.anon.NavigationState[T] => TagMod[Any],
+    springConfig: Damping,
     swipeEnabled: Boolean,
     tabBarPosition: top | bottom,
-    timingConfig: AnonDuration
+    timingConfig: Duration
   ): Props[T] = {
     val __obj = js.Dynamic.literal(gestureHandlerProps = gestureHandlerProps.asInstanceOf[js.Any], keyboardDismissMode = keyboardDismissMode.asInstanceOf[js.Any], lazyPreloadDistance = lazyPreloadDistance.asInstanceOf[js.Any], navigationState = navigationState.asInstanceOf[js.Any], onIndexChange = js.Any.fromFunction1(onIndexChange), renderLazyPlaceholder = js.Any.fromFunction1(renderLazyPlaceholder), renderPager = js.Any.fromFunction1(renderPager), renderScene = js.Any.fromFunction1(renderScene), renderTabBar = js.Any.fromFunction1(renderTabBar), springConfig = springConfig.asInstanceOf[js.Any], swipeEnabled = swipeEnabled.asInstanceOf[js.Any], tabBarPosition = tabBarPosition.asInstanceOf[js.Any], timingConfig = timingConfig.asInstanceOf[js.Any])
     __obj.updateDynamic("lazy")(`lazy`.asInstanceOf[js.Any])
@@ -118,7 +116,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withRenderLazyPlaceholder(value: AnonRoute[T] => TagMod[Any]): Self[T] = {
+    def withRenderLazyPlaceholder(value: typingsSlinky.reactNativeTabView.anon.Route[T] => TagMod[Any]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderLazyPlaceholder")(js.Any.fromFunction1(value))
         ret
@@ -130,19 +128,21 @@ object Props {
         ret
     }
     @scala.inline
-    def withRenderScene(value: SceneRendererProps with AnonRoute[T] => TagMod[Any]): Self[T] = {
+    def withRenderScene(value: SceneRendererProps with typingsSlinky.reactNativeTabView.anon.Route[T] => TagMod[Any]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderScene")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withRenderTabBar(value: SceneRendererProps with AnonNavigationState[T] => TagMod[Any]): Self[T] = {
+    def withRenderTabBar(
+      value: SceneRendererProps with typingsSlinky.reactNativeTabView.anon.NavigationState[T] => TagMod[Any]
+    ): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderTabBar")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withSpringConfig(value: AnonDamping): Self[T] = {
+    def withSpringConfig(value: Damping): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("springConfig")(value.asInstanceOf[js.Any])
         ret
@@ -160,13 +160,13 @@ object Props {
         ret
     }
     @scala.inline
-    def withTimingConfig(value: AnonDuration): Self[T] = {
+    def withTimingConfig(value: Duration): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("timingConfig")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withInitialLayout(value: AnonHeight): Self[T] = {
+    def withInitialLayout(value: Height): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("initialLayout")(value.asInstanceOf[js.Any])
         ret

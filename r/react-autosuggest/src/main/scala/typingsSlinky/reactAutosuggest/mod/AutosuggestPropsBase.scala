@@ -1,9 +1,9 @@
 package typingsSlinky.reactAutosuggest.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -176,7 +176,7 @@ object AutosuggestPropsBase {
     }
     @scala.inline
     def withOnSuggestionSelected(
-      value: (SyntheticEvent[EventTarget with js.Any, Event_], /* data */ SuggestionSelectedEventData[TSuggestion]) => Unit
+      value: (SyntheticEvent[EventTarget with js.Any, Event], /* data */ SuggestionSelectedEventData[TSuggestion]) => Unit
     ): Self[TSuggestion] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSuggestionSelected")(js.Any.fromFunction2(value))

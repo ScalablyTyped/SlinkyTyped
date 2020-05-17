@@ -1,13 +1,13 @@
 package typingsSlinky.gatsby.mod
 
-import typingsSlinky.std.Location_
+import org.scalajs.dom.raw.Location
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait RouteUpdateArgs extends BrowserPluginArgs {
-  var location: Location_ = js.native
+  var location: Location = js.native
 }
 
 object RouteUpdateArgs {
@@ -16,7 +16,7 @@ object RouteUpdateArgs {
     getResourceURLsForPathname: js.Function,
     getResourcesForPathname: js.Function,
     getResourcesForPathnameSync: js.Function,
-    location: Location_
+    location: Location
   ): RouteUpdateArgs = {
     val __obj = js.Dynamic.literal(getResourceURLsForPathname = getResourceURLsForPathname.asInstanceOf[js.Any], getResourcesForPathname = getResourcesForPathname.asInstanceOf[js.Any], getResourcesForPathnameSync = getResourcesForPathnameSync.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any])
     __obj.asInstanceOf[RouteUpdateArgs]
@@ -28,7 +28,7 @@ object RouteUpdateArgs {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withLocation(value: Location_): Self = {
+    def withLocation(value: Location): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
         ret

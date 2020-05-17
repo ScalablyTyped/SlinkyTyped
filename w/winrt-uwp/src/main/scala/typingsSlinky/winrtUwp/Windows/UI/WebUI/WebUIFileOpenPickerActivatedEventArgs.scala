@@ -9,9 +9,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides information about an activated event that fires when the user tries to pick files or folders that are provided by the app. */
-@JSGlobal("Windows.UI.WebUI.WebUIFileOpenPickerActivatedEventArgs")
 @js.native
-abstract class WebUIFileOpenPickerActivatedEventArgs () extends js.Object {
+trait WebUIFileOpenPickerActivatedEventArgs extends js.Object {
   /** Gets the app activated operation. */
   var activatedOperation: ActivatedOperation = js.native
   /** Gets the family name of the caller's package. */
@@ -24,5 +23,64 @@ abstract class WebUIFileOpenPickerActivatedEventArgs () extends js.Object {
   var previousExecutionState: ApplicationExecutionState = js.native
   /** Gets the splash screen object that provides information about the transition from the splash screen to the activated app. */
   var splashScreen: SplashScreen = js.native
+}
+
+object WebUIFileOpenPickerActivatedEventArgs {
+  @scala.inline
+  def apply(
+    activatedOperation: ActivatedOperation,
+    callerPackageFamilyName: String,
+    fileOpenPickerUI: FileOpenPickerUI,
+    kind: ActivationKind,
+    previousExecutionState: ApplicationExecutionState,
+    splashScreen: SplashScreen
+  ): WebUIFileOpenPickerActivatedEventArgs = {
+    val __obj = js.Dynamic.literal(activatedOperation = activatedOperation.asInstanceOf[js.Any], callerPackageFamilyName = callerPackageFamilyName.asInstanceOf[js.Any], fileOpenPickerUI = fileOpenPickerUI.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], previousExecutionState = previousExecutionState.asInstanceOf[js.Any], splashScreen = splashScreen.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebUIFileOpenPickerActivatedEventArgs]
+  }
+  @scala.inline
+  implicit class WebUIFileOpenPickerActivatedEventArgsOps[Self <: WebUIFileOpenPickerActivatedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActivatedOperation(value: ActivatedOperation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activatedOperation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCallerPackageFamilyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callerPackageFamilyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFileOpenPickerUI(value: FileOpenPickerUI): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileOpenPickerUI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKind(value: ActivationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreviousExecutionState(value: ApplicationExecutionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousExecutionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSplashScreen(value: SplashScreen): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splashScreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

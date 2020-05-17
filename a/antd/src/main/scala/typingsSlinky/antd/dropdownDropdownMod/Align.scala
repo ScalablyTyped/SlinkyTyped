@@ -1,6 +1,6 @@
 package typingsSlinky.antd.dropdownDropdownMod
 
-import typingsSlinky.antd.AnonAdjustX
+import typingsSlinky.antd.anon.AdjustX
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Align extends js.Object {
   var offset: js.UndefOr[js.Tuple2[Double, Double]] = js.native
-  var overflow: js.UndefOr[AnonAdjustX] = js.native
+  var overflow: js.UndefOr[AdjustX] = js.native
   var points: js.UndefOr[js.Tuple2[String, String]] = js.native
   var targetOffset: js.UndefOr[js.Tuple2[Double, Double]] = js.native
   var useCssBottom: js.UndefOr[Boolean] = js.native
@@ -41,7 +41,7 @@ object Align {
         ret
     }
     @scala.inline
-    def withOverflow(value: AnonAdjustX): Self = {
+    def withOverflow(value: AdjustX): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overflow")(value.asInstanceOf[js.Any])
         ret

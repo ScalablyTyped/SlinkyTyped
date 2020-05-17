@@ -1,6 +1,6 @@
 package typingsSlinky.swig.mod
 
-import typingsSlinky.swig.Typeofloaders
+import typingsSlinky.swig.anon.Typeofloaders
 import typingsSlinky.swig.mod.lexer.TYPES
 import typingsSlinky.swig.mod.parser.ParseReturn
 import scala.scalajs.js

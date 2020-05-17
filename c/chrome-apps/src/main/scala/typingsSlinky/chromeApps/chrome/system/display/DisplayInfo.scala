@@ -1,6 +1,6 @@
 package typingsSlinky.chromeApps.chrome.system.display
 
-import typingsSlinky.chromeApps.AnonManufacturerId
+import typingsSlinky.chromeApps.anon.ManufacturerId
 import typingsSlinky.chromeApps.chrome.double
 import typingsSlinky.chromeApps.chrome.integer
 import scala.scalajs.js
@@ -26,7 +26,7 @@ trait DisplayInfo extends js.Object {
   /**
     * @requires(CrOS Kiosk app) Only available in Chrome OS Kiosk apps
     */
-  var edid: js.UndefOr[AnonManufacturerId] = js.native
+  var edid: js.UndefOr[ManufacturerId] = js.native
   /** True if this display has a touch input device associated with it. */
   var hasTouchSupport: Boolean = js.native
   /** The unique identifier of the display. */
@@ -204,7 +204,7 @@ object DisplayInfo {
         ret
     }
     @scala.inline
-    def withEdid(value: AnonManufacturerId): Self = {
+    def withEdid(value: ManufacturerId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("edid")(value.asInstanceOf[js.Any])
         ret

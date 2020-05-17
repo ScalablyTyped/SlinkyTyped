@@ -3,7 +3,7 @@ package typingsSlinky.bezierJs.mod
 import typingsSlinky.bezierJs.BezierJs.ABC
 import typingsSlinky.bezierJs.BezierJs.Bezier
 import typingsSlinky.bezierJs.BezierJs.Point
-import typingsSlinky.bezierJs.Typeofutils
+import typingsSlinky.bezierJs.anon.Typeofutils
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

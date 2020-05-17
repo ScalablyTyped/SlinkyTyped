@@ -1,11 +1,12 @@
 package typingsSlinky.antd.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLUListElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.web.html.ul.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.PartialTransferLocale
+import typingsSlinky.antd.anon.PartialTransferLocale
 import typingsSlinky.antd.transferListMod.TransferListProps
 import typingsSlinky.antd.transferMod.ListStyle
 import typingsSlinky.antd.transferMod.RenderResult
@@ -15,7 +16,6 @@ import typingsSlinky.antd.transferMod.TransferItem
 import typingsSlinky.antd.transferMod.TransferProps
 import typingsSlinky.antd.transferMod.default
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,7 +45,7 @@ object Transfer {
     ): this.type = set("onChange", js.Any.fromFunction3(value))
     @scala.inline
     def onScroll(
-      value: (/* direction */ TransferDirection, /* e */ SyntheticEvent[Event_, HTMLUListElement]) => Unit
+      value: (/* direction */ TransferDirection, /* e */ SyntheticEvent[Event, HTMLUListElement]) => Unit
     ): this.type = set("onScroll", js.Any.fromFunction2(value))
     @scala.inline
     def onSearch(value: (/* direction */ TransferDirection, /* value */ String) => Unit): this.type = set("onSearch", js.Any.fromFunction2(value))

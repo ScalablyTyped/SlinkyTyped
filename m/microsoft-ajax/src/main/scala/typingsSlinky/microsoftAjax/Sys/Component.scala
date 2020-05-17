@@ -1,7 +1,5 @@
 package typingsSlinky.microsoftAjax.Sys
 
-import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.microsoftAjax.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,13 +8,8 @@ import scala.scalajs.js.annotation._
   * Provides the base class for the Control and Behavior classes, and for any other object whose lifetime should be managed by the ASP.NET AJAX client library.
   * @see {@link http://msdn.microsoft.com/en-us/library/bb397516(v=vs.100).aspx}
   */
-@JSGlobal("Sys.Component")
 @js.native
-//#region Constructors
-/**
-  * When overridden in a derived class, initializes an instance of that class and registers it with the application as a disposable object.
-  */
-class Component () extends js.Object {
+trait Component extends js.Object {
   //#endregion
   //#region Events
   /**
@@ -101,29 +94,125 @@ class Component () extends js.Object {
   def updated(): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("Sys.Component")
-@js.native
-object Component extends js.Object {
-  /**
-    * Creates and initializes a component of the specified type. This method is static and can be called without creating an instance of the class.
-    * @param type
-    *           The type of the component to create.
-    * @param properties
-    *           (Optional) A JSON object that describes the properties and their values.
-    * @param events
-    *           (Optional) A JSON object that describes the events and their handlers.
-    * @param references
-    *           (Optional) A JSON object that describes the properties that are references to other components.
-    * @param element
-    *           (Optional) The DOM element that the component should be attached to.
-    *
-    * @returns A new instance of a component that uses the specified parameters.
-    */
-  def create(`type`: Type): Component = js.native
-  def create(`type`: Type, properties: js.Any): Component = js.native
-  def create(`type`: Type, properties: js.Any, events: js.Any): Component = js.native
-  def create(`type`: Type, properties: js.Any, events: js.Any, references: js.Any): Component = js.native
-  def create(`type`: Type, properties: js.Any, events: js.Any, references: js.Any, element: HTMLElement): Component = js.native
+object Component {
+  @scala.inline
+  def apply(
+    add_disposing: js.Function => Unit,
+    add_propertyChanged: js.Function => Unit,
+    beginUpdate: () => Unit,
+    dispose: () => Unit,
+    endUpdate: () => Unit,
+    get_events: () => js.Any,
+    get_id: () => String,
+    get_isInitialized: () => Boolean,
+    get_isUpdating: () => Boolean,
+    initialize: () => Unit,
+    raisePropertyChanged: String => Unit,
+    remove_disposing: js.Function => Unit,
+    remove_propertyChanged: js.Function => Unit,
+    set_id: String => Unit,
+    updated: () => Unit
+  ): Component = {
+    val __obj = js.Dynamic.literal(add_disposing = js.Any.fromFunction1(add_disposing), add_propertyChanged = js.Any.fromFunction1(add_propertyChanged), beginUpdate = js.Any.fromFunction0(beginUpdate), dispose = js.Any.fromFunction0(dispose), endUpdate = js.Any.fromFunction0(endUpdate), get_events = js.Any.fromFunction0(get_events), get_id = js.Any.fromFunction0(get_id), get_isInitialized = js.Any.fromFunction0(get_isInitialized), get_isUpdating = js.Any.fromFunction0(get_isUpdating), initialize = js.Any.fromFunction0(initialize), raisePropertyChanged = js.Any.fromFunction1(raisePropertyChanged), remove_disposing = js.Any.fromFunction1(remove_disposing), remove_propertyChanged = js.Any.fromFunction1(remove_propertyChanged), set_id = js.Any.fromFunction1(set_id), updated = js.Any.fromFunction0(updated))
+    __obj.asInstanceOf[Component]
+  }
+  @scala.inline
+  implicit class ComponentOps[Self <: Component] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdd_disposing(value: js.Function => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add_disposing")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAdd_propertyChanged(value: js.Function => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add_propertyChanged")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withBeginUpdate(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beginUpdate")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDispose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispose")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withEndUpdate(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endUpdate")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_events(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_events")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_id(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_id")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_isInitialized(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_isInitialized")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_isUpdating(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_isUpdating")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withInitialize(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initialize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRaisePropertyChanged(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("raisePropertyChanged")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemove_disposing(value: js.Function => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove_disposing")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemove_propertyChanged(value: js.Function => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove_propertyChanged")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_id(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_id")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUpdated(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updated")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.terminalKit.mod
 
-import typingsSlinky.terminalKit.AnonDstRect
+import typingsSlinky.terminalKit.anon.DstRect
 import typingsSlinky.terminalKit.rectMod.AbsoluteOptions
 import typingsSlinky.terminalKit.rectMod.Region
 import typingsSlinky.terminalKit.rectMod.^
@@ -25,6 +25,6 @@ class Rect protected () extends ^ {
 @JSImport("terminal-kit", "Rect")
 @js.native
 object Rect extends js.Object {
-  def wrappingRect(params: AnonDstRect): Unit = js.native
+  def wrappingRect(params: DstRect): Unit = js.native
 }
 

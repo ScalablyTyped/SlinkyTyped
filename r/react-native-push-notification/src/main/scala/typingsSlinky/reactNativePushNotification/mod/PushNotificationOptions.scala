@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativePushNotification.mod
 
-import typingsSlinky.reactNativePushNotification.AnonOs
+import typingsSlinky.reactNativePushNotification.anon.Os
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PushNotificationOptions extends js.Object {
   var onNotification: js.UndefOr[js.Function1[/* notification */ PushNotification, Unit]] = js.native
-  var onRegister: js.UndefOr[js.Function1[/* token */ AnonOs, Unit]] = js.native
+  var onRegister: js.UndefOr[js.Function1[/* token */ Os, Unit]] = js.native
   var permissions: js.UndefOr[PushNotificationPermissions] = js.native
   var popInitialNotification: js.UndefOr[Boolean] = js.native
   var requestPermissions: js.UndefOr[Boolean] = js.native
@@ -40,7 +40,7 @@ object PushNotificationOptions {
         ret
     }
     @scala.inline
-    def withOnRegister(value: /* token */ AnonOs => Unit): Self = {
+    def withOnRegister(value: /* token */ Os => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRegister")(js.Any.fromFunction1(value))
         ret

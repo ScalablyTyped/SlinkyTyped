@@ -1,9 +1,9 @@
 package typingsSlinky.reactBootstrap.mod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.EventHandler
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,6 +17,6 @@ trait SelectCallback
     * It does not reflect the underlying event and should not be used.
     */
   def apply(e: SyntheticMouseEvent[js.Object]): Unit = js.native
-  def apply(eventKey: js.Any, e: SyntheticEvent[Event_, js.Object]): Unit = js.native
+  def apply(eventKey: js.Any, e: SyntheticEvent[Event, js.Object]): Unit = js.native
 }
 

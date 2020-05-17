@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.exclude
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.include
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.value
@@ -27,8 +26,4 @@ trait PointCloudValueFilter extends PointCloudFilter {
     */
   var values: js.Array[Double] = js.native
 }
-
-@JSGlobal("__esri.PointCloudValueFilter")
-@js.native
-object PointCloudValueFilter extends TopLevel[PointCloudValueFilterConstructor]
 

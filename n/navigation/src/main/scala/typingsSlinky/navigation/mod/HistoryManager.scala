@@ -1,7 +1,7 @@
 package typingsSlinky.navigation.mod
 
 import org.scalajs.dom.raw.HTMLAnchorElement
-import typingsSlinky.std.Location_
+import org.scalajs.dom.raw.Location
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +31,7 @@ trait HistoryManager extends js.Object {
     * Gets a Url from the anchor or location
     */
   def getUrl(hrefElement: HTMLAnchorElement): String = js.native
-  def getUrl(hrefElement: Location_): String = js.native
+  def getUrl(hrefElement: Location): String = js.native
   /**
     * Registers browser history event listeners
     * @param navigateHistory The history navigation event handler

@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PluralElement
   extends BaseElement[plural]
-     with _MessageFormatElement {
+     with MessageFormatElement {
   var offset: Double = js.native
   var options: Record[ValidPluralRule, PluralOrSelectOption] = js.native
   var pluralType: js.UndefOr[cardinal | ordinal] = js.native

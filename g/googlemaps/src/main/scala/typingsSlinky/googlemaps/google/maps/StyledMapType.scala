@@ -4,13 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("google.maps.StyledMapType")
 @js.native
-class StyledMapType protected ()
+trait StyledMapType
   extends MVCObject
      with MapType {
-  def this(styles: js.Array[MapTypeStyle]) = this()
-  def this(styles: js.Array[MapTypeStyle], options: StyledMapTypeOptions) = this()
   @JSName("alt")
   var alt_StyledMapType: String = js.native
   @JSName("maxZoom")

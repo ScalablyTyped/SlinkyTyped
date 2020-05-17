@@ -2,7 +2,7 @@ package typingsSlinky.tern.inferMod
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.estree.mod.Node
-import typingsSlinky.tern.Objnamestring
+import typingsSlinky.tern.anon.Objnamestring
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

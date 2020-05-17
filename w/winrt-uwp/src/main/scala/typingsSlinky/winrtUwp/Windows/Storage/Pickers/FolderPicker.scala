@@ -9,10 +9,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a UI element that lets the user choose folders. */
-@JSGlobal("Windows.Storage.Pickers.FolderPicker")
 @js.native
-/** Creates a new instance of a FolderPicker . */
-class FolderPicker () extends js.Object {
+trait FolderPicker extends js.Object {
   /** Gets or sets the label text of the folder picker's commit button. */
   var commitButtonText: String = js.native
   /** Gets a set of values to be populated by the app before a PickFolderAndContinue operation that deactivates the app in order to provide context when the app is activated. (Windows Phone Store apps) */
@@ -32,5 +30,78 @@ class FolderPicker () extends js.Object {
     * @return When the call to this method completes successfully, it returns a storageFolder object that represents the folder that the user picked.
     */
   def pickSingleFolderAsync(): IPromiseWithIAsyncOperation[StorageFolder] = js.native
+}
+
+object FolderPicker {
+  @scala.inline
+  def apply(
+    commitButtonText: String,
+    continuationData: ValueSet,
+    fileTypeFilter: IVector[String],
+    pickFolderAndContinue: () => Unit,
+    pickSingleFolderAsync: () => IPromiseWithIAsyncOperation[StorageFolder],
+    settingsIdentifier: String,
+    suggestedStartLocation: PickerLocationId,
+    viewMode: PickerViewMode
+  ): FolderPicker = {
+    val __obj = js.Dynamic.literal(commitButtonText = commitButtonText.asInstanceOf[js.Any], continuationData = continuationData.asInstanceOf[js.Any], fileTypeFilter = fileTypeFilter.asInstanceOf[js.Any], pickFolderAndContinue = js.Any.fromFunction0(pickFolderAndContinue), pickSingleFolderAsync = js.Any.fromFunction0(pickSingleFolderAsync), settingsIdentifier = settingsIdentifier.asInstanceOf[js.Any], suggestedStartLocation = suggestedStartLocation.asInstanceOf[js.Any], viewMode = viewMode.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FolderPicker]
+  }
+  @scala.inline
+  implicit class FolderPickerOps[Self <: FolderPicker] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommitButtonText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commitButtonText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContinuationData(value: ValueSet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continuationData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFileTypeFilter(value: IVector[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileTypeFilter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPickFolderAndContinue(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pickFolderAndContinue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPickSingleFolderAsync(value: () => IPromiseWithIAsyncOperation[StorageFolder]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pickSingleFolderAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSettingsIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("settingsIdentifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuggestedStartLocation(value: PickerLocationId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suggestedStartLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withViewMode(value: PickerViewMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

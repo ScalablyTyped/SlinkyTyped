@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Word
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJsPreview.Word.Interfaces.TableBorderData
 import typingsSlinky.officeJsPreview.Word.Interfaces.TableBorderLoadOptions
 import typingsSlinky.officeJsPreview.Word.Interfaces.TableBorderUpdateData
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.DashDotStroked
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Dashed
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.DashedSmall
@@ -40,9 +40,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: WordApi 1.3]
   */
-@JSGlobal("Word.TableBorder")
 @js.native
-class TableBorder () extends ClientObject {
+trait TableBorder extends ClientObject {
   /**
     *
     * Gets or sets the table border color.
@@ -85,8 +84,8 @@ class TableBorder () extends ClientObject {
   def load(): TableBorder = js.native
   def load(option: String): TableBorder = js.native
   def load(option: js.Array[String]): TableBorder = js.native
-  def load(option: AnonExpand): TableBorder = js.native
   def load(option: TableBorderLoadOptions): TableBorder = js.native
+  def load(option: Expand): TableBorder = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.
     *
     * @remarks

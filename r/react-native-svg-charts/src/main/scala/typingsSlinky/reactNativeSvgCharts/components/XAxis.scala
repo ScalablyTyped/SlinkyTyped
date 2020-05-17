@@ -5,8 +5,8 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.d3Scale.mod.ScaleBand_
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeSvgCharts.AnonLeft
-import typingsSlinky.reactNativeSvgCharts.PartialTextProps
+import typingsSlinky.reactNativeSvgCharts.anon.Left
+import typingsSlinky.reactNativeSvgCharts.anon.PartialTextProps
 import typingsSlinky.reactNativeSvgCharts.mod.AccessorFunctionProps
 import typingsSlinky.reactNativeSvgCharts.mod.ScaleType
 import typingsSlinky.reactNativeSvgCharts.mod.XAxisProps
@@ -24,7 +24,7 @@ object XAxis {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvgCharts.mod.XAxis[js.Any]] {
     @scala.inline
-    def contentInset(value: AnonLeft): this.type = set("contentInset", value.asInstanceOf[js.Any])
+    def contentInset(value: Left): this.type = set("contentInset", value.asInstanceOf[js.Any])
     @scala.inline
     def formatLabel(value: (/* value */ js.Any, /* index */ Double) => Double | String): this.type = set("formatLabel", js.Any.fromFunction2(value))
     @scala.inline

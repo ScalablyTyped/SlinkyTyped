@@ -2,9 +2,6 @@ package typingsSlinky.angularCommon.httpHttpMod
 
 import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.FormData
-import typingsSlinky.angularCommon.AnonMethod
-import typingsSlinky.angularCommon.AnonParams
-import typingsSlinky.angularCommon.AnonSetHeaders
 import typingsSlinky.angularCommon.angularCommonStrings.DELETE
 import typingsSlinky.angularCommon.angularCommonStrings.GET
 import typingsSlinky.angularCommon.angularCommonStrings.HEAD
@@ -17,6 +14,9 @@ import typingsSlinky.angularCommon.angularCommonStrings.arraybuffer
 import typingsSlinky.angularCommon.angularCommonStrings.blob
 import typingsSlinky.angularCommon.angularCommonStrings.json
 import typingsSlinky.angularCommon.angularCommonStrings.text
+import typingsSlinky.angularCommon.anon.Method
+import typingsSlinky.angularCommon.anon.Params
+import typingsSlinky.angularCommon.anon.SetHeaders
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,22 +34,22 @@ class HttpRequest[T] protected () extends js.Object {
   def this(method: POST, url: String) = this()
   def this(method: PUT, url: String) = this()
   def this(method: String, url: String, body: T) = this()
-  def this(method: DELETE, url: String, init: AnonParams) = this()
-  def this(method: GET, url: String, init: AnonParams) = this()
-  def this(method: HEAD, url: String, init: AnonParams) = this()
-  def this(method: JSONP, url: String, init: AnonParams) = this()
-  def this(method: OPTIONS, url: String, init: AnonParams) = this()
+  def this(method: DELETE, url: String, init: Params) = this()
+  def this(method: GET, url: String, init: Params) = this()
+  def this(method: HEAD, url: String, init: Params) = this()
+  def this(method: JSONP, url: String, init: Params) = this()
+  def this(method: OPTIONS, url: String, init: Params) = this()
   def this(method: PATCH, url: String, body: T) = this()
   def this(method: POST, url: String, body: T) = this()
   def this(method: PUT, url: String, body: T) = this()
-  def this(method: String, url: String, body: T, init: AnonParams) = this()
-  def this(method: String, url: String, body: Null, init: AnonParams) = this()
-  def this(method: PATCH, url: String, body: T, init: AnonParams) = this()
-  def this(method: PATCH, url: String, body: Null, init: AnonParams) = this()
-  def this(method: POST, url: String, body: T, init: AnonParams) = this()
-  def this(method: POST, url: String, body: Null, init: AnonParams) = this()
-  def this(method: PUT, url: String, body: T, init: AnonParams) = this()
-  def this(method: PUT, url: String, body: Null, init: AnonParams) = this()
+  def this(method: String, url: String, body: T, init: Params) = this()
+  def this(method: String, url: String, body: Null, init: Params) = this()
+  def this(method: PATCH, url: String, body: T, init: Params) = this()
+  def this(method: PATCH, url: String, body: Null, init: Params) = this()
+  def this(method: POST, url: String, body: T, init: Params) = this()
+  def this(method: POST, url: String, body: Null, init: Params) = this()
+  def this(method: PUT, url: String, body: T, init: Params) = this()
+  def this(method: PUT, url: String, body: Null, init: Params) = this()
   /**
     * The request body, or `null` if one isn't set.
     *
@@ -93,8 +93,8 @@ class HttpRequest[T] protected () extends js.Object {
     * Whether this request should be sent with outgoing credentials (cookies).
     */
   val withCredentials: Boolean = js.native
-  def clone(update: AnonMethod[T]): HttpRequest[T] = js.native
-  def clone[V](update: AnonSetHeaders[V]): HttpRequest[V] = js.native
+  def clone(update: Method[T]): HttpRequest[T] = js.native
+  def clone[V](update: SetHeaders[V]): HttpRequest[V] = js.native
   /**
     * Examine the body and attempt to infer an appropriate MIME type
     * for it.

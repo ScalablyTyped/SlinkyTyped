@@ -27,9 +27,8 @@ import scala.scalajs.js.annotation._
 		 * in the middle of the display on Android and at the bottom edge on iOS. On Android, buttons may
 		 * be added below the options.
 		 */
-@JSGlobal("Titanium.UI.OptionDialog")
 @js.native
-class OptionDialog () extends View {
+trait OptionDialog extends View {
   /**
   			 * View to load inside the message area, to create a custom layout.
   			 */

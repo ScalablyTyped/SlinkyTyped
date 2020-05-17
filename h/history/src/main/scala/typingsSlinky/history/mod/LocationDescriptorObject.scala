@@ -5,7 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LocationDescriptorObject[S] extends js.Object {
+trait LocationDescriptorObject[S]
+  extends typingsSlinky.history.mod.History.LocationDescriptor[S] {
   var hash: js.UndefOr[Hash] = js.native
   var key: js.UndefOr[LocationKey] = js.native
   var pathname: js.UndefOr[Pathname] = js.native

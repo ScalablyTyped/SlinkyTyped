@@ -6,11 +6,11 @@ import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactNative.mod.Animated.AnimatedInterpolation
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeGestureHandler.AnonBottom
-import typingsSlinky.reactNativeGestureHandler.AnonBottomHeight
-import typingsSlinky.reactNativeGestureHandler.AnonHeight
-import typingsSlinky.reactNativeGestureHandler.AnonLeft
-import typingsSlinky.reactNativeGestureHandler.AnonRight
+import typingsSlinky.reactNativeGestureHandler.anon.Bottom
+import typingsSlinky.reactNativeGestureHandler.anon.BottomHeight
+import typingsSlinky.reactNativeGestureHandler.anon.Height
+import typingsSlinky.reactNativeGestureHandler.anon.Left
+import typingsSlinky.reactNativeGestureHandler.anon.Right
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +27,7 @@ trait SwipeableProperties extends js.Object {
   var failOffsetX: js.UndefOr[Double | js.Array[Double]] = js.native
   var failOffsetY: js.UndefOr[Double | js.Array[Double]] = js.native
   var friction: js.UndefOr[Double] = js.native
-  var hitSlop: js.UndefOr[Double | AnonBottom | AnonLeft | AnonRight | AnonHeight | AnonBottomHeight] = js.native
+  var hitSlop: js.UndefOr[Double | Bottom | Left | Right | Height | BottomHeight] = js.native
   var id: js.UndefOr[String] = js.native
   var leftThreshold: js.UndefOr[Double] = js.native
   var maxDeltaX: js.UndefOr[Double] = js.native
@@ -227,7 +227,7 @@ object SwipeableProperties {
         ret
     }
     @scala.inline
-    def withHitSlop(value: Double | AnonBottom | AnonLeft | AnonRight | AnonHeight | AnonBottomHeight): Self = {
+    def withHitSlop(value: Double | Bottom | Left | Right | Height | BottomHeight): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hitSlop")(value.asInstanceOf[js.Any])
         ret

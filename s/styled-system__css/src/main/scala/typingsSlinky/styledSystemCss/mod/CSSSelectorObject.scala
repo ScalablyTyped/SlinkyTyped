@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CSSSelectorObject
   extends /* cssSelector */ StringDictionary[SystemStyleObject]
-     with _SystemStyleObject
+     with SystemStyleObject
 
 object CSSSelectorObject {
   @scala.inline

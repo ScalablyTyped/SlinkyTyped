@@ -5,13 +5,34 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data for the ContactChanged event. */
-@JSGlobal("Windows.ApplicationModel.Contacts.ContactChangedEventArgs")
 @js.native
-abstract class ContactChangedEventArgs () extends js.Object {
+trait ContactChangedEventArgs extends js.Object {
   /**
     * Gets the ContactChangedDeferral object to use for asynchronous operations.
     * @return The deferral object to use for asynchronous operations.
     */
   def getDeferral(): ContactChangedDeferral = js.native
+}
+
+object ContactChangedEventArgs {
+  @scala.inline
+  def apply(getDeferral: () => ContactChangedDeferral): ContactChangedEventArgs = {
+    val __obj = js.Dynamic.literal(getDeferral = js.Any.fromFunction0(getDeferral))
+    __obj.asInstanceOf[ContactChangedEventArgs]
+  }
+  @scala.inline
+  implicit class ContactChangedEventArgsOps[Self <: ContactChangedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetDeferral(value: () => ContactChangedDeferral): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDeferral")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

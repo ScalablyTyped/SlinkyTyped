@@ -1,7 +1,7 @@
 package typingsSlinky.reactI18next.mod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.reactI18next.AnonWithRef
+import typingsSlinky.reactI18next.anon.WithRef
 import typingsSlinky.reactI18next.reactI18nextStrings.i18n
 import typingsSlinky.reactI18next.reactI18nextStrings.tReady
 import scala.scalajs.js
@@ -19,7 +19,7 @@ object withTranslation extends js.Object {
     /* component */ ReactComponentClass[WithTranslation_], 
     ReactComponentClass[Omit[WithTranslation_, i18n | tReady]]
   ] = js.native
-  def apply(ns: Namespace, options: AnonWithRef): js.Function1[
+  def apply(ns: Namespace, options: WithRef): js.Function1[
     /* component */ ReactComponentClass[WithTranslation_], 
     ReactComponentClass[Omit[WithTranslation_, i18n | tReady]]
   ] = js.native

@@ -13,15 +13,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Box2D.Dynamics.b2World")
 @js.native
-class b2World protected () extends js.Object {
-  /**
-  		* Creates a new world.
-  		* @param gravity The world gravity vector.
-  		* @param doSleep Improvie performance by not simulating inactive bodies.
-  		**/
-  def this(gravity: b2Vec2, doSleep: Boolean) = this()
+trait b2World extends js.Object {
   /**
   		* Add a controller to the world list.
   		* @param c Controller to add.
@@ -239,19 +232,5 @@ class b2World protected () extends js.Object {
   		* Perform validation of internal data structures.
   		**/
   def Validate(): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("Box2D.Dynamics.b2World")
-@js.native
-object b2World extends js.Object {
-  /**
-  		* Locked
-  		**/
-  var e_locked: Double = js.native
-  /**
-  		* New Fixture
-  		**/
-  var e_newFixture: Double = js.native
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.weixinApp.wx
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.weixinApp.Partialbubblesbooleancomp
+import typingsSlinky.weixinApp.anon.Partialbubblesbooleancomp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

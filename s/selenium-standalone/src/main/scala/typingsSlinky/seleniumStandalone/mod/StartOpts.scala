@@ -5,7 +5,7 @@ import typingsSlinky.node.childProcessMod.ChildProcess
 import typingsSlinky.node.childProcessMod.SpawnOptions
 import typingsSlinky.node.httpMod.RequestOptions
 import typingsSlinky.node.urlMod.URL_
-import typingsSlinky.seleniumStandalone.AnonArch
+import typingsSlinky.seleniumStandalone.anon.Arch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 trait StartOpts extends js.Object {
   var basePath: js.UndefOr[String] = js.native
   var cb: js.UndefOr[js.Function2[/* error */ js.Error, /* child */ ChildProcess, Unit]] = js.native
-  var drivers: js.UndefOr[StringDictionary[AnonArch]] = js.native
+  var drivers: js.UndefOr[StringDictionary[Arch]] = js.native
   var javaArgs: js.UndefOr[js.Array[String]] = js.native
   var javaPath: js.UndefOr[String] = js.native
   var requestOpts: js.UndefOr[RequestOptions | String | URL_] = js.native
@@ -61,7 +61,7 @@ object StartOpts {
         ret
     }
     @scala.inline
-    def withDrivers(value: StringDictionary[AnonArch]): Self = {
+    def withDrivers(value: StringDictionary[Arch]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("drivers")(value.asInstanceOf[js.Any])
         ret

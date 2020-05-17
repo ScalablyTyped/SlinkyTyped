@@ -1,6 +1,6 @@
 package typingsSlinky.baiduApp.swan
 
-import typingsSlinky.baiduApp.AnonLongitude
+import typingsSlinky.baiduApp.anon.Longitude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait TranslateMarkerOptions
   	// 指定marker移动到的目标点
   var autoRotate: Boolean = js.native
   	// 指定 marker
-  var destination: AnonLongitude = js.native
+  var destination: Longitude = js.native
   	// marker 的旋转角度
   var duration: js.UndefOr[Double] = js.native
   var markerId: Double = js.native
@@ -23,7 +23,7 @@ trait TranslateMarkerOptions
 
 object TranslateMarkerOptions {
   @scala.inline
-  def apply(autoRotate: Boolean, destination: AnonLongitude, markerId: Double, rotate: Double): TranslateMarkerOptions = {
+  def apply(autoRotate: Boolean, destination: Longitude, markerId: Double, rotate: Double): TranslateMarkerOptions = {
     val __obj = js.Dynamic.literal(autoRotate = autoRotate.asInstanceOf[js.Any], destination = destination.asInstanceOf[js.Any], markerId = markerId.asInstanceOf[js.Any], rotate = rotate.asInstanceOf[js.Any])
     __obj.asInstanceOf[TranslateMarkerOptions]
   }
@@ -40,7 +40,7 @@ object TranslateMarkerOptions {
         ret
     }
     @scala.inline
-    def withDestination(value: AnonLongitude): Self = {
+    def withDestination(value: Longitude): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(value.asInstanceOf[js.Any])
         ret

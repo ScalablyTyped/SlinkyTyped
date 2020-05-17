@@ -1,13 +1,13 @@
 package typingsSlinky.c3.mod
 
-import typingsSlinky.c3.AnonInterval
+import typingsSlinky.c3.anon.Interval
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait YTickConfigurationWithTime extends YTickConfiguration {
-  var time: js.UndefOr[AnonInterval] = js.native
+  var time: js.UndefOr[Interval] = js.native
 }
 
 object YTickConfigurationWithTime {
@@ -23,7 +23,7 @@ object YTickConfigurationWithTime {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTime(value: AnonInterval): Self = {
+    def withTime(value: Interval): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,7 @@
 package typingsSlinky.tstl
 
 import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.tstl.anon.Iteratoranyanyanyany
 import typingsSlinky.tstl.binaryPredicatorMod.BinaryPredicator
 import typingsSlinky.tstl.hashMultiMapMod.HashMultiMap.Iterator
 import typingsSlinky.tstl.hashMultiMapMod.HashMultiMap.ReverseIterator

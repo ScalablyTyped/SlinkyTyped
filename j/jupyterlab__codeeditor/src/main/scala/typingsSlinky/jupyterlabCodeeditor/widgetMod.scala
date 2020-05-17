@@ -1,5 +1,7 @@
 package typingsSlinky.jupyterlabCodeeditor
 
+import org.scalajs.dom.raw.Event
+import typingsSlinky.jupyterlabCodeeditor.anon.PartialIConfig
 import typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.Factory
 import typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.IEditor
 import typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.IModel
@@ -7,7 +9,6 @@ import typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.ISelectionStyle
 import typingsSlinky.jupyterlabCodeeditor.widgetMod.CodeEditorWrapper.IOptions
 import typingsSlinky.phosphorWidgets.mod.Widget
 import typingsSlinky.phosphorWidgets.mod.Widget.ResizeMessage
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -60,7 +61,7 @@ object widgetMod extends js.Object {
       * called in response to events on the notebook panel's node. It should
       * not be called directly by user code.
       */
-    def handleEvent(event: Event_): Unit = js.native
+    def handleEvent(event: Event): Unit = js.native
     /**
       * A message handler invoked on a `'resize'` message.
       */

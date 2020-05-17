@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`process-definition`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`process-start`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`process-stop`
@@ -30,8 +29,4 @@ trait GPMessage
     */
   var `type`: informative | `process-definition` | `process-start` | `process-stop` | warning | error | empty | abort = js.native
 }
-
-@JSGlobal("__esri.GPMessage")
-@js.native
-object GPMessage extends TopLevel[GPMessageConstructor]
 

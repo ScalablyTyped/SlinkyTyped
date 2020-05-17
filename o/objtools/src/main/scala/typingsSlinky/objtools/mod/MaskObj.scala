@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait MaskObj extends /* key */ StringDictionary[Mask]
+trait MaskObj
+  extends /* key */ StringDictionary[Mask]
+     with Mask
 
 object MaskObj {
   @scala.inline

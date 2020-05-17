@@ -1,7 +1,7 @@
 package typingsSlinky.jsonapiSerializer.mod
 
-import typingsSlinky.jsonapiSerializer.AnonAbout
-import typingsSlinky.jsonapiSerializer.AnonParameter
+import typingsSlinky.jsonapiSerializer.anon.About
+import typingsSlinky.jsonapiSerializer.anon.Parameter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,9 +11,9 @@ trait JSONAPIErrorOptions extends js.Object {
   var code: js.UndefOr[String] = js.native
   var detail: js.UndefOr[String] = js.native
   var id: js.UndefOr[String] = js.native
-  var links: js.UndefOr[AnonAbout] = js.native
+  var links: js.UndefOr[About] = js.native
   var meta: js.UndefOr[js.Any] = js.native
-  var source: js.UndefOr[AnonParameter] = js.native
+  var source: js.UndefOr[Parameter] = js.native
   var status: js.UndefOr[String] = js.native
   var title: js.UndefOr[String] = js.native
 }
@@ -67,7 +67,7 @@ object JSONAPIErrorOptions {
         ret
     }
     @scala.inline
-    def withLinks(value: AnonAbout): Self = {
+    def withLinks(value: About): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("links")(value.asInstanceOf[js.Any])
         ret
@@ -91,7 +91,7 @@ object JSONAPIErrorOptions {
         ret
     }
     @scala.inline
-    def withSource(value: AnonParameter): Self = {
+    def withSource(value: Parameter): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
         ret

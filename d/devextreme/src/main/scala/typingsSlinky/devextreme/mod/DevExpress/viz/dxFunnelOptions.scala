@@ -1,10 +1,10 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonConnector
-import typingsSlinky.devextreme.AnonElementItem
-import typingsSlinky.devextreme.AnonEventItem
-import typingsSlinky.devextreme.AnonHoverStyle
-import typingsSlinky.devextreme.AnonKeepLabels
+import typingsSlinky.devextreme.anon.Connector
+import typingsSlinky.devextreme.anon.ElementItem
+import typingsSlinky.devextreme.anon.EventItem
+import typingsSlinky.devextreme.anon.HoverStyle
+import typingsSlinky.devextreme.anon.KeepLabels
 import typingsSlinky.devextreme.devextremeStrings.Bright
 import typingsSlinky.devextreme.devextremeStrings.Carmine
 import typingsSlinky.devextreme.devextremeStrings.Default
@@ -40,7 +40,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait dxFunnelOptions extends BaseWidgetOptions[dxFunnel] {
   /** Specifies adaptive layout options. */
-  var adaptiveLayout: js.UndefOr[AnonKeepLabels] = js.native
+  var adaptiveLayout: js.UndefOr[KeepLabels] = js.native
   /** Specifies the algorithm for building the funnel. */
   var algorithm: js.UndefOr[dynamicHeight | dynamicSlope] = js.native
   /** Specifies which data source field provides arguments for funnel items. The argument identifies a funnel item and represents it on the legend. */
@@ -54,9 +54,9 @@ trait dxFunnelOptions extends BaseWidgetOptions[dxFunnel] {
   /** Turns the funnel upside down. */
   var inverted: js.UndefOr[Boolean] = js.native
   /** Configures funnel items' appearance. */
-  var item: js.UndefOr[AnonHoverStyle] = js.native
+  var item: js.UndefOr[HoverStyle] = js.native
   /** Configures funnel item labels. */
-  var label: js.UndefOr[AnonConnector] = js.native
+  var label: js.UndefOr[Connector] = js.native
   /** Configures the legend. */
   var legend: js.UndefOr[dxFunnelLegend] = js.native
   /** Specifies the ratio between the height of the neck and that of the whole funnel. Accepts values from 0 to 1. Applies only if the algorithm is "dynamicHeight". */
@@ -64,13 +64,13 @@ trait dxFunnelOptions extends BaseWidgetOptions[dxFunnel] {
   /** Specifies the ratio between the width of the neck and that of the whole funnel. Accepts values from 0 to 1. Applies only if the algorithm is "dynamicHeight". */
   var neckWidth: js.UndefOr[Double] = js.native
   /** A function that is executed after the pointer enters or leaves a funnel item. */
-  var onHoverChanged: js.UndefOr[js.Function1[/* e */ AnonElementItem, _]] = js.native
+  var onHoverChanged: js.UndefOr[js.Function1[/* e */ ElementItem, _]] = js.native
   /** A function that is executed when a funnel item is clicked or tapped. */
-  var onItemClick: js.UndefOr[(js.Function1[/* e */ AnonEventItem, _]) | String] = js.native
+  var onItemClick: js.UndefOr[(js.Function1[/* e */ EventItem, _]) | String] = js.native
   /** A function that is executed when a legend item is clicked or tapped. */
-  var onLegendClick: js.UndefOr[(js.Function1[/* e */ AnonEventItem, _]) | String] = js.native
+  var onLegendClick: js.UndefOr[(js.Function1[/* e */ EventItem, _]) | String] = js.native
   /** A function that is executed when a funnel item is selected or selection is canceled. */
-  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonElementItem, _]] = js.native
+  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ ElementItem, _]] = js.native
   /** Sets the palette to be used to colorize funnel items. */
   var palette: js.UndefOr[
     js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
@@ -103,7 +103,7 @@ object dxFunnelOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAdaptiveLayout(value: AnonKeepLabels): Self = {
+    def withAdaptiveLayout(value: KeepLabels): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("adaptiveLayout")(value.asInstanceOf[js.Any])
         ret
@@ -187,7 +187,7 @@ object dxFunnelOptions {
         ret
     }
     @scala.inline
-    def withItem(value: AnonHoverStyle): Self = {
+    def withItem(value: HoverStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
         ret
@@ -199,7 +199,7 @@ object dxFunnelOptions {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonConnector): Self = {
+    def withLabel(value: Connector): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -247,7 +247,7 @@ object dxFunnelOptions {
         ret
     }
     @scala.inline
-    def withOnHoverChanged(value: /* e */ AnonElementItem => _): Self = {
+    def withOnHoverChanged(value: /* e */ ElementItem => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onHoverChanged")(js.Any.fromFunction1(value))
         ret
@@ -259,13 +259,13 @@ object dxFunnelOptions {
         ret
     }
     @scala.inline
-    def withOnItemClickFunction1(value: /* e */ AnonEventItem => _): Self = {
+    def withOnItemClickFunction1(value: /* e */ EventItem => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnItemClick(value: (js.Function1[/* e */ AnonEventItem, _]) | String): Self = {
+    def withOnItemClick(value: (js.Function1[/* e */ EventItem, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(value.asInstanceOf[js.Any])
         ret
@@ -277,13 +277,13 @@ object dxFunnelOptions {
         ret
     }
     @scala.inline
-    def withOnLegendClickFunction1(value: /* e */ AnonEventItem => _): Self = {
+    def withOnLegendClickFunction1(value: /* e */ EventItem => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLegendClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnLegendClick(value: (js.Function1[/* e */ AnonEventItem, _]) | String): Self = {
+    def withOnLegendClick(value: (js.Function1[/* e */ EventItem, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLegendClick")(value.asInstanceOf[js.Any])
         ret
@@ -295,7 +295,7 @@ object dxFunnelOptions {
         ret
     }
     @scala.inline
-    def withOnSelectionChanged(value: /* e */ AnonElementItem => _): Self = {
+    def withOnSelectionChanged(value: /* e */ ElementItem => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.Any.fromFunction1(value))
         ret

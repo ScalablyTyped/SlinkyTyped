@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonSpecifiers
+import typingsSlinky.astTypes.anon.Specifiers
 import typingsSlinky.astTypes.kindsMod.DeclarationKind
 import typingsSlinky.astTypes.kindsMod.ExportSpecifierKind
 import typingsSlinky.astTypes.kindsMod.LiteralKind
@@ -17,6 +17,6 @@ trait ExportNamedDeclarationBuilder extends js.Object {
   def apply(declaration: DeclarationKind): ExportNamedDeclaration = js.native
   def apply(declaration: DeclarationKind, specifiers: js.Array[ExportSpecifierKind]): ExportNamedDeclaration = js.native
   def apply(declaration: DeclarationKind, specifiers: js.Array[ExportSpecifierKind], source: LiteralKind): ExportNamedDeclaration = js.native
-  def from(params: AnonSpecifiers): ExportNamedDeclaration = js.native
+  def from(params: Specifiers): ExportNamedDeclaration = js.native
 }
 

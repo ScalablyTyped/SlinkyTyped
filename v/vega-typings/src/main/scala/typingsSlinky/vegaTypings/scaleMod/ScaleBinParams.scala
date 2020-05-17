@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ScaleBinParams extends _ScaleBins {
+trait ScaleBinParams extends ScaleBins {
   /**
     * The starting (lowest-valued) bin boundary.
     *

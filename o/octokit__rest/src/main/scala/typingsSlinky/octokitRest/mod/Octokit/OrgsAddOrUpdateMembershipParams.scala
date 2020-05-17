@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait OrgsAddOrUpdateMembershipParams extends js.Object {
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
   /**
     * The role to give the user in the organization. Can be one of:
     * \* `admin` - The user will become an owner of the organization.
@@ -20,8 +21,9 @@ trait OrgsAddOrUpdateMembershipParams extends js.Object {
 
 object OrgsAddOrUpdateMembershipParams {
   @scala.inline
-  def apply(org: String, username: String): OrgsAddOrUpdateMembershipParams = {
-    val __obj = js.Dynamic.literal(org = org.asInstanceOf[js.Any], username = username.asInstanceOf[js.Any])
+  def apply(org_ : String, username: String): OrgsAddOrUpdateMembershipParams = {
+    val __obj = js.Dynamic.literal(username = username.asInstanceOf[js.Any])
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrgsAddOrUpdateMembershipParams]
   }
   @scala.inline
@@ -31,7 +33,7 @@ object OrgsAddOrUpdateMembershipParams {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

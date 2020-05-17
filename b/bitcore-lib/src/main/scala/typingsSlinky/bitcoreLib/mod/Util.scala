@@ -1,18 +1,18 @@
 package typingsSlinky.bitcoreLib.mod
 
-import typingsSlinky.bitcoreLib.AnonReverse
+import typingsSlinky.bitcoreLib.anon.Reverse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Util extends js.Object {
-  val buffer: AnonReverse = js.native
+  val buffer: Reverse = js.native
 }
 
 object Util {
   @scala.inline
-  def apply(buffer: AnonReverse): Util = {
+  def apply(buffer: Reverse): Util = {
     val __obj = js.Dynamic.literal(buffer = buffer.asInstanceOf[js.Any])
     __obj.asInstanceOf[Util]
   }
@@ -23,7 +23,7 @@ object Util {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBuffer(value: AnonReverse): Self = {
+    def withBuffer(value: Reverse): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(value.asInstanceOf[js.Any])
         ret

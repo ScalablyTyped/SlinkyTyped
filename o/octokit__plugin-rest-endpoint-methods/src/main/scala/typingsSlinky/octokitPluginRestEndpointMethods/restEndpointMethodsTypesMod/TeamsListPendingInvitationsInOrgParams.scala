@@ -6,7 +6,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait TeamsListPendingInvitationsInOrgParams extends js.Object {
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
   /**
     * Page number of the results to fetch.
     */
@@ -20,8 +21,9 @@ trait TeamsListPendingInvitationsInOrgParams extends js.Object {
 
 object TeamsListPendingInvitationsInOrgParams {
   @scala.inline
-  def apply(org: String, team_slug: String): TeamsListPendingInvitationsInOrgParams = {
-    val __obj = js.Dynamic.literal(org = org.asInstanceOf[js.Any], team_slug = team_slug.asInstanceOf[js.Any])
+  def apply(org_ : String, team_slug: String): TeamsListPendingInvitationsInOrgParams = {
+    val __obj = js.Dynamic.literal(team_slug = team_slug.asInstanceOf[js.Any])
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[TeamsListPendingInvitationsInOrgParams]
   }
   @scala.inline
@@ -31,7 +33,7 @@ object TeamsListPendingInvitationsInOrgParams {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

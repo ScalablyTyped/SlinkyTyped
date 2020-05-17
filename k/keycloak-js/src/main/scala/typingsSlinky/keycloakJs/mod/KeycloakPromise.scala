@@ -5,7 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait KeycloakPromise[TSuccess, TError] extends js.Object {
+trait KeycloakPromise[TSuccess, TError]
+  extends CompatPromise[js.Any, TSuccess, TError] {
   /**
   		 * Function to call if the promised action throws an error.
   		 */

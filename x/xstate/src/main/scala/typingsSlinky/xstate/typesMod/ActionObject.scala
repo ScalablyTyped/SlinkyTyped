@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ActionObject[TContext, TEvent /* <: EventObject */]
   extends /* other */ StringDictionary[js.Any]
-     with _Action[TContext, TEvent] {
+     with Action[TContext, TEvent] {
   /**
     * The implementation for executing the action.
     */

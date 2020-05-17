@@ -1,7 +1,7 @@
 package typingsSlinky.postmanCollection.mod
 
-import typingsSlinky.postmanCollection.AnonFile
-import typingsSlinky.postmanCollection.AnonSrcString
+import typingsSlinky.postmanCollection.anon.File
+import typingsSlinky.postmanCollection.anon.SrcString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class RequestBody protected () extends PropertyBase[RequestBodyDefinition] {
   def this(options: RequestBodyDefinition) = this()
-  var file: js.UndefOr[AnonSrcString | String] = js.native
+  var file: js.UndefOr[SrcString | String] = js.native
   var formdata: js.UndefOr[js.Array[FormParamDefinition] | PropertyList[FormParam]] = js.native
   var mode: String = js.native
   var raw: js.UndefOr[String] = js.native
@@ -25,6 +25,6 @@ class RequestBody protected () extends PropertyBase[RequestBodyDefinition] {
 @JSImport("postman-collection", "RequestBody")
 @js.native
 object RequestBody extends js.Object {
-  var MODES: AnonFile = js.native
+  var MODES: File = js.native
 }
 

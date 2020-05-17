@@ -1,8 +1,8 @@
 package typingsSlinky.yup.mod
 
 import typingsSlinky.std.Exclude
-import typingsSlinky.yup.Anon0
-import typingsSlinky.yup.Anon1
+import typingsSlinky.yup.anon.`0`
+import typingsSlinky.yup.anon.`1`
 import typingsSlinky.yup.yupBooleans.`false`
 import typingsSlinky.yup.yupBooleans.`true`
 import scala.scalajs.js
@@ -12,17 +12,17 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DateSchema[T /* <: js.UndefOr[js.Date | Null] */] extends Schema[T] {
   def max(limit: String): DateSchema[T] = js.native
-  def max(limit: String, message: TestOptionsMessage[Anon1, _]): DateSchema[T] = js.native
+  def max(limit: String, message: TestOptionsMessage[`1`, _]): DateSchema[T] = js.native
   def max(limit: js.Date): DateSchema[T] = js.native
-  def max(limit: js.Date, message: TestOptionsMessage[Anon1, _]): DateSchema[T] = js.native
+  def max(limit: js.Date, message: TestOptionsMessage[`1`, _]): DateSchema[T] = js.native
   def max(limit: Ref_): DateSchema[T] = js.native
-  def max(limit: Ref_, message: TestOptionsMessage[Anon1, _]): DateSchema[T] = js.native
+  def max(limit: Ref_, message: TestOptionsMessage[`1`, _]): DateSchema[T] = js.native
   def min(limit: String): DateSchema[T] = js.native
-  def min(limit: String, message: TestOptionsMessage[Anon0, _]): DateSchema[T] = js.native
+  def min(limit: String, message: TestOptionsMessage[`0`, _]): DateSchema[T] = js.native
   def min(limit: js.Date): DateSchema[T] = js.native
-  def min(limit: js.Date, message: TestOptionsMessage[Anon0, _]): DateSchema[T] = js.native
+  def min(limit: js.Date, message: TestOptionsMessage[`0`, _]): DateSchema[T] = js.native
   def min(limit: Ref_): DateSchema[T] = js.native
-  def min(limit: Ref_, message: TestOptionsMessage[Anon0, _]): DateSchema[T] = js.native
+  def min(limit: Ref_, message: TestOptionsMessage[`0`, _]): DateSchema[T] = js.native
   def notRequired(): DateSchema[js.UndefOr[T]] = js.native
   def nullable(): DateSchema[T | Null] = js.native
   def nullable(isNullable: Boolean): DateSchema[T] = js.native

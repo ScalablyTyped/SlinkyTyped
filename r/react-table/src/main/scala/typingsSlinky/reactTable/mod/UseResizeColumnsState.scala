@@ -1,18 +1,18 @@
 package typingsSlinky.reactTable.mod
 
-import typingsSlinky.reactTable.AnonColumnWidth
+import typingsSlinky.reactTable.anon.ColumnWidth
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait UseResizeColumnsState[D /* <: js.Object */] extends js.Object {
-  var columnResizing: AnonColumnWidth = js.native
+  var columnResizing: ColumnWidth = js.native
 }
 
 object UseResizeColumnsState {
   @scala.inline
-  def apply[D](columnResizing: AnonColumnWidth): UseResizeColumnsState[D] = {
+  def apply[D](columnResizing: ColumnWidth): UseResizeColumnsState[D] = {
     val __obj = js.Dynamic.literal(columnResizing = columnResizing.asInstanceOf[js.Any])
     __obj.asInstanceOf[UseResizeColumnsState[D]]
   }
@@ -23,7 +23,7 @@ object UseResizeColumnsState {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[D] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[D] with Other]
     @scala.inline
-    def withColumnResizing(value: AnonColumnWidth): Self[D] = {
+    def withColumnResizing(value: ColumnWidth): Self[D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnResizing")(value.asInstanceOf[js.Any])
         ret

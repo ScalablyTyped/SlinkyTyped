@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Word
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJs.Word.Interfaces.SectionData
 import typingsSlinky.officeJs.Word.Interfaces.SectionLoadOptions
 import typingsSlinky.officeJs.Word.Interfaces.SectionUpdateData
+import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.EvenPages
 import typingsSlinky.officeJs.officeJsStrings.FirstPage
 import typingsSlinky.officeJs.officeJsStrings.Primary
@@ -19,9 +19,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: WordApi 1.1]
   */
-@JSGlobal("Word.Section")
 @js.native
-class Section () extends ClientObject {
+trait Section extends ClientObject {
   /**
     *
     * Gets the body object of the section. This does not include the header/footer and other section metadata. Read-only.
@@ -110,8 +109,8 @@ class Section () extends ClientObject {
   def load(): Section = js.native
   def load(option: String): Section = js.native
   def load(option: js.Array[String]): Section = js.native
-  def load(option: AnonExpand): Section = js.native
   def load(option: SectionLoadOptions): Section = js.native
+  def load(option: Expand): Section = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.
     *
     * @remarks

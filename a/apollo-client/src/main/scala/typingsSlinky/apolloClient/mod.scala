@@ -1,5 +1,7 @@
 package typingsSlinky.apolloClient
 
+import typingsSlinky.apolloClient.anon.ErrorMessage
+import typingsSlinky.apolloClient.anon.Options
 import typingsSlinky.apolloClient.apolloClientMod.ApolloClientOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,13 +19,13 @@ object mod extends js.Object {
   @js.native
   class ApolloError protected ()
     extends typingsSlinky.apolloClient.apolloErrorMod.ApolloError {
-    def this(hasGraphQLErrorsNetworkErrorErrorMessageExtraInfo: AnonErrorMessage) = this()
+    def this(hasGraphQLErrorsNetworkErrorErrorMessageExtraInfo: ErrorMessage) = this()
   }
   
   @js.native
   class ObservableQuery[TData, TVariables] protected ()
     extends typingsSlinky.apolloClient.observableQueryMod.ObservableQuery[TData, TVariables] {
-    def this(hasQueryManagerOptionsShouldSubscribe: AnonOptions[TVariables]) = this()
+    def this(hasQueryManagerOptionsShouldSubscribe: Options[TVariables]) = this()
   }
   
   @js.native

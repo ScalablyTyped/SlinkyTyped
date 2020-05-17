@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.elbv2Mod
 
-import typingsSlinky.awsSdk.DescribeLoadBalancersInpu
+import typingsSlinky.awsSdk.anon.DescribeLoadBalancersInpu
 import typingsSlinky.awsSdk.awsSdkStrings.loadBalancerAvailable
 import typingsSlinky.awsSdk.awsSdkStrings.loadBalancerExists
 import typingsSlinky.awsSdk.awsSdkStrings.loadBalancersDeleted
@@ -534,11 +534,11 @@ trait ELBv2 extends Service {
     * Waits for the targetDeregistered state by periodically calling the underlying ELBv2.describeTargetHealthoperation every 15 seconds (at most 40 times).
     */
   @JSName("waitFor")
-  def waitFor_targetDeregistered(state: targetDeregistered, params: typingsSlinky.awsSdk.DescribeTargetHealthInput): Request[DescribeTargetHealthOutput, AWSError] = js.native
+  def waitFor_targetDeregistered(state: targetDeregistered, params: typingsSlinky.awsSdk.anon.DescribeTargetHealthInput): Request[DescribeTargetHealthOutput, AWSError] = js.native
   @JSName("waitFor")
   def waitFor_targetDeregistered(
     state: targetDeregistered,
-    params: typingsSlinky.awsSdk.DescribeTargetHealthInput,
+    params: typingsSlinky.awsSdk.anon.DescribeTargetHealthInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeTargetHealthOutput, Unit]
   ): Request[DescribeTargetHealthOutput, AWSError] = js.native
   /**
@@ -555,11 +555,11 @@ trait ELBv2 extends Service {
     * Waits for the targetInService state by periodically calling the underlying ELBv2.describeTargetHealthoperation every 15 seconds (at most 40 times).
     */
   @JSName("waitFor")
-  def waitFor_targetInService(state: targetInService, params: typingsSlinky.awsSdk.DescribeTargetHealthInput): Request[DescribeTargetHealthOutput, AWSError] = js.native
+  def waitFor_targetInService(state: targetInService, params: typingsSlinky.awsSdk.anon.DescribeTargetHealthInput): Request[DescribeTargetHealthOutput, AWSError] = js.native
   @JSName("waitFor")
   def waitFor_targetInService(
     state: targetInService,
-    params: typingsSlinky.awsSdk.DescribeTargetHealthInput,
+    params: typingsSlinky.awsSdk.anon.DescribeTargetHealthInput,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeTargetHealthOutput, Unit]
   ): Request[DescribeTargetHealthOutput, AWSError] = js.native
 }

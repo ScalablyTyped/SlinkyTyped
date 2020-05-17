@@ -1,6 +1,7 @@
 package typingsSlinky.antdMobile
 
 import slinky.core.TagMod
+import typingsSlinky.antdMobile.anon.Close
 import typingsSlinky.antdMobile.modalPropsTypeMod.CallbackOrActions
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -10,20 +11,20 @@ import scala.scalajs.js.annotation._
 @JSImport("antd-mobile/lib/modal/prompt", JSImport.Namespace)
 @js.native
 object promptMod extends js.Object {
-  def default(title: TagMod[Any], message: TagMod[Any], callbackOrActions: CallbackOrActions[CSSProperties]): AnonClose = js.native
+  def default(title: TagMod[Any], message: TagMod[Any], callbackOrActions: CallbackOrActions[CSSProperties]): Close = js.native
   def default(
     title: TagMod[Any],
     message: TagMod[Any],
     callbackOrActions: CallbackOrActions[CSSProperties],
     `type`: String
-  ): AnonClose = js.native
+  ): Close = js.native
   def default(
     title: TagMod[Any],
     message: TagMod[Any],
     callbackOrActions: CallbackOrActions[CSSProperties],
     `type`: String,
     defaultValue: String
-  ): AnonClose = js.native
+  ): Close = js.native
   def default(
     title: TagMod[Any],
     message: TagMod[Any],
@@ -31,7 +32,7 @@ object promptMod extends js.Object {
     `type`: String,
     defaultValue: String,
     placeholders: js.Array[String]
-  ): AnonClose = js.native
+  ): Close = js.native
   def default(
     title: TagMod[Any],
     message: TagMod[Any],
@@ -40,6 +41,6 @@ object promptMod extends js.Object {
     defaultValue: String,
     placeholders: js.Array[String],
     platform: String
-  ): AnonClose = js.native
+  ): Close = js.native
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeAudio.mod
 
-import typingsSlinky.reactNativeAudio.AnonAudioFileURL
-import typingsSlinky.reactNativeAudio.AnonCurrentTime
+import typingsSlinky.reactNativeAudio.anon.AudioFileURL
+import typingsSlinky.reactNativeAudio.anon.CurrentTime
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,8 +10,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object AudioRecorder extends js.Object {
   def checkAuthorizationStatus(): js.Promise[Boolean] = js.native
-  def onFinished(res: AnonAudioFileURL): Unit = js.native
-  def onProgress(res: AnonCurrentTime): Unit = js.native
+  def onFinished(res: AudioFileURL): Unit = js.native
+  def onProgress(res: CurrentTime): Unit = js.native
   def pauseRecording(): js.Promise[String] = js.native
   def prepareRecordingAtPath(path: String, options: RecordingOptions): js.Promise[String] = js.native
   def requestAuthorization(): js.Promise[Boolean] = js.native

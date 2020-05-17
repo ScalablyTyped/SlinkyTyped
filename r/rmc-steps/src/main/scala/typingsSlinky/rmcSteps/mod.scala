@@ -1,5 +1,6 @@
 package typingsSlinky.rmcSteps
 
+import typingsSlinky.rmcSteps.anon.Current
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +19,7 @@ object mod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var defaultProps: AnonCurrent = js.native
+    var defaultProps: Current = js.native
   }
   
 }

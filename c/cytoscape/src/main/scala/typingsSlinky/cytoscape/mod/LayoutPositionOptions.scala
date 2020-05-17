@@ -124,18 +124,6 @@ object LayoutPositionOptions {
         ret
     }
     @scala.inline
-    def withReady(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutReady: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ready")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withSpacingFactor(value: Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("spacingFactor")(value.asInstanceOf[js.Any])
@@ -145,18 +133,6 @@ object LayoutPositionOptions {
     def withoutSpacingFactor: Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("spacingFactor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withStop(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutStop: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.undefined)
         ret
     }
     @scala.inline

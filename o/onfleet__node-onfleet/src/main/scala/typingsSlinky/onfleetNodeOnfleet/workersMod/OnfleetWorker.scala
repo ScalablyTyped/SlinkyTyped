@@ -1,6 +1,6 @@
 package typingsSlinky.onfleetNodeOnfleet.workersMod
 
-import typingsSlinky.onfleetNodeOnfleet.AnonAppVersion
+import typingsSlinky.onfleetNodeOnfleet.anon.AppVersion
 import typingsSlinky.onfleetNodeOnfleet.destinationsMod.Location
 import typingsSlinky.onfleetNodeOnfleet.metadataMod.OnfleetMetadata
 import scala.scalajs.js
@@ -27,7 +27,7 @@ trait OnfleetWorker extends js.Object {
   var timeCreated: Double = js.native
   var timeLastModified: Double = js.native
   var timeLastSeen: Double = js.native
-  var userData: AnonAppVersion = js.native
+  var userData: AppVersion = js.native
   var vehicle: Vehicle | Null = js.native
 }
 
@@ -49,7 +49,7 @@ object OnfleetWorker {
     timeCreated: Double,
     timeLastModified: Double,
     timeLastSeen: Double,
-    userData: AnonAppVersion
+    userData: AppVersion
   ): OnfleetWorker = {
     val __obj = js.Dynamic.literal(accountStatus = accountStatus.asInstanceOf[js.Any], capacity = capacity.asInstanceOf[js.Any], displayName = displayName.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], onDuty = onDuty.asInstanceOf[js.Any], organization = organization.asInstanceOf[js.Any], phone = phone.asInstanceOf[js.Any], tasks = tasks.asInstanceOf[js.Any], teams = teams.asInstanceOf[js.Any], timeCreated = timeCreated.asInstanceOf[js.Any], timeLastModified = timeLastModified.asInstanceOf[js.Any], timeLastSeen = timeLastSeen.asInstanceOf[js.Any], userData = userData.asInstanceOf[js.Any])
     __obj.asInstanceOf[OnfleetWorker]
@@ -151,7 +151,7 @@ object OnfleetWorker {
         ret
     }
     @scala.inline
-    def withUserData(value: AnonAppVersion): Self = {
+    def withUserData(value: AppVersion): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("userData")(value.asInstanceOf[js.Any])
         ret

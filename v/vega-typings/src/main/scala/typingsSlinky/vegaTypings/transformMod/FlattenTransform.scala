@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait FlattenTransform extends _Transforms {
+trait FlattenTransform extends Transforms {
   var as: js.UndefOr[(js.Array[String | SignalRef]) | SignalRef] = js.native
   var fields: js.Array[FieldRef] | SignalRef = js.native
   var index: js.UndefOr[String | SignalRef] = js.native

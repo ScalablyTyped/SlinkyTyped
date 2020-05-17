@@ -3,14 +3,15 @@ package typingsSlinky.sharepoint.SP.UserProfiles
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.sharepoint.SP.ClientValueObject
 import typingsSlinky.sharepoint.SP.Guid
+import typingsSlinky.sharepoint.SP.SerializationContext
+import typingsSlinky.sharepoint.SP.XmlWriter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a followed content resource. */
-@JSGlobal("SP.UserProfiles.FollowedItem")
 @js.native
-class FollowedItem () extends ClientValueObject {
+trait FollowedItem extends ClientValueObject {
   /** Additional metadata associated with this item */
   def get_data(): StringDictionary[js.Any] = js.native
   /** Specifies the type of the file if this item is a file. Otherwise, this property is the empty string. */
@@ -91,5 +92,279 @@ class FollowedItem () extends ClientValueObject {
   def set_url(value: String): String = js.native
   /** Specifies the site identification (GUID) in the Content database for this item if it is a site, or the identification of its parent site if this item is a document. */
   def set_webId(value: Guid): js.Any = js.native
+}
+
+object FollowedItem {
+  @scala.inline
+  def apply(
+    customFromJson: js.Any => Boolean,
+    customWriteToXml: (XmlWriter, SerializationContext) => Boolean,
+    fromJson: js.Any => Unit,
+    get_data: () => StringDictionary[js.Any],
+    get_fileType: () => String,
+    get_fileTypeProgid: () => String,
+    get_flags: () => String,
+    get_hasFeed: () => Boolean,
+    get_hidden: () => Boolean,
+    get_iconUrl: () => String,
+    get_itemId: () => Double,
+    get_itemType: () => FollowedItemType,
+    get_listId: () => String,
+    get_parentUrl: () => String,
+    get_serverUrlProgid: () => String,
+    get_siteId: () => String,
+    get_subtype: () => Double,
+    get_title: () => String,
+    get_typeId: () => String,
+    get_uniqueId: () => Guid,
+    get_url: () => String,
+    get_webId: () => Guid,
+    set_data: StringDictionary[js.Any] => StringDictionary[js.Any],
+    set_fileType: String => String,
+    set_fileTypeProgid: String => String,
+    set_flags: String => String,
+    set_hasFeed: Boolean => Boolean,
+    set_hidden: Boolean => Boolean,
+    set_iconUrl: String => String,
+    set_itemId: Double => Double,
+    set_itemType: FollowedItemType => FollowedItemType,
+    set_listId: String => String,
+    set_parentUrl: String => String,
+    set_serverUrlProgid: String => String,
+    set_siteId: String => String,
+    set_subtype: Double => Double,
+    set_title: String => String,
+    set_uniqueId: Guid => Guid,
+    set_url: String => String,
+    set_webId: Guid => js.Any,
+    writeToXml: (XmlWriter, SerializationContext) => Unit
+  ): FollowedItem = {
+    val __obj = js.Dynamic.literal(customFromJson = js.Any.fromFunction1(customFromJson), customWriteToXml = js.Any.fromFunction2(customWriteToXml), fromJson = js.Any.fromFunction1(fromJson), get_data = js.Any.fromFunction0(get_data), get_fileType = js.Any.fromFunction0(get_fileType), get_fileTypeProgid = js.Any.fromFunction0(get_fileTypeProgid), get_flags = js.Any.fromFunction0(get_flags), get_hasFeed = js.Any.fromFunction0(get_hasFeed), get_hidden = js.Any.fromFunction0(get_hidden), get_iconUrl = js.Any.fromFunction0(get_iconUrl), get_itemId = js.Any.fromFunction0(get_itemId), get_itemType = js.Any.fromFunction0(get_itemType), get_listId = js.Any.fromFunction0(get_listId), get_parentUrl = js.Any.fromFunction0(get_parentUrl), get_serverUrlProgid = js.Any.fromFunction0(get_serverUrlProgid), get_siteId = js.Any.fromFunction0(get_siteId), get_subtype = js.Any.fromFunction0(get_subtype), get_title = js.Any.fromFunction0(get_title), get_typeId = js.Any.fromFunction0(get_typeId), get_uniqueId = js.Any.fromFunction0(get_uniqueId), get_url = js.Any.fromFunction0(get_url), get_webId = js.Any.fromFunction0(get_webId), set_data = js.Any.fromFunction1(set_data), set_fileType = js.Any.fromFunction1(set_fileType), set_fileTypeProgid = js.Any.fromFunction1(set_fileTypeProgid), set_flags = js.Any.fromFunction1(set_flags), set_hasFeed = js.Any.fromFunction1(set_hasFeed), set_hidden = js.Any.fromFunction1(set_hidden), set_iconUrl = js.Any.fromFunction1(set_iconUrl), set_itemId = js.Any.fromFunction1(set_itemId), set_itemType = js.Any.fromFunction1(set_itemType), set_listId = js.Any.fromFunction1(set_listId), set_parentUrl = js.Any.fromFunction1(set_parentUrl), set_serverUrlProgid = js.Any.fromFunction1(set_serverUrlProgid), set_siteId = js.Any.fromFunction1(set_siteId), set_subtype = js.Any.fromFunction1(set_subtype), set_title = js.Any.fromFunction1(set_title), set_uniqueId = js.Any.fromFunction1(set_uniqueId), set_url = js.Any.fromFunction1(set_url), set_webId = js.Any.fromFunction1(set_webId), writeToXml = js.Any.fromFunction2(writeToXml))
+    __obj.asInstanceOf[FollowedItem]
+  }
+  @scala.inline
+  implicit class FollowedItemOps[Self <: FollowedItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGet_data(value: () => StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_data")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_fileType(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_fileType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_fileTypeProgid(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_fileTypeProgid")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_flags(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_flags")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_hasFeed(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_hasFeed")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_hidden(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_hidden")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_iconUrl(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_iconUrl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_itemId(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_itemId")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_itemType(value: () => FollowedItemType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_itemType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_listId(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_listId")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_parentUrl(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_parentUrl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_serverUrlProgid(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_serverUrlProgid")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_siteId(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_siteId")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_subtype(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_subtype")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_title(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_title")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_uniqueId(value: () => Guid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_uniqueId")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_url(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_url")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_webId(value: () => Guid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_webId")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSet_data(value: StringDictionary[js.Any] => StringDictionary[js.Any]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_data")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_fileType(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_fileType")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_fileTypeProgid(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_fileTypeProgid")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_flags(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_flags")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_hasFeed(value: Boolean => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_hasFeed")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_hidden(value: Boolean => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_hidden")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_iconUrl(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_iconUrl")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_itemId(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_itemId")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_itemType(value: FollowedItemType => FollowedItemType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_itemType")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_listId(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_listId")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_parentUrl(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_parentUrl")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_serverUrlProgid(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_serverUrlProgid")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_siteId(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_siteId")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_subtype(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_subtype")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_title(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_title")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_uniqueId(value: Guid => Guid): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_uniqueId")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_url(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_url")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_webId(value: Guid => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_webId")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

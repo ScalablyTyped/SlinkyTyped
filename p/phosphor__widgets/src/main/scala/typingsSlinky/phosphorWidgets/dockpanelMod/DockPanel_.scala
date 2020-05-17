@@ -1,5 +1,6 @@
 package typingsSlinky.phosphorWidgets.dockpanelMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.phosphorAlgorithm.iterMod.IIterator
 import typingsSlinky.phosphorSignaling.mod.ISignal
@@ -11,7 +12,6 @@ import typingsSlinky.phosphorWidgets.dockpanelMod.DockPanel.IRenderer
 import typingsSlinky.phosphorWidgets.dockpanelMod.DockPanel.Mode
 import typingsSlinky.phosphorWidgets.tabbarMod.TabBar
 import typingsSlinky.phosphorWidgets.widgetMod.Widget
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -179,7 +179,7 @@ class DockPanel_ () extends Widget {
     * called in response to events on the panel's DOM node. It should
     * not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
   /**
     * Create an iterator over the handles in the panel.
     *

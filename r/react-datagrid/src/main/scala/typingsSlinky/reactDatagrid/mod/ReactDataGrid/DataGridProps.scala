@@ -2,7 +2,7 @@ package typingsSlinky.reactDatagrid.mod.ReactDataGrid
 
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Props
-import typingsSlinky.reactDatagrid.AnonPageSize
+import typingsSlinky.reactDatagrid.anon.PageSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait DataGridProps extends Props[DataGrid] {
     * to render in the grid. For remote data, a string url, or a function
     * that returns a promise.
     */
-  var dataSource: js.Array[_] | String | (js.Function1[/* query */ AnonPageSize, js.Promise[js.Array[_]]]) = js.native
+  var dataSource: js.Array[_] | String | (js.Function1[/* query */ PageSize, js.Promise[js.Array[_]]]) = js.native
   var dataSourceCount: js.UndefOr[Double] = js.native
   var defaultPage: js.UndefOr[Double] = js.native
   var defaultPageSize: js.UndefOr[Double] = js.native
@@ -152,7 +152,7 @@ object DataGridProps {
   @scala.inline
   def apply(
     columns: js.Array[Column],
-    dataSource: js.Array[_] | String | (js.Function1[/* query */ AnonPageSize, js.Promise[js.Array[_]]]),
+    dataSource: js.Array[_] | String | (js.Function1[/* query */ PageSize, js.Promise[js.Array[_]]]),
     idProperty: String
   ): DataGridProps = {
     val __obj = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], dataSource = dataSource.asInstanceOf[js.Any], idProperty = idProperty.asInstanceOf[js.Any])
@@ -171,13 +171,13 @@ object DataGridProps {
         ret
     }
     @scala.inline
-    def withDataSourceFunction1(value: /* query */ AnonPageSize => js.Promise[js.Array[_]]): Self = {
+    def withDataSourceFunction1(value: /* query */ PageSize => js.Promise[js.Array[_]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDataSource(value: js.Array[_] | String | (js.Function1[/* query */ AnonPageSize, js.Promise[js.Array[_]]])): Self = {
+    def withDataSource(value: js.Array[_] | String | (js.Function1[/* query */ PageSize, js.Promise[js.Array[_]]])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataSource")(value.asInstanceOf[js.Any])
         ret

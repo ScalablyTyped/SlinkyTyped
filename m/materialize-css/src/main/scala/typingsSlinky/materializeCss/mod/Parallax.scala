@@ -1,8 +1,9 @@
 package typingsSlinky.materializeCss.mod
 
 import org.scalajs.dom.raw.Element
+import typingsSlinky.materializeCss.M.ParallaxOptions
 import typingsSlinky.materializeCss.MElements
-import typingsSlinky.materializeCss.PartialParallaxOptions
+import typingsSlinky.materializeCss.anon.PartialParallaxOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation._
 @JSImport("materialize-css", "Parallax")
 @js.native
 class Parallax ()
-  extends typingsSlinky.materializeCss.M.Parallax
+  extends typingsSlinky.materializeCss.M.Component[ParallaxOptions]
 
 /* static members */
 @JSImport("materialize-css", "Parallax")

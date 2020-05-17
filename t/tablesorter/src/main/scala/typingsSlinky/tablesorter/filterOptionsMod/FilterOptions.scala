@@ -1,14 +1,14 @@
 package typingsSlinky.tablesorter.filterOptionsMod
 
-import typingsSlinky.jquery.JQuery_.Selector
+import typingsSlinky.jquery.JQuery.Selector
 import typingsSlinky.tablesorter.filterControlFactoryMod.FilterControlFactory
 import typingsSlinky.tablesorter.filterFunctionCollectionMod.FilterFunctionCollection
 import typingsSlinky.tablesorter.filterFunctionMod.FilterFunction
 import typingsSlinky.tablesorter.filterPlaceholdersMod.FilterPlaceholders
 import typingsSlinky.tablesorter.mappedSettingsMod.MappedSettings
 import typingsSlinky.tablesorter.matchTypeSettingsMod.MatchTypeSettings
-import typingsSlinky.tablesorter.mod._Global_.HTMLElement
-import typingsSlinky.tablesorter.mod._Global_.JQuery
+import typingsSlinky.tablesorter.mod.global.HTMLElement
+import typingsSlinky.tablesorter.mod.global.JQuery
 import typingsSlinky.tablesorter.selectSourcesMod.SelectSources
 import typingsSlinky.tablesorter.tablesorterConfigurationStoreMod.TablesorterConfigurationStore
 import typingsSlinky.tablesorter.validSelectSourcesMod.ValidSelectSources

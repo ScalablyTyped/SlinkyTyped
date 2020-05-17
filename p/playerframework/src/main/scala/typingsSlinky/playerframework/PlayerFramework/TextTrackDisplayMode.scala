@@ -1,6 +1,5 @@
 package typingsSlinky.playerframework.PlayerFramework
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,20 +33,6 @@ object TextTrackDisplayMode extends js.Object {
   		*/
   @js.native
   sealed trait none extends TextTrackDisplayMode
-  
-  @JSBracketAccess
-  def apply(value: Double): js.UndefOr[TextTrackDisplayMode with Double] = js.native
-  /* 3 */ @js.native
-  object all extends TopLevel[all with Double]
-  
-  /* 1 */ @js.native
-  object custom extends TopLevel[custom with Double]
-  
-  /* 2 */ @js.native
-  object native extends TopLevel[native with Double]
-  
-  /* 0 */ @js.native
-  object none extends TopLevel[none with Double]
   
 }
 

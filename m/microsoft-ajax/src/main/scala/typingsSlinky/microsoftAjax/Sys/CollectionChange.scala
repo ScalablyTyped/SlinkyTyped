@@ -8,30 +8,8 @@ import scala.scalajs.js.annotation._
   * Describes a change in a collection.
   * @see {@link http://msdn.microsoft.com/en-us/library/dd393798(v=vs.100).aspx}
   */
-@JSGlobal("Sys.CollectionChange")
 @js.native
-class CollectionChange protected () extends js.Object {
-  //#region Constructors
-  /**
-    * Creates a CollectionChange object based on the supplied parameters.
-    * @param action
-    *           A NotifyCollectionChangedAction enumeration value.
-    * @param newItems
-    *           (Optional) The items that were added when the action is add or replace.
-    * @param newStartingIndex
-    *           (Optional) An integer that represents the index where new items have been inserted.
-    * @param oldItems
-    *           (Optional) The items that were removed when the action is remove or replace.
-    *  @param oldStartingIndex
-    *           (Optional) An integer that represents the index where old items have been removed.
-    */
-  def this(
-    action: NotifyCollectionChangedAction,
-    newItems: js.Array[_],
-    newStartingIndex: Double,
-    oldItems: js.Array[_],
-    oldStartingIndex: Double
-  ) = this()
+trait CollectionChange extends js.Object {
   //#endregion
   //#region Fields
   /**
@@ -58,5 +36,57 @@ class CollectionChange protected () extends js.Object {
     * @return An integer that represents the index where old items have been removed.
     */
   var oldStartingIndex: Double = js.native
+}
+
+object CollectionChange {
+  @scala.inline
+  def apply(
+    action: NotifyCollectionChangedAction,
+    newItems: js.Array[_],
+    newStartingIndex: Double,
+    oldItems: js.Array[_],
+    oldStartingIndex: Double
+  ): CollectionChange = {
+    val __obj = js.Dynamic.literal(action = action.asInstanceOf[js.Any], newItems = newItems.asInstanceOf[js.Any], newStartingIndex = newStartingIndex.asInstanceOf[js.Any], oldItems = oldItems.asInstanceOf[js.Any], oldStartingIndex = oldStartingIndex.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CollectionChange]
+  }
+  @scala.inline
+  implicit class CollectionChangeOps[Self <: CollectionChange] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAction(value: NotifyCollectionChangedAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNewItems(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNewStartingIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newStartingIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOldItems(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldItems")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOldStartingIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldStartingIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

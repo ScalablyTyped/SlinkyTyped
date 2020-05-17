@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.reachMenuButton.PartialState
+import typingsSlinky.reachMenuButton.anon.PartialState
 import typingsSlinky.reachMenuButton.reachMenuButtonStrings.`additions text`
 import typingsSlinky.reachMenuButton.reachMenuButtonStrings.`inline`
 import typingsSlinky.reachMenuButton.reachMenuButtonStrings.additions
@@ -51,7 +51,7 @@ import typingsSlinky.reachMenuButton.reachMenuButtonStrings.tree
 import typingsSlinky.reachMenuButton.reachMenuButtonStrings.url
 import typingsSlinky.reachMenuButton.reachMenuButtonStrings.vertical
 import typingsSlinky.reachMenuButton.reachMenuButtonStrings.yes
-import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -301,7 +301,7 @@ trait MenuItemProps extends js.Object {
   var controls: js.UndefOr[Boolean] = js.native
   var coords: js.UndefOr[String] = js.native
   var crossOrigin: js.UndefOr[String] = js.native
-  var dangerouslySetInnerHTML: js.UndefOr[AnonHtml] = js.native
+  var dangerouslySetInnerHTML: js.UndefOr[Html] = js.native
   var data: js.UndefOr[String] = js.native
   var datatype: js.UndefOr[String] = js.native
   var dateTime: js.UndefOr[String] = js.native

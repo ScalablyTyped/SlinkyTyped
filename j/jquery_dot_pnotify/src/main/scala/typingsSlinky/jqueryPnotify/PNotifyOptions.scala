@@ -1,5 +1,7 @@
 package typingsSlinky.jqueryPnotify
 
+import typingsSlinky.jqueryPnotify.anon.Closerhover
+import typingsSlinky.jqueryPnotify.anon.Nonblock
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +25,7 @@ trait PNotifyOptions extends js.Object {
     * Display the notice when it is created. Turn this off to add notifications to the history without displaying them.
     */
   var auto_display: js.UndefOr[Boolean] = js.native
-  var buttons: js.UndefOr[AnonCloserhover] = js.native
+  var buttons: js.UndefOr[Closerhover] = js.native
   /**
     * Support for PNotifyconfirm options
     */
@@ -68,7 +70,7 @@ trait PNotifyOptions extends js.Object {
     * Reset the hide timer if the mouse moves over the notice.
     */
   var mouse_reset: js.UndefOr[Boolean] = js.native
-  var nonblock: js.UndefOr[AnonNonblock] = js.native
+  var nonblock: js.UndefOr[Nonblock] = js.native
   /**
     * Opacity of the notice.
     */
@@ -180,7 +182,7 @@ object PNotifyOptions {
         ret
     }
     @scala.inline
-    def withButtons(value: AnonCloserhover): Self = {
+    def withButtons(value: Closerhover): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
         ret
@@ -324,7 +326,7 @@ object PNotifyOptions {
         ret
     }
     @scala.inline
-    def withNonblock(value: AnonNonblock): Self = {
+    def withNonblock(value: Nonblock): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nonblock")(value.asInstanceOf[js.Any])
         ret

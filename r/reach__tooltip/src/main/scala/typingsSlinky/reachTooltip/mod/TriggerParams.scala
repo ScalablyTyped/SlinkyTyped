@@ -1,11 +1,11 @@
 package typingsSlinky.reachTooltip.mod
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.ReactEventHandler
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,13 +29,13 @@ object TriggerParams {
   def apply(
     `aria-describedby`: String,
     `data-reach-tooltip-trigger`: String,
-    onBlur: SyntheticEvent[Event_, Element] => Unit,
-    onFocus: SyntheticEvent[Event_, Element] => Unit,
-    onKeyDown: SyntheticEvent[Event_, Element] => Unit,
-    onMouseDown: SyntheticEvent[Event_, Element] => Unit,
-    onMouseEnter: SyntheticEvent[Event_, Element] => Unit,
-    onMouseLeave: SyntheticEvent[Event_, Element] => Unit,
-    onMouseMove: SyntheticEvent[Event_, Element] => Unit
+    onBlur: SyntheticEvent[Event, Element] => Unit,
+    onFocus: SyntheticEvent[Event, Element] => Unit,
+    onKeyDown: SyntheticEvent[Event, Element] => Unit,
+    onMouseDown: SyntheticEvent[Event, Element] => Unit,
+    onMouseEnter: SyntheticEvent[Event, Element] => Unit,
+    onMouseLeave: SyntheticEvent[Event, Element] => Unit,
+    onMouseMove: SyntheticEvent[Event, Element] => Unit
   ): TriggerParams = {
     val __obj = js.Dynamic.literal(onBlur = js.Any.fromFunction1(onBlur), onFocus = js.Any.fromFunction1(onFocus), onKeyDown = js.Any.fromFunction1(onKeyDown), onMouseDown = js.Any.fromFunction1(onMouseDown), onMouseEnter = js.Any.fromFunction1(onMouseEnter), onMouseLeave = js.Any.fromFunction1(onMouseLeave), onMouseMove = js.Any.fromFunction1(onMouseMove))
     __obj.updateDynamic("aria-describedby")(`aria-describedby`.asInstanceOf[js.Any])
@@ -61,43 +61,43 @@ object TriggerParams {
         ret
     }
     @scala.inline
-    def withOnBlur(value: SyntheticEvent[Event_, Element] => Unit): Self = {
+    def withOnBlur(value: SyntheticEvent[Event, Element] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnFocus(value: SyntheticEvent[Event_, Element] => Unit): Self = {
+    def withOnFocus(value: SyntheticEvent[Event, Element] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnKeyDown(value: SyntheticEvent[Event_, Element] => Unit): Self = {
+    def withOnKeyDown(value: SyntheticEvent[Event, Element] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnMouseDown(value: SyntheticEvent[Event_, Element] => Unit): Self = {
+    def withOnMouseDown(value: SyntheticEvent[Event, Element] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnMouseEnter(value: SyntheticEvent[Event_, Element] => Unit): Self = {
+    def withOnMouseEnter(value: SyntheticEvent[Event, Element] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnMouseLeave(value: SyntheticEvent[Event_, Element] => Unit): Self = {
+    def withOnMouseLeave(value: SyntheticEvent[Event, Element] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnMouseMove(value: SyntheticEvent[Event_, Element] => Unit): Self = {
+    def withOnMouseMove(value: SyntheticEvent[Event, Element] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(js.Any.fromFunction1(value))
         ret

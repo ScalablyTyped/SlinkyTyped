@@ -72,30 +72,6 @@ object OptionData {
         ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
         ret
     }
-    @scala.inline
-    def withChildren(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutChildren: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withLoading(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutLoading: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loading")(js.undefined)
-        ret
-    }
   }
   
 }

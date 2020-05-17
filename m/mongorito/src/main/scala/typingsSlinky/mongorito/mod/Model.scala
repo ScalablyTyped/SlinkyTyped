@@ -5,7 +5,7 @@ import typingsSlinky.mongodb.mod.Collection
 import typingsSlinky.mongodb.mod.CommonOptions
 import typingsSlinky.mongodb.mod.Db
 import typingsSlinky.mongodb.mod.IndexOptions
-import typingsSlinky.mongorito.AnonBatchSize
+import typingsSlinky.mongorito.anon.BatchSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -63,7 +63,7 @@ object Model extends js.Object {
     * @see mongodb.CommandCursor#toArray()
     */
   def listIndexes(): js.Promise[js.Array[_]] = js.native
-  def listIndexes(options: AnonBatchSize): js.Promise[js.Array[_]] = js.native
+  def listIndexes(options: BatchSize): js.Promise[js.Array[_]] = js.native
   def modifyReducer(reducerModifier: ReducerModifier): Unit = js.native
   def query(method: String, query: js.Array[js.Tuple2[String, _]]): js.Promise[js.Array[js.Object]] = js.native
   def use(): Unit = js.native

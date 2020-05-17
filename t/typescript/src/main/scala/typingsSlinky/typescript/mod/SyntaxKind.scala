@@ -18,8 +18,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait AmpersandAmpersandToken
-    extends SyntaxKind
-       with LogicalOperator
+    extends LogicalOperator
+       with SyntaxKind
   
   @js.native
   sealed trait AmpersandEqualsToken
@@ -28,8 +28,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait AmpersandToken
-    extends SyntaxKind
-       with BitwiseOperator
+    extends BitwiseOperator
+       with SyntaxKind
   
   @js.native
   sealed trait AnyKeyword
@@ -76,9 +76,9 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait AsteriskToken
-    extends SyntaxKind
+    extends MultiplicativeOperator
+       with SyntaxKind
        with JSDocSyntaxKind
-       with MultiplicativeOperator
   
   @js.native
   sealed trait AsyncKeyword
@@ -106,8 +106,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait BarBarToken
-    extends SyntaxKind
-       with LogicalOperator
+    extends LogicalOperator
+       with SyntaxKind
   
   @js.native
   sealed trait BarEqualsToken
@@ -116,8 +116,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait BarToken
-    extends SyntaxKind
-       with BitwiseOperator
+    extends BitwiseOperator
+       with SyntaxKind
   
   @js.native
   sealed trait BigIntKeyword
@@ -165,8 +165,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait CaretToken
-    extends SyntaxKind
-       with BitwiseOperator
+    extends BitwiseOperator
+       with SyntaxKind
   
   @js.native
   sealed trait CaseBlock extends SyntaxKind
@@ -220,8 +220,8 @@ object SyntaxKind extends js.Object {
   @js.native
   sealed trait CommaToken
     extends SyntaxKind
+       with BinaryOperator
        with JSDocSyntaxKind
-       with _BinaryOperator
   
   @js.native
   sealed trait ComputedPropertyName extends SyntaxKind
@@ -348,13 +348,13 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait EqualsEqualsEqualsToken
-    extends SyntaxKind
-       with EqualityOperator
+    extends EqualityOperator
+       with SyntaxKind
   
   @js.native
   sealed trait EqualsEqualsToken
-    extends SyntaxKind
-       with EqualityOperator
+    extends EqualityOperator
+       with SyntaxKind
   
   @js.native
   sealed trait EqualsGreaterThanToken extends SyntaxKind
@@ -367,13 +367,13 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait ExclamationEqualsEqualsToken
-    extends SyntaxKind
-       with EqualityOperator
+    extends EqualityOperator
+       with SyntaxKind
   
   @js.native
   sealed trait ExclamationEqualsToken
-    extends SyntaxKind
-       with EqualityOperator
+    extends EqualityOperator
+       with SyntaxKind
   
   @js.native
   sealed trait ExclamationToken
@@ -514,8 +514,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait GreaterThanEqualsToken
-    extends SyntaxKind
-       with RelationalOperator
+    extends RelationalOperator
+       with SyntaxKind
   
   @js.native
   sealed trait GreaterThanGreaterThanEqualsToken
@@ -529,19 +529,19 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait GreaterThanGreaterThanGreaterThanToken
-    extends SyntaxKind
-       with ShiftOperator
+    extends ShiftOperator
+       with SyntaxKind
   
   @js.native
   sealed trait GreaterThanGreaterThanToken
-    extends SyntaxKind
-       with ShiftOperator
+    extends ShiftOperator
+       with SyntaxKind
   
   @js.native
   sealed trait GreaterThanToken
-    extends SyntaxKind
+    extends RelationalOperator
+       with SyntaxKind
        with JSDocSyntaxKind
-       with RelationalOperator
   
   @js.native
   sealed trait HeritageClause extends SyntaxKind
@@ -586,9 +586,9 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait InKeyword
-    extends KeywordSyntaxKind
+    extends RelationalOperator
        with SyntaxKind
-       with RelationalOperator
+       with KeywordSyntaxKind
   
   @js.native
   sealed trait IndexSignature extends SyntaxKind
@@ -609,9 +609,9 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait InstanceOfKeyword
-    extends KeywordSyntaxKind
+    extends RelationalOperator
        with SyntaxKind
-       with RelationalOperator
+       with KeywordSyntaxKind
   
   @js.native
   sealed trait InterfaceDeclaration extends SyntaxKind
@@ -814,8 +814,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait LessThanEqualsToken
-    extends SyntaxKind
-       with RelationalOperator
+    extends RelationalOperator
+       with SyntaxKind
   
   @js.native
   sealed trait LessThanLessThanEqualsToken
@@ -824,8 +824,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait LessThanLessThanToken
-    extends SyntaxKind
-       with ShiftOperator
+    extends ShiftOperator
+       with SyntaxKind
   
   @js.native
   sealed trait LessThanSlashToken
@@ -834,10 +834,10 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait LessThanToken
-    extends SyntaxKind
+    extends RelationalOperator
+       with SyntaxKind
        with JSDocSyntaxKind
        with JsxTokenSyntaxKind
-       with RelationalOperator
   
   @js.native
   sealed trait LetKeyword
@@ -875,8 +875,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait MinusToken
-    extends SyntaxKind
-       with AdditiveOperator
+    extends AdditiveOperator
+       with SyntaxKind
        with PrefixUnaryOperator
   
   @js.native
@@ -1018,8 +1018,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait PercentToken
-    extends SyntaxKind
-       with MultiplicativeOperator
+    extends MultiplicativeOperator
+       with SyntaxKind
   
   @js.native
   sealed trait PlusEqualsToken
@@ -1034,8 +1034,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait PlusToken
-    extends SyntaxKind
-       with AdditiveOperator
+    extends AdditiveOperator
+       with SyntaxKind
        with PrefixUnaryOperator
   
   @js.native
@@ -1082,7 +1082,7 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait QuestionQuestionToken
-    extends _AssignmentOperatorOrHigher
+    extends AssignmentOperatorOrHigher
        with SyntaxKind
   
   @js.native
@@ -1144,8 +1144,8 @@ object SyntaxKind extends js.Object {
   
   @js.native
   sealed trait SlashToken
-    extends SyntaxKind
-       with MultiplicativeOperator
+    extends MultiplicativeOperator
+       with SyntaxKind
   
   @js.native
   sealed trait SourceFile extends SyntaxKind

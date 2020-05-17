@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object interfaceMod {
-  type ConnectedComponentClass[C /* <: slinky.core.ReactComponentClass[_] */, P] = (slinky.core.ReactComponentClass[typingsSlinky.react.mod._Global_.JSX.LibraryManagedAttributes[C, P]]) with (typingsSlinky.antDesignCompatible.interfaceMod.NonReactStatics[C, js.Object]) with typingsSlinky.antDesignCompatible.AnonWrappedComponent[C]
+  type ConnectedComponentClass[C /* <: slinky.core.ReactComponentClass[_] */, P] = (slinky.core.ReactComponentClass[typingsSlinky.react.mod.global.JSX.LibraryManagedAttributes[C, P]]) with (typingsSlinky.antDesignCompatible.interfaceMod.NonReactStatics[C, js.Object]) with typingsSlinky.antDesignCompatible.anon.WrappedComponent[C]
   type FormWrappedProps[TOwnProps /* <: typingsSlinky.antDesignCompatible.formFormMod.WrappedFormInternalProps[_] */] = js.Function1[
     /* component */ js.Any, 
     typingsSlinky.antDesignCompatible.interfaceMod.ConnectedComponentClass[

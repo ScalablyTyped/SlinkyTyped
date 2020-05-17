@@ -1,6 +1,5 @@
 package typingsSlinky.avvio.mod
 
-import typingsSlinky.avvio.AnonAfter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Options extends js.Object {
   var autostart: js.UndefOr[Boolean] = js.native
-  var expose: js.UndefOr[AnonAfter] = js.native
+  var expose: js.UndefOr[typingsSlinky.avvio.anon.After] = js.native
 }
 
 object Options {
@@ -36,7 +35,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withExpose(value: AnonAfter): Self = {
+    def withExpose(value: typingsSlinky.avvio.anon.After): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("expose")(value.asInstanceOf[js.Any])
         ret

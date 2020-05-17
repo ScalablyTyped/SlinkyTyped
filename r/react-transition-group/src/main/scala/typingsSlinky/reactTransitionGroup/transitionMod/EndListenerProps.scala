@@ -1,7 +1,7 @@
 package typingsSlinky.reactTransitionGroup.transitionMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.reactTransitionGroup.AnonAppear
+import typingsSlinky.reactTransitionGroup.anon.Appear
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +35,7 @@ trait EndListenerProps
     * - enter defaults to `0`
     * - exit defaults to `0`
     */
-  var timeout: js.UndefOr[Double | AnonAppear] = js.native
+  var timeout: js.UndefOr[Double | Appear] = js.native
 }
 
 object EndListenerProps {
@@ -57,7 +57,7 @@ object EndListenerProps {
         ret
     }
     @scala.inline
-    def withTimeout(value: Double | AnonAppear): Self = {
+    def withTimeout(value: Double | Appear): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("timeout")(value.asInstanceOf[js.Any])
         ret

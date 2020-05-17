@@ -1,7 +1,7 @@
 package typingsSlinky.lobibox.LobiboxModule
 
-import typingsSlinky.lobibox.AnonCancel
-import typingsSlinky.lobibox.AnonConfirm
+import typingsSlinky.lobibox.anon.Cancel
+import typingsSlinky.lobibox.anon.Confirm
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,13 +9,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MessageBoxesOptions extends MessageBoxesDefault {
   var bodyClass: js.UndefOr[String] = js.native
-  var buttons: js.UndefOr[AnonCancel | js.Any] = js.native
+  var buttons: js.UndefOr[Cancel | js.Any] = js.native
   @JSName("buttonsAlign")
   var buttonsAlign_MessageBoxesOptions: js.UndefOr[js.Any] = js.native
   var callback: js.UndefOr[
     js.Function3[/* lobibox */ js.Any, /* type */ js.UndefOr[String], /* ev */ js.UndefOr[js.Any], Unit]
   ] = js.native
-  var modalClasses: js.UndefOr[AnonConfirm] = js.native
+  var modalClasses: js.UndefOr[Confirm] = js.native
 }
 
 object MessageBoxesOptions {
@@ -43,7 +43,7 @@ object MessageBoxesOptions {
         ret
     }
     @scala.inline
-    def withButtons(value: AnonCancel | js.Any): Self = {
+    def withButtons(value: Cancel | js.Any): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
         ret
@@ -79,7 +79,7 @@ object MessageBoxesOptions {
         ret
     }
     @scala.inline
-    def withModalClasses(value: AnonConfirm): Self = {
+    def withModalClasses(value: Confirm): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("modalClasses")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.auth0.mod
 
-import typingsSlinky.auth0.AnonDescription
+import typingsSlinky.auth0.anon.Description
 import typingsSlinky.auth0.auth0Strings.HS256
 import typingsSlinky.auth0.auth0Strings.RS256
 import typingsSlinky.auth0.auth0Strings.access_token
@@ -31,7 +31,7 @@ trait ResourceServer extends js.Object {
     * A friendly name for the resource server.
     */
   var name: js.UndefOr[String] = js.native
-  var scopes: js.UndefOr[js.Array[AnonDescription]] = js.native
+  var scopes: js.UndefOr[js.Array[Description]] = js.native
   /**
     * The algorithm used to sign tokens.
     */
@@ -131,7 +131,7 @@ object ResourceServer {
         ret
     }
     @scala.inline
-    def withScopes(value: js.Array[AnonDescription]): Self = {
+    def withScopes(value: js.Array[Description]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scopes")(value.asInstanceOf[js.Any])
         ret

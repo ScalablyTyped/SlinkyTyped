@@ -4,9 +4,9 @@ import org.scalablytyped.runtime.Instantiable0
 import slinky.core.TagMod
 import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.reactNativeGestureHandler.mod.PanGestureHandler
-import typingsSlinky.reactNativeTabView.AnonDamping
-import typingsSlinky.reactNativeTabView.AnonDuration
-import typingsSlinky.reactNativeTabView.EventEmitterPropsposition
+import typingsSlinky.reactNativeTabView.anon.Damping
+import typingsSlinky.reactNativeTabView.anon.Duration
+import typingsSlinky.reactNativeTabView.anon.EventEmitterPropsposition
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.`on-drag`
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.auto
 import typingsSlinky.reactNativeTabView.reactNativeTabViewStrings.none
@@ -27,11 +27,11 @@ trait Props[T /* <: Route */] extends js.Object {
   var onSwipeEnd: js.UndefOr[js.Function0[Unit]] = js.native
   var onSwipeStart: js.UndefOr[js.Function0[Unit]] = js.native
   var removeClippedSubviews: js.UndefOr[Boolean] = js.native
-  var springConfig: AnonDamping = js.native
+  var springConfig: Damping = js.native
   var springVelocityScale: js.UndefOr[Double] = js.native
   var swipeEnabled: Boolean = js.native
   var swipeVelocityImpact: js.UndefOr[Double] = js.native
-  var timingConfig: AnonDuration = js.native
+  var timingConfig: Duration = js.native
   def children(props: EventEmitterPropsposition): TagMod[Any] = js.native
   def onIndexChange(index: Double): Unit = js.native
 }
@@ -45,9 +45,9 @@ object Props {
     layout: Layout,
     navigationState: NavigationState[T],
     onIndexChange: Double => Unit,
-    springConfig: AnonDamping,
+    springConfig: Damping,
     swipeEnabled: Boolean,
-    timingConfig: AnonDuration
+    timingConfig: Duration
   ): Props[T] = {
     val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children), gestureHandlerProps = gestureHandlerProps.asInstanceOf[js.Any], keyboardDismissMode = keyboardDismissMode.asInstanceOf[js.Any], layout = layout.asInstanceOf[js.Any], navigationState = navigationState.asInstanceOf[js.Any], onIndexChange = js.Any.fromFunction1(onIndexChange), springConfig = springConfig.asInstanceOf[js.Any], swipeEnabled = swipeEnabled.asInstanceOf[js.Any], timingConfig = timingConfig.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props[T]]
@@ -95,7 +95,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withSpringConfig(value: AnonDamping): Self[T] = {
+    def withSpringConfig(value: Damping): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("springConfig")(value.asInstanceOf[js.Any])
         ret
@@ -107,7 +107,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withTimingConfig(value: AnonDuration): Self[T] = {
+    def withTimingConfig(value: Duration): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("timingConfig")(value.asInstanceOf[js.Any])
         ret

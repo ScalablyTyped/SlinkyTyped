@@ -1,13 +1,13 @@
 package typingsSlinky.betterScroll.mod
 
-import typingsSlinky.betterScroll.PartialInfinityOption
-import typingsSlinky.betterScroll.PartialMouseWheelOption
-import typingsSlinky.betterScroll.PartialPullDownOption
-import typingsSlinky.betterScroll.PartialPullUpOption
-import typingsSlinky.betterScroll.PartialScrollBarOption
-import typingsSlinky.betterScroll.PartialSlideOption
-import typingsSlinky.betterScroll.PartialWheelOption
-import typingsSlinky.betterScroll.PartialZoomOption
+import typingsSlinky.betterScroll.anon.PartialInfinityOption
+import typingsSlinky.betterScroll.anon.PartialMouseWheelOption
+import typingsSlinky.betterScroll.anon.PartialPullDownOption
+import typingsSlinky.betterScroll.anon.PartialPullUpOption
+import typingsSlinky.betterScroll.anon.PartialScrollBarOption
+import typingsSlinky.betterScroll.anon.PartialSlideOption
+import typingsSlinky.betterScroll.anon.PartialWheelOption
+import typingsSlinky.betterScroll.anon.PartialZoomOption
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

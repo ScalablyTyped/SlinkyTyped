@@ -1,7 +1,7 @@
 package typingsSlinky.maquette.interfacesMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +39,7 @@ object ProjectorOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPerformanceLogger(value: (/* eventType */ PerformanceLoggerEvent, /* trigger */ js.UndefOr[Event_]) => Unit): Self = {
+    def withPerformanceLogger(value: (/* eventType */ PerformanceLoggerEvent, /* trigger */ js.UndefOr[Event]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("performanceLogger")(js.Any.fromFunction2(value))
         ret

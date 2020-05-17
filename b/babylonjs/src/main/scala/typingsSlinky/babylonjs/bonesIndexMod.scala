@@ -1,6 +1,8 @@
 package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
+import typingsSlinky.babylonjs.anon.AdjustPitch
+import typingsSlinky.babylonjs.anon.BendAxis
 import typingsSlinky.babylonjs.mathVectorMod.Matrix
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.babylonjs.sceneMod.Scene
@@ -94,7 +96,7 @@ object bonesIndexMod extends js.Object {
       * @param options defines options to set up the controller
       */
     def this(mesh: AbstractMesh, bone: typingsSlinky.babylonjs.boneMod.Bone) = this()
-    def this(mesh: AbstractMesh, bone: typingsSlinky.babylonjs.boneMod.Bone, options: AnonBendAxis) = this()
+    def this(mesh: AbstractMesh, bone: typingsSlinky.babylonjs.boneMod.Bone, options: BendAxis) = this()
   }
   
   @js.native
@@ -124,7 +126,7 @@ object bonesIndexMod extends js.Object {
       mesh: AbstractMesh,
       bone: typingsSlinky.babylonjs.boneMod.Bone,
       target: Vector3,
-      options: AnonAdjustPitch
+      options: AdjustPitch
     ) = this()
   }
   

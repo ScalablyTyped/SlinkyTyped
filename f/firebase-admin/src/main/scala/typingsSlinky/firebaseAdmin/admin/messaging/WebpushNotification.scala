@@ -1,7 +1,7 @@
 package typingsSlinky.firebaseAdmin.admin.messaging
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.firebaseAdmin.AnonAction
+import typingsSlinky.firebaseAdmin.anon.Action
 import typingsSlinky.firebaseAdmin.firebaseAdminStrings.auto
 import typingsSlinky.firebaseAdmin.firebaseAdminStrings.ltr
 import typingsSlinky.firebaseAdmin.firebaseAdminStrings.rtl
@@ -17,12 +17,12 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait WebpushNotification
-  extends /* key */ StringDictionary[js.Any] {
+  extends /* customData */ StringDictionary[js.Any] {
   /**
     * An array of notification actions representing the actions
     * available to the user when the notification is presented.
     */
-  var actions: js.UndefOr[js.Array[AnonAction]] = js.native
+  var actions: js.UndefOr[js.Array[Action]] = js.native
   /**
     * URL of the image used to represent the notification when there is
     * not enough space to display the notification itself.
@@ -104,7 +104,7 @@ object WebpushNotification {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActions(value: js.Array[AnonAction]): Self = {
+    def withActions(value: js.Array[Action]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
         ret

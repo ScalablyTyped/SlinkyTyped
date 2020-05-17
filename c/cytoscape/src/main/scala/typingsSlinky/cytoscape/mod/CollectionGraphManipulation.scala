@@ -1,7 +1,7 @@
 package typingsSlinky.cytoscape.mod
 
-import typingsSlinky.cytoscape.AnonParent
-import typingsSlinky.cytoscape.AnonSource
+import typingsSlinky.cytoscape.anon.Parent
+import typingsSlinky.cytoscape.anon.Source
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,12 +20,12 @@ trait CollectionGraphManipulation extends js.Object {
     * Effectively move nodes to different parent node. The modified (actually new) elements are returned.
     * http://js.cytoscape.org/#eles.move
     */
-  def move(location: AnonParent): NodeCollection = js.native
+  def move(location: Parent): NodeCollection = js.native
   /**
     * Effectively move edges to different nodes. The modified (actually new) elements are returned.
     * http://js.cytoscape.org/#eles.move
     */
-  def move(location: AnonSource): EdgeCollection = js.native
+  def move(location: Source): EdgeCollection = js.native
   /**
     * Remove the elements from the graph.
     * http://js.cytoscape.org/#eles.remove

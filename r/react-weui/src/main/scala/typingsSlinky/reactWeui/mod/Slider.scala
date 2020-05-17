@@ -1,6 +1,6 @@
 package typingsSlinky.reactWeui.mod
 
-import typingsSlinky.reactWeui.AnonDefaultValue
+import typingsSlinky.reactWeui.anon.DefaultValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ class Slider protected () extends js.Object {
 @JSImport("react-weui", "Slider")
 @js.native
 object Slider extends js.Object {
-  var defaultProps: AnonDefaultValue = js.native
+  var defaultProps: DefaultValue = js.native
   @js.native
   object propTypes extends js.Object {
     @js.native

@@ -1,5 +1,6 @@
 package typingsSlinky.tensorflowTfjsCore
 
+import typingsSlinky.tensorflowTfjsCore.anon.Error
 import typingsSlinky.tensorflowTfjsCore.backendMod.BackendTimer
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TypedArray
@@ -28,12 +29,12 @@ object profilerMod extends js.Object {
       inputs: NamedTensorMap,
       extraInfo: String
     ): Unit = js.native
-    def logKernelProfile(name: String, result: Tensor[Rank], vals: TypedArray, timeMs: AnonError, inputs: NamedTensorMap): Unit = js.native
+    def logKernelProfile(name: String, result: Tensor[Rank], vals: TypedArray, timeMs: Error, inputs: NamedTensorMap): Unit = js.native
     def logKernelProfile(
       name: String,
       result: Tensor[Rank],
       vals: TypedArray,
-      timeMs: AnonError,
+      timeMs: Error,
       inputs: NamedTensorMap,
       extraInfo: String
     ): Unit = js.native

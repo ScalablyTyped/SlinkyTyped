@@ -1,6 +1,6 @@
 package typingsSlinky.epilogue.mod
 
-import typingsSlinky.epilogue.AnonModel
+import typingsSlinky.epilogue.anon.Model
 import typingsSlinky.sequelize.mod.AssociationOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ trait ResourceOptions extends js.Object {
   var associations: js.UndefOr[AssociationOptions] = js.native
   var endpoints: js.Array[String] = js.native
   var excludeAttributes: js.UndefOr[js.Array[String]] = js.native
-  var include: js.UndefOr[js.Array[AnonModel | String]] = js.native
+  var include: js.UndefOr[js.Array[Model | String]] = js.native
   var model: js.Any = js.native
   var pagination: js.UndefOr[Boolean] = js.native
   var readOnlyAttributes: js.UndefOr[js.Array[String]] = js.native
@@ -83,7 +83,7 @@ object ResourceOptions {
         ret
     }
     @scala.inline
-    def withInclude(value: js.Array[AnonModel | String]): Self = {
+    def withInclude(value: js.Array[Model | String]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("include")(value.asInstanceOf[js.Any])
         ret

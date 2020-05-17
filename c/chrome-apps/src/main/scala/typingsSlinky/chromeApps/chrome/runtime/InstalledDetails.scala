@@ -1,6 +1,6 @@
 package typingsSlinky.chromeApps.chrome.runtime
 
-import typingsSlinky.chromeApps.AnonCHROMEUPDATE
+import typingsSlinky.chromeApps.anon.CHROMEUPDATE
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chromeAppsStrings.CHROME_UPDATE
 import typingsSlinky.chromeApps.chromeAppsStrings.INSTALL
@@ -33,10 +33,10 @@ trait InstalledDetails extends js.Object {
     * @see enum OnInstalledReason
     */
   var reason: ToStringLiteral[
-    AnonCHROMEUPDATE, 
-    /* keyof chrome-apps.AnonCHROMEUPDATE */ INSTALL | UPDATE | CHROME_UPDATE | SHARED_MODULE_UPDATE, 
+    CHROMEUPDATE, 
+    /* keyof chrome-apps.anon.CHROMEUPDATE */ INSTALL | UPDATE | CHROME_UPDATE | SHARED_MODULE_UPDATE, 
     Exclude[
-      /* keyof chrome-apps.AnonCHROMEUPDATE */ INSTALL | UPDATE | CHROME_UPDATE | SHARED_MODULE_UPDATE, 
+      /* keyof chrome-apps.anon.CHROMEUPDATE */ INSTALL | UPDATE | CHROME_UPDATE | SHARED_MODULE_UPDATE, 
       install_ | update_ | chrome_update_ | shared_module_update_
     ]
   ] = js.native
@@ -46,10 +46,10 @@ object InstalledDetails {
   @scala.inline
   def apply(
     reason: ToStringLiteral[
-      AnonCHROMEUPDATE, 
-      /* keyof chrome-apps.AnonCHROMEUPDATE */ INSTALL | UPDATE | CHROME_UPDATE | SHARED_MODULE_UPDATE, 
+      CHROMEUPDATE, 
+      /* keyof chrome-apps.anon.CHROMEUPDATE */ INSTALL | UPDATE | CHROME_UPDATE | SHARED_MODULE_UPDATE, 
       Exclude[
-        /* keyof chrome-apps.AnonCHROMEUPDATE */ INSTALL | UPDATE | CHROME_UPDATE | SHARED_MODULE_UPDATE, 
+        /* keyof chrome-apps.anon.CHROMEUPDATE */ INSTALL | UPDATE | CHROME_UPDATE | SHARED_MODULE_UPDATE, 
         install_ | update_ | chrome_update_ | shared_module_update_
       ]
     ]
@@ -66,10 +66,10 @@ object InstalledDetails {
     @scala.inline
     def withReason(
       value: ToStringLiteral[
-          AnonCHROMEUPDATE, 
-          /* keyof chrome-apps.AnonCHROMEUPDATE */ INSTALL | UPDATE | CHROME_UPDATE | SHARED_MODULE_UPDATE, 
+          CHROMEUPDATE, 
+          /* keyof chrome-apps.anon.CHROMEUPDATE */ INSTALL | UPDATE | CHROME_UPDATE | SHARED_MODULE_UPDATE, 
           Exclude[
-            /* keyof chrome-apps.AnonCHROMEUPDATE */ INSTALL | UPDATE | CHROME_UPDATE | SHARED_MODULE_UPDATE, 
+            /* keyof chrome-apps.anon.CHROMEUPDATE */ INSTALL | UPDATE | CHROME_UPDATE | SHARED_MODULE_UPDATE, 
             install_ | update_ | chrome_update_ | shared_module_update_
           ]
         ]

@@ -1,16 +1,13 @@
 package typingsSlinky.winrtUwp.Windows.Storage.Streams
 
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
-import typingsSlinky.winrtUwp.Windows.Foundation.Uri
-import typingsSlinky.winrtUwp.Windows.Storage.IStorageFile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides random access of data in input and output streams for a file. */
-@JSGlobal("Windows.Storage.Streams.RandomAccessStreamReference")
 @js.native
-abstract class RandomAccessStreamReference () extends js.Object {
+trait RandomAccessStreamReference extends js.Object {
   /**
     * Opens a stream for random access.
     * @return The asynchronous operation.
@@ -18,27 +15,25 @@ abstract class RandomAccessStreamReference () extends js.Object {
   def openReadAsync(): IPromiseWithIAsyncOperation[IRandomAccessStreamWithContentType] = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Storage.Streams.RandomAccessStreamReference")
-@js.native
-object RandomAccessStreamReference extends js.Object {
-  /**
-    * Creates a random access stream around a file.
-    * @param file The file to create a stream around.
-    * @return The stream that encapsulates file.
-    */
-  def createFromFile(file: IStorageFile): RandomAccessStreamReference = js.native
-  /**
-    * Creates a random access stream around the specified stream.
-    * @param stream The source stream.
-    * @return The random access stream that encapsulates stream.
-    */
-  def createFromStream(stream: IRandomAccessStream): RandomAccessStreamReference = js.native
-  /**
-    * Creates a random access stream around the specified URI.
-    * @param uri The URI to create the stream around. The valid URI schemes are http, https, ms-appx, and ms-appdata.
-    * @return The random access stream that encapsulates uri.
-    */
-  def createFromUri(uri: Uri): RandomAccessStreamReference = js.native
+object RandomAccessStreamReference {
+  @scala.inline
+  def apply(openReadAsync: () => IPromiseWithIAsyncOperation[IRandomAccessStreamWithContentType]): RandomAccessStreamReference = {
+    val __obj = js.Dynamic.literal(openReadAsync = js.Any.fromFunction0(openReadAsync))
+    __obj.asInstanceOf[RandomAccessStreamReference]
+  }
+  @scala.inline
+  implicit class RandomAccessStreamReferenceOps[Self <: RandomAccessStreamReference] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOpenReadAsync(value: () => IPromiseWithIAsyncOperation[IRandomAccessStreamWithContentType]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("openReadAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

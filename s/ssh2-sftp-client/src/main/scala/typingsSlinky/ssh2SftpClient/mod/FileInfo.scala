@@ -1,6 +1,6 @@
 package typingsSlinky.ssh2SftpClient.mod
 
-import typingsSlinky.ssh2SftpClient.AnonGroup
+import typingsSlinky.ssh2SftpClient.anon.Group
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait FileInfo extends js.Object {
   var modifyTime: Double = js.native
   var name: String = js.native
   var owner: Double = js.native
-  var rights: AnonGroup = js.native
+  var rights: Group = js.native
   var size: Double = js.native
   var `type`: String = js.native
 }
@@ -25,7 +25,7 @@ object FileInfo {
     modifyTime: Double,
     name: String,
     owner: Double,
-    rights: AnonGroup,
+    rights: Group,
     size: Double,
     `type`: String
   ): FileInfo = {
@@ -70,7 +70,7 @@ object FileInfo {
         ret
     }
     @scala.inline
-    def withRights(value: AnonGroup): Self = {
+    def withRights(value: Group): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rights")(value.asInstanceOf[js.Any])
         ret

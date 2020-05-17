@@ -1,6 +1,6 @@
 package typingsSlinky.aceDiff.mod
 
-import typingsSlinky.aceDiff.AnonLeft
+import typingsSlinky.aceDiff.anon.Left
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait AceDiff extends js.Object {
   def destroy(): Unit = js.native
   def diff(): Unit = js.native
-  def getEditors(): AnonLeft = js.native
+  def getEditors(): Left = js.native
   def getNumDiffs(): Double = js.native
   def setOptions(options: AceDiffOpts): Unit = js.native
 }
@@ -19,7 +19,7 @@ object AceDiff {
   def apply(
     destroy: () => Unit,
     diff: () => Unit,
-    getEditors: () => AnonLeft,
+    getEditors: () => Left,
     getNumDiffs: () => Double,
     setOptions: AceDiffOpts => Unit
   ): AceDiff = {
@@ -45,7 +45,7 @@ object AceDiff {
         ret
     }
     @scala.inline
-    def withGetEditors(value: () => AnonLeft): Self = {
+    def withGetEditors(value: () => Left): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getEditors")(js.Any.fromFunction0(value))
         ret

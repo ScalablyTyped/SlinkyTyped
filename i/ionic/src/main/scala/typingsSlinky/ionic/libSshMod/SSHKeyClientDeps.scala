@@ -1,6 +1,6 @@
 package typingsSlinky.ionic.libSshMod
 
-import typingsSlinky.ionic.AnonIdNumber
+import typingsSlinky.ionic.anon.IdNumber
 import typingsSlinky.ionic.definitionsMod.IClient
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation._
 trait SSHKeyClientDeps extends js.Object {
   val client: IClient = js.native
   val token: String = js.native
-  val user: AnonIdNumber = js.native
+  val user: IdNumber = js.native
 }
 
 object SSHKeyClientDeps {
   @scala.inline
-  def apply(client: IClient, token: String, user: AnonIdNumber): SSHKeyClientDeps = {
+  def apply(client: IClient, token: String, user: IdNumber): SSHKeyClientDeps = {
     val __obj = js.Dynamic.literal(client = client.asInstanceOf[js.Any], token = token.asInstanceOf[js.Any], user = user.asInstanceOf[js.Any])
     __obj.asInstanceOf[SSHKeyClientDeps]
   }
@@ -38,7 +38,7 @@ object SSHKeyClientDeps {
         ret
     }
     @scala.inline
-    def withUser(value: AnonIdNumber): Self = {
+    def withUser(value: IdNumber): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
         ret

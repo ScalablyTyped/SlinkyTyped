@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ElementPart extends js.Object {
+trait ElementPart extends Part {
   var `type`: element = js.native
   var value: String = js.native
 }

@@ -1,7 +1,6 @@
 package typingsSlinky.amapJsSdk.AMap
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.amapJsSdk.AnonContent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +16,7 @@ trait MarkerOptions extends js.Object {
   var draggable: js.UndefOr[Boolean] = js.native
   var extData: js.UndefOr[js.Any] = js.native
   var icon: js.UndefOr[String | Icon] = js.native
-  var label: js.UndefOr[AnonContent] = js.native
+  var label: js.UndefOr[typingsSlinky.amapJsSdk.anon.Content] = js.native
   var map: js.UndefOr[Map] = js.native
   var offset: js.UndefOr[Pixel] = js.native
   var position: js.UndefOr[LngLat] = js.native
@@ -158,7 +157,7 @@ object MarkerOptions {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonContent): Self = {
+    def withLabel(value: typingsSlinky.amapJsSdk.anon.Content): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret

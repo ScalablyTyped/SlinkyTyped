@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Filter extends js.Object {
+trait Filter extends EventType {
   var address: js.UndefOr[String] = js.native
   var fromBlock: js.UndefOr[BlockTag] = js.native
   var toBlock: js.UndefOr[BlockTag] = js.native

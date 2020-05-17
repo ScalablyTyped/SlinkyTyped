@@ -1,22 +1,16 @@
 package typingsSlinky.googlemaps.google.maps
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.googlemaps.google.maps.places._LocationBias
+import typingsSlinky.googlemaps.google.maps.places.LocationBias
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A circle on the Earth's surface; also known as a "spherical cap". */
-@JSGlobal("google.maps.Circle")
 @js.native
-/**
-  * Create a circle using the passed CircleOptions, which specify the
-  * center, radius, and style.
-  */
-class Circle ()
+trait Circle
   extends MVCObject
-     with _LocationBias {
-  def this(opts: CircleOptions) = this()
+     with LocationBias {
   /** Gets the LatLngBounds of this Circle. */
   def getBounds(): LatLngBounds = js.native
   /** Returns the center of this circle. */

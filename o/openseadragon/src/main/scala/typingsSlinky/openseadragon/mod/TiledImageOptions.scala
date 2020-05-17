@@ -2,7 +2,7 @@ package typingsSlinky.openseadragon.mod
 
 import org.scalajs.dom.raw.CanvasGradient
 import org.scalajs.dom.raw.CanvasPattern
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ trait TiledImageOptions extends js.Object {
   var placeholderFillStyle: js.UndefOr[String | CanvasGradient | CanvasPattern] = js.native
   var preload: js.UndefOr[Boolean] = js.native
   var replace: js.UndefOr[Boolean] = js.native
-  var success: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var success: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   var tileSource: String | js.Object = js.native
   var width: js.UndefOr[Double] = js.native
   var x: js.UndefOr[Double] = js.native
@@ -268,7 +268,7 @@ object TiledImageOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* event */ Event_ => Unit): Self = {
+    def withSuccess(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

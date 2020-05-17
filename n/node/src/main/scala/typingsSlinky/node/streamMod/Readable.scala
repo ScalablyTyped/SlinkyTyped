@@ -1,9 +1,9 @@
 package typingsSlinky.node.streamMod
 
-import typingsSlinky.node.AnonEnd
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.NodeJS.WritableStream
+import typingsSlinky.node.anon.End
 import typingsSlinky.node.nodeStrings.close
 import typingsSlinky.node.nodeStrings.data
 import typingsSlinky.node.nodeStrings.end
@@ -101,7 +101,7 @@ class Readable ()
   /* InferMemberOverrides */
   override def pipe[T /* <: WritableStream */](destination: T): T = js.native
   /* InferMemberOverrides */
-  override def pipe[T /* <: WritableStream */](destination: T, options: AnonEnd): T = js.native
+  override def pipe[T /* <: WritableStream */](destination: T, options: End): T = js.native
   @JSName("prependListener")
   def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")

@@ -4,11 +4,10 @@ import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
-import typingsSlinky.signaturePad.AnonCallback
-import typingsSlinky.signaturePad.AnonColor
-import typingsSlinky.signaturePad.AnonCurve
-import typingsSlinky.signaturePad.AnonEnd
-import typingsSlinky.signaturePad.AnonPoint
+import typingsSlinky.signaturePad.anon.Callback
+import typingsSlinky.signaturePad.anon.Color
+import typingsSlinky.signaturePad.anon.Curve
+import typingsSlinky.signaturePad.anon.End
 import typingsSlinky.signaturePad.mod.SignaturePad.Bezier
 import typingsSlinky.signaturePad.mod.SignaturePad.Point
 import typingsSlinky.signaturePad.mod.SignaturePad.SignaturePadOptions
@@ -19,7 +18,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SignaturePad_ extends js.Object {
   var _ctx: CanvasRenderingContext2D = js.native
-  var _data: js.Array[AnonColor] = js.native
+  var _data: js.Array[Color] = js.native
   var _isEmpty: Boolean = js.native
   var _lastVelocity: Double = js.native
   var _lastWidth: Double = js.native
@@ -36,15 +35,15 @@ trait SignaturePad_ extends js.Object {
   var throttle: Double = js.native
   var velocityFilterWeight: Double = js.native
   def _addPoint(point: Point): Bezier | Null = js.native
-  def _calculateCurveWidths(startPoint: Point, endPoint: Point): AnonEnd = js.native
+  def _calculateCurveWidths(startPoint: Point, endPoint: Point): End = js.native
   def _createPoint(x: Double, y: Double): Point = js.native
-  def _drawCurve(_a: AnonCurve): Unit = js.native
+  def _drawCurve(_a: Curve): Unit = js.native
   def _drawCurveSegment(x: Double, y: Double, width: Double): Unit = js.native
-  def _drawDot(_a: AnonPoint): Unit = js.native
+  def _drawDot(_a: typingsSlinky.signaturePad.anon.Point): Unit = js.native
   def _fromData(
     pointGroups: js.Array[js.Array[Point]],
-    drawCurve: js.Function1[/* _a */ AnonCurve, Unit],
-    drawDot: js.Function1[/* _a */ AnonPoint, Unit]
+    drawCurve: js.Function1[/* _a */ Curve, Unit],
+    drawDot: js.Function1[/* _a */ typingsSlinky.signaturePad.anon.Point, Unit]
   ): Unit = js.native
   /**
     * Privates
@@ -76,7 +75,7 @@ trait SignaturePad_ extends js.Object {
     *   Draws signature image from data URL
     */
   def fromDataURL(dataUrl: String): Unit = js.native
-  def fromDataURL(dataUrl: String, options: AnonCallback): Unit = js.native
+  def fromDataURL(dataUrl: String, options: Callback): Unit = js.native
   /**
     *   Returns true if canvas is empty, otherwise returns false
     */

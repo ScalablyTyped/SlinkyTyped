@@ -1,6 +1,6 @@
 package typingsSlinky.yandexMaps.mod.control
 
-import typingsSlinky.yandexMaps.AnonBoundedBy
+import typingsSlinky.yandexMaps.anon.BoundedBy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ISearchControlParameters extends js.Object {
   var data: js.UndefOr[js.Object] = js.native
-  var options: js.UndefOr[AnonBoundedBy] = js.native
+  var options: js.UndefOr[BoundedBy] = js.native
   var state: js.UndefOr[js.Object] = js.native
 }
 
@@ -37,7 +37,7 @@ object ISearchControlParameters {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonBoundedBy): Self = {
+    def withOptions(value: BoundedBy): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

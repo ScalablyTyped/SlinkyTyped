@@ -1,7 +1,7 @@
 package typingsSlinky.graphql.definitionMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.graphql.GraphQLInterfaceTypeConfi
+import typingsSlinky.graphql.anon.GraphQLInterfaceTypeConfi
 import typingsSlinky.graphql.astMod.InterfaceTypeDefinitionNode
 import typingsSlinky.graphql.astMod.InterfaceTypeExtensionNode
 import typingsSlinky.graphql.maybeMod.Maybe
@@ -14,11 +14,11 @@ import scala.scalajs.js.annotation._
 @js.native
 class GraphQLInterfaceType protected ()
   extends GraphQLAbstractType
-     with _GraphQLCompositeType
-     with _GraphQLNamedType
-     with _GraphQLNullableType
-     with _GraphQLOutputType
-     with _GraphQLType {
+     with GraphQLCompositeType
+     with GraphQLNamedType
+     with GraphQLNullableType
+     with GraphQLOutputType
+     with GraphQLType {
   def this(config: GraphQLInterfaceTypeConfig[_, _, StringDictionary[_]]) = this()
   var astNode: js.UndefOr[Maybe[InterfaceTypeDefinitionNode]] = js.native
   var description: Maybe[String] = js.native

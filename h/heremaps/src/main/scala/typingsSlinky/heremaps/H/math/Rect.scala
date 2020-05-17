@@ -7,17 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Class defines a rectangle in 2-dimensional geometric space. It is used to represent the area in projected space.
   */
-@JSGlobal("H.math.Rect")
 @js.native
-class Rect protected () extends js.Object {
-  /**
-    * Constructor
-    * @param left {number} - The rectangle's left edge x value
-    * @param top {number} - The rectangle's top edge y value
-    * @param right {number} - The rectangle's right edge x value
-    * @param bottom {number} - The rectangle's bottom edge y value
-    */
-  def this(left: Double, top: Double, right: Double, bottom: Double) = this()
+trait Rect extends js.Object {
   /**
     * Method checks if provided coordinates lie within rectangle.
     * @param x {number} - x-coordinate to check
@@ -45,16 +36,48 @@ class Rect protected () extends js.Object {
   def set(left: Double, top: Double, right: Double, bottom: Double): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("H.math.Rect")
-@js.native
-object Rect extends js.Object {
-  /**
-    * To create a rectangle from a top-left and bottom-right point pair.
-    * @param topLeft {H.math.IPoint} - the top-left vertex of the rectanle
-    * @param bottomRight {H.math.IPoint} - the bottom-right vertex of the rectanle
-    * @returns {H.math.Rect} - returns the rectangular area defined by the top-left and bottom-right vertices
-    */
-  def fromPoints(topLeft: IPoint, bottomRight: IPoint): Rect = js.native
+object Rect {
+  @scala.inline
+  def apply(
+    containsXY: (Double, Double) => Boolean,
+    getBottomRight: () => Point,
+    getTopLeft: () => Point,
+    set: (Double, Double, Double, Double) => Unit
+  ): Rect = {
+    val __obj = js.Dynamic.literal(containsXY = js.Any.fromFunction2(containsXY), getBottomRight = js.Any.fromFunction0(getBottomRight), getTopLeft = js.Any.fromFunction0(getTopLeft), set = js.Any.fromFunction4(set))
+    __obj.asInstanceOf[Rect]
+  }
+  @scala.inline
+  implicit class RectOps[Self <: Rect] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainsXY(value: (Double, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containsXY")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetBottomRight(value: () => Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBottomRight")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetTopLeft(value: () => Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTopLeft")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSet(value: (Double, Double, Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction4(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,5 +1,9 @@
 package typingsSlinky.tslint
 
+import typingsSlinky.tslint.anon.PropertiesLocations
+import typingsSlinky.tslint.anon.PropertiesOverloads
+import typingsSlinky.tslint.anon.PropertiesPrivacies
+import typingsSlinky.tslint.anon.PropertiesType
 import typingsSlinky.tslint.exclusionDescriptorsMod.IInputExclusionDescriptors
 import typingsSlinky.tslint.mod.Rules.AbstractRule
 import typingsSlinky.tslint.ruleMod.IRuleMetadata
@@ -10,10 +14,34 @@ import scala.scalajs.js.annotation._
 @JSImport("tslint/lib/rules/completedDocsRule", JSImport.Namespace)
 @js.native
 object completedDocsRuleMod extends js.Object {
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.tslint.completedDocsRuleMod.All
+    - / * "classes" * / java.lang.String
+  */
+  trait DocType extends IInputExclusionDescriptors
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.tslint.completedDocsRuleMod.All
+    - / * "instance" * / java.lang.String
+  */
+  trait Location extends js.Object
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.tslint.completedDocsRuleMod.All
+    - / * "private" * / java.lang.String
+  */
+  trait Privacy extends js.Object
+  
   @js.native
   class Rule () extends AbstractRule {
     var getExclusionsMap: js.Any = js.native
   }
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.tslint.completedDocsRuleMod.All
+    - / * "exported" * / java.lang.String
+  */
+  trait Visibility extends js.Object
   
   @JSName("ALL")
   val ALL_ : /* "all" */ String = js.native
@@ -44,19 +72,15 @@ object completedDocsRuleMod extends js.Object {
   /* static members */
   @js.native
   object Rule extends js.Object {
-    var ARGUMENT_DESCRIPTOR_BLOCK: AnonPropertiesType = js.native
-    var ARGUMENT_DESCRIPTOR_CLASS: AnonPropertiesAnonLocations = js.native
-    var ARGUMENT_DESCRIPTOR_FUNCTION: AnonPropertiesAnonOverloads = js.native
-    var ARGUMENT_DESCRIPTOR_METHOD: AnonPropertiesAnonPrivacies = js.native
+    var ARGUMENT_DESCRIPTOR_BLOCK: PropertiesType = js.native
+    var ARGUMENT_DESCRIPTOR_CLASS: PropertiesLocations = js.native
+    var ARGUMENT_DESCRIPTOR_FUNCTION: PropertiesOverloads = js.native
+    var ARGUMENT_DESCRIPTOR_METHOD: PropertiesPrivacies = js.native
     var FAILURE_STRING_EXIST: String = js.native
     var defaultArguments: IInputExclusionDescriptors = js.native
     var metadata: IRuleMetadata = js.native
   }
   
   type All = /* "all" */ String
-  type DocType = All | (/* "classes" */ String)
-  type Location = All | (/* "instance" */ String)
-  type Privacy = All | (/* "private" */ String)
-  type Visibility = All | (/* "exported" */ String)
 }
 

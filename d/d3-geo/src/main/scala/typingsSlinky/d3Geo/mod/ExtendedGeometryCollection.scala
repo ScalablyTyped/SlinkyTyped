@@ -1,14 +1,14 @@
 package typingsSlinky.d3Geo.mod
 
-import typingsSlinky.d3Geo.AnonProperties
+import typingsSlinky.d3Geo.anon.Properties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ExtendedGeometryCollection[GeometryType /* <: GeoGeometryObjects */] extends js.Object {
+trait ExtendedGeometryCollection[GeometryType /* <: GeoGeometryObjects */] extends GeoPermissibleObjects {
   var bbox: js.UndefOr[js.Array[Double]] = js.native
-  var crs: js.UndefOr[AnonProperties] = js.native
+  var crs: js.UndefOr[Properties] = js.native
   var geometries: js.Array[GeometryType] = js.native
   var `type`: String = js.native
 }
@@ -51,7 +51,7 @@ object ExtendedGeometryCollection {
         ret
     }
     @scala.inline
-    def withCrs(value: AnonProperties): Self[GeometryType] = {
+    def withCrs(value: Properties): Self[GeometryType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("crs")(value.asInstanceOf[js.Any])
         ret

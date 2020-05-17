@@ -1,9 +1,9 @@
 package typingsSlinky.cleanCss.mod
 
-import typingsSlinky.cleanCss.AnonAdjacentSpace
-import typingsSlinky.cleanCss.AnonBackgroundClipMerging
-import typingsSlinky.cleanCss.AnonCh
-import typingsSlinky.cleanCss.AnonOpacity
+import typingsSlinky.cleanCss.anon.AdjacentSpace
+import typingsSlinky.cleanCss.anon.BackgroundClipMerging
+import typingsSlinky.cleanCss.anon.Ch
+import typingsSlinky.cleanCss.anon.Opacity
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,19 +16,19 @@ trait CompatibilityOptions extends js.Object {
   /**
     * A hash of compatibility options related to color
     */
-  var colors: js.UndefOr[AnonOpacity] = js.native
+  var colors: js.UndefOr[Opacity] = js.native
   /**
     * A hash of properties that can be set with compatibility
     */
-  var properties: js.UndefOr[AnonBackgroundClipMerging] = js.native
+  var properties: js.UndefOr[BackgroundClipMerging] = js.native
   /**
     * A hash of options related to compatibility of selectors
     */
-  var selectors: js.UndefOr[AnonAdjacentSpace] = js.native
+  var selectors: js.UndefOr[AdjacentSpace] = js.native
   /**
     * A hash of options related to comparability of supported units
     */
-  var units: js.UndefOr[AnonCh] = js.native
+  var units: js.UndefOr[Ch] = js.native
 }
 
 object CompatibilityOptions {
@@ -44,7 +44,7 @@ object CompatibilityOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withColors(value: AnonOpacity): Self = {
+    def withColors(value: Opacity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
         ret
@@ -56,7 +56,7 @@ object CompatibilityOptions {
         ret
     }
     @scala.inline
-    def withProperties(value: AnonBackgroundClipMerging): Self = {
+    def withProperties(value: BackgroundClipMerging): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
         ret
@@ -68,7 +68,7 @@ object CompatibilityOptions {
         ret
     }
     @scala.inline
-    def withSelectors(value: AnonAdjacentSpace): Self = {
+    def withSelectors(value: AdjacentSpace): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectors")(value.asInstanceOf[js.Any])
         ret
@@ -80,7 +80,7 @@ object CompatibilityOptions {
         ret
     }
     @scala.inline
-    def withUnits(value: AnonCh): Self = {
+    def withUnits(value: Ch): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("units")(value.asInstanceOf[js.Any])
         ret

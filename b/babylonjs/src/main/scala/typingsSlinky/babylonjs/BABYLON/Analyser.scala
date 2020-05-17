@@ -1,20 +1,14 @@
 package typingsSlinky.babylonjs.BABYLON
 
 import org.scalajs.dom.raw.AudioNode
-import typingsSlinky.babylonjs.AnonWidth
-import typingsSlinky.babylonjs.AnonY
+import typingsSlinky.babylonjs.anon.Width
+import typingsSlinky.babylonjs.anon.Y
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.Analyser")
 @js.native
-class Analyser protected () extends js.Object {
-  /**
-    * Creates a new analyser
-    * @param scene defines hosting scene
-    */
-  def this(scene: Scene) = this()
+trait Analyser extends js.Object {
   /**
     * Gets or sets the bar graph amplitude
     * @ignorenaming
@@ -24,12 +18,12 @@ class Analyser protected () extends js.Object {
     * Gets or sets the position of the debug canvas
     * @ignorenaming
     */
-  var DEBUGCANVASPOS: AnonY = js.native
+  var DEBUGCANVASPOS: Y = js.native
   /**
     * Gets or sets the debug canvas size
     * @ignorenaming
     */
-  var DEBUGCANVASSIZE: AnonWidth = js.native
+  var DEBUGCANVASSIZE: Width = js.native
   /**
     * Gets or sets the FFT table size
     * @ignorenaming
@@ -91,5 +85,176 @@ class Analyser protected () extends js.Object {
     * Stops rendering the debug canvas and removes it
     */
   def stopDebugCanvas(): Unit = js.native
+}
+
+object Analyser {
+  @scala.inline
+  def apply(
+    BARGRAPHAMPLITUDE: Double,
+    DEBUGCANVASPOS: Y,
+    DEBUGCANVASSIZE: Width,
+    FFT_SIZE: Double,
+    SMOOTHING: Double,
+    _audioEngine: js.Any,
+    _byteFreqs: js.Any,
+    _byteTime: js.Any,
+    _debugCanvas: js.Any,
+    _debugCanvasContext: js.Any,
+    _floatFreqs: js.Any,
+    _registerFunc: js.Any,
+    _scene: js.Any,
+    _webAudioAnalyser: js.Any,
+    connectAudioNodes: (AudioNode, AudioNode) => Unit,
+    dispose: () => Unit,
+    drawDebugCanvas: () => Unit,
+    getByteFrequencyData: () => js.typedarray.Uint8Array,
+    getByteTimeDomainData: () => js.typedarray.Uint8Array,
+    getFloatFrequencyData: () => js.typedarray.Float32Array,
+    getFrequencyBinCount: () => Double,
+    stopDebugCanvas: () => Unit
+  ): Analyser = {
+    val __obj = js.Dynamic.literal(BARGRAPHAMPLITUDE = BARGRAPHAMPLITUDE.asInstanceOf[js.Any], DEBUGCANVASPOS = DEBUGCANVASPOS.asInstanceOf[js.Any], DEBUGCANVASSIZE = DEBUGCANVASSIZE.asInstanceOf[js.Any], FFT_SIZE = FFT_SIZE.asInstanceOf[js.Any], SMOOTHING = SMOOTHING.asInstanceOf[js.Any], _audioEngine = _audioEngine.asInstanceOf[js.Any], _byteFreqs = _byteFreqs.asInstanceOf[js.Any], _byteTime = _byteTime.asInstanceOf[js.Any], _debugCanvas = _debugCanvas.asInstanceOf[js.Any], _debugCanvasContext = _debugCanvasContext.asInstanceOf[js.Any], _floatFreqs = _floatFreqs.asInstanceOf[js.Any], _registerFunc = _registerFunc.asInstanceOf[js.Any], _scene = _scene.asInstanceOf[js.Any], _webAudioAnalyser = _webAudioAnalyser.asInstanceOf[js.Any], connectAudioNodes = js.Any.fromFunction2(connectAudioNodes), dispose = js.Any.fromFunction0(dispose), drawDebugCanvas = js.Any.fromFunction0(drawDebugCanvas), getByteFrequencyData = js.Any.fromFunction0(getByteFrequencyData), getByteTimeDomainData = js.Any.fromFunction0(getByteTimeDomainData), getFloatFrequencyData = js.Any.fromFunction0(getFloatFrequencyData), getFrequencyBinCount = js.Any.fromFunction0(getFrequencyBinCount), stopDebugCanvas = js.Any.fromFunction0(stopDebugCanvas))
+    __obj.asInstanceOf[Analyser]
+  }
+  @scala.inline
+  implicit class AnalyserOps[Self <: Analyser] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBARGRAPHAMPLITUDE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BARGRAPHAMPLITUDE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDEBUGCANVASPOS(value: Y): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DEBUGCANVASPOS")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDEBUGCANVASSIZE(value: Width): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DEBUGCANVASSIZE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFFT_SIZE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FFT_SIZE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSMOOTHING(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SMOOTHING")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_audioEngine(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_audioEngine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_byteFreqs(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_byteFreqs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_byteTime(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_byteTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_debugCanvas(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_debugCanvas")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_debugCanvasContext(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_debugCanvasContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_floatFreqs(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_floatFreqs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_registerFunc(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_registerFunc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_scene(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_scene")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_webAudioAnalyser(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_webAudioAnalyser")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConnectAudioNodes(value: (AudioNode, AudioNode) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectAudioNodes")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withDispose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispose")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDrawDebugCanvas(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawDebugCanvas")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetByteFrequencyData(value: () => js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getByteFrequencyData")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetByteTimeDomainData(value: () => js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getByteTimeDomainData")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetFloatFrequencyData(value: () => js.typedarray.Float32Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFloatFrequencyData")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetFrequencyBinCount(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFrequencyBinCount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStopDebugCanvas(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopDebugCanvas")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

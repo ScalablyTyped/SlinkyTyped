@@ -1,16 +1,16 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonItemElementModel
-import typingsSlinky.devextreme.AnonPreviousItem
-import typingsSlinky.devextreme.AnonSelectedItem
+import typingsSlinky.devextreme.anon.ItemElementModel
+import typingsSlinky.devextreme.anon.PreviousItem
+import typingsSlinky.devextreme.anon.SelectedItem
 import typingsSlinky.devextreme.devextremeStrings.contained
 import typingsSlinky.devextreme.devextremeStrings.outlined
 import typingsSlinky.devextreme.devextremeStrings.text
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -51,11 +51,11 @@ trait dxDropDownButtonOptions extends WidgetOptions[dxDropDownButton] {
   /** Specifies text or HTML markup displayed in the drop-down menu when it does not contain any items. */
   var noDataText: js.UndefOr[String] = js.native
   /** A function that is executed when the button is clicked or tapped. If splitButton is true, this function is executed for the action button only. */
-  var onButtonClick: js.UndefOr[(js.Function1[/* e */ AnonSelectedItem, _]) | String] = js.native
+  var onButtonClick: js.UndefOr[(js.Function1[/* e */ SelectedItem, _]) | String] = js.native
   /** A function that is executed when a drop-down menu item is clicked. */
-  var onItemClick: js.UndefOr[(js.Function1[/* e */ AnonItemElementModel, _]) | String] = js.native
+  var onItemClick: js.UndefOr[(js.Function1[/* e */ ItemElementModel, _]) | String] = js.native
   /** A function that is executed when an item is selected or selection is canceled. In effect when useSelectMode is true. */
-  var onSelectionChanged: js.UndefOr[(js.Function1[/* e */ AnonPreviousItem, _]) | String] = js.native
+  var onSelectionChanged: js.UndefOr[(js.Function1[/* e */ PreviousItem, _]) | String] = js.native
   /** Specifies whether the drop-down menu is opened. */
   var opened: js.UndefOr[Boolean] = js.native
   /** Contains the selected item's data. Available when useSelectMode is true. */
@@ -256,13 +256,13 @@ object dxDropDownButtonOptions {
         ret
     }
     @scala.inline
-    def withOnButtonClickFunction1(value: /* e */ AnonSelectedItem => _): Self = {
+    def withOnButtonClickFunction1(value: /* e */ SelectedItem => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onButtonClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnButtonClick(value: (js.Function1[/* e */ AnonSelectedItem, _]) | String): Self = {
+    def withOnButtonClick(value: (js.Function1[/* e */ SelectedItem, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onButtonClick")(value.asInstanceOf[js.Any])
         ret
@@ -274,13 +274,13 @@ object dxDropDownButtonOptions {
         ret
     }
     @scala.inline
-    def withOnItemClickFunction1(value: /* e */ AnonItemElementModel => _): Self = {
+    def withOnItemClickFunction1(value: /* e */ ItemElementModel => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnItemClick(value: (js.Function1[/* e */ AnonItemElementModel, _]) | String): Self = {
+    def withOnItemClick(value: (js.Function1[/* e */ ItemElementModel, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(value.asInstanceOf[js.Any])
         ret
@@ -292,13 +292,13 @@ object dxDropDownButtonOptions {
         ret
     }
     @scala.inline
-    def withOnSelectionChangedFunction1(value: /* e */ AnonPreviousItem => _): Self = {
+    def withOnSelectionChangedFunction1(value: /* e */ PreviousItem => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnSelectionChanged(value: (js.Function1[/* e */ AnonPreviousItem, _]) | String): Self = {
+    def withOnSelectionChanged(value: (js.Function1[/* e */ PreviousItem, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(value.asInstanceOf[js.Any])
         ret

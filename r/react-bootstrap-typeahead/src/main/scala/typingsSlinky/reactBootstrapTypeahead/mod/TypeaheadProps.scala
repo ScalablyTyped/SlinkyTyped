@@ -1,7 +1,7 @@
 package typingsSlinky.reactBootstrapTypeahead.mod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.TagMod
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -85,15 +85,15 @@ trait TypeaheadProps[T /* <: TypeaheadModel */] extends js.Object {
   /* Provides the ability to specify a prefix before the user-entered text to indicate that the selection will be new. No-op unless allowNew={true}. */
   var newSelectionPrefix: js.UndefOr[String] = js.native
   /* Invoked when the input is blurred. Receives an event. */
-  var onBlur: js.UndefOr[js.Function1[/* e */ Event_, Unit]] = js.native
+  var onBlur: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
   /* Invoked whenever items are added or removed. Receives an array of the selected options. */
   var onChange: js.UndefOr[js.Function1[/* selected */ js.Array[T], Unit]] = js.native
   /* Invoked when the input is focused. Receives an event. */
-  var onFocus: js.UndefOr[js.Function1[/* e */ Event_, Unit]] = js.native
+  var onFocus: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
   /* Invoked when the input value changes. Receives the string value of the input, as well as the original event. */
-  var onInputChange: js.UndefOr[js.Function2[/* input */ String, /* e */ Event_, Unit]] = js.native
+  var onInputChange: js.UndefOr[js.Function2[/* input */ String, /* e */ Event, Unit]] = js.native
   /* Invoked when a key is pressed. Receives an event. */
-  var onKeyDown: js.UndefOr[js.Function1[/* e */ Event_, Unit]] = js.native
+  var onKeyDown: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
   /* DEPRECATED: Invoked when the menu is hidden. */
   var onMenuHide: js.UndefOr[js.Function0[Unit]] = js.native
   /* DEPRECATED: Invoked when the menu is shown. */
@@ -101,7 +101,7 @@ trait TypeaheadProps[T /* <: TypeaheadModel */] extends js.Object {
   /* 	Invoked when menu visibility changes. */
   var onMenuToggle: js.UndefOr[js.Function1[/* show */ Boolean, Unit]] = js.native
   /* Invoked when the pagination menu item is clicked. */
-  var onPaginate: js.UndefOr[js.Function2[/* e */ Event_, /* numResults */ Double, Unit]] = js.native
+  var onPaginate: js.UndefOr[js.Function2[/* e */ Event, /* numResults */ Double, Unit]] = js.native
   /* Whether or not the menu should be displayed. undefined allows the component to control visibility,
     while true and false show and hide the menu, respectively. */
   var open: js.UndefOr[Boolean] = js.native
@@ -557,7 +557,7 @@ object TypeaheadProps {
         ret
     }
     @scala.inline
-    def withOnBlur(value: /* e */ Event_ => Unit): Self[T] = {
+    def withOnBlur(value: /* e */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
         ret
@@ -581,7 +581,7 @@ object TypeaheadProps {
         ret
     }
     @scala.inline
-    def withOnFocus(value: /* e */ Event_ => Unit): Self[T] = {
+    def withOnFocus(value: /* e */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
         ret
@@ -593,7 +593,7 @@ object TypeaheadProps {
         ret
     }
     @scala.inline
-    def withOnInputChange(value: (/* input */ String, /* e */ Event_) => Unit): Self[T] = {
+    def withOnInputChange(value: (/* input */ String, /* e */ Event) => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInputChange")(js.Any.fromFunction2(value))
         ret
@@ -605,7 +605,7 @@ object TypeaheadProps {
         ret
     }
     @scala.inline
-    def withOnKeyDown(value: /* e */ Event_ => Unit): Self[T] = {
+    def withOnKeyDown(value: /* e */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction1(value))
         ret
@@ -653,7 +653,7 @@ object TypeaheadProps {
         ret
     }
     @scala.inline
-    def withOnPaginate(value: (/* e */ Event_, /* numResults */ Double) => Unit): Self[T] = {
+    def withOnPaginate(value: (/* e */ Event, /* numResults */ Double) => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPaginate")(js.Any.fromFunction2(value))
         ret

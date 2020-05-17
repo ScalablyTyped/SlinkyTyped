@@ -1,7 +1,7 @@
 package typingsSlinky.babelPluginMacros.mod
 
-import typingsSlinky.babelPluginMacros.TypeofBabel
-import typingsSlinky.babelPluginMacros.defaultArrayNodePathNodeR
+import typingsSlinky.babelPluginMacros.anon.TypeofBabel
+import typingsSlinky.babelPluginMacros.anon.defaultArrayNodePathNodeR
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

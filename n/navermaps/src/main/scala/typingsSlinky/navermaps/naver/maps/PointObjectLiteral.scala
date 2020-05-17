@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PointObjectLiteral extends js.Object {
+trait PointObjectLiteral extends PointLiteral {
   var x: Double = js.native
   var y: Double = js.native
 }

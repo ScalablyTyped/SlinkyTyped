@@ -1,11 +1,12 @@
 package typingsSlinky.officeUiFabricReact.comboBoxTypesMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
-import typingsSlinky.officeUiFabricReact.PartialIButtonStyles
-import typingsSlinky.officeUiFabricReact.PartialIComboBoxOptionSty
-import typingsSlinky.officeUiFabricReact.PartialIComboBoxStyles
+import typingsSlinky.officeUiFabricReact.anon.PartialIButtonStyles
+import typingsSlinky.officeUiFabricReact.anon.PartialIComboBoxOptionSty
+import typingsSlinky.officeUiFabricReact.anon.PartialIComboBoxStyles
 import typingsSlinky.officeUiFabricReact.autofillTypesMod.IAutofillProps
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonProps
 import typingsSlinky.officeUiFabricReact.comboBoxClassNamesMod.IComboBoxClassNames
@@ -14,7 +15,6 @@ import typingsSlinky.officeUiFabricReact.keytipTypesMod.IKeytipProps
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.off
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.on
 import typingsSlinky.officeUiFabricReact.selectableDroppableTextTypesMod.ISelectableDroppableTextProps
-import typingsSlinky.std.Event_
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import scala.scalajs.js
@@ -105,7 +105,7 @@ trait IComboBoxProps extends ISelectableDroppableTextProps[IComboBox, IComboBox]
   @JSName("onChange")
   var onChange_IComboBoxProps: js.UndefOr[
     js.Function4[
-      SyntheticEvent[EventTarget with IComboBox, Event_], 
+      SyntheticEvent[EventTarget with IComboBox, Event], 
       /* option */ js.UndefOr[IComboBoxOption], 
       /* index */ js.UndefOr[Double], 
       /* value */ js.UndefOr[String], 
@@ -117,7 +117,7 @@ trait IComboBoxProps extends ISelectableDroppableTextProps[IComboBox, IComboBox]
     */
   var onItemClick: js.UndefOr[
     js.Function3[
-      SyntheticEvent[EventTarget with IComboBox, Event_], 
+      SyntheticEvent[EventTarget with IComboBox, Event], 
       /* option */ js.UndefOr[IComboBoxOption], 
       /* index */ js.UndefOr[Double], 
       Unit
@@ -394,7 +394,7 @@ object IComboBoxProps {
     }
     @scala.inline
     def withOnChange(
-      value: (SyntheticEvent[EventTarget with IComboBox, Event_], /* option */ js.UndefOr[IComboBoxOption], /* index */ js.UndefOr[Double], /* value */ js.UndefOr[String]) => Unit
+      value: (SyntheticEvent[EventTarget with IComboBox, Event], /* option */ js.UndefOr[IComboBoxOption], /* index */ js.UndefOr[Double], /* value */ js.UndefOr[String]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction4(value))
@@ -408,7 +408,7 @@ object IComboBoxProps {
     }
     @scala.inline
     def withOnItemClick(
-      value: (SyntheticEvent[EventTarget with IComboBox, Event_], /* option */ js.UndefOr[IComboBoxOption], /* index */ js.UndefOr[Double]) => Unit
+      value: (SyntheticEvent[EventTarget with IComboBox, Event], /* option */ js.UndefOr[IComboBoxOption], /* index */ js.UndefOr[Double]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction3(value))

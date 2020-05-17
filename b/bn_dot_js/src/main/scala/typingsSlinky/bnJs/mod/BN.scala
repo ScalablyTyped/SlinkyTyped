@@ -1,7 +1,7 @@
 package typingsSlinky.bnJs.mod
 
-import typingsSlinky.bnJs.AnonA
-import typingsSlinky.bnJs.TypeofBuffer
+import typingsSlinky.bnJs.anon.A
+import typingsSlinky.bnJs.anon.TypeofBuffer
 import typingsSlinky.bnJs.bnJsNumbers.`-1`
 import typingsSlinky.bnJs.bnJsNumbers.`0`
 import typingsSlinky.bnJs.bnJsNumbers.`1`
@@ -68,7 +68,7 @@ trait BN extends js.Object {
   /**
     * @description Extended GCD results `({ a: ..., b: ..., gcd: ... })`
     */
-  def egcd(b: BN): AnonA = js.native
+  def egcd(b: BN): A = js.native
   /**
     * @description a equals b
     */

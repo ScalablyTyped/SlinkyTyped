@@ -10,5 +10,4 @@ package object mod {
     typingsSlinky.httpErrors.mod.HttpError
   ]
   type HttpErrorConstructor = org.scalablytyped.runtime.Instantiable1[js.UndefOr[/* msg */ java.lang.String], typingsSlinky.httpErrors.mod.HttpError]
-  type UnknownError = js.Error | java.lang.String | scala.Double | org.scalablytyped.runtime.StringDictionary[js.Any]
 }

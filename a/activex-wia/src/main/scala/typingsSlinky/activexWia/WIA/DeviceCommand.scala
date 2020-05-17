@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** The DeviceCommand object describes a CommandID that can be used when calling ExecuteCommand on a Device or Item object. */
-@JSGlobal("WIA.DeviceCommand")
 @js.native
-class DeviceCommand protected () extends js.Object {
+trait DeviceCommand extends js.Object {
   /** Returns the commandID for this Command */
   val CommandID: String = js.native
   /** Returns the command Description */
@@ -16,5 +15,46 @@ class DeviceCommand protected () extends js.Object {
   val Name: String = js.native
   @JSName("WIA.DeviceCommand_typekey")
   var WIADotDeviceCommand_typekey: DeviceCommand = js.native
+}
+
+object DeviceCommand {
+  @scala.inline
+  def apply(CommandID: String, Description: String, Name: String, WIADotDeviceCommand_typekey: DeviceCommand): DeviceCommand = {
+    val __obj = js.Dynamic.literal(CommandID = CommandID.asInstanceOf[js.Any], Description = Description.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
+    __obj.updateDynamic("WIA.DeviceCommand_typekey")(WIADotDeviceCommand_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DeviceCommand]
+  }
+  @scala.inline
+  implicit class DeviceCommandOps[Self <: DeviceCommand] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommandID(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CommandID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWIADotDeviceCommand_typekey(value: DeviceCommand): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("WIA.DeviceCommand_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

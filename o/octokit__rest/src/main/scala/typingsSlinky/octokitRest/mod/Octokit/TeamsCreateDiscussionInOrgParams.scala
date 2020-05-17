@@ -10,7 +10,8 @@ trait TeamsCreateDiscussionInOrgParams extends js.Object {
     * The discussion post's body text.
     */
   var body: String = js.native
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
   /**
     * Private posts are only visible to team members, organization owners, and team maintainers. Public posts are visible to all members of the organization. Set to `true` to create a private post.
     */
@@ -24,8 +25,9 @@ trait TeamsCreateDiscussionInOrgParams extends js.Object {
 
 object TeamsCreateDiscussionInOrgParams {
   @scala.inline
-  def apply(body: String, org: String, team_slug: String, title: String): TeamsCreateDiscussionInOrgParams = {
-    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], org = org.asInstanceOf[js.Any], team_slug = team_slug.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
+  def apply(body: String, org_ : String, team_slug: String, title: String): TeamsCreateDiscussionInOrgParams = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], team_slug = team_slug.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[TeamsCreateDiscussionInOrgParams]
   }
   @scala.inline
@@ -41,7 +43,7 @@ object TeamsCreateDiscussionInOrgParams {
         ret
     }
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

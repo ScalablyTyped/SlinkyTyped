@@ -1,9 +1,9 @@
 package typingsSlinky.reactTabsRedux.components
 
+import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactTabsRedux.tabLinkMod.TabLinkProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +36,7 @@ object TabLink {
     @scala.inline
     def namespace(value: String): this.type = set("namespace", value.asInstanceOf[js.Any])
     @scala.inline
-    def onClick(value: /* event */ Event_ => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    def onClick(value: /* event */ Event => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
   }

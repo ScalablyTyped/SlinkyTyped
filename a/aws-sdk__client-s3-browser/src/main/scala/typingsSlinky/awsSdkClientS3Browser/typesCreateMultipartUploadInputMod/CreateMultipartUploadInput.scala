@@ -15,7 +15,7 @@ import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.`public-
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.`public-read`
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.awsColonkms
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.requester_
-import typingsSlinky.awsSdkClientS3Browser.inputTypesUnionMod._InputTypesUnion
+import typingsSlinky.awsSdkClientS3Browser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.cryptoMod.SourceData
 import typingsSlinky.awsSdkTypes.httpMod.BrowserHttpOptions
@@ -24,7 +24,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CreateMultipartUploadInput extends _InputTypesUnion {
+trait CreateMultipartUploadInput extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *

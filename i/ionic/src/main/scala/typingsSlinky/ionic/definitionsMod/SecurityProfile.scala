@@ -1,6 +1,6 @@
 package typingsSlinky.ionic.definitionsMod
 
-import typingsSlinky.ionic.AnonAndroid
+import typingsSlinky.ionic.anon.Android
 import typingsSlinky.ionic.ionicStrings.development
 import typingsSlinky.ionic.ionicStrings.production
 import scala.scalajs.js
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SecurityProfile extends js.Object {
   var created: String = js.native
-  var credentials: AnonAndroid = js.native
+  var credentials: Android = js.native
   var name: String = js.native
   var tag: String = js.native
   var `type`: development | production = js.native
@@ -18,13 +18,7 @@ trait SecurityProfile extends js.Object {
 
 object SecurityProfile {
   @scala.inline
-  def apply(
-    created: String,
-    credentials: AnonAndroid,
-    name: String,
-    tag: String,
-    `type`: development | production
-  ): SecurityProfile = {
+  def apply(created: String, credentials: Android, name: String, tag: String, `type`: development | production): SecurityProfile = {
     val __obj = js.Dynamic.literal(created = created.asInstanceOf[js.Any], credentials = credentials.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], tag = tag.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecurityProfile]
@@ -42,7 +36,7 @@ object SecurityProfile {
         ret
     }
     @scala.inline
-    def withCredentials(value: AnonAndroid): Self = {
+    def withCredentials(value: Android): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(value.asInstanceOf[js.Any])
         ret

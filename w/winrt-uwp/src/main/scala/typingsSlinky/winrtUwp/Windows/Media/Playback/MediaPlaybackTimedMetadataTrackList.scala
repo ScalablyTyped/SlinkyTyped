@@ -1,22 +1,21 @@
 package typingsSlinky.winrtUwp.Windows.Media.Playback
 
 import typingsSlinky.std.Array
-import typingsSlinky.winrtUwp.AnonIndex
-import typingsSlinky.winrtUwp.AnonItemsTimedMetadataTrack
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrtUwp.Windows.Foundation.EventHandler
 import typingsSlinky.winrtUwp.Windows.Foundation.TypedEventHandler
 import typingsSlinky.winrtUwp.Windows.Media.Core.TimedMetadataTrack
 import typingsSlinky.winrtUwp.Windows.WinRTEvent
+import typingsSlinky.winrtUwp.anon.Index
+import typingsSlinky.winrtUwp.anon.ItemsTimedMetadataTrack
 import typingsSlinky.winrtUwp.winrtUwpStrings.presentationmodechanged
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a read-only list of timed metadata tracks. */
-@JSGlobal("Windows.Media.Playback.MediaPlaybackTimedMetadataTrackList")
 @js.native
-abstract class MediaPlaybackTimedMetadataTrackList () extends Array[TimedMetadataTrack] {
+trait MediaPlaybackTimedMetadataTrackList extends Array[TimedMetadataTrack] {
   /** Occurs when the presentation mode of the MediaPlaybackTimedMetadataTrackList changes. */
   @JSName("onpresentationmodechanged")
   var onpresentationmodechanged_Original: TypedEventHandler[MediaPlaybackTimedMetadataTrackList, TimedMetadataPresentationModeChangedEventArgs] = js.native
@@ -43,20 +42,20 @@ abstract class MediaPlaybackTimedMetadataTrackList () extends Array[TimedMetadat
     * Retrieves the timed metadata tracks that start at the specified index in the list.
     * @param startIndex The zero-based index of the start of the timed metadata tracks in the list.
     */
-  def getMany(startIndex: Double): AnonItemsTimedMetadataTrack = js.native
+  def getMany(startIndex: Double): ItemsTimedMetadataTrack = js.native
   /**
     * Gets the presentation mode of the timed metadata track with the specified index.
     * @param index The index of the timed metadata track for which the presentation mode is queried.
     * @return The presentation mode.
     */
   def getPresentationMode(index: Double): TimedMetadataTrackPresentationMode = js.native
-  def indexOf(value: TimedMetadataTrack, extra: js.Any*): AnonIndex = js.native
+  def indexOf(value: TimedMetadataTrack, extra: js.Any*): Index = js.native
   /**
     * Retrieves the index of a specified timed metadata track in the list.
     * @param value The timed metadata track to find in the vector view.
     */
   @JSName("indexOf")
-  def indexOf_AnonIndex(value: TimedMetadataTrack): AnonIndex = js.native
+  def indexOf_Index(value: TimedMetadataTrack): Index = js.native
   /** Occurs when the presentation mode of the MediaPlaybackTimedMetadataTrackList changes. */
   def onpresentationmodechanged(
     ev: TimedMetadataPresentationModeChangedEventArgs with WinRTEvent[MediaPlaybackTimedMetadataTrackList]

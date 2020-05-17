@@ -1,6 +1,6 @@
 package typingsSlinky.vmap.mod
 
-import typingsSlinky.std.Document_
+import org.scalajs.dom.raw.Document
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +11,6 @@ import scala.scalajs.js.annotation._
 @JSImport("vmap", JSImport.Namespace)
 @js.native
 class ^ protected () extends VMAP {
-  def this(xml: Document_) = this()
+  def this(xml: Document) = this()
 }
 

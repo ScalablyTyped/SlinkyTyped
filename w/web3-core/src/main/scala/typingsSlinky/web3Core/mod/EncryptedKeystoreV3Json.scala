@@ -1,6 +1,6 @@
 package typingsSlinky.web3Core.mod
 
-import typingsSlinky.web3Core.AnonCipher
+import typingsSlinky.web3Core.anon.Cipher
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait EncryptedKeystoreV3Json extends js.Object {
   var address: String = js.native
-  var crypto: AnonCipher = js.native
+  var crypto: Cipher = js.native
   var id: String = js.native
   var version: Double = js.native
 }
 
 object EncryptedKeystoreV3Json {
   @scala.inline
-  def apply(address: String, crypto: AnonCipher, id: String, version: Double): EncryptedKeystoreV3Json = {
+  def apply(address: String, crypto: Cipher, id: String, version: Double): EncryptedKeystoreV3Json = {
     val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], crypto = crypto.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
     __obj.asInstanceOf[EncryptedKeystoreV3Json]
   }
@@ -32,7 +32,7 @@ object EncryptedKeystoreV3Json {
         ret
     }
     @scala.inline
-    def withCrypto(value: AnonCipher): Self = {
+    def withCrypto(value: Cipher): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("crypto")(value.asInstanceOf[js.Any])
         ret

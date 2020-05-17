@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientClassroom.gapi.client.classroom
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientClassroom.AnonQuotaUserUploadType
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientClassroom.anon.QuotaUserUploadType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait UserProfilesResource extends js.Object {
     * this user profile, if no profile exists with the requested ID, or for
     * access errors.
     */
-  def get(): Request_[UserProfile] = js.native
-  def get(request: AnonQuotaUserUploadType): Request_[UserProfile] = js.native
+  def get(): Request[UserProfile] = js.native
+  def get(request: QuotaUserUploadType): Request[UserProfile] = js.native
 }
 

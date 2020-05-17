@@ -6,8 +6,8 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.rbx.BinVariablesbreakpointsLi
-import typingsSlinky.rbx.KinVariablesbreakpointsto
+import typingsSlinky.rbx.anon.BinVariablesbreakpointsLi
+import typingsSlinky.rbx.anon.KinVariablesbreakpointsto
 import typingsSlinky.rbx.dropdownContainerMod.DropdownContainerProps
 import typingsSlinky.rbx.rbxNumbers.`1`
 import typingsSlinky.rbx.rbxNumbers.`2`

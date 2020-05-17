@@ -1,13 +1,13 @@
 package typingsSlinky.vexflow.mod.Flow
 
+import typingsSlinky.vexflow.Vex.Flow.KeySignature
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("vexflow", "Flow.KeySignature")
 @js.native
-class KeySignature_ protected ()
-  extends typingsSlinky.vexflow.Vex.Flow.KeySignature_ {
+class KeySignature_ protected () extends KeySignature {
   def this(key_spec: String) = this()
 }
 

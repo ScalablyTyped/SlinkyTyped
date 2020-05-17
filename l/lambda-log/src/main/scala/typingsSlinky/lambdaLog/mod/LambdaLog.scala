@@ -1,8 +1,8 @@
 package typingsSlinky.lambdaLog.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Console
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.std.Console_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ class LambdaLog ()
   var LambdaLog: typingsSlinky.lambdaLog.mod.LambdaLog = js.native
   var _levels: js.Any = js.native
   var _logLevels: js.Any = js.native
-  var console: Console_ = js.native
+  var console: Console = js.native
   var options: LambdaLogOptions = js.native
   def assert(test: js.Any, msg: String): Boolean | LogMessage = js.native
   def assert(test: js.Any, msg: String, meta: js.Object): Boolean | LogMessage = js.native

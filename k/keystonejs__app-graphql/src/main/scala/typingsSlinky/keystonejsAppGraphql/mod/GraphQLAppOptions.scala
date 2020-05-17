@@ -1,6 +1,6 @@
 package typingsSlinky.keystonejsAppGraphql.mod
 
-import typingsSlinky.keystonejsAppGraphql.AnonIntrospection
+import typingsSlinky.keystonejsAppGraphql.anon.Introspection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GraphQLAppOptions extends js.Object {
   var apiPath: js.UndefOr[String] = js.native
-  var apollo: js.UndefOr[AnonIntrospection] = js.native
+  var apollo: js.UndefOr[Introspection] = js.native
   var graphiqlPath: js.UndefOr[String] = js.native
   var schemaName: js.UndefOr[String] = js.native
 }
@@ -38,7 +38,7 @@ object GraphQLAppOptions {
         ret
     }
     @scala.inline
-    def withApollo(value: AnonIntrospection): Self = {
+    def withApollo(value: Introspection): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("apollo")(value.asInstanceOf[js.Any])
         ret

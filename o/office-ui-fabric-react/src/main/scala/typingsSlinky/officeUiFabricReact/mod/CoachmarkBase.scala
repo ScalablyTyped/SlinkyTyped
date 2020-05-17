@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.mod
 
-import typingsSlinky.officeUiFabricReact.PartialICoachmarkProps
+import typingsSlinky.officeUiFabricReact.anon.PartialICoachmarkProps
 import typingsSlinky.officeUiFabricReact.coachmarkTypesMod.ICoachmarkProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

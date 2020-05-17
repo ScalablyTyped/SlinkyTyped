@@ -1,16 +1,12 @@
 package typingsSlinky.winrtUwp.Windows.Devices.I2c
 
-import typingsSlinky.winrtUwp.Windows.Devices.I2c.Provider.II2cProvider
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
-import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the I²C controller for the system. */
-@JSGlobal("Windows.Devices.I2c.I2cController")
 @js.native
-abstract class I2cController () extends js.Object {
+trait I2cController extends js.Object {
   /**
     * Gets the I²C device with the specified settings.
     * @param settings The desired connection settings.
@@ -19,20 +15,25 @@ abstract class I2cController () extends js.Object {
   def getDevice(settings: I2cConnectionSettings): I2cDevice = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Devices.I2c.I2cController")
-@js.native
-object I2cController extends js.Object {
-  /**
-    * Gets all the I²C controllers that are on the system.
-    * @param provider The I²C provider for the controllers on the system.
-    * @return When the method completes successfully, it returns a list of values that represent the available I²C controllers on the system.
-    */
-  def getControllersAsync(provider: II2cProvider): IPromiseWithIAsyncOperation[IVectorView[_]] = js.native
-  /**
-    * Gets the default I²C controller on the system.
-    * @return The default I²C controller on the system, or null if the system has no I²C controller.
-    */
-  def getDefaultAsync(): IPromiseWithIAsyncOperation[I2cController] = js.native
+object I2cController {
+  @scala.inline
+  def apply(getDevice: I2cConnectionSettings => I2cDevice): I2cController = {
+    val __obj = js.Dynamic.literal(getDevice = js.Any.fromFunction1(getDevice))
+    __obj.asInstanceOf[I2cController]
+  }
+  @scala.inline
+  implicit class I2cControllerOps[Self <: I2cController] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetDevice(value: I2cConnectionSettings => I2cDevice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDevice")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

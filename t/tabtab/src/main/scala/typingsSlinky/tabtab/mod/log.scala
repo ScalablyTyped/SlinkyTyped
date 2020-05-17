@@ -1,6 +1,6 @@
 package typingsSlinky.tabtab.mod
 
-import typingsSlinky.tabtab.ReadonlyCompletionItem
+import typingsSlinky.tabtab.anon.ReadonlyCompletionItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

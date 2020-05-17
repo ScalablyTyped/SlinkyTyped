@@ -1,13 +1,13 @@
 package typingsSlinky.recurlyRecurlyJs.paypalMod
 
-import typingsSlinky.recurlyRecurlyJs.AnonDisplayName
+import typingsSlinky.recurlyRecurlyJs.anon.DisplayName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait DirectConfig extends PayPalConfig {
-  var display: js.UndefOr[AnonDisplayName] = js.native
+  var display: js.UndefOr[DisplayName] = js.native
 }
 
 object DirectConfig {
@@ -23,7 +23,7 @@ object DirectConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDisplay(value: AnonDisplayName): Self = {
+    def withDisplay(value: DisplayName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("display")(value.asInstanceOf[js.Any])
         ret

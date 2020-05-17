@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ConditionalDataBarPositiveFormatData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ConditionalDataBarPositiveFormatLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ConditionalDataBarPositiveFormatUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.6]
   */
-@JSGlobal("Excel.ConditionalDataBarPositiveFormat")
 @js.native
-class ConditionalDataBarPositiveFormat () extends ClientObject {
+trait ConditionalDataBarPositiveFormat extends ClientObject {
   /**
     *
     * HTML color code representing the color of the border line, of the form #RRGGBB (e.g. "FFA500") or as a named HTML color (e.g. "orange").
@@ -51,7 +50,7 @@ class ConditionalDataBarPositiveFormat () extends ClientObject {
     */
   def load(): ConditionalDataBarPositiveFormat = js.native
   def load(options: ConditionalDataBarPositiveFormatLoadOptions): ConditionalDataBarPositiveFormat = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ConditionalDataBarPositiveFormat = js.native
+  def load(propertyNamesAndPaths: Expand): ConditionalDataBarPositiveFormat = js.native
   def load(propertyNames: String): ConditionalDataBarPositiveFormat = js.native
   def load(propertyNames: js.Array[String]): ConditionalDataBarPositiveFormat = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

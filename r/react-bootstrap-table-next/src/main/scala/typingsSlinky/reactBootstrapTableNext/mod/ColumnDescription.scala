@@ -3,10 +3,10 @@ package typingsSlinky.reactBootstrapTableNext.mod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactText
-import typingsSlinky.reactBootstrapTableNext.AnonFilterElement
-import typingsSlinky.reactBootstrapTableNext.AnonOnClick
-import typingsSlinky.reactBootstrapTableNext.AnonOptions
-import typingsSlinky.reactBootstrapTableNext.AnonTooltipFormatter
+import typingsSlinky.reactBootstrapTableNext.anon.FilterElement
+import typingsSlinky.reactBootstrapTableNext.anon.OnClick
+import typingsSlinky.reactBootstrapTableNext.anon.Options
+import typingsSlinky.reactBootstrapTableNext.anon.TooltipFormatter
 import typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.asc
 import typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.desc
 import scala.scalajs.js
@@ -39,7 +39,7 @@ trait ColumnDescription[T /* <: js.Object */, E] extends js.Object {
   var editable: js.UndefOr[
     Boolean | (js.Function4[/* cell */ js.Any, /* row */ T, /* rowIndex */ Double, /* colIndex */ Double, Boolean])
   ] = js.native
-  var editor: js.UndefOr[AnonOptions] = js.native
+  var editor: js.UndefOr[Options] = js.native
   var filter: js.UndefOr[Boolean | (TableColumnFilterProps[_, _])] = js.native
   var filterValue: js.UndefOr[
     js.Function2[
@@ -62,13 +62,13 @@ trait ColumnDescription[T /* <: js.Object */, E] extends js.Object {
   var footerClasses: js.UndefOr[
     String | (js.Function2[/* column */ ColumnDescription[T, E], /* columnIndex */ Double, String])
   ] = js.native
-  var footerEvents: js.UndefOr[AnonOnClick[T, E]] = js.native
+  var footerEvents: js.UndefOr[OnClick[T, E]] = js.native
   var footerFormatter: js.UndefOr[
     js.Function2[/* column */ ColumnDescription[T, E], /* columnIndex */ Double, Unit]
   ] = js.native
   var footerStyle: js.UndefOr[CSSProperties] = js.native
   var footerTitle: js.UndefOr[Boolean] = js.native
-  var formatExtraData: js.UndefOr[AnonTooltipFormatter[T] with E] = js.native
+  var formatExtraData: js.UndefOr[TooltipFormatter[T] with E] = js.native
   var formatter: js.UndefOr[ColumnFormatter[T, E, _]] = js.native
   var headerAlign: js.UndefOr[CellAlignment] = js.native
   var headerFormatter: js.UndefOr[HeaderFormatter[T]] = js.native
@@ -194,7 +194,7 @@ object ColumnDescription {
         ret
     }
     @scala.inline
-    def withEditor(value: AnonOptions): Self[T, E] = {
+    def withEditor(value: Options): Self[T, E] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editor")(value.asInstanceOf[js.Any])
         ret
@@ -299,7 +299,7 @@ object ColumnDescription {
         ret
     }
     @scala.inline
-    def withFooterEvents(value: AnonOnClick[T, E]): Self[T, E] = {
+    def withFooterEvents(value: OnClick[T, E]): Self[T, E] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("footerEvents")(value.asInstanceOf[js.Any])
         ret
@@ -347,7 +347,7 @@ object ColumnDescription {
         ret
     }
     @scala.inline
-    def withFormatExtraData(value: AnonTooltipFormatter[T] with E): Self[T, E] = {
+    def withFormatExtraData(value: TooltipFormatter[T] with E): Self[T, E] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formatExtraData")(value.asInstanceOf[js.Any])
         ret
@@ -384,7 +384,7 @@ object ColumnDescription {
     }
     @scala.inline
     def withHeaderFormatter(
-      value: (/* column */ ColumnDescription[T, js.Any], /* colIndex */ Double, /* components */ AnonFilterElement) => ReactElement | String | Double | ReactText
+      value: (/* column */ ColumnDescription[T, js.Any], /* colIndex */ Double, /* components */ FilterElement) => ReactElement | String | Double | ReactText
     ): Self[T, E] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headerFormatter")(js.Any.fromFunction3(value))

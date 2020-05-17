@@ -19,13 +19,6 @@ package object mod {
     /* bagpipes */ js.Any, 
     typingsSlinky.bagpipes.mod.Fitting
   ]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.bagpipes.bagpipesStrings.system
-    - typingsSlinky.bagpipes.bagpipesStrings.user
-    - java.lang.String
-  */
-  type FittingType = typingsSlinky.bagpipes.mod._FittingType | java.lang.String
   type FittingTypesMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.bagpipes.mod.FittingFactory]
-  type PipeDef = js.Array[js.Any] | java.lang.String | typingsSlinky.bagpipes.mod.FittingDef
   type PipeDefMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.bagpipes.mod.PipeDef]
 }

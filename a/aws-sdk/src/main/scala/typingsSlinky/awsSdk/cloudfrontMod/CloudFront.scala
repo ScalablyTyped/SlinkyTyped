@@ -1,8 +1,8 @@
 package typingsSlinky.awsSdk.cloudfrontMod
 
-import typingsSlinky.awsSdk.GetDistributionRequestwai
-import typingsSlinky.awsSdk.GetInvalidationRequestwai
-import typingsSlinky.awsSdk.GetStreamingDistributionR
+import typingsSlinky.awsSdk.anon.GetDistributionRequestwai
+import typingsSlinky.awsSdk.anon.GetInvalidationRequestwai
+import typingsSlinky.awsSdk.anon.GetStreamingDistributionR
 import typingsSlinky.awsSdk.awsSdkStrings.distributionDeployed
 import typingsSlinky.awsSdk.awsSdkStrings.invalidationCompleted
 import typingsSlinky.awsSdk.awsSdkStrings.streamingDistributionDeployed

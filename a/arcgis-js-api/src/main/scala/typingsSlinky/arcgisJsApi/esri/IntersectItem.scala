@@ -11,3 +11,12 @@ import scala.scalajs.js.annotation._
 */
 trait IntersectItem extends js.Object
 
+object IntersectItem {
+  @scala.inline
+  implicit def apply(value: BuildingSublayer): IntersectItem = value.asInstanceOf[IntersectItem]
+  @scala.inline
+  implicit def apply(value: Graphic): IntersectItem = value.asInstanceOf[IntersectItem]
+  @scala.inline
+  implicit def apply(value: Layer): IntersectItem = value.asInstanceOf[IntersectItem]
+}
+

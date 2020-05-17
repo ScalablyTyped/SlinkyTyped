@@ -3,7 +3,7 @@ package typingsSlinky.reactPdf.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.pdfjsDist.mod.PDFTreeNode
-import typingsSlinky.reactPdf.AnonPageNumber
+import typingsSlinky.reactPdf.anon.PageNumber
 import typingsSlinky.reactPdf.outlineMod.Props
 import typingsSlinky.reactPdf.outlineMod.default
 import scala.scalajs.js
@@ -22,7 +22,7 @@ object Outline {
     @scala.inline
     def className(value: String | js.Array[String]): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def onItemClick(value: /* hasPageNumber */ AnonPageNumber => Unit): this.type = set("onItemClick", js.Any.fromFunction1(value))
+    def onItemClick(value: /* hasPageNumber */ PageNumber => Unit): this.type = set("onItemClick", js.Any.fromFunction1(value))
     @scala.inline
     def onLoadError(value: /* error */ js.Error => Unit): this.type = set("onLoadError", js.Any.fromFunction1(value))
     @scala.inline

@@ -9,8 +9,8 @@ trait InterfaceDeclaration
   extends DeclarationStatement
      with JSDocContainer
      with DeclarationWithTypeParameterChildren
-     with ObjectTypeDeclaration
-     with _HasJSDoc {
+     with HasJSDoc
+     with ObjectTypeDeclaration {
   var heritageClauses: js.UndefOr[NodeArray[HeritageClause]] = js.native
   @JSName("kind")
   var kind_InterfaceDeclaration: typingsSlinky.typescript.mod.SyntaxKind.InterfaceDeclaration = js.native

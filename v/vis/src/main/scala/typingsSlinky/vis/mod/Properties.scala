@@ -1,7 +1,7 @@
 package typingsSlinky.vis.mod
 
-import typingsSlinky.vis.AnonCanvas
-import typingsSlinky.vis.AnonNodes
+import typingsSlinky.vis.anon.Canvas
+import typingsSlinky.vis.anon.Nodes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,13 +11,13 @@ trait Properties extends js.Object {
   var edges: js.Array[String] = js.native
   var event: js.Array[String] = js.native
   var nodes: js.Array[String] = js.native
-  var pointer: AnonCanvas = js.native
-  var previousSelection: js.UndefOr[AnonNodes] = js.native
+  var pointer: Canvas = js.native
+  var previousSelection: js.UndefOr[Nodes] = js.native
 }
 
 object Properties {
   @scala.inline
-  def apply(edges: js.Array[String], event: js.Array[String], nodes: js.Array[String], pointer: AnonCanvas): Properties = {
+  def apply(edges: js.Array[String], event: js.Array[String], nodes: js.Array[String], pointer: Canvas): Properties = {
     val __obj = js.Dynamic.literal(edges = edges.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any], nodes = nodes.asInstanceOf[js.Any], pointer = pointer.asInstanceOf[js.Any])
     __obj.asInstanceOf[Properties]
   }
@@ -46,13 +46,13 @@ object Properties {
         ret
     }
     @scala.inline
-    def withPointer(value: AnonCanvas): Self = {
+    def withPointer(value: Canvas): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointer")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPreviousSelection(value: AnonNodes): Self = {
+    def withPreviousSelection(value: Nodes): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("previousSelection")(value.asInstanceOf[js.Any])
         ret

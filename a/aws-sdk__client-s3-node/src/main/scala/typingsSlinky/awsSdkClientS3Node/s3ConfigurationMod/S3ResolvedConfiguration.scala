@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientS3Node.s3ConfigurationMod
 
-import typingsSlinky.awsSdkClientS3Node.AnonInstantiable
+import typingsSlinky.awsSdkClientS3Node.anon.Instantiable
 import typingsSlinky.awsSdkTypes.credentialsMod.Credentials
 import typingsSlinky.awsSdkTypes.cryptoMod.HashConstructor
 import typingsSlinky.awsSdkTypes.cryptoMod.StreamHasher
@@ -50,7 +50,7 @@ trait S3ResolvedConfiguration extends S3Configuration {
   @JSName("maxRetries")
   var maxRetries_S3ResolvedConfiguration: Double = js.native
   @JSName("md5")
-  var md5_S3ResolvedConfiguration: AnonInstantiable = js.native
+  var md5_S3ResolvedConfiguration: Instantiable = js.native
   var parser: ResponseParser[Readable] = js.native
   @JSName("region")
   var region_Original: Provider[String] = js.native
@@ -95,7 +95,7 @@ trait S3ResolvedConfiguration extends S3Configuration {
   @JSName("streamCollector")
   def streamCollector_MS3ResolvedConfiguration(stream: Readable): js.Promise[js.typedarray.Uint8Array] = js.native
   @JSName("streamHasher")
-  def streamHasher_MS3ResolvedConfiguration(hashCtor: typingsSlinky.awsSdkTypes.AnonInstantiable, stream: Readable): js.Promise[js.typedarray.Uint8Array] = js.native
+  def streamHasher_MS3ResolvedConfiguration(hashCtor: typingsSlinky.awsSdkTypes.anon.Instantiable, stream: Readable): js.Promise[js.typedarray.Uint8Array] = js.native
   @JSName("urlParser")
   def urlParser_MS3ResolvedConfiguration(url: String): HttpEndpoint = js.native
   @JSName("utf8Decoder")

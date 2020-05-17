@@ -1,6 +1,6 @@
 package typingsSlinky.registryAuthToken.mod
 
-import typingsSlinky.registryAuthToken.AnonDictregistryUrls
+import typingsSlinky.registryAuthToken.anon.DictregistryUrls
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait AuthOptions extends js.Object {
     * An npmrc configuration object used when searching for tokens. If no object is provided,
     * the `.npmrc` file at the base of the project is used.
     */
-  var npmrc: js.UndefOr[AnonDictregistryUrls] = js.native
+  var npmrc: js.UndefOr[DictregistryUrls] = js.native
   /**
     * Wether or not url's path parts are recursively trimmed from the registry
     * url when searching for tokens
@@ -35,7 +35,7 @@ object AuthOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withNpmrc(value: AnonDictregistryUrls): Self = {
+    def withNpmrc(value: DictregistryUrls): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("npmrc")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.openfin.channelChannelMod
 
-import typingsSlinky.openfin.FnCall
+import typingsSlinky.openfin.anon.FnCall
 import typingsSlinky.openfin.identityMod.Identity
 import typingsSlinky.openfin.openfinBooleans.`true`
 import typingsSlinky.openfin.openfinStrings.`request-external-authorization`

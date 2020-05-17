@@ -1,10 +1,10 @@
 package typingsSlinky.oracleOraclejet.ojsunburstMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.Anon16
-import typingsSlinky.oracleOraclejet.Anon17
-import typingsSlinky.oracleOraclejet.AnonHoverColor
-import typingsSlinky.oracleOraclejet.AnonLabelColor
+import typingsSlinky.oracleOraclejet.anon.HoverColor
+import typingsSlinky.oracleOraclejet.anon.LabelColor
+import typingsSlinky.oracleOraclejet.anon.`16`
+import typingsSlinky.oracleOraclejet.anon.`17`
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojkeysetMod.KeySet
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.all
@@ -40,19 +40,19 @@ trait ojSunburstSettablePropertiesLenient[K, D]
   var highlightedCategories: js.UndefOr[js.Array[String]] = js.native
   var hoverBehavior: js.UndefOr[dim | none] = js.native
   var hoverBehaviorDelay: js.UndefOr[Double] = js.native
-  var nodeDefaults: js.UndefOr[AnonHoverColor] = js.native
+  var nodeDefaults: js.UndefOr[HoverColor] = js.native
   var rootNode: js.UndefOr[js.Any] = js.native
-  var rootNodeContent: js.UndefOr[Anon16[K, D]] = js.native
+  var rootNodeContent: js.UndefOr[`16`[K, D]] = js.native
   var rotation: js.UndefOr[off | on] = js.native
   var selection: js.UndefOr[js.Array[_]] = js.native
   var selectionMode: js.UndefOr[none | single | multiple] = js.native
   var sizeLabel: js.UndefOr[String] = js.native
   var sorting: js.UndefOr[on | off] = js.native
   var startAngle: js.UndefOr[Double] = js.native
-  var tooltip: js.UndefOr[Anon17[K, D]] = js.native
+  var tooltip: js.UndefOr[`17`[K, D]] = js.native
   var touchResponse: js.UndefOr[touchStart | auto] = js.native
   var trackResize: js.UndefOr[on | off] = js.native
-  var translations: js.UndefOr[AnonLabelColor] = js.native
+  var translations: js.UndefOr[LabelColor] = js.native
 }
 
 object ojSunburstSettablePropertiesLenient {
@@ -248,7 +248,7 @@ object ojSunburstSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withNodeDefaults(value: AnonHoverColor): Self[K, D] = {
+    def withNodeDefaults(value: HoverColor): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nodeDefaults")(value.asInstanceOf[js.Any])
         ret
@@ -272,7 +272,7 @@ object ojSunburstSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withRootNodeContent(value: Anon16[K, D]): Self[K, D] = {
+    def withRootNodeContent(value: `16`[K, D]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rootNodeContent")(value.asInstanceOf[js.Any])
         ret
@@ -356,7 +356,7 @@ object ojSunburstSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTooltip(value: Anon17[K, D]): Self[K, D] = {
+    def withTooltip(value: `17`[K, D]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
@@ -392,7 +392,7 @@ object ojSunburstSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelColor): Self[K, D] = {
+    def withTranslations(value: LabelColor): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

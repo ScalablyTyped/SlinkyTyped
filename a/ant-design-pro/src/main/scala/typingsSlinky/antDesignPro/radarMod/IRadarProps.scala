@@ -2,7 +2,7 @@ package typingsSlinky.antDesignPro.radarMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antDesignPro.AnonLabel
+import typingsSlinky.antDesignPro.anon.Label
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait IRadarProps extends js.Object {
-  var data: js.Array[AnonLabel] = js.native
+  var data: js.Array[Label] = js.native
   var hasLegend: js.UndefOr[Boolean] = js.native
   var height: Double = js.native
   var padding: js.UndefOr[js.Tuple4[Double, Double, Double, Double]] = js.native
@@ -20,7 +20,7 @@ trait IRadarProps extends js.Object {
 
 object IRadarProps {
   @scala.inline
-  def apply(data: js.Array[AnonLabel], height: Double): IRadarProps = {
+  def apply(data: js.Array[Label], height: Double): IRadarProps = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any])
     __obj.asInstanceOf[IRadarProps]
   }
@@ -31,7 +31,7 @@ object IRadarProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withData(value: js.Array[AnonLabel]): Self = {
+    def withData(value: js.Array[Label]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

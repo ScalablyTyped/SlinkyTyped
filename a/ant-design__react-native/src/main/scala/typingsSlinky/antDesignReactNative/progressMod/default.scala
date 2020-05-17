@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.progressMod
 
-import typingsSlinky.antDesignReactNative.AnonAppearTransition
+import typingsSlinky.antDesignReactNative.anon.AppearTransition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +15,6 @@ class default protected () extends Progress {
 @JSImport("@ant-design/react-native/lib/progress", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonAppearTransition = js.native
+  var defaultProps: AppearTransition = js.native
 }
 

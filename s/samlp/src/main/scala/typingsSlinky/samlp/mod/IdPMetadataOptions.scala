@@ -1,7 +1,7 @@
 package typingsSlinky.samlp.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.samlp.AnonPost
+import typingsSlinky.samlp.anon.Post
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait IdPMetadataOptions extends js.Object {
   var cert: String | Buffer = js.native
   var issuer: String = js.native
-  var logoutEndpointPaths: js.UndefOr[AnonPost] = js.native
+  var logoutEndpointPaths: js.UndefOr[Post] = js.native
   var postEndpointPath: js.UndefOr[String] = js.native
   var profileMapper: js.UndefOr[ProfileMapperConstructor] = js.native
   var redirectEndpointPath: js.UndefOr[String] = js.native
@@ -41,7 +41,7 @@ object IdPMetadataOptions {
         ret
     }
     @scala.inline
-    def withLogoutEndpointPaths(value: AnonPost): Self = {
+    def withLogoutEndpointPaths(value: Post): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("logoutEndpointPaths")(value.asInstanceOf[js.Any])
         ret

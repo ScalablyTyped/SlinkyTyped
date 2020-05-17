@@ -1,6 +1,6 @@
 package typingsSlinky.jweixin.mod
 
-import typingsSlinky.jweixin.AnonLocalIds
+import typingsSlinky.jweixin.anon.LocalIds
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,12 +18,12 @@ trait IchooseImage extends BaseParams {
   def cancel(): Unit = js.native
   /** 成功则返回图片的本地文件路径列表 tempFilePaths */
   @JSName("success")
-  def success_MIchooseImage(res: AnonLocalIds): Unit = js.native
+  def success_MIchooseImage(res: LocalIds): Unit = js.native
 }
 
 object IchooseImage {
   @scala.inline
-  def apply(cancel: () => Unit, success: AnonLocalIds => Unit): IchooseImage = {
+  def apply(cancel: () => Unit, success: LocalIds => Unit): IchooseImage = {
     val __obj = js.Dynamic.literal(cancel = js.Any.fromFunction0(cancel), success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[IchooseImage]
   }
@@ -40,7 +40,7 @@ object IchooseImage {
         ret
     }
     @scala.inline
-    def withSuccess(value: AnonLocalIds => Unit): Self = {
+    def withSuccess(value: LocalIds => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

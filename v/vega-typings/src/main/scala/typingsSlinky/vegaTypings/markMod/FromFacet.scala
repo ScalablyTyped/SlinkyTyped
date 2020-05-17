@@ -1,25 +1,20 @@
 package typingsSlinky.vegaTypings.markMod
 
+import typingsSlinky.vegaTypings.anon.FromfacetFacet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.vegaTypings.markMod.From
-  - typingsSlinky.vegaTypings.FromfacetFacet
+  - typingsSlinky.vegaTypings.anon.FromfacetFacet
 */
 trait FromFacet extends js.Object
 
 object FromFacet {
   @scala.inline
-  def From(): FromFacet = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[FromFacet]
-  }
+  implicit def apply(value: From): FromFacet = value.asInstanceOf[FromFacet]
   @scala.inline
-  def FromfacetFacet(facet: Facet): FromFacet = {
-    val __obj = js.Dynamic.literal(facet = facet.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FromFacet]
-  }
+  implicit def apply(value: FromfacetFacet): FromFacet = value.asInstanceOf[FromFacet]
 }
 

@@ -14,5 +14,4 @@ package object mod {
     ], 
     scala.Unit
   ]
-  type Message = java.lang.String | typingsSlinky.node.Buffer | js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView
 }

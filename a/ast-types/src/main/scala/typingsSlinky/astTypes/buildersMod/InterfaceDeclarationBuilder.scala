@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonCommentsExtends
+import typingsSlinky.astTypes.anon.CommentsExtends
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.kindsMod.InterfaceExtendsKind
 import typingsSlinky.astTypes.kindsMod.ObjectTypeAnnotationKind
@@ -12,6 +12,6 @@ import scala.scalajs.js.annotation._
 @js.native
 trait InterfaceDeclarationBuilder extends js.Object {
   def apply(id: IdentifierKind, body: ObjectTypeAnnotationKind, extendsParam: js.Array[InterfaceExtendsKind]): InterfaceDeclaration = js.native
-  def from(params: AnonCommentsExtends): InterfaceDeclaration = js.native
+  def from(params: CommentsExtends): InterfaceDeclaration = js.native
 }
 

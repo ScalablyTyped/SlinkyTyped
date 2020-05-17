@@ -2,7 +2,6 @@ package typingsSlinky.baseui.layoutGridMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.baseui.AnonCell
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +11,7 @@ trait CellProps extends js.Object {
   var align: js.UndefOr[Responsive[ALIGNMENT]] = js.native
   var children: js.UndefOr[TagMod[Any]] = js.native
   var order: js.UndefOr[Responsive[Double]] = js.native
-  var overrides: js.UndefOr[AnonCell] = js.native
+  var overrides: js.UndefOr[typingsSlinky.baseui.anon.Cell] = js.native
   var skip: js.UndefOr[Responsive[Double]] = js.native
   var span: js.UndefOr[Responsive[Double]] = js.native
 }
@@ -72,7 +71,7 @@ object CellProps {
         ret
     }
     @scala.inline
-    def withOverrides(value: AnonCell): Self = {
+    def withOverrides(value: typingsSlinky.baseui.anon.Cell): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
         ret

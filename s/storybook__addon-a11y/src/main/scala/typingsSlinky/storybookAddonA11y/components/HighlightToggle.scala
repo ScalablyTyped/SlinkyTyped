@@ -3,8 +3,8 @@ package typingsSlinky.storybookAddonA11y.components
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.react.mod._Global_.JSX.LibraryManagedAttributes
-import typingsSlinky.storybookAddonA11y.TypeofHighlightToggle
+import typingsSlinky.react.mod.global.JSX.LibraryManagedAttributes
+import typingsSlinky.storybookAddonA11y.anon.TypeofHighlightToggle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

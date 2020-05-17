@@ -1,9 +1,9 @@
 package typingsSlinky.primereact.components
 
+import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.deferredContentMod.DeferredContentProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ object DeferredContent {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.primereact.primereactDeferredcontentMod.DeferredContent] {
     @scala.inline
-    def onLoad(value: /* event */ Event_ => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
+    def onLoad(value: /* event */ Event => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
   }
   
   def withProps(p: DeferredContentProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

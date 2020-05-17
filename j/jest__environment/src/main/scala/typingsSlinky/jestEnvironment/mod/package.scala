@@ -17,7 +17,7 @@ package object mod {
     /* global */ typingsSlinky.jestTypes.globalMod.Global, 
     /* jest */ typingsSlinky.jestEnvironment.mod.Jest, 
     js.UndefOr[
-      /* repeated */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 55 */ js.Any
+      /* repeated */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 54 */ js.Any
     ], 
     js.Any
   ]

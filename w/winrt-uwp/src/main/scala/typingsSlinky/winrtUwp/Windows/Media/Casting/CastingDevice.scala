@@ -1,6 +1,5 @@
 package typingsSlinky.winrtUwp.Windows.Media.Casting
 
-import typingsSlinky.winrtUwp.Windows.Devices.Enumeration.DeviceInformation
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IRandomAccessStreamWithContentType
 import scala.scalajs.js
@@ -8,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a physical device that is capable of supporting casting connections and rendering media content sent to it. */
-@JSGlobal("Windows.Media.Casting.CastingDevice")
 @js.native
-abstract class CastingDevice () extends js.Object {
+trait CastingDevice extends js.Object {
   /** A human-readable name for the device, retrieved from the device itself. */
   var friendlyName: String = js.native
   /** An icon representing the device. */
@@ -29,33 +27,55 @@ abstract class CastingDevice () extends js.Object {
   def getSupportedCastingPlaybackTypesAsync(): IPromiseWithIAsyncOperation[CastingPlaybackTypes] = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Media.Casting.CastingDevice")
-@js.native
-object CastingDevice extends js.Object {
-  /**
-    * Indicates whether the given device (a DeviceInformation object) supports casting.
-    * @param device The device you want to know about.
-    * @return True if the device supports casting; false otherwise.
-    */
-  def deviceInfoSupportsCastingAsync(device: DeviceInformation): IPromiseWithIAsyncOperation[Boolean] = js.native
-  /**
-    * Gets a CastingDevice object for a given a device ID (acquired from a query using the Windows.Devices.Enumeration APIs).
-    * @param value The device ID.
-    * @return The object representing the casting device.
-    */
-  def fromIdAsync(value: String): IPromiseWithIAsyncOperation[CastingDevice] = js.native
-  /**
-    * Gets an AQS filter string to be used with the Windows.Devices.Enumeration APIs for a given CastingPlaybackTypes .
-    * @param type The casting playback type.
-    * @return The AQS filter string.
-    */
-  def getDeviceSelector(`type`: CastingPlaybackTypes): String = js.native
-  /**
-    * Gets an AQS filter string to be used with the Windows.Devices.Enumeration APIs for a given CastingSource .
-    * @param castingSource The casting source.
-    * @return The AQS filter string.
-    */
-  def getDeviceSelectorFromCastingSourceAsync(castingSource: CastingSource): IPromiseWithIAsyncOperation[String] = js.native
+object CastingDevice {
+  @scala.inline
+  def apply(
+    createCastingConnection: () => CastingConnection,
+    friendlyName: String,
+    getSupportedCastingPlaybackTypesAsync: () => IPromiseWithIAsyncOperation[CastingPlaybackTypes],
+    icon: IRandomAccessStreamWithContentType,
+    id: String
+  ): CastingDevice = {
+    val __obj = js.Dynamic.literal(createCastingConnection = js.Any.fromFunction0(createCastingConnection), friendlyName = friendlyName.asInstanceOf[js.Any], getSupportedCastingPlaybackTypesAsync = js.Any.fromFunction0(getSupportedCastingPlaybackTypesAsync), icon = icon.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CastingDevice]
+  }
+  @scala.inline
+  implicit class CastingDeviceOps[Self <: CastingDevice] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateCastingConnection(value: () => CastingConnection): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createCastingConnection")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withFriendlyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("friendlyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetSupportedCastingPlaybackTypesAsync(value: () => IPromiseWithIAsyncOperation[CastingPlaybackTypes]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSupportedCastingPlaybackTypesAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIcon(value: IRandomAccessStreamWithContentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

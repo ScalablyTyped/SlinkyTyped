@@ -1,0 +1,37 @@
+package typingsSlinky.awsSdkClientCognitoIdentityBrowser.mergeDeveloperIdentitiesExceptionsUnionMod
+
+import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesInternalErrorExceptionMod.InternalErrorException
+import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesInvalidParameterExceptionMod.InvalidParameterException
+import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesNotAuthorizedExceptionMod.NotAuthorizedException
+import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesResourceConflictExceptionMod.ResourceConflictException
+import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesResourceNotFoundExceptionMod.ResourceNotFoundException
+import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesTooManyRequestsExceptionMod.TooManyRequestsException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesInvalidParameterExceptionMod.InvalidParameterException
+  - typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesResourceNotFoundExceptionMod.ResourceNotFoundException
+  - typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesNotAuthorizedExceptionMod.NotAuthorizedException
+  - typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesResourceConflictExceptionMod.ResourceConflictException
+  - typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesTooManyRequestsExceptionMod.TooManyRequestsException
+  - typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesInternalErrorExceptionMod.InternalErrorException
+*/
+trait MergeDeveloperIdentitiesExceptionsUnion extends js.Object
+
+object MergeDeveloperIdentitiesExceptionsUnion {
+  @scala.inline
+  implicit def apply(value: InternalErrorException): MergeDeveloperIdentitiesExceptionsUnion = value.asInstanceOf[MergeDeveloperIdentitiesExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: InvalidParameterException): MergeDeveloperIdentitiesExceptionsUnion = value.asInstanceOf[MergeDeveloperIdentitiesExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: NotAuthorizedException): MergeDeveloperIdentitiesExceptionsUnion = value.asInstanceOf[MergeDeveloperIdentitiesExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: ResourceConflictException): MergeDeveloperIdentitiesExceptionsUnion = value.asInstanceOf[MergeDeveloperIdentitiesExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: ResourceNotFoundException): MergeDeveloperIdentitiesExceptionsUnion = value.asInstanceOf[MergeDeveloperIdentitiesExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: TooManyRequestsException): MergeDeveloperIdentitiesExceptionsUnion = value.asInstanceOf[MergeDeveloperIdentitiesExceptionsUnion]
+}
+

@@ -2,8 +2,7 @@ package typingsSlinky.gestalt.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.Anon3
-import typingsSlinky.gestalt.AnonEventSyntheticEvent
+import typingsSlinky.gestalt.anon.EventSyntheticEvent
 import typingsSlinky.gestalt.gestaltNumbers.`0`
 import typingsSlinky.gestalt.gestaltNumbers.`1`
 import typingsSlinky.gestalt.gestaltNumbers.`2`
@@ -44,16 +43,16 @@ object Touchable {
     @scala.inline
     def mouseCursor(value: copy | grab | grabbing | move | noDrop | pointer | zoomIn | zoomOut): this.type = set("mouseCursor", value.asInstanceOf[js.Any])
     @scala.inline
-    def onMouseEnter(value: /* args */ AnonEventSyntheticEvent => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+    def onMouseEnter(value: /* args */ EventSyntheticEvent => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
     @scala.inline
-    def onMouseLeave(value: /* args */ AnonEventSyntheticEvent => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+    def onMouseLeave(value: /* args */ EventSyntheticEvent => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
     @scala.inline
     def rounding(value: pill | circle | `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8`): this.type = set("rounding", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: TouchableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(onTouch: Anon3 => Unit): Builder = {
+  def apply(onTouch: typingsSlinky.gestalt.anon.`3` => Unit): Builder = {
     val __props = js.Dynamic.literal(onTouch = js.Any.fromFunction1(onTouch))
     new Builder(js.Array(this.component, __props.asInstanceOf[TouchableProps]))
   }

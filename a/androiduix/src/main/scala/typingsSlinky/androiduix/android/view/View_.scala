@@ -29,20 +29,15 @@ import typingsSlinky.androiduix.androidui.attr.AttrBinder.ClassBinderMap
 import typingsSlinky.androiduix.java_.lang.JavaObject
 import typingsSlinky.androiduix.java_.lang.Runnable
 import typingsSlinky.androiduix.java_.util.ArrayList
-import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.view.View")
 @js.native
-class View_ protected ()
+trait View_
   extends JavaObject
      with Callback
      with typingsSlinky.androiduix.android.view.KeyEvent.Callback {
-  def this(context: Context) = this()
-  def this(context: Context, bindElement: HTMLElement) = this()
-  def this(context: Context, bindElement: HTMLElement, defStyleAttr: Map[String, String]) = this()
   var _AttrObserver: js.Any = js.native
   var _attrBinder: js.Any = js.native
   var _lastSyncHeight: js.Any = js.native

@@ -2,7 +2,7 @@ package typingsSlinky.officeUiFabricReact.personaTypesMod
 
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
-import typingsSlinky.officeUiFabricReact.AnonAvailable
+import typingsSlinky.officeUiFabricReact.anon.Available
 import typingsSlinky.officeUiFabricReact.imageTypesMod.ImageLoadState
 import typingsSlinky.officeUiFabricReact.personaBaseMod.PersonaBase
 import typingsSlinky.officeUiFabricReact.personaCoinBaseMod.PersonaCoinBase
@@ -93,7 +93,7 @@ trait IPersonaSharedProps extends HTMLAttributes[PersonaBase | PersonaCoinBase |
     */
   var presence: js.UndefOr[PersonaPresence] = js.native
   /** The colors to be used for the presence-icon and it's background */
-  var presenceColors: js.UndefOr[AnonAvailable] = js.native
+  var presenceColors: js.UndefOr[Available] = js.native
   /**
     * Presence title to be shown as a tooltip on hover over the presence icon.
     */
@@ -362,7 +362,7 @@ object IPersonaSharedProps {
         ret
     }
     @scala.inline
-    def withPresenceColors(value: AnonAvailable): Self = {
+    def withPresenceColors(value: Available): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("presenceColors")(value.asInstanceOf[js.Any])
         ret

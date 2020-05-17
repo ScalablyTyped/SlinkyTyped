@@ -1,15 +1,14 @@
 package typingsSlinky.webix.webix.ui
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Event_
 import typingsSlinky.webix.webix.WebixCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("webix.ui.template")
 @js.native
-class template () extends baseview {
+trait template extends baseview {
   @JSName("$scope")
   var $scope: js.Any = js.native
   @JSName("config")
@@ -17,7 +16,7 @@ class template () extends baseview {
   @JSName("$tooltipIn")
   def $tooltipIn(node: HTMLElement): HTMLElement = js.native
   @JSName("$tooltipMove")
-  def $tooltipMove(t: HTMLElement, e: Event_, text: String): Unit = js.native
+  def $tooltipMove(t: HTMLElement, e: Event, text: String): Unit = js.native
   @JSName("$tooltipOut")
   def $tooltipOut(): Unit = js.native
   def attachEvent(`type`: templateEventName, functor: WebixCallback): String | Double = js.native

@@ -1,6 +1,5 @@
 package typingsSlinky.phaser.spine.webgl
 
-import org.scalajs.dom.raw.WebGLRenderingContext
 import typingsSlinky.phaser.spine.Color
 import typingsSlinky.phaser.spine.Disposable
 import typingsSlinky.phaser.spine.Skeleton
@@ -8,11 +7,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("spine.webgl.SkeletonDebugRenderer")
 @js.native
-class SkeletonDebugRenderer protected () extends Disposable {
-  def this(context: ManagedWebGLRenderingContext) = this()
-  def this(context: WebGLRenderingContext) = this()
+trait SkeletonDebugRenderer extends Disposable {
   var aabbColor: Color = js.native
   var attachmentLineColor: Color = js.native
   var boneLineColor: Color = js.native
@@ -37,13 +33,5 @@ class SkeletonDebugRenderer protected () extends Disposable {
   var vertices: js.Any = js.native
   def draw(shapes: ShapeRenderer, skeleton: Skeleton): Unit = js.native
   def draw(shapes: ShapeRenderer, skeleton: Skeleton, ignoredBones: js.Array[String]): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("spine.webgl.SkeletonDebugRenderer")
-@js.native
-object SkeletonDebugRenderer extends js.Object {
-  var GREEN: js.Any = js.native
-  var LIGHT_GRAY: js.Any = js.native
 }
 

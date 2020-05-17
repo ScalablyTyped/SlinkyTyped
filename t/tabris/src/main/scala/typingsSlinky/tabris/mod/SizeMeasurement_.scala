@@ -1,7 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.AnonFont
-import typingsSlinky.tabris.AnonWidth
+import typingsSlinky.tabris.anon.Width
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,12 +14,12 @@ class SizeMeasurement_ protected () extends NativeObject {
     * @param configs The text configurations to measure. A text configuration has to provide at least a `text` and `fontSize` property.
     * @provisional
     */
-  def measureTexts(configs: js.Array[AnonFont]): js.Promise[AnonWidth] = js.native
+  def measureTexts(configs: js.Array[typingsSlinky.tabris.anon.Font]): js.Promise[Width] = js.native
   /**
     * Measures the given text. The method returns an array of `{width: number, height: number}`.
     * @param configs The text configurations to measure. A text configuration has to provide at least a `text` and `fontSize` property.
     * @provisional
     */
-  def measureTextsSync(configs: js.Array[AnonFont]): js.Array[AnonWidth] = js.native
+  def measureTextsSync(configs: js.Array[typingsSlinky.tabris.anon.Font]): js.Array[Width] = js.native
 }
 

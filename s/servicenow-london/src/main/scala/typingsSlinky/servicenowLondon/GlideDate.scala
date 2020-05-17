@@ -4,12 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("GlideDate")
 @js.native
-/**
-  * Creates a GlideDate object with the current date time.
-  */
-class GlideDate () extends js.Object {
+trait GlideDate extends js.Object {
   /**
     * Gets the date in the specified date format.
     *
@@ -128,29 +124,83 @@ class GlideDate () extends js.Object {
   def setValue(o: String): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("GlideDate")
-@js.native
-object GlideDate extends js.Object {
-  /**
-    * Gets the duration difference between two GlideDate values.
-    *
-    * @param start The start value.
-    * @param end The end value.
-    * @returns The duration between the two values.
-    * @example
-    *
-    * var sgd1 = new GlideDate();
-    * sgd1.setDisplayValue('2014-07-18');
-    * var sgd2 = new GlideDate();
-    * sgd2.setDisplayValue('2014-07-19');
-    * var duration = GlideDate.subtract(sgd1, sgd2);
-    * gs.info(duration.getDisplayValue());
-    * // 1 Day
-    */
-  def subtract(start: GlideDate, end: GlideDate): GlideDuration = js.native
-  def subtract(start: GlideDate, end: GlideTime): GlideDuration = js.native
-  def subtract(start: GlideTime, end: GlideDate): GlideDuration = js.native
-  def subtract(start: GlideTime, end: GlideTime): GlideDuration = js.native
+object GlideDate {
+  @scala.inline
+  def apply(
+    getByFormat: String => String,
+    getDayOfMonthNoTZ: () => Double,
+    getDisplayValue: () => String,
+    getDisplayValueInternal: () => String,
+    getMonthNoTZ: () => Double,
+    getValue: () => String,
+    getYearNoTZ: () => Double,
+    setDisplayValue: String => Unit,
+    setValue: String => Unit
+  ): GlideDate = {
+    val __obj = js.Dynamic.literal(getByFormat = js.Any.fromFunction1(getByFormat), getDayOfMonthNoTZ = js.Any.fromFunction0(getDayOfMonthNoTZ), getDisplayValue = js.Any.fromFunction0(getDisplayValue), getDisplayValueInternal = js.Any.fromFunction0(getDisplayValueInternal), getMonthNoTZ = js.Any.fromFunction0(getMonthNoTZ), getValue = js.Any.fromFunction0(getValue), getYearNoTZ = js.Any.fromFunction0(getYearNoTZ), setDisplayValue = js.Any.fromFunction1(setDisplayValue), setValue = js.Any.fromFunction1(setValue))
+    __obj.asInstanceOf[GlideDate]
+  }
+  @scala.inline
+  implicit class GlideDateOps[Self <: GlideDate] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetByFormat(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getByFormat")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetDayOfMonthNoTZ(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDayOfMonthNoTZ")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDisplayValue(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDisplayValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDisplayValueInternal(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDisplayValueInternal")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMonthNoTZ(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMonthNoTZ")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetValue(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetYearNoTZ(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getYearNoTZ")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetDisplayValue(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDisplayValue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetValue(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setValue")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

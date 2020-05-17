@@ -1,7 +1,7 @@
 package typingsSlinky.agoraRtcSdk.mod
 
-import typingsSlinky.agoraRtcSdk.AnonHeight
-import typingsSlinky.agoraRtcSdk.AnonMax
+import typingsSlinky.agoraRtcSdk.anon.Height
+import typingsSlinky.agoraRtcSdk.anon.Max
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ trait VideoEncoderConfiguration extends js.Object {
     *
     * [[include:VideoProfileDefinition.md]]
     */
-  var bitrate: js.UndefOr[AnonMax] = js.native
+  var bitrate: js.UndefOr[Max] = js.native
   /**
     * The video frame rate (fps).
     *
@@ -32,7 +32,7 @@ trait VideoEncoderConfiguration extends js.Object {
     * - This parameter sets the local capturing video frame rate. The actual encoding frame rate depends on the device, system, and browser.
     * - When the network conditions change, the browser adjusts the encoding frame rate automatically.
     */
-  var frameRate: js.UndefOr[AnonMax] = js.native
+  var frameRate: js.UndefOr[Max] = js.native
   /**
     * Resolution of the video.
     *
@@ -43,7 +43,7 @@ trait VideoEncoderConfiguration extends js.Object {
     * - 960 &times; 720
     *
     */
-  var resolution: js.UndefOr[AnonHeight] = js.native
+  var resolution: js.UndefOr[Height] = js.native
 }
 
 object VideoEncoderConfiguration {
@@ -59,7 +59,7 @@ object VideoEncoderConfiguration {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBitrate(value: AnonMax): Self = {
+    def withBitrate(value: Max): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bitrate")(value.asInstanceOf[js.Any])
         ret
@@ -71,7 +71,7 @@ object VideoEncoderConfiguration {
         ret
     }
     @scala.inline
-    def withFrameRate(value: AnonMax): Self = {
+    def withFrameRate(value: Max): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("frameRate")(value.asInstanceOf[js.Any])
         ret
@@ -83,7 +83,7 @@ object VideoEncoderConfiguration {
         ret
     }
     @scala.inline
-    def withResolution(value: AnonHeight): Self = {
+    def withResolution(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resolution")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.cliTable.mod
 
-import typingsSlinky.cliTable.PartialTableOptions
+import typingsSlinky.cliTable.anon.PartialTableOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,7 @@
 package typingsSlinky.prosemirrorView.mod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.prosemirrorModel.mod.Mark
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,7 +46,7 @@ trait WidgetDecorationSpec extends js.Object {
     * Can be used to control which DOM events, when they bubble out
     * of this widget, the editor view should ignore.
     */
-  var stopEvent: js.UndefOr[(js.Function1[/* event */ Event_, Boolean]) | Null] = js.native
+  var stopEvent: js.UndefOr[(js.Function1[/* event */ Event, Boolean]) | Null] = js.native
 }
 
 object WidgetDecorationSpec {
@@ -116,7 +116,7 @@ object WidgetDecorationSpec {
         ret
     }
     @scala.inline
-    def withStopEvent(value: /* event */ Event_ => Boolean): Self = {
+    def withStopEvent(value: /* event */ Event => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stopEvent")(js.Any.fromFunction1(value))
         ret

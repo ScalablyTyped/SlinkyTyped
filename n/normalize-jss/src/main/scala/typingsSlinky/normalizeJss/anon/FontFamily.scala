@@ -1,0 +1,54 @@
+package typingsSlinky.normalizeJss.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait FontFamily extends js.Object {
+  var fontFamily: String = js.native
+  var fontSize: String = js.native
+  var lineHeight: String = js.native
+  var margin: Double = js.native
+}
+
+object FontFamily {
+  @scala.inline
+  def apply(fontFamily: String, fontSize: String, lineHeight: String, margin: Double): FontFamily = {
+    val __obj = js.Dynamic.literal(fontFamily = fontFamily.asInstanceOf[js.Any], fontSize = fontSize.asInstanceOf[js.Any], lineHeight = lineHeight.asInstanceOf[js.Any], margin = margin.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FontFamily]
+  }
+  @scala.inline
+  implicit class FontFamilyOps[Self <: FontFamily] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFontFamily(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamily")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFontSize(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fontSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLineHeight(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lineHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMargin(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

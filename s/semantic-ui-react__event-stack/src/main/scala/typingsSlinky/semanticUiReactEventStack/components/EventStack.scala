@@ -1,6 +1,8 @@
 package typingsSlinky.semanticUiReactEventStack.components
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Window
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -25,11 +27,15 @@ object EventStack {
     @scala.inline
     def pool(value: String): this.type = set("pool", value.asInstanceOf[js.Any])
     @scala.inline
+    def targetWindow(value: Window): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def target(value: InputTargetElement): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
+    def targetDocument(value: Document): this.type = set("target", value.asInstanceOf[js.Any])
+    @scala.inline
     def targetRefObject(value: ReactRef[TargetElement]): this.type = set("target", value.asInstanceOf[js.Any])
     @scala.inline
     def targetHTMLElement(value: HTMLElement): this.type = set("target", value.asInstanceOf[js.Any])
-    @scala.inline
-    def target(value: InputTargetElement): this.type = set("target", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: EventStackProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

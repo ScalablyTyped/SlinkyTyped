@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonAbstract
+import typingsSlinky.astTypes.anon.Abstract
 import typingsSlinky.astTypes.astTypesStrings.constructor
 import typingsSlinky.astTypes.astTypesStrings.get
 import typingsSlinky.astTypes.astTypesStrings.method
@@ -38,6 +38,6 @@ trait ClassMethodBuilder extends js.Object {
     computed: Boolean,
     staticParam: Boolean
   ): ClassMethod = js.native
-  def from(params: AnonAbstract): ClassMethod = js.native
+  def from(params: Abstract): ClassMethod = js.native
 }
 

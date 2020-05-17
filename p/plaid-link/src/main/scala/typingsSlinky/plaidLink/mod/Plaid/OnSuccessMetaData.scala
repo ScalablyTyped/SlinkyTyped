@@ -1,6 +1,6 @@
 package typingsSlinky.plaidLink.mod.Plaid
 
-import typingsSlinky.plaidLink.AnonInstitutionid
+import typingsSlinky.plaidLink.anon.Institutionid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait OnSuccessMetaData extends js.Object {
   var accounts: js.Array[Account] = js.native
-  var institution: AnonInstitutionid = js.native
+  var institution: Institutionid = js.native
   var link_session_id: String = js.native
 }
 
 object OnSuccessMetaData {
   @scala.inline
-  def apply(accounts: js.Array[Account], institution: AnonInstitutionid, link_session_id: String): OnSuccessMetaData = {
+  def apply(accounts: js.Array[Account], institution: Institutionid, link_session_id: String): OnSuccessMetaData = {
     val __obj = js.Dynamic.literal(accounts = accounts.asInstanceOf[js.Any], institution = institution.asInstanceOf[js.Any], link_session_id = link_session_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[OnSuccessMetaData]
   }
@@ -31,7 +31,7 @@ object OnSuccessMetaData {
         ret
     }
     @scala.inline
-    def withInstitution(value: AnonInstitutionid): Self = {
+    def withInstitution(value: Institutionid): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("institution")(value.asInstanceOf[js.Any])
         ret

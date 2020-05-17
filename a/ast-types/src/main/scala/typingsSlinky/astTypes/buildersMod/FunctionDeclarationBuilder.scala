@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonAsync
+import typingsSlinky.astTypes.anon.Async
 import typingsSlinky.astTypes.kindsMod.BlockStatementKind
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.kindsMod.PatternKind
@@ -20,6 +20,6 @@ trait FunctionDeclarationBuilder extends js.Object {
     generator: Boolean,
     expression: Boolean
   ): FunctionDeclaration = js.native
-  def from(params: AnonAsync): FunctionDeclaration = js.native
+  def from(params: Async): FunctionDeclaration = js.native
 }
 

@@ -7,18 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientTreeView.ExpandedChanging event.
   */
-@JSGlobal("BootstrapClientTreeViewNodeCancelEventArgs")
 @js.native
-class BootstrapClientTreeViewNodeCancelEventArgs protected () extends ASPxClientProcessingModeCancelEventArgs {
-  /**
-    * Initializes a new object of the BootstrapClientTreeViewNodeCancelEventArgs type with the specified settings.
-    * @param processOnServer true to process the event on the server side; false to completely handle it on the client side.
-    * @param node An BootstrapClientTreeViewNode object that represents a node related to the event.
-    */
-  def this(processOnServer: Boolean, node: BootstrapClientTreeViewNode) = this()
+trait BootstrapClientTreeViewNodeCancelEventArgs extends ASPxClientProcessingModeCancelEventArgs {
   /**
     * Gets a node object related to the event.
     */
   var node: BootstrapClientTreeViewNode = js.native
+}
+
+object BootstrapClientTreeViewNodeCancelEventArgs {
+  @scala.inline
+  def apply(cancel: Boolean, node: BootstrapClientTreeViewNode, processOnServer: Boolean): BootstrapClientTreeViewNodeCancelEventArgs = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any], processOnServer = processOnServer.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BootstrapClientTreeViewNodeCancelEventArgs]
+  }
+  @scala.inline
+  implicit class BootstrapClientTreeViewNodeCancelEventArgsOps[Self <: BootstrapClientTreeViewNodeCancelEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNode(value: BootstrapClientTreeViewNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

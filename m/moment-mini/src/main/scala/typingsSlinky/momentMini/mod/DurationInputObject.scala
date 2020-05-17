@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DurationInputObject
   extends MomentInputObject
-     with _DurationInputArg1 {
+     with DurationInputArg1 {
   var Q: js.UndefOr[Double] = js.native
   var quarter: js.UndefOr[Double] = js.native
   var quarters: js.UndefOr[Double] = js.native

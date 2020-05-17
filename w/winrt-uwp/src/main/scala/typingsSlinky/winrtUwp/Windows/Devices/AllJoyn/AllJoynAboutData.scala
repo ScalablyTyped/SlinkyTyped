@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Used to set descriptive information about the app and the device it is running on. */
-@JSGlobal("Windows.Devices.AllJoyn.AllJoynAboutData")
 @js.native
-abstract class AllJoynAboutData () extends js.Object {
+trait AllJoynAboutData extends js.Object {
   /** A globally unique identifier associated with the app. */
   var appId: String = js.native
   /** A collection of language-specific app names. */
@@ -34,5 +33,106 @@ abstract class AllJoynAboutData () extends js.Object {
   var softwareVersion: String = js.native
   /** A URL to the manufacturer or developer support portal. */
   var supportUrl: Uri = js.native
+}
+
+object AllJoynAboutData {
+  @scala.inline
+  def apply(
+    appId: String,
+    appNames: IMap[String, String],
+    dateOfManufacture: js.Date,
+    defaultAppName: String,
+    defaultDescription: String,
+    defaultManufacturer: String,
+    descriptions: IMap[String, String],
+    isEnabled: Boolean,
+    manufacturers: IMap[String, String],
+    modelNumber: String,
+    softwareVersion: String,
+    supportUrl: Uri
+  ): AllJoynAboutData = {
+    val __obj = js.Dynamic.literal(appId = appId.asInstanceOf[js.Any], appNames = appNames.asInstanceOf[js.Any], dateOfManufacture = dateOfManufacture.asInstanceOf[js.Any], defaultAppName = defaultAppName.asInstanceOf[js.Any], defaultDescription = defaultDescription.asInstanceOf[js.Any], defaultManufacturer = defaultManufacturer.asInstanceOf[js.Any], descriptions = descriptions.asInstanceOf[js.Any], isEnabled = isEnabled.asInstanceOf[js.Any], manufacturers = manufacturers.asInstanceOf[js.Any], modelNumber = modelNumber.asInstanceOf[js.Any], softwareVersion = softwareVersion.asInstanceOf[js.Any], supportUrl = supportUrl.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AllJoynAboutData]
+  }
+  @scala.inline
+  implicit class AllJoynAboutDataOps[Self <: AllJoynAboutData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAppNames(value: IMap[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDateOfManufacture(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateOfManufacture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultAppName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultAppName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultManufacturer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultManufacturer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescriptions(value: IMap[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("descriptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withManufacturers(value: IMap[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withModelNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSoftwareVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("softwareVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSupportUrl(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

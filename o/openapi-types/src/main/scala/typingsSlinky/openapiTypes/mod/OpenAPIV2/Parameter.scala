@@ -13,15 +13,8 @@ trait Parameter
 
 object Parameter {
   @scala.inline
-  def InBodyParameterObject(in: String, name: String, schema: Schema): Parameter = {
-    val __obj = js.Dynamic.literal(in = in.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], schema = schema.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Parameter]
-  }
+  implicit def apply(value: GeneralParameterObject): Parameter = value.asInstanceOf[Parameter]
   @scala.inline
-  def GeneralParameterObject(in: String, name: String, `type`: String): Parameter = {
-    val __obj = js.Dynamic.literal(in = in.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Parameter]
-  }
+  implicit def apply(value: InBodyParameterObject): Parameter = value.asInstanceOf[Parameter]
 }
 

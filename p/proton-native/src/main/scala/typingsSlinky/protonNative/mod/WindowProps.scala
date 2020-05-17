@@ -1,8 +1,8 @@
 package typingsSlinky.protonNative.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.protonNative.AnonW
-import typingsSlinky.protonNative.AnonY
+import typingsSlinky.protonNative.anon.W
+import typingsSlinky.protonNative.anon.Y
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,11 +44,11 @@ trait WindowProps extends js.Object {
   /**
     * Called when the window size is changed by the user. The new size is passed as an argument, in an object.
     */
-  var onContentSizeChange: js.UndefOr[js.Function1[/* size */ AnonY, Unit]] = js.native
+  var onContentSizeChange: js.UndefOr[js.Function1[/* size */ Y, Unit]] = js.native
   /**
     * How big the window is when the application is first started.
     */
-  var size: js.UndefOr[AnonW] = js.native
+  var size: js.UndefOr[W] = js.native
   /**
     * The title of the window. Will be shown at the top left ribbon.
     */
@@ -164,7 +164,7 @@ object WindowProps {
         ret
     }
     @scala.inline
-    def withOnContentSizeChange(value: /* size */ AnonY => Unit): Self = {
+    def withOnContentSizeChange(value: /* size */ Y => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContentSizeChange")(js.Any.fromFunction1(value))
         ret
@@ -176,7 +176,7 @@ object WindowProps {
         ret
     }
     @scala.inline
-    def withSize(value: AnonW): Self = {
+    def withSize(value: W): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
         ret

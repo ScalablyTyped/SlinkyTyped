@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("gsap", "Quart")
 @js.native
 class Quart ()
-  extends typingsSlinky.gsap.gsap.Quart
+  extends typingsSlinky.gsap.gsap.Ease
 
 /* static members */
 @JSImport("gsap", "Quart")

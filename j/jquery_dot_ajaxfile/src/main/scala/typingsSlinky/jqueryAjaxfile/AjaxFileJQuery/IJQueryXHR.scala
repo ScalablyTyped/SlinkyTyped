@@ -1,8 +1,8 @@
 package typingsSlinky.jqueryAjaxfile.AjaxFileJQuery
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Document
 import typingsSlinky.jqueryAjaxfile.JQueryAjaxSettings
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait IJQueryXHR extends js.Object {
   ] = js.native
   var readyState: js.Any = js.native
   var responseText: String = js.native
-  var responseXML: Document_ = js.native
+  var responseXML: Document = js.native
   var status: Double = js.native
   var statusCode: js.UndefOr[StringDictionary[js.Any]] = js.native
   var statusText: String = js.native

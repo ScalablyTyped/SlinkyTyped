@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.RangeAreasData
 import typingsSlinky.officeJs.Excel.Interfaces.RangeAreasLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.RangeAreasUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.All
 import typingsSlinky.officeJs.officeJsStrings.Blanks
 import typingsSlinky.officeJs.officeJsStrings.ConditionalFormats
@@ -45,9 +45,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@JSGlobal("Excel.RangeAreas")
 @js.native
-class RangeAreas () extends ClientObject {
+trait RangeAreas extends ClientObject {
   /**
     *
     * Returns the RageAreas reference in A1-style. Address value will contain the worksheet name for each rectangular block of cells (e.g. "Sheet1!A1:B4, Sheet1!D1:D4"). Read-only.
@@ -481,7 +480,7 @@ class RangeAreas () extends ClientObject {
     */
   def load(): RangeAreas = js.native
   def load(options: RangeAreasLoadOptions): RangeAreas = js.native
-  def load(propertyNamesAndPaths: AnonExpand): RangeAreas = js.native
+  def load(propertyNamesAndPaths: Expand): RangeAreas = js.native
   def load(propertyNames: String): RangeAreas = js.native
   def load(propertyNames: js.Array[String]): RangeAreas = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

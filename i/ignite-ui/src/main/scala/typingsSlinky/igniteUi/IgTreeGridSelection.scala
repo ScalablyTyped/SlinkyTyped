@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -129,7 +129,7 @@ object IgTreeGridSelection {
         ret
     }
     @scala.inline
-    def withActiveCellChanged(value: (/* event */ Event_, /* ui */ ActiveCellChangedEventUIParam) => Unit): Self = {
+    def withActiveCellChanged(value: (/* event */ Event, /* ui */ ActiveCellChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("activeCellChanged")(js.Any.fromFunction2(value))
         ret
@@ -141,7 +141,7 @@ object IgTreeGridSelection {
         ret
     }
     @scala.inline
-    def withActiveCellChanging(value: (/* event */ Event_, /* ui */ ActiveCellChangingEventUIParam) => Unit): Self = {
+    def withActiveCellChanging(value: (/* event */ Event, /* ui */ ActiveCellChangingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("activeCellChanging")(js.Any.fromFunction2(value))
         ret
@@ -153,7 +153,7 @@ object IgTreeGridSelection {
         ret
     }
     @scala.inline
-    def withActiveRowChanged(value: (/* event */ Event_, /* ui */ ActiveRowChangedEventUIParam) => Unit): Self = {
+    def withActiveRowChanged(value: (/* event */ Event, /* ui */ ActiveRowChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("activeRowChanged")(js.Any.fromFunction2(value))
         ret
@@ -165,7 +165,7 @@ object IgTreeGridSelection {
         ret
     }
     @scala.inline
-    def withActiveRowChanging(value: (/* event */ Event_, /* ui */ ActiveRowChangingEventUIParam) => Unit): Self = {
+    def withActiveRowChanging(value: (/* event */ Event, /* ui */ ActiveRowChangingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("activeRowChanging")(js.Any.fromFunction2(value))
         ret
@@ -189,7 +189,7 @@ object IgTreeGridSelection {
         ret
     }
     @scala.inline
-    def withCellSelectionChanged(value: (/* event */ Event_, /* ui */ CellSelectionChangedEventUIParam) => Unit): Self = {
+    def withCellSelectionChanged(value: (/* event */ Event, /* ui */ CellSelectionChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cellSelectionChanged")(js.Any.fromFunction2(value))
         ret
@@ -201,7 +201,7 @@ object IgTreeGridSelection {
         ret
     }
     @scala.inline
-    def withCellSelectionChanging(value: (/* event */ Event_, /* ui */ CellSelectionChangingEventUIParam) => Unit): Self = {
+    def withCellSelectionChanging(value: (/* event */ Event, /* ui */ CellSelectionChangingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cellSelectionChanging")(js.Any.fromFunction2(value))
         ret
@@ -273,7 +273,7 @@ object IgTreeGridSelection {
         ret
     }
     @scala.inline
-    def withRowSelectionChanged(value: (/* event */ Event_, /* ui */ RowSelectionChangedEventUIParam) => Unit): Self = {
+    def withRowSelectionChanged(value: (/* event */ Event, /* ui */ RowSelectionChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowSelectionChanged")(js.Any.fromFunction2(value))
         ret
@@ -285,7 +285,7 @@ object IgTreeGridSelection {
         ret
     }
     @scala.inline
-    def withRowSelectionChanging(value: (/* event */ Event_, /* ui */ RowSelectionChangingEventUIParam) => Unit): Self = {
+    def withRowSelectionChanging(value: (/* event */ Event, /* ui */ RowSelectionChangingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowSelectionChanging")(js.Any.fromFunction2(value))
         ret

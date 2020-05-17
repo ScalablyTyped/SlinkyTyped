@@ -1,6 +1,5 @@
 package typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1
 
-import typingsSlinky.jsrsasign.jsrsasignBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,13 +39,8 @@ import scala.scalajs.js.annotation._
   * //     }
   * //   }
   */
-@JSGlobal("jsrsasign.KJUR.asn1.DERBitString")
 @js.native
-class DERBitString () extends ASN1Object {
-  def this(params: ASN1ObjectParam) = this()
-  def this(params: ArrayParam[Boolean]) = this()
-  def this(params: BinParam) = this()
-  def this(params: HexParam) = this()
+trait DERBitString extends ASN1Object {
   /**
     * set ASN.1 DER BitString by binary string
     * @param binaryString binary value string (i.e. '10111')
@@ -80,20 +74,57 @@ class DERBitString () extends ASN1Object {
   def setUnusedBitsAndHexValue(unusedBits: Double, hValue: String): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("jsrsasign.KJUR.asn1.DERBitString")
-@js.native
-object DERBitString extends js.Object {
-  /**
-    * generate an array of falses with specified length
-    * @param nLength length of array to generate
-    * @return array of boolean falses
-    * @description
-    * This static method may be useful to initialize boolean array.
-    * @example
-    * o = new KJUR.asn1.DERBitString();
-    * o.newFalseArray(3) → [false, false, false]
-    */
-  def newFalseArray(nLength: Double): js.Array[`false`] = js.native
+object DERBitString {
+  @scala.inline
+  def apply(
+    getEncodedHex: () => String,
+    getFreshValueHex: () => String,
+    getLengthHexFromValue: () => String,
+    getValueHex: () => String,
+    hL: String,
+    hT: String,
+    hTLV: String,
+    hV: String,
+    isModified: String,
+    setByBinaryString: String => Unit,
+    setByBooleanArray: js.Array[Boolean] => Unit,
+    setHexValueIncludingUnusedBits: String => Unit,
+    setUnusedBitsAndHexValue: (Double, String) => Unit
+  ): DERBitString = {
+    val __obj = js.Dynamic.literal(getEncodedHex = js.Any.fromFunction0(getEncodedHex), getFreshValueHex = js.Any.fromFunction0(getFreshValueHex), getLengthHexFromValue = js.Any.fromFunction0(getLengthHexFromValue), getValueHex = js.Any.fromFunction0(getValueHex), hL = hL.asInstanceOf[js.Any], hT = hT.asInstanceOf[js.Any], hTLV = hTLV.asInstanceOf[js.Any], hV = hV.asInstanceOf[js.Any], isModified = isModified.asInstanceOf[js.Any], setByBinaryString = js.Any.fromFunction1(setByBinaryString), setByBooleanArray = js.Any.fromFunction1(setByBooleanArray), setHexValueIncludingUnusedBits = js.Any.fromFunction1(setHexValueIncludingUnusedBits), setUnusedBitsAndHexValue = js.Any.fromFunction2(setUnusedBitsAndHexValue))
+    __obj.asInstanceOf[DERBitString]
+  }
+  @scala.inline
+  implicit class DERBitStringOps[Self <: DERBitString] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSetByBinaryString(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setByBinaryString")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetByBooleanArray(value: js.Array[Boolean] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setByBooleanArray")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetHexValueIncludingUnusedBits(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setHexValueIncludingUnusedBits")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetUnusedBitsAndHexValue(value: (Double, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setUnusedBitsAndHexValue")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

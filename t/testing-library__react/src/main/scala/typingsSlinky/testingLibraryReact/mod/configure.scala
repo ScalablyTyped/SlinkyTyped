@@ -1,6 +1,6 @@
 package typingsSlinky.testingLibraryReact.mod
 
-import typingsSlinky.testingLibraryDom.PartialConfig
+import typingsSlinky.testingLibraryDom.anon.PartialConfig
 import typingsSlinky.testingLibraryDom.configMod.ConfigFn
 import scala.scalajs.js
 import scala.scalajs.js.`|`

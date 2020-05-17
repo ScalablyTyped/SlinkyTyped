@@ -3,7 +3,7 @@ package typingsSlinky.koaJoiRouter.mod
 import typingsSlinky.koa.mod.DefaultContext
 import typingsSlinky.koa.mod.DefaultState
 import typingsSlinky.koa.mod.Middleware
-import typingsSlinky.koaJoiRouter.FnCall
+import typingsSlinky.koaJoiRouter.anon.FnCall
 import typingsSlinky.koaRouter.mod.IMiddleware
 import typingsSlinky.koaRouter.mod.IParamMiddleware
 import scala.scalajs.js

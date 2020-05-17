@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait InvalidAction[Payload] extends js.Object {
+trait InvalidAction[Payload]
+  extends RSAARequestAction[js.Any, js.Any]
+     with RSAAResultAction[js.Any, js.Any] {
   var error: `true` = js.native
   var payload: Payload = js.native
   var `type`: String | js.Symbol = js.native

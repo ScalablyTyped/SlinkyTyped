@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientSqladmin.gapi.client.sqladmin
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientSqladmin.AnonDatabaseVersion
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientSqladmin.anon.DatabaseVersion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait FlagsResource extends js.Object {
   /** List all available database flags for Google Cloud SQL instances. */
-  def list(request: AnonDatabaseVersion): Request_[FlagsListResponse] = js.native
+  def list(request: DatabaseVersion): Request[FlagsListResponse] = js.native
 }
 
 object FlagsResource {
   @scala.inline
-  def apply(list: AnonDatabaseVersion => Request_[FlagsListResponse]): FlagsResource = {
+  def apply(list: DatabaseVersion => Request[FlagsListResponse]): FlagsResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[FlagsResource]
   }
@@ -25,7 +25,7 @@ object FlagsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withList(value: AnonDatabaseVersion => Request_[FlagsListResponse]): Self = {
+    def withList(value: DatabaseVersion => Request[FlagsListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

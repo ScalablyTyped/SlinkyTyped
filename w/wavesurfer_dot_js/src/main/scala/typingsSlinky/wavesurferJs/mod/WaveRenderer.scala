@@ -1,8 +1,8 @@
 package typingsSlinky.wavesurferJs.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ class WaveRenderer protected () extends Observer {
   def drawWave(peaks: js.Array[js.Array[Double] | Double], channelIndex: Double, start: Double, end: Double): Unit = js.native
   def getScrollX(): Double = js.native
   def getWidth(): Double = js.native
-  def handleEvent(e: Event_, noPrevent: Boolean): Double = js.native
+  def handleEvent(e: Event, noPrevent: Boolean): Double = js.native
   def progress(progress: Double): Unit = js.native
   def recenter(percent: Double): Unit = js.native
   def recenterOnPosition(position: Double, immediate: Boolean): Unit = js.native

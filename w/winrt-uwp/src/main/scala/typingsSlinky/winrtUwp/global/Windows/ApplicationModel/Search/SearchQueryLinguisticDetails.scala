@@ -1,0 +1,25 @@
+package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Search
+
+import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterable
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Provides information about query text that the user enters through an Input Method Editor (IME). */
+@JSGlobal("Windows.ApplicationModel.Search.SearchQueryLinguisticDetails")
+@js.native
+class SearchQueryLinguisticDetails protected ()
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Search.SearchQueryLinguisticDetails {
+  /**
+    * Initializes a new instance of the SearchQueryLinguisticDetails class.
+    * @param queryTextAlternatives A list of the text alternatives for the current query text.
+    * @param queryTextCompositionStart The starting location of the text that the user is composing with an IME.
+    * @param queryTextCompositionLength The length of the portion of the query text that the user is composing with an IME.
+    */
+  def this(
+    queryTextAlternatives: IIterable[String],
+    queryTextCompositionStart: Double,
+    queryTextCompositionLength: Double
+  ) = this()
+}
+

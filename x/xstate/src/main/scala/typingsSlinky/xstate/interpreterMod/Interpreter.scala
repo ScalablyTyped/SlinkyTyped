@@ -1,11 +1,11 @@
 package typingsSlinky.xstate.interpreterMod
 
 import typingsSlinky.std.Map
-import typingsSlinky.xstate.AnonAutoForward
-import typingsSlinky.xstate.FnCallMachineOptions
-import typingsSlinky.xstate.PartialInterpreterOptions
-import typingsSlinky.xstate.ReadonlyInterpreterOption
 import typingsSlinky.xstate.actorMod.Actor
+import typingsSlinky.xstate.anon.AutoForward
+import typingsSlinky.xstate.anon.FnCallMachineOptions
+import typingsSlinky.xstate.anon.PartialInterpreterOptions
+import typingsSlinky.xstate.anon.ReadonlyInterpreterOption
 import typingsSlinky.xstate.stateMod.State
 import typingsSlinky.xstate.typesMod.ActionFunctionMap
 import typingsSlinky.xstate.typesMod.AnyEventObject
@@ -168,7 +168,7 @@ class Interpreter[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: E
   def spawn(entity: Spawnable, name: String): Actor[_, AnyEventObject] = js.native
   def spawn(entity: Spawnable, name: String, options: SpawnOptions): Actor[_, AnyEventObject] = js.native
   def spawnMachine[TChildContext, TChildStateSchema, TChildEvent /* <: EventObject */](machine: StateMachine[TChildContext, TChildStateSchema, TChildEvent, _]): Interpreter[TChildContext, TChildStateSchema, TChildEvent, _] = js.native
-  def spawnMachine[TChildContext, TChildStateSchema, TChildEvent /* <: EventObject */](machine: StateMachine[TChildContext, TChildStateSchema, TChildEvent, _], options: AnonAutoForward): Interpreter[TChildContext, TChildStateSchema, TChildEvent, _] = js.native
+  def spawnMachine[TChildContext, TChildStateSchema, TChildEvent /* <: EventObject */](machine: StateMachine[TChildContext, TChildStateSchema, TChildEvent, _], options: AutoForward): Interpreter[TChildContext, TChildStateSchema, TChildEvent, _] = js.native
   /**
     * Starts the interpreter from the given state, or the initial state.
     * @param initialState The state to start the statechart from

@@ -6,12 +6,12 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait SpeechSynthesisEventMap extends js.Object {
-  var voiceschanged: Event_ = js.native
+  var voiceschanged: org.scalajs.dom.raw.Event = js.native
 }
 
 object SpeechSynthesisEventMap {
   @scala.inline
-  def apply(voiceschanged: Event_): SpeechSynthesisEventMap = {
+  def apply(voiceschanged: org.scalajs.dom.raw.Event): SpeechSynthesisEventMap = {
     val __obj = js.Dynamic.literal(voiceschanged = voiceschanged.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpeechSynthesisEventMap]
   }
@@ -22,7 +22,7 @@ object SpeechSynthesisEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withVoiceschanged(value: Event_): Self = {
+    def withVoiceschanged(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("voiceschanged")(value.asInstanceOf[js.Any])
         ret

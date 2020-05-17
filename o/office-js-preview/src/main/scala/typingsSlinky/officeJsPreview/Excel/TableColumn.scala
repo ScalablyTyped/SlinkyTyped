@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.TableColumnData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.TableColumnLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.TableColumnUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.TableColumn")
 @js.native
-class TableColumn () extends ClientObject {
+trait TableColumn extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_TableColumn: RequestContext = js.native
@@ -94,7 +93,7 @@ class TableColumn () extends ClientObject {
     */
   def load(): TableColumn = js.native
   def load(options: TableColumnLoadOptions): TableColumn = js.native
-  def load(propertyNamesAndPaths: AnonExpand): TableColumn = js.native
+  def load(propertyNamesAndPaths: Expand): TableColumn = js.native
   def load(propertyNames: String): TableColumn = js.native
   def load(propertyNames: js.Array[String]): TableColumn = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

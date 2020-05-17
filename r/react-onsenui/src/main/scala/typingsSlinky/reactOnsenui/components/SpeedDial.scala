@@ -3,7 +3,7 @@ package typingsSlinky.reactOnsenui.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameDirection
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameDirection
 import typingsSlinky.reactOnsenui.mod.SpeedDialDirection
 import typingsSlinky.reactOnsenui.mod.SpeedDialPosition
 import scala.scalajs.js

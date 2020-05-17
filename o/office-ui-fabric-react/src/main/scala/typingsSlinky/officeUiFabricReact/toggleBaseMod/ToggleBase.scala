@@ -1,8 +1,8 @@
 package typingsSlinky.officeUiFabricReact.toggleBaseMod
 
-import typingsSlinky.officeUiFabricReact.PartialIToggleState
-import typingsSlinky.officeUiFabricReact.ReadonlyIToggleProps
-import typingsSlinky.officeUiFabricReact.ReadonlyIToggleState
+import typingsSlinky.officeUiFabricReact.anon.PartialIToggleState
+import typingsSlinky.officeUiFabricReact.anon.ReadonlyIToggleProps
+import typingsSlinky.officeUiFabricReact.anon.ReadonlyIToggleState
 import typingsSlinky.officeUiFabricReact.toggleTypesMod.IToggle
 import typingsSlinky.officeUiFabricReact.toggleTypesMod.IToggleProps
 import typingsSlinky.react.mod.Component

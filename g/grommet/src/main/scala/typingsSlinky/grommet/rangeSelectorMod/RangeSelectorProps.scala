@@ -1,6 +1,6 @@
 package typingsSlinky.grommet.rangeSelectorMod
 
-import typingsSlinky.grommet.AnonLower
+import typingsSlinky.grommet.anon.Lower
 import typingsSlinky.grommet.grommetStrings.full
 import typingsSlinky.grommet.grommetStrings.horizontal
 import typingsSlinky.grommet.grommetStrings.large
@@ -23,7 +23,7 @@ trait RangeSelectorProps extends js.Object {
   var direction: js.UndefOr[horizontal | vertical] = js.native
   var invert: js.UndefOr[Boolean] = js.native
   var max: js.UndefOr[Double] = js.native
-  var messages: js.UndefOr[AnonLower] = js.native
+  var messages: js.UndefOr[Lower] = js.native
   var min: js.UndefOr[Double] = js.native
   var onChange: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit]] = js.native
   var opacity: js.UndefOr[weak | medium | strong | String | Boolean] = js.native
@@ -100,7 +100,7 @@ object RangeSelectorProps {
         ret
     }
     @scala.inline
-    def withMessages(value: AnonLower): Self = {
+    def withMessages(value: Lower): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.exceljs.mod
 
-import typingsSlinky.exceljs.AnonLeft
+import typingsSlinky.exceljs.anon.Left
 import typingsSlinky.exceljs.exceljsStrings.gradient
 import typingsSlinky.exceljs.exceljsStrings.path
 import scala.scalajs.js
@@ -13,7 +13,7 @@ trait FillGradientPath extends Fill {
   	 * For 'path' gradient. Specifies the relative coordinates for the start of the path.
   	 * 'left' and 'top' values range from 0 to 1
   	 */
-  var center: AnonLeft = js.native
+  var center: Left = js.native
   var gradient: path = js.native
   /**
   	 * Specifies the gradient colour sequence. Is an array of objects containing position and
@@ -26,7 +26,7 @@ trait FillGradientPath extends Fill {
 
 object FillGradientPath {
   @scala.inline
-  def apply(center: AnonLeft, gradient: path, stops: js.Array[GradientStop], `type`: gradient): FillGradientPath = {
+  def apply(center: Left, gradient: path, stops: js.Array[GradientStop], `type`: gradient): FillGradientPath = {
     val __obj = js.Dynamic.literal(center = center.asInstanceOf[js.Any], gradient = gradient.asInstanceOf[js.Any], stops = stops.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[FillGradientPath]
@@ -38,7 +38,7 @@ object FillGradientPath {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCenter(value: AnonLeft): Self = {
+    def withCenter(value: Left): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
         ret

@@ -2,7 +2,7 @@ package typingsSlinky.steamClient.mod
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.steamClient.AnonMsg
+import typingsSlinky.steamClient.anon.Msg
 import typingsSlinky.steamClient.steamClientBooleans.`false`
 import typingsSlinky.steamClient.steamClientStrings.message
 import scala.scalajs.js
@@ -89,7 +89,7 @@ class CMClient () extends EventEmitter {
     * The following fields are reserved for internal use and shall be ignored: steamid, client_sessionid, jobid_source, jobid_target.
     * (Note: pass an empty object if you don't need to set any fields)
     */
-  header: AnonMsg,
+  header: Msg,
     /**
     * A Buffer or ByteBuffer containing the rest of the message
     */
@@ -101,7 +101,7 @@ class CMClient () extends EventEmitter {
     * The following fields are reserved for internal use and shall be ignored: steamid, client_sessionid, jobid_source, jobid_target.
     * (Note: pass an empty object if you don't need to set any fields)
     */
-  header: AnonMsg,
+  header: Msg,
     /**
     * A Buffer or ByteBuffer containing the rest of the message
     */
@@ -123,7 +123,7 @@ class CMClient () extends EventEmitter {
     * The following fields are reserved for internal use and shall be ignored: steamid, client_sessionid, jobid_source, jobid_target.
     * (Note: pass an empty object if you don't need to set any fields)
     */
-  header: AnonMsg,
+  header: Msg,
     /**
     * A Buffer or ByteBuffer containing the rest of the message
     */
@@ -135,7 +135,7 @@ class CMClient () extends EventEmitter {
     * The following fields are reserved for internal use and shall be ignored: steamid, client_sessionid, jobid_source, jobid_target.
     * (Note: pass an empty object if you don't need to set any fields)
     */
-  header: AnonMsg,
+  header: Msg,
     /**
     * A Buffer or ByteBuffer containing the rest of the message
     */
@@ -152,7 +152,7 @@ class CMClient () extends EventEmitter {
     * The following fields are reserved for internal use and shall be ignored: steamid, client_sessionid, jobid_source, jobid_target.
     * (Note: pass an empty object if you don't need to set any fields)
     */
-  header: AnonMsg,
+  header: Msg,
     /**
     * A Buffer or ByteBuffer containing the rest of the message
     */
@@ -169,7 +169,7 @@ class CMClient () extends EventEmitter {
     * The following fields are reserved for internal use and shall be ignored: steamid, client_sessionid, jobid_source, jobid_target.
     * (Note: pass an empty object if you don't need to set any fields)
     */
-  header: AnonMsg,
+  header: Msg,
     /**
     * A Buffer or ByteBuffer containing the rest of the message
     */

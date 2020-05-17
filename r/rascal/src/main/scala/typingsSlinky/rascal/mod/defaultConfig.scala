@@ -1,6 +1,6 @@
 package typingsSlinky.rascal.mod
 
-import typingsSlinky.rascal.AnonPublications
+import typingsSlinky.rascal.anon.Publications
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("rascal", "defaultConfig")
 @js.native
 object defaultConfig extends js.Object {
-  var defaults: AnonPublications = js.native
+  var defaults: Publications = js.native
 }
 

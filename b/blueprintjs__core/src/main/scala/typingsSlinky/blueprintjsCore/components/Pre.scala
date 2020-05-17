@@ -13,7 +13,7 @@ object Pre {
   @js.native
   object component extends js.Object
   
-  def withProps(p: HTMLProps[HTMLElement] with IElementRefProps[HTMLElement]): `SharedBuilder_<intersection>_1717983003`[LegacyRef[js.Any] with js.Object] = new `SharedBuilder_<intersection>_1717983003`[LegacyRef[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Pre.type): `SharedBuilder_<intersection>_1717983003`[LegacyRef[js.Any] with js.Object] = new `SharedBuilder_<intersection>_1717983003`[LegacyRef[js.Any] with js.Object](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: HTMLProps[HTMLElement] with IElementRefProps[HTMLElement]): `SharedBuilder_<intersection>_1717983003`[LegacyRef[js.Any]] = new `SharedBuilder_<intersection>_1717983003`[LegacyRef[js.Any]](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Pre.type): `SharedBuilder_<intersection>_1717983003`[LegacyRef[js.Any]] = new `SharedBuilder_<intersection>_1717983003`[LegacyRef[js.Any]](js.Array(this.component, js.Dictionary.empty))()
 }
 

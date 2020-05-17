@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
   * _Read and write files on disk._
   * @see https://docs.scriptable.app/filemanager
   */
-@JSGlobal("FileManager")
 @js.native
-class FileManager_ () extends js.Object {
+trait FileManager_ extends js.Object {
   /**
     * _Adds a tag to a file._
     *

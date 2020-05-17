@@ -31,17 +31,17 @@ package object mod {
   ]
   type ChartLoadCallbackFunction = js.ThisFunction1[
     /* this */ typingsSlinky.highcharts.mod.Chart_, 
-    /* event */ typingsSlinky.std.Event_, 
+    /* event */ org.scalajs.dom.raw.Event, 
     scala.Unit
   ]
   type ChartRedrawCallbackFunction = js.ThisFunction1[
     /* this */ typingsSlinky.highcharts.mod.Chart_, 
-    /* event */ typingsSlinky.std.Event_, 
+    /* event */ org.scalajs.dom.raw.Event, 
     scala.Unit
   ]
   type ChartRenderCallbackFunction = js.ThisFunction1[
     /* this */ typingsSlinky.highcharts.mod.Chart_, 
-    /* event */ typingsSlinky.std.Event_, 
+    /* event */ org.scalajs.dom.raw.Event, 
     scala.Unit
   ]
   type ChartSelectionCallbackFunction = js.ThisFunction1[
@@ -51,12 +51,6 @@ package object mod {
   ]
   type ClipRectElement = typingsSlinky.highcharts.mod.SVGElement
   type ColorString = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.highcharts.mod.ColorString
-    - typingsSlinky.highcharts.mod.GradientColorObject
-    - typingsSlinky.highcharts.mod.PatternObject
-  */
-  type ColorType = typingsSlinky.highcharts.mod._ColorType | typingsSlinky.highcharts.mod.ColorString
   type DataBeforeParseCallbackFunction = js.Function1[/* csv */ java.lang.String, java.lang.String]
   type DataCompleteCallbackFunction = js.Function1[/* chartOptions */ typingsSlinky.highcharts.mod.Options, scala.Unit]
   /**
@@ -69,7 +63,6 @@ package object mod {
   ]
   type DataParseDateCallbackFunction = js.Function1[/* dateValue */ java.lang.String, scala.Double]
   type DataParsedCallbackFunction = js.Function1[/* columns */ js.Array[js.Array[js.Any]], js.UndefOr[scala.Boolean]]
-  type DataValueType = scala.Double | java.lang.String | scala.Null
   type Dictionary[T] = org.scalablytyped.runtime.StringDictionary[T]
   type DrilldownCallbackFunction = js.ThisFunction1[
     /* this */ typingsSlinky.highcharts.mod.Chart_, 
@@ -88,7 +81,7 @@ package object mod {
   ]
   type EventCallbackFunction[T] = js.ThisFunction1[
     /* this */ T, 
-    /* eventArguments */ js.UndefOr[typingsSlinky.std.Event_ | typingsSlinky.highcharts.mod.Dictionary[js.Any]], 
+    /* eventArguments */ js.UndefOr[org.scalajs.dom.raw.Event | typingsSlinky.highcharts.mod.Dictionary[js.Any]], 
     scala.Boolean | scala.Unit
   ]
   type ExportDataCallbackFunction = js.ThisFunction1[
@@ -98,12 +91,12 @@ package object mod {
   ]
   type ExportingAfterPrintCallbackFunction = js.Function2[
     /* chart */ typingsSlinky.highcharts.mod.Chart_, 
-    /* event */ typingsSlinky.std.Event_, 
+    /* event */ org.scalajs.dom.raw.Event, 
     scala.Unit
   ]
   type ExportingBeforePrintCallbackFunction = js.Function2[
     /* chart */ typingsSlinky.highcharts.mod.Chart_, 
-    /* event */ typingsSlinky.std.Event_, 
+    /* event */ org.scalajs.dom.raw.Event, 
     scala.Unit
   ]
   type ExportingErrorCallbackFunction = js.Function2[
@@ -121,13 +114,6 @@ package object mod {
     /* obj */ js.Any, 
     scala.Unit
   ]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.highcharts.highchartsStrings.straight
-    - typingsSlinky.highcharts.highchartsStrings.fastAvoid
-    - typingsSlinky.highcharts.highchartsStrings.simpleConnect
-    - java.lang.String
-  */
-  type PathfinderTypeValue = typingsSlinky.highcharts.mod._PathfinderTypeValue | java.lang.String
   type PointClickCallbackFunction = js.ThisFunction1[
     /* this */ typingsSlinky.highcharts.mod.Point, 
     /* event */ typingsSlinky.highcharts.mod.PointClickEventObject, 
@@ -160,13 +146,12 @@ package object mod {
   ]
   type PointMouseOverCallbackFunction = js.ThisFunction1[
     /* this */ typingsSlinky.highcharts.mod.Point, 
-    /* event */ typingsSlinky.std.Event_, 
+    /* event */ org.scalajs.dom.raw.Event, 
     scala.Unit
   ]
-  type PointOptionsType = scala.Double | java.lang.String | typingsSlinky.highcharts.mod.PointOptionsObject | (js.Array[scala.Double | java.lang.String]) | scala.Null
   type PointRemoveCallbackFunction = js.ThisFunction1[
     /* this */ typingsSlinky.highcharts.mod.Point, 
-    /* event */ typingsSlinky.std.Event_, 
+    /* event */ org.scalajs.dom.raw.Event, 
     scala.Unit
   ]
   type PointSelectCallbackFunction = js.ThisFunction1[
@@ -184,9 +169,12 @@ package object mod {
     /* event */ typingsSlinky.highcharts.mod.PointUpdateEventObject, 
     scala.Unit
   ]
-  type RangeSelectorClickCallbackFunction = js.Function2[/* e */ typingsSlinky.std.Event_, /* Return */ js.UndefOr[scala.Boolean], scala.Unit]
+  type RangeSelectorClickCallbackFunction = js.Function2[
+    /* e */ org.scalajs.dom.raw.Event, 
+    /* Return */ js.UndefOr[scala.Boolean], 
+    scala.Unit
+  ]
   type RangeSelectorParseCallbackFunction = js.Function1[/* value */ java.lang.String, scala.Double]
-  type RelativeSize = scala.Double | java.lang.String
   type ResponsiveCallbackFunction = js.ThisFunction0[/* this */ typingsSlinky.highcharts.mod.Chart_, scala.Boolean]
   type SVGDOMElement = org.scalajs.dom.raw.SVGElement
   type SVGPathArray = js.Array[scala.Double | typingsSlinky.highcharts.mod.SVGPathCommand]
@@ -209,7 +197,7 @@ package object mod {
   ]
   type SeriesHideCallbackFunction = js.ThisFunction1[
     /* this */ typingsSlinky.highcharts.mod.Series, 
-    /* event */ typingsSlinky.std.Event_, 
+    /* event */ org.scalajs.dom.raw.Event, 
     scala.Unit
   ]
   type SeriesLegendItemClickCallbackFunction = js.ThisFunction1[
@@ -217,13 +205,6 @@ package object mod {
     /* event */ typingsSlinky.highcharts.mod.SeriesLegendItemClickEventObject, 
     scala.Unit
   ]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.highcharts.highchartsStrings.butt
-    - typingsSlinky.highcharts.highchartsStrings.round
-    - typingsSlinky.highcharts.highchartsStrings.square
-    - java.lang.String
-  */
-  type SeriesLinecapValue = typingsSlinky.highcharts.mod._SeriesLinecapValue | java.lang.String
   type SeriesMouseOutCallbackFunction = js.ThisFunction1[
     /* this */ typingsSlinky.highcharts.mod.Series, 
     /* event */ org.scalajs.dom.raw.PointerEvent, 
@@ -248,7 +229,7 @@ package object mod {
   ]
   type SeriesShowCallbackFunction = js.ThisFunction1[
     /* this */ typingsSlinky.highcharts.mod.Series, 
-    /* event */ typingsSlinky.std.Event_, 
+    /* event */ org.scalajs.dom.raw.Event, 
     scala.Unit
   ]
   type TimeFormatCallbackFunction = js.Function1[/* timestamp */ scala.Double, java.lang.String]

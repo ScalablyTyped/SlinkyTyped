@@ -1,6 +1,6 @@
 package typingsSlinky.mobx.internalMod
 
-import typingsSlinky.mobx.Promisevoidcancelvoid
+import typingsSlinky.mobx.anon.Promisevoidcancelvoid
 import typingsSlinky.mobx.reactionMod.IReactionDisposer
 import typingsSlinky.mobx.utilsMod.Lambda
 import typingsSlinky.mobx.whenMod.IWhenOptions

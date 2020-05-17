@@ -1,13 +1,13 @@
 package typingsSlinky.athenajs.mod
 
-import typingsSlinky.athenajs.AnonInstantiable
+import typingsSlinky.athenajs.anon.Instantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait DrawableOptions extends js.Object {
-  var behavior: js.UndefOr[AnonInstantiable] = js.native
+  var behavior: js.UndefOr[Instantiable] = js.native
   var canCollide: js.UndefOr[Boolean] = js.native
   var canCollideFriendBullet: js.UndefOr[Boolean] = js.native
   var collideGroup: js.UndefOr[Double] = js.native
@@ -33,7 +33,7 @@ object DrawableOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBehavior(value: AnonInstantiable): Self = {
+    def withBehavior(value: Instantiable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("behavior")(value.asInstanceOf[js.Any])
         ret

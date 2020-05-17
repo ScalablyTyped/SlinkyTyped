@@ -1,13 +1,13 @@
 package typingsSlinky.expressBrute.mod.expressServeStaticCoreAugmentingMod
 
-import typingsSlinky.expressBrute.AnonReset
+import typingsSlinky.expressBrute.anon.Reset
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Request extends js.Object {
-  var brute: js.UndefOr[AnonReset] = js.native
+  var brute: js.UndefOr[Reset] = js.native
 }
 
 object Request {
@@ -23,7 +23,7 @@ object Request {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBrute(value: AnonReset): Self = {
+    def withBrute(value: Reset): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("brute")(value.asInstanceOf[js.Any])
         ret

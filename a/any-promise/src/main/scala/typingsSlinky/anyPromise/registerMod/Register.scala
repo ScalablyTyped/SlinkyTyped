@@ -1,6 +1,6 @@
 package typingsSlinky.anyPromise.registerMod
 
-import typingsSlinky.anyPromise.TypeofPromise
+import typingsSlinky.anyPromise.anon.TypeofPromise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

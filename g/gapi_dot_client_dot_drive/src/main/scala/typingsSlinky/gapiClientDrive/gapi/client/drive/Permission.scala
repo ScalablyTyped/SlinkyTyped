@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientDrive.gapi.client.drive
 
-import typingsSlinky.gapiClientDrive.AnonInherited
+import typingsSlinky.gapiClientDrive.anon.Inherited
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,7 +43,7 @@ trait Permission extends js.Object {
     * Details of whether the permissions on this Team Drive item are inherited or directly on this item. This is an output-only field which is present only
     * for Team Drive items.
     */
-  var teamDrivePermissionDetails: js.UndefOr[js.Array[AnonInherited]] = js.native
+  var teamDrivePermissionDetails: js.UndefOr[js.Array[Inherited]] = js.native
   /**
     * The type of the grantee. Valid values are:
     * - user
@@ -187,7 +187,7 @@ object Permission {
         ret
     }
     @scala.inline
-    def withTeamDrivePermissionDetails(value: js.Array[AnonInherited]): Self = {
+    def withTeamDrivePermissionDetails(value: js.Array[Inherited]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("teamDrivePermissionDetails")(value.asInstanceOf[js.Any])
         ret

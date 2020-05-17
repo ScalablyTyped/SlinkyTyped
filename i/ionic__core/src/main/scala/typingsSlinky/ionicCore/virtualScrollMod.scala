@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCore
 
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonVirtualScrollElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonVirtualScrollElement
 import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
 import typingsSlinky.ionicCore.virtualScrollInterfaceMod.DomRenderFn
 import typingsSlinky.ionicCore.virtualScrollInterfaceMod.FooterHeightFn

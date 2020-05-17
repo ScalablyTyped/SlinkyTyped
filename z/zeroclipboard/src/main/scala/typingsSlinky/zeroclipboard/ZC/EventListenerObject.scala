@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait EventListenerObject[T /* <: ZeroClipboardEvent */] extends js.Object {
+trait EventListenerObject[T /* <: ZeroClipboardEvent */] extends EventListenerOrEventListenerObject[T] {
   def handleEvent(ev: T): Unit = js.native
 }
 

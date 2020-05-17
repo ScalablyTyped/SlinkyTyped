@@ -5,14 +5,48 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** FaxRecipient Class */
-@JSGlobal("FAXCOMEXLib.FaxRecipient")
 @js.native
-class FaxRecipient protected () extends js.Object {
+trait FaxRecipient extends js.Object {
   @JSName("FAXCOMEXLib.FaxRecipient_typekey")
   var FAXCOMEXLibDotFaxRecipient_typekey: FaxRecipient = js.native
   /** Recipient's fax number */
   var FaxNumber: String = js.native
   /** Recipient's name */
   var Name: String = js.native
+}
+
+object FaxRecipient {
+  @scala.inline
+  def apply(FAXCOMEXLibDotFaxRecipient_typekey: FaxRecipient, FaxNumber: String, Name: String): FaxRecipient = {
+    val __obj = js.Dynamic.literal(FaxNumber = FaxNumber.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
+    __obj.updateDynamic("FAXCOMEXLib.FaxRecipient_typekey")(FAXCOMEXLibDotFaxRecipient_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FaxRecipient]
+  }
+  @scala.inline
+  implicit class FaxRecipientOps[Self <: FaxRecipient] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFAXCOMEXLibDotFaxRecipient_typekey(value: FaxRecipient): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FAXCOMEXLib.FaxRecipient_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFaxNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FaxNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

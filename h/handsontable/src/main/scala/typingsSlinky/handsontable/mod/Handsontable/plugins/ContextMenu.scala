@@ -1,7 +1,7 @@
 package typingsSlinky.handsontable.mod.Handsontable.plugins
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.handsontable.mod._Handsontable.Core
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait ContextMenu extends Base {
   var menu: Menu | Unit = js.native
   def close(): Unit = js.native
   def executeCommand(commandName: String, params: js.Any*): Unit = js.native
-  def open(event: Event_): Unit = js.native
+  def open(event: Event): Unit = js.native
 }
 
 object ContextMenu {
@@ -37,7 +37,7 @@ object ContextMenu {
     isPluginsReady: Boolean,
     itemsFactory: ItemsFactory | Unit,
     menu: Menu | Unit,
-    open: Event_ => Unit,
+    open: Event => Unit,
     pluginName: String,
     pluginsInitializedCallback: js.Array[_],
     removeHooks: String => Unit,
@@ -90,7 +90,7 @@ object ContextMenu {
         ret
     }
     @scala.inline
-    def withOpen(value: Event_ => Unit): Self = {
+    def withOpen(value: Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("open")(js.Any.fromFunction1(value))
         ret

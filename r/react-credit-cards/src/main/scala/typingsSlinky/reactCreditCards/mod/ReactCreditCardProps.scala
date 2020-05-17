@@ -1,7 +1,7 @@
 package typingsSlinky.reactCreditCards.mod
 
-import typingsSlinky.reactCreditCards.AnonName
-import typingsSlinky.reactCreditCards.AnonValid
+import typingsSlinky.reactCreditCards.anon.Name
+import typingsSlinky.reactCreditCards.anon.Valid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,10 +14,10 @@ trait ReactCreditCardProps extends js.Object {
   var expiry: String | Double = js.native
   var focused: js.UndefOr[Focused] = js.native
   var issuer: js.UndefOr[String] = js.native
-  var locale: js.UndefOr[AnonValid] = js.native
+  var locale: js.UndefOr[Valid] = js.native
   var name: String = js.native
   var number: String | Double = js.native
-  var placeholders: js.UndefOr[AnonName] = js.native
+  var placeholders: js.UndefOr[Name] = js.native
   var preview: js.UndefOr[Boolean] = js.native
 }
 
@@ -106,7 +106,7 @@ object ReactCreditCardProps {
         ret
     }
     @scala.inline
-    def withLocale(value: AnonValid): Self = {
+    def withLocale(value: Valid): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
         ret
@@ -118,7 +118,7 @@ object ReactCreditCardProps {
         ret
     }
     @scala.inline
-    def withPlaceholders(value: AnonName): Self = {
+    def withPlaceholders(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("placeholders")(value.asInstanceOf[js.Any])
         ret

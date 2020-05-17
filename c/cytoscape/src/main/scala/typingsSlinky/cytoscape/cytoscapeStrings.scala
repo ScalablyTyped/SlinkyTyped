@@ -4,11 +4,11 @@ import typingsSlinky.cytoscape.mod.CollectionEventName
 import typingsSlinky.cytoscape.mod.Css.ArrowFill
 import typingsSlinky.cytoscape.mod.Css.ArrowShape
 import typingsSlinky.cytoscape.mod.Css.FontStyle
+import typingsSlinky.cytoscape.mod.Css.FontWeight
 import typingsSlinky.cytoscape.mod.Css.LineStyle
 import typingsSlinky.cytoscape.mod.Css.NodeShape
 import typingsSlinky.cytoscape.mod.Css.TextTranformation
 import typingsSlinky.cytoscape.mod.Css.TransitionTimingFunction
-import typingsSlinky.cytoscape.mod.Css._FontWeight
 import typingsSlinky.cytoscape.mod.ElementGroup
 import typingsSlinky.cytoscape.mod.GraphEventName
 import typingsSlinky.cytoscape.mod.PositionDimension
@@ -42,10 +42,10 @@ object cytoscapeStrings {
   sealed trait blob extends js.Object
   
   @js.native
-  sealed trait bold extends _FontWeight
+  sealed trait bold extends FontWeight
   
   @js.native
-  sealed trait bolder extends _FontWeight
+  sealed trait bolder extends FontWeight
   
   @js.native
   sealed trait bottom extends js.Object
@@ -281,7 +281,7 @@ object cytoscapeStrings {
   sealed trait left extends js.Object
   
   @js.native
-  sealed trait lighter extends _FontWeight
+  sealed trait lighter extends FontWeight
   
   @js.native
   sealed trait linear extends TransitionTimingFunction
@@ -330,7 +330,7 @@ object cytoscapeStrings {
   @js.native
   sealed trait normal
     extends FontStyle
-       with _FontWeight
+       with FontWeight
   
   @js.native
   sealed trait `null` extends js.Object

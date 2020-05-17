@@ -1,0 +1,29 @@
+package typingsSlinky.awsSdkClientCodecommitNode.updateRepositoryNameExceptionsUnionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameExistsExceptionMod.RepositoryNameExistsException
+import typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryDoesNotExistExceptionMod.RepositoryDoesNotExistException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameExistsExceptionMod.RepositoryNameExistsException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNameRequiredExceptionMod.RepositoryNameRequiredException
+  - typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryNameExceptionMod.InvalidRepositoryNameException
+*/
+trait UpdateRepositoryNameExceptionsUnion extends js.Object
+
+object UpdateRepositoryNameExceptionsUnion {
+  @scala.inline
+  implicit def apply(value: InvalidRepositoryNameException): UpdateRepositoryNameExceptionsUnion = value.asInstanceOf[UpdateRepositoryNameExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryDoesNotExistException): UpdateRepositoryNameExceptionsUnion = value.asInstanceOf[UpdateRepositoryNameExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryNameExistsException): UpdateRepositoryNameExceptionsUnion = value.asInstanceOf[UpdateRepositoryNameExceptionsUnion]
+  @scala.inline
+  implicit def apply(value: RepositoryNameRequiredException): UpdateRepositoryNameExceptionsUnion = value.asInstanceOf[UpdateRepositoryNameExceptionsUnion]
+}
+

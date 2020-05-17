@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobile.wingBlankMod
 
-import typingsSlinky.antdMobile.AnonPrefixClsSize
+import typingsSlinky.antdMobile.anon.PrefixClsSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ class default () extends WingBlank
 @JSImport("antd-mobile/lib/wing-blank", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonPrefixClsSize = js.native
+  var defaultProps: PrefixClsSize = js.native
 }
 

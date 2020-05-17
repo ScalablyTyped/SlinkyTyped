@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation._
 
 package object JSX {
   type Element = js.Any
-  type JsxFactory_ = js.ThisFunction2[
+  type JsxFactory = js.ThisFunction2[
     /* this */ typingsSlinky.tabris.mod.JsxProcessor, 
-    /* type */ typingsSlinky.tabris.AnonInstantiable, 
+    /* type */ typingsSlinky.tabris.anon.InstantiableAny, 
     /* attributes */ js.Object, 
     typingsSlinky.tabris.JSX.Element
   ]

@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientToolresults.gapi.client.toolresults
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientToolresults.AnonExecutionId
-import typingsSlinky.gapiClientToolresults.AnonPageToken
-import typingsSlinky.gapiClientToolresults.AnonPrettyPrint
-import typingsSlinky.gapiClientToolresults.AnonQuotaUser
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientToolresults.anon.ExecutionId
+import typingsSlinky.gapiClientToolresults.anon.PageToken
+import typingsSlinky.gapiClientToolresults.anon.PrettyPrint
+import typingsSlinky.gapiClientToolresults.anon.QuotaUser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ trait ExecutionsResource extends js.Object {
     * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the
     * containing History does not exist
     */
-  def create(request: AnonQuotaUser): Request_[Execution] = js.native
+  def create(request: QuotaUser): Request[Execution] = js.native
   /**
     * Gets an Execution.
     *
@@ -32,7 +32,7 @@ trait ExecutionsResource extends js.Object {
     * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Execution
     * does not exist
     */
-  def get(request: AnonExecutionId): Request_[Execution] = js.native
+  def get(request: ExecutionId): Request[Execution] = js.native
   /**
     * Lists Histories for a given Project.
     *
@@ -43,7 +43,7 @@ trait ExecutionsResource extends js.Object {
     * - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing
     * History does not exist
     */
-  def list(request: AnonPageToken): Request_[ListExecutionsResponse] = js.native
+  def list(request: PageToken): Request[ListExecutionsResponse] = js.native
   /**
     * Updates an existing Execution with the supplied partial entity.
     *
@@ -52,17 +52,17 @@ trait ExecutionsResource extends js.Object {
     * - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the
     * requested state transition is illegal - NOT_FOUND - if the containing History does not exist
     */
-  def patch(request: AnonPrettyPrint): Request_[Execution] = js.native
+  def patch(request: PrettyPrint): Request[Execution] = js.native
 }
 
 object ExecutionsResource {
   @scala.inline
   def apply(
     clusters: ClustersResource,
-    create: AnonQuotaUser => Request_[Execution],
-    get: AnonExecutionId => Request_[Execution],
-    list: AnonPageToken => Request_[ListExecutionsResponse],
-    patch: AnonPrettyPrint => Request_[Execution],
+    create: QuotaUser => Request[Execution],
+    get: ExecutionId => Request[Execution],
+    list: PageToken => Request[ListExecutionsResponse],
+    patch: PrettyPrint => Request[Execution],
     steps: StepsResource
   ): ExecutionsResource = {
     val __obj = js.Dynamic.literal(clusters = clusters.asInstanceOf[js.Any], create = js.Any.fromFunction1(create), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), steps = steps.asInstanceOf[js.Any])
@@ -81,25 +81,25 @@ object ExecutionsResource {
         ret
     }
     @scala.inline
-    def withCreate(value: AnonQuotaUser => Request_[Execution]): Self = {
+    def withCreate(value: QuotaUser => Request[Execution]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonExecutionId => Request_[Execution]): Self = {
+    def withGet(value: ExecutionId => Request[Execution]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonPageToken => Request_[ListExecutionsResponse]): Self = {
+    def withList(value: PageToken => Request[ListExecutionsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPatch(value: AnonPrettyPrint => Request_[Execution]): Self = {
+    def withPatch(value: PrettyPrint => Request[Execution]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
         ret

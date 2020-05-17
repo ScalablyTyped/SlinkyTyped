@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Foundation.Diagnostics.RuntimeBrokerErrorSettings")
 @js.native
-class RuntimeBrokerErrorSettings () extends IErrorReportingSettings
+trait RuntimeBrokerErrorSettings extends IErrorReportingSettings
+
+object RuntimeBrokerErrorSettings {
+  @scala.inline
+  def apply(getErrorOptions: () => ErrorOptions, setErrorOptions: ErrorOptions => Unit): RuntimeBrokerErrorSettings = {
+    val __obj = js.Dynamic.literal(getErrorOptions = js.Any.fromFunction0(getErrorOptions), setErrorOptions = js.Any.fromFunction1(setErrorOptions))
+    __obj.asInstanceOf[RuntimeBrokerErrorSettings]
+  }
+}
 

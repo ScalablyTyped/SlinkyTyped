@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactDraggable.PartialDraggableProps
+import typingsSlinky.reactDraggable.anon.PartialDraggableProps
 import typingsSlinky.reactDraggable.mod.ControlPosition
 import typingsSlinky.reactDraggable.mod.DraggableBounds
 import typingsSlinky.reactDraggable.mod.DraggableData

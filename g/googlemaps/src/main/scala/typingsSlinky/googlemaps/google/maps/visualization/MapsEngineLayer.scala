@@ -7,10 +7,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("google.maps.visualization.MapsEngineLayer")
 @js.native
-class MapsEngineLayer protected () extends MVCObject {
-  def this(options: MapsEngineLayerOptions) = this()
+trait MapsEngineLayer extends MVCObject {
   def getLayerId(): String = js.native
   def getLayerKey(): String = js.native
   def getMap(): Map[Element] = js.native

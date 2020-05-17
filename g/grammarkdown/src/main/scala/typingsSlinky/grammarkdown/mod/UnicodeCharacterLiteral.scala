@@ -10,10 +10,6 @@ import scala.scalajs.js.annotation._
 class UnicodeCharacterLiteral ()
   extends typingsSlinky.grammarkdown.nodesMod.UnicodeCharacterLiteral {
   def this(text: String) = this()
-  def this(
-    text: js.UndefOr[scala.Nothing],
-    questionToken: typingsSlinky.grammarkdown.nodesMod.Token[QuestionToken]
-  ) = this()
   def this(text: String, questionToken: typingsSlinky.grammarkdown.nodesMod.Token[QuestionToken]) = this()
 }
 

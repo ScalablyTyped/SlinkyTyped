@@ -1,16 +1,5 @@
 package typingsSlinky.mdast.mod
 
-import typingsSlinky.mdast.mdastStrings.break
-import typingsSlinky.mdast.mdastStrings.delete
-import typingsSlinky.mdast.mdastStrings.emphasis
-import typingsSlinky.mdast.mdastStrings.footnote
-import typingsSlinky.mdast.mdastStrings.footnoteReference
-import typingsSlinky.mdast.mdastStrings.html
-import typingsSlinky.mdast.mdastStrings.image
-import typingsSlinky.mdast.mdastStrings.imageReference
-import typingsSlinky.mdast.mdastStrings.inlineCode
-import typingsSlinky.mdast.mdastStrings.strong
-import typingsSlinky.mdast.mdastStrings.text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,70 +21,26 @@ trait StaticPhrasingContent extends PhrasingContent
 
 object StaticPhrasingContent {
   @scala.inline
-  def HTML(`type`: html, value: js.Any): StaticPhrasingContent = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[StaticPhrasingContent]
-  }
+  implicit def apply(value: Break): StaticPhrasingContent = value.asInstanceOf[StaticPhrasingContent]
   @scala.inline
-  def Strong(children: js.Array[PhrasingContent], `type`: strong): StaticPhrasingContent = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[StaticPhrasingContent]
-  }
+  implicit def apply(value: Delete): StaticPhrasingContent = value.asInstanceOf[StaticPhrasingContent]
   @scala.inline
-  def Text(`type`: text, value: js.Any): StaticPhrasingContent = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[StaticPhrasingContent]
-  }
+  implicit def apply(value: Emphasis): StaticPhrasingContent = value.asInstanceOf[StaticPhrasingContent]
   @scala.inline
-  def Emphasis(children: js.Array[PhrasingContent], `type`: emphasis): StaticPhrasingContent = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[StaticPhrasingContent]
-  }
+  implicit def apply(value: Footnote): StaticPhrasingContent = value.asInstanceOf[StaticPhrasingContent]
   @scala.inline
-  def InlineCode(`type`: inlineCode, value: js.Any): StaticPhrasingContent = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[StaticPhrasingContent]
-  }
+  implicit def apply(value: FootnoteReference): StaticPhrasingContent = value.asInstanceOf[StaticPhrasingContent]
   @scala.inline
-  def FootnoteReference(identifier: String, `type`: footnoteReference): StaticPhrasingContent = {
-    val __obj = js.Dynamic.literal(identifier = identifier.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[StaticPhrasingContent]
-  }
+  implicit def apply(value: HTML): StaticPhrasingContent = value.asInstanceOf[StaticPhrasingContent]
   @scala.inline
-  def Image(`type`: image, url: String): StaticPhrasingContent = {
-    val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[StaticPhrasingContent]
-  }
+  implicit def apply(value: Image): StaticPhrasingContent = value.asInstanceOf[StaticPhrasingContent]
   @scala.inline
-  def Delete(children: js.Array[PhrasingContent], `type`: delete): StaticPhrasingContent = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[StaticPhrasingContent]
-  }
+  implicit def apply(value: ImageReference): StaticPhrasingContent = value.asInstanceOf[StaticPhrasingContent]
   @scala.inline
-  def Break(`type`: break): StaticPhrasingContent = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[StaticPhrasingContent]
-  }
+  implicit def apply(value: InlineCode): StaticPhrasingContent = value.asInstanceOf[StaticPhrasingContent]
   @scala.inline
-  def ImageReference(identifier: String, referenceType: ReferenceType, `type`: imageReference): StaticPhrasingContent = {
-    val __obj = js.Dynamic.literal(identifier = identifier.asInstanceOf[js.Any], referenceType = referenceType.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[StaticPhrasingContent]
-  }
+  implicit def apply(value: Strong): StaticPhrasingContent = value.asInstanceOf[StaticPhrasingContent]
   @scala.inline
-  def Footnote(children: js.Array[PhrasingContent], `type`: footnote): StaticPhrasingContent = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[StaticPhrasingContent]
-  }
+  implicit def apply(value: Text): StaticPhrasingContent = value.asInstanceOf[StaticPhrasingContent]
 }
 

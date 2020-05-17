@@ -1,6 +1,6 @@
 package typingsSlinky.angularCompiler.compileMetadataMod
 
-import typingsSlinky.angularCompiler.AnonModule
+import typingsSlinky.angularCompiler.anon.Module
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait CompileNgModuleSummary extends CompileTypeSummary {
   var exportedDirectives: js.Array[CompileIdentifierMetadata] = js.native
   var exportedPipes: js.Array[CompileIdentifierMetadata] = js.native
   var modules: js.Array[CompileTypeMetadata] = js.native
-  var providers: js.Array[AnonModule] = js.native
+  var providers: js.Array[Module] = js.native
 }
 
 object CompileNgModuleSummary {
@@ -21,7 +21,7 @@ object CompileNgModuleSummary {
     exportedDirectives: js.Array[CompileIdentifierMetadata],
     exportedPipes: js.Array[CompileIdentifierMetadata],
     modules: js.Array[CompileTypeMetadata],
-    providers: js.Array[AnonModule],
+    providers: js.Array[Module],
     `type`: CompileTypeMetadata
   ): CompileNgModuleSummary = {
     val __obj = js.Dynamic.literal(entryComponents = entryComponents.asInstanceOf[js.Any], exportedDirectives = exportedDirectives.asInstanceOf[js.Any], exportedPipes = exportedPipes.asInstanceOf[js.Any], modules = modules.asInstanceOf[js.Any], providers = providers.asInstanceOf[js.Any])
@@ -59,7 +59,7 @@ object CompileNgModuleSummary {
         ret
     }
     @scala.inline
-    def withProviders(value: js.Array[AnonModule]): Self = {
+    def withProviders(value: js.Array[Module]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("providers")(value.asInstanceOf[js.Any])
         ret

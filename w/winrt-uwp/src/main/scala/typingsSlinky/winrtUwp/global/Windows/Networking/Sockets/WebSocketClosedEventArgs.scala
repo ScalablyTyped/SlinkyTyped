@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.Networking.Sockets
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Provides data for a closed event on a MessageWebSocket , StreamWebSocket , or IWebSocket object. */
+@JSGlobal("Windows.Networking.Sockets.WebSocketClosedEventArgs")
+@js.native
+abstract class WebSocketClosedEventArgs ()
+  extends typingsSlinky.winrtUwp.Windows.Networking.Sockets.WebSocketClosedEventArgs
+

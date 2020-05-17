@@ -1,6 +1,6 @@
 package typingsSlinky.jsforce.oauth2Mod
 
-import typingsSlinky.jsforce.AnonScope
+import typingsSlinky.jsforce.anon.Scope
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ class OAuth2 () extends js.Object {
     password: String,
     callback: js.Function2[/* err */ js.Error, /* tokenResponse */ TokenResponse, Unit]
   ): js.Promise[TokenResponse] = js.native
-  def getAuthorizationUrl(params: AnonScope): String = js.native
+  def getAuthorizationUrl(params: Scope): String = js.native
   def refreshToken(code: String): js.Promise[TokenResponse] = js.native
   def refreshToken(code: String, callback: js.Function2[/* err */ js.Error, /* tokenResponse */ TokenResponse, Unit]): js.Promise[TokenResponse] = js.native
   def requestToken(code: String): js.Promise[TokenResponse] = js.native

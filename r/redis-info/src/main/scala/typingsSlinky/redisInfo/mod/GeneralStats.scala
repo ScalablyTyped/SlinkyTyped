@@ -2,21 +2,21 @@ package typingsSlinky.redisInfo.mod
 
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.redisInfo.AnonCalls
-import typingsSlinky.redisInfo.AnonExpires
+import typingsSlinky.redisInfo.anon.Calls
+import typingsSlinky.redisInfo.anon.Expires
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait GeneralStats extends js.Object {
-  var commands: StringDictionary[AnonCalls] = js.native
-  var databases: NumberDictionary[AnonExpires] = js.native
+  var commands: StringDictionary[Calls] = js.native
+  var databases: NumberDictionary[Expires] = js.native
 }
 
 object GeneralStats {
   @scala.inline
-  def apply(commands: StringDictionary[AnonCalls], databases: NumberDictionary[AnonExpires]): GeneralStats = {
+  def apply(commands: StringDictionary[Calls], databases: NumberDictionary[Expires]): GeneralStats = {
     val __obj = js.Dynamic.literal(commands = commands.asInstanceOf[js.Any], databases = databases.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeneralStats]
   }
@@ -27,13 +27,13 @@ object GeneralStats {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCommands(value: StringDictionary[AnonCalls]): Self = {
+    def withCommands(value: StringDictionary[Calls]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("commands")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withDatabases(value: NumberDictionary[AnonExpires]): Self = {
+    def withDatabases(value: NumberDictionary[Expires]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("databases")(value.asInstanceOf[js.Any])
         ret

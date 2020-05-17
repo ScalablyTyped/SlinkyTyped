@@ -1,5 +1,6 @@
 package typingsSlinky.alloy
 
+import typingsSlinky.alloy.anon.Dictk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +13,7 @@ trait AlloyInterface extends js.Object {
   /**
     * An object for storing globally accessible Alloy collections. Singleton collections created via markup will be stored on this object.
     */
-  var Collections: AnonDictk = js.native
+  var Collections: Dictk = js.native
   /**
     * An object for storing globally accessible Alloy models. Singleton models created via markup will be stored on this object.
     */

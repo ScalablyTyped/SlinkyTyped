@@ -1,0 +1,17 @@
+package typingsSlinky.officeJsPreview.global.Excel
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  *
+  * Manages sorting operations on Table objects.
+  *
+  * [Api set: ExcelApi 1.2]
+  */
+@JSGlobal("Excel.TableSort")
+@js.native
+class TableSort ()
+  extends typingsSlinky.officeJsPreview.Excel.TableSort
+

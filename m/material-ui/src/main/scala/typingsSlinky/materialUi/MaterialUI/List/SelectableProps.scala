@@ -1,17 +1,15 @@
 package typingsSlinky.materialUi.MaterialUI.List
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SelectableProps extends js.Object {
-  var onChange: js.UndefOr[
-    js.Function2[/* e */ SyntheticEvent[Event_, js.Object], /* value */ js.Any, Unit]
-  ] = js.native
+  var onChange: js.UndefOr[js.Function2[/* e */ SyntheticEvent[Event, js.Object], /* value */ js.Any, Unit]] = js.native
   var selectedItemStyle: js.UndefOr[CSSProperties] = js.native
   var value: js.UndefOr[js.Any] = js.native
 }
@@ -29,7 +27,7 @@ object SelectableProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnChange(value: (/* e */ SyntheticEvent[Event_, js.Object], /* value */ js.Any) => Unit): Self = {
+    def withOnChange(value: (/* e */ SyntheticEvent[Event, js.Object], /* value */ js.Any) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
         ret

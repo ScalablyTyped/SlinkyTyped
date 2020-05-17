@@ -1,7 +1,6 @@
 package typingsSlinky.nodeSql2.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.nodeSql2.AnonColumns
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +11,7 @@ trait TableDefinition[Name /* <: String */, Row] extends js.Object {
   {[ CName in keyof Row ]: node-sql-2.sql.ColumnDefinition<CName, Row[CName]>}
     */ typingsSlinky.nodeSql2.nodeSql2Strings.TableDefinition with TopLevel[Row] = js.native
   var dialect: js.UndefOr[SQLDialects] = js.native
-  var foreignKeys: js.UndefOr[AnonColumns[Row]] = js.native
+  var foreignKeys: js.UndefOr[typingsSlinky.nodeSql2.anon.Columns[Row]] = js.native
   var isTemporary: js.UndefOr[Boolean] = js.native
   var name: Name = js.native
   var schema: String = js.native
@@ -71,7 +70,7 @@ object TableDefinition {
         ret
     }
     @scala.inline
-    def withForeignKeys(value: AnonColumns[Row]): Self[Name, Row] = {
+    def withForeignKeys(value: typingsSlinky.nodeSql2.anon.Columns[Row]): Self[Name, Row] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("foreignKeys")(value.asInstanceOf[js.Any])
         ret

@@ -1,17 +1,17 @@
 package typingsSlinky.gapiClientCustomsearch.gapi.client.customsearch
 
-import typingsSlinky.gapiClientCustomsearch.AnonHeight
-import typingsSlinky.gapiClientCustomsearch.AnonHtmlTitle
+import typingsSlinky.gapiClientCustomsearch.anon.Height
+import typingsSlinky.gapiClientCustomsearch.anon.HtmlTitle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Promotion extends js.Object {
-  var bodyLines: js.UndefOr[js.Array[AnonHtmlTitle]] = js.native
+  var bodyLines: js.UndefOr[js.Array[HtmlTitle]] = js.native
   var displayLink: js.UndefOr[String] = js.native
   var htmlTitle: js.UndefOr[String] = js.native
-  var image: js.UndefOr[AnonHeight] = js.native
+  var image: js.UndefOr[Height] = js.native
   var link: js.UndefOr[String] = js.native
   var title: js.UndefOr[String] = js.native
 }
@@ -29,7 +29,7 @@ object Promotion {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBodyLines(value: js.Array[AnonHtmlTitle]): Self = {
+    def withBodyLines(value: js.Array[HtmlTitle]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bodyLines")(value.asInstanceOf[js.Any])
         ret
@@ -65,7 +65,7 @@ object Promotion {
         ret
     }
     @scala.inline
-    def withImage(value: AnonHeight): Self = {
+    def withImage(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
         ret

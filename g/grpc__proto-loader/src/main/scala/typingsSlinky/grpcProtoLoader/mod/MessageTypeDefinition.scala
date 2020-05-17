@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MessageTypeDefinition
   extends ProtobufTypeDefinition
-     with _AnyDefinition {
+     with AnyDefinition {
   @JSName("format")
   var format_MessageTypeDefinition: `Protocol Buffer 3 DescriptorProto` = js.native
 }

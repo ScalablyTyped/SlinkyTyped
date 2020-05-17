@@ -16,8 +16,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Moment
   extends Object
-     with _LocaleSpecifier
-     with _MomentInput {
+     with LocaleSpecifier
+     with MomentInput {
   def add(): Moment = js.native
   def add(amount: DurationInputArg1): Moment = js.native
   def add(amount: DurationInputArg1, unit: DurationInputArg2): Moment = js.native

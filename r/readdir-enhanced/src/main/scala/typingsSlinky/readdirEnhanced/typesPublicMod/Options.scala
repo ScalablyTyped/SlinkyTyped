@@ -1,6 +1,6 @@
 package typingsSlinky.readdirEnhanced.typesPublicMod
 
-import typingsSlinky.readdirEnhanced.PartialFileSystem
+import typingsSlinky.readdirEnhanced.anon.PartialFileSystem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -11,10 +11,8 @@ import scala.scalajs.js.annotation._
   * @class
   * @memberof PIXI
   */
-@JSGlobal("PIXI.TimeLimiter")
 @js.native
-class TimeLimiter protected () extends js.Object {
-  def this(maxMilliseconds: Double) = this()
+trait TimeLimiter extends js.Object {
   /**
     * Checks to see if another item can be uploaded. This should only be called once per item.
     * @return {boolean} If the item is allowed to be uploaded.
@@ -24,5 +22,33 @@ class TimeLimiter protected () extends js.Object {
     * Resets any counting properties to start fresh on a new frame.
     */
   def beginFrame(): Unit = js.native
+}
+
+object TimeLimiter {
+  @scala.inline
+  def apply(allowedToUpload: () => Boolean, beginFrame: () => Unit): TimeLimiter = {
+    val __obj = js.Dynamic.literal(allowedToUpload = js.Any.fromFunction0(allowedToUpload), beginFrame = js.Any.fromFunction0(beginFrame))
+    __obj.asInstanceOf[TimeLimiter]
+  }
+  @scala.inline
+  implicit class TimeLimiterOps[Self <: TimeLimiter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowedToUpload(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowedToUpload")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withBeginFrame(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("beginFrame")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.vscodeLanguageserverProtocol.protocolWorkspaceFoldersMod
 
-import typingsSlinky.vscodeLanguageserverProtocol.AnonWorkspaceFoldersAnonChangeNotifications
+import typingsSlinky.vscodeLanguageserverProtocol.anon.WorkspaceFoldersChangeNotifications
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait WorkspaceFoldersServerCapabilities extends js.Object {
   /**
     * The workspace server capabilities
     */
-  var workspace: js.UndefOr[AnonWorkspaceFoldersAnonChangeNotifications] = js.native
+  var workspace: js.UndefOr[WorkspaceFoldersChangeNotifications] = js.native
 }
 
 object WorkspaceFoldersServerCapabilities {
@@ -26,7 +26,7 @@ object WorkspaceFoldersServerCapabilities {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withWorkspace(value: AnonWorkspaceFoldersAnonChangeNotifications): Self = {
+    def withWorkspace(value: WorkspaceFoldersChangeNotifications): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("workspace")(value.asInstanceOf[js.Any])
         ret

@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.cathoQuantum.AnonBreakpoints
+import typingsSlinky.cathoQuantum.anon.Breakpoints
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.button
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.error
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.large
@@ -38,7 +38,7 @@ trait ButtonProps extends js.Object {
   var size: js.UndefOr[xsmall | small | medium | large | xlarge] = js.native
   var skin: js.UndefOr[neutral | primary | secondary | success | warning | error] = js.native
   var stroked: js.UndefOr[Boolean] = js.native
-  var theme: js.UndefOr[AnonBreakpoints] = js.native
+  var theme: js.UndefOr[Breakpoints] = js.native
   var `type`: js.UndefOr[button | reset | submit] = js.native
 }
 
@@ -199,7 +199,7 @@ object ButtonProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonBreakpoints): Self = {
+    def withTheme(value: Breakpoints): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

@@ -1,22 +1,22 @@
 package typingsSlinky.jqueryui.JQueryUI
 
 import typingsSlinky.jquery.JQueryEventObject
-import typingsSlinky.jqueryui.AnonSelected
-import typingsSlinky.jqueryui.AnonSelecting
-import typingsSlinky.jqueryui.AnonUnselected
-import typingsSlinky.jqueryui.AnonUnselecting
+import typingsSlinky.jqueryui.anon.Selected
+import typingsSlinky.jqueryui.anon.Selecting
+import typingsSlinky.jqueryui.anon.Unselected
+import typingsSlinky.jqueryui.anon.Unselecting
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SelectableEvents extends js.Object {
-  var selected: js.UndefOr[js.Function2[/* event */ JQueryEventObject, /* ui */ AnonSelected, Unit]] = js.native
-  var selecting: js.UndefOr[js.Function2[/* event */ JQueryEventObject, /* ui */ AnonSelecting, Unit]] = js.native
+  var selected: js.UndefOr[js.Function2[/* event */ JQueryEventObject, /* ui */ Selected, Unit]] = js.native
+  var selecting: js.UndefOr[js.Function2[/* event */ JQueryEventObject, /* ui */ Selecting, Unit]] = js.native
   var start: js.UndefOr[js.Function2[/* event */ JQueryEventObject, /* ui */ js.Any, Unit]] = js.native
   var stop: js.UndefOr[js.Function2[/* event */ JQueryEventObject, /* ui */ js.Any, Unit]] = js.native
-  var unselected: js.UndefOr[js.Function2[/* event */ JQueryEventObject, /* ui */ AnonUnselected, Unit]] = js.native
-  var unselecting: js.UndefOr[js.Function2[/* event */ JQueryEventObject, /* ui */ AnonUnselecting, Unit]] = js.native
+  var unselected: js.UndefOr[js.Function2[/* event */ JQueryEventObject, /* ui */ Unselected, Unit]] = js.native
+  var unselecting: js.UndefOr[js.Function2[/* event */ JQueryEventObject, /* ui */ Unselecting, Unit]] = js.native
 }
 
 object SelectableEvents {
@@ -32,7 +32,7 @@ object SelectableEvents {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSelected(value: (/* event */ JQueryEventObject, /* ui */ AnonSelected) => Unit): Self = {
+    def withSelected(value: (/* event */ JQueryEventObject, /* ui */ Selected) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selected")(js.Any.fromFunction2(value))
         ret
@@ -44,7 +44,7 @@ object SelectableEvents {
         ret
     }
     @scala.inline
-    def withSelecting(value: (/* event */ JQueryEventObject, /* ui */ AnonSelecting) => Unit): Self = {
+    def withSelecting(value: (/* event */ JQueryEventObject, /* ui */ Selecting) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selecting")(js.Any.fromFunction2(value))
         ret
@@ -80,7 +80,7 @@ object SelectableEvents {
         ret
     }
     @scala.inline
-    def withUnselected(value: (/* event */ JQueryEventObject, /* ui */ AnonUnselected) => Unit): Self = {
+    def withUnselected(value: (/* event */ JQueryEventObject, /* ui */ Unselected) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("unselected")(js.Any.fromFunction2(value))
         ret
@@ -92,7 +92,7 @@ object SelectableEvents {
         ret
     }
     @scala.inline
-    def withUnselecting(value: (/* event */ JQueryEventObject, /* ui */ AnonUnselecting) => Unit): Self = {
+    def withUnselecting(value: (/* event */ JQueryEventObject, /* ui */ Unselecting) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("unselecting")(js.Any.fromFunction2(value))
         ret

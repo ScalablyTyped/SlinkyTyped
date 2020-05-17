@@ -1,12 +1,12 @@
 package typingsSlinky.baseui.radioMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.ChangeEventHandler
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +24,7 @@ trait StatefulContainerProps extends js.Object {
 object StatefulContainerProps {
   @scala.inline
   def apply(
-    stateReducer: (/* stateType */ String, /* nextState */ State, /* currentState */ State, /* event */ SyntheticEvent[Event_, HTMLInputElement]) => State
+    stateReducer: (/* stateType */ String, /* nextState */ State, /* currentState */ State, /* event */ SyntheticEvent[Event, HTMLInputElement]) => State
   ): StatefulContainerProps = {
     val __obj = js.Dynamic.literal(stateReducer = js.Any.fromFunction4(stateReducer))
     __obj.asInstanceOf[StatefulContainerProps]
@@ -37,7 +37,7 @@ object StatefulContainerProps {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
     def withStateReducer(
-      value: (/* stateType */ String, /* nextState */ State, /* currentState */ State, /* event */ SyntheticEvent[Event_, HTMLInputElement]) => State
+      value: (/* stateType */ String, /* nextState */ State, /* currentState */ State, /* event */ SyntheticEvent[Event, HTMLInputElement]) => State
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stateReducer")(js.Any.fromFunction4(value))

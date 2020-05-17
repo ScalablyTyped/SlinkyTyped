@@ -1,13 +1,14 @@
 package typingsSlinky.reactSelect.selectMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
-import typingsSlinky.reactSelect.AnonCount
-import typingsSlinky.reactSelect.AnonInputValue
+import typingsSlinky.reactSelect.anon.Count
+import typingsSlinky.reactSelect.anon.InputValue
 import typingsSlinky.reactSelect.componentsMod.SelectComponentsConfig
 import typingsSlinky.reactSelect.filtersMod.Option
 import typingsSlinky.reactSelect.stylesMod.StylesConfig
@@ -25,7 +26,6 @@ import typingsSlinky.reactSelect.typesMod.OptionsType
 import typingsSlinky.reactSelect.typesMod.Theme
 import typingsSlinky.reactSelect.typesMod.ValueType
 import typingsSlinky.std.EventListener
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -125,7 +125,7 @@ trait Props[OptionType /* <: OptionTypeBase */] extends js.Object {
   /* Whether to enable search functionality */
   var isSearchable: js.UndefOr[Boolean] = js.native
   /* Async: Text to display when loading options */
-  var loadingMessage: js.UndefOr[js.Function1[/* obj */ AnonInputValue, String | Null]] = js.native
+  var loadingMessage: js.UndefOr[js.Function1[/* obj */ InputValue, String | Null]] = js.native
   /* Maximum height of the menu before scrolling */
   var maxMenuHeight: js.UndefOr[Double] = js.native
   /* Whether the menu is open */
@@ -146,7 +146,7 @@ trait Props[OptionType /* <: OptionTypeBase */] extends js.Object {
   /* Name of the HTML Input (optional - without this, no input will be rendered) */
   var name: js.UndefOr[String] = js.native
   /* Text to display when there are no options */
-  var noOptionsMessage: js.UndefOr[js.Function1[/* obj */ AnonInputValue, String | Null]] = js.native
+  var noOptionsMessage: js.UndefOr[js.Function1[/* obj */ InputValue, String | Null]] = js.native
   /* Handle blur events on the control */
   var onBlur: js.UndefOr[FocusEventHandler] = js.native
   /* Handle change events on the select */
@@ -164,9 +164,9 @@ trait Props[OptionType /* <: OptionTypeBase */] extends js.Object {
   /* Handle the menu opening */
   var onMenuOpen: js.UndefOr[js.Function0[Unit]] = js.native
   /* Fired when the user scrolls to the bottom of the menu */
-  var onMenuScrollToBottom: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, HTMLElement], Unit]] = js.native
+  var onMenuScrollToBottom: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLElement], Unit]] = js.native
   /* Fired when the user scrolls to the top of the menu */
-  var onMenuScrollToTop: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, HTMLElement], Unit]] = js.native
+  var onMenuScrollToTop: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLElement], Unit]] = js.native
   /* Allows control of whether the menu is opened when the Select is clicked */
   var openMenuOnClick: js.UndefOr[Boolean] = js.native
   /* Allows control of whether the menu is opened when the Select is focused */
@@ -178,7 +178,7 @@ trait Props[OptionType /* <: OptionTypeBase */] extends js.Object {
   /* Placeholder text for the select value */
   var placeholder: js.UndefOr[TagMod[Any]] = js.native
   /* Status to relay to screen readers */
-  var screenReaderStatus: js.UndefOr[js.Function1[/* obj */ AnonCount, String]] = js.native
+  var screenReaderStatus: js.UndefOr[js.Function1[/* obj */ Count, String]] = js.native
   /* Style modifier methods */
   var styles: js.UndefOr[StylesConfig] = js.native
   /* Sets the tabIndex attribute on the input */
@@ -306,7 +306,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withCloseMenuOnScrollFunction1(value: /* evt */ Event_ => Unit): Self[OptionType] = {
+    def withCloseMenuOnScrollFunction1(value: /* evt */ Event => Unit): Self[OptionType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("closeMenuOnScroll")(js.Any.fromFunction1(value))
         ret
@@ -648,7 +648,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withLoadingMessage(value: /* obj */ AnonInputValue => String | Null): Self[OptionType] = {
+    def withLoadingMessage(value: /* obj */ InputValue => String | Null): Self[OptionType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loadingMessage")(js.Any.fromFunction1(value))
         ret
@@ -774,7 +774,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withNoOptionsMessage(value: /* obj */ AnonInputValue => String | Null): Self[OptionType] = {
+    def withNoOptionsMessage(value: /* obj */ InputValue => String | Null): Self[OptionType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("noOptionsMessage")(js.Any.fromFunction1(value))
         ret
@@ -870,7 +870,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withOnMenuScrollToBottom(value: /* event */ SyntheticEvent[Event_, HTMLElement] => Unit): Self[OptionType] = {
+    def withOnMenuScrollToBottom(value: /* event */ SyntheticEvent[Event, HTMLElement] => Unit): Self[OptionType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMenuScrollToBottom")(js.Any.fromFunction1(value))
         ret
@@ -882,7 +882,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withOnMenuScrollToTop(value: /* event */ SyntheticEvent[Event_, HTMLElement] => Unit): Self[OptionType] = {
+    def withOnMenuScrollToTop(value: /* event */ SyntheticEvent[Event, HTMLElement] => Unit): Self[OptionType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMenuScrollToTop")(js.Any.fromFunction1(value))
         ret
@@ -960,7 +960,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withScreenReaderStatus(value: /* obj */ AnonCount => String): Self[OptionType] = {
+    def withScreenReaderStatus(value: /* obj */ Count => String): Self[OptionType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("screenReaderStatus")(js.Any.fromFunction1(value))
         ret

@@ -2,8 +2,8 @@ package typingsSlinky.testingLibraryReact.mod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.testingLibraryDom.getQueriesForElementMod.Queries
-import typingsSlinky.testingLibraryReact.OmitRenderOptionsreadonly
-import typingsSlinky.testingLibraryReact.RenderResultreadonlygetAl
+import typingsSlinky.testingLibraryReact.anon.OmitRenderOptionsreadonly
+import typingsSlinky.testingLibraryReact.anon.RenderResultreadonlygetAl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

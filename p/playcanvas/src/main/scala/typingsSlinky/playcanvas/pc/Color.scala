@@ -18,17 +18,8 @@ import scala.scalajs.js.annotation._
   * @property {number} b The blue component of the color.
   * @property {number} a The alpha component of the color.
   */
-@JSGlobal("pc.Color")
 @js.native
-class Color () extends js.Object {
-  def this(r: js.Array[Double]) = this()
-  def this(r: Double) = this()
-  def this(r: js.Array[Double], g: Double) = this()
-  def this(r: Double, g: Double) = this()
-  def this(r: js.Array[Double], g: Double, b: Double) = this()
-  def this(r: Double, g: Double, b: Double) = this()
-  def this(r: js.Array[Double], g: Double, b: Double, a: Double) = this()
-  def this(r: Double, g: Double, b: Double, a: Double) = this()
+trait Color extends js.Object {
   /**
     * The alpha component of the color.
     */

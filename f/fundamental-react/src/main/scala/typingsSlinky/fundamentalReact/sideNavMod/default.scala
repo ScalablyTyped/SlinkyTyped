@@ -1,7 +1,7 @@
 package typingsSlinky.fundamentalReact.sideNavMod
 
-import typingsSlinky.fundamentalReact.ComponentClassSideNavList
-import typingsSlinky.fundamentalReact.ComponentClassSideNavListInstantiable
+import typingsSlinky.fundamentalReact.anon.ComponentClassSideNavList
+import typingsSlinky.fundamentalReact.anon.ComponentClassSideNavListInstantiable
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,28 +1,21 @@
 package typingsSlinky.eslint.mod.Rule
 
-import typingsSlinky.eslint.AnonColumn
-import typingsSlinky.eslint.mod.AST.SourceLocation
-import typingsSlinky.estree.mod.Node
+import typingsSlinky.eslint.anon.Loc
+import typingsSlinky.eslint.anon.NodeNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.eslint.AnonNodeNode
-  - typingsSlinky.eslint.AnonLoc
+  - typingsSlinky.eslint.anon.NodeNode
+  - typingsSlinky.eslint.anon.Loc
 */
 trait ReportDescriptorLocation extends js.Object
 
 object ReportDescriptorLocation {
   @scala.inline
-  def AnonNodeNode(node: Node): ReportDescriptorLocation = {
-    val __obj = js.Dynamic.literal(node = node.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ReportDescriptorLocation]
-  }
+  implicit def apply(value: Loc): ReportDescriptorLocation = value.asInstanceOf[ReportDescriptorLocation]
   @scala.inline
-  def AnonLoc(loc: SourceLocation | AnonColumn): ReportDescriptorLocation = {
-    val __obj = js.Dynamic.literal(loc = loc.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ReportDescriptorLocation]
-  }
+  implicit def apply(value: NodeNode): ReportDescriptorLocation = value.asInstanceOf[ReportDescriptorLocation]
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.oracleOraclejet.ojtagcloudMod
 
-import typingsSlinky.oracleOraclejet.Anon24
-import typingsSlinky.oracleOraclejet.AnonHoverBehaviorDelay
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
+import typingsSlinky.oracleOraclejet.anon.HoverBehaviorDelay
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
+import typingsSlinky.oracleOraclejet.anon.`24`
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponentSettableProperties
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.all
@@ -34,11 +34,11 @@ trait ojTagCloudSettableProperties[K, D] extends dvtBaseComponentSettablePropert
   var layout: cloud | rectangular = js.native
   var selection: js.Array[K] = js.native
   var selectionMode: single | multiple | none = js.native
-  var styleDefaults: AnonHoverBehaviorDelay = js.native
-  var tooltip: Anon24[K] = js.native
+  var styleDefaults: HoverBehaviorDelay = js.native
+  var tooltip: `24`[K] = js.native
   var touchResponse: touchStart | auto = js.native
   @JSName("translations")
-  var translations_ojTagCloudSettableProperties: AnonLabelAndValue = js.native
+  var translations_ojTagCloudSettableProperties: LabelAndValue = js.native
 }
 
 object ojTagCloudSettableProperties {
@@ -54,11 +54,11 @@ object ojTagCloudSettableProperties {
     layout: cloud | rectangular,
     selection: js.Array[K],
     selectionMode: single | multiple | none,
-    styleDefaults: AnonHoverBehaviorDelay,
-    tooltip: Anon24[K],
+    styleDefaults: HoverBehaviorDelay,
+    tooltip: `24`[K],
     touchResponse: touchStart | auto,
     trackResize: on | off,
-    translations: AnonLabelAndValue
+    translations: LabelAndValue
   ): ojTagCloudSettableProperties[K, D] = {
     val __obj = js.Dynamic.literal(animationOnDataChange = animationOnDataChange.asInstanceOf[js.Any], animationOnDisplay = animationOnDisplay.asInstanceOf[js.Any], as = as.asInstanceOf[js.Any], hiddenCategories = hiddenCategories.asInstanceOf[js.Any], highlightMatch = highlightMatch.asInstanceOf[js.Any], highlightedCategories = highlightedCategories.asInstanceOf[js.Any], hoverBehavior = hoverBehavior.asInstanceOf[js.Any], layout = layout.asInstanceOf[js.Any], selection = selection.asInstanceOf[js.Any], selectionMode = selectionMode.asInstanceOf[js.Any], styleDefaults = styleDefaults.asInstanceOf[js.Any], tooltip = tooltip.asInstanceOf[js.Any], touchResponse = touchResponse.asInstanceOf[js.Any], trackResize = trackResize.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojTagCloudSettableProperties[K, D]]
@@ -130,13 +130,13 @@ object ojTagCloudSettableProperties {
         ret
     }
     @scala.inline
-    def withStyleDefaults(value: AnonHoverBehaviorDelay): Self[K, D] = {
+    def withStyleDefaults(value: HoverBehaviorDelay): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styleDefaults")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withTooltip(value: Anon24[K]): Self[K, D] = {
+    def withTooltip(value: `24`[K]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
@@ -148,7 +148,7 @@ object ojTagCloudSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelAndValue): Self[K, D] = {
+    def withTranslations(value: LabelAndValue): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

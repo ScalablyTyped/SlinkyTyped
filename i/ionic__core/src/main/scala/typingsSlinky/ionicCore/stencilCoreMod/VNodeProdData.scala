@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait VNodeProdData
-  extends /* state */ StringDictionary[js.Any] {
+  extends /* key */ StringDictionary[js.Any]
+     with PropsType {
   var `class`: js.UndefOr[StringDictionary[Boolean] | String] = js.native
   var className: js.UndefOr[StringDictionary[Boolean] | String] = js.native
   var key: js.UndefOr[String | Double] = js.native

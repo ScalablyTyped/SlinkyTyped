@@ -1,8 +1,8 @@
 package typingsSlinky.useDarkMode.mod
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Window
 import org.scalajs.dom.raw.WindowLocalStorage
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait DarkModeConfig extends js.Object {
    // A className to set "light mode". Default = "light-mode".
   var element: js.UndefOr[HTMLElement] = js.native
    // A storage provider. Default = `localStorage`.
-  var global: js.UndefOr[Window_] = js.native
+  var global: js.UndefOr[Window] = js.native
    // The element to apply the className. Default = `document.body`
   var onChange: js.UndefOr[js.Function1[/* val */ js.UndefOr[Boolean], Unit]] = js.native
    // Overide the default className handler with a custom callback.
@@ -73,7 +73,7 @@ object DarkModeConfig {
         ret
     }
     @scala.inline
-    def withGlobal(value: Window_): Self = {
+    def withGlobal(value: Window): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("global")(value.asInstanceOf[js.Any])
         ret

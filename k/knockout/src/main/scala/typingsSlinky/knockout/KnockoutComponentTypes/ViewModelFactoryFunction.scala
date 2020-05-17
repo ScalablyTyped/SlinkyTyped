@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ViewModelFactoryFunction extends _ViewModel {
+trait ViewModelFactoryFunction extends ViewModel {
   def createViewModel(params: js.Any, componentInfo: ComponentInfo): js.Any = js.native
 }
 

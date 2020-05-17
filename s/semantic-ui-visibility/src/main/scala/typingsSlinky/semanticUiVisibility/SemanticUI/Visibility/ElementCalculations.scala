@@ -1,7 +1,7 @@
 package typingsSlinky.semanticUiVisibility.SemanticUI.Visibility
 
 import typingsSlinky.jquery.JQueryCoordinates
-import typingsSlinky.semanticUiVisibility.AnonBottom
+import typingsSlinky.semanticUiVisibility.anon.Bottom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait ElementCalculations extends ElementPosition {
   var bottom: Double = js.native
   var bottomPassed: Boolean = js.native
   var bottomVisible: Boolean = js.native
-  var margin: js.UndefOr[AnonBottom] = js.native
+  var margin: js.UndefOr[Bottom] = js.native
   var offScreen: Boolean = js.native
   var onScreen: Boolean = js.native
   var passing: Boolean = js.native
@@ -117,7 +117,7 @@ object ElementCalculations {
         ret
     }
     @scala.inline
-    def withMargin(value: AnonBottom): Self = {
+    def withMargin(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
         ret

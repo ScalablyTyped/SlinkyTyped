@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.WebGLProgram
 import org.scalajs.dom.raw.WebGLRenderingContext
 import org.scalajs.dom.raw.WebGLShader
-import typingsSlinky.glShader.AnonFragment
+import typingsSlinky.glShader.anon.Fragment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait Shader extends js.Object {
   val vertShader: WebGLShader = js.native
   def bind(): Unit = js.native
   def dispose(): Unit = js.native
-  def update(obj: AnonFragment): Unit = js.native
+  def update(obj: Fragment): Unit = js.native
   def update(vertex: String, fragment: String): Unit = js.native
   def update(vertex: String, fragment: String, uniforms: js.Array[Parameter]): Unit = js.native
   def update(vertex: String, fragment: String, uniforms: js.Array[Parameter], attributes: js.Array[Parameter]): Unit = js.native

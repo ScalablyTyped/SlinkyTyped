@@ -1,6 +1,6 @@
 package typingsSlinky.ionic.definitionsMod
 
-import typingsSlinky.ionic.AnonAddress
+import typingsSlinky.ionic.anon.Address
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,13 +9,13 @@ import scala.scalajs.js.annotation._
 trait DevAppDetails extends js.Object {
   var channel: js.UndefOr[String] = js.native
   var commPort: Double = js.native
-  var interfaces: js.Array[AnonAddress] = js.native
+  var interfaces: js.Array[Address] = js.native
   var port: Double = js.native
 }
 
 object DevAppDetails {
   @scala.inline
-  def apply(commPort: Double, interfaces: js.Array[AnonAddress], port: Double): DevAppDetails = {
+  def apply(commPort: Double, interfaces: js.Array[Address], port: Double): DevAppDetails = {
     val __obj = js.Dynamic.literal(commPort = commPort.asInstanceOf[js.Any], interfaces = interfaces.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any])
     __obj.asInstanceOf[DevAppDetails]
   }
@@ -32,7 +32,7 @@ object DevAppDetails {
         ret
     }
     @scala.inline
-    def withInterfaces(value: js.Array[AnonAddress]): Self = {
+    def withInterfaces(value: js.Array[Address]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("interfaces")(value.asInstanceOf[js.Any])
         ret

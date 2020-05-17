@@ -1,6 +1,6 @@
 package typingsSlinky.webpack.mod.compilation
 
-import typingsSlinky.webpack.AnonNewChunks
+import typingsSlinky.webpack.anon.NewChunks
 import typingsSlinky.webpack.mod.SortableSet
 import typingsSlinky.webpack.webpackBooleans.`false`
 import typingsSlinky.webpack.webpackBooleans.`true`
@@ -16,7 +16,7 @@ class Module protected () extends DependenciesBlock {
   def this(`type`: String) = this()
   def this(`type`: String, context: String) = this()
   var _chunks: SortableSet[Chunk] = js.native
-  var _rewriteChunkInReasons: js.UndefOr[AnonNewChunks] = js.native
+  var _rewriteChunkInReasons: js.UndefOr[NewChunks] = js.native
   var _source: js.Any = js.native
   var buildInfo: js.Any = js.native
   var buildMeta: js.Any = js.native

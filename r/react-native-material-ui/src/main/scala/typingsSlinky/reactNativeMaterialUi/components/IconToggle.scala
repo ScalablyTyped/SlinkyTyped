@@ -2,7 +2,7 @@ package typingsSlinky.reactNativeMaterialUi.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNativeMaterialUi.AnonContainerIcon
+import typingsSlinky.reactNativeMaterialUi.anon.ContainerIcon
 import typingsSlinky.reactNativeMaterialUi.mod.IconToggleProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -30,7 +30,7 @@ object IconToggle {
     @scala.inline
     def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline
-    def style(value: AnonContainerIcon): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: ContainerIcon): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
     @scala.inline

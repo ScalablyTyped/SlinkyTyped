@@ -1,5 +1,6 @@
 package typingsSlinky.sketchapp
 
+import typingsSlinky.sketchapp.anon.X
 import typingsSlinky.sketchapp.sketchappStrings.styleBlur
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SketchMSStyleBlur extends js.Object {
   var _class: styleBlur = js.native
-  var center: AnonX = js.native
+  var center: X = js.native
   var isEnabled: Double = js.native
   var motionAngle: Double = js.native
   var radius: Double = js.native
@@ -19,7 +20,7 @@ object SketchMSStyleBlur {
   @scala.inline
   def apply(
     _class: styleBlur,
-    center: AnonX,
+    center: X,
     isEnabled: Double,
     motionAngle: Double,
     radius: Double,
@@ -42,7 +43,7 @@ object SketchMSStyleBlur {
         ret
     }
     @scala.inline
-    def withCenter(value: AnonX): Self = {
+    def withCenter(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("center")(value.asInstanceOf[js.Any])
         ret

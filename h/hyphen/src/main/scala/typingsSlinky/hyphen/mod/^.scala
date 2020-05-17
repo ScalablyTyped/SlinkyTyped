@@ -1,6 +1,6 @@
 package typingsSlinky.hyphen.mod
 
-import typingsSlinky.hyphen.ReadonlyFactoryOptions
+import typingsSlinky.hyphen.anon.ReadonlyFactoryOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

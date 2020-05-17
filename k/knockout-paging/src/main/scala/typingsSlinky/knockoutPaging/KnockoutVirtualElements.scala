@@ -2,6 +2,7 @@ package typingsSlinky.knockoutPaging
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Node
+import typingsSlinky.knockoutPaging.anon.Dictindex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +16,7 @@ trait KnockoutVirtualElements extends js.Object {
   def insertAfter(container: KnockoutVirtualElement, nodeToInsert: Node, insertAfter: Node): Unit = js.native
   def nextSibling(node: KnockoutVirtualElement): Node = js.native
   def prepend(node: KnockoutVirtualElement, toInsert: Node): Unit = js.native
-  def setDomNodeChildren(node: KnockoutVirtualElement, newChildren: AnonDictindex): Unit = js.native
+  def setDomNodeChildren(node: KnockoutVirtualElement, newChildren: Dictindex): Unit = js.native
 }
 
 object KnockoutVirtualElements {
@@ -28,7 +29,7 @@ object KnockoutVirtualElements {
     insertAfter: (KnockoutVirtualElement, Node, Node) => Unit,
     nextSibling: KnockoutVirtualElement => Node,
     prepend: (KnockoutVirtualElement, Node) => Unit,
-    setDomNodeChildren: (KnockoutVirtualElement, AnonDictindex) => Unit
+    setDomNodeChildren: (KnockoutVirtualElement, Dictindex) => Unit
   ): KnockoutVirtualElements = {
     val __obj = js.Dynamic.literal(allowedBindings = allowedBindings.asInstanceOf[js.Any], childNodes = js.Any.fromFunction1(childNodes), emptyNode = js.Any.fromFunction1(emptyNode), firstChild = js.Any.fromFunction1(firstChild), insertAfter = js.Any.fromFunction3(insertAfter), nextSibling = js.Any.fromFunction1(nextSibling), prepend = js.Any.fromFunction2(prepend), setDomNodeChildren = js.Any.fromFunction2(setDomNodeChildren))
     __obj.asInstanceOf[KnockoutVirtualElements]
@@ -82,7 +83,7 @@ object KnockoutVirtualElements {
         ret
     }
     @scala.inline
-    def withSetDomNodeChildren(value: (KnockoutVirtualElement, AnonDictindex) => Unit): Self = {
+    def withSetDomNodeChildren(value: (KnockoutVirtualElement, Dictindex) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("setDomNodeChildren")(js.Any.fromFunction2(value))
         ret

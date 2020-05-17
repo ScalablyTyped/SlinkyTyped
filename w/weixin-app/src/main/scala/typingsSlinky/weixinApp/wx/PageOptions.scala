@@ -1,6 +1,6 @@
 package typingsSlinky.weixinApp.wx
 
-import typingsSlinky.weixinApp.AnonScrollTop
+import typingsSlinky.weixinApp.anon.ScrollTop
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +28,7 @@ trait PageOptions extends js.Object {
   		 * 监听用户滑动页面事件。
   		 * 参数为 Object，包含以下字段：
   		 */
-  var onPageScroll: js.UndefOr[js.Function1[/* option */ AnonScrollTop, Unit]] = js.native
+  var onPageScroll: js.UndefOr[js.Function1[/* option */ ScrollTop, Unit]] = js.native
   /**
   		 * 下拉刷新
   		 * 在 Page 中定义 onPullDownRefresh 处理函数，监听该页面用户下拉刷新事件。
@@ -119,7 +119,7 @@ object PageOptions {
         ret
     }
     @scala.inline
-    def withOnPageScroll(value: /* option */ AnonScrollTop => Unit): Self = {
+    def withOnPageScroll(value: /* option */ ScrollTop => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPageScroll")(js.Any.fromFunction1(value))
         ret

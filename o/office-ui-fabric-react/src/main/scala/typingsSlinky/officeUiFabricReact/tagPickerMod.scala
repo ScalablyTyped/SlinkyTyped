@@ -1,6 +1,7 @@
 package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.officeUiFabricReact.anon.OnRenderItem
 import typingsSlinky.officeUiFabricReact.basePickerMod.BasePicker
 import typingsSlinky.officeUiFabricReact.tagPickerTypesMod.ITag
 import typingsSlinky.officeUiFabricReact.tagPickerTypesMod.ITagPickerProps
@@ -20,7 +21,7 @@ object tagPickerMod extends js.Object {
   /* static members */
   @js.native
   object TagPickerBase extends js.Object {
-    var defaultProps: AnonOnRenderItem = js.native
+    var defaultProps: OnRenderItem = js.native
   }
   
 }

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -72,8 +71,4 @@ trait RelationshipQuery
     */
   var where: String = js.native
 }
-
-@JSGlobal("__esri.RelationshipQuery")
-@js.native
-object RelationshipQuery extends TopLevel[RelationshipQueryConstructor]
 

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("MSHTML.IHTMLStorage")
 @js.native
-class IHTMLStorage protected () extends js.Object {
+trait IHTMLStorage extends js.Object {
   @JSName("MSHTML.IHTMLStorage_typekey")
   var MSHTMLDotIHTMLStorage_typekey: IHTMLStorage = js.native
   val length: Double = js.native
@@ -16,5 +15,79 @@ class IHTMLStorage protected () extends js.Object {
   def key(lIndex: Double): String = js.native
   def removeItem(bstrKey: String): Unit = js.native
   def setItem(bstrKey: String, bstrValue: String): Unit = js.native
+}
+
+object IHTMLStorage {
+  @scala.inline
+  def apply(
+    MSHTMLDotIHTMLStorage_typekey: IHTMLStorage,
+    clear: () => Unit,
+    getItem: String => js.Any,
+    key: Double => String,
+    length: Double,
+    remainingSpace: Double,
+    removeItem: String => Unit,
+    setItem: (String, String) => Unit
+  ): IHTMLStorage = {
+    val __obj = js.Dynamic.literal(clear = js.Any.fromFunction0(clear), getItem = js.Any.fromFunction1(getItem), key = js.Any.fromFunction1(key), length = length.asInstanceOf[js.Any], remainingSpace = remainingSpace.asInstanceOf[js.Any], removeItem = js.Any.fromFunction1(removeItem), setItem = js.Any.fromFunction2(setItem))
+    __obj.updateDynamic("MSHTML.IHTMLStorage_typekey")(MSHTMLDotIHTMLStorage_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IHTMLStorage]
+  }
+  @scala.inline
+  implicit class IHTMLStorageOps[Self <: IHTMLStorage] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMSHTMLDotIHTMLStorage_typekey(value: IHTMLStorage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.IHTMLStorage_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClear(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetItem(value: String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withKey(value: Double => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemainingSpace(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remainingSpace")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoveItem(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetItem(value: (String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setItem")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

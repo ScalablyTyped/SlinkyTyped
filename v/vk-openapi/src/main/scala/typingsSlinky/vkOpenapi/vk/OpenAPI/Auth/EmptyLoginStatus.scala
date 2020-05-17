@@ -36,18 +36,6 @@ object EmptyLoginStatus {
         ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
         ret
     }
-    @scala.inline
-    def withSettings(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settings")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSettings: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("settings")(js.undefined)
-        ret
-    }
   }
   
 }

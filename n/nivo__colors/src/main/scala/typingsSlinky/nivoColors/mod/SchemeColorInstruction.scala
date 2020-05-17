@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait SchemeColorInstruction
-  extends _OrdinalColorsInstruction[js.Any] {
+  extends OrdinalColorsInstruction[js.Any] {
   var scheme: ColorSchemeId = js.native
   // size is useful for diverging & sequential colors,
   // as they are array of array, whereas categorical colors

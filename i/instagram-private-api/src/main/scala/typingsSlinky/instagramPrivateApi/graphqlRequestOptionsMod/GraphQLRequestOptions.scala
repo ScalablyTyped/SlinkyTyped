@@ -1,6 +1,6 @@
 package typingsSlinky.instagramPrivateApi.graphqlRequestOptionsMod
 
-import typingsSlinky.instagramPrivateApi.AnonFriendlyName
+import typingsSlinky.instagramPrivateApi.anon.FriendlyName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,13 +9,13 @@ import scala.scalajs.js.annotation._
 trait GraphQLRequestOptions extends js.Object {
   var accessToken: js.UndefOr[String] = js.native
   var documentId: String = js.native
-  var surface: AnonFriendlyName = js.native
+  var surface: FriendlyName = js.native
   var variables: js.Any = js.native
 }
 
 object GraphQLRequestOptions {
   @scala.inline
-  def apply(documentId: String, surface: AnonFriendlyName, variables: js.Any): GraphQLRequestOptions = {
+  def apply(documentId: String, surface: FriendlyName, variables: js.Any): GraphQLRequestOptions = {
     val __obj = js.Dynamic.literal(documentId = documentId.asInstanceOf[js.Any], surface = surface.asInstanceOf[js.Any], variables = variables.asInstanceOf[js.Any])
     __obj.asInstanceOf[GraphQLRequestOptions]
   }
@@ -32,7 +32,7 @@ object GraphQLRequestOptions {
         ret
     }
     @scala.inline
-    def withSurface(value: AnonFriendlyName): Self = {
+    def withSurface(value: FriendlyName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("surface")(value.asInstanceOf[js.Any])
         ret

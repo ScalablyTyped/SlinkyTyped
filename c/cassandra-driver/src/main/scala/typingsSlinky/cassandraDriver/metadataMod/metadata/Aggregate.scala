@@ -1,13 +1,13 @@
 package typingsSlinky.cassandraDriver.metadataMod.metadata
 
-import typingsSlinky.cassandraDriver.AnonCode
+import typingsSlinky.cassandraDriver.anon.Code
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Aggregate extends js.Object {
-  var argumentTypes: js.Array[AnonCode] = js.native
+  var argumentTypes: js.Array[Code] = js.native
   var finalFunction: String = js.native
   var initCondition: String = js.native
   var keyspaceName: String = js.native
@@ -20,7 +20,7 @@ trait Aggregate extends js.Object {
 object Aggregate {
   @scala.inline
   def apply(
-    argumentTypes: js.Array[AnonCode],
+    argumentTypes: js.Array[Code],
     finalFunction: String,
     initCondition: String,
     keyspaceName: String,
@@ -39,7 +39,7 @@ object Aggregate {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withArgumentTypes(value: js.Array[AnonCode]): Self = {
+    def withArgumentTypes(value: js.Array[Code]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("argumentTypes")(value.asInstanceOf[js.Any])
         ret

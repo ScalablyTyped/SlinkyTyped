@@ -547,24 +547,6 @@ object TimelineFeedResponseMediaOrAd {
         ret
     }
     @scala.inline
-    def withITunesItem(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iTunesItem")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutITunesItem: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iTunesItem")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withITunesItemNull: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("iTunesItem")(null)
-        ret
-    }
-    @scala.inline
     def withImage_versions2(value: TimelineFeedResponseImageVersions2): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("image_versions2")(value.asInstanceOf[js.Any])

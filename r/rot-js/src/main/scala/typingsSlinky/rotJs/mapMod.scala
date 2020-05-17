@@ -3,6 +3,10 @@ package typingsSlinky.rotJs
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable3
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.rotJs.anon.PartialOptionsBorn
+import typingsSlinky.rotJs.anon.PartialOptionsCellHeight
+import typingsSlinky.rotJs.anon.PartialOptionsCorridorLength
+import typingsSlinky.rotJs.anon.PartialOptionsRoomDugPercentage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

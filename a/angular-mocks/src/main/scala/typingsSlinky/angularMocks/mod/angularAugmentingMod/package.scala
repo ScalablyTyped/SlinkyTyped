@@ -11,7 +11,7 @@ package object angularAugmentingMod {
   ///////////////////////////////////////////////////////////////////////////
   type IComponentControllerService = js.Function4[
     /* componentName */ java.lang.String, 
-    /* locals */ typingsSlinky.angularMocks.AnonDictkey, 
+    /* locals */ typingsSlinky.angularMocks.anon.Dictkey, 
     /* bindings */ js.UndefOr[js.Any], 
     /* ident */ js.UndefOr[java.lang.String], 
     js.Any

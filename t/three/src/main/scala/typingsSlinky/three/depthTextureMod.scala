@@ -1,5 +1,6 @@
 package typingsSlinky.three
 
+import typingsSlinky.three.anon.HeightWidth
 import typingsSlinky.three.constantsMod.Mapping
 import typingsSlinky.three.constantsMod.TextureDataType
 import typingsSlinky.three.constantsMod.TextureFilter
@@ -26,7 +27,7 @@ object depthTextureMod extends js.Object {
       anisotropy: js.UndefOr[Double]
     ) = this()
     @JSName("image")
-    var image_DepthTexture: AnonHeightWidth = js.native
+    var image_DepthTexture: HeightWidth = js.native
   }
   
 }

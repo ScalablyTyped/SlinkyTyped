@@ -241,18 +241,6 @@ object Model {
         ret.asInstanceOf[js.Dynamic].updateDynamic("startAngle")(js.undefined)
         ret
     }
-    @scala.inline
-    def withSteppedLine(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("steppedLine")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSteppedLine: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("steppedLine")(js.undefined)
-        ret
-    }
   }
   
 }

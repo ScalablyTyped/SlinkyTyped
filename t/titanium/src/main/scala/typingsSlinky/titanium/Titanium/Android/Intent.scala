@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * Message objects passed between Android application components.
 		 */
-@JSGlobal("Titanium.Android.Intent")
 @js.native
-class Intent () extends Proxy {
+trait Intent extends Proxy {
   /**
   			 * The action associated with this intent.
   			 */

@@ -1,7 +1,7 @@
 package typingsSlinky.algoliasearch.mod.Places
 
-import typingsSlinky.algoliasearch.AnonAdministrative
-import typingsSlinky.algoliasearch.AnonLat
+import typingsSlinky.algoliasearch.anon.Administrative
+import typingsSlinky.algoliasearch.anon.Lat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,12 +16,12 @@ trait LocalizedHitInterface extends js.Object {
     * Associated list of latitude and longitude.
     * https://community.algolia.com/places/api-clients.html#api-suggestion-latlng
     */
-  var _geoloc: AnonLat = js.native
+  var _geoloc: Lat = js.native
   /**
     * The associated highlighting information.
     * https://community.algolia.com/places/api-clients.html#api-suggestion-highlightResult
     */
-  var _highlightResult: AnonAdministrative = js.native
+  var _highlightResult: Administrative = js.native
   var _tags: js.Array[String] = js.native
   var admin_level: Double = js.native
   /**
@@ -77,8 +77,8 @@ trait LocalizedHitInterface extends js.Object {
 object LocalizedHitInterface {
   @scala.inline
   def apply(
-    _geoloc: AnonLat,
-    _highlightResult: AnonAdministrative,
+    _geoloc: Lat,
+    _highlightResult: Administrative,
     _tags: js.Array[String],
     admin_level: Double,
     country: String,
@@ -102,13 +102,13 @@ object LocalizedHitInterface {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_geoloc(value: AnonLat): Self = {
+    def with_geoloc(value: Lat): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("_geoloc")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def with_highlightResult(value: AnonAdministrative): Self = {
+    def with_highlightResult(value: Administrative): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("_highlightResult")(value.asInstanceOf[js.Any])
         ret

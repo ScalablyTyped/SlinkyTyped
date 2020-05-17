@@ -3,10 +3,10 @@ package typingsSlinky.mongoose.mod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.mongodb.mod.MongoError
-import typingsSlinky.mongoose.AnonAutoIndexId
-import typingsSlinky.mongoose.AnonDictother
-import typingsSlinky.mongoose.AnonJ
-import typingsSlinky.mongoose.AnonLength
+import typingsSlinky.mongoose.anon.AutoIndexId
+import typingsSlinky.mongoose.anon.Dictother
+import typingsSlinky.mongoose.anon.J
+import typingsSlinky.mongoose.anon.Length
 import typingsSlinky.mongoose.mongooseStrings._id
 import typingsSlinky.mongoose.mongooseStrings.`throw`
 import typingsSlinky.mongoose.mongooseStrings.aggregate
@@ -96,7 +96,7 @@ trait Schema[T] extends EventEmitter {
     *   expires option into seconds for the expireAfterSeconds in the above link.
     */
   def index(fields: js.Any): this.type = js.native
-  def index(fields: js.Any, options: AnonDictother): this.type = js.native
+  def index(fields: js.Any, options: Dictother): this.type = js.native
   /** Compiles indexes from fields and schema-level indexes */
   def indexes(): js.Array[_] = js.native
   /**
@@ -341,13 +341,13 @@ trait Schema[T] extends EventEmitter {
   @JSName("set")
   def set_bufferCommands(key: bufferCommands, value: Boolean): this.type = js.native
   @JSName("set")
-  def set_capped(key: capped): Boolean | Double | AnonAutoIndexId = js.native
+  def set_capped(key: capped): Boolean | Double | AutoIndexId = js.native
   @JSName("set")
   def set_capped(key: capped, value: Boolean): this.type = js.native
   @JSName("set")
   def set_capped(key: capped, value: Double): this.type = js.native
   @JSName("set")
-  def set_capped(key: capped, value: AnonAutoIndexId): this.type = js.native
+  def set_capped(key: capped, value: AutoIndexId): this.type = js.native
   @JSName("set")
   def set_collation(key: collation): CollationOptions = js.native
   @JSName("set")
@@ -385,11 +385,11 @@ trait Schema[T] extends EventEmitter {
   @JSName("set")
   def set_read(key: read, value: String): this.type = js.native
   @JSName("set")
-  def set_safe(key: safe): Boolean | AnonJ = js.native
+  def set_safe(key: safe): Boolean | J = js.native
   @JSName("set")
   def set_safe(key: safe, value: Boolean): this.type = js.native
   @JSName("set")
-  def set_safe(key: safe, value: AnonJ): this.type = js.native
+  def set_safe(key: safe, value: J): this.type = js.native
   @JSName("set")
   def set_selectPopulatedPaths(key: selectPopulatedPaths): Boolean = js.native
   @JSName("set")
@@ -481,7 +481,7 @@ object Schema extends js.Object {
         * Check if the given value satisfies a required validator. The given value
         * must be not null nor undefined, and have a non-zero length.
         */
-      def checkRequired[T /* <: AnonLength */](value: T): scala.Boolean = js.native
+      def checkRequired[T /* <: Length */](value: T): scala.Boolean = js.native
     }
     
     /*

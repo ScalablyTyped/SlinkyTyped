@@ -1,15 +1,15 @@
 package typingsSlinky.aceDiff.mod
 
-import typingsSlinky.aceDiff.AnonConnector
 import typingsSlinky.aceDiff.aceDiffStrings.broad
 import typingsSlinky.aceDiff.aceDiffStrings.specific
+import typingsSlinky.aceDiff.anon.Connector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait AceDiffOpts extends js.Object {
-  var classes: js.UndefOr[AnonConnector] = js.native
+  var classes: js.UndefOr[Connector] = js.native
   var diffGranularity: js.UndefOr[specific | broad] = js.native
   var left: js.UndefOr[AceDiffLROpts] = js.native
   var maxDiffs: js.UndefOr[Double] = js.native
@@ -33,7 +33,7 @@ object AceDiffOpts {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClasses(value: AnonConnector): Self = {
+    def withClasses(value: Connector): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
         ret

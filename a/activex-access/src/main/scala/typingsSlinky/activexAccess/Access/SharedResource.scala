@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Access.SharedResource")
 @js.native
-class SharedResource protected () extends js.Object {
+trait SharedResource extends js.Object {
   @JSName("Access.SharedResource_typekey")
   var AccessDotSharedResource_typekey: SharedResource = js.native
   var Name: String = js.native
@@ -14,5 +13,65 @@ class SharedResource protected () extends js.Object {
   val Type: AcResourceType = js.native
   def Delete(): Unit = js.native
   def IsMemberSafe(dispid: Double): Boolean = js.native
+}
+
+object SharedResource {
+  @scala.inline
+  def apply(
+    AccessDotSharedResource_typekey: SharedResource,
+    Delete: () => Unit,
+    IsMemberSafe: Double => Boolean,
+    Name: String,
+    Parent: js.Any,
+    Type: AcResourceType
+  ): SharedResource = {
+    val __obj = js.Dynamic.literal(Delete = js.Any.fromFunction0(Delete), IsMemberSafe = js.Any.fromFunction1(IsMemberSafe), Name = Name.asInstanceOf[js.Any], Parent = Parent.asInstanceOf[js.Any], Type = Type.asInstanceOf[js.Any])
+    __obj.updateDynamic("Access.SharedResource_typekey")(AccessDotSharedResource_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SharedResource]
+  }
+  @scala.inline
+  implicit class SharedResourceOps[Self <: SharedResource] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessDotSharedResource_typekey(value: SharedResource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Access.SharedResource_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDelete(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Delete")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsMemberSafe(value: Double => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsMemberSafe")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: AcResourceType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

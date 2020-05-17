@@ -1,7 +1,5 @@
 package typingsSlinky.soap.typesMod
 
-import typingsSlinky.soap.AnonSubcode
-import typingsSlinky.soap.AnonText
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,14 +12,8 @@ trait ISoapFault extends js.Object
 
 object ISoapFault {
   @scala.inline
-  def ISoapFault11(faultcode: Double | String, faultstring: String): ISoapFault = {
-    val __obj = js.Dynamic.literal(faultcode = faultcode.asInstanceOf[js.Any], faultstring = faultstring.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ISoapFault]
-  }
+  implicit def apply(value: ISoapFault11): ISoapFault = value.asInstanceOf[ISoapFault]
   @scala.inline
-  def ISoapFault12(Code: AnonSubcode, Reason: AnonText): ISoapFault = {
-    val __obj = js.Dynamic.literal(Code = Code.asInstanceOf[js.Any], Reason = Reason.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ISoapFault]
-  }
+  implicit def apply(value: ISoapFault12): ISoapFault = value.asInstanceOf[ISoapFault]
 }
 

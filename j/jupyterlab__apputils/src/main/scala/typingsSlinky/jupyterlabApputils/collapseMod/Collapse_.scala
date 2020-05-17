@@ -1,9 +1,9 @@
 package typingsSlinky.jupyterlabApputils.collapseMod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.jupyterlabApputils.collapseMod.Collapse.IOptions
 import typingsSlinky.phosphorSignaling.mod.ISignal
 import typingsSlinky.phosphorWidgets.mod.Widget
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,7 +46,7 @@ class Collapse_[T /* <: Widget */] protected () extends Widget {
     * called in response to events on the panel's DOM node. It should
     * not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
   /**
     * Toggle the collapse state of the panel.
     */

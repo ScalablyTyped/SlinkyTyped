@@ -1,10 +1,23 @@
 package typingsSlinky.winrt.Windows.ApplicationModel.Activation
 
+import typingsSlinky.winrt.Windows.Devices.Printers.Extensions.PrintTaskConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.ApplicationModel.Activation.PrintTaskSettingsActivatedEventArgs")
 @js.native
-class PrintTaskSettingsActivatedEventArgs () extends IPrintTaskSettingsActivatedEventArgs
+trait PrintTaskSettingsActivatedEventArgs extends IPrintTaskSettingsActivatedEventArgs
+
+object PrintTaskSettingsActivatedEventArgs {
+  @scala.inline
+  def apply(
+    configuration: PrintTaskConfiguration,
+    kind: ActivationKind,
+    previousExecutionState: ApplicationExecutionState,
+    splashScreen: SplashScreen
+  ): PrintTaskSettingsActivatedEventArgs = {
+    val __obj = js.Dynamic.literal(configuration = configuration.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], previousExecutionState = previousExecutionState.asInstanceOf[js.Any], splashScreen = splashScreen.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PrintTaskSettingsActivatedEventArgs]
+  }
+}
 

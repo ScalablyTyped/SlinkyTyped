@@ -5,12 +5,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the result of a key credential retrieval. */
-@JSGlobal("Windows.Security.Credentials.KeyCredentialRetrievalResult")
 @js.native
-abstract class KeyCredentialRetrievalResult () extends js.Object {
+trait KeyCredentialRetrievalResult extends js.Object {
   /** Gets the key credential. */
   var credential: KeyCredential = js.native
   /** Gets the status of the key credential. */
   var status: KeyCredentialStatus = js.native
+}
+
+object KeyCredentialRetrievalResult {
+  @scala.inline
+  def apply(credential: KeyCredential, status: KeyCredentialStatus): KeyCredentialRetrievalResult = {
+    val __obj = js.Dynamic.literal(credential = credential.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
+    __obj.asInstanceOf[KeyCredentialRetrievalResult]
+  }
+  @scala.inline
+  implicit class KeyCredentialRetrievalResultOps[Self <: KeyCredentialRetrievalResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCredential(value: KeyCredential): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credential")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: KeyCredentialStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

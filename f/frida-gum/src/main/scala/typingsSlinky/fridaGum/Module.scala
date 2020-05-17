@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Module")
 @js.native
-class Module () extends js.Object {
+trait Module extends js.Object {
   /**
     * Base address.
     */
@@ -59,54 +58,90 @@ class Module () extends js.Object {
   def getExportByName(exportName: String): NativePointer = js.native
 }
 
-/* static members */
-@JSGlobal("Module")
-@js.native
-object Module extends js.Object {
-  /**
-    * Ensures that initializers of the specified module have been run. This is important during early instrumentation,
-    * i.e. code run early in the process lifetime, to be able to safely interact with APIs.
-    *
-    * One such use-case is interacting with ObjC classes provided by a given module.
-    */
-  def ensureInitialized(name: String): Unit = js.native
-  /**
-    * Looks up the base address of the `name` module. Returns null if the module isn’t loaded.
-    *
-    * @param name Module name or path.
-    */
-  def findBaseAddress(name: String): NativePointer | Null = js.native
-  /**
-    * Looks up the absolute address of the export named `exportName` in `moduleName`. If the module isn’t known you may
-    * pass null instead of its name, but this can be a costly search and should be avoided.
-    *
-    * Returns null if the module or export doesn't exist.
-    *
-    * @param moduleName Module name or path.
-    * @param exportName Export name to find the address of.
-    */
-  def findExportByName(moduleName: String, exportName: String): NativePointer | Null = js.native
-  def findExportByName(moduleName: Null, exportName: String): NativePointer | Null = js.native
-  /**
-    * Looks up the base address of the `name` module. Throws an exception if the module isn’t loaded.
-    *
-    * @param name Module name or path.
-    */
-  def getBaseAddress(name: String): NativePointer = js.native
-  /**
-    * Looks up the absolute address of the export named `exportName` in `moduleName`. If the module isn’t known you may
-    * pass null instead of its name, but this can be a costly search and should be avoided.
-    *
-    * Throws an exception if the module or export doesn't exist.
-    *
-    * @param moduleName Module name or path.
-    * @param exportName Export name to find the address of.
-    */
-  def getExportByName(moduleName: String, exportName: String): NativePointer = js.native
-  def getExportByName(moduleName: Null, exportName: String): NativePointer = js.native
-  /**
-    * Loads the specified module.
-    */
-  def load(name: String): Module = js.native
+object Module {
+  @scala.inline
+  def apply(
+    base: NativePointer,
+    enumerateExports: () => js.Array[ModuleExportDetails],
+    enumerateImports: () => js.Array[ModuleImportDetails],
+    enumerateRanges: PageProtection => js.Array[RangeDetails],
+    enumerateSymbols: () => js.Array[ModuleSymbolDetails],
+    findExportByName: String => NativePointer | Null,
+    getExportByName: String => NativePointer,
+    name: String,
+    path: String,
+    size: Double
+  ): Module = {
+    val __obj = js.Dynamic.literal(base = base.asInstanceOf[js.Any], enumerateExports = js.Any.fromFunction0(enumerateExports), enumerateImports = js.Any.fromFunction0(enumerateImports), enumerateRanges = js.Any.fromFunction1(enumerateRanges), enumerateSymbols = js.Any.fromFunction0(enumerateSymbols), findExportByName = js.Any.fromFunction1(findExportByName), getExportByName = js.Any.fromFunction1(getExportByName), name = name.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Module]
+  }
+  @scala.inline
+  implicit class ModuleOps[Self <: Module] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBase(value: NativePointer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnumerateExports(value: () => js.Array[ModuleExportDetails]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enumerateExports")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withEnumerateImports(value: () => js.Array[ModuleImportDetails]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enumerateImports")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withEnumerateRanges(value: PageProtection => js.Array[RangeDetails]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enumerateRanges")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEnumerateSymbols(value: () => js.Array[ModuleSymbolDetails]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enumerateSymbols")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withFindExportByName(value: String => NativePointer | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findExportByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetExportByName(value: String => NativePointer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getExportByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClientBooks.AnonAllowedCharacterCount
-import typingsSlinky.gapiClientBooks.AnonCfiRange
+import typingsSlinky.gapiClientBooks.anon.AllowedCharacterCount
+import typingsSlinky.gapiClientBooks.anon.CfiRange
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,11 +13,11 @@ trait Annotation extends js.Object {
   /** Anchor text before excerpt. For requests, if the user bookmarked a screen that has no flowing text on it, then this field should be empty. */
   var beforeSelectedText: js.UndefOr[String] = js.native
   /** Selection ranges sent from the client. */
-  var clientVersionRanges: js.UndefOr[AnonCfiRange] = js.native
+  var clientVersionRanges: js.UndefOr[CfiRange] = js.native
   /** Timestamp for the created time of this annotation. */
   var created: js.UndefOr[String] = js.native
   /** Selection ranges for the most recent content version. */
-  var currentVersionRanges: js.UndefOr[AnonCfiRange] = js.native
+  var currentVersionRanges: js.UndefOr[CfiRange] = js.native
   /** User-created data for this annotation. */
   var data: js.UndefOr[String] = js.native
   /** Indicates that this annotation is deleted. */
@@ -30,7 +30,7 @@ trait Annotation extends js.Object {
   var kind: js.UndefOr[String] = js.native
   /** The layer this annotation is for. */
   var layerId: js.UndefOr[String] = js.native
-  var layerSummary: js.UndefOr[AnonAllowedCharacterCount] = js.native
+  var layerSummary: js.UndefOr[AllowedCharacterCount] = js.native
   /** Pages that this annotation spans. */
   var pageIds: js.UndefOr[js.Array[String]] = js.native
   /** Excerpt from the volume. */
@@ -80,7 +80,7 @@ object Annotation {
         ret
     }
     @scala.inline
-    def withClientVersionRanges(value: AnonCfiRange): Self = {
+    def withClientVersionRanges(value: CfiRange): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("clientVersionRanges")(value.asInstanceOf[js.Any])
         ret
@@ -104,7 +104,7 @@ object Annotation {
         ret
     }
     @scala.inline
-    def withCurrentVersionRanges(value: AnonCfiRange): Self = {
+    def withCurrentVersionRanges(value: CfiRange): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("currentVersionRanges")(value.asInstanceOf[js.Any])
         ret
@@ -188,7 +188,7 @@ object Annotation {
         ret
     }
     @scala.inline
-    def withLayerSummary(value: AnonAllowedCharacterCount): Self = {
+    def withLayerSummary(value: AllowedCharacterCount): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("layerSummary")(value.asInstanceOf[js.Any])
         ret

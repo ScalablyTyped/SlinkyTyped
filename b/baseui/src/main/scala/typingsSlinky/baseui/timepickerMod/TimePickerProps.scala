@@ -1,6 +1,6 @@
 package typingsSlinky.baseui.timepickerMod
 
-import typingsSlinky.baseui.AnonSelect
+import typingsSlinky.baseui.anon.Select
 import typingsSlinky.baseui.baseuiStrings.`12`
 import typingsSlinky.baseui.baseuiStrings.`24`
 import typingsSlinky.baseui.baseuiStrings.compact
@@ -19,7 +19,7 @@ trait TimePickerProps extends js.Object {
   var format: js.UndefOr[`12` | `24`] = js.native
   var nullable: js.UndefOr[Boolean] = js.native
   var onChange: js.UndefOr[js.Function1[/* args */ js.Date, _]] = js.native
-  var overrides: js.UndefOr[AnonSelect] = js.native
+  var overrides: js.UndefOr[Select] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var positive: js.UndefOr[Boolean] = js.native
   var size: js.UndefOr[mini | default_ | compact | large_] = js.native
@@ -112,7 +112,7 @@ object TimePickerProps {
         ret
     }
     @scala.inline
-    def withOverrides(value: AnonSelect): Self = {
+    def withOverrides(value: Select): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
         ret

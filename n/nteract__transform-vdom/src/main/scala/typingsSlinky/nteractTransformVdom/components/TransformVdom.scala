@@ -2,7 +2,7 @@ package typingsSlinky.nteractTransformVdom.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.nteractTransformVdom.PartialProps
+import typingsSlinky.nteractTransformVdom.anon.PartialProps
 import typingsSlinky.nteractTransformVdom.eventToObjectMod.SerializedEvent
 import typingsSlinky.nteractTransformVdom.mod.default
 import typingsSlinky.nteractTransformVdom.nteractTransformVdomStrings.applicationSlashvdomDotv1Plussignjson

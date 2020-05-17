@@ -1,8 +1,8 @@
 package typingsSlinky.gestalt.mod
 
-import typingsSlinky.gestalt.Anon1
-import typingsSlinky.gestalt.Anon2
-import typingsSlinky.gestalt.AnonEventSyntheticEventValueString
+import typingsSlinky.gestalt.anon.EventSyntheticEventValueString
+import typingsSlinky.gestalt.anon.`1`
+import typingsSlinky.gestalt.anon.`2`
 import typingsSlinky.gestalt.gestaltStrings.`current-password`
 import typingsSlinky.gestalt.gestaltStrings.`new-password`
 import typingsSlinky.gestalt.gestaltStrings.date
@@ -29,19 +29,19 @@ trait TextFieldProps extends js.Object {
   var id: String = js.native
   var label: js.UndefOr[String] = js.native
   var name: js.UndefOr[String] = js.native
-  var onBlur: js.UndefOr[js.Function1[/* args */ Anon1, Unit]] = js.native
-  var onFocus: js.UndefOr[js.Function1[/* args */ Anon1, Unit]] = js.native
-  var onKeyDown: js.UndefOr[js.Function1[/* args */ Anon2, Unit]] = js.native
+  var onBlur: js.UndefOr[js.Function1[/* args */ `1`, Unit]] = js.native
+  var onFocus: js.UndefOr[js.Function1[/* args */ `1`, Unit]] = js.native
+  var onKeyDown: js.UndefOr[js.Function1[/* args */ `2`, Unit]] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var size: js.UndefOr[md | lg] = js.native
   var `type`: js.UndefOr[date | email | number | password | text | url] = js.native
   var value: js.UndefOr[String] = js.native
-  def onChange(args: AnonEventSyntheticEventValueString): Unit = js.native
+  def onChange(args: EventSyntheticEventValueString): Unit = js.native
 }
 
 object TextFieldProps {
   @scala.inline
-  def apply(id: String, onChange: AnonEventSyntheticEventValueString => Unit): TextFieldProps = {
+  def apply(id: String, onChange: EventSyntheticEventValueString => Unit): TextFieldProps = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
     __obj.asInstanceOf[TextFieldProps]
   }
@@ -58,7 +58,7 @@ object TextFieldProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: AnonEventSyntheticEventValueString => Unit): Self = {
+    def withOnChange(value: EventSyntheticEventValueString => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -136,7 +136,7 @@ object TextFieldProps {
         ret
     }
     @scala.inline
-    def withOnBlur(value: /* args */ Anon1 => Unit): Self = {
+    def withOnBlur(value: /* args */ `1` => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
         ret
@@ -148,7 +148,7 @@ object TextFieldProps {
         ret
     }
     @scala.inline
-    def withOnFocus(value: /* args */ Anon1 => Unit): Self = {
+    def withOnFocus(value: /* args */ `1` => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
         ret
@@ -160,7 +160,7 @@ object TextFieldProps {
         ret
     }
     @scala.inline
-    def withOnKeyDown(value: /* args */ Anon2 => Unit): Self = {
+    def withOnKeyDown(value: /* args */ `2` => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction1(value))
         ret

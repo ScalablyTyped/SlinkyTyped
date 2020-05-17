@@ -1,5 +1,6 @@
 package typingsSlinky.baseui.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import slinky.core.TagMod
@@ -26,7 +27,6 @@ import typingsSlinky.baseui.baseuiStrings.topLeft
 import typingsSlinky.baseui.baseuiStrings.topRight
 import typingsSlinky.baseui.popoverMod.Overrides
 import typingsSlinky.baseui.tooltipMod.TooltipProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -65,7 +65,7 @@ object Tooltip {
     @scala.inline
     def onBlur(value: () => _): this.type = set("onBlur", js.Any.fromFunction0(value))
     @scala.inline
-    def onClick(value: /* e */ Event_ => _): this.type = set("onClick", js.Any.fromFunction1(value))
+    def onClick(value: /* e */ Event => _): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
     def onClickOutside(value: /* event */ MouseEvent => _): this.type = set("onClickOutside", js.Any.fromFunction1(value))
     @scala.inline

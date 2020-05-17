@@ -1,6 +1,6 @@
 package typingsSlinky.playcanvas.mod
 
-import typingsSlinky.playcanvas.AnonColors
+import typingsSlinky.playcanvas.anon.Colors
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,6 +34,6 @@ object createMesh extends js.Object {
     *     });
     */
   def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice, positions: js.Array[Double]): typingsSlinky.playcanvas.pc.Mesh = js.native
-  def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice, positions: js.Array[Double], opts: AnonColors): typingsSlinky.playcanvas.pc.Mesh = js.native
+  def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice, positions: js.Array[Double], opts: Colors): typingsSlinky.playcanvas.pc.Mesh = js.native
 }
 

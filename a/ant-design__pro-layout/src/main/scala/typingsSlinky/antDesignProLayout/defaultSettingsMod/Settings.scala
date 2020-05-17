@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignProLayout.defaultSettingsMod
 
-import typingsSlinky.antDesignProLayout.AnonDefaultOpenAll
+import typingsSlinky.antDesignProLayout.anon.DefaultOpenAll
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.realDark
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.sidemenu
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.topmenu
@@ -28,7 +28,7 @@ trait Settings extends js.Object {
     * nav menu position: `sidemenu` or `topmenu`
     */
   var layout: sidemenu | topmenu = js.native
-  var menu: AnonDefaultOpenAll = js.native
+  var menu: DefaultOpenAll = js.native
   /**
     * theme for nav menu
     */
@@ -47,7 +47,7 @@ object Settings {
     fixedHeader: Boolean,
     iconfontUrl: String,
     layout: sidemenu | topmenu,
-    menu: AnonDefaultOpenAll,
+    menu: DefaultOpenAll,
     primaryColor: String,
     title: String
   ): Settings = {
@@ -91,7 +91,7 @@ object Settings {
         ret
     }
     @scala.inline
-    def withMenu(value: AnonDefaultOpenAll): Self = {
+    def withMenu(value: DefaultOpenAll): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
         ret

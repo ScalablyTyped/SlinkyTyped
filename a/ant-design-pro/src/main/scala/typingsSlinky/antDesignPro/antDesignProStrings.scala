@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignPro
 
-import typingsSlinky.antDesignPro.avatarItemMod._SizeType
+import typingsSlinky.antDesignPro.avatarItemMod.SizeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +28,7 @@ object antDesignProStrings {
   sealed trait bottomRight extends js.Object
   
   @js.native
-  sealed trait default extends _SizeType
+  sealed trait default extends SizeType
   
   @js.native
   sealed trait down extends js.Object
@@ -40,10 +40,10 @@ object antDesignProStrings {
   sealed trait horizontal extends js.Object
   
   @js.native
-  sealed trait large extends _SizeType
+  sealed trait large extends SizeType
   
   @js.native
-  sealed trait small extends _SizeType
+  sealed trait small extends SizeType
   
   @js.native
   sealed trait success extends js.Object

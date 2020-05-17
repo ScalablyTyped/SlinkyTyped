@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientPrediction.gapi.client.prediction
 
-import typingsSlinky.gapiClientPrediction.AnonLabel
+import typingsSlinky.gapiClientPrediction.anon.Label
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait Output extends js.Object {
   /** The most likely class label (Categorical models only). */
   var outputLabel: js.UndefOr[String] = js.native
   /** A list of class labels with their estimated probabilities (Categorical models only). */
-  var outputMulti: js.UndefOr[js.Array[AnonLabel]] = js.native
+  var outputMulti: js.UndefOr[js.Array[Label]] = js.native
   /** The estimated regression value (Regression models only). */
   var outputValue: js.UndefOr[String] = js.native
   /** A URL to re-request this resource. */
@@ -70,7 +70,7 @@ object Output {
         ret
     }
     @scala.inline
-    def withOutputMulti(value: js.Array[AnonLabel]): Self = {
+    def withOutputMulti(value: js.Array[Label]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("outputMulti")(value.asInstanceOf[js.Any])
         ret

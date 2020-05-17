@@ -1,10 +1,10 @@
 package typingsSlinky.reactResizable.mod
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,13 +21,13 @@ trait ResizableProps extends js.Object {
   var maxConstraints: js.UndefOr[js.Tuple2[Double, Double]] = js.native
   var minConstraints: js.UndefOr[js.Tuple2[Double, Double]] = js.native
   var onResize: js.UndefOr[
-    js.Function2[/* e */ SyntheticEvent[Event_, Element], /* data */ ResizeCallbackData, _]
+    js.Function2[/* e */ SyntheticEvent[Event, Element], /* data */ ResizeCallbackData, _]
   ] = js.native
   var onResizeStart: js.UndefOr[
-    js.Function2[/* e */ SyntheticEvent[Event_, Element], /* data */ ResizeCallbackData, _]
+    js.Function2[/* e */ SyntheticEvent[Event, Element], /* data */ ResizeCallbackData, _]
   ] = js.native
   var onResizeStop: js.UndefOr[
-    js.Function2[/* e */ SyntheticEvent[Event_, Element], /* data */ ResizeCallbackData, _]
+    js.Function2[/* e */ SyntheticEvent[Event, Element], /* data */ ResizeCallbackData, _]
   ] = js.native
   var resizeHandles: js.UndefOr[js.Array[ResizeHandle]] = js.native
   var width: Double = js.native
@@ -166,7 +166,7 @@ object ResizableProps {
         ret
     }
     @scala.inline
-    def withOnResize(value: (/* e */ SyntheticEvent[Event_, Element], /* data */ ResizeCallbackData) => _): Self = {
+    def withOnResize(value: (/* e */ SyntheticEvent[Event, Element], /* data */ ResizeCallbackData) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onResize")(js.Any.fromFunction2(value))
         ret
@@ -178,7 +178,7 @@ object ResizableProps {
         ret
     }
     @scala.inline
-    def withOnResizeStart(value: (/* e */ SyntheticEvent[Event_, Element], /* data */ ResizeCallbackData) => _): Self = {
+    def withOnResizeStart(value: (/* e */ SyntheticEvent[Event, Element], /* data */ ResizeCallbackData) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onResizeStart")(js.Any.fromFunction2(value))
         ret
@@ -190,7 +190,7 @@ object ResizableProps {
         ret
     }
     @scala.inline
-    def withOnResizeStop(value: (/* e */ SyntheticEvent[Event_, Element], /* data */ ResizeCallbackData) => _): Self = {
+    def withOnResizeStop(value: (/* e */ SyntheticEvent[Event, Element], /* data */ ResizeCallbackData) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onResizeStop")(js.Any.fromFunction2(value))
         ret

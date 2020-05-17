@@ -1,6 +1,7 @@
 package typingsSlinky.emojione
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.emojione.anon.Fname
 import typingsSlinky.emojione.emojioneStrings.png
 import typingsSlinky.emojione.emojioneStrings.svg
 import scala.scalajs.js
@@ -25,7 +26,7 @@ object mod extends js.Object {
   def toShort(str: String): String = js.native
   def unicodeToImage(str: String): String = js.native
   @js.native
-  object emojioneList extends /* key */ StringDictionary[AnonFname]
+  object emojioneList extends /* key */ StringDictionary[Fname]
   
 }
 

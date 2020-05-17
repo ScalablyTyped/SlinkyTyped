@@ -1,6 +1,6 @@
 package typingsSlinky.googleVisualization.google.visualization
 
-import typingsSlinky.googleVisualization.AnonMapTypeId
+import typingsSlinky.googleVisualization.anon.MapTypeId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait MapOptions extends js.Object {
   var lineWidth: js.UndefOr[Double] = js.native
   var mapType: js.UndefOr[String] = js.native
   var mapTypeIds: js.UndefOr[js.Array[_]] = js.native
-  var maps: AnonMapTypeId = js.native
+  var maps: MapTypeId = js.native
   var showInfoWindow: js.UndefOr[Boolean] = js.native
   var showLine: js.UndefOr[Boolean] = js.native
   var showTooltip: js.UndefOr[Boolean] = js.native
@@ -23,7 +23,7 @@ trait MapOptions extends js.Object {
 
 object MapOptions {
   @scala.inline
-  def apply(maps: AnonMapTypeId): MapOptions = {
+  def apply(maps: MapTypeId): MapOptions = {
     val __obj = js.Dynamic.literal(maps = maps.asInstanceOf[js.Any])
     __obj.asInstanceOf[MapOptions]
   }
@@ -34,7 +34,7 @@ object MapOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMaps(value: AnonMapTypeId): Self = {
+    def withMaps(value: MapTypeId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("maps")(value.asInstanceOf[js.Any])
         ret

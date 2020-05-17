@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.extent
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.mesh
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.multipoint
@@ -58,8 +57,4 @@ trait FeatureSet
     */
   var spatialReference: SpatialReference = js.native
 }
-
-@JSGlobal("__esri.FeatureSet")
-@js.native
-object FeatureSet extends TopLevel[FeatureSetConstructor]
 

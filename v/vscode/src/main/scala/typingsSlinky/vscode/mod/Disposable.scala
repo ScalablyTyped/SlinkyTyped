@@ -1,6 +1,6 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonDispose
+import typingsSlinky.vscode.anon.Dispose
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,6 +33,6 @@ object Disposable extends js.Object {
   		 * @return Returns a new disposable which, upon dispose, will
   		 * dispose all provided disposables.
   		 */
-  def from(disposableLikes: AnonDispose*): Disposable = js.native
+  def from(disposableLikes: Dispose*): Disposable = js.native
 }
 

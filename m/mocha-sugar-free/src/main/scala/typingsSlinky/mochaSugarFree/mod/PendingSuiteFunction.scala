@@ -1,8 +1,8 @@
 package typingsSlinky.mochaSugarFree.mod
 
 import typingsSlinky.mocha.mod.Suite_
-import typingsSlinky.mochaSugarFree.OptionsfnSuiteFunc
-import typingsSlinky.mochaSugarFree.OptionstitlestringfnSuite
+import typingsSlinky.mochaSugarFree.anon.OptionsfnSuiteFunc
+import typingsSlinky.mochaSugarFree.anon.OptionstitlestringfnSuite
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

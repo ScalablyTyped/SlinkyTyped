@@ -1,7 +1,7 @@
 package typingsSlinky.synaptic.mod
 
 import org.scalajs.dom.raw.Worker
-import typingsSlinky.synaptic.AnonCode
+import typingsSlinky.synaptic.anon.Code
 import typingsSlinky.synaptic.mod.Layer.LayerConnection
 import typingsSlinky.synaptic.mod.Layer.connectionType
 import typingsSlinky.synaptic.mod.Layer.gateType
@@ -89,8 +89,8 @@ class Network_ () extends js.Object {
     * Export the topology into dot language which can be visualized as graphs using dot.
     * @param edgeConnection
     */
-  def toDot(): AnonCode = js.native
-  def toDot(edgeConnection: js.Any): AnonCode = js.native
+  def toDot(): Code = js.native
+  def toDot(edgeConnection: js.Any): Code = js.native
   /**
     * Networks can be stored as JSON's.
     */

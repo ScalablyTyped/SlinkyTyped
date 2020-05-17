@@ -3,7 +3,7 @@ package typingsSlinky.proj4leaflet.mod
 import typingsSlinky.geojson.mod.BBox
 import typingsSlinky.geojson.mod.GeoJsonProperties
 import typingsSlinky.geojson.mod.GeometryObject
-import typingsSlinky.proj4leaflet.AnonProperties
+import typingsSlinky.proj4leaflet.anon.Properties
 import typingsSlinky.proj4leaflet.proj4leafletStrings.Feature
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,7 @@ trait Proj4GeoJSONFeature extends js.Object {
     * https://tools.ietf.org/html/rfc7946#section-5
     */
   var bbox: js.UndefOr[BBox] = js.native
-  var crs: js.UndefOr[AnonProperties] = js.native
+  var crs: js.UndefOr[Properties] = js.native
   /**
     * The feature's geometry
     */
@@ -76,7 +76,7 @@ object Proj4GeoJSONFeature {
         ret
     }
     @scala.inline
-    def withCrs(value: AnonProperties): Self = {
+    def withCrs(value: Properties): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("crs")(value.asInstanceOf[js.Any])
         ret

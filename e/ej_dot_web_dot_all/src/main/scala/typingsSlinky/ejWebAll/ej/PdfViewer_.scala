@@ -1,19 +1,12 @@
 package typingsSlinky.ejWebAll.ej
 
-import org.scalajs.dom.raw.Element
-import typingsSlinky.ejWebAll.JQuery
 import typingsSlinky.ejWebAll.ej.PdfViewer.AnnotationType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("ej.PdfViewer")
 @js.native
-class PdfViewer_ protected () extends Widget_ {
-  def this(element: JQuery) = this()
-  def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.PdfViewer.Model) = this()
-  def this(element: Element, options: typingsSlinky.ejWebAll.ej.PdfViewer.Model) = this()
+trait PdfViewer_ extends Widget_ {
   var defaults: typingsSlinky.ejWebAll.ej.PdfViewer.Model = js.native
   @JSName("model")
   var model_PdfViewer_ : typingsSlinky.ejWebAll.ej.PdfViewer.Model = js.native

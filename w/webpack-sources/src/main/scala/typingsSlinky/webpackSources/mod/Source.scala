@@ -1,7 +1,7 @@
 package typingsSlinky.webpackSources.mod
 
 import typingsSlinky.node.cryptoMod.Hash
-import typingsSlinky.webpackSources.AnonMap
+import typingsSlinky.webpackSources.anon.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,8 +20,8 @@ abstract class Source () extends js.Object {
   def size(): Double = js.native
   def source(): String = js.native
   def source(options: js.Any): String = js.native
-  def sourceAndMap(): AnonMap = js.native
-  def sourceAndMap(options: js.Any): AnonMap = js.native
+  def sourceAndMap(): Map = js.native
+  def sourceAndMap(options: js.Any): Map = js.native
   def updateHash(hash: Hash): Unit = js.native
 }
 

@@ -1,5 +1,6 @@
 package typingsSlinky.jestJasmine2
 
+import typingsSlinky.jestJasmine2.anon.CurrentSpies
 import typingsSlinky.jestJasmine2.jestJasmine2Strings.configurable
 import typingsSlinky.jestJasmine2.jestJasmine2Strings.enumerable
 import typingsSlinky.jestJasmine2.jestJasmine2Strings.get
@@ -38,7 +39,7 @@ object spyRegistryMod extends js.Object {
   
   @js.native
   class default () extends SpyRegistry {
-    def this(hasCurrentSpies: AnonCurrentSpies) = this()
+    def this(hasCurrentSpies: CurrentSpies) = this()
   }
   
 }

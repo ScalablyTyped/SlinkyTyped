@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress
 
-import typingsSlinky.devextreme.AnonCloseIcon
+import typingsSlinky.devextreme.anon.CloseIcon
 import typingsSlinky.devextreme.devextremeStrings.filled
 import typingsSlinky.devextreme.devextremeStrings.outlined
 import typingsSlinky.devextreme.devextremeStrings.underlined
@@ -18,7 +18,7 @@ trait globalConfig extends js.Object {
   /** Specifies how editors' text fields are styled in your application. */
   var editorStylingMode: js.UndefOr[outlined | underlined | filled] = js.native
   /** Configures a Floating Action Button (FAB) that emits a stack of related actions (speed dial). */
-  var floatingActionButtonConfig: js.UndefOr[AnonCloseIcon] = js.native
+  var floatingActionButtonConfig: js.UndefOr[CloseIcon] = js.native
   /** Specifies whether dates are parsed and serialized according to the ISO 8601 standard in all browsers. */
   var forceIsoDateParsing: js.UndefOr[Boolean] = js.native
   /** Specifies whether to convert string values to lowercase in filter and search requests to OData services. Applies to the following operations: "startswith", "endswith", "contains", and "notcontains". */
@@ -83,7 +83,7 @@ object globalConfig {
         ret
     }
     @scala.inline
-    def withFloatingActionButtonConfig(value: AnonCloseIcon): Self = {
+    def withFloatingActionButtonConfig(value: CloseIcon): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("floatingActionButtonConfig")(value.asInstanceOf[js.Any])
         ret

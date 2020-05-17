@@ -5,7 +5,7 @@ import org.scalablytyped.runtime.Instantiable2
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.NodeList
 import org.scalajs.dom.raw.Range
-import typingsSlinky.mediumEditor.AnonMajor
+import typingsSlinky.mediumEditor.anon.Major
 import typingsSlinky.std.EventListenerOrEventListenerObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,7 @@ Instantiable1[/* elements */ elementType, typingsSlinky.mediumEditor.MediumEdito
       typingsSlinky.mediumEditor.MediumEditor.MediumEditor
     ] {
   // Properties
-  var version: AnonMajor = js.native
+  var version: Major = js.native
   def addElements(elements: elementType): Unit = js.native
   // Helper Functions
   def checkContentChanged(): Unit = js.native

@@ -1,12 +1,13 @@
 package typingsSlinky.tweenJs
 
+import typingsSlinky.tweenJs.anon.Bernstein
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Interpolation extends js.Object {
-  var Utils: AnonBernstein = js.native
+  var Utils: Bernstein = js.native
   def Bezier(v: js.Array[Double], k: Double): Double = js.native
   def CatmullRom(v: js.Array[Double], k: Double): Double = js.native
   def Linear(v: js.Array[Double], k: Double): Double = js.native
@@ -18,7 +19,7 @@ object Interpolation {
     Bezier: (js.Array[Double], Double) => Double,
     CatmullRom: (js.Array[Double], Double) => Double,
     Linear: (js.Array[Double], Double) => Double,
-    Utils: AnonBernstein
+    Utils: Bernstein
   ): Interpolation = {
     val __obj = js.Dynamic.literal(Bezier = js.Any.fromFunction2(Bezier), CatmullRom = js.Any.fromFunction2(CatmullRom), Linear = js.Any.fromFunction2(Linear), Utils = Utils.asInstanceOf[js.Any])
     __obj.asInstanceOf[Interpolation]
@@ -48,7 +49,7 @@ object Interpolation {
         ret
     }
     @scala.inline
-    def withUtils(value: AnonBernstein): Self = {
+    def withUtils(value: Bernstein): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Utils")(value.asInstanceOf[js.Any])
         ret

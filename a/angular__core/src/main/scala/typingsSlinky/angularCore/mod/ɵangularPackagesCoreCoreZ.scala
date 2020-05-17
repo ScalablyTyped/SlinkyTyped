@@ -1,7 +1,7 @@
 package typingsSlinky.angularCore.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Console_
+import org.scalajs.dom.raw.Console
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,6 +18,6 @@ abstract class ɵangularPackagesCoreCoreZ () extends js.Object {
   val references: StringDictionary[js.Any] = js.native
   val renderNode: js.Any = js.native
   val view: ViewData = js.native
-  def logError(console: Console_, values: js.Any*): Unit = js.native
+  def logError(console: Console, values: js.Any*): Unit = js.native
 }
 

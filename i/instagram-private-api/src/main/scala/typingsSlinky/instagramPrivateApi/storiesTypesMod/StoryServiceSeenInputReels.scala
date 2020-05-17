@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait StoryServiceSeenInputReels extends js.Object {
+trait StoryServiceSeenInputReels extends StoryServiceInput {
   var items: js.Array[StoryServiceSeenInputItems] = js.native
 }
 

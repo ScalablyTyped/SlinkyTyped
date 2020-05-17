@@ -1,19 +1,12 @@
 package typingsSlinky.ejWebAll.ej
 
-import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.ejWebAll.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("ej.ListView")
 @js.native
-class ListView_ protected () extends Widget_ {
-  def this(element: JQuery) = this()
-  def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.ListView.Model) = this()
-  def this(element: Element, options: typingsSlinky.ejWebAll.ej.ListView.Model) = this()
+trait ListView_ extends Widget_ {
   var defaults: typingsSlinky.ejWebAll.ej.ListView.Model = js.native
   @JSName("model")
   var model_ListView_ : typingsSlinky.ejWebAll.ej.ListView.Model = js.native

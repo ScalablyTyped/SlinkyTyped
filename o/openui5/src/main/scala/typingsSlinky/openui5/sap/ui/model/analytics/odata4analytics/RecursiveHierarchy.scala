@@ -4,29 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("sap.ui.model.analytics.odata4analytics.RecursiveHierarchy")
 @js.native
-class RecursiveHierarchy protected () extends js.Object {
-  /**
-    * Create a representation of a recursive hierarchy defined on one multipleproperties in an OData
-    * entity type query. Do not create your own instances.
-    * @param oEntityType object for the entity type
-    * @param oNodeIDProperty DataJS object for the property holding the           hierarchy node ID
-    * identifying the hierarchy node to which the           OData entry belongs
-    * @param oParentNodeIDProperty DataJS object for the property holding the           node ID of the
-    * parent of the hierarchy node pointed to by the           value of oNodeIDProperty
-    * @param oNodeLevelProperty DataJS object for the property holding the           level number for the
-    * of the hierarchy node pointed to by the value           of oNodeIDProperty
-    * @param oNodeValueProperty DataJS object for the property holding the data           value for the of
-    * the hierarchy node pointed to by the value of           oNodeIDProperty
-    */
-  def this(
-    oEntityType: EntityType,
-    oNodeIDProperty: js.Any,
-    oParentNodeIDProperty: js.Any,
-    oNodeLevelProperty: js.Any,
-    oNodeValueProperty: js.Any
-  ) = this()
+trait RecursiveHierarchy extends js.Object {
   /**
     * Get the property holding the node ID of the hierarchy node
     * @returns The DataJS object representing this property
@@ -57,5 +36,64 @@ class RecursiveHierarchy protected () extends js.Object {
     * @returns True
     */
   def isRecursiveHierarchy(): Boolean = js.native
+}
+
+object RecursiveHierarchy {
+  @scala.inline
+  def apply(
+    getNodeIDProperty: () => js.Any,
+    getNodeLevelProperty: () => js.Any,
+    getNodeValueProperty: () => js.Any,
+    getParentNodeIDProperty: () => js.Any,
+    isLeveledHierarchy: () => Boolean,
+    isRecursiveHierarchy: () => Boolean
+  ): RecursiveHierarchy = {
+    val __obj = js.Dynamic.literal(getNodeIDProperty = js.Any.fromFunction0(getNodeIDProperty), getNodeLevelProperty = js.Any.fromFunction0(getNodeLevelProperty), getNodeValueProperty = js.Any.fromFunction0(getNodeValueProperty), getParentNodeIDProperty = js.Any.fromFunction0(getParentNodeIDProperty), isLeveledHierarchy = js.Any.fromFunction0(isLeveledHierarchy), isRecursiveHierarchy = js.Any.fromFunction0(isRecursiveHierarchy))
+    __obj.asInstanceOf[RecursiveHierarchy]
+  }
+  @scala.inline
+  implicit class RecursiveHierarchyOps[Self <: RecursiveHierarchy] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetNodeIDProperty(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNodeIDProperty")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetNodeLevelProperty(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNodeLevelProperty")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetNodeValueProperty(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNodeValueProperty")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetParentNodeIDProperty(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getParentNodeIDProperty")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsLeveledHierarchy(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isLeveledHierarchy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsRecursiveHierarchy(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRecursiveHierarchy")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

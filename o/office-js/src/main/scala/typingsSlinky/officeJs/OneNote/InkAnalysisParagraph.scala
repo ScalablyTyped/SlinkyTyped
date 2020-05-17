@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.OneNote
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJs.OneNote.Interfaces.InkAnalysisParagraphData
 import typingsSlinky.officeJs.OneNote.Interfaces.InkAnalysisParagraphLoadOptions
 import typingsSlinky.officeJs.OneNote.Interfaces.InkAnalysisParagraphUpdateData
+import typingsSlinky.officeJs.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: OneNoteApi 1.1]
   */
-@JSGlobal("OneNote.InkAnalysisParagraph")
 @js.native
-class InkAnalysisParagraph () extends ClientObject {
+trait InkAnalysisParagraph extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_InkAnalysisParagraph: RequestContext = js.native
@@ -61,8 +60,8 @@ class InkAnalysisParagraph () extends ClientObject {
   def load(): InkAnalysisParagraph = js.native
   def load(option: String): InkAnalysisParagraph = js.native
   def load(option: js.Array[String]): InkAnalysisParagraph = js.native
-  def load(option: AnonExpand): InkAnalysisParagraph = js.native
   def load(option: InkAnalysisParagraphLoadOptions): InkAnalysisParagraph = js.native
+  def load(option: Expand): InkAnalysisParagraph = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */
   def set(properties: InkAnalysisParagraph): Unit = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

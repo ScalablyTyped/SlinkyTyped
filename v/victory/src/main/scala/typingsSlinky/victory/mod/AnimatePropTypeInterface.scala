@@ -1,7 +1,7 @@
 package typingsSlinky.victory.mod
 
-import typingsSlinky.victory.AnonAfter
-import typingsSlinky.victory.AnonBefore
+import typingsSlinky.victory.anon.After
+import typingsSlinky.victory.anon.Before
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,15 +24,15 @@ trait AnimatePropTypeInterface extends js.Object {
   /**
     * Animation enter transition configuration
     */
-  var onEnter: js.UndefOr[AnonAfter] = js.native
+  var onEnter: js.UndefOr[After] = js.native
   /**
     * Animation exit transition configuration
     */
-  var onExit: js.UndefOr[AnonBefore] = js.native
+  var onExit: js.UndefOr[Before] = js.native
   /**
     * Animation load transition configuration
     */
-  var onLoad: js.UndefOr[AnonAfter] = js.native
+  var onLoad: js.UndefOr[After] = js.native
 }
 
 object AnimatePropTypeInterface {
@@ -78,7 +78,7 @@ object AnimatePropTypeInterface {
         ret
     }
     @scala.inline
-    def withOnEnter(value: AnonAfter): Self = {
+    def withOnEnter(value: After): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEnter")(value.asInstanceOf[js.Any])
         ret
@@ -90,7 +90,7 @@ object AnimatePropTypeInterface {
         ret
     }
     @scala.inline
-    def withOnExit(value: AnonBefore): Self = {
+    def withOnExit(value: Before): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onExit")(value.asInstanceOf[js.Any])
         ret
@@ -102,7 +102,7 @@ object AnimatePropTypeInterface {
         ret
     }
     @scala.inline
-    def withOnLoad(value: AnonAfter): Self = {
+    def withOnLoad(value: After): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(value.asInstanceOf[js.Any])
         ret

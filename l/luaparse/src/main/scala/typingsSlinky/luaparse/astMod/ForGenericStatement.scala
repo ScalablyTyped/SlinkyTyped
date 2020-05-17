@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ForGenericStatement
-  extends _Statement
+  extends Statement
      with Base[typingsSlinky.luaparse.luaparseStrings.ForGenericStatement] {
   var body: js.Array[Statement] = js.native
   var iterators: js.Array[Expression] = js.native

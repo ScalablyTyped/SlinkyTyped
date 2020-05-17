@@ -1,6 +1,6 @@
 package typingsSlinky.libxmljs.mod
 
-import typingsSlinky.libxmljs.AnonExternalId
+import typingsSlinky.libxmljs.anon.ExternalId
 import typingsSlinky.libxmljs.libxmljsStrings.document
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,7 +27,7 @@ class Document () extends js.Object {
   def find(xpath: String, ns_uri: String): js.Array[Element] = js.native
   def get(xpath: String): Element | Null = js.native
   def get(xpath: String, namespaces: StringMap): Element | Null = js.native
-  def getDtd(): AnonExternalId = js.native
+  def getDtd(): ExternalId = js.native
   def node(name: String): Element = js.native
   def node(name: String, content: String): Element = js.native
   def root(): Element | Null = js.native

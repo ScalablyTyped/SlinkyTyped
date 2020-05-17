@@ -1,6 +1,6 @@
 package typingsSlinky.mqttPacket.mod
 
-import typingsSlinky.mqttPacket.AnonAssignedClientIdentifier
+import typingsSlinky.mqttPacket.anon.AssignedClientIdentifier
 import typingsSlinky.mqttPacket.mqttPacketStrings.connack
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ trait IConnackPacket
      with Packet {
   @JSName("cmd")
   var cmd_IConnackPacket: connack = js.native
-  var properties: js.UndefOr[AnonAssignedClientIdentifier] = js.native
+  var properties: js.UndefOr[AssignedClientIdentifier] = js.native
   var returnCode: Double = js.native
   var sessionPresent: Boolean = js.native
 }
@@ -48,7 +48,7 @@ object IConnackPacket {
         ret
     }
     @scala.inline
-    def withProperties(value: AnonAssignedClientIdentifier): Self = {
+    def withProperties(value: AssignedClientIdentifier): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
         ret

@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientAndroidpublisher.gapi.client.androidpublisher
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAndroidpublisher.AnonReviewId
-import typingsSlinky.gapiClientAndroidpublisher.AnonToken
-import typingsSlinky.gapiClientAndroidpublisher.AnonUserIp
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAndroidpublisher.anon.ReviewId
+import typingsSlinky.gapiClientAndroidpublisher.anon.Token
+import typingsSlinky.gapiClientAndroidpublisher.anon.UserIp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,19 +11,19 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ReviewsResource extends js.Object {
   /** Returns a single review. */
-  def get(request: AnonReviewId): Request_[Review] = js.native
+  def get(request: ReviewId): Request[Review] = js.native
   /** Returns a list of reviews. Only reviews from last week will be returned. */
-  def list(request: AnonToken): Request_[ReviewsListResponse] = js.native
+  def list(request: Token): Request[ReviewsListResponse] = js.native
   /** Reply to a single review, or update an existing reply. */
-  def reply(request: AnonUserIp): Request_[ReviewsReplyResponse] = js.native
+  def reply(request: UserIp): Request[ReviewsReplyResponse] = js.native
 }
 
 object ReviewsResource {
   @scala.inline
   def apply(
-    get: AnonReviewId => Request_[Review],
-    list: AnonToken => Request_[ReviewsListResponse],
-    reply: AnonUserIp => Request_[ReviewsReplyResponse]
+    get: ReviewId => Request[Review],
+    list: Token => Request[ReviewsListResponse],
+    reply: UserIp => Request[ReviewsReplyResponse]
   ): ReviewsResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), reply = js.Any.fromFunction1(reply))
     __obj.asInstanceOf[ReviewsResource]
@@ -35,19 +35,19 @@ object ReviewsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonReviewId => Request_[Review]): Self = {
+    def withGet(value: ReviewId => Request[Review]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonToken => Request_[ReviewsListResponse]): Self = {
+    def withList(value: Token => Request[ReviewsListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withReply(value: AnonUserIp => Request_[ReviewsReplyResponse]): Self = {
+    def withReply(value: UserIp => Request[ReviewsReplyResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("reply")(js.Any.fromFunction1(value))
         ret

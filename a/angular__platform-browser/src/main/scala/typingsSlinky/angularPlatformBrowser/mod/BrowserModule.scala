@@ -1,7 +1,7 @@
 package typingsSlinky.angularPlatformBrowser.mod
 
 import typingsSlinky.angularCore.mod.ModuleWithProviders
-import typingsSlinky.angularPlatformBrowser.AnonAppId
+import typingsSlinky.angularPlatformBrowser.anon.AppId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,6 +24,6 @@ object BrowserModule extends js.Object {
     * The ID must match between the client and server versions of the app.
     * @returns The reconfigured `BrowserModule` to import into the app's root `AppModule`.
     */
-  def withServerTransition(params: AnonAppId): ModuleWithProviders[BrowserModule] = js.native
+  def withServerTransition(params: AppId): ModuleWithProviders[BrowserModule] = js.native
 }
 

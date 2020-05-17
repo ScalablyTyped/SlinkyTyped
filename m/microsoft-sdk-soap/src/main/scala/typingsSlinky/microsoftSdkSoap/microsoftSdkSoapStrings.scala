@@ -1,10 +1,10 @@
 package typingsSlinky.microsoftSdkSoap
 
-import typingsSlinky.microsoftSdkSoap.mod._Global_.Sdk.Mdq.AssociatedMenuBehavior
-import typingsSlinky.microsoftSdkSoap.mod._Global_.Sdk.Mdq.AssociatedMenuGroup
-import typingsSlinky.microsoftSdkSoap.mod._Global_.Sdk.Mdq.CascadeType
-import typingsSlinky.microsoftSdkSoap.mod._Global_.Sdk.Mdq.RelationshipType
-import typingsSlinky.microsoftSdkSoap.mod._Global_.Sdk.Mdq.SecurityType
+import typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.AssociatedMenuBehavior
+import typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.AssociatedMenuGroup
+import typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.CascadeType
+import typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.RelationshipType
+import typingsSlinky.microsoftSdkSoap.mod.global.Sdk.Mdq.SecurityType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

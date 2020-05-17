@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.haversine.mod._ParamType because Already inherited */ @js.native
-trait CoordinateLatLng extends _Coordinate {
+- typingsSlinky.haversine.mod.ParamType because Already inherited */ @js.native
+trait CoordinateLatLng extends Coordinate {
   var lat: Double = js.native
   var lng: Double = js.native
 }

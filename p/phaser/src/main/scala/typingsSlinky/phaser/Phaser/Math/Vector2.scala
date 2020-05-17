@@ -10,18 +10,8 @@ import scala.scalajs.js.annotation._
   * 
   * A two-component vector.
   */
-@JSGlobal("Phaser.Math.Vector2")
 @js.native
-/**
-  * 
-  * @param x The x component, or an object with `x` and `y` properties.
-  * @param y The y component.
-  */
-class Vector2 () extends js.Object {
-  def this(x: Double) = this()
-  def this(x: Vector2Like) = this()
-  def this(x: Double, y: Double) = this()
-  def this(x: Vector2Like, y: Double) = this()
+trait Vector2 extends js.Object {
   /**
     * The x component of this Vector.
     */
@@ -166,47 +156,5 @@ class Vector2 () extends js.Object {
     * @param mat The Matrix4 to transform this Vector2 with.
     */
   def transformMat4(mat: Matrix4): Vector2 = js.native
-}
-
-/* static members */
-@JSGlobal("Phaser.Math.Vector2")
-@js.native
-object Vector2 extends js.Object {
-  /**
-    * A static down Vector2 for use by reference.
-    * 
-    * This constant is meant for comparison operations and should not be modified directly.
-    */
-  val DOWN: Vector2 = js.native
-  /**
-    * A static left Vector2 for use by reference.
-    * 
-    * This constant is meant for comparison operations and should not be modified directly.
-    */
-  val LEFT: Vector2 = js.native
-  /**
-    * A static one Vector2 for use by reference.
-    * 
-    * This constant is meant for comparison operations and should not be modified directly.
-    */
-  val ONE: Vector2 = js.native
-  /**
-    * A static right Vector2 for use by reference.
-    * 
-    * This constant is meant for comparison operations and should not be modified directly.
-    */
-  val RIGHT: Vector2 = js.native
-  /**
-    * A static up Vector2 for use by reference.
-    * 
-    * This constant is meant for comparison operations and should not be modified directly.
-    */
-  val UP: Vector2 = js.native
-  /**
-    * A static zero Vector2 for use by reference.
-    * 
-    * This constant is meant for comparison operations and should not be modified directly.
-    */
-  val ZERO: Vector2 = js.native
 }
 

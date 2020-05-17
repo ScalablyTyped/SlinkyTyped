@@ -29,9 +29,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * A panel that displays the app's main navigation options on the left edge of the screen.
 			 */
-@JSGlobal("Titanium.UI.Android.DrawerLayout")
 @js.native
-class DrawerLayout () extends View {
+trait DrawerLayout extends View {
   /**
   				 * Use with [DrawerLayout.drawerLockMode](Titanium.UI.Android.DrawerLayout.drawerLockMode) to specify the drawer is locked closed.
   				 */

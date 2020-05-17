@@ -1,6 +1,6 @@
 package typingsSlinky.serialport.mod
 
-import typingsSlinky.serialport.AnonVmin
+import typingsSlinky.serialport.anon.Vmin
 import typingsSlinky.serialport.serialportNumbers.`110`
 import typingsSlinky.serialport.serialportNumbers.`115200`
 import typingsSlinky.serialport.serialportNumbers.`1200`
@@ -41,7 +41,7 @@ trait OpenOptions extends js.Object {
     `115200` | `57600` | `38400` | `19200` | `9600` | `4800` | `2400` | `1800` | `1200` | `600` | `300` | `200` | `150` | `134` | `110` | `75` | `50` | Double
   ] = js.native
   var binding: js.UndefOr[BaseBinding] = js.native
-  var bindingOptions: js.UndefOr[AnonVmin] = js.native
+  var bindingOptions: js.UndefOr[Vmin] = js.native
   var dataBits: js.UndefOr[`8` | `7` | `6` | `5`] = js.native
   var highWaterMark: js.UndefOr[Double] = js.native
   var lock: js.UndefOr[Boolean] = js.native
@@ -104,7 +104,7 @@ object OpenOptions {
         ret
     }
     @scala.inline
-    def withBindingOptions(value: AnonVmin): Self = {
+    def withBindingOptions(value: Vmin): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bindingOptions")(value.asInstanceOf[js.Any])
         ret

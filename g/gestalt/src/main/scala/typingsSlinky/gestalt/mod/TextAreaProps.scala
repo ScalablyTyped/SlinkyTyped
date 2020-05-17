@@ -1,6 +1,6 @@
 package typingsSlinky.gestalt.mod
 
-import typingsSlinky.gestalt.AnonValueString
+import typingsSlinky.gestalt.anon.ValueString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,18 +13,18 @@ trait TextAreaProps extends js.Object {
   var id: String = js.native
   var label: js.UndefOr[String] = js.native
   var name: js.UndefOr[String] = js.native
-  var onBlur: js.UndefOr[js.Function1[/* args */ AnonValueString, Unit]] = js.native
-  var onFocus: js.UndefOr[js.Function1[/* args */ AnonValueString, Unit]] = js.native
-  var onKeyDown: js.UndefOr[js.Function1[/* args */ AnonValueString, Unit]] = js.native
+  var onBlur: js.UndefOr[js.Function1[/* args */ ValueString, Unit]] = js.native
+  var onFocus: js.UndefOr[js.Function1[/* args */ ValueString, Unit]] = js.native
+  var onKeyDown: js.UndefOr[js.Function1[/* args */ ValueString, Unit]] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var rows: js.UndefOr[Double] = js.native
   var value: js.UndefOr[String] = js.native
-  def onChange(args: AnonValueString): Unit = js.native
+  def onChange(args: ValueString): Unit = js.native
 }
 
 object TextAreaProps {
   @scala.inline
-  def apply(id: String, onChange: AnonValueString => Unit): TextAreaProps = {
+  def apply(id: String, onChange: ValueString => Unit): TextAreaProps = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
     __obj.asInstanceOf[TextAreaProps]
   }
@@ -41,7 +41,7 @@ object TextAreaProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: AnonValueString => Unit): Self = {
+    def withOnChange(value: ValueString => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -107,7 +107,7 @@ object TextAreaProps {
         ret
     }
     @scala.inline
-    def withOnBlur(value: /* args */ AnonValueString => Unit): Self = {
+    def withOnBlur(value: /* args */ ValueString => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
         ret
@@ -119,7 +119,7 @@ object TextAreaProps {
         ret
     }
     @scala.inline
-    def withOnFocus(value: /* args */ AnonValueString => Unit): Self = {
+    def withOnFocus(value: /* args */ ValueString => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
         ret
@@ -131,7 +131,7 @@ object TextAreaProps {
         ret
     }
     @scala.inline
-    def withOnKeyDown(value: /* args */ AnonValueString => Unit): Self = {
+    def withOnKeyDown(value: /* args */ ValueString => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction1(value))
         ret

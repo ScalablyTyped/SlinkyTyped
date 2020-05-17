@@ -19,9 +19,10 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait Stamp[Obj]
-  extends FactoryFunction[Obj]
+  extends StampSignature
+     with FactoryFunction[Obj]
      with Chainables[StampObjectType[Obj], StampType[Obj]]
-     with StampSignature {
+     with StampType[js.Any] {
   /**
     * A function which creates a new `Stamp`s from a list of `Composable`s.
     * @template Obj The type of the object instance being produced by the `Stamp`. or the type of the `Stamp` being created.

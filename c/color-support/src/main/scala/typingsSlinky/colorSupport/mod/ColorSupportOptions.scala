@@ -1,7 +1,7 @@
 package typingsSlinky.colorSupport.mod
 
 import typingsSlinky.node.NodeJS.ProcessEnv
-import typingsSlinky.node.processMod._Global_.NodeJS.WriteStream
+import typingsSlinky.node.processMod.global.NodeJS.WriteStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

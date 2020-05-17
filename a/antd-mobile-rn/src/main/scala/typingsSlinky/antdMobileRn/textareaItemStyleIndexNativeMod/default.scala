@@ -1,10 +1,10 @@
 package typingsSlinky.antdMobileRn.textareaItemStyleIndexNativeMod
 
-import typingsSlinky.antdMobileRn.AnonBackgroundColorFontSize
-import typingsSlinky.antdMobileRn.AnonBorderBottomColorBorderBottomWidth
-import typingsSlinky.antdMobileRn.AnonBottomPosition
-import typingsSlinky.antdMobileRn.AnonHeightPosition
-import typingsSlinky.antdMobileRn.AnonPositionRight
+import typingsSlinky.antdMobileRn.anon.BackgroundColorFontSize
+import typingsSlinky.antdMobileRn.anon.BorderBottomColorBorderBottomWidth
+import typingsSlinky.antdMobileRn.anon.BottomPosition
+import typingsSlinky.antdMobileRn.anon.HeightPosition
+import typingsSlinky.antdMobileRn.anon.PositionRight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,10 +12,10 @@ import scala.scalajs.js.annotation._
 @JSImport("antd-mobile-rn/lib/textarea-item/style/index.native", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var container: AnonBorderBottomColorBorderBottomWidth = js.native
-  var count: AnonBottomPosition = js.native
-  var errorIcon: AnonPositionRight = js.native
-  var icon: AnonHeightPosition = js.native
-  var input: AnonBackgroundColorFontSize = js.native
+  var container: BorderBottomColorBorderBottomWidth = js.native
+  var count: BottomPosition = js.native
+  var errorIcon: PositionRight = js.native
+  var icon: HeightPosition = js.native
+  var input: BackgroundColorFontSize = js.native
 }
 

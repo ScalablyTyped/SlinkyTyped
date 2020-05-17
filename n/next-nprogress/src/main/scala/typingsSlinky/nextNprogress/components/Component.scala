@@ -2,7 +2,7 @@ package typingsSlinky.nextNprogress.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.nextNprogress.PartialNProgressOptions
+import typingsSlinky.nextNprogress.anon.PartialNProgressOptions
 import typingsSlinky.nextNprogress.componentMod.NProgressProps
 import typingsSlinky.nextNprogress.componentMod.default
 import scala.scalajs.js

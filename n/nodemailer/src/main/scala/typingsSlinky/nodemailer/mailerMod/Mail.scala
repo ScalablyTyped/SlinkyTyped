@@ -2,7 +2,6 @@ package typingsSlinky.nodemailer.mailerMod
 
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.urlMod.Url
-import typingsSlinky.nodemailer.AnonConnection
 import typingsSlinky.nodemailer.mod.SentMessageInfo
 import typingsSlinky.nodemailer.mod.Transport
 import typingsSlinky.nodemailer.mod.TransportOptions
@@ -62,42 +61,66 @@ trait Mail extends EventEmitter {
   def get_proxyhandlerhttp(key: proxy_handler_http): js.Function3[
     /* proxy */ Url, 
     /* options */ TransportOptions, 
-    /* callback */ js.Function2[/* err */ js.Error | Null, /* socketOptions */ AnonConnection, Unit], 
+    /* callback */ js.Function2[
+      /* err */ js.Error | Null, 
+      /* socketOptions */ typingsSlinky.nodemailer.anon.Connection, 
+      Unit
+    ], 
     Unit
   ] = js.native
   @JSName("get")
   def get_proxyhandlerhttps(key: proxy_handler_https): js.Function3[
     /* proxy */ Url, 
     /* options */ TransportOptions, 
-    /* callback */ js.Function2[/* err */ js.Error | Null, /* socketOptions */ AnonConnection, Unit], 
+    /* callback */ js.Function2[
+      /* err */ js.Error | Null, 
+      /* socketOptions */ typingsSlinky.nodemailer.anon.Connection, 
+      Unit
+    ], 
     Unit
   ] = js.native
   @JSName("get")
   def get_proxyhandlersocks(key: proxy_handler_socks): js.Function3[
     /* proxy */ Url, 
     /* options */ TransportOptions, 
-    /* callback */ js.Function2[/* err */ js.Error | Null, /* socketOptions */ AnonConnection, Unit], 
+    /* callback */ js.Function2[
+      /* err */ js.Error | Null, 
+      /* socketOptions */ typingsSlinky.nodemailer.anon.Connection, 
+      Unit
+    ], 
     Unit
   ] = js.native
   @JSName("get")
   def get_proxyhandlersocks4(key: proxy_handler_socks4): js.Function3[
     /* proxy */ Url, 
     /* options */ TransportOptions, 
-    /* callback */ js.Function2[/* err */ js.Error | Null, /* socketOptions */ AnonConnection, Unit], 
+    /* callback */ js.Function2[
+      /* err */ js.Error | Null, 
+      /* socketOptions */ typingsSlinky.nodemailer.anon.Connection, 
+      Unit
+    ], 
     Unit
   ] = js.native
   @JSName("get")
   def get_proxyhandlersocks4a(key: proxy_handler_socks4a): js.Function3[
     /* proxy */ Url, 
     /* options */ TransportOptions, 
-    /* callback */ js.Function2[/* err */ js.Error | Null, /* socketOptions */ AnonConnection, Unit], 
+    /* callback */ js.Function2[
+      /* err */ js.Error | Null, 
+      /* socketOptions */ typingsSlinky.nodemailer.anon.Connection, 
+      Unit
+    ], 
     Unit
   ] = js.native
   @JSName("get")
   def get_proxyhandlersocks5(key: proxy_handler_socks5): js.Function3[
     /* proxy */ Url, 
     /* options */ TransportOptions, 
-    /* callback */ js.Function2[/* err */ js.Error | Null, /* socketOptions */ AnonConnection, Unit], 
+    /* callback */ js.Function2[
+      /* err */ js.Error | Null, 
+      /* socketOptions */ typingsSlinky.nodemailer.anon.Connection, 
+      Unit
+    ], 
     Unit
   ] = js.native
   /** Returns true if there are free slots in the queue */
@@ -160,7 +183,11 @@ trait Mail extends EventEmitter {
     value: js.Function3[
       /* proxy */ Url, 
       /* options */ TransportOptions, 
-      /* callback */ js.Function2[/* err */ js.Error | Null, /* socketOptions */ js.UndefOr[AnonConnection], Unit], 
+      /* callback */ js.Function2[
+        /* err */ js.Error | Null, 
+        /* socketOptions */ js.UndefOr[typingsSlinky.nodemailer.anon.Connection], 
+        Unit
+      ], 
       Unit
     ]
   ): Map[String, _] = js.native
@@ -170,7 +197,11 @@ trait Mail extends EventEmitter {
     value: js.Function3[
       /* proxy */ Url, 
       /* options */ TransportOptions, 
-      /* callback */ js.Function2[/* err */ js.Error | Null, /* socketOptions */ js.UndefOr[AnonConnection], Unit], 
+      /* callback */ js.Function2[
+        /* err */ js.Error | Null, 
+        /* socketOptions */ js.UndefOr[typingsSlinky.nodemailer.anon.Connection], 
+        Unit
+      ], 
       Unit
     ]
   ): Map[String, _] = js.native
@@ -180,7 +211,11 @@ trait Mail extends EventEmitter {
     value: js.Function3[
       /* proxy */ Url, 
       /* options */ TransportOptions, 
-      /* callback */ js.Function2[/* err */ js.Error | Null, /* socketOptions */ js.UndefOr[AnonConnection], Unit], 
+      /* callback */ js.Function2[
+        /* err */ js.Error | Null, 
+        /* socketOptions */ js.UndefOr[typingsSlinky.nodemailer.anon.Connection], 
+        Unit
+      ], 
       Unit
     ]
   ): Map[String, _] = js.native
@@ -190,7 +225,11 @@ trait Mail extends EventEmitter {
     value: js.Function3[
       /* proxy */ Url, 
       /* options */ TransportOptions, 
-      /* callback */ js.Function2[/* err */ js.Error | Null, /* socketOptions */ js.UndefOr[AnonConnection], Unit], 
+      /* callback */ js.Function2[
+        /* err */ js.Error | Null, 
+        /* socketOptions */ js.UndefOr[typingsSlinky.nodemailer.anon.Connection], 
+        Unit
+      ], 
       Unit
     ]
   ): Map[String, _] = js.native
@@ -200,7 +239,11 @@ trait Mail extends EventEmitter {
     value: js.Function3[
       /* proxy */ Url, 
       /* options */ TransportOptions, 
-      /* callback */ js.Function2[/* err */ js.Error | Null, /* socketOptions */ js.UndefOr[AnonConnection], Unit], 
+      /* callback */ js.Function2[
+        /* err */ js.Error | Null, 
+        /* socketOptions */ js.UndefOr[typingsSlinky.nodemailer.anon.Connection], 
+        Unit
+      ], 
       Unit
     ]
   ): Map[String, _] = js.native
@@ -210,7 +253,11 @@ trait Mail extends EventEmitter {
     value: js.Function3[
       /* proxy */ Url, 
       /* options */ TransportOptions, 
-      /* callback */ js.Function2[/* err */ js.Error | Null, /* socketOptions */ js.UndefOr[AnonConnection], Unit], 
+      /* callback */ js.Function2[
+        /* err */ js.Error | Null, 
+        /* socketOptions */ js.UndefOr[typingsSlinky.nodemailer.anon.Connection], 
+        Unit
+      ], 
       Unit
     ]
   ): Map[String, _] = js.native

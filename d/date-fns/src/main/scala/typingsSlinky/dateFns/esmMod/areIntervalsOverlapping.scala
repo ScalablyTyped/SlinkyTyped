@@ -1,7 +1,7 @@
 package typingsSlinky.dateFns.esmMod
 
-import typingsSlinky.dateFns.AnonInclusive
 import typingsSlinky.dateFns.Interval
+import typingsSlinky.dateFns.anon.Inclusive
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object areIntervalsOverlapping extends js.Object {
   def apply(intervalLeft: Interval, intervalRight: Interval): Boolean = js.native
-  def apply(intervalLeft: Interval, intervalRight: Interval, options: AnonInclusive): Boolean = js.native
+  def apply(intervalLeft: Interval, intervalRight: Interval, options: Inclusive): Boolean = js.native
 }
 

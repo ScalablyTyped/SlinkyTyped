@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.mod
 
-import typingsSlinky.officeUiFabricReact.AnonDescription
+import typingsSlinky.officeUiFabricReact.anon.Description
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +14,6 @@ class ProgressIndicatorBase ()
 @JSImport("office-ui-fabric-react", "ProgressIndicatorBase")
 @js.native
 object ProgressIndicatorBase extends js.Object {
-  var defaultProps: AnonDescription = js.native
+  var defaultProps: Description = js.native
 }
 

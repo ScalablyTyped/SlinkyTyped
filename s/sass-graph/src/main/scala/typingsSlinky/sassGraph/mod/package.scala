@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type Node = org.scalablytyped.runtime.StringDictionary[typingsSlinky.sassGraph.AnonImportedBy]
+  type Node = org.scalablytyped.runtime.StringDictionary[typingsSlinky.sassGraph.anon.ImportedBy]
 }

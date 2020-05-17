@@ -1,6 +1,6 @@
 package typingsSlinky.playcanvas.mod
 
-import typingsSlinky.playcanvas.AnonAtlas
+import typingsSlinky.playcanvas.anon.Atlas
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,6 +42,6 @@ import scala.scalajs.js.annotation._
 class Sprite protected ()
   extends typingsSlinky.playcanvas.pc.Sprite {
   def this(device: typingsSlinky.playcanvas.pc.GraphicsDevice) = this()
-  def this(device: typingsSlinky.playcanvas.pc.GraphicsDevice, options: AnonAtlas) = this()
+  def this(device: typingsSlinky.playcanvas.pc.GraphicsDevice, options: Atlas) = this()
 }
 

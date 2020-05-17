@@ -1,6 +1,6 @@
 package typingsSlinky.yandexMaps.mod.control
 
-import typingsSlinky.yandexMaps.AnonBottom
+import typingsSlinky.yandexMaps.anon.Bottom
 import typingsSlinky.yandexMaps.yandexMapsStrings.left
 import typingsSlinky.yandexMaps.yandexMapsStrings.none
 import typingsSlinky.yandexMaps.yandexMapsStrings.right
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait IManagerControlOptions extends js.Object {
   var float: js.UndefOr[none | left | right] = js.native
   var floatIndex: js.UndefOr[Double] = js.native
-  var position: js.UndefOr[AnonBottom] = js.native
+  var position: js.UndefOr[Bottom] = js.native
 }
 
 object IManagerControlOptions {
@@ -52,7 +52,7 @@ object IManagerControlOptions {
         ret
     }
     @scala.inline
-    def withPosition(value: AnonBottom): Self = {
+    def withPosition(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
         ret

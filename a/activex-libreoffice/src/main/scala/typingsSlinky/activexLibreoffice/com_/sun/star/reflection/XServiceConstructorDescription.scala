@@ -1,0 +1,116 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.reflection
+
+import typingsSlinky.std.SafeArray
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Reflects a service constructor.
+  * @since OOo 2.0
+  */
+@js.native
+trait XServiceConstructorDescription extends js.Object {
+  /**
+    * Returns the exceptions that can be raised by the constructor.
+    * @returns the reflections of all the exceptions that are listed in the constructor's `raises` specification, in no particular order; all elements of the re
+    */
+  val Exceptions: SafeArray[XCompoundTypeDescription] = js.native
+  /**
+    * Returns the constructor's name.
+    * @returns the constructor's name; for a default constructor, an empty `string` is returned
+    */
+  val Name: String = js.native
+  /**
+    * Returns the constructor's parameters.
+    * @returns the reflections of all the constructor's parameters, in their lexical order; for a default constructor, an empty sequence is returned
+    */
+  val Parameters: SafeArray[XParameter] = js.native
+  /**
+    * Returns the exceptions that can be raised by the constructor.
+    * @returns the reflections of all the exceptions that are listed in the constructor's `raises` specification, in no particular order; all elements of the re
+    */
+  def getExceptions(): SafeArray[XCompoundTypeDescription] = js.native
+  /**
+    * Returns the constructor's name.
+    * @returns the constructor's name; for a default constructor, an empty `string` is returned
+    */
+  def getName(): String = js.native
+  /**
+    * Returns the constructor's parameters.
+    * @returns the reflections of all the constructor's parameters, in their lexical order; for a default constructor, an empty sequence is returned
+    */
+  def getParameters(): SafeArray[XParameter] = js.native
+  /**
+    * Returns whether the constructor is a default constructor.
+    * @returns `TRUE` if the constructor is a default constructor
+    */
+  def isDefaultConstructor(): Boolean = js.native
+}
+
+object XServiceConstructorDescription {
+  @scala.inline
+  def apply(
+    Exceptions: SafeArray[XCompoundTypeDescription],
+    Name: String,
+    Parameters: SafeArray[XParameter],
+    getExceptions: () => SafeArray[XCompoundTypeDescription],
+    getName: () => String,
+    getParameters: () => SafeArray[XParameter],
+    isDefaultConstructor: () => Boolean
+  ): XServiceConstructorDescription = {
+    val __obj = js.Dynamic.literal(Exceptions = Exceptions.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Parameters = Parameters.asInstanceOf[js.Any], getExceptions = js.Any.fromFunction0(getExceptions), getName = js.Any.fromFunction0(getName), getParameters = js.Any.fromFunction0(getParameters), isDefaultConstructor = js.Any.fromFunction0(isDefaultConstructor))
+    __obj.asInstanceOf[XServiceConstructorDescription]
+  }
+  @scala.inline
+  implicit class XServiceConstructorDescriptionOps[Self <: XServiceConstructorDescription] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExceptions(value: SafeArray[XCompoundTypeDescription]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Exceptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParameters(value: SafeArray[XParameter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetExceptions(value: () => SafeArray[XCompoundTypeDescription]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getExceptions")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetParameters(value: () => SafeArray[XParameter]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getParameters")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsDefaultConstructor(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDefaultConstructor")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
+}
+

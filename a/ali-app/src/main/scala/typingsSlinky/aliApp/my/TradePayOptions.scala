@@ -1,6 +1,6 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonResultCode
+import typingsSlinky.aliApp.anon.ResultCode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait TradePayOptions
   extends BaseOptions[js.Any, js.Any] {
   	// 接入小程序支付时传入此参数。此参数为支付宝交易号
   @JSName("success")
-  var success_TradePayOptions: js.UndefOr[js.Function1[/* res */ AnonResultCode, Unit]] = js.native
+  var success_TradePayOptions: js.UndefOr[js.Function1[/* res */ ResultCode, Unit]] = js.native
   var tradeNO: js.UndefOr[String] = js.native
 }
 
@@ -29,7 +29,7 @@ object TradePayOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSuccess(value: /* res */ AnonResultCode => Unit): Self = {
+    def withSuccess(value: /* res */ ResultCode => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

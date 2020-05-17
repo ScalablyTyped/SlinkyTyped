@@ -12,14 +12,8 @@ trait DatabaseConfiguration extends js.Object
 
 object DatabaseConfiguration {
   @scala.inline
-  def LocalDatabaseConfiguration(): DatabaseConfiguration = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[DatabaseConfiguration]
-  }
+  implicit def apply(value: LocalDatabaseConfiguration): DatabaseConfiguration = value.asInstanceOf[DatabaseConfiguration]
   @scala.inline
-  def RemoteDatabaseConfiguration(): DatabaseConfiguration = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[DatabaseConfiguration]
-  }
+  implicit def apply(value: RemoteDatabaseConfiguration): DatabaseConfiguration = value.asInstanceOf[DatabaseConfiguration]
 }
 

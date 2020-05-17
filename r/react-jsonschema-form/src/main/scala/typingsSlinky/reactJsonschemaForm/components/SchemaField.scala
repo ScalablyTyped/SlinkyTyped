@@ -3,7 +3,7 @@ package typingsSlinky.reactJsonschemaForm.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.jsonSchema.mod.JSONSchema6
-import typingsSlinky.reactJsonschemaForm.AnonDefinitions
+import typingsSlinky.reactJsonschemaForm.anon.Definitions
 import typingsSlinky.reactJsonschemaForm.mod.ErrorSchema
 import typingsSlinky.reactJsonschemaForm.mod.IdSchema
 import typingsSlinky.reactJsonschemaForm.mod.UiSchema
@@ -25,7 +25,7 @@ object SchemaField {
     formContext: js.Any,
     formData: js.Any,
     idSchema: IdSchema[_],
-    registry: AnonDefinitions,
+    registry: Definitions,
     schema: JSONSchema6,
     uiSchema: UiSchema
   ): Default[tag.type, default] = {

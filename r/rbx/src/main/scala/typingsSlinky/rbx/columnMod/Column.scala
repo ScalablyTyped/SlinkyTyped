@@ -1,11 +1,11 @@
 package typingsSlinky.rbx.columnMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.rbx.AnonAsElementType
-import typingsSlinky.rbx.AnonDesktop
-import typingsSlinky.rbx.AnonFullhd
-import typingsSlinky.rbx.ColumnGroupPropsBackgroundColor
-import typingsSlinky.rbx.PickBadgeHelpersPropsFloa
+import typingsSlinky.rbx.anon.AsElementType
+import typingsSlinky.rbx.anon.ColumnGroupPropsBackgroundColor
+import typingsSlinky.rbx.anon.Desktop
+import typingsSlinky.rbx.anon.Fullhd
+import typingsSlinky.rbx.anon.PickBadgeHelpersPropsFloa
 import typingsSlinky.rbx.exoticMod.ForwardRefAsExoticComponent
 import typingsSlinky.rbx.exoticMod.FromReactType
 import typingsSlinky.rbx.helpersMod.HelpersPropsOverrides
@@ -67,12 +67,12 @@ object Column extends js.Object {
   @JSName("$$typeof")
   var DollarDollartypeof: js.Symbol = js.native
   var Group: ForwardRefAsExoticComponent[ColumnGroupPropsBackgroundColor, ReactElement] = js.native
-  var defaultProps: AnonAsElementType with (Partial[
-    HelpersPropsOverrides with PickBadgeHelpersPropsFloa with AnonFullhd with ColumnBreakpointOptions with (Pick[_, String | Double | js.Symbol])
+  var defaultProps: AsElementType with (Partial[
+    HelpersPropsOverrides with PickBadgeHelpersPropsFloa with Fullhd with ColumnBreakpointOptions with (Pick[_, String | Double | js.Symbol])
   ]) = js.native
   var displayName: js.UndefOr[String] = js.native
   def apply[TAsComponent /* <: ReactElement */](
-    props: AnonDesktop[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with ColumnBreakpointOptions with (Pick[
+    props: Desktop[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with ColumnBreakpointOptions with (Pick[
       ComponentProps[TAsComponent], 
       Exclude[
         /* keyof react.react.ComponentProps<TAsComponent> */ String, 

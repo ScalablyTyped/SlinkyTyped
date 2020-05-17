@@ -1,10 +1,10 @@
 package typingsSlinky.intercomClient.leadMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.intercomClient.AnonCompanies
-import typingsSlinky.intercomClient.AnonSegments
-import typingsSlinky.intercomClient.AnonSocialprofiles
-import typingsSlinky.intercomClient.AnonTags
+import typingsSlinky.intercomClient.anon.Companies
+import typingsSlinky.intercomClient.anon.Segments
+import typingsSlinky.intercomClient.anon.Socialprofiles
+import typingsSlinky.intercomClient.anon.Tags
 import typingsSlinky.intercomClient.intercomClientStrings.contact
 import typingsSlinky.intercomClient.userMod.Avatar
 import typingsSlinky.intercomClient.userMod.LocationData
@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Lead extends js.Object {
   var avatar: Avatar = js.native
-  var companies: AnonCompanies = js.native
+  var companies: Companies = js.native
   val created_at: Double = js.native
   var custom_attributes: StringDictionary[js.Any] = js.native
   var email: String | Null = js.native
@@ -26,9 +26,9 @@ trait Lead extends js.Object {
   var name: String | Null = js.native
   var phone: String | Null = js.native
   var referrer: String | Null = js.native
-  var segments: AnonSegments = js.native
-  var social_profiles: AnonSocialprofiles = js.native
-  var tags: AnonTags = js.native
+  var segments: Segments = js.native
+  var social_profiles: Socialprofiles = js.native
+  var tags: Tags = js.native
   var `type`: contact = js.native
   var unsubscribed_from_emails: Boolean = js.native
   val updated_at: Double = js.native
@@ -40,14 +40,14 @@ object Lead {
   @scala.inline
   def apply(
     avatar: Avatar,
-    companies: AnonCompanies,
+    companies: Companies,
     created_at: Double,
     custom_attributes: StringDictionary[js.Any],
     id: String,
     location_data: LocationData | js.Object,
-    segments: AnonSegments,
-    social_profiles: AnonSocialprofiles,
-    tags: AnonTags,
+    segments: Segments,
+    social_profiles: Socialprofiles,
+    tags: Tags,
     `type`: contact,
     unsubscribed_from_emails: Boolean,
     updated_at: Double
@@ -69,7 +69,7 @@ object Lead {
         ret
     }
     @scala.inline
-    def withCompanies(value: AnonCompanies): Self = {
+    def withCompanies(value: Companies): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("companies")(value.asInstanceOf[js.Any])
         ret
@@ -99,19 +99,19 @@ object Lead {
         ret
     }
     @scala.inline
-    def withSegments(value: AnonSegments): Self = {
+    def withSegments(value: Segments): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("segments")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSocial_profiles(value: AnonSocialprofiles): Self = {
+    def withSocial_profiles(value: Socialprofiles): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("social_profiles")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withTags(value: AnonTags): Self = {
+    def withTags(value: Tags): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,7 @@
 package typingsSlinky.storageHelper
 
 import typingsSlinky.std.NonNullable
+import typingsSlinky.storageHelper.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

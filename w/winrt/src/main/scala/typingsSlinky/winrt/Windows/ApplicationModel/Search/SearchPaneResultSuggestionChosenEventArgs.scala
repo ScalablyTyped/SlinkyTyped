@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.ApplicationModel.Search.SearchPaneResultSuggestionChosenEventArgs")
 @js.native
-class SearchPaneResultSuggestionChosenEventArgs () extends ISearchPaneResultSuggestionChosenEventArgs
+trait SearchPaneResultSuggestionChosenEventArgs extends ISearchPaneResultSuggestionChosenEventArgs
+
+object SearchPaneResultSuggestionChosenEventArgs {
+  @scala.inline
+  def apply(tag: String): SearchPaneResultSuggestionChosenEventArgs = {
+    val __obj = js.Dynamic.literal(tag = tag.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SearchPaneResultSuggestionChosenEventArgs]
+  }
+}
 

@@ -1,18 +1,17 @@
 package typingsSlinky.reactNativeMaterialUi.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactNativeMaterialUi.AnonAccountContainer
-import typingsSlinky.reactNativeMaterialUi.AnonAvatar
+import typingsSlinky.reactNativeMaterialUi.anon.AccountContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait DrawerHeaderAccountProps extends js.Object {
-  var accounts: js.UndefOr[js.Array[AnonAvatar]] = js.native
+  var accounts: js.UndefOr[js.Array[typingsSlinky.reactNativeMaterialUi.anon.Avatar]] = js.native
   var avatar: js.UndefOr[ReactElement] = js.native
   var footer: js.UndefOr[js.Object] = js.native
-  var style: js.UndefOr[AnonAccountContainer] = js.native
+  var style: js.UndefOr[AccountContainer] = js.native
 }
 
 object DrawerHeaderAccountProps {
@@ -28,7 +27,7 @@ object DrawerHeaderAccountProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAccounts(value: js.Array[AnonAvatar]): Self = {
+    def withAccounts(value: js.Array[typingsSlinky.reactNativeMaterialUi.anon.Avatar]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("accounts")(value.asInstanceOf[js.Any])
         ret
@@ -64,7 +63,7 @@ object DrawerHeaderAccountProps {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonAccountContainer): Self = {
+    def withStyle(value: AccountContainer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

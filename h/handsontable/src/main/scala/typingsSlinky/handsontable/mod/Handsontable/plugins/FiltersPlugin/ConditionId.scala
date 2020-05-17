@@ -1,6 +1,6 @@
 package typingsSlinky.handsontable.mod.Handsontable.plugins.FiltersPlugin
 
-import typingsSlinky.handsontable.AnonKey
+import typingsSlinky.handsontable.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ConditionId extends js.Object {
   var args: js.Array[_] = js.native
-  var command: js.UndefOr[AnonKey] = js.native
+  var command: js.UndefOr[Key] = js.native
   var name: js.UndefOr[ConditionName] = js.native
 }
 
@@ -31,7 +31,7 @@ object ConditionId {
         ret
     }
     @scala.inline
-    def withCommand(value: AnonKey): Self = {
+    def withCommand(value: Key): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("command")(value.asInstanceOf[js.Any])
         ret

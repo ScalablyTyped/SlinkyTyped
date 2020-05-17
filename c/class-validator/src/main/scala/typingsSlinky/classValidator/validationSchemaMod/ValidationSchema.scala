@@ -1,7 +1,7 @@
 package typingsSlinky.classValidator.validationSchemaMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.classValidator.AnonAlways
+import typingsSlinky.classValidator.anon.Always
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait ValidationSchema extends js.Object {
   var properties: /**
     * Name of the object's property to be validated which holds an array of validation constraints.
     */
-  StringDictionary[js.Array[AnonAlways]] = js.native
+  StringDictionary[js.Array[Always]] = js.native
 }
 
 object ValidationSchema {
@@ -28,7 +28,7 @@ object ValidationSchema {
     properties: /**
     * Name of the object's property to be validated which holds an array of validation constraints.
     */
-  StringDictionary[js.Array[AnonAlways]]
+  StringDictionary[js.Array[Always]]
   ): ValidationSchema = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValidationSchema]
@@ -50,7 +50,7 @@ object ValidationSchema {
       value: /**
       * Name of the object's property to be validated which holds an array of validation constraints.
       */
-    StringDictionary[js.Array[AnonAlways]]
+    StringDictionary[js.Array[Always]]
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])

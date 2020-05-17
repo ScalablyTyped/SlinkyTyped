@@ -2,7 +2,7 @@ package typingsSlinky.oracleOraclejet.ojdialogMod
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.AnonLabelCloseIcon
+import typingsSlinky.oracleOraclejet.anon.LabelCloseIcon
 import typingsSlinky.oracleOraclejet.mod.baseComponent
 import typingsSlinky.oracleOraclejet.ojdialogMod.ojDialog.Position
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.`title-bar`
@@ -74,7 +74,7 @@ trait ojDialog_ extends baseComponent[ojDialogSettableProperties] {
   var resizeBehavior: resizable | none = js.native
   var role: String = js.native
   @JSName("translations")
-  var translations_ojDialog_ : AnonLabelCloseIcon = js.native
+  var translations_ojDialog_ : LabelCloseIcon = js.native
   def addEventListener(`type`: cancelBehaviorChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: cancelBehaviorChanged,
@@ -252,6 +252,6 @@ trait ojDialog_ extends baseComponent[ojDialogSettableProperties] {
   @JSName("setProperty")
   def setProperty_role(property: role, value: String): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonLabelCloseIcon): Unit = js.native
+  def setProperty_translations(property: translations, value: LabelCloseIcon): Unit = js.native
 }
 

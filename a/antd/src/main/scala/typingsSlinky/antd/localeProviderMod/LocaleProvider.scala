@@ -1,6 +1,6 @@
 package typingsSlinky.antd.localeProviderMod
 
-import typingsSlinky.antd.AnonAntLocaleAnonCalendar
+import typingsSlinky.antd.anon.AntLocaleCalendar
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,6 +13,6 @@ trait LocaleProvider
   def componentDidUpdate_MLocaleProvider(prevProps: LocaleProviderProps): Unit = js.native
   @JSName("componentWillUnmount")
   def componentWillUnmount_MLocaleProvider(): Unit = js.native
-  def getChildContext(): AnonAntLocaleAnonCalendar = js.native
+  def getChildContext(): AntLocaleCalendar = js.native
 }
 

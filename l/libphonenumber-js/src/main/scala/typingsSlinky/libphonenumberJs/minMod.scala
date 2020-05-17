@@ -1,5 +1,8 @@
 package typingsSlinky.libphonenumberJs
 
+import typingsSlinky.libphonenumberJs.anon.DefaultCallingCode
+import typingsSlinky.libphonenumberJs.anon.DefaultCountry
+import typingsSlinky.libphonenumberJs.anon.countryinCountryCodeNatio
 import typingsSlinky.libphonenumberJs.typesMod.CountryCallingCode
 import typingsSlinky.libphonenumberJs.typesMod.CountryCode
 import typingsSlinky.libphonenumberJs.typesMod.Metadata
@@ -16,7 +19,7 @@ import scala.scalajs.js.annotation._
 object minMod extends js.Object {
   @js.native
   class AsYouType () extends js.Object {
-    def this(defaultCountryCode: AnonDefaultCallingCode) = this()
+    def this(defaultCountryCode: DefaultCallingCode) = this()
     def this(defaultCountryCode: CountryCode) = this()
     def getNumber(): js.UndefOr[typingsSlinky.libphonenumberJs.typesMod.PhoneNumber] = js.native
     def getTemplate(): js.UndefOr[String] = js.native
@@ -42,16 +45,16 @@ object minMod extends js.Object {
   @js.native
   class PhoneNumberMatcher protected () extends js.Object {
     def this(text: String) = this()
-    def this(text: String, options: AnonDefaultCountry) = this()
+    def this(text: String, options: DefaultCountry) = this()
     def hasNext(): Boolean = js.native
     def next(): js.UndefOr[NumberFound] = js.native
   }
   
   def findNumbers(text: String): js.Array[NumberFoundLegacy] = js.native
-  def findNumbers(text: String, options: AnonDefaultCountry): js.Array[NumberFound] = js.native
+  def findNumbers(text: String, options: DefaultCountry): js.Array[NumberFound] = js.native
   def findNumbers(text: String, options: CountryCode): js.Array[NumberFoundLegacy] = js.native
   def findPhoneNumbersInText(text: String): js.Array[NumberFound] = js.native
-  def findPhoneNumbersInText(text: String, options: AnonDefaultCallingCode): js.Array[NumberFound] = js.native
+  def findPhoneNumbersInText(text: String, options: DefaultCallingCode): js.Array[NumberFound] = js.native
   def findPhoneNumbersInText(text: String, options: CountryCode): js.Array[NumberFound] = js.native
   def formatIncompletePhoneNumber(number: String): String = js.native
   def formatIncompletePhoneNumber(number: String, countryCode: CountryCode): String = js.native
@@ -66,13 +69,13 @@ object minMod extends js.Object {
   def parsePhoneNumber(text: String, defaultCountry: CountryCode): typingsSlinky.libphonenumberJs.typesMod.PhoneNumber = js.native
   def parsePhoneNumberCharacter(character: String): String = js.native
   def parsePhoneNumberFromString(text: String): js.UndefOr[typingsSlinky.libphonenumberJs.typesMod.PhoneNumber] = js.native
-  def parsePhoneNumberFromString(text: String, defaultCountry: AnonDefaultCallingCode): js.UndefOr[typingsSlinky.libphonenumberJs.typesMod.PhoneNumber] = js.native
+  def parsePhoneNumberFromString(text: String, defaultCountry: DefaultCallingCode): js.UndefOr[typingsSlinky.libphonenumberJs.typesMod.PhoneNumber] = js.native
   def parsePhoneNumberFromString(text: String, defaultCountry: CountryCode): js.UndefOr[typingsSlinky.libphonenumberJs.typesMod.PhoneNumber] = js.native
   def searchNumbers(text: String): IterableIterator[NumberFoundLegacy] = js.native
-  def searchNumbers(text: String, options: AnonDefaultCountry): IterableIterator[NumberFound] = js.native
+  def searchNumbers(text: String, options: DefaultCountry): IterableIterator[NumberFound] = js.native
   def searchNumbers(text: String, options: CountryCode): IterableIterator[NumberFoundLegacy] = js.native
   def searchPhoneNumbersInText(text: String): IterableIterator[NumberFound] = js.native
-  def searchPhoneNumbersInText(text: String, options: AnonDefaultCallingCode): IterableIterator[NumberFound] = js.native
+  def searchPhoneNumbersInText(text: String, options: DefaultCallingCode): IterableIterator[NumberFound] = js.native
   def searchPhoneNumbersInText(text: String, options: CountryCode): IterableIterator[NumberFound] = js.native
 }
 

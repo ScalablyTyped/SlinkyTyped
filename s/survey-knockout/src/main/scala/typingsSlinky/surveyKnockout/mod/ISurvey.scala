@@ -1,7 +1,7 @@
 package typingsSlinky.surveyKnockout.mod
 
 import org.scalajs.dom.raw.File
-import typingsSlinky.surveyKnockout.AnonCanAddRow
+import typingsSlinky.surveyKnockout.anon.CanAddRow
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -52,7 +52,7 @@ trait ISurvey
   def isPageStarted(page: IPage): Boolean = js.native
   def matrixAfterCellRender(question: IQuestion, options: js.Any): js.Any = js.native
   def matrixAllowRemoveRow(question: IQuestion, rowIndex: Double, row: js.Any): Boolean = js.native
-  def matrixBeforeRowAdded(options: AnonCanAddRow): js.Any = js.native
+  def matrixBeforeRowAdded(options: CanAddRow): js.Any = js.native
   def matrixCellCreated(question: IQuestion, options: js.Any): js.Any = js.native
   def matrixCellValidate(question: IQuestion, options: js.Any): SurveyError = js.native
   def matrixCellValueChanged(question: IQuestion, options: js.Any): js.Any = js.native
@@ -116,7 +116,7 @@ object ISurvey {
     isUpdateValueTextOnTyping: Boolean,
     matrixAfterCellRender: (IQuestion, js.Any) => js.Any,
     matrixAllowRemoveRow: (IQuestion, Double, js.Any) => Boolean,
-    matrixBeforeRowAdded: AnonCanAddRow => js.Any,
+    matrixBeforeRowAdded: CanAddRow => js.Any,
     matrixCellCreated: (IQuestion, js.Any) => js.Any,
     matrixCellValidate: (IQuestion, js.Any) => SurveyError,
     matrixCellValueChanged: (IQuestion, js.Any) => js.Any,
@@ -325,7 +325,7 @@ object ISurvey {
         ret
     }
     @scala.inline
-    def withMatrixBeforeRowAdded(value: AnonCanAddRow => js.Any): Self = {
+    def withMatrixBeforeRowAdded(value: CanAddRow => js.Any): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("matrixBeforeRowAdded")(js.Any.fromFunction1(value))
         ret

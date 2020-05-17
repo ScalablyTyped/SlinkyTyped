@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
+import typingsSlinky.babylonjs.anon.ColorDiameter
 import typingsSlinky.babylonjs.iparticlesystemMod.IParticleSystem
 import typingsSlinky.babylonjs.sceneMod.IDisposable
 import typingsSlinky.babylonjs.sceneMod.Scene
@@ -36,7 +37,7 @@ object particleSystemSetMod extends js.Object {
       * @param renderingGroupId defines the renderingGroupId to use for the sphere
       * @param scene defines the hosting scene
       */
-    def setEmitterAsSphere(options: AnonColorDiameter, renderingGroupId: Double, scene: Scene): Unit = js.native
+    def setEmitterAsSphere(options: ColorDiameter, renderingGroupId: Double, scene: Scene): Unit = js.native
     /**
       * Starts all particle systems of the set
       * @param emitter defines an optional mesh to use as emitter for the particle systems

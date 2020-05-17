@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides information about the activated event that fires when the user saves or opens a file that needs updates from the app. */
-@JSGlobal("Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs")
 @js.native
-abstract class CachedFileUpdaterActivatedEventArgs () extends js.Object {
+trait CachedFileUpdaterActivatedEventArgs extends js.Object {
   /** Gets the letterbox UI of the file picker that is displayed when a file needs updates from the app. */
   var cachedFileUpdaterUI: CachedFileUpdaterUI = js.native
   /** Gets the activation type. */
@@ -17,5 +16,50 @@ abstract class CachedFileUpdaterActivatedEventArgs () extends js.Object {
   var previousExecutionState: ApplicationExecutionState = js.native
   /** Gets a SplashScreen object that provides information about the transition from the splash screen to the activated app. */
   var splashScreen: SplashScreen = js.native
+}
+
+object CachedFileUpdaterActivatedEventArgs {
+  @scala.inline
+  def apply(
+    cachedFileUpdaterUI: CachedFileUpdaterUI,
+    kind: ActivationKind,
+    previousExecutionState: ApplicationExecutionState,
+    splashScreen: SplashScreen
+  ): CachedFileUpdaterActivatedEventArgs = {
+    val __obj = js.Dynamic.literal(cachedFileUpdaterUI = cachedFileUpdaterUI.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], previousExecutionState = previousExecutionState.asInstanceOf[js.Any], splashScreen = splashScreen.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CachedFileUpdaterActivatedEventArgs]
+  }
+  @scala.inline
+  implicit class CachedFileUpdaterActivatedEventArgsOps[Self <: CachedFileUpdaterActivatedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCachedFileUpdaterUI(value: CachedFileUpdaterUI): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cachedFileUpdaterUI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKind(value: ActivationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreviousExecutionState(value: ApplicationExecutionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousExecutionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSplashScreen(value: SplashScreen): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splashScreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -20,17 +20,8 @@ import scala.scalajs.js.annotation._
   * You can adjust the stiffness, length and other properties of the constraint via
   * the `options` object on creation.
   */
-@JSGlobal("Phaser.Physics.Matter.PointerConstraint")
 @js.native
-class PointerConstraint protected () extends js.Object {
-  /**
-    * 
-    * @param scene A reference to the Scene to which this Pointer Constraint belongs.
-    * @param world A reference to the Matter World instance to which this Constraint belongs.
-    * @param options A Constraint configuration object.
-    */
-  def this(scene: Scene, world: World) = this()
-  def this(scene: Scene, world: World, options: js.Object) = this()
+trait PointerConstraint extends js.Object {
   /**
     * Is this Constraint active or not?
     * 
@@ -117,5 +108,134 @@ class PointerConstraint protected () extends js.Object {
     * Internal update handler. Called in the Matter BEFORE_UPDATE step.
     */
   def update(): Unit = js.native
+}
+
+object PointerConstraint {
+  @scala.inline
+  def apply(
+    active: Boolean,
+    body: BodyType,
+    camera: Camera,
+    constraint: ConstraintType,
+    destroy: () => Unit,
+    getBody: () => Boolean,
+    hitTestBody: (BodyType, Vector2) => Boolean,
+    onDown: Pointer => Unit,
+    onUp: Pointer => Unit,
+    part: BodyType,
+    pointer: Pointer,
+    position: Vector2,
+    scene: Scene,
+    stopDrag: () => Unit,
+    update: () => Unit,
+    world: World
+  ): PointerConstraint = {
+    val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], camera = camera.asInstanceOf[js.Any], constraint = constraint.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), getBody = js.Any.fromFunction0(getBody), hitTestBody = js.Any.fromFunction2(hitTestBody), onDown = js.Any.fromFunction1(onDown), onUp = js.Any.fromFunction1(onUp), part = part.asInstanceOf[js.Any], pointer = pointer.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], scene = scene.asInstanceOf[js.Any], stopDrag = js.Any.fromFunction0(stopDrag), update = js.Any.fromFunction0(update), world = world.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PointerConstraint]
+  }
+  @scala.inline
+  implicit class PointerConstraintOps[Self <: PointerConstraint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBody(value: BodyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCamera(value: Camera): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("camera")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConstraint(value: ConstraintType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constraint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestroy(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetBody(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBody")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHitTestBody(value: (BodyType, Vector2) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hitTestBody")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withOnDown(value: Pointer => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onDown")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnUp(value: Pointer => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onUp")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPart(value: BodyType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("part")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPointer(value: Pointer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPosition(value: Vector2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScene(value: Scene): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scene")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStopDrag(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopDrag")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withWorld(value: World): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("world")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

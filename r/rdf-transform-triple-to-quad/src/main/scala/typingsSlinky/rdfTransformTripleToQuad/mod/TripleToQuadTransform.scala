@@ -1,8 +1,8 @@
 package typingsSlinky.rdfTransformTripleToQuad.mod
 
-import typingsSlinky.node.AnonEnd
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.WritableStream
+import typingsSlinky.node.anon.End
 import typingsSlinky.node.streamMod.Transform
 import typingsSlinky.rdfJs.mod.BaseQuad
 import typingsSlinky.rdfJs.mod.Stream
@@ -17,7 +17,7 @@ trait TripleToQuadTransform[Q /* <: BaseQuad */]
   /* InferMemberOverrides */
   override def pipe[T /* <: WritableStream */](destination: T): T = js.native
   /* InferMemberOverrides */
-  override def pipe[T /* <: WritableStream */](destination: T, options: AnonEnd): T = js.native
+  override def pipe[T /* <: WritableStream */](destination: T, options: End): T = js.native
   /**
     * This method pulls a quad out of the internal buffer and returns it.
     * If there is no quad available, then it will return null.

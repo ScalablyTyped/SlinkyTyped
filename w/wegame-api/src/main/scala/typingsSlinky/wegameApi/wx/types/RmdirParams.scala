@@ -1,6 +1,6 @@
 package typingsSlinky.wegameApi.wx.types
 
-import typingsSlinky.wegameApi.AnonErrMsg
+import typingsSlinky.wegameApi.anon.ErrMsg
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait RmdirParams extends js.Object {
   var complete: js.UndefOr[js.Function0[Unit]] = js.native
   var dirPath: String = js.native
-  var fail: js.UndefOr[js.Function1[/* res */ AnonErrMsg, Unit]] = js.native
+  var fail: js.UndefOr[js.Function1[/* res */ ErrMsg, Unit]] = js.native
   var recursive: js.UndefOr[Boolean] = js.native
   var success: js.UndefOr[js.Function0[Unit]] = js.native
 }
@@ -45,7 +45,7 @@ object RmdirParams {
         ret
     }
     @scala.inline
-    def withFail(value: /* res */ AnonErrMsg => Unit): Self = {
+    def withFail(value: /* res */ ErrMsg => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fail")(js.Any.fromFunction1(value))
         ret

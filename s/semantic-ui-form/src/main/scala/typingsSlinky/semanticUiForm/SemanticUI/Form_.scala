@@ -2,7 +2,7 @@ package typingsSlinky.semanticUiForm.SemanticUI
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery_.TriggeredEvent
+import typingsSlinky.jquery.JQuery.TriggeredEvent
 import typingsSlinky.semanticUiForm.JQuery
 import typingsSlinky.semanticUiForm.SemanticUI.Form.ClassNameSettings
 import typingsSlinky.semanticUiForm.SemanticUI.Form.ErrorSettings

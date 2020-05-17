@@ -1,6 +1,6 @@
 package typingsSlinky.inkTestingLibrary.mod
 
-import typingsSlinky.inkTestingLibrary.AnonWrite
+import typingsSlinky.inkTestingLibrary.anon.Write
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RenderResponse extends js.Object {
   var frames: js.Array[String] = js.native
-  var stdin: AnonWrite = js.native
+  var stdin: Write = js.native
   def lastFrame(): String = js.native
   def rerender(
     tree: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify InkElement */ js.Any
@@ -22,7 +22,7 @@ object RenderResponse {
     frames: js.Array[String],
     lastFrame: () => String,
     rerender: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify InkElement */ js.Any => Unit,
-    stdin: AnonWrite,
+    stdin: Write,
     unmount: () => Unit
   ): RenderResponse = {
     val __obj = js.Dynamic.literal(frames = frames.asInstanceOf[js.Any], lastFrame = js.Any.fromFunction0(lastFrame), rerender = js.Any.fromFunction1(rerender), stdin = stdin.asInstanceOf[js.Any], unmount = js.Any.fromFunction0(unmount))
@@ -55,7 +55,7 @@ object RenderResponse {
         ret
     }
     @scala.inline
-    def withStdin(value: AnonWrite): Self = {
+    def withStdin(value: Write): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stdin")(value.asInstanceOf[js.Any])
         ret

@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.web.html.textarea.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -212,7 +212,7 @@ object TextArea {
     @scala.inline
     def crossOrigin(value: String): this.type = set("crossOrigin", value.asInstanceOf[js.Any])
     @scala.inline
-    def dangerouslySetInnerHTML(value: AnonHtml): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
+    def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
     @scala.inline
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline

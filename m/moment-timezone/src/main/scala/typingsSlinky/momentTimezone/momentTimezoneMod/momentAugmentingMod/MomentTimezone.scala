@@ -1,7 +1,7 @@
 package typingsSlinky.momentTimezone.momentTimezoneMod.momentAugmentingMod
 
 import typingsSlinky.moment.mod.MomentFormatSpecification
-import typingsSlinky.momentTimezone.AnonLinks
+import typingsSlinky.momentTimezone.anon.Links
 import typingsSlinky.momentTimezone.momentTimezoneBooleans.`false`
 import typingsSlinky.momentTimezone.momentTimezoneBooleans.`true`
 import scala.scalajs.js
@@ -35,7 +35,7 @@ trait MomentTimezone extends js.Object {
   def guess(ignoreCache: Boolean): String = js.native
   def link(packedLinkString: String): Unit = js.native
   def link(packedLinkString: js.Array[String]): Unit = js.native
-  def load(data: AnonLinks): Unit = js.native
+  def load(data: Links): Unit = js.native
   def names(): js.Array[String] = js.native
   def setDefault(): Moment = js.native
   def setDefault(timezone: String): Moment = js.native

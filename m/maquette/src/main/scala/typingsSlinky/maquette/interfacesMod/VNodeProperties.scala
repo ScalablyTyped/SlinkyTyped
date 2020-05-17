@@ -3,15 +3,15 @@ package typingsSlinky.maquette.interfacesMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
 import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
-import typingsSlinky.maquette.PartialCSSStyleDeclaratio
+import typingsSlinky.maquette.anon.PartialCSSStyleDeclaratio
 import typingsSlinky.maquette.maquetteStrings.`HintColon do not use GraveaccentclassNameGraveaccentComma use GraveaccentclassGraveaccent instead`
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -137,7 +137,7 @@ trait VNodeProperties
   val method: js.UndefOr[String] = js.native
   val name: js.UndefOr[String] = js.native
   var onblur: js.UndefOr[js.Function1[/* ev */ FocusEvent, Boolean | Unit]] = js.native
-  var onchange: js.UndefOr[js.Function1[/* ev */ Event_, Boolean | Unit]] = js.native
+  var onchange: js.UndefOr[js.Function1[/* ev */ Event, Boolean | Unit]] = js.native
   var onclick: js.UndefOr[js.Function1[/* ev */ MouseEvent, Boolean | Unit]] = js.native
   var ondblclick: js.UndefOr[js.Function1[/* ev */ MouseEvent, Boolean | Unit]] = js.native
   var ondrag: js.UndefOr[js.Function1[/* ev */ DragEvent, Boolean | Unit]] = js.native
@@ -148,11 +148,11 @@ trait VNodeProperties
   var ondragstart: js.UndefOr[js.Function1[/* ev */ DragEvent, Boolean | Unit]] = js.native
   var ondrop: js.UndefOr[js.Function1[/* ev */ DragEvent, Boolean | Unit]] = js.native
   var onfocus: js.UndefOr[js.Function1[/* ev */ FocusEvent, Boolean | Unit]] = js.native
-  var oninput: js.UndefOr[js.Function1[/* ev */ Event_, Boolean | Unit]] = js.native
+  var oninput: js.UndefOr[js.Function1[/* ev */ Event, Boolean | Unit]] = js.native
   var onkeydown: js.UndefOr[js.Function1[/* ev */ KeyboardEvent, Boolean | Unit]] = js.native
   var onkeypress: js.UndefOr[js.Function1[/* ev */ KeyboardEvent, Boolean | Unit]] = js.native
   var onkeyup: js.UndefOr[js.Function1[/* ev */ KeyboardEvent, Boolean | Unit]] = js.native
-  var onload: js.UndefOr[js.Function1[/* ev */ Event_, Boolean | Unit]] = js.native
+  var onload: js.UndefOr[js.Function1[/* ev */ Event, Boolean | Unit]] = js.native
   var onmousedown: js.UndefOr[js.Function1[/* ev */ MouseEvent, Boolean | Unit]] = js.native
   var onmouseenter: js.UndefOr[js.Function1[/* ev */ MouseEvent, Boolean | Unit]] = js.native
   var onmouseleave: js.UndefOr[js.Function1[/* ev */ MouseEvent, Boolean | Unit]] = js.native
@@ -162,7 +162,7 @@ trait VNodeProperties
   var onmouseup: js.UndefOr[js.Function1[/* ev */ MouseEvent, Boolean | Unit]] = js.native
   var onmousewheel: js.UndefOr[js.Function1[/* ev */ WheelEvent, Boolean | Unit]] = js.native
   var onscroll: js.UndefOr[js.Function1[/* ev */ UIEvent, Boolean | Unit]] = js.native
-  var onsubmit: js.UndefOr[js.Function1[/* ev */ Event_, Boolean | Unit]] = js.native
+  var onsubmit: js.UndefOr[js.Function1[/* ev */ Event, Boolean | Unit]] = js.native
   var ontouchcancel: js.UndefOr[js.Function1[/* ev */ TouchEvent, Boolean | Unit]] = js.native
   var ontouchend: js.UndefOr[js.Function1[/* ev */ TouchEvent, Boolean | Unit]] = js.native
   var ontouchmove: js.UndefOr[js.Function1[/* ev */ TouchEvent, Boolean | Unit]] = js.native
@@ -521,7 +521,7 @@ object VNodeProperties {
         ret
     }
     @scala.inline
-    def withOnchange(value: /* ev */ Event_ => Boolean | Unit): Self = {
+    def withOnchange(value: /* ev */ Event => Boolean | Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onchange")(js.Any.fromFunction1(value))
         ret
@@ -653,7 +653,7 @@ object VNodeProperties {
         ret
     }
     @scala.inline
-    def withOninput(value: /* ev */ Event_ => Boolean | Unit): Self = {
+    def withOninput(value: /* ev */ Event => Boolean | Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oninput")(js.Any.fromFunction1(value))
         ret
@@ -701,7 +701,7 @@ object VNodeProperties {
         ret
     }
     @scala.inline
-    def withOnload(value: /* ev */ Event_ => Boolean | Unit): Self = {
+    def withOnload(value: /* ev */ Event => Boolean | Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onload")(js.Any.fromFunction1(value))
         ret
@@ -821,7 +821,7 @@ object VNodeProperties {
         ret
     }
     @scala.inline
-    def withOnsubmit(value: /* ev */ Event_ => Boolean | Unit): Self = {
+    def withOnsubmit(value: /* ev */ Event => Boolean | Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onsubmit")(js.Any.fromFunction1(value))
         ret

@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
 import typingsSlinky.heremaps.H.geo.IPoint
 import typingsSlinky.heremaps.H.geo.Point
-import typingsSlinky.heremaps.H.ui.InfoBubble.Options
 import typingsSlinky.heremaps.H.ui.InfoBubble.State
 import typingsSlinky.heremaps.H.ui.base.Element
 import scala.scalajs.js
@@ -14,16 +13,8 @@ import scala.scalajs.js.annotation._
 /**
   * This class represents an information bubble bound to a geo-position on the map.
   */
-@JSGlobal("H.ui.InfoBubble")
 @js.native
-class InfoBubble_ protected () extends Element {
-  /**
-    * Constructor
-    * @param position {H.geo.IPoint} - the geo-position to which this info bubble corresponds
-    * @param opt_options {H.ui.InfoBubble.Options=} - optional parameters to be passed to the info bubble
-    */
-  def this(position: IPoint) = this()
-  def this(position: IPoint, opt_options: Options) = this()
+trait InfoBubble_ extends Element {
   /**
     * This method closes the info bubble (setting its state to CLOSED)
     */

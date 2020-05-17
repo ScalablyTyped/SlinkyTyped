@@ -10,10 +10,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Contains methods that a stream parser plug-in uses to send notifications to a PlayReady-ND client. */
-@JSGlobal("Windows.Media.Protection.PlayReady.NDStreamParserNotifier")
 @js.native
-/** Creates a new instance of the NDStreamParserNotifier class. */
-class NDStreamParserNotifier () extends js.Object {
+trait NDStreamParserNotifier extends js.Object {
   /**
     * Called by the stream parser when it requests a setup decryptor.
     * @param descriptor The descriptor of the media stream being decrypted.
@@ -52,5 +50,52 @@ class NDStreamParserNotifier () extends js.Object {
     ccFormat: NDClosedCaptionFormat,
     ccDataBytes: js.Array[Double]
   ): Unit = js.native
+}
+
+object NDStreamParserNotifier {
+  @scala.inline
+  def apply(
+    onBeginSetupDecryptor: (IMediaStreamDescriptor, String, js.Array[Double]) => Unit,
+    onContentIDReceived: INDLicenseFetchDescriptor => Unit,
+    onMediaStreamDescriptorCreated: (IVector[AudioStreamDescriptor], IVector[VideoStreamDescriptor]) => Unit,
+    onSampleParsed: (Double, NDMediaStreamType, MediaStreamSample, Double, NDClosedCaptionFormat, js.Array[Double]) => Unit
+  ): NDStreamParserNotifier = {
+    val __obj = js.Dynamic.literal(onBeginSetupDecryptor = js.Any.fromFunction3(onBeginSetupDecryptor), onContentIDReceived = js.Any.fromFunction1(onContentIDReceived), onMediaStreamDescriptorCreated = js.Any.fromFunction2(onMediaStreamDescriptorCreated), onSampleParsed = js.Any.fromFunction6(onSampleParsed))
+    __obj.asInstanceOf[NDStreamParserNotifier]
+  }
+  @scala.inline
+  implicit class NDStreamParserNotifierOps[Self <: NDStreamParserNotifier] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnBeginSetupDecryptor(value: (IMediaStreamDescriptor, String, js.Array[Double]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBeginSetupDecryptor")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withOnContentIDReceived(value: INDLicenseFetchDescriptor => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onContentIDReceived")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnMediaStreamDescriptorCreated(value: (IVector[AudioStreamDescriptor], IVector[VideoStreamDescriptor]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onMediaStreamDescriptorCreated")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withOnSampleParsed(
+      value: (Double, NDMediaStreamType, MediaStreamSample, Double, NDClosedCaptionFormat, js.Array[Double]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onSampleParsed")(js.Any.fromFunction6(value))
+        ret
+    }
+  }
+  
 }
 

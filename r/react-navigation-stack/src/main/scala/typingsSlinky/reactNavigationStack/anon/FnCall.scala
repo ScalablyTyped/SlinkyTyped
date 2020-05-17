@@ -1,0 +1,48 @@
+package typingsSlinky.reactNavigationStack.anon
+
+import typingsSlinky.reactNavigationStack.typesMod.TransitionConfig
+import typingsSlinky.reactNavigationStack.typesMod.TransitionProps
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait FnCall extends js.Object {
+  def apply[T](
+    transitionConfigurer: js.UndefOr[
+      js.Function3[
+        /* transitionProps */ TransitionProps, 
+        /* prevTransitionProps */ js.UndefOr[TransitionProps], 
+        /* isModal */ js.UndefOr[Boolean], 
+        T
+      ]
+    ],
+    transitionProps: TransitionProps
+  ): TransitionConfig with T = js.native
+  def apply[T](
+    transitionConfigurer: js.UndefOr[
+      js.Function3[
+        /* transitionProps */ TransitionProps, 
+        /* prevTransitionProps */ js.UndefOr[TransitionProps], 
+        /* isModal */ js.UndefOr[Boolean], 
+        T
+      ]
+    ],
+    transitionProps: TransitionProps,
+    prevTransitionProps: TransitionProps
+  ): TransitionConfig with T = js.native
+  def apply[T](
+    transitionConfigurer: js.UndefOr[
+      js.Function3[
+        /* transitionProps */ TransitionProps, 
+        /* prevTransitionProps */ js.UndefOr[TransitionProps], 
+        /* isModal */ js.UndefOr[Boolean], 
+        T
+      ]
+    ],
+    transitionProps: TransitionProps,
+    prevTransitionProps: TransitionProps,
+    isModal: Boolean
+  ): TransitionConfig with T = js.native
+}
+

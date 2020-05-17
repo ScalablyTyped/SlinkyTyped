@@ -1,8 +1,8 @@
 package typingsSlinky.tensorflowTfjsCore.texUtilMod
 
 import org.scalajs.dom.raw.WebGLTexture
-import typingsSlinky.tensorflowTfjsCore.AnonFlatOffset
-import typingsSlinky.tensorflowTfjsCore.AnonImagReal
+import typingsSlinky.tensorflowTfjsCore.anon.FlatOffset
+import typingsSlinky.tensorflowTfjsCore.anon.ImagReal
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.BackendValues
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import scala.scalajs.js
@@ -11,11 +11,11 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait TextureData extends js.Object {
-  var complexTensors: js.UndefOr[AnonImagReal] = js.native
+  var complexTensors: js.UndefOr[ImagReal] = js.native
   var dtype: DataType = js.native
   var isPacked: js.UndefOr[Boolean] = js.native
   var shape: js.Array[Double] = js.native
-  var slice: js.UndefOr[AnonFlatOffset] = js.native
+  var slice: js.UndefOr[FlatOffset] = js.native
   /** [rows, columns] shape of the texture. */
   var texShape: js.UndefOr[js.Tuple2[Double, Double]] = js.native
   var texture: js.UndefOr[WebGLTexture] = js.native
@@ -48,7 +48,7 @@ object TextureData {
         ret
     }
     @scala.inline
-    def withComplexTensors(value: AnonImagReal): Self = {
+    def withComplexTensors(value: ImagReal): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("complexTensors")(value.asInstanceOf[js.Any])
         ret
@@ -72,7 +72,7 @@ object TextureData {
         ret
     }
     @scala.inline
-    def withSlice(value: AnonFlatOffset): Self = {
+    def withSlice(value: FlatOffset): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("slice")(value.asInstanceOf[js.Any])
         ret

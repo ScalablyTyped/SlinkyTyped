@@ -3,14 +3,14 @@ package typingsSlinky.storybookAddonStoryshotsPuppeteer.configMod
 import typingsSlinky.puppeteer.mod.Browser
 import typingsSlinky.puppeteer.mod.DirectNavigationOptions
 import typingsSlinky.puppeteer.mod.Page
-import typingsSlinky.storybookAddonStoryshotsPuppeteer.AnonFilter
+import typingsSlinky.storybookAddonStoryshotsPuppeteer.anon.Filter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait PuppeteerTestConfig extends CommonConfig {
-  var testBody: (js.Function2[/* page */ Page, /* options */ Options, Unit | js.Promise[Unit]]) with AnonFilter = js.native
+  var testBody: (js.Function2[/* page */ Page, /* options */ Options, Unit | js.Promise[Unit]]) with Filter = js.native
 }
 
 object PuppeteerTestConfig {
@@ -22,7 +22,7 @@ object PuppeteerTestConfig {
     getGotoOptions: Options => DirectNavigationOptions,
     setupTimeout: Double,
     storybookUrl: String,
-    testBody: (js.Function2[/* page */ Page, /* options */ Options, Unit | js.Promise[Unit]]) with AnonFilter,
+    testBody: (js.Function2[/* page */ Page, /* options */ Options, Unit | js.Promise[Unit]]) with Filter,
     testTimeout: Double
   ): PuppeteerTestConfig = {
     val __obj = js.Dynamic.literal(chromeExecutablePath = chromeExecutablePath.asInstanceOf[js.Any], customizePage = js.Any.fromFunction1(customizePage), getCustomBrowser = js.Any.fromFunction0(getCustomBrowser), getGotoOptions = js.Any.fromFunction1(getGotoOptions), setupTimeout = setupTimeout.asInstanceOf[js.Any], storybookUrl = storybookUrl.asInstanceOf[js.Any], testBody = testBody.asInstanceOf[js.Any], testTimeout = testTimeout.asInstanceOf[js.Any])
@@ -35,9 +35,7 @@ object PuppeteerTestConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTestBody(
-      value: (js.Function2[/* page */ Page, /* options */ Options, Unit | js.Promise[Unit]]) with AnonFilter
-    ): Self = {
+    def withTestBody(value: (js.Function2[/* page */ Page, /* options */ Options, Unit | js.Promise[Unit]]) with Filter): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("testBody")(value.asInstanceOf[js.Any])
         ret

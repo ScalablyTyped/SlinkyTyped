@@ -1,7 +1,7 @@
 package typingsSlinky.firebaseAuthTypes.mod
 
 import typingsSlinky.firebaseAppTypes.mod.FirebaseApp
-import typingsSlinky.firebaseAuthTypes.AnonLOCAL
+import typingsSlinky.firebaseAuthTypes.anon.LOCAL
 import typingsSlinky.firebaseUtil.subscribeMod.Observer
 import typingsSlinky.firebaseUtil.subscribeMod.Unsubscribe
 import scala.scalajs.js
@@ -68,6 +68,6 @@ class FirebaseAuth protected () extends js.Object {
 @JSImport("@firebase/auth-types", "FirebaseAuth")
 @js.native
 object FirebaseAuth extends js.Object {
-  var Persistence: AnonLOCAL = js.native
+  var Persistence: LOCAL = js.native
 }
 

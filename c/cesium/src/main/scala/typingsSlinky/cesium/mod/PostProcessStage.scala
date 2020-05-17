@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonClearColor
+import typingsSlinky.cesium.anon.ClearColor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "PostProcessStage")
 @js.native
 class PostProcessStage () extends js.Object {
-  def this(options: AnonClearColor) = this()
+  def this(options: ClearColor) = this()
   val clearColor: Color = js.native
   var enabled: Boolean = js.native
   val forcePowerOfTwo: Boolean = js.native

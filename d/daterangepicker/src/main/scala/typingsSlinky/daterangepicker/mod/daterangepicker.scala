@@ -1,6 +1,6 @@
 package typingsSlinky.daterangepicker.mod
 
-import typingsSlinky.daterangepicker.mod._Global_.JQuery
+import typingsSlinky.daterangepicker.mod.global.JQuery
 import typingsSlinky.moment.mod.Moment
 import scala.scalajs.js
 import scala.scalajs.js.`|`

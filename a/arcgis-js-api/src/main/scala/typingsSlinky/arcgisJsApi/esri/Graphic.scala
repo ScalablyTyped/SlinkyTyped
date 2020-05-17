@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,9 +8,9 @@ import scala.scalajs.js.annotation._
 trait Graphic
   extends Accessor
      with JSONSupport
-     with IntersectItem
-     with _GoToTarget2D
-     with _GoToTarget3D {
+     with GoToTarget2D
+     with GoToTarget3D
+     with IntersectItem {
   /**
     * Name-value pairs of fields and field values associated with the graphic.
     *
@@ -89,8 +88,4 @@ trait Graphic
     */
   def setAttribute(name: String, newValue: js.Any): Unit = js.native
 }
-
-@JSGlobal("__esri.Graphic")
-@js.native
-object Graphic extends TopLevel[GraphicConstructor]
 

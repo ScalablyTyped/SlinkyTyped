@@ -8,7 +8,7 @@ import typingsSlinky.react.mod.GetDerivedStateFromError
 import typingsSlinky.react.mod.GetDerivedStateFromProps
 import typingsSlinky.react.mod.ValidationMap
 import typingsSlinky.react.mod.WeakValidationMap
-import typingsSlinky.reactNative.ReadonlyNativeMethods
+import typingsSlinky.reactNative.anon.ReadonlyNativeMethods
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`

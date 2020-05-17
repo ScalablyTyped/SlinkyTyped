@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PackTransform extends _Transforms {
+trait PackTransform extends Transforms {
   var as: js.UndefOr[(Vector5[String | SignalRef]) | SignalRef] = js.native
   var field: js.UndefOr[FieldRef] = js.native
   var padding: js.UndefOr[Double | SignalRef] = js.native

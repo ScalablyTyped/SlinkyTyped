@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.issuing.disputes
 
-import typingsSlinky.stripe.AnonDisputeexplanation
+import typingsSlinky.stripe.anon.Disputeexplanation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,8 +10,8 @@ trait IIssuingDisputeEvidence extends js.Object {
   /**
     * Evidence to support a fraudulent dispute. This will only be present if your dispute’s reason is fraudulent.
     */
-  var fraudulent: js.UndefOr[AnonDisputeexplanation] = js.native
-  var other: js.UndefOr[AnonDisputeexplanation] = js.native
+  var fraudulent: js.UndefOr[Disputeexplanation] = js.native
+  var other: js.UndefOr[Disputeexplanation] = js.native
 }
 
 object IIssuingDisputeEvidence {
@@ -27,7 +27,7 @@ object IIssuingDisputeEvidence {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFraudulent(value: AnonDisputeexplanation): Self = {
+    def withFraudulent(value: Disputeexplanation): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fraudulent")(value.asInstanceOf[js.Any])
         ret
@@ -39,7 +39,7 @@ object IIssuingDisputeEvidence {
         ret
     }
     @scala.inline
-    def withOther(value: AnonDisputeexplanation): Self = {
+    def withOther(value: Disputeexplanation): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("other")(value.asInstanceOf[js.Any])
         ret

@@ -8,4 +8,5 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RecursiveArray[T]
   extends Array[T | js.Array[T] | RecursiveArray[T]]
+     with StyleProp[js.Any]
 

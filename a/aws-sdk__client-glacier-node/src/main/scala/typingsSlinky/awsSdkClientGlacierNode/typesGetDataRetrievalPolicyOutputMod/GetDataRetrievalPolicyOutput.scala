@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientGlacierNode.typesGetDataRetrievalPolicyOutputMod
 
-import typingsSlinky.awsSdkClientGlacierNode.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientGlacierNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientGlacierNode.typesDataRetrievalPolicyMod.UnmarshalledDataRetrievalPolicy
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait GetDataRetrievalPolicyOutput extends _OutputTypesUnion {
+trait GetDataRetrievalPolicyOutput extends OutputTypesUnion {
   /**
     * Metadata about the response received, including the HTTP status code, HTTP headers, and any request identifiers recognized by the SDK.
     */

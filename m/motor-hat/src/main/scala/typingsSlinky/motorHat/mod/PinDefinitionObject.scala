@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PinDefinitionObject extends js.Object {
+trait PinDefinitionObject extends PinDefinition {
   /**
     * Pin number of the first coil output
     */

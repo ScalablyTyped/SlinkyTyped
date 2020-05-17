@@ -1,13 +1,30 @@
 package typingsSlinky.winrt.Windows.UI.WebUI
 
+import typingsSlinky.winrt.Windows.ApplicationModel.Activation.ActivationKind
+import typingsSlinky.winrt.Windows.ApplicationModel.Activation.ApplicationExecutionState
 import typingsSlinky.winrt.Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs
+import typingsSlinky.winrt.Windows.ApplicationModel.Activation.SplashScreen
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.UI.WebUI.WebUILaunchActivatedEventArgs")
 @js.native
-class WebUILaunchActivatedEventArgs ()
+trait WebUILaunchActivatedEventArgs
   extends ILaunchActivatedEventArgs
      with IActivatedEventArgsDeferral
+
+object WebUILaunchActivatedEventArgs {
+  @scala.inline
+  def apply(
+    activatedOperation: ActivatedOperation,
+    arguments: String,
+    kind: ActivationKind,
+    previousExecutionState: ApplicationExecutionState,
+    splashScreen: SplashScreen,
+    tileId: String
+  ): WebUILaunchActivatedEventArgs = {
+    val __obj = js.Dynamic.literal(activatedOperation = activatedOperation.asInstanceOf[js.Any], arguments = arguments.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], previousExecutionState = previousExecutionState.asInstanceOf[js.Any], splashScreen = splashScreen.asInstanceOf[js.Any], tileId = tileId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebUILaunchActivatedEventArgs]
+  }
+}
 

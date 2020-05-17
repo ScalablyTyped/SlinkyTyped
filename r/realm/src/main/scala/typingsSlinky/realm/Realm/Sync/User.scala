@@ -1,7 +1,5 @@
 package typingsSlinky.realm.Realm.Sync
 
-import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.realm.AnonProvider
 import typingsSlinky.realm.Realm.Configuration
 import typingsSlinky.realm.Realm.PartialConfiguration
 import typingsSlinky.realm.realmStrings.any
@@ -15,9 +13,8 @@ import scala.scalajs.js.annotation._
   * User
   * @see { @link https://realm.io/docs/javascript/latest/api/Realm.Sync.User.html }
   */
-@JSGlobal("Realm.Sync.User")
 @js.native
-class User () extends js.Object {
+trait User extends js.Object {
   val identity: String = js.native
   val isAdmin: Boolean = js.native
   val isAdminToken: Boolean = js.native
@@ -41,33 +38,5 @@ class User () extends js.Object {
   def offerPermissions(realmUrl: String, accessLevel: AccessLevel, expiresAt: js.Date): js.Promise[String] = js.native
   def retrieveAccount(provider: String, username: String): js.Promise[Account] = js.native
   def serialize(): SerializedUser | SerializedTokenUser = js.native
-}
-
-/* static members */
-@JSGlobal("Realm.Sync.User")
-@js.native
-object User extends js.Object {
-  val all: StringDictionary[User] = js.native
-  val current: js.UndefOr[User] = js.native
-  // Deprecated
-  /** @deprecated, to be removed in future versions */
-  def adminUser(adminToken: String): User = js.native
-  def adminUser(adminToken: String, server: String): User = js.native
-  /** @deprecated, to be removed in future versions */
-  def authenticate(server: String, provider: String, options: js.Any): js.Promise[User] = js.native
-  def completePasswordReset(server: String, resetToken: String, newPassword: String): js.Promise[Unit] = js.native
-  def confirmEmail(server: String, confirmationToken: String): js.Promise[Unit] = js.native
-  def deserialize(serialized: SerializedTokenUser): User = js.native
-  def deserialize(serialized: SerializedUser): User = js.native
-  def login(server: String, credentials: AdminCredentials): User = js.native
-  def login(server: String, credentials: Credentials): js.Promise[User] = js.native
-  /** @deprecated, to be removed in future versions */
-  def login(server: String, username: String, password: String): js.Promise[User] = js.native
-  /** @deprecated, to be removed in future versions */
-  def register(server: String, username: String, password: String): js.Promise[User] = js.native
-  /** @deprecated, to be removed in future versions */
-  def registerWithProvider(server: String, options: AnonProvider): js.Promise[User] = js.native
-  def requestEmailConfirmation(server: String, email: String): js.Promise[Unit] = js.native
-  def requestPasswordReset(server: String, email: String): js.Promise[Unit] = js.native
 }
 

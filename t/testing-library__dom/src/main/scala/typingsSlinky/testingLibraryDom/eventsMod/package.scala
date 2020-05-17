@@ -6,8 +6,8 @@ import scala.scalajs.js.annotation._
 
 package object eventsMod {
   type FireFunction = js.Function2[
-    /* element */ typingsSlinky.std.Document_ | org.scalajs.dom.raw.Element | typingsSlinky.std.Window_ | org.scalajs.dom.raw.Node, 
-    /* event */ typingsSlinky.std.Event_, 
+    /* element */ org.scalajs.dom.raw.Document | org.scalajs.dom.raw.Element | org.scalajs.dom.raw.Window | org.scalajs.dom.raw.Node, 
+    /* event */ org.scalajs.dom.raw.Event, 
     scala.Boolean
   ]
 }

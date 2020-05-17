@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ContentQr
   extends ContentBase
-     with _Content {
+     with Content {
   var eccLevel: js.UndefOr[L | M | Q | H] = js.native
   var fit: js.UndefOr[Double] = js.native
   var foreground: js.UndefOr[String] = js.native

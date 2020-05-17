@@ -1,0 +1,16 @@
+package typingsSlinky.mfiles.global.MFiles
+
+import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.IVaultUserOperations
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("MFiles.VaultUserOperations")
+@js.native
+class VaultUserOperations () extends IVaultUserOperations
+
+@JSGlobal("MFiles.VaultUserOperations")
+@js.native
+object VaultUserOperations extends Instantiable0[IVaultUserOperations]
+

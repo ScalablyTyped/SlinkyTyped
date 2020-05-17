@@ -1,14 +1,14 @@
 package typingsSlinky.amapJsApiHeatmap.AMap.Heatmap
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.amapJsApiHeatmap.AnonDrawGridLine
+import typingsSlinky.amapJsApiHeatmap.anon.DrawGridLine
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Options extends js.Object {
-  var `3d`: js.UndefOr[AnonDrawGridLine] = js.native
+  var `3d`: js.UndefOr[DrawGridLine] = js.native
   var blur: js.UndefOr[Double] = js.native
   /**
     * 热力图的渐变区间
@@ -48,7 +48,7 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with3d(value: AnonDrawGridLine): Self = {
+    def with3d(value: DrawGridLine): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("3d")(value.asInstanceOf[js.Any])
         ret

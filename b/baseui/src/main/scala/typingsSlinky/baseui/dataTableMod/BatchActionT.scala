@@ -1,6 +1,6 @@
 package typingsSlinky.baseui.dataTableMod
 
-import typingsSlinky.baseui.AnonClearSelection
+import typingsSlinky.baseui.anon.ClearSelection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait BatchActionT extends js.Object {
   var label: String = js.native
   var renderIcon: js.UndefOr[js.Any] = js.native
-  def onClick(params: AnonClearSelection): js.Any = js.native
+  def onClick(params: ClearSelection): js.Any = js.native
 }
 
 object BatchActionT {
   @scala.inline
-  def apply(label: String, onClick: AnonClearSelection => js.Any): BatchActionT = {
+  def apply(label: String, onClick: ClearSelection => js.Any): BatchActionT = {
     val __obj = js.Dynamic.literal(label = label.asInstanceOf[js.Any], onClick = js.Any.fromFunction1(onClick))
     __obj.asInstanceOf[BatchActionT]
   }
@@ -31,7 +31,7 @@ object BatchActionT {
         ret
     }
     @scala.inline
-    def withOnClick(value: AnonClearSelection => js.Any): Self = {
+    def withOnClick(value: ClearSelection => js.Any): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret

@@ -1,0 +1,32 @@
+package typingsSlinky.octokitPluginRestEndpointMethods.anon
+
+import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.PullsCreateCommentParams
+import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.PullsCreateCommentParamsDeprecatedInReplyTo
+import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.PullsCreateCommentParamsDeprecatedNumber
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait `286` extends js.Object {
+  var endpoint: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify EndpointInterface */ js.Any = js.native
+  def apply(): js.Promise[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<PullsCreateCommentResponse> */ _
+  ] = js.native
+  def apply(
+    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with PullsCreateCommentParams
+  ): js.Promise[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<PullsCreateCommentResponse> */ _
+  ] = js.native
+  def apply(
+    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with PullsCreateCommentParamsDeprecatedNumber
+  ): js.Promise[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<PullsCreateCommentResponse> */ _
+  ] = js.native
+  def apply(
+    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with PullsCreateCommentParamsDeprecatedInReplyTo
+  ): js.Promise[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<PullsCreateCommentResponse> */ _
+  ] = js.native
+}
+

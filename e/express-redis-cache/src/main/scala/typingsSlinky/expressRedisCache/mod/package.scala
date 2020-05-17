@@ -16,5 +16,4 @@ package object mod {
     /* res */ typingsSlinky.express.mod.Response_[js.Any], 
     scala.Double
   ]
-  type ExpireOption = scala.Double | typingsSlinky.expressRedisCache.mod.ExpirationConfig
 }

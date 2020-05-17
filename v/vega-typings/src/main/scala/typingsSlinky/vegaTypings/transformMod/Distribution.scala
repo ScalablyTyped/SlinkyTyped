@@ -1,10 +1,5 @@
 package typingsSlinky.vegaTypings.transformMod
 
-import typingsSlinky.vegaTypings.vegaTypingsStrings.kde
-import typingsSlinky.vegaTypings.vegaTypingsStrings.lognormal
-import typingsSlinky.vegaTypings.vegaTypingsStrings.mixture
-import typingsSlinky.vegaTypings.vegaTypingsStrings.normal
-import typingsSlinky.vegaTypings.vegaTypingsStrings.uniform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,29 +15,14 @@ trait Distribution extends js.Object
 
 object Distribution {
   @scala.inline
-  def DistributionKDE(field: String | TransformField, function: kde): Distribution = {
-    val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any], function = function.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Distribution]
-  }
+  implicit def apply(value: DistributionKDE): Distribution = value.asInstanceOf[Distribution]
   @scala.inline
-  def DistributionMixture(field: String | TransformField, function: mixture): Distribution = {
-    val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any], function = function.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Distribution]
-  }
+  implicit def apply(value: DistributionLogNormal): Distribution = value.asInstanceOf[Distribution]
   @scala.inline
-  def DistributionUniform(function: uniform): Distribution = {
-    val __obj = js.Dynamic.literal(function = function.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Distribution]
-  }
+  implicit def apply(value: DistributionMixture): Distribution = value.asInstanceOf[Distribution]
   @scala.inline
-  def DistributionNormal(function: normal): Distribution = {
-    val __obj = js.Dynamic.literal(function = function.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Distribution]
-  }
+  implicit def apply(value: DistributionNormal): Distribution = value.asInstanceOf[Distribution]
   @scala.inline
-  def DistributionLogNormal(function: lognormal): Distribution = {
-    val __obj = js.Dynamic.literal(function = function.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Distribution]
-  }
+  implicit def apply(value: DistributionUniform): Distribution = value.asInstanceOf[Distribution]
 }
 

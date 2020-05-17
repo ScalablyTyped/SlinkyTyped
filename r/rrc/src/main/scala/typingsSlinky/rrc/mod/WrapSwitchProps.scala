@@ -3,7 +3,7 @@ package typingsSlinky.rrc.mod
 import typingsSlinky.history.mod.Location
 import typingsSlinky.history.mod.LocationState
 import typingsSlinky.reactRouter.mod.`match`
-import typingsSlinky.rrc.LocationDescriptorObjectL
+import typingsSlinky.rrc.anon.LocationDescriptorObjectL
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

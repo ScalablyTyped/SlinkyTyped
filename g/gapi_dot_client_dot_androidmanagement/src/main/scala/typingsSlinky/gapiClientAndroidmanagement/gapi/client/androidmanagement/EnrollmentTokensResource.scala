@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientAndroidmanagement.gapi.client.androidmanagement
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAndroidmanagement.AnonAlt
-import typingsSlinky.gapiClientAndroidmanagement.AnonKey
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAndroidmanagement.anon.Alt
+import typingsSlinky.gapiClientAndroidmanagement.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait EnrollmentTokensResource extends js.Object {
   /** Creates an enrollment token for a given enterprise. */
-  def create(request: AnonKey): Request_[EnrollmentToken] = js.native
+  def create(request: Key): Request[EnrollmentToken] = js.native
   /** Deletes an enrollment token, which prevents future use of the token. */
-  def delete(request: AnonAlt): Request_[js.Object] = js.native
+  def delete(request: Alt): Request[js.Object] = js.native
 }
 
 object EnrollmentTokensResource {
   @scala.inline
-  def apply(create: AnonKey => Request_[EnrollmentToken], delete: AnonAlt => Request_[js.Object]): EnrollmentTokensResource = {
+  def apply(create: Key => Request[EnrollmentToken], delete: Alt => Request[js.Object]): EnrollmentTokensResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete))
     __obj.asInstanceOf[EnrollmentTokensResource]
   }
@@ -28,13 +28,13 @@ object EnrollmentTokensResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: AnonKey => Request_[EnrollmentToken]): Self = {
+    def withCreate(value: Key => Request[EnrollmentToken]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonAlt => Request_[js.Object]): Self = {
+    def withDelete(value: Alt => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret

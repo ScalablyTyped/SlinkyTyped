@@ -2,7 +2,6 @@ package typingsSlinky.winrtUwp.Windows.Devices.AllJoyn
 
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IMapView
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
-import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtUwp.Windows.Foundation.Uri
 import typingsSlinky.winrtUwp.Windows.Globalization.Language
 import scala.scalajs.js
@@ -10,9 +9,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Used to view data about another app and the device it is running on. */
-@JSGlobal("Windows.Devices.AllJoyn.AllJoynAboutDataView")
 @js.native
-abstract class AllJoynAboutDataView () extends js.Object {
+trait AllJoynAboutDataView extends js.Object {
   /** The version number for the implemented AllJoyn platform software. */
   var ajSoftwareVersion: String = js.native
   /** A globally unique identifier associated with the app. */
@@ -47,26 +45,132 @@ abstract class AllJoynAboutDataView () extends js.Object {
   var supportedLanguages: IVectorView[Language] = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Devices.AllJoyn.AllJoynAboutDataView")
-@js.native
-object AllJoynAboutDataView extends js.Object {
-  /**
-    * Gets the About data for a session.
-    * @param uniqueName The unique name.
-    * @param busAttachment The bus attachment supporting the session.
-    * @param sessionPort The port used to connect to the session.
-    * @return An object containing About data for the session.
-    */
-  def getDataBySessionPortAsync(uniqueName: String, busAttachment: AllJoynBusAttachment, sessionPort: Double): IPromiseWithIAsyncOperation[AllJoynAboutDataView] = js.native
-  /**
-    * Gets the About data for a session in a particular language.
-    * @param uniqueName The unique name.
-    * @param busAttachment The bus attachment supporting the session.
-    * @param sessionPort The port used to connect to the session.
-    * @param language The language to return the descriptive data in.
-    * @return An object containing About data for the session in the set language.
-    */
-  def getDataBySessionPortAsync(uniqueName: String, busAttachment: AllJoynBusAttachment, sessionPort: Double, language: Language): IPromiseWithIAsyncOperation[AllJoynAboutDataView] = js.native
+object AllJoynAboutDataView {
+  @scala.inline
+  def apply(
+    ajSoftwareVersion: String,
+    appId: String,
+    appName: String,
+    dateOfManufacture: js.Date,
+    defaultLanguage: Language,
+    description: String,
+    deviceId: String,
+    deviceName: String,
+    hardwareVersion: String,
+    manufacturer: String,
+    modelNumber: String,
+    properties: IMapView[String, _],
+    softwareVersion: String,
+    status: Double,
+    supportUrl: Uri,
+    supportedLanguages: IVectorView[Language]
+  ): AllJoynAboutDataView = {
+    val __obj = js.Dynamic.literal(ajSoftwareVersion = ajSoftwareVersion.asInstanceOf[js.Any], appId = appId.asInstanceOf[js.Any], appName = appName.asInstanceOf[js.Any], dateOfManufacture = dateOfManufacture.asInstanceOf[js.Any], defaultLanguage = defaultLanguage.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], deviceId = deviceId.asInstanceOf[js.Any], deviceName = deviceName.asInstanceOf[js.Any], hardwareVersion = hardwareVersion.asInstanceOf[js.Any], manufacturer = manufacturer.asInstanceOf[js.Any], modelNumber = modelNumber.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], softwareVersion = softwareVersion.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], supportUrl = supportUrl.asInstanceOf[js.Any], supportedLanguages = supportedLanguages.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AllJoynAboutDataView]
+  }
+  @scala.inline
+  implicit class AllJoynAboutDataViewOps[Self <: AllJoynAboutDataView] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAjSoftwareVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ajSoftwareVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAppId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAppName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDateOfManufacture(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dateOfManufacture")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultLanguage(value: Language): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultLanguage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeviceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeviceName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHardwareVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hardwareVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withManufacturer(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("manufacturer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withModelNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("modelNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProperties(value: IMapView[String, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSoftwareVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("softwareVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSupportUrl(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSupportedLanguages(value: IVectorView[Language]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportedLanguages")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

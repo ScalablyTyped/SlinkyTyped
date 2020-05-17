@@ -1,6 +1,7 @@
 package typingsSlinky.reactDatepicker
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
@@ -11,9 +12,11 @@ import slinky.web.SyntheticMouseEvent
 import typingsSlinky.dateFns.mod.Locale
 import typingsSlinky.popperJs.mod.Modifiers
 import typingsSlinky.react.mod.Component
+import typingsSlinky.reactDatepicker.anon.ChangeMonth
+import typingsSlinky.reactDatepicker.anon.Children
+import typingsSlinky.reactDatepicker.anon.Code
 import typingsSlinky.reactDatepicker.reactDatepickerStrings.scroll
 import typingsSlinky.reactDatepicker.reactDatepickerStrings.select
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +42,7 @@ object mod extends js.Object {
     var autoComplete: js.UndefOr[String] = js.native
     var autoFocus: js.UndefOr[Boolean] = js.native
     var calendarClassName: js.UndefOr[String] = js.native
-    var calendarContainer: js.UndefOr[js.Function1[/* props */ AnonChildren, TagMod[Any]]] = js.native
+    var calendarContainer: js.UndefOr[js.Function1[/* props */ Children, TagMod[Any]]] = js.native
     var children: js.UndefOr[TagMod[Any]] = js.native
     var className: js.UndefOr[String] = js.native
     var clearButtonTitle: js.UndefOr[String] = js.native
@@ -84,18 +87,18 @@ object mod extends js.Object {
     var onDayMouseEnter: js.UndefOr[js.Function1[/* date */ js.Date, Unit]] = js.native
     var onFocus: js.UndefOr[js.Function1[/* event */ SyntheticFocusEvent[HTMLInputElement], Unit]] = js.native
     var onInputClick: js.UndefOr[js.Function0[Unit]] = js.native
-    var onInputError: js.UndefOr[js.Function1[/* err */ AnonCode, Unit]] = js.native
+    var onInputError: js.UndefOr[js.Function1[/* err */ Code, Unit]] = js.native
     var onKeyDown: js.UndefOr[js.Function1[/* event */ SyntheticKeyboardEvent[HTMLDivElement], Unit]] = js.native
     var onMonthChange: js.UndefOr[js.Function1[/* date */ js.Date, Unit]] = js.native
     var onMonthMouseLeave: js.UndefOr[js.Function0[Unit]] = js.native
     var onSelect: js.UndefOr[
-        js.Function2[/* date */ js.Date, /* event */ js.UndefOr[SyntheticEvent[Event_, _]], Unit]
+        js.Function2[/* date */ js.Date, /* event */ js.UndefOr[SyntheticEvent[Event, _]], Unit]
       ] = js.native
     var onWeekSelect: js.UndefOr[
         js.Function3[
           /* firstDayOfWeek */ js.Date, 
           /* weekNumber */ String | Double, 
-          /* event */ js.UndefOr[SyntheticEvent[Event_, _]], 
+          /* event */ js.UndefOr[SyntheticEvent[Event, _]], 
           Unit
         ]
       ] = js.native
@@ -105,7 +108,7 @@ object mod extends js.Object {
     var peekNextMonth: js.UndefOr[Boolean] = js.native
     var placeholderText: js.UndefOr[String] = js.native
     var popperClassName: js.UndefOr[String] = js.native
-    var popperContainer: js.UndefOr[js.Function1[/* props */ AnonChildren, TagMod[Any]]] = js.native
+    var popperContainer: js.UndefOr[js.Function1[/* props */ Children, TagMod[Any]]] = js.native
     var popperModifiers: js.UndefOr[Modifiers] = js.native
     var popperPlacement: js.UndefOr[String] = js.native
     var popperProps: js.UndefOr[js.Object] = js.native
@@ -113,7 +116,7 @@ object mod extends js.Object {
     var previousMonthButtonLabel: js.UndefOr[String] = js.native
     var previousYearButtonLabel: js.UndefOr[String] = js.native
     var readOnly: js.UndefOr[Boolean] = js.native
-    var renderCustomHeader: js.UndefOr[js.Function1[/* params */ AnonChangeMonth, TagMod[Any]]] = js.native
+    var renderCustomHeader: js.UndefOr[js.Function1[/* params */ ChangeMonth, TagMod[Any]]] = js.native
     var renderDayContents: js.UndefOr[
         js.Function2[/* dayOfMonth */ Double, /* date */ js.UndefOr[js.Date], TagMod[Any]]
       ] = js.native
@@ -154,9 +157,9 @@ object mod extends js.Object {
     var wrapperClassName: js.UndefOr[String] = js.native
     var yearDropdownItemNumber: js.UndefOr[Double] = js.native
     def onChange(): Unit = js.native
-    def onChange(date: Null, event: SyntheticEvent[Event_, _]): Unit = js.native
+    def onChange(date: Null, event: SyntheticEvent[Event, _]): Unit = js.native
     def onChange(date: js.Date): Unit = js.native
-    def onChange(date: js.Date, event: SyntheticEvent[Event_, _]): Unit = js.native
+    def onChange(date: js.Date, event: SyntheticEvent[Event, _]): Unit = js.native
   }
   
   @js.native

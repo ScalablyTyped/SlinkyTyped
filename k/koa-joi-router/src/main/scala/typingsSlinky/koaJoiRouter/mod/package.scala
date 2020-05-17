@@ -10,7 +10,6 @@ package object mod {
     /* next */ typingsSlinky.koa.mod.Next, 
     js.Any
   ]
-  type Handler = typingsSlinky.koaJoiRouter.mod.FullHandler | typingsSlinky.koaJoiRouter.mod.NestedHandler
   type Method = js.Function3[
     /* path */ java.lang.String | js.RegExp, 
     /* handlerOrConfig */ typingsSlinky.koaJoiRouter.mod.Handler | typingsSlinky.koaJoiRouter.mod.Config, 

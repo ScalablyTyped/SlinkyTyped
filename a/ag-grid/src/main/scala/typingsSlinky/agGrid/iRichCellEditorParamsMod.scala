@@ -1,5 +1,6 @@
 package typingsSlinky.agGrid
 
+import typingsSlinky.agGrid.anon.InstantiableICellRendererComp
 import typingsSlinky.agGrid.componentResolverMod.ComponentHolder
 import typingsSlinky.agGrid.iCellEditorMod.ICellEditorParams
 import typingsSlinky.agGrid.iCellRendererMod.ICellRendererFunc
@@ -15,7 +16,7 @@ object iRichCellEditorParamsMod extends js.Object {
     extends ICellEditorParams
        with ComponentHolder {
     var cellHeight: Double = js.native
-    var cellRenderer: AnonInstantiableICellRendererComp | ICellRendererFunc | String = js.native
+    var cellRenderer: InstantiableICellRendererComp | ICellRendererFunc | String = js.native
     var values: js.Array[String] = js.native
   }
   

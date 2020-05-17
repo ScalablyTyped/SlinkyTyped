@@ -1,13 +1,12 @@
 package typingsSlinky.dockerode.mod
 
-import typingsSlinky.dockerode.AnonContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait GetEventsOptions extends js.Object {
-  var filters: js.UndefOr[String | AnonContainer] = js.native
+  var filters: js.UndefOr[String | typingsSlinky.dockerode.anon.Container] = js.native
   var since: js.UndefOr[Double] = js.native
   var until: js.UndefOr[Double] = js.native
 }
@@ -25,7 +24,7 @@ object GetEventsOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFilters(value: String | AnonContainer): Self = {
+    def withFilters(value: String | typingsSlinky.dockerode.anon.Container): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.angularCompiler.compilerFacadeInterfaceMod
 
-import typingsSlinky.angularCompiler.AnonNameString
+import typingsSlinky.angularCompiler.anon.NameString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait R3NgModuleMetadataFacade extends js.Object {
   var exports: js.Array[js.Function] = js.native
   var id: String | Null = js.native
   var imports: js.Array[js.Function] = js.native
-  var schemas: js.Array[AnonNameString] | Null = js.native
+  var schemas: js.Array[NameString] | Null = js.native
   var `type`: js.Any = js.native
 }
 
@@ -86,7 +86,7 @@ object R3NgModuleMetadataFacade {
         ret
     }
     @scala.inline
-    def withSchemas(value: js.Array[AnonNameString]): Self = {
+    def withSchemas(value: js.Array[NameString]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("schemas")(value.asInstanceOf[js.Any])
         ret

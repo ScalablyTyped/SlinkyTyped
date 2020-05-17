@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ArgsProps extends js.Object {
+trait ArgsProps extends JointContent {
   var content: TagMod[Any] = js.native
   var duration: Double | Null = js.native
   var icon: js.UndefOr[TagMod[Any]] = js.native

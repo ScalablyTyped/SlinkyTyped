@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.UI.Input.Inking.InkManager")
 @js.native
-class InkManager () extends IInkManager
+trait InkManager extends IInkManager
 

@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Contains settings defining the table width's measurement units and value.
   */
-@JSGlobal("TableWidthUnit")
 @js.native
-class TableWidthUnit () extends js.Object {
+trait TableWidthUnit extends js.Object {
   /**
     * Gets or sets the unit type for the table width.
     */
@@ -18,5 +17,34 @@ class TableWidthUnit () extends js.Object {
     * Gets or sets the table width value in twips.
     */
   var value: Double = js.native
+}
+
+object TableWidthUnit {
+  @scala.inline
+  def apply(`type`: TableWidthUnitType, value: Double): TableWidthUnit = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TableWidthUnit]
+  }
+  @scala.inline
+  implicit class TableWidthUnitOps[Self <: TableWidthUnit] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: TableWidthUnitType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

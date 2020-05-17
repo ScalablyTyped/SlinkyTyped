@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TrafficParams extends _FormatterParams {
+trait TrafficParams extends FormatterParams {
   var color: js.UndefOr[Color] = js.native
   var max: js.UndefOr[Double] = js.native
   // Traffic

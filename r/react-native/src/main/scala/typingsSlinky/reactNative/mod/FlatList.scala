@@ -5,10 +5,10 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactNative.Anon0
-import typingsSlinky.reactNative.AnonItem
-import typingsSlinky.reactNative.AnonOffset
-import typingsSlinky.reactNative.AnonViewOffset
+import typingsSlinky.reactNative.anon.Item
+import typingsSlinky.reactNative.anon.Offset
+import typingsSlinky.reactNative.anon.ViewOffset
+import typingsSlinky.reactNative.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,22 +40,22 @@ class FlatList[ItemT] ()
     * Scrolls to the end of the content. May be janky without `getItemLayout` prop.
     */
   def scrollToEnd(): Unit = js.native
-  def scrollToEnd(params: Anon0): Unit = js.native
+  def scrollToEnd(params: `0`): Unit = js.native
   /**
     * Scrolls to the item at the specified index such that it is positioned in the viewable area
     * such that viewPosition 0 places it at the top, 1 at the bottom, and 0.5 centered in the middle.
     * Cannot scroll to locations outside the render window without specifying the getItemLayout prop.
     */
-  def scrollToIndex(params: AnonViewOffset): Unit = js.native
+  def scrollToIndex(params: ViewOffset): Unit = js.native
   /**
     * Requires linear scan through data - use `scrollToIndex` instead if possible.
     * May be janky without `getItemLayout` prop.
     */
-  def scrollToItem(params: AnonItem[ItemT]): Unit = js.native
+  def scrollToItem(params: Item[ItemT]): Unit = js.native
   /**
     * Scroll to a specific content pixel offset, like a normal `ScrollView`.
     */
-  def scrollToOffset(params: AnonOffset): Unit = js.native
+  def scrollToOffset(params: Offset): Unit = js.native
   // TODO: use `unknown` instead of `any` for Typescript >= 3.0
   def setNativeProps(props: StringDictionary[js.Any]): Unit = js.native
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.arangodb.Foxx
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.arangodb.AnonType
+import typingsSlinky.arangodb.anon.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ trait Manifest extends js.Object {
   var main: js.UndefOr[String] = js.native
   var name: js.UndefOr[String] = js.native
   var provides: js.UndefOr[StringDictionary[js.UndefOr[String]]] = js.native
-  var repository: js.UndefOr[AnonType] = js.native
+  var repository: js.UndefOr[Type] = js.native
   var scripts: js.UndefOr[StringDictionary[js.UndefOr[String]]] = js.native
   var tests: js.UndefOr[js.Array[String]] = js.native
   var thumbnail: js.UndefOr[String] = js.native
@@ -192,7 +192,7 @@ object Manifest {
         ret
     }
     @scala.inline
-    def withRepository(value: AnonType): Self = {
+    def withRepository(value: Type): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("repository")(value.asInstanceOf[js.Any])
         ret

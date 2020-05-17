@@ -1,6 +1,6 @@
 package typingsSlinky.angularAnimations.mod
 
-import typingsSlinky.angularAnimations.Anon0
+import typingsSlinky.angularAnimations.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait AnimationTriggerMetadata extends AnimationMetadata {
     * developer-defined parameters that provide styling defaults and
     * can be overridden on invocation. Default delay is 0.
     */
-  var options: Anon0 | Null = js.native
+  var options: `0` | Null = js.native
 }
 
 object AnimationTriggerMetadata {
@@ -49,7 +49,7 @@ object AnimationTriggerMetadata {
         ret
     }
     @scala.inline
-    def withOptions(value: Anon0): Self = {
+    def withOptions(value: `0`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

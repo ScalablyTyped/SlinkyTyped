@@ -1,6 +1,6 @@
 package typingsSlinky.phantom.mod
 
-import typingsSlinky.phantom.AnonName
+import typingsSlinky.phantom.anon.Name
 import typingsSlinky.phantom.phantomStrings.end
 import typingsSlinky.phantom.phantomStrings.start
 import scala.scalajs.js
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait IResponse extends js.Object {
   var bodySize: Double = js.native
   var contentType: String = js.native
-  var headers: js.Array[AnonName] = js.native
+  var headers: js.Array[Name] = js.native
   var id: String = js.native
   var redirectURL: String = js.native
   var stage: start | end = js.native
@@ -26,7 +26,7 @@ object IResponse {
   def apply(
     bodySize: Double,
     contentType: String,
-    headers: js.Array[AnonName],
+    headers: js.Array[Name],
     id: String,
     redirectURL: String,
     stage: start | end,
@@ -57,7 +57,7 @@ object IResponse {
         ret
     }
     @scala.inline
-    def withHeaders(value: js.Array[AnonName]): Self = {
+    def withHeaders(value: js.Array[Name]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
         ret

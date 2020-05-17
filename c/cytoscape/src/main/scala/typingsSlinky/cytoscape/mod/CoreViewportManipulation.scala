@@ -1,7 +1,7 @@
 package typingsSlinky.cytoscape.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.cytoscape.AnonH
+import typingsSlinky.cytoscape.anon.H
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -92,7 +92,7 @@ trait CoreViewportManipulation extends js.Object {
     * positions are visible in the viewport.
     * http://js.cytoscape.org/#cy.extent
     */
-  def extent(): AnonH = js.native
+  def extent(): H = js.native
   /**
     * Pan and zooms the graph to fit to a collection.
     * http://js.cytoscape.org/#cy.fit

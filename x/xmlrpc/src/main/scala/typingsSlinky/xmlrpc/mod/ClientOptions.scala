@@ -1,14 +1,14 @@
 package typingsSlinky.xmlrpc.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.xmlrpc.AnonPass
+import typingsSlinky.xmlrpc.anon.Pass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ClientOptions extends js.Object {
-  var basic_auth: js.UndefOr[AnonPass] = js.native
+  var basic_auth: js.UndefOr[Pass] = js.native
   var cookies: js.UndefOr[Boolean] = js.native
   var headers: js.UndefOr[StringDictionary[String]] = js.native
   var host: js.UndefOr[String] = js.native
@@ -31,7 +31,7 @@ object ClientOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBasic_auth(value: AnonPass): Self = {
+    def withBasic_auth(value: Pass): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("basic_auth")(value.asInstanceOf[js.Any])
         ret

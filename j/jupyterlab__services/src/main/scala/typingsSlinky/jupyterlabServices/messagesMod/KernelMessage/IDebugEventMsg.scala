@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabServices.messagesMod.KernelMessage
 
-import typingsSlinky.jupyterlabServices.AnonEvent
+import typingsSlinky.jupyterlabServices.anon.Event
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.debug_event
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.iopub
 import typingsSlinky.phosphorCoreutils.jsonMod.JSONObject
@@ -21,16 +21,16 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IDebugEventMsg
   extends IIOPubMessage[debug_event]
-     with _Message {
+     with Message {
   @JSName("content")
-  var content_IDebugEventMsg: AnonEvent = js.native
+  var content_IDebugEventMsg: Event = js.native
 }
 
 object IDebugEventMsg {
   @scala.inline
   def apply(
     channel: iopub,
-    content: AnonEvent,
+    content: Event,
     header: IHeader[debug_event],
     metadata: JSONObject,
     parent_header: IHeader[MessageType] | js.Object
@@ -45,7 +45,7 @@ object IDebugEventMsg {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContent(value: AnonEvent): Self = {
+    def withContent(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
         ret

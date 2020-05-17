@@ -1,6 +1,6 @@
 package typingsSlinky.inputmask.mod
 
-import typingsSlinky.inputmask.AnonStart
+import typingsSlinky.inputmask.anon.Start
 import typingsSlinky.inputmask.inputmaskBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -28,7 +28,7 @@ trait CommandObject extends js.Object {
     * * `true` => refresh validPositions from the complete buffer .
     * * `{ start: , end: }` => refresh from start to end.
     */
-  var refreshFromBuffer: js.UndefOr[`true` | AnonStart] = js.native
+  var refreshFromBuffer: js.UndefOr[`true` | Start] = js.native
   /**
     * Position(s) to remove.
     */
@@ -96,7 +96,7 @@ object CommandObject {
         ret
     }
     @scala.inline
-    def withRefreshFromBuffer(value: `true` | AnonStart): Self = {
+    def withRefreshFromBuffer(value: `true` | Start): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("refreshFromBuffer")(value.asInstanceOf[js.Any])
         ret

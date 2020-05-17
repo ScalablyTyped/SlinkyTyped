@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.imageItemMod
 
-import typingsSlinky.antDesignReactNative.AnonItem
+import typingsSlinky.antDesignReactNative.anon.Item
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +15,6 @@ class default protected () extends ImageItem {
 @JSImport("@ant-design/react-native/lib/image-picker/ImageItem", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonItem = js.native
+  var defaultProps: Item = js.native
 }
 

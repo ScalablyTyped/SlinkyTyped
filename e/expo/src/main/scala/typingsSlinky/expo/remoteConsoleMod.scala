@@ -1,6 +1,6 @@
 package typingsSlinky.expo
 
-import typingsSlinky.std.Console_
+import org.scalajs.dom.raw.Console
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 object remoteConsoleMod extends js.Object {
   @js.native
   object default extends js.Object {
-    var createRemoteConsole: js.Function1[/* originalConsole */ Console_, Console_] = js.native
+    var createRemoteConsole: js.Function1[/* originalConsole */ Console, Console] = js.native
   }
   
 }

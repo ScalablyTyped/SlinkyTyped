@@ -1,7 +1,7 @@
 package typingsSlinky.angularPlatformBrowser.mod
 
+import org.scalajs.dom.raw.Location
 import typingsSlinky.angularCommon.mod.PlatformLocation
-import typingsSlinky.std.Location_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,6 +12,6 @@ class ɵBrowserPlatformLocation protected () extends PlatformLocation {
   def this(_doc: js.Any) = this()
   var _doc: js.Any = js.native
   var _history: js.Any = js.native
-  val location: Location_ = js.native
+  val location: Location = js.native
 }
 

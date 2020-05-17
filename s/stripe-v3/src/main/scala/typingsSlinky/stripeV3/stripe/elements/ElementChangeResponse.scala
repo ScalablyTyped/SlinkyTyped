@@ -1,6 +1,6 @@
 package typingsSlinky.stripeV3.stripe.elements
 
-import typingsSlinky.stripeV3.AnonPostalCode
+import typingsSlinky.stripeV3.anon.PostalCode
 import typingsSlinky.stripeV3.stripe.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,7 @@ trait ElementChangeResponse extends js.Object {
   var elementType: String = js.native
   var empty: Boolean = js.native
   var error: js.UndefOr[Error] = js.native
-  var value: js.UndefOr[AnonPostalCode | String] = js.native
+  var value: js.UndefOr[PostalCode | String] = js.native
 }
 
 object ElementChangeResponse {
@@ -91,7 +91,7 @@ object ElementChangeResponse {
         ret
     }
     @scala.inline
-    def withValue(value: AnonPostalCode | String): Self = {
+    def withValue(value: PostalCode | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
         ret

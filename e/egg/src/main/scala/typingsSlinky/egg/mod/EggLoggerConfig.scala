@@ -1,6 +1,6 @@
 package typingsSlinky.egg.mod
 
-import typingsSlinky.egg.PartialEggLoggerOptions
+import typingsSlinky.egg.anon.PartialEggLoggerOptions
 import typingsSlinky.egg.eggStrings.duplicate
 import typingsSlinky.egg.eggStrings.ignore
 import typingsSlinky.egg.eggStrings.redirect

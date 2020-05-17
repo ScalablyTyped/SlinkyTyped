@@ -2,11 +2,11 @@ package typingsSlinky.cathoQuantum.inputMod
 
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.cathoQuantum.AnonBaseFontSizeColors
-import typingsSlinky.cathoQuantum.AnonMaxLength
-import typingsSlinky.cathoQuantum.AnonMinLength
-import typingsSlinky.cathoQuantum.AnonValue
-import typingsSlinky.cathoQuantum.AnonValueString
+import typingsSlinky.cathoQuantum.anon.BaseFontSizeColors
+import typingsSlinky.cathoQuantum.anon.MaxLength
+import typingsSlinky.cathoQuantum.anon.MinLength
+import typingsSlinky.cathoQuantum.anon.Value
+import typingsSlinky.cathoQuantum.anon.ValueString
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.email
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.number
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.password
@@ -33,7 +33,7 @@ trait InputProps extends js.Object {
   var onClean: js.UndefOr[MouseEventHandler[HTMLInputElement]] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var required: js.UndefOr[Boolean] = js.native
-  var theme: js.UndefOr[AnonBaseFontSizeColors] = js.native
+  var theme: js.UndefOr[BaseFontSizeColors] = js.native
   var `type`: js.UndefOr[email | text | tel | number | password | search] = js.native
   var validate: js.UndefOr[Validate | CustomValidate | (js.Array[Validate | CustomValidate])] = js.native
   var value: js.UndefOr[String] = js.native
@@ -196,7 +196,7 @@ object InputProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonBaseFontSizeColors): Self = {
+    def withTheme(value: BaseFontSizeColors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret
@@ -220,7 +220,7 @@ object InputProps {
         ret
     }
     @scala.inline
-    def withValidateFunction2(value: (/* params */ AnonValue, /* cpf */ js.UndefOr[String]) => String): Self = {
+    def withValidateFunction2(value: (/* params */ Value, /* cpf */ js.UndefOr[String]) => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validate")(js.Any.fromFunction2(value))
         ret
@@ -228,7 +228,7 @@ object InputProps {
     @scala.inline
     def withValidateFunction1(
       value: js.UndefOr[
-          (/* params */ AnonMaxLength) | (/* params */ AnonMinLength) | (/* params */ AnonValue) | AnonValueString
+          (/* params */ MaxLength) | (/* params */ MinLength) | (/* params */ Value) | ValueString
         ] => String
     ): Self = {
         val ret = this.duplicate

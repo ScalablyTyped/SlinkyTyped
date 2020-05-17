@@ -1,9 +1,9 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonInputValue
 import typingsSlinky.aliApp.aliAppStrings.center
 import typingsSlinky.aliApp.aliAppStrings.left
 import typingsSlinky.aliApp.aliAppStrings.right
+import typingsSlinky.aliApp.anon.InputValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,12 +24,12 @@ trait PromptOptions
   /** prompt框标题 */
   var title: js.UndefOr[String] = js.native
   @JSName("success")
-  def success_MPromptOptions(result: AnonInputValue): Unit = js.native
+  def success_MPromptOptions(result: InputValue): Unit = js.native
 }
 
 object PromptOptions {
   @scala.inline
-  def apply(cancelButtonText: String, okButtonText: String, success: AnonInputValue => Unit): PromptOptions = {
+  def apply(cancelButtonText: String, okButtonText: String, success: InputValue => Unit): PromptOptions = {
     val __obj = js.Dynamic.literal(cancelButtonText = cancelButtonText.asInstanceOf[js.Any], okButtonText = okButtonText.asInstanceOf[js.Any], success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[PromptOptions]
   }
@@ -52,7 +52,7 @@ object PromptOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: AnonInputValue => Unit): Self = {
+    def withSuccess(value: InputValue => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

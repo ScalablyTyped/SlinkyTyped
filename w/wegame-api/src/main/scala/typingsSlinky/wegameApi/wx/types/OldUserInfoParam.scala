@@ -1,6 +1,6 @@
 package typingsSlinky.wegameApi.wx.types
 
-import typingsSlinky.wegameApi.AnonEncryptedData
+import typingsSlinky.wegameApi.anon.EncryptedData
 import typingsSlinky.wegameApi.wegameApiStrings.en
 import typingsSlinky.wegameApi.wegameApiStrings.zh_CN
 import typingsSlinky.wegameApi.wegameApiStrings.zh_TW
@@ -19,7 +19,7 @@ trait OldUserInfoParam extends js.Object {
     * 显示用户信息的语言
     */
   var lang: js.UndefOr[en | zh_CN | zh_TW] = js.native
-  var success: js.UndefOr[js.Function1[/* res */ AnonEncryptedData, Unit]] = js.native
+  var success: js.UndefOr[js.Function1[/* res */ EncryptedData, Unit]] = js.native
   /**
     * 是否带上登录态信息。当 withCredentials 为 true 时，要求此前有调用过 wx.login 且登录态尚未过期，此时返回的数据会包含 encryptedData, iv 等敏感信息；当 withCredentials 为 false 时，不要求有登录态，返回的数据不包含 encryptedData, iv 等敏感信息。
     */
@@ -75,7 +75,7 @@ object OldUserInfoParam {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonEncryptedData => Unit): Self = {
+    def withSuccess(value: /* res */ EncryptedData => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

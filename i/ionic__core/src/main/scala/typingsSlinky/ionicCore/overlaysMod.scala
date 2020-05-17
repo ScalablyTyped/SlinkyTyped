@@ -1,16 +1,18 @@
 package typingsSlinky.ionicCore
 
+import org.scalajs.dom.raw.Document
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ionicCore.actionSheetInterfaceMod.ActionSheetOptions
 import typingsSlinky.ionicCore.alertInterfaceMod.AlertOptions
 import typingsSlinky.ionicCore.animationInterfaceMod.Animation
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonActionSheetElement
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonAlertElement
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonLoadingElement
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonModalElement
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonPickerElement
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonPopoverElement
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonToastElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonActionSheetElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonAlertElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonLoadingElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonModalElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonPickerElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonPopoverElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonToastElement
 import typingsSlinky.ionicCore.ionicCoreStrings._forceStatusbarPadding
 import typingsSlinky.ionicCore.ionicCoreStrings._testing
 import typingsSlinky.ionicCore.ionicCoreStrings._zoneGate
@@ -62,8 +64,6 @@ import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayInterface
 import typingsSlinky.ionicCore.pickerInterfaceMod.PickerOptions
 import typingsSlinky.ionicCore.popoverInterfaceMod.PopoverOptions
 import typingsSlinky.ionicCore.toastInterfaceMod.ToastOptions
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -72,13 +72,13 @@ import scala.scalajs.js.annotation._
 @js.native
 object overlaysMod extends js.Object {
   val BACKDROP: /* "backdrop" */ String = js.native
-  def connectListeners(doc: Document_): Unit = js.native
+  def connectListeners(doc: Document): Unit = js.native
   def createOverlay[T /* <: HTMLIonOverlayElement */](tagName: String): js.Promise[T] = js.native
   def createOverlay[T /* <: HTMLIonOverlayElement */](tagName: String, opts: js.Object): js.Promise[T] = js.native
   def dismiss(
     overlay: OverlayInterface,
     data: js.Any,
-    role: js.UndefOr[scala.Nothing],
+    role: js.UndefOr[String],
     name: mode | animated | rippleEffect | hardwareBackButton | statusTap | backButtonIcon | backButtonText | menuIcon | menuType | spinner | loadingSpinner | refreshingIcon | refreshingSpinner | infiniteLoadingSpinner | swipeBackEnabled | tabButtonLayout | navAnimation | actionSheetEnter | alertEnter | loadingEnter | modalEnter | popoverEnter | toastEnter | pickerEnter | actionSheetLeave | alertLeave | loadingLeave | modalLeave | popoverLeave | toastLeave | pickerLeave | experimentalTransitionShadow | keyboardHeight | inputShims | scrollPadding | inputBlurring | scrollAssist | hideCaretOnScroll | persistConfig | _forceStatusbarPadding | _testing | _zoneGate,
     iosLeaveAnimation: AnimationBuilder,
     mdLeaveAnimation: AnimationBuilder
@@ -86,7 +86,7 @@ object overlaysMod extends js.Object {
   def dismiss(
     overlay: OverlayInterface,
     data: js.Any,
-    role: js.UndefOr[scala.Nothing],
+    role: js.UndefOr[String],
     name: mode | animated | rippleEffect | hardwareBackButton | statusTap | backButtonIcon | backButtonText | menuIcon | menuType | spinner | loadingSpinner | refreshingIcon | refreshingSpinner | infiniteLoadingSpinner | swipeBackEnabled | tabButtonLayout | navAnimation | actionSheetEnter | alertEnter | loadingEnter | modalEnter | popoverEnter | toastEnter | pickerEnter | actionSheetLeave | alertLeave | loadingLeave | modalLeave | popoverLeave | toastLeave | pickerLeave | experimentalTransitionShadow | keyboardHeight | inputShims | scrollPadding | inputBlurring | scrollAssist | hideCaretOnScroll | persistConfig | _forceStatusbarPadding | _testing | _zoneGate,
     iosLeaveAnimation: AnimationBuilder,
     mdLeaveAnimation: AnimationBuilder,
@@ -95,7 +95,7 @@ object overlaysMod extends js.Object {
   def dismiss(
     overlay: OverlayInterface,
     data: js.Any,
-    role: js.UndefOr[scala.Nothing],
+    role: js.UndefOr[String],
     name: mode | animated | rippleEffect | hardwareBackButton | statusTap | backButtonIcon | backButtonText | menuIcon | menuType | spinner | loadingSpinner | refreshingIcon | refreshingSpinner | infiniteLoadingSpinner | swipeBackEnabled | tabButtonLayout | navAnimation | actionSheetEnter | alertEnter | loadingEnter | modalEnter | popoverEnter | toastEnter | pickerEnter | actionSheetLeave | alertLeave | loadingLeave | modalLeave | popoverLeave | toastLeave | pickerLeave | experimentalTransitionShadow | keyboardHeight | inputShims | scrollPadding | inputBlurring | scrollAssist | hideCaretOnScroll | persistConfig | _forceStatusbarPadding | _testing | _zoneGate,
     iosLeaveAnimation: AnimationBuilder,
     mdLeaveAnimation: IonicAnimationInterface
@@ -103,7 +103,7 @@ object overlaysMod extends js.Object {
   def dismiss(
     overlay: OverlayInterface,
     data: js.Any,
-    role: js.UndefOr[scala.Nothing],
+    role: js.UndefOr[String],
     name: mode | animated | rippleEffect | hardwareBackButton | statusTap | backButtonIcon | backButtonText | menuIcon | menuType | spinner | loadingSpinner | refreshingIcon | refreshingSpinner | infiniteLoadingSpinner | swipeBackEnabled | tabButtonLayout | navAnimation | actionSheetEnter | alertEnter | loadingEnter | modalEnter | popoverEnter | toastEnter | pickerEnter | actionSheetLeave | alertLeave | loadingLeave | modalLeave | popoverLeave | toastLeave | pickerLeave | experimentalTransitionShadow | keyboardHeight | inputShims | scrollPadding | inputBlurring | scrollAssist | hideCaretOnScroll | persistConfig | _forceStatusbarPadding | _testing | _zoneGate,
     iosLeaveAnimation: AnimationBuilder,
     mdLeaveAnimation: IonicAnimationInterface,
@@ -112,7 +112,7 @@ object overlaysMod extends js.Object {
   def dismiss(
     overlay: OverlayInterface,
     data: js.Any,
-    role: js.UndefOr[scala.Nothing],
+    role: js.UndefOr[String],
     name: mode | animated | rippleEffect | hardwareBackButton | statusTap | backButtonIcon | backButtonText | menuIcon | menuType | spinner | loadingSpinner | refreshingIcon | refreshingSpinner | infiniteLoadingSpinner | swipeBackEnabled | tabButtonLayout | navAnimation | actionSheetEnter | alertEnter | loadingEnter | modalEnter | popoverEnter | toastEnter | pickerEnter | actionSheetLeave | alertLeave | loadingLeave | modalLeave | popoverLeave | toastLeave | pickerLeave | experimentalTransitionShadow | keyboardHeight | inputShims | scrollPadding | inputBlurring | scrollAssist | hideCaretOnScroll | persistConfig | _forceStatusbarPadding | _testing | _zoneGate,
     iosLeaveAnimation: IonicAnimationInterface,
     mdLeaveAnimation: AnimationBuilder
@@ -120,7 +120,7 @@ object overlaysMod extends js.Object {
   def dismiss(
     overlay: OverlayInterface,
     data: js.Any,
-    role: js.UndefOr[scala.Nothing],
+    role: js.UndefOr[String],
     name: mode | animated | rippleEffect | hardwareBackButton | statusTap | backButtonIcon | backButtonText | menuIcon | menuType | spinner | loadingSpinner | refreshingIcon | refreshingSpinner | infiniteLoadingSpinner | swipeBackEnabled | tabButtonLayout | navAnimation | actionSheetEnter | alertEnter | loadingEnter | modalEnter | popoverEnter | toastEnter | pickerEnter | actionSheetLeave | alertLeave | loadingLeave | modalLeave | popoverLeave | toastLeave | pickerLeave | experimentalTransitionShadow | keyboardHeight | inputShims | scrollPadding | inputBlurring | scrollAssist | hideCaretOnScroll | persistConfig | _forceStatusbarPadding | _testing | _zoneGate,
     iosLeaveAnimation: IonicAnimationInterface,
     mdLeaveAnimation: AnimationBuilder,
@@ -129,7 +129,7 @@ object overlaysMod extends js.Object {
   def dismiss(
     overlay: OverlayInterface,
     data: js.Any,
-    role: js.UndefOr[scala.Nothing],
+    role: js.UndefOr[String],
     name: mode | animated | rippleEffect | hardwareBackButton | statusTap | backButtonIcon | backButtonText | menuIcon | menuType | spinner | loadingSpinner | refreshingIcon | refreshingSpinner | infiniteLoadingSpinner | swipeBackEnabled | tabButtonLayout | navAnimation | actionSheetEnter | alertEnter | loadingEnter | modalEnter | popoverEnter | toastEnter | pickerEnter | actionSheetLeave | alertLeave | loadingLeave | modalLeave | popoverLeave | toastLeave | pickerLeave | experimentalTransitionShadow | keyboardHeight | inputShims | scrollPadding | inputBlurring | scrollAssist | hideCaretOnScroll | persistConfig | _forceStatusbarPadding | _testing | _zoneGate,
     iosLeaveAnimation: IonicAnimationInterface,
     mdLeaveAnimation: IonicAnimationInterface
@@ -137,94 +137,23 @@ object overlaysMod extends js.Object {
   def dismiss(
     overlay: OverlayInterface,
     data: js.Any,
-    role: js.UndefOr[scala.Nothing],
+    role: js.UndefOr[String],
     name: mode | animated | rippleEffect | hardwareBackButton | statusTap | backButtonIcon | backButtonText | menuIcon | menuType | spinner | loadingSpinner | refreshingIcon | refreshingSpinner | infiniteLoadingSpinner | swipeBackEnabled | tabButtonLayout | navAnimation | actionSheetEnter | alertEnter | loadingEnter | modalEnter | popoverEnter | toastEnter | pickerEnter | actionSheetLeave | alertLeave | loadingLeave | modalLeave | popoverLeave | toastLeave | pickerLeave | experimentalTransitionShadow | keyboardHeight | inputShims | scrollPadding | inputBlurring | scrollAssist | hideCaretOnScroll | persistConfig | _forceStatusbarPadding | _testing | _zoneGate,
     iosLeaveAnimation: IonicAnimationInterface,
     mdLeaveAnimation: IonicAnimationInterface,
     opts: js.Any
   ): js.Promise[Boolean] = js.native
-  def dismiss(
-    overlay: OverlayInterface,
-    data: js.Any,
-    role: String,
-    name: mode | animated | rippleEffect | hardwareBackButton | statusTap | backButtonIcon | backButtonText | menuIcon | menuType | spinner | loadingSpinner | refreshingIcon | refreshingSpinner | infiniteLoadingSpinner | swipeBackEnabled | tabButtonLayout | navAnimation | actionSheetEnter | alertEnter | loadingEnter | modalEnter | popoverEnter | toastEnter | pickerEnter | actionSheetLeave | alertLeave | loadingLeave | modalLeave | popoverLeave | toastLeave | pickerLeave | experimentalTransitionShadow | keyboardHeight | inputShims | scrollPadding | inputBlurring | scrollAssist | hideCaretOnScroll | persistConfig | _forceStatusbarPadding | _testing | _zoneGate,
-    iosLeaveAnimation: AnimationBuilder,
-    mdLeaveAnimation: AnimationBuilder
-  ): js.Promise[Boolean] = js.native
-  def dismiss(
-    overlay: OverlayInterface,
-    data: js.Any,
-    role: String,
-    name: mode | animated | rippleEffect | hardwareBackButton | statusTap | backButtonIcon | backButtonText | menuIcon | menuType | spinner | loadingSpinner | refreshingIcon | refreshingSpinner | infiniteLoadingSpinner | swipeBackEnabled | tabButtonLayout | navAnimation | actionSheetEnter | alertEnter | loadingEnter | modalEnter | popoverEnter | toastEnter | pickerEnter | actionSheetLeave | alertLeave | loadingLeave | modalLeave | popoverLeave | toastLeave | pickerLeave | experimentalTransitionShadow | keyboardHeight | inputShims | scrollPadding | inputBlurring | scrollAssist | hideCaretOnScroll | persistConfig | _forceStatusbarPadding | _testing | _zoneGate,
-    iosLeaveAnimation: AnimationBuilder,
-    mdLeaveAnimation: AnimationBuilder,
-    opts: js.Any
-  ): js.Promise[Boolean] = js.native
-  def dismiss(
-    overlay: OverlayInterface,
-    data: js.Any,
-    role: String,
-    name: mode | animated | rippleEffect | hardwareBackButton | statusTap | backButtonIcon | backButtonText | menuIcon | menuType | spinner | loadingSpinner | refreshingIcon | refreshingSpinner | infiniteLoadingSpinner | swipeBackEnabled | tabButtonLayout | navAnimation | actionSheetEnter | alertEnter | loadingEnter | modalEnter | popoverEnter | toastEnter | pickerEnter | actionSheetLeave | alertLeave | loadingLeave | modalLeave | popoverLeave | toastLeave | pickerLeave | experimentalTransitionShadow | keyboardHeight | inputShims | scrollPadding | inputBlurring | scrollAssist | hideCaretOnScroll | persistConfig | _forceStatusbarPadding | _testing | _zoneGate,
-    iosLeaveAnimation: AnimationBuilder,
-    mdLeaveAnimation: IonicAnimationInterface
-  ): js.Promise[Boolean] = js.native
-  def dismiss(
-    overlay: OverlayInterface,
-    data: js.Any,
-    role: String,
-    name: mode | animated | rippleEffect | hardwareBackButton | statusTap | backButtonIcon | backButtonText | menuIcon | menuType | spinner | loadingSpinner | refreshingIcon | refreshingSpinner | infiniteLoadingSpinner | swipeBackEnabled | tabButtonLayout | navAnimation | actionSheetEnter | alertEnter | loadingEnter | modalEnter | popoverEnter | toastEnter | pickerEnter | actionSheetLeave | alertLeave | loadingLeave | modalLeave | popoverLeave | toastLeave | pickerLeave | experimentalTransitionShadow | keyboardHeight | inputShims | scrollPadding | inputBlurring | scrollAssist | hideCaretOnScroll | persistConfig | _forceStatusbarPadding | _testing | _zoneGate,
-    iosLeaveAnimation: AnimationBuilder,
-    mdLeaveAnimation: IonicAnimationInterface,
-    opts: js.Any
-  ): js.Promise[Boolean] = js.native
-  def dismiss(
-    overlay: OverlayInterface,
-    data: js.Any,
-    role: String,
-    name: mode | animated | rippleEffect | hardwareBackButton | statusTap | backButtonIcon | backButtonText | menuIcon | menuType | spinner | loadingSpinner | refreshingIcon | refreshingSpinner | infiniteLoadingSpinner | swipeBackEnabled | tabButtonLayout | navAnimation | actionSheetEnter | alertEnter | loadingEnter | modalEnter | popoverEnter | toastEnter | pickerEnter | actionSheetLeave | alertLeave | loadingLeave | modalLeave | popoverLeave | toastLeave | pickerLeave | experimentalTransitionShadow | keyboardHeight | inputShims | scrollPadding | inputBlurring | scrollAssist | hideCaretOnScroll | persistConfig | _forceStatusbarPadding | _testing | _zoneGate,
-    iosLeaveAnimation: IonicAnimationInterface,
-    mdLeaveAnimation: AnimationBuilder
-  ): js.Promise[Boolean] = js.native
-  def dismiss(
-    overlay: OverlayInterface,
-    data: js.Any,
-    role: String,
-    name: mode | animated | rippleEffect | hardwareBackButton | statusTap | backButtonIcon | backButtonText | menuIcon | menuType | spinner | loadingSpinner | refreshingIcon | refreshingSpinner | infiniteLoadingSpinner | swipeBackEnabled | tabButtonLayout | navAnimation | actionSheetEnter | alertEnter | loadingEnter | modalEnter | popoverEnter | toastEnter | pickerEnter | actionSheetLeave | alertLeave | loadingLeave | modalLeave | popoverLeave | toastLeave | pickerLeave | experimentalTransitionShadow | keyboardHeight | inputShims | scrollPadding | inputBlurring | scrollAssist | hideCaretOnScroll | persistConfig | _forceStatusbarPadding | _testing | _zoneGate,
-    iosLeaveAnimation: IonicAnimationInterface,
-    mdLeaveAnimation: AnimationBuilder,
-    opts: js.Any
-  ): js.Promise[Boolean] = js.native
-  def dismiss(
-    overlay: OverlayInterface,
-    data: js.Any,
-    role: String,
-    name: mode | animated | rippleEffect | hardwareBackButton | statusTap | backButtonIcon | backButtonText | menuIcon | menuType | spinner | loadingSpinner | refreshingIcon | refreshingSpinner | infiniteLoadingSpinner | swipeBackEnabled | tabButtonLayout | navAnimation | actionSheetEnter | alertEnter | loadingEnter | modalEnter | popoverEnter | toastEnter | pickerEnter | actionSheetLeave | alertLeave | loadingLeave | modalLeave | popoverLeave | toastLeave | pickerLeave | experimentalTransitionShadow | keyboardHeight | inputShims | scrollPadding | inputBlurring | scrollAssist | hideCaretOnScroll | persistConfig | _forceStatusbarPadding | _testing | _zoneGate,
-    iosLeaveAnimation: IonicAnimationInterface,
-    mdLeaveAnimation: IonicAnimationInterface
-  ): js.Promise[Boolean] = js.native
-  def dismiss(
-    overlay: OverlayInterface,
-    data: js.Any,
-    role: String,
-    name: mode | animated | rippleEffect | hardwareBackButton | statusTap | backButtonIcon | backButtonText | menuIcon | menuType | spinner | loadingSpinner | refreshingIcon | refreshingSpinner | infiniteLoadingSpinner | swipeBackEnabled | tabButtonLayout | navAnimation | actionSheetEnter | alertEnter | loadingEnter | modalEnter | popoverEnter | toastEnter | pickerEnter | actionSheetLeave | alertLeave | loadingLeave | modalLeave | popoverLeave | toastLeave | pickerLeave | experimentalTransitionShadow | keyboardHeight | inputShims | scrollPadding | inputBlurring | scrollAssist | hideCaretOnScroll | persistConfig | _forceStatusbarPadding | _testing | _zoneGate,
-    iosLeaveAnimation: IonicAnimationInterface,
-    mdLeaveAnimation: IonicAnimationInterface,
-    opts: js.Any
-  ): js.Promise[Boolean] = js.native
-  def dismissOverlay(doc: Document_, data: js.Any, role: js.UndefOr[scala.Nothing], overlayTag: String): js.Promise[Boolean] = js.native
-  def dismissOverlay(doc: Document_, data: js.Any, role: js.UndefOr[scala.Nothing], overlayTag: String, id: String): js.Promise[Boolean] = js.native
-  def dismissOverlay(doc: Document_, data: js.Any, role: String, overlayTag: String): js.Promise[Boolean] = js.native
-  def dismissOverlay(doc: Document_, data: js.Any, role: String, overlayTag: String, id: String): js.Promise[Boolean] = js.native
+  def dismissOverlay(doc: Document, data: js.Any, role: js.UndefOr[String], overlayTag: String): js.Promise[Boolean] = js.native
+  def dismissOverlay(doc: Document, data: js.Any, role: js.UndefOr[String], overlayTag: String, id: String): js.Promise[Boolean] = js.native
   def eventMethod[T](element: HTMLElement, eventName: String): js.Promise[T] = js.native
-  def getOverlay(doc: Document_): js.UndefOr[HTMLIonOverlayElement] = js.native
-  def getOverlay(doc: Document_, overlayTag: js.UndefOr[scala.Nothing], id: String): js.UndefOr[HTMLIonOverlayElement] = js.native
-  def getOverlay(doc: Document_, overlayTag: String): js.UndefOr[HTMLIonOverlayElement] = js.native
-  def getOverlay(doc: Document_, overlayTag: String, id: String): js.UndefOr[HTMLIonOverlayElement] = js.native
-  def getOverlays(doc: Document_): js.Array[HTMLIonOverlayElement] = js.native
-  def getOverlays(doc: Document_, selector: String): js.Array[HTMLIonOverlayElement] = js.native
+  def getOverlay(doc: Document): js.UndefOr[HTMLIonOverlayElement] = js.native
+  def getOverlay(doc: Document, overlayTag: String): js.UndefOr[HTMLIonOverlayElement] = js.native
+  def getOverlay(doc: Document, overlayTag: String, id: String): js.UndefOr[HTMLIonOverlayElement] = js.native
+  def getOverlays(doc: Document): js.Array[HTMLIonOverlayElement] = js.native
+  def getOverlays(doc: Document, selector: String): js.Array[HTMLIonOverlayElement] = js.native
   def isCancel(): Boolean = js.native
   def isCancel(role: String): Boolean = js.native
-  def onceEvent(element: HTMLElement, eventName: String, callback: js.Function1[/* ev */ Event_, Unit]): Unit = js.native
+  def onceEvent(element: HTMLElement, eventName: String, callback: js.Function1[/* ev */ Event, Unit]): Unit = js.native
   def prepareOverlay[T /* <: HTMLIonOverlayElement */](el: T): Unit = js.native
   def present(
     overlay: OverlayInterface,
@@ -285,7 +214,6 @@ object overlaysMod extends js.Object {
     def create(options: ActionSheetOptions): js.Promise[HTMLIonActionSheetElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
-    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonActionSheetElement]] = js.native
@@ -296,7 +224,6 @@ object overlaysMod extends js.Object {
     def create(options: AlertOptions): js.Promise[HTMLIonAlertElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
-    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonAlertElement]] = js.native
@@ -307,7 +234,6 @@ object overlaysMod extends js.Object {
     def create(options: LoadingOptions): js.Promise[HTMLIonLoadingElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
-    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonLoadingElement]] = js.native
@@ -318,7 +244,6 @@ object overlaysMod extends js.Object {
     def create(options: ModalOptions[ComponentRef]): js.Promise[HTMLIonModalElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
-    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonModalElement]] = js.native
@@ -329,7 +254,6 @@ object overlaysMod extends js.Object {
     def create(options: PickerOptions): js.Promise[HTMLIonPickerElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
-    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonPickerElement]] = js.native
@@ -340,7 +264,6 @@ object overlaysMod extends js.Object {
     def create(options: PopoverOptions[ComponentRef]): js.Promise[HTMLIonPopoverElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
-    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonPopoverElement]] = js.native
@@ -351,7 +274,6 @@ object overlaysMod extends js.Object {
     def create(options: ToastOptions): js.Promise[HTMLIonToastElement] = js.native
     def dismiss(): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any): js.Promise[Boolean] = js.native
-    def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
     def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
     def getTop(): js.Promise[js.UndefOr[HTMLIonToastElement]] = js.native

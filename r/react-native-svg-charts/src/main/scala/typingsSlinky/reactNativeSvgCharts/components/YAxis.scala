@@ -5,8 +5,8 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.d3Scale.mod.ScaleBand_
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeSvgCharts.AnonTop
-import typingsSlinky.reactNativeSvgCharts.PartialTextProps
+import typingsSlinky.reactNativeSvgCharts.anon.PartialTextProps
+import typingsSlinky.reactNativeSvgCharts.anon.Top
 import typingsSlinky.reactNativeSvgCharts.mod.AccessorFunctionProps
 import typingsSlinky.reactNativeSvgCharts.mod.ScaleType
 import typingsSlinky.reactNativeSvgCharts.mod.YAxisProps
@@ -24,7 +24,7 @@ object YAxis {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeSvgCharts.mod.YAxis[js.Any]] {
     @scala.inline
-    def contentInset(value: AnonTop): this.type = set("contentInset", value.asInstanceOf[js.Any])
+    def contentInset(value: Top): this.type = set("contentInset", value.asInstanceOf[js.Any])
     @scala.inline
     def formatLabel(value: (/* value */ js.Any, /* index */ Double) => Double | String): this.type = set("formatLabel", js.Any.fromFunction2(value))
     @scala.inline

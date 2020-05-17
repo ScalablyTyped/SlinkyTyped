@@ -1,6 +1,7 @@
 package typingsSlinky.materialUiCore
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.materialUiCore.anon.PartialwithThemeboolean
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

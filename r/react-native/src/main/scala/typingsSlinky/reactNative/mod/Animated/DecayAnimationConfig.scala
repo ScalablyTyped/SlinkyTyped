@@ -1,6 +1,6 @@
 package typingsSlinky.reactNative.mod.Animated
 
-import typingsSlinky.reactNative.AnonX
+import typingsSlinky.reactNative.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DecayAnimationConfig extends AnimationConfig {
   var deceleration: js.UndefOr[Double] = js.native
-  var velocity: Double | AnonX = js.native
+  var velocity: Double | X = js.native
 }
 
 object DecayAnimationConfig {
   @scala.inline
-  def apply(useNativeDriver: Boolean, velocity: Double | AnonX): DecayAnimationConfig = {
+  def apply(useNativeDriver: Boolean, velocity: Double | X): DecayAnimationConfig = {
     val __obj = js.Dynamic.literal(useNativeDriver = useNativeDriver.asInstanceOf[js.Any], velocity = velocity.asInstanceOf[js.Any])
     __obj.asInstanceOf[DecayAnimationConfig]
   }
@@ -24,7 +24,7 @@ object DecayAnimationConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withVelocity(value: Double | AnonX): Self = {
+    def withVelocity(value: Double | X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("velocity")(value.asInstanceOf[js.Any])
         ret

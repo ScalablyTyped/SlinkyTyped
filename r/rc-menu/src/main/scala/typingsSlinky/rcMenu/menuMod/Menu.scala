@@ -2,7 +2,7 @@ package typingsSlinky.rcMenu.menuMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.SyntheticKeyboardEvent
-import typingsSlinky.rcMenu.ComponentClassSubPopupMen
+import typingsSlinky.rcMenu.anon.ComponentClassSubPopupMen
 import typingsSlinky.rcMenu.interfaceMod.MenuClickEventHandler
 import typingsSlinky.rcMenu.interfaceMod.MiniStore
 import typingsSlinky.rcMenu.interfaceMod.SelectInfo

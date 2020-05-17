@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.atlaskitSingleSelect.AnonEvent
+import typingsSlinky.atlaskitSingleSelect.anon.Event
 import typingsSlinky.atlaskitSingleSelect.atlaskitSingleSelectStrings.subtle
 import typingsSlinky.atlaskitSingleSelect.mod.GroupType
 import typingsSlinky.atlaskitSingleSelect.mod.ItemType
@@ -60,7 +60,7 @@ object SingleSelect {
     @scala.inline
     def onFilterChange(value: /* filter */ String => Unit): this.type = set("onFilterChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onOpenChange(value: /* change */ AnonEvent => Unit): this.type = set("onOpenChange", js.Any.fromFunction1(value))
+    def onOpenChange(value: /* change */ Event => Unit): this.type = set("onOpenChange", js.Any.fromFunction1(value))
     @scala.inline
     def onSelected(value: /* item */ ItemType => Unit): this.type = set("onSelected", js.Any.fromFunction1(value))
     @scala.inline

@@ -5,8 +5,8 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.moment.mod.Moment
-import typingsSlinky.rcTimePicker.AnonOpen
-import typingsSlinky.rcTimePicker.PartialTimePickerProps
+import typingsSlinky.rcTimePicker.anon.Open
+import typingsSlinky.rcTimePicker.anon.PartialTimePickerProps
 import typingsSlinky.rcTimePicker.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -66,9 +66,9 @@ object RcTimePicker {
     @scala.inline
     def onChange(value: /* value */ Moment => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onClose(value: /* state */ AnonOpen => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
+    def onClose(value: /* state */ Open => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
     @scala.inline
-    def onOpen(value: /* state */ AnonOpen => Unit): this.type = set("onOpen", js.Any.fromFunction1(value))
+    def onOpen(value: /* state */ Open => Unit): this.type = set("onOpen", js.Any.fromFunction1(value))
     @scala.inline
     def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
     @scala.inline

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("fast-csv/build/src/parser/parser/Token", "Token")
 @js.native
-class Token protected () extends js.Object {
+class Token protected () extends MaybeToken {
   def this(tokenArgs: TokenArgs) = this()
   val endCursor: Double = js.native
   val startCursor: Double = js.native

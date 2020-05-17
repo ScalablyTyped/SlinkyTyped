@@ -7,10 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents the data in a table or an {@link Office.TableBinding}.
   */
-@JSGlobal("Office.TableData")
 @js.native
-class TableData () extends js.Object {
-  def this(rows: js.Array[js.Array[_]], headers: js.Array[_]) = this()
+trait TableData extends js.Object {
   /**
     * Gets or sets the headers of the table.
     * 
@@ -44,5 +42,33 @@ class TableData () extends js.Object {
     * - If you overwrite or update an existing table, the existing rows are not altered.
     */
   var rows: js.Array[js.Array[_]] = js.native
+}
+
+object TableData {
+  @scala.inline
+  def apply(headers: js.Array[_], rows: js.Array[js.Array[_]]): TableData = {
+    val __obj = js.Dynamic.literal(headers = headers.asInstanceOf[js.Any], rows = rows.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TableData]
+  }
+  @scala.inline
+  implicit class TableDataOps[Self <: TableData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHeaders(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRows(value: js.Array[js.Array[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

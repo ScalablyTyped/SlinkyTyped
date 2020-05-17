@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait VNode extends js.Object {
+trait VNode extends ChildType {
   @JSName("$attrs$")
   var DollarattrsDollar: js.UndefOr[js.Any] = js.native
   @JSName("$children$")

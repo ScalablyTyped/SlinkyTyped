@@ -14,3 +14,18 @@ import scala.scalajs.js.annotation._
 */
 trait geometryGeometry extends js.Object
 
+object geometryGeometry {
+  @scala.inline
+  implicit def apply(value: Extent): geometryGeometry = value.asInstanceOf[geometryGeometry]
+  @scala.inline
+  implicit def apply(value: Mesh): geometryGeometry = value.asInstanceOf[geometryGeometry]
+  @scala.inline
+  implicit def apply(value: Multipoint): geometryGeometry = value.asInstanceOf[geometryGeometry]
+  @scala.inline
+  implicit def apply(value: Point): geometryGeometry = value.asInstanceOf[geometryGeometry]
+  @scala.inline
+  implicit def apply(value: Polygon): geometryGeometry = value.asInstanceOf[geometryGeometry]
+  @scala.inline
+  implicit def apply(value: Polyline): geometryGeometry = value.asInstanceOf[geometryGeometry]
+}
+

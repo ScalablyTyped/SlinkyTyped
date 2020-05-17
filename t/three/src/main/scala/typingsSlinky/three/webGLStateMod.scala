@@ -1,6 +1,7 @@
 package typingsSlinky.three
 
 import org.scalajs.dom.raw.WebGLRenderingContext
+import typingsSlinky.three.anon.Stencil
 import typingsSlinky.three.constantsMod.Blending
 import typingsSlinky.three.constantsMod.BlendingDstFactor
 import typingsSlinky.three.constantsMod.BlendingEquation
@@ -44,7 +45,7 @@ object webGLStateMod extends js.Object {
       utils: js.Any,
       capabilities: WebGLCapabilities
     ) = this()
-    var buffers: AnonStencil = js.native
+    var buffers: Stencil = js.native
     def activeTexture(webglSlot: Double): Unit = js.native
     def bindTexture(webglType: Double, webglTexture: js.Any): Unit = js.native
     // Same interface as https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexImage2D

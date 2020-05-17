@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojnboxMod
 
-import typingsSlinky.oracleOraclejet.AnonBorderRadiusBorderWidth
-import typingsSlinky.oracleOraclejet.AnonBorderWidthColor
+import typingsSlinky.oracleOraclejet.anon.BorderRadiusBorderWidth
+import typingsSlinky.oracleOraclejet.anon.BorderWidthColor
 import typingsSlinky.oracleOraclejet.mod.JetSettableProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,9 +15,9 @@ trait ojNBoxNodeSettableProperties extends JetSettableProperties {
   var color: js.UndefOr[String] = js.native
   var column: String = js.native
   var groupCategory: js.UndefOr[String] = js.native
-  var icon: js.UndefOr[AnonBorderRadiusBorderWidth] = js.native
+  var icon: js.UndefOr[BorderRadiusBorderWidth] = js.native
   var indicatorColor: js.UndefOr[String] = js.native
-  var indicatorIcon: js.UndefOr[AnonBorderWidthColor] = js.native
+  var indicatorIcon: js.UndefOr[BorderWidthColor] = js.native
   var label: String = js.native
   var row: String = js.native
   var secondaryLabel: String = js.native
@@ -129,7 +129,7 @@ object ojNBoxNodeSettableProperties {
         ret
     }
     @scala.inline
-    def withIcon(value: AnonBorderRadiusBorderWidth): Self = {
+    def withIcon(value: BorderRadiusBorderWidth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
         ret
@@ -153,7 +153,7 @@ object ojNBoxNodeSettableProperties {
         ret
     }
     @scala.inline
-    def withIndicatorIcon(value: AnonBorderWidthColor): Self = {
+    def withIndicatorIcon(value: BorderWidthColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("indicatorIcon")(value.asInstanceOf[js.Any])
         ret

@@ -2,7 +2,7 @@ package typingsSlinky.reactVega.mod
 
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactVega.AnonBottom
+import typingsSlinky.reactVega.anon.Bottom
 import typingsSlinky.std.Record
 import typingsSlinky.vegaTypings.mod.View
 import typingsSlinky.vegaTypings.runtimeMod.Item
@@ -21,7 +21,7 @@ trait VegaPropsWithoutSpec extends js.Object {
   var logLevel: js.UndefOr[Double] = js.native
   var onNewView: js.UndefOr[js.Function1[/* view */ View, Unit]] = js.native
   var onParseError: js.UndefOr[js.Function1[/* error */ js.Error, Unit]] = js.native
-  var padding: js.UndefOr[Double | AnonBottom] = js.native
+  var padding: js.UndefOr[Double | Bottom] = js.native
   var renderer: js.UndefOr[String] = js.native
   var style: js.UndefOr[CSSProperties] = js.native
   var tooltip: js.UndefOr[TooltipHandler] = js.native
@@ -137,7 +137,7 @@ object VegaPropsWithoutSpec {
         ret
     }
     @scala.inline
-    def withPadding(value: Double | AnonBottom): Self = {
+    def withPadding(value: Double | Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("padding")(value.asInstanceOf[js.Any])
         ret

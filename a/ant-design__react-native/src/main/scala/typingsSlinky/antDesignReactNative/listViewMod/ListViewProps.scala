@@ -2,7 +2,7 @@ package typingsSlinky.antDesignReactNative.listViewMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antDesignReactNative.AnonHighlight
+import typingsSlinky.antDesignReactNative.anon.Highlight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,14 +14,14 @@ trait ListViewProps[T] extends UltimateListViewProps {
   @JSName("numColumns")
   var numColumns_ListViewProps: js.UndefOr[Double] = js.native
   def onFetch(currentPage: Double, startFetch: js.Function0[_], abortFetch: js.Function0[Unit]): Unit = js.native
-  def renderItem(item: T, index: Double, separators: AnonHighlight): ReactElement | Null = js.native
+  def renderItem(item: T, index: Double, separators: Highlight): ReactElement | Null = js.native
 }
 
 object ListViewProps {
   @scala.inline
   def apply[T](
     onFetch: (Double, js.Function0[_], js.Function0[Unit]) => Unit,
-    renderItem: (T, Double, AnonHighlight) => ReactElement | Null
+    renderItem: (T, Double, Highlight) => ReactElement | Null
   ): ListViewProps[T] = {
     val __obj = js.Dynamic.literal(onFetch = js.Any.fromFunction3(onFetch), renderItem = js.Any.fromFunction3(renderItem))
     __obj.asInstanceOf[ListViewProps[T]]
@@ -39,7 +39,7 @@ object ListViewProps {
         ret
     }
     @scala.inline
-    def withRenderItem(value: (T, Double, AnonHighlight) => ReactElement | Null): Self[T] = {
+    def withRenderItem(value: (T, Double, Highlight) => ReactElement | Null): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderItem")(js.Any.fromFunction3(value))
         ret

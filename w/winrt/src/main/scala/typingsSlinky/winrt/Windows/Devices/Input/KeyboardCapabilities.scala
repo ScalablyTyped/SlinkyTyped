@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Devices.Input.KeyboardCapabilities")
 @js.native
-class KeyboardCapabilities () extends IKeyboardCapabilities
+trait KeyboardCapabilities extends IKeyboardCapabilities
+
+object KeyboardCapabilities {
+  @scala.inline
+  def apply(keyboardPresent: Double): KeyboardCapabilities = {
+    val __obj = js.Dynamic.literal(keyboardPresent = keyboardPresent.asInstanceOf[js.Any])
+    __obj.asInstanceOf[KeyboardCapabilities]
+  }
+}
 

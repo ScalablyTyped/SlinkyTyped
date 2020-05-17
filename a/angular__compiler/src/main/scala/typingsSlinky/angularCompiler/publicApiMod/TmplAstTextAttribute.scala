@@ -25,20 +25,6 @@ class TmplAstTextAttribute protected ()
     name: String,
     value: String,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
-    valueSpan: js.UndefOr[scala.Nothing],
-    i18n: Message
-  ) = this()
-  def this(
-    name: String,
-    value: String,
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
-    valueSpan: js.UndefOr[scala.Nothing],
-    i18n: Node
-  ) = this()
-  def this(
-    name: String,
-    value: String,
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
     valueSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
     i18n: Message
   ) = this()

@@ -1,6 +1,6 @@
 package typingsSlinky.sendgrid.mod.SendGrid.Helpers.Mail
 
-import typingsSlinky.sendgrid.AnonEnableBoolean
+import typingsSlinky.sendgrid.anon.EnableBoolean
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait SandBoxMode extends js.Object {
   def getEnable(): Boolean = js.native
   def setEnable(enabled: Boolean): Unit = js.native
-  def toJSON(): AnonEnableBoolean = js.native
+  def toJSON(): EnableBoolean = js.native
 }
 
 object SandBoxMode {
   @scala.inline
-  def apply(getEnable: () => Boolean, setEnable: Boolean => Unit, toJSON: () => AnonEnableBoolean): SandBoxMode = {
+  def apply(getEnable: () => Boolean, setEnable: Boolean => Unit, toJSON: () => EnableBoolean): SandBoxMode = {
     val __obj = js.Dynamic.literal(getEnable = js.Any.fromFunction0(getEnable), setEnable = js.Any.fromFunction1(setEnable), toJSON = js.Any.fromFunction0(toJSON))
     __obj.asInstanceOf[SandBoxMode]
   }
@@ -37,7 +37,7 @@ object SandBoxMode {
         ret
     }
     @scala.inline
-    def withToJSON(value: () => AnonEnableBoolean): Self = {
+    def withToJSON(value: () => EnableBoolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
         ret

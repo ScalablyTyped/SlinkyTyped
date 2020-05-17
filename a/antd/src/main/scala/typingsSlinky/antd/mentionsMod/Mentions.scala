@@ -2,7 +2,7 @@ package typingsSlinky.antd.mentionsMod
 
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.AnonFocused
+import typingsSlinky.antd.anon.Focused
 import typingsSlinky.antd.contextMod.ConfigConsumerProps
 import typingsSlinky.antd.renderEmptyMod.RenderEmptyHandler
 import typingsSlinky.react.mod.Component
@@ -18,7 +18,7 @@ trait Mentions
   var onFocus: FocusEventHandler[HTMLTextAreaElement] = js.native
   var rcMentions: js.Any = js.native
   @JSName("state")
-  var state_Mentions: AnonFocused = js.native
+  var state_Mentions: Focused = js.native
   def blur(): Unit = js.native
   def focus(): Unit = js.native
   def getFilterOption(): js.Any = js.native

@@ -1,6 +1,7 @@
 package typingsSlinky.phantomjs
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.phantomjs.anon.Architecture
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait System extends js.Object {
   var args: js.Array[String] = js.native
   var env: StringDictionary[String] = js.native
-  var os: AnonArchitecture = js.native
+  var os: Architecture = js.native
   var pid: Double = js.native
   var platform: String = js.native
 }
@@ -19,7 +20,7 @@ object System {
   def apply(
     args: js.Array[String],
     env: StringDictionary[String],
-    os: AnonArchitecture,
+    os: Architecture,
     pid: Double,
     platform: String
   ): System = {
@@ -45,7 +46,7 @@ object System {
         ret
     }
     @scala.inline
-    def withOs(value: AnonArchitecture): Self = {
+    def withOs(value: Architecture): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("os")(value.asInstanceOf[js.Any])
         ret

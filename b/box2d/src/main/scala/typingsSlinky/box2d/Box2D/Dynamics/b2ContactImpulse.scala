@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Box2D.Dynamics.b2ContactImpulse")
 @js.native
-class b2ContactImpulse () extends js.Object {
+trait b2ContactImpulse extends js.Object {
   /**
   		* Normal impulses.
   		**/
@@ -16,5 +15,33 @@ class b2ContactImpulse () extends js.Object {
   		* Tangent impulses.
   		**/
   var tangentImpulses: b2Vec2 = js.native
+}
+
+object b2ContactImpulse {
+  @scala.inline
+  def apply(normalImpulses: b2Vec2, tangentImpulses: b2Vec2): b2ContactImpulse = {
+    val __obj = js.Dynamic.literal(normalImpulses = normalImpulses.asInstanceOf[js.Any], tangentImpulses = tangentImpulses.asInstanceOf[js.Any])
+    __obj.asInstanceOf[b2ContactImpulse]
+  }
+  @scala.inline
+  implicit class b2ContactImpulseOps[Self <: b2ContactImpulse] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNormalImpulses(value: b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalImpulses")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTangentImpulses(value: b2Vec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tangentImpulses")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

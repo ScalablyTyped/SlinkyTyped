@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a client-side equivalent of the Appointment class.
   */
-@JSGlobal("ASPxClientAppointment")
 @js.native
-class ASPxClientAppointment () extends js.Object {
+trait ASPxClientAppointment extends js.Object {
   /**
     * Returns the client appointment ID.
     */
@@ -156,5 +155,253 @@ class ASPxClientAppointment () extends js.Object {
     * @param subject A string containing the appointment subject.
     */
   def SetSubject(subject: String): Unit = js.native
+}
+
+object ASPxClientAppointment {
+  @scala.inline
+  def apply(
+    AddResource: String => Unit,
+    GetAllDay: () => Boolean,
+    GetAppointmentType: () => ASPxAppointmentType,
+    GetDescription: () => String,
+    GetDuration: () => Double,
+    GetEnd: () => js.Date,
+    GetId: () => String,
+    GetLabelId: () => Double,
+    GetLocation: () => String,
+    GetRecurrenceInfo: () => ASPxClientRecurrenceInfo,
+    GetRecurrencePattern: () => ASPxClientAppointment,
+    GetResource: Double => String,
+    GetStart: () => js.Date,
+    GetStatusId: () => Double,
+    GetSubject: () => String,
+    SetAllDay: Boolean => Unit,
+    SetAppointmentType: ASPxAppointmentType => Unit,
+    SetDescription: String => Unit,
+    SetDuration: js.Any => Unit,
+    SetEnd: js.Date => Unit,
+    SetId: String => Unit,
+    SetLabelId: Double => Unit,
+    SetLocation: String => Unit,
+    SetRecurrenceInfo: ASPxClientRecurrenceInfo => Unit,
+    SetStart: js.Date => Unit,
+    SetStatusId: Double => Unit,
+    SetSubject: String => Unit,
+    appointmentId: String,
+    appointmentType: ASPxAppointmentType,
+    interval: ASPxClientTimeInterval,
+    labelIndex: Double,
+    resources: js.Array[String],
+    statusIndex: Double
+  ): ASPxClientAppointment = {
+    val __obj = js.Dynamic.literal(AddResource = js.Any.fromFunction1(AddResource), GetAllDay = js.Any.fromFunction0(GetAllDay), GetAppointmentType = js.Any.fromFunction0(GetAppointmentType), GetDescription = js.Any.fromFunction0(GetDescription), GetDuration = js.Any.fromFunction0(GetDuration), GetEnd = js.Any.fromFunction0(GetEnd), GetId = js.Any.fromFunction0(GetId), GetLabelId = js.Any.fromFunction0(GetLabelId), GetLocation = js.Any.fromFunction0(GetLocation), GetRecurrenceInfo = js.Any.fromFunction0(GetRecurrenceInfo), GetRecurrencePattern = js.Any.fromFunction0(GetRecurrencePattern), GetResource = js.Any.fromFunction1(GetResource), GetStart = js.Any.fromFunction0(GetStart), GetStatusId = js.Any.fromFunction0(GetStatusId), GetSubject = js.Any.fromFunction0(GetSubject), SetAllDay = js.Any.fromFunction1(SetAllDay), SetAppointmentType = js.Any.fromFunction1(SetAppointmentType), SetDescription = js.Any.fromFunction1(SetDescription), SetDuration = js.Any.fromFunction1(SetDuration), SetEnd = js.Any.fromFunction1(SetEnd), SetId = js.Any.fromFunction1(SetId), SetLabelId = js.Any.fromFunction1(SetLabelId), SetLocation = js.Any.fromFunction1(SetLocation), SetRecurrenceInfo = js.Any.fromFunction1(SetRecurrenceInfo), SetStart = js.Any.fromFunction1(SetStart), SetStatusId = js.Any.fromFunction1(SetStatusId), SetSubject = js.Any.fromFunction1(SetSubject), appointmentId = appointmentId.asInstanceOf[js.Any], appointmentType = appointmentType.asInstanceOf[js.Any], interval = interval.asInstanceOf[js.Any], labelIndex = labelIndex.asInstanceOf[js.Any], resources = resources.asInstanceOf[js.Any], statusIndex = statusIndex.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientAppointment]
+  }
+  @scala.inline
+  implicit class ASPxClientAppointmentOps[Self <: ASPxClientAppointment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddResource(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AddResource")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetAllDay(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetAllDay")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetAppointmentType(value: () => ASPxAppointmentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetAppointmentType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDescription(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetDescription")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDuration(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetDuration")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetEnd(value: () => js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetEnd")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetId(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetId")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLabelId(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetLabelId")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLocation(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetLocation")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRecurrenceInfo(value: () => ASPxClientRecurrenceInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetRecurrenceInfo")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRecurrencePattern(value: () => ASPxClientAppointment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetRecurrencePattern")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetResource(value: Double => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetResource")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetStart(value: () => js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetStart")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetStatusId(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetStatusId")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSubject(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetSubject")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetAllDay(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetAllDay")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetAppointmentType(value: ASPxAppointmentType => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetAppointmentType")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetDescription(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetDescription")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetDuration(value: js.Any => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetDuration")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetEnd(value: js.Date => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetEnd")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetId(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetId")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetLabelId(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetLabelId")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetLocation(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetLocation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetRecurrenceInfo(value: ASPxClientRecurrenceInfo => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetRecurrenceInfo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetStart(value: js.Date => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetStart")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetStatusId(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetStatusId")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetSubject(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetSubject")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAppointmentId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAppointmentType(value: ASPxAppointmentType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInterval(value: ASPxClientTimeInterval): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLabelIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("labelIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResources(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatusIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("statusIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

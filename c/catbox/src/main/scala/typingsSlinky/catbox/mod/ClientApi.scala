@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ClientApi[T] extends js.Object {
+trait ClientApi[T] extends EnginePrototypeOrObject {
   /**
     * drop(key) - remove an item from cache where:
     *  * key - a cache key object (see [ICacheKey]).

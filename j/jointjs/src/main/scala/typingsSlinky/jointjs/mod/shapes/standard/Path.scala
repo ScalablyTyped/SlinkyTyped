@@ -1,0 +1,16 @@
+package typingsSlinky.jointjs.mod.shapes.standard
+
+import typingsSlinky.jointjs.mod.dia.Element
+import typingsSlinky.jointjs.mod.dia.Element.GenericAttributes
+import typingsSlinky.jointjs.mod.dia.Graph.Options
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("jointjs", "shapes.standard.Path")
+@js.native
+class Path () extends Element {
+  def this(attributes: GenericAttributes[PathSelectors]) = this()
+  def this(attributes: GenericAttributes[PathSelectors], opt: Options) = this()
+}
+

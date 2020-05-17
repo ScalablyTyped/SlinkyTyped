@@ -1,20 +1,14 @@
 package typingsSlinky.ejWebAll.ej
 
-import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ejWebAll.JQuery
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("ej.RTE")
 @js.native
-class RTE_ protected () extends Widget_ {
-  def this(element: JQuery) = this()
-  def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.RTE.Model) = this()
-  def this(element: Element, options: typingsSlinky.ejWebAll.ej.RTE.Model) = this()
+trait RTE_ extends Widget_ {
   var defaults: typingsSlinky.ejWebAll.ej.RTE.Model = js.native
   @JSName("model")
   var model_RTE_ : typingsSlinky.ejWebAll.ej.RTE.Model = js.native
@@ -57,7 +51,7 @@ class RTE_ protected () extends Widget_ {
   /** Gets the Document from the RTE control.
     * @returns {Document}
     */
-  def getDocument(): Document_ = js.native
+  def getDocument(): Document = js.native
   /** Gets the HTML string from the RTE control.
     * @returns {HTMLElement}
     */

@@ -2,8 +2,8 @@ package typingsSlinky.easyXapiSupertest.netMod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.easyXapiSupertest.AnonAddress
-import typingsSlinky.easyXapiSupertest.AnonAllowHalfOpen
+import typingsSlinky.easyXapiSupertest.anon.Address
+import typingsSlinky.easyXapiSupertest.anon.AllowHalfOpen
 import typingsSlinky.easyXapiSupertest.streamMod.Duplex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +19,7 @@ trait Socket extends Duplex {
   var remoteAddress: String = js.native
   var remoteFamily: String = js.native
   var remotePort: Double = js.native
-  def address(): AnonAddress = js.native
+  def address(): Address = js.native
   def connect(path: String): Unit = js.native
   def connect(path: String, connectionListener: js.Function): Unit = js.native
   def connect(port: Double): Unit = js.native
@@ -48,5 +48,5 @@ trait Socket extends Duplex {
 @js.native
 object Socket
   extends Instantiable0[Socket]
-     with Instantiable1[/* options */ AnonAllowHalfOpen, Socket]
+     with Instantiable1[/* options */ AllowHalfOpen, Socket]
 

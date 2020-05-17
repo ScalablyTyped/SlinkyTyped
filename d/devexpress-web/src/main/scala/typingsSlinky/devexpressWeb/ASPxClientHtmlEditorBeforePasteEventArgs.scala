@@ -7,15 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientHtmlEditor.BeforePaste event.
   */
-@JSGlobal("ASPxClientHtmlEditorBeforePasteEventArgs")
 @js.native
-class ASPxClientHtmlEditorBeforePasteEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initialize a new instance of the ASPxClientHtmlEditorBeforePasteEventArgs class with the specified settings.
-    * @param commandName A string value identifying the command's name.
-    * @param html A string value that specifies the HTML content to paste.
-    */
-  def this(commandName: String, html: String) = this()
+trait ASPxClientHtmlEditorBeforePasteEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the name of the processed command.
     */
@@ -24,5 +17,33 @@ class ASPxClientHtmlEditorBeforePasteEventArgs protected () extends ASPxClientEv
     * Gets or sets the HTML markup that is about to be pasted to the ASPxHtmlEditor's content.
     */
   var html: String = js.native
+}
+
+object ASPxClientHtmlEditorBeforePasteEventArgs {
+  @scala.inline
+  def apply(commandName: String, html: String): ASPxClientHtmlEditorBeforePasteEventArgs = {
+    val __obj = js.Dynamic.literal(commandName = commandName.asInstanceOf[js.Any], html = html.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientHtmlEditorBeforePasteEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientHtmlEditorBeforePasteEventArgsOps[Self <: ASPxClientHtmlEditorBeforePasteEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCommandName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("commandName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHtml(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

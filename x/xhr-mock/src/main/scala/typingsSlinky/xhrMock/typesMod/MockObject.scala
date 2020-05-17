@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait MockObject extends js.Object {
+trait MockObject extends Mock {
   var body: js.UndefOr[js.Any] = js.native
   var headers: js.UndefOr[MockHeaders] = js.native
   var reason: js.UndefOr[String] = js.native

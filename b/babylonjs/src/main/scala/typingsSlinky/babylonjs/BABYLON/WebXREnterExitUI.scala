@@ -4,14 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.WebXREnterExitUI")
 @js.native
-/**
-  *
-  * @param scene babylon scene object to use
-  * @param options (read-only) version of the options passed to this UI
-  */
-class WebXREnterExitUI protected () extends IDisposable {
+trait WebXREnterExitUI extends IDisposable {
   var _activeButton: js.Any = js.native
   var _buttons: js.Any = js.native
   var _overlay: js.Any = js.native
@@ -29,17 +23,70 @@ class WebXREnterExitUI protected () extends IDisposable {
   var scene: js.Any = js.native
 }
 
-/* static members */
-@JSGlobal("BABYLON.WebXREnterExitUI")
-@js.native
-object WebXREnterExitUI extends js.Object {
-  /**
-    * Creates UI to allow the user to enter/exit XR mode
-    * @param scene the scene to add the ui to
-    * @param helper the xr experience helper to enter/exit xr with
-    * @param options options to configure the UI
-    * @returns the created ui
-    */
-  def CreateAsync(scene: Scene, helper: WebXRExperienceHelper, options: WebXREnterExitUIOptions): js.Promise[WebXREnterExitUI] = js.native
+object WebXREnterExitUI {
+  @scala.inline
+  def apply(
+    _activeButton: js.Any,
+    _buttons: js.Any,
+    _overlay: js.Any,
+    _updateButtons: js.Any,
+    activeButtonChangedObservable: Observable[Nullable[WebXREnterExitUIButton]],
+    dispose: () => Unit,
+    options: WebXREnterExitUIOptions,
+    scene: js.Any
+  ): WebXREnterExitUI = {
+    val __obj = js.Dynamic.literal(_activeButton = _activeButton.asInstanceOf[js.Any], _buttons = _buttons.asInstanceOf[js.Any], _overlay = _overlay.asInstanceOf[js.Any], _updateButtons = _updateButtons.asInstanceOf[js.Any], activeButtonChangedObservable = activeButtonChangedObservable.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), options = options.asInstanceOf[js.Any], scene = scene.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebXREnterExitUI]
+  }
+  @scala.inline
+  implicit class WebXREnterExitUIOps[Self <: WebXREnterExitUI] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_activeButton(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_activeButton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_buttons(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_buttons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_overlay(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_overlay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_updateButtons(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_updateButtons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActiveButtonChangedObservable(value: Observable[Nullable[WebXREnterExitUIButton]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activeButtonChangedObservable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOptions(value: WebXREnterExitUIOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScene(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scene")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

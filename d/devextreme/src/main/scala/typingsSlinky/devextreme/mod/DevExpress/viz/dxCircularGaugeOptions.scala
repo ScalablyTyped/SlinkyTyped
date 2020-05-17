@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonEndAngle
+import typingsSlinky.devextreme.anon.EndAngle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait dxCircularGaugeOptions extends BaseGaugeOptions[dxCircularGauge] {
   /** Specifies the options required to set the geometry of the CircularGauge widget. */
-  var geometry: js.UndefOr[AnonEndAngle] = js.native
+  var geometry: js.UndefOr[EndAngle] = js.native
   /** Specifies gauge range container options. */
   @JSName("rangeContainer")
   var rangeContainer_dxCircularGaugeOptions: js.UndefOr[dxCircularGaugeRangeContainer] = js.native
@@ -34,7 +34,7 @@ object dxCircularGaugeOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGeometry(value: AnonEndAngle): Self = {
+    def withGeometry(value: EndAngle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("geometry")(value.asInstanceOf[js.Any])
         ret

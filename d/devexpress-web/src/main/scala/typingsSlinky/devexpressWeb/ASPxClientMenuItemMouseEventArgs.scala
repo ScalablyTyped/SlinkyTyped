@@ -7,18 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for client events which relate to mouse hovering (such as entering or leaving) over menu items.
   */
-@JSGlobal("ASPxClientMenuItemMouseEventArgs")
 @js.native
-class ASPxClientMenuItemMouseEventArgs protected () extends ASPxClientMenuItemEventArgs {
-  /**
-    * Initializes a new ASPxClientMenuItemMouseEventArgs object with the specified settings.
-    * @param item An ASPxClientMenuItem object that represents an item related to the event.
-    * @param htmlElement An HTML object that contains the processed item.
-    */
-  def this(item: ASPxClientMenuItem, htmlElement: js.Any) = this()
+trait ASPxClientMenuItemMouseEventArgs extends ASPxClientMenuItemEventArgs {
   /**
     * Gets the HTML object that contains the processed item.
     */
   var htmlElement: js.Any = js.native
+}
+
+object ASPxClientMenuItemMouseEventArgs {
+  @scala.inline
+  def apply(htmlElement: js.Any, item: ASPxClientMenuItem): ASPxClientMenuItemMouseEventArgs = {
+    val __obj = js.Dynamic.literal(htmlElement = htmlElement.asInstanceOf[js.Any], item = item.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientMenuItemMouseEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientMenuItemMouseEventArgsOps[Self <: ASPxClientMenuItemMouseEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHtmlElement(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("htmlElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

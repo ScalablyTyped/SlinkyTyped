@@ -5,7 +5,7 @@ import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.nivoBar.dataFromindexeskeysLegend
+import typingsSlinky.nivoBar.anon.dataFromindexeskeysLegend
 import typingsSlinky.nivoBar.mod.AccessorFunc
 import typingsSlinky.nivoBar.mod.Axis
 import typingsSlinky.nivoBar.mod.BarCanvasProps

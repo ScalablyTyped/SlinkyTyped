@@ -1,5 +1,6 @@
 package typingsSlinky.rbx.modalContainerMod
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.SVGElement
 import slinky.core.ReactComponentClass
@@ -7,7 +8,6 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait ModalContainerProps extends js.Object {
   var closeOnBlur: js.UndefOr[Boolean] = js.native
   var closeOnEsc: js.UndefOr[Boolean] = js.native
   var containerClassName: js.UndefOr[String] = js.native
-  var document: js.UndefOr[Document_] = js.native
+  var document: js.UndefOr[Document] = js.native
   var innerRef: js.UndefOr[Ref[HTMLElement | SVGElement | ReactComponentClass[js.Object]]] = js.native
   var onClose: js.UndefOr[js.Function0[Unit]] = js.native
 }
@@ -141,7 +141,7 @@ object ModalContainerProps {
         ret
     }
     @scala.inline
-    def withDocument(value: Document_): Self = {
+    def withDocument(value: Document): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
         ret

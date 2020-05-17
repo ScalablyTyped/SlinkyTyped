@@ -13,14 +13,8 @@ import scala.scalajs.js.annotation._
   * @author Jeongho Nam <http://samchon.org>
   */
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify protocol.Entity * / any */ @JSGlobal("bws.packer.InstanceForm")
-@js.native
-/**
-  * Default Constructor.
-  */
-class InstanceForm () extends js.Object {
-  def this(instance: Instance) = this()
-  def this(instance: Instance, count: Double) = this()
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify protocol.Entity * / any */ @js.native
+trait InstanceForm extends js.Object {
   @JSName("$count")
   var $count: String = js.native
   @JSName("$height")
@@ -69,5 +63,136 @@ class InstanceForm () extends js.Object {
     * @inheritdoc
     */
   def toXML(): js.Any = js.native
+}
+
+object InstanceForm {
+  @scala.inline
+  def apply(
+    $count: String,
+    $height: String,
+    $length: String,
+    $name: String,
+    $width: String,
+    TAG: () => String,
+    construct: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify library.XML */ js.Any => Unit,
+    count: js.Any,
+    createInstance: js.Any => js.Any,
+    getCount: () => Double,
+    getInstance: () => Instance,
+    instance: js.Any,
+    key: () => js.Any,
+    setCount: Double => Unit,
+    toInstanceArray: () => InstanceArray,
+    toXML: () => js.Any
+  ): InstanceForm = {
+    val __obj = js.Dynamic.literal($count = $count.asInstanceOf[js.Any], $height = $height.asInstanceOf[js.Any], $length = $length.asInstanceOf[js.Any], $name = $name.asInstanceOf[js.Any], $width = $width.asInstanceOf[js.Any], TAG = js.Any.fromFunction0(TAG), construct = js.Any.fromFunction1(construct), count = count.asInstanceOf[js.Any], createInstance = js.Any.fromFunction1(createInstance), getCount = js.Any.fromFunction0(getCount), getInstance = js.Any.fromFunction0(getInstance), instance = instance.asInstanceOf[js.Any], key = js.Any.fromFunction0(key), setCount = js.Any.fromFunction1(setCount), toInstanceArray = js.Any.fromFunction0(toInstanceArray), toXML = js.Any.fromFunction0(toXML))
+    __obj.asInstanceOf[InstanceForm]
+  }
+  @scala.inline
+  implicit class InstanceFormOps[Self <: InstanceForm] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with$count(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$height(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$length(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$name(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with$width(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("$width")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTAG(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TAG")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withConstruct(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify library.XML */ js.Any => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("construct")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCount(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreateInstance(value: js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createInstance")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetCount(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetInstance(value: () => Instance): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getInstance")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withInstance(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("instance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKey(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetCount(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setCount")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withToInstanceArray(value: () => InstanceArray): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toInstanceArray")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withToXML(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toXML")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

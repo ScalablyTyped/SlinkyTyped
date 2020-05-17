@@ -1,7 +1,7 @@
 package typingsSlinky.officeJsPreview.Office
 
-import typingsSlinky.officeJsPreview.AsyncContextOptionsisInli
 import typingsSlinky.officeJsPreview.Office.MailboxEnums.ItemType
+import typingsSlinky.officeJsPreview.anon.AsyncContextOptionsisInli
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.reactBootstrapTable.mod
 
-import typingsSlinky.reactBootstrapTable.AnonMsg
+import typingsSlinky.reactBootstrapTable.anon.Msg
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +14,12 @@ trait EditValidatorObject extends js.Object {
   /**
   	 * Notification object providing details on the validation result.
   	 */
-  var notification: AnonMsg = js.native
+  var notification: Msg = js.native
 }
 
 object EditValidatorObject {
   @scala.inline
-  def apply(isValid: Boolean, notification: AnonMsg): EditValidatorObject = {
+  def apply(isValid: Boolean, notification: Msg): EditValidatorObject = {
     val __obj = js.Dynamic.literal(isValid = isValid.asInstanceOf[js.Any], notification = notification.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditValidatorObject]
   }
@@ -36,7 +36,7 @@ object EditValidatorObject {
         ret
     }
     @scala.inline
-    def withNotification(value: AnonMsg): Self = {
+    def withNotification(value: Msg): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notification")(value.asInstanceOf[js.Any])
         ret

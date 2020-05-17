@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -98,7 +98,7 @@ object IgGridCellMerging {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCellsMerged(value: (/* event */ Event_, /* ui */ CellsMergedEventUIParam) => Unit): Self = {
+    def withCellsMerged(value: (/* event */ Event, /* ui */ CellsMergedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cellsMerged")(js.Any.fromFunction2(value))
         ret
@@ -110,7 +110,7 @@ object IgGridCellMerging {
         ret
     }
     @scala.inline
-    def withCellsMerging(value: (/* event */ Event_, /* ui */ CellsMergingEventUIParam) => Unit): Self = {
+    def withCellsMerging(value: (/* event */ Event, /* ui */ CellsMergingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cellsMerging")(js.Any.fromFunction2(value))
         ret

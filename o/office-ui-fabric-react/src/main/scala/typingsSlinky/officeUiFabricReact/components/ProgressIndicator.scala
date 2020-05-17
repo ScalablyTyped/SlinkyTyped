@@ -23,7 +23,7 @@ object ProgressIndicator {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, LegacyRef[js.Any]] {
     @scala.inline
     def ariaValueText(value: String): this.type = set("ariaValueText", value.asInstanceOf[js.Any])
     @scala.inline

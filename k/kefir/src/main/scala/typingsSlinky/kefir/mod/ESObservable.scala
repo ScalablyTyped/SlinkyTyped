@@ -1,18 +1,18 @@
 package typingsSlinky.kefir.mod
 
-import typingsSlinky.kefir.AnonUnsubscribe
+import typingsSlinky.kefir.anon.Unsubscribe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ESObservable[T, S] extends js.Object {
-  def subscribe(callbacks: ESObserver[T, S]): AnonUnsubscribe = js.native
+  def subscribe(callbacks: ESObserver[T, S]): Unsubscribe = js.native
 }
 
 object ESObservable {
   @scala.inline
-  def apply[T, S](subscribe: ESObserver[T, S] => AnonUnsubscribe): ESObservable[T, S] = {
+  def apply[T, S](subscribe: ESObserver[T, S] => Unsubscribe): ESObservable[T, S] = {
     val __obj = js.Dynamic.literal(subscribe = js.Any.fromFunction1(subscribe))
     __obj.asInstanceOf[ESObservable[T, S]]
   }
@@ -23,7 +23,7 @@ object ESObservable {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): (Self[T, S]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[T, S]) with Other]
     @scala.inline
-    def withSubscribe(value: ESObserver[T, S] => AnonUnsubscribe): Self[T, S] = {
+    def withSubscribe(value: ESObserver[T, S] => Unsubscribe): Self[T, S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("subscribe")(js.Any.fromFunction1(value))
         ret

@@ -1,9 +1,9 @@
 package typingsSlinky.terminalKit.screenBufferMod
 
-import typingsSlinky.terminalKit.AnonAttr
-import typingsSlinky.terminalKit.AnonChar
-import typingsSlinky.terminalKit.AnonDst
-import typingsSlinky.terminalKit.AnonX
+import typingsSlinky.terminalKit.anon.Attr
+import typingsSlinky.terminalKit.anon.Char
+import typingsSlinky.terminalKit.anon.Dst
+import typingsSlinky.terminalKit.anon.X
 import typingsSlinky.terminalKit.screenBufferHDMod.IsBlending
 import typingsSlinky.terminalKit.terminalMod.Terminal
 import scala.scalajs.js
@@ -22,12 +22,12 @@ trait ScreenBuffer
   def draw(): Unit = js.native
   def draw(options: DrawOptions): Unit = js.native
   def drawCursor(): Unit = js.native
-  def drawCursor(options: AnonDst): Unit = js.native
+  def drawCursor(options: Dst): Unit = js.native
   def dumpChars(): String = js.native
   def fill(): Unit = js.native
-  def fill(options: AnonAttr): Unit = js.native
-  def get(): AnonChar = js.native
-  def get(options: AnonX): AnonChar = js.native
+  def fill(options: Attr): Unit = js.native
+  def get(): Char = js.native
+  def get(options: X): Char = js.native
   def moveTo(x: Double, y: Double): Unit = js.native
   def object2attr(attrObject: Attributes): Unit = js.native
   def put(options: PutOptions, format: String, formatArgumets: js.Any*): Unit = js.native

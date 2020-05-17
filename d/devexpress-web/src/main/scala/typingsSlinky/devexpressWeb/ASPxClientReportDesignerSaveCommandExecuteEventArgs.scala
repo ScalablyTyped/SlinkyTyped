@@ -7,15 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientReportDesigner.SaveCommandExecute event.
   */
-@JSGlobal("ASPxClientReportDesignerSaveCommandExecuteEventArgs")
 @js.native
-/**
-  * Initializes a new instance of the ASPxClientReportDesignerSaveCommandExecuteEventArgs class with the default settings.
-  */
-class ASPxClientReportDesignerSaveCommandExecuteEventArgs () extends ASPxClientEventArgs {
+trait ASPxClientReportDesignerSaveCommandExecuteEventArgs extends ASPxClientEventArgs {
   /**
     * Specifies whether or not the event was handled.
     */
   var handled: Boolean = js.native
+}
+
+object ASPxClientReportDesignerSaveCommandExecuteEventArgs {
+  @scala.inline
+  def apply(handled: Boolean): ASPxClientReportDesignerSaveCommandExecuteEventArgs = {
+    val __obj = js.Dynamic.literal(handled = handled.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientReportDesignerSaveCommandExecuteEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientReportDesignerSaveCommandExecuteEventArgsOps[Self <: ASPxClientReportDesignerSaveCommandExecuteEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHandled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handled")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

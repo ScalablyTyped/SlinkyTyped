@@ -1,6 +1,6 @@
 package typingsSlinky.gcsResumableUpload.mod
 
-import typingsSlinky.gcsResumableUpload.AnonScopes
+import typingsSlinky.gcsResumableUpload.anon.Scopes
 import typingsSlinky.gcsResumableUpload.gcsResumableUploadStrings.Asterisk
 import typingsSlinky.googleAuthLibrary.mod.GoogleAuth
 import typingsSlinky.node.Buffer
@@ -15,7 +15,7 @@ class Upload_ protected () extends ^ {
   def this(cfg: UploadConfig) = this()
   var apiEndpoint: String = js.native
   var authClient: GoogleAuth = js.native
-  var authConfig: js.UndefOr[AnonScopes] = js.native
+  var authConfig: js.UndefOr[Scopes] = js.native
   val baseURI: js.Any = js.native
   var bucket: String = js.native
   var bufferStream: js.UndefOr[js.Any] = js.native

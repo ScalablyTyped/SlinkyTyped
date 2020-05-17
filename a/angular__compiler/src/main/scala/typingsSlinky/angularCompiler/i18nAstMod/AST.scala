@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait AST extends js.Object
 
+object AST {
+  @scala.inline
+  implicit def apply(value: Message): AST = value.asInstanceOf[AST]
+  @scala.inline
+  implicit def apply(value: Node): AST = value.asInstanceOf[AST]
+}
+

@@ -1,6 +1,6 @@
 package typingsSlinky.oracleOraclejet.ojaccordionMod
 
-import typingsSlinky.oracleOraclejet.AnonId
+import typingsSlinky.oracleOraclejet.anon.Id
 import typingsSlinky.oracleOraclejet.mod.baseComponentSettableProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ojAccordionSettableProperties extends baseComponentSettableProperties {
-  var expanded: (js.Array[AnonId | Double | String]) | Null = js.native
+  var expanded: (js.Array[Double | Id | String]) | Null = js.native
   var multiple: Boolean = js.native
 }
 
@@ -31,7 +31,7 @@ object ojAccordionSettableProperties {
         ret
     }
     @scala.inline
-    def withExpanded(value: js.Array[AnonId | Double | String]): Self = {
+    def withExpanded(value: js.Array[Double | Id | String]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("expanded")(value.asInstanceOf[js.Any])
         ret

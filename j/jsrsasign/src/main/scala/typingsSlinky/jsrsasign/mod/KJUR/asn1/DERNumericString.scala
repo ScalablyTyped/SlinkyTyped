@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @JSImport("jsrsasign", "KJUR.asn1.DERNumericString")
 @js.native
 class DERNumericString protected ()
-  extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.DERNumericString {
+  extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.DERAbstractString {
   def this(params: StringParam) = this()
 }
 

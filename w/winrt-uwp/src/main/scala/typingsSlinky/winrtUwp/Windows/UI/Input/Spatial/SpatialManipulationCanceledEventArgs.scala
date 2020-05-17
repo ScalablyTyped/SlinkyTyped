@@ -4,9 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.UI.Input.Spatial.SpatialManipulationCanceledEventArgs")
 @js.native
-abstract class SpatialManipulationCanceledEventArgs () extends js.Object {
+trait SpatialManipulationCanceledEventArgs extends js.Object {
   var interactionSourceKind: js.Any = js.native
+}
+
+object SpatialManipulationCanceledEventArgs {
+  @scala.inline
+  def apply(interactionSourceKind: js.Any): SpatialManipulationCanceledEventArgs = {
+    val __obj = js.Dynamic.literal(interactionSourceKind = interactionSourceKind.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SpatialManipulationCanceledEventArgs]
+  }
+  @scala.inline
+  implicit class SpatialManipulationCanceledEventArgsOps[Self <: SpatialManipulationCanceledEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInteractionSourceKind(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interactionSourceKind")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

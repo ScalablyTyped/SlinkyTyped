@@ -1,26 +1,124 @@
 package typingsSlinky.baidumapWebSdk.BMap
 
-import typingsSlinky.baidumapWebSdk.AnonTarget
+import typingsSlinky.baidumapWebSdk.anon.Target
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BMap.GroundOverlay")
 @js.native
-class GroundOverlay protected () extends Overlay {
-  def this(bounds: Bounds) = this()
-  def this(bounds: Bounds, opts: GroundOverlayOptions) = this()
+trait GroundOverlay extends Overlay {
   def getBounds(): Bounds = js.native
   def getDispalyOnMaxLevel(): Double = js.native
   def getDisplayOnMinLevel(): Double = js.native
   def getImageURL(): String = js.native
   def getOpacity(): Double = js.native
-  def onclick(event: AnonTarget): Unit = js.native
-  def ondblclick(event: AnonTarget): Unit = js.native
+  def onclick(event: Target): Unit = js.native
+  def ondblclick(event: Target): Unit = js.native
   def setBounds(bounds: Bounds): Unit = js.native
   def setDispalyOnMaxLevel(level: Double): Unit = js.native
   def setDisplayOnMinLevel(level: Double): Unit = js.native
   def setImageURL(url: String): Unit = js.native
   def setOpacity(opcity: Double): Unit = js.native
+}
+
+object GroundOverlay {
+  @scala.inline
+  def apply(
+    getBounds: () => Bounds,
+    getDispalyOnMaxLevel: () => Double,
+    getDisplayOnMinLevel: () => Double,
+    getImageURL: () => String,
+    getOpacity: () => Double,
+    onclick: Target => Unit,
+    ondblclick: Target => Unit,
+    setBounds: Bounds => Unit,
+    setDispalyOnMaxLevel: Double => Unit,
+    setDisplayOnMinLevel: Double => Unit,
+    setImageURL: String => Unit,
+    setOpacity: Double => Unit
+  ): GroundOverlay = {
+    val __obj = js.Dynamic.literal(getBounds = js.Any.fromFunction0(getBounds), getDispalyOnMaxLevel = js.Any.fromFunction0(getDispalyOnMaxLevel), getDisplayOnMinLevel = js.Any.fromFunction0(getDisplayOnMinLevel), getImageURL = js.Any.fromFunction0(getImageURL), getOpacity = js.Any.fromFunction0(getOpacity), onclick = js.Any.fromFunction1(onclick), ondblclick = js.Any.fromFunction1(ondblclick), setBounds = js.Any.fromFunction1(setBounds), setDispalyOnMaxLevel = js.Any.fromFunction1(setDispalyOnMaxLevel), setDisplayOnMinLevel = js.Any.fromFunction1(setDisplayOnMinLevel), setImageURL = js.Any.fromFunction1(setImageURL), setOpacity = js.Any.fromFunction1(setOpacity))
+    __obj.asInstanceOf[GroundOverlay]
+  }
+  @scala.inline
+  implicit class GroundOverlayOps[Self <: GroundOverlay] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetBounds(value: () => Bounds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBounds")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDispalyOnMaxLevel(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDispalyOnMaxLevel")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDisplayOnMinLevel(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDisplayOnMinLevel")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetImageURL(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getImageURL")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetOpacity(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getOpacity")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnclick(value: Target => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onclick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOndblclick(value: Target => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ondblclick")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetBounds(value: Bounds => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setBounds")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetDispalyOnMaxLevel(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDispalyOnMaxLevel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetDisplayOnMinLevel(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDisplayOnMinLevel")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetImageURL(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setImageURL")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetOpacity(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setOpacity")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

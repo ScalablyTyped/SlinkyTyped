@@ -1,6 +1,5 @@
 package typingsSlinky.doccookies
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,8 +49,4 @@ trait docCookies extends js.Object {
   def setItem(sKey: String, sValue: String, vEnd: js.Date, sPath: String, sDomain: String): Boolean = js.native
   def setItem(sKey: String, sValue: String, vEnd: js.Date, sPath: String, sDomain: String, bSecure: Boolean): Boolean = js.native
 }
-
-@JSGlobal("docCookies")
-@js.native
-object docCookies extends TopLevel[docCookies]
 

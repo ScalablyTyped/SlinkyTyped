@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLHeadingElement
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.themeUi.AnonAs
+import typingsSlinky.themeUi.anon.As
 import typingsSlinky.themeUi.mod.SxProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,8 +16,8 @@ object StyledH5 {
   object component extends js.Object
   
   def withProps(
-    p: (DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]) with SxProps with AnonAs
-  ): `SharedBuilder_<intersection>_93340326`[LegacyRef[js.Any] with js.Object] = new `SharedBuilder_<intersection>_93340326`[LegacyRef[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: StyledH5.type): `SharedBuilder_<intersection>_93340326`[LegacyRef[js.Any] with js.Object] = new `SharedBuilder_<intersection>_93340326`[LegacyRef[js.Any] with js.Object](js.Array(this.component, js.Dictionary.empty))()
+    p: (DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]) with SxProps with As
+  ): `SharedBuilder_<intersection>1112162328`[LegacyRef[js.Any]] = new `SharedBuilder_<intersection>1112162328`[LegacyRef[js.Any]](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: StyledH5.type): `SharedBuilder_<intersection>1112162328`[LegacyRef[js.Any]] = new `SharedBuilder_<intersection>1112162328`[LegacyRef[js.Any]](js.Array(this.component, js.Dictionary.empty))()
 }
 

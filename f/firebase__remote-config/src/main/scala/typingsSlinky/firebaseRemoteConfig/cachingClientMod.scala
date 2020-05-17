@@ -18,7 +18,6 @@ object cachingClientMod extends js.Object {
     val logger: js.Any = js.native
     val storage: js.Any = js.native
     val storageCache: js.Any = js.native
-    def isCachedDataFresh(cacheMaxAgeMillis: Double): Boolean = js.native
     /**
       * Returns true if the age of the cached fetched configs is less than or equal to
       * {@link Settings#minimumFetchIntervalInSeconds}.
@@ -28,6 +27,7 @@ object cachingClientMod extends js.Object {
       *
       * <p>Visible for testing.
       */
+    def isCachedDataFresh(cacheMaxAgeMillis: Double): Boolean = js.native
     def isCachedDataFresh(cacheMaxAgeMillis: Double, lastSuccessfulFetchTimestampMillis: Double): Boolean = js.native
   }
   

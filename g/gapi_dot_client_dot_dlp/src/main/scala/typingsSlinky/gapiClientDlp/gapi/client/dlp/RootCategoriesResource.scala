@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientDlp.gapi.client.dlp
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientDlp.AnonFields
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientDlp.anon.Fields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation._
 trait RootCategoriesResource extends js.Object {
   var infoTypes: InfoTypesResource = js.native
   /** Returns the list of root categories of sensitive information. */
-  def list(request: AnonFields): Request_[GooglePrivacyDlpV2beta1ListRootCategoriesResponse] = js.native
+  def list(request: Fields): Request[GooglePrivacyDlpV2beta1ListRootCategoriesResponse] = js.native
 }
 
 object RootCategoriesResource {
   @scala.inline
   def apply(
     infoTypes: InfoTypesResource,
-    list: AnonFields => Request_[GooglePrivacyDlpV2beta1ListRootCategoriesResponse]
+    list: Fields => Request[GooglePrivacyDlpV2beta1ListRootCategoriesResponse]
   ): RootCategoriesResource = {
     val __obj = js.Dynamic.literal(infoTypes = infoTypes.asInstanceOf[js.Any], list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[RootCategoriesResource]
@@ -35,7 +35,7 @@ object RootCategoriesResource {
         ret
     }
     @scala.inline
-    def withList(value: AnonFields => Request_[GooglePrivacyDlpV2beta1ListRootCategoriesResponse]): Self = {
+    def withList(value: Fields => Request[GooglePrivacyDlpV2beta1ListRootCategoriesResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

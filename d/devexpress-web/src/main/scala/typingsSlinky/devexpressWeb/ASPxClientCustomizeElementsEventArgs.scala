@@ -7,14 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientReportDesigner.CustomizeElements, ASPxClientReportDesigner.PreviewCustomizeElements and ASPxClientWebDocumentViewer.CustomizeElements events.
   */
-@JSGlobal("ASPxClientCustomizeElementsEventArgs")
 @js.native
-class ASPxClientCustomizeElementsEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientCustomizeElementsEventArgs class with the specified settings.
-    * @param elements An array of ASPxReportUIElement objects. This value is assigned to the ASPxClientCustomizeElementsEventArgs.Elements property.
-    */
-  def this(elements: js.Array[ASPxReportUIElement]) = this()
+trait ASPxClientCustomizeElementsEventArgs extends ASPxClientEventArgs {
   /**
     * Provides access to the collection of UI elements.
     */
@@ -24,5 +18,33 @@ class ASPxClientCustomizeElementsEventArgs protected () extends ASPxClientEventA
     * @param templateId A string that specifies the element ID.
     */
   def GetById(templateId: String): js.Array[ASPxReportUIElement] = js.native
+}
+
+object ASPxClientCustomizeElementsEventArgs {
+  @scala.inline
+  def apply(Elements: js.Array[ASPxReportUIElement], GetById: String => js.Array[ASPxReportUIElement]): ASPxClientCustomizeElementsEventArgs = {
+    val __obj = js.Dynamic.literal(Elements = Elements.asInstanceOf[js.Any], GetById = js.Any.fromFunction1(GetById))
+    __obj.asInstanceOf[ASPxClientCustomizeElementsEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientCustomizeElementsEventArgsOps[Self <: ASPxClientCustomizeElementsEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withElements(value: js.Array[ASPxReportUIElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Elements")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetById(value: String => js.Array[ASPxReportUIElement]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetById")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

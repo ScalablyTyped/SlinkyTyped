@@ -1,13 +1,13 @@
 package typingsSlinky.keycloakJs.keycloakAuthzMod
 
-import typingsSlinky.keycloakJs.AnonRptendpoint
+import typingsSlinky.keycloakJs.anon.Rptendpoint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait KeycloakAuthorizationInstance extends js.Object {
-  var config: AnonRptendpoint = js.native
+  var config: Rptendpoint = js.native
   var rpt: js.Any = js.native
   /**
     * This method enables client applications to better integrate with resource servers protected by a Keycloak

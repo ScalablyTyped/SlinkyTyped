@@ -1,12 +1,12 @@
 package typingsSlinky.rxjs.webSocketSubjectMod
 
 import org.scalajs.dom.raw.CloseEvent
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.MessageEvent
-import typingsSlinky.rxjs.AnonInstantiable
+import typingsSlinky.rxjs.anon.Instantiable
 import typingsSlinky.rxjs.rxjsStrings.arraybuffer
 import typingsSlinky.rxjs.rxjsStrings.blob
 import typingsSlinky.rxjs.typesMod.NextObserver
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait WebSocketSubjectConfig[T] extends js.Object {
     * WebSocket impl in Node (WebSocket is a DOM API), or for mocking a WebSocket
     * for testing purposes
     */
-  var WebSocketCtor: js.UndefOr[AnonInstantiable] = js.native
+  var WebSocketCtor: js.UndefOr[Instantiable] = js.native
   /** Sets the `binaryType` property of the underlying WebSocket. */
   var binaryType: js.UndefOr[blob | arraybuffer] = js.native
   /**
@@ -38,7 +38,7 @@ trait WebSocketSubjectConfig[T] extends js.Object {
   /**
     * An Observer that watches when open events occur on the underlying web socket.
     */
-  var openObserver: js.UndefOr[NextObserver[Event_]] = js.native
+  var openObserver: js.UndefOr[NextObserver[Event]] = js.native
   /** The protocol to use to connect */
   var protocol: js.UndefOr[String | js.Array[String]] = js.native
   /** @deprecated use {@link deserializer} */
@@ -71,7 +71,7 @@ object WebSocketSubjectConfig {
         ret
     }
     @scala.inline
-    def withWebSocketCtor(value: AnonInstantiable): Self[T] = {
+    def withWebSocketCtor(value: Instantiable): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("WebSocketCtor")(value.asInstanceOf[js.Any])
         ret
@@ -131,7 +131,7 @@ object WebSocketSubjectConfig {
         ret
     }
     @scala.inline
-    def withOpenObserver(value: NextObserver[Event_]): Self[T] = {
+    def withOpenObserver(value: NextObserver[Event]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("openObserver")(value.asInstanceOf[js.Any])
         ret

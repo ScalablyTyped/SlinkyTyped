@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LoessTransform extends _Transforms {
+trait LoessTransform extends Transforms {
   var as: js.UndefOr[(Vector2[String | SignalRef]) | SignalRef] = js.native
   var bandwidth: js.UndefOr[Double | SignalRef] = js.native
   var groupby: js.UndefOr[js.Array[FieldRef] | SignalRef] = js.native

@@ -1,13 +1,13 @@
 package typingsSlinky.protonNative.mod
 
-import typingsSlinky.protonNative.AnonBackgroundColor
+import typingsSlinky.protonNative.anon.BackgroundColor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait StyledTextProps extends js.Object {
-  var style: js.UndefOr[AnonBackgroundColor] = js.native
+  var style: js.UndefOr[BackgroundColor] = js.native
   /**
     * The x coordinate of the text's top left corner. (Only in a top level text component.)
     */
@@ -31,7 +31,7 @@ object StyledTextProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withStyle(value: AnonBackgroundColor): Self = {
+    def withStyle(value: BackgroundColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

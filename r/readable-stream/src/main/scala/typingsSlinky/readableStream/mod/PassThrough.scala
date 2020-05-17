@@ -11,10 +11,8 @@ class PassThrough () extends Transform {
   def this(options: TransformOptions) = this()
   def _transform[T](
     chunk: T,
-    encoding: js.UndefOr[scala.Nothing],
+    encoding: js.UndefOr[Null | String],
     callback: js.Function2[/* error */ js.Any, /* data */ T, Unit]
   ): Unit = js.native
-  def _transform[T](chunk: T, encoding: String, callback: js.Function2[/* error */ js.Any, /* data */ T, Unit]): Unit = js.native
-  def _transform[T](chunk: T, encoding: Null, callback: js.Function2[/* error */ js.Any, /* data */ T, Unit]): Unit = js.native
 }
 

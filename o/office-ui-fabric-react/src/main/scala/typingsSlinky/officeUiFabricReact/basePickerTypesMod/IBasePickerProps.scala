@@ -2,7 +2,7 @@ package typingsSlinky.officeUiFabricReact.basePickerTypesMod
 
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactElement
-import typingsSlinky.officeUiFabricReact.AnonInput
+import typingsSlinky.officeUiFabricReact.anon.Input
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutProps
 import typingsSlinky.officeUiFabricReact.libAutofillMod.Autofill
 import typingsSlinky.officeUiFabricReact.pickerItemTypesMod.IPickerItemProps
@@ -166,7 +166,7 @@ trait IBasePickerProps[T]
   /**
     * The text to display while searching for more results in a limited suggestions list
     */
-  var searchingText: js.UndefOr[(js.Function1[/* props */ AnonInput, String]) | String] = js.native
+  var searchingText: js.UndefOr[(js.Function1[/* props */ Input, String]) | String] = js.native
   /**
     * The items that the base picker should currently display as selected.
     * If this is provided then the picker will act as a controlled component.

@@ -2,8 +2,8 @@ package typingsSlinky.expressServeStaticCore.mod
 
 import typingsSlinky.expressServeStaticCore.expressServeStaticCoreBooleans.`false`
 import typingsSlinky.expressServeStaticCore.expressServeStaticCoreStrings.`set-cookie`
-import typingsSlinky.node.AnonEnd
 import typingsSlinky.node.NodeJS.WritableStream
+import typingsSlinky.node.anon.End
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.rangeParser.mod.Options
@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Request[P /* <: Params */, ResBody, ReqBody, ReqQuery]
   extends IncomingMessage
-     with typingsSlinky.expressServeStaticCore.mod._Global_.Express.Request {
+     with typingsSlinky.expressServeStaticCore.mod.global.Express.Request {
   /**
     * Return an array of Accepted media types
     * ordered from highest quality to lowest.
@@ -258,7 +258,7 @@ trait Request[P /* <: Params */, ResBody, ReqBody, ReqQuery]
   /* InferMemberOverrides */
   override def pipe[T /* <: WritableStream */](destination: T): T = js.native
   /* InferMemberOverrides */
-  override def pipe[T /* <: WritableStream */](destination: T, options: AnonEnd): T = js.native
+  override def pipe[T /* <: WritableStream */](destination: T, options: End): T = js.native
   /**
     * Parse Range header field, capping to the given `size`.
     *

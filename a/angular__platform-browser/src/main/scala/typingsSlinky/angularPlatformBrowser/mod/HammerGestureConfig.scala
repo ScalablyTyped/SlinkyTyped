@@ -2,7 +2,7 @@ package typingsSlinky.angularPlatformBrowser.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.angularPlatformBrowser.AnonCssProps
+import typingsSlinky.angularPlatformBrowser.anon.CssProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ class HammerGestureConfig () extends js.Object {
     * and their allowed and default values, see
     * [HammerJS documentation](http://hammerjs.github.io/).
     */
-  var options: js.UndefOr[AnonCssProps] = js.native
+  var options: js.UndefOr[CssProps] = js.native
   /**
     * Maps gesture event names to a set of configuration options
     * that specify overrides to the default values for specific properties.

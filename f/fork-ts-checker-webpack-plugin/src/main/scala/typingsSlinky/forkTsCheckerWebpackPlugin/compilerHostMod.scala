@@ -1,5 +1,8 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin
 
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.FnCall
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.RemovedFiles
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.Typeofts
 import typingsSlinky.forkTsCheckerWebpackPlugin.resolutionMod.ResolveModuleName
 import typingsSlinky.forkTsCheckerWebpackPlugin.resolutionMod.ResolveTypeReferenceDirective
 import typingsSlinky.std.Set
@@ -103,7 +106,7 @@ object compilerHostMod extends js.Object {
     def getProgram(): Program = js.native
     @JSName("onWatchStatusChange")
     def onWatchStatusChange_MCompilerHost(_diagnostic: Diagnostic, _newLine: String, _options: CompilerOptions): Unit = js.native
-    def processChanges(): js.Promise[AnonRemovedFiles] = js.native
+    def processChanges(): js.Promise[RemovedFiles] = js.native
     @JSName("readDirectory")
     def readDirectory_MCompilerHost(path: String): js.Array[String] = js.native
     @JSName("readDirectory")

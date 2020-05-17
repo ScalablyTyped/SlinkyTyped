@@ -4,14 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("sap.ui.model.ClientModel")
 @js.native
-abstract class ClientModel protected () extends Model {
-  /**
-    * Constructor for a new ClientModel.
-    * @param oData URL where to load the data from
-    */
-  def this(oData: js.Any) = this()
+trait ClientModel extends Model {
   /**
     * Force no caching.
     * @param bForceNoCache whether to force not to cache

@@ -1,6 +1,6 @@
 package typingsSlinky.segmentAnalytics.SegmentAnalytics
 
-import typingsSlinky.segmentAnalytics.AnonDictintegration
+import typingsSlinky.segmentAnalytics.anon.Dictintegration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait InitOptions extends js.Object {
   var cookie: js.UndefOr[CookieOptions] = js.native
   var group: js.UndefOr[GroupOptions] = js.native
-  var integrations: js.UndefOr[AnonDictintegration] = js.native
+  var integrations: js.UndefOr[Dictintegration] = js.native
   var localStorage: js.UndefOr[StoreOptions] = js.native
   var metrics: js.UndefOr[MetricsOptions] = js.native
   var user: js.UndefOr[UserOptions] = js.native
@@ -52,7 +52,7 @@ object InitOptions {
         ret
     }
     @scala.inline
-    def withIntegrations(value: AnonDictintegration): Self = {
+    def withIntegrations(value: Dictintegration): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("integrations")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdk.ecrMod
 
-import typingsSlinky.awsSdk.DescribeImageScanFindings
-import typingsSlinky.awsSdk.GetLifecyclePolicyPreview
+import typingsSlinky.awsSdk.anon.DescribeImageScanFindings
+import typingsSlinky.awsSdk.anon.GetLifecyclePolicyPreview
 import typingsSlinky.awsSdk.awsSdkStrings.imageScanComplete
 import typingsSlinky.awsSdk.awsSdkStrings.lifecyclePolicyPreviewComplete
 import typingsSlinky.awsSdk.configMod.ConfigBase

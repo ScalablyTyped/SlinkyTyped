@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 	* @brief Redis 数据库客户端对象
 	* @detail 用以创建和管理 Redis 数据库，创建方法：,```JavaScript,var db = require("db");,var test = new db.openRedis("redis-server");,```
 	*/
-@JSGlobal("Class_Redis")
 @js.native
-class ClassRedis () extends ClassObject {
+trait ClassRedis extends ClassObject {
   /**
   	 * class prop 
   	 *

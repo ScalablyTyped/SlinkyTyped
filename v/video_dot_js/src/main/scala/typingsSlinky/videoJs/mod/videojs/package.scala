@@ -5,9 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object videojs {
-  type Child = java.lang.String | typingsSlinky.videoJs.AnonChildren
   type Component = typingsSlinky.videoJs.mod.videojs.Component_
-  type Content = java.lang.String | org.scalajs.dom.raw.Element | org.scalajs.dom.raw.Node | (js.Function0[java.lang.String | org.scalajs.dom.raw.Element | org.scalajs.dom.raw.Node])
   type Dom = typingsSlinky.videoJs.mod.videojs.Dom_
   type LanguageTranslations = org.scalablytyped.runtime.StringDictionary[java.lang.String]
   type Player = typingsSlinky.videoJs.mod.VideoJsPlayer

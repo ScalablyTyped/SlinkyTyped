@@ -3,7 +3,7 @@ package typingsSlinky.reactTextMask.mod
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import typingsSlinky.react.mod.InputHTMLAttributes
-import typingsSlinky.reactTextMask.AnonIndexesOfPipedChars
+import typingsSlinky.reactTextMask.anon.IndexesOfPipedChars
 import typingsSlinky.reactTextMask.reactTextMaskBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ trait MaskedInputProps extends InputHTMLAttributes[HTMLInputElement] {
     js.Function2[
       /* conformedValue */ String, 
       /* config */ js.Any, 
-      `false` | String | AnonIndexesOfPipedChars
+      `false` | String | IndexesOfPipedChars
     ]
   ] = js.native
   var placeholderChar: js.UndefOr[String] = js.native
@@ -84,7 +84,7 @@ object MaskedInputProps {
     }
     @scala.inline
     def withPipe(
-      value: (/* conformedValue */ String, /* config */ js.Any) => `false` | String | AnonIndexesOfPipedChars
+      value: (/* conformedValue */ String, /* config */ js.Any) => `false` | String | IndexesOfPipedChars
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pipe")(js.Any.fromFunction2(value))

@@ -4,7 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.history.mod.LocationDescriptor
 import typingsSlinky.history.mod.LocationState
-import typingsSlinky.reactBreadcrumbs.AnonTitle
+import typingsSlinky.reactBreadcrumbs.anon.Title
 import typingsSlinky.reactBreadcrumbs.mod.BreadcrumbProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,7 +25,7 @@ object Breadcrumb {
   
   def withProps(p: BreadcrumbProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(data: LocationDescriptor[LocationState] with AnonTitle): Builder = {
+  def apply(data: LocationDescriptor[LocationState] with Title): Builder = {
     val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[BreadcrumbProps]))
   }

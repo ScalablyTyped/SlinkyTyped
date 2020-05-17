@@ -1,6 +1,6 @@
 package typingsSlinky.commandLineUsage.mod
 
-import typingsSlinky.commandLineUsage.AnonData
+import typingsSlinky.commandLineUsage.anon.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait Content extends Section {
     *     consistent throughout the array.
     *  4. An object with two properties - data and options. In this case, the data and options will be passed directly to the underlying table layout module for rendering.
     */
-  var content: js.UndefOr[String | (js.Array[_ | String]) | AnonData] = js.native
+  var content: js.UndefOr[String | (js.Array[_ | String]) | Data] = js.native
   /** The section header, always bold and underlined. */
   var header: js.UndefOr[String] = js.native
   /** Set to true to avoid indentation and wrapping. Useful for banners. */
@@ -36,7 +36,7 @@ object Content {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContent(value: String | (js.Array[_ | String]) | AnonData): Self = {
+    def withContent(value: String | (js.Array[_ | String]) | Data): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
         ret

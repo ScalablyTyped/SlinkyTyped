@@ -1,20 +1,20 @@
 package typingsSlinky.cssTree.mod
 
-import typingsSlinky.cssTree.AnonColumn
+import typingsSlinky.cssTree.anon.Column
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CssLocation extends js.Object {
-  var end: AnonColumn = js.native
+  var end: Column = js.native
   var source: String = js.native
-  var start: AnonColumn = js.native
+  var start: Column = js.native
 }
 
 object CssLocation {
   @scala.inline
-  def apply(end: AnonColumn, source: String, start: AnonColumn): CssLocation = {
+  def apply(end: Column, source: String, start: Column): CssLocation = {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.asInstanceOf[CssLocation]
   }
@@ -25,7 +25,7 @@ object CssLocation {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEnd(value: AnonColumn): Self = {
+    def withEnd(value: Column): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
         ret
@@ -37,7 +37,7 @@ object CssLocation {
         ret
     }
     @scala.inline
-    def withStart(value: AnonColumn): Self = {
+    def withStart(value: Column): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
         ret

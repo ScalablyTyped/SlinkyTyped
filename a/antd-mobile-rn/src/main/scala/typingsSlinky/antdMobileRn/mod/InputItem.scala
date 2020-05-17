@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobileRn.mod
 
-import typingsSlinky.antdMobileRn.AnonClear
+import typingsSlinky.antdMobileRn.anon.Clear
 import typingsSlinky.antdMobileRn.inputItemIndexNativeMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +14,6 @@ class InputItem () extends default
 @JSImport("antd-mobile-rn", "InputItem")
 @js.native
 object InputItem extends js.Object {
-  var defaultProps: AnonClear = js.native
+  var defaultProps: Clear = js.native
 }
 

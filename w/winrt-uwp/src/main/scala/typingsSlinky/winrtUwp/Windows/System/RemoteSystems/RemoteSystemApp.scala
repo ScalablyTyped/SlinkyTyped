@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents an application on a remote system. */
-@JSGlobal("Windows.System.RemoteSystems.RemoteSystemApp")
 @js.native
-abstract class RemoteSystemApp () extends js.Object {
+trait RemoteSystemApp extends js.Object {
   /** The app-specific attributes of this application. */
   var Attributes: IMapView[String, String] = js.native
   /** The display-friendly name for this application. This is the name used by the device for Bluetooth identification. If this hasn't been set or the device doesn't support Bluetooth, this field will be empty. */
@@ -19,5 +18,57 @@ abstract class RemoteSystemApp () extends js.Object {
   var isAvailableByProximity: Boolean = js.native
   /** Indicates whether this application is currently available for spatial sharing connection. */
   var isAvailableBySpatialProximity: Boolean = js.native
+}
+
+object RemoteSystemApp {
+  @scala.inline
+  def apply(
+    Attributes: IMapView[String, String],
+    displayName: String,
+    id: String,
+    isAvailableByProximity: Boolean,
+    isAvailableBySpatialProximity: Boolean
+  ): RemoteSystemApp = {
+    val __obj = js.Dynamic.literal(Attributes = Attributes.asInstanceOf[js.Any], displayName = displayName.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isAvailableByProximity = isAvailableByProximity.asInstanceOf[js.Any], isAvailableBySpatialProximity = isAvailableBySpatialProximity.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RemoteSystemApp]
+  }
+  @scala.inline
+  implicit class RemoteSystemAppOps[Self <: RemoteSystemApp] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributes(value: IMapView[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsAvailableByProximity(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAvailableByProximity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsAvailableBySpatialProximity(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAvailableBySpatialProximity")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

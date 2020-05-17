@@ -1,6 +1,6 @@
 package typingsSlinky.azureSb.mod.Azure.ServiceBus
 
-import typingsSlinky.azureSb.AnonError
+import typingsSlinky.azureSb.anon.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ErrorResponse extends Response {
   @JSName("body")
-  var body_ErrorResponse: AnonError = js.native
+  var body_ErrorResponse: Error = js.native
 }
 
 object ErrorResponse {
   @scala.inline
-  def apply(body: AnonError, headers: Dictionary[String], isSuccessful: Boolean, statusCode: Double): ErrorResponse = {
+  def apply(body: Error, headers: Dictionary[String], isSuccessful: Boolean, statusCode: Double): ErrorResponse = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], headers = headers.asInstanceOf[js.Any], isSuccessful = isSuccessful.asInstanceOf[js.Any], statusCode = statusCode.asInstanceOf[js.Any])
     __obj.asInstanceOf[ErrorResponse]
   }
@@ -24,7 +24,7 @@ object ErrorResponse {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBody(value: AnonError): Self = {
+    def withBody(value: Error): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
         ret

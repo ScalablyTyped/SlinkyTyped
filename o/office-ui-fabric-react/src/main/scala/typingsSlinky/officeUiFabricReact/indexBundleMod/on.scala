@@ -1,8 +1,8 @@
 package typingsSlinky.officeUiFabricReact.indexBundleMod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.Event_
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Event
+import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,19 +10,14 @@ import scala.scalajs.js.annotation._
 @JSImport("office-ui-fabric-react/lib/index.bundle", "on")
 @js.native
 object on extends js.Object {
-  def apply(element: Element, eventName: String, callback: js.Function1[/* ev */ Event_, Unit]): js.Function0[Unit] = js.native
+  def apply(element: Element, eventName: String, callback: js.Function1[/* ev */ Event, Unit]): js.Function0[Unit] = js.native
   def apply(
     element: Element,
     eventName: String,
-    callback: js.Function1[/* ev */ Event_, Unit],
+    callback: js.Function1[/* ev */ Event, Unit],
     options: Boolean
   ): js.Function0[Unit] = js.native
-  def apply(element: Window_, eventName: String, callback: js.Function1[/* ev */ Event_, Unit]): js.Function0[Unit] = js.native
-  def apply(
-    element: Window_,
-    eventName: String,
-    callback: js.Function1[/* ev */ Event_, Unit],
-    options: Boolean
-  ): js.Function0[Unit] = js.native
+  def apply(element: Window, eventName: String, callback: js.Function1[/* ev */ Event, Unit]): js.Function0[Unit] = js.native
+  def apply(element: Window, eventName: String, callback: js.Function1[/* ev */ Event, Unit], options: Boolean): js.Function0[Unit] = js.native
 }
 

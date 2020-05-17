@@ -2,7 +2,7 @@ package typingsSlinky.swiper.mod
 
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.swiper.keyinSwiperEventvoid
+import typingsSlinky.swiper.anon.keyinSwiperEventvoid
 import typingsSlinky.swiper.swiperStrings.auto
 import typingsSlinky.swiper.swiperStrings.column
 import typingsSlinky.swiper.swiperStrings.container

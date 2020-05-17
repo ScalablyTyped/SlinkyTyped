@@ -1,7 +1,7 @@
 package typingsSlinky.jsonwebtoken.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.jsonwebtoken.DecodeOptionsjsontrue
+import typingsSlinky.jsonwebtoken.anon.DecodeOptionsjsontrue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

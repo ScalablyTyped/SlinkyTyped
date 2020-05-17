@@ -1,18 +1,18 @@
 organization := "org.scalablytyped.slinky"
 name := "subleveldown"
-version := "4.1-dt-20191226Z-d5a7dd"
-scalaVersion := "2.13.1"
+version := "4.1-dt-20191226Z-efe79c"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "abstract-leveldown" % "5.0-dt-20180913Z-acd9e3",
-  "org.scalablytyped.slinky" %%% "level-codec" % "9.0-dt-20200225Z-1bfc61",
-  "org.scalablytyped.slinky" %%% "levelup" % "4.3-dt-20200226Z-e983d2",
-  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-6c3110",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
+  "org.scalablytyped.slinky" %%% "abstract-leveldown" % "5.0-dt-20180913Z-99d6b1",
+  "org.scalablytyped.slinky" %%% "level-codec" % "9.0-dt-20200225Z-44a126",
+  "org.scalablytyped.slinky" %%% "levelup" % "4.3-dt-20200226Z-7a4707",
+  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-9e8213",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

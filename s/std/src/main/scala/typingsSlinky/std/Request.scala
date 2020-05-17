@@ -1,14 +1,14 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This Fetch API interface represents a resource request. */
 @js.native
-trait Request extends Body {
+trait Request
+  extends Body
+     with RequestInfo {
   /**
     * Returns the cache mode associated with request, which is a string indicating how the request will interact with the browser's cache when fetching.
     */
@@ -71,13 +71,131 @@ trait Request extends Body {
   val url: java.lang.String = js.native
 }
 
-@JSGlobal("Request")
-@js.native
-object Request
-  extends Instantiable1[/* input */ RequestInfo, org.scalajs.dom.experimental.Request]
-     with Instantiable2[
-      /* input */ RequestInfo, 
-      /* init */ org.scalajs.dom.experimental.RequestInit, 
-      org.scalajs.dom.experimental.Request
-    ]
+object Request {
+  @scala.inline
+  def apply(
+    arrayBuffer: () => js.Promise[js.typedarray.ArrayBuffer],
+    blob: () => js.Promise[org.scalajs.dom.raw.Blob],
+    bodyUsed: scala.Boolean,
+    cache: org.scalajs.dom.experimental.RequestCache,
+    credentials: org.scalajs.dom.experimental.RequestCredentials,
+    destination: org.scalajs.dom.experimental.RequestDestination,
+    formData: () => js.Promise[org.scalajs.dom.raw.FormData],
+    headers: org.scalajs.dom.experimental.Headers,
+    integrity: java.lang.String,
+    isHistoryNavigation: scala.Boolean,
+    isReloadNavigation: scala.Boolean,
+    json: () => js.Promise[_],
+    keepalive: scala.Boolean,
+    method: java.lang.String,
+    mode: org.scalajs.dom.experimental.RequestMode,
+    redirect: org.scalajs.dom.experimental.RequestRedirect,
+    referrer: java.lang.String,
+    referrerPolicy: org.scalajs.dom.experimental.ReferrerPolicy,
+    signal: org.scalajs.dom.experimental.AbortSignal,
+    text: () => js.Promise[java.lang.String],
+    url: java.lang.String
+  ): Request = {
+    val __obj = js.Dynamic.literal(arrayBuffer = js.Any.fromFunction0(arrayBuffer), blob = js.Any.fromFunction0(blob), bodyUsed = bodyUsed.asInstanceOf[js.Any], cache = cache.asInstanceOf[js.Any], credentials = credentials.asInstanceOf[js.Any], destination = destination.asInstanceOf[js.Any], formData = js.Any.fromFunction0(formData), headers = headers.asInstanceOf[js.Any], integrity = integrity.asInstanceOf[js.Any], isHistoryNavigation = isHistoryNavigation.asInstanceOf[js.Any], isReloadNavigation = isReloadNavigation.asInstanceOf[js.Any], json = js.Any.fromFunction0(json), keepalive = keepalive.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], redirect = redirect.asInstanceOf[js.Any], referrer = referrer.asInstanceOf[js.Any], referrerPolicy = referrerPolicy.asInstanceOf[js.Any], signal = signal.asInstanceOf[js.Any], text = js.Any.fromFunction0(text), url = url.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Request]
+  }
+  @scala.inline
+  implicit class RequestOps[Self <: org.scalajs.dom.experimental.Request] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCache(value: org.scalajs.dom.experimental.RequestCache): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCredentials(value: org.scalajs.dom.experimental.RequestCredentials): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("credentials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestination(value: org.scalajs.dom.experimental.RequestDestination): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destination")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeaders(value: org.scalajs.dom.experimental.Headers): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIntegrity(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("integrity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsHistoryNavigation(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isHistoryNavigation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsReloadNavigation(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isReloadNavigation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKeepalive(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keepalive")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMethod(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("method")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMode(value: org.scalajs.dom.experimental.RequestMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRedirect(value: org.scalajs.dom.experimental.RequestRedirect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redirect")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReferrer(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referrer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReferrerPolicy(value: org.scalajs.dom.experimental.ReferrerPolicy): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("referrerPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSignal(value: org.scalajs.dom.experimental.AbortSignal): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

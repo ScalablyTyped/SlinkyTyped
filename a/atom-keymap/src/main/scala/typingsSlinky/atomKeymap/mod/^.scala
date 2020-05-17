@@ -1,9 +1,9 @@
 package typingsSlinky.atomKeymap.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.atomKeymap.AnonDefaultTarget
-import typingsSlinky.atomKeymap.mod._Global_.AtomKeymap.KeymapManager
-import typingsSlinky.atomKeymap.mod._Global_.AtomKeymap.KeymapManagerStatic
+import typingsSlinky.atomKeymap.anon.DefaultTarget
+import typingsSlinky.atomKeymap.mod.global.AtomKeymap.KeymapManager
+import typingsSlinky.atomKeymap.mod.global.AtomKeymap.KeymapManagerStatic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 /** Create a new KeymapManager. */
 class ^ () extends KeymapManager {
-  def this(options: AnonDefaultTarget) = this()
+  def this(options: DefaultTarget) = this()
 }
 
 @JSImport("atom-keymap", JSImport.Namespace)

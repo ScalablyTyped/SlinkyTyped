@@ -3,13 +3,13 @@ package typingsSlinky.officeUiFabricReact.calloutTypesMod
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.MouseEvent
+import org.scalajs.dom.raw.Window
 import slinky.core.facade.ReactRef
 import typingsSlinky.officeUiFabricReact.directionalHintMod.DirectionalHint
 import typingsSlinky.officeUiFabricReact.layerTypesMod.ILayerProps
 import typingsSlinky.officeUiFabricReact.positioningTypesMod.ICalloutPositionedInfo
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.std.Partial
-import typingsSlinky.std.Window_
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
@@ -52,7 +52,7 @@ trait ICalloutProps extends HTMLAttributes[HTMLDivElement] {
   var bounds: js.UndefOr[
     IRectangle | (js.Function2[
       /* target */ js.UndefOr[Target], 
-      /* targetWindow */ js.UndefOr[Window_], 
+      /* targetWindow */ js.UndefOr[Window], 
       js.UndefOr[IRectangle]
     ])
   ] = js.native
@@ -288,7 +288,7 @@ object ICalloutProps {
     }
     @scala.inline
     def withBoundsFunction2(
-      value: (/* target */ js.UndefOr[Target], /* targetWindow */ js.UndefOr[Window_]) => js.UndefOr[IRectangle]
+      value: (/* target */ js.UndefOr[Target], /* targetWindow */ js.UndefOr[Window]) => js.UndefOr[IRectangle]
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bounds")(js.Any.fromFunction2(value))
@@ -298,7 +298,7 @@ object ICalloutProps {
     def withBounds(
       value: IRectangle | (js.Function2[
           /* target */ js.UndefOr[Target], 
-          /* targetWindow */ js.UndefOr[Window_], 
+          /* targetWindow */ js.UndefOr[Window], 
           js.UndefOr[IRectangle]
         ])
     ): Self = {

@@ -1,7 +1,7 @@
 package typingsSlinky.circularDependencyPlugin.mod
 
-import typingsSlinky.circularDependencyPlugin.AnonCompilation
-import typingsSlinky.circularDependencyPlugin.AnonCompilationCompilation
+import typingsSlinky.circularDependencyPlugin.anon.Compilation
+import typingsSlinky.circularDependencyPlugin.anon.CompilationCompilation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,9 +12,9 @@ trait Options extends js.Object {
   var cwd: js.UndefOr[String] = js.native
   var exclude: js.UndefOr[js.RegExp] = js.native
   var failOnError: js.UndefOr[Boolean] = js.native
-  var onDetected: js.UndefOr[js.Function1[/* x */ AnonCompilation, Unit]] = js.native
-  var onEnd: js.UndefOr[js.Function1[/* x */ AnonCompilationCompilation, Unit]] = js.native
-  var onStart: js.UndefOr[js.Function1[/* x */ AnonCompilationCompilation, Unit]] = js.native
+  var onDetected: js.UndefOr[js.Function1[/* x */ Compilation, Unit]] = js.native
+  var onEnd: js.UndefOr[js.Function1[/* x */ CompilationCompilation, Unit]] = js.native
+  var onStart: js.UndefOr[js.Function1[/* x */ CompilationCompilation, Unit]] = js.native
 }
 
 object Options {
@@ -78,7 +78,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withOnDetected(value: /* x */ AnonCompilation => Unit): Self = {
+    def withOnDetected(value: /* x */ Compilation => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDetected")(js.Any.fromFunction1(value))
         ret
@@ -90,7 +90,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withOnEnd(value: /* x */ AnonCompilationCompilation => Unit): Self = {
+    def withOnEnd(value: /* x */ CompilationCompilation => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEnd")(js.Any.fromFunction1(value))
         ret
@@ -102,7 +102,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withOnStart(value: /* x */ AnonCompilationCompilation => Unit): Self = {
+    def withOnStart(value: /* x */ CompilationCompilation => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onStart")(js.Any.fromFunction1(value))
         ret

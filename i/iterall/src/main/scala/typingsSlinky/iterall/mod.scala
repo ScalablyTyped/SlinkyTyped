@@ -1,5 +1,6 @@
 package typingsSlinky.iterall
 
+import typingsSlinky.iterall.anon.Length
 import typingsSlinky.std.AsyncIterable
 import typingsSlinky.std.AsyncIterator
 import scala.scalajs.js
@@ -14,17 +15,17 @@ object mod extends js.Object {
   @JSName("$$iterator")
   var iterator: js.Symbol = js.native
   def createAsyncIterator(collection: js.Any): Unit | (AsyncIterator[_, _, js.UndefOr[scala.Nothing]]) = js.native
-  def createAsyncIterator(collection: AnonLength): AsyncIterator[_, _, js.UndefOr[scala.Nothing]] = js.native
+  def createAsyncIterator(collection: Length): AsyncIterator[_, _, js.UndefOr[scala.Nothing]] = js.native
   def createAsyncIterator[TValue](collection: AsyncIterable[TValue]): AsyncIterator[TValue, _, js.UndefOr[scala.Nothing]] = js.native
   def createAsyncIterator[TValue](collection: js.Iterable[js.Promise[TValue] | TValue]): AsyncIterator[TValue, _, js.UndefOr[scala.Nothing]] = js.native
   def createIterator(collection: js.Any): Unit | js.Iterator[_] = js.native
-  def createIterator(collection: AnonLength): js.Iterator[_] = js.native
+  def createIterator(collection: Length): js.Iterator[_] = js.native
   def createIterator[TValue](collection: js.Iterable[TValue]): js.Iterator[TValue] = js.native
-  def forAwaitEach[TCollection /* <: AnonLength */](
+  def forAwaitEach[TCollection /* <: Length */](
     collection: TCollection,
     callbackFn: js.Function3[/* value */ js.Any, /* index */ Double, /* collection */ TCollection, _]
   ): js.Promise[Unit] = js.native
-  def forAwaitEach[TCollection /* <: AnonLength */](
+  def forAwaitEach[TCollection /* <: Length */](
     collection: TCollection,
     callbackFn: js.Function3[/* value */ js.Any, /* index */ Double, /* collection */ TCollection, _],
     thisArg: js.Any
@@ -51,11 +52,11 @@ object mod extends js.Object {
     callbackFn: js.Function3[/* value */ TValue, /* index */ Double, /* collection */ TCollection, _],
     thisArg: js.Any
   ): js.Promise[Unit] = js.native
-  def forEach[TCollection /* <: AnonLength */](
+  def forEach[TCollection /* <: Length */](
     collection: TCollection,
     callbackFn: js.Function3[/* value */ js.Any, /* index */ Double, /* collection */ TCollection, _]
   ): Unit = js.native
-  def forEach[TCollection /* <: AnonLength */](
+  def forEach[TCollection /* <: Length */](
     collection: TCollection,
     callbackFn: js.Function3[/* value */ js.Any, /* index */ Double, /* collection */ TCollection, _],
     thisArg: js.Any
@@ -79,7 +80,7 @@ object mod extends js.Object {
   def getIterator[TValue](iterable: js.Iterable[TValue]): js.Iterator[TValue] = js.native
   def getIteratorMethod(iterable: js.Any): Unit | js.Function0[js.Iterator[_]] = js.native
   def getIteratorMethod[TValue](iterable: js.Iterable[TValue]): js.Function0[js.Iterator[TValue]] = js.native
-  def isArrayLike(obj: js.Any): /* is iterall.AnonLength */ Boolean = js.native
+  def isArrayLike(obj: js.Any): /* is iterall.anon.Length */ Boolean = js.native
   def isAsyncIterable(obj: js.Any): /* is std.AsyncIterable<any> */ Boolean = js.native
   def isCollection(obj: js.Any): Boolean = js.native
   def isIterable(obj: js.Any): /* is std.Iterable<any> */ Boolean = js.native

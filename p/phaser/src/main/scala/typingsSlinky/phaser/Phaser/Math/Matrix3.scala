@@ -9,14 +9,8 @@ import scala.scalajs.js.annotation._
   * 
   * Defaults to the identity matrix when instantiated.
   */
-@JSGlobal("Phaser.Math.Matrix3")
 @js.native
-/**
-  * 
-  * @param m Optional Matrix3 to copy values from.
-  */
-class Matrix3 () extends js.Object {
-  def this(m: Matrix3) = this()
+trait Matrix3 extends js.Object {
   /**
     * The matrix values.
     */

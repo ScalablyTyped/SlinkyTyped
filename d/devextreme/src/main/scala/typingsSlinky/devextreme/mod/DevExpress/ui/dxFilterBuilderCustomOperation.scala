@@ -1,8 +1,8 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonField
-import typingsSlinky.devextreme.AnonSetValue
+import typingsSlinky.devextreme.anon.Field
+import typingsSlinky.devextreme.anon.SetValue
 import typingsSlinky.devextreme.devextremeStrings.`object`
 import typingsSlinky.devextreme.devextremeStrings.boolean_
 import typingsSlinky.devextreme.devextremeStrings.date
@@ -10,7 +10,7 @@ import typingsSlinky.devextreme.devextremeStrings.datetime
 import typingsSlinky.devextreme.devextremeStrings.number
 import typingsSlinky.devextreme.devextremeStrings.string_
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,16 +28,12 @@ trait dxFilterBuilderCustomOperation extends js.Object {
   /** Specifies the operation's caption. */
   var caption: js.UndefOr[String] = js.native
   /** Customizes the field value's text representation. */
-  var customizeText: js.UndefOr[js.Function1[/* fieldInfo */ AnonField, String]] = js.native
+  var customizeText: js.UndefOr[js.Function1[/* fieldInfo */ Field, String]] = js.native
   /** Specifies for which data types the operation is available by default. */
   var dataTypes: js.UndefOr[js.Array[string_ | number | date | boolean_ | `object` | datetime]] = js.native
   /** Specifies a custom template for the widget used to edit the field value. */
   var editorTemplate: js.UndefOr[
-    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
-      /* conditionInfo */ AnonSetValue, 
-      /* container */ dxElement, 
-      String | Element | JQuery
-    ])
+    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* conditionInfo */ SetValue, /* container */ dxElement, String | Element | JQuery])
   ] = js.native
   /** Specifies whether the operation can have a value. If it can, the editor is displayed. */
   var hasValue: js.UndefOr[Boolean] = js.native
@@ -86,7 +82,7 @@ object dxFilterBuilderCustomOperation {
         ret
     }
     @scala.inline
-    def withCustomizeText(value: /* fieldInfo */ AnonField => String): Self = {
+    def withCustomizeText(value: /* fieldInfo */ Field => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customizeText")(js.Any.fromFunction1(value))
         ret
@@ -110,7 +106,7 @@ object dxFilterBuilderCustomOperation {
         ret
     }
     @scala.inline
-    def withEditorTemplateFunction2(value: (/* conditionInfo */ AnonSetValue, /* container */ dxElement) => String | Element | JQuery): Self = {
+    def withEditorTemplateFunction2(value: (/* conditionInfo */ SetValue, /* container */ dxElement) => String | Element | JQuery): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editorTemplate")(js.Any.fromFunction2(value))
         ret
@@ -123,11 +119,7 @@ object dxFilterBuilderCustomOperation {
     }
     @scala.inline
     def withEditorTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
-          /* conditionInfo */ AnonSetValue, 
-          /* container */ dxElement, 
-          String | Element | JQuery
-        ])
+      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* conditionInfo */ SetValue, /* container */ dxElement, String | Element | JQuery])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editorTemplate")(value.asInstanceOf[js.Any])

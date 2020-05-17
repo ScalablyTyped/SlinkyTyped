@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait MapDataEvent extends js.Object
 
+object MapDataEvent {
+  @scala.inline
+  implicit def apply(value: MapSourceDataEvent): MapDataEvent = value.asInstanceOf[MapDataEvent]
+  @scala.inline
+  implicit def apply(value: MapStyleDataEvent): MapDataEvent = value.asInstanceOf[MapDataEvent]
+}
+

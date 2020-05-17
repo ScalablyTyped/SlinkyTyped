@@ -1,12 +1,12 @@
 package typingsSlinky.prosemirrorView.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Document
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.MutationRecord
 import org.scalajs.dom.raw.Node
 import typingsSlinky.prosemirrorModel.mod.Schema
-import typingsSlinky.prosemirrorView.AnonTarget
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Event_
+import typingsSlinky.prosemirrorView.anon.Target
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,7 +47,7 @@ trait NodeView[S /* <: Schema[_, _] */] extends js.Object {
     * re-parse the range around the mutation, true if it can safely be
     * ignored.
     */
-  var ignoreMutation: js.UndefOr[(js.Function1[/* p */ MutationRecord | AnonTarget, Boolean]) | Null] = js.native
+  var ignoreMutation: js.UndefOr[(js.Function1[/* p */ MutationRecord | Target, Boolean]) | Null] = js.native
   /**
     * Can be used to override the way the node's selected status (as a
     * node selection) is displayed.
@@ -61,14 +61,14 @@ trait NodeView[S /* <: Schema[_, _] */] extends js.Object {
     * override it you can do something else.
     */
   var setSelection: js.UndefOr[
-    (js.Function3[/* anchor */ Double, /* head */ Double, /* root */ Document_, Unit]) | Null
+    (js.Function3[/* anchor */ Double, /* head */ Double, /* root */ Document, Unit]) | Null
   ] = js.native
   /**
     * Can be used to prevent the editor view from trying to handle some
     * or all DOM events that bubble up from the node view. Events for
     * which this returns true are not handled by the editor.
     */
-  var stopEvent: js.UndefOr[(js.Function1[/* event */ Event_, Boolean]) | Null] = js.native
+  var stopEvent: js.UndefOr[(js.Function1[/* event */ Event, Boolean]) | Null] = js.native
   /**
     * When given, this will be called when the view is updating itself.
     * It will be given a node (possibly of a different type), and an
@@ -173,7 +173,7 @@ object NodeView {
         ret
     }
     @scala.inline
-    def withIgnoreMutation(value: /* p */ MutationRecord | AnonTarget => Boolean): Self[S] = {
+    def withIgnoreMutation(value: /* p */ MutationRecord | Target => Boolean): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ignoreMutation")(js.Any.fromFunction1(value))
         ret
@@ -209,7 +209,7 @@ object NodeView {
         ret
     }
     @scala.inline
-    def withSetSelection(value: (/* anchor */ Double, /* head */ Double, /* root */ Document_) => Unit): Self[S] = {
+    def withSetSelection(value: (/* anchor */ Double, /* head */ Double, /* root */ Document) => Unit): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("setSelection")(js.Any.fromFunction3(value))
         ret
@@ -227,7 +227,7 @@ object NodeView {
         ret
     }
     @scala.inline
-    def withStopEvent(value: /* event */ Event_ => Boolean): Self[S] = {
+    def withStopEvent(value: /* event */ Event => Boolean): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stopEvent")(js.Any.fromFunction1(value))
         ret

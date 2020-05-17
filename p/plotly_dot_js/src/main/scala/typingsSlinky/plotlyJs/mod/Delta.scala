@@ -1,6 +1,6 @@
 package typingsSlinky.plotlyJs.mod
 
-import typingsSlinky.plotlyJs.AnonSymbol
+import typingsSlinky.plotlyJs.anon.Symbol
 import typingsSlinky.plotlyJs.plotlyJsStrings.bottom
 import typingsSlinky.plotlyJs.plotlyJsStrings.left
 import typingsSlinky.plotlyJs.plotlyJsStrings.right
@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Delta extends js.Object {
-  var decreasing: AnonSymbol = js.native
-  var increasing: AnonSymbol = js.native
+  var decreasing: Symbol = js.native
+  var increasing: Symbol = js.native
   var position: top | bottom | left | right = js.native
   var reference: Double = js.native
   var relative: Boolean = js.native
@@ -22,8 +22,8 @@ trait Delta extends js.Object {
 object Delta {
   @scala.inline
   def apply(
-    decreasing: AnonSymbol,
-    increasing: AnonSymbol,
+    decreasing: Symbol,
+    increasing: Symbol,
     position: top | bottom | left | right,
     reference: Double,
     relative: Boolean,
@@ -39,13 +39,13 @@ object Delta {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDecreasing(value: AnonSymbol): Self = {
+    def withDecreasing(value: Symbol): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("decreasing")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withIncreasing(value: AnonSymbol): Self = {
+    def withIncreasing(value: Symbol): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("increasing")(value.asInstanceOf[js.Any])
         ret

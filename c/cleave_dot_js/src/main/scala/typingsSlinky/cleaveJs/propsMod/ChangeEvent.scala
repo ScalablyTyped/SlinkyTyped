@@ -1,7 +1,7 @@
 package typingsSlinky.cleaveJs.propsMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ object ChangeEvent {
     isDefaultPrevented: () => Boolean,
     isPropagationStopped: () => Boolean,
     isTrusted: Boolean,
-    nativeEvent: Event_,
+    nativeEvent: Event,
     persist: () => Unit,
     preventDefault: () => Unit,
     stopPropagation: () => Unit,

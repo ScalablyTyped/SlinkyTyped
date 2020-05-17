@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IMessageOptions extends js.Object {
+trait IMessageOptions extends Message {
   var closeOnClick: js.UndefOr[Boolean] = js.native
   var delay: js.UndefOr[Double] = js.native
   var message: js.UndefOr[String] = js.native

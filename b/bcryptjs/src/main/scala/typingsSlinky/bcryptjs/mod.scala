@@ -1,5 +1,6 @@
 package typingsSlinky.bcryptjs
 
+import typingsSlinky.bcryptjs.anon.ReadonlyArrayLikenumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

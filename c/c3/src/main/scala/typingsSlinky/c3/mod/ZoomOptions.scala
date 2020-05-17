@@ -1,9 +1,9 @@
 package typingsSlinky.c3.mod
 
-import typingsSlinky.c3.AnonMin
+import org.scalajs.dom.raw.Event
+import typingsSlinky.c3.anon.Min
 import typingsSlinky.c3.c3Strings.drag
 import typingsSlinky.c3.c3Strings.scroll
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +39,7 @@ trait ZoomOptions extends js.Object {
   /**
     * Set callback that is called when zooming starts. Specified function receives the zoom event.
     */
-  var onzoomstart: js.UndefOr[js.ThisFunction1[/* this */ ChartAPI, /* event */ Event_, Unit]] = js.native
+  var onzoomstart: js.UndefOr[js.ThisFunction1[/* this */ ChartAPI, /* event */ Event, Unit]] = js.native
   var priveleged: js.UndefOr[Boolean] = js.native
   /**
     * Enable to rescale after zooming. If true set, y domain will be updated according to the zoomed region.
@@ -49,7 +49,7 @@ trait ZoomOptions extends js.Object {
     * Set interaction type for zooming
     */
   var `type`: js.UndefOr[scroll | drag] = js.native
-  var x: js.UndefOr[AnonMin] = js.native
+  var x: js.UndefOr[Min] = js.native
 }
 
 object ZoomOptions {
@@ -137,7 +137,7 @@ object ZoomOptions {
         ret
     }
     @scala.inline
-    def withOnzoomstart(value: js.ThisFunction1[/* this */ ChartAPI, /* event */ Event_, Unit]): Self = {
+    def withOnzoomstart(value: js.ThisFunction1[/* this */ ChartAPI, /* event */ Event, Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onzoomstart")(value.asInstanceOf[js.Any])
         ret
@@ -185,7 +185,7 @@ object ZoomOptions {
         ret
     }
     @scala.inline
-    def withX(value: AnonMin): Self = {
+    def withX(value: Min): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
         ret

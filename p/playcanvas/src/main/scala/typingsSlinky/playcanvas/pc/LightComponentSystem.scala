@@ -12,9 +12,6 @@ import scala.scalajs.js.annotation._
   * @description Create a new LightComponentSystem.
   * @param {pc.Application} app - The application.
   */
-@JSGlobal("pc.LightComponentSystem")
 @js.native
-class LightComponentSystem protected () extends ComponentSystem {
-  def this(app: Application) = this()
-}
+trait LightComponentSystem extends ComponentSystem
 

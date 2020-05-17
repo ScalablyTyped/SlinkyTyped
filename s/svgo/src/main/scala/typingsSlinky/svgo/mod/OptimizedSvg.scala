@@ -1,6 +1,6 @@
 package typingsSlinky.svgo.mod
 
-import typingsSlinky.svgo.AnonHeight
+import typingsSlinky.svgo.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait OptimizedSvg extends js.Object {
   var data: String = js.native
-  var info: AnonHeight = js.native
+  var info: Height = js.native
   var path: js.UndefOr[String] = js.native
 }
 
 object OptimizedSvg {
   @scala.inline
-  def apply(data: String, info: AnonHeight): OptimizedSvg = {
+  def apply(data: String, info: Height): OptimizedSvg = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], info = info.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptimizedSvg]
   }
@@ -31,7 +31,7 @@ object OptimizedSvg {
         ret
     }
     @scala.inline
-    def withInfo(value: AnonHeight): Self = {
+    def withInfo(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
         ret

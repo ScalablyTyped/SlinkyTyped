@@ -1,6 +1,6 @@
 package typingsSlinky.jest.mod.jest
 
-import typingsSlinky.jest.Typeofjest
+import typingsSlinky.jest.anon.Typeofjest
 import typingsSlinky.jest.mod.jasmine.CustomMatcherFactories
 import scala.scalajs.js
 import scala.scalajs.js.`|`

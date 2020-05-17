@@ -1,5 +1,6 @@
 package typingsSlinky.reactImageCrop.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLImageElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
@@ -13,7 +14,6 @@ import typingsSlinky.reactImageCrop.mod.ReactCropProps
 import typingsSlinky.reactImageCrop.mod.^
 import typingsSlinky.reactImageCrop.reactImageCropStrings.`use-credentials`
 import typingsSlinky.reactImageCrop.reactImageCropStrings.anonymous
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -60,7 +60,7 @@ object ReactImageCrop {
     @scala.inline
     def onDragStart(value: () => Unit): this.type = set("onDragStart", js.Any.fromFunction0(value))
     @scala.inline
-    def onImageError(value: /* event */ SyntheticEvent[Event_, HTMLImageElement] => Unit): this.type = set("onImageError", js.Any.fromFunction1(value))
+    def onImageError(value: /* event */ SyntheticEvent[Event, HTMLImageElement] => Unit): this.type = set("onImageError", js.Any.fromFunction1(value))
     @scala.inline
     def onImageLoaded(value: /* target */ HTMLImageElement => Unit): this.type = set("onImageLoaded", js.Any.fromFunction1(value))
     @scala.inline

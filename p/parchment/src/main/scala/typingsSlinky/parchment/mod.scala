@@ -1,6 +1,15 @@
 package typingsSlinky.parchment
 
 import org.scalajs.dom.raw.Node
+import typingsSlinky.parchment.anon.Class
+import typingsSlinky.parchment.anon.TypeofBlockBlot
+import typingsSlinky.parchment.anon.TypeofContainerBlot
+import typingsSlinky.parchment.anon.TypeofEmbedBlot
+import typingsSlinky.parchment.anon.TypeofFormatBlot
+import typingsSlinky.parchment.anon.TypeofInlineBlot
+import typingsSlinky.parchment.anon.TypeofLeafBlot
+import typingsSlinky.parchment.anon.TypeofScrollBlot
+import typingsSlinky.parchment.anon.TypeofTextBlot
 import typingsSlinky.parchment.blotMod.Blot
 import typingsSlinky.parchment.registryMod.BlotConstructor
 import typingsSlinky.parchment.registryMod.Scope
@@ -13,7 +22,7 @@ import scala.scalajs.js.annotation._
 object mod extends js.Object {
   @js.native
   object default extends js.Object {
-    var Attributor: AnonClass = js.native
+    var Attributor: Class = js.native
     var Block: TypeofBlockBlot = js.native
     var Container: TypeofContainerBlot = js.native
     var Embed: TypeofEmbedBlot = js.native

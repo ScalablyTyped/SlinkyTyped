@@ -1,7 +1,7 @@
 package typingsSlinky.mysql.mod
 
-import typingsSlinky.mysql.SecureContextOptionsrejec
-import typingsSlinky.mysql.UntypedFieldInfotypestrin
+import typingsSlinky.mysql.anon.SecureContextOptionsrejec
+import typingsSlinky.mysql.anon.UntypedFieldInfotypestrin
 import typingsSlinky.mysql.mysqlStrings.DATE
 import typingsSlinky.mysql.mysqlStrings.DATETIME
 import typingsSlinky.mysql.mysqlStrings.TIMESTAMP

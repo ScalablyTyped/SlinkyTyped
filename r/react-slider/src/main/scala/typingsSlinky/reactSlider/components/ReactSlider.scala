@@ -3,8 +3,8 @@ package typingsSlinky.reactSlider.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactSlider.AnonIndex
-import typingsSlinky.reactSlider.AnonValue
+import typingsSlinky.reactSlider.anon.Index
+import typingsSlinky.reactSlider.anon.Value
 import typingsSlinky.reactSlider.mod.ReactSliderProps
 import typingsSlinky.reactSlider.mod.^
 import typingsSlinky.reactSlider.reactSliderStrings.horizontal
@@ -25,9 +25,9 @@ object ReactSlider {
     @scala.inline
     def ariaLabel(value: String | js.Array[String]): this.type = set("ariaLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def ariaValuetextFunction1(value: /* value */ AnonIndex => String): this.type = set("ariaValuetext", js.Any.fromFunction1(value))
+    def ariaValuetextFunction1(value: /* value */ Index => String): this.type = set("ariaValuetext", js.Any.fromFunction1(value))
     @scala.inline
-    def ariaValuetext(value: String | (js.Function1[/* value */ AnonIndex, String])): this.type = set("ariaValuetext", value.asInstanceOf[js.Any])
+    def ariaValuetext(value: String | (js.Function1[/* value */ Index, String])): this.type = set("ariaValuetext", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
@@ -57,9 +57,9 @@ object ReactSlider {
     @scala.inline
     def pearling(value: Boolean): this.type = set("pearling", value.asInstanceOf[js.Any])
     @scala.inline
-    def renderThumb(value: (/* props */ js.Object, /* state */ AnonIndex) => ReactElement): this.type = set("renderThumb", js.Any.fromFunction2(value))
+    def renderThumb(value: (/* props */ js.Object, /* state */ Index) => ReactElement): this.type = set("renderThumb", js.Any.fromFunction2(value))
     @scala.inline
-    def renderTrack(value: (/* props */ js.Object, /* state */ AnonValue) => ReactElement): this.type = set("renderTrack", js.Any.fromFunction2(value))
+    def renderTrack(value: (/* props */ js.Object, /* state */ Value) => ReactElement): this.type = set("renderTrack", js.Any.fromFunction2(value))
     @scala.inline
     def snapDragDisabled(value: Boolean): this.type = set("snapDragDisabled", value.asInstanceOf[js.Any])
     @scala.inline

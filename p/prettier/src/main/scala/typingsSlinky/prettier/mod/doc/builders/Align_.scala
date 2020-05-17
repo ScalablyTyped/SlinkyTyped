@@ -1,20 +1,20 @@
 package typingsSlinky.prettier.mod.doc.builders
 
-import typingsSlinky.prettier.AnonType
+import typingsSlinky.prettier.anon.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Align_ extends _Doc {
+trait Align_ extends Doc {
   var contents: Doc = js.native
-  var n: Double | String | AnonType = js.native
+  var n: Double | String | Type = js.native
   var `type`: typingsSlinky.prettier.prettierStrings.align = js.native
 }
 
 object Align_ {
   @scala.inline
-  def apply(contents: Doc, n: Double | String | AnonType, `type`: typingsSlinky.prettier.prettierStrings.align): Align_ = {
+  def apply(contents: Doc, n: Double | String | Type, `type`: typingsSlinky.prettier.prettierStrings.align): Align_ = {
     val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], n = n.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Align_]
@@ -32,7 +32,7 @@ object Align_ {
         ret
     }
     @scala.inline
-    def withN(value: Double | String | AnonType): Self = {
+    def withN(value: Double | String | Type): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("n")(value.asInstanceOf[js.Any])
         ret

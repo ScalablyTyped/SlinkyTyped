@@ -3,6 +3,7 @@ package typingsSlinky.mermaid
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.NodeList
+import typingsSlinky.mermaid.anon.TypeofmermaidAPI
 import typingsSlinky.mermaid.mermaidAPIMod.mermaidAPI.Config
 import scala.scalajs.js
 import scala.scalajs.js.`|`

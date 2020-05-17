@@ -2,7 +2,7 @@ package typingsSlinky.storybookAddonKnobs.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.storybookAddonKnobs.PickAPIonoffemitgetQueryP
+import typingsSlinky.storybookAddonKnobs.anon.PickAPIonoffemitgetQueryP
 import typingsSlinky.storybookAddonKnobs.panelMod.KnobPanelProps
 import typingsSlinky.storybookAddonKnobs.panelMod.default
 import scala.scalajs.js
@@ -24,7 +24,7 @@ object Panel {
   
   def withProps(p: KnobPanelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(active: Boolean, api: PickAPIonoffemitgetQueryP): Builder = {
+  def apply(active: scala.Boolean, api: PickAPIonoffemitgetQueryP): Builder = {
     val __props = js.Dynamic.literal(active = active.asInstanceOf[js.Any], api = api.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[KnobPanelProps]))
   }

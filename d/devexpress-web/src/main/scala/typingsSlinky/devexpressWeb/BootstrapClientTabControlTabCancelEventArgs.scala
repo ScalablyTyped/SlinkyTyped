@@ -7,15 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for cancellable events related to manipulations on tabs.
   */
-@JSGlobal("BootstrapClientTabControlTabCancelEventArgs")
 @js.native
-class BootstrapClientTabControlTabCancelEventArgs protected () extends ASPxClientProcessingModeCancelEventArgs {
-  /**
-    * Initializes a new object of the BootstrapClientTabControlTabCancelEventArgs type with the specified settings.
-    * @param processOnServer true to process the event on the server side; false to completely handle it on the client side.
-    * @param tab An BootstrapClientTab object that represents a tab related to the event.
-    */
-  def this(processOnServer: Boolean, tab: BootstrapClientTab) = this()
+trait BootstrapClientTabControlTabCancelEventArgs extends ASPxClientProcessingModeCancelEventArgs {
   /**
     * Gets or sets a value specifying whether a callback should be sent to the server to reload the content of the page being activated.
     */
@@ -24,5 +17,38 @@ class BootstrapClientTabControlTabCancelEventArgs protected () extends ASPxClien
     * Gets the tab object related to the event.
     */
   var tab: BootstrapClientTab = js.native
+}
+
+object BootstrapClientTabControlTabCancelEventArgs {
+  @scala.inline
+  def apply(
+    cancel: Boolean,
+    processOnServer: Boolean,
+    reloadContentOnCallback: Boolean,
+    tab: BootstrapClientTab
+  ): BootstrapClientTabControlTabCancelEventArgs = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], processOnServer = processOnServer.asInstanceOf[js.Any], reloadContentOnCallback = reloadContentOnCallback.asInstanceOf[js.Any], tab = tab.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BootstrapClientTabControlTabCancelEventArgs]
+  }
+  @scala.inline
+  implicit class BootstrapClientTabControlTabCancelEventArgsOps[Self <: BootstrapClientTabControlTabCancelEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReloadContentOnCallback(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("reloadContentOnCallback")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTab(value: BootstrapClientTab): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tab")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

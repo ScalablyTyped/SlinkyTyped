@@ -1,6 +1,5 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonCornerType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "CorridorGeometry")
 @js.native
 class CorridorGeometry protected () extends Packable {
-  def this(options: AnonCornerType) = this()
+  def this(options: typingsSlinky.cesium.anon.CornerType) = this()
 }
 
 /* static members */

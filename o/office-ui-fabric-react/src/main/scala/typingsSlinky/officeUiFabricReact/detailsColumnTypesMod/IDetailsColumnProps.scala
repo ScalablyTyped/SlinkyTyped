@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.officeUiFabricReact.AnonItemIndex
+import typingsSlinky.officeUiFabricReact.anon.ItemIndex
 import typingsSlinky.officeUiFabricReact.detailsColumnBaseMod.DetailsColumnBase
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IColumn
 import typingsSlinky.officeUiFabricReact.detailsRowTypesMod.ICellStyleProps
@@ -83,9 +83,7 @@ trait IDetailsColumnProps extends ClassAttributes[DetailsColumnBase] {
   /**
     * Callback on drag and drop event.
     */
-  var updateDragInfo: js.UndefOr[
-    js.Function2[/* props */ AnonItemIndex, /* event */ js.UndefOr[MouseEvent], Unit]
-  ] = js.native
+  var updateDragInfo: js.UndefOr[js.Function2[/* props */ ItemIndex, /* event */ js.UndefOr[MouseEvent], Unit]] = js.native
   /**
     * Whether to use fast icon and check components. The icons can't be targeted by customization
     * but are still customizable via class names.
@@ -279,7 +277,7 @@ object IDetailsColumnProps {
         ret
     }
     @scala.inline
-    def withUpdateDragInfo(value: (/* props */ AnonItemIndex, /* event */ js.UndefOr[MouseEvent]) => Unit): Self = {
+    def withUpdateDragInfo(value: (/* props */ ItemIndex, /* event */ js.UndefOr[MouseEvent]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("updateDragInfo")(js.Any.fromFunction2(value))
         ret

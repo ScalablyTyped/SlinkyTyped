@@ -1,6 +1,6 @@
 package typingsSlinky.yandexMaps.mod.control
 
-import typingsSlinky.yandexMaps.IBaseButtonParametersOptiFloat
+import typingsSlinky.yandexMaps.anon.IBaseButtonParametersOptiFloat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

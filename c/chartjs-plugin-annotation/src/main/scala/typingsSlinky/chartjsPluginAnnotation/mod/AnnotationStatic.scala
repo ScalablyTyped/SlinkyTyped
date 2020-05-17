@@ -1,7 +1,7 @@
 package typingsSlinky.chartjsPluginAnnotation.mod
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.chartjsPluginAnnotation.AnonBox
+import typingsSlinky.chartjsPluginAnnotation.anon.Box
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait AnnotationStatic extends js.Object {
   var defaults: AnnotationConfig = js.native
   var drawTimeOptions: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof DrawTimeOptions */ js.Any = js.native
   var labelDefaults: LineAnnotationLabel = js.native
-  var types: AnonBox = js.native
+  var types: Box = js.native
 }
 
 object AnnotationStatic {
@@ -22,7 +22,7 @@ object AnnotationStatic {
     defaults: AnnotationConfig,
     drawTimeOptions: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof DrawTimeOptions */ js.Any,
     labelDefaults: LineAnnotationLabel,
-    types: AnonBox
+    types: Box
   ): AnnotationStatic = {
     val __obj = js.Dynamic.literal(Element = Element.asInstanceOf[js.Any], defaults = defaults.asInstanceOf[js.Any], drawTimeOptions = drawTimeOptions.asInstanceOf[js.Any], labelDefaults = labelDefaults.asInstanceOf[js.Any], types = types.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnnotationStatic]
@@ -60,7 +60,7 @@ object AnnotationStatic {
         ret
     }
     @scala.inline
-    def withTypes(value: AnonBox): Self = {
+    def withTypes(value: Box): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("types")(value.asInstanceOf[js.Any])
         ret

@@ -111,9 +111,7 @@ abstract class Session_ protected () extends EventEmitter {
   def dtmf(tones: Double): this.type = js.native
   def dtmf(tones: Double, options: DtmfOptions): this.type = js.native
   /* protected */ def errorListener(args: js.Any*): Unit = js.native
-  /* protected */ def failed(response: js.UndefOr[scala.Nothing], cause: String): this.type = js.native
-  /* protected */ def failed(response: IncomingRequestMessage, cause: String): this.type = js.native
-  /* protected */ def failed(response: IncomingResponseMessage, cause: String): this.type = js.native
+  /* protected */ def failed(response: js.UndefOr[IncomingRequestMessage | IncomingResponseMessage], cause: String): this.type = js.native
   def hold(): Unit = js.native
   def hold(options: SessionDescriptionHandlerOptions): Unit = js.native
   def hold(options: SessionDescriptionHandlerOptions, modifiers: SessionDescriptionHandlerModifiers): Unit = js.native

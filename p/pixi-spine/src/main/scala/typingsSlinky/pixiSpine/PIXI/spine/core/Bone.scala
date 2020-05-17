@@ -4,10 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("PIXI.spine.core.Bone")
 @js.native
-class Bone protected () extends Updatable {
-  def this(data: BoneData, skeleton: Skeleton, parent: Bone) = this()
+trait Bone extends Updatable {
   var active: Boolean = js.native
   var appliedValid: Boolean = js.native
   var arotation: Double = js.native
@@ -55,10 +53,283 @@ class Bone protected () extends Updatable {
   def worldToLocalRotation(worldRotation: Double): Double = js.native
 }
 
-/* static members */
-@JSGlobal("PIXI.spine.core.Bone")
-@js.native
-object Bone extends js.Object {
-  var yDown: Boolean = js.native
+object Bone {
+  @scala.inline
+  def apply(
+    active: Boolean,
+    appliedValid: Boolean,
+    arotation: Double,
+    ascaleX: Double,
+    ascaleY: Double,
+    ashearX: Double,
+    ashearY: Double,
+    ax: Double,
+    ay: Double,
+    children: js.Array[Bone],
+    data: BoneData,
+    getWorldRotationX: () => Double,
+    getWorldRotationY: () => Double,
+    getWorldScaleX: () => Double,
+    getWorldScaleY: () => Double,
+    isActive: () => Boolean,
+    localToWorld: Vector2 => Vector2,
+    localToWorldRotation: Double => Double,
+    matrix: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PIXI.Matrix */ js.Any,
+    parent: Bone,
+    rotateWorld: Double => Unit,
+    rotation: Double,
+    scaleX: Double,
+    scaleY: Double,
+    setToSetupPose: () => Unit,
+    shearX: Double,
+    shearY: Double,
+    skeleton: Skeleton,
+    sorted: Boolean,
+    update: () => Unit,
+    updateAppliedTransform: () => Unit,
+    updateWorldTransform: () => Unit,
+    updateWorldTransformWith: (Double, Double, Double, Double, Double, Double, Double) => Unit,
+    worldToLocal: Vector2 => Vector2,
+    worldToLocalRotation: Double => Double,
+    worldX: Double,
+    worldY: Double,
+    x: Double,
+    y: Double
+  ): Bone = {
+    val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], appliedValid = appliedValid.asInstanceOf[js.Any], arotation = arotation.asInstanceOf[js.Any], ascaleX = ascaleX.asInstanceOf[js.Any], ascaleY = ascaleY.asInstanceOf[js.Any], ashearX = ashearX.asInstanceOf[js.Any], ashearY = ashearY.asInstanceOf[js.Any], ax = ax.asInstanceOf[js.Any], ay = ay.asInstanceOf[js.Any], children = children.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], getWorldRotationX = js.Any.fromFunction0(getWorldRotationX), getWorldRotationY = js.Any.fromFunction0(getWorldRotationY), getWorldScaleX = js.Any.fromFunction0(getWorldScaleX), getWorldScaleY = js.Any.fromFunction0(getWorldScaleY), isActive = js.Any.fromFunction0(isActive), localToWorld = js.Any.fromFunction1(localToWorld), localToWorldRotation = js.Any.fromFunction1(localToWorldRotation), matrix = matrix.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], rotateWorld = js.Any.fromFunction1(rotateWorld), rotation = rotation.asInstanceOf[js.Any], scaleX = scaleX.asInstanceOf[js.Any], scaleY = scaleY.asInstanceOf[js.Any], setToSetupPose = js.Any.fromFunction0(setToSetupPose), shearX = shearX.asInstanceOf[js.Any], shearY = shearY.asInstanceOf[js.Any], skeleton = skeleton.asInstanceOf[js.Any], sorted = sorted.asInstanceOf[js.Any], update = js.Any.fromFunction0(update), updateAppliedTransform = js.Any.fromFunction0(updateAppliedTransform), updateWorldTransform = js.Any.fromFunction0(updateWorldTransform), updateWorldTransformWith = js.Any.fromFunction7(updateWorldTransformWith), worldToLocal = js.Any.fromFunction1(worldToLocal), worldToLocalRotation = js.Any.fromFunction1(worldToLocalRotation), worldX = worldX.asInstanceOf[js.Any], worldY = worldY.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Bone]
+  }
+  @scala.inline
+  implicit class BoneOps[Self <: Bone] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAppliedValid(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appliedValid")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withArotation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAscaleX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ascaleX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAscaleY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ascaleY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAshearX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ashearX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAshearY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ashearY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ax")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildren(value: js.Array[Bone]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withData(value: BoneData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetWorldRotationX(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getWorldRotationX")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetWorldRotationY(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getWorldRotationY")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetWorldScaleX(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getWorldScaleX")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetWorldScaleY(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getWorldScaleY")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withLocalToWorld(value: Vector2 => Vector2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localToWorld")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLocalToWorldRotation(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localToWorldRotation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withMatrix(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PIXI.Matrix */ js.Any
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("matrix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParent(value: Bone): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRotateWorld(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotateWorld")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRotation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScaleX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScaleY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scaleY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetToSetupPose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setToSetupPose")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withShearX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shearX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShearY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shearY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSkeleton(value: Skeleton): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skeleton")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSorted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sorted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdateAppliedTransform(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateAppliedTransform")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateWorldTransform(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateWorldTransform")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateWorldTransformWith(value: (Double, Double, Double, Double, Double, Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateWorldTransformWith")(js.Any.fromFunction7(value))
+        ret
+    }
+    @scala.inline
+    def withWorldToLocal(value: Vector2 => Vector2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("worldToLocal")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWorldToLocalRotation(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("worldToLocalRotation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWorldX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("worldX")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWorldY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("worldY")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withX(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("x")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withY(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("y")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

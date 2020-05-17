@@ -5,12 +5,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the result of creating an audio device output node. */
-@JSGlobal("Windows.Media.Audio.CreateAudioDeviceOutputNodeResult")
 @js.native
-abstract class CreateAudioDeviceOutputNodeResult () extends js.Object {
+trait CreateAudioDeviceOutputNodeResult extends js.Object {
   /** Gets the audio device output node. */
   var deviceOutputNode: AudioDeviceOutputNode = js.native
   /** Gets the status of audio device output node creation. */
   var status: AudioDeviceNodeCreationStatus = js.native
+}
+
+object CreateAudioDeviceOutputNodeResult {
+  @scala.inline
+  def apply(deviceOutputNode: AudioDeviceOutputNode, status: AudioDeviceNodeCreationStatus): CreateAudioDeviceOutputNodeResult = {
+    val __obj = js.Dynamic.literal(deviceOutputNode = deviceOutputNode.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CreateAudioDeviceOutputNodeResult]
+  }
+  @scala.inline
+  implicit class CreateAudioDeviceOutputNodeResultOps[Self <: CreateAudioDeviceOutputNodeResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceOutputNode(value: AudioDeviceOutputNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceOutputNode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: AudioDeviceNodeCreationStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

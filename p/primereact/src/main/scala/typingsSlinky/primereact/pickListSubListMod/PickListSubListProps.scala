@@ -1,7 +1,7 @@
 package typingsSlinky.primereact.pickListSubListMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.primereact.AnonEventValue
+import typingsSlinky.primereact.anon.EventValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait PickListSubListProps extends js.Object {
   var listClassName: js.UndefOr[String] = js.native
   var metaKeySelection: js.UndefOr[Boolean] = js.native
   var onItemClick: js.UndefOr[js.Function0[Unit]] = js.native
-  var onSelectionChange: js.UndefOr[js.Function1[/* e */ AnonEventValue, Unit]] = js.native
+  var onSelectionChange: js.UndefOr[js.Function1[/* e */ EventValue, Unit]] = js.native
   var selection: js.UndefOr[js.Array[_]] = js.native
   var showControls: js.UndefOr[Boolean] = js.native
   var style: js.UndefOr[js.Object] = js.native
@@ -118,7 +118,7 @@ object PickListSubListProps {
         ret
     }
     @scala.inline
-    def withOnSelectionChange(value: /* e */ AnonEventValue => Unit): Self = {
+    def withOnSelectionChange(value: /* e */ EventValue => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChange")(js.Any.fromFunction1(value))
         ret

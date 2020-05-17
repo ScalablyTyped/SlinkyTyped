@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientBigquery.gapi.client.bigquery
 
-import typingsSlinky.gapiClientBigquery.AnonDomain
+import typingsSlinky.gapiClientBigquery.anon.Domain
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ trait Dataset extends js.Object {
     * entities: access.specialGroup: projectReaders; access.role: READER; access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup:
     * projectOwners; access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
     */
-  var access: js.UndefOr[js.Array[AnonDomain]] = js.native
+  var access: js.UndefOr[js.Array[Domain]] = js.native
   /** [Output-only] The time when this dataset was created, in milliseconds since the epoch. */
   var creationTime: js.UndefOr[String] = js.native
   /** [Required] A reference that identifies the dataset. */
@@ -66,7 +66,7 @@ object Dataset {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAccess(value: js.Array[AnonDomain]): Self = {
+    def withAccess(value: js.Array[Domain]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("access")(value.asInstanceOf[js.Any])
         ret

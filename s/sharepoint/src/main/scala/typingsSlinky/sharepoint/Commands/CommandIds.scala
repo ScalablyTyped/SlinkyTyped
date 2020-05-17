@@ -1,0 +1,9 @@
+package typingsSlinky.sharepoint.Commands
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait CommandIds extends js.Object
+

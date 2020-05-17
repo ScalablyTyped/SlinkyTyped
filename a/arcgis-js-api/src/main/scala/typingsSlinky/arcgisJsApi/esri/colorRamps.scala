@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,7 +44,48 @@ trait colorRamps extends js.Object {
   def names(): js.Array[String] = js.native
 }
 
-@JSGlobal("__esri.colorRamps")
-@js.native
-object colorRamps extends TopLevel[colorRamps]
+object colorRamps {
+  @scala.inline
+  def apply(
+    all: () => js.Array[colorRampsColorRamp],
+    byName: String => colorRampsColorRamp,
+    byTag: colorRampsByTagParams => js.Array[colorRampsColorRamp],
+    names: () => js.Array[String]
+  ): colorRamps = {
+    val __obj = js.Dynamic.literal(all = js.Any.fromFunction0(all), byName = js.Any.fromFunction1(byName), byTag = js.Any.fromFunction1(byTag), names = js.Any.fromFunction0(names))
+    __obj.asInstanceOf[colorRamps]
+  }
+  @scala.inline
+  implicit class colorRampsOps[Self <: colorRamps] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAll(value: () => js.Array[colorRampsColorRamp]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("all")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withByName(value: String => colorRampsColorRamp): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("byName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withByTag(value: colorRampsByTagParams => js.Array[colorRampsColorRamp]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("byTag")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withNames(value: () => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("names")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
+}
 

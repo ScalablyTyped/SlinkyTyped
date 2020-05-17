@@ -2,6 +2,7 @@ package typingsSlinky.xstate
 
 import typingsSlinky.std.Record
 import typingsSlinky.std.Required
+import typingsSlinky.xstate.anon.Type
 import typingsSlinky.xstate.typesMod.Action
 import typingsSlinky.xstate.typesMod.ActionFunction
 import typingsSlinky.xstate.typesMod.ActionFunctionMap
@@ -39,7 +40,7 @@ import scala.scalajs.js.annotation._
 @JSImport("xstate/lib/actions", JSImport.Namespace)
 @js.native
 object actionsMod extends js.Object {
-  val initEvent: Event[AnonType] = js.native
+  val initEvent: Event[Type] = js.native
   def after(delayRef: String): String = js.native
   def after(delayRef: String, id: String): String = js.native
   def after(delayRef: Double): String = js.native
@@ -115,10 +116,6 @@ object actionsMod extends js.Object {
   def toActionObject[TContext, TEvent /* <: EventObject */](action: Action[TContext, TEvent]): ActionObject[TContext, TEvent] = js.native
   def toActionObject[TContext, TEvent /* <: EventObject */](action: Action[TContext, TEvent], actionFunctionMap: ActionFunctionMap[TContext, TEvent]): ActionObject[TContext, TEvent] = js.native
   def toActionObjects[TContext, TEvent /* <: EventObject */](): js.Array[ActionObject[TContext, TEvent]] = js.native
-  def toActionObjects[TContext, TEvent /* <: EventObject */](
-    action: js.UndefOr[scala.Nothing],
-    actionFunctionMap: Record[String, (ActionFunction[TContext, TEvent]) | (ActionObject[TContext, TEvent])]
-  ): js.Array[ActionObject[TContext, TEvent]] = js.native
   def toActionObjects[TContext, TEvent /* <: EventObject */](action: String): js.Array[ActionObject[TContext, TEvent]] = js.native
   def toActionObjects[TContext, TEvent /* <: EventObject */](
     action: String,

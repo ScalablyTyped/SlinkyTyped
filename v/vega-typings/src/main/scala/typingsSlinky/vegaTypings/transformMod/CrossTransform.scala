@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CrossTransform extends _Transforms {
+trait CrossTransform extends Transforms {
   var as: js.UndefOr[(Vector2[String | SignalRef]) | SignalRef] = js.native
   var filter: js.UndefOr[ExprString] = js.native
   var `type`: cross = js.native

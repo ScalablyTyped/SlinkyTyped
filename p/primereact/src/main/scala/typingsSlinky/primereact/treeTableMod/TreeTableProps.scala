@@ -1,12 +1,12 @@
 package typingsSlinky.primereact.treeTableMod
 
-import typingsSlinky.primereact.AnonDelta
-import typingsSlinky.primereact.AnonDropIndex
-import typingsSlinky.primereact.AnonFirst
-import typingsSlinky.primereact.AnonMultiSortMeta
-import typingsSlinky.primereact.AnonNode
-import typingsSlinky.primereact.AnonNodeOriginalEvent
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.Delta
+import typingsSlinky.primereact.anon.DropIndex
+import typingsSlinky.primereact.anon.First
+import typingsSlinky.primereact.anon.MultiSortMeta
+import typingsSlinky.primereact.anon.Node
+import typingsSlinky.primereact.anon.NodeOriginalEvent
+import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.treeNodeMod.TreeNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -40,20 +40,20 @@ trait TreeTableProps extends js.Object {
   var loadingIcon: js.UndefOr[String] = js.native
   var metaKeySelection: js.UndefOr[Boolean] = js.native
   var multiSortMeta: js.UndefOr[js.Array[_]] = js.native
-  var onColReorder: js.UndefOr[js.Function1[/* e */ AnonDropIndex, Unit]] = js.native
-  var onCollapse: js.UndefOr[js.Function1[/* e */ AnonNodeOriginalEvent, Unit]] = js.native
-  var onColumnResizeEnd: js.UndefOr[js.Function1[/* e */ AnonDelta, Unit]] = js.native
-  var onContextMenu: js.UndefOr[js.Function1[/* e */ AnonNode, Unit]] = js.native
-  var onContextMenuSelectionChange: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
-  var onExpand: js.UndefOr[js.Function1[/* e */ AnonNodeOriginalEvent, Unit]] = js.native
+  var onColReorder: js.UndefOr[js.Function1[/* e */ DropIndex, Unit]] = js.native
+  var onCollapse: js.UndefOr[js.Function1[/* e */ NodeOriginalEvent, Unit]] = js.native
+  var onColumnResizeEnd: js.UndefOr[js.Function1[/* e */ Delta, Unit]] = js.native
+  var onContextMenu: js.UndefOr[js.Function1[/* e */ Node, Unit]] = js.native
+  var onContextMenuSelectionChange: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
+  var onExpand: js.UndefOr[js.Function1[/* e */ NodeOriginalEvent, Unit]] = js.native
   var onFilter: js.UndefOr[js.Function1[/* filters */ js.Array[_], Unit]] = js.native
-  var onPage: js.UndefOr[js.Function1[/* e */ AnonFirst, Unit]] = js.native
-  var onRowClick: js.UndefOr[js.Function1[/* e */ AnonNodeOriginalEvent, Unit]] = js.native
-  var onSelect: js.UndefOr[js.Function1[/* e */ AnonNodeOriginalEvent, Unit]] = js.native
-  var onSelectionChange: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
-  var onSort: js.UndefOr[js.Function1[/* e */ AnonMultiSortMeta, Unit]] = js.native
-  var onToggle: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
-  var onUnselect: js.UndefOr[js.Function1[/* e */ AnonNodeOriginalEvent, Unit]] = js.native
+  var onPage: js.UndefOr[js.Function1[/* e */ First, Unit]] = js.native
+  var onRowClick: js.UndefOr[js.Function1[/* e */ NodeOriginalEvent, Unit]] = js.native
+  var onSelect: js.UndefOr[js.Function1[/* e */ NodeOriginalEvent, Unit]] = js.native
+  var onSelectionChange: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
+  var onSort: js.UndefOr[js.Function1[/* e */ MultiSortMeta, Unit]] = js.native
+  var onToggle: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
+  var onUnselect: js.UndefOr[js.Function1[/* e */ NodeOriginalEvent, Unit]] = js.native
   var pageLinkSize: js.UndefOr[Double] = js.native
   var paginator: js.UndefOr[Boolean] = js.native
   var paginatorLeft: js.UndefOr[js.Any] = js.native
@@ -407,7 +407,7 @@ object TreeTableProps {
         ret
     }
     @scala.inline
-    def withOnColReorder(value: /* e */ AnonDropIndex => Unit): Self = {
+    def withOnColReorder(value: /* e */ DropIndex => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onColReorder")(js.Any.fromFunction1(value))
         ret
@@ -419,7 +419,7 @@ object TreeTableProps {
         ret
     }
     @scala.inline
-    def withOnCollapse(value: /* e */ AnonNodeOriginalEvent => Unit): Self = {
+    def withOnCollapse(value: /* e */ NodeOriginalEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCollapse")(js.Any.fromFunction1(value))
         ret
@@ -431,7 +431,7 @@ object TreeTableProps {
         ret
     }
     @scala.inline
-    def withOnColumnResizeEnd(value: /* e */ AnonDelta => Unit): Self = {
+    def withOnColumnResizeEnd(value: /* e */ Delta => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onColumnResizeEnd")(js.Any.fromFunction1(value))
         ret
@@ -443,7 +443,7 @@ object TreeTableProps {
         ret
     }
     @scala.inline
-    def withOnContextMenu(value: /* e */ AnonNode => Unit): Self = {
+    def withOnContextMenu(value: /* e */ Node => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(js.Any.fromFunction1(value))
         ret
@@ -455,7 +455,7 @@ object TreeTableProps {
         ret
     }
     @scala.inline
-    def withOnContextMenuSelectionChange(value: /* e */ AnonValue => Unit): Self = {
+    def withOnContextMenuSelectionChange(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenuSelectionChange")(js.Any.fromFunction1(value))
         ret
@@ -467,7 +467,7 @@ object TreeTableProps {
         ret
     }
     @scala.inline
-    def withOnExpand(value: /* e */ AnonNodeOriginalEvent => Unit): Self = {
+    def withOnExpand(value: /* e */ NodeOriginalEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onExpand")(js.Any.fromFunction1(value))
         ret
@@ -491,7 +491,7 @@ object TreeTableProps {
         ret
     }
     @scala.inline
-    def withOnPage(value: /* e */ AnonFirst => Unit): Self = {
+    def withOnPage(value: /* e */ First => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPage")(js.Any.fromFunction1(value))
         ret
@@ -503,7 +503,7 @@ object TreeTableProps {
         ret
     }
     @scala.inline
-    def withOnRowClick(value: /* e */ AnonNodeOriginalEvent => Unit): Self = {
+    def withOnRowClick(value: /* e */ NodeOriginalEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRowClick")(js.Any.fromFunction1(value))
         ret
@@ -515,7 +515,7 @@ object TreeTableProps {
         ret
     }
     @scala.inline
-    def withOnSelect(value: /* e */ AnonNodeOriginalEvent => Unit): Self = {
+    def withOnSelect(value: /* e */ NodeOriginalEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
         ret
@@ -527,7 +527,7 @@ object TreeTableProps {
         ret
     }
     @scala.inline
-    def withOnSelectionChange(value: /* e */ AnonValue => Unit): Self = {
+    def withOnSelectionChange(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChange")(js.Any.fromFunction1(value))
         ret
@@ -539,7 +539,7 @@ object TreeTableProps {
         ret
     }
     @scala.inline
-    def withOnSort(value: /* e */ AnonMultiSortMeta => Unit): Self = {
+    def withOnSort(value: /* e */ MultiSortMeta => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSort")(js.Any.fromFunction1(value))
         ret
@@ -551,7 +551,7 @@ object TreeTableProps {
         ret
     }
     @scala.inline
-    def withOnToggle(value: /* e */ AnonValue => Unit): Self = {
+    def withOnToggle(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onToggle")(js.Any.fromFunction1(value))
         ret
@@ -563,7 +563,7 @@ object TreeTableProps {
         ret
     }
     @scala.inline
-    def withOnUnselect(value: /* e */ AnonNodeOriginalEvent => Unit): Self = {
+    def withOnUnselect(value: /* e */ NodeOriginalEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onUnselect")(js.Any.fromFunction1(value))
         ret

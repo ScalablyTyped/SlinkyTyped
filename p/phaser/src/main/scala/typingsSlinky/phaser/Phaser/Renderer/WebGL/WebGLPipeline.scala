@@ -43,14 +43,8 @@ import scala.scalajs.js.annotation._
   * Here you can find more information of how to describe an attribute:
   * - https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttribPointer
   */
-@JSGlobal("Phaser.Renderer.WebGL.WebGLPipeline")
 @js.native
-class WebGLPipeline protected () extends js.Object {
-  /**
-    * 
-    * @param config The configuration object for this WebGL Pipeline, as described above.
-    */
-  def this(config: js.Object) = this()
+trait WebGLPipeline extends js.Object {
   /**
     * Indicates if the current pipeline is active or not for this frame only.
     * Reset in the onRender method.
@@ -299,5 +293,344 @@ class WebGLPipeline protected () extends js.Object {
     * Check if the current batch of vertices is full.
     */
   def shouldFlush(): Boolean = js.native
+}
+
+object WebGLPipeline {
+  @scala.inline
+  def apply(
+    active: Boolean,
+    addAttribute: (String, integer, integer, Boolean, integer) => WebGLPipeline,
+    attributes: js.Object,
+    bind: () => WebGLPipeline,
+    boot: () => Unit,
+    bytes: js.typedarray.Uint8Array,
+    destroy: () => WebGLPipeline,
+    flush: () => WebGLPipeline,
+    flushLocked: Boolean,
+    game: Game,
+    gl: WebGLRenderingContext,
+    height: Double,
+    name: String,
+    onBind: () => WebGLPipeline,
+    onPostRender: () => WebGLPipeline,
+    onPreRender: () => WebGLPipeline,
+    onRender: (Scene, Camera) => WebGLPipeline,
+    program: WebGLProgram,
+    renderer: WebGLRenderer,
+    resize: (Double, Double, Double) => WebGLPipeline,
+    resolution: Double,
+    setFloat1: (String, Double) => WebGLPipeline,
+    setFloat1v: (String, js.typedarray.Float32Array) => WebGLPipeline,
+    setFloat2: (String, Double, Double) => WebGLPipeline,
+    setFloat2v: (String, js.typedarray.Float32Array) => WebGLPipeline,
+    setFloat3: (String, Double, Double, Double) => WebGLPipeline,
+    setFloat3v: (String, js.typedarray.Float32Array) => WebGLPipeline,
+    setFloat4: (String, Double, Double, Double, Double) => WebGLPipeline,
+    setFloat4v: (String, js.typedarray.Float32Array) => WebGLPipeline,
+    setInt1: (String, integer) => WebGLPipeline,
+    setInt2: (String, integer, integer) => WebGLPipeline,
+    setInt3: (String, integer, integer, integer) => WebGLPipeline,
+    setInt4: (String, integer, integer, integer, integer) => WebGLPipeline,
+    setMatrix2: (String, Boolean, js.typedarray.Float32Array) => WebGLPipeline,
+    setMatrix3: (String, Boolean, js.typedarray.Float32Array) => WebGLPipeline,
+    setMatrix4: (String, Boolean, js.typedarray.Float32Array) => WebGLPipeline,
+    shouldFlush: () => Boolean,
+    topology: integer,
+    vertexBuffer: WebGLBuffer,
+    vertexCapacity: integer,
+    vertexComponentCount: integer,
+    vertexCount: Double,
+    vertexData: js.typedarray.ArrayBuffer,
+    vertexSize: integer,
+    view: HTMLCanvasElement,
+    width: Double
+  ): WebGLPipeline = {
+    val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], addAttribute = js.Any.fromFunction5(addAttribute), attributes = attributes.asInstanceOf[js.Any], bind = js.Any.fromFunction0(bind), boot = js.Any.fromFunction0(boot), bytes = bytes.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), flush = js.Any.fromFunction0(flush), flushLocked = flushLocked.asInstanceOf[js.Any], game = game.asInstanceOf[js.Any], gl = gl.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], onBind = js.Any.fromFunction0(onBind), onPostRender = js.Any.fromFunction0(onPostRender), onPreRender = js.Any.fromFunction0(onPreRender), onRender = js.Any.fromFunction2(onRender), program = program.asInstanceOf[js.Any], renderer = renderer.asInstanceOf[js.Any], resize = js.Any.fromFunction3(resize), resolution = resolution.asInstanceOf[js.Any], setFloat1 = js.Any.fromFunction2(setFloat1), setFloat1v = js.Any.fromFunction2(setFloat1v), setFloat2 = js.Any.fromFunction3(setFloat2), setFloat2v = js.Any.fromFunction2(setFloat2v), setFloat3 = js.Any.fromFunction4(setFloat3), setFloat3v = js.Any.fromFunction2(setFloat3v), setFloat4 = js.Any.fromFunction5(setFloat4), setFloat4v = js.Any.fromFunction2(setFloat4v), setInt1 = js.Any.fromFunction2(setInt1), setInt2 = js.Any.fromFunction3(setInt2), setInt3 = js.Any.fromFunction4(setInt3), setInt4 = js.Any.fromFunction5(setInt4), setMatrix2 = js.Any.fromFunction3(setMatrix2), setMatrix3 = js.Any.fromFunction3(setMatrix3), setMatrix4 = js.Any.fromFunction3(setMatrix4), shouldFlush = js.Any.fromFunction0(shouldFlush), topology = topology.asInstanceOf[js.Any], vertexBuffer = vertexBuffer.asInstanceOf[js.Any], vertexCapacity = vertexCapacity.asInstanceOf[js.Any], vertexComponentCount = vertexComponentCount.asInstanceOf[js.Any], vertexCount = vertexCount.asInstanceOf[js.Any], vertexData = vertexData.asInstanceOf[js.Any], vertexSize = vertexSize.asInstanceOf[js.Any], view = view.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WebGLPipeline]
+  }
+  @scala.inline
+  implicit class WebGLPipelineOps[Self <: WebGLPipeline] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withActive(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("active")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAddAttribute(value: (String, integer, integer, Boolean, integer) => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addAttribute")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withAttributes(value: js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBind(value: () => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bind")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withBoot(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("boot")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withBytes(value: js.typedarray.Uint8Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bytes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestroy(value: () => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withFlush(value: () => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flush")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withFlushLocked(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flushLocked")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGame(value: Game): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("game")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGl(value: WebGLRenderingContext): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("gl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnBind(value: () => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBind")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnPostRender(value: () => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPostRender")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnPreRender(value: () => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onPreRender")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnRender(value: (Scene, Camera) => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onRender")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withProgram(value: WebGLProgram): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("program")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRenderer(value: WebGLRenderer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResize(value: (Double, Double, Double) => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resize")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withResolution(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetFloat1(value: (String, Double) => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFloat1")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetFloat1v(value: (String, js.typedarray.Float32Array) => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFloat1v")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetFloat2(value: (String, Double, Double) => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFloat2")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withSetFloat2v(value: (String, js.typedarray.Float32Array) => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFloat2v")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetFloat3(value: (String, Double, Double, Double) => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFloat3")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withSetFloat3v(value: (String, js.typedarray.Float32Array) => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFloat3v")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetFloat4(value: (String, Double, Double, Double, Double) => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFloat4")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withSetFloat4v(value: (String, js.typedarray.Float32Array) => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFloat4v")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetInt1(value: (String, integer) => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setInt1")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetInt2(value: (String, integer, integer) => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setInt2")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withSetInt3(value: (String, integer, integer, integer) => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setInt3")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withSetInt4(value: (String, integer, integer, integer, integer) => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setInt4")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withSetMatrix2(value: (String, Boolean, js.typedarray.Float32Array) => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMatrix2")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withSetMatrix3(value: (String, Boolean, js.typedarray.Float32Array) => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMatrix3")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withSetMatrix4(value: (String, Boolean, js.typedarray.Float32Array) => WebGLPipeline): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMatrix4")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withShouldFlush(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shouldFlush")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withTopology(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("topology")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVertexBuffer(value: WebGLBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexBuffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVertexCapacity(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexCapacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVertexComponentCount(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexComponentCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVertexCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVertexData(value: js.typedarray.ArrayBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVertexSize(value: integer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexSize")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withView(value: HTMLCanvasElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

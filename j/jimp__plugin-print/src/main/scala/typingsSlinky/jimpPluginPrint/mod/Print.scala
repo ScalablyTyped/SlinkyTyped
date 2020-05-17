@@ -1,6 +1,6 @@
 package typingsSlinky.jimpPluginPrint.mod
 
-import typingsSlinky.jimpPluginPrint.AnonFONTSANS10BLACK
+import typingsSlinky.jimpPluginPrint.anon.FONTSANS10BLACK
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Print extends js.Object {
   var `class`: PrintClass = js.native
-  var constants: AnonFONTSANS10BLACK = js.native
+  var constants: FONTSANS10BLACK = js.native
 }
 
 object Print {
   @scala.inline
-  def apply(`class`: PrintClass, constants: AnonFONTSANS10BLACK): Print = {
+  def apply(`class`: PrintClass, constants: FONTSANS10BLACK): Print = {
     val __obj = js.Dynamic.literal(constants = constants.asInstanceOf[js.Any])
     __obj.updateDynamic("class")(`class`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Print]
@@ -31,7 +31,7 @@ object Print {
         ret
     }
     @scala.inline
-    def withConstants(value: AnonFONTSANS10BLACK): Self = {
+    def withConstants(value: FONTSANS10BLACK): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("constants")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.hapiHapi.mod
 
-import typingsSlinky.hapiHapi.AnonVary
+import typingsSlinky.hapiHapi.anon.Vary
 import typingsSlinky.hapiHapi.hapiHapiStrings.ascii
 import typingsSlinky.hapiHapi.hapiHapiStrings.base64
 import typingsSlinky.hapiHapi.hapiHapiStrings.binary
@@ -142,7 +142,7 @@ trait ResponseObject extends Podium {
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-responseetagtag-options)
     */
   def etag(tag: String): ResponseObject = js.native
-  def etag(tag: String, options: AnonVary): ResponseObject = js.native
+  def etag(tag: String, options: Vary): ResponseObject = js.native
   /**
     * Sets an HTTP header where:
     * @param name - the header name.

@@ -1,6 +1,6 @@
 package typingsSlinky.consolidate.mod
 
-import typingsSlinky.consolidate.AnonDictotherOptions
+import typingsSlinky.consolidate.anon.DictotherOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -96,346 +96,346 @@ trait ConsolidateType extends js.Object {
   var whiskers_Original: RendererInterface = js.native
   def `arc-templates`(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def `arc-templates`(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def `arc-templates`(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def `arc-templates`(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def `arc-templates`(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def atpl(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def atpl(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def atpl(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def atpl(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def atpl(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def bracket(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def bracket(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def bracket(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def bracket(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def bracket(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def dot(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def dot(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def dot(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def dot(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def dot(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def dust(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def dust(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def dust(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def dust(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def dust(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def eco(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def eco(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def eco(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def eco(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def eco(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def ect(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def ect(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def ect(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def ect(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def ect(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def ejs(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def ejs(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def ejs(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def ejs(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def ejs(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def haml(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def haml(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def haml(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def haml(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def haml(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def `haml-coffee`(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def `haml-coffee`(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def `haml-coffee`(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def `haml-coffee`(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def `haml-coffee`(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def hamlet(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def hamlet(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def hamlet(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def hamlet(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def hamlet(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def handlebars(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def handlebars(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def handlebars(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def handlebars(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def handlebars(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def hogan(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def hogan(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def hogan(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def hogan(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def hogan(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def htmling(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def htmling(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def htmling(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def htmling(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def htmling(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def jade(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def jade(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def jade(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def jade(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def jade(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def jazz(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def jazz(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def jazz(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def jazz(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def jazz(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def jqtpl(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def jqtpl(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def jqtpl(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def jqtpl(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def jqtpl(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def just(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def just(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def just(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def just(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def just(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def liquid(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def liquid(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def liquid(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def liquid(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def liquid(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def liquor(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def liquor(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def liquor(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def liquor(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def liquor(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def lodash(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def lodash(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def lodash(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def lodash(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def lodash(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def marko(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def marko(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def marko(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def marko(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def marko(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def mote(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def mote(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def mote(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def mote(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def mote(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def mustache(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def mustache(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def mustache(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def mustache(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def mustache(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def nunjucks(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def nunjucks(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def nunjucks(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def nunjucks(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def nunjucks(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def plates(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def plates(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def plates(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def plates(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def plates(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def pug(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def pug(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def pug(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def pug(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def pug(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def qejs(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def qejs(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def qejs(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def qejs(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def qejs(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def ractive(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def ractive(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def ractive(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def ractive(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def ractive(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def razor(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def razor(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def razor(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def razor(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def razor(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def react(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def react(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def react(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def react(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def react(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def slm(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def slm(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def slm(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def slm(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def slm(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def squirrelly(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def squirrelly(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def squirrelly(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def squirrelly(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def squirrelly(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def swig(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def swig(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def swig(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def swig(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def swig(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def teacup(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def teacup(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def teacup(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def teacup(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def teacup(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def templayed(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def templayed(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def templayed(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def templayed(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def templayed(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def toffee(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def toffee(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def toffee(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def toffee(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def toffee(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def twig(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def twig(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def twig(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def twig(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def twig(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def underscore(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def underscore(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def underscore(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def underscore(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def underscore(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def vash(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def vash(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def vash(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def vash(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def vash(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def velocityjs(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def velocityjs(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def velocityjs(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def velocityjs(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def velocityjs(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def walrus(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def walrus(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def walrus(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def walrus(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def walrus(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
   def whiskers(path: String): typingsSlinky.bluebird.mod.^[String] = js.native
   def whiskers(path: String, fn: js.Function2[/* err */ js.Error, /* html */ String, _]): js.Any = js.native
-  def whiskers(path: String, options: AnonDictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
+  def whiskers(path: String, options: DictotherOptions): typingsSlinky.bluebird.mod.^[String] = js.native
   def whiskers(
     path: String,
-    options: AnonDictotherOptions,
+    options: DictotherOptions,
     fn: js.Function2[/* err */ js.Error, /* html */ String, _]
   ): js.Any = js.native
 }

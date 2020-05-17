@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait BreakParent_ extends _Doc {
+trait BreakParent_ extends Doc {
   var `type`: `break-parent` = js.native
 }
 

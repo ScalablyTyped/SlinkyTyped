@@ -1,8 +1,8 @@
 package typingsSlinky.nivoChord.mod
 
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.nivoChord.OmitArcDataformattedValue
-import typingsSlinky.nivoChord.OmitArcDatalabel
+import typingsSlinky.nivoChord.anon.OmitArcDataformattedValue
+import typingsSlinky.nivoChord.anon.OmitArcDatalabel
 import typingsSlinky.nivoColors.mod.InheritedColorProp
 import typingsSlinky.nivoColors.mod.OrdinalColorsInstruction
 import typingsSlinky.nivoCore.mod.Box

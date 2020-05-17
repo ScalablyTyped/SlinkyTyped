@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeSafeAreaView.components
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -29,7 +29,7 @@ import typingsSlinky.reactNative.reactNativeStrings.polite
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.yes
-import typingsSlinky.reactNativeSafeAreaView.AnonBottom
+import typingsSlinky.reactNativeSafeAreaView.anon.Bottom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -69,7 +69,7 @@ class SharedBuilder_SafeAreaViewProps_729231753[R <: js.Object] (val args: js.Ar
   @scala.inline
   def collapsable(value: Boolean): this.type = set("collapsable", value.asInstanceOf[js.Any])
   @scala.inline
-  def forceInset(value: AnonBottom): this.type = set("forceInset", value.asInstanceOf[js.Any])
+  def forceInset(value: Bottom): this.type = set("forceInset", value.asInstanceOf[js.Any])
   @scala.inline
   def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
   @scala.inline

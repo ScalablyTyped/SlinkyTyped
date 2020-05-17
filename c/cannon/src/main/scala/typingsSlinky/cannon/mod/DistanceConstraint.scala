@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cannon", "DistanceConstraint")
 @js.native
 class DistanceConstraint protected ()
-  extends typingsSlinky.cannon.CANNON.DistanceConstraint {
+  extends typingsSlinky.cannon.CANNON.Constraint {
   def this(bodyA: typingsSlinky.cannon.CANNON.Body, bodyB: typingsSlinky.cannon.CANNON.Body, distance: Double) = this()
   def this(
     bodyA: typingsSlinky.cannon.CANNON.Body,

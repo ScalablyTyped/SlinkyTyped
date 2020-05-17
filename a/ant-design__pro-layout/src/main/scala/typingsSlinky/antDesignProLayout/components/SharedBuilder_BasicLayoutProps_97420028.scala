@@ -6,9 +6,9 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignProLayout.AnonDefaultOpenAll
-import typingsSlinky.antDesignProLayout.AnonId
-import typingsSlinky.antDesignProLayout.MenuDataItemisUrlboolean
+import typingsSlinky.antDesignProLayout.anon.DefaultOpenAll
+import typingsSlinky.antDesignProLayout.anon.Id
+import typingsSlinky.antDesignProLayout.anon.MenuDataItemisUrlboolean
 import typingsSlinky.antDesignProLayout.antDesignProLayoutBooleans.`false`
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.realDark
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.sidemenu
@@ -107,7 +107,7 @@ class SharedBuilder_BasicLayoutProps_97420028 (val args: js.Array[js.Any])
   @scala.inline
   def logo(value: TagMod[Any] | WithFalse[js.Function0[TagMod[Any]]]): this.type = set("logo", value.asInstanceOf[js.Any])
   @scala.inline
-  def menu(value: AnonDefaultOpenAll): this.type = set("menu", value.asInstanceOf[js.Any])
+  def menu(value: DefaultOpenAll): this.type = set("menu", value.asInstanceOf[js.Any])
   @scala.inline
   def menuDataRender(value: /* menuData */ js.Array[MenuDataItem] => js.Array[MenuDataItem]): this.type = set("menuDataRender", js.Any.fromFunction1(value))
   @scala.inline
@@ -153,7 +153,7 @@ class SharedBuilder_BasicLayoutProps_97420028 (val args: js.Array[js.Any])
   def onOpenChange(value: /* openKeys */ WithFalse[js.Array[String]] => Unit): this.type = set("onOpenChange", js.Any.fromFunction1(value))
   @scala.inline
   def pageTitleRenderFunction3(
-    value: (/* props */ GetPageTitleProps, /* defaultPageTitle */ js.UndefOr[String], /* info */ js.UndefOr[AnonId]) => String
+    value: (/* props */ GetPageTitleProps, /* defaultPageTitle */ js.UndefOr[String], /* info */ js.UndefOr[Id]) => String
   ): this.type = set("pageTitleRender", js.Any.fromFunction3(value))
   @scala.inline
   def pageTitleRender(
@@ -161,7 +161,7 @@ class SharedBuilder_BasicLayoutProps_97420028 (val args: js.Array[js.Any])
       js.Function3[
         /* props */ GetPageTitleProps, 
         /* defaultPageTitle */ js.UndefOr[String], 
-        /* info */ js.UndefOr[AnonId], 
+        /* info */ js.UndefOr[Id], 
         String
       ]
     ]

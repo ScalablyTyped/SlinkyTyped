@@ -1,6 +1,6 @@
 package typingsSlinky.graphql.mod
 
-import typingsSlinky.graphql.AnonMaxErrors
+import typingsSlinky.graphql.anon.MaxErrors
 import typingsSlinky.graphql.astMod.DocumentNode
 import typingsSlinky.graphql.validationContextMod.ValidationRule
 import scala.scalajs.js
@@ -27,7 +27,7 @@ object validate extends js.Object {
     documentAST: DocumentNode,
     rules: js.Array[ValidationRule],
     typeInfo: typingsSlinky.graphql.typeInfoMod.TypeInfo,
-    options: AnonMaxErrors
+    options: MaxErrors
   ): js.Array[typingsSlinky.graphql.graphQLErrorMod.GraphQLError] = js.native
 }
 

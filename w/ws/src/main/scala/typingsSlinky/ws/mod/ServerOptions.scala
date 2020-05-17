@@ -1,7 +1,7 @@
 package typingsSlinky.ws.mod
 
 import typingsSlinky.node.httpMod.OutgoingHttpHeaders
-import typingsSlinky.ws.AnonOrigin
+import typingsSlinky.ws.anon.Origin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -155,7 +155,7 @@ object ServerOptions {
     }
     @scala.inline
     def withVerifyClientFunction2(
-      value: (/* info */ AnonOrigin, /* callback */ js.Function4[
+      value: (/* info */ Origin, /* callback */ js.Function4[
           /* res */ Boolean, 
           /* code */ js.UndefOr[Double], 
           /* message */ js.UndefOr[String], 
@@ -168,7 +168,7 @@ object ServerOptions {
         ret
     }
     @scala.inline
-    def withVerifyClientFunction1(value: /* info */ AnonOrigin => Boolean): Self = {
+    def withVerifyClientFunction1(value: /* info */ Origin => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("verifyClient")(js.Any.fromFunction1(value))
         ret

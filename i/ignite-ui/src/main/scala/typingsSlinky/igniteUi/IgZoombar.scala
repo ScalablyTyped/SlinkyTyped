@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -247,7 +247,7 @@ object IgZoombar {
         ret
     }
     @scala.inline
-    def withProviderCreated(value: (/* event */ Event_, /* ui */ ProviderCreatedEventUIParam) => Unit): Self = {
+    def withProviderCreated(value: (/* event */ Event, /* ui */ ProviderCreatedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("providerCreated")(js.Any.fromFunction2(value))
         ret
@@ -307,7 +307,7 @@ object IgZoombar {
         ret
     }
     @scala.inline
-    def withWindowDragEnded(value: (/* event */ Event_, /* ui */ WindowDragEndedEventUIParam) => Unit): Self = {
+    def withWindowDragEnded(value: (/* event */ Event, /* ui */ WindowDragEndedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("windowDragEnded")(js.Any.fromFunction2(value))
         ret
@@ -319,7 +319,7 @@ object IgZoombar {
         ret
     }
     @scala.inline
-    def withWindowDragEnding(value: (/* event */ Event_, /* ui */ WindowDragEndingEventUIParam) => Unit): Self = {
+    def withWindowDragEnding(value: (/* event */ Event, /* ui */ WindowDragEndingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("windowDragEnding")(js.Any.fromFunction2(value))
         ret
@@ -331,7 +331,7 @@ object IgZoombar {
         ret
     }
     @scala.inline
-    def withWindowDragStarted(value: (/* event */ Event_, /* ui */ WindowDragStartedEventUIParam) => Unit): Self = {
+    def withWindowDragStarted(value: (/* event */ Event, /* ui */ WindowDragStartedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("windowDragStarted")(js.Any.fromFunction2(value))
         ret
@@ -343,7 +343,7 @@ object IgZoombar {
         ret
     }
     @scala.inline
-    def withWindowDragStarting(value: (/* event */ Event_, /* ui */ WindowDragStartingEventUIParam) => Unit): Self = {
+    def withWindowDragStarting(value: (/* event */ Event, /* ui */ WindowDragStartingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("windowDragStarting")(js.Any.fromFunction2(value))
         ret
@@ -355,7 +355,7 @@ object IgZoombar {
         ret
     }
     @scala.inline
-    def withWindowDragging(value: (/* event */ Event_, /* ui */ WindowDraggingEventUIParam) => Unit): Self = {
+    def withWindowDragging(value: (/* event */ Event, /* ui */ WindowDraggingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("windowDragging")(js.Any.fromFunction2(value))
         ret
@@ -379,7 +379,7 @@ object IgZoombar {
         ret
     }
     @scala.inline
-    def withWindowResized(value: (/* event */ Event_, /* ui */ WindowResizedEventUIParam) => Unit): Self = {
+    def withWindowResized(value: (/* event */ Event, /* ui */ WindowResizedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("windowResized")(js.Any.fromFunction2(value))
         ret
@@ -391,7 +391,7 @@ object IgZoombar {
         ret
     }
     @scala.inline
-    def withWindowResizing(value: (/* event */ Event_, /* ui */ WindowResizingEventUIParam) => Unit): Self = {
+    def withWindowResizing(value: (/* event */ Event, /* ui */ WindowResizingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("windowResizing")(js.Any.fromFunction2(value))
         ret
@@ -415,7 +415,7 @@ object IgZoombar {
         ret
     }
     @scala.inline
-    def withZoomChanged(value: (/* event */ Event_, /* ui */ ZoomChangedEventUIParam) => Unit): Self = {
+    def withZoomChanged(value: (/* event */ Event, /* ui */ ZoomChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("zoomChanged")(js.Any.fromFunction2(value))
         ret
@@ -427,7 +427,7 @@ object IgZoombar {
         ret
     }
     @scala.inline
-    def withZoomChanging(value: (/* event */ Event_, /* ui */ ZoomChangingEventUIParam) => Unit): Self = {
+    def withZoomChanging(value: (/* event */ Event, /* ui */ ZoomChangingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("zoomChanging")(js.Any.fromFunction2(value))
         ret

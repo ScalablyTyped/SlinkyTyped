@@ -5,14 +5,14 @@ import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.MouseEventHandler
-import typingsSlinky.reactLazylog.AnonText
+import typingsSlinky.reactLazylog.anon.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait LineProps extends js.Object {
-  var data: js.Array[AnonText] = js.native
+  var data: js.Array[Text] = js.native
   var formatPart: js.UndefOr[js.Function1[/* text */ String, TagMod[Any]]] = js.native
   var highlight: js.UndefOr[Boolean] = js.native
   var number: Double = js.native
@@ -29,7 +29,7 @@ trait LineProps extends js.Object {
 
 object LineProps {
   @scala.inline
-  def apply(data: js.Array[AnonText], number: Double, rowHeight: Double): LineProps = {
+  def apply(data: js.Array[Text], number: Double, rowHeight: Double): LineProps = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any], rowHeight = rowHeight.asInstanceOf[js.Any])
     __obj.asInstanceOf[LineProps]
   }
@@ -40,7 +40,7 @@ object LineProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withData(value: js.Array[AnonText]): Self = {
+    def withData(value: js.Array[Text]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

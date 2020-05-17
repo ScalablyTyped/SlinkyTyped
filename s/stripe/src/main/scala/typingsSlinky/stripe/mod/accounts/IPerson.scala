@@ -1,7 +1,7 @@
 package typingsSlinky.stripe.mod.accounts
 
-import typingsSlinky.stripe.AnonAdditionaldocument
-import typingsSlinky.stripe.AnonCurrentlydue
+import typingsSlinky.stripe.anon.Additionaldocument
+import typingsSlinky.stripe.anon.Currentlydue
 import typingsSlinky.stripe.mod.IMetadata
 import typingsSlinky.stripe.stripeStrings.person
 import scala.scalajs.js
@@ -35,7 +35,7 @@ trait IPerson extends IPersonShared {
   /**
     * Information about the requirements for this person, including what information needs to be collected, and by when.
     */
-  var requirements: AnonCurrentlydue = js.native
+  var requirements: Currentlydue = js.native
   /**
     * Whether the person’s last 4 SSN digits was provided.
     */
@@ -43,7 +43,7 @@ trait IPerson extends IPersonShared {
   /**
     * The person’s verification document information.
     */
-  var verification: AnonAdditionaldocument = js.native
+  var verification: Additionaldocument = js.native
 }
 
 object IPerson {
@@ -54,9 +54,9 @@ object IPerson {
     id_number_provided: Boolean,
     metadata: IMetadata,
     `object`: person,
-    requirements: AnonCurrentlydue,
+    requirements: Currentlydue,
     ssn_last_4_provided: Boolean,
-    verification: AnonAdditionaldocument
+    verification: Additionaldocument
   ): IPerson = {
     val __obj = js.Dynamic.literal(created = created.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], id_number_provided = id_number_provided.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], requirements = requirements.asInstanceOf[js.Any], ssn_last_4_provided = ssn_last_4_provided.asInstanceOf[js.Any], verification = verification.asInstanceOf[js.Any])
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
@@ -99,7 +99,7 @@ object IPerson {
         ret
     }
     @scala.inline
-    def withRequirements(value: AnonCurrentlydue): Self = {
+    def withRequirements(value: Currentlydue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("requirements")(value.asInstanceOf[js.Any])
         ret
@@ -111,7 +111,7 @@ object IPerson {
         ret
     }
     @scala.inline
-    def withVerification(value: AnonAdditionaldocument): Self = {
+    def withVerification(value: Additionaldocument): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("verification")(value.asInstanceOf[js.Any])
         ret

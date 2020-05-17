@@ -1,6 +1,6 @@
 package typingsSlinky.nestdb.mod
 
-import typingsSlinky.nestdb.AnonNewDoc
+import typingsSlinky.nestdb.anon.NewDoc
 import typingsSlinky.nestdb.nestdbStrings.compactionDotdone
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
@@ -172,7 +172,7 @@ trait NestDb[G] extends EventEmitter {
     * If one update violates a constraint, all changes are rolled back
     */
   def updateIndexes[T /* <: G */](oldDoc: T, newDoc: T): Unit = js.native
-  def updateIndexes[T /* <: G */](updates: js.Array[AnonNewDoc[T, G]]): Unit = js.native
+  def updateIndexes[T /* <: G */](updates: js.Array[NewDoc[T, G]]): Unit = js.native
   /**
     * Update all docs matching query v1.8 signature.
     * For now, very naive implementation (recalculating the whole database)

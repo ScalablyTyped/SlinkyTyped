@@ -1,5 +1,7 @@
 package typingsSlinky.officeUiFabricReact
 
+import typingsSlinky.officeUiFabricReact.anon.PartialIButtonStyles
+import typingsSlinky.officeUiFabricReact.anon.PartialISpinButtonStyles
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonStyles
 import typingsSlinky.officeUiFabricReact.spinButtonTypesMod.ISpinButtonStyles
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme

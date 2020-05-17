@@ -9,15 +9,8 @@ import scala.scalajs.js.annotation._
 	* @brief Smtp对象
 	* @detail 
 	*/
-@JSGlobal("Class_Smtp")
 @js.native
-/**
-	 * 
-	 * @brief Smtp 对象构造函数
-	 * 
-	 * 
-	 */
-class ClassSmtp () extends ClassObject {
+trait ClassSmtp extends ClassObject {
   /**
   	 * class prop 
   	 *

@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TextProps
   extends typingsSlinky.reactNative.mod.TextProps
-     with _HeaderSubComponent {
+     with HeaderSubComponent {
   /**
     * font size 40
     */

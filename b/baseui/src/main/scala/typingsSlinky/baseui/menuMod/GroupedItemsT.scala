@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait GroupedItemsT extends /* key */ StringDictionary[ArrayItemsT] {
+trait GroupedItemsT
+  extends /* key */ StringDictionary[ArrayItemsT]
+     with ItemsT {
   var __ungrouped: ArrayItemsT = js.native
 }
 

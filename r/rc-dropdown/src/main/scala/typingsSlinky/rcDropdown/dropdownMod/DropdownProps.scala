@@ -1,8 +1,8 @@
 package typingsSlinky.rcDropdown.dropdownMod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,15 +17,15 @@ trait DropdownProps extends js.Object {
   var animation: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AnimationType */ js.Any
   ] = js.native
-  var children: js.Any = js.native
-  var getPopupContainer: js.Any = js.native
+  var children: js.UndefOr[js.Any] = js.native
+  var getPopupContainer: js.UndefOr[js.Any] = js.native
   var hideAction: js.UndefOr[
     js.Array[
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionType */ _
     ]
   ] = js.native
   var minOverlayWidthMatchTrigger: js.UndefOr[Boolean] = js.native
-  var onOverlayClick: js.UndefOr[js.Function1[/* e */ Event_, Unit]] = js.native
+  var onOverlayClick: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
   var onVisibleChange: js.UndefOr[js.Function1[/* visible */ Boolean, Unit]] = js.native
   var openClassName: js.UndefOr[String] = js.native
   var overlay: js.UndefOr[js.Function0[ReactElement] | ReactElement] = js.native
@@ -52,8 +52,8 @@ trait DropdownProps extends js.Object {
 
 object DropdownProps {
   @scala.inline
-  def apply(children: js.Any, getPopupContainer: js.Any): DropdownProps = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], getPopupContainer = getPopupContainer.asInstanceOf[js.Any])
+  def apply(): DropdownProps = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[DropdownProps]
   }
   @scala.inline
@@ -62,18 +62,6 @@ object DropdownProps {
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    @scala.inline
-    def withChildren(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withGetPopupContainer(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("getPopupContainer")(value.asInstanceOf[js.Any])
-        ret
-    }
     @scala.inline
     def withAlign(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
@@ -115,6 +103,30 @@ object DropdownProps {
         ret
     }
     @scala.inline
+    def withChildren(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutChildren: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withGetPopupContainer(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPopupContainer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutGetPopupContainer: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPopupContainer")(js.undefined)
+        ret
+    }
+    @scala.inline
     def withHideAction(
       value: js.Array[
           /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionType */ _
@@ -143,7 +155,7 @@ object DropdownProps {
         ret
     }
     @scala.inline
-    def withOnOverlayClick(value: /* e */ Event_ => Unit): Self = {
+    def withOnOverlayClick(value: /* e */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOverlayClick")(js.Any.fromFunction1(value))
         ret

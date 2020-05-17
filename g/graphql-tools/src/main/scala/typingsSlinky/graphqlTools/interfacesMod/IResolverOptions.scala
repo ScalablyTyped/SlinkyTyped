@@ -8,7 +8,7 @@ import typingsSlinky.graphql.definitionMod.GraphQLResolveInfo
 import typingsSlinky.graphql.definitionMod.GraphQLTypeResolver
 import typingsSlinky.graphql.maybeMod.Maybe
 import typingsSlinky.graphql.promiseOrValueMod.PromiseOrValue
-import typingsSlinky.graphqlTools.GraphQLResolveInfomergeIn
+import typingsSlinky.graphqlTools.anon.GraphQLResolveInfomergeIn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

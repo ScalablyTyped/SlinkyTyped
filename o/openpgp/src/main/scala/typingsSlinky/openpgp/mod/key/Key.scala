@@ -1,8 +1,7 @@
 package typingsSlinky.openpgp.mod.key
 
-import typingsSlinky.openpgp.AnonKeyid
-import typingsSlinky.openpgp.AnonSelfCertification
-import typingsSlinky.openpgp.AnonUserid
+import typingsSlinky.openpgp.anon.SelfCertification
+import typingsSlinky.openpgp.anon.Userid
 import typingsSlinky.openpgp.mod.Infinity
 import typingsSlinky.openpgp.mod.`type`.keyid.Keyid
 import typingsSlinky.openpgp.mod.enums.keyStatus
@@ -145,9 +144,9 @@ class Key protected () extends js.Object {
     * @param userId (optional) user ID to get instead of the primary user, if it exists
     * @returns The primary user and the self signature
     */
-  def getPrimaryUser(): js.Promise[AnonSelfCertification] = js.native
-  def getPrimaryUser(date: js.Date): js.Promise[AnonSelfCertification] = js.native
-  def getPrimaryUser(date: js.Date, userId: js.Object): js.Promise[AnonSelfCertification] = js.native
+  def getPrimaryUser(): js.Promise[SelfCertification] = js.native
+  def getPrimaryUser(date: js.Date): js.Promise[SelfCertification] = js.native
+  def getPrimaryUser(date: js.Date, userId: js.Object): js.Promise[SelfCertification] = js.native
   /**
     * Get revocation certificate from a revoked key.
     * (To get a revocation certificate for an unrevoked key, call revoke() first.)
@@ -268,7 +267,7 @@ class Key protected () extends js.Object {
     * @param keys array of keys to verify certificate signatures
     * @returns list of userid, signer's keyid and validity of signature
     */
-  def verifyAllUsers(keys: js.Array[_]): js.Promise[js.Array[AnonUserid]] = js.native
+  def verifyAllUsers(keys: js.Array[_]): js.Promise[js.Array[Userid]] = js.native
   /**
     * Verify primary key. Checks for revocation signatures, expiration time
     * and valid self signature
@@ -288,6 +287,6 @@ class Key protected () extends js.Object {
     * @param userId (optional) user ID to get instead of the primary user, if it exists
     * @returns List of signer's keyid and validity of signature
     */
-  def verifyPrimaryUser(keys: js.Array[_], date: js.Date, userId: js.Object): js.Promise[js.Array[AnonKeyid]] = js.native
+  def verifyPrimaryUser(keys: js.Array[_], date: js.Date, userId: js.Object): js.Promise[js.Array[typingsSlinky.openpgp.anon.Keyid]] = js.native
 }
 

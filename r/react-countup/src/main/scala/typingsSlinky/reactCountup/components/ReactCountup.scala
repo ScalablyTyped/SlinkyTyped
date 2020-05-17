@@ -3,11 +3,11 @@ package typingsSlinky.reactCountup.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactCountup.AnonPauseResume
-import typingsSlinky.reactCountup.AnonPauseResumeReset
-import typingsSlinky.reactCountup.AnonReset
-import typingsSlinky.reactCountup.AnonStart
-import typingsSlinky.reactCountup.AnonUpdate
+import typingsSlinky.reactCountup.anon.PauseResume
+import typingsSlinky.reactCountup.anon.PauseResumeReset
+import typingsSlinky.reactCountup.anon.Reset
+import typingsSlinky.reactCountup.anon.Start
+import typingsSlinky.reactCountup.anon.Update
 import typingsSlinky.reactCountup.mod.Props
 import typingsSlinky.reactCountup.mod.^
 import scala.scalajs.js
@@ -40,15 +40,15 @@ object ReactCountup {
     @scala.inline
     def formattingFn(value: /* value */ Double => String): this.type = set("formattingFn", js.Any.fromFunction1(value))
     @scala.inline
-    def onEnd(value: /* providedFn */ AnonPauseResume => Unit): this.type = set("onEnd", js.Any.fromFunction1(value))
+    def onEnd(value: /* providedFn */ PauseResume => Unit): this.type = set("onEnd", js.Any.fromFunction1(value))
     @scala.inline
-    def onPauseResume(value: () => js.Function1[/* providedFn */ AnonStart, Unit]): this.type = set("onPauseResume", js.Any.fromFunction0(value))
+    def onPauseResume(value: () => js.Function1[/* providedFn */ Start, Unit]): this.type = set("onPauseResume", js.Any.fromFunction0(value))
     @scala.inline
-    def onReset(value: () => js.Function1[/* providedFn */ AnonUpdate, Unit]): this.type = set("onReset", js.Any.fromFunction0(value))
+    def onReset(value: () => js.Function1[/* providedFn */ Update, Unit]): this.type = set("onReset", js.Any.fromFunction0(value))
     @scala.inline
-    def onStart(value: /* providedFn */ AnonReset => Unit): this.type = set("onStart", js.Any.fromFunction1(value))
+    def onStart(value: /* providedFn */ Reset => Unit): this.type = set("onStart", js.Any.fromFunction1(value))
     @scala.inline
-    def onUpdate(value: /* providedFn */ AnonPauseResumeReset => Unit): this.type = set("onUpdate", js.Any.fromFunction1(value))
+    def onUpdate(value: /* providedFn */ PauseResumeReset => Unit): this.type = set("onUpdate", js.Any.fromFunction1(value))
     @scala.inline
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
     @scala.inline

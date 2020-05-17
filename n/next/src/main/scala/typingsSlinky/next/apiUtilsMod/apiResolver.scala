@@ -1,6 +1,6 @@
 package typingsSlinky.next.apiUtilsMod
 
-import typingsSlinky.next.AnonErr
+import typingsSlinky.next.anon.Err
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
 import scala.scalajs.js
@@ -23,7 +23,7 @@ object apiResolver extends js.Object {
     params: js.Any,
     resolverModule: js.Any,
     apiContext: ApiPreviewProps,
-    onError: js.Function1[/* hasErr */ AnonErr, js.Promise[Unit]]
+    onError: js.Function1[/* hasErr */ Err, js.Promise[Unit]]
   ): js.Promise[Unit] = js.native
 }
 

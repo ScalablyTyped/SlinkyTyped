@@ -1,6 +1,6 @@
 package typingsSlinky.dingtalkRobotSender.mod.Message
 
-import typingsSlinky.dingtalkRobotSender.AnonIsAtAll
+import typingsSlinky.dingtalkRobotSender.anon.IsAtAll
 import typingsSlinky.dingtalkRobotSender.dingtalkRobotSenderStrings.markdown
 import typingsSlinky.dingtalkRobotSender.mod.MessageType
 import scala.scalajs.js
@@ -9,13 +9,13 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Markdown extends MessageType {
-  var markdown: AnonIsAtAll = js.native
+  var markdown: IsAtAll = js.native
   var msgtype: markdown = js.native
 }
 
 object Markdown {
   @scala.inline
-  def apply(markdown: AnonIsAtAll, msgtype: markdown): Markdown = {
+  def apply(markdown: IsAtAll, msgtype: markdown): Markdown = {
     val __obj = js.Dynamic.literal(markdown = markdown.asInstanceOf[js.Any], msgtype = msgtype.asInstanceOf[js.Any])
     __obj.asInstanceOf[Markdown]
   }
@@ -26,7 +26,7 @@ object Markdown {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMarkdown(value: AnonIsAtAll): Self = {
+    def withMarkdown(value: IsAtAll): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markdown")(value.asInstanceOf[js.Any])
         ret

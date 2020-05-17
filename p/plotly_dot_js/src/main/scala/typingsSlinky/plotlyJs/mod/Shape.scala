@@ -1,6 +1,6 @@
 package typingsSlinky.plotlyJs.mod
 
-import typingsSlinky.plotlyJs.PartialShapeLine
+import typingsSlinky.plotlyJs.anon.PartialShapeLine
 import typingsSlinky.plotlyJs.plotlyJsStrings.above
 import typingsSlinky.plotlyJs.plotlyJsStrings.below
 import typingsSlinky.plotlyJs.plotlyJsStrings.circle
@@ -131,7 +131,7 @@ object Shape {
         ret
     }
     @scala.inline
-    def withXref(value: x | paper): Self = {
+    def withXref(value: typingsSlinky.plotlyJs.plotlyJsStrings.x | paper): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("xref")(value.asInstanceOf[js.Any])
         ret

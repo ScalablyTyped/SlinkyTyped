@@ -1,6 +1,6 @@
 package typingsSlinky.angularUiBootstrap.mod.angularAugmentingMod.ui.bootstrap
 
-import typingsSlinky.angularUiBootstrap.AnonDate
+import typingsSlinky.angularUiBootstrap.anon.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -64,7 +64,7 @@ trait IDatepickerPopupConfig extends IDatepickerConfig {
   /**
     * Allows overriding of the default format for html5 date inputs.
     */
-  var html5Types: js.UndefOr[AnonDate] = js.native
+  var html5Types: js.UndefOr[Date] = js.native
   /**
     * Whether to focus the datepicker popup upon opening.
     *
@@ -206,7 +206,7 @@ object IDatepickerPopupConfig {
         ret
     }
     @scala.inline
-    def withHtml5Types(value: AnonDate): Self = {
+    def withHtml5Types(value: Date): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("html5Types")(value.asInstanceOf[js.Any])
         ret

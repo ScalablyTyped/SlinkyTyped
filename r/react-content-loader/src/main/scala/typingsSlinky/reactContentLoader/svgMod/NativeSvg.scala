@@ -1,7 +1,7 @@
 package typingsSlinky.reactContentLoader.svgMod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactContentLoader.AnonOffset
+import typingsSlinky.reactContentLoader.anon.Offset
 import typingsSlinky.reactNative.mod.Animated.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ trait NativeSvg
   var idClip: String = js.native
   var idGradient: String = js.native
   @JSName("state")
-  var state_NativeSvg: AnonOffset = js.native
+  var state_NativeSvg: Offset = js.native
   @JSName("componentDidMount")
   def componentDidMount_MNativeSvg(): Unit = js.native
   @JSName("componentWillUnmount")

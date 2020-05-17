@@ -4,16 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("AppleTVJS.MediaItem")
 @js.native
-class MediaItem protected () extends js.Object {
-  /**
-  		 * Creates a new MediaItem object from the information stored in the URL location.
-  		 * @type: Valid values are: audio, video. Defaults to video.
-  		 * @url: The URL pointing to the media item information.
-  		 * */
-  def this(`type`: String) = this()
-  def this(`type`: String, url: String) = this()
+trait MediaItem extends js.Object {
   /** The URL path to the artwork that accompanies the media item. */
   var artworkImageURL: String = js.native
   /**
@@ -68,5 +60,130 @@ class MediaItem protected () extends js.Object {
     requestData: js.Any,
     callback: js.Function3[/* key */ String, /* renewalDate */ String, /* error */ String, Unit]
   ): Unit = js.native
+}
+
+object MediaItem {
+  @scala.inline
+  def apply(
+    artworkImageURL: String,
+    contentRatingDomain: String,
+    contentRatingRanking: Double,
+    description: String,
+    highlightGroups: js.Array[HighlightGroup],
+    interstitials: js.Array[Interstitial],
+    isExplicit: Boolean,
+    loadAssetID: (String, js.Function2[/* assetID */ String, /* error */ String, Unit]) => Unit,
+    loadCertificate: (String, js.Function2[/* certificate */ String, /* error */ String, Unit]) => Unit,
+    loadKey: (String, js.Any, js.Function3[/* key */ String, /* renewalDate */ String, /* error */ String, Unit]) => Unit,
+    resumeTime: Double,
+    subtitle: String,
+    title: String,
+    `type`: String,
+    url: String
+  ): MediaItem = {
+    val __obj = js.Dynamic.literal(artworkImageURL = artworkImageURL.asInstanceOf[js.Any], contentRatingDomain = contentRatingDomain.asInstanceOf[js.Any], contentRatingRanking = contentRatingRanking.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], highlightGroups = highlightGroups.asInstanceOf[js.Any], interstitials = interstitials.asInstanceOf[js.Any], isExplicit = isExplicit.asInstanceOf[js.Any], loadAssetID = js.Any.fromFunction2(loadAssetID), loadCertificate = js.Any.fromFunction2(loadCertificate), loadKey = js.Any.fromFunction3(loadKey), resumeTime = resumeTime.asInstanceOf[js.Any], subtitle = subtitle.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MediaItem]
+  }
+  @scala.inline
+  implicit class MediaItemOps[Self <: MediaItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArtworkImageURL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("artworkImageURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentRatingDomain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentRatingDomain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentRatingRanking(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentRatingRanking")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHighlightGroups(value: js.Array[HighlightGroup]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("highlightGroups")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInterstitials(value: js.Array[Interstitial]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interstitials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsExplicit(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isExplicit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLoadAssetID(value: (String, js.Function2[/* assetID */ String, /* error */ String, Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadAssetID")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withLoadCertificate(value: (String, js.Function2[/* certificate */ String, /* error */ String, Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadCertificate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withLoadKey(
+      value: (String, js.Any, js.Function3[/* key */ String, /* renewalDate */ String, /* error */ String, Unit]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadKey")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withResumeTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resumeTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubtitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

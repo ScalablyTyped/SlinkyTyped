@@ -2,7 +2,7 @@ package typingsSlinky.reactForm.mod
 
 import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
-import typingsSlinky.reactForm.StyledPropsInputHTMLAttriAbout
+import typingsSlinky.reactForm.anon.StyledPropsInputHTMLAttriAbout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

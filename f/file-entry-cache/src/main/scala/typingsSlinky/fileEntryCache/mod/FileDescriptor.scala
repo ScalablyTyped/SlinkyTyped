@@ -1,6 +1,6 @@
 package typingsSlinky.fileEntryCache.mod
 
-import typingsSlinky.fileEntryCache.AnonHash
+import typingsSlinky.fileEntryCache.anon.Hash
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait FileDescriptor extends js.Object {
   val changed: js.UndefOr[Boolean] = js.native
   val err: js.UndefOr[js.Error] = js.native
   val key: String = js.native
-  val meta: js.UndefOr[AnonHash] = js.native
+  val meta: js.UndefOr[Hash] = js.native
   val notFound: Boolean = js.native
 }
 
@@ -63,7 +63,7 @@ object FileDescriptor {
         ret
     }
     @scala.inline
-    def withMeta(value: AnonHash): Self = {
+    def withMeta(value: Hash): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
         ret

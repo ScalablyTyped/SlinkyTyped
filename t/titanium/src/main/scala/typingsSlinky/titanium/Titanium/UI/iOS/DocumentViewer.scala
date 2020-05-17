@@ -13,9 +13,8 @@ import scala.scalajs.js.annotation._
 			 * A DocumentViewer provides in-app support for managing user interactions with files on the
 			 * local system.
 			 */
-@JSGlobal("Titanium.UI.iOS.DocumentViewer")
 @js.native
-class DocumentViewer () extends Proxy {
+trait DocumentViewer extends Proxy {
   /**
   				 * Name of the file (without the path).
   				 */

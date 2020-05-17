@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeMaterialKit.mod
 
-import typingsSlinky.reactNativeMaterialKit.AnonColor
+import typingsSlinky.reactNativeMaterialKit.anon.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TextFieldStyle extends js.Object {
   var highlightColor: js.UndefOr[String] = js.native
-  var textInputStyle: js.UndefOr[AnonColor] = js.native
+  var textInputStyle: js.UndefOr[Color] = js.native
   var tintColor: js.UndefOr[String] = js.native
 }
 
@@ -37,7 +37,7 @@ object TextFieldStyle {
         ret
     }
     @scala.inline
-    def withTextInputStyle(value: AnonColor): Self = {
+    def withTextInputStyle(value: Color): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("textInputStyle")(value.asInstanceOf[js.Any])
         ret

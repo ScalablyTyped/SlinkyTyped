@@ -1,7 +1,7 @@
 package typingsSlinky.nise.mod
 
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Document
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +31,7 @@ trait FakeXMLHttpRequest extends js.Object {
   /**
     * When using respond, this property is populated with a parsed document if response headers indicate as much (see the spec)
     */
-  var responseXML: Document_ = js.native
+  var responseXML: Document = js.native
   /**
     * The request’s status code.
     * undefined if the request has not been handled (see respond below)
@@ -65,13 +65,13 @@ trait FakeXMLHttpRequest extends js.Object {
     * @param header
     */
   def getResponseHeader(header: String): String = js.native
-  def onabort(e: Event_): Unit = js.native
-  def onerror(e: Event_): Unit = js.native
-  def onload(e: Event_): Unit = js.native
-  def onloadend(e: Event_): Unit = js.native
-  def onloadstart(e: Event_): Unit = js.native
-  def onprogress(e: Event_): Unit = js.native
-  def ontimeout(e: Event_): Unit = js.native
+  def onabort(e: Event): Unit = js.native
+  def onerror(e: Event): Unit = js.native
+  def onload(e: Event): Unit = js.native
+  def onloadend(e: Event): Unit = js.native
+  def onloadstart(e: Event): Unit = js.native
+  def onprogress(e: Event): Unit = js.native
+  def ontimeout(e: Event): Unit = js.native
   /**
     * Calls the above three methods.
     */

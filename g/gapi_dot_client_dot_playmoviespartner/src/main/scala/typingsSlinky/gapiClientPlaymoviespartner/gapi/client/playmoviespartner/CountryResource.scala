@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientPlaymoviespartner.gapi.client.playmoviespartner
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientPlaymoviespartner.AnonCallback
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientPlaymoviespartner.anon.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +14,12 @@ trait CountryResource extends js.Object {
     * See _Authentication and Authorization rules_ and
     * _Get methods rules_ for more information about this method.
     */
-  def get(request: AnonCallback): Request_[StoreInfo] = js.native
+  def get(request: Callback): Request[StoreInfo] = js.native
 }
 
 object CountryResource {
   @scala.inline
-  def apply(get: AnonCallback => Request_[StoreInfo]): CountryResource = {
+  def apply(get: Callback => Request[StoreInfo]): CountryResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get))
     __obj.asInstanceOf[CountryResource]
   }
@@ -30,7 +30,7 @@ object CountryResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonCallback => Request_[StoreInfo]): Self = {
+    def withGet(value: Callback => Request[StoreInfo]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret

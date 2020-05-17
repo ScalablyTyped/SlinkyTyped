@@ -1,7 +1,7 @@
 package typingsSlinky.jupyterlabServices.contentsMod.Contents
 
 import typingsSlinky.jupyterlabObservables.modeldbMod.ModelDB.IFactory
-import typingsSlinky.jupyterlabServices.PartialIModel
+import typingsSlinky.jupyterlabServices.anon.PartialIModel
 import typingsSlinky.jupyterlabServices.serverconnectionMod.ServerConnection.ISettings
 import typingsSlinky.phosphorDisposable.mod.IDisposable
 import typingsSlinky.phosphorSignaling.mod.ISignal

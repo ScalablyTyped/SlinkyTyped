@@ -7,18 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for client events that relate to closing a custom dialog.
   */
-@JSGlobal("ASPxClientHtmlEditorCustomDialogCloseEventArgsBase")
 @js.native
-class ASPxClientHtmlEditorCustomDialogCloseEventArgsBase protected () extends ASPxClientHtmlEditorCustomDialogEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientHtmlEditorCustomDialogCloseEventArgsBase class with the specified settings.
-    * @param name A string value that specifies the custom dialog's name. This value is assigned to the ASPxClientHtmlEditorCustomDialogEventArgs.name property.
-    * @param status An object that specifies a status that is returned to the parent control when the custom dialog is closed. This value is assigned to the ASPxClientHtmlEditorCustomDialogCloseEventArgsBase.status property.
-    */
-  def this(name: String, status: js.Any) = this()
+trait ASPxClientHtmlEditorCustomDialogCloseEventArgsBase extends ASPxClientHtmlEditorCustomDialogEventArgs {
   /**
     * Gets the status of the closed custom dialog.
     */
   var status: js.Any = js.native
+}
+
+object ASPxClientHtmlEditorCustomDialogCloseEventArgsBase {
+  @scala.inline
+  def apply(name: String, status: js.Any): ASPxClientHtmlEditorCustomDialogCloseEventArgsBase = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientHtmlEditorCustomDialogCloseEventArgsBase]
+  }
+  @scala.inline
+  implicit class ASPxClientHtmlEditorCustomDialogCloseEventArgsBaseOps[Self <: ASPxClientHtmlEditorCustomDialogCloseEventArgsBase] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withStatus(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

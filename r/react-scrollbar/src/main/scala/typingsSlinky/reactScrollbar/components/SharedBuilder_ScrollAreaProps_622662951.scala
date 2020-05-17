@@ -3,7 +3,7 @@ package typingsSlinky.reactScrollbar.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactScrollbar.AnonContainerHeight
+import typingsSlinky.reactScrollbar.anon.ContainerHeight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +31,7 @@ class SharedBuilder_ScrollAreaProps_622662951[R <: js.Object] (val args: js.Arra
   @scala.inline
   def minScrollSize(value: Double): this.type = set("minScrollSize", value.asInstanceOf[js.Any])
   @scala.inline
-  def onScroll(value: /* value */ AnonContainerHeight => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
+  def onScroll(value: /* value */ ContainerHeight => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
   @scala.inline
   def ownerDocument(value: js.Any): this.type = set("ownerDocument", value.asInstanceOf[js.Any])
   @scala.inline

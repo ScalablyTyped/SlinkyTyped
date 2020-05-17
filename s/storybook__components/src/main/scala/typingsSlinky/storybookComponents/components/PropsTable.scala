@@ -11,19 +11,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PropsTable {
-  object PropsTableErrorProps {
-    @JSImport("@storybook/components", "PropsTable")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: typingsSlinky.storybookComponents.propsTableMod.PropsTableErrorProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-    @scala.inline
-    def apply(error: PropsTableError): Default[tag.type, js.Object] = {
-        val __props = js.Dynamic.literal(error = error.asInstanceOf[js.Any])
-        new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[typingsSlinky.storybookComponents.propsTableMod.PropsTableErrorProps]))
-    }
-  }
-  
   object PropsTableRowsProps {
     @JSImport("@storybook/components", "PropsTable")
     @js.native
@@ -52,6 +39,19 @@ object PropsTable {
     
     def withProps(p: typingsSlinky.storybookComponents.propsTableMod.PropsTableSectionsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     implicit def make(companion: PropsTableSectionsProps.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object PropsTableErrorProps {
+    @JSImport("@storybook/components", "PropsTable")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: typingsSlinky.storybookComponents.propsTableMod.PropsTableErrorProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+    @scala.inline
+    def apply(error: PropsTableError): Default[tag.type, js.Object] = {
+        val __props = js.Dynamic.literal(error = error.asInstanceOf[js.Any])
+        new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[typingsSlinky.storybookComponents.propsTableMod.PropsTableErrorProps]))
+    }
   }
   
 }

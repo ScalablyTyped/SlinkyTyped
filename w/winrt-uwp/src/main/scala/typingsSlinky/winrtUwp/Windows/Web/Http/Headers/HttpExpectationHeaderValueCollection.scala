@@ -1,18 +1,17 @@
 package typingsSlinky.winrtUwp.Windows.Web.Http.Headers
 
 import typingsSlinky.std.Array
-import typingsSlinky.winrtUwp.AnonIndex
-import typingsSlinky.winrtUwp.AnonItemsHttpExpectationHeaderValue
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
+import typingsSlinky.winrtUwp.anon.Index
+import typingsSlinky.winrtUwp.anon.ItemsHttpExpectationHeaderValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the value of the Expect HTTP header on an HTTP request. */
-@JSGlobal("Windows.Web.Http.Headers.HttpExpectationHeaderValueCollection")
 @js.native
-abstract class HttpExpectationHeaderValueCollection () extends Array[HttpExpectationHeaderValue] {
+trait HttpExpectationHeaderValueCollection extends Array[HttpExpectationHeaderValue] {
   /** Gets the number of HttpExpectationHeaderValue objects in the collection. */
   var size: Double = js.native
   /**
@@ -37,19 +36,19 @@ abstract class HttpExpectationHeaderValueCollection () extends Array[HttpExpecta
     * Retrieves the HttpExpectationHeaderValue items that start at the specified index in the collection.
     * @param startIndex The zero-based index of the start of the HttpExpectationHeaderValue items in the HttpExpectationHeaderValueCollection .
     */
-  def getMany(startIndex: Double): AnonItemsHttpExpectationHeaderValue = js.native
+  def getMany(startIndex: Double): ItemsHttpExpectationHeaderValue = js.native
   /**
     * Returns an immutable view of the HttpExpectationHeaderValueCollection .
     * @return The view of the HttpExpectationHeaderValueCollection .
     */
   def getView(): IVectorView[HttpExpectationHeaderValue] = js.native
-  def indexOf(value: HttpExpectationHeaderValue, extra: js.Any*): AnonIndex = js.native
+  def indexOf(value: HttpExpectationHeaderValue, extra: js.Any*): Index = js.native
   /**
     * Retrieves the index of an HttpExpectationHeaderValue in the collection.
     * @param value The HttpExpectationHeaderValue to find in the HttpExpectationHeaderValueCollection .
     */
   @JSName("indexOf")
-  def indexOf_AnonIndex(value: HttpExpectationHeaderValue): AnonIndex = js.native
+  def indexOf_Index(value: HttpExpectationHeaderValue): Index = js.native
   /**
     * Inserts an HttpExpectationHeaderValue into the collection at the specified index.
     * @param index The zero-based index at which value should be inserted.

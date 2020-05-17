@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.reactRange.anon.Bottom
 import typingsSlinky.reactRange.rangeMod.default
 import typingsSlinky.reactRange.typesMod.Direction
 import typingsSlinky.reactRange.typesMod.ITrackBackground
@@ -18,8 +19,8 @@ object utilsMod extends js.Object {
   def assertUnreachable(x: scala.Nothing): scala.Nothing = js.native
   def checkBoundaries(value: Double, min: Double, max: Double): Unit = js.native
   def checkInitialOverlap(values: js.Array[Double]): Unit = js.native
-  def getMargin(element: Element): AnonBottom = js.native
-  def getPaddingAndBorder(element: Element): AnonBottom = js.native
+  def getMargin(element: Element): Bottom = js.native
+  def getPaddingAndBorder(element: Element): Bottom = js.native
   def getStepDecimals(step: Double): Double = js.native
   def getTrackBackground(hasValuesColorsMinMaxDirectionRtl: ITrackBackground): String = js.native
   def isStepDivisible(min: Double, max: Double, step: Double): Boolean = js.native

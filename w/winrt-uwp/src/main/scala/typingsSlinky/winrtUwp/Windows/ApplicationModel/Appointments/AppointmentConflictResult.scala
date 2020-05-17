@@ -5,12 +5,40 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a conflict between appointments. */
-@JSGlobal("Windows.ApplicationModel.Appointments.AppointmentConflictResult")
 @js.native
-abstract class AppointmentConflictResult () extends js.Object {
+trait AppointmentConflictResult extends js.Object {
   /** Gets the date of the appointment conflict. */
   var date: js.Date = js.native
   /** Gets a value indicating the type of appointment conflict. */
   var `type`: AppointmentConflictType = js.native
+}
+
+object AppointmentConflictResult {
+  @scala.inline
+  def apply(date: js.Date, `type`: AppointmentConflictType): AppointmentConflictResult = {
+    val __obj = js.Dynamic.literal(date = date.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AppointmentConflictResult]
+  }
+  @scala.inline
+  implicit class AppointmentConflictResultOps[Self <: AppointmentConflictResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("date")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: AppointmentConflictType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

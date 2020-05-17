@@ -1,8 +1,8 @@
 package typingsSlinky.openlayers.mod.format
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Node
 import typingsSlinky.openlayers.mod.GlobalObject
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +30,7 @@ class WMTSCapabilities () extends XML {
     * @return An object representing the WMTS capabilities.
     * @api
     */
-  def read(source: Document_): GlobalObject = js.native
+  def read(source: Document): GlobalObject = js.native
   def read(source: Node): GlobalObject = js.native
 }
 

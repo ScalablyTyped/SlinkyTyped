@@ -1,7 +1,7 @@
 package typingsSlinky.jasmineJquery.jasmine
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,14 +11,14 @@ trait JasmineJQuery extends js.Object {
   var events: JasmineJQueryEvents = js.native
   var matchersClass: js.Any = js.native
   def browserTagCaseIndependentHtml(html: String): String = js.native
-  def elementToString(element: JQuery_[HTMLElement]): String = js.native
+  def elementToString(element: JQuery[HTMLElement]): String = js.native
 }
 
 object JasmineJQuery {
   @scala.inline
   def apply(
     browserTagCaseIndependentHtml: String => String,
-    elementToString: JQuery_[HTMLElement] => String,
+    elementToString: JQuery[HTMLElement] => String,
     events: JasmineJQueryEvents,
     matchersClass: js.Any
   ): JasmineJQuery = {
@@ -38,7 +38,7 @@ object JasmineJQuery {
         ret
     }
     @scala.inline
-    def withElementToString(value: JQuery_[HTMLElement] => String): Self = {
+    def withElementToString(value: JQuery[HTMLElement] => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("elementToString")(js.Any.fromFunction1(value))
         ret

@@ -1,0 +1,16 @@
+package typingsSlinky.mfiles.global.MFiles
+
+import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.IMFilesVersion
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("MFiles.MFilesVersion")
+@js.native
+class MFilesVersion () extends IMFilesVersion
+
+@JSGlobal("MFiles.MFilesVersion")
+@js.native
+object MFilesVersion extends Instantiable0[IMFilesVersion]
+

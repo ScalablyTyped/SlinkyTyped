@@ -1,6 +1,6 @@
 package typingsSlinky.googlemaps.google.maps
 
-import typingsSlinky.googlemaps.google.maps.places._LocationBias
+import typingsSlinky.googlemaps.google.maps.places.LocationBias
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,26 +25,8 @@ import scala.scalajs.js.annotation._
   * Notice that you cannot modify the coordinates of a LatLng. If you want
   * to compute another point, you have to create a new one.
   */
-@JSGlobal("google.maps.LatLng")
 @js.native
-class LatLng protected () extends _LocationBias {
-  /**
-    * Creates a LatLng object representing a geographic point.
-    * @param literal Object literal.
-    * @param noWrap Set noWrap to true to enable values outside of this range.
-    */
-  def this(literal: LatLngLiteral) = this()
-  /**
-    * Creates a LatLng object representing a geographic point.
-    * Note the ordering of latitude and longitude.
-    * @param lat Latitude is specified in degrees within the range [-90, 90].
-    * @param lng Longitude is specified in degrees within the range [-180,
-    *     180].
-    * @param noWrap Set noWrap to true to enable values outside of this range.
-    */
-  def this(lat: Double, lng: Double) = this()
-  def this(literal: LatLngLiteral, noWrap: Boolean) = this()
-  def this(lat: Double, lng: Double, noWrap: Boolean) = this()
+trait LatLng extends LocationBias {
   /** Comparison function. */
   def equals(other: LatLng): Boolean = js.native
   /** Returns the latitude in degrees. */

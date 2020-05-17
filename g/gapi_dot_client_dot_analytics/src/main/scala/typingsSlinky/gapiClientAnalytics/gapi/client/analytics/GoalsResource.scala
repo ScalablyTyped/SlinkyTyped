@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientAnalytics.gapi.client.analytics
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAnalytics.AnonGoalId
-import typingsSlinky.gapiClientAnalytics.AnonProfileId
-import typingsSlinky.gapiClientAnalytics.AnonStartindex
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAnalytics.anon.GoalId
+import typingsSlinky.gapiClientAnalytics.anon.ProfileId
+import typingsSlinky.gapiClientAnalytics.anon.Startindex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,25 +11,25 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GoalsResource extends js.Object {
   /** Gets a goal to which the user has access. */
-  def get(request: AnonGoalId): Request_[Goal] = js.native
+  def get(request: GoalId): Request[Goal] = js.native
   /** Create a new goal. */
-  def insert(request: AnonProfileId): Request_[Goal] = js.native
+  def insert(request: ProfileId): Request[Goal] = js.native
   /** Lists goals to which the user has access. */
-  def list(request: AnonStartindex): Request_[Goals] = js.native
+  def list(request: Startindex): Request[Goals] = js.native
   /** Updates an existing goal. This method supports patch semantics. */
-  def patch(request: AnonGoalId): Request_[Goal] = js.native
+  def patch(request: GoalId): Request[Goal] = js.native
   /** Updates an existing goal. */
-  def update(request: AnonGoalId): Request_[Goal] = js.native
+  def update(request: GoalId): Request[Goal] = js.native
 }
 
 object GoalsResource {
   @scala.inline
   def apply(
-    get: AnonGoalId => Request_[Goal],
-    insert: AnonProfileId => Request_[Goal],
-    list: AnonStartindex => Request_[Goals],
-    patch: AnonGoalId => Request_[Goal],
-    update: AnonGoalId => Request_[Goal]
+    get: GoalId => Request[Goal],
+    insert: ProfileId => Request[Goal],
+    list: Startindex => Request[Goals],
+    patch: GoalId => Request[Goal],
+    update: GoalId => Request[Goal]
   ): GoalsResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[GoalsResource]
@@ -41,31 +41,31 @@ object GoalsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonGoalId => Request_[Goal]): Self = {
+    def withGet(value: GoalId => Request[Goal]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withInsert(value: AnonProfileId => Request_[Goal]): Self = {
+    def withInsert(value: ProfileId => Request[Goal]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonStartindex => Request_[Goals]): Self = {
+    def withList(value: Startindex => Request[Goals]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPatch(value: AnonGoalId => Request_[Goal]): Self = {
+    def withPatch(value: GoalId => Request[Goal]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonGoalId => Request_[Goal]): Self = {
+    def withUpdate(value: GoalId => Request[Goal]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

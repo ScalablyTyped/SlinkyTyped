@@ -1,6 +1,6 @@
 package typingsSlinky.jquerymobile
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ object PopupEvents {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPopupafterclose(value: (/* event */ Event_, /* ui */ js.Any) => Unit): Self = {
+    def withPopupafterclose(value: (/* event */ Event, /* ui */ js.Any) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("popupafterclose")(js.Any.fromFunction2(value))
         ret
@@ -37,7 +37,7 @@ object PopupEvents {
         ret
     }
     @scala.inline
-    def withPopupafteropen(value: (/* event */ Event_, /* ui */ js.Any) => Unit): Self = {
+    def withPopupafteropen(value: (/* event */ Event, /* ui */ js.Any) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("popupafteropen")(js.Any.fromFunction2(value))
         ret
@@ -49,7 +49,7 @@ object PopupEvents {
         ret
     }
     @scala.inline
-    def withPopupbeforeposition(value: (/* event */ Event_, /* ui */ js.Any) => Unit): Self = {
+    def withPopupbeforeposition(value: (/* event */ Event, /* ui */ js.Any) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("popupbeforeposition")(js.Any.fromFunction2(value))
         ret

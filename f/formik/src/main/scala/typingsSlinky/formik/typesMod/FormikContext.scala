@@ -1,5 +1,6 @@
 package typingsSlinky.formik.typesMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLFormElement
 import slinky.core.ReactComponentClass
@@ -14,7 +15,6 @@ import typingsSlinky.formik.formikStrings.submitCount
 import typingsSlinky.formik.formikStrings.touched
 import typingsSlinky.formik.formikStrings.values
 import typingsSlinky.react.mod.ChangeEvent
-import typingsSlinky.std.Event_
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -48,7 +48,7 @@ trait FormikContext[Values] extends js.Object {
   def handleChange[T](field: T): (js.Function1[/* e */ js.Any | ChangeEvent[_], Unit]) | Unit = js.native
   def handleReset(): Unit = js.native
   def handleSubmit(): Unit = js.native
-  def handleSubmit(e: SyntheticEvent[EventTarget with HTMLFormElement, Event_]): Unit = js.native
+  def handleSubmit(e: SyntheticEvent[EventTarget with HTMLFormElement, Event]): Unit = js.native
   def registerField(name: String, Comp: ReactComponentClass[_]): Unit = js.native
   def resetForm(): Unit = js.native
   def resetForm(nextValues: Values): Unit = js.native

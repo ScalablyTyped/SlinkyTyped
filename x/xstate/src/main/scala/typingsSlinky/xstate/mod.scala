@@ -3,6 +3,16 @@ package typingsSlinky.xstate
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Partial
 import typingsSlinky.xstate.actorMod.Actor
+import typingsSlinky.xstate.anon.Fn0
+import typingsSlinky.xstate.anon.Fn1
+import typingsSlinky.xstate.anon.FnCall
+import typingsSlinky.xstate.anon.FnCallActivity
+import typingsSlinky.xstate.anon.FnCallErrorDataOptions
+import typingsSlinky.xstate.anon.FnCallEventOptions
+import typingsSlinky.xstate.anon.FnCallExprLabel
+import typingsSlinky.xstate.anon.FnCallMachineOptions
+import typingsSlinky.xstate.anon.FnCallTargetOptions
+import typingsSlinky.xstate.anon.PartialInterpreterOptions
 import typingsSlinky.xstate.interpreterMod.SpawnOptions
 import typingsSlinky.xstate.matchMod.StatePatternTuple
 import typingsSlinky.xstate.matchMod.ValueFromStateGetter

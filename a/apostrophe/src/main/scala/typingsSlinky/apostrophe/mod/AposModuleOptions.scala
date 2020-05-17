@@ -1,7 +1,6 @@
 package typingsSlinky.apostrophe.mod
 
-import typingsSlinky.apostrophe.AnonFields
-import typingsSlinky.apostrophe.AnonProjection
+import typingsSlinky.apostrophe.anon.Projection
 import typingsSlinky.apostrophe.apostropheBooleans.`false`
 import typingsSlinky.apostrophe.apostropheStrings.user
 import scala.scalajs.js
@@ -12,11 +11,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AposModuleOptions[C] extends js.Object {
   var addFields: js.UndefOr[js.Array[Field]] = js.native
-  var arrangeFields: js.UndefOr[js.Array[AnonFields]] = js.native
+  var arrangeFields: js.UndefOr[js.Array[typingsSlinky.apostrophe.anon.Fields]] = js.native
   var beforeConstruct: js.UndefOr[js.Function2[/* self */ js.Any, /* options */ js.Any, _]] = js.native
   var defer: js.UndefOr[Boolean] = js.native
   var extend: AposCoreModules | C = js.native
-  var filters: js.UndefOr[AnonProjection] = js.native
+  var filters: js.UndefOr[Projection] = js.native
   var label: String = js.native
   var name: js.UndefOr[String] = js.native
   var playerData: js.UndefOr[`false` | js.Array[String]] = js.native
@@ -62,7 +61,7 @@ object AposModuleOptions {
         ret
     }
     @scala.inline
-    def withArrangeFields(value: js.Array[AnonFields]): Self[C] = {
+    def withArrangeFields(value: js.Array[typingsSlinky.apostrophe.anon.Fields]): Self[C] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("arrangeFields")(value.asInstanceOf[js.Any])
         ret
@@ -98,7 +97,7 @@ object AposModuleOptions {
         ret
     }
     @scala.inline
-    def withFilters(value: AnonProjection): Self[C] = {
+    def withFilters(value: Projection): Self[C] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filters")(value.asInstanceOf[js.Any])
         ret

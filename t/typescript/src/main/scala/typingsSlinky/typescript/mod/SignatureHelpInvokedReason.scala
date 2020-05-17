@@ -33,18 +33,6 @@ object SignatureHelpInvokedReason {
         ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
         ret
     }
-    @scala.inline
-    def withTriggerCharacter(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerCharacter")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutTriggerCharacter: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerCharacter")(js.undefined)
-        ret
-    }
   }
   
 }

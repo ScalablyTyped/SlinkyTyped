@@ -1,5 +1,6 @@
 package typingsSlinky.rmcTabs
 
+import typingsSlinky.rmcTabs.anon.TypeofDefaultTabBar
 import typingsSlinky.rmcTabs.defaultTabBarNativeMod.PropsType
 import scala.scalajs.js
 import scala.scalajs.js.`|`

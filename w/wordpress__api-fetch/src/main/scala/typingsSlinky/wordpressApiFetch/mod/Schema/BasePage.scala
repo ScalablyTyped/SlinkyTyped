@@ -1,24 +1,24 @@
 package typingsSlinky.wordpressApiFetch.mod.Schema
 
 import typingsSlinky.std.Record
-import typingsSlinky.wordpressApiFetch.AnonBlockversion
-import typingsSlinky.wordpressApiFetch.AnonDictk
-import typingsSlinky.wordpressApiFetch.AnonProtected
+import typingsSlinky.wordpressApiFetch.anon.Blockversion
+import typingsSlinky.wordpressApiFetch.anon.Dictk
+import typingsSlinky.wordpressApiFetch.anon.Protected
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Inlined parent std.Omit<@wordpress/api-fetch.@wordpress/api-fetch.Schema.BasePost<T>, 'categories' | 'format' | 'sticky' | 'tags'> */
 @js.native
-trait BasePage[T /* <: Context */] extends js.Object {
+trait BasePage[T /* <: Context */] extends Page[T] {
   var _embedded: js.UndefOr[Record[String, js.Array[_]]] = js.native
-  var _links: Record[String, js.Array[AnonDictk]] = js.native
+  var _links: Record[String, js.Array[Dictk]] = js.native
   var author: Double = js.native
   var comment_status: OpenOrClosed = js.native
-  var content: Contextual[T, AnonProtected, AnonBlockversion] = js.native
+  var content: Contextual[T, Protected, Blockversion] = js.native
   var date: String = js.native
   var date_gmt: String = js.native
-  var excerpt: Contextual[T, AnonProtected, js.Object] = js.native
+  var excerpt: Contextual[T, Protected, js.Object] = js.native
   var featured_media: Double = js.native
   var generated_slug: String = js.native
   var guid: Contextual[T, js.Object, js.Object] = js.native
@@ -42,13 +42,13 @@ trait BasePage[T /* <: Context */] extends js.Object {
 object BasePage {
   @scala.inline
   def apply[T](
-    _links: Record[String, js.Array[AnonDictk]],
+    _links: Record[String, js.Array[Dictk]],
     author: Double,
     comment_status: OpenOrClosed,
-    content: Contextual[T, AnonProtected, AnonBlockversion],
+    content: Contextual[T, Protected, Blockversion],
     date: String,
     date_gmt: String,
-    excerpt: Contextual[T, AnonProtected, js.Object],
+    excerpt: Contextual[T, Protected, js.Object],
     featured_media: Double,
     generated_slug: String,
     guid: Contextual[T, js.Object, js.Object],
@@ -79,7 +79,7 @@ object BasePage {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def with_links(value: Record[String, js.Array[AnonDictk]]): Self[T] = {
+    def with_links(value: Record[String, js.Array[Dictk]]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("_links")(value.asInstanceOf[js.Any])
         ret
@@ -97,7 +97,7 @@ object BasePage {
         ret
     }
     @scala.inline
-    def withContent(value: Contextual[T, AnonProtected, AnonBlockversion]): Self[T] = {
+    def withContent(value: Contextual[T, Protected, Blockversion]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
         ret
@@ -115,7 +115,7 @@ object BasePage {
         ret
     }
     @scala.inline
-    def withExcerpt(value: Contextual[T, AnonProtected, js.Object]): Self[T] = {
+    def withExcerpt(value: Contextual[T, Protected, js.Object]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("excerpt")(value.asInstanceOf[js.Any])
         ret

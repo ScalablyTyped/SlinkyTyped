@@ -1,6 +1,5 @@
 package typingsSlinky.inboxsdk.mod.ButterBar
 
-import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,19 +13,10 @@ trait SavingMessageDescriptor extends js.Object
 
 object SavingMessageDescriptor {
   @scala.inline
-  def SavingMessageDescriptorText(text: String): SavingMessageDescriptor = {
-    val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SavingMessageDescriptor]
-  }
+  implicit def apply(value: SavingMessageDescriptorHtml): SavingMessageDescriptor = value.asInstanceOf[SavingMessageDescriptor]
   @scala.inline
-  def SavingMessageDescriptorHtml(html: String): SavingMessageDescriptor = {
-    val __obj = js.Dynamic.literal(html = html.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SavingMessageDescriptor]
-  }
+  implicit def apply(value: SavingMessageDescriptorHtmlElement): SavingMessageDescriptor = value.asInstanceOf[SavingMessageDescriptor]
   @scala.inline
-  def SavingMessageDescriptorHtmlElement(el: HTMLElement): SavingMessageDescriptor = {
-    val __obj = js.Dynamic.literal(el = el.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SavingMessageDescriptor]
-  }
+  implicit def apply(value: SavingMessageDescriptorText): SavingMessageDescriptor = value.asInstanceOf[SavingMessageDescriptor]
 }
 

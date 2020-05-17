@@ -8,10 +8,9 @@ package object mod {
   type ART = typingsSlinky.reactNative.mod.ARTStatic
   type AccessibilityActionEvent = slinky.core.SyntheticEvent[
     typingsSlinky.reactNative.mod.NodeHandle, 
-    typingsSlinky.reactNative.ReadonlyactionNamestring
+    typingsSlinky.reactNative.anon.ReadonlyactionNamestring
   ]
   type AccessibilityChangeEvent = scala.Boolean
-  type AccessibilityEvent = typingsSlinky.reactNative.mod.AccessibilityChangeEvent | typingsSlinky.reactNative.mod.AccessibilityAnnoucementFinishedEvent
   type AccessibilityInfo = typingsSlinky.reactNative.mod.AccessibilityInfoStatic
   type AccessibilityProperties = typingsSlinky.reactNative.mod.AccessibilityProps
   type AccessibilityPropertiesAndroid = typingsSlinky.reactNative.mod.AccessibilityPropsAndroid
@@ -28,13 +27,6 @@ package object mod {
   type ButtonProperties = typingsSlinky.reactNative.mod.ButtonProps
   type CameraRoll = typingsSlinky.reactNative.mod.CameraRollStatic
   type Clipboard = typingsSlinky.reactNative.mod.ClipboardStatic
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.reactNative.reactNativeStrings.light
-    - typingsSlinky.reactNative.reactNativeStrings.dark
-    - scala.Null
-    - js.UndefOr[scala.Nothing]
-  */
-  type ColorSchemeName = js.UndefOr[typingsSlinky.reactNative.mod._ColorSchemeName | scala.Null]
   type ComponentProvider = js.Function0[slinky.core.ReactComponentClass[js.Any]]
   type Constructor[T] = org.scalablytyped.runtime.Instantiable1[/* args (repeated) */ js.Any, T]
   type DatePickerAndroid = typingsSlinky.reactNative.mod.DatePickerAndroidStatic
@@ -49,7 +41,6 @@ package object mod {
   type Easing = typingsSlinky.reactNative.mod.EasingStatic
   type EasingFunction = js.Function1[/* value */ scala.Double, scala.Double]
   type ErrorHandlerCallback = js.Function2[/* error */ js.Any, /* isFatal */ js.UndefOr[scala.Boolean], scala.Unit]
-  type Falsy = js.UndefOr[scala.Null | typingsSlinky.reactNative.reactNativeBooleans.`false`]
   type FlatListProperties[ItemT] = typingsSlinky.reactNative.mod.FlatListProps[ItemT]
   type GestureResponderEvent = slinky.core.SyntheticEvent[
     typingsSlinky.reactNative.mod.NodeHandle, 
@@ -68,7 +59,6 @@ package object mod {
   type ImagePropertiesIOS = typingsSlinky.reactNative.mod.ImagePropsIOS
   type ImagePropertiesSourceOptions = typingsSlinky.reactNative.mod.ImageSourcePropType
   type ImageRequireSource = scala.Double
-  type ImageSourcePropType = typingsSlinky.reactNative.mod.ImageURISource | js.Array[typingsSlinky.reactNative.mod.ImageURISource] | typingsSlinky.reactNative.mod.ImageRequireSource
   type ImageStore = typingsSlinky.reactNative.mod.ImageStoreStatic
   type InputAccessoryViewProperties = typingsSlinky.reactNative.mod.InputAccessoryViewProps
   /**
@@ -78,12 +68,6 @@ package object mod {
   type KeyboardAvoidingViewComponent = slinky.core.ReactComponentClass[typingsSlinky.reactNative.mod.KeyboardAvoidingViewProps]
   type KeyboardEventListener = js.Function1[/* event */ typingsSlinky.reactNative.mod.KeyboardEvent, scala.Unit]
   type KeyboardTypeAndroid = typingsSlinky.reactNative.reactNativeStrings.`visible-password`
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.reactNative.mod.KeyboardType
-    - typingsSlinky.reactNative.mod.KeyboardTypeAndroid
-    - typingsSlinky.reactNative.mod.KeyboardTypeIOS
-  */
-  type KeyboardTypeOptions = typingsSlinky.reactNative.mod._KeyboardTypeOptions | typingsSlinky.reactNative.mod.KeyboardTypeAndroid
   type LayoutAnimation = typingsSlinky.reactNative.mod.LayoutAnimationStatic
   type Linking = typingsSlinky.reactNative.mod.LinkingStatic
   type ListRenderItem[ItemT] = js.Function1[
@@ -192,7 +176,7 @@ package object mod {
   type RefreshControlPropertiesAndroid = typingsSlinky.reactNative.mod.RefreshControlPropsAndroid
   type RefreshControlPropertiesIOS = typingsSlinky.reactNative.mod.RefreshControlPropsIOS
   /** Keep a brand of 'T' so that calls to `StyleSheet.flatten` can take `RegisteredStyle<T>` and return `T`. */
-  type RegisteredStyle[T] = scala.Double with typingsSlinky.reactNative.AnonRegisteredStyleBrand[T]
+  type RegisteredStyle[T] = scala.Double with typingsSlinky.reactNative.anon.RegisteredStyleBrand[T]
   type Runnable = js.Function1[/* appParameters */ js.Any, scala.Unit]
   /**
     * Renders nested content and automatically applies paddings reflect the portion of the view
@@ -253,9 +237,6 @@ package object mod {
   type StatusBarProperties = typingsSlinky.reactNative.mod.StatusBarProps
   type StatusBarPropertiesAndroid = typingsSlinky.reactNative.mod.StatusBarPropsAndroid
   type StatusBarPropertiesIOS = typingsSlinky.reactNative.mod.StatusBarPropsIOS
-  type StyleProp[T] = T | typingsSlinky.reactNative.mod.RegisteredStyle[T] | (typingsSlinky.reactNative.mod.RecursiveArray[
-    T | typingsSlinky.reactNative.mod.RegisteredStyle[T] | typingsSlinky.reactNative.mod.Falsy
-  ]) | typingsSlinky.reactNative.mod.Falsy
   /**
     * Renders a boolean input.
     *

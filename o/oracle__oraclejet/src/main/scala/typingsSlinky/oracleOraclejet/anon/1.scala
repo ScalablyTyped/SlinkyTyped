@@ -1,0 +1,40 @@
+package typingsSlinky.oracleOraclejet.anon
+
+import org.scalajs.dom.raw.HTMLElement
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait `1` extends js.Object {
+  var insert: HTMLElement | String = js.native
+}
+
+object `1` {
+  @scala.inline
+  def apply(insert: HTMLElement | String): `1` = {
+    val __obj = js.Dynamic.literal(insert = insert.asInstanceOf[js.Any])
+    __obj.asInstanceOf[`1`]
+  }
+  @scala.inline
+  implicit class `1Ops`[Self <: `1`] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInsertHTMLElement(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInsert(value: HTMLElement | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

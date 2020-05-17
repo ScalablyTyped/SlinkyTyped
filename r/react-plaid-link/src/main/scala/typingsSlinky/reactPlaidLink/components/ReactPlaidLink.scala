@@ -3,11 +3,11 @@ package typingsSlinky.reactPlaidLink.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactPlaidLink.AnonAccounts
-import typingsSlinky.reactPlaidLink.AnonDisplaymessage
-import typingsSlinky.reactPlaidLink.AnonEmailAddress
-import typingsSlinky.reactPlaidLink.AnonErrorcode
-import typingsSlinky.reactPlaidLink.AnonInstitution
+import typingsSlinky.reactPlaidLink.anon.Accounts
+import typingsSlinky.reactPlaidLink.anon.Displaymessage
+import typingsSlinky.reactPlaidLink.anon.EmailAddress
+import typingsSlinky.reactPlaidLink.anon.Errorcode
+import typingsSlinky.reactPlaidLink.anon.Institution
 import typingsSlinky.reactPlaidLink.mod.PlaidLinkProps
 import typingsSlinky.reactPlaidLink.mod.default
 import typingsSlinky.reactPlaidLink.reactPlaidLinkStrings.ERROR
@@ -55,10 +55,10 @@ object ReactPlaidLink {
     def institution(value: String): this.type = set("institution", value.asInstanceOf[js.Any])
     @scala.inline
     def onEvent(
-      value: (/* eventName */ ERROR | EXIT | HANDOFF | OPEN | OPEN_MY_PLAID | SEARCH_INSTITUTION | SELECT_INSTITUTION | SUBMIT_CREDENTIALS | SUBMIT_MFA | TRANSITION_VIEW, /* metadata */ AnonErrorcode) => Unit
+      value: (/* eventName */ ERROR | EXIT | HANDOFF | OPEN | OPEN_MY_PLAID | SEARCH_INSTITUTION | SELECT_INSTITUTION | SUBMIT_CREDENTIALS | SUBMIT_MFA | TRANSITION_VIEW, /* metadata */ Errorcode) => Unit
     ): this.type = set("onEvent", js.Any.fromFunction2(value))
     @scala.inline
-    def onExit(value: (/* error */ AnonDisplaymessage | Null, /* metadata */ AnonInstitution) => Unit): this.type = set("onExit", js.Any.fromFunction2(value))
+    def onExit(value: (/* error */ Displaymessage | Null, /* metadata */ Institution) => Unit): this.type = set("onExit", js.Any.fromFunction2(value))
     @scala.inline
     def onLoad(value: () => Unit): this.type = set("onLoad", js.Any.fromFunction0(value))
     @scala.inline
@@ -68,7 +68,7 @@ object ReactPlaidLink {
     @scala.inline
     def token(value: String): this.type = set("token", value.asInstanceOf[js.Any])
     @scala.inline
-    def user(value: AnonEmailAddress): this.type = set("user", value.asInstanceOf[js.Any])
+    def user(value: EmailAddress): this.type = set("user", value.asInstanceOf[js.Any])
     @scala.inline
     def webhook(value: String): this.type = set("webhook", value.asInstanceOf[js.Any])
   }
@@ -78,7 +78,7 @@ object ReactPlaidLink {
   def apply(
     clientName: String,
     env: tartan | sandbox | development | production,
-    onSuccess: (String, AnonAccounts) => Unit,
+    onSuccess: (String, Accounts) => Unit,
     product: js.Array[
       connect | info | auth | identity | income | transactions | assets | liabilities | investments | payment_initiation
     ],

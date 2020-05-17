@@ -1,0 +1,13 @@
+package typingsSlinky.sharepoint.global.SP.JsGrid.EventArgs
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("SP.JsGrid.EventArgs.OnRowEscape")
+@js.native
+class OnRowEscape protected ()
+  extends typingsSlinky.sharepoint.SP.JsGrid.EventArgs.OnRowEscape {
+  def this(recordKey: Double) = this()
+}
+

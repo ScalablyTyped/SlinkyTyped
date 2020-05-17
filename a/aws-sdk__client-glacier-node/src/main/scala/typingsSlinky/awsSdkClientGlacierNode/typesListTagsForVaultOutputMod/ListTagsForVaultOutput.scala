@@ -1,14 +1,14 @@
 package typingsSlinky.awsSdkClientGlacierNode.typesListTagsForVaultOutputMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.awsSdkClientGlacierNode.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientGlacierNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ListTagsForVaultOutput extends _OutputTypesUnion {
+trait ListTagsForVaultOutput extends OutputTypesUnion {
   /**
     * Metadata about the response received, including the HTTP status code, HTTP headers, and any request identifiers recognized by the SDK.
     */

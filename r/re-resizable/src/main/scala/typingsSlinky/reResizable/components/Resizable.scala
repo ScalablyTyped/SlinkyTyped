@@ -8,7 +8,7 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reResizable.AnonX
+import typingsSlinky.reResizable.anon.X
 import typingsSlinky.reResizable.mod.Enable
 import typingsSlinky.reResizable.mod.HandleClassName
 import typingsSlinky.reResizable.mod.HandleComponent
@@ -88,7 +88,7 @@ object Resizable {
     @scala.inline
     def size(value: Size): this.type = set("size", value.asInstanceOf[js.Any])
     @scala.inline
-    def snap(value: AnonX): this.type = set("snap", value.asInstanceOf[js.Any])
+    def snap(value: X): this.type = set("snap", value.asInstanceOf[js.Any])
     @scala.inline
     def snapGap(value: Double): this.type = set("snapGap", value.asInstanceOf[js.Any])
     @scala.inline

@@ -7,15 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the popup control's cancellable client events, such as the ASPxClientPopupControlBase.Closing.
   */
-@JSGlobal("ASPxClientPopupWindowCancelEventArgs")
 @js.native
-class ASPxClientPopupWindowCancelEventArgs protected () extends ASPxClientCancelEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientPopupWindowCancelEventArgs class with the specified settings.
-    * @param window An ASPxClientPopupWindow object that is a popup window related to the generated event.
-    * @param closeReason One of the ASPxClientPopupControlCloseReason enumeration values that specifies the reason the popup window is about to close.
-    */
-  def this(window: ASPxClientPopupWindow, closeReason: ASPxClientPopupControlCloseReason) = this()
+trait ASPxClientPopupWindowCancelEventArgs extends ASPxClientCancelEventArgs {
   /**
     * Gets the value that identifies the reason the popup window is about to close.
     */
@@ -24,5 +17,33 @@ class ASPxClientPopupWindowCancelEventArgs protected () extends ASPxClientCancel
     * Gets the popup window object related to the event.
     */
   var window: ASPxClientPopupWindow = js.native
+}
+
+object ASPxClientPopupWindowCancelEventArgs {
+  @scala.inline
+  def apply(cancel: Boolean, closeReason: ASPxClientPopupControlCloseReason, window: ASPxClientPopupWindow): ASPxClientPopupWindowCancelEventArgs = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], closeReason = closeReason.asInstanceOf[js.Any], window = window.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientPopupWindowCancelEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientPopupWindowCancelEventArgsOps[Self <: ASPxClientPopupWindowCancelEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloseReason(value: ASPxClientPopupControlCloseReason): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeReason")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWindow(value: ASPxClientPopupWindow): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("window")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

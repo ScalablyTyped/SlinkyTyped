@@ -1,6 +1,8 @@
 package typingsSlinky.authmosphere
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.authmosphere.anon.Accesstoken
+import typingsSlinky.authmosphere.anon.Token
 import typingsSlinky.authmosphere.getTokenInfoMod.GetTokenInfo
 import typingsSlinky.authmosphere.loggerMod.Logger
 import typingsSlinky.authmosphere.mockOptionsMod.MockOptions
@@ -114,7 +116,7 @@ object mod extends js.Object {
     * @throws on parse error of options.url
     */
   def mockTokeninfoEndpoint(options: MockOptions): Scope = js.native
-  def mockTokeninfoEndpoint(options: MockOptions, tokens: js.Array[AnonAccesstoken]): Scope = js.native
+  def mockTokeninfoEndpoint(options: MockOptions, tokens: js.Array[Accesstoken]): Scope = js.native
   def mockTokeninfoEndpointWithErrorResponse(options: MockOptions, httpStatus: Double): Scope = js.native
   def mockTokeninfoEndpointWithErrorResponse(options: MockOptions, httpStatus: Double, responseBody: js.Object): Scope = js.native
   def safeLogger(): Logger = js.native

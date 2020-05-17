@@ -8,5 +8,5 @@ package object Radio {
   type RadioProps = (typingsSlinky.reactRadioGroup.mod.Omit[
     typingsSlinky.react.mod.InputHTMLAttributes[org.scalajs.dom.raw.HTMLInputElement], 
     typingsSlinky.reactRadioGroup.reactRadioGroupStrings.value | typingsSlinky.reactRadioGroup.reactRadioGroupStrings.name | typingsSlinky.reactRadioGroup.reactRadioGroupStrings.role | typingsSlinky.reactRadioGroup.reactRadioGroupStrings.`type` | typingsSlinky.reactRadioGroup.reactRadioGroupStrings.`aria-checked`
-  ]) with typingsSlinky.reactRadioGroup.AnonValue
+  ]) with typingsSlinky.reactRadioGroup.anon.Value
 }

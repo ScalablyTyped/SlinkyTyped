@@ -1,6 +1,6 @@
 package typingsSlinky.elasticElasticsearch.mod
 
-import typingsSlinky.elasticElasticsearch.AnonNone
+import typingsSlinky.elasticElasticsearch.anon.None
 import typingsSlinky.elasticElasticsearch.poolMod.ConnectionPoolOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,6 +17,6 @@ class ConnectionPool ()
 @JSImport("@elastic/elasticsearch", "ConnectionPool")
 @js.native
 object ConnectionPool extends js.Object {
-  var resurrectStrategies: AnonNone = js.native
+  var resurrectStrategies: None = js.native
 }
 

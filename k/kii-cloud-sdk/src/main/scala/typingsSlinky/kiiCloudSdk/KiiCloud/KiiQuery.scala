@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a KiiQuery object
   */
-@JSGlobal("KiiCloud.KiiQuery")
 @js.native
-class KiiQuery () extends js.Object {
+trait KiiQuery extends js.Object {
   /**
     * Get the limit of the current query
     *
@@ -41,17 +40,48 @@ class KiiQuery () extends js.Object {
   def sortByDesc(field: String): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("KiiCloud.KiiQuery")
-@js.native
-object KiiQuery extends js.Object {
-  /**
-    * Create a KiiQuery object based on a KiiClause
-    * <br><br>
-    * By passing null as the ‘clause’ parameter, all objects can be retrieved.
-    *
-    * @param clause The KiiClause to be executed with the query
-    */
-  def queryWithClause(clause: KiiClause): KiiQuery = js.native
+object KiiQuery {
+  @scala.inline
+  def apply(
+    getLimit: () => Double,
+    setLimit: Double => Unit,
+    sortByAsc: String => Unit,
+    sortByDesc: String => Unit
+  ): KiiQuery = {
+    val __obj = js.Dynamic.literal(getLimit = js.Any.fromFunction0(getLimit), setLimit = js.Any.fromFunction1(setLimit), sortByAsc = js.Any.fromFunction1(sortByAsc), sortByDesc = js.Any.fromFunction1(sortByDesc))
+    __obj.asInstanceOf[KiiQuery]
+  }
+  @scala.inline
+  implicit class KiiQueryOps[Self <: KiiQuery] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetLimit(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLimit")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetLimit(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setLimit")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSortByAsc(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortByAsc")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSortByDesc(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortByDesc")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

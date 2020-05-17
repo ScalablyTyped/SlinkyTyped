@@ -1,6 +1,6 @@
 package typingsSlinky.fabric.fabricImplMod
 
-import typingsSlinky.fabric.AnonBaseline
+import typingsSlinky.fabric.anon.Baseline
 import typingsSlinky.fabric.fabricStrings._empty
 import typingsSlinky.fabric.fabricStrings.italic
 import typingsSlinky.fabric.fabricStrings.normal
@@ -67,12 +67,12 @@ trait TextOptions extends IObjectOptions {
   	 * Subscript schema object (minimum overlap)
   	 * @type {Object}
   	 */
-  var subscript: js.UndefOr[AnonBaseline] = js.native
+  var subscript: js.UndefOr[Baseline] = js.native
   /**
   	 * Superscript schema object (minimum overlap)
   	 * @type {Object}
   	 */
-  var superscript: js.UndefOr[AnonBaseline] = js.native
+  var superscript: js.UndefOr[Baseline] = js.native
   var text: js.UndefOr[String] = js.native
   /**
   	 * Text alignment. Possible values: "left", "center", "right", "justify",
@@ -225,7 +225,7 @@ object TextOptions {
         ret
     }
     @scala.inline
-    def withSubscript(value: AnonBaseline): Self = {
+    def withSubscript(value: Baseline): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("subscript")(value.asInstanceOf[js.Any])
         ret
@@ -237,7 +237,7 @@ object TextOptions {
         ret
     }
     @scala.inline
-    def withSuperscript(value: AnonBaseline): Self = {
+    def withSuperscript(value: Baseline): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("superscript")(value.asInstanceOf[js.Any])
         ret

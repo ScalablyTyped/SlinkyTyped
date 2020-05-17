@@ -3,17 +3,17 @@ package typingsSlinky.oracleOraclejet.ojtableMod
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.Anon19
-import typingsSlinky.oracleOraclejet.AnonColumnIndexKey
-import typingsSlinky.oracleOraclejet.AnonColumnKey
-import typingsSlinky.oracleOraclejet.AnonDataIndex
-import typingsSlinky.oracleOraclejet.AnonDropReorder
-import typingsSlinky.oracleOraclejet.AnonField
-import typingsSlinky.oracleOraclejet.AnonFooterClassName
-import typingsSlinky.oracleOraclejet.AnonIndexSubId
-import typingsSlinky.oracleOraclejet.AnonLabelAccSelectionAffordanceBottom
-import typingsSlinky.oracleOraclejet.AnonMaxCount
-import typingsSlinky.oracleOraclejet.AnonRowHeader
+import typingsSlinky.oracleOraclejet.anon.ColumnIndexKey
+import typingsSlinky.oracleOraclejet.anon.ColumnKey
+import typingsSlinky.oracleOraclejet.anon.DataIndex
+import typingsSlinky.oracleOraclejet.anon.DropReorder
+import typingsSlinky.oracleOraclejet.anon.Field
+import typingsSlinky.oracleOraclejet.anon.FooterClassName
+import typingsSlinky.oracleOraclejet.anon.IndexSubId
+import typingsSlinky.oracleOraclejet.anon.LabelAccSelectionAffordanceBottom
+import typingsSlinky.oracleOraclejet.anon.MaxCount
+import typingsSlinky.oracleOraclejet.anon.RowHeader
+import typingsSlinky.oracleOraclejet.anon.`19`
 import typingsSlinky.oracleOraclejet.mod.baseComponent
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojtableMod.ojTable.ColumnSelectionEnd
@@ -80,14 +80,14 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ojTable_[K, D] extends baseComponent[ojTableSettableProperties[K, D]] {
-  var accessibility: AnonRowHeader = js.native
+  var accessibility: RowHeader = js.native
   var as: String = js.native
-  var columns: (js.Array[AnonField[K, D]]) | Null = js.native
-  var columnsDefault: AnonFooterClassName[K, D] = js.native
+  var columns: (js.Array[Field[K, D]]) | Null = js.native
+  var columnsDefault: FooterClassName[K, D] = js.native
   var currentRow: CurrentRow[K] | Null = js.native
   var data: (DataProvider[K, D]) | Null = js.native
   var display: list | grid = js.native
-  var dnd: AnonDropReorder[K, D] = js.native
+  var dnd: DropReorder[K, D] = js.native
   var editMode: none | rowEdit = js.native
   val firstSelectedRow: js.Object = js.native
   var horizontalGridVisible: auto | enabled | disabled = js.native
@@ -118,15 +118,15 @@ trait ojTable_[K, D] extends baseComponent[ojTableSettableProperties[K, D]] {
   var onVerticalGridVisibleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var rowRenderer: (js.Function1[/* context */ RowRendererContext[K, D], String | HTMLElement | Unit]) | Null = js.native
   var scrollPolicy: auto | loadMoreOnScroll = js.native
-  var scrollPolicyOptions: AnonMaxCount = js.native
-  var scrollPosition: AnonColumnKey = js.native
+  var scrollPolicyOptions: MaxCount = js.native
+  var scrollPosition: ColumnKey = js.native
   var selection: js.Array[
     (RowSelectionStart[K] with RowSelectionEnd[K]) | (ColumnSelectionStart[K] with ColumnSelectionEnd[K])
   ] = js.native
-  var selectionMode: Anon19 = js.native
+  var selectionMode: `19` = js.native
   var selectionRequired: Boolean = js.native
   @JSName("translations")
-  var translations_ojTable_ : AnonLabelAccSelectionAffordanceBottom = js.native
+  var translations_ojTable_ : LabelAccSelectionAffordanceBottom = js.native
   var verticalGridVisible: auto | enabled | disabled = js.native
   def addEventListener(`type`: displayChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
@@ -331,16 +331,16 @@ trait ojTable_[K, D] extends baseComponent[ojTableSettableProperties[K, D]] {
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _],
     useCapture: Boolean
   ): Unit = js.native
-  def getContextByNode(node: Element): AnonColumnIndexKey | AnonIndexSubId = js.native
-  def getDataForVisibleRow(rowIndex: Double): (AnonDataIndex[D, K]) | Null = js.native
+  def getContextByNode(node: Element): ColumnIndexKey | IndexSubId = js.native
+  def getDataForVisibleRow(rowIndex: Double): (DataIndex[D, K]) | Null = js.native
   @JSName("getProperty")
-  def getProperty_accessibility(property: accessibility): AnonRowHeader = js.native
+  def getProperty_accessibility(property: accessibility): RowHeader = js.native
   @JSName("getProperty")
   def getProperty_as(property: as): String = js.native
   @JSName("getProperty")
-  def getProperty_columns(property: columns): (js.Array[AnonField[K, D]]) | Null = js.native
+  def getProperty_columns(property: columns): (js.Array[Field[K, D]]) | Null = js.native
   @JSName("getProperty")
-  def getProperty_columnsDefault(property: columnsDefault): AnonFooterClassName[K, D] = js.native
+  def getProperty_columnsDefault(property: columnsDefault): FooterClassName[K, D] = js.native
   @JSName("getProperty")
   def getProperty_currentRow(property: currentRow): CurrentRow[K] | Null = js.native
   @JSName("getProperty")
@@ -348,7 +348,7 @@ trait ojTable_[K, D] extends baseComponent[ojTableSettableProperties[K, D]] {
   @JSName("getProperty")
   def getProperty_display(property: display): list | grid = js.native
   @JSName("getProperty")
-  def getProperty_dnd(property: dnd): AnonDropReorder[K, D] = js.native
+  def getProperty_dnd(property: dnd): DropReorder[K, D] = js.native
   @JSName("getProperty")
   def getProperty_editMode(property: editMode): none | rowEdit = js.native
   @JSName("getProperty")
@@ -360,15 +360,15 @@ trait ojTable_[K, D] extends baseComponent[ojTableSettableProperties[K, D]] {
   @JSName("getProperty")
   def getProperty_scrollPolicy(property: scrollPolicy): auto | loadMoreOnScroll = js.native
   @JSName("getProperty")
-  def getProperty_scrollPolicyOptions(property: scrollPolicyOptions): AnonMaxCount = js.native
+  def getProperty_scrollPolicyOptions(property: scrollPolicyOptions): MaxCount = js.native
   @JSName("getProperty")
-  def getProperty_scrollPosition(property: scrollPosition): AnonColumnKey = js.native
+  def getProperty_scrollPosition(property: scrollPosition): ColumnKey = js.native
   @JSName("getProperty")
   def getProperty_selection(property: selection): js.Array[
     (RowSelectionStart[K] with RowSelectionEnd[K]) | (ColumnSelectionStart[K] with ColumnSelectionEnd[K])
   ] = js.native
   @JSName("getProperty")
-  def getProperty_selectionMode(property: selectionMode): Anon19 = js.native
+  def getProperty_selectionMode(property: selectionMode): `19` = js.native
   @JSName("getProperty")
   def getProperty_selectionRequired(property: selectionRequired): Boolean = js.native
   @JSName("getProperty")
@@ -388,15 +388,15 @@ trait ojTable_[K, D] extends baseComponent[ojTableSettableProperties[K, D]] {
   def setProperty(property: verticalGridVisible, value: disabled): Unit = js.native
   def setProperty(property: verticalGridVisible, value: enabled): Unit = js.native
   @JSName("setProperty")
-  def setProperty_accessibility(property: accessibility, value: AnonRowHeader): Unit = js.native
+  def setProperty_accessibility(property: accessibility, value: RowHeader): Unit = js.native
   @JSName("setProperty")
   def setProperty_as(property: as, value: String): Unit = js.native
   @JSName("setProperty")
   def setProperty_columns(property: columns): Unit = js.native
   @JSName("setProperty")
-  def setProperty_columns(property: columns, value: js.Array[AnonField[K, D]]): Unit = js.native
+  def setProperty_columns(property: columns, value: js.Array[Field[K, D]]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_columnsDefault(property: columnsDefault, value: AnonFooterClassName[K, D]): Unit = js.native
+  def setProperty_columnsDefault(property: columnsDefault, value: FooterClassName[K, D]): Unit = js.native
   @JSName("setProperty")
   def setProperty_currentRow(property: currentRow): Unit = js.native
   @JSName("setProperty")
@@ -406,7 +406,7 @@ trait ojTable_[K, D] extends baseComponent[ojTableSettableProperties[K, D]] {
   @JSName("setProperty")
   def setProperty_data(property: data, value: DataProvider[K, D]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_dnd(property: dnd, value: AnonDropReorder[K, D]): Unit = js.native
+  def setProperty_dnd(property: dnd, value: DropReorder[K, D]): Unit = js.native
   @JSName("setProperty")
   def setProperty_firstSelectedRow(property: typingsSlinky.oracleOraclejet.oracleOraclejetStrings.firstSelectedRow, value: js.Object): Unit = js.native
   @JSName("setProperty")
@@ -417,9 +417,9 @@ trait ojTable_[K, D] extends baseComponent[ojTableSettableProperties[K, D]] {
     value: js.Function1[/* context */ RowRendererContext[K, D], String | HTMLElement | Unit]
   ): Unit = js.native
   @JSName("setProperty")
-  def setProperty_scrollPolicyOptions(property: scrollPolicyOptions, value: AnonMaxCount): Unit = js.native
+  def setProperty_scrollPolicyOptions(property: scrollPolicyOptions, value: MaxCount): Unit = js.native
   @JSName("setProperty")
-  def setProperty_scrollPosition(property: scrollPosition, value: AnonColumnKey): Unit = js.native
+  def setProperty_scrollPosition(property: scrollPosition, value: ColumnKey): Unit = js.native
   @JSName("setProperty")
   def setProperty_selection(
     property: selection,
@@ -428,10 +428,10 @@ trait ojTable_[K, D] extends baseComponent[ojTableSettableProperties[K, D]] {
     ]
   ): Unit = js.native
   @JSName("setProperty")
-  def setProperty_selectionMode(property: selectionMode, value: Anon19): Unit = js.native
+  def setProperty_selectionMode(property: selectionMode, value: `19`): Unit = js.native
   @JSName("setProperty")
   def setProperty_selectionRequired(property: selectionRequired, value: Boolean): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonLabelAccSelectionAffordanceBottom): Unit = js.native
+  def setProperty_translations(property: translations, value: LabelAccSelectionAffordanceBottom): Unit = js.native
 }
 

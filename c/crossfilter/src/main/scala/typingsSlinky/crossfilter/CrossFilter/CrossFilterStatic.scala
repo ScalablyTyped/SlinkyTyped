@@ -1,9 +1,9 @@
 package typingsSlinky.crossfilter.CrossFilter
 
-import typingsSlinky.crossfilter.AnonBy
-import typingsSlinky.crossfilter.AnonCall
-import typingsSlinky.crossfilter.AnonCallArrayLoHi
-import typingsSlinky.crossfilter.AnonCallBy
+import typingsSlinky.crossfilter.anon.By
+import typingsSlinky.crossfilter.anon.Call
+import typingsSlinky.crossfilter.anon.CallArrayLoHi
+import typingsSlinky.crossfilter.anon.CallBy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,15 +11,15 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CrossFilterStatic extends js.Object {
   @JSName("bisect")
-  var bisect_Original: AnonCall = js.native
+  var bisect_Original: Call = js.native
   @JSName("heap")
-  var heap_Original: AnonBy = js.native
+  var heap_Original: By = js.native
   @JSName("heapselect")
-  var heapselect_Original: AnonCallBy = js.native
+  var heapselect_Original: CallBy = js.native
   @JSName("insertionsort")
-  var insertionsort_Original: AnonCallArrayLoHi = js.native
+  var insertionsort_Original: CallArrayLoHi = js.native
   @JSName("quicksort")
-  var quicksort_Original: AnonCallArrayLoHi = js.native
+  var quicksort_Original: CallArrayLoHi = js.native
   var version: String = js.native
   def apply[T](data: js.Array[T]): typingsSlinky.crossfilter.CrossFilter.CrossFilter[T] = js.native
   def bisect[T](array: js.Array[T], value: T, lo: Double, hi: Double): Double = js.native

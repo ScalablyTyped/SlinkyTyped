@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.marqueeMod
 
-import typingsSlinky.antDesignReactNative.AnonFps
+import typingsSlinky.antDesignReactNative.anon.Fps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +15,6 @@ class default protected () extends Marquee {
 @JSImport("@ant-design/react-native/lib/notice-bar/Marquee", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonFps = js.native
+  var defaultProps: Fps = js.native
 }
 

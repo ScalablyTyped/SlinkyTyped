@@ -1,7 +1,7 @@
 package typingsSlinky.elementReady.mod
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait Options extends js.Object {
   		The element that's expected to contain a match.
   		@default document
   		*/
-  val target: js.UndefOr[Element | Document_] = js.native
+  val target: js.UndefOr[Element | Document] = js.native
   /**
   		Milliseconds to wait before stopping the search and resolving the promise to `undefined`.
   		@default Infinity
@@ -50,13 +50,19 @@ object Options {
         ret
     }
     @scala.inline
+    def withTargetDocument(value: Document): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
     def withTargetElement(value: Element): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withTarget(value: Element | Document_): Self = {
+    def withTarget(value: Element | Document): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
         ret

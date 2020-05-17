@@ -1,7 +1,7 @@
 package typingsSlinky.htmlToText.mod
 
-import typingsSlinky.htmlToText.AnonForceWrapOnLimit
-import typingsSlinky.htmlToText.AnonIsAttributeValue
+import typingsSlinky.htmlToText.anon.ForceWrapOnLimit
+import typingsSlinky.htmlToText.anon.IsAttributeValue
 import typingsSlinky.htmlToText.htmlToTextBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +22,7 @@ trait HtmlToTextOptions extends js.Object {
     * defines the text decoding options given to `he.decode`
     * For more information see the [he](https://github.com/mathiasbynens/he) module
     */
-  var decodeOptions: js.UndefOr[AnonIsAttributeValue] = js.native
+  var decodeOptions: js.UndefOr[IsAttributeValue] = js.native
   /**
     * Customize the formatting of individual element types.
     */
@@ -52,7 +52,7 @@ trait HtmlToTextOptions extends js.Object {
   /**
     * describes how to wrap long words
     */
-  var longWordSplit: js.UndefOr[AnonForceWrapOnLimit] = js.native
+  var longWordSplit: js.UndefOr[ForceWrapOnLimit] = js.native
   /**
     *  Dont print brackets around the link if true
     */
@@ -122,7 +122,7 @@ object HtmlToTextOptions {
         ret
     }
     @scala.inline
-    def withDecodeOptions(value: AnonIsAttributeValue): Self = {
+    def withDecodeOptions(value: IsAttributeValue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("decodeOptions")(value.asInstanceOf[js.Any])
         ret
@@ -194,7 +194,7 @@ object HtmlToTextOptions {
         ret
     }
     @scala.inline
-    def withLongWordSplit(value: AnonForceWrapOnLimit): Self = {
+    def withLongWordSplit(value: ForceWrapOnLimit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("longWordSplit")(value.asInstanceOf[js.Any])
         ret

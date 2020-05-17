@@ -1,6 +1,6 @@
 package typingsSlinky.storybookClientApi
 
-import typingsSlinky.storybookAddons.AnonCurrent
+import typingsSlinky.storybookAddons.anon.Current
 import typingsSlinky.storybookAddons.hooksMod.Decorator
 import typingsSlinky.storybookAddons.hooksMod.EventMap
 import typingsSlinky.storybookAddons.typesMod.StoryContext
@@ -39,7 +39,7 @@ object hooksMod extends js.Object {
     initialArg: I,
     init: js.Function1[/* initialArg */ I, S]
   ): js.Tuple2[S, js.Function1[/* action */ A, Unit]] = js.native
-  def useRef[T](initialValue: T): AnonCurrent[T] = js.native
+  def useRef[T](initialValue: T): Current[T] = js.native
   def useState[S](initialState: S): js.Tuple2[S, js.Function1[/* update */ (js.Function1[/* prevState */ S, S]) | S, Unit]] = js.native
   def useState[S](initialState: js.Function0[S]): js.Tuple2[S, js.Function1[/* update */ (js.Function1[/* prevState */ S, S]) | S, Unit]] = js.native
   def useStoryContext(): StoryContext = js.native

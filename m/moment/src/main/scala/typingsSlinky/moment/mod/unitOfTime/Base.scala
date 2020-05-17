@@ -33,7 +33,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.moment.momentStrings.milliseconds
   - typingsSlinky.moment.momentStrings.ms
 */
-trait Base extends _StartOf
+trait Base extends StartOf
 
 object Base {
   @scala.inline

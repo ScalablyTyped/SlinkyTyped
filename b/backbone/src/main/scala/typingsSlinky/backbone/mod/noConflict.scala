@@ -1,6 +1,6 @@
 package typingsSlinky.backbone.mod
 
-import typingsSlinky.backbone.Typeofbackbone
+import typingsSlinky.backbone.anon.Typeofbackbone
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

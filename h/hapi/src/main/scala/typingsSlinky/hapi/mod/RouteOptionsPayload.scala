@@ -1,6 +1,6 @@
 package typingsSlinky.hapi.mod
 
-import typingsSlinky.hapi.AnonOutput
+import typingsSlinky.hapi.anon.Output
 import typingsSlinky.hapi.hapiBooleans.`false`
 import typingsSlinky.hapi.hapiStrings.gunzip
 import typingsSlinky.hapi.mod.Lifecycle.FailAction
@@ -61,7 +61,7 @@ trait RouteOptionsPayload extends js.Object {
     * * * * payload - the processed part payload.
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-routeoptionspayloadmultipart)
     */
-  var multipart: js.UndefOr[`false` | AnonOutput] = js.native
+  var multipart: js.UndefOr[`false` | Output] = js.native
   /**
     * Default value: 'data'.
     * The processed payload format. The value must be one of:
@@ -189,7 +189,7 @@ object RouteOptionsPayload {
         ret
     }
     @scala.inline
-    def withMultipart(value: `false` | AnonOutput): Self = {
+    def withMultipart(value: `false` | Output): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("multipart")(value.asInstanceOf[js.Any])
         ret

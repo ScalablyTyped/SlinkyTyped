@@ -1,18 +1,18 @@
 package typingsSlinky.eggMultipart.mod
 
-import typingsSlinky.eggMultipart.AnonAutoFields
+import typingsSlinky.eggMultipart.anon.AutoFields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait EggAppConfig extends js.Object {
-  var multipart: AnonAutoFields = js.native
+  var multipart: AutoFields = js.native
 }
 
 object EggAppConfig {
   @scala.inline
-  def apply(multipart: AnonAutoFields): EggAppConfig = {
+  def apply(multipart: AutoFields): EggAppConfig = {
     val __obj = js.Dynamic.literal(multipart = multipart.asInstanceOf[js.Any])
     __obj.asInstanceOf[EggAppConfig]
   }
@@ -23,7 +23,7 @@ object EggAppConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMultipart(value: AnonAutoFields): Self = {
+    def withMultipart(value: AutoFields): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("multipart")(value.asInstanceOf[js.Any])
         ret

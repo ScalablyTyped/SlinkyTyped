@@ -1,13 +1,13 @@
 package typingsSlinky.reduxFirstRouter.mod
 
-import typingsSlinky.reduxFirstRouter.AnonNotFoundPath
+import typingsSlinky.reduxFirstRouter.anon.NotFoundPath
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ReceivedActionMeta extends js.Object {
-  var meta: AnonNotFoundPath = js.native
+  var meta: NotFoundPath = js.native
   var navKey: js.UndefOr[Nullable[String]] = js.native
   var payload: Payload = js.native
   var query: js.UndefOr[Query] = js.native
@@ -16,7 +16,7 @@ trait ReceivedActionMeta extends js.Object {
 
 object ReceivedActionMeta {
   @scala.inline
-  def apply(meta: AnonNotFoundPath, payload: Payload, `type`: String): ReceivedActionMeta = {
+  def apply(meta: NotFoundPath, payload: Payload, `type`: String): ReceivedActionMeta = {
     val __obj = js.Dynamic.literal(meta = meta.asInstanceOf[js.Any], payload = payload.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReceivedActionMeta]
@@ -28,7 +28,7 @@ object ReceivedActionMeta {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMeta(value: AnonNotFoundPath): Self = {
+    def withMeta(value: NotFoundPath): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
         ret

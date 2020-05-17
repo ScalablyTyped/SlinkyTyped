@@ -9,7 +9,7 @@ trait CSSObject
   extends CSSOthersObjectForCSSObject
      with CSSPropertiesWithMultiValues
      with CSSPseudosForCSSObject
-     with _CSSInterpolation
+     with CSSInterpolation
 
 object CSSObject {
   @scala.inline

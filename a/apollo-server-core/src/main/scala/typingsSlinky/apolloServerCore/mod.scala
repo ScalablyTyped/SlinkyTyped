@@ -1,15 +1,17 @@
 package typingsSlinky.apolloServerCore
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.apolloServerCore.anon.EditorcursorShape
+import typingsSlinky.apolloServerCore.anon.FnCall
 import typingsSlinky.apolloServerCore.graphqlOptionsMod.GraphQLServerOptions
 import typingsSlinky.apolloServerCore.playgroundMod.PlaygroundConfig
 import typingsSlinky.apolloServerCore.runHttpQueryMod.HttpQueryRequest
 import typingsSlinky.apolloServerCore.runHttpQueryMod.HttpQueryResponse
 import typingsSlinky.apolloServerCore.typesMod.Config
 import typingsSlinky.apolloServerEnv.mod.Request
-import typingsSlinky.apolloServerErrors.AnonDebug
-import typingsSlinky.apolloServerErrors.ErrorextensionsRecordstri
-import typingsSlinky.apolloServerErrors.ErrorextensionsRecordstriExtensions
+import typingsSlinky.apolloServerErrors.anon.Debug
+import typingsSlinky.apolloServerErrors.anon.ErrorextensionsRecordstri
+import typingsSlinky.apolloServerErrors.anon.ErrorextensionsRecordstriExtensions
 import typingsSlinky.apolloServerTypes.mod.ValueOrPromise
 import typingsSlinky.apollographqlGraphqlPlaygroundHtml.renderPlaygroundPageMod.RenderPageOptions
 import typingsSlinky.graphql.astMod.DocumentNode
@@ -91,7 +93,7 @@ object mod extends js.Object {
   def createPlaygroundOptions(): js.UndefOr[RenderPageOptions] = js.native
   def createPlaygroundOptions(playground: PlaygroundConfig): js.UndefOr[RenderPageOptions] = js.native
   def formatApolloErrors(errors: js.Array[js.Error]): js.Array[typingsSlinky.apolloServerErrors.mod.ApolloError] = js.native
-  def formatApolloErrors(errors: js.Array[js.Error], options: AnonDebug): js.Array[typingsSlinky.apolloServerErrors.mod.ApolloError] = js.native
+  def formatApolloErrors(errors: js.Array[js.Error], options: Debug): js.Array[typingsSlinky.apolloServerErrors.mod.ApolloError] = js.native
   def gql(template: String, substitutions: js.Any*): DocumentNode = js.native
   def gql(template: TemplateStringsArray, substitutions: js.Any*): DocumentNode = js.native
   def resolveGraphqlOptions(
@@ -104,7 +106,7 @@ object mod extends js.Object {
   def toApolloError(error: ErrorextensionsRecordstri, code: String): ErrorextensionsRecordstriExtensions = js.native
   @js.native
   object defaultPlaygroundOptions extends js.Object {
-    var settings: AnonEditorcursorShape = js.native
+    var settings: EditorcursorShape = js.native
     var version: String = js.native
   }
   

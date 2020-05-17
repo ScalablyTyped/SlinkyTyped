@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeMaterialUi.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNativeMaterialUi.AnonText
+import typingsSlinky.reactNativeMaterialUi.anon.Text
 import typingsSlinky.reactNativeMaterialUi.mod.ButtonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -35,7 +35,7 @@ object Button {
     @scala.inline
     def raised(value: Boolean): this.type = set("raised", value.asInstanceOf[js.Any])
     @scala.inline
-    def style(value: AnonText): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: Text): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
     @scala.inline

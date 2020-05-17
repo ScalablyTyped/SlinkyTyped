@@ -1,6 +1,6 @@
 package typingsSlinky.jsforce.connectionMod
 
-import typingsSlinky.jsforce.PartialPartialOAuth2Optio
+import typingsSlinky.jsforce.anon.PartialPartialOAuth2Optio
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

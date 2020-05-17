@@ -1,7 +1,7 @@
 package typingsSlinky.chartist.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.chartist.AnonAreaBase
+import typingsSlinky.chartist.anon.AreaBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait ILineChartOptions extends IChartOptions {
   var high: js.UndefOr[Double] = js.native
   var lineSmooth: js.UndefOr[js.Function | Boolean] = js.native
   var low: js.UndefOr[Double] = js.native
-  var series: js.UndefOr[StringDictionary[AnonAreaBase]] = js.native
+  var series: js.UndefOr[StringDictionary[AreaBase]] = js.native
   var showArea: js.UndefOr[Boolean] = js.native
   var showLine: js.UndefOr[Boolean] = js.native
   var showPoint: js.UndefOr[Boolean] = js.native
@@ -159,7 +159,7 @@ object ILineChartOptions {
         ret
     }
     @scala.inline
-    def withSeries(value: StringDictionary[AnonAreaBase]): Self = {
+    def withSeries(value: StringDictionary[AreaBase]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("series")(value.asInstanceOf[js.Any])
         ret

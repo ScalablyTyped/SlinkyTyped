@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.accounts
 
-import typingsSlinky.stripe.AnonAccountholdername
+import typingsSlinky.stripe.anon.Accountholdername
 import typingsSlinky.stripe.mod.IDataOptionsWithMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -30,7 +30,7 @@ trait IAccountUpdateOptions
     * existing default for this currency, use the bank account or card creation
     * API.
     */
-  var external_account: js.UndefOr[AnonAccountholdername] = js.native
+  var external_account: js.UndefOr[Accountholdername] = js.native
   /**
     * Information about the person represented by the account.
     * This field is null unless business_type is set to individual.
@@ -75,7 +75,7 @@ object IAccountUpdateOptions {
         ret
     }
     @scala.inline
-    def withExternal_account(value: AnonAccountholdername): Self = {
+    def withExternal_account(value: Accountholdername): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("external_account")(value.asInstanceOf[js.Any])
         ret

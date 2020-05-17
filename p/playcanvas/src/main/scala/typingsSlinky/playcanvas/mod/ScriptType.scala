@@ -1,6 +1,6 @@
 package typingsSlinky.playcanvas.mod
 
-import typingsSlinky.playcanvas.AnonApp
+import typingsSlinky.playcanvas.anon.App
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -48,7 +48,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class ScriptType protected ()
   extends typingsSlinky.playcanvas.pc.ScriptType {
-  def this(args: AnonApp) = this()
+  def this(args: App) = this()
 }
 
 /* static members */

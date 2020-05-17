@@ -1,11 +1,11 @@
 package typingsSlinky.oracleOraclejet.ojcolorpaletteMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonConverterHint
-import typingsSlinky.oracleOraclejet.AnonDefinition
-import typingsSlinky.oracleOraclejet.AnonInstruction
-import typingsSlinky.oracleOraclejet.AnonLabel
-import typingsSlinky.oracleOraclejet.AnonLabelNone
+import typingsSlinky.oracleOraclejet.anon.ConverterHint
+import typingsSlinky.oracleOraclejet.anon.Definition
+import typingsSlinky.oracleOraclejet.anon.Instruction
+import typingsSlinky.oracleOraclejet.anon.Label
+import typingsSlinky.oracleOraclejet.anon.LabelNone
 import typingsSlinky.oracleOraclejet.ojmessagingMod.^
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.auto
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.grid
@@ -28,17 +28,17 @@ trait ojColorPaletteSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
   var describedBy: js.UndefOr[String] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
-  var displayOptions: js.UndefOr[AnonConverterHint] = js.native
-  var help: js.UndefOr[AnonInstruction] = js.native
-  var helpHints: js.UndefOr[AnonDefinition] = js.native
+  var displayOptions: js.UndefOr[ConverterHint] = js.native
+  var help: js.UndefOr[Instruction] = js.native
+  var helpHints: js.UndefOr[Definition] = js.native
   var labelDisplay: js.UndefOr[auto | off] = js.native
   var labelHint: js.UndefOr[String] = js.native
   var labelledBy: js.UndefOr[String] = js.native
   var layout: js.UndefOr[grid | list] = js.native
   var messagesCustom: js.UndefOr[js.Array[^]] = js.native
-  var palette: js.UndefOr[js.Array[AnonLabel]] = js.native
+  var palette: js.UndefOr[js.Array[Label]] = js.native
   var swatchSize: js.UndefOr[xs | sm | lg] = js.native
-  var translations: js.UndefOr[AnonLabelNone] = js.native
+  var translations: js.UndefOr[LabelNone] = js.native
   var valid: js.UndefOr[
     typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valid | pending | invalidHidden | invalidShown
   ] = js.native
@@ -82,7 +82,7 @@ object ojColorPaletteSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withDisplayOptions(value: AnonConverterHint): Self = {
+    def withDisplayOptions(value: ConverterHint): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("displayOptions")(value.asInstanceOf[js.Any])
         ret
@@ -94,7 +94,7 @@ object ojColorPaletteSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withHelp(value: AnonInstruction): Self = {
+    def withHelp(value: Instruction): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
         ret
@@ -106,7 +106,7 @@ object ojColorPaletteSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withHelpHints(value: AnonDefinition): Self = {
+    def withHelpHints(value: Definition): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("helpHints")(value.asInstanceOf[js.Any])
         ret
@@ -178,7 +178,7 @@ object ojColorPaletteSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withPalette(value: js.Array[AnonLabel]): Self = {
+    def withPalette(value: js.Array[Label]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("palette")(value.asInstanceOf[js.Any])
         ret
@@ -202,7 +202,7 @@ object ojColorPaletteSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelNone): Self = {
+    def withTranslations(value: LabelNone): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

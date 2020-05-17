@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobileRn.buttonIndexNativeMod
 
-import typingsSlinky.antdMobileRn.AnonContainer
+import typingsSlinky.antdMobileRn.anon.Container
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.ghost
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.large
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.primary
@@ -20,7 +20,7 @@ trait ButtonProps extends TouchableHighlightProps {
   var loading: js.UndefOr[Boolean] = js.native
   var onClick: js.UndefOr[js.Function1[/* _ */ js.UndefOr[js.Any], Unit]] = js.native
   var size: js.UndefOr[large | small] = js.native
-  var styles: js.UndefOr[AnonContainer] = js.native
+  var styles: js.UndefOr[Container] = js.native
   var `type`: js.UndefOr[primary | warning | ghost] = js.native
 }
 
@@ -91,7 +91,7 @@ object ButtonProps {
         ret
     }
     @scala.inline
-    def withStyles(value: AnonContainer): Self = {
+    def withStyles(value: Container): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
         ret

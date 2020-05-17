@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.MouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactVega.AnonBottom
+import typingsSlinky.reactVega.anon.Bottom
 import typingsSlinky.reactVega.mod.VegaPropsWithSpec
 import typingsSlinky.reactVega.mod.default
 import typingsSlinky.std.Record
@@ -41,7 +41,7 @@ object ReactVega {
     @scala.inline
     def onParseError(value: /* error */ js.Error => Unit): this.type = set("onParseError", js.Any.fromFunction1(value))
     @scala.inline
-    def padding(value: Double | AnonBottom): this.type = set("padding", value.asInstanceOf[js.Any])
+    def padding(value: Double | Bottom): this.type = set("padding", value.asInstanceOf[js.Any])
     @scala.inline
     def renderer(value: String): this.type = set("renderer", value.asInstanceOf[js.Any])
     @scala.inline

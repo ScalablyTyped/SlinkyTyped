@@ -1,13 +1,13 @@
 package typingsSlinky.primereact.rowRadioButtonMod
 
-import typingsSlinky.primereact.AnonDataObject
+import typingsSlinky.primereact.anon.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait RowRadioButtonProps extends js.Object {
-  var onClick: js.UndefOr[js.Function1[/* e */ AnonDataObject, Unit]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* e */ DataObject, Unit]] = js.native
   var rowData: js.UndefOr[js.Object] = js.native
   var selected: js.UndefOr[Boolean] = js.native
 }
@@ -25,7 +25,7 @@ object RowRadioButtonProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnClick(value: /* e */ AnonDataObject => Unit): Self = {
+    def withOnClick(value: /* e */ DataObject => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret

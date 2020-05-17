@@ -1,12 +1,12 @@
 package typingsSlinky.highcharts.mod
 
-import typingsSlinky.std.Event_
+import typingsSlinky.std.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ChartSelectionContextObject extends Event_ {
+trait ChartSelectionContextObject extends Event {
   /**
     * Arrays containing the axes of each dimension and each axis' min and max
     * values.

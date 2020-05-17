@@ -171,6 +171,13 @@ import typingsSlinky.std.HTMLTableHeaderCellElement
 import typingsSlinky.std.HTMLTemplateElement
 import typingsSlinky.std.SVGFEDropShadowElement
 import typingsSlinky.std.SVGForeignObjectElement
+import typingsSlinky.storybookComponents.anon.PartialDetailedHTMLPropsF
+import typingsSlinky.storybookComponents.anon.PickDetailedHTMLPropsForm
+import typingsSlinky.storybookComponents.anon.PropsWithChildrenDetailed
+import typingsSlinky.storybookComponents.anon.StyledComponentPickPickHT
+import typingsSlinky.storybookComponents.anon.StyledComponentPickPickTe
+import typingsSlinky.storybookComponents.anon.StyledComponentPickSelect
+import typingsSlinky.storybookComponents.anon.WeakValidationMapDetailed
 import typingsSlinky.storybookComponents.fieldMod.FieldProps
 import typingsSlinky.storybookComponents.storybookComponentsStrings.`object`
 import typingsSlinky.storybookComponents.storybookComponentsStrings.`var`

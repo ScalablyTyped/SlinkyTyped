@@ -3,6 +3,7 @@ package typingsSlinky.arcgisJsApi.esri
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`private`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.english
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.metric
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.org_
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.org_admin
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.org_publisher
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.org_user
@@ -18,7 +19,7 @@ trait PortalUserProperties extends js.Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalUser.html#access)
     */
-  var access: js.UndefOr[`private` | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.org | public] = js.native
+  var access: js.UndefOr[`private` | org_ | public] = js.native
   /**
     * The date the user was created.
     *
@@ -124,7 +125,7 @@ object PortalUserProperties {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAccess(value: `private` | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.org | public): Self = {
+    def withAccess(value: `private` | org_ | public): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("access")(value.asInstanceOf[js.Any])
         ret

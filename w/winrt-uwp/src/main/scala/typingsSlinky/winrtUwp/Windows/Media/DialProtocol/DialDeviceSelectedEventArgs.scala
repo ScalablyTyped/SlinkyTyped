@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the event arguments for the DialDeviceSelected event on the DialDevicePicker object. */
-@JSGlobal("Windows.Media.DialProtocol.DialDeviceSelectedEventArgs")
 @js.native
-abstract class DialDeviceSelectedEventArgs () extends js.Object {
+trait DialDeviceSelectedEventArgs extends js.Object {
   /** Gets the DialDevice object that represents the remote device that has been selected by the user in a DialDevicePicker . */
   var selectedDialDevice: DialDevice = js.native
+}
+
+object DialDeviceSelectedEventArgs {
+  @scala.inline
+  def apply(selectedDialDevice: DialDevice): DialDeviceSelectedEventArgs = {
+    val __obj = js.Dynamic.literal(selectedDialDevice = selectedDialDevice.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DialDeviceSelectedEventArgs]
+  }
+  @scala.inline
+  implicit class DialDeviceSelectedEventArgsOps[Self <: DialDeviceSelectedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSelectedDialDevice(value: DialDevice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectedDialDevice")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

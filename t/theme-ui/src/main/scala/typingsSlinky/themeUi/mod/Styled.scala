@@ -34,7 +34,7 @@ import typingsSlinky.react.mod.WeakValidationMap
 import typingsSlinky.std.HTMLTableDataCellElement
 import typingsSlinky.std.HTMLTableHeaderCellElement
 import typingsSlinky.std.Partial
-import typingsSlinky.themeUi.AnonAs
+import typingsSlinky.themeUi.anon.As
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,13 +43,13 @@ import scala.scalajs.js.annotation._
 @js.native
 class Styled protected ()
   extends Component[
-      (/* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with AnonAs, 
+      (/* import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with As, 
       js.Object, 
       js.Any
     ] {
-  def this(props: (/* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with AnonAs) = this()
+  def this(props: (/* import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with As) = this()
   def this(
-    props: (/* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with AnonAs,
+    props: (/* import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with As,
     context: js.Any
   ) = this()
 }
@@ -58,130 +58,130 @@ class Styled protected ()
 @js.native
 object Styled
   extends Instantiable1[
-      /* props */ (/* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with AnonAs, 
+      /* props */ (/* import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with As, 
       ReactComponentClass[
-        (/* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with AnonAs
+        (/* import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with As
       ]
     ]
      with Instantiable2[
-      /* props */ (/* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with AnonAs, 
+      /* props */ (/* import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with As, 
       /* context */ js.Any, 
       ReactComponentClass[
-        (/* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with AnonAs
+        (/* import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with As
       ]
     ] {
   var a: ReactComponentClass[
-    (DetailedHTMLProps[AnchorHTMLAttributes[HTMLAnchorElement], HTMLAnchorElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[AnchorHTMLAttributes[HTMLAnchorElement], HTMLAnchorElement]) with SxProps with As
   ] = js.native
   var b: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]) with SxProps with As
   ] = js.native
   var blockquote: ReactComponentClass[
-    (DetailedHTMLProps[BlockquoteHTMLAttributes[HTMLElement], HTMLElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[BlockquoteHTMLAttributes[HTMLElement], HTMLElement]) with SxProps with As
   ] = js.native
   var childContextTypes: js.UndefOr[ValidationMap[_]] = js.native
   var code: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]) with SxProps with As
   ] = js.native
   var contextType: js.UndefOr[typingsSlinky.react.mod.Context[_]] = js.native
   var contextTypes: js.UndefOr[ValidationMap[_]] = js.native
   var defaultProps: js.UndefOr[
     Partial[
-      (/* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with AnonAs
+      (/* import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with As
     ]
   ] = js.native
   var delete: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) with SxProps with As
   ] = js.native
   var displayName: js.UndefOr[String] = js.native
   var div: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) with SxProps with As
   ] = js.native
   var em: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]) with SxProps with As
   ] = js.native
   var getDerivedStateFromError: js.UndefOr[
     GetDerivedStateFromError[
-      (/* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with AnonAs, 
+      (/* import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with As, 
       js.Object
     ]
   ] = js.native
   var getDerivedStateFromProps: js.UndefOr[
     GetDerivedStateFromProps[
-      (/* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with AnonAs, 
+      (/* import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with As, 
       js.Object
     ]
   ] = js.native
   var h1: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]) with SxProps with As
   ] = js.native
   var h2: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]) with SxProps with As
   ] = js.native
   var h3: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]) with SxProps with As
   ] = js.native
   var h4: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]) with SxProps with As
   ] = js.native
   var h5: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]) with SxProps with As
   ] = js.native
   var h6: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLHeadingElement], HTMLHeadingElement]) with SxProps with As
   ] = js.native
   var hr: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLHRElement], HTMLHRElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLHRElement], HTMLHRElement]) with SxProps with As
   ] = js.native
   var i: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]) with SxProps with As
   ] = js.native
   var img: ReactComponentClass[
-    (DetailedHTMLProps[ImgHTMLAttributes[HTMLImageElement], HTMLImageElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[ImgHTMLAttributes[HTMLImageElement], HTMLImageElement]) with SxProps with As
   ] = js.native
   var inlineCode: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) with SxProps with As
   ] = js.native
   var li: ReactComponentClass[
-    (DetailedHTMLProps[LiHTMLAttributes[HTMLLIElement], HTMLLIElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[LiHTMLAttributes[HTMLLIElement], HTMLLIElement]) with SxProps with As
   ] = js.native
   var ol: ReactComponentClass[
-    (DetailedHTMLProps[OlHTMLAttributes[HTMLOListElement], HTMLOListElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[OlHTMLAttributes[HTMLOListElement], HTMLOListElement]) with SxProps with As
   ] = js.native
   var p: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLParagraphElement], HTMLParagraphElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLParagraphElement], HTMLParagraphElement]) with SxProps with As
   ] = js.native
   var pre: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLPreElement], HTMLPreElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLPreElement], HTMLPreElement]) with SxProps with As
   ] = js.native
   var propTypes: js.UndefOr[
     WeakValidationMap[
-      (/* import warning: importer.ImportType#apply Failed type conversion: react.react._Global_.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with AnonAs
+      (/* import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements['div'] */ js.Any) with SxProps with As
     ]
   ] = js.native
   var root: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) with SxProps with As
   ] = js.native
   var strong: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]) with SxProps with As
   ] = js.native
   var table: ReactComponentClass[
-    (DetailedHTMLProps[TableHTMLAttributes[HTMLTableElement], HTMLTableElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[TableHTMLAttributes[HTMLTableElement], HTMLTableElement]) with SxProps with As
   ] = js.native
   var td: ReactComponentClass[
-    (DetailedHTMLProps[TdHTMLAttributes[HTMLTableDataCellElement], HTMLTableDataCellElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[TdHTMLAttributes[HTMLTableDataCellElement], HTMLTableDataCellElement]) with SxProps with As
   ] = js.native
   var th: ReactComponentClass[
-    (DetailedHTMLProps[ThHTMLAttributes[HTMLTableHeaderCellElement], HTMLTableHeaderCellElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[ThHTMLAttributes[HTMLTableHeaderCellElement], HTMLTableHeaderCellElement]) with SxProps with As
   ] = js.native
   var thematicBreak: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]) with SxProps with As
   ] = js.native
   var tr: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLTableRowElement], HTMLTableRowElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLTableRowElement], HTMLTableRowElement]) with SxProps with As
   ] = js.native
   var ul: ReactComponentClass[
-    (DetailedHTMLProps[HTMLAttributes[HTMLUListElement], HTMLUListElement]) with SxProps with AnonAs
+    (DetailedHTMLProps[HTMLAttributes[HTMLUListElement], HTMLUListElement]) with SxProps with As
   ] = js.native
 }
 

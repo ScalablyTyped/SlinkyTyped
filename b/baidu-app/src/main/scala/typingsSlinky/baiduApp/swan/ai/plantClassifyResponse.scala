@@ -1,6 +1,6 @@
 package typingsSlinky.baiduApp.swan.ai
 
-import typingsSlinky.baiduApp.AnonScore
+import typingsSlinky.baiduApp.anon.Score
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait plantClassifyResponse extends js.Object {
   var log_id: Double = js.native
    // 	唯一的log id，用于问题定位。
-  var result: js.Array[AnonScore] = js.native
+  var result: js.Array[Score] = js.native
 }
 
 object plantClassifyResponse {
   @scala.inline
-  def apply(log_id: Double, result: js.Array[AnonScore]): plantClassifyResponse = {
+  def apply(log_id: Double, result: js.Array[Score]): plantClassifyResponse = {
     val __obj = js.Dynamic.literal(log_id = log_id.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any])
     __obj.asInstanceOf[plantClassifyResponse]
   }
@@ -31,7 +31,7 @@ object plantClassifyResponse {
         ret
     }
     @scala.inline
-    def withResult(value: js.Array[AnonScore]): Self = {
+    def withResult(value: js.Array[Score]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
         ret

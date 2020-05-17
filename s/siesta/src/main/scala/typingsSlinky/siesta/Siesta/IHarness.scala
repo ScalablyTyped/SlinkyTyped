@@ -1,7 +1,7 @@
 package typingsSlinky.siesta.Siesta
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait IHarness extends js.Object {
   var isReadyTimeout: Double = js.native
   var keepNLastResults: Double = js.native
   var keepResults: Boolean = js.native
-  var listenters: StringDictionary[js.Function2[/* event */ Event_, /* repeated */ js.Any, Unit]] = js.native
+  var listenters: StringDictionary[js.Function2[/* event */ Event, /* repeated */ js.Any, Unit]] = js.native
   var maxThreads: Double = js.native
   var needDone: Boolean = js.native
   var overrideSetTimeout: Boolean = js.native
@@ -49,7 +49,7 @@ object IHarness {
     isReadyTimeout: Double,
     keepNLastResults: Double,
     keepResults: Boolean,
-    listenters: StringDictionary[js.Function2[/* event */ Event_, /* repeated */ js.Any, Unit]],
+    listenters: StringDictionary[js.Function2[/* event */ Event, /* repeated */ js.Any, Unit]],
     maxThreads: Double,
     needDone: Boolean,
     overrideSetTimeout: Boolean,
@@ -133,7 +133,7 @@ object IHarness {
         ret
     }
     @scala.inline
-    def withListenters(value: StringDictionary[js.Function2[/* event */ Event_, /* repeated */ js.Any, Unit]]): Self = {
+    def withListenters(value: StringDictionary[js.Function2[/* event */ Event, /* repeated */ js.Any, Unit]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("listenters")(value.asInstanceOf[js.Any])
         ret

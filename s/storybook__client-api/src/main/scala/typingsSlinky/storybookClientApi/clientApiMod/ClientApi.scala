@@ -4,9 +4,9 @@ import typingsSlinky.node.NodeModule
 import typingsSlinky.storybookAddons.typesMod.DecoratorFunction
 import typingsSlinky.storybookAddons.typesMod.Parameters
 import typingsSlinky.storybookAddons.typesMod.StoryApi
-import typingsSlinky.storybookClientApi.AnonFileName
-import typingsSlinky.storybookClientApi.AnonHierarchyRootSeparator
-import typingsSlinky.storybookClientApi.AnonHierarchySeparator
+import typingsSlinky.storybookClientApi.anon.FileName
+import typingsSlinky.storybookClientApi.anon.HierarchyRootSeparator
+import typingsSlinky.storybookClientApi.anon.HierarchySeparator
 import typingsSlinky.storybookClientApi.typesMod.StoreItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,8 +21,8 @@ trait ClientApi extends js.Object {
   def addParameters(parameters: Parameters): Unit = js.native
   def clearDecorators(): Unit = js.native
   def clearParameters(): Unit = js.native
-  def getSeparators(): AnonHierarchyRootSeparator | AnonHierarchySeparator = js.native
-  def getStorybook(): js.Array[AnonFileName] = js.native
+  def getSeparators(): HierarchyRootSeparator | HierarchySeparator = js.native
+  def getStorybook(): js.Array[FileName] = js.native
   def raw(): js.Array[StoreItem] = js.native
   def setAddon(addon: js.Any): Unit = js.native
   def store(): typingsSlinky.storybookClientApi.storyStoreMod.default = js.native
@@ -39,8 +39,8 @@ object ClientApi {
     addParameters: Parameters => Unit,
     clearDecorators: () => Unit,
     clearParameters: () => Unit,
-    getSeparators: () => AnonHierarchyRootSeparator | AnonHierarchySeparator,
-    getStorybook: () => js.Array[AnonFileName],
+    getSeparators: () => HierarchyRootSeparator | HierarchySeparator,
+    getStorybook: () => js.Array[FileName],
     raw: () => js.Array[StoreItem],
     setAddon: js.Any => Unit,
     store: () => typingsSlinky.storybookClientApi.storyStoreMod.default,
@@ -98,13 +98,13 @@ object ClientApi {
         ret
     }
     @scala.inline
-    def withGetSeparators(value: () => AnonHierarchyRootSeparator | AnonHierarchySeparator): Self = {
+    def withGetSeparators(value: () => HierarchyRootSeparator | HierarchySeparator): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getSeparators")(js.Any.fromFunction0(value))
         ret
     }
     @scala.inline
-    def withGetStorybook(value: () => js.Array[AnonFileName]): Self = {
+    def withGetStorybook(value: () => js.Array[FileName]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getStorybook")(js.Any.fromFunction0(value))
         ret

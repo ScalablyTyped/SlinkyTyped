@@ -1,6 +1,6 @@
 package typingsSlinky.cosmiconfig.mod
 
-import typingsSlinky.cosmiconfig.AnonClearLoadCache
+import typingsSlinky.cosmiconfig.anon.ClearLoadCache
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cosmiconfig", "cosmiconfigSync")
 @js.native
 object cosmiconfigSync extends js.Object {
-  def apply(moduleName: String): AnonClearLoadCache = js.native
-  def apply(moduleName: String, options: OptionsSync): AnonClearLoadCache = js.native
+  def apply(moduleName: String): ClearLoadCache = js.native
+  def apply(moduleName: String, options: OptionsSync): ClearLoadCache = js.native
 }
 

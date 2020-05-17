@@ -1,9 +1,12 @@
 package typingsSlinky.chaiJquery
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
+import typingsSlinky.chaiJquery.anon.Interval
+import typingsSlinky.jquery.JQuery
 import typingsSlinky.jquery.JQueryAjaxSettings
 import typingsSlinky.jquery.JQueryCallback
 import typingsSlinky.jquery.JQueryDeferred
@@ -12,8 +15,6 @@ import typingsSlinky.jquery.JQueryParam
 import typingsSlinky.jquery.JQueryPromise
 import typingsSlinky.jquery.JQuerySupport
 import typingsSlinky.jquery.JQueryXHR
-import typingsSlinky.jquery.JQuery_
-import typingsSlinky.std.Document_
 import typingsSlinky.std.XMLDocument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -37,7 +38,7 @@ trait ChaiJQueryStatic extends js.Object {
   /**
     * Effects
     */
-  var fx: AnonInterval = js.native
+  var fx: Interval = js.native
     //TODO: Decide how we want to type this
   var isReady: Boolean = js.native
   /**
@@ -76,7 +77,7 @@ trait ChaiJQueryStatic extends js.Object {
     * @param attributes An object of attributes, events, and methods to call on the newly-created element.
     */
   def apply(html: String, attributes: js.Object): ChaiJQuery = js.native
-  def apply(html: String, ownerDocument: Document_): ChaiJQuery = js.native
+  def apply(html: String, ownerDocument: Document): ChaiJQuery = js.native
   /**
     * Accepts a string containing a CSS selector which is then used to match a set of elements.
     *
@@ -88,7 +89,7 @@ trait ChaiJQueryStatic extends js.Object {
     *
     * @param object An existing jQuery object to clone.
     */
-  def apply(`object`: JQuery_[HTMLElement]): ChaiJQuery = js.native
+  def apply(`object`: JQuery[HTMLElement]): ChaiJQuery = js.native
   /**
     * Accepts a string containing a CSS selector which is then used to match a set of elements.
     *
@@ -102,7 +103,7 @@ trait ChaiJQueryStatic extends js.Object {
     * @param ownerDocument A document in which the new elements will be created.
     */
   def apply(selector: String): ChaiJQuery = js.native
-  def apply(selector: String, context: JQuery_[HTMLElement]): ChaiJQuery = js.native
+  def apply(selector: String, context: JQuery[HTMLElement]): ChaiJQuery = js.native
   def apply(selector: String, context: Element): ChaiJQuery = js.native
   /**
     * A multi-purpose callbacks list object that provides a powerful way to manage callback lists.
@@ -141,8 +142,8 @@ trait ChaiJQueryStatic extends js.Object {
   jQuery( "body" ).trigger( e );
   ```
     */
-  def Event[T /* <: js.Object */](event: String): typingsSlinky.jquery.JQuery_.Event with T = js.native
-  def Event[T /* <: js.Object */](event: String, properties: T): typingsSlinky.jquery.JQuery_.Event with T = js.native
+  def Event[T /* <: js.Object */](event: String): typingsSlinky.jquery.JQuery.Event with T = js.native
+  def Event[T /* <: js.Object */](event: String, properties: T): typingsSlinky.jquery.JQuery.Event with T = js.native
   /**
     * Perform an asynchronous HTTP (Ajax) request.
     *
@@ -474,8 +475,8 @@ trait ChaiJQueryStatic extends js.Object {
     * @param keepScripts A Boolean indicating whether to include scripts passed in the HTML string
     */
   def parseHTML(data: String): js.Array[_] = js.native
-  def parseHTML(data: String, context: Document_): js.Array[_] = js.native
-  def parseHTML(data: String, context: Document_, keepScripts: Boolean): js.Array[_] = js.native
+  def parseHTML(data: String, context: Document): js.Array[_] = js.native
+  def parseHTML(data: String, context: Document, keepScripts: Boolean): js.Array[_] = js.native
   def parseHTML(data: String, context: HTMLElement): js.Array[_] = js.native
   def parseHTML(data: String, context: HTMLElement, keepScripts: Boolean): js.Array[_] = js.native
   /**

@@ -1,6 +1,6 @@
 package typingsSlinky.sendcloud.mod
 
-import typingsSlinky.sendcloud.AnonDescription
+import typingsSlinky.sendcloud.anon.Description
 import typingsSlinky.sendcloud.sendcloudStrings.success
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait EmailListUpdateResponse extends js.Object {
-  var list: AnonDescription = js.native
+  var list: Description = js.native
   var message: success = js.native
 }
 
 object EmailListUpdateResponse {
   @scala.inline
-  def apply(list: AnonDescription, message: success): EmailListUpdateResponse = {
+  def apply(list: Description, message: success): EmailListUpdateResponse = {
     val __obj = js.Dynamic.literal(list = list.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any])
     __obj.asInstanceOf[EmailListUpdateResponse]
   }
@@ -25,7 +25,7 @@ object EmailListUpdateResponse {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withList(value: AnonDescription): Self = {
+    def withList(value: Description): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(value.asInstanceOf[js.Any])
         ret

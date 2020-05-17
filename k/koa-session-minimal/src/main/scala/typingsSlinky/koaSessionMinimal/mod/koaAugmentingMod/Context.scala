@@ -1,6 +1,6 @@
 package typingsSlinky.koaSessionMinimal.mod.koaAugmentingMod
 
-import typingsSlinky.koaSessionMinimal.AnonRegenerateId
+import typingsSlinky.koaSessionMinimal.anon.RegenerateId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Context extends js.Object {
   var session: js.Any = js.native
-  var sessionHandler: AnonRegenerateId = js.native
+  var sessionHandler: RegenerateId = js.native
 }
 
 object Context {
   @scala.inline
-  def apply(session: js.Any, sessionHandler: AnonRegenerateId): Context = {
+  def apply(session: js.Any, sessionHandler: RegenerateId): Context = {
     val __obj = js.Dynamic.literal(session = session.asInstanceOf[js.Any], sessionHandler = sessionHandler.asInstanceOf[js.Any])
     __obj.asInstanceOf[Context]
   }
@@ -30,7 +30,7 @@ object Context {
         ret
     }
     @scala.inline
-    def withSessionHandler(value: AnonRegenerateId): Self = {
+    def withSessionHandler(value: RegenerateId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sessionHandler")(value.asInstanceOf[js.Any])
         ret

@@ -1,5 +1,6 @@
 package typingsSlinky.bip174
 
+import typingsSlinky.bip174.anon.TypeofPsbt
 import typingsSlinky.bip174.interfacesMod.KeyValue
 import typingsSlinky.bip174.interfacesMod.PsbtGlobal
 import typingsSlinky.bip174.interfacesMod.PsbtGlobalUpdate

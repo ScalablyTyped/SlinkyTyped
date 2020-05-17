@@ -3,8 +3,8 @@ package typingsSlinky.ffi.mod
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.ffi.AnonRTLDDEFAUL
 import typingsSlinky.ffi.Buffer
+import typingsSlinky.ffi.anon.RTLDDEFAUL
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ object DynamicLibrary
   extends Instantiable0[DynamicLibrary]
      with Instantiable1[/* path */ String, DynamicLibrary]
      with Instantiable2[/* path */ String, /* mode */ Double, DynamicLibrary] {
-  var FLAGS: AnonRTLDDEFAUL = js.native
+  var FLAGS: RTLDDEFAUL = js.native
   def apply(): DynamicLibrary = js.native
   def apply(path: String): DynamicLibrary = js.native
   def apply(path: String, mode: Double): DynamicLibrary = js.native

@@ -1,5 +1,6 @@
 package typingsSlinky.scheduler
 
+import typingsSlinky.scheduler.anon.Delay
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -47,7 +48,7 @@ object mod extends js.Object {
   @JSName("unstable_scheduleCallback")
   def unstableScheduleCallback(priorityLevel: Double, callback: FrameCallbackType): CallbackNode = js.native
   @JSName("unstable_scheduleCallback")
-  def unstableScheduleCallback(priorityLevel: Double, callback: FrameCallbackType, options: AnonDelay): CallbackNode = js.native
+  def unstableScheduleCallback(priorityLevel: Double, callback: FrameCallbackType, options: Delay): CallbackNode = js.native
   @JSName("unstable_shouldYield")
   def unstableShouldYield(): Boolean = js.native
   @JSName("unstable_wrapCallback")

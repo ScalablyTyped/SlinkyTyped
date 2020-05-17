@@ -1,6 +1,6 @@
 package typingsSlinky.ansiEscapes.mod
 
-import typingsSlinky.ansiEscapes.AnonAnnotation
+import typingsSlinky.ansiEscapes.anon.Annotation
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -79,7 +79,7 @@ object ^ extends js.Object {
   	Erase the screen from the current line up to the top of the screen.
   	*/
   var eraseUp: String = js.native
-  var iTerm: AnonAnnotation = js.native
+  var iTerm: Annotation = js.native
   /**
   	Scroll display down one line.
   	*/

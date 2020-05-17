@@ -1,7 +1,7 @@
 package typingsSlinky.reactMedia.mod
 
+import org.scalajs.dom.raw.Window
 import slinky.core.TagMod
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait BaseProps extends js.Object {
   var render: js.UndefOr[js.Function0[TagMod[Any]]] = js.native
-  var targetWindow: js.UndefOr[Window_] = js.native
+  var targetWindow: js.UndefOr[Window] = js.native
 }
 
 object BaseProps {
@@ -37,7 +37,7 @@ object BaseProps {
         ret
     }
     @scala.inline
-    def withTargetWindow(value: Window_): Self = {
+    def withTargetWindow(value: Window): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("targetWindow")(value.asInstanceOf[js.Any])
         ret

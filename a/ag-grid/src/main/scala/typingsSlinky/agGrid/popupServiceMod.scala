@@ -2,6 +2,10 @@ package typingsSlinky.agGrid
 
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.Touch
+import typingsSlinky.agGrid.anon.Column
+import typingsSlinky.agGrid.anon.EPopup
+import typingsSlinky.agGrid.anon.EventSource
+import typingsSlinky.agGrid.anon.KeepWithinBounds
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,10 +37,10 @@ object popupServiceMod extends js.Object {
     /* private */ def keepXWithinBounds(params: js.Any, x: js.Any): js.Any = js.native
     /* private */ def keepYWithinBounds(params: js.Any, y: js.Any): js.Any = js.native
     /* private */ def positionPopup(params: js.Any): js.Any = js.native
-    def positionPopupForMenu(params: AnonEPopup): Unit = js.native
-    def positionPopupOverComponent(params: AnonKeepWithinBounds): Unit = js.native
-    def positionPopupUnderComponent(params: AnonEventSource): Unit = js.native
-    def positionPopupUnderMouseEvent(params: AnonColumn): Unit = js.native
+    def positionPopupForMenu(params: EPopup): Unit = js.native
+    def positionPopupOverComponent(params: KeepWithinBounds): Unit = js.native
+    def positionPopupUnderComponent(params: EventSource): Unit = js.native
+    def positionPopupUnderMouseEvent(params: Column): Unit = js.native
   }
   
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.graphqlCompose.enumTypeComposerMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.graphql.GraphQLEnumTypeConfigexte
+import typingsSlinky.graphql.anon.GraphQLEnumTypeConfigexte
 import typingsSlinky.graphql.astMod.EnumTypeDefinitionNode
 import typingsSlinky.graphql.astMod.EnumTypeExtensionNode
 import typingsSlinky.graphql.astMod.ValueNode

@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientAnalytics.gapi.client.analytics
 
-import typingsSlinky.gapiClientAnalytics.AnonEffective
-import typingsSlinky.gapiClientAnalytics.AnonHref
+import typingsSlinky.gapiClientAnalytics.anon.Effective
+import typingsSlinky.gapiClientAnalytics.anon.Href
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait Profile extends js.Object {
   /** Indicates whether bot filtering is enabled for this view (profile). */
   var botFilteringEnabled: js.UndefOr[Boolean] = js.native
   /** Child link for this view (profile). Points to the list of goals for this view (profile). */
-  var childLink: js.UndefOr[AnonHref] = js.native
+  var childLink: js.UndefOr[Href] = js.native
   /** Time this view (profile) was created. */
   var created: js.UndefOr[String] = js.native
   /**
@@ -39,9 +39,9 @@ trait Profile extends js.Object {
   /** Name of this view (profile). */
   var name: js.UndefOr[String] = js.native
   /** Parent link for this view (profile). Points to the web property to which this view (profile) belongs. */
-  var parentLink: js.UndefOr[AnonHref] = js.native
+  var parentLink: js.UndefOr[Href] = js.native
   /** Permissions the user has for this view (profile). */
-  var permissions: js.UndefOr[AnonEffective] = js.native
+  var permissions: js.UndefOr[Effective] = js.native
   /** Link for this view (profile). */
   var selfLink: js.UndefOr[String] = js.native
   /** Site search category parameters for this view (profile). */
@@ -103,7 +103,7 @@ object Profile {
         ret
     }
     @scala.inline
-    def withChildLink(value: AnonHref): Self = {
+    def withChildLink(value: Href): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("childLink")(value.asInstanceOf[js.Any])
         ret
@@ -235,7 +235,7 @@ object Profile {
         ret
     }
     @scala.inline
-    def withParentLink(value: AnonHref): Self = {
+    def withParentLink(value: Href): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parentLink")(value.asInstanceOf[js.Any])
         ret
@@ -247,7 +247,7 @@ object Profile {
         ret
     }
     @scala.inline
-    def withPermissions(value: AnonEffective): Self = {
+    def withPermissions(value: Effective): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("permissions")(value.asInstanceOf[js.Any])
         ret

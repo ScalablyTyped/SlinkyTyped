@@ -25,9 +25,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A Toolbar can contain buttons, as well as certain other widgets, including text fields and labels.
 		 */
-@JSGlobal("Titanium.UI.Toolbar")
 @js.native
-class Toolbar () extends View {
+trait Toolbar extends View {
   /**
   			 * Background color for the toolbar, as a color name or hex triplet.
   			 */

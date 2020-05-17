@@ -1,7 +1,7 @@
 package typingsSlinky.cathoQuantum.checkboxMod
 
 import org.scalajs.dom.raw.HTMLInputElement
-import typingsSlinky.cathoQuantum.AnonBaseFontSize
+import typingsSlinky.cathoQuantum.anon.BaseFontSize
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.ChangeEventHandler
 import scala.scalajs.js
@@ -18,7 +18,7 @@ trait CheckboxProps extends js.Object {
   var label: js.UndefOr[String] = js.native
   var name: String = js.native
   var onChange: js.UndefOr[ChangeEventHandler[HTMLInputElement]] = js.native
-  var theme: js.UndefOr[AnonBaseFontSize] = js.native
+  var theme: js.UndefOr[BaseFontSize] = js.native
   var value: js.UndefOr[String] = js.native
 }
 
@@ -125,7 +125,7 @@ object CheckboxProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonBaseFontSize): Self = {
+    def withTheme(value: BaseFontSize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

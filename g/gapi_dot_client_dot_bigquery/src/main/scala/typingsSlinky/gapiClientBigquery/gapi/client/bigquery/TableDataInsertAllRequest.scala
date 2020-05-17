@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientBigquery.gapi.client.bigquery
 
-import typingsSlinky.gapiClientBigquery.AnonInsertId
+import typingsSlinky.gapiClientBigquery.anon.InsertId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait TableDataInsertAllRequest extends js.Object {
   /** The resource type of the response. */
   var kind: js.UndefOr[String] = js.native
   /** The rows to insert. */
-  var rows: js.UndefOr[js.Array[AnonInsertId]] = js.native
+  var rows: js.UndefOr[js.Array[InsertId]] = js.native
   /**
     * [Optional] Insert all valid rows of a request, even if invalid rows exist. The default value is false, which causes the entire request to fail if any
     * invalid rows exist.
@@ -66,7 +66,7 @@ object TableDataInsertAllRequest {
         ret
     }
     @scala.inline
-    def withRows(value: js.Array[AnonInsertId]): Self = {
+    def withRows(value: js.Array[InsertId]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
         ret

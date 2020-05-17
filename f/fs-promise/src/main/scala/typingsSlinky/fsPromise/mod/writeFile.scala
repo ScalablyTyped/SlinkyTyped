@@ -64,6 +64,7 @@ object writeFile extends js.Object {
     data: js.Any,
     callback: (js.Function1[/* err */ ErrnoException, Unit]) | NoParamCallback
   ): Unit = js.native
+  def apply(path: Double, data: js.Any, options: typingsSlinky.node.fsMod.WriteFileOptions): js.Promise[Unit] = js.native
   def apply(
     path: Double,
     data: js.Any,

@@ -1,7 +1,7 @@
 package typingsSlinky.primereact.gmapMod
 
-import typingsSlinky.primereact.AnonMap
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
+import typingsSlinky.primereact.anon.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,13 +9,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GMapProps extends js.Object {
   var className: js.UndefOr[String] = js.native
-  var onMapClick: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onMapClick: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   var onMapDragEnd: js.UndefOr[js.Function0[Unit]] = js.native
   var onMapReady: js.UndefOr[js.Function1[/* map */ js.Any, Unit]] = js.native
-  var onOverlayClick: js.UndefOr[js.Function1[/* e */ AnonMap, Unit]] = js.native
-  var onOverlayDrag: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onOverlayDragEnd: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onOverlayDragStart: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onOverlayClick: js.UndefOr[js.Function1[/* e */ Map, Unit]] = js.native
+  var onOverlayDrag: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onOverlayDragEnd: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onOverlayDragStart: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   var onZoomChanged: js.UndefOr[js.Function0[Unit]] = js.native
   var options: js.UndefOr[js.Object] = js.native
   var overlays: js.UndefOr[js.Array[_]] = js.native
@@ -47,7 +47,7 @@ object GMapProps {
         ret
     }
     @scala.inline
-    def withOnMapClick(value: /* event */ Event_ => Unit): Self = {
+    def withOnMapClick(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMapClick")(js.Any.fromFunction1(value))
         ret
@@ -83,7 +83,7 @@ object GMapProps {
         ret
     }
     @scala.inline
-    def withOnOverlayClick(value: /* e */ AnonMap => Unit): Self = {
+    def withOnOverlayClick(value: /* e */ Map => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOverlayClick")(js.Any.fromFunction1(value))
         ret
@@ -95,7 +95,7 @@ object GMapProps {
         ret
     }
     @scala.inline
-    def withOnOverlayDrag(value: /* event */ Event_ => Unit): Self = {
+    def withOnOverlayDrag(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOverlayDrag")(js.Any.fromFunction1(value))
         ret
@@ -107,7 +107,7 @@ object GMapProps {
         ret
     }
     @scala.inline
-    def withOnOverlayDragEnd(value: /* event */ Event_ => Unit): Self = {
+    def withOnOverlayDragEnd(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOverlayDragEnd")(js.Any.fromFunction1(value))
         ret
@@ -119,7 +119,7 @@ object GMapProps {
         ret
     }
     @scala.inline
-    def withOnOverlayDragStart(value: /* event */ Event_ => Unit): Self = {
+    def withOnOverlayDragStart(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOverlayDragStart")(js.Any.fromFunction1(value))
         ret

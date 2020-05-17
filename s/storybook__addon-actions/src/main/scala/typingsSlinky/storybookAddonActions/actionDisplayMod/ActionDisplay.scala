@@ -1,7 +1,7 @@
 package typingsSlinky.storybookAddonActions.actionDisplayMod
 
-import typingsSlinky.storybookAddonActions.AnonArgs
 import typingsSlinky.storybookAddonActions.actionOptionsMod.ActionOptions
+import typingsSlinky.storybookAddonActions.anon.Args
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,14 +9,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ActionDisplay extends js.Object {
   var count: Double = js.native
-  var data: AnonArgs = js.native
+  var data: Args = js.native
   var id: String = js.native
   var options: ActionOptions = js.native
 }
 
 object ActionDisplay {
   @scala.inline
-  def apply(count: Double, data: AnonArgs, id: String, options: ActionOptions): ActionDisplay = {
+  def apply(count: Double, data: Args, id: String, options: ActionOptions): ActionDisplay = {
     val __obj = js.Dynamic.literal(count = count.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActionDisplay]
   }
@@ -33,7 +33,7 @@ object ActionDisplay {
         ret
     }
     @scala.inline
-    def withData(value: AnonArgs): Self = {
+    def withData(value: Args): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

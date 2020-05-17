@@ -1,9 +1,9 @@
 package typingsSlinky.phaser.Phaser.Loader.FileTypes
 
+import typingsSlinky.phaser.Phaser.Loader.File
 import typingsSlinky.phaser.Phaser.Loader.LoaderPlugin
 import typingsSlinky.phaser.Phaser.Loader.MultiFile
-import typingsSlinky.phaser.Phaser.Types.Loader.FileTypes.AtlasJSONFileConfig
-import typingsSlinky.phaser.Phaser.Types.Loader.XHRSettingsObject
+import typingsSlinky.phaser.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,91 +17,51 @@ import scala.scalajs.js.annotation._
   * 
   * https://www.codeandweb.com/texturepacker/tutorials/how-to-create-sprite-sheets-for-phaser3?source=photonstorm
   */
-@JSGlobal("Phaser.Loader.FileTypes.AtlasJSONFile")
 @js.native
-class AtlasJSONFile protected () extends MultiFile {
-  /**
-    * 
-    * @param loader A reference to the Loader that is responsible for this file.
-    * @param key The key to use for this file, or a file configuration object.
-    * @param textureURL The absolute or relative URL to load the texture image file from. If undefined or `null` it will be set to `<key>.png`, i.e. if `key` was "alien" then the URL will be "alien.png".
-    * @param atlasURL The absolute or relative URL to load the texture atlas json data file from. If undefined or `null` it will be set to `<key>.json`, i.e. if `key` was "alien" then the URL will be "alien.json".
-    * @param textureXhrSettings An XHR Settings configuration object for the atlas image file. Used in replacement of the Loaders default XHR Settings.
-    * @param atlasXhrSettings An XHR Settings configuration object for the atlas json file. Used in replacement of the Loaders default XHR Settings.
-    */
-  def this(loader: LoaderPlugin, key: String) = this()
-  def this(loader: LoaderPlugin, key: AtlasJSONFileConfig) = this()
-  def this(loader: LoaderPlugin, key: String, textureURL: String) = this()
-  def this(loader: LoaderPlugin, key: String, textureURL: js.Array[String]) = this()
-  def this(loader: LoaderPlugin, key: AtlasJSONFileConfig, textureURL: String) = this()
-  def this(loader: LoaderPlugin, key: AtlasJSONFileConfig, textureURL: js.Array[String]) = this()
-  def this(loader: LoaderPlugin, key: String, textureURL: String, atlasURL: String) = this()
-  def this(loader: LoaderPlugin, key: String, textureURL: js.Array[String], atlasURL: String) = this()
-  def this(loader: LoaderPlugin, key: AtlasJSONFileConfig, textureURL: String, atlasURL: String) = this()
-  def this(loader: LoaderPlugin, key: AtlasJSONFileConfig, textureURL: js.Array[String], atlasURL: String) = this()
-  def this(
-    loader: LoaderPlugin,
-    key: String,
-    textureURL: String,
-    atlasURL: String,
-    textureXhrSettings: XHRSettingsObject
-  ) = this()
-  def this(
-    loader: LoaderPlugin,
-    key: String,
-    textureURL: js.Array[String],
-    atlasURL: String,
-    textureXhrSettings: XHRSettingsObject
-  ) = this()
-  def this(
-    loader: LoaderPlugin,
-    key: AtlasJSONFileConfig,
-    textureURL: String,
-    atlasURL: String,
-    textureXhrSettings: XHRSettingsObject
-  ) = this()
-  def this(
-    loader: LoaderPlugin,
-    key: AtlasJSONFileConfig,
-    textureURL: js.Array[String],
-    atlasURL: String,
-    textureXhrSettings: XHRSettingsObject
-  ) = this()
-  def this(
-    loader: LoaderPlugin,
-    key: String,
-    textureURL: String,
-    atlasURL: String,
-    textureXhrSettings: XHRSettingsObject,
-    atlasXhrSettings: XHRSettingsObject
-  ) = this()
-  def this(
-    loader: LoaderPlugin,
-    key: String,
-    textureURL: js.Array[String],
-    atlasURL: String,
-    textureXhrSettings: XHRSettingsObject,
-    atlasXhrSettings: XHRSettingsObject
-  ) = this()
-  def this(
-    loader: LoaderPlugin,
-    key: AtlasJSONFileConfig,
-    textureURL: String,
-    atlasURL: String,
-    textureXhrSettings: XHRSettingsObject,
-    atlasXhrSettings: XHRSettingsObject
-  ) = this()
-  def this(
-    loader: LoaderPlugin,
-    key: AtlasJSONFileConfig,
-    textureURL: js.Array[String],
-    atlasURL: String,
-    textureXhrSettings: XHRSettingsObject,
-    atlasXhrSettings: XHRSettingsObject
-  ) = this()
+trait AtlasJSONFile extends MultiFile {
   /**
     * Adds this file to its target cache upon successful loading and processing.
     */
   def addToCache(): Unit = js.native
+}
+
+object AtlasJSONFile {
+  @scala.inline
+  def apply(
+    addToCache: () => Unit,
+    addToMultiFile: File => MultiFile,
+    baseURL: String,
+    complete: Boolean,
+    config: js.Any,
+    failed: integer,
+    files: js.Array[File],
+    isReadyToProcess: () => Boolean,
+    key: String,
+    loader: LoaderPlugin,
+    onFileComplete: File => Unit,
+    onFileFailed: File => Unit,
+    path: String,
+    pending: integer,
+    prefix: String,
+    `type`: String
+  ): AtlasJSONFile = {
+    val __obj = js.Dynamic.literal(addToCache = js.Any.fromFunction0(addToCache), addToMultiFile = js.Any.fromFunction1(addToMultiFile), baseURL = baseURL.asInstanceOf[js.Any], complete = complete.asInstanceOf[js.Any], config = config.asInstanceOf[js.Any], failed = failed.asInstanceOf[js.Any], files = files.asInstanceOf[js.Any], isReadyToProcess = js.Any.fromFunction0(isReadyToProcess), key = key.asInstanceOf[js.Any], loader = loader.asInstanceOf[js.Any], onFileComplete = js.Any.fromFunction1(onFileComplete), onFileFailed = js.Any.fromFunction1(onFileFailed), path = path.asInstanceOf[js.Any], pending = pending.asInstanceOf[js.Any], prefix = prefix.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AtlasJSONFile]
+  }
+  @scala.inline
+  implicit class AtlasJSONFileOps[Self <: AtlasJSONFile] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddToCache(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addToCache")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

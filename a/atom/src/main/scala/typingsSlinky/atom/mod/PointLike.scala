@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PointLike extends js.Object {
+trait PointLike extends PointCompatible {
   /** A zero-indexed number representing the column of the Point. */
   var column: Double = js.native
   /** A zero-indexed number representing the row of the Point. */

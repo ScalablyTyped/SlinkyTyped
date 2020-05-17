@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LogErrorData extends js.Object {
+trait LogErrorData extends LogData {
   var message: String = js.native
   var stack: String = js.native
 }

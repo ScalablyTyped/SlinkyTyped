@@ -7,8 +7,6 @@ import scala.scalajs.js.annotation._
 package object mod {
   type ColumnRenderProperties = typingsSlinky.griddleReact.mod.components.ColumnDefinitionProps
   type Griddle[T] = slinky.core.ReactComponentClass[typingsSlinky.griddleReact.mod.GriddleProps[T]]
-  type GriddleComponent[T] = slinky.core.ReactComponentClass[T]
-  type GriddleFilter = java.lang.String | typingsSlinky.griddleReact.mod.RowFilter | (typingsSlinky.griddleReact.mod.PropertyBag[java.lang.String | typingsSlinky.griddleReact.mod.RowFilter])
   type Listener = js.Function3[
     /* prevState */ js.Any, 
     /* nextState */ js.Any, 

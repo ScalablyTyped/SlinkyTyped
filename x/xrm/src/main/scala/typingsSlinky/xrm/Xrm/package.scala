@@ -11,5 +11,6 @@ package object Xrm {
     */
   type ExecuteResponse = org.scalajs.dom.experimental.Response
   type Navigation = typingsSlinky.xrm.Xrm.Navigation_
+  type Page = typingsSlinky.xrm.Xrm.Page_
   type Utility = typingsSlinky.xrm.Xrm.Utility_
 }

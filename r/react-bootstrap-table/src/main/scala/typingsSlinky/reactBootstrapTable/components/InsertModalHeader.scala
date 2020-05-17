@@ -1,11 +1,11 @@
 package typingsSlinky.reactBootstrapTable.components
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBootstrapTable.mod.BootstrapVersion
 import typingsSlinky.reactBootstrapTable.mod.InsertModalHeaderProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ object InsertModalHeader {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactBootstrapTable.mod.InsertModalHeader] {
     @scala.inline
-    def beforeClose(value: /* e */ SyntheticEvent[Event_, _] => Unit): this.type = set("beforeClose", js.Any.fromFunction1(value))
+    def beforeClose(value: /* e */ SyntheticEvent[Event, _] => Unit): this.type = set("beforeClose", js.Any.fromFunction1(value))
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

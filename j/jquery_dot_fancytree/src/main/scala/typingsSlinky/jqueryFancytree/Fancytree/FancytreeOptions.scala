@@ -2,12 +2,12 @@ package typingsSlinky.jqueryFancytree.Fancytree
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.jquery.JQueryEventObject
-import typingsSlinky.jqueryFancytree.AnonBottom
-import typingsSlinky.jqueryFancytree.AnonCache
 import typingsSlinky.jqueryFancytree.Fancytree.Extensions.DragAndDrop5
 import typingsSlinky.jqueryFancytree.Fancytree.Extensions.Filter
 import typingsSlinky.jqueryFancytree.Fancytree.Extensions.Table
 import typingsSlinky.jqueryFancytree.JQuery
+import typingsSlinky.jqueryFancytree.anon.Bottom
+import typingsSlinky.jqueryFancytree.anon.Cache
 import typingsSlinky.jqueryFancytree.jqueryFancytreeBooleans.`false`
 import typingsSlinky.jqueryFancytree.jqueryFancytreeNumbers.`0`
 import typingsSlinky.jqueryFancytree.jqueryFancytreeNumbers.`1`
@@ -30,7 +30,7 @@ trait FancytreeOptions
   /** Make sure that the active node is always visible, i.e. its parents are expanded (default: true). */
   var activeVisible: js.UndefOr[Boolean] = js.native
   /** Default options for ajax requests. */
-  var ajax: js.UndefOr[AnonCache] = js.native
+  var ajax: js.UndefOr[Cache] = js.native
   /** (default: false) Add WAI-ARIA attributes to markup */
   var aria: js.UndefOr[Boolean] = js.native
   /** Activate a node when focused with the keyboard (default: true) */
@@ -79,7 +79,7 @@ trait FancytreeOptions
   /** navigate to next node by typing the first letters (default: false) */
   var quicksearch: js.UndefOr[Boolean] = js.native
   /** optional margins for node.scrollIntoView() (default: {top: 0, bottom: 0}) */
-  var scrollOfs: js.UndefOr[AnonBottom] = js.native
+  var scrollOfs: js.UndefOr[Bottom] = js.native
   /** scrollable container for node.scrollIntoView() (default: $container) */
   var scrollParent: js.UndefOr[JQuery | Null] = js.native
   /** default: multi_hier */
@@ -136,7 +136,7 @@ object FancytreeOptions {
         ret
     }
     @scala.inline
-    def withAjax(value: AnonCache): Self = {
+    def withAjax(value: Cache): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ajax")(value.asInstanceOf[js.Any])
         ret
@@ -420,7 +420,7 @@ object FancytreeOptions {
         ret
     }
     @scala.inline
-    def withScrollOfs(value: AnonBottom): Self = {
+    def withScrollOfs(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollOfs")(value.asInstanceOf[js.Any])
         ret

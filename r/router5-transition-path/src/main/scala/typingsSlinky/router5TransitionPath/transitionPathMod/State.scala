@@ -1,7 +1,7 @@
 package typingsSlinky.router5TransitionPath.transitionPathMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.router5TransitionPath.AnonOptions
+import typingsSlinky.router5TransitionPath.anon.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait State
   extends /* key */ StringDictionary[js.Any] {
-  var meta: js.UndefOr[AnonOptions] = js.native
+  var meta: js.UndefOr[Options] = js.native
   var name: String = js.native
   var params: js.UndefOr[StringDictionary[js.Any]] = js.native
 }
@@ -33,7 +33,7 @@ object State {
         ret
     }
     @scala.inline
-    def withMeta(value: AnonOptions): Self = {
+    def withMeta(value: Options): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("meta")(value.asInstanceOf[js.Any])
         ret

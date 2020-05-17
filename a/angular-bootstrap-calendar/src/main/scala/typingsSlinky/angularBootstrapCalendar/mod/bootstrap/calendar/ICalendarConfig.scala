@@ -1,36 +1,36 @@
 package typingsSlinky.angularBootstrapCalendar.mod.bootstrap.calendar
 
-import typingsSlinky.angularBootstrapCalendar.AnonAngular
-import typingsSlinky.angularBootstrapCalendar.AnonCalendarDayView
-import typingsSlinky.angularBootstrapCalendar.AnonWeekNumber
+import typingsSlinky.angularBootstrapCalendar.anon.Angular
+import typingsSlinky.angularBootstrapCalendar.anon.CalendarDayView
+import typingsSlinky.angularBootstrapCalendar.anon.WeekNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ICalendarConfig extends js.Object {
-  var allDateFormats: AnonAngular = js.native
+  var allDateFormats: Angular = js.native
   var dateFormats: IDateFormats = js.native
   var dateFormatter: String = js.native
   var displayAllMonthEvents: Boolean = js.native
   var displayEventEndTimes: Boolean = js.native
-  var i18nStrings: AnonWeekNumber = js.native
+  var i18nStrings: WeekNumber = js.native
   var showTimesOnWeekView: Boolean = js.native
-  var templates: AnonCalendarDayView = js.native
+  var templates: CalendarDayView = js.native
   var titleFormats: ITitleFormats = js.native
 }
 
 object ICalendarConfig {
   @scala.inline
   def apply(
-    allDateFormats: AnonAngular,
+    allDateFormats: Angular,
     dateFormats: IDateFormats,
     dateFormatter: String,
     displayAllMonthEvents: Boolean,
     displayEventEndTimes: Boolean,
-    i18nStrings: AnonWeekNumber,
+    i18nStrings: WeekNumber,
     showTimesOnWeekView: Boolean,
-    templates: AnonCalendarDayView,
+    templates: CalendarDayView,
     titleFormats: ITitleFormats
   ): ICalendarConfig = {
     val __obj = js.Dynamic.literal(allDateFormats = allDateFormats.asInstanceOf[js.Any], dateFormats = dateFormats.asInstanceOf[js.Any], dateFormatter = dateFormatter.asInstanceOf[js.Any], displayAllMonthEvents = displayAllMonthEvents.asInstanceOf[js.Any], displayEventEndTimes = displayEventEndTimes.asInstanceOf[js.Any], i18nStrings = i18nStrings.asInstanceOf[js.Any], showTimesOnWeekView = showTimesOnWeekView.asInstanceOf[js.Any], templates = templates.asInstanceOf[js.Any], titleFormats = titleFormats.asInstanceOf[js.Any])
@@ -43,7 +43,7 @@ object ICalendarConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAllDateFormats(value: AnonAngular): Self = {
+    def withAllDateFormats(value: Angular): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("allDateFormats")(value.asInstanceOf[js.Any])
         ret
@@ -73,7 +73,7 @@ object ICalendarConfig {
         ret
     }
     @scala.inline
-    def withI18nStrings(value: AnonWeekNumber): Self = {
+    def withI18nStrings(value: WeekNumber): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("i18nStrings")(value.asInstanceOf[js.Any])
         ret
@@ -85,7 +85,7 @@ object ICalendarConfig {
         ret
     }
     @scala.inline
-    def withTemplates(value: AnonCalendarDayView): Self = {
+    def withTemplates(value: CalendarDayView): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("templates")(value.asInstanceOf[js.Any])
         ret

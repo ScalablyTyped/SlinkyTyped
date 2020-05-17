@@ -6,7 +6,7 @@ import typingsSlinky.reactNative.mod.Animated.SpringAnimationConfig
 import typingsSlinky.reactNative.mod.Animated.TimingAnimationConfig
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeElements.AnonHeight
+import typingsSlinky.reactNativeElements.anon.Height
 import typingsSlinky.reactNativeElements.mod.SliderProps
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.horizontal
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.spring
@@ -64,7 +64,7 @@ object Slider {
     @scala.inline
     def thumbTintColor(value: String): this.type = set("thumbTintColor", value.asInstanceOf[js.Any])
     @scala.inline
-    def thumbTouchSize(value: AnonHeight): this.type = set("thumbTouchSize", value.asInstanceOf[js.Any])
+    def thumbTouchSize(value: Height): this.type = set("thumbTouchSize", value.asInstanceOf[js.Any])
     @scala.inline
     def trackStyle(value: StyleProp[ViewStyle]): this.type = set("trackStyle", value.asInstanceOf[js.Any])
     @scala.inline

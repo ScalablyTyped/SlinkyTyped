@@ -1,9 +1,9 @@
 package typingsSlinky.reactNativeSortableList.mod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactNativeSortableList.AnonAnimated
-import typingsSlinky.reactNativeSortableList.AnonKey
-import typingsSlinky.reactNativeSortableList.AnonX
+import typingsSlinky.reactNativeSortableList.anon.Animated
+import typingsSlinky.reactNativeSortableList.anon.Key
+import typingsSlinky.reactNativeSortableList.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,14 +14,14 @@ trait SortableList[T, K]
   /**
     * scrolls by a given y offset, either immediately or with a smooth animation
     */
-  def scrollBy(hasDxDyAnimated: AnonAnimated): Unit = js.native
+  def scrollBy(hasDxDyAnimated: Animated): Unit = js.native
   /**
     * scrolls to a given y offset, either immediately or with a smooth animation
     */
-  def scrollTo(hasXYAnimated: AnonX): Unit = js.native
+  def scrollTo(hasXYAnimated: X): Unit = js.native
   /**
     * scrolls to a given row key, either immediately or with a smooth animation
     */
-  def scrollToRowKey(hasKeyAnimated: AnonKey[K]): Unit = js.native
+  def scrollToRowKey(hasKeyAnimated: Key[K]): Unit = js.native
 }
 

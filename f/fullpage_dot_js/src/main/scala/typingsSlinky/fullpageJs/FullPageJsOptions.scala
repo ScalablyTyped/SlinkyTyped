@@ -1,5 +1,6 @@
 package typingsSlinky.fullpageJs
 
+import typingsSlinky.fullpageJs.anon.Percentage
 import typingsSlinky.fullpageJs.fullpageJsStrings.bottom
 import typingsSlinky.fullpageJs.fullpageJsStrings.fingersonly
 import typingsSlinky.fullpageJs.fullpageJsStrings.horizontal
@@ -222,7 +223,7 @@ trait FullPageJsOptions extends js.Object {
   /**
     * Allows to configure the parameters for the parallax backgrounds effect when using the option parallax:true.
     */ 
-  var parallaxOptions: js.UndefOr[AnonPercentage] = js.native
+  var parallaxOptions: js.UndefOr[Percentage] = js.native
   /**
     * (default true) Defines whether to push the state of the site to the browser's history. When set to true each section/slide of the site will act as a new page and the back and forward buttons of the browser will scroll the sections/slides to reach the previous or next state of the site. When set to false, the URL will keep changing but will have no effect on the browser's history. This option is automatically turned off when using autoScrolling:false.
     */
@@ -794,7 +795,7 @@ object FullPageJsOptions {
         ret
     }
     @scala.inline
-    def withParallaxOptions(value: AnonPercentage): Self = {
+    def withParallaxOptions(value: Percentage): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parallaxOptions")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.arithmetic
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.geographic
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.heading
@@ -50,8 +49,4 @@ trait RotationVariable extends VisualVariable {
   @JSName("type")
   val type_RotationVariable: rotation = js.native
 }
-
-@JSGlobal("__esri.RotationVariable")
-@js.native
-object RotationVariable extends TopLevel[RotationVariableConstructor]
 

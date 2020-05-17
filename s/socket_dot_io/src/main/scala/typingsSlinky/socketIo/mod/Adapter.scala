@@ -2,7 +2,7 @@ package typingsSlinky.socketIo.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.node.NodeJS.EventEmitter
-import typingsSlinky.socketIo.AnonExcept
+import typingsSlinky.socketIo.anon.Except
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,7 +42,7 @@ trait Adapter extends EventEmitter {
   		 * 	- except: A list of Socket IDs to exclude
   		 * 	- flags: Any flags that we want to send along ('json', 'volatile', 'broadcast')
   		 */
-  def broadcast(packet: js.Any, opts: AnonExcept): Unit = js.native
+  def broadcast(packet: js.Any, opts: Except): Unit = js.native
   /**
   		 * Removes a socket from a room. If there are no more sockets in the room,
   		 * the room is deleted

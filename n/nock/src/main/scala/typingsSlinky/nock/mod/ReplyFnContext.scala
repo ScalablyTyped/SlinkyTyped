@@ -1,6 +1,6 @@
 package typingsSlinky.nock.mod
 
-import typingsSlinky.nock.ClientRequestheadersRecor
+import typingsSlinky.nock.anon.ClientRequestheadersRecor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

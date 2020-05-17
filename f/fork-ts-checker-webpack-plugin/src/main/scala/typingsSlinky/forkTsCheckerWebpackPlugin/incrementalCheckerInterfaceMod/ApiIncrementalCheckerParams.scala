@@ -1,7 +1,7 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin.incrementalCheckerInterfaceMod
 
-import typingsSlinky.forkTsCheckerWebpackPlugin.AnonGetFormattedLints
-import typingsSlinky.forkTsCheckerWebpackPlugin.Typeofts
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.GetFormattedLints
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.Typeofts
 import typingsSlinky.forkTsCheckerWebpackPlugin.normalizedMessageMod.NormalizedMessage
 import typingsSlinky.forkTsCheckerWebpackPlugin.resolutionMod.ResolveModuleName
 import typingsSlinky.forkTsCheckerWebpackPlugin.resolutionMod.ResolveTypeReferenceDirective
@@ -21,7 +21,7 @@ trait ApiIncrementalCheckerParams extends js.Object {
   var checkSyntacticErrors: Boolean = js.native
   var compilerOptions: CompilerOptions = js.native
   var context: String = js.native
-  var eslinter: js.UndefOr[ReturnType[js.Function1[/* eslintOptions */ js.Object, AnonGetFormattedLints]]] = js.native
+  var eslinter: js.UndefOr[ReturnType[js.Function1[/* eslintOptions */ js.Object, GetFormattedLints]]] = js.native
   var linterAutoFix: Boolean = js.native
   var linterConfigFile: String | Boolean = js.native
   var programConfigFile: String = js.native
@@ -109,7 +109,7 @@ object ApiIncrementalCheckerParams {
         ret
     }
     @scala.inline
-    def withEslinter(value: ReturnType[js.Function1[/* eslintOptions */ js.Object, AnonGetFormattedLints]]): Self = {
+    def withEslinter(value: ReturnType[js.Function1[/* eslintOptions */ js.Object, GetFormattedLints]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("eslinter")(value.asInstanceOf[js.Any])
         ret

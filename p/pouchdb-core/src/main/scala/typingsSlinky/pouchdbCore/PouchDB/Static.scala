@@ -8,10 +8,10 @@ import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.experimental.Response
 import typingsSlinky.debug.mod.Debugger
 import typingsSlinky.debug.mod.IDebug
-import typingsSlinky.pouchdbCore.AnonInstantiable
 import typingsSlinky.pouchdbCore.EventEmitter
 import typingsSlinky.pouchdbCore.Fetch
 import typingsSlinky.pouchdbCore.PouchDB.Configuration.DatabaseConfiguration
+import typingsSlinky.pouchdbCore.anon.Instantiable
 import typingsSlinky.pouchdbCore.pouchdbCoreStrings.created
 import typingsSlinky.pouchdbCore.pouchdbCoreStrings.destroyed
 import scala.scalajs.js
@@ -34,7 +34,7 @@ trait Static
     * The returned object is a constructor function that works the same as PouchDB,
     * except that whenever you invoke it (e.g. with new), the given options will be passed in by default.
     */
-  def defaults(options: DatabaseConfiguration): AnonInstantiable = js.native
+  def defaults(options: DatabaseConfiguration): Instantiable = js.native
   def fetch(url: String): js.Promise[Response] = js.native
   def fetch(url: String, opts: RequestInit): js.Promise[Response] = js.native
   def fetch(url: Request): js.Promise[Response] = js.native

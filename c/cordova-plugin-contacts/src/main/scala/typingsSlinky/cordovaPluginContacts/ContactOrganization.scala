@@ -1,11 +1,5 @@
 package typingsSlinky.cordovaPluginContacts
 
-import org.scalablytyped.runtime.Instantiable0
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
-import org.scalablytyped.runtime.Instantiable3
-import org.scalablytyped.runtime.Instantiable4
-import org.scalablytyped.runtime.Instantiable5
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,27 +22,79 @@ trait ContactOrganization extends js.Object {
   var `type`: js.UndefOr[String] = js.native
 }
 
-@JSGlobal("ContactOrganization")
-@js.native
-object ContactOrganization
-  extends /** Constructor for ContactOrganization object */
-Instantiable0[ContactOrganization]
-     with Instantiable1[/* pref */ Boolean, ContactOrganization]
-     with Instantiable2[/* pref */ Boolean, /* type */ String, ContactOrganization]
-     with Instantiable3[/* pref */ Boolean, /* type */ String, /* name */ String, ContactOrganization]
-     with Instantiable4[
-      /* pref */ Boolean, 
-      /* type */ String, 
-      /* name */ String, 
-      /* department */ String, 
-      ContactOrganization
-    ]
-     with Instantiable5[
-      /* pref */ Boolean, 
-      /* type */ String, 
-      /* name */ String, 
-      /* department */ String, 
-      /* title */ String, 
-      ContactOrganization
-    ]
+object ContactOrganization {
+  @scala.inline
+  def apply(): ContactOrganization = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ContactOrganization]
+  }
+  @scala.inline
+  implicit class ContactOrganizationOps[Self <: ContactOrganization] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDepartment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("department")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDepartment: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("department")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutName: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPref(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pref")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPref: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pref")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutTitle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutType: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
+        ret
+    }
+  }
+  
+}
 

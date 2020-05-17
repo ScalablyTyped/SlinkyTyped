@@ -68,18 +68,6 @@ object PhysicsDefinition {
         ret
     }
     @scala.inline
-    def withEase(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ease")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEase: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("ease")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withFriction(value: Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("friction")(value.asInstanceOf[js.Any])

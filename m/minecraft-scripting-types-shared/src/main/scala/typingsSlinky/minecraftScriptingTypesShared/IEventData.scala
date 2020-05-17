@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IEventData[T] extends js.Object {
+trait IEventData[T] extends IMinecraftObject {
   /**
     * The identifier of the event
     */

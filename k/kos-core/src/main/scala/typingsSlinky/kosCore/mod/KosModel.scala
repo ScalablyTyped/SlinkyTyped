@@ -1,8 +1,8 @@
 package typingsSlinky.kosCore.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.kosCore.AnonPayload
-import typingsSlinky.kosCore.AnonPayloadAnonParam
+import typingsSlinky.kosCore.anon.Payload
+import typingsSlinky.kosCore.anon.PayloadParam
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait KosModel[T] extends js.Object {
     js.Function3[
       /* dispatch */ js.UndefOr[KosDispatch], 
       /* getState */ js.UndefOr[GetKosState[T]], 
-      /* action */ js.UndefOr[AnonPayload[T]], 
+      /* action */ js.UndefOr[Payload[T]], 
       Unit
     ]
   ] = js.native
@@ -25,12 +25,12 @@ trait KosModel[T] extends js.Object {
   ] = js.native
   var initial: T = js.native
   var namespace: String = js.native
-  var reducers: StringDictionary[js.Function2[/* state */ T, /* hasPayload */ AnonPayload[T], Unit]] = js.native
+  var reducers: StringDictionary[js.Function2[/* state */ T, /* hasPayload */ Payload[T], Unit]] = js.native
   var setup: js.UndefOr[
     js.Function3[
       /* dispatch */ KosDispatch, 
       /* getState */ GetKosState[T], 
-      /* action */ AnonPayloadAnonParam, 
+      /* action */ PayloadParam, 
       Unit
     ]
   ] = js.native
@@ -43,13 +43,13 @@ object KosModel {
       js.Function3[
         /* dispatch */ js.UndefOr[KosDispatch], 
         /* getState */ js.UndefOr[GetKosState[T]], 
-        /* action */ js.UndefOr[AnonPayload[T]], 
+        /* action */ js.UndefOr[Payload[T]], 
         Unit
       ]
     ],
     initial: T,
     namespace: String,
-    reducers: StringDictionary[js.Function2[/* state */ T, /* hasPayload */ AnonPayload[T], Unit]]
+    reducers: StringDictionary[js.Function2[/* state */ T, /* hasPayload */ Payload[T], Unit]]
   ): KosModel[T] = {
     val __obj = js.Dynamic.literal(asyncs = asyncs.asInstanceOf[js.Any], initial = initial.asInstanceOf[js.Any], namespace = namespace.asInstanceOf[js.Any], reducers = reducers.asInstanceOf[js.Any])
     __obj.asInstanceOf[KosModel[T]]
@@ -66,7 +66,7 @@ object KosModel {
           js.Function3[
             /* dispatch */ js.UndefOr[KosDispatch], 
             /* getState */ js.UndefOr[GetKosState[T]], 
-            /* action */ js.UndefOr[AnonPayload[T]], 
+            /* action */ js.UndefOr[Payload[T]], 
             Unit
           ]
         ]
@@ -88,7 +88,7 @@ object KosModel {
         ret
     }
     @scala.inline
-    def withReducers(value: StringDictionary[js.Function2[/* state */ T, /* hasPayload */ AnonPayload[T], Unit]]): Self[T] = {
+    def withReducers(value: StringDictionary[js.Function2[/* state */ T, /* hasPayload */ Payload[T], Unit]]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("reducers")(value.asInstanceOf[js.Any])
         ret
@@ -109,7 +109,7 @@ object KosModel {
     }
     @scala.inline
     def withSetup(
-      value: (/* dispatch */ KosDispatch, /* getState */ GetKosState[T], /* action */ AnonPayloadAnonParam) => Unit
+      value: (/* dispatch */ KosDispatch, /* getState */ GetKosState[T], /* action */ PayloadParam) => Unit
     ): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("setup")(js.Any.fromFunction3(value))

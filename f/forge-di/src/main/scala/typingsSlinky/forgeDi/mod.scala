@@ -1,6 +1,7 @@
 package typingsSlinky.forgeDi
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.forgeDi.anon.Partialdefault
 import typingsSlinky.forgeDi.configMod.Config
 import typingsSlinky.forgeDi.constructorMod.Constructor
 import scala.scalajs.js

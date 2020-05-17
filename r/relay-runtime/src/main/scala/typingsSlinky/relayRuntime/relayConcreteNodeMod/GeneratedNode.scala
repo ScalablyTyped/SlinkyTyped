@@ -1,11 +1,8 @@
 package typingsSlinky.relayRuntime.relayConcreteNodeMod
 
-import typingsSlinky.relayRuntime.normalizationNodeMod.NormalizationOperation
-import typingsSlinky.relayRuntime.normalizationNodeMod.NormalizationSelection
-import typingsSlinky.relayRuntime.readerNodeMod.ReaderArgumentDefinition
+import typingsSlinky.relayRuntime.normalizationNodeMod.NormalizationSplitOperation
 import typingsSlinky.relayRuntime.readerNodeMod.ReaderFragment
-import typingsSlinky.relayRuntime.readerNodeMod.ReaderSelection
-import typingsSlinky.relayRuntime.relayRuntimeStrings.InlineDataFragment
+import typingsSlinky.relayRuntime.readerNodeMod.ReaderInlineDataFragment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,36 +17,12 @@ trait GeneratedNode extends js.Object
 
 object GeneratedNode {
   @scala.inline
-  def ConcreteRequest(
-    fragment: ReaderFragment,
-    kind: String,
-    operation: NormalizationOperation,
-    params: RequestParameters
-  ): GeneratedNode = {
-    val __obj = js.Dynamic.literal(fragment = fragment.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], operation = operation.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any])
-    __obj.asInstanceOf[GeneratedNode]
-  }
+  implicit def apply(value: ConcreteRequest): GeneratedNode = value.asInstanceOf[GeneratedNode]
   @scala.inline
-  def ReaderFragment(
-    argumentDefinitions: js.Array[ReaderArgumentDefinition],
-    kind: String,
-    name: String,
-    selections: js.Array[ReaderSelection],
-    `type`: String
-  ): GeneratedNode = {
-    val __obj = js.Dynamic.literal(argumentDefinitions = argumentDefinitions.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[GeneratedNode]
-  }
+  implicit def apply(value: NormalizationSplitOperation): GeneratedNode = value.asInstanceOf[GeneratedNode]
   @scala.inline
-  def ReaderInlineDataFragment(kind: InlineDataFragment, name: String): GeneratedNode = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[GeneratedNode]
-  }
+  implicit def apply(value: ReaderFragment): GeneratedNode = value.asInstanceOf[GeneratedNode]
   @scala.inline
-  def NormalizationSplitOperation(kind: String, name: String, selections: js.Array[NormalizationSelection]): GeneratedNode = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
-    __obj.asInstanceOf[GeneratedNode]
-  }
+  implicit def apply(value: ReaderInlineDataFragment): GeneratedNode = value.asInstanceOf[GeneratedNode]
 }
 

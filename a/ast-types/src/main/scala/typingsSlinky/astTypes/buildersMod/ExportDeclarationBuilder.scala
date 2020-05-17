@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonDefault
+import typingsSlinky.astTypes.anon.Default
 import typingsSlinky.astTypes.kindsMod.DeclarationKind
 import typingsSlinky.astTypes.kindsMod.ExportBatchSpecifierKind
 import typingsSlinky.astTypes.kindsMod.ExportSpecifierKind
@@ -49,6 +49,6 @@ trait ExportDeclarationBuilder extends js.Object {
     specifiers: js.Array[ExportSpecifierKind | ExportBatchSpecifierKind],
     source: LiteralKind
   ): ExportDeclaration = js.native
-  def from(params: AnonDefault): ExportDeclaration = js.native
+  def from(params: Default): ExportDeclaration = js.native
 }
 

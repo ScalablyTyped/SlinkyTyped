@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait Transport extends js.Object
 
+object Transport {
+  @scala.inline
+  implicit def apply(value: SocketTransport): Transport = value.asInstanceOf[Transport]
+  @scala.inline
+  implicit def apply(value: TransportKind): Transport = value.asInstanceOf[Transport]
+}
+

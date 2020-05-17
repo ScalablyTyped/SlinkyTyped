@@ -1,7 +1,7 @@
 package typingsSlinky.qtip2.QTip2
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.qtip2.JQuery
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,7 +37,7 @@ object QTipOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContentFunction2(value: (/* event */ Event_, /* api */ Api) => Unit): Self = {
+    def withContentFunction2(value: (/* event */ Event, /* api */ Api) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content")(js.Any.fromFunction2(value))
         ret

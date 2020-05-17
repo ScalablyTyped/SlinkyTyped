@@ -1,6 +1,6 @@
 package typingsSlinky.blueprintjsCore.mod
 
-import typingsSlinky.blueprintjsCore.ValidationMapIPortalConte
+import typingsSlinky.blueprintjsCore.anon.ValidationMapIPortalConte
 import typingsSlinky.blueprintjsCore.portalMod.IPortalProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,5 +1,26 @@
 package typingsSlinky.baconjs
 
+import typingsSlinky.baconjs.anon.Fn0
+import typingsSlinky.baconjs.anon.Fn1
+import typingsSlinky.baconjs.anon.Fn10
+import typingsSlinky.baconjs.anon.Fn2
+import typingsSlinky.baconjs.anon.Fn3
+import typingsSlinky.baconjs.anon.Fn4
+import typingsSlinky.baconjs.anon.Fn5
+import typingsSlinky.baconjs.anon.Fn6
+import typingsSlinky.baconjs.anon.Fn7
+import typingsSlinky.baconjs.anon.Fn8
+import typingsSlinky.baconjs.anon.Fn9
+import typingsSlinky.baconjs.anon.FnCall
+import typingsSlinky.baconjs.anon.FnCallF
+import typingsSlinky.baconjs.anon.FnCallFXs
+import typingsSlinky.baconjs.anon.FnCallFnMe
+import typingsSlinky.baconjs.anon.FnCallX
+import typingsSlinky.baconjs.anon.FnCallXXs
+import typingsSlinky.baconjs.anon.FnCallXs
+import typingsSlinky.baconjs.anon.FnCallXsF
+import typingsSlinky.baconjs.anon.FnCallXsSeedF
+import typingsSlinky.baconjs.anon.FnCallXsX
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

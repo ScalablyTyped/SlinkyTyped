@@ -1,6 +1,6 @@
 package typingsSlinky.consoleUi.mod
 
-import typingsSlinky.consoleUi.AnonCi
+import typingsSlinky.consoleUi.anon.Ci
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ import scala.scalajs.js.annotation._
 @JSImport("console-ui", JSImport.Namespace)
 @js.native
 class ^ () extends UI {
-  def this(options: AnonCi) = this()
+  def this(options: Ci) = this()
 }
 

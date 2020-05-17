@@ -1,6 +1,5 @@
 package typingsSlinky.angularCommon.httpHttpMod
 
-import typingsSlinky.angularCommon.AnonError
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +10,7 @@ import scala.scalajs.js.annotation._
 class HttpErrorResponse protected ()
   extends HttpResponseBase
      with Error {
-  def this(init: AnonError) = this()
+  def this(init: typingsSlinky.angularCommon.anon.Error) = this()
   val error: js.Any | Null = js.native
 }
 

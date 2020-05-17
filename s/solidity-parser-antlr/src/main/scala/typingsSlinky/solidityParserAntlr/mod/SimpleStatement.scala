@@ -12,22 +12,8 @@ trait SimpleStatement extends Statement
 
 object SimpleStatement {
   @scala.inline
-  def VariableDeclarationStatement(
-    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.VariableDeclarationStatement,
-    variables: js.Array[ASTNode]
-  ): SimpleStatement = {
-    val __obj = js.Dynamic.literal(variables = variables.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SimpleStatement]
-  }
+  implicit def apply(value: ExpressionStatement): SimpleStatement = value.asInstanceOf[SimpleStatement]
   @scala.inline
-  def ExpressionStatement(
-    expression: Expression,
-    `type`: typingsSlinky.solidityParserAntlr.solidityParserAntlrStrings.ExpressionStatement
-  ): SimpleStatement = {
-    val __obj = js.Dynamic.literal(expression = expression.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SimpleStatement]
-  }
+  implicit def apply(value: VariableDeclarationStatement): SimpleStatement = value.asInstanceOf[SimpleStatement]
 }
 

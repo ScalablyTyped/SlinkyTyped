@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait HtmlOptions extends js.Object {
+trait HtmlOptions extends Html {
   var filename: js.UndefOr[String] = js.native
   var inject: js.UndefOr[Boolean] = js.native
   var template: js.UndefOr[String] = js.native

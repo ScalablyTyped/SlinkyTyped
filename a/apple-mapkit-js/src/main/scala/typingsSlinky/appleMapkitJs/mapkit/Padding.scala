@@ -7,26 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * The values that define content padding within the map view frame.
   */
-@JSGlobal("mapkit.Padding")
 @js.native
-/**
-  * Creates a padding object, and initializes its inset margin properties.
-  *
-  * @param top The amount of padding, in CSS pixels, to inset the map from
-  * the top edge.
-  * @param right The amount of padding, in CSS pixels, to inset the map from
-  * the right edge.
-  * @param bottom The amount of padding, in CSS pixels, to inset the map from
-  * the left edge.
-  * @param left The amount of padding, in CSS pixels, to inset the map from
-  * the left edge.
-  */
-class Padding () extends js.Object {
-  def this(options: PaddingConstructorOptions) = this()
-  def this(top: Double) = this()
-  def this(top: Double, right: Double) = this()
-  def this(top: Double, right: Double, bottom: Double) = this()
-  def this(top: Double, right: Double, bottom: Double, left: Double) = this()
+trait Padding extends js.Object {
   /**
     * The amount of padding, in CSS pixels, to inset the map from the bottom edge.
     */
@@ -43,5 +25,45 @@ class Padding () extends js.Object {
     * The amount of padding, in CSS pixels, to inset the map from the top edge.
     */
   var top: Double = js.native
+}
+
+object Padding {
+  @scala.inline
+  def apply(bottom: Double, left: Double, right: Double, top: Double): Padding = {
+    val __obj = js.Dynamic.literal(bottom = bottom.asInstanceOf[js.Any], left = left.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any], top = top.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Padding]
+  }
+  @scala.inline
+  implicit class PaddingOps[Self <: Padding] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBottom(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bottom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLeft(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTop(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("top")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

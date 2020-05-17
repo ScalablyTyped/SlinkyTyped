@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Calls
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Controls the removal of an app from the lock screen. */
+@JSGlobal("Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs")
+@js.native
+abstract class LockScreenCallEndRequestedEventArgs ()
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Calls.LockScreenCallEndRequestedEventArgs
+

@@ -1,23 +1,22 @@
 package typingsSlinky.ariClient.mod
 
-import typingsSlinky.ariClient.AnonAppArgsSnoopId
-import typingsSlinky.ariClient.AnonAppString
-import typingsSlinky.ariClient.AnonBefore
-import typingsSlinky.ariClient.AnonDirectionString
-import typingsSlinky.ariClient.AnonEncapsulation
-import typingsSlinky.ariClient.AnonEndpointString
-import typingsSlinky.ariClient.AnonExtension
-import typingsSlinky.ariClient.AnonFormat
-import typingsSlinky.ariClient.AnonFormats
-import typingsSlinky.ariClient.AnonLabel
-import typingsSlinky.ariClient.AnonMohClassString
-import typingsSlinky.ariClient.AnonOffsetms
-import typingsSlinky.ariClient.AnonPlaybackId
-import typingsSlinky.ariClient.AnonReasonString
-import typingsSlinky.ariClient.AnonTimeout
-import typingsSlinky.ariClient.AnonValue
-import typingsSlinky.ariClient.AnonVariable
-import typingsSlinky.ariClient.AnonWhisper
+import typingsSlinky.ariClient.anon.AppArgsSnoopId
+import typingsSlinky.ariClient.anon.AppString
+import typingsSlinky.ariClient.anon.Before
+import typingsSlinky.ariClient.anon.DirectionString
+import typingsSlinky.ariClient.anon.Encapsulation
+import typingsSlinky.ariClient.anon.EndpointString
+import typingsSlinky.ariClient.anon.Extension
+import typingsSlinky.ariClient.anon.Format
+import typingsSlinky.ariClient.anon.Formats
+import typingsSlinky.ariClient.anon.Label
+import typingsSlinky.ariClient.anon.MohClassString
+import typingsSlinky.ariClient.anon.Offsetms
+import typingsSlinky.ariClient.anon.PlaybackId
+import typingsSlinky.ariClient.anon.ReasonString
+import typingsSlinky.ariClient.anon.Timeout
+import typingsSlinky.ariClient.anon.Value
+import typingsSlinky.ariClient.anon.Whisper
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,58 +38,58 @@ trait Channel extends Resource {
   def answer(callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def continueInDialplan(): js.Promise[Unit] = js.native
   def continueInDialplan(callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def continueInDialplan(params: AnonLabel): js.Promise[Unit] = js.native
-  def continueInDialplan(params: AnonLabel, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def create(params: AnonFormats): js.Promise[Channel] = js.native
-  def create(params: AnonFormats, callback: js.Function2[/* err */ js.Error, /* channel */ this.type, Unit]): Unit = js.native
+  def continueInDialplan(params: Label): js.Promise[Unit] = js.native
+  def continueInDialplan(params: Label, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def create(params: Formats): js.Promise[Channel] = js.native
+  def create(params: Formats, callback: js.Function2[/* err */ js.Error, /* channel */ this.type, Unit]): Unit = js.native
   def dial(): js.Promise[Unit] = js.native
   def dial(callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def dial(params: AnonTimeout): js.Promise[Unit] = js.native
-  def dial(params: AnonTimeout, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def externalMedia(params: AnonEncapsulation): js.Promise[Channel] = js.native
-  def externalMedia(
-    params: AnonEncapsulation,
-    callback: js.Function2[/* err */ js.Error, /* channel */ this.type, Unit]
-  ): Unit = js.native
+  def dial(params: Timeout): js.Promise[Unit] = js.native
+  def dial(params: Timeout, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def externalMedia(params: Encapsulation): js.Promise[Channel] = js.native
+  def externalMedia(params: Encapsulation, callback: js.Function2[/* err */ js.Error, /* channel */ this.type, Unit]): Unit = js.native
   def get(): js.Promise[Channel] = js.native
   def get(callback: js.Function2[/* err */ js.Error, /* channel */ this.type, Unit]): Unit = js.native
-  def getChannelVar(params: AnonVariable): js.Promise[Variable] = js.native
-  def getChannelVar(params: AnonVariable, callback: js.Function2[/* err */ js.Error, /* variable */ Variable, Unit]): Unit = js.native
+  def getChannelVar(params: typingsSlinky.ariClient.anon.Variable): js.Promise[Variable] = js.native
+  def getChannelVar(
+    params: typingsSlinky.ariClient.anon.Variable,
+    callback: js.Function2[/* err */ js.Error, /* variable */ Variable, Unit]
+  ): Unit = js.native
   def hangup(): js.Promise[Unit] = js.native
   def hangup(callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def hangup(params: AnonReasonString): js.Promise[Unit] = js.native
-  def hangup(params: AnonReasonString, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def hangup(params: ReasonString): js.Promise[Unit] = js.native
+  def hangup(params: ReasonString, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def hold(): js.Promise[Unit] = js.native
   def hold(callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def list(): js.Promise[js.Array[Channel]] = js.native
   /* Methods */
   def list(callback: js.Function2[/* err */ js.Error, /* channels */ js.Array[this.type], Unit]): Unit = js.native
-  def move(params: AnonAppString): js.Promise[Unit] = js.native
-  def move(params: AnonAppString, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def move(params: AppString): js.Promise[Unit] = js.native
+  def move(params: AppString, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def mute(): js.Promise[Unit] = js.native
   def mute(callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def mute(params: AnonDirectionString): js.Promise[Unit] = js.native
-  def mute(params: AnonDirectionString, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def originate(params: AnonExtension): js.Promise[Channel] = js.native
-  def originate(params: AnonExtension, callback: js.Function2[/* err */ js.Error, /* channel */ this.type, Unit]): Unit = js.native
-  def originateWithId(params: AnonExtension): js.Promise[Channel] = js.native
-  def originateWithId(params: AnonExtension, callback: js.Function2[/* err */ js.Error, /* channel */ this.type, Unit]): Unit = js.native
-  def play(params: AnonOffsetms, playback: Playback): js.Promise[Playback] = js.native
+  def mute(params: DirectionString): js.Promise[Unit] = js.native
+  def mute(params: DirectionString, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def originate(params: Extension): js.Promise[Channel] = js.native
+  def originate(params: Extension, callback: js.Function2[/* err */ js.Error, /* channel */ this.type, Unit]): Unit = js.native
+  def originateWithId(params: Extension): js.Promise[Channel] = js.native
+  def originateWithId(params: Extension, callback: js.Function2[/* err */ js.Error, /* channel */ this.type, Unit]): Unit = js.native
+  def play(params: Offsetms, playback: Playback): js.Promise[Playback] = js.native
   def play(
-    params: AnonOffsetms,
+    params: Offsetms,
     playback: Playback,
     callback: js.Function2[/* err */ js.Error, /* playback */ Playback, Unit]
   ): Unit = js.native
-  def playWithId(params: AnonPlaybackId): js.Promise[Playback] = js.native
-  def playWithId(params: AnonPlaybackId, callback: js.Function2[/* err */ js.Error, /* playback */ Playback, Unit]): Unit = js.native
-  def record(params: AnonFormat, recording: LiveRecording): js.Promise[LiveRecording] = js.native
+  def playWithId(params: PlaybackId): js.Promise[Playback] = js.native
+  def playWithId(params: PlaybackId, callback: js.Function2[/* err */ js.Error, /* playback */ Playback, Unit]): Unit = js.native
+  def record(params: Format, recording: LiveRecording): js.Promise[LiveRecording] = js.native
   def record(
-    params: AnonFormat,
+    params: Format,
     recording: LiveRecording,
     callback: js.Function2[/* err */ js.Error, /* liverecording */ LiveRecording, Unit]
   ): Unit = js.native
-  def redirect(params: AnonEndpointString): js.Promise[Unit] = js.native
-  def redirect(params: AnonEndpointString, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def redirect(params: EndpointString): js.Promise[Unit] = js.native
+  def redirect(params: EndpointString, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def ring(): js.Promise[Unit] = js.native
   def ring(callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def ringStop(): js.Promise[Unit] = js.native
@@ -99,25 +98,22 @@ trait Channel extends Resource {
   def rtpstatistics(callback: js.Function2[/* err */ js.Error, /* rtpstat */ RTPstat, Unit]): Unit = js.native
   def sendDTMF(): js.Promise[Unit] = js.native
   def sendDTMF(callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def sendDTMF(params: AnonBefore): js.Promise[Unit] = js.native
-  def sendDTMF(params: AnonBefore, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def setChannelVar(params: AnonValue): js.Promise[Unit] = js.native
-  def setChannelVar(params: AnonValue, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def snoopChannel(params: AnonWhisper, snoopChannel: Channel): js.Promise[Channel] = js.native
+  def sendDTMF(params: Before): js.Promise[Unit] = js.native
+  def sendDTMF(params: Before, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def setChannelVar(params: Value): js.Promise[Unit] = js.native
+  def setChannelVar(params: Value, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def snoopChannel(params: Whisper, snoopChannel: Channel): js.Promise[Channel] = js.native
   def snoopChannel(
-    params: AnonWhisper,
+    params: Whisper,
     snoopChannel: Channel,
     callback: js.Function2[/* err */ js.Error, /* channel */ this.type, Unit]
   ): Unit = js.native
-  def snoopChannelWithId(params: AnonAppArgsSnoopId): js.Promise[Channel] = js.native
-  def snoopChannelWithId(
-    params: AnonAppArgsSnoopId,
-    callback: js.Function2[/* err */ js.Error, /* channel */ this.type, Unit]
-  ): Unit = js.native
+  def snoopChannelWithId(params: AppArgsSnoopId): js.Promise[Channel] = js.native
+  def snoopChannelWithId(params: AppArgsSnoopId, callback: js.Function2[/* err */ js.Error, /* channel */ this.type, Unit]): Unit = js.native
   def startMoh(): js.Promise[Unit] = js.native
   def startMoh(callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def startMoh(params: AnonMohClassString): js.Promise[Unit] = js.native
-  def startMoh(params: AnonMohClassString, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def startMoh(params: MohClassString): js.Promise[Unit] = js.native
+  def startMoh(params: MohClassString, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def startSilence(): js.Promise[Unit] = js.native
   def startSilence(callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def stopMoh(): js.Promise[Unit] = js.native
@@ -128,7 +124,7 @@ trait Channel extends Resource {
   def unhold(callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   def unmute(): js.Promise[Unit] = js.native
   def unmute(callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def unmute(params: AnonDirectionString): js.Promise[Unit] = js.native
-  def unmute(params: AnonDirectionString, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def unmute(params: DirectionString): js.Promise[Unit] = js.native
+  def unmute(params: DirectionString, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
 }
 

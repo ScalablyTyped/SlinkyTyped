@@ -94,7 +94,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.minecraftScriptingTypesShared.minecraftScriptingTypesSharedStrings.minecraftColontrackingemitter
   - typingsSlinky.minecraftScriptingTypesShared.minecraftScriptingTypesSharedStrings.minecraftColonwitchspell
 */
-trait MinecraftParticleEffect extends js.Object
+trait MinecraftParticleEffect extends ParticleEffect
 
 object MinecraftParticleEffect {
   /**

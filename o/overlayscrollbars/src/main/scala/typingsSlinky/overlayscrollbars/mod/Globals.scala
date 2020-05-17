@@ -1,8 +1,8 @@
 package typingsSlinky.overlayscrollbars.mod
 
-import typingsSlinky.overlayscrollbars.AnonI
-import typingsSlinky.overlayscrollbars.AnonXBoolean
-import typingsSlinky.overlayscrollbars.AnonXNumber
+import typingsSlinky.overlayscrollbars.anon.I
+import typingsSlinky.overlayscrollbars.anon.XBoolean
+import typingsSlinky.overlayscrollbars.anon.XNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +12,12 @@ trait Globals extends js.Object {
   var autoUpdateLoop: Boolean = js.native
   var autoUpdateRecommended: Boolean = js.native
   var cssCalc: String | Null = js.native
-  var nativeScrollbarIsOverlaid: AnonXBoolean = js.native
-  var nativeScrollbarSize: AnonXNumber = js.native
+  var nativeScrollbarIsOverlaid: XBoolean = js.native
+  var nativeScrollbarSize: XNumber = js.native
   var nativeScrollbarStyling: Boolean = js.native
-  var overlayScrollbarDummySize: AnonXNumber = js.native
+  var overlayScrollbarDummySize: XNumber = js.native
   var restrictedMeasuring: Boolean = js.native
-  var rtlScrollBehavior: AnonI = js.native
+  var rtlScrollBehavior: I = js.native
   var supportMutationObserver: Boolean = js.native
   var supportPassiveEvents: Boolean = js.native
   var supportResizeObserver: Boolean = js.native
@@ -30,12 +30,12 @@ object Globals {
   def apply(
     autoUpdateLoop: Boolean,
     autoUpdateRecommended: Boolean,
-    nativeScrollbarIsOverlaid: AnonXBoolean,
-    nativeScrollbarSize: AnonXNumber,
+    nativeScrollbarIsOverlaid: XBoolean,
+    nativeScrollbarSize: XNumber,
     nativeScrollbarStyling: Boolean,
-    overlayScrollbarDummySize: AnonXNumber,
+    overlayScrollbarDummySize: XNumber,
     restrictedMeasuring: Boolean,
-    rtlScrollBehavior: AnonI,
+    rtlScrollBehavior: I,
     supportMutationObserver: Boolean,
     supportPassiveEvents: Boolean,
     supportResizeObserver: Boolean,
@@ -64,13 +64,13 @@ object Globals {
         ret
     }
     @scala.inline
-    def withNativeScrollbarIsOverlaid(value: AnonXBoolean): Self = {
+    def withNativeScrollbarIsOverlaid(value: XBoolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nativeScrollbarIsOverlaid")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withNativeScrollbarSize(value: AnonXNumber): Self = {
+    def withNativeScrollbarSize(value: XNumber): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nativeScrollbarSize")(value.asInstanceOf[js.Any])
         ret
@@ -82,7 +82,7 @@ object Globals {
         ret
     }
     @scala.inline
-    def withOverlayScrollbarDummySize(value: AnonXNumber): Self = {
+    def withOverlayScrollbarDummySize(value: XNumber): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overlayScrollbarDummySize")(value.asInstanceOf[js.Any])
         ret
@@ -94,7 +94,7 @@ object Globals {
         ret
     }
     @scala.inline
-    def withRtlScrollBehavior(value: AnonI): Self = {
+    def withRtlScrollBehavior(value: I): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rtlScrollBehavior")(value.asInstanceOf[js.Any])
         ret

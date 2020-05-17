@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobile.mod
 
-import typingsSlinky.antdMobile.AnonEnableDragHandle
+import typingsSlinky.antdMobile.anon.EnableDragHandle
 import typingsSlinky.antdMobile.drawerMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +14,6 @@ class Drawer () extends default
 @JSImport("antd-mobile", "Drawer")
 @js.native
 object Drawer extends js.Object {
-  var defaultProps: AnonEnableDragHandle = js.native
+  var defaultProps: EnableDragHandle = js.native
 }
 

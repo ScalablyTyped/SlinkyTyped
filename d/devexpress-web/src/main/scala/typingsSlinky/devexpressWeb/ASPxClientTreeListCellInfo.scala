@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Contains information on a tree list cell.
   */
-@JSGlobal("ASPxClientTreeListCellInfo")
 @js.native
-class ASPxClientTreeListCellInfo () extends js.Object {
+trait ASPxClientTreeListCellInfo extends js.Object {
   /**
     * Gets the data column that contains the cell currently being processed.
     */
@@ -18,5 +17,33 @@ class ASPxClientTreeListCellInfo () extends js.Object {
     * Gets the processed node's key value.
     */
   var nodeKey: String = js.native
+}
+
+object ASPxClientTreeListCellInfo {
+  @scala.inline
+  def apply(column: ASPxClientTreeListColumn, nodeKey: String): ASPxClientTreeListCellInfo = {
+    val __obj = js.Dynamic.literal(column = column.asInstanceOf[js.Any], nodeKey = nodeKey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientTreeListCellInfo]
+  }
+  @scala.inline
+  implicit class ASPxClientTreeListCellInfoOps[Self <: ASPxClientTreeListCellInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumn(value: ASPxClientTreeListColumn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("column")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNodeKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -3,9 +3,9 @@ package typingsSlinky.emberData.mod.DS
 import typingsSlinky.ember.mod.Ember.NativeArray
 import typingsSlinky.ember.mod.default.ComputedProperty
 import typingsSlinky.ember.mod.default.Map
-import typingsSlinky.emberData.AnonAdapterOptions
-import typingsSlinky.emberData.AnonIncludeId
-import typingsSlinky.emberData.TypeofModel
+import typingsSlinky.emberData.anon.AdapterOptions
+import typingsSlinky.emberData.anon.IncludeId
+import typingsSlinky.emberData.anon.TypeofModel
 import typingsSlinky.emberData.emberDataStrings.boolean
 import typingsSlinky.emberData.emberDataStrings.date
 import typingsSlinky.emberData.emberDataStrings.number
@@ -154,7 +154,7 @@ class Model () extends default {
     * Same as `deleteRecord`, but saves the record immediately.
     */
   def destroyRecord(): Promise[this.type] = js.native
-  def destroyRecord(options: AnonAdapterOptions): Promise[this.type] = js.native
+  def destroyRecord(options: AdapterOptions): Promise[this.type] = js.native
   /**
     * Fired when a new record is commited to the server.
     */
@@ -194,7 +194,7 @@ class Model () extends default {
     * Reload the record from the adapter.
     */
   def reload(): Promise[this.type] = js.native
-  def reload(options: AnonAdapterOptions): Promise[this.type] = js.native
+  def reload(options: AdapterOptions): Promise[this.type] = js.native
   /**
     * If the model `hasDirtyAttributes` this function will discard any unsaved
     * changes. If the model `isNew` it will be removed from the store.
@@ -209,19 +209,19 @@ class Model () extends default {
     * external source via the adapter.
     */
   def save(): Promise[this.type] = js.native
-  def save(options: AnonAdapterOptions): Promise[this.type] = js.native
+  def save(options: AdapterOptions): Promise[this.type] = js.native
   /**
     * Create a JSON representation of the record, using the serialization
     * strategy of the store's adapter.
     */
   def serialize(): js.Object = js.native
-  def serialize(options: AnonIncludeId): js.Object = js.native
+  def serialize(options: IncludeId): js.Object = js.native
   /**
     * Use [DS.JSONSerializer](DS.JSONSerializer.html) to
     * get the JSON representation of a record.
     */
   def toJSON(): js.Object = js.native
-  def toJSON(options: AnonIncludeId): js.Object = js.native
+  def toJSON(options: IncludeId): js.Object = js.native
   /**
     * Unloads the record from the store. This will cause the record to be destroyed and freed up for garbage collection.
     */

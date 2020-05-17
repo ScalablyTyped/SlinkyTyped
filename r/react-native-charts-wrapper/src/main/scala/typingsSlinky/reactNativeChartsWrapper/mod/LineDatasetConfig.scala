@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeChartsWrapper.mod
 
-import typingsSlinky.reactNativeChartsWrapper.AnonPhase
+import typingsSlinky.reactNativeChartsWrapper.anon.Phase
 import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.CUBIC_BEZIER
 import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.HORIZONTAL_BEZIER
 import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.LINEAR
@@ -19,7 +19,7 @@ trait LineDatasetConfig
   var circleColors: js.UndefOr[js.Array[Color]] = js.native
   var circleHoleColor: js.UndefOr[Color] = js.native
   var circleRadius: js.UndefOr[Double] = js.native
-  var dashedLine: js.UndefOr[AnonPhase] = js.native
+  var dashedLine: js.UndefOr[Phase] = js.native
   var drawCircleHole: js.UndefOr[Boolean] = js.native
   var drawCircles: js.UndefOr[Boolean] = js.native
   var drawCubicIntensity: js.UndefOr[Double] = js.native
@@ -87,7 +87,7 @@ object LineDatasetConfig {
         ret
     }
     @scala.inline
-    def withDashedLine(value: AnonPhase): Self = {
+    def withDashedLine(value: Phase): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dashedLine")(value.asInstanceOf[js.Any])
         ret

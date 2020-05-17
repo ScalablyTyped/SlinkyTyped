@@ -1,6 +1,6 @@
 package typingsSlinky.nano.mod
 
-import typingsSlinky.nano.AnonDisable
+import typingsSlinky.nano.anon.Disable
 import typingsSlinky.request.mod.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait DatabaseScope extends js.Object {
-  var replication: AnonDisable = js.native
+  var replication: Disable = js.native
   // http://docs.couchdb.org/en/latest/api/database/changes.html#get--db-_changes
   def changes(name: String): js.Promise[DatabaseChangesResponse] = js.native
   def changes(name: String, callback: Callback[DatabaseChangesResponse]): js.Promise[DatabaseChangesResponse] = js.native

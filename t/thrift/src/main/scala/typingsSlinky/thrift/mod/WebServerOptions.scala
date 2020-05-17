@@ -1,19 +1,19 @@
 package typingsSlinky.thrift.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.thrift.AnonHandler
+import typingsSlinky.thrift.anon.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait WebServerOptions[TProcessor, THandler] extends js.Object {
-  var services: StringDictionary[AnonHandler[TProcessor, THandler]] = js.native
+  var services: StringDictionary[Handler[TProcessor, THandler]] = js.native
 }
 
 object WebServerOptions {
   @scala.inline
-  def apply[TProcessor, THandler](services: StringDictionary[AnonHandler[TProcessor, THandler]]): WebServerOptions[TProcessor, THandler] = {
+  def apply[TProcessor, THandler](services: StringDictionary[Handler[TProcessor, THandler]]): WebServerOptions[TProcessor, THandler] = {
     val __obj = js.Dynamic.literal(services = services.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebServerOptions[TProcessor, THandler]]
   }
@@ -24,7 +24,7 @@ object WebServerOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): (Self[TProcessor, THandler]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[TProcessor, THandler]) with Other]
     @scala.inline
-    def withServices(value: StringDictionary[AnonHandler[TProcessor, THandler]]): Self[TProcessor, THandler] = {
+    def withServices(value: StringDictionary[Handler[TProcessor, THandler]]): Self[TProcessor, THandler] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("services")(value.asInstanceOf[js.Any])
         ret

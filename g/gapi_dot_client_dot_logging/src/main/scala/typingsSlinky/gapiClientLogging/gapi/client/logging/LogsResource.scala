@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientLogging.gapi.client.logging
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientLogging.AnonBearertoken
-import typingsSlinky.gapiClientLogging.AnonFields
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientLogging.anon.Bearertoken
+import typingsSlinky.gapiClientLogging.anon.Fields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,14 +13,14 @@ trait LogsResource extends js.Object {
     * Deletes all the log entries in a log. The log reappears if it receives new entries. Log entries written shortly before the delete operation might not
     * be deleted.
     */
-  def delete(request: AnonFields): Request_[js.Object] = js.native
+  def delete(request: Fields): Request[js.Object] = js.native
   /** Lists the logs in projects, organizations, folders, or billing accounts. Only logs that have entries are listed. */
-  def list(request: AnonBearertoken): Request_[ListLogsResponse] = js.native
+  def list(request: Bearertoken): Request[ListLogsResponse] = js.native
 }
 
 object LogsResource {
   @scala.inline
-  def apply(delete: AnonFields => Request_[js.Object], list: AnonBearertoken => Request_[ListLogsResponse]): LogsResource = {
+  def apply(delete: Fields => Request[js.Object], list: Bearertoken => Request[ListLogsResponse]): LogsResource = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[LogsResource]
   }
@@ -31,13 +31,13 @@ object LogsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDelete(value: AnonFields => Request_[js.Object]): Self = {
+    def withDelete(value: Fields => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonBearertoken => Request_[ListLogsResponse]): Self = {
+    def withList(value: Bearertoken => Request[ListLogsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

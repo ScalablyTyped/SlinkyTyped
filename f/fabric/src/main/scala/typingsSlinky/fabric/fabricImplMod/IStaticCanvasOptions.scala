@@ -1,7 +1,7 @@
 package typingsSlinky.fabric.fabricImplMod
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
-import typingsSlinky.fabric.AnonTl
+import typingsSlinky.fabric.anon.Tl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -144,7 +144,7 @@ trait IStaticCanvasOptions extends js.Object {
   	 * The coordinates get updated with @method calcViewportBoundaries.
   	 * @memberOf fabric.StaticCanvas.prototype
   	 */
-  var vptCoords: js.UndefOr[AnonTl] = js.native
+  var vptCoords: js.UndefOr[Tl] = js.native
 }
 
 object IStaticCanvasOptions {
@@ -376,7 +376,7 @@ object IStaticCanvasOptions {
         ret
     }
     @scala.inline
-    def withVptCoords(value: AnonTl): Self = {
+    def withVptCoords(value: Tl): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("vptCoords")(value.asInstanceOf[js.Any])
         ret

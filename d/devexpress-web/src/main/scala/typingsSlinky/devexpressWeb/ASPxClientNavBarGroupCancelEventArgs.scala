@@ -7,18 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for cancellable events which concern manipulations on groups.
   */
-@JSGlobal("ASPxClientNavBarGroupCancelEventArgs")
 @js.native
-class ASPxClientNavBarGroupCancelEventArgs protected () extends ASPxClientProcessingModeCancelEventArgs {
-  /**
-    * Initializes a new object of the ASPxClientNavBarGroupCancelEventArgs type with the specified settings.
-    * @param processOnServer true to process the event on the server side; false to completely handle it on the client side.
-    * @param group An ASPxClientNavBarGroup object that represents a group related to the event.
-    */
-  def this(processOnServer: Boolean, group: ASPxClientNavBarGroup) = this()
+trait ASPxClientNavBarGroupCancelEventArgs extends ASPxClientProcessingModeCancelEventArgs {
   /**
     * Gets the group object related to the event.
     */
   var group: ASPxClientNavBarGroup = js.native
+}
+
+object ASPxClientNavBarGroupCancelEventArgs {
+  @scala.inline
+  def apply(cancel: Boolean, group: ASPxClientNavBarGroup, processOnServer: Boolean): ASPxClientNavBarGroupCancelEventArgs = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], group = group.asInstanceOf[js.Any], processOnServer = processOnServer.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientNavBarGroupCancelEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientNavBarGroupCancelEventArgsOps[Self <: ASPxClientNavBarGroupCancelEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGroup(value: ASPxClientNavBarGroup): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("group")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

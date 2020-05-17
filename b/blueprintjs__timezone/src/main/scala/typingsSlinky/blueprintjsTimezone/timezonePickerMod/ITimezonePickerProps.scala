@@ -3,8 +3,8 @@ package typingsSlinky.blueprintjsTimezone.timezonePickerMod
 import typingsSlinky.blueprintjsCore.inputGroupMod.IInputGroupProps
 import typingsSlinky.blueprintjsCore.propsMod.HTMLInputProps
 import typingsSlinky.blueprintjsCore.propsMod.IProps
-import typingsSlinky.blueprintjsTimezone.PartialIButtonProps
-import typingsSlinky.blueprintjsTimezone.PartialIPopoverProps
+import typingsSlinky.blueprintjsTimezone.anon.PartialIButtonProps
+import typingsSlinky.blueprintjsTimezone.anon.PartialIPopoverProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

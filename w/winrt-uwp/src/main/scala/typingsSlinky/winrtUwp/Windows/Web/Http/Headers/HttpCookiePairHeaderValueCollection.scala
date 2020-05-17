@@ -1,18 +1,17 @@
 package typingsSlinky.winrtUwp.Windows.Web.Http.Headers
 
 import typingsSlinky.std.Array
-import typingsSlinky.winrtUwp.AnonIndex
-import typingsSlinky.winrtUwp.AnonItemsHttpCookiePairHeaderValue
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
+import typingsSlinky.winrtUwp.anon.Index
+import typingsSlinky.winrtUwp.anon.ItemsHttpCookiePairHeaderValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the value of the Cookie HTTP header on an HTTP request. */
-@JSGlobal("Windows.Web.Http.Headers.HttpCookiePairHeaderValueCollection")
 @js.native
-abstract class HttpCookiePairHeaderValueCollection () extends Array[HttpCookiePairHeaderValue] {
+trait HttpCookiePairHeaderValueCollection extends Array[HttpCookiePairHeaderValue] {
   /** Gets the number of HttpCookiePairHeaderValue objects in the collection. */
   var size: Double = js.native
   /**
@@ -37,19 +36,19 @@ abstract class HttpCookiePairHeaderValueCollection () extends Array[HttpCookiePa
     * Retrieves the HttpCookiePairHeaderValue items that start at the specified index in the collection.
     * @param startIndex The zero-based index of the start of the HttpCookiePairHeaderValue items in the HttpCookiePairHeaderValueCollection .
     */
-  def getMany(startIndex: Double): AnonItemsHttpCookiePairHeaderValue = js.native
+  def getMany(startIndex: Double): ItemsHttpCookiePairHeaderValue = js.native
   /**
     * Returns an immutable view of the HttpCookiePairHeaderValueCollection .
     * @return The view of the HttpCookiePairHeaderValueCollection .
     */
   def getView(): IVectorView[HttpCookiePairHeaderValue] = js.native
-  def indexOf(value: HttpCookiePairHeaderValue, extra: js.Any*): AnonIndex = js.native
+  def indexOf(value: HttpCookiePairHeaderValue, extra: js.Any*): Index = js.native
   /**
     * Retrieves the index of an HttpCookiePairHeaderValue in the collection.
     * @param value The HttpCookiePairHeaderValue to find in the HttpCookiePairHeaderValueCollection .
     */
   @JSName("indexOf")
-  def indexOf_AnonIndex(value: HttpCookiePairHeaderValue): AnonIndex = js.native
+  def indexOf_Index(value: HttpCookiePairHeaderValue): Index = js.native
   /**
     * Inserts an HttpCookiePairHeaderValue into the collection at the specified index.
     * @param index The zero-based index at which value should be inserted.

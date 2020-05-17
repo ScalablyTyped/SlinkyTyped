@@ -1,6 +1,8 @@
 package typingsSlinky.ethers
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.ethers.anon.Data
+import typingsSlinky.ethers.anon.Topics
 import typingsSlinky.ethers.typesMod.DeployDescription
 import typingsSlinky.ethers.typesMod.EventDescription
 import typingsSlinky.ethers.typesMod.EventFragment
@@ -24,8 +26,8 @@ object interfaceMod extends js.Object {
     val deployFunction: DeployDescription = js.native
     val events: StringDictionary[EventDescription] = js.native
     val functions: StringDictionary[FunctionDescription] = js.native
-    def parseLog(log: AnonTopics): LogDescription = js.native
-    def parseTransaction(tx: AnonData): TransactionDescription = js.native
+    def parseLog(log: Topics): LogDescription = js.native
+    def parseTransaction(tx: Data): TransactionDescription = js.native
   }
   
 }

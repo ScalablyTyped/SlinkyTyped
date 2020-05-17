@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonColumn
+import typingsSlinky.devextreme.anon.Column
 import typingsSlinky.devextreme.devextremeStrings.async
 import typingsSlinky.devextreme.devextremeStrings.compare
 import typingsSlinky.devextreme.devextremeStrings.custom
@@ -27,7 +27,7 @@ trait CustomRule extends js.Object {
     required | numeric | range | stringLength | custom | compare | pattern | email | async
   ] = js.native
   /** A function that validates the target value. */
-  var validationCallback: js.UndefOr[js.Function1[/* options */ AnonColumn, Boolean]] = js.native
+  var validationCallback: js.UndefOr[js.Function1[/* options */ Column, Boolean]] = js.native
 }
 
 object CustomRule {
@@ -91,7 +91,7 @@ object CustomRule {
         ret
     }
     @scala.inline
-    def withValidationCallback(value: /* options */ AnonColumn => Boolean): Self = {
+    def withValidationCallback(value: /* options */ Column => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validationCallback")(js.Any.fromFunction1(value))
         ret

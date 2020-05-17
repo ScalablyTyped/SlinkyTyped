@@ -1,7 +1,7 @@
 package typingsSlinky.jestRunner.typesMod
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.jestRunner.AnonIsWatchMode
+import typingsSlinky.jestRunner.anon.IsWatchMode
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TestWatcher
   extends EventEmitter
-     with Instantiable1[/* hasIsWatchMode */ AnonIsWatchMode, TestWatcher] {
+     with Instantiable1[/* hasIsWatchMode */ IsWatchMode, TestWatcher] {
   var state: WatcherState = js.native
   def isInterrupted(): Boolean = js.native
   def isWatchMode(): Boolean = js.native

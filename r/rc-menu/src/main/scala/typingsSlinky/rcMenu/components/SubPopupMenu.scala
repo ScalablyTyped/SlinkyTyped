@@ -6,7 +6,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.rcMenu.AnonOpen
+import typingsSlinky.rcMenu.anon.Open
 import typingsSlinky.rcMenu.interfaceMod.BuiltinPlacements
 import typingsSlinky.rcMenu.interfaceMod.MenuInfo
 import typingsSlinky.rcMenu.interfaceMod.MenuMode
@@ -89,7 +89,7 @@ object SubPopupMenu {
     @scala.inline
     def onDestroy(value: /* key */ Key => Unit): this.type = set("onDestroy", js.Any.fromFunction1(value))
     @scala.inline
-    def onOpenChange(value: /* keys */ js.Array[Key] | AnonOpen => Unit): this.type = set("onOpenChange", js.Any.fromFunction1(value))
+    def onOpenChange(value: /* keys */ js.Array[Key] | Open => Unit): this.type = set("onOpenChange", js.Any.fromFunction1(value))
     @scala.inline
     def onSelect(value: /* info */ SelectInfo => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline

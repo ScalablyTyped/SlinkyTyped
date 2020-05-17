@@ -1,11 +1,11 @@
 package typingsSlinky.electron.originalFsMod
 
 import typingsSlinky.electron.electronStrings.buffer
-import typingsSlinky.node.Anon2
-import typingsSlinky.node.Anon3
-import typingsSlinky.node.AnonEncoding
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
+import typingsSlinky.node.anon.Encoding
+import typingsSlinky.node.anon.`2`
+import typingsSlinky.node.anon.`3`
 import typingsSlinky.node.fsMod.PathLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,21 +22,21 @@ object realpathSync extends js.Object {
   def apply(path: PathLike): String = js.native
   def apply(path: PathLike, options: String): String | Buffer = js.native
   def apply(path: PathLike, options: buffer): Buffer = js.native
+  def apply(path: PathLike, options: BufferEncoding): String = js.native
+  def apply(path: PathLike, options: Encoding): String = js.native
   /**
     * Synchronous realpath(3) - return the canonicalized absolute pathname.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
     * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
     */
-  def apply(path: PathLike, options: Anon2): Buffer = js.native
-  def apply(path: PathLike, options: Anon3): String | Buffer = js.native
-  def apply(path: PathLike, options: AnonEncoding): String = js.native
-  def apply(path: PathLike, options: BufferEncoding): String = js.native
+  def apply(path: PathLike, options: `2`): Buffer = js.native
+  def apply(path: PathLike, options: `3`): String | Buffer = js.native
   def native(path: PathLike): String = js.native
   def native(path: PathLike, options: String): String | Buffer = js.native
-  def native(path: PathLike, options: Anon2): Buffer = js.native
-  def native(path: PathLike, options: Anon3): String | Buffer = js.native
-  def native(path: PathLike, options: AnonEncoding): String = js.native
   def native(path: PathLike, options: BufferEncoding): String = js.native
+  def native(path: PathLike, options: Encoding): String = js.native
+  def native(path: PathLike, options: `2`): Buffer = js.native
+  def native(path: PathLike, options: `3`): String | Buffer = js.native
   @JSName("native")
   def native_Union(path: PathLike): String | Buffer = js.native
   @JSName("native")

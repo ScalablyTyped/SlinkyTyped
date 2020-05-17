@@ -1,5 +1,6 @@
 package typingsSlinky.openlayers.mod.olx
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import typingsSlinky.openlayers.mod.Collection
 import typingsSlinky.openlayers.mod.Overlay
@@ -8,7 +9,6 @@ import typingsSlinky.openlayers.mod.View
 import typingsSlinky.openlayers.mod.control.Control
 import typingsSlinky.openlayers.mod.interaction.Interaction
 import typingsSlinky.openlayers.mod.layer.Base
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation._
 trait MapOptions extends js.Object {
   var controls: js.UndefOr[Collection[Control] | js.Array[Control]] = js.native
   var interactions: js.UndefOr[Collection[Interaction] | js.Array[Interaction]] = js.native
-  var keyboardEventTarget: js.UndefOr[Element | Document_ | String] = js.native
+  var keyboardEventTarget: js.UndefOr[Element | Document | String] = js.native
   var layers: js.UndefOr[js.Array[Base] | Collection[Base]] = js.native
   var loadTilesWhileAnimating: js.UndefOr[Boolean] = js.native
   var loadTilesWhileInteracting: js.UndefOr[Boolean] = js.native
@@ -70,13 +70,19 @@ object MapOptions {
         ret
     }
     @scala.inline
+    def withKeyboardEventTargetDocument(value: Document): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardEventTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
     def withKeyboardEventTargetElement(value: Element): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardEventTarget")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withKeyboardEventTarget(value: Element | Document_ | String): Self = {
+    def withKeyboardEventTarget(value: Element | Document | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardEventTarget")(value.asInstanceOf[js.Any])
         ret

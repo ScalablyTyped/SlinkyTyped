@@ -1,19 +1,19 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonAllowFieldDragging
-import typingsSlinky.devextreme.AnonApplyChangesMode
-import typingsSlinky.devextreme.AnonArea
-import typingsSlinky.devextreme.AnonCell
-import typingsSlinky.devextreme.AnonCollapseAll
-import typingsSlinky.devextreme.AnonColumnFields
-import typingsSlinky.devextreme.AnonComponentDxPivotGrid
-import typingsSlinky.devextreme.AnonCustomLoad
-import typingsSlinky.devextreme.AnonFileNameFormat
-import typingsSlinky.devextreme.AnonFileNameModel
-import typingsSlinky.devextreme.AnonIgnoreExcelErrors
-import typingsSlinky.devextreme.AnonSearchTimeout
-import typingsSlinky.devextreme.AnonShowIndicator
-import typingsSlinky.devextreme.AnonUseNative
+import typingsSlinky.devextreme.anon.AllowFieldDragging
+import typingsSlinky.devextreme.anon.ApplyChangesMode
+import typingsSlinky.devextreme.anon.Area
+import typingsSlinky.devextreme.anon.Cell
+import typingsSlinky.devextreme.anon.CollapseAll
+import typingsSlinky.devextreme.anon.ColumnFields
+import typingsSlinky.devextreme.anon.ComponentDxPivotGrid
+import typingsSlinky.devextreme.anon.CustomLoad
+import typingsSlinky.devextreme.anon.FileNameFormat
+import typingsSlinky.devextreme.anon.FileNameModel
+import typingsSlinky.devextreme.anon.IgnoreExcelErrors
+import typingsSlinky.devextreme.anon.SearchTimeout
+import typingsSlinky.devextreme.anon.ShowIndicator
+import typingsSlinky.devextreme.anon.UseNative
 import typingsSlinky.devextreme.devextremeStrings.both
 import typingsSlinky.devextreme.devextremeStrings.column
 import typingsSlinky.devextreme.devextremeStrings.columns
@@ -43,33 +43,33 @@ trait dxPivotGridOptions extends WidgetOptions[dxPivotGrid] {
   /** Binds the widget to data. */
   var dataSource: js.UndefOr[js.Array[_] | PivotGridDataSource | PivotGridDataSourceOptions] = js.native
   /** Configures client-side exporting. */
-  var export: js.UndefOr[AnonIgnoreExcelErrors] = js.native
+  var export: js.UndefOr[IgnoreExcelErrors] = js.native
   /** The Field Chooser configuration options. */
-  var fieldChooser: js.UndefOr[AnonApplyChangesMode] = js.native
+  var fieldChooser: js.UndefOr[ApplyChangesMode] = js.native
   /** Configures the field panel. */
-  var fieldPanel: js.UndefOr[AnonAllowFieldDragging] = js.native
+  var fieldPanel: js.UndefOr[AllowFieldDragging] = js.native
   /** Configures the header filter feature. */
-  var headerFilter: js.UndefOr[AnonSearchTimeout] = js.native
+  var headerFilter: js.UndefOr[SearchTimeout] = js.native
   /** Specifies whether or not to hide rows and columns with no data. */
   var hideEmptySummaryCells: js.UndefOr[Boolean] = js.native
   /** Specifies options configuring the load panel. */
-  var loadPanel: js.UndefOr[AnonShowIndicator] = js.native
+  var loadPanel: js.UndefOr[ShowIndicator] = js.native
   /** A function that is executed when a pivot grid cell is clicked or tapped. */
-  var onCellClick: js.UndefOr[js.Function1[/* e */ AnonArea, _]] = js.native
+  var onCellClick: js.UndefOr[js.Function1[/* e */ Area, _]] = js.native
   /** A function that is executed after a pivot grid cell is created. */
-  var onCellPrepared: js.UndefOr[js.Function1[/* e */ AnonCell, _]] = js.native
+  var onCellPrepared: js.UndefOr[js.Function1[/* e */ Cell, _]] = js.native
   /** A function that is executed before the context menu is rendered. */
-  var onContextMenuPreparing: js.UndefOr[js.Function1[/* e */ AnonColumnFields, _]] = js.native
+  var onContextMenuPreparing: js.UndefOr[js.Function1[/* e */ ColumnFields, _]] = js.native
   /** A function that is executed after data is exported. */
-  var onExported: js.UndefOr[js.Function1[/* e */ AnonComponentDxPivotGrid, _]] = js.native
+  var onExported: js.UndefOr[js.Function1[/* e */ ComponentDxPivotGrid, _]] = js.native
   /** A function that is executed before data is exported. */
-  var onExporting: js.UndefOr[js.Function1[/* e */ AnonFileNameModel, _]] = js.native
+  var onExporting: js.UndefOr[js.Function1[/* e */ FileNameModel, _]] = js.native
   /** A function that is executed before a file with exported data is saved to the user's local storage. */
-  var onFileSaving: js.UndefOr[js.Function1[/* e */ AnonFileNameFormat, _]] = js.native
+  var onFileSaving: js.UndefOr[js.Function1[/* e */ FileNameFormat, _]] = js.native
   /** Specifies the layout of items in the row header. */
   var rowHeaderLayout: js.UndefOr[standard | tree] = js.native
   /** A configuration object specifying scrolling options. */
-  var scrolling: js.UndefOr[AnonUseNative] = js.native
+  var scrolling: js.UndefOr[UseNative] = js.native
   /** Specifies whether the outer borders of the grid are visible or not. */
   var showBorders: js.UndefOr[Boolean] = js.native
   /** Specifies whether to display the Grand Total column. */
@@ -83,9 +83,9 @@ trait dxPivotGridOptions extends WidgetOptions[dxPivotGrid] {
   /** Specifies where to show the total rows or columns. Applies only if rowHeaderLayout is "standard". */
   var showTotalsPrior: js.UndefOr[both | columns | none | rows] = js.native
   /** A configuration object specifying options related to state storing. */
-  var stateStoring: js.UndefOr[AnonCustomLoad] = js.native
+  var stateStoring: js.UndefOr[CustomLoad] = js.native
   /** Strings that can be changed or localized in the PivotGrid widget. */
-  var texts: js.UndefOr[AnonCollapseAll] = js.native
+  var texts: js.UndefOr[CollapseAll] = js.native
   /** Specifies whether long text in header items should be wrapped. */
   var wordWrapEnabled: js.UndefOr[Boolean] = js.native
 }
@@ -175,7 +175,7 @@ object dxPivotGridOptions {
         ret
     }
     @scala.inline
-    def withExport(value: AnonIgnoreExcelErrors): Self = {
+    def withExport(value: IgnoreExcelErrors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("export")(value.asInstanceOf[js.Any])
         ret
@@ -187,7 +187,7 @@ object dxPivotGridOptions {
         ret
     }
     @scala.inline
-    def withFieldChooser(value: AnonApplyChangesMode): Self = {
+    def withFieldChooser(value: ApplyChangesMode): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fieldChooser")(value.asInstanceOf[js.Any])
         ret
@@ -199,7 +199,7 @@ object dxPivotGridOptions {
         ret
     }
     @scala.inline
-    def withFieldPanel(value: AnonAllowFieldDragging): Self = {
+    def withFieldPanel(value: AllowFieldDragging): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fieldPanel")(value.asInstanceOf[js.Any])
         ret
@@ -211,7 +211,7 @@ object dxPivotGridOptions {
         ret
     }
     @scala.inline
-    def withHeaderFilter(value: AnonSearchTimeout): Self = {
+    def withHeaderFilter(value: SearchTimeout): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headerFilter")(value.asInstanceOf[js.Any])
         ret
@@ -235,7 +235,7 @@ object dxPivotGridOptions {
         ret
     }
     @scala.inline
-    def withLoadPanel(value: AnonShowIndicator): Self = {
+    def withLoadPanel(value: ShowIndicator): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loadPanel")(value.asInstanceOf[js.Any])
         ret
@@ -247,7 +247,7 @@ object dxPivotGridOptions {
         ret
     }
     @scala.inline
-    def withOnCellClick(value: /* e */ AnonArea => _): Self = {
+    def withOnCellClick(value: /* e */ Area => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCellClick")(js.Any.fromFunction1(value))
         ret
@@ -259,7 +259,7 @@ object dxPivotGridOptions {
         ret
     }
     @scala.inline
-    def withOnCellPrepared(value: /* e */ AnonCell => _): Self = {
+    def withOnCellPrepared(value: /* e */ Cell => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCellPrepared")(js.Any.fromFunction1(value))
         ret
@@ -271,7 +271,7 @@ object dxPivotGridOptions {
         ret
     }
     @scala.inline
-    def withOnContextMenuPreparing(value: /* e */ AnonColumnFields => _): Self = {
+    def withOnContextMenuPreparing(value: /* e */ ColumnFields => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenuPreparing")(js.Any.fromFunction1(value))
         ret
@@ -283,7 +283,7 @@ object dxPivotGridOptions {
         ret
     }
     @scala.inline
-    def withOnExported(value: /* e */ AnonComponentDxPivotGrid => _): Self = {
+    def withOnExported(value: /* e */ ComponentDxPivotGrid => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onExported")(js.Any.fromFunction1(value))
         ret
@@ -295,7 +295,7 @@ object dxPivotGridOptions {
         ret
     }
     @scala.inline
-    def withOnExporting(value: /* e */ AnonFileNameModel => _): Self = {
+    def withOnExporting(value: /* e */ FileNameModel => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onExporting")(js.Any.fromFunction1(value))
         ret
@@ -307,7 +307,7 @@ object dxPivotGridOptions {
         ret
     }
     @scala.inline
-    def withOnFileSaving(value: /* e */ AnonFileNameFormat => _): Self = {
+    def withOnFileSaving(value: /* e */ FileNameFormat => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFileSaving")(js.Any.fromFunction1(value))
         ret
@@ -331,7 +331,7 @@ object dxPivotGridOptions {
         ret
     }
     @scala.inline
-    def withScrolling(value: AnonUseNative): Self = {
+    def withScrolling(value: UseNative): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrolling")(value.asInstanceOf[js.Any])
         ret
@@ -415,7 +415,7 @@ object dxPivotGridOptions {
         ret
     }
     @scala.inline
-    def withStateStoring(value: AnonCustomLoad): Self = {
+    def withStateStoring(value: CustomLoad): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stateStoring")(value.asInstanceOf[js.Any])
         ret
@@ -427,7 +427,7 @@ object dxPivotGridOptions {
         ret
     }
     @scala.inline
-    def withTexts(value: AnonCollapseAll): Self = {
+    def withTexts(value: CollapseAll): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("texts")(value.asInstanceOf[js.Any])
         ret

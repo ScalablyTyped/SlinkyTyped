@@ -1,7 +1,6 @@
 package typingsSlinky.gestalt.mod
 
-import typingsSlinky.gestalt.AnonLabel
-import typingsSlinky.gestalt.AnonValue
+import typingsSlinky.gestalt.anon.Value
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
 import scala.scalajs.js
@@ -16,16 +15,16 @@ trait SelectListProps extends js.Object {
   var id: String = js.native
   var label: js.UndefOr[String] = js.native
   var name: js.UndefOr[String] = js.native
-  var options: js.Array[AnonLabel] = js.native
+  var options: js.Array[typingsSlinky.gestalt.anon.Label] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var size: js.UndefOr[md | lg] = js.native
   var value: js.UndefOr[String] = js.native
-  def onChange(args: AnonValue): Unit = js.native
+  def onChange(args: Value): Unit = js.native
 }
 
 object SelectListProps {
   @scala.inline
-  def apply(id: String, onChange: AnonValue => Unit, options: js.Array[AnonLabel]): SelectListProps = {
+  def apply(id: String, onChange: Value => Unit, options: js.Array[typingsSlinky.gestalt.anon.Label]): SelectListProps = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), options = options.asInstanceOf[js.Any])
     __obj.asInstanceOf[SelectListProps]
   }
@@ -42,13 +41,13 @@ object SelectListProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: AnonValue => Unit): Self = {
+    def withOnChange(value: Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOptions(value: js.Array[AnonLabel]): Self = {
+    def withOptions(value: js.Array[typingsSlinky.gestalt.anon.Label]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

@@ -7,17 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientUploadControl.FileUploadComplete event.
   */
-@JSGlobal("ASPxClientUploadControlFileUploadCompleteEventArgs")
 @js.native
-class ASPxClientUploadControlFileUploadCompleteEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientUploadControlFileUploadCompleteEventArgs class.
-    * @param inputIndex An integer value that specifies the file input element's index.
-    * @param isValid true if the uploaded file is valid; otherwise, false.
-    * @param errorText A String value representing the error description.
-    * @param callbackData A String value that contains the callback data.
-    */
-  def this(inputIndex: Double, isValid: Boolean, errorText: String, callbackData: String) = this()
+trait ASPxClientUploadControlFileUploadCompleteEventArgs extends ASPxClientEventArgs {
   /**
     * Gets a string that contains specific information (if any) passed from the server side for further client processing.
     */
@@ -34,5 +25,45 @@ class ASPxClientUploadControlFileUploadCompleteEventArgs protected () extends AS
     * Gets or sets a value indicating whether the uploaded file passes validation.
     */
   var isValid: Boolean = js.native
+}
+
+object ASPxClientUploadControlFileUploadCompleteEventArgs {
+  @scala.inline
+  def apply(callbackData: String, errorText: String, inputIndex: Double, isValid: Boolean): ASPxClientUploadControlFileUploadCompleteEventArgs = {
+    val __obj = js.Dynamic.literal(callbackData = callbackData.asInstanceOf[js.Any], errorText = errorText.asInstanceOf[js.Any], inputIndex = inputIndex.asInstanceOf[js.Any], isValid = isValid.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientUploadControlFileUploadCompleteEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientUploadControlFileUploadCompleteEventArgsOps[Self <: ASPxClientUploadControlFileUploadCompleteEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCallbackData(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callbackData")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withErrorText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInputIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsValid(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isValid")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

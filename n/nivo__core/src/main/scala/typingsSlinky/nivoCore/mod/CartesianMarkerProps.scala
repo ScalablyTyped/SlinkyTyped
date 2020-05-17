@@ -1,6 +1,6 @@
 package typingsSlinky.nivoCore.mod
 
-import typingsSlinky.nivoCore.PartialCSSProperties
+import typingsSlinky.nivoCore.anon.PartialCSSProperties
 import typingsSlinky.nivoCore.nivoCoreStrings.x
 import typingsSlinky.nivoCore.nivoCoreStrings.y
 import scala.scalajs.js
@@ -29,7 +29,7 @@ object CartesianMarkerProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAxis(value: x | y): Self = {
+    def withAxis(value: typingsSlinky.nivoCore.nivoCoreStrings.x | y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("axis")(value.asInstanceOf[js.Any])
         ret

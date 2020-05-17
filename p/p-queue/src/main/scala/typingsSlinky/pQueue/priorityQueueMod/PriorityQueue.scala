@@ -1,6 +1,6 @@
 package typingsSlinky.pQueue.priorityQueueMod
 
-import typingsSlinky.pQueue.PartialPriorityQueueOptio
+import typingsSlinky.pQueue.anon.PartialPriorityQueueOptio
 import typingsSlinky.pQueue.queueMod.Queue
 import typingsSlinky.pQueue.queueMod.RunFunction
 import scala.scalajs.js

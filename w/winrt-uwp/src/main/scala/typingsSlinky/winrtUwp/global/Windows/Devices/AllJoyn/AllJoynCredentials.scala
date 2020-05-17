@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.Devices.AllJoyn
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Defines properties used when passing credentials during authentication. */
+@JSGlobal("Windows.Devices.AllJoyn.AllJoynCredentials")
+@js.native
+abstract class AllJoynCredentials ()
+  extends typingsSlinky.winrtUwp.Windows.Devices.AllJoyn.AllJoynCredentials
+

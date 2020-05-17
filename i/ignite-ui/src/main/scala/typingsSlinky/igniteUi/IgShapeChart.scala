@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -930,7 +930,7 @@ object IgShapeChart {
         ret
     }
     @scala.inline
-    def withCalloutStyleUpdating(value: (/* event */ Event_, /* ui */ CalloutStyleUpdatingEventUIParam) => Unit): Self = {
+    def withCalloutStyleUpdating(value: (/* event */ Event, /* ui */ CalloutStyleUpdatingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("calloutStyleUpdating")(js.Any.fromFunction2(value))
         ret
@@ -1086,7 +1086,7 @@ object IgShapeChart {
         ret
     }
     @scala.inline
-    def withDataBinding(value: (/* event */ Event_, /* ui */ DataBindingEventUIParam) => Unit): Self = {
+    def withDataBinding(value: (/* event */ Event, /* ui */ DataBindingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataBinding")(js.Any.fromFunction2(value))
         ret
@@ -1098,7 +1098,7 @@ object IgShapeChart {
         ret
     }
     @scala.inline
-    def withDataBound(value: (/* event */ Event_, /* ui */ DataBoundEventUIParam) => Unit): Self = {
+    def withDataBound(value: (/* event */ Event, /* ui */ DataBoundEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataBound")(js.Any.fromFunction2(value))
         ret
@@ -1194,7 +1194,7 @@ object IgShapeChart {
         ret
     }
     @scala.inline
-    def withHideTooltip(value: (/* event */ Event_, /* ui */ HideTooltipEventUIParam) => Unit): Self = {
+    def withHideTooltip(value: (/* event */ Event, /* ui */ HideTooltipEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hideTooltip")(js.Any.fromFunction2(value))
         ret
@@ -1386,7 +1386,7 @@ object IgShapeChart {
         ret
     }
     @scala.inline
-    def withPropertyChanged(value: (/* event */ Event_, /* ui */ PropertyChangedEventUIParam) => Unit): Self = {
+    def withPropertyChanged(value: (/* event */ Event, /* ui */ PropertyChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("propertyChanged")(js.Any.fromFunction2(value))
         ret
@@ -1446,7 +1446,7 @@ object IgShapeChart {
         ret
     }
     @scala.inline
-    def withSeriesAdded(value: (/* event */ Event_, /* ui */ SeriesAddedEventUIParam) => Unit): Self = {
+    def withSeriesAdded(value: (/* event */ Event, /* ui */ SeriesAddedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seriesAdded")(js.Any.fromFunction2(value))
         ret
@@ -1458,7 +1458,7 @@ object IgShapeChart {
         ret
     }
     @scala.inline
-    def withSeriesPointerDown(value: (/* event */ Event_, /* ui */ SeriesPointerDownEventUIParam) => Unit): Self = {
+    def withSeriesPointerDown(value: (/* event */ Event, /* ui */ SeriesPointerDownEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seriesPointerDown")(js.Any.fromFunction2(value))
         ret
@@ -1470,7 +1470,7 @@ object IgShapeChart {
         ret
     }
     @scala.inline
-    def withSeriesPointerEnter(value: (/* event */ Event_, /* ui */ SeriesPointerEnterEventUIParam) => Unit): Self = {
+    def withSeriesPointerEnter(value: (/* event */ Event, /* ui */ SeriesPointerEnterEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seriesPointerEnter")(js.Any.fromFunction2(value))
         ret
@@ -1482,7 +1482,7 @@ object IgShapeChart {
         ret
     }
     @scala.inline
-    def withSeriesPointerLeave(value: (/* event */ Event_, /* ui */ SeriesPointerLeaveEventUIParam) => Unit): Self = {
+    def withSeriesPointerLeave(value: (/* event */ Event, /* ui */ SeriesPointerLeaveEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seriesPointerLeave")(js.Any.fromFunction2(value))
         ret
@@ -1494,7 +1494,7 @@ object IgShapeChart {
         ret
     }
     @scala.inline
-    def withSeriesPointerMove(value: (/* event */ Event_, /* ui */ SeriesPointerMoveEventUIParam) => Unit): Self = {
+    def withSeriesPointerMove(value: (/* event */ Event, /* ui */ SeriesPointerMoveEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seriesPointerMove")(js.Any.fromFunction2(value))
         ret
@@ -1506,7 +1506,7 @@ object IgShapeChart {
         ret
     }
     @scala.inline
-    def withSeriesPointerUp(value: (/* event */ Event_, /* ui */ SeriesPointerUpEventUIParam) => Unit): Self = {
+    def withSeriesPointerUp(value: (/* event */ Event, /* ui */ SeriesPointerUpEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seriesPointerUp")(js.Any.fromFunction2(value))
         ret
@@ -1518,7 +1518,7 @@ object IgShapeChart {
         ret
     }
     @scala.inline
-    def withSeriesRemoved(value: (/* event */ Event_, /* ui */ SeriesRemovedEventUIParam) => Unit): Self = {
+    def withSeriesRemoved(value: (/* event */ Event, /* ui */ SeriesRemovedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seriesRemoved")(js.Any.fromFunction2(value))
         ret
@@ -1890,7 +1890,7 @@ object IgShapeChart {
         ret
     }
     @scala.inline
-    def withUpdateTooltip(value: (/* event */ Event_, /* ui */ UpdateTooltipEventUIParam) => Unit): Self = {
+    def withUpdateTooltip(value: (/* event */ Event, /* ui */ UpdateTooltipEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("updateTooltip")(js.Any.fromFunction2(value))
         ret

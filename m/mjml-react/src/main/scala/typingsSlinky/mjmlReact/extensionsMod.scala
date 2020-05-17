@@ -1,5 +1,8 @@
 package typingsSlinky.mjmlReact
 
+import typingsSlinky.mjmlReact.anon.Children
+import typingsSlinky.mjmlReact.anon.Condition
+import typingsSlinky.mjmlReact.anon.Src
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,19 +13,19 @@ import scala.scalajs.js.annotation._
 object extensionsMod extends js.Object {
   @js.native
   class MjmlComment ()
-    extends Component[AnonChildren, js.Object, js.Any]
+    extends Component[Children, js.Object, js.Any]
   
   @js.native
   class MjmlConditionalComment ()
-    extends Component[AnonCondition, js.Object, js.Any]
+    extends Component[Condition, js.Object, js.Any]
   
   @js.native
   class MjmlTrackingPixel ()
-    extends Component[AnonSrc, js.Object, js.Any]
+    extends Component[Src, js.Object, js.Any]
   
   @js.native
   class MjmlYahooStyle ()
-    extends Component[AnonChildren, js.Object, js.Any]
+    extends Component[Children, js.Object, js.Any]
   
 }
 

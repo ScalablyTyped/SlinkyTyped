@@ -47,31 +47,6 @@ trait RequiredTheme extends js.Object {
 
 object RequiredTheme {
   @scala.inline
-  def apply(
-    borderStyles: ObjectOrArray[BorderProperty[js.Object], /* keyof any */ String],
-    borderWidths: ObjectOrArray[BorderWidthProperty[TLengthStyledSystem], /* keyof any */ String],
-    borders: ObjectOrArray[BorderProperty[js.Object], /* keyof any */ String],
-    breakpoints: ObjectOrArray[Double | String | js.Symbol, /* keyof any */ String],
-    buttons: ObjectOrArray[StandardProperties[String | `0`], /* keyof any */ String],
-    colorStyles: ObjectOrArray[StandardProperties[String | `0`], /* keyof any */ String],
-    colors: ObjectOrArray[ColorProperty, /* keyof any */ String],
-    fontSizes: ObjectOrArray[FontSizeProperty[Double], /* keyof any */ String],
-    fontWeights: ObjectOrArray[FontWeightProperty, /* keyof any */ String],
-    fonts: ObjectOrArray[FontFamilyProperty, /* keyof any */ String],
-    letterSpacings: ObjectOrArray[LetterSpacingProperty[TLengthStyledSystem], /* keyof any */ String],
-    lineHeights: ObjectOrArray[LineHeightProperty[TLengthStyledSystem], /* keyof any */ String],
-    mediaQueries: StringDictionary[String],
-    radii: ObjectOrArray[BorderRadiusProperty[TLengthStyledSystem], /* keyof any */ String],
-    shadows: ObjectOrArray[BoxShadowProperty, /* keyof any */ String],
-    sizes: ObjectOrArray[HeightProperty[js.Object] | WidthProperty[js.Object], /* keyof any */ String],
-    space: ObjectOrArray[MarginProperty[Double | String], /* keyof any */ String],
-    textStyles: ObjectOrArray[StandardProperties[String | `0`], /* keyof any */ String],
-    zIndices: ObjectOrArray[ZIndexProperty, /* keyof any */ String]
-  ): RequiredTheme = {
-    val __obj = js.Dynamic.literal(borderStyles = borderStyles.asInstanceOf[js.Any], borderWidths = borderWidths.asInstanceOf[js.Any], borders = borders.asInstanceOf[js.Any], breakpoints = breakpoints.asInstanceOf[js.Any], buttons = buttons.asInstanceOf[js.Any], colorStyles = colorStyles.asInstanceOf[js.Any], colors = colors.asInstanceOf[js.Any], fontSizes = fontSizes.asInstanceOf[js.Any], fontWeights = fontWeights.asInstanceOf[js.Any], fonts = fonts.asInstanceOf[js.Any], letterSpacings = letterSpacings.asInstanceOf[js.Any], lineHeights = lineHeights.asInstanceOf[js.Any], mediaQueries = mediaQueries.asInstanceOf[js.Any], radii = radii.asInstanceOf[js.Any], shadows = shadows.asInstanceOf[js.Any], sizes = sizes.asInstanceOf[js.Any], space = space.asInstanceOf[js.Any], textStyles = textStyles.asInstanceOf[js.Any], zIndices = zIndices.asInstanceOf[js.Any])
-    __obj.asInstanceOf[RequiredTheme]
-  }
-  @scala.inline
   implicit class RequiredThemeOps[Self <: RequiredTheme] (val x: Self) extends AnyVal {
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]

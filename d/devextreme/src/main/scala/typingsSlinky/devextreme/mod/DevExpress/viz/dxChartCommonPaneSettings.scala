@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonLeft
+import typingsSlinky.devextreme.anon.Left
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait dxChartCommonPaneSettings extends js.Object {
   /** Specifies the color of the pane's background. */
   var backgroundColor: js.UndefOr[String] = js.native
   /** Configures the pane border. */
-  var border: js.UndefOr[AnonLeft] = js.native
+  var border: js.UndefOr[Left] = js.native
 }
 
 object dxChartCommonPaneSettings {
@@ -38,7 +38,7 @@ object dxChartCommonPaneSettings {
         ret
     }
     @scala.inline
-    def withBorder(value: AnonLeft): Self = {
+    def withBorder(value: Left): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
         ret

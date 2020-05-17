@@ -1,7 +1,7 @@
 package typingsSlinky.reactSortableTree.treeDataUtilsMod
 
-import typingsSlinky.reactSortableTree.FullTreeindexnumbergetNod
-import typingsSlinky.reactSortableTree.TreeNodeTreePathlowerSibl
+import typingsSlinky.reactSortableTree.anon.FullTreeindexnumbergetNod
+import typingsSlinky.reactSortableTree.anon.TreeNodeTreePathlowerSibl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

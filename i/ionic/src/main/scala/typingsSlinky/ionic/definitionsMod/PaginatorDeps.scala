@@ -1,6 +1,6 @@
 package typingsSlinky.ionic.definitionsMod
 
-import typingsSlinky.ionic.AnonReq
+import typingsSlinky.ionic.anon.Req
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,16 +12,12 @@ trait PaginatorDeps[T /* <: Response[js.Array[js.Object]] */, S] extends js.Obje
   val max: js.UndefOr[Double] = js.native
   val state: js.UndefOr[Partial[S]] = js.native
   def guard(res: APIResponseSuccess): /* is T */ Boolean = js.native
-  def reqgen(): js.Promise[AnonReq] = js.native
+  def reqgen(): js.Promise[Req] = js.native
 }
 
 object PaginatorDeps {
   @scala.inline
-  def apply[T, S](
-    client: IClient,
-    guard: APIResponseSuccess => /* is T */ Boolean,
-    reqgen: () => js.Promise[AnonReq]
-  ): PaginatorDeps[T, S] = {
+  def apply[T, S](client: IClient, guard: APIResponseSuccess => /* is T */ Boolean, reqgen: () => js.Promise[Req]): PaginatorDeps[T, S] = {
     val __obj = js.Dynamic.literal(client = client.asInstanceOf[js.Any], guard = js.Any.fromFunction1(guard), reqgen = js.Any.fromFunction0(reqgen))
     __obj.asInstanceOf[PaginatorDeps[T, S]]
   }
@@ -44,7 +40,7 @@ object PaginatorDeps {
         ret
     }
     @scala.inline
-    def withReqgen(value: () => js.Promise[AnonReq]): Self[T, S] = {
+    def withReqgen(value: () => js.Promise[Req]): Self[T, S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("reqgen")(js.Any.fromFunction0(value))
         ret

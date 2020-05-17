@@ -5,7 +5,7 @@ import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.officeUiFabricReact.AnonInput
+import typingsSlinky.officeUiFabricReact.anon.Input
 import typingsSlinky.officeUiFabricReact.baseFloatingPickerTypesMod.IBaseFloatingPicker
 import typingsSlinky.officeUiFabricReact.baseFloatingPickerTypesMod.IBaseFloatingPickerSuggestionProps
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutProps
@@ -64,9 +64,9 @@ class SharedBuilder_IPeopleFloatingPickerProps212491139[R <: js.Object] (val arg
   @scala.inline
   def resolveDelay(value: Double): this.type = set("resolveDelay", value.asInstanceOf[js.Any])
   @scala.inline
-  def searchingTextFunction1(value: /* props */ AnonInput => String): this.type = set("searchingText", js.Any.fromFunction1(value))
+  def searchingTextFunction1(value: /* props */ Input => String): this.type = set("searchingText", js.Any.fromFunction1(value))
   @scala.inline
-  def searchingText(value: (js.Function1[/* props */ AnonInput, String]) | String): this.type = set("searchingText", value.asInstanceOf[js.Any])
+  def searchingText(value: (js.Function1[/* props */ Input, String]) | String): this.type = set("searchingText", value.asInstanceOf[js.Any])
   @scala.inline
   def selectedItems(value: js.Array[IPersonaProps]): this.type = set("selectedItems", value.asInstanceOf[js.Any])
   @scala.inline

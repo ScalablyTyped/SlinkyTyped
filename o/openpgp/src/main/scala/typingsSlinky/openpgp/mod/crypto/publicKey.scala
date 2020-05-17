@@ -1,7 +1,7 @@
 package typingsSlinky.openpgp.mod.crypto
 
-import typingsSlinky.openpgp.AnonC
-import typingsSlinky.openpgp.AnonS
+import typingsSlinky.openpgp.anon.C
+import typingsSlinky.openpgp.anon.S
 import typingsSlinky.openpgp.mod.Integer
 import typingsSlinky.openpgp.mod.`type`.mpi.MPI
 import typingsSlinky.openpgp.mod.`type`.oid.OID
@@ -146,7 +146,7 @@ object publicKey extends js.Object {
         m: MPI,
         Q: js.typedarray.Uint8Array,
         fingerprint: String
-      ): js.Promise[AnonC] = js.native
+      ): js.Promise[C] = js.native
       /**
         * Generate ECDHE secret from private key and public part of ephemeral key
         * @param curve Elliptic curve object
@@ -163,7 +163,7 @@ object publicKey extends js.Object {
         * @param Q Recipient public key
         * @returns Returns public part of ephemeral key and generated ephemeral secret
         */
-      def genPublicEphemeralKey(curve: Curve, Q: js.typedarray.Uint8Array): js.Promise[AnonS] = js.native
+      def genPublicEphemeralKey(curve: Curve, Q: js.typedarray.Uint8Array): js.Promise[S] = js.native
     }
     
     @js.native

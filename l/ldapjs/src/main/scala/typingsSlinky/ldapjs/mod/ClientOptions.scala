@@ -1,6 +1,6 @@
 package typingsSlinky.ldapjs.mod
 
-import typingsSlinky.ldapjs.AnonFailAfter
+import typingsSlinky.ldapjs.anon.FailAfter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait ClientOptions extends js.Object {
   var queueDisable: js.UndefOr[Boolean] = js.native
   var queueSize: js.UndefOr[Double] = js.native
   var queueTimeout: js.UndefOr[Double] = js.native
-  var reconnect: js.UndefOr[Boolean | AnonFailAfter] = js.native
+  var reconnect: js.UndefOr[Boolean | FailAfter] = js.native
   var socketPath: js.UndefOr[String] = js.native
   var strictDN: js.UndefOr[Boolean] = js.native
   var timeout: js.UndefOr[Double] = js.native
@@ -138,7 +138,7 @@ object ClientOptions {
         ret
     }
     @scala.inline
-    def withReconnect(value: Boolean | AnonFailAfter): Self = {
+    def withReconnect(value: Boolean | FailAfter): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("reconnect")(value.asInstanceOf[js.Any])
         ret

@@ -3,25 +3,25 @@ package typingsSlinky.grommet
 import typingsSlinky.grommet.announceContextMod.AnnounceMode
 import typingsSlinky.grommet.diagramMod.DiagramConnectionAnchor
 import typingsSlinky.grommet.diagramMod.DiagramConnectionType
+import typingsSlinky.grommet.listMod.PadSizeType
 import typingsSlinky.grommet.listMod.SideType
-import typingsSlinky.grommet.listMod._PadSizeType
-import typingsSlinky.grommet.listMod._SizeType
+import typingsSlinky.grommet.listMod.SizeType
 import typingsSlinky.grommet.utilsMod.AlignContentType
 import typingsSlinky.grommet.utilsMod.AlignSelfType
+import typingsSlinky.grommet.utilsMod.BasisType
 import typingsSlinky.grommet.utilsMod.BoxSideType
+import typingsSlinky.grommet.utilsMod.BoxSizeType
 import typingsSlinky.grommet.utilsMod.BoxStyleType
 import typingsSlinky.grommet.utilsMod.EdgeSizeType
+import typingsSlinky.grommet.utilsMod.EdgeType
+import typingsSlinky.grommet.utilsMod.ElevationType
+import typingsSlinky.grommet.utilsMod.FillType
+import typingsSlinky.grommet.utilsMod.GapType
 import typingsSlinky.grommet.utilsMod.JustifyContentType
+import typingsSlinky.grommet.utilsMod.OpacityType
+import typingsSlinky.grommet.utilsMod.PolymorphicType
+import typingsSlinky.grommet.utilsMod.RoundType
 import typingsSlinky.grommet.utilsMod.TextAlignType
-import typingsSlinky.grommet.utilsMod._BasisType
-import typingsSlinky.grommet.utilsMod._BoxSizeType
-import typingsSlinky.grommet.utilsMod._EdgeType
-import typingsSlinky.grommet.utilsMod._ElevationType
-import typingsSlinky.grommet.utilsMod._FillType
-import typingsSlinky.grommet.utilsMod._GapType
-import typingsSlinky.grommet.utilsMod._OpacityType
-import typingsSlinky.grommet.utilsMod._PolymorphicType
-import typingsSlinky.grommet.utilsMod._RoundType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,13 +34,13 @@ object grommetStrings {
   sealed trait `12` extends js.Object
   
   @js.native
-  sealed trait `1Slash2` extends _BasisType
+  sealed trait `1Slash2` extends BasisType
   
   @js.native
-  sealed trait `1Slash3` extends _BasisType
+  sealed trait `1Slash3` extends BasisType
   
   @js.native
-  sealed trait `1Slash4` extends _BasisType
+  sealed trait `1Slash4` extends BasisType
   
   @js.native
   sealed trait `2` extends js.Object
@@ -49,16 +49,16 @@ object grommetStrings {
   sealed trait `24` extends js.Object
   
   @js.native
-  sealed trait `2Slash3` extends _BasisType
+  sealed trait `2Slash3` extends BasisType
   
   @js.native
-  sealed trait `2Slash4` extends _BasisType
+  sealed trait `2Slash4` extends BasisType
   
   @js.native
   sealed trait `3` extends js.Object
   
   @js.native
-  sealed trait `3Slash4` extends _BasisType
+  sealed trait `3Slash4` extends BasisType
   
   @js.native
   sealed trait `4` extends js.Object
@@ -106,13 +106,13 @@ object grommetStrings {
   sealed trait _top extends js.Object
   
   @js.native
-  sealed trait a extends _PolymorphicType
+  sealed trait a extends PolymorphicType
   
   @js.native
-  sealed trait abbr extends _PolymorphicType
+  sealed trait abbr extends PolymorphicType
   
   @js.native
-  sealed trait address extends _PolymorphicType
+  sealed trait address extends PolymorphicType
   
   @js.native
   sealed trait all
@@ -123,16 +123,16 @@ object grommetStrings {
   sealed trait analog extends js.Object
   
   @js.native
-  sealed trait animate extends _PolymorphicType
+  sealed trait animate extends PolymorphicType
   
   @js.native
-  sealed trait animateMotion extends _PolymorphicType
+  sealed trait animateMotion extends PolymorphicType
   
   @js.native
-  sealed trait animateTransform extends _PolymorphicType
+  sealed trait animateTransform extends PolymorphicType
   
   @js.native
-  sealed trait area extends _PolymorphicType
+  sealed trait area extends PolymorphicType
   
   @js.native
   sealed trait around
@@ -143,28 +143,28 @@ object grommetStrings {
   sealed trait arrows extends js.Object
   
   @js.native
-  sealed trait article extends _PolymorphicType
+  sealed trait article extends PolymorphicType
   
   @js.native
   sealed trait asc extends js.Object
   
   @js.native
-  sealed trait aside extends _PolymorphicType
+  sealed trait aside extends PolymorphicType
   
   @js.native
   sealed trait assertive extends AnnounceMode
   
   @js.native
-  sealed trait audio extends _PolymorphicType
+  sealed trait audio extends PolymorphicType
   
   @js.native
-  sealed trait auto extends _BasisType
+  sealed trait auto extends BasisType
   
   @js.native
   sealed trait avg extends js.Object
   
   @js.native
-  sealed trait b extends _PolymorphicType
+  sealed trait b extends PolymorphicType
   
   @js.native
   sealed trait backward extends js.Object
@@ -173,16 +173,16 @@ object grommetStrings {
   sealed trait bar extends js.Object
   
   @js.native
-  sealed trait base extends _PolymorphicType
+  sealed trait base extends PolymorphicType
   
   @js.native
   sealed trait baseline extends js.Object
   
   @js.native
-  sealed trait bdi extends _PolymorphicType
+  sealed trait bdi extends PolymorphicType
   
   @js.native
-  sealed trait bdo extends _PolymorphicType
+  sealed trait bdo extends PolymorphicType
   
   @js.native
   sealed trait below extends js.Object
@@ -194,16 +194,16 @@ object grommetStrings {
        with JustifyContentType
   
   @js.native
-  sealed trait big extends _PolymorphicType
+  sealed trait big extends PolymorphicType
   
   @js.native
-  sealed trait blockquote extends _PolymorphicType
+  sealed trait blockquote extends PolymorphicType
   
   @js.native
   sealed trait blur extends js.Object
   
   @js.native
-  sealed trait body extends _PolymorphicType
+  sealed trait body extends PolymorphicType
   
   @js.native
   sealed trait bold extends js.Object
@@ -220,7 +220,7 @@ object grommetStrings {
   sealed trait `bottom-right` extends js.Object
   
   @js.native
-  sealed trait br extends _PolymorphicType
+  sealed trait br extends PolymorphicType
   
   @js.native
   sealed trait `break-all` extends js.Object
@@ -229,13 +229,13 @@ object grommetStrings {
   sealed trait `break-word` extends js.Object
   
   @js.native
-  sealed trait button extends _PolymorphicType
+  sealed trait button extends PolymorphicType
   
   @js.native
-  sealed trait canvas extends _PolymorphicType
+  sealed trait canvas extends PolymorphicType
   
   @js.native
-  sealed trait caption extends _PolymorphicType
+  sealed trait caption extends PolymorphicType
   
   @js.native
   sealed trait center
@@ -246,22 +246,22 @@ object grommetStrings {
        with TextAlignType
   
   @js.native
-  sealed trait circle extends _PolymorphicType
+  sealed trait circle extends PolymorphicType
   
   @js.native
-  sealed trait cite extends _PolymorphicType
+  sealed trait cite extends PolymorphicType
   
   @js.native
-  sealed trait clipPath extends _PolymorphicType
+  sealed trait clipPath extends PolymorphicType
   
   @js.native
-  sealed trait code extends _PolymorphicType
+  sealed trait code extends PolymorphicType
   
   @js.native
-  sealed trait col extends _PolymorphicType
+  sealed trait col extends PolymorphicType
   
   @js.native
-  sealed trait colgroup extends _PolymorphicType
+  sealed trait colgroup extends PolymorphicType
   
   @js.native
   sealed trait color extends js.Object
@@ -294,31 +294,31 @@ object grommetStrings {
   sealed trait dashed extends BoxStyleType
   
   @js.native
-  sealed trait data extends _PolymorphicType
+  sealed trait data extends PolymorphicType
   
   @js.native
-  sealed trait datalist extends _PolymorphicType
+  sealed trait datalist extends PolymorphicType
   
   @js.native
-  sealed trait dd extends _PolymorphicType
+  sealed trait dd extends PolymorphicType
   
   @js.native
-  sealed trait defs extends _PolymorphicType
+  sealed trait defs extends PolymorphicType
   
   @js.native
-  sealed trait del extends _PolymorphicType
+  sealed trait del extends PolymorphicType
   
   @js.native
-  sealed trait desc extends _PolymorphicType
+  sealed trait desc extends PolymorphicType
   
   @js.native
-  sealed trait details extends _PolymorphicType
+  sealed trait details extends PolymorphicType
   
   @js.native
-  sealed trait dfn extends _PolymorphicType
+  sealed trait dfn extends PolymorphicType
   
   @js.native
-  sealed trait dialog extends _PolymorphicType
+  sealed trait dialog extends PolymorphicType
   
   @js.native
   sealed trait digital extends js.Object
@@ -327,10 +327,10 @@ object grommetStrings {
   sealed trait direct extends DiagramConnectionType
   
   @js.native
-  sealed trait div extends _PolymorphicType
+  sealed trait div extends PolymorphicType
   
   @js.native
-  sealed trait dl extends _PolymorphicType
+  sealed trait dl extends PolymorphicType
   
   @js.native
   sealed trait document extends js.Object
@@ -342,16 +342,16 @@ object grommetStrings {
   sealed trait double extends BoxStyleType
   
   @js.native
-  sealed trait dt extends _PolymorphicType
+  sealed trait dt extends PolymorphicType
   
   @js.native
-  sealed trait ellipse extends _PolymorphicType
+  sealed trait ellipse extends PolymorphicType
   
   @js.native
-  sealed trait em extends _PolymorphicType
+  sealed trait em extends PolymorphicType
   
   @js.native
-  sealed trait embed extends _PolymorphicType
+  sealed trait embed extends PolymorphicType
   
   @js.native
   sealed trait end
@@ -377,94 +377,94 @@ object grommetStrings {
   sealed trait `false` extends js.Object
   
   @js.native
-  sealed trait feBlend extends _PolymorphicType
+  sealed trait feBlend extends PolymorphicType
   
   @js.native
-  sealed trait feColorMatrix extends _PolymorphicType
+  sealed trait feColorMatrix extends PolymorphicType
   
   @js.native
-  sealed trait feComponentTransfer extends _PolymorphicType
+  sealed trait feComponentTransfer extends PolymorphicType
   
   @js.native
-  sealed trait feComposite extends _PolymorphicType
+  sealed trait feComposite extends PolymorphicType
   
   @js.native
-  sealed trait feConvolveMatrix extends _PolymorphicType
+  sealed trait feConvolveMatrix extends PolymorphicType
   
   @js.native
-  sealed trait feDiffuseLighting extends _PolymorphicType
+  sealed trait feDiffuseLighting extends PolymorphicType
   
   @js.native
-  sealed trait feDisplacementMap extends _PolymorphicType
+  sealed trait feDisplacementMap extends PolymorphicType
   
   @js.native
-  sealed trait feDistantLight extends _PolymorphicType
+  sealed trait feDistantLight extends PolymorphicType
   
   @js.native
-  sealed trait feDropShadow extends _PolymorphicType
+  sealed trait feDropShadow extends PolymorphicType
   
   @js.native
-  sealed trait feFlood extends _PolymorphicType
+  sealed trait feFlood extends PolymorphicType
   
   @js.native
-  sealed trait feFuncA extends _PolymorphicType
+  sealed trait feFuncA extends PolymorphicType
   
   @js.native
-  sealed trait feFuncB extends _PolymorphicType
+  sealed trait feFuncB extends PolymorphicType
   
   @js.native
-  sealed trait feFuncG extends _PolymorphicType
+  sealed trait feFuncG extends PolymorphicType
   
   @js.native
-  sealed trait feFuncR extends _PolymorphicType
+  sealed trait feFuncR extends PolymorphicType
   
   @js.native
-  sealed trait feGaussianBlur extends _PolymorphicType
+  sealed trait feGaussianBlur extends PolymorphicType
   
   @js.native
-  sealed trait feImage extends _PolymorphicType
+  sealed trait feImage extends PolymorphicType
   
   @js.native
-  sealed trait feMerge extends _PolymorphicType
+  sealed trait feMerge extends PolymorphicType
   
   @js.native
-  sealed trait feMergeNode extends _PolymorphicType
+  sealed trait feMergeNode extends PolymorphicType
   
   @js.native
-  sealed trait feMorphology extends _PolymorphicType
+  sealed trait feMorphology extends PolymorphicType
   
   @js.native
-  sealed trait feOffset extends _PolymorphicType
+  sealed trait feOffset extends PolymorphicType
   
   @js.native
-  sealed trait fePointLight extends _PolymorphicType
+  sealed trait fePointLight extends PolymorphicType
   
   @js.native
-  sealed trait feSpecularLighting extends _PolymorphicType
+  sealed trait feSpecularLighting extends PolymorphicType
   
   @js.native
-  sealed trait feSpotLight extends _PolymorphicType
+  sealed trait feSpotLight extends PolymorphicType
   
   @js.native
-  sealed trait feTile extends _PolymorphicType
+  sealed trait feTile extends PolymorphicType
   
   @js.native
-  sealed trait feTurbulence extends _PolymorphicType
+  sealed trait feTurbulence extends PolymorphicType
   
   @js.native
-  sealed trait fieldset extends _PolymorphicType
+  sealed trait fieldset extends PolymorphicType
   
   @js.native
-  sealed trait figcaption extends _PolymorphicType
+  sealed trait figcaption extends PolymorphicType
   
   @js.native
-  sealed trait figure extends _PolymorphicType
+  sealed trait figure extends PolymorphicType
   
   @js.native
   sealed trait fill extends js.Object
   
   @js.native
-  sealed trait filter extends _PolymorphicType
+  sealed trait filter extends PolymorphicType
   
   @js.native
   sealed trait first extends js.Object
@@ -476,24 +476,24 @@ object grommetStrings {
   sealed trait flex extends js.Object
   
   @js.native
-  sealed trait footer extends _PolymorphicType
+  sealed trait footer extends PolymorphicType
   
   @js.native
-  sealed trait foreignObject extends _PolymorphicType
+  sealed trait foreignObject extends PolymorphicType
   
   @js.native
-  sealed trait form extends _PolymorphicType
+  sealed trait form extends PolymorphicType
   
   @js.native
   sealed trait forward extends js.Object
   
   @js.native
   sealed trait full
-    extends _BasisType
-       with _RoundType
+    extends BasisType
+       with RoundType
   
   @js.native
-  sealed trait g extends _PolymorphicType
+  sealed trait g extends PolymorphicType
   
   @js.native
   sealed trait groove extends BoxStyleType
@@ -502,34 +502,34 @@ object grommetStrings {
   sealed trait grow extends js.Object
   
   @js.native
-  sealed trait h1 extends _PolymorphicType
+  sealed trait h1 extends PolymorphicType
   
   @js.native
-  sealed trait h2 extends _PolymorphicType
+  sealed trait h2 extends PolymorphicType
   
   @js.native
-  sealed trait h3 extends _PolymorphicType
+  sealed trait h3 extends PolymorphicType
   
   @js.native
-  sealed trait h4 extends _PolymorphicType
+  sealed trait h4 extends PolymorphicType
   
   @js.native
-  sealed trait h5 extends _PolymorphicType
+  sealed trait h5 extends PolymorphicType
   
   @js.native
-  sealed trait h6 extends _PolymorphicType
+  sealed trait h6 extends PolymorphicType
   
   @js.native
   sealed trait hair extends js.Object
   
   @js.native
-  sealed trait head extends _PolymorphicType
+  sealed trait head extends PolymorphicType
   
   @js.native
-  sealed trait header extends _PolymorphicType
+  sealed trait header extends PolymorphicType
   
   @js.native
-  sealed trait hgroup extends _PolymorphicType
+  sealed trait hgroup extends PolymorphicType
   
   @js.native
   sealed trait hidden extends BoxStyleType
@@ -538,20 +538,20 @@ object grommetStrings {
   sealed trait horizontal
     extends BoxSideType
        with DiagramConnectionAnchor
+       with FillType
        with SideType
-       with _FillType
   
   @js.native
   sealed trait hours extends js.Object
   
   @js.native
-  sealed trait hr extends _PolymorphicType
+  sealed trait hr extends PolymorphicType
   
   @js.native
-  sealed trait html extends _PolymorphicType
+  sealed trait html extends PolymorphicType
   
   @js.native
-  sealed trait i extends _PolymorphicType
+  sealed trait i extends PolymorphicType
   
   @js.native
   sealed trait icon extends js.Object
@@ -560,22 +560,22 @@ object grommetStrings {
   sealed trait id extends js.Object
   
   @js.native
-  sealed trait iframe extends _PolymorphicType
+  sealed trait iframe extends PolymorphicType
   
   @js.native
-  sealed trait image extends _PolymorphicType
+  sealed trait image extends PolymorphicType
   
   @js.native
-  sealed trait img extends _PolymorphicType
+  sealed trait img extends PolymorphicType
   
   @js.native
   sealed trait info extends js.Object
   
   @js.native
-  sealed trait input extends _PolymorphicType
+  sealed trait input extends PolymorphicType
   
   @js.native
-  sealed trait ins extends _PolymorphicType
+  sealed trait ins extends PolymorphicType
   
   @js.native
   sealed trait inset extends BoxStyleType
@@ -584,7 +584,7 @@ object grommetStrings {
   sealed trait jiggle extends js.Object
   
   @js.native
-  sealed trait kbd extends _PolymorphicType
+  sealed trait kbd extends PolymorphicType
   
   @js.native
   sealed trait `keep-all` extends js.Object
@@ -593,20 +593,20 @@ object grommetStrings {
   sealed trait key extends js.Object
   
   @js.native
-  sealed trait keygen extends _PolymorphicType
+  sealed trait keygen extends PolymorphicType
   
   @js.native
-  sealed trait label extends _PolymorphicType
+  sealed trait label extends PolymorphicType
   
   @js.native
   sealed trait large
     extends EdgeSizeType
-       with _BasisType
-       with _BoxSizeType
-       with _ElevationType
-       with _PadSizeType
-       with _RoundType
-       with _SizeType
+       with BasisType
+       with BoxSizeType
+       with ElevationType
+       with PadSizeType
+       with RoundType
+       with SizeType
   
   @js.native
   sealed trait last extends js.Object
@@ -617,37 +617,37 @@ object grommetStrings {
        with SideType
   
   @js.native
-  sealed trait legend extends _PolymorphicType
+  sealed trait legend extends PolymorphicType
   
   @js.native
-  sealed trait li extends _PolymorphicType
+  sealed trait li extends PolymorphicType
   
   @js.native
   sealed trait light extends js.Object
   
   @js.native
-  sealed trait line extends _PolymorphicType
+  sealed trait line extends PolymorphicType
   
   @js.native
-  sealed trait linearGradient extends _PolymorphicType
+  sealed trait linearGradient extends PolymorphicType
   
   @js.native
-  sealed trait link extends _PolymorphicType
+  sealed trait link extends PolymorphicType
   
   @js.native
-  sealed trait main extends _PolymorphicType
+  sealed trait main extends PolymorphicType
   
   @js.native
-  sealed trait map extends _PolymorphicType
+  sealed trait map extends PolymorphicType
   
   @js.native
-  sealed trait mark extends _PolymorphicType
+  sealed trait mark extends PolymorphicType
   
   @js.native
-  sealed trait marker extends _PolymorphicType
+  sealed trait marker extends PolymorphicType
   
   @js.native
-  sealed trait mask extends _PolymorphicType
+  sealed trait mask extends PolymorphicType
   
   @js.native
   sealed trait max extends js.Object
@@ -655,28 +655,28 @@ object grommetStrings {
   @js.native
   sealed trait medium
     extends EdgeSizeType
-       with _BasisType
-       with _BoxSizeType
-       with _ElevationType
-       with _OpacityType
-       with _PadSizeType
-       with _RoundType
-       with _SizeType
+       with BasisType
+       with BoxSizeType
+       with ElevationType
+       with OpacityType
+       with PadSizeType
+       with RoundType
+       with SizeType
   
   @js.native
-  sealed trait menu extends _PolymorphicType
+  sealed trait menu extends PolymorphicType
   
   @js.native
-  sealed trait menuitem extends _PolymorphicType
+  sealed trait menuitem extends PolymorphicType
   
   @js.native
-  sealed trait meta extends _PolymorphicType
+  sealed trait meta extends PolymorphicType
   
   @js.native
-  sealed trait metadata extends _PolymorphicType
+  sealed trait metadata extends PolymorphicType
   
   @js.native
-  sealed trait meter extends _PolymorphicType
+  sealed trait meter extends PolymorphicType
   
   @js.native
   sealed trait middle extends js.Object
@@ -688,53 +688,53 @@ object grommetStrings {
   sealed trait minutes extends js.Object
   
   @js.native
-  sealed trait mpath extends _PolymorphicType
+  sealed trait mpath extends PolymorphicType
   
   @js.native
   sealed trait name extends js.Object
   
   @js.native
-  sealed trait nav extends _PolymorphicType
+  sealed trait nav extends PolymorphicType
   
   @js.native
   sealed trait `no-repeat` extends js.Object
   
   @js.native
-  sealed trait noindex extends _PolymorphicType
+  sealed trait noindex extends PolymorphicType
   
   @js.native
   sealed trait none
-    extends _PadSizeType
-       with _EdgeType
-       with _ElevationType
-       with _GapType
+    extends PadSizeType
+       with EdgeType
+       with ElevationType
+       with GapType
   
   @js.native
   sealed trait normal extends js.Object
   
   @js.native
-  sealed trait noscript extends _PolymorphicType
+  sealed trait noscript extends PolymorphicType
   
   @js.native
-  sealed trait `object` extends _PolymorphicType
+  sealed trait `object` extends PolymorphicType
   
   @js.native
   sealed trait off extends AnnounceMode
   
   @js.native
-  sealed trait ol extends _PolymorphicType
+  sealed trait ol extends PolymorphicType
   
   @js.native
   sealed trait onSelect extends js.Object
   
   @js.native
-  sealed trait optgroup extends _PolymorphicType
+  sealed trait optgroup extends PolymorphicType
   
   @js.native
-  sealed trait option extends _PolymorphicType
+  sealed trait option extends PolymorphicType
   
   @js.native
-  sealed trait output extends _PolymorphicType
+  sealed trait output extends PolymorphicType
   
   @js.native
   sealed trait outset extends BoxStyleType
@@ -743,19 +743,19 @@ object grommetStrings {
   sealed trait over extends js.Object
   
   @js.native
-  sealed trait p extends _PolymorphicType
+  sealed trait p extends PolymorphicType
   
   @js.native
-  sealed trait param extends _PolymorphicType
+  sealed trait param extends PolymorphicType
   
   @js.native
-  sealed trait path extends _PolymorphicType
+  sealed trait path extends PolymorphicType
   
   @js.native
-  sealed trait pattern extends _PolymorphicType
+  sealed trait pattern extends PolymorphicType
   
   @js.native
-  sealed trait picture extends _PolymorphicType
+  sealed trait picture extends PolymorphicType
   
   @js.native
   sealed trait placeholder extends js.Object
@@ -770,16 +770,16 @@ object grommetStrings {
   sealed trait polite extends AnnounceMode
   
   @js.native
-  sealed trait polygon extends _PolymorphicType
+  sealed trait polygon extends PolymorphicType
   
   @js.native
-  sealed trait polyline extends _PolymorphicType
+  sealed trait polyline extends PolymorphicType
   
   @js.native
-  sealed trait pre extends _PolymorphicType
+  sealed trait pre extends PolymorphicType
   
   @js.native
-  sealed trait progress extends _PolymorphicType
+  sealed trait progress extends PolymorphicType
   
   @js.native
   sealed trait pulse extends js.Object
@@ -788,13 +788,13 @@ object grommetStrings {
   sealed trait push extends js.Object
   
   @js.native
-  sealed trait q extends _PolymorphicType
+  sealed trait q extends PolymorphicType
   
   @js.native
-  sealed trait radialGradient extends _PolymorphicType
+  sealed trait radialGradient extends PolymorphicType
   
   @js.native
-  sealed trait rect extends _PolymorphicType
+  sealed trait rect extends PolymorphicType
   
   @js.native
   sealed trait rectilinear extends DiagramConnectionType
@@ -832,25 +832,25 @@ object grommetStrings {
   sealed trait `row-reverse` extends js.Object
   
   @js.native
-  sealed trait rp extends _PolymorphicType
+  sealed trait rp extends PolymorphicType
   
   @js.native
-  sealed trait rt extends _PolymorphicType
+  sealed trait rt extends PolymorphicType
   
   @js.native
   sealed trait rtl extends js.Object
   
   @js.native
-  sealed trait ruby extends _PolymorphicType
+  sealed trait ruby extends PolymorphicType
   
   @js.native
-  sealed trait s extends _PolymorphicType
+  sealed trait s extends PolymorphicType
   
   @js.native
-  sealed trait samp extends _PolymorphicType
+  sealed trait samp extends PolymorphicType
   
   @js.native
-  sealed trait script extends _PolymorphicType
+  sealed trait script extends PolymorphicType
   
   @js.native
   sealed trait scroll extends js.Object
@@ -859,10 +859,10 @@ object grommetStrings {
   sealed trait seconds extends js.Object
   
   @js.native
-  sealed trait section extends _PolymorphicType
+  sealed trait section extends PolymorphicType
   
   @js.native
-  sealed trait select extends _PolymorphicType
+  sealed trait select extends PolymorphicType
   
   @js.native
   sealed trait selectors extends js.Object
@@ -889,27 +889,27 @@ object grommetStrings {
   sealed trait slideUp extends js.Object
   
   @js.native
-  sealed trait slot extends _PolymorphicType
+  sealed trait slot extends PolymorphicType
   
   @js.native
   sealed trait small
     extends EdgeSizeType
-       with _BasisType
-       with _BoxSizeType
-       with _ElevationType
-       with _PadSizeType
-       with _PolymorphicType
-       with _RoundType
-       with _SizeType
+       with BasisType
+       with BoxSizeType
+       with ElevationType
+       with PadSizeType
+       with PolymorphicType
+       with RoundType
+       with SizeType
   
   @js.native
   sealed trait solid extends BoxStyleType
   
   @js.native
-  sealed trait source extends _PolymorphicType
+  sealed trait source extends PolymorphicType
   
   @js.native
-  sealed trait span extends _PolymorphicType
+  sealed trait span extends PolymorphicType
   
   @js.native
   sealed trait start
@@ -920,7 +920,7 @@ object grommetStrings {
        with TextAlignType
   
   @js.native
-  sealed trait stop extends _PolymorphicType
+  sealed trait stop extends PolymorphicType
   
   @js.native
   sealed trait stretch
@@ -930,14 +930,14 @@ object grommetStrings {
   
   @js.native
   sealed trait strong
-    extends _OpacityType
-       with _PolymorphicType
+    extends OpacityType
+       with PolymorphicType
   
   @js.native
-  sealed trait style extends _PolymorphicType
+  sealed trait style extends PolymorphicType
   
   @js.native
-  sealed trait sub extends _PolymorphicType
+  sealed trait sub extends PolymorphicType
   
   @js.native
   sealed trait submit extends js.Object
@@ -946,55 +946,55 @@ object grommetStrings {
   sealed trait sum extends js.Object
   
   @js.native
-  sealed trait summary extends _PolymorphicType
+  sealed trait summary extends PolymorphicType
   
   @js.native
-  sealed trait sup extends _PolymorphicType
+  sealed trait sup extends PolymorphicType
   
   @js.native
-  sealed trait svg extends _PolymorphicType
+  sealed trait svg extends PolymorphicType
   
   @js.native
-  sealed trait switch extends _PolymorphicType
+  sealed trait switch extends PolymorphicType
   
   @js.native
-  sealed trait symbol extends _PolymorphicType
+  sealed trait symbol extends PolymorphicType
   
   @js.native
-  sealed trait table extends _PolymorphicType
+  sealed trait table extends PolymorphicType
   
   @js.native
-  sealed trait tbody extends _PolymorphicType
+  sealed trait tbody extends PolymorphicType
   
   @js.native
-  sealed trait td extends _PolymorphicType
+  sealed trait td extends PolymorphicType
   
   @js.native
-  sealed trait template extends _PolymorphicType
+  sealed trait template extends PolymorphicType
   
   @js.native
-  sealed trait text extends _PolymorphicType
+  sealed trait text extends PolymorphicType
   
   @js.native
-  sealed trait textPath extends _PolymorphicType
+  sealed trait textPath extends PolymorphicType
   
   @js.native
-  sealed trait textarea extends _PolymorphicType
+  sealed trait textarea extends PolymorphicType
   
   @js.native
-  sealed trait tfoot extends _PolymorphicType
+  sealed trait tfoot extends PolymorphicType
   
   @js.native
-  sealed trait th extends _PolymorphicType
+  sealed trait th extends PolymorphicType
   
   @js.native
-  sealed trait thead extends _PolymorphicType
+  sealed trait thead extends PolymorphicType
   
   @js.native
-  sealed trait time extends _PolymorphicType
+  sealed trait time extends PolymorphicType
   
   @js.native
-  sealed trait title extends _PolymorphicType
+  sealed trait title extends PolymorphicType
   
   @js.native
   sealed trait top
@@ -1008,53 +1008,53 @@ object grommetStrings {
   sealed trait `top-right` extends js.Object
   
   @js.native
-  sealed trait tr extends _PolymorphicType
+  sealed trait tr extends PolymorphicType
   
   @js.native
-  sealed trait track extends _PolymorphicType
+  sealed trait track extends PolymorphicType
   
   @js.native
-  sealed trait tspan extends _PolymorphicType
+  sealed trait tspan extends PolymorphicType
   
   @js.native
-  sealed trait u extends _PolymorphicType
+  sealed trait u extends PolymorphicType
   
   @js.native
-  sealed trait ul extends _PolymorphicType
+  sealed trait ul extends PolymorphicType
   
   @js.native
-  sealed trait use extends _PolymorphicType
+  sealed trait use extends PolymorphicType
   
   @js.native
   sealed trait value extends js.Object
   
   @js.native
-  sealed trait `var` extends _PolymorphicType
+  sealed trait `var` extends PolymorphicType
   
   @js.native
   sealed trait vertical
     extends BoxSideType
        with DiagramConnectionAnchor
+       with FillType
        with SideType
-       with _FillType
   
   @js.native
-  sealed trait video extends _PolymorphicType
+  sealed trait video extends PolymorphicType
   
   @js.native
-  sealed trait view extends _PolymorphicType
+  sealed trait view extends PolymorphicType
   
   @js.native
   sealed trait visible extends js.Object
   
   @js.native
-  sealed trait wbr extends _PolymorphicType
+  sealed trait wbr extends PolymorphicType
   
   @js.native
-  sealed trait weak extends _OpacityType
+  sealed trait weak extends OpacityType
   
   @js.native
-  sealed trait webview extends _PolymorphicType
+  sealed trait webview extends PolymorphicType
   
   @js.native
   sealed trait window extends js.Object
@@ -1062,32 +1062,32 @@ object grommetStrings {
   @js.native
   sealed trait xlarge
     extends EdgeSizeType
-       with _BasisType
-       with _BoxSizeType
-       with _ElevationType
-       with _PadSizeType
-       with _RoundType
-       with _SizeType
+       with BasisType
+       with BoxSizeType
+       with ElevationType
+       with PadSizeType
+       with RoundType
+       with SizeType
   
   @js.native
   sealed trait xsmall
     extends EdgeSizeType
-       with _BasisType
-       with _BoxSizeType
-       with _ElevationType
-       with _PadSizeType
-       with _RoundType
-       with _SizeType
+       with BasisType
+       with BoxSizeType
+       with ElevationType
+       with PadSizeType
+       with RoundType
+       with SizeType
   
   @js.native
-  sealed trait xxlarge extends _BasisType
+  sealed trait xxlarge extends BasisType
   
   @js.native
   sealed trait xxsmall
     extends EdgeSizeType
-       with _BasisType
-       with _PadSizeType
-       with _SizeType
+       with BasisType
+       with PadSizeType
+       with SizeType
   
   @js.native
   sealed trait zoomIn extends js.Object

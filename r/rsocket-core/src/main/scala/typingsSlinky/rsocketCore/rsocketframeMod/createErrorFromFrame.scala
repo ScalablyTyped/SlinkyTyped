@@ -1,6 +1,6 @@
 package typingsSlinky.rsocketCore.rsocketframeMod
 
-import typingsSlinky.rsocketCore.ErrorsourceErrorSource
+import typingsSlinky.rsocketCore.anon.ErrorsourceErrorSource
 import typingsSlinky.rsocketTypes.reactiveSocketTypesMod.ErrorFrame
 import scala.scalajs.js
 import scala.scalajs.js.`|`

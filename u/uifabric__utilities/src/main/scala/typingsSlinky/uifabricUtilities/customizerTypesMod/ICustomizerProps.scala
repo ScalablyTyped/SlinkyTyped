@@ -1,7 +1,7 @@
 package typingsSlinky.uifabricUtilities.customizerTypesMod
 
 import slinky.core.facade.ReactRef
-import typingsSlinky.uifabricUtilities.ReadonlyICustomizerContex
+import typingsSlinky.uifabricUtilities.anon.ReadonlyICustomizerContex
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.customizationsMod.ISettings
 import typingsSlinky.uifabricUtilities.customizationsMod.ISettingsFunction

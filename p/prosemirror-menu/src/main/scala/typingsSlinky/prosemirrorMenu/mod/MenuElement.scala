@@ -1,6 +1,6 @@
 package typingsSlinky.prosemirrorMenu.mod
 
-import typingsSlinky.prosemirrorMenu.AnonDom
+import typingsSlinky.prosemirrorMenu.anon.Dom
 import typingsSlinky.prosemirrorModel.mod.Schema
 import typingsSlinky.prosemirrorView.mod.EditorView
 import scala.scalajs.js
@@ -15,12 +15,12 @@ trait MenuElement[S /* <: Schema[_, _] */] extends js.Object {
     * a new state. The `update` function will return false if the
     * update hid the entire element.
     */
-  def render(pm: EditorView[S]): AnonDom[S] = js.native
+  def render(pm: EditorView[S]): Dom[S] = js.native
 }
 
 object MenuElement {
   @scala.inline
-  def apply[S](render: EditorView[S] => AnonDom[S]): MenuElement[S] = {
+  def apply[S](render: EditorView[S] => Dom[S]): MenuElement[S] = {
     val __obj = js.Dynamic.literal(render = js.Any.fromFunction1(render))
     __obj.asInstanceOf[MenuElement[S]]
   }
@@ -31,7 +31,7 @@ object MenuElement {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[S] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[S] with Other]
     @scala.inline
-    def withRender(value: EditorView[S] => AnonDom[S]): Self[S] = {
+    def withRender(value: EditorView[S] => Dom[S]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("render")(js.Any.fromFunction1(value))
         ret

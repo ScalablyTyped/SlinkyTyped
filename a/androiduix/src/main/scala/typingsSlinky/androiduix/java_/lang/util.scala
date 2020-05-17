@@ -11,7 +11,7 @@ object util extends js.Object {
   @js.native
   object concurrent extends js.Object {
     @js.native
-    class CopyOnWriteArrayList[T] () extends js.Object {
+    trait CopyOnWriteArrayList[T] extends js.Object {
       var isDataNew: js.Any = js.native
       @JSName(js.Symbol.iterator)
       var iterator_FCopyOnWriteArrayList: js.Function0[IterableIterator[T]] = js.native

@@ -1,9 +1,9 @@
 package typingsSlinky.reactVirtualized.esListMod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactVirtualized.AnonAlignmentIndex
-import typingsSlinky.reactVirtualized.AnonAutoHeight
-import typingsSlinky.reactVirtualized.PartialCellPosition
+import typingsSlinky.reactVirtualized.anon.AlignmentIndex
+import typingsSlinky.reactVirtualized.anon.AutoHeight
+import typingsSlinky.reactVirtualized.anon.PartialCellPosition
 import typingsSlinky.reactVirtualized.esCellMeasurerMod.CellPosition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ class List ()
   var Grid: js.UndefOr[typingsSlinky.reactVirtualized.esGridMod.Grid] = js.native
   def forceUpdateGrid(): Unit = js.native
   /** See Grid#getOffsetForCell */
-  def getOffsetForRow(params: AnonAlignmentIndex): Double = js.native
+  def getOffsetForRow(params: AlignmentIndex): Double = js.native
   /** CellMeasurer compatibility */
   def invalidateCellSizeAfterRender(hasColumnIndexRowIndex: CellPosition): Unit = js.native
   /** See Grid#measureAllCells */
@@ -39,6 +39,6 @@ class List ()
 @JSImport("react-virtualized/dist/es/List", "List")
 @js.native
 object List extends js.Object {
-  var defaultProps: AnonAutoHeight = js.native
+  var defaultProps: AutoHeight = js.native
 }
 

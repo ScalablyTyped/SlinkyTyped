@@ -37,9 +37,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A native control for playing videos.
 		 */
-@JSGlobal("Titanium.Media.VideoPlayer")
 @js.native
-class VideoPlayer () extends View {
+trait VideoPlayer extends View {
   /**
   			 * Whether or not the current movie can be played on a remote device.
   			 */

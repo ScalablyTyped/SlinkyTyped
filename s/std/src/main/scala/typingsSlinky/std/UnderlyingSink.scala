@@ -62,18 +62,6 @@ object UnderlyingSink {
         ret
     }
     @scala.inline
-    def withType(value: scala.Nothing): Self[W] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutType: Self[W] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withWrite(value: (W, /* controller */ WritableStreamDefaultController) => Unit | js.Thenable[Unit]): Self[W] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("write")(js.Any.fromFunction2(value))

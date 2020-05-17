@@ -21,59 +21,26 @@ trait Op extends js.Object
 
 object Op {
   @scala.inline
-  def ListMoveOp(lm: js.Any, p: Path): Op = {
-    val __obj = js.Dynamic.literal(lm = lm.asInstanceOf[js.Any], p = p.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Op]
-  }
+  implicit def apply(value: AddNumOp): Op = value.asInstanceOf[Op]
   @scala.inline
-  def ObjectInsertOp(oi: js.Any, p: Path): Op = {
-    val __obj = js.Dynamic.literal(oi = oi.asInstanceOf[js.Any], p = p.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Op]
-  }
+  implicit def apply(value: ListDeleteOp): Op = value.asInstanceOf[Op]
   @scala.inline
-  def ObjectReplaceOp(od: js.Any, oi: js.Any, p: Path): Op = {
-    val __obj = js.Dynamic.literal(od = od.asInstanceOf[js.Any], oi = oi.asInstanceOf[js.Any], p = p.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Op]
-  }
+  implicit def apply(value: ListInsertOp): Op = value.asInstanceOf[Op]
   @scala.inline
-  def ListInsertOp(li: js.Any, p: Path): Op = {
-    val __obj = js.Dynamic.literal(li = li.asInstanceOf[js.Any], p = p.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Op]
-  }
+  implicit def apply(value: ListMoveOp): Op = value.asInstanceOf[Op]
   @scala.inline
-  def AddNumOp(na: Double, p: Path): Op = {
-    val __obj = js.Dynamic.literal(na = na.asInstanceOf[js.Any], p = p.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Op]
-  }
+  implicit def apply(value: ListReplaceOp): Op = value.asInstanceOf[Op]
   @scala.inline
-  def ListDeleteOp(ld: js.Any, p: Path): Op = {
-    val __obj = js.Dynamic.literal(ld = ld.asInstanceOf[js.Any], p = p.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Op]
-  }
+  implicit def apply(value: ObjectDeleteOp): Op = value.asInstanceOf[Op]
   @scala.inline
-  def ListReplaceOp(ld: js.Any, li: js.Any, p: Path): Op = {
-    val __obj = js.Dynamic.literal(ld = ld.asInstanceOf[js.Any], li = li.asInstanceOf[js.Any], p = p.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Op]
-  }
+  implicit def apply(value: ObjectInsertOp): Op = value.asInstanceOf[Op]
   @scala.inline
-  def StringDeleteOp(p: Path, sd: String): Op = {
-    val __obj = js.Dynamic.literal(p = p.asInstanceOf[js.Any], sd = sd.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Op]
-  }
+  implicit def apply(value: ObjectReplaceOp): Op = value.asInstanceOf[Op]
   @scala.inline
-  def ObjectDeleteOp(od: js.Any, p: Path): Op = {
-    val __obj = js.Dynamic.literal(od = od.asInstanceOf[js.Any], p = p.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Op]
-  }
+  implicit def apply(value: StringDeleteOp): Op = value.asInstanceOf[Op]
   @scala.inline
-  def SubtypeOp(o: js.Any, p: Path, t: String): Op = {
-    val __obj = js.Dynamic.literal(o = o.asInstanceOf[js.Any], p = p.asInstanceOf[js.Any], t = t.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Op]
-  }
+  implicit def apply(value: StringInsertOp): Op = value.asInstanceOf[Op]
   @scala.inline
-  def StringInsertOp(p: Path, si: String): Op = {
-    val __obj = js.Dynamic.literal(p = p.asInstanceOf[js.Any], si = si.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Op]
-  }
+  implicit def apply(value: SubtypeOp): Op = value.asInstanceOf[Op]
 }
 

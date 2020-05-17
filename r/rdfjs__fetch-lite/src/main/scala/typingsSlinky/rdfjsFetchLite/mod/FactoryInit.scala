@@ -3,7 +3,7 @@ package typingsSlinky.rdfjsFetchLite.mod
 import typingsSlinky.rdfJs.mod.BaseQuad
 import typingsSlinky.rdfJs.mod.DatasetCore
 import typingsSlinky.rdfJs.mod.DatasetCoreFactory
-import typingsSlinky.rdfjsFetchLite.PickparsersSinkMapEventEm
+import typingsSlinky.rdfjsFetchLite.anon.PickparsersSinkMapEventEm
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

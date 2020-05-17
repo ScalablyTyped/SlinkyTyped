@@ -1,16 +1,13 @@
 package typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search.Query
 
-import typingsSlinky.sharepoint.SP.ClientContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /**Contains information about a keyword based search query.*/
-@JSGlobal("Microsoft.SharePoint.Client.Search.Query.KeywordQuery")
 @js.native
-class KeywordQuery protected ()
+trait KeywordQuery
   extends typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search.Query.Query {
-  def this(context: ClientContext) = this()
   def get_collapseSpecification(): String = js.native
   def get_enableSorting(): Boolean = js.native
   def get_hiddenConstraints(): String = js.native

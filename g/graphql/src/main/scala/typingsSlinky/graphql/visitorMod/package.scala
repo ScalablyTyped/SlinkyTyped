@@ -27,7 +27,6 @@ package object visitorMod {
     /* ancestors */ js.Array[TAnyNode | js.Array[TAnyNode]], 
     js.Any
   ]
-  type Visitor[KindToNode, Nodes] = (typingsSlinky.graphql.visitorMod.EnterLeaveVisitor[KindToNode, Nodes]) | (typingsSlinky.graphql.visitorMod.ShapeMapVisitor[KindToNode, Nodes])
   type VisitorKeyMap[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]: std.ReadonlyArray<keyof T[P]>}
     */ typingsSlinky.graphql.graphqlStrings.VisitorKeyMap with org.scalablytyped.runtime.TopLevel[js.Any]

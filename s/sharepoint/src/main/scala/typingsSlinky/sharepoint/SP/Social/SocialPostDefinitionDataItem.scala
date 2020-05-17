@@ -1,15 +1,16 @@
 package typingsSlinky.sharepoint.SP.Social
 
 import typingsSlinky.sharepoint.SP.ClientValueObject
+import typingsSlinky.sharepoint.SP.SerializationContext
+import typingsSlinky.sharepoint.SP.XmlWriter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Specifies an item to be inserted in a post by replacing a token in the post definition.
   This type can only be specified in a server-to-server call. */
-@JSGlobal("SP.Social.SocialPostDefinitionDataItem")
 @js.native
-class SocialPostDefinitionDataItem () extends ClientValueObject {
+trait SocialPostDefinitionDataItem extends ClientValueObject {
   /** Specifies the name of the user.
     This property is only used if the ItemType property specifies that the item is a User. */
   def get_accountName(): String = js.native
@@ -40,5 +41,111 @@ class SocialPostDefinitionDataItem () extends ClientValueObject {
   /** Specifies the URI of the document, site, or link.
     This property is only available if the ItemType property specifies that the item is a Document, Link, or Site. */
   def set_uri(value: String): String = js.native
+}
+
+object SocialPostDefinitionDataItem {
+  @scala.inline
+  def apply(
+    customFromJson: js.Any => Boolean,
+    customWriteToXml: (XmlWriter, SerializationContext) => Boolean,
+    fromJson: js.Any => Unit,
+    get_accountName: () => String,
+    get_itemType: () => SocialPostDefinitionDataItemType,
+    get_placeholderName: () => String,
+    get_tagGuid: () => String,
+    get_text: () => String,
+    get_typeId: () => String,
+    get_uri: () => String,
+    set_accountName: String => String,
+    set_itemType: SocialPostDefinitionDataItemType => SocialPostDefinitionDataItemType,
+    set_placeholderName: String => String,
+    set_tagGuid: String => String,
+    set_text: String => String,
+    set_uri: String => String,
+    writeToXml: (XmlWriter, SerializationContext) => Unit
+  ): SocialPostDefinitionDataItem = {
+    val __obj = js.Dynamic.literal(customFromJson = js.Any.fromFunction1(customFromJson), customWriteToXml = js.Any.fromFunction2(customWriteToXml), fromJson = js.Any.fromFunction1(fromJson), get_accountName = js.Any.fromFunction0(get_accountName), get_itemType = js.Any.fromFunction0(get_itemType), get_placeholderName = js.Any.fromFunction0(get_placeholderName), get_tagGuid = js.Any.fromFunction0(get_tagGuid), get_text = js.Any.fromFunction0(get_text), get_typeId = js.Any.fromFunction0(get_typeId), get_uri = js.Any.fromFunction0(get_uri), set_accountName = js.Any.fromFunction1(set_accountName), set_itemType = js.Any.fromFunction1(set_itemType), set_placeholderName = js.Any.fromFunction1(set_placeholderName), set_tagGuid = js.Any.fromFunction1(set_tagGuid), set_text = js.Any.fromFunction1(set_text), set_uri = js.Any.fromFunction1(set_uri), writeToXml = js.Any.fromFunction2(writeToXml))
+    __obj.asInstanceOf[SocialPostDefinitionDataItem]
+  }
+  @scala.inline
+  implicit class SocialPostDefinitionDataItemOps[Self <: SocialPostDefinitionDataItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGet_accountName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_accountName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_itemType(value: () => SocialPostDefinitionDataItemType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_itemType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_placeholderName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_placeholderName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_tagGuid(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_tagGuid")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_text(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_text")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_uri(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_uri")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSet_accountName(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_accountName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_itemType(value: SocialPostDefinitionDataItemType => SocialPostDefinitionDataItemType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_itemType")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_placeholderName(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_placeholderName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_tagGuid(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_tagGuid")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_text(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_text")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_uri(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_uri")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

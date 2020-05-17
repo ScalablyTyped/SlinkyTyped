@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -628,7 +628,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withCaptionRendered(value: (/* event */ Event_, /* ui */ CaptionRenderedEventUIParam) => Unit): Self = {
+    def withCaptionRendered(value: (/* event */ Event, /* ui */ CaptionRenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("captionRendered")(js.Any.fromFunction2(value))
         ret
@@ -640,7 +640,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withCaptionRendering(value: (/* event */ Event_, /* ui */ CaptionRenderingEventUIParam) => Unit): Self = {
+    def withCaptionRendering(value: (/* event */ Event, /* ui */ CaptionRenderingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("captionRendering")(js.Any.fromFunction2(value))
         ret
@@ -652,7 +652,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withCellClick(value: (/* event */ Event_, /* ui */ CellClickEventUIParam) => Unit): Self = {
+    def withCellClick(value: (/* event */ Event, /* ui */ CellClickEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cellClick")(js.Any.fromFunction2(value))
         ret
@@ -664,7 +664,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withCellRightClick(value: (/* event */ Event_, /* ui */ CellRightClickEventUIParam) => Unit): Self = {
+    def withCellRightClick(value: (/* event */ Event, /* ui */ CellRightClickEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cellRightClick")(js.Any.fromFunction2(value))
         ret
@@ -724,7 +724,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withColumnsCollectionModified(value: (/* event */ Event_, /* ui */ ColumnsCollectionModifiedEventUIParam) => Unit): Self = {
+    def withColumnsCollectionModified(value: (/* event */ Event, /* ui */ ColumnsCollectionModifiedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnsCollectionModified")(js.Any.fromFunction2(value))
         ret
@@ -736,7 +736,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withCreated(value: (/* event */ Event_, /* ui */ CreatedEventUIParam) => Unit): Self = {
+    def withCreated(value: (/* event */ Event, /* ui */ CreatedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.Any.fromFunction2(value))
         ret
@@ -748,7 +748,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withDataBinding(value: (/* event */ Event_, /* ui */ DataBindingEventUIParam) => Unit): Self = {
+    def withDataBinding(value: (/* event */ Event, /* ui */ DataBindingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataBinding")(js.Any.fromFunction2(value))
         ret
@@ -760,7 +760,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withDataBound(value: (/* event */ Event_, /* ui */ DataBoundEventUIParam) => Unit): Self = {
+    def withDataBound(value: (/* event */ Event, /* ui */ DataBoundEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataBound")(js.Any.fromFunction2(value))
         ret
@@ -772,7 +772,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withDataRendered(value: (/* event */ Event_, /* ui */ DataRenderedEventUIParam) => Unit): Self = {
+    def withDataRendered(value: (/* event */ Event, /* ui */ DataRenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataRendered")(js.Any.fromFunction2(value))
         ret
@@ -784,7 +784,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withDataRendering(value: (/* event */ Event_, /* ui */ DataRenderingEventUIParam) => Unit): Self = {
+    def withDataRendering(value: (/* event */ Event, /* ui */ DataRenderingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataRendering")(js.Any.fromFunction2(value))
         ret
@@ -856,7 +856,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withDestroyed(value: (/* event */ Event_, /* ui */ DestroyedEventUIParam) => Unit): Self = {
+    def withDestroyed(value: (/* event */ Event, /* ui */ DestroyedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("destroyed")(js.Any.fromFunction2(value))
         ret
@@ -976,7 +976,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withFooterRendered(value: (/* event */ Event_, /* ui */ FooterRenderedEventUIParam) => Unit): Self = {
+    def withFooterRendered(value: (/* event */ Event, /* ui */ FooterRenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("footerRendered")(js.Any.fromFunction2(value))
         ret
@@ -988,7 +988,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withFooterRendering(value: (/* event */ Event_, /* ui */ FooterRenderingEventUIParam) => Unit): Self = {
+    def withFooterRendering(value: (/* event */ Event, /* ui */ FooterRenderingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("footerRendering")(js.Any.fromFunction2(value))
         ret
@@ -1024,7 +1024,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withHeaderCellRendered(value: (/* event */ Event_, /* ui */ HeaderCellRenderedEventUIParam) => Unit): Self = {
+    def withHeaderCellRendered(value: (/* event */ Event, /* ui */ HeaderCellRenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headerCellRendered")(js.Any.fromFunction2(value))
         ret
@@ -1036,7 +1036,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withHeaderRendered(value: (/* event */ Event_, /* ui */ HeaderRenderedEventUIParam) => Unit): Self = {
+    def withHeaderRendered(value: (/* event */ Event, /* ui */ HeaderRenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headerRendered")(js.Any.fromFunction2(value))
         ret
@@ -1048,7 +1048,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withHeaderRendering(value: (/* event */ Event_, /* ui */ HeaderRenderingEventUIParam) => Unit): Self = {
+    def withHeaderRendering(value: (/* event */ Event, /* ui */ HeaderRenderingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headerRendering")(js.Any.fromFunction2(value))
         ret
@@ -1216,7 +1216,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withRendered(value: (/* event */ Event_, /* ui */ RenderedEventUIParam) => Unit): Self = {
+    def withRendered(value: (/* event */ Event, /* ui */ RenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rendered")(js.Any.fromFunction2(value))
         ret
@@ -1228,7 +1228,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withRendering(value: (/* event */ Event_, /* ui */ RenderingEventUIParam) => Unit): Self = {
+    def withRendering(value: (/* event */ Event, /* ui */ RenderingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rendering")(js.Any.fromFunction2(value))
         ret
@@ -1240,7 +1240,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withRequestError(value: (/* event */ Event_, /* ui */ RequestErrorEventUIParam) => Unit): Self = {
+    def withRequestError(value: (/* event */ Event, /* ui */ RequestErrorEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("requestError")(js.Any.fromFunction2(value))
         ret
@@ -1312,7 +1312,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withRowCollapsed(value: (/* event */ Event_, /* ui */ RowCollapsedEventUIParam) => Unit): Self = {
+    def withRowCollapsed(value: (/* event */ Event, /* ui */ RowCollapsedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowCollapsed")(js.Any.fromFunction2(value))
         ret
@@ -1324,7 +1324,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withRowCollapsing(value: (/* event */ Event_, /* ui */ RowCollapsingEventUIParam) => Unit): Self = {
+    def withRowCollapsing(value: (/* event */ Event, /* ui */ RowCollapsingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowCollapsing")(js.Any.fromFunction2(value))
         ret
@@ -1336,7 +1336,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withRowExpanded(value: (/* event */ Event_, /* ui */ RowExpandedEventUIParam) => Unit): Self = {
+    def withRowExpanded(value: (/* event */ Event, /* ui */ RowExpandedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowExpanded")(js.Any.fromFunction2(value))
         ret
@@ -1348,7 +1348,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withRowExpanding(value: (/* event */ Event_, /* ui */ RowExpandingEventUIParam) => Unit): Self = {
+    def withRowExpanding(value: (/* event */ Event, /* ui */ RowExpandingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowExpanding")(js.Any.fromFunction2(value))
         ret
@@ -1372,7 +1372,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withRowsRendered(value: (/* event */ Event_, /* ui */ RowsRenderedEventUIParam) => Unit): Self = {
+    def withRowsRendered(value: (/* event */ Event, /* ui */ RowsRenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowsRendered")(js.Any.fromFunction2(value))
         ret
@@ -1384,7 +1384,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withRowsRendering(value: (/* event */ Event_, /* ui */ RowsRenderingEventUIParam) => Unit): Self = {
+    def withRowsRendering(value: (/* event */ Event, /* ui */ RowsRenderingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowsRendering")(js.Any.fromFunction2(value))
         ret
@@ -1396,7 +1396,7 @@ object IgTreeGrid {
         ret
     }
     @scala.inline
-    def withSchemaGenerated(value: (/* event */ Event_, /* ui */ SchemaGeneratedEventUIParam) => Unit): Self = {
+    def withSchemaGenerated(value: (/* event */ Event, /* ui */ SchemaGeneratedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("schemaGenerated")(js.Any.fromFunction2(value))
         ret

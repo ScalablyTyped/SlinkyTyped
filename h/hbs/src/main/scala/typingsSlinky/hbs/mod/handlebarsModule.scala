@@ -7,17 +7,17 @@ import typingsSlinky.handlebars.CompileOptions
 import typingsSlinky.handlebars.Handlebars.HelperDeclareSpec
 import typingsSlinky.handlebars.Handlebars.HelperDelegate
 import typingsSlinky.handlebars.Handlebars.ParseOptions
-import typingsSlinky.handlebars.Handlebars.Template_
+import typingsSlinky.handlebars.Handlebars.Template
 import typingsSlinky.handlebars.HandlebarsTemplateDelegate
 import typingsSlinky.handlebars.HandlebarsTemplates
 import typingsSlinky.handlebars.Logger
 import typingsSlinky.handlebars.PrecompileOptions
 import typingsSlinky.handlebars.TemplateSpecification
-import typingsSlinky.handlebars.TypeofHandlebars
+import typingsSlinky.handlebars.anon.TypeofHandlebars
 import typingsSlinky.handlebars.hbs.AST.Program
-import typingsSlinky.hbs.TypeofAST
-import typingsSlinky.hbs.TypeofUtils
-import typingsSlinky.hbs.TypeofVM
+import typingsSlinky.hbs.anon.TypeofAST
+import typingsSlinky.hbs.anon.TypeofUtils
+import typingsSlinky.hbs.anon.TypeofVM
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,7 +54,7 @@ trait handlebarsModule extends js.Object {
   def registerDecorator(name: String, fn: js.Function): Unit = js.native
   def registerHelper(name: String, fn: HelperDelegate): Unit = js.native
   def registerHelper(name: HelperDeclareSpec): Unit = js.native
-  def registerPartial(name: String, fn: Template_[_]): Unit = js.native
+  def registerPartial(name: String, fn: Template[_]): Unit = js.native
   def registerPartial(spec: StringDictionary[HandlebarsTemplateDelegate[_]]): Unit = js.native
   def template[T](precompilation: TemplateSpecification): HandlebarsTemplateDelegate[T] = js.native
   def unregisterDecorator(name: String): Unit = js.native

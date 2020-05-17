@@ -1,6 +1,6 @@
 package typingsSlinky.rmcCascader.popupMod
 
-import typingsSlinky.rmcCascader.AnonPickerValueChangeProp
+import typingsSlinky.rmcCascader.anon.PickerValueChangeProp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ class default () extends PopupCascader
 @JSImport("rmc-cascader/lib/Popup", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonPickerValueChangeProp = js.native
+  var defaultProps: PickerValueChangeProp = js.native
 }
 

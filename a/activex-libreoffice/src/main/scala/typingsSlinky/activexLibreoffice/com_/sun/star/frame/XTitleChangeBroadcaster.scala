@@ -1,0 +1,51 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.frame
+
+import typingsSlinky.activexLibreoffice.`type`
+import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Allows to register for title changed events. */
+@js.native
+trait XTitleChangeBroadcaster extends XInterface {
+  /** Add a listener */
+  def addTitleChangeListener(xListener: XTitleChangeListener): Unit = js.native
+  /** Remove a listener */
+  def removeTitleChangeListener(xListener: XTitleChangeListener): Unit = js.native
+}
+
+object XTitleChangeBroadcaster {
+  @scala.inline
+  def apply(
+    acquire: () => Unit,
+    addTitleChangeListener: XTitleChangeListener => Unit,
+    queryInterface: `type` => js.Any,
+    release: () => Unit,
+    removeTitleChangeListener: XTitleChangeListener => Unit
+  ): XTitleChangeBroadcaster = {
+    val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), addTitleChangeListener = js.Any.fromFunction1(addTitleChangeListener), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeTitleChangeListener = js.Any.fromFunction1(removeTitleChangeListener))
+    __obj.asInstanceOf[XTitleChangeBroadcaster]
+  }
+  @scala.inline
+  implicit class XTitleChangeBroadcasterOps[Self <: XTitleChangeBroadcaster] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddTitleChangeListener(value: XTitleChangeListener => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addTitleChangeListener")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveTitleChangeListener(value: XTitleChangeListener => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeTitleChangeListener")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
+

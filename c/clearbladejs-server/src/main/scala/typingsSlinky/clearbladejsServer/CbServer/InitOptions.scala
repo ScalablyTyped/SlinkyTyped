@@ -84,7 +84,7 @@ object InitOptions {
         ret
     }
     @scala.inline
-    def withCallback(value: (/* error */ Boolean, /* response */ Resp_) => Unit): Self = {
+    def withCallback(value: (/* error */ Boolean, /* response */ Resp) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("callback")(js.Any.fromFunction2(value))
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -332,7 +332,7 @@ object IgUpload {
         ret
     }
     @scala.inline
-    def withCancelAllClicked(value: (/* event */ Event_, /* ui */ CancelAllClickedEventUIParam) => Unit): Self = {
+    def withCancelAllClicked(value: (/* event */ Event, /* ui */ CancelAllClickedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cancelAllClicked")(js.Any.fromFunction2(value))
         ret
@@ -524,7 +524,7 @@ object IgUpload {
         ret
     }
     @scala.inline
-    def withFileExtensionsValidating(value: (/* event */ Event_, /* ui */ FileExtensionsValidatingEventUIParam) => Unit): Self = {
+    def withFileExtensionsValidating(value: (/* event */ Event, /* ui */ FileExtensionsValidatingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fileExtensionsValidating")(js.Any.fromFunction2(value))
         ret
@@ -536,7 +536,7 @@ object IgUpload {
         ret
     }
     @scala.inline
-    def withFileSelected(value: (/* event */ Event_, /* ui */ FileSelectedEventUIParam) => Unit): Self = {
+    def withFileSelected(value: (/* event */ Event, /* ui */ FileSelectedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fileSelected")(js.Any.fromFunction2(value))
         ret
@@ -548,7 +548,7 @@ object IgUpload {
         ret
     }
     @scala.inline
-    def withFileSelecting(value: (/* event */ Event_, /* ui */ FileSelectingEventUIParam) => Unit): Self = {
+    def withFileSelecting(value: (/* event */ Event, /* ui */ FileSelectingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fileSelecting")(js.Any.fromFunction2(value))
         ret
@@ -584,7 +584,7 @@ object IgUpload {
         ret
     }
     @scala.inline
-    def withFileUploadAborted(value: (/* event */ Event_, /* ui */ FileUploadAbortedEventUIParam) => Unit): Self = {
+    def withFileUploadAborted(value: (/* event */ Event, /* ui */ FileUploadAbortedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fileUploadAborted")(js.Any.fromFunction2(value))
         ret
@@ -596,7 +596,7 @@ object IgUpload {
         ret
     }
     @scala.inline
-    def withFileUploaded(value: (/* event */ Event_, /* ui */ FileUploadedEventUIParam) => Unit): Self = {
+    def withFileUploaded(value: (/* event */ Event, /* ui */ FileUploadedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fileUploaded")(js.Any.fromFunction2(value))
         ret
@@ -608,7 +608,7 @@ object IgUpload {
         ret
     }
     @scala.inline
-    def withFileUploading(value: (/* event */ Event_, /* ui */ FileUploadingEventUIParam) => Unit): Self = {
+    def withFileUploading(value: (/* event */ Event, /* ui */ FileUploadingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fileUploading")(js.Any.fromFunction2(value))
         ret
@@ -848,7 +848,7 @@ object IgUpload {
         ret
     }
     @scala.inline
-    def withOnError(value: (/* event */ Event_, /* ui */ OnErrorEventUIParam) => Unit): Self = {
+    def withOnError(value: (/* event */ Event, /* ui */ OnErrorEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction2(value))
         ret
@@ -860,7 +860,7 @@ object IgUpload {
         ret
     }
     @scala.inline
-    def withOnFormDataSubmit(value: (/* event */ Event_, /* ui */ OnFormDataSubmitEventUIParam) => Unit): Self = {
+    def withOnFormDataSubmit(value: (/* event */ Event, /* ui */ OnFormDataSubmitEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFormDataSubmit")(js.Any.fromFunction2(value))
         ret
@@ -872,7 +872,7 @@ object IgUpload {
         ret
     }
     @scala.inline
-    def withOnXHRLoad(value: (/* event */ Event_, /* ui */ OnXHRLoadEventUIParam) => Unit): Self = {
+    def withOnXHRLoad(value: (/* event */ Event, /* ui */ OnXHRLoadEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onXHRLoad")(js.Any.fromFunction2(value))
         ret

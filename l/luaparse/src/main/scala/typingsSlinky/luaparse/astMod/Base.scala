@@ -1,13 +1,13 @@
 package typingsSlinky.luaparse.astMod
 
-import typingsSlinky.luaparse.AnonEnd
+import typingsSlinky.luaparse.anon.End
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Base[TType /* <: String */] extends js.Object {
-  var loc: js.UndefOr[AnonEnd] = js.native
+  var loc: js.UndefOr[End] = js.native
   var `type`: TType = js.native
 }
 
@@ -31,7 +31,7 @@ object Base {
         ret
     }
     @scala.inline
-    def withLoc(value: AnonEnd): Self[TType] = {
+    def withLoc(value: End): Self[TType] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
         ret

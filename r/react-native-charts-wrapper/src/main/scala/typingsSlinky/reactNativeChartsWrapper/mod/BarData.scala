@@ -1,13 +1,13 @@
 package typingsSlinky.reactNativeChartsWrapper.mod
 
-import typingsSlinky.reactNativeChartsWrapper.AnonBarWidth
+import typingsSlinky.reactNativeChartsWrapper.anon.BarWidth
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait BarData extends js.Object {
-  var config: js.UndefOr[AnonBarWidth] = js.native
+  var config: js.UndefOr[BarWidth] = js.native
   var dataSets: js.UndefOr[js.Array[BarDataset]] = js.native
 }
 
@@ -24,7 +24,7 @@ object BarData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withConfig(value: AnonBarWidth): Self = {
+    def withConfig(value: BarWidth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
         ret

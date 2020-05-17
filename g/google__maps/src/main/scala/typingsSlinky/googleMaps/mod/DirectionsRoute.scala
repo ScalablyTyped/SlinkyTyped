@@ -1,6 +1,6 @@
 package typingsSlinky.googleMaps.mod
 
-import typingsSlinky.googleMaps.AnonPoints
+import typingsSlinky.googleMaps.anon.Points
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +35,7 @@ trait DirectionsRoute extends js.Object {
     * contains a single `points` object that holds an encoded polyline representation of the route.
     * This polyline is an approximate (smoothed) path of the resulting directions.
     */
-  var overview_polyline: AnonPoints = js.native
+  var overview_polyline: Points = js.native
   /** contains a short textual description for the route, suitable for naming and disambiguating the route from alternatives. */
   var summary: String = js.native
   /** contains an array of warnings to be displayed when showing these directions. You must handle and display these warnings yourself. */
@@ -55,7 +55,7 @@ object DirectionsRoute {
     fare: TransitFare,
     legs: js.Array[RouteLeg],
     overview_path: js.Array[LatLngLiteral],
-    overview_polyline: AnonPoints,
+    overview_polyline: Points,
     summary: String,
     warnings: js.Array[String],
     waypoint_order: js.Array[Double]
@@ -100,7 +100,7 @@ object DirectionsRoute {
         ret
     }
     @scala.inline
-    def withOverview_polyline(value: AnonPoints): Self = {
+    def withOverview_polyline(value: Points): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overview_polyline")(value.asInstanceOf[js.Any])
         ret

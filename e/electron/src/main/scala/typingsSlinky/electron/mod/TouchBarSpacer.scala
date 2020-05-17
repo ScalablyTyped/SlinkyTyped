@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("electron", "TouchBarSpacer")
 @js.native
 class TouchBarSpacer protected ()
-  extends typingsSlinky.electron.Electron.TouchBarSpacer {
+  extends typingsSlinky.electron.Electron.EventEmitter {
   // Docs: http://electronjs.org/docs/api/touch-bar-spacer
   def this(options: TouchBarSpacerConstructorOptions) = this()
 }

@@ -1,0 +1,14 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Serves as the base class for classes that provide data for client-side events related to dashboard items.
+  */
+@JSGlobal("ASPxClientDashboardItemEventArgs")
+@js.native
+class ASPxClientDashboardItemEventArgs ()
+  extends typingsSlinky.devexpressWeb.ASPxClientDashboardItemEventArgs
+

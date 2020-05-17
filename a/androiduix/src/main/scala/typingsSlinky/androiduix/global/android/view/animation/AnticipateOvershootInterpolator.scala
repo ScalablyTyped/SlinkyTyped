@@ -1,0 +1,22 @@
+package typingsSlinky.androiduix.global.android.view.animation
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("android.view.animation.AnticipateOvershootInterpolator")
+@js.native
+class AnticipateOvershootInterpolator ()
+  extends typingsSlinky.androiduix.android.view.animation.AnticipateOvershootInterpolator {
+  def this(tension: Double) = this()
+  def this(tension: Double, extraTension: Double) = this()
+}
+
+/* static members */
+@JSGlobal("android.view.animation.AnticipateOvershootInterpolator")
+@js.native
+object AnticipateOvershootInterpolator extends js.Object {
+  /* private */ def a(t: js.Any, s: js.Any): js.Any = js.native
+  /* private */ def o(t: js.Any, s: js.Any): js.Any = js.native
+}
+

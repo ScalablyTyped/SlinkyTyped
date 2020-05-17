@@ -1,6 +1,5 @@
 package typingsSlinky.canvasjs.mod
 
-import typingsSlinky.canvasjs.AnonChart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -65,7 +64,7 @@ trait ChartLegendOptions extends js.Object {
   /**
     * A custom formatter function that returns text to be displayed inside individual legend items.
     */
-  var itemTextFormatter: js.UndefOr[js.Function1[/* e */ js.UndefOr[AnonChart], String]] = js.native
+  var itemTextFormatter: js.UndefOr[js.Function1[/* e */ js.UndefOr[typingsSlinky.canvasjs.anon.Chart], String]] = js.native
   /**
     * Sets the width of individual legend items after which the it gets wrapped or clipped depending on whether itemWrap is set to true (default) or false.
     * itemWidth can’t be greater than itemMaxWidth and maxWidth of legend.
@@ -261,7 +260,7 @@ object ChartLegendOptions {
         ret
     }
     @scala.inline
-    def withItemTextFormatter(value: /* e */ js.UndefOr[AnonChart] => String): Self = {
+    def withItemTextFormatter(value: /* e */ js.UndefOr[typingsSlinky.canvasjs.anon.Chart] => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemTextFormatter")(js.Any.fromFunction1(value))
         ret

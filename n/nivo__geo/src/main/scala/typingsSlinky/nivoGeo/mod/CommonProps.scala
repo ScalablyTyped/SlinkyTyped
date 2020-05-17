@@ -1,7 +1,7 @@
 package typingsSlinky.nivoGeo.mod
 
-import typingsSlinky.nivoGeo.PartialBox
-import typingsSlinky.nivoGeo.PartialTheme
+import typingsSlinky.nivoGeo.anon.PartialBox
+import typingsSlinky.nivoGeo.anon.PartialTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

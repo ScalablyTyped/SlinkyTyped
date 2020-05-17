@@ -1,8 +1,9 @@
 package typingsSlinky.mocha.mod.reporters
 
-import typingsSlinky.mocha.Mocha_.IRunner
-import typingsSlinky.mocha.Mocha_.Runner
-import typingsSlinky.mocha.Mocha_.reporters.Progress_.MochaOptions
+import typingsSlinky.mocha.Mocha.IRunner
+import typingsSlinky.mocha.Mocha.Runner
+import typingsSlinky.mocha.Mocha.reporters.Base
+import typingsSlinky.mocha.Mocha.reporters.Progress.MochaOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,8 +15,7 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("mocha", "reporters.Progress")
 @js.native
-class Progress_ protected ()
-  extends typingsSlinky.mocha.Mocha_.reporters.Progress_ {
+class Progress_ protected () extends Base {
   /** @deprecated Use the overload that accepts `Mocha.Runner` instead. */
   def this(runner: IRunner) = this()
   def this(runner: Runner) = this()

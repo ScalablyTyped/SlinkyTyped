@@ -1,6 +1,6 @@
 package typingsSlinky.webpack.mod.DllReferencePlugin
 
-import typingsSlinky.webpack.AnonContent
+import typingsSlinky.webpack.anon.Content
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ trait Options extends js.Object {
   /**
     * An object containing `content` and `name`.
     */
-  var manifest: AnonContent | String = js.native
+  var manifest: Content | String = js.native
   /**
     * The name where the DLL is exposed.
     *
@@ -47,7 +47,7 @@ trait Options extends js.Object {
 
 object Options {
   @scala.inline
-  def apply(context: String, manifest: AnonContent | String): Options = {
+  def apply(context: String, manifest: Content | String): Options = {
     val __obj = js.Dynamic.literal(context = context.asInstanceOf[js.Any], manifest = manifest.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
@@ -64,7 +64,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withManifest(value: AnonContent | String): Self = {
+    def withManifest(value: Content | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("manifest")(value.asInstanceOf[js.Any])
         ret

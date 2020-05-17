@@ -1,6 +1,6 @@
 package typingsSlinky.jui.mod
 
-import typingsSlinky.jui.AnonAlign
+import typingsSlinky.jui.anon.Align
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UISelect extends js.Object {
   def apply(selector: js.Any): this.type = js.native
-  def apply(selector: js.Any, options: AnonAlign): this.type = js.native
+  def apply(selector: js.Any, options: Align): this.type = js.native
   def getSelectedIndex(): Double = js.native
   def getValue(): js.Any | js.Array[_] = js.native
   def setSelectedIndex(index: Double): Unit = js.native

@@ -1,7 +1,7 @@
 package typingsSlinky.fsExtraPromise.mod
 
-import typingsSlinky.fsExtra.AnonEncodingFlag
-import typingsSlinky.fsExtra.AnonFlag
+import typingsSlinky.fsExtra.anon.EncodingFlag
+import typingsSlinky.fsExtra.anon.Flag
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ErrnoException
 import scala.scalajs.js
@@ -19,16 +19,16 @@ object readFile extends js.Object {
     encoding: String,
     callback: js.Function2[/* err */ ErrnoException, /* data */ String, Unit]
   ): Unit = js.native
-  def apply(file: String, options: AnonEncodingFlag): js.Promise[String] = js.native
+  def apply(file: String, options: EncodingFlag): js.Promise[String] = js.native
   def apply(
     file: String,
-    options: AnonEncodingFlag,
+    options: EncodingFlag,
     callback: js.Function2[/* err */ ErrnoException, /* data */ Buffer, Unit]
   ): Unit = js.native
-  def apply(file: String, options: AnonFlag): js.Promise[String] = js.native
+  def apply(file: String, options: Flag): js.Promise[String] = js.native
   def apply(
     file: String,
-    options: AnonFlag,
+    options: Flag,
     callback: js.Function2[/* err */ ErrnoException, /* data */ Buffer, Unit]
   ): Unit = js.native
   def apply(file: Double): js.Promise[Buffer] = js.native
@@ -39,16 +39,16 @@ object readFile extends js.Object {
     encoding: String,
     callback: js.Function2[/* err */ ErrnoException, /* data */ String, Unit]
   ): Unit = js.native
-  def apply(file: Double, options: AnonEncodingFlag): js.Promise[String] = js.native
+  def apply(file: Double, options: EncodingFlag): js.Promise[String] = js.native
   def apply(
     file: Double,
-    options: AnonEncodingFlag,
+    options: EncodingFlag,
     callback: js.Function2[/* err */ ErrnoException, /* data */ Buffer, Unit]
   ): Unit = js.native
-  def apply(file: Double, options: AnonFlag): js.Promise[String] = js.native
+  def apply(file: Double, options: Flag): js.Promise[String] = js.native
   def apply(
     file: Double,
-    options: AnonFlag,
+    options: Flag,
     callback: js.Function2[/* err */ ErrnoException, /* data */ Buffer, Unit]
   ): Unit = js.native
   def apply(file: Buffer): js.Promise[Buffer] = js.native
@@ -59,16 +59,16 @@ object readFile extends js.Object {
     encoding: String,
     callback: js.Function2[/* err */ ErrnoException, /* data */ String, Unit]
   ): Unit = js.native
-  def apply(file: Buffer, options: AnonEncodingFlag): js.Promise[String] = js.native
+  def apply(file: Buffer, options: EncodingFlag): js.Promise[String] = js.native
   def apply(
     file: Buffer,
-    options: AnonEncodingFlag,
+    options: EncodingFlag,
     callback: js.Function2[/* err */ ErrnoException, /* data */ Buffer, Unit]
   ): Unit = js.native
-  def apply(file: Buffer, options: AnonFlag): js.Promise[String] = js.native
+  def apply(file: Buffer, options: Flag): js.Promise[String] = js.native
   def apply(
     file: Buffer,
-    options: AnonFlag,
+    options: Flag,
     callback: js.Function2[/* err */ ErrnoException, /* data */ Buffer, Unit]
   ): Unit = js.native
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.antd.contextMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.antd.AnonGhost
+import typingsSlinky.antd.anon.Ghost
 import typingsSlinky.antd.antdStrings.ltr
 import typingsSlinky.antd.antdStrings.rtl
 import typingsSlinky.antd.localeProviderMod.Locale
@@ -17,7 +17,7 @@ trait ConfigConsumerProps extends js.Object {
   var direction: js.UndefOr[ltr | rtl] = js.native
   var getPopupContainer: js.UndefOr[js.Function1[/* triggerNode */ HTMLElement, HTMLElement]] = js.native
   var locale: js.UndefOr[Locale] = js.native
-  var pageHeader: js.UndefOr[AnonGhost] = js.native
+  var pageHeader: js.UndefOr[Ghost] = js.native
   var renderEmpty: RenderEmptyHandler = js.native
   var rootPrefixCls: js.UndefOr[String] = js.native
   def getPrefixCls(suffixCls: String): String = js.native

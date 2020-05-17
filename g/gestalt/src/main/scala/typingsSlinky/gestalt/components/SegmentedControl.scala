@@ -3,7 +3,7 @@ package typingsSlinky.gestalt.components
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.AnonActiveIndex
+import typingsSlinky.gestalt.anon.ActiveIndex
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
 import typingsSlinky.gestalt.mod.SegmentedControlProps
@@ -28,7 +28,7 @@ object SegmentedControl {
   
   def withProps(p: SegmentedControlProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(items: js.Array[TagMod[Any]], onChange: AnonActiveIndex => Unit, selectedItemIndex: Double): Builder = {
+  def apply(items: js.Array[TagMod[Any]], onChange: ActiveIndex => Unit, selectedItemIndex: Double): Builder = {
     val __props = js.Dynamic.literal(items = items.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), selectedItemIndex = selectedItemIndex.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[SegmentedControlProps]))
   }

@@ -1,5 +1,6 @@
 package typingsSlinky.cypress.mochaMod.reporters
 
+import typingsSlinky.cypress.Mocha.reporters.HTML
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +14,5 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("mocha", "reporters.HTML")
 @js.native
-class HTML_ ()
-  extends typingsSlinky.cypress.Mocha_.reporters.HTML_
+class HTML_ () extends HTML
 

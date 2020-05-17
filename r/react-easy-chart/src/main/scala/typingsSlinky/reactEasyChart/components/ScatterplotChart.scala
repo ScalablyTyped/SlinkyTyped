@@ -3,9 +3,9 @@ package typingsSlinky.reactEasyChart.components
 import org.scalajs.dom.raw.MouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactEasyChart.AnonBottom
-import typingsSlinky.reactEasyChart.AnonStroke
-import typingsSlinky.reactEasyChart.AnonY
+import typingsSlinky.reactEasyChart.anon.Bottom
+import typingsSlinky.reactEasyChart.anon.Stroke
+import typingsSlinky.reactEasyChart.anon.Y
 import typingsSlinky.reactEasyChart.mod.ScatterplotChartProps
 import typingsSlinky.reactEasyChart.mod.ScatterplotData
 import typingsSlinky.reactEasyChart.reactEasyChartStrings.linear
@@ -27,11 +27,11 @@ object ScatterplotChart {
     @scala.inline
     def axes(value: Boolean): this.type = set("axes", value.asInstanceOf[js.Any])
     @scala.inline
-    def axisLabels(value: AnonY): this.type = set("axisLabels", value.asInstanceOf[js.Any])
+    def axisLabels(value: Y): this.type = set("axisLabels", value.asInstanceOf[js.Any])
     @scala.inline
     def clickHandler(value: (/* data */ ScatterplotData, /* mouseEvent */ MouseEvent) => _): this.type = set("clickHandler", js.Any.fromFunction2(value))
     @scala.inline
-    def config(value: js.Array[AnonStroke]): this.type = set("config", value.asInstanceOf[js.Any])
+    def config(value: js.Array[Stroke]): this.type = set("config", value.asInstanceOf[js.Any])
     @scala.inline
     def dotRadius(value: Double): this.type = set("dotRadius", value.asInstanceOf[js.Any])
     @scala.inline
@@ -39,7 +39,7 @@ object ScatterplotChart {
     @scala.inline
     def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
     @scala.inline
-    def margin(value: AnonBottom): this.type = set("margin", value.asInstanceOf[js.Any])
+    def margin(value: Bottom): this.type = set("margin", value.asInstanceOf[js.Any])
     @scala.inline
     def mouseMoveHandler(value: (/* data */ ScatterplotData, /* mouseEvent */ MouseEvent) => _): this.type = set("mouseMoveHandler", js.Any.fromFunction2(value))
     @scala.inline

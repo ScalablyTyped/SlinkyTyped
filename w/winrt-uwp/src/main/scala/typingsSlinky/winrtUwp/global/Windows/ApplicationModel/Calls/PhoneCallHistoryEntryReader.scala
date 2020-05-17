@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Calls
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Enables the calling app to read through the phone call history entries. */
+@JSGlobal("Windows.ApplicationModel.Calls.PhoneCallHistoryEntryReader")
+@js.native
+abstract class PhoneCallHistoryEntryReader ()
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Calls.PhoneCallHistoryEntryReader
+

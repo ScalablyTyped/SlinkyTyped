@@ -1,29 +1,15 @@
 package typingsSlinky.phaser.spine.webgl
 
-import org.scalajs.dom.raw.WebGLRenderingContext
 import typingsSlinky.phaser.spine.Disposable
 import typingsSlinky.phaser.spine.Restorable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("spine.webgl.Mesh")
 @js.native
-class Mesh protected ()
+trait Mesh
   extends Disposable
      with Restorable {
-  def this(
-    context: ManagedWebGLRenderingContext,
-    attributes: js.Array[VertexAttribute],
-    maxVertices: Double,
-    maxIndices: Double
-  ) = this()
-  def this(
-    context: WebGLRenderingContext,
-    attributes: js.Array[VertexAttribute],
-    maxVertices: Double,
-    maxIndices: Double
-  ) = this()
   var attributes: js.Any = js.native
   var context: js.Any = js.native
   var dirtyIndices: js.Any = js.native
@@ -52,5 +38,220 @@ class Mesh protected ()
   def setVertices(vertices: js.Array[Double]): Unit = js.native
   def setVerticesLength(length: Double): Unit = js.native
   def unbind(shader: Shader): Unit = js.native
+}
+
+object Mesh {
+  @scala.inline
+  def apply(
+    attributes: js.Any,
+    bind: Shader => Unit,
+    context: js.Any,
+    dirtyIndices: js.Any,
+    dirtyVertices: js.Any,
+    dispose: () => Unit,
+    draw: (Shader, Double) => Unit,
+    drawWithOffset: (Shader, Double, Double, Double) => Unit,
+    elementsPerVertex: js.Any,
+    getAttributes: () => js.Array[VertexAttribute],
+    getIndices: () => js.typedarray.Uint16Array,
+    getVertexSizeInFloats: () => Double,
+    getVertices: () => js.typedarray.Float32Array,
+    indices: js.Any,
+    indicesBuffer: js.Any,
+    indicesLength: js.Any,
+    maxIndices: () => Double,
+    maxVertices: () => Double,
+    numIndices: () => Double,
+    numVertices: () => Double,
+    restore: () => Unit,
+    setIndices: js.Array[Double] => Unit,
+    setIndicesLength: Double => Unit,
+    setVertices: js.Array[Double] => Unit,
+    setVerticesLength: Double => Unit,
+    unbind: Shader => Unit,
+    update: js.Any,
+    vertices: js.Any,
+    verticesBuffer: js.Any,
+    verticesLength: js.Any
+  ): Mesh = {
+    val __obj = js.Dynamic.literal(attributes = attributes.asInstanceOf[js.Any], bind = js.Any.fromFunction1(bind), context = context.asInstanceOf[js.Any], dirtyIndices = dirtyIndices.asInstanceOf[js.Any], dirtyVertices = dirtyVertices.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), draw = js.Any.fromFunction2(draw), drawWithOffset = js.Any.fromFunction4(drawWithOffset), elementsPerVertex = elementsPerVertex.asInstanceOf[js.Any], getAttributes = js.Any.fromFunction0(getAttributes), getIndices = js.Any.fromFunction0(getIndices), getVertexSizeInFloats = js.Any.fromFunction0(getVertexSizeInFloats), getVertices = js.Any.fromFunction0(getVertices), indices = indices.asInstanceOf[js.Any], indicesBuffer = indicesBuffer.asInstanceOf[js.Any], indicesLength = indicesLength.asInstanceOf[js.Any], maxIndices = js.Any.fromFunction0(maxIndices), maxVertices = js.Any.fromFunction0(maxVertices), numIndices = js.Any.fromFunction0(numIndices), numVertices = js.Any.fromFunction0(numVertices), restore = js.Any.fromFunction0(restore), setIndices = js.Any.fromFunction1(setIndices), setIndicesLength = js.Any.fromFunction1(setIndicesLength), setVertices = js.Any.fromFunction1(setVertices), setVerticesLength = js.Any.fromFunction1(setVerticesLength), unbind = js.Any.fromFunction1(unbind), update = update.asInstanceOf[js.Any], vertices = vertices.asInstanceOf[js.Any], verticesBuffer = verticesBuffer.asInstanceOf[js.Any], verticesLength = verticesLength.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Mesh]
+  }
+  @scala.inline
+  implicit class MeshOps[Self <: Mesh] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttributes(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBind(value: Shader => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bind")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withContext(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("context")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDirtyIndices(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dirtyIndices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDirtyVertices(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dirtyVertices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDraw(value: (Shader, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("draw")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withDrawWithOffset(value: (Shader, Double, Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drawWithOffset")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withElementsPerVertex(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("elementsPerVertex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetAttributes(value: () => js.Array[VertexAttribute]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributes")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetIndices(value: () => js.typedarray.Uint16Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getIndices")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetVertexSizeInFloats(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getVertexSizeInFloats")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetVertices(value: () => js.typedarray.Float32Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getVertices")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIndices(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIndicesBuffer(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indicesBuffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIndicesLength(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indicesLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaxIndices(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxIndices")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withMaxVertices(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maxVertices")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNumIndices(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numIndices")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNumVertices(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numVertices")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetIndices(value: js.Array[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setIndices")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetIndicesLength(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setIndicesLength")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetVertices(value: js.Array[Double] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setVertices")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetVerticesLength(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setVerticesLength")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUnbind(value: Shader => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unbind")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVertices(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVerticesBuffer(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticesBuffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVerticesLength(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticesLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

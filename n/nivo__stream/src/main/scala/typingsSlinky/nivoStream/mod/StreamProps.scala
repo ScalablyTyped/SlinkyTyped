@@ -4,8 +4,8 @@ import slinky.core.TagMod
 import typingsSlinky.nivoAxes.mod.AxisProps
 import typingsSlinky.nivoColors.mod.InheritedColorProp
 import typingsSlinky.nivoColors.mod.OrdinalColorsInstruction
-import typingsSlinky.nivoCore.AnonDictkey
-import typingsSlinky.nivoCore.AnonId
+import typingsSlinky.nivoCore.anon.Dictkey
+import typingsSlinky.nivoCore.anon.Id
 import typingsSlinky.nivoCore.mod.AreaCurve
 import typingsSlinky.nivoCore.mod.Box
 import typingsSlinky.nivoCore.mod.StackOffset
@@ -13,7 +13,7 @@ import typingsSlinky.nivoCore.mod.StackOrder
 import typingsSlinky.nivoCore.mod.Theme
 import typingsSlinky.nivoLegends.mod.LegendProps
 import typingsSlinky.nivoScales.mod.Scale
-import typingsSlinky.nivoStream.Anon0
+import typingsSlinky.nivoStream.anon.`0`
 import typingsSlinky.nivoStream.nivoStreamStrings.center
 import typingsSlinky.nivoStream.nivoStreamStrings.end
 import typingsSlinky.nivoStream.nivoStreamStrings.start
@@ -34,7 +34,7 @@ trait StreamProps[T] extends js.Object {
   var colors: js.UndefOr[OrdinalColorsInstruction[_]] = js.native
   var curve: js.UndefOr[AreaCurve] = js.native
   var data: js.Array[T] = js.native
-  var defs: js.UndefOr[js.Array[AnonDictkey]] = js.native
+  var defs: js.UndefOr[js.Array[Dictkey]] = js.native
   var dotBorderColor: js.UndefOr[InheritedColorProp[_]] = js.native
   var dotBorderWidth: js.UndefOr[DatumToNumber | Double] = js.native
   var dotColor: js.UndefOr[InheritedColorProp[_]] = js.native
@@ -44,7 +44,7 @@ trait StreamProps[T] extends js.Object {
   var enableGridX: js.UndefOr[Boolean] = js.native
   var enableGridY: js.UndefOr[Boolean] = js.native
   var enableStackTooltip: js.UndefOr[Boolean] = js.native
-  var fill: js.UndefOr[js.Array[AnonId[T]]] = js.native
+  var fill: js.UndefOr[js.Array[Id[T]]] = js.native
   var fillOpacity: js.UndefOr[Double] = js.native
   var isInteractive: js.UndefOr[Boolean] = js.native
   var keys: js.Array[String] = js.native
@@ -208,7 +208,7 @@ object StreamProps {
         ret
     }
     @scala.inline
-    def withDefs(value: js.Array[AnonDictkey]): Self[T] = {
+    def withDefs(value: js.Array[Dictkey]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defs")(value.asInstanceOf[js.Any])
         ret
@@ -352,7 +352,7 @@ object StreamProps {
         ret
     }
     @scala.inline
-    def withFill(value: js.Array[AnonId[T]]): Self[T] = {
+    def withFill(value: js.Array[Id[T]]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
         ret
@@ -472,7 +472,7 @@ object StreamProps {
         ret
     }
     @scala.inline
-    def withStack(value: /* data */ js.Array[T] => js.Array[js.Array[Anon0[T]]]): Self[T] = {
+    def withStack(value: /* data */ js.Array[T] => js.Array[js.Array[`0`[T]]]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stack")(js.Any.fromFunction1(value))
         ret

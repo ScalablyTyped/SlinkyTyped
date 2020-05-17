@@ -13,10 +13,10 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait IController
-  extends /**
-  * Indexer which should return ng.INgModelController for most properties but cannot because of "All named properties must be assignable to string indexer type" constraint - see https://github.com/Microsoft/TypeScript/issues/272
-  */
-/* name */ StringDictionary[js.Any] {
+  extends // IController implementations frequently do not implement any of its methods.
+// A string indexer indicates to TypeScript not to issue a weak type error in this case.
+/* s */ StringDictionary[js.Any]
+     with IDirectiveController {
   /**
     * Called on each turn of the digest cycle. Provides an opportunity to detect and act on changes.
     * Any actions that you wish to take in response to the changes that you detect must be invoked from this hook;

@@ -3,9 +3,9 @@ package typingsSlinky.grommet.listMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.grommet.AnonBorder
-import typingsSlinky.grommet.AnonDarkLight
-import typingsSlinky.grommet.AnonIndex
+import typingsSlinky.grommet.anon.Border
+import typingsSlinky.grommet.anon.DarkLight
+import typingsSlinky.grommet.anon.Index
 import typingsSlinky.grommet.utilsMod.A11yTitleType
 import typingsSlinky.grommet.utilsMod.AlignSelfType
 import typingsSlinky.grommet.utilsMod.GridAreaType
@@ -19,14 +19,14 @@ trait ListProps extends js.Object {
   var a11yTitle: js.UndefOr[A11yTitleType] = js.native
   var alignSelf: js.UndefOr[AlignSelfType] = js.native
   var as: js.UndefOr[String] = js.native
-  var background: js.UndefOr[String | js.Array[String] | AnonDarkLight] = js.native
+  var background: js.UndefOr[String | js.Array[String] | DarkLight] = js.native
   var border: js.UndefOr[BorderType] = js.native
   var data: js.UndefOr[js.Array[js.Object | String]] = js.native
   var gridArea: js.UndefOr[GridAreaType] = js.native
-  var itemProps: js.UndefOr[StringDictionary[AnonBorder]] = js.native
+  var itemProps: js.UndefOr[StringDictionary[Border]] = js.native
   var margin: js.UndefOr[MarginType] = js.native
   var onClickItem: js.UndefOr[
-    js.Function1[(/* event */ AnonIndex) | (/* event */ SyntheticMouseEvent[Element]), Unit]
+    js.Function1[(/* event */ Index) | (/* event */ SyntheticMouseEvent[Element]), Unit]
   ] = js.native
   var onMore: js.UndefOr[js.Function0[Unit]] = js.native
   var pad: js.UndefOr[PadType] = js.native
@@ -84,7 +84,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withBackground(value: String | js.Array[String] | AnonDarkLight): Self = {
+    def withBackground(value: String | js.Array[String] | DarkLight): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("background")(value.asInstanceOf[js.Any])
         ret
@@ -132,7 +132,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withItemProps(value: StringDictionary[AnonBorder]): Self = {
+    def withItemProps(value: StringDictionary[Border]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemProps")(value.asInstanceOf[js.Any])
         ret
@@ -156,7 +156,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withOnClickItem(value: (/* event */ AnonIndex) | (/* event */ SyntheticMouseEvent[Element]) => Unit): Self = {
+    def withOnClickItem(value: (/* event */ Index) | (/* event */ SyntheticMouseEvent[Element]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClickItem")(js.Any.fromFunction1(value))
         ret

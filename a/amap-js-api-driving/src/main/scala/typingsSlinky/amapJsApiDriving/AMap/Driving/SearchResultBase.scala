@@ -1,7 +1,7 @@
 package typingsSlinky.amapJsApiDriving.AMap.Driving
 
 import typingsSlinky.amapJsApi.AMap.LngLat
-import typingsSlinky.amapJsApiDriving.PoiisWaypointboolean
+import typingsSlinky.amapJsApiDriving.anon.PoiisWaypointboolean
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

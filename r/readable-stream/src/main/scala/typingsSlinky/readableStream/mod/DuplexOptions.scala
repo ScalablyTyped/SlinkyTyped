@@ -1,6 +1,6 @@
 package typingsSlinky.readableStream.mod
 
-import typingsSlinky.readableStream.AnonChunk
+import typingsSlinky.readableStream.anon.Chunk
 import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -72,12 +72,12 @@ trait DuplexOptions extends js.Object {
   var writev: js.UndefOr[
     (js.ThisFunction2[
       /* this */ Writable, 
-      /* chunk */ ArrayLike[AnonChunk], 
+      /* chunk */ ArrayLike[Chunk], 
       /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ]) with (js.ThisFunction2[
       /* this */ Duplex, 
-      /* chunks */ js.Array[AnonChunk], 
+      /* chunks */ js.Array[Chunk], 
       /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ])
@@ -335,12 +335,12 @@ object DuplexOptions {
     def withWritev(
       value: (js.ThisFunction2[
           /* this */ Writable, 
-          /* chunk */ ArrayLike[AnonChunk], 
+          /* chunk */ ArrayLike[Chunk], 
           /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
           Unit
         ]) with (js.ThisFunction2[
           /* this */ Duplex, 
-          /* chunks */ js.Array[AnonChunk], 
+          /* chunks */ js.Array[Chunk], 
           /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
           Unit
         ])

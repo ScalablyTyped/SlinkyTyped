@@ -1,6 +1,6 @@
 package typingsSlinky.cypress
 
-import typingsSlinky.cypress.Mocha_.MochaOptions
+import typingsSlinky.cypress.Mocha.MochaOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

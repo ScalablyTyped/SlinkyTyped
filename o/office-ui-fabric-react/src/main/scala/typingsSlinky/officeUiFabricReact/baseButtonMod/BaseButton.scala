@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.baseButtonMod
 
-import typingsSlinky.officeUiFabricReact.PartialIBaseButtonProps
+import typingsSlinky.officeUiFabricReact.anon.PartialIBaseButtonProps
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButton
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js

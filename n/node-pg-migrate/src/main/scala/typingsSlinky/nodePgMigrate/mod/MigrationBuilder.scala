@@ -1,8 +1,8 @@
 package typingsSlinky.nodePgMigrate.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.nodePgMigrate.AnonAfter
-import typingsSlinky.nodePgMigrate.AnonAuthorization
+import typingsSlinky.nodePgMigrate.anon.After
+import typingsSlinky.nodePgMigrate.anon.Authorization
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +33,7 @@ trait MigrationBuilder extends js.Object {
   def addType(typeName: Name, values: StringDictionary[Type]): Unit = js.native
   def addTypeAttribute(typeName: Name, attributeName: String, attributeType: Type): Unit = js.native
   def addTypeValue(typeName: Name, value: Value): Unit = js.native
-  def addTypeValue(typeName: Name, value: Value, options: AnonAfter): Unit = js.native
+  def addTypeValue(typeName: Name, value: Value, options: After): Unit = js.native
   def alterColumn(tableName: Name, columnName: String, options: AlterColumnOptions): Unit = js.native
   def alterDomain(domainName: Name, domainOptions: DomainOptionsAlter): Unit = js.native
   def alterMaterializedView(viewName: Name, options: AlterMaterializedViewOptions): Unit = js.native
@@ -87,7 +87,7 @@ trait MigrationBuilder extends js.Object {
   def createRole(roleName: Name, roleOptions: RoleOptions): Unit = js.native
   // Schemas
   def createSchema(schemaName: String): Unit = js.native
-  def createSchema(schemaName: String, schemaOptions: AnonAuthorization): Unit = js.native
+  def createSchema(schemaName: String, schemaOptions: Authorization): Unit = js.native
   // Sequences
   def createSequence(sequenceName: Name): Unit = js.native
   def createSequence(sequenceName: Name, sequenceOptions: SequenceOptionsCreate): Unit = js.native

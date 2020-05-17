@@ -6,7 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait BalanceLineNative extends js.Object {
+trait BalanceLineNative
+  extends BalanceLine[js.Any] {
   var asset_type: native = js.native
   var balance: String = js.native
   var buying_liabilities: String = js.native

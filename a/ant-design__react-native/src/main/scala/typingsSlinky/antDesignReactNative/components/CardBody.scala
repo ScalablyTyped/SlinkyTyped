@@ -2,7 +2,7 @@ package typingsSlinky.antDesignReactNative.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignReactNative.PickCardStylebody
+import typingsSlinky.antDesignReactNative.anon.PickCardStylebody
 import typingsSlinky.antDesignReactNative.cardBodyMod.CardBodyProps
 import typingsSlinky.antDesignReactNative.cardBodyMod.default
 import typingsSlinky.reactNative.mod.StyleProp

@@ -1,5 +1,7 @@
 package typingsSlinky.minecraftScriptingTypesServer
 
+import typingsSlinky.minecraftScriptingTypesServer.anon.Particleoffsettowardsinteractor
+import typingsSlinky.minecraftScriptingTypesServer.anon.Table
 import typingsSlinky.minecraftScriptingTypesShared.MinecraftTrigger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +15,7 @@ trait IInteractComponent extends js.Object {
   /**
     * Loot table with items to add to the player's inventory upon successful interaction
     */
-  var add_items: AnonTable = js.native
+  var add_items: Table = js.native
   /**
     * Time in seconds before this entity can be interacted with again
     * @default 0.0
@@ -35,7 +37,7 @@ trait IInteractComponent extends js.Object {
   /**
     * Particle effect that will be triggered at the start of the interaction
     */
-  var particle_on_start: AnonParticleoffsettowardsinteractor = js.native
+  var particle_on_start: Particleoffsettowardsinteractor = js.native
   /**
     * An array of sound identifiers to play when the interaction occurs
     */
@@ -47,7 +49,7 @@ trait IInteractComponent extends js.Object {
   /**
     * Loot table with items to drop on the ground upon successful interaction
     */
-  var spawn_items: AnonTable = js.native
+  var spawn_items: Table = js.native
   /**
     * If true, the player will do the 'swing' animation when interacting with this entity
     * @default false
@@ -67,15 +69,15 @@ trait IInteractComponent extends js.Object {
 object IInteractComponent {
   @scala.inline
   def apply(
-    add_items: AnonTable,
+    add_items: Table,
     cooldown: Double,
     hurt_item: Double,
     interact_text: String,
     on_interact: MinecraftTrigger | String,
-    particle_on_start: AnonParticleoffsettowardsinteractor,
+    particle_on_start: Particleoffsettowardsinteractor,
     play_sounds: js.Array[String],
     spawn_entities: js.Array[String],
-    spawn_items: AnonTable,
+    spawn_items: Table,
     swing: Boolean,
     use_item: Boolean
   ): IInteractComponent = {
@@ -89,7 +91,7 @@ object IInteractComponent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAdd_items(value: AnonTable): Self = {
+    def withAdd_items(value: Table): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("add_items")(value.asInstanceOf[js.Any])
         ret
@@ -119,7 +121,7 @@ object IInteractComponent {
         ret
     }
     @scala.inline
-    def withParticle_on_start(value: AnonParticleoffsettowardsinteractor): Self = {
+    def withParticle_on_start(value: Particleoffsettowardsinteractor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("particle_on_start")(value.asInstanceOf[js.Any])
         ret
@@ -137,7 +139,7 @@ object IInteractComponent {
         ret
     }
     @scala.inline
-    def withSpawn_items(value: AnonTable): Self = {
+    def withSpawn_items(value: Table): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("spawn_items")(value.asInstanceOf[js.Any])
         ret

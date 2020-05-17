@@ -1,7 +1,7 @@
 package typingsSlinky.lyricist.mod
 
-import typingsSlinky.lyricist.AnonApipath
-import typingsSlinky.lyricist.AnonContent
+import typingsSlinky.lyricist.anon.Apipath
+import typingsSlinky.lyricist.anon.Content
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DescriptionAnnotation extends js.Object {
   var _type: String = js.native
-  var annotatable: AnonApipath = js.native
+  var annotatable: Apipath = js.native
   var annotations: js.Array[Annotation] = js.native
   var annotator_id: Double = js.native
   var annotator_login: String = js.native
@@ -19,7 +19,7 @@ trait DescriptionAnnotation extends js.Object {
   var id: Double = js.native
   var is_description: Boolean = js.native
   var path: String = js.native
-  var range: AnonContent = js.native
+  var range: Content = js.native
   var song_id: Double = js.native
   var url: String = js.native
   var verified_annotator_ids: js.Array[_] = js.native
@@ -29,7 +29,7 @@ object DescriptionAnnotation {
   @scala.inline
   def apply(
     _type: String,
-    annotatable: AnonApipath,
+    annotatable: Apipath,
     annotations: js.Array[Annotation],
     annotator_id: Double,
     annotator_login: String,
@@ -39,7 +39,7 @@ object DescriptionAnnotation {
     id: Double,
     is_description: Boolean,
     path: String,
-    range: AnonContent,
+    range: Content,
     song_id: Double,
     url: String,
     verified_annotator_ids: js.Array[_]
@@ -60,7 +60,7 @@ object DescriptionAnnotation {
         ret
     }
     @scala.inline
-    def withAnnotatable(value: AnonApipath): Self = {
+    def withAnnotatable(value: Apipath): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("annotatable")(value.asInstanceOf[js.Any])
         ret
@@ -120,7 +120,7 @@ object DescriptionAnnotation {
         ret
     }
     @scala.inline
-    def withRange(value: AnonContent): Self = {
+    def withRange(value: Content): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
         ret

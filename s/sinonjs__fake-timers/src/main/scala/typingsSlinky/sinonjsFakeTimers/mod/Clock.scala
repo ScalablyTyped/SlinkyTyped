@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait Clock extends js.Object
 
+object Clock {
+  @scala.inline
+  implicit def apply(value: BrowserClock): Clock = value.asInstanceOf[Clock]
+  @scala.inline
+  implicit def apply(value: NodeClock): Clock = value.asInstanceOf[Clock]
+}
+

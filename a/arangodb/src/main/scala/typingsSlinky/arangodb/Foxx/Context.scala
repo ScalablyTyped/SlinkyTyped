@@ -2,7 +2,7 @@ package typingsSlinky.arangodb.Foxx
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.arangodb.ArangoDB.Collection
-import typingsSlinky.arangodb.PartialDocumentationRoute
+import typingsSlinky.arangodb.anon.PartialDocumentationRoute
 import typingsSlinky.arangodb.arangodbBooleans.`false`
 import typingsSlinky.node.Buffer
 import scala.scalajs.js

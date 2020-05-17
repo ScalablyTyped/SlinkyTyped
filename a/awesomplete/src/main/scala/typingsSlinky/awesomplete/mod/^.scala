@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.NodeList
 import org.scalajs.dom.raw.ParentNode
-import typingsSlinky.awesomplete.AnonCall
+import typingsSlinky.awesomplete.anon.Call
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +24,7 @@ class ^ protected () extends Awesomplete {
 @js.native
 object ^ extends js.Object {
   @JSName("$")
-  var $_Original: AnonCall = js.native
+  var $_Original: Call = js.native
   var all: js.Array[_] = js.native
   @JSName("$")
   def $(expr: String): String | Element = js.native

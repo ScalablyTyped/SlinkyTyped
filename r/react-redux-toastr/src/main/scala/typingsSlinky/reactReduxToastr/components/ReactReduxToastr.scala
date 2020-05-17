@@ -2,7 +2,7 @@ package typingsSlinky.reactReduxToastr.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactReduxToastr.AnonCancelText
+import typingsSlinky.reactReduxToastr.anon.CancelText
 import typingsSlinky.reactReduxToastr.mod.ReduxToastrProps
 import typingsSlinky.reactReduxToastr.mod.ToastrState
 import typingsSlinky.reactReduxToastr.mod.default
@@ -27,7 +27,7 @@ object ReactReduxToastr {
     @scala.inline
     def closeOnToastrClick(value: Boolean): this.type = set("closeOnToastrClick", value.asInstanceOf[js.Any])
     @scala.inline
-    def confirmOptions(value: AnonCancelText): this.type = set("confirmOptions", value.asInstanceOf[js.Any])
+    def confirmOptions(value: CancelText): this.type = set("confirmOptions", value.asInstanceOf[js.Any])
     @scala.inline
     def newestOnTop(value: Boolean): this.type = set("newestOnTop", value.asInstanceOf[js.Any])
     @scala.inline

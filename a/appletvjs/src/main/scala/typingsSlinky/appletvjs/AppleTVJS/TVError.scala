@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("AppleTVJS.TVError")
 @js.native
-class TVError () extends js.Object {
+trait TVError extends js.Object {
   /** The error code. */
   var code: String = js.native
   /** A string containing the description of the error. */
@@ -39,5 +38,45 @@ class TVError () extends js.Object {
   		 * NSURLErrorFailingURLPeerTrustErrorKey
   		 * */
   var userInfo: js.Any = js.native
+}
+
+object TVError {
+  @scala.inline
+  def apply(code: String, description: String, domain: String, userInfo: js.Any): TVError = {
+    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], domain = domain.asInstanceOf[js.Any], userInfo = userInfo.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TVError]
+  }
+  @scala.inline
+  implicit class TVErrorOps[Self <: TVError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("code")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDomain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserInfo(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

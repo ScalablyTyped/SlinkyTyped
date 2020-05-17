@@ -1,7 +1,7 @@
 package typingsSlinky.k6.optionsMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.k6.AnonMax
+import typingsSlinky.k6.anon.Max
 import typingsSlinky.k6.httpMod.CipherSuite
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -66,7 +66,7 @@ trait Options extends js.Object {
   /** Allowed TLS cipher suites. */
   var tlsCipherSuites: js.Array[CipherSuite] = js.native
   /** Allowed TLS version. Use `http.SSL_*` `http.TLS_*` constants. */
-  var tlsVersion: String | AnonMax = js.native
+  var tlsVersion: String | Max = js.native
   /** User agent string to include in HTTP requests. */
   var userAgent: String = js.native
   /** Number of VUs to run concurrently. */
@@ -106,7 +106,7 @@ object Options {
     `throw`: Boolean,
     tlsAuth: js.Array[Certificate],
     tlsCipherSuites: js.Array[CipherSuite],
-    tlsVersion: String | AnonMax,
+    tlsVersion: String | Max,
     userAgent: String,
     vus: Double,
     vusMax: Double
@@ -290,7 +290,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withTlsVersion(value: String | AnonMax): Self = {
+    def withTlsVersion(value: String | Max): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tlsVersion")(value.asInstanceOf[js.Any])
         ret

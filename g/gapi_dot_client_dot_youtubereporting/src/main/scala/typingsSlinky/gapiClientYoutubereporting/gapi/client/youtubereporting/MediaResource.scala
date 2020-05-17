@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientYoutubereporting.gapi.client.youtubereporting
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientYoutubereporting.AnonKey
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientYoutubereporting.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +12,12 @@ trait MediaResource extends js.Object {
     * Method for media download. Download is supported
     * on the URI `/v1/media/{+name}?alt=media`.
     */
-  def download(request: AnonKey): Request_[Media] = js.native
+  def download(request: Key): Request[Media] = js.native
 }
 
 object MediaResource {
   @scala.inline
-  def apply(download: AnonKey => Request_[Media]): MediaResource = {
+  def apply(download: Key => Request[Media]): MediaResource = {
     val __obj = js.Dynamic.literal(download = js.Any.fromFunction1(download))
     __obj.asInstanceOf[MediaResource]
   }
@@ -28,7 +28,7 @@ object MediaResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDownload(value: AnonKey => Request_[Media]): Self = {
+    def withDownload(value: Key => Request[Media]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("download")(js.Any.fromFunction1(value))
         ret

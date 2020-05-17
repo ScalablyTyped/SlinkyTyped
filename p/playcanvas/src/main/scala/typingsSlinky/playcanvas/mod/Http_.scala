@@ -1,5 +1,6 @@
 package typingsSlinky.playcanvas.mod
 
+import typingsSlinky.playcanvas.pc.Http
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +14,5 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("playcanvas", "Http")
 @js.native
-class Http_ ()
-  extends typingsSlinky.playcanvas.pc.Http_
+class Http_ () extends Http
 

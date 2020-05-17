@@ -2,7 +2,7 @@ package typingsSlinky.primereact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonDirection
+import typingsSlinky.primereact.anon.Direction
 import typingsSlinky.primereact.pickListControlsMod.PickListControlsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +22,7 @@ object PickListControls {
     @scala.inline
     def list(value: js.Array[_]): this.type = set("list", value.asInstanceOf[js.Any])
     @scala.inline
-    def onReorder(value: /* e */ AnonDirection => Unit): this.type = set("onReorder", js.Any.fromFunction1(value))
+    def onReorder(value: /* e */ Direction => Unit): this.type = set("onReorder", js.Any.fromFunction1(value))
     @scala.inline
     def selection(value: js.Array[_]): this.type = set("selection", value.asInstanceOf[js.Any])
   }

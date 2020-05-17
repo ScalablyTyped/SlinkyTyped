@@ -1,6 +1,6 @@
 package typingsSlinky.leafletGeosearch.mod
 
-import typingsSlinky.leafletGeosearch.AnonLocation
+import typingsSlinky.leafletGeosearch.anon.Location
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait GoogleProviderResultRaw extends js.Object {
   var address_components: js.Array[GoogleProviderResultAddressComponent] = js.native
   var formatted_address: String = js.native
-  var geometry: AnonLocation = js.native
+  var geometry: Location = js.native
   var place_id: String = js.native
   var types: js.Array[String] = js.native
 }
@@ -19,7 +19,7 @@ object GoogleProviderResultRaw {
   def apply(
     address_components: js.Array[GoogleProviderResultAddressComponent],
     formatted_address: String,
-    geometry: AnonLocation,
+    geometry: Location,
     place_id: String,
     types: js.Array[String]
   ): GoogleProviderResultRaw = {
@@ -45,7 +45,7 @@ object GoogleProviderResultRaw {
         ret
     }
     @scala.inline
-    def withGeometry(value: AnonLocation): Self = {
+    def withGeometry(value: Location): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("geometry")(value.asInstanceOf[js.Any])
         ret

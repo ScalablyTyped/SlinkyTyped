@@ -1,9 +1,9 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ImageData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ImageLoadOptions
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.BMP
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.GIF
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.JPEG
@@ -20,9 +20,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@JSGlobal("Excel.Image")
 @js.native
-class Image () extends ClientObject {
+trait Image extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_Image: RequestContext = js.native
@@ -54,7 +53,7 @@ class Image () extends ClientObject {
     */
   def load(): Image = js.native
   def load(options: ImageLoadOptions): Image = js.native
-  def load(propertyNamesAndPaths: AnonExpand): Image = js.native
+  def load(propertyNamesAndPaths: Expand): Image = js.native
   def load(propertyNames: String): Image = js.native
   def load(propertyNames: js.Array[String]): Image = js.native
   /**

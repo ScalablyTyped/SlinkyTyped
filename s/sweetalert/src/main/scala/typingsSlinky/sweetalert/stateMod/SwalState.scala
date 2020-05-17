@@ -1,23 +1,23 @@
 package typingsSlinky.sweetalert.stateMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.sweetalert.AnonCloseModal
-import typingsSlinky.sweetalert.AnonReject
+import typingsSlinky.sweetalert.anon.CloseModal
+import typingsSlinky.sweetalert.anon.Reject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SwalState extends js.Object {
-  var actions: StringDictionary[AnonCloseModal] = js.native
+  var actions: StringDictionary[CloseModal] = js.native
   var isOpen: Boolean = js.native
-  var promise: AnonReject = js.native
+  var promise: Reject = js.native
   var timer: Double = js.native
 }
 
 object SwalState {
   @scala.inline
-  def apply(actions: StringDictionary[AnonCloseModal], isOpen: Boolean, promise: AnonReject, timer: Double): SwalState = {
+  def apply(actions: StringDictionary[CloseModal], isOpen: Boolean, promise: Reject, timer: Double): SwalState = {
     val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], isOpen = isOpen.asInstanceOf[js.Any], promise = promise.asInstanceOf[js.Any], timer = timer.asInstanceOf[js.Any])
     __obj.asInstanceOf[SwalState]
   }
@@ -28,7 +28,7 @@ object SwalState {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActions(value: StringDictionary[AnonCloseModal]): Self = {
+    def withActions(value: StringDictionary[CloseModal]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
         ret
@@ -40,7 +40,7 @@ object SwalState {
         ret
     }
     @scala.inline
-    def withPromise(value: AnonReject): Self = {
+    def withPromise(value: Reject): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("promise")(value.asInstanceOf[js.Any])
         ret

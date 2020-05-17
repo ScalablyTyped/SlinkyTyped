@@ -1,6 +1,6 @@
 package typingsSlinky.powerAssertFormatter.powerAssertFormatter
 
-import typingsSlinky.powerAssertFormatter.AnonInstantiable
+import typingsSlinky.powerAssertFormatter.anon.Instantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait Options extends js.Object {
   var renderers: js.UndefOr[js.Array[_]] = js.native
   var stringify: js.UndefOr[js.Function] = js.native
   var widthOf: js.UndefOr[js.Function] = js.native
-  var writerClass: js.UndefOr[AnonInstantiable] = js.native
+  var writerClass: js.UndefOr[Instantiable] = js.native
 }
 
 object Options {
@@ -166,7 +166,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withWriterClass(value: AnonInstantiable): Self = {
+    def withWriterClass(value: Instantiable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("writerClass")(value.asInstanceOf[js.Any])
         ret

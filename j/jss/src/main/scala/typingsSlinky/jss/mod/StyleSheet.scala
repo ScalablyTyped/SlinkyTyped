@@ -1,6 +1,6 @@
 package typingsSlinky.jss.mod
 
-import typingsSlinky.jss.PartialRuleOptions
+import typingsSlinky.jss.anon.PartialRuleOptions
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`

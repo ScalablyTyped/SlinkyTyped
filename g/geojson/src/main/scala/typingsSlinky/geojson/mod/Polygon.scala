@@ -6,8 +6,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Polygon
-  extends GeoJsonObject
-     with Geometry {
+  extends Geometry
+     with GeoJsonObject {
   var coordinates: js.Array[js.Array[Position]] = js.native
   @JSName("type")
   var type_Polygon: typingsSlinky.geojson.geojsonStrings.Polygon = js.native

@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.`inline-list-item`
   - typingsSlinky.csstype.csstypeStrings.`inline-table`
 */
-trait DisplayLegacy extends _DisplayProperty
+trait DisplayLegacy extends DisplayProperty
 
 object DisplayLegacy {
   @scala.inline

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("tabris", "ImageBitmap")
 @js.native
-class ImageBitmap protected () extends _ImageValue {
+class ImageBitmap protected () extends ImageValue {
   /**
     * Native image height in pixel
     * @constant

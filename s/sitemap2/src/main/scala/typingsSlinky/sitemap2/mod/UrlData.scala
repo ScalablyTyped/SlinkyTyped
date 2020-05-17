@@ -1,6 +1,6 @@
 package typingsSlinky.sitemap2.mod
 
-import typingsSlinky.sitemap2.AnonContentloc
+import typingsSlinky.sitemap2.anon.Contentloc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait UrlData extends js.Object {
   var lastmodWithTime: js.UndefOr[Boolean] = js.native
   var priority: js.UndefOr[Double | String] = js.native
   var url: String = js.native
-  var video: js.UndefOr[AnonContentloc] = js.native
+  var video: js.UndefOr[Contentloc] = js.native
 }
 
 object UrlData {
@@ -95,7 +95,7 @@ object UrlData {
         ret
     }
     @scala.inline
-    def withVideo(value: AnonContentloc): Self = {
+    def withVideo(value: Contentloc): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
         ret

@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
   * _Raw data representation._
   * @see https://docs.scriptable.app/data
   */
-@JSGlobal("Data")
 @js.native
-class Data () extends js.Object {
+trait Data extends js.Object {
   /**
     * _Gets bytes from data._
     * @see https://docs.scriptable.app/data/#-getbytes
@@ -32,45 +31,37 @@ class Data () extends js.Object {
   def toRawString(): String = js.native
 }
 
-/* static members */
-@JSGlobal("Data")
-@js.native
-object Data extends js.Object {
-  /**
-    * _Creates data from base 64 encoded string._
-    *
-    * The supplied string must be base 64 encoded otherwise the function will return null.
-    * @param base64String - Base 64 encoded string to create data from.
-    * @see https://docs.scriptable.app/data/#frombase64string
-    */
-  def fromBase64String(base64String: String): Data = js.native
-  /**
-    * _Reads data from file path._
-    *
-    * Reads the raw data of the file at the specified file path.
-    * @param filePath - Path of file to read data from.
-    * @see https://docs.scriptable.app/data/#fromfile
-    */
-  def fromFile(filePath: String): Data = js.native
-  /**
-    * _Creates data from JPEG image._
-    * @param image - JPEG image to convert to data.
-    * @see https://docs.scriptable.app/data/#fromjpeg
-    */
-  def fromJPEG(image: Image): Data = js.native
-  /**
-    * _Creates data from PNG image._
-    * @param image - PNG image to convert to data.
-    * @see https://docs.scriptable.app/data/#frompng
-    */
-  def fromPNG(image: Image): Data = js.native
-  /**
-    * _Creates data from string._
-    *
-    * The provided string is assumed to be UTF8 encoded. If the string is not UTF8 encoded, the function will return null.
-    * @param string - String to create data from.
-    * @see https://docs.scriptable.app/data/#fromstring
-    */
-  def fromString(string: String): Data = js.native
+object Data {
+  @scala.inline
+  def apply(getBytes: () => js.Array[Double], toBase64String: () => String, toRawString: () => String): Data = {
+    val __obj = js.Dynamic.literal(getBytes = js.Any.fromFunction0(getBytes), toBase64String = js.Any.fromFunction0(toBase64String), toRawString = js.Any.fromFunction0(toRawString))
+    __obj.asInstanceOf[Data]
+  }
+  @scala.inline
+  implicit class DataOps[Self <: Data] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetBytes(value: () => js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBytes")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withToBase64String(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toBase64String")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withToRawString(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toRawString")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

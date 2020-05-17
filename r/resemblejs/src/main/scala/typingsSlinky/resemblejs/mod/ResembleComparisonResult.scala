@@ -1,7 +1,7 @@
 package typingsSlinky.resemblejs.mod
 
-import typingsSlinky.resemblejs.AnonBottom
-import typingsSlinky.resemblejs.AnonHeight
+import typingsSlinky.resemblejs.anon.Bottom
+import typingsSlinky.resemblejs.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,11 +9,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ResembleComparisonResult extends js.Object {
   var analysisTime: Double = js.native
-  var diffBounds: AnonBottom = js.native
+  var diffBounds: Bottom = js.native
   /**
     * The difference in width and height between the dimensions of the two compared images
     */
-  var dimensionDifference: AnonHeight = js.native
+  var dimensionDifference: Height = js.native
   /**
     * Do the two images have the same dimensions?
     */
@@ -32,8 +32,8 @@ object ResembleComparisonResult {
   @scala.inline
   def apply(
     analysisTime: Double,
-    diffBounds: AnonBottom,
-    dimensionDifference: AnonHeight,
+    diffBounds: Bottom,
+    dimensionDifference: Height,
     getImageDataUrl: () => String,
     isSameDimensions: Boolean,
     misMatchPercentage: Double
@@ -54,13 +54,13 @@ object ResembleComparisonResult {
         ret
     }
     @scala.inline
-    def withDiffBounds(value: AnonBottom): Self = {
+    def withDiffBounds(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("diffBounds")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withDimensionDifference(value: AnonHeight): Self = {
+    def withDimensionDifference(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dimensionDifference")(value.asInstanceOf[js.Any])
         ret

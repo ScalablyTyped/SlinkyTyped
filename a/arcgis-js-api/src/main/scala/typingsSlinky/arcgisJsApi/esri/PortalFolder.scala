@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,8 +37,4 @@ trait PortalFolder extends Accessor {
     */
   val url: String = js.native
 }
-
-@JSGlobal("__esri.PortalFolder")
-@js.native
-object PortalFolder extends TopLevel[PortalFolderConstructor]
 

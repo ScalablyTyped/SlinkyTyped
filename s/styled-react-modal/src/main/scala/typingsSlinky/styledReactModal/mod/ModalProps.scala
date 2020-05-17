@@ -1,10 +1,10 @@
 package typingsSlinky.styledReactModal.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait ModalProps extends js.Object {
   var children: js.UndefOr[TagMod[Any]] = js.native
   var isOpen: Boolean = js.native
   var onBackgroundClick: js.UndefOr[js.Function1[/* event */ SyntheticMouseEvent[HTMLDivElement], Unit]] = js.native
-  var onEscapeKeydown: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onEscapeKeydown: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
 }
 
 object ModalProps {
@@ -156,7 +156,7 @@ object ModalProps {
         ret
     }
     @scala.inline
-    def withOnEscapeKeydown(value: /* event */ Event_ => Unit): Self = {
+    def withOnEscapeKeydown(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEscapeKeydown")(js.Any.fromFunction1(value))
         ret

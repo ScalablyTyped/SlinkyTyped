@@ -1,6 +1,6 @@
 package typingsSlinky.webpackBugsnagPlugins.mod
 
-import typingsSlinky.webpackBugsnagPlugins.AnonProvider
+import typingsSlinky.webpackBugsnagPlugins.anon.Provider
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +39,7 @@ trait BuildReporterBuild extends js.Object {
     * the module will attempt to detect source control information from .git, .
     * hg and the nearest package.json)
     */
-  var sourceControl: js.UndefOr[AnonProvider] = js.native
+  var sourceControl: js.UndefOr[Provider] = js.native
 }
 
 object BuildReporterBuild {
@@ -103,7 +103,7 @@ object BuildReporterBuild {
         ret
     }
     @scala.inline
-    def withSourceControl(value: AnonProvider): Self = {
+    def withSourceControl(value: Provider): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sourceControl")(value.asInstanceOf[js.Any])
         ret

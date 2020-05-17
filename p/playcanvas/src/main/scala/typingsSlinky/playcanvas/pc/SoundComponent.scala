@@ -1,6 +1,5 @@
 package typingsSlinky.playcanvas.pc
 
-import typingsSlinky.playcanvas.AnonAsset
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,10 +37,8 @@ import scala.scalajs.js.annotation._
   * @property {object} slots A dictionary that contains the {@link pc.SoundSlot}s managed
   * by this Component.
   */
-@JSGlobal("pc.SoundComponent")
 @js.native
-class SoundComponent protected () extends Component {
-  def this(system: SoundComponentSystem, entity: Entity) = this()
+trait SoundComponent extends Component {
   /**
     * Determines which algorithm to use to reduce the
     * volume of the sound as it moves away from the listener. Can be:
@@ -112,7 +109,7 @@ class SoundComponent protected () extends Component {
     * this.entity.sound.play('beep');
     */
   def addSlot(name: String): SoundSlot = js.native
-  def addSlot(name: String, options: AnonAsset): SoundSlot = js.native
+  def addSlot(name: String, options: typingsSlinky.playcanvas.anon.Asset): SoundSlot = js.native
   /**
     * @function
     * @name pc.SoundComponent#pause

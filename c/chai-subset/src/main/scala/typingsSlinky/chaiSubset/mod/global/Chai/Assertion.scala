@@ -1,0 +1,33 @@
+package typingsSlinky.chaiSubset.mod.global.Chai
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Assertion extends js.Object {
+  def containSubset(expected: js.Any): Assertion = js.native
+}
+
+object Assertion {
+  @scala.inline
+  def apply(containSubset: js.Any => Assertion): Assertion = {
+    val __obj = js.Dynamic.literal(containSubset = js.Any.fromFunction1(containSubset))
+    __obj.asInstanceOf[Assertion]
+  }
+  @scala.inline
+  implicit class AssertionOps[Self <: Assertion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainSubset(value: js.Any => Assertion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containSubset")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
+

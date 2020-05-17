@@ -1,6 +1,7 @@
 package typingsSlinky.forgeDi
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.forgeDi.anon.Partialdefault
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -5,7 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.googlemaps.google.maps.LatLng
 import typingsSlinky.googlemaps.google.maps.LatLngBounds
 import typingsSlinky.googlemaps.google.maps.places.AutocompletePrediction
-import typingsSlinky.reactGeosuggest.Typeofmaps
+import typingsSlinky.reactGeosuggest.anon.Typeofmaps
 import typingsSlinky.reactGeosuggest.mod.Fixture
 import typingsSlinky.reactGeosuggest.mod.GeosuggestProps
 import typingsSlinky.reactGeosuggest.mod.QueryType

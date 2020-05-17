@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientPlaymoviespartner.gapi.client.playmoviespartner
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientPlaymoviespartner.AnonCountries
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientPlaymoviespartner.anon.Countries
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,12 +15,12 @@ trait StoreInfosResource extends js.Object {
     * See _Authentication and Authorization rules_ and
     * _List methods rules_ for more information about this method.
     */
-  def list(request: AnonCountries): Request_[ListStoreInfosResponse] = js.native
+  def list(request: Countries): Request[ListStoreInfosResponse] = js.native
 }
 
 object StoreInfosResource {
   @scala.inline
-  def apply(country: CountryResource, list: AnonCountries => Request_[ListStoreInfosResponse]): StoreInfosResource = {
+  def apply(country: CountryResource, list: Countries => Request[ListStoreInfosResponse]): StoreInfosResource = {
     val __obj = js.Dynamic.literal(country = country.asInstanceOf[js.Any], list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[StoreInfosResource]
   }
@@ -37,7 +37,7 @@ object StoreInfosResource {
         ret
     }
     @scala.inline
-    def withList(value: AnonCountries => Request_[ListStoreInfosResponse]): Self = {
+    def withList(value: Countries => Request[ListStoreInfosResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

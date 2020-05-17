@@ -1,6 +1,6 @@
 package typingsSlinky.hexo.mod
 
-import typingsSlinky.hexo.AnonEncoding
+import typingsSlinky.hexo.anon.Encoding
 import typingsSlinky.hexo.hexoStrings.create
 import typingsSlinky.hexo.hexoStrings.delete
 import typingsSlinky.hexo.hexoStrings.skip
@@ -65,13 +65,13 @@ object Box extends js.Object {
       */
     def read(): js.Promise[String | Buffer] = js.native
     def read(fn: js.Function2[/* err */ js.Any, /* result */ String | Buffer, Unit]): js.Promise[String | Buffer] = js.native
-    def read(option: AnonEncoding): js.Promise[String | Buffer] = js.native
-    def read(option: AnonEncoding, fn: js.Function2[/* err */ js.Any, /* result */ String | Buffer, Unit]): js.Promise[String | Buffer] = js.native
+    def read(option: Encoding): js.Promise[String | Buffer] = js.native
+    def read(option: Encoding, fn: js.Function2[/* err */ js.Any, /* result */ String | Buffer, Unit]): js.Promise[String | Buffer] = js.native
     /**
       * Read a file synchronously
       */
     def readSync(): String | Buffer = js.native
-    def readSync(option: AnonEncoding): String | Buffer = js.native
+    def readSync(option: Encoding): String | Buffer = js.native
     /**
       * Render a file
       */

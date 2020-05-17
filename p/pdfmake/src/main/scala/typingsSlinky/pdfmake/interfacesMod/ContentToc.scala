@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ContentToc
   extends ContentBase
-     with _Content {
+     with Content {
   var toc: TableOfContent = js.native
 }
 

@@ -4,17 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("TypeScript.PrefixUnaryExpressionSyntax")
 @js.native
-class PrefixUnaryExpressionSyntax protected ()
-  extends SyntaxNode
-     with IUnaryExpressionSyntax {
-  def this(
-    kind: SyntaxKind,
-    operatorToken: ISyntaxToken,
-    operand: IUnaryExpressionSyntax,
-    parsedInStrictMode: Boolean
-  ) = this()
+trait PrefixUnaryExpressionSyntax
+  extends IUnaryExpressionSyntax
+     with SyntaxNode {
   var _kind: js.Any = js.native
   var operand: IUnaryExpressionSyntax = js.native
   var operatorToken: ISyntaxToken = js.native

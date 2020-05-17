@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientAndroidmanagement.gapi.client.androidmanagement
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAndroidmanagement.AnonAlt
-import typingsSlinky.gapiClientAndroidmanagement.AnonEnterpriseToken
-import typingsSlinky.gapiClientAndroidmanagement.AnonFields
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAndroidmanagement.anon.Alt
+import typingsSlinky.gapiClientAndroidmanagement.anon.EnterpriseToken
+import typingsSlinky.gapiClientAndroidmanagement.anon.Fields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,22 +16,22 @@ trait EnterprisesResource extends js.Object {
   var policies: PoliciesResource = js.native
   var webTokens: WebTokensResource = js.native
   /** Creates an enterprise by completing the enterprise signup flow. */
-  def create(request: AnonEnterpriseToken): Request_[Enterprise] = js.native
+  def create(request: EnterpriseToken): Request[Enterprise] = js.native
   /** Gets an enterprise. */
-  def get(request: AnonAlt): Request_[Enterprise] = js.native
+  def get(request: Alt): Request[Enterprise] = js.native
   /** Updates an enterprise. */
-  def patch(request: AnonFields): Request_[Enterprise] = js.native
+  def patch(request: Fields): Request[Enterprise] = js.native
 }
 
 object EnterprisesResource {
   @scala.inline
   def apply(
     applications: ApplicationsResource,
-    create: AnonEnterpriseToken => Request_[Enterprise],
+    create: EnterpriseToken => Request[Enterprise],
     devices: DevicesResource,
     enrollmentTokens: EnrollmentTokensResource,
-    get: AnonAlt => Request_[Enterprise],
-    patch: AnonFields => Request_[Enterprise],
+    get: Alt => Request[Enterprise],
+    patch: Fields => Request[Enterprise],
     policies: PoliciesResource,
     webTokens: WebTokensResource
   ): EnterprisesResource = {
@@ -51,7 +51,7 @@ object EnterprisesResource {
         ret
     }
     @scala.inline
-    def withCreate(value: AnonEnterpriseToken => Request_[Enterprise]): Self = {
+    def withCreate(value: EnterpriseToken => Request[Enterprise]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
@@ -69,13 +69,13 @@ object EnterprisesResource {
         ret
     }
     @scala.inline
-    def withGet(value: AnonAlt => Request_[Enterprise]): Self = {
+    def withGet(value: Alt => Request[Enterprise]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPatch(value: AnonFields => Request_[Enterprise]): Self = {
+    def withPatch(value: Fields => Request[Enterprise]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
         ret

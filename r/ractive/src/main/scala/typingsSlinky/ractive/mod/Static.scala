@@ -3,19 +3,20 @@ package typingsSlinky.ractive.mod
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.ractive.AnonInstantiable
+import typingsSlinky.ractive.anon.Instantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Static[T /* <: Ractive[T] */]
-  extends Instantiable0[T]
+  extends Component
+     with Instantiable0[T]
      with Instantiable1[/* opts */ InitOpts[T], T] {
   /** The parent constructor used to create this constructor. */
   var Parent: Static[Ractive[Ractive[_]]] = js.native
   /** The Ractive constructor used to create this constructor. */
-  var Ractive: AnonInstantiable = js.native
+  var Ractive: Instantiable = js.native
   var adaptors: Registry[Adaptor] = js.native
   var components: Registry[Component] = js.native
   var css: String | CssFn = js.native

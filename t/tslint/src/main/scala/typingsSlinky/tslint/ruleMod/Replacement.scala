@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("tslint/lib/language/rule/rule", "Replacement")
 @js.native
-class Replacement protected () extends js.Object {
+class Replacement protected () extends Fix {
   def this(start: Double, length: Double, text: String) = this()
   val end: Double = js.native
   val length: Double = js.native

@@ -1,6 +1,5 @@
 package typingsSlinky.ace.AceAjax
 
-import org.scalablytyped.runtime.Instantiable2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,13 +44,76 @@ trait BackgroundTokenizer extends js.Object {
   def stop(): Unit = js.native
 }
 
-@JSGlobal("AceAjax.BackgroundTokenizer")
-@js.native
-object BackgroundTokenizer
-  extends /**
-  * Creates a new `BackgroundTokenizer` object.
-  * @param tokenizer The tokenizer to use
-  * @param editor The editor to associate with
-  **/
-Instantiable2[/* tokenizer */ Tokenizer, /* editor */ Editor, BackgroundTokenizer]
+object BackgroundTokenizer {
+  @scala.inline
+  def apply(
+    fireUpdateEvent: (Double, Double) => Unit,
+    getState: Double => String,
+    getTokens: Double => js.Array[TokenInfo],
+    setDocument: Document => Unit,
+    setTokenizer: Tokenizer => Unit,
+    start: Double => Unit,
+    states: js.Array[_],
+    stop: () => Unit
+  ): BackgroundTokenizer = {
+    val __obj = js.Dynamic.literal(fireUpdateEvent = js.Any.fromFunction2(fireUpdateEvent), getState = js.Any.fromFunction1(getState), getTokens = js.Any.fromFunction1(getTokens), setDocument = js.Any.fromFunction1(setDocument), setTokenizer = js.Any.fromFunction1(setTokenizer), start = js.Any.fromFunction1(start), states = states.asInstanceOf[js.Any], stop = js.Any.fromFunction0(stop))
+    __obj.asInstanceOf[BackgroundTokenizer]
+  }
+  @scala.inline
+  implicit class BackgroundTokenizerOps[Self <: BackgroundTokenizer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFireUpdateEvent(value: (Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fireUpdateEvent")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetState(value: Double => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getState")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetTokens(value: Double => js.Array[TokenInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTokens")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetDocument(value: Document => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDocument")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetTokenizer(value: Tokenizer => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTokenizer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withStart(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withStates(value: js.Array[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("states")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStop(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
+}
 

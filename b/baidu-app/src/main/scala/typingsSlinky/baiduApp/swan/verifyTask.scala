@@ -1,20 +1,20 @@
 package typingsSlinky.baiduApp.swan
 
-import typingsSlinky.baiduApp.AnonResult
+import typingsSlinky.baiduApp.anon.Result
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait verifyTask extends js.Object {
-  var data: AnonResult = js.native
+  var data: Result = js.native
   var errmsg: String = js.native
   var errno: String = js.native
 }
 
 object verifyTask {
   @scala.inline
-  def apply(data: AnonResult, errmsg: String, errno: String): verifyTask = {
+  def apply(data: Result, errmsg: String, errno: String): verifyTask = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], errmsg = errmsg.asInstanceOf[js.Any], errno = errno.asInstanceOf[js.Any])
     __obj.asInstanceOf[verifyTask]
   }
@@ -25,7 +25,7 @@ object verifyTask {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withData(value: AnonResult): Self = {
+    def withData(value: Result): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.hlsParser.mod.types
 
-import typingsSlinky.hlsParser.AnonOffset
-import typingsSlinky.hlsParser.BasePlaylistConstructorPr
+import typingsSlinky.hlsParser.anon.BasePlaylistConstructorPr
+import typingsSlinky.hlsParser.anon.Offset
 import typingsSlinky.hlsParser.mod.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ class Playlist protected () extends Data {
   var independentSegments: Boolean = js.native
   var isMasterPlaylist: Boolean = js.native
   var source: js.UndefOr[String] = js.native
-  var start: js.UndefOr[AnonOffset] = js.native
+  var start: js.UndefOr[Offset] = js.native
   var uri: js.UndefOr[String] = js.native
   var version: js.UndefOr[Double] = js.native
 }

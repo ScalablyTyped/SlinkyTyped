@@ -4,7 +4,7 @@ import typingsSlinky.angularCore.mod.ComponentFactoryResolver
 import typingsSlinky.angularCore.mod.Injector
 import typingsSlinky.ionicAngular.angularDelegateMod.AngularDelegate
 import typingsSlinky.ionicAngular.overlayMod.OverlayBaseController
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonModalElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonModalElement
 import typingsSlinky.ionicCore.mod.ComponentRef
 import typingsSlinky.ionicCore.modalInterfaceMod.ModalOptions
 import scala.scalajs.js

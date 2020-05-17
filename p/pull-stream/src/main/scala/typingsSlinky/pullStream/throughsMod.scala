@@ -1,5 +1,6 @@
 package typingsSlinky.pullStream
 
+import typingsSlinky.pullStream.anon.Last
 import typingsSlinky.pullStream.mod.Source
 import typingsSlinky.pullStream.mod.Through_
 import scala.scalajs.js
@@ -51,7 +52,7 @@ object throughsMod extends js.Object {
   object take extends js.Object {
     def apply[InOut](n: Double): Through_[InOut, InOut] = js.native
     def apply[InOut](testFn: js.Function1[/* data */ InOut, Boolean]): Through_[InOut, InOut] = js.native
-    def apply[InOut](testFn: js.Function1[/* data */ InOut, Boolean], opts: AnonLast): Through_[InOut, InOut] = js.native
+    def apply[InOut](testFn: js.Function1[/* data */ InOut, Boolean], opts: Last): Through_[InOut, InOut] = js.native
   }
   
   @js.native

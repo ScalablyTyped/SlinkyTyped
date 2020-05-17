@@ -1,7 +1,7 @@
 package typingsSlinky.apolloServer.exportsMod
 
 import typingsSlinky.graphql.mod.GraphQLSchema
-import typingsSlinky.graphqlTools.GraphQLSchematransformsAr
+import typingsSlinky.graphqlTools.anon.GraphQLSchematransformsAr
 import typingsSlinky.graphqlTools.interfacesMod.Transform
 import scala.scalajs.js
 import scala.scalajs.js.`|`

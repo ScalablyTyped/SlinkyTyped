@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.compass
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.disabled
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.rotation
@@ -43,8 +42,4 @@ trait CompassViewModel
     */
   def reset(): Unit = js.native
 }
-
-@JSGlobal("__esri.CompassViewModel")
-@js.native
-object CompassViewModel extends TopLevel[CompassViewModelConstructor]
 

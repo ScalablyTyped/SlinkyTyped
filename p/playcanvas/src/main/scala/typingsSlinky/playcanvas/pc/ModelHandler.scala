@@ -13,10 +13,8 @@ import scala.scalajs.js.annotation._
   * @param {pc.GraphicsDevice} device - The graphics device that will be rendering.
   * @param {pc.StandardMaterial} defaultMaterial - The shared default material that is used in any place that a material is not specified.
   */
-@JSGlobal("pc.ModelHandler")
 @js.native
-class ModelHandler protected () extends ResourceHandler {
-  def this(device: GraphicsDevice, defaultMaterial: StandardMaterial) = this()
+trait ModelHandler extends ResourceHandler {
   /**
     * @function
     * @name pc.ModelHandler#addParser

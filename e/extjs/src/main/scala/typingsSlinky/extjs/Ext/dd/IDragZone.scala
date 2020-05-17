@@ -1,7 +1,7 @@
 package typingsSlinky.extjs.Ext.dd
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.extjs.Ext.Array
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,12 +15,12 @@ trait IDragZone extends IDragSource {
   		* @returns Object The dragData
   		*/
   @JSName("getDragData")
-  var getDragData_IDragZone: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event_], _]] = js.native
+  var getDragData_IDragZone: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event], _]] = js.native
   /** [Method] Called before a repair of an invalid drop to get the XY to animate to
   		* @param e Event The mouse up event
   		* @returns Number[] The xy location (e.g. [100, 200])
   		*/
-  var getRepairXY: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event_], Array]] = js.native
+  var getRepairXY: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event], Array]] = js.native
   /** [Method] Called once drag threshold has been reached to initialize the proxy element
   		* @param x Number The x position of the click on the dragged object
   		* @param y Number The y position of the click on the dragged object
@@ -56,7 +56,7 @@ object IDragZone {
         ret
     }
     @scala.inline
-    def withGetDragData(value: /* e */ js.UndefOr[Event_] => _): Self = {
+    def withGetDragData(value: /* e */ js.UndefOr[Event] => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getDragData")(js.Any.fromFunction1(value))
         ret
@@ -68,7 +68,7 @@ object IDragZone {
         ret
     }
     @scala.inline
-    def withGetRepairXY(value: /* e */ js.UndefOr[Event_] => Array): Self = {
+    def withGetRepairXY(value: /* e */ js.UndefOr[Event] => Array): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getRepairXY")(js.Any.fromFunction1(value))
         ret

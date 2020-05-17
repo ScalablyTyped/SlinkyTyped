@@ -70,7 +70,7 @@ object CoordProps {
         ret
     }
     @scala.inline
-    def withReflect(value: x | y): Self = {
+    def withReflect(value: typingsSlinky.bizcharts.bizchartsStrings.x | y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("reflect")(value.asInstanceOf[js.Any])
         ret

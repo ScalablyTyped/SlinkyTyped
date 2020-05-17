@@ -1,6 +1,6 @@
 package typingsSlinky.tensorflowTfjsCore.backendWebglMod
 
-import typingsSlinky.tensorflowTfjsCore.AnonError
+import typingsSlinky.tensorflowTfjsCore.anon.Error
 import typingsSlinky.tensorflowTfjsCore.engineMod.TimingInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ trait WebGLTimingInfo extends TimingInfo {
 
 object WebGLTimingInfo {
   @scala.inline
-  def apply(downloadWaitMs: Double, kernelMs: Double | AnonError, uploadWaitMs: Double, wallMs: Double): WebGLTimingInfo = {
+  def apply(downloadWaitMs: Double, kernelMs: Double | Error, uploadWaitMs: Double, wallMs: Double): WebGLTimingInfo = {
     val __obj = js.Dynamic.literal(downloadWaitMs = downloadWaitMs.asInstanceOf[js.Any], kernelMs = kernelMs.asInstanceOf[js.Any], uploadWaitMs = uploadWaitMs.asInstanceOf[js.Any], wallMs = wallMs.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebGLTimingInfo]
   }

@@ -1,14 +1,14 @@
 package typingsSlinky.ravenJs.mod
 
-import typingsSlinky.ravenJs.AnonSentryclient
-import typingsSlinky.ravenJs.ErrorrequestXMLHttpReques
+import typingsSlinky.ravenJs.anon.ErrorrequestXMLHttpReques
+import typingsSlinky.ravenJs.anon.Sentryclient
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait RavenTransportOptions extends js.Object {
-  var auth: AnonSentryclient = js.native
+  var auth: Sentryclient = js.native
   var data: js.Any = js.native
   var url: String = js.native
   def onError(error: ErrorrequestXMLHttpReques): Unit = js.native
@@ -18,7 +18,7 @@ trait RavenTransportOptions extends js.Object {
 object RavenTransportOptions {
   @scala.inline
   def apply(
-    auth: AnonSentryclient,
+    auth: Sentryclient,
     data: js.Any,
     onError: ErrorrequestXMLHttpReques => Unit,
     onSuccess: () => Unit,
@@ -34,7 +34,7 @@ object RavenTransportOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAuth(value: AnonSentryclient): Self = {
+    def withAuth(value: Sentryclient): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
         ret

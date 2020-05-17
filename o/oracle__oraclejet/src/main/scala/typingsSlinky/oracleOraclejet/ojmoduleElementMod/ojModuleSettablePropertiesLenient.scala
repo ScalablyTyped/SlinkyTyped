@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojmoduleElementMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonCleanupMode
+import typingsSlinky.oracleOraclejet.anon.CleanupMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait ojModuleSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
   var animation: js.UndefOr[js.Object] = js.native
-  var config: js.UndefOr[AnonCleanupMode] = js.native
+  var config: js.UndefOr[CleanupMode] = js.native
 }
 
 object ojModuleSettablePropertiesLenient {
@@ -39,7 +39,7 @@ object ojModuleSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withConfig(value: AnonCleanupMode): Self = {
+    def withConfig(value: CleanupMode): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
         ret

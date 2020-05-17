@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -63,7 +62,25 @@ trait VisualVariablesMixin extends js.Object {
   var visualVariables: js.Array[VisualVariable] = js.native
 }
 
-@JSGlobal("__esri.VisualVariablesMixin")
-@js.native
-object VisualVariablesMixin extends TopLevel[VisualVariablesMixinConstructor]
+object VisualVariablesMixin {
+  @scala.inline
+  def apply(visualVariables: js.Array[VisualVariable]): VisualVariablesMixin = {
+    val __obj = js.Dynamic.literal(visualVariables = visualVariables.asInstanceOf[js.Any])
+    __obj.asInstanceOf[VisualVariablesMixin]
+  }
+  @scala.inline
+  implicit class VisualVariablesMixinOps[Self <: VisualVariablesMixin] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withVisualVariables(value: js.Array[VisualVariable]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visualVariables")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

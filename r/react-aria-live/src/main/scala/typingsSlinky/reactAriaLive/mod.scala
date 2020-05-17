@@ -2,6 +2,8 @@ package typingsSlinky.reactAriaLive
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
+import typingsSlinky.reactAriaLive.anon.Arialive
+import typingsSlinky.reactAriaLive.anon.Children
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +20,7 @@ object mod extends js.Object {
     def announcePolite(message: String, id: String): Unit = js.native
   }
   
-  val LiveMessage: ReactComponentClass[AnonArialive] = js.native
-  val LiveMessenger: ReactComponentClass[AnonChildren] = js.native
+  val LiveMessage: ReactComponentClass[Arialive] = js.native
+  val LiveMessenger: ReactComponentClass[Children] = js.native
 }
 

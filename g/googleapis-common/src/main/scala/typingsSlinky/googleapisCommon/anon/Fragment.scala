@@ -1,0 +1,33 @@
+package typingsSlinky.googleapisCommon.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Fragment extends js.Object {
+  var fragment: String = js.native
+}
+
+object Fragment {
+  @scala.inline
+  def apply(fragment: String): Fragment = {
+    val __obj = js.Dynamic.literal(fragment = fragment.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Fragment]
+  }
+  @scala.inline
+  implicit class FragmentOps[Self <: Fragment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFragment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fragment")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

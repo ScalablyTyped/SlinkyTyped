@@ -1,11 +1,11 @@
 package typingsSlinky.oracleOraclejet.ojthematicmapMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.Anon25
-import typingsSlinky.oracleOraclejet.AnonAreaSvgStyle
-import typingsSlinky.oracleOraclejet.AnonGeo
-import typingsSlinky.oracleOraclejet.AnonInsertSVGElement
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
+import typingsSlinky.oracleOraclejet.anon.AreaSvgStyle
+import typingsSlinky.oracleOraclejet.anon.Geo
+import typingsSlinky.oracleOraclejet.anon.InsertSVGElement
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
+import typingsSlinky.oracleOraclejet.anon.`25`
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojthematicmapMod.ojThematicMap.RendererContext
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.all
@@ -37,39 +37,39 @@ trait ojThematicMapSettablePropertiesLenient[K1, K2, K3, D1, D2, D3]
   var areaData: js.UndefOr[DataProvider[K1, D1]] = js.native
   var as: js.UndefOr[String] = js.native
   var focusRenderer: js.UndefOr[
-    js.Function1[/* context */ RendererContext[K1, K2, K3, D1, D2, D3], AnonInsertSVGElement | Unit]
+    js.Function1[/* context */ RendererContext[K1, K2, K3, D1, D2, D3], InsertSVGElement | Unit]
   ] = js.native
   var hiddenCategories: js.UndefOr[js.Array[String]] = js.native
   var highlightMatch: js.UndefOr[any | all] = js.native
   var highlightedCategories: js.UndefOr[js.Array[String]] = js.native
   var hoverBehavior: js.UndefOr[dim | none] = js.native
   var hoverRenderer: js.UndefOr[
-    js.Function1[/* context */ RendererContext[K1, K2, K3, D1, D2, D3], AnonInsertSVGElement | Unit]
+    js.Function1[/* context */ RendererContext[K1, K2, K3, D1, D2, D3], InsertSVGElement | Unit]
   ] = js.native
   var initialZooming: js.UndefOr[auto | none] = js.native
   var isolatedItem: js.UndefOr[K1] = js.native
   var labelDisplay: js.UndefOr[on | off | auto] = js.native
   var labelType: js.UndefOr[long | short] = js.native
   var linkData: js.UndefOr[DataProvider[K2, D2]] = js.native
-  var mapProvider: js.UndefOr[AnonGeo] = js.native
+  var mapProvider: js.UndefOr[Geo] = js.native
   var markerData: js.UndefOr[DataProvider[K3, D3]] = js.native
   var markerZoomBehavior: js.UndefOr[zoom | fixed] = js.native
   var maxZoom: js.UndefOr[Double] = js.native
   var panning: js.UndefOr[auto | none] = js.native
   var renderer: js.UndefOr[
-    js.Function1[/* context */ RendererContext[K1, K2, K3, D1, D2, D3], AnonInsertSVGElement | Unit]
+    js.Function1[/* context */ RendererContext[K1, K2, K3, D1, D2, D3], InsertSVGElement | Unit]
   ] = js.native
   var selection: js.UndefOr[js.Array[K1 | K2 | K3]] = js.native
   var selectionMode: js.UndefOr[single | multiple | none] = js.native
   var selectionRenderer: js.UndefOr[
-    js.Function1[/* context */ RendererContext[K1, K2, K3, D1, D2, D3], AnonInsertSVGElement | Unit]
+    js.Function1[/* context */ RendererContext[K1, K2, K3, D1, D2, D3], InsertSVGElement | Unit]
   ] = js.native
-  var styleDefaults: js.UndefOr[AnonAreaSvgStyle] = js.native
-  var tooltip: js.UndefOr[Anon25[K1, K2, K3, D1, D2, D3]] = js.native
+  var styleDefaults: js.UndefOr[AreaSvgStyle] = js.native
+  var tooltip: js.UndefOr[`25`[K1, K2, K3, D1, D2, D3]] = js.native
   var tooltipDisplay: js.UndefOr[auto | labelAndShortDesc | none | shortDesc] = js.native
   var touchResponse: js.UndefOr[touchStart | auto] = js.native
   var trackResize: js.UndefOr[on | off] = js.native
-  var translations: js.UndefOr[AnonLabelAndValue] = js.native
+  var translations: js.UndefOr[LabelAndValue] = js.native
   var zooming: js.UndefOr[auto | none] = js.native
 }
 
@@ -134,7 +134,7 @@ object ojThematicMapSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withFocusRenderer(value: /* context */ RendererContext[K1, K2, K3, D1, D2, D3] => AnonInsertSVGElement | Unit): Self[K1, K2, K3, D1, D2, D3] = {
+    def withFocusRenderer(value: /* context */ RendererContext[K1, K2, K3, D1, D2, D3] => InsertSVGElement | Unit): Self[K1, K2, K3, D1, D2, D3] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("focusRenderer")(js.Any.fromFunction1(value))
         ret
@@ -194,7 +194,7 @@ object ojThematicMapSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withHoverRenderer(value: /* context */ RendererContext[K1, K2, K3, D1, D2, D3] => AnonInsertSVGElement | Unit): Self[K1, K2, K3, D1, D2, D3] = {
+    def withHoverRenderer(value: /* context */ RendererContext[K1, K2, K3, D1, D2, D3] => InsertSVGElement | Unit): Self[K1, K2, K3, D1, D2, D3] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hoverRenderer")(js.Any.fromFunction1(value))
         ret
@@ -266,7 +266,7 @@ object ojThematicMapSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withMapProvider(value: AnonGeo): Self[K1, K2, K3, D1, D2, D3] = {
+    def withMapProvider(value: Geo): Self[K1, K2, K3, D1, D2, D3] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mapProvider")(value.asInstanceOf[js.Any])
         ret
@@ -326,7 +326,7 @@ object ojThematicMapSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withRenderer(value: /* context */ RendererContext[K1, K2, K3, D1, D2, D3] => AnonInsertSVGElement | Unit): Self[K1, K2, K3, D1, D2, D3] = {
+    def withRenderer(value: /* context */ RendererContext[K1, K2, K3, D1, D2, D3] => InsertSVGElement | Unit): Self[K1, K2, K3, D1, D2, D3] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderer")(js.Any.fromFunction1(value))
         ret
@@ -362,7 +362,7 @@ object ojThematicMapSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withSelectionRenderer(value: /* context */ RendererContext[K1, K2, K3, D1, D2, D3] => AnonInsertSVGElement | Unit): Self[K1, K2, K3, D1, D2, D3] = {
+    def withSelectionRenderer(value: /* context */ RendererContext[K1, K2, K3, D1, D2, D3] => InsertSVGElement | Unit): Self[K1, K2, K3, D1, D2, D3] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectionRenderer")(js.Any.fromFunction1(value))
         ret
@@ -374,7 +374,7 @@ object ojThematicMapSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withStyleDefaults(value: AnonAreaSvgStyle): Self[K1, K2, K3, D1, D2, D3] = {
+    def withStyleDefaults(value: AreaSvgStyle): Self[K1, K2, K3, D1, D2, D3] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styleDefaults")(value.asInstanceOf[js.Any])
         ret
@@ -386,7 +386,7 @@ object ojThematicMapSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTooltip(value: Anon25[K1, K2, K3, D1, D2, D3]): Self[K1, K2, K3, D1, D2, D3] = {
+    def withTooltip(value: `25`[K1, K2, K3, D1, D2, D3]): Self[K1, K2, K3, D1, D2, D3] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
@@ -434,7 +434,7 @@ object ojThematicMapSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelAndValue): Self[K1, K2, K3, D1, D2, D3] = {
+    def withTranslations(value: LabelAndValue): Self[K1, K2, K3, D1, D2, D3] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

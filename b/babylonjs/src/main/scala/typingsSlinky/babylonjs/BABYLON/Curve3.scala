@@ -4,16 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.Curve3")
 @js.native
-class Curve3 protected () extends js.Object {
-  /**
-    * A Curve3 object is a logical object, so not a mesh, to handle curves in the 3D geometric space.
-    * A Curve3 is designed from a series of successive Vector3.
-    * Tuto : https://doc.babylonjs.com/how_to/how_to_use_curve3#curve3-object
-    * @param points points which make up the curve
-    */
-  def this(points: js.Array[Vector3]) = this()
+trait Curve3 extends js.Object {
   var _computeLength: js.Any = js.native
   var _length: js.Any = js.native
   var _points: js.Any = js.native
@@ -35,64 +27,62 @@ class Curve3 protected () extends js.Object {
   def length(): Double = js.native
 }
 
-/* static members */
-@JSGlobal("BABYLON.Curve3")
-@js.native
-object Curve3 extends js.Object {
-  /**
-    * Returns a Curve3 object along a CatmullRom Spline curve :
-    * @param points (array of Vector3) the points the spline must pass through. At least, four points required
-    * @param nbPoints (integer) the wanted number of points between each curve control points
-    * @param closed (boolean) optional with default false, when true forms a closed loop from the points
-    * @returns the created Curve3
-    */
-  def CreateCatmullRomSpline(points: DeepImmutable[js.Array[Vector3]], nbPoints: Double): Curve3 = js.native
-  def CreateCatmullRomSpline(points: DeepImmutable[js.Array[Vector3]], nbPoints: Double, closed: Boolean): Curve3 = js.native
-  /**
-    * Returns a Curve3 object along a Cubic Bezier curve : https://doc.babylonjs.com/how_to/how_to_use_curve3#cubic-bezier-curve
-    * @param v0 (Vector3) the origin point of the Cubic Bezier
-    * @param v1 (Vector3) the first control point
-    * @param v2 (Vector3) the second control point
-    * @param v3 (Vector3) the end point of the Cubic Bezier
-    * @param nbPoints (integer) the wanted number of points in the curve
-    * @returns the created Curve3
-    */
-  def CreateCubicBezier(
-    v0: DeepImmutable[Vector3],
-    v1: DeepImmutable[Vector3],
-    v2: DeepImmutable[Vector3],
-    v3: DeepImmutable[Vector3],
-    nbPoints: Double
-  ): Curve3 = js.native
-  /**
-    * Returns a Curve3 object along a Hermite Spline curve : https://doc.babylonjs.com/how_to/how_to_use_curve3#hermite-spline
-    * @param p1 (Vector3) the origin point of the Hermite Spline
-    * @param t1 (Vector3) the tangent vector at the origin point
-    * @param p2 (Vector3) the end point of the Hermite Spline
-    * @param t2 (Vector3) the tangent vector at the end point
-    * @param nbPoints (integer) the wanted number of points in the curve
-    * @returns the created Curve3
-    */
-  def CreateHermiteSpline(
-    p1: DeepImmutable[Vector3],
-    t1: DeepImmutable[Vector3],
-    p2: DeepImmutable[Vector3],
-    t2: DeepImmutable[Vector3],
-    nbPoints: Double
-  ): Curve3 = js.native
-  /**
-    * Returns a Curve3 object along a Quadratic Bezier curve : https://doc.babylonjs.com/how_to/how_to_use_curve3#quadratic-bezier-curve
-    * @param v0 (Vector3) the origin point of the Quadratic Bezier
-    * @param v1 (Vector3) the control point
-    * @param v2 (Vector3) the end point of the Quadratic Bezier
-    * @param nbPoints (integer) the wanted number of points in the curve
-    * @returns the created Curve3
-    */
-  def CreateQuadraticBezier(
-    v0: DeepImmutable[Vector3],
-    v1: DeepImmutable[Vector3],
-    v2: DeepImmutable[Vector3],
-    nbPoints: Double
-  ): Curve3 = js.native
+object Curve3 {
+  @scala.inline
+  def apply(
+    _computeLength: js.Any,
+    _length: js.Any,
+    _points: js.Any,
+    continue: DeepImmutable[Curve3] => Curve3,
+    getPoints: () => js.Array[Vector3],
+    length: () => Double
+  ): Curve3 = {
+    val __obj = js.Dynamic.literal(_computeLength = _computeLength.asInstanceOf[js.Any], _length = _length.asInstanceOf[js.Any], _points = _points.asInstanceOf[js.Any], continue = js.Any.fromFunction1(continue), getPoints = js.Any.fromFunction0(getPoints), length = js.Any.fromFunction0(length))
+    __obj.asInstanceOf[Curve3]
+  }
+  @scala.inline
+  implicit class Curve3Ops[Self <: Curve3] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_computeLength(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_computeLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_length(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_points(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_points")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContinue(value: DeepImmutable[Curve3] => Curve3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("continue")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetPoints(value: () => js.Array[Vector3]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPoints")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withLength(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

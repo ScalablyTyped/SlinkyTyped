@@ -1,6 +1,6 @@
 package typingsSlinky.saslExternal.mod
 
-import typingsSlinky.saslExternal.TypeofExternalMechanism
+import typingsSlinky.saslExternal.anon.TypeofExternalMechanism
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -5,7 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ClassType
-import typingsSlinky.reactResponsive.PartialMediaQueryMatchers
+import typingsSlinky.reactResponsive.anon.PartialMediaQueryMatchers
 import typingsSlinky.reactResponsive.mod.MediaQueryMatchers
 import typingsSlinky.reactResponsive.mod.MediaQueryProps
 import typingsSlinky.reactResponsive.mod.MediaQueryType

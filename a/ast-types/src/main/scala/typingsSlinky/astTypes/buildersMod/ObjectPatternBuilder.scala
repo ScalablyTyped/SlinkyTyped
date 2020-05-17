@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonDecorators
+import typingsSlinky.astTypes.anon.Decorators
 import typingsSlinky.astTypes.kindsMod.ObjectPropertyKind
 import typingsSlinky.astTypes.kindsMod.PropertyKind
 import typingsSlinky.astTypes.kindsMod.PropertyPatternKind
@@ -19,6 +19,6 @@ trait ObjectPatternBuilder extends js.Object {
       PropertyKind | PropertyPatternKind | SpreadPropertyPatternKind | SpreadPropertyKind | ObjectPropertyKind | RestPropertyKind
     ]
   ): ObjectPattern = js.native
-  def from(params: AnonDecorators): ObjectPattern = js.native
+  def from(params: Decorators): ObjectPattern = js.native
 }
 

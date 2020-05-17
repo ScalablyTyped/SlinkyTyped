@@ -2,6 +2,7 @@ package typingsSlinky.ts3NodejsLibrary
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.ts3NodejsLibrary.abstractMod.Abstract
+import typingsSlinky.ts3NodejsLibrary.anon.PartialClientList
 import typingsSlinky.ts3NodejsLibrary.clientMod.TeamSpeakClient
 import typingsSlinky.ts3NodejsLibrary.enumMod.Codec
 import typingsSlinky.ts3NodejsLibrary.propertyTypesMod.ChannelEdit

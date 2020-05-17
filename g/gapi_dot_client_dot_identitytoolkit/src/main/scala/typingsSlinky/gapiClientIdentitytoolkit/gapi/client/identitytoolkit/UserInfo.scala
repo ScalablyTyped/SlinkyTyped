@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientIdentitytoolkit.gapi.client.identitytoolkit
 
-import typingsSlinky.gapiClientIdentitytoolkit.AnonEmail
+import typingsSlinky.gapiClientIdentitytoolkit.anon.Email
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,7 +34,7 @@ trait UserInfo extends js.Object {
   /** The URL of the user profile photo. */
   var photoUrl: js.UndefOr[String] = js.native
   /** The IDP of the user. */
-  var providerUserInfo: js.UndefOr[js.Array[AnonEmail]] = js.native
+  var providerUserInfo: js.UndefOr[js.Array[Email]] = js.native
   /** The user's plain text password. */
   var rawPassword: js.UndefOr[String] = js.native
   /** The user's password salt. */
@@ -216,7 +216,7 @@ object UserInfo {
         ret
     }
     @scala.inline
-    def withProviderUserInfo(value: js.Array[AnonEmail]): Self = {
+    def withProviderUserInfo(value: js.Array[Email]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("providerUserInfo")(value.asInstanceOf[js.Any])
         ret

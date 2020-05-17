@@ -1,7 +1,7 @@
 package typingsSlinky.fuseJs.mod
 
-import typingsSlinky.fuseJs.AnonName
-import typingsSlinky.fuseJs.AnonScore
+import typingsSlinky.fuseJs.anon.Name
+import typingsSlinky.fuseJs.anon.Score
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,13 +15,13 @@ trait FuseOptions[T] extends js.Object {
   var id: js.UndefOr[/* keyof T */ String] = js.native
   var includeMatches: js.UndefOr[Boolean] = js.native
   var includeScore: js.UndefOr[Boolean] = js.native
-  var keys: js.UndefOr[js.Array[AnonName[T] | (/* keyof T */ String)]] = js.native
+  var keys: js.UndefOr[js.Array[Name[T] | (/* keyof T */ String)]] = js.native
   var location: js.UndefOr[Double] = js.native
   var matchAllTokens: js.UndefOr[Boolean] = js.native
   var maxPatternLength: js.UndefOr[Double] = js.native
   var minMatchCharLength: js.UndefOr[Double] = js.native
   var shouldSort: js.UndefOr[Boolean] = js.native
-  var sortFn: js.UndefOr[js.Function2[/* a */ AnonScore, /* b */ AnonScore, Double]] = js.native
+  var sortFn: js.UndefOr[js.Function2[/* a */ Score, /* b */ Score, Double]] = js.native
   var threshold: js.UndefOr[Double] = js.native
   var tokenSeparator: js.UndefOr[js.RegExp] = js.native
   var tokenize: js.UndefOr[Boolean] = js.native
@@ -125,7 +125,7 @@ object FuseOptions {
         ret
     }
     @scala.inline
-    def withKeys(value: js.Array[AnonName[T] | (/* keyof T */ String)]): Self[T] = {
+    def withKeys(value: js.Array[Name[T] | (/* keyof T */ String)]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
         ret
@@ -197,7 +197,7 @@ object FuseOptions {
         ret
     }
     @scala.inline
-    def withSortFn(value: (/* a */ AnonScore, /* b */ AnonScore) => Double): Self[T] = {
+    def withSortFn(value: (/* a */ Score, /* b */ Score) => Double): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sortFn")(js.Any.fromFunction2(value))
         ret

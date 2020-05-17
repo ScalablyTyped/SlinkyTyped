@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait IReplyAbortContent
-  extends _ReplyContent[js.Any] {
+  extends ReplyContent[js.Any] {
   var status: abort = js.native
 }
 

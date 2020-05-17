@@ -7,9 +7,9 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait CustomPublishOptions
-  extends PublishConfiguration
+  extends AllPublishOptions
+     with PublishConfiguration
      with /* index */ StringDictionary[js.Any]
-     with _AllPublishOptions
 
 object CustomPublishOptions {
   @scala.inline

@@ -1,20 +1,20 @@
 package typingsSlinky.pubnub.mod
 
-import typingsSlinky.pubnub.AnonValue
+import typingsSlinky.pubnub.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait AddMessageActionParameters extends js.Object {
-  var action: AnonValue = js.native
+  var action: Value = js.native
   var channel: String = js.native
   var messageTimetoken: String = js.native
 }
 
 object AddMessageActionParameters {
   @scala.inline
-  def apply(action: AnonValue, channel: String, messageTimetoken: String): AddMessageActionParameters = {
+  def apply(action: Value, channel: String, messageTimetoken: String): AddMessageActionParameters = {
     val __obj = js.Dynamic.literal(action = action.asInstanceOf[js.Any], channel = channel.asInstanceOf[js.Any], messageTimetoken = messageTimetoken.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddMessageActionParameters]
   }
@@ -25,7 +25,7 @@ object AddMessageActionParameters {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAction(value: AnonValue): Self = {
+    def withAction(value: Value): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("action")(value.asInstanceOf[js.Any])
         ret

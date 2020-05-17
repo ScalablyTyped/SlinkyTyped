@@ -1,13 +1,13 @@
 package typingsSlinky.atom.mod
 
-import typingsSlinky.atom.AnonAllowPrevious
-import typingsSlinky.atom.AnonAutoscroll
-import typingsSlinky.atom.AnonBackwards
-import typingsSlinky.atom.AnonIncludeNewline
-import typingsSlinky.atom.AnonIncludeNonWordCharacters
-import typingsSlinky.atom.AnonIncludeNonWordCharactersBoolean
-import typingsSlinky.atom.AnonMoveToEndOfSelection
-import typingsSlinky.atom.AnonWordRegex
+import typingsSlinky.atom.anon.AllowPrevious
+import typingsSlinky.atom.anon.Autoscroll
+import typingsSlinky.atom.anon.Backwards
+import typingsSlinky.atom.anon.IncludeNewline
+import typingsSlinky.atom.anon.IncludeNonWordCharacters
+import typingsSlinky.atom.anon.IncludeNonWordCharactersBoolean
+import typingsSlinky.atom.anon.MoveToEndOfSelection
+import typingsSlinky.atom.anon.WordRegex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,10 +27,10 @@ trait Cursor extends js.Object {
   def compare(otherCursor: Cursor): Double = js.native
   /** Retrieves the buffer position of where the current word starts. */
   def getBeginningOfCurrentWordBufferPosition(): Point = js.native
-  def getBeginningOfCurrentWordBufferPosition(options: AnonAllowPrevious): Point = js.native
+  def getBeginningOfCurrentWordBufferPosition(options: AllowPrevious): Point = js.native
   /** Retrieves the buffer position of where the next word starts. */
   def getBeginningOfNextWordBufferPosition(): Point = js.native
-  def getBeginningOfNextWordBufferPosition(options: AnonWordRegex): Point = js.native
+  def getBeginningOfNextWordBufferPosition(options: WordRegex): Point = js.native
   /** Returns the cursor's current buffer column. */
   def getBufferColumn(): Double = js.native
   /** Returns the current buffer position as an Array. */
@@ -41,7 +41,7 @@ trait Cursor extends js.Object {
   def getCurrentBufferLine(): String = js.native
   /** Returns the buffer Range for the current line. */
   def getCurrentLineBufferRange(): Range = js.native
-  def getCurrentLineBufferRange(options: AnonIncludeNewline): Range = js.native
+  def getCurrentLineBufferRange(options: IncludeNewline): Range = js.native
   /**
     *  Retrieves the range for the current paragraph.
     *  A paragraph is defined as a block of text surrounded by empty lines or comments.
@@ -49,12 +49,12 @@ trait Cursor extends js.Object {
   def getCurrentParagraphBufferRange(): Range = js.native
   /** Returns the buffer Range occupied by the word located under the cursor. */
   def getCurrentWordBufferRange(): Range = js.native
-  def getCurrentWordBufferRange(options: AnonWordRegex): Range = js.native
+  def getCurrentWordBufferRange(options: WordRegex): Range = js.native
   /** Returns the characters preceding the cursor in the current word. */
   def getCurrentWordPrefix(): String = js.native
   /** Retrieves the buffer position of where the current word ends. */
   def getEndOfCurrentWordBufferPosition(): Point = js.native
-  def getEndOfCurrentWordBufferPosition(options: AnonIncludeNonWordCharacters): Point = js.native
+  def getEndOfCurrentWordBufferPosition(options: IncludeNonWordCharacters): Point = js.native
   /** Returns the indentation level of the current line. */
   def getIndentLevel(): Double = js.native
   // Cursor Position Details
@@ -68,14 +68,14 @@ trait Cursor extends js.Object {
     *  word, or the previous word.
     */
   def getNextWordBoundaryBufferPosition(): Point = js.native
-  def getNextWordBoundaryBufferPosition(options: AnonWordRegex): Point = js.native
+  def getNextWordBoundaryBufferPosition(options: WordRegex): Point = js.native
   // Local Positions and Ranges
   /**
     *  Returns buffer position of previous word boundary. It might be on the current
     *  word, or the previous word.
     */
   def getPreviousWordBoundaryBufferPosition(): Point = js.native
-  def getPreviousWordBoundaryBufferPosition(options: AnonWordRegex): Point = js.native
+  def getPreviousWordBoundaryBufferPosition(options: WordRegex): Point = js.native
   /** Retrieves the scope descriptor for the cursor's current position. */
   def getScopeDescriptor(): ScopeDescriptor = js.native
   /** Returns the cursor's current screen column. */
@@ -99,7 +99,7 @@ trait Cursor extends js.Object {
   def isBetweenWordAndNonWord(): Boolean = js.native
   /** Returns whether this cursor is between a word's start and end. */
   def isInsideWord(): Boolean = js.native
-  def isInsideWord(options: AnonWordRegex): Boolean = js.native
+  def isInsideWord(options: WordRegex): Boolean = js.native
   /**
     *  Identifies if this cursor is the last in the TextEditor.
     *  "Last" is defined as the most recently added cursor.
@@ -116,15 +116,15 @@ trait Cursor extends js.Object {
   /** Moves the cursor down one screen row. */
   def moveDown(): Unit = js.native
   def moveDown(rowCount: Double): Unit = js.native
-  def moveDown(rowCount: Double, options: AnonMoveToEndOfSelection): Unit = js.native
+  def moveDown(rowCount: Double, options: MoveToEndOfSelection): Unit = js.native
   /** Moves the cursor left one screen column. */
   def moveLeft(): Unit = js.native
   def moveLeft(columnCount: Double): Unit = js.native
-  def moveLeft(columnCount: Double, options: AnonMoveToEndOfSelection): Unit = js.native
+  def moveLeft(columnCount: Double, options: MoveToEndOfSelection): Unit = js.native
   /** Moves the cursor right one screen column. */
   def moveRight(): Unit = js.native
   def moveRight(columnCount: Double): Unit = js.native
-  def moveRight(columnCount: Double, options: AnonMoveToEndOfSelection): Unit = js.native
+  def moveRight(columnCount: Double, options: MoveToEndOfSelection): Unit = js.native
   /** Moves the cursor to the beginning of the buffer line. */
   def moveToBeginningOfLine(): Unit = js.native
   /** Moves the cursor to the beginning of the next paragraph. */
@@ -161,7 +161,7 @@ trait Cursor extends js.Object {
   /** Moves the cursor up one screen row. */
   def moveUp(): Unit = js.native
   def moveUp(rowCount: Double): Unit = js.native
-  def moveUp(rowCount: Double, options: AnonMoveToEndOfSelection): Unit = js.native
+  def moveUp(rowCount: Double, options: MoveToEndOfSelection): Unit = js.native
   // Event Subscription
   /** Calls your callback when the cursor has been moved. */
   def onDidChangePosition(callback: js.Function1[/* event */ CursorPositionChangedEvent, Unit]): Disposable = js.native
@@ -171,11 +171,11 @@ trait Cursor extends js.Object {
   def onDidDestroy(callback: js.Function0[Unit]): Disposable = js.native
   /** Moves a cursor to a given buffer position. */
   def setBufferPosition(bufferPosition: PointCompatible): Unit = js.native
-  def setBufferPosition(bufferPosition: PointCompatible, options: AnonAutoscroll): Unit = js.native
+  def setBufferPosition(bufferPosition: PointCompatible, options: Autoscroll): Unit = js.native
   // Managing Cursor Position
   /** Moves a cursor to a given screen position. */
   def setScreenPosition(screenPosition: PointCompatible): Unit = js.native
-  def setScreenPosition(screenPosition: PointCompatible, options: AnonAutoscroll): Unit = js.native
+  def setScreenPosition(screenPosition: PointCompatible, options: Autoscroll): Unit = js.native
   // Visibility
   /** Sets whether the cursor is visible. */
   def setVisible(visible: Boolean): Unit = js.native
@@ -183,9 +183,9 @@ trait Cursor extends js.Object {
   def skipLeadingWhitespace(): Unit = js.native
   /** Get the RegExp used by the cursor to determine what a "subword" is. */
   def subwordRegExp(): js.RegExp = js.native
-  def subwordRegExp(options: AnonBackwards): js.RegExp = js.native
+  def subwordRegExp(options: Backwards): js.RegExp = js.native
   /** Get the RegExp used by the cursor to determine what a "word" is. */
   def wordRegExp(): js.RegExp = js.native
-  def wordRegExp(options: AnonIncludeNonWordCharactersBoolean): js.RegExp = js.native
+  def wordRegExp(options: IncludeNonWordCharactersBoolean): js.RegExp = js.native
 }
 

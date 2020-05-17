@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.mod
 
-import typingsSlinky.babylonjs.AnonBendAxis
+import typingsSlinky.babylonjs.anon.BendAxis
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ class BoneIKController protected ()
   def this(
     mesh: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh,
     bone: typingsSlinky.babylonjs.boneMod.Bone,
-    options: AnonBendAxis
+    options: BendAxis
   ) = this()
 }
 

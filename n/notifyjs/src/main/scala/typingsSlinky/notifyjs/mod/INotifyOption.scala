@@ -1,6 +1,6 @@
 package typingsSlinky.notifyjs.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +33,7 @@ trait INotifyOption extends js.Object {
   /**
     * callback when notification is shown
     */
-  var notifyShow: js.UndefOr[js.Function1[/* e */ Event_, _]] = js.native
+  var notifyShow: js.UndefOr[js.Function1[/* e */ Event, _]] = js.native
   /**
     * callback when user has denied permission
     */
@@ -134,7 +134,7 @@ object INotifyOption {
         ret
     }
     @scala.inline
-    def withNotifyShow(value: /* e */ Event_ => _): Self = {
+    def withNotifyShow(value: /* e */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notifyShow")(js.Any.fromFunction1(value))
         ret

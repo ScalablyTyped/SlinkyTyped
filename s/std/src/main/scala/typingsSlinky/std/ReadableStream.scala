@@ -1,22 +1,21 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
+import typingsSlinky.std.anon.Mode
+import typingsSlinky.std.anon.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** This Streams API interface represents a readable stream of byte data. The Fetch API offers a concrete instance of a ReadableStream through the body property of a Response object. */
 @js.native
-trait ReadableStream[R] extends js.Object {
+trait ReadableStream[R] extends BodyInit {
   val locked: scala.Boolean = js.native
   def cancel(): js.Promise[Unit] = js.native
   def cancel(reason: js.Any): js.Promise[Unit] = js.native
   def getReader(): ReadableStreamDefaultReader[R] = js.native
-  def getReader(options: AnonMode): ReadableStreamBYOBReader = js.native
-  def pipeThrough[T](hasWritableReadable: AnonReadable[R, T]): org.scalajs.dom.experimental.ReadableStream[T] = js.native
-  def pipeThrough[T](hasWritableReadable: AnonReadable[R, T], options: PipeOptions): org.scalajs.dom.experimental.ReadableStream[T] = js.native
+  def getReader(options: Mode): ReadableStreamBYOBReader = js.native
+  def pipeThrough[T](hasWritableReadable: Readable[R, T]): org.scalajs.dom.experimental.ReadableStream[T] = js.native
+  def pipeThrough[T](hasWritableReadable: Readable[R, T], options: PipeOptions): org.scalajs.dom.experimental.ReadableStream[T] = js.native
   def pipeTo(dest: WritableStream[R]): js.Promise[Unit] = js.native
   def pipeTo(dest: WritableStream[R], options: PipeOptions): js.Promise[Unit] = js.native
   def tee(): js.Tuple2[
@@ -24,18 +23,4 @@ trait ReadableStream[R] extends js.Object {
     org.scalajs.dom.experimental.ReadableStream[R]
   ] = js.native
 }
-
-@JSGlobal("ReadableStream")
-@js.native
-object ReadableStream
-  extends Instantiable0[org.scalajs.dom.experimental.ReadableStream[js.Object]]
-     with Instantiable1[
-      (/* underlyingSource */ UnderlyingByteSource) | (/* underlyingSource */ UnderlyingSource[js.Object]), 
-      org.scalajs.dom.experimental.ReadableStream[js.Object | js.typedarray.Uint8Array]
-    ]
-     with Instantiable2[
-      (/* underlyingSource */ UnderlyingByteSource) | (/* underlyingSource */ UnderlyingSource[js.Object]), 
-      (/* strategy */ AnonSize) | (/* strategy */ QueuingStrategy[js.Object]), 
-      org.scalajs.dom.experimental.ReadableStream[js.Object | js.typedarray.Uint8Array]
-    ]
 

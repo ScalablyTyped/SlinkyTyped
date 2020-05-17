@@ -1,0 +1,72 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.text
+
+import typingsSlinky.activexLibreoffice.`type`
+import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XComponent
+import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XEventListener
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** enables objects to be inserted into a text and to provide their location in a text once they are inserted into it. */
+@js.native
+trait XTextContent extends XComponent {
+  /** @returns the text range to which the content is attached.  Note: The anchor of the actual implementation for text tables does not have a position in the t */
+  val Anchor: XTextRange = js.native
+  /**
+    * is called when this object gets embedded in a text.
+    *
+    * This acts like a multi-phase construction, thus the object may be invalid until it is attached to a text position. Usually this method is called from
+    * within {@link XText.insertTextContent()} .
+    *
+    * Both text objects and text content objects may only be connected to each other if they are created by the same component. When implementing new
+    * components, this behavior is deprecated.
+    */
+  def attach(xTextRange: XTextRange): Unit = js.native
+  /** @returns the text range to which the content is attached.  Note: The anchor of the actual implementation for text tables does not have a position in the t */
+  def getAnchor(): XTextRange = js.native
+}
+
+object XTextContent {
+  @scala.inline
+  def apply(
+    Anchor: XTextRange,
+    acquire: () => Unit,
+    addEventListener: XEventListener => Unit,
+    attach: XTextRange => Unit,
+    dispose: () => Unit,
+    getAnchor: () => XTextRange,
+    queryInterface: `type` => js.Any,
+    release: () => Unit,
+    removeEventListener: XEventListener => Unit
+  ): XTextContent = {
+    val __obj = js.Dynamic.literal(Anchor = Anchor.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), attach = js.Any.fromFunction1(attach), dispose = js.Any.fromFunction0(dispose), getAnchor = js.Any.fromFunction0(getAnchor), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener))
+    __obj.asInstanceOf[XTextContent]
+  }
+  @scala.inline
+  implicit class XTextContentOps[Self <: XTextContent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnchor(value: XTextRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Anchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAttach(value: XTextRange => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attach")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetAnchor(value: () => XTextRange): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAnchor")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
+}
+

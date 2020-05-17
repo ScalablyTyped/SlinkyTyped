@@ -1,6 +1,6 @@
 package typingsSlinky.ckeditorCkeditor5Engine.mod.conversion
 
-import typingsSlinky.ckeditorCkeditor5Engine.AnonIsPhantom
+import typingsSlinky.ckeditorCkeditor5Engine.anon.IsPhantom
 import typingsSlinky.ckeditorCkeditor5Engine.mod.view.Element
 import typingsSlinky.ckeditorCkeditor5Engine.mod.view.Position
 import typingsSlinky.ckeditorCkeditor5Engine.mod.view.Range
@@ -24,7 +24,7 @@ class Mapper () extends js.Object {
   def toModelRange(viewRange: Range): typingsSlinky.ckeditorCkeditor5Engine.mod.model.Range = js.native
   def toViewElement(modelElement: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Element): js.UndefOr[Element] = js.native
   def toViewPosition(modelPosition: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Position): Position = js.native
-  def toViewPosition(modelPosition: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Position, options: AnonIsPhantom): Position = js.native
+  def toViewPosition(modelPosition: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Position, options: IsPhantom): Position = js.native
   def toViewRange(modelRange: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Range): Range = js.native
   def unbindElementsFromMarkerName(name: String): Unit = js.native
   def unbindModelElement(modelElement: typingsSlinky.ckeditorCkeditor5Engine.mod.model.Element): Unit = js.native

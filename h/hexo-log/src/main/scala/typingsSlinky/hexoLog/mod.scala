@@ -1,6 +1,7 @@
 package typingsSlinky.hexoLog
 
 import typingsSlinky.hexoBunyan.mod.^
+import typingsSlinky.hexoLog.anon.Debug
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -138,6 +139,6 @@ object mod extends js.Object {
   }
   
   def apply(): HexoLogger = js.native
-  def apply(options: AnonDebug): HexoLogger = js.native
+  def apply(options: Debug): HexoLogger = js.native
 }
 

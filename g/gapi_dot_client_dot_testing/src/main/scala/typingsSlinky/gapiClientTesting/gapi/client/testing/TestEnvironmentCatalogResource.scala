@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientTesting.gapi.client.testing
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientTesting.AnonBearertoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientTesting.anon.Bearertoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,12 +17,12 @@ trait TestEnvironmentCatalogResource extends js.Object {
     * - NOT_FOUND - if the environment type does not exist
     * - INTERNAL - if an internal error occurred
     */
-  def get(request: AnonBearertoken): Request_[TestEnvironmentCatalog] = js.native
+  def get(request: Bearertoken): Request[TestEnvironmentCatalog] = js.native
 }
 
 object TestEnvironmentCatalogResource {
   @scala.inline
-  def apply(get: AnonBearertoken => Request_[TestEnvironmentCatalog]): TestEnvironmentCatalogResource = {
+  def apply(get: Bearertoken => Request[TestEnvironmentCatalog]): TestEnvironmentCatalogResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get))
     __obj.asInstanceOf[TestEnvironmentCatalogResource]
   }
@@ -33,7 +33,7 @@ object TestEnvironmentCatalogResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonBearertoken => Request_[TestEnvironmentCatalog]): Self = {
+    def withGet(value: Bearertoken => Request[TestEnvironmentCatalog]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret

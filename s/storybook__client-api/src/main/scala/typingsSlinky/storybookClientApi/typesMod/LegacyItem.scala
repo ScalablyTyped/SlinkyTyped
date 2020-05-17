@@ -1,7 +1,7 @@
 package typingsSlinky.storybookClientApi.typesMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.storybookClientApi.AnonStoryId
+import typingsSlinky.storybookClientApi.anon.StoryId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait LegacyItem extends js.Object {
   var index: Double = js.native
   var kind: String = js.native
   var revision: js.UndefOr[Double] = js.native
-  var selection: js.UndefOr[AnonStoryId] = js.native
+  var selection: js.UndefOr[StoryId] = js.native
   var stories: StringDictionary[js.Any] = js.native
 }
 
@@ -65,7 +65,7 @@ object LegacyItem {
         ret
     }
     @scala.inline
-    def withSelection(value: AnonStoryId): Self = {
+    def withSelection(value: StoryId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selection")(value.asInstanceOf[js.Any])
         ret

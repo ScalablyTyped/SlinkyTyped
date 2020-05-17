@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonReturnType
+import typingsSlinky.astTypes.anon.ReturnType
 import typingsSlinky.astTypes.astTypesStrings.get
 import typingsSlinky.astTypes.astTypesStrings.method
 import typingsSlinky.astTypes.astTypesStrings.set
@@ -88,6 +88,6 @@ trait ObjectMethodBuilder extends js.Object {
     body: BlockStatementKind,
     computed: Boolean
   ): ObjectMethod = js.native
-  def from(params: AnonReturnType): ObjectMethod = js.native
+  def from(params: ReturnType): ObjectMethod = js.native
 }
 

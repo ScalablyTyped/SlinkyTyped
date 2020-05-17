@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait S3Options
   extends BaseS3Options
-     with _AllPublishOptions {
+     with AllPublishOptions {
   /**
     * The bucket name.
     */

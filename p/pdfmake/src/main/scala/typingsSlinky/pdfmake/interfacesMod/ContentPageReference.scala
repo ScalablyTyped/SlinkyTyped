@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ContentPageReference
   extends ContentBase
-     with _Content {
+     with Content {
   var pageReference: String = js.native
 }
 

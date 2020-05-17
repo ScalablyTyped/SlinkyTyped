@@ -29,9 +29,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A specialized text field for entering search text.
 		 */
-@JSGlobal("Titanium.UI.SearchBar")
 @js.native
-class SearchBar () extends View {
+trait SearchBar extends View {
   /**
   			 * Determines how text is capitalized during typing.
   			 */

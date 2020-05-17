@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ForNumericStatement
-  extends _Statement
+  extends Statement
      with Base[typingsSlinky.luaparse.luaparseStrings.ForNumericStatement] {
   var body: js.Array[Statement] = js.native
   var end: Expression = js.native

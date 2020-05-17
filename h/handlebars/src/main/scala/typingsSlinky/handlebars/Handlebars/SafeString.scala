@@ -4,10 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Handlebars.SafeString")
 @js.native
-class SafeString protected () extends js.Object {
-  def this(str: String) = this()
+trait SafeString extends js.Object {
   def toHTML(): String = js.native
+}
+
+object SafeString {
+  @scala.inline
+  def apply(toHTML: () => String): SafeString = {
+    val __obj = js.Dynamic.literal(toHTML = js.Any.fromFunction0(toHTML))
+    __obj.asInstanceOf[SafeString]
+  }
+  @scala.inline
+  implicit class SafeStringOps[Self <: SafeString] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withToHTML(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toHTML")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

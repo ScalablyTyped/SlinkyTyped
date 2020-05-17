@@ -1,13 +1,14 @@
 package typingsSlinky.blueprintjsSelect
 
 import org.scalablytyped.runtime.Instantiable1
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import typingsSlinky.blueprintjsCore.inputGroupMod.IInputGroupProps
 import typingsSlinky.blueprintjsCore.propsMod.HTMLInputProps
+import typingsSlinky.blueprintjsSelect.anon.PartialIOverlayProps
 import typingsSlinky.blueprintjsSelect.listItemsPropsMod.IListItemsProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,7 +39,7 @@ object omnibarMod extends js.Object {
       * itself until the `isOpen` prop becomes `false`.
       * .
       */
-    var onClose: js.UndefOr[js.Function1[/* event */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]], Unit]] = js.native
+    var onClose: js.UndefOr[js.Function1[/* event */ js.UndefOr[SyntheticEvent[Event, HTMLElement]], Unit]] = js.native
     /** Props to spread to `Overlay`. */
     var overlayProps: js.UndefOr[PartialIOverlayProps] = js.native
   }

@@ -1,5 +1,6 @@
 package typingsSlinky.pgFormat
 
+import typingsSlinky.pgFormat.anon.Pattern
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation._
 object mod extends js.Object {
   def apply(fmt: String, args: js.Any*): String = js.native
   def config(): Unit = js.native
-  def config(config: AnonPattern): Unit = js.native
+  def config(config: Pattern): Unit = js.native
   def ident(`val`: String): String = js.native
   def ident(`val`: js.Array[_]): String = js.native
   def ident(`val`: Boolean): String = js.native

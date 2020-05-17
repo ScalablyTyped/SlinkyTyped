@@ -1,9 +1,8 @@
 package typingsSlinky.plotlyJs.mod
 
-import typingsSlinky.plotlyJs.AnonColor
-import typingsSlinky.plotlyJs.PartialAxis
-import typingsSlinky.plotlyJs.PartialGaugeBar
-import typingsSlinky.plotlyJs.PartialThreshold
+import typingsSlinky.plotlyJs.anon.PartialAxis
+import typingsSlinky.plotlyJs.anon.PartialGaugeBar
+import typingsSlinky.plotlyJs.anon.PartialThreshold
 import typingsSlinky.plotlyJs.plotlyJsStrings.angular
 import typingsSlinky.plotlyJs.plotlyJsStrings.bullet
 import scala.scalajs.js
@@ -18,7 +17,7 @@ trait Gauge extends js.Object {
   var bordercolor: Color = js.native
   var borderwidth: Double = js.native
   var shape: angular | bullet = js.native
-  var steps: js.Array[AnonColor] = js.native
+  var steps: js.Array[typingsSlinky.plotlyJs.anon.Color] = js.native
   var threshold: PartialThreshold = js.native
 }
 
@@ -31,7 +30,7 @@ object Gauge {
     bordercolor: Color,
     borderwidth: Double,
     shape: angular | bullet,
-    steps: js.Array[AnonColor],
+    steps: js.Array[typingsSlinky.plotlyJs.anon.Color],
     threshold: PartialThreshold
   ): Gauge = {
     val __obj = js.Dynamic.literal(axis = axis.asInstanceOf[js.Any], bar = bar.asInstanceOf[js.Any], bgcolor = bgcolor.asInstanceOf[js.Any], bordercolor = bordercolor.asInstanceOf[js.Any], borderwidth = borderwidth.asInstanceOf[js.Any], shape = shape.asInstanceOf[js.Any], steps = steps.asInstanceOf[js.Any], threshold = threshold.asInstanceOf[js.Any])
@@ -80,7 +79,7 @@ object Gauge {
         ret
     }
     @scala.inline
-    def withSteps(value: js.Array[AnonColor]): Self = {
+    def withSteps(value: js.Array[typingsSlinky.plotlyJs.anon.Color]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("steps")(value.asInstanceOf[js.Any])
         ret

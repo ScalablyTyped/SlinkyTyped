@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PipelineBareFunction_
   extends BaseNode
-     with _Node {
+     with Node {
   var callee: Expression = js.native
   @JSName("type")
   var type_PipelineBareFunction_ : PipelineBareFunction = js.native

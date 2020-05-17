@@ -3,7 +3,7 @@ package typingsSlinky.ionicCore.scrollAssistMod
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonContentElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonContentElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

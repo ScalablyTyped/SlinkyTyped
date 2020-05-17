@@ -1,6 +1,6 @@
 package typingsSlinky.vscodeLanguageserverProtocol.protocolConfigurationMod
 
-import typingsSlinky.vscodeLanguageserverProtocol.AnonConfiguration
+import typingsSlinky.vscodeLanguageserverProtocol.anon.Configuration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait ConfigurationClientCapabilities extends js.Object {
   /**
     * The workspace client capabilities
     */
-  var workspace: js.UndefOr[AnonConfiguration] = js.native
+  var workspace: js.UndefOr[Configuration] = js.native
 }
 
 object ConfigurationClientCapabilities {
@@ -26,7 +26,7 @@ object ConfigurationClientCapabilities {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withWorkspace(value: AnonConfiguration): Self = {
+    def withWorkspace(value: Configuration): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("workspace")(value.asInstanceOf[js.Any])
         ret

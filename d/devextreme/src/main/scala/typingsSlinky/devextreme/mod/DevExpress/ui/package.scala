@@ -71,39 +71,5 @@ package object ui {
   type dxTreeViewItemTemplate = typingsSlinky.devextreme.mod.DevExpress.ui.dxTreeViewItem
   type dxValidationGroupOptions = typingsSlinky.devextreme.mod.DevExpress.DOMComponentOptions[typingsSlinky.devextreme.mod.DevExpress.ui.dxValidationGroup]
   type dxValidationSummary = typingsSlinky.devextreme.mod.DevExpress.ui.CollectionWidget
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.devextreme.devextremeStrings.billions
-    - typingsSlinky.devextreme.devextremeStrings.currency
-    - typingsSlinky.devextreme.devextremeStrings.day
-    - typingsSlinky.devextreme.devextremeStrings.decimal_
-    - typingsSlinky.devextreme.devextremeStrings.exponential
-    - typingsSlinky.devextreme.devextremeStrings.fixedPoint
-    - typingsSlinky.devextreme.devextremeStrings.largeNumber
-    - typingsSlinky.devextreme.devextremeStrings.longDate
-    - typingsSlinky.devextreme.devextremeStrings.longTime
-    - typingsSlinky.devextreme.devextremeStrings.millions
-    - typingsSlinky.devextreme.devextremeStrings.millisecond
-    - typingsSlinky.devextreme.devextremeStrings.month
-    - typingsSlinky.devextreme.devextremeStrings.monthAndDay
-    - typingsSlinky.devextreme.devextremeStrings.monthAndYear
-    - typingsSlinky.devextreme.devextremeStrings.percent
-    - typingsSlinky.devextreme.devextremeStrings.quarter
-    - typingsSlinky.devextreme.devextremeStrings.quarterAndYear
-    - typingsSlinky.devextreme.devextremeStrings.shortDate
-    - typingsSlinky.devextreme.devextremeStrings.shortTime
-    - typingsSlinky.devextreme.devextremeStrings.thousands
-    - typingsSlinky.devextreme.devextremeStrings.trillions
-    - typingsSlinky.devextreme.devextremeStrings.year
-    - typingsSlinky.devextreme.devextremeStrings.dayOfWeek
-    - typingsSlinky.devextreme.devextremeStrings.hour
-    - typingsSlinky.devextreme.devextremeStrings.longDateLongTime
-    - typingsSlinky.devextreme.devextremeStrings.minute
-    - typingsSlinky.devextreme.devextremeStrings.second
-    - typingsSlinky.devextreme.devextremeStrings.shortDateShortTime
-    - java.lang.String
-    - js.Function1[/ * value * / scala.Double | typingsSlinky.std.Date, java.lang.String]
-    - typingsSlinky.devextreme.AnonCurrency
-  */
-  type format = typingsSlinky.devextreme.mod.DevExpress.ui._format | (js.Function1[/* value */ scala.Double | js.Date, java.lang.String]) | java.lang.String
   type template = typingsSlinky.devextreme.mod.DevExpress.core.template
 }

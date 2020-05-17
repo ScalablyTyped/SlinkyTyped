@@ -91,7 +91,7 @@ object indexConsoleMod extends js.Object {
     /* _fromCache */ Boolean, 
     /* _hasPendingWrites */ Boolean, 
     js.UndefOr[
-      FirestoreDataConverter[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any]
+      /* _converter */ FirestoreDataConverter[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any]
     ], 
     typingsSlinky.firebaseFirestore.apiDatabaseMod.DocumentSnapshot[js.Object]
   ] = js.native
@@ -100,7 +100,7 @@ object indexConsoleMod extends js.Object {
     /* _originalQuery */ Query, 
     /* _snapshot */ ViewSnapshot, 
     js.UndefOr[
-      FirestoreDataConverter[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any]
+      /* _converter */ FirestoreDataConverter[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any]
     ], 
     typingsSlinky.firebaseFirestore.apiDatabaseMod.QuerySnapshot[js.Object]
   ] = js.native

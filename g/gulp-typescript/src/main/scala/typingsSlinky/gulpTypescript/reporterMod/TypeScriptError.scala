@@ -1,6 +1,6 @@
 package typingsSlinky.gulpTypescript.reporterMod
 
-import typingsSlinky.gulpTypescript.AnonCharacter
+import typingsSlinky.gulpTypescript.anon.Character
 import typingsSlinky.gulpTypescript.typesMod.VinylFile
 import typingsSlinky.std.Error
 import typingsSlinky.typescript.mod.Diagnostic
@@ -12,11 +12,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TypeScriptError extends Error {
   var diagnostic: Diagnostic = js.native
-  var endPosition: js.UndefOr[AnonCharacter] = js.native
+  var endPosition: js.UndefOr[Character] = js.native
   var file: js.UndefOr[VinylFile] = js.native
   var fullFilename: js.UndefOr[String] = js.native
   var relativeFilename: js.UndefOr[String] = js.native
-  var startPosition: js.UndefOr[AnonCharacter] = js.native
+  var startPosition: js.UndefOr[Character] = js.native
   var tsFile: js.UndefOr[SourceFile] = js.native
 }
 
@@ -39,7 +39,7 @@ object TypeScriptError {
         ret
     }
     @scala.inline
-    def withEndPosition(value: AnonCharacter): Self = {
+    def withEndPosition(value: Character): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("endPosition")(value.asInstanceOf[js.Any])
         ret
@@ -87,7 +87,7 @@ object TypeScriptError {
         ret
     }
     @scala.inline
-    def withStartPosition(value: AnonCharacter): Self = {
+    def withStartPosition(value: Character): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("startPosition")(value.asInstanceOf[js.Any])
         ret

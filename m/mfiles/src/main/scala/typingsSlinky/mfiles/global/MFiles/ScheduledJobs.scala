@@ -1,0 +1,16 @@
+package typingsSlinky.mfiles.global.MFiles
+
+import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.IScheduledJobs
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("MFiles.ScheduledJobs")
+@js.native
+class ScheduledJobs () extends IScheduledJobs
+
+@JSGlobal("MFiles.ScheduledJobs")
+@js.native
+object ScheduledJobs extends Instantiable0[IScheduledJobs]
+

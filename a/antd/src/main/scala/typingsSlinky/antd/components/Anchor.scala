@@ -4,10 +4,10 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.AnonHref
 import typingsSlinky.antd.anchorAnchorMod.AnchorContainer
 import typingsSlinky.antd.anchorAnchorMod.AnchorProps
 import typingsSlinky.antd.anchorMod.default
+import typingsSlinky.antd.anon.Href
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -37,7 +37,7 @@ object Anchor {
     @scala.inline
     def onChange(value: /* currentActiveLink */ String => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onClick(value: (/* e */ SyntheticMouseEvent[HTMLElement], /* link */ AnonHref) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
+    def onClick(value: (/* e */ SyntheticMouseEvent[HTMLElement], /* link */ Href) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline

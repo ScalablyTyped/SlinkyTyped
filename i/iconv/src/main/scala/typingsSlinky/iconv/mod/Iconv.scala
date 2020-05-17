@@ -1,6 +1,6 @@
 package typingsSlinky.iconv.mod
 
-import typingsSlinky.iconv.AnonEnd
+import typingsSlinky.iconv.anon.End
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.WritableStream
 import scala.scalajs.js
@@ -20,7 +20,7 @@ trait Iconv extends WritableStream {
   def end(str: String, encoding: String, cb: js.Function): Unit = js.native
   // copy from stream.Stream
   def pipe[T /* <: WritableStream */](destination: T): T = js.native
-  def pipe[T /* <: WritableStream */](destination: T, options: AnonEnd): T = js.native
+  def pipe[T /* <: WritableStream */](destination: T, options: End): T = js.native
   def write(buffer: String, cb: js.Function): Boolean = js.native
   def write(buffer: Buffer, cb: js.Function): Boolean = js.native
   // copy from NodeJS.WritableStream for compatibility

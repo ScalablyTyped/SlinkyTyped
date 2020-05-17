@@ -1,6 +1,6 @@
 package typingsSlinky.obsoleteWeb.mod
 
-import typingsSlinky.obsoleteWeb.ReadonlyRequiredOptions
+import typingsSlinky.obsoleteWeb.anon.ReadonlyRequiredOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

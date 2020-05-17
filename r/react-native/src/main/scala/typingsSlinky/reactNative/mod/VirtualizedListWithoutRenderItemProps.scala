@@ -2,10 +2,10 @@ package typingsSlinky.reactNative.mod
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactNative.AnonAverageItemLength
-import typingsSlinky.reactNative.AnonChanged
-import typingsSlinky.reactNative.AnonDistanceFromEnd
-import typingsSlinky.reactNative.AnonIndex
+import typingsSlinky.reactNative.anon.AverageItemLength
+import typingsSlinky.reactNative.anon.Changed
+import typingsSlinky.reactNative.anon.DistanceFromEnd
+import typingsSlinky.reactNative.anon.Index
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -57,7 +57,7 @@ trait VirtualizedListWithoutRenderItemProps[ItemT] extends ScrollViewProps {
     * Determines how many items are in the data blob.
     */
   var getItemCount: js.UndefOr[js.Function1[/* data */ js.Any, Double]] = js.native
-  var getItemLayout: js.UndefOr[js.Function2[/* data */ js.Any, /* index */ Double, AnonIndex]] = js.native
+  var getItemLayout: js.UndefOr[js.Function2[/* data */ js.Any, /* index */ Double, Index]] = js.native
   /**
     * How many items to render in the initial batch. This should be enough to fill the screen but not
     * much more. Note these items will never be unmounted as part of the windowed rendering in order
@@ -83,7 +83,7 @@ trait VirtualizedListWithoutRenderItemProps[ItemT] extends ScrollViewProps {
     * interfere with responding to button taps or other interactions.
     */
   var maxToRenderPerBatch: js.UndefOr[Double] = js.native
-  var onEndReached: js.UndefOr[(js.Function1[/* info */ AnonDistanceFromEnd, Unit]) | Null] = js.native
+  var onEndReached: js.UndefOr[(js.Function1[/* info */ DistanceFromEnd, Unit]) | Null] = js.native
   var onEndReachedThreshold: js.UndefOr[Double | Null] = js.native
   /**
     * If provided, a standard RefreshControl will be added for "Pull to Refresh" functionality. Make
@@ -95,12 +95,12 @@ trait VirtualizedListWithoutRenderItemProps[ItemT] extends ScrollViewProps {
     * Recommended action is to either compute your own offset and `scrollTo` it, or scroll as far
     * as possible and then try again after more items have been rendered.
     */
-  var onScrollToIndexFailed: js.UndefOr[js.Function1[/* info */ AnonAverageItemLength, Unit]] = js.native
+  var onScrollToIndexFailed: js.UndefOr[js.Function1[/* info */ AverageItemLength, Unit]] = js.native
   /**
     * Called when the viewability of rows changes, as defined by the
     * `viewabilityConfig` prop.
     */
-  var onViewableItemsChanged: js.UndefOr[(js.Function1[/* info */ AnonChanged, Unit]) | Null] = js.native
+  var onViewableItemsChanged: js.UndefOr[(js.Function1[/* info */ Changed, Unit]) | Null] = js.native
   /**
     * Set this when offset is needed for the loading indicator to show correctly.
     * @platform android
@@ -324,7 +324,7 @@ object VirtualizedListWithoutRenderItemProps {
         ret
     }
     @scala.inline
-    def withGetItemLayout(value: (/* data */ js.Any, /* index */ Double) => AnonIndex): Self[ItemT] = {
+    def withGetItemLayout(value: (/* data */ js.Any, /* index */ Double) => Index): Self[ItemT] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getItemLayout")(js.Any.fromFunction2(value))
         ret
@@ -420,7 +420,7 @@ object VirtualizedListWithoutRenderItemProps {
         ret
     }
     @scala.inline
-    def withOnEndReached(value: /* info */ AnonDistanceFromEnd => Unit): Self[ItemT] = {
+    def withOnEndReached(value: /* info */ DistanceFromEnd => Unit): Self[ItemT] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEndReached")(js.Any.fromFunction1(value))
         ret
@@ -474,7 +474,7 @@ object VirtualizedListWithoutRenderItemProps {
         ret
     }
     @scala.inline
-    def withOnScrollToIndexFailed(value: /* info */ AnonAverageItemLength => Unit): Self[ItemT] = {
+    def withOnScrollToIndexFailed(value: /* info */ AverageItemLength => Unit): Self[ItemT] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onScrollToIndexFailed")(js.Any.fromFunction1(value))
         ret
@@ -486,7 +486,7 @@ object VirtualizedListWithoutRenderItemProps {
         ret
     }
     @scala.inline
-    def withOnViewableItemsChanged(value: /* info */ AnonChanged => Unit): Self[ItemT] = {
+    def withOnViewableItemsChanged(value: /* info */ Changed => Unit): Self[ItemT] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onViewableItemsChanged")(js.Any.fromFunction1(value))
         ret

@@ -1,12 +1,12 @@
 package typingsSlinky.jupyterlabNotebook.widgetMod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.jupyterlabCells.mod.Cell
 import typingsSlinky.jupyterlabCoreutils.interfacesMod.IChangedArgs
-import typingsSlinky.jupyterlabNotebook.AnonAnchor
+import typingsSlinky.jupyterlabNotebook.anon.Anchor
 import typingsSlinky.jupyterlabNotebook.widgetMod.Notebook.IOptions
 import typingsSlinky.phosphorSignaling.mod.ISignal
 import typingsSlinky.phosphorWidgets.mod.Widget.ResizeMessage
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -173,7 +173,7 @@ class Notebook protected () extends StaticNotebook {
     * Throws an error if the currently selected cells do not form a contiguous
     * selection.
     */
-  def getContiguousSelection(): AnonAnchor = js.native
+  def getContiguousSelection(): Anchor = js.native
   /**
     * Handle the DOM events for the widget.
     *
@@ -184,7 +184,7 @@ class Notebook protected () extends StaticNotebook {
     * called in response to events on the notebook panel's node. It should
     * not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
   /**
     * Whether a cell is selected.
     */

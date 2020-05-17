@@ -6,7 +6,9 @@ import scala.scalajs.js.annotation._
 
 @JSImport("oja", "Action")
 @js.native
-class Action () extends Flow {
+class Action ()
+  extends Flow
+     with AddableToAction {
   def activate(): this.type = js.native
   def add(child: AddableToAction*): this.type = js.native
   def execute(): Unit = js.native

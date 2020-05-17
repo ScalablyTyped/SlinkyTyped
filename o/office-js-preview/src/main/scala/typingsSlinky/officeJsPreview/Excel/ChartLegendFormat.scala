@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartLegendFormatData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartLegendFormatLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartLegendFormatUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.ChartLegendFormat")
 @js.native
-class ChartLegendFormat () extends ClientObject {
+trait ChartLegendFormat extends ClientObject {
   /**
     *
     * Represents the border format, which includes color, linestyle, and weight. Read-only.
@@ -50,7 +49,7 @@ class ChartLegendFormat () extends ClientObject {
     */
   def load(): ChartLegendFormat = js.native
   def load(options: ChartLegendFormatLoadOptions): ChartLegendFormat = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ChartLegendFormat = js.native
+  def load(propertyNamesAndPaths: Expand): ChartLegendFormat = js.native
   def load(propertyNames: String): ChartLegendFormat = js.native
   def load(propertyNames: js.Array[String]): ChartLegendFormat = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

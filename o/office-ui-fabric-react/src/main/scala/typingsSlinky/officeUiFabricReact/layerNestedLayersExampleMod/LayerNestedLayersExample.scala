@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.layerNestedLayersExampleMod
 
-import typingsSlinky.officeUiFabricReact.AnonHideDialog
+import typingsSlinky.officeUiFabricReact.anon.HideDialog
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,6 +15,6 @@ class LayerNestedLayersExample ()
   var _onShowPanel: js.Any = js.native
   var _showDialog: js.Any = js.native
   @JSName("state")
-  var state_LayerNestedLayersExample: AnonHideDialog = js.native
+  var state_LayerNestedLayersExample: HideDialog = js.native
 }
 

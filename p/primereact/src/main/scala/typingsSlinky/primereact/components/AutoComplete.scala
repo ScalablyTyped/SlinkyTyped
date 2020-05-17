@@ -1,13 +1,13 @@
 package typingsSlinky.primereact.components
 
+import org.scalajs.dom.raw.Event
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonOriginalEvent
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.OriginalEvent
+import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.autocompleteAutoCompleteMod.AutoCompleteProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +30,7 @@ object AutoComplete {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def completeMethod(value: /* e */ AnonOriginalEvent => Unit): this.type = set("completeMethod", js.Any.fromFunction1(value))
+    def completeMethod(value: /* e */ OriginalEvent => Unit): this.type = set("completeMethod", js.Any.fromFunction1(value))
     @scala.inline
     def delay(value: Double): this.type = set("delay", value.asInstanceOf[js.Any])
     @scala.inline
@@ -60,31 +60,31 @@ object AutoComplete {
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def onBlur(value: /* event */ Event_ => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    def onBlur(value: /* event */ Event => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: /* e */ AnonValue => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ Value => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onClear(value: /* event */ Event_ => Unit): this.type = set("onClear", js.Any.fromFunction1(value))
+    def onClear(value: /* event */ Event => Unit): this.type = set("onClear", js.Any.fromFunction1(value))
     @scala.inline
-    def onClick(value: /* event */ Event_ => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    def onClick(value: /* event */ Event => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onContextMenu(value: /* event */ Event_ => Unit): this.type = set("onContextMenu", js.Any.fromFunction1(value))
+    def onContextMenu(value: /* event */ Event => Unit): this.type = set("onContextMenu", js.Any.fromFunction1(value))
     @scala.inline
-    def onDblClick(value: /* event */ Event_ => Unit): this.type = set("onDblClick", js.Any.fromFunction1(value))
+    def onDblClick(value: /* event */ Event => Unit): this.type = set("onDblClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onDropdownClick(value: /* e */ AnonOriginalEvent => Unit): this.type = set("onDropdownClick", js.Any.fromFunction1(value))
+    def onDropdownClick(value: /* e */ OriginalEvent => Unit): this.type = set("onDropdownClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onFocus(value: /* event */ Event_ => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    def onFocus(value: /* event */ Event => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
-    def onKeyPress(value: /* event */ Event_ => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
+    def onKeyPress(value: /* event */ Event => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
     @scala.inline
-    def onKeyUp(value: /* event */ Event_ => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
+    def onKeyUp(value: /* event */ Event => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
     @scala.inline
-    def onMouseDown(value: /* event */ Event_ => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
+    def onMouseDown(value: /* event */ Event => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
     @scala.inline
-    def onSelect(value: /* e */ AnonValue => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    def onSelect(value: /* e */ Value => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline
-    def onUnselect(value: /* e */ AnonValue => Unit): this.type = set("onUnselect", js.Any.fromFunction1(value))
+    def onUnselect(value: /* e */ Value => Unit): this.type = set("onUnselect", js.Any.fromFunction1(value))
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline

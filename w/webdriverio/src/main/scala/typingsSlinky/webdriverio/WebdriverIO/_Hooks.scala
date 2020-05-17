@@ -1,6 +1,6 @@
 package typingsSlinky.webdriverio.WebdriverIO
 
-import typingsSlinky.webdriverio.AnonDuration
+import typingsSlinky.webdriverio.anon.Duration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,16 +21,14 @@ trait _Hooks extends js.Object {
     js.Function5[
       /* test */ js.Any, 
       /* context */ js.Any, 
-      /* result */ AnonDuration, 
+      /* result */ Duration, 
       /* stepData */ js.UndefOr[js.Any], 
       /* world */ js.UndefOr[js.Any], 
       Unit
     ]
   ] = js.native
   var afterSuite: js.UndefOr[js.Function1[/* suite */ Suite, Unit]] = js.native
-  var afterTest: js.UndefOr[
-    js.Function3[/* test */ Test, /* context */ js.Any, /* result */ AnonDuration, Unit]
-  ] = js.native
+  var afterTest: js.UndefOr[js.Function3[/* test */ Test, /* context */ js.Any, /* result */ Duration, Unit]] = js.native
   var beforeCommand: js.UndefOr[js.Function2[/* commandName */ String, /* args */ js.Array[_], Unit]] = js.native
   var beforeHook: js.UndefOr[
     js.Function4[
@@ -74,7 +72,7 @@ object _Hooks {
     }
     @scala.inline
     def withAfterHook(
-      value: (/* test */ js.Any, /* context */ js.Any, /* result */ AnonDuration, /* stepData */ js.UndefOr[js.Any], /* world */ js.UndefOr[js.Any]) => Unit
+      value: (/* test */ js.Any, /* context */ js.Any, /* result */ Duration, /* stepData */ js.UndefOr[js.Any], /* world */ js.UndefOr[js.Any]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterHook")(js.Any.fromFunction5(value))
@@ -99,7 +97,7 @@ object _Hooks {
         ret
     }
     @scala.inline
-    def withAfterTest(value: (/* test */ Test, /* context */ js.Any, /* result */ AnonDuration) => Unit): Self = {
+    def withAfterTest(value: (/* test */ Test, /* context */ js.Any, /* result */ Duration) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterTest")(js.Any.fromFunction3(value))
         ret

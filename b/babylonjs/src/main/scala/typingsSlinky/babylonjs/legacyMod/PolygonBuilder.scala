@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.legacyMod
 
-import typingsSlinky.babylonjs.AnonHoles
+import typingsSlinky.babylonjs.anon.Holes
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,11 +29,11 @@ object PolygonBuilder extends js.Object {
     * @param earcutInjection can be used to inject your own earcut reference
     * @returns the polygon mesh
     */
-  def CreatePolygon(name: String, options: AnonHoles): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreatePolygon(name: String, options: AnonHoles, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePolygon(name: String, options: Holes): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePolygon(name: String, options: Holes, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreatePolygon(
     name: String,
-    options: AnonHoles,
+    options: Holes,
     scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene],
     earcutInjection: js.Any
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
@@ -47,11 +47,11 @@ object PolygonBuilder extends js.Object {
     * @param earcutInjection can be used to inject your own earcut reference
     * @returns the polygon mesh
     */
-  def ExtrudePolygon(name: String, options: AnonHoles): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def ExtrudePolygon(name: String, options: AnonHoles, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudePolygon(name: String, options: Holes): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudePolygon(name: String, options: Holes, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def ExtrudePolygon(
     name: String,
-    options: AnonHoles,
+    options: Holes,
     scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene],
     earcutInjection: js.Any
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native

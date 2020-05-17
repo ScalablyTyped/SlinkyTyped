@@ -5,8 +5,8 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.rcMenu.AnonItem
-import typingsSlinky.rcMenu.AnonMode
+import typingsSlinky.rcMenu.anon.Item
+import typingsSlinky.rcMenu.anon.Mode
 import typingsSlinky.rcMenu.interfaceMod.MenuInfo
 import typingsSlinky.rcMenu.interfaceMod.MenuMode
 import typingsSlinky.rcMenu.interfaceMod.OpenEventHandler
@@ -51,7 +51,7 @@ class SubMenu protected ()
   var onTitleMouseEnter: MouseEventHandler[HTMLElement] = js.native
   var onTitleMouseLeave: MouseEventHandler[HTMLElement] = js.native
   var subMenuTitle: HTMLElement = js.native
-  def addKeyPath(info: MenuInfo): AnonItem = js.native
+  def addKeyPath(info: MenuInfo): Item = js.native
   def adjustWidth(): Unit = js.native
   @JSName("componentDidMount")
   def componentDidMount_MSubMenu(): Unit = js.native
@@ -84,6 +84,6 @@ class SubMenu protected ()
 @JSImport("rc-menu/lib/SubMenu", "SubMenu")
 @js.native
 object SubMenu extends js.Object {
-  var defaultProps: AnonMode = js.native
+  var defaultProps: Mode = js.native
 }
 

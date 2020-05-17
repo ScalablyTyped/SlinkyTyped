@@ -1,6 +1,6 @@
 package typingsSlinky.uiGrid.mod
 
-import typingsSlinky.uiGrid.AnonAVG_
+import typingsSlinky.uiGrid.anon.AVG_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,13 +9,13 @@ import scala.scalajs.js.annotation._
 trait ISharedTreeConstants extends js.Object {
   var COLLAPSED: String = js.native
   var EXPANDED: String = js.native
-  var aggregation: AnonAVG_ = js.native
+  var aggregation: AVG_ = js.native
   var rowHeaderColName: String = js.native
 }
 
 object ISharedTreeConstants {
   @scala.inline
-  def apply(COLLAPSED: String, EXPANDED: String, aggregation: AnonAVG_, rowHeaderColName: String): ISharedTreeConstants = {
+  def apply(COLLAPSED: String, EXPANDED: String, aggregation: AVG_, rowHeaderColName: String): ISharedTreeConstants = {
     val __obj = js.Dynamic.literal(COLLAPSED = COLLAPSED.asInstanceOf[js.Any], EXPANDED = EXPANDED.asInstanceOf[js.Any], aggregation = aggregation.asInstanceOf[js.Any], rowHeaderColName = rowHeaderColName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISharedTreeConstants]
   }
@@ -38,7 +38,7 @@ object ISharedTreeConstants {
         ret
     }
     @scala.inline
-    def withAggregation(value: AnonAVG_): Self = {
+    def withAggregation(value: AVG_): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("aggregation")(value.asInstanceOf[js.Any])
         ret

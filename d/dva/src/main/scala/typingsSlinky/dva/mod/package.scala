@@ -10,7 +10,7 @@ package object mod {
     /* effects */ typingsSlinky.dva.mod.EffectsCommandMap, 
     scala.Unit
   ]
-  type EffectWithType = js.Tuple2[typingsSlinky.dva.mod.Effect, typingsSlinky.dva.AnonType]
+  type EffectWithType = js.Tuple2[typingsSlinky.dva.mod.Effect, typingsSlinky.dva.anon.Type]
   type EffectsMapObject = org.scalablytyped.runtime.StringDictionary[typingsSlinky.dva.mod.Effect | typingsSlinky.dva.mod.EffectWithType]
   type ReducerEnhancer = js.Function1[
     /* reducer */ typingsSlinky.redux.mod.Reducer[js.Any, typingsSlinky.redux.mod.AnyAction], 

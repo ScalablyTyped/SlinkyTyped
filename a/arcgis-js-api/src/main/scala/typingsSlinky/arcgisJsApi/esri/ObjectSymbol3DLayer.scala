@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`object`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.bottom
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.center
@@ -108,8 +107,4 @@ trait ObjectSymbol3DLayer
     */
   var width: Double = js.native
 }
-
-@JSGlobal("__esri.ObjectSymbol3DLayer")
-@js.native
-object ObjectSymbol3DLayer extends TopLevel[ObjectSymbol3DLayerConstructor]
 

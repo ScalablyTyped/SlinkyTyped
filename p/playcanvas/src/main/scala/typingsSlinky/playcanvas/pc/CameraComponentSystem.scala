@@ -14,10 +14,8 @@ import scala.scalajs.js.annotation._
   * @param {pc.Application} app - The Application.
   * @property {pc.CameraComponent[]} cameras Holds all the active camera components.
   */
-@JSGlobal("pc.CameraComponentSystem")
 @js.native
-class CameraComponentSystem protected () extends ComponentSystem {
-  def this(app: Application) = this()
+trait CameraComponentSystem extends ComponentSystem {
   /**
     * Holds all the active camera components.
     */

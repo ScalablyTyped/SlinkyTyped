@@ -2,7 +2,7 @@ package typingsSlinky.officeUiFabricReact.teachingBubbleBaseMod
 
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactRef
-import typingsSlinky.officeUiFabricReact.AnonCalloutProps
+import typingsSlinky.officeUiFabricReact.anon.CalloutProps
 import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubbleProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -23,6 +23,6 @@ class TeachingBubbleBase protected ()
 @JSImport("office-ui-fabric-react/lib/components/TeachingBubble/TeachingBubble.base", "TeachingBubbleBase")
 @js.native
 object TeachingBubbleBase extends js.Object {
-  var defaultProps: AnonCalloutProps = js.native
+  var defaultProps: CalloutProps = js.native
 }
 

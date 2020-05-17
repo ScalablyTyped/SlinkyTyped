@@ -25,5 +25,4 @@ package object mod {
     /* next */ typingsSlinky.restify.mod.Next, 
     js.Any
   ]
-  type RequestHandlerType = typingsSlinky.restify.mod.RequestHandler | js.Array[typingsSlinky.restify.mod.RequestHandler]
 }

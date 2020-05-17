@@ -1,6 +1,6 @@
 package typingsSlinky.reactPhoneNumberInput.mod
 
-import typingsSlinky.reactPhoneNumberInput.AnonIcon
+import typingsSlinky.reactPhoneNumberInput.anon.Icon
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait CountrySelectComponentProps extends js.Object {
   /**
     * The list of all selectable countries (including "International")
     */
-  var options: js.UndefOr[js.Array[AnonIcon]] = js.native
+  var options: js.UndefOr[js.Array[Icon]] = js.native
   var tabIndex: js.UndefOr[Double | String] = js.native
   /**
     * The currently selected country code
@@ -109,7 +109,7 @@ object CountrySelectComponentProps {
         ret
     }
     @scala.inline
-    def withOptions(value: js.Array[AnonIcon]): Self = {
+    def withOptions(value: js.Array[Icon]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

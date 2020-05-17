@@ -1,15 +1,15 @@
 package typingsSlinky.gapiClientPhotoslibrary.gapi.client.photoslibrary
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientPhotoslibrary.AnonAccesstoken
-import typingsSlinky.gapiClientPhotoslibrary.AnonAlbumId
-import typingsSlinky.gapiClientPhotoslibrary.AnonAlt
-import typingsSlinky.gapiClientPhotoslibrary.AnonCallback
-import typingsSlinky.gapiClientPhotoslibrary.AnonExcludeNonAppCreatedData
-import typingsSlinky.gapiClientPhotoslibrary.AnonFields
-import typingsSlinky.gapiClientPhotoslibrary.AnonKey
-import typingsSlinky.gapiClientPhotoslibrary.AnonOauthtoken
-import typingsSlinky.gapiClientPhotoslibrary.AnonPrettyPrint
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientPhotoslibrary.anon.Accesstoken
+import typingsSlinky.gapiClientPhotoslibrary.anon.AlbumId
+import typingsSlinky.gapiClientPhotoslibrary.anon.Alt
+import typingsSlinky.gapiClientPhotoslibrary.anon.Callback
+import typingsSlinky.gapiClientPhotoslibrary.anon.ExcludeNonAppCreatedData
+import typingsSlinky.gapiClientPhotoslibrary.anon.Fields
+import typingsSlinky.gapiClientPhotoslibrary.anon.Key
+import typingsSlinky.gapiClientPhotoslibrary.anon.Oauthtoken
+import typingsSlinky.gapiClientPhotoslibrary.anon.PrettyPrint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,9 +17,9 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AlbumsResource extends js.Object {
   /** Adds an enrichment at a specified position in a defined album. */
-  def addEnrichment(request: AnonAccesstoken): Request_[AddEnrichmentToAlbumResponse] = js.native
-  def addEnrichment(request: AnonAlbumId, body: AddEnrichmentToAlbumRequest): Request_[AddEnrichmentToAlbumResponse] = js.native
-  def batchAddMediaItems(request: AnonAlbumId, body: BatchAddMediaItemsToAlbumRequest): Request_[js.Object] = js.native
+  def addEnrichment(request: Accesstoken): Request[AddEnrichmentToAlbumResponse] = js.native
+  def addEnrichment(request: AlbumId, body: AddEnrichmentToAlbumRequest): Request[AddEnrichmentToAlbumResponse] = js.native
+  def batchAddMediaItems(request: AlbumId, body: BatchAddMediaItemsToAlbumRequest): Request[js.Object] = js.native
   /**
     * Adds one or more media items in a user's Google Photos library to
     * an album. The media items and albums must have been created by the
@@ -37,8 +37,8 @@ trait AlbumsResource extends js.Object {
     * Partial success is not supported. The entire request will fail if an
     * invalid media item or album is specified.
     */
-  def batchAddMediaItems(request: AnonAlt): Request_[js.Object] = js.native
-  def batchRemoveMediaItems(request: AnonAlbumId, body: BatchRemoveMediaItemsFromAlbumRequest): Request_[js.Object] = js.native
+  def batchAddMediaItems(request: Alt): Request[js.Object] = js.native
+  def batchRemoveMediaItems(request: AlbumId, body: BatchRemoveMediaItemsFromAlbumRequest): Request[js.Object] = js.native
   /**
     * Removes one or more media items from a specified album. The media items and
     * the album must have been created by the developer via the API.
@@ -51,29 +51,29 @@ trait AlbumsResource extends js.Object {
     * action will be performed on the album if an invalid media item or album is
     * specified.
     */
-  def batchRemoveMediaItems(request: AnonCallback): Request_[js.Object] = js.native
+  def batchRemoveMediaItems(request: Callback): Request[js.Object] = js.native
   /** Creates an album in a user's Google Photos library. */
-  def create(request: AnonFields): Request_[Album] = js.native
-  def create(request: AnonKey, body: CreateAlbumRequest): Request_[Album] = js.native
+  def create(request: Fields): Request[Album] = js.native
+  def create(request: Key, body: CreateAlbumRequest): Request[Album] = js.native
   /**
     * Returns the album based on the specified `albumId`.
     * The `albumId` must be the ID of an album owned by the user or a shared
     * album that the user has joined.
     */
-  def get(request: AnonAlbumId): Request_[Album] = js.native
+  def get(request: AlbumId): Request[Album] = js.native
   /**
     * Lists all albums shown to a user in the Albums tab of the Google
     * Photos app.
     */
-  def list(request: AnonExcludeNonAppCreatedData): Request_[ListAlbumsResponse] = js.native
-  def share(request: AnonAlbumId, body: ShareAlbumRequest): Request_[ShareAlbumResponse] = js.native
+  def list(request: ExcludeNonAppCreatedData): Request[ListAlbumsResponse] = js.native
+  def share(request: AlbumId, body: ShareAlbumRequest): Request[ShareAlbumResponse] = js.native
   /**
     * Marks an album as shared and accessible to other users. This action can
     * only be performed on albums which were created by the developer via the
     * API.
     */
-  def share(request: AnonOauthtoken): Request_[ShareAlbumResponse] = js.native
-  def unshare(request: AnonAlbumId, body: UnshareAlbumRequest): Request_[js.Object] = js.native
+  def share(request: Oauthtoken): Request[ShareAlbumResponse] = js.native
+  def unshare(request: AlbumId, body: UnshareAlbumRequest): Request[js.Object] = js.native
   /**
     * Marks a previously shared album as private. This means that the album is
     * no longer shared and all the non-owners will lose access to the album. All
@@ -82,6 +82,6 @@ trait AlbumsResource extends js.Object {
     * their library. This action can only be performed on albums which were
     * created by the developer via the API.
     */
-  def unshare(request: AnonPrettyPrint): Request_[js.Object] = js.native
+  def unshare(request: PrettyPrint): Request[js.Object] = js.native
 }
 

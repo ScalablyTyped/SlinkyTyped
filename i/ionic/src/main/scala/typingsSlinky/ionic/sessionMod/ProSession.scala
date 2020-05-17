@@ -1,6 +1,6 @@
 package typingsSlinky.ionic.sessionMod
 
-import typingsSlinky.ionic.AnonIdNumber
+import typingsSlinky.ionic.anon.IdNumber
 import typingsSlinky.ionic.definitionsMod.ISession
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ class ProSession ()
   extends BaseSession
      with ISession {
   /* InferMemberOverrides */
-  override def getUser(): AnonIdNumber = js.native
+  override def getUser(): IdNumber = js.native
   /* InferMemberOverrides */
   override def getUserToken(): String = js.native
   /* InferMemberOverrides */

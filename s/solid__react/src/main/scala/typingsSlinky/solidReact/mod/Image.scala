@@ -1,7 +1,7 @@
 package typingsSlinky.solidReact.mod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.solidReact.srcstringdefaultSrcstring
+import typingsSlinky.solidReact.anon.srcstringdefaultSrcstring
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -28,9 +28,8 @@ import scala.scalajs.js.annotation._
 			 * content.
 			 * @deprecated Use [Titanium.UI.NavigationWindow](Titanium.UI.NavigationWindow) instead.
 			 */
-@JSGlobal("Titanium.UI.iOS.NavigationWindow")
 @js.native
-class NavigationWindow () extends Window {
+trait NavigationWindow extends Window {
   /**
   				 * Window to add to this navigation window.
   				 */

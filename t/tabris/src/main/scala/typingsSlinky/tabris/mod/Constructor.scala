@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation._
 // General helper types
 @js.native
 trait Constructor[T]
-  extends Instantiable1[/* args (repeated) */ js.Any, T]
+  extends Selector[js.Any, T]
+     with Instantiable1[/* args (repeated) */ js.Any, T]
 

@@ -1,6 +1,7 @@
 package typingsSlinky.sipJs
 
 import typingsSlinky.sipJs.ackMod.IncomingAckRequest
+import typingsSlinky.sipJs.anon.SessionDescriptionHandlerModifiers
 import typingsSlinky.sipJs.apiSessionDescriptionHandlerMod.SessionDescriptionHandler
 import typingsSlinky.sipJs.apiSessionDescriptionHandlerMod.SessionDescriptionHandlerModifier
 import typingsSlinky.sipJs.apiSessionDescriptionHandlerMod.SessionDescriptionHandlerOptions
@@ -184,19 +185,19 @@ object sessionMod extends js.Object {
       * provided, generates a local offer.
       * @internal
       */
-    /* protected */ def generateResponseOfferAnswer(request: IncomingInviteRequest, options: AnonSessionDescriptionHandlerModifiers): js.Promise[js.UndefOr[Body]] = js.native
+    /* protected */ def generateResponseOfferAnswer(request: IncomingInviteRequest, options: SessionDescriptionHandlerModifiers): js.Promise[js.UndefOr[Body]] = js.native
     /**
       * Generate an offer or answer for a response to an INVITE request
       * when a dialog (early or otherwise) has already been established.
       * This method may NOT be called if a dialog has yet to be established.
       * @internal
       */
-    /* protected */ def generateResponseOfferAnswerInDialog(options: AnonSessionDescriptionHandlerModifiers): js.Promise[js.UndefOr[Body]] = js.native
+    /* protected */ def generateResponseOfferAnswerInDialog(options: SessionDescriptionHandlerModifiers): js.Promise[js.UndefOr[Body]] = js.native
     /**
       * Get local offer.
       * @internal
       */
-    /* protected */ def getOffer(options: AnonSessionDescriptionHandlerModifiers): js.Promise[Body] = js.native
+    /* protected */ def getOffer(options: SessionDescriptionHandlerModifiers): js.Promise[Body] = js.native
     /**
       * Renegotiate the session. Sends a re-INVITE.
       * @param options - Options bucket.
@@ -262,12 +263,12 @@ object sessionMod extends js.Object {
       * Set remote answer.
       * @internal
       */
-    /* protected */ def setAnswer(answer: Body, options: AnonSessionDescriptionHandlerModifiers): js.Promise[Unit] = js.native
+    /* protected */ def setAnswer(answer: Body, options: SessionDescriptionHandlerModifiers): js.Promise[Unit] = js.native
     /**
       * Set remote offer and get local answer.
       * @internal
       */
-    /* protected */ def setOfferAndGetAnswer(offer: Body, options: AnonSessionDescriptionHandlerModifiers): js.Promise[Body] = js.native
+    /* protected */ def setOfferAndGetAnswer(offer: Body, options: SessionDescriptionHandlerModifiers): js.Promise[Body] = js.native
     /**
       * SDH for confirmed dialog.
       * @internal

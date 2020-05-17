@@ -1,7 +1,7 @@
 package typingsSlinky.mongodb.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.mongodb.AnonColl
+import typingsSlinky.mongodb.anon.Coll
 import typingsSlinky.mongodb.mongodbStrings.drop
 import typingsSlinky.mongodb.mongodbStrings.dropDatabase
 import scala.scalajs.js
@@ -20,7 +20,7 @@ object ChangeEventOther {
   def apply[TSchema](
     _id: ResumeToken,
     clusterTime: typingsSlinky.bson.mod.Timestamp,
-    ns: AnonColl,
+    ns: Coll,
     operationType: drop | dropDatabase
   ): ChangeEventOther[TSchema] = {
     val __obj = js.Dynamic.literal(_id = _id.asInstanceOf[js.Any], clusterTime = clusterTime.asInstanceOf[js.Any], ns = ns.asInstanceOf[js.Any], operationType = operationType.asInstanceOf[js.Any])

@@ -1,14 +1,12 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
-import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides a way to easily construct a set of key/value pairs representing form fields and their values, which can then be easily sent using the XMLHttpRequest.send() method. It uses the same format a form would use if the encoding type were set to "multipart/form-data". */
 @js.native
-trait FormData extends _BodyInit {
+trait FormData extends BodyInit {
   @JSName(js.Symbol.iterator)
   var iterator: js.Function0[IterableIterator[js.Tuple2[java.lang.String, FormDataEntryValue]]] = js.native
   def append(name: java.lang.String, value: java.lang.String): Unit = js.native
@@ -53,10 +51,4 @@ trait FormData extends _BodyInit {
     */
   def values(): IterableIterator[FormDataEntryValue] = js.native
 }
-
-@JSGlobal("FormData")
-@js.native
-object FormData
-  extends Instantiable0[org.scalajs.dom.raw.FormData]
-     with Instantiable1[/* form */ org.scalajs.dom.raw.HTMLFormElement, org.scalajs.dom.raw.FormData]
 

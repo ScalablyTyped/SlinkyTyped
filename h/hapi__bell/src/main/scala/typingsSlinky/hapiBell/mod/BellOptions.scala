@@ -12,19 +12,8 @@ trait BellOptions extends js.Object
 
 object BellOptions {
   @scala.inline
-  def CustomProviderOptions(
-    clientId: String,
-    clientSecret: String,
-    password: String,
-    provider: CustomProtocol1 | CustomProtocol2
-  ): BellOptions = {
-    val __obj = js.Dynamic.literal(clientId = clientId.asInstanceOf[js.Any], clientSecret = clientSecret.asInstanceOf[js.Any], password = password.asInstanceOf[js.Any], provider = provider.asInstanceOf[js.Any])
-    __obj.asInstanceOf[BellOptions]
-  }
+  implicit def apply(value: CustomProviderOptions): BellOptions = value.asInstanceOf[BellOptions]
   @scala.inline
-  def KnownProviderOptions(clientId: String, clientSecret: String, password: String, provider: Provider): BellOptions = {
-    val __obj = js.Dynamic.literal(clientId = clientId.asInstanceOf[js.Any], clientSecret = clientSecret.asInstanceOf[js.Any], password = password.asInstanceOf[js.Any], provider = provider.asInstanceOf[js.Any])
-    __obj.asInstanceOf[BellOptions]
-  }
+  implicit def apply(value: KnownProviderOptions): BellOptions = value.asInstanceOf[BellOptions]
 }
 

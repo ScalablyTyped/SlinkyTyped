@@ -1,21 +1,21 @@
 package typingsSlinky.soap.typesMod
 
-import typingsSlinky.soap.AnonSubcode
-import typingsSlinky.soap.AnonText
+import typingsSlinky.soap.anon.Subcode
+import typingsSlinky.soap.anon.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ISoapFault12 extends ISoapFault {
-  var Code: AnonSubcode = js.native
-  var Reason: AnonText = js.native
+  var Code: Subcode = js.native
+  var Reason: Text = js.native
   var statusCode: js.UndefOr[Double] = js.native
 }
 
 object ISoapFault12 {
   @scala.inline
-  def apply(Code: AnonSubcode, Reason: AnonText): ISoapFault12 = {
+  def apply(Code: Subcode, Reason: Text): ISoapFault12 = {
     val __obj = js.Dynamic.literal(Code = Code.asInstanceOf[js.Any], Reason = Reason.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISoapFault12]
   }
@@ -26,13 +26,13 @@ object ISoapFault12 {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCode(value: AnonSubcode): Self = {
+    def withCode(value: Subcode): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Code")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withReason(value: AnonText): Self = {
+    def withReason(value: Text): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Reason")(value.asInstanceOf[js.Any])
         ret

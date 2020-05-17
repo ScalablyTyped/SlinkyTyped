@@ -1,7 +1,7 @@
 package typingsSlinky.babylonjs.indexMod
 
 import org.scalajs.dom.raw.File
-import typingsSlinky.babylonjs.AnonAnimationGroups
+import typingsSlinky.babylonjs.anon.AnimationGroups
 import typingsSlinky.babylonjs.iparticlesystemMod.IParticleSystem
 import typingsSlinky.babylonjs.sceneLoaderMod.ISceneLoaderPlugin
 import typingsSlinky.babylonjs.sceneLoaderMod.ISceneLoaderPluginAsync
@@ -273,14 +273,14 @@ object SceneLoader extends js.Object {
     * @param pluginExtension the extension used to determine the plugin
     * @returns The loaded list of imported meshes, particle systems, skeletons, and animation groups
     */
-  def ImportMeshAsync(meshNames: js.Any, rootUrl: String): js.Promise[AnonAnimationGroups] = js.native
-  def ImportMeshAsync(meshNames: js.Any, rootUrl: String, sceneFilename: String): js.Promise[AnonAnimationGroups] = js.native
+  def ImportMeshAsync(meshNames: js.Any, rootUrl: String): js.Promise[AnimationGroups] = js.native
+  def ImportMeshAsync(meshNames: js.Any, rootUrl: String, sceneFilename: String): js.Promise[AnimationGroups] = js.native
   def ImportMeshAsync(
     meshNames: js.Any,
     rootUrl: String,
     sceneFilename: String,
     scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]
-  ): js.Promise[AnonAnimationGroups] = js.native
+  ): js.Promise[AnimationGroups] = js.native
   def ImportMeshAsync(
     meshNames: js.Any,
     rootUrl: String,
@@ -289,7 +289,7 @@ object SceneLoader extends js.Object {
     onProgress: Nullable[
       js.Function1[/* event */ typingsSlinky.babylonjs.sceneLoaderMod.SceneLoaderProgressEvent, Unit]
     ]
-  ): js.Promise[AnonAnimationGroups] = js.native
+  ): js.Promise[AnimationGroups] = js.native
   def ImportMeshAsync(
     meshNames: js.Any,
     rootUrl: String,
@@ -299,14 +299,14 @@ object SceneLoader extends js.Object {
       js.Function1[/* event */ typingsSlinky.babylonjs.sceneLoaderMod.SceneLoaderProgressEvent, Unit]
     ],
     pluginExtension: Nullable[String]
-  ): js.Promise[AnonAnimationGroups] = js.native
-  def ImportMeshAsync(meshNames: js.Any, rootUrl: String, sceneFilename: File): js.Promise[AnonAnimationGroups] = js.native
+  ): js.Promise[AnimationGroups] = js.native
+  def ImportMeshAsync(meshNames: js.Any, rootUrl: String, sceneFilename: File): js.Promise[AnimationGroups] = js.native
   def ImportMeshAsync(
     meshNames: js.Any,
     rootUrl: String,
     sceneFilename: File,
     scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]
-  ): js.Promise[AnonAnimationGroups] = js.native
+  ): js.Promise[AnimationGroups] = js.native
   def ImportMeshAsync(
     meshNames: js.Any,
     rootUrl: String,
@@ -315,7 +315,7 @@ object SceneLoader extends js.Object {
     onProgress: Nullable[
       js.Function1[/* event */ typingsSlinky.babylonjs.sceneLoaderMod.SceneLoaderProgressEvent, Unit]
     ]
-  ): js.Promise[AnonAnimationGroups] = js.native
+  ): js.Promise[AnimationGroups] = js.native
   def ImportMeshAsync(
     meshNames: js.Any,
     rootUrl: String,
@@ -325,7 +325,7 @@ object SceneLoader extends js.Object {
       js.Function1[/* event */ typingsSlinky.babylonjs.sceneLoaderMod.SceneLoaderProgressEvent, Unit]
     ],
     pluginExtension: Nullable[String]
-  ): js.Promise[AnonAnimationGroups] = js.native
+  ): js.Promise[AnimationGroups] = js.native
   /**
     * Gets a boolean indicating that the given extension can be loaded
     * @param extension defines the extension to load

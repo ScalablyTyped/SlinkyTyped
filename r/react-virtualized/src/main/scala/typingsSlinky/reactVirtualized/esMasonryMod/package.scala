@@ -10,8 +10,8 @@ package object esMasonryMod {
     slinky.core.TagMod[scala.Any]
   ]
   type OnCellsRenderedCallback = js.Function1[/* params */ typingsSlinky.reactVirtualized.mod.IndexRange, scala.Unit]
-  type OnScrollCallback = js.Function1[/* params */ typingsSlinky.reactVirtualized.AnonClientHeight, scala.Unit]
-  type Positioner = (js.Function1[/* index */ scala.Double, typingsSlinky.reactVirtualized.esMasonryMod.Position]) with typingsSlinky.reactVirtualized.AnonReset
+  type OnScrollCallback = js.Function1[/* params */ typingsSlinky.reactVirtualized.anon.ClientHeight, scala.Unit]
+  type Positioner = (js.Function1[/* index */ scala.Double, typingsSlinky.reactVirtualized.esMasonryMod.Position]) with typingsSlinky.reactVirtualized.anon.Reset
   type emptyObject = js.Object
   type identity = js.Function1[/* value */ js.Any, js.Any]
   type noop = js.Function0[scala.Unit]

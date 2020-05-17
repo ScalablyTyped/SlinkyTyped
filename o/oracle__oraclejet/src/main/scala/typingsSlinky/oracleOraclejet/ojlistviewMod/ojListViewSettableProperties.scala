@@ -1,11 +1,11 @@
 package typingsSlinky.oracleOraclejet.ojlistviewMod
 
-import typingsSlinky.oracleOraclejet.AnonAccessibleNavigateSkipItems
-import typingsSlinky.oracleOraclejet.AnonDragDrop
-import typingsSlinky.oracleOraclejet.AnonFetchSize
-import typingsSlinky.oracleOraclejet.AnonFocusable
-import typingsSlinky.oracleOraclejet.AnonKey
-import typingsSlinky.oracleOraclejet.AnonOffsetX
+import typingsSlinky.oracleOraclejet.anon.AccessibleNavigateSkipItems
+import typingsSlinky.oracleOraclejet.anon.DragDrop
+import typingsSlinky.oracleOraclejet.anon.FetchSize
+import typingsSlinky.oracleOraclejet.anon.Focusable
+import typingsSlinky.oracleOraclejet.anon.Key
+import typingsSlinky.oracleOraclejet.anon.OffsetX
 import typingsSlinky.oracleOraclejet.mod.baseComponentSettableProperties
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojkeysetMod.KeySet
@@ -26,20 +26,20 @@ trait ojListViewSettableProperties[K, D] extends baseComponentSettableProperties
   var as: String = js.native
   var currentItem: K = js.native
   var data: DataProvider[K, D] = js.native
-  var dnd: AnonDragDrop = js.native
+  var dnd: DragDrop = js.native
   var drillMode: collapsible | none = js.native
   var expanded: KeySet[K] = js.native
-  val firstSelectedItem: AnonKey[K, D] = js.native
+  val firstSelectedItem: Key[K, D] = js.native
   var groupHeaderPosition: static | sticky = js.native
-  var item: AnonFocusable[K, D] = js.native
+  var item: Focusable[K, D] = js.native
   var scrollPolicy: auto | loadMoreOnScroll = js.native
-  var scrollPolicyOptions: AnonFetchSize = js.native
-  var scrollPosition: AnonOffsetX[K] = js.native
+  var scrollPolicyOptions: FetchSize = js.native
+  var scrollPosition: OffsetX[K] = js.native
   var selection: js.Array[K] = js.native
   var selectionMode: none | single | multiple = js.native
   var selectionRequired: Boolean = js.native
   @JSName("translations")
-  var translations_ojListViewSettableProperties: AnonAccessibleNavigateSkipItems = js.native
+  var translations_ojListViewSettableProperties: AccessibleNavigateSkipItems = js.native
 }
 
 object ojListViewSettableProperties {
@@ -48,19 +48,19 @@ object ojListViewSettableProperties {
     as: String,
     currentItem: K,
     data: DataProvider[K, D],
-    dnd: AnonDragDrop,
+    dnd: DragDrop,
     drillMode: collapsible | none,
     expanded: KeySet[K],
-    firstSelectedItem: AnonKey[K, D],
+    firstSelectedItem: Key[K, D],
     groupHeaderPosition: static | sticky,
-    item: AnonFocusable[K, D],
+    item: Focusable[K, D],
     scrollPolicy: auto | loadMoreOnScroll,
-    scrollPolicyOptions: AnonFetchSize,
-    scrollPosition: AnonOffsetX[K],
+    scrollPolicyOptions: FetchSize,
+    scrollPosition: OffsetX[K],
     selection: js.Array[K],
     selectionMode: none | single | multiple,
     selectionRequired: Boolean,
-    translations: AnonAccessibleNavigateSkipItems
+    translations: AccessibleNavigateSkipItems
   ): ojListViewSettableProperties[K, D] = {
     val __obj = js.Dynamic.literal(as = as.asInstanceOf[js.Any], currentItem = currentItem.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], dnd = dnd.asInstanceOf[js.Any], drillMode = drillMode.asInstanceOf[js.Any], expanded = expanded.asInstanceOf[js.Any], firstSelectedItem = firstSelectedItem.asInstanceOf[js.Any], groupHeaderPosition = groupHeaderPosition.asInstanceOf[js.Any], item = item.asInstanceOf[js.Any], scrollPolicy = scrollPolicy.asInstanceOf[js.Any], scrollPolicyOptions = scrollPolicyOptions.asInstanceOf[js.Any], scrollPosition = scrollPosition.asInstanceOf[js.Any], selection = selection.asInstanceOf[js.Any], selectionMode = selectionMode.asInstanceOf[js.Any], selectionRequired = selectionRequired.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojListViewSettableProperties[K, D]]
@@ -90,7 +90,7 @@ object ojListViewSettableProperties {
         ret
     }
     @scala.inline
-    def withDnd(value: AnonDragDrop): Self[K, D] = {
+    def withDnd(value: DragDrop): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dnd")(value.asInstanceOf[js.Any])
         ret
@@ -108,7 +108,7 @@ object ojListViewSettableProperties {
         ret
     }
     @scala.inline
-    def withFirstSelectedItem(value: AnonKey[K, D]): Self[K, D] = {
+    def withFirstSelectedItem(value: Key[K, D]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("firstSelectedItem")(value.asInstanceOf[js.Any])
         ret
@@ -120,7 +120,7 @@ object ojListViewSettableProperties {
         ret
     }
     @scala.inline
-    def withItem(value: AnonFocusable[K, D]): Self[K, D] = {
+    def withItem(value: Focusable[K, D]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
         ret
@@ -132,13 +132,13 @@ object ojListViewSettableProperties {
         ret
     }
     @scala.inline
-    def withScrollPolicyOptions(value: AnonFetchSize): Self[K, D] = {
+    def withScrollPolicyOptions(value: FetchSize): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPolicyOptions")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withScrollPosition(value: AnonOffsetX[K]): Self[K, D] = {
+    def withScrollPosition(value: OffsetX[K]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPosition")(value.asInstanceOf[js.Any])
         ret
@@ -162,7 +162,7 @@ object ojListViewSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonAccessibleNavigateSkipItems): Self[K, D] = {
+    def withTranslations(value: AccessibleNavigateSkipItems): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

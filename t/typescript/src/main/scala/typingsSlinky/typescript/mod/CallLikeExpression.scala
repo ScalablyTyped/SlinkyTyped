@@ -13,3 +13,16 @@ import scala.scalajs.js.annotation._
 */
 trait CallLikeExpression extends js.Object
 
+object CallLikeExpression {
+  @scala.inline
+  implicit def apply(value: CallExpression): CallLikeExpression = value.asInstanceOf[CallLikeExpression]
+  @scala.inline
+  implicit def apply(value: Decorator): CallLikeExpression = value.asInstanceOf[CallLikeExpression]
+  @scala.inline
+  implicit def apply(value: JsxOpeningLikeElement): CallLikeExpression = value.asInstanceOf[CallLikeExpression]
+  @scala.inline
+  implicit def apply(value: NewExpression): CallLikeExpression = value.asInstanceOf[CallLikeExpression]
+  @scala.inline
+  implicit def apply(value: TaggedTemplateExpression): CallLikeExpression = value.asInstanceOf[CallLikeExpression]
+}
+

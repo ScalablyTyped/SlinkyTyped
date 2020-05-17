@@ -2,7 +2,7 @@ package typingsSlinky.reactNativeSvgCharts.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNativeSvgCharts.PartialLineProps
+import typingsSlinky.reactNativeSvgCharts.anon.PartialLineProps
 import typingsSlinky.reactNativeSvgCharts.mod.GridDirection
 import typingsSlinky.reactNativeSvgCharts.mod.GridProps
 import scala.scalajs.js

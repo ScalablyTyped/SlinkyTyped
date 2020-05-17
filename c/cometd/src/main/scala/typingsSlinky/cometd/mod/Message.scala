@@ -1,7 +1,5 @@
 package typingsSlinky.cometd.mod
 
-import typingsSlinky.cometd.cometdBooleans.`false`
-import typingsSlinky.cometd.cometdBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,31 +13,10 @@ trait Message extends js.Object
 
 object Message {
   @scala.inline
-  def BaseMessage(channel: String, successful: Boolean): Message = {
-    val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], successful = successful.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Message]
-  }
+  implicit def apply(value: BaseMessage): Message = value.asInstanceOf[Message]
   @scala.inline
-  def SubscribeMessage(channel: String, subscription: String, successful: Boolean): Message = {
-    val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], subscription = subscription.asInstanceOf[js.Any], successful = successful.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Message]
-  }
+  implicit def apply(value: HandshakeMessage): Message = value.asInstanceOf[Message]
   @scala.inline
-  def SuccessfulHandshakeMessage(
-    channel: String,
-    clientId: String,
-    reestablish: Boolean,
-    successful: `true`,
-    supportedConnectionTypes: js.Array[ConnectionType],
-    version: String
-  ): Message = {
-    val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], clientId = clientId.asInstanceOf[js.Any], reestablish = reestablish.asInstanceOf[js.Any], successful = successful.asInstanceOf[js.Any], supportedConnectionTypes = supportedConnectionTypes.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Message]
-  }
-  @scala.inline
-  def UnsuccessfulHandshakeMessage(channel: String, error: String, successful: `false`): Message = {
-    val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], successful = successful.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Message]
-  }
+  implicit def apply(value: SubscribeMessage): Message = value.asInstanceOf[Message]
 }
 

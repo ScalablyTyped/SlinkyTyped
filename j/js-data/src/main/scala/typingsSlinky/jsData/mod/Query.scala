@@ -1,6 +1,6 @@
 package typingsSlinky.jsData.mod
 
-import typingsSlinky.jsData.Anon
+import typingsSlinky.jsData.anon._empty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,6 +37,6 @@ class Query () extends Component {
 @JSImport("js-data", "Query")
 @js.native
 object Query extends js.Object {
-  var ops: Anon = js.native
+  var ops: _empty = js.native
 }
 

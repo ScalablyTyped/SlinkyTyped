@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait ModuleBody extends js.Object
 
+object ModuleBody {
+  @scala.inline
+  implicit def apply(value: JSDocNamespaceBody): ModuleBody = value.asInstanceOf[ModuleBody]
+  @scala.inline
+  implicit def apply(value: NamespaceBody): ModuleBody = value.asInstanceOf[ModuleBody]
+}
+

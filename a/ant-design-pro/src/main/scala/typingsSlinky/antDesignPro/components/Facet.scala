@@ -2,8 +2,8 @@ package typingsSlinky.antDesignPro.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.bizcharts.AnonOffsetX
-import typingsSlinky.bizcharts.AnonOffsetY
+import typingsSlinky.bizcharts.anon.OffsetX
+import typingsSlinky.bizcharts.anon.OffsetY
 import typingsSlinky.bizcharts.mod.FacetProps
 import typingsSlinky.bizcharts.mod.FacetType
 import scala.scalajs.js
@@ -22,7 +22,7 @@ object Facet {
     @scala.inline
     def autoSetAxis(value: Boolean): this.type = set("autoSetAxis", value.asInstanceOf[js.Any])
     @scala.inline
-    def colTitle(value: AnonOffsetY): this.type = set("colTitle", value.asInstanceOf[js.Any])
+    def colTitle(value: OffsetY): this.type = set("colTitle", value.asInstanceOf[js.Any])
     @scala.inline
     def eachView(value: (/* view */ js.UndefOr[js.Any], /* facet */ js.UndefOr[js.Any]) => Unit): this.type = set("eachView", js.Any.fromFunction2(value))
     @scala.inline
@@ -32,7 +32,7 @@ object Facet {
     @scala.inline
     def padding(value: Double | js.Array[Double]): this.type = set("padding", value.asInstanceOf[js.Any])
     @scala.inline
-    def rowTitle(value: AnonOffsetX): this.type = set("rowTitle", value.asInstanceOf[js.Any])
+    def rowTitle(value: OffsetX): this.type = set("rowTitle", value.asInstanceOf[js.Any])
     @scala.inline
     def showTitle(value: Boolean): this.type = set("showTitle", value.asInstanceOf[js.Any])
     @scala.inline

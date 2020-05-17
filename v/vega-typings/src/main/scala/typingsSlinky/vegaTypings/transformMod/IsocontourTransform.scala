@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IsocontourTransform extends _Transforms {
+trait IsocontourTransform extends Transforms {
   var as: js.UndefOr[String | Null | SignalRef] = js.native
   var field: js.UndefOr[String | TransformField] = js.native
   var levels: js.UndefOr[Double | SignalRef] = js.native

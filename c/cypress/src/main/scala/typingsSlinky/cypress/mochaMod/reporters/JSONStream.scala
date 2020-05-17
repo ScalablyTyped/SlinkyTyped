@@ -1,5 +1,6 @@
 package typingsSlinky.cypress.mochaMod.reporters
 
+import typingsSlinky.cypress.Mocha.reporters.Base
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +12,5 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("mocha", "reporters.JSONStream")
 @js.native
-class JSONStream ()
-  extends typingsSlinky.cypress.Mocha_.reporters.Base_
+class JSONStream () extends Base
 

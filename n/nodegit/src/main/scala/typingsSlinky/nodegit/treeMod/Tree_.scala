@@ -1,6 +1,6 @@
 package typingsSlinky.nodegit.treeMod
 
-import typingsSlinky.nodegit.EventEmitterstartvoid
+import typingsSlinky.nodegit.anon.EventEmitterstartvoid
 import typingsSlinky.nodegit.diffFileMod.DiffFile
 import typingsSlinky.nodegit.objectMod.Object
 import typingsSlinky.nodegit.oidMod.Oid

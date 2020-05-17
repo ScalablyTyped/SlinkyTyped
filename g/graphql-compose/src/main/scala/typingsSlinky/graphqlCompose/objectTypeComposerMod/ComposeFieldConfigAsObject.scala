@@ -13,7 +13,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ComposeFieldConfigAsObject[TSource, TContext, TArgs]
-  extends /* opt */ StringDictionary[js.Any] {
+  extends /* key */ StringDictionary[js.Any]
+     with ComposeFieldConfig[TSource, TContext, TArgs] {
   @JSName("$call")
   var $call: js.UndefOr[Unit] = js.native
   var args: js.UndefOr[ComposeFieldConfigArgumentMap[TArgs]] = js.native

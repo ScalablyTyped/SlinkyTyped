@@ -1,12 +1,12 @@
 package typingsSlinky.tinycolor2.mod.ColorFormats
 
-import typingsSlinky.tinycolor2.mod._ColorInputWithoutInstance
+import typingsSlinky.tinycolor2.mod.ColorInputWithoutInstance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait HSV extends _ColorInputWithoutInstance {
+trait HSV extends ColorInputWithoutInstance {
   var h: Double = js.native
   var s: Double = js.native
   var v: Double = js.native

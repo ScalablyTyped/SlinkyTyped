@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("tableau.RelativeDateFilter")
 @js.native
-class RelativeDateFilter ()
+trait RelativeDateFilter
   extends Filter
      with ConcreteFilter {
   /** The date period of the filter. See PeriodType Enum for the values in the enum. */
@@ -15,5 +14,47 @@ class RelativeDateFilter ()
   def getRange(): DateRangeType = js.native
   /** When getRange returns LASTN or NEXTN, this is the N value (how many years, months, etc.). */
   def getRangeN(): Double = js.native
+}
+
+object RelativeDateFilter {
+  @scala.inline
+  def apply(
+    getFieldAsync: () => js.Promise[Field],
+    getFieldName: () => String,
+    getFilterType: () => FilterType,
+    getPeriod: () => PeriodType,
+    getRange: () => DateRangeType,
+    getRangeN: () => Double,
+    getWorksheet: () => Worksheet
+  ): RelativeDateFilter = {
+    val __obj = js.Dynamic.literal(getFieldAsync = js.Any.fromFunction0(getFieldAsync), getFieldName = js.Any.fromFunction0(getFieldName), getFilterType = js.Any.fromFunction0(getFilterType), getPeriod = js.Any.fromFunction0(getPeriod), getRange = js.Any.fromFunction0(getRange), getRangeN = js.Any.fromFunction0(getRangeN), getWorksheet = js.Any.fromFunction0(getWorksheet))
+    __obj.asInstanceOf[RelativeDateFilter]
+  }
+  @scala.inline
+  implicit class RelativeDateFilterOps[Self <: RelativeDateFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetPeriod(value: () => PeriodType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPeriod")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRange(value: () => DateRangeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRange")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRangeN(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRangeN")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

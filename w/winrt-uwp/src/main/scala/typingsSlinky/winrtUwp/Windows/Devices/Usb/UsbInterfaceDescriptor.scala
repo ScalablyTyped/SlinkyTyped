@@ -1,14 +1,12 @@
 package typingsSlinky.winrtUwp.Windows.Devices.Usb
 
-import typingsSlinky.winrtUwp.AnonParsedUsbInterfaceDescriptor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Describes a USB alternate setting (of an interface) in an interface descriptor. For an explanation of an interface descriptor, see Section 9.6.5 in the Universal Serial Bus Specification: */
-@JSGlobal("Windows.Devices.Usb.UsbInterfaceDescriptor")
 @js.native
-abstract class UsbInterfaceDescriptor () extends js.Object {
+trait UsbInterfaceDescriptor extends js.Object {
   /** Gets the bAlternateSetting field of the USB interface descriptor. The value is a number that identifies the alternate setting defined by the interface. */
   var alternateSettingNumber: Double = js.native
   /** Gets the bInterfaceClass field of the USB interface descriptor. The value indicates the USB-defined class to which the interface conforms. */
@@ -21,20 +19,55 @@ abstract class UsbInterfaceDescriptor () extends js.Object {
   var subclassCode: Double = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Devices.Usb.UsbInterfaceDescriptor")
-@js.native
-object UsbInterfaceDescriptor extends js.Object {
-  /**
-    * Parses the specified USB descriptor and returns alternate setting information in a UsbInterfaceDescriptor object.
-    * @param descriptor A UsbDescriptor object that contains the USB interface descriptor.
-    * @return A UsbInterfaceDescriptor object describes the alternate setting.
-    */
-  def parse(descriptor: UsbDescriptor): UsbInterfaceDescriptor = js.native
-  /**
-    * Retrieves information about the alternate setting in a UsbInterfaceDescriptor object that is contained in a UsbDescriptor object.
-    * @param descriptor The UsbDescriptor object to parse.
-    */
-  def tryParse(descriptor: UsbDescriptor): AnonParsedUsbInterfaceDescriptor = js.native
+object UsbInterfaceDescriptor {
+  @scala.inline
+  def apply(
+    alternateSettingNumber: Double,
+    classCode: Double,
+    interfaceNumber: Double,
+    protocolCode: Double,
+    subclassCode: Double
+  ): UsbInterfaceDescriptor = {
+    val __obj = js.Dynamic.literal(alternateSettingNumber = alternateSettingNumber.asInstanceOf[js.Any], classCode = classCode.asInstanceOf[js.Any], interfaceNumber = interfaceNumber.asInstanceOf[js.Any], protocolCode = protocolCode.asInstanceOf[js.Any], subclassCode = subclassCode.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UsbInterfaceDescriptor]
+  }
+  @scala.inline
+  implicit class UsbInterfaceDescriptorOps[Self <: UsbInterfaceDescriptor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlternateSettingNumber(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alternateSettingNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClassCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("classCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInterfaceNumber(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interfaceNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withProtocolCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("protocolCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSubclassCode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subclassCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

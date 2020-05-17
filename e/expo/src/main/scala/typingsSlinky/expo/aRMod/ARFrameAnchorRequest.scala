@@ -1,13 +1,13 @@
 package typingsSlinky.expo.aRMod
 
-import typingsSlinky.expo.AnonBlendShapes
+import typingsSlinky.expo.anon.BlendShapes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ARFrameAnchorRequest extends js.Object {
-  var ARFaceTrackingConfiguration: js.UndefOr[AnonBlendShapes] = js.native
+  var ARFaceTrackingConfiguration: js.UndefOr[BlendShapes] = js.native
 }
 
 object ARFrameAnchorRequest {
@@ -23,7 +23,7 @@ object ARFrameAnchorRequest {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withARFaceTrackingConfiguration(value: AnonBlendShapes): Self = {
+    def withARFaceTrackingConfiguration(value: BlendShapes): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ARFaceTrackingConfiguration")(value.asInstanceOf[js.Any])
         ret

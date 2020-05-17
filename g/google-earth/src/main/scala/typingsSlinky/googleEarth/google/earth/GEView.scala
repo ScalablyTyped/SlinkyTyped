@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("google.earth.GEView")
 @js.native
-class GEView () extends js.Object {
+trait GEView extends js.Object {
   /**
     * Creates and returns a new KmlCamera object, initialized to the current camera position and orientation.
     * Use 'altitudeMode' to specify the altitude mode of the new camera.
@@ -64,5 +63,64 @@ class GEView () extends js.Object {
     * Sets the camera that views the scene in Google Earth.
     */
   def setAbstractView(view: KmlAbstractView): Unit = js.native
+}
+
+object GEView {
+  @scala.inline
+  def apply(
+    copyAsCamera: KmlAltitudeModeEnum => KmlCamera,
+    copyAsLookAt: KmlAltitudeModeEnum => KmlLookAt,
+    getViewportGlobeBounds: () => KmlLatLonBox,
+    hitTest: (Double, KmlUnitsEnum, Double, KmlUnitsEnum, GEHitTestModeEnum) => GEHitTestResult,
+    project: (Double, Double, Double, KmlAltitudeModeEnum) => KmlVec2,
+    setAbstractView: KmlAbstractView => Unit
+  ): GEView = {
+    val __obj = js.Dynamic.literal(copyAsCamera = js.Any.fromFunction1(copyAsCamera), copyAsLookAt = js.Any.fromFunction1(copyAsLookAt), getViewportGlobeBounds = js.Any.fromFunction0(getViewportGlobeBounds), hitTest = js.Any.fromFunction5(hitTest), project = js.Any.fromFunction4(project), setAbstractView = js.Any.fromFunction1(setAbstractView))
+    __obj.asInstanceOf[GEView]
+  }
+  @scala.inline
+  implicit class GEViewOps[Self <: GEView] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCopyAsCamera(value: KmlAltitudeModeEnum => KmlCamera): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyAsCamera")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCopyAsLookAt(value: KmlAltitudeModeEnum => KmlLookAt): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyAsLookAt")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetViewportGlobeBounds(value: () => KmlLatLonBox): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getViewportGlobeBounds")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHitTest(value: (Double, KmlUnitsEnum, Double, KmlUnitsEnum, GEHitTestModeEnum) => GEHitTestResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hitTest")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withProject(value: (Double, Double, Double, KmlAltitudeModeEnum) => KmlVec2): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("project")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withSetAbstractView(value: KmlAbstractView => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAbstractView")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

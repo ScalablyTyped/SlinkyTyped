@@ -14,7 +14,7 @@ package object clientMod {
   type ISubscriptionMap = /**
     * object which has topic names as object keys and as value the options, like {'test1': {qos: 0}, 'test2': {qos: 2}}.
     */
-  org.scalablytyped.runtime.StringDictionary[typingsSlinky.mqtt.AnonNl]
+  org.scalablytyped.runtime.StringDictionary[typingsSlinky.mqtt.anon.Nl]
   type OnErrorCallback = js.Function1[/* error */ js.Error, scala.Unit]
   type OnMessageCallback = js.Function3[
     /* topic */ java.lang.String, 

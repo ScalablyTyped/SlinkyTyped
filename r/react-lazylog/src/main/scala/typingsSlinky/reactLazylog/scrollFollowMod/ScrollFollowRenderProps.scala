@@ -1,6 +1,6 @@
 package typingsSlinky.reactLazylog.scrollFollowMod
 
-import typingsSlinky.reactLazylog.AnonClientHeight
+import typingsSlinky.reactLazylog.anon.ClientHeight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ScrollFollowRenderProps extends js.Object {
   var follow: Boolean = js.native
-  def onScroll(args: AnonClientHeight): Unit = js.native
+  def onScroll(args: ClientHeight): Unit = js.native
   def startFollowing(): Unit = js.native
   def stopFollowing(): Unit = js.native
 }
@@ -17,7 +17,7 @@ object ScrollFollowRenderProps {
   @scala.inline
   def apply(
     follow: Boolean,
-    onScroll: AnonClientHeight => Unit,
+    onScroll: ClientHeight => Unit,
     startFollowing: () => Unit,
     stopFollowing: () => Unit
   ): ScrollFollowRenderProps = {
@@ -37,7 +37,7 @@ object ScrollFollowRenderProps {
         ret
     }
     @scala.inline
-    def withOnScroll(value: AnonClientHeight => Unit): Self = {
+    def withOnScroll(value: ClientHeight => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onScroll")(js.Any.fromFunction1(value))
         ret

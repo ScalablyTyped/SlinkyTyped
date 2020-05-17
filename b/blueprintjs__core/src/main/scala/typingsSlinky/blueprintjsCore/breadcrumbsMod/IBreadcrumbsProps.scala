@@ -1,7 +1,7 @@
 package typingsSlinky.blueprintjsCore.breadcrumbsMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.blueprintjsCore.PartialIOverflowListProps
+import typingsSlinky.blueprintjsCore.anon.PartialIOverflowListProps
 import typingsSlinky.blueprintjsCore.boundaryMod.Boundary
 import typingsSlinky.blueprintjsCore.breadcrumbMod.IBreadcrumbProps
 import typingsSlinky.blueprintjsCore.popoverMod.IPopoverProps

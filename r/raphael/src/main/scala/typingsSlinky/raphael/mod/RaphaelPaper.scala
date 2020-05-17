@@ -1,6 +1,7 @@
 package typingsSlinky.raphael.mod
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Window
 import typingsSlinky.raphael.raphaelStrings.`arrow-end`
 import typingsSlinky.raphael.raphaelStrings.`clip-rect`
 import typingsSlinky.raphael.raphaelStrings.`fill-opacity`
@@ -36,7 +37,6 @@ import typingsSlinky.raphael.raphaelStrings.width
 import typingsSlinky.raphael.raphaelStrings.x
 import typingsSlinky.raphael.raphaelStrings.y
 import typingsSlinky.std.Record
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -346,7 +346,7 @@ trait RaphaelPaper[TTechnology /* <: RaphaelTechnology */] extends js.Object {
     height: Double,
     callback: js.ThisFunction0[/* this */ RaphaelPaper[TTechnology], Unit]
   ): RaphaelPaper[TTechnology] = js.native
-  def raphael(onReadyCallback: js.ThisFunction0[/* this */ Window_, Unit]): RaphaelPaper[TTechnology] = js.native
+  def raphael(onReadyCallback: js.ThisFunction0[/* this */ Window, Unit]): RaphaelPaper[TTechnology] = js.native
   /**
     * Creates a canvas object on which to draw. You must do this first, as all future calls to drawing methods
     * from this instance will be bound to this canvas.

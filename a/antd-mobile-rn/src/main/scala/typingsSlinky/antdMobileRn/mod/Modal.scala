@@ -1,7 +1,7 @@
 package typingsSlinky.antdMobileRn.mod
 
-import typingsSlinky.antdMobileRn.AnonAnimateAppear
-import typingsSlinky.antdMobileRn.AnonAntLocale
+import typingsSlinky.antdMobileRn.anon.AnimateAppear
+import typingsSlinky.antdMobileRn.anon.AntLocale
 import typingsSlinky.antdMobileRn.modalIndexNativeMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,8 +16,8 @@ class Modal () extends default
 @js.native
 object Modal extends js.Object {
   var alert: js.Any = js.native
-  var contextTypes: AnonAntLocale = js.native
-  var defaultProps: AnonAnimateAppear = js.native
+  var contextTypes: AntLocale = js.native
+  var defaultProps: AnimateAppear = js.native
   var operation: js.Any = js.native
   var prompt: js.Any = js.native
 }

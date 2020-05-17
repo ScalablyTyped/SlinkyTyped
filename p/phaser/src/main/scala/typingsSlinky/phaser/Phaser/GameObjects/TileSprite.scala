@@ -20,7 +20,6 @@ import typingsSlinky.phaser.Phaser.GameObjects.Components.Transform
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Visible
 import typingsSlinky.phaser.Phaser.Renderer.Canvas.CanvasRenderer
 import typingsSlinky.phaser.Phaser.Renderer.WebGL.WebGLRenderer
-import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -48,9 +47,8 @@ import scala.scalajs.js.annotation._
   * pixel art graphics. If you notice it and it becomes an issue, the only way to avoid it is to ensure that you
   * provide POT textures for Tile Sprites.
   */
-@JSGlobal("Phaser.GameObjects.TileSprite")
 @js.native
-class TileSprite protected ()
+trait TileSprite
   extends GameObject
      with Alpha
      with BlendMode
@@ -66,35 +64,6 @@ class TileSprite protected ()
      with Tint
      with Transform
      with Visible {
-  /**
-    * 
-    * @param scene The Scene to which this Game Object belongs. A Game Object can only belong to one Scene at a time.
-    * @param x The horizontal position of this Game Object in the world.
-    * @param y The vertical position of this Game Object in the world.
-    * @param width The width of the Game Object. If zero it will use the size of the texture frame.
-    * @param height The height of the Game Object. If zero it will use the size of the texture frame.
-    * @param textureKey The key of the Texture this Game Object will use to render with, as stored in the Texture Manager.
-    * @param frameKey An optional frame from the Texture this Game Object is rendering with.
-    */
-  def this(scene: Scene, x: Double, y: Double, width: integer, height: integer, textureKey: String) = this()
-  def this(
-    scene: Scene,
-    x: Double,
-    y: Double,
-    width: integer,
-    height: integer,
-    textureKey: String,
-    frameKey: String
-  ) = this()
-  def this(
-    scene: Scene,
-    x: Double,
-    y: Double,
-    width: integer,
-    height: integer,
-    textureKey: String,
-    frameKey: integer
-  ) = this()
   /**
     * The Canvas element that the TileSprite renders its fill pattern in to.
     * Only used in Canvas mode.

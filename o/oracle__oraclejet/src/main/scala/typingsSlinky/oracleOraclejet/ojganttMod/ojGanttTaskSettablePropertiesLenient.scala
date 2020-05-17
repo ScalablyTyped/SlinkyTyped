@@ -1,8 +1,8 @@
 package typingsSlinky.oracleOraclejet.ojganttMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonEnd
-import typingsSlinky.oracleOraclejet.AnonValue
+import typingsSlinky.oracleOraclejet.anon.End
+import typingsSlinky.oracleOraclejet.anon.Value
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.auto
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.end
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.innerCenter
@@ -21,14 +21,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ojGanttTaskSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
-  var baseline: js.UndefOr[AnonEnd] = js.native
+  var baseline: js.UndefOr[End] = js.native
   var borderRadius: js.UndefOr[String] = js.native
   var end: js.UndefOr[String] = js.native
   var height: js.UndefOr[Double] = js.native
   var label: js.UndefOr[String] = js.native
   var labelPosition: js.UndefOr[start | innerCenter | innerStart | innerEnd | end | none] = js.native
   var labelStyle: js.UndefOr[js.Object] = js.native
-  var progress: js.UndefOr[AnonValue] = js.native
+  var progress: js.UndefOr[Value] = js.native
   var rowId: js.UndefOr[js.Any] = js.native
   var shortDesc: js.UndefOr[String] = js.native
   var start: js.UndefOr[String] = js.native
@@ -50,7 +50,7 @@ object ojGanttTaskSettablePropertiesLenient {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBaseline(value: AnonEnd): Self = {
+    def withBaseline(value: End): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("baseline")(value.asInstanceOf[js.Any])
         ret
@@ -134,7 +134,7 @@ object ojGanttTaskSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withProgress(value: AnonValue): Self = {
+    def withProgress(value: Value): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(value.asInstanceOf[js.Any])
         ret

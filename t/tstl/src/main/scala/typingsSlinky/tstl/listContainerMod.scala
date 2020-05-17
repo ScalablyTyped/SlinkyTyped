@@ -2,6 +2,7 @@ package typingsSlinky.tstl
 
 import typingsSlinky.tstl.containerContainerMod.Container
 import typingsSlinky.tstl.icontainerMod.IContainer
+import typingsSlinky.tstl.icontainerMod.IContainer.Iterator
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import typingsSlinky.tstl.ipushbackMod.IPushBack
 import typingsSlinky.tstl.listIteratorMod.ListIterator
@@ -49,10 +50,24 @@ object listContainerMod extends js.Object {
     /* InferMemberOverrides */
     override def assign[InputIterator /* <: IForwardIterator[T, InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
     /**
+      * Iterator to the first element.
+      *
+      * @return Iterator to the first element.
+      */
+    /* InferMemberOverrides */
+    override def begin(): Iterator[T, SourceT, IteratorT, ReverseIteratorT, T] = js.native
+    /**
       * @inheritDoc
       */
     /* InferMemberOverrides */
     override def clear(): Unit = js.native
+    /**
+      * Iterator to the end.
+      *
+      * @return Iterator to the end.
+      */
+    /* InferMemberOverrides */
+    override def end(): Iterator[T, SourceT, IteratorT, ReverseIteratorT, T] = js.native
     /**
       * Erase elements in range.
       *
@@ -117,9 +132,30 @@ object listContainerMod extends js.Object {
       */
     def pop_front(): Unit = js.native
     /**
+      * Insert an element at the end.
+      *
+      * @param val Value to insert.
+      */
+    /* InferMemberOverrides */
+    override def push_back(`val`: T): Unit = js.native
+    /**
       * @inheritDoc
       */
     def push_front(`val`: T): Unit = js.native
+    /**
+      * Reverse iterator to the first element in reverse.
+      *
+      * @return Reverse iterator to the first.
+      */
+    /* InferMemberOverrides */
+    override def rbegin(): ReverseIteratorT = js.native
+    /**
+      * Reverse iterator to the reverse end.
+      *
+      * @return Reverse iterator to the end.
+      */
+    /* InferMemberOverrides */
+    override def rend(): ReverseIteratorT = js.native
     /**
       * @inheritDoc
       */

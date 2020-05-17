@@ -6,10 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("TypeScript.Services.LanguageService")
 @js.native
-class LanguageService protected () extends ILanguageService {
-  def this(host: ILanguageServiceHost) = this()
+trait LanguageService extends ILanguageService {
   var _syntaxTreeCache: js.Any = js.native
   var activeCompletionSession: js.Any = js.native
   var compiler: js.Any = js.native

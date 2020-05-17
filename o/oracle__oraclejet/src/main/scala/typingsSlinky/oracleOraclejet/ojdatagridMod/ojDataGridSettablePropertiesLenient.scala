@@ -1,15 +1,15 @@
 package typingsSlinky.oracleOraclejet.ojdatagridMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonAccessibleActionableMode
-import typingsSlinky.oracleOraclejet.AnonCell
-import typingsSlinky.oracleOraclejet.AnonClassName
-import typingsSlinky.oracleOraclejet.AnonColumn
-import typingsSlinky.oracleOraclejet.AnonColumnEnd
-import typingsSlinky.oracleOraclejet.AnonColumnIndex
-import typingsSlinky.oracleOraclejet.AnonHorizontal
-import typingsSlinky.oracleOraclejet.AnonMaxColumnCount
-import typingsSlinky.oracleOraclejet.AnonReorder
+import typingsSlinky.oracleOraclejet.anon.AccessibleActionableMode
+import typingsSlinky.oracleOraclejet.anon.Cell
+import typingsSlinky.oracleOraclejet.anon.ClassName
+import typingsSlinky.oracleOraclejet.anon.Column
+import typingsSlinky.oracleOraclejet.anon.ColumnEnd
+import typingsSlinky.oracleOraclejet.anon.ColumnIndex
+import typingsSlinky.oracleOraclejet.anon.Horizontal
+import typingsSlinky.oracleOraclejet.anon.MaxColumnCount
+import typingsSlinky.oracleOraclejet.anon.Reorder
 import typingsSlinky.oracleOraclejet.ojdatagridMod.ojDataGrid.CurrentCell
 import typingsSlinky.oracleOraclejet.ojdatagridMod.ojDataGrid.Selection
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
@@ -27,20 +27,20 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ojDataGridSettablePropertiesLenient[K, D]
   extends /* key */ StringDictionary[js.Any] {
-  var bandingInterval: js.UndefOr[AnonColumn] = js.native
-  var cell: js.UndefOr[AnonClassName[K, D]] = js.native
+  var bandingInterval: js.UndefOr[Column] = js.native
+  var cell: js.UndefOr[ClassName[K, D]] = js.native
   var currentCell: js.UndefOr[CurrentCell[K]] = js.native
   var data: js.UndefOr[DataProvider[K, D]] = js.native
-  var dnd: js.UndefOr[AnonReorder] = js.native
+  var dnd: js.UndefOr[Reorder] = js.native
   var editMode: js.UndefOr[none | cellNavigation | cellEdit] = js.native
-  var gridlines: js.UndefOr[AnonHorizontal] = js.native
-  var header: js.UndefOr[AnonColumnEnd[K, D]] = js.native
+  var gridlines: js.UndefOr[Horizontal] = js.native
+  var header: js.UndefOr[ColumnEnd[K, D]] = js.native
   var scrollPolicy: js.UndefOr[auto | loadMoreOnScroll | scroll] = js.native
-  var scrollPolicyOptions: js.UndefOr[AnonMaxColumnCount] = js.native
-  var scrollPosition: js.UndefOr[AnonColumnIndex[K]] = js.native
+  var scrollPolicyOptions: js.UndefOr[MaxColumnCount] = js.native
+  var scrollPosition: js.UndefOr[ColumnIndex[K]] = js.native
   var selection: js.UndefOr[js.Array[Selection[K]]] = js.native
-  var selectionMode: js.UndefOr[AnonCell] = js.native
-  var translations: js.UndefOr[AnonAccessibleActionableMode] = js.native
+  var selectionMode: js.UndefOr[Cell] = js.native
+  var translations: js.UndefOr[AccessibleActionableMode] = js.native
 }
 
 object ojDataGridSettablePropertiesLenient {
@@ -56,7 +56,7 @@ object ojDataGridSettablePropertiesLenient {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): (Self[K, D]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[K, D]) with Other]
     @scala.inline
-    def withBandingInterval(value: AnonColumn): Self[K, D] = {
+    def withBandingInterval(value: Column): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bandingInterval")(value.asInstanceOf[js.Any])
         ret
@@ -68,7 +68,7 @@ object ojDataGridSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withCell(value: AnonClassName[K, D]): Self[K, D] = {
+    def withCell(value: ClassName[K, D]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cell")(value.asInstanceOf[js.Any])
         ret
@@ -104,7 +104,7 @@ object ojDataGridSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withDnd(value: AnonReorder): Self[K, D] = {
+    def withDnd(value: Reorder): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dnd")(value.asInstanceOf[js.Any])
         ret
@@ -128,7 +128,7 @@ object ojDataGridSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withGridlines(value: AnonHorizontal): Self[K, D] = {
+    def withGridlines(value: Horizontal): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gridlines")(value.asInstanceOf[js.Any])
         ret
@@ -140,7 +140,7 @@ object ojDataGridSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withHeader(value: AnonColumnEnd[K, D]): Self[K, D] = {
+    def withHeader(value: ColumnEnd[K, D]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("header")(value.asInstanceOf[js.Any])
         ret
@@ -164,7 +164,7 @@ object ojDataGridSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withScrollPolicyOptions(value: AnonMaxColumnCount): Self[K, D] = {
+    def withScrollPolicyOptions(value: MaxColumnCount): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPolicyOptions")(value.asInstanceOf[js.Any])
         ret
@@ -176,7 +176,7 @@ object ojDataGridSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withScrollPosition(value: AnonColumnIndex[K]): Self[K, D] = {
+    def withScrollPosition(value: ColumnIndex[K]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPosition")(value.asInstanceOf[js.Any])
         ret
@@ -200,7 +200,7 @@ object ojDataGridSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withSelectionMode(value: AnonCell): Self[K, D] = {
+    def withSelectionMode(value: Cell): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectionMode")(value.asInstanceOf[js.Any])
         ret
@@ -212,7 +212,7 @@ object ojDataGridSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonAccessibleActionableMode): Self[K, D] = {
+    def withTranslations(value: AccessibleActionableMode): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

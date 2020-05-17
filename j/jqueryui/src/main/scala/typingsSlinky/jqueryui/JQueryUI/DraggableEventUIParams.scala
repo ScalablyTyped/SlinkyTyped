@@ -1,7 +1,7 @@
 package typingsSlinky.jqueryui.JQueryUI
 
-import typingsSlinky.jqueryui.AnonLeft
 import typingsSlinky.jqueryui.JQuery
+import typingsSlinky.jqueryui.anon.Left
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,13 +10,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DraggableEventUIParams extends js.Object {
   var helper: JQuery = js.native
-  var offset: AnonLeft = js.native
-  var position: AnonLeft = js.native
+  var offset: Left = js.native
+  var position: Left = js.native
 }
 
 object DraggableEventUIParams {
   @scala.inline
-  def apply(helper: JQuery, offset: AnonLeft, position: AnonLeft): DraggableEventUIParams = {
+  def apply(helper: JQuery, offset: Left, position: Left): DraggableEventUIParams = {
     val __obj = js.Dynamic.literal(helper = helper.asInstanceOf[js.Any], offset = offset.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any])
     __obj.asInstanceOf[DraggableEventUIParams]
   }
@@ -33,13 +33,13 @@ object DraggableEventUIParams {
         ret
     }
     @scala.inline
-    def withOffset(value: AnonLeft): Self = {
+    def withOffset(value: Left): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPosition(value: AnonLeft): Self = {
+    def withPosition(value: Left): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
         ret

@@ -2,7 +2,7 @@ package typingsSlinky.jestRuntime.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.istanbulLibCoverage.mod.CoverageMapData
-import typingsSlinky.jestRuntime.AnonVirtual
+import typingsSlinky.jestRuntime.anon.Virtual
 import typingsSlinky.jestSourceMap.typesMod.SourceMapRegistry
 import typingsSlinky.jestTypes.configMod.Path
 import typingsSlinky.std.Set
@@ -67,6 +67,6 @@ trait Runtime extends js.Object {
   def resetModules(): Unit = js.native
   def restoreAllMocks(): Unit = js.native
   def setMock(from: String, moduleName: String, mockFactory: js.Function0[_]): Unit = js.native
-  def setMock(from: String, moduleName: String, mockFactory: js.Function0[_], options: AnonVirtual): Unit = js.native
+  def setMock(from: String, moduleName: String, mockFactory: js.Function0[_], options: Virtual): Unit = js.native
 }
 

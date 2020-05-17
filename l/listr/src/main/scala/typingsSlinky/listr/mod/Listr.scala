@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Listr[Ctx] extends js.Object {
+trait Listr[Ctx] extends ListrTaskResult[Ctx] {
   var tasks: js.Array[ListrTaskWrapper[Ctx]] = js.native
   def add(tasks: js.Array[ListrTask[Ctx]]): Unit = js.native
   def add(tasks: ListrTask[Ctx]): Unit = js.native

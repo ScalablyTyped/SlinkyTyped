@@ -2,7 +2,6 @@ package typingsSlinky.heremaps.H.map
 
 import org.scalajs.dom.raw.CSSStyleDeclaration
 import org.scalajs.dom.raw.HTMLCanvasElement
-import typingsSlinky.heremaps.H.Map_
 import typingsSlinky.heremaps.H.map.Imprint.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,16 +10,8 @@ import scala.scalajs.js.annotation._
 /**
   * This class encapsulates the brand, copyright and terms of use elements on the map.
   */
-@JSGlobal("H.map.Imprint")
 @js.native
-class Imprint_ protected () extends js.Object {
-  /**
-    * Constructor
-    * @param map {H.Map} - The map where the imprint is attached to
-    * @param opt_options {H.map.Imprint.Options=} - The options to style the imprint
-    */
-  def this(map: Map_) = this()
-  def this(map: Map_, opt_options: Options) = this()
+trait Imprint_ extends js.Object {
   /**
     * Method adds a callback which will be triggered when the object is disposed
     * @param callback {Function}

@@ -1,6 +1,6 @@
 package typingsSlinky.yogBigpipe.mod
 
-import typingsSlinky.yogBigpipe.AnonDefault
+import typingsSlinky.yogBigpipe.anon.Default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait BigPipeOption extends js.Object {
   var skipAnalysis: js.UndefOr[Boolean] = js.native
-  var tpl: js.UndefOr[AnonDefault] = js.native
+  var tpl: js.UndefOr[Default] = js.native
 }
 
 object BigPipeOption {
@@ -36,7 +36,7 @@ object BigPipeOption {
         ret
     }
     @scala.inline
-    def withTpl(value: AnonDefault): Self = {
+    def withTpl(value: Default): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tpl")(value.asInstanceOf[js.Any])
         ret

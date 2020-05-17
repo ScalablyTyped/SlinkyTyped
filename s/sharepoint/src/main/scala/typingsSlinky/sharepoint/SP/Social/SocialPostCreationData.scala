@@ -1,15 +1,16 @@
 package typingsSlinky.sharepoint.SP.Social
 
 import typingsSlinky.sharepoint.SP.ClientValueObject
+import typingsSlinky.sharepoint.SP.SerializationContext
+import typingsSlinky.sharepoint.SP.XmlWriter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Specifies the content of a post in the SocialFeedManager.createPost method.
   The post consists of a text message, which can optionally include social tags, mentions of users, and links. */
-@JSGlobal("SP.Social.SocialPostCreationData")
 @js.native
-class SocialPostCreationData () extends ClientValueObject {
+trait SocialPostCreationData extends ClientValueObject {
   /** Specifies an image, document preview, or video preview to be used in the post. */
   def get_attachment(): SocialAttachment = js.native
   /** Specifies an array consisting of social tags, user mentions, links to documents, links to sites, and generic links.
@@ -44,5 +45,125 @@ class SocialPostCreationData () extends ClientValueObject {
   def set_source(value: SocialLink): SocialLink = js.native
   /** Indicates whether the post is to be used as the current user's new status message. */
   def set_updateStatusText(value: Boolean): Boolean = js.native
+}
+
+object SocialPostCreationData {
+  @scala.inline
+  def apply(
+    customFromJson: js.Any => Boolean,
+    customWriteToXml: (XmlWriter, SerializationContext) => Boolean,
+    fromJson: js.Any => Unit,
+    get_attachment: () => SocialAttachment,
+    get_contentItems: () => js.Array[SocialDataItem],
+    get_contentText: () => String,
+    get_definitionData: () => SocialPostDefinitionData,
+    get_securityUris: () => js.Array[String],
+    get_source: () => SocialLink,
+    get_typeId: () => String,
+    get_updateStatusText: () => Boolean,
+    set_attachment: SocialAttachment => SocialAttachment,
+    set_contentItems: js.Array[SocialDataItem] => js.Array[SocialDataItem],
+    set_contentText: String => String,
+    set_definitionData: SocialPostDefinitionData => SocialPostDefinitionData,
+    set_securityUris: js.Array[String] => js.Array[String],
+    set_source: SocialLink => SocialLink,
+    set_updateStatusText: Boolean => Boolean,
+    writeToXml: (XmlWriter, SerializationContext) => Unit
+  ): SocialPostCreationData = {
+    val __obj = js.Dynamic.literal(customFromJson = js.Any.fromFunction1(customFromJson), customWriteToXml = js.Any.fromFunction2(customWriteToXml), fromJson = js.Any.fromFunction1(fromJson), get_attachment = js.Any.fromFunction0(get_attachment), get_contentItems = js.Any.fromFunction0(get_contentItems), get_contentText = js.Any.fromFunction0(get_contentText), get_definitionData = js.Any.fromFunction0(get_definitionData), get_securityUris = js.Any.fromFunction0(get_securityUris), get_source = js.Any.fromFunction0(get_source), get_typeId = js.Any.fromFunction0(get_typeId), get_updateStatusText = js.Any.fromFunction0(get_updateStatusText), set_attachment = js.Any.fromFunction1(set_attachment), set_contentItems = js.Any.fromFunction1(set_contentItems), set_contentText = js.Any.fromFunction1(set_contentText), set_definitionData = js.Any.fromFunction1(set_definitionData), set_securityUris = js.Any.fromFunction1(set_securityUris), set_source = js.Any.fromFunction1(set_source), set_updateStatusText = js.Any.fromFunction1(set_updateStatusText), writeToXml = js.Any.fromFunction2(writeToXml))
+    __obj.asInstanceOf[SocialPostCreationData]
+  }
+  @scala.inline
+  implicit class SocialPostCreationDataOps[Self <: SocialPostCreationData] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGet_attachment(value: () => SocialAttachment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_attachment")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_contentItems(value: () => js.Array[SocialDataItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_contentItems")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_contentText(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_contentText")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_definitionData(value: () => SocialPostDefinitionData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_definitionData")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_securityUris(value: () => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_securityUris")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_source(value: () => SocialLink): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_source")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet_updateStatusText(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get_updateStatusText")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSet_attachment(value: SocialAttachment => SocialAttachment): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_attachment")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_contentItems(value: js.Array[SocialDataItem] => js.Array[SocialDataItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_contentItems")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_contentText(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_contentText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_definitionData(value: SocialPostDefinitionData => SocialPostDefinitionData): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_definitionData")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_securityUris(value: js.Array[String] => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_securityUris")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_source(value: SocialLink => SocialLink): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_source")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet_updateStatusText(value: Boolean => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set_updateStatusText")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

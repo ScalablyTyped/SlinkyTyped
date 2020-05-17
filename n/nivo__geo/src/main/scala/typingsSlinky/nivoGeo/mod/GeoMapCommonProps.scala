@@ -2,7 +2,7 @@ package typingsSlinky.nivoGeo.mod
 
 import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.nivoGeo.AnonFeature
+import typingsSlinky.nivoGeo.anon.Feature
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait GeoMapCommonProps extends CommonProps {
   var onMouseEnter: js.UndefOr[GeoMapEventHandler] = js.native
   var onMouseLeave: js.UndefOr[GeoMapEventHandler] = js.native
   var onMouseMove: js.UndefOr[GeoMapEventHandler] = js.native
-  var tooltip: js.UndefOr[ReactComponentClass[AnonFeature]] = js.native
+  var tooltip: js.UndefOr[ReactComponentClass[Feature]] = js.native
 }
 
 object GeoMapCommonProps {
@@ -134,7 +134,7 @@ object GeoMapCommonProps {
         ret
     }
     @scala.inline
-    def withTooltip(value: ReactComponentClass[AnonFeature]): Self = {
+    def withTooltip(value: ReactComponentClass[Feature]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

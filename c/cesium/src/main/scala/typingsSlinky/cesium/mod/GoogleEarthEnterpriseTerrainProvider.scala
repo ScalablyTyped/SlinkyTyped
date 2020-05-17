@@ -1,7 +1,7 @@
 package typingsSlinky.cesium.mod
 
 import org.scalajs.dom.experimental.Request
-import typingsSlinky.cesium.AnonUrl
+import typingsSlinky.cesium.anon.Url
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "GoogleEarthEnterpriseTerrainProvider")
 @js.native
 class GoogleEarthEnterpriseTerrainProvider protected () extends js.Object {
-  def this(options: AnonUrl) = this()
+  def this(options: Url) = this()
   var availability: TileAvailability = js.native
   var credit: Credit = js.native
   var errorEvent: Event[js.Array[_]] = js.native

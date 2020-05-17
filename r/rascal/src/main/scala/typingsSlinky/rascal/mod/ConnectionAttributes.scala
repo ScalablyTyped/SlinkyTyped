@@ -1,7 +1,7 @@
 package typingsSlinky.rascal.mod
 
-import typingsSlinky.rascal.AnonDictkey
-import typingsSlinky.rascal.AnonTimeoutNumber
+import typingsSlinky.rascal.anon.Dictkey
+import typingsSlinky.rascal.anon.TimeoutNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,14 +11,14 @@ trait ConnectionAttributes extends js.Object {
   var auth: js.UndefOr[String] = js.native
   var hostname: js.UndefOr[String] = js.native
   var loggableUrl: js.UndefOr[String] = js.native
-  var options: js.UndefOr[AnonDictkey] = js.native
+  var options: js.UndefOr[Dictkey] = js.native
   var password: js.UndefOr[String] = js.native
   var pathname: js.UndefOr[String] = js.native
   var port: js.UndefOr[String | Double] = js.native
   var protocol: js.UndefOr[String] = js.native
   var query: js.UndefOr[String] = js.native
   var slashes: js.UndefOr[Boolean] = js.native
-  var socketOptions: js.UndefOr[AnonTimeoutNumber] = js.native
+  var socketOptions: js.UndefOr[TimeoutNumber] = js.native
   var url: js.UndefOr[String] = js.native
   var user: js.UndefOr[String] = js.native
   var vhost: js.UndefOr[String] = js.native
@@ -73,7 +73,7 @@ object ConnectionAttributes {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonDictkey): Self = {
+    def withOptions(value: Dictkey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret
@@ -157,7 +157,7 @@ object ConnectionAttributes {
         ret
     }
     @scala.inline
-    def withSocketOptions(value: AnonTimeoutNumber): Self = {
+    def withSocketOptions(value: TimeoutNumber): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("socketOptions")(value.asInstanceOf[js.Any])
         ret

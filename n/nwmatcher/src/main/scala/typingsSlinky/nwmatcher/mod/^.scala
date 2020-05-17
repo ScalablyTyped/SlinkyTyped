@@ -1,6 +1,6 @@
 package typingsSlinky.nwmatcher.mod
 
-import typingsSlinky.nwmatcher.AnonDocument
+import typingsSlinky.nwmatcher.anon.Document
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("nwmatcher", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
-  def apply(global: AnonDocument): Matcher = js.native
+  def apply(global: Document): Matcher = js.native
 }
 

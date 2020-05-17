@@ -1,6 +1,6 @@
 package typingsSlinky.inquirer.mod
 
-import typingsSlinky.inquirer.AnonIsFinal
+import typingsSlinky.inquirer.anon.IsFinal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,12 +29,7 @@ trait InputQuestionOptions[T /* <: Answers */] extends Question[T] {
     * The value to display to the user.
     */
   var transformer: js.UndefOr[
-    js.Function3[
-      /* input */ js.Any, 
-      /* answers */ T, 
-      /* flags */ AnonIsFinal, 
-      String | js.Promise[String]
-    ]
+    js.Function3[/* input */ js.Any, /* answers */ T, /* flags */ IsFinal, String | js.Promise[String]]
   ] = js.native
 }
 
@@ -51,9 +46,7 @@ object InputQuestionOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withTransformer(
-      value: (/* input */ js.Any, /* answers */ T, /* flags */ AnonIsFinal) => String | js.Promise[String]
-    ): Self[T] = {
+    def withTransformer(value: (/* input */ js.Any, /* answers */ T, /* flags */ IsFinal) => String | js.Promise[String]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("transformer")(js.Any.fromFunction3(value))
         ret

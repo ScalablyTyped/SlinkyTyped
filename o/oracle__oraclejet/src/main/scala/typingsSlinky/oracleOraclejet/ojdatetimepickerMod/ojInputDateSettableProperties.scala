@@ -1,13 +1,13 @@
 package typingsSlinky.oracleOraclejet.ojdatetimepickerMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonChangeMonth
-import typingsSlinky.oracleOraclejet.AnonClass
-import typingsSlinky.oracleOraclejet.AnonConverterHint
-import typingsSlinky.oracleOraclejet.AnonCurrentText
-import typingsSlinky.oracleOraclejet.AnonDefinition
-import typingsSlinky.oracleOraclejet.AnonDisabled
-import typingsSlinky.oracleOraclejet.AnonInstruction
+import typingsSlinky.oracleOraclejet.anon.ChangeMonth
+import typingsSlinky.oracleOraclejet.anon.Class
+import typingsSlinky.oracleOraclejet.anon.ConverterHint
+import typingsSlinky.oracleOraclejet.anon.CurrentText
+import typingsSlinky.oracleOraclejet.anon.Definition
+import typingsSlinky.oracleOraclejet.anon.Disabled
+import typingsSlinky.oracleOraclejet.anon.Instruction
 import typingsSlinky.oracleOraclejet.ojdatetimepickerMod.ojInputDate.DayFormatterInput
 import typingsSlinky.oracleOraclejet.ojdatetimepickerMod.ojInputDate.DayFormatterOutput
 import typingsSlinky.oracleOraclejet.ojinputtextMod.inputBaseSettableProperties
@@ -33,15 +33,15 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ojInputDateSettableProperties extends inputBaseSettableProperties[String, String, String] {
   var converter: Converter[String] | RegisteredConverter = js.native
-  var datePicker: AnonChangeMonth = js.native
-  var dayMetaData: StringDictionary[StringDictionary[StringDictionary[AnonDisabled]]] = js.native
+  var datePicker: ChangeMonth = js.native
+  var dayMetaData: StringDictionary[StringDictionary[StringDictionary[Disabled]]] = js.native
   var keyboardEdit: enabled | disabled = js.native
   var max: String | Null = js.native
   var min: String | Null = js.native
-  var pickerAttributes: AnonClass = js.native
+  var pickerAttributes: Class = js.native
   var renderMode: jet | native = js.native
   @JSName("translations")
-  var translations_ojInputDateSettableProperties: AnonCurrentText = js.native
+  var translations_ojInputDateSettableProperties: CurrentText = js.native
   def dayFormatter(param: DayFormatterInput): Null | all | DayFormatterOutput = js.native
 }
 
@@ -52,23 +52,23 @@ object ojInputDateSettableProperties {
     autocomplete: on | off | String,
     autofocus: Boolean,
     converter: Converter[String] | RegisteredConverter,
-    datePicker: AnonChangeMonth,
+    datePicker: ChangeMonth,
     dayFormatter: DayFormatterInput => Null | all | DayFormatterOutput,
-    dayMetaData: StringDictionary[StringDictionary[StringDictionary[AnonDisabled]]],
+    dayMetaData: StringDictionary[StringDictionary[StringDictionary[Disabled]]],
     disabled: Boolean,
-    displayOptions: AnonConverterHint,
-    help: AnonInstruction,
-    helpHints: AnonDefinition,
+    displayOptions: ConverterHint,
+    help: Instruction,
+    helpHints: Definition,
     keyboardEdit: enabled | disabled,
     labelHint: String,
     messagesCustom: js.Array[^],
-    pickerAttributes: AnonClass,
+    pickerAttributes: Class,
     placeholder: String,
     rawValue: String,
     readonly: Boolean,
     renderMode: jet | native,
     required: Boolean,
-    translations: AnonCurrentText,
+    translations: CurrentText,
     valid: valid | pending | invalidHidden | invalidShown,
     value: String
   ): ojInputDateSettableProperties = {
@@ -88,7 +88,7 @@ object ojInputDateSettableProperties {
         ret
     }
     @scala.inline
-    def withDatePicker(value: AnonChangeMonth): Self = {
+    def withDatePicker(value: ChangeMonth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("datePicker")(value.asInstanceOf[js.Any])
         ret
@@ -100,7 +100,7 @@ object ojInputDateSettableProperties {
         ret
     }
     @scala.inline
-    def withDayMetaData(value: StringDictionary[StringDictionary[StringDictionary[AnonDisabled]]]): Self = {
+    def withDayMetaData(value: StringDictionary[StringDictionary[StringDictionary[Disabled]]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dayMetaData")(value.asInstanceOf[js.Any])
         ret
@@ -112,7 +112,7 @@ object ojInputDateSettableProperties {
         ret
     }
     @scala.inline
-    def withPickerAttributes(value: AnonClass): Self = {
+    def withPickerAttributes(value: Class): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pickerAttributes")(value.asInstanceOf[js.Any])
         ret
@@ -124,7 +124,7 @@ object ojInputDateSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonCurrentText): Self = {
+    def withTranslations(value: CurrentText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

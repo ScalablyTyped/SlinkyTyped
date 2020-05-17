@@ -3,6 +3,7 @@ package typingsSlinky.rmcCalendar
 import org.scalajs.dom.raw.CSSStyleDeclaration
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
+import typingsSlinky.rmcCalendar.anon.OnFinish
 import typingsSlinky.rmcCalendar.dataTypesMod.Models.MonthData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +16,7 @@ object datePickerMod extends js.Object {
   trait DatePicker
     extends typingsSlinky.rmcCalendar.datePickerBaseMod.default {
     var panel: HTMLDivElement = js.native
-    var touchHandler: AnonOnFinish = js.native
+    var touchHandler: OnFinish = js.native
     var transform: String = js.native
     def computeHeight(data: MonthData): Unit = js.native
     def computeHeight(data: MonthData, singleMonth: typingsSlinky.rmcCalendar.singleMonthMod.default): Unit = js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.universalRouter.mod
 
-import typingsSlinky.universalRouter.Errorstatusnumber
+import typingsSlinky.universalRouter.anon.Errorstatusnumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

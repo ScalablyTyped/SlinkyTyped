@@ -1,6 +1,6 @@
 package typingsSlinky.primereact.listBoxHeaderMod
 
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait ListBoxHeaderProps extends js.Object {
   var disabled: js.UndefOr[Boolean] = js.native
   var filter: js.UndefOr[String] = js.native
-  var onFilter: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
+  var onFilter: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
 }
 
 object ListBoxHeaderProps {
@@ -49,7 +49,7 @@ object ListBoxHeaderProps {
         ret
     }
     @scala.inline
-    def withOnFilter(value: /* e */ AnonValue => Unit): Self = {
+    def withOnFilter(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFilter")(js.Any.fromFunction1(value))
         ret

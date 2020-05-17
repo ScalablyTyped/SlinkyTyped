@@ -1,5 +1,10 @@
 package typingsSlinky.fullcalendar
 
+import typingsSlinky.fullcalendar.anon.Center
+import typingsSlinky.fullcalendar.anon.Day
+import typingsSlinky.fullcalendar.anon.Days
+import typingsSlinky.fullcalendar.anon.Next
+import typingsSlinky.fullcalendar.anon.NextYear
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,10 +23,10 @@ object optionsMod extends js.Object {
     var agendaEventMinHeight: Double = js.native
     var allDayText: String = js.native
     var aspectRatio: Double = js.native
-    var buttonText: AnonDay = js.native
+    var buttonText: Day = js.native
     var columnHeader: Boolean = js.native
     var dayPopoverFormat: String = js.native
-    var defaultAllDayEventDuration: AnonDays = js.native
+    var defaultAllDayEventDuration: Days = js.native
     var defaultTimedEventDuration: String = js.native
     var defaultView: String = js.native
     var dragOpacity: Double = js.native
@@ -35,7 +40,7 @@ object optionsMod extends js.Object {
     var eventOrder: String = js.native
     var forceEventDuration: Boolean = js.native
     var handleWindowResize: Boolean = js.native
-    var header: AnonCenter = js.native
+    var header: Center = js.native
     var isRTL: Boolean = js.native
     var lazyFetching: Boolean = js.native
     var locale: js.Any = js.native
@@ -61,9 +66,9 @@ object optionsMod extends js.Object {
   
   @js.native
   object rtlDefaults extends js.Object {
-    var buttonIcons: AnonNext = js.native
-    var header: AnonCenter = js.native
-    var themeButtonIcons: AnonNextYear = js.native
+    var buttonIcons: Next = js.native
+    var header: Center = js.native
+    var themeButtonIcons: NextYear = js.native
   }
   
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.evernote.mod.Types
 
-import typingsSlinky.evernote.AnonFileSize
+import typingsSlinky.evernote.anon.FileSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("evernote", "Types.RelatedContentImage")
 @js.native
 class RelatedContentImage () extends js.Object {
-  def this(args: AnonFileSize) = this()
+  def this(args: FileSize) = this()
   var fileSize: js.UndefOr[Double] = js.native
   var height: js.UndefOr[Double] = js.native
   var pixelRatio: js.UndefOr[Double] = js.native

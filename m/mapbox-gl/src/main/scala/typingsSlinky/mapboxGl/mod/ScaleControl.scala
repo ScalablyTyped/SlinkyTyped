@@ -1,6 +1,6 @@
 package typingsSlinky.mapboxGl.mod
 
-import typingsSlinky.mapboxGl.AnonMaxWidth
+import typingsSlinky.mapboxGl.anon.MaxWidth
 import typingsSlinky.mapboxGl.mapboxGlStrings.imperial
 import typingsSlinky.mapboxGl.mapboxGlStrings.metric
 import typingsSlinky.mapboxGl.mapboxGlStrings.nautical
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @JSImport("mapbox-gl", "ScaleControl")
 @js.native
 class ScaleControl () extends Evented {
-  def this(options: AnonMaxWidth) = this()
+  def this(options: MaxWidth) = this()
   @JSName("setUnit")
   def setUnit_imperial(unit: imperial): Unit = js.native
   @JSName("setUnit")

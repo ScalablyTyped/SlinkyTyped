@@ -48,18 +48,6 @@ object CollectionAdsDialogParams {
         ret
     }
     @scala.inline
-    def withCanvas_id(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canvas_id")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCanvas_id: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("canvas_id")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withProduct_catalog_id(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("product_catalog_id")(value.asInstanceOf[js.Any])

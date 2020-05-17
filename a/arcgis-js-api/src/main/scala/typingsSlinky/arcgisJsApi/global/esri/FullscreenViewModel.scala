@@ -1,0 +1,12 @@
+package typingsSlinky.arcgisJsApi.global.esri
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.arcgisJsApi.esri.FullscreenViewModelConstructor
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("__esri.FullscreenViewModel")
+@js.native
+object FullscreenViewModel extends TopLevel[FullscreenViewModelConstructor]
+

@@ -1,5 +1,6 @@
 package typingsSlinky.baseui.inputMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactRef
@@ -17,7 +18,6 @@ import typingsSlinky.react.mod.FocusEventHandler
 import typingsSlinky.react.mod.FormEventHandler
 import typingsSlinky.react.mod.KeyboardEventHandler
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -291,7 +291,7 @@ object BaseInputProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: SyntheticEvent[EventTarget with T, Event_] => Unit): Self[T] = {
+    def withOnChange(value: SyntheticEvent[EventTarget with T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

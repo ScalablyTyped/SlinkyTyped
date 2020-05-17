@@ -7,16 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientCardView.BatchEditStartEditing event.
   */
-@JSGlobal("ASPxClientCardViewBatchEditStartEditingEventArgs")
 @js.native
-class ASPxClientCardViewBatchEditStartEditingEventArgs protected () extends ASPxClientCancelEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientCardViewBatchEditStartEditingEventArgs class with the specified settings.
-    * @param visibleIndex An integer value that specifies the visible index of the card. This value is assigned to the ASPxClientCardViewBatchEditStartEditingEventArgs.visibleIndex property.
-    * @param focusedColumn An ASPxClientCardViewColumn object that is the focused CardView column. This value is assigned to the ASPxClientCardViewBatchEditStartEditingEventArgs.focusedColumn property.
-    * @param cardValues A hashtable that stores information about editable cells. This value is assigned to the ASPxClientCardViewBatchEditStartEditingEventArgs.cardValues property.
-    */
-  def this(visibleIndex: Double, focusedColumn: ASPxClientCardViewColumn, cardValues: js.Any) = this()
+trait ASPxClientCardViewBatchEditStartEditingEventArgs extends ASPxClientCancelEventArgs {
   /**
     * Gets a hashtable that maintains information about editable cells.
     */
@@ -29,5 +21,39 @@ class ASPxClientCardViewBatchEditStartEditingEventArgs protected () extends ASPx
     * Gets the visible index of the card whose cells are about to be edited.
     */
   var visibleIndex: Double = js.native
+}
+
+object ASPxClientCardViewBatchEditStartEditingEventArgs {
+  @scala.inline
+  def apply(cancel: Boolean, cardValues: js.Any, focusedColumn: ASPxClientCardViewColumn, visibleIndex: Double): ASPxClientCardViewBatchEditStartEditingEventArgs = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], cardValues = cardValues.asInstanceOf[js.Any], focusedColumn = focusedColumn.asInstanceOf[js.Any], visibleIndex = visibleIndex.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientCardViewBatchEditStartEditingEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientCardViewBatchEditStartEditingEventArgsOps[Self <: ASPxClientCardViewBatchEditStartEditingEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCardValues(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cardValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFocusedColumn(value: ASPxClientCardViewColumn): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("focusedColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVisibleIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visibleIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

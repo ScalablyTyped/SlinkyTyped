@@ -1,7 +1,7 @@
 package typingsSlinky.materialMenu.foundationMod
 
-import typingsSlinky.materialMenu.AnonFocusIndex
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
+import typingsSlinky.materialMenu.anon.FocusIndex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,11 +10,11 @@ import scala.scalajs.js.annotation._
 trait MDCMenuFoundation
   extends typingsSlinky.materialBase.foundationMod.default[MDCMenuFoundation] {
   def close(): Unit = js.native
-  def close(evt: Event_): Unit = js.native
+  def close(evt: Event): Unit = js.native
   def getSelectedIndex(): Double = js.native
   def isOpen(): Boolean = js.native
   def open(): Unit = js.native
-  def open(hasFocusIndex: AnonFocusIndex): Unit = js.native
+  def open(hasFocusIndex: FocusIndex): Unit = js.native
   /**
     * @param corner Default anchor corner alignment of top-left menu corner.
     */

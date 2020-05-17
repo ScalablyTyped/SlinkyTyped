@@ -1,7 +1,7 @@
 package typingsSlinky.gulpConnect.mod
 
 import typingsSlinky.connect.mod.HandleFunction
-import typingsSlinky.gulpConnect.TypeofconnectModule
+import typingsSlinky.gulpConnect.anon.TypeofconnectModule
 import typingsSlinky.node.httpMod.Server
 import typingsSlinky.node.httpsMod.ServerOptions
 import scala.scalajs.js

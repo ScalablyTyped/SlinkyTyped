@@ -3,7 +3,7 @@ package typingsSlinky.expressSession.mod
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
-import typingsSlinky.expressSession.AnonDomain
+import typingsSlinky.expressSession.anon.Domain
 import typingsSlinky.expressSession.expressSessionStrings.destroy
 import typingsSlinky.expressSession.expressSessionStrings.keep
 import scala.scalajs.js
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait SessionOptions extends js.Object {
-  var cookie: js.UndefOr[AnonDomain] = js.native
+  var cookie: js.UndefOr[Domain] = js.native
   var genid: js.UndefOr[js.Function1[/* req */ Request_[ParamsDictionary, _, _, Query], String]] = js.native
   var name: js.UndefOr[String] = js.native
   var proxy: js.UndefOr[Boolean] = js.native
@@ -49,7 +49,7 @@ object SessionOptions {
         ret
     }
     @scala.inline
-    def withCookie(value: AnonDomain): Self = {
+    def withCookie(value: Domain): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cookie")(value.asInstanceOf[js.Any])
         ret

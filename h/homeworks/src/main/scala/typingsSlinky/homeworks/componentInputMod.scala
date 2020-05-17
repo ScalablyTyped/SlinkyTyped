@@ -7,7 +7,6 @@ import typingsSlinky.angularCore.mod.Renderer2
 import typingsSlinky.angularForms.mod.ControlValueAccessor
 import typingsSlinky.homeworks.homeworks.Event
 import typingsSlinky.homeworks.managerMod.HomeworksManager
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,7 +53,7 @@ object componentInputMod extends js.Object {
     var validation: Boolean = js.native
     def ngAfterViewInit(): Unit = js.native
     def ngOnInit(): Unit = js.native
-    def onInput($event: Event_): Unit = js.native
+    def onInput($event: org.scalajs.dom.raw.Event): Unit = js.native
     def render(): Unit = js.native
     def setBlock(block: Boolean): Unit = js.native
   }

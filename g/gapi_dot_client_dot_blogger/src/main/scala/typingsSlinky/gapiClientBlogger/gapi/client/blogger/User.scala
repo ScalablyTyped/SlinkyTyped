@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientBlogger.gapi.client.blogger
 
-import typingsSlinky.gapiClientBlogger.AnonCountry
-import typingsSlinky.gapiClientBlogger.AnonSelfLinkString
+import typingsSlinky.gapiClientBlogger.anon.Country
+import typingsSlinky.gapiClientBlogger.anon.SelfLinkString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait User extends js.Object {
   /** Profile summary information. */
   var about: js.UndefOr[String] = js.native
   /** The container of blogs for this user. */
-  var blogs: js.UndefOr[AnonSelfLinkString] = js.native
+  var blogs: js.UndefOr[SelfLinkString] = js.native
   /** The timestamp of when this profile was created, in seconds since epoch. */
   var created: js.UndefOr[String] = js.native
   /** The display name. */
@@ -21,7 +21,7 @@ trait User extends js.Object {
   /** The kind of this entity. Always blogger#user */
   var kind: js.UndefOr[String] = js.native
   /** This user's locale */
-  var locale: js.UndefOr[AnonCountry] = js.native
+  var locale: js.UndefOr[Country] = js.native
   /** The API REST URL to fetch this resource from. */
   var selfLink: js.UndefOr[String] = js.native
   /** The user's profile page. */
@@ -53,7 +53,7 @@ object User {
         ret
     }
     @scala.inline
-    def withBlogs(value: AnonSelfLinkString): Self = {
+    def withBlogs(value: SelfLinkString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("blogs")(value.asInstanceOf[js.Any])
         ret
@@ -113,7 +113,7 @@ object User {
         ret
     }
     @scala.inline
-    def withLocale(value: AnonCountry): Self = {
+    def withLocale(value: Country): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("locale")(value.asInstanceOf[js.Any])
         ret

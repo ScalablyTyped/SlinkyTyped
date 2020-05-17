@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ContextObject extends js.Object {
+trait ContextObject extends ElementContext {
   var exclude: js.UndefOr[js.Array[js.Array[String] | String]] = js.native
   var include: js.UndefOr[js.Array[js.Array[String] | String]] = js.native
 }

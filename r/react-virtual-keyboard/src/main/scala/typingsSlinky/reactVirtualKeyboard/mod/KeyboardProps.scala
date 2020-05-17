@@ -1,7 +1,7 @@
 package typingsSlinky.reactVirtualKeyboard.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +31,7 @@ object KeyboardProps {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
     def withCallbackParent(
-      value: (/* event */ js.UndefOr[String | Event_], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+      value: (/* event */ js.UndefOr[String | Event], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("callbackParent")(js.Any.fromFunction3(value))
@@ -57,7 +57,7 @@ object KeyboardProps {
     }
     @scala.inline
     def withOnAccepted(
-      value: (/* event */ js.UndefOr[String | Event_], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+      value: (/* event */ js.UndefOr[String | Event], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAccepted")(js.Any.fromFunction3(value))
@@ -71,7 +71,7 @@ object KeyboardProps {
     }
     @scala.inline
     def withOnChange(
-      value: (/* event */ js.UndefOr[String | Event_], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
+      value: (/* event */ js.UndefOr[String | Event], /* keyboard */ js.UndefOr[Element], /* el */ js.UndefOr[Element]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction3(value))

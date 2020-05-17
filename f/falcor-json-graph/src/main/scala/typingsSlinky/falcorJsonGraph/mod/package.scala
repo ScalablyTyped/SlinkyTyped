@@ -10,14 +10,6 @@ package object mod {
     **/
   type JSONGraph = js.Any
   /**
-    * A part of a {@link Path} that can be any JSON value type. All types are coerced to string, except null. This makes the number 1 and the string "1" equivalent.
-    **/
-  type Key = java.lang.String | scala.Double | scala.Boolean
-  /**
-    * A part of a {@link PathSet} that can be either a {@link Key}, {@link Range}, or Array of either.
-    **/
-  type KeySet = typingsSlinky.falcorJsonGraph.mod.Key | typingsSlinky.falcorJsonGraph.mod.Range | (js.Array[typingsSlinky.falcorJsonGraph.mod.Key | typingsSlinky.falcorJsonGraph.mod.Range])
-  /**
     * An ordered list of {@link Key}s that point to a value in a {@link JSONGraph}.
     **/
   type Path = js.Array[typingsSlinky.falcorJsonGraph.mod.Key]

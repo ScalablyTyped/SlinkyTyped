@@ -1,0 +1,34 @@
+package typingsSlinky.semanticUiDropdown.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Inlined std.Pick<semantic-ui-dropdown.SemanticUI.DropdownSettings._Impl, 'allowCategorySelection'> */
+@js.native
+trait PickImplallowCategorySele extends js.Object {
+  var allowCategorySelection: Boolean = js.native
+}
+
+object PickImplallowCategorySele {
+  @scala.inline
+  def apply(allowCategorySelection: Boolean): PickImplallowCategorySele = {
+    val __obj = js.Dynamic.literal(allowCategorySelection = allowCategorySelection.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PickImplallowCategorySele]
+  }
+  @scala.inline
+  implicit class PickImplallowCategorySeleOps[Self <: PickImplallowCategorySele] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAllowCategorySelection(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allowCategorySelection")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

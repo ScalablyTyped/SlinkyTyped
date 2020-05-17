@@ -8,9 +8,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides information about a package. */
-@JSGlobal("Windows.ApplicationModel.Package")
 @js.native
-abstract class Package () extends js.Object {
+trait Package extends js.Object {
   /** Gets the packages on which the current package depends. */
   var dependencies: IVectorView[Package] = js.native
   /** Gets the description of the package. */
@@ -51,11 +50,139 @@ abstract class Package () extends js.Object {
   def launch(parameters: String): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.ApplicationModel.Package")
-@js.native
-object Package extends js.Object {
-  /** Gets the package for the current app. */
-  var current: Package = js.native
+object Package {
+  @scala.inline
+  def apply(
+    dependencies: IVectorView[Package],
+    description: String,
+    displayName: String,
+    getAppListEntriesAsync: js.Any,
+    getThumbnailToken: () => String,
+    id: PackageId,
+    installDate: js.Date,
+    installedDate: js.Date,
+    installedLocation: StorageFolder,
+    isBundle: Boolean,
+    isDevelopmentMode: Boolean,
+    isFramework: Boolean,
+    isResourcePackage: Boolean,
+    launch: String => Unit,
+    logo: Uri,
+    publisherDisplayName: String,
+    status: js.Any
+  ): Package = {
+    val __obj = js.Dynamic.literal(dependencies = dependencies.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], displayName = displayName.asInstanceOf[js.Any], getAppListEntriesAsync = getAppListEntriesAsync.asInstanceOf[js.Any], getThumbnailToken = js.Any.fromFunction0(getThumbnailToken), id = id.asInstanceOf[js.Any], installDate = installDate.asInstanceOf[js.Any], installedDate = installedDate.asInstanceOf[js.Any], installedLocation = installedLocation.asInstanceOf[js.Any], isBundle = isBundle.asInstanceOf[js.Any], isDevelopmentMode = isDevelopmentMode.asInstanceOf[js.Any], isFramework = isFramework.asInstanceOf[js.Any], isResourcePackage = isResourcePackage.asInstanceOf[js.Any], launch = js.Any.fromFunction1(launch), logo = logo.asInstanceOf[js.Any], publisherDisplayName = publisherDisplayName.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Package]
+  }
+  @scala.inline
+  implicit class PackageOps[Self <: Package] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDependencies(value: IVectorView[Package]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dependencies")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetAppListEntriesAsync(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAppListEntriesAsync")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetThumbnailToken(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getThumbnailToken")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withId(value: PackageId): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstallDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("installDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstalledDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("installedDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInstalledLocation(value: StorageFolder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("installedLocation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsBundle(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isBundle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsDevelopmentMode(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDevelopmentMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsFramework(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFramework")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsResourcePackage(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isResourcePackage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLaunch(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("launch")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLogo(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPublisherDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("publisherDisplayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

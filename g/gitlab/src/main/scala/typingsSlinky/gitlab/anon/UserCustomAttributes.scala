@@ -1,0 +1,93 @@
+package typingsSlinky.gitlab.anon
+
+import org.scalablytyped.runtime.Instantiable0
+import org.scalablytyped.runtime.Instantiable1
+import typingsSlinky.gitlab.baseServiceMod.BaseServiceOptions
+import typingsSlinky.gitlab.servicesMod.UserGPGKeys
+import typingsSlinky.gitlab.servicesMod.UserImpersonationTokens
+import typingsSlinky.gitlab.servicesMod.UserKeys
+import typingsSlinky.gitlab.servicesMod.Users
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait UserCustomAttributes extends js.Object {
+  var UserCustomAttributes: Instantiable1[
+    js.UndefOr[/* options */ BaseServiceOptions], 
+    typingsSlinky.gitlab.servicesMod.UserCustomAttributes
+  ] = js.native
+  var UserEmails: Instantiable0[typingsSlinky.gitlab.servicesMod.UserEmails] = js.native
+  var UserGPGKeys: Instantiable0[typingsSlinky.gitlab.servicesMod.UserGPGKeys] = js.native
+  var UserImpersonationTokens: Instantiable0[typingsSlinky.gitlab.servicesMod.UserImpersonationTokens] = js.native
+  var UserKeys: Instantiable0[typingsSlinky.gitlab.servicesMod.UserKeys] = js.native
+  var Users: Instantiable0[typingsSlinky.gitlab.servicesMod.Users] = js.native
+}
+
+object UserCustomAttributes {
+  @scala.inline
+  def apply(
+    UserCustomAttributes: Instantiable1[
+      js.UndefOr[/* options */ BaseServiceOptions], 
+      typingsSlinky.gitlab.servicesMod.UserCustomAttributes
+    ],
+    UserEmails: Instantiable0[typingsSlinky.gitlab.servicesMod.UserEmails],
+    UserGPGKeys: Instantiable0[UserGPGKeys],
+    UserImpersonationTokens: Instantiable0[UserImpersonationTokens],
+    UserKeys: Instantiable0[UserKeys],
+    Users: Instantiable0[Users]
+  ): UserCustomAttributes = {
+    val __obj = js.Dynamic.literal(UserCustomAttributes = UserCustomAttributes.asInstanceOf[js.Any], UserEmails = UserEmails.asInstanceOf[js.Any], UserGPGKeys = UserGPGKeys.asInstanceOf[js.Any], UserImpersonationTokens = UserImpersonationTokens.asInstanceOf[js.Any], UserKeys = UserKeys.asInstanceOf[js.Any], Users = Users.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UserCustomAttributes]
+  }
+  @scala.inline
+  implicit class UserCustomAttributesOps[Self <: UserCustomAttributes] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUserCustomAttributes(
+      value: Instantiable1[
+          js.UndefOr[/* options */ BaseServiceOptions], 
+          typingsSlinky.gitlab.servicesMod.UserCustomAttributes
+        ]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserCustomAttributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserEmails(value: Instantiable0[typingsSlinky.gitlab.servicesMod.UserEmails]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserEmails")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserGPGKeys(value: Instantiable0[UserGPGKeys]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserGPGKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserImpersonationTokens(value: Instantiable0[UserImpersonationTokens]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserImpersonationTokens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserKeys(value: Instantiable0[UserKeys]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UserKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUsers(value: Instantiable0[Users]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Users")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

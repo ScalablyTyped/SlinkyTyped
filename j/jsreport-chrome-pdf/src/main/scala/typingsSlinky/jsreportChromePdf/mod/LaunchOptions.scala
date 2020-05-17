@@ -1,7 +1,7 @@
 package typingsSlinky.jsreportChromePdf.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.jsreportChromePdf.Partialwidthstringheights
+import typingsSlinky.jsreportChromePdf.anon.Partialwidthstringheights
 import typingsSlinky.jsreportChromePdf.jsreportChromePdfStrings.chrome
 import typingsSlinky.jsreportChromePdf.jsreportChromePdfStrings.firefox
 import scala.scalajs.js

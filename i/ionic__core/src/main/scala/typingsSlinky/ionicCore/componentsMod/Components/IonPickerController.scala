@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCore.componentsMod.Components
 
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonPickerElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonPickerElement
 import typingsSlinky.ionicCore.pickerInterfaceMod.PickerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,6 @@ trait IonPickerController extends js.Object {
     */
   def dismiss(): js.Promise[Boolean] = js.native
   def dismiss(data: js.Any): js.Promise[Boolean] = js.native
-  def dismiss(data: js.Any, role: js.UndefOr[scala.Nothing], id: String): js.Promise[Boolean] = js.native
   def dismiss(data: js.Any, role: String): js.Promise[Boolean] = js.native
   def dismiss(data: js.Any, role: String, id: String): js.Promise[Boolean] = js.native
   /**

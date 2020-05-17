@@ -1,6 +1,6 @@
 package typingsSlinky.oracleOraclejet.ojmenuMod
 
-import typingsSlinky.oracleOraclejet.AnonAriaFocusSkipLink
+import typingsSlinky.oracleOraclejet.anon.AriaFocusSkipLink
 import typingsSlinky.oracleOraclejet.mod.baseComponentSettableProperties
 import typingsSlinky.oracleOraclejet.ojmenuMod.ojMenu.OpenOptions
 import scala.scalajs.js
@@ -12,12 +12,12 @@ trait ojMenuSettableProperties extends baseComponentSettableProperties {
   var disabled: Boolean = js.native
   var openOptions: OpenOptions = js.native
   @JSName("translations")
-  var translations_ojMenuSettableProperties: AnonAriaFocusSkipLink = js.native
+  var translations_ojMenuSettableProperties: AriaFocusSkipLink = js.native
 }
 
 object ojMenuSettableProperties {
   @scala.inline
-  def apply(disabled: Boolean, openOptions: OpenOptions, translations: AnonAriaFocusSkipLink): ojMenuSettableProperties = {
+  def apply(disabled: Boolean, openOptions: OpenOptions, translations: AriaFocusSkipLink): ojMenuSettableProperties = {
     val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], openOptions = openOptions.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojMenuSettableProperties]
   }
@@ -40,7 +40,7 @@ object ojMenuSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonAriaFocusSkipLink): Self = {
+    def withTranslations(value: AriaFocusSkipLink): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

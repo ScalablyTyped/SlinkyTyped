@@ -24,9 +24,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * CardView provides a layout container with rounded corners and a shadow indicating the view is elevated.
 			 */
-@JSGlobal("Titanium.UI.Android.CardView")
 @js.native
-class CardView () extends View {
+trait CardView extends View {
   /**
   				 * Maximum Elevation for CardView.
   				 */

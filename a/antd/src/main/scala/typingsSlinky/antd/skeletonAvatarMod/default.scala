@@ -1,6 +1,6 @@
 package typingsSlinky.antd.skeletonAvatarMod
 
-import typingsSlinky.antd.PartialAvatarProps
+import typingsSlinky.antd.anon.PartialAvatarProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

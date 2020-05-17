@@ -1,16 +1,16 @@
 package typingsSlinky.emberComponent
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLSelectElement
+import org.scalajs.dom.raw.Window
+import typingsSlinky.jquery.JQuery
+import typingsSlinky.jquery.JQuery.PlainObject
+import typingsSlinky.jquery.JQuery.Selector
+import typingsSlinky.jquery.JQuery.htmlString
 import typingsSlinky.jquery.JQueryStatic
-import typingsSlinky.jquery.JQuery_
-import typingsSlinky.jquery.JQuery_.PlainObject
-import typingsSlinky.jquery.JQuery_.Selector
-import typingsSlinky.jquery.JQuery_.htmlString
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -65,7 +65,7 @@ object viewMixinMod extends js.Object {
       * as its buffer.
       */
     @JSName("$")
-    def $(element: HTMLSelectElement): JQuery_[HTMLSelectElement] = js.native
+    def $(element: HTMLSelectElement): JQuery[HTMLSelectElement] = js.native
     // HACK: This is the factory function returned when importing jQuery without a DOM. Declaring it separately breaks using the type parameter on JQueryStatic.
     // HACK: The discriminator parameter handles the edge case of passing a Window object to JQueryStatic. It doesn't actually exist on the factory function.
     /**
@@ -74,7 +74,7 @@ object viewMixinMod extends js.Object {
       * as its buffer.
       */
     @JSName("$")
-    def $(window: Window_, discriminator: Boolean): JQueryStatic = js.native
+    def $(window: Window, discriminator: Boolean): JQueryStatic = js.native
     /**
       * Returns an empty jQuery set.
       * @see \`{@link https://api.jquery.com/jQuery/ }\`
@@ -87,7 +87,7 @@ object viewMixinMod extends js.Object {
       * as its buffer.
       */
     @JSName("$")
-    def $[TElement](): JQuery_[TElement] = js.native
+    def $[TElement](): JQuery[TElement] = js.native
     /**
       * Binds a function to be executed when the DOM has finished loading.
       * @param callback The function to execute when the DOM is ready.
@@ -113,23 +113,26 @@ object viewMixinMod extends js.Object {
       * as its buffer.
       */
     @JSName("$")
-    def $[TElement](callback: js.ThisFunction1[/* this */ Document_, /* $ */ this.type, Unit]): JQuery_[TElement] = js.native
+    def $[TElement](callback: js.ThisFunction1[/* this */ Document, /* $ */ this.type, Unit]): JQuery[TElement] = js.native
+    /**
+      * Returns a jQuery object for this view's element. If you pass in a selector
+      * string, this method will return a jQuery object, using the current element
+      * as its buffer.
+      */
+    @JSName("$")
+    def $[T /* <: Element */](element_elementArray: ArrayLike[T]): JQuery[T] = js.native
+    /**
+      * Returns a jQuery object for this view's element. If you pass in a selector
+      * string, this method will return a jQuery object, using the current element
+      * as its buffer.
+      */
+    @JSName("$")
+    def $[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery[TElement] = js.native
     /**
       * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
-      * @param element_elementArray _&#x40;param_ `element_elementArray`
-      * <br>
-      * * `element` — A DOM element to wrap in a jQuery object. <br>
-      * * `elementArray` — An array containing a set of DOM elements to wrap in a jQuery object.
+      * @param object A plain object to wrap in a jQuery object.
       * @see \`{@link https://api.jquery.com/jQuery/ }\`
       * @since 1.0
-      * @example ​ ````Set the background color of the page to black.
-    ```javascript
-    $( document.body ).css( "background", "black" );
-    ```
-      * @example ​ ````Hide all the input elements within a form.
-    ```javascript
-    $( myForm.elements ).hide();
-    ```
       */
     /**
       * Returns a jQuery object for this view's element. If you pass in a selector
@@ -137,21 +140,7 @@ object viewMixinMod extends js.Object {
       * as its buffer.
       */
     @JSName("$")
-    def $[T /* <: Element */](element_elementArray: T): JQuery_[T] = js.native
-    /**
-      * Returns a jQuery object for this view's element. If you pass in a selector
-      * string, this method will return a jQuery object, using the current element
-      * as its buffer.
-      */
-    @JSName("$")
-    def $[T /* <: Element */](element_elementArray: ArrayLike[T]): JQuery_[T] = js.native
-    /**
-      * Returns a jQuery object for this view's element. If you pass in a selector
-      * string, this method will return a jQuery object, using the current element
-      * as its buffer.
-      */
-    @JSName("$")
-    def $[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery_[TElement] = js.native
+    def $[T /* <: PlainObject[_] */](`object`: T): JQuery[T] = js.native
     /**
       * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
       * @param selection An existing jQuery object to clone.
@@ -164,7 +153,7 @@ object viewMixinMod extends js.Object {
       * as its buffer.
       */
     @JSName("$")
-    def $[T](selection: JQuery_[T]): JQuery_[T] = js.native
+    def $[T](selection: JQuery[T]): JQuery[T] = js.native
     /**
       * Accepts a string containing a CSS selector which is then used to match a set of elements.
       * @param selector A string containing a selector expression
@@ -209,35 +198,35 @@ object viewMixinMod extends js.Object {
       * as its buffer.
       */
     @JSName("$")
-    def $[TElement /* <: Element */](selector: Selector): JQuery_[TElement] = js.native
+    def $[TElement /* <: Element */](selector: Selector): JQuery[TElement] = js.native
     /**
       * Returns a jQuery object for this view's element. If you pass in a selector
       * string, this method will return a jQuery object, using the current element
       * as its buffer.
       */
     @JSName("$")
-    def $[TElement /* <: Element */](selector: Selector, context: JQuery_[HTMLElement]): JQuery_[TElement] = js.native
+    def $[TElement /* <: Element */](selector: Selector, context: JQuery[HTMLElement]): JQuery[TElement] = js.native
     /**
       * Returns a jQuery object for this view's element. If you pass in a selector
       * string, this method will return a jQuery object, using the current element
       * as its buffer.
       */
     @JSName("$")
-    def $[TElement /* <: Element */](selector: Selector, context: Selector): JQuery_[TElement] = js.native
+    def $[TElement /* <: Element */](selector: Selector, context: Selector): JQuery[TElement] = js.native
     /**
       * Returns a jQuery object for this view's element. If you pass in a selector
       * string, this method will return a jQuery object, using the current element
       * as its buffer.
       */
     @JSName("$")
-    def $[TElement /* <: Element */](selector: Selector, context: Document_): JQuery_[TElement] = js.native
+    def $[TElement /* <: Element */](selector: Selector, context: Document): JQuery[TElement] = js.native
     /**
       * Returns a jQuery object for this view's element. If you pass in a selector
       * string, this method will return a jQuery object, using the current element
       * as its buffer.
       */
     @JSName("$")
-    def $[TElement /* <: Element */](selector: Selector, context: Element): JQuery_[TElement] = js.native
+    def $[TElement /* <: Element */](selector: Selector, context: Element): JQuery[TElement] = js.native
     /**
       * Creates DOM elements on the fly from the provided string of raw HTML.
       * @param html _&#x40;param_ `html`
@@ -274,19 +263,30 @@ object viewMixinMod extends js.Object {
       * as its buffer.
       */
     @JSName("$")
-    def $_TElement_HTMLElement[TElement /* <: HTMLElement */](html: htmlString): JQuery_[TElement] = js.native
+    def $_TElement_HTMLElement[TElement /* <: HTMLElement */](html: htmlString): JQuery[TElement] = js.native
     /**
       * Returns a jQuery object for this view's element. If you pass in a selector
       * string, this method will return a jQuery object, using the current element
       * as its buffer.
       */
     @JSName("$")
-    def $_TElement_HTMLElement[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: Document_): JQuery_[TElement] = js.native
+    def $_TElement_HTMLElement[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: Document): JQuery[TElement] = js.native
     /**
       * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
-      * @param object A plain object to wrap in a jQuery object.
+      * @param element_elementArray _&#x40;param_ `element_elementArray`
+      * <br>
+      * * `element` — A DOM element to wrap in a jQuery object. <br>
+      * * `elementArray` — An array containing a set of DOM elements to wrap in a jQuery object.
       * @see \`{@link https://api.jquery.com/jQuery/ }\`
       * @since 1.0
+      * @example ​ ````Set the background color of the page to black.
+    ```javascript
+    $( document.body ).css( "background", "black" );
+    ```
+      * @example ​ ````Hide all the input elements within a form.
+    ```javascript
+    $( myForm.elements ).hide();
+    ```
       */
     /**
       * Returns a jQuery object for this view's element. If you pass in a selector
@@ -294,7 +294,7 @@ object viewMixinMod extends js.Object {
       * as its buffer.
       */
     @JSName("$")
-    def $_T_PlainObjectWildcard[T /* <: PlainObject[_] */](`object`: T): JQuery_[T] = js.native
+    def $_T_Element[T /* <: Element */](element_elementArray: T): JQuery[T] = js.native
     /**
       * Called when the element of the view has been inserted into the DOM.
       * Override this function to do any set up that requires an element

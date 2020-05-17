@@ -1,8 +1,8 @@
 package typingsSlinky.fundamentalReact.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.fundamentalReact.PartialTabProps
-import typingsSlinky.fundamentalReact.WeakValidationMapTabProps
+import typingsSlinky.fundamentalReact.anon.PartialTabProps
+import typingsSlinky.fundamentalReact.anon.WeakValidationMapTabProps
 import typingsSlinky.fundamentalReact.tabMod.TabProps
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap

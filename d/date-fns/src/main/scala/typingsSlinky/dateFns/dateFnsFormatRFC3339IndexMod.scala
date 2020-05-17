@@ -1,5 +1,6 @@
 package typingsSlinky.dateFns
 
+import typingsSlinky.dateFns.anon.FractionDigits
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,9 +11,9 @@ object dateFnsFormatRFC3339IndexMod extends js.Object {
   @js.native
   object default extends js.Object {
     def apply(date: Double): String = js.native
-    def apply(date: Double, options: AnonFractionDigits): String = js.native
+    def apply(date: Double, options: FractionDigits): String = js.native
     def apply(date: js.Date): String = js.native
-    def apply(date: js.Date, options: AnonFractionDigits): String = js.native
+    def apply(date: js.Date, options: FractionDigits): String = js.native
   }
   
 }

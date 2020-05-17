@@ -1,6 +1,6 @@
 package typingsSlinky.rotJs.cellularMod
 
-import typingsSlinky.rotJs.PartialOptionsBorn
+import typingsSlinky.rotJs.anon.PartialOptionsBorn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

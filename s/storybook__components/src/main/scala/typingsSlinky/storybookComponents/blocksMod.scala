@@ -8,6 +8,7 @@ import typingsSlinky.emotionStyledBase.mod.StyledComponent
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.TableHTMLAttributes
+import typingsSlinky.storybookComponents.anon.PickDetailedHTMLPropsHTML
 import typingsSlinky.storybookComponents.colorPaletteMod.ColorProps
 import typingsSlinky.storybookComponents.descriptionMod.DescriptionProps
 import typingsSlinky.storybookComponents.iconGalleryMod.IconItemProps

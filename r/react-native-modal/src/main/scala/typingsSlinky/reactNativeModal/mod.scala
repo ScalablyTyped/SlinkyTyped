@@ -1,5 +1,8 @@
 package typingsSlinky.reactNativeModal
 
+import typingsSlinky.reactNativeModal.anon.AnimationIn
+import typingsSlinky.reactNativeModal.anon.AnimationInTiming
+import typingsSlinky.reactNativeModal.anon.IsVisible
 import typingsSlinky.reactNativeModal.modalMod.ModalProps
 import typingsSlinky.reactNativeModal.modalMod.State
 import scala.scalajs.js
@@ -24,17 +27,17 @@ object mod extends js.Object {
   /* static members */
   @js.native
   object ReactNativeModal extends js.Object {
-    var defaultProps: AnonAnimationInTiming = js.native
-    var propTypes: AnonAnimationIn = js.native
-    def getDerivedStateFromProps(nextProps: ModalProps, state: State): AnonIsVisible | Null = js.native
+    var defaultProps: AnimationInTiming = js.native
+    var propTypes: AnimationIn = js.native
+    def getDerivedStateFromProps(nextProps: ModalProps, state: State): IsVisible | Null = js.native
   }
   
   /* static members */
   @js.native
   object default extends js.Object {
-    var defaultProps: AnonAnimationInTiming = js.native
-    var propTypes: AnonAnimationIn = js.native
-    def getDerivedStateFromProps(nextProps: ModalProps, state: State): AnonIsVisible | Null = js.native
+    var defaultProps: AnimationInTiming = js.native
+    var propTypes: AnimationIn = js.native
+    def getDerivedStateFromProps(nextProps: ModalProps, state: State): IsVisible | Null = js.native
   }
   
 }

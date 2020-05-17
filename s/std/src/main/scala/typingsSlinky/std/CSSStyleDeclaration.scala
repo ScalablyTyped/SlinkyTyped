@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.NumberDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -547,9 +546,4 @@ trait CSSStyleDeclaration
   def setProperty(propertyName: java.lang.String, value: java.lang.String, priority: java.lang.String): Unit = js.native
   def setProperty(propertyName: java.lang.String, value: Null, priority: java.lang.String): Unit = js.native
 }
-
-@JSGlobal("CSSStyleDeclaration")
-@js.native
-object CSSStyleDeclaration
-  extends Instantiable0[org.scalajs.dom.raw.CSSStyleDeclaration]
 

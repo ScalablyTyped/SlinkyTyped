@@ -1,8 +1,8 @@
 package typingsSlinky.materialSnackbar
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.materialSnackbar.adapterMod.MDCSnackbarAdapter
 import typingsSlinky.std.EventListener
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ object foundationMod extends js.Object {
     var message: String = js.native
     var multiline: js.UndefOr[Boolean] = js.native
     var timeout: js.UndefOr[Double] = js.native
-    def actionHandler(evt: Event_): Unit = js.native
+    def actionHandler(evt: Event): Unit = js.native
   }
   
   @js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.socketIoEmitter.mod
 
-import typingsSlinky.socketIoEmitter.Recordbroadcastjsonvolati
+import typingsSlinky.socketIoEmitter.anon.Recordbroadcastjsonvolati
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

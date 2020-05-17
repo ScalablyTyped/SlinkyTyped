@@ -11,13 +11,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("androidui.image.ChangeImageSizeDrawable")
 @js.native
-class ChangeImageSizeDrawable protected ()
+trait ChangeImageSizeDrawable
   extends Drawable
      with Callback {
-  def this(drawable: Drawable, overrideWidth: Double) = this()
-  def this(drawable: Drawable, overrideWidth: Double, overrideHeight: Double) = this()
   var mMutated: js.Any = js.native
   var mState: js.Any = js.native
   var mTmpRect: js.Any = js.native

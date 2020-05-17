@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Algorithm extends js.Object {
+trait Algorithm extends AlgorithmIdentifier {
   var name: java.lang.String = js.native
 }
 

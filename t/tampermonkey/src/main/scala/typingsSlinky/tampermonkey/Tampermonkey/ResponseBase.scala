@@ -1,6 +1,6 @@
 package typingsSlinky.tampermonkey.Tampermonkey
 
-import typingsSlinky.std.Document_
+import org.scalajs.dom.raw.Document
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait ResponseBase extends js.Object {
   val response: js.Any = js.native
   val responseHeaders: String = js.native
   val responseText: String = js.native
-  val responseXML: Document_ | Null = js.native
+  val responseXML: Document | Null = js.native
   val status: Double = js.native
   val statusText: String = js.native
 }
@@ -72,7 +72,7 @@ object ResponseBase {
         ret
     }
     @scala.inline
-    def withResponseXML(value: Document_): Self = {
+    def withResponseXML(value: Document): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("responseXML")(value.asInstanceOf[js.Any])
         ret

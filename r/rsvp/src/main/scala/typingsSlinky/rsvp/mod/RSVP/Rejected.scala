@@ -6,7 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Rejected[T] extends js.Object {
+trait Rejected[T]
+  extends PromiseState[js.Any] {
   var reason: T = js.native
   var state: rejected = js.native
 }

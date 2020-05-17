@@ -2,7 +2,7 @@ package typingsSlinky.antdMobileRn.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antdMobileRn.AnonDisabledStepTextColor
+import typingsSlinky.antdMobileRn.anon.DisabledStepTextColor
 import typingsSlinky.antdMobileRn.stepperIndexNativeMod.StepProps
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -46,7 +46,7 @@ object Stepper {
     @scala.inline
     def styleNull: this.type = set("style", null)
     @scala.inline
-    def styles(value: AnonDisabledStepTextColor): this.type = set("styles", value.asInstanceOf[js.Any])
+    def styles(value: DisabledStepTextColor): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline
     def upStyle(value: js.Object): this.type = set("upStyle", value.asInstanceOf[js.Any])
     @scala.inline

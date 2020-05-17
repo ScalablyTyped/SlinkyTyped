@@ -1,67 +1,67 @@
 package typingsSlinky.babelParser
 
-import typingsSlinky.babelParser.mod._ParserPlugin
+import typingsSlinky.babelParser.mod.ParserPlugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object babelParserStrings {
   @js.native
-  sealed trait asyncGenerators extends _ParserPlugin
+  sealed trait asyncGenerators extends ParserPlugin
   
   @js.native
-  sealed trait bigInt extends _ParserPlugin
+  sealed trait bigInt extends ParserPlugin
   
   @js.native
-  sealed trait classPrivateMethods extends _ParserPlugin
+  sealed trait classPrivateMethods extends ParserPlugin
   
   @js.native
-  sealed trait classPrivateProperties extends _ParserPlugin
+  sealed trait classPrivateProperties extends ParserPlugin
   
   @js.native
-  sealed trait classProperties extends _ParserPlugin
+  sealed trait classProperties extends ParserPlugin
   
   @js.native
-  sealed trait decorators extends _ParserPlugin
+  sealed trait decorators extends ParserPlugin
   
   @js.native
-  sealed trait `decorators-legacy` extends _ParserPlugin
+  sealed trait `decorators-legacy` extends ParserPlugin
   
   @js.native
-  sealed trait doExpressions extends _ParserPlugin
+  sealed trait doExpressions extends ParserPlugin
   
   @js.native
-  sealed trait dynamicImport extends _ParserPlugin
+  sealed trait dynamicImport extends ParserPlugin
   
   @js.native
-  sealed trait estree extends _ParserPlugin
+  sealed trait estree extends ParserPlugin
   
   @js.native
-  sealed trait exportDefaultFrom extends _ParserPlugin
+  sealed trait exportDefaultFrom extends ParserPlugin
   
   @js.native
-  sealed trait exportNamespaceFrom extends _ParserPlugin
+  sealed trait exportNamespaceFrom extends ParserPlugin
   
   @js.native
-  sealed trait flow extends _ParserPlugin
+  sealed trait flow extends ParserPlugin
   
   @js.native
-  sealed trait flowComments extends _ParserPlugin
+  sealed trait flowComments extends ParserPlugin
   
   @js.native
-  sealed trait functionBind extends _ParserPlugin
+  sealed trait functionBind extends ParserPlugin
   
   @js.native
-  sealed trait functionSent extends _ParserPlugin
+  sealed trait functionSent extends ParserPlugin
   
   @js.native
-  sealed trait importMeta extends _ParserPlugin
+  sealed trait importMeta extends ParserPlugin
   
   @js.native
-  sealed trait jsx extends _ParserPlugin
+  sealed trait jsx extends ParserPlugin
   
   @js.native
-  sealed trait logicalAssignment extends _ParserPlugin
+  sealed trait logicalAssignment extends ParserPlugin
   
   @js.native
   sealed trait minimal extends js.Object
@@ -70,28 +70,28 @@ object babelParserStrings {
   sealed trait module extends js.Object
   
   @js.native
-  sealed trait nullishCoalescingOperator extends _ParserPlugin
+  sealed trait nullishCoalescingOperator extends ParserPlugin
   
   @js.native
-  sealed trait numericSeparator extends _ParserPlugin
+  sealed trait numericSeparator extends ParserPlugin
   
   @js.native
-  sealed trait objectRestSpread extends _ParserPlugin
+  sealed trait objectRestSpread extends ParserPlugin
   
   @js.native
-  sealed trait optionalCatchBinding extends _ParserPlugin
+  sealed trait optionalCatchBinding extends ParserPlugin
   
   @js.native
-  sealed trait optionalChaining extends _ParserPlugin
+  sealed trait optionalChaining extends ParserPlugin
   
   @js.native
-  sealed trait partialApplication extends _ParserPlugin
+  sealed trait partialApplication extends ParserPlugin
   
   @js.native
-  sealed trait pipelineOperator extends _ParserPlugin
+  sealed trait pipelineOperator extends ParserPlugin
   
   @js.native
-  sealed trait placeholders extends _ParserPlugin
+  sealed trait placeholders extends ParserPlugin
   
   @js.native
   sealed trait script extends js.Object
@@ -100,19 +100,19 @@ object babelParserStrings {
   sealed trait smart extends js.Object
   
   @js.native
-  sealed trait throwExpressions extends _ParserPlugin
+  sealed trait throwExpressions extends ParserPlugin
   
   @js.native
-  sealed trait topLevelAwait extends _ParserPlugin
+  sealed trait topLevelAwait extends ParserPlugin
   
   @js.native
-  sealed trait typescript extends _ParserPlugin
+  sealed trait typescript extends ParserPlugin
   
   @js.native
   sealed trait unambiguous extends js.Object
   
   @js.native
-  sealed trait v8intrinsic extends _ParserPlugin
+  sealed trait v8intrinsic extends ParserPlugin
   
   @scala.inline
   def asyncGenerators: asyncGenerators = "asyncGenerators".asInstanceOf[asyncGenerators]

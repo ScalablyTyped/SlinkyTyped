@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait QuantileTransform extends _Transforms {
+trait QuantileTransform extends Transforms {
   var as: js.UndefOr[(js.Array[String | SignalRef]) | SignalRef] = js.native
   var field: FieldRef = js.native
   var groupby: js.UndefOr[js.Array[FieldRef] | SignalRef] = js.native

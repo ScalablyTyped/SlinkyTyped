@@ -2,7 +2,7 @@ package typingsSlinky.oracleOraclejet.ojtableMod.ojTable
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
-import typingsSlinky.oracleOraclejet.AnonDatasource
+import typingsSlinky.oracleOraclejet.anon.Datasource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait RowRendererContext[K, D] extends js.Object {
   var componentElement: Element = js.native
   var data: StringDictionary[js.Any] = js.native
   var parentElement: Element = js.native
-  var rowContext: AnonDatasource[K, D] = js.native
+  var rowContext: Datasource[K, D] = js.native
 }
 
 object RowRendererContext {
@@ -22,7 +22,7 @@ object RowRendererContext {
     componentElement: Element,
     data: StringDictionary[js.Any],
     parentElement: Element,
-    rowContext: AnonDatasource[K, D]
+    rowContext: Datasource[K, D]
   ): RowRendererContext[K, D] = {
     val __obj = js.Dynamic.literal(componentElement = componentElement.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], parentElement = parentElement.asInstanceOf[js.Any], rowContext = rowContext.asInstanceOf[js.Any])
     __obj.asInstanceOf[RowRendererContext[K, D]]
@@ -52,7 +52,7 @@ object RowRendererContext {
         ret
     }
     @scala.inline
-    def withRowContext(value: AnonDatasource[K, D]): Self[K, D] = {
+    def withRowContext(value: Datasource[K, D]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowContext")(value.asInstanceOf[js.Any])
         ret

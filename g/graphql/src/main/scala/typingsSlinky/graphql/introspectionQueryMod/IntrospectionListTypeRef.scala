@@ -6,7 +6,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IntrospectionListTypeRef[T /* <: IntrospectionTypeRef */] extends js.Object {
+trait IntrospectionListTypeRef[T /* <: IntrospectionTypeRef */]
+  extends IntrospectionInputTypeRef
+     with IntrospectionOutputTypeRef
+     with IntrospectionTypeRef {
   val kind: LIST = js.native
   val ofType: T = js.native
 }

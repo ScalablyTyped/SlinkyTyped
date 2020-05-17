@@ -24,9 +24,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A picker column, representing a selectable group of items in a <Titanium.UI.Picker>.
 		 */
-@JSGlobal("Titanium.UI.PickerColumn")
 @js.native
-class PickerColumn () extends View {
+trait PickerColumn extends View {
   /**
   			 * Font to use for text.
   			 */

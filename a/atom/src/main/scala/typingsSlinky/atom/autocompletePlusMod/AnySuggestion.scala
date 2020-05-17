@@ -12,14 +12,8 @@ trait AnySuggestion extends js.Object
 
 object AnySuggestion {
   @scala.inline
-  def TextSuggestion(text: String): AnySuggestion = {
-    val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnySuggestion]
-  }
+  implicit def apply(value: SnippetSuggestion): AnySuggestion = value.asInstanceOf[AnySuggestion]
   @scala.inline
-  def SnippetSuggestion(snippet: String): AnySuggestion = {
-    val __obj = js.Dynamic.literal(snippet = snippet.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnySuggestion]
-  }
+  implicit def apply(value: TextSuggestion): AnySuggestion = value.asInstanceOf[AnySuggestion]
 }
 

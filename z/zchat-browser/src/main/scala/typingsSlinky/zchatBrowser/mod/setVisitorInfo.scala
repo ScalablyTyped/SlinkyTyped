@@ -1,6 +1,6 @@
 package typingsSlinky.zchatBrowser.mod
 
-import typingsSlinky.zchatBrowser.PartialVisitorInfo
+import typingsSlinky.zchatBrowser.anon.PartialVisitorInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

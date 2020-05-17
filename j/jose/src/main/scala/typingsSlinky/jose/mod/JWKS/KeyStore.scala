@@ -5,18 +5,18 @@ import typingsSlinky.jose.joseStrings.OKP
 import typingsSlinky.jose.joseStrings.RSA
 import typingsSlinky.jose.joseStrings.oct
 import typingsSlinky.jose.mod.BasicParameters
+import typingsSlinky.jose.mod.ConsumeKeyInput
 import typingsSlinky.jose.mod.ECCurve
 import typingsSlinky.jose.mod.JSONWebKeySet
 import typingsSlinky.jose.mod.JWK.Key
 import typingsSlinky.jose.mod.OKPCurve
-import typingsSlinky.jose.mod._ConsumeKeyInput
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("jose", "JWKS.KeyStore")
 @js.native
-class KeyStore () extends _ConsumeKeyInput {
+class KeyStore () extends ConsumeKeyInput {
   def this(keys: js.Array[Key]) = this()
   val size: Double = js.native
   def add(key: Key): Unit = js.native

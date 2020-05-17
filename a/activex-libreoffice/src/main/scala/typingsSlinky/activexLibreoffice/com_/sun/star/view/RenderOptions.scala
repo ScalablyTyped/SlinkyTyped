@@ -1,0 +1,102 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.view
+
+import typingsSlinky.activexLibreoffice.com_.sun.star.awt.XDevice
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * describes the options for Render jobs.
+  * @since OOo 1.1.2
+  */
+@js.native
+trait RenderOptions extends js.Object {
+  /**
+    * indicates that the current page is the first page to be exported.
+    *
+    * Hyperlinks, notes, and outlines cannot be exported on a per page base. They have to be exported once **before** the first page is exported. Therefore
+    * the IsFirstPage property has been introduced. It is evaluated in the render function and indicates that the current page is the first page to be
+    * exported.
+    * @see XRenderable
+    */
+  var IsFirstPage: Boolean = js.native
+  /**
+    * indicates that the current page is the last page to be exported.
+    *
+    * Hyperlinks from the EditEngine have to be exported once **after** the last page has been processed. Therefore the IsLastPage property has been
+    * introduced. It is evaluated in the render function and indicates that the current page is the last page to be exported.
+    * @see XRenderable
+    */
+  var IsLastPage: Boolean = js.native
+  /**
+    * specifies if empty pages should be skipped.
+    *
+    * Tells the PDF export to skip empty pages. This flag also has to be passed to the render function, in order to calculate to correct page numbers during
+    * the export of hyperlinks, notes, and outlines.
+    * @see XRenderable
+    */
+  var IsSkipEmptyPages: Boolean = js.native
+  /**
+    * specifies the page ranges to be rendered.
+    *
+    * Tells the PDF export to skip empty pages. This flag also has to be passed to the render function, in order to calculate to correct page numbers during
+    * the export of hyperlinks, notes, and outlines.
+    * @see XRenderable
+    */
+  var PageRange: String = js.native
+  /** specifies the device the page should be rendered to */
+  var RenderDevice: XDevice = js.native
+}
+
+object RenderOptions {
+  @scala.inline
+  def apply(
+    IsFirstPage: Boolean,
+    IsLastPage: Boolean,
+    IsSkipEmptyPages: Boolean,
+    PageRange: String,
+    RenderDevice: XDevice
+  ): RenderOptions = {
+    val __obj = js.Dynamic.literal(IsFirstPage = IsFirstPage.asInstanceOf[js.Any], IsLastPage = IsLastPage.asInstanceOf[js.Any], IsSkipEmptyPages = IsSkipEmptyPages.asInstanceOf[js.Any], PageRange = PageRange.asInstanceOf[js.Any], RenderDevice = RenderDevice.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RenderOptions]
+  }
+  @scala.inline
+  implicit class RenderOptionsOps[Self <: RenderOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsFirstPage(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsFirstPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsLastPage(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsLastPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsSkipEmptyPages(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("IsSkipEmptyPages")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPageRange(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PageRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRenderDevice(value: XDevice): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RenderDevice")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

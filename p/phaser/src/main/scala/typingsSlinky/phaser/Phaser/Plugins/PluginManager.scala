@@ -42,14 +42,8 @@ import scala.scalajs.js.annotation._
   * 
   * For information on creating your own plugin please see the Phaser 3 Plugin Template.
   */
-@JSGlobal("Phaser.Plugins.PluginManager")
 @js.native
-class PluginManager protected () extends js.Object {
-  /**
-    * 
-    * @param game The game instance that owns this Plugin Manager.
-    */
-  def this(game: Game) = this()
+trait PluginManager extends js.Object {
   /**
     * The game instance that owns this Plugin Manager.
     */

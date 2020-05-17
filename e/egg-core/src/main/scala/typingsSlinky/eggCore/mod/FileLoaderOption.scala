@@ -1,6 +1,6 @@
 package typingsSlinky.eggCore.mod
 
-import typingsSlinky.eggCore.AnonPath
+import typingsSlinky.eggCore.anon.Path
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait FileLoaderOption extends js.Object {
   /** ignore the files when load, support glob */
   var ignore: js.UndefOr[String | js.Array[String]] = js.native
   /** custom file exports, receive two parameters, first is the inject object(if not js file, will be content buffer), second is an `options` object that contain `path` */
-  var initializer: js.UndefOr[js.Function2[/* obj */ js.Object, /* options */ AnonPath, _]] = js.native
+  var initializer: js.UndefOr[js.Function2[/* obj */ js.Object, /* options */ Path, _]] = js.native
   /** an object that be the argument when invoke the function */
   var inject: js.UndefOr[js.Object] = js.native
   /** match the files when load, support glob, default to all js files */
@@ -108,7 +108,7 @@ object FileLoaderOption {
         ret
     }
     @scala.inline
-    def withInitializer(value: (/* obj */ js.Object, /* options */ AnonPath) => _): Self = {
+    def withInitializer(value: (/* obj */ js.Object, /* options */ Path) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("initializer")(js.Any.fromFunction2(value))
         ret

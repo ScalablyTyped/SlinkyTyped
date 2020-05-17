@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.cardBodyMod
 
-import typingsSlinky.antDesignReactNative.AnonStyle
+import typingsSlinky.antDesignReactNative.anon.Style
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ class default () extends CardBody
 @JSImport("@ant-design/react-native/lib/card/CardBody", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonStyle = js.native
+  var defaultProps: Style = js.native
 }
 

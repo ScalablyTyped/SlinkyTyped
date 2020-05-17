@@ -1,7 +1,7 @@
 package typingsSlinky.typeFest.packageJsonMod.PackageJson
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.typeFest.AnonDictmoduleName
+import typingsSlinky.typeFest.anon.DictmoduleName
 import typingsSlinky.typeFest.typeFestBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ trait NonStandardEntryPoints extends js.Object {
   /**
   		A module ID with untranspiled code that is the primary entry point to the program.
   		*/
-  var esnext: js.UndefOr[String | AnonDictmoduleName] = js.native
+  var esnext: js.UndefOr[String | DictmoduleName] = js.native
   /**
   		An ECMAScript module ID that is the primary entry point to the program.
   		*/
@@ -48,7 +48,7 @@ object NonStandardEntryPoints {
         ret
     }
     @scala.inline
-    def withEsnext(value: String | AnonDictmoduleName): Self = {
+    def withEsnext(value: String | DictmoduleName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("esnext")(value.asInstanceOf[js.Any])
         ret

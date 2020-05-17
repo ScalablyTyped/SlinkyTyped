@@ -1,6 +1,7 @@
 package typingsSlinky.blocks
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.blocks.anon.Route
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +21,7 @@ trait ViewPrototype
   	 */
   var isActive: js.UndefOr[js.Function0[Boolean]] = js.native
   var navigateTo: js.UndefOr[js.Function] = js.native
-  var options: js.UndefOr[AnonRoute] = js.native
+  var options: js.UndefOr[Route] = js.native
   var parentView: js.UndefOr[js.Any] = js.native
   /**
     * Override the ready method to perform actions when the DOM is ready and
@@ -88,7 +89,7 @@ object ViewPrototype {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonRoute): Self = {
+    def withOptions(value: Route): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

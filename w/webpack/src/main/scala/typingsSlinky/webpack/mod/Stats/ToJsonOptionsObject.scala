@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ToJsonOptionsObject extends _ToJsonOptions {
+trait ToJsonOptionsObject extends ToJsonOptions {
   /** fallback value for stats options when an option is not defined (has precedence over local webpack defaults) */
   var all: js.UndefOr[Boolean] = js.native
   /** Add asset Information */

@@ -3,7 +3,7 @@ package typingsSlinky.oracleOraclejet.ojlegendMod
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponent
 import typingsSlinky.oracleOraclejet.ojkeysetMod.KeySet
@@ -97,7 +97,7 @@ trait ojLegend_[K, D] extends dvtBaseComponent[ojLegendSettableProperties[K, D]]
   var symbolWidth: Double = js.native
   var textStyle: js.UndefOr[js.Object] = js.native
   @JSName("translations")
-  var translations_ojLegend_ : AnonLabelAndValue = js.native
+  var translations_ojLegend_ : LabelAndValue = js.native
   var valign: middle | bottom | top = js.native
   def addEventListener(`type`: drillingChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
@@ -309,6 +309,6 @@ trait ojLegend_[K, D] extends dvtBaseComponent[ojLegendSettableProperties[K, D]]
   @JSName("setProperty")
   def setProperty_textStyle(property: textStyle, value: js.Object): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonLabelAndValue): Unit = js.native
+  def setProperty_translations(property: translations, value: LabelAndValue): Unit = js.native
 }
 

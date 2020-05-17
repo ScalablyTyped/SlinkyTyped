@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.layersIndexMod
 
-import typingsSlinky.babylonjs.PartialIHighlightLayerOpt
+import typingsSlinky.babylonjs.anon.PartialIHighlightLayerOpt
 import typingsSlinky.babylonjs.mathColorMod.Color4
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js

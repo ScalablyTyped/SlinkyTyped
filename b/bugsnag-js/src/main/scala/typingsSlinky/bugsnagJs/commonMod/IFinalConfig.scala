@@ -1,6 +1,6 @@
 package typingsSlinky.bugsnagJs.commonMod
 
-import typingsSlinky.bugsnagJs.AnonNotify
+import typingsSlinky.bugsnagJs.anon.Notify
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait IFinalConfig extends IConfig {
   @JSName("consoleBreadcrumbsEnabled")
   var consoleBreadcrumbsEnabled_IFinalConfig: Boolean = js.native
   @JSName("endpoints")
-  var endpoints_IFinalConfig: AnonNotify = js.native
+  var endpoints_IFinalConfig: Notify = js.native
   @JSName("interactionBreadcrumbsEnabled")
   var interactionBreadcrumbsEnabled_IFinalConfig: Boolean = js.native
   @JSName("maxBreadcrumbs")
@@ -49,7 +49,7 @@ object IFinalConfig {
     beforeSend: js.Array[BeforeSend],
     collectUserIp: Boolean,
     consoleBreadcrumbsEnabled: Boolean,
-    endpoints: AnonNotify,
+    endpoints: Notify,
     interactionBreadcrumbsEnabled: Boolean,
     maxBreadcrumbs: Double,
     maxEvents: Double,
@@ -103,7 +103,7 @@ object IFinalConfig {
         ret
     }
     @scala.inline
-    def withEndpoints(value: AnonNotify): Self = {
+    def withEndpoints(value: Notify): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("endpoints")(value.asInstanceOf[js.Any])
         ret

@@ -1,11 +1,11 @@
 package typingsSlinky.blueprintjsCore.radioGroupMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
 import typingsSlinky.blueprintjsCore.propsMod.IOptionProps
 import typingsSlinky.blueprintjsCore.propsMod.IProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,12 +41,12 @@ trait IRadioGroupProps extends IProps {
     * Use `event.currentTarget.value` to read the currently selected value.
     * This prop is required because this component only supports controlled usage.
     */
-  def onChange(event: SyntheticEvent[EventTarget with HTMLInputElement, Event_]): Unit = js.native
+  def onChange(event: SyntheticEvent[EventTarget with HTMLInputElement, Event]): Unit = js.native
 }
 
 object IRadioGroupProps {
   @scala.inline
-  def apply(onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit): IRadioGroupProps = {
+  def apply(onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit): IRadioGroupProps = {
     val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
     __obj.asInstanceOf[IRadioGroupProps]
   }
@@ -57,7 +57,7 @@ object IRadioGroupProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit): Self = {
+    def withOnChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

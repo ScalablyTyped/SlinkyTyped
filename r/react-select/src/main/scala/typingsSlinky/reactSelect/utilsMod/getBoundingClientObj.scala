@@ -1,7 +1,7 @@
 package typingsSlinky.reactSelect.utilsMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.reactSelect.AnonBottom
+import typingsSlinky.reactSelect.anon.Bottom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @JSImport("react-select/src/utils", "getBoundingClientObj")
 @js.native
 object getBoundingClientObj extends js.Object {
-  def apply(element: HTMLElement): AnonBottom = js.native
+  def apply(element: HTMLElement): Bottom = js.native
 }
 

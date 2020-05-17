@@ -1,6 +1,6 @@
 package typingsSlinky.node.perfHooksMod
 
-import typingsSlinky.node.AnonBuffered
+import typingsSlinky.node.anon.Buffered
 import typingsSlinky.node.asyncHooksMod.AsyncResource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,6 +20,6 @@ class PerformanceObserver protected () extends AsyncResource {
     * Property buffered defaults to false.
     * @param options
     */
-  def observe(options: AnonBuffered): Unit = js.native
+  def observe(options: Buffered): Unit = js.native
 }
 

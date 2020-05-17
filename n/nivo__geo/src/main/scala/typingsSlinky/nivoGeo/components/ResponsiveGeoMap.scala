@@ -4,9 +4,9 @@ import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.nivoGeo.AnonFeature
-import typingsSlinky.nivoGeo.PartialBox
-import typingsSlinky.nivoGeo.PartialTheme
+import typingsSlinky.nivoGeo.anon.Feature
+import typingsSlinky.nivoGeo.anon.PartialBox
+import typingsSlinky.nivoGeo.anon.PartialTheme
 import typingsSlinky.nivoGeo.mod.FeatureAccessor
 import typingsSlinky.nivoGeo.mod.GeoMapCommonProps
 import typingsSlinky.nivoGeo.mod.GeoProjectionType
@@ -64,7 +64,7 @@ object ResponsiveGeoMap {
     @scala.inline
     def theme(value: PartialTheme): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
-    def tooltip(value: ReactComponentClass[AnonFeature]): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    def tooltip(value: ReactComponentClass[Feature]): this.type = set("tooltip", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: GeoMapCommonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

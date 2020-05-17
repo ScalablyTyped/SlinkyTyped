@@ -1,8 +1,8 @@
 package typingsSlinky.jsreportCore.mod
 
-import typingsSlinky.jsreportCore.AnonAllowedModules
-import typingsSlinky.jsreportCore.AnonSilent
-import typingsSlinky.jsreportCore.PartialallowedModulesArra
+import typingsSlinky.jsreportCore.anon.AllowedModules
+import typingsSlinky.jsreportCore.anon.PartialallowedModulesArra
+import typingsSlinky.jsreportCore.anon.Silent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,9 +13,9 @@ trait Configuration extends js.Object {
   var dataDirectory: String = js.native
   var extensionsLocationCache: Boolean = js.native
   var loadConfig: Boolean = js.native
-  var logger: AnonSilent = js.native
+  var logger: Silent = js.native
   var rootDirectory: String = js.native
-  var scripts: AnonAllowedModules = js.native
+  var scripts: AllowedModules = js.native
   var tasks: PartialallowedModulesArra = js.native
   var tempDirectory: String = js.native
 }
@@ -27,9 +27,9 @@ object Configuration {
     dataDirectory: String,
     extensionsLocationCache: Boolean,
     loadConfig: Boolean,
-    logger: AnonSilent,
+    logger: Silent,
     rootDirectory: String,
-    scripts: AnonAllowedModules,
+    scripts: AllowedModules,
     tasks: PartialallowedModulesArra,
     tempDirectory: String
   ): Configuration = {
@@ -67,7 +67,7 @@ object Configuration {
         ret
     }
     @scala.inline
-    def withLogger(value: AnonSilent): Self = {
+    def withLogger(value: Silent): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
         ret
@@ -79,7 +79,7 @@ object Configuration {
         ret
     }
     @scala.inline
-    def withScripts(value: AnonAllowedModules): Self = {
+    def withScripts(value: AllowedModules): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scripts")(value.asInstanceOf[js.Any])
         ret

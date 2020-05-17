@@ -1,6 +1,6 @@
 package typingsSlinky.pizzip.mod
 
-import typingsSlinky.pizzip.AnonLevel
+import typingsSlinky.pizzip.anon.Level
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +35,7 @@ trait FileOptions extends js.Object {
     * With `STORE` (no compression), this parameter is ignored.
     * With `DEFLATE`, you can give the compression level with `compressionOptions : {level:6}` (or any level between 1 (best speed) and 9 (best compression)).
     */
-  var compressionOptions: js.UndefOr[AnonLevel | Null] = js.native
+  var compressionOptions: js.UndefOr[Level | Null] = js.native
   /**
     * Set to true if folders in the file path should be automatically created,
     * otherwise there will only be virtual folders that represent the path to the file.
@@ -137,7 +137,7 @@ object FileOptions {
         ret
     }
     @scala.inline
-    def withCompressionOptions(value: AnonLevel): Self = {
+    def withCompressionOptions(value: Level): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("compressionOptions")(value.asInstanceOf[js.Any])
         ret

@@ -10,6 +10,13 @@ import scala.scalajs.js.annotation._
 */
 trait AccessorDeclaration
   extends SignatureDeclaration
+     with HasJSDoc
      with ObjectLiteralElementLike
-     with _HasJSDoc
+
+object AccessorDeclaration {
+  @scala.inline
+  implicit def apply(value: GetAccessorDeclaration): AccessorDeclaration = value.asInstanceOf[AccessorDeclaration]
+  @scala.inline
+  implicit def apply(value: SetAccessorDeclaration): AccessorDeclaration = value.asInstanceOf[AccessorDeclaration]
+}
 

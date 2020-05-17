@@ -1,6 +1,6 @@
 package typingsSlinky.playcanvas.pc
 
-import typingsSlinky.playcanvas.AnonFps
+import typingsSlinky.playcanvas.anon.Loop
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,10 +35,8 @@ import scala.scalajs.js.annotation._
   * @property {number[]} layers An array of layer IDs ({@link pc.Layer#id}) to which this sprite should belong.
   * @property {number} drawOrder The draw order of the component. A higher value means that the component will be rendered on top of other components in the same layer.
   */
-@JSGlobal("pc.SpriteComponent")
 @js.native
-class SpriteComponent protected () extends Component {
-  def this(system: SpriteComponentSystem, entity: Entity) = this()
+trait SpriteComponent extends Component {
   /**
     * The name of the clip to play automatically when the component is enabled and the clip exists.
     */
@@ -120,7 +118,7 @@ class SpriteComponent protected () extends Component {
     * @param {number} [data.spriteAsset] - The id of the sprite asset that this clip will play.
     * @returns {pc.SpriteAnimationClip} The new clip that was added.
     */
-  def addClip(data: AnonFps): SpriteAnimationClip = js.native
+  def addClip(data: Loop): SpriteAnimationClip = js.native
   /**
     * @function
     * @name pc.SpriteComponent#clip

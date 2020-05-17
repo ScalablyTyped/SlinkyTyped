@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Excel.XmlNamespace")
 @js.native
-class XmlNamespace protected () extends js.Object {
+trait XmlNamespace extends js.Object {
   val Application: typingsSlinky.activexExcel.Excel.Application = js.native
   val Creator: XlCreator = js.native
   @JSName("Excel.XmlNamespace_typekey")
@@ -15,5 +14,72 @@ class XmlNamespace protected () extends js.Object {
   val Prefix: String = js.native
   val Uri: String = js.native
   val _Default: String = js.native
+}
+
+object XmlNamespace {
+  @scala.inline
+  def apply(
+    Application: Application,
+    Creator: XlCreator,
+    ExcelDotXmlNamespace_typekey: XmlNamespace,
+    Parent: js.Any,
+    Prefix: String,
+    Uri: String,
+    _Default: String
+  ): XmlNamespace = {
+    val __obj = js.Dynamic.literal(Application = Application.asInstanceOf[js.Any], Creator = Creator.asInstanceOf[js.Any], Parent = Parent.asInstanceOf[js.Any], Prefix = Prefix.asInstanceOf[js.Any], Uri = Uri.asInstanceOf[js.Any], _Default = _Default.asInstanceOf[js.Any])
+    __obj.updateDynamic("Excel.XmlNamespace_typekey")(ExcelDotXmlNamespace_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[XmlNamespace]
+  }
+  @scala.inline
+  implicit class XmlNamespaceOps[Self <: XmlNamespace] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplication(value: Application): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Application")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreator(value: XlCreator): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Creator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExcelDotXmlNamespace_typekey(value: XmlNamespace): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Excel.XmlNamespace_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParent(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Parent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Uri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_Default(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_Default")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

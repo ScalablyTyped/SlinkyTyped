@@ -1,6 +1,6 @@
 package typingsSlinky.ractive.mod
 
-import typingsSlinky.ractive.AnonOptional
+import typingsSlinky.ractive.anon.Optional
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ExtendOpts[T /* <: Ractive[T] */] extends BaseInitOpts[T] {
   /** A list of attributes to be reserved by a component. Any additional attributes are collected into the extra-attributes partial. */
-  var attributes: js.UndefOr[js.Array[String] | AnonOptional] = js.native
+  var attributes: js.UndefOr[js.Array[String] | Optional] = js.native
   /** The css to add to the page when the first instance of this component is rendered. */
   var css: js.UndefOr[String | CssFn] = js.native
   /** Default data to be supplied to any css functions. */
@@ -38,7 +38,7 @@ object ExtendOpts {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withAttributes(value: js.Array[String] | AnonOptional): Self[T] = {
+    def withAttributes(value: js.Array[String] | Optional): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
         ret

@@ -2,7 +2,7 @@ package typingsSlinky.antd.typographyUtilMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
-import typingsSlinky.antd.AnonContent
+import typingsSlinky.antd.anon.Content
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,6 +16,6 @@ object default extends js.Object {
     content: TagMod[Any],
     fixedContent: js.Array[TagMod[Any]],
     ellipsisStr: String
-  ): AnonContent = js.native
+  ): Content = js.native
 }
 

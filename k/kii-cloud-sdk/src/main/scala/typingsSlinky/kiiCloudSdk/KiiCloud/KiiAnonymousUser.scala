@@ -9,12 +9,33 @@ import scala.scalajs.js.annotation._
   *
   * 	When retrieving ACL from an object, test for this class to determine the subject type.
   */
-@JSGlobal("KiiCloud.KiiAnonymousUser")
 @js.native
-class KiiAnonymousUser () extends KiiACLSubject {
+trait KiiAnonymousUser extends KiiACLSubject {
   /**
     * Returns the ID of Anonymous user.
     */
   def getID(): String = js.native
+}
+
+object KiiAnonymousUser {
+  @scala.inline
+  def apply(getID: () => String): KiiAnonymousUser = {
+    val __obj = js.Dynamic.literal(getID = js.Any.fromFunction0(getID))
+    __obj.asInstanceOf[KiiAnonymousUser]
+  }
+  @scala.inline
+  implicit class KiiAnonymousUserOps[Self <: KiiAnonymousUser] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetID(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getID")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

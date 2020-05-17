@@ -4,18 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Class_Semaphore")
 @js.native
-/**
-	 * 
-	 * @brief 信号量构造函数
-	 * @param value 计数器初始数值
-	 * 
-	 * 
-	 * 
-	 */
-class ClassSemaphore () extends ClassLock {
-  def this(value: Double) = this()
+trait ClassSemaphore extends ClassLock {
   /**
   	 * 
   	 * @brief 释放一个信号量，等同于 release()

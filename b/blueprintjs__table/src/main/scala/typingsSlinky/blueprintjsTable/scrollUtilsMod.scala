@@ -1,6 +1,7 @@
 package typingsSlinky.blueprintjsTable
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.blueprintjsTable.anon.ScrollLeft
 import typingsSlinky.blueprintjsTable.blueprintjsTableStrings.horizontal
 import typingsSlinky.blueprintjsTable.blueprintjsTableStrings.vertical
 import typingsSlinky.blueprintjsTable.esmRegionsMod.IRegion
@@ -17,7 +18,7 @@ object scrollUtilsMod extends js.Object {
     currScrollTop: Double,
     getLeftOffset: js.Function1[/* columnIndex */ Double, Double],
     getTopOffset: js.Function1[/* rowIndex */ Double, Double]
-  ): AnonScrollLeft = js.native
+  ): ScrollLeft = js.native
   def getScrollPositionForRegion(
     region: IRegion,
     currScrollLeft: Double,
@@ -25,7 +26,7 @@ object scrollUtilsMod extends js.Object {
     getLeftOffset: js.Function1[/* columnIndex */ Double, Double],
     getTopOffset: js.Function1[/* rowIndex */ Double, Double],
     numFrozenRows: Double
-  ): AnonScrollLeft = js.native
+  ): ScrollLeft = js.native
   def getScrollPositionForRegion(
     region: IRegion,
     currScrollLeft: Double,
@@ -34,7 +35,7 @@ object scrollUtilsMod extends js.Object {
     getTopOffset: js.Function1[/* rowIndex */ Double, Double],
     numFrozenRows: Double,
     numFrozenColumns: Double
-  ): AnonScrollLeft = js.native
+  ): ScrollLeft = js.native
   @JSName("measureScrollBarThickness")
   def measureScrollBarThickness_horizontal(element: HTMLElement, direction: horizontal): Double = js.native
   @JSName("measureScrollBarThickness")

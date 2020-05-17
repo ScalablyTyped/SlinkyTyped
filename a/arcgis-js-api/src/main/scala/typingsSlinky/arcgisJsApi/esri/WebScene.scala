@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`not-loaded`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.failed
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.loading
@@ -178,8 +177,4 @@ trait WebScene
   def updateFrom(view: SceneView): js.Promise[_] = js.native
   def updateFrom(view: SceneView, options: WebSceneUpdateFromOptions): js.Promise[_] = js.native
 }
-
-@JSGlobal("__esri.WebScene")
-@js.native
-object WebScene extends TopLevel[WebSceneConstructor]
 

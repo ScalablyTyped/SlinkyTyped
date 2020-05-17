@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a collection of items in the Spreadsheet's context menu.
   */
-@JSGlobal("ASPxClientSpreadsheetPopupMenuItemCollection")
 @js.native
-class ASPxClientSpreadsheetPopupMenuItemCollection () extends js.Object {
+trait ASPxClientSpreadsheetPopupMenuItemCollection extends js.Object {
   /**
     * Adds the specified menu item to the end of the collection.
     * @param item An ASPxClientSpreadsheetPopupMenuItem object specifying the item to be added to the collection.
@@ -49,5 +48,78 @@ class ASPxClientSpreadsheetPopupMenuItemCollection () extends js.Object {
     * @param name A string value specifying the ASPxClientSpreadsheetPopupMenuItem.name property value of a menu item to remove from the collection.
     */
   def RemoveByName(name: String): Unit = js.native
+}
+
+object ASPxClientSpreadsheetPopupMenuItemCollection {
+  @scala.inline
+  def apply(
+    Add: ASPxClientSpreadsheetPopupMenuItem => Unit,
+    Clear: () => Unit,
+    Get: Double => ASPxClientSpreadsheetPopupMenuItem,
+    GetByName: String => ASPxClientSpreadsheetPopupMenuItem,
+    GetCount: () => Double,
+    Insert: (Double, ASPxClientSpreadsheetPopupMenuItem) => Unit,
+    Remove: Double => Unit,
+    RemoveByName: String => Unit
+  ): ASPxClientSpreadsheetPopupMenuItemCollection = {
+    val __obj = js.Dynamic.literal(Add = js.Any.fromFunction1(Add), Clear = js.Any.fromFunction0(Clear), Get = js.Any.fromFunction1(Get), GetByName = js.Any.fromFunction1(GetByName), GetCount = js.Any.fromFunction0(GetCount), Insert = js.Any.fromFunction2(Insert), Remove = js.Any.fromFunction1(Remove), RemoveByName = js.Any.fromFunction1(RemoveByName))
+    __obj.asInstanceOf[ASPxClientSpreadsheetPopupMenuItemCollection]
+  }
+  @scala.inline
+  implicit class ASPxClientSpreadsheetPopupMenuItemCollectionOps[Self <: ASPxClientSpreadsheetPopupMenuItemCollection] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdd(value: ASPxClientSpreadsheetPopupMenuItem => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Add")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withClear(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Clear")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: Double => ASPxClientSpreadsheetPopupMenuItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetByName(value: String => ASPxClientSpreadsheetPopupMenuItem): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetCount(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetCount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withInsert(value: (Double, ASPxClientSpreadsheetPopupMenuItem) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Insert")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRemove(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Remove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveByName(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RemoveByName")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

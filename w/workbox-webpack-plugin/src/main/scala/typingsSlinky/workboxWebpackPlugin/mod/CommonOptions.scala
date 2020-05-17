@@ -1,8 +1,8 @@
 package typingsSlinky.workboxWebpackPlugin.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.workboxWebpackPlugin.AnonIntegrity
-import typingsSlinky.workboxWebpackPlugin.AnonManifest
+import typingsSlinky.workboxWebpackPlugin.anon.Integrity
+import typingsSlinky.workboxWebpackPlugin.anon.Manifest
 import typingsSlinky.workboxWebpackPlugin.workboxWebpackPluginStrings.production
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +13,7 @@ trait CommonOptions extends js.Object {
   /**
   	 * A list of entries to be precached, in addition to any entries that are generated as part of the build configuration.
   	 */
-  var additionalManifestEntries: js.UndefOr[js.Array[AnonIntegrity | String]] = js.native
+  var additionalManifestEntries: js.UndefOr[js.Array[Integrity | String]] = js.native
   /**
   	 * By default, Workbox will precache assets regardless of which chunk the asset is part of.
   	 *
@@ -137,7 +137,7 @@ trait CommonOptions extends js.Object {
   	 * If `modifyUrlPrefix` or `dontCacheBustUrlsMatching` are also specified, their corresponding transformations will be applied first.
   	 */
   var manifestTransforms: js.UndefOr[
-    (js.Array[js.Function1[/* originalManifest */ js.Array[ManifestEntry], AnonManifest]]) | Null
+    (js.Array[js.Function1[/* originalManifest */ js.Array[ManifestEntry], Manifest]]) | Null
   ] = js.native
   /**
   	 * This value can be used to determine the maximum size of files that will be precached. This prevents you from inadvertantly precaching very large files that might have
@@ -208,7 +208,7 @@ object CommonOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAdditionalManifestEntries(value: js.Array[AnonIntegrity | String]): Self = {
+    def withAdditionalManifestEntries(value: js.Array[Integrity | String]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("additionalManifestEntries")(value.asInstanceOf[js.Any])
         ret
@@ -370,7 +370,7 @@ object CommonOptions {
         ret
     }
     @scala.inline
-    def withManifestTransforms(value: js.Array[js.Function1[/* originalManifest */ js.Array[ManifestEntry], AnonManifest]]): Self = {
+    def withManifestTransforms(value: js.Array[js.Function1[/* originalManifest */ js.Array[ManifestEntry], Manifest]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("manifestTransforms")(value.asInstanceOf[js.Any])
         ret

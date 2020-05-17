@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientReseller.gapi.client.reseller
 
-import typingsSlinky.gapiClientReseller.AnonCommitmentInterval
-import typingsSlinky.gapiClientReseller.AnonIsInTrial
-import typingsSlinky.gapiClientReseller.AnonMinimumTransferableSeats
+import typingsSlinky.gapiClientReseller.anon.CommitmentInterval
+import typingsSlinky.gapiClientReseller.anon.IsInTrial
+import typingsSlinky.gapiClientReseller.anon.MinimumTransferableSeats
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +31,7 @@ trait Subscription extends js.Object {
     * The plan property is required. In this version of the API, the G Suite plans are the flexible plan, annual commitment plan, and the 30-day free trial
     * plan. For more information about the API"s payment plans, see the API concepts.
     */
-  var plan: js.UndefOr[AnonCommitmentInterval] = js.native
+  var plan: js.UndefOr[CommitmentInterval] = js.native
   /**
     * This is an optional property. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value
     * is given it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters.
@@ -77,9 +77,9 @@ trait Subscription extends js.Object {
     */
   var suspensionReasons: js.UndefOr[js.Array[String]] = js.native
   /** Read-only transfer related information for the subscription. For more information, see retrieve transferable subscriptions for a customer. */
-  var transferInfo: js.UndefOr[AnonMinimumTransferableSeats] = js.native
+  var transferInfo: js.UndefOr[MinimumTransferableSeats] = js.native
   /** The G Suite annual commitment and flexible payment plans can be in a 30-day free trial. For more information, see the API concepts. */
-  var trialSettings: js.UndefOr[AnonIsInTrial] = js.native
+  var trialSettings: js.UndefOr[IsInTrial] = js.native
 }
 
 object Subscription {
@@ -167,7 +167,7 @@ object Subscription {
         ret
     }
     @scala.inline
-    def withPlan(value: AnonCommitmentInterval): Self = {
+    def withPlan(value: CommitmentInterval): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("plan")(value.asInstanceOf[js.Any])
         ret
@@ -287,7 +287,7 @@ object Subscription {
         ret
     }
     @scala.inline
-    def withTransferInfo(value: AnonMinimumTransferableSeats): Self = {
+    def withTransferInfo(value: MinimumTransferableSeats): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("transferInfo")(value.asInstanceOf[js.Any])
         ret
@@ -299,7 +299,7 @@ object Subscription {
         ret
     }
     @scala.inline
-    def withTrialSettings(value: AnonIsInTrial): Self = {
+    def withTrialSettings(value: IsInTrial): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("trialSettings")(value.asInstanceOf[js.Any])
         ret

@@ -3,7 +3,7 @@ package typingsSlinky.reactNavigation.mod
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.ViewProps
-import typingsSlinky.reactNavigation.AnonBottom
+import typingsSlinky.reactNavigation.anon.Bottom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SafeAreaViewProps extends ViewProps {
   var children: js.UndefOr[TagMod[Any]] = js.native
-  var forceInset: js.UndefOr[AnonBottom] = js.native
+  var forceInset: js.UndefOr[Bottom] = js.native
 }
 
 object SafeAreaViewProps {
@@ -45,7 +45,7 @@ object SafeAreaViewProps {
         ret
     }
     @scala.inline
-    def withForceInset(value: AnonBottom): Self = {
+    def withForceInset(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("forceInset")(value.asInstanceOf[js.Any])
         ret

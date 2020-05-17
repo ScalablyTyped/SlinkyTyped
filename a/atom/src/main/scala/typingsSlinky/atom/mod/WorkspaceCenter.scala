@@ -1,6 +1,5 @@
 package typingsSlinky.atom.mod
 
-import typingsSlinky.atom.AnonPane
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -51,7 +50,7 @@ trait WorkspaceCenter extends js.Object {
     */
   def observeTextEditors(callback: js.Function1[/* editor */ TextEditor, Unit]): Disposable = js.native
   /** Invoke the given callback when a pane is added to the workspace center. */
-  def onDidAddPane(callback: js.Function1[/* event */ AnonPane, Unit]): Disposable = js.native
+  def onDidAddPane(callback: js.Function1[/* event */ typingsSlinky.atom.anon.Pane, Unit]): Disposable = js.native
   /** Invoke the given callback when a pane item is added to the workspace center. */
   def onDidAddPaneItem(callback: js.Function1[/* event */ PaneItemObservedEvent, Unit]): Disposable = js.native
   /** Invoke the given callback when a text editor is added to the workspace center. */
@@ -61,13 +60,13 @@ trait WorkspaceCenter extends js.Object {
   /** Invoke the given callback when the active pane item changes. */
   def onDidChangeActivePaneItem(callback: js.Function1[/* item */ js.Object, Unit]): Disposable = js.native
   /** Invoke the given callback when a pane is destroyed in the workspace center. */
-  def onDidDestroyPane(callback: js.Function1[/* event */ AnonPane, Unit]): Disposable = js.native
+  def onDidDestroyPane(callback: js.Function1[/* event */ typingsSlinky.atom.anon.Pane, Unit]): Disposable = js.native
   /** Invoke the given callback when a pane item is destroyed. */
   def onDidDestroyPaneItem(callback: js.Function1[/* event */ PaneItemObservedEvent, Unit]): Disposable = js.native
   /** Invoke the given callback when the active pane item stops changing. */
   def onDidStopChangingActivePaneItem(callback: js.Function1[/* item */ js.Object, Unit]): Disposable = js.native
   /** Invoke the given callback before a pane is destroyed in the workspace center. */
-  def onWillDestroyPane(callback: js.Function1[/* event */ AnonPane, Unit]): Disposable = js.native
+  def onWillDestroyPane(callback: js.Function1[/* event */ typingsSlinky.atom.anon.Pane, Unit]): Disposable = js.native
   /**
     *  Invoke the given callback when a pane item is about to be destroyed, before the user
     *  is prompted to save it.
@@ -101,15 +100,15 @@ object WorkspaceCenter {
     observePaneItems: js.Function1[/* item */ js.Object, Unit] => Disposable,
     observePanes: js.Function1[/* pane */ Pane, Unit] => Disposable,
     observeTextEditors: js.Function1[/* editor */ TextEditor, Unit] => Disposable,
-    onDidAddPane: js.Function1[/* event */ AnonPane, Unit] => Disposable,
+    onDidAddPane: js.Function1[/* event */ typingsSlinky.atom.anon.Pane, Unit] => Disposable,
     onDidAddPaneItem: js.Function1[/* event */ PaneItemObservedEvent, Unit] => Disposable,
     onDidAddTextEditor: js.Function1[/* event */ TextEditorObservedEvent, Unit] => Disposable,
     onDidChangeActivePane: js.Function1[/* pane */ Pane, Unit] => Disposable,
     onDidChangeActivePaneItem: js.Function1[/* item */ js.Object, Unit] => Disposable,
-    onDidDestroyPane: js.Function1[/* event */ AnonPane, Unit] => Disposable,
+    onDidDestroyPane: js.Function1[/* event */ typingsSlinky.atom.anon.Pane, Unit] => Disposable,
     onDidDestroyPaneItem: js.Function1[/* event */ PaneItemObservedEvent, Unit] => Disposable,
     onDidStopChangingActivePaneItem: js.Function1[/* item */ js.Object, Unit] => Disposable,
-    onWillDestroyPane: js.Function1[/* event */ AnonPane, Unit] => Disposable,
+    onWillDestroyPane: js.Function1[/* event */ typingsSlinky.atom.anon.Pane, Unit] => Disposable,
     onWillDestroyPaneItem: js.Function1[/* event */ PaneItemObservedEvent, Unit | js.Promise[Unit]] => Disposable,
     paneForItem: js.Object => js.UndefOr[Pane],
     paneForURI: String => js.UndefOr[Pane],
@@ -209,7 +208,7 @@ object WorkspaceCenter {
         ret
     }
     @scala.inline
-    def withOnDidAddPane(value: js.Function1[/* event */ AnonPane, Unit] => Disposable): Self = {
+    def withOnDidAddPane(value: js.Function1[/* event */ typingsSlinky.atom.anon.Pane, Unit] => Disposable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDidAddPane")(js.Any.fromFunction1(value))
         ret
@@ -239,7 +238,7 @@ object WorkspaceCenter {
         ret
     }
     @scala.inline
-    def withOnDidDestroyPane(value: js.Function1[/* event */ AnonPane, Unit] => Disposable): Self = {
+    def withOnDidDestroyPane(value: js.Function1[/* event */ typingsSlinky.atom.anon.Pane, Unit] => Disposable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDidDestroyPane")(js.Any.fromFunction1(value))
         ret
@@ -257,7 +256,7 @@ object WorkspaceCenter {
         ret
     }
     @scala.inline
-    def withOnWillDestroyPane(value: js.Function1[/* event */ AnonPane, Unit] => Disposable): Self = {
+    def withOnWillDestroyPane(value: js.Function1[/* event */ typingsSlinky.atom.anon.Pane, Unit] => Disposable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onWillDestroyPane")(js.Any.fromFunction1(value))
         ret

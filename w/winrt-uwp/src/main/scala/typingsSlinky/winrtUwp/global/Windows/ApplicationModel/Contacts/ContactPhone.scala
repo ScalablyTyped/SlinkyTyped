@@ -1,0 +1,13 @@
+package typingsSlinky.winrtUwp.global.Windows.ApplicationModel.Contacts
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Represents info about the phone for a contact. */
+@JSGlobal("Windows.ApplicationModel.Contacts.ContactPhone")
+@js.native
+/** Initializes a new instance of a ContactPhone class. */
+class ContactPhone ()
+  extends typingsSlinky.winrtUwp.Windows.ApplicationModel.Contacts.ContactPhone
+

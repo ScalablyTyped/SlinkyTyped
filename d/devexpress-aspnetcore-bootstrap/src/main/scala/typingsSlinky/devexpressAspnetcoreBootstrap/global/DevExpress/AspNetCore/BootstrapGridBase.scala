@@ -1,0 +1,11 @@
+package typingsSlinky.devexpressAspnetcoreBootstrap.global.DevExpress.AspNetCore
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("DevExpress.AspNetCore.BootstrapGridBase")
+@js.native
+class BootstrapGridBase ()
+  extends typingsSlinky.devexpressAspnetcoreBootstrap.DevExpress.AspNetCore.BootstrapGridBase
+

@@ -5,10 +5,6 @@ import org.scalajs.dom.raw.File
 import org.scalajs.dom.raw.PointerEvent
 import org.scalajs.dom.raw.PointerEventInit
 import org.scalajs.dom.raw.ProgressEvent
-import typingsSlinky.babylonjs.AnonAnimations
-import typingsSlinky.babylonjs.AnonMax
-import typingsSlinky.babylonjs.AnonOriginalValue
-import typingsSlinky.babylonjs.PartialIEnvironmentHelper
 import typingsSlinky.babylonjs.abstractActionManagerMod.AbstractActionManager
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
 import typingsSlinky.babylonjs.abstractSceneMod.AbstractScene
@@ -16,6 +12,10 @@ import typingsSlinky.babylonjs.animatableMod.Animatable
 import typingsSlinky.babylonjs.animationGroupMod.AnimationGroup
 import typingsSlinky.babylonjs.animationMod.Animation
 import typingsSlinky.babylonjs.animationPropertiesOverrideMod.AnimationPropertiesOverride
+import typingsSlinky.babylonjs.anon.Animations
+import typingsSlinky.babylonjs.anon.Max
+import typingsSlinky.babylonjs.anon.OriginalValue
+import typingsSlinky.babylonjs.anon.PartialIEnvironmentHelper
 import typingsSlinky.babylonjs.baseTextureMod.BaseTexture
 import typingsSlinky.babylonjs.boneMod.Bone
 import typingsSlinky.babylonjs.boundingBoxRendererMod.BoundingBoxRenderer
@@ -1064,9 +1064,9 @@ class Scene protected () extends AbstractScene {
   /** @hidden */
   def _processLateAnimationBindings(): Unit = js.native
   /** @hidden */
-  def _processLateAnimationBindingsForMatrices(holder: AnonAnimations): js.Any = js.native
+  def _processLateAnimationBindingsForMatrices(holder: Animations): js.Any = js.native
   /** @hidden */
-  def _processLateAnimationBindingsForQuaternions(holder: AnonOriginalValue, refQuaternion: Quaternion): Quaternion = js.native
+  def _processLateAnimationBindingsForQuaternions(holder: OriginalValue, refQuaternion: Quaternion): Quaternion = js.native
   /** @hidden */
   def _readFile(file: File, onSuccess: js.Function1[/* data */ String | js.typedarray.ArrayBuffer, Unit]): IFileRequest = js.native
   def _readFile(
@@ -2240,8 +2240,8 @@ class Scene protected () extends AbstractScene {
     * @param filterPredicate the predicate - which meshes should be included when calculating the world size
     * @returns {{ min: Vector3; max: Vector3 }} min and max vectors
     */
-  def getWorldExtends(): AnonMax = js.native
-  def getWorldExtends(filterPredicate: js.Function1[/* mesh */ AbstractMesh, Boolean]): AnonMax = js.native
+  def getWorldExtends(): Max = js.native
+  def getWorldExtends(filterPredicate: js.Function1[/* mesh */ AbstractMesh, Boolean]): Max = js.native
   /**
     * Default image processing configuration used either in the rendering
     * Forward main pass or through the imageProcessingPostProcess if present.

@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobileRn.listItemNativeMod
 
-import typingsSlinky.antdMobileRn.AnonArrow
+import typingsSlinky.antdMobileRn.anon.Arrow
 import typingsSlinky.antdMobileRn.listPropsTypeMod.ListItemPropsType
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -14,7 +14,7 @@ trait ListItemProps extends ListItemPropsType {
   var onPressIn: js.UndefOr[js.Function0[Unit]] = js.native
   var onPressOut: js.UndefOr[js.Function0[Unit]] = js.native
   var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var styles: js.UndefOr[AnonArrow] = js.native
+  var styles: js.UndefOr[Arrow] = js.native
 }
 
 object ListItemProps {
@@ -84,7 +84,7 @@ object ListItemProps {
         ret
     }
     @scala.inline
-    def withStyles(value: AnonArrow): Self = {
+    def withStyles(value: Arrow): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
         ret

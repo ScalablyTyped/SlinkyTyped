@@ -1,42 +1,44 @@
 package typingsSlinky.wordpressApiFetch.mod.Schema
 
 import typingsSlinky.std.Record
-import typingsSlinky.wordpressApiFetch.AnonAddnewitem
-import typingsSlinky.wordpressApiFetch.AnonAssignterms
-import typingsSlinky.wordpressApiFetch.AnonDictk
-import typingsSlinky.wordpressApiFetch.AnonPublic
+import typingsSlinky.wordpressApiFetch.anon.Addnewitem
+import typingsSlinky.wordpressApiFetch.anon.Assignterms
+import typingsSlinky.wordpressApiFetch.anon.Dictk
+import typingsSlinky.wordpressApiFetch.anon.Public
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait BaseTaxonomy[T /* <: Context */] extends BaseResponse {
-  var capabilities: AnonAssignterms = js.native
+trait BaseTaxonomy[T /* <: Context */]
+  extends BaseResponse
+     with Taxonomy[T] {
+  var capabilities: Assignterms = js.native
   var description: String = js.native
   var hierarchical: Boolean = js.native
-  var labels: AnonAddnewitem = js.native
+  var labels: Addnewitem = js.native
   var name: String = js.native
   var rest_base: String = js.native
   var show_cloud: Boolean = js.native
   var slug: String = js.native
   var types: js.Array[String] = js.native
-  var visibility: AnonPublic = js.native
+  var visibility: Public = js.native
 }
 
 object BaseTaxonomy {
   @scala.inline
   def apply[T](
-    _links: Record[String, js.Array[AnonDictk]],
-    capabilities: AnonAssignterms,
+    _links: Record[String, js.Array[Dictk]],
+    capabilities: Assignterms,
     description: String,
     hierarchical: Boolean,
-    labels: AnonAddnewitem,
+    labels: Addnewitem,
     name: String,
     rest_base: String,
     show_cloud: Boolean,
     slug: String,
     types: js.Array[String],
-    visibility: AnonPublic
+    visibility: Public
   ): BaseTaxonomy[T] = {
     val __obj = js.Dynamic.literal(_links = _links.asInstanceOf[js.Any], capabilities = capabilities.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], hierarchical = hierarchical.asInstanceOf[js.Any], labels = labels.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], rest_base = rest_base.asInstanceOf[js.Any], show_cloud = show_cloud.asInstanceOf[js.Any], slug = slug.asInstanceOf[js.Any], types = types.asInstanceOf[js.Any], visibility = visibility.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseTaxonomy[T]]
@@ -48,7 +50,7 @@ object BaseTaxonomy {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withCapabilities(value: AnonAssignterms): Self[T] = {
+    def withCapabilities(value: Assignterms): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("capabilities")(value.asInstanceOf[js.Any])
         ret
@@ -66,7 +68,7 @@ object BaseTaxonomy {
         ret
     }
     @scala.inline
-    def withLabels(value: AnonAddnewitem): Self[T] = {
+    def withLabels(value: Addnewitem): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
         ret
@@ -102,7 +104,7 @@ object BaseTaxonomy {
         ret
     }
     @scala.inline
-    def withVisibility(value: AnonPublic): Self[T] = {
+    def withVisibility(value: Public): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("visibility")(value.asInstanceOf[js.Any])
         ret

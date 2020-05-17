@@ -1,9 +1,9 @@
 package typingsSlinky.autolinker.autolinkerMod
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.autolinker.AnonEmail
-import typingsSlinky.autolinker.AnonHashtag
 import typingsSlinky.autolinker.anchorTagBuilderMod.AnchorTagBuilderCfg
+import typingsSlinky.autolinker.anon.Email
+import typingsSlinky.autolinker.anon.Hashtag
 import typingsSlinky.autolinker.htmlTagMod.HtmlTagCfg
 import typingsSlinky.autolinker.matchMatchMod.Match
 import scala.scalajs.js
@@ -42,12 +42,12 @@ object default extends js.Object {
     * For backwards compatibility with Autolinker 1.x, the Match classes are
     * provided as statics on the Autolinker class.
     */
-  val `match`: AnonHashtag = js.native
+  val `match`: Hashtag = js.native
   /**
     * For backwards compatibility with Autolinker 1.x, the Matcher classes are
     * provided as statics on the Autolinker class.
     */
-  val matcher: AnonEmail = js.native
+  val matcher: Email = js.native
   /**
     * @static
     * @property {String} version

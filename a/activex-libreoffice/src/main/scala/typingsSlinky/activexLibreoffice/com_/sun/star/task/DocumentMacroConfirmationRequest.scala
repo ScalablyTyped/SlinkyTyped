@@ -1,0 +1,79 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.task
+
+import typingsSlinky.activexLibreoffice.com_.sun.star.embed.XStorage
+import typingsSlinky.activexLibreoffice.com_.sun.star.security.DocumentSignatureInformation
+import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
+import typingsSlinky.std.SafeArray
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** describes the request to approve or deny the execution of macros contained in a document. */
+@js.native
+trait DocumentMacroConfirmationRequest extends ClassifiedInteractionRequest {
+  /** contains information about the signatures in the document */
+  var DocumentSignatureInformation: SafeArray[
+    typingsSlinky.activexLibreoffice.com_.sun.star.security.DocumentSignatureInformation
+  ] = js.native
+  /**
+    * refers to the storage related to the last committed version of the document.
+    *
+    * This storage is necessary e.g. for displaying the existing signatures to the user, to allow them a decision whether or not to trust those signatures
+    * and thus the signed macros.
+    * @see com.sun.star.security.XDocumentDigitalSignatures.showScriptingContentSignatures
+    */
+  var DocumentStorage: XStorage = js.native
+  /** specifies the URL of the document which contains macros whose execution should be approved or rejected. */
+  var DocumentURL: String = js.native
+  /** contains information about the ODF version of the document */
+  var DocumentVersion: String = js.native
+}
+
+object DocumentMacroConfirmationRequest {
+  @scala.inline
+  def apply(
+    Classification: InteractionClassification,
+    Context: XInterface,
+    DocumentSignatureInformation: SafeArray[DocumentSignatureInformation],
+    DocumentStorage: XStorage,
+    DocumentURL: String,
+    DocumentVersion: String,
+    Message: String
+  ): DocumentMacroConfirmationRequest = {
+    val __obj = js.Dynamic.literal(Classification = Classification.asInstanceOf[js.Any], Context = Context.asInstanceOf[js.Any], DocumentSignatureInformation = DocumentSignatureInformation.asInstanceOf[js.Any], DocumentStorage = DocumentStorage.asInstanceOf[js.Any], DocumentURL = DocumentURL.asInstanceOf[js.Any], DocumentVersion = DocumentVersion.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DocumentMacroConfirmationRequest]
+  }
+  @scala.inline
+  implicit class DocumentMacroConfirmationRequestOps[Self <: DocumentMacroConfirmationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDocumentSignatureInformation(value: SafeArray[DocumentSignatureInformation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentSignatureInformation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDocumentStorage(value: XStorage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentStorage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDocumentURL(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentURL")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDocumentVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DocumentVersion")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

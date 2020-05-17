@@ -4,20 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Slick.Range")
 @js.native
-class Range protected () extends js.Object {
-  /**
-  		* A structure containing a range of cells.
-  		* @constructor
-  		* @param fromRow {Integer} Starting row.
-  		* @param fromCell {Integer} Starting cell.
-  		* @param toRow {Integer} Optional. Ending row. Defaults to <code>fromRow</code>.
-  		* @param toCell {Integer} Optional. Ending cell. Defaults to <code>fromCell</code>.
-  		**/
-  def this(fromRow: Double, fromCell: Double) = this()
-  def this(fromRow: Double, fromCell: Double, toRow: Double) = this()
-  def this(fromRow: Double, fromCell: Double, toRow: Double, toCell: Double) = this()
+trait Range extends js.Object {
   /***
   		* @property fromCell
   		* @type {Integer}
@@ -58,5 +46,71 @@ class Range protected () extends js.Object {
   		* @return {Boolean}
   		*/
   def isSingleRow(): Boolean = js.native
+}
+
+object Range {
+  @scala.inline
+  def apply(
+    contains: (Double, Double) => Boolean,
+    fromCell: Double,
+    fromRow: Double,
+    isSingleCell: () => Boolean,
+    isSingleRow: () => Boolean,
+    toCell: Double,
+    toRow: Double
+  ): Range = {
+    val __obj = js.Dynamic.literal(contains = js.Any.fromFunction2(contains), fromCell = fromCell.asInstanceOf[js.Any], fromRow = fromRow.asInstanceOf[js.Any], isSingleCell = js.Any.fromFunction0(isSingleCell), isSingleRow = js.Any.fromFunction0(isSingleRow), toCell = toCell.asInstanceOf[js.Any], toRow = toRow.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Range]
+  }
+  @scala.inline
+  implicit class RangeOps[Self <: Range] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContains(value: (Double, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withFromCell(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromCell")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFromRow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsSingleCell(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSingleCell")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsSingleRow(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSingleRow")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withToCell(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toCell")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToRow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

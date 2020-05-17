@@ -13,11 +13,11 @@ object ThemeWrapper {
   @js.native
   object component extends js.Object
   
-  def withProps(p: ThemeWrapperProps): Default[tag.type, typingsSlinky.materialUi.MaterialUI.ThemeWrapper] = new Default[tag.type, typingsSlinky.materialUi.MaterialUI.ThemeWrapper](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: ThemeWrapperProps): Default[tag.type, typingsSlinky.materialUi.global.MaterialUI.ThemeWrapper] = new Default[tag.type, typingsSlinky.materialUi.global.MaterialUI.ThemeWrapper](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(theme: MuiTheme): Default[tag.type, typingsSlinky.materialUi.MaterialUI.ThemeWrapper] = {
+  def apply(theme: MuiTheme): Default[tag.type, typingsSlinky.materialUi.global.MaterialUI.ThemeWrapper] = {
     val __props = js.Dynamic.literal(theme = theme.asInstanceOf[js.Any])
-    new Default[tag.type, typingsSlinky.materialUi.MaterialUI.ThemeWrapper](js.Array(this.component, __props.asInstanceOf[ThemeWrapperProps]))
+    new Default[tag.type, typingsSlinky.materialUi.global.MaterialUI.ThemeWrapper](js.Array(this.component, __props.asInstanceOf[ThemeWrapperProps]))
   }
 }
 

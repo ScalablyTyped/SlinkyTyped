@@ -33,18 +33,6 @@ object ErrorMutationResult {
         ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
         ret
     }
-    @scala.inline
-    def withData(value: scala.Nothing): Self[TResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutData: Self[TResult] = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
   }
   
 }

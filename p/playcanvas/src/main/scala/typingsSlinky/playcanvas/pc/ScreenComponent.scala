@@ -20,10 +20,8 @@ import scala.scalajs.js.annotation._
   * @property {pc.Vec2} resolution The width and height of the ScreenComponent. When screenSpace is true the resolution will always be equal to {@link pc.GraphicsDevice#width} x {@link pc.GraphicsDevice#height}.
   * @property {pc.Vec2} referenceResolution The resolution that the ScreenComponent is designed for. This is only taken into account when screenSpace is true and scaleMode is {@link pc.SCALEMODE_BLEND}. If the actual resolution is different then the ScreenComponent will be scaled according to the scaleBlend value.
   */
-@JSGlobal("pc.ScreenComponent")
 @js.native
-class ScreenComponent protected () extends Component {
-  def this(system: ScreenComponentSystem, entity: Entity) = this()
+trait ScreenComponent extends Component {
   /**
     * If true then elements inside this screen will be not be rendered when outside of the screen (only valid when screenSpace is true).
     */

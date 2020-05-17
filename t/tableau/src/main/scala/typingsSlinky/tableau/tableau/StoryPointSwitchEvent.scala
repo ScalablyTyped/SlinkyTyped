@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("tableau.StoryPointSwitchEvent")
 @js.native
-class StoryPointSwitchEvent () extends TableauEvent {
+trait StoryPointSwitchEvent extends TableauEvent {
   /** Gets the StoryPoint that is currently active. */
   def getNewStoryPoint(): StoryPoint = js.native
   /**
@@ -15,5 +14,38 @@ class StoryPointSwitchEvent () extends TableauEvent {
     * The returned object reflects the state of the story point after the switch occured.
     */
   def getOldStoryPointInfo(): StoryPointInfo = js.native
+}
+
+object StoryPointSwitchEvent {
+  @scala.inline
+  def apply(
+    getEventName: () => TableauEventName,
+    getNewStoryPoint: () => StoryPoint,
+    getOldStoryPointInfo: () => StoryPointInfo,
+    getViz: () => Viz
+  ): StoryPointSwitchEvent = {
+    val __obj = js.Dynamic.literal(getEventName = js.Any.fromFunction0(getEventName), getNewStoryPoint = js.Any.fromFunction0(getNewStoryPoint), getOldStoryPointInfo = js.Any.fromFunction0(getOldStoryPointInfo), getViz = js.Any.fromFunction0(getViz))
+    __obj.asInstanceOf[StoryPointSwitchEvent]
+  }
+  @scala.inline
+  implicit class StoryPointSwitchEventOps[Self <: StoryPointSwitchEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetNewStoryPoint(value: () => StoryPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNewStoryPoint")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetOldStoryPointInfo(value: () => StoryPointInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getOldStoryPointInfo")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

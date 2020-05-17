@@ -58,9 +58,8 @@ import scala.scalajs.js.annotation._
   * @property {number} depthBias Offsets the output depth buffer value. Useful for decals to prevent z-fighting.
   * @property {number} slopeDepthBias Same as {@link pc.Material#depthBias}, but also depends on the slope of the triangle relative to the camera.
   */
-@JSGlobal("pc.Material")
 @js.native
-class Material () extends js.Object {
+trait Material extends js.Object {
   /**
     * The alpha test reference value to control which fragments are written to the currently
     * active render target based on alpha value. All fragments with an alpha value of less than the alphaTest reference value

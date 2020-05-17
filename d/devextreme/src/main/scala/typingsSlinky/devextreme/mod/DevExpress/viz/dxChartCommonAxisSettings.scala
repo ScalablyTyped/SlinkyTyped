@@ -1,8 +1,8 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonColorOpacity
-import typingsSlinky.devextreme.AnonLength
-import typingsSlinky.devextreme.AnonLine
+import typingsSlinky.devextreme.anon.ColorOpacity
+import typingsSlinky.devextreme.anon.Length
+import typingsSlinky.devextreme.anon.Line
 import typingsSlinky.devextreme.devextremeStrings.betweenLabels
 import typingsSlinky.devextreme.devextremeStrings.crossLabels
 import scala.scalajs.js
@@ -14,7 +14,7 @@ trait dxChartCommonAxisSettings extends js.Object {
   /** Specifies whether to allow decimal values on the axis. When false, the axis contains integer values only. */
   var allowDecimals: js.UndefOr[Boolean] = js.native
   /** Configures the scale breaks' appearance. */
-  var breakStyle: js.UndefOr[AnonLine] = js.native
+  var breakStyle: js.UndefOr[Line] = js.native
   /** Specifies the color of the axis line. */
   var color: js.UndefOr[String] = js.native
   /** Configures the appearance of all constant lines in the widget. */
@@ -24,7 +24,7 @@ trait dxChartCommonAxisSettings extends js.Object {
   /** Specifies whether to force the axis to start and end on ticks. */
   var endOnTick: js.UndefOr[Boolean] = js.native
   /** Configures the grid. */
-  var grid: js.UndefOr[AnonColorOpacity] = js.native
+  var grid: js.UndefOr[ColorOpacity] = js.native
   /** Inverts the axis. */
   var inverted: js.UndefOr[Boolean] = js.native
   /** Configures axis labels. */
@@ -34,9 +34,9 @@ trait dxChartCommonAxisSettings extends js.Object {
   /** Controls the empty space between the minimum series points and the axis. Applies only to the axes of the "continuous" and "logarithmic" type. */
   var minValueMargin: js.UndefOr[Double] = js.native
   /** Configures the minor grid. */
-  var minorGrid: js.UndefOr[AnonColorOpacity] = js.native
+  var minorGrid: js.UndefOr[ColorOpacity] = js.native
   /** Configures the appearance of minor axis ticks. */
-  var minorTick: js.UndefOr[AnonLength] = js.native
+  var minorTick: js.UndefOr[Length] = js.native
   /** Specifies how transparent the axis line should be. */
   var opacity: js.UndefOr[Double] = js.native
   /** Reserves a pixel-measured space for the axis. */
@@ -44,7 +44,7 @@ trait dxChartCommonAxisSettings extends js.Object {
   /** Configures the appearance of strips. */
   var stripStyle: js.UndefOr[dxChartCommonAxisSettingsStripStyle] = js.native
   /** Configures the appearance of major axis ticks. */
-  var tick: js.UndefOr[AnonLength] = js.native
+  var tick: js.UndefOr[Length] = js.native
   /** Configures axis titles. */
   var title: js.UndefOr[dxChartCommonAxisSettingsTitle] = js.native
   /** Adds an empty space between the axis and the minimum and maximum series points. */
@@ -80,7 +80,7 @@ object dxChartCommonAxisSettings {
         ret
     }
     @scala.inline
-    def withBreakStyle(value: AnonLine): Self = {
+    def withBreakStyle(value: Line): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("breakStyle")(value.asInstanceOf[js.Any])
         ret
@@ -140,7 +140,7 @@ object dxChartCommonAxisSettings {
         ret
     }
     @scala.inline
-    def withGrid(value: AnonColorOpacity): Self = {
+    def withGrid(value: ColorOpacity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(value.asInstanceOf[js.Any])
         ret
@@ -200,7 +200,7 @@ object dxChartCommonAxisSettings {
         ret
     }
     @scala.inline
-    def withMinorGrid(value: AnonColorOpacity): Self = {
+    def withMinorGrid(value: ColorOpacity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("minorGrid")(value.asInstanceOf[js.Any])
         ret
@@ -212,7 +212,7 @@ object dxChartCommonAxisSettings {
         ret
     }
     @scala.inline
-    def withMinorTick(value: AnonLength): Self = {
+    def withMinorTick(value: Length): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("minorTick")(value.asInstanceOf[js.Any])
         ret
@@ -260,7 +260,7 @@ object dxChartCommonAxisSettings {
         ret
     }
     @scala.inline
-    def withTick(value: AnonLength): Self = {
+    def withTick(value: Length): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tick")(value.asInstanceOf[js.Any])
         ret

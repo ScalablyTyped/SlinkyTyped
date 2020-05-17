@@ -5,10 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Supports the ability to determine the capabilities of any connected mouse devices. */
-@JSGlobal("Windows.Devices.Input.MouseCapabilities")
 @js.native
-/** Initializes a new instance of the MouseCapabilities class. */
-class MouseCapabilities () extends js.Object {
+trait MouseCapabilities extends js.Object {
   /** Gets a value indicating whether any of the mice connected to the computer have a scroll wheel that tilts left and right (usually for horizontal scrolling). */
   var horizontalWheelPresent: Double = js.native
   /** Gets a value that indicates whether a mouse device is detected. */
@@ -19,5 +17,57 @@ class MouseCapabilities () extends js.Object {
   var swapButtons: Double = js.native
   /** Gets a value indicating whether any of the mice connected to the computer have a scroll wheel that rolls up and down (usually for vertical scrolling). */
   var verticalWheelPresent: Double = js.native
+}
+
+object MouseCapabilities {
+  @scala.inline
+  def apply(
+    horizontalWheelPresent: Double,
+    mousePresent: Double,
+    numberOfButtons: Double,
+    swapButtons: Double,
+    verticalWheelPresent: Double
+  ): MouseCapabilities = {
+    val __obj = js.Dynamic.literal(horizontalWheelPresent = horizontalWheelPresent.asInstanceOf[js.Any], mousePresent = mousePresent.asInstanceOf[js.Any], numberOfButtons = numberOfButtons.asInstanceOf[js.Any], swapButtons = swapButtons.asInstanceOf[js.Any], verticalWheelPresent = verticalWheelPresent.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MouseCapabilities]
+  }
+  @scala.inline
+  implicit class MouseCapabilitiesOps[Self <: MouseCapabilities] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withHorizontalWheelPresent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("horizontalWheelPresent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMousePresent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mousePresent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNumberOfButtons(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberOfButtons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSwapButtons(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("swapButtons")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVerticalWheelPresent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verticalWheelPresent")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

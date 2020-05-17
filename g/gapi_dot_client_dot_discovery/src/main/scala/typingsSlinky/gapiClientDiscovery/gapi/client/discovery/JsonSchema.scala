@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientDiscovery.gapi.client.discovery
 
-import typingsSlinky.gapiClientDiscovery.AnonDiscriminant
-import typingsSlinky.gapiClientDiscovery.AnonRequired
+import typingsSlinky.gapiClientDiscovery.anon.Discriminant
+import typingsSlinky.gapiClientDiscovery.anon.Required
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,7 @@ trait JsonSchema extends js.Object {
   /** If this is a schema for an object, this property is the schema for any additional properties with dynamic keys on this object. */
   var additionalProperties: js.UndefOr[JsonSchema] = js.native
   /** Additional information about this property. */
-  var annotations: js.UndefOr[AnonRequired] = js.native
+  var annotations: js.UndefOr[Required] = js.native
   /** The default value of this property (if one exists). */
   var default: js.UndefOr[String] = js.native
   /** A description of this object. */
@@ -58,7 +58,7 @@ trait JsonSchema extends js.Object {
     * In a variant data type, the value of one property is used to determine how to interpret the entire entity. Its value must exist in a map of
     * descriminant values to schema names.
     */
-  var variant: js.UndefOr[AnonDiscriminant] = js.native
+  var variant: js.UndefOr[Discriminant] = js.native
 }
 
 object JsonSchema {
@@ -98,7 +98,7 @@ object JsonSchema {
         ret
     }
     @scala.inline
-    def withAnnotations(value: AnonRequired): Self = {
+    def withAnnotations(value: Required): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("annotations")(value.asInstanceOf[js.Any])
         ret
@@ -302,7 +302,7 @@ object JsonSchema {
         ret
     }
     @scala.inline
-    def withVariant(value: AnonDiscriminant): Self = {
+    def withVariant(value: Discriminant): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("variant")(value.asInstanceOf[js.Any])
         ret

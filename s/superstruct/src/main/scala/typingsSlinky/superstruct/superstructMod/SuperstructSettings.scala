@@ -1,7 +1,7 @@
 package typingsSlinky.superstruct.superstructMod
 
 import typingsSlinky.std.Record
-import typingsSlinky.superstruct.AnonInstantiable
+import typingsSlinky.superstruct.anon.Instantiable
 import typingsSlinky.superstruct.typesMod.Validator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,13 +9,13 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait SuperstructSettings extends js.Object {
-  var error: AnonInstantiable = js.native
+  var error: Instantiable = js.native
   var types: Record[String, Validator] = js.native
 }
 
 object SuperstructSettings {
   @scala.inline
-  def apply(error: AnonInstantiable, types: Record[String, Validator]): SuperstructSettings = {
+  def apply(error: Instantiable, types: Record[String, Validator]): SuperstructSettings = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], types = types.asInstanceOf[js.Any])
     __obj.asInstanceOf[SuperstructSettings]
   }
@@ -26,7 +26,7 @@ object SuperstructSettings {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withError(value: AnonInstantiable): Self = {
+    def withError(value: Instantiable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret

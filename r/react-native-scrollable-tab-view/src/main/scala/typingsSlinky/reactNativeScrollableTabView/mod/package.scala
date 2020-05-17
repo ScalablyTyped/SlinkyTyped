@@ -15,6 +15,6 @@ package object mod {
     ], 
     slinky.core.facade.ReactElement
   ]
-  type TabBarProps[T] = T with typingsSlinky.reactNativeScrollableTabView.AnonActiveTab
-  type TabProps[T] = T with typingsSlinky.reactNativeScrollableTabView.AnonTabLabel
+  type TabBarProps[T] = T with typingsSlinky.reactNativeScrollableTabView.anon.ActiveTab
+  type TabProps[T] = T with typingsSlinky.reactNativeScrollableTabView.anon.TabLabel
 }

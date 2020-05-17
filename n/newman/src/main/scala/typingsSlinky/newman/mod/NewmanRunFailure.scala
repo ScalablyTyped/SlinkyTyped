@@ -1,6 +1,6 @@
 package typingsSlinky.newman.mod
 
-import typingsSlinky.newman.AnonRef
+import typingsSlinky.newman.anon.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait NewmanRunFailure extends js.Object {
   /** The event where the failure occurred */
   var at: String = js.native
-  var cursor: AnonRef | js.Object = js.native
+  var cursor: Ref | js.Object = js.native
   var error: NewmanRunExecutionAssertionError = js.native
   var parent: js.Any = js.native
   var source: js.UndefOr[NewmanRunExecutionItem] = js.native
@@ -17,7 +17,7 @@ trait NewmanRunFailure extends js.Object {
 
 object NewmanRunFailure {
   @scala.inline
-  def apply(at: String, cursor: AnonRef | js.Object, error: NewmanRunExecutionAssertionError, parent: js.Any): NewmanRunFailure = {
+  def apply(at: String, cursor: Ref | js.Object, error: NewmanRunExecutionAssertionError, parent: js.Any): NewmanRunFailure = {
     val __obj = js.Dynamic.literal(at = at.asInstanceOf[js.Any], cursor = cursor.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any])
     __obj.asInstanceOf[NewmanRunFailure]
   }
@@ -34,7 +34,7 @@ object NewmanRunFailure {
         ret
     }
     @scala.inline
-    def withCursor(value: AnonRef | js.Object): Self = {
+    def withCursor(value: Ref | js.Object): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(value.asInstanceOf[js.Any])
         ret

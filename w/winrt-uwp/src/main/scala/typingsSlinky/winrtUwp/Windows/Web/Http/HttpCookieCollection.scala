@@ -1,17 +1,16 @@
 package typingsSlinky.winrtUwp.Windows.Web.Http
 
 import typingsSlinky.std.Array
-import typingsSlinky.winrtUwp.AnonIndex
-import typingsSlinky.winrtUwp.AnonItemsHttpCookie
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
+import typingsSlinky.winrtUwp.anon.Index
+import typingsSlinky.winrtUwp.anon.ItemsHttpCookie
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides a collection container for instances of the HttpCookie class. */
-@JSGlobal("Windows.Web.Http.HttpCookieCollection")
 @js.native
-abstract class HttpCookieCollection () extends Array[HttpCookie] {
+trait HttpCookieCollection extends Array[HttpCookie] {
   /** Gets the number of cookies in the HttpCookieCollection . */
   var size: Double = js.native
   /**
@@ -29,13 +28,13 @@ abstract class HttpCookieCollection () extends Array[HttpCookie] {
     * Retrieves the HttpCookie items that start at the specified index in the HttpCookieCollection .
     * @param startIndex The zero-based index of the start of the HttpCookie items in the HttpCookieCollection .
     */
-  def getMany(startIndex: Double): AnonItemsHttpCookie = js.native
-  def indexOf(value: HttpCookie, extra: js.Any*): AnonIndex = js.native
+  def getMany(startIndex: Double): ItemsHttpCookie = js.native
+  def indexOf(value: HttpCookie, extra: js.Any*): Index = js.native
   /**
     * Retrieves the index of an HttpCookie in the HttpCookieCollection .
     * @param value The HttpCookie to find in the HttpCookieCollection .
     */
   @JSName("indexOf")
-  def indexOf_AnonIndex(value: HttpCookie): AnonIndex = js.native
+  def indexOf_Index(value: HttpCookie): Index = js.native
 }
 

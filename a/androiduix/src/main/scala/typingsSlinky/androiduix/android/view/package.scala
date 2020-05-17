@@ -12,6 +12,8 @@ package object view {
   type ScaleGestureDetector = typingsSlinky.androiduix.android.view.ScaleGestureDetector_
   type View = typingsSlinky.androiduix.android.view.View_
   type ViewGroup = typingsSlinky.androiduix.android.view.ViewGroup_
+  type ViewRootImpl = typingsSlinky.androiduix.android.view.ViewRootImpl_
   type ViewTreeObserver = typingsSlinky.androiduix.android.view.ViewTreeObserver_
   type Window = typingsSlinky.androiduix.android.view.Window_
+  type WindowManager = typingsSlinky.androiduix.android.view.WindowManager_
 }

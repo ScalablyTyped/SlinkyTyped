@@ -1,29 +1,29 @@
 package typingsSlinky.webgme.GmeCommon
 
-import typingsSlinky.webgme.AnonFilter
-import typingsSlinky.webgme.AnonLevel
-import typingsSlinky.webgme.AnonPtr
+import typingsSlinky.webgme.anon.Filter
+import typingsSlinky.webgme.anon.Level
+import typingsSlinky.webgme.anon.Ptr
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait MetaRules extends js.Object {
-  var aspects: AnonFilter = js.native
-  var attributes: AnonLevel = js.native
+  var aspects: Filter = js.native
+  var attributes: Level = js.native
   var children: MetaCardRule = js.native
   var constraints: Dictionary[typingsSlinky.webgme.Core.Constraint] = js.native
-  var pointers: AnonPtr = js.native
+  var pointers: Ptr = js.native
 }
 
 object MetaRules {
   @scala.inline
   def apply(
-    aspects: AnonFilter,
-    attributes: AnonLevel,
+    aspects: Filter,
+    attributes: Level,
     children: MetaCardRule,
     constraints: Dictionary[typingsSlinky.webgme.Core.Constraint],
-    pointers: AnonPtr
+    pointers: Ptr
   ): MetaRules = {
     val __obj = js.Dynamic.literal(aspects = aspects.asInstanceOf[js.Any], attributes = attributes.asInstanceOf[js.Any], children = children.asInstanceOf[js.Any], constraints = constraints.asInstanceOf[js.Any], pointers = pointers.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetaRules]
@@ -35,13 +35,13 @@ object MetaRules {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAspects(value: AnonFilter): Self = {
+    def withAspects(value: Filter): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("aspects")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withAttributes(value: AnonLevel): Self = {
+    def withAttributes(value: Level): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
         ret
@@ -59,7 +59,7 @@ object MetaRules {
         ret
     }
     @scala.inline
-    def withPointers(value: AnonPtr): Self = {
+    def withPointers(value: Ptr): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointers")(value.asInstanceOf[js.Any])
         ret

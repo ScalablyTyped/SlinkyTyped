@@ -1,6 +1,7 @@
 package typingsSlinky.protractor
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.protractor.anon.TypeofBy
 import typingsSlinky.protractor.browserMod.ElementHelper
 import typingsSlinky.protractor.browserMod.ProtractorBrowser
 import typingsSlinky.protractor.locatorsMod.Locator

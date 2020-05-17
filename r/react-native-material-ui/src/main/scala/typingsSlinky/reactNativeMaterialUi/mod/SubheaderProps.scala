@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeMaterialUi.mod
 
-import typingsSlinky.reactNativeMaterialUi.AnonText
+import typingsSlinky.reactNativeMaterialUi.anon.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait SubheaderProps extends js.Object {
   var inset: js.UndefOr[Boolean] = js.native
   var lines: js.UndefOr[Double] = js.native
-  var style: js.UndefOr[AnonText] = js.native
+  var style: js.UndefOr[Text] = js.native
   var text: String = js.native
 }
 
@@ -56,7 +56,7 @@ object SubheaderProps {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonText): Self = {
+    def withStyle(value: Text): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

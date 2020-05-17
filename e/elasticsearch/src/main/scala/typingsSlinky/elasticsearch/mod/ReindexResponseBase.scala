@@ -1,6 +1,6 @@
 package typingsSlinky.elasticsearch.mod
 
-import typingsSlinky.elasticsearch.AnonBulk
+import typingsSlinky.elasticsearch.anon.Bulk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait ReindexResponseBase extends js.Object {
   var deleted: Double = js.native
   var noops: Double = js.native
   var requests_per_second: Double = js.native
-  var retries: AnonBulk = js.native
+  var retries: Bulk = js.native
   var throttled_millis: Double = js.native
   var throttled_until_millis: Double = js.native
   var total: Double = js.native
@@ -26,7 +26,7 @@ object ReindexResponseBase {
     deleted: Double,
     noops: Double,
     requests_per_second: Double,
-    retries: AnonBulk,
+    retries: Bulk,
     throttled_millis: Double,
     throttled_until_millis: Double,
     total: Double,
@@ -67,7 +67,7 @@ object ReindexResponseBase {
         ret
     }
     @scala.inline
-    def withRetries(value: AnonBulk): Self = {
+    def withRetries(value: Bulk): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("retries")(value.asInstanceOf[js.Any])
         ret

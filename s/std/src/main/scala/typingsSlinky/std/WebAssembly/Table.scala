@@ -1,20 +1,15 @@
 package typingsSlinky.std.WebAssembly
 
-import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Table extends _ExportValue {
+trait Table extends ExportValue {
   val length: Double = js.native
   def get(index: Double): js.Function | Null = js.native
   def grow(delta: Double): Double = js.native
   def set(index: Double): Unit = js.native
   def set(index: Double, value: js.Function): Unit = js.native
 }
-
-@JSGlobal("WebAssembly.Table")
-@js.native
-object Table extends Instantiable1[/* descriptor */ TableDescriptor, Table]
 

@@ -1,9 +1,9 @@
 package typingsSlinky.pixiJs.mod
 
 import org.scalajs.dom.raw.HTMLCanvasElement
-import typingsSlinky.pixiJs.AnonDevice
-import typingsSlinky.pixiJs.AnonPhone
 import typingsSlinky.pixiJs.PIXI.utils.DecomposedDataUri
+import typingsSlinky.pixiJs.anon.Device
+import typingsSlinky.pixiJs.anon.Phone
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -398,13 +398,13 @@ object utils extends js.Object {
     */
   @js.native
   object isMobile extends js.Object {
-    var amazon: AnonPhone = js.native
-    var android: AnonPhone = js.native
+    var amazon: Phone = js.native
+    var android: Phone = js.native
     var any: Boolean = js.native
-    var apple: AnonDevice = js.native
+    var apple: Device = js.native
     var phone: Boolean = js.native
     var tablet: Boolean = js.native
-    var windows: AnonPhone = js.native
+    var windows: Phone = js.native
   }
   
 }

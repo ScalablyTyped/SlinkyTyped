@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojdatagridMod.ojDataGrid
 
-import typingsSlinky.oracleOraclejet.AnonColumnK
-import typingsSlinky.oracleOraclejet.AnonColumnRow
+import typingsSlinky.oracleOraclejet.anon.ColumnK
+import typingsSlinky.oracleOraclejet.anon.ColumnRow
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.cell
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.column
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.columnEnd
@@ -18,9 +18,9 @@ import scala.scalajs.js.annotation._
 trait CurrentCell[K] extends js.Object {
   var axis: js.UndefOr[column | columnEnd | row | rowEnd] = js.native
   var index: js.UndefOr[Double] = js.native
-  var indexes: js.UndefOr[AnonColumnRow] = js.native
+  var indexes: js.UndefOr[ColumnRow] = js.native
   var key: js.UndefOr[js.Any] = js.native
-  var keys: js.UndefOr[AnonColumnK[K]] = js.native
+  var keys: js.UndefOr[ColumnK[K]] = js.native
   var level: js.UndefOr[Double] = js.native
   var `type`: cell | header | label = js.native
 }
@@ -69,7 +69,7 @@ object CurrentCell {
         ret
     }
     @scala.inline
-    def withIndexes(value: AnonColumnRow): Self[K] = {
+    def withIndexes(value: ColumnRow): Self[K] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("indexes")(value.asInstanceOf[js.Any])
         ret
@@ -93,7 +93,7 @@ object CurrentCell {
         ret
     }
     @scala.inline
-    def withKeys(value: AnonColumnK[K]): Self[K] = {
+    def withKeys(value: ColumnK[K]): Self[K] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keys")(value.asInstanceOf[js.Any])
         ret

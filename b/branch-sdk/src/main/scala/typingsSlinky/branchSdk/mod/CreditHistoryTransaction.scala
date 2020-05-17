@@ -1,6 +1,6 @@
 package typingsSlinky.branchSdk.mod
 
-import typingsSlinky.branchSdk.AnonAmount
+import typingsSlinky.branchSdk.anon.Amount
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait CreditHistoryTransaction extends js.Object {
   var referree: String = js.native
   var referrer: String = js.native
-  var transaction: AnonAmount = js.native
+  var transaction: Amount = js.native
 }
 
 object CreditHistoryTransaction {
   @scala.inline
-  def apply(referree: String, referrer: String, transaction: AnonAmount): CreditHistoryTransaction = {
+  def apply(referree: String, referrer: String, transaction: Amount): CreditHistoryTransaction = {
     val __obj = js.Dynamic.literal(referree = referree.asInstanceOf[js.Any], referrer = referrer.asInstanceOf[js.Any], transaction = transaction.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreditHistoryTransaction]
   }
@@ -37,7 +37,7 @@ object CreditHistoryTransaction {
         ret
     }
     @scala.inline
-    def withTransaction(value: AnonAmount): Self = {
+    def withTransaction(value: Amount): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("transaction")(value.asInstanceOf[js.Any])
         ret

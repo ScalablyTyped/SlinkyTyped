@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonName
+import typingsSlinky.astTypes.anon.Name
 import typingsSlinky.astTypes.kindsMod.JSXExpressionContainerKind
 import typingsSlinky.astTypes.kindsMod.JSXIdentifierKind
 import typingsSlinky.astTypes.kindsMod.JSXNamespacedNameKind
@@ -18,6 +18,6 @@ trait JSXAttributeBuilder extends js.Object {
   def apply(name: JSXNamespacedNameKind): JSXAttribute = js.native
   def apply(name: JSXNamespacedNameKind, value: JSXExpressionContainerKind): JSXAttribute = js.native
   def apply(name: JSXNamespacedNameKind, value: LiteralKind): JSXAttribute = js.native
-  def from(params: AnonName): JSXAttribute = js.native
+  def from(params: Name): JSXAttribute = js.native
 }
 

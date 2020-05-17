@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,9 +16,4 @@ trait VTTCue extends TextTrackCue {
   var snapToLines: scala.Boolean = js.native
   var vertical: DirectionSetting = js.native
 }
-
-@JSGlobal("VTTCue")
-@js.native
-object VTTCue
-  extends Instantiable3[/* startTime */ Double, /* endTime */ Double, /* text */ java.lang.String, VTTCue]
 

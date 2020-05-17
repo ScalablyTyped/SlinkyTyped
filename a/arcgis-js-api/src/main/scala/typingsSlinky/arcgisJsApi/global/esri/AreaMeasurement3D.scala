@@ -1,0 +1,12 @@
+package typingsSlinky.arcgisJsApi.global.esri
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.arcgisJsApi.esri.AreaMeasurement3DConstructor
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("__esri.AreaMeasurement3D")
+@js.native
+object AreaMeasurement3D extends TopLevel[AreaMeasurement3DConstructor]
+

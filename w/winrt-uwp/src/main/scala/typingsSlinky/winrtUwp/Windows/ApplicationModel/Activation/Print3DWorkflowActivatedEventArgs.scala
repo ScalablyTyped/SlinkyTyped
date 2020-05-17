@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides information about an event that occurs when the app is launched as a 3D printing workflow. */
-@JSGlobal("Windows.ApplicationModel.Activation.Print3DWorkflowActivatedEventArgs")
 @js.native
-abstract class Print3DWorkflowActivatedEventArgs () extends js.Object {
+trait Print3DWorkflowActivatedEventArgs extends js.Object {
   /** Gets the activation type. */
   var kind: ActivationKind = js.native
   /** Gets the execution state of the app before it was activated. */
@@ -17,5 +16,50 @@ abstract class Print3DWorkflowActivatedEventArgs () extends js.Object {
   var splashScreen: SplashScreen = js.native
   /** Gets a customized printing experience for a 3D printer. */
   var workflow: Print3DWorkflow = js.native
+}
+
+object Print3DWorkflowActivatedEventArgs {
+  @scala.inline
+  def apply(
+    kind: ActivationKind,
+    previousExecutionState: ApplicationExecutionState,
+    splashScreen: SplashScreen,
+    workflow: Print3DWorkflow
+  ): Print3DWorkflowActivatedEventArgs = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], previousExecutionState = previousExecutionState.asInstanceOf[js.Any], splashScreen = splashScreen.asInstanceOf[js.Any], workflow = workflow.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Print3DWorkflowActivatedEventArgs]
+  }
+  @scala.inline
+  implicit class Print3DWorkflowActivatedEventArgsOps[Self <: Print3DWorkflowActivatedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withKind(value: ActivationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreviousExecutionState(value: ApplicationExecutionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousExecutionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSplashScreen(value: SplashScreen): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splashScreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWorkflow(value: Print3DWorkflow): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("workflow")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

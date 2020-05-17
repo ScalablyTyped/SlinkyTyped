@@ -1,7 +1,7 @@
 package typingsSlinky.i18nextSprintfPostprocessor.mod
 
 import typingsSlinky.i18next.mod.PostProcessorModule
-import typingsSlinky.i18nextSprintfPostprocessor.AnonPostProcess
+import typingsSlinky.i18nextSprintfPostprocessor.anon.PostProcess
 import typingsSlinky.i18nextSprintfPostprocessor.i18nextSprintfPostprocessorStrings.postProcessor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait I18nextSprintfPostProcessor extends PostProcessorModule {
   @JSName("type")
   var type_I18nextSprintfPostProcessor: postProcessor = js.native
-  def overloadTranslationOptionHandler(args: js.Array[String]): AnonPostProcess = js.native
+  def overloadTranslationOptionHandler(args: js.Array[String]): PostProcess = js.native
   def process(value: js.Any, key: String, options: js.Any): js.Any = js.native
 }
 
@@ -19,7 +19,7 @@ object I18nextSprintfPostProcessor {
   @scala.inline
   def apply(
     name: String,
-    overloadTranslationOptionHandler: js.Array[String] => AnonPostProcess,
+    overloadTranslationOptionHandler: js.Array[String] => PostProcess,
     process: (js.Any, String, js.Any) => js.Any,
     `type`: postProcessor
   ): I18nextSprintfPostProcessor = {
@@ -34,7 +34,7 @@ object I18nextSprintfPostProcessor {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOverloadTranslationOptionHandler(value: js.Array[String] => AnonPostProcess): Self = {
+    def withOverloadTranslationOptionHandler(value: js.Array[String] => PostProcess): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overloadTranslationOptionHandler")(js.Any.fromFunction1(value))
         ret

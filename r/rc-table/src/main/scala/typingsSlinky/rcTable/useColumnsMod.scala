@@ -1,6 +1,7 @@
 package typingsSlinky.rcTable
 
 import slinky.core.TagMod
+import typingsSlinky.rcTable.anon.Columns
 import typingsSlinky.rcTable.interfaceMod.ColumnType
 import typingsSlinky.rcTable.interfaceMod.ColumnsType
 import scala.scalajs.js
@@ -15,7 +16,7 @@ object useColumnsMod extends js.Object {
     * Parse `columns` & `children` into `columns`.
     */
   def default[RecordType](
-    hasPrefixClsColumnsChildrenExpandableExpandedKeysGetRowKeyOnTriggerExpandExpandIconRowExpandableExpandIconColumnIndexDirection: AnonColumns[RecordType],
+    hasPrefixClsColumnsChildrenExpandableExpandedKeysGetRowKeyOnTriggerExpandExpandIconRowExpandableExpandIconColumnIndexDirection: Columns[RecordType],
     transformColumns: js.Function1[/* columns */ ColumnsType[RecordType], ColumnsType[RecordType]]
   ): js.Tuple2[ColumnsType[RecordType], js.Array[ColumnType[RecordType]]] = js.native
 }

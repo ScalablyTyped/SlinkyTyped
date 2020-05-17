@@ -1,13 +1,13 @@
 package typingsSlinky.officeJs.Word
 
-import typingsSlinky.officeJs.AnonExpand
-import typingsSlinky.officeJs.AnonIgnorePunct
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.ClientResult
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJs.Word.Interfaces.ContentControlData
 import typingsSlinky.officeJs.Word.Interfaces.ContentControlLoadOptions
 import typingsSlinky.officeJs.Word.Interfaces.ContentControlUpdateData
+import typingsSlinky.officeJs.anon.Expand
+import typingsSlinky.officeJs.anon.IgnorePunct
 import typingsSlinky.officeJs.officeJsStrings.After
 import typingsSlinky.officeJs.officeJsStrings.Before
 import typingsSlinky.officeJs.officeJsStrings.BoundingBox
@@ -53,9 +53,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: WordApi 1.1]
   */
-@JSGlobal("Word.ContentControl")
 @js.native
-class ContentControl () extends ClientObject {
+trait ContentControl extends ClientObject {
   /**
     *
     * Gets or sets the appearance of the content control. The value can be 'BoundingBox', 'Tags', or 'Hidden'.
@@ -575,8 +574,8 @@ class ContentControl () extends ClientObject {
   def load(): ContentControl = js.native
   def load(option: String): ContentControl = js.native
   def load(option: js.Array[String]): ContentControl = js.native
-  def load(option: AnonExpand): ContentControl = js.native
   def load(option: ContentControlLoadOptions): ContentControl = js.native
+  def load(option: Expand): ContentControl = js.native
   /**
     *
     * Performs a search with the specified SearchOptions on the scope of the content control object. The search results are a collection of range objects.
@@ -587,8 +586,8 @@ class ContentControl () extends ClientObject {
     * @param searchOptions Optional. Options for the search.
     */
   def search(searchText: String): RangeCollection = js.native
-  def search(searchText: String, searchOptions: AnonIgnorePunct): RangeCollection = js.native
   def search(searchText: String, searchOptions: SearchOptions): RangeCollection = js.native
+  def search(searchText: String, searchOptions: IgnorePunct): RangeCollection = js.native
   /**
     *
     * Selects the content control. This causes Word to scroll to the selection.

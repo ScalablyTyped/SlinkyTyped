@@ -1,6 +1,6 @@
 package typingsSlinky.typedGithubApi.branchMod
 
-import typingsSlinky.typedGithubApi.AnonHtml
+import typingsSlinky.typedGithubApi.anon.Html
 import typingsSlinky.typedGithubApi.commitMod.CommitSummary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Branch extends js.Object {
-  var _links: AnonHtml = js.native
+  var _links: Html = js.native
   var commit: CommitSummary = js.native
   var name: String = js.native
   var `protected`: js.UndefOr[Boolean] = js.native
@@ -17,7 +17,7 @@ trait Branch extends js.Object {
 
 object Branch {
   @scala.inline
-  def apply(_links: AnonHtml, commit: CommitSummary, name: String): Branch = {
+  def apply(_links: Html, commit: CommitSummary, name: String): Branch = {
     val __obj = js.Dynamic.literal(_links = _links.asInstanceOf[js.Any], commit = commit.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[Branch]
   }
@@ -28,7 +28,7 @@ object Branch {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_links(value: AnonHtml): Self = {
+    def with_links(value: Html): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("_links")(value.asInstanceOf[js.Any])
         ret

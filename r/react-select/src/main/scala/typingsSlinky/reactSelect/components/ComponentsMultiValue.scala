@@ -2,7 +2,7 @@ package typingsSlinky.reactSelect.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactSelect.AnonOnClick
+import typingsSlinky.reactSelect.anon.OnClick
 import typingsSlinky.reactSelect.componentsMultiValueMod.MultiValueProps
 import typingsSlinky.reactSelect.selectMod.Props
 import typingsSlinky.reactSelect.typesMod.ActionTypes
@@ -42,7 +42,7 @@ object ComponentsMultiValue {
     isFocused: Boolean,
     isMulti: Boolean,
     options: OptionsType[js.Any],
-    removeProps: AnonOnClick,
+    removeProps: OnClick,
     selectOption: js.Any => Unit,
     selectProps: Props[js.Any],
     setValue: (ValueType[js.Any], ActionTypes) => Unit

@@ -1,6 +1,6 @@
 package typingsSlinky.async.mod
 
-import typingsSlinky.async.AnonErrorFilter
+import typingsSlinky.async.anon.ErrorFilter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,13 +19,13 @@ object retry extends js.Object {
     task: js.Function2[/* callback */ AsyncResultCallback[T, E], /* results */ js.Any, Unit],
     callback: AsyncResultCallback[_, E]
   ): Unit = js.native
-  def apply[T, E](opts: AnonErrorFilter): js.Promise[Unit] = js.native
+  def apply[T, E](opts: ErrorFilter): js.Promise[Unit] = js.native
   def apply[T, E](
-    opts: AnonErrorFilter,
+    opts: ErrorFilter,
     task: js.Function2[/* callback */ AsyncResultCallback[T, E], /* results */ js.Any, Unit]
   ): js.Promise[Unit] = js.native
   def apply[T, E](
-    opts: AnonErrorFilter,
+    opts: ErrorFilter,
     task: js.Function2[/* callback */ AsyncResultCallback[T, E], /* results */ js.Any, Unit],
     callback: AsyncResultCallback[_, E]
   ): Unit = js.native

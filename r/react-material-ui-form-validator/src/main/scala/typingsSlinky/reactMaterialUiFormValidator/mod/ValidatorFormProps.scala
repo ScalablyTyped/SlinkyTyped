@@ -2,9 +2,9 @@ package typingsSlinky.reactMaterialUiFormValidator.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,12 +16,12 @@ trait ValidatorFormProps
   var debounceTime: js.UndefOr[Double] = js.native
   var instantValidate: js.UndefOr[Boolean] = js.native
   var onError: js.UndefOr[js.Function1[/* errors */ js.Array[_], Unit]] = js.native
-  def onSubmit(event: SyntheticEvent[EventTarget with Element, Event_]): Unit = js.native
+  def onSubmit(event: SyntheticEvent[EventTarget with Element, Event]): Unit = js.native
 }
 
 object ValidatorFormProps {
   @scala.inline
-  def apply(onSubmit: SyntheticEvent[EventTarget with Element, Event_] => Unit): ValidatorFormProps = {
+  def apply(onSubmit: SyntheticEvent[EventTarget with Element, Event] => Unit): ValidatorFormProps = {
     val __obj = js.Dynamic.literal(onSubmit = js.Any.fromFunction1(onSubmit))
     __obj.asInstanceOf[ValidatorFormProps]
   }
@@ -32,7 +32,7 @@ object ValidatorFormProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnSubmit(value: SyntheticEvent[EventTarget with Element, Event_] => Unit): Self = {
+    def withOnSubmit(value: SyntheticEvent[EventTarget with Element, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(js.Any.fromFunction1(value))
         ret

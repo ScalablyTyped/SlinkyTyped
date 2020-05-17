@@ -24,9 +24,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A progress bar.
 		 */
-@JSGlobal("Titanium.UI.ProgressBar")
 @js.native
-class ProgressBar () extends View {
+trait ProgressBar extends View {
   /**
   			 * Color of the progress bar message, as a color name or hex triplet.
   			 */

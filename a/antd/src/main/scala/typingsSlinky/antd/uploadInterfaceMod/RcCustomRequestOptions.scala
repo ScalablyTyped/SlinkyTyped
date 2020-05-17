@@ -1,7 +1,7 @@
 package typingsSlinky.antd.uploadInterfaceMod
 
 import org.scalajs.dom.raw.File
-import typingsSlinky.antd.AnonPercent
+import typingsSlinky.antd.anon.Percent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait RcCustomRequestOptions extends js.Object {
   var headers: js.Object = js.native
   var withCredentials: Boolean = js.native
   def onError(error: js.Error): Unit = js.native
-  def onProgress(event: AnonPercent, file: File): Unit = js.native
+  def onProgress(event: Percent, file: File): Unit = js.native
   def onSuccess(response: js.Object, file: File): Unit = js.native
 }
 
@@ -28,7 +28,7 @@ object RcCustomRequestOptions {
     filename: String,
     headers: js.Object,
     onError: js.Error => Unit,
-    onProgress: (AnonPercent, File) => Unit,
+    onProgress: (Percent, File) => Unit,
     onSuccess: (js.Object, File) => Unit,
     withCredentials: Boolean
   ): RcCustomRequestOptions = {
@@ -78,7 +78,7 @@ object RcCustomRequestOptions {
         ret
     }
     @scala.inline
-    def withOnProgress(value: (AnonPercent, File) => Unit): Self = {
+    def withOnProgress(value: (Percent, File) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.Any.fromFunction2(value))
         ret

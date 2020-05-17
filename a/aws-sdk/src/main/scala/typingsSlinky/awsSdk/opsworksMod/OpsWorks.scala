@@ -1,8 +1,8 @@
 package typingsSlinky.awsSdk.opsworksMod
 
-import typingsSlinky.awsSdk.DescribeAppsRequestwaiter
-import typingsSlinky.awsSdk.DescribeDeploymentsReques
-import typingsSlinky.awsSdk.DescribeInstancesRequestwInstanceIds
+import typingsSlinky.awsSdk.anon.DescribeAppsRequestwaiter
+import typingsSlinky.awsSdk.anon.DescribeDeploymentsReques
+import typingsSlinky.awsSdk.anon.DescribeInstancesRequestwInstanceIds
 import typingsSlinky.awsSdk.awsSdkStrings.appExists
 import typingsSlinky.awsSdk.awsSdkStrings.deploymentSuccessful
 import typingsSlinky.awsSdk.awsSdkStrings.instanceOnline

@@ -1,5 +1,6 @@
 package typingsSlinky.vegaTypings.encodeMod
 
+import typingsSlinky.vegaTypings.valuesMod.FontWeightValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +20,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.vegaTypings.vegaTypingsStrings.lighter
   - typingsSlinky.vegaTypings.vegaTypingsStrings.bolder
 */
-trait FontWeight extends js.Object
+trait FontWeight extends FontWeightValue
 
 object FontWeight {
   @scala.inline

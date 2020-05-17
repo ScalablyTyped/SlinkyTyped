@@ -1,6 +1,6 @@
 package typingsSlinky.yandexMaps.mod.multiRouter
 
-import typingsSlinky.yandexMaps.AnonDictindex
+import typingsSlinky.yandexMaps.anon.Dictindex
 import typingsSlinky.yandexMaps.mod.GeoObjectCollection
 import typingsSlinky.yandexMaps.mod.IGeoObject
 import typingsSlinky.yandexMaps.mod.IMultiRouteModelJson
@@ -14,8 +14,8 @@ import scala.scalajs.js.annotation._
 class MultiRoute protected () extends IGeoObject {
   def this(model: IMultiRouteModelJson) = this()
   def this(model: MultiRouteModel) = this()
-  def this(model: IMultiRouteModelJson, options: AnonDictindex) = this()
-  def this(model: MultiRouteModel, options: AnonDictindex) = this()
+  def this(model: IMultiRouteModelJson, options: Dictindex) = this()
+  def this(model: MultiRouteModel, options: Dictindex) = this()
   var editor: EditorAddon = js.native
   var model: MultiRouteModel = js.native
   def getActiveRoute(): Route | typingsSlinky.yandexMaps.mod.multiRouter.masstransit.Route | Null = js.native

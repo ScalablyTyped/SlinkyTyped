@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Infragistics.OlapResultAxisMember")
 @js.native
-class OlapResultAxisMember () extends js.Object {
+trait OlapResultAxisMember extends js.Object {
   /**
   	 * Returns the caption of the axis member used when displaying the name of the axis member to the user.
   	 *
@@ -67,5 +66,92 @@ class OlapResultAxisMember () extends js.Object {
   	 * @param value
   	 */
   def uniqueName(value: js.Object): String = js.native
+}
+
+object OlapResultAxisMember {
+  @scala.inline
+  def apply(
+    caption: js.Object => String,
+    childCount: js.Object => Double,
+    displayInfo: js.Object => Double,
+    drilledDown: js.Object => Boolean,
+    hierarchyUniqueName: js.Object => String,
+    levelNumber: js.Object => Double,
+    levelUniqueName: js.Object => String,
+    parentSameAsPrev: js.Object => Boolean,
+    properties: js.Object => js.Object,
+    uniqueName: js.Object => String
+  ): OlapResultAxisMember = {
+    val __obj = js.Dynamic.literal(caption = js.Any.fromFunction1(caption), childCount = js.Any.fromFunction1(childCount), displayInfo = js.Any.fromFunction1(displayInfo), drilledDown = js.Any.fromFunction1(drilledDown), hierarchyUniqueName = js.Any.fromFunction1(hierarchyUniqueName), levelNumber = js.Any.fromFunction1(levelNumber), levelUniqueName = js.Any.fromFunction1(levelUniqueName), parentSameAsPrev = js.Any.fromFunction1(parentSameAsPrev), properties = js.Any.fromFunction1(properties), uniqueName = js.Any.fromFunction1(uniqueName))
+    __obj.asInstanceOf[OlapResultAxisMember]
+  }
+  @scala.inline
+  implicit class OlapResultAxisMemberOps[Self <: OlapResultAxisMember] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCaption(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withChildCount(value: js.Object => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childCount")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDisplayInfo(value: js.Object => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayInfo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDrilledDown(value: js.Object => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("drilledDown")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withHierarchyUniqueName(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchyUniqueName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLevelNumber(value: js.Object => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levelNumber")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLevelUniqueName(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("levelUniqueName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withParentSameAsPrev(value: js.Object => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentSameAsPrev")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withProperties(value: js.Object => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("properties")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUniqueName(value: js.Object => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueName")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

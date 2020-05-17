@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientAdexchangebuyer.gapi.client.adexchangebuyer
 
-import typingsSlinky.gapiClientAdexchangebuyer.AnonBidProtocol
+import typingsSlinky.gapiClientAdexchangebuyer.anon.BidProtocol
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Account extends js.Object {
   /** Your bidder locations that have distinct URLs. */
-  var bidderLocation: js.UndefOr[js.Array[AnonBidProtocol]] = js.native
+  var bidderLocation: js.UndefOr[js.Array[BidProtocol]] = js.native
   /** The nid parameter value used in cookie match requests. Please contact your technical account manager if you need to change this. */
   var cookieMatchingNid: js.UndefOr[String] = js.native
   /** The base URL used in cookie match requests. */
@@ -41,7 +41,7 @@ object Account {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBidderLocation(value: js.Array[AnonBidProtocol]): Self = {
+    def withBidderLocation(value: js.Array[BidProtocol]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bidderLocation")(value.asInstanceOf[js.Any])
         ret

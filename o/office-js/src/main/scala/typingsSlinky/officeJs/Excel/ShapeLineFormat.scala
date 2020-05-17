@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.ShapeLineFormatData
 import typingsSlinky.officeJs.Excel.Interfaces.ShapeLineFormatLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.ShapeLineFormatUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.Dash
 import typingsSlinky.officeJs.officeJsStrings.DashDot
 import typingsSlinky.officeJs.officeJsStrings.DashDotDot
@@ -33,9 +33,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@JSGlobal("Excel.ShapeLineFormat")
 @js.native
-class ShapeLineFormat () extends ClientObject {
+trait ShapeLineFormat extends ClientObject {
   /**
     *
     * Represents the line color in HTML color format, of the form #RRGGBB (e.g. "FFA500") or as a named HTML color (e.g. "orange").
@@ -88,7 +87,7 @@ class ShapeLineFormat () extends ClientObject {
     */
   def load(): ShapeLineFormat = js.native
   def load(options: ShapeLineFormatLoadOptions): ShapeLineFormat = js.native
-  def load(propertyNamesAndPaths: AnonExpand): ShapeLineFormat = js.native
+  def load(propertyNamesAndPaths: Expand): ShapeLineFormat = js.native
   def load(propertyNames: String): ShapeLineFormat = js.native
   def load(propertyNames: js.Array[String]): ShapeLineFormat = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

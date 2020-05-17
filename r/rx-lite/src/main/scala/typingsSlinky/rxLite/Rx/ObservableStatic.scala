@@ -3,7 +3,7 @@ package typingsSlinky.rxLite.Rx
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.rxCore.Rx.IDisposable
 import typingsSlinky.rxCore.Rx.IPromise
-import typingsSlinky.rxLite.AnonDictindex
+import typingsSlinky.rxLite.anon.Dictindex
 import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -280,15 +280,11 @@ trait ObservableStatic extends js.Object {
     * @param [thisArg] The context to use calling the mapFn if provided.
     * @param [scheduler] Optional scheduler to use for scheduling.  If not provided, defaults to Scheduler.currentThread.
     */
-  def from[T](array: AnonDictindex[T]): Observable[T] = js.native
-  def from[T](array: AnonDictindex[T], mapFn: js.Function2[/* value */ T, /* index */ Double, T]): Observable[T] = js.native
+  def from[T](array: Dictindex[T]): Observable[T] = js.native
+  def from[T](array: Dictindex[T], mapFn: js.Function2[/* value */ T, /* index */ Double, T]): Observable[T] = js.native
+  def from[T](array: Dictindex[T], mapFn: js.Function2[/* value */ T, /* index */ Double, T], thisArg: js.Any): Observable[T] = js.native
   def from[T](
-    array: AnonDictindex[T],
-    mapFn: js.Function2[/* value */ T, /* index */ Double, T],
-    thisArg: js.Any
-  ): Observable[T] = js.native
-  def from[T](
-    array: AnonDictindex[T],
+    array: Dictindex[T],
     mapFn: js.Function2[/* value */ T, /* index */ Double, T],
     thisArg: js.Any,
     scheduler: IScheduler
@@ -311,8 +307,8 @@ trait ObservableStatic extends js.Object {
   ): Observable[T] = js.native
   def fromArray[T](array: js.Array[T]): Observable[T] = js.native
   def fromArray[T](array: js.Array[T], scheduler: IScheduler): Observable[T] = js.native
-  def fromArray[T](array: AnonDictindex[T]): Observable[T] = js.native
-  def fromArray[T](array: AnonDictindex[T], scheduler: IScheduler): Observable[T] = js.native
+  def fromArray[T](array: Dictindex[T]): Observable[T] = js.native
+  def fromArray[T](array: Dictindex[T], scheduler: IScheduler): Observable[T] = js.native
   def fromCallback[TResult](func: js.Function): js.Function1[/* repeated */ js.Any, Observable[TResult]] = js.native
   def fromCallback[TResult](
     func: js.Function1[
@@ -551,16 +547,16 @@ trait ObservableStatic extends js.Object {
     * @param [scheduler] Optional scheduler to use for scheduling.  If not provided, defaults to Scheduler.currentThread.
     */
   @JSName("from")
-  def from_TTResult[T, TResult](array: AnonDictindex[T], mapFn: js.Function2[/* value */ T, /* index */ Double, TResult]): Observable[TResult] = js.native
+  def from_TTResult[T, TResult](array: Dictindex[T], mapFn: js.Function2[/* value */ T, /* index */ Double, TResult]): Observable[TResult] = js.native
   @JSName("from")
   def from_TTResult[T, TResult](
-    array: AnonDictindex[T],
+    array: Dictindex[T],
     mapFn: js.Function2[/* value */ T, /* index */ Double, TResult],
     thisArg: js.Any
   ): Observable[TResult] = js.native
   @JSName("from")
   def from_TTResult[T, TResult](
-    array: AnonDictindex[T],
+    array: Dictindex[T],
     mapFn: js.Function2[/* value */ T, /* index */ Double, TResult],
     thisArg: js.Any,
     scheduler: IScheduler

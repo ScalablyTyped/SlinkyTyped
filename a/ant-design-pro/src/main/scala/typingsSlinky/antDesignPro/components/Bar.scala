@@ -3,7 +3,7 @@ package typingsSlinky.antDesignPro.components
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignPro.AnonX
+import typingsSlinky.antDesignPro.anon.X
 import typingsSlinky.antDesignPro.barMod.IBarProps
 import typingsSlinky.antDesignPro.barMod.default
 import typingsSlinky.react.mod.CSSProperties
@@ -34,7 +34,7 @@ object Bar {
   
   def withProps(p: IBarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(data: js.Array[AnonX], height: Double): Builder = {
+  def apply(data: js.Array[X], height: Double): Builder = {
     val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[IBarProps]))
   }

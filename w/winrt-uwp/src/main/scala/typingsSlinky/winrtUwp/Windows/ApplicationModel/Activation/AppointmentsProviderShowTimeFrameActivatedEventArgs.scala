@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data when an app is activated to show a specified time frame on the user’s calendar. */
-@JSGlobal("Windows.ApplicationModel.Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs")
 @js.native
-abstract class AppointmentsProviderShowTimeFrameActivatedEventArgs () extends js.Object {
+trait AppointmentsProviderShowTimeFrameActivatedEventArgs extends js.Object {
   /** Gets the duration of the time frame to be shown. */
   var duration: Double = js.native
   /** Gets the activation type. */
@@ -20,5 +19,64 @@ abstract class AppointmentsProviderShowTimeFrameActivatedEventArgs () extends js
   var timeToShow: js.Date = js.native
   /** Gets the action to be performed by the appointments provider. */
   var verb: String = js.native
+}
+
+object AppointmentsProviderShowTimeFrameActivatedEventArgs {
+  @scala.inline
+  def apply(
+    duration: Double,
+    kind: ActivationKind,
+    previousExecutionState: ApplicationExecutionState,
+    splashScreen: SplashScreen,
+    timeToShow: js.Date,
+    verb: String
+  ): AppointmentsProviderShowTimeFrameActivatedEventArgs = {
+    val __obj = js.Dynamic.literal(duration = duration.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], previousExecutionState = previousExecutionState.asInstanceOf[js.Any], splashScreen = splashScreen.asInstanceOf[js.Any], timeToShow = timeToShow.asInstanceOf[js.Any], verb = verb.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AppointmentsProviderShowTimeFrameActivatedEventArgs]
+  }
+  @scala.inline
+  implicit class AppointmentsProviderShowTimeFrameActivatedEventArgsOps[Self <: AppointmentsProviderShowTimeFrameActivatedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDuration(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("duration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKind(value: ActivationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreviousExecutionState(value: ApplicationExecutionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousExecutionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSplashScreen(value: SplashScreen): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splashScreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimeToShow(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeToShow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVerb(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verb")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

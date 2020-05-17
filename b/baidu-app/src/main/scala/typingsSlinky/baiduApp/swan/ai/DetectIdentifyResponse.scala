@@ -1,6 +1,6 @@
 package typingsSlinky.baiduApp.swan.ai
 
-import typingsSlinky.baiduApp.AnonHeight
+import typingsSlinky.baiduApp.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait DetectIdentifyResponse extends js.Object {
   var log_id: Double = js.native
    // 	唯一的log id，用于问题定位。
-  var result: AnonHeight = js.native
+  var result: Height = js.native
 }
 
 object DetectIdentifyResponse {
   @scala.inline
-  def apply(log_id: Double, result: AnonHeight): DetectIdentifyResponse = {
+  def apply(log_id: Double, result: Height): DetectIdentifyResponse = {
     val __obj = js.Dynamic.literal(log_id = log_id.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any])
     __obj.asInstanceOf[DetectIdentifyResponse]
   }
@@ -31,7 +31,7 @@ object DetectIdentifyResponse {
         ret
     }
     @scala.inline
-    def withResult(value: AnonHeight): Self = {
+    def withResult(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("result")(value.asInstanceOf[js.Any])
         ret

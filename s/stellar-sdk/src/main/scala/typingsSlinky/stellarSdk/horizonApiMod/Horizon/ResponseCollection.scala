@@ -1,20 +1,20 @@
 package typingsSlinky.stellarSdk.horizonApiMod.Horizon
 
-import typingsSlinky.stellarSdk.AnonNext
-import typingsSlinky.stellarSdk.AnonRecords
+import typingsSlinky.stellarSdk.anon.Next
+import typingsSlinky.stellarSdk.anon.Records
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ResponseCollection[T /* <: BaseResponse[scala.Nothing] */] extends js.Object {
-  var _embedded: AnonRecords[T] = js.native
-  var _links: AnonNext = js.native
+  var _embedded: Records[T] = js.native
+  var _links: Next = js.native
 }
 
 object ResponseCollection {
   @scala.inline
-  def apply[T](_embedded: AnonRecords[T], _links: AnonNext): ResponseCollection[T] = {
+  def apply[T](_embedded: Records[T], _links: Next): ResponseCollection[T] = {
     val __obj = js.Dynamic.literal(_embedded = _embedded.asInstanceOf[js.Any], _links = _links.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResponseCollection[T]]
   }
@@ -25,13 +25,13 @@ object ResponseCollection {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def with_embedded(value: AnonRecords[T]): Self[T] = {
+    def with_embedded(value: Records[T]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("_embedded")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def with_links(value: AnonNext): Self[T] = {
+    def with_links(value: Next): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("_links")(value.asInstanceOf[js.Any])
         ret

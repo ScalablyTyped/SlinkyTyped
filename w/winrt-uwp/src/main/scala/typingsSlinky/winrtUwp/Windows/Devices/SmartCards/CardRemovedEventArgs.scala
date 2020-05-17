@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data for the CardRemoved event. */
-@JSGlobal("Windows.Devices.SmartCards.CardRemovedEventArgs")
 @js.native
-abstract class CardRemovedEventArgs () extends js.Object {
+trait CardRemovedEventArgs extends js.Object {
   /** Gets info about the smart card that was taken out of the smart card reader. */
   var smartCard: SmartCard = js.native
+}
+
+object CardRemovedEventArgs {
+  @scala.inline
+  def apply(smartCard: SmartCard): CardRemovedEventArgs = {
+    val __obj = js.Dynamic.literal(smartCard = smartCard.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CardRemovedEventArgs]
+  }
+  @scala.inline
+  implicit class CardRemovedEventArgsOps[Self <: CardRemovedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSmartCard(value: SmartCard): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("smartCard")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

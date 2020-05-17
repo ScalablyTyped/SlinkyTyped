@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobile.mod
 
-import typingsSlinky.antdMobile.AnonPrefixCls
+import typingsSlinky.antdMobile.anon.PrefixCls
 import typingsSlinky.antdMobile.rangeMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +14,6 @@ class Range () extends default
 @JSImport("antd-mobile", "Range")
 @js.native
 object Range extends js.Object {
-  var defaultProps: AnonPrefixCls = js.native
+  var defaultProps: PrefixCls = js.native
 }
 

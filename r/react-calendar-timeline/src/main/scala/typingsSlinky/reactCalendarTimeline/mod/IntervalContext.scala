@@ -1,19 +1,19 @@
 package typingsSlinky.reactCalendarTimeline.mod
 
-import typingsSlinky.reactCalendarTimeline.AnonEndTime
+import typingsSlinky.reactCalendarTimeline.anon.EndTime
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IntervalContext extends js.Object {
-  var interval: AnonEndTime = js.native
+  var interval: EndTime = js.native
   var intervalText: String = js.native
 }
 
 object IntervalContext {
   @scala.inline
-  def apply(interval: AnonEndTime, intervalText: String): IntervalContext = {
+  def apply(interval: EndTime, intervalText: String): IntervalContext = {
     val __obj = js.Dynamic.literal(interval = interval.asInstanceOf[js.Any], intervalText = intervalText.asInstanceOf[js.Any])
     __obj.asInstanceOf[IntervalContext]
   }
@@ -24,7 +24,7 @@ object IntervalContext {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withInterval(value: AnonEndTime): Self = {
+    def withInterval(value: EndTime): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("interval")(value.asInstanceOf[js.Any])
         ret

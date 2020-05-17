@@ -1,5 +1,6 @@
 package typingsSlinky.blueprintjsSelect.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
@@ -7,8 +8,8 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.blueprintjsSelect.PartialIPopoverProps
-import typingsSlinky.blueprintjsSelect.PartialITagInputProps
+import typingsSlinky.blueprintjsSelect.anon.PartialIPopoverProps
+import typingsSlinky.blueprintjsSelect.anon.PartialITagInputProps
 import typingsSlinky.blueprintjsSelect.itemListRendererMod.IItemListRendererProps
 import typingsSlinky.blueprintjsSelect.itemRendererMod.IItemRendererProps
 import typingsSlinky.blueprintjsSelect.listItemsPropsMod.ItemsEqualProp
@@ -16,7 +17,6 @@ import typingsSlinky.blueprintjsSelect.listItemsUtilsMod.ICreateNewItem
 import typingsSlinky.blueprintjsSelect.multiSelectMod.IMultiSelectProps
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.MouseEventHandler
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -101,7 +101,7 @@ object MultiSelect {
   def apply[T](
     itemRenderer: (T, /* itemProps */ IItemRendererProps) => ReactElement | Null,
     items: js.Array[T],
-    onItemSelect: (T, js.UndefOr[SyntheticEvent[Event_, HTMLElement]]) => Unit,
+    onItemSelect: (T, js.UndefOr[SyntheticEvent[Event, HTMLElement]]) => Unit,
     tagRenderer: T => TagMod[Any]
   ): Builder[T] = {
     val __props = js.Dynamic.literal(itemRenderer = js.Any.fromFunction2(itemRenderer), items = items.asInstanceOf[js.Any], onItemSelect = js.Any.fromFunction2(onItemSelect), tagRenderer = js.Any.fromFunction1(tagRenderer))

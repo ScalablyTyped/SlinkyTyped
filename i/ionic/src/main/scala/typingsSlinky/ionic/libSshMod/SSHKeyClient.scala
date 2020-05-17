@@ -1,7 +1,7 @@
 package typingsSlinky.ionic.libSshMod
 
-import typingsSlinky.ionic.AnonIdNumber
-import typingsSlinky.ionic.PartialPaginateArgsResponMax
+import typingsSlinky.ionic.anon.IdNumber
+import typingsSlinky.ionic.anon.PartialPaginateArgsResponMax
 import typingsSlinky.ionic.definitionsMod.IClient
 import typingsSlinky.ionic.definitionsMod.IPaginator
 import typingsSlinky.ionic.definitionsMod.PaginatorState
@@ -27,7 +27,7 @@ class SSHKeyClient protected ()
   def this(hasClientTokenUser: SSHKeyClientDeps) = this()
   var client: IClient = js.native
   var token: String = js.native
-  var user: AnonIdNumber = js.native
+  var user: IdNumber = js.native
   def load(id: String): js.Promise[SSHKey] = js.native
   def paginate(args: PartialPaginateArgsResponMax): IPaginator[Response[js.Array[SSHKey]], PaginatorState] = js.native
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonChildren
+import typingsSlinky.astTypes.anon.Children
 import typingsSlinky.astTypes.kindsMod.JSXClosingFragmentKind
 import typingsSlinky.astTypes.kindsMod.JSXElementKind
 import typingsSlinky.astTypes.kindsMod.JSXExpressionContainerKind
@@ -23,6 +23,6 @@ trait JSXFragmentBuilder extends js.Object {
       JSXElementKind | JSXExpressionContainerKind | JSXFragmentKind | JSXTextKind | LiteralKind
     ]
   ): JSXFragment = js.native
-  def from(params: AnonChildren): JSXFragment = js.native
+  def from(params: Children): JSXFragment = js.native
 }
 

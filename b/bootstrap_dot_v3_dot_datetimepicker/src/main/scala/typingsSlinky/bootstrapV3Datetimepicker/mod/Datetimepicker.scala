@@ -1,6 +1,6 @@
 package typingsSlinky.bootstrapV3Datetimepicker.mod
 
-import typingsSlinky.bootstrapV3Datetimepicker.mod._Global_.JQuery
+import typingsSlinky.bootstrapV3Datetimepicker.mod.global.JQuery
 import typingsSlinky.moment.mod.Moment
 import typingsSlinky.moment.mod.MomentBuiltinFormat
 import scala.scalajs.js

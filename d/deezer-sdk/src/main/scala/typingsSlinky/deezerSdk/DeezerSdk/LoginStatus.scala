@@ -1,6 +1,6 @@
 package typingsSlinky.deezerSdk.DeezerSdk
 
-import typingsSlinky.deezerSdk.AnonExpire
+import typingsSlinky.deezerSdk.anon.Expire
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,13 +10,13 @@ import scala.scalajs.js.annotation._
   */
 @js.native
 trait LoginStatus extends js.Object {
-  var authResponse: AnonExpire = js.native
+  var authResponse: Expire = js.native
   var status: ConnectionStatus = js.native
 }
 
 object LoginStatus {
   @scala.inline
-  def apply(authResponse: AnonExpire, status: ConnectionStatus): LoginStatus = {
+  def apply(authResponse: Expire, status: ConnectionStatus): LoginStatus = {
     val __obj = js.Dynamic.literal(authResponse = authResponse.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoginStatus]
   }
@@ -27,7 +27,7 @@ object LoginStatus {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAuthResponse(value: AnonExpire): Self = {
+    def withAuthResponse(value: Expire): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("authResponse")(value.asInstanceOf[js.Any])
         ret

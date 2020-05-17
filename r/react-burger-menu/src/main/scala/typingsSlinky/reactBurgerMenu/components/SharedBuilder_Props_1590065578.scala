@@ -5,7 +5,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactBurgerMenu.PartialStyles
+import typingsSlinky.reactBurgerMenu.anon.PartialStyles
 import typingsSlinky.reactBurgerMenu.mod.State
 import typingsSlinky.reactBurgerMenu.reactBurgerMenuBooleans.`false`
 import scala.scalajs.js

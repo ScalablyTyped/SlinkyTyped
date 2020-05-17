@@ -1,7 +1,7 @@
 package typingsSlinky.rcTree.mod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.ReactComponentClass
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait OnDropData extends js.Object {
   var dragNodesKeys: js.Array[String] = js.native
   var dropPosition: Double = js.native
   var dropToGap: js.UndefOr[Boolean] = js.native
-  var event: Event_ = js.native
+  var event: Event = js.native
   var node: ReactComponentClass[InternalTreeNodeProps] = js.native
 }
 
@@ -22,7 +22,7 @@ object OnDropData {
     dragNode: ReactComponentClass[InternalTreeNodeProps],
     dragNodesKeys: js.Array[String],
     dropPosition: Double,
-    event: Event_,
+    event: Event,
     node: ReactComponentClass[InternalTreeNodeProps]
   ): OnDropData = {
     val __obj = js.Dynamic.literal(dragNode = dragNode.asInstanceOf[js.Any], dragNodesKeys = dragNodesKeys.asInstanceOf[js.Any], dropPosition = dropPosition.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any])
@@ -53,7 +53,7 @@ object OnDropData {
         ret
     }
     @scala.inline
-    def withEvent(value: Event_): Self = {
+    def withEvent(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
         ret

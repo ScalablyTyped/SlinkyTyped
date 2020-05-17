@@ -9,7 +9,6 @@ package object Flow {
   type Barline = typingsSlinky.vexflow.Vex.Flow.Barline_
   type Curve = typingsSlinky.vexflow.Vex.Flow.Curve_
   type Modifier = typingsSlinky.vexflow.Vex.Flow.Modifier_
-  type Music = typingsSlinky.vexflow.Vex.Flow.Music_
   type PedalMarking = typingsSlinky.vexflow.Vex.Flow.PedalMarking_
   type Renderer = typingsSlinky.vexflow.Vex.Flow.Renderer_
   type Repetition = typingsSlinky.vexflow.Vex.Flow.Repetition_

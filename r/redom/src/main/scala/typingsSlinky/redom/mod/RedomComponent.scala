@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RedomComponent extends js.Object {
+trait RedomComponent extends RedomElement {
   var el: HTMLElement = js.native
   var onmount: js.UndefOr[js.Function0[Unit]] = js.native
   var onremount: js.UndefOr[js.Function0[Unit]] = js.native

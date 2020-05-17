@@ -1,6 +1,6 @@
 package typingsSlinky.schedule.mod
 
-import typingsSlinky.schedule.AnonTimeout
+import typingsSlinky.schedule.anon.Timeout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object unstableScheduleWork extends js.Object {
   def apply(callback: FrameCallbackType): CallbackNode = js.native
-  def apply(callback: FrameCallbackType, options: AnonTimeout): CallbackNode = js.native
+  def apply(callback: FrameCallbackType, options: Timeout): CallbackNode = js.native
 }
 

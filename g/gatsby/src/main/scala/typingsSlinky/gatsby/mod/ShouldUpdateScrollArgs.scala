@@ -1,6 +1,6 @@
 package typingsSlinky.gatsby.mod
 
-import typingsSlinky.gatsby.AnonLocation
+import typingsSlinky.gatsby.anon.Location
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
 trait ShouldUpdateScrollArgs extends BrowserPluginArgs {
   var getSavedScrollPosition: js.Function = js.native
   var pathname: String = js.native
-  var prevRouterProps: js.UndefOr[AnonLocation] = js.native
-  var routerProps: AnonLocation = js.native
+  var prevRouterProps: js.UndefOr[Location] = js.native
+  var routerProps: Location = js.native
 }
 
 object ShouldUpdateScrollArgs {
@@ -21,7 +21,7 @@ object ShouldUpdateScrollArgs {
     getResourcesForPathnameSync: js.Function,
     getSavedScrollPosition: js.Function,
     pathname: String,
-    routerProps: AnonLocation
+    routerProps: Location
   ): ShouldUpdateScrollArgs = {
     val __obj = js.Dynamic.literal(getResourceURLsForPathname = getResourceURLsForPathname.asInstanceOf[js.Any], getResourcesForPathname = getResourcesForPathname.asInstanceOf[js.Any], getResourcesForPathnameSync = getResourcesForPathnameSync.asInstanceOf[js.Any], getSavedScrollPosition = getSavedScrollPosition.asInstanceOf[js.Any], pathname = pathname.asInstanceOf[js.Any], routerProps = routerProps.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShouldUpdateScrollArgs]
@@ -45,13 +45,13 @@ object ShouldUpdateScrollArgs {
         ret
     }
     @scala.inline
-    def withRouterProps(value: AnonLocation): Self = {
+    def withRouterProps(value: Location): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("routerProps")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPrevRouterProps(value: AnonLocation): Self = {
+    def withPrevRouterProps(value: Location): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("prevRouterProps")(value.asInstanceOf[js.Any])
         ret

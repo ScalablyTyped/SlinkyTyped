@@ -1,6 +1,6 @@
 package typingsSlinky.rollupTypescript.mod
 
-import typingsSlinky.rollupTypescript.Typeofts
+import typingsSlinky.rollupTypescript.anon.Typeofts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

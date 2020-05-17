@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.disabled
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.horizontal
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ready
@@ -59,8 +58,4 @@ trait SwipeViewModel extends Accessor {
     */
   var view: MapView = js.native
 }
-
-@JSGlobal("__esri.SwipeViewModel")
-@js.native
-object SwipeViewModel extends TopLevel[SwipeViewModelConstructor]
 

@@ -107,7 +107,7 @@ import org.scalajs.dom.raw.SVGUseElement
 import org.scalajs.dom.raw.SVGViewElement
 import slinky.core.ReactComponentClass
 import typingsSlinky.emotionSerialize.mod.ComponentSelector
-import typingsSlinky.emotionStyledBase.AnonThemeTheme
+import typingsSlinky.emotionStyledBase.anon.ThemeTheme
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.`object`
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.`var`
 import typingsSlinky.emotionStyledBase.emotionStyledBaseStrings.a
@@ -352,8 +352,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait StyledComponent[InnerProps, StyleProps, Theme /* <: js.Object */]
-  extends ComponentSelector
-     with FunctionComponent[InnerProps with StyleProps with AnonThemeTheme[Theme]] {
+  extends FunctionComponent[InnerProps with StyleProps with ThemeTheme[Theme]]
+     with ComponentSelector {
   def withComponent[Tag /* <: ReactComponentClass[_] */](tag: Tag): StyledComponent[PropsOf[Tag], StyleProps, Theme] = js.native
   /**
     * @desc this method is type-unsafe

@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeChartsWrapper.mod
 
-import typingsSlinky.reactNativeChartsWrapper.AnonColors
+import typingsSlinky.reactNativeChartsWrapper.anon.Colors
 import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.BOTTOM
 import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.CENTER
 import typingsSlinky.reactNativeChartsWrapper.reactNativeChartsWrapperStrings.CIRCLE
@@ -22,7 +22,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ChartLegend extends js.Object {
-  var custom: js.UndefOr[AnonColors] = js.native
+  var custom: js.UndefOr[Colors] = js.native
   var direction: js.UndefOr[LEFT_TO_RIGHT | RIGHT_TO_LEFT] = js.native
   var drawInside: js.UndefOr[Boolean] = js.native
   var enabled: js.UndefOr[Boolean] = js.native
@@ -56,7 +56,7 @@ object ChartLegend {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCustom(value: AnonColors): Self = {
+    def withCustom(value: Colors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(value.asInstanceOf[js.Any])
         ret

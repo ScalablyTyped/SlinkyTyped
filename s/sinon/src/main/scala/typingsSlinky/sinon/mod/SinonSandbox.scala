@@ -1,7 +1,7 @@
 package typingsSlinky.sinon.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.sinon.PartialSinonFakeTimersCon
+import typingsSlinky.sinon.anon.PartialSinonFakeTimersCon
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,14 +1,15 @@
 package typingsSlinky.jsrsasign.mod.KJUR.asn1
 
-import typingsSlinky.jsrsasign.AnonAlg
-import typingsSlinky.jsrsasign.AnonAlgCert
-import typingsSlinky.jsrsasign.AnonAlgs
-import typingsSlinky.jsrsasign.AnonCert
-import typingsSlinky.jsrsasign.AnonCertString
-import typingsSlinky.jsrsasign.AnonDigalg
-import typingsSlinky.jsrsasign.AnonHash
-import typingsSlinky.jsrsasign.AnonLength
-import typingsSlinky.jsrsasign.AnonRes
+import typingsSlinky.jsrsasign.anon.Alg
+import typingsSlinky.jsrsasign.anon.AlgCert
+import typingsSlinky.jsrsasign.anon.Algs
+import typingsSlinky.jsrsasign.anon.Cert
+import typingsSlinky.jsrsasign.anon.CertString
+import typingsSlinky.jsrsasign.anon.Digalg
+import typingsSlinky.jsrsasign.anon.Hash
+import typingsSlinky.jsrsasign.anon.Length
+import typingsSlinky.jsrsasign.anon.Res
+import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cms.Attribute
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -170,7 +171,7 @@ object cades extends js.Object {
   @js.native
   class CompleteCertificateRefs ()
     extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cades.CompleteCertificateRefs {
-    def this(params: AnonLength) = this()
+    def this(params: Length) = this()
   }
   
   /**
@@ -190,7 +191,7 @@ object cades extends js.Object {
   class OtherCertID ()
     extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cades.OtherCertID {
     def this(params: String) = this()
-    def this(params: AnonCert) = this()
+    def this(params: Cert) = this()
   }
   
   /**
@@ -214,9 +215,9 @@ object cades extends js.Object {
   class OtherHash ()
     extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cades.OtherHash {
     def this(params: String) = this()
-    def this(params: AnonAlg) = this()
-    def this(params: AnonAlgCert) = this()
-    def this(params: AnonCertString) = this()
+    def this(params: Alg) = this()
+    def this(params: AlgCert) = this()
+    def this(params: CertString) = this()
   }
   
   /**
@@ -232,8 +233,8 @@ object cades extends js.Object {
     */
   @js.native
   class OtherHashAlgAndValue ()
-    extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cades.OtherHashAlgAndValue {
-    def this(params: AnonAlg) = this()
+    extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ASN1Object {
+    def this(params: Alg) = this()
   }
   
   /**
@@ -261,9 +262,8 @@ object cades extends js.Object {
     * });
     */
   @js.native
-  class SignaturePolicyIdentifier ()
-    extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cades.SignaturePolicyIdentifier {
-    def this(params: AnonHash) = this()
+  class SignaturePolicyIdentifier () extends Attribute {
+    def this(params: Hash) = this()
   }
   
   /**
@@ -277,9 +277,8 @@ object cades extends js.Object {
     * ```
     */
   @js.native
-  class SignatureTimeStamp ()
-    extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cades.SignatureTimeStamp {
-    def this(params: AnonRes) = this()
+  class SignatureTimeStamp () extends Attribute {
+    def this(params: Res) = this()
   }
   
   @js.native
@@ -307,7 +306,7 @@ object cades extends js.Object {
       * info = KJUR.asn1.cades.CAdESUtil.parseSignedDataForAddingUnsigned(beshex);
       * sd = info.obj;
       */
-    def parseSignedDataForAddingUnsigned(hex: String): AnonAlgs = js.native
+    def parseSignedDataForAddingUnsigned(hex: String): Algs = js.native
     /**
       * parse SignerInfo to add unsigned attributes
       * @param hex hexadecimal string of SignerInfo
@@ -332,7 +331,7 @@ object cades extends js.Object {
       * future version. That's way this version provides support
       * for CAdES-T and not for CAdES-C.
       */
-    def parseSignerInfoForAddingUnsigned(hex: String, iSI: Double, nth: Double): AnonDigalg = js.native
+    def parseSignerInfoForAddingUnsigned(hex: String, iSI: Double, nth: Double): Digalg = js.native
   }
   
 }

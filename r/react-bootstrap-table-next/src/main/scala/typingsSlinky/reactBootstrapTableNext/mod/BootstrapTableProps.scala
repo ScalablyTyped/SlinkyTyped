@@ -2,11 +2,11 @@ package typingsSlinky.reactBootstrapTableNext.mod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactBootstrapTableNext.AnonDataSize
-import typingsSlinky.reactBootstrapTableNext.AnonOptionsPaginationOptions
-import typingsSlinky.reactBootstrapTableNext.AnonOrder
-import typingsSlinky.reactBootstrapTableNext.AnonSortCaret
-import typingsSlinky.reactBootstrapTableNext.Partialpaginationbooleanf
+import typingsSlinky.reactBootstrapTableNext.anon.DataSize
+import typingsSlinky.reactBootstrapTableNext.anon.OptionsPaginationOptions
+import typingsSlinky.reactBootstrapTableNext.anon.Order
+import typingsSlinky.reactBootstrapTableNext.anon.Partialpaginationbooleanf
+import typingsSlinky.reactBootstrapTableNext.anon.SortCaret
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ trait BootstrapTableProps[T /* <: js.Object */] extends js.Object {
     */
   var data: js.Array[_] = js.native
   var defaultSortDirection: js.UndefOr[SortOrder] = js.native
-  var defaultSorted: js.UndefOr[js.Array[AnonOrder]] = js.native
+  var defaultSorted: js.UndefOr[js.Array[Order]] = js.native
   var expandRow: js.UndefOr[ExpandRowProps[T]] = js.native
   var filter: js.UndefOr[js.Any] = js.native
   var filterPosition: js.UndefOr[FilterPosition] = js.native
@@ -47,13 +47,13 @@ trait BootstrapTableProps[T /* <: js.Object */] extends js.Object {
   /**
     * This callback function will be called only when data size change by search/filter etc.
     */
-  var onDataSizeChange: js.UndefOr[js.Function1[/* props */ AnonDataSize, Unit]] = js.native
+  var onDataSizeChange: js.UndefOr[js.Function1[/* props */ DataSize, Unit]] = js.native
   var onExternalFilter: js.UndefOr[js.Any] = js.native
   var onFilter: js.UndefOr[js.Any] = js.native
   var onSort: js.UndefOr[js.Any] = js.native
   var onTableChange: js.UndefOr[TableChangeHandler[T]] = js.native
   var overlay: js.UndefOr[js.Any] = js.native
-  var pagination: js.UndefOr[AnonOptionsPaginationOptions] = js.native
+  var pagination: js.UndefOr[OptionsPaginationOptions] = js.native
   var parentClassName: js.UndefOr[
     String | (js.Function3[/* isExpand */ Boolean, /* row */ T, /* rowIndex */ Double, String])
   ] = js.native
@@ -65,7 +65,7 @@ trait BootstrapTableProps[T /* <: js.Object */] extends js.Object {
   ] = js.native
   var search: js.UndefOr[SearchProps[T] | Boolean] = js.native
   var selectRow: js.UndefOr[SelectRowProps[T]] = js.native
-  var sort: js.UndefOr[AnonSortCaret] = js.native
+  var sort: js.UndefOr[SortCaret] = js.native
   var striped: js.UndefOr[Boolean] = js.native
   var tabIndexCell: js.UndefOr[Boolean] = js.native
   var wrapperClasses: js.UndefOr[String] = js.native
@@ -204,7 +204,7 @@ object BootstrapTableProps {
         ret
     }
     @scala.inline
-    def withDefaultSorted(value: js.Array[AnonOrder]): Self[T] = {
+    def withDefaultSorted(value: js.Array[Order]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defaultSorted")(value.asInstanceOf[js.Any])
         ret
@@ -336,7 +336,7 @@ object BootstrapTableProps {
         ret
     }
     @scala.inline
-    def withOnDataSizeChange(value: /* props */ AnonDataSize => Unit): Self[T] = {
+    def withOnDataSizeChange(value: /* props */ DataSize => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDataSizeChange")(js.Any.fromFunction1(value))
         ret
@@ -408,7 +408,7 @@ object BootstrapTableProps {
         ret
     }
     @scala.inline
-    def withPagination(value: AnonOptionsPaginationOptions): Self[T] = {
+    def withPagination(value: OptionsPaginationOptions): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pagination")(value.asInstanceOf[js.Any])
         ret
@@ -522,7 +522,7 @@ object BootstrapTableProps {
         ret
     }
     @scala.inline
-    def withSort(value: AnonSortCaret): Self[T] = {
+    def withSort(value: SortCaret): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
         ret

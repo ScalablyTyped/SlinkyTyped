@@ -108,18 +108,6 @@ object SeriesOrganizationOptions {
         ret
     }
     @scala.inline
-    def withCurveFactor(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("curveFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCurveFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("curveFactor")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withData(value: js.Array[SeriesOrganizationDataOptions]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])

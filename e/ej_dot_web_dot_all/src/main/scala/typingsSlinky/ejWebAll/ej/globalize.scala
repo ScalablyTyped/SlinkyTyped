@@ -1,6 +1,5 @@
 package typingsSlinky.ejWebAll.ej
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,8 +25,4 @@ trait globalize extends js.Object {
   def preferredCulture(): culture = js.native
   def preferredCulture(culture: String): culture = js.native
 }
-
-@JSGlobal("ej.globalize")
-@js.native
-object globalize extends TopLevel[globalize]
 

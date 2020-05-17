@@ -2,7 +2,7 @@ package typingsSlinky.rawBody.mod
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.Readable
-import typingsSlinky.rawBody.OptionsencodingEncoding
+import typingsSlinky.rawBody.anon.OptionsencodingEncoding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

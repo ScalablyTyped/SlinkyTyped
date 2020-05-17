@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.TextFrameData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.TextFrameLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.TextFrameUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.AutoSizeMixed
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.AutoSizeNone
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.AutoSizeShapeToFitText
@@ -43,9 +43,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@JSGlobal("Excel.TextFrame")
 @js.native
-class TextFrame () extends ClientObject {
+trait TextFrame extends ClientObject {
   /**
     *
     * Gets or sets the automatic sizing settings for the text frame. A text frame can be set to automatically fit the text to the text frame, to automatically fit the text frame to the text, or not perform any automatic sizing.
@@ -153,7 +152,7 @@ class TextFrame () extends ClientObject {
     */
   def load(): TextFrame = js.native
   def load(options: TextFrameLoadOptions): TextFrame = js.native
-  def load(propertyNamesAndPaths: AnonExpand): TextFrame = js.native
+  def load(propertyNamesAndPaths: Expand): TextFrame = js.native
   def load(propertyNames: String): TextFrame = js.native
   def load(propertyNames: js.Array[String]): TextFrame = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

@@ -6,20 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Permits apps to perform text queries using Advanced Query Syntax (AQS) strings, with the option of providing a language tag to be employed in the query. */
-@JSGlobal("Windows.Data.Text.SemanticTextQuery")
 @js.native
-class SemanticTextQuery protected () extends js.Object {
-  /**
-    * Creates a SemanticTextQuery from an Advanced Query Syntax (AQS) query string.
-    * @param aqsFilter An AQS string that contains the desired query. Learn more about AQS in Advanced Query Syntax (AQS).
-    */
-  def this(aqsFilter: String) = this()
-  /**
-    * Creates a SemanticTextQuery from an Advanced Query Syntax (AQS) query string and a language tag.
-    * @param aqsFilter An AQS string that contains the desired query. Learn more about AQS in Advanced Query Syntax (AQS).
-    * @param filterLanguage The BCP-47 language tag to be employed in the query.
-    */
-  def this(aqsFilter: String, filterLanguage: String) = this()
+trait SemanticTextQuery extends js.Object {
   /**
     * Returns segments of a source string that match the SemanticTextQuery object's query.
     * @param content A source string to be queried.
@@ -33,5 +21,36 @@ class SemanticTextQuery protected () extends js.Object {
     * @return A collection of TextSegment structures that represent hits from the query.
     */
   def findInProperty(propertyContent: String, propertyName: String): IVectorView[TextSegment] = js.native
+}
+
+object SemanticTextQuery {
+  @scala.inline
+  def apply(
+    find: String => IVectorView[TextSegment],
+    findInProperty: (String, String) => IVectorView[TextSegment]
+  ): SemanticTextQuery = {
+    val __obj = js.Dynamic.literal(find = js.Any.fromFunction1(find), findInProperty = js.Any.fromFunction2(findInProperty))
+    __obj.asInstanceOf[SemanticTextQuery]
+  }
+  @scala.inline
+  implicit class SemanticTextQueryOps[Self <: SemanticTextQuery] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFind(value: String => IVectorView[TextSegment]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("find")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFindInProperty(value: (String, String) => IVectorView[TextSegment]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("findInProperty")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

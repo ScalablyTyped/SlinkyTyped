@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientCloudkms.gapi.client.cloudkms
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientCloudkms.AnonAlt
-import typingsSlinky.gapiClientCloudkms.AnonFilter
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientCloudkms.anon.Alt
+import typingsSlinky.gapiClientCloudkms.anon.Filter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,17 +11,17 @@ import scala.scalajs.js.annotation._
 trait LocationsResource extends js.Object {
   var keyRings: KeyRingsResource = js.native
   /** Get information about a location. */
-  def get(request: AnonAlt): Request_[Location] = js.native
+  def get(request: Alt): Request[Location] = js.native
   /** Lists information about the supported locations for this service. */
-  def list(request: AnonFilter): Request_[ListLocationsResponse] = js.native
+  def list(request: Filter): Request[ListLocationsResponse] = js.native
 }
 
 object LocationsResource {
   @scala.inline
   def apply(
-    get: AnonAlt => Request_[Location],
+    get: Alt => Request[Location],
     keyRings: KeyRingsResource,
-    list: AnonFilter => Request_[ListLocationsResponse]
+    list: Filter => Request[ListLocationsResponse]
   ): LocationsResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), keyRings = keyRings.asInstanceOf[js.Any], list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[LocationsResource]
@@ -33,7 +33,7 @@ object LocationsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonAlt => Request_[Location]): Self = {
+    def withGet(value: Alt => Request[Location]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
@@ -45,7 +45,7 @@ object LocationsResource {
         ret
     }
     @scala.inline
-    def withList(value: AnonFilter => Request_[ListLocationsResponse]): Self = {
+    def withList(value: Filter => Request[ListLocationsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

@@ -7,38 +7,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("MakerJs.models.RoundRectangle")
 @js.native
-class RoundRectangle protected () extends IModel {
-  /**
-    * Create a round rectangle which will surround a model.
-    *
-    * Example:
-    * ```
-    * var b = new makerjs.models.BoltRectangle(30, 20, 1); //draw a bolt rectangle so we have something to surround
-    * var r = new makerjs.models.RoundRectangle(b, 2.5);   //surround it
-    * ```
-    *
-    * @param modelToSurround IModel object.
-    * @param margin Distance from the model. This will also become the corner radius.
-    */
-  def this(modelToSurround: IModel, margin: Double) = this()
-  /**
-    * Create a round rectangle from width, height, and corner radius.
-    *
-    * Example:
-    * ```
-    * var r = new makerjs.models.RoundRectangle(100, 50, 5);
-    * ```
-    *
-    * @param width Width of the rectangle.
-    * @param height Height of the rectangle.
-    * @param radius Corner radius.
-    */
-  def this(width: Double, height: Double, radius: Double) = this()
+trait RoundRectangle extends IModel {
   @JSName("origin")
   var origin_RoundRectangle: IPoint = js.native
   @JSName("paths")
   var paths_RoundRectangle: IPathMap = js.native
+}
+
+object RoundRectangle {
+  @scala.inline
+  def apply(origin: IPoint, paths: IPathMap): RoundRectangle = {
+    val __obj = js.Dynamic.literal(origin = origin.asInstanceOf[js.Any], paths = paths.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RoundRectangle]
+  }
+  @scala.inline
+  implicit class RoundRectangleOps[Self <: RoundRectangle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOrigin(value: IPoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaths(value: IPathMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

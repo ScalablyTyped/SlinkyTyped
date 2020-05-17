@@ -15,3 +15,20 @@ import scala.scalajs.js.annotation._
 */
 trait FunctionLikeDeclaration extends js.Object
 
+object FunctionLikeDeclaration {
+  @scala.inline
+  implicit def apply(value: ArrowFunction): FunctionLikeDeclaration = value.asInstanceOf[FunctionLikeDeclaration]
+  @scala.inline
+  implicit def apply(value: ConstructorDeclaration): FunctionLikeDeclaration = value.asInstanceOf[FunctionLikeDeclaration]
+  @scala.inline
+  implicit def apply(value: FunctionDeclaration): FunctionLikeDeclaration = value.asInstanceOf[FunctionLikeDeclaration]
+  @scala.inline
+  implicit def apply(value: FunctionExpression): FunctionLikeDeclaration = value.asInstanceOf[FunctionLikeDeclaration]
+  @scala.inline
+  implicit def apply(value: GetAccessorDeclaration): FunctionLikeDeclaration = value.asInstanceOf[FunctionLikeDeclaration]
+  @scala.inline
+  implicit def apply(value: MethodDeclaration): FunctionLikeDeclaration = value.asInstanceOf[FunctionLikeDeclaration]
+  @scala.inline
+  implicit def apply(value: SetAccessorDeclaration): FunctionLikeDeclaration = value.asInstanceOf[FunctionLikeDeclaration]
+}
+

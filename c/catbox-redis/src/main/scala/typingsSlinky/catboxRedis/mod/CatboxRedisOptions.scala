@@ -1,7 +1,7 @@
 package typingsSlinky.catboxRedis.mod
 
 import typingsSlinky.catbox.mod.ClientOptions
-import typingsSlinky.catboxRedis.AnonHost
+import typingsSlinky.catboxRedis.anon.Host
 import typingsSlinky.ioredis.mod.Redis
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -39,7 +39,7 @@ trait CatboxRedisOptions extends ClientOptions {
   /**
     * an array of redis sentinel addresses to connect to.
     */
-  var sentinels: js.UndefOr[js.Array[AnonHost]] = js.native
+  var sentinels: js.UndefOr[js.Array[Host]] = js.native
   /**
     * the unix socket string to connect to (if socket is provided, host and port are ignored)
     */
@@ -135,7 +135,7 @@ object CatboxRedisOptions {
         ret
     }
     @scala.inline
-    def withSentinels(value: js.Array[AnonHost]): Self = {
+    def withSentinels(value: js.Array[Host]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sentinels")(value.asInstanceOf[js.Any])
         ret

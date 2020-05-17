@@ -1,7 +1,7 @@
 package typingsSlinky.jsforce.connectionMod
 
-import typingsSlinky.jsforce.AnonCall
-import typingsSlinky.jsforce.AnonClear
+import typingsSlinky.jsforce.anon.Call
+import typingsSlinky.jsforce.anon.Clear
 import typingsSlinky.jsforce.describeResultMod.DescribeGlobalResult
 import typingsSlinky.jsforce.describeResultMod.DescribeSObjectResult
 import typingsSlinky.jsforce.httpApiMod.HttpApiOptions
@@ -20,9 +20,9 @@ import scala.scalajs.js.annotation._
 @js.native
 abstract class BaseConnection () extends EventEmitter {
   @JSName("describe$")
-  var describe$_Original: AnonCall = js.native
+  var describe$_Original: Call = js.native
   @JSName("describeGlobal$")
-  var describeGlobal$_Original: AnonClear = js.native
+  var describeGlobal$_Original: Clear = js.native
   def _baseUrl(): String = js.native
   def create[T](records: js.Array[Record[T]]): js.Promise[RecordResult | js.Array[RecordResult]] = js.native
   def create[T](records: js.Array[Record[T]], options: RestApiOptions): js.Promise[RecordResult | js.Array[RecordResult]] = js.native

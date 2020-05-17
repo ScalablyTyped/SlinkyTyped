@@ -1,0 +1,69 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.ucb
+
+import typingsSlinky.activexLibreoffice.`type`
+import typingsSlinky.activexLibreoffice.com_.sun.star.io.XInputStream
+import typingsSlinky.activexLibreoffice.com_.sun.star.io.XOutputStream
+import typingsSlinky.activexLibreoffice.com_.sun.star.io.XStream
+import typingsSlinky.activexLibreoffice.com_.sun.star.task.XInteractionHandler
+import typingsSlinky.activexLibreoffice.com_.sun.star.util.DateTime
+import typingsSlinky.std.SafeArray
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** This is an extension to the interface {@link XSimpleFileAccess} . */
+@js.native
+trait XSimpleFileAccess2 extends XSimpleFileAccess {
+  /**
+    * Overwrites the file content with the given data.
+    *
+    * If the file does not exist, it will be created.
+    * @param FileURL File to write
+    * @param data A stream containing the data for the file to be (over-)written
+    */
+  def writeFile(FileURL: String, data: XInputStream): Unit = js.native
+}
+
+object XSimpleFileAccess2 {
+  @scala.inline
+  def apply(
+    acquire: () => Unit,
+    copy: (String, String) => Unit,
+    createFolder: String => Unit,
+    exists: String => Boolean,
+    getContentType: String => String,
+    getDateTimeModified: String => DateTime,
+    getFolderContents: (String, Boolean) => SafeArray[String],
+    getSize: String => Double,
+    isFolder: String => Boolean,
+    isReadOnly: String => Boolean,
+    kill: String => Unit,
+    move: (String, String) => Unit,
+    openFileRead: String => XInputStream,
+    openFileReadWrite: String => XStream,
+    openFileWrite: String => XOutputStream,
+    queryInterface: `type` => js.Any,
+    release: () => Unit,
+    setInteractionHandler: XInteractionHandler => Unit,
+    setReadOnly: (String, Boolean) => Unit,
+    writeFile: (String, XInputStream) => Unit
+  ): XSimpleFileAccess2 = {
+    val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), copy = js.Any.fromFunction2(copy), createFolder = js.Any.fromFunction1(createFolder), exists = js.Any.fromFunction1(exists), getContentType = js.Any.fromFunction1(getContentType), getDateTimeModified = js.Any.fromFunction1(getDateTimeModified), getFolderContents = js.Any.fromFunction2(getFolderContents), getSize = js.Any.fromFunction1(getSize), isFolder = js.Any.fromFunction1(isFolder), isReadOnly = js.Any.fromFunction1(isReadOnly), kill = js.Any.fromFunction1(kill), move = js.Any.fromFunction2(move), openFileRead = js.Any.fromFunction1(openFileRead), openFileReadWrite = js.Any.fromFunction1(openFileReadWrite), openFileWrite = js.Any.fromFunction1(openFileWrite), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), setInteractionHandler = js.Any.fromFunction1(setInteractionHandler), setReadOnly = js.Any.fromFunction2(setReadOnly), writeFile = js.Any.fromFunction2(writeFile))
+    __obj.asInstanceOf[XSimpleFileAccess2]
+  }
+  @scala.inline
+  implicit class XSimpleFileAccess2Ops[Self <: XSimpleFileAccess2] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withWriteFile(value: (String, XInputStream) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("writeFile")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
+}
+

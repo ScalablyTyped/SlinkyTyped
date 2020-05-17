@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Network extends js.Object {
+trait Network extends Networkish {
   var chainId: Double = js.native
   var ensAddress: js.UndefOr[String] = js.native
   var name: String = js.native

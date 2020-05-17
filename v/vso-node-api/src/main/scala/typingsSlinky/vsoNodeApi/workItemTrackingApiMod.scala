@@ -1,6 +1,8 @@
 package typingsSlinky.vsoNodeApi
 
 import typingsSlinky.node.NodeJS.ReadableStream
+import typingsSlinky.vsoNodeApi.anon.Key
+import typingsSlinky.vsoNodeApi.anon.Value
 import typingsSlinky.vsoNodeApi.clientApiBasesMod.ClientApiBase
 import typingsSlinky.vsoNodeApi.coreInterfacesMod.TeamContext
 import typingsSlinky.vsoNodeApi.vsoBaseInterfacesMod.IRequestHandler
@@ -201,8 +203,8 @@ object workItemTrackingApiMod extends js.Object {
     def getWorkItemType(project: String, `type`: String): js.Promise[WorkItemType] = js.native
     def getWorkItemTypeCategories(project: String): js.Promise[js.Array[WorkItemTypeCategory]] = js.native
     def getWorkItemTypeCategory(project: String, category: String): js.Promise[WorkItemTypeCategory] = js.native
-    def getWorkItemTypeColorAndIcons(projectNames: js.Array[String]): js.Promise[js.Array[AnonValue]] = js.native
-    def getWorkItemTypeColors(projectNames: js.Array[String]): js.Promise[js.Array[AnonKey]] = js.native
+    def getWorkItemTypeColorAndIcons(projectNames: js.Array[String]): js.Promise[js.Array[Value]] = js.native
+    def getWorkItemTypeColors(projectNames: js.Array[String]): js.Promise[js.Array[Key]] = js.native
     def getWorkItemTypeField(project: String, `type`: String, field: String): js.Promise[WorkItemTypeFieldInstance] = js.native
     def getWorkItemTypeField(project: String, `type`: String, field: String, expand: WorkItemTypeFieldsExpandLevel): js.Promise[WorkItemTypeFieldInstance] = js.native
     def getWorkItemTypeFields(project: String, `type`: String): js.Promise[js.Array[WorkItemTypeFieldInstance]] = js.native

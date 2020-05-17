@@ -1,7 +1,7 @@
 package typingsSlinky.ember.mod.Ember
 
-import typingsSlinky.emberObject.AnonId
-import typingsSlinky.emberObject.AnonUntil
+import typingsSlinky.emberObject.anon.Id
+import typingsSlinky.emberObject.anon.Until
 import typingsSlinky.emberObject.typesMod.ComputedPropertyCallback
 import typingsSlinky.std.MethodDecorator
 import scala.scalajs.js
@@ -55,8 +55,8 @@ object computed extends js.Object {
   def bool(dependentKey: java.lang.String): typingsSlinky.emberObject.computedMod.ComputedProperty[Boolean, Boolean] = js.native
   def collect(dependentKeys: java.lang.String*): typingsSlinky.emberObject.computedMod.ComputedProperty[js.Array[_], js.Array[_]] = js.native
   def deprecatingAlias(dependentKey: java.lang.String): typingsSlinky.emberObject.computedMod.ComputedProperty[_, _] = js.native
-  def deprecatingAlias(dependentKey: java.lang.String, options: AnonId): typingsSlinky.emberObject.computedMod.ComputedProperty[_, _] = js.native
-  def deprecatingAlias(dependentKey: java.lang.String, options: AnonUntil): typingsSlinky.emberObject.computedMod.ComputedProperty[_, _] = js.native
+  def deprecatingAlias(dependentKey: java.lang.String, options: Id): typingsSlinky.emberObject.computedMod.ComputedProperty[_, _] = js.native
+  def deprecatingAlias(dependentKey: java.lang.String, options: Until): typingsSlinky.emberObject.computedMod.ComputedProperty[_, _] = js.native
   def empty(dependentKey: java.lang.String): typingsSlinky.emberObject.computedMod.ComputedProperty[Boolean, Boolean] = js.native
   def equal(dependentKey: java.lang.String, value: js.Any): typingsSlinky.emberObject.computedMod.ComputedProperty[Boolean, Boolean] = js.native
   def filter(

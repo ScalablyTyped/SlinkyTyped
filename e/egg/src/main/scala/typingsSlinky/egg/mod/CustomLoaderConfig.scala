@@ -2,7 +2,7 @@ package typingsSlinky.egg.mod
 
 import typingsSlinky.egg.eggStrings.app
 import typingsSlinky.egg.eggStrings.ctx
-import typingsSlinky.eggCore.AnonPath
+import typingsSlinky.eggCore.anon.Path
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait CustomLoaderConfig extends js.Object {
   var directory: String | js.Array[String] = js.native
   var filter: js.UndefOr[js.Function1[/* obj */ js.Object, Boolean]] = js.native
   var ignore: js.UndefOr[String | js.Array[String]] = js.native
-  var initializer: js.UndefOr[js.Function2[/* obj */ js.Object, /* options */ AnonPath, _]] = js.native
+  var initializer: js.UndefOr[js.Function2[/* obj */ js.Object, /* options */ Path, _]] = js.native
   /**
     * an object you wanner load to, value can only be 'ctx' or 'app'. default to app
     */
@@ -101,7 +101,7 @@ object CustomLoaderConfig {
         ret
     }
     @scala.inline
-    def withInitializer(value: (/* obj */ js.Object, /* options */ AnonPath) => _): Self = {
+    def withInitializer(value: (/* obj */ js.Object, /* options */ Path) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("initializer")(js.Any.fromFunction2(value))
         ret

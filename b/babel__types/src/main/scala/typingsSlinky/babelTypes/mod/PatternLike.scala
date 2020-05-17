@@ -1,10 +1,5 @@
 package typingsSlinky.babelTypes.mod
 
-import typingsSlinky.babelTypes.babelTypesStrings.ArrayPattern
-import typingsSlinky.babelTypes.babelTypesStrings.AssignmentPattern
-import typingsSlinky.babelTypes.babelTypesStrings.Identifier
-import typingsSlinky.babelTypes.babelTypesStrings.ObjectPattern
-import typingsSlinky.babelTypes.babelTypesStrings.RestElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,42 +11,18 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.ArrayPattern_
   - typingsSlinky.babelTypes.mod.ObjectPattern_
 */
-trait PatternLike extends _Node
+trait PatternLike extends Node
 
 object PatternLike {
   @scala.inline
-  def Identifier_(name: js.Any, `type`: Identifier): PatternLike = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[PatternLike]
-  }
+  implicit def apply(value: ArrayPattern_): PatternLike = value.asInstanceOf[PatternLike]
   @scala.inline
-  def ObjectPattern_(properties: js.Array[RestElement_ | ObjectProperty_], `type`: ObjectPattern): PatternLike = {
-    val __obj = js.Dynamic.literal(properties = properties.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[PatternLike]
-  }
+  implicit def apply(value: AssignmentPattern_): PatternLike = value.asInstanceOf[PatternLike]
   @scala.inline
-  def ArrayPattern_(elements: js.Array[Null | PatternLike], `type`: ArrayPattern): PatternLike = {
-    val __obj = js.Dynamic.literal(elements = elements.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[PatternLike]
-  }
+  implicit def apply(value: Identifier_): PatternLike = value.asInstanceOf[PatternLike]
   @scala.inline
-  def AssignmentPattern_(
-    left: Identifier_ | ObjectPattern_ | ArrayPattern_ | MemberExpression_,
-    right: Expression,
-    `type`: AssignmentPattern
-  ): PatternLike = {
-    val __obj = js.Dynamic.literal(left = left.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[PatternLike]
-  }
+  implicit def apply(value: ObjectPattern_): PatternLike = value.asInstanceOf[PatternLike]
   @scala.inline
-  def RestElement_(argument: LVal, `type`: RestElement): PatternLike = {
-    val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[PatternLike]
-  }
+  implicit def apply(value: RestElement_): PatternLike = value.asInstanceOf[PatternLike]
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.reactIntl.mod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactIntl.AnonValues
+import typingsSlinky.reactIntl.anon.Values
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +19,7 @@ class FormattedMessage[V /* <: Record[String, _] */] ()
 @JSImport("react-intl", "FormattedMessage")
 @js.native
 object FormattedMessage extends js.Object {
-  var defaultProps: AnonValues = js.native
+  var defaultProps: Values = js.native
   var displayName: String = js.native
 }
 

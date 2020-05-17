@@ -1,5 +1,6 @@
 package typingsSlinky.rbx.components
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.SVGElement
 import slinky.core.ReactComponentClass
@@ -8,7 +9,6 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rbx.modalPortalMod.ModalPortalModifierProps
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,7 +50,7 @@ object ModalPortal {
   
   def withProps(p: ModalPortalModifierProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(document: Document_): Builder = {
+  def apply(document: Document): Builder = {
     val __props = js.Dynamic.literal(document = document.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[ModalPortalModifierProps]))
   }

@@ -10,5 +10,4 @@ package object stripe {
     * additional information about the object in a structured format.
     */
   type Metadata = org.scalablytyped.runtime.StringDictionary[java.lang.String]
-  type StripeRedirectResponse = scala.Nothing | typingsSlinky.stripeV3.AnonError
 }

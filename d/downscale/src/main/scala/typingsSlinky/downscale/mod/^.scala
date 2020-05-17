@@ -2,9 +2,9 @@ package typingsSlinky.downscale.mod
 
 import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.HTMLCanvasElement
-import typingsSlinky.downscale.DownscaleOptionsreturnBlo
-import typingsSlinky.downscale.DownscaleOptionsreturnBloImageType
-import typingsSlinky.downscale.DownscaleOptionsreturnCan
+import typingsSlinky.downscale.anon.DownscaleOptionsreturnBlo
+import typingsSlinky.downscale.anon.DownscaleOptionsreturnBloImageType
+import typingsSlinky.downscale.anon.DownscaleOptionsreturnCan
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

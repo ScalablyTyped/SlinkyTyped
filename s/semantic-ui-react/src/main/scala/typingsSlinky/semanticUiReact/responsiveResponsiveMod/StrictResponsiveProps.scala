@@ -1,10 +1,10 @@
 package typingsSlinky.semanticUiReact.responsiveResponsiveMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,7 +34,7 @@ trait StrictResponsiveProps extends js.Object {
     */
   var onUpdate: js.UndefOr[
     js.Function2[
-      /* event */ SyntheticEvent[Event_, HTMLElement], 
+      /* event */ SyntheticEvent[Event, HTMLElement], 
       /* data */ ResponsiveOnUpdateData, 
       Unit
     ]
@@ -132,9 +132,7 @@ object StrictResponsiveProps {
         ret
     }
     @scala.inline
-    def withOnUpdate(
-      value: (/* event */ SyntheticEvent[Event_, HTMLElement], /* data */ ResponsiveOnUpdateData) => Unit
-    ): Self = {
+    def withOnUpdate(value: (/* event */ SyntheticEvent[Event, HTMLElement], /* data */ ResponsiveOnUpdateData) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onUpdate")(js.Any.fromFunction2(value))
         ret

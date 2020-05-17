@@ -1,8 +1,8 @@
 package typingsSlinky.fundamentalReact.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.fundamentalReact.PartialMessageStripProps
-import typingsSlinky.fundamentalReact.WeakValidationMapMessageS
+import typingsSlinky.fundamentalReact.anon.PartialMessageStripProps
+import typingsSlinky.fundamentalReact.anon.WeakValidationMapMessageS
 import typingsSlinky.fundamentalReact.messageStripMod.MessageStripProps
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap

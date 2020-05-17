@@ -15,3 +15,10 @@ import scala.scalajs.js.annotation._
 */
 trait IsADescriptor[Type] extends js.Object
 
+object IsADescriptor {
+  @scala.inline
+  def `false`[Type]: typingsSlinky.stampit.stampitBooleans.`false` = false.asInstanceOf[typingsSlinky.stampit.stampitBooleans.`false`]
+  @scala.inline
+  def `true`[Type]: typingsSlinky.stampit.stampitBooleans.`true` = true.asInstanceOf[typingsSlinky.stampit.stampitBooleans.`true`]
+}
+

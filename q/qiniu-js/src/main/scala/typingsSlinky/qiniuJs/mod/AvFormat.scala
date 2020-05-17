@@ -1,6 +1,6 @@
 package typingsSlinky.qiniuJs.mod
 
-import typingsSlinky.qiniuJs.AnonDictkey
+import typingsSlinky.qiniuJs.anon.Dictkey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait AvFormat extends js.Object {
   var nb_streams: Double = js.native
   var size: String = js.native
   var start_time: String = js.native
-  var tags: AnonDictkey = js.native
+  var tags: Dictkey = js.native
 }
 
 object AvFormat {
@@ -27,7 +27,7 @@ object AvFormat {
     nb_streams: Double,
     size: String,
     start_time: String,
-    tags: AnonDictkey
+    tags: Dictkey
   ): AvFormat = {
     val __obj = js.Dynamic.literal(bit_rate = bit_rate.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any], format_long_name = format_long_name.asInstanceOf[js.Any], format_name = format_name.asInstanceOf[js.Any], nb_streams = nb_streams.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], start_time = start_time.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[AvFormat]
@@ -81,7 +81,7 @@ object AvFormat {
         ret
     }
     @scala.inline
-    def withTags(value: AnonDictkey): Self = {
+    def withTags(value: Dictkey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tags")(value.asInstanceOf[js.Any])
         ret

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("gsap", "Bounce")
 @js.native
 class Bounce ()
-  extends typingsSlinky.gsap.gsap.Bounce
+  extends typingsSlinky.gsap.gsap.Ease
 
 /* static members */
 @JSImport("gsap", "Bounce")

@@ -11,3 +11,12 @@ import scala.scalajs.js.annotation._
 */
 trait symbolsSymbol extends js.Object
 
+object symbolsSymbol {
+  @scala.inline
+  implicit def apply(value: Symbol2D): symbolsSymbol = value.asInstanceOf[symbolsSymbol]
+  @scala.inline
+  implicit def apply(value: WebStyleSymbol): symbolsSymbol = value.asInstanceOf[symbolsSymbol]
+  @scala.inline
+  implicit def apply(value: symbolsSymbol3D): symbolsSymbol = value.asInstanceOf[symbolsSymbol]
+}
+

@@ -1,6 +1,5 @@
 package typingsSlinky.kendoUi.kendo.dataviz.ui
 
-import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.JQuery
 import typingsSlinky.kendoUi.JQueryEventObject
 import typingsSlinky.kendoUi.kendo.dataviz.map.Extent
@@ -11,11 +10,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.dataviz.ui.Map")
 @js.native
-class Map protected () extends Widget {
-  def this(element: Element) = this()
-  def this(element: Element, options: MapOptions) = this()
+trait Map extends Widget {
   var layers: js.Any = js.native
   @JSName("options")
   var options_Map: MapOptions = js.native
@@ -45,13 +41,5 @@ class Map protected () extends Widget {
   def viewToLocation(point: Point, zoom: Double): Location = js.native
   def zoom(): Double = js.native
   def zoom(level: Double): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("kendo.dataviz.ui.Map")
-@js.native
-object Map extends js.Object {
-  var fn: Map = js.native
-  def extend(proto: js.Object): Map = js.native
 }
 

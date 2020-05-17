@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonBaseSize
+import typingsSlinky.devextreme.anon.BaseSize
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
 import scala.scalajs.js
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait dxResponsiveBoxOptions extends CollectionWidgetOptions[dxResponsiveBox] {
   /** Specifies the collection of columns for the grid used to position layout elements. */
-  var cols: js.UndefOr[js.Array[AnonBaseSize]] = js.native
+  var cols: js.UndefOr[js.Array[BaseSize]] = js.native
   /** Binds the widget to data. */
   @JSName("dataSource")
   var dataSource_dxResponsiveBoxOptions: js.UndefOr[
@@ -20,7 +20,7 @@ trait dxResponsiveBoxOptions extends CollectionWidgetOptions[dxResponsiveBox] {
   @JSName("items")
   var items_dxResponsiveBoxOptions: js.UndefOr[js.Array[String | dxResponsiveBoxItem | _]] = js.native
   /** Specifies the collection of rows for the grid used to position layout elements. */
-  var rows: js.UndefOr[js.Array[AnonBaseSize]] = js.native
+  var rows: js.UndefOr[js.Array[BaseSize]] = js.native
   /** Specifies the function returning the size qualifier depending on the screen's width. */
   var screenByWidth: js.UndefOr[js.Function] = js.native
   /** Specifies on which screens all layout elements should be arranged in a single column. Accepts a single or several size qualifiers separated by a space. */
@@ -40,7 +40,7 @@ object dxResponsiveBoxOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCols(value: js.Array[AnonBaseSize]): Self = {
+    def withCols(value: js.Array[BaseSize]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cols")(value.asInstanceOf[js.Any])
         ret
@@ -76,7 +76,7 @@ object dxResponsiveBoxOptions {
         ret
     }
     @scala.inline
-    def withRows(value: js.Array[AnonBaseSize]): Self = {
+    def withRows(value: js.Array[BaseSize]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rows")(value.asInstanceOf[js.Any])
         ret

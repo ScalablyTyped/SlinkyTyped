@@ -1,6 +1,6 @@
 package typingsSlinky.natsHemera.mod
 
-import typingsSlinky.natsHemera.AnonExpectedMessages
+import typingsSlinky.natsHemera.anon.ExpectedMessages
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait ClientRequest extends js.Object {
   var error: js.Error = js.native
   var pattern: ClientPattern = js.native
   var payload: HemeraMessagePayload = js.native
-  var transport: AnonExpectedMessages = js.native
+  var transport: ExpectedMessages = js.native
 }
 
 object ClientRequest {
@@ -19,7 +19,7 @@ object ClientRequest {
     error: js.Error,
     pattern: ClientPattern,
     payload: HemeraMessagePayload,
-    transport: AnonExpectedMessages
+    transport: ExpectedMessages
   ): ClientRequest = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], pattern = pattern.asInstanceOf[js.Any], payload = payload.asInstanceOf[js.Any], transport = transport.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientRequest]
@@ -49,7 +49,7 @@ object ClientRequest {
         ret
     }
     @scala.inline
-    def withTransport(value: AnonExpectedMessages): Self = {
+    def withTransport(value: ExpectedMessages): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("transport")(value.asInstanceOf[js.Any])
         ret

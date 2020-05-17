@@ -293,9 +293,6 @@ package object restEndpointMethodsTypesMod {
   type ReposGetCommitActivityStatsResponse = js.Array[
     typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ReposGetCommitActivityStatsResponseItem
   ]
-  type ReposGetContentsResponse = typingsSlinky.octokitPluginRestEndpointMethods.AnonDownloadurl | (js.Array[
-    typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ReposGetContentsResponseItem
-  ])
   type ReposGetContributorsStatsResponse = js.Array[
     typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ReposGetContributorsStatsResponseItem
   ]

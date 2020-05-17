@@ -1,7 +1,5 @@
 package typingsSlinky.filewriter
 
-import org.scalablytyped.runtime.Instantiable1
-import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.ProgressEvent
 import typingsSlinky.std.EventTarget
 import scala.scalajs.js
@@ -79,13 +77,4 @@ trait FileSaver extends EventTarget {
     */
   def onwritestart(event: ProgressEvent): Unit = js.native
 }
-
-@JSGlobal("FileSaver")
-@js.native
-object FileSaver
-  extends /**
-  * When the FileSaver constructor is called, the user agent must return a new FileSaver object with readyState set to INIT.
-  * This constructor must be visible when the script's global object is either a Window object or an object implementing the WorkerUtils interface.
-  */
-Instantiable1[/* data */ Blob, FileSaver]
 

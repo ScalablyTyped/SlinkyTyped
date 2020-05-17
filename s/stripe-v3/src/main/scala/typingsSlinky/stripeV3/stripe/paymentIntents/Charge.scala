@@ -1,7 +1,7 @@
 package typingsSlinky.stripeV3.stripe.paymentIntents
 
-import typingsSlinky.stripeV3.AnonNetworkstatus
-import typingsSlinky.stripeV3.AnonStripereport
+import typingsSlinky.stripeV3.anon.Networkstatus
+import typingsSlinky.stripeV3.anon.Stripereport
 import typingsSlinky.stripeV3.stripe.BillingDetails
 import typingsSlinky.stripeV3.stripe.List
 import typingsSlinky.stripeV3.stripe.Metadata
@@ -88,7 +88,7 @@ trait Charge extends js.Object {
   /**
     * Hash with information on fraud assessments for the charge.
     */
-  var fraud_details: AnonStripereport = js.native
+  var fraud_details: Stripereport = js.native
   /**
     * Unique identifier for the object.
     */
@@ -122,7 +122,7 @@ trait Charge extends js.Object {
     * Details about whether the payment was accepted, and why. See
     * understanding declines for details.
     */
-  var outcome: AnonNetworkstatus | Null = js.native
+  var outcome: Networkstatus | Null = js.native
   /**
     * true if the charge succeeded, or was successfully authorized for later capture.
     */
@@ -208,7 +208,7 @@ object Charge {
     captured: Boolean,
     created: Double,
     currency: String,
-    fraud_details: AnonStripereport,
+    fraud_details: Stripereport,
     id: String,
     livemode: Boolean,
     metadata: Metadata,
@@ -274,7 +274,7 @@ object Charge {
         ret
     }
     @scala.inline
-    def withFraud_details(value: AnonStripereport): Self = {
+    def withFraud_details(value: Stripereport): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fraud_details")(value.asInstanceOf[js.Any])
         ret
@@ -478,7 +478,7 @@ object Charge {
         ret
     }
     @scala.inline
-    def withOutcome(value: AnonNetworkstatus): Self = {
+    def withOutcome(value: Networkstatus): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("outcome")(value.asInstanceOf[js.Any])
         ret

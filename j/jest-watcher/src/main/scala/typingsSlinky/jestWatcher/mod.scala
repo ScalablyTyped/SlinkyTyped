@@ -1,5 +1,6 @@
 package typingsSlinky.jestWatcher
 
+import typingsSlinky.jestWatcher.anon.Stdin
 import typingsSlinky.jestWatcher.baseWatchPluginMod.default
 import typingsSlinky.node.NodeJS.WritableStream
 import scala.scalajs.js
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation._
 object mod extends js.Object {
   @js.native
   class BaseWatchPlugin protected () extends default {
-    def this(hasStdinStdout: AnonStdin) = this()
+    def this(hasStdinStdout: Stdin) = this()
   }
   
   @js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.css.mod
 
-import typingsSlinky.css.AnonContent
+import typingsSlinky.css.anon.Content
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait Node extends js.Object {
   /** A reference to the parent node, or null if the node has no parent. */
   var parent: js.UndefOr[Node] = js.native
   /** Information about the position in the source string that corresponds to the node. */
-  var position: js.UndefOr[AnonContent] = js.native
+  var position: js.UndefOr[Content] = js.native
   /** The possible values are the ones listed in the Types section on https://github.com/reworkcss/css page. */
   var `type`: js.UndefOr[String] = js.native
 }
@@ -40,7 +40,7 @@ object Node {
         ret
     }
     @scala.inline
-    def withPosition(value: AnonContent): Self = {
+    def withPosition(value: Content): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
         ret

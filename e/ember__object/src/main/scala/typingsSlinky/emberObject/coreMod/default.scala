@@ -1,6 +1,6 @@
 package typingsSlinky.emberObject.coreMod
 
-import typingsSlinky.emberObject.TypeofCoreObject
+import typingsSlinky.emberObject.anon.TypeofCoreObject
 import typingsSlinky.emberObject.typesMod.EmberClassArguments
 import typingsSlinky.emberObject.typesMod.EmberClassConstructor
 import typingsSlinky.emberObject.typesMod.EmberInstanceArguments

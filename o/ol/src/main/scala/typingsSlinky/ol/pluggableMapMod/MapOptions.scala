@@ -1,7 +1,7 @@
 package typingsSlinky.ol.pluggableMapMod
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait MapOptions extends js.Object {
   var interactions: js.UndefOr[
     typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.interactionInteractionMod.default] | js.Array[typingsSlinky.ol.interactionInteractionMod.default]
   ] = js.native
-  var keyboardEventTarget: js.UndefOr[HTMLElement | Document_ | String] = js.native
+  var keyboardEventTarget: js.UndefOr[HTMLElement | Document | String] = js.native
   var layers: js.UndefOr[
     js.Array[typingsSlinky.ol.baseMod.default] | typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.baseMod.default] | typingsSlinky.ol.groupMod.default
   ] = js.native
@@ -69,13 +69,19 @@ object MapOptions {
         ret
     }
     @scala.inline
+    def withKeyboardEventTargetDocument(value: Document): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardEventTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
     def withKeyboardEventTargetHTMLElement(value: HTMLElement): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardEventTarget")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withKeyboardEventTarget(value: HTMLElement | Document_ | String): Self = {
+    def withKeyboardEventTarget(value: HTMLElement | Document | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardEventTarget")(value.asInstanceOf[js.Any])
         ret

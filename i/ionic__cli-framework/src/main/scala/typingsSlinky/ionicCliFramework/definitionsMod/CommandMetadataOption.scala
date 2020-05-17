@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCliFramework.definitionsMod
 
-import typingsSlinky.ionicCliFramework.AnonValue
+import typingsSlinky.ionicCliFramework.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait CommandMetadataOption extends Metadata {
   var aliases: js.UndefOr[js.Array[String]] = js.native
   var default: js.UndefOr[String | Boolean] = js.native
-  var spec: js.UndefOr[AnonValue] = js.native
+  var spec: js.UndefOr[Value] = js.native
   var `type`: js.UndefOr[CommandOptionType] = js.native
 }
 
@@ -50,7 +50,7 @@ object CommandMetadataOption {
         ret
     }
     @scala.inline
-    def withSpec(value: AnonValue): Self = {
+    def withSpec(value: Value): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("spec")(value.asInstanceOf[js.Any])
         ret

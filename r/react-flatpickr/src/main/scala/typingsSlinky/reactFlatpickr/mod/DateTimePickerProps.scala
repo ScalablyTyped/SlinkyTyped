@@ -5,8 +5,10 @@ import org.scalajs.dom.raw.Attr
 import org.scalajs.dom.raw.CSSStyleDeclaration
 import org.scalajs.dom.raw.ClipboardEvent
 import org.scalajs.dom.raw.DOMTokenList
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.FileList
 import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.HTMLAnchorElement
@@ -29,11 +31,11 @@ import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.ValidityState
 import org.scalajs.dom.raw.WheelEvent
 import slinky.core.facade.ReactElement
-import typingsSlinky.flatpickr.globalsMod._Global_.Date
+import typingsSlinky.flatpickr.globalsMod.global.Date
 import typingsSlinky.flatpickr.instanceMod.Instance
 import typingsSlinky.flatpickr.mod.flatpickr.Options.Hook
 import typingsSlinky.flatpickr.mod.flatpickr.Options.Options
-import typingsSlinky.reactFlatpickr.OmitDateTimePickerPropsop
+import typingsSlinky.reactFlatpickr.anon.OmitDateTimePickerPropsop
 import typingsSlinky.reactFlatpickr.reactFlatpickrStrings.a
 import typingsSlinky.reactFlatpickr.reactFlatpickrStrings.backward
 import typingsSlinky.reactFlatpickr.reactFlatpickrStrings.forward
@@ -45,8 +47,6 @@ import typingsSlinky.std.ChildNode
 import typingsSlinky.std.DOMRect
 import typingsSlinky.std.DOMRectList
 import typingsSlinky.std.DOMStringMap
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Event_
 import typingsSlinky.std.HTMLCollectionOf
 import typingsSlinky.std.HTMLSlotElement
 import typingsSlinky.std.InsertPosition
@@ -86,7 +86,7 @@ trait DateTimePickerProps extends js.Object {
   var addEventListener: js.UndefOr[
     js.Function2[
       fullscreenchange, 
-      /* listener */ js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _], 
+      /* listener */ js.ThisFunction1[/* this */ this.type, /* ev */ Event, _], 
       Unit
     ]
   ] = js.native
@@ -128,7 +128,7 @@ trait DateTimePickerProps extends js.Object {
   var dir: js.UndefOr[String] = js.native
   var dirName: js.UndefOr[String] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
-  var dispatchEvent: js.UndefOr[js.Function1[/* event */ Event_, Boolean]] = js.native
+  var dispatchEvent: js.UndefOr[js.Function1[/* event */ Event, Boolean]] = js.native
   var draggable: js.UndefOr[Boolean] = js.native
   var files: js.UndefOr[FileList] = js.native
   var firstChild: js.UndefOr[ChildNode] = js.native
@@ -225,42 +225,42 @@ trait DateTimePickerProps extends js.Object {
   var onanimationstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.native
   var onauxclick: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
   var onblur: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _]] = js.native
-  var oncancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var oncanplay: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var oncanplaythrough: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var onchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var oncancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var oncanplay: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var oncanplaythrough: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var onchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
   var onclick: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
-  var onclose: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onclose: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
   var oncontextmenu: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
   var oncopy: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _]] = js.native
-  var oncuechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var oncuechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
   var oncut: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _]] = js.native
   var ondblclick: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
   var ondrag: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
   var ondragend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
   var ondragenter: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
-  var ondragexit: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var ondragexit: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
   var ondragleave: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
   var ondragover: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
   var ondragstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
   var ondrop: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.native
-  var ondurationchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var onemptied: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var onended: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var ondurationchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var onemptied: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var onended: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
   var onerror: js.UndefOr[OnErrorEventHandler] = js.native
   var onfocus: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _]] = js.native
-  var onfullscreenchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var onfullscreenerror: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onfullscreenchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var onfullscreenerror: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
   var ongotpointercapture: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
-  var oninput: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var oninvalid: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var oninput: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var oninvalid: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
   var onkeydown: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]] = js.native
   var onkeypress: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]] = js.native
   var onkeyup: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]] = js.native
-  var onload: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var onloadeddata: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var onloadedmetadata: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var onloadstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onload: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var onloadeddata: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var onloadedmetadata: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var onloadstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
   var onlostpointercapture: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
   var onmousedown: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
   var onmouseenter: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
@@ -270,9 +270,9 @@ trait DateTimePickerProps extends js.Object {
   var onmouseover: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
   var onmouseup: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.native
   var onpaste: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _]] = js.native
-  var onpause: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var onplay: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var onplaying: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onpause: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var onplay: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var onplaying: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
   var onpointercancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
   var onpointerdown: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
   var onpointerenter: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
@@ -282,21 +282,21 @@ trait DateTimePickerProps extends js.Object {
   var onpointerover: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
   var onpointerup: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.native
   var onprogress: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ ProgressEvent, _]] = js.native
-  var onratechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var onreset: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onratechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var onreset: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
   var onresize: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _]] = js.native
-  var onscroll: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onscroll: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
   var onsecuritypolicyviolation: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ SecurityPolicyViolationEvent, _]] = js.native
-  var onseeked: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var onseeking: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var onselect: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var onselectionchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var onselectstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var onstalled: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var onsubmit: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var onsuspend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var ontimeupdate: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var ontoggle: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onseeked: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var onseeking: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var onselect: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var onselectionchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var onselectstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var onstalled: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var onsubmit: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var onsuspend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var ontimeupdate: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var ontoggle: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
   var ontouchcancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.native
   var ontouchend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.native
   var ontouchmove: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.native
@@ -305,12 +305,12 @@ trait DateTimePickerProps extends js.Object {
   var ontransitionend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.native
   var ontransitionrun: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.native
   var ontransitionstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.native
-  var onvolumechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
-  var onwaiting: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]] = js.native
+  var onvolumechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
+  var onwaiting: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.native
   var onwheel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ WheelEvent, _]] = js.native
   var options: js.UndefOr[Options] = js.native
   var outerHTML: js.UndefOr[String] = js.native
-  var ownerDocument: js.UndefOr[Document_] = js.native
+  var ownerDocument: js.UndefOr[Document] = js.native
   var parentElement: js.UndefOr[HTMLElement] = js.native
   var parentNode: js.UndefOr[Node with ParentNode] = js.native
   var pattern: js.UndefOr[String] = js.native
@@ -331,7 +331,7 @@ trait DateTimePickerProps extends js.Object {
   var removeEventListener: js.UndefOr[
     js.Function2[
       fullscreenchange, 
-      /* listener */ js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _], 
+      /* listener */ js.ThisFunction1[/* this */ this.type, /* ev */ Event, _], 
       Unit
     ]
   ] = js.native
@@ -663,7 +663,7 @@ object DateTimePickerProps {
     }
     @scala.inline
     def withAddEventListener(
-      value: (fullscreenchange, /* listener */ js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]) => Unit
+      value: (fullscreenchange, /* listener */ js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addEventListener")(js.Any.fromFunction2(value))
@@ -1132,7 +1132,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withDispatchEvent(value: /* event */ Event_ => Boolean): Self = {
+    def withDispatchEvent(value: /* event */ Event => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dispatchEvent")(js.Any.fromFunction1(value))
         ret
@@ -2218,7 +2218,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOncancel(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOncancel(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oncancel")(value.asInstanceOf[js.Any])
         ret
@@ -2230,7 +2230,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOncanplay(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOncanplay(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oncanplay")(value.asInstanceOf[js.Any])
         ret
@@ -2242,7 +2242,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOncanplaythrough(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOncanplaythrough(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oncanplaythrough")(value.asInstanceOf[js.Any])
         ret
@@ -2290,7 +2290,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOncuechange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOncuechange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oncuechange")(value.asInstanceOf[js.Any])
         ret
@@ -2362,7 +2362,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOndragexit(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOndragexit(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ondragexit")(value.asInstanceOf[js.Any])
         ret
@@ -2422,7 +2422,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOndurationchange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOndurationchange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ondurationchange")(value.asInstanceOf[js.Any])
         ret
@@ -2434,7 +2434,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnemptied(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnemptied(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onemptied")(value.asInstanceOf[js.Any])
         ret
@@ -2446,7 +2446,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnended(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnended(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onended")(value.asInstanceOf[js.Any])
         ret
@@ -2459,7 +2459,7 @@ object DateTimePickerProps {
     }
     @scala.inline
     def withOnerror(
-      value: (/* event */ Event_ | String, /* source */ js.UndefOr[String], /* lineno */ js.UndefOr[Double], /* colno */ js.UndefOr[Double], /* error */ js.UndefOr[js.Error]) => js.Any
+      value: (/* event */ Event | String, /* source */ js.UndefOr[String], /* lineno */ js.UndefOr[Double], /* colno */ js.UndefOr[Double], /* error */ js.UndefOr[js.Error]) => js.Any
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onerror")(js.Any.fromFunction5(value))
@@ -2490,7 +2490,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnfullscreenchange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnfullscreenchange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onfullscreenchange")(value.asInstanceOf[js.Any])
         ret
@@ -2502,7 +2502,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnfullscreenerror(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnfullscreenerror(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onfullscreenerror")(value.asInstanceOf[js.Any])
         ret
@@ -2526,7 +2526,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOninput(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOninput(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oninput")(value.asInstanceOf[js.Any])
         ret
@@ -2538,7 +2538,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOninvalid(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOninvalid(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oninvalid")(value.asInstanceOf[js.Any])
         ret
@@ -2586,7 +2586,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnload(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnload(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onload")(value.asInstanceOf[js.Any])
         ret
@@ -2598,7 +2598,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnloadeddata(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnloadeddata(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onloadeddata")(value.asInstanceOf[js.Any])
         ret
@@ -2610,7 +2610,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnloadedmetadata(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnloadedmetadata(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onloadedmetadata")(value.asInstanceOf[js.Any])
         ret
@@ -2622,7 +2622,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnloadstart(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnloadstart(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onloadstart")(value.asInstanceOf[js.Any])
         ret
@@ -2742,7 +2742,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnpause(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnpause(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onpause")(value.asInstanceOf[js.Any])
         ret
@@ -2754,7 +2754,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnplay(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnplay(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onplay")(value.asInstanceOf[js.Any])
         ret
@@ -2766,7 +2766,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnplaying(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnplaying(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onplaying")(value.asInstanceOf[js.Any])
         ret
@@ -2886,7 +2886,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnratechange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnratechange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onratechange")(value.asInstanceOf[js.Any])
         ret
@@ -2898,7 +2898,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnreset(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnreset(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onreset")(value.asInstanceOf[js.Any])
         ret
@@ -2922,7 +2922,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnscroll(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnscroll(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onscroll")(value.asInstanceOf[js.Any])
         ret
@@ -2946,7 +2946,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnseeked(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnseeked(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onseeked")(value.asInstanceOf[js.Any])
         ret
@@ -2958,7 +2958,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnseeking(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnseeking(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onseeking")(value.asInstanceOf[js.Any])
         ret
@@ -2970,7 +2970,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnselect(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnselect(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onselect")(value.asInstanceOf[js.Any])
         ret
@@ -2982,7 +2982,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnselectionchange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnselectionchange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onselectionchange")(value.asInstanceOf[js.Any])
         ret
@@ -2994,7 +2994,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnselectstart(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnselectstart(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onselectstart")(value.asInstanceOf[js.Any])
         ret
@@ -3006,7 +3006,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnstalled(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnstalled(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onstalled")(value.asInstanceOf[js.Any])
         ret
@@ -3018,7 +3018,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnsubmit(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnsubmit(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onsubmit")(value.asInstanceOf[js.Any])
         ret
@@ -3030,7 +3030,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnsuspend(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnsuspend(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onsuspend")(value.asInstanceOf[js.Any])
         ret
@@ -3042,7 +3042,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOntimeupdate(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOntimeupdate(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ontimeupdate")(value.asInstanceOf[js.Any])
         ret
@@ -3054,7 +3054,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOntoggle(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOntoggle(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ontoggle")(value.asInstanceOf[js.Any])
         ret
@@ -3162,7 +3162,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnvolumechange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnvolumechange(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onvolumechange")(value.asInstanceOf[js.Any])
         ret
@@ -3174,7 +3174,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOnwaiting(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]): Self = {
+    def withOnwaiting(value: js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onwaiting")(value.asInstanceOf[js.Any])
         ret
@@ -3222,7 +3222,7 @@ object DateTimePickerProps {
         ret
     }
     @scala.inline
-    def withOwnerDocument(value: Document_): Self = {
+    def withOwnerDocument(value: Document): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ownerDocument")(value.asInstanceOf[js.Any])
         ret
@@ -3439,7 +3439,7 @@ object DateTimePickerProps {
     }
     @scala.inline
     def withRemoveEventListener(
-      value: (fullscreenchange, /* listener */ js.ThisFunction1[DateTimePickerProps, /* ev */ Event_, _]) => Unit
+      value: (fullscreenchange, /* listener */ js.ThisFunction1[DateTimePickerProps, /* ev */ Event, _]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("removeEventListener")(js.Any.fromFunction2(value))

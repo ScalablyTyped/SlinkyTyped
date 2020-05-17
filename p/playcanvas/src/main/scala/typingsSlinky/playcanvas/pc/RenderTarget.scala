@@ -1,6 +1,5 @@
 package typingsSlinky.playcanvas.pc
 
-import typingsSlinky.playcanvas.AnonAutoResolve
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,10 +44,8 @@ import scala.scalajs.js.annotation._
   * // Set the render target on a layer
   * layer.renderTarget = renderTarget;
   */
-@JSGlobal("pc.RenderTarget")
 @js.native
-class RenderTarget protected () extends js.Object {
-  def this(options: AnonAutoResolve) = this()
+trait RenderTarget extends js.Object {
   /**
     * @readonly
     * @name pc.RenderTarget#colorBuffer
@@ -124,5 +121,78 @@ class RenderTarget protected () extends js.Object {
     * @param {boolean} depth - Resolve depth buffer.
     */
   def resolve(color: Boolean, depth: Boolean): Unit = js.native
+}
+
+object RenderTarget {
+  @scala.inline
+  def apply(
+    colorBuffer: Texture,
+    copy: (RenderTarget, Boolean, Boolean) => Boolean,
+    depthBuffer: Texture,
+    destroy: () => Unit,
+    face: Double,
+    height: Double,
+    resolve: (Boolean, Boolean) => Unit,
+    width: Double
+  ): RenderTarget = {
+    val __obj = js.Dynamic.literal(colorBuffer = colorBuffer.asInstanceOf[js.Any], copy = js.Any.fromFunction3(copy), depthBuffer = depthBuffer.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), face = face.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], resolve = js.Any.fromFunction2(resolve), width = width.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RenderTarget]
+  }
+  @scala.inline
+  implicit class RenderTargetOps[Self <: RenderTarget] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColorBuffer(value: Texture): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("colorBuffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCopy(value: (RenderTarget, Boolean, Boolean) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withDepthBuffer(value: Texture): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("depthBuffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDestroy(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("destroy")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withFace(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("face")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResolve(value: (Boolean, Boolean) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resolve")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

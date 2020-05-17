@@ -11,7 +11,7 @@ package object mod {
   ]
   type ParamMiddleware = js.Function3[
     /* param */ java.lang.String, 
-    /* ctx */ typingsSlinky.koaRouter.RouterContextany, 
+    /* ctx */ typingsSlinky.koaRouter.anon.RouterContextany, 
     /* next */ typingsSlinky.koa.mod.Next, 
     js.Any
   ]

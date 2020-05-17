@@ -1,9 +1,9 @@
 package typingsSlinky.agoraRtcSdk.mod
 
-import typingsSlinky.agoraRtcSdk.AnonAEC
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.application
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.screen
 import typingsSlinky.agoraRtcSdk.agoraRtcSdkStrings.window
+import typingsSlinky.agoraRtcSdk.anon.AEC
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait StreamSpec extends js.Object {
     */
   var audio: Boolean = js.native
   /** Marks whether to enable audio processing. */
-  var audioProcessing: js.UndefOr[AnonAEC] = js.native
+  var audioProcessing: js.UndefOr[AEC] = js.native
   /**
     * Specifies the audio source of the stream.
     */
@@ -154,7 +154,7 @@ object StreamSpec {
         ret
     }
     @scala.inline
-    def withAudioProcessing(value: AnonAEC): Self = {
+    def withAudioProcessing(value: AEC): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("audioProcessing")(value.asInstanceOf[js.Any])
         ret

@@ -98,16 +98,7 @@ object bindingParserMod extends js.Object {
       value: String,
       sourceSpan: ParseSourceSpan,
       absoluteOffset: Double,
-      valueSpan: js.UndefOr[scala.Nothing],
-      targetMatchableAttrs: js.Array[js.Array[String]],
-      targetProps: js.Array[ParsedProperty]
-    ): Unit = js.native
-    def parseLiteralAttr(
-      name: String,
-      value: String,
-      sourceSpan: ParseSourceSpan,
-      absoluteOffset: Double,
-      valueSpan: ParseSourceSpan,
+      valueSpan: js.UndefOr[ParseSourceSpan],
       targetMatchableAttrs: js.Array[js.Array[String]],
       targetProps: js.Array[ParsedProperty]
     ): Unit = js.native
@@ -116,16 +107,7 @@ object bindingParserMod extends js.Object {
       value: Null,
       sourceSpan: ParseSourceSpan,
       absoluteOffset: Double,
-      valueSpan: js.UndefOr[scala.Nothing],
-      targetMatchableAttrs: js.Array[js.Array[String]],
-      targetProps: js.Array[ParsedProperty]
-    ): Unit = js.native
-    def parseLiteralAttr(
-      name: String,
-      value: Null,
-      sourceSpan: ParseSourceSpan,
-      absoluteOffset: Double,
-      valueSpan: ParseSourceSpan,
+      valueSpan: js.UndefOr[ParseSourceSpan],
       targetMatchableAttrs: js.Array[js.Array[String]],
       targetProps: js.Array[ParsedProperty]
     ): Unit = js.native
@@ -135,17 +117,7 @@ object bindingParserMod extends js.Object {
       isHost: Boolean,
       sourceSpan: ParseSourceSpan,
       absoluteOffset: Double,
-      valueSpan: js.UndefOr[scala.Nothing],
-      targetMatchableAttrs: js.Array[js.Array[String]],
-      targetProps: js.Array[ParsedProperty]
-    ): Unit = js.native
-    def parsePropertyBinding(
-      name: String,
-      expression: String,
-      isHost: Boolean,
-      sourceSpan: ParseSourceSpan,
-      absoluteOffset: Double,
-      valueSpan: ParseSourceSpan,
+      valueSpan: js.UndefOr[ParseSourceSpan],
       targetMatchableAttrs: js.Array[js.Array[String]],
       targetProps: js.Array[ParsedProperty]
     ): Unit = js.native
@@ -153,15 +125,7 @@ object bindingParserMod extends js.Object {
       name: String,
       value: String,
       sourceSpan: ParseSourceSpan,
-      valueSpan: js.UndefOr[scala.Nothing],
-      targetMatchableAttrs: js.Array[js.Array[String]],
-      targetProps: js.Array[ParsedProperty]
-    ): Boolean = js.native
-    def parsePropertyInterpolation(
-      name: String,
-      value: String,
-      sourceSpan: ParseSourceSpan,
-      valueSpan: ParseSourceSpan,
+      valueSpan: js.UndefOr[ParseSourceSpan],
       targetMatchableAttrs: js.Array[js.Array[String]],
       targetProps: js.Array[ParsedProperty]
     ): Boolean = js.native

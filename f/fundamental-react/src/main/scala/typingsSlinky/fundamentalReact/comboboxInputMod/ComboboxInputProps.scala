@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.fundamentalReact.AnonState
+import typingsSlinky.fundamentalReact.anon.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +24,7 @@ trait ComboboxInputProps
   var onClick: js.UndefOr[js.Function1[/* event */ SyntheticMouseEvent[HTMLDivElement], Unit]] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var popoverProps: js.UndefOr[js.Object] = js.native
-  var validationState: js.UndefOr[AnonState] = js.native
+  var validationState: js.UndefOr[State] = js.native
 }
 
 object ComboboxInputProps {
@@ -154,7 +154,7 @@ object ComboboxInputProps {
         ret
     }
     @scala.inline
-    def withValidationState(value: AnonState): Self = {
+    def withValidationState(value: State): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validationState")(value.asInstanceOf[js.Any])
         ret

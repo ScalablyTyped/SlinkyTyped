@@ -1,7 +1,7 @@
 package typingsSlinky.dexie.mod.default
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.dexie.AnonIDBKeyRange
+import typingsSlinky.dexie.anon.IDBKeyRange
 import typingsSlinky.dexie.mod.Dexie
 import typingsSlinky.dexie.mod.Dexie.DexiePromiseConstructor
 import typingsSlinky.dexie.mod.Dexie.Transaction
@@ -18,7 +18,7 @@ object ^ extends js.Object {
   var addons: js.Array[js.Function1[/* db */ Dexie, Unit]] = js.native
   var currentTransaction: Transaction = js.native
   var default: Dexie = js.native
-  var dependencies: AnonIDBKeyRange = js.native
+  var dependencies: IDBKeyRange = js.native
   var maxKey: js.Array[js.Array[Unit]] | String = js.native
   var minKey: Double = js.native
   var semVer: String = js.native

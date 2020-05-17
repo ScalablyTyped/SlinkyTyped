@@ -1,13 +1,10 @@
 package typingsSlinky.winrtUwp.Windows.Gaming.Input
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtUwp.Windows.Foundation.EventHandler
 import typingsSlinky.winrtUwp.Windows.Foundation.TypedEventHandler
 import typingsSlinky.winrtUwp.Windows.System.User
 import typingsSlinky.winrtUwp.Windows.System.UserChangedEventArgs
 import typingsSlinky.winrtUwp.Windows.WinRTEvent
-import typingsSlinky.winrtUwp.winrtUwpStrings.gamepadadded
-import typingsSlinky.winrtUwp.winrtUwpStrings.gamepadremoved
 import typingsSlinky.winrtUwp.winrtUwpStrings.headsetconnected
 import typingsSlinky.winrtUwp.winrtUwpStrings.headsetdisconnected
 import typingsSlinky.winrtUwp.winrtUwpStrings.userchanged
@@ -16,9 +13,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a game controller. */
-@JSGlobal("Windows.Gaming.Input.Gamepad")
 @js.native
-abstract class Gamepad () extends js.Object {
+trait Gamepad extends js.Object {
   /** The audio headset attached to the gamepad. */
   var headset: Headset = js.native
   /** Gets a value that indicates the wireless state of the gamepad. */
@@ -61,33 +57,5 @@ abstract class Gamepad () extends js.Object {
   def removeEventListener_headsetdisconnected(`type`: headsetdisconnected, listener: TypedEventHandler[IGameController, Headset]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_userchanged(`type`: userchanged, listener: TypedEventHandler[IGameController, UserChangedEventArgs]): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("Windows.Gaming.Input.Gamepad")
-@js.native
-object Gamepad extends js.Object {
-  /** The list of all connected gamepads. */
-  var gamepads: IVectorView[Gamepad] = js.native
-  /** Signals when a new gamepad is connected. */
-  @JSName("ongamepadadded")
-  var ongamepadadded_Original: EventHandler[_] = js.native
-  /** Signals when a gamepad is disconnected. */
-  @JSName("ongamepadremoved")
-  var ongamepadremoved_Original: EventHandler[_] = js.native
-  def addEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_gamepadadded(`type`: gamepadadded, listener: EventHandler[_]): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_gamepadremoved(`type`: gamepadremoved, listener: EventHandler[_]): Unit = js.native
-  /** Signals when a new gamepad is connected. */
-  def ongamepadadded(ev: js.Any with WinRTEvent[_]): Unit = js.native
-  /** Signals when a gamepad is disconnected. */
-  def ongamepadremoved(ev: js.Any with WinRTEvent[_]): Unit = js.native
-  def removeEventListener(`type`: String, listener: EventHandler[_]): Unit = js.native
-  @JSName("removeEventListener")
-  def removeEventListener_gamepadadded(`type`: gamepadadded, listener: EventHandler[_]): Unit = js.native
-  @JSName("removeEventListener")
-  def removeEventListener_gamepadremoved(`type`: gamepadremoved, listener: EventHandler[_]): Unit = js.native
 }
 

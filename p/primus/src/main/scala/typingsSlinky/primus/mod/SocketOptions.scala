@@ -1,6 +1,6 @@
 package typingsSlinky.primus.mod
 
-import typingsSlinky.primus.AnonFactor
+import typingsSlinky.primus.anon.Factor
 import typingsSlinky.primus.primusStrings.disconnect
 import typingsSlinky.primus.primusStrings.online
 import typingsSlinky.primus.primusStrings.timeout
@@ -15,7 +15,7 @@ trait SocketOptions extends js.Object {
   var pingTimeout: js.UndefOr[Double] = js.native
   var queueSize: js.UndefOr[Double] = js.native
   // https://github.com/unshiftio/recovery
-  var reconnect: js.UndefOr[AnonFactor] = js.native
+  var reconnect: js.UndefOr[Factor] = js.native
   var strategy: js.UndefOr[String | (js.Array[disconnect | online | timeout])] = js.native
   var timeout: js.UndefOr[Double] = js.native
   var transport: js.UndefOr[js.Object] = js.native
@@ -83,7 +83,7 @@ object SocketOptions {
         ret
     }
     @scala.inline
-    def withReconnect(value: AnonFactor): Self = {
+    def withReconnect(value: Factor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("reconnect")(value.asInstanceOf[js.Any])
         ret

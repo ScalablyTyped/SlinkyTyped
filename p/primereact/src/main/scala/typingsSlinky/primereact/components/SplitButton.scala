@@ -1,11 +1,11 @@
 package typingsSlinky.primereact.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.splitButtonMod.SplitButtonProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,7 +38,7 @@ object SplitButton {
     @scala.inline
     def model(value: js.Array[_]): this.type = set("model", value.asInstanceOf[js.Any])
     @scala.inline
-    def onClick(value: /* event */ Event_ => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    def onClick(value: /* event */ Event => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

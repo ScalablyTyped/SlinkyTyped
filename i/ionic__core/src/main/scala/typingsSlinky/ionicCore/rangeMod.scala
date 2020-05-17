@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCore
 
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonRangeElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonRangeElement
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.mod.StyleEventDetail
 import typingsSlinky.ionicCore.rangeInterfaceMod.RangeChangeEventDetail

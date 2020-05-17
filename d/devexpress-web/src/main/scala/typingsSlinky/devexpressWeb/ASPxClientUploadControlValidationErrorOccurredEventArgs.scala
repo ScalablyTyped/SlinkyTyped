@@ -7,15 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientUploadControl.ValidationErrorOccurred event.
   */
-@JSGlobal("ASPxClientUploadControlValidationErrorOccurredEventArgs")
 @js.native
-class ASPxClientUploadControlValidationErrorOccurredEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientUploadControlValidationErrorOccurredEventArgs class with specified settings.
-    * @param errorText A string that is the error text.
-    * @param invalidFiles An array of the ASPxClientUploadControlInvalidFileInfo objects that are invalid files.
-    */
-  def this(errorText: String, invalidFiles: js.Array[ASPxClientUploadControlInvalidFileInfo]) = this()
+trait ASPxClientUploadControlValidationErrorOccurredEventArgs extends ASPxClientEventArgs {
   /**
     * Gets or sets the error text.
     */
@@ -32,5 +25,50 @@ class ASPxClientUploadControlValidationErrorOccurredEventArgs protected () exten
     * Gets the validation settings for the selected files.
     */
   var validationSettings: ASPxClientUploadControlValidationSettings = js.native
+}
+
+object ASPxClientUploadControlValidationErrorOccurredEventArgs {
+  @scala.inline
+  def apply(
+    errorText: String,
+    invalidFiles: js.Array[ASPxClientUploadControlInvalidFileInfo],
+    showAlert: Boolean,
+    validationSettings: ASPxClientUploadControlValidationSettings
+  ): ASPxClientUploadControlValidationErrorOccurredEventArgs = {
+    val __obj = js.Dynamic.literal(errorText = errorText.asInstanceOf[js.Any], invalidFiles = invalidFiles.asInstanceOf[js.Any], showAlert = showAlert.asInstanceOf[js.Any], validationSettings = validationSettings.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientUploadControlValidationErrorOccurredEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientUploadControlValidationErrorOccurredEventArgsOps[Self <: ASPxClientUploadControlValidationErrorOccurredEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withErrorText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("errorText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInvalidFiles(value: js.Array[ASPxClientUploadControlInvalidFileInfo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidFiles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShowAlert(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showAlert")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValidationSettings(value: ASPxClientUploadControlValidationSettings): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("validationSettings")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

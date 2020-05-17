@@ -1,7 +1,7 @@
 package typingsSlinky.log4js.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.log4js.AnonAppenders
+import typingsSlinky.log4js.anon.Appenders
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Configuration extends js.Object {
   var appenders: StringDictionary[Appender] = js.native
-  var categories: StringDictionary[AnonAppenders] = js.native
+  var categories: StringDictionary[Appenders] = js.native
   var disableClustering: js.UndefOr[Boolean] = js.native
   var levels: js.UndefOr[Levels_] = js.native
   var pm2: js.UndefOr[Boolean] = js.native
@@ -18,7 +18,7 @@ trait Configuration extends js.Object {
 
 object Configuration {
   @scala.inline
-  def apply(appenders: StringDictionary[Appender], categories: StringDictionary[AnonAppenders]): Configuration = {
+  def apply(appenders: StringDictionary[Appender], categories: StringDictionary[Appenders]): Configuration = {
     val __obj = js.Dynamic.literal(appenders = appenders.asInstanceOf[js.Any], categories = categories.asInstanceOf[js.Any])
     __obj.asInstanceOf[Configuration]
   }
@@ -35,7 +35,7 @@ object Configuration {
         ret
     }
     @scala.inline
-    def withCategories(value: StringDictionary[AnonAppenders]): Self = {
+    def withCategories(value: StringDictionary[Appenders]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("categories")(value.asInstanceOf[js.Any])
         ret

@@ -11,7 +11,7 @@ import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.`eu-west-1`
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.`sa-east-1`
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.`us-west-1`
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.`us-west-2`
-import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
@@ -21,7 +21,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetBucketLocationOutput
   extends MetadataBearer
-     with _OutputTypesUnion {
+     with OutputTypesUnion {
   /**
     * _BucketLocationConstraint shape
     */

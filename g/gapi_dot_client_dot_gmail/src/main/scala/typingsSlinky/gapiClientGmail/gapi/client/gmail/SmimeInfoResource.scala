@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientGmail.gapi.client.gmail
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientGmail.AnonOauthtoken
-import typingsSlinky.gapiClientGmail.AnonPrettyPrint
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientGmail.anon.Oauthtoken
+import typingsSlinky.gapiClientGmail.anon.PrettyPrint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,25 +10,25 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SmimeInfoResource extends js.Object {
   /** Deletes the specified S/MIME config for the specified send-as alias. */
-  def delete(request: AnonOauthtoken): Request_[Unit] = js.native
+  def delete(request: Oauthtoken): Request[Unit] = js.native
   /** Gets the specified S/MIME config for the specified send-as alias. */
-  def get(request: AnonOauthtoken): Request_[SmimeInfo] = js.native
+  def get(request: Oauthtoken): Request[SmimeInfo] = js.native
   /** Insert (upload) the given S/MIME config for the specified send-as alias. Note that pkcs12 format is required for the key. */
-  def insert(request: AnonPrettyPrint): Request_[SmimeInfo] = js.native
+  def insert(request: PrettyPrint): Request[SmimeInfo] = js.native
   /** Lists S/MIME configs for the specified send-as alias. */
-  def list(request: AnonPrettyPrint): Request_[ListSmimeInfoResponse] = js.native
+  def list(request: PrettyPrint): Request[ListSmimeInfoResponse] = js.native
   /** Sets the default S/MIME config for the specified send-as alias. */
-  def setDefault(request: AnonOauthtoken): Request_[Unit] = js.native
+  def setDefault(request: Oauthtoken): Request[Unit] = js.native
 }
 
 object SmimeInfoResource {
   @scala.inline
   def apply(
-    delete: AnonOauthtoken => Request_[Unit],
-    get: AnonOauthtoken => Request_[SmimeInfo],
-    insert: AnonPrettyPrint => Request_[SmimeInfo],
-    list: AnonPrettyPrint => Request_[ListSmimeInfoResponse],
-    setDefault: AnonOauthtoken => Request_[Unit]
+    delete: Oauthtoken => Request[Unit],
+    get: Oauthtoken => Request[SmimeInfo],
+    insert: PrettyPrint => Request[SmimeInfo],
+    list: PrettyPrint => Request[ListSmimeInfoResponse],
+    setDefault: Oauthtoken => Request[Unit]
   ): SmimeInfoResource = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), setDefault = js.Any.fromFunction1(setDefault))
     __obj.asInstanceOf[SmimeInfoResource]
@@ -40,31 +40,31 @@ object SmimeInfoResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDelete(value: AnonOauthtoken => Request_[Unit]): Self = {
+    def withDelete(value: Oauthtoken => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonOauthtoken => Request_[SmimeInfo]): Self = {
+    def withGet(value: Oauthtoken => Request[SmimeInfo]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withInsert(value: AnonPrettyPrint => Request_[SmimeInfo]): Self = {
+    def withInsert(value: PrettyPrint => Request[SmimeInfo]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonPrettyPrint => Request_[ListSmimeInfoResponse]): Self = {
+    def withList(value: PrettyPrint => Request[ListSmimeInfoResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withSetDefault(value: AnonOauthtoken => Request_[Unit]): Self = {
+    def withSetDefault(value: Oauthtoken => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("setDefault")(js.Any.fromFunction1(value))
         ret

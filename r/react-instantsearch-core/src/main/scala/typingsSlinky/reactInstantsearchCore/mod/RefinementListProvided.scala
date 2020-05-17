@@ -1,28 +1,29 @@
 package typingsSlinky.reactInstantsearchCore.mod
 
-import typingsSlinky.reactInstantsearchCore.HitcountnumberisRefinedbo
+import typingsSlinky.reactInstantsearchCore.anon.HitcountnumberisRefinedbo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait RefinementListProvided extends js.Object {
   /** a boolean that says whether you can currently refine */
-  var canRefine: Boolean
+  var canRefine: Boolean = js.native
   /** the refinement currently applied */
-  var currentRefinement: js.Array[String]
+  var currentRefinement: js.Array[String] = js.native
   /** a boolean that says if the items props contains facet values from the global search or from the search inside items. */
-  var isFromSearch: Boolean
+  var isFromSearch: Boolean = js.native
   /**
     * The list of items the RefinementList can display.
     * If isFromSearch is false, the hit properties like _highlightResult are undefined
     */
-  var items: js.Array[HitcountnumberisRefinedbo]
+  var items: js.Array[HitcountnumberisRefinedbo] = js.native
   /** a function to generate a URL for the corresponding search state */
-  def createURL(args: js.Any*): js.Any
+  def createURL(args: js.Any*): js.Any = js.native
   /** a function to toggle a refinement */
-  def refine(value: js.Array[String]): js.Any
+  def refine(value: js.Array[String]): js.Any = js.native
   /** a function to toggle a search inside items values */
-  def searchForItems(args: js.Any*): js.Any
+  def searchForItems(args: js.Any*): js.Any = js.native
 }
 
 object RefinementListProvided {
@@ -37,8 +38,57 @@ object RefinementListProvided {
     searchForItems: /* repeated */ js.Any => js.Any
   ): RefinementListProvided = {
     val __obj = js.Dynamic.literal(canRefine = canRefine.asInstanceOf[js.Any], createURL = js.Any.fromFunction1(createURL), currentRefinement = currentRefinement.asInstanceOf[js.Any], isFromSearch = isFromSearch.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], refine = js.Any.fromFunction1(refine), searchForItems = js.Any.fromFunction1(searchForItems))
-  
     __obj.asInstanceOf[RefinementListProvided]
   }
+  @scala.inline
+  implicit class RefinementListProvidedOps[Self <: RefinementListProvided] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCanRefine(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("canRefine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreateURL(value: /* repeated */ js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createURL")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCurrentRefinement(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentRefinement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsFromSearch(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFromSearch")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItems(value: js.Array[HitcountnumberisRefinedbo]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRefine(value: js.Array[String] => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refine")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSearchForItems(value: /* repeated */ js.Any => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("searchForItems")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

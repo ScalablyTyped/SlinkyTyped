@@ -1,6 +1,7 @@
 package typingsSlinky.graphqlBinding
 
 import typingsSlinky.graphql.mod.GraphQLSchema
+import typingsSlinky.graphqlBinding.anon.InputSchemaPath
 import typingsSlinky.graphqlBinding.typesMod.Interpolation
 import typingsSlinky.std.TemplateStringsArray
 import scala.scalajs.js
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation._
 object generatorMod extends js.Object {
   @js.native
   class Generator protected () extends js.Object {
-    def this(hasSchemaInputSchemaPathOutputBindingPathIsDefaultExport: AnonInputSchemaPath) = this()
+    def this(hasSchemaInputSchemaPathOutputBindingPathIsDefaultExport: InputSchemaPath) = this()
     var inputSchemaPath: String = js.native
     var isDefaultExport: Boolean = js.native
     var outputBindingPath: String = js.native

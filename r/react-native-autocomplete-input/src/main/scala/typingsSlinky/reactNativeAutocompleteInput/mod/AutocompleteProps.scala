@@ -7,7 +7,7 @@ import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextInputProperties
 import typingsSlinky.reactNative.mod.TextInputProps
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeAutocompleteInput.AnonIndex
+import typingsSlinky.reactNativeAutocompleteInput.anon.Index
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -81,12 +81,12 @@ trait AutocompleteProps[T] extends TextInputProps {
     * function
     * renderItem will be called to render the data objects which will be displayed in the result view below the text input.
     */
-  def renderItem(itemWithIndex: AnonIndex[T]): TagMod[Any] = js.native
+  def renderItem(itemWithIndex: Index[T]): TagMod[Any] = js.native
 }
 
 object AutocompleteProps {
   @scala.inline
-  def apply[T](data: js.Array[T], renderItem: AnonIndex[T] => TagMod[Any]): AutocompleteProps[T] = {
+  def apply[T](data: js.Array[T], renderItem: Index[T] => TagMod[Any]): AutocompleteProps[T] = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], renderItem = js.Any.fromFunction1(renderItem))
     __obj.asInstanceOf[AutocompleteProps[T]]
   }
@@ -103,7 +103,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withRenderItem(value: AnonIndex[T] => TagMod[Any]): Self[T] = {
+    def withRenderItem(value: Index[T] => TagMod[Any]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderItem")(js.Any.fromFunction1(value))
         ret

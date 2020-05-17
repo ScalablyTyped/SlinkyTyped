@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientAdexchangebuyer.gapi.client.adexchangebuyer
 
-import typingsSlinky.gapiClientAdexchangebuyer.AnonAspectRatio
-import typingsSlinky.gapiClientAdexchangebuyer.AnonToken
-import typingsSlinky.gapiClientAdexchangebuyer.AnonWidth
+import typingsSlinky.gapiClientAdexchangebuyer.anon.AspectRatio
+import typingsSlinky.gapiClientAdexchangebuyer.anon.Token
+import typingsSlinky.gapiClientAdexchangebuyer.anon.Width
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,13 +18,13 @@ trait PretargetingConfig extends js.Object {
   /** List must contain exactly one of PRETARGETING_CREATIVE_TYPE_HTML or PRETARGETING_CREATIVE_TYPE_VIDEO. */
   var creativeType: js.UndefOr[js.Array[String]] = js.native
   /** Requests which allow one of these (width, height) pairs will match. All pairs must be supported ad dimensions. */
-  var dimensions: js.UndefOr[js.Array[AnonWidth]] = js.native
+  var dimensions: js.UndefOr[js.Array[Width]] = js.native
   /** Requests with any of these content labels will not match. Values are from content-labels.txt in the downloadable files section. */
   var excludedContentLabels: js.UndefOr[js.Array[String]] = js.native
   /** Requests containing any of these geo criteria ids will not match. */
   var excludedGeoCriteriaIds: js.UndefOr[js.Array[String]] = js.native
   /** Requests containing any of these placements will not match. */
-  var excludedPlacements: js.UndefOr[js.Array[AnonToken]] = js.native
+  var excludedPlacements: js.UndefOr[js.Array[Token]] = js.native
   /** Requests containing any of these users list ids will not match. */
   var excludedUserLists: js.UndefOr[js.Array[String]] = js.native
   /** Requests containing any of these vertical ids will not match. Values are from the publisher-verticals.txt file in the downloadable files section. */
@@ -49,7 +49,7 @@ trait PretargetingConfig extends js.Object {
   /** Requests containing any of these mobile operating system version ids will match. Values are from mobile-os.csv in the downloadable files section. */
   var mobileOperatingSystemVersions: js.UndefOr[js.Array[String]] = js.native
   /** Requests containing any of these placements will match. */
-  var placements: js.UndefOr[js.Array[AnonToken]] = js.native
+  var placements: js.UndefOr[js.Array[Token]] = js.native
   /**
     * Requests matching any of these platforms will match. Possible values are PRETARGETING_PLATFORM_MOBILE, PRETARGETING_PLATFORM_DESKTOP, and
     * PRETARGETING_PLATFORM_TABLET.
@@ -72,7 +72,7 @@ trait PretargetingConfig extends js.Object {
   /** Requests containing any of these vertical ids will match. */
   var verticals: js.UndefOr[js.Array[String]] = js.native
   /** Video requests satisfying any of these player size constraints will match. */
-  var videoPlayerSizes: js.UndefOr[js.Array[AnonAspectRatio]] = js.native
+  var videoPlayerSizes: js.UndefOr[js.Array[AspectRatio]] = js.native
 }
 
 object PretargetingConfig {
@@ -136,7 +136,7 @@ object PretargetingConfig {
         ret
     }
     @scala.inline
-    def withDimensions(value: js.Array[AnonWidth]): Self = {
+    def withDimensions(value: js.Array[Width]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(value.asInstanceOf[js.Any])
         ret
@@ -172,7 +172,7 @@ object PretargetingConfig {
         ret
     }
     @scala.inline
-    def withExcludedPlacements(value: js.Array[AnonToken]): Self = {
+    def withExcludedPlacements(value: js.Array[Token]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("excludedPlacements")(value.asInstanceOf[js.Any])
         ret
@@ -304,7 +304,7 @@ object PretargetingConfig {
         ret
     }
     @scala.inline
-    def withPlacements(value: js.Array[AnonToken]): Self = {
+    def withPlacements(value: js.Array[Token]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("placements")(value.asInstanceOf[js.Any])
         ret
@@ -388,7 +388,7 @@ object PretargetingConfig {
         ret
     }
     @scala.inline
-    def withVideoPlayerSizes(value: js.Array[AnonAspectRatio]): Self = {
+    def withVideoPlayerSizes(value: js.Array[AspectRatio]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("videoPlayerSizes")(value.asInstanceOf[js.Any])
         ret

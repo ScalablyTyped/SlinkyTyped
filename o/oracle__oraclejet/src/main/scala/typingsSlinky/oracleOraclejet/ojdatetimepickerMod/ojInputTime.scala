@@ -2,9 +2,9 @@ package typingsSlinky.oracleOraclejet.ojdatetimepickerMod
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.AnonAmpmWheelLabel
-import typingsSlinky.oracleOraclejet.AnonClass
-import typingsSlinky.oracleOraclejet.AnonFooterLayout
+import typingsSlinky.oracleOraclejet.anon.AmpmWheelLabel
+import typingsSlinky.oracleOraclejet.anon.Class
+import typingsSlinky.oracleOraclejet.anon.FooterLayout
 import typingsSlinky.oracleOraclejet.ojinputtextMod.inputBase
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.Converter
 import typingsSlinky.oracleOraclejet.ojvalidationBaseMod.Validation.RegisteredConverter
@@ -48,11 +48,11 @@ trait ojInputTime extends inputBase[String, ojInputTimeSettableProperties, Strin
   var onPickerAttributesChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var onRenderModeChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var onTimePickerChanged: (js.Function1[CustomEvent, _]) | Null = js.native
-  var pickerAttributes: AnonClass = js.native
+  var pickerAttributes: Class = js.native
   var renderMode: jet | native = js.native
-  var timePicker: AnonFooterLayout = js.native
+  var timePicker: FooterLayout = js.native
   @JSName("translations")
-  var translations_ojInputTime: AnonAmpmWheelLabel = js.native
+  var translations_ojInputTime: AmpmWheelLabel = js.native
   def addEventListener(`type`: keyboardEditChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: keyboardEditChanged,
@@ -117,11 +117,11 @@ trait ojInputTime extends inputBase[String, ojInputTimeSettableProperties, Strin
   @JSName("getProperty")
   def getProperty_min(property: min): String | Null = js.native
   @JSName("getProperty")
-  def getProperty_pickerAttributes(property: pickerAttributes): AnonClass = js.native
+  def getProperty_pickerAttributes(property: pickerAttributes): Class = js.native
   @JSName("getProperty")
   def getProperty_renderMode(property: renderMode): jet | native = js.native
   @JSName("getProperty")
-  def getProperty_timePicker(property: timePicker): AnonFooterLayout = js.native
+  def getProperty_timePicker(property: timePicker): FooterLayout = js.native
   def hide(): Unit = js.native
   def setProperties(properties: ojInputTimeSettablePropertiesLenient): Unit = js.native
   def setProperty(property: keyboardEdit, value: disabled): Unit = js.native
@@ -141,11 +141,11 @@ trait ojInputTime extends inputBase[String, ojInputTimeSettableProperties, Strin
   @JSName("setProperty")
   def setProperty_min(property: min, value: String): Unit = js.native
   @JSName("setProperty")
-  def setProperty_pickerAttributes(property: pickerAttributes, value: AnonClass): Unit = js.native
+  def setProperty_pickerAttributes(property: pickerAttributes, value: Class): Unit = js.native
   @JSName("setProperty")
-  def setProperty_timePicker(property: timePicker, value: AnonFooterLayout): Unit = js.native
+  def setProperty_timePicker(property: timePicker, value: FooterLayout): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonAmpmWheelLabel): Unit = js.native
+  def setProperty_translations(property: translations, value: AmpmWheelLabel): Unit = js.native
   def show(): Unit = js.native
 }
 

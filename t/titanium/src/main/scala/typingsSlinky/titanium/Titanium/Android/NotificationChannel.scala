@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * Module for notification channels.
 		 */
-@JSGlobal("Titanium.Android.NotificationChannel")
 @js.native
-class NotificationChannel () extends Proxy {
+trait NotificationChannel extends Proxy {
   /**
   			 * Whether or not notifications posted to this channel can interrupt the user.
   			 */

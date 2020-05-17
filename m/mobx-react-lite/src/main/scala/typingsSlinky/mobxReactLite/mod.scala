@@ -1,6 +1,7 @@
 package typingsSlinky.mobxReactLite
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.mobxReactLite.anon.IObserverOptionsforwardRe
 import typingsSlinky.mobxReactLite.observerMod.IObserverOptions
 import typingsSlinky.mobxReactLite.optimizeSchedulerMod.IBatchedUpdates
 import typingsSlinky.mobxReactLite.useDisposableMod.TDisposable

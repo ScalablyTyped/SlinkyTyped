@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DateFilterValue extends _FilterValueData {
+trait DateFilterValue extends FilterValueData {
   var comparator: FilterComparator = js.native
   var date: js.Date | String = js.native
 }

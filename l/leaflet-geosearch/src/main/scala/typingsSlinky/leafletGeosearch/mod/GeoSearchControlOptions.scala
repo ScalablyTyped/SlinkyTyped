@@ -1,8 +1,8 @@
 package typingsSlinky.leafletGeosearch.mod
 
 import typingsSlinky.leaflet.mod.MarkerOptions
-import typingsSlinky.leafletGeosearch.AnonButton
-import typingsSlinky.leafletGeosearch.AnonQuery
+import typingsSlinky.leafletGeosearch.anon.Button
+import typingsSlinky.leafletGeosearch.anon.Query
 import typingsSlinky.leafletGeosearch.leafletGeosearchStrings.bar
 import typingsSlinky.leafletGeosearch.leafletGeosearchStrings.button
 import scala.scalajs.js
@@ -32,7 +32,7 @@ trait GeoSearchControlOptions extends js.Object {
     *      input: '';
     * }
     */
-  var classNames: js.UndefOr[AnonButton] = js.native
+  var classNames: js.UndefOr[Button] = js.native
   /** @default false */
   var keepResult: js.UndefOr[Boolean] = js.native
   /**
@@ -49,7 +49,7 @@ trait GeoSearchControlOptions extends js.Object {
   /** @default 'Sorry; that address could not be found.' */
   var notFoundMessage: js.UndefOr[String] = js.native
   /** @default ({ result }) => `${result.label}` */
-  var popupFormat: js.UndefOr[js.Function1[/* hasQueryResult */ AnonQuery, String]] = js.native
+  var popupFormat: js.UndefOr[js.Function1[/* hasQueryResult */ Query, String]] = js.native
   /** @default 'topleft' */
   var position: js.UndefOr[String] = js.native
   var provider: BaseProvider[js.Object, js.Object] = js.native
@@ -134,7 +134,7 @@ object GeoSearchControlOptions {
         ret
     }
     @scala.inline
-    def withClassNames(value: AnonButton): Self = {
+    def withClassNames(value: Button): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("classNames")(value.asInstanceOf[js.Any])
         ret
@@ -206,7 +206,7 @@ object GeoSearchControlOptions {
         ret
     }
     @scala.inline
-    def withPopupFormat(value: /* hasQueryResult */ AnonQuery => String): Self = {
+    def withPopupFormat(value: /* hasQueryResult */ Query => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("popupFormat")(js.Any.fromFunction1(value))
         ret

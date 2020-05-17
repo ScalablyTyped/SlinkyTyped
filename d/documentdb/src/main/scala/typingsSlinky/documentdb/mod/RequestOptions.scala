@@ -1,6 +1,6 @@
 package typingsSlinky.documentdb.mod
 
-import typingsSlinky.documentdb.AnonCondition
+import typingsSlinky.documentdb.anon.Condition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RequestOptions extends js.Object {
   /** Conditions Associated with the request. */
-  var accessCondition: js.UndefOr[AnonCondition] = js.native
+  var accessCondition: js.UndefOr[Condition] = js.native
   /** Consistency level required by the client. */
   var consistencyLevel: js.UndefOr[String] = js.native
   /**
@@ -66,7 +66,7 @@ object RequestOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAccessCondition(value: AnonCondition): Self = {
+    def withAccessCondition(value: Condition): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("accessCondition")(value.asInstanceOf[js.Any])
         ret

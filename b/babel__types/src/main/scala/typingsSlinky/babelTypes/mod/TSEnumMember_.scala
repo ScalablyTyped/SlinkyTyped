@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TSEnumMember_
   extends BaseNode
-     with _Node {
+     with Node {
   var id: Identifier_ | StringLiteral_ = js.native
   var initializer: Expression | Null = js.native
   @JSName("type")

@@ -1,6 +1,6 @@
 package typingsSlinky.sequelize.mod
 
-import typingsSlinky.sequelize.AnonLength
+import typingsSlinky.sequelize.anon.Length
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,6 +16,6 @@ trait DataTypeAbstractString[T] extends DataTypeAbstract {
     */
   def apply(): T = js.native
   def apply(length: Double): T = js.native
-  def apply(options: AnonLength): T = js.native
+  def apply(options: Length): T = js.native
 }
 

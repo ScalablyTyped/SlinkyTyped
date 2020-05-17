@@ -3,11 +3,11 @@ package typingsSlinky.babylonjs.indexMod
 import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.ProgressEvent
-import typingsSlinky.babylonjs.AnonCapture
-import typingsSlinky.babylonjs.AnonCaptureConstraint
 import typingsSlinky.babylonjs.HTMLCanvasElement
 import typingsSlinky.babylonjs.ImageBitmap
 import typingsSlinky.babylonjs.WebGLRenderingContext
+import typingsSlinky.babylonjs.anon.Capture
+import typingsSlinky.babylonjs.anon.CaptureConstraint
 import typingsSlinky.babylonjs.fileRequestMod.IFileRequest
 import typingsSlinky.babylonjs.internalTextureLoaderMod.IInternalTextureLoader
 import typingsSlinky.babylonjs.iofflineproviderMod.IOfflineProvider
@@ -56,7 +56,7 @@ object ThinEngine extends js.Object {
     */
   var CollisionsEpsilon: Double = js.native
   /** Use this array to turn off some WebGL2 features on known buggy browsers version */
-  var ExceptionList: js.Array[AnonCapture | AnonCaptureConstraint] = js.native
+  var ExceptionList: js.Array[Capture | CaptureConstraint] = js.native
   /** @hidden */
   var _TextureLoaders: js.Array[IInternalTextureLoader] = js.native
   var _isSupported: js.Any = js.native

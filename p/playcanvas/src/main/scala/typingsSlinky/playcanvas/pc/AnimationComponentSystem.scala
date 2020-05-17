@@ -12,9 +12,6 @@ import scala.scalajs.js.annotation._
   * @description Create an AnimationComponentSystem.
   * @param {pc.Application} app - The application managing this system.
   */
-@JSGlobal("pc.AnimationComponentSystem")
 @js.native
-class AnimationComponentSystem protected () extends ComponentSystem {
-  def this(app: Application) = this()
-}
+trait AnimationComponentSystem extends ComponentSystem
 

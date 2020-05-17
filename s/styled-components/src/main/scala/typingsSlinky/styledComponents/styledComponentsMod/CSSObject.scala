@@ -39,14 +39,15 @@ import scala.scalajs.js.annotation._
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.csstype.mod.SvgProperties because var conflicts: clip, clipPath, color, cursor, direction, display, filter, font, fontFamily, fontSize, fontSizeAdjust, fontStretch, fontStyle, fontVariant, fontWeight, imageRendering, letterSpacing, lineHeight, mask, opacity, overflow, paintOrder, pointerEvents, textDecoration, textRendering, unicodeBidi, visibility, whiteSpace, wordSpacing, writingMode. Inlined alignmentBaseline, baselineShift, clipRule, colorInterpolation, colorRendering, dominantBaseline, fill, fillOpacity, fillRule, floodColor, floodOpacity, glyphOrientationVertical, lightingColor, marker, markerEnd, markerMid, markerStart, shapeRendering, stopColor, stopOpacity, stroke, strokeDasharray, strokeDashoffset, strokeLinecap, strokeLinejoin, strokeMiterlimit, strokeOpacity, strokeWidth, textAnchor, vectorEffect */ @js.native
 trait CSSObject
-  extends _InterpolationValue
+  extends InterpolationValue
      with StandardLonghandProperties[String | Double]
      with StandardShorthandProperties[String | Double]
      with VendorLonghandProperties[String | Double]
      with VendorShorthandProperties[String | Double]
      with ObsoleteProperties[String | Double]
      with CSSPseudos
-     with /* key */ StringDictionary[js.UndefOr[CSSObject | String | Double]] {
+     with /* key */ StringDictionary[js.UndefOr[CSSObject | String | Double]]
+     with CSSProp[js.Any] {
   var alignmentBaseline: js.UndefOr[AlignmentBaselineProperty] = js.native
   var baselineShift: js.UndefOr[BaselineShiftProperty[String | Double]] = js.native
   var clipRule: js.UndefOr[ClipRuleProperty] = js.native

@@ -1,0 +1,41 @@
+package typingsSlinky.numeric.anon
+
+import typingsSlinky.numeric.mod.Matrix
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait B extends js.Object {
+  var B: Matrix = js.native
+  var Q: Matrix = js.native
+}
+
+object B {
+  @scala.inline
+  def apply(B: Matrix, Q: Matrix): B = {
+    val __obj = js.Dynamic.literal(B = B.asInstanceOf[js.Any], Q = Q.asInstanceOf[js.Any])
+    __obj.asInstanceOf[B]
+  }
+  @scala.inline
+  implicit class BOps[Self <: B] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withB(value: Matrix): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("B")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQ(value: Matrix): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Q")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

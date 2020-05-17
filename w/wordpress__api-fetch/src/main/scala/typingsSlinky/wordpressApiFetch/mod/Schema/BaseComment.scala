@@ -1,7 +1,7 @@
 package typingsSlinky.wordpressApiFetch.mod.Schema
 
 import typingsSlinky.std.Record
-import typingsSlinky.wordpressApiFetch.AnonDictk
+import typingsSlinky.wordpressApiFetch.anon.Dictk
 import typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.approved
 import typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.hold
 import typingsSlinky.wordpressApiFetch.wordpressApiFetchStrings.spam
@@ -11,7 +11,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait BaseComment[T /* <: Context */] extends BaseResponse {
+trait BaseComment[T /* <: Context */]
+  extends BaseResponse
+     with Comment[T] {
   var author: Double = js.native
   var author_avatar_urls: Record[Double, String] = js.native
   var author_email: String = js.native
@@ -34,7 +36,7 @@ trait BaseComment[T /* <: Context */] extends BaseResponse {
 object BaseComment {
   @scala.inline
   def apply[T](
-    _links: Record[String, js.Array[AnonDictk]],
+    _links: Record[String, js.Array[Dictk]],
     author: Double,
     author_avatar_urls: Record[Double, String],
     author_email: String,

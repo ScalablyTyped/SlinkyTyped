@@ -1,7 +1,7 @@
 package typingsSlinky.oja.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oja.AnonNext
+import typingsSlinky.oja.anon.Next
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ class Flow () extends js.Object {
   def define(topic: String, data: Primitive): this.type = js.native
   def define(topics: String): StageContext = js.native
   def define(topics: js.Array[String]): StageContext = js.native
-  def getReader(topic: String): AnonNext = js.native
+  def getReader(topic: String): Next = js.native
   def state(): State = js.native
   def timeout(topics: String, ms: Double): this.type = js.native
   def timeout(topics: js.Array[String], ms: Double): this.type = js.native

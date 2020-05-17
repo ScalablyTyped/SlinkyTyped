@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.WebGLRenderingContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -147,8 +146,4 @@ trait BaseLayerViewGL2D extends LayerView {
     */
   def tilesChanged(added: js.Array[BaseLayerViewGL2DTile], removed: js.Array[BaseLayerViewGL2DTile]): Unit = js.native
 }
-
-@JSGlobal("__esri.BaseLayerViewGL2D")
-@js.native
-object BaseLayerViewGL2D extends TopLevel[BaseLayerViewGL2DConstructor]
 

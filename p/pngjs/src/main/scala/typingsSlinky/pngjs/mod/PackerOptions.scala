@@ -1,14 +1,14 @@
 package typingsSlinky.pngjs.mod
 
-import typingsSlinky.pngjs.AnonBlue
-import typingsSlinky.pngjs.FnCall
+import typingsSlinky.pngjs.anon.Blue
+import typingsSlinky.pngjs.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait PackerOptions extends js.Object {
-  var bgColor: js.UndefOr[AnonBlue] = js.native
+  var bgColor: js.UndefOr[Blue] = js.native
   var bitDepth: js.UndefOr[BitDepth] = js.native
   var colorType: js.UndefOr[ColorType] = js.native
   var deflateChunkSize: js.UndefOr[Double] = js.native
@@ -33,7 +33,7 @@ object PackerOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBgColor(value: AnonBlue): Self = {
+    def withBgColor(value: Blue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bgColor")(value.asInstanceOf[js.Any])
         ret

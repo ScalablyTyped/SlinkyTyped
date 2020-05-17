@@ -1,18 +1,17 @@
 package typingsSlinky.winrtUwp.Windows.Web.Http.Headers
 
 import typingsSlinky.std.Array
-import typingsSlinky.winrtUwp.AnonIndex
-import typingsSlinky.winrtUwp.AnonItemsHttpChallengeHeaderValue
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
+import typingsSlinky.winrtUwp.anon.Index
+import typingsSlinky.winrtUwp.anon.ItemsHttpChallengeHeaderValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the value of the Proxy-Authenticate or WWW-Authenticate HTTP header on an HTTP response. */
-@JSGlobal("Windows.Web.Http.Headers.HttpChallengeHeaderValueCollection")
 @js.native
-abstract class HttpChallengeHeaderValueCollection () extends Array[HttpChallengeHeaderValue] {
+trait HttpChallengeHeaderValueCollection extends Array[HttpChallengeHeaderValue] {
   /** Gets the number of HttpChallengeHeaderValue objects in the collection. */
   var size: Double = js.native
   /**
@@ -37,19 +36,19 @@ abstract class HttpChallengeHeaderValueCollection () extends Array[HttpChallenge
     * Retrieves the HttpChallengeHeaderValue items that start at the specified index in the collection.
     * @param startIndex The zero-based index of the start of the HttpChallengeHeaderValue items in the HttpChallengeHeaderValueCollection .
     */
-  def getMany(startIndex: Double): AnonItemsHttpChallengeHeaderValue = js.native
+  def getMany(startIndex: Double): ItemsHttpChallengeHeaderValue = js.native
   /**
     * Returns an immutable view of the HttpChallengeHeaderValueCollection .
     * @return The view of the HttpChallengeHeaderValueCollection .
     */
   def getView(): IVectorView[HttpChallengeHeaderValue] = js.native
-  def indexOf(value: HttpChallengeHeaderValue, extra: js.Any*): AnonIndex = js.native
+  def indexOf(value: HttpChallengeHeaderValue, extra: js.Any*): Index = js.native
   /**
     * Retrieves the index of an HttpChallengeHeaderValue in the collection.
     * @param value The HttpChallengeHeaderValue to find in the HttpChallengeHeaderValueCollection .
     */
   @JSName("indexOf")
-  def indexOf_AnonIndex(value: HttpChallengeHeaderValue): AnonIndex = js.native
+  def indexOf_Index(value: HttpChallengeHeaderValue): Index = js.native
   /**
     * Inserts an HttpChallengeHeaderValue into the collection at the specified index.
     * @param index The zero-based index at which value should be inserted.

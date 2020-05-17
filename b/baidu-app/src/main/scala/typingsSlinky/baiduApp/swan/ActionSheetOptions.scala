@@ -1,6 +1,6 @@
 package typingsSlinky.baiduApp.swan
 
-import typingsSlinky.baiduApp.AnonTapIndex
+import typingsSlinky.baiduApp.anon.TapIndex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait ActionSheetOptions
   		 * 接口调用成功的回调函数
   		 */
   @JSName("success")
-  var success_ActionSheetOptions: js.UndefOr[js.Function1[/* res */ AnonTapIndex, Unit]] = js.native
+  var success_ActionSheetOptions: js.UndefOr[js.Function1[/* res */ TapIndex, Unit]] = js.native
 }
 
 object ActionSheetOptions {
@@ -54,7 +54,7 @@ object ActionSheetOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonTapIndex => Unit): Self = {
+    def withSuccess(value: /* res */ TapIndex => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

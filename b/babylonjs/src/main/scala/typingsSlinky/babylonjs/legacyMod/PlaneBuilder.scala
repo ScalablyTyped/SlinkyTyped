@@ -1,6 +1,5 @@
 package typingsSlinky.babylonjs.legacyMod
 
-import typingsSlinky.babylonjs.AnonSize
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,7 +28,11 @@ object PlaneBuilder extends js.Object {
     * @returns the plane mesh
     * @see https://doc.babylonjs.com/how_to/set_shapes#plane
     */
-  def CreatePlane(name: String, options: AnonSize): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreatePlane(name: String, options: AnonSize, scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePlane(name: String, options: typingsSlinky.babylonjs.anon.Size): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePlane(
+    name: String,
+    options: typingsSlinky.babylonjs.anon.Size,
+    scene: Nullable[typingsSlinky.babylonjs.sceneMod.Scene]
+  ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
 }
 

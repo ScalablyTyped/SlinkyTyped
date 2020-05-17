@@ -1,6 +1,6 @@
 package typingsSlinky.storybookAddonKnobs.colorMod
 
-import typingsSlinky.storybookAddonKnobs.AnonOnChange
+import typingsSlinky.storybookAddonKnobs.anon.OnChange
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ class default () extends ColorType
 @js.native
 object default extends js.Object {
   var defaultProps: ColorTypeProps = js.native
-  var propTypes: AnonOnChange = js.native
+  var propTypes: OnChange = js.native
   def deserialize(value: String): String = js.native
   def serialize(value: String): String = js.native
 }

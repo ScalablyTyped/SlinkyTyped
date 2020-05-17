@@ -2,7 +2,7 @@ package typingsSlinky.webpackAssetsManifest.mod
 
 import typingsSlinky.std.ProxyHandler
 import typingsSlinky.webpack.mod.Plugin
-import typingsSlinky.webpackAssetsManifest.AnonAfterOptions
+import typingsSlinky.webpackAssetsManifest.anon.AfterOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait WebpackAssetsManifest extends Plugin {
   /** https://github.com/webdeveric/webpack-assets-manifest#options-read-the-schema */
   var defaultOptions: Options = js.native
   /** https://github.com/webdeveric/webpack-assets-manifest#hooks */
-  var hooks: AnonAfterOptions = js.native
+  var hooks: AfterOptions = js.native
   /** Determine if the manifest data is currently being merged */
   var isMerging: Boolean = js.native
   /** https://github.com/webdeveric/webpack-assets-manifest#options-read-the-schema */

@@ -1,6 +1,6 @@
 package typingsSlinky.atom.mod
 
-import typingsSlinky.atom.AnonLeadingContextLines
+import typingsSlinky.atom.anon.LeadingContextLines
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ScandalResult extends js.Object {
   var filePath: String = js.native
-  var matches: js.Array[AnonLeadingContextLines] = js.native
+  var matches: js.Array[LeadingContextLines] = js.native
 }
 
 object ScandalResult {
   @scala.inline
-  def apply(filePath: String, matches: js.Array[AnonLeadingContextLines]): ScandalResult = {
+  def apply(filePath: String, matches: js.Array[LeadingContextLines]): ScandalResult = {
     val __obj = js.Dynamic.literal(filePath = filePath.asInstanceOf[js.Any], matches = matches.asInstanceOf[js.Any])
     __obj.asInstanceOf[ScandalResult]
   }
@@ -30,7 +30,7 @@ object ScandalResult {
         ret
     }
     @scala.inline
-    def withMatches(value: js.Array[AnonLeadingContextLines]): Self = {
+    def withMatches(value: js.Array[LeadingContextLines]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("matches")(value.asInstanceOf[js.Any])
         ret

@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.k6.k6Strings.base64url
   - typingsSlinky.k6.k6Strings.base64rawurl
 */
-trait StringEncoding extends js.Object
+trait StringEncoding extends OutputEncoding
 
 object StringEncoding {
   @scala.inline

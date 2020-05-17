@@ -1,7 +1,7 @@
 package typingsSlinky.agGrid.componentResolverMod
 
-import typingsSlinky.agGrid.Anon1
-import typingsSlinky.agGrid.AnonInstantiableB
+import typingsSlinky.agGrid.anon.InstantiableB
+import typingsSlinky.agGrid.anon.`1`
 import typingsSlinky.agGrid.iComponentMod.IComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ResolvedComponent[A /* <: IComponent[_] with B */, B] extends js.Object {
-  var component: (Anon1[A, B]) | AnonInstantiableB[B] = js.native
+  var component: (`1`[A, B]) | InstantiableB[B] = js.native
   var dynamicParams: js.Any = js.native
   var source: ComponentSource = js.native
   var `type`: ComponentType = js.native
@@ -18,7 +18,7 @@ trait ResolvedComponent[A /* <: IComponent[_] with B */, B] extends js.Object {
 object ResolvedComponent {
   @scala.inline
   def apply[A, B](
-    component: (Anon1[A, B]) | AnonInstantiableB[B],
+    component: (`1`[A, B]) | InstantiableB[B],
     dynamicParams: js.Any,
     source: ComponentSource,
     `type`: ComponentType
@@ -34,7 +34,7 @@ object ResolvedComponent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): (Self[A, B]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[A, B]) with Other]
     @scala.inline
-    def withComponent(value: (Anon1[A, B]) | AnonInstantiableB[B]): Self[A, B] = {
+    def withComponent(value: (`1`[A, B]) | InstantiableB[B]): Self[A, B] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
         ret

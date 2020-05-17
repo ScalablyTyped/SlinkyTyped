@@ -1,8 +1,8 @@
 package typingsSlinky.reactBootstrapTableNext
 
+import typingsSlinky.reactBootstrapTableNext.mod.CellAlignment
 import typingsSlinky.reactBootstrapTableNext.mod.SortOrder
 import typingsSlinky.reactBootstrapTableNext.mod.TableChangeType
-import typingsSlinky.reactBootstrapTableNext.mod._CellAlignment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,31 +18,31 @@ object reactBootstrapTableNextStrings {
   sealed trait cellEdit extends TableChangeType
   
   @js.native
-  sealed trait center extends _CellAlignment
+  sealed trait center extends CellAlignment
   
   @js.native
   sealed trait desc extends SortOrder
   
   @js.native
-  sealed trait end extends _CellAlignment
+  sealed trait end extends CellAlignment
   
   @js.native
   sealed trait filter extends TableChangeType
   
   @js.native
-  sealed trait left extends _CellAlignment
+  sealed trait left extends CellAlignment
   
   @js.native
   sealed trait pagination extends TableChangeType
   
   @js.native
-  sealed trait right extends _CellAlignment
+  sealed trait right extends CellAlignment
   
   @js.native
   sealed trait sort extends TableChangeType
   
   @js.native
-  sealed trait start extends _CellAlignment
+  sealed trait start extends CellAlignment
   
   @scala.inline
   def TEXT: TEXT = "TEXT".asInstanceOf[TEXT]

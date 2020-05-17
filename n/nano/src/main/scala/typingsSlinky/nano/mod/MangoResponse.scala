@@ -1,6 +1,6 @@
 package typingsSlinky.nano.mod
 
-import typingsSlinky.nano.AnonIdRev
+import typingsSlinky.nano.anon.IdRev
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait MangoResponse[D] extends js.Object {
   var bookmark: js.UndefOr[String] = js.native
   // Array of documents matching the search. In each matching document, the fields specified in
   // the fields part of the request body are listed, along with their values.
-  var docs: js.Array[D with AnonIdRev] = js.native
+  var docs: js.Array[D with IdRev] = js.native
   // Basic execution statistics for a specific request.
   var execution_stats: js.UndefOr[MangoExecutionStats] = js.native
   // Execution warnings
@@ -20,7 +20,7 @@ trait MangoResponse[D] extends js.Object {
 
 object MangoResponse {
   @scala.inline
-  def apply[D](docs: js.Array[D with AnonIdRev]): MangoResponse[D] = {
+  def apply[D](docs: js.Array[D with IdRev]): MangoResponse[D] = {
     val __obj = js.Dynamic.literal(docs = docs.asInstanceOf[js.Any])
     __obj.asInstanceOf[MangoResponse[D]]
   }
@@ -31,7 +31,7 @@ object MangoResponse {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[D] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[D] with Other]
     @scala.inline
-    def withDocs(value: js.Array[D with AnonIdRev]): Self[D] = {
+    def withDocs(value: js.Array[D with IdRev]): Self[D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("docs")(value.asInstanceOf[js.Any])
         ret

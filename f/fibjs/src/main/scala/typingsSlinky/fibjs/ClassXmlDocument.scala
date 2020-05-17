@@ -4,18 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Class_XmlDocument")
 @js.native
-/**
-	 * 
-	 * @brief 构造一个 XmlDocument 对象
-	 * @param type 指定文档对象的类型，缺省为 "text/xml"，若需要处理 html 则需要指定 "text/html"
-	 * 
-	 * 
-	 * 
-	 */
-class ClassXmlDocument () extends ClassXmlNode {
-  def this(`type`: String) = this()
+trait ClassXmlDocument extends ClassXmlNode {
   /**
   	 * class prop 
   	 *

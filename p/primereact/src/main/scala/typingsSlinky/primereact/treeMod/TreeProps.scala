@@ -1,8 +1,8 @@
 package typingsSlinky.primereact.treeMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.primereact.AnonNodeOriginalEvent
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.NodeOriginalEvent
+import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.treeNodeMod.TreeNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,15 +26,15 @@ trait TreeProps extends js.Object {
   var loadingIcon: js.UndefOr[String] = js.native
   var metaKeySelection: js.UndefOr[Boolean] = js.native
   var nodeTemplate: js.UndefOr[js.Function1[/* node */ js.Any, ReactElement]] = js.native
-  var onCollapse: js.UndefOr[js.Function1[/* e */ AnonNodeOriginalEvent, Unit]] = js.native
-  var onContextMenu: js.UndefOr[js.Function1[/* e */ AnonNodeOriginalEvent, Unit]] = js.native
-  var onContextMenuSelectionChange: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
-  var onDragDrop: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
-  var onExpand: js.UndefOr[js.Function1[/* e */ AnonNodeOriginalEvent, Unit]] = js.native
-  var onSelect: js.UndefOr[js.Function1[/* e */ AnonNodeOriginalEvent, Unit]] = js.native
-  var onSelectionChange: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
-  var onToggle: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
-  var onUnselect: js.UndefOr[js.Function1[/* e */ AnonNodeOriginalEvent, Unit]] = js.native
+  var onCollapse: js.UndefOr[js.Function1[/* e */ NodeOriginalEvent, Unit]] = js.native
+  var onContextMenu: js.UndefOr[js.Function1[/* e */ NodeOriginalEvent, Unit]] = js.native
+  var onContextMenuSelectionChange: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
+  var onDragDrop: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
+  var onExpand: js.UndefOr[js.Function1[/* e */ NodeOriginalEvent, Unit]] = js.native
+  var onSelect: js.UndefOr[js.Function1[/* e */ NodeOriginalEvent, Unit]] = js.native
+  var onSelectionChange: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
+  var onToggle: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
+  var onUnselect: js.UndefOr[js.Function1[/* e */ NodeOriginalEvent, Unit]] = js.native
   var propagateSelectionDown: js.UndefOr[Boolean] = js.native
   var propagateSelectionUp: js.UndefOr[Boolean] = js.native
   var selectionKeys: js.UndefOr[js.Any] = js.native
@@ -248,7 +248,7 @@ object TreeProps {
         ret
     }
     @scala.inline
-    def withOnCollapse(value: /* e */ AnonNodeOriginalEvent => Unit): Self = {
+    def withOnCollapse(value: /* e */ NodeOriginalEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCollapse")(js.Any.fromFunction1(value))
         ret
@@ -260,7 +260,7 @@ object TreeProps {
         ret
     }
     @scala.inline
-    def withOnContextMenu(value: /* e */ AnonNodeOriginalEvent => Unit): Self = {
+    def withOnContextMenu(value: /* e */ NodeOriginalEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(js.Any.fromFunction1(value))
         ret
@@ -272,7 +272,7 @@ object TreeProps {
         ret
     }
     @scala.inline
-    def withOnContextMenuSelectionChange(value: /* e */ AnonValue => Unit): Self = {
+    def withOnContextMenuSelectionChange(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenuSelectionChange")(js.Any.fromFunction1(value))
         ret
@@ -284,7 +284,7 @@ object TreeProps {
         ret
     }
     @scala.inline
-    def withOnDragDrop(value: /* e */ AnonValue => Unit): Self = {
+    def withOnDragDrop(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDragDrop")(js.Any.fromFunction1(value))
         ret
@@ -296,7 +296,7 @@ object TreeProps {
         ret
     }
     @scala.inline
-    def withOnExpand(value: /* e */ AnonNodeOriginalEvent => Unit): Self = {
+    def withOnExpand(value: /* e */ NodeOriginalEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onExpand")(js.Any.fromFunction1(value))
         ret
@@ -308,7 +308,7 @@ object TreeProps {
         ret
     }
     @scala.inline
-    def withOnSelect(value: /* e */ AnonNodeOriginalEvent => Unit): Self = {
+    def withOnSelect(value: /* e */ NodeOriginalEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
         ret
@@ -320,7 +320,7 @@ object TreeProps {
         ret
     }
     @scala.inline
-    def withOnSelectionChange(value: /* e */ AnonValue => Unit): Self = {
+    def withOnSelectionChange(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChange")(js.Any.fromFunction1(value))
         ret
@@ -332,7 +332,7 @@ object TreeProps {
         ret
     }
     @scala.inline
-    def withOnToggle(value: /* e */ AnonValue => Unit): Self = {
+    def withOnToggle(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onToggle")(js.Any.fromFunction1(value))
         ret
@@ -344,7 +344,7 @@ object TreeProps {
         ret
     }
     @scala.inline
-    def withOnUnselect(value: /* e */ AnonNodeOriginalEvent => Unit): Self = {
+    def withOnUnselect(value: /* e */ NodeOriginalEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onUnselect")(js.Any.fromFunction1(value))
         ret

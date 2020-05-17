@@ -1,16 +1,12 @@
 package typingsSlinky.kendoUi.kendo.ui
 
-import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.ui.DateInput")
 @js.native
-class DateInput protected () extends Widget {
-  def this(element: Element) = this()
-  def this(element: Element, options: DateInputOptions) = this()
+trait DateInput extends Widget {
   @JSName("options")
   var options_DateInput: DateInputOptions = js.native
   var wrapper: JQuery = js.native
@@ -26,13 +22,5 @@ class DateInput protected () extends Widget {
   def value(): js.Date = js.native
   def value(value: String): Unit = js.native
   def value(value: js.Date): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("kendo.ui.DateInput")
-@js.native
-object DateInput extends js.Object {
-  var fn: DateInput = js.native
-  def extend(proto: js.Object): DateInput = js.native
 }
 

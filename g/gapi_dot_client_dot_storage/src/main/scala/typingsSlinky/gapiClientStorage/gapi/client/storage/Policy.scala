@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientStorage.gapi.client.storage
 
-import typingsSlinky.gapiClientStorage.AnonCondition
+import typingsSlinky.gapiClientStorage.anon.Condition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Policy extends js.Object {
   /** An association between a role, which comes with a set of permissions, and members who may assume that role. */
-  var bindings: js.UndefOr[js.Array[AnonCondition]] = js.native
+  var bindings: js.UndefOr[js.Array[Condition]] = js.native
   /** HTTP 1.1  Entity tag for the policy. */
   var etag: js.UndefOr[String] = js.native
   /** The kind of item this is. For policies, this is always storage#policy. This field is ignored on input. */
@@ -34,7 +34,7 @@ object Policy {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBindings(value: js.Array[AnonCondition]): Self = {
+    def withBindings(value: js.Array[Condition]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bindings")(value.asInstanceOf[js.Any])
         ret

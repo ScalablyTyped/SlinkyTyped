@@ -2,6 +2,7 @@ package typingsSlinky.prosemirrorView.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.ClipboardEvent
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.Selection
@@ -11,8 +12,7 @@ import typingsSlinky.prosemirrorModel.mod.Node
 import typingsSlinky.prosemirrorModel.mod.ResolvedPos
 import typingsSlinky.prosemirrorModel.mod.Schema
 import typingsSlinky.prosemirrorModel.mod.Slice
-import typingsSlinky.prosemirrorView.AnonRight
-import typingsSlinky.std.Event_
+import typingsSlinky.prosemirrorView.anon.Right
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -137,7 +137,7 @@ trait EditorProps[S /* <: Schema[_, _] */] extends js.Object {
     * default behavior).
     */
   var handleDOMEvents: js.UndefOr[
-    (StringDictionary[js.Function2[/* view */ EditorView[S], /* event */ Event_, Boolean]]) | Null
+    (StringDictionary[js.Function2[/* view */ EditorView[S], /* event */ Event, Boolean]]) | Null
   ] = js.native
   /**
     * Called when the editor is double-clicked, after `handleDoubleClickOn`.
@@ -167,7 +167,7 @@ trait EditorProps[S /* <: Schema[_, _] */] extends js.Object {
   var handleDrop: js.UndefOr[
     (js.Function4[
       /* view */ EditorView[S], 
-      /* event */ Event_, 
+      /* event */ Event, 
       /* slice */ Slice[S], 
       /* moved */ Boolean, 
       Boolean
@@ -259,13 +259,13 @@ trait EditorProps[S /* <: Schema[_, _] */] extends js.Object {
     * Determines the extra space (in pixels) that is left above or
     * below the cursor when it is scrolled into view. Defaults to 5.
     */
-  var scrollMargin: js.UndefOr[Double | AnonRight | Null] = js.native
+  var scrollMargin: js.UndefOr[Double | Right | Null] = js.native
   /**
     * Determines the distance (in pixels) between the cursor and the
     * end of the visible viewport at which point, when scrolling the
     * cursor into view, scrolling takes place. Defaults to 0.
     */
-  var scrollThreshold: js.UndefOr[Double | AnonRight | Null] = js.native
+  var scrollThreshold: js.UndefOr[Double | Right | Null] = js.native
   /**
     * Can be used to transform pasted content before it is applied to
     * the document.
@@ -514,7 +514,7 @@ object EditorProps {
         ret
     }
     @scala.inline
-    def withHandleDOMEvents(value: StringDictionary[js.Function2[/* view */ EditorView[S], /* event */ Event_, Boolean]]): Self[S] = {
+    def withHandleDOMEvents(value: StringDictionary[js.Function2[/* view */ EditorView[S], /* event */ Event, Boolean]]): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("handleDOMEvents")(value.asInstanceOf[js.Any])
         ret
@@ -571,7 +571,7 @@ object EditorProps {
     }
     @scala.inline
     def withHandleDrop(
-      value: (/* view */ EditorView[S], /* event */ Event_, /* slice */ Slice[S], /* moved */ Boolean) => Boolean
+      value: (/* view */ EditorView[S], /* event */ Event, /* slice */ Slice[S], /* moved */ Boolean) => Boolean
     ): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("handleDrop")(js.Any.fromFunction4(value))
@@ -748,7 +748,7 @@ object EditorProps {
         ret
     }
     @scala.inline
-    def withScrollMargin(value: Double | AnonRight): Self[S] = {
+    def withScrollMargin(value: Double | Right): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollMargin")(value.asInstanceOf[js.Any])
         ret
@@ -766,7 +766,7 @@ object EditorProps {
         ret
     }
     @scala.inline
-    def withScrollThreshold(value: Double | AnonRight): Self[S] = {
+    def withScrollThreshold(value: Double | Right): Self[S] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollThreshold")(value.asInstanceOf[js.Any])
         ret

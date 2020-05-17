@@ -1,6 +1,6 @@
 package typingsSlinky.nodelibFsScandir.settingsMod
 
-import typingsSlinky.nodelibFsScandir.PartialFileSystemAdapter
+import typingsSlinky.nodelibFsScandir.anon.PartialFileSystemAdapter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

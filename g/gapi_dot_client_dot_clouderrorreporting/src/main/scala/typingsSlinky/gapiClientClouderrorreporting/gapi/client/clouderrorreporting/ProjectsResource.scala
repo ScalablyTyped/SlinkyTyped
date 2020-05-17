@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientClouderrorreporting.gapi.client.clouderrorreporting
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientClouderrorreporting.AnonAlt
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientClouderrorreporting.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,13 +12,13 @@ trait ProjectsResource extends js.Object {
   var groupStats: GroupStatsResource = js.native
   var groups: GroupsResource = js.native
   /** Deletes all error events of a given project. */
-  def deleteEvents(request: AnonAlt): Request_[js.Object] = js.native
+  def deleteEvents(request: Alt): Request[js.Object] = js.native
 }
 
 object ProjectsResource {
   @scala.inline
   def apply(
-    deleteEvents: AnonAlt => Request_[js.Object],
+    deleteEvents: Alt => Request[js.Object],
     events: EventsResource,
     groupStats: GroupStatsResource,
     groups: GroupsResource
@@ -33,7 +33,7 @@ object ProjectsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDeleteEvents(value: AnonAlt => Request_[js.Object]): Self = {
+    def withDeleteEvents(value: Alt => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("deleteEvents")(js.Any.fromFunction1(value))
         ret

@@ -1,13 +1,13 @@
 package typingsSlinky.oracleOraclejet.ojdatetimepickerMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonChangeMonth
-import typingsSlinky.oracleOraclejet.AnonClass
-import typingsSlinky.oracleOraclejet.AnonConverterHint
-import typingsSlinky.oracleOraclejet.AnonCurrentText
-import typingsSlinky.oracleOraclejet.AnonDefinition
-import typingsSlinky.oracleOraclejet.AnonDisabled
-import typingsSlinky.oracleOraclejet.AnonInstruction
+import typingsSlinky.oracleOraclejet.anon.ChangeMonth
+import typingsSlinky.oracleOraclejet.anon.Class
+import typingsSlinky.oracleOraclejet.anon.ConverterHint
+import typingsSlinky.oracleOraclejet.anon.CurrentText
+import typingsSlinky.oracleOraclejet.anon.Definition
+import typingsSlinky.oracleOraclejet.anon.Disabled
+import typingsSlinky.oracleOraclejet.anon.Instruction
 import typingsSlinky.oracleOraclejet.ojdatetimepickerMod.ojInputDate.DayFormatterInput
 import typingsSlinky.oracleOraclejet.ojdatetimepickerMod.ojInputDate.DayFormatterOutput
 import typingsSlinky.oracleOraclejet.ojmessagingMod.^
@@ -42,23 +42,23 @@ object ojDatePickerSettableProperties {
     autocomplete: on | off | String,
     autofocus: Boolean,
     converter: Converter[String] | RegisteredConverter,
-    datePicker: AnonChangeMonth,
+    datePicker: ChangeMonth,
     dayFormatter: DayFormatterInput => Null | all | DayFormatterOutput,
-    dayMetaData: StringDictionary[StringDictionary[StringDictionary[AnonDisabled]]],
+    dayMetaData: StringDictionary[StringDictionary[StringDictionary[Disabled]]],
     disabled: Boolean,
-    displayOptions: AnonConverterHint,
-    help: AnonInstruction,
-    helpHints: AnonDefinition,
+    displayOptions: ConverterHint,
+    help: Instruction,
+    helpHints: Definition,
     keyboardEdit: disabled,
     labelHint: String,
     messagesCustom: js.Array[^],
-    pickerAttributes: AnonClass,
+    pickerAttributes: Class,
     placeholder: String,
     rawValue: String,
     readonly: Boolean,
     renderMode: jet,
     required: Boolean,
-    translations: AnonCurrentText,
+    translations: CurrentText,
     valid: valid | pending | invalidHidden | invalidShown,
     value: String
   ): ojDatePickerSettableProperties = {

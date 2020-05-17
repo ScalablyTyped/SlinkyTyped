@@ -1,5 +1,7 @@
 package typingsSlinky.dwt
 
+import typingsSlinky.dwt.anon.BChrome
+import typingsSlinky.dwt.anon.Ssl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +14,12 @@ trait DynamsoftLib extends js.Object {
     addEventListener  ajax  all  appendMessage  appendRichMessage  aryControlLoadImage  attachAddon  attachProperty
     base64  bio  cancelFrome  clearMessage  closeAll  closeProgress  colorStrToInt  config  css  currentStyle
     debug*/
-  var detect: AnonSsl = js.native
+  var detect: Ssl = js.native
   /*ignored
     detectButton  dialog  dialogShowStatus  dlgProgress  dlgRef  drawBoxBorder  drawImageWithHermite
     each  empty  endsWith
     */
-  var env: AnonBChrome = js.native
+  var env: BChrome = js.native
   def NewOCRReadPara(): OCRReadPara = js.native
   def NewOCRZone(): OCRZone = js.native
   def NewRedaction(): Redaction = js.native
@@ -44,8 +46,8 @@ object DynamsoftLib {
     NewOCRReadPara: () => OCRReadPara,
     NewOCRZone: () => OCRZone,
     NewRedaction: () => Redaction,
-    detect: AnonSsl,
-    env: AnonBChrome,
+    detect: Ssl,
+    env: BChrome,
     getScript: (String, Boolean, js.Function0[Unit]) => Unit,
     hideMask: () => Unit,
     showMask: () => Unit
@@ -78,13 +80,13 @@ object DynamsoftLib {
         ret
     }
     @scala.inline
-    def withDetect(value: AnonSsl): Self = {
+    def withDetect(value: Ssl): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("detect")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withEnv(value: AnonBChrome): Self = {
+    def withEnv(value: BChrome): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("env")(value.asInstanceOf[js.Any])
         ret

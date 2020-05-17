@@ -1,6 +1,6 @@
 package typingsSlinky.mangopay2NodejsSdk.mod.models
 
-import typingsSlinky.mangopay2NodejsSdk.PartialDisputeData
+import typingsSlinky.mangopay2NodejsSdk.anon.PartialDisputeData
 import typingsSlinky.mangopay2NodejsSdk.mod.dispute.DisputeData
 import scala.scalajs.js
 import scala.scalajs.js.`|`

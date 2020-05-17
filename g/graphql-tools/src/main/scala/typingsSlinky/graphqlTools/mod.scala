@@ -9,6 +9,14 @@ import typingsSlinky.graphql.definitionMod.GraphQLNamedType
 import typingsSlinky.graphql.definitionMod.GraphQLResolveInfo
 import typingsSlinky.graphql.mod.GraphQLDirective
 import typingsSlinky.graphql.mod.GraphQLSchema
+import typingsSlinky.graphqlTools.anon.Args
+import typingsSlinky.graphqlTools.anon.BuildSchemaOptions
+import typingsSlinky.graphqlTools.anon.DocumentNodedefinitionsAr
+import typingsSlinky.graphqlTools.anon.Field
+import typingsSlinky.graphqlTools.anon.From
+import typingsSlinky.graphqlTools.anon.GraphQLSchematransformsAr
+import typingsSlinky.graphqlTools.anon.InheritResolversFromInterfaces
+import typingsSlinky.graphqlTools.anon.TypeofSchemaDirectiveVisi
 import typingsSlinky.graphqlTools.filterRootFieldsMod.RootFilter
 import typingsSlinky.graphqlTools.graphqlToolsStrings.Mutation
 import typingsSlinky.graphqlTools.graphqlToolsStrings.Query
@@ -67,7 +75,7 @@ object mod extends js.Object {
   @js.native
   class ExtractField protected ()
     extends typingsSlinky.graphqlTools.transformsMod.ExtractField {
-    def this(hasFromTo: AnonFrom) = this()
+    def this(hasFromTo: From) = this()
   }
   
   @js.native
@@ -118,13 +126,13 @@ object mod extends js.Object {
   @js.native
   class ReplaceFieldWithFragment protected ()
     extends typingsSlinky.graphqlTools.transformsMod.ReplaceFieldWithFragment {
-    def this(targetSchema: GraphQLSchema, fragments: js.Array[AnonField]) = this()
+    def this(targetSchema: GraphQLSchema, fragments: js.Array[Field]) = this()
   }
   
   @js.native
   class SchemaDirectiveVisitor protected ()
     extends typingsSlinky.graphqlTools.schemaVisitorMod.SchemaDirectiveVisitor {
-    protected def this(config: AnonArgs) = this()
+    protected def this(config: Args) = this()
   }
   
   @js.native
@@ -181,8 +189,7 @@ object mod extends js.Object {
   def checkForResolveTypeResolver(schema: GraphQLSchema, requireResolversForResolveType: Boolean): Unit = js.native
   def concatenateTypeDefs(typeDefinitionsAry: js.Array[ITypedef]): String = js.native
   def concatenateTypeDefs(typeDefinitionsAry: js.Array[ITypedef], calledFunctionRefs: js.Any): String = js.native
-  def decorateWithLogger(fn: js.UndefOr[scala.Nothing], logger: ILogger, hint: String): GraphQLFieldResolver[_, _, StringDictionary[_]] = js.native
-  def decorateWithLogger(fn: GraphQLFieldResolver[_, _, StringDictionary[_]], logger: ILogger, hint: String): GraphQLFieldResolver[_, _, StringDictionary[_]] = js.native
+  def decorateWithLogger(fn: js.UndefOr[GraphQLFieldResolver[_, _, StringDictionary[_]]], logger: ILogger, hint: String): GraphQLFieldResolver[_, _, StringDictionary[_]] = js.native
   def defaultCreateRemoteResolver(fetcher: Fetcher): GraphQLFieldResolver[_, _, StringDictionary[_]] = js.native
   def delegateToSchema(options: GraphQLSchema, args: js.Any*): js.Promise[_] = js.native
   def delegateToSchema(options: IDelegateToSchemaOptions[StringDictionary[_]], args: js.Any*): js.Promise[_] = js.native
@@ -196,9 +203,9 @@ object mod extends js.Object {
   def makeExecutableSchema[TContext](
     hasTypeDefsResolversConnectorsLoggerAllowUndefinedInResolveResolverValidationOptionsDirectiveResolversSchemaDirectivesParseOptionsInheritResolversFromInterfaces: IExecutableSchemaDefinition[TContext]
   ): GraphQLSchema = js.native
-  def makeRemoteExecutableSchema(hasSchemaLinkFetcherCreateResolverBuildSchemaOptionsPrintSchemaOptions: AnonBuildSchemaOptions): GraphQLSchema = js.native
+  def makeRemoteExecutableSchema(hasSchemaLinkFetcherCreateResolverBuildSchemaOptionsPrintSchemaOptions: BuildSchemaOptions): GraphQLSchema = js.native
   def mergeSchemas(
-    hasSchemasOnTypeConflictResolversSchemaDirectivesInheritResolversFromInterfacesMergeDirectives: AnonInheritResolversFromInterfaces
+    hasSchemasOnTypeConflictResolversSchemaDirectivesInheritResolversFromInterfacesMergeDirectives: InheritResolversFromInterfaces
   ): GraphQLSchema = js.native
   def mockServer(schema: GraphQLSchema, mocks: IMocks): IMockServer = js.native
   def mockServer(schema: GraphQLSchema, mocks: IMocks, preserveResolvers: Boolean): IMockServer = js.native

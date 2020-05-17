@@ -4,17 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("TypeScript.ObjectCreationExpressionSyntax")
 @js.native
-class ObjectCreationExpressionSyntax protected ()
-  extends SyntaxNode
-     with IMemberExpressionSyntax {
-  def this(
-    newKeyword: ISyntaxToken,
-    expression: IMemberExpressionSyntax,
-    argumentList: ArgumentListSyntax,
-    parsedInStrictMode: Boolean
-  ) = this()
+trait ObjectCreationExpressionSyntax
+  extends IMemberExpressionSyntax
+     with SyntaxNode {
   var argumentList: ArgumentListSyntax = js.native
   var expression: IMemberExpressionSyntax = js.native
   var newKeyword: ISyntaxToken = js.native
@@ -24,13 +17,5 @@ class ObjectCreationExpressionSyntax protected ()
   def withArgumentList(argumentList: ArgumentListSyntax): ObjectCreationExpressionSyntax = js.native
   def withExpression(expression: IMemberExpressionSyntax): ObjectCreationExpressionSyntax = js.native
   def withNewKeyword(newKeyword: ISyntaxToken): ObjectCreationExpressionSyntax = js.native
-}
-
-/* static members */
-@JSGlobal("TypeScript.ObjectCreationExpressionSyntax")
-@js.native
-object ObjectCreationExpressionSyntax extends js.Object {
-  def create(newKeyword: ISyntaxToken, expression: IMemberExpressionSyntax): ObjectCreationExpressionSyntax = js.native
-  def create1(expression: IMemberExpressionSyntax): ObjectCreationExpressionSyntax = js.native
 }
 

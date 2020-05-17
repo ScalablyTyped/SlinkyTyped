@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.formol.AnonDictk
+import typingsSlinky.formol.anon.Dictk
 import typingsSlinky.formol.mod.SwitchButtonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +22,7 @@ object SwitchButton {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def i18n(value: AnonDictk): this.type = set("i18n", value.asInstanceOf[js.Any])
+    def i18n(value: Dictk): this.type = set("i18n", value.asInstanceOf[js.Any])
     @scala.inline
     def leftLabelReactElement(value: ReactElement): this.type = set("leftLabel", value.asInstanceOf[js.Any])
     @scala.inline

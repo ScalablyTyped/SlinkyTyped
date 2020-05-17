@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.TextConditionalFormatData
 import typingsSlinky.officeJs.Excel.Interfaces.TextConditionalFormatLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.TextConditionalFormatUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,9 +16,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.6]
   */
-@JSGlobal("Excel.TextConditionalFormat")
 @js.native
-class TextConditionalFormat () extends ClientObject {
+trait TextConditionalFormat extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_TextConditionalFormat: RequestContext = js.native
@@ -43,7 +42,7 @@ class TextConditionalFormat () extends ClientObject {
     */
   def load(): TextConditionalFormat = js.native
   def load(options: TextConditionalFormatLoadOptions): TextConditionalFormat = js.native
-  def load(propertyNamesAndPaths: AnonExpand): TextConditionalFormat = js.native
+  def load(propertyNamesAndPaths: Expand): TextConditionalFormat = js.native
   def load(propertyNames: String): TextConditionalFormat = js.native
   def load(propertyNames: js.Array[String]): TextConditionalFormat = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "color"
-version := "3.0-dt-20200225Z-3f6953"
-scalaVersion := "2.13.1"
+version := "3.0-dt-20200225Z-6e6db7"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "color-convert" % "1.9-dt-20191126Z-ea7c87",
-  "org.scalablytyped.slinky" %%% "color-name" % "1.1-dt-20190212Z-40bb38",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e")
+  "org.scalablytyped.slinky" %%% "color-convert" % "1.9-dt-20191126Z-4e805e",
+  "org.scalablytyped.slinky" %%% "color-name" % "1.1-dt-20190212Z-b941fb",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

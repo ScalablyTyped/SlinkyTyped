@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientPrediction.gapi.client.prediction
 
-import typingsSlinky.gapiClientPrediction.AnonCsvInstance
+import typingsSlinky.gapiClientPrediction.anon.CsvInstance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Input extends js.Object {
   /** Input to the model for a prediction. */
-  var input: js.UndefOr[AnonCsvInstance] = js.native
+  var input: js.UndefOr[CsvInstance] = js.native
 }
 
 object Input {
@@ -24,7 +24,7 @@ object Input {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withInput(value: AnonCsvInstance): Self = {
+    def withInput(value: CsvInstance): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("input")(value.asInstanceOf[js.Any])
         ret

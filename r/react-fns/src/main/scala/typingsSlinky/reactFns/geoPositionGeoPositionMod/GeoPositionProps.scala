@@ -1,14 +1,14 @@
 package typingsSlinky.reactFns.geoPositionGeoPositionMod
 
 import org.scalajs.dom.raw.PositionError
-import typingsSlinky.reactFns.AnonLatitude
+import typingsSlinky.reactFns.anon.Latitude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait GeoPositionProps extends js.Object {
-  var coords: js.UndefOr[AnonLatitude] = js.native
+  var coords: js.UndefOr[Latitude] = js.native
   var error: js.UndefOr[PositionError] = js.native
   var isLoading: Boolean = js.native
 }
@@ -32,7 +32,7 @@ object GeoPositionProps {
         ret
     }
     @scala.inline
-    def withCoords(value: AnonLatitude): Self = {
+    def withCoords(value: Latitude): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("coords")(value.asInstanceOf[js.Any])
         ret

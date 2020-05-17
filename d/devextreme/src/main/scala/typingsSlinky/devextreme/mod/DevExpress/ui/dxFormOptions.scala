@@ -1,7 +1,7 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonComponentDataField
-import typingsSlinky.devextreme.AnonDataFieldElement
+import typingsSlinky.devextreme.anon.ComponentDataField
+import typingsSlinky.devextreme.anon.DataFieldElement
 import typingsSlinky.devextreme.devextremeStrings.auto
 import typingsSlinky.devextreme.devextremeStrings.left
 import typingsSlinky.devextreme.devextremeStrings.right
@@ -40,9 +40,9 @@ trait dxFormOptions extends WidgetOptions[dxForm] {
   /** The minimum column width used for calculating column count in the form layout. */
   var minColWidth: js.UndefOr[Double] = js.native
   /** A function that is executed when the Enter key has been pressed while an editor is focused. */
-  var onEditorEnterKey: js.UndefOr[js.Function1[/* e */ AnonComponentDataField, _]] = js.native
+  var onEditorEnterKey: js.UndefOr[js.Function1[/* e */ ComponentDataField, _]] = js.native
   /** A function that is executed when the value of a formData object field is changed. */
-  var onFieldDataChanged: js.UndefOr[js.Function1[/* e */ AnonDataFieldElement, _]] = js.native
+  var onFieldDataChanged: js.UndefOr[js.Function1[/* e */ DataFieldElement, _]] = js.native
   /** The text displayed for optional fields. */
   var optionalMark: js.UndefOr[String] = js.native
   /** Specifies whether all editors on the form are read-only. Applies only to non-templated items. */
@@ -194,7 +194,7 @@ object dxFormOptions {
         ret
     }
     @scala.inline
-    def withOnEditorEnterKey(value: /* e */ AnonComponentDataField => _): Self = {
+    def withOnEditorEnterKey(value: /* e */ ComponentDataField => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEditorEnterKey")(js.Any.fromFunction1(value))
         ret
@@ -206,7 +206,7 @@ object dxFormOptions {
         ret
     }
     @scala.inline
-    def withOnFieldDataChanged(value: /* e */ AnonDataFieldElement => _): Self = {
+    def withOnFieldDataChanged(value: /* e */ DataFieldElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFieldDataChanged")(js.Any.fromFunction1(value))
         ret

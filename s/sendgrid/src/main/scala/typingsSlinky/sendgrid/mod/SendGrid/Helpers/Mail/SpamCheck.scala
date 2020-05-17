@@ -1,6 +1,6 @@
 package typingsSlinky.sendgrid.mod.SendGrid.Helpers.Mail
 
-import typingsSlinky.sendgrid.AnonPosttourl
+import typingsSlinky.sendgrid.anon.Posttourl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait SpamCheck extends js.Object {
   def setEnable(enabled: Boolean): Unit = js.native
   def setPosttoUrl(post_to_url: String): Unit = js.native
   def setThreshold(threshold: Double): Unit = js.native
-  def toJSON(): AnonPosttourl = js.native
+  def toJSON(): Posttourl = js.native
 }
 
 object SpamCheck {
@@ -25,7 +25,7 @@ object SpamCheck {
     setEnable: Boolean => Unit,
     setPosttoUrl: String => Unit,
     setThreshold: Double => Unit,
-    toJSON: () => AnonPosttourl
+    toJSON: () => Posttourl
   ): SpamCheck = {
     val __obj = js.Dynamic.literal(getEnable = js.Any.fromFunction0(getEnable), getPosttoUrl = js.Any.fromFunction0(getPosttoUrl), getThreshold = js.Any.fromFunction0(getThreshold), setEnable = js.Any.fromFunction1(setEnable), setPosttoUrl = js.Any.fromFunction1(setPosttoUrl), setThreshold = js.Any.fromFunction1(setThreshold), toJSON = js.Any.fromFunction0(toJSON))
     __obj.asInstanceOf[SpamCheck]
@@ -73,7 +73,7 @@ object SpamCheck {
         ret
     }
     @scala.inline
-    def withToJSON(value: () => AnonPosttourl): Self = {
+    def withToJSON(value: () => Posttourl): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
         ret

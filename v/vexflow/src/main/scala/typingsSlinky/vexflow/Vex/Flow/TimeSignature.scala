@@ -1,29 +1,15 @@
 package typingsSlinky.vexflow.Vex.Flow
 
-import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.vexflow.AnonCodeLine
-import typingsSlinky.vexflow.AnonGlyph
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Vex.Flow.TimeSignature")
 @js.native
-class TimeSignature protected () extends StaveModifier {
-  def this(timeSpec: String) = this()
-  def this(timeSpec: String, customPadding: Double) = this()
+trait TimeSignature extends StaveModifier {
   def addEndModifier(stave: Stave): Unit = js.native
   def addModifier(stave: Stave): Unit = js.native
-  def getTimeSig(): AnonGlyph = js.native
+  def getTimeSig(): typingsSlinky.vexflow.anon.Glyph = js.native
   def makeTimeSignatureGlyph(topNums: js.Array[Double], botNums: js.Array[Double]): Glyph = js.native
-  def parseTimeSpec(timeSpec: String): AnonGlyph = js.native
-}
-
-@JSGlobal("Vex.Flow.TimeSignature")
-@js.native
-object TimeSignature extends js.Object {
-  @js.native
-  object glyphs extends /* name */ StringDictionary[AnonCodeLine]
-  
+  def parseTimeSpec(timeSpec: String): typingsSlinky.vexflow.anon.Glyph = js.native
 }
 

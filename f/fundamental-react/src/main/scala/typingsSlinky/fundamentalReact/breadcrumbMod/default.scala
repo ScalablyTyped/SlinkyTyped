@@ -1,9 +1,9 @@
 package typingsSlinky.fundamentalReact.breadcrumbMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.fundamentalReact.FunctionComponentBreadcru
-import typingsSlinky.fundamentalReact.PartialBreadcrumbProps
-import typingsSlinky.fundamentalReact.WeakValidationMapBreadcru
+import typingsSlinky.fundamentalReact.anon.FunctionComponentBreadcru
+import typingsSlinky.fundamentalReact.anon.PartialBreadcrumbProps
+import typingsSlinky.fundamentalReact.anon.WeakValidationMapBreadcru
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.Breadcrumb
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap

@@ -1,0 +1,11 @@
+package typingsSlinky.activexPowerpoint.global.PowerPoint
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("PowerPoint.TableStyle")
+@js.native
+class TableStyle protected ()
+  extends typingsSlinky.activexPowerpoint.PowerPoint.TableStyle
+

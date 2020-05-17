@@ -18,19 +18,10 @@ trait PhoneInfoOptions extends js.Object
 
 object PhoneInfoOptions {
   @scala.inline
-  def PhoneSingleFactorInfoOptions(phoneNumber: String): PhoneInfoOptions = {
-    val __obj = js.Dynamic.literal(phoneNumber = phoneNumber.asInstanceOf[js.Any])
-    __obj.asInstanceOf[PhoneInfoOptions]
-  }
+  implicit def apply(value: PhoneMultiFactorEnrollInfoOptions): PhoneInfoOptions = value.asInstanceOf[PhoneInfoOptions]
   @scala.inline
-  def PhoneMultiFactorEnrollInfoOptions(phoneNumber: String, session: MultiFactorSession): PhoneInfoOptions = {
-    val __obj = js.Dynamic.literal(phoneNumber = phoneNumber.asInstanceOf[js.Any], session = session.asInstanceOf[js.Any])
-    __obj.asInstanceOf[PhoneInfoOptions]
-  }
+  implicit def apply(value: PhoneMultiFactorSignInInfoOptions): PhoneInfoOptions = value.asInstanceOf[PhoneInfoOptions]
   @scala.inline
-  def PhoneMultiFactorSignInInfoOptions(session: MultiFactorSession): PhoneInfoOptions = {
-    val __obj = js.Dynamic.literal(session = session.asInstanceOf[js.Any])
-    __obj.asInstanceOf[PhoneInfoOptions]
-  }
+  implicit def apply(value: PhoneSingleFactorInfoOptions): PhoneInfoOptions = value.asInstanceOf[PhoneInfoOptions]
 }
 

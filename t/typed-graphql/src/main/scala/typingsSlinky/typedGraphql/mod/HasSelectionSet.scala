@@ -12,14 +12,8 @@ trait HasSelectionSet extends js.Object
 
 object HasSelectionSet {
   @scala.inline
-  def OperationDefinition(kind: String, operation: String, selectionSet: SelectionSet): HasSelectionSet = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], operation = operation.asInstanceOf[js.Any], selectionSet = selectionSet.asInstanceOf[js.Any])
-    __obj.asInstanceOf[HasSelectionSet]
-  }
+  implicit def apply(value: FragmentDefinition): HasSelectionSet = value.asInstanceOf[HasSelectionSet]
   @scala.inline
-  def FragmentDefinition(kind: String, name: Name, selectionSet: SelectionSet, typeCondition: NamedType): HasSelectionSet = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selectionSet = selectionSet.asInstanceOf[js.Any], typeCondition = typeCondition.asInstanceOf[js.Any])
-    __obj.asInstanceOf[HasSelectionSet]
-  }
+  implicit def apply(value: OperationDefinition): HasSelectionSet = value.asInstanceOf[HasSelectionSet]
 }
 

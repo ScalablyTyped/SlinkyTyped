@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LineSuffix_ extends _Doc {
+trait LineSuffix_ extends Doc {
   var contents: Doc = js.native
   var `type`: `line-suffix` = js.native
 }

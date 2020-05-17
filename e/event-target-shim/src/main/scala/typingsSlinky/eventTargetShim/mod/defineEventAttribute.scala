@@ -1,6 +1,6 @@
 package typingsSlinky.eventTargetShim.mod
 
-import typingsSlinky.eventTargetShim.EventTargetloose
+import typingsSlinky.eventTargetShim.anon.EventTargetloose
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

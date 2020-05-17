@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdk.redshiftMod
 
-import typingsSlinky.awsSdk.DescribeClusterSnapshotsM
-import typingsSlinky.awsSdk.DescribeClustersMessagewa
+import typingsSlinky.awsSdk.anon.DescribeClusterSnapshotsM
+import typingsSlinky.awsSdk.anon.DescribeClustersMessagewa
 import typingsSlinky.awsSdk.awsSdkStrings.clusterAvailable
 import typingsSlinky.awsSdk.awsSdkStrings.clusterDeleted
 import typingsSlinky.awsSdk.awsSdkStrings.clusterRestored

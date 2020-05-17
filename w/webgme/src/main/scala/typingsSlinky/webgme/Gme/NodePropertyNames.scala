@@ -1,18 +1,18 @@
 package typingsSlinky.webgme.Gme
 
-import typingsSlinky.webgme.AnonName
+import typingsSlinky.webgme.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait NodePropertyNames extends js.Object {
-  var Attributes: AnonName = js.native
+  var Attributes: Name = js.native
 }
 
 object NodePropertyNames {
   @scala.inline
-  def apply(Attributes: AnonName): NodePropertyNames = {
+  def apply(Attributes: Name): NodePropertyNames = {
     val __obj = js.Dynamic.literal(Attributes = Attributes.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodePropertyNames]
   }
@@ -23,7 +23,7 @@ object NodePropertyNames {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAttributes(value: AnonName): Self = {
+    def withAttributes(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Attributes")(value.asInstanceOf[js.Any])
         ret

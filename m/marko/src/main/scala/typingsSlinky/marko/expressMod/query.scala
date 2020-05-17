@@ -1,6 +1,6 @@
 package typingsSlinky.marko.expressMod
 
-import typingsSlinky.express.FnCall
+import typingsSlinky.express.anon.FnCall
 import typingsSlinky.express.mod.Handler
 import typingsSlinky.qs.mod.IParseOptions
 import scala.scalajs.js

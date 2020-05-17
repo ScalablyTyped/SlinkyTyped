@@ -1,7 +1,7 @@
 package typingsSlinky.buble.mod
 
-import typingsSlinky.buble.AnonArrow
-import typingsSlinky.buble.AnonChrome
+import typingsSlinky.buble.anon.Arrow
+import typingsSlinky.buble.anon.Chrome
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +22,9 @@ trait TransformOptions extends js.Object {
   // used for sourcemaps
   var source: js.UndefOr[String] = js.native
   // source: https://github.com/Rich-Harris/buble/blob/master/src/support.js
-  var target: js.UndefOr[AnonChrome] = js.native
+  var target: js.UndefOr[Chrome] = js.native
   // transforms
-  var transforms: js.UndefOr[AnonArrow] = js.native
+  var transforms: js.UndefOr[Arrow] = js.native
 }
 
 object TransformOptions {
@@ -112,7 +112,7 @@ object TransformOptions {
         ret
     }
     @scala.inline
-    def withTarget(value: AnonChrome): Self = {
+    def withTarget(value: Chrome): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
         ret
@@ -124,7 +124,7 @@ object TransformOptions {
         ret
     }
     @scala.inline
-    def withTransforms(value: AnonArrow): Self = {
+    def withTransforms(value: Arrow): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("transforms")(value.asInstanceOf[js.Any])
         ret

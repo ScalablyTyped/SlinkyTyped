@@ -1,6 +1,6 @@
 package typingsSlinky.findMyWay.mod
 
-import typingsSlinky.findMyWay.AnonDeriveVersion
+import typingsSlinky.findMyWay.anon.DeriveVersion
 import typingsSlinky.node.http2Mod.Http2ServerRequest
 import typingsSlinky.node.http2Mod.Http2ServerResponse
 import typingsSlinky.node.httpMod.IncomingMessage
@@ -22,7 +22,7 @@ trait Config[V /* <: HTTPVersion */] extends js.Object {
   ] = js.native
   var ignoreTrailingSlash: js.UndefOr[Boolean] = js.native
   var maxParamLength: js.UndefOr[Double] = js.native
-  var versioning: js.UndefOr[AnonDeriveVersion[V]] = js.native
+  var versioning: js.UndefOr[DeriveVersion[V]] = js.native
 }
 
 object Config {
@@ -100,7 +100,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withVersioning(value: AnonDeriveVersion[V]): Self[V] = {
+    def withVersioning(value: DeriveVersion[V]): Self[V] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("versioning")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.browserSync.mod
 
-import typingsSlinky.browserSync.AnonPort
+import typingsSlinky.browserSync.anon.Port
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait UIOptions extends js.Object {
   /** set the default port */
   var port: js.UndefOr[Double] = js.native
   /** set the default weinre port */
-  var weinre: js.UndefOr[AnonPort] = js.native
+  var weinre: js.UndefOr[Port] = js.native
 }
 
 object UIOptions {
@@ -38,7 +38,7 @@ object UIOptions {
         ret
     }
     @scala.inline
-    def withWeinre(value: AnonPort): Self = {
+    def withWeinre(value: Port): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("weinre")(value.asInstanceOf[js.Any])
         ret

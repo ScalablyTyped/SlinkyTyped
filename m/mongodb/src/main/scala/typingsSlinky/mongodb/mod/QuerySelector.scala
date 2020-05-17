@@ -1,12 +1,14 @@
 package typingsSlinky.mongodb.mod
 
-import typingsSlinky.mongodb.AnonGeometry
+import typingsSlinky.mongodb.anon.Geometry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait QuerySelector[T] extends js.Object {
+trait QuerySelector[T]
+  extends Condition[js.Any]
+     with ObjectQuerySelector[T] {
   // Array
   // TODO: define better types for $all and $elemMatch
   @JSName("$all")
@@ -38,7 +40,7 @@ trait QuerySelector[T] extends js.Object {
   // Geospatial
   // TODO: define better types for geo queries
   @JSName("$geoIntersects")
-  var $geoIntersects: js.UndefOr[AnonGeometry] = js.native
+  var $geoIntersects: js.UndefOr[Geometry] = js.native
   @JSName("$geoWithin")
   var $geoWithin: js.UndefOr[js.Object] = js.native
   @JSName("$gt")
@@ -199,7 +201,7 @@ object QuerySelector {
         ret
     }
     @scala.inline
-    def with$geoIntersects(value: AnonGeometry): Self[T] = {
+    def with$geoIntersects(value: Geometry): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("$geoIntersects")(value.asInstanceOf[js.Any])
         ret

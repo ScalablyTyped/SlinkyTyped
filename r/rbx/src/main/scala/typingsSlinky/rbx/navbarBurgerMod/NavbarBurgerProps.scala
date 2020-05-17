@@ -2,8 +2,8 @@ package typingsSlinky.rbx.navbarBurgerMod
 
 import org.scalajs.dom.raw.Element
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.rbx.BinVariablesbreakpointsLi
-import typingsSlinky.rbx.KinVariablesbreakpointsto
+import typingsSlinky.rbx.anon.BinVariablesbreakpointsLi
+import typingsSlinky.rbx.anon.KinVariablesbreakpointsto
 import typingsSlinky.rbx.rbxNumbers.`1`
 import typingsSlinky.rbx.rbxNumbers.`2`
 import typingsSlinky.rbx.rbxNumbers.`3`

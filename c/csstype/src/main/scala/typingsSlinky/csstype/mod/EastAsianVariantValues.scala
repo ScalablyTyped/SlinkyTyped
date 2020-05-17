@@ -13,9 +13,9 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.traditional
 */
 trait EastAsianVariantValues
-  extends _FontFaceFontVariantProperty
-     with _FontVariantEastAsianProperty
-     with _FontVariantProperty
+  extends FontFaceFontVariantProperty
+     with FontVariantEastAsianProperty
+     with FontVariantProperty
 
 object EastAsianVariantValues {
   @scala.inline

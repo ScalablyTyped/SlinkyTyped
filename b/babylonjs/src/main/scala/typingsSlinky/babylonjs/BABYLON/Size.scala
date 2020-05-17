@@ -4,15 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.Size")
 @js.native
-class Size protected () extends ISize {
-  /**
-    * Creates a Size object from the given width and height (floats).
-    * @param width width of the new size
-    * @param height height of the new size
-    */
-  def this(width: Double, height: Double) = this()
+trait Size extends ISize {
   /**
     * Sums the width and height of two sizes
     * @param otherSize size to add to this size
@@ -73,22 +66,92 @@ class Size protected () extends ISize {
   def surface: Double = js.native
 }
 
-/* static members */
-@JSGlobal("BABYLON.Size")
-@js.native
-object Size extends js.Object {
-  /**
-    * Creates a new Size set at the linear interpolation "amount" between "start" and "end"
-    * @param start starting size to lerp between
-    * @param end end size to lerp between
-    * @param amount amount to lerp between the start and end values
-    * @returns a new Size set at the linear interpolation "amount" between "start" and "end"
-    */
-  def Lerp(start: Size, end: Size, amount: Double): Size = js.native
-  /**
-    * Create a new size of zero
-    * @returns a new Size set to (0.0, 0.0)
-    */
-  def Zero(): Size = js.native
+object Size {
+  @scala.inline
+  def apply(
+    add: Size => Size,
+    copyFrom: Size => Unit,
+    copyFromFloats: (Double, Double) => Size,
+    equals: Size => Boolean,
+    getClassName: () => String,
+    getHashCode: () => Double,
+    height: Double,
+    multiplyByFloats: (Double, Double) => Size,
+    set: (Double, Double) => Size,
+    subtract: Size => Size,
+    surface: () => Double,
+    width: Double
+  ): Size = {
+    val __obj = js.Dynamic.literal(add = js.Any.fromFunction1(add), copyFrom = js.Any.fromFunction1(copyFrom), copyFromFloats = js.Any.fromFunction2(copyFromFloats), equals = js.Any.fromFunction1(equals), getClassName = js.Any.fromFunction0(getClassName), getHashCode = js.Any.fromFunction0(getHashCode), height = height.asInstanceOf[js.Any], multiplyByFloats = js.Any.fromFunction2(multiplyByFloats), set = js.Any.fromFunction2(set), subtract = js.Any.fromFunction1(subtract), surface = js.Any.fromFunction0(surface), width = width.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Size]
+  }
+  @scala.inline
+  implicit class SizeOps[Self <: Size] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdd(value: Size => Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCopyFrom(value: Size => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyFrom")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCopyFromFloats(value: (Double, Double) => Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyFromFloats")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withEquals(value: Size => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetClassName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getClassName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetHashCode(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getHashCode")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withMultiplyByFloats(value: (Double, Double) => Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiplyByFloats")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSet(value: (Double, Double) => Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSubtract(value: Size => Size): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtract")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSurface(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("surface")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

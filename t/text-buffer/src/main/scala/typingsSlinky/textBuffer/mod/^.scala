@@ -1,9 +1,9 @@
 package typingsSlinky.textBuffer.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.textBuffer.AnonShouldDestroyOnFileDelete
-import typingsSlinky.textBuffer.mod._Global_.TextBuffer.TextBuffer
-import typingsSlinky.textBuffer.mod._Global_.TextBuffer.TextBufferStatic
+import typingsSlinky.textBuffer.anon.ShouldDestroyOnFileDelete
+import typingsSlinky.textBuffer.mod.global.TextBuffer.TextBuffer
+import typingsSlinky.textBuffer.mod.global.TextBuffer.TextBufferStatic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 /** Create a new buffer with the given params. */
 class ^ () extends TextBuffer {
-  def this(params: AnonShouldDestroyOnFileDelete) = this()
+  def this(params: ShouldDestroyOnFileDelete) = this()
   /** Create a new buffer with the given starting text. */
   def this(text: String) = this()
 }

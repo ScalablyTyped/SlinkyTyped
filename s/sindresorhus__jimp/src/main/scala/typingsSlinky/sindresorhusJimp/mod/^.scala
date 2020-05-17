@@ -1,11 +1,11 @@
 package typingsSlinky.sindresorhusJimp.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.sindresorhusJimp.AnonDiff
 import typingsSlinky.sindresorhusJimp.Jimp.ImageCallback
 import typingsSlinky.sindresorhusJimp.Jimp.Jimp
 import typingsSlinky.sindresorhusJimp.Jimp.RGB
 import typingsSlinky.sindresorhusJimp.Jimp.RGBA
+import typingsSlinky.sindresorhusJimp.anon.Diff
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -79,8 +79,8 @@ object ^ extends js.Object {
   def colorDiff(rgba1: RGBA, rgba2: RGBA): Double = js.native
   def colorDiff(rgba1: RGB, rgba2: RGB): Double = js.native
   def colorDiff(rgba1: RGB, rgba2: RGBA): Double = js.native
-  def diff(img1: Jimp, img2: Jimp): AnonDiff = js.native
-  def diff(img1: Jimp, img2: Jimp, threshold: Double): AnonDiff = js.native
+  def diff(img1: Jimp, img2: Jimp): Diff = js.native
+  def diff(img1: Jimp, img2: Jimp, threshold: Double): Diff = js.native
   def distance(img1: Jimp, img2: Jimp): Double = js.native
   def intToRGBA(i: Double): RGBA = js.native
   def intToRGBA(i: Double, cb: js.Function2[/* err */ js.Error, /* rgba */ RGBA, _]): RGBA = js.native

@@ -1,7 +1,7 @@
 package typingsSlinky.solidReact.mod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.solidReact.hrefstringHTMLAttributesH
+import typingsSlinky.solidReact.anon.hrefstringHTMLAttributesH
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

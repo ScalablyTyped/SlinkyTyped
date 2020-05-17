@@ -12,14 +12,8 @@ trait DependencyLocation extends js.Object
 
 object DependencyLocation {
   @scala.inline
-  def SynteticDependencyLocation(name: String): DependencyLocation = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DependencyLocation]
-  }
+  implicit def apply(value: RealDependencyLocation): DependencyLocation = value.asInstanceOf[DependencyLocation]
   @scala.inline
-  def RealDependencyLocation(start: SourcePosition): DependencyLocation = {
-    val __obj = js.Dynamic.literal(start = start.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DependencyLocation]
-  }
+  implicit def apply(value: SynteticDependencyLocation): DependencyLocation = value.asInstanceOf[DependencyLocation]
 }
 

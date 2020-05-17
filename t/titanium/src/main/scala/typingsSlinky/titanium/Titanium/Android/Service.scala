@@ -13,9 +13,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * Android application component that executes in the background.
 		 */
-@JSGlobal("Titanium.Android.Service")
 @js.native
-class Service () extends Proxy {
+trait Service extends Proxy {
   /**
   			 * The intent used to start or bind to the Service.
   			 */

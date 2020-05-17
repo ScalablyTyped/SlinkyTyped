@@ -4,8 +4,8 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.AnonDataSource
-import typingsSlinky.reactOnsenui.HTMLAttributesidclassName
+import typingsSlinky.reactOnsenui.anon.DataSource
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,7 +37,7 @@ object List {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T](p: HTMLAttributesidclassName with AnonDataSource[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[T](p: HTMLAttributesidclassName with DataSource[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make[T](companion: List.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -5,9 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Encapsulates information specific to XML Element nodes. */
-@JSGlobal("Windows.Data.Xml.Dom.XmlElement")
 @js.native
-abstract class XmlElement () extends js.Object {
+trait XmlElement extends js.Object {
   /** Gets the list of attributes of this node. */
   var attributes: XmlNamedNodeMap = js.native
   /** Gets a list of children in the current node. */
@@ -184,5 +183,302 @@ abstract class XmlElement () extends js.Object {
     * @return The attribute successfully added to the collection. If Null, no object is created.
     */
   def setAttributeNodeNS(newAttribute: XmlAttribute): XmlAttribute = js.native
+}
+
+object XmlElement {
+  @scala.inline
+  def apply(
+    appendChild: IXmlNode => IXmlNode,
+    attributes: XmlNamedNodeMap,
+    childNodes: XmlNodeList,
+    cloneNode: Boolean => IXmlNode,
+    firstChild: IXmlNode,
+    getAttribute: String => String,
+    getAttributeNS: (js.Any, String) => String,
+    getAttributeNode: String => XmlAttribute,
+    getAttributeNodeNS: (js.Any, String) => XmlAttribute,
+    getElementsByTagName: String => XmlNodeList,
+    getXml: () => String,
+    hasChildNodes: () => Boolean,
+    innerText: String,
+    insertBefore: (IXmlNode, IXmlNode) => IXmlNode,
+    lastChild: IXmlNode,
+    localName: js.Any,
+    namespaceUri: js.Any,
+    nextSibling: IXmlNode,
+    nodeName: String,
+    nodeType: NodeType,
+    nodeValue: js.Any,
+    normalize: () => Unit,
+    ownerDocument: XmlDocument,
+    parentNode: IXmlNode,
+    prefix: js.Any,
+    previousSibling: IXmlNode,
+    removeAttribute: String => Unit,
+    removeAttributeNS: (js.Any, String) => Unit,
+    removeAttributeNode: XmlAttribute => XmlAttribute,
+    removeChild: IXmlNode => IXmlNode,
+    replaceChild: (IXmlNode, IXmlNode) => IXmlNode,
+    selectNodes: String => XmlNodeList,
+    selectNodesNS: (String, js.Any) => XmlNodeList,
+    selectSingleNode: String => IXmlNode,
+    selectSingleNodeNS: (String, js.Any) => IXmlNode,
+    setAttribute: (String, String) => Unit,
+    setAttributeNS: (js.Any, String, String) => Unit,
+    setAttributeNode: XmlAttribute => XmlAttribute,
+    setAttributeNodeNS: XmlAttribute => XmlAttribute,
+    tagName: String
+  ): XmlElement = {
+    val __obj = js.Dynamic.literal(appendChild = js.Any.fromFunction1(appendChild), attributes = attributes.asInstanceOf[js.Any], childNodes = childNodes.asInstanceOf[js.Any], cloneNode = js.Any.fromFunction1(cloneNode), firstChild = firstChild.asInstanceOf[js.Any], getAttribute = js.Any.fromFunction1(getAttribute), getAttributeNS = js.Any.fromFunction2(getAttributeNS), getAttributeNode = js.Any.fromFunction1(getAttributeNode), getAttributeNodeNS = js.Any.fromFunction2(getAttributeNodeNS), getElementsByTagName = js.Any.fromFunction1(getElementsByTagName), getXml = js.Any.fromFunction0(getXml), hasChildNodes = js.Any.fromFunction0(hasChildNodes), innerText = innerText.asInstanceOf[js.Any], insertBefore = js.Any.fromFunction2(insertBefore), lastChild = lastChild.asInstanceOf[js.Any], localName = localName.asInstanceOf[js.Any], namespaceUri = namespaceUri.asInstanceOf[js.Any], nextSibling = nextSibling.asInstanceOf[js.Any], nodeName = nodeName.asInstanceOf[js.Any], nodeType = nodeType.asInstanceOf[js.Any], nodeValue = nodeValue.asInstanceOf[js.Any], normalize = js.Any.fromFunction0(normalize), ownerDocument = ownerDocument.asInstanceOf[js.Any], parentNode = parentNode.asInstanceOf[js.Any], prefix = prefix.asInstanceOf[js.Any], previousSibling = previousSibling.asInstanceOf[js.Any], removeAttribute = js.Any.fromFunction1(removeAttribute), removeAttributeNS = js.Any.fromFunction2(removeAttributeNS), removeAttributeNode = js.Any.fromFunction1(removeAttributeNode), removeChild = js.Any.fromFunction1(removeChild), replaceChild = js.Any.fromFunction2(replaceChild), selectNodes = js.Any.fromFunction1(selectNodes), selectNodesNS = js.Any.fromFunction2(selectNodesNS), selectSingleNode = js.Any.fromFunction1(selectSingleNode), selectSingleNodeNS = js.Any.fromFunction2(selectSingleNodeNS), setAttribute = js.Any.fromFunction2(setAttribute), setAttributeNS = js.Any.fromFunction3(setAttributeNS), setAttributeNode = js.Any.fromFunction1(setAttributeNode), setAttributeNodeNS = js.Any.fromFunction1(setAttributeNodeNS), tagName = tagName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[XmlElement]
+  }
+  @scala.inline
+  implicit class XmlElementOps[Self <: XmlElement] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppendChild(value: IXmlNode => IXmlNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendChild")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAttributes(value: XmlNamedNodeMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChildNodes(value: XmlNodeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childNodes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCloneNode(value: Boolean => IXmlNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cloneNode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withFirstChild(value: IXmlNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("firstChild")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetAttribute(value: String => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttribute")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetAttributeNS(value: (js.Any, String) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeNS")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetAttributeNode(value: String => XmlAttribute): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeNode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetAttributeNodeNS(value: (js.Any, String) => XmlAttribute): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeNodeNS")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetElementsByTagName(value: String => XmlNodeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getElementsByTagName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetXml(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getXml")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHasChildNodes(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasChildNodes")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withInnerText(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("innerText")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInsertBefore(value: (IXmlNode, IXmlNode) => IXmlNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertBefore")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withLastChild(value: IXmlNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lastChild")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocalName(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNamespaceUri(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("namespaceUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNextSibling(value: IXmlNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nextSibling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNodeName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNodeType(value: NodeType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNodeValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNormalize(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normalize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOwnerDocument(value: XmlDocument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ownerDocument")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withParentNode(value: IXmlNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parentNode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrefix(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefix")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreviousSibling(value: IXmlNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousSibling")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemoveAttribute(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAttribute")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveAttributeNS(value: (js.Any, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAttributeNS")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveAttributeNode(value: XmlAttribute => XmlAttribute): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAttributeNode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveChild(value: IXmlNode => IXmlNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeChild")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withReplaceChild(value: (IXmlNode, IXmlNode) => IXmlNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceChild")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSelectNodes(value: String => XmlNodeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectNodes")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSelectNodesNS(value: (String, js.Any) => XmlNodeList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectNodesNS")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSelectSingleNode(value: String => IXmlNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectSingleNode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSelectSingleNodeNS(value: (String, js.Any) => IXmlNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("selectSingleNodeNS")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetAttribute(value: (String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttribute")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetAttributeNS(value: (js.Any, String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttributeNS")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withSetAttributeNode(value: XmlAttribute => XmlAttribute): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttributeNode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetAttributeNodeNS(value: XmlAttribute => XmlAttribute): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAttributeNodeNS")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withTagName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tagName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

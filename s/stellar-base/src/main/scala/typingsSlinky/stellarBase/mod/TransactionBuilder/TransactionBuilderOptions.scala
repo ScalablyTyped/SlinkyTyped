@@ -1,6 +1,6 @@
 package typingsSlinky.stellarBase.mod.TransactionBuilder
 
-import typingsSlinky.stellarBase.AnonMinTime
+import typingsSlinky.stellarBase.anon.MinTime
 import typingsSlinky.stellarBase.mod.Memo
 import typingsSlinky.stellarBase.mod.MemoType
 import scala.scalajs.js
@@ -12,7 +12,7 @@ trait TransactionBuilderOptions extends js.Object {
   var fee: Double = js.native
   var memo: js.UndefOr[Memo[MemoType]] = js.native
   var networkPassphrase: js.UndefOr[String] = js.native
-  var timebounds: js.UndefOr[AnonMinTime] = js.native
+  var timebounds: js.UndefOr[MinTime] = js.native
 }
 
 object TransactionBuilderOptions {
@@ -58,7 +58,7 @@ object TransactionBuilderOptions {
         ret
     }
     @scala.inline
-    def withTimebounds(value: AnonMinTime): Self = {
+    def withTimebounds(value: MinTime): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("timebounds")(value.asInstanceOf[js.Any])
         ret

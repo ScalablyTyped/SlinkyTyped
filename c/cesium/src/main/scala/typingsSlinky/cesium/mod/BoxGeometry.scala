@@ -1,6 +1,6 @@
 package typingsSlinky.cesium.mod
 
-import typingsSlinky.cesium.AnonMaximumCorner
+import typingsSlinky.cesium.anon.MaximumCorner
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("cesium", "BoxGeometry")
 @js.native
 class BoxGeometry protected () extends Packable {
-  def this(options: AnonMaximumCorner) = this()
+  def this(options: MaximumCorner) = this()
 }
 
 /* static members */

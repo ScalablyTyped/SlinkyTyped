@@ -1,5 +1,6 @@
 package typingsSlinky.angularCompiler
 
+import typingsSlinky.angularCompiler.anon.DepsExpr
 import typingsSlinky.angularCompiler.compileMetadataMod.CompileDiDependencyMetadata
 import typingsSlinky.angularCompiler.compileMetadataMod.CompileEntryComponentMetadata
 import typingsSlinky.angularCompiler.compileReflectorMod.CompileReflector
@@ -20,9 +21,9 @@ object providerCompilerMod extends js.Object {
     ctx: OutputContext,
     flags: NodeFlags,
     entryComponents: js.Array[CompileEntryComponentMetadata]
-  ): AnonDepsExpr = js.native
+  ): DepsExpr = js.native
   def depDef(ctx: OutputContext, dep: CompileDiDependencyMetadata): Expression = js.native
   def lifecycleHookToNodeFlag(lifecycleHook: LifecycleHooks): NodeFlags = js.native
-  def providerDef(ctx: OutputContext, providerAst: ProviderAst): AnonDepsExpr = js.native
+  def providerDef(ctx: OutputContext, providerAst: ProviderAst): DepsExpr = js.native
 }
 

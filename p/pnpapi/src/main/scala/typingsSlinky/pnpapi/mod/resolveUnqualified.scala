@@ -1,6 +1,6 @@
 package typingsSlinky.pnpapi.mod
 
-import typingsSlinky.pnpapi.AnonExtensions
+import typingsSlinky.pnpapi.anon.Extensions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object resolveUnqualified extends js.Object {
   def apply(unqualified: String): String = js.native
-  def apply(unqualified: String, opts: AnonExtensions): String = js.native
+  def apply(unqualified: String, opts: Extensions): String = js.native
 }
 

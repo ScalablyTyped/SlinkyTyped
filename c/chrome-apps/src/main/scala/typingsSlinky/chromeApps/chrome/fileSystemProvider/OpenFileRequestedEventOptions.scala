@@ -1,10 +1,9 @@
 package typingsSlinky.chromeApps.chrome.fileSystemProvider
 
-import typingsSlinky.chromeApps.AnonREAD
+import typingsSlinky.chromeApps.anon.READ
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chrome.fileSystemProvider.internal.FilePathRequestedEventOptions
 import typingsSlinky.chromeApps.chrome.integer
-import typingsSlinky.chromeApps.chromeAppsStrings.READ
 import typingsSlinky.chromeApps.chromeAppsStrings.WRITE
 import typingsSlinky.std.Exclude
 import scala.scalajs.js
@@ -18,9 +17,12 @@ trait OpenFileRequestedEventOptions extends FilePathRequestedEventOptions {
     * @see ChangeType
     */
   var mode: ToStringLiteral[
-    AnonREAD, 
-    /* keyof chrome-apps.AnonREAD */ READ | WRITE, 
-    Exclude[/* keyof chrome-apps.AnonREAD */ READ | WRITE, READ | WRITE]
+    READ, 
+    /* keyof chrome-apps.anon.READ */ typingsSlinky.chromeApps.chromeAppsStrings.READ | WRITE, 
+    Exclude[
+      /* keyof chrome-apps.anon.READ */ typingsSlinky.chromeApps.chromeAppsStrings.READ | WRITE, 
+      typingsSlinky.chromeApps.chromeAppsStrings.READ | WRITE
+    ]
   ] = js.native
 }
 
@@ -30,9 +32,12 @@ object OpenFileRequestedEventOptions {
     filePath: String,
     fileSystemId: String,
     mode: ToStringLiteral[
-      AnonREAD, 
-      /* keyof chrome-apps.AnonREAD */ READ | WRITE, 
-      Exclude[/* keyof chrome-apps.AnonREAD */ READ | WRITE, READ | WRITE]
+      READ, 
+      /* keyof chrome-apps.anon.READ */ typingsSlinky.chromeApps.chromeAppsStrings.READ | WRITE, 
+      Exclude[
+        /* keyof chrome-apps.anon.READ */ typingsSlinky.chromeApps.chromeAppsStrings.READ | WRITE, 
+        typingsSlinky.chromeApps.chromeAppsStrings.READ | WRITE
+      ]
     ],
     requestId: integer
   ): OpenFileRequestedEventOptions = {
@@ -48,9 +53,12 @@ object OpenFileRequestedEventOptions {
     @scala.inline
     def withMode(
       value: ToStringLiteral[
-          AnonREAD, 
-          /* keyof chrome-apps.AnonREAD */ READ | WRITE, 
-          Exclude[/* keyof chrome-apps.AnonREAD */ READ | WRITE, READ | WRITE]
+          READ, 
+          /* keyof chrome-apps.anon.READ */ typingsSlinky.chromeApps.chromeAppsStrings.READ | WRITE, 
+          Exclude[
+            /* keyof chrome-apps.anon.READ */ typingsSlinky.chromeApps.chromeAppsStrings.READ | WRITE, 
+            typingsSlinky.chromeApps.chromeAppsStrings.READ | WRITE
+          ]
         ]
     ): Self = {
         val ret = this.duplicate

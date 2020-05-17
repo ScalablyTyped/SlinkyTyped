@@ -4,7 +4,7 @@ import typingsSlinky.express.mod.Express
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.expressServeStaticCore.mod.Request
-import typingsSlinky.hubot.AnonListener
+import typingsSlinky.hubot.anon.Listener
 import typingsSlinky.node.NodeJS.Timeout
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.httpMod.IncomingMessage
@@ -33,7 +33,7 @@ class Robot[A /* <: Adapter */] protected () extends js.Object {
   val globalHttpOptions: Options = js.native
   @JSName("logger")
   val logger_Original: Log = js.native
-  val middleware: AnonListener[A] = js.native
+  val middleware: Listener[A] = js.native
   val name: String = js.native
   val pingIntervalId: Null | Timeout = js.native
   @JSName("router")

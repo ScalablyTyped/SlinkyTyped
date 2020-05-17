@@ -8,7 +8,9 @@ import scala.scalajs.js.annotation._
   * @see {@link https://www.w3.org/TR/credential-management-1/#dictdef-passwordcredentialdata}
   */
 @js.native
-trait PasswordCredentialData extends SiteBoundCredentialData {
+trait PasswordCredentialData
+  extends SiteBoundCredentialData
+     with PasswordCredentialInit {
   /**
     * The plain-text password.
     */

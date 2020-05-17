@@ -1,7 +1,7 @@
 package typingsSlinky.yup.mod
 
-import typingsSlinky.yup.AnonValues
-import typingsSlinky.yup.PartialTestMessageParams
+import typingsSlinky.yup.anon.PartialTestMessageParams
+import typingsSlinky.yup.anon.Values
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MixedLocale extends js.Object {
   var default: js.UndefOr[TestOptionsMessage[js.Object, _]] = js.native
-  var notOneOf: js.UndefOr[TestOptionsMessage[AnonValues, _]] = js.native
+  var notOneOf: js.UndefOr[TestOptionsMessage[Values, _]] = js.native
   var notType: js.UndefOr[LocaleValue] = js.native
-  var oneOf: js.UndefOr[TestOptionsMessage[AnonValues, _]] = js.native
+  var oneOf: js.UndefOr[TestOptionsMessage[Values, _]] = js.native
   var required: js.UndefOr[TestOptionsMessage[js.Object, _]] = js.native
 }
 
@@ -46,13 +46,13 @@ object MixedLocale {
         ret
     }
     @scala.inline
-    def withNotOneOfFunction1(value: /* params */ AnonValues with PartialTestMessageParams => _): Self = {
+    def withNotOneOfFunction1(value: /* params */ Values with PartialTestMessageParams => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notOneOf")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withNotOneOf(value: TestOptionsMessage[AnonValues, _]): Self = {
+    def withNotOneOf(value: TestOptionsMessage[Values, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notOneOf")(value.asInstanceOf[js.Any])
         ret
@@ -82,13 +82,13 @@ object MixedLocale {
         ret
     }
     @scala.inline
-    def withOneOfFunction1(value: /* params */ AnonValues with PartialTestMessageParams => _): Self = {
+    def withOneOfFunction1(value: /* params */ Values with PartialTestMessageParams => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oneOf")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOneOf(value: TestOptionsMessage[AnonValues, _]): Self = {
+    def withOneOf(value: TestOptionsMessage[Values, _]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oneOf")(value.asInstanceOf[js.Any])
         ret

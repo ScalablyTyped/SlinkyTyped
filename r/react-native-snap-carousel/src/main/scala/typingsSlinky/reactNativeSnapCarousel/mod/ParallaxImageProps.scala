@@ -4,7 +4,7 @@ import typingsSlinky.reactNative.mod.ImageProps
 import typingsSlinky.reactNative.mod.ImageSourcePropType
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeSnapCarousel.AnonHeight
+import typingsSlinky.reactNativeSnapCarousel.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait ParallaxImageProps
   /**
     * On screen dimensions of the image
     */
-  var dimensions: js.UndefOr[AnonHeight] = js.native
+  var dimensions: js.UndefOr[Height] = js.native
   /**
     * Speed of parallax effect. A higher value appears more 'zoomed in'
     */
@@ -66,7 +66,7 @@ object ParallaxImageProps {
         ret
     }
     @scala.inline
-    def withDimensions(value: AnonHeight): Self = {
+    def withDimensions(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dimensions")(value.asInstanceOf[js.Any])
         ret

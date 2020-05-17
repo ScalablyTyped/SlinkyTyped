@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.grommet.grommetStrings.vertical
   - typingsSlinky.grommet.grommetStrings.all
 */
-trait SideType extends _BorderType
+trait SideType extends BorderType
 
 object SideType {
   @scala.inline

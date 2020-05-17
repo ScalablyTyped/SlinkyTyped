@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.ImageProcessingConfigurationDefines")
 @js.native
-class ImageProcessingConfigurationDefines ()
+trait ImageProcessingConfigurationDefines
   extends MaterialDefines
      with IImageProcessingConfigurationDefines
 

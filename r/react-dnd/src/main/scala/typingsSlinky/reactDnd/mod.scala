@@ -5,6 +5,7 @@ import typingsSlinky.dndCore.interfacesMod.BackendFactory
 import typingsSlinky.dndCore.interfacesMod.SourceType
 import typingsSlinky.dndCore.interfacesMod.TargetType
 import typingsSlinky.react.mod.Context
+import typingsSlinky.reactDnd.anon.DragDropManager
 import typingsSlinky.reactDnd.connectorsMod.ConnectDragPreview
 import typingsSlinky.reactDnd.connectorsMod.ConnectDragSource
 import typingsSlinky.reactDnd.connectorsMod.ConnectDropTarget
@@ -78,10 +79,10 @@ object mod extends js.Object {
     collect: DropTargetCollector[CollectedProps, RequiredProps],
     options: DndOptions[RequiredProps]
   ): DndComponentEnhancer[CollectedProps] = js.native
-  def createDndContext[BackendContext, BackendOptions](backend: BackendFactory): AnonDragDropManager = js.native
-  def createDndContext[BackendContext, BackendOptions](backend: BackendFactory, context: BackendContext): AnonDragDropManager = js.native
-  def createDndContext[BackendContext, BackendOptions](backend: BackendFactory, context: BackendContext, options: BackendOptions): AnonDragDropManager = js.native
-  def createDndContext[BackendContext, BackendOptions](backend: BackendFactory, context: BackendContext, options: BackendOptions, debugMode: Boolean): AnonDragDropManager = js.native
+  def createDndContext[BackendContext, BackendOptions](backend: BackendFactory): DragDropManager = js.native
+  def createDndContext[BackendContext, BackendOptions](backend: BackendFactory, context: BackendContext): DragDropManager = js.native
+  def createDndContext[BackendContext, BackendOptions](backend: BackendFactory, context: BackendContext, options: BackendOptions): DragDropManager = js.native
+  def createDndContext[BackendContext, BackendOptions](backend: BackendFactory, context: BackendContext, options: BackendOptions, debugMode: Boolean): DragDropManager = js.native
   def useDrag[DragObject /* <: DragObjectWithType */, DropResult, CollectedProps](spec: DragSourceHookSpec[DragObject, DropResult, CollectedProps]): js.Tuple3[CollectedProps, ConnectDragSource, ConnectDragPreview] = js.native
   def useDragLayer[CollectedProps](collect: js.Function1[/* monitor */ DragLayerMonitor, CollectedProps]): CollectedProps = js.native
   def useDrop[DragObject /* <: DragObjectWithType */, DropResult, CollectedProps](spec: DropTargetHookSpec[DragObject, DropResult, CollectedProps]): js.Tuple2[CollectedProps, ConnectDropTarget] = js.native

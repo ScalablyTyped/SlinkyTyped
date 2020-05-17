@@ -1,5 +1,6 @@
 package typingsSlinky.materialUiLab.autocompleteAutocompleteMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
@@ -20,7 +21,7 @@ import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import typingsSlinky.materialUiCore.popperPopperMod.PopperProps
-import typingsSlinky.materialUiLab.PartialClassNameMapAutoco
+import typingsSlinky.materialUiLab.anon.PartialClassNameMapAutoco
 import typingsSlinky.materialUiLab.materialUiLabBooleans.`false`
 import typingsSlinky.materialUiLab.materialUiLabBooleans.`true`
 import typingsSlinky.materialUiLab.materialUiLabStrings.`additions text`
@@ -76,7 +77,7 @@ import typingsSlinky.materialUiLab.materialUiLabStrings.yes
 import typingsSlinky.materialUiLab.useAutocompleteUseAutocompleteMod.AutocompleteCloseReason
 import typingsSlinky.materialUiLab.useAutocompleteUseAutocompleteMod.AutocompleteInputChangeReason
 import typingsSlinky.materialUiLab.useAutocompleteUseAutocompleteMod.FilterOptionsState
-import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -97,7 +98,6 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -233,7 +233,7 @@ trait AutocompleteProps[T] extends js.Object {
   var componentName: js.UndefOr[String] = js.native
   var contentEditable: js.UndefOr[Booleanish | inherit] = js.native
   var contextMenu: js.UndefOr[String] = js.native
-  var dangerouslySetInnerHTML: js.UndefOr[AnonHtml] = js.native
+  var dangerouslySetInnerHTML: js.UndefOr[Html] = js.native
   var datatype: js.UndefOr[String] = js.native
   /**
     * If `true`, the popup will ignore the blur event if the input is filled.
@@ -1474,7 +1474,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withDangerouslySetInnerHTML(value: AnonHtml): Self[T] = {
+    def withDangerouslySetInnerHTML(value: Html): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetInnerHTML")(value.asInstanceOf[js.Any])
         ret
@@ -1936,7 +1936,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnAbort(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnAbort(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAbort")(js.Any.fromFunction1(value))
         ret
@@ -1996,7 +1996,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnBeforeInput(value: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit): Self[T] = {
+    def withOnBeforeInput(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeInput")(js.Any.fromFunction1(value))
         ret
@@ -2020,7 +2020,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnCanPlay(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnCanPlay(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlay")(js.Any.fromFunction1(value))
         ret
@@ -2032,7 +2032,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnCanPlayThrough(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnCanPlayThrough(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlayThrough")(js.Any.fromFunction1(value))
         ret
@@ -2248,7 +2248,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnDurationChange(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnDurationChange(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDurationChange")(js.Any.fromFunction1(value))
         ret
@@ -2260,7 +2260,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnEmptied(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnEmptied(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEmptied")(js.Any.fromFunction1(value))
         ret
@@ -2272,7 +2272,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnEncrypted(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnEncrypted(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEncrypted")(js.Any.fromFunction1(value))
         ret
@@ -2284,7 +2284,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnEnded(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnEnded(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEnded")(js.Any.fromFunction1(value))
         ret
@@ -2296,7 +2296,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnError(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnError(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
         ret
@@ -2320,7 +2320,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnInput(value: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit): Self[T] = {
+    def withOnInput(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInput")(js.Any.fromFunction1(value))
         ret
@@ -2346,7 +2346,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnInvalid(value: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit): Self[T] = {
+    def withOnInvalid(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInvalid")(js.Any.fromFunction1(value))
         ret
@@ -2394,7 +2394,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnLoad(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnLoad(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction1(value))
         ret
@@ -2406,7 +2406,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnLoadStart(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnLoadStart(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadStart")(js.Any.fromFunction1(value))
         ret
@@ -2418,7 +2418,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnLoadedData(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnLoadedData(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedData")(js.Any.fromFunction1(value))
         ret
@@ -2430,7 +2430,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnLoadedMetadata(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnLoadedMetadata(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedMetadata")(js.Any.fromFunction1(value))
         ret
@@ -2550,7 +2550,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnPause(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnPause(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.Any.fromFunction1(value))
         ret
@@ -2562,7 +2562,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnPlay(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnPlay(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.Any.fromFunction1(value))
         ret
@@ -2574,7 +2574,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnPlaying(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnPlaying(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaying")(js.Any.fromFunction1(value))
         ret
@@ -2682,7 +2682,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnProgress(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnProgress(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.Any.fromFunction1(value))
         ret
@@ -2694,7 +2694,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnRateChange(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnRateChange(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRateChange")(js.Any.fromFunction1(value))
         ret
@@ -2706,7 +2706,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnReset(value: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit): Self[T] = {
+    def withOnReset(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onReset")(js.Any.fromFunction1(value))
         ret
@@ -2730,7 +2730,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnSeeked(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnSeeked(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeked")(js.Any.fromFunction1(value))
         ret
@@ -2742,7 +2742,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnSeeking(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnSeeking(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeking")(js.Any.fromFunction1(value))
         ret
@@ -2754,7 +2754,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnSelect(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnSelect(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
         ret
@@ -2766,7 +2766,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnStalled(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnStalled(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onStalled")(js.Any.fromFunction1(value))
         ret
@@ -2778,7 +2778,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnSubmit(value: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit): Self[T] = {
+    def withOnSubmit(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(js.Any.fromFunction1(value))
         ret
@@ -2790,7 +2790,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnSuspend(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnSuspend(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSuspend")(js.Any.fromFunction1(value))
         ret
@@ -2802,7 +2802,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnTimeUpdate(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnTimeUpdate(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTimeUpdate")(js.Any.fromFunction1(value))
         ret
@@ -2874,7 +2874,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnVolumeChange(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnVolumeChange(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onVolumeChange")(js.Any.fromFunction1(value))
         ret
@@ -2886,7 +2886,7 @@ object AutocompleteProps {
         ret
     }
     @scala.inline
-    def withOnWaiting(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self[T] = {
+    def withOnWaiting(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onWaiting")(js.Any.fromFunction1(value))
         ret

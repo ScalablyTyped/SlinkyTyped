@@ -1,7 +1,7 @@
 package typingsSlinky.depcheck.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.depcheck.AnonDependencies
+import typingsSlinky.depcheck.anon.Dependencies
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Options extends js.Object {
   @JSName("package")
-  var _package: js.UndefOr[AnonDependencies] = js.native
+  var _package: js.UndefOr[Dependencies] = js.native
   var detectors: js.UndefOr[js.Array[Detector_]] = js.native
   var ignoreBinPackage: js.UndefOr[Boolean] = js.native
   var ignoreDirs: js.UndefOr[js.Array[String]] = js.native
@@ -32,7 +32,7 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_package(value: AnonDependencies): Self = {
+    def with_package(value: Dependencies): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("package")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.urbanairshipCordova.UrbanAirshipPlugin
 
-import typingsSlinky.urbanairshipCordova.AnonAlert
+import typingsSlinky.urbanairshipCordova.anon.Alert
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait UrbanAirshipStatic extends js.Object {
   /**
     * The enumeration values for use with setNotificationTypes().
     */
-  var notificationType: AnonAlert = js.native
+  var notificationType: Alert = js.native
   /**
     * (Android Only)
     *
@@ -328,7 +328,7 @@ object UrbanAirshipStatic {
     isSoundEnabled: js.Function1[/* enabled */ Boolean, Unit] => Unit,
     isUserNotificationsEnabled: js.Function1[/* enabled */ Boolean, Unit] => Unit,
     isVibrateEnabled: js.Function1[/* enabled */ Boolean, Unit] => Unit,
-    notificationType: AnonAlert,
+    notificationType: Alert,
     recordCurrentLocation: js.Function0[Unit] => Unit,
     resetBadge: js.Function0[Unit] => Unit,
     runAction: (String, String, js.Function1[/* result */ RunActionResult, Unit]) => Unit,
@@ -465,7 +465,7 @@ object UrbanAirshipStatic {
         ret
     }
     @scala.inline
-    def withNotificationType(value: AnonAlert): Self = {
+    def withNotificationType(value: Alert): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("notificationType")(value.asInstanceOf[js.Any])
         ret

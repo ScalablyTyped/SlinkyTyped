@@ -1,6 +1,6 @@
 package typingsSlinky.alexaSdk.mod
 
-import typingsSlinky.alexaSdk.AnonHref
+import typingsSlinky.alexaSdk.anon.Href
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +36,7 @@ trait ListObject extends js.Object {
     * href is lint to the items having certain status.
     * The status can be "active" or "completed".
     */
-  var statusMap: AnonHref = js.native
+  var statusMap: Href = js.native
   /**
     * list version (Positive integer)
     */
@@ -45,7 +45,7 @@ trait ListObject extends js.Object {
 
 object ListObject {
   @scala.inline
-  def apply(items: js.Array[ListItemObject], listId: String, name: String, statusMap: AnonHref): ListObject = {
+  def apply(items: js.Array[ListItemObject], listId: String, name: String, statusMap: Href): ListObject = {
     val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any], listId = listId.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], statusMap = statusMap.asInstanceOf[js.Any])
     __obj.asInstanceOf[ListObject]
   }
@@ -74,7 +74,7 @@ object ListObject {
         ret
     }
     @scala.inline
-    def withStatusMap(value: AnonHref): Self = {
+    def withStatusMap(value: Href): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("statusMap")(value.asInstanceOf[js.Any])
         ret

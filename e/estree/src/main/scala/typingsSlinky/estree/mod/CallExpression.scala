@@ -12,24 +12,8 @@ trait CallExpression extends Expression
 
 object CallExpression {
   @scala.inline
-  def SimpleCallExpression(
-    arguments: js.Array[Expression | SpreadElement],
-    callee: Expression | Super,
-    `type`: typingsSlinky.estree.estreeStrings.CallExpression
-  ): CallExpression = {
-    val __obj = js.Dynamic.literal(arguments = arguments.asInstanceOf[js.Any], callee = callee.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CallExpression]
-  }
+  implicit def apply(value: NewExpression): CallExpression = value.asInstanceOf[CallExpression]
   @scala.inline
-  def NewExpression(
-    arguments: js.Array[Expression | SpreadElement],
-    callee: Expression | Super,
-    `type`: typingsSlinky.estree.estreeStrings.NewExpression
-  ): CallExpression = {
-    val __obj = js.Dynamic.literal(arguments = arguments.asInstanceOf[js.Any], callee = callee.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CallExpression]
-  }
+  implicit def apply(value: SimpleCallExpression): CallExpression = value.asInstanceOf[CallExpression]
 }
 

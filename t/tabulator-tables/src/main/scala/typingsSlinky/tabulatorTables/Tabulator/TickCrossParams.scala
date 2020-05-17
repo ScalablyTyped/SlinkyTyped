@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TickCrossParams extends _FormatterParams {
+trait TickCrossParams extends FormatterParams {
   // Tick Cross
   var allowEmpty: js.UndefOr[Boolean] = js.native
   var allowTruthy: js.UndefOr[Boolean] = js.native

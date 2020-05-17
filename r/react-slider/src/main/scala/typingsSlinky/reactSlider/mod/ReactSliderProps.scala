@@ -1,8 +1,8 @@
 package typingsSlinky.reactSlider.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactSlider.AnonIndex
-import typingsSlinky.reactSlider.AnonValue
+import typingsSlinky.reactSlider.anon.Index
+import typingsSlinky.reactSlider.anon.Value
 import typingsSlinky.reactSlider.reactSliderStrings.horizontal
 import typingsSlinky.reactSlider.reactSliderStrings.vertical
 import scala.scalajs.js
@@ -21,7 +21,7 @@ trait ReactSliderProps extends js.Object {
     * aria-valuetext for screen-readers.
     * Can be a static string, or a function that returns a string.
     */
-  var ariaValuetext: js.UndefOr[String | (js.Function1[/* value */ AnonIndex, String])] = js.native
+  var ariaValuetext: js.UndefOr[String | (js.Function1[/* value */ Index, String])] = js.native
   /**
     * The css class set on the slider node.
     */
@@ -95,13 +95,13 @@ trait ReactSliderProps extends js.Object {
     * The render function will be passed two arguments.The first is
     * an object that should be added to your thumb node,
     */
-  var renderThumb: js.UndefOr[js.Function2[/* props */ js.Object, /* state */ AnonIndex, ReactElement]] = js.native
+  var renderThumb: js.UndefOr[js.Function2[/* props */ js.Object, /* state */ Index, ReactElement]] = js.native
   /**
     * Provide a custom render function for the track node.
     * The render function will be passed two arguments. The first is
     * an object that should be added to your handle node.
     */
-  var renderTrack: js.UndefOr[js.Function2[/* props */ js.Object, /* state */ AnonValue, ReactElement]] = js.native
+  var renderTrack: js.UndefOr[js.Function2[/* props */ js.Object, /* state */ Value, ReactElement]] = js.native
   /**
     * Disables thumb move when clicking the slider track
     */
@@ -165,13 +165,13 @@ object ReactSliderProps {
         ret
     }
     @scala.inline
-    def withAriaValuetextFunction1(value: /* value */ AnonIndex => String): Self = {
+    def withAriaValuetextFunction1(value: /* value */ Index => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ariaValuetext")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withAriaValuetext(value: String | (js.Function1[/* value */ AnonIndex, String])): Self = {
+    def withAriaValuetext(value: String | (js.Function1[/* value */ Index, String])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ariaValuetext")(value.asInstanceOf[js.Any])
         ret
@@ -351,7 +351,7 @@ object ReactSliderProps {
         ret
     }
     @scala.inline
-    def withRenderThumb(value: (/* props */ js.Object, /* state */ AnonIndex) => ReactElement): Self = {
+    def withRenderThumb(value: (/* props */ js.Object, /* state */ Index) => ReactElement): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderThumb")(js.Any.fromFunction2(value))
         ret
@@ -363,7 +363,7 @@ object ReactSliderProps {
         ret
     }
     @scala.inline
-    def withRenderTrack(value: (/* props */ js.Object, /* state */ AnonValue) => ReactElement): Self = {
+    def withRenderTrack(value: (/* props */ js.Object, /* state */ Value) => ReactElement): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderTrack")(js.Any.fromFunction2(value))
         ret

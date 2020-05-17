@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object Dropbox {
+  type AuthDriver = typingsSlinky.dropboxjs.Dropbox.AuthDriver_
   type ClientFileReadCallback = js.Function4[
     /* err */ typingsSlinky.dropboxjs.Dropbox.ApiError, 
     /* fileContents */ java.lang.String, 

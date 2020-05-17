@@ -1,6 +1,6 @@
 package typingsSlinky.giphyApi.mod
 
-import typingsSlinky.giphyApi.AnonAvatarurl
+import typingsSlinky.giphyApi.anon.Avatarurl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +24,7 @@ trait GIFObject extends js.Object {
   var `type`: String = js.native
   var update_datetime: String = js.native
   var url: String = js.native
-  var user: js.UndefOr[AnonAvatarurl] = js.native
+  var user: js.UndefOr[Avatarurl] = js.native
   var username: String = js.native
 }
 
@@ -169,7 +169,7 @@ object GIFObject {
         ret
     }
     @scala.inline
-    def withUser(value: AnonAvatarurl): Self = {
+    def withUser(value: Avatarurl): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
         ret

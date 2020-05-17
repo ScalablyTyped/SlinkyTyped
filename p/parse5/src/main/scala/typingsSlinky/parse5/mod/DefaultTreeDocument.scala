@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DefaultTreeDocument extends DefaultTreeParentNode {
+trait DefaultTreeDocument
+  extends DefaultTreeParentNode
+     with Document {
   /**
     * [Document mode](https://dom.spec.whatwg.org/#concept-document-limited-quirks).
     */

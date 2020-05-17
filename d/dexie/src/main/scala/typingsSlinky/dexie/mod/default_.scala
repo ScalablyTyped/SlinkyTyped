@@ -1,6 +1,6 @@
 package typingsSlinky.dexie.mod
 
-import typingsSlinky.dexie.AnonAddons
+import typingsSlinky.dexie.anon.Addons
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class default_ protected () extends Dexie {
   def this(databaseName: String) = this()
-  def this(databaseName: String, options: AnonAddons) = this()
+  def this(databaseName: String, options: Addons) = this()
 }
 

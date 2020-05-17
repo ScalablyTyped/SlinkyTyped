@@ -1,6 +1,6 @@
 package typingsSlinky.licenseCheckerWebpackPlugin.mod
 
-import typingsSlinky.licenseCheckerWebpackPlugin.PartialDependency
+import typingsSlinky.licenseCheckerWebpackPlugin.anon.PartialDependency
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`

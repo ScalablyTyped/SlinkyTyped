@@ -1,15 +1,14 @@
 package typingsSlinky.babylonjs.BABYLON
 
-import typingsSlinky.babylonjs.AnonWidth
 import typingsSlinky.babylonjs.WebGLUniformLocation
+import typingsSlinky.babylonjs.anon.Width
 import typingsSlinky.std.WebGLVertexArrayObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.NativeEngine")
 @js.native
-class NativeEngine () extends Engine {
+trait NativeEngine extends Engine {
   /** Defines the invalid handle returned by bgfx when resource creation goes wrong */
   val INVALID_HANDLE: js.Any = js.native
   var _getAddressMode: js.Any = js.native
@@ -65,8 +64,8 @@ class NativeEngine () extends Engine {
     lodOffset: js.UndefOr[Double],
     fallback: js.UndefOr[Nullable[InternalTexture]]
   ): InternalTexture = js.native
-  def createRenderTargetTexture(size: AnonWidth, options: Boolean): NativeTexture = js.native
-  def createRenderTargetTexture(size: AnonWidth, options: RenderTargetCreationOptions): NativeTexture = js.native
+  def createRenderTargetTexture(size: Width, options: Boolean): NativeTexture = js.native
+  def createRenderTargetTexture(size: Width, options: RenderTargetCreationOptions): NativeTexture = js.native
   def setArray(uniform: WebGLUniformLocation, array: js.Array[Double]): Unit = js.native
   def setArray2(uniform: WebGLUniformLocation, array: js.Array[Double]): Unit = js.native
   def setArray3(uniform: WebGLUniformLocation, array: js.Array[Double]): Unit = js.native
@@ -93,12 +92,5 @@ class NativeEngine () extends Engine {
   def setViewport(viewport: Viewport): Unit = js.native
   def setViewport(viewport: Viewport, requiredWidth: Double): Unit = js.native
   def setViewport(viewport: Viewport, requiredWidth: Double, requiredHeight: Double): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("BABYLON.NativeEngine")
-@js.native
-object NativeEngine extends js.Object {
-  var _GetNativeTextureFormat: js.Any = js.native
 }
 

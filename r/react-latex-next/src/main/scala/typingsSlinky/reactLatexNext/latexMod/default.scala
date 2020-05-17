@@ -1,6 +1,6 @@
 package typingsSlinky.reactLatexNext.latexMod
 
-import typingsSlinky.reactLatexNext.PartialLatexProps
+import typingsSlinky.reactLatexNext.anon.PartialLatexProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

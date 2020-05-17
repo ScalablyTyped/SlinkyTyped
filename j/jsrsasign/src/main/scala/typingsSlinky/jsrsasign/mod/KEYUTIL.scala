@@ -1,8 +1,8 @@
 package typingsSlinky.jsrsasign.mod
 
-import typingsSlinky.jsrsasign.AnonE
-import typingsSlinky.jsrsasign.AnonP8pubkeyhex
-import typingsSlinky.jsrsasign.AnonPrvKeyObj_
+import typingsSlinky.jsrsasign.anon.E
+import typingsSlinky.jsrsasign.anon.P8pubkeyhex
+import typingsSlinky.jsrsasign.anon.PrvKeyObj_
 import typingsSlinky.jsrsasign.jsrsasign.ECCPrivateKey
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.crypto.DSA
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.crypto.ECDSA
@@ -82,11 +82,11 @@ class KEYUTIL ()
 object KEYUTIL extends js.Object {
   val version: String = js.native
   @JSName("generateKeypair")
-  def generateKeypair_EC(alg: EC, keylenOrCurve: String): AnonPrvKeyObj_ = js.native
+  def generateKeypair_EC(alg: EC, keylenOrCurve: String): PrvKeyObj_ = js.native
   @JSName("generateKeypair")
-  def generateKeypair_EC(alg: EC, keylenOrCurve: Double): AnonPrvKeyObj_ = js.native
+  def generateKeypair_EC(alg: EC, keylenOrCurve: Double): PrvKeyObj_ = js.native
   @JSName("generateKeypair")
-  def generateKeypair_RSA(alg: RSA, keylenOrCurve: String): AnonPrvKeyObj_ = js.native
+  def generateKeypair_RSA(alg: RSA, keylenOrCurve: String): PrvKeyObj_ = js.native
   /**
     * @param alg 'RSA' or 'EC'
     * @param keylenOrCurve key length for RSA or curve name for EC
@@ -110,7 +110,7 @@ object KEYUTIL extends js.Object {
     *
     */
   @JSName("generateKeypair")
-  def generateKeypair_RSA(alg: RSA, keylenOrCurve: Double): AnonPrvKeyObj_ = js.native
+  def generateKeypair_RSA(alg: RSA, keylenOrCurve: Double): PrvKeyObj_ = js.native
   def getJWKFromKey(keyObj: DSA): JsonWebKey = js.native
   def getJWKFromKey(keyObj: ECDSA): JsonWebKey = js.native
   /**
@@ -137,10 +137,10 @@ object KEYUTIL extends js.Object {
   def getKey(param: String, passcode: String): typingsSlinky.jsrsasign.jsrsasign.RSAKey | DSA | ECDSA = js.native
   def getKey(param: String, passcode: String, hextype: String): typingsSlinky.jsrsasign.jsrsasign.RSAKey | DSA | ECDSA = js.native
   def getKey(param: String, passcode: Null, hextype: String): typingsSlinky.jsrsasign.jsrsasign.RSAKey | DSA | ECDSA = js.native
-  def getKey(param: AnonE): typingsSlinky.jsrsasign.jsrsasign.RSAKey | DSA | ECDSA = js.native
-  def getKey(param: AnonE, passcode: String): typingsSlinky.jsrsasign.jsrsasign.RSAKey | DSA | ECDSA = js.native
-  def getKey(param: AnonE, passcode: String, hextype: String): typingsSlinky.jsrsasign.jsrsasign.RSAKey | DSA | ECDSA = js.native
-  def getKey(param: AnonE, passcode: Null, hextype: String): typingsSlinky.jsrsasign.jsrsasign.RSAKey | DSA | ECDSA = js.native
+  def getKey(param: E): typingsSlinky.jsrsasign.jsrsasign.RSAKey | DSA | ECDSA = js.native
+  def getKey(param: E, passcode: String): typingsSlinky.jsrsasign.jsrsasign.RSAKey | DSA | ECDSA = js.native
+  def getKey(param: E, passcode: String, hextype: String): typingsSlinky.jsrsasign.jsrsasign.RSAKey | DSA | ECDSA = js.native
+  def getKey(param: E, passcode: Null, hextype: String): typingsSlinky.jsrsasign.jsrsasign.RSAKey | DSA | ECDSA = js.native
   def getKey(param: ECCPrivateKey): typingsSlinky.jsrsasign.jsrsasign.RSAKey | DSA | ECDSA = js.native
   def getKey(param: ECCPrivateKey, passcode: String): typingsSlinky.jsrsasign.jsrsasign.RSAKey | DSA | ECDSA = js.native
   def getKey(param: ECCPrivateKey, passcode: String, hextype: String): typingsSlinky.jsrsasign.jsrsasign.RSAKey | DSA | ECDSA = js.native
@@ -339,6 +339,6 @@ object KEYUTIL extends js.Object {
     * - p8pubkeyhex - hexadecimal string of subject public key in PKCS#8
     *
     */
-  def parseCSRHex(csrHex: String): AnonP8pubkeyhex = js.native
+  def parseCSRHex(csrHex: String): P8pubkeyhex = js.native
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.primereact.spinnerMod
 
-import typingsSlinky.primereact.Anon0
+import org.scalajs.dom.raw.Event
+import typingsSlinky.primereact.anon.`0`
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,8 +22,8 @@ trait SpinnerProps extends js.Object {
   var maxlength: js.UndefOr[Double] = js.native
   var min: js.UndefOr[Double] = js.native
   var name: js.UndefOr[String] = js.native
-  var onBlur: js.UndefOr[js.Function1[/* e */ Event_, Unit]] = js.native
-  var onChange: js.UndefOr[js.Function1[/* e */ Anon0, Unit]] = js.native
+  var onBlur: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* e */ `0`, Unit]] = js.native
   var pattern: js.UndefOr[String] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var readonly: js.UndefOr[Boolean] = js.native
@@ -207,7 +207,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnBlur(value: /* e */ Event_ => Unit): Self = {
+    def withOnBlur(value: /* e */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
         ret
@@ -219,7 +219,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* e */ Anon0 => Unit): Self = {
+    def withOnChange(value: /* e */ `0` => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

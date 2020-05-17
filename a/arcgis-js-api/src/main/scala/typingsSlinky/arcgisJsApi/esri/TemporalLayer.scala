@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,7 +40,43 @@ trait TemporalLayer extends js.Object {
   var useViewTime: Boolean = js.native
 }
 
-@JSGlobal("__esri.TemporalLayer")
-@js.native
-object TemporalLayer extends TopLevel[TemporalLayerConstructor]
+object TemporalLayer {
+  @scala.inline
+  def apply(timeExtent: TimeExtent, timeInfo: TimeInfo, timeOffset: TimeInterval, useViewTime: Boolean): TemporalLayer = {
+    val __obj = js.Dynamic.literal(timeExtent = timeExtent.asInstanceOf[js.Any], timeInfo = timeInfo.asInstanceOf[js.Any], timeOffset = timeOffset.asInstanceOf[js.Any], useViewTime = useViewTime.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TemporalLayer]
+  }
+  @scala.inline
+  implicit class TemporalLayerOps[Self <: TemporalLayer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withTimeExtent(value: TimeExtent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeExtent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimeInfo(value: TimeInfo): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeInfo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimeOffset(value: TimeInterval): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeOffset")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUseViewTime(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useViewTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

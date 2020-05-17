@@ -1,7 +1,7 @@
 package typingsSlinky.grommet.tabsMod
 
 import slinky.core.TagMod
-import typingsSlinky.grommet.AnonTabContents
+import typingsSlinky.grommet.anon.TabContents
 import typingsSlinky.grommet.grommetStrings.center
 import typingsSlinky.grommet.grommetStrings.end
 import typingsSlinky.grommet.grommetStrings.grow
@@ -25,7 +25,7 @@ trait TabsProps extends js.Object {
   var gridArea: js.UndefOr[GridAreaType] = js.native
   var justify: js.UndefOr[start | center | end] = js.native
   var margin: js.UndefOr[MarginType] = js.native
-  var messages: js.UndefOr[AnonTabContents] = js.native
+  var messages: js.UndefOr[TabContents] = js.native
   var onActive: js.UndefOr[js.Function1[/* index */ Double, Unit]] = js.native
 }
 
@@ -138,7 +138,7 @@ object TabsProps {
         ret
     }
     @scala.inline
-    def withMessages(value: AnonTabContents): Self = {
+    def withMessages(value: TabContents): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
         ret

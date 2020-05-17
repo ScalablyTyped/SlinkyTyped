@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.shaderMaterialMod
 
-import typingsSlinky.babylonjs.PartialIShaderMaterialOpt
+import typingsSlinky.babylonjs.anon.PartialIShaderMaterialOpt
 import typingsSlinky.babylonjs.materialMod.Material
 import typingsSlinky.babylonjs.mathColorMod.Color3
 import typingsSlinky.babylonjs.mathColorMod.Color4

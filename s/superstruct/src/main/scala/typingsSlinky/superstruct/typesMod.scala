@@ -1,5 +1,6 @@
 package typingsSlinky.superstruct
 
+import typingsSlinky.superstruct.anon.PartialFailure
 import typingsSlinky.superstruct.structErrorMod.Branch
 import typingsSlinky.superstruct.structErrorMod.Path
 import scala.scalajs.js

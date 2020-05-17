@@ -10,9 +10,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * Continuous or instantaneous force to apply to an item.
 			 */
-@JSGlobal("Titanium.UI.iOS.PushBehavior")
 @js.native
-class PushBehavior () extends Proxy {
+trait PushBehavior extends Proxy {
   /**
   				 * State of the push behavior's force.
   				 */

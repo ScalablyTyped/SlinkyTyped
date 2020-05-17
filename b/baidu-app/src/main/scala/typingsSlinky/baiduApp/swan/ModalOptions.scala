@@ -1,6 +1,6 @@
 package typingsSlinky.baiduApp.swan
 
-import typingsSlinky.baiduApp.AnonCancel
+import typingsSlinky.baiduApp.anon.Cancel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +33,7 @@ trait ModalOptions
   		 */
   var showCancel: js.UndefOr[Boolean] = js.native
   @JSName("success")
-  var success_ModalOptions: js.UndefOr[js.Function1[/* res */ AnonCancel, Unit]] = js.native
+  var success_ModalOptions: js.UndefOr[js.Function1[/* res */ Cancel, Unit]] = js.native
   /**
   		 * 提示的标题
   		 */
@@ -125,7 +125,7 @@ object ModalOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonCancel => Unit): Self = {
+    def withSuccess(value: /* res */ Cancel => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

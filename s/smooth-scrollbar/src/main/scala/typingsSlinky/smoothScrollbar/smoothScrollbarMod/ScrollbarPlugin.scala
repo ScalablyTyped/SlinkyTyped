@@ -1,8 +1,8 @@
 package typingsSlinky.smoothScrollbar.smoothScrollbarMod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.smoothScrollbar.data2dMod.Data2d
 import typingsSlinky.smoothScrollbar.smoothScrollbarScrollbarMod.Scrollbar
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ class ScrollbarPlugin protected ()
   extends typingsSlinky.smoothScrollbar.pluginMod.ScrollbarPlugin {
   def this(scrollbar: Scrollbar) = this()
   def this(scrollbar: Scrollbar, options: js.Any) = this()
-  def transformDelta(delta: Data2d, _evt: Event_): Data2d = js.native
+  def transformDelta(delta: Data2d, _evt: Event): Data2d = js.native
 }
 
 /* static members */

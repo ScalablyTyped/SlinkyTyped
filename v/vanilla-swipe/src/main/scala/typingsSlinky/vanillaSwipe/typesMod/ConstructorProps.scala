@@ -1,7 +1,7 @@
 package typingsSlinky.vanillaSwipe.typesMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Event_
 import typingsSlinky.vanillaSwipe.vanillaSwipeNumbers.`0`
 import typingsSlinky.vanillaSwipe.vanillaSwipeNumbers.`10`
 import scala.scalajs.js
@@ -15,7 +15,7 @@ trait ConstructorProps extends js.Object {
   var mouseTrackingEnabled: js.UndefOr[Boolean] = js.native
   var onSwiped: js.UndefOr[EventHandler] = js.native
   var onSwiping: js.UndefOr[EventHandler] = js.native
-  var onTap: js.UndefOr[js.Function1[/* e */ Event_, Unit]] = js.native
+  var onTap: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
   var preventDefaultTouchmoveEvent: js.UndefOr[Boolean] = js.native
   var rotationAngle: js.UndefOr[Double | `0`] = js.native
   var touchTrackingEnabled: js.UndefOr[Boolean] = js.native
@@ -77,7 +77,7 @@ object ConstructorProps {
     }
     @scala.inline
     def withOnSwiped(
-      value: (/* e */ Event_, /* deltaX */ Double, /* deltaY */ Double, /* absX */ Double, /* absY */ Double, /* duration */ Double) => Unit
+      value: (/* e */ Event, /* deltaX */ Double, /* deltaY */ Double, /* absX */ Double, /* absY */ Double, /* duration */ Double) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSwiped")(js.Any.fromFunction6(value))
@@ -91,7 +91,7 @@ object ConstructorProps {
     }
     @scala.inline
     def withOnSwiping(
-      value: (/* e */ Event_, /* deltaX */ Double, /* deltaY */ Double, /* absX */ Double, /* absY */ Double, /* duration */ Double) => Unit
+      value: (/* e */ Event, /* deltaX */ Double, /* deltaY */ Double, /* absX */ Double, /* absY */ Double, /* duration */ Double) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSwiping")(js.Any.fromFunction6(value))
@@ -104,7 +104,7 @@ object ConstructorProps {
         ret
     }
     @scala.inline
-    def withOnTap(value: /* e */ Event_ => Unit): Self = {
+    def withOnTap(value: /* e */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTap")(js.Any.fromFunction1(value))
         ret

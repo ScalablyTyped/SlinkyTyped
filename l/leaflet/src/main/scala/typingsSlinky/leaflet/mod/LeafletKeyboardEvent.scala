@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.leaflet.mod.DomEvent._PropagableEvent because Already inherited */ @js.native
+- typingsSlinky.leaflet.mod.DomEvent.PropagableEvent because Already inherited */ @js.native
 trait LeafletKeyboardEvent extends LeafletEvent {
   var originalEvent: KeyboardEvent = js.native
 }

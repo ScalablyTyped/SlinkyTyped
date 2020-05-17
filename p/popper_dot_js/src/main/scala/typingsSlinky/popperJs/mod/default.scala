@@ -1,7 +1,7 @@
 package typingsSlinky.popperJs.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.popperJs.BaseModifiernamestring
+import typingsSlinky.popperJs.anon.BaseModifiernamestring
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

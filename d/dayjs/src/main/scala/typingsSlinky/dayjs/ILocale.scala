@@ -1,5 +1,7 @@
 package typingsSlinky.dayjs
 
+import typingsSlinky.dayjs.anon.PartialLTstringLTSstringL
+import typingsSlinky.dayjs.anon.Partialfuturestringpastst
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

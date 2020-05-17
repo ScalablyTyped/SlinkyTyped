@@ -4,7 +4,7 @@ import typingsSlinky.angularCore.mod.ComponentFactoryResolver
 import typingsSlinky.angularCore.mod.Injector
 import typingsSlinky.ionicAngular.angularDelegateMod.AngularDelegate
 import typingsSlinky.ionicAngular.overlayMod.OverlayBaseController
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonPopoverElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonPopoverElement
 import typingsSlinky.ionicCore.mod.ComponentRef
 import typingsSlinky.ionicCore.popoverInterfaceMod.PopoverOptions
 import scala.scalajs.js

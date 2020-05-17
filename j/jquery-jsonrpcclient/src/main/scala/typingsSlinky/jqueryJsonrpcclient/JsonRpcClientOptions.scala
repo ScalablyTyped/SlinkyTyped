@@ -2,10 +2,10 @@ package typingsSlinky.jqueryJsonrpcclient
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.CloseEvent
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.MessageEvent
 import org.scalajs.dom.raw.WebSocket
-import typingsSlinky.jquery.JQuery_.AjaxSettings
-import typingsSlinky.std.Event_
+import typingsSlinky.jquery.JQuery.AjaxSettings
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +18,9 @@ trait JsonRpcClientOptions
   @JSName("headers")
   var headers_JsonRpcClientOptions: js.UndefOr[StringDictionary[js.Any]] = js.native
   var onclose: js.UndefOr[js.Function1[/* ev */ CloseEvent, Unit]] = js.native
-  var onerror: js.UndefOr[js.Function1[/* ev */ Event_, Unit]] = js.native
+  var onerror: js.UndefOr[js.Function1[/* ev */ Event, Unit]] = js.native
   var onmessage: js.UndefOr[js.Function1[/* ev */ MessageEvent, Unit]] = js.native
-  var onopen: js.UndefOr[js.Function1[/* ev */ Event_, Unit]] = js.native
+  var onopen: js.UndefOr[js.Function1[/* ev */ Event, Unit]] = js.native
   var socketUrl: js.UndefOr[String] = js.native
 }
 
@@ -79,7 +79,7 @@ object JsonRpcClientOptions {
         ret
     }
     @scala.inline
-    def withOnerror(value: /* ev */ Event_ => Unit): Self = {
+    def withOnerror(value: /* ev */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onerror")(js.Any.fromFunction1(value))
         ret
@@ -103,7 +103,7 @@ object JsonRpcClientOptions {
         ret
     }
     @scala.inline
-    def withOnopen(value: /* ev */ Event_ => Unit): Self = {
+    def withOnopen(value: /* ev */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onopen")(js.Any.fromFunction1(value))
         ret

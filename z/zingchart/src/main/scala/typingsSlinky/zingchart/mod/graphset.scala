@@ -1,45 +1,45 @@
 package typingsSlinky.zingchart.mod
 
-import typingsSlinky.zingchart.AnonActive
-import typingsSlinky.zingchart.AnonAdjustlayout
-import typingsSlinky.zingchart.AnonAlign
-import typingsSlinky.zingchart.AnonAlpha
-import typingsSlinky.zingchart.AnonAnchor
-import typingsSlinky.zingchart.AnonAngle
-import typingsSlinky.zingchart.AnonAngleend
-import typingsSlinky.zingchart.AnonAnimation
-import typingsSlinky.zingchart.AnonAspect
-import typingsSlinky.zingchart.AnonAsync
-import typingsSlinky.zingchart.AnonAutofit
-import typingsSlinky.zingchart.AnonBackgroundimage
-import typingsSlinky.zingchart.AnonBorderradiusbottomright
-import typingsSlinky.zingchart.AnonCalloutextension
-import typingsSlinky.zingchart.AnonCalloutheight
-import typingsSlinky.zingchart.AnonCallouthook
-import typingsSlinky.zingchart.AnonCenter
-import typingsSlinky.zingchart.AnonColumns
-import typingsSlinky.zingchart.AnonDecimalsseparator
-import typingsSlinky.zingchart.AnonExact
-import typingsSlinky.zingchart.AnonFormat
-import typingsSlinky.zingchart.AnonGuide
-import typingsSlinky.zingchart.AnonHandle
-import typingsSlinky.zingchart.AnonMaxheight
-import typingsSlinky.zingchart.AnonPreservezoom
-import typingsSlinky.zingchart.AnonSizefactor
-import typingsSlinky.zingchart.AnonTypeString
+import typingsSlinky.zingchart.anon.Active
+import typingsSlinky.zingchart.anon.Adjustlayout
+import typingsSlinky.zingchart.anon.Align
+import typingsSlinky.zingchart.anon.Alpha
+import typingsSlinky.zingchart.anon.Anchor
+import typingsSlinky.zingchart.anon.Angle
+import typingsSlinky.zingchart.anon.Angleend
+import typingsSlinky.zingchart.anon.Animation
+import typingsSlinky.zingchart.anon.Aspect
+import typingsSlinky.zingchart.anon.Async
+import typingsSlinky.zingchart.anon.Autofit
+import typingsSlinky.zingchart.anon.Backgroundimage
+import typingsSlinky.zingchart.anon.Borderradiusbottomright
+import typingsSlinky.zingchart.anon.Calloutextension
+import typingsSlinky.zingchart.anon.Calloutheight
+import typingsSlinky.zingchart.anon.Callouthook
+import typingsSlinky.zingchart.anon.Center
+import typingsSlinky.zingchart.anon.Columns
+import typingsSlinky.zingchart.anon.Decimalsseparator
+import typingsSlinky.zingchart.anon.Exact
+import typingsSlinky.zingchart.anon.Format
+import typingsSlinky.zingchart.anon.Guide
+import typingsSlinky.zingchart.anon.Handle
+import typingsSlinky.zingchart.anon.Maxheight
+import typingsSlinky.zingchart.anon.Preservezoom
+import typingsSlinky.zingchart.anon.Sizefactor
+import typingsSlinky.zingchart.anon.TypeString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait graphset extends js.Object {
-  var `3d-aspect`: js.UndefOr[AnonAngle] = js.native
+  var `3d-aspect`: js.UndefOr[Angle] = js.native
   /**
     * Sets the transparency level of the object. Values must range between 0.0 and 1.0, with 0.0 being completely transparent and 1.0 be
     * ing completely opaque. Note that values require the leading 0 before the decimal point. 0.3 | 0.4 | 0.9 | ...
     */
   var alpha: js.UndefOr[Double] = js.native
-  var arrows: js.UndefOr[js.Array[AnonAlpha]] = js.native
+  var arrows: js.UndefOr[js.Array[Alpha]] = js.native
   /**
     * Sets the background color of the object. Colors can be entered by name (e.g., "purple", "blue"), hexadecimal notation (e.g., "#666
     * 699", #33ccff"), or RGB notation (e.g., "rgb(255,0,0)", "rgb(0,0,255)"). "none" | "transparent" | "purple" | "#33ccff" | "rgb(100,
@@ -58,49 +58,49 @@ trait graphset extends js.Object {
     * Sets the border width of the object. 1 | 3 | | "6px" | ...
     */
   var `border-width`: js.UndefOr[Double] = js.native
-  var crosshair: js.UndefOr[AnonExact] = js.native
-  var csv: js.UndefOr[AnonColumns] = js.native
-  var heatmap: js.UndefOr[AnonAsync] = js.native
+  var crosshair: js.UndefOr[Exact] = js.native
+  var csv: js.UndefOr[Columns] = js.native
+  var heatmap: js.UndefOr[Async] = js.native
   /**
     * Sets the height of the object. 10 | "20px" | 0.3 | "30%" | ...
     */
   var height: js.UndefOr[Double] = js.native
-  var images: js.UndefOr[js.Array[AnonBackgroundimage]] = js.native
-  var labels: js.UndefOr[js.Array[AnonAnchor]] = js.native
-  var legend: js.UndefOr[AnonAdjustlayout] = js.native
+  var images: js.UndefOr[js.Array[Backgroundimage]] = js.native
+  var labels: js.UndefOr[js.Array[Anchor]] = js.native
+  var legend: js.UndefOr[Adjustlayout] = js.native
   /**
     * Sets the line style of the object. "solid" | "dotted" | "dashed" | "dashdot"
     */
   var `line-style`: js.UndefOr[String] = js.native
-  var `media-rules`: js.UndefOr[js.Array[AnonMaxheight]] = js.native
-  var `no-data`: js.UndefOr[AnonAlign] = js.native
-  var options: js.UndefOr[AnonAspect] = js.native
-  var plot: js.UndefOr[AnonAnimation] = js.native
-  var plotarea: js.UndefOr[AnonBorderradiusbottomright] = js.native
-  var preview: js.UndefOr[AnonActive] = js.native
-  var scale: js.UndefOr[AnonSizefactor] = js.native
-  var `scale-k`: js.UndefOr[AnonFormat] = js.native
-  var `scale-r`: js.UndefOr[AnonCenter] = js.native
-  var `scale-v`: js.UndefOr[AnonGuide] = js.native
-  var `scale-x`: js.UndefOr[AnonAutofit] = js.native
-  var `scale-y`: js.UndefOr[AnonDecimalsseparator] = js.native
-  var `scroll-x-scroll-y`: js.UndefOr[AnonHandle] = js.native
+  var `media-rules`: js.UndefOr[js.Array[Maxheight]] = js.native
+  var `no-data`: js.UndefOr[Align] = js.native
+  var options: js.UndefOr[Aspect] = js.native
+  var plot: js.UndefOr[Animation] = js.native
+  var plotarea: js.UndefOr[Borderradiusbottomright] = js.native
+  var preview: js.UndefOr[Active] = js.native
+  var scale: js.UndefOr[Sizefactor] = js.native
+  var `scale-k`: js.UndefOr[Format] = js.native
+  var `scale-r`: js.UndefOr[Center] = js.native
+  var `scale-v`: js.UndefOr[Guide] = js.native
+  var `scale-x`: js.UndefOr[Autofit] = js.native
+  var `scale-y`: js.UndefOr[Decimalsseparator] = js.native
+  var `scroll-x-scroll-y`: js.UndefOr[Handle] = js.native
   var series: js.UndefOr[js.Array[typingsSlinky.zingchart.mod.series]] = js.native
-  var shapes: js.UndefOr[js.Array[AnonAngleend]] = js.native
-  var source: js.UndefOr[AnonCalloutextension] = js.native
-  var subtitle: js.UndefOr[AnonCalloutextension] = js.native
-  var title: js.UndefOr[AnonCalloutheight] = js.native
-  var tooltip: js.UndefOr[AnonCallouthook] = js.native
+  var shapes: js.UndefOr[js.Array[Angleend]] = js.native
+  var source: js.UndefOr[Calloutextension] = js.native
+  var subtitle: js.UndefOr[Calloutextension] = js.native
+  var title: js.UndefOr[Calloutheight] = js.native
+  var tooltip: js.UndefOr[Callouthook] = js.native
   /**
     * The type of the chart "line" | "bar"...
     */
   var `type`: js.UndefOr[String] = js.native
-  var widget: js.UndefOr[AnonTypeString] = js.native
+  var widget: js.UndefOr[TypeString] = js.native
   /**
     * Sets the width of the object. 10 | "20px" | 0.3 | "30%" | ...
     */
   var width: js.UndefOr[Double] = js.native
-  var zoom: js.UndefOr[AnonPreservezoom] = js.native
+  var zoom: js.UndefOr[Preservezoom] = js.native
 }
 
 object graphset {
@@ -116,7 +116,7 @@ object graphset {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def `with3d-aspect`(value: AnonAngle): Self = {
+    def `with3d-aspect`(value: Angle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("3d-aspect")(value.asInstanceOf[js.Any])
         ret
@@ -140,7 +140,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def withArrows(value: js.Array[AnonAlpha]): Self = {
+    def withArrows(value: js.Array[Alpha]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("arrows")(value.asInstanceOf[js.Any])
         ret
@@ -200,7 +200,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def withCrosshair(value: AnonExact): Self = {
+    def withCrosshair(value: Exact): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("crosshair")(value.asInstanceOf[js.Any])
         ret
@@ -212,7 +212,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def withCsv(value: AnonColumns): Self = {
+    def withCsv(value: Columns): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("csv")(value.asInstanceOf[js.Any])
         ret
@@ -224,7 +224,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def withHeatmap(value: AnonAsync): Self = {
+    def withHeatmap(value: Async): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("heatmap")(value.asInstanceOf[js.Any])
         ret
@@ -248,7 +248,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def withImages(value: js.Array[AnonBackgroundimage]): Self = {
+    def withImages(value: js.Array[Backgroundimage]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("images")(value.asInstanceOf[js.Any])
         ret
@@ -260,7 +260,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def withLabels(value: js.Array[AnonAnchor]): Self = {
+    def withLabels(value: js.Array[Anchor]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
         ret
@@ -272,7 +272,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def withLegend(value: AnonAdjustlayout): Self = {
+    def withLegend(value: Adjustlayout): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("legend")(value.asInstanceOf[js.Any])
         ret
@@ -296,7 +296,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def `withMedia-rules`(value: js.Array[AnonMaxheight]): Self = {
+    def `withMedia-rules`(value: js.Array[Maxheight]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("media-rules")(value.asInstanceOf[js.Any])
         ret
@@ -308,7 +308,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def `withNo-data`(value: AnonAlign): Self = {
+    def `withNo-data`(value: Align): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("no-data")(value.asInstanceOf[js.Any])
         ret
@@ -320,7 +320,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonAspect): Self = {
+    def withOptions(value: Aspect): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret
@@ -332,7 +332,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def withPlot(value: AnonAnimation): Self = {
+    def withPlot(value: Animation): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("plot")(value.asInstanceOf[js.Any])
         ret
@@ -344,7 +344,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def withPlotarea(value: AnonBorderradiusbottomright): Self = {
+    def withPlotarea(value: Borderradiusbottomright): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("plotarea")(value.asInstanceOf[js.Any])
         ret
@@ -356,7 +356,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def withPreview(value: AnonActive): Self = {
+    def withPreview(value: Active): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("preview")(value.asInstanceOf[js.Any])
         ret
@@ -368,7 +368,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def withScale(value: AnonSizefactor): Self = {
+    def withScale(value: Sizefactor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
         ret
@@ -380,7 +380,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def `withScale-k`(value: AnonFormat): Self = {
+    def `withScale-k`(value: Format): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scale-k")(value.asInstanceOf[js.Any])
         ret
@@ -392,7 +392,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def `withScale-r`(value: AnonCenter): Self = {
+    def `withScale-r`(value: Center): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scale-r")(value.asInstanceOf[js.Any])
         ret
@@ -404,7 +404,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def `withScale-v`(value: AnonGuide): Self = {
+    def `withScale-v`(value: Guide): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scale-v")(value.asInstanceOf[js.Any])
         ret
@@ -416,7 +416,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def `withScale-x`(value: AnonAutofit): Self = {
+    def `withScale-x`(value: Autofit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scale-x")(value.asInstanceOf[js.Any])
         ret
@@ -428,7 +428,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def `withScale-y`(value: AnonDecimalsseparator): Self = {
+    def `withScale-y`(value: Decimalsseparator): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scale-y")(value.asInstanceOf[js.Any])
         ret
@@ -440,7 +440,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def `withScroll-x-scroll-y`(value: AnonHandle): Self = {
+    def `withScroll-x-scroll-y`(value: Handle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scroll-x-scroll-y")(value.asInstanceOf[js.Any])
         ret
@@ -464,7 +464,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def withShapes(value: js.Array[AnonAngleend]): Self = {
+    def withShapes(value: js.Array[Angleend]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shapes")(value.asInstanceOf[js.Any])
         ret
@@ -476,7 +476,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def withSource(value: AnonCalloutextension): Self = {
+    def withSource(value: Calloutextension): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
         ret
@@ -488,7 +488,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def withSubtitle(value: AnonCalloutextension): Self = {
+    def withSubtitle(value: Calloutextension): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(value.asInstanceOf[js.Any])
         ret
@@ -500,7 +500,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def withTitle(value: AnonCalloutheight): Self = {
+    def withTitle(value: Calloutheight): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
         ret
@@ -512,7 +512,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonCallouthook): Self = {
+    def withTooltip(value: Callouthook): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
@@ -536,7 +536,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def withWidget(value: AnonTypeString): Self = {
+    def withWidget(value: TypeString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("widget")(value.asInstanceOf[js.Any])
         ret
@@ -560,7 +560,7 @@ object graphset {
         ret
     }
     @scala.inline
-    def withZoom(value: AnonPreservezoom): Self = {
+    def withZoom(value: Preservezoom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("zoom")(value.asInstanceOf[js.Any])
         ret

@@ -3,7 +3,7 @@ package typingsSlinky.reactDatagrid.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactDatagrid.AnonPageSize
+import typingsSlinky.reactDatagrid.anon.PageSize
 import typingsSlinky.reactDatagrid.mod.ReactDataGrid.Column
 import typingsSlinky.reactDatagrid.mod.ReactDataGrid.DataGridProps
 import typingsSlinky.reactDatagrid.mod.ReactDataGrid.PaginationToolbarProps
@@ -87,7 +87,7 @@ object ReactDatagrid {
   @scala.inline
   def apply(
     columns: js.Array[Column],
-    dataSource: js.Array[_] | String | (js.Function1[/* query */ AnonPageSize, js.Promise[js.Array[_]]]),
+    dataSource: js.Array[_] | String | (js.Function1[/* query */ PageSize, js.Promise[js.Array[_]]]),
     idProperty: String
   ): Builder = {
     val __props = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], dataSource = dataSource.asInstanceOf[js.Any], idProperty = idProperty.asInstanceOf[js.Any])

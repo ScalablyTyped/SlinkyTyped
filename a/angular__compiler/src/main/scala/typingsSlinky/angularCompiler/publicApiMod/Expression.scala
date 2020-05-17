@@ -9,10 +9,6 @@ import scala.scalajs.js.annotation._
 abstract class Expression ()
   extends typingsSlinky.angularCompiler.srcCompilerMod.Expression {
   def this(`type`: typingsSlinky.angularCompiler.outputAstMod.Type) = this()
-  def this(
-    `type`: js.UndefOr[scala.Nothing],
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
-  ) = this()
   def this(`type`: Null, sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan) = this()
   def this(
     `type`: typingsSlinky.angularCompiler.outputAstMod.Type,

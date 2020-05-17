@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait FormatDSV extends _Format {
+trait FormatDSV extends Format {
   var delimiter: String = js.native
   var header: js.UndefOr[js.Array[String]] = js.native
   var parse: js.UndefOr[Parse] = js.native

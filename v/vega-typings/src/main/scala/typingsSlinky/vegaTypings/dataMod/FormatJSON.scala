@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait FormatJSON extends _Format {
+trait FormatJSON extends Format {
   var copy: js.UndefOr[Boolean] = js.native
   var parse: js.UndefOr[Parse] = js.native
   var property: js.UndefOr[String | SignalRef] = js.native

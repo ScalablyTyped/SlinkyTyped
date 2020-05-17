@@ -2,7 +2,7 @@ package typingsSlinky.stormReactDiagrams.diagramWidgetMod
 
 import org.scalajs.dom.raw.KeyboardEvent
 import slinky.core.facade.ReactElement
-import typingsSlinky.stormReactDiagrams.AnonElement
+import typingsSlinky.stormReactDiagrams.anon.Element
 import typingsSlinky.stormReactDiagrams.baseActionMod.BaseAction
 import typingsSlinky.stormReactDiagrams.baseWidgetMod.BaseWidget
 import scala.scalajs.js
@@ -28,7 +28,7 @@ class DiagramWidget protected () extends BaseWidget[DiagramProps, DiagramState] 
   /**
     * Gets a model and element under the mouse cursor
     */
-  def getMouseElement(event: js.Any): AnonElement = js.native
+  def getMouseElement(event: js.Any): Element = js.native
   def onKeyUp(event: js.Any): Unit = js.native
   def onKeyUpPointer(ev: KeyboardEvent): Unit = js.native
   def onMouseMove(event: js.Any): Unit = js.native

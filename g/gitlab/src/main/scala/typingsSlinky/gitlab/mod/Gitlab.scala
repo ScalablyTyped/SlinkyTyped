@@ -1,7 +1,7 @@
 package typingsSlinky.gitlab.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.gitlab.TypeofAPIServices
+import typingsSlinky.gitlab.anon.TypeofAPIServices
 import typingsSlinky.gitlab.utilsMod.Bundle
 import scala.scalajs.js
 import scala.scalajs.js.`|`

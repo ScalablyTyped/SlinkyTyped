@@ -1,31 +1,20 @@
 package typingsSlinky.rollup.mod
 
-import typingsSlinky.rollup.rollupBooleans.`true`
+import typingsSlinky.rollup.anon.Missing
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.rollup.AnonMissing
+  - typingsSlinky.rollup.anon.Missing
   - typingsSlinky.rollup.mod.ExistingDecodedSourceMap
 */
 trait DecodedSourceMapOrMissing extends js.Object
 
 object DecodedSourceMapOrMissing {
   @scala.inline
-  def AnonMissing(missing: `true`, plugin: String): DecodedSourceMapOrMissing = {
-    val __obj = js.Dynamic.literal(missing = missing.asInstanceOf[js.Any], plugin = plugin.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DecodedSourceMapOrMissing]
-  }
+  implicit def apply(value: ExistingDecodedSourceMap): DecodedSourceMapOrMissing = value.asInstanceOf[DecodedSourceMapOrMissing]
   @scala.inline
-  def ExistingDecodedSourceMap(
-    mappings: js.Array[js.Array[SourceMapSegment]],
-    names: js.Array[String],
-    sources: js.Array[String],
-    version: Double
-  ): DecodedSourceMapOrMissing = {
-    val __obj = js.Dynamic.literal(mappings = mappings.asInstanceOf[js.Any], names = names.asInstanceOf[js.Any], sources = sources.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
-    __obj.asInstanceOf[DecodedSourceMapOrMissing]
-  }
+  implicit def apply(value: Missing): DecodedSourceMapOrMissing = value.asInstanceOf[DecodedSourceMapOrMissing]
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonInserting
+import typingsSlinky.vscode.anon.Inserting
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -92,7 +92,7 @@ class CompletionItem protected () extends js.Object {
   		 * [contain](#Range.contains) the position at which completion has been [requested](#CompletionItemProvider.provideCompletionItems).
   		 * *Note 2:* A insert range must be a prefix of a replace range, that means it must be contained and starting at the same position.
   		 */
-  var range: js.UndefOr[Range | AnonInserting] = js.native
+  var range: js.UndefOr[Range | Inserting] = js.native
   /**
   		 * A string that should be used when comparing this item
   		 * with other items. When `falsy` the [label](#CompletionItem.label)

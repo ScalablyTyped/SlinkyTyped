@@ -5,8 +5,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.rcTable.AnonBody
-import typingsSlinky.rcTable.AnonX
+import typingsSlinky.rcTable.anon.X
 import typingsSlinky.rcTable.interfaceMod.ColumnType
 import typingsSlinky.rcTable.interfaceMod.ColumnsType
 import typingsSlinky.rcTable.interfaceMod.DefaultRecordType
@@ -76,7 +75,7 @@ class SharedBuilder_TableProps1251172539[RecordType <: DefaultRecordType] (val a
   @scala.inline
   def internalHooks(value: String): this.type = set("internalHooks", value.asInstanceOf[js.Any])
   @scala.inline
-  def internalRefs(value: AnonBody): this.type = set("internalRefs", value.asInstanceOf[js.Any])
+  def internalRefs(value: typingsSlinky.rcTable.anon.Body): this.type = set("internalRefs", value.asInstanceOf[js.Any])
   @scala.inline
   def onExpand(value: (/* expanded */ Boolean, RecordType) => Unit): this.type = set("onExpand", js.Any.fromFunction2(value))
   @scala.inline
@@ -98,7 +97,7 @@ class SharedBuilder_TableProps1251172539[RecordType <: DefaultRecordType] (val a
   @scala.inline
   def rowKey(value: String | GetRowKey[RecordType]): this.type = set("rowKey", value.asInstanceOf[js.Any])
   @scala.inline
-  def scroll(value: AnonX): this.type = set("scroll", value.asInstanceOf[js.Any])
+  def scroll(value: X): this.type = set("scroll", value.asInstanceOf[js.Any])
   @scala.inline
   def showHeader(value: Boolean): this.type = set("showHeader", value.asInstanceOf[js.Any])
   @scala.inline

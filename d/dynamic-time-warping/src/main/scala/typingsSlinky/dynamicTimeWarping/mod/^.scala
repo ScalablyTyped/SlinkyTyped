@@ -1,6 +1,6 @@
 package typingsSlinky.dynamicTimeWarping.mod
 
-import typingsSlinky.dynamicTimeWarping.mod._Global_.DynamicTimeWarping
+import typingsSlinky.dynamicTimeWarping.mod.global.DynamicTimeWarping
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

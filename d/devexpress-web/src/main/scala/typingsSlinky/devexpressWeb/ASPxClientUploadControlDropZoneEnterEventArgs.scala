@@ -7,17 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientUploadControl.DropZoneEnter event.
   */
-@JSGlobal("ASPxClientUploadControlDropZoneEnterEventArgs")
 @js.native
-class ASPxClientUploadControlDropZoneEnterEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientUploadControlDropZoneEnterEventArgs object.
-    * @param dropZone An object that is a drop zone related to the processed event.
-    */
-  def this(dropZone: js.Any) = this()
+trait ASPxClientUploadControlDropZoneEnterEventArgs extends ASPxClientEventArgs {
   /**
     * Gets a <strong>drop zone</strong> object related to the processed event.
     */
   var dropZone: js.Any = js.native
+}
+
+object ASPxClientUploadControlDropZoneEnterEventArgs {
+  @scala.inline
+  def apply(dropZone: js.Any): ASPxClientUploadControlDropZoneEnterEventArgs = {
+    val __obj = js.Dynamic.literal(dropZone = dropZone.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientUploadControlDropZoneEnterEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientUploadControlDropZoneEnterEventArgsOps[Self <: ASPxClientUploadControlDropZoneEnterEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDropZone(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dropZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

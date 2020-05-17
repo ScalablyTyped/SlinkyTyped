@@ -1,6 +1,6 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonReason
+import typingsSlinky.vscode.anon.Reason
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,7 +43,7 @@ class CodeAction protected () extends js.Object {
   		 * that auto applies a code action and only a disabled code actions are returned, VS Code will show the user an
   		 * error message with `reason` in the editor.
   		 */
-  var disabled: js.UndefOr[AnonReason] = js.native
+  var disabled: js.UndefOr[Reason] = js.native
   /**
   		 * A [workspace edit](#WorkspaceEdit) this code action performs.
   		 */

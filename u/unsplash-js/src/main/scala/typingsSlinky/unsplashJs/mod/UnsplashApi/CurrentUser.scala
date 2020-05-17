@@ -1,7 +1,7 @@
 package typingsSlinky.unsplashJs.mod.UnsplashApi
 
 import org.scalajs.dom.experimental.Response
-import typingsSlinky.unsplashJs.AnonBio
+import typingsSlinky.unsplashJs.anon.Bio
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CurrentUser extends js.Object {
   def profile(): js.Promise[Response] = js.native
-  def updateProfile(options: AnonBio): js.Promise[Response] = js.native
+  def updateProfile(options: Bio): js.Promise[Response] = js.native
 }
 
 object CurrentUser {
   @scala.inline
-  def apply(profile: () => js.Promise[Response], updateProfile: AnonBio => js.Promise[Response]): CurrentUser = {
+  def apply(profile: () => js.Promise[Response], updateProfile: Bio => js.Promise[Response]): CurrentUser = {
     val __obj = js.Dynamic.literal(profile = js.Any.fromFunction0(profile), updateProfile = js.Any.fromFunction1(updateProfile))
     __obj.asInstanceOf[CurrentUser]
   }
@@ -31,7 +31,7 @@ object CurrentUser {
         ret
     }
     @scala.inline
-    def withUpdateProfile(value: AnonBio => js.Promise[Response]): Self = {
+    def withUpdateProfile(value: Bio => js.Promise[Response]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("updateProfile")(js.Any.fromFunction1(value))
         ret

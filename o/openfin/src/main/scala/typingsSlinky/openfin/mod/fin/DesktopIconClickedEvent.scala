@@ -1,6 +1,6 @@
 package typingsSlinky.openfin.mod.fin
 
-import typingsSlinky.openfin.AnonLeft
+import typingsSlinky.openfin.anon.Left
 import typingsSlinky.openfin.openfinStrings.`desktop-icon-clicked`
 import typingsSlinky.openfin.openfinStrings.system
 import scala.scalajs.js
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait DesktopIconClickedEvent extends js.Object {
-  var mouse: AnonLeft = js.native
+  var mouse: Left = js.native
   /**
     * the number of milliseconds that have elapsed since the system was started,
     */
@@ -20,7 +20,7 @@ trait DesktopIconClickedEvent extends js.Object {
 
 object DesktopIconClickedEvent {
   @scala.inline
-  def apply(mouse: AnonLeft, tickCount: Double, topic: system, `type`: `desktop-icon-clicked`): DesktopIconClickedEvent = {
+  def apply(mouse: Left, tickCount: Double, topic: system, `type`: `desktop-icon-clicked`): DesktopIconClickedEvent = {
     val __obj = js.Dynamic.literal(mouse = mouse.asInstanceOf[js.Any], tickCount = tickCount.asInstanceOf[js.Any], topic = topic.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DesktopIconClickedEvent]
@@ -32,7 +32,7 @@ object DesktopIconClickedEvent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMouse(value: AnonLeft): Self = {
+    def withMouse(value: Left): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mouse")(value.asInstanceOf[js.Any])
         ret

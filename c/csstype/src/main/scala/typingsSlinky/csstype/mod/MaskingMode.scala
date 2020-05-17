@@ -10,8 +10,8 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.`match-source`
 */
 trait MaskingMode
-  extends _MaskLayer[js.Any]
-     with _MaskModeProperty
+  extends MaskLayer[js.Any]
+     with MaskModeProperty
 
 object MaskingMode {
   @scala.inline

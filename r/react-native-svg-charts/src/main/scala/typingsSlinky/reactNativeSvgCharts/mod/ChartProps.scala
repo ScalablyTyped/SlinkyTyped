@@ -7,8 +7,8 @@ import typingsSlinky.d3Shape.mod.CurveFactory
 import typingsSlinky.d3Shape.mod.CurveGenerator
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeSvgCharts.AnonBottom
-import typingsSlinky.reactNativeSvgCharts.PartialPathProps
+import typingsSlinky.reactNativeSvgCharts.anon.Bottom
+import typingsSlinky.reactNativeSvgCharts.anon.PartialPathProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation._
 trait ChartProps[T] extends js.Object {
   var animate: js.UndefOr[Boolean] = js.native
   var animationDuration: js.UndefOr[Double] = js.native
-  var contentInset: js.UndefOr[AnonBottom] = js.native
+  var contentInset: js.UndefOr[Bottom] = js.native
   var curve: js.UndefOr[CurveFactory] = js.native
   var data: js.Array[T] = js.native
   var gridMax: js.UndefOr[Double] = js.native
@@ -81,7 +81,7 @@ object ChartProps {
         ret
     }
     @scala.inline
-    def withContentInset(value: AnonBottom): Self[T] = {
+    def withContentInset(value: Bottom): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentInset")(value.asInstanceOf[js.Any])
         ret

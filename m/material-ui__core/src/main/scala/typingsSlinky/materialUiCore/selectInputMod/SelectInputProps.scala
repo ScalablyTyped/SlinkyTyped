@@ -5,8 +5,8 @@ import org.scalajs.dom.raw.HTMLSelectElement
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.web.SyntheticFocusEvent
-import typingsSlinky.materialUiCore.AnonValue
-import typingsSlinky.materialUiCore.PartialMenuProps
+import typingsSlinky.materialUiCore.anon.PartialMenuProps
+import typingsSlinky.materialUiCore.anon.Value
 import typingsSlinky.materialUiCore.materialUiCoreStrings.filled
 import typingsSlinky.materialUiCore.materialUiCoreStrings.outlined
 import typingsSlinky.materialUiCore.materialUiCoreStrings.standard
@@ -25,7 +25,7 @@ trait SelectInputProps extends js.Object {
   var autoFocus: js.UndefOr[Boolean] = js.native
   var autoWidth: Boolean = js.native
   var disabled: js.UndefOr[Boolean] = js.native
-  var inputRef: js.UndefOr[js.Function1[/* ref */ HTMLSelectElement | AnonValue, Unit]] = js.native
+  var inputRef: js.UndefOr[js.Function1[/* ref */ HTMLSelectElement | Value, Unit]] = js.native
   var multiple: Boolean = js.native
   var name: js.UndefOr[String] = js.native
   var native: Boolean = js.native
@@ -163,7 +163,7 @@ object SelectInputProps {
         ret
     }
     @scala.inline
-    def withInputRef(value: /* ref */ HTMLSelectElement | AnonValue => Unit): Self = {
+    def withInputRef(value: /* ref */ HTMLSelectElement | Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("inputRef")(js.Any.fromFunction1(value))
         ret

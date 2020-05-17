@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.legacyMod
 
-import typingsSlinky.babylonjs.PartialIShaderMaterialOpt
+import typingsSlinky.babylonjs.anon.PartialIShaderMaterialOpt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

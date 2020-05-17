@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RangeModifier extends _Modifier {
+trait RangeModifier extends Modifier {
   var from: js.Date = js.native
   var to: js.Date = js.native
 }

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TemplateOptions extends js.Object {
+trait TemplateOptions extends TemplateSetter {
   var converters: js.UndefOr[Hash[Converter]] = js.native
   var helpers: js.UndefOr[Hash[_]] = js.native
   var markup: js.Any = js.native

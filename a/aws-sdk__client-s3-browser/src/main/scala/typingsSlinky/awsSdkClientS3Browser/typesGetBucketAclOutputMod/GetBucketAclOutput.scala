@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientS3Browser.typesGetBucketAclOutputMod
 
-import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientS3Browser.typesGrantMod.UnmarshalledGrant
 import typingsSlinky.awsSdkClientS3Browser.typesOwnerMod.UnmarshalledOwner
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait GetBucketAclOutput
   extends MetadataBearer
-     with _OutputTypesUnion {
+     with OutputTypesUnion {
   /**
     * <p>A list of grants.</p>
     */

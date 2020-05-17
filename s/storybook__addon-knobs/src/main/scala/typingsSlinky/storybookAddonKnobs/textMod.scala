@@ -3,6 +3,7 @@ package typingsSlinky.storybookAddonKnobs
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.Component
+import typingsSlinky.storybookAddonKnobs.anon.OnChange
 import typingsSlinky.storybookAddonKnobs.typesTypesMod.KnobControlConfig
 import typingsSlinky.storybookAddonKnobs.typesTypesMod.KnobControlProps
 import scala.scalajs.js
@@ -27,7 +28,7 @@ object textMod extends js.Object {
   @js.native
   object default extends js.Object {
     var defaultProps: TextTypeProps = js.native
-    var propTypes: AnonOnChange = js.native
+    var propTypes: OnChange = js.native
     def deserialize(value: String): String = js.native
     def serialize(value: String): String = js.native
   }

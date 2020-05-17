@@ -1,10 +1,10 @@
 package typingsSlinky.amplitudeJs.mod
 
-import typingsSlinky.amplitudeJs.AnonCarrier
 import typingsSlinky.amplitudeJs.amplitudeJsStrings.DISABLE
 import typingsSlinky.amplitudeJs.amplitudeJsStrings.ERROR
 import typingsSlinky.amplitudeJs.amplitudeJsStrings.INFO
 import typingsSlinky.amplitudeJs.amplitudeJsStrings.WARN
+import typingsSlinky.amplitudeJs.anon.Carrier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,7 +34,7 @@ trait Config extends js.Object {
   var savedMaxCount: js.UndefOr[Double] = js.native
   var secureCookie: js.UndefOr[Boolean] = js.native
   var sessionTimeout: js.UndefOr[Double] = js.native
-  var trackingOptions: js.UndefOr[AnonCarrier] = js.native
+  var trackingOptions: js.UndefOr[Carrier] = js.native
   var unsentIdentifyKey: js.UndefOr[String] = js.native
   var unsentKey: js.UndefOr[String] = js.native
   var unsetParamsReferrerOnNewSession: js.UndefOr[Boolean] = js.native
@@ -332,7 +332,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withTrackingOptions(value: AnonCarrier): Self = {
+    def withTrackingOptions(value: Carrier): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("trackingOptions")(value.asInstanceOf[js.Any])
         ret

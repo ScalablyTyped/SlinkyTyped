@@ -9,7 +9,7 @@ trait KernelRangeDetails extends js.Object {
   /**
     * Base address.
     */
-  var base: UInt64_ = js.native
+  var base: UInt64 = js.native
   /**
     * Protection.
     */
@@ -22,7 +22,7 @@ trait KernelRangeDetails extends js.Object {
 
 object KernelRangeDetails {
   @scala.inline
-  def apply(base: UInt64_, protection: PageProtection, size: Double): KernelRangeDetails = {
+  def apply(base: UInt64, protection: PageProtection, size: Double): KernelRangeDetails = {
     val __obj = js.Dynamic.literal(base = base.asInstanceOf[js.Any], protection = protection.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
     __obj.asInstanceOf[KernelRangeDetails]
   }
@@ -33,7 +33,7 @@ object KernelRangeDetails {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBase(value: UInt64_): Self = {
+    def withBase(value: UInt64): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("base")(value.asInstanceOf[js.Any])
         ret

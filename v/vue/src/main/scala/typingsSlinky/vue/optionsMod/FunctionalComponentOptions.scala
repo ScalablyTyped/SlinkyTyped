@@ -1,6 +1,6 @@
 package typingsSlinky.vue.optionsMod
 
-import typingsSlinky.vue.AnonEvent
+import typingsSlinky.vue.anon.Event
 import typingsSlinky.vue.vnodeMod.VNode
 import typingsSlinky.vue.vueMod.CreateElement
 import scala.scalajs.js
@@ -8,10 +8,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait FunctionalComponentOptions[Props, PropDefs] extends js.Object {
+trait FunctionalComponentOptions[Props, PropDefs]
+  extends Component[js.Any, js.Any, js.Any, Props] {
   var functional: Boolean = js.native
   var inject: js.UndefOr[InjectOptions] = js.native
-  var model: js.UndefOr[AnonEvent] = js.native
+  var model: js.UndefOr[Event] = js.native
   var name: js.UndefOr[String] = js.native
   var props: js.UndefOr[PropDefs] = js.native
   var render: js.UndefOr[
@@ -55,7 +56,7 @@ object FunctionalComponentOptions {
         ret
     }
     @scala.inline
-    def withModel(value: AnonEvent): Self[Props, PropDefs] = {
+    def withModel(value: Event): Self[Props, PropDefs] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
         ret

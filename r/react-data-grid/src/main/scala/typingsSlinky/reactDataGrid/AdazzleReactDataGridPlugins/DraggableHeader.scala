@@ -1,6 +1,6 @@
 package typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins
 
-import typingsSlinky.react.mod.Component
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,9 +8,6 @@ import scala.scalajs.js.annotation._
 @JSGlobal("AdazzleReactDataGridPlugins.DraggableHeader")
 @js.native
 object DraggableHeader extends js.Object {
-  @js.native
-  class DraggableContainer ()
-    extends Component[js.Any, js.Object, js.Any]
-  
+  type DraggableContainer = ReactComponentClass[js.Any]
 }
 

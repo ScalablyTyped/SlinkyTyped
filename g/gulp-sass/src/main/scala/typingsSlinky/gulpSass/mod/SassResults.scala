@@ -1,6 +1,6 @@
 package typingsSlinky.gulpSass.mod
 
-import typingsSlinky.gulpSass.AnonDuration
+import typingsSlinky.gulpSass.anon.Duration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 trait SassResults extends js.Object {
   var css: String = js.native
   var map: String = js.native
-  var stats: AnonDuration = js.native
+  var stats: Duration = js.native
 }
 
 object SassResults {
   @scala.inline
-  def apply(css: String, map: String, stats: AnonDuration): SassResults = {
+  def apply(css: String, map: String, stats: Duration): SassResults = {
     val __obj = js.Dynamic.literal(css = css.asInstanceOf[js.Any], map = map.asInstanceOf[js.Any], stats = stats.asInstanceOf[js.Any])
     __obj.asInstanceOf[SassResults]
   }
@@ -37,7 +37,7 @@ object SassResults {
         ret
     }
     @scala.inline
-    def withStats(value: AnonDuration): Self = {
+    def withStats(value: Duration): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
         ret

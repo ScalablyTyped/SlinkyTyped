@@ -1,13 +1,13 @@
 package typingsSlinky.nodeResque.mod
 
-import typingsSlinky.nodeResque.AnonArgs
+import typingsSlinky.nodeResque.anon.Args
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait WorkerStatus extends js.Object {
-  var payload: AnonArgs = js.native
+  var payload: Args = js.native
   var queue: String = js.native
   var run_at: String = js.native
   var worker: String = js.native
@@ -15,7 +15,7 @@ trait WorkerStatus extends js.Object {
 
 object WorkerStatus {
   @scala.inline
-  def apply(payload: AnonArgs, queue: String, run_at: String, worker: String): WorkerStatus = {
+  def apply(payload: Args, queue: String, run_at: String, worker: String): WorkerStatus = {
     val __obj = js.Dynamic.literal(payload = payload.asInstanceOf[js.Any], queue = queue.asInstanceOf[js.Any], run_at = run_at.asInstanceOf[js.Any], worker = worker.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkerStatus]
   }
@@ -26,7 +26,7 @@ object WorkerStatus {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPayload(value: AnonArgs): Self = {
+    def withPayload(value: Args): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("payload")(value.asInstanceOf[js.Any])
         ret

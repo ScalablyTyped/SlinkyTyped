@@ -1,9 +1,9 @@
 package typingsSlinky.amqplib.propertiesMod
 
-import typingsSlinky.amqplib.Anon
 import typingsSlinky.amqplib.amqplibStrings.expired
 import typingsSlinky.amqplib.amqplibStrings.maxlen
 import typingsSlinky.amqplib.amqplibStrings.rejected
+import typingsSlinky.amqplib.anon._empty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait XDeath extends js.Object {
   var queue: String = js.native
   var reason: rejected | expired | maxlen = js.native
   var `routing-keys`: js.Array[String] = js.native
-  var time: Anon = js.native
+  var time: _empty = js.native
 }
 
 object XDeath {
@@ -27,7 +27,7 @@ object XDeath {
     queue: String,
     reason: rejected | expired | maxlen,
     `routing-keys`: js.Array[String],
-    time: Anon
+    time: _empty
   ): XDeath = {
     val __obj = js.Dynamic.literal(count = count.asInstanceOf[js.Any], exchange = exchange.asInstanceOf[js.Any], queue = queue.asInstanceOf[js.Any], reason = reason.asInstanceOf[js.Any], time = time.asInstanceOf[js.Any])
     __obj.updateDynamic("routing-keys")(`routing-keys`.asInstanceOf[js.Any])
@@ -70,7 +70,7 @@ object XDeath {
         ret
     }
     @scala.inline
-    def withTime(value: Anon): Self = {
+    def withTime(value: _empty): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("time")(value.asInstanceOf[js.Any])
         ret

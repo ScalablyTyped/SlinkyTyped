@@ -5,7 +5,7 @@ import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.materialUiCore.PartialClassNameMapGridLiActionIcon
+import typingsSlinky.materialUiCore.anon.PartialClassNameMapGridLiActionIcon
 import typingsSlinky.materialUiCore.gridListTileBarGridListTileBarMod.GridListTileBarProps
 import typingsSlinky.materialUiCore.gridListTileBarMod.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.bottom

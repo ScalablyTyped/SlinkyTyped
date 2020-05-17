@@ -1,11 +1,11 @@
 package typingsSlinky.canvasFit
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.SVGElement
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,9 +31,9 @@ object mod extends js.Object {
   }
   
   def apply(canvas: HTMLCanvasElement): resize = js.native
-  def apply(canvas: HTMLCanvasElement, parent: Document_): resize = js.native
-  def apply(canvas: HTMLCanvasElement, parent: Document_, scale: String): resize = js.native
-  def apply(canvas: HTMLCanvasElement, parent: Document_, scale: Double): resize = js.native
+  def apply(canvas: HTMLCanvasElement, parent: Document): resize = js.native
+  def apply(canvas: HTMLCanvasElement, parent: Document, scale: String): resize = js.native
+  def apply(canvas: HTMLCanvasElement, parent: Document, scale: Double): resize = js.native
   def apply(canvas: HTMLCanvasElement, parent: EventTarget): resize = js.native
   def apply(canvas: HTMLCanvasElement, parent: EventTarget, scale: String): resize = js.native
   def apply(canvas: HTMLCanvasElement, parent: EventTarget, scale: Double): resize = js.native
@@ -41,9 +41,9 @@ object mod extends js.Object {
   def apply(canvas: HTMLCanvasElement, parent: HTMLElement, scale: String): resize = js.native
   def apply(canvas: HTMLCanvasElement, parent: HTMLElement, scale: Double): resize = js.native
   def apply(canvas: SVGElement): resize = js.native
-  def apply(canvas: SVGElement, parent: Document_): resize = js.native
-  def apply(canvas: SVGElement, parent: Document_, scale: String): resize = js.native
-  def apply(canvas: SVGElement, parent: Document_, scale: Double): resize = js.native
+  def apply(canvas: SVGElement, parent: Document): resize = js.native
+  def apply(canvas: SVGElement, parent: Document, scale: String): resize = js.native
+  def apply(canvas: SVGElement, parent: Document, scale: Double): resize = js.native
   def apply(canvas: SVGElement, parent: EventTarget): resize = js.native
   def apply(canvas: SVGElement, parent: EventTarget, scale: String): resize = js.native
   def apply(canvas: SVGElement, parent: EventTarget, scale: Double): resize = js.native

@@ -1,20 +1,12 @@
 package typingsSlinky.winrtUwp.Windows.Storage.Streams
 
-import typingsSlinky.winrtUwp.Windows.Foundation.IMemoryBuffer
-import typingsSlinky.winrtUwp.Windows.Foundation.MemoryBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides a default implementation of the IBuffer interface and its related interfaces. */
-@JSGlobal("Windows.Storage.Streams.Buffer")
 @js.native
-class Buffer protected () extends js.Object {
-  /**
-    * Initializes a new instance of the Buffer class with the specified capacity.
-    * @param capacity The maximum number of bytes that the buffer can hold.
-    */
-  def this(capacity: Double) = this()
+trait Buffer extends js.Object {
   var byteLength: js.Any = js.native
    /* unmapped type */ /** Gets the maximum number of bytes that the buffer can hold. */
   var capacity: Double = js.native
@@ -22,21 +14,37 @@ class Buffer protected () extends js.Object {
   var length: Double = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Storage.Streams.Buffer")
-@js.native
-object Buffer extends js.Object {
-  /**
-    * Creates a new buffer containing a copy of a specified buffer.
-    * @param input The buffer to be copied.
-    * @return The newly created copy.
-    */
-  def createCopyFromMemoryBuffer(input: IMemoryBuffer): Buffer = js.native
-  /**
-    * Creates a MemoryBuffer from an existing IBuffer .
-    * @param input The input IBuffer .
-    * @return The newly created MemoryBuffer .
-    */
-  def createMemoryBufferOverIBuffer(input: IBuffer): MemoryBuffer = js.native
+object Buffer {
+  @scala.inline
+  def apply(byteLength: js.Any, capacity: Double, length: Double): Buffer = {
+    val __obj = js.Dynamic.literal(byteLength = byteLength.asInstanceOf[js.Any], capacity = capacity.asInstanceOf[js.Any], length = length.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Buffer]
+  }
+  @scala.inline
+  implicit class BufferOps[Self <: Buffer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withByteLength(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("byteLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCapacity(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("capacity")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

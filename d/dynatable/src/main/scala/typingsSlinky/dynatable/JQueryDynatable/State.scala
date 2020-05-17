@@ -1,6 +1,6 @@
 package typingsSlinky.dynatable.JQueryDynatable
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait State extends js.Object {
     *
     * @param event The native popstate event
     */
-  def pop(event: Event_): Unit = js.native
+  def pop(event: Event): Unit = js.native
   /**
     * Update the URL data using pushState
     *
@@ -31,7 +31,7 @@ trait State extends js.Object {
 
 object State {
   @scala.inline
-  def apply(init: () => Unit, initOnLoad: () => Boolean, pop: Event_ => Unit, push: js.Object => Unit): State = {
+  def apply(init: () => Unit, initOnLoad: () => Boolean, pop: Event => Unit, push: js.Object => Unit): State = {
     val __obj = js.Dynamic.literal(init = js.Any.fromFunction0(init), initOnLoad = js.Any.fromFunction0(initOnLoad), pop = js.Any.fromFunction1(pop), push = js.Any.fromFunction1(push))
     __obj.asInstanceOf[State]
   }
@@ -54,7 +54,7 @@ object State {
         ret
     }
     @scala.inline
-    def withPop(value: Event_ => Unit): Self = {
+    def withPop(value: Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pop")(js.Any.fromFunction1(value))
         ret

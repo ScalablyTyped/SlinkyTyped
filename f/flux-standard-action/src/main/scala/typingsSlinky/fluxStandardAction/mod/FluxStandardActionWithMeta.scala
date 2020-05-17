@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.fluxStandardAction.mod._FluxStandardActionAuto because Already inherited */ @js.native
+- typingsSlinky.fluxStandardAction.mod.FluxStandardActionAuto because Already inherited */ @js.native
 trait FluxStandardActionWithMeta[Type /* <: String */, Payload, Meta] extends FluxStandardAction[Type, Payload, Meta] {
   /**
     * The required `meta` property MAY be any type of value.

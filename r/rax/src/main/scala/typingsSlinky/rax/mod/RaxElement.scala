@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RaxElement[P, T /* <: String | JSXElementConstructor[_] */] extends js.Object {
+trait RaxElement[P, T /* <: String | JSXElementConstructor[_] */] extends RaxChild {
   var key: Key | Null = js.native
   var props: P = js.native
   var `type`: T = js.native

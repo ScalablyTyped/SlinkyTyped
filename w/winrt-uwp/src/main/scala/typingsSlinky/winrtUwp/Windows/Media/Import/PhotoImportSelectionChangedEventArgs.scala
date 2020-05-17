@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides data for the PhotoImportFindItemsResult::SelectionChanged event. */
-@JSGlobal("Windows.Media.Import.PhotoImportSelectionChangedEventArgs")
 @js.native
-abstract class PhotoImportSelectionChangedEventArgs () extends js.Object {
+trait PhotoImportSelectionChangedEventArgs extends js.Object {
   /** Gets a value indicating whether no items are selected after the selection has changed. */
   var isSelectionEmpty: Boolean = js.native
+}
+
+object PhotoImportSelectionChangedEventArgs {
+  @scala.inline
+  def apply(isSelectionEmpty: Boolean): PhotoImportSelectionChangedEventArgs = {
+    val __obj = js.Dynamic.literal(isSelectionEmpty = isSelectionEmpty.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PhotoImportSelectionChangedEventArgs]
+  }
+  @scala.inline
+  implicit class PhotoImportSelectionChangedEventArgsOps[Self <: PhotoImportSelectionChangedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsSelectionEmpty(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSelectionEmpty")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

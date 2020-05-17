@@ -1,6 +1,6 @@
 package typingsSlinky.jsrsasign.mod.KJUR.asn1
 
-import typingsSlinky.jsrsasign.StringParamtypegen
+import typingsSlinky.jsrsasign.anon.StringParamtypegen
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

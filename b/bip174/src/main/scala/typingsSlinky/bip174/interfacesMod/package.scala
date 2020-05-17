@@ -15,7 +15,7 @@ package object interfacesMod {
     /* buffer */ typingsSlinky.node.Buffer, 
     typingsSlinky.bip174.interfacesMod.Transaction
   ]
-  type TransactionIOCountGetter = js.Function1[/* txBuffer */ typingsSlinky.node.Buffer, typingsSlinky.bip174.AnonInputCount]
+  type TransactionIOCountGetter = js.Function1[/* txBuffer */ typingsSlinky.node.Buffer, typingsSlinky.bip174.anon.InputCount]
   type TransactionInputAdder = js.Function2[
     /* input */ typingsSlinky.bip174.interfacesMod.TransactionInput, 
     /* txBuffer */ typingsSlinky.node.Buffer, 

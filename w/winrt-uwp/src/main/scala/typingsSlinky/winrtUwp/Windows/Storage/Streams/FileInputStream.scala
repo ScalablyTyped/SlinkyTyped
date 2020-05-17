@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Reads data from a file. */
-@JSGlobal("Windows.Storage.Streams.FileInputStream")
 @js.native
-abstract class FileInputStream () extends js.Object {
+trait FileInputStream extends js.Object {
   /** Closes the current stream and releases system resources. */
   def close(): Unit = js.native
   /**
@@ -19,5 +18,38 @@ abstract class FileInputStream () extends js.Object {
     * @return The asynchronous operation.
     */
   def readAsync(buffer: IBuffer, count: Double, options: InputStreamOptions): IPromiseWithIAsyncOperationWithProgress[IBuffer, Double] = js.native
+}
+
+object FileInputStream {
+  @scala.inline
+  def apply(
+    close: () => Unit,
+    readAsync: (IBuffer, Double, InputStreamOptions) => IPromiseWithIAsyncOperationWithProgress[IBuffer, Double]
+  ): FileInputStream = {
+    val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), readAsync = js.Any.fromFunction3(readAsync))
+    __obj.asInstanceOf[FileInputStream]
+  }
+  @scala.inline
+  implicit class FileInputStreamOps[Self <: FileInputStream] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("close")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withReadAsync(
+      value: (IBuffer, Double, InputStreamOptions) => IPromiseWithIAsyncOperationWithProgress[IBuffer, Double]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readAsync")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

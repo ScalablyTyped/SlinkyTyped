@@ -1,18 +1,18 @@
 package typingsSlinky.reactNative.mod
 
-import typingsSlinky.reactNative.AnonUrl
+import typingsSlinky.reactNative.anon.Url
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ImageLoadEventData extends ImageLoadEventDataAndroid {
-  var source: AnonUrl = js.native
+  var source: Url = js.native
 }
 
 object ImageLoadEventData {
   @scala.inline
-  def apply(source: AnonUrl): ImageLoadEventData = {
+  def apply(source: Url): ImageLoadEventData = {
     val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImageLoadEventData]
   }
@@ -23,7 +23,7 @@ object ImageLoadEventData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSource(value: AnonUrl): Self = {
+    def withSource(value: Url): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
         ret

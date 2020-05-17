@@ -19,14 +19,4 @@ package object mod {
     typingsSlinky.stampit.mod.StampObjectType[Obj], 
     typingsSlinky.stampit.mod.StampType[Obj]
   ]
-  /**
-    * @internal The type of the object produced by the `Stamp`.
-    * @template Original The type (either a `Stamp` or a `ExtendedDescriptor`) to get the object type from.
-    */
-  type StampObjectType[Original] = Original | js.Any
-  /**
-    * @internal Extracts the `Stamp` type.
-    * @template Original The type to extract the `Stamp` type from.
-    */
-  type StampType[Original] = (typingsSlinky.stampit.mod.stampit.Stamp[js.Any | Original]) | Original | js.Any
 }

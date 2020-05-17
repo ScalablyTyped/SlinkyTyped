@@ -1,5 +1,6 @@
 package typingsSlinky.firebaseFirestore
 
+import typingsSlinky.firebaseFirestore.anon.ClientId
 import typingsSlinky.firebaseFirestore.coreDatabaseInfoMod.DatabaseInfo
 import typingsSlinky.firebaseFirestore.coreTypesMod.ListenSequenceNumber
 import typingsSlinky.firebaseFirestore.localLruGarbageCollectorMod.LruDelegate
@@ -181,7 +182,7 @@ object localIndexeddbPersistenceMod extends js.Object {
       */
     def buildStoragePrefix(databaseInfo: DatabaseInfo): String = js.native
     def clearPersistence(persistenceKey: String): js.Promise[Unit] = js.native
-    def createIndexedDbPersistence(options: AnonClientId): js.Promise[IndexedDbPersistence] = js.native
+    def createIndexedDbPersistence(options: ClientId): js.Promise[IndexedDbPersistence] = js.native
     def getStore[Key /* <: IDBValidKey */, Value](txn: PersistenceTransaction, store: String): SimpleDbStore[Key, Value] = js.native
     def isAvailable(): Boolean = js.native
   }

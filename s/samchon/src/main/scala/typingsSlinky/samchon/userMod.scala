@@ -82,6 +82,19 @@ object userMod extends js.Object {
     /* InferMemberOverrides */
     override def assign[InputIterator /* <: IForwardIterator[IPair[Double, Client], InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
     /**
+      * Iterator to the first element.
+      *
+      * @return Iterator to the first element.
+      */
+    /* InferMemberOverrides */
+    override def begin(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[
+        Entry[Double, Client], 
+        HashMap[Double, Client], 
+        Iterator[Double, Client], 
+        ReverseIterator[Double, Client], 
+        IPair[Double, Client]
+      ] = js.native
+    /**
       * @inheritDoc
       */
     /* InferMemberOverrides */
@@ -146,6 +159,19 @@ object userMod extends js.Object {
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def emplace_hint(hint: Iterator[Double, Client], key: Double, `val`: Client): Iterator[Double, Client] = js.native
+    /**
+      * Iterator to the end.
+      *
+      * @return Iterator to the end.
+      */
+    /* InferMemberOverrides */
+    override def end(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[
+        Entry[Double, Client], 
+        HashMap[Double, Client], 
+        Iterator[Double, Client], 
+        ReverseIterator[Double, Client], 
+        IPair[Double, Client]
+      ] = js.native
     /**
       * Erase elements in range.
       *
@@ -291,6 +317,20 @@ object userMod extends js.Object {
     /* InferMemberOverrides */
     /* InferMemberOverrides */
     override def merge(source: HashMap[Double, Client]): Unit = js.native
+    /**
+      * Reverse iterator to the first element in reverse.
+      *
+      * @return Reverse iterator to the first.
+      */
+    /* InferMemberOverrides */
+    override def rbegin(): ReverseIterator[Double, Client] = js.native
+    /**
+      * Reverse iterator to the reverse end.
+      *
+      * @return Reverse iterator to the end.
+      */
+    /* InferMemberOverrides */
+    override def rend(): ReverseIterator[Double, Client] = js.native
     /**
       * Set a value with key.
       *

@@ -1,6 +1,6 @@
 package typingsSlinky.workboxWindow.workboxEventMod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import typingsSlinky.workboxWindow.workboxMod.Workbox
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait WorkboxEvent extends js.Object {
-  val originalEvent: Event_ = js.native
+  val originalEvent: Event = js.native
   val target: Workbox = js.native
   val `type`: String = js.native
 }
 
 object WorkboxEvent {
   @scala.inline
-  def apply(originalEvent: Event_, target: Workbox, `type`: String): WorkboxEvent = {
+  def apply(originalEvent: Event, target: Workbox, `type`: String): WorkboxEvent = {
     val __obj = js.Dynamic.literal(originalEvent = originalEvent.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[WorkboxEvent]
@@ -27,7 +27,7 @@ object WorkboxEvent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOriginalEvent(value: Event_): Self = {
+    def withOriginalEvent(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("originalEvent")(value.asInstanceOf[js.Any])
         ret

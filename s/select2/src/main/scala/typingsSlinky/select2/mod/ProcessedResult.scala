@@ -1,13 +1,13 @@
 package typingsSlinky.select2.mod
 
-import typingsSlinky.select2.AnonMore
+import typingsSlinky.select2.anon.More
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ProcessedResult[Result] extends js.Object {
-  var pagination: js.UndefOr[AnonMore] = js.native
+  var pagination: js.UndefOr[More] = js.native
   var results: js.Array[Result] = js.native
 }
 
@@ -30,7 +30,7 @@ object ProcessedResult {
         ret
     }
     @scala.inline
-    def withPagination(value: AnonMore): Self[Result] = {
+    def withPagination(value: More): Self[Result] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pagination")(value.asInstanceOf[js.Any])
         ret

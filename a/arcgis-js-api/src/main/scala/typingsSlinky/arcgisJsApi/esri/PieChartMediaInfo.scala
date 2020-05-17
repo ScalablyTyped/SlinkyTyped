@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +19,26 @@ trait PieChartMediaInfo
   val `type`: String = js.native
 }
 
-@JSGlobal("__esri.PieChartMediaInfo")
-@js.native
-object PieChartMediaInfo extends TopLevel[PieChartMediaInfoConstructor]
+object PieChartMediaInfo {
+  @scala.inline
+  def apply(caption: String, title: String, toJSON: () => js.Any, `type`: String, value: ChartMediaInfoValue): PieChartMediaInfo = {
+    val __obj = js.Dynamic.literal(caption = caption.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), value = value.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PieChartMediaInfo]
+  }
+  @scala.inline
+  implicit class PieChartMediaInfoOps[Self <: PieChartMediaInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

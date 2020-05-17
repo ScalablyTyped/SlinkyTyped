@@ -1,5 +1,6 @@
 package typingsSlinky.blueprintjsCore.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
@@ -7,7 +8,6 @@ import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.propsMod.IOptionProps
 import typingsSlinky.blueprintjsCore.radioGroupMod.IRadioGroupProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +39,7 @@ object RadioGroup {
   
   def withProps(p: IRadioGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit): Builder = {
+  def apply(onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit): Builder = {
     val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
     new Builder(js.Array(this.component, __props.asInstanceOf[IRadioGroupProps]))
   }

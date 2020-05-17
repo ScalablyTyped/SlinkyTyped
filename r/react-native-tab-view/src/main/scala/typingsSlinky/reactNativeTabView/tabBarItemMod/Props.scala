@@ -5,7 +5,7 @@ import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeTabView.AnonFocused
+import typingsSlinky.reactNativeTabView.anon.Focused
 import typingsSlinky.reactNativeTabView.typesMod.NavigationState
 import typingsSlinky.reactNativeTabView.typesMod.Route
 import typingsSlinky.reactNativeTabView.typesMod.Scene
@@ -24,8 +24,8 @@ trait Props[T /* <: Route */] extends js.Object {
   var pressColor: js.UndefOr[String] = js.native
   var pressOpacity: js.UndefOr[Double] = js.native
   var renderBadge: js.UndefOr[js.Function1[/* scene */ Scene[T], TagMod[Any]]] = js.native
-  var renderIcon: js.UndefOr[js.Function1[/* scene */ AnonFocused[T], TagMod[Any]]] = js.native
-  var renderLabel: js.UndefOr[js.Function1[/* scene */ AnonFocused[T], TagMod[Any]]] = js.native
+  var renderIcon: js.UndefOr[js.Function1[/* scene */ Focused[T], TagMod[Any]]] = js.native
+  var renderLabel: js.UndefOr[js.Function1[/* scene */ Focused[T], TagMod[Any]]] = js.native
   var route: T = js.native
   var style: StyleProp[ViewStyle] = js.native
   def getAccessibilityLabel(scene: Scene[T]): js.UndefOr[String] = js.native
@@ -205,7 +205,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withRenderIcon(value: /* scene */ AnonFocused[T] => TagMod[Any]): Self[T] = {
+    def withRenderIcon(value: /* scene */ Focused[T] => TagMod[Any]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderIcon")(js.Any.fromFunction1(value))
         ret
@@ -217,7 +217,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withRenderLabel(value: /* scene */ AnonFocused[T] => TagMod[Any]): Self[T] = {
+    def withRenderLabel(value: /* scene */ Focused[T] => TagMod[Any]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderLabel")(js.Any.fromFunction1(value))
         ret

@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientStreetviewpublish.gapi.client.streetviewpublish
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientStreetviewpublish.AnonAccesstoken
-import typingsSlinky.gapiClientStreetviewpublish.AnonAlt
-import typingsSlinky.gapiClientStreetviewpublish.AnonBearertoken
-import typingsSlinky.gapiClientStreetviewpublish.AnonCallback
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientStreetviewpublish.anon.Accesstoken
+import typingsSlinky.gapiClientStreetviewpublish.anon.Alt
+import typingsSlinky.gapiClientStreetviewpublish.anon.Bearertoken
+import typingsSlinky.gapiClientStreetviewpublish.anon.Callback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +32,7 @@ trait PhotoResource extends js.Object {
     * &#42; google.rpc.Code.RESOURCE_EXHAUSTED if the account has reached the
     * storage limit.
     */
-  def create(request: AnonAccesstoken): Request_[Photo] = js.native
+  def create(request: Accesstoken): Request[Photo] = js.native
   /**
     * Deletes a Photo and its metadata.
     *
@@ -42,7 +42,7 @@ trait PhotoResource extends js.Object {
     * create the requested photo.
     * &#42; google.rpc.Code.NOT_FOUND if the photo ID does not exist.
     */
-  def delete(request: AnonAlt): Request_[js.Object] = js.native
+  def delete(request: Alt): Request[js.Object] = js.native
   /**
     * Gets the metadata of the specified
     * Photo.
@@ -54,7 +54,7 @@ trait PhotoResource extends js.Object {
     * &#42; google.rpc.Code.NOT_FOUND if the requested
     * Photo does not exist.
     */
-  def get(request: AnonBearertoken): Request_[Photo] = js.native
+  def get(request: Bearertoken): Request[Photo] = js.native
   /**
     * Creates an upload session to start uploading photo bytes. The upload URL of
     * the returned UploadRef is used to
@@ -76,7 +76,7 @@ trait PhotoResource extends js.Object {
     * CreatePhoto
     * to create the Photo object entry.
     */
-  def startUpload(request: AnonAccesstoken): Request_[UploadRef] = js.native
+  def startUpload(request: Accesstoken): Request[UploadRef] = js.native
   /**
     * Updates the metadata of a Photo, such
     * as pose, place association, connections, etc. Changing the pixels of a
@@ -99,17 +99,17 @@ trait PhotoResource extends js.Object {
     * &#42; google.rpc.Code.INVALID_ARGUMENT if the request is malformed.
     * &#42; google.rpc.Code.NOT_FOUND if the requested photo does not exist.
     */
-  def update(request: AnonCallback): Request_[Photo] = js.native
+  def update(request: Callback): Request[Photo] = js.native
 }
 
 object PhotoResource {
   @scala.inline
   def apply(
-    create: AnonAccesstoken => Request_[Photo],
-    delete: AnonAlt => Request_[js.Object],
-    get: AnonBearertoken => Request_[Photo],
-    startUpload: AnonAccesstoken => Request_[UploadRef],
-    update: AnonCallback => Request_[Photo]
+    create: Accesstoken => Request[Photo],
+    delete: Alt => Request[js.Object],
+    get: Bearertoken => Request[Photo],
+    startUpload: Accesstoken => Request[UploadRef],
+    update: Callback => Request[Photo]
   ): PhotoResource = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), startUpload = js.Any.fromFunction1(startUpload), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[PhotoResource]
@@ -121,31 +121,31 @@ object PhotoResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: AnonAccesstoken => Request_[Photo]): Self = {
+    def withCreate(value: Accesstoken => Request[Photo]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonAlt => Request_[js.Object]): Self = {
+    def withDelete(value: Alt => Request[js.Object]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonBearertoken => Request_[Photo]): Self = {
+    def withGet(value: Bearertoken => Request[Photo]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withStartUpload(value: AnonAccesstoken => Request_[UploadRef]): Self = {
+    def withStartUpload(value: Accesstoken => Request[UploadRef]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("startUpload")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonCallback => Request_[Photo]): Self = {
+    def withUpdate(value: Callback => Request[Photo]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

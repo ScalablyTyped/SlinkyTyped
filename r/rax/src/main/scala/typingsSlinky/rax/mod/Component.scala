@@ -1,6 +1,6 @@
 package typingsSlinky.rax.mod
 
-import typingsSlinky.rax.ReadonlychildrenRaxNode
+import typingsSlinky.rax.anon.ReadonlychildrenRaxNode
 import typingsSlinky.std.Pick
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,9 @@ import scala.scalajs.js.annotation._
 // tslint:disable-next-line:no-empty-interface
 @JSImport("rax", "Component")
 @js.native
-class Component[P, S, SS] protected () extends ComponentLifecycle[P, S, SS] {
+class Component[P, S, SS] protected ()
+  extends ComponentLifecycle[P, S, SS]
+     with RaxInstance {
   def this(props: P) = this()
   val props: P with ReadonlychildrenRaxNode = js.native
   var state: S = js.native

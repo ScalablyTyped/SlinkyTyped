@@ -40,7 +40,7 @@ package object serviceObjectMod {
     typingsSlinky.googleCloudCommon.serviceObjectMod.Metadata, 
     typingsSlinky.teenyRequest.mod.Response[js.Any]
   ]
-  type Methods = org.scalablytyped.runtime.StringDictionary[typingsSlinky.googleCloudCommon.AnonReqOpts | scala.Boolean]
+  type Methods = org.scalablytyped.runtime.StringDictionary[typingsSlinky.googleCloudCommon.anon.ReqOpts | scala.Boolean]
   type RequestResponse = js.Tuple2[
     typingsSlinky.googleCloudCommon.serviceObjectMod.Metadata, 
     typingsSlinky.teenyRequest.mod.Response[js.Any]

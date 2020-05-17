@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PartialObserver extends _ObserverCandidate {
+trait PartialObserver extends ObserverCandidate {
   var complete: js.UndefOr[Complete] = js.native
   var error: js.UndefOr[Error] = js.native
   var registerParent: js.UndefOr[js.Function] = js.native

@@ -29,7 +29,6 @@ package object mod {
     js.Promise[java.lang.String]
   ]
   type RuntimeOptions = js.Object
-  type ServerViewCompile = typingsSlinky.hapiVision.mod.ServerViewCompileSync | typingsSlinky.hapiVision.mod.ServerViewCompileAsync
   type ServerViewCompileAsync = js.Function3[
     /* template */ java.lang.String, 
     /* options */ js.Any, 

@@ -1,6 +1,12 @@
 package typingsSlinky.rbx
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.rbx.anon.AsElementType
+import typingsSlinky.rbx.anon.NoneTAsComponentextendsElContainer
+import typingsSlinky.rbx.anon.PickNavbarContainerPropsf
+import typingsSlinky.rbx.anon.PreferHelpersPropsOverridBackgroundColor
+import typingsSlinky.rbx.anon.TypeofNavbarContainer
+import typingsSlinky.rbx.anon.`7`
 import typingsSlinky.rbx.exoticMod.ForwardRefAsExoticComponent
 import typingsSlinky.rbx.exoticMod.FromReactType
 import typingsSlinky.rbx.navbarBurgerMod.NavbarBurgerProps
@@ -74,10 +80,10 @@ object navbarMod extends js.Object {
     var Link: ForwardRefAsExoticComponent[NavbarLinkProps, ReactElement] = js.native
     var Menu: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
     var Segment: ForwardRefAsExoticComponent[NavbarSegmentProps, ReactElement] = js.native
-    var defaultProps: AnonAsElementType with (Partial[PickNavbarContainerPropsf with (Pick[_, String | Double | js.Symbol])]) = js.native
+    var defaultProps: AsElementType with (Partial[PickNavbarContainerPropsf with (Pick[_, String | Double | js.Symbol])]) = js.native
     var displayName: js.UndefOr[String] = js.native
     def apply[TAsComponent /* <: ReactElement */](
-      props: Anon7[TAsComponent] with PickNavbarContainerPropsf with (Pick[
+      props: `7`[TAsComponent] with PickNavbarContainerPropsf with (Pick[
           ComponentProps[TAsComponent], 
           Exclude[
             /* keyof react.react.ComponentProps<TAsComponent> */ String, 

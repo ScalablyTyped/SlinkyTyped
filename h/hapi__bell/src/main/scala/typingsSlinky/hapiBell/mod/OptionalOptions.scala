@@ -1,7 +1,7 @@
 package typingsSlinky.hapiBell.mod
 
-import typingsSlinky.hapiBell.AnonExtendedProfile
-import typingsSlinky.hapiBell.AnonUri
+import typingsSlinky.hapiBell.anon.ExtendedProfile
+import typingsSlinky.hapiBell.anon.Uri
 import typingsSlinky.hapiHapi.mod.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,7 +25,7 @@ trait OptionalOptions extends js.Object {
     * option which allows pointing to a private enterprise installation (e.g. 'https://vpn.example.com').
     * See Providers documentation for more information.
     */
-  var config: js.UndefOr[AnonExtendedProfile | AnonUri] = js.native
+  var config: js.UndefOr[ExtendedProfile | Uri] = js.native
   /**
     * the name of the cookie used to manage the temporary state.
     * Defaults to 'bell-provider' where 'provider' is the provider name (or 'custom' for custom providers).
@@ -131,7 +131,7 @@ object OptionalOptions {
         ret
     }
     @scala.inline
-    def withConfig(value: AnonExtendedProfile | AnonUri): Self = {
+    def withConfig(value: ExtendedProfile | Uri): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
         ret

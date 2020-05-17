@@ -1,6 +1,6 @@
 package typingsSlinky.blueprintjsDatetime.shortcutsMod
 
-import typingsSlinky.blueprintjsDatetime.PartialIShortcutsProps
+import typingsSlinky.blueprintjsDatetime.anon.PartialIShortcutsProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

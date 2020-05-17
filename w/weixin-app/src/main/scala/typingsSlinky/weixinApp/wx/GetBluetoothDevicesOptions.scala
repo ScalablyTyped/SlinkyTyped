@@ -1,6 +1,6 @@
 package typingsSlinky.weixinApp.wx
 
-import typingsSlinky.weixinApp.devicesArrayBluetoothDevi
+import typingsSlinky.weixinApp.anon.devicesArrayBluetoothDevi
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

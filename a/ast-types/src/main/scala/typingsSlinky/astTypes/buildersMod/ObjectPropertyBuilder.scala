@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonAccessibility
+import typingsSlinky.astTypes.anon.Accessibility
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.kindsMod.LiteralKind
@@ -18,6 +18,6 @@ trait ObjectPropertyBuilder extends js.Object {
   def apply(key: IdentifierKind, value: PatternKind): ObjectProperty = js.native
   def apply(key: LiteralKind, value: ExpressionKind): ObjectProperty = js.native
   def apply(key: LiteralKind, value: PatternKind): ObjectProperty = js.native
-  def from(params: AnonAccessibility): ObjectProperty = js.native
+  def from(params: Accessibility): ObjectProperty = js.native
 }
 

@@ -4,20 +4,13 @@ import typingsSlinky.amapJsApi.AMap.EventEmitter
 import typingsSlinky.amapJsApiGeolocation.AMap.Geolocation.CityResult
 import typingsSlinky.amapJsApiGeolocation.AMap.Geolocation.ErrorStatus
 import typingsSlinky.amapJsApiGeolocation.AMap.Geolocation.GeolocationResult
-import typingsSlinky.amapJsApiGeolocation.AMap.Geolocation.Options
 import typingsSlinky.amapJsApiGeolocation.AMap.Geolocation.SearchStatus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("AMap.Geolocation")
 @js.native
-/**
-  * 定位服务
-  * @param options 选项
-  */
-class Geolocation_ () extends EventEmitter {
-  def this(options: Options) = this()
+trait Geolocation_ extends EventEmitter {
   /**
     * 取消对当前位置的监控
     * @param wathcId 监控id

@@ -1,10 +1,10 @@
 package typingsSlinky.jupyterlabCsvviewer.toolbarMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLSelectElement
 import typingsSlinky.jupyterlabCsvviewer.toolbarMod.CSVToolbar.IOptions
 import typingsSlinky.phosphorSignaling.mod.ISignal
 import typingsSlinky.phosphorWidgets.mod.Widget
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,6 +35,6 @@ class CSVDelimiter protected () extends Widget {
     * called in response to events on the dock panel's node. It should
     * not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
 }
 

@@ -5,7 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CachingConfig extends js.Object {
+trait CachingConfig
+  extends WrapArgsType[js.Any] {
   var ttl: Double | TtlFunction = js.native
 }
 

@@ -17,39 +17,18 @@ trait RequestObject extends js.Object
 
 object RequestObject {
   @scala.inline
-  def EventsRequestObject(): RequestObject = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[RequestObject]
-  }
+  implicit def apply(value: AwardsRequestObject): RequestObject = value.asInstanceOf[RequestObject]
   @scala.inline
-  def SeasonRankingsRequestObject(): RequestObject = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[RequestObject]
-  }
+  implicit def apply(value: EventsRequestObject): RequestObject = value.asInstanceOf[RequestObject]
   @scala.inline
-  def SkillsRequestObject(): RequestObject = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[RequestObject]
-  }
+  implicit def apply(value: MatchesRequestObject): RequestObject = value.asInstanceOf[RequestObject]
   @scala.inline
-  def AwardsRequestObject(): RequestObject = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[RequestObject]
-  }
+  implicit def apply(value: RankingsRequestObject): RequestObject = value.asInstanceOf[RequestObject]
   @scala.inline
-  def MatchesRequestObject(): RequestObject = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[RequestObject]
-  }
+  implicit def apply(value: SeasonRankingsRequestObject): RequestObject = value.asInstanceOf[RequestObject]
   @scala.inline
-  def RankingsRequestObject(): RequestObject = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[RequestObject]
-  }
+  implicit def apply(value: SkillsRequestObject): RequestObject = value.asInstanceOf[RequestObject]
   @scala.inline
-  def TeamsRequestObject(): RequestObject = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[RequestObject]
-  }
+  implicit def apply(value: TeamsRequestObject): RequestObject = value.asInstanceOf[RequestObject]
 }
 

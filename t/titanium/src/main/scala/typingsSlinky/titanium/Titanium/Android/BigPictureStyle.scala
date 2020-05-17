@@ -10,9 +10,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * Helper object for generating large-format notifications that include a large image attachment.
 		 */
-@JSGlobal("Titanium.Android.BigPictureStyle")
 @js.native
-class BigPictureStyle () extends Proxy {
+trait BigPictureStyle extends Proxy {
   /**
   			 * Overrides <Titanium.Android.Notification.contentTitle> in the big form of the notification. This defaults to the value passed to <Titanium.Android.Notification.contentTitle>.
   			 */

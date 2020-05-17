@@ -1,6 +1,6 @@
 package typingsSlinky.reactNative.mod
 
-import typingsSlinky.reactNative.AnonNativeEvent
+import typingsSlinky.reactNative.anon.NativeEvent
 import typingsSlinky.reactNative.reactNativeStrings.large_
 import typingsSlinky.reactNative.reactNativeStrings.small_
 import scala.scalajs.js
@@ -25,7 +25,7 @@ trait ActivityIndicatorIOSProps extends ViewProps {
     * Invoked on mount and layout changes with
     */
   @JSName("onLayout")
-  var onLayout_ActivityIndicatorIOSProps: js.UndefOr[js.Function1[/* event */ AnonNativeEvent, Unit]] = js.native
+  var onLayout_ActivityIndicatorIOSProps: js.UndefOr[js.Function1[/* event */ NativeEvent, Unit]] = js.native
   /**
     * Size of the indicator.
     * Small has a height of 20, large has a height of 36.
@@ -84,7 +84,7 @@ object ActivityIndicatorIOSProps {
         ret
     }
     @scala.inline
-    def withOnLayout(value: /* event */ AnonNativeEvent => Unit): Self = {
+    def withOnLayout(value: /* event */ NativeEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLayout")(js.Any.fromFunction1(value))
         ret

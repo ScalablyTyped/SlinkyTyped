@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.engineRenderTargetMod
 
-import typingsSlinky.babylonjs.AnonHeight
+import typingsSlinky.babylonjs.anon.Height
 import typingsSlinky.babylonjs.depthTextureCreationOptionsMod.DepthTextureCreationOptions
 import typingsSlinky.babylonjs.internalTextureMod.InternalTexture
 import typingsSlinky.babylonjs.renderTargetCreationOptionsMod.RenderTargetCreationOptions
@@ -16,7 +16,7 @@ object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
   trait ThinEngine extends js.Object {
     /** @hidden */
     def _createDepthStencilTexture(size: Double, options: DepthTextureCreationOptions): InternalTexture = js.native
-    def _createDepthStencilTexture(size: AnonHeight, options: DepthTextureCreationOptions): InternalTexture = js.native
+    def _createDepthStencilTexture(size: Height, options: DepthTextureCreationOptions): InternalTexture = js.native
     /**
       * Creates a depth stencil texture.
       * This is only available in WebGL 2 or with the depth texture extension available.
@@ -25,7 +25,7 @@ object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
       * @returns The texture
       */
     def createDepthStencilTexture(size: Double, options: DepthTextureCreationOptions): InternalTexture = js.native
-    def createDepthStencilTexture(size: AnonHeight, options: DepthTextureCreationOptions): InternalTexture = js.native
+    def createDepthStencilTexture(size: Height, options: DepthTextureCreationOptions): InternalTexture = js.native
     /**
       * Creates a new render target texture
       * @param size defines the size of the texture
@@ -34,8 +34,8 @@ object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
       */
     def createRenderTargetTexture(size: Double, options: Boolean): InternalTexture = js.native
     def createRenderTargetTexture(size: Double, options: RenderTargetCreationOptions): InternalTexture = js.native
-    def createRenderTargetTexture(size: AnonHeight, options: Boolean): InternalTexture = js.native
-    def createRenderTargetTexture(size: AnonHeight, options: RenderTargetCreationOptions): InternalTexture = js.native
+    def createRenderTargetTexture(size: Height, options: Boolean): InternalTexture = js.native
+    def createRenderTargetTexture(size: Height, options: RenderTargetCreationOptions): InternalTexture = js.native
   }
   
 }

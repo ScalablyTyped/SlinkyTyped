@@ -1,9 +1,8 @@
 package typingsSlinky.chromeApps.chrome.usb
 
-import typingsSlinky.chromeApps.AnonIN
+import typingsSlinky.chromeApps.anon.IN
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chrome.integer
-import typingsSlinky.chromeApps.chromeAppsStrings.IN
 import typingsSlinky.chromeApps.chromeAppsStrings.OUT
 import typingsSlinky.chromeApps.chromeAppsStrings.in_
 import typingsSlinky.chromeApps.chromeAppsStrings.out_
@@ -21,9 +20,12 @@ trait GenericTransferInfo extends js.Object {
     * @see Direction
     */
   var direction: ToStringLiteral[
-    AnonIN, 
-    /* keyof chrome-apps.AnonIN */ IN | OUT, 
-    Exclude[/* keyof chrome-apps.AnonIN */ IN | OUT, in_ | out_]
+    IN, 
+    /* keyof chrome-apps.anon.IN */ typingsSlinky.chromeApps.chromeAppsStrings.IN | OUT, 
+    Exclude[
+      /* keyof chrome-apps.anon.IN */ typingsSlinky.chromeApps.chromeAppsStrings.IN | OUT, 
+      in_ | out_
+    ]
   ] = js.native
   /** The target endpoint address. The interface containing this endpoint must be claimed. */
   var endpoint: integer = js.native
@@ -41,9 +43,12 @@ object GenericTransferInfo {
   @scala.inline
   def apply(
     direction: ToStringLiteral[
-      AnonIN, 
-      /* keyof chrome-apps.AnonIN */ IN | OUT, 
-      Exclude[/* keyof chrome-apps.AnonIN */ IN | OUT, in_ | out_]
+      IN, 
+      /* keyof chrome-apps.anon.IN */ typingsSlinky.chromeApps.chromeAppsStrings.IN | OUT, 
+      Exclude[
+        /* keyof chrome-apps.anon.IN */ typingsSlinky.chromeApps.chromeAppsStrings.IN | OUT, 
+        in_ | out_
+      ]
     ],
     endpoint: integer
   ): GenericTransferInfo = {
@@ -59,9 +64,12 @@ object GenericTransferInfo {
     @scala.inline
     def withDirection(
       value: ToStringLiteral[
-          AnonIN, 
-          /* keyof chrome-apps.AnonIN */ IN | OUT, 
-          Exclude[/* keyof chrome-apps.AnonIN */ IN | OUT, in_ | out_]
+          IN, 
+          /* keyof chrome-apps.anon.IN */ typingsSlinky.chromeApps.chromeAppsStrings.IN | OUT, 
+          Exclude[
+            /* keyof chrome-apps.anon.IN */ typingsSlinky.chromeApps.chromeAppsStrings.IN | OUT, 
+            in_ | out_
+          ]
         ]
     ): Self = {
         val ret = this.duplicate

@@ -3,7 +3,7 @@ package typingsSlinky.emberData.mod.default
 import typingsSlinky.ember.mod.Ember.NativeArray
 import typingsSlinky.ember.mod.default.ComputedProperty
 import typingsSlinky.ember.mod.default.Map
-import typingsSlinky.emberData.TypeofModel
+import typingsSlinky.emberData.anon.TypeofModel
 import typingsSlinky.emberData.emberDataStrings.boolean
 import typingsSlinky.emberData.emberDataStrings.date
 import typingsSlinky.emberData.emberDataStrings.number

@@ -1,7 +1,7 @@
 package typingsSlinky.tslint.mod
 
 import typingsSlinky.std.Map
-import typingsSlinky.tslint.PartialIOptions
+import typingsSlinky.tslint.anon.PartialIOptions
 import typingsSlinky.tslint.configurationMod.IConfigurationFile
 import typingsSlinky.tslint.configurationMod.IConfigurationLoadResult
 import typingsSlinky.tslint.configurationMod.RawConfigFile

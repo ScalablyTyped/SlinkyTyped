@@ -1,8 +1,5 @@
 package typingsSlinky.babelTypes.mod
 
-import typingsSlinky.babelTypes.babelTypesStrings.ExportAllDeclaration
-import typingsSlinky.babelTypes.babelTypesStrings.ExportDefaultDeclaration
-import typingsSlinky.babelTypes.babelTypesStrings.ExportNamedDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,41 +13,10 @@ trait ExportDeclaration extends js.Object
 
 object ExportDeclaration {
   @scala.inline
-  def ExportAllDeclaration_(
-    end: Double,
-    loc: SourceLocation,
-    source: StringLiteral_,
-    start: Double,
-    `type`: ExportAllDeclaration
-  ): ExportDeclaration = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ExportDeclaration]
-  }
+  implicit def apply(value: ExportAllDeclaration_): ExportDeclaration = value.asInstanceOf[ExportDeclaration]
   @scala.inline
-  def ExportDefaultDeclaration_(
-    declaration: Declaration | Expression,
-    end: Double,
-    loc: SourceLocation,
-    start: Double,
-    `type`: ExportDefaultDeclaration
-  ): ExportDeclaration = {
-    val __obj = js.Dynamic.literal(declaration = declaration.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ExportDeclaration]
-  }
+  implicit def apply(value: ExportDefaultDeclaration_): ExportDeclaration = value.asInstanceOf[ExportDeclaration]
   @scala.inline
-  def ExportNamedDeclaration_(
-    declaration: Declaration,
-    end: Double,
-    loc: SourceLocation,
-    specifiers: js.Array[ExportSpecifier_],
-    start: Double,
-    `type`: ExportNamedDeclaration
-  ): ExportDeclaration = {
-    val __obj = js.Dynamic.literal(declaration = declaration.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], loc = loc.asInstanceOf[js.Any], specifiers = specifiers.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ExportDeclaration]
-  }
+  implicit def apply(value: ExportNamedDeclaration_): ExportDeclaration = value.asInstanceOf[ExportDeclaration]
 }
 

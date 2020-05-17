@@ -1,6 +1,9 @@
 package typingsSlinky.classValidator
 
 import org.scalablytyped.runtime.Instantiable1
+import typingsSlinky.classValidator.anon.Async
+import typingsSlinky.classValidator.anon.Get
+import typingsSlinky.classValidator.anon.Instantiable
 import typingsSlinky.classValidator.classValidatorStrings.`3`
 import typingsSlinky.classValidator.classValidatorStrings.`4`
 import typingsSlinky.classValidator.classValidatorStrings.`5`
@@ -274,13 +277,13 @@ object mod extends js.Object {
   @JSName("Validate")
   def Validate_(constraintClass: js.Function, validationOptions: ValidationOptions): js.Function = js.native
   def ValidatorConstraint(): js.Function1[/* target */ js.Function, Unit] = js.native
-  def ValidatorConstraint(options: AnonAsync): js.Function1[/* target */ js.Function, Unit] = js.native
+  def ValidatorConstraint(options: Async): js.Function1[/* target */ js.Function, Unit] = js.native
   def getFromContainer[T](someClass: js.Function): T = js.native
-  def getFromContainer[T](someClass: AnonInstantiable[T]): T = js.native
+  def getFromContainer[T](someClass: Instantiable[T]): T = js.native
   def registerDecorator(options: ValidationDecoratorOptions): Unit = js.native
   def registerSchema(schema: ValidationSchema): Unit = js.native
-  def useContainer(iocContainer: AnonGet): Unit = js.native
-  def useContainer(iocContainer: AnonGet, options: UseContainerOptions): Unit = js.native
+  def useContainer(iocContainer: Get): Unit = js.native
+  def useContainer(iocContainer: Get, options: UseContainerOptions): Unit = js.native
   def validate(`object`: js.Object): js.Promise[js.Array[typingsSlinky.classValidator.validationErrorMod.ValidationError]] = js.native
   def validate(`object`: js.Object, validatorOptions: ValidatorOptions): js.Promise[js.Array[typingsSlinky.classValidator.validationErrorMod.ValidationError]] = js.native
   def validate(schemaName: String, `object`: js.Object): js.Promise[js.Array[typingsSlinky.classValidator.validationErrorMod.ValidationError]] = js.native

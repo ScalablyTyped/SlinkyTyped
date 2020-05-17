@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Contains settings that specify parameters affecting how the dashboard or dashboard item is exported in Image format.
   */
-@JSGlobal("ImageFormatOptions")
 @js.native
-class ImageFormatOptions () extends js.Object {
+trait ImageFormatOptions extends js.Object {
   /** @deprecated The ImageFormatOptions.Format property is obsolete now. Use the DashboardImageExportOptions.Format property instead. To learn more, see the following KB article: https://www.devexpress.com/Support/Center/Question/Details/T488764 */
   /**
     * Gets or sets an image format in which the dashboard (dashboard item) is exported.
@@ -20,5 +19,33 @@ class ImageFormatOptions () extends js.Object {
     * Gets or sets the resolution (in dpi) used to export a dashboard (dashboard item) in Image format.
     */
   var Resolution: Double = js.native
+}
+
+object ImageFormatOptions {
+  @scala.inline
+  def apply(Format: String, Resolution: Double): ImageFormatOptions = {
+    val __obj = js.Dynamic.literal(Format = Format.asInstanceOf[js.Any], Resolution = Resolution.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ImageFormatOptions]
+  }
+  @scala.inline
+  implicit class ImageFormatOptionsOps[Self <: ImageFormatOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormat(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Format")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResolution(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Resolution")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

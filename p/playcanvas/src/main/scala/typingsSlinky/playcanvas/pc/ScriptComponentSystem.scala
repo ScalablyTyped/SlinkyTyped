@@ -12,9 +12,6 @@ import scala.scalajs.js.annotation._
   * @classdesc Allows scripts to be attached to an Entity and executed.
   * @param {pc.Application} app - The application.
   */
-@JSGlobal("pc.ScriptComponentSystem")
 @js.native
-class ScriptComponentSystem protected () extends ComponentSystem {
-  def this(app: Application) = this()
-}
+trait ScriptComponentSystem extends ComponentSystem
 

@@ -1,6 +1,6 @@
 package typingsSlinky.zingchart.mod
 
-import typingsSlinky.zingchart.AnonCalloutoffset
+import typingsSlinky.zingchart.anon.Calloutoffset
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait refresh extends js.Object {
     * Enabling true will allow dynamic value range of the scale pertaining to the values. false (default) | true
     */
   var `adjust-scale`: js.UndefOr[Boolean] = js.native
-  var curtain: js.UndefOr[AnonCalloutoffset] = js.native
+  var curtain: js.UndefOr[Calloutoffset] = js.native
   /**
     * Sets the timeout between two refresh operations. If value is smaller than 50, seconds are assumed, otherwise milliseconds are assu
     * med. 5 | 10 | ...
@@ -64,7 +64,7 @@ object refresh {
         ret
     }
     @scala.inline
-    def withCurtain(value: AnonCalloutoffset): Self = {
+    def withCurtain(value: Calloutoffset): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("curtain")(value.asInstanceOf[js.Any])
         ret

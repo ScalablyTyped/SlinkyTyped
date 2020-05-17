@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides event information when communication to and from the lock screen is required. */
-@JSGlobal("Windows.ApplicationModel.Activation.LockScreenCallActivatedEventArgs")
 @js.native
-abstract class LockScreenCallActivatedEventArgs () extends js.Object {
+trait LockScreenCallActivatedEventArgs extends js.Object {
   /** Gets the arguments that are passed to the app to launch it. */
   var arguments: String = js.native
   /** Gets the UI that handles communication to and from the lock screen. */
@@ -26,5 +25,78 @@ abstract class LockScreenCallActivatedEventArgs () extends js.Object {
   var tileId: String = js.native
   /** Gets the view switcher object that allows you to set the view for the application. */
   var viewSwitcher: ActivationViewSwitcher = js.native
+}
+
+object LockScreenCallActivatedEventArgs {
+  @scala.inline
+  def apply(
+    arguments: String,
+    callUI: LockScreenCallUI,
+    currentlyShownApplicationViewId: Double,
+    kind: ActivationKind,
+    previousExecutionState: ApplicationExecutionState,
+    splashScreen: SplashScreen,
+    tileId: String,
+    viewSwitcher: ActivationViewSwitcher
+  ): LockScreenCallActivatedEventArgs = {
+    val __obj = js.Dynamic.literal(arguments = arguments.asInstanceOf[js.Any], callUI = callUI.asInstanceOf[js.Any], currentlyShownApplicationViewId = currentlyShownApplicationViewId.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], previousExecutionState = previousExecutionState.asInstanceOf[js.Any], splashScreen = splashScreen.asInstanceOf[js.Any], tileId = tileId.asInstanceOf[js.Any], viewSwitcher = viewSwitcher.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LockScreenCallActivatedEventArgs]
+  }
+  @scala.inline
+  implicit class LockScreenCallActivatedEventArgsOps[Self <: LockScreenCallActivatedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArguments(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCallUI(value: LockScreenCallUI): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("callUI")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentlyShownApplicationViewId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentlyShownApplicationViewId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKind(value: ActivationKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreviousExecutionState(value: ApplicationExecutionState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("previousExecutionState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSplashScreen(value: SplashScreen): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("splashScreen")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTileId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tileId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withViewSwitcher(value: ActivationViewSwitcher): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewSwitcher")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

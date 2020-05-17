@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonBodyCommentsLoc
+import typingsSlinky.astTypes.anon.BodyCommentsLoc
 import typingsSlinky.astTypes.kindsMod.ClassMethodKind
 import typingsSlinky.astTypes.kindsMod.ClassPrivateMethodKind
 import typingsSlinky.astTypes.kindsMod.ClassPrivatePropertyKind
@@ -26,6 +26,6 @@ trait ClassBodyBuilder extends js.Object {
       MethodDefinitionKind | VariableDeclaratorKind | ClassPropertyDefinitionKind | ClassPropertyKind | ClassPrivatePropertyKind | ClassMethodKind | ClassPrivateMethodKind | TSDeclareMethodKind | TSCallSignatureDeclarationKind | TSConstructSignatureDeclarationKind | TSIndexSignatureKind | TSMethodSignatureKind | TSPropertySignatureKind
     ]
   ): ClassBody = js.native
-  def from(params: AnonBodyCommentsLoc): ClassBody = js.native
+  def from(params: BodyCommentsLoc): ClassBody = js.native
 }
 

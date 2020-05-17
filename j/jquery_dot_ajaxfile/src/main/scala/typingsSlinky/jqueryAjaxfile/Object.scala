@@ -1,6 +1,6 @@
 package typingsSlinky.jqueryAjaxfile
 
-import typingsSlinky.jqueryAjaxfile.Chai_.Assertion
+import typingsSlinky.jqueryAjaxfile.Chai.Assertion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

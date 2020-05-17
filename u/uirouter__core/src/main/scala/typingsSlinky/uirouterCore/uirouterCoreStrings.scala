@@ -1,7 +1,7 @@
 package typingsSlinky.uirouterCore
 
+import typingsSlinky.uirouterCore.resolveInterfaceMod.PolicyAsync
 import typingsSlinky.uirouterCore.resolveInterfaceMod.PolicyWhen
-import typingsSlinky.uirouterCore.resolveInterfaceMod._PolicyAsync
 import typingsSlinky.uirouterCore.urlInterfaceMod.UrlRuleType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,7 @@ object uirouterCoreStrings {
   sealed trait LAZY extends PolicyWhen
   
   @js.native
-  sealed trait NOWAIT extends _PolicyAsync
+  sealed trait NOWAIT extends PolicyAsync
   
   @js.native
   sealed trait OTHER extends UrlRuleType
@@ -39,7 +39,7 @@ object uirouterCoreStrings {
   sealed trait URLMATCHER extends UrlRuleType
   
   @js.native
-  sealed trait WAIT extends _PolicyAsync
+  sealed trait WAIT extends PolicyAsync
   
   @js.native
   sealed trait auto extends js.Object

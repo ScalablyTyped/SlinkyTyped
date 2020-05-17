@@ -1,5 +1,6 @@
 package typingsSlinky.wegameApi
 
+import org.scalajs.dom.raw.CanvasRenderingContext2D
 import typingsSlinky.wegameApi.wegameApiStrings.`2d`
 import typingsSlinky.wegameApi.wegameApiStrings.webgl
 import typingsSlinky.wegameApi.wx.types.RenderingContextConfig
@@ -9,9 +10,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Canvas")
 @js.native
-class Canvas () extends js.Object {
+trait Canvas extends js.Object {
   /**
     * 画布的高度
     */
@@ -26,13 +26,13 @@ class Canvas () extends js.Object {
     * @param contextAttributes webgl 上下文属性，仅当 contextType 为 webgl 时有效
     */
   @JSName("getContext")
-  def getContext_2d(contextType: `2d`): WxRenderingContext | WxWebGLRenderingContext = js.native
+  def getContext_2d(contextType: `2d`): CanvasRenderingContext2D | WxWebGLRenderingContext = js.native
   @JSName("getContext")
-  def getContext_2d(contextType: `2d`, contextAttributes: RenderingContextConfig): WxRenderingContext | WxWebGLRenderingContext = js.native
+  def getContext_2d(contextType: `2d`, contextAttributes: RenderingContextConfig): CanvasRenderingContext2D | WxWebGLRenderingContext = js.native
   @JSName("getContext")
-  def getContext_webgl(contextType: webgl): WxRenderingContext | WxWebGLRenderingContext = js.native
+  def getContext_webgl(contextType: webgl): CanvasRenderingContext2D | WxWebGLRenderingContext = js.native
   @JSName("getContext")
-  def getContext_webgl(contextType: webgl, contextAttributes: RenderingContextConfig): WxRenderingContext | WxWebGLRenderingContext = js.native
+  def getContext_webgl(contextType: webgl, contextAttributes: RenderingContextConfig): CanvasRenderingContext2D | WxWebGLRenderingContext = js.native
   /**
     * 把画布上的绘制内容以一个 data URI 的格式返回
     */

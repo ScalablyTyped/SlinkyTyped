@@ -2,8 +2,8 @@ package typingsSlinky.fundamentalReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.fundamentalReact.AnonHour
-import typingsSlinky.fundamentalReact.AnonMeridiemPM
+import typingsSlinky.fundamentalReact.anon.Hour
+import typingsSlinky.fundamentalReact.anon.MeridiemPM
 import typingsSlinky.fundamentalReact.timePickerMod.TimePickerProps
 import typingsSlinky.fundamentalReact.timePickerMod.default
 import scala.scalajs.js
@@ -28,7 +28,7 @@ object TimePicker {
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
-    def localizedText(value: AnonMeridiemPM): this.type = set("localizedText", value.asInstanceOf[js.Any])
+    def localizedText(value: MeridiemPM): this.type = set("localizedText", value.asInstanceOf[js.Any])
     @scala.inline
     def onChange(value: /* repeated */ js.Any => _): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
@@ -40,7 +40,7 @@ object TimePicker {
     @scala.inline
     def spinners(value: Boolean): this.type = set("spinners", value.asInstanceOf[js.Any])
     @scala.inline
-    def time(value: AnonHour): this.type = set("time", value.asInstanceOf[js.Any])
+    def time(value: Hour): this.type = set("time", value.asInstanceOf[js.Any])
     @scala.inline
     def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }

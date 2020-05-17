@@ -1,10 +1,10 @@
 package typingsSlinky.tinymce.mod
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLBodyElement
 import org.scalajs.dom.raw.Node
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Window
 import typingsSlinky.tinymce.mod.dom.DOMUtils
 import typingsSlinky.tinymce.mod.dom.DomQuery
 import typingsSlinky.tinymce.mod.dom.Selection
@@ -73,14 +73,14 @@ class Editor protected () extends Observable {
   def getContent(): String = js.native
   def getContent(args: js.Object): String = js.native
   def getContentAreaContainer(): Element = js.native
-  def getDoc(): Document_ = js.native
+  def getDoc(): Document = js.native
   def getElement(): Element = js.native
   def getLang(name: String): Unit = js.native
   def getLang(name: String, defaultVal: String): Unit = js.native
   def getParam(name: String): String = js.native
   def getParam(name: String, defaultVal: String): String = js.native
   def getParam(name: String, defaultVal: String, `type`: String): String = js.native
-  def getWin(): Window_ = js.native
+  def getWin(): Window = js.native
   def hide(): Unit = js.native
   def init(): Unit = js.native
   def insertContent(content: String): Unit = js.native

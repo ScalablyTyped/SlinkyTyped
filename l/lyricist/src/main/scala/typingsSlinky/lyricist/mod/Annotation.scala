@@ -1,6 +1,6 @@
 package typingsSlinky.lyricist.mod
 
-import typingsSlinky.lyricist.AnonInteractions
+import typingsSlinky.lyricist.anon.Interactions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait Annotation extends js.Object {
   var comment_count: Double = js.native
   var community: Boolean = js.native
   var cosigned_by: js.Array[_] = js.native
-  var current_user_metadata: AnonInteractions = js.native
+  var current_user_metadata: Interactions = js.native
   var custom_preview: js.UndefOr[js.Any] = js.native
   var has_voters: Boolean = js.native
   var id: Double = js.native
@@ -37,7 +37,7 @@ object Annotation {
     comment_count: Double,
     community: Boolean,
     cosigned_by: js.Array[_],
-    current_user_metadata: AnonInteractions,
+    current_user_metadata: Interactions,
     has_voters: Boolean,
     id: Double,
     pinned: Boolean,
@@ -93,7 +93,7 @@ object Annotation {
         ret
     }
     @scala.inline
-    def withCurrent_user_metadata(value: AnonInteractions): Self = {
+    def withCurrent_user_metadata(value: Interactions): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("current_user_metadata")(value.asInstanceOf[js.Any])
         ret

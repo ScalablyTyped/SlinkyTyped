@@ -2,6 +2,8 @@ package typingsSlinky.graphqlTools
 
 import typingsSlinky.graphql.definitionMod.GraphQLNamedType
 import typingsSlinky.graphql.mod.GraphQLSchema
+import typingsSlinky.graphqlTools.anon.InheritResolversFromInterfaces
+import typingsSlinky.graphqlTools.anon.Left
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +12,12 @@ import scala.scalajs.js.annotation._
 @js.native
 object mergeSchemasMod extends js.Object {
   def default(
-    hasSchemasOnTypeConflictResolversSchemaDirectivesInheritResolversFromInterfacesMergeDirectives: AnonInheritResolversFromInterfaces
+    hasSchemasOnTypeConflictResolversSchemaDirectivesInheritResolversFromInterfacesMergeDirectives: InheritResolversFromInterfaces
   ): GraphQLSchema = js.native
   type OnTypeConflict = js.Function3[
     /* left */ GraphQLNamedType, 
     /* right */ GraphQLNamedType, 
-    /* info */ js.UndefOr[AnonLeft], 
+    /* info */ js.UndefOr[Left], 
     GraphQLNamedType
   ]
 }

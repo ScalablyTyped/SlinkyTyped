@@ -1,9 +1,9 @@
 package typingsSlinky.formatjsIntlUtils.numberTypesMod
 
-import typingsSlinky.formatjsIntlUtils.AnonCompactLong
-import typingsSlinky.formatjsIntlUtils.AnonCurrencyName
-import typingsSlinky.formatjsIntlUtils.AnonDecimal
-import typingsSlinky.formatjsIntlUtils.AnonUnitName
+import typingsSlinky.formatjsIntlUtils.anon.CompactLong
+import typingsSlinky.formatjsIntlUtils.anon.CurrencyName
+import typingsSlinky.formatjsIntlUtils.anon.Decimal
+import typingsSlinky.formatjsIntlUtils.anon.UnitName
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,21 +11,21 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait NumberILD extends js.Object {
-  var currency: AnonCompactLong = js.native
-  var currencySymbols: Record[String, AnonCurrencyName] = js.native
-  var decimal: AnonCompactLong = js.native
-  var symbols: AnonDecimal = js.native
-  var unitSymbols: Record[String, AnonUnitName] = js.native
+  var currency: CompactLong = js.native
+  var currencySymbols: Record[String, CurrencyName] = js.native
+  var decimal: CompactLong = js.native
+  var symbols: Decimal = js.native
+  var unitSymbols: Record[String, UnitName] = js.native
 }
 
 object NumberILD {
   @scala.inline
   def apply(
-    currency: AnonCompactLong,
-    currencySymbols: Record[String, AnonCurrencyName],
-    decimal: AnonCompactLong,
-    symbols: AnonDecimal,
-    unitSymbols: Record[String, AnonUnitName]
+    currency: CompactLong,
+    currencySymbols: Record[String, CurrencyName],
+    decimal: CompactLong,
+    symbols: Decimal,
+    unitSymbols: Record[String, UnitName]
   ): NumberILD = {
     val __obj = js.Dynamic.literal(currency = currency.asInstanceOf[js.Any], currencySymbols = currencySymbols.asInstanceOf[js.Any], decimal = decimal.asInstanceOf[js.Any], symbols = symbols.asInstanceOf[js.Any], unitSymbols = unitSymbols.asInstanceOf[js.Any])
     __obj.asInstanceOf[NumberILD]
@@ -37,31 +37,31 @@ object NumberILD {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCurrency(value: AnonCompactLong): Self = {
+    def withCurrency(value: CompactLong): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withCurrencySymbols(value: Record[String, AnonCurrencyName]): Self = {
+    def withCurrencySymbols(value: Record[String, CurrencyName]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("currencySymbols")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withDecimal(value: AnonCompactLong): Self = {
+    def withDecimal(value: CompactLong): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("decimal")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSymbols(value: AnonDecimal): Self = {
+    def withSymbols(value: Decimal): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("symbols")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withUnitSymbols(value: Record[String, AnonUnitName]): Self = {
+    def withUnitSymbols(value: Record[String, UnitName]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("unitSymbols")(value.asInstanceOf[js.Any])
         ret

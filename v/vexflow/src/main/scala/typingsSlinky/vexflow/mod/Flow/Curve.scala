@@ -1,6 +1,6 @@
 package typingsSlinky.vexflow.mod.Flow
 
-import typingsSlinky.vexflow.AnonCps
+import typingsSlinky.vexflow.anon.Cps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,11 +10,7 @@ import scala.scalajs.js.annotation._
 class Curve protected ()
   extends typingsSlinky.vexflow.Vex.Flow.Curve {
   def this(from: typingsSlinky.vexflow.Vex.Flow.Note, to: typingsSlinky.vexflow.Vex.Flow.Note) = this()
-  def this(
-    from: typingsSlinky.vexflow.Vex.Flow.Note,
-    to: typingsSlinky.vexflow.Vex.Flow.Note,
-    options: AnonCps
-  ) = this()
+  def this(from: typingsSlinky.vexflow.Vex.Flow.Note, to: typingsSlinky.vexflow.Vex.Flow.Note, options: Cps) = this()
 }
 
 /* static members */

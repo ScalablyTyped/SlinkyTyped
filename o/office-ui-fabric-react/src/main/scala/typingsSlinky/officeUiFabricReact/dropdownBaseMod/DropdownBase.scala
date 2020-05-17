@@ -1,13 +1,13 @@
 package typingsSlinky.officeUiFabricReact.dropdownBaseMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.SyntheticEvent
-import typingsSlinky.officeUiFabricReact.AnonOptions
+import typingsSlinky.officeUiFabricReact.anon.Options
 import typingsSlinky.officeUiFabricReact.dropdownTypesMod.IDropdown
 import typingsSlinky.officeUiFabricReact.dropdownTypesMod.IDropdownProps
 import typingsSlinky.react.mod.Component
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -125,13 +125,13 @@ class DropdownBase protected ()
   def componentDidUpdate_MDropdownBase(prevProps: IDropdownProps, prevState: IDropdownState): Unit = js.native
   @JSName("componentWillUnmount")
   def componentWillUnmount_MDropdownBase(): Unit = js.native
-  def setSelectedIndex(event: SyntheticEvent[EventTarget with HTMLDivElement, Event_], index: Double): Unit = js.native
+  def setSelectedIndex(event: SyntheticEvent[EventTarget with HTMLDivElement, Event], index: Double): Unit = js.native
 }
 
 /* static members */
 @JSImport("office-ui-fabric-react/lib/components/Dropdown/Dropdown.base", "DropdownBase")
 @js.native
 object DropdownBase extends js.Object {
-  var defaultProps: AnonOptions = js.native
+  var defaultProps: Options = js.native
 }
 

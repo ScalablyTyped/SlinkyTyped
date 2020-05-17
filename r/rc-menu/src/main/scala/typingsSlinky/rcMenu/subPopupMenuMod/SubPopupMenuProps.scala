@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Element
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.rcMenu.AnonOpen
+import typingsSlinky.rcMenu.anon.Open
 import typingsSlinky.rcMenu.interfaceMod.BuiltinPlacements
 import typingsSlinky.rcMenu.interfaceMod.DestroyEventHandler
 import typingsSlinky.rcMenu.interfaceMod.LegacyFunctionRef
@@ -391,7 +391,7 @@ object SubPopupMenuProps {
         ret
     }
     @scala.inline
-    def withOnOpenChange(value: /* keys */ js.Array[Key] | AnonOpen => Unit): Self = {
+    def withOnOpenChange(value: /* keys */ js.Array[Key] | Open => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onOpenChange")(js.Any.fromFunction1(value))
         ret

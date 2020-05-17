@@ -1,5 +1,9 @@
 package typingsSlinky.reactNativeModalPopover
 
+import typingsSlinky.reactNativeModalPopover.anon.ArrowSize
+import typingsSlinky.reactNativeModalPopover.anon.Children
+import typingsSlinky.reactNativeModalPopover.anon.OnPopoverDisplayed
+import typingsSlinky.reactNativeModalPopover.anon.PartialPopoverProps
 import typingsSlinky.reactNativeModalPopover.popoverMod.PopoverProps
 import typingsSlinky.reactNativeModalPopover.popoverTouchableMod.Props
 import scala.scalajs.js
@@ -36,19 +40,19 @@ object mod extends js.Object {
   object Popover extends js.Object {
     var defaultProps: PartialPopoverProps = js.native
     var displayName: String = js.native
-    var propTypes: AnonArrowSize = js.native
+    var propTypes: ArrowSize = js.native
   }
   
   /* static members */
   @js.native
   object PopoverController extends js.Object {
-    var propTypes: AnonChildren = js.native
+    var propTypes: Children = js.native
   }
   
   /* static members */
   @js.native
   object PopoverTouchable extends js.Object {
-    var propTypes: AnonOnPopoverDisplayed = js.native
+    var propTypes: OnPopoverDisplayed = js.native
   }
   
   /* static members */
@@ -56,7 +60,7 @@ object mod extends js.Object {
   object default extends js.Object {
     var defaultProps: PartialPopoverProps = js.native
     var displayName: String = js.native
-    var propTypes: AnonArrowSize = js.native
+    var propTypes: ArrowSize = js.native
   }
   
 }

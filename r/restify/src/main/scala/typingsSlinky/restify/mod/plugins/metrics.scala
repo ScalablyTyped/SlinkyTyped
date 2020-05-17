@@ -1,6 +1,6 @@
 package typingsSlinky.restify.mod.plugins
 
-import typingsSlinky.restify.AnonServer
+import typingsSlinky.restify.anon.Server
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,6 +18,6 @@ object metrics extends js.Object {
     * }));
     * ```
     */
-  def apply(opts: AnonServer, callback: MetricsCallback): js.Function1[/* repeated */ js.Any, Unit] = js.native
+  def apply(opts: Server, callback: MetricsCallback): js.Function1[/* repeated */ js.Any, Unit] = js.native
 }
 

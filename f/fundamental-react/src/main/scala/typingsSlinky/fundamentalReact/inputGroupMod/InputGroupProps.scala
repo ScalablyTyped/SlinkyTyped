@@ -1,7 +1,7 @@
 package typingsSlinky.fundamentalReact.inputGroupMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.fundamentalReact.AnonState
+import typingsSlinky.fundamentalReact.anon.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait InputGroupProps
   var disableStyles: js.UndefOr[Boolean] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
   var props: js.UndefOr[js.Any] = js.native
-  var validationState: js.UndefOr[AnonState] = js.native
+  var validationState: js.UndefOr[State] = js.native
 }
 
 object InputGroupProps {
@@ -90,7 +90,7 @@ object InputGroupProps {
         ret
     }
     @scala.inline
-    def withValidationState(value: AnonState): Self = {
+    def withValidationState(value: State): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validationState")(value.asInstanceOf[js.Any])
         ret

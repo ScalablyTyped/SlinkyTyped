@@ -1,8 +1,8 @@
 package typingsSlinky.nodemailer.sesTransportMod
 
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.nodemailer.AnonCallback
-import typingsSlinky.nodemailer.AnonPending
+import typingsSlinky.nodemailer.anon.Callback
+import typingsSlinky.nodemailer.anon.Pending
 import typingsSlinky.nodemailer.mod.Transport
 import typingsSlinky.nodemailer.nodemailerBooleans.`true`
 import typingsSlinky.nodemailer.nodemailerStrings.idle
@@ -22,9 +22,9 @@ trait SESTransport
   var mailer_SESTransport: typingsSlinky.nodemailer.mailerMod.^ = js.native
   var maxConnections: Double = js.native
   var options: Options = js.native
-  var pending: js.Array[AnonCallback] = js.native
+  var pending: js.Array[Callback] = js.native
   var rateInterval: Double = js.native
-  var rateMessages: js.Array[AnonPending] = js.native
+  var rateMessages: js.Array[Pending] = js.native
   var sendingRate: Double = js.native
   var sendingRateTTL: Double | Null = js.native
   var ses: js.Any = js.native

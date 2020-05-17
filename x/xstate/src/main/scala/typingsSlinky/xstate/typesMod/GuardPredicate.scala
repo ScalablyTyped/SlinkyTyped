@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait GuardPredicate[TContext, TEvent /* <: EventObject */] extends js.Object {
+trait GuardPredicate[TContext, TEvent /* <: EventObject */] extends Guard[TContext, TEvent] {
   var name: js.UndefOr[String] = js.native
   @JSName("predicate")
   var predicate_Original: ConditionPredicate[TContext, TEvent] = js.native

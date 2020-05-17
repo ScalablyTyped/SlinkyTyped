@@ -1,7 +1,7 @@
 package typingsSlinky.ariClient.mod
 
-import typingsSlinky.ariClient.AnonBody
-import typingsSlinky.ariClient.AnonVariables
+import typingsSlinky.ariClient.anon.Body
+import typingsSlinky.ariClient.anon.Variables
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,9 +20,9 @@ trait Endpoint extends Resource {
   def list(callback: js.Function2[/* err */ js.Error, /* endpoints */ js.Array[this.type], Unit]): Unit = js.native
   def listByTech(): js.Promise[js.Array[Endpoint]] = js.native
   def listByTech(callback: js.Function2[/* err */ js.Error, /* endpoints */ js.Array[this.type], Unit]): Unit = js.native
-  def sendMessage(params: AnonBody): js.Promise[Unit] = js.native
-  def sendMessage(params: AnonBody, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def sendMessageToEndpoint(params: AnonVariables): js.Promise[Unit] = js.native
-  def sendMessageToEndpoint(params: AnonVariables, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def sendMessage(params: Body): js.Promise[Unit] = js.native
+  def sendMessage(params: Body, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def sendMessageToEndpoint(params: Variables): js.Promise[Unit] = js.native
+  def sendMessageToEndpoint(params: Variables, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
 }
 

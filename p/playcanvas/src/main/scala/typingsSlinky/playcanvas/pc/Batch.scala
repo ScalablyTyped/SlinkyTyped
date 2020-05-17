@@ -17,10 +17,8 @@ import scala.scalajs.js.annotation._
   * @property {boolean} dynamic Whether this batch is dynamic (supports transforming mesh instances at runtime).
   * @property {number} [batchGroupId] Link this batch to a specific batch group. This is done automatically with default batches.
   */
-@JSGlobal("pc.Batch")
 @js.native
-class Batch protected () extends js.Object {
-  def this(meshInstances: js.Array[MeshInstance], dynamic: Boolean, batchGroupId: Double) = this()
+trait Batch extends js.Object {
   /**
     * Link this batch to a specific batch group. This is done automatically with default batches.
     */
@@ -41,5 +39,62 @@ class Batch protected () extends js.Object {
     * An array of original mesh instances, from which this batch was generated.
     */
   var origMeshInstances: js.Array[MeshInstance] = js.native
+}
+
+object Batch {
+  @scala.inline
+  def apply(
+    dynamic: Boolean,
+    meshInstance: MeshInstance,
+    model: Model,
+    origMeshInstances: js.Array[MeshInstance]
+  ): Batch = {
+    val __obj = js.Dynamic.literal(dynamic = dynamic.asInstanceOf[js.Any], meshInstance = meshInstance.asInstanceOf[js.Any], model = model.asInstanceOf[js.Any], origMeshInstances = origMeshInstances.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Batch]
+  }
+  @scala.inline
+  implicit class BatchOps[Self <: Batch] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDynamic(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dynamic")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMeshInstance(value: MeshInstance): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meshInstance")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withModel(value: Model): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrigMeshInstances(value: js.Array[MeshInstance]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origMeshInstances")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBatchGroupId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batchGroupId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutBatchGroupId: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("batchGroupId")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

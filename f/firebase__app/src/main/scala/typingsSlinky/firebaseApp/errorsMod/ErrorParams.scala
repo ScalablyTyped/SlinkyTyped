@@ -1,6 +1,6 @@
 package typingsSlinky.firebaseApp.errorsMod
 
-import typingsSlinky.firebaseApp.AnonAppName
+import typingsSlinky.firebaseApp.anon.AppName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,23 +8,23 @@ import scala.scalajs.js.annotation._
 /* Inlined {[ key in @firebase/app.@firebase/app/dist/packages/app/src/errors.AppError ]: {  appName  :string}} */
 @js.native
 trait ErrorParams extends js.Object {
-  var `app-deleted`: AnonAppName = js.native
-  var `bad-app-name`: AnonAppName = js.native
-  var `duplicate-app`: AnonAppName = js.native
-  var `invalid-app-argument`: AnonAppName = js.native
-  var `invalid-log-argument`: AnonAppName = js.native
-  var `no-app`: AnonAppName = js.native
+  var `app-deleted`: AppName = js.native
+  var `bad-app-name`: AppName = js.native
+  var `duplicate-app`: AppName = js.native
+  var `invalid-app-argument`: AppName = js.native
+  var `invalid-log-argument`: AppName = js.native
+  var `no-app`: AppName = js.native
 }
 
 object ErrorParams {
   @scala.inline
   def apply(
-    `app-deleted`: AnonAppName,
-    `bad-app-name`: AnonAppName,
-    `duplicate-app`: AnonAppName,
-    `invalid-app-argument`: AnonAppName,
-    `invalid-log-argument`: AnonAppName,
-    `no-app`: AnonAppName
+    `app-deleted`: AppName,
+    `bad-app-name`: AppName,
+    `duplicate-app`: AppName,
+    `invalid-app-argument`: AppName,
+    `invalid-log-argument`: AppName,
+    `no-app`: AppName
   ): ErrorParams = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("app-deleted")(`app-deleted`.asInstanceOf[js.Any])
@@ -42,37 +42,37 @@ object ErrorParams {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def `withApp-deleted`(value: AnonAppName): Self = {
+    def `withApp-deleted`(value: AppName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("app-deleted")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def `withBad-app-name`(value: AnonAppName): Self = {
+    def `withBad-app-name`(value: AppName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bad-app-name")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def `withDuplicate-app`(value: AnonAppName): Self = {
+    def `withDuplicate-app`(value: AppName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("duplicate-app")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def `withInvalid-app-argument`(value: AnonAppName): Self = {
+    def `withInvalid-app-argument`(value: AppName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("invalid-app-argument")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def `withInvalid-log-argument`(value: AnonAppName): Self = {
+    def `withInvalid-log-argument`(value: AppName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("invalid-log-argument")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def `withNo-app`(value: AnonAppName): Self = {
+    def `withNo-app`(value: AppName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("no-app")(value.asInstanceOf[js.Any])
         ret

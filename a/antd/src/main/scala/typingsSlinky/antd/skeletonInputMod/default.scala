@@ -1,6 +1,6 @@
 package typingsSlinky.antd.skeletonInputMod
 
-import typingsSlinky.antd.PartialSkeletonInputProps
+import typingsSlinky.antd.anon.PartialSkeletonInputProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

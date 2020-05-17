@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,9 +16,4 @@ trait HTMLMapElement extends HTMLElement {
     */
   var name: java.lang.String = js.native
 }
-
-@JSGlobal("HTMLMapElement")
-@js.native
-object HTMLMapElement
-  extends Instantiable0[org.scalajs.dom.raw.HTMLMapElement]
 

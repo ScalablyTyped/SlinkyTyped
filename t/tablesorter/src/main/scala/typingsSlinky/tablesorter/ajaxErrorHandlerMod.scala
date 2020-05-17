@@ -1,7 +1,7 @@
 package typingsSlinky.tablesorter
 
-import typingsSlinky.jquery.JQuery_.AjaxSettings
-import typingsSlinky.jquery.JQuery_.jqXHR
+import typingsSlinky.jquery.JQuery.AjaxSettings
+import typingsSlinky.jquery.JQuery.jqXHR
 import typingsSlinky.tablesorter.tablesorterConfigurationStoreMod.TablesorterConfigurationStore
 import scala.scalajs.js
 import scala.scalajs.js.`|`

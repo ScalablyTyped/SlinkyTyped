@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ReactElement extends js.Object {
+trait ReactElement extends ReactChild {
   var key: Key | Null = js.native
   var props: js.Any = js.native
   var `type`: js.Any = js.native

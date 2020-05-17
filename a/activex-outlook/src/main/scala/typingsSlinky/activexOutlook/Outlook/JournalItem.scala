@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Outlook.JournalItem")
 @js.native
-class JournalItem protected () extends js.Object {
+trait JournalItem extends js.Object {
   val Actions: typingsSlinky.activexOutlook.Outlook.Actions = js.native
   val Application: typingsSlinky.activexOutlook.Outlook.Application = js.native
   val Attachments: typingsSlinky.activexOutlook.Outlook.Attachments = js.native

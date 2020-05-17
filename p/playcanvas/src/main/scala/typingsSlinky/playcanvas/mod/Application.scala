@@ -1,7 +1,7 @@
 package typingsSlinky.playcanvas.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.playcanvas.AnonAssetPrefix
+import typingsSlinky.playcanvas.anon.AssetPrefix
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -56,7 +56,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Application protected ()
   extends typingsSlinky.playcanvas.pc.Application {
-  def this(canvas: Element, options: AnonAssetPrefix) = this()
+  def this(canvas: Element, options: AssetPrefix) = this()
 }
 
 /* static members */

@@ -2,7 +2,7 @@ package typingsSlinky.reactNavigationStack.typesMod
 
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNavigationStack.AnonTimingFunction
+import typingsSlinky.reactNavigationStack.anon.TimingFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,15 +13,12 @@ trait TransitionConfig extends js.Object {
   var containerStyleDark: js.UndefOr[StyleProp[ViewStyle]] = js.native
   var containerStyleLight: js.UndefOr[StyleProp[ViewStyle]] = js.native
   var screenInterpolator: SceneInterpolator = js.native
-  var transitionSpec: AnonTimingFunction = js.native
+  var transitionSpec: TimingFunction = js.native
 }
 
 object TransitionConfig {
   @scala.inline
-  def apply(
-    screenInterpolator: /* props */ SceneInterpolatorProps => js.Any,
-    transitionSpec: AnonTimingFunction
-  ): TransitionConfig = {
+  def apply(screenInterpolator: /* props */ SceneInterpolatorProps => js.Any, transitionSpec: TimingFunction): TransitionConfig = {
     val __obj = js.Dynamic.literal(screenInterpolator = js.Any.fromFunction1(screenInterpolator), transitionSpec = transitionSpec.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransitionConfig]
   }
@@ -38,7 +35,7 @@ object TransitionConfig {
         ret
     }
     @scala.inline
-    def withTransitionSpec(value: AnonTimingFunction): Self = {
+    def withTransitionSpec(value: TimingFunction): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("transitionSpec")(value.asInstanceOf[js.Any])
         ret

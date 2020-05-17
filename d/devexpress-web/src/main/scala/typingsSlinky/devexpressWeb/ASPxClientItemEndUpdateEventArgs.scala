@@ -7,12 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientDashboard.ItemEndUpdate event.
   */
-@JSGlobal("ASPxClientItemEndUpdateEventArgs")
 @js.native
-class ASPxClientItemEndUpdateEventArgs () extends ASPxClientEventArgs {
+trait ASPxClientItemEndUpdateEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the component name of the dashboard item.
     */
   var ItemName: String = js.native
+}
+
+object ASPxClientItemEndUpdateEventArgs {
+  @scala.inline
+  def apply(ItemName: String): ASPxClientItemEndUpdateEventArgs = {
+    val __obj = js.Dynamic.literal(ItemName = ItemName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientItemEndUpdateEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientItemEndUpdateEventArgsOps[Self <: ASPxClientItemEndUpdateEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withItemName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ItemName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

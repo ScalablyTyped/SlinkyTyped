@@ -2,8 +2,8 @@ package typingsSlinky.puppeteer.mod
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.node.Buffer
-import typingsSlinky.puppeteer.Anon0
-import typingsSlinky.puppeteer.AnonDelay
+import typingsSlinky.puppeteer.anon.Delay
+import typingsSlinky.puppeteer.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ElementHandle[E /* <: Element */]
   extends JSHandle[E]
-     with Evalable {
+     with Evalable
+     with WrapElementHandle[E] {
   /**
     * The method runs element.querySelector within the page.
     * If no element matches the selector, the return value resolve to null.
@@ -74,7 +75,7 @@ trait ElementHandle[E /* <: Element */]
     * @param options The text and delay options.
     */
   def press(key: String): js.Promise[Unit] = js.native
-  def press(key: String, options: AnonDelay): js.Promise[Unit] = js.native
+  def press(key: String, options: Delay): js.Promise[Unit] = js.native
   /**
     * This method scrolls element into view if needed, and then uses page.screenshot to take a screenshot of the element.
     * If the element is detached from DOM, the method throws an error.
@@ -103,7 +104,7 @@ trait ElementHandle[E /* <: Element */]
     * @param options The typing options.
     */
   def `type`(text: String): js.Promise[Unit] = js.native
-  def `type`(text: String, options: Anon0): js.Promise[Unit] = js.native
+  def `type`(text: String, options: `0`): js.Promise[Unit] = js.native
   /**
     * This method expects elementHandle to point to an input element.
     * @param filePaths Sets the value of the file input these paths. If some of the filePaths are relative paths, then they are resolved relative to current working directory.

@@ -1,11 +1,5 @@
 package typingsSlinky.cssSelectorTokenizer.mod
 
-import typingsSlinky.cssSelectorTokenizer.cssSelectorTokenizerStrings.`nested-item`
-import typingsSlinky.cssSelectorTokenizer.cssSelectorTokenizerStrings.comment
-import typingsSlinky.cssSelectorTokenizer.cssSelectorTokenizerStrings.invalid
-import typingsSlinky.cssSelectorTokenizer.cssSelectorTokenizerStrings.item
-import typingsSlinky.cssSelectorTokenizer.cssSelectorTokenizerStrings.string
-import typingsSlinky.cssSelectorTokenizer.cssSelectorTokenizerStrings.url
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,40 +16,16 @@ trait ValueNodeType extends AnyValueNode
 
 object ValueNodeType {
   @scala.inline
-  def ItemNode(name: String, `type`: item): ValueNodeType = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ValueNodeType]
-  }
+  implicit def apply(value: CommentNode): ValueNodeType = value.asInstanceOf[ValueNodeType]
   @scala.inline
-  def UrlNode(`type`: url, url: String): ValueNodeType = {
-    val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ValueNodeType]
-  }
+  implicit def apply(value: InvalidNode): ValueNodeType = value.asInstanceOf[ValueNodeType]
   @scala.inline
-  def CommentNode(content: String, `type`: comment): ValueNodeType = {
-    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ValueNodeType]
-  }
+  implicit def apply(value: ItemNode): ValueNodeType = value.asInstanceOf[ValueNodeType]
   @scala.inline
-  def InvalidNode(`type`: invalid, value: String): ValueNodeType = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ValueNodeType]
-  }
+  implicit def apply(value: NestedItemNode): ValueNodeType = value.asInstanceOf[ValueNodeType]
   @scala.inline
-  def NestedItemNode(name: String, nodes: js.Array[ValueNode], `type`: `nested-item`): ValueNodeType = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], nodes = nodes.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ValueNodeType]
-  }
+  implicit def apply(value: StringNode): ValueNodeType = value.asInstanceOf[ValueNodeType]
   @scala.inline
-  def StringNode(stringType: String, `type`: string, value: String): ValueNodeType = {
-    val __obj = js.Dynamic.literal(stringType = stringType.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ValueNodeType]
-  }
+  implicit def apply(value: UrlNode): ValueNodeType = value.asInstanceOf[ValueNodeType]
 }
 

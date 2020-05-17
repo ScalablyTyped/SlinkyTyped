@@ -6,12 +6,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("MakerJs.models.BoltCircle")
 @js.native
-class BoltCircle protected () extends IModel {
-  def this(boltRadius: Double, holeRadius: Double, boltCount: Double) = this()
-  def this(boltRadius: Double, holeRadius: Double, boltCount: Double, firstBoltAngleInDegrees: Double) = this()
+trait BoltCircle extends IModel {
   @JSName("paths")
   var paths_BoltCircle: IPathMap = js.native
+}
+
+object BoltCircle {
+  @scala.inline
+  def apply(paths: IPathMap): BoltCircle = {
+    val __obj = js.Dynamic.literal(paths = paths.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BoltCircle]
+  }
+  @scala.inline
+  implicit class BoltCircleOps[Self <: BoltCircle] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPaths(value: IPathMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

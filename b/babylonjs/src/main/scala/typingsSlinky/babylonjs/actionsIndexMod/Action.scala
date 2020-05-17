@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.actionsIndexMod
 
-import typingsSlinky.babylonjs.AnonName
+import typingsSlinky.babylonjs.anon.Name
 import typingsSlinky.babylonjs.nodeMod.Node
 import typingsSlinky.babylonjs.sceneMod.Scene
 import scala.scalajs.js
@@ -33,8 +33,8 @@ object Action extends js.Object {
     * Internal only
     * @hidden
     */
-  def _GetTargetProperty(target: Node): AnonName = js.native
-  def _GetTargetProperty(target: Scene): AnonName = js.native
+  def _GetTargetProperty(target: Node): Name = js.native
+  def _GetTargetProperty(target: Scene): Name = js.native
   /**
     * Internal only
     * @hidden

@@ -1,5 +1,6 @@
 package typingsSlinky.jpm
 
+import typingsSlinky.jpm.anon.Badge
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +12,6 @@ import scala.scalajs.js.annotation._
 @JSImport("sdk/ui/button/action", JSImport.Namespace)
 @js.native
 object actionMod extends js.Object {
-  def ActionButton(options: AnonBadge): typingsSlinky.jpm.FFAddonSDK.ActionButton = js.native
+  def ActionButton(options: Badge): typingsSlinky.jpm.FFAddonSDK.ActionButton = js.native
 }
 

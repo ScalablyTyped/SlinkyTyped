@@ -1,5 +1,7 @@
 package typingsSlinky.gapiYoutube
 
+import typingsSlinky.gapiYoutube.anon.KindPlaylistId
+import typingsSlinky.gapiYoutube.anon.Thumbnails
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +15,7 @@ trait GoogleApiYouTubeSearchResource extends js.Object {
   /**
     * The id object contains information that can be used to uniquely identify the resource that matches the search request.
     */
-  var id: AnonKindPlaylistId = js.native
+  var id: KindPlaylistId = js.native
   /**
     * The kind, fixed to "youtube#searchResult".
     */
@@ -21,12 +23,12 @@ trait GoogleApiYouTubeSearchResource extends js.Object {
   /**
     * The snippet object contains basic details about a search result, such as its title or description.
     */
-  var snippet: AnonThumbnails = js.native
+  var snippet: Thumbnails = js.native
 }
 
 object GoogleApiYouTubeSearchResource {
   @scala.inline
-  def apply(etag: String, id: AnonKindPlaylistId, kind: String, snippet: AnonThumbnails): GoogleApiYouTubeSearchResource = {
+  def apply(etag: String, id: KindPlaylistId, kind: String, snippet: Thumbnails): GoogleApiYouTubeSearchResource = {
     val __obj = js.Dynamic.literal(etag = etag.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], snippet = snippet.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleApiYouTubeSearchResource]
   }
@@ -43,7 +45,7 @@ object GoogleApiYouTubeSearchResource {
         ret
     }
     @scala.inline
-    def withId(value: AnonKindPlaylistId): Self = {
+    def withId(value: KindPlaylistId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
         ret
@@ -55,7 +57,7 @@ object GoogleApiYouTubeSearchResource {
         ret
     }
     @scala.inline
-    def withSnippet(value: AnonThumbnails): Self = {
+    def withSnippet(value: Thumbnails): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("snippet")(value.asInstanceOf[js.Any])
         ret

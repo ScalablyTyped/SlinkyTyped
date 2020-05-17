@@ -1,6 +1,7 @@
 package typingsSlinky.rmcCalendar
 
 import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.rmcCalendar.anon.TypeofHeader
 import typingsSlinky.rmcCalendar.calendarMod.default
 import typingsSlinky.rmcCalendar.calendarPropsMod.PropsType
 import typingsSlinky.rmcCalendar.dataTypesMod.Models.Locale

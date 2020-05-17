@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonComponentElementModelTarget
+import typingsSlinky.devextreme.anon.ComponentElementModelTarget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,9 +15,9 @@ trait BaseGaugeOptions[T] extends BaseWidgetOptions[T] {
   @JSName("loadingIndicator")
   var loadingIndicator_BaseGaugeOptions: js.UndefOr[BaseGaugeLoadingIndicator] = js.native
   /** A function that is executed when a tooltip becomes hidden. */
-  var onTooltipHidden: js.UndefOr[js.Function1[/* e */ AnonComponentElementModelTarget[T], _]] = js.native
+  var onTooltipHidden: js.UndefOr[js.Function1[/* e */ ComponentElementModelTarget[T], _]] = js.native
   /** A function that is executed when a tooltip appears. */
-  var onTooltipShown: js.UndefOr[js.Function1[/* e */ AnonComponentElementModelTarget[T], _]] = js.native
+  var onTooltipShown: js.UndefOr[js.Function1[/* e */ ComponentElementModelTarget[T], _]] = js.native
   /** Specifies options of the gauge's range container. */
   var rangeContainer: js.UndefOr[BaseGaugeRangeContainer] = js.native
   /** Specifies options of the gauge's scale. */
@@ -80,7 +80,7 @@ object BaseGaugeOptions {
         ret
     }
     @scala.inline
-    def withOnTooltipHidden(value: /* e */ AnonComponentElementModelTarget[T] => _): Self[T] = {
+    def withOnTooltipHidden(value: /* e */ ComponentElementModelTarget[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTooltipHidden")(js.Any.fromFunction1(value))
         ret
@@ -92,7 +92,7 @@ object BaseGaugeOptions {
         ret
     }
     @scala.inline
-    def withOnTooltipShown(value: /* e */ AnonComponentElementModelTarget[T] => _): Self[T] = {
+    def withOnTooltipShown(value: /* e */ ComponentElementModelTarget[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTooltipShown")(js.Any.fromFunction1(value))
         ret

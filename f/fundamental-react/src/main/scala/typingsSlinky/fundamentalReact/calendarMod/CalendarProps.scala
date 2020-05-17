@@ -1,7 +1,7 @@
 package typingsSlinky.fundamentalReact.calendarMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.fundamentalReact.AnonNextMonth
+import typingsSlinky.fundamentalReact.anon.NextMonth
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait CalendarProps
   var disableWeekday: js.UndefOr[js.Array[String]] = js.native
   var disableWeekends: js.UndefOr[Boolean] = js.native
   var disabledDates: js.UndefOr[js.Array[js.Date]] = js.native
-  var localizedText: js.UndefOr[AnonNextMonth] = js.native
+  var localizedText: js.UndefOr[NextMonth] = js.native
   var monthListProps: js.UndefOr[StringDictionary[js.Any]] = js.native
   var onChange: js.UndefOr[js.Function1[/* date */ js.Date, Unit]] = js.native
   var tableBodyProps: js.UndefOr[StringDictionary[js.Any]] = js.native
@@ -149,7 +149,7 @@ object CalendarProps {
         ret
     }
     @scala.inline
-    def withLocalizedText(value: AnonNextMonth): Self = {
+    def withLocalizedText(value: NextMonth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("localizedText")(value.asInstanceOf[js.Any])
         ret

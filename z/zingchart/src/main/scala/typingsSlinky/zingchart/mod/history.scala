@@ -1,6 +1,6 @@
 package typingsSlinky.zingchart.mod
 
-import typingsSlinky.zingchart.AnonShadow
+import typingsSlinky.zingchart.anon.Shadow
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -158,8 +158,8 @@ trait history extends js.Object {
     * Sets the object's height. 10 | "20px" | 0.3 | "30%" | ...
     */
   var height: js.UndefOr[js.Any] = js.native
-  var item: js.UndefOr[AnonShadow] = js.native
-  var `item-off`: js.UndefOr[AnonShadow] = js.native
+  var item: js.UndefOr[Shadow] = js.native
+  var `item-off`: js.UndefOr[Shadow] = js.native
   /**
     * Sets the object's margin/s. 10 | "5px" | "10 20" | "5px 10px 15px 20px" | ...
     */
@@ -637,7 +637,7 @@ object history {
         ret
     }
     @scala.inline
-    def withItem(value: AnonShadow): Self = {
+    def withItem(value: Shadow): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
         ret
@@ -649,7 +649,7 @@ object history {
         ret
     }
     @scala.inline
-    def `withItem-off`(value: AnonShadow): Self = {
+    def `withItem-off`(value: Shadow): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("item-off")(value.asInstanceOf[js.Any])
         ret

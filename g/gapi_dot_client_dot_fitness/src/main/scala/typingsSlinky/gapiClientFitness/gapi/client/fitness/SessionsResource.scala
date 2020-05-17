@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientFitness.gapi.client.fitness
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientFitness.AnonEndTime
-import typingsSlinky.gapiClientFitness.AnonOauthtoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientFitness.anon.EndTime
+import typingsSlinky.gapiClientFitness.anon.Oauthtoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,19 +10,19 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SessionsResource extends js.Object {
   /** Deletes a session specified by the given session ID. */
-  def delete(request: AnonOauthtoken): Request_[Unit] = js.native
+  def delete(request: Oauthtoken): Request[Unit] = js.native
   /** Lists sessions previously created. */
-  def list(request: AnonEndTime): Request_[ListSessionsResponse] = js.native
+  def list(request: EndTime): Request[ListSessionsResponse] = js.native
   /** Updates or insert a given session. */
-  def update(request: AnonOauthtoken): Request_[Session] = js.native
+  def update(request: Oauthtoken): Request[Session] = js.native
 }
 
 object SessionsResource {
   @scala.inline
   def apply(
-    delete: AnonOauthtoken => Request_[Unit],
-    list: AnonEndTime => Request_[ListSessionsResponse],
-    update: AnonOauthtoken => Request_[Session]
+    delete: Oauthtoken => Request[Unit],
+    list: EndTime => Request[ListSessionsResponse],
+    update: Oauthtoken => Request[Session]
   ): SessionsResource = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), list = js.Any.fromFunction1(list), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[SessionsResource]
@@ -34,19 +34,19 @@ object SessionsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDelete(value: AnonOauthtoken => Request_[Unit]): Self = {
+    def withDelete(value: Oauthtoken => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonEndTime => Request_[ListSessionsResponse]): Self = {
+    def withList(value: EndTime => Request[ListSessionsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonOauthtoken => Request_[Session]): Self = {
+    def withUpdate(value: Oauthtoken => Request[Session]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.ldapjs.mod
 
-import typingsSlinky.ldapjs.AnonPagePause
+import typingsSlinky.ldapjs.anon.PagePause
 import typingsSlinky.ldapjs.ldapjsStrings.base
 import typingsSlinky.ldapjs.ldapjsStrings.one
 import typingsSlinky.ldapjs.ldapjsStrings.sub
@@ -15,7 +15,7 @@ trait SearchOptions extends js.Object {
   var derefAliases: js.UndefOr[Double] = js.native
   /**  Defaults to (objectclass=*) */
   var filter: js.UndefOr[String | Filter] = js.native
-  var paged: js.UndefOr[Boolean | AnonPagePause] = js.native
+  var paged: js.UndefOr[Boolean | PagePause] = js.native
   /** Defaults to base */
   var scope: js.UndefOr[base | one | sub] = js.native
   /** Defaults to 0 (unlimited) */
@@ -74,7 +74,7 @@ object SearchOptions {
         ret
     }
     @scala.inline
-    def withPaged(value: Boolean | AnonPagePause): Self = {
+    def withPaged(value: Boolean | PagePause): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("paged")(value.asInstanceOf[js.Any])
         ret

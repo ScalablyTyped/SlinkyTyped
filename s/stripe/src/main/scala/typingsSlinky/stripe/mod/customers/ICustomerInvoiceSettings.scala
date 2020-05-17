@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.customers
 
-import typingsSlinky.stripe.AnonName
+import typingsSlinky.stripe.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait ICustomerInvoiceSettings extends js.Object {
   /**
     * Default custom fields to be displayed on invoices for this customer.
     */
-  var custom_fields: js.UndefOr[js.Array[AnonName]] = js.native
+  var custom_fields: js.UndefOr[js.Array[Name]] = js.native
   /**
     * ID of the default payment method used for subscriptions and invoices for the customer.
     */
@@ -35,7 +35,7 @@ object ICustomerInvoiceSettings {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCustom_fields(value: js.Array[AnonName]): Self = {
+    def withCustom_fields(value: js.Array[Name]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("custom_fields")(value.asInstanceOf[js.Any])
         ret

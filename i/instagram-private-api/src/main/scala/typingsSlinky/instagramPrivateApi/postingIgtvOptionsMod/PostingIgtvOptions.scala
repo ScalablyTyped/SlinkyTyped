@@ -1,8 +1,8 @@
 package typingsSlinky.instagramPrivateApi.postingIgtvOptionsMod
 
-import typingsSlinky.instagramPrivateApi.AnonBottom
-import typingsSlinky.instagramPrivateApi.PartialMediaConfigureToIg
-import typingsSlinky.instagramPrivateApi.PartialUploadVideoOptions
+import typingsSlinky.instagramPrivateApi.anon.Bottom
+import typingsSlinky.instagramPrivateApi.anon.PartialMediaConfigureToIg
+import typingsSlinky.instagramPrivateApi.anon.PartialUploadVideoOptions
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ trait PostingIgtvOptions extends js.Object {
   var caption: js.UndefOr[String] = js.native
   var configureOptions: js.UndefOr[PartialMediaConfigureToIg] = js.native
   var coverFrame: Buffer = js.native
-  var feedPreviewCrop: js.UndefOr[AnonBottom] = js.native
+  var feedPreviewCrop: js.UndefOr[Bottom] = js.native
   var maxTranscodeTries: js.UndefOr[Double] = js.native
   var shareToFeed: js.UndefOr[Boolean] = js.native
   var title: String = js.native
@@ -90,7 +90,7 @@ object PostingIgtvOptions {
         ret
     }
     @scala.inline
-    def withFeedPreviewCrop(value: AnonBottom): Self = {
+    def withFeedPreviewCrop(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("feedPreviewCrop")(value.asInstanceOf[js.Any])
         ret

@@ -2,7 +2,7 @@ package typingsSlinky.backlogJs.mod
 
 import org.scalajs.dom.experimental.Response
 import org.scalajs.dom.raw.FormData
-import typingsSlinky.backlogJs.AnonAccessToken
+import typingsSlinky.backlogJs.anon.AccessToken
 import typingsSlinky.backlogJs.mod.Entity.File.FileData
 import typingsSlinky.backlogJs.mod.Option.Group.GetGroupsParams
 import typingsSlinky.backlogJs.mod.Option.Group.PatchGroupParams
@@ -68,7 +68,7 @@ import scala.scalajs.js.annotation._
 @JSImport("backlog-js", "Backlog")
 @js.native
 class Backlog protected () extends Request {
-  def this(configure: AnonAccessToken) = this()
+  def this(configure: AccessToken) = this()
   def deleteCategories(projectIdOrKey: String, id: Double): js.Promise[_] = js.native
   def deleteCustomField(projectIdOrKey: String, id: Double): js.Promise[_] = js.native
   def deleteCustomFieldItem(projectIdOrKey: String, id: Double, params: PostCustomFieldItemParams): js.Promise[_] = js.native

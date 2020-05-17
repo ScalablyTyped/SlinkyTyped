@@ -1,7 +1,7 @@
 package typingsSlinky.reactInstantsearch
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactInstantsearchNative.mod.InstantSearchProps
+import typingsSlinky.reactInstantsearchCore.mod.InstantSearchProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

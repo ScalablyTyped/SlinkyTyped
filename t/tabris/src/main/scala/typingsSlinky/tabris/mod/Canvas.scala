@@ -1,7 +1,7 @@
 package typingsSlinky.tabris.mod
 
 import typingsSlinky.tabris.Blob
-import typingsSlinky.tabris.OmitCanvasset
+import typingsSlinky.tabris.anon.OmitCanvasset
 import typingsSlinky.tabris.tabrisStrings.imageSlashjpeg
 import typingsSlinky.tabris.tabrisStrings.imageSlashpng
 import typingsSlinky.tabris.tabrisStrings.imageSlashwebp

@@ -1,6 +1,6 @@
 package typingsSlinky.cathoQuantum.circularLoaderMod
 
-import typingsSlinky.cathoQuantum.AnonGutter
+import typingsSlinky.cathoQuantum.anon.Gutter
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.large
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.medium
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.primary
@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
 trait CircularLoaderProps extends js.Object {
   var size: js.UndefOr[medium | large | xlarge | xxlarge | xxxlarge] = js.native
   var skin: js.UndefOr[primary | secondary] = js.native
-  var theme: js.UndefOr[AnonGutter] = js.native
+  var theme: js.UndefOr[Gutter] = js.native
 }
 
 object CircularLoaderProps {
@@ -56,7 +56,7 @@ object CircularLoaderProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonGutter): Self = {
+    def withTheme(value: Gutter): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

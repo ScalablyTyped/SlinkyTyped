@@ -5,8 +5,8 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactStripeElements.mod.ReactStripeElements.ElementChangeResponse
 import typingsSlinky.reactStripeElements.mod.ReactStripeElements.HTMLStripeElement
-import typingsSlinky.stripeV3.AnonBase
-import typingsSlinky.stripeV3.AnonComplete
+import typingsSlinky.stripeV3.anon.Base
+import typingsSlinky.stripeV3.anon.Complete
 import typingsSlinky.stripeV3.stripe.paymentRequest.StripePaymentRequest
 import typingsSlinky.stripeV3.stripeV3Strings.default
 import typingsSlinky.stripeV3.stripeV3Strings.solid
@@ -21,7 +21,7 @@ class SharedBuilder_ElementProps_2011987615[R <: js.Object] (val args: js.Array[
   @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   @scala.inline
-  def classes(value: AnonBase): this.type = set("classes", value.asInstanceOf[js.Any])
+  def classes(value: Base): this.type = set("classes", value.asInstanceOf[js.Any])
   @scala.inline
   def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
   @scala.inline
@@ -49,7 +49,7 @@ class SharedBuilder_ElementProps_2011987615[R <: js.Object] (val args: js.Array[
   @scala.inline
   def placeholderCountry(value: String): this.type = set("placeholderCountry", value.asInstanceOf[js.Any])
   @scala.inline
-  def style(value: AnonComplete): this.type = set("style", value.asInstanceOf[js.Any])
+  def style(value: Complete): this.type = set("style", value.asInstanceOf[js.Any])
   @scala.inline
   def supportedCountries(value: js.Array[String]): this.type = set("supportedCountries", value.asInstanceOf[js.Any])
   @scala.inline

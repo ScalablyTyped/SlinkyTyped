@@ -24,5 +24,5 @@ package object typesMod {
     /* testPath */ java.lang.String, 
     js.Promise[typingsSlinky.jestTestResult.typesMod.TestResult]
   ]
-  type TestRunData = js.Array[typingsSlinky.jestReporters.AnonContext]
+  type TestRunData = js.Array[typingsSlinky.jestReporters.anon.Context]
 }

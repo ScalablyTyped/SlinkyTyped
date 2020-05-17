@@ -1,6 +1,6 @@
 package typingsSlinky.reactBootstrapTable.mod
 
-import typingsSlinky.reactBootstrapTable.AnonPageList
+import typingsSlinky.reactBootstrapTable.anon.PageList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait PaginationPanelProps extends js.Object {
   	 * The basic components for the pagination panel, provided here so that you have the option to use some of them
   	 * if you don't want to customize all of them.
   	 */
-  var components: AnonPageList = js.native
+  var components: PageList = js.native
   /**
   	 * Current page number
   	 */
@@ -48,7 +48,7 @@ object PaginationPanelProps {
   def apply(
     changePage: Double => Unit,
     changeSizePerPage: Double => Unit,
-    components: AnonPageList,
+    components: PageList,
     currPage: Double,
     pageStartIndex: Double,
     sizePerPage: Double,
@@ -77,7 +77,7 @@ object PaginationPanelProps {
         ret
     }
     @scala.inline
-    def withComponents(value: AnonPageList): Self = {
+    def withComponents(value: PageList): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("components")(value.asInstanceOf[js.Any])
         ret

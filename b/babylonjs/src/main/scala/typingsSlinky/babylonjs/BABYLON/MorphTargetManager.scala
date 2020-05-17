@@ -4,14 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.MorphTargetManager")
 @js.native
-/**
-  * Creates a new MorphTargetManager
-  * @param scene defines the current scene
-  */
-class MorphTargetManager () extends js.Object {
-  def this(scene: Nullable[Scene]) = this()
+trait MorphTargetManager extends js.Object {
   var _activeTargets: js.Any = js.native
   var _influences: js.Any = js.native
   var _scene: js.Any = js.native
@@ -102,16 +96,230 @@ class MorphTargetManager () extends js.Object {
   def vertexCount: Double = js.native
 }
 
-/* static members */
-@JSGlobal("BABYLON.MorphTargetManager")
-@js.native
-object MorphTargetManager extends js.Object {
-  /**
-    * Creates a new MorphTargetManager from serialized data
-    * @param serializationObject defines the serialized data
-    * @param scene defines the hosting scene
-    * @returns the new MorphTargetManager
-    */
-  def Parse(serializationObject: js.Any, scene: Scene): MorphTargetManager = js.native
+object MorphTargetManager {
+  @scala.inline
+  def apply(
+    _activeTargets: js.Any,
+    _influences: js.Any,
+    _scene: js.Any,
+    _supportsNormals: js.Any,
+    _supportsTangents: js.Any,
+    _supportsUVs: js.Any,
+    _syncActiveTargets: js.Any,
+    _targetDataLayoutChangedObservers: js.Any,
+    _targetInfluenceChangedObservers: js.Any,
+    _targets: js.Any,
+    _tempInfluences: js.Any,
+    _uniqueId: js.Any,
+    _vertexCount: js.Any,
+    addTarget: MorphTarget => Unit,
+    enableNormalMorphing: Boolean,
+    enableTangentMorphing: Boolean,
+    enableUVMorphing: Boolean,
+    getActiveTarget: Double => MorphTarget,
+    getTarget: Double => MorphTarget,
+    influences: () => js.typedarray.Float32Array,
+    numInfluencers: () => Double,
+    numTargets: () => Double,
+    removeTarget: MorphTarget => Unit,
+    serialize: () => js.Any,
+    supportsNormals: () => Boolean,
+    supportsTangents: () => Boolean,
+    supportsUVs: () => Boolean,
+    synchronize: () => Unit,
+    uniqueId: () => Double,
+    vertexCount: () => Double
+  ): MorphTargetManager = {
+    val __obj = js.Dynamic.literal(_activeTargets = _activeTargets.asInstanceOf[js.Any], _influences = _influences.asInstanceOf[js.Any], _scene = _scene.asInstanceOf[js.Any], _supportsNormals = _supportsNormals.asInstanceOf[js.Any], _supportsTangents = _supportsTangents.asInstanceOf[js.Any], _supportsUVs = _supportsUVs.asInstanceOf[js.Any], _syncActiveTargets = _syncActiveTargets.asInstanceOf[js.Any], _targetDataLayoutChangedObservers = _targetDataLayoutChangedObservers.asInstanceOf[js.Any], _targetInfluenceChangedObservers = _targetInfluenceChangedObservers.asInstanceOf[js.Any], _targets = _targets.asInstanceOf[js.Any], _tempInfluences = _tempInfluences.asInstanceOf[js.Any], _uniqueId = _uniqueId.asInstanceOf[js.Any], _vertexCount = _vertexCount.asInstanceOf[js.Any], addTarget = js.Any.fromFunction1(addTarget), enableNormalMorphing = enableNormalMorphing.asInstanceOf[js.Any], enableTangentMorphing = enableTangentMorphing.asInstanceOf[js.Any], enableUVMorphing = enableUVMorphing.asInstanceOf[js.Any], getActiveTarget = js.Any.fromFunction1(getActiveTarget), getTarget = js.Any.fromFunction1(getTarget), influences = js.Any.fromFunction0(influences), numInfluencers = js.Any.fromFunction0(numInfluencers), numTargets = js.Any.fromFunction0(numTargets), removeTarget = js.Any.fromFunction1(removeTarget), serialize = js.Any.fromFunction0(serialize), supportsNormals = js.Any.fromFunction0(supportsNormals), supportsTangents = js.Any.fromFunction0(supportsTangents), supportsUVs = js.Any.fromFunction0(supportsUVs), synchronize = js.Any.fromFunction0(synchronize), uniqueId = js.Any.fromFunction0(uniqueId), vertexCount = js.Any.fromFunction0(vertexCount))
+    __obj.asInstanceOf[MorphTargetManager]
+  }
+  @scala.inline
+  implicit class MorphTargetManagerOps[Self <: MorphTargetManager] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_activeTargets(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_activeTargets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_influences(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_influences")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_scene(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_scene")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_supportsNormals(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_supportsNormals")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_supportsTangents(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_supportsTangents")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_supportsUVs(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_supportsUVs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_syncActiveTargets(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_syncActiveTargets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_targetDataLayoutChangedObservers(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_targetDataLayoutChangedObservers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_targetInfluenceChangedObservers(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_targetInfluenceChangedObservers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_targets(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_targets")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_tempInfluences(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_tempInfluences")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_uniqueId(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_uniqueId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_vertexCount(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_vertexCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAddTarget(value: MorphTarget => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addTarget")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEnableNormalMorphing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableNormalMorphing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnableTangentMorphing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableTangentMorphing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnableUVMorphing(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enableUVMorphing")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetActiveTarget(value: Double => MorphTarget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getActiveTarget")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetTarget(value: Double => MorphTarget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTarget")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInfluences(value: () => js.typedarray.Float32Array): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("influences")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNumInfluencers(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numInfluencers")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNumTargets(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numTargets")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveTarget(value: MorphTarget => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeTarget")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSerialize(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serialize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSupportsNormals(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsNormals")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSupportsTangents(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsTangents")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSupportsUVs(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("supportsUVs")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSynchronize(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("synchronize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUniqueId(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueId")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withVertexCount(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("vertexCount")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

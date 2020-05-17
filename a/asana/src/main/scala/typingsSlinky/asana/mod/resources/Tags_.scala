@@ -1,6 +1,6 @@
 package typingsSlinky.asana.mod.resources
 
-import typingsSlinky.asana.Typeworkspacestring
+import typingsSlinky.asana.anon.Typeworkspacestring
 import typingsSlinky.asana.mod.resources.Tags.FindAllParams
 import typingsSlinky.asana.mod.resources.Tags.Type
 import scala.scalajs.js

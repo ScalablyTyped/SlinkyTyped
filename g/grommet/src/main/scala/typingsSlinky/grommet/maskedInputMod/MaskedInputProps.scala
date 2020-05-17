@@ -3,7 +3,7 @@ package typingsSlinky.grommet.maskedInputMod
 import org.scalajs.dom.raw.Element
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
-import typingsSlinky.grommet.AnonFixed
+import typingsSlinky.grommet.anon.Fixed
 import typingsSlinky.grommet.grommetStrings.large
 import typingsSlinky.grommet.grommetStrings.medium
 import typingsSlinky.grommet.grommetStrings.small
@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
 trait MaskedInputProps extends js.Object {
   var icon: js.UndefOr[ReactElement] = js.native
   var id: js.UndefOr[String] = js.native
-  var mask: js.UndefOr[js.Array[AnonFixed]] = js.native
+  var mask: js.UndefOr[js.Array[Fixed]] = js.native
   var name: js.UndefOr[String] = js.native
   var onBlur: js.UndefOr[js.Function1[/* event */ SyntheticFocusEvent[Element], _]] = js.native
   var plain: js.UndefOr[Boolean] = js.native
@@ -62,7 +62,7 @@ object MaskedInputProps {
         ret
     }
     @scala.inline
-    def withMask(value: js.Array[AnonFixed]): Self = {
+    def withMask(value: js.Array[Fixed]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mask")(value.asInstanceOf[js.Any])
         ret

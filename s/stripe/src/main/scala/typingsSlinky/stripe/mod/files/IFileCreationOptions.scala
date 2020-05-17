@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.files
 
-import typingsSlinky.stripe.AnonData
+import typingsSlinky.stripe.anon.Data
 import typingsSlinky.stripe.mod.IDataOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait IFileCreationOptions extends IDataOptions {
-  var file: AnonData = js.native
+  var file: Data = js.native
   var purpose: IPurpose = js.native
 }
 
 object IFileCreationOptions {
   @scala.inline
-  def apply(file: AnonData, purpose: IPurpose): IFileCreationOptions = {
+  def apply(file: Data, purpose: IPurpose): IFileCreationOptions = {
     val __obj = js.Dynamic.literal(file = file.asInstanceOf[js.Any], purpose = purpose.asInstanceOf[js.Any])
     __obj.asInstanceOf[IFileCreationOptions]
   }
@@ -25,7 +25,7 @@ object IFileCreationOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFile(value: AnonData): Self = {
+    def withFile(value: Data): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("file")(value.asInstanceOf[js.Any])
         ret

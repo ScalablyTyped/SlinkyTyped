@@ -1,6 +1,6 @@
 package typingsSlinky.intercomWeb
 
-import typingsSlinky.intercomWeb.Intercom_.IntercomCommand
+import typingsSlinky.intercomWeb.Intercom.IntercomCommand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

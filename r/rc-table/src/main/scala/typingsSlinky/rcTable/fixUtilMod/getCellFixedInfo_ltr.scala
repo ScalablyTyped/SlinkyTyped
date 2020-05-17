@@ -1,6 +1,6 @@
 package typingsSlinky.rcTable.fixUtilMod
 
-import typingsSlinky.rcTable.AnonFixed
+import typingsSlinky.rcTable.anon.Fixed
 import typingsSlinky.rcTable.interfaceMod.StickyOffsets
 import typingsSlinky.rcTable.rcTableStrings.ltr
 import scala.scalajs.js
@@ -13,7 +13,7 @@ object getCellFixedInfo_ltr extends js.Object {
   def apply(
     colStart: Double,
     colEnd: Double,
-    columns: js.Array[AnonFixed],
+    columns: js.Array[Fixed],
     stickyOffsets: StickyOffsets,
     direction: ltr
   ): FixedInfo = js.native

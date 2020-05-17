@@ -1,6 +1,5 @@
 package typingsSlinky.cleanCss.mod
 
-import typingsSlinky.cleanCss.cleanCssBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,14 +18,8 @@ trait Options extends js.Object
 
 object Options {
   @scala.inline
-  def OptionsPromise(returnPromise: `true`): Options = {
-    val __obj = js.Dynamic.literal(returnPromise = returnPromise.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Options]
-  }
+  implicit def apply(value: OptionsOutput): Options = value.asInstanceOf[Options]
   @scala.inline
-  def OptionsOutput(): Options = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Options]
-  }
+  implicit def apply(value: OptionsPromise): Options = value.asInstanceOf[Options]
 }
 

@@ -4,17 +4,17 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonColumns
-import typingsSlinky.primereact.AnonData
-import typingsSlinky.primereact.AnonDataField
-import typingsSlinky.primereact.AnonDataIndex
-import typingsSlinky.primereact.AnonDataOriginalEvent
-import typingsSlinky.primereact.AnonDelta
-import typingsSlinky.primereact.AnonDragIndex
-import typingsSlinky.primereact.AnonFirst
-import typingsSlinky.primereact.AnonMultiSortMeta
-import typingsSlinky.primereact.AnonType
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.Columns
+import typingsSlinky.primereact.anon.Data
+import typingsSlinky.primereact.anon.DataField
+import typingsSlinky.primereact.anon.DataIndex
+import typingsSlinky.primereact.anon.DataOriginalEvent
+import typingsSlinky.primereact.anon.Delta
+import typingsSlinky.primereact.anon.DragIndex
+import typingsSlinky.primereact.anon.First
+import typingsSlinky.primereact.anon.MultiSortMeta
+import typingsSlinky.primereact.anon.Type
+import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.dataTableMod.DataTableProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -60,7 +60,7 @@ object DataTable {
     @scala.inline
     def exportFilename(value: String): this.type = set("exportFilename", value.asInstanceOf[js.Any])
     @scala.inline
-    def exportFunction(value: /* e */ AnonDataField => _): this.type = set("exportFunction", js.Any.fromFunction1(value))
+    def exportFunction(value: /* e */ DataField => _): this.type = set("exportFunction", js.Any.fromFunction1(value))
     @scala.inline
     def filters(value: js.Object): this.type = set("filters", value.asInstanceOf[js.Any])
     @scala.inline
@@ -98,47 +98,47 @@ object DataTable {
     @scala.inline
     def multiSortMeta(value: js.Array[_]): this.type = set("multiSortMeta", value.asInstanceOf[js.Any])
     @scala.inline
-    def onColReorder(value: /* e */ AnonColumns => Unit): this.type = set("onColReorder", js.Any.fromFunction1(value))
+    def onColReorder(value: /* e */ Columns => Unit): this.type = set("onColReorder", js.Any.fromFunction1(value))
     @scala.inline
-    def onColumnResizeEnd(value: /* e */ AnonDelta => Unit): this.type = set("onColumnResizeEnd", js.Any.fromFunction1(value))
+    def onColumnResizeEnd(value: /* e */ Delta => Unit): this.type = set("onColumnResizeEnd", js.Any.fromFunction1(value))
     @scala.inline
-    def onContextMenu(value: /* e */ AnonDataOriginalEvent => Unit): this.type = set("onContextMenu", js.Any.fromFunction1(value))
+    def onContextMenu(value: /* e */ DataOriginalEvent => Unit): this.type = set("onContextMenu", js.Any.fromFunction1(value))
     @scala.inline
-    def onContextMenuSelectionChange(value: /* e */ AnonValue => Unit): this.type = set("onContextMenuSelectionChange", js.Any.fromFunction1(value))
+    def onContextMenuSelectionChange(value: /* e */ Value => Unit): this.type = set("onContextMenuSelectionChange", js.Any.fromFunction1(value))
     @scala.inline
     def onFilter(value: /* filters */ js.Array[_] => Unit): this.type = set("onFilter", js.Any.fromFunction1(value))
     @scala.inline
-    def onPage(value: /* e */ AnonFirst => Unit): this.type = set("onPage", js.Any.fromFunction1(value))
+    def onPage(value: /* e */ First => Unit): this.type = set("onPage", js.Any.fromFunction1(value))
     @scala.inline
-    def onRowClick(value: /* e */ AnonDataIndex => Unit): this.type = set("onRowClick", js.Any.fromFunction1(value))
+    def onRowClick(value: /* e */ DataIndex => Unit): this.type = set("onRowClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onRowCollapse(value: /* e */ AnonDataOriginalEvent => Unit): this.type = set("onRowCollapse", js.Any.fromFunction1(value))
+    def onRowCollapse(value: /* e */ DataOriginalEvent => Unit): this.type = set("onRowCollapse", js.Any.fromFunction1(value))
     @scala.inline
-    def onRowDoubleClick(value: /* e */ AnonDataIndex => Unit): this.type = set("onRowDoubleClick", js.Any.fromFunction1(value))
+    def onRowDoubleClick(value: /* e */ DataIndex => Unit): this.type = set("onRowDoubleClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onRowEditCancel(value: /* e */ AnonDataIndex => Unit): this.type = set("onRowEditCancel", js.Any.fromFunction1(value))
+    def onRowEditCancel(value: /* e */ DataIndex => Unit): this.type = set("onRowEditCancel", js.Any.fromFunction1(value))
     @scala.inline
-    def onRowEditInit(value: /* e */ AnonDataOriginalEvent => Unit): this.type = set("onRowEditInit", js.Any.fromFunction1(value))
+    def onRowEditInit(value: /* e */ DataOriginalEvent => Unit): this.type = set("onRowEditInit", js.Any.fromFunction1(value))
     @scala.inline
-    def onRowEditSave(value: /* e */ AnonDataOriginalEvent => Unit): this.type = set("onRowEditSave", js.Any.fromFunction1(value))
+    def onRowEditSave(value: /* e */ DataOriginalEvent => Unit): this.type = set("onRowEditSave", js.Any.fromFunction1(value))
     @scala.inline
-    def onRowExpand(value: /* e */ AnonDataOriginalEvent => Unit): this.type = set("onRowExpand", js.Any.fromFunction1(value))
+    def onRowExpand(value: /* e */ DataOriginalEvent => Unit): this.type = set("onRowExpand", js.Any.fromFunction1(value))
     @scala.inline
-    def onRowReorder(value: /* e */ AnonDragIndex => Unit): this.type = set("onRowReorder", js.Any.fromFunction1(value))
+    def onRowReorder(value: /* e */ DragIndex => Unit): this.type = set("onRowReorder", js.Any.fromFunction1(value))
     @scala.inline
-    def onRowSelect(value: /* e */ AnonType => Unit): this.type = set("onRowSelect", js.Any.fromFunction1(value))
+    def onRowSelect(value: /* e */ Type => Unit): this.type = set("onRowSelect", js.Any.fromFunction1(value))
     @scala.inline
-    def onRowToggle(value: /* e */ AnonData => Unit): this.type = set("onRowToggle", js.Any.fromFunction1(value))
+    def onRowToggle(value: /* e */ Data => Unit): this.type = set("onRowToggle", js.Any.fromFunction1(value))
     @scala.inline
-    def onRowUnselect(value: /* e */ AnonType => Unit): this.type = set("onRowUnselect", js.Any.fromFunction1(value))
+    def onRowUnselect(value: /* e */ Type => Unit): this.type = set("onRowUnselect", js.Any.fromFunction1(value))
     @scala.inline
-    def onSelectionChange(value: /* e */ AnonValue => Unit): this.type = set("onSelectionChange", js.Any.fromFunction1(value))
+    def onSelectionChange(value: /* e */ Value => Unit): this.type = set("onSelectionChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onSort(value: /* e */ AnonMultiSortMeta => Unit): this.type = set("onSort", js.Any.fromFunction1(value))
+    def onSort(value: /* e */ MultiSortMeta => Unit): this.type = set("onSort", js.Any.fromFunction1(value))
     @scala.inline
     def onValueChange(value: /* value */ js.Array[_] => Unit): this.type = set("onValueChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onVirtualScroll(value: /* e */ AnonFirst => Unit): this.type = set("onVirtualScroll", js.Any.fromFunction1(value))
+    def onVirtualScroll(value: /* e */ First => Unit): this.type = set("onVirtualScroll", js.Any.fromFunction1(value))
     @scala.inline
     def pageLinkSize(value: Double): this.type = set("pageLinkSize", value.asInstanceOf[js.Any])
     @scala.inline

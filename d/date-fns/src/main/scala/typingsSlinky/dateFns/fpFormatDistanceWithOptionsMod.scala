@@ -1,6 +1,7 @@
 package typingsSlinky.dateFns
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.dateFns.anon.AddSuffixIncludeSeconds
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,9 +11,7 @@ import scala.scalajs.js.annotation._
 object fpFormatDistanceWithOptionsMod extends js.Object {
   @js.native
   object default
-    extends TopLevel[
-          CurriedFn3[AnonAddSuffixIncludeSeconds, js.Date | Double, js.Date | Double, String]
-        ]
+    extends TopLevel[CurriedFn3[AddSuffixIncludeSeconds, js.Date | Double, js.Date | Double, String]]
   
 }
 

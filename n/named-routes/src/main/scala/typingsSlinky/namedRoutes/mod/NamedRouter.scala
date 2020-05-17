@@ -8,7 +8,7 @@ import typingsSlinky.express.mod.Response_
 import typingsSlinky.express.mod.Router
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
-import typingsSlinky.namedRoutes.PartialRouteOptions
+import typingsSlinky.namedRoutes.anon.PartialRouteOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

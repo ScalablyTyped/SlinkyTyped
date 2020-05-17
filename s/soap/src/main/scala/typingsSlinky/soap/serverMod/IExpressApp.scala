@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IExpressApp extends js.Object {
+trait IExpressApp extends ServerType {
   var route: js.Any = js.native
   var use: js.Any = js.native
 }

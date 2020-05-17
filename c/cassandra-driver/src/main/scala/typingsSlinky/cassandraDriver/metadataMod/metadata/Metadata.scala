@@ -1,8 +1,8 @@
 package typingsSlinky.cassandraDriver.metadataMod.metadata
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.cassandraDriver.AnonInfo
-import typingsSlinky.cassandraDriver.AnonName
+import typingsSlinky.cassandraDriver.anon.Info
+import typingsSlinky.cassandraDriver.anon.Name
 import typingsSlinky.cassandraDriver.mod.EmptyCallback
 import typingsSlinky.cassandraDriver.mod.Host
 import typingsSlinky.cassandraDriver.mod.ValueCallback
@@ -18,22 +18,22 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Metadata extends js.Object {
-  var keyspaces: StringDictionary[AnonName] = js.native
+  var keyspaces: StringDictionary[Name] = js.native
   def clearPrepared(): Unit = js.native
-  def getAggregate(keyspaceName: String, name: String, signature: js.Array[AnonInfo | String]): js.Promise[Aggregate] = js.native
+  def getAggregate(keyspaceName: String, name: String, signature: js.Array[Info | String]): js.Promise[Aggregate] = js.native
   def getAggregate(
     keyspaceName: String,
     name: String,
-    signature: js.Array[AnonInfo | String],
+    signature: js.Array[Info | String],
     callback: ValueCallback[Aggregate]
   ): Unit = js.native
   def getAggregates(keyspaceName: String, name: String): js.Promise[js.Array[Aggregate]] = js.native
   def getAggregates(keyspaceName: String, name: String, callback: ValueCallback[js.Array[Aggregate]]): Unit = js.native
-  def getFunction(keyspaceName: String, name: String, signature: js.Array[AnonInfo | String]): js.Promise[SchemaFunction] = js.native
+  def getFunction(keyspaceName: String, name: String, signature: js.Array[Info | String]): js.Promise[SchemaFunction] = js.native
   def getFunction(
     keyspaceName: String,
     name: String,
-    signature: js.Array[AnonInfo | String],
+    signature: js.Array[Info | String],
     callback: ValueCallback[SchemaFunction]
   ): Unit = js.native
   def getFunctions(keyspaceName: String, name: String): js.Promise[js.Array[SchemaFunction]] = js.native

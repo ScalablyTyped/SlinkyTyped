@@ -1,6 +1,6 @@
 package typingsSlinky.agGrid.componentMetadataProviderMod
 
-import typingsSlinky.agGrid.AnonInstantiableIComponent
+import typingsSlinky.agGrid.anon.InstantiableIComponent
 import typingsSlinky.agGrid.componentProviderMod.AgGridComponentFunctionInput
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ComponentMetadata extends js.Object {
   var functionAdapter: js.UndefOr[
-    js.Function1[/* callback */ AgGridComponentFunctionInput, AnonInstantiableIComponent]
+    js.Function1[/* callback */ AgGridComponentFunctionInput, InstantiableIComponent]
   ] = js.native
   var mandatoryMethodList: js.Array[String] = js.native
   var optionalMethodList: js.Array[String] = js.native
@@ -40,7 +40,7 @@ object ComponentMetadata {
         ret
     }
     @scala.inline
-    def withFunctionAdapter(value: /* callback */ AgGridComponentFunctionInput => AnonInstantiableIComponent): Self = {
+    def withFunctionAdapter(value: /* callback */ AgGridComponentFunctionInput => InstantiableIComponent): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("functionAdapter")(js.Any.fromFunction1(value))
         ret

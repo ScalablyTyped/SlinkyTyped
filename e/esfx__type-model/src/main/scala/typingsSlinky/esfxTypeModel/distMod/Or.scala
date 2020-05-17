@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait Or[A /* <: Boolean */, B /* <: Boolean */] extends js.Object
 
+object Or {
+  @scala.inline
+  def `false`[A, B]: typingsSlinky.esfxTypeModel.esfxTypeModelBooleans.`false` = false.asInstanceOf[typingsSlinky.esfxTypeModel.esfxTypeModelBooleans.`false`]
+  @scala.inline
+  def `true`[A, B]: typingsSlinky.esfxTypeModel.esfxTypeModelBooleans.`true` = true.asInstanceOf[typingsSlinky.esfxTypeModel.esfxTypeModelBooleans.`true`]
+}
+

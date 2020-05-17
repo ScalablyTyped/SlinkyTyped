@@ -12,11 +12,7 @@ object Lib {
   @js.native
   object component extends js.Object
   
-  def withProps(p: DropdownProps with RefAttributes[js.Any]): `SharedBuilder_<intersection>821852308`[Ref[js.Any] with js.Object] = new `SharedBuilder_<intersection>821852308`[Ref[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-  @scala.inline
-  def apply(getPopupContainer: js.Any): `SharedBuilder_<intersection>821852308`[Ref[js.Any] with js.Object] = {
-    val __props = js.Dynamic.literal(getPopupContainer = getPopupContainer.asInstanceOf[js.Any])
-    new `SharedBuilder_<intersection>821852308`[Ref[js.Any] with js.Object](js.Array(this.component, __props.asInstanceOf[DropdownProps with RefAttributes[js.Any]]))
-  }
+  def withProps(p: DropdownProps with RefAttributes[js.Any]): `SharedBuilder_<intersection>821852308`[Ref[js.Any]] = new `SharedBuilder_<intersection>821852308`[Ref[js.Any]](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Lib.type): `SharedBuilder_<intersection>821852308`[Ref[js.Any]] = new `SharedBuilder_<intersection>821852308`[Ref[js.Any]](js.Array(this.component, js.Dictionary.empty))()
 }
 

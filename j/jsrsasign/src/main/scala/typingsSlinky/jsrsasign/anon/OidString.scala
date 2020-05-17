@@ -1,0 +1,33 @@
+package typingsSlinky.jsrsasign.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait OidString extends js.Object {
+  var oid: String = js.native
+}
+
+object OidString {
+  @scala.inline
+  def apply(oid: String): OidString = {
+    val __obj = js.Dynamic.literal(oid = oid.asInstanceOf[js.Any])
+    __obj.asInstanceOf[OidString]
+  }
+  @scala.inline
+  implicit class OidStringOps[Self <: OidString] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOid(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oid")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

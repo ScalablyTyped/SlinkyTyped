@@ -1,7 +1,7 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonBottom
-import typingsSlinky.devextreme.AnonFontOffset
+import typingsSlinky.devextreme.anon.Bottom
+import typingsSlinky.devextreme.anon.FontOffset
 import typingsSlinky.devextreme.devextremeStrings.bottom
 import typingsSlinky.devextreme.devextremeStrings.breakWord
 import typingsSlinky.devextreme.devextremeStrings.center
@@ -24,11 +24,11 @@ trait BaseWidgetTitle extends js.Object {
   /** Specifies the title's alignment in a horizontal direction. */
   var horizontalAlignment: js.UndefOr[center | left | right] = js.native
   /** Generates space around the title. */
-  var margin: js.UndefOr[Double | AnonBottom] = js.native
+  var margin: js.UndefOr[Double | Bottom] = js.native
   /** Reserves a pixel-measured space for the title. */
   var placeholderSize: js.UndefOr[Double] = js.native
   /** Configures the widget's subtitle. */
-  var subtitle: js.UndefOr[AnonFontOffset | String] = js.native
+  var subtitle: js.UndefOr[FontOffset | String] = js.native
   /** Specifies the title's text. */
   var text: js.UndefOr[String] = js.native
   /** Specifies what to do with the title when it overflows the allocated space after applying wordWrap: hide, truncate it and display an ellipsis, or do nothing. */
@@ -76,7 +76,7 @@ object BaseWidgetTitle {
         ret
     }
     @scala.inline
-    def withMargin(value: Double | AnonBottom): Self = {
+    def withMargin(value: Double | Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
         ret
@@ -100,7 +100,7 @@ object BaseWidgetTitle {
         ret
     }
     @scala.inline
-    def withSubtitle(value: AnonFontOffset | String): Self = {
+    def withSubtitle(value: FontOffset | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("subtitle")(value.asInstanceOf[js.Any])
         ret

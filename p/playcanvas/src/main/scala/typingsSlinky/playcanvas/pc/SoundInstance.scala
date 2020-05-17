@@ -2,7 +2,6 @@ package typingsSlinky.playcanvas.pc
 
 import org.scalajs.dom.raw.AudioBufferSourceNode
 import org.scalajs.dom.raw.AudioNode
-import typingsSlinky.playcanvas.AnonDuration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,10 +37,8 @@ import scala.scalajs.js.annotation._
   * @property {AudioBufferSourceNode} source Gets the source that plays the sound resource. If the Web Audio API is not supported the type of source is <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio" target="_blank">Audio</a>. Source is only available after calling play.
   * @property {pc.Sound} sound The sound resource that the instance will play.
   */
-@JSGlobal("pc.SoundInstance")
 @js.native
-class SoundInstance protected () extends EventHandler {
-  def this(manager: SoundManager, sound: Sound, options: AnonDuration) = this()
+trait SoundInstance extends EventHandler {
   /**
     * Gets or sets the current time of the sound that is playing. If the value provided is bigger than the duration of the instance it will wrap from the beginning.
     */

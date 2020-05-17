@@ -1,7 +1,7 @@
 package typingsSlinky.angularCompiler.srcCompilerMod
 
-import typingsSlinky.angularCompiler.AnonChangeDetection
-import typingsSlinky.angularCompiler.AnonComponentFactory
+import typingsSlinky.angularCompiler.anon.ChangeDetection
+import typingsSlinky.angularCompiler.anon.ComponentFactory
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class CompileDirectiveMetadata protected ()
   extends typingsSlinky.angularCompiler.compileMetadataMod.CompileDirectiveMetadata {
-  def this(hasIsHostTypeIsComponentSelectorExportAsChangeDetectionInputsOutputsHostListenersHostPropertiesHostAttributesProvidersViewProvidersQueriesGuardsViewQueriesEntryComponentsTemplateComponentViewTypeRendererTypeComponentFactory: AnonComponentFactory) = this()
+  def this(hasIsHostTypeIsComponentSelectorExportAsChangeDetectionInputsOutputsHostListenersHostPropertiesHostAttributesProvidersViewProvidersQueriesGuardsViewQueriesEntryComponentsTemplateComponentViewTypeRendererTypeComponentFactory: ComponentFactory) = this()
 }
 
 /* static members */
@@ -18,7 +18,7 @@ class CompileDirectiveMetadata protected ()
 @js.native
 object CompileDirectiveMetadata extends js.Object {
   def create(
-    hasIsHostTypeIsComponentSelectorExportAsChangeDetectionInputsOutputsHostProvidersViewProvidersQueriesGuardsViewQueriesEntryComponentsTemplateComponentViewTypeRendererTypeComponentFactory: AnonChangeDetection
+    hasIsHostTypeIsComponentSelectorExportAsChangeDetectionInputsOutputsHostProvidersViewProvidersQueriesGuardsViewQueriesEntryComponentsTemplateComponentViewTypeRendererTypeComponentFactory: ChangeDetection
   ): typingsSlinky.angularCompiler.compileMetadataMod.CompileDirectiveMetadata = js.native
 }
 

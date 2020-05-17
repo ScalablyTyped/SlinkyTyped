@@ -1,7 +1,7 @@
 package typingsSlinky.node.tlsMod
 
-import typingsSlinky.node.AnonRejectUnauthorized
 import typingsSlinky.node.Buffer
+import typingsSlinky.node.anon.RejectUnauthorized
 import typingsSlinky.node.netMod.Socket
 import typingsSlinky.node.nodeBooleans.`false`
 import typingsSlinky.node.nodeBooleans.`true`
@@ -226,7 +226,7 @@ class TLSSocket protected () extends Socket {
     * is successfully completed.
     * @return `undefined` when socket is destroy, `false` if negotiaion can't be initiated.
     */
-  def renegotiate(options: AnonRejectUnauthorized, callback: js.Function1[/* err */ js.Error | Null, Unit]): js.UndefOr[Boolean] = js.native
+  def renegotiate(options: RejectUnauthorized, callback: js.Function1[/* err */ js.Error | Null, Unit]): js.UndefOr[Boolean] = js.native
   /**
     * Set maximum TLS fragment size (default and maximum value is: 16384, minimum is: 512).
     * Smaller fragment size decreases buffering latency on the client: large fragments are buffered by

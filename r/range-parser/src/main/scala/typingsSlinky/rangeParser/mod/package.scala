@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type Result = typingsSlinky.rangeParser.mod.ResultUnsatisfiable | typingsSlinky.rangeParser.mod.ResultInvalid
   type ResultInvalid = typingsSlinky.rangeParser.rangeParserNumbers.`-2`
   type ResultUnsatisfiable = typingsSlinky.rangeParser.rangeParserNumbers.`-1`
 }

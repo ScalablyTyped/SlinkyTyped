@@ -1,6 +1,6 @@
 package typingsSlinky.enhancedResolve.mod
 
-import typingsSlinky.enhancedResolve.AnonFlag
+import typingsSlinky.enhancedResolve.anon.Flag
 import typingsSlinky.enhancedResolve.commonTypesMod.AbstractInputFileSystem
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ErrnoException
@@ -21,7 +21,7 @@ class CachedInputFileSystem protected () extends js.Object {
       Unit
     ]
   ] = js.native
-  var readFileSync: js.UndefOr[js.Function2[/* filename */ String, /* options */ js.UndefOr[AnonFlag], Buffer]] = js.native
+  var readFileSync: js.UndefOr[js.Function2[/* filename */ String, /* options */ js.UndefOr[Flag], Buffer]] = js.native
   var readJson: js.UndefOr[
     js.Function2[
       /* path */ String, 

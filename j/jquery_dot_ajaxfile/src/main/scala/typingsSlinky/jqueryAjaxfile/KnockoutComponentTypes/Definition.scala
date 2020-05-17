@@ -1,14 +1,14 @@
 package typingsSlinky.jqueryAjaxfile.KnockoutComponentTypes
 
 import org.scalajs.dom.raw.Node
-import typingsSlinky.jqueryAjaxfile.AnonElement
+import typingsSlinky.jqueryAjaxfile.anon.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Definition extends js.Object {
-  var createViewModel: js.UndefOr[js.Function2[/* params */ js.Any, /* options */ AnonElement, _]] = js.native
+  var createViewModel: js.UndefOr[js.Function2[/* params */ js.Any, /* options */ Element, _]] = js.native
   var template: js.Array[Node] = js.native
 }
 
@@ -31,7 +31,7 @@ object Definition {
         ret
     }
     @scala.inline
-    def withCreateViewModel(value: (/* params */ js.Any, /* options */ AnonElement) => _): Self = {
+    def withCreateViewModel(value: (/* params */ js.Any, /* options */ Element) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("createViewModel")(js.Any.fromFunction2(value))
         ret

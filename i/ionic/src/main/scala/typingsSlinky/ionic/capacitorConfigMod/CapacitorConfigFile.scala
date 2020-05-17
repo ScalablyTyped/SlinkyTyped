@@ -1,6 +1,6 @@
 package typingsSlinky.ionic.capacitorConfigMod
 
-import typingsSlinky.ionic.AnonOriginalUrl
+import typingsSlinky.ionic.anon.OriginalUrl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait CapacitorConfigFile extends js.Object {
   var appId: js.UndefOr[String] = js.native
   var appName: js.UndefOr[String] = js.native
-  var server: js.UndefOr[AnonOriginalUrl] = js.native
+  var server: js.UndefOr[OriginalUrl] = js.native
   var webDir: js.UndefOr[String] = js.native
 }
 
@@ -50,7 +50,7 @@ object CapacitorConfigFile {
         ret
     }
     @scala.inline
-    def withServer(value: AnonOriginalUrl): Self = {
+    def withServer(value: OriginalUrl): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("server")(value.asInstanceOf[js.Any])
         ret

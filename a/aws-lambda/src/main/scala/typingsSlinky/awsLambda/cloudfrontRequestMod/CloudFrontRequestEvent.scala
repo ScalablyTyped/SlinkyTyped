@@ -1,18 +1,18 @@
 package typingsSlinky.awsLambda.cloudfrontRequestMod
 
-import typingsSlinky.awsLambda.AnonCf
+import typingsSlinky.awsLambda.anon.Cf
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CloudFrontRequestEvent extends js.Object {
-  var Records: js.Array[AnonCf] = js.native
+  var Records: js.Array[Cf] = js.native
 }
 
 object CloudFrontRequestEvent {
   @scala.inline
-  def apply(Records: js.Array[AnonCf]): CloudFrontRequestEvent = {
+  def apply(Records: js.Array[Cf]): CloudFrontRequestEvent = {
     val __obj = js.Dynamic.literal(Records = Records.asInstanceOf[js.Any])
     __obj.asInstanceOf[CloudFrontRequestEvent]
   }
@@ -23,7 +23,7 @@ object CloudFrontRequestEvent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withRecords(value: js.Array[AnonCf]): Self = {
+    def withRecords(value: js.Array[Cf]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Records")(value.asInstanceOf[js.Any])
         ret

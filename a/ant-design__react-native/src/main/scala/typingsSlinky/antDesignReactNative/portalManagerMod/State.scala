@@ -1,18 +1,18 @@
 package typingsSlinky.antDesignReactNative.portalManagerMod
 
-import typingsSlinky.antDesignReactNative.AnonChildrenReactNode
+import typingsSlinky.antDesignReactNative.anon.ChildrenReactNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait State extends js.Object {
-  var portals: js.Array[AnonChildrenReactNode] = js.native
+  var portals: js.Array[ChildrenReactNode] = js.native
 }
 
 object State {
   @scala.inline
-  def apply(portals: js.Array[AnonChildrenReactNode]): State = {
+  def apply(portals: js.Array[ChildrenReactNode]): State = {
     val __obj = js.Dynamic.literal(portals = portals.asInstanceOf[js.Any])
     __obj.asInstanceOf[State]
   }
@@ -23,7 +23,7 @@ object State {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPortals(value: js.Array[AnonChildrenReactNode]): Self = {
+    def withPortals(value: js.Array[ChildrenReactNode]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("portals")(value.asInstanceOf[js.Any])
         ret

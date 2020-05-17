@@ -1,7 +1,7 @@
 package typingsSlinky.stellarSdk.serverApiMod.ServerApi
 
 import typingsSlinky.stellarBase.mod.MemoType
-import typingsSlinky.stellarSdk.keyinaccountledgeroperati
+import typingsSlinky.stellarSdk.anon.keyinaccountledgeroperati
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

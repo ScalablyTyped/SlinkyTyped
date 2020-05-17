@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IHeaderOptions extends js.Object {
+trait IHeaderOptions extends HeaderOptions {
   var api_key: js.UndefOr[String] = js.native
   /**
     * Many objects contain the ID of a related object in their response properties. For example, a Charge may have an associated Customer ID.

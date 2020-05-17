@@ -1,5 +1,6 @@
 package typingsSlinky.useSidecar
 
+import typingsSlinky.useSidecar.anon.ReadonlySideCarMedium
 import typingsSlinky.useSidecar.typesMod.MiddlewareCallback
 import typingsSlinky.useSidecar.typesMod.SideCarMediumOptions
 import typingsSlinky.useSidecar.typesMod.SideMedium

@@ -1,6 +1,6 @@
 package typingsSlinky.victory.mod
 
-import typingsSlinky.victory.AnonBottom
+import typingsSlinky.victory.anon.Bottom
 import typingsSlinky.victory.victoryStrings.data
 import typingsSlinky.victory.victoryStrings.end
 import typingsSlinky.victory.victoryStrings.labels
@@ -42,7 +42,7 @@ trait VictoryBarProps
     * If this prop is given as a single number, the radius will only be applied to the top of each bar.
     * When this prop is given as a function, it will be evaluated with the arguments datum, and active.
     */
-  var cornerRadius: js.UndefOr[NumberOrCallback | AnonBottom] = js.native
+  var cornerRadius: js.UndefOr[NumberOrCallback | Bottom] = js.native
   /**
     * Similar to data accessor props `x` and `y`, this prop may be used to functionally
     * assign eventKeys to data
@@ -162,7 +162,7 @@ object VictoryBarProps {
         ret
     }
     @scala.inline
-    def withCornerRadius(value: NumberOrCallback | AnonBottom): Self = {
+    def withCornerRadius(value: NumberOrCallback | Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cornerRadius")(value.asInstanceOf[js.Any])
         ret

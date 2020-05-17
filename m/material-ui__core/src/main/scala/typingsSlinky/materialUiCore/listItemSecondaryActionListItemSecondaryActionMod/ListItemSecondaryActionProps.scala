@@ -1,7 +1,7 @@
 package typingsSlinky.materialUiCore.listItemSecondaryActionListItemSecondaryActionMod
 
 import slinky.core.facade.ReactRef
-import typingsSlinky.materialUiCore.PartialClassNameMapListItRoot
+import typingsSlinky.materialUiCore.anon.PartialClassNameMapListItRoot
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js

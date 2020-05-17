@@ -2,7 +2,7 @@ package typingsSlinky.reactIntl.mod
 
 import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
-import typingsSlinky.reactIntl.DisplayNamesOptionsvalues
+import typingsSlinky.reactIntl.anon.DisplayNamesOptionsvalues
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabNotebook.widgetMod.StaticNotebook
 
-import typingsSlinky.jupyterlabNotebook.PartialIConfig
+import typingsSlinky.jupyterlabNotebook.anon.PartialIConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

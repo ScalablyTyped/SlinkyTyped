@@ -1,11 +1,11 @@
 package typingsSlinky.gapiClientServicemanagement.gapi.client.servicemanagement
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientServicemanagement.AnonBearertoken
-import typingsSlinky.gapiClientServicemanagement.AnonConfigId
-import typingsSlinky.gapiClientServicemanagement.AnonConsumerId
-import typingsSlinky.gapiClientServicemanagement.AnonKey
-import typingsSlinky.gapiClientServicemanagement.AnonPp
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientServicemanagement.anon.Bearertoken
+import typingsSlinky.gapiClientServicemanagement.anon.ConfigId
+import typingsSlinky.gapiClientServicemanagement.anon.ConsumerId
+import typingsSlinky.gapiClientServicemanagement.anon.Key
+import typingsSlinky.gapiClientServicemanagement.anon.Pp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait ServicesResource extends js.Object {
     *
     * Operation<response: ManagedService>
     */
-  def create(request: AnonPp): Request_[Operation] = js.native
+  def create(request: Pp): Request[Operation] = js.native
   /**
     * Deletes a managed service. This method will change the service to the
     * `Soft-Delete` state for 30 days. Within this period, service producers may
@@ -30,7 +30,7 @@ trait ServicesResource extends js.Object {
     *
     * Operation<response: google.protobuf.Empty>
     */
-  def delete(request: AnonBearertoken): Request_[Operation] = js.native
+  def delete(request: Bearertoken): Request[Operation] = js.native
   /**
     * Disables a service for a project, so it can no longer be
     * be used for the project. It prevents accidental usage that may cause
@@ -38,7 +38,7 @@ trait ServicesResource extends js.Object {
     *
     * Operation<response: DisableServiceResponse>
     */
-  def disable(request: AnonBearertoken): Request_[Operation] = js.native
+  def disable(request: Bearertoken): Request[Operation] = js.native
   /**
     * Enables a service for a project, so it can be used
     * for the project. See
@@ -47,7 +47,7 @@ trait ServicesResource extends js.Object {
     *
     * Operation<response: EnableServiceResponse>
     */
-  def enable(request: AnonBearertoken): Request_[Operation] = js.native
+  def enable(request: Bearertoken): Request[Operation] = js.native
   /**
     * Generates and returns a report (errors, warnings and changes from
     * existing configurations) associated with
@@ -61,20 +61,20 @@ trait ServicesResource extends js.Object {
     * will compare GenerateConfigReportRequest.new_value with the last pushed
     * service configuration.
     */
-  def generateConfigReport(request: AnonPp): Request_[GenerateConfigReportResponse] = js.native
+  def generateConfigReport(request: Pp): Request[GenerateConfigReportResponse] = js.native
   /**
     * Gets a managed service. Authentication is required unless the service is
     * public.
     */
-  def get(request: AnonBearertoken): Request_[ManagedService] = js.native
+  def get(request: Bearertoken): Request[ManagedService] = js.native
   /** Gets a service configuration (version) for a managed service. */
-  def getConfig(request: AnonConfigId): Request_[Service] = js.native
+  def getConfig(request: ConfigId): Request[Service] = js.native
   /**
     * Gets the access control policy for a resource.
     * Returns an empty policy if the resource exists and does not have a policy
     * set.
     */
-  def getIamPolicy(request: AnonKey): Request_[Policy] = js.native
+  def getIamPolicy(request: Key): Request[Policy] = js.native
   /**
     * Lists managed services.
     *
@@ -86,12 +86,12 @@ trait ServicesResource extends js.Object {
     * services enabled on the consumer. The `consumer_id` must have the format
     * of "project:{PROJECT-ID}".
     */
-  def list(request: AnonConsumerId): Request_[ListServicesResponse] = js.native
+  def list(request: ConsumerId): Request[ListServicesResponse] = js.native
   /**
     * Sets the access control policy on the specified resource. Replaces any
     * existing policy.
     */
-  def setIamPolicy(request: AnonKey): Request_[Policy] = js.native
+  def setIamPolicy(request: Key): Request[Policy] = js.native
   /**
     * Returns permissions that a caller has on the specified resource.
     * If the resource does not exist, this will return an empty set of
@@ -101,7 +101,7 @@ trait ServicesResource extends js.Object {
     * UIs and command-line tools, not for authorization checking. This operation
     * may "fail open" without warning.
     */
-  def testIamPermissions(request: AnonKey): Request_[TestIamPermissionsResponse] = js.native
+  def testIamPermissions(request: Key): Request[TestIamPermissionsResponse] = js.native
   /**
     * Revives a previously deleted managed service. The method restores the
     * service using the configuration at the time the service was deleted.
@@ -110,7 +110,7 @@ trait ServicesResource extends js.Object {
     *
     * Operation<response: UndeleteServiceResponse>
     */
-  def undelete(request: AnonBearertoken): Request_[Operation] = js.native
+  def undelete(request: Bearertoken): Request[Operation] = js.native
 }
 
 object ServicesResource {
@@ -118,19 +118,19 @@ object ServicesResource {
   def apply(
     configs: ConfigsResource,
     consumers: ConsumersResource,
-    create: AnonPp => Request_[Operation],
-    delete: AnonBearertoken => Request_[Operation],
-    disable: AnonBearertoken => Request_[Operation],
-    enable: AnonBearertoken => Request_[Operation],
-    generateConfigReport: AnonPp => Request_[GenerateConfigReportResponse],
-    get: AnonBearertoken => Request_[ManagedService],
-    getConfig: AnonConfigId => Request_[Service],
-    getIamPolicy: AnonKey => Request_[Policy],
-    list: AnonConsumerId => Request_[ListServicesResponse],
+    create: Pp => Request[Operation],
+    delete: Bearertoken => Request[Operation],
+    disable: Bearertoken => Request[Operation],
+    enable: Bearertoken => Request[Operation],
+    generateConfigReport: Pp => Request[GenerateConfigReportResponse],
+    get: Bearertoken => Request[ManagedService],
+    getConfig: ConfigId => Request[Service],
+    getIamPolicy: Key => Request[Policy],
+    list: ConsumerId => Request[ListServicesResponse],
     rollouts: RolloutsResource,
-    setIamPolicy: AnonKey => Request_[Policy],
-    testIamPermissions: AnonKey => Request_[TestIamPermissionsResponse],
-    undelete: AnonBearertoken => Request_[Operation]
+    setIamPolicy: Key => Request[Policy],
+    testIamPermissions: Key => Request[TestIamPermissionsResponse],
+    undelete: Bearertoken => Request[Operation]
   ): ServicesResource = {
     val __obj = js.Dynamic.literal(configs = configs.asInstanceOf[js.Any], consumers = consumers.asInstanceOf[js.Any], create = js.Any.fromFunction1(create), delete = js.Any.fromFunction1(delete), disable = js.Any.fromFunction1(disable), enable = js.Any.fromFunction1(enable), generateConfigReport = js.Any.fromFunction1(generateConfigReport), get = js.Any.fromFunction1(get), getConfig = js.Any.fromFunction1(getConfig), getIamPolicy = js.Any.fromFunction1(getIamPolicy), list = js.Any.fromFunction1(list), rollouts = rollouts.asInstanceOf[js.Any], setIamPolicy = js.Any.fromFunction1(setIamPolicy), testIamPermissions = js.Any.fromFunction1(testIamPermissions), undelete = js.Any.fromFunction1(undelete))
     __obj.asInstanceOf[ServicesResource]
@@ -154,55 +154,55 @@ object ServicesResource {
         ret
     }
     @scala.inline
-    def withCreate(value: AnonPp => Request_[Operation]): Self = {
+    def withCreate(value: Pp => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDelete(value: AnonBearertoken => Request_[Operation]): Self = {
+    def withDelete(value: Bearertoken => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withDisable(value: AnonBearertoken => Request_[Operation]): Self = {
+    def withDisable(value: Bearertoken => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("disable")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withEnable(value: AnonBearertoken => Request_[Operation]): Self = {
+    def withEnable(value: Bearertoken => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("enable")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGenerateConfigReport(value: AnonPp => Request_[GenerateConfigReportResponse]): Self = {
+    def withGenerateConfigReport(value: Pp => Request[GenerateConfigReportResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("generateConfigReport")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonBearertoken => Request_[ManagedService]): Self = {
+    def withGet(value: Bearertoken => Request[ManagedService]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGetConfig(value: AnonConfigId => Request_[Service]): Self = {
+    def withGetConfig(value: ConfigId => Request[Service]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getConfig")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGetIamPolicy(value: AnonKey => Request_[Policy]): Self = {
+    def withGetIamPolicy(value: Key => Request[Policy]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getIamPolicy")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonConsumerId => Request_[ListServicesResponse]): Self = {
+    def withList(value: ConsumerId => Request[ListServicesResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
@@ -214,19 +214,19 @@ object ServicesResource {
         ret
     }
     @scala.inline
-    def withSetIamPolicy(value: AnonKey => Request_[Policy]): Self = {
+    def withSetIamPolicy(value: Key => Request[Policy]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("setIamPolicy")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withTestIamPermissions(value: AnonKey => Request_[TestIamPermissionsResponse]): Self = {
+    def withTestIamPermissions(value: Key => Request[TestIamPermissionsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("testIamPermissions")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUndelete(value: AnonBearertoken => Request_[Operation]): Self = {
+    def withUndelete(value: Bearertoken => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("undelete")(js.Any.fromFunction1(value))
         ret

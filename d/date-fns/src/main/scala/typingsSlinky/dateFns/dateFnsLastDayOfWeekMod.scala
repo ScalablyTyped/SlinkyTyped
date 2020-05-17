@@ -10,9 +10,9 @@ object dateFnsLastDayOfWeekMod extends js.Object {
   @js.native
   object default extends js.Object {
     def apply(date: Double): js.Date = js.native
-    def apply(date: Double, options: AnonLocale): js.Date = js.native
+    def apply(date: Double, options: typingsSlinky.dateFns.anon.Locale): js.Date = js.native
     def apply(date: js.Date): js.Date = js.native
-    def apply(date: js.Date, options: AnonLocale): js.Date = js.native
+    def apply(date: js.Date, options: typingsSlinky.dateFns.anon.Locale): js.Date = js.native
   }
   
 }

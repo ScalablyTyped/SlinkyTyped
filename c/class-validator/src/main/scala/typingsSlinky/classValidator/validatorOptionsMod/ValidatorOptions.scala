@@ -1,6 +1,6 @@
 package typingsSlinky.classValidator.validatorOptionsMod
 
-import typingsSlinky.classValidator.AnonTarget
+import typingsSlinky.classValidator.anon.Target
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +39,7 @@ trait ValidatorOptions extends js.Object {
   /**
     * ValidationError special options.
     */
-  var validationError: js.UndefOr[AnonTarget] = js.native
+  var validationError: js.UndefOr[Target] = js.native
   /**
     * If set to true validator will strip validated object of any properties that do not have any decorators.
     *
@@ -145,7 +145,7 @@ object ValidatorOptions {
         ret
     }
     @scala.inline
-    def withValidationError(value: AnonTarget): Self = {
+    def withValidationError(value: Target): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validationError")(value.asInstanceOf[js.Any])
         ret

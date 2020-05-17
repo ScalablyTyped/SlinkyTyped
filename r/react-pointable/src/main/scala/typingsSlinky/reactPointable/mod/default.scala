@@ -1,7 +1,7 @@
 package typingsSlinky.reactPointable.mod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactPointable.AnonTagName
+import typingsSlinky.reactPointable.anon.TagName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +15,6 @@ class default ()
 @JSImport("react-pointable", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonTagName = js.native
+  var defaultProps: TagName = js.native
 }
 

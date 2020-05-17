@@ -1,0 +1,17 @@
+package typingsSlinky.officeJs.global.Excel
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  *
+  * Represents a TableStyle, which defines the style elements by region of the Table.
+  *
+  * [Api set: ExcelApi 1.10]
+  */
+@JSGlobal("Excel.TableStyle")
+@js.native
+class TableStyle ()
+  extends typingsSlinky.officeJs.Excel.TableStyle
+

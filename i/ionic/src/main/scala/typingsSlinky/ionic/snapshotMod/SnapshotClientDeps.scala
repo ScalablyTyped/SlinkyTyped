@@ -1,6 +1,6 @@
 package typingsSlinky.ionic.snapshotMod
 
-import typingsSlinky.ionic.AnonIdString
+import typingsSlinky.ionic.anon.IdString
 import typingsSlinky.ionic.definitionsMod.IClient
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait SnapshotClientDeps extends js.Object {
-  val app: AnonIdString = js.native
+  val app: IdString = js.native
   val client: IClient = js.native
   val token: String = js.native
 }
 
 object SnapshotClientDeps {
   @scala.inline
-  def apply(app: AnonIdString, client: IClient, token: String): SnapshotClientDeps = {
+  def apply(app: IdString, client: IClient, token: String): SnapshotClientDeps = {
     val __obj = js.Dynamic.literal(app = app.asInstanceOf[js.Any], client = client.asInstanceOf[js.Any], token = token.asInstanceOf[js.Any])
     __obj.asInstanceOf[SnapshotClientDeps]
   }
@@ -26,7 +26,7 @@ object SnapshotClientDeps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withApp(value: AnonIdString): Self = {
+    def withApp(value: IdString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("app")(value.asInstanceOf[js.Any])
         ret

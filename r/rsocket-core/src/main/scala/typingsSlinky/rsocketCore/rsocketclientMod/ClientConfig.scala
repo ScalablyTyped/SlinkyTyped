@@ -1,6 +1,6 @@
 package typingsSlinky.rsocketCore.rsocketclientMod
 
-import typingsSlinky.rsocketCore.AnonDataMimeType
+import typingsSlinky.rsocketCore.anon.DataMimeType
 import typingsSlinky.rsocketCore.rsocketleaseMod.Leases
 import typingsSlinky.rsocketCore.rsocketserializationMod.PayloadSerializers
 import typingsSlinky.rsocketTypes.reactiveSocketTypesMod.DuplexConnection
@@ -16,13 +16,13 @@ trait ClientConfig[D, M] extends js.Object {
   var leases: js.UndefOr[js.Function0[Leases[_]]] = js.native
   var responder: js.UndefOr[Partial[Responder[D, M]]] = js.native
   var serializers: js.UndefOr[PayloadSerializers[D, M]] = js.native
-  var setup: AnonDataMimeType[D, M] = js.native
+  var setup: DataMimeType[D, M] = js.native
   var transport: DuplexConnection = js.native
 }
 
 object ClientConfig {
   @scala.inline
-  def apply[D, M](setup: AnonDataMimeType[D, M], transport: DuplexConnection): ClientConfig[D, M] = {
+  def apply[D, M](setup: DataMimeType[D, M], transport: DuplexConnection): ClientConfig[D, M] = {
     val __obj = js.Dynamic.literal(setup = setup.asInstanceOf[js.Any], transport = transport.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientConfig[D, M]]
   }
@@ -33,7 +33,7 @@ object ClientConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): (Self[D, M]) with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[(Self[D, M]) with Other]
     @scala.inline
-    def withSetup(value: AnonDataMimeType[D, M]): Self[D, M] = {
+    def withSetup(value: DataMimeType[D, M]): Self[D, M] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("setup")(value.asInstanceOf[js.Any])
         ret

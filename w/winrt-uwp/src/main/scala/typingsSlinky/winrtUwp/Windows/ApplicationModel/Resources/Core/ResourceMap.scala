@@ -1,17 +1,16 @@
 package typingsSlinky.winrtUwp.Windows.ApplicationModel.Resources.Core
 
-import typingsSlinky.winrtUwp.AnonFirstSecond
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IKeyValuePair
 import typingsSlinky.winrtUwp.Windows.Foundation.Uri
+import typingsSlinky.winrtUwp.anon.FirstSecond
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A collection of related resources, typically either for a particular app package, or a resource file for a particular package. */
-@JSGlobal("Windows.ApplicationModel.Resources.Core.ResourceMap")
 @js.native
-abstract class ResourceMap () extends js.Object {
+trait ResourceMap extends js.Object {
   /** Gets the number of resources in the map. */
   var size: Double = js.native
   /** Gets a URI that can be used to refer to this ResourceMap . */
@@ -55,6 +54,6 @@ abstract class ResourceMap () extends js.Object {
   /**
     * Splits the map view into two views.
     */
-  def split(): AnonFirstSecond = js.native
+  def split(): FirstSecond = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.leafletDraw.mod.Localization
 
-import typingsSlinky.leafletDraw.AnonCircle
+import typingsSlinky.leafletDraw.anon.Circle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DrawToolbar extends js.Object {
   var actions: Action = js.native
-  var buttons: AnonCircle = js.native
+  var buttons: Circle = js.native
   var finish: Action = js.native
   var undo: Action = js.native
 }
 
 object DrawToolbar {
   @scala.inline
-  def apply(actions: Action, buttons: AnonCircle, finish: Action, undo: Action): DrawToolbar = {
+  def apply(actions: Action, buttons: Circle, finish: Action, undo: Action): DrawToolbar = {
     val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], buttons = buttons.asInstanceOf[js.Any], finish = finish.asInstanceOf[js.Any], undo = undo.asInstanceOf[js.Any])
     __obj.asInstanceOf[DrawToolbar]
   }
@@ -32,7 +32,7 @@ object DrawToolbar {
         ret
     }
     @scala.inline
-    def withButtons(value: AnonCircle): Self = {
+    def withButtons(value: Circle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("buttons")(value.asInstanceOf[js.Any])
         ret

@@ -7,7 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait BalanceLineAsset[T /* <: credit4 | credit12 */] extends js.Object {
+trait BalanceLineAsset[T /* <: credit4 | credit12 */]
+  extends BalanceLine[js.Any] {
   var asset_code: String = js.native
   var asset_issuer: String = js.native
   var asset_type: T = js.native

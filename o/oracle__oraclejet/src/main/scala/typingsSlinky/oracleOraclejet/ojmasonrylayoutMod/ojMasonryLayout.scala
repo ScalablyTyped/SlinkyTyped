@@ -2,7 +2,7 @@ package typingsSlinky.oracleOraclejet.ojmasonrylayoutMod
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.AnonLabelCut
+import typingsSlinky.oracleOraclejet.anon.LabelCut
 import typingsSlinky.oracleOraclejet.mod.baseComponent
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.ojAnimateEnd
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.ojAnimateStart
@@ -36,7 +36,7 @@ trait ojMasonryLayout extends baseComponent[ojMasonryLayoutSettableProperties] {
   var onReorderHandleChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var reorderHandle: String | Null = js.native
   @JSName("translations")
-  var translations_ojMasonryLayout: AnonLabelCut = js.native
+  var translations_ojMasonryLayout: LabelCut = js.native
   @JSName("addEventListener")
   def addEventListener_ojAnimateEnd(`type`: ojAnimateEnd, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   @JSName("addEventListener")
@@ -136,7 +136,7 @@ trait ojMasonryLayout extends baseComponent[ojMasonryLayoutSettableProperties] {
   @JSName("setProperty")
   def setProperty_reorderHandle(property: reorderHandle, value: String): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonLabelCut): Unit = js.native
+  def setProperty_translations(property: translations, value: LabelCut): Unit = js.native
 }
 
 @JSImport("@oracle/oraclejet/ojmasonrylayout", "ojMasonryLayout")

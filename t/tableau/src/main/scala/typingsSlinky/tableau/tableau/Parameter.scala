@@ -6,9 +6,8 @@ import scala.scalajs.js.annotation._
 
 //#endregion
 //#region Parameter Classes
-@JSGlobal("tableau.Parameter")
 @js.native
-class Parameter () extends js.Object {
+trait Parameter extends js.Object {
   /**
     * If the parameter is restricted to a list of allowable values, this property contains the array of those values.
     * Note that this is not a standard collection, but a JavaScript array.
@@ -34,5 +33,85 @@ class Parameter () extends js.Object {
   def getName(): String = js.native
   /** If getAllowableValuesType is RANGE, this defines the step size used in the parameter UI control slider. Otherwise it’s undefined/null. */
   def getStepSize(): Double = js.native
+}
+
+object Parameter {
+  @scala.inline
+  def apply(
+    getAllowableValues: () => js.Array[DataValue],
+    getAllowableValuesType: () => ParameterAllowableValuesType,
+    getCurrentValue: () => DataValue,
+    getDataType: () => ParameterDataType,
+    getDateStepPeriod: () => PeriodType,
+    getMaxValue: () => DataValue,
+    getMinValue: () => DataValue,
+    getName: () => String,
+    getStepSize: () => Double
+  ): Parameter = {
+    val __obj = js.Dynamic.literal(getAllowableValues = js.Any.fromFunction0(getAllowableValues), getAllowableValuesType = js.Any.fromFunction0(getAllowableValuesType), getCurrentValue = js.Any.fromFunction0(getCurrentValue), getDataType = js.Any.fromFunction0(getDataType), getDateStepPeriod = js.Any.fromFunction0(getDateStepPeriod), getMaxValue = js.Any.fromFunction0(getMaxValue), getMinValue = js.Any.fromFunction0(getMinValue), getName = js.Any.fromFunction0(getName), getStepSize = js.Any.fromFunction0(getStepSize))
+    __obj.asInstanceOf[Parameter]
+  }
+  @scala.inline
+  implicit class ParameterOps[Self <: Parameter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetAllowableValues(value: () => js.Array[DataValue]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllowableValues")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetAllowableValuesType(value: () => ParameterAllowableValuesType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllowableValuesType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetCurrentValue(value: () => DataValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDataType(value: () => ParameterDataType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDataType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDateStepPeriod(value: () => PeriodType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDateStepPeriod")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMaxValue(value: () => DataValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMinValue(value: () => DataValue): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMinValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetStepSize(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStepSize")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

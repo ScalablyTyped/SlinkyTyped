@@ -1,6 +1,7 @@
 package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.ionicCore.anon.Visible
 import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
 import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
 import scala.scalajs.js
@@ -26,7 +27,7 @@ object splitPaneMod extends js.Object {
     /**
       * Expression to be called when the split-pane visibility has changed
       */
-    var ionSplitPaneVisible: EventEmitter[AnonVisible] = js.native
+    var ionSplitPaneVisible: EventEmitter[Visible] = js.native
     var isPane: js.Any = js.native
     var rmL: js.Any = js.native
     var styleChildren: js.Any = js.native

@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DateTimeParams extends _FormatterParams {
+trait DateTimeParams extends FormatterParams {
   // datetime
   var inputFormat: js.UndefOr[String] = js.native
   var invalidPlaceholder: js.UndefOr[`true` | String | Double | ValueStringCallback] = js.native

@@ -4,16 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("GlideDBFunctionBuilder")
 @js.native
-/**
-  * Instantiates a GlideDBFunctionBuilder object.
-  *
-  * @example
-  *
-  * var builder = new GlideDBFunctionBuilder();
-  */
-class GlideDBFunctionBuilder () extends js.Object {
+trait GlideDBFunctionBuilder extends js.Object {
   /**
     * Adds the values of two or more integer fields.
     *
@@ -182,5 +174,99 @@ class GlideDBFunctionBuilder () extends js.Object {
     * mySubtractFunction = functionBuilder.build();
     */
   def subtract(): GlideDBFunctionBuilder = js.native
+}
+
+object GlideDBFunctionBuilder {
+  @scala.inline
+  def apply(
+    add: () => GlideDBFunctionBuilder,
+    build: () => String,
+    concat: () => GlideDBFunctionBuilder,
+    constant: String => GlideDBFunctionBuilder,
+    datediff: () => GlideDBFunctionBuilder,
+    dayofweek: () => GlideDBFunctionBuilder,
+    divide: () => GlideDBFunctionBuilder,
+    field: String => GlideDBFunctionBuilder,
+    length: () => GlideDBFunctionBuilder,
+    multiply: () => GlideDBFunctionBuilder,
+    subtract: () => GlideDBFunctionBuilder
+  ): GlideDBFunctionBuilder = {
+    val __obj = js.Dynamic.literal(add = js.Any.fromFunction0(add), build = js.Any.fromFunction0(build), concat = js.Any.fromFunction0(concat), constant = js.Any.fromFunction1(constant), datediff = js.Any.fromFunction0(datediff), dayofweek = js.Any.fromFunction0(dayofweek), divide = js.Any.fromFunction0(divide), field = js.Any.fromFunction1(field), length = js.Any.fromFunction0(length), multiply = js.Any.fromFunction0(multiply), subtract = js.Any.fromFunction0(subtract))
+    __obj.asInstanceOf[GlideDBFunctionBuilder]
+  }
+  @scala.inline
+  implicit class GlideDBFunctionBuilderOps[Self <: GlideDBFunctionBuilder] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAdd(value: () => GlideDBFunctionBuilder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withBuild(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withConcat(value: () => GlideDBFunctionBuilder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("concat")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withConstant(value: String => GlideDBFunctionBuilder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constant")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDatediff(value: () => GlideDBFunctionBuilder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("datediff")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDayofweek(value: () => GlideDBFunctionBuilder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dayofweek")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withDivide(value: () => GlideDBFunctionBuilder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("divide")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withField(value: String => GlideDBFunctionBuilder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("field")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLength(value: () => GlideDBFunctionBuilder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withMultiply(value: () => GlideDBFunctionBuilder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiply")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSubtract(value: () => GlideDBFunctionBuilder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("subtract")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

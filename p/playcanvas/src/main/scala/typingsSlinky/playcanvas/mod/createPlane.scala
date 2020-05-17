@@ -1,6 +1,6 @@
 package typingsSlinky.playcanvas.mod
 
-import typingsSlinky.playcanvas.AnonHalfExtents
+import typingsSlinky.playcanvas.anon.HalfExtents
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,6 +28,6 @@ object createPlane extends js.Object {
     * @returns {pc.Mesh} A new plane-shaped mesh.
     */
   def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice): typingsSlinky.playcanvas.pc.Mesh = js.native
-  def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice, opts: AnonHalfExtents): typingsSlinky.playcanvas.pc.Mesh = js.native
+  def apply(device: typingsSlinky.playcanvas.pc.GraphicsDevice, opts: HalfExtents): typingsSlinky.playcanvas.pc.Mesh = js.native
 }
 

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Spec_ extends js.Object {
+trait Spec_ extends SpecInput {
   /**
     * The name of the spec, displayed in explain() results.
     */

@@ -1,6 +1,6 @@
 package typingsSlinky.delay.mod
 
-import typingsSlinky.delay.AnonOnce
+import typingsSlinky.delay.anon.Once
 import typingsSlinky.delay.delayStrings.abort
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +17,7 @@ trait AbortSignal extends js.Object {
   @JSName("addEventListener")
   def addEventListener_abort(`type`: abort, listener: js.Function0[Unit]): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_abort(`type`: abort, listener: js.Function0[Unit], options: AnonOnce): Unit = js.native
+  def addEventListener_abort(`type`: abort, listener: js.Function0[Unit], options: Once): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_abort(`type`: abort, listener: js.Function0[Unit]): Unit = js.native
 }

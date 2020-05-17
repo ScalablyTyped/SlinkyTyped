@@ -7,7 +7,7 @@ import typingsSlinky.reactNative.mod.ScrollViewProps
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeScrollableTabView.TabBarProps
+import typingsSlinky.reactNativeScrollableTabView.anon.TabBarProps
 import typingsSlinky.reactNativeScrollableTabView.mod.ChangeTabProperties
 import typingsSlinky.reactNativeScrollableTabView.mod.ScrollableTabViewProperties
 import typingsSlinky.reactNativeScrollableTabView.mod.default

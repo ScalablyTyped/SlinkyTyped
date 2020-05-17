@@ -1,0 +1,17 @@
+package typingsSlinky.officeJs.global.Visio
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  *
+  * Represents a collection of Page objects that are part of the document.
+  *
+  * [Api set:  1.1]
+  */
+@JSGlobal("Visio.PageCollection")
+@js.native
+class PageCollection ()
+  extends typingsSlinky.officeJs.Visio.PageCollection
+

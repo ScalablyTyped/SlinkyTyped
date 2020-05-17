@@ -1,6 +1,6 @@
 package typingsSlinky.agGrid.componentResolverMod
 
-import typingsSlinky.agGrid.AnonInstantiableA
+import typingsSlinky.agGrid.anon.InstantiableA
 import typingsSlinky.agGrid.iComponentMod.IComponent
 import typingsSlinky.agGrid.utilsMod.Promise
 import scala.scalajs.js
@@ -74,9 +74,9 @@ class ComponentResolver () extends js.Object {
     *  @param customInitParamsCb: A chance to customise the params passed to the init method. It receives what the current
     *  params are and the component that init is about to get called for
     */
-  def createInternalAgGridComponent[A /* <: IComponent[_] */](clazz: AnonInstantiableA[A], agGridParams: js.Any): A = js.native
+  def createInternalAgGridComponent[A /* <: IComponent[_] */](clazz: InstantiableA[A], agGridParams: js.Any): A = js.native
   def createInternalAgGridComponent[A /* <: IComponent[_] */](
-    clazz: AnonInstantiableA[A],
+    clazz: InstantiableA[A],
     agGridParams: js.Any,
     customInitParamsCb: js.Function2[/* params */ js.Any, /* component */ A, _]
   ): A = js.native

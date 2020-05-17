@@ -1,5 +1,7 @@
 package typingsSlinky.instagramPrivateApi
 
+import typingsSlinky.instagramPrivateApi.anon.PickDirectInboxFeedRespon
+import typingsSlinky.instagramPrivateApi.anon.Source
 import typingsSlinky.instagramPrivateApi.clientMod.IgApiClient
 import typingsSlinky.instagramPrivateApi.commonTypesMod.IgAppModule
 import typingsSlinky.instagramPrivateApi.feedsMod.AccountFollowersFeed
@@ -112,7 +114,7 @@ object feedFactoryMod extends js.Object {
     def news(): NewsFeed = js.native
     def pendingFriendships(): PendingFriendshipsFeed = js.native
     def postsInsightsFeed(options: PostsInsightsFeedOptions): PostsInsightsFeed = js.native
-    def reelsMedia(options: AnonSource): ReelsMediaFeed = js.native
+    def reelsMedia(options: Source): ReelsMediaFeed = js.native
     def reelsTray(): ReelsTrayFeed = js.native
     @JSName("reelsTray")
     def reelsTray_coldstart(reason: cold_start): ReelsTrayFeed = js.native

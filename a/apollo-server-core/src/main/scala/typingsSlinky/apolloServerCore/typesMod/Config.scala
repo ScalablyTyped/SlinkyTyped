@@ -2,8 +2,8 @@ package typingsSlinky.apolloServerCore.typesMod
 
 import typingsSlinky.apolloCacheControl.mod.CacheControlExtensionOptions
 import typingsSlinky.apolloEngineReporting.agentMod.EngineReportingOptions
-import typingsSlinky.apolloServerCore.PartialSubscriptionServer
-import typingsSlinky.apolloServerCore.TypeofSchemaDirectiveVisi
+import typingsSlinky.apolloServerCore.anon.PartialSubscriptionServer
+import typingsSlinky.apolloServerCore.anon.TypeofSchemaDirectiveVisi
 import typingsSlinky.apolloServerCore.apolloServerCoreBooleans.`false`
 import typingsSlinky.apolloServerCore.graphqlOptionsMod.PersistedQueryOptions
 import typingsSlinky.apolloServerCore.playgroundMod.PlaygroundConfig

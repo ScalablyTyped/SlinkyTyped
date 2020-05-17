@@ -1,6 +1,6 @@
 package typingsSlinky.extjs.Ext.dd
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait IDropZone extends IDropTarget {
   		* @param e Event The event
   		* @returns Object data The custom data
   		*/
-  var getTargetFromEvent: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event_], _]] = js.native
+  var getTargetFromEvent: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event], _]] = js.native
   /** [Method] Called when the DropZone determines that a Ext dd DragSource has been dropped on it but not on any of its registered
   		* @param source Ext.dd.DragSource The drag source that was dragged over this drop zone
   		* @param e Event The event
@@ -21,7 +21,7 @@ trait IDropZone extends IDropTarget {
   var onContainerDrop: js.UndefOr[
     js.Function3[
       /* source */ js.UndefOr[IDragSource], 
-      /* e */ js.UndefOr[Event_], 
+      /* e */ js.UndefOr[Event], 
       /* data */ js.UndefOr[js.Any], 
       Boolean
     ]
@@ -35,7 +35,7 @@ trait IDropZone extends IDropTarget {
   var onContainerOver: js.UndefOr[
     js.Function3[
       /* source */ js.UndefOr[IDragSource], 
-      /* e */ js.UndefOr[Event_], 
+      /* e */ js.UndefOr[Event], 
       /* data */ js.UndefOr[js.Any], 
       String
     ]
@@ -51,7 +51,7 @@ trait IDropZone extends IDropTarget {
     js.Function4[
       /* nodeData */ js.UndefOr[js.Any], 
       /* source */ js.UndefOr[IDragSource], 
-      /* e */ js.UndefOr[Event_], 
+      /* e */ js.UndefOr[Event], 
       /* data */ js.UndefOr[js.Any], 
       Boolean
     ]
@@ -66,7 +66,7 @@ trait IDropZone extends IDropTarget {
     js.Function4[
       /* nodeData */ js.UndefOr[js.Any], 
       /* source */ js.UndefOr[IDragSource], 
-      /* e */ js.UndefOr[Event_], 
+      /* e */ js.UndefOr[Event], 
       /* data */ js.UndefOr[js.Any], 
       Unit
     ]
@@ -81,7 +81,7 @@ trait IDropZone extends IDropTarget {
     js.Function4[
       /* nodeData */ js.UndefOr[js.Any], 
       /* source */ js.UndefOr[IDragSource], 
-      /* e */ js.UndefOr[Event_], 
+      /* e */ js.UndefOr[Event], 
       /* data */ js.UndefOr[js.Any], 
       Unit
     ]
@@ -97,7 +97,7 @@ trait IDropZone extends IDropTarget {
     js.Function4[
       /* nodeData */ js.UndefOr[js.Any], 
       /* source */ js.UndefOr[IDragSource], 
-      /* e */ js.UndefOr[Event_], 
+      /* e */ js.UndefOr[Event], 
       /* data */ js.UndefOr[js.Any], 
       String
     ]
@@ -117,7 +117,7 @@ object IDropZone {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetTargetFromEvent(value: /* e */ js.UndefOr[Event_] => _): Self = {
+    def withGetTargetFromEvent(value: /* e */ js.UndefOr[Event] => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getTargetFromEvent")(js.Any.fromFunction1(value))
         ret
@@ -130,7 +130,7 @@ object IDropZone {
     }
     @scala.inline
     def withOnContainerDrop(
-      value: (/* source */ js.UndefOr[IDragSource], /* e */ js.UndefOr[Event_], /* data */ js.UndefOr[js.Any]) => Boolean
+      value: (/* source */ js.UndefOr[IDragSource], /* e */ js.UndefOr[Event], /* data */ js.UndefOr[js.Any]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContainerDrop")(js.Any.fromFunction3(value))
@@ -144,7 +144,7 @@ object IDropZone {
     }
     @scala.inline
     def withOnContainerOver(
-      value: (/* source */ js.UndefOr[IDragSource], /* e */ js.UndefOr[Event_], /* data */ js.UndefOr[js.Any]) => String
+      value: (/* source */ js.UndefOr[IDragSource], /* e */ js.UndefOr[Event], /* data */ js.UndefOr[js.Any]) => String
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContainerOver")(js.Any.fromFunction3(value))
@@ -158,7 +158,7 @@ object IDropZone {
     }
     @scala.inline
     def withOnNodeDrop(
-      value: (/* nodeData */ js.UndefOr[js.Any], /* source */ js.UndefOr[IDragSource], /* e */ js.UndefOr[Event_], /* data */ js.UndefOr[js.Any]) => Boolean
+      value: (/* nodeData */ js.UndefOr[js.Any], /* source */ js.UndefOr[IDragSource], /* e */ js.UndefOr[Event], /* data */ js.UndefOr[js.Any]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeDrop")(js.Any.fromFunction4(value))
@@ -172,7 +172,7 @@ object IDropZone {
     }
     @scala.inline
     def withOnNodeEnter(
-      value: (/* nodeData */ js.UndefOr[js.Any], /* source */ js.UndefOr[IDragSource], /* e */ js.UndefOr[Event_], /* data */ js.UndefOr[js.Any]) => Unit
+      value: (/* nodeData */ js.UndefOr[js.Any], /* source */ js.UndefOr[IDragSource], /* e */ js.UndefOr[Event], /* data */ js.UndefOr[js.Any]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeEnter")(js.Any.fromFunction4(value))
@@ -186,7 +186,7 @@ object IDropZone {
     }
     @scala.inline
     def withOnNodeOut(
-      value: (/* nodeData */ js.UndefOr[js.Any], /* source */ js.UndefOr[IDragSource], /* e */ js.UndefOr[Event_], /* data */ js.UndefOr[js.Any]) => Unit
+      value: (/* nodeData */ js.UndefOr[js.Any], /* source */ js.UndefOr[IDragSource], /* e */ js.UndefOr[Event], /* data */ js.UndefOr[js.Any]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeOut")(js.Any.fromFunction4(value))
@@ -200,7 +200,7 @@ object IDropZone {
     }
     @scala.inline
     def withOnNodeOver(
-      value: (/* nodeData */ js.UndefOr[js.Any], /* source */ js.UndefOr[IDragSource], /* e */ js.UndefOr[Event_], /* data */ js.UndefOr[js.Any]) => String
+      value: (/* nodeData */ js.UndefOr[js.Any], /* source */ js.UndefOr[IDragSource], /* e */ js.UndefOr[Event], /* data */ js.UndefOr[js.Any]) => String
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onNodeOver")(js.Any.fromFunction4(value))

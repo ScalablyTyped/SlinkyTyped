@@ -11,3 +11,12 @@ import scala.scalajs.js.annotation._
 */
 trait VerifyErrors extends js.Object
 
+object VerifyErrors {
+  @scala.inline
+  implicit def apply(value: JsonWebTokenError): VerifyErrors = value.asInstanceOf[VerifyErrors]
+  @scala.inline
+  implicit def apply(value: NotBeforeError): VerifyErrors = value.asInstanceOf[VerifyErrors]
+  @scala.inline
+  implicit def apply(value: TokenExpiredError): VerifyErrors = value.asInstanceOf[VerifyErrors]
+}
+

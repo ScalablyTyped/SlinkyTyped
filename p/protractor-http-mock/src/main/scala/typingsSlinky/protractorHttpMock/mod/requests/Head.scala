@@ -1,7 +1,7 @@
 package typingsSlinky.protractorHttpMock.mod.requests
 
-import typingsSlinky.protractorHttpMock.AnonData
-import typingsSlinky.protractorHttpMock.AnonRegex
+import typingsSlinky.protractorHttpMock.anon.Data
+import typingsSlinky.protractorHttpMock.anon.Regex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation._
   * HEAD request mock.
   */
 @js.native
-trait Head[TResponse] extends js.Object {
-  var request: AnonRegex = js.native
-  var response: AnonData[TResponse] = js.native
+trait Head[TResponse] extends AllRequests {
+  var request: Regex = js.native
+  var response: Data[TResponse] = js.native
 }
 
 object Head {
   @scala.inline
-  def apply[TResponse](request: AnonRegex, response: AnonData[TResponse]): Head[TResponse] = {
+  def apply[TResponse](request: Regex, response: Data[TResponse]): Head[TResponse] = {
     val __obj = js.Dynamic.literal(request = request.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[Head[TResponse]]
   }
@@ -28,13 +28,13 @@ object Head {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[TResponse] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TResponse] with Other]
     @scala.inline
-    def withRequest(value: AnonRegex): Self[TResponse] = {
+    def withRequest(value: Regex): Self[TResponse] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withResponse(value: AnonData[TResponse]): Self[TResponse] = {
+    def withResponse(value: Data[TResponse]): Self[TResponse] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
         ret

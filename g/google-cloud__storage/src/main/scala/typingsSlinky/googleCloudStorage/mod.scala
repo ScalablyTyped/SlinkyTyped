@@ -1,6 +1,7 @@
 package typingsSlinky.googleCloudStorage
 
 import org.scalablytyped.runtime.Instantiable3
+import typingsSlinky.googleCloudStorage.anon.OWNERROLE
 import typingsSlinky.googleCloudStorage.bucketMod.BucketOptions
 import typingsSlinky.googleCloudStorage.fileMod.FileOptions
 import typingsSlinky.googleCloudStorage.hmacKeyMod.HmacKeyOptions
@@ -333,7 +334,7 @@ object mod extends js.Object {
       *   const apiResponse = data[1];
       * });
       */
-    var acl: AnonOWNERROLE = js.native
+    var acl: OWNERROLE = js.native
   }
   
 }

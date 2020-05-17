@@ -2,7 +2,7 @@ package typingsSlinky.antd.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.AnonInsertExtraNode
+import typingsSlinky.antd.anon.InsertExtraNode
 import typingsSlinky.antd.waveMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,7 @@ object Wave {
     def insertExtraNode(value: Boolean): this.type = set("insertExtraNode", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AnonInsertExtraNode): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: InsertExtraNode): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Wave.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

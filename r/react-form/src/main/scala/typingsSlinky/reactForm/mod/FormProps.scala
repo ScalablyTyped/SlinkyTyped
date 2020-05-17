@@ -1,10 +1,9 @@
 package typingsSlinky.reactForm.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Event
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import typingsSlinky.reactForm.AnonFormApi
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait FormProps extends js.Object {
   var asyncValidators: js.UndefOr[StringDictionary[js.Function1[/* value */ FormValue, js.Promise[_]]]] = js.native
-  var component: js.UndefOr[ReactComponentClass[AnonFormApi]] = js.native
+  var component: js.UndefOr[ReactComponentClass[typingsSlinky.reactForm.anon.FormApi]] = js.native
   var defaultValues: js.UndefOr[FormValues] = js.native
   var dontPreventDefault: js.UndefOr[Boolean] = js.native
   var dontValidateOnMount: js.UndefOr[Boolean] = js.native
@@ -21,7 +20,7 @@ trait FormProps extends js.Object {
   var onSubmit: js.UndefOr[
     js.Function3[
       /* values */ FormValues, 
-      /* submissionEvent */ SyntheticEvent[Event_, _], 
+      /* submissionEvent */ SyntheticEvent[Event, _], 
       /* formApi */ FormApi, 
       Unit
     ]
@@ -61,19 +60,19 @@ object FormProps {
         ret
     }
     @scala.inline
-    def withComponentFunctionComponent(value: ReactComponentClass[AnonFormApi]): Self = {
+    def withComponentFunctionComponent(value: ReactComponentClass[typingsSlinky.reactForm.anon.FormApi]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withComponentComponentClass(value: ReactComponentClass[AnonFormApi]): Self = {
+    def withComponentComponentClass(value: ReactComponentClass[typingsSlinky.reactForm.anon.FormApi]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withComponent(value: ReactComponentClass[AnonFormApi]): Self = {
+    def withComponent(value: ReactComponentClass[typingsSlinky.reactForm.anon.FormApi]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
         ret
@@ -146,7 +145,7 @@ object FormProps {
     }
     @scala.inline
     def withOnSubmit(
-      value: (/* values */ FormValues, /* submissionEvent */ SyntheticEvent[Event_, _], /* formApi */ FormApi) => Unit
+      value: (/* values */ FormValues, /* submissionEvent */ SyntheticEvent[Event, _], /* formApi */ FormApi) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(js.Any.fromFunction3(value))

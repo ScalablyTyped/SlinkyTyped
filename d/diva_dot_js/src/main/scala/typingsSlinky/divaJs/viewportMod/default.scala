@@ -1,7 +1,7 @@
 package typingsSlinky.divaJs.viewportMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.divaJs.AnonIntersectionTolerance
+import typingsSlinky.divaJs.anon.IntersectionTolerance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class default protected () extends Viewport {
   def this(outer: HTMLElement) = this()
-  def this(outer: HTMLElement, options: AnonIntersectionTolerance) = this()
+  def this(outer: HTMLElement, options: IntersectionTolerance) = this()
 }
 

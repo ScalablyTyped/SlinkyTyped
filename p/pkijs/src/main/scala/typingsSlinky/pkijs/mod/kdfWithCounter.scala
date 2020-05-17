@@ -1,6 +1,6 @@
 package typingsSlinky.pkijs.mod
 
-import typingsSlinky.pkijs.AnonCounter
+import typingsSlinky.pkijs.anon.Counter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,6 +21,6 @@ object kdfWithCounter extends js.Object {
     Zbuffer: js.typedarray.ArrayBuffer,
     Counter: Double,
     SharedInfo: js.typedarray.ArrayBuffer
-  ): js.Thenable[AnonCounter] = js.native
+  ): js.Thenable[Counter] = js.native
 }
 

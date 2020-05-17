@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.UI.Core.CoreAcceleratorKeys")
 @js.native
-class CoreAcceleratorKeys () extends ICoreAcceleratorKeys
+trait CoreAcceleratorKeys extends ICoreAcceleratorKeys
+
+object CoreAcceleratorKeys {
+  @scala.inline
+  def apply(onacceleratorkeyactivated: js.Any): CoreAcceleratorKeys = {
+    val __obj = js.Dynamic.literal(onacceleratorkeyactivated = onacceleratorkeyactivated.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CoreAcceleratorKeys]
+  }
+}
 

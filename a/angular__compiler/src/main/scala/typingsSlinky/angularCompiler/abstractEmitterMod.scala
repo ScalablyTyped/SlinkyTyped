@@ -1,5 +1,6 @@
 package typingsSlinky.angularCompiler
 
+import typingsSlinky.angularCompiler.anon.SourceSpan
 import typingsSlinky.angularCompiler.outputAstMod.AssertNotNull_
 import typingsSlinky.angularCompiler.outputAstMod.BinaryOperatorExpr
 import typingsSlinky.angularCompiler.outputAstMod.BuiltinMethod
@@ -108,12 +109,12 @@ object abstractEmitterMod extends js.Object {
     def popClass(): ClassStmt = js.native
     def print(from: Null, part: String): Unit = js.native
     def print(from: Null, part: String, newLine: Boolean): Unit = js.native
-    def print(from: AnonSourceSpan, part: String): Unit = js.native
-    def print(from: AnonSourceSpan, part: String, newLine: Boolean): Unit = js.native
+    def print(from: SourceSpan, part: String): Unit = js.native
+    def print(from: SourceSpan, part: String, newLine: Boolean): Unit = js.native
     def println(): Unit = js.native
     def println(from: Null, lastPart: String): Unit = js.native
-    def println(from: AnonSourceSpan): Unit = js.native
-    def println(from: AnonSourceSpan, lastPart: String): Unit = js.native
+    def println(from: SourceSpan): Unit = js.native
+    def println(from: SourceSpan, lastPart: String): Unit = js.native
     def pushClass(clazz: ClassStmt): Unit = js.native
     def removeEmptyLastLine(): Unit = js.native
     def setPreambleLineCount(count: Double): Double = js.native

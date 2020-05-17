@@ -1,19 +1,19 @@
 package typingsSlinky.roadsReq.mod
 
 import typingsSlinky.node.httpMod.RequestOptions
-import typingsSlinky.roadsReq.AnonEncoding
-import typingsSlinky.roadsReq.AnonPw
+import typingsSlinky.roadsReq.anon.Encoding
+import typingsSlinky.roadsReq.anon.Pw
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait RoadsReqOptions extends js.Object {
-  var basicAuth: js.UndefOr[AnonPw] = js.native
+  var basicAuth: js.UndefOr[Pw] = js.native
   var followRedirects: js.UndefOr[Boolean] = js.native
   var request: RequestOptions | typingsSlinky.node.httpsMod.RequestOptions = js.native
   var requestBody: js.UndefOr[String] = js.native
-  var response: js.UndefOr[AnonEncoding] = js.native
+  var response: js.UndefOr[Encoding] = js.native
 }
 
 object RoadsReqOptions {
@@ -35,7 +35,7 @@ object RoadsReqOptions {
         ret
     }
     @scala.inline
-    def withBasicAuth(value: AnonPw): Self = {
+    def withBasicAuth(value: Pw): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("basicAuth")(value.asInstanceOf[js.Any])
         ret
@@ -71,7 +71,7 @@ object RoadsReqOptions {
         ret
     }
     @scala.inline
-    def withResponse(value: AnonEncoding): Self = {
+    def withResponse(value: Encoding): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
         ret

@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.PartialRecordBreakpointnu
+import typingsSlinky.antd.anon.PartialRecordBreakpointnu
 import typingsSlinky.antd.antdStrings.default
 import typingsSlinky.antd.antdStrings.horizontal
 import typingsSlinky.antd.antdStrings.middle

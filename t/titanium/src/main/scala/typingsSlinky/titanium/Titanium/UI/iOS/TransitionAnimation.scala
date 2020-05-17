@@ -12,9 +12,8 @@ import scala.scalajs.js.annotation._
 			 * Use this proxy with the Window's
 			 * [transitionAnimation](Titanium.UI.Window.transitionAnimation) property.
 			 */
-@JSGlobal("Titanium.UI.iOS.TransitionAnimation")
 @js.native
-class TransitionAnimation () extends Proxy {
+trait TransitionAnimation extends Proxy {
   /**
   				 * Length of the transition in milliseconds.
   				 */

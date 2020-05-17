@@ -1,10 +1,10 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonCreate
-import typingsSlinky.vscode.AnonExcludes
-import typingsSlinky.vscode.AnonOverwrite
-import typingsSlinky.vscode.AnonRecursive
 import typingsSlinky.vscode.Thenable
+import typingsSlinky.vscode.anon.Create
+import typingsSlinky.vscode.anon.Excludes
+import typingsSlinky.vscode.anon.Overwrite
+import typingsSlinky.vscode.anon.Recursive
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +27,7 @@ trait FileSystemProvider extends js.Object {
     js.Function3[
       /* source */ Uri, 
       /* destination */ Uri, 
-      /* options */ AnonOverwrite, 
+      /* options */ Overwrite, 
       Unit | Thenable[Unit]
     ]
   ] = js.native
@@ -48,7 +48,7 @@ trait FileSystemProvider extends js.Object {
   		 * @throws [`FileNotFound`](#FileSystemError.FileNotFound) when `uri` doesn't exist.
   		 * @throws [`NoPermissions`](#FileSystemError.NoPermissions) when permissions aren't sufficient.
   		 */
-  def delete(uri: Uri, options: AnonRecursive): Unit | Thenable[Unit] = js.native
+  def delete(uri: Uri, options: Recursive): Unit | Thenable[Unit] = js.native
   /**
   		 * An event to signal that a resource has been created, changed, or deleted. This
   		 * event should fire for resources that are being [watched](#FileSystemProvider.watch)
@@ -93,7 +93,7 @@ trait FileSystemProvider extends js.Object {
   		 * @throws [`FileExists`](#FileSystemError.FileExists) when `newUri` exists and when the `overwrite` option is not `true`.
   		 * @throws [`NoPermissions`](#FileSystemError.NoPermissions) when permissions aren't sufficient.
   		 */
-  def rename(oldUri: Uri, newUri: Uri, options: AnonOverwrite): Unit | Thenable[Unit] = js.native
+  def rename(oldUri: Uri, newUri: Uri, options: Overwrite): Unit | Thenable[Unit] = js.native
   /**
   		 * Retrieve metadata about a file.
   		 *
@@ -117,7 +117,7 @@ trait FileSystemProvider extends js.Object {
   		 * @param options Configures the watch.
   		 * @returns A disposable that tells the provider to stop watching the `uri`.
   		 */
-  def watch(uri: Uri, options: AnonExcludes): Disposable = js.native
+  def watch(uri: Uri, options: Excludes): Disposable = js.native
   /**
   		 * Write data to a file, replacing its entire contents.
   		 *
@@ -129,6 +129,6 @@ trait FileSystemProvider extends js.Object {
   		 * @throws [`FileExists`](#FileSystemError.FileExists) when `uri` already exists, `create` is set but `overwrite` is not set.
   		 * @throws [`NoPermissions`](#FileSystemError.NoPermissions) when permissions aren't sufficient.
   		 */
-  def writeFile(uri: Uri, content: js.typedarray.Uint8Array, options: AnonCreate): Unit | Thenable[Unit] = js.native
+  def writeFile(uri: Uri, content: js.typedarray.Uint8Array, options: Create): Unit | Thenable[Unit] = js.native
 }
 

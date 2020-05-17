@@ -3,6 +3,7 @@ package typingsSlinky.reduxThunk
 import typingsSlinky.redux.mod.Action
 import typingsSlinky.redux.mod.AnyAction
 import typingsSlinky.redux.mod.Middleware
+import typingsSlinky.reduxThunk.anon.WithExtraArgument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +17,7 @@ object mod extends js.Object {
     def apply[R](asyncAction: ThunkAction[R, S, E, A]): R = js.native
   }
   
-  val default: (ThunkMiddleware[js.Object, AnyAction, js.UndefOr[scala.Nothing]]) with AnonWithExtraArgument = js.native
+  val default: (ThunkMiddleware[js.Object, AnyAction, js.UndefOr[scala.Nothing]]) with WithExtraArgument = js.native
   type ThunkAction[R, S, E, A /* <: Action[_] */] = js.Function3[
     /* dispatch */ ThunkDispatch[S, E, A], 
     /* getState */ js.Function0[S], 

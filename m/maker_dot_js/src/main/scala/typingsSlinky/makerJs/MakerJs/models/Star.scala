@@ -6,20 +6,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("MakerJs.models.Star")
 @js.native
-class Star protected () extends IModel {
-  def this(numberOfPoints: Double, outerRadius: Double) = this()
-  def this(numberOfPoints: Double, outerRadius: Double, innerRadius: Double) = this()
-  def this(numberOfPoints: Double, outerRadius: Double, innerRadius: Double, skipPoints: Double) = this()
+trait Star extends IModel {
   @JSName("paths")
   var paths_Star: IPathMap = js.native
 }
 
-/* static members */
-@JSGlobal("MakerJs.models.Star")
-@js.native
-object Star extends js.Object {
-  def InnerRadiusRatio(numberOfPoints: Double, skipPoints: Double): Double = js.native
+object Star {
+  @scala.inline
+  def apply(paths: IPathMap): Star = {
+    val __obj = js.Dynamic.literal(paths = paths.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Star]
+  }
+  @scala.inline
+  implicit class StarOps[Self <: Star] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPaths(value: IPathMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.qrcode.mod
 
-import typingsSlinky.qrcode.AnonDeflateLevel
+import typingsSlinky.qrcode.anon.DeflateLevel
 import typingsSlinky.qrcode.qrcodeStrings.png
 import typingsSlinky.qrcode.qrcodeStrings.svg
 import typingsSlinky.qrcode.qrcodeStrings.utf8
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait QRCodeToFileOptions extends QRCodeRenderersOptions {
-  var rendererOpts: js.UndefOr[AnonDeflateLevel] = js.native
+  var rendererOpts: js.UndefOr[DeflateLevel] = js.native
   /**
     * Output format.
     * Default: png
@@ -31,7 +31,7 @@ object QRCodeToFileOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withRendererOpts(value: AnonDeflateLevel): Self = {
+    def withRendererOpts(value: DeflateLevel): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rendererOpts")(value.asInstanceOf[js.Any])
         ret

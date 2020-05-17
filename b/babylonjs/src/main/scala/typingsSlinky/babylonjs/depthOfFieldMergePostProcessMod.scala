@@ -1,5 +1,7 @@
 package typingsSlinky.babylonjs
 
+import typingsSlinky.babylonjs.anon.BlurSteps
+import typingsSlinky.babylonjs.anon.Blurred
 import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.postProcessMod.PostProcess
@@ -162,11 +164,11 @@ object depthOfFieldMergePostProcessMod extends js.Object {
     /**
       * Parameters to perform the merge of bloom effect
       */
-    var bloom: js.UndefOr[AnonBlurred] = js.native
+    var bloom: js.UndefOr[Blurred] = js.native
     /**
       * Parameters to perform the merge of the depth of field effect
       */
-    var depthOfField: js.UndefOr[AnonBlurSteps] = js.native
+    var depthOfField: js.UndefOr[BlurSteps] = js.native
     /**
       * The original image to merge on top of
       */

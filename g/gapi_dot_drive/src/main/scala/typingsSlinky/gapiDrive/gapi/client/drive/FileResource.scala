@@ -1,12 +1,12 @@
 package typingsSlinky.gapiDrive.gapi.client.drive
 
-import typingsSlinky.gapiDrive.AnonAperture
-import typingsSlinky.gapiDrive.AnonCanAddChildren
-import typingsSlinky.gapiDrive.AnonDisplayName
-import typingsSlinky.gapiDrive.AnonDurationMillis
-import typingsSlinky.gapiDrive.AnonHidden
-import typingsSlinky.gapiDrive.AnonImage
-import typingsSlinky.gapiDrive.AnonText
+import typingsSlinky.gapiDrive.anon.Aperture
+import typingsSlinky.gapiDrive.anon.CanAddChildren
+import typingsSlinky.gapiDrive.anon.DisplayName
+import typingsSlinky.gapiDrive.anon.DurationMillis
+import typingsSlinky.gapiDrive.anon.Hidden
+import typingsSlinky.gapiDrive.anon.Image
+import typingsSlinky.gapiDrive.anon.Text
 import typingsSlinky.gapiDrive.gapiDriveStrings.driveNumbersignfile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ trait FileResource extends js.Object {
   var appDataContents: Boolean = js.native
   var canComment: Boolean = js.native
   var canReadRevisions: Boolean = js.native
-  var capabilities: AnonCanAddChildren = js.native
+  var capabilities: CanAddChildren = js.native
   var copyable: Boolean = js.native
   var createdDate: js.Date = js.native
   // openWithLinks
@@ -38,13 +38,13 @@ trait FileResource extends js.Object {
   var headRevisionId: String = js.native
   var iconLink: String = js.native
   var id: String = js.native
-  var imageMediaMetadata: AnonAperture = js.native
+  var imageMediaMetadata: Aperture = js.native
   // exportLinks
-  var indexableText: AnonText = js.native
+  var indexableText: Text = js.native
   var isAppAuthorized: Boolean = js.native
   var kind: driveNumbersignfile = js.native
-  var labels: AnonHidden = js.native
-  var lastModifyingUser: AnonDisplayName = js.native
+  var labels: Hidden = js.native
+  var lastModifyingUser: DisplayName = js.native
   var lastModifyingUserName: String = js.native
   var lastViewedByMeDate: js.Date = js.native
   var markedViewedByMeDate: js.Date = js.native
@@ -55,7 +55,7 @@ trait FileResource extends js.Object {
   var originalFilename: String = js.native
   var ownedByMe: Boolean = js.native
   var ownerNames: js.Array[String] = js.native
-  var owners: js.Array[AnonDisplayName] = js.native
+  var owners: js.Array[DisplayName] = js.native
   var parents: js.Array[ParentResource] = js.native
   var permissions: js.Array[PermissionResource] = js.native
   var properties: js.Array[PropertiesResource] = js.native
@@ -64,17 +64,17 @@ trait FileResource extends js.Object {
   var shareable: Boolean = js.native
   var shared: Boolean = js.native
   var sharedWithMeDate: js.Date = js.native
-  var sharingUser: AnonDisplayName = js.native
+  var sharingUser: DisplayName = js.native
   var spaces: js.Array[String] = js.native
   var teamDriveId: String = js.native
-  var thumbnail: AnonImage = js.native
+  var thumbnail: Image = js.native
   var thumbnailLink: String = js.native
   var title: String = js.native
   var trashedDate: js.Date = js.native
-  var trashingUser: AnonDisplayName = js.native
+  var trashingUser: DisplayName = js.native
   var userPermission: PermissionResource = js.native
   var version: Double = js.native
-  var videoMediaMetadata: AnonDurationMillis = js.native
+  var videoMediaMetadata: DurationMillis = js.native
   var webContentLink: String = js.native
   var webViewLink: String = js.native
   var writersCanShare: Boolean = js.native
@@ -87,7 +87,7 @@ object FileResource {
     appDataContents: Boolean,
     canComment: Boolean,
     canReadRevisions: Boolean,
-    capabilities: AnonCanAddChildren,
+    capabilities: CanAddChildren,
     copyable: Boolean,
     createdDate: js.Date,
     defaultOpenWithLink: String,
@@ -106,12 +106,12 @@ object FileResource {
     headRevisionId: String,
     iconLink: String,
     id: String,
-    imageMediaMetadata: AnonAperture,
-    indexableText: AnonText,
+    imageMediaMetadata: Aperture,
+    indexableText: Text,
     isAppAuthorized: Boolean,
     kind: driveNumbersignfile,
-    labels: AnonHidden,
-    lastModifyingUser: AnonDisplayName,
+    labels: Hidden,
+    lastModifyingUser: DisplayName,
     lastModifyingUserName: String,
     lastViewedByMeDate: js.Date,
     markedViewedByMeDate: js.Date,
@@ -122,7 +122,7 @@ object FileResource {
     originalFilename: String,
     ownedByMe: Boolean,
     ownerNames: js.Array[String],
-    owners: js.Array[AnonDisplayName],
+    owners: js.Array[DisplayName],
     parents: js.Array[ParentResource],
     permissions: js.Array[PermissionResource],
     properties: js.Array[PropertiesResource],
@@ -131,17 +131,17 @@ object FileResource {
     shareable: Boolean,
     shared: Boolean,
     sharedWithMeDate: js.Date,
-    sharingUser: AnonDisplayName,
+    sharingUser: DisplayName,
     spaces: js.Array[String],
     teamDriveId: String,
-    thumbnail: AnonImage,
+    thumbnail: Image,
     thumbnailLink: String,
     title: String,
     trashedDate: js.Date,
-    trashingUser: AnonDisplayName,
+    trashingUser: DisplayName,
     userPermission: PermissionResource,
     version: Double,
-    videoMediaMetadata: AnonDurationMillis,
+    videoMediaMetadata: DurationMillis,
     webContentLink: String,
     webViewLink: String,
     writersCanShare: Boolean
@@ -180,7 +180,7 @@ object FileResource {
         ret
     }
     @scala.inline
-    def withCapabilities(value: AnonCanAddChildren): Self = {
+    def withCapabilities(value: CanAddChildren): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("capabilities")(value.asInstanceOf[js.Any])
         ret
@@ -294,13 +294,13 @@ object FileResource {
         ret
     }
     @scala.inline
-    def withImageMediaMetadata(value: AnonAperture): Self = {
+    def withImageMediaMetadata(value: Aperture): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("imageMediaMetadata")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withIndexableText(value: AnonText): Self = {
+    def withIndexableText(value: Text): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("indexableText")(value.asInstanceOf[js.Any])
         ret
@@ -318,13 +318,13 @@ object FileResource {
         ret
     }
     @scala.inline
-    def withLabels(value: AnonHidden): Self = {
+    def withLabels(value: Hidden): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withLastModifyingUser(value: AnonDisplayName): Self = {
+    def withLastModifyingUser(value: DisplayName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lastModifyingUser")(value.asInstanceOf[js.Any])
         ret
@@ -390,7 +390,7 @@ object FileResource {
         ret
     }
     @scala.inline
-    def withOwners(value: js.Array[AnonDisplayName]): Self = {
+    def withOwners(value: js.Array[DisplayName]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("owners")(value.asInstanceOf[js.Any])
         ret
@@ -444,7 +444,7 @@ object FileResource {
         ret
     }
     @scala.inline
-    def withSharingUser(value: AnonDisplayName): Self = {
+    def withSharingUser(value: DisplayName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sharingUser")(value.asInstanceOf[js.Any])
         ret
@@ -462,7 +462,7 @@ object FileResource {
         ret
     }
     @scala.inline
-    def withThumbnail(value: AnonImage): Self = {
+    def withThumbnail(value: Image): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail")(value.asInstanceOf[js.Any])
         ret
@@ -486,7 +486,7 @@ object FileResource {
         ret
     }
     @scala.inline
-    def withTrashingUser(value: AnonDisplayName): Self = {
+    def withTrashingUser(value: DisplayName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("trashingUser")(value.asInstanceOf[js.Any])
         ret
@@ -504,7 +504,7 @@ object FileResource {
         ret
     }
     @scala.inline
-    def withVideoMediaMetadata(value: AnonDurationMillis): Self = {
+    def withVideoMediaMetadata(value: DurationMillis): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("videoMediaMetadata")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.materialUiDatatables.mod
 
-import typingsSlinky.materialUiDatatables.PartialDataTableProps
+import typingsSlinky.materialUiDatatables.anon.PartialDataTableProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

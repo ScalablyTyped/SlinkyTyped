@@ -1,6 +1,6 @@
 package typingsSlinky.nightwatch.mod
 
-import typingsSlinky.nightwatch.AnonClass
+import typingsSlinky.nightwatch.anon.Class
 import typingsSlinky.nightwatch.nightwatchNumbers.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,12 +12,12 @@ trait NightwatchCallbackResultError
   var state: js.Error | String = js.native
   var status: `1` = js.native
    // we cannot use `number` so giving it a "symbolic" value allows to disjoint the union
-  var value: AnonClass = js.native
+  var value: Class = js.native
 }
 
 object NightwatchCallbackResultError {
   @scala.inline
-  def apply(state: js.Error | String, status: `1`, value: AnonClass): NightwatchCallbackResultError = {
+  def apply(state: js.Error | String, status: `1`, value: Class): NightwatchCallbackResultError = {
     val __obj = js.Dynamic.literal(state = state.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[NightwatchCallbackResultError]
   }
@@ -46,7 +46,7 @@ object NightwatchCallbackResultError {
         ret
     }
     @scala.inline
-    def withValue(value: AnonClass): Self = {
+    def withValue(value: Class): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
         ret

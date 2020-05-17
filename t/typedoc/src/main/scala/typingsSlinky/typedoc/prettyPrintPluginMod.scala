@@ -1,5 +1,7 @@
 package typingsSlinky.typedoc
 
+import typingsSlinky.typedoc.anon.Area
+import typingsSlinky.typedoc.anon.Code
 import typingsSlinky.typedoc.componentMod.AbstractComponent
 import typingsSlinky.typedoc.eventsMod.PageEvent
 import typingsSlinky.typedoc.rendererMod.Renderer
@@ -18,8 +20,8 @@ object prettyPrintPluginMod extends js.Object {
   /* static members */
   @js.native
   object PrettyPrintPlugin extends js.Object {
-    var IGNORED_TAGS: AnonArea = js.native
-    var PRE_TAGS: AnonCode = js.native
+    var IGNORED_TAGS: Area = js.native
+    var PRE_TAGS: Code = js.native
   }
   
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.wonderJs
 
+import typingsSlinky.wonderJs.anon.X
 import typingsSlinky.wonderJs.eventNameHandlerMod.EEventName
 import typingsSlinky.wonderJs.mouseEventMod.MouseEvent
 import typingsSlinky.wonderJs.pointEventMod.PointEvent
@@ -17,7 +18,7 @@ object mousePointEventMod extends js.Object {
     @JSName("eventObj")
     var eventObj_MousePointEvent: MouseEvent = js.native
     @JSName("movementDelta")
-    val movementDelta_MousePointEvent: AnonX = js.native
+    val movementDelta_MousePointEvent: X = js.native
     @JSName("wheel")
     val wheel_MousePointEvent: Double = js.native
   }

@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.Devices.Perception
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Contains information about a infrared frame arrived event. */
+@JSGlobal("Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs")
+@js.native
+abstract class PerceptionInfraredFrameArrivedEventArgs ()
+  extends typingsSlinky.winrtUwp.Windows.Devices.Perception.PerceptionInfraredFrameArrivedEventArgs
+

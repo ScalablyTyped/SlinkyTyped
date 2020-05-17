@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CustomPropertiesObject extends js.Object {
+trait CustomPropertiesObject
+  extends ExportSources
+     with ImportSources {
   var `custom-properties`: js.UndefOr[StringDictionary[String]] = js.native
   var customProperties: js.UndefOr[StringDictionary[String]] = js.native
 }

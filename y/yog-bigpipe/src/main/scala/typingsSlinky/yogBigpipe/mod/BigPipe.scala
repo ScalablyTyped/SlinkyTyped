@@ -2,7 +2,7 @@ package typingsSlinky.yogBigpipe.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.node.streamMod.Readable
-import typingsSlinky.yogBigpipe.AnonDictkey
+import typingsSlinky.yogBigpipe.anon.Dictkey
 import typingsSlinky.yogBigpipe.mod.Pagelet.status
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,7 +29,7 @@ class BigPipe () extends Readable {
   def format(pagelet: Pagelet): String = js.native
   def isQuickingMode(): Boolean = js.native
   def isQuicklingMode(): Boolean = js.native
-  def isQuicklingWidget(item: AnonDictkey): Unit = js.native
+  def isQuicklingWidget(item: Dictkey): Unit = js.native
   def outputPagelet(pagelet: Pagelet): Unit = js.native
   def prepareAllSources(): js.Promise[_] = js.native
   def preparePageOnly(): js.Promise[_] = js.native

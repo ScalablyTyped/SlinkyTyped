@@ -1,6 +1,6 @@
 package typingsSlinky.eyes.mod
 
-import typingsSlinky.eyes.AnonAll
+import typingsSlinky.eyes.anon.All
 import typingsSlinky.node.NodeJS.WritableStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +17,7 @@ trait EyesOptions extends js.Object {
   /** Stream to write to, or null */
   var stream: js.UndefOr[WritableStream] = js.native
   /** Styles applied to stdout */
-  var styles: js.UndefOr[AnonAll] = js.native
+  var styles: js.UndefOr[All] = js.native
 }
 
 object EyesOptions {
@@ -81,7 +81,7 @@ object EyesOptions {
         ret
     }
     @scala.inline
-    def withStyles(value: AnonAll): Self = {
+    def withStyles(value: All): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
         ret

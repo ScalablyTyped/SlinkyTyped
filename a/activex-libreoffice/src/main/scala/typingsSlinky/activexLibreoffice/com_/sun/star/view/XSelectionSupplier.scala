@@ -1,0 +1,81 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.view
+
+import typingsSlinky.activexLibreoffice.`type`
+import typingsSlinky.activexLibreoffice.com_.sun.star.uno.XInterface
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * makes it possible to access and change the selection in a view.
+  * @see OfficeDocumentView
+  */
+@js.native
+trait XSelectionSupplier extends XInterface {
+  /** @returns the current selection.  The selection is either specified by an object which is contained in the component to which the view belongs, or it is an */
+  val Selection: js.Any = js.native
+  /** registers an event listener, which is called when the selection changes. */
+  def addSelectionChangeListener(xListener: XSelectionChangeListener): Unit = js.native
+  /** @returns the current selection.  The selection is either specified by an object which is contained in the component to which the view belongs, or it is an */
+  def getSelection(): js.Any = js.native
+  /** unregisters an event listener which was registered with {@link XSelectionSupplier.addSelectionChangeListener()} . */
+  def removeSelectionChangeListener(xListener: XSelectionChangeListener): Unit = js.native
+  /** selects the object represented by **xSelection** if it is known and selectable in this object. */
+  def select(xSelection: js.Any): Boolean = js.native
+}
+
+object XSelectionSupplier {
+  @scala.inline
+  def apply(
+    Selection: js.Any,
+    acquire: () => Unit,
+    addSelectionChangeListener: XSelectionChangeListener => Unit,
+    getSelection: () => js.Any,
+    queryInterface: `type` => js.Any,
+    release: () => Unit,
+    removeSelectionChangeListener: XSelectionChangeListener => Unit,
+    select: js.Any => Boolean
+  ): XSelectionSupplier = {
+    val __obj = js.Dynamic.literal(Selection = Selection.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addSelectionChangeListener = js.Any.fromFunction1(addSelectionChangeListener), getSelection = js.Any.fromFunction0(getSelection), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeSelectionChangeListener = js.Any.fromFunction1(removeSelectionChangeListener), select = js.Any.fromFunction1(select))
+    __obj.asInstanceOf[XSelectionSupplier]
+  }
+  @scala.inline
+  implicit class XSelectionSupplierOps[Self <: XSelectionSupplier] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSelection(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Selection")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAddSelectionChangeListener(value: XSelectionChangeListener => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addSelectionChangeListener")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetSelection(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSelection")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveSelectionChangeListener(value: XSelectionChangeListener => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeSelectionChangeListener")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSelect(value: js.Any => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
+

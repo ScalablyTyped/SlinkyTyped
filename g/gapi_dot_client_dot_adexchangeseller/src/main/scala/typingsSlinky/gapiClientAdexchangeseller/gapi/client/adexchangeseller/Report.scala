@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientAdexchangeseller.gapi.client.adexchangeseller
 
-import typingsSlinky.gapiClientAdexchangeseller.AnonCurrency
+import typingsSlinky.gapiClientAdexchangeseller.anon.Currency
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait Report extends js.Object {
     * The header information of the columns requested in the report. This is a list of headers; one for each dimension in the request, followed by one for
     * each metric in the request.
     */
-  var headers: js.UndefOr[js.Array[AnonCurrency]] = js.native
+  var headers: js.UndefOr[js.Array[Currency]] = js.native
   /** Kind this is, in this case adexchangeseller#report. */
   var kind: js.UndefOr[String] = js.native
   /**
@@ -57,7 +57,7 @@ object Report {
         ret
     }
     @scala.inline
-    def withHeaders(value: js.Array[AnonCurrency]): Self = {
+    def withHeaders(value: js.Array[Currency]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
         ret

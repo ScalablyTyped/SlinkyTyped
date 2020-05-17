@@ -1,8 +1,8 @@
 package typingsSlinky.rax.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.rax.AnonHtml
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
+import typingsSlinky.rax.anon.Html
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait DOMAttributes[T]
   extends // weex
 /* key */ StringDictionary[js.Any] {
   var children: js.UndefOr[RaxNode] = js.native
-  var dangerouslySetInnerHTML: js.UndefOr[AnonHtml] = js.native
+  var dangerouslySetInnerHTML: js.UndefOr[Html] = js.native
   // Media Events
   var onAbort: js.UndefOr[RaxEventHandler[T]] = js.native
   var onAbortCapture: js.UndefOr[RaxEventHandler[T]] = js.native
@@ -227,7 +227,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withDangerouslySetInnerHTML(value: AnonHtml): Self[T] = {
+    def withDangerouslySetInnerHTML(value: Html): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetInnerHTML")(value.asInstanceOf[js.Any])
         ret
@@ -239,7 +239,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnAbort(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnAbort(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAbort")(js.Any.fromFunction1(value))
         ret
@@ -251,7 +251,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnAbortCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnAbortCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAbortCapture")(js.Any.fromFunction1(value))
         ret
@@ -419,7 +419,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnCanPlay(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnCanPlay(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlay")(js.Any.fromFunction1(value))
         ret
@@ -431,7 +431,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnCanPlayCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnCanPlayCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlayCapture")(js.Any.fromFunction1(value))
         ret
@@ -443,7 +443,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnCanPlayThrough(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnCanPlayThrough(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlayThrough")(js.Any.fromFunction1(value))
         ret
@@ -455,7 +455,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnCanPlayThroughCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnCanPlayThroughCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlayThroughCapture")(js.Any.fromFunction1(value))
         ret
@@ -887,7 +887,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnDurationChange(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnDurationChange(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDurationChange")(js.Any.fromFunction1(value))
         ret
@@ -899,7 +899,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnDurationChangeCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnDurationChangeCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDurationChangeCapture")(js.Any.fromFunction1(value))
         ret
@@ -911,7 +911,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnEmptied(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnEmptied(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEmptied")(js.Any.fromFunction1(value))
         ret
@@ -923,7 +923,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnEmptiedCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnEmptiedCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEmptiedCapture")(js.Any.fromFunction1(value))
         ret
@@ -935,7 +935,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnEncrypted(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnEncrypted(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEncrypted")(js.Any.fromFunction1(value))
         ret
@@ -947,7 +947,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnEncryptedCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnEncryptedCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEncryptedCapture")(js.Any.fromFunction1(value))
         ret
@@ -959,7 +959,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnEnded(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnEnded(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEnded")(js.Any.fromFunction1(value))
         ret
@@ -971,7 +971,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnEndedCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnEndedCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEndedCapture")(js.Any.fromFunction1(value))
         ret
@@ -983,7 +983,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnError(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnError(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
         ret
@@ -995,7 +995,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnErrorCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnErrorCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onErrorCapture")(js.Any.fromFunction1(value))
         ret
@@ -1175,7 +1175,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnLoad(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnLoad(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction1(value))
         ret
@@ -1187,7 +1187,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnLoadCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnLoadCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadCapture")(js.Any.fromFunction1(value))
         ret
@@ -1199,7 +1199,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnLoadStart(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnLoadStart(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadStart")(js.Any.fromFunction1(value))
         ret
@@ -1211,7 +1211,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnLoadStartCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnLoadStartCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadStartCapture")(js.Any.fromFunction1(value))
         ret
@@ -1223,7 +1223,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnLoadedData(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnLoadedData(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedData")(js.Any.fromFunction1(value))
         ret
@@ -1235,7 +1235,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnLoadedDataCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnLoadedDataCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedDataCapture")(js.Any.fromFunction1(value))
         ret
@@ -1247,7 +1247,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnLoadedMetadata(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnLoadedMetadata(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedMetadata")(js.Any.fromFunction1(value))
         ret
@@ -1259,7 +1259,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnLoadedMetadataCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnLoadedMetadataCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedMetadataCapture")(js.Any.fromFunction1(value))
         ret
@@ -1475,7 +1475,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnPause(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnPause(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.Any.fromFunction1(value))
         ret
@@ -1487,7 +1487,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnPauseCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnPauseCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPauseCapture")(js.Any.fromFunction1(value))
         ret
@@ -1499,7 +1499,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnPlay(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnPlay(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.Any.fromFunction1(value))
         ret
@@ -1511,7 +1511,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnPlayCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnPlayCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlayCapture")(js.Any.fromFunction1(value))
         ret
@@ -1523,7 +1523,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnPlaying(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnPlaying(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaying")(js.Any.fromFunction1(value))
         ret
@@ -1535,7 +1535,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnPlayingCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnPlayingCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlayingCapture")(js.Any.fromFunction1(value))
         ret
@@ -1739,7 +1739,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnProgress(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnProgress(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.Any.fromFunction1(value))
         ret
@@ -1751,7 +1751,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnProgressCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnProgressCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onProgressCapture")(js.Any.fromFunction1(value))
         ret
@@ -1763,7 +1763,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnRateChange(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnRateChange(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRateChange")(js.Any.fromFunction1(value))
         ret
@@ -1775,7 +1775,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnRateChangeCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnRateChangeCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onRateChangeCapture")(js.Any.fromFunction1(value))
         ret
@@ -1835,7 +1835,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnSeeked(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnSeeked(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeked")(js.Any.fromFunction1(value))
         ret
@@ -1847,7 +1847,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnSeekedCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnSeekedCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeekedCapture")(js.Any.fromFunction1(value))
         ret
@@ -1859,7 +1859,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnSeeking(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnSeeking(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeeking")(js.Any.fromFunction1(value))
         ret
@@ -1871,7 +1871,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnSeekingCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnSeekingCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSeekingCapture")(js.Any.fromFunction1(value))
         ret
@@ -1883,7 +1883,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnSelect(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnSelect(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
         ret
@@ -1895,7 +1895,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnSelectCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnSelectCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectCapture")(js.Any.fromFunction1(value))
         ret
@@ -1907,7 +1907,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnStalled(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnStalled(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onStalled")(js.Any.fromFunction1(value))
         ret
@@ -1919,7 +1919,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnStalledCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnStalledCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onStalledCapture")(js.Any.fromFunction1(value))
         ret
@@ -1955,7 +1955,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnSuspend(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnSuspend(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSuspend")(js.Any.fromFunction1(value))
         ret
@@ -1967,7 +1967,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnSuspendCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnSuspendCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSuspendCapture")(js.Any.fromFunction1(value))
         ret
@@ -1979,7 +1979,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnTimeUpdate(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnTimeUpdate(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTimeUpdate")(js.Any.fromFunction1(value))
         ret
@@ -1991,7 +1991,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnTimeUpdateCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnTimeUpdateCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTimeUpdateCapture")(js.Any.fromFunction1(value))
         ret
@@ -2123,7 +2123,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnVolumeChange(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnVolumeChange(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onVolumeChange")(js.Any.fromFunction1(value))
         ret
@@ -2135,7 +2135,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnVolumeChangeCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnVolumeChangeCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onVolumeChangeCapture")(js.Any.fromFunction1(value))
         ret
@@ -2147,7 +2147,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnWaiting(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnWaiting(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onWaiting")(js.Any.fromFunction1(value))
         ret
@@ -2159,7 +2159,7 @@ object DOMAttributes {
         ret
     }
     @scala.inline
-    def withOnWaitingCapture(value: SyntheticEvent[T, Event_] => Unit): Self[T] = {
+    def withOnWaitingCapture(value: SyntheticEvent[T, Event] => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onWaitingCapture")(js.Any.fromFunction1(value))
         ret

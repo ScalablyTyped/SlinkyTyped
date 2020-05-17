@@ -6,13 +6,13 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait TextTrackCueEventMap extends js.Object {
-  var enter: Event_ = js.native
-  var exit: Event_ = js.native
+  var enter: org.scalajs.dom.raw.Event = js.native
+  var exit: org.scalajs.dom.raw.Event = js.native
 }
 
 object TextTrackCueEventMap {
   @scala.inline
-  def apply(enter: Event_, exit: Event_): TextTrackCueEventMap = {
+  def apply(enter: org.scalajs.dom.raw.Event, exit: org.scalajs.dom.raw.Event): TextTrackCueEventMap = {
     val __obj = js.Dynamic.literal(enter = enter.asInstanceOf[js.Any], exit = exit.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextTrackCueEventMap]
   }
@@ -23,13 +23,13 @@ object TextTrackCueEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEnter(value: Event_): Self = {
+    def withEnter(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("enter")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withExit(value: Event_): Self = {
+    def withExit(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("exit")(value.asInstanceOf[js.Any])
         ret

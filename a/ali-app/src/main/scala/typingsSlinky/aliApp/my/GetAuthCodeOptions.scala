@@ -1,6 +1,6 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonAuthCode
+import typingsSlinky.aliApp.anon.AuthCode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait GetAuthCodeOptions
   var scopes: js.UndefOr[String | js.Array[String]] = js.native
   	// 授权类型，默认 auth_base。支持 auth_base（静默授权）/ auth_user（主动授权） / auth_zhima（芝麻信用）
   @JSName("success")
-  var success_GetAuthCodeOptions: js.UndefOr[js.Function1[/* res */ AnonAuthCode, Unit]] = js.native
+  var success_GetAuthCodeOptions: js.UndefOr[js.Function1[/* res */ AuthCode, Unit]] = js.native
 }
 
 object GetAuthCodeOptions {
@@ -40,7 +40,7 @@ object GetAuthCodeOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonAuthCode => Unit): Self = {
+    def withSuccess(value: /* res */ AuthCode => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

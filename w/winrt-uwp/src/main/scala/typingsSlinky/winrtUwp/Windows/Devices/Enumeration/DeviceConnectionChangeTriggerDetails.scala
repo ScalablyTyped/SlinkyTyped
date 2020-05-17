@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides information about the device that caused this trigger to fire. */
-@JSGlobal("Windows.Devices.Enumeration.DeviceConnectionChangeTriggerDetails")
 @js.native
-abstract class DeviceConnectionChangeTriggerDetails () extends js.Object {
+trait DeviceConnectionChangeTriggerDetails extends js.Object {
   /** Gets the device Id of the device that caused this trigger to fire. */
   var deviceId: String = js.native
+}
+
+object DeviceConnectionChangeTriggerDetails {
+  @scala.inline
+  def apply(deviceId: String): DeviceConnectionChangeTriggerDetails = {
+    val __obj = js.Dynamic.literal(deviceId = deviceId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DeviceConnectionChangeTriggerDetails]
+  }
+  @scala.inline
+  implicit class DeviceConnectionChangeTriggerDetailsOps[Self <: DeviceConnectionChangeTriggerDetails] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeviceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

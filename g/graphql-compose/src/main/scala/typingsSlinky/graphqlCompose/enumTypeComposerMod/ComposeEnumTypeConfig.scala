@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ComposeEnumTypeConfig extends _EnumTypeComposeDefinition {
+trait ComposeEnumTypeConfig extends EnumTypeComposeDefinition {
   var description: js.UndefOr[String | Null] = js.native
   var extensions: js.UndefOr[Extensions] = js.native
   var name: String = js.native

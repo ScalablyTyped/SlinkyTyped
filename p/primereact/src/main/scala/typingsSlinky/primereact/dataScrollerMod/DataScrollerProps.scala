@@ -1,7 +1,7 @@
 package typingsSlinky.primereact.dataScrollerMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.primereact.AnonFirst
+import typingsSlinky.primereact.anon.First
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait DataScrollerProps extends js.Object {
   var itemTemplate: js.UndefOr[js.Function1[/* item */ js.Any, js.UndefOr[ReactElement]]] = js.native
   var `lazy`: js.UndefOr[Boolean] = js.native
   var loader: js.UndefOr[js.Any] = js.native
-  var onLazyLoad: js.UndefOr[js.Function1[/* e */ AnonFirst, Unit]] = js.native
+  var onLazyLoad: js.UndefOr[js.Function1[/* e */ First, Unit]] = js.native
   var rows: js.UndefOr[Double] = js.native
   var scrollHeight: js.UndefOr[js.Any] = js.native
   var style: js.UndefOr[js.Object] = js.native
@@ -145,7 +145,7 @@ object DataScrollerProps {
         ret
     }
     @scala.inline
-    def withOnLazyLoad(value: /* e */ AnonFirst => Unit): Self = {
+    def withOnLazyLoad(value: /* e */ First => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLazyLoad")(js.Any.fromFunction1(value))
         ret

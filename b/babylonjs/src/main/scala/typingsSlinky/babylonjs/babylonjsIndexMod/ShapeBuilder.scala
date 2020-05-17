@@ -1,7 +1,7 @@
 package typingsSlinky.babylonjs.babylonjsIndexMod
 
-import typingsSlinky.babylonjs.AnonInvertUV
-import typingsSlinky.babylonjs.AnonPath
+import typingsSlinky.babylonjs.anon.InvertUV
+import typingsSlinky.babylonjs.anon.Path
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
@@ -38,8 +38,8 @@ object ShapeBuilder extends js.Object {
     * @see https://doc.babylonjs.com/how_to/parametric_shapes
     * @see https://doc.babylonjs.com/how_to/parametric_shapes#extruded-shapes
     */
-  def ExtrudeShape(name: String, options: AnonInvertUV): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def ExtrudeShape(name: String, options: AnonInvertUV, scene: Nullable[Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudeShape(name: String, options: InvertUV): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudeShape(name: String, options: InvertUV, scene: Nullable[Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates an custom extruded shape mesh.
     * The custom extrusion is a parametric shape. It has no predefined shape. Its final shape will depend on the input parameters.
@@ -66,7 +66,7 @@ object ShapeBuilder extends js.Object {
     * @see https://doc.babylonjs.com/how_to/parametric_shapes
     * @see https://doc.babylonjs.com/how_to/parametric_shapes#extruded-shapes
     */
-  def ExtrudeShapeCustom(name: String, options: AnonPath): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def ExtrudeShapeCustom(name: String, options: AnonPath, scene: Nullable[Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudeShapeCustom(name: String, options: Path): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def ExtrudeShapeCustom(name: String, options: Path, scene: Nullable[Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
 }
 

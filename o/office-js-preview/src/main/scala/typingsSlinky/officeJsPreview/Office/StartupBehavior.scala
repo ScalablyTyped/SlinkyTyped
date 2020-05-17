@@ -1,6 +1,5 @@
 package typingsSlinky.officeJsPreview.Office
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,14 +25,6 @@ object StartupBehavior extends js.Object {
     */
   @js.native
   sealed trait none extends StartupBehavior
-  
-  @JSBracketAccess
-  def apply(value: String): js.UndefOr[StartupBehavior with String] = js.native
-  /* "Load" */ @js.native
-  object load extends TopLevel[load with String]
-  
-  /* "None" */ @js.native
-  object none extends TopLevel[none with String]
   
 }
 

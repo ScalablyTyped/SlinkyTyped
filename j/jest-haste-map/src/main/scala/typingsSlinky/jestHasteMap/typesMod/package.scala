@@ -10,7 +10,7 @@ package object typesMod {
     typingsSlinky.std.Map[java.lang.String, typingsSlinky.jestHasteMap.typesMod.DuplicatesSet]
   ]
   type DuplicatesSet = typingsSlinky.std.Map[java.lang.String, /* type */ scala.Double]
-  type EventsQueue = js.Array[typingsSlinky.jestHasteMap.AnonFilePath]
+  type EventsQueue = js.Array[typingsSlinky.jestHasteMap.anon.FilePath]
   type FileData = typingsSlinky.std.Map[
     typingsSlinky.jestTypes.configMod.Path, 
     typingsSlinky.jestHasteMap.typesMod.FileMetaData
@@ -23,7 +23,6 @@ package object typesMod {
     java.lang.String, 
     js.UndefOr[java.lang.String | scala.Null]
   ]
-  type HasteRegExp = js.RegExp | (js.Function1[/* str */ java.lang.String, scala.Boolean])
   type IgnoreMatcher = js.Function1[/* item */ java.lang.String, scala.Boolean]
   type Mapper = js.Function1[/* item */ java.lang.String, js.Array[java.lang.String] | scala.Null]
   type MockData = typingsSlinky.std.Map[java.lang.String, typingsSlinky.jestTypes.configMod.Path]

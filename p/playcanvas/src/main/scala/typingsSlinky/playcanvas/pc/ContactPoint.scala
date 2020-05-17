@@ -20,10 +20,8 @@ import scala.scalajs.js.annotation._
   * @property {pc.Vec3} pointOther The point on the other entity where the contact occurred, in world space.
   * @property {pc.Vec3} normal The normal vector of the contact on the other entity, in world space.
   */
-@JSGlobal("pc.ContactPoint")
 @js.native
-class ContactPoint protected () extends js.Object {
-  def this(localPoint: Vec3, localPointOther: Vec3, point: Vec3, pointOther: Vec3, normal: Vec3) = this()
+trait ContactPoint extends js.Object {
   /**
     * The point on the entity where the contact occurred, relative to the entity.
     */
@@ -44,5 +42,51 @@ class ContactPoint protected () extends js.Object {
     * The point on the other entity where the contact occurred, in world space.
     */
   var pointOther: Vec3 = js.native
+}
+
+object ContactPoint {
+  @scala.inline
+  def apply(localPoint: Vec3, localPointOther: Vec3, normal: Vec3, point: Vec3, pointOther: Vec3): ContactPoint = {
+    val __obj = js.Dynamic.literal(localPoint = localPoint.asInstanceOf[js.Any], localPointOther = localPointOther.asInstanceOf[js.Any], normal = normal.asInstanceOf[js.Any], point = point.asInstanceOf[js.Any], pointOther = pointOther.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ContactPoint]
+  }
+  @scala.inline
+  implicit class ContactPointOps[Self <: ContactPoint] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withLocalPoint(value: Vec3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localPoint")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocalPointOther(value: Vec3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localPointOther")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNormal(value: Vec3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("normal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPoint(value: Vec3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("point")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPointOther(value: Vec3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pointOther")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

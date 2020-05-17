@@ -5,7 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TagOptions extends TagOptionProps {
+trait TagOptions
+  extends TagOptionProps
+     with TagSetter {
   /* Tag options hash */
   var template: js.UndefOr[TemplateSetter] = js.native
 }

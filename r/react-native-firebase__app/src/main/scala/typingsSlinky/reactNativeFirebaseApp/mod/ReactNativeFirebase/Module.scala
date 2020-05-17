@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeFirebaseApp.mod.ReactNativeFirebase
 
-import typingsSlinky.reactNativeFirebaseApp.FirebaseModuleWithStatics
+import typingsSlinky.reactNativeFirebaseApp.anon.FirebaseModuleWithStatics
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

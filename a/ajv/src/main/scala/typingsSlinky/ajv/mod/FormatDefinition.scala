@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait FormatDefinition extends js.Object
 
+object FormatDefinition {
+  @scala.inline
+  implicit def apply(value: NumberFormatDefinition): FormatDefinition = value.asInstanceOf[FormatDefinition]
+  @scala.inline
+  implicit def apply(value: StringFormatDefinition): FormatDefinition = value.asInstanceOf[FormatDefinition]
+}
+

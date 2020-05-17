@@ -5,9 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Outlook.TaskItem")
 @js.native
-class TaskItem protected () extends js.Object {
+trait TaskItem extends js.Object {
   val Actions: typingsSlinky.activexOutlook.Outlook.Actions = js.native
   var ActualWork: Double = js.native
   val Application: typingsSlinky.activexOutlook.Outlook.Application = js.native

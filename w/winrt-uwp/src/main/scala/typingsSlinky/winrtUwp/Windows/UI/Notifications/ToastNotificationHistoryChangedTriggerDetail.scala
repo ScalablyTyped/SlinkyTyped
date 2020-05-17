@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the details of a toast history changed trigger. */
-@JSGlobal("Windows.UI.Notifications.ToastNotificationHistoryChangedTriggerDetail")
 @js.native
-abstract class ToastNotificationHistoryChangedTriggerDetail () extends js.Object {
+trait ToastNotificationHistoryChangedTriggerDetail extends js.Object {
   /** Gets a value representing the kind of change that caused the toast history changed trigger. */
   var changeType: ToastHistoryChangedType = js.native
+}
+
+object ToastNotificationHistoryChangedTriggerDetail {
+  @scala.inline
+  def apply(changeType: ToastHistoryChangedType): ToastNotificationHistoryChangedTriggerDetail = {
+    val __obj = js.Dynamic.literal(changeType = changeType.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ToastNotificationHistoryChangedTriggerDetail]
+  }
+  @scala.inline
+  implicit class ToastNotificationHistoryChangedTriggerDetailOps[Self <: ToastNotificationHistoryChangedTriggerDetail] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChangeType(value: ToastHistoryChangedType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("changeType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

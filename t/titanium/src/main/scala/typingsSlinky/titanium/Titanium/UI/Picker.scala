@@ -25,9 +25,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A control used to select one or more fixed values.
 		 */
-@JSGlobal("Titanium.UI.Picker")
 @js.native
-class Picker () extends View {
+trait Picker extends View {
   /**
   			 * Determines whether the calenderView is visible.
   			 */

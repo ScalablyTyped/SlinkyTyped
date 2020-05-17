@@ -10,9 +10,9 @@ object dateFnsIsThisWeekIndexMod extends js.Object {
   @js.native
   object default extends js.Object {
     def apply(date: Double): Boolean = js.native
-    def apply(date: Double, options: AnonLocale): Boolean = js.native
+    def apply(date: Double, options: typingsSlinky.dateFns.anon.Locale): Boolean = js.native
     def apply(date: js.Date): Boolean = js.native
-    def apply(date: js.Date, options: AnonLocale): Boolean = js.native
+    def apply(date: js.Date, options: typingsSlinky.dateFns.anon.Locale): Boolean = js.native
   }
   
 }

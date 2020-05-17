@@ -12,21 +12,8 @@ trait ReaderSelectableNode extends js.Object
 
 object ReaderSelectableNode {
   @scala.inline
-  def ReaderFragment(
-    argumentDefinitions: js.Array[ReaderArgumentDefinition],
-    kind: String,
-    name: String,
-    selections: js.Array[ReaderSelection],
-    `type`: String
-  ): ReaderSelectableNode = {
-    val __obj = js.Dynamic.literal(argumentDefinitions = argumentDefinitions.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ReaderSelectableNode]
-  }
+  implicit def apply(value: ReaderFragment): ReaderSelectableNode = value.asInstanceOf[ReaderSelectableNode]
   @scala.inline
-  def ReaderSplitOperation(kind: String, name: String, selections: js.Array[ReaderSelection]): ReaderSelectableNode = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], selections = selections.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ReaderSelectableNode]
-  }
+  implicit def apply(value: ReaderSplitOperation): ReaderSelectableNode = value.asInstanceOf[ReaderSelectableNode]
 }
 

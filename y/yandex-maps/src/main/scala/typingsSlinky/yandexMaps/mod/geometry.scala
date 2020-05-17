@@ -1,6 +1,6 @@
 package typingsSlinky.yandexMaps.mod
 
-import typingsSlinky.yandexMaps.AnonCoordRendering
+import typingsSlinky.yandexMaps.anon.CoordRendering
 import typingsSlinky.yandexMaps.yandexMapsStrings.evenOdd
 import typingsSlinky.yandexMaps.yandexMapsStrings.nonZero
 import scala.scalajs.js
@@ -15,7 +15,7 @@ object geometry extends js.Object {
   - typingsSlinky.yandexMaps.mod.ILineStringGeometryAccess because var conflicts: events. Inlined get, getChildGeometry, getClosest, getCoordinates, getLength, insert, remove, set, setCoordinates, splice */ @js.native
   class LineString () extends IGeometry {
     def this(coordinates: js.Array[js.Array[Double]]) = this()
-    def this(coordinates: js.Array[js.Array[Double]], options: AnonCoordRendering) = this()
+    def this(coordinates: js.Array[js.Array[Double]], options: CoordRendering) = this()
     def add(types: String, callback: js.Function1[/* event */ js.Object | IEvent, Unit]): this.type = js.native
     def add(types: String, callback: js.Function1[/* event */ js.Object | IEvent, Unit], context: js.Object): this.type = js.native
     def add(
@@ -80,7 +80,8 @@ object geometry extends js.Object {
   @js.native
   class Point ()
     extends IGeometry
-       with IPointGeometryAccess {
+       with IPointGeometryAccess
+       with IMultiRouteReferencePoint {
     def this(coordinates: js.Array[Double]) = this()
   }
   

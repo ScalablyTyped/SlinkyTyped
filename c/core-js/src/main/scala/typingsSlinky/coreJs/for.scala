@@ -18,9 +18,3 @@ trait `for`[T] extends IterableIterator[T] {
   def of(callbackfn: js.Function2[/* value */ T, /* key */ js.Any, Unit], thisArg: js.Any): Unit = js.native
 }
 
-@JSGlobal("$for")
-@js.native
-object `for` extends js.Object {
-  def apply[T](iterable: js.Iterable[T]): `for`[T] = js.native
-}
-

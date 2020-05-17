@@ -1,7 +1,7 @@
 package typingsSlinky.openseadragon.mod
 
-import typingsSlinky.openseadragon.AnonAjaxHeaders
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
+import typingsSlinky.openseadragon.anon.AjaxHeaders
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("openseadragon", "TiledImage")
 @js.native
 class TiledImage protected () extends js.Object {
-  def this(options: AnonAjaxHeaders) = this()
+  def this(options: AjaxHeaders) = this()
   var source: TileSource = js.native
   def addHandler(eventName: String, handler: EventHandler[TiledImageEvent]): Unit = js.native
   def addHandler(eventName: String, handler: EventHandler[TiledImageEvent], userData: js.Object): Unit = js.native
@@ -30,7 +30,7 @@ class TiledImage protected () extends js.Object {
   def getCompositeOperation(): String = js.native
   def getContentSize(): Point = js.native
   def getFullyLoaded(): Boolean = js.native
-  def getHandler(eventName: String): js.Function2[/* source */ Event_, /* repeated */ js.Any, Unit] = js.native
+  def getHandler(eventName: String): js.Function2[/* source */ Event, /* repeated */ js.Any, Unit] = js.native
   def getOpacity(): Double = js.native
   def getPreload(): Boolean = js.native
   def getRotation(): Double = js.native

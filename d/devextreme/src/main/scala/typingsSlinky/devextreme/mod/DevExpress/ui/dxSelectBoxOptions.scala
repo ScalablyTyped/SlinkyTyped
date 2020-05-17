@@ -1,9 +1,9 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonCustomItem
+import typingsSlinky.devextreme.anon.CustomItem
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait dxSelectBoxOptions[T] extends dxDropDownListOptions[T] {
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* selectedItem */ js.Any, /* fieldElement */ dxElement, String | Element | JQuery])
   ] = js.native
   /** A function that is executed when a user adds a custom item. Requires acceptCustomValue to be set to true. */
-  var onCustomItemCreating: js.UndefOr[js.Function1[/* e */ AnonCustomItem[T], _]] = js.native
+  var onCustomItemCreating: js.UndefOr[js.Function1[/* e */ CustomItem[T], _]] = js.native
   /** Specifies whether or not to display selection controls. */
   var showSelectionControls: js.UndefOr[Boolean] = js.native
 }
@@ -59,7 +59,7 @@ object dxSelectBoxOptions {
         ret
     }
     @scala.inline
-    def withOnCustomItemCreating(value: /* e */ AnonCustomItem[T] => _): Self[T] = {
+    def withOnCustomItemCreating(value: /* e */ CustomItem[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCustomItemCreating")(js.Any.fromFunction1(value))
         ret

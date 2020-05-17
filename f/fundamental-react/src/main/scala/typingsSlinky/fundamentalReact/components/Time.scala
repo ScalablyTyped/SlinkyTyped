@@ -2,8 +2,8 @@ package typingsSlinky.fundamentalReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.fundamentalReact.AnonHour
-import typingsSlinky.fundamentalReact.AnonMeridiemAM
+import typingsSlinky.fundamentalReact.anon.Hour
+import typingsSlinky.fundamentalReact.anon.MeridiemAM
 import typingsSlinky.fundamentalReact.timeMod.TimeProps
 import typingsSlinky.fundamentalReact.timeMod.default
 import scala.scalajs.js
@@ -34,7 +34,7 @@ object Time {
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
-    def localizedText(value: AnonMeridiemAM): this.type = set("localizedText", value.asInstanceOf[js.Any])
+    def localizedText(value: MeridiemAM): this.type = set("localizedText", value.asInstanceOf[js.Any])
     @scala.inline
     def meridiemDownButtonProps(value: js.Any): this.type = set("meridiemDownButtonProps", value.asInstanceOf[js.Any])
     @scala.inline
@@ -48,7 +48,7 @@ object Time {
     @scala.inline
     def minutesUpButtonProps(value: js.Any): this.type = set("minutesUpButtonProps", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* time */ AnonHour => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* time */ Hour => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def secondsDownButtonProps(value: js.Any): this.type = set("secondsDownButtonProps", value.asInstanceOf[js.Any])
     @scala.inline
@@ -64,7 +64,7 @@ object Time {
     @scala.inline
     def spinners(value: Boolean): this.type = set("spinners", value.asInstanceOf[js.Any])
     @scala.inline
-    def time(value: AnonHour): this.type = set("time", value.asInstanceOf[js.Any])
+    def time(value: Hour): this.type = set("time", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: TimeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

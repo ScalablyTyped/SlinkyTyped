@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DOMOutputSpecArray extends js.Object {
+trait DOMOutputSpecArray extends DOMOutputSpec {
   var `0`: String = js.native
   var `1`: js.UndefOr[DOMOutputSpec | `0` | StringDictionary[String]] = js.native
   var `2`: js.UndefOr[DOMOutputSpec | `0`] = js.native

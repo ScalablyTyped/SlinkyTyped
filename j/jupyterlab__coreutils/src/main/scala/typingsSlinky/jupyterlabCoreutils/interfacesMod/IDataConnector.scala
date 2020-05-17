@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabCoreutils.interfacesMod
 
-import typingsSlinky.jupyterlabCoreutils.AnonIds
+import typingsSlinky.jupyterlabCoreutils.anon.Ids
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,8 +32,8 @@ trait IDataConnector[T, U, V] extends js.Object {
     * retrieving the data. The two lists will always be the same size. If there
     * is no data, this method will succeed with empty `ids` and `values`.
     */
-  def list(): js.Promise[AnonIds[V, T]] = js.native
-  def list(query: js.Any): js.Promise[AnonIds[V, T]] = js.native
+  def list(): js.Promise[Ids[V, T]] = js.native
+  def list(query: js.Any): js.Promise[Ids[V, T]] = js.native
   /**
     * Remove a value using the data connector.
     *

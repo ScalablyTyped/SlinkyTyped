@@ -34,9 +34,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * An empty drawing surface or container
 		 */
-@JSGlobal("Titanium.UI.View")
 @js.native
-class View () extends Proxy {
+trait View extends Proxy {
   /**
   			 * Whether the view should be "hidden" from (i.e., ignored by) the accessibility service.
   			 */

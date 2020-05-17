@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdkClientS3Browser.typesSelectObjectContentInputMod
 
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.SQL
-import typingsSlinky.awsSdkClientS3Browser.inputTypesUnionMod._InputTypesUnion
+import typingsSlinky.awsSdkClientS3Browser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientS3Browser.typesInputSerializationMod.InputSerialization
 import typingsSlinky.awsSdkClientS3Browser.typesOutputSerializationMod.OutputSerialization
 import typingsSlinky.awsSdkClientS3Browser.typesRequestProgressMod.RequestProgress
@@ -13,7 +13,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SelectObjectContentInput extends _InputTypesUnion {
+trait SelectObjectContentInput extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *

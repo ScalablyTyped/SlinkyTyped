@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.disabled
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ready
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.sliced
@@ -64,8 +63,4 @@ trait SliceViewModel extends Accessor {
     */
   def newSlice(): Unit = js.native
 }
-
-@JSGlobal("__esri.SliceViewModel")
-@js.native
-object SliceViewModel extends TopLevel[SliceViewModelConstructor]
 

@@ -1,9 +1,9 @@
 package typingsSlinky.pkijs.envelopedDataMod
 
 import org.scalajs.dom.crypto.Algorithm
-import typingsSlinky.pkijs.AnonHmacHashAlgorithm
-import typingsSlinky.pkijs.AnonKdfAlgorithm
-import typingsSlinky.pkijs.AnonRecipientCertificate
+import typingsSlinky.pkijs.anon.HmacHashAlgorithm
+import typingsSlinky.pkijs.anon.KdfAlgorithm
+import typingsSlinky.pkijs.anon.RecipientCertificate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,25 +24,21 @@ trait EnvelopedData extends js.Object {
     * @param {*} [parameters] Additional parameters neccessary for "fine tunning" of encryption process
     * @param {number} [variant] Variant = 1 is for "key transport", variant = 2 is for "key agreement". In fact the "variant" is unneccessary now because Google has no DH algorithm implementation. Thus key encryption scheme would be choosen by certificate type only: "key transport" for RSA and "key agreement" for ECC certificates.
     */
-  def addRecipientByCertificate(
-    certificate: typingsSlinky.pkijs.certificateMod.default,
-    parameters: AnonKdfAlgorithm,
-    variant: Double
-  ): Boolean = js.native
+  def addRecipientByCertificate(certificate: typingsSlinky.pkijs.certificateMod.default, parameters: KdfAlgorithm, variant: Double): Boolean = js.native
   /**
     * Add recipient based on pre-defined data like password or KEK
     * @param {ArrayBuffer} preDefinedData ArrayBuffer with pre-defined data
     * @param {*} parameters Additional parameters neccessary for "fine tunning" of encryption process
     * @param {number} variant Variant = 1 for pre-defined "key encryption key" (KEK). Variant = 2 for password-based encryption.
     */
-  def addRecipientByPreDefinedData(preDefinedData: js.typedarray.ArrayBuffer, parameters: AnonHmacHashAlgorithm, variant: Double): Boolean = js.native
+  def addRecipientByPreDefinedData(preDefinedData: js.typedarray.ArrayBuffer, parameters: HmacHashAlgorithm, variant: Double): Boolean = js.native
   /**
     * Decrypt existing CMS Enveloped Data content
     * @param {number} recipientIndex Index of recipient
     * @param {*} parameters Additional parameters
     * @returns {Promise}
     */
-  def decrypt(recipientIndex: Double, parameters: AnonRecipientCertificate): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def decrypt(recipientIndex: Double, parameters: RecipientCertificate): js.Thenable[js.typedarray.ArrayBuffer] = js.native
   /**
     * Create a new CMS Enveloped Data content with encrypted data
     * @param {Algorithm} contentEncryptionAlgorithm WebCrypto algorithm. For the moment here could be only "AES-CBC" or "AES-GCM" algorithms.
@@ -58,9 +54,9 @@ trait EnvelopedData extends js.Object {
 object EnvelopedData {
   @scala.inline
   def apply(
-    addRecipientByCertificate: (typingsSlinky.pkijs.certificateMod.default, AnonKdfAlgorithm, Double) => Boolean,
-    addRecipientByPreDefinedData: (js.typedarray.ArrayBuffer, AnonHmacHashAlgorithm, Double) => Boolean,
-    decrypt: (Double, AnonRecipientCertificate) => js.Thenable[js.typedarray.ArrayBuffer],
+    addRecipientByCertificate: (typingsSlinky.pkijs.certificateMod.default, KdfAlgorithm, Double) => Boolean,
+    addRecipientByPreDefinedData: (js.typedarray.ArrayBuffer, HmacHashAlgorithm, Double) => Boolean,
+    decrypt: (Double, RecipientCertificate) => js.Thenable[js.typedarray.ArrayBuffer],
     encrypt: (Algorithm, js.typedarray.ArrayBuffer) => js.Thenable[js.typedarray.ArrayBuffer],
     encryptedContentInfo: typingsSlinky.pkijs.encryptedContentInfoMod.default,
     fromSchema: js.Any => Unit,
@@ -79,19 +75,19 @@ object EnvelopedData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddRecipientByCertificate(value: (typingsSlinky.pkijs.certificateMod.default, AnonKdfAlgorithm, Double) => Boolean): Self = {
+    def withAddRecipientByCertificate(value: (typingsSlinky.pkijs.certificateMod.default, KdfAlgorithm, Double) => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addRecipientByCertificate")(js.Any.fromFunction3(value))
         ret
     }
     @scala.inline
-    def withAddRecipientByPreDefinedData(value: (js.typedarray.ArrayBuffer, AnonHmacHashAlgorithm, Double) => Boolean): Self = {
+    def withAddRecipientByPreDefinedData(value: (js.typedarray.ArrayBuffer, HmacHashAlgorithm, Double) => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addRecipientByPreDefinedData")(js.Any.fromFunction3(value))
         ret
     }
     @scala.inline
-    def withDecrypt(value: (Double, AnonRecipientCertificate) => js.Thenable[js.typedarray.ArrayBuffer]): Self = {
+    def withDecrypt(value: (Double, RecipientCertificate) => js.Thenable[js.typedarray.ArrayBuffer]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("decrypt")(js.Any.fromFunction2(value))
         ret

@@ -2,7 +2,7 @@ package typingsSlinky.storybookComponents.withTooltipMod
 
 import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
-import typingsSlinky.storybookComponents.WithTooltipPurePropsstart
+import typingsSlinky.storybookComponents.anon.WithTooltipPurePropsstart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -2,6 +2,7 @@ package typingsSlinky.samchon
 
 import typingsSlinky.samchon.ientityMod.IEntity
 import typingsSlinky.sxml.mod.XML
+import typingsSlinky.tstl.icontainerMod.IContainer.Iterator
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import typingsSlinky.tstl.mod.base.Container
 import scala.scalajs.js
@@ -28,6 +29,13 @@ object ientitygroupMod extends js.Object {
     /* InferMemberOverrides */
     override def assign[InputIterator /* <: IForwardIterator[T, InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
     /**
+      * Iterator to the first element.
+      *
+      * @return Iterator to the first element.
+      */
+    /* InferMemberOverrides */
+    override def begin(): Iterator[T, SourceT, IteratorT, ReverseT, T] = js.native
+    /**
       * @inheritDoc
       */
     /* InferMemberOverrides */
@@ -52,6 +60,13 @@ object ientitygroupMod extends js.Object {
       * @return A new child Entity belongs to EntityArray.
       */
     def createChild(xml: XML): T = js.native
+    /**
+      * Iterator to the end.
+      *
+      * @return Iterator to the end.
+      */
+    /* InferMemberOverrides */
+    override def end(): Iterator[T, SourceT, IteratorT, ReverseT, T] = js.native
     /**
       * Erase elements in range.
       *
@@ -107,6 +122,22 @@ object ientitygroupMod extends js.Object {
       * @return Whether the map has an item having the specified identifier.
       */
     def has(key: js.Any): Boolean = js.native
+    /**
+      * Reverse iterator to the first element in reverse.
+      *
+      * @return Reverse iterator to the first.
+      */
+    /* InferMemberOverrides */
+    /* InferMemberOverrides */
+    override def rbegin(): ReverseT = js.native
+    /**
+      * Reverse iterator to the reverse end.
+      *
+      * @return Reverse iterator to the end.
+      */
+    /* InferMemberOverrides */
+    /* InferMemberOverrides */
+    override def rend(): ReverseT = js.native
     /**
       * Swap elements.
       *

@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.peoplePickerItemTypesMod
 
-import typingsSlinky.officeUiFabricReact.IPersonaPropsValidationSt
+import typingsSlinky.officeUiFabricReact.anon.IPersonaPropsValidationSt
 import typingsSlinky.officeUiFabricReact.pickerItemTypesMod.IPickerItemProps
 import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject

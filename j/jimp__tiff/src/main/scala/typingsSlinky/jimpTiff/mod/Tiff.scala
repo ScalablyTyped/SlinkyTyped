@@ -1,29 +1,24 @@
 package typingsSlinky.jimpTiff.mod
 
-import typingsSlinky.jimpTiff.AnonImagetiff
-import typingsSlinky.jimpTiff.AnonImagetiffDecoderFn
-import typingsSlinky.jimpTiff.AnonImagetiffEncoderFn
-import typingsSlinky.jimpTiff.AnonMIMETIFF
+import typingsSlinky.jimpTiff.anon.Imagetiff
+import typingsSlinky.jimpTiff.anon.ImagetiffDecoderFn
+import typingsSlinky.jimpTiff.anon.ImagetiffEncoderFn
+import typingsSlinky.jimpTiff.anon.MIMETIFF
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Tiff extends js.Object {
-  var constants: AnonMIMETIFF = js.native
-  var decoders: AnonImagetiffDecoderFn = js.native
-  var encoders: AnonImagetiffEncoderFn = js.native
-  var mime: AnonImagetiff = js.native
+  var constants: MIMETIFF = js.native
+  var decoders: ImagetiffDecoderFn = js.native
+  var encoders: ImagetiffEncoderFn = js.native
+  var mime: Imagetiff = js.native
 }
 
 object Tiff {
   @scala.inline
-  def apply(
-    constants: AnonMIMETIFF,
-    decoders: AnonImagetiffDecoderFn,
-    encoders: AnonImagetiffEncoderFn,
-    mime: AnonImagetiff
-  ): Tiff = {
+  def apply(constants: MIMETIFF, decoders: ImagetiffDecoderFn, encoders: ImagetiffEncoderFn, mime: Imagetiff): Tiff = {
     val __obj = js.Dynamic.literal(constants = constants.asInstanceOf[js.Any], decoders = decoders.asInstanceOf[js.Any], encoders = encoders.asInstanceOf[js.Any], mime = mime.asInstanceOf[js.Any])
     __obj.asInstanceOf[Tiff]
   }
@@ -34,25 +29,25 @@ object Tiff {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withConstants(value: AnonMIMETIFF): Self = {
+    def withConstants(value: MIMETIFF): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("constants")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withDecoders(value: AnonImagetiffDecoderFn): Self = {
+    def withDecoders(value: ImagetiffDecoderFn): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("decoders")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withEncoders(value: AnonImagetiffEncoderFn): Self = {
+    def withEncoders(value: ImagetiffEncoderFn): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("encoders")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withMime(value: AnonImagetiff): Self = {
+    def withMime(value: Imagetiff): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mime")(value.asInstanceOf[js.Any])
         ret

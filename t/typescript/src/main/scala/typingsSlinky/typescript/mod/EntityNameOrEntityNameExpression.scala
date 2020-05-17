@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait EntityNameOrEntityNameExpression extends js.Object
 
+object EntityNameOrEntityNameExpression {
+  @scala.inline
+  implicit def apply(value: EntityName): EntityNameOrEntityNameExpression = value.asInstanceOf[EntityNameOrEntityNameExpression]
+  @scala.inline
+  implicit def apply(value: EntityNameExpression): EntityNameOrEntityNameExpression = value.asInstanceOf[EntityNameOrEntityNameExpression]
+}
+

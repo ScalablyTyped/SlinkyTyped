@@ -2,13 +2,13 @@ package typingsSlinky.pdfmake
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Blob
+import org.scalajs.dom.raw.Window
 import typingsSlinky.node.Buffer
 import typingsSlinky.pdfkit.PDFKit.PDFDocument
 import typingsSlinky.pdfmake.interfacesMod.BufferOptions
 import typingsSlinky.pdfmake.interfacesMod.CustomTableLayout
 import typingsSlinky.pdfmake.interfacesMod.TDocumentDefinitions
 import typingsSlinky.pdfmake.interfacesMod.TFontDictionary
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,10 +37,10 @@ object pdfmakeMod extends js.Object {
      // minimal version 0.1.41
     def open(): Unit = js.native
     def open(options: BufferOptions): Unit = js.native
-    def open(options: BufferOptions, win: Window_): Unit = js.native
+    def open(options: BufferOptions, win: Window): Unit = js.native
     def print(): Unit = js.native
     def print(options: BufferOptions): Unit = js.native
-    def print(options: BufferOptions, win: Window_): Unit = js.native
+    def print(options: BufferOptions, win: Window): Unit = js.native
   }
   
   var fonts: TFontDictionary = js.native

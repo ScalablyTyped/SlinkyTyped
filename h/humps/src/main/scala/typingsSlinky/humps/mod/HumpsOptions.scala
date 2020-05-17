@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait HumpsOptions extends js.Object {
+trait HumpsOptions extends OptionOrProcessor {
   var process: js.UndefOr[HumpsProcessor] = js.native
   var separator: js.UndefOr[String] = js.native
   var split: js.UndefOr[js.RegExp] = js.native

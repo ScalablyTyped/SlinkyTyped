@@ -1,5 +1,6 @@
 package typingsSlinky.sketchapp
 
+import typingsSlinky.sketchapp.anon.Archive
 import typingsSlinky.sketchapp.sketchappStrings.attributedString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SketchMSAttributedString extends js.Object {
   var _class: attributedString = js.native
-  var archivedAttributedString: js.UndefOr[AnonArchive] = js.native
+  var archivedAttributedString: js.UndefOr[Archive] = js.native
   var attributes: js.Array[SketchMSStringAttribute] = js.native
   var string: String = js.native
 }
@@ -44,7 +45,7 @@ object SketchMSAttributedString {
         ret
     }
     @scala.inline
-    def withArchivedAttributedString(value: AnonArchive): Self = {
+    def withArchivedAttributedString(value: Archive): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("archivedAttributedString")(value.asInstanceOf[js.Any])
         ret

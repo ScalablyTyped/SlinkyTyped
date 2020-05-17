@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait RectProps
-  extends _SvgProperties[js.Any] {
+  extends SvgProperties[js.Any] {
   var height: Double = js.native
   var rx: js.UndefOr[Double] = js.native
   var ry: js.UndefOr[Double] = js.native

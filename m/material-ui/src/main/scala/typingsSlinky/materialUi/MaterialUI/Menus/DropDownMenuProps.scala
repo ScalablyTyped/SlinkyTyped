@@ -1,5 +1,6 @@
 package typingsSlinky.materialUi.MaterialUI.Menus
 
+import org.scalajs.dom.raw.Event
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
@@ -7,7 +8,6 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.materialUi.MaterialUI.Popover.PopoverAnimationProps
 import typingsSlinky.materialUi.MaterialUI.propTypes.origin
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,13 +30,13 @@ trait DropDownMenuProps extends js.Object {
   var multiple: js.UndefOr[Boolean] = js.native
   var onChange: js.UndefOr[
     js.Function3[
-      /* e */ SyntheticEvent[Event_, js.Object], 
+      /* e */ SyntheticEvent[Event, js.Object], 
       /* index */ Double, 
       /* menuItemValue */ js.Any, 
       Unit
     ]
   ] = js.native
-  var onClose: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event_, js.Object], Unit]] = js.native
+  var onClose: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event, js.Object], Unit]] = js.native
   var openImmediately: js.UndefOr[Boolean] = js.native
   var selectedMenuItemStyle: js.UndefOr[CSSProperties] = js.native
   var selectionRenderer: js.UndefOr[js.Function2[/* value */ js.Any, /* menuItem */ js.Any, Unit]] = js.native
@@ -222,7 +222,7 @@ object DropDownMenuProps {
     }
     @scala.inline
     def withOnChange(
-      value: (/* e */ SyntheticEvent[Event_, js.Object], /* index */ Double, /* menuItemValue */ js.Any) => Unit
+      value: (/* e */ SyntheticEvent[Event, js.Object], /* index */ Double, /* menuItemValue */ js.Any) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction3(value))
@@ -235,7 +235,7 @@ object DropDownMenuProps {
         ret
     }
     @scala.inline
-    def withOnClose(value: /* e */ SyntheticEvent[Event_, js.Object] => Unit): Self = {
+    def withOnClose(value: /* e */ SyntheticEvent[Event, js.Object] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction1(value))
         ret

@@ -4,10 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("SP.JsGrid.ColumnInfo")
 @js.native
-class ColumnInfo protected () extends js.Object {
-  def this(name: String, imgSrc: String, key: String, width: Double) = this()
+trait ColumnInfo extends js.Object {
   var bOpenMenuOnContentClick: Boolean = js.native
   /** Column identifier */
   var columnKey: String = js.native
@@ -63,5 +61,176 @@ class ColumnInfo protected () extends js.Object {
   def fnShouldLinkSingleValue(record: IRecord, fieldKey: String, dataValue: js.Any, localizedValue: js.Any): Boolean = js.native
   /** if a particular cell is determined as clickable by fnShouldLinkSingleValue, this function will be called when the cell is clicked */
   def fnSingleValueClicked(record: IRecord, fieldKey: String, dataValue: js.Any, localizedValue: js.Any): Unit = js.native
+}
+
+object ColumnInfo {
+  @scala.inline
+  def apply(
+    ColumnType: () => String,
+    bOpenMenuOnContentClick: Boolean,
+    columnKey: String,
+    fieldKeys: js.Array[String],
+    fnGetCellEditMode: (IRecord, String) => EditMode,
+    fnGetCellStyleId: (IRecord, String, js.Any) => String,
+    fnGetDisplayControlName: (IRecord, String) => String,
+    fnGetEditControlName: (IRecord, String) => String,
+    fnGetSingleValueTooltip: (IRecord, String, js.Any, js.Any) => String,
+    fnGetWidgetControlNames: (IRecord, String) => js.Array[String],
+    fnShouldLinkSingleValue: (IRecord, String, js.Any, js.Any) => Boolean,
+    fnSingleValueClicked: (IRecord, String, js.Any, js.Any) => Unit,
+    imgRawSrc: String,
+    imgSrc: String,
+    isAutoFilterable: Boolean,
+    isFooter: Boolean,
+    isHidable: Boolean,
+    isResizable: Boolean,
+    isSortable: Boolean,
+    isVisible: Boolean,
+    name: String,
+    width: Double
+  ): ColumnInfo = {
+    val __obj = js.Dynamic.literal(ColumnType = js.Any.fromFunction0(ColumnType), bOpenMenuOnContentClick = bOpenMenuOnContentClick.asInstanceOf[js.Any], columnKey = columnKey.asInstanceOf[js.Any], fieldKeys = fieldKeys.asInstanceOf[js.Any], fnGetCellEditMode = js.Any.fromFunction2(fnGetCellEditMode), fnGetCellStyleId = js.Any.fromFunction3(fnGetCellStyleId), fnGetDisplayControlName = js.Any.fromFunction2(fnGetDisplayControlName), fnGetEditControlName = js.Any.fromFunction2(fnGetEditControlName), fnGetSingleValueTooltip = js.Any.fromFunction4(fnGetSingleValueTooltip), fnGetWidgetControlNames = js.Any.fromFunction2(fnGetWidgetControlNames), fnShouldLinkSingleValue = js.Any.fromFunction4(fnShouldLinkSingleValue), fnSingleValueClicked = js.Any.fromFunction4(fnSingleValueClicked), imgRawSrc = imgRawSrc.asInstanceOf[js.Any], imgSrc = imgSrc.asInstanceOf[js.Any], isAutoFilterable = isAutoFilterable.asInstanceOf[js.Any], isFooter = isFooter.asInstanceOf[js.Any], isHidable = isHidable.asInstanceOf[js.Any], isResizable = isResizable.asInstanceOf[js.Any], isSortable = isSortable.asInstanceOf[js.Any], isVisible = isVisible.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ColumnInfo]
+  }
+  @scala.inline
+  implicit class ColumnInfoOps[Self <: ColumnInfo] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumnType(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ColumnType")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withBOpenMenuOnContentClick(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bOpenMenuOnContentClick")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withColumnKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFieldKeys(value: js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFnGetCellEditMode(value: (IRecord, String) => EditMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fnGetCellEditMode")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withFnGetCellStyleId(value: (IRecord, String, js.Any) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fnGetCellStyleId")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withFnGetDisplayControlName(value: (IRecord, String) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fnGetDisplayControlName")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withFnGetEditControlName(value: (IRecord, String) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fnGetEditControlName")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withFnGetSingleValueTooltip(value: (IRecord, String, js.Any, js.Any) => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fnGetSingleValueTooltip")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withFnGetWidgetControlNames(value: (IRecord, String) => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fnGetWidgetControlNames")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withFnShouldLinkSingleValue(value: (IRecord, String, js.Any, js.Any) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fnShouldLinkSingleValue")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withFnSingleValueClicked(value: (IRecord, String, js.Any, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fnSingleValueClicked")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withImgRawSrc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imgRawSrc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImgSrc(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("imgSrc")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsAutoFilterable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAutoFilterable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsFooter(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isFooter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsHidable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isHidable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsResizable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isResizable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsSortable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSortable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isVisible")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

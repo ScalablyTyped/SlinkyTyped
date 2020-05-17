@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait EllipseProps
-  extends _SvgProperties[js.Any] {
+  extends SvgProperties[js.Any] {
   var cx: Double = js.native
   var cy: Double = js.native
   var rx: Double = js.native

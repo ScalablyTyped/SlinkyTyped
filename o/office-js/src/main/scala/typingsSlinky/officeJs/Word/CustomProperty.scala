@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Word
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJs.Word.Interfaces.CustomPropertyData
 import typingsSlinky.officeJs.Word.Interfaces.CustomPropertyLoadOptions
 import typingsSlinky.officeJs.Word.Interfaces.CustomPropertyUpdateData
+import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.Boolean
 import typingsSlinky.officeJs.officeJsStrings.Date
 import typingsSlinky.officeJs.officeJsStrings.Number
@@ -19,9 +19,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: WordApi 1.3]
   */
-@JSGlobal("Word.CustomProperty")
 @js.native
-class CustomProperty () extends ClientObject {
+trait CustomProperty extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_CustomProperty: RequestContext = js.native
@@ -71,8 +70,8 @@ class CustomProperty () extends ClientObject {
   def load(): CustomProperty = js.native
   def load(option: String): CustomProperty = js.native
   def load(option: js.Array[String]): CustomProperty = js.native
-  def load(option: AnonExpand): CustomProperty = js.native
   def load(option: CustomPropertyLoadOptions): CustomProperty = js.native
+  def load(option: Expand): CustomProperty = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */
   def set(properties: CustomProperty): Unit = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

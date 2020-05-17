@@ -1,5 +1,6 @@
 package typingsSlinky.angularCore
 
+import typingsSlinky.angularCore.anon.ForwardRefs
 import typingsSlinky.typescript.mod.ImportSpecifier
 import typingsSlinky.typescript.mod.NamedImports
 import typingsSlinky.typescript.mod.NodeArray
@@ -14,6 +15,6 @@ import scala.scalajs.js.annotation._
 object utilMod extends js.Object {
   def findCoreImport(sourceFile: SourceFile, symbolName: String): NamedImports | Null = js.native
   def findImportSpecifier(elements: NodeArray[ImportSpecifier], importName: String): ImportSpecifier | Null = js.native
-  def findRendererReferences(sourceFile: SourceFile, typeChecker: TypeChecker, rendererImport: NamedImports): AnonForwardRefs = js.native
+  def findRendererReferences(sourceFile: SourceFile, typeChecker: TypeChecker, rendererImport: NamedImports): ForwardRefs = js.native
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`envelope-intersects`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`index-intersects`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`nautical-miles`
@@ -304,8 +303,4 @@ trait Query
     */
   var where: String = js.native
 }
-
-@JSGlobal("__esri.Query")
-@js.native
-object Query extends TopLevel[QueryConstructor]
 

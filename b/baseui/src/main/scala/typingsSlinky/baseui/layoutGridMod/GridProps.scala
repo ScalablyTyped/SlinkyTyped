@@ -1,7 +1,6 @@
 package typingsSlinky.baseui.layoutGridMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.baseui.AnonGrid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +18,7 @@ trait GridProps extends js.Object {
   var gridUnit: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSSLengthUnitT */ js.Any
   ] = js.native
-  var overrides: js.UndefOr[AnonGrid] = js.native
+  var overrides: js.UndefOr[typingsSlinky.baseui.anon.Grid] = js.native
 }
 
 object GridProps {
@@ -145,7 +144,7 @@ object GridProps {
         ret
     }
     @scala.inline
-    def withOverrides(value: AnonGrid): Self = {
+    def withOverrides(value: typingsSlinky.baseui.anon.Grid): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
         ret

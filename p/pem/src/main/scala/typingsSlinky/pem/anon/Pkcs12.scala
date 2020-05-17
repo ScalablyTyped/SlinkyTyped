@@ -1,0 +1,33 @@
+package typingsSlinky.pem.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Pkcs12 extends js.Object {
+  var pkcs12: js.Any = js.native
+}
+
+object Pkcs12 {
+  @scala.inline
+  def apply(pkcs12: js.Any): Pkcs12 = {
+    val __obj = js.Dynamic.literal(pkcs12 = pkcs12.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Pkcs12]
+  }
+  @scala.inline
+  implicit class Pkcs12Ops[Self <: Pkcs12] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPkcs12(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pkcs12")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

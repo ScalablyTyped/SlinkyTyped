@@ -1,6 +1,7 @@
 package typingsSlinky.graphqlTools
 
 import typingsSlinky.graphql.astMod.DocumentNode
+import typingsSlinky.graphqlTools.anon.DocumentNodedefinitionsAr
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

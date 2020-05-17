@@ -1,9 +1,9 @@
 package typingsSlinky.babylonjs.materialMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.babylonjs.PartialIMaterialCompilati
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
 import typingsSlinky.babylonjs.animatableInterfaceMod.IAnimatable
+import typingsSlinky.babylonjs.anon.PartialIMaterialCompilati
 import typingsSlinky.babylonjs.baseTextureMod.BaseTexture
 import typingsSlinky.babylonjs.effectMod.Effect
 import typingsSlinky.babylonjs.iInspectableMod.IInspectable

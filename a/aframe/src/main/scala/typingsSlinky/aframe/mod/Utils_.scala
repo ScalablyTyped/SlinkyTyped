@@ -1,19 +1,19 @@
 package typingsSlinky.aframe.mod
 
-import typingsSlinky.aframe.AnonCheckHasPositionalTracking
-import typingsSlinky.aframe.AnonGetComponentProperty
-import typingsSlinky.aframe.AnonIsCoordinate
-import typingsSlinky.aframe.AnonParse
+import typingsSlinky.aframe.anon.CheckHasPositionalTracking
+import typingsSlinky.aframe.anon.GetComponentProperty
+import typingsSlinky.aframe.anon.IsCoordinate
+import typingsSlinky.aframe.anon.Parse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Utils_ extends js.Object {
-  var coordinates: AnonIsCoordinate = js.native
-  var device: AnonCheckHasPositionalTracking = js.native
-  var entity: AnonGetComponentProperty = js.native
-  var styleParser: AnonParse = js.native
+  var coordinates: IsCoordinate = js.native
+  var device: CheckHasPositionalTracking = js.native
+  var entity: GetComponentProperty = js.native
+  var styleParser: Parse = js.native
   def deepEqual(a: js.Any, b: js.Any): Boolean = js.native
   def diff(a: js.Object, b: js.Object): js.Object = js.native
   def extend(target: js.Object, source: js.Object*): js.Object = js.native

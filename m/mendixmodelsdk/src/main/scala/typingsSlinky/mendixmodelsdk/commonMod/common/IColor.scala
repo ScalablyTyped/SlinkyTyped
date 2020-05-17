@@ -1,6 +1,6 @@
 package typingsSlinky.mendixmodelsdk.commonMod.common
 
-import typingsSlinky.mendixmodelsdk.deltasDeltasMod._PrimitiveValue
+import typingsSlinky.mendixmodelsdk.deltasDeltasMod.PrimitiveValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
   * Representation of an RGB color.
   */
 @js.native
-trait IColor extends _PrimitiveValue {
+trait IColor extends PrimitiveValue {
   var blue: Double = js.native
   var green: Double = js.native
   var red: Double = js.native

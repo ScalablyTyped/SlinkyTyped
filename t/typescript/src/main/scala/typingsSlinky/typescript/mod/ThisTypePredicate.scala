@@ -42,30 +42,6 @@ object ThisTypePredicate {
         ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
         ret
     }
-    @scala.inline
-    def withParameterIndex(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterIndex")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameterIndex: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterIndex")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withParameterName(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterName")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutParameterName: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("parameterName")(js.undefined)
-        ret
-    }
   }
   
 }

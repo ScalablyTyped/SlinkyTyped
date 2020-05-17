@@ -1,0 +1,27 @@
+package typingsSlinky.androiduix.global.android.view
+
+import typingsSlinky.androiduix.android.graphics.Rect
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("android.view.FocusFinder")
+@js.native
+class FocusFinder ()
+  extends typingsSlinky.androiduix.android.view.FocusFinder
+
+/* static members */
+@JSGlobal("android.view.FocusFinder")
+@js.native
+object FocusFinder extends js.Object {
+  var sFocusFinder: js.Any = js.native
+  def getInstance(): typingsSlinky.androiduix.android.view.FocusFinder = js.native
+  /* private */ def getNextFocusable(focused: js.Any, focusables: js.Any, count: js.Any): js.Any = js.native
+  /* private */ def getPreviousFocusable(focused: js.Any, focusables: js.Any, count: js.Any): js.Any = js.native
+  def majorAxisDistance(direction: Double, source: Rect, dest: Rect): Double = js.native
+  def majorAxisDistanceRaw(direction: Double, source: Rect, dest: Rect): Double = js.native
+  def majorAxisDistanceToFarEdge(direction: Double, source: Rect, dest: Rect): Double = js.native
+  def majorAxisDistanceToFarEdgeRaw(direction: Double, source: Rect, dest: Rect): Double = js.native
+  def minorAxisDistance(direction: Double, source: Rect, dest: Rect): Double = js.native
+}
+

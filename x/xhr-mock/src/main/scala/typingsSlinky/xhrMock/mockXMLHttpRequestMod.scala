@@ -1,11 +1,11 @@
 package typingsSlinky.xhrMock
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.Document
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventListenerOptions
 import typingsSlinky.std.AddEventListenerOptions
 import typingsSlinky.std.BodyInit
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Event_
 import typingsSlinky.std.XMLHttpRequestResponseType
 import typingsSlinky.std.XMLHttpRequestUpload
 import typingsSlinky.std.stdStrings.readystatechange
@@ -36,7 +36,7 @@ object mockXMLHttpRequestMod extends js.Object {
     var isSynchronous: js.Any = js.native
     var isTimedOut: js.Any = js.native
     var isUploadComplete: js.Any = js.native
-    var onreadystatechange: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
+    var onreadystatechange: (js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null = js.native
     var readyState: Double | ReadyState = js.native
     var req: js.Any = js.native
     var res: js.Any = js.native
@@ -44,7 +44,7 @@ object mockXMLHttpRequestMod extends js.Object {
     val responseText: String = js.native
     var responseType: XMLHttpRequestResponseType = js.native
     var responseURL: String = js.native
-    val responseXML: Document_ | Null = js.native
+    val responseXML: Document | Null = js.native
     val status: Double = js.native
     val statusText: String = js.native
     var timeout: Double = js.native
@@ -55,17 +55,17 @@ object mockXMLHttpRequestMod extends js.Object {
       */
     def abort(): Unit = js.native
     @JSName("addEventListener")
-    def addEventListener_readystatechange(`type`: readystatechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
+    def addEventListener_readystatechange(`type`: readystatechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
     @JSName("addEventListener")
     def addEventListener_readystatechange(
       `type`: readystatechange,
-      listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+      listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
       options: Boolean
     ): Unit = js.native
     @JSName("addEventListener")
     def addEventListener_readystatechange(
       `type`: readystatechange,
-      listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+      listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
       options: AddEventListenerOptions
     ): Unit = js.native
     /* private */ def applyNetworkError(): js.Any = js.native
@@ -75,7 +75,7 @@ object mockXMLHttpRequestMod extends js.Object {
     /* private */ def handleError(error: js.Any): js.Any = js.native
     /* private */ def handleResponseBody(res: js.Any): js.Any = js.native
     def msCachingEnabled(): Boolean = js.native
-    def onreadystatechange(ev: Event_): js.Any = js.native
+    def onreadystatechange(ev: Event): js.Any = js.native
     /**
       * Sets the request method, request URL, and synchronous flag.
       * 
@@ -98,17 +98,17 @@ object mockXMLHttpRequestMod extends js.Object {
     def overrideMimeType(mime: String): Unit = js.native
     /* private */ def receiveResponse(res: js.Any): js.Any = js.native
     @JSName("removeEventListener")
-    def removeEventListener_readystatechange(`type`: readystatechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
+    def removeEventListener_readystatechange(`type`: readystatechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]): Unit = js.native
     @JSName("removeEventListener")
     def removeEventListener_readystatechange(
       `type`: readystatechange,
-      listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+      listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
       options: Boolean
     ): Unit = js.native
     @JSName("removeEventListener")
     def removeEventListener_readystatechange(
       `type`: readystatechange,
-      listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+      listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event, _],
       options: EventListenerOptions
     ): Unit = js.native
     /* private */ def reportError(event: js.Any): js.Any = js.native
@@ -120,7 +120,7 @@ object mockXMLHttpRequestMod extends js.Object {
     def send(): Unit = js.native
     def send(body: js.Any): Unit = js.native
     def send(body: BodyInit): Unit = js.native
-    def send(body: Document_): Unit = js.native
+    def send(body: Document): Unit = js.native
     /* private */ def sendAsync(): js.Any = js.native
     /* private */ def sendRequest(req: js.Any): js.Any = js.native
     /* private */ def sendSync(): js.Any = js.native

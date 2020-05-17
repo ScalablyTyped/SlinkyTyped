@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`backward-diagonal`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`diagonal-cross`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`forward-diagonal`
@@ -18,10 +17,10 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.arcgisJsApi.esri.Symbol2D3D because Already inherited
 - typingsSlinky.arcgisJsApi.esri.symbols.Symbol2D3D because Already inherited */ @js.native
 trait SimpleFillSymbol
-  extends FillSymbol
+  extends Symbol2D
+     with FillSymbol
      with typingsSlinky.arcgisJsApi.esri.symbols.FillSymbol
      with typingsSlinky.arcgisJsApi.esri.symbols.Symbol2D
-     with Symbol2D
      with symbolsFillSymbol {
   /**
     * The fill style. Possible values are listed in the table below:
@@ -52,8 +51,4 @@ trait SimpleFillSymbol
   @JSName("type")
   val type_SimpleFillSymbol: `simple-fill` = js.native
 }
-
-@JSGlobal("__esri.SimpleFillSymbol")
-@js.native
-object SimpleFillSymbol extends TopLevel[SimpleFillSymbolConstructor]
 

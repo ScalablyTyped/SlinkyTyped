@@ -46,10 +46,8 @@ import scala.scalajs.js.annotation._
   *
   * Defaults to pc.BODYTYPE_STATIC.
   */
-@JSGlobal("pc.RigidBodyComponent")
 @js.native
-class RigidBodyComponent protected () extends Component {
-  def this(system: RigidBodyComponentSystem, entity: Entity) = this()
+trait RigidBodyComponent extends Component {
   /**
     * Controls the rate at which a body loses angular velocity over time.
     * Defaults to 0.

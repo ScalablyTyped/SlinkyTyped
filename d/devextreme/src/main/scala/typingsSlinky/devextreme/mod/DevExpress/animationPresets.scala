@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress
 
-import typingsSlinky.devextreme.AnonAnimation
+import typingsSlinky.devextreme.anon.Animation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait animationPresets extends js.Object {
   /** Registers predefined animations in the animation repository. */
   def registerDefaultPresets(): Unit = js.native
   /** Adds an animation with a specific name to the animation repository. */
-  def registerPreset(name: String, config: AnonAnimation): Unit = js.native
+  def registerPreset(name: String, config: Animation): Unit = js.native
   /** Deletes all custom animations. */
   def resetToDefaults(): Unit = js.native
 }

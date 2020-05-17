@@ -1,9 +1,9 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`private`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.english
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.metric
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.org_
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.org_admin
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.org_publisher
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.org_user
@@ -19,7 +19,7 @@ trait PortalUser extends Accessor {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalUser.html#access)
     */
-  var access: `private` | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.org | public = js.native
+  var access: `private` | org_ | public = js.native
   /**
     * The date the user was created.
     *
@@ -212,8 +212,4 @@ trait PortalUser extends Accessor {
   def queryFavorites(): js.Promise[PortalQueryResult] = js.native
   def queryFavorites(queryParams: PortalQueryParams): js.Promise[PortalQueryResult] = js.native
 }
-
-@JSGlobal("__esri.PortalUser")
-@js.native
-object PortalUser extends TopLevel[PortalUserConstructor]
 

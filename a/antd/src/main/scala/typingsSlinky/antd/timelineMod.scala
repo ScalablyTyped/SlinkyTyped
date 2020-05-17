@@ -1,6 +1,7 @@
 package typingsSlinky.antd
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.antd.anon.Mode
 import typingsSlinky.antd.timelineItemMod.TimeLineItemProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +18,7 @@ object timelineMod extends js.Object {
   @js.native
   object default extends js.Object {
     var Item: ReactComponentClass[TimeLineItemProps] = js.native
-    var defaultProps: AnonMode = js.native
+    var defaultProps: Mode = js.native
   }
   
 }

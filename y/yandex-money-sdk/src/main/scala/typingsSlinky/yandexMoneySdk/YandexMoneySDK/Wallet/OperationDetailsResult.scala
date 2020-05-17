@@ -1,6 +1,6 @@
 package typingsSlinky.yandexMoneySdk.YandexMoneySDK.Wallet
 
-import typingsSlinky.yandexMoneySdk.AnonArticle
+import typingsSlinky.yandexMoneySdk.anon.Article
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait OperationDetailsResult extends js.Object {
   var comment: js.UndefOr[String] = js.native
   var datetime: js.UndefOr[String] = js.native
   var details: js.UndefOr[String] = js.native
-  var digital_goods: js.UndefOr[AnonArticle] = js.native
+  var digital_goods: js.UndefOr[Article] = js.native
   var direction: js.UndefOr[String] = js.native
   var error: js.UndefOr[String] = js.native
   var expires: js.UndefOr[String] = js.native
@@ -129,7 +129,7 @@ object OperationDetailsResult {
         ret
     }
     @scala.inline
-    def withDigital_goods(value: AnonArticle): Self = {
+    def withDigital_goods(value: Article): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("digital_goods")(value.asInstanceOf[js.Any])
         ret

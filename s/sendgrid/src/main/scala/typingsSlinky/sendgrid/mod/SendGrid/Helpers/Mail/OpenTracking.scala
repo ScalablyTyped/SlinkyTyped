@@ -1,6 +1,6 @@
 package typingsSlinky.sendgrid.mod.SendGrid.Helpers.Mail
 
-import typingsSlinky.sendgrid.AnonSubstitutiontag
+import typingsSlinky.sendgrid.anon.Substitutiontag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait OpenTracking extends js.Object {
   def getSubscriptionTag(): String = js.native
   def setEnable(enabled: Boolean): Unit = js.native
   def setSubscriptionTag(subscriptionTag: String): Unit = js.native
-  def toJSON(): AnonSubstitutiontag = js.native
+  def toJSON(): Substitutiontag = js.native
 }
 
 object OpenTracking {
@@ -21,7 +21,7 @@ object OpenTracking {
     getSubscriptionTag: () => String,
     setEnable: Boolean => Unit,
     setSubscriptionTag: String => Unit,
-    toJSON: () => AnonSubstitutiontag
+    toJSON: () => Substitutiontag
   ): OpenTracking = {
     val __obj = js.Dynamic.literal(getEnable = js.Any.fromFunction0(getEnable), getSubscriptionTag = js.Any.fromFunction0(getSubscriptionTag), setEnable = js.Any.fromFunction1(setEnable), setSubscriptionTag = js.Any.fromFunction1(setSubscriptionTag), toJSON = js.Any.fromFunction0(toJSON))
     __obj.asInstanceOf[OpenTracking]
@@ -57,7 +57,7 @@ object OpenTracking {
         ret
     }
     @scala.inline
-    def withToJSON(value: () => AnonSubstitutiontag): Self = {
+    def withToJSON(value: () => Substitutiontag): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
         ret

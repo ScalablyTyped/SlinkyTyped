@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.OmitImageViewset
+import typingsSlinky.tabris.anon.OmitImageViewset
 import typingsSlinky.tabris.tabrisStrings.auto
 import typingsSlinky.tabris.tabrisStrings.fill
 import typingsSlinky.tabris.tabrisStrings.fit

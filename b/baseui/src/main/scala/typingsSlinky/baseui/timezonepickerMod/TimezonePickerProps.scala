@@ -1,7 +1,7 @@
 package typingsSlinky.baseui.timezonepickerMod
 
 import slinky.core.TagMod
-import typingsSlinky.baseui.AnonSelect
+import typingsSlinky.baseui.anon.Select
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
@@ -18,7 +18,7 @@ trait TimezonePickerProps extends js.Object {
   var error: js.UndefOr[Boolean] = js.native
   var mapLabels: js.UndefOr[js.Function1[/* args */ Option, TagMod[Any]]] = js.native
   var onChange: js.UndefOr[js.Function1[/* value */ Timezone, _]] = js.native
-  var overrides: js.UndefOr[AnonSelect] = js.native
+  var overrides: js.UndefOr[Select] = js.native
   var positive: js.UndefOr[Boolean] = js.native
   var size: js.UndefOr[mini | default_ | compact | large_] = js.native
   var value: js.UndefOr[String] = js.native
@@ -97,7 +97,7 @@ object TimezonePickerProps {
         ret
     }
     @scala.inline
-    def withOverrides(value: AnonSelect): Self = {
+    def withOverrides(value: Select): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
         ret

@@ -6,12 +6,12 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Window extends js.Object {
-  var cordova: Cordova_ = js.native
+  var cordova: Cordova = js.native
 }
 
 object Window {
   @scala.inline
-  def apply(cordova: Cordova_): Window = {
+  def apply(cordova: Cordova): Window = {
     val __obj = js.Dynamic.literal(cordova = cordova.asInstanceOf[js.Any])
     __obj.asInstanceOf[Window]
   }
@@ -22,7 +22,7 @@ object Window {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCordova(value: Cordova_): Self = {
+    def withCordova(value: Cordova): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cordova")(value.asInstanceOf[js.Any])
         ret

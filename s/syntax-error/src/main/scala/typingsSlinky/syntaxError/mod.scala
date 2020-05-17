@@ -1,6 +1,7 @@
 package typingsSlinky.syntaxError
 
 import typingsSlinky.acorn.mod.Options
+import typingsSlinky.syntaxError.anon.SyntaxErrorlinenumbercolu
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

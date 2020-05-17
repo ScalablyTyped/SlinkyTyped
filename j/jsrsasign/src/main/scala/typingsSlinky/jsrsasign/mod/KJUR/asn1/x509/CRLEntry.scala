@@ -1,6 +1,6 @@
 package typingsSlinky.jsrsasign.mod.KJUR.asn1.x509
 
-import typingsSlinky.jsrsasign.AnonSn
+import typingsSlinky.jsrsasign.anon.Sn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,6 +21,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class CRLEntry ()
   extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.x509.CRLEntry {
-  def this(params: AnonSn) = this()
+  def this(params: Sn) = this()
 }
 

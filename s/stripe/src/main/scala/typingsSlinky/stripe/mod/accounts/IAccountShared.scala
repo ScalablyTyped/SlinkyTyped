@@ -1,8 +1,8 @@
 package typingsSlinky.stripe.mod.accounts
 
-import typingsSlinky.stripe.AnonBranding
-import typingsSlinky.stripe.AnonDate
-import typingsSlinky.stripe.AnonMcc
+import typingsSlinky.stripe.anon.Branding
+import typingsSlinky.stripe.anon.Date
+import typingsSlinky.stripe.anon.Mcc
 import typingsSlinky.stripe.stripeStrings.company
 import typingsSlinky.stripe.stripeStrings.individual
 import scala.scalajs.js
@@ -14,7 +14,7 @@ trait IAccountShared extends js.Object {
   /**
     * Optional information related to the business.
     */
-  var business_profile: js.UndefOr[AnonMcc] = js.native
+  var business_profile: js.UndefOr[Mcc] = js.native
   /**
     * The business type. Can be individual or company.
     */
@@ -48,13 +48,13 @@ trait IAccountShared extends js.Object {
   /**
     * Account options for customizing how the account functions within Stripe.
     */
-  var settings: js.UndefOr[AnonBranding] = js.native
+  var settings: js.UndefOr[Branding] = js.native
   /**
     * Details on who accepted the Stripe terms of service, and when they
     * accepted it. See our updating managed accounts guide for more
     * information
     */
-  var tos_acceptance: js.UndefOr[AnonDate] = js.native
+  var tos_acceptance: js.UndefOr[Date] = js.native
 }
 
 object IAccountShared {
@@ -70,7 +70,7 @@ object IAccountShared {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBusiness_profile(value: AnonMcc): Self = {
+    def withBusiness_profile(value: Mcc): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("business_profile")(value.asInstanceOf[js.Any])
         ret
@@ -142,7 +142,7 @@ object IAccountShared {
         ret
     }
     @scala.inline
-    def withSettings(value: AnonBranding): Self = {
+    def withSettings(value: Branding): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("settings")(value.asInstanceOf[js.Any])
         ret
@@ -154,7 +154,7 @@ object IAccountShared {
         ret
     }
     @scala.inline
-    def withTos_acceptance(value: AnonDate): Self = {
+    def withTos_acceptance(value: Date): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tos_acceptance")(value.asInstanceOf[js.Any])
         ret

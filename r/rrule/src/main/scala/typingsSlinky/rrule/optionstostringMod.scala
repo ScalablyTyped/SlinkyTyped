@@ -1,5 +1,6 @@
 package typingsSlinky.rrule
 
+import typingsSlinky.rrule.anon.PartialOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

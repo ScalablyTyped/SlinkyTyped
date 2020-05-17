@@ -1,6 +1,6 @@
 package typingsSlinky.evernote.mod.Types
 
-import typingsSlinky.evernote.AnonAltitude
+import typingsSlinky.evernote.anon.Altitude
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("evernote", "Types.NoteAttributes")
 @js.native
 class NoteAttributes () extends js.Object {
-  def this(args: AnonAltitude) = this()
+  def this(args: Altitude) = this()
   var altitude: js.UndefOr[Double] = js.native
   var applicationData: js.UndefOr[LazyMap] = js.native
   var author: js.UndefOr[String] = js.native

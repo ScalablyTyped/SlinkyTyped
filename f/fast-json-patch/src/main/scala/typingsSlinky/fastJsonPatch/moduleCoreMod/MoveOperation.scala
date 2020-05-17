@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MoveOperation
   extends BaseOperation
-     with _Operation {
+     with Operation {
   var from: String = js.native
   var op: move = js.native
 }

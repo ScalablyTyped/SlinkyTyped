@@ -1,6 +1,7 @@
 package typingsSlinky.rmcPicker
 
 import typingsSlinky.react.mod.Component
+import typingsSlinky.rmcPicker.anon.Children
 import typingsSlinky.rmcPicker.pickerTypesMod.IPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +24,7 @@ object pickerNativeMod extends js.Object {
   /* static members */
   @js.native
   object default extends js.Object {
-    var defaultProps: AnonChildren = js.native
+    var defaultProps: Children = js.native
     def Item(): Unit = js.native
   }
   

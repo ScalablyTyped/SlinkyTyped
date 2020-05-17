@@ -1,12 +1,12 @@
 package typingsSlinky.actionsOnGoogle.v2Mod
 
-import typingsSlinky.actionsOnGoogle.richMod._RichResponseItem
+import typingsSlinky.actionsOnGoogle.richMod.RichResponseItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait GoogleActionsV2RichResponseItem extends _RichResponseItem {
+trait GoogleActionsV2RichResponseItem extends RichResponseItem {
   /**
     * A basic card.
     */

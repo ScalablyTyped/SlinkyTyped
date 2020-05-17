@@ -7,10 +7,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.view.Menu")
 @js.native
-class Menu__ protected () extends js.Object {
-  def this(context: Context) = this()
+trait Menu__ extends js.Object {
   var mCallback: js.Any = js.native
   var mContext: js.Any = js.native
   var mItems: js.Any = js.native

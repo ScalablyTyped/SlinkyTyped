@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait InterpreterDirective_
   extends BaseNode
-     with _Node {
+     with Node {
   @JSName("type")
   var type_InterpreterDirective_ : InterpreterDirective = js.native
   var value: String = js.native

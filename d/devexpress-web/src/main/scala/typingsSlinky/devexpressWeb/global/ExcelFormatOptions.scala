@@ -1,0 +1,14 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Contains options which define how the dashboard item is exported to Excel format.
+  */
+@JSGlobal("ExcelFormatOptions")
+@js.native
+class ExcelFormatOptions ()
+  extends typingsSlinky.devexpressWeb.ExcelFormatOptions
+

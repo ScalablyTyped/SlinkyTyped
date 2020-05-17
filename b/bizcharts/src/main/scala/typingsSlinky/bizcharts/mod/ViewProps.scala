@@ -1,7 +1,7 @@
 package typingsSlinky.bizcharts.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.bizcharts.AnonX
+import typingsSlinky.bizcharts.anon.X
 import typingsSlinky.react.mod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,11 +12,11 @@ trait ViewProps
   extends Props[js.Any] {
   var animate: js.UndefOr[Boolean] = js.native
   var data: js.UndefOr[js.Any] = js.native
-  var end: js.UndefOr[AnonX] = js.native
+  var end: js.UndefOr[X] = js.native
   var filter: js.UndefOr[js.Array[_]] = js.native
   var id: js.UndefOr[String] = js.native
   var scale: js.UndefOr[StringDictionary[js.Any]] = js.native
-  var start: js.UndefOr[AnonX] = js.native
+  var start: js.UndefOr[X] = js.native
 }
 
 object ViewProps {
@@ -56,7 +56,7 @@ object ViewProps {
         ret
     }
     @scala.inline
-    def withEnd(value: AnonX): Self = {
+    def withEnd(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
         ret
@@ -104,7 +104,7 @@ object ViewProps {
         ret
     }
     @scala.inline
-    def withStart(value: AnonX): Self = {
+    def withStart(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
         ret

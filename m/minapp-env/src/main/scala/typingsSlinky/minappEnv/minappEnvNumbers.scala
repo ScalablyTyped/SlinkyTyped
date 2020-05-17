@@ -1,6 +1,6 @@
 package typingsSlinky.minappEnv
 
-import typingsSlinky.minappEnv.App._SceneValues
+import typingsSlinky.minappEnv.App.SceneValues
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,214 +34,214 @@ object minappEnvNumbers {
   sealed trait `10004` extends js.Object
   
   @js.native
-  sealed trait `1001` extends _SceneValues
+  sealed trait `1001` extends SceneValues
   
   @js.native
-  sealed trait `1005` extends _SceneValues
+  sealed trait `1005` extends SceneValues
   
   @js.native
-  sealed trait `1006` extends _SceneValues
+  sealed trait `1006` extends SceneValues
   
   @js.native
-  sealed trait `1007` extends _SceneValues
+  sealed trait `1007` extends SceneValues
   
   @js.native
-  sealed trait `1008` extends _SceneValues
+  sealed trait `1008` extends SceneValues
   
   @js.native
-  sealed trait `1011` extends _SceneValues
+  sealed trait `1011` extends SceneValues
   
   @js.native
-  sealed trait `1012` extends _SceneValues
+  sealed trait `1012` extends SceneValues
   
   @js.native
-  sealed trait `1013` extends _SceneValues
+  sealed trait `1013` extends SceneValues
   
   @js.native
-  sealed trait `1014` extends _SceneValues
+  sealed trait `1014` extends SceneValues
   
   @js.native
-  sealed trait `1017` extends _SceneValues
+  sealed trait `1017` extends SceneValues
   
   @js.native
-  sealed trait `1019` extends _SceneValues
+  sealed trait `1019` extends SceneValues
   
   @js.native
-  sealed trait `1020` extends _SceneValues
+  sealed trait `1020` extends SceneValues
   
   @js.native
-  sealed trait `1022` extends _SceneValues
+  sealed trait `1022` extends SceneValues
   
   @js.native
-  sealed trait `1023` extends _SceneValues
+  sealed trait `1023` extends SceneValues
   
   @js.native
-  sealed trait `1024` extends _SceneValues
+  sealed trait `1024` extends SceneValues
   
   @js.native
-  sealed trait `1025` extends _SceneValues
+  sealed trait `1025` extends SceneValues
   
   @js.native
-  sealed trait `1026` extends _SceneValues
+  sealed trait `1026` extends SceneValues
   
   @js.native
-  sealed trait `1027` extends _SceneValues
+  sealed trait `1027` extends SceneValues
   
   @js.native
-  sealed trait `1028` extends _SceneValues
+  sealed trait `1028` extends SceneValues
   
   @js.native
-  sealed trait `1029` extends _SceneValues
+  sealed trait `1029` extends SceneValues
   
   @js.native
-  sealed trait `1030` extends _SceneValues
+  sealed trait `1030` extends SceneValues
   
   @js.native
-  sealed trait `1031` extends _SceneValues
+  sealed trait `1031` extends SceneValues
   
   @js.native
-  sealed trait `1032` extends _SceneValues
+  sealed trait `1032` extends SceneValues
   
   @js.native
-  sealed trait `1034` extends _SceneValues
+  sealed trait `1034` extends SceneValues
   
   @js.native
-  sealed trait `1035` extends _SceneValues
+  sealed trait `1035` extends SceneValues
   
   @js.native
-  sealed trait `1036` extends _SceneValues
+  sealed trait `1036` extends SceneValues
   
   @js.native
-  sealed trait `1037` extends _SceneValues
+  sealed trait `1037` extends SceneValues
   
   @js.native
-  sealed trait `1038` extends _SceneValues
+  sealed trait `1038` extends SceneValues
   
   @js.native
-  sealed trait `1039` extends _SceneValues
+  sealed trait `1039` extends SceneValues
   
   @js.native
-  sealed trait `1042` extends _SceneValues
+  sealed trait `1042` extends SceneValues
   
   @js.native
-  sealed trait `1043` extends _SceneValues
+  sealed trait `1043` extends SceneValues
   
   @js.native
-  sealed trait `1044` extends _SceneValues
+  sealed trait `1044` extends SceneValues
   
   @js.native
-  sealed trait `1045` extends _SceneValues
+  sealed trait `1045` extends SceneValues
   
   @js.native
-  sealed trait `1046` extends _SceneValues
+  sealed trait `1046` extends SceneValues
   
   @js.native
-  sealed trait `1047` extends _SceneValues
+  sealed trait `1047` extends SceneValues
   
   @js.native
-  sealed trait `1048` extends _SceneValues
+  sealed trait `1048` extends SceneValues
   
   @js.native
-  sealed trait `1049` extends _SceneValues
+  sealed trait `1049` extends SceneValues
   
   @js.native
-  sealed trait `1052` extends _SceneValues
+  sealed trait `1052` extends SceneValues
   
   @js.native
-  sealed trait `1053` extends _SceneValues
+  sealed trait `1053` extends SceneValues
   
   @js.native
-  sealed trait `1054` extends _SceneValues
+  sealed trait `1054` extends SceneValues
   
   @js.native
-  sealed trait `1056` extends _SceneValues
+  sealed trait `1056` extends SceneValues
   
   @js.native
-  sealed trait `1057` extends _SceneValues
+  sealed trait `1057` extends SceneValues
   
   @js.native
-  sealed trait `1058` extends _SceneValues
+  sealed trait `1058` extends SceneValues
   
   @js.native
-  sealed trait `1059` extends _SceneValues
+  sealed trait `1059` extends SceneValues
   
   @js.native
-  sealed trait `1064` extends _SceneValues
+  sealed trait `1064` extends SceneValues
   
   @js.native
-  sealed trait `1067` extends _SceneValues
+  sealed trait `1067` extends SceneValues
   
   @js.native
-  sealed trait `1068` extends _SceneValues
+  sealed trait `1068` extends SceneValues
   
   @js.native
-  sealed trait `1069` extends _SceneValues
+  sealed trait `1069` extends SceneValues
   
   @js.native
-  sealed trait `1071` extends _SceneValues
+  sealed trait `1071` extends SceneValues
   
   @js.native
-  sealed trait `1072` extends _SceneValues
+  sealed trait `1072` extends SceneValues
   
   @js.native
-  sealed trait `1073` extends _SceneValues
+  sealed trait `1073` extends SceneValues
   
   @js.native
-  sealed trait `1074` extends _SceneValues
+  sealed trait `1074` extends SceneValues
   
   @js.native
-  sealed trait `1077` extends _SceneValues
+  sealed trait `1077` extends SceneValues
   
   @js.native
-  sealed trait `1078` extends _SceneValues
+  sealed trait `1078` extends SceneValues
   
   @js.native
-  sealed trait `1079` extends _SceneValues
+  sealed trait `1079` extends SceneValues
   
   @js.native
-  sealed trait `1081` extends _SceneValues
+  sealed trait `1081` extends SceneValues
   
   @js.native
-  sealed trait `1082` extends _SceneValues
+  sealed trait `1082` extends SceneValues
   
   @js.native
-  sealed trait `1084` extends _SceneValues
+  sealed trait `1084` extends SceneValues
   
   @js.native
-  sealed trait `1089` extends _SceneValues
+  sealed trait `1089` extends SceneValues
   
   @js.native
-  sealed trait `1090` extends _SceneValues
+  sealed trait `1090` extends SceneValues
   
   @js.native
-  sealed trait `1091` extends _SceneValues
+  sealed trait `1091` extends SceneValues
   
   @js.native
-  sealed trait `1092` extends _SceneValues
+  sealed trait `1092` extends SceneValues
   
   @js.native
-  sealed trait `1095` extends _SceneValues
+  sealed trait `1095` extends SceneValues
   
   @js.native
-  sealed trait `1096` extends _SceneValues
+  sealed trait `1096` extends SceneValues
   
   @js.native
-  sealed trait `1097` extends _SceneValues
+  sealed trait `1097` extends SceneValues
   
   @js.native
-  sealed trait `1099` extends _SceneValues
+  sealed trait `1099` extends SceneValues
   
   @js.native
-  sealed trait `1102` extends _SceneValues
+  sealed trait `1102` extends SceneValues
   
   @js.native
   sealed trait `11025` extends js.Object
   
   @js.native
-  sealed trait `1103` extends _SceneValues
+  sealed trait `1103` extends SceneValues
   
   @js.native
-  sealed trait `1104` extends _SceneValues
+  sealed trait `1104` extends SceneValues
   
   @js.native
   sealed trait `12000` extends js.Object

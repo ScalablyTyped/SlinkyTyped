@@ -1,0 +1,40 @@
+package typingsSlinky.reactNativeFetchBlob.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Free extends js.Object {
+  var free: Double = js.native
+  var total: Double = js.native
+}
+
+object Free {
+  @scala.inline
+  def apply(free: Double, total: Double): Free = {
+    val __obj = js.Dynamic.literal(free = free.asInstanceOf[js.Any], total = total.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Free]
+  }
+  @scala.inline
+  implicit class FreeOps[Self <: Free] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFree(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("free")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTotal(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("total")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

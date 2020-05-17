@@ -1,5 +1,6 @@
 package typingsSlinky.baseui.components
 
+import org.scalajs.dom.raw.Event
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -15,7 +16,6 @@ import typingsSlinky.baseui.baseuiStrings.solid
 import typingsSlinky.baseui.baseuiStrings.warning
 import typingsSlinky.baseui.tagMod.TagOverrides
 import typingsSlinky.baseui.tagMod.TagProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,13 +42,13 @@ object Tag {
     @scala.inline
     def kind(value: custom_ | accent | primary | neutral | positive | warning | negative): this.type = set("kind", value.asInstanceOf[js.Any])
     @scala.inline
-    def onActionClick(value: (/* e */ Event_, /* children */ js.UndefOr[TagMod[Any]]) => _): this.type = set("onActionClick", js.Any.fromFunction2(value))
+    def onActionClick(value: (/* e */ Event, /* children */ js.UndefOr[TagMod[Any]]) => _): this.type = set("onActionClick", js.Any.fromFunction2(value))
     @scala.inline
-    def onActionKeyDown(value: (/* e */ Event_, /* children */ js.UndefOr[TagMod[Any]]) => _): this.type = set("onActionKeyDown", js.Any.fromFunction2(value))
+    def onActionKeyDown(value: (/* e */ Event, /* children */ js.UndefOr[TagMod[Any]]) => _): this.type = set("onActionKeyDown", js.Any.fromFunction2(value))
     @scala.inline
-    def onClick(value: /* event */ Event_ => _): this.type = set("onClick", js.Any.fromFunction1(value))
+    def onClick(value: /* event */ Event => _): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onKeyDown(value: /* event */ Event_ => _): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    def onKeyDown(value: /* event */ Event => _): this.type = set("onKeyDown", js.Any.fromFunction1(value))
     @scala.inline
     def overrides(value: TagOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline

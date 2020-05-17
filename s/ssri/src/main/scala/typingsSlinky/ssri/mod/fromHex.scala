@@ -1,8 +1,8 @@
 package typingsSlinky.ssri.mod
 
-import typingsSlinky.ssri.AnonOptions
-import typingsSlinky.ssri.AnonOptionsSingle
-import typingsSlinky.ssri.AnonOptionsSingleStrict
+import typingsSlinky.ssri.anon.Options
+import typingsSlinky.ssri.anon.OptionsSingle
+import typingsSlinky.ssri.anon.OptionsSingleStrict
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object fromHex extends js.Object {
   def apply(hexDigest: String, algorithm: String): Hash = js.native
-  def apply(hexDigest: String, algorithm: String, opts: AnonOptions): IntegrityMap = js.native
-  def apply(hexDigest: String, algorithm: String, opts: AnonOptionsSingle): Hash = js.native
-  def apply(hexDigest: String, algorithm: String, opts: AnonOptionsSingleStrict): IntegrityMap | Hash = js.native
+  def apply(hexDigest: String, algorithm: String, opts: Options): IntegrityMap = js.native
+  def apply(hexDigest: String, algorithm: String, opts: OptionsSingle): Hash = js.native
+  def apply(hexDigest: String, algorithm: String, opts: OptionsSingleStrict): IntegrityMap | Hash = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.paymentIntents
 
-import typingsSlinky.stripe.AnonAmountNumber
+import typingsSlinky.stripe.anon.AmountNumber
 import typingsSlinky.stripe.mod.IOptionsMetadata
 import typingsSlinky.stripe.mod.IShippingInformation
 import scala.scalajs.js
@@ -71,7 +71,7 @@ trait IPaymentIntentUpdateOptions extends js.Object {
   /**
     * The parameters used to automatically create a Transfer when the payment succeeds.
     */
-  var transfer_data: js.UndefOr[AnonAmountNumber] = js.native
+  var transfer_data: js.UndefOr[AmountNumber] = js.native
   /**
     * A string that identifies the resulting payment as part of a group.
     */
@@ -265,7 +265,7 @@ object IPaymentIntentUpdateOptions {
         ret
     }
     @scala.inline
-    def withTransfer_data(value: AnonAmountNumber): Self = {
+    def withTransfer_data(value: AmountNumber): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("transfer_data")(value.asInstanceOf[js.Any])
         ret

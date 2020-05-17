@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @JSImport("jsrsasign", "KJUR.asn1.DERUTF8String")
 @js.native
 class DERUTF8String protected ()
-  extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.DERUTF8String {
+  extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.DERAbstractString {
   def this(params: StringParam) = this()
 }
 

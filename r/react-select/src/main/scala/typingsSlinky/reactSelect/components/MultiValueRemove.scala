@@ -2,7 +2,7 @@ package typingsSlinky.reactSelect.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactSelect.AnonOnTouchEnd
+import typingsSlinky.reactSelect.anon.OnTouchEnd
 import typingsSlinky.reactSelect.componentsMultiValueMod.MultiValueRemoveProps
 import typingsSlinky.reactSelect.selectMod.Props
 import typingsSlinky.reactSelect.typesMod.ActionTypes
@@ -38,7 +38,7 @@ object MultiValueRemove {
     getStyles: (String, js.Any) => js.Object,
     getValue: () => ValueType[OptionType],
     hasValue: Boolean,
-    innerProps: AnonOnTouchEnd,
+    innerProps: OnTouchEnd,
     isMulti: Boolean,
     options: OptionsType[OptionType],
     selectOption: OptionType => Unit,

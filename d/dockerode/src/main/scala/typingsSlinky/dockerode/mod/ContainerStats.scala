@@ -1,6 +1,6 @@
 package typingsSlinky.dockerode.mod
 
-import typingsSlinky.dockerode.AnonCurrent
+import typingsSlinky.dockerode.anon.Current
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait ContainerStats extends js.Object {
   var cpu_stats: CPUStats = js.native
   var memory_stats: MemoryStats = js.native
   var networks: NetworkStats = js.native
-  var pid_stats: AnonCurrent = js.native
+  var pid_stats: Current = js.native
   var precpu_stats: CPUStats = js.native
   var read: String = js.native
 }
@@ -21,7 +21,7 @@ object ContainerStats {
     cpu_stats: CPUStats,
     memory_stats: MemoryStats,
     networks: NetworkStats,
-    pid_stats: AnonCurrent,
+    pid_stats: Current,
     precpu_stats: CPUStats,
     read: String
   ): ContainerStats = {
@@ -53,7 +53,7 @@ object ContainerStats {
         ret
     }
     @scala.inline
-    def withPid_stats(value: AnonCurrent): Self = {
+    def withPid_stats(value: Current): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pid_stats")(value.asInstanceOf[js.Any])
         ret

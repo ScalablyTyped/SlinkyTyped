@@ -1,15 +1,15 @@
 package typingsSlinky.activedirectory2.mod
 
-import typingsSlinky.activedirectory2.AnonEnabled
-import typingsSlinky.activedirectory2.AnonGroup
 import typingsSlinky.activedirectory2.activedirectory2Numbers.`1000`
+import typingsSlinky.activedirectory2.anon.Enabled
+import typingsSlinky.activedirectory2.anon.Group
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ADProperties extends js.Object {
-  var attributes: js.UndefOr[AnonGroup] = js.native
+  var attributes: js.UndefOr[Group] = js.native
   var baseDN: String = js.native
   var entryParser: js.UndefOr[
     js.Function3[
@@ -21,7 +21,7 @@ trait ADProperties extends js.Object {
   ] = js.native
   var pageSize: js.UndefOr[`1000`] = js.native
   var password: String = js.native
-  var referrals: js.UndefOr[AnonEnabled] = js.native
+  var referrals: js.UndefOr[Enabled] = js.native
   var url: String = js.native
   var username: String = js.native
 }
@@ -63,7 +63,7 @@ object ADProperties {
         ret
     }
     @scala.inline
-    def withAttributes(value: AnonGroup): Self = {
+    def withAttributes(value: Group): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("attributes")(value.asInstanceOf[js.Any])
         ret
@@ -101,7 +101,7 @@ object ADProperties {
         ret
     }
     @scala.inline
-    def withReferrals(value: AnonEnabled): Self = {
+    def withReferrals(value: Enabled): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("referrals")(value.asInstanceOf[js.Any])
         ret

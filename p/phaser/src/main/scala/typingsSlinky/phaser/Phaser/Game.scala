@@ -20,7 +20,6 @@ import typingsSlinky.phaser.Phaser.Sound.HTML5AudioSoundManager
 import typingsSlinky.phaser.Phaser.Sound.NoAudioSoundManager
 import typingsSlinky.phaser.Phaser.Sound.WebAudioSoundManager
 import typingsSlinky.phaser.Phaser.Textures.TextureManager
-import typingsSlinky.phaser.Phaser.Types.Core.GameConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,14 +33,8 @@ import scala.scalajs.js.annotation._
   * You should generally avoid accessing any of the systems created by Game, and instead use those
   * made available to you via the Phaser.Scene Systems class instead.
   */
-@JSGlobal("Phaser.Game")
 @js.native
-/**
-  * 
-  * @param GameConfig The configuration object for your Phaser Game instance.
-  */
-class Game () extends js.Object {
-  def this(GameConfig: GameConfig) = this()
+trait Game extends js.Object {
   /**
     * An instance of the Animation Manager.
     * 

@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdk.medialiveMod
 
-import typingsSlinky.awsSdk.DescribeChannelRequestwai
-import typingsSlinky.awsSdk.DescribeMultiplexRequestw
+import typingsSlinky.awsSdk.anon.DescribeChannelRequestwai
+import typingsSlinky.awsSdk.anon.DescribeMultiplexRequestw
 import typingsSlinky.awsSdk.awsSdkStrings.channelCreated
 import typingsSlinky.awsSdk.awsSdkStrings.channelDeleted
 import typingsSlinky.awsSdk.awsSdkStrings.channelRunning

@@ -1,19 +1,19 @@
 package typingsSlinky.monacoEditor.mod.editor
 
-import typingsSlinky.monacoEditor.AnonFromLineNumber
+import typingsSlinky.monacoEditor.anon.FromLineNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IModelTokensChangedEvent extends js.Object {
-  val ranges: js.Array[AnonFromLineNumber] = js.native
+  val ranges: js.Array[FromLineNumber] = js.native
   val tokenizationSupportChanged: Boolean = js.native
 }
 
 object IModelTokensChangedEvent {
   @scala.inline
-  def apply(ranges: js.Array[AnonFromLineNumber], tokenizationSupportChanged: Boolean): IModelTokensChangedEvent = {
+  def apply(ranges: js.Array[FromLineNumber], tokenizationSupportChanged: Boolean): IModelTokensChangedEvent = {
     val __obj = js.Dynamic.literal(ranges = ranges.asInstanceOf[js.Any], tokenizationSupportChanged = tokenizationSupportChanged.asInstanceOf[js.Any])
     __obj.asInstanceOf[IModelTokensChangedEvent]
   }
@@ -24,7 +24,7 @@ object IModelTokensChangedEvent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withRanges(value: js.Array[AnonFromLineNumber]): Self = {
+    def withRanges(value: js.Array[FromLineNumber]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(value.asInstanceOf[js.Any])
         ret

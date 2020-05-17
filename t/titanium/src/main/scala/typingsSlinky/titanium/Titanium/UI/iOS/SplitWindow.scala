@@ -28,9 +28,8 @@ import scala.scalajs.js.annotation._
 			 * A SplitWindow is a window that manages the presentation of two side-by-side view
 			 * controllers.
 			 */
-@JSGlobal("Titanium.UI.iOS.SplitWindow")
 @js.native
-class SplitWindow () extends Window {
+trait SplitWindow extends Window {
   /**
   				 * Window for the detail view section of the SplitWindow.
   				 */

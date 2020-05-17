@@ -9,7 +9,7 @@ package object mod {
     /* this */ typingsSlinky.webidl2js.mod.ProcessorContext, 
     /* idl */ typingsSlinky.webidl2.mod.AttributeMemberType, 
     /* implName */ java.lang.String, 
-    typingsSlinky.webidl2js.AnonGet
+    typingsSlinky.webidl2js.anon.Get
   ]
   type CodeProcessor = js.ThisFunction1[
     /* this */ typingsSlinky.webidl2js.mod.ProcessorContext, 

@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ForceTransform extends _Transforms {
+trait ForceTransform extends Transforms {
   var alpha: js.UndefOr[Double | SignalRef] = js.native
   var alphaMin: js.UndefOr[Double | SignalRef] = js.native
   var alphaTarget: js.UndefOr[Double | SignalRef] = js.native

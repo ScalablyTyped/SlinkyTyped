@@ -1,5 +1,6 @@
 package typingsSlinky.playcanvas.mod
 
+import typingsSlinky.playcanvas.pc.ResourceHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +14,7 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("playcanvas", "AudioHandler")
 @js.native
-class AudioHandler protected ()
-  extends typingsSlinky.playcanvas.pc.AudioHandler {
+class AudioHandler protected () extends ResourceHandler {
   def this(manager: typingsSlinky.playcanvas.pc.SoundManager) = this()
 }
 

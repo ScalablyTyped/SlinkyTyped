@@ -1,22 +1,21 @@
 package typingsSlinky.winrtUwp.Windows.Devices.Perception
 
-import typingsSlinky.winrtUwp.AnonResults
 import typingsSlinky.winrtUwp.Windows.Foundation.Numerics.Vector3
 import typingsSlinky.winrtUwp.Windows.Foundation.Point
 import typingsSlinky.winrtUwp.Windows.Foundation.Rect
+import typingsSlinky.winrtUwp.anon.Results
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides convenience methods to facilitate geometric math for a camera device, combining the intrinsic properties of that camera with correlated depth frames to provide screen-space pixel to camera-space coordinate projections. */
-@JSGlobal("Windows.Devices.Perception.PerceptionDepthCorrelatedCameraIntrinsics")
 @js.native
-abstract class PerceptionDepthCorrelatedCameraIntrinsics () extends js.Object {
+trait PerceptionDepthCorrelatedCameraIntrinsics extends js.Object {
   /**
     * Unprojects all pixels in an image from camera image space out into the coordinate frame of the camera device, using the corresponding depth values from a correlated depth camera.
     * @param depthFrame The depth frame containing the depth value to use when projecting the points into camera space. The coordinates of each pixel in the image will be mapped from camera image space to depth image space, and then used to look up the depth in this depth frame.
     */
-  def unprojectAllPixelsAtCorrelatedDepthAsync(depthFrame: PerceptionDepthFrame): AnonResults = js.native
+  def unprojectAllPixelsAtCorrelatedDepthAsync(depthFrame: PerceptionDepthFrame): Results = js.native
   /**
     * Unprojects a point in camera image space out into the coordinate frame of the camera device, using the corresponding depth from a correlated depth camera.
     * @param pixelCoordinate A point, relative to the camera frame.
@@ -36,6 +35,51 @@ abstract class PerceptionDepthCorrelatedCameraIntrinsics () extends js.Object {
     * @param region The region of pixels to project from camera image space out into the coordinate frame of the camera device.
     * @param depthFrame The depth frame containing the depth value to use when projecting the points into camera space. The pixelCoordinates will be mapped from camera image space to depth image space, and then used to look up the depth in depthFrame.
     */
-  def unprojectRegionPixelsAtCorrelatedDepthAsync(region: Rect, depthFrame: PerceptionDepthFrame): AnonResults = js.native
+  def unprojectRegionPixelsAtCorrelatedDepthAsync(region: Rect, depthFrame: PerceptionDepthFrame): Results = js.native
+}
+
+object PerceptionDepthCorrelatedCameraIntrinsics {
+  @scala.inline
+  def apply(
+    unprojectAllPixelsAtCorrelatedDepthAsync: PerceptionDepthFrame => Results,
+    unprojectPixelAtCorrelatedDepth: (Point, PerceptionDepthFrame) => Vector3,
+    unprojectPixelsAtCorrelatedDepth: (Point, PerceptionDepthFrame) => Vector3,
+    unprojectRegionPixelsAtCorrelatedDepthAsync: (Rect, PerceptionDepthFrame) => Results
+  ): PerceptionDepthCorrelatedCameraIntrinsics = {
+    val __obj = js.Dynamic.literal(unprojectAllPixelsAtCorrelatedDepthAsync = js.Any.fromFunction1(unprojectAllPixelsAtCorrelatedDepthAsync), unprojectPixelAtCorrelatedDepth = js.Any.fromFunction2(unprojectPixelAtCorrelatedDepth), unprojectPixelsAtCorrelatedDepth = js.Any.fromFunction2(unprojectPixelsAtCorrelatedDepth), unprojectRegionPixelsAtCorrelatedDepthAsync = js.Any.fromFunction2(unprojectRegionPixelsAtCorrelatedDepthAsync))
+    __obj.asInstanceOf[PerceptionDepthCorrelatedCameraIntrinsics]
+  }
+  @scala.inline
+  implicit class PerceptionDepthCorrelatedCameraIntrinsicsOps[Self <: PerceptionDepthCorrelatedCameraIntrinsics] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUnprojectAllPixelsAtCorrelatedDepthAsync(value: PerceptionDepthFrame => Results): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unprojectAllPixelsAtCorrelatedDepthAsync")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withUnprojectPixelAtCorrelatedDepth(value: (Point, PerceptionDepthFrame) => Vector3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unprojectPixelAtCorrelatedDepth")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withUnprojectPixelsAtCorrelatedDepth(value: (Point, PerceptionDepthFrame) => Vector3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unprojectPixelsAtCorrelatedDepth")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withUnprojectRegionPixelsAtCorrelatedDepthAsync(value: (Rect, PerceptionDepthFrame) => Results): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unprojectRegionPixelsAtCorrelatedDepthAsync")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

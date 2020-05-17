@@ -1,6 +1,6 @@
 package typingsSlinky.pouchdbCore.PouchDB.Core
 
-import typingsSlinky.pouchdbCore.AnonRev
+import typingsSlinky.pouchdbCore.anon.Rev
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,13 +9,13 @@ import scala.scalajs.js.annotation._
 trait BulkGetOptions extends Options {
   var attachments: js.UndefOr[Boolean] = js.native
   var binary: js.UndefOr[Boolean] = js.native
-  var docs: js.Array[AnonRev] = js.native
+  var docs: js.Array[Rev] = js.native
   var revs: js.UndefOr[Boolean] = js.native
 }
 
 object BulkGetOptions {
   @scala.inline
-  def apply(docs: js.Array[AnonRev]): BulkGetOptions = {
+  def apply(docs: js.Array[Rev]): BulkGetOptions = {
     val __obj = js.Dynamic.literal(docs = docs.asInstanceOf[js.Any])
     __obj.asInstanceOf[BulkGetOptions]
   }
@@ -26,7 +26,7 @@ object BulkGetOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDocs(value: js.Array[AnonRev]): Self = {
+    def withDocs(value: js.Array[Rev]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("docs")(value.asInstanceOf[js.Any])
         ret

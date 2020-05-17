@@ -1,22 +1,22 @@
 package typingsSlinky.azure.mod
 
-import typingsSlinky.azure.AnonDatabase
-import typingsSlinky.azure.AnonKey
+import typingsSlinky.azure.anon.Database
+import typingsSlinky.azure.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ClusterCreationOptions extends js.Object {
-  var additionalStorageAccounts: js.UndefOr[js.Array[AnonKey]] = js.native
+  var additionalStorageAccounts: js.UndefOr[js.Array[Key]] = js.native
   var defaultStorageAccountKey: String = js.native
   var defaultStorageAccountName: String = js.native
   var defaultStorageContainer: String = js.native
-  var hiveMetastore: js.UndefOr[AnonDatabase] = js.native
+  var hiveMetastore: js.UndefOr[Database] = js.native
   var location: String = js.native
   var name: String = js.native
   var nodes: Double = js.native
-  var oozieMetastore: js.UndefOr[AnonDatabase] = js.native
+  var oozieMetastore: js.UndefOr[Database] = js.native
   var password: String = js.native
   var user: String = js.native
 }
@@ -91,7 +91,7 @@ object ClusterCreationOptions {
         ret
     }
     @scala.inline
-    def withAdditionalStorageAccounts(value: js.Array[AnonKey]): Self = {
+    def withAdditionalStorageAccounts(value: js.Array[Key]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("additionalStorageAccounts")(value.asInstanceOf[js.Any])
         ret
@@ -103,7 +103,7 @@ object ClusterCreationOptions {
         ret
     }
     @scala.inline
-    def withHiveMetastore(value: AnonDatabase): Self = {
+    def withHiveMetastore(value: Database): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hiveMetastore")(value.asInstanceOf[js.Any])
         ret
@@ -115,7 +115,7 @@ object ClusterCreationOptions {
         ret
     }
     @scala.inline
-    def withOozieMetastore(value: AnonDatabase): Self = {
+    def withOozieMetastore(value: Database): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("oozieMetastore")(value.asInstanceOf[js.Any])
         ret

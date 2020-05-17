@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.SVGPathElement
 import slinky.core.facade.ReactElement
-import typingsSlinky.stormReactDiagrams.AnonPath
+import typingsSlinky.stormReactDiagrams.anon.Path
 import typingsSlinky.stormReactDiagrams.baseWidgetMod.BaseWidget
 import typingsSlinky.stormReactDiagrams.labelModelMod.LabelModel
 import typingsSlinky.stormReactDiagrams.pathFindingMod.default
@@ -27,7 +27,7 @@ class DefaultLinkWidget protected () extends BaseWidget[DefaultLinkProps, Defaul
   def componentDidMount_MDefaultLinkWidget(): Unit = js.native
   @JSName("componentDidUpdate")
   def componentDidUpdate_MDefaultLinkWidget(): Unit = js.native
-  def findPathAndRelativePositionToRenderLabel(index: Double): AnonPath = js.native
+  def findPathAndRelativePositionToRenderLabel(index: Double): Path = js.native
   def generateLabel(label: LabelModel): ReactElement = js.native
   def generateLink(path: String, extraProps: js.Any, id: String): ReactElement = js.native
   def generateLink(path: String, extraProps: js.Any, id: Double): ReactElement = js.native

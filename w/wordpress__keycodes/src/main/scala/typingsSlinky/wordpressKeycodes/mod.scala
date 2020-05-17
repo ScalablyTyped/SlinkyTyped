@@ -1,6 +1,6 @@
 package typingsSlinky.wordpressKeycodes
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -53,16 +53,16 @@ object mod extends js.Object {
   
   @js.native
   object isKeyboardEvent extends js.Object {
-    def access(event: Event_, character: String): Boolean = js.native
-    def alt(event: Event_, character: String): Boolean = js.native
-    def ctrl(event: Event_, character: String): Boolean = js.native
-    def ctrlShift(event: Event_, character: String): Boolean = js.native
-    def primary(event: Event_, character: String): Boolean = js.native
-    def primaryAlt(event: Event_, character: String): Boolean = js.native
-    def primaryShift(event: Event_, character: String): Boolean = js.native
-    def secondary(event: Event_, character: String): Boolean = js.native
-    def shift(event: Event_, character: String): Boolean = js.native
-    def shiftAlt(event: Event_, character: String): Boolean = js.native
+    def access(event: Event, character: String): Boolean = js.native
+    def alt(event: Event, character: String): Boolean = js.native
+    def ctrl(event: Event, character: String): Boolean = js.native
+    def ctrlShift(event: Event, character: String): Boolean = js.native
+    def primary(event: Event, character: String): Boolean = js.native
+    def primaryAlt(event: Event, character: String): Boolean = js.native
+    def primaryShift(event: Event, character: String): Boolean = js.native
+    def secondary(event: Event, character: String): Boolean = js.native
+    def shift(event: Event, character: String): Boolean = js.native
+    def shiftAlt(event: Event, character: String): Boolean = js.native
   }
   
   @js.native

@@ -5,6 +5,7 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import typingsSlinky.react.mod.Component
+import typingsSlinky.rmcTabs.anon.ActiveTab
 import typingsSlinky.rmcTabs.modelsMod.Models.TabData
 import typingsSlinky.rmcTabs.propsTypeMod.PropsType
 import typingsSlinky.rmcTabs.rmcTabsStrings.horizontal
@@ -66,7 +67,7 @@ object tabsBaseMod extends js.Object {
         /* allPrefix */ js.UndefOr[String], 
         StringDictionary[TagMod[Any]]
       ] = js.native
-    def getTabBarBaseProps(): AnonActiveTab[S, P] = js.native
+    def getTabBarBaseProps(): ActiveTab[S, P] = js.native
     def getTabIndex(props: P): Double = js.native
     def goToTab(index: Double): Boolean = js.native
     def goToTab(index: Double, force: Boolean): Boolean = js.native

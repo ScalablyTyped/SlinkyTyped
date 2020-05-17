@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A request from an app that's in control of this IPerceptionFrameProvider to update a property. */
-@JSGlobal("Windows.Devices.Perception.Provider.PerceptionPropertyChangeRequest")
 @js.native
-abstract class PerceptionPropertyChangeRequest () extends js.Object {
+trait PerceptionPropertyChangeRequest extends js.Object {
   /** Gets the name of the property to change. */
   var name: String = js.native
   /** Sets the new status of the request after processing the request. */
@@ -21,5 +20,50 @@ abstract class PerceptionPropertyChangeRequest () extends js.Object {
     * @return The Deferral object.
     */
   def getDeferral(): Deferral = js.native
+}
+
+object PerceptionPropertyChangeRequest {
+  @scala.inline
+  def apply(
+    getDeferral: () => Deferral,
+    name: String,
+    status: PerceptionFrameSourcePropertyChangeStatus,
+    value: js.Any
+  ): PerceptionPropertyChangeRequest = {
+    val __obj = js.Dynamic.literal(getDeferral = js.Any.fromFunction0(getDeferral), name = name.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PerceptionPropertyChangeRequest]
+  }
+  @scala.inline
+  implicit class PerceptionPropertyChangeRequestOps[Self <: PerceptionPropertyChangeRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetDeferral(value: () => Deferral): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDeferral")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStatus(value: PerceptionFrameSourcePropertyChangeStatus): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

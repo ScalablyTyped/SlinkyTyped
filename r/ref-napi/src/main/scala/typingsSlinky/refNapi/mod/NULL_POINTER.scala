@@ -1,7 +1,7 @@
 package typingsSlinky.refNapi.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.refNapi.mod._Global_.Buffer
+import typingsSlinky.refNapi.mod.global.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,18 +1,18 @@
 package typingsSlinky.awsLambda.cloudfrontMod
 
-import typingsSlinky.awsLambda.AnonDistributionDomainName
+import typingsSlinky.awsLambda.anon.DistributionDomainName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CloudFrontEvent extends js.Object {
-  var config: AnonDistributionDomainName = js.native
+  var config: DistributionDomainName = js.native
 }
 
 object CloudFrontEvent {
   @scala.inline
-  def apply(config: AnonDistributionDomainName): CloudFrontEvent = {
+  def apply(config: DistributionDomainName): CloudFrontEvent = {
     val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any])
     __obj.asInstanceOf[CloudFrontEvent]
   }
@@ -23,7 +23,7 @@ object CloudFrontEvent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withConfig(value: AnonDistributionDomainName): Self = {
+    def withConfig(value: DistributionDomainName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
         ret

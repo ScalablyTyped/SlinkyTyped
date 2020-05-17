@@ -2,7 +2,7 @@ package typingsSlinky.griddleReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.griddleReact.AnonFilterPlaceholder
+import typingsSlinky.griddleReact.anon.FilterPlaceholder
 import typingsSlinky.griddleReact.mod.GriddleComponents
 import typingsSlinky.griddleReact.mod.GriddleEvents
 import typingsSlinky.griddleReact.mod.GriddleInitialState
@@ -73,7 +73,7 @@ object GriddleReact {
     @scala.inline
     def styleConfig(value: GriddleStyleConfig): this.type = set("styleConfig", value.asInstanceOf[js.Any])
     @scala.inline
-    def textProperties(value: AnonFilterPlaceholder): this.type = set("textProperties", value.asInstanceOf[js.Any])
+    def textProperties(value: FilterPlaceholder): this.type = set("textProperties", value.asInstanceOf[js.Any])
   }
   
   def withProps[T](p: GriddleProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))

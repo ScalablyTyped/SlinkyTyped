@@ -1,7 +1,7 @@
 package typingsSlinky.pixiJs.PIXI
 
-import typingsSlinky.pixiJs.AnonAlignment
-import typingsSlinky.pixiJs.AnonAlpha
+import typingsSlinky.pixiJs.anon.Alignment
+import typingsSlinky.pixiJs.anon.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,10 +19,8 @@ import scala.scalajs.js.annotation._
   * @extends PIXI.Container
   * @memberof PIXI
   */
-@JSGlobal("PIXI.Graphics")
 @js.native
-class Graphics () extends Container {
-  def this(geometry: GraphicsGeometry) = this()
+trait Graphics extends Container {
   /**
     * Current fill style
     *
@@ -250,7 +248,7 @@ class Graphics () extends Container {
     * @return {PIXI.Graphics} This Graphics object. Good for chaining method calls
     */
   def beginTextureFill(): Graphics = js.native
-  def beginTextureFill(options: AnonAlpha): Graphics = js.native
+  def beginTextureFill(options: Color): Graphics = js.native
   /**
     * Calculate the points for a bezier curve and then draws it.
     *
@@ -422,7 +420,7 @@ class Graphics () extends Container {
     * @return {PIXI.Graphics} This Graphics object. Good for chaining method calls
     */
   def lineTextureStyle(): Graphics = js.native
-  def lineTextureStyle(options: AnonAlignment): Graphics = js.native
+  def lineTextureStyle(options: Alignment): Graphics = js.native
   /**
     * Draws a line using the current line style from the current drawing position to (x, y);
     * The current drawing position is then set to (x, y).

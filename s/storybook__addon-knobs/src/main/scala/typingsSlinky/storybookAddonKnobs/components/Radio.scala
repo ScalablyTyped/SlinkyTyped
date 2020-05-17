@@ -17,7 +17,11 @@ object Radio {
   
   def withProps(p: RadiosTypeProps): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(isInline: Boolean, knob: RadiosTypeKnob, onChange: RadiosTypeKnobValue => RadiosTypeKnobValue): Default[tag.type, default] = {
+  def apply(
+    isInline: scala.Boolean,
+    knob: RadiosTypeKnob,
+    onChange: RadiosTypeKnobValue => RadiosTypeKnobValue
+  ): Default[tag.type, default] = {
     val __props = js.Dynamic.literal(isInline = isInline.asInstanceOf[js.Any], knob = knob.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
     new Default[tag.type, default](js.Array(this.component, __props.asInstanceOf[RadiosTypeProps]))
   }

@@ -3,15 +3,12 @@ package typingsSlinky.amapJsApiToolBar.AMap
 import typingsSlinky.amapJsApi.AMap.EventEmitter
 import typingsSlinky.amapJsApi.AMap.LngLat
 import typingsSlinky.amapJsApi.AMap.Pixel
-import typingsSlinky.amapJsApiToolBar.AMap.ToolBar.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("AMap.ToolBar")
 @js.native
-class ToolBar_ () extends EventEmitter {
-  def this(options: Options) = this()
+trait ToolBar_ extends EventEmitter {
   /**
     * 进行位置定位
     */

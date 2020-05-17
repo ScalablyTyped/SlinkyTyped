@@ -1,6 +1,6 @@
 package typingsSlinky.chartJs.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait PluginServiceRegistrationOptions extends js.Object {
     js.Function3[/* chartInstance */ Chart, /* easing */ Easing, /* options */ js.UndefOr[js.Any], Unit]
   ] = js.native
   var afterEvent: js.UndefOr[
-    js.Function3[/* chartInstance */ Chart, /* event */ Event_, /* options */ js.UndefOr[js.Any], Unit]
+    js.Function3[/* chartInstance */ Chart, /* event */ Event, /* options */ js.UndefOr[js.Any], Unit]
   ] = js.native
   var afterInit: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.native
   var afterLayout: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.native
@@ -52,7 +52,7 @@ trait PluginServiceRegistrationOptions extends js.Object {
   ] = js.native
   // Called when an event occurs on the chart
   var beforeEvent: js.UndefOr[
-    js.Function3[/* chartInstance */ Chart, /* event */ Event_, /* options */ js.UndefOr[js.Any], Unit]
+    js.Function3[/* chartInstance */ Chart, /* event */ Event, /* options */ js.UndefOr[js.Any], Unit]
   ] = js.native
   var beforeInit: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.native
   var beforeLayout: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.native
@@ -154,7 +154,7 @@ object PluginServiceRegistrationOptions {
         ret
     }
     @scala.inline
-    def withAfterEvent(value: (/* chartInstance */ Chart, /* event */ Event_, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+    def withAfterEvent(value: (/* chartInstance */ Chart, /* event */ Event, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("afterEvent")(js.Any.fromFunction3(value))
         ret
@@ -300,7 +300,7 @@ object PluginServiceRegistrationOptions {
         ret
     }
     @scala.inline
-    def withBeforeEvent(value: (/* chartInstance */ Chart, /* event */ Event_, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
+    def withBeforeEvent(value: (/* chartInstance */ Chart, /* event */ Event, /* options */ js.UndefOr[js.Any]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeEvent")(js.Any.fromFunction3(value))
         ret

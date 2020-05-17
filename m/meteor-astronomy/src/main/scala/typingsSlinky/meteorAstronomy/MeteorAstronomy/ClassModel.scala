@@ -1,7 +1,7 @@
 package typingsSlinky.meteorAstronomy.MeteorAstronomy
 
 import typingsSlinky.meteor.Mongo.Collection
-import typingsSlinky.meteorAstronomy.AnonInsert
+import typingsSlinky.meteorAstronomy.anon.Insert
 import typingsSlinky.meteorAstronomy.meteorAstronomyStrings._id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +17,7 @@ trait ClassModel[T] extends js.Object {
   var indexes: js.UndefOr[js.Object] = js.native
   var meteorMethods: js.UndefOr[js.Object] = js.native
   var name: String = js.native
-  var secured: js.UndefOr[AnonInsert | Boolean] = js.native
+  var secured: js.UndefOr[Insert | Boolean] = js.native
 }
 
 object ClassModel {
@@ -117,7 +117,7 @@ object ClassModel {
         ret
     }
     @scala.inline
-    def withSecured(value: AnonInsert | Boolean): Self[T] = {
+    def withSecured(value: Insert | Boolean): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("secured")(value.asInstanceOf[js.Any])
         ret

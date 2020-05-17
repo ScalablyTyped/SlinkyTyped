@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("gsap", "Cubic")
 @js.native
 class Cubic ()
-  extends typingsSlinky.gsap.gsap.Cubic
+  extends typingsSlinky.gsap.gsap.Ease
 
 /* static members */
 @JSImport("gsap", "Cubic")

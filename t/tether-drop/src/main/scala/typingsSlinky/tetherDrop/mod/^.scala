@@ -1,6 +1,6 @@
 package typingsSlinky.tetherDrop.mod
 
-import typingsSlinky.tetherDrop.TypeofDrop
+import typingsSlinky.tetherDrop.anon.TypeofDrop
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

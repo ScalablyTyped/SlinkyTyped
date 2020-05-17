@@ -1,6 +1,6 @@
 package typingsSlinky.azure.mod
 
-import typingsSlinky.azure.AnonDictkey
+import typingsSlinky.azure.anon.Dictkey
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 //#region RoleEnvironment
 @js.native
 trait RoleEnvironmentInterface extends EventEmitter {
-  var EnvironmentVariables: AnonDictkey = js.native
+  var EnvironmentVariables: Dictkey = js.native
   var VersionEndpointFixedPath: String = js.native
   var clientId: String = js.native
   var incorrectCallbackErr: String = js.native

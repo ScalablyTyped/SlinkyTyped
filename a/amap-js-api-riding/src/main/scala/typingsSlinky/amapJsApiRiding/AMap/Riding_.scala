@@ -2,7 +2,6 @@ package typingsSlinky.amapJsApiRiding.AMap
 
 import typingsSlinky.amapJsApi.AMap.EventEmitter
 import typingsSlinky.amapJsApi.AMap.LocationValue
-import typingsSlinky.amapJsApiRiding.AMap.Riding.Options
 import typingsSlinky.amapJsApiRiding.AMap.Riding.SearchPoint
 import typingsSlinky.amapJsApiRiding.AMap.Riding.SearchResultBase
 import typingsSlinky.amapJsApiRiding.AMap.Riding.SearchResultExt
@@ -11,10 +10,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("AMap.Riding")
 @js.native
-class Riding_ () extends EventEmitter {
-  def this(options: Options) = this()
+trait Riding_ extends EventEmitter {
   /**
     * 清除搜索的结果
     */

@@ -1,13 +1,13 @@
 package typingsSlinky.officeJsPreview.Word
 
-import typingsSlinky.officeJsPreview.AnonExpand
-import typingsSlinky.officeJsPreview.AnonIgnorePunct
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientResult
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJsPreview.Word.Interfaces.ParagraphData
 import typingsSlinky.officeJsPreview.Word.Interfaces.ParagraphLoadOptions
 import typingsSlinky.officeJsPreview.Word.Interfaces.ParagraphUpdateData
+import typingsSlinky.officeJsPreview.anon.Expand
+import typingsSlinky.officeJsPreview.anon.IgnorePunct
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.After
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Before
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Centered
@@ -39,9 +39,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: WordApi 1.1]
   */
-@JSGlobal("Word.Paragraph")
 @js.native
-class Paragraph () extends ClientObject {
+trait Paragraph extends ClientObject {
   /**
     *
     * Gets or sets the alignment for a paragraph. The value can be 'left', 'centered', 'right', or 'justified'.
@@ -632,8 +631,8 @@ class Paragraph () extends ClientObject {
   def load(): Paragraph = js.native
   def load(option: String): Paragraph = js.native
   def load(option: js.Array[String]): Paragraph = js.native
-  def load(option: AnonExpand): Paragraph = js.native
   def load(option: ParagraphLoadOptions): Paragraph = js.native
+  def load(option: Expand): Paragraph = js.native
   /**
     *
     * Performs a search with the specified SearchOptions on the scope of the paragraph object. The search results are a collection of range objects.
@@ -644,8 +643,8 @@ class Paragraph () extends ClientObject {
     * @param searchOptions Optional. Options for the search.
     */
   def search(searchText: String): RangeCollection = js.native
-  def search(searchText: String, searchOptions: AnonIgnorePunct): RangeCollection = js.native
   def search(searchText: String, searchOptions: SearchOptions): RangeCollection = js.native
+  def search(searchText: String, searchOptions: IgnorePunct): RangeCollection = js.native
   /**
     *
     * Selects and navigates the Word UI to the paragraph.

@@ -1,5 +1,8 @@
 package typingsSlinky.tensorflowTfjsCore
 
+import typingsSlinky.tensorflowTfjsCore.anon.Grad
+import typingsSlinky.tensorflowTfjsCore.anon.GradsValue
+import typingsSlinky.tensorflowTfjsCore.anon.Value
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
 import typingsSlinky.tensorflowTfjsCore.engineMod.CustomGradientFunc
@@ -148,7 +151,7 @@ object gradientsMod extends js.Object {
     * ```
     */
   /** @doc {heading: 'Training', subheading: 'Gradients'} */
-  def valueAndGrad[I /* <: Tensor[Rank] */, O /* <: Tensor[Rank] */](f: js.Function1[/* x */ I, O]): js.Function2[/* x */ I, /* dy */ js.UndefOr[O], AnonGrad[O, I]] = js.native
+  def valueAndGrad[I /* <: Tensor[Rank] */, O /* <: Tensor[Rank] */](f: js.Function1[/* x */ I, O]): js.Function2[/* x */ I, /* dy */ js.UndefOr[O], Grad[O, I]] = js.native
   /**
     * Like `tf.grads`, but returns also the value of `f()`. Useful when `f()`
     * returns a metric you want to show.
@@ -179,7 +182,7 @@ object gradientsMod extends js.Object {
     * ```
     */
   /** @doc {heading: 'Training', subheading: 'Gradients'} */
-  def valueAndGrads[O /* <: Tensor[Rank] */](f: js.Function1[/* repeated */ Tensor[Rank], O]): js.Function2[/* args */ js.Array[Tensor[Rank]], /* dy */ js.UndefOr[O], AnonGradsValue[O]] = js.native
+  def valueAndGrads[O /* <: Tensor[Rank] */](f: js.Function1[/* repeated */ Tensor[Rank], O]): js.Function2[/* args */ js.Array[Tensor[Rank]], /* dy */ js.UndefOr[O], GradsValue[O]] = js.native
   /**
     * Computes and returns the gradient of f(x) with respect to the list of
     * trainable variables provided by `varList`. If no list is provided, it
@@ -209,7 +212,7 @@ object gradientsMod extends js.Object {
     *     that map the names of the non-trainable variables to `null`.
     */
   /** @doc {heading: 'Training', subheading: 'Gradients'} */
-  def variableGrads(f: js.Function0[Scalar]): AnonValue = js.native
-  def variableGrads(f: js.Function0[Scalar], varList: js.Array[Variable[Rank]]): AnonValue = js.native
+  def variableGrads(f: js.Function0[Scalar]): Value = js.native
+  def variableGrads(f: js.Function0[Scalar], varList: js.Array[Variable[Rank]]): Value = js.native
 }
 

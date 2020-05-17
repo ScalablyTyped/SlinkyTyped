@@ -1,6 +1,6 @@
 package typingsSlinky.wordpressWordcount.mod
 
-import typingsSlinky.wordpressWordcount.PartialSettings
+import typingsSlinky.wordpressWordcount.anon.PartialSettings
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,7 @@
 package typingsSlinky.lokijs.mod
 
-import typingsSlinky.lokijs.LokiConstructor
-import typingsSlinky.lokijs.PartialLokiConstructorOptAdapter
+import typingsSlinky.lokijs.Loki
+import typingsSlinky.lokijs.anon.PartialLokiConstructorOpt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,9 +13,9 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("lokijs", JSImport.Namespace)
 @js.native
-class ^ protected () extends LokiConstructor {
+class ^ protected () extends Loki {
   def this(filename: String) = this()
-  def this(filename: String, options: PartialLokiConstructorOptAdapter) = this()
+  def this(filename: String, options: PartialLokiConstructorOpt) = this()
 }
 
 @JSImport("lokijs", JSImport.Namespace)

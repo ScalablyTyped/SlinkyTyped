@@ -1,11 +1,11 @@
 package typingsSlinky.jupyterlabServices.kernelKernelMod.Kernel
 
-import typingsSlinky.jupyterlabServices.AnonAllowstdin
-import typingsSlinky.jupyterlabServices.AnonArguments
-import typingsSlinky.jupyterlabServices.AnonCode
-import typingsSlinky.jupyterlabServices.AnonCodeString
-import typingsSlinky.jupyterlabServices.AnonCursorpos
-import typingsSlinky.jupyterlabServices.AnonTarget
+import typingsSlinky.jupyterlabServices.anon.Allowstdin
+import typingsSlinky.jupyterlabServices.anon.Arguments
+import typingsSlinky.jupyterlabServices.anon.Code
+import typingsSlinky.jupyterlabServices.anon.CodeString
+import typingsSlinky.jupyterlabServices.anon.Cursorpos
+import typingsSlinky.jupyterlabServices.anon.Target
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.iopub
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.shell
 import typingsSlinky.jupyterlabServices.messagesMod.KernelMessage.ControlMessageType
@@ -237,7 +237,7 @@ trait IKernelConnection extends IDisposable {
     * Fulfills with the `comm_info_reply` content when the shell reply is
     * received and validated.
     */
-  def requestCommInfo(content: AnonTarget): js.Promise[ICommInfoReplyMsg] = js.native
+  def requestCommInfo(content: Target): js.Promise[ICommInfoReplyMsg] = js.native
   /**
     * Send a `complete_request` message.
     *
@@ -251,7 +251,7 @@ trait IKernelConnection extends IDisposable {
     * Fulfills with the `complete_reply` content when the shell reply is
     * received and validated.
     */
-  def requestComplete(content: AnonCode): js.Promise[ICompleteReplyMsg] = js.native
+  def requestComplete(content: Code): js.Promise[ICompleteReplyMsg] = js.native
   /**
     * Send an experimental `debug_request` message.
     *
@@ -268,8 +268,8 @@ trait IKernelConnection extends IDisposable {
     * kernel message specification. As such, this function is *NOT* considered
     * part of the public API, and may change without notice.
     */
-  def requestDebug(content: AnonArguments): IControlFuture[IDebugRequestMsg, IDebugReplyMsg] = js.native
-  def requestDebug(content: AnonArguments, disposeOnDone: Boolean): IControlFuture[IDebugRequestMsg, IDebugReplyMsg] = js.native
+  def requestDebug(content: Arguments): IControlFuture[IDebugRequestMsg, IDebugReplyMsg] = js.native
+  def requestDebug(content: Arguments, disposeOnDone: Boolean): IControlFuture[IDebugRequestMsg, IDebugReplyMsg] = js.native
   /**
     * Send an `execute_request` message.
     *
@@ -291,9 +291,9 @@ trait IKernelConnection extends IDisposable {
     *
     * **See also:** [[IExecuteReply]]
     */
-  def requestExecute(content: AnonAllowstdin): IShellFuture[IExecuteRequestMsg, IExecuteReplyMsg] = js.native
-  def requestExecute(content: AnonAllowstdin, disposeOnDone: Boolean): IShellFuture[IExecuteRequestMsg, IExecuteReplyMsg] = js.native
-  def requestExecute(content: AnonAllowstdin, disposeOnDone: Boolean, metadata: JSONObject): IShellFuture[IExecuteRequestMsg, IExecuteReplyMsg] = js.native
+  def requestExecute(content: Allowstdin): IShellFuture[IExecuteRequestMsg, IExecuteReplyMsg] = js.native
+  def requestExecute(content: Allowstdin, disposeOnDone: Boolean): IShellFuture[IExecuteRequestMsg, IExecuteReplyMsg] = js.native
+  def requestExecute(content: Allowstdin, disposeOnDone: Boolean, metadata: JSONObject): IShellFuture[IExecuteRequestMsg, IExecuteReplyMsg] = js.native
   /**
     * Send a `history_request` message.
     *
@@ -323,7 +323,7 @@ trait IKernelConnection extends IDisposable {
     * Fulfills with the `inspect_reply` content when the shell reply is
     * received and validated.
     */
-  def requestInspect(content: AnonCursorpos): js.Promise[IInspectReplyMsg] = js.native
+  def requestInspect(content: Cursorpos): js.Promise[IInspectReplyMsg] = js.native
   /**
     * Send an `is_complete_request` message.
     *
@@ -337,7 +337,7 @@ trait IKernelConnection extends IDisposable {
     * Fulfills with the `is_complete_response` content when the shell reply is
     * received and validated.
     */
-  def requestIsComplete(content: AnonCodeString): js.Promise[IIsCompleteReplyMsg] = js.native
+  def requestIsComplete(content: CodeString): js.Promise[IIsCompleteReplyMsg] = js.native
   /**
     * Send a `kernel_info_request` message.
     *

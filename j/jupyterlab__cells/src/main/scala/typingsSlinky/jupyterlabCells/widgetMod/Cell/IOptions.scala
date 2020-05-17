@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabCells.widgetMod.Cell
 
-import typingsSlinky.jupyterlabCells.PartialIConfig
+import typingsSlinky.jupyterlabCells.anon.PartialIConfig
 import typingsSlinky.jupyterlabCells.modelMod.ICellModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`

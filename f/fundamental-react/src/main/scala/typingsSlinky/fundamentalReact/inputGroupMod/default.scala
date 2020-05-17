@@ -1,6 +1,6 @@
 package typingsSlinky.fundamentalReact.inputGroupMod
 
-import typingsSlinky.fundamentalReact.FunctionComponentInputGro
+import typingsSlinky.fundamentalReact.anon.FunctionComponentInputGro
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`

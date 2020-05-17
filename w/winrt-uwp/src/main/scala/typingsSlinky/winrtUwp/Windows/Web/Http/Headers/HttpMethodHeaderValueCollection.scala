@@ -1,19 +1,18 @@
 package typingsSlinky.winrtUwp.Windows.Web.Http.Headers
 
 import typingsSlinky.std.Array
-import typingsSlinky.winrtUwp.AnonIndex
-import typingsSlinky.winrtUwp.AnonItemsHttpMethod
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrtUwp.Windows.Web.Http.HttpMethod
+import typingsSlinky.winrtUwp.anon.Index
+import typingsSlinky.winrtUwp.anon.ItemsHttpMethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the value of the Allow HTTP header on an HTTP response. */
-@JSGlobal("Windows.Web.Http.Headers.HttpMethodHeaderValueCollection")
 @js.native
-abstract class HttpMethodHeaderValueCollection () extends Array[HttpMethod] {
+trait HttpMethodHeaderValueCollection extends Array[HttpMethod] {
   /** Gets the number of HttpMethod objects in the collection. */
   var size: Double = js.native
   /**
@@ -38,19 +37,19 @@ abstract class HttpMethodHeaderValueCollection () extends Array[HttpMethod] {
     * Retrieves the HttpMethod items that start at the specified index in the collection.
     * @param startIndex The zero-based index of the start of the HttpMethod items in the HttpMethodHeaderValueCollection .
     */
-  def getMany(startIndex: Double): AnonItemsHttpMethod = js.native
+  def getMany(startIndex: Double): ItemsHttpMethod = js.native
   /**
     * Returns an immutable view of the HttpMethodHeaderValueCollection .
     * @return The view of the HttpMethodHeaderValueCollection .
     */
   def getView(): IVectorView[HttpMethod] = js.native
-  def indexOf(value: HttpMethod, extra: js.Any*): AnonIndex = js.native
+  def indexOf(value: HttpMethod, extra: js.Any*): Index = js.native
   /**
     * Retrieves the index of an HttpMethod in the collection.
     * @param value The HttpMethod to find in the HttpMethodHeaderValueCollection .
     */
   @JSName("indexOf")
-  def indexOf_AnonIndex(value: HttpMethod): AnonIndex = js.native
+  def indexOf_Index(value: HttpMethod): Index = js.native
   /**
     * Inserts an HttpMethod into the collection at the specified index.
     * @param index The zero-based index at which value should be inserted.

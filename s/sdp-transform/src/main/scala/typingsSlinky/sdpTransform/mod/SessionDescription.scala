@@ -1,8 +1,8 @@
 package typingsSlinky.sdpTransform.mod
 
-import typingsSlinky.sdpTransform.AnonAddress
-import typingsSlinky.sdpTransform.AnonStart
-import typingsSlinky.sdpTransform.typestringportnumberproto
+import typingsSlinky.sdpTransform.anon.Address
+import typingsSlinky.sdpTransform.anon.Start
+import typingsSlinky.sdpTransform.anon.typestringportnumberproto
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait SessionDescription
   // s=
   var name: js.UndefOr[String] = js.native
   // o=
-  var origin: js.UndefOr[AnonAddress] = js.native
+  var origin: js.UndefOr[Address] = js.native
   // p=
   var phone: js.UndefOr[String] = js.native
   // r=
@@ -26,7 +26,7 @@ trait SessionDescription
   // z=
   var timezones: js.UndefOr[String] = js.native
   // t=0 0
-  var timing: js.UndefOr[AnonStart] = js.native
+  var timing: js.UndefOr[Start] = js.native
   // u=
   var uri: js.UndefOr[String] = js.native
   var version: js.UndefOr[Double] = js.native
@@ -75,7 +75,7 @@ object SessionDescription {
         ret
     }
     @scala.inline
-    def withOrigin(value: AnonAddress): Self = {
+    def withOrigin(value: Address): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
         ret
@@ -123,7 +123,7 @@ object SessionDescription {
         ret
     }
     @scala.inline
-    def withTiming(value: AnonStart): Self = {
+    def withTiming(value: Start): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("timing")(value.asInstanceOf[js.Any])
         ret

@@ -4,11 +4,11 @@ import org.scalajs.dom.raw.CustomEvent
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonToastElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonToastElement
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.mod.Mode
 import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation
-import typingsSlinky.ionicReact.ToastOptionsReactControll
+import typingsSlinky.ionicReact.anon.ToastOptionsReactControll
 import typingsSlinky.ionicReact.ionToastMod.ToastButton
 import typingsSlinky.ionicReact.ionicReactStrings.bottom
 import typingsSlinky.ionicReact.ionicReactStrings.middle
@@ -26,7 +26,7 @@ object IonToast {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, Ref[js.Any]] {
     @scala.inline
     def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
     @scala.inline

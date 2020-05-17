@@ -2,7 +2,7 @@ package typingsSlinky.codemirror.mod
 
 import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.KeyboardEvent
-import typingsSlinky.codemirror.AnonDelay
+import typingsSlinky.codemirror.anon.Delay
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +28,7 @@ trait EditorConfiguration extends js.Object {
   var autoCloseTags: js.UndefOr[AutoCloseTags | Boolean] = js.native
   // if true, it will be refreshed the first time the editor becomes visible.
   // you can pass delay (msec) time as polling duration
-  var autoRefresh: js.UndefOr[Boolean | AnonDelay] = js.native
+  var autoRefresh: js.UndefOr[Boolean | Delay] = js.native
   /** Specifies whether or not autocapitalization will be enabled on the input. */
   var autocapitalize: js.UndefOr[Boolean] = js.native
   /** Specifies whether or not autocorrect will be enabled on the input. */
@@ -265,7 +265,7 @@ object EditorConfiguration {
         ret
     }
     @scala.inline
-    def withAutoRefresh(value: Boolean | AnonDelay): Self = {
+    def withAutoRefresh(value: Boolean | Delay): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("autoRefresh")(value.asInstanceOf[js.Any])
         ret

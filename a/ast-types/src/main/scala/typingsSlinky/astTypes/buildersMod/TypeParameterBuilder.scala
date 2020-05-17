@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonBound
+import typingsSlinky.astTypes.anon.Bound
 import typingsSlinky.astTypes.astTypesStrings.minus
 import typingsSlinky.astTypes.astTypesStrings.plus
 import typingsSlinky.astTypes.kindsMod.TypeAnnotationKind
@@ -20,6 +20,6 @@ trait TypeParameterBuilder extends js.Object {
   def apply(name: String, variance: plus, bound: TypeAnnotationKind): TypeParameter = js.native
   def apply(name: String, variance: VarianceKind): TypeParameter = js.native
   def apply(name: String, variance: VarianceKind, bound: TypeAnnotationKind): TypeParameter = js.native
-  def from(params: AnonBound): TypeParameter = js.native
+  def from(params: Bound): TypeParameter = js.native
 }
 

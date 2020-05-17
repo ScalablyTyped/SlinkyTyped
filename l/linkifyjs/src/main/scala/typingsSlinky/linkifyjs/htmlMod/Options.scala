@@ -1,6 +1,6 @@
 package typingsSlinky.linkifyjs.htmlMod
 
-import typingsSlinky.linkifyjs.PartialGlobalEventHandler
+import typingsSlinky.linkifyjs.anon.PartialGlobalEventHandler
 import typingsSlinky.linkifyjs.mod.LinkEntityType
 import scala.scalajs.js
 import scala.scalajs.js.`|`

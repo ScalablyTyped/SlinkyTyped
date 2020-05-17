@@ -1,10 +1,10 @@
 package typingsSlinky.oracleOraclejet.ojgaugeMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.Anon8
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
-import typingsSlinky.oracleOraclejet.AnonText
-import typingsSlinky.oracleOraclejet.AnonTextType
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
+import typingsSlinky.oracleOraclejet.anon.Text
+import typingsSlinky.oracleOraclejet.anon.TextType
+import typingsSlinky.oracleOraclejet.anon.`8`
 import typingsSlinky.oracleOraclejet.ojgaugeMod.ojLedGauge.Threshold
 import typingsSlinky.oracleOraclejet.oracleOraclejetNumbers.`0`
 import typingsSlinky.oracleOraclejet.oracleOraclejetNumbers.`180`
@@ -32,18 +32,18 @@ trait ojLedGaugeSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
   var borderColor: js.UndefOr[String] = js.native
   var color: js.UndefOr[String] = js.native
-  var label: js.UndefOr[AnonText] = js.native
+  var label: js.UndefOr[Text] = js.native
   var max: js.UndefOr[Double] = js.native
-  var metricLabel: js.UndefOr[AnonTextType] = js.native
+  var metricLabel: js.UndefOr[TextType] = js.native
   var min: js.UndefOr[Double] = js.native
   var rotation: js.UndefOr[`90` | `180` | `270` | `0`] = js.native
   var size: js.UndefOr[Double] = js.native
   var svgClassName: js.UndefOr[String] = js.native
   var svgStyle: js.UndefOr[js.Object] = js.native
   var thresholds: js.UndefOr[js.Array[Threshold]] = js.native
-  var tooltip: js.UndefOr[Anon8] = js.native
+  var tooltip: js.UndefOr[`8`] = js.native
   var trackResize: js.UndefOr[on | off] = js.native
-  var translations: js.UndefOr[AnonLabelAndValue] = js.native
+  var translations: js.UndefOr[LabelAndValue] = js.native
   var `type`: js.UndefOr[arrow | diamond | square | rectangle | triangle | star | human | circle] = js.native
   var value: js.UndefOr[Double] = js.native
   var visualEffects: js.UndefOr[none | auto] = js.native
@@ -86,7 +86,7 @@ object ojLedGaugeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonText): Self = {
+    def withLabel(value: Text): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -110,7 +110,7 @@ object ojLedGaugeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withMetricLabel(value: AnonTextType): Self = {
+    def withMetricLabel(value: TextType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metricLabel")(value.asInstanceOf[js.Any])
         ret
@@ -194,7 +194,7 @@ object ojLedGaugeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTooltip(value: Anon8): Self = {
+    def withTooltip(value: `8`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
@@ -218,7 +218,7 @@ object ojLedGaugeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelAndValue): Self = {
+    def withTranslations(value: LabelAndValue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

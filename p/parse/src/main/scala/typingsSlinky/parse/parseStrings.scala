@@ -1,6 +1,6 @@
 package typingsSlinky.parse
 
-import typingsSlinky.parse.mod._Global_.Parse.Schema.TYPE
+import typingsSlinky.parse.mod.global.Parse.Schema.TYPE
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

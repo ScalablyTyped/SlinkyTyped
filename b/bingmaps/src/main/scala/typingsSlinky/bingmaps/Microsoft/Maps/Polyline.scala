@@ -4,16 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Microsoft.Maps.Polyline")
 @js.native
-class Polyline protected () extends IPrimitive {
-  /**
-    * @constructor
-    * @param locations An array of locations that make up the path of the polyine.
-    * @param options Options used to customize polyline.
-    */
-  def this(locations: js.Array[Location]) = this()
-  def this(locations: js.Array[Location], options: IPolylineOptions) = this()
+trait Polyline extends IPrimitive {
   /**
     * Returns whether the polyline is generalizable based on zoom level or not.
     * @returns whether the polyline is generalizable based on zoom level or not.
@@ -49,5 +41,73 @@ class Polyline protected () extends IPrimitive {
     * @param options The IPolylineOptions object containing the options to customize the polyline.
     */
   def setOptions(options: IPolylineOptions): Unit = js.native
+}
+
+object Polyline {
+  @scala.inline
+  def apply(
+    getCursor: () => String,
+    getGeneralizable: () => Boolean,
+    getLocations: () => js.Array[Location],
+    getStrokeColor: () => String | Color,
+    getStrokeDashArray: () => js.Array[Double] | String,
+    getStrokeThickness: () => Double,
+    getVisible: () => Boolean,
+    setLocations: js.Array[Location] => Unit,
+    setOptions: IPolylineOptions => Unit
+  ): Polyline = {
+    val __obj = js.Dynamic.literal(getCursor = js.Any.fromFunction0(getCursor), getGeneralizable = js.Any.fromFunction0(getGeneralizable), getLocations = js.Any.fromFunction0(getLocations), getStrokeColor = js.Any.fromFunction0(getStrokeColor), getStrokeDashArray = js.Any.fromFunction0(getStrokeDashArray), getStrokeThickness = js.Any.fromFunction0(getStrokeThickness), getVisible = js.Any.fromFunction0(getVisible), setLocations = js.Any.fromFunction1(setLocations), setOptions = js.Any.fromFunction1(setOptions))
+    __obj.asInstanceOf[Polyline]
+  }
+  @scala.inline
+  implicit class PolylineOps[Self <: Polyline] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetGeneralizable(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getGeneralizable")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLocations(value: () => js.Array[Location]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLocations")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetStrokeColor(value: () => String | Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStrokeColor")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetStrokeDashArray(value: () => js.Array[Double] | String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStrokeDashArray")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetStrokeThickness(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStrokeThickness")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetLocations(value: js.Array[Location] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setLocations")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetOptions(value: IPolylineOptions => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setOptions")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

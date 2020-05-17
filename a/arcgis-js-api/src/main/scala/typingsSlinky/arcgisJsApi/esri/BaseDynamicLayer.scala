@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`base-dynamic`
@@ -50,8 +49,4 @@ trait BaseDynamicLayer
     */
   def getImageUrl(extent: Extent, width: Double, height: Double): js.Promise[String] | String = js.native
 }
-
-@JSGlobal("__esri.BaseDynamicLayer")
-@js.native
-object BaseDynamicLayer extends TopLevel[BaseDynamicLayerConstructor]
 

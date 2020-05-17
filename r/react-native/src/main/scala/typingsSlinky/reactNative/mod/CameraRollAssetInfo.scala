@@ -1,6 +1,6 @@
 package typingsSlinky.reactNative.mod
 
-import typingsSlinky.reactNative.AnonEndcursor
+import typingsSlinky.reactNative.anon.Endcursor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CameraRollAssetInfo extends js.Object {
   var edges: js.Array[CameraRollEdgeInfo] = js.native
-  var page_info: AnonEndcursor = js.native
+  var page_info: Endcursor = js.native
 }
 
 object CameraRollAssetInfo {
   @scala.inline
-  def apply(edges: js.Array[CameraRollEdgeInfo], page_info: AnonEndcursor): CameraRollAssetInfo = {
+  def apply(edges: js.Array[CameraRollEdgeInfo], page_info: Endcursor): CameraRollAssetInfo = {
     val __obj = js.Dynamic.literal(edges = edges.asInstanceOf[js.Any], page_info = page_info.asInstanceOf[js.Any])
     __obj.asInstanceOf[CameraRollAssetInfo]
   }
@@ -30,7 +30,7 @@ object CameraRollAssetInfo {
         ret
     }
     @scala.inline
-    def withPage_info(value: AnonEndcursor): Self = {
+    def withPage_info(value: Endcursor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("page_info")(value.asInstanceOf[js.Any])
         ret

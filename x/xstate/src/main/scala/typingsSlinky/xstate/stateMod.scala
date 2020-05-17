@@ -13,6 +13,7 @@ import typingsSlinky.xstate.typesMod.EventType
 import typingsSlinky.xstate.typesMod.HistoryValue
 import typingsSlinky.xstate.typesMod.SCXML.Event
 import typingsSlinky.xstate.typesMod.StateConfig
+import typingsSlinky.xstate.typesMod.StateKey
 import typingsSlinky.xstate.typesMod.StateSchema
 import typingsSlinky.xstate.typesMod.StateValue
 import typingsSlinky.xstate.typesMod.TransitionDefinition
@@ -27,7 +28,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object stateMod extends js.Object {
   @js.native
-  class State[TContext, TEvent /* <: EventObject */, TStateSchema /* <: StateSchema[TContext] */, TTypestate /* <: Typestate[TContext] */] protected () extends js.Object {
+  class State[TContext, TEvent /* <: EventObject */, TStateSchema /* <: StateSchema[TContext] */, TTypestate /* <: Typestate[TContext] */] protected () extends StateKey {
     /**
       * Creates a new State instance.
       * @param value The state value
@@ -101,8 +102,8 @@ object stateMod extends js.Object {
   def isState[TContext, TEvent /* <: EventObject */](state: String): /* is xstate.xstate/lib/State.State<TContext, TEvent, any, any> */ Boolean = js.native
   def isState[TContext, TEvent /* <: EventObject */](state: js.Object): /* is xstate.xstate/lib/State.State<TContext, TEvent, any, any> */ Boolean = js.native
   def stateValuesEqual(): Boolean = js.native
-  def stateValuesEqual(a: js.UndefOr[StateValue], b: StateValue): Boolean = js.native
   def stateValuesEqual(a: StateValue): Boolean = js.native
+  def stateValuesEqual(a: StateValue, b: StateValue): Boolean = js.native
   /* static members */
   @js.native
   object State extends js.Object {

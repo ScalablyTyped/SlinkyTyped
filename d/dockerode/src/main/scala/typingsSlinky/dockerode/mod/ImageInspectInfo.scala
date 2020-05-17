@@ -1,9 +1,9 @@
 package typingsSlinky.dockerode.mod
 
-import typingsSlinky.dockerode.AnonArgsEscaped
-import typingsSlinky.dockerode.AnonAttachStdin
-import typingsSlinky.dockerode.AnonBaseLayer
-import typingsSlinky.dockerode.AnonData
+import typingsSlinky.dockerode.anon.ArgsEscaped
+import typingsSlinky.dockerode.anon.AttachStdin
+import typingsSlinky.dockerode.anon.BaseLayer
+import typingsSlinky.dockerode.anon.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,18 +13,18 @@ trait ImageInspectInfo extends js.Object {
   var Architecture: String = js.native
   var Author: String = js.native
   var Comment: String = js.native
-  var Config: AnonAttachStdin = js.native
+  var Config: AttachStdin = js.native
   var Container: String = js.native
-  var ContainerConfig: AnonArgsEscaped = js.native
+  var ContainerConfig: ArgsEscaped = js.native
   var Created: String = js.native
   var DockerVersion: String = js.native
-  var GraphDriver: AnonData = js.native
+  var GraphDriver: Data = js.native
   var Id: String = js.native
   var Os: String = js.native
   var Parent: String = js.native
   var RepoDigests: js.Array[String] = js.native
   var RepoTags: js.Array[String] = js.native
-  var RootFS: AnonBaseLayer = js.native
+  var RootFS: BaseLayer = js.native
   var Size: Double = js.native
   var VirtualSize: Double = js.native
 }
@@ -35,18 +35,18 @@ object ImageInspectInfo {
     Architecture: String,
     Author: String,
     Comment: String,
-    Config: AnonAttachStdin,
+    Config: AttachStdin,
     Container: String,
-    ContainerConfig: AnonArgsEscaped,
+    ContainerConfig: ArgsEscaped,
     Created: String,
     DockerVersion: String,
-    GraphDriver: AnonData,
+    GraphDriver: Data,
     Id: String,
     Os: String,
     Parent: String,
     RepoDigests: js.Array[String],
     RepoTags: js.Array[String],
-    RootFS: AnonBaseLayer,
+    RootFS: BaseLayer,
     Size: Double,
     VirtualSize: Double
   ): ImageInspectInfo = {
@@ -78,7 +78,7 @@ object ImageInspectInfo {
         ret
     }
     @scala.inline
-    def withConfig(value: AnonAttachStdin): Self = {
+    def withConfig(value: AttachStdin): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Config")(value.asInstanceOf[js.Any])
         ret
@@ -90,7 +90,7 @@ object ImageInspectInfo {
         ret
     }
     @scala.inline
-    def withContainerConfig(value: AnonArgsEscaped): Self = {
+    def withContainerConfig(value: ArgsEscaped): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ContainerConfig")(value.asInstanceOf[js.Any])
         ret
@@ -108,7 +108,7 @@ object ImageInspectInfo {
         ret
     }
     @scala.inline
-    def withGraphDriver(value: AnonData): Self = {
+    def withGraphDriver(value: Data): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("GraphDriver")(value.asInstanceOf[js.Any])
         ret
@@ -144,7 +144,7 @@ object ImageInspectInfo {
         ret
     }
     @scala.inline
-    def withRootFS(value: AnonBaseLayer): Self = {
+    def withRootFS(value: BaseLayer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("RootFS")(value.asInstanceOf[js.Any])
         ret

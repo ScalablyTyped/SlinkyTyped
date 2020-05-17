@@ -4,21 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.BoundingInfo")
 @js.native
-class BoundingInfo protected () extends ICullable {
-  /**
-    * Constructs bounding info
-    * @param minimum min vector of the bounding box/sphere
-    * @param maximum max vector of the bounding box/sphere
-    * @param worldMatrix defines the new world matrix
-    */
-  def this(minimum: DeepImmutable[Vector3], maximum: DeepImmutable[Vector3]) = this()
-  def this(
-    minimum: DeepImmutable[Vector3],
-    maximum: DeepImmutable[Vector3],
-    worldMatrix: DeepImmutable[Matrix]
-  ) = this()
+trait BoundingInfo extends ICullable {
   var _isLocked: js.Any = js.native
   /**
     * Bounding box for the mesh
@@ -89,12 +76,5 @@ class BoundingInfo protected () extends ICullable {
     * @param world world matrix to be used to update
     */
   def update(world: DeepImmutable[Matrix]): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("BABYLON.BoundingInfo")
-@js.native
-object BoundingInfo extends js.Object {
-  val TmpVector3: js.Any = js.native
 }
 

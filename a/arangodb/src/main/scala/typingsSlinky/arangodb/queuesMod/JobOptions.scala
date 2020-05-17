@@ -1,6 +1,6 @@
 package typingsSlinky.arangodb.queuesMod
 
-import typingsSlinky.arangodb.DocumentJob
+import typingsSlinky.arangodb.anon.DocumentJob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

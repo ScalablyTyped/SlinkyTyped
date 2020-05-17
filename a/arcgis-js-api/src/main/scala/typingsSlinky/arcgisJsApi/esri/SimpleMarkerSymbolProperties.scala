@@ -103,7 +103,9 @@ object SimpleMarkerSymbolProperties {
         ret
     }
     @scala.inline
-    def withStyle(value: circle | square | cross | x | diamond | triangle | path): Self = {
+    def withStyle(
+      value: circle | square | cross | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.x | diamond | triangle | path
+    ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,6 @@
 package typingsSlinky.heremaps.H.map.layer
 
 import typingsSlinky.heremaps.H.geo.Rect
-import typingsSlinky.heremaps.H.map.layer.ITileLayer.Options
 import typingsSlinky.heremaps.H.map.layer.ITileLayer.Response
 import typingsSlinky.heremaps.H.map.provider.Tile
 import typingsSlinky.heremaps.H.map.provider.TileProvider
@@ -14,16 +13,8 @@ import scala.scalajs.js.annotation._
   * BaseTileLayer encapsulates funcitonailty that is common to all layers that deliver tiles, such as H.map.layer.TileLayer. The functionality includes geo bounding box to grid
   * calculation, tile request management.
   */
-@JSGlobal("H.map.layer.BaseTileLayer")
 @js.native
-class BaseTileLayer protected () extends Layer {
-  /**
-    * Constructor
-    * @param provider {H.map.provider.TileProvider} - data source for the TileLayer
-    * @param opt_options {H.map.layer.ITileLayer.Options=} - additional options
-    */
-  def this(provider: TileProvider) = this()
-  def this(provider: TileProvider, opt_options: Options) = this()
+trait BaseTileLayer extends Layer {
   /**
     * This method cancels a previously requested tile.
     * @param x {number} - tile row position

@@ -1,7 +1,7 @@
 package typingsSlinky.cypress.cypressMod.Cypress
 
 import org.scalajs.dom.raw.XMLHttpRequest
-import typingsSlinky.cypress.AnonBody
+import typingsSlinky.cypress.anon.Body
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,10 +11,10 @@ trait WaitXHR extends js.Object {
   var duration: Double = js.native
   var id: String = js.native
   var method: HttpMethod = js.native
-  var request: AnonBody = js.native
+  var request: Body = js.native
   var requestBody: String | ObjectLike = js.native
   var requestHeaders: ObjectLike = js.native
-  var response: AnonBody = js.native
+  var response: Body = js.native
   var responseBody: String | ObjectLike = js.native
   var responseHeaders: ObjectLike = js.native
   var status: Double = js.native
@@ -29,10 +29,10 @@ object WaitXHR {
     duration: Double,
     id: String,
     method: HttpMethod,
-    request: AnonBody,
+    request: Body,
     requestBody: String | ObjectLike,
     requestHeaders: ObjectLike,
-    response: AnonBody,
+    response: Body,
     responseBody: String | ObjectLike,
     responseHeaders: ObjectLike,
     status: Double,
@@ -68,7 +68,7 @@ object WaitXHR {
         ret
     }
     @scala.inline
-    def withRequest(value: AnonBody): Self = {
+    def withRequest(value: Body): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
         ret
@@ -86,7 +86,7 @@ object WaitXHR {
         ret
     }
     @scala.inline
-    def withResponse(value: AnonBody): Self = {
+    def withResponse(value: Body): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("response")(value.asInstanceOf[js.Any])
         ret

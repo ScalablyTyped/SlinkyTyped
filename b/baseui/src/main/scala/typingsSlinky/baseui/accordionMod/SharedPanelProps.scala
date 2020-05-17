@@ -1,11 +1,11 @@
 package typingsSlinky.baseui.accordionMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.KeyboardEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.baseui.AnonExpandedBoolean
+import typingsSlinky.baseui.anon.ExpandedBoolean
 import typingsSlinky.react.mod.Key
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,8 +15,8 @@ trait SharedPanelProps extends js.Object {
   var children: TagMod[Any] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
   var key: js.UndefOr[Key] = js.native
-  var onChange: js.UndefOr[js.Function1[/* args */ AnonExpandedBoolean, _]] = js.native
-  var onClick: js.UndefOr[js.Function1[/* e */ Event_, _]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* args */ ExpandedBoolean, _]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* e */ Event, _]] = js.native
   var onKeyDown: js.UndefOr[js.Function1[/* e */ KeyboardEvent, _]] = js.native
   var overrides: js.UndefOr[PanelOverrides[SharedProps]] = js.native
   var renderAll: js.UndefOr[Boolean] = js.native
@@ -73,7 +73,7 @@ object SharedPanelProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* args */ AnonExpandedBoolean => _): Self = {
+    def withOnChange(value: /* args */ ExpandedBoolean => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -85,7 +85,7 @@ object SharedPanelProps {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* e */ Event_ => _): Self = {
+    def withOnClick(value: /* e */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret

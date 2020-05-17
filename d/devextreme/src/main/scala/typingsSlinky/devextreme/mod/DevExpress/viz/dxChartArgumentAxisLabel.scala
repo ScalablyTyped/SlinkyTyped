@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonValueValueText
+import typingsSlinky.devextreme.anon.ValueValueText
 import typingsSlinky.devextreme.mod.DevExpress.ui.format
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation._
 @js.native
 trait dxChartArgumentAxisLabel extends dxChartCommonAxisSettingsLabel {
   /** Specifies the hint that appears when a user points to an axis label. */
-  var customizeHint: js.UndefOr[js.Function1[/* argument */ AnonValueValueText, String]] = js.native
+  var customizeHint: js.UndefOr[js.Function1[/* argument */ ValueValueText, String]] = js.native
   /** Customizes the text displayed by axis labels. */
-  var customizeText: js.UndefOr[js.Function1[/* argument */ AnonValueValueText, String]] = js.native
+  var customizeText: js.UndefOr[js.Function1[/* argument */ ValueValueText, String]] = js.native
   /** Formats a value before it is displayed in an axis label. */
   var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.native
 }
@@ -29,7 +29,7 @@ object dxChartArgumentAxisLabel {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCustomizeHint(value: /* argument */ AnonValueValueText => String): Self = {
+    def withCustomizeHint(value: /* argument */ ValueValueText => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customizeHint")(js.Any.fromFunction1(value))
         ret
@@ -41,7 +41,7 @@ object dxChartArgumentAxisLabel {
         ret
     }
     @scala.inline
-    def withCustomizeText(value: /* argument */ AnonValueValueText => String): Self = {
+    def withCustomizeText(value: /* argument */ ValueValueText => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customizeText")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -74,7 +73,36 @@ trait univariateColorSize extends js.Object {
   def createVisualVariables(params: univariateColorSizeCreateVisualVariablesParams): js.Promise[VisualVariablesResult] = js.native
 }
 
-@JSGlobal("__esri.univariateColorSize")
-@js.native
-object univariateColorSize extends TopLevel[univariateColorSize]
+object univariateColorSize {
+  @scala.inline
+  def apply(
+    createContinuousRenderer: univariateColorSizeCreateContinuousRendererParams => js.Promise[univariateColorSizeContinuousRendererResult],
+    createVisualVariables: univariateColorSizeCreateVisualVariablesParams => js.Promise[VisualVariablesResult]
+  ): univariateColorSize = {
+    val __obj = js.Dynamic.literal(createContinuousRenderer = js.Any.fromFunction1(createContinuousRenderer), createVisualVariables = js.Any.fromFunction1(createVisualVariables))
+    __obj.asInstanceOf[univariateColorSize]
+  }
+  @scala.inline
+  implicit class univariateColorSizeOps[Self <: univariateColorSize] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateContinuousRenderer(
+      value: univariateColorSizeCreateContinuousRendererParams => js.Promise[univariateColorSizeContinuousRendererResult]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createContinuousRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateVisualVariables(value: univariateColorSizeCreateVisualVariablesParams => js.Promise[VisualVariablesResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createVisualVariables")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

@@ -1,6 +1,6 @@
 package typingsSlinky.atom.mod
 
-import typingsSlinky.atom.ReadonlyPoint
+import typingsSlinky.atom.anon.ReadonlyPoint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

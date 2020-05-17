@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignPro.miniAreaMod
 
-import typingsSlinky.antDesignPro.AnonY
+import typingsSlinky.antDesignPro.anon.Y
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait IMiniAreaProps extends js.Object {
   var animate: js.UndefOr[Boolean] = js.native
   var borderColor: js.UndefOr[String] = js.native
   var color: js.UndefOr[String] = js.native
-  var data: js.Array[AnonY] = js.native
+  var data: js.Array[Y] = js.native
   var height: Double = js.native
   var line: js.UndefOr[Boolean] = js.native
   var xAxis: js.UndefOr[IAxis] = js.native
@@ -19,7 +19,7 @@ trait IMiniAreaProps extends js.Object {
 
 object IMiniAreaProps {
   @scala.inline
-  def apply(data: js.Array[AnonY], height: Double): IMiniAreaProps = {
+  def apply(data: js.Array[Y], height: Double): IMiniAreaProps = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMiniAreaProps]
   }
@@ -30,7 +30,7 @@ object IMiniAreaProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withData(value: js.Array[AnonY]): Self = {
+    def withData(value: js.Array[Y]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

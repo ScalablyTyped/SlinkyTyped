@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,9 +38,4 @@ trait HTMLFieldSetElement extends HTMLElement {
     */
   def setCustomValidity(error: java.lang.String): Unit = js.native
 }
-
-@JSGlobal("HTMLFieldSetElement")
-@js.native
-object HTMLFieldSetElement
-  extends Instantiable0[org.scalajs.dom.raw.HTMLFieldSetElement]
 

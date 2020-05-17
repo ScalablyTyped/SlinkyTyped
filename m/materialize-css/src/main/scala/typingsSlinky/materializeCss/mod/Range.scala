@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSImport("materialize-css", "Range")
 @js.native
 class Range ()
-  extends typingsSlinky.materializeCss.M.Range
+  extends typingsSlinky.materializeCss.M.Component[js.UndefOr[scala.Nothing]]
 
 /* static members */
 @JSImport("materialize-css", "Range")

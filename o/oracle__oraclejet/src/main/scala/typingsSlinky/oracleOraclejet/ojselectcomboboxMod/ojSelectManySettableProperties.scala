@@ -1,13 +1,13 @@
 package typingsSlinky.oracleOraclejet.ojselectcomboboxMod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.oracleOraclejet.AnonChildrenLabel
-import typingsSlinky.oracleOraclejet.AnonClass
-import typingsSlinky.oracleOraclejet.AnonConverterHint
-import typingsSlinky.oracleOraclejet.AnonDefinition
-import typingsSlinky.oracleOraclejet.AnonInstruction
-import typingsSlinky.oracleOraclejet.AnonLabelValue
-import typingsSlinky.oracleOraclejet.AnonMoreMatchesFound
+import typingsSlinky.oracleOraclejet.anon.ChildrenLabel
+import typingsSlinky.oracleOraclejet.anon.Class
+import typingsSlinky.oracleOraclejet.anon.ConverterHint
+import typingsSlinky.oracleOraclejet.anon.Definition
+import typingsSlinky.oracleOraclejet.anon.Instruction
+import typingsSlinky.oracleOraclejet.anon.LabelValue
+import typingsSlinky.oracleOraclejet.anon.MoreMatchesFound
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojeditablevalueMod.editableValueSettableProperties
 import typingsSlinky.oracleOraclejet.ojmessagingMod.^
@@ -30,15 +30,15 @@ trait ojSelectManySettableProperties[K, D]
   var options: (js.Array[
     typingsSlinky.oracleOraclejet.ojselectcomboboxMod.ojSelect.Option | typingsSlinky.oracleOraclejet.ojselectcomboboxMod.ojSelect.Optgroup
   ]) | (DataProvider[K, D]) | Null = js.native
-  var optionsKeys: AnonChildrenLabel = js.native
-  var pickerAttributes: AnonClass = js.native
+  var optionsKeys: ChildrenLabel = js.native
+  var pickerAttributes: Class = js.native
   var placeholder: String | Null = js.native
   var readOnly: Boolean = js.native
   var renderMode: jet | native = js.native
   var required: Boolean = js.native
   @JSName("translations")
-  var translations_ojSelectManySettableProperties: AnonMoreMatchesFound = js.native
-  var valueOptions: js.Array[AnonLabelValue] | Null = js.native
+  var translations_ojSelectManySettableProperties: MoreMatchesFound = js.native
+  var valueOptions: js.Array[LabelValue] | Null = js.native
   @JSName("value")
   var value_ojSelectManySettableProperties: js.Array[_] | Null = js.native
 }
@@ -47,18 +47,18 @@ object ojSelectManySettableProperties {
   @scala.inline
   def apply[K, D](
     disabled: Boolean,
-    displayOptions: AnonConverterHint,
-    help: AnonInstruction,
-    helpHints: AnonDefinition,
+    displayOptions: ConverterHint,
+    help: Instruction,
+    helpHints: Definition,
     labelHint: String,
     messagesCustom: js.Array[^],
     minimumResultsForSearch: Double,
-    optionsKeys: AnonChildrenLabel,
-    pickerAttributes: AnonClass,
+    optionsKeys: ChildrenLabel,
+    pickerAttributes: Class,
     readOnly: Boolean,
     renderMode: jet | native,
     required: Boolean,
-    translations: AnonMoreMatchesFound,
+    translations: MoreMatchesFound,
     valid: valid | pending | invalidHidden | invalidShown
   ): ojSelectManySettableProperties[K, D] = {
     val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], displayOptions = displayOptions.asInstanceOf[js.Any], help = help.asInstanceOf[js.Any], helpHints = helpHints.asInstanceOf[js.Any], labelHint = labelHint.asInstanceOf[js.Any], messagesCustom = messagesCustom.asInstanceOf[js.Any], minimumResultsForSearch = minimumResultsForSearch.asInstanceOf[js.Any], optionsKeys = optionsKeys.asInstanceOf[js.Any], pickerAttributes = pickerAttributes.asInstanceOf[js.Any], readOnly = readOnly.asInstanceOf[js.Any], renderMode = renderMode.asInstanceOf[js.Any], required = required.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any], valid = valid.asInstanceOf[js.Any])
@@ -77,13 +77,13 @@ object ojSelectManySettableProperties {
         ret
     }
     @scala.inline
-    def withOptionsKeys(value: AnonChildrenLabel): Self[K, D] = {
+    def withOptionsKeys(value: ChildrenLabel): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("optionsKeys")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPickerAttributes(value: AnonClass): Self[K, D] = {
+    def withPickerAttributes(value: Class): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pickerAttributes")(value.asInstanceOf[js.Any])
         ret
@@ -107,7 +107,7 @@ object ojSelectManySettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonMoreMatchesFound): Self[K, D] = {
+    def withTranslations(value: MoreMatchesFound): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret
@@ -171,7 +171,7 @@ object ojSelectManySettableProperties {
         ret
     }
     @scala.inline
-    def withValueOptions(value: js.Array[AnonLabelValue]): Self[K, D] = {
+    def withValueOptions(value: js.Array[LabelValue]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("valueOptions")(value.asInstanceOf[js.Any])
         ret

@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientAdexchangebuyer.gapi.client.adexchangebuyer
 
-import typingsSlinky.gapiClientAdexchangebuyer.AnonAdvertiser
-import typingsSlinky.gapiClientAdexchangebuyer.AnonContexts
-import typingsSlinky.gapiClientAdexchangebuyer.AnonDate
-import typingsSlinky.gapiClientAdexchangebuyer.AnonDisapprovalReasons
+import typingsSlinky.gapiClientAdexchangebuyer.anon.Advertiser
+import typingsSlinky.gapiClientAdexchangebuyer.anon.Contexts
+import typingsSlinky.gapiClientAdexchangebuyer.anon.Date
+import typingsSlinky.gapiClientAdexchangebuyer.anon.DisapprovalReasons
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,7 +37,7 @@ trait Creative extends js.Object {
   /** The set of destination urls for the snippet. */
   var clickThroughUrl: js.UndefOr[js.Array[String]] = js.native
   /** Shows any corrections that were applied to this creative. Read-only. This field should not be set in requests. */
-  var corrections: js.UndefOr[js.Array[AnonContexts]] = js.native
+  var corrections: js.UndefOr[js.Array[Contexts]] = js.native
   /**
     * Top-level deals status. Read-only. This field should not be set in requests. If disapproved, an entry for auctionType=DIRECT_DEALS (or ALL) in
     * servingRestrictions will also exist. Note that this may be nuanced with other contextual restrictions, in which case it may be preferable to read from
@@ -47,7 +47,7 @@ trait Creative extends js.Object {
   /** Detected domains for this creative. Read-only. This field should not be set in requests. */
   var detectedDomains: js.UndefOr[js.Array[String]] = js.native
   /** The filtering reasons for the creative. Read-only. This field should not be set in requests. */
-  var filteringReasons: js.UndefOr[AnonDate] = js.native
+  var filteringReasons: js.UndefOr[Date] = js.native
   /** Ad height. */
   var height: js.UndefOr[Double] = js.native
   /** The set of urls to be called to record an impression. */
@@ -57,7 +57,7 @@ trait Creative extends js.Object {
   /** Detected languages for this creative. Read-only. This field should not be set in requests. */
   var languages: js.UndefOr[js.Array[String]] = js.native
   /** If nativeAd is set, HTMLSnippet and the videoURL outside of nativeAd should not be set. (The videoURL inside nativeAd can be set.) */
-  var nativeAd: js.UndefOr[AnonAdvertiser] = js.native
+  var nativeAd: js.UndefOr[Advertiser] = js.native
   /**
     * Top-level open auction status. Read-only. This field should not be set in requests. If disapproved, an entry for auctionType=OPEN_AUCTION (or ALL) in
     * servingRestrictions will also exist. Note that this may be nuanced with other contextual restrictions, in which case it may be preferable to read from
@@ -84,7 +84,7 @@ trait Creative extends js.Object {
     * platform, an HTTPS vs HTTP request, or the type of auction). Read-only. This field should not be set in requests. See the examples in the Creatives
     * guide for more details.
     */
-  var servingRestrictions: js.UndefOr[js.Array[AnonDisapprovalReasons]] = js.native
+  var servingRestrictions: js.UndefOr[js.Array[DisapprovalReasons]] = js.native
   /** List of vendor types for the ads that may be shown from this snippet. Each vendor type is represented by an integer as defined in vendors.txt. */
   var vendorType: js.UndefOr[js.Array[Double]] = js.native
   /** The version for this creative. Read-only. This field should not be set in requests. */
@@ -228,7 +228,7 @@ object Creative {
         ret
     }
     @scala.inline
-    def withCorrections(value: js.Array[AnonContexts]): Self = {
+    def withCorrections(value: js.Array[Contexts]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("corrections")(value.asInstanceOf[js.Any])
         ret
@@ -264,7 +264,7 @@ object Creative {
         ret
     }
     @scala.inline
-    def withFilteringReasons(value: AnonDate): Self = {
+    def withFilteringReasons(value: Date): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filteringReasons")(value.asInstanceOf[js.Any])
         ret
@@ -324,7 +324,7 @@ object Creative {
         ret
     }
     @scala.inline
-    def withNativeAd(value: AnonAdvertiser): Self = {
+    def withNativeAd(value: Advertiser): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nativeAd")(value.asInstanceOf[js.Any])
         ret
@@ -384,7 +384,7 @@ object Creative {
         ret
     }
     @scala.inline
-    def withServingRestrictions(value: js.Array[AnonDisapprovalReasons]): Self = {
+    def withServingRestrictions(value: js.Array[DisapprovalReasons]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("servingRestrictions")(value.asInstanceOf[js.Any])
         ret

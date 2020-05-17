@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCore
 
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonPopoverElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonPopoverElement
 import typingsSlinky.ionicCore.mod.ComponentRef
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayController
 import typingsSlinky.ionicCore.popoverInterfaceMod.PopoverOptions

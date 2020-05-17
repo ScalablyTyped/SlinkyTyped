@@ -4,18 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("TypeScript.BinaryExpressionSyntax")
 @js.native
-class BinaryExpressionSyntax protected ()
+trait BinaryExpressionSyntax
   extends SyntaxNode
      with IExpressionSyntax {
-  def this(
-    kind: SyntaxKind,
-    left: IExpressionSyntax,
-    operatorToken: ISyntaxToken,
-    right: IExpressionSyntax,
-    parsedInStrictMode: Boolean
-  ) = this()
   var _kind: js.Any = js.native
   var left: IExpressionSyntax = js.native
   var operatorToken: ISyntaxToken = js.native

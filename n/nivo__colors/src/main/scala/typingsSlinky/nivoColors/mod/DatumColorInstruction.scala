@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait DatumColorInstruction
-  extends _OrdinalColorsInstruction[js.Any] {
+  extends OrdinalColorsInstruction[js.Any] {
   var datum: String = js.native
 }
 

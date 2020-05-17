@@ -1,6 +1,6 @@
 package typingsSlinky.sendgrid.mod.SendGrid.Helpers.Mail
 
-import typingsSlinky.sendgrid.AnonUtmcampaign
+import typingsSlinky.sendgrid.anon.Utmcampaign
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait Ganalytics extends js.Object {
   def setUrmTerm(term: String): Unit = js.native
   def setUtmCampaign(campaign: String): Unit = js.native
   def setUtmSource(source: String): Unit = js.native
-  def toJSON(): AnonUtmcampaign = js.native
+  def toJSON(): Utmcampaign = js.native
 }
 
 object Ganalytics {
@@ -37,7 +37,7 @@ object Ganalytics {
     setUrmTerm: String => Unit,
     setUtmCampaign: String => Unit,
     setUtmSource: String => Unit,
-    toJSON: () => AnonUtmcampaign
+    toJSON: () => Utmcampaign
   ): Ganalytics = {
     val __obj = js.Dynamic.literal(getContent = js.Any.fromFunction0(getContent), getEnable = js.Any.fromFunction0(getEnable), getUrmMedium = js.Any.fromFunction0(getUrmMedium), getUrmTerm = js.Any.fromFunction0(getUrmTerm), getUtmCampaign = js.Any.fromFunction0(getUtmCampaign), getUtmSource = js.Any.fromFunction0(getUtmSource), setContent = js.Any.fromFunction1(setContent), setEnable = js.Any.fromFunction1(setEnable), setUrmMedium = js.Any.fromFunction1(setUrmMedium), setUrmTerm = js.Any.fromFunction1(setUrmTerm), setUtmCampaign = js.Any.fromFunction1(setUtmCampaign), setUtmSource = js.Any.fromFunction1(setUtmSource), toJSON = js.Any.fromFunction0(toJSON))
     __obj.asInstanceOf[Ganalytics]
@@ -121,7 +121,7 @@ object Ganalytics {
         ret
     }
     @scala.inline
-    def withToJSON(value: () => AnonUtmcampaign): Self = {
+    def withToJSON(value: () => Utmcampaign): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toJSON")(js.Any.fromFunction0(value))
         ret

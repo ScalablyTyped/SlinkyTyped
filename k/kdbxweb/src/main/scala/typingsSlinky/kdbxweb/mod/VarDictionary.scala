@@ -1,6 +1,6 @@
 package typingsSlinky.kdbxweb.mod
 
-import typingsSlinky.kdbxweb.AnonBool
+import typingsSlinky.kdbxweb.anon.Bool
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ class VarDictionary () extends js.Object {
 @JSImport("kdbxweb", "VarDictionary")
 @js.native
 object VarDictionary extends js.Object {
-  var ValueType: AnonBool = js.native
+  var ValueType: Bool = js.native
   def read(stm: BinaryStream): VarDictionary = js.native
 }
 

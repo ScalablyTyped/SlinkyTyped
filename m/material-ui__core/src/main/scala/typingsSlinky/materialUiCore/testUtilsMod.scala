@@ -3,6 +3,13 @@ package typingsSlinky.materialUiCore
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import typingsSlinky.enzyme.mod.ReactWrapper
+import typingsSlinky.materialUiCore.anon.Fn0
+import typingsSlinky.materialUiCore.anon.Fn1
+import typingsSlinky.materialUiCore.anon.NonePSnodeReactElementopt
+import typingsSlinky.materialUiCore.anon.PartialMountOptions
+import typingsSlinky.materialUiCore.anon.PartialRenderOptions
+import typingsSlinky.materialUiCore.anon.PartialShallowOptions
+import typingsSlinky.materialUiCore.anon.PartialwithThemeboolean
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

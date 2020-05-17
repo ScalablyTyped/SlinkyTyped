@@ -1,7 +1,7 @@
 package typingsSlinky.cytoscape.mod
 
-import typingsSlinky.cytoscape.AnonDegree
-import typingsSlinky.cytoscape.AnonMaxDegree
+import typingsSlinky.cytoscape.anon.Degree
+import typingsSlinky.cytoscape.anon.MaxDegree
 import typingsSlinky.cytoscape.cytoscapeBooleans.`false`
 import typingsSlinky.cytoscape.cytoscapeNumbers.`10`
 import typingsSlinky.cytoscape.cytoscapeStrings.concentric
@@ -35,18 +35,18 @@ trait ConcentricLayoutOptions extends ShapedLayoutOptions {
   // width of layout area (overrides container width)
   var width: js.UndefOr[scala.Nothing] = js.native
   // returns numeric value for each node, placing higher nodes in levels towards the centre
-  def concentric(node: AnonDegree): Double = js.native
+  def concentric(node: Degree): Double = js.native
   // the variation of concentric values in each level
-  def levelWidth(node: AnonMaxDegree): Double = js.native
+  def levelWidth(node: MaxDegree): Double = js.native
 }
 
 object ConcentricLayoutOptions {
   @scala.inline
   def apply(
-    concentric: AnonDegree => Double,
+    concentric: Degree => Double,
     equidistant: `false`,
     fit: Boolean,
-    levelWidth: AnonMaxDegree => Double,
+    levelWidth: MaxDegree => Double,
     minNodeSpacing: `10`,
     name: concentric,
     nodeDimensionsIncludeLabels: Boolean,
@@ -62,7 +62,7 @@ object ConcentricLayoutOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withConcentric(value: AnonDegree => Double): Self = {
+    def withConcentric(value: Degree => Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("concentric")(js.Any.fromFunction1(value))
         ret
@@ -74,7 +74,7 @@ object ConcentricLayoutOptions {
         ret
     }
     @scala.inline
-    def withLevelWidth(value: AnonMaxDegree => Double): Self = {
+    def withLevelWidth(value: MaxDegree => Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("levelWidth")(js.Any.fromFunction1(value))
         ret
@@ -110,30 +110,6 @@ object ConcentricLayoutOptions {
         ret
     }
     @scala.inline
-    def withHeight(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHeight: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("height")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withSpacingFactor(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacingFactor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutSpacingFactor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("spacingFactor")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withSweep(value: Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sweep")(value.asInstanceOf[js.Any])
@@ -143,18 +119,6 @@ object ConcentricLayoutOptions {
     def withoutSweep: Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sweep")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withWidth(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("width")(js.undefined)
         ret
     }
   }

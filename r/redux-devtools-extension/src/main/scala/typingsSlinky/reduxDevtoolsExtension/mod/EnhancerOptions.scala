@@ -3,8 +3,8 @@ package typingsSlinky.reduxDevtoolsExtension.mod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.redux.mod.Action
 import typingsSlinky.redux.mod.ActionCreator
-import typingsSlinky.reduxDevtoolsExtension.AnonDate
-import typingsSlinky.reduxDevtoolsExtension.AnonDispatch
+import typingsSlinky.reduxDevtoolsExtension.anon.Date
+import typingsSlinky.reduxDevtoolsExtension.anon.Dispatch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,7 +42,7 @@ trait EnhancerOptions extends js.Object {
     * Note that except `true`/`false`, `import` and `export` can be set as `custom` (which is by default for Redux enhancer), meaning that the importing/exporting occurs on the client side.
     * Otherwise, you'll get/set the data right from the monitor part.
     */
-  var features: js.UndefOr[AnonDispatch] = js.native
+  var features: js.UndefOr[Dispatch] = js.native
   /**
     * if more than one action is dispatched in the indicated interval, all new actions will be collected and sent at once.
     * It is the joint between performance and speed. When set to `0`, all actions will be sent instantly.
@@ -83,7 +83,7 @@ trait EnhancerOptions extends js.Object {
     *   For `function` key you can also specify a custom function which handles serialization.
     *   See [`jsan`](https://github.com/kolodny/jsan) for more details.
     */
-  var serialize: js.UndefOr[Boolean | AnonDate] = js.native
+  var serialize: js.UndefOr[Boolean | Date] = js.native
   /**
     * if specified as `true`, whenever there's an exception in reducers, the monitors will show the error message, and next actions will not be dispatched.
     *
@@ -198,7 +198,7 @@ object EnhancerOptions {
         ret
     }
     @scala.inline
-    def withFeatures(value: AnonDispatch): Self = {
+    def withFeatures(value: Dispatch): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("features")(value.asInstanceOf[js.Any])
         ret
@@ -270,7 +270,7 @@ object EnhancerOptions {
         ret
     }
     @scala.inline
-    def withSerialize(value: Boolean | AnonDate): Self = {
+    def withSerialize(value: Boolean | Date): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("serialize")(value.asInstanceOf[js.Any])
         ret

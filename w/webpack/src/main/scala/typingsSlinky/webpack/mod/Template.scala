@@ -1,6 +1,6 @@
 package typingsSlinky.webpack.mod
 
-import typingsSlinky.webpack.Anon0
+import typingsSlinky.webpack.anon.`0`
 import typingsSlinky.webpack.mod.compilation.Chunk
 import typingsSlinky.webpack.mod.compilation.ModuleTemplate
 import typingsSlinky.webpack.webpackBooleans.`false`
@@ -15,7 +15,7 @@ object Template extends js.Object {
   def asString(str: String): String = js.native
   def asString(str: js.Array[String]): String = js.native
   def getFunctionContent(fn: js.Function1[/* repeated */ js.Any, _]): String = js.native
-  def getModulesArrayBounds(modules: js.Array[Anon0]): (js.Tuple2[Double, Double]) | `false` = js.native
+  def getModulesArrayBounds(modules: js.Array[`0`]): (js.Tuple2[Double, Double]) | `false` = js.native
   def indent(s: String): String = js.native
   def indent(s: js.Array[String]): String = js.native
   def numberToIdentifer(n: Double): String = js.native

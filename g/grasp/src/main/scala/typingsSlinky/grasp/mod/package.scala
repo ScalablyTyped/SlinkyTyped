@@ -31,11 +31,4 @@ package object mod {
     /* selector */ java.lang.String, 
     js.Function1[/* input */ java.lang.String, js.Array[typingsSlinky.estree.mod.Node]]
   ])
-  type Replacement = java.lang.String | (js.Function4[
-    /* getRaw */ js.Function1[/* node */ typingsSlinky.estree.mod.Node, java.lang.String], 
-    /* node */ typingsSlinky.estree.mod.Node, 
-    /* query */ js.Function1[/* q */ java.lang.String, js.Array[typingsSlinky.estree.mod.Node]], 
-    /* named */ org.scalablytyped.runtime.StringDictionary[java.lang.String | typingsSlinky.estree.mod.Node], 
-    java.lang.String
-  ])
 }

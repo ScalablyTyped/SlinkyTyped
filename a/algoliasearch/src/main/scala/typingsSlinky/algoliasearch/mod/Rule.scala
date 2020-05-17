@@ -1,7 +1,7 @@
 package typingsSlinky.algoliasearch.mod
 
-import typingsSlinky.algoliasearch.AnonAnchoring
-import typingsSlinky.algoliasearch.AnonPromote
+import typingsSlinky.algoliasearch.anon.Anchoring
+import typingsSlinky.algoliasearch.anon.Promote
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,11 +14,11 @@ trait Rule extends js.Object {
   /**
     * Condition of the rule
     */
-  var condition: js.UndefOr[AnonAnchoring] = js.native
+  var condition: js.UndefOr[Anchoring] = js.native
   /**
     * Consequence of the rule. At least one of the following must be used:
     */
-  var consequence: AnonPromote = js.native
+  var consequence: Promote = js.native
   /**
     * This field is intended for rule management purposes,
     * in particular to ease searching for rules and presenting them to human readers.
@@ -33,7 +33,7 @@ trait Rule extends js.Object {
 
 object Rule {
   @scala.inline
-  def apply(consequence: AnonPromote, objectID: String): Rule = {
+  def apply(consequence: Promote, objectID: String): Rule = {
     val __obj = js.Dynamic.literal(consequence = consequence.asInstanceOf[js.Any], objectID = objectID.asInstanceOf[js.Any])
     __obj.asInstanceOf[Rule]
   }
@@ -44,7 +44,7 @@ object Rule {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withConsequence(value: AnonPromote): Self = {
+    def withConsequence(value: Promote): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("consequence")(value.asInstanceOf[js.Any])
         ret
@@ -56,7 +56,7 @@ object Rule {
         ret
     }
     @scala.inline
-    def withCondition(value: AnonAnchoring): Self = {
+    def withCondition(value: Anchoring): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("condition")(value.asInstanceOf[js.Any])
         ret

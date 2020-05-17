@@ -1,7 +1,5 @@
 package typingsSlinky.ace.AceAjax
 
-import org.scalablytyped.runtime.Instantiable0
-import org.scalablytyped.runtime.Instantiable1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -185,13 +183,223 @@ trait Document extends js.Object {
   def setValue(text: String): Unit = js.native
 }
 
-@JSGlobal("AceAjax.Document")
-@js.native
-object Document
-  extends /**
-  * Creates a new `Document`. If `text` is included, the `Document` contains those strings; otherwise, it's empty.
-  * @param text The starting text
-  **/
-Instantiable0[Document]
-     with Instantiable1[(/* text */ js.Array[String]) | (/* text */ String), Document]
+object Document {
+  @scala.inline
+  def apply(
+    applyDeltas: js.Array[Delta] => Unit,
+    createAnchor: (Double, Double) => Unit,
+    getAllLines: () => js.Array[String],
+    getLength: () => Double,
+    getLine: Double => String,
+    getLines: (Double, Double) => js.Array[String],
+    getNewLineCharacter: () => String,
+    getNewLineMode: () => String,
+    getTextRange: Range => String,
+    getValue: () => String,
+    indexToPosition: (Double, Double) => Position,
+    insert: (Position, String) => js.Any,
+    insertFullLines: (Double, js.Array[String]) => js.Any,
+    insertInLine: (js.Any, String) => js.Any,
+    insertLines: (Double, js.Array[String]) => js.Any,
+    insertMergedLines: (Double, js.Array[String]) => js.Any,
+    insertNewLine: Position => js.Any,
+    isNewLine: String => Boolean,
+    on: (String, js.Function1[/* e */ js.Any, _]) => Unit,
+    positionToIndex: (Position, Double) => Double,
+    remove: Range => js.Any,
+    removeFullLines: (Double, Double) => js.Array[String],
+    removeInLine: (Double, Double, Double) => js.Any,
+    removeLines: (Double, Double) => js.Array[String],
+    removeNewLine: Double => Unit,
+    replace: (Range, String) => js.Any,
+    revertDeltas: js.Array[Delta] => Unit,
+    setNewLineMode: String => Unit,
+    setValue: String => Unit
+  ): Document = {
+    val __obj = js.Dynamic.literal(applyDeltas = js.Any.fromFunction1(applyDeltas), createAnchor = js.Any.fromFunction2(createAnchor), getAllLines = js.Any.fromFunction0(getAllLines), getLength = js.Any.fromFunction0(getLength), getLine = js.Any.fromFunction1(getLine), getLines = js.Any.fromFunction2(getLines), getNewLineCharacter = js.Any.fromFunction0(getNewLineCharacter), getNewLineMode = js.Any.fromFunction0(getNewLineMode), getTextRange = js.Any.fromFunction1(getTextRange), getValue = js.Any.fromFunction0(getValue), indexToPosition = js.Any.fromFunction2(indexToPosition), insert = js.Any.fromFunction2(insert), insertFullLines = js.Any.fromFunction2(insertFullLines), insertInLine = js.Any.fromFunction2(insertInLine), insertLines = js.Any.fromFunction2(insertLines), insertMergedLines = js.Any.fromFunction2(insertMergedLines), insertNewLine = js.Any.fromFunction1(insertNewLine), isNewLine = js.Any.fromFunction1(isNewLine), on = js.Any.fromFunction2(on), positionToIndex = js.Any.fromFunction2(positionToIndex), remove = js.Any.fromFunction1(remove), removeFullLines = js.Any.fromFunction2(removeFullLines), removeInLine = js.Any.fromFunction3(removeInLine), removeLines = js.Any.fromFunction2(removeLines), removeNewLine = js.Any.fromFunction1(removeNewLine), replace = js.Any.fromFunction2(replace), revertDeltas = js.Any.fromFunction1(revertDeltas), setNewLineMode = js.Any.fromFunction1(setNewLineMode), setValue = js.Any.fromFunction1(setValue))
+    __obj.asInstanceOf[Document]
+  }
+  @scala.inline
+  implicit class DocumentOps[Self <: Document] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplyDeltas(value: js.Array[Delta] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applyDeltas")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateAnchor(value: (Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createAnchor")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetAllLines(value: () => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllLines")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLength(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLength")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLine(value: Double => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLine")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetLines(value: (Double, Double) => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLines")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetNewLineCharacter(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNewLineCharacter")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetNewLineMode(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNewLineMode")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetTextRange(value: Range => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTextRange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetValue(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getValue")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIndexToPosition(value: (Double, Double) => Position): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indexToPosition")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withInsert(value: (Position, String) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withInsertFullLines(value: (Double, js.Array[String]) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertFullLines")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withInsertInLine(value: (js.Any, String) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertInLine")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withInsertLines(value: (Double, js.Array[String]) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertLines")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withInsertMergedLines(value: (Double, js.Array[String]) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertMergedLines")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withInsertNewLine(value: Position => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insertNewLine")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsNewLine(value: String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isNewLine")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOn(value: (String, js.Function1[/* e */ js.Any, _]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withPositionToIndex(value: (Position, Double) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("positionToIndex")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRemove(value: Range => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveFullLines(value: (Double, Double) => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeFullLines")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveInLine(value: (Double, Double, Double) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeInLine")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveLines(value: (Double, Double) => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeLines")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveNewLine(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeNewLine")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withReplace(value: (Range, String) => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRevertDeltas(value: js.Array[Delta] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("revertDeltas")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetNewLineMode(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setNewLineMode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetValue(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setValue")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

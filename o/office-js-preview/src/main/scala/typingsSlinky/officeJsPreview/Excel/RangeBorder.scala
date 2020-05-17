@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.RangeBorderData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.RangeBorderLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.RangeBorderUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Continuous
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Dash
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.DashDot
@@ -36,9 +36,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.RangeBorder")
 @js.native
-class RangeBorder () extends ClientObject {
+trait RangeBorder extends ClientObject {
   /**
     *
     * HTML color code representing the color of the border line, of the form #RRGGBB (e.g. "FFA500") or as a named HTML color (e.g. "orange").
@@ -85,7 +84,7 @@ class RangeBorder () extends ClientObject {
     */
   def load(): RangeBorder = js.native
   def load(options: RangeBorderLoadOptions): RangeBorder = js.native
-  def load(propertyNamesAndPaths: AnonExpand): RangeBorder = js.native
+  def load(propertyNamesAndPaths: Expand): RangeBorder = js.native
   def load(propertyNames: String): RangeBorder = js.native
   def load(propertyNames: js.Array[String]): RangeBorder = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

@@ -1,6 +1,6 @@
 package typingsSlinky.handlebarsHelpers.mod
 
-import typingsSlinky.handlebarsHelpers.TypeofHandlebars
+import typingsSlinky.handlebarsHelpers.anon.TypeofHandlebars
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

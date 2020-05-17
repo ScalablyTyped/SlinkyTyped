@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents the client-side equivalent of the ASPxHyperLink control.
   */
-@JSGlobal("ASPxClientHyperLink")
 @js.native
-class ASPxClientHyperLink () extends ASPxClientStaticEdit {
+trait ASPxClientHyperLink extends ASPxClientStaticEdit {
   /**
     * Gets an URL which defines the navigation location for the editor's hyperlink.
     */
@@ -30,14 +29,70 @@ class ASPxClientHyperLink () extends ASPxClientStaticEdit {
   def SetText(text: String): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("ASPxClientHyperLink")
-@js.native
-object ASPxClientHyperLink extends js.Object {
-  /**
-    * Converts the specified object to the ASPxClientHyperLink type. The converted client object specified by the obj parameter.
-    * @param obj The client object to be type cast.
-    */
-  def Cast(obj: js.Any): ASPxClientHyperLink = js.native
+object ASPxClientHyperLink {
+  @scala.inline
+  def apply(
+    AdjustControl: () => Unit,
+    Click: ASPxClientEvent[ASPxClientEditEventHandler[ASPxClientStaticEdit]],
+    GetCaption: () => String,
+    GetClientVisible: () => Boolean,
+    GetEnabled: () => Boolean,
+    GetHeight: () => Double,
+    GetMainElement: () => js.Any,
+    GetNavigateUrl: () => String,
+    GetParentControl: () => js.Any,
+    GetText: () => String,
+    GetValue: () => js.Any,
+    GetVisible: () => Boolean,
+    GetWidth: () => Double,
+    InCallback: () => Boolean,
+    Init: ASPxClientEvent[ASPxClientEventHandler[ASPxClientControlBase]],
+    SendMessageToAssistiveTechnology: String => Unit,
+    SetCaption: String => Unit,
+    SetClientVisible: Boolean => Unit,
+    SetEnabled: Boolean => Unit,
+    SetHeight: Double => Unit,
+    SetNavigateUrl: String => Unit,
+    SetText: String => Unit,
+    SetValue: js.Any => Unit,
+    SetVisible: Boolean => Unit,
+    SetWidth: Double => Unit,
+    name: String
+  ): ASPxClientHyperLink = {
+    val __obj = js.Dynamic.literal(AdjustControl = js.Any.fromFunction0(AdjustControl), Click = Click.asInstanceOf[js.Any], GetCaption = js.Any.fromFunction0(GetCaption), GetClientVisible = js.Any.fromFunction0(GetClientVisible), GetEnabled = js.Any.fromFunction0(GetEnabled), GetHeight = js.Any.fromFunction0(GetHeight), GetMainElement = js.Any.fromFunction0(GetMainElement), GetNavigateUrl = js.Any.fromFunction0(GetNavigateUrl), GetParentControl = js.Any.fromFunction0(GetParentControl), GetText = js.Any.fromFunction0(GetText), GetValue = js.Any.fromFunction0(GetValue), GetVisible = js.Any.fromFunction0(GetVisible), GetWidth = js.Any.fromFunction0(GetWidth), InCallback = js.Any.fromFunction0(InCallback), Init = Init.asInstanceOf[js.Any], SendMessageToAssistiveTechnology = js.Any.fromFunction1(SendMessageToAssistiveTechnology), SetCaption = js.Any.fromFunction1(SetCaption), SetClientVisible = js.Any.fromFunction1(SetClientVisible), SetEnabled = js.Any.fromFunction1(SetEnabled), SetHeight = js.Any.fromFunction1(SetHeight), SetNavigateUrl = js.Any.fromFunction1(SetNavigateUrl), SetText = js.Any.fromFunction1(SetText), SetValue = js.Any.fromFunction1(SetValue), SetVisible = js.Any.fromFunction1(SetVisible), SetWidth = js.Any.fromFunction1(SetWidth), name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientHyperLink]
+  }
+  @scala.inline
+  implicit class ASPxClientHyperLinkOps[Self <: ASPxClientHyperLink] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetNavigateUrl(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetNavigateUrl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetText(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetText")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetNavigateUrl(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetNavigateUrl")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetText(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetText")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

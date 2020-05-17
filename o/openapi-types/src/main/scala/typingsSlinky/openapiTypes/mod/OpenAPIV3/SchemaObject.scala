@@ -12,16 +12,8 @@ trait SchemaObject extends js.Object
 
 object SchemaObject {
   @scala.inline
-  def ArraySchemaObject(items: ReferenceObject | SchemaObject, `type`: ArraySchemaObjectType): SchemaObject = {
-    val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SchemaObject]
-  }
+  implicit def apply(value: ArraySchemaObject): SchemaObject = value.asInstanceOf[SchemaObject]
   @scala.inline
-  def NonArraySchemaObject(`type`: NonArraySchemaObjectType): SchemaObject = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SchemaObject]
-  }
+  implicit def apply(value: NonArraySchemaObject): SchemaObject = value.asInstanceOf[SchemaObject]
 }
 

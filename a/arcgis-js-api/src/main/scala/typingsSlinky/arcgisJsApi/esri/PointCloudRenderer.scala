@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`point-cloud-class-breaks`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`point-cloud-rgb`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`point-cloud-stretch`
@@ -40,8 +39,4 @@ trait PointCloudRenderer
     */
   val `type`: `point-cloud-class-breaks` | `point-cloud-rgb` | `point-cloud-stretch` | `point-cloud-unique-value` = js.native
 }
-
-@JSGlobal("__esri.PointCloudRenderer")
-@js.native
-object PointCloudRenderer extends TopLevel[PointCloudRendererConstructor]
 

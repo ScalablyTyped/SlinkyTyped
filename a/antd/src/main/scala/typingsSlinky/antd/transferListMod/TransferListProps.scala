@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.HTMLUListElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticUIEvent
-import typingsSlinky.antd.AnonSelectedCount
+import typingsSlinky.antd.anon.SelectedCount
 import typingsSlinky.antd.renderListBodyMod.TransferListBodyProps
 import typingsSlinky.antd.transferMod.RenderResult
 import typingsSlinky.antd.transferMod.SelectAllLabel
@@ -227,7 +227,7 @@ object TransferListProps {
         ret
     }
     @scala.inline
-    def withSelectAllLabelFunction1(value: /* info */ AnonSelectedCount => TagMod[Any]): Self = {
+    def withSelectAllLabelFunction1(value: /* info */ SelectedCount => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectAllLabel")(js.Any.fromFunction1(value))
         ret

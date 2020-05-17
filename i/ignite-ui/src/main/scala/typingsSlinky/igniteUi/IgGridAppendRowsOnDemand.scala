@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -198,7 +198,7 @@ object IgGridAppendRowsOnDemand {
         ret
     }
     @scala.inline
-    def withRowsRequested(value: (/* event */ Event_, /* ui */ RowsRequestedEventUIParam) => Unit): Self = {
+    def withRowsRequested(value: (/* event */ Event, /* ui */ RowsRequestedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowsRequested")(js.Any.fromFunction2(value))
         ret
@@ -210,7 +210,7 @@ object IgGridAppendRowsOnDemand {
         ret
     }
     @scala.inline
-    def withRowsRequesting(value: (/* event */ Event_, /* ui */ RowsRequestingEventUIParam) => Unit): Self = {
+    def withRowsRequesting(value: (/* event */ Event, /* ui */ RowsRequestingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowsRequesting")(js.Any.fromFunction2(value))
         ret

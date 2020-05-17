@@ -1,6 +1,5 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.WorkbookData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.WorkbookLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.WorkbookUpdateData
@@ -8,6 +7,7 @@ import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientResult
 import typingsSlinky.officeJsPreview.OfficeExtension.EventHandlers
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Prompt
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Save
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.SkipSave
@@ -22,9 +22,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.Workbook")
 @js.native
-class Workbook () extends ClientObject {
+trait Workbook extends ClientObject {
   /**
     *
     * Represents the Excel application instance that contains this workbook. Read-only.
@@ -316,7 +315,7 @@ class Workbook () extends ClientObject {
     */
   def load(): Workbook = js.native
   def load(options: WorkbookLoadOptions): Workbook = js.native
-  def load(propertyNamesAndPaths: AnonExpand): Workbook = js.native
+  def load(propertyNamesAndPaths: Expand): Workbook = js.native
   def load(propertyNames: String): Workbook = js.native
   def load(propertyNames: js.Array[String]): Workbook = js.native
   /**

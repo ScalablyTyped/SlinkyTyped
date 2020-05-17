@@ -1,7 +1,7 @@
 package typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins
 
 import typingsSlinky.reactDataGrid.AdazzleReactDataGrid.ExcelColumn
-import typingsSlinky.reactDataGrid.AnonId
+import typingsSlinky.reactDataGrid.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait AutoCompleteEditorProps extends js.Object {
   var onCommit: js.UndefOr[js.Function0[Unit]] = js.native
   var onFocus: js.UndefOr[js.Function0[Unit]] = js.native
   var onKeyDown: js.UndefOr[js.Function0[Unit]] = js.native
-  var options: js.UndefOr[js.Array[AnonId]] = js.native
+  var options: js.UndefOr[js.Array[Id]] = js.native
   var resultIdentifier: js.UndefOr[String] = js.native
   var search: js.UndefOr[String] = js.native
   var value: js.UndefOr[js.Any] = js.native
@@ -119,7 +119,7 @@ object AutoCompleteEditorProps {
         ret
     }
     @scala.inline
-    def withOptions(value: js.Array[AnonId]): Self = {
+    def withOptions(value: js.Array[Id]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

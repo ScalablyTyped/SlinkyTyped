@@ -1,6 +1,8 @@
 package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.officeUiFabricReact.anon.CardDismissDelay
+import typingsSlinky.officeUiFabricReact.anon.CompactCardHeight
 import typingsSlinky.officeUiFabricReact.expandingCardTypesMod.IExpandingCardProps
 import typingsSlinky.officeUiFabricReact.hoverCardTypesMod.IHoverCardProps
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`0`
@@ -111,7 +113,7 @@ object libHoverCardMod extends js.Object {
   /* static members */
   @js.native
   object ExpandingCardBase extends js.Object {
-    var defaultProps: AnonCompactCardHeight = js.native
+    var defaultProps: CompactCardHeight = js.native
   }
   
   @js.native
@@ -127,7 +129,7 @@ object libHoverCardMod extends js.Object {
   /* static members */
   @js.native
   object HoverCardBase extends js.Object {
-    var defaultProps: AnonCardDismissDelay = js.native
+    var defaultProps: CardDismissDelay = js.native
   }
   
   @js.native

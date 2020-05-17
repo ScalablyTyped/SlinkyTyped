@@ -1,6 +1,6 @@
 package typingsSlinky.relayCompiler.relayLanguagePluginInterfaceMod
 
-import typingsSlinky.relayCompiler.AnonColumn
+import typingsSlinky.relayCompiler.anon.Column
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ trait GraphQLTag extends js.Object {
   /**
     * The location in the source file that the tag is placed at.
     */
-  var sourceLocationOffset: AnonColumn = js.native
+  var sourceLocationOffset: Column = js.native
   /**
     * Should hold the string content of the `graphql` tagged template literal,
     * which is either an operation or fragment.
@@ -41,7 +41,7 @@ trait GraphQLTag extends js.Object {
 
 object GraphQLTag {
   @scala.inline
-  def apply(sourceLocationOffset: AnonColumn, template: String): GraphQLTag = {
+  def apply(sourceLocationOffset: Column, template: String): GraphQLTag = {
     val __obj = js.Dynamic.literal(sourceLocationOffset = sourceLocationOffset.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any])
     __obj.asInstanceOf[GraphQLTag]
   }
@@ -52,7 +52,7 @@ object GraphQLTag {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSourceLocationOffset(value: AnonColumn): Self = {
+    def withSourceLocationOffset(value: Column): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sourceLocationOffset")(value.asInstanceOf[js.Any])
         ret

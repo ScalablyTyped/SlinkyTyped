@@ -3,7 +3,7 @@ package typingsSlinky.immutable.mod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.immutable.Immutable.Seq.Indexed
 import typingsSlinky.immutable.Immutable.Seq.Keyed
-import typingsSlinky.immutable.Immutable.Seq.Set
+import typingsSlinky.immutable.Immutable.Set
 import typingsSlinky.std.IterableIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -780,11 +780,11 @@ trait Collection[K, V]
     * Note: This is equivalent to `Set(this)`, but provided to allow for
     * chained expressions.
     */
-  def toSet(): typingsSlinky.immutable.Immutable.Set_[V] = js.native
+  def toSet(): Set[V] = js.native
   /**
     * Returns a Seq.Set of the values of this Collection, discarding keys.
     */
-  def toSetSeq(): Set[V] = js.native
+  def toSetSeq(): typingsSlinky.immutable.Immutable.Seq.Set[V] = js.native
   /**
     * Converts this Collection to a Stack, discarding keys. Throws if values
     * are not hashable.

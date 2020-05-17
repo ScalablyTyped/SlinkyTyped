@@ -1,7 +1,7 @@
 package typingsSlinky.reactToastNotifications.mod
 
 import slinky.core.TagMod
-import typingsSlinky.reactToastNotifications.AnonAppearance
+import typingsSlinky.reactToastNotifications.anon.Appearance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait ToastConsumerContext extends js.Object {
   var add: AddToast = js.native
   var remove: RemoveToast = js.native
-  var toasts: js.Array[AnonAppearance] = js.native
+  var toasts: js.Array[Appearance] = js.native
 }
 
 object ToastConsumerContext {
@@ -18,7 +18,7 @@ object ToastConsumerContext {
   def apply(
     add: (/* content */ TagMod[Any], /* options */ js.UndefOr[Options], /* callback */ js.UndefOr[js.Function1[/* id */ String, Unit]]) => Unit,
     remove: (/* id */ String, /* callback */ js.UndefOr[js.Function0[Unit]]) => Unit,
-    toasts: js.Array[AnonAppearance]
+    toasts: js.Array[Appearance]
   ): ToastConsumerContext = {
     val __obj = js.Dynamic.literal(add = js.Any.fromFunction3(add), remove = js.Any.fromFunction2(remove), toasts = toasts.asInstanceOf[js.Any])
     __obj.asInstanceOf[ToastConsumerContext]
@@ -44,7 +44,7 @@ object ToastConsumerContext {
         ret
     }
     @scala.inline
-    def withToasts(value: js.Array[AnonAppearance]): Self = {
+    def withToasts(value: js.Array[Appearance]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toasts")(value.asInstanceOf[js.Any])
         ret

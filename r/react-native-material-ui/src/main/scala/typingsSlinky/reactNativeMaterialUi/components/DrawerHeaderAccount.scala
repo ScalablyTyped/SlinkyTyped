@@ -3,8 +3,7 @@ package typingsSlinky.reactNativeMaterialUi.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNativeMaterialUi.AnonAccountContainer
-import typingsSlinky.reactNativeMaterialUi.AnonAvatar
+import typingsSlinky.reactNativeMaterialUi.anon.AccountContainer
 import typingsSlinky.reactNativeMaterialUi.mod.Drawer.Header.Account
 import typingsSlinky.reactNativeMaterialUi.mod.DrawerHeaderAccountProps
 import scala.scalajs.js
@@ -21,13 +20,13 @@ object DrawerHeaderAccount {
     extends AnyVal
        with StBuildingComponent[tag.type, Account] {
     @scala.inline
-    def accounts(value: js.Array[AnonAvatar]): this.type = set("accounts", value.asInstanceOf[js.Any])
+    def accounts(value: js.Array[typingsSlinky.reactNativeMaterialUi.anon.Avatar]): this.type = set("accounts", value.asInstanceOf[js.Any])
     @scala.inline
     def avatar(value: ReactElement): this.type = set("avatar", value.asInstanceOf[js.Any])
     @scala.inline
     def footer(value: js.Object): this.type = set("footer", value.asInstanceOf[js.Any])
     @scala.inline
-    def style(value: AnonAccountContainer): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: AccountContainer): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: DrawerHeaderAccountProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

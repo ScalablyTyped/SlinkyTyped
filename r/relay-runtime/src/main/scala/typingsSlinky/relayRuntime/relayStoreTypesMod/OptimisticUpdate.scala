@@ -12,14 +12,8 @@ trait OptimisticUpdate extends js.Object
 
 object OptimisticUpdate {
   @scala.inline
-  def OptimisticUpdateFunction(storeUpdater: RecordSourceProxy => Unit): OptimisticUpdate = {
-    val __obj = js.Dynamic.literal(storeUpdater = js.Any.fromFunction1(storeUpdater))
-    __obj.asInstanceOf[OptimisticUpdate]
-  }
+  implicit def apply(value: OptimisticUpdateFunction): OptimisticUpdate = value.asInstanceOf[OptimisticUpdate]
   @scala.inline
-  def OptimisticUpdateRelayPayload(operation: OperationDescriptor, payload: RelayResponsePayload): OptimisticUpdate = {
-    val __obj = js.Dynamic.literal(operation = operation.asInstanceOf[js.Any], payload = payload.asInstanceOf[js.Any])
-    __obj.asInstanceOf[OptimisticUpdate]
-  }
+  implicit def apply(value: OptimisticUpdateRelayPayload): OptimisticUpdate = value.asInstanceOf[OptimisticUpdate]
 }
 

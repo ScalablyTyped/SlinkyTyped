@@ -1,6 +1,6 @@
 package typingsSlinky.keystonejsKeystone.mod
 
-import typingsSlinky.keystonejsKeystone.AnonQuery
+import typingsSlinky.keystonejsKeystone.anon.Query
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait ResolveInputHooksOptions[Record /* <: js.Object */] extends js.Object {
    // todo: check
   var existingItem: Record = js.native
    // not clear in the documentation
-  var list: AnonQuery[Record] = js.native
+  var list: Query[Record] = js.native
   var originalInput: js.Any = js.native
   var resolvedData: js.Any = js.native
   var updatedItem: Record = js.native
@@ -25,7 +25,7 @@ object ResolveInputHooksOptions {
     addFieldValidationError: String => js.Any,
     context: js.Any,
     existingItem: Record,
-    list: AnonQuery[Record],
+    list: Query[Record],
     originalInput: js.Any,
     resolvedData: js.Any,
     updatedItem: Record
@@ -58,7 +58,7 @@ object ResolveInputHooksOptions {
         ret
     }
     @scala.inline
-    def withList(value: AnonQuery[Record]): Self[Record] = {
+    def withList(value: Query[Record]): Self[Record] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(value.asInstanceOf[js.Any])
         ret

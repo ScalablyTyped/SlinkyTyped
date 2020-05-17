@@ -2,6 +2,8 @@ package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
+import typingsSlinky.officeUiFabricReact.anon.PartialIStackProps
+import typingsSlinky.officeUiFabricReact.anon.WeakValidationMapIStackPr
 import typingsSlinky.officeUiFabricReact.stackItemTypesMod.IStackItemProps
 import typingsSlinky.officeUiFabricReact.stackTypesMod.IStackProps
 import typingsSlinky.react.mod.PropsWithChildren

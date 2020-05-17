@@ -1,24 +1,32 @@
 package typingsSlinky.vexflow.Vex.Flow
 
-import typingsSlinky.vexflow.AnonFirstindices
+import typingsSlinky.vexflow.Vex.IRenderContext
+import typingsSlinky.vexflow.anon.Family
+import typingsSlinky.vexflow.anon.Firstindices
+import typingsSlinky.vexflow.anon.Firstxpx
+import typingsSlinky.vexflow.anon.Lastindices
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Vex.Flow.TabSlide")
 @js.native
-class TabSlide protected () extends TabTie {
-  def this(notes: AnonFirstindices) = this()
-  def this(notes: AnonFirstindices, direction: Double) = this()
-}
+trait TabSlide extends TabTie
 
-/* static members */
-@JSGlobal("Vex.Flow.TabSlide")
-@js.native
-object TabSlide extends js.Object {
-  val SLIDE_DOWN: Double = js.native
-  val SLIDE_UP: Double = js.native
-  def createSlideDown(notes: AnonFirstindices): TabSlide = js.native
-  def createSlideUp(notes: AnonFirstindices): TabSlide = js.native
+object TabSlide {
+  @scala.inline
+  def apply(
+    createHammeron: Firstindices => TabTie,
+    createPulloff: Firstindices => TabTie,
+    draw: () => Boolean,
+    isPartial: () => Boolean,
+    renderText: (Double, Double) => Unit,
+    renderTie: Firstxpx => Unit,
+    setContext: IRenderContext => StaveTie,
+    setFont: Family => StaveTie,
+    setNotes: Lastindices => StaveTie
+  ): TabSlide = {
+    val __obj = js.Dynamic.literal(createHammeron = js.Any.fromFunction1(createHammeron), createPulloff = js.Any.fromFunction1(createPulloff), draw = js.Any.fromFunction0(draw), isPartial = js.Any.fromFunction0(isPartial), renderText = js.Any.fromFunction2(renderText), renderTie = js.Any.fromFunction1(renderTie), setContext = js.Any.fromFunction1(setContext), setFont = js.Any.fromFunction1(setFont), setNotes = js.Any.fromFunction1(setNotes))
+    __obj.asInstanceOf[TabSlide]
+  }
 }
 

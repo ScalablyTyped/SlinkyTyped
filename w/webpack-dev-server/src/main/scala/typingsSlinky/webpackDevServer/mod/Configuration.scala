@@ -8,11 +8,11 @@ import typingsSlinky.serveStatic.mod.ServeStaticOptions
 import typingsSlinky.webpack.mod.Compiler_
 import typingsSlinky.webpack.mod.Options.Stats
 import typingsSlinky.webpack.mod.WatchOptions
-import typingsSlinky.webpackDevServer.AnonClient
-import typingsSlinky.webpackDevServer.AnonClientServer
-import typingsSlinky.webpackDevServer.AnonErrors
-import typingsSlinky.webpackDevServer.AnonServer
-import typingsSlinky.webpackDevServer.AnonTypeMap
+import typingsSlinky.webpackDevServer.anon.Client
+import typingsSlinky.webpackDevServer.anon.ClientServer
+import typingsSlinky.webpackDevServer.anon.Errors
+import typingsSlinky.webpackDevServer.anon.Server
+import typingsSlinky.webpackDevServer.anon.TypeMap
 import typingsSlinky.webpackDevServer.webpackDevServerStrings.debug
 import typingsSlinky.webpackDevServer.webpackDevServerStrings.error
 import typingsSlinky.webpackDevServer.webpackDevServerStrings.info
@@ -167,7 +167,7 @@ trait Configuration extends js.Object {
     * [documentation](https://github.com/webpack/webpack-dev-middleware#mimetypes)
     * for usage notes.
     */
-  var mimeTypes: js.UndefOr[StringDictionary[js.Array[String]] | AnonTypeMap] = js.native
+  var mimeTypes: js.UndefOr[StringDictionary[js.Array[String]] | TypeMap] = js.native
   /**
     * With noInfo enabled, messages like the webpack bundle information
     * that is shown when starting up and after each save,will be hidden.
@@ -187,7 +187,7 @@ trait Configuration extends js.Object {
     * Shows a full-screen overlay in the browser when there are compiler
     * errors or warnings. Disabled by default.
     */
-  var overlay: js.UndefOr[Boolean | AnonErrors] = js.native
+  var overlay: js.UndefOr[Boolean | Errors] = js.native
   /**
     * When used via the CLI, a path to an SSL .pfx file. If used in
     * options, it should be the bytestream of the .pfx file.
@@ -291,7 +291,7 @@ trait Configuration extends js.Object {
     * version. This mode uses ws as a server, and native WebSockets on the
     * client.
     */
-  var transportMode: js.UndefOr[sockjs | ws | AnonClient | AnonServer | AnonClientServer] = js.native
+  var transportMode: js.UndefOr[sockjs | ws | Client | Server | ClientServer] = js.native
   /** This option lets the browser open with your local IP. */
   var useLocalIp: js.UndefOr[Boolean] = js.native
   /**
@@ -607,7 +607,7 @@ object Configuration {
         ret
     }
     @scala.inline
-    def withMimeTypes(value: StringDictionary[js.Array[String]] | AnonTypeMap): Self = {
+    def withMimeTypes(value: StringDictionary[js.Array[String]] | TypeMap): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mimeTypes")(value.asInstanceOf[js.Any])
         ret
@@ -667,7 +667,7 @@ object Configuration {
         ret
     }
     @scala.inline
-    def withOverlay(value: Boolean | AnonErrors): Self = {
+    def withOverlay(value: Boolean | Errors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overlay")(value.asInstanceOf[js.Any])
         ret
@@ -859,7 +859,7 @@ object Configuration {
         ret
     }
     @scala.inline
-    def withTransportMode(value: sockjs | ws | AnonClient | AnonServer | AnonClientServer): Self = {
+    def withTransportMode(value: sockjs | ws | Client | Server | ClientServer): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("transportMode")(value.asInstanceOf[js.Any])
         ret

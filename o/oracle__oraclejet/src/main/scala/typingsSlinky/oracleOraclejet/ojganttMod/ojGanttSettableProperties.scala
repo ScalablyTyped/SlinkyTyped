@@ -1,15 +1,15 @@
 package typingsSlinky.oracleOraclejet.ojganttMod
 
-import typingsSlinky.oracleOraclejet.Anon7
-import typingsSlinky.oracleOraclejet.AnonAccessibleDependencyInfo
-import typingsSlinky.oracleOraclejet.AnonBaseline
-import typingsSlinky.oracleOraclejet.AnonBaselineDate
-import typingsSlinky.oracleOraclejet.AnonHeightNumber
-import typingsSlinky.oracleOraclejet.AnonMaxWidth
-import typingsSlinky.oracleOraclejet.AnonMove
-import typingsSlinky.oracleOraclejet.AnonOffsetY
-import typingsSlinky.oracleOraclejet.AnonScale
-import typingsSlinky.oracleOraclejet.AnonVertical
+import typingsSlinky.oracleOraclejet.anon.AccessibleDependencyInfo
+import typingsSlinky.oracleOraclejet.anon.Baseline
+import typingsSlinky.oracleOraclejet.anon.BaselineDate
+import typingsSlinky.oracleOraclejet.anon.HeightNumber
+import typingsSlinky.oracleOraclejet.anon.MaxWidth
+import typingsSlinky.oracleOraclejet.anon.Move
+import typingsSlinky.oracleOraclejet.anon.OffsetY
+import typingsSlinky.oracleOraclejet.anon.Scale
+import typingsSlinky.oracleOraclejet.anon.Vertical
+import typingsSlinky.oracleOraclejet.anon.`7`
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponentSettableProperties
 import typingsSlinky.oracleOraclejet.ojganttMod.ojGantt.ReferenceObject
@@ -32,24 +32,24 @@ trait ojGanttSettableProperties[K1, K2, D1, D2] extends dvtBaseComponentSettable
   var as: String = js.native
   var axisPosition: bottom | top = js.native
   var dependencyData: js.UndefOr[DataProvider[K1, D1]] = js.native
-  var dnd: AnonMove = js.native
+  var dnd: Move = js.native
   var end: String = js.native
-  var gridlines: AnonVertical = js.native
-  var majorAxis: AnonScale = js.native
-  var minorAxis: AnonScale = js.native
+  var gridlines: Vertical = js.native
+  var majorAxis: Scale = js.native
+  var minorAxis: Scale = js.native
   var referenceObjects: js.Array[ReferenceObject] = js.native
-  var rowAxis: AnonMaxWidth[K2, D2] = js.native
-  var rowDefaults: AnonHeightNumber = js.native
-  var scrollPosition: AnonOffsetY = js.native
+  var rowAxis: MaxWidth[K2, D2] = js.native
+  var rowDefaults: HeightNumber = js.native
+  var scrollPosition: OffsetY = js.native
   var selection: js.Array[K2] = js.native
   var selectionMode: single | multiple | none = js.native
   var start: String = js.native
   var taskData: js.UndefOr[DataProvider[K2, D2]] = js.native
-  var taskDefaults: AnonBaseline = js.native
-  var tooltip: Anon7[K2, D2] = js.native
+  var taskDefaults: Baseline = js.native
+  var tooltip: `7`[K2, D2] = js.native
   @JSName("translations")
-  var translations_ojGanttSettableProperties: AnonAccessibleDependencyInfo = js.native
-  var valueFormats: AnonBaselineDate = js.native
+  var translations_ojGanttSettableProperties: AccessibleDependencyInfo = js.native
+  var valueFormats: BaselineDate = js.native
   var viewportEnd: String = js.native
   var viewportStart: String = js.native
 }
@@ -61,23 +61,23 @@ object ojGanttSettableProperties {
     animationOnDisplay: auto | none,
     as: String,
     axisPosition: bottom | top,
-    dnd: AnonMove,
+    dnd: Move,
     end: String,
-    gridlines: AnonVertical,
-    majorAxis: AnonScale,
-    minorAxis: AnonScale,
+    gridlines: Vertical,
+    majorAxis: Scale,
+    minorAxis: Scale,
     referenceObjects: js.Array[ReferenceObject],
-    rowAxis: AnonMaxWidth[K2, D2],
-    rowDefaults: AnonHeightNumber,
-    scrollPosition: AnonOffsetY,
+    rowAxis: MaxWidth[K2, D2],
+    rowDefaults: HeightNumber,
+    scrollPosition: OffsetY,
     selection: js.Array[K2],
     selectionMode: single | multiple | none,
     start: String,
-    taskDefaults: AnonBaseline,
-    tooltip: Anon7[K2, D2],
+    taskDefaults: Baseline,
+    tooltip: `7`[K2, D2],
     trackResize: on | off,
-    translations: AnonAccessibleDependencyInfo,
-    valueFormats: AnonBaselineDate,
+    translations: AccessibleDependencyInfo,
+    valueFormats: BaselineDate,
     viewportEnd: String,
     viewportStart: String
   ): ojGanttSettableProperties[K1, K2, D1, D2] = {
@@ -115,7 +115,7 @@ object ojGanttSettableProperties {
         ret
     }
     @scala.inline
-    def withDnd(value: AnonMove): Self[K1, K2, D1, D2] = {
+    def withDnd(value: Move): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dnd")(value.asInstanceOf[js.Any])
         ret
@@ -127,19 +127,19 @@ object ojGanttSettableProperties {
         ret
     }
     @scala.inline
-    def withGridlines(value: AnonVertical): Self[K1, K2, D1, D2] = {
+    def withGridlines(value: Vertical): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gridlines")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withMajorAxis(value: AnonScale): Self[K1, K2, D1, D2] = {
+    def withMajorAxis(value: Scale): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("majorAxis")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withMinorAxis(value: AnonScale): Self[K1, K2, D1, D2] = {
+    def withMinorAxis(value: Scale): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("minorAxis")(value.asInstanceOf[js.Any])
         ret
@@ -151,19 +151,19 @@ object ojGanttSettableProperties {
         ret
     }
     @scala.inline
-    def withRowAxis(value: AnonMaxWidth[K2, D2]): Self[K1, K2, D1, D2] = {
+    def withRowAxis(value: MaxWidth[K2, D2]): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowAxis")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withRowDefaults(value: AnonHeightNumber): Self[K1, K2, D1, D2] = {
+    def withRowDefaults(value: HeightNumber): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowDefaults")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withScrollPosition(value: AnonOffsetY): Self[K1, K2, D1, D2] = {
+    def withScrollPosition(value: OffsetY): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scrollPosition")(value.asInstanceOf[js.Any])
         ret
@@ -187,25 +187,25 @@ object ojGanttSettableProperties {
         ret
     }
     @scala.inline
-    def withTaskDefaults(value: AnonBaseline): Self[K1, K2, D1, D2] = {
+    def withTaskDefaults(value: Baseline): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("taskDefaults")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withTooltip(value: Anon7[K2, D2]): Self[K1, K2, D1, D2] = {
+    def withTooltip(value: `7`[K2, D2]): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonAccessibleDependencyInfo): Self[K1, K2, D1, D2] = {
+    def withTranslations(value: AccessibleDependencyInfo): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withValueFormats(value: AnonBaselineDate): Self[K1, K2, D1, D2] = {
+    def withValueFormats(value: BaselineDate): Self[K1, K2, D1, D2] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("valueFormats")(value.asInstanceOf[js.Any])
         ret

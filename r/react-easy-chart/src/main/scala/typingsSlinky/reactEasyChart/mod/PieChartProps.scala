@@ -3,7 +3,7 @@ package typingsSlinky.reactEasyChart.mod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactEasyChart.AnonColor
+import typingsSlinky.reactEasyChart.anon.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PieChartProps extends js.Object {
   var clickHandler: js.UndefOr[js.Function2[/* data */ PieData, /* mouseEvent */ MouseEvent, _]] = js.native
-  var data: js.Array[AnonColor] = js.native
+  var data: js.Array[Color] = js.native
   /** Size in pixels of the inner hole (diameter) */
   var innerHoleSize: js.UndefOr[Double] = js.native
   /** Whether to add labels the to pie segments */
@@ -28,7 +28,7 @@ trait PieChartProps extends js.Object {
 
 object PieChartProps {
   @scala.inline
-  def apply(data: js.Array[AnonColor]): PieChartProps = {
+  def apply(data: js.Array[Color]): PieChartProps = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     __obj.asInstanceOf[PieChartProps]
   }
@@ -39,7 +39,7 @@ object PieChartProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withData(value: js.Array[AnonColor]): Self = {
+    def withData(value: js.Array[Color]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

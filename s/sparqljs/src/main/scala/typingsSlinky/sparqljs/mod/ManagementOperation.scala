@@ -1,13 +1,5 @@
 package typingsSlinky.sparqljs.mod
 
-import typingsSlinky.sparqljs.sparqljsBooleans.`false`
-import typingsSlinky.sparqljs.sparqljsStrings.add
-import typingsSlinky.sparqljs.sparqljsStrings.clear
-import typingsSlinky.sparqljs.sparqljsStrings.copy
-import typingsSlinky.sparqljs.sparqljsStrings.create
-import typingsSlinky.sparqljs.sparqljsStrings.drop
-import typingsSlinky.sparqljs.sparqljsStrings.load
-import typingsSlinky.sparqljs.sparqljsStrings.move
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,28 +14,12 @@ trait ManagementOperation extends UpdateOperation
 
 object ManagementOperation {
   @scala.inline
-  def CopyMoveAddOperation(destination: GraphOrDefault, silent: Boolean, source: GraphOrDefault, `type`: copy | move | add): ManagementOperation = {
-    val __obj = js.Dynamic.literal(destination = destination.asInstanceOf[js.Any], silent = silent.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ManagementOperation]
-  }
+  implicit def apply(value: ClearDropOperation): ManagementOperation = value.asInstanceOf[ManagementOperation]
   @scala.inline
-  def LoadOperation(destination: String | `false`, silent: Boolean, source: String, `type`: load): ManagementOperation = {
-    val __obj = js.Dynamic.literal(destination = destination.asInstanceOf[js.Any], silent = silent.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ManagementOperation]
-  }
+  implicit def apply(value: CopyMoveAddOperation): ManagementOperation = value.asInstanceOf[ManagementOperation]
   @scala.inline
-  def CreateOperation(graph: String, silent: Boolean, `type`: create): ManagementOperation = {
-    val __obj = js.Dynamic.literal(graph = graph.asInstanceOf[js.Any], silent = silent.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ManagementOperation]
-  }
+  implicit def apply(value: CreateOperation): ManagementOperation = value.asInstanceOf[ManagementOperation]
   @scala.inline
-  def ClearDropOperation(graph: GraphReference, silent: Boolean, `type`: clear | drop): ManagementOperation = {
-    val __obj = js.Dynamic.literal(graph = graph.asInstanceOf[js.Any], silent = silent.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ManagementOperation]
-  }
+  implicit def apply(value: LoadOperation): ManagementOperation = value.asInstanceOf[ManagementOperation]
 }
 

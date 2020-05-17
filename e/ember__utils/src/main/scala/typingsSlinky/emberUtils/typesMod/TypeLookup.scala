@@ -104,18 +104,6 @@ object TypeLookup {
         ret.asInstanceOf[js.Dynamic].updateDynamic("string")(value.asInstanceOf[js.Any])
         ret
     }
-    @scala.inline
-    def withUndefined(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("undefined")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutUndefined: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("undefined")(js.undefined)
-        ret
-    }
   }
   
 }

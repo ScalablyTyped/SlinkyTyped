@@ -1,6 +1,6 @@
 package typingsSlinky.pdfkit.PDFKit
 
-import typingsSlinky.pdfkit.AnonBottom
+import typingsSlinky.pdfkit.anon.Bottom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait PDFPage extends js.Object {
   var fonts: js.Any = js.native
   var height: Double = js.native
   var layout: String = js.native
-  var margins: AnonBottom = js.native
+  var margins: Bottom = js.native
   var patterns: js.Any = js.native
   var size: String = js.native
   var width: Double = js.native
@@ -43,7 +43,7 @@ object PDFPage {
     fonts: js.Any,
     height: Double,
     layout: String,
-    margins: AnonBottom,
+    margins: Bottom,
     maxY: () => Double,
     patterns: js.Any,
     size: String,
@@ -115,7 +115,7 @@ object PDFPage {
         ret
     }
     @scala.inline
-    def withMargins(value: AnonBottom): Self = {
+    def withMargins(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("margins")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,5 @@
 package typingsSlinky.winrtUwp.Windows.Networking.NetworkOperators
 
-import typingsSlinky.winrtUwp.AnonContext
 import typingsSlinky.winrtUwp.Windows.Data.Xml.Dom.XmlDocument
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperation
 import typingsSlinky.winrtUwp.Windows.Foundation.Uri
@@ -10,9 +9,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides the authentication context that contains details of the current authentication attempt and provides methods to perform the authentication. */
-@JSGlobal("Windows.Networking.NetworkOperators.HotspotAuthenticationContext")
 @js.native
-abstract class HotspotAuthenticationContext () extends js.Object {
+trait HotspotAuthenticationContext extends js.Object {
   /** Gets the HTTPS URL specified in the Wireless Internet Service Provider roaming (WISPr) redirect message. */
   var authenticationUrl: Uri = js.native
   /** Gets the network interface that is connected to the WLAN access point of the hotspot. */
@@ -55,14 +53,92 @@ abstract class HotspotAuthenticationContext () extends js.Object {
   def triggerAttentionRequired(packageRelativeApplicationId: String, applicationParameters: String): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Networking.NetworkOperators.HotspotAuthenticationContext")
-@js.native
-object HotspotAuthenticationContext extends js.Object {
-  /**
-    * Gets the context of an authentication attempt.
-    * @param evenToken The event token retrieved from the network operator hotspot authentication event . The token is a GUID in string format.
-    */
-  def tryGetAuthenticationContext(evenToken: String): AnonContext = js.native
+object HotspotAuthenticationContext {
+  @scala.inline
+  def apply(
+    abortAuthentication: Boolean => Unit,
+    authenticationUrl: Uri,
+    issueCredentials: (String, String, String, Boolean) => Unit,
+    issueCredentialsAsync: (String, String, String, Boolean) => IPromiseWithIAsyncOperation[HotspotCredentialsAuthenticationResult],
+    networkAdapter: NetworkAdapter,
+    redirectMessageUrl: Uri,
+    redirectMessageXml: XmlDocument,
+    skipAuthentication: () => Unit,
+    triggerAttentionRequired: (String, String) => Unit,
+    wirelessNetworkId: Double
+  ): HotspotAuthenticationContext = {
+    val __obj = js.Dynamic.literal(abortAuthentication = js.Any.fromFunction1(abortAuthentication), authenticationUrl = authenticationUrl.asInstanceOf[js.Any], issueCredentials = js.Any.fromFunction4(issueCredentials), issueCredentialsAsync = js.Any.fromFunction4(issueCredentialsAsync), networkAdapter = networkAdapter.asInstanceOf[js.Any], redirectMessageUrl = redirectMessageUrl.asInstanceOf[js.Any], redirectMessageXml = redirectMessageXml.asInstanceOf[js.Any], skipAuthentication = js.Any.fromFunction0(skipAuthentication), triggerAttentionRequired = js.Any.fromFunction2(triggerAttentionRequired), wirelessNetworkId = wirelessNetworkId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[HotspotAuthenticationContext]
+  }
+  @scala.inline
+  implicit class HotspotAuthenticationContextOps[Self <: HotspotAuthenticationContext] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAbortAuthentication(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("abortAuthentication")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAuthenticationUrl(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("authenticationUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIssueCredentials(value: (String, String, String, Boolean) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issueCredentials")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withIssueCredentialsAsync(
+      value: (String, String, String, Boolean) => IPromiseWithIAsyncOperation[HotspotCredentialsAuthenticationResult]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("issueCredentialsAsync")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withNetworkAdapter(value: NetworkAdapter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkAdapter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRedirectMessageUrl(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectMessageUrl")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRedirectMessageXml(value: XmlDocument): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("redirectMessageXml")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSkipAuthentication(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skipAuthentication")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withTriggerAttentionRequired(value: (String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("triggerAttentionRequired")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withWirelessNetworkId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wirelessNetworkId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

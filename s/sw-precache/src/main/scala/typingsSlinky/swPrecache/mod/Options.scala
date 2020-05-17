@@ -2,8 +2,7 @@ package typingsSlinky.swPrecache.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.node.Buffer
-import typingsSlinky.swPrecache.AnonHandler
-import typingsSlinky.swPrecache.FnCall
+import typingsSlinky.swPrecache.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +22,7 @@ trait Options extends js.Object {
   var navigateFallback: js.UndefOr[String] = js.native
   var navigateFallbackWhitelist: js.UndefOr[js.Array[js.RegExp]] = js.native
   var replacePrefix: js.UndefOr[String] = js.native
-  var runtimeCaching: js.UndefOr[js.Array[AnonHandler]] = js.native
+  var runtimeCaching: js.UndefOr[js.Array[typingsSlinky.swPrecache.anon.Handler]] = js.native
   var skipWaiting: js.UndefOr[Boolean] = js.native
   var staticFileGlobs: js.UndefOr[js.Array[String]] = js.native
   var stripPrefix: js.UndefOr[String] = js.native
@@ -201,7 +200,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withRuntimeCaching(value: js.Array[AnonHandler]): Self = {
+    def withRuntimeCaching(value: js.Array[typingsSlinky.swPrecache.anon.Handler]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("runtimeCaching")(value.asInstanceOf[js.Any])
         ret

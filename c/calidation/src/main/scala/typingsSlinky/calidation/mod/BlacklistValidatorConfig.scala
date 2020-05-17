@@ -5,7 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait BlacklistValidatorConfig extends SimpleValidatorConfig {
+trait BlacklistValidatorConfig
+  extends SimpleValidatorConfig
+     with BlacklistValidator {
   var blacklist: js.Array[String] = js.native
 }
 

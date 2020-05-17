@@ -1,6 +1,7 @@
 package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.officeUiFabricReact.anon.PartialICoachmarkProps
 import typingsSlinky.officeUiFabricReact.coachmarkTypesMod.ICoachmarkProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

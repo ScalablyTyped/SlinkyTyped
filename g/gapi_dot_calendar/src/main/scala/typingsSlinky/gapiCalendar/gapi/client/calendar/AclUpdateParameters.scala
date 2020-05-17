@@ -1,6 +1,6 @@
 package typingsSlinky.gapiCalendar.gapi.client.calendar
 
-import typingsSlinky.gapiCalendar.AnonValue
+import typingsSlinky.gapiCalendar.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait AclUpdateParameters extends AclInsertParameters {
 
 object AclUpdateParameters {
   @scala.inline
-  def apply(calendarId: String, role: AccessRole, ruleId: String, scope: AnonValue): AclUpdateParameters = {
+  def apply(calendarId: String, role: AccessRole, ruleId: String, scope: Value): AclUpdateParameters = {
     val __obj = js.Dynamic.literal(calendarId = calendarId.asInstanceOf[js.Any], role = role.asInstanceOf[js.Any], ruleId = ruleId.asInstanceOf[js.Any], scope = scope.asInstanceOf[js.Any])
     __obj.asInstanceOf[AclUpdateParameters]
   }

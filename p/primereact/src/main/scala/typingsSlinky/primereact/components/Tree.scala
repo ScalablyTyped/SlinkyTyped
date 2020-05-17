@@ -3,8 +3,8 @@ package typingsSlinky.primereact.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonNodeOriginalEvent
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.NodeOriginalEvent
+import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.treeMod.TreeProps
 import typingsSlinky.primereact.treeNodeMod.TreeNode
 import scala.scalajs.js
@@ -53,23 +53,23 @@ object Tree {
     @scala.inline
     def nodeTemplate(value: /* node */ js.Any => ReactElement): this.type = set("nodeTemplate", js.Any.fromFunction1(value))
     @scala.inline
-    def onCollapse(value: /* e */ AnonNodeOriginalEvent => Unit): this.type = set("onCollapse", js.Any.fromFunction1(value))
+    def onCollapse(value: /* e */ NodeOriginalEvent => Unit): this.type = set("onCollapse", js.Any.fromFunction1(value))
     @scala.inline
-    def onContextMenu(value: /* e */ AnonNodeOriginalEvent => Unit): this.type = set("onContextMenu", js.Any.fromFunction1(value))
+    def onContextMenu(value: /* e */ NodeOriginalEvent => Unit): this.type = set("onContextMenu", js.Any.fromFunction1(value))
     @scala.inline
-    def onContextMenuSelectionChange(value: /* e */ AnonValue => Unit): this.type = set("onContextMenuSelectionChange", js.Any.fromFunction1(value))
+    def onContextMenuSelectionChange(value: /* e */ Value => Unit): this.type = set("onContextMenuSelectionChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onDragDrop(value: /* e */ AnonValue => Unit): this.type = set("onDragDrop", js.Any.fromFunction1(value))
+    def onDragDrop(value: /* e */ Value => Unit): this.type = set("onDragDrop", js.Any.fromFunction1(value))
     @scala.inline
-    def onExpand(value: /* e */ AnonNodeOriginalEvent => Unit): this.type = set("onExpand", js.Any.fromFunction1(value))
+    def onExpand(value: /* e */ NodeOriginalEvent => Unit): this.type = set("onExpand", js.Any.fromFunction1(value))
     @scala.inline
-    def onSelect(value: /* e */ AnonNodeOriginalEvent => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    def onSelect(value: /* e */ NodeOriginalEvent => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline
-    def onSelectionChange(value: /* e */ AnonValue => Unit): this.type = set("onSelectionChange", js.Any.fromFunction1(value))
+    def onSelectionChange(value: /* e */ Value => Unit): this.type = set("onSelectionChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onToggle(value: /* e */ AnonValue => Unit): this.type = set("onToggle", js.Any.fromFunction1(value))
+    def onToggle(value: /* e */ Value => Unit): this.type = set("onToggle", js.Any.fromFunction1(value))
     @scala.inline
-    def onUnselect(value: /* e */ AnonNodeOriginalEvent => Unit): this.type = set("onUnselect", js.Any.fromFunction1(value))
+    def onUnselect(value: /* e */ NodeOriginalEvent => Unit): this.type = set("onUnselect", js.Any.fromFunction1(value))
     @scala.inline
     def propagateSelectionDown(value: Boolean): this.type = set("propagateSelectionDown", value.asInstanceOf[js.Any])
     @scala.inline

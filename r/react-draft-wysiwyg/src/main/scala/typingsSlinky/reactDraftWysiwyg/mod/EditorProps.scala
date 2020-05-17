@@ -1,9 +1,9 @@
 package typingsSlinky.reactDraftWysiwyg.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,13 +42,13 @@ trait EditorProps extends js.Object {
   var localization: js.UndefOr[js.Object] = js.native
   var mention: js.UndefOr[js.Object] = js.native
   var onBlur: js.UndefOr[
-    js.Function1[slinky.core.SyntheticEvent[EventTarget with js.Object, Event_], Unit]
+    js.Function1[slinky.core.SyntheticEvent[EventTarget with js.Object, Event], Unit]
   ] = js.native
   var onChange: js.UndefOr[js.Function1[/* contentState */ RawDraftContentState, Unit]] = js.native
   var onContentStateChange: js.UndefOr[js.Function1[/* contentState */ RawDraftContentState, Unit]] = js.native
   var onEditorStateChange: js.UndefOr[js.Function1[/* editorState */ EditorState, Unit]] = js.native
   var onFocus: js.UndefOr[
-    js.Function1[slinky.core.SyntheticEvent[EventTarget with js.Object, Event_], Unit]
+    js.Function1[slinky.core.SyntheticEvent[EventTarget with js.Object, Event], Unit]
   ] = js.native
   var onTab: js.UndefOr[js.Function1[slinky.web.SyntheticKeyboardEvent[js.Object], Unit]] = js.native
   var placeholder: js.UndefOr[String] = js.native
@@ -360,7 +360,7 @@ object EditorProps {
         ret
     }
     @scala.inline
-    def withOnBlur(value: slinky.core.SyntheticEvent[EventTarget with js.Object, Event_] => Unit): Self = {
+    def withOnBlur(value: slinky.core.SyntheticEvent[EventTarget with js.Object, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
         ret
@@ -408,7 +408,7 @@ object EditorProps {
         ret
     }
     @scala.inline
-    def withOnFocus(value: slinky.core.SyntheticEvent[EventTarget with js.Object, Event_] => Unit): Self = {
+    def withOnFocus(value: slinky.core.SyntheticEvent[EventTarget with js.Object, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
         ret

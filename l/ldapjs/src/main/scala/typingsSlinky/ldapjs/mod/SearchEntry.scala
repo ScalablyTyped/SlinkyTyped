@@ -1,6 +1,6 @@
 package typingsSlinky.ldapjs.mod
 
-import typingsSlinky.ldapjs.LDAPMessageJsonObjectobje
+import typingsSlinky.ldapjs.anon.LDAPMessageJsonObjectobje
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

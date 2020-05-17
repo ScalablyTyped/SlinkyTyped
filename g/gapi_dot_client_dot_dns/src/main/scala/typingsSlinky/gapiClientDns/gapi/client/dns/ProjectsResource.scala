@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientDns.gapi.client.dns
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientDns.AnonKey
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientDns.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ProjectsResource extends js.Object {
   /** Fetch the representation of an existing Project. */
-  def get(request: AnonKey): Request_[Project] = js.native
+  def get(request: Key): Request[Project] = js.native
 }
 
 object ProjectsResource {
   @scala.inline
-  def apply(get: AnonKey => Request_[Project]): ProjectsResource = {
+  def apply(get: Key => Request[Project]): ProjectsResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get))
     __obj.asInstanceOf[ProjectsResource]
   }
@@ -25,7 +25,7 @@ object ProjectsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonKey => Request_[Project]): Self = {
+    def withGet(value: Key => Request[Project]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret

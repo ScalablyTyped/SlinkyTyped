@@ -1,6 +1,6 @@
 package typingsSlinky.prex.cancellationMod
 
-import typingsSlinky.prex.AnonDispose
+import typingsSlinky.prex.anon.Dispose
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait VSCodeCancellationTokenLike extends js.Object {
   val isCancellationRequested: Boolean = js.native
-  def onCancellationRequested(listener: js.Function0[_]): AnonDispose = js.native
+  def onCancellationRequested(listener: js.Function0[_]): Dispose = js.native
 }
 
 object VSCodeCancellationTokenLike {
   @scala.inline
-  def apply(isCancellationRequested: Boolean, onCancellationRequested: js.Function0[_] => AnonDispose): VSCodeCancellationTokenLike = {
+  def apply(isCancellationRequested: Boolean, onCancellationRequested: js.Function0[_] => Dispose): VSCodeCancellationTokenLike = {
     val __obj = js.Dynamic.literal(isCancellationRequested = isCancellationRequested.asInstanceOf[js.Any], onCancellationRequested = js.Any.fromFunction1(onCancellationRequested))
     __obj.asInstanceOf[VSCodeCancellationTokenLike]
   }
@@ -30,7 +30,7 @@ object VSCodeCancellationTokenLike {
         ret
     }
     @scala.inline
-    def withOnCancellationRequested(value: js.Function0[_] => AnonDispose): Self = {
+    def withOnCancellationRequested(value: js.Function0[_] => Dispose): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCancellationRequested")(js.Any.fromFunction1(value))
         ret

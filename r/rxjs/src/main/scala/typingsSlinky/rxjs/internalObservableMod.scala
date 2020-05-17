@@ -1,5 +1,7 @@
 package typingsSlinky.rxjs
 
+import org.scalablytyped.runtime.Instantiable1
+import typingsSlinky.rxjs.anon.FnCall
 import typingsSlinky.rxjs.operatorMod.Operator
 import typingsSlinky.rxjs.subscriberMod.Subscriber
 import typingsSlinky.rxjs.typesMod.OperatorFunction
@@ -9,6 +11,7 @@ import typingsSlinky.rxjs.typesMod.SubscribableOrPromise
 import typingsSlinky.rxjs.typesMod.TeardownLogic
 import typingsSlinky.std.PromiseConstructor
 import typingsSlinky.std.PromiseConstructorLike
+import typingsSlinky.std.global.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -121,7 +124,21 @@ object internalObservableMod extends js.Object {
       operations: (OperatorFunction[_, _])*
     ): Observable[js.Object] = js.native
     def toPromise[T](): js.Promise[T] = js.native
-    def toPromise[T](PromiseCtor: PromiseConstructor): js.Promise[T] = js.native
+    def toPromise[T](
+      PromiseCtor: PromiseConstructor with (Instantiable1[
+          /* executor */ js.Function2[
+            /* resolve */ js.Function1[
+              /* value */ js.UndefOr[
+                (/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any) | (js.Thenable[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any])
+              ], 
+              Unit
+            ], 
+            /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
+            Unit
+          ], 
+          Promise[js.Object]
+        ])
+    ): js.Promise[T] = js.native
     def toPromise[T](PromiseCtor: PromiseConstructorLike): js.Promise[T] = js.native
   }
   

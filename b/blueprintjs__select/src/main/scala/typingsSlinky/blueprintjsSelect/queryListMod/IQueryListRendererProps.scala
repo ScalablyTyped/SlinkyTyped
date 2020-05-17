@@ -1,5 +1,6 @@
 package typingsSlinky.blueprintjsSelect.queryListMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
@@ -7,7 +8,6 @@ import slinky.core.TagMod
 import typingsSlinky.blueprintjsSelect.listItemsUtilsMod.ICreateNewItem
 import typingsSlinky.react.mod.ChangeEventHandler
 import typingsSlinky.react.mod.KeyboardEventHandler
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,7 +43,7 @@ trait IQueryListRendererProps[T] extends js.Object {
     * perhaps because the user clicked it.
     */
   def handleItemSelect(item: T): Unit = js.native
-  def handleItemSelect(item: T, event: SyntheticEvent[Event_, HTMLElement]): Unit = js.native
+  def handleItemSelect(item: T, event: SyntheticEvent[Event, HTMLElement]): Unit = js.native
   /**
     * Handler that should be invoked when the user pastes one or more values.
     *

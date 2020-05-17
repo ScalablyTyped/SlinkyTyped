@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,9 +13,4 @@ trait HTMLBRElement extends HTMLElement {
   /** @deprecated */
   var clear: java.lang.String = js.native
 }
-
-@JSGlobal("HTMLBRElement")
-@js.native
-object HTMLBRElement
-  extends Instantiable0[org.scalajs.dom.raw.HTMLBRElement]
 

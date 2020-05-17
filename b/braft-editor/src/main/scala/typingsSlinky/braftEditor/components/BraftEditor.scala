@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.braftEditor.AnonFamily
+import typingsSlinky.braftEditor.anon.Family
 import typingsSlinky.braftEditor.braftEditorStrings.`vi-vn`
 import typingsSlinky.braftEditor.braftEditorStrings.`zh-hant`
 import typingsSlinky.braftEditor.braftEditorStrings.center
@@ -88,7 +88,7 @@ object BraftEditor {
     @scala.inline
     def fixPlaceholder(value: Boolean): this.type = set("fixPlaceholder", value.asInstanceOf[js.Any])
     @scala.inline
-    def fontFamilies(value: js.Array[AnonFamily]): this.type = set("fontFamilies", value.asInstanceOf[js.Any])
+    def fontFamilies(value: js.Array[Family]): this.type = set("fontFamilies", value.asInstanceOf[js.Any])
     @scala.inline
     def fontSizes(value: js.Array[Double]): this.type = set("fontSizes", value.asInstanceOf[js.Any])
     @scala.inline

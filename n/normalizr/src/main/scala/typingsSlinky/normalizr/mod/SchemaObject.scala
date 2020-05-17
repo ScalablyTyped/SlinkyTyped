@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait SchemaObject[T]
-  extends /* key */ StringDictionary[SchemaValue[T]]
-     with Schema_[T]
+  extends Schema_[T]
+     with /* key */ StringDictionary[SchemaValue[T]]
 
 object SchemaObject {
   @scala.inline

@@ -1,6 +1,6 @@
 package typingsSlinky.tryghostContentApi.mod
 
-import typingsSlinky.tryghostContentApi.AnonPosts
+import typingsSlinky.tryghostContentApi.anon.Posts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait Tag
   extends Identification
      with Metadata
      with GhostData {
-  var count: js.UndefOr[AnonPosts] = js.native
+  var count: js.UndefOr[Posts] = js.native
   var description: js.UndefOr[Nullable[String]] = js.native
   var feature_image: js.UndefOr[Nullable[String]] = js.native
   var name: js.UndefOr[String] = js.native
@@ -31,7 +31,7 @@ object Tag {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCount(value: AnonPosts): Self = {
+    def withCount(value: Posts): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
         ret

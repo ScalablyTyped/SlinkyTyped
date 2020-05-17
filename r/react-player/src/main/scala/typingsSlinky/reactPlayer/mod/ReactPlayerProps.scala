@@ -2,7 +2,7 @@ package typingsSlinky.reactPlayer.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.experimental.mediastream.MediaStream
-import typingsSlinky.reactPlayer.AnonLoaded
+import typingsSlinky.reactPlayer.anon.Loaded
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +36,7 @@ trait ReactPlayerProps
   ] = js.native
   var onPause: js.UndefOr[js.Function0[Unit]] = js.native
   var onPlay: js.UndefOr[js.Function0[Unit]] = js.native
-  var onProgress: js.UndefOr[js.Function1[/* state */ AnonLoaded, Unit]] = js.native
+  var onProgress: js.UndefOr[js.Function1[/* state */ Loaded, Unit]] = js.native
   var onReady: js.UndefOr[js.Function0[Unit]] = js.native
   var onSeek: js.UndefOr[js.Function1[/* seconds */ Double, Unit]] = js.native
   var onStart: js.UndefOr[js.Function0[Unit]] = js.native
@@ -287,7 +287,7 @@ object ReactPlayerProps {
         ret
     }
     @scala.inline
-    def withOnProgress(value: /* state */ AnonLoaded => Unit): Self = {
+    def withOnProgress(value: /* state */ Loaded => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onProgress")(js.Any.fromFunction1(value))
         ret

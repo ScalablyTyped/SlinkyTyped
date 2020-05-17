@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait MUIDataTableColumn extends js.Object {
+trait MUIDataTableColumn extends MUIDataTableColumnDef {
   var label: js.UndefOr[String] = js.native
   var name: String = js.native
   var options: js.UndefOr[MUIDataTableColumnOptions] = js.native

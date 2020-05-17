@@ -1,7 +1,7 @@
 package typingsSlinky.yandexMoneySdk.YandexMoneySDK.Wallet
 
-import typingsSlinky.yandexMoneySdk.AnonArticle
-import typingsSlinky.yandexMoneySdk.AnonDictkey
+import typingsSlinky.yandexMoneySdk.anon.Article
+import typingsSlinky.yandexMoneySdk.anon.Dictkey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,11 +9,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ProcessPaymentResult extends js.Object {
   var account_unblock_uri: js.UndefOr[String] = js.native
-  var acs_params: js.UndefOr[AnonDictkey] = js.native
+  var acs_params: js.UndefOr[Dictkey] = js.native
   var acs_uri: js.UndefOr[String] = js.native
   var balance: js.UndefOr[Double] = js.native
   var credit_amount: js.UndefOr[Double] = js.native
-  var digital_goods: js.UndefOr[AnonArticle] = js.native
+  var digital_goods: js.UndefOr[Article] = js.native
   var error: js.UndefOr[String] = js.native
   var hold_for_pickup_link: js.UndefOr[String] = js.native
   var invoice_id: js.UndefOr[String] = js.native
@@ -55,7 +55,7 @@ object ProcessPaymentResult {
         ret
     }
     @scala.inline
-    def withAcs_params(value: AnonDictkey): Self = {
+    def withAcs_params(value: Dictkey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("acs_params")(value.asInstanceOf[js.Any])
         ret
@@ -103,7 +103,7 @@ object ProcessPaymentResult {
         ret
     }
     @scala.inline
-    def withDigital_goods(value: AnonArticle): Self = {
+    def withDigital_goods(value: Article): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("digital_goods")(value.asInstanceOf[js.Any])
         ret

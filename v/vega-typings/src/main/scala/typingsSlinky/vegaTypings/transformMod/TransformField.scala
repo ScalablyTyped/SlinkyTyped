@@ -1,6 +1,7 @@
 package typingsSlinky.vegaTypings.transformMod
 
-import typingsSlinky.vegaTypings.exprMod.Expr
+import typingsSlinky.vegaTypings.exprMod.ExprRef
+import typingsSlinky.vegaTypings.signalMod.SignalRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,23 +11,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.vegaTypings.transformMod.FieldParam
   - typingsSlinky.vegaTypings.exprMod.ExprRef
 */
-trait TransformField extends js.Object
+trait TransformField extends FieldRef
 
 object TransformField {
   @scala.inline
-  def SignalRef(signal: String): TransformField = {
-    val __obj = js.Dynamic.literal(signal = signal.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TransformField]
-  }
+  implicit def apply(value: ExprRef): TransformField = value.asInstanceOf[TransformField]
   @scala.inline
-  def FieldParam(field: String): TransformField = {
-    val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TransformField]
-  }
+  implicit def apply(value: FieldParam): TransformField = value.asInstanceOf[TransformField]
   @scala.inline
-  def ExprRef(expr: Expr): TransformField = {
-    val __obj = js.Dynamic.literal(expr = expr.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TransformField]
-  }
+  implicit def apply(value: SignalRef): TransformField = value.asInstanceOf[TransformField]
 }
 

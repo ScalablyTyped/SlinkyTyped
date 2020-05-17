@@ -5,11 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mod {
-  type CachePolicyOptions[T] = typingsSlinky.hapiCatbox.mod.PolicyOptionVariants[T] with typingsSlinky.hapiHapi.AnonCache
-  type CacheProvider[T /* <: typingsSlinky.hapiCatbox.mod.ClientOptions */] = typingsSlinky.hapiCatbox.mod.EnginePrototype[js.Any] | typingsSlinky.hapiHapi.AnonConstructor[T]
-  type DecorateName = java.lang.String | js.Symbol
+  type CachePolicyOptions[T] = typingsSlinky.hapiCatbox.mod.PolicyOptionVariants[T] with typingsSlinky.hapiHapi.anon.Cache
   type DecorationMethod[T] = js.ThisFunction1[/* this */ T, /* repeated */ js.Any, js.Any]
-  type Dependencies = java.lang.String | js.Array[java.lang.String] | org.scalablytyped.runtime.StringDictionary[java.lang.String]
   type LogEventHandler = js.Function2[
     /* event */ typingsSlinky.hapiHapi.mod.LogEvent, 
     /* tags */ org.scalablytyped.runtime.StringDictionary[typingsSlinky.hapiHapi.hapiHapiBooleans.`true`], 
@@ -26,25 +23,10 @@ package object mod {
   ]
   type RequestQuery = org.scalablytyped.runtime.StringDictionary[java.lang.String | js.Array[java.lang.String]]
   type ResponseEventHandler = js.Function1[/* request */ typingsSlinky.hapiHapi.mod.Request, scala.Unit]
-  type ResponseValue = java.lang.String | js.Object
   type RouteCompressionEncoderSettings = js.Object
   type RouteEventHandler = js.Function1[/* route */ typingsSlinky.hapiHapi.mod.RequestRoute, scala.Unit]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.hapiHapi.mod.RouteOptionsAccessScopeObject
-    - typingsSlinky.hapiHapi.mod.RouteOptionsAccessEntityObject
-    - typingsSlinky.hapiHapi.mod.RouteOptionsAccessScopeObject with typingsSlinky.hapiHapi.mod.RouteOptionsAccessEntityObject
-  */
-  type RouteOptionsAccessObject = typingsSlinky.hapiHapi.mod._RouteOptionsAccessObject | (typingsSlinky.hapiHapi.mod.RouteOptionsAccessScopeObject with typingsSlinky.hapiHapi.mod.RouteOptionsAccessEntityObject)
-  type RouteOptionsAccessScope = typingsSlinky.hapiHapi.hapiHapiBooleans.`false` | java.lang.String | js.Array[java.lang.String]
-  type RouteOptionsCache = typingsSlinky.hapiHapi.AnonOtherwise with (typingsSlinky.hapiHapi.AnonExpiresAt | typingsSlinky.hapiHapi.AnonExpiresIn | typingsSlinky.hapiHapi.AnonExpiresAtExpiresIn)
-  type RouteOptionsPreAllOptions = typingsSlinky.hapiHapi.mod.RouteOptionsPreObject | js.Array[typingsSlinky.hapiHapi.mod.RouteOptionsPreObject] | typingsSlinky.hapiHapi.mod.Lifecycle.Method
+  type RouteOptionsCache = typingsSlinky.hapiHapi.anon.Otherwise with (typingsSlinky.hapiHapi.anon.ExpiresAt | typingsSlinky.hapiHapi.anon.ExpiresIn | typingsSlinky.hapiHapi.anon.ExpiresAtExpiresIn)
   type RouteOptionsPreArray = js.Array[typingsSlinky.hapiHapi.mod.RouteOptionsPreAllOptions]
-  type RouteOptionsResponseSchema = scala.Boolean | typingsSlinky.hapiHapi.mod.ValidationObject | typingsSlinky.hapiJoi.mod.Schema | (js.Function2[
-    /* value */ js.Object | typingsSlinky.node.Buffer | java.lang.String, 
-    /* options */ typingsSlinky.hapiJoi.mod.ValidationOptions, 
-    js.Promise[js.Any]
-  ])
-  type RouteOptionsSecure = scala.Boolean | typingsSlinky.hapiHapi.mod.RouteOptionsSecureObject
   type ServerAuthConfig = typingsSlinky.hapiHapi.mod.RouteOptionsAccess
   type ServerAuthScheme = js.Function2[
     /* server */ typingsSlinky.hapiHapi.mod.Server_, 
@@ -52,7 +34,6 @@ package object mod {
     typingsSlinky.hapiHapi.mod.ServerAuthSchemeObject
   ]
   type ServerAuthSchemeOptions = js.Object
-  type ServerEventsApplication = java.lang.String | typingsSlinky.hapiHapi.mod.ServerEventsApplicationObject | typingsSlinky.hapiPodium.mod.Podium
   type ServerExtPointFunction = js.Function1[/* server */ typingsSlinky.hapiHapi.mod.Server_, scala.Unit]
   type ServerMethod = js.Function1[/* repeated */ js.Any, js.Any]
   type ServerMethods = typingsSlinky.hapiHapi.mod.Util.Dictionary[typingsSlinky.hapiHapi.mod.ServerMethod]

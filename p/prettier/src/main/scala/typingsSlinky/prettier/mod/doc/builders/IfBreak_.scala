@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IfBreak_ extends _Doc {
+trait IfBreak_ extends Doc {
   var breakContents: Doc = js.native
   var flatContents: Doc = js.native
   var `type`: `if-break` = js.native

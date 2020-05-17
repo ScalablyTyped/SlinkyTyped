@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object typesMod {
-  type ChildMessage = typingsSlinky.jestWorker.typesMod.ChildMessageInitialize | typingsSlinky.jestWorker.typesMod.ChildMessageCall | typingsSlinky.jestWorker.typesMod.ChildMessageEnd
   type ChildMessageCall = js.Tuple4[
     typingsSlinky.jestWorker.jestWorkerNumbers.`1`, 
     scala.Boolean, 
@@ -24,7 +23,6 @@ package object typesMod {
   ]
   type OnEnd = js.Function2[/* err */ js.Error | scala.Null, /* result */ js.Any, scala.Unit]
   type OnStart = js.Function1[/* worker */ typingsSlinky.jestWorker.typesMod.WorkerInterface, scala.Unit]
-  type ParentMessage = typingsSlinky.jestWorker.typesMod.ParentMessageOk | typingsSlinky.jestWorker.typesMod.ParentMessageError
   type ParentMessageError = js.Tuple5[
     typingsSlinky.jestWorker.typesMod.PARENT_MESSAGE_ERROR, 
     java.lang.String, 

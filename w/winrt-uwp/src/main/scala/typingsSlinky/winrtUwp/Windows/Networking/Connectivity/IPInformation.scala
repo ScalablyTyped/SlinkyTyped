@@ -5,12 +5,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the association between an IP address and an adapter on the network. */
-@JSGlobal("Windows.Networking.Connectivity.IPInformation")
 @js.native
-abstract class IPInformation () extends js.Object {
+trait IPInformation extends js.Object {
   /** Retrieves the network adapter associated with the IP address. */
   var networkAdapter: NetworkAdapter = js.native
   /** Retrieves the length of the prefix, or network part of the IP address. */
   var prefixLength: Double = js.native
+}
+
+object IPInformation {
+  @scala.inline
+  def apply(networkAdapter: NetworkAdapter, prefixLength: Double): IPInformation = {
+    val __obj = js.Dynamic.literal(networkAdapter = networkAdapter.asInstanceOf[js.Any], prefixLength = prefixLength.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IPInformation]
+  }
+  @scala.inline
+  implicit class IPInformationOps[Self <: IPInformation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNetworkAdapter(value: NetworkAdapter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkAdapter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPrefixLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prefixLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

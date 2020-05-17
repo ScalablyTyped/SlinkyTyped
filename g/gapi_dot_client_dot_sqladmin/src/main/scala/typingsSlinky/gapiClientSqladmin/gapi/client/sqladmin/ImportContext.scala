@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientSqladmin.gapi.client.sqladmin
 
-import typingsSlinky.gapiClientSqladmin.AnonColumns
+import typingsSlinky.gapiClientSqladmin.anon.Columns
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ImportContext extends js.Object {
   /** Options for importing data as CSV. */
-  var csvImportOptions: js.UndefOr[AnonColumns] = js.native
+  var csvImportOptions: js.UndefOr[Columns] = js.native
   /**
     * The database (for example, guestbook) to which the import is made. If fileType is SQL and no database is specified, it is assumed that the database is
     * specified in the file to be imported. If fileType is CSV, it must be specified.
@@ -44,7 +44,7 @@ object ImportContext {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCsvImportOptions(value: AnonColumns): Self = {
+    def withCsvImportOptions(value: Columns): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("csvImportOptions")(value.asInstanceOf[js.Any])
         ret

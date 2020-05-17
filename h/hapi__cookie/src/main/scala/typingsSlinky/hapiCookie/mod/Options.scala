@@ -1,6 +1,6 @@
 package typingsSlinky.hapiCookie.mod
 
-import typingsSlinky.hapiCookie.ServerStateCookieOptionsn
+import typingsSlinky.hapiCookie.anon.ServerStateCookieOptionsn
 import typingsSlinky.hapiHapi.mod.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`

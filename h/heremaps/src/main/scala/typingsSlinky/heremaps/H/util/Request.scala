@@ -1,6 +1,5 @@
 package typingsSlinky.heremaps.H.util
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.heremaps.H.util.Request.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,16 +8,8 @@ import scala.scalajs.js.annotation._
 /**
   * A generic class to represent a handle for any kind of asynchronous processed requests
   */
-@JSGlobal("H.util.Request")
 @js.native
-/**
-  * Constructor
-  * @param opt_onprogress {function(H.util.Request)=} - A callback to invoke every time when the request's progress state changes
-  * @param opt_total {number=} - The total number of processing steps to complete this request, default is 1
-  */
-class Request () extends js.Object {
-  def this(opt_onprogress: js.Function1[/* req */ Request, Unit]) = this()
-  def this(opt_onprogress: js.Function1[/* req */ Request, Unit], opt_total: Double) = this()
+trait Request extends js.Object {
   /**
     * Returns the number of processingsteps which have been failed
     * @returns {number}
@@ -66,23 +57,6 @@ object Request extends js.Object {
     
     @js.native
     sealed trait PROCESSING extends State
-    
-    @JSBracketAccess
-    def apply(value: Double): js.UndefOr[State with Double] = js.native
-    /* 3 */ @js.native
-    object CANCELLED extends TopLevel[CANCELLED with Double]
-    
-    /* 2 */ @js.native
-    object COMPLETE extends TopLevel[COMPLETE with Double]
-    
-    /* 4 */ @js.native
-    object ERROR extends TopLevel[ERROR with Double]
-    
-    /* 0 */ @js.native
-    object PENDING extends TopLevel[PENDING with Double]
-    
-    /* 1 */ @js.native
-    object PROCESSING extends TopLevel[PROCESSING with Double]
     
   }
   

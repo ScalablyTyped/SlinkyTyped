@@ -16,8 +16,8 @@ import typingsSlinky.csstype.mod.StandardProperties
 import typingsSlinky.csstype.mod.WidthProperty
 import typingsSlinky.csstype.mod.ZIndexProperty
 import typingsSlinky.styledSystem.mod.TLengthStyledSystem
-import typingsSlinky.themeUi.ColorModemodeskstringColo
-import typingsSlinky.themeUi.PinStyledTagsSystemStyleO
+import typingsSlinky.themeUi.anon.ColorModemodeskstringColo
+import typingsSlinky.themeUi.anon.PinStyledTagsSystemStyleO
 import typingsSlinky.themeUi.themeUiNumbers.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`

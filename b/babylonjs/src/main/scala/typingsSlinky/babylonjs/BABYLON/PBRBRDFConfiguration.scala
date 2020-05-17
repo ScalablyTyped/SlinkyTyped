@@ -4,14 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.PBRBRDFConfiguration")
 @js.native
-class PBRBRDFConfiguration protected () extends js.Object {
-  /**
-    * Instantiate a new istance of clear coat configuration.
-    * @param markAllSubMeshesAsMiscDirty Callback to flag the material to dirty
-    */
-  def this(markAllSubMeshesAsMiscDirty: js.Function0[Unit]) = this()
+trait PBRBRDFConfiguration extends js.Object {
   /** @hidden */
   var _internalMarkAllSubMeshesAsMiscDirty: js.Any = js.native
   var _useEnergyConservation: js.Any = js.native
@@ -77,31 +71,125 @@ class PBRBRDFConfiguration protected () extends js.Object {
   def serialize(): js.Any = js.native
 }
 
-/* static members */
-@JSGlobal("BABYLON.PBRBRDFConfiguration")
-@js.native
-object PBRBRDFConfiguration extends js.Object {
-  /**
-    * Default value used for the energy conservation.
-    * This should only be changed to adapt to the type of texture in scene.environmentBRDFTexture.
-    */
-  var DEFAULT_USE_ENERGY_CONSERVATION: Boolean = js.native
-  /**
-    * Default value used for the Smith Visibility Height Correlated mode.
-    * This should only be changed to adapt to the type of texture in scene.environmentBRDFTexture.
-    */
-  var DEFAULT_USE_SMITH_VISIBILITY_HEIGHT_CORRELATED: Boolean = js.native
-  /**
-    * Default value used for activating energy conservation for the specular workflow.
-    * If activated, the albedo color is multiplied with (1. - maxChannel(specular color)).
-    * If deactivated, a material is only physically plausible, when (albedo color + specular color) < 1.
-    */
-  var DEFAULT_USE_SPECULAR_GLOSSINESS_INPUT_ENERGY_CONSERVATION: Boolean = js.native
-  /**
-    * Default value used for the IBL diffuse part.
-    * This can help switching back to the polynomials mode globally which is a tiny bit
-    * less GPU intensive at the drawback of a lower quality.
-    */
-  var DEFAULT_USE_SPHERICAL_HARMONICS: Boolean = js.native
+object PBRBRDFConfiguration {
+  @scala.inline
+  def apply(
+    _internalMarkAllSubMeshesAsMiscDirty: js.Any,
+    _markAllSubMeshesAsMiscDirty: () => Unit,
+    _useEnergyConservation: js.Any,
+    _useSmithVisibilityHeightCorrelated: js.Any,
+    _useSpecularGlossinessInputEnergyConservation: js.Any,
+    _useSphericalHarmonics: js.Any,
+    copyTo: PBRBRDFConfiguration => Unit,
+    getClassName: () => String,
+    parse: (js.Any, Scene, String) => Unit,
+    prepareDefines: IMaterialBRDFDefines => Unit,
+    serialize: () => js.Any,
+    useEnergyConservation: Boolean,
+    useSmithVisibilityHeightCorrelated: Boolean,
+    useSpecularGlossinessInputEnergyConservation: Boolean,
+    useSphericalHarmonics: Boolean
+  ): PBRBRDFConfiguration = {
+    val __obj = js.Dynamic.literal(_internalMarkAllSubMeshesAsMiscDirty = _internalMarkAllSubMeshesAsMiscDirty.asInstanceOf[js.Any], _markAllSubMeshesAsMiscDirty = js.Any.fromFunction0(_markAllSubMeshesAsMiscDirty), _useEnergyConservation = _useEnergyConservation.asInstanceOf[js.Any], _useSmithVisibilityHeightCorrelated = _useSmithVisibilityHeightCorrelated.asInstanceOf[js.Any], _useSpecularGlossinessInputEnergyConservation = _useSpecularGlossinessInputEnergyConservation.asInstanceOf[js.Any], _useSphericalHarmonics = _useSphericalHarmonics.asInstanceOf[js.Any], copyTo = js.Any.fromFunction1(copyTo), getClassName = js.Any.fromFunction0(getClassName), parse = js.Any.fromFunction3(parse), prepareDefines = js.Any.fromFunction1(prepareDefines), serialize = js.Any.fromFunction0(serialize), useEnergyConservation = useEnergyConservation.asInstanceOf[js.Any], useSmithVisibilityHeightCorrelated = useSmithVisibilityHeightCorrelated.asInstanceOf[js.Any], useSpecularGlossinessInputEnergyConservation = useSpecularGlossinessInputEnergyConservation.asInstanceOf[js.Any], useSphericalHarmonics = useSphericalHarmonics.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PBRBRDFConfiguration]
+  }
+  @scala.inline
+  implicit class PBRBRDFConfigurationOps[Self <: PBRBRDFConfiguration] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_internalMarkAllSubMeshesAsMiscDirty(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_internalMarkAllSubMeshesAsMiscDirty")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_markAllSubMeshesAsMiscDirty(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_markAllSubMeshesAsMiscDirty")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def with_useEnergyConservation(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_useEnergyConservation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_useSmithVisibilityHeightCorrelated(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_useSmithVisibilityHeightCorrelated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_useSpecularGlossinessInputEnergyConservation(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_useSpecularGlossinessInputEnergyConservation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_useSphericalHarmonics(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_useSphericalHarmonics")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCopyTo(value: PBRBRDFConfiguration => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyTo")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetClassName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getClassName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withParse(value: (js.Any, Scene, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("parse")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withPrepareDefines(value: IMaterialBRDFDefines => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("prepareDefines")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSerialize(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("serialize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUseEnergyConservation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useEnergyConservation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUseSmithVisibilityHeightCorrelated(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useSmithVisibilityHeightCorrelated")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUseSpecularGlossinessInputEnergyConservation(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useSpecularGlossinessInputEnergyConservation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUseSphericalHarmonics(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("useSphericalHarmonics")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -2,7 +2,7 @@ package typingsSlinky.rrc.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
-import typingsSlinky.rrc.LocationDescriptorObjectL
+import typingsSlinky.rrc.anon.LocationDescriptorObjectL
 import typingsSlinky.rrc.mod.RouteConfiguration
 import typingsSlinky.rrc.mod.SwitchProps
 import scala.scalajs.js

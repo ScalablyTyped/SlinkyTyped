@@ -5,7 +5,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -48,8 +48,8 @@ import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.scrollableAxes
 import typingsSlinky.reactNative.reactNativeStrings.white
 import typingsSlinky.reactNative.reactNativeStrings.yes
-import typingsSlinky.reactNativeSnapCarousel.AnonIndex
-import typingsSlinky.reactNativeSnapCarousel.AnonInputRange
+import typingsSlinky.reactNativeSnapCarousel.anon.Index
+import typingsSlinky.reactNativeSnapCarousel.anon.InputRange
 import typingsSlinky.reactNativeSnapCarousel.mod.AdditionalParallaxProps
 import typingsSlinky.reactNativeSnapCarousel.mod.CarouselProperties
 import typingsSlinky.reactNativeSnapCarousel.mod.CarouselProps
@@ -322,7 +322,7 @@ object ReactNativeSnapCarousel {
     @scala.inline
     def scrollIndicatorInsets(value: Insets): this.type = set("scrollIndicatorInsets", value.asInstanceOf[js.Any])
     @scala.inline
-    def scrollInterpolator(value: (/* index */ Double, /* carouselProps */ CarouselProps[_]) => AnonInputRange): this.type = set("scrollInterpolator", js.Any.fromFunction2(value))
+    def scrollInterpolator(value: (/* index */ Double, /* carouselProps */ CarouselProps[_]) => InputRange): this.type = set("scrollInterpolator", js.Any.fromFunction2(value))
     @scala.inline
     def scrollPerfTag(value: String): this.type = set("scrollPerfTag", value.asInstanceOf[js.Any])
     @scala.inline
@@ -391,7 +391,7 @@ object ReactNativeSnapCarousel {
   
   def withProps[T](p: CarouselProperties[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T](data: js.Array[T], renderItem: (AnonIndex[T], js.UndefOr[AdditionalParallaxProps]) => TagMod[Any]): Builder[T] = {
+  def apply[T](data: js.Array[T], renderItem: (Index[T], js.UndefOr[AdditionalParallaxProps]) => TagMod[Any]): Builder[T] = {
     val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], renderItem = js.Any.fromFunction2(renderItem))
     new Builder[T](js.Array(this.component, __props.asInstanceOf[CarouselProperties[T]]))
   }

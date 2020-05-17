@@ -1,6 +1,6 @@
 package typingsSlinky.handsontable.mod.Handsontable.plugins
 
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Storage extends js.Object {
   var prefix: String = js.native
-  var rootWindow: Window_ = js.native
+  var rootWindow: Window = js.native
   var savedKeys: js.Array[String] = js.native
   def clearSavedKeys(): Unit = js.native
   def loadSavedKeys(): Unit = js.native
@@ -26,7 +26,7 @@ object Storage {
     loadValue: (String, js.Object) => js.Any,
     prefix: String,
     resetAll: () => Unit,
-    rootWindow: Window_,
+    rootWindow: Window,
     saveSavedKeys: () => Unit,
     saveValue: (String, js.Any) => Unit,
     savedKeys: js.Array[String]
@@ -71,7 +71,7 @@ object Storage {
         ret
     }
     @scala.inline
-    def withRootWindow(value: Window_): Self = {
+    def withRootWindow(value: Window): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rootWindow")(value.asInstanceOf[js.Any])
         ret

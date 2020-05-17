@@ -1,7 +1,7 @@
 package typingsSlinky.storybookAddonKnobs.arrayMod
 
-import typingsSlinky.storybookAddonKnobs.AnonKnob
-import typingsSlinky.storybookAddonKnobs.PartialArrayTypeProps
+import typingsSlinky.storybookAddonKnobs.anon.Knob
+import typingsSlinky.storybookAddonKnobs.anon.PartialArrayTypeProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ class default () extends ArrayType
 @js.native
 object default extends js.Object {
   var defaultProps: PartialArrayTypeProps = js.native
-  var propTypes: AnonKnob = js.native
+  var propTypes: Knob = js.native
   def deserialize(value: js.Array[String]): js.Array[String] = js.native
   def serialize(value: ArrayTypeKnobValue): ArrayTypeKnobValue = js.native
 }

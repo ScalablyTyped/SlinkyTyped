@@ -1,6 +1,6 @@
 package typingsSlinky.jestCore.quitMod
 
-import typingsSlinky.jestCore.AnonStdin
+import typingsSlinky.jestCore.anon.Stdin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@jest/core/build/plugins/quit", JSImport.Default)
 @js.native
 class default protected () extends QuitPlugin {
-  def this(options: AnonStdin) = this()
+  def this(options: Stdin) = this()
 }
 

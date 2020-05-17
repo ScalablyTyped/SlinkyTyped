@@ -1,8 +1,8 @@
 package typingsSlinky.jestHasteMap.mod
 
+import org.scalajs.dom.raw.Console
 import typingsSlinky.jestHasteMap.typesMod.HasteRegExp
 import typingsSlinky.jestHasteMap.typesMod.Mapper
-import typingsSlinky.std.Console_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait Options extends js.Object {
   var cacheDirectory: js.UndefOr[String] = js.native
   var computeDependencies: js.UndefOr[Boolean] = js.native
   var computeSha1: js.UndefOr[Boolean] = js.native
-  var console: js.UndefOr[Console_] = js.native
+  var console: js.UndefOr[Console] = js.native
   var dependencyExtractor: js.UndefOr[String] = js.native
   var extensions: js.Array[String] = js.native
   var forceNodeFilesystemAPI: js.UndefOr[Boolean] = js.native
@@ -133,7 +133,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withConsole(value: Console_): Self = {
+    def withConsole(value: Console): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("console")(value.asInstanceOf[js.Any])
         ret

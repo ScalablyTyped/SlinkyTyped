@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabExtensionmanager.queryMod
 
-import typingsSlinky.jupyterlabExtensionmanager.AnonFlags
+import typingsSlinky.jupyterlabExtensionmanager.anon.Flags
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait ISearchResult extends js.Object {
   /**
     * A collection of search results.
     */
-  var objects: js.Array[AnonFlags] = js.native
+  var objects: js.Array[Flags] = js.native
   /**
     * Timestamp of the search result creation.
     */
@@ -26,7 +26,7 @@ trait ISearchResult extends js.Object {
 
 object ISearchResult {
   @scala.inline
-  def apply(objects: js.Array[AnonFlags], time: String, total: Double): ISearchResult = {
+  def apply(objects: js.Array[Flags], time: String, total: Double): ISearchResult = {
     val __obj = js.Dynamic.literal(objects = objects.asInstanceOf[js.Any], time = time.asInstanceOf[js.Any], total = total.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISearchResult]
   }
@@ -37,7 +37,7 @@ object ISearchResult {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withObjects(value: js.Array[AnonFlags]): Self = {
+    def withObjects(value: js.Array[Flags]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("objects")(value.asInstanceOf[js.Any])
         ret

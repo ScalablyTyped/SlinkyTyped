@@ -4,14 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Microsoft.Maps.AnimatedTileLayer")
 @js.native
-/**
-  * @contstructor
-  * @param options Options that define how to animate between the specified tile layers. 
-  */
-class AnimatedTileLayer () extends js.Object {
-  def this(options: IAnimatedTileLayerOptions) = this()
+trait AnimatedTileLayer extends js.Object {
   /**
     * Gets the frame rate of this animated tile layer.
     * @returns The frame rate of this animated tile layer.
@@ -48,5 +42,85 @@ class AnimatedTileLayer () extends js.Object {
   def setOptions(options: IAnimatedTileLayerOptions): Unit = js.native
   /** Stop the layer animation, hide layer, and reset frame to the beginning. **/
   def stop(): Unit = js.native
+}
+
+object AnimatedTileLayer {
+  @scala.inline
+  def apply(
+    getFrameRate: () => Double,
+    getLoadingScreen: () => CustomOverlay,
+    getMaxTotalLoadTime: () => Double,
+    getTileSources: () => js.Array[TileSource],
+    getVisible: () => Boolean,
+    pause: () => Unit,
+    play: () => Unit,
+    setOptions: IAnimatedTileLayerOptions => Unit,
+    stop: () => Unit
+  ): AnimatedTileLayer = {
+    val __obj = js.Dynamic.literal(getFrameRate = js.Any.fromFunction0(getFrameRate), getLoadingScreen = js.Any.fromFunction0(getLoadingScreen), getMaxTotalLoadTime = js.Any.fromFunction0(getMaxTotalLoadTime), getTileSources = js.Any.fromFunction0(getTileSources), getVisible = js.Any.fromFunction0(getVisible), pause = js.Any.fromFunction0(pause), play = js.Any.fromFunction0(play), setOptions = js.Any.fromFunction1(setOptions), stop = js.Any.fromFunction0(stop))
+    __obj.asInstanceOf[AnimatedTileLayer]
+  }
+  @scala.inline
+  implicit class AnimatedTileLayerOps[Self <: AnimatedTileLayer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetFrameRate(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getFrameRate")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetLoadingScreen(value: () => CustomOverlay): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getLoadingScreen")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMaxTotalLoadTime(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMaxTotalLoadTime")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetTileSources(value: () => js.Array[TileSource]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTileSources")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetVisible(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getVisible")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPause(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pause")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPlay(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("play")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetOptions(value: IAnimatedTileLayerOptions => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setOptions")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withStop(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

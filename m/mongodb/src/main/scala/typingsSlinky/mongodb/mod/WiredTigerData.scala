@@ -1,40 +1,40 @@
 package typingsSlinky.mongodb.mod
 
-import typingsSlinky.mongodb.AnonAllocationsrequiringfileextension
-import typingsSlinky.mongodb.AnonAveragedifferencebetweencurrentevictiongenerationwhenthepagewaslastconsidered
-import typingsSlinky.mongodb.AnonBloomfilterfalsepositives
-import typingsSlinky.mongodb.AnonBtreecheckpointgeneration
-import typingsSlinky.mongodb.AnonBulkloadedcursorinsertcalls
-import typingsSlinky.mongodb.AnonBytescurrentlyinthecache
-import typingsSlinky.mongodb.AnonCompressedpagesread
-import typingsSlinky.mongodb.AnonDictionarymatches
+import typingsSlinky.mongodb.anon.Allocationsrequiringfileextension
+import typingsSlinky.mongodb.anon.Averagedifferencebetweencurrentevictiongenerationwhenthepagewaslastconsidered
+import typingsSlinky.mongodb.anon.Bloomfilterfalsepositives
+import typingsSlinky.mongodb.anon.Btreecheckpointgeneration
+import typingsSlinky.mongodb.anon.Bulkloadedcursorinsertcalls
+import typingsSlinky.mongodb.anon.Bytescurrentlyinthecache
+import typingsSlinky.mongodb.anon.Compressedpagesread
+import typingsSlinky.mongodb.anon.Dictionarymatches
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait WiredTigerData extends js.Object {
-  var LSM: AnonBloomfilterfalsepositives = js.native
-  var `block-manager`: AnonAllocationsrequiringfileextension = js.native
-  var btree: AnonBtreecheckpointgeneration = js.native
-  var cache: AnonBytescurrentlyinthecache = js.native
-  var cache_walk: AnonAveragedifferencebetweencurrentevictiongenerationwhenthepagewaslastconsidered = js.native
-  var compression: AnonCompressedpagesread = js.native
-  var cursor: AnonBulkloadedcursorinsertcalls = js.native
-  var reconciliation: AnonDictionarymatches = js.native
+  var LSM: Bloomfilterfalsepositives = js.native
+  var `block-manager`: Allocationsrequiringfileextension = js.native
+  var btree: Btreecheckpointgeneration = js.native
+  var cache: Bytescurrentlyinthecache = js.native
+  var cache_walk: Averagedifferencebetweencurrentevictiongenerationwhenthepagewaslastconsidered = js.native
+  var compression: Compressedpagesread = js.native
+  var cursor: Bulkloadedcursorinsertcalls = js.native
+  var reconciliation: Dictionarymatches = js.native
 }
 
 object WiredTigerData {
   @scala.inline
   def apply(
-    LSM: AnonBloomfilterfalsepositives,
-    `block-manager`: AnonAllocationsrequiringfileextension,
-    btree: AnonBtreecheckpointgeneration,
-    cache: AnonBytescurrentlyinthecache,
-    cache_walk: AnonAveragedifferencebetweencurrentevictiongenerationwhenthepagewaslastconsidered,
-    compression: AnonCompressedpagesread,
-    cursor: AnonBulkloadedcursorinsertcalls,
-    reconciliation: AnonDictionarymatches
+    LSM: Bloomfilterfalsepositives,
+    `block-manager`: Allocationsrequiringfileextension,
+    btree: Btreecheckpointgeneration,
+    cache: Bytescurrentlyinthecache,
+    cache_walk: Averagedifferencebetweencurrentevictiongenerationwhenthepagewaslastconsidered,
+    compression: Compressedpagesread,
+    cursor: Bulkloadedcursorinsertcalls,
+    reconciliation: Dictionarymatches
   ): WiredTigerData = {
     val __obj = js.Dynamic.literal(LSM = LSM.asInstanceOf[js.Any], btree = btree.asInstanceOf[js.Any], cache = cache.asInstanceOf[js.Any], cache_walk = cache_walk.asInstanceOf[js.Any], compression = compression.asInstanceOf[js.Any], cursor = cursor.asInstanceOf[js.Any], reconciliation = reconciliation.asInstanceOf[js.Any])
     __obj.updateDynamic("block-manager")(`block-manager`.asInstanceOf[js.Any])
@@ -47,49 +47,49 @@ object WiredTigerData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withLSM(value: AnonBloomfilterfalsepositives): Self = {
+    def withLSM(value: Bloomfilterfalsepositives): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("LSM")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def `withBlock-manager`(value: AnonAllocationsrequiringfileextension): Self = {
+    def `withBlock-manager`(value: Allocationsrequiringfileextension): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("block-manager")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withBtree(value: AnonBtreecheckpointgeneration): Self = {
+    def withBtree(value: Btreecheckpointgeneration): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("btree")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withCache(value: AnonBytescurrentlyinthecache): Self = {
+    def withCache(value: Bytescurrentlyinthecache): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cache")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withCache_walk(value: AnonAveragedifferencebetweencurrentevictiongenerationwhenthepagewaslastconsidered): Self = {
+    def withCache_walk(value: Averagedifferencebetweencurrentevictiongenerationwhenthepagewaslastconsidered): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cache_walk")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withCompression(value: AnonCompressedpagesread): Self = {
+    def withCompression(value: Compressedpagesread): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("compression")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withCursor(value: AnonBulkloadedcursorinsertcalls): Self = {
+    def withCursor(value: Bulkloadedcursorinsertcalls): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cursor")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withReconciliation(value: AnonDictionarymatches): Self = {
+    def withReconciliation(value: Dictionarymatches): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("reconciliation")(value.asInstanceOf[js.Any])
         ret

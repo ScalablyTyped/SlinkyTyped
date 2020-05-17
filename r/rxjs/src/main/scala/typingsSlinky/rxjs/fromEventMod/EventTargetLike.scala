@@ -10,5 +10,16 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.rxjs.fromEventMod.NodeCompatibleEventEmitter
   - typingsSlinky.rxjs.fromEventMod.JQueryStyleEventEmitter
 */
-trait EventTargetLike[T] extends js.Object
+trait EventTargetLike[T] extends FromEventTarget[T]
+
+object EventTargetLike {
+  @scala.inline
+  implicit def apply[T](value: HasEventTargetAddRemove[T]): EventTargetLike[T] = value.asInstanceOf[EventTargetLike[T]]
+  @scala.inline
+  implicit def apply[T](value: JQueryStyleEventEmitter): EventTargetLike[T] = value.asInstanceOf[EventTargetLike[T]]
+  @scala.inline
+  implicit def apply[T](value: NodeCompatibleEventEmitter): EventTargetLike[T] = value.asInstanceOf[EventTargetLike[T]]
+  @scala.inline
+  implicit def apply[T](value: NodeStyleEventEmitter): EventTargetLike[T] = value.asInstanceOf[EventTargetLike[T]]
+}
 

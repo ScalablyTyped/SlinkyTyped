@@ -1,6 +1,5 @@
 package typingsSlinky.suitescript
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,17 +11,8 @@ import scala.scalajs.js.annotation._
   * @return {nlobjError}
   * @constructor
   */
-@JSGlobal("nlobjError")
 @js.native
-class nlobjError protected ()
-  extends /**
-  *
-  * @return
-  */
-Instantiable0[js.Any] {
-  def this(name: String) = this()
-  def this(name: String, join: String) = this()
-  def this(name: String, join: String, summary: String) = this()
+trait nlobjError extends js.Object {
   /**
     * return the error code for this system or user-defined error.
     * @return {string}
@@ -88,5 +78,64 @@ Instantiable0[js.Any] {
     * @return
     */
   def getUserEvent(): String = js.native
+}
+
+object nlobjError {
+  @scala.inline
+  def apply(
+    getCode: () => String,
+    getDetails: () => String,
+    getId: () => String,
+    getInternalId: () => js.Any,
+    getStackTrace: () => Unit,
+    getUserEvent: () => String
+  ): nlobjError = {
+    val __obj = js.Dynamic.literal(getCode = js.Any.fromFunction0(getCode), getDetails = js.Any.fromFunction0(getDetails), getId = js.Any.fromFunction0(getId), getInternalId = js.Any.fromFunction0(getInternalId), getStackTrace = js.Any.fromFunction0(getStackTrace), getUserEvent = js.Any.fromFunction0(getUserEvent))
+    __obj.asInstanceOf[nlobjError]
+  }
+  @scala.inline
+  implicit class nlobjErrorOps[Self <: nlobjError] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetCode(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCode")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDetails(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDetails")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetId(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getId")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetInternalId(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getInternalId")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetStackTrace(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStackTrace")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetUserEvent(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getUserEvent")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

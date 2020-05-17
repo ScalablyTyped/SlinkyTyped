@@ -1,15 +1,15 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonItemElementItemIndex
-import typingsSlinky.devextreme.AnonModelSelectedItem
-import typingsSlinky.devextreme.AnonPreviousValue
+import typingsSlinky.devextreme.anon.ItemElementItemIndex
+import typingsSlinky.devextreme.anon.ModelSelectedItem
+import typingsSlinky.devextreme.anon.PreviousValue
 import typingsSlinky.devextreme.devextremeStrings.contains
 import typingsSlinky.devextreme.devextremeStrings.startswith
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,12 +50,12 @@ trait dxDropDownListOptions[T] extends dxDropDownEditorOptions[T] {
   /** The text or HTML markup displayed by the widget if the item collection is empty. */
   var noDataText: js.UndefOr[String] = js.native
   /** A function that is executed when a list item is clicked or tapped. */
-  var onItemClick: js.UndefOr[js.Function1[/* e */ AnonItemElementItemIndex[T], _]] = js.native
+  var onItemClick: js.UndefOr[js.Function1[/* e */ ItemElementItemIndex[T], _]] = js.native
   /** A function that is executed when a list item is selected or selection is canceled. */
-  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonModelSelectedItem[T], _]] = js.native
+  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ ModelSelectedItem[T], _]] = js.native
   /** A function that is executed after the widget's value is changed. */
   @JSName("onValueChanged")
-  var onValueChanged_dxDropDownListOptions: js.UndefOr[js.Function1[/* e */ AnonPreviousValue[T], _]] = js.native
+  var onValueChanged_dxDropDownListOptions: js.UndefOr[js.Function1[/* e */ PreviousValue[T], _]] = js.native
   /** Specifies whether to allow searching. */
   var searchEnabled: js.UndefOr[Boolean] = js.native
   /** Specifies the name of a data source item field or an expression whose value is compared to the search criterion. */
@@ -243,7 +243,7 @@ object dxDropDownListOptions {
         ret
     }
     @scala.inline
-    def withOnItemClick(value: /* e */ AnonItemElementItemIndex[T] => _): Self[T] = {
+    def withOnItemClick(value: /* e */ ItemElementItemIndex[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction1(value))
         ret
@@ -255,7 +255,7 @@ object dxDropDownListOptions {
         ret
     }
     @scala.inline
-    def withOnSelectionChanged(value: /* e */ AnonModelSelectedItem[T] => _): Self[T] = {
+    def withOnSelectionChanged(value: /* e */ ModelSelectedItem[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.Any.fromFunction1(value))
         ret
@@ -267,7 +267,7 @@ object dxDropDownListOptions {
         ret
     }
     @scala.inline
-    def withOnValueChanged(value: /* e */ AnonPreviousValue[T] => _): Self[T] = {
+    def withOnValueChanged(value: /* e */ PreviousValue[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onValueChanged")(js.Any.fromFunction1(value))
         ret

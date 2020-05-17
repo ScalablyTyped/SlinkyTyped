@@ -1,14 +1,13 @@
 package typingsSlinky.elliptic.mod.ec
 
 import typingsSlinky.elliptic.mod.SignatureInput
-import typingsSlinky.elliptic.mod._SignatureInput
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @JSImport("elliptic", "ec.Signature")
 @js.native
-class Signature protected () extends _SignatureInput {
+class Signature protected () extends SignatureInput {
   def this(options: SignatureInput) = this()
   def this(options: SignatureInput, enc: String) = this()
   var r: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BN */ js.Any = js.native

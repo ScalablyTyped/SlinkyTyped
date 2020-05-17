@@ -6,7 +6,7 @@ import typingsSlinky.reactNavigation.mod.NavigationDescriptor
 import typingsSlinky.reactNavigation.mod.NavigationParams
 import typingsSlinky.reactNavigation.mod.NavigationProp
 import typingsSlinky.reactNavigation.mod.NavigationRoute
-import typingsSlinky.reactNavigationMaterialBottomTabs.AnonRoute
+import typingsSlinky.reactNavigationMaterialBottomTabs.anon.Route
 import typingsSlinky.reactNavigationMaterialBottomTabs.typesMod.NavigationMaterialBottomTabOptions
 import typingsSlinky.reactNavigationMaterialBottomTabs.typesMod.NavigationTabProp
 import typingsSlinky.reactNavigationMaterialBottomTabs.typesMod.NavigationTabState
@@ -26,13 +26,13 @@ trait NavigationViewProps extends js.Object {
   var navigation: NavigationProp[NavigationTabState] = js.native
   var navigationConfig: js.Any = js.native
   var screenProps: js.UndefOr[js.Any] = js.native
-  def getAccessibilityLabel(props: AnonRoute): js.UndefOr[String] = js.native
-  def getLabelText(props: AnonRoute): js.UndefOr[String] = js.native
-  def getTestID(props: AnonRoute): js.UndefOr[String] = js.native
+  def getAccessibilityLabel(props: Route): js.UndefOr[String] = js.native
+  def getLabelText(props: Route): js.UndefOr[String] = js.native
+  def getTestID(props: Route): js.UndefOr[String] = js.native
   def onIndexChange(index: Double): Unit = js.native
-  def onTabPress(props: AnonRoute): Unit = js.native
+  def onTabPress(props: Route): Unit = js.native
   def renderIcon(props: RenderIconProps): TagMod[Any] = js.native
-  def renderScene(props: AnonRoute): TagMod[Any] = js.native
+  def renderScene(props: Route): TagMod[Any] = js.native
 }
 
 object NavigationViewProps {
@@ -45,15 +45,15 @@ object NavigationViewProps {
         NavigationTabProp[NavigationRoute[NavigationParams], NavigationParams]
       ]
     ],
-    getAccessibilityLabel: AnonRoute => js.UndefOr[String],
-    getLabelText: AnonRoute => js.UndefOr[String],
-    getTestID: AnonRoute => js.UndefOr[String],
+    getAccessibilityLabel: Route => js.UndefOr[String],
+    getLabelText: Route => js.UndefOr[String],
+    getTestID: Route => js.UndefOr[String],
     navigation: NavigationProp[NavigationTabState],
     navigationConfig: js.Any,
     onIndexChange: Double => Unit,
-    onTabPress: AnonRoute => Unit,
+    onTabPress: Route => Unit,
     renderIcon: RenderIconProps => TagMod[Any],
-    renderScene: AnonRoute => TagMod[Any]
+    renderScene: Route => TagMod[Any]
   ): NavigationViewProps = {
     val __obj = js.Dynamic.literal(descriptors = descriptors.asInstanceOf[js.Any], getAccessibilityLabel = js.Any.fromFunction1(getAccessibilityLabel), getLabelText = js.Any.fromFunction1(getLabelText), getTestID = js.Any.fromFunction1(getTestID), navigation = navigation.asInstanceOf[js.Any], navigationConfig = navigationConfig.asInstanceOf[js.Any], onIndexChange = js.Any.fromFunction1(onIndexChange), onTabPress = js.Any.fromFunction1(onTabPress), renderIcon = js.Any.fromFunction1(renderIcon), renderScene = js.Any.fromFunction1(renderScene))
     __obj.asInstanceOf[NavigationViewProps]
@@ -79,19 +79,19 @@ object NavigationViewProps {
         ret
     }
     @scala.inline
-    def withGetAccessibilityLabel(value: AnonRoute => js.UndefOr[String]): Self = {
+    def withGetAccessibilityLabel(value: Route => js.UndefOr[String]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getAccessibilityLabel")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGetLabelText(value: AnonRoute => js.UndefOr[String]): Self = {
+    def withGetLabelText(value: Route => js.UndefOr[String]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getLabelText")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGetTestID(value: AnonRoute => js.UndefOr[String]): Self = {
+    def withGetTestID(value: Route => js.UndefOr[String]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getTestID")(js.Any.fromFunction1(value))
         ret
@@ -115,7 +115,7 @@ object NavigationViewProps {
         ret
     }
     @scala.inline
-    def withOnTabPress(value: AnonRoute => Unit): Self = {
+    def withOnTabPress(value: Route => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTabPress")(js.Any.fromFunction1(value))
         ret
@@ -127,7 +127,7 @@ object NavigationViewProps {
         ret
     }
     @scala.inline
-    def withRenderScene(value: AnonRoute => TagMod[Any]): Self = {
+    def withRenderScene(value: Route => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderScene")(js.Any.fromFunction1(value))
         ret

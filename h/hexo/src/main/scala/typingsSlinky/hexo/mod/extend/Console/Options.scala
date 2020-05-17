@@ -1,6 +1,6 @@
 package typingsSlinky.hexo.mod.extend.Console
 
-import typingsSlinky.hexo.AnonDesc
+import typingsSlinky.hexo.anon.Desc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait Options extends js.Object {
   /**
     * The description of each argument of a console command.
     */
-  var arguments: js.UndefOr[js.Array[AnonDesc]] = js.native
+  var arguments: js.UndefOr[js.Array[Desc]] = js.native
   /**
     * More detailed information about a console command.
     */
@@ -18,7 +18,7 @@ trait Options extends js.Object {
   /**
     * The description of each option of a console command.
     */
-  var options: js.UndefOr[js.Array[AnonDesc]] = js.native
+  var options: js.UndefOr[js.Array[Desc]] = js.native
   /**
     * The usage of a console command.
     */
@@ -38,7 +38,7 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withArguments(value: js.Array[AnonDesc]): Self = {
+    def withArguments(value: js.Array[Desc]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("arguments")(value.asInstanceOf[js.Any])
         ret
@@ -62,7 +62,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withOptions(value: js.Array[AnonDesc]): Self = {
+    def withOptions(value: js.Array[Desc]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

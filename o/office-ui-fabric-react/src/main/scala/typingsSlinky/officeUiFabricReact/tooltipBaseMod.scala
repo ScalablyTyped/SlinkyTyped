@@ -1,5 +1,6 @@
 package typingsSlinky.officeUiFabricReact
 
+import typingsSlinky.officeUiFabricReact.anon.PartialITooltipProps
 import typingsSlinky.officeUiFabricReact.tooltipTypesMod.ITooltipProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js

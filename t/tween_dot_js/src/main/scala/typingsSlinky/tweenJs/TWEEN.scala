@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object TWEEN extends js.Object {
   @js.native
-  class Group () extends js.Object {
+  trait Group extends js.Object {
     def add(tween: Tween): Unit = js.native
     def getAll(): js.Array[Tween] = js.native
     def remove(tween: Tween): Unit = js.native
@@ -19,9 +19,7 @@ object TWEEN extends js.Object {
   }
   
   @js.native
-  class Tween () extends js.Object {
-    def this(`object`: js.Any) = this()
-    def this(`object`: js.Any, group: Group) = this()
+  trait Tween extends js.Object {
     def chain(tweens: Tween*): Tween = js.native
     def delay(amount: Double): Tween = js.native
     def duration(d: Double): Tween = js.native
@@ -52,15 +50,5 @@ object TWEEN extends js.Object {
     def yoyo(enable: Boolean): Tween = js.native
   }
   
-  var Easing: typingsSlinky.tweenJs.Easing = js.native
-  var Interpolation: typingsSlinky.tweenJs.Interpolation = js.native
-  def add(tween: Tween): Unit = js.native
-  def getAll(): js.Array[Tween] = js.native
-  def now(): Double = js.native
-  def remove(tween: Tween): Unit = js.native
-  def removeAll(): Unit = js.native
-  def update(): Boolean = js.native
-  def update(time: Double): Boolean = js.native
-  def update(time: Double, preserve: Boolean): Boolean = js.native
 }
 

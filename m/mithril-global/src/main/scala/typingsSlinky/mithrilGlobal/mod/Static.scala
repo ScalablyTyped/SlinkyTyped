@@ -1,17 +1,16 @@
 package typingsSlinky.mithrilGlobal.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.mithril.AnonKey
-import typingsSlinky.mithril.AnonParams
-import typingsSlinky.mithril.AnonUrl
-import typingsSlinky.mithril.Fn0
-import typingsSlinky.mithril.FnCallElementComponent
-import typingsSlinky.mithril.FnCallUrlOptions
-import typingsSlinky.mithril.JsonpOptionsurlstring
-import typingsSlinky.mithril.Lifecycleanyanykeystringa
+import typingsSlinky.mithril.anon.Fn0
+import typingsSlinky.mithril.anon.FnCallElementComponent
+import typingsSlinky.mithril.anon.FnCallUrlOptions
+import typingsSlinky.mithril.anon.JsonpOptionsurlstring
+import typingsSlinky.mithril.anon.Key
+import typingsSlinky.mithril.anon.Lifecycleanyanykeystringa
+import typingsSlinky.mithril.anon.Url
 import typingsSlinky.mithril.mod.Params
 import typingsSlinky.mithril.mod.Redraw
-import typingsSlinky.mithrilGlobal.AnonCall
+import typingsSlinky.mithrilGlobal.anon.Call
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +31,7 @@ trait Static extends js.Object {
   @JSName("route")
   var route_Original: typingsSlinky.mithril.mod.Route = js.native
   @JSName("stream")
-  var stream_Original: AnonCall = js.native
+  var stream_Original: Call = js.native
   /** Creates a virtual element (Vnode). */
   def apply(
     selector: String,
@@ -49,7 +48,7 @@ trait Static extends js.Object {
   /** Creates a virtual element (Vnode). */
   def apply[Attrs, State](
     component: typingsSlinky.mithril.mod.ComponentTypes[Attrs, State],
-    attributes: Attrs with (typingsSlinky.mithril.mod.Lifecycle[Attrs, State]) with AnonKey,
+    attributes: Attrs with (typingsSlinky.mithril.mod.Lifecycle[Attrs, State]) with Key,
     args: typingsSlinky.mithril.mod.Children*
   ): typingsSlinky.mithril.mod.Vnode[Attrs, State] = js.native
   /** Build path name */
@@ -65,13 +64,13 @@ trait Static extends js.Object {
   def mount(element: Element): Unit = js.native
   def mount(element: Element, component: typingsSlinky.mithril.mod.ComponentTypes[_, _]): Unit = js.native
   /** Parse path name */
-  def parsePathname(url: String): AnonParams = js.native
+  def parsePathname(url: String): typingsSlinky.mithril.anon.Params = js.native
   /** Returns an object with key/value pairs parsed from a string of the form: ?a=1&b=2 */
   def parseQueryString(queryString: String): Params = js.native
   /** Manually triggers an asynchronous redraw of mounted components. */
   def redraw(): Unit = js.native
   def render(el: Element, vnodes: typingsSlinky.mithril.mod.Children): Unit = js.native
-  def request[T](options: typingsSlinky.mithril.mod.RequestOptions[T] with AnonUrl): js.Promise[T] = js.native
+  def request[T](options: typingsSlinky.mithril.mod.RequestOptions[T] with Url): js.Promise[T] = js.native
   def request[T](url: String): js.Promise[T] = js.native
   def request[T](url: String, options: typingsSlinky.mithril.mod.RequestOptions[T]): js.Promise[T] = js.native
   /** Creates application routes and mounts Components and/or RouteResolvers to a DOM element. */

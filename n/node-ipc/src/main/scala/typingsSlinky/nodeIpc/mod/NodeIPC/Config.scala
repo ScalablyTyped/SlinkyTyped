@@ -1,7 +1,7 @@
 package typingsSlinky.nodeIpc.mod.NodeIPC
 
-import typingsSlinky.nodeIpc.AnonFamily
-import typingsSlinky.nodeIpc.AnonPrivate
+import typingsSlinky.nodeIpc.anon.Family
+import typingsSlinky.nodeIpc.anon.Private
 import typingsSlinky.nodeIpc.nodeIpcStrings.ascii
 import typingsSlinky.nodeIpc.nodeIpcStrings.base64
 import typingsSlinky.nodeIpc.nodeIpcStrings.hex
@@ -38,7 +38,7 @@ trait Config extends js.Object {
     * Primarily used when specifying which interface a client should connect through.
     * see the socket.connect documentation in the node.js api https://nodejs.org/api/net.html#net_socket_connect_options_connectlistener
     */
-  var interfaces: AnonFamily = js.native
+  var interfaces: Family = js.native
   /**
     * Default: 5
     * Set the depth for util.inspect during ipc.log
@@ -108,7 +108,7 @@ trait Config extends js.Object {
     * Synchronous requests. Clients will not send new requests until the server answers
     */
   var sync: Boolean = js.native
-  var tls: AnonPrivate = js.native
+  var tls: Private = js.native
   /**
     * Default: true
     * Defaults to true meaning that the module will take care of deleting the IPC socket prior to startup.
@@ -129,7 +129,7 @@ object Config {
     appspace: String,
     encoding: ascii | utf8 | utf16le | ucs2 | base64 | hex,
     id: String,
-    interfaces: AnonFamily,
+    interfaces: Family,
     logDepth: Double,
     logInColor: Boolean,
     logger: String => Unit,
@@ -143,7 +143,7 @@ object Config {
     socketRoot: String,
     stopRetrying: Boolean,
     sync: Boolean,
-    tls: AnonPrivate,
+    tls: Private,
     unlink: Boolean
   ): Config = {
     val __obj = js.Dynamic.literal(appspace = appspace.asInstanceOf[js.Any], encoding = encoding.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], interfaces = interfaces.asInstanceOf[js.Any], logDepth = logDepth.asInstanceOf[js.Any], logInColor = logInColor.asInstanceOf[js.Any], logger = js.Any.fromFunction1(logger), maxConnections = maxConnections.asInstanceOf[js.Any], maxRetries = maxRetries.asInstanceOf[js.Any], networkHost = networkHost.asInstanceOf[js.Any], networkPort = networkPort.asInstanceOf[js.Any], rawBuffer = rawBuffer.asInstanceOf[js.Any], retry = retry.asInstanceOf[js.Any], silent = silent.asInstanceOf[js.Any], socketRoot = socketRoot.asInstanceOf[js.Any], stopRetrying = stopRetrying.asInstanceOf[js.Any], sync = sync.asInstanceOf[js.Any], tls = tls.asInstanceOf[js.Any], unlink = unlink.asInstanceOf[js.Any])
@@ -174,7 +174,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withInterfaces(value: AnonFamily): Self = {
+    def withInterfaces(value: Family): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("interfaces")(value.asInstanceOf[js.Any])
         ret
@@ -258,7 +258,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withTls(value: AnonPrivate): Self = {
+    def withTls(value: Private): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tls")(value.asInstanceOf[js.Any])
         ret

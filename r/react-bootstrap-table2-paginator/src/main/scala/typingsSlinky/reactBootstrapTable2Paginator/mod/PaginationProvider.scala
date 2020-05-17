@@ -1,7 +1,7 @@
 package typingsSlinky.reactBootstrapTable2Paginator.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactBootstrapTable2Paginator.AnonChildren
+import typingsSlinky.reactBootstrapTable2Paginator.anon.Children
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @JSImport("react-bootstrap-table2-paginator", "PaginationProvider")
 @js.native
 object PaginationProvider extends js.Object {
-  def apply(props: AnonChildren): ReactElement | Null = js.native
+  def apply(props: Children): ReactElement | Null = js.native
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.cqrsDomain.mod
 
-import typingsSlinky.cqrsDomain.AnonAuthSource
-import typingsSlinky.cqrsDomain.AnonDb
-import typingsSlinky.cqrsDomain.AnonHost
+import typingsSlinky.cqrsDomain.anon.AuthSource
+import typingsSlinky.cqrsDomain.anon.Db
+import typingsSlinky.cqrsDomain.anon.Host
 import typingsSlinky.cqrsDomain.cqrsDomainBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,7 @@ trait CreateDomainOptions extends js.Object {
     * currently supports: mongodb, redis, tingodb, couchdb, azuretable, dynamodb and inmemory
     * hint settings like: [eventstore](https://github.com/adrai/node-eventstore#provide-implementation-for-storage)
     */
-  var aggregateLock: js.UndefOr[AnonDb] = js.native
+  var aggregateLock: js.UndefOr[Db] = js.native
   /**
     * optional, default is 'commandRejected'
     * will be used if an error occurs and an event should be generated
@@ -27,7 +27,7 @@ trait CreateDomainOptions extends js.Object {
     * currently supports: mongodb, redis, tingodb and inmemory
     * hint settings like: [eventstore](https://github.com/adrai/node-eventstore#provide-implementation-for-storage)
     */
-  var deduplication: js.UndefOr[AnonHost] = js.native
+  var deduplication: js.UndefOr[Host] = js.native
   /**
     * the path to the "working directory"
     * can be structured like
@@ -40,7 +40,7 @@ trait CreateDomainOptions extends js.Object {
     * currently supports: mongodb, redis, tingodb, azuretable and inmemory
     * hint: [eventstore](https://github.com/adrai/node-eventstore#provide-implementation-for-storage)
     */
-  var eventStore: js.UndefOr[AnonAuthSource] = js.native
+  var eventStore: js.UndefOr[AuthSource] = js.native
   /**
     * optional, default is 800
     * if using in scaled systems and not guaranteeing that each command for an aggregate instance
@@ -81,7 +81,7 @@ object CreateDomainOptions {
         ret
     }
     @scala.inline
-    def withAggregateLock(value: AnonDb): Self = {
+    def withAggregateLock(value: Db): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("aggregateLock")(value.asInstanceOf[js.Any])
         ret
@@ -105,7 +105,7 @@ object CreateDomainOptions {
         ret
     }
     @scala.inline
-    def withDeduplication(value: AnonHost): Self = {
+    def withDeduplication(value: Host): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("deduplication")(value.asInstanceOf[js.Any])
         ret
@@ -117,7 +117,7 @@ object CreateDomainOptions {
         ret
     }
     @scala.inline
-    def withEventStore(value: AnonAuthSource): Self = {
+    def withEventStore(value: AuthSource): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("eventStore")(value.asInstanceOf[js.Any])
         ret

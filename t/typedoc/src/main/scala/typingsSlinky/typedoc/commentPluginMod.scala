@@ -32,8 +32,7 @@ object commentPluginMod extends js.Object {
     def removeReflection(project: ProjectReflection, reflection: Reflection): Unit = js.native
     def removeReflection(project: ProjectReflection, reflection: Reflection, deletedIds: js.Array[Double]): Unit = js.native
     def removeReflections(project: ProjectReflection, reflections: js.Array[Reflection]): Unit = js.native
-    def removeTags(comment: js.UndefOr[scala.Nothing], tagName: String): Unit = js.native
-    def removeTags(comment: Comment, tagName: String): Unit = js.native
+    def removeTags(comment: js.UndefOr[Comment], tagName: String): Unit = js.native
   }
   
 }

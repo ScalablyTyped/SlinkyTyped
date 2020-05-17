@@ -1,8 +1,8 @@
 package typingsSlinky.officeUiFabricReact.colorPickerBaseMod
 
-import typingsSlinky.officeUiFabricReact.PartialIColorPickerProps
-import typingsSlinky.officeUiFabricReact.ReadonlyIColorPickerProps
-import typingsSlinky.officeUiFabricReact.ReadonlyIColorPickerState
+import typingsSlinky.officeUiFabricReact.anon.PartialIColorPickerProps
+import typingsSlinky.officeUiFabricReact.anon.ReadonlyIColorPickerProps
+import typingsSlinky.officeUiFabricReact.anon.ReadonlyIColorPickerState
 import typingsSlinky.officeUiFabricReact.colorPickerTypesMod.IColorPicker
 import typingsSlinky.officeUiFabricReact.colorPickerTypesMod.IColorPickerProps
 import typingsSlinky.react.mod.Component

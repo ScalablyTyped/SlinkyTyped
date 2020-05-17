@@ -1,6 +1,7 @@
 package typingsSlinky.ionicReact.components
 
 import org.scalajs.dom.raw.CustomEvent
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
 import slinky.web.SyntheticAnimationEvent
@@ -16,8 +17,8 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonRadioGroupElement
-import typingsSlinky.ionicReact.IonRadioGroupPickHTMLAttr
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonRadioGroupElement
+import typingsSlinky.ionicReact.anon.IonRadioGroupPickHTMLAttr
 import typingsSlinky.ionicReact.ionicReactStrings.`additions text`
 import typingsSlinky.ionicReact.ionicReactStrings.`inline`
 import typingsSlinky.ionicReact.ionicReactStrings.additions
@@ -63,11 +64,10 @@ import typingsSlinky.ionicReact.ionicReactStrings.tree
 import typingsSlinky.ionicReact.ionicReactStrings.url
 import typingsSlinky.ionicReact.ionicReactStrings.vertical
 import typingsSlinky.ionicReact.ionicReactStrings.yes
-import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -80,7 +80,7 @@ object IonRadioGroup {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, Ref[js.Any]] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -200,7 +200,7 @@ object IonRadioGroup {
     @scala.inline
     def contextMenu(value: String): this.type = set("contextMenu", value.asInstanceOf[js.Any])
     @scala.inline
-    def dangerouslySetInnerHTML(value: AnonHtml): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
+    def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
     @scala.inline
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
     @scala.inline
@@ -236,91 +236,183 @@ object IonRadioGroup {
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def onAbort(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
+    def onAbort(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
+    @scala.inline
+    def onAbortCapture(value: js.Any): this.type = set("onAbortCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onAnimationEnd(value: SyntheticAnimationEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onAnimationEnd", js.Any.fromFunction1(value))
     @scala.inline
+    def onAnimationEndCapture(value: js.Any): this.type = set("onAnimationEndCapture", value.asInstanceOf[js.Any])
+    @scala.inline
     def onAnimationIteration(value: SyntheticAnimationEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onAnimationIteration", js.Any.fromFunction1(value))
+    @scala.inline
+    def onAnimationIterationCapture(value: js.Any): this.type = set("onAnimationIterationCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onAnimationStart(value: SyntheticAnimationEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onAnimationStart", js.Any.fromFunction1(value))
     @scala.inline
+    def onAnimationStartCapture(value: js.Any): this.type = set("onAnimationStartCapture", value.asInstanceOf[js.Any])
+    @scala.inline
     def onAuxClick(value: SyntheticMouseEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onAuxClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onBeforeInput(value: SyntheticEvent[EventTarget with HTMLIonRadioGroupElement, Event_] => Unit): this.type = set("onBeforeInput", js.Any.fromFunction1(value))
+    def onAuxClickCapture(value: js.Any): this.type = set("onAuxClickCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onBeforeInput(value: SyntheticEvent[EventTarget with HTMLIonRadioGroupElement, Event] => Unit): this.type = set("onBeforeInput", js.Any.fromFunction1(value))
+    @scala.inline
+    def onBeforeInputCapture(value: js.Any): this.type = set("onBeforeInputCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onBlur(value: SyntheticFocusEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onCanPlay(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onCanPlay", js.Any.fromFunction1(value))
+    def onBlurCapture(value: js.Any): this.type = set("onBlurCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onCanPlayThrough(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
+    def onCanPlay(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onCanPlay", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: SyntheticEvent[EventTarget with HTMLIonRadioGroupElement, Event_] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onCanPlayCapture(value: js.Any): this.type = set("onCanPlayCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onCanPlayThrough(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCanPlayThroughCapture(value: js.Any): this.type = set("onCanPlayThroughCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onChange(value: SyntheticEvent[EventTarget with HTMLIonRadioGroupElement, Event] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onChangeCapture(value: js.Any): this.type = set("onChangeCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onClick(value: SyntheticMouseEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
+    def onClickCapture(value: js.Any): this.type = set("onClickCapture", value.asInstanceOf[js.Any])
+    @scala.inline
     def onCompositionEnd(value: SyntheticCompositionEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onCompositionEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCompositionEndCapture(value: js.Any): this.type = set("onCompositionEndCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onCompositionStart(value: SyntheticCompositionEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onCompositionStart", js.Any.fromFunction1(value))
     @scala.inline
+    def onCompositionStartCapture(value: js.Any): this.type = set("onCompositionStartCapture", value.asInstanceOf[js.Any])
+    @scala.inline
     def onCompositionUpdate(value: SyntheticCompositionEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onCompositionUpdate", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCompositionUpdateCapture(value: js.Any): this.type = set("onCompositionUpdateCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onContextMenu(value: SyntheticMouseEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onContextMenu", js.Any.fromFunction1(value))
     @scala.inline
+    def onContextMenuCapture(value: js.Any): this.type = set("onContextMenuCapture", value.asInstanceOf[js.Any])
+    @scala.inline
     def onCopy(value: SyntheticClipboardEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onCopy", js.Any.fromFunction1(value))
+    @scala.inline
+    def onCopyCapture(value: js.Any): this.type = set("onCopyCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onCut(value: SyntheticClipboardEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onCut", js.Any.fromFunction1(value))
     @scala.inline
+    def onCutCapture(value: js.Any): this.type = set("onCutCapture", value.asInstanceOf[js.Any])
+    @scala.inline
     def onDoubleClick(value: SyntheticMouseEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onDoubleClick", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDoubleClickCapture(value: js.Any): this.type = set("onDoubleClickCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onDrag(value: DragEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onDrag", js.Any.fromFunction1(value))
     @scala.inline
+    def onDragCapture(value: js.Any): this.type = set("onDragCapture", value.asInstanceOf[js.Any])
+    @scala.inline
     def onDragEnd(value: DragEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onDragEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragEndCapture(value: js.Any): this.type = set("onDragEndCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onDragEnter(value: DragEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onDragEnter", js.Any.fromFunction1(value))
     @scala.inline
+    def onDragEnterCapture(value: js.Any): this.type = set("onDragEnterCapture", value.asInstanceOf[js.Any])
+    @scala.inline
     def onDragExit(value: DragEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onDragExit", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragExitCapture(value: js.Any): this.type = set("onDragExitCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onDragLeave(value: DragEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onDragLeave", js.Any.fromFunction1(value))
     @scala.inline
+    def onDragLeaveCapture(value: js.Any): this.type = set("onDragLeaveCapture", value.asInstanceOf[js.Any])
+    @scala.inline
     def onDragOver(value: DragEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onDragOver", js.Any.fromFunction1(value))
+    @scala.inline
+    def onDragOverCapture(value: js.Any): this.type = set("onDragOverCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onDragStart(value: DragEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onDragStart", js.Any.fromFunction1(value))
     @scala.inline
+    def onDragStartCapture(value: js.Any): this.type = set("onDragStartCapture", value.asInstanceOf[js.Any])
+    @scala.inline
     def onDrop(value: DragEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onDrop", js.Any.fromFunction1(value))
     @scala.inline
-    def onDurationChange(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onDurationChange", js.Any.fromFunction1(value))
+    def onDropCapture(value: js.Any): this.type = set("onDropCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onEmptied(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onEmptied", js.Any.fromFunction1(value))
+    def onDurationChange(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onDurationChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onEncrypted(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onEncrypted", js.Any.fromFunction1(value))
+    def onDurationChangeCapture(value: js.Any): this.type = set("onDurationChangeCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onEnded(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onEnded", js.Any.fromFunction1(value))
+    def onEmptied(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onEmptied", js.Any.fromFunction1(value))
     @scala.inline
-    def onError(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onError", js.Any.fromFunction1(value))
+    def onEmptiedCapture(value: js.Any): this.type = set("onEmptiedCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onEncrypted(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onEncrypted", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEncryptedCapture(value: js.Any): this.type = set("onEncryptedCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onEnded(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onEnded", js.Any.fromFunction1(value))
+    @scala.inline
+    def onEndedCapture(value: js.Any): this.type = set("onEndedCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onError(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onError", js.Any.fromFunction1(value))
+    @scala.inline
+    def onErrorCapture(value: js.Any): this.type = set("onErrorCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onFocus(value: SyntheticFocusEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     @scala.inline
-    def onInput(value: SyntheticEvent[EventTarget with HTMLIonRadioGroupElement, Event_] => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
+    def onFocusCapture(value: js.Any): this.type = set("onFocusCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onInvalid(value: SyntheticEvent[EventTarget with HTMLIonRadioGroupElement, Event_] => Unit): this.type = set("onInvalid", js.Any.fromFunction1(value))
+    def onGotPointerCapture(value: js.Any): this.type = set("onGotPointerCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onGotPointerCaptureCapture(value: js.Any): this.type = set("onGotPointerCaptureCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onInput(value: SyntheticEvent[EventTarget with HTMLIonRadioGroupElement, Event] => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
+    @scala.inline
+    def onInputCapture(value: js.Any): this.type = set("onInputCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onInvalid(value: SyntheticEvent[EventTarget with HTMLIonRadioGroupElement, Event] => Unit): this.type = set("onInvalid", js.Any.fromFunction1(value))
+    @scala.inline
+    def onInvalidCapture(value: js.Any): this.type = set("onInvalidCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onIonChange(value: /* event */ CustomEvent => Unit): this.type = set("onIonChange", js.Any.fromFunction1(value))
     @scala.inline
     def onKeyDown(value: SyntheticKeyboardEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
     @scala.inline
+    def onKeyDownCapture(value: js.Any): this.type = set("onKeyDownCapture", value.asInstanceOf[js.Any])
+    @scala.inline
     def onKeyPress(value: SyntheticKeyboardEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
+    @scala.inline
+    def onKeyPressCapture(value: js.Any): this.type = set("onKeyPressCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onKeyUp(value: SyntheticKeyboardEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoad(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
+    def onKeyUpCapture(value: js.Any): this.type = set("onKeyUpCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onLoadStart(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onLoadStart", js.Any.fromFunction1(value))
+    def onLoad(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
     @scala.inline
-    def onLoadedData(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onLoadedData", js.Any.fromFunction1(value))
+    def onLoadCapture(value: js.Any): this.type = set("onLoadCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onLoadedMetadata(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onLoadedMetadata", js.Any.fromFunction1(value))
+    def onLoadStart(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onLoadStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoadStartCapture(value: js.Any): this.type = set("onLoadStartCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onLoadedData(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onLoadedData", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoadedDataCapture(value: js.Any): this.type = set("onLoadedDataCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onLoadedMetadata(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onLoadedMetadata", js.Any.fromFunction1(value))
+    @scala.inline
+    def onLoadedMetadataCapture(value: js.Any): this.type = set("onLoadedMetadataCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onLostPointerCapture(value: js.Any): this.type = set("onLostPointerCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onLostPointerCaptureCapture(value: js.Any): this.type = set("onLostPointerCaptureCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onMouseDown(value: SyntheticMouseEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseDownCapture(value: js.Any): this.type = set("onMouseDownCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onMouseEnter(value: SyntheticMouseEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
     @scala.inline
@@ -328,73 +420,143 @@ object IonRadioGroup {
     @scala.inline
     def onMouseMove(value: SyntheticMouseEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onMouseMove", js.Any.fromFunction1(value))
     @scala.inline
+    def onMouseMoveCapture(value: js.Any): this.type = set("onMouseMoveCapture", value.asInstanceOf[js.Any])
+    @scala.inline
     def onMouseOut(value: SyntheticMouseEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onMouseOut", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseOutCapture(value: js.Any): this.type = set("onMouseOutCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onMouseOver(value: SyntheticMouseEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onMouseOver", js.Any.fromFunction1(value))
     @scala.inline
+    def onMouseOverCapture(value: js.Any): this.type = set("onMouseOverCapture", value.asInstanceOf[js.Any])
+    @scala.inline
     def onMouseUp(value: SyntheticMouseEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onMouseUp", js.Any.fromFunction1(value))
+    @scala.inline
+    def onMouseUpCapture(value: js.Any): this.type = set("onMouseUpCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onPaste(value: SyntheticClipboardEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onPaste", js.Any.fromFunction1(value))
     @scala.inline
-    def onPause(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onPause", js.Any.fromFunction1(value))
+    def onPasteCapture(value: js.Any): this.type = set("onPasteCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onPlay(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onPlay", js.Any.fromFunction1(value))
+    def onPause(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onPause", js.Any.fromFunction1(value))
     @scala.inline
-    def onPlaying(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onPlaying", js.Any.fromFunction1(value))
+    def onPauseCapture(value: js.Any): this.type = set("onPauseCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onPlay(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onPlay", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPlayCapture(value: js.Any): this.type = set("onPlayCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onPlaying(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onPlaying", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPlayingCapture(value: js.Any): this.type = set("onPlayingCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onPointerCancel(value: SyntheticPointerEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onPointerCancel", js.Any.fromFunction1(value))
     @scala.inline
+    def onPointerCancelCapture(value: js.Any): this.type = set("onPointerCancelCapture", value.asInstanceOf[js.Any])
+    @scala.inline
     def onPointerDown(value: SyntheticPointerEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onPointerDown", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPointerDownCapture(value: js.Any): this.type = set("onPointerDownCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onPointerEnter(value: SyntheticPointerEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onPointerEnter", js.Any.fromFunction1(value))
     @scala.inline
+    def onPointerEnterCapture(value: js.Any): this.type = set("onPointerEnterCapture", value.asInstanceOf[js.Any])
+    @scala.inline
     def onPointerLeave(value: SyntheticPointerEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onPointerLeave", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPointerLeaveCapture(value: js.Any): this.type = set("onPointerLeaveCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onPointerMove(value: SyntheticPointerEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onPointerMove", js.Any.fromFunction1(value))
     @scala.inline
+    def onPointerMoveCapture(value: js.Any): this.type = set("onPointerMoveCapture", value.asInstanceOf[js.Any])
+    @scala.inline
     def onPointerOut(value: SyntheticPointerEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onPointerOut", js.Any.fromFunction1(value))
+    @scala.inline
+    def onPointerOutCapture(value: js.Any): this.type = set("onPointerOutCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onPointerOver(value: SyntheticPointerEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onPointerOver", js.Any.fromFunction1(value))
     @scala.inline
+    def onPointerOverCapture(value: js.Any): this.type = set("onPointerOverCapture", value.asInstanceOf[js.Any])
+    @scala.inline
     def onPointerUp(value: SyntheticPointerEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onPointerUp", js.Any.fromFunction1(value))
     @scala.inline
-    def onProgress(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
+    def onPointerUpCapture(value: js.Any): this.type = set("onPointerUpCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onRateChange(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onRateChange", js.Any.fromFunction1(value))
+    def onProgress(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
     @scala.inline
-    def onReset(value: SyntheticEvent[EventTarget with HTMLIonRadioGroupElement, Event_] => Unit): this.type = set("onReset", js.Any.fromFunction1(value))
+    def onProgressCapture(value: js.Any): this.type = set("onProgressCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onRateChange(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onRateChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onRateChangeCapture(value: js.Any): this.type = set("onRateChangeCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onReset(value: SyntheticEvent[EventTarget with HTMLIonRadioGroupElement, Event] => Unit): this.type = set("onReset", js.Any.fromFunction1(value))
+    @scala.inline
+    def onResetCapture(value: js.Any): this.type = set("onResetCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onScroll(value: SyntheticUIEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
     @scala.inline
-    def onSeeked(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onSeeked", js.Any.fromFunction1(value))
+    def onScrollCapture(value: js.Any): this.type = set("onScrollCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onSeeking(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onSeeking", js.Any.fromFunction1(value))
+    def onSeeked(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onSeeked", js.Any.fromFunction1(value))
     @scala.inline
-    def onSelect(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    def onSeekedCapture(value: js.Any): this.type = set("onSeekedCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onStalled(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onStalled", js.Any.fromFunction1(value))
+    def onSeeking(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onSeeking", js.Any.fromFunction1(value))
     @scala.inline
-    def onSubmit(value: SyntheticEvent[EventTarget with HTMLIonRadioGroupElement, Event_] => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))
+    def onSeekingCapture(value: js.Any): this.type = set("onSeekingCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onSuspend(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onSuspend", js.Any.fromFunction1(value))
+    def onSelect(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline
-    def onTimeUpdate(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onTimeUpdate", js.Any.fromFunction1(value))
+    def onSelectCapture(value: js.Any): this.type = set("onSelectCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onStalled(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onStalled", js.Any.fromFunction1(value))
+    @scala.inline
+    def onStalledCapture(value: js.Any): this.type = set("onStalledCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onSubmit(value: SyntheticEvent[EventTarget with HTMLIonRadioGroupElement, Event] => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSubmitCapture(value: js.Any): this.type = set("onSubmitCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onSuspend(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onSuspend", js.Any.fromFunction1(value))
+    @scala.inline
+    def onSuspendCapture(value: js.Any): this.type = set("onSuspendCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onTimeUpdate(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onTimeUpdate", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTimeUpdateCapture(value: js.Any): this.type = set("onTimeUpdateCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onTouchCancel(value: SyntheticTouchEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))
     @scala.inline
+    def onTouchCancelCapture(value: js.Any): this.type = set("onTouchCancelCapture", value.asInstanceOf[js.Any])
+    @scala.inline
     def onTouchEnd(value: SyntheticTouchEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onTouchEnd", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchEndCapture(value: js.Any): this.type = set("onTouchEndCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onTouchMove(value: SyntheticTouchEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onTouchMove", js.Any.fromFunction1(value))
     @scala.inline
+    def onTouchMoveCapture(value: js.Any): this.type = set("onTouchMoveCapture", value.asInstanceOf[js.Any])
+    @scala.inline
     def onTouchStart(value: SyntheticTouchEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onTouchStart", js.Any.fromFunction1(value))
+    @scala.inline
+    def onTouchStartCapture(value: js.Any): this.type = set("onTouchStartCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onTransitionEnd(value: SyntheticTransitionEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onTransitionEnd", js.Any.fromFunction1(value))
     @scala.inline
-    def onVolumeChange(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
+    def onTransitionEndCapture(value: js.Any): this.type = set("onTransitionEndCapture", value.asInstanceOf[js.Any])
     @scala.inline
-    def onWaiting(value: SyntheticEvent[Event_, HTMLIonRadioGroupElement] => Unit): this.type = set("onWaiting", js.Any.fromFunction1(value))
+    def onVolumeChange(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
+    @scala.inline
+    def onVolumeChangeCapture(value: js.Any): this.type = set("onVolumeChangeCapture", value.asInstanceOf[js.Any])
+    @scala.inline
+    def onWaiting(value: SyntheticEvent[Event, HTMLIonRadioGroupElement] => Unit): this.type = set("onWaiting", js.Any.fromFunction1(value))
+    @scala.inline
+    def onWaitingCapture(value: js.Any): this.type = set("onWaitingCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def onWheel(value: SyntheticWheelEvent[HTMLIonRadioGroupElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
+    @scala.inline
+    def onWheelCapture(value: js.Any): this.type = set("onWheelCapture", value.asInstanceOf[js.Any])
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
@@ -438,92 +600,6 @@ object IonRadioGroup {
   }
   
   def withProps(p: IonRadioGroupPickHTMLAttr): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  @scala.inline
-  def apply(
-    onAbortCapture: js.Any,
-    onAnimationEndCapture: js.Any,
-    onAnimationIterationCapture: js.Any,
-    onAnimationStartCapture: js.Any,
-    onAuxClickCapture: js.Any,
-    onBeforeInputCapture: js.Any,
-    onBlurCapture: js.Any,
-    onCanPlayCapture: js.Any,
-    onCanPlayThroughCapture: js.Any,
-    onChangeCapture: js.Any,
-    onClickCapture: js.Any,
-    onCompositionEndCapture: js.Any,
-    onCompositionStartCapture: js.Any,
-    onCompositionUpdateCapture: js.Any,
-    onContextMenuCapture: js.Any,
-    onCopyCapture: js.Any,
-    onCutCapture: js.Any,
-    onDoubleClickCapture: js.Any,
-    onDragCapture: js.Any,
-    onDragEndCapture: js.Any,
-    onDragEnterCapture: js.Any,
-    onDragExitCapture: js.Any,
-    onDragLeaveCapture: js.Any,
-    onDragOverCapture: js.Any,
-    onDragStartCapture: js.Any,
-    onDropCapture: js.Any,
-    onDurationChangeCapture: js.Any,
-    onEmptiedCapture: js.Any,
-    onEncryptedCapture: js.Any,
-    onEndedCapture: js.Any,
-    onErrorCapture: js.Any,
-    onFocusCapture: js.Any,
-    onGotPointerCapture: js.Any,
-    onGotPointerCaptureCapture: js.Any,
-    onInputCapture: js.Any,
-    onInvalidCapture: js.Any,
-    onKeyDownCapture: js.Any,
-    onKeyPressCapture: js.Any,
-    onKeyUpCapture: js.Any,
-    onLoadCapture: js.Any,
-    onLoadStartCapture: js.Any,
-    onLoadedDataCapture: js.Any,
-    onLoadedMetadataCapture: js.Any,
-    onLostPointerCapture: js.Any,
-    onLostPointerCaptureCapture: js.Any,
-    onMouseDownCapture: js.Any,
-    onMouseMoveCapture: js.Any,
-    onMouseOutCapture: js.Any,
-    onMouseOverCapture: js.Any,
-    onMouseUpCapture: js.Any,
-    onPasteCapture: js.Any,
-    onPauseCapture: js.Any,
-    onPlayCapture: js.Any,
-    onPlayingCapture: js.Any,
-    onPointerCancelCapture: js.Any,
-    onPointerDownCapture: js.Any,
-    onPointerEnterCapture: js.Any,
-    onPointerLeaveCapture: js.Any,
-    onPointerMoveCapture: js.Any,
-    onPointerOutCapture: js.Any,
-    onPointerOverCapture: js.Any,
-    onPointerUpCapture: js.Any,
-    onProgressCapture: js.Any,
-    onRateChangeCapture: js.Any,
-    onResetCapture: js.Any,
-    onScrollCapture: js.Any,
-    onSeekedCapture: js.Any,
-    onSeekingCapture: js.Any,
-    onSelectCapture: js.Any,
-    onStalledCapture: js.Any,
-    onSubmitCapture: js.Any,
-    onSuspendCapture: js.Any,
-    onTimeUpdateCapture: js.Any,
-    onTouchCancelCapture: js.Any,
-    onTouchEndCapture: js.Any,
-    onTouchMoveCapture: js.Any,
-    onTouchStartCapture: js.Any,
-    onTransitionEndCapture: js.Any,
-    onVolumeChangeCapture: js.Any,
-    onWaitingCapture: js.Any,
-    onWheelCapture: js.Any
-  ): Builder = {
-    val __props = js.Dynamic.literal(onAbortCapture = onAbortCapture.asInstanceOf[js.Any], onAnimationEndCapture = onAnimationEndCapture.asInstanceOf[js.Any], onAnimationIterationCapture = onAnimationIterationCapture.asInstanceOf[js.Any], onAnimationStartCapture = onAnimationStartCapture.asInstanceOf[js.Any], onAuxClickCapture = onAuxClickCapture.asInstanceOf[js.Any], onBeforeInputCapture = onBeforeInputCapture.asInstanceOf[js.Any], onBlurCapture = onBlurCapture.asInstanceOf[js.Any], onCanPlayCapture = onCanPlayCapture.asInstanceOf[js.Any], onCanPlayThroughCapture = onCanPlayThroughCapture.asInstanceOf[js.Any], onChangeCapture = onChangeCapture.asInstanceOf[js.Any], onClickCapture = onClickCapture.asInstanceOf[js.Any], onCompositionEndCapture = onCompositionEndCapture.asInstanceOf[js.Any], onCompositionStartCapture = onCompositionStartCapture.asInstanceOf[js.Any], onCompositionUpdateCapture = onCompositionUpdateCapture.asInstanceOf[js.Any], onContextMenuCapture = onContextMenuCapture.asInstanceOf[js.Any], onCopyCapture = onCopyCapture.asInstanceOf[js.Any], onCutCapture = onCutCapture.asInstanceOf[js.Any], onDoubleClickCapture = onDoubleClickCapture.asInstanceOf[js.Any], onDragCapture = onDragCapture.asInstanceOf[js.Any], onDragEndCapture = onDragEndCapture.asInstanceOf[js.Any], onDragEnterCapture = onDragEnterCapture.asInstanceOf[js.Any], onDragExitCapture = onDragExitCapture.asInstanceOf[js.Any], onDragLeaveCapture = onDragLeaveCapture.asInstanceOf[js.Any], onDragOverCapture = onDragOverCapture.asInstanceOf[js.Any], onDragStartCapture = onDragStartCapture.asInstanceOf[js.Any], onDropCapture = onDropCapture.asInstanceOf[js.Any], onDurationChangeCapture = onDurationChangeCapture.asInstanceOf[js.Any], onEmptiedCapture = onEmptiedCapture.asInstanceOf[js.Any], onEncryptedCapture = onEncryptedCapture.asInstanceOf[js.Any], onEndedCapture = onEndedCapture.asInstanceOf[js.Any], onErrorCapture = onErrorCapture.asInstanceOf[js.Any], onFocusCapture = onFocusCapture.asInstanceOf[js.Any], onGotPointerCapture = onGotPointerCapture.asInstanceOf[js.Any], onGotPointerCaptureCapture = onGotPointerCaptureCapture.asInstanceOf[js.Any], onInputCapture = onInputCapture.asInstanceOf[js.Any], onInvalidCapture = onInvalidCapture.asInstanceOf[js.Any], onKeyDownCapture = onKeyDownCapture.asInstanceOf[js.Any], onKeyPressCapture = onKeyPressCapture.asInstanceOf[js.Any], onKeyUpCapture = onKeyUpCapture.asInstanceOf[js.Any], onLoadCapture = onLoadCapture.asInstanceOf[js.Any], onLoadStartCapture = onLoadStartCapture.asInstanceOf[js.Any], onLoadedDataCapture = onLoadedDataCapture.asInstanceOf[js.Any], onLoadedMetadataCapture = onLoadedMetadataCapture.asInstanceOf[js.Any], onLostPointerCapture = onLostPointerCapture.asInstanceOf[js.Any], onLostPointerCaptureCapture = onLostPointerCaptureCapture.asInstanceOf[js.Any], onMouseDownCapture = onMouseDownCapture.asInstanceOf[js.Any], onMouseMoveCapture = onMouseMoveCapture.asInstanceOf[js.Any], onMouseOutCapture = onMouseOutCapture.asInstanceOf[js.Any], onMouseOverCapture = onMouseOverCapture.asInstanceOf[js.Any], onMouseUpCapture = onMouseUpCapture.asInstanceOf[js.Any], onPasteCapture = onPasteCapture.asInstanceOf[js.Any], onPauseCapture = onPauseCapture.asInstanceOf[js.Any], onPlayCapture = onPlayCapture.asInstanceOf[js.Any], onPlayingCapture = onPlayingCapture.asInstanceOf[js.Any], onPointerCancelCapture = onPointerCancelCapture.asInstanceOf[js.Any], onPointerDownCapture = onPointerDownCapture.asInstanceOf[js.Any], onPointerEnterCapture = onPointerEnterCapture.asInstanceOf[js.Any], onPointerLeaveCapture = onPointerLeaveCapture.asInstanceOf[js.Any], onPointerMoveCapture = onPointerMoveCapture.asInstanceOf[js.Any], onPointerOutCapture = onPointerOutCapture.asInstanceOf[js.Any], onPointerOverCapture = onPointerOverCapture.asInstanceOf[js.Any], onPointerUpCapture = onPointerUpCapture.asInstanceOf[js.Any], onProgressCapture = onProgressCapture.asInstanceOf[js.Any], onRateChangeCapture = onRateChangeCapture.asInstanceOf[js.Any], onResetCapture = onResetCapture.asInstanceOf[js.Any], onScrollCapture = onScrollCapture.asInstanceOf[js.Any], onSeekedCapture = onSeekedCapture.asInstanceOf[js.Any], onSeekingCapture = onSeekingCapture.asInstanceOf[js.Any], onSelectCapture = onSelectCapture.asInstanceOf[js.Any], onStalledCapture = onStalledCapture.asInstanceOf[js.Any], onSubmitCapture = onSubmitCapture.asInstanceOf[js.Any], onSuspendCapture = onSuspendCapture.asInstanceOf[js.Any], onTimeUpdateCapture = onTimeUpdateCapture.asInstanceOf[js.Any], onTouchCancelCapture = onTouchCancelCapture.asInstanceOf[js.Any], onTouchEndCapture = onTouchEndCapture.asInstanceOf[js.Any], onTouchMoveCapture = onTouchMoveCapture.asInstanceOf[js.Any], onTouchStartCapture = onTouchStartCapture.asInstanceOf[js.Any], onTransitionEndCapture = onTransitionEndCapture.asInstanceOf[js.Any], onVolumeChangeCapture = onVolumeChangeCapture.asInstanceOf[js.Any], onWaitingCapture = onWaitingCapture.asInstanceOf[js.Any], onWheelCapture = onWheelCapture.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[IonRadioGroupPickHTMLAttr]))
-  }
+  implicit def make(companion: IonRadioGroup.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

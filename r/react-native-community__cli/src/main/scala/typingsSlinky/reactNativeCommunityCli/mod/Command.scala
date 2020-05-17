@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeCommunityCli.mod
 
-import typingsSlinky.reactNativeCommunityCli.AnonCmd
-import typingsSlinky.reactNativeCommunityCli.AnonDefault
+import typingsSlinky.reactNativeCommunityCli.anon.Cmd
+import typingsSlinky.reactNativeCommunityCli.anon.Default
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,9 +10,9 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Command extends js.Object {
   var description: js.UndefOr[String] = js.native
-  var examples: js.UndefOr[js.Array[AnonCmd]] = js.native
+  var examples: js.UndefOr[js.Array[Cmd]] = js.native
   var name: String = js.native
-  var options: js.UndefOr[js.Array[AnonDefault]] = js.native
+  var options: js.UndefOr[js.Array[Default]] = js.native
   def func(argv: js.Array[String], ctx: Config_, args: Record[String, String]): js.Promise[Unit] = js.native
 }
 
@@ -53,7 +53,7 @@ object Command {
         ret
     }
     @scala.inline
-    def withExamples(value: js.Array[AnonCmd]): Self = {
+    def withExamples(value: js.Array[Cmd]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("examples")(value.asInstanceOf[js.Any])
         ret
@@ -65,7 +65,7 @@ object Command {
         ret
     }
     @scala.inline
-    def withOptions(value: js.Array[AnonDefault]): Self = {
+    def withOptions(value: js.Array[Default]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

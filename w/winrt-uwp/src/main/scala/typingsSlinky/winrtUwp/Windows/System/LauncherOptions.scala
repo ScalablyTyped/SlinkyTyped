@@ -8,10 +8,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Specifies the options used to launch the default app for a file or URI. */
-@JSGlobal("Windows.System.LauncherOptions")
 @js.native
-/** Creates and initializes a new instance of the launcher options object. */
-class LauncherOptions () extends js.Object {
+trait LauncherOptions extends js.Object {
   /** Gets or sets the content type that is associated with a URI that represents a file on the network. */
   var contentType: String = js.native
   /** Launch a target app and have the currently running source app remain on the screen by sharing the space equally with the target app or by taking up more or less space than the target app. */
@@ -32,5 +30,92 @@ class LauncherOptions () extends js.Object {
   var treatAsUntrusted: Boolean = js.native
   /** Gets the user interface (UI) options when starting a default app. */
   var ui: LauncherUIOptions = js.native
+}
+
+object LauncherOptions {
+  @scala.inline
+  def apply(
+    contentType: String,
+    desiredRemainingView: ViewSizePreference,
+    displayApplicationPicker: Boolean,
+    fallbackUri: Uri,
+    neighboringFilesQuery: StorageFileQueryResult,
+    preferredApplicationDisplayName: String,
+    preferredApplicationPackageFamilyName: String,
+    targetApplicationPackageFamilyName: String,
+    treatAsUntrusted: Boolean,
+    ui: LauncherUIOptions
+  ): LauncherOptions = {
+    val __obj = js.Dynamic.literal(contentType = contentType.asInstanceOf[js.Any], desiredRemainingView = desiredRemainingView.asInstanceOf[js.Any], displayApplicationPicker = displayApplicationPicker.asInstanceOf[js.Any], fallbackUri = fallbackUri.asInstanceOf[js.Any], neighboringFilesQuery = neighboringFilesQuery.asInstanceOf[js.Any], preferredApplicationDisplayName = preferredApplicationDisplayName.asInstanceOf[js.Any], preferredApplicationPackageFamilyName = preferredApplicationPackageFamilyName.asInstanceOf[js.Any], targetApplicationPackageFamilyName = targetApplicationPackageFamilyName.asInstanceOf[js.Any], treatAsUntrusted = treatAsUntrusted.asInstanceOf[js.Any], ui = ui.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LauncherOptions]
+  }
+  @scala.inline
+  implicit class LauncherOptionsOps[Self <: LauncherOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContentType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDesiredRemainingView(value: ViewSizePreference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("desiredRemainingView")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisplayApplicationPicker(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayApplicationPicker")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFallbackUri(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNeighboringFilesQuery(value: StorageFileQueryResult): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("neighboringFilesQuery")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreferredApplicationDisplayName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preferredApplicationDisplayName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreferredApplicationPackageFamilyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preferredApplicationPackageFamilyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetApplicationPackageFamilyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetApplicationPackageFamilyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTreatAsUntrusted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("treatAsUntrusted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUi(value: LauncherUIOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ui")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

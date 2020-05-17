@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeElements.mod
 
-import typingsSlinky.reactNativeElements.PartialTouchableOpacityPr
+import typingsSlinky.reactNativeElements.anon.PartialTouchableOpacityPr
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

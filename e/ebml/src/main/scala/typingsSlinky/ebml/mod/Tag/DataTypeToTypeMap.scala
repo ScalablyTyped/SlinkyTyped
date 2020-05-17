@@ -72,18 +72,6 @@ object DataTypeToTypeMap {
         ret.asInstanceOf[js.Dynamic].updateDynamic("u")(value.asInstanceOf[js.Any])
         ret
     }
-    @scala.inline
-    def withM(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("m")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutM: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("m")(js.undefined)
-        ret
-    }
   }
   
 }

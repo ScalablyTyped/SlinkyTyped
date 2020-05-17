@@ -13,15 +13,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents an HTTP Response as used by `fetch()`.
   */
-@JSGlobal("Response")
 @js.native
-class Response () extends js.Object {
-  def this(body: String) = this()
-  def this(body: Blob) = this()
-  def this(body: FormData) = this()
-  def this(body: String, init: ResponseInit) = this()
-  def this(body: Blob, init: ResponseInit) = this()
-  def this(body: FormData, init: ResponseInit) = this()
+trait Response extends js.Object {
   val bodyUsed: Boolean = js.native
   val headers: Headers = js.native
   val ok: Boolean = js.native
@@ -35,13 +28,5 @@ class Response () extends js.Object {
   @JSName("json")
   def json_T[T](): js.Promise[T] = js.native
   def text(): js.Promise[String] = js.native
-}
-
-/* static members */
-@JSGlobal("Response")
-@js.native
-object Response extends js.Object {
-  def error(): Response = js.native
-  def redirect(url: String, status: Double): Response = js.native
 }
 

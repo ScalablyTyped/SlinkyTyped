@@ -1,6 +1,6 @@
 package typingsSlinky.pdf2image.mod
 
-import typingsSlinky.pdf2image.TypeofimportedVm
+import typingsSlinky.pdf2image.anon.TypeofimportedVm
 import typingsSlinky.pdf2image.pdf2imageStrings.Asterisk
 import typingsSlinky.pdf2image.pdf2imageStrings.Dotjpg
 import typingsSlinky.pdf2image.pdf2imageStrings.Dotpng

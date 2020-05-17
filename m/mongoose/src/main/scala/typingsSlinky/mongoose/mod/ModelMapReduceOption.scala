@@ -1,6 +1,6 @@
 package typingsSlinky.mongoose.mod
 
-import typingsSlinky.mongoose.AnonInline
+import typingsSlinky.mongoose.anon.Inline
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait ModelMapReduceOption[T, Key, Val] extends js.Object {
   var limit: js.UndefOr[Double] = js.native
   var map: js.Function | String = js.native
   /** sets the output target for the map reduce job. default: {inline: 1} */
-  var out: js.UndefOr[AnonInline] = js.native
+  var out: js.UndefOr[Inline] = js.native
   /** query filter object. */
   var query: js.UndefOr[js.Any] = js.native
   var readPreference: js.UndefOr[String] = js.native
@@ -104,7 +104,7 @@ object ModelMapReduceOption {
         ret
     }
     @scala.inline
-    def withOut(value: AnonInline): Self[T, Key, Val] = {
+    def withOut(value: Inline): Self[T, Key, Val] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("out")(value.asInstanceOf[js.Any])
         ret

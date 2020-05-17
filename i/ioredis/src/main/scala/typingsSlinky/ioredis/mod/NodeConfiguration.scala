@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait NodeConfiguration extends js.Object {
+trait NodeConfiguration extends ClusterNode {
   var host: js.UndefOr[String] = js.native
   var port: js.UndefOr[Double] = js.native
 }

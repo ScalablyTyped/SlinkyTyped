@@ -11,7 +11,7 @@ import typingsSlinky.formatjsIntlUtils.unifiedNumberformatTypesMod.UnifiedNumber
 import typingsSlinky.formatjsIntlUtils.unifiedNumberformatTypesMod.UnifiedNumberFormatOptionsSignDisplay
 import typingsSlinky.formatjsIntlUtils.unifiedNumberformatTypesMod.UnifiedNumberFormatOptionsStyle
 import typingsSlinky.formatjsIntlUtils.unifiedNumberformatTypesMod.UnifiedNumberFormatOptionsUnitDisplay
-import typingsSlinky.reactIntl.UnifiedNumberFormatOption
+import typingsSlinky.reactIntl.anon.UnifiedNumberFormatOption
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

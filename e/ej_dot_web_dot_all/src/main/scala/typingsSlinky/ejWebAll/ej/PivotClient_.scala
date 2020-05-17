@@ -1,18 +1,11 @@
 package typingsSlinky.ejWebAll.ej
 
-import org.scalajs.dom.raw.Element
-import typingsSlinky.ejWebAll.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("ej.PivotClient")
 @js.native
-class PivotClient_ protected () extends Widget_ {
-  def this(element: JQuery) = this()
-  def this(element: Element) = this()
-  def this(element: JQuery, options: typingsSlinky.ejWebAll.ej.PivotClient.Model) = this()
-  def this(element: Element, options: typingsSlinky.ejWebAll.ej.PivotClient.Model) = this()
+trait PivotClient_ extends Widget_ {
   var defaults: typingsSlinky.ejWebAll.ej.PivotClient.Model = js.native
   @JSName("model")
   var model_PivotClient_ : typingsSlinky.ejWebAll.ej.PivotClient.Model = js.native

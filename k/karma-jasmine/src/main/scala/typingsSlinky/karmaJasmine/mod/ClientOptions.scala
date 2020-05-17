@@ -1,6 +1,6 @@
 package typingsSlinky.karmaJasmine.mod
 
-import typingsSlinky.karmaJasmine.EnvConfigurationtimeoutIn
+import typingsSlinky.karmaJasmine.anon.EnvConfigurationtimeoutIn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

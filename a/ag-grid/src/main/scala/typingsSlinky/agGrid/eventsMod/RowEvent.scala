@@ -1,9 +1,9 @@
 package typingsSlinky.agGrid.eventsMod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.agGrid.columnApiMod.ColumnApi
 import typingsSlinky.agGrid.gridApiMod.GridApi
 import typingsSlinky.agGrid.rowNodeMod.RowNode
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait RowEvent extends AgGridEvent {
   var context: js.Any = js.native
   var data: js.Any = js.native
-  var event: js.UndefOr[Event_] = js.native
+  var event: js.UndefOr[Event] = js.native
   var node: RowNode = js.native
   var rowIndex: Double = js.native
   var rowPinned: String = js.native
@@ -71,7 +71,7 @@ object RowEvent {
         ret
     }
     @scala.inline
-    def withEvent(value: Event_): Self = {
+    def withEvent(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
         ret

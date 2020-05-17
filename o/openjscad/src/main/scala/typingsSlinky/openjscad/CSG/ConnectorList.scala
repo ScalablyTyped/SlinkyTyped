@@ -4,10 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("CSG.ConnectorList")
 @js.native
-class ConnectorList protected () extends js.Object {
-  def this(connectors: js.Array[Connector]) = this()
+trait ConnectorList extends js.Object {
   var closed: Boolean = js.native
   var connectors_ : js.Array[Connector] = js.native
   def appendConnector(conn: Connector): Unit = js.native
@@ -16,13 +14,62 @@ class ConnectorList protected () extends js.Object {
   def verify(): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("CSG.ConnectorList")
-@js.native
-object ConnectorList extends js.Object {
-  var defaultNormal: js.Array[Double] = js.native
-  def _fromPath2DExplicit(path2D: js.Any, angleIsh: js.Any): ConnectorList = js.native
-  def _fromPath2DTangents(path2D: js.Any, start: js.Any, end: js.Any): ConnectorList = js.native
-  def fromPath2D(path2D: Path2D, arg1: js.Any, arg2: js.Any): ConnectorList = js.native
+object ConnectorList {
+  @scala.inline
+  def apply(
+    appendConnector: Connector => Unit,
+    closed: Boolean,
+    connectors_ : js.Array[Connector],
+    followWith: js.Any => typingsSlinky.openjscad.CSG,
+    setClosed: Boolean => Unit,
+    verify: () => Unit
+  ): ConnectorList = {
+    val __obj = js.Dynamic.literal(appendConnector = js.Any.fromFunction1(appendConnector), closed = closed.asInstanceOf[js.Any], connectors_ = connectors_.asInstanceOf[js.Any], followWith = js.Any.fromFunction1(followWith), setClosed = js.Any.fromFunction1(setClosed), verify = js.Any.fromFunction0(verify))
+    __obj.asInstanceOf[ConnectorList]
+  }
+  @scala.inline
+  implicit class ConnectorListOps[Self <: ConnectorList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppendConnector(value: Connector => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendConnector")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withClosed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConnectors_(value: js.Array[Connector]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("connectors_")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFollowWith(value: js.Any => typingsSlinky.openjscad.CSG): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("followWith")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetClosed(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setClosed")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withVerify(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("verify")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobile.customInputMod
 
-import typingsSlinky.antdMobile.AnonAutoAdjustHeight
+import typingsSlinky.antdMobile.anon.AutoAdjustHeight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +15,6 @@ class default protected () extends NumberInput {
 @JSImport("antd-mobile/lib/input-item/CustomInput", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonAutoAdjustHeight = js.native
+  var defaultProps: AutoAdjustHeight = js.native
 }
 

@@ -1,11 +1,9 @@
 package typingsSlinky.heremaps.H.map.layer
 
-import typingsSlinky.heremaps.H.clustering.Provider
 import typingsSlinky.heremaps.H.geo.Rect
 import typingsSlinky.heremaps.H.map.ICopyright
 import typingsSlinky.heremaps.H.map.layer.IMarkerLayer.Response
 import typingsSlinky.heremaps.H.map.layer.IMarkerLayer.TiledResponse
-import typingsSlinky.heremaps.H.map.layer.ObjectLayer.Options
 import typingsSlinky.heremaps.H.map.layer.ObjectLayer.OverlaysResponse
 import typingsSlinky.heremaps.H.map.provider.ObjectProvider
 import typingsSlinky.heremaps.H.map.provider.Tile
@@ -18,20 +16,10 @@ import scala.scalajs.js.annotation._
   * This class represents a layer which renders map objects. Spatial objects like polygons and polylines a rendered to tiles before being passed to the enigne. Point objects like markers
   * are provided as objects given an rectangular area.
   */
-@JSGlobal("H.map.layer.ObjectLayer")
 @js.native
-class ObjectLayer_ protected ()
+trait ObjectLayer_
   extends Layer
      with ITileLayer {
-  def this(provider: Provider) = this()
-  /**
-    * Constructor
-    * @param provider {H.map.provider.ObjectProvider} - the ObjectProvider which provides the map objects to this object layer.
-    * @param opt_options {H.map.layer.ObjectLayer.Options=} - The options for this layer
-    */
-  def this(provider: ObjectProvider) = this()
-  def this(provider: Provider, opt_options: Options) = this()
-  def this(provider: ObjectProvider, opt_options: Options) = this()
   /* InferMemberOverrides */
   override def addOnDisposeCallback(callback: js.Function0[Unit], opt_scope: js.Object): Unit = js.native
   /**

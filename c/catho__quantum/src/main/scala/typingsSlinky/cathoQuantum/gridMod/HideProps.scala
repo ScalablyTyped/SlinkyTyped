@@ -1,6 +1,6 @@
 package typingsSlinky.cathoQuantum.gridMod
 
-import typingsSlinky.cathoQuantum.AnonBreakpointsObject
+import typingsSlinky.cathoQuantum.anon.BreakpointsObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait HideProps extends js.Object {
   var large: js.UndefOr[Boolean] = js.native
   var medium: js.UndefOr[Boolean] = js.native
   var small: js.UndefOr[Boolean] = js.native
-  var theme: js.UndefOr[AnonBreakpointsObject] = js.native
+  var theme: js.UndefOr[BreakpointsObject] = js.native
   var xlarge: js.UndefOr[Boolean] = js.native
   var xsmall: js.UndefOr[Boolean] = js.native
 }
@@ -64,7 +64,7 @@ object HideProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonBreakpointsObject): Self = {
+    def withTheme(value: BreakpointsObject): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

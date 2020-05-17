@@ -1,7 +1,7 @@
 package typingsSlinky.reactOnsenui.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameAnimationOptions
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameAnimationOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

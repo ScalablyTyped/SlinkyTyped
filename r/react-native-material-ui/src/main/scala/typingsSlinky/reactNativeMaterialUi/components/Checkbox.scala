@@ -2,7 +2,7 @@ package typingsSlinky.reactNativeMaterialUi.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNativeMaterialUi.AnonLabel
+import typingsSlinky.reactNativeMaterialUi.anon.Label
 import typingsSlinky.reactNativeMaterialUi.mod.CheckBoxProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,7 +24,7 @@ object Checkbox {
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def style(value: AnonLabel): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: Label): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def uncheckedIcon(value: String): this.type = set("uncheckedIcon", value.asInstanceOf[js.Any])
   }

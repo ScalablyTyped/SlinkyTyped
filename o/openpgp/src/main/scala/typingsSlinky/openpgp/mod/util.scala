@@ -1,6 +1,6 @@
 package typingsSlinky.openpgp.mod
 
-import typingsSlinky.openpgp.AnonComment
+import typingsSlinky.openpgp.anon.Comment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -106,7 +106,7 @@ object util extends js.Object {
   /**
     * Format user id for internal use.
     */
-  def formatUserId(id: AnonComment): String = js.native
+  def formatUserId(id: Comment): String = js.native
   /**
     * Get native Node.js Buffer constructor. This should be used since
     * Buffer is not available under browserify.
@@ -169,7 +169,7 @@ object util extends js.Object {
   /**
     * Parse user id.
     */
-  def parseUserId(userId: String): AnonComment = js.native
+  def parseUserId(userId: String): Comment = js.native
   /**
     * Helper function to print a debug message. Debug
     * messages are only printed if

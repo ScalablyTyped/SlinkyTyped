@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents app capture settings. */
-@JSGlobal("Windows.Media.Capture.AppCaptureSettings")
 @js.native
-abstract class AppCaptureSettings () extends js.Object {
+trait AppCaptureSettings extends js.Object {
   /** Gets the alternate shortcut key settings. */
   var alternateShortcutKeys: AppCaptureAlternateShortcutKeys = js.native
   /** Gets or sets the app capture destination folder. */
@@ -54,5 +53,183 @@ abstract class AppCaptureSettings () extends js.Object {
   var videoEncodingBitrateMode: AppCaptureVideoEncodingBitrateMode = js.native
   /** Gets or sets the video encoding resolution mode. */
   var videoEncodingResolutionMode: AppCaptureVideoEncodingResolutionMode = js.native
+}
+
+object AppCaptureSettings {
+  @scala.inline
+  def apply(
+    alternateShortcutKeys: AppCaptureAlternateShortcutKeys,
+    appCaptureDestinationFolder: StorageFolder,
+    audioEncodingBitrate: Double,
+    customVideoEncodingBitrate: Double,
+    customVideoEncodingHeight: Double,
+    customVideoEncodingWidth: Double,
+    hasHardwareEncoder: Boolean,
+    historicalBufferLength: Double,
+    historicalBufferLengthUnit: AppCaptureHistoricalBufferLengthUnit,
+    isAppCaptureEnabled: Boolean,
+    isAudioCaptureEnabled: Boolean,
+    isCpuConstrained: Boolean,
+    isDisabledByPolicy: Boolean,
+    isGpuConstrained: Boolean,
+    isHistoricalCaptureEnabled: Boolean,
+    isHistoricalCaptureOnBatteryAllowed: Boolean,
+    isHistoricalCaptureOnWirelessDisplayAllowed: Boolean,
+    isMemoryConstrained: Boolean,
+    isMicrophoneCaptureEnabled: js.Any,
+    maximumRecordLength: Double,
+    screenshotDestinationFolder: StorageFolder,
+    videoEncodingBitrateMode: AppCaptureVideoEncodingBitrateMode,
+    videoEncodingResolutionMode: AppCaptureVideoEncodingResolutionMode
+  ): AppCaptureSettings = {
+    val __obj = js.Dynamic.literal(alternateShortcutKeys = alternateShortcutKeys.asInstanceOf[js.Any], appCaptureDestinationFolder = appCaptureDestinationFolder.asInstanceOf[js.Any], audioEncodingBitrate = audioEncodingBitrate.asInstanceOf[js.Any], customVideoEncodingBitrate = customVideoEncodingBitrate.asInstanceOf[js.Any], customVideoEncodingHeight = customVideoEncodingHeight.asInstanceOf[js.Any], customVideoEncodingWidth = customVideoEncodingWidth.asInstanceOf[js.Any], hasHardwareEncoder = hasHardwareEncoder.asInstanceOf[js.Any], historicalBufferLength = historicalBufferLength.asInstanceOf[js.Any], historicalBufferLengthUnit = historicalBufferLengthUnit.asInstanceOf[js.Any], isAppCaptureEnabled = isAppCaptureEnabled.asInstanceOf[js.Any], isAudioCaptureEnabled = isAudioCaptureEnabled.asInstanceOf[js.Any], isCpuConstrained = isCpuConstrained.asInstanceOf[js.Any], isDisabledByPolicy = isDisabledByPolicy.asInstanceOf[js.Any], isGpuConstrained = isGpuConstrained.asInstanceOf[js.Any], isHistoricalCaptureEnabled = isHistoricalCaptureEnabled.asInstanceOf[js.Any], isHistoricalCaptureOnBatteryAllowed = isHistoricalCaptureOnBatteryAllowed.asInstanceOf[js.Any], isHistoricalCaptureOnWirelessDisplayAllowed = isHistoricalCaptureOnWirelessDisplayAllowed.asInstanceOf[js.Any], isMemoryConstrained = isMemoryConstrained.asInstanceOf[js.Any], isMicrophoneCaptureEnabled = isMicrophoneCaptureEnabled.asInstanceOf[js.Any], maximumRecordLength = maximumRecordLength.asInstanceOf[js.Any], screenshotDestinationFolder = screenshotDestinationFolder.asInstanceOf[js.Any], videoEncodingBitrateMode = videoEncodingBitrateMode.asInstanceOf[js.Any], videoEncodingResolutionMode = videoEncodingResolutionMode.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AppCaptureSettings]
+  }
+  @scala.inline
+  implicit class AppCaptureSettingsOps[Self <: AppCaptureSettings] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAlternateShortcutKeys(value: AppCaptureAlternateShortcutKeys): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("alternateShortcutKeys")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAppCaptureDestinationFolder(value: StorageFolder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appCaptureDestinationFolder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAudioEncodingBitrate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("audioEncodingBitrate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCustomVideoEncodingBitrate(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customVideoEncodingBitrate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCustomVideoEncodingHeight(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customVideoEncodingHeight")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCustomVideoEncodingWidth(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("customVideoEncodingWidth")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHasHardwareEncoder(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasHardwareEncoder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHistoricalBufferLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("historicalBufferLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHistoricalBufferLengthUnit(value: AppCaptureHistoricalBufferLengthUnit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("historicalBufferLengthUnit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsAppCaptureEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAppCaptureEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsAudioCaptureEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAudioCaptureEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsCpuConstrained(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isCpuConstrained")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsDisabledByPolicy(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isDisabledByPolicy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsGpuConstrained(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isGpuConstrained")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsHistoricalCaptureEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isHistoricalCaptureEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsHistoricalCaptureOnBatteryAllowed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isHistoricalCaptureOnBatteryAllowed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsHistoricalCaptureOnWirelessDisplayAllowed(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isHistoricalCaptureOnWirelessDisplayAllowed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsMemoryConstrained(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isMemoryConstrained")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsMicrophoneCaptureEnabled(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isMicrophoneCaptureEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaximumRecordLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("maximumRecordLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScreenshotDestinationFolder(value: StorageFolder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("screenshotDestinationFolder")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVideoEncodingBitrateMode(value: AppCaptureVideoEncodingBitrateMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoEncodingBitrateMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVideoEncodingResolutionMode(value: AppCaptureVideoEncodingResolutionMode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("videoEncodingResolutionMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

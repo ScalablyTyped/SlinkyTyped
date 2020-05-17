@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ListSqlTokenType extends _SqlTokenType {
+trait ListSqlTokenType extends SqlTokenType {
   var glue: SqlTokenType = js.native
   var members: js.Array[SqlTokenType] = js.native
   var `type`: js.Symbol = js.native

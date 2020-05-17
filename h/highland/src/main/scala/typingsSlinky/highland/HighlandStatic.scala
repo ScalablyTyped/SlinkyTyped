@@ -1,9 +1,9 @@
 package typingsSlinky.highland
 
-import typingsSlinky.highland.Highland_.MappingHint
-import typingsSlinky.highland.Highland_.Nil
-import typingsSlinky.highland.Highland_.OnFinished
-import typingsSlinky.highland.Highland_.Stream
+import typingsSlinky.highland.Highland.MappingHint
+import typingsSlinky.highland.Highland.Nil
+import typingsSlinky.highland.Highland.OnFinished
+import typingsSlinky.highland.Highland.Stream
 import typingsSlinky.node.NodeJS.EventEmitter
 import typingsSlinky.node.NodeJS.ReadableStream
 import scala.scalajs.js

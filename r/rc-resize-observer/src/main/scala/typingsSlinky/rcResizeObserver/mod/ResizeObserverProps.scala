@@ -1,7 +1,7 @@
 package typingsSlinky.rcResizeObserver.mod
 
 import slinky.core.TagMod
-import typingsSlinky.rcResizeObserver.AnonHeight
+import typingsSlinky.rcResizeObserver.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait ResizeObserverProps extends js.Object {
   var children: TagMod[Any] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
   /** Trigger if element resized. Will always trigger when first time render. */
-  var onResize: js.UndefOr[js.Function1[/* size */ AnonHeight, Unit]] = js.native
+  var onResize: js.UndefOr[js.Function1[/* size */ Height, Unit]] = js.native
 }
 
 object ResizeObserverProps {
@@ -51,7 +51,7 @@ object ResizeObserverProps {
         ret
     }
     @scala.inline
-    def withOnResize(value: /* size */ AnonHeight => Unit): Self = {
+    def withOnResize(value: /* size */ Height => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onResize")(js.Any.fromFunction1(value))
         ret

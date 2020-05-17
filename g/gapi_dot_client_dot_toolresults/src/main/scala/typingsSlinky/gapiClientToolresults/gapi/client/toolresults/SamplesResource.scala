@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientToolresults.gapi.client.toolresults
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientToolresults.AnonHistoryId
-import typingsSlinky.gapiClientToolresults.AnonKey
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientToolresults.anon.HistoryId
+import typingsSlinky.gapiClientToolresults.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait SamplesResource extends js.Object {
     *
     * May return any of the following canonical error codes: - NOT_FOUND - The containing PerfSampleSeries does not exist
     */
-  def batchCreate(request: AnonHistoryId): Request_[BatchCreatePerfSamplesResponse] = js.native
+  def batchCreate(request: HistoryId): Request[BatchCreatePerfSamplesResponse] = js.native
   /**
     * Lists the Performance Samples of a given Sample Series - The list results are sorted by timestamps ascending - The default page size is 500 samples;
     * and maximum size allowed 5000 - The response token indicates the last returned PerfSample timestamp - When the results size exceeds the page size,
@@ -25,14 +25,14 @@ trait SamplesResource extends js.Object {
     * May return any of the following canonical error codes: - OUT_OF_RANGE - The specified request page_token is out of valid range - NOT_FOUND - The
     * containing PerfSampleSeries does not exist
     */
-  def list(request: AnonKey): Request_[ListPerfSamplesResponse] = js.native
+  def list(request: Key): Request[ListPerfSamplesResponse] = js.native
 }
 
 object SamplesResource {
   @scala.inline
   def apply(
-    batchCreate: AnonHistoryId => Request_[BatchCreatePerfSamplesResponse],
-    list: AnonKey => Request_[ListPerfSamplesResponse]
+    batchCreate: HistoryId => Request[BatchCreatePerfSamplesResponse],
+    list: Key => Request[ListPerfSamplesResponse]
   ): SamplesResource = {
     val __obj = js.Dynamic.literal(batchCreate = js.Any.fromFunction1(batchCreate), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[SamplesResource]
@@ -44,13 +44,13 @@ object SamplesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBatchCreate(value: AnonHistoryId => Request_[BatchCreatePerfSamplesResponse]): Self = {
+    def withBatchCreate(value: HistoryId => Request[BatchCreatePerfSamplesResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("batchCreate")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonKey => Request_[ListPerfSamplesResponse]): Self = {
+    def withList(value: Key => Request[ListPerfSamplesResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

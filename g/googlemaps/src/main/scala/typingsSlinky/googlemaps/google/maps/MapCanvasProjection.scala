@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("google.maps.MapCanvasProjection")
 @js.native
-class MapCanvasProjection () extends MVCObject {
+trait MapCanvasProjection extends MVCObject {
   def fromContainerPixelToLatLng(pixel: Point): LatLng = js.native
   def fromContainerPixelToLatLng(pixel: Point, nowrap: Boolean): LatLng = js.native
   def fromDivPixelToLatLng(pixel: Point): LatLng = js.native

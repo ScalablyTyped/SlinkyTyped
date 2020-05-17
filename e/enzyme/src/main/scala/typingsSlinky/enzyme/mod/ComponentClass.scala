@@ -9,6 +9,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ComponentClass[Props]
-  extends Instantiable1[/* props */ Props, ReactComponentClass[Props]]
+  extends ComponentType[Props]
+     with EnzymeSelector
+     with Instantiable1[/* props */ Props, ReactComponentClass[Props]]
      with Instantiable2[/* props */ Props, /* context */ js.Any, ReactComponentClass[Props]]
 

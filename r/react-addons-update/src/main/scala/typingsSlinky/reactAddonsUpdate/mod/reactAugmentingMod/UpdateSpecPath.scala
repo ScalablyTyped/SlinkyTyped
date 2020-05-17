@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UpdateSpecPath
   extends /* key */ StringDictionary[UpdateSpec]
-     with _UpdateSpec
+     with UpdateSpec
 
 object UpdateSpecPath {
   @scala.inline

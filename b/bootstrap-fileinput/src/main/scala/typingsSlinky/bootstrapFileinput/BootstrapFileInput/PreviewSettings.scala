@@ -1,20 +1,20 @@
 package typingsSlinky.bootstrapFileinput.BootstrapFileInput
 
-import typingsSlinky.bootstrapFileinput.AnonHeight
+import typingsSlinky.bootstrapFileinput.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait PreviewSettings extends js.Object {
-  var audio: js.UndefOr[AnonHeight] = js.native
-  var flash: js.UndefOr[AnonHeight] = js.native
-  var html: js.UndefOr[AnonHeight] = js.native
-  var image: js.UndefOr[AnonHeight] = js.native
-  var `object`: js.UndefOr[AnonHeight] = js.native
-  var other: js.UndefOr[AnonHeight] = js.native
-  var text: js.UndefOr[AnonHeight] = js.native
-  var video: js.UndefOr[AnonHeight] = js.native
+  var audio: js.UndefOr[Height] = js.native
+  var flash: js.UndefOr[Height] = js.native
+  var html: js.UndefOr[Height] = js.native
+  var image: js.UndefOr[Height] = js.native
+  var `object`: js.UndefOr[Height] = js.native
+  var other: js.UndefOr[Height] = js.native
+  var text: js.UndefOr[Height] = js.native
+  var video: js.UndefOr[Height] = js.native
 }
 
 object PreviewSettings {
@@ -30,7 +30,7 @@ object PreviewSettings {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAudio(value: AnonHeight): Self = {
+    def withAudio(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("audio")(value.asInstanceOf[js.Any])
         ret
@@ -42,7 +42,7 @@ object PreviewSettings {
         ret
     }
     @scala.inline
-    def withFlash(value: AnonHeight): Self = {
+    def withFlash(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("flash")(value.asInstanceOf[js.Any])
         ret
@@ -54,7 +54,7 @@ object PreviewSettings {
         ret
     }
     @scala.inline
-    def withHtml(value: AnonHeight): Self = {
+    def withHtml(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("html")(value.asInstanceOf[js.Any])
         ret
@@ -66,7 +66,7 @@ object PreviewSettings {
         ret
     }
     @scala.inline
-    def withImage(value: AnonHeight): Self = {
+    def withImage(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
         ret
@@ -78,7 +78,7 @@ object PreviewSettings {
         ret
     }
     @scala.inline
-    def withObject(value: AnonHeight): Self = {
+    def withObject(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
         ret
@@ -90,7 +90,7 @@ object PreviewSettings {
         ret
     }
     @scala.inline
-    def withOther(value: AnonHeight): Self = {
+    def withOther(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("other")(value.asInstanceOf[js.Any])
         ret
@@ -102,7 +102,7 @@ object PreviewSettings {
         ret
     }
     @scala.inline
-    def withText(value: AnonHeight): Self = {
+    def withText(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
         ret
@@ -114,7 +114,7 @@ object PreviewSettings {
         ret
     }
     @scala.inline
-    def withVideo(value: AnonHeight): Self = {
+    def withVideo(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("video")(value.asInstanceOf[js.Any])
         ret

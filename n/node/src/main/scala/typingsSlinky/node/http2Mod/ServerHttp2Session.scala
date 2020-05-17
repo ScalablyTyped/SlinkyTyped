@@ -1,6 +1,6 @@
 package typingsSlinky.node.http2Mod
 
-import typingsSlinky.node.AnonOrigin
+import typingsSlinky.node.anon.Origin
 import typingsSlinky.node.netMod.Socket
 import typingsSlinky.node.nodeStrings.stream
 import typingsSlinky.node.tlsMod.TLSSocket
@@ -67,7 +67,7 @@ trait ServerHttp2Session extends Http2Session {
       Unit
     ]
   ): this.type = js.native
-  def origin(args: (String | URL_ | AnonOrigin)*): Unit = js.native
+  def origin(args: (String | URL_ | Origin)*): Unit = js.native
   @JSName("prependListener")
   def prependListener_connect(
     event: typingsSlinky.node.nodeStrings.connect,

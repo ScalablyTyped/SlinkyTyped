@@ -3,7 +3,7 @@ package typingsSlinky.officeUiFabricReact.choiceGroupTypesMod
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactElement
-import typingsSlinky.officeUiFabricReact.AnonWidth
+import typingsSlinky.officeUiFabricReact.anon.Width
 import typingsSlinky.officeUiFabricReact.choiceGroupOptionTypesMod.IChoiceGroupOptionStyleProps
 import typingsSlinky.officeUiFabricReact.choiceGroupOptionTypesMod.IChoiceGroupOptionStyles
 import typingsSlinky.officeUiFabricReact.iconTypesMod.IIconProps
@@ -34,7 +34,7 @@ trait IChoiceGroupOption extends InputHTMLAttributes[HTMLElement | HTMLInputElem
     * The width and height of the image in px for choice field.
     * @defaultvalue `{ width: 32, height: 32 }`
     */
-  var imageSize: js.UndefOr[AnonWidth] = js.native
+  var imageSize: js.UndefOr[Width] = js.native
   /**
     * Image to display with this option.
     */
@@ -130,7 +130,7 @@ object IChoiceGroupOption {
         ret
     }
     @scala.inline
-    def withImageSize(value: AnonWidth): Self = {
+    def withImageSize(value: Width): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("imageSize")(value.asInstanceOf[js.Any])
         ret

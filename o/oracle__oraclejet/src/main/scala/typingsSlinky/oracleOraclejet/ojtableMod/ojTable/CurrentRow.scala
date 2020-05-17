@@ -1,26 +1,22 @@
 package typingsSlinky.oracleOraclejet.ojtableMod.ojTable
 
+import typingsSlinky.oracleOraclejet.anon.RowIndexRowKey
+import typingsSlinky.oracleOraclejet.anon.RowKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // tslint:disable-next-line interface-over-type-literal
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.oracleOraclejet.AnonRowKey[K]
-  - typingsSlinky.oracleOraclejet.AnonRowIndexRowKey[K]
+  - typingsSlinky.oracleOraclejet.anon.RowKey[K]
+  - typingsSlinky.oracleOraclejet.anon.RowIndexRowKey[K]
 */
 trait CurrentRow[K] extends js.Object
 
 object CurrentRow {
   @scala.inline
-  def AnonRowKey[K](rowIndex: Double): CurrentRow[K] = {
-    val __obj = js.Dynamic.literal(rowIndex = rowIndex.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CurrentRow[K]]
-  }
+  implicit def apply[K](value: RowIndexRowKey[K]): CurrentRow[K] = value.asInstanceOf[CurrentRow[K]]
   @scala.inline
-  def AnonRowIndexRowKey[K](rowKey: K): CurrentRow[K] = {
-    val __obj = js.Dynamic.literal(rowKey = rowKey.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CurrentRow[K]]
-  }
+  implicit def apply[K](value: RowKey[K]): CurrentRow[K] = value.asInstanceOf[CurrentRow[K]]
 }
 

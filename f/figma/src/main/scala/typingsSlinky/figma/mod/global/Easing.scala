@@ -1,0 +1,38 @@
+package typingsSlinky.figma.mod.global
+
+import typingsSlinky.figma.figmaStrings.EASE_IN
+import typingsSlinky.figma.figmaStrings.EASE_IN_AND_OUT
+import typingsSlinky.figma.figmaStrings.EASE_OUT
+import typingsSlinky.figma.figmaStrings.LINEAR
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Easing extends js.Object {
+  val `type`: EASE_IN | EASE_OUT | EASE_IN_AND_OUT | LINEAR = js.native
+}
+
+object Easing {
+  @scala.inline
+  def apply(`type`: EASE_IN | EASE_OUT | EASE_IN_AND_OUT | LINEAR): Easing = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Easing]
+  }
+  @scala.inline
+  implicit class EasingOps[Self <: Easing] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withType(value: EASE_IN | EASE_OUT | EASE_IN_AND_OUT | LINEAR): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

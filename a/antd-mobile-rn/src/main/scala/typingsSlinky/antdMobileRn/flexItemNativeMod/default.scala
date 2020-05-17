@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobileRn.flexItemNativeMod
 
-import typingsSlinky.antdMobileRn.AnonFlexNumber
+import typingsSlinky.antdMobileRn.anon.FlexNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ class default () extends FlexItem
 @JSImport("antd-mobile-rn/lib/flex/FlexItem.native", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonFlexNumber = js.native
+  var defaultProps: FlexNumber = js.native
 }
 

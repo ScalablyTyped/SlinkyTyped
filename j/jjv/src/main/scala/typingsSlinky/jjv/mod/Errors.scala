@@ -1,19 +1,19 @@
 package typingsSlinky.jjv.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.jjv.AnonRequired
+import typingsSlinky.jjv.anon.Required
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Errors extends js.Object {
-  var validation: StringDictionary[AnonRequired] = js.native
+  var validation: StringDictionary[Required] = js.native
 }
 
 object Errors {
   @scala.inline
-  def apply(validation: StringDictionary[AnonRequired]): Errors = {
+  def apply(validation: StringDictionary[Required]): Errors = {
     val __obj = js.Dynamic.literal(validation = validation.asInstanceOf[js.Any])
     __obj.asInstanceOf[Errors]
   }
@@ -24,7 +24,7 @@ object Errors {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withValidation(value: StringDictionary[AnonRequired]): Self = {
+    def withValidation(value: StringDictionary[Required]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validation")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.hapiNes.clientMod
 
-import typingsSlinky.hapiNes.AnonCode
+import typingsSlinky.hapiNes.anon.Code
 import typingsSlinky.hapiNes.clientMod.Client.ClientConnectOptions
 import typingsSlinky.hapiNes.clientMod.Client.ClientOptions
 import typingsSlinky.hapiNes.clientMod.Client.ClientRequestOptions
@@ -21,7 +21,7 @@ class Client_ protected () extends js.Object {
   def disconnect(): js.Promise[_] = js.native
   def message(message: js.Any): js.Promise[_] = js.native
   def onConnect(): Unit = js.native
-  def onDisconnect(willReconnect: Boolean, log: AnonCode): Unit = js.native
+  def onDisconnect(willReconnect: Boolean, log: Code): Unit = js.native
   def onError(err: js.Any): Unit = js.native
   def onUpdate(message: js.Any): Unit = js.native
   def overrideReconnectionAuth(auth: js.Any): Unit = js.native

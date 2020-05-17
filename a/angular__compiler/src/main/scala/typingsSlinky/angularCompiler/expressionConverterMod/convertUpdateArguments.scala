@@ -1,6 +1,6 @@
 package typingsSlinky.angularCompiler.expressionConverterMod
 
-import typingsSlinky.angularCompiler.AnonArgs
+import typingsSlinky.angularCompiler.anon.Args
 import typingsSlinky.angularCompiler.astMod.AST
 import typingsSlinky.angularCompiler.outputAstMod.Expression
 import scala.scalajs.js
@@ -15,6 +15,6 @@ object convertUpdateArguments extends js.Object {
     contextVariableExpression: Expression,
     expressionWithArgumentsToExtract: AST,
     bindingId: String
-  ): AnonArgs = js.native
+  ): Args = js.native
 }
 

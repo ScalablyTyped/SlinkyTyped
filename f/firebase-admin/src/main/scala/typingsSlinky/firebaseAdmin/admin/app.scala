@@ -91,7 +91,5 @@ object app extends js.Object {
     def storage(): Storage = js.native
   }
   
-  def apply(): App = js.native
-  def apply(name: String): App = js.native
 }
 

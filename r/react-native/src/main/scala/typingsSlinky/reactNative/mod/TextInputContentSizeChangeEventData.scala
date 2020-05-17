@@ -1,18 +1,18 @@
 package typingsSlinky.reactNative.mod
 
-import typingsSlinky.reactNative.AnonHeight
+import typingsSlinky.reactNative.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait TextInputContentSizeChangeEventData extends js.Object {
-  var contentSize: AnonHeight = js.native
+  var contentSize: Height = js.native
 }
 
 object TextInputContentSizeChangeEventData {
   @scala.inline
-  def apply(contentSize: AnonHeight): TextInputContentSizeChangeEventData = {
+  def apply(contentSize: Height): TextInputContentSizeChangeEventData = {
     val __obj = js.Dynamic.literal(contentSize = contentSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextInputContentSizeChangeEventData]
   }
@@ -23,7 +23,7 @@ object TextInputContentSizeChangeEventData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContentSize(value: AnonHeight): Self = {
+    def withContentSize(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentSize")(value.asInstanceOf[js.Any])
         ret

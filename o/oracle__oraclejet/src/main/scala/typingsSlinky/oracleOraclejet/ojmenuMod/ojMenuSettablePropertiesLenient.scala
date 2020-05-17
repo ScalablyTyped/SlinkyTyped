@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojmenuMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonAriaFocusSkipLink
+import typingsSlinky.oracleOraclejet.anon.AriaFocusSkipLink
 import typingsSlinky.oracleOraclejet.ojmenuMod.ojMenu.OpenOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +13,7 @@ trait ojMenuSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
   var disabled: js.UndefOr[Boolean] = js.native
   var openOptions: js.UndefOr[OpenOptions] = js.native
-  var translations: js.UndefOr[AnonAriaFocusSkipLink] = js.native
+  var translations: js.UndefOr[AriaFocusSkipLink] = js.native
 }
 
 object ojMenuSettablePropertiesLenient {
@@ -53,7 +53,7 @@ object ojMenuSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonAriaFocusSkipLink): Self = {
+    def withTranslations(value: AriaFocusSkipLink): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

@@ -5,10 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("java.util.ArrayList")
 @js.native
-class ArrayList[T] () extends List[T] {
-  def this(initialCapacity: Double) = this()
+trait ArrayList[T] extends List[T] {
   var array: js.Array[T] = js.native
   @JSName(js.Symbol.iterator)
   var iterator: js.Function0[js.Function0[IterableIterator[T]]] = js.native

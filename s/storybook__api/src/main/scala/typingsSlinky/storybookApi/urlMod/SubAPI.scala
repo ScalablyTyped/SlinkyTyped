@@ -1,7 +1,7 @@
 package typingsSlinky.storybookApi.urlMod
 
 import typingsSlinky.reachRouter.mod.NavigateOptions
-import typingsSlinky.storybookApi.AnonPath
+import typingsSlinky.storybookApi.anon.Path
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SubAPI extends js.Object {
   def getQueryParam(key: String): js.UndefOr[String] = js.native
-  def getUrlState(): AnonPath = js.native
+  def getUrlState(): Path = js.native
   def navigateUrl(url: String, options: NavigateOptions[js.Object]): Unit = js.native
   def setQueryParams(input: QueryParams): Unit = js.native
 }
@@ -18,7 +18,7 @@ object SubAPI {
   @scala.inline
   def apply(
     getQueryParam: String => js.UndefOr[String],
-    getUrlState: () => AnonPath,
+    getUrlState: () => Path,
     navigateUrl: (String, NavigateOptions[js.Object]) => Unit,
     setQueryParams: QueryParams => Unit
   ): SubAPI = {
@@ -38,7 +38,7 @@ object SubAPI {
         ret
     }
     @scala.inline
-    def withGetUrlState(value: () => AnonPath): Self = {
+    def withGetUrlState(value: () => Path): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getUrlState")(js.Any.fromFunction0(value))
         ret

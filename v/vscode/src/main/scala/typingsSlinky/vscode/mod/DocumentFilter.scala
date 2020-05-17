@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DocumentFilter extends js.Object {
+trait DocumentFilter extends DocumentSelector {
   /**
   		 * A language id, like `typescript`.
   		 */

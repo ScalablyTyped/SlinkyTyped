@@ -1,16 +1,11 @@
 package typingsSlinky.igniteUi.Infragistics
 
-import typingsSlinky.igniteUi.GridExcelExporterCallbacks
-import typingsSlinky.igniteUi.GridExcelExporterSettings
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Infragistics.GridExcelExporter")
 @js.native
-class GridExcelExporter protected () extends js.Object {
-  def this(callbacks: GridExcelExporterCallbacks) = this()
-  def this(settings: GridExcelExporterSettings) = this()
+trait GridExcelExporter extends js.Object {
   /**
   	 * Exports the provided igGrid to Excel document.
   	 *
@@ -19,5 +14,27 @@ class GridExcelExporter protected () extends js.Object {
   	 * @param userCallbacks Callbacks for the events.
   	 */
   def exportGrid(grid: js.Object, userSettings: js.Object, userCallbacks: js.Object): Unit = js.native
+}
+
+object GridExcelExporter {
+  @scala.inline
+  def apply(exportGrid: (js.Object, js.Object, js.Object) => Unit): GridExcelExporter = {
+    val __obj = js.Dynamic.literal(exportGrid = js.Any.fromFunction3(exportGrid))
+    __obj.asInstanceOf[GridExcelExporter]
+  }
+  @scala.inline
+  implicit class GridExcelExporterOps[Self <: GridExcelExporter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withExportGrid(value: (js.Object, js.Object, js.Object) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exportGrid")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

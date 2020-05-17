@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonLocObject
+import typingsSlinky.astTypes.anon.LocObject
 import typingsSlinky.astTypes.kindsMod.GenericTypeAnnotationKind
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.kindsMod.MemberTypeAnnotationKind
@@ -13,6 +13,6 @@ import scala.scalajs.js.annotation._
 trait MemberTypeAnnotationBuilder extends js.Object {
   def apply(`object`: IdentifierKind, property: GenericTypeAnnotationKind): MemberTypeAnnotation = js.native
   def apply(`object`: IdentifierKind, property: MemberTypeAnnotationKind): MemberTypeAnnotation = js.native
-  def from(params: AnonLocObject): MemberTypeAnnotation = js.native
+  def from(params: LocObject): MemberTypeAnnotation = js.native
 }
 

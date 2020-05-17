@@ -4,11 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("MSHTML.XDomainRequest")
 @js.native
-class XDomainRequest protected () extends js.Object {
+trait XDomainRequest extends js.Object {
   @JSName("MSHTML.XDomainRequest_typekey")
   var MSHTMLDotXDomainRequest_typekey: XDomainRequest = js.native
   val constructor: js.Any = js.native
+}
+
+object XDomainRequest {
+  @scala.inline
+  def apply(MSHTMLDotXDomainRequest_typekey: XDomainRequest, constructor: js.Any): XDomainRequest = {
+    val __obj = js.Dynamic.literal(constructor = constructor.asInstanceOf[js.Any])
+    __obj.updateDynamic("MSHTML.XDomainRequest_typekey")(MSHTMLDotXDomainRequest_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[XDomainRequest]
+  }
+  @scala.inline
+  implicit class XDomainRequestOps[Self <: XDomainRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMSHTMLDotXDomainRequest_typekey(value: XDomainRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.XDomainRequest_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withConstructor(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("constructor")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

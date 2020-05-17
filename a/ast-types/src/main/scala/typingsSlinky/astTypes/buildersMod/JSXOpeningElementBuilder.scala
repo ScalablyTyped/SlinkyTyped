@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonSelfClosing
+import typingsSlinky.astTypes.anon.SelfClosing
 import typingsSlinky.astTypes.kindsMod.JSXAttributeKind
 import typingsSlinky.astTypes.kindsMod.JSXIdentifierKind
 import typingsSlinky.astTypes.kindsMod.JSXMemberExpressionKind
@@ -34,6 +34,6 @@ trait JSXOpeningElementBuilder extends js.Object {
     attributes: js.Array[JSXAttributeKind | JSXSpreadAttributeKind],
     selfClosing: Boolean
   ): JSXOpeningElement = js.native
-  def from(params: AnonSelfClosing): JSXOpeningElement = js.native
+  def from(params: SelfClosing): JSXOpeningElement = js.native
 }
 

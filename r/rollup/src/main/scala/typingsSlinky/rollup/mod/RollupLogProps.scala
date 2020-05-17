@@ -1,6 +1,6 @@
 package typingsSlinky.rollup.mod
 
-import typingsSlinky.rollup.AnonColumn
+import typingsSlinky.rollup.anon.Column
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait RollupLogProps extends js.Object {
   var frame: js.UndefOr[String] = js.native
   var hook: js.UndefOr[String] = js.native
   var id: js.UndefOr[String] = js.native
-  var loc: js.UndefOr[AnonColumn] = js.native
+  var loc: js.UndefOr[Column] = js.native
   var message: String = js.native
   var name: js.UndefOr[String] = js.native
   var plugin: js.UndefOr[String] = js.native
@@ -87,7 +87,7 @@ object RollupLogProps {
         ret
     }
     @scala.inline
-    def withLoc(value: AnonColumn): Self = {
+    def withLoc(value: Column): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loc")(value.asInstanceOf[js.Any])
         ret

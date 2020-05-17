@@ -6,5 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ArrayClassNameArg extends Array[ClassNameArg]
+trait ArrayClassNameArg
+  extends Array[ClassNameArg]
+     with ClassNameArg
 

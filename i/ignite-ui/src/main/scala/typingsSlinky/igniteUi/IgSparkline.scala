@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -348,7 +348,7 @@ object IgSparkline {
         ret
     }
     @scala.inline
-    def withDataBinding(value: (/* event */ Event_, /* ui */ DataBindingEventUIParam) => Unit): Self = {
+    def withDataBinding(value: (/* event */ Event, /* ui */ DataBindingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataBinding")(js.Any.fromFunction2(value))
         ret
@@ -360,7 +360,7 @@ object IgSparkline {
         ret
     }
     @scala.inline
-    def withDataBound(value: (/* event */ Event_, /* ui */ DataBoundEventUIParam) => Unit): Self = {
+    def withDataBound(value: (/* event */ Event, /* ui */ DataBoundEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataBound")(js.Any.fromFunction2(value))
         ret
@@ -492,7 +492,7 @@ object IgSparkline {
         ret
     }
     @scala.inline
-    def withHideTooltip(value: (/* event */ Event_, /* ui */ HideTooltipEventUIParam) => Unit): Self = {
+    def withHideTooltip(value: (/* event */ Event, /* ui */ HideTooltipEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hideTooltip")(js.Any.fromFunction2(value))
         ret
@@ -924,7 +924,7 @@ object IgSparkline {
         ret
     }
     @scala.inline
-    def withUpdateTooltip(value: (/* event */ Event_, /* ui */ UpdateTooltipEventUIParam) => Unit): Self = {
+    def withUpdateTooltip(value: (/* event */ Event, /* ui */ UpdateTooltipEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("updateTooltip")(js.Any.fromFunction2(value))
         ret

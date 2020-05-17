@@ -1,6 +1,8 @@
 package typingsSlinky.cssom
 
 import org.scalablytyped.runtime.NumberDictionary
+import typingsSlinky.cssom.anon.Error
+import typingsSlinky.cssom.anon.Expression
 import typingsSlinky.cssom.cssomNumbers.`1001`
 import typingsSlinky.cssom.cssomNumbers.`12`
 import typingsSlinky.cssom.cssomNumbers.`13`
@@ -127,7 +129,7 @@ object mod extends js.Object {
   @js.native
   class CSSValueExpression protected () extends CSSValue {
     def this(token: String, idx: Double) = this()
-    def parse(): AnonError | AnonExpression = js.native
+    def parse(): Error | Expression = js.native
   }
   
   @js.native

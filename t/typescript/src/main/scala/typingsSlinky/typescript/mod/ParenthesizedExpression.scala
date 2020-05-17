@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 trait ParenthesizedExpression
   extends PrimaryExpression
      with JSDocContainer
-     with _HasJSDoc {
+     with HasJSDoc {
   var expression: Expression = js.native
   @JSName("kind")
   var kind_ParenthesizedExpression: typingsSlinky.typescript.mod.SyntaxKind.ParenthesizedExpression = js.native

@@ -3,7 +3,6 @@ package typingsSlinky.amapJsApiScale.AMap
 import org.scalajs.dom.raw.Position
 import typingsSlinky.amapJsApi.AMap.EventEmitter
 import typingsSlinky.amapJsApi.AMap.Pixel
-import typingsSlinky.amapJsApiScale.AMap.Scale.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,10 +10,8 @@ import scala.scalajs.js.annotation._
 /**
   * 比例尺插件
   */
-@JSGlobal("AMap.Scale")
 @js.native
-class Scale_ () extends EventEmitter {
-  def this(options: Options) = this()
+trait Scale_ extends EventEmitter {
   /**
     * 相对于地图容器左上角的偏移量
     */

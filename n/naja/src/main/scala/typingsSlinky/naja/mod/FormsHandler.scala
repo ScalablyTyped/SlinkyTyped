@@ -1,7 +1,7 @@
 package typingsSlinky.naja.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation._
 trait FormsHandler extends js.Object {
   var netteForms: js.Object = js.native
   def initForms(element: Element): Unit = js.native
-  def processForm(event: Event_): Unit = js.native
+  def processForm(event: Event): Unit = js.native
 }
 
 object FormsHandler {
   @scala.inline
-  def apply(initForms: Element => Unit, netteForms: js.Object, processForm: Event_ => Unit): FormsHandler = {
+  def apply(initForms: Element => Unit, netteForms: js.Object, processForm: Event => Unit): FormsHandler = {
     val __obj = js.Dynamic.literal(initForms = js.Any.fromFunction1(initForms), netteForms = netteForms.asInstanceOf[js.Any], processForm = js.Any.fromFunction1(processForm))
     __obj.asInstanceOf[FormsHandler]
   }
@@ -38,7 +38,7 @@ object FormsHandler {
         ret
     }
     @scala.inline
-    def withProcessForm(value: Event_ => Unit): Self = {
+    def withProcessForm(value: Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("processForm")(js.Any.fromFunction1(value))
         ret

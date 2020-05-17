@@ -1,23 +1,16 @@
 package typingsSlinky.androiduix.androidui.widget
 
-import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.androiduix.android.content.Context
 import typingsSlinky.androiduix.android.view.View
 import typingsSlinky.androiduix.android.widget.FrameLayout
 import typingsSlinky.androiduix.androidui.widget.PullRefreshLoadLayout.FooterView
 import typingsSlinky.androiduix.androidui.widget.PullRefreshLoadLayout.HeaderView
 import typingsSlinky.androiduix.androidui.widget.PullRefreshLoadLayout.RefreshLoadListener
-import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("androidui.widget.PullRefreshLoadLayout")
 @js.native
-class PullRefreshLoadLayout_ protected () extends FrameLayout {
-  def this(context: Context) = this()
-  def this(context: Context, bindElement: HTMLElement) = this()
-  def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String]) = this()
+trait PullRefreshLoadLayout_ extends FrameLayout {
   var autoLoadScrollAtBottom: js.Any = js.native
   var contentOverY: js.Any = js.native
   var contentView: js.Any = js.native

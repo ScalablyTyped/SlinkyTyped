@@ -1,12 +1,13 @@
 package typingsSlinky.agGrid.gridOptionsMod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.agGrid.AnonInstantiable
-import typingsSlinky.agGrid.AnonInstantiableAny
-import typingsSlinky.agGrid.AnonInstantiableICellRendererComp
-import typingsSlinky.agGrid.AnonInstantiableILoadingOverlayComp
-import typingsSlinky.agGrid.AnonInstantiableINoRowsOverlayComp
+import typingsSlinky.agGrid.anon.Instantiable
+import typingsSlinky.agGrid.anon.InstantiableAny
+import typingsSlinky.agGrid.anon.InstantiableICellRendererComp
+import typingsSlinky.agGrid.anon.InstantiableILoadingOverlayComp
+import typingsSlinky.agGrid.anon.InstantiableINoRowsOverlayComp
 import typingsSlinky.agGrid.colDefMod.ColDef
 import typingsSlinky.agGrid.colDefMod.ColGroupDef
 import typingsSlinky.agGrid.colDefMod.IAggFunc
@@ -78,7 +79,6 @@ import typingsSlinky.agGrid.iDatasourceMod.IDatasource
 import typingsSlinky.agGrid.iServerSideDatasourceMod.IServerSideDatasource
 import typingsSlinky.agGrid.iViewportDatasourceMod.IViewportDatasource
 import typingsSlinky.agGrid.rowNodeMod.RowNode
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -118,7 +118,7 @@ trait GridOptions extends ComponentHolder {
   var context: js.UndefOr[js.Any] = js.native
   var contractColumnSelection: js.UndefOr[Boolean] = js.native
   var datasource: js.UndefOr[IDatasource] = js.native
-  var dateComponent: js.UndefOr[AnonInstantiable] = js.native
+  var dateComponent: js.UndefOr[Instantiable] = js.native
   var dateComponentFramework: js.UndefOr[js.Any] = js.native
   var debug: js.UndefOr[Boolean] = js.native
   var defaultColDef: js.UndefOr[ColDef] = js.native
@@ -126,7 +126,7 @@ trait GridOptions extends ComponentHolder {
   var defaultExportParams: js.UndefOr[CsvExportParams] = js.native
   var defaultGroupSortComparator: js.UndefOr[js.Function2[/* nodeA */ RowNode, /* nodeB */ RowNode, Double]] = js.native
   var deltaRowDataMode: js.UndefOr[Boolean] = js.native
-  var detailCellRenderer: js.UndefOr[AnonInstantiableICellRendererComp | ICellRendererFunc | String] = js.native
+  var detailCellRenderer: js.UndefOr[InstantiableICellRendererComp | ICellRendererFunc | String] = js.native
   var detailCellRendererFramework: js.UndefOr[js.Any] = js.native
   var detailCellRendererParams: js.UndefOr[js.Any] = js.native
   var detailRowHeight: js.UndefOr[Double] = js.native
@@ -154,8 +154,8 @@ trait GridOptions extends ComponentHolder {
   var floatingFilter: js.UndefOr[Boolean] = js.native
   var floatingFiltersHeight: js.UndefOr[Double] = js.native
   var forPrint: js.UndefOr[Boolean] = js.native
-  var frameworkComponents: js.UndefOr[StringDictionary[AnonInstantiableAny]] = js.native
-  var fullWidthCellRenderer: js.UndefOr[AnonInstantiableICellRendererComp | ICellRendererFunc | String] = js.native
+  var frameworkComponents: js.UndefOr[StringDictionary[InstantiableAny]] = js.native
+  var fullWidthCellRenderer: js.UndefOr[InstantiableICellRendererComp | ICellRendererFunc | String] = js.native
   var fullWidthCellRendererFramework: js.UndefOr[js.Any] = js.native
   var fullWidthCellRendererParams: js.UndefOr[js.Any] = js.native
   var functionsPassive: js.UndefOr[Boolean] = js.native
@@ -164,7 +164,7 @@ trait GridOptions extends ComponentHolder {
   var getChildCount: js.UndefOr[js.Function1[/* dataItem */ js.Any, Double]] = js.native
   var getContextMenuItems: js.UndefOr[GetContextMenuItems] = js.native
   var getDataPath: js.UndefOr[GetDataPath] = js.native
-  var getDocument: js.UndefOr[js.Function0[Document_]] = js.native
+  var getDocument: js.UndefOr[js.Function0[Document]] = js.native
   var getMainMenuItems: js.UndefOr[GetMainMenuItems] = js.native
   var getNodeChildDetails: js.UndefOr[GetNodeChildDetails] = js.native
   var getRowClass: js.UndefOr[js.Function1[/* params */ js.Any, String | js.Array[String]]] = js.native
@@ -182,9 +182,9 @@ trait GridOptions extends ComponentHolder {
   var groupRemoveLowestSingleChildren: js.UndefOr[Boolean] = js.native
   var groupRemoveSingleChildren: js.UndefOr[Boolean] = js.native
   var groupRowAggNodes: js.UndefOr[js.Function1[/* nodes */ js.Array[RowNode], _]] = js.native
-  var groupRowInnerRenderer: js.UndefOr[AnonInstantiableICellRendererComp | ICellRendererFunc | String] = js.native
+  var groupRowInnerRenderer: js.UndefOr[InstantiableICellRendererComp | ICellRendererFunc | String] = js.native
   var groupRowInnerRendererFramework: js.UndefOr[js.Any] = js.native
-  var groupRowRenderer: js.UndefOr[AnonInstantiableICellRendererComp | ICellRendererFunc | String] = js.native
+  var groupRowRenderer: js.UndefOr[InstantiableICellRendererComp | ICellRendererFunc | String] = js.native
   var groupRowRendererFramework: js.UndefOr[js.Any] = js.native
   var groupRowRendererParams: js.UndefOr[js.Any] = js.native
   var groupSelectsChildren: js.UndefOr[Boolean] = js.native
@@ -203,7 +203,7 @@ trait GridOptions extends ComponentHolder {
   var isFullWidthCell: js.UndefOr[js.Function1[/* rowNode */ RowNode, Boolean]] = js.native
   var isRowMaster: js.UndefOr[IsRowMaster] = js.native
   var isRowSelectable: js.UndefOr[IsRowSelectable] = js.native
-  var loadingOverlayComponent: js.UndefOr[AnonInstantiableILoadingOverlayComp | String] = js.native
+  var loadingOverlayComponent: js.UndefOr[InstantiableILoadingOverlayComp | String] = js.native
   var loadingOverlayComponentFramework: js.UndefOr[js.Any] = js.native
   /****************************************************************
     * Don't forget to update ComponentUtil if changing this class. *
@@ -217,7 +217,7 @@ trait GridOptions extends ComponentHolder {
   var minColWidth: js.UndefOr[Double] = js.native
   var multiSortKey: js.UndefOr[String] = js.native
   var navigateToNextCell: js.UndefOr[js.Function1[/* params */ NavigateToNextCellParams, GridCellDef]] = js.native
-  var noRowsOverlayComponent: js.UndefOr[AnonInstantiableINoRowsOverlayComp | String] = js.native
+  var noRowsOverlayComponent: js.UndefOr[InstantiableINoRowsOverlayComp | String] = js.native
   var noRowsOverlayComponentFramework: js.UndefOr[js.Any] = js.native
   var onBodyScroll: js.UndefOr[js.Function1[/* event */ BodyScrollEvent, Unit]] = js.native
   var onCellClicked: js.UndefOr[js.Function1[/* event */ CellClickedEvent, Unit]] = js.native
@@ -735,7 +735,7 @@ object GridOptions {
         ret
     }
     @scala.inline
-    def withDateComponent(value: AnonInstantiable): Self = {
+    def withDateComponent(value: Instantiable): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dateComponent")(value.asInstanceOf[js.Any])
         ret
@@ -837,7 +837,7 @@ object GridOptions {
         ret
     }
     @scala.inline
-    def withDetailCellRenderer(value: AnonInstantiableICellRendererComp | ICellRendererFunc | String): Self = {
+    def withDetailCellRenderer(value: InstantiableICellRendererComp | ICellRendererFunc | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("detailCellRenderer")(value.asInstanceOf[js.Any])
         ret
@@ -1173,7 +1173,7 @@ object GridOptions {
         ret
     }
     @scala.inline
-    def withFrameworkComponents(value: StringDictionary[AnonInstantiableAny]): Self = {
+    def withFrameworkComponents(value: StringDictionary[InstantiableAny]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("frameworkComponents")(value.asInstanceOf[js.Any])
         ret
@@ -1191,7 +1191,7 @@ object GridOptions {
         ret
     }
     @scala.inline
-    def withFullWidthCellRenderer(value: AnonInstantiableICellRendererComp | ICellRendererFunc | String): Self = {
+    def withFullWidthCellRenderer(value: InstantiableICellRendererComp | ICellRendererFunc | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fullWidthCellRenderer")(value.asInstanceOf[js.Any])
         ret
@@ -1299,7 +1299,7 @@ object GridOptions {
         ret
     }
     @scala.inline
-    def withGetDocument(value: () => Document_): Self = {
+    def withGetDocument(value: () => Document): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getDocument")(js.Any.fromFunction0(value))
         ret
@@ -1521,7 +1521,7 @@ object GridOptions {
         ret
     }
     @scala.inline
-    def withGroupRowInnerRenderer(value: AnonInstantiableICellRendererComp | ICellRendererFunc | String): Self = {
+    def withGroupRowInnerRenderer(value: InstantiableICellRendererComp | ICellRendererFunc | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("groupRowInnerRenderer")(value.asInstanceOf[js.Any])
         ret
@@ -1551,7 +1551,7 @@ object GridOptions {
         ret
     }
     @scala.inline
-    def withGroupRowRenderer(value: AnonInstantiableICellRendererComp | ICellRendererFunc | String): Self = {
+    def withGroupRowRenderer(value: InstantiableICellRendererComp | ICellRendererFunc | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("groupRowRenderer")(value.asInstanceOf[js.Any])
         ret
@@ -1743,7 +1743,7 @@ object GridOptions {
         ret
     }
     @scala.inline
-    def withLoadingOverlayComponent(value: AnonInstantiableILoadingOverlayComp | String): Self = {
+    def withLoadingOverlayComponent(value: InstantiableILoadingOverlayComp | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loadingOverlayComponent")(value.asInstanceOf[js.Any])
         ret
@@ -1875,7 +1875,7 @@ object GridOptions {
         ret
     }
     @scala.inline
-    def withNoRowsOverlayComponent(value: AnonInstantiableINoRowsOverlayComp | String): Self = {
+    def withNoRowsOverlayComponent(value: InstantiableINoRowsOverlayComp | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("noRowsOverlayComponent")(value.asInstanceOf[js.Any])
         ret

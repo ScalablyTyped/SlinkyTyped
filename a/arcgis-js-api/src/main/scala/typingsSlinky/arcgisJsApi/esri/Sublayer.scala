@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`hide-children`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.hide
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.show
@@ -255,8 +254,4 @@ trait Sublayer
     */
   def toExportImageJSON(): Unit = js.native
 }
-
-@JSGlobal("__esri.Sublayer")
-@js.native
-object Sublayer extends TopLevel[SublayerConstructor]
 

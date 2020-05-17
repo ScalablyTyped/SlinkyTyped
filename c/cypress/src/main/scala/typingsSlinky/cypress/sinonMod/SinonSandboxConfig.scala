@@ -1,6 +1,6 @@
 package typingsSlinky.cypress.sinonMod
 
-import typingsSlinky.cypress.PartialSinonFakeTimersCon
+import typingsSlinky.cypress.anon.PartialSinonFakeTimersCon
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

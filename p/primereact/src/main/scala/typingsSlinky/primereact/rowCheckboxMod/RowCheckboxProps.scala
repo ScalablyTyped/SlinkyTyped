@@ -1,13 +1,13 @@
 package typingsSlinky.primereact.rowCheckboxMod
 
-import typingsSlinky.primereact.AnonCheckedData
+import typingsSlinky.primereact.anon.CheckedData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait RowCheckboxProps extends js.Object {
-  var onClick: js.UndefOr[js.Function1[/* e */ AnonCheckedData, Unit]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* e */ CheckedData, Unit]] = js.native
   var rowData: js.UndefOr[js.Object] = js.native
 }
 
@@ -24,7 +24,7 @@ object RowCheckboxProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnClick(value: /* e */ AnonCheckedData => Unit): Self = {
+    def withOnClick(value: /* e */ CheckedData => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret

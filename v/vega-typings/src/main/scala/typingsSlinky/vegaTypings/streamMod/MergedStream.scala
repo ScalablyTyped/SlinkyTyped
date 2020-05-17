@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait MergedStream
-  extends _Stream
+  extends Stream
      with StreamParameters {
   var merge: js.Array[Stream] = js.native
 }

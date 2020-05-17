@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.AnimationEvent
 import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.ErrorEvent
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventListenerOptions
 import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.KeyboardEvent
@@ -14,6 +15,8 @@ import org.scalajs.dom.raw.TouchEvent
 import org.scalajs.dom.raw.TransitionEvent
 import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
+import typingsSlinky.delegatedEvents.anon.CurrentTarget
+import typingsSlinky.delegatedEvents.anon.CustomEventanycurrentTarg
 import typingsSlinky.delegatedEvents.delegatedEventsStrings.abort
 import typingsSlinky.delegatedEvents.delegatedEventsStrings.animationcancel
 import typingsSlinky.delegatedEvents.delegatedEventsStrings.animationend
@@ -101,7 +104,6 @@ import typingsSlinky.delegatedEvents.delegatedEventsStrings.transitionstart
 import typingsSlinky.delegatedEvents.delegatedEventsStrings.volumechange
 import typingsSlinky.delegatedEvents.delegatedEventsStrings.waiting
 import typingsSlinky.delegatedEvents.delegatedEventsStrings.wheel
-import typingsSlinky.std.Event_
 import typingsSlinky.std.GlobalEventHandlers
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import scala.scalajs.js
@@ -121,21 +123,13 @@ object mod extends js.Object {
   def on_abort(
     name: abort,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ UIEvent with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ UIEvent with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_abort(
     name: abort,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ UIEvent with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ UIEvent with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
@@ -144,7 +138,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ AnimationEvent with AnonCurrentTarget, 
+      /* ev */ AnimationEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -154,7 +148,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ AnimationEvent with AnonCurrentTarget, 
+      /* ev */ AnimationEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -165,7 +159,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ AnimationEvent with AnonCurrentTarget, 
+      /* ev */ AnimationEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -175,7 +169,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ AnimationEvent with AnonCurrentTarget, 
+      /* ev */ AnimationEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -186,7 +180,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ AnimationEvent with AnonCurrentTarget, 
+      /* ev */ AnimationEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -196,7 +190,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ AnimationEvent with AnonCurrentTarget, 
+      /* ev */ AnimationEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -207,7 +201,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ AnimationEvent with AnonCurrentTarget, 
+      /* ev */ AnimationEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -217,7 +211,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ AnimationEvent with AnonCurrentTarget, 
+      /* ev */ AnimationEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -228,7 +222,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -238,7 +232,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -249,7 +243,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ FocusEvent with AnonCurrentTarget, 
+      /* ev */ FocusEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -259,7 +253,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ FocusEvent with AnonCurrentTarget, 
+      /* ev */ FocusEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -268,84 +262,52 @@ object mod extends js.Object {
   def on_cancel(
     name: cancel,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_cancel(
     name: cancel,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_canplay(
     name: canplay,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_canplay(
     name: canplay,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_canplaythrough(
     name: canplaythrough,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_canplaythrough(
     name: canplaythrough,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_change(
     name: change,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_change(
     name: change,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
@@ -354,7 +316,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -364,7 +326,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -373,21 +335,13 @@ object mod extends js.Object {
   def on_close(
     name: close,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_close(
     name: close,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
@@ -396,7 +350,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -406,7 +360,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -415,21 +369,13 @@ object mod extends js.Object {
   def on_cuechange(
     name: cuechange,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_cuechange(
     name: cuechange,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
@@ -438,7 +384,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -448,7 +394,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -459,7 +405,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ DragEvent with AnonCurrentTarget, 
+      /* ev */ DragEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -469,7 +415,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ DragEvent with AnonCurrentTarget, 
+      /* ev */ DragEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -480,7 +426,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ DragEvent with AnonCurrentTarget, 
+      /* ev */ DragEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -490,7 +436,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ DragEvent with AnonCurrentTarget, 
+      /* ev */ DragEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -501,7 +447,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ DragEvent with AnonCurrentTarget, 
+      /* ev */ DragEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -511,7 +457,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ DragEvent with AnonCurrentTarget, 
+      /* ev */ DragEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -520,21 +466,13 @@ object mod extends js.Object {
   def on_dragexit(
     name: dragexit,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_dragexit(
     name: dragexit,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
@@ -543,7 +481,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ DragEvent with AnonCurrentTarget, 
+      /* ev */ DragEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -553,7 +491,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ DragEvent with AnonCurrentTarget, 
+      /* ev */ DragEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -564,7 +502,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ DragEvent with AnonCurrentTarget, 
+      /* ev */ DragEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -574,7 +512,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ DragEvent with AnonCurrentTarget, 
+      /* ev */ DragEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -585,7 +523,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ DragEvent with AnonCurrentTarget, 
+      /* ev */ DragEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -595,7 +533,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ DragEvent with AnonCurrentTarget, 
+      /* ev */ DragEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -606,7 +544,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ DragEvent with AnonCurrentTarget, 
+      /* ev */ DragEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -616,7 +554,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ DragEvent with AnonCurrentTarget, 
+      /* ev */ DragEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -625,63 +563,39 @@ object mod extends js.Object {
   def on_durationchange(
     name: durationchange,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_durationchange(
     name: durationchange,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_emptied(
     name: emptied,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_emptied(
     name: emptied,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_ended(
     name: ended,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_ended(
     name: ended,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
@@ -690,7 +604,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ ErrorEvent with AnonCurrentTarget, 
+      /* ev */ ErrorEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -700,7 +614,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ ErrorEvent with AnonCurrentTarget, 
+      /* ev */ ErrorEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -711,7 +625,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ FocusEvent with AnonCurrentTarget, 
+      /* ev */ FocusEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -721,7 +635,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ FocusEvent with AnonCurrentTarget, 
+      /* ev */ FocusEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -732,7 +646,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ FocusEvent with AnonCurrentTarget, 
+      /* ev */ FocusEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -742,7 +656,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ FocusEvent with AnonCurrentTarget, 
+      /* ev */ FocusEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -753,7 +667,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ FocusEvent with AnonCurrentTarget, 
+      /* ev */ FocusEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -763,7 +677,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ FocusEvent with AnonCurrentTarget, 
+      /* ev */ FocusEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -774,7 +688,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ PointerEvent with AnonCurrentTarget, 
+      /* ev */ PointerEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -784,7 +698,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ PointerEvent with AnonCurrentTarget, 
+      /* ev */ PointerEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -793,42 +707,26 @@ object mod extends js.Object {
   def on_input(
     name: input,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_input(
     name: input,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_invalid(
     name: invalid,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_invalid(
     name: invalid,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
@@ -837,7 +735,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ KeyboardEvent with AnonCurrentTarget, 
+      /* ev */ KeyboardEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -847,7 +745,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ KeyboardEvent with AnonCurrentTarget, 
+      /* ev */ KeyboardEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -858,7 +756,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ KeyboardEvent with AnonCurrentTarget, 
+      /* ev */ KeyboardEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -868,7 +766,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ KeyboardEvent with AnonCurrentTarget, 
+      /* ev */ KeyboardEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -879,7 +777,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ KeyboardEvent with AnonCurrentTarget, 
+      /* ev */ KeyboardEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -889,7 +787,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ KeyboardEvent with AnonCurrentTarget, 
+      /* ev */ KeyboardEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -898,84 +796,52 @@ object mod extends js.Object {
   def on_load(
     name: load,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_load(
     name: load,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_loadeddata(
     name: loadeddata,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_loadeddata(
     name: loadeddata,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_loadedmetadata(
     name: loadedmetadata,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_loadedmetadata(
     name: loadedmetadata,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_loadstart(
     name: loadstart,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_loadstart(
     name: loadstart,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
@@ -984,7 +850,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ PointerEvent with AnonCurrentTarget, 
+      /* ev */ PointerEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -994,7 +860,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ PointerEvent with AnonCurrentTarget, 
+      /* ev */ PointerEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1005,7 +871,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1015,7 +881,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1026,7 +892,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1036,7 +902,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1047,7 +913,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1057,7 +923,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1068,7 +934,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1078,7 +944,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1089,7 +955,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1099,7 +965,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1110,7 +976,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1120,7 +986,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1131,7 +997,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1141,7 +1007,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ MouseEvent with AnonCurrentTarget, 
+      /* ev */ MouseEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1150,63 +1016,39 @@ object mod extends js.Object {
   def on_pause(
     name: pause,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_pause(
     name: pause,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_play(
     name: play,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_play(
     name: play,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_playing(
     name: playing,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_playing(
     name: playing,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
@@ -1215,7 +1057,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ PointerEvent with AnonCurrentTarget, 
+      /* ev */ PointerEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1225,7 +1067,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ PointerEvent with AnonCurrentTarget, 
+      /* ev */ PointerEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1236,7 +1078,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ PointerEvent with AnonCurrentTarget, 
+      /* ev */ PointerEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1246,7 +1088,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ PointerEvent with AnonCurrentTarget, 
+      /* ev */ PointerEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1257,7 +1099,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ PointerEvent with AnonCurrentTarget, 
+      /* ev */ PointerEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1267,7 +1109,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ PointerEvent with AnonCurrentTarget, 
+      /* ev */ PointerEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1278,7 +1120,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ PointerEvent with AnonCurrentTarget, 
+      /* ev */ PointerEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1288,7 +1130,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ PointerEvent with AnonCurrentTarget, 
+      /* ev */ PointerEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1299,7 +1141,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ PointerEvent with AnonCurrentTarget, 
+      /* ev */ PointerEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1309,7 +1151,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ PointerEvent with AnonCurrentTarget, 
+      /* ev */ PointerEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1320,7 +1162,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ PointerEvent with AnonCurrentTarget, 
+      /* ev */ PointerEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1330,7 +1172,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ PointerEvent with AnonCurrentTarget, 
+      /* ev */ PointerEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1341,7 +1183,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ PointerEvent with AnonCurrentTarget, 
+      /* ev */ PointerEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1351,7 +1193,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ PointerEvent with AnonCurrentTarget, 
+      /* ev */ PointerEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1362,7 +1204,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ PointerEvent with AnonCurrentTarget, 
+      /* ev */ PointerEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1372,7 +1214,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ PointerEvent with AnonCurrentTarget, 
+      /* ev */ PointerEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1383,7 +1225,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ ProgressEvent with AnonCurrentTarget, 
+      /* ev */ ProgressEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1393,7 +1235,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ ProgressEvent with AnonCurrentTarget, 
+      /* ev */ ProgressEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1402,84 +1244,52 @@ object mod extends js.Object {
   def on_ratechange(
     name: ratechange,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_ratechange(
     name: ratechange,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_reset(
     name: reset,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_reset(
     name: reset,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_resize(
     name: resize,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ UIEvent with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ UIEvent with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_resize(
     name: resize,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ UIEvent with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ UIEvent with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_scroll(
     name: scroll,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_scroll(
     name: scroll,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
@@ -1488,7 +1298,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ SecurityPolicyViolationEvent with AnonCurrentTarget, 
+      /* ev */ SecurityPolicyViolationEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1498,7 +1308,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ SecurityPolicyViolationEvent with AnonCurrentTarget, 
+      /* ev */ SecurityPolicyViolationEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1507,210 +1317,130 @@ object mod extends js.Object {
   def on_seeked(
     name: seeked,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_seeked(
     name: seeked,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_seeking(
     name: seeking,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_seeking(
     name: seeking,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_select(
     name: select,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_select(
     name: select,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_selectionchange(
     name: selectionchange,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_selectionchange(
     name: selectionchange,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_selectstart(
     name: selectstart,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_selectstart(
     name: selectstart,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_stalled(
     name: stalled,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_stalled(
     name: stalled,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_submit(
     name: submit,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_submit(
     name: submit,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_suspend(
     name: suspend,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_suspend(
     name: suspend,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_timeupdate(
     name: timeupdate,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_timeupdate(
     name: timeupdate,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_toggle(
     name: toggle,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_toggle(
     name: toggle,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
@@ -1719,7 +1449,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ TouchEvent with AnonCurrentTarget, 
+      /* ev */ TouchEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1729,7 +1459,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ TouchEvent with AnonCurrentTarget, 
+      /* ev */ TouchEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1740,7 +1470,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ TouchEvent with AnonCurrentTarget, 
+      /* ev */ TouchEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1750,7 +1480,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ TouchEvent with AnonCurrentTarget, 
+      /* ev */ TouchEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1761,7 +1491,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ TouchEvent with AnonCurrentTarget, 
+      /* ev */ TouchEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1771,7 +1501,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ TouchEvent with AnonCurrentTarget, 
+      /* ev */ TouchEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1782,7 +1512,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ TouchEvent with AnonCurrentTarget, 
+      /* ev */ TouchEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1792,7 +1522,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ TouchEvent with AnonCurrentTarget, 
+      /* ev */ TouchEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1803,7 +1533,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ TransitionEvent with AnonCurrentTarget, 
+      /* ev */ TransitionEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1813,7 +1543,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ TransitionEvent with AnonCurrentTarget, 
+      /* ev */ TransitionEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1824,7 +1554,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ TransitionEvent with AnonCurrentTarget, 
+      /* ev */ TransitionEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1834,7 +1564,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ TransitionEvent with AnonCurrentTarget, 
+      /* ev */ TransitionEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1845,7 +1575,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ TransitionEvent with AnonCurrentTarget, 
+      /* ev */ TransitionEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1855,7 +1585,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ TransitionEvent with AnonCurrentTarget, 
+      /* ev */ TransitionEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1866,7 +1596,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ TransitionEvent with AnonCurrentTarget, 
+      /* ev */ TransitionEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1876,7 +1606,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ TransitionEvent with AnonCurrentTarget, 
+      /* ev */ TransitionEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions
@@ -1885,42 +1615,26 @@ object mod extends js.Object {
   def on_volumechange(
     name: volumechange,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_volumechange(
     name: volumechange,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
   def on_waiting(
     name: waiting,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ]
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _]
   ): Unit = js.native
   @JSName("on")
   def on_waiting(
     name: waiting,
     selector: String,
-    listener: js.ThisFunction1[
-      /* this */ GlobalEventHandlers with Element, 
-      /* ev */ Event_ with AnonCurrentTarget, 
-      _
-    ],
+    listener: js.ThisFunction1[/* this */ GlobalEventHandlers with Element, /* ev */ Event with CurrentTarget, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("on")
@@ -1929,7 +1643,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ WheelEvent with AnonCurrentTarget, 
+      /* ev */ WheelEvent with CurrentTarget, 
       _
     ]
   ): Unit = js.native
@@ -1939,7 +1653,7 @@ object mod extends js.Object {
     selector: String,
     listener: js.ThisFunction1[
       /* this */ GlobalEventHandlers with Element, 
-      /* ev */ WheelEvent with AnonCurrentTarget, 
+      /* ev */ WheelEvent with CurrentTarget, 
       _
     ],
     options: EventListenerOptions

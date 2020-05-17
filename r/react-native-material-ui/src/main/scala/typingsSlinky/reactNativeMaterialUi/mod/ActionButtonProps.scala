@@ -1,8 +1,7 @@
 package typingsSlinky.reactNativeMaterialUi.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactNativeMaterialUi.AnonContainer
-import typingsSlinky.reactNativeMaterialUi.AnonIcon
+import typingsSlinky.reactNativeMaterialUi.anon.Container
 import typingsSlinky.reactNativeMaterialUi.reactNativeMaterialUiStrings.speedDial
 import typingsSlinky.reactNativeMaterialUi.reactNativeMaterialUiStrings.toolbar
 import scala.scalajs.js
@@ -11,12 +10,12 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ActionButtonProps extends js.Object {
-  var actions: js.UndefOr[js.Array[AnonIcon | ReactElement | String]] = js.native
+  var actions: js.UndefOr[js.Array[ReactElement | typingsSlinky.reactNativeMaterialUi.anon.Icon | String]] = js.native
   var hidden: js.UndefOr[Boolean] = js.native
   var icon: js.UndefOr[String] = js.native
   var onLongPress: js.UndefOr[js.Function0[Unit]] = js.native
   var onPress: js.UndefOr[js.Function0[Unit]] = js.native
-  var style: js.UndefOr[AnonContainer] = js.native
+  var style: js.UndefOr[Container] = js.native
   var transition: js.UndefOr[toolbar | speedDial] = js.native
 }
 
@@ -33,7 +32,7 @@ object ActionButtonProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActions(value: js.Array[AnonIcon | ReactElement | String]): Self = {
+    def withActions(value: js.Array[ReactElement | typingsSlinky.reactNativeMaterialUi.anon.Icon | String]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("actions")(value.asInstanceOf[js.Any])
         ret
@@ -93,7 +92,7 @@ object ActionButtonProps {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonContainer): Self = {
+    def withStyle(value: Container): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

@@ -5,9 +5,9 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.nivoCore.mod.Dimensions
-import typingsSlinky.nivoGeo.AnonFeature
-import typingsSlinky.nivoGeo.PartialBox
-import typingsSlinky.nivoGeo.PartialTheme
+import typingsSlinky.nivoGeo.anon.Feature
+import typingsSlinky.nivoGeo.anon.PartialBox
+import typingsSlinky.nivoGeo.anon.PartialTheme
 import typingsSlinky.nivoGeo.mod.FeatureAccessor
 import typingsSlinky.nivoGeo.mod.GeoMapCanvasProps
 import typingsSlinky.nivoGeo.mod.GeoProjectionType
@@ -67,7 +67,7 @@ object GeoMapCanvas {
     @scala.inline
     def theme(value: PartialTheme): this.type = set("theme", value.asInstanceOf[js.Any])
     @scala.inline
-    def tooltip(value: ReactComponentClass[AnonFeature]): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    def tooltip(value: ReactComponentClass[Feature]): this.type = set("tooltip", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: GeoMapCanvasProps with Dimensions): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

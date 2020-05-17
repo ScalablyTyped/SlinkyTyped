@@ -1,6 +1,6 @@
 package typingsSlinky.ioredis.mod
 
-import typingsSlinky.ioredis.AnonHost
+import typingsSlinky.ioredis.anon.Host
 import typingsSlinky.ioredis.ioredisNumbers.`1`
 import typingsSlinky.ioredis.ioredisNumbers.`2`
 import typingsSlinky.ioredis.ioredisStrings.master
@@ -127,7 +127,7 @@ trait RedisOptions extends js.Object {
     */
   var sentinelRetryStrategy: js.UndefOr[js.Function1[/* times */ Double, Double | Unit | Null]] = js.native
   var sentinelTLS: js.UndefOr[SecureContextOptions] = js.native
-  var sentinels: js.UndefOr[js.Array[AnonHost]] = js.native
+  var sentinels: js.UndefOr[js.Array[Host]] = js.native
   /**
     * Whether to show a friendly error stack. Will decrease the performance significantly.
     */
@@ -501,7 +501,7 @@ object RedisOptions {
         ret
     }
     @scala.inline
-    def withSentinels(value: js.Array[AnonHost]): Self = {
+    def withSentinels(value: js.Array[Host]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sentinels")(value.asInstanceOf[js.Any])
         ret

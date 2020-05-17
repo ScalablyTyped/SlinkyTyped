@@ -2,7 +2,7 @@ package typingsSlinky.baseui.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.ReadonlyToasterProps
+import typingsSlinky.baseui.anon.ReadonlyToasterProps
 import typingsSlinky.baseui.baseuiStrings.bottom
 import typingsSlinky.baseui.baseuiStrings.bottomLeft
 import typingsSlinky.baseui.baseuiStrings.bottomRight

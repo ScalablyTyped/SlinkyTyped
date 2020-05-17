@@ -6,6 +6,92 @@ import org.scalablytyped.runtime.Instantiable2
 import slinky.core.ReactComponentClass
 import typingsSlinky.ionicCore.mod.Config_
 import typingsSlinky.ionicCore.utilsConfigMod.IonicConfig
+import typingsSlinky.ionicReact.anon.ActionSheetOptionsReactOv
+import typingsSlinky.ionicReact.anon.AlertOptionsReactControll
+import typingsSlinky.ionicReact.anon.ClickButton
+import typingsSlinky.ionicReact.anon.ComponentCanBeDestroyed
+import typingsSlinky.ionicReact.anon.Instantiable
+import typingsSlinky.ionicReact.anon.IonAppPickHTMLAttributesH
+import typingsSlinky.ionicReact.anon.IonAvatarPickHTMLAttribut
+import typingsSlinky.ionicReact.anon.IonBackdropPickHTMLAttrib
+import typingsSlinky.ionicReact.anon.IonBadgePickHTMLAttribute
+import typingsSlinky.ionicReact.anon.IonButtonsPickHTMLAttribu
+import typingsSlinky.ionicReact.anon.IonCardContentPickHTMLAtt
+import typingsSlinky.ionicReact.anon.IonCardHeaderPickHTMLAttr
+import typingsSlinky.ionicReact.anon.IonCardSubtitlePickHTMLAt
+import typingsSlinky.ionicReact.anon.IonCardTitlePickHTMLAttri
+import typingsSlinky.ionicReact.anon.IonCheckboxPickHTMLAttrib
+import typingsSlinky.ionicReact.anon.IonChipPickHTMLAttributes
+import typingsSlinky.ionicReact.anon.IonColPickHTMLAttributesH
+import typingsSlinky.ionicReact.anon.IonContentPickHTMLAttribu
+import typingsSlinky.ionicReact.anon.IonDatetimePickHTMLAttrib
+import typingsSlinky.ionicReact.anon.IonFabListPickHTMLAttribu
+import typingsSlinky.ionicReact.anon.IonFabPickHTMLAttributesH
+import typingsSlinky.ionicReact.anon.IonFooterPickHTMLAttribut
+import typingsSlinky.ionicReact.anon.IonGridPickHTMLAttributes
+import typingsSlinky.ionicReact.anon.IonHeaderPickHTMLAttribut
+import typingsSlinky.ionicReact.anon.IonIconPropsIonicReactPro
+import typingsSlinky.ionicReact.anon.IonImgPickHTMLAttributesH
+import typingsSlinky.ionicReact.anon.IonInfiniteScrollContentP
+import typingsSlinky.ionicReact.anon.IonInfiniteScrollPickHTML
+import typingsSlinky.ionicReact.anon.IonInputPickHTMLAttribute
+import typingsSlinky.ionicReact.anon.IonItemDividerPickHTMLAtt
+import typingsSlinky.ionicReact.anon.IonItemGroupPickHTMLAttri
+import typingsSlinky.ionicReact.anon.IonItemOptionsPickHTMLAtt
+import typingsSlinky.ionicReact.anon.IonItemSlidingPickHTMLAtt
+import typingsSlinky.ionicReact.anon.IonLabelPickHTMLAttribute
+import typingsSlinky.ionicReact.anon.IonListHeaderPickHTMLAttr
+import typingsSlinky.ionicReact.anon.IonListPickHTMLAttributes
+import typingsSlinky.ionicReact.anon.IonMenuButtonPickHTMLAttr
+import typingsSlinky.ionicReact.anon.IonMenuPickHTMLAttributes
+import typingsSlinky.ionicReact.anon.IonMenuTogglePickHTMLAttr
+import typingsSlinky.ionicReact.anon.IonNavPickHTMLAttributesH
+import typingsSlinky.ionicReact.anon.IonNotePickHTMLAttributes
+import typingsSlinky.ionicReact.anon.IonPickerColumnPickHTMLAt
+import typingsSlinky.ionicReact.anon.IonProgressBarPickHTMLAtt
+import typingsSlinky.ionicReact.anon.IonRadioGroupPickHTMLAttr
+import typingsSlinky.ionicReact.anon.IonRadioPickHTMLAttribute
+import typingsSlinky.ionicReact.anon.IonRangePickHTMLAttribute
+import typingsSlinky.ionicReact.anon.IonRefresherContentPickHT
+import typingsSlinky.ionicReact.anon.IonRefresherPickHTMLAttri
+import typingsSlinky.ionicReact.anon.IonReorderGroupPickHTMLAt
+import typingsSlinky.ionicReact.anon.IonReorderPickHTMLAttribu
+import typingsSlinky.ionicReact.anon.IonRippleEffectPickHTMLAt
+import typingsSlinky.ionicReact.anon.IonRowPickHTMLAttributesH
+import typingsSlinky.ionicReact.anon.IonSearchbarPickHTMLAttri
+import typingsSlinky.ionicReact.anon.IonSegmentButtonPickHTMLA
+import typingsSlinky.ionicReact.anon.IonSegmentPickHTMLAttribu
+import typingsSlinky.ionicReact.anon.IonSelectOptionPickHTMLAt
+import typingsSlinky.ionicReact.anon.IonSelectPickHTMLAttribut
+import typingsSlinky.ionicReact.anon.IonSelectPopoverPickHTMLA
+import typingsSlinky.ionicReact.anon.IonSkeletonTextPickHTMLAt
+import typingsSlinky.ionicReact.anon.IonSlidePickHTMLAttribute
+import typingsSlinky.ionicReact.anon.IonSlidesPickHTMLAttribut
+import typingsSlinky.ionicReact.anon.IonSpinnerPickHTMLAttribu
+import typingsSlinky.ionicReact.anon.IonSplitPanePickHTMLAttri
+import typingsSlinky.ionicReact.anon.IonTabButtonPickHTMLAttri
+import typingsSlinky.ionicReact.anon.IonTabPickHTMLAttributesH
+import typingsSlinky.ionicReact.anon.IonTextPickHTMLAttributes
+import typingsSlinky.ionicReact.anon.IonTextareaPickHTMLAttrib
+import typingsSlinky.ionicReact.anon.IonThumbnailPickHTMLAttri
+import typingsSlinky.ionicReact.anon.IonTitlePickHTMLAttribute
+import typingsSlinky.ionicReact.anon.IonTogglePickHTMLAttribut
+import typingsSlinky.ionicReact.anon.IonToolbarPickHTMLAttribu
+import typingsSlinky.ionicReact.anon.IonVirtualScrollPickHTMLA
+import typingsSlinky.ionicReact.anon.LoadingOptionsReactContro
+import typingsSlinky.ionicReact.anon.PickHTMLAttributesunknown
+import typingsSlinky.ionicReact.anon.PickIonButtondisabledstro
+import typingsSlinky.ionicReact.anon.PickIonCarddisabledbutton
+import typingsSlinky.ionicReact.anon.PickIonFabButtonshowdisab
+import typingsSlinky.ionicReact.anon.PickIonItemOptiondisabled
+import typingsSlinky.ionicReact.anon.PickIonItemdisabledbutton
+import typingsSlinky.ionicReact.anon.PickIonRouterLinkcolorhre
+import typingsSlinky.ionicReact.anon.PickIonicReactExternalPro
+import typingsSlinky.ionicReact.anon.PickerOptionsReactControl
+import typingsSlinky.ionicReact.anon.ReadonlyProps
+import typingsSlinky.ionicReact.anon.ToastOptionsReactControll
+import typingsSlinky.ionicReact.anon.childrenReactNodeforwarde
+import typingsSlinky.ionicReact.anon.childrenReactNodeforwardeAnimated
 import typingsSlinky.ionicReact.ionBackButtonMod.Props
 import typingsSlinky.ionicReact.ionLifeCycleContextMod.IonLifeCycleContextInterface
 import typingsSlinky.ionicReact.ionLifeCycleContextMod.LifeCycleCallback
@@ -34,10 +120,10 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   @js.native
-  class DefaultIonLifeCycleContext () extends AnonComponentCanBeDestroyed
+  class DefaultIonLifeCycleContext () extends ComponentCanBeDestroyed
   
   @js.native
-  class IonBackButton protected () extends AnonClickButton {
+  class IonBackButton protected () extends ClickButton {
     def this(props: ReadonlyProps) = this()
     def this(props: Props) = this()
     def this(props: Props, context: js.Any) = this()
@@ -150,14 +236,14 @@ object mod extends js.Object {
   def useIonViewWillEnter(callback: LifeCycleCallback, deps: js.Array[_]): Unit = js.native
   def useIonViewWillLeave(callback: LifeCycleCallback): Unit = js.native
   def useIonViewWillLeave(callback: LifeCycleCallback, deps: js.Array[_]): Unit = js.native
-  def withIonLifeCycle(WrappedComponent: ReactComponentClass[_]): AnonInstantiable = js.native
+  def withIonLifeCycle(WrappedComponent: ReactComponentClass[_]): Instantiable = js.native
   @js.native
-  object DefaultIonLifeCycleContext extends Instantiable0[AnonComponentCanBeDestroyed]
+  object DefaultIonLifeCycleContext extends Instantiable0[ComponentCanBeDestroyed]
   
   @js.native
   object IonBackButton
-    extends Instantiable1[(/* props */ Props) | (/* props */ ReadonlyProps), AnonClickButton]
-       with Instantiable2[/* props */ Props, /* context */ js.Any, AnonClickButton] {
+    extends Instantiable1[(/* props */ Props) | (/* props */ ReadonlyProps), ClickButton]
+       with Instantiable2[/* props */ Props, /* context */ js.Any, ClickButton] {
     val contextType: Context[NavContextState] = js.native
     val displayName: String = js.native
   }

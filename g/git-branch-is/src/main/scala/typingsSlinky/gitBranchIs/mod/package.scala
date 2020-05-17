@@ -6,11 +6,6 @@ import scala.scalajs.js.annotation._
 
 package object mod {
   /**
-    * Expected name of current branch
-    * or a test function to apply to the branch name
-    */
-  type BranchNameOrTest = java.lang.String | typingsSlinky.gitBranchIs.mod.BranchNameTest
-  /**
     * test function to apply to the branch name
     */
   type BranchNameTest = js.Function1[/* branchName */ java.lang.String, scala.Boolean | js.Promise[scala.Boolean]]

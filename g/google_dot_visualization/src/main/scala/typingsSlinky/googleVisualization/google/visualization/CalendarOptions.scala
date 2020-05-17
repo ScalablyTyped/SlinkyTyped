@@ -1,26 +1,26 @@
 package typingsSlinky.googleVisualization.google.visualization
 
-import typingsSlinky.googleVisualization.AnonCellColor
-import typingsSlinky.googleVisualization.AnonColors
-import typingsSlinky.googleVisualization.AnonIsHtml
+import typingsSlinky.googleVisualization.anon.CellColor
+import typingsSlinky.googleVisualization.anon.Colors
+import typingsSlinky.googleVisualization.anon.IsHtml
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CalendarOptions extends js.Object {
-  var calendar: AnonCellColor = js.native
-  var colorAxis: js.UndefOr[AnonColors] = js.native
+  var calendar: CellColor = js.native
+  var colorAxis: js.UndefOr[Colors] = js.native
   var forceIFrame: js.UndefOr[Boolean] = js.native
   var height: js.UndefOr[Double] = js.native
   var noDataPattern: js.UndefOr[js.Object] = js.native
-  var tooltip: AnonIsHtml = js.native
+  var tooltip: IsHtml = js.native
   var width: js.UndefOr[Double] = js.native
 }
 
 object CalendarOptions {
   @scala.inline
-  def apply(calendar: AnonCellColor, tooltip: AnonIsHtml): CalendarOptions = {
+  def apply(calendar: CellColor, tooltip: IsHtml): CalendarOptions = {
     val __obj = js.Dynamic.literal(calendar = calendar.asInstanceOf[js.Any], tooltip = tooltip.asInstanceOf[js.Any])
     __obj.asInstanceOf[CalendarOptions]
   }
@@ -31,19 +31,19 @@ object CalendarOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCalendar(value: AnonCellColor): Self = {
+    def withCalendar(value: CellColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("calendar")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonIsHtml): Self = {
+    def withTooltip(value: IsHtml): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withColorAxis(value: AnonColors): Self = {
+    def withColorAxis(value: Colors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("colorAxis")(value.asInstanceOf[js.Any])
         ret

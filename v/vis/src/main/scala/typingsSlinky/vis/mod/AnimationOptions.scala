@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait AnimationOptions extends js.Object {
+trait AnimationOptions extends TimelineAnimationType {
   /**
     * The duration (in milliseconds).
     */

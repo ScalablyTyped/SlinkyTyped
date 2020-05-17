@@ -1,17 +1,5 @@
 package typingsSlinky.vegaTypings.markMod
 
-import typingsSlinky.vegaTypings.vegaTypingsStrings.arc
-import typingsSlinky.vegaTypings.vegaTypingsStrings.area
-import typingsSlinky.vegaTypings.vegaTypingsStrings.group
-import typingsSlinky.vegaTypings.vegaTypingsStrings.image
-import typingsSlinky.vegaTypings.vegaTypingsStrings.line
-import typingsSlinky.vegaTypings.vegaTypingsStrings.path
-import typingsSlinky.vegaTypings.vegaTypingsStrings.rect
-import typingsSlinky.vegaTypings.vegaTypingsStrings.rule
-import typingsSlinky.vegaTypings.vegaTypingsStrings.shape
-import typingsSlinky.vegaTypings.vegaTypingsStrings.symbol
-import typingsSlinky.vegaTypings.vegaTypingsStrings.text
-import typingsSlinky.vegaTypings.vegaTypingsStrings.trail
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,76 +22,28 @@ trait Mark extends js.Object
 
 object Mark {
   @scala.inline
-  def SymbolMark(`type`: symbol): Mark = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Mark]
-  }
+  implicit def apply(value: ArcMark): Mark = value.asInstanceOf[Mark]
   @scala.inline
-  def RuleMark(`type`: rule): Mark = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Mark]
-  }
+  implicit def apply(value: AreaMark): Mark = value.asInstanceOf[Mark]
   @scala.inline
-  def LineMark(`type`: line): Mark = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Mark]
-  }
+  implicit def apply(value: GroupMark): Mark = value.asInstanceOf[Mark]
   @scala.inline
-  def TrailMark(`type`: trail): Mark = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Mark]
-  }
+  implicit def apply(value: ImageMark): Mark = value.asInstanceOf[Mark]
   @scala.inline
-  def ShapeMark(`type`: shape): Mark = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Mark]
-  }
+  implicit def apply(value: LineMark): Mark = value.asInstanceOf[Mark]
   @scala.inline
-  def AreaMark(`type`: area): Mark = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Mark]
-  }
+  implicit def apply(value: PathMark): Mark = value.asInstanceOf[Mark]
   @scala.inline
-  def GroupMark(`type`: group): Mark = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Mark]
-  }
+  implicit def apply(value: RectMark): Mark = value.asInstanceOf[Mark]
   @scala.inline
-  def RectMark(`type`: rect): Mark = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Mark]
-  }
+  implicit def apply(value: RuleMark): Mark = value.asInstanceOf[Mark]
   @scala.inline
-  def ImageMark(`type`: image): Mark = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Mark]
-  }
+  implicit def apply(value: ShapeMark): Mark = value.asInstanceOf[Mark]
   @scala.inline
-  def PathMark(`type`: path): Mark = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Mark]
-  }
+  implicit def apply(value: SymbolMark): Mark = value.asInstanceOf[Mark]
   @scala.inline
-  def TextMark(`type`: text): Mark = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Mark]
-  }
+  implicit def apply(value: TextMark): Mark = value.asInstanceOf[Mark]
   @scala.inline
-  def ArcMark(`type`: arc): Mark = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Mark]
-  }
+  implicit def apply(value: TrailMark): Mark = value.asInstanceOf[Mark]
 }
 

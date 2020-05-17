@@ -1,12 +1,12 @@
 package typingsSlinky.officeJs.Word
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.ClientResult
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJs.Word.Interfaces.InlinePictureData
 import typingsSlinky.officeJs.Word.Interfaces.InlinePictureLoadOptions
 import typingsSlinky.officeJs.Word.Interfaces.InlinePictureUpdateData
+import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.After
 import typingsSlinky.officeJs.officeJsStrings.Before
 import typingsSlinky.officeJs.officeJsStrings.Content
@@ -32,9 +32,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: WordApi 1.1]
   */
-@JSGlobal("Word.InlinePicture")
 @js.native
-class InlinePicture () extends ClientObject {
+trait InlinePicture extends ClientObject {
   /**
     *
     * Gets or sets a string that represents the alternative text associated with the inline image.
@@ -401,8 +400,8 @@ class InlinePicture () extends ClientObject {
   def load(): InlinePicture = js.native
   def load(option: String): InlinePicture = js.native
   def load(option: js.Array[String]): InlinePicture = js.native
-  def load(option: AnonExpand): InlinePicture = js.native
   def load(option: InlinePictureLoadOptions): InlinePicture = js.native
+  def load(option: Expand): InlinePicture = js.native
   /**
     *
     * Selects the inline picture. This causes Word to scroll to the selection.

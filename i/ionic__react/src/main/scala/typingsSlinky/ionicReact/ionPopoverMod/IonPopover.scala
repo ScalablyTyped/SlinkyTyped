@@ -1,7 +1,7 @@
 package typingsSlinky.ionicReact.ionPopoverMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.ionicReact.childrenReactNodeforwardeAnimated
+import typingsSlinky.ionicReact.anon.childrenReactNodeforwardeAnimated
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`

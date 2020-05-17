@@ -1,6 +1,6 @@
 package typingsSlinky.reactSortableTree.mod
 
-import typingsSlinky.reactSortableTree.FullTreegetNodeKeyGetNode
+import typingsSlinky.reactSortableTree.anon.FullTreegetNodeKeyGetNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

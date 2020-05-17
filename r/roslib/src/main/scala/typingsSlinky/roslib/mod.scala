@@ -1,5 +1,13 @@
 package typingsSlinky.roslib
 
+import typingsSlinky.roslib.anon.ActionName
+import typingsSlinky.roslib.anon.AngularThres
+import typingsSlinky.roslib.anon.Compression
+import typingsSlinky.roslib.anon.GroovyCompatibility
+import typingsSlinky.roslib.anon.Name
+import typingsSlinky.roslib.anon.Rotation
+import typingsSlinky.roslib.anon.W
+import typingsSlinky.roslib.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +33,7 @@ object mod extends js.Object {
     		 *   * actionName - the action message name, like 'actionlib_tutorials/FibonacciAction'
     		 *   * timeout - the timeout length when connecting to the action server
     		 */
-    def this(options: AnonActionName) = this()
+    def this(options: ActionName) = this()
     /**
     		 * Cancel all goals associated with this ActionClient.
     		 */
@@ -45,7 +53,7 @@ object mod extends js.Object {
     		 *   * actionClient - the ROSLIB.ActionClient to use with this goal
     		 *   * goalMessage - The JSON object containing the goal for the action server
     		 */
-    def this(options: AnonActionClient) = this()
+    def this(options: typingsSlinky.roslib.anon.ActionClient) = this()
     /**
     		 * Cancel the current goal.
     		 */
@@ -87,7 +95,7 @@ object mod extends js.Object {
     		 *   * ros - the ROSLIB.Ros connection handle
     		 *   * name - the param name, like max_vel_x
     		 */
-    def this(options: AnonName) = this()
+    def this(options: Name) = this()
     /**
     		 * Delete this parameter on the ROS server.
     		 */
@@ -122,7 +130,7 @@ object mod extends js.Object {
     *   * w - the w value
     */
   class Quaternion () extends js.Object {
-    def this(options: AnonW) = this()
+    def this(options: W) = this()
     var w: Double = js.native
     // getters
     var x: Double = js.native
@@ -170,7 +178,7 @@ object mod extends js.Object {
     		 *   * transportLibrary (optional) - one of 'websocket' (default), 'socket.io' or RTCPeerConnection instance controlling how the connection is created in `connect`.
     		 *   * transportOptions (optional) - the options to use use when creating a connection. Currently only used if `transportLibrary` is RTCPeerConnection.
     		 */
-    def this(options: AnonGroovyCompatibility) = this()
+    def this(options: GroovyCompatibility) = this()
     /**
     		 * Sends an authorization request to the server.
     		 *
@@ -358,7 +366,7 @@ object mod extends js.Object {
     		 *   * name - the service name, like /add_two_ints
     		 *   * serviceType - the service type, like 'rospy_tutorials/AddTwoInts'
     		 */
-    def this(data: AnonRos) = this()
+    def this(data: typingsSlinky.roslib.anon.Ros) = this()
     // getter
     var name: String = js.native
     // getter
@@ -431,7 +439,7 @@ object mod extends js.Object {
       *   * serverName (optional) - the name of the tf2_web_republisher server
       *   * repubServiceName (optional) - the name of the republish_tfs service (non groovy compatibility mode only) default: '/republish_tfs'
       */
-    def this(options: AnonAngularThres) = this()
+    def this(options: AngularThres) = this()
     /**
       * Unsubscribe and unadvertise all topics associated with this TFClient.
       */
@@ -488,7 +496,7 @@ object mod extends js.Object {
     		 *   * latch - latch the topic when publishing
     		 *   * queue_length - the queue length at bridge side used when subscribing (defaults to 0, no queueing).
     		 */
-    def this(options: AnonCompression) = this()
+    def this(options: Compression) = this()
     // getter
     var messageType: String = js.native
     // getter
@@ -538,7 +546,7 @@ object mod extends js.Object {
       *   * translation - the Vector3 describing the translation
       *   * rotation - the ROSLIB.Quaternion describing the rotation
       */
-    def this(options: AnonRotation) = this()
+    def this(options: Rotation) = this()
     var rotation: Quaternion = js.native
     // getters
     var translation: Vector3 = js.native
@@ -555,7 +563,7 @@ object mod extends js.Object {
       *   * y - the y value
       *   * z - the z value
       */
-    def this(options: AnonX) = this()
+    def this(options: X) = this()
     // getters
     var x: Double = js.native
     var y: Double = js.native

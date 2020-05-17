@@ -1,0 +1,11 @@
+package typingsSlinky.box2d.global.Box2D.Dynamics.Joints
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("Box2D.Dynamics.Joints.b2MouseJoint")
+@js.native
+class b2MouseJoint ()
+  extends typingsSlinky.box2d.Box2D.Dynamics.Joints.b2MouseJoint
+

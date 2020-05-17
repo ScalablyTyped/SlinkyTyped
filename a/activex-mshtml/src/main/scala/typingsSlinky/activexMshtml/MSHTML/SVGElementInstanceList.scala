@@ -4,12 +4,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("MSHTML.SVGElementInstanceList")
 @js.native
-class SVGElementInstanceList protected () extends js.Object {
+trait SVGElementInstanceList extends js.Object {
   @JSName("MSHTML.SVGElementInstanceList_typekey")
   var MSHTMLDotSVGElementInstanceList_typekey: SVGElementInstanceList = js.native
   val length: Double = js.native
   def item(index: Double): ISVGElementInstance = js.native
+}
+
+object SVGElementInstanceList {
+  @scala.inline
+  def apply(
+    MSHTMLDotSVGElementInstanceList_typekey: SVGElementInstanceList,
+    item: Double => ISVGElementInstance,
+    length: Double
+  ): SVGElementInstanceList = {
+    val __obj = js.Dynamic.literal(item = js.Any.fromFunction1(item), length = length.asInstanceOf[js.Any])
+    __obj.updateDynamic("MSHTML.SVGElementInstanceList_typekey")(MSHTMLDotSVGElementInstanceList_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SVGElementInstanceList]
+  }
+  @scala.inline
+  implicit class SVGElementInstanceListOps[Self <: SVGElementInstanceList] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMSHTMLDotSVGElementInstanceList_typekey(value: SVGElementInstanceList): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.SVGElementInstanceList_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItem(value: Double => ISVGElementInstance): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

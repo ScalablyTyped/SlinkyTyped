@@ -1,11 +1,11 @@
 package typingsSlinky.algoliasearch.mod
 
-import typingsSlinky.algoliasearch.AnonIndexName
-import typingsSlinky.algoliasearch.AnonLogs
-import typingsSlinky.algoliasearch.AnonParams
 import typingsSlinky.algoliasearch.algoliasearchStrings.rules
 import typingsSlinky.algoliasearch.algoliasearchStrings.settings
 import typingsSlinky.algoliasearch.algoliasearchStrings.synonyms
+import typingsSlinky.algoliasearch.anon.IndexName
+import typingsSlinky.algoliasearch.anon.Logs
+import typingsSlinky.algoliasearch.anon.Params
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -105,11 +105,11 @@ trait Client extends js.Object {
   /**
     * Get 1000 last events
     */
-  def getLogs(options: LogsOptions): js.Promise[AnonLogs] = js.native
+  def getLogs(options: LogsOptions): js.Promise[Logs] = js.native
   /**
     * Get 1000 last events
     */
-  def getLogs(options: LogsOptions, cb: js.Function2[/* err */ js.Error, /* res */ AnonLogs, Unit]): Unit = js.native
+  def getLogs(options: LogsOptions, cb: js.Function2[/* err */ js.Error, /* res */ Logs, Unit]): Unit = js.native
   /**
     * Initialization of the index
     */
@@ -141,18 +141,18 @@ trait Client extends js.Object {
   /**
     * Query on multiple index
     */
-  def search[T](queries: js.Array[AnonIndexName]): js.Promise[MultiResponse[T]] = js.native
+  def search[T](queries: js.Array[IndexName]): js.Promise[MultiResponse[T]] = js.native
   /**
     * Query on multiple index
     */
   def search[T](
-    queries: js.Array[AnonIndexName],
+    queries: js.Array[IndexName],
     cb: js.Function2[/* err */ js.Error, /* res */ MultiResponse[T], Unit]
   ): Unit = js.native
   /**
     * Query for facet values of a specific facet
     */
-  def searchForFacetValues(queries: js.Array[AnonParams]): js.Promise[js.Array[typingsSlinky.algoliasearch.mod.SearchForFacetValues.Response]] = js.native
+  def searchForFacetValues(queries: js.Array[Params]): js.Promise[js.Array[typingsSlinky.algoliasearch.mod.SearchForFacetValues.Response]] = js.native
   /**
     * Add a header to be sent with all upcoming requests
     */

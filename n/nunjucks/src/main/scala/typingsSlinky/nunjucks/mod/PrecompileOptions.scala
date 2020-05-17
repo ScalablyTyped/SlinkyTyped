@@ -1,6 +1,6 @@
 package typingsSlinky.nunjucks.mod
 
-import typingsSlinky.nunjucks.AnonName
+import typingsSlinky.nunjucks.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait PrecompileOptions extends js.Object {
   var force: js.UndefOr[Boolean] = js.native
   var include: js.UndefOr[js.Array[String]] = js.native
   var name: js.UndefOr[String] = js.native
-  var wrapper: js.UndefOr[js.Function2[/* templates */ AnonName, /* opts */ this.type, String]] = js.native
+  var wrapper: js.UndefOr[js.Function2[/* templates */ Name, /* opts */ this.type, String]] = js.native
 }
 
 object PrecompileOptions {
@@ -101,7 +101,7 @@ object PrecompileOptions {
         ret
     }
     @scala.inline
-    def withWrapper(value: (/* templates */ AnonName, PrecompileOptions) => String): Self = {
+    def withWrapper(value: (/* templates */ Name, PrecompileOptions) => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("wrapper")(js.Any.fromFunction2(value))
         ret

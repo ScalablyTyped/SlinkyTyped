@@ -10,9 +10,8 @@ import scala.scalajs.js.annotation._
   * @class
   * @memberof PIXI
   */
-@JSGlobal("PIXI.Transform")
 @js.native
-class Transform () extends js.Object {
+trait Transform extends js.Object {
   /**
     * The locally unique ID of the local transform
     * used to calculate the current local transformation matrix.
@@ -154,17 +153,167 @@ class Transform () extends js.Object {
   def updateTransform(parentTransform: Transform): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("PIXI.Transform")
-@js.native
-object Transform extends js.Object {
-  /**
-    * A default (identity) transform
-    *
-    * @static
-    * @constant
-    * @member {PIXI.Transform}
-    */
-  var IDENTITY: Transform = js.native
+object Transform {
+  @scala.inline
+  def apply(
+    _currentLocalID: Double,
+    _cx: Double,
+    _cy: Double,
+    _localID: Double,
+    _parentID: Double,
+    _rotation: Double,
+    _sx: Double,
+    _sy: Double,
+    _worldID: Double,
+    localTransform: Matrix,
+    onChange: () => Unit,
+    pivot: ObservablePoint,
+    position: ObservablePoint,
+    rotation: Double,
+    scale: ObservablePoint,
+    setFromMatrix: Matrix => Unit,
+    skew: ObservablePoint,
+    updateLocalTransform: () => Unit,
+    updateSkew: () => Unit,
+    updateTransform: Transform => Unit,
+    worldTransform: Matrix
+  ): Transform = {
+    val __obj = js.Dynamic.literal(_currentLocalID = _currentLocalID.asInstanceOf[js.Any], _cx = _cx.asInstanceOf[js.Any], _cy = _cy.asInstanceOf[js.Any], _localID = _localID.asInstanceOf[js.Any], _parentID = _parentID.asInstanceOf[js.Any], _rotation = _rotation.asInstanceOf[js.Any], _sx = _sx.asInstanceOf[js.Any], _sy = _sy.asInstanceOf[js.Any], _worldID = _worldID.asInstanceOf[js.Any], localTransform = localTransform.asInstanceOf[js.Any], onChange = js.Any.fromFunction0(onChange), pivot = pivot.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any], rotation = rotation.asInstanceOf[js.Any], scale = scale.asInstanceOf[js.Any], setFromMatrix = js.Any.fromFunction1(setFromMatrix), skew = skew.asInstanceOf[js.Any], updateLocalTransform = js.Any.fromFunction0(updateLocalTransform), updateSkew = js.Any.fromFunction0(updateSkew), updateTransform = js.Any.fromFunction1(updateTransform), worldTransform = worldTransform.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Transform]
+  }
+  @scala.inline
+  implicit class TransformOps[Self <: Transform] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_currentLocalID(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_currentLocalID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_cx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_cx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_cy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_cy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_localID(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_localID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_parentID(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_parentID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_rotation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_rotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_sx(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_sx")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_sy(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_sy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_worldID(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_worldID")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocalTransform(value: Matrix): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("localTransform")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnChange(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withPivot(value: ObservablePoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pivot")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPosition(value: ObservablePoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRotation(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rotation")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScale(value: ObservablePoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scale")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetFromMatrix(value: Matrix => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFromMatrix")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSkew(value: ObservablePoint): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("skew")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUpdateLocalTransform(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateLocalTransform")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateSkew(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateSkew")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateTransform(value: Transform => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateTransform")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withWorldTransform(value: Matrix): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("worldTransform")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

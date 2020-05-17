@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.moment.momentStrings.quarters
   - typingsSlinky.moment.momentStrings.Q
 */
-trait quarter extends _StartOf
+trait quarter extends StartOf
 
 object quarter {
   @scala.inline

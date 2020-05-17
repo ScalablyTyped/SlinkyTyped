@@ -12,14 +12,8 @@ trait V1Options extends js.Object
 
 object V1Options {
   @scala.inline
-  def V1RandomOptions(): V1Options = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[V1Options]
-  }
+  implicit def apply(value: V1RandomOptions): V1Options = value.asInstanceOf[V1Options]
   @scala.inline
-  def V1RngOptions(): V1Options = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[V1Options]
-  }
+  implicit def apply(value: V1RngOptions): V1Options = value.asInstanceOf[V1Options]
 }
 

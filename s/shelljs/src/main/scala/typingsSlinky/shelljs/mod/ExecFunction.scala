@@ -1,8 +1,8 @@
 package typingsSlinky.shelljs.mod
 
 import typingsSlinky.node.childProcessMod.ChildProcess
-import typingsSlinky.shelljs.ExecOptionsasyncfalse
-import typingsSlinky.shelljs.ExecOptionsasynctrue
+import typingsSlinky.shelljs.anon.ExecOptionsasyncfalse
+import typingsSlinky.shelljs.anon.ExecOptionsasynctrue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

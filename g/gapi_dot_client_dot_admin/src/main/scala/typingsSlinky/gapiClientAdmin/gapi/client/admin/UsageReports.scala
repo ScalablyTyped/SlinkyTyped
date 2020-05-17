@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientAdmin.gapi.client.admin
 
-import typingsSlinky.gapiClientAdmin.AnonCode
+import typingsSlinky.gapiClientAdmin.anon.Code
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait UsageReports extends js.Object {
   /** Various application parameter records. */
   var usageReports: js.UndefOr[js.Array[UsageReport]] = js.native
   /** Warnings if any. */
-  var warnings: js.UndefOr[js.Array[AnonCode]] = js.native
+  var warnings: js.UndefOr[js.Array[Code]] = js.native
 }
 
 object UsageReports {
@@ -80,7 +80,7 @@ object UsageReports {
         ret
     }
     @scala.inline
-    def withWarnings(value: js.Array[AnonCode]): Self = {
+    def withWarnings(value: js.Array[Code]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(value.asInstanceOf[js.Any])
         ret

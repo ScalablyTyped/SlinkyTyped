@@ -1,7 +1,7 @@
 package typingsSlinky.telebot.mod
 
-import typingsSlinky.telebot.AnonCert
-import typingsSlinky.telebot.AnonInterval
+import typingsSlinky.telebot.anon.Cert
+import typingsSlinky.telebot.anon.Interval
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,11 +14,11 @@ trait config extends js.Object {
    // Optional. Use build-in plugins from pluginFolder.
   var pluginFolder: js.UndefOr[String] = js.native
    // Required. Telegram Bot API token.
-  var polling: js.UndefOr[AnonInterval] = js.native
+  var polling: js.UndefOr[Interval] = js.native
   var token: String = js.native
    // Optional. List the types of updates you want your bot to receive. Specify an empty list to receive all updates.
   var usePlugins: js.UndefOr[js.Array[String]] = js.native
-  var webhook: js.UndefOr[AnonCert] = js.native
+  var webhook: js.UndefOr[Cert] = js.native
 }
 
 object config {
@@ -76,7 +76,7 @@ object config {
         ret
     }
     @scala.inline
-    def withPolling(value: AnonInterval): Self = {
+    def withPolling(value: Interval): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("polling")(value.asInstanceOf[js.Any])
         ret
@@ -100,7 +100,7 @@ object config {
         ret
     }
     @scala.inline
-    def withWebhook(value: AnonCert): Self = {
+    def withWebhook(value: Cert): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("webhook")(value.asInstanceOf[js.Any])
         ret

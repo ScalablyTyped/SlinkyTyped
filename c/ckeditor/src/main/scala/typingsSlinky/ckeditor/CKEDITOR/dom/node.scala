@@ -1,14 +1,11 @@
 package typingsSlinky.ckeditor.CKEDITOR.dom
 
-import org.scalajs.dom.raw.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("CKEDITOR.dom.node")
 @js.native
-class node protected () extends domObject {
-  def this(domNode: Node) = this()
+trait node extends domObject {
   var `type`: Double = js.native
   def appendTo(element: element): element = js.native
   def clone(includeChildren: Boolean, cloneId: Boolean): node = js.native

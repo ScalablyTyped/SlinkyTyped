@@ -1,5 +1,7 @@
 package typingsSlinky.gapiYoutube
 
+import typingsSlinky.gapiYoutube.anon.Bulletin
+import typingsSlinky.gapiYoutube.anon.ChannelId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +11,7 @@ trait GoogleApiYouTubeActivityResource extends js.Object {
   /**
     * The contentDetails object contains information about the content associated with the activity.
     */
-  var contentDetails: AnonBulletin = js.native
+  var contentDetails: Bulletin = js.native
   /**
     * The ETag of the activity resource.
     */
@@ -25,12 +27,12 @@ trait GoogleApiYouTubeActivityResource extends js.Object {
   /**
     * The snippet object contains basic details about the activity, including the activitys type and group ID.
     */
-  var snippet: AnonChannelTitle = js.native
+  var snippet: ChannelId = js.native
 }
 
 object GoogleApiYouTubeActivityResource {
   @scala.inline
-  def apply(contentDetails: AnonBulletin, etag: String, id: String, kind: String, snippet: AnonChannelTitle): GoogleApiYouTubeActivityResource = {
+  def apply(contentDetails: Bulletin, etag: String, id: String, kind: String, snippet: ChannelId): GoogleApiYouTubeActivityResource = {
     val __obj = js.Dynamic.literal(contentDetails = contentDetails.asInstanceOf[js.Any], etag = etag.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], snippet = snippet.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleApiYouTubeActivityResource]
   }
@@ -41,7 +43,7 @@ object GoogleApiYouTubeActivityResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContentDetails(value: AnonBulletin): Self = {
+    def withContentDetails(value: Bulletin): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentDetails")(value.asInstanceOf[js.Any])
         ret
@@ -65,7 +67,7 @@ object GoogleApiYouTubeActivityResource {
         ret
     }
     @scala.inline
-    def withSnippet(value: AnonChannelTitle): Self = {
+    def withSnippet(value: ChannelId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("snippet")(value.asInstanceOf[js.Any])
         ret

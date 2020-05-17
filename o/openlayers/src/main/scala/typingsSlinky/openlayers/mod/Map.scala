@@ -1,6 +1,7 @@
 package typingsSlinky.openlayers.mod
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import typingsSlinky.openlayers.mod.control.Control
 import typingsSlinky.openlayers.mod.interaction.Interaction
 import typingsSlinky.openlayers.mod.layer.Base
@@ -8,7 +9,6 @@ import typingsSlinky.openlayers.mod.layer.Group
 import typingsSlinky.openlayers.mod.layer.Layer
 import typingsSlinky.openlayers.mod.olx.AtPixelOptions
 import typingsSlinky.openlayers.mod.olx.MapOptions
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -184,14 +184,14 @@ class Map protected () extends Object {
     * @return Coordinate.
     * @api stable
     */
-  def getEventCoordinate(event: Event_): Coordinate_ = js.native
+  def getEventCoordinate(event: Event): Coordinate_ = js.native
   /**
     * Returns the map pixel position for a browser event relative to the viewport.
     * @param event Event.
     * @return Pixel.
     * @api stable
     */
-  def getEventPixel(event: Event_): Pixel = js.native
+  def getEventPixel(event: Event): Pixel = js.native
   /**
     * Get all features that intersect a pixel on the viewport.
     * @param pixel Pixel.

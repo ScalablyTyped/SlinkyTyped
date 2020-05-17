@@ -1,7 +1,6 @@
 package typingsSlinky.tern.ternMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.tern.AnonQuery
 import typingsSlinky.tern.inferMod.Context
 import typingsSlinky.tern.ternStrings.afterLoad
 import typingsSlinky.tern.ternStrings.beforeLoad
@@ -66,7 +65,7 @@ trait Server extends js.Object {
     * When the server hasn’t been configured to be asynchronous, the callback will be called before request returns.
     */
   def request[Q /* <: Query */, D /* <: Document */](
-    doc: D with AnonQuery[Q],
+    doc: D with typingsSlinky.tern.anon.Query[Q],
     callback: js.Function2[
       /* error */ String | Null, 
       /* response */ js.UndefOr[js.Object | QueryResult[Q]], 

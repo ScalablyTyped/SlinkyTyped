@@ -4,7 +4,7 @@ import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.reactSelect.AnonOnMouseDown
+import typingsSlinky.reactSelect.anon.OnMouseDown
 import typingsSlinky.reactSelect.controlMod.ControlProps
 import typingsSlinky.reactSelect.selectMod.Props
 import typingsSlinky.reactSelect.typesMod.ActionTypes
@@ -44,7 +44,7 @@ object ComponentsControl {
     getStyles: (String, js.Any) => js.Object,
     getValue: () => ValueType[js.Any],
     hasValue: Boolean,
-    innerProps: AnonOnMouseDown,
+    innerProps: OnMouseDown,
     isDisabled: Boolean,
     isFocused: Boolean,
     isMulti: Boolean,

@@ -1,6 +1,6 @@
 package typingsSlinky.deezerSdk.DeezerSdk
 
-import typingsSlinky.deezerSdk.AnonIndex
+import typingsSlinky.deezerSdk.anon.Index
 import typingsSlinky.deezerSdk.deezerSdkStrings.current_track
 import typingsSlinky.deezerSdk.deezerSdkStrings.mute_changed
 import typingsSlinky.deezerSdk.deezerSdkStrings.player_buffering
@@ -28,7 +28,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Event extends js.Object {
   @JSName("subscribe")
-  def subscribe_currenttrack(event: current_track, callback: js.Function1[/* currentTrackInfo */ AnonIndex, Unit]): Unit = js.native
+  def subscribe_currenttrack(event: current_track, callback: js.Function1[/* currentTrackInfo */ Index, Unit]): Unit = js.native
   @JSName("subscribe")
   def subscribe_mutechanged(event: mute_changed, callback: js.Function1[/* mute */ Boolean, Unit]): Unit = js.native
   @JSName("subscribe")

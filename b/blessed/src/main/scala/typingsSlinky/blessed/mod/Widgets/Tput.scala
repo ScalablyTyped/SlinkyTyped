@@ -1,6 +1,6 @@
 package typingsSlinky.blessed.mod.Widgets
 
-import typingsSlinky.blessed.AnonBools
+import typingsSlinky.blessed.anon.Bools
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ class Tput protected () extends IHasOptions[TputsOptions] {
   var terminal: String = js.native
   var terminfoFile: String = js.native
   var terminfoPrefix: String = js.native
-  def parseTerminfo(data: js.Any, file: String): AnonBools = js.native
+  def parseTerminfo(data: js.Any, file: String): Bools = js.native
   def readTerminfo(term: String): String = js.native
   def setup(): Unit = js.native
   def term(is: js.Any): Boolean = js.native

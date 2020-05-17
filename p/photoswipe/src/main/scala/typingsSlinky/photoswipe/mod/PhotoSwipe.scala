@@ -2,8 +2,8 @@ package typingsSlinky.photoswipe.mod
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.photoswipe.AnonPrevent
-import typingsSlinky.photoswipe.AnonX
+import typingsSlinky.photoswipe.anon.Prevent
+import typingsSlinky.photoswipe.anon.X
 import typingsSlinky.photoswipe.photoswipeStrings.afterChange
 import typingsSlinky.photoswipe.photoswipeStrings.beforeChange
 import typingsSlinky.photoswipe.photoswipeStrings.close
@@ -83,7 +83,7 @@ trait PhotoSwipe[T /* <: Options */] extends js.Object {
   /**
     * Size of the current viewport.
     */
-  var viewportSize: AnonX = js.native
+  var viewportSize: X = js.native
   /**
     * Apply zoom and pan to the current slide
     *
@@ -220,7 +220,7 @@ trait PhotoSwipe[T /* <: Options */] extends js.Object {
   @JSName("listen")
   def listen_preventDragEvent(
     eventName: preventDragEvent,
-    callback: js.Function3[/* e */ MouseEvent, /* isDown */ Boolean, /* preventObj */ AnonPrevent, Unit]
+    callback: js.Function3[/* e */ MouseEvent, /* isDown */ Boolean, /* preventObj */ Prevent, Unit]
   ): Unit = js.native
   /**
     * Called when the viewport size changes.
@@ -266,16 +266,16 @@ trait PhotoSwipe[T /* <: Options */] extends js.Object {
     * pswp.zoomTo(2, {x:pswp.viewportSize.x/2,y:pswp.viewportSize.y/2}, 2000, false, function(now) {});
     *
     */
-  def zoomTo(destZoomLevel: Double, centerPoint: AnonX, speed: Double): Unit = js.native
+  def zoomTo(destZoomLevel: Double, centerPoint: X, speed: Double): Unit = js.native
   def zoomTo(
     destZoomLevel: Double,
-    centerPoint: AnonX,
+    centerPoint: X,
     speed: Double,
     easingFn: js.Function1[/* k */ Double, Double]
   ): Unit = js.native
   def zoomTo(
     destZoomLevel: Double,
-    centerPoint: AnonX,
+    centerPoint: X,
     speed: Double,
     easingFn: js.Function1[/* k */ Double, Double],
     updateFn: js.Function1[/* now */ Double, Unit]

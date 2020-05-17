@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`return`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.bitfield
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.value
@@ -25,8 +24,4 @@ trait PointCloudFilter
     */
   val `type`: value | bitfield | `return` = js.native
 }
-
-@JSGlobal("__esri.PointCloudFilter")
-@js.native
-object PointCloudFilter extends TopLevel[PointCloudFilterConstructor]
 

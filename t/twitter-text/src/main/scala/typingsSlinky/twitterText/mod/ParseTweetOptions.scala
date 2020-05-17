@@ -1,6 +1,6 @@
 package typingsSlinky.twitterText.mod
 
-import typingsSlinky.twitterText.AnonEnd
+import typingsSlinky.twitterText.anon.End
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait ParseTweetOptions extends js.Object {
   var defaultWeight: js.UndefOr[Double] = js.native
   var maxWeightedTweetLength: js.UndefOr[Double] = js.native
-  var ranges: js.UndefOr[js.Array[AnonEnd]] = js.native
+  var ranges: js.UndefOr[js.Array[End]] = js.native
   var scale: js.UndefOr[Double] = js.native
   var transformedURLLength: js.UndefOr[Double] = js.native
   var version: js.UndefOr[Double] = js.native
@@ -52,7 +52,7 @@ object ParseTweetOptions {
         ret
     }
     @scala.inline
-    def withRanges(value: js.Array[AnonEnd]): Self = {
+    def withRanges(value: js.Array[End]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(value.asInstanceOf[js.Any])
         ret

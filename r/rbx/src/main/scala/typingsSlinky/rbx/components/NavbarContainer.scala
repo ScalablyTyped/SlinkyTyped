@@ -1,13 +1,14 @@
 package typingsSlinky.rbx.components
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.SVGElement
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.rbx.BinVariablesbreakpointsLi
-import typingsSlinky.rbx.KinVariablesbreakpointsto
+import typingsSlinky.rbx.anon.BinVariablesbreakpointsLi
+import typingsSlinky.rbx.anon.KinVariablesbreakpointsto
 import typingsSlinky.rbx.navbarContainerMod.NavbarContainerProps
 import typingsSlinky.rbx.rbxNumbers.`1`
 import typingsSlinky.rbx.rbxNumbers.`2`
@@ -51,7 +52,6 @@ import typingsSlinky.rbx.rbxStrings.uppercase
 import typingsSlinky.rbx.rbxStrings.warning
 import typingsSlinky.rbx.rbxStrings.white
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -96,7 +96,7 @@ object NavbarContainer {
     @scala.inline
     def color(value: primary | success | info | warning | danger | light | dark | white | black | link): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
-    def document(value: Document_): this.type = set("document", value.asInstanceOf[js.Any])
+    def document(value: Document): this.type = set("document", value.asInstanceOf[js.Any])
     @scala.inline
     def fixed(value: top | bottom): this.type = set("fixed", value.asInstanceOf[js.Any])
     @scala.inline

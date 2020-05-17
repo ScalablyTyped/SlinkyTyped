@@ -1,7 +1,7 @@
 package typingsSlinky.braintreeWebDropIn.mod
 
-import typingsSlinky.braintreeWebDropIn.AnonPaymentMethodIsSelected
-import typingsSlinky.braintreeWebDropIn.AnonPaymentOption
+import typingsSlinky.braintreeWebDropIn.anon.PaymentMethodIsSelected
+import typingsSlinky.braintreeWebDropIn.anon.PaymentOption
 import typingsSlinky.braintreeWebDropIn.braintreeWebDropInStrings.noPaymentMethodRequestable
 import typingsSlinky.braintreeWebDropIn.braintreeWebDropInStrings.paymentMethodRequestable
 import typingsSlinky.braintreeWebDropIn.braintreeWebDropInStrings.paymentOptionSelected
@@ -18,10 +18,10 @@ trait Dropin extends js.Object {
   @JSName("on")
   def on_paymentMethodRequestable(
     event: paymentMethodRequestable,
-    handler: js.Function1[/* payload */ AnonPaymentMethodIsSelected, Unit]
+    handler: js.Function1[/* payload */ PaymentMethodIsSelected, Unit]
   ): Unit = js.native
   @JSName("on")
-  def on_paymentOptionSelected(event: paymentOptionSelected, handler: js.Function1[/* payload */ AnonPaymentOption, Unit]): Unit = js.native
+  def on_paymentOptionSelected(event: paymentOptionSelected, handler: js.Function1[/* payload */ PaymentOption, Unit]): Unit = js.native
   def requestPaymentMethod(): js.Promise[PaymentMethodPayload] = js.native
   def requestPaymentMethod(
     callback: js.Function2[/* error */ js.Object | Null, /* payload */ js.UndefOr[PaymentMethodPayload], Unit]

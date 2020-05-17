@@ -1,6 +1,6 @@
 package typingsSlinky.esm.mod.Options
 
-import typingsSlinky.esm.PartialEsm
+import typingsSlinky.esm.anon.PartialEsm
 import typingsSlinky.esm.esmStrings.all
 import typingsSlinky.esm.esmStrings.auto
 import typingsSlinky.esm.esmStrings.strict

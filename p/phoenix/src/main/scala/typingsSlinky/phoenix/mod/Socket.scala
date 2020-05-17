@@ -1,6 +1,6 @@
 package typingsSlinky.phoenix.mod
 
-import typingsSlinky.phoenix.PartialSocketConnectOptio
+import typingsSlinky.phoenix.anon.PartialSocketConnectOptio
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

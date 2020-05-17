@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Class_XmlText")
 @js.native
-class ClassXmlText () extends ClassXmlCharacterData {
+trait ClassXmlText extends ClassXmlCharacterData {
   /**
   	 * 
   	 * @brief 按照指定的 offset 把文本节点分割为两个节点

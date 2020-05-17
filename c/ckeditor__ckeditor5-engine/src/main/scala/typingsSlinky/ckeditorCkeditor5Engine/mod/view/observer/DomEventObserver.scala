@@ -1,6 +1,6 @@
 package typingsSlinky.ckeditorCkeditor5Engine.mod.view.observer
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
 class DomEventObserver () extends Observer {
   val domEventType: String | js.Array[String] = js.native
   var useCapture: Boolean = js.native
-  def fire(eventType: String, domEvent: Event_): Unit = js.native
-  def fire(eventType: String, domEvent: Event_, additionalData: js.Object): Unit = js.native
+  def fire(eventType: String, domEvent: Event): Unit = js.native
+  def fire(eventType: String, domEvent: Event, additionalData: js.Object): Unit = js.native
   def onDomEvent(): Unit = js.native
 }
 

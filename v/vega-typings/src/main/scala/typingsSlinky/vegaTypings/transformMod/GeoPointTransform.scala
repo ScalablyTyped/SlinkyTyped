@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait GeoPointTransform extends _Transforms {
+trait GeoPointTransform extends Transforms {
   var as: js.UndefOr[(Vector2[String | SignalRef]) | SignalRef] = js.native
   var fields: Vector2[FieldRef] | SignalRef = js.native
   var projection: ProjectionName = js.native

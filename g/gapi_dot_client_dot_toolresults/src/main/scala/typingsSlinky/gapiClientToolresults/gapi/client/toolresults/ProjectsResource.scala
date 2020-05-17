@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientToolresults.gapi.client.toolresults
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientToolresults.AnonAltFields
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientToolresults.anon.AltFields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait ProjectsResource extends js.Object {
     *
     * - PERMISSION_DENIED - if the user is not authorized to read from project
     */
-  def getSettings(request: AnonAltFields): Request_[ProjectSettings] = js.native
+  def getSettings(request: AltFields): Request[ProjectSettings] = js.native
   /**
     * Creates resources for settings which have not yet been set.
     *
@@ -36,15 +36,15 @@ trait ProjectsResource extends js.Object {
     *
     * - PERMISSION_DENIED - if the user is not authorized to write to project - Any error code raised by Google Cloud Storage
     */
-  def initializeSettings(request: AnonAltFields): Request_[ProjectSettings] = js.native
+  def initializeSettings(request: AltFields): Request[ProjectSettings] = js.native
 }
 
 object ProjectsResource {
   @scala.inline
   def apply(
-    getSettings: AnonAltFields => Request_[ProjectSettings],
+    getSettings: AltFields => Request[ProjectSettings],
     histories: HistoriesResource,
-    initializeSettings: AnonAltFields => Request_[ProjectSettings]
+    initializeSettings: AltFields => Request[ProjectSettings]
   ): ProjectsResource = {
     val __obj = js.Dynamic.literal(getSettings = js.Any.fromFunction1(getSettings), histories = histories.asInstanceOf[js.Any], initializeSettings = js.Any.fromFunction1(initializeSettings))
     __obj.asInstanceOf[ProjectsResource]
@@ -56,7 +56,7 @@ object ProjectsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetSettings(value: AnonAltFields => Request_[ProjectSettings]): Self = {
+    def withGetSettings(value: AltFields => Request[ProjectSettings]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getSettings")(js.Any.fromFunction1(value))
         ret
@@ -68,7 +68,7 @@ object ProjectsResource {
         ret
     }
     @scala.inline
-    def withInitializeSettings(value: AnonAltFields => Request_[ProjectSettings]): Self = {
+    def withInitializeSettings(value: AltFields => Request[ProjectSettings]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("initializeSettings")(js.Any.fromFunction1(value))
         ret

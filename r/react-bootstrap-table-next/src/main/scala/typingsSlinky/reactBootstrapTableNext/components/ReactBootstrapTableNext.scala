@@ -4,11 +4,11 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactBootstrapTableNext.AnonDataSize
-import typingsSlinky.reactBootstrapTableNext.AnonOptionsPaginationOptions
-import typingsSlinky.reactBootstrapTableNext.AnonOrder
-import typingsSlinky.reactBootstrapTableNext.AnonSortCaret
-import typingsSlinky.reactBootstrapTableNext.Partialpaginationbooleanf
+import typingsSlinky.reactBootstrapTableNext.anon.DataSize
+import typingsSlinky.reactBootstrapTableNext.anon.OptionsPaginationOptions
+import typingsSlinky.reactBootstrapTableNext.anon.Order
+import typingsSlinky.reactBootstrapTableNext.anon.Partialpaginationbooleanf
+import typingsSlinky.reactBootstrapTableNext.anon.SortCaret
 import typingsSlinky.reactBootstrapTableNext.mod.BootstrapTableProps
 import typingsSlinky.reactBootstrapTableNext.mod.ColumnDescription
 import typingsSlinky.reactBootstrapTableNext.mod.ExpandRowProps
@@ -52,7 +52,7 @@ object ReactBootstrapTableNext {
     @scala.inline
     def defaultSortDirection(value: SortOrder): this.type = set("defaultSortDirection", value.asInstanceOf[js.Any])
     @scala.inline
-    def defaultSorted(value: js.Array[AnonOrder]): this.type = set("defaultSorted", value.asInstanceOf[js.Any])
+    def defaultSorted(value: js.Array[Order]): this.type = set("defaultSorted", value.asInstanceOf[js.Any])
     @scala.inline
     def expandRow(value: ExpandRowProps[T]): this.type = set("expandRow", value.asInstanceOf[js.Any])
     @scala.inline
@@ -74,7 +74,7 @@ object ReactBootstrapTableNext {
     @scala.inline
     def noDataIndication(value: () => ReactElement | String): this.type = set("noDataIndication", js.Any.fromFunction0(value))
     @scala.inline
-    def onDataSizeChange(value: /* props */ AnonDataSize => Unit): this.type = set("onDataSizeChange", js.Any.fromFunction1(value))
+    def onDataSizeChange(value: /* props */ DataSize => Unit): this.type = set("onDataSizeChange", js.Any.fromFunction1(value))
     @scala.inline
     def onExternalFilter(value: js.Any): this.type = set("onExternalFilter", value.asInstanceOf[js.Any])
     @scala.inline
@@ -86,7 +86,7 @@ object ReactBootstrapTableNext {
     @scala.inline
     def overlay(value: js.Any): this.type = set("overlay", value.asInstanceOf[js.Any])
     @scala.inline
-    def pagination(value: AnonOptionsPaginationOptions): this.type = set("pagination", value.asInstanceOf[js.Any])
+    def pagination(value: OptionsPaginationOptions): this.type = set("pagination", value.asInstanceOf[js.Any])
     @scala.inline
     def parentClassNameFunction3(value: (/* isExpand */ Boolean, T, /* rowIndex */ Double) => String): this.type = set("parentClassName", js.Any.fromFunction3(value))
     @scala.inline
@@ -108,7 +108,7 @@ object ReactBootstrapTableNext {
     @scala.inline
     def selectRow(value: SelectRowProps[T]): this.type = set("selectRow", value.asInstanceOf[js.Any])
     @scala.inline
-    def sort(value: AnonSortCaret): this.type = set("sort", value.asInstanceOf[js.Any])
+    def sort(value: SortCaret): this.type = set("sort", value.asInstanceOf[js.Any])
     @scala.inline
     def striped(value: Boolean): this.type = set("striped", value.asInstanceOf[js.Any])
     @scala.inline

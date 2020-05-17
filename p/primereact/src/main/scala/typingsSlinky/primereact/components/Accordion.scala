@@ -2,8 +2,8 @@ package typingsSlinky.primereact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonIndex
 import typingsSlinky.primereact.accordionMod.AccordionProps
+import typingsSlinky.primereact.anon.Index
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +26,11 @@ object Accordion {
     @scala.inline
     def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
     @scala.inline
-    def onTabChange(value: /* e */ AnonIndex => Unit): this.type = set("onTabChange", js.Any.fromFunction1(value))
+    def onTabChange(value: /* e */ Index => Unit): this.type = set("onTabChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onTabClose(value: /* e */ AnonIndex => Unit): this.type = set("onTabClose", js.Any.fromFunction1(value))
+    def onTabClose(value: /* e */ Index => Unit): this.type = set("onTabClose", js.Any.fromFunction1(value))
     @scala.inline
-    def onTabOpen(value: /* e */ AnonIndex => Unit): this.type = set("onTabOpen", js.Any.fromFunction1(value))
+    def onTabOpen(value: /* e */ Index => Unit): this.type = set("onTabOpen", js.Any.fromFunction1(value))
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
   }

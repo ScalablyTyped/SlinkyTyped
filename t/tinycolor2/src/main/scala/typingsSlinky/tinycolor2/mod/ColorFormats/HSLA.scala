@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.tinycolor2.mod._ColorInput because Already inherited
-- typingsSlinky.tinycolor2.mod._ColorInputWithoutInstance because Already inherited */ @js.native
+- typingsSlinky.tinycolor2.mod.ColorInput because Already inherited
+- typingsSlinky.tinycolor2.mod.ColorInputWithoutInstance because Already inherited */ @js.native
 trait HSLA
   extends HSL
      with Alpha

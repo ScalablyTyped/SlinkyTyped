@@ -1,6 +1,6 @@
 package typingsSlinky.orientjs.mod
 
-import typingsSlinky.orientjs.AnonMax
+import typingsSlinky.orientjs.anon.Max
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait ODatabaseSessionPoolOptions extends js.Object {
   var name: String = js.native
   var password: js.UndefOr[String] = js.native
-  var pool: js.UndefOr[AnonMax] = js.native
+  var pool: js.UndefOr[Max] = js.native
   var username: js.UndefOr[String] = js.native
 }
 
@@ -44,7 +44,7 @@ object ODatabaseSessionPoolOptions {
         ret
     }
     @scala.inline
-    def withPool(value: AnonMax): Self = {
+    def withPool(value: Max): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pool")(value.asInstanceOf[js.Any])
         ret

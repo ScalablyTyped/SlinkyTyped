@@ -2,7 +2,7 @@ package typingsSlinky.reactNativeMaterialUi.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNativeMaterialUi.AnonContainerViewStyle
+import typingsSlinky.reactNativeMaterialUi.anon.ContainerViewStyle
 import typingsSlinky.reactNativeMaterialUi.mod.DrawerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ object Drawer {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeMaterialUi.mod.Drawer] {
     @scala.inline
-    def style(value: AnonContainerViewStyle): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: ContainerViewStyle): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: DrawerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

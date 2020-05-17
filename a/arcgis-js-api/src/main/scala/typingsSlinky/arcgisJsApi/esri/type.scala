@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -81,7 +80,34 @@ trait `type` extends js.Object {
   def createRenderer(params: typeCreateRendererParams): js.Promise[typeRendererResult] = js.native
 }
 
-@JSGlobal("__esri.type")
-@js.native
-object `type` extends TopLevel[`type`]
+object `type` {
+  @scala.inline
+  def apply(
+    createPCClassRenderer: typeCreatePCClassRendererParams => js.Promise[PCClassRendererResult],
+    createRenderer: typeCreateRendererParams => js.Promise[typeRendererResult]
+  ): `type` = {
+    val __obj = js.Dynamic.literal(createPCClassRenderer = js.Any.fromFunction1(createPCClassRenderer), createRenderer = js.Any.fromFunction1(createRenderer))
+    __obj.asInstanceOf[`type`]
+  }
+  @scala.inline
+  implicit class typeOps[Self <: `type`] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreatePCClassRenderer(value: typeCreatePCClassRendererParams => js.Promise[PCClassRendererResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createPCClassRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateRenderer(value: typeCreateRendererParams => js.Promise[typeRendererResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

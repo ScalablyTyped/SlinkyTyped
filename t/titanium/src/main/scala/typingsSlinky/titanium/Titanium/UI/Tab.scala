@@ -27,9 +27,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A tab instance for a [TabGroup](Titanium.UI.TabGroup).
 		 */
-@JSGlobal("Titanium.UI.Tab")
 @js.native
-class Tab () extends View {
+trait Tab extends View {
   /**
   			 * `true` if this tab is active, `false` if it is not.
   			 */

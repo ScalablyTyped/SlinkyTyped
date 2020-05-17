@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait StackTransform extends _Transforms {
+trait StackTransform extends Transforms {
   var as: js.UndefOr[(Vector2[String | SignalRef]) | SignalRef] = js.native
   var field: js.UndefOr[FieldRef] = js.native
   var groupby: js.UndefOr[js.Array[FieldRef]] = js.native

@@ -6,33 +6,33 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait SpeechRecognitionEventMap extends js.Object {
-  var audioend: Event_ = js.native
-  var audiostart: Event_ = js.native
-  var end: Event_ = js.native
-  var error: Event_ = js.native
+  var audioend: org.scalajs.dom.raw.Event = js.native
+  var audiostart: org.scalajs.dom.raw.Event = js.native
+  var end: org.scalajs.dom.raw.Event = js.native
+  var error: org.scalajs.dom.raw.Event = js.native
   var nomatch: SpeechRecognitionEvent = js.native
   var result: SpeechRecognitionEvent = js.native
-  var soundend: Event_ = js.native
-  var soundstart: Event_ = js.native
-  var speechend: Event_ = js.native
-  var speechstart: Event_ = js.native
-  var start: Event_ = js.native
+  var soundend: org.scalajs.dom.raw.Event = js.native
+  var soundstart: org.scalajs.dom.raw.Event = js.native
+  var speechend: org.scalajs.dom.raw.Event = js.native
+  var speechstart: org.scalajs.dom.raw.Event = js.native
+  var start: org.scalajs.dom.raw.Event = js.native
 }
 
 object SpeechRecognitionEventMap {
   @scala.inline
   def apply(
-    audioend: Event_,
-    audiostart: Event_,
-    end: Event_,
-    error: Event_,
+    audioend: org.scalajs.dom.raw.Event,
+    audiostart: org.scalajs.dom.raw.Event,
+    end: org.scalajs.dom.raw.Event,
+    error: org.scalajs.dom.raw.Event,
     nomatch: SpeechRecognitionEvent,
     result: SpeechRecognitionEvent,
-    soundend: Event_,
-    soundstart: Event_,
-    speechend: Event_,
-    speechstart: Event_,
-    start: Event_
+    soundend: org.scalajs.dom.raw.Event,
+    soundstart: org.scalajs.dom.raw.Event,
+    speechend: org.scalajs.dom.raw.Event,
+    speechstart: org.scalajs.dom.raw.Event,
+    start: org.scalajs.dom.raw.Event
   ): SpeechRecognitionEventMap = {
     val __obj = js.Dynamic.literal(audioend = audioend.asInstanceOf[js.Any], audiostart = audiostart.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], nomatch = nomatch.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any], soundend = soundend.asInstanceOf[js.Any], soundstart = soundstart.asInstanceOf[js.Any], speechend = speechend.asInstanceOf[js.Any], speechstart = speechstart.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.asInstanceOf[SpeechRecognitionEventMap]
@@ -44,25 +44,25 @@ object SpeechRecognitionEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAudioend(value: Event_): Self = {
+    def withAudioend(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("audioend")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withAudiostart(value: Event_): Self = {
+    def withAudiostart(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("audiostart")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withEnd(value: Event_): Self = {
+    def withEnd(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withError(value: Event_): Self = {
+    def withError(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret
@@ -80,31 +80,31 @@ object SpeechRecognitionEventMap {
         ret
     }
     @scala.inline
-    def withSoundend(value: Event_): Self = {
+    def withSoundend(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("soundend")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSoundstart(value: Event_): Self = {
+    def withSoundstart(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("soundstart")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSpeechend(value: Event_): Self = {
+    def withSpeechend(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("speechend")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSpeechstart(value: Event_): Self = {
+    def withSpeechstart(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("speechstart")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withStart(value: Event_): Self = {
+    def withStart(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
         ret

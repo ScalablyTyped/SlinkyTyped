@@ -12,9 +12,9 @@ import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeSvg.mod.LinearGradientProps
 import typingsSlinky.reactNativeSvg.mod.RadialGradientProps
-import typingsSlinky.reactNativeSvgCharts.AnonBottom
-import typingsSlinky.reactNativeSvgCharts.AnonId
-import typingsSlinky.reactNativeSvgCharts.PartialPathProps
+import typingsSlinky.reactNativeSvgCharts.anon.Bottom
+import typingsSlinky.reactNativeSvgCharts.anon.Id
+import typingsSlinky.reactNativeSvgCharts.anon.PartialPathProps
 import typingsSlinky.reactNativeSvgCharts.mod.AccessorFunctionProps
 import typingsSlinky.reactNativeSvgCharts.mod.GridProps
 import typingsSlinky.reactNativeSvgCharts.mod.ScaleType
@@ -37,7 +37,7 @@ object StackedBarChart {
     @scala.inline
     def animationDuration(value: Double): this.type = set("animationDuration", value.asInstanceOf[js.Any])
     @scala.inline
-    def contentInset(value: AnonBottom): this.type = set("contentInset", value.asInstanceOf[js.Any])
+    def contentInset(value: Bottom): this.type = set("contentInset", value.asInstanceOf[js.Any])
     @scala.inline
     def curve(value: /* context */ CanvasRenderingContext2D | Path_ => CurveGenerator): this.type = set("curve", js.Any.fromFunction1(value))
     @scala.inline
@@ -61,7 +61,7 @@ object StackedBarChart {
     @scala.inline
     def order(value: /* series */ Series[js.Any, js.Any] => js.Array[Double]): this.type = set("order", js.Any.fromFunction1(value))
     @scala.inline
-    def renderGradient(value: /* props */ AnonId => ReactComponentClass[LinearGradientProps | RadialGradientProps]): this.type = set("renderGradient", js.Any.fromFunction1(value))
+    def renderGradient(value: /* props */ Id => ReactComponentClass[LinearGradientProps | RadialGradientProps]): this.type = set("renderGradient", js.Any.fromFunction1(value))
     @scala.inline
     def showGrid(value: Boolean): this.type = set("showGrid", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,14 +1,14 @@
 package typingsSlinky.awsLambda.cloudfrontMod
 
-import typingsSlinky.awsLambda.AnonAction
-import typingsSlinky.awsLambda.cloudfrontRequestMod._CloudFrontRequestResult
+import typingsSlinky.awsLambda.anon.Action
+import typingsSlinky.awsLambda.cloudfrontRequestMod.CloudFrontRequestResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait CloudFrontRequest extends _CloudFrontRequestResult {
-  var body: js.UndefOr[AnonAction] = js.native
+trait CloudFrontRequest extends CloudFrontRequestResult {
+  var body: js.UndefOr[Action] = js.native
   val clientIp: String = js.native
   var headers: CloudFrontHeaders = js.native
   val method: String = js.native
@@ -60,7 +60,7 @@ object CloudFrontRequest {
         ret
     }
     @scala.inline
-    def withBody(value: AnonAction): Self = {
+    def withBody(value: Action): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
         ret

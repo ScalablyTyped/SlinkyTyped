@@ -1,6 +1,5 @@
 package typingsSlinky.materialUiLab.useAutocompleteUseAutocompleteMod
 
-import typingsSlinky.materialUiLab.materialUiLabBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,14 +12,8 @@ trait UseAutocompleteProps[T] extends js.Object
 
 object UseAutocompleteProps {
   @scala.inline
-  def UseAutocompleteSingleProps[T](options: js.Array[T]): UseAutocompleteProps[T] = {
-    val __obj = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
-    __obj.asInstanceOf[UseAutocompleteProps[T]]
-  }
+  implicit def apply[T](value: UseAutocompleteMultipleProps[T]): UseAutocompleteProps[T] = value.asInstanceOf[UseAutocompleteProps[T]]
   @scala.inline
-  def UseAutocompleteMultipleProps[T](multiple: `true`, options: js.Array[T]): UseAutocompleteProps[T] = {
-    val __obj = js.Dynamic.literal(multiple = multiple.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
-    __obj.asInstanceOf[UseAutocompleteProps[T]]
-  }
+  implicit def apply[T](value: UseAutocompleteSingleProps[T]): UseAutocompleteProps[T] = value.asInstanceOf[UseAutocompleteProps[T]]
 }
 

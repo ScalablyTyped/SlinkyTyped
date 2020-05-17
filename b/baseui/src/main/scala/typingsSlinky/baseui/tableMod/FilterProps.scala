@@ -1,7 +1,7 @@
 package typingsSlinky.baseui.tableMod
 
 import slinky.core.TagMod
-import typingsSlinky.baseui.AnonContent
+import typingsSlinky.baseui.anon.Content
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait FilterProps extends js.Object {
   var disabled: js.UndefOr[Boolean] = js.native
   var onReset: js.UndefOr[js.Function0[_]] = js.native
   var onSelectAll: js.UndefOr[js.Function0[_]] = js.native
-  var overrides: js.UndefOr[AnonContent] = js.native
+  var overrides: js.UndefOr[Content] = js.native
 }
 
 object FilterProps {
@@ -89,7 +89,7 @@ object FilterProps {
         ret
     }
     @scala.inline
-    def withOverrides(value: AnonContent): Self = {
+    def withOverrides(value: Content): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("overrides")(value.asInstanceOf[js.Any])
         ret

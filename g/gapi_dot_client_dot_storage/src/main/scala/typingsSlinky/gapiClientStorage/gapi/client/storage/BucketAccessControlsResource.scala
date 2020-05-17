@@ -1,8 +1,7 @@
 package typingsSlinky.gapiClientStorage.gapi.client.storage
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientStorage.AnonAlt
-import typingsSlinky.gapiClientStorage.AnonBucket
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientStorage.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,28 +9,28 @@ import scala.scalajs.js.annotation._
 @js.native
 trait BucketAccessControlsResource extends js.Object {
   /** Permanently deletes the ACL entry for the specified entity on the specified bucket. */
-  def delete(request: AnonAlt): Request_[Unit] = js.native
+  def delete(request: Alt): Request[Unit] = js.native
   /** Returns the ACL entry for the specified entity on the specified bucket. */
-  def get(request: AnonAlt): Request_[BucketAccessControl] = js.native
+  def get(request: Alt): Request[BucketAccessControl] = js.native
   /** Creates a new ACL entry on the specified bucket. */
-  def insert(request: AnonBucket): Request_[BucketAccessControl] = js.native
+  def insert(request: typingsSlinky.gapiClientStorage.anon.Bucket): Request[BucketAccessControl] = js.native
   /** Retrieves ACL entries on the specified bucket. */
-  def list(request: AnonBucket): Request_[BucketAccessControls] = js.native
+  def list(request: typingsSlinky.gapiClientStorage.anon.Bucket): Request[BucketAccessControls] = js.native
   /** Updates an ACL entry on the specified bucket. This method supports patch semantics. */
-  def patch(request: AnonAlt): Request_[BucketAccessControl] = js.native
+  def patch(request: Alt): Request[BucketAccessControl] = js.native
   /** Updates an ACL entry on the specified bucket. */
-  def update(request: AnonAlt): Request_[BucketAccessControl] = js.native
+  def update(request: Alt): Request[BucketAccessControl] = js.native
 }
 
 object BucketAccessControlsResource {
   @scala.inline
   def apply(
-    delete: AnonAlt => Request_[Unit],
-    get: AnonAlt => Request_[BucketAccessControl],
-    insert: AnonBucket => Request_[BucketAccessControl],
-    list: AnonBucket => Request_[BucketAccessControls],
-    patch: AnonAlt => Request_[BucketAccessControl],
-    update: AnonAlt => Request_[BucketAccessControl]
+    delete: Alt => Request[Unit],
+    get: Alt => Request[BucketAccessControl],
+    insert: typingsSlinky.gapiClientStorage.anon.Bucket => Request[BucketAccessControl],
+    list: typingsSlinky.gapiClientStorage.anon.Bucket => Request[BucketAccessControls],
+    patch: Alt => Request[BucketAccessControl],
+    update: Alt => Request[BucketAccessControl]
   ): BucketAccessControlsResource = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[BucketAccessControlsResource]
@@ -43,37 +42,37 @@ object BucketAccessControlsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDelete(value: AnonAlt => Request_[Unit]): Self = {
+    def withDelete(value: Alt => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonAlt => Request_[BucketAccessControl]): Self = {
+    def withGet(value: Alt => Request[BucketAccessControl]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withInsert(value: AnonBucket => Request_[BucketAccessControl]): Self = {
+    def withInsert(value: typingsSlinky.gapiClientStorage.anon.Bucket => Request[BucketAccessControl]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonBucket => Request_[BucketAccessControls]): Self = {
+    def withList(value: typingsSlinky.gapiClientStorage.anon.Bucket => Request[BucketAccessControls]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPatch(value: AnonAlt => Request_[BucketAccessControl]): Self = {
+    def withPatch(value: Alt => Request[BucketAccessControl]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonAlt => Request_[BucketAccessControl]): Self = {
+    def withUpdate(value: Alt => Request[BucketAccessControl]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.arangodb.ArangoDB
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.arangodb.AnonSegmentThreshold
+import typingsSlinky.arangodb.anon.SegmentThreshold
 import typingsSlinky.arangodb.arangodbStrings.arangosearch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait ArangoSearchViewProperties extends js.Object {
   var cleanupIntervalStep: Double = js.native
   var consolidationIntervalMsec: Double = js.native
-  var consolidationPolicy: AnonSegmentThreshold = js.native
+  var consolidationPolicy: SegmentThreshold = js.native
   var id: String = js.native
   var links: StringDictionary[js.UndefOr[ArangoSearchViewCollectionLink]] = js.native
   var name: String = js.native
@@ -23,7 +23,7 @@ object ArangoSearchViewProperties {
   def apply(
     cleanupIntervalStep: Double,
     consolidationIntervalMsec: Double,
-    consolidationPolicy: AnonSegmentThreshold,
+    consolidationPolicy: SegmentThreshold,
     id: String,
     links: StringDictionary[js.UndefOr[ArangoSearchViewCollectionLink]],
     name: String,
@@ -52,7 +52,7 @@ object ArangoSearchViewProperties {
         ret
     }
     @scala.inline
-    def withConsolidationPolicy(value: AnonSegmentThreshold): Self = {
+    def withConsolidationPolicy(value: SegmentThreshold): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("consolidationPolicy")(value.asInstanceOf[js.Any])
         ret

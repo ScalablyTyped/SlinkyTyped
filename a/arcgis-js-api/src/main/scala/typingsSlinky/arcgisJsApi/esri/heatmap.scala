@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,7 +33,25 @@ trait heatmap extends js.Object {
   def createRenderer(params: heatmapCreateRendererParams): js.Promise[HeatmapRendererResult] = js.native
 }
 
-@JSGlobal("__esri.heatmap")
-@js.native
-object heatmap extends TopLevel[heatmap]
+object heatmap {
+  @scala.inline
+  def apply(createRenderer: heatmapCreateRendererParams => js.Promise[HeatmapRendererResult]): heatmap = {
+    val __obj = js.Dynamic.literal(createRenderer = js.Any.fromFunction1(createRenderer))
+    __obj.asInstanceOf[heatmap]
+  }
+  @scala.inline
+  implicit class heatmapOps[Self <: heatmap] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateRenderer(value: heatmapCreateRendererParams => js.Promise[HeatmapRendererResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

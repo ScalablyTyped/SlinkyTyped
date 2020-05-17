@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IIterable[T] extends js.Object {
+trait IIterable[T] extends IterableOrArrayLike[T] {
   /**
     * Get an iterator over the object's values.
     *

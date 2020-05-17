@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Decorator_
   extends BaseNode
-     with _Node {
+     with Node {
   var expression: Expression = js.native
   @JSName("type")
   var type_Decorator_ : Decorator = js.native

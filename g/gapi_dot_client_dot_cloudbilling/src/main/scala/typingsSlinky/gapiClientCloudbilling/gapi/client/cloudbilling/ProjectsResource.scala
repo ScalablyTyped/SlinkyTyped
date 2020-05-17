@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientCloudbilling.gapi.client.cloudbilling
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientCloudbilling.AnonAccesstoken
-import typingsSlinky.gapiClientCloudbilling.AnonAlt
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientCloudbilling.anon.Accesstoken
+import typingsSlinky.gapiClientCloudbilling.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,13 +15,13 @@ trait ProjectsResource extends js.Object {
     * project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
     * ).
     */
-  def getBillingInfo(request: AnonAlt): Request_[ProjectBillingInfo] = js.native
+  def getBillingInfo(request: Alt): Request[ProjectBillingInfo] = js.native
   /**
     * Lists the projects associated with a billing account. The current
     * authenticated user must be an [owner of the billing
     * account](https://support.google.com/cloud/answer/4430947).
     */
-  def list(request: AnonAccesstoken): Request_[ListProjectBillingInfoResponse] = js.native
+  def list(request: Accesstoken): Request[ListProjectBillingInfoResponse] = js.native
   /**
     * Sets or updates the billing account associated with a project. You specify
     * the new billing account by setting the `billing_account_name` in the
@@ -55,15 +55,15 @@ trait ProjectsResource extends js.Object {
     * disable billing, you should always call this method with the name of an
     * &#42;open&#42; billing account.
     */
-  def updateBillingInfo(request: AnonAlt): Request_[ProjectBillingInfo] = js.native
+  def updateBillingInfo(request: Alt): Request[ProjectBillingInfo] = js.native
 }
 
 object ProjectsResource {
   @scala.inline
   def apply(
-    getBillingInfo: AnonAlt => Request_[ProjectBillingInfo],
-    list: AnonAccesstoken => Request_[ListProjectBillingInfoResponse],
-    updateBillingInfo: AnonAlt => Request_[ProjectBillingInfo]
+    getBillingInfo: Alt => Request[ProjectBillingInfo],
+    list: Accesstoken => Request[ListProjectBillingInfoResponse],
+    updateBillingInfo: Alt => Request[ProjectBillingInfo]
   ): ProjectsResource = {
     val __obj = js.Dynamic.literal(getBillingInfo = js.Any.fromFunction1(getBillingInfo), list = js.Any.fromFunction1(list), updateBillingInfo = js.Any.fromFunction1(updateBillingInfo))
     __obj.asInstanceOf[ProjectsResource]
@@ -75,19 +75,19 @@ object ProjectsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetBillingInfo(value: AnonAlt => Request_[ProjectBillingInfo]): Self = {
+    def withGetBillingInfo(value: Alt => Request[ProjectBillingInfo]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getBillingInfo")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonAccesstoken => Request_[ListProjectBillingInfoResponse]): Self = {
+    def withList(value: Accesstoken => Request[ListProjectBillingInfoResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdateBillingInfo(value: AnonAlt => Request_[ProjectBillingInfo]): Self = {
+    def withUpdateBillingInfo(value: Alt => Request[ProjectBillingInfo]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("updateBillingInfo")(js.Any.fromFunction1(value))
         ret

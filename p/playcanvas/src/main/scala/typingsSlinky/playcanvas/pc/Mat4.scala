@@ -11,9 +11,8 @@ import scala.scalajs.js.annotation._
   * @description Creates a new identity Mat4 object.
   * @property {Float32Array} data Matrix elements in the form of a flat array.
   */
-@JSGlobal("pc.Mat4")
 @js.native
-class Mat4 () extends js.Object {
+trait Mat4 extends js.Object {
   /**
     * Matrix elements in the form of a flat array.
     */
@@ -414,29 +413,5 @@ class Mat4 () extends js.Object {
     * m.transpose();
     */
   def transpose(): Mat4 = js.native
-}
-
-/* static members */
-@JSGlobal("pc.Mat4")
-@js.native
-object Mat4 extends js.Object {
-  /**
-    * @field
-    * @static
-    * @readonly
-    * @name pc.Mat4.IDENTITY
-    * @type {pc.Mat4}
-    * @description A constant matrix set to the identity.
-    */
-  val IDENTITY: Mat4 = js.native
-  /**
-    * @field
-    * @static
-    * @readonly
-    * @name pc.Mat4.ZERO
-    * @type {pc.Mat4}
-    * @description A constant matrix with all elements set to 0.
-    */
-  val ZERO: Mat4 = js.native
 }
 

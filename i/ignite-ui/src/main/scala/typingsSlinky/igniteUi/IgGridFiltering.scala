@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -435,7 +435,7 @@ object IgGridFiltering {
         ret
     }
     @scala.inline
-    def withDataFiltered(value: (/* event */ Event_, /* ui */ DataFilteredEventUIParam) => Unit): Self = {
+    def withDataFiltered(value: (/* event */ Event, /* ui */ DataFilteredEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataFiltered")(js.Any.fromFunction2(value))
         ret
@@ -447,7 +447,7 @@ object IgGridFiltering {
         ret
     }
     @scala.inline
-    def withDataFiltering(value: (/* event */ Event_, /* ui */ DataFilteringEventUIParam) => Unit): Self = {
+    def withDataFiltering(value: (/* event */ Event, /* ui */ DataFilteringEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dataFiltering")(js.Any.fromFunction2(value))
         ret
@@ -471,7 +471,7 @@ object IgGridFiltering {
         ret
     }
     @scala.inline
-    def withDropDownClosed(value: (/* event */ Event_, /* ui */ DropDownClosedEventUIParam) => Unit): Self = {
+    def withDropDownClosed(value: (/* event */ Event, /* ui */ DropDownClosedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownClosed")(js.Any.fromFunction2(value))
         ret
@@ -483,7 +483,7 @@ object IgGridFiltering {
         ret
     }
     @scala.inline
-    def withDropDownClosing(value: (/* event */ Event_, /* ui */ DropDownClosingEventUIParam) => Unit): Self = {
+    def withDropDownClosing(value: (/* event */ Event, /* ui */ DropDownClosingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownClosing")(js.Any.fromFunction2(value))
         ret
@@ -495,7 +495,7 @@ object IgGridFiltering {
         ret
     }
     @scala.inline
-    def withDropDownOpened(value: (/* event */ Event_, /* ui */ DropDownOpenedEventUIParam) => Unit): Self = {
+    def withDropDownOpened(value: (/* event */ Event, /* ui */ DropDownOpenedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownOpened")(js.Any.fromFunction2(value))
         ret
@@ -507,7 +507,7 @@ object IgGridFiltering {
         ret
     }
     @scala.inline
-    def withDropDownOpening(value: (/* event */ Event_, /* ui */ DropDownOpeningEventUIParam) => Unit): Self = {
+    def withDropDownOpening(value: (/* event */ Event, /* ui */ DropDownOpeningEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownOpening")(js.Any.fromFunction2(value))
         ret
@@ -615,7 +615,7 @@ object IgGridFiltering {
         ret
     }
     @scala.inline
-    def withFilterDialogClosed(value: (/* event */ Event_, /* ui */ FilterDialogClosedEventUIParam) => Unit): Self = {
+    def withFilterDialogClosed(value: (/* event */ Event, /* ui */ FilterDialogClosedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filterDialogClosed")(js.Any.fromFunction2(value))
         ret
@@ -627,7 +627,7 @@ object IgGridFiltering {
         ret
     }
     @scala.inline
-    def withFilterDialogClosing(value: (/* event */ Event_, /* ui */ FilterDialogClosingEventUIParam) => Unit): Self = {
+    def withFilterDialogClosing(value: (/* event */ Event, /* ui */ FilterDialogClosingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filterDialogClosing")(js.Any.fromFunction2(value))
         ret
@@ -663,7 +663,7 @@ object IgGridFiltering {
         ret
     }
     @scala.inline
-    def withFilterDialogContentsRendered(value: (/* event */ Event_, /* ui */ FilterDialogContentsRenderedEventUIParam) => Unit): Self = {
+    def withFilterDialogContentsRendered(value: (/* event */ Event, /* ui */ FilterDialogContentsRenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filterDialogContentsRendered")(js.Any.fromFunction2(value))
         ret
@@ -675,7 +675,7 @@ object IgGridFiltering {
         ret
     }
     @scala.inline
-    def withFilterDialogContentsRendering(value: (/* event */ Event_, /* ui */ FilterDialogContentsRenderingEventUIParam) => Unit): Self = {
+    def withFilterDialogContentsRendering(value: (/* event */ Event, /* ui */ FilterDialogContentsRenderingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filterDialogContentsRendering")(js.Any.fromFunction2(value))
         ret
@@ -699,7 +699,7 @@ object IgGridFiltering {
         ret
     }
     @scala.inline
-    def withFilterDialogFilterAdded(value: (/* event */ Event_, /* ui */ FilterDialogFilterAddedEventUIParam) => Unit): Self = {
+    def withFilterDialogFilterAdded(value: (/* event */ Event, /* ui */ FilterDialogFilterAddedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filterDialogFilterAdded")(js.Any.fromFunction2(value))
         ret
@@ -711,7 +711,7 @@ object IgGridFiltering {
         ret
     }
     @scala.inline
-    def withFilterDialogFilterAdding(value: (/* event */ Event_, /* ui */ FilterDialogFilterAddingEventUIParam) => Unit): Self = {
+    def withFilterDialogFilterAdding(value: (/* event */ Event, /* ui */ FilterDialogFilterAddingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filterDialogFilterAdding")(js.Any.fromFunction2(value))
         ret
@@ -759,7 +759,7 @@ object IgGridFiltering {
         ret
     }
     @scala.inline
-    def withFilterDialogFiltering(value: (/* event */ Event_, /* ui */ FilterDialogFilteringEventUIParam) => Unit): Self = {
+    def withFilterDialogFiltering(value: (/* event */ Event, /* ui */ FilterDialogFilteringEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filterDialogFiltering")(js.Any.fromFunction2(value))
         ret
@@ -795,7 +795,7 @@ object IgGridFiltering {
         ret
     }
     @scala.inline
-    def withFilterDialogMoving(value: (/* event */ Event_, /* ui */ FilterDialogMovingEventUIParam) => Unit): Self = {
+    def withFilterDialogMoving(value: (/* event */ Event, /* ui */ FilterDialogMovingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filterDialogMoving")(js.Any.fromFunction2(value))
         ret
@@ -819,7 +819,7 @@ object IgGridFiltering {
         ret
     }
     @scala.inline
-    def withFilterDialogOpened(value: (/* event */ Event_, /* ui */ FilterDialogOpenedEventUIParam) => Unit): Self = {
+    def withFilterDialogOpened(value: (/* event */ Event, /* ui */ FilterDialogOpenedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filterDialogOpened")(js.Any.fromFunction2(value))
         ret
@@ -831,7 +831,7 @@ object IgGridFiltering {
         ret
     }
     @scala.inline
-    def withFilterDialogOpening(value: (/* event */ Event_, /* ui */ FilterDialogOpeningEventUIParam) => Unit): Self = {
+    def withFilterDialogOpening(value: (/* event */ Event, /* ui */ FilterDialogOpeningEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filterDialogOpening")(js.Any.fromFunction2(value))
         ret

@@ -1,14 +1,14 @@
 package typingsSlinky.sigmajs.SigmaJs
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.sigmajs.AnonDictrenderType
+import typingsSlinky.sigmajs.anon.DictrenderType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SVG extends js.Object {
-  var edges: AnonDictrenderType = js.native
+  var edges: DictrenderType = js.native
   var labels: StringDictionary[SVGObject[Node]] = js.native
   var nodes: StringDictionary[SVGObject[Node]] = js.native
 }
@@ -16,7 +16,7 @@ trait SVG extends js.Object {
 object SVG {
   @scala.inline
   def apply(
-    edges: AnonDictrenderType,
+    edges: DictrenderType,
     labels: StringDictionary[SVGObject[Node]],
     nodes: StringDictionary[SVGObject[Node]]
   ): SVG = {
@@ -30,7 +30,7 @@ object SVG {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEdges(value: AnonDictrenderType): Self = {
+    def withEdges(value: DictrenderType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("edges")(value.asInstanceOf[js.Any])
         ret

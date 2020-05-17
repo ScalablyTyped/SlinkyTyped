@@ -2,8 +2,8 @@ package typingsSlinky.surveyKnockout.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.File
-import typingsSlinky.surveyKnockout.AnonCalculations
-import typingsSlinky.surveyKnockout.AnonCanAddRow
+import typingsSlinky.surveyKnockout.anon.Calculations
+import typingsSlinky.surveyKnockout.anon.CanAddRow
 import typingsSlinky.surveyKnockout.surveyKnockoutStrings.autogonext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -1385,7 +1385,7 @@ class SurveyModel ()
     * Set `options.includeEmpty` to `false` if you want to skip empty answers.
     */
   def getPlainData(): js.Array[_] = js.native
-  def getPlainData(options: AnonCalculations): js.Array[_] = js.native
+  def getPlainData(options: Calculations): js.Array[_] = js.native
   /**
     * Returns the progress that a user made while going through the survey.
     */
@@ -1471,7 +1471,7 @@ class SurveyModel ()
   def matrixAfterCellRender_Unit(question: IQuestion, options: js.Any): Unit = js.native
   def matrixAllowRemoveRow(question: IQuestion, rowIndex: Double, row: js.Any): Boolean = js.native
   def matrixBeforeRowAdded(options: js.Any): Unit = js.native
-  def matrixBeforeRowAdded(options: AnonCanAddRow): js.Any = js.native
+  def matrixBeforeRowAdded(options: CanAddRow): js.Any = js.native
   def matrixCellCreated(question: IQuestion, options: js.Any): js.Any = js.native
   @JSName("matrixCellCreated")
   def matrixCellCreated_Unit(question: IQuestion, options: js.Any): Unit = js.native

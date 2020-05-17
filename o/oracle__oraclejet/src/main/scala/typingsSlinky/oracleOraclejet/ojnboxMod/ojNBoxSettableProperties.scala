@@ -1,8 +1,8 @@
 package typingsSlinky.oracleOraclejet.ojnboxMod
 
-import typingsSlinky.oracleOraclejet.Anon13
-import typingsSlinky.oracleOraclejet.AnonCellDefaults
-import typingsSlinky.oracleOraclejet.AnonHighlightedCount
+import typingsSlinky.oracleOraclejet.anon.CellDefaults
+import typingsSlinky.oracleOraclejet.anon.HighlightedCount
+import typingsSlinky.oracleOraclejet.anon.`13`
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponentSettableProperties
 import typingsSlinky.oracleOraclejet.ojnboxMod.ojNBox.Cell
@@ -58,11 +58,11 @@ trait ojNBoxSettableProperties[K, D] extends dvtBaseComponentSettableProperties 
   var rowsTitle: String = js.native
   var selection: js.Array[K] = js.native
   var selectionMode: none | single | multiple = js.native
-  var styleDefaults: AnonCellDefaults = js.native
-  var tooltip: Anon13[K] = js.native
+  var styleDefaults: CellDefaults = js.native
+  var tooltip: `13`[K] = js.native
   var touchResponse: touchStart | auto = js.native
   @JSName("translations")
-  var translations_ojNBoxSettableProperties: AnonHighlightedCount = js.native
+  var translations_ojNBoxSettableProperties: HighlightedCount = js.native
   def countLabel(context: CountLabelContext): String | Null = js.native
 }
 
@@ -90,11 +90,11 @@ object ojNBoxSettableProperties {
     rowsTitle: String,
     selection: js.Array[K],
     selectionMode: none | single | multiple,
-    styleDefaults: AnonCellDefaults,
-    tooltip: Anon13[K],
+    styleDefaults: CellDefaults,
+    tooltip: `13`[K],
     touchResponse: touchStart | auto,
     trackResize: on | off,
-    translations: AnonHighlightedCount
+    translations: HighlightedCount
   ): ojNBoxSettableProperties[K, D] = {
     val __obj = js.Dynamic.literal(animationOnDataChange = animationOnDataChange.asInstanceOf[js.Any], animationOnDisplay = animationOnDisplay.asInstanceOf[js.Any], as = as.asInstanceOf[js.Any], cellContent = cellContent.asInstanceOf[js.Any], cellMaximize = cellMaximize.asInstanceOf[js.Any], columnsTitle = columnsTitle.asInstanceOf[js.Any], countLabel = js.Any.fromFunction1(countLabel), groupAttributes = groupAttributes.asInstanceOf[js.Any], groupBehavior = groupBehavior.asInstanceOf[js.Any], hiddenCategories = hiddenCategories.asInstanceOf[js.Any], highlightMatch = highlightMatch.asInstanceOf[js.Any], highlightedCategories = highlightedCategories.asInstanceOf[js.Any], hoverBehavior = hoverBehavior.asInstanceOf[js.Any], labelTruncation = labelTruncation.asInstanceOf[js.Any], maximizedColumn = maximizedColumn.asInstanceOf[js.Any], maximizedRow = maximizedRow.asInstanceOf[js.Any], otherColor = otherColor.asInstanceOf[js.Any], otherThreshold = otherThreshold.asInstanceOf[js.Any], rowsTitle = rowsTitle.asInstanceOf[js.Any], selection = selection.asInstanceOf[js.Any], selectionMode = selectionMode.asInstanceOf[js.Any], styleDefaults = styleDefaults.asInstanceOf[js.Any], tooltip = tooltip.asInstanceOf[js.Any], touchResponse = touchResponse.asInstanceOf[js.Any], trackResize = trackResize.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojNBoxSettableProperties[K, D]]
@@ -232,13 +232,13 @@ object ojNBoxSettableProperties {
         ret
     }
     @scala.inline
-    def withStyleDefaults(value: AnonCellDefaults): Self[K, D] = {
+    def withStyleDefaults(value: CellDefaults): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styleDefaults")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withTooltip(value: Anon13[K]): Self[K, D] = {
+    def withTooltip(value: `13`[K]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
@@ -250,7 +250,7 @@ object ojNBoxSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonHighlightedCount): Self[K, D] = {
+    def withTranslations(value: HighlightedCount): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

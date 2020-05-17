@@ -1,23 +1,80 @@
 package typingsSlinky.androiduix.android.widget.AbsListView
 
-import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.androiduix.android.content.Context
+import typingsSlinky.androiduix.android.content.res.TypedArray
+import typingsSlinky.androiduix.androidui.attr.AttrBinder
+import typingsSlinky.androiduix.androidui.attr.AttrBinder.ClassBinderMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.widget.AbsListView.LayoutParams")
 @js.native
-class LayoutParams protected ()
+trait LayoutParams
   extends typingsSlinky.androiduix.android.view.ViewGroup.LayoutParams {
-  def this(source: typingsSlinky.androiduix.android.view.ViewGroup.LayoutParams) = this()
-  def this(context: Context, attrs: HTMLElement) = this()
-  def this(w: Double, h: Double) = this()
-  def this(w: Double, h: Double, viewType: Double) = this()
   var forceAdd: Boolean = js.native
   var itemId: Double = js.native
   var recycledHeaderFooter: Boolean = js.native
   var scrappedFromPosition: Double = js.native
   var viewType: Double = js.native
+}
+
+object LayoutParams {
+  @scala.inline
+  def apply(
+    _attrBinder: js.Any,
+    createClassAttrBinder: () => ClassBinderMap,
+    equals: js.Any => Boolean,
+    forceAdd: Boolean,
+    getAttrBinder: () => AttrBinder,
+    hash: js.Any,
+    height: Double,
+    initBindAttr: () => js.Any,
+    itemId: Double,
+    recycledHeaderFooter: Boolean,
+    scrappedFromPosition: Double,
+    setBaseAttributes: (TypedArray, String, String) => Unit,
+    viewType: Double,
+    width: Double
+  ): LayoutParams = {
+    val __obj = js.Dynamic.literal(_attrBinder = _attrBinder.asInstanceOf[js.Any], createClassAttrBinder = js.Any.fromFunction0(createClassAttrBinder), equals = js.Any.fromFunction1(equals), forceAdd = forceAdd.asInstanceOf[js.Any], getAttrBinder = js.Any.fromFunction0(getAttrBinder), hash = hash.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], initBindAttr = js.Any.fromFunction0(initBindAttr), itemId = itemId.asInstanceOf[js.Any], recycledHeaderFooter = recycledHeaderFooter.asInstanceOf[js.Any], scrappedFromPosition = scrappedFromPosition.asInstanceOf[js.Any], setBaseAttributes = js.Any.fromFunction3(setBaseAttributes), viewType = viewType.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LayoutParams]
+  }
+  @scala.inline
+  implicit class LayoutParamsOps[Self <: LayoutParams] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withForceAdd(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forceAdd")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItemId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("itemId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRecycledHeaderFooter(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("recycledHeaderFooter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScrappedFromPosition(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scrappedFromPosition")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withViewType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("viewType")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

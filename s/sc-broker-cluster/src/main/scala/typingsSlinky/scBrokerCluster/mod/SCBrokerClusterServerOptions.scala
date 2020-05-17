@@ -1,5 +1,6 @@
 package typingsSlinky.scBrokerCluster.mod
 
+import typingsSlinky.socketclusterServer.serverMod.AGServerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -7,9 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SCBrokerClusterServerOptions extends js.Object {
   var appBrokerControllerPath: js.UndefOr[String] = js.native
-  var brokerOptions: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AGServerOptions */ js.Any
-  ] = js.native
+  var brokerOptions: js.UndefOr[AGServerOptions] = js.native
   var brokers: js.Array[String] = js.native
   var debug: js.UndefOr[Boolean] = js.native
   var downgradeToUser: Double | String = js.native
@@ -58,9 +57,7 @@ object SCBrokerClusterServerOptions {
         ret
     }
     @scala.inline
-    def withBrokerOptions(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AGServerOptions */ js.Any
-    ): Self = {
+    def withBrokerOptions(value: AGServerOptions): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("brokerOptions")(value.asInstanceOf[js.Any])
         ret

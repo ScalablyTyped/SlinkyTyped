@@ -1,6 +1,6 @@
 package typingsSlinky.screeps
 
-import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.screeps.anon.StoreRESOURCEENERGYfalse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -48,8 +48,4 @@ trait StructureLink
   def transferEnergy(target: StructureLink): ScreepsReturnCode = js.native
   def transferEnergy(target: StructureLink, amount: Double): ScreepsReturnCode = js.native
 }
-
-@JSGlobal("StructureLink")
-@js.native
-object StructureLink extends TopLevel[StructureLinkConstructor]
 

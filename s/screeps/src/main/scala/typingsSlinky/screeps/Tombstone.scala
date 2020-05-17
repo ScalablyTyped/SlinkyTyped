@@ -1,6 +1,5 @@
 package typingsSlinky.screeps
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,7 +39,57 @@ trait Tombstone extends RoomObject {
   var ticksToDecay: Double = js.native
 }
 
-@JSGlobal("Tombstone")
-@js.native
-object Tombstone extends TopLevel[TombstoneConstructor]
+object Tombstone {
+  @scala.inline
+  def apply(
+    creep: AnyCreep,
+    deathTime: Double,
+    effects: js.Array[RoomObjectEffect],
+    id: Id[Tombstone],
+    pos: RoomPosition,
+    store: StoreDefinitionUnlimited,
+    ticksToDecay: Double
+  ): Tombstone = {
+    val __obj = js.Dynamic.literal(creep = creep.asInstanceOf[js.Any], deathTime = deathTime.asInstanceOf[js.Any], effects = effects.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], pos = pos.asInstanceOf[js.Any], store = store.asInstanceOf[js.Any], ticksToDecay = ticksToDecay.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Tombstone]
+  }
+  @scala.inline
+  implicit class TombstoneOps[Self <: Tombstone] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreep(value: AnyCreep): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("creep")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeathTime(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deathTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: Id[Tombstone]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStore(value: StoreDefinitionUnlimited): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("store")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTicksToDecay(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ticksToDecay")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

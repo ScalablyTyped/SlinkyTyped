@@ -1,7 +1,7 @@
 package typingsSlinky.unsplashJs.mod
 
 import org.scalajs.dom.experimental.Response
-import typingsSlinky.unsplashJs.AnonBody
+import typingsSlinky.unsplashJs.anon.Body
 import typingsSlinky.unsplashJs.mod.UnsplashApi.Auth
 import typingsSlinky.unsplashJs.mod.UnsplashApi.Collections
 import typingsSlinky.unsplashJs.mod.UnsplashApi.CurrentUser
@@ -22,7 +22,7 @@ trait Unsplash extends js.Object {
   var search: Search = js.native
   var stats: Stats = js.native
   var users: Users = js.native
-  def request(requestOptions: AnonBody): js.Promise[Response] = js.native
+  def request(requestOptions: Body): js.Promise[Response] = js.native
 }
 
 object Unsplash {
@@ -32,7 +32,7 @@ object Unsplash {
     collections: Collections,
     currentUser: CurrentUser,
     photos: Photo,
-    request: AnonBody => js.Promise[Response],
+    request: Body => js.Promise[Response],
     search: Search,
     stats: Stats,
     users: Users
@@ -71,7 +71,7 @@ object Unsplash {
         ret
     }
     @scala.inline
-    def withRequest(value: AnonBody => js.Promise[Response]): Self = {
+    def withRequest(value: Body => js.Promise[Response]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("request")(js.Any.fromFunction1(value))
         ret

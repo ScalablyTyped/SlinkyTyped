@@ -1,12 +1,12 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonComponentDxTreeView
-import typingsSlinky.devextreme.AnonComponentElementModelValue
-import typingsSlinky.devextreme.AnonElementItemElement
-import typingsSlinky.devextreme.AnonEventItemDataItemElement
-import typingsSlinky.devextreme.AnonItemDataItemElementItemIndex
-import typingsSlinky.devextreme.AnonItemElementItemIndexModel
-import typingsSlinky.devextreme.AnonModelNode
+import typingsSlinky.devextreme.anon.ComponentDxTreeView
+import typingsSlinky.devextreme.anon.ComponentElementModelValue
+import typingsSlinky.devextreme.anon.ElementItemElement
+import typingsSlinky.devextreme.anon.EventItemDataItemElement
+import typingsSlinky.devextreme.anon.ItemDataItemElementItemIndex
+import typingsSlinky.devextreme.anon.ItemElementItemIndexModel
+import typingsSlinky.devextreme.anon.ModelNode
 import typingsSlinky.devextreme.devextremeStrings.both
 import typingsSlinky.devextreme.devextremeStrings.click
 import typingsSlinky.devextreme.devextremeStrings.dblclick_
@@ -21,8 +21,8 @@ import typingsSlinky.devextreme.devextremeStrings.tree
 import typingsSlinky.devextreme.devextremeStrings.vertical
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
-import typingsSlinky.devextreme.mod._Global_.JQueryPromise
-import typingsSlinky.devextreme.mod._Global_.Promise
+import typingsSlinky.devextreme.mod.global.JQueryPromise
+import typingsSlinky.devextreme.mod.global.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -57,27 +57,27 @@ trait dxTreeViewOptions
   var items_dxTreeViewOptions: js.UndefOr[js.Array[dxTreeViewItem]] = js.native
   /** A function that is executed when a collection item is clicked or tapped. */
   @JSName("onItemClick")
-  var onItemClick_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ AnonModelNode, _]] = js.native
+  var onItemClick_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ ModelNode, _]] = js.native
   /** A function that is executed when a tree view item is collapsed. */
-  var onItemCollapsed: js.UndefOr[js.Function1[/* e */ AnonEventItemDataItemElement, _]] = js.native
+  var onItemCollapsed: js.UndefOr[js.Function1[/* e */ EventItemDataItemElement, _]] = js.native
   /** A function that is executed when a collection item is right-clicked or pressed. */
   @JSName("onItemContextMenu")
-  var onItemContextMenu_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ AnonModelNode, _]] = js.native
+  var onItemContextMenu_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ ModelNode, _]] = js.native
   /** A function that is executed when a tree view item is expanded. */
-  var onItemExpanded: js.UndefOr[js.Function1[/* e */ AnonEventItemDataItemElement, _]] = js.native
+  var onItemExpanded: js.UndefOr[js.Function1[/* e */ EventItemDataItemElement, _]] = js.native
   /** A function that is executed when a collection item has been held for a specified period. */
   @JSName("onItemHold")
-  var onItemHold_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ AnonItemDataItemElementItemIndex, _]] = js.native
+  var onItemHold_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ ItemDataItemElementItemIndex, _]] = js.native
   /** A function that is executed after a collection item is rendered. */
   @JSName("onItemRendered")
-  var onItemRendered_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ AnonItemElementItemIndexModel, _]] = js.native
+  var onItemRendered_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ ItemElementItemIndexModel, _]] = js.native
   /** A function that is executed when a tree view item is selected or selection is canceled. */
-  var onItemSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonElementItemElement, _]] = js.native
+  var onItemSelectionChanged: js.UndefOr[js.Function1[/* e */ ElementItemElement, _]] = js.native
   /** A function that is executed when the "Select All" check box value is changed. Applies only if showCheckBoxesMode is "selectAll" and selectionMode is "multiple". */
-  var onSelectAllValueChanged: js.UndefOr[js.Function1[/* e */ AnonComponentElementModelValue, _]] = js.native
+  var onSelectAllValueChanged: js.UndefOr[js.Function1[/* e */ ComponentElementModelValue, _]] = js.native
   /** A function that is executed when a tree view item is selected or selection is canceled. */
   @JSName("onSelectionChanged")
-  var onSelectionChanged_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ AnonComponentDxTreeView, _]] = js.native
+  var onSelectionChanged_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ ComponentDxTreeView, _]] = js.native
   /** Specifies the name of the data source item field for holding the parent key of the corresponding node. */
   var parentIdExpr: js.UndefOr[String | js.Function] = js.native
   /** Specifies the parent ID value of the root item. */
@@ -231,7 +231,7 @@ object dxTreeViewOptions {
         ret
     }
     @scala.inline
-    def withOnItemClick(value: /* e */ AnonModelNode => _): Self = {
+    def withOnItemClick(value: /* e */ ModelNode => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction1(value))
         ret
@@ -243,7 +243,7 @@ object dxTreeViewOptions {
         ret
     }
     @scala.inline
-    def withOnItemCollapsed(value: /* e */ AnonEventItemDataItemElement => _): Self = {
+    def withOnItemCollapsed(value: /* e */ EventItemDataItemElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemCollapsed")(js.Any.fromFunction1(value))
         ret
@@ -255,7 +255,7 @@ object dxTreeViewOptions {
         ret
     }
     @scala.inline
-    def withOnItemContextMenu(value: /* e */ AnonModelNode => _): Self = {
+    def withOnItemContextMenu(value: /* e */ ModelNode => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemContextMenu")(js.Any.fromFunction1(value))
         ret
@@ -267,7 +267,7 @@ object dxTreeViewOptions {
         ret
     }
     @scala.inline
-    def withOnItemExpanded(value: /* e */ AnonEventItemDataItemElement => _): Self = {
+    def withOnItemExpanded(value: /* e */ EventItemDataItemElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemExpanded")(js.Any.fromFunction1(value))
         ret
@@ -279,7 +279,7 @@ object dxTreeViewOptions {
         ret
     }
     @scala.inline
-    def withOnItemHold(value: /* e */ AnonItemDataItemElementItemIndex => _): Self = {
+    def withOnItemHold(value: /* e */ ItemDataItemElementItemIndex => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemHold")(js.Any.fromFunction1(value))
         ret
@@ -291,7 +291,7 @@ object dxTreeViewOptions {
         ret
     }
     @scala.inline
-    def withOnItemRendered(value: /* e */ AnonItemElementItemIndexModel => _): Self = {
+    def withOnItemRendered(value: /* e */ ItemElementItemIndexModel => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemRendered")(js.Any.fromFunction1(value))
         ret
@@ -303,7 +303,7 @@ object dxTreeViewOptions {
         ret
     }
     @scala.inline
-    def withOnItemSelectionChanged(value: /* e */ AnonElementItemElement => _): Self = {
+    def withOnItemSelectionChanged(value: /* e */ ElementItemElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemSelectionChanged")(js.Any.fromFunction1(value))
         ret
@@ -315,7 +315,7 @@ object dxTreeViewOptions {
         ret
     }
     @scala.inline
-    def withOnSelectAllValueChanged(value: /* e */ AnonComponentElementModelValue => _): Self = {
+    def withOnSelectAllValueChanged(value: /* e */ ComponentElementModelValue => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectAllValueChanged")(js.Any.fromFunction1(value))
         ret
@@ -327,7 +327,7 @@ object dxTreeViewOptions {
         ret
     }
     @scala.inline
-    def withOnSelectionChanged(value: /* e */ AnonComponentDxTreeView => _): Self = {
+    def withOnSelectionChanged(value: /* e */ ComponentDxTreeView => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelectionChanged")(js.Any.fromFunction1(value))
         ret

@@ -1,8 +1,8 @@
 package typingsSlinky.reactRange.typesMod
 
 import slinky.core.TagMod
-import typingsSlinky.reactRange.AnonChildren
-import typingsSlinky.reactRange.AnonIndex
+import typingsSlinky.reactRange.anon.Children
+import typingsSlinky.reactRange.anon.Index
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,8 +19,8 @@ trait IProps extends js.Object {
   var step: Double = js.native
   var values: js.Array[Double] = js.native
   def onChange(values: js.Array[Double]): Unit = js.native
-  def renderThumb(params: AnonIndex): TagMod[Any] = js.native
-  def renderTrack(params: AnonChildren): TagMod[Any] = js.native
+  def renderThumb(params: Index): TagMod[Any] = js.native
+  def renderTrack(params: Children): TagMod[Any] = js.native
 }
 
 object IProps {
@@ -32,8 +32,8 @@ object IProps {
     max: Double,
     min: Double,
     onChange: js.Array[Double] => Unit,
-    renderThumb: AnonIndex => TagMod[Any],
-    renderTrack: AnonChildren => TagMod[Any],
+    renderThumb: Index => TagMod[Any],
+    renderTrack: Children => TagMod[Any],
     rtl: Boolean,
     step: Double,
     values: js.Array[Double]
@@ -84,13 +84,13 @@ object IProps {
         ret
     }
     @scala.inline
-    def withRenderThumb(value: AnonIndex => TagMod[Any]): Self = {
+    def withRenderThumb(value: Index => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderThumb")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withRenderTrack(value: AnonChildren => TagMod[Any]): Self = {
+    def withRenderTrack(value: Children => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderTrack")(js.Any.fromFunction1(value))
         ret

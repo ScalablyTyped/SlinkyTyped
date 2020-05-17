@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait SheetView extends js.Object
 
+object SheetView {
+  @scala.inline
+  implicit def apply(value: DialogSheetView): SheetView = value.asInstanceOf[SheetView]
+  @scala.inline
+  implicit def apply(value: WorksheetView): SheetView = value.asInstanceOf[SheetView]
+}
+

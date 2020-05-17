@@ -1,6 +1,6 @@
 package typingsSlinky.dynogels.mod
 
-import typingsSlinky.dynogels.AnonStreamEnabled
+import typingsSlinky.dynogels.anon.StreamEnabled
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CreateTablesOptions extends js.Object {
   var readCapacity: js.UndefOr[Double] = js.native
-  var streamSpecification: js.UndefOr[AnonStreamEnabled] = js.native
+  var streamSpecification: js.UndefOr[StreamEnabled] = js.native
   var writeCapacity: js.UndefOr[Double] = js.native
 }
 
@@ -37,7 +37,7 @@ object CreateTablesOptions {
         ret
     }
     @scala.inline
-    def withStreamSpecification(value: AnonStreamEnabled): Self = {
+    def withStreamSpecification(value: StreamEnabled): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("streamSpecification")(value.asInstanceOf[js.Any])
         ret

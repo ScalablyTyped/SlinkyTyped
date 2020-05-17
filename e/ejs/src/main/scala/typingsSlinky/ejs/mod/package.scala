@@ -37,5 +37,5 @@ package object mod {
     scala.Nothing
   ]
   type TemplateFunction = js.Function1[/* data */ js.UndefOr[typingsSlinky.ejs.mod.Data], java.lang.String]
-  type fileLoader = js.Function1[/* path */ java.lang.String, java.lang.String | typingsSlinky.ejs.AnonToString]
+  type fileLoader = js.Function1[/* path */ java.lang.String, java.lang.String | typingsSlinky.ejs.anon.ToString]
 }

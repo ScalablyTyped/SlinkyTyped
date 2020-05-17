@@ -1,8 +1,8 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesCandlestick
 
-import typingsSlinky.echarts.AnonBorderColor0
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonItemStyleAnonBorderColor0
+import typingsSlinky.echarts.anon.BorderColor0
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.ItemStyleBorderColor0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,14 +15,14 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.data.emphasis
     */
-  var emphasis: js.UndefOr[AnonItemStyleAnonBorderColor0] = js.native
+  var emphasis: js.UndefOr[ItemStyleBorderColor0] = js.native
   /**
     * Style of a candle box.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.data.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBorderColor0] = js.native
+  var itemStyle: js.UndefOr[BorderColor0] = js.native
   /**
     * Name of data item.
     *
@@ -36,7 +36,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.data.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * Value of data item.
     *
@@ -61,7 +61,7 @@ object DataObject {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEmphasis(value: AnonItemStyleAnonBorderColor0): Self = {
+    def withEmphasis(value: ItemStyleBorderColor0): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -73,7 +73,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonBorderColor0): Self = {
+    def withItemStyle(value: BorderColor0): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -97,7 +97,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

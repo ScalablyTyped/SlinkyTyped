@@ -153,13 +153,13 @@ trait Pseudoterminal extends js.Object {
   def onDidWrite(listener: js.Function1[/* e */ String, _]): Disposable = js.native
   def onDidWrite(listener: js.Function1[/* e */ String, _], thisArgs: js.Any): Disposable = js.native
   def onDidWrite(listener: js.Function1[/* e */ String, _], thisArgs: js.Any, disposables: js.Array[Disposable]): Disposable = js.native
-  def open(): Unit = js.native
   /**
   		 * Implement to handle when the pty is open and ready to start firing events.
   		 *
   		 * @param initialDimensions The dimensions of the terminal, this will be undefined if the
   		 * terminal panel has not been opened before this is called.
   		 */
+  def open(): Unit = js.native
   def open(initialDimensions: TerminalDimensions): Unit = js.native
 }
 

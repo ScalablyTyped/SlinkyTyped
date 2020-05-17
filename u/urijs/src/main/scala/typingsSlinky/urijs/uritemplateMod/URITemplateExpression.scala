@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait URITemplateExpression extends js.Object {
+trait URITemplateExpression extends URITemplatePart {
   var expression: String = js.native
   var operator: String = js.native
   var variables: js.Array[URITemplateVariable] = js.native

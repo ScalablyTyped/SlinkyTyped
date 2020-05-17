@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LegendOptions extends js.Object {
+trait LegendOptions extends Graph2dLegendOption {
   var enabled: js.UndefOr[Boolean] = js.native
   var iconSize: js.UndefOr[Double] = js.native
   var iconSpacing: js.UndefOr[Double] = js.native

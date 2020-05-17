@@ -1,7 +1,7 @@
 package typingsSlinky.jupyterlabDocregistry.registryMod.DocumentRegistry
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.jupyterlabDocregistry.PartialIFileType
+import typingsSlinky.jupyterlabDocregistry.anon.PartialIFileType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

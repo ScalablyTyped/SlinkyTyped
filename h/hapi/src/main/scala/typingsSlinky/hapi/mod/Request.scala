@@ -1,8 +1,8 @@
 package typingsSlinky.hapi.mod
 
 import typingsSlinky.boom.mod.^
-import typingsSlinky.hapi.AnonClose
-import typingsSlinky.hapi.AnonReq
+import typingsSlinky.hapi.anon.Close
+import typingsSlinky.hapi.anon.Req
 import typingsSlinky.hapi.mod.Util.Dictionary
 import typingsSlinky.hapi.mod.Util.HTTP_METHODS_PARTIAL
 import typingsSlinky.hapi.mod.Util.HTTP_METHODS_PARTIAL_LOWERCASE
@@ -122,7 +122,7 @@ trait Request extends Podium {
     * * req - the node request object.
     * * res - the node response object.
     */
-  val raw: AnonReq = js.native
+  val raw: Req = js.native
   /**
     * Access: read / write (see limitations below).
     * The response object when set. The object can be modified but must not be assigned another object. To replace the response with another from within an extension point, use reply(response) to
@@ -166,10 +166,10 @@ trait Request extends Podium {
     */
   /* tslint:disable-next-line:max-line-length */
   def generateResponse(source: String): ResponseObject = js.native
-  def generateResponse(source: String, options: AnonClose): ResponseObject = js.native
+  def generateResponse(source: String, options: Close): ResponseObject = js.native
   def generateResponse(source: js.Object): ResponseObject = js.native
-  def generateResponse(source: js.Object, options: AnonClose): ResponseObject = js.native
-  def generateResponse(source: Null, options: AnonClose): ResponseObject = js.native
+  def generateResponse(source: js.Object, options: Close): ResponseObject = js.native
+  def generateResponse(source: Null, options: Close): ResponseObject = js.native
   /**
     * Logs request-specific events. When called, the server emits a 'request' event which can be used by other listeners or plugins. The arguments are:
     * @param tags - a string or an array of strings (e.g. ['error', 'database', 'read']) used to identify the event. Tags are used instead of log levels and provide a much more expressive mechanism

@@ -11,17 +11,6 @@ package object mod {
     typingsSlinky.intlMessageformatParser.mod.DateTimeSkeleton
   ]
   type LiteralElement = typingsSlinky.intlMessageformatParser.mod.BaseElement[typingsSlinky.intlMessageformatParser.mod.TYPE.literal]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.intlMessageformatParser.mod.LiteralElement
-    - typingsSlinky.intlMessageformatParser.mod.ArgumentElement
-    - typingsSlinky.intlMessageformatParser.mod.NumberElement
-    - typingsSlinky.intlMessageformatParser.mod.DateElement
-    - typingsSlinky.intlMessageformatParser.mod.TimeElement
-    - typingsSlinky.intlMessageformatParser.mod.SelectElement
-    - typingsSlinky.intlMessageformatParser.mod.PluralElement
-    - typingsSlinky.intlMessageformatParser.mod.PoundElement
-  */
-  type MessageFormatElement = typingsSlinky.intlMessageformatParser.mod._MessageFormatElement | typingsSlinky.intlMessageformatParser.mod.LiteralElement | typingsSlinky.intlMessageformatParser.mod.ArgumentElement | typingsSlinky.intlMessageformatParser.mod.NumberElement | typingsSlinky.intlMessageformatParser.mod.DateElement | typingsSlinky.intlMessageformatParser.mod.TimeElement
   type NumberElement = typingsSlinky.intlMessageformatParser.mod.SimpleFormatElement[
     typingsSlinky.intlMessageformatParser.mod.TYPE.number, 
     typingsSlinky.intlMessageformatParser.mod.NumberSkeleton
@@ -36,14 +25,4 @@ package object mod {
     typingsSlinky.intlMessageformatParser.mod.TYPE.time, 
     typingsSlinky.intlMessageformatParser.mod.DateTimeSkeleton
   ]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.intlMessageformatParser.intlMessageformatParserStrings.zero
-    - typingsSlinky.intlMessageformatParser.intlMessageformatParserStrings.one
-    - typingsSlinky.intlMessageformatParser.intlMessageformatParserStrings.two
-    - typingsSlinky.intlMessageformatParser.intlMessageformatParserStrings.few
-    - typingsSlinky.intlMessageformatParser.intlMessageformatParserStrings.many
-    - typingsSlinky.intlMessageformatParser.intlMessageformatParserStrings.other
-    - java.lang.String
-  */
-  type ValidPluralRule = typingsSlinky.intlMessageformatParser.mod._ValidPluralRule | java.lang.String
 }

@@ -8,7 +8,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUi.MaterialUI.Tabs.TabsProps
 import typingsSlinky.materialUi.tabsMod.default
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,7 +33,7 @@ object Tabs {
     def inkBarStyle(value: CSSProperties): this.type = set("inkBarStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def onChange(
-      value: (/* value */ js.Any, SyntheticEvent[EventTarget with js.Object, Event_], /* tab */ typingsSlinky.materialUi.MaterialUI.Tabs.Tab) => Unit
+      value: (/* value */ js.Any, SyntheticEvent[EventTarget with js.Object, org.scalajs.dom.raw.Event], /* tab */ typingsSlinky.materialUi.MaterialUI.Tabs.Tab) => Unit
     ): this.type = set("onChange", js.Any.fromFunction3(value))
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])

@@ -1,5 +1,6 @@
 package typingsSlinky.jqueryTimeago
 
+import typingsSlinky.jqueryTimeago.anon.Day
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait TimeagoSetings extends js.Object {
   var allowFuture: js.UndefOr[Boolean] = js.native
   var refreshMillis: js.UndefOr[Double] = js.native
-  var strings: js.UndefOr[AnonDay] = js.native
+  var strings: js.UndefOr[Day] = js.native
 }
 
 object TimeagoSetings {
@@ -48,7 +49,7 @@ object TimeagoSetings {
         ret
     }
     @scala.inline
-    def withStrings(value: AnonDay): Self = {
+    def withStrings(value: Day): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("strings")(value.asInstanceOf[js.Any])
         ret

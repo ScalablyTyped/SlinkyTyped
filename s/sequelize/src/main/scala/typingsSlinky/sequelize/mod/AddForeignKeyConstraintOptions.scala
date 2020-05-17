@@ -1,6 +1,6 @@
 package typingsSlinky.sequelize.mod
 
-import typingsSlinky.sequelize.AnonField
+import typingsSlinky.sequelize.anon.Field
 import typingsSlinky.sequelize.sequelizeStrings.`foreign key`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ trait AddForeignKeyConstraintOptions extends AddConstraintOptions {
   var name: js.UndefOr[String] = js.native
   var onDelete: String = js.native
   var onUpdate: String = js.native
-  var references: js.UndefOr[AnonField] = js.native
+  var references: js.UndefOr[Field] = js.native
   var `type`: `foreign key` = js.native
 }
 
@@ -59,7 +59,7 @@ object AddForeignKeyConstraintOptions {
         ret
     }
     @scala.inline
-    def withReferences(value: AnonField): Self = {
+    def withReferences(value: Field): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("references")(value.asInstanceOf[js.Any])
         ret

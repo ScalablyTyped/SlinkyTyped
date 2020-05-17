@@ -2,7 +2,7 @@ package typingsSlinky.fundamentalReact.tableMod
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.TagMod
-import typingsSlinky.fundamentalReact.AnonRowData
+import typingsSlinky.fundamentalReact.anon.RowData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait TableProps
     StringDictionary[js.Any] | (js.Function2[/* rowData */ js.Array[String], /* index */ Double, Unit])
   ] = js.native
   var tableCellClassName: js.UndefOr[String] = js.native
-  var tableData: js.UndefOr[js.Array[AnonRowData]] = js.native
+  var tableData: js.UndefOr[js.Array[RowData]] = js.native
   var tableHeaderClassName: js.UndefOr[String] = js.native
   var tableHeaderProps: js.UndefOr[js.Any] = js.native
   var tableHeaderRowClassName: js.UndefOr[String] = js.native
@@ -126,7 +126,7 @@ object TableProps {
         ret
     }
     @scala.inline
-    def withTableData(value: js.Array[AnonRowData]): Self = {
+    def withTableData(value: js.Array[RowData]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tableData")(value.asInstanceOf[js.Any])
         ret

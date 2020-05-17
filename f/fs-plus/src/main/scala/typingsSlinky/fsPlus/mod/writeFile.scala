@@ -1,6 +1,6 @@
 package typingsSlinky.fsPlus.mod
 
-import typingsSlinky.fsPlus.AnonEncoding
+import typingsSlinky.fsPlus.anon.Encoding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,15 +12,7 @@ object writeFile extends js.Object {
   def apply(
     filePath: String,
     content: js.Any,
-    options: js.UndefOr[scala.Nothing],
-    callback: js.Function1[/* err */ js.Any, Unit]
-  ): Unit = js.native
-  def apply(filePath: String, content: js.Any, options: String, callback: js.Function1[/* err */ js.Any, Unit]): Unit = js.native
-  def apply(filePath: String, content: js.Any, options: Null, callback: js.Function1[/* err */ js.Any, Unit]): Unit = js.native
-  def apply(
-    filePath: String,
-    content: js.Any,
-    options: AnonEncoding,
+    options: js.UndefOr[Encoding | Null | String],
     callback: js.Function1[/* err */ js.Any, Unit]
   ): Unit = js.native
 }

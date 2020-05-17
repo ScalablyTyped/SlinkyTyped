@@ -7,18 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the client events concerned with node processing, and that allow the event's processing to be passed to the server side.
   */
-@JSGlobal("ASPxClientTreeViewNodeProcessingModeEventArgs")
 @js.native
-class ASPxClientTreeViewNodeProcessingModeEventArgs protected () extends ASPxClientProcessingModeEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientTreeViewNodeProcessingModeEventArgs class with the specified setting.
-    * @param processOnServer true to process the event on the server side; false to completely handle it on the client side.
-    * @param node An ASPxClientTreeViewNode object representing the node related to the event.
-    */
-  def this(processOnServer: Boolean, node: ASPxClientTreeViewNode) = this()
+trait ASPxClientTreeViewNodeProcessingModeEventArgs extends ASPxClientProcessingModeEventArgs {
   /**
     * Gets a node object related to the event.
     */
   var node: ASPxClientTreeViewNode = js.native
+}
+
+object ASPxClientTreeViewNodeProcessingModeEventArgs {
+  @scala.inline
+  def apply(node: ASPxClientTreeViewNode, processOnServer: Boolean): ASPxClientTreeViewNodeProcessingModeEventArgs = {
+    val __obj = js.Dynamic.literal(node = node.asInstanceOf[js.Any], processOnServer = processOnServer.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientTreeViewNodeProcessingModeEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientTreeViewNodeProcessingModeEventArgsOps[Self <: ASPxClientTreeViewNodeProcessingModeEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNode(value: ASPxClientTreeViewNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -7,5 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ReactNodeArray extends Array[TagMod[Any]]
+trait ReactNodeArray
+  extends Array[TagMod[Any]]
+     with ReactFragment
 

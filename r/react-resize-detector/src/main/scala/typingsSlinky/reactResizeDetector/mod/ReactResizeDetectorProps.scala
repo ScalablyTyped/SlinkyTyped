@@ -3,7 +3,7 @@ package typingsSlinky.reactResizeDetector.mod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
 import typingsSlinky.react.mod.Props
-import typingsSlinky.reactResizeDetector.AnonLeading
+import typingsSlinky.reactResizeDetector.anon.Leading
 import typingsSlinky.reactResizeDetector.reactResizeDetectorStrings.debounce
 import typingsSlinky.reactResizeDetector.reactResizeDetectorStrings.throttle
 import scala.scalajs.js
@@ -57,7 +57,7 @@ trait ReactResizeDetectorProps extends Props[ReactResizeDetector] {
     * Please refer to lodash's docs for more info.
     * Default: undefined
     */
-  var refreshOptions: js.UndefOr[AnonLeading] = js.native
+  var refreshOptions: js.UndefOr[Leading] = js.native
   /**
     * Use this in conjunction with refreshMode.
     * Important! It's a numeric prop so set it accordingly, e.g. refreshRate={500}.
@@ -166,7 +166,7 @@ object ReactResizeDetectorProps {
         ret
     }
     @scala.inline
-    def withRefreshOptions(value: AnonLeading): Self = {
+    def withRefreshOptions(value: Leading): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("refreshOptions")(value.asInstanceOf[js.Any])
         ret

@@ -1,148 +1,148 @@
 package typingsSlinky.jsonSchemaCompare
 
-import typingsSlinky.jsonSchemaCompare.mod._JSONSchemaKeys
+import typingsSlinky.jsonSchemaCompare.mod.JSONSchemaKeys
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object jsonSchemaCompareStrings {
   @js.native
-  sealed trait $comment extends _JSONSchemaKeys
+  sealed trait $comment extends JSONSchemaKeys
   
   @js.native
-  sealed trait $id extends _JSONSchemaKeys
+  sealed trait $id extends JSONSchemaKeys
   
   @js.native
-  sealed trait $ref extends _JSONSchemaKeys
+  sealed trait $ref extends JSONSchemaKeys
   
   @js.native
-  sealed trait $schema extends _JSONSchemaKeys
+  sealed trait $schema extends JSONSchemaKeys
   
   @js.native
-  sealed trait additionalItems extends _JSONSchemaKeys
+  sealed trait additionalItems extends JSONSchemaKeys
   
   @js.native
-  sealed trait additionalProperties extends _JSONSchemaKeys
+  sealed trait additionalProperties extends JSONSchemaKeys
   
   @js.native
-  sealed trait allOf extends _JSONSchemaKeys
+  sealed trait allOf extends JSONSchemaKeys
   
   @js.native
-  sealed trait anyOf extends _JSONSchemaKeys
+  sealed trait anyOf extends JSONSchemaKeys
   
   @js.native
-  sealed trait const extends _JSONSchemaKeys
+  sealed trait const extends JSONSchemaKeys
   
   @js.native
-  sealed trait contains extends _JSONSchemaKeys
+  sealed trait contains extends JSONSchemaKeys
   
   @js.native
-  sealed trait contentEncoding extends _JSONSchemaKeys
+  sealed trait contentEncoding extends JSONSchemaKeys
   
   @js.native
-  sealed trait contentMediaType extends _JSONSchemaKeys
+  sealed trait contentMediaType extends JSONSchemaKeys
   
   @js.native
-  sealed trait default extends _JSONSchemaKeys
+  sealed trait default extends JSONSchemaKeys
   
   @js.native
-  sealed trait definitions extends _JSONSchemaKeys
+  sealed trait definitions extends JSONSchemaKeys
   
   @js.native
-  sealed trait dependencies extends _JSONSchemaKeys
+  sealed trait dependencies extends JSONSchemaKeys
   
   @js.native
-  sealed trait description extends _JSONSchemaKeys
+  sealed trait description extends JSONSchemaKeys
   
   @js.native
-  sealed trait `else` extends _JSONSchemaKeys
+  sealed trait `else` extends JSONSchemaKeys
   
   @js.native
-  sealed trait enum extends _JSONSchemaKeys
+  sealed trait enum extends JSONSchemaKeys
   
   @js.native
-  sealed trait examples extends _JSONSchemaKeys
+  sealed trait examples extends JSONSchemaKeys
   
   @js.native
-  sealed trait exclusiveMaximum extends _JSONSchemaKeys
+  sealed trait exclusiveMaximum extends JSONSchemaKeys
   
   @js.native
-  sealed trait exclusiveMinimum extends _JSONSchemaKeys
+  sealed trait exclusiveMinimum extends JSONSchemaKeys
   
   @js.native
-  sealed trait format extends _JSONSchemaKeys
+  sealed trait format extends JSONSchemaKeys
   
   @js.native
-  sealed trait `if` extends _JSONSchemaKeys
+  sealed trait `if` extends JSONSchemaKeys
   
   @js.native
-  sealed trait items extends _JSONSchemaKeys
+  sealed trait items extends JSONSchemaKeys
   
   @js.native
-  sealed trait maxItems extends _JSONSchemaKeys
+  sealed trait maxItems extends JSONSchemaKeys
   
   @js.native
-  sealed trait maxLength extends _JSONSchemaKeys
+  sealed trait maxLength extends JSONSchemaKeys
   
   @js.native
-  sealed trait maxProperties extends _JSONSchemaKeys
+  sealed trait maxProperties extends JSONSchemaKeys
   
   @js.native
-  sealed trait maximum extends _JSONSchemaKeys
+  sealed trait maximum extends JSONSchemaKeys
   
   @js.native
-  sealed trait minItems extends _JSONSchemaKeys
+  sealed trait minItems extends JSONSchemaKeys
   
   @js.native
-  sealed trait minLength extends _JSONSchemaKeys
+  sealed trait minLength extends JSONSchemaKeys
   
   @js.native
-  sealed trait minProperties extends _JSONSchemaKeys
+  sealed trait minProperties extends JSONSchemaKeys
   
   @js.native
-  sealed trait minimum extends _JSONSchemaKeys
+  sealed trait minimum extends JSONSchemaKeys
   
   @js.native
-  sealed trait multipleOf extends _JSONSchemaKeys
+  sealed trait multipleOf extends JSONSchemaKeys
   
   @js.native
-  sealed trait not extends _JSONSchemaKeys
+  sealed trait not extends JSONSchemaKeys
   
   @js.native
-  sealed trait oneOf extends _JSONSchemaKeys
+  sealed trait oneOf extends JSONSchemaKeys
   
   @js.native
-  sealed trait pattern extends _JSONSchemaKeys
+  sealed trait pattern extends JSONSchemaKeys
   
   @js.native
-  sealed trait patternProperties extends _JSONSchemaKeys
+  sealed trait patternProperties extends JSONSchemaKeys
   
   @js.native
-  sealed trait properties extends _JSONSchemaKeys
+  sealed trait properties extends JSONSchemaKeys
   
   @js.native
-  sealed trait propertyNames extends _JSONSchemaKeys
+  sealed trait propertyNames extends JSONSchemaKeys
   
   @js.native
-  sealed trait readOnly extends _JSONSchemaKeys
+  sealed trait readOnly extends JSONSchemaKeys
   
   @js.native
-  sealed trait required extends _JSONSchemaKeys
+  sealed trait required extends JSONSchemaKeys
   
   @js.native
-  sealed trait `then` extends _JSONSchemaKeys
+  sealed trait `then` extends JSONSchemaKeys
   
   @js.native
-  sealed trait title extends _JSONSchemaKeys
+  sealed trait title extends JSONSchemaKeys
   
   @js.native
-  sealed trait `type` extends _JSONSchemaKeys
+  sealed trait `type` extends JSONSchemaKeys
   
   @js.native
-  sealed trait uniqueItems extends _JSONSchemaKeys
+  sealed trait uniqueItems extends JSONSchemaKeys
   
   @js.native
-  sealed trait writeOnly extends _JSONSchemaKeys
+  sealed trait writeOnly extends JSONSchemaKeys
   
   @scala.inline
   def $comment: $comment = "$comment".asInstanceOf[$comment]

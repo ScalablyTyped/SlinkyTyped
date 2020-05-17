@@ -1,90 +1,90 @@
 package typingsSlinky.matrixJsSdk
 
-import typingsSlinky.matrixJsSdk.mod._EventType
-import typingsSlinky.matrixJsSdk.mod._MembershipType
-import typingsSlinky.matrixJsSdk.mod._MsgType
+import typingsSlinky.matrixJsSdk.mod.EventType
+import typingsSlinky.matrixJsSdk.mod.MembershipType
+import typingsSlinky.matrixJsSdk.mod.MsgType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object matrixJsSdkStrings {
   @js.native
-  sealed trait ban extends _MembershipType
+  sealed trait ban extends MembershipType
   
   @js.native
-  sealed trait invite extends _MembershipType
+  sealed trait invite extends MembershipType
   
   @js.native
-  sealed trait join extends _MembershipType
+  sealed trait join extends MembershipType
   
   @js.native
-  sealed trait leave extends _MembershipType
+  sealed trait leave extends MembershipType
   
   @js.native
-  sealed trait mDotaudio extends _MsgType
+  sealed trait mDotaudio extends MsgType
   
   @js.native
-  sealed trait mDotbadDotencrypted extends _MsgType
+  sealed trait mDotbadDotencrypted extends MsgType
   
   @js.native
-  sealed trait mDotemote extends _MsgType
+  sealed trait mDotemote extends MsgType
   
   @js.native
-  sealed trait mDotfile extends _MsgType
+  sealed trait mDotfile extends MsgType
   
   @js.native
-  sealed trait mDotimage extends _MsgType
+  sealed trait mDotimage extends MsgType
   
   @js.native
-  sealed trait mDotnotice extends _MsgType
+  sealed trait mDotnotice extends MsgType
   
   @js.native
-  sealed trait mDotpresence extends _EventType
+  sealed trait mDotpresence extends EventType
   
   @js.native
-  sealed trait mDotroomDotcanonical_alias extends _EventType
+  sealed trait mDotroomDotcanonical_alias extends EventType
   
   @js.native
-  sealed trait mDotroomDotencryption extends _EventType
+  sealed trait mDotroomDotencryption extends EventType
   
   @js.native
-  sealed trait mDotroomDotguest_access extends _EventType
+  sealed trait mDotroomDotguest_access extends EventType
   
   @js.native
-  sealed trait mDotroomDothistory_visibility extends _EventType
+  sealed trait mDotroomDothistory_visibility extends EventType
   
   @js.native
-  sealed trait mDotroomDotjoin_rules extends _EventType
+  sealed trait mDotroomDotjoin_rules extends EventType
   
   @js.native
-  sealed trait mDotroomDotmember extends _EventType
+  sealed trait mDotroomDotmember extends EventType
   
   @js.native
-  sealed trait mDotroomDotmessage extends _EventType
+  sealed trait mDotroomDotmessage extends EventType
   
   @js.native
-  sealed trait mDotroomDotname extends _EventType
+  sealed trait mDotroomDotname extends EventType
   
   @js.native
-  sealed trait mDotroomDotpower_levels extends _EventType
+  sealed trait mDotroomDotpower_levels extends EventType
   
   @js.native
-  sealed trait mDotroomDotredaction extends _EventType
+  sealed trait mDotroomDotredaction extends EventType
   
   @js.native
-  sealed trait mDotroomDottombstone extends _EventType
+  sealed trait mDotroomDottombstone extends EventType
   
   @js.native
-  sealed trait mDotroomDottopic extends _EventType
+  sealed trait mDotroomDottopic extends EventType
   
   @js.native
-  sealed trait mDotsticker extends _EventType
+  sealed trait mDotsticker extends EventType
   
   @js.native
-  sealed trait mDottext extends _MsgType
+  sealed trait mDottext extends MsgType
   
   @js.native
-  sealed trait mDotvideo extends _MsgType
+  sealed trait mDotvideo extends MsgType
   
   @js.native
   sealed trait `private` extends js.Object

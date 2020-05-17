@@ -1,6 +1,5 @@
 package typingsSlinky.tampermonkey.Tampermonkey
 
-import typingsSlinky.tampermonkey.tampermonkeyBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,14 +12,8 @@ trait NotificationDetails extends js.Object
 
 object NotificationDetails {
   @scala.inline
-  def TextNotification(text: String): NotificationDetails = {
-    val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NotificationDetails]
-  }
+  implicit def apply(value: HighlightNotification): NotificationDetails = value.asInstanceOf[NotificationDetails]
   @scala.inline
-  def HighlightNotification(highlight: `true`): NotificationDetails = {
-    val __obj = js.Dynamic.literal(highlight = highlight.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NotificationDetails]
-  }
+  implicit def apply(value: TextNotification): NotificationDetails = value.asInstanceOf[NotificationDetails]
 }
 

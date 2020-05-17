@@ -2,7 +2,7 @@ package typingsSlinky.mobxReactDevtools.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.mobxReactDevtools.AnonHighlightTimeout
+import typingsSlinky.mobxReactDevtools.anon.HighlightTimeout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ object UpdatesControl {
     def highlightTimeout(value: Double): this.type = set("highlightTimeout", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AnonHighlightTimeout): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: HighlightTimeout): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: UpdatesControl.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.reactRelay.mod
 
-import typingsSlinky.reactRelay.AnonCount
+import typingsSlinky.reactRelay.anon.Count
 import typingsSlinky.reactRelay.reactRelayStrings.backward
 import typingsSlinky.reactRelay.reactRelayStrings.forward
 import typingsSlinky.relayRuntime.readerNodeMod.ReaderFragment
@@ -17,12 +17,12 @@ trait ConnectionConfig[Props] extends js.Object {
   var getConnectionFromProps: js.UndefOr[js.Function1[/* props */ Props, js.UndefOr[ConnectionData | Null]]] = js.native
   var getFragmentVariables: js.UndefOr[js.Function2[/* prevVars */ Variables, /* totalCount */ Double, Variables]] = js.native
   var query: GraphQLTaggedNode = js.native
-  def getVariables(props: Props, paginationInfo: AnonCount, fragmentVariables: Variables): Variables = js.native
+  def getVariables(props: Props, paginationInfo: Count, fragmentVariables: Variables): Variables = js.native
 }
 
 object ConnectionConfig {
   @scala.inline
-  def apply[Props](getVariables: (Props, AnonCount, Variables) => Variables, query: GraphQLTaggedNode): ConnectionConfig[Props] = {
+  def apply[Props](getVariables: (Props, Count, Variables) => Variables, query: GraphQLTaggedNode): ConnectionConfig[Props] = {
     val __obj = js.Dynamic.literal(getVariables = js.Any.fromFunction3(getVariables), query = query.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectionConfig[Props]]
   }
@@ -33,7 +33,7 @@ object ConnectionConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[Props] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[Props] with Other]
     @scala.inline
-    def withGetVariables(value: (Props, AnonCount, Variables) => Variables): Self[Props] = {
+    def withGetVariables(value: (Props, Count, Variables) => Variables): Self[Props] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getVariables")(js.Any.fromFunction3(value))
         ret

@@ -2,9 +2,9 @@ package typingsSlinky.oracleOraclejet.ojeditablevalueMod
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.AnonConverterHint
-import typingsSlinky.oracleOraclejet.AnonDefinition
-import typingsSlinky.oracleOraclejet.AnonInstruction
+import typingsSlinky.oracleOraclejet.anon.ConverterHint
+import typingsSlinky.oracleOraclejet.anon.Definition
+import typingsSlinky.oracleOraclejet.anon.Instruction
 import typingsSlinky.oracleOraclejet.mod.baseComponent
 import typingsSlinky.oracleOraclejet.ojmessagingMod.^
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.describedBy
@@ -37,9 +37,9 @@ import scala.scalajs.js.annotation._
 trait editableValue[V, SP /* <: editableValueSettableProperties[V, SV, RV] */, SV, RV] extends baseComponent[SP] {
   var describedBy: String | Null = js.native
   var disabled: Boolean = js.native
-  var displayOptions: AnonConverterHint = js.native
-  var help: AnonInstruction = js.native
-  var helpHints: AnonDefinition = js.native
+  var displayOptions: ConverterHint = js.native
+  var help: Instruction = js.native
+  var helpHints: Definition = js.native
   var labelHint: String = js.native
   var messagesCustom: js.Array[^] = js.native
   var onDescribedByChanged: (js.Function1[CustomEvent, _]) | Null = js.native
@@ -146,11 +146,11 @@ trait editableValue[V, SP /* <: editableValueSettableProperties[V, SV, RV] */, S
   @JSName("getProperty")
   def getProperty_disabled(property: disabled): Boolean = js.native
   @JSName("getProperty")
-  def getProperty_displayOptions(property: displayOptions): AnonConverterHint = js.native
+  def getProperty_displayOptions(property: displayOptions): ConverterHint = js.native
   @JSName("getProperty")
-  def getProperty_help(property: help): AnonInstruction = js.native
+  def getProperty_help(property: help): Instruction = js.native
   @JSName("getProperty")
-  def getProperty_helpHints(property: helpHints): AnonDefinition = js.native
+  def getProperty_helpHints(property: helpHints): Definition = js.native
   @JSName("getProperty")
   def getProperty_labelHint(property: labelHint): String = js.native
   @JSName("getProperty")
@@ -171,11 +171,11 @@ trait editableValue[V, SP /* <: editableValueSettableProperties[V, SV, RV] */, S
   @JSName("setProperty")
   def setProperty_disabled(property: disabled, value: Boolean): Unit = js.native
   @JSName("setProperty")
-  def setProperty_displayOptions(property: displayOptions, value: AnonConverterHint): Unit = js.native
+  def setProperty_displayOptions(property: displayOptions, value: ConverterHint): Unit = js.native
   @JSName("setProperty")
-  def setProperty_help(property: help, value: AnonInstruction): Unit = js.native
+  def setProperty_help(property: help, value: Instruction): Unit = js.native
   @JSName("setProperty")
-  def setProperty_helpHints(property: helpHints, value: AnonDefinition): Unit = js.native
+  def setProperty_helpHints(property: helpHints, value: Definition): Unit = js.native
   @JSName("setProperty")
   def setProperty_labelHint(property: labelHint, value: String): Unit = js.native
   @JSName("setProperty")

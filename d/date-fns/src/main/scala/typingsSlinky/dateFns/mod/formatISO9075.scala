@@ -1,6 +1,6 @@
 package typingsSlinky.dateFns.mod
 
-import typingsSlinky.dateFns.AnonFormat
+import typingsSlinky.dateFns.anon.Format
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
 @js.native
 object formatISO9075 extends js.Object {
   def apply(date: Double): String = js.native
-  def apply(date: Double, options: AnonFormat): String = js.native
+  def apply(date: Double, options: Format): String = js.native
   def apply(date: js.Date): String = js.native
-  def apply(date: js.Date, options: AnonFormat): String = js.native
+  def apply(date: js.Date, options: Format): String = js.native
 }
 

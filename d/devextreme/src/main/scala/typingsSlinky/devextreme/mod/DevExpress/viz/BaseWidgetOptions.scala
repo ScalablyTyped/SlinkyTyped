@@ -1,9 +1,9 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonCancelComponentData
-import typingsSlinky.devextreme.AnonComponentTElementDxElementModelAny
-import typingsSlinky.devextreme.AnonFormatModel
-import typingsSlinky.devextreme.AnonTargetAny
+import typingsSlinky.devextreme.anon.CancelComponentData
+import typingsSlinky.devextreme.anon.ComponentTElementDxElementModelAny
+import typingsSlinky.devextreme.anon.FormatModel
+import typingsSlinky.devextreme.anon.TargetAny
 import typingsSlinky.devextreme.devextremeStrings.genericDotcarmine
 import typingsSlinky.devextreme.devextremeStrings.genericDotcontrast
 import typingsSlinky.devextreme.devextremeStrings.genericDotdark
@@ -34,15 +34,15 @@ trait BaseWidgetOptions[T] extends DOMComponentOptions[T] {
   /** Generates space around the widget. */
   var margin: js.UndefOr[BaseWidgetMargin] = js.native
   /** A function that is executed when the widget's rendering has finished. */
-  var onDrawn: js.UndefOr[js.Function1[/* e */ AnonComponentTElementDxElementModelAny[T], _]] = js.native
+  var onDrawn: js.UndefOr[js.Function1[/* e */ ComponentTElementDxElementModelAny[T], _]] = js.native
   /** A function that is executed after the widget is exported. */
-  var onExported: js.UndefOr[js.Function1[/* e */ AnonComponentTElementDxElementModelAny[T], _]] = js.native
+  var onExported: js.UndefOr[js.Function1[/* e */ ComponentTElementDxElementModelAny[T], _]] = js.native
   /** A function that is executed before the widget is exported. */
-  var onExporting: js.UndefOr[js.Function1[/* e */ AnonFormatModel[T], _]] = js.native
+  var onExporting: js.UndefOr[js.Function1[/* e */ FormatModel[T], _]] = js.native
   /** A function that is executed before a file with exported widget is saved to the user's local storage. */
-  var onFileSaving: js.UndefOr[js.Function1[/* e */ AnonCancelComponentData[T], _]] = js.native
+  var onFileSaving: js.UndefOr[js.Function1[/* e */ CancelComponentData[T], _]] = js.native
   /** A function that is executed when an error or warning occurs. */
-  var onIncidentOccurred: js.UndefOr[js.Function1[/* e */ AnonTargetAny[T], _]] = js.native
+  var onIncidentOccurred: js.UndefOr[js.Function1[/* e */ TargetAny[T], _]] = js.native
   /** Notifies the widget that it is embedded into an HTML page that uses a tag modifying the path. */
   var pathModified: js.UndefOr[Boolean] = js.native
   /** Specifies whether to redraw the widget when the size of the parent browser window changes or a mobile device rotates. */
@@ -120,7 +120,7 @@ object BaseWidgetOptions {
         ret
     }
     @scala.inline
-    def withOnDrawn(value: /* e */ AnonComponentTElementDxElementModelAny[T] => _): Self[T] = {
+    def withOnDrawn(value: /* e */ ComponentTElementDxElementModelAny[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDrawn")(js.Any.fromFunction1(value))
         ret
@@ -132,7 +132,7 @@ object BaseWidgetOptions {
         ret
     }
     @scala.inline
-    def withOnExported(value: /* e */ AnonComponentTElementDxElementModelAny[T] => _): Self[T] = {
+    def withOnExported(value: /* e */ ComponentTElementDxElementModelAny[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onExported")(js.Any.fromFunction1(value))
         ret
@@ -144,7 +144,7 @@ object BaseWidgetOptions {
         ret
     }
     @scala.inline
-    def withOnExporting(value: /* e */ AnonFormatModel[T] => _): Self[T] = {
+    def withOnExporting(value: /* e */ FormatModel[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onExporting")(js.Any.fromFunction1(value))
         ret
@@ -156,7 +156,7 @@ object BaseWidgetOptions {
         ret
     }
     @scala.inline
-    def withOnFileSaving(value: /* e */ AnonCancelComponentData[T] => _): Self[T] = {
+    def withOnFileSaving(value: /* e */ CancelComponentData[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFileSaving")(js.Any.fromFunction1(value))
         ret
@@ -168,7 +168,7 @@ object BaseWidgetOptions {
         ret
     }
     @scala.inline
-    def withOnIncidentOccurred(value: /* e */ AnonTargetAny[T] => _): Self[T] = {
+    def withOnIncidentOccurred(value: /* e */ TargetAny[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onIncidentOccurred")(js.Any.fromFunction1(value))
         ret

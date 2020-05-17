@@ -1,6 +1,6 @@
 package typingsSlinky.atom.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +30,7 @@ trait ContextMenuItemOptions extends ContextMenuOptions {
     *  A function that is called on the item each time a context menu is created
     *  via a right click.
     */
-  var created: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var created: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   /**
     *  Whether the menu item should be clickable. Disabled menu items typically
     *  appear grayed out. Defaults to true.
@@ -42,7 +42,7 @@ trait ContextMenuItemOptions extends ContextMenuOptions {
     *  A function that is called to determine whether to display this item on a
     *  given context menu deployment.
     */
-  var shouldDisplay: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var shouldDisplay: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   /** An array of additional items. */
   var submenu: js.UndefOr[js.Array[ContextMenuOptions]] = js.native
   /** Whether the menu item should appear in the menu. Defaults to true. */
@@ -122,7 +122,7 @@ object ContextMenuItemOptions {
         ret
     }
     @scala.inline
-    def withCreated(value: /* event */ Event_ => Unit): Self = {
+    def withCreated(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("created")(js.Any.fromFunction1(value))
         ret
@@ -158,7 +158,7 @@ object ContextMenuItemOptions {
         ret
     }
     @scala.inline
-    def withShouldDisplay(value: /* event */ Event_ => Unit): Self = {
+    def withShouldDisplay(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shouldDisplay")(js.Any.fromFunction1(value))
         ret

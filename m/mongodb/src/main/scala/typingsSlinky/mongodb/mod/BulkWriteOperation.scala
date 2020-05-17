@@ -1,7 +1,5 @@
 package typingsSlinky.mongodb.mod
 
-import typingsSlinky.mongodb.AnonCollation
-import typingsSlinky.mongodb.AnonDocument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,34 +16,16 @@ trait BulkWriteOperation[T] extends js.Object
 
 object BulkWriteOperation {
   @scala.inline
-  def BulkWriteReplaceOneOperation[T](replaceOne: AnonCollation[T]): BulkWriteOperation[T] = {
-    val __obj = js.Dynamic.literal(replaceOne = replaceOne.asInstanceOf[js.Any])
-    __obj.asInstanceOf[BulkWriteOperation[T]]
-  }
+  implicit def apply[T](value: BulkWriteDeleteManyOperation[T]): BulkWriteOperation[T] = value.asInstanceOf[BulkWriteOperation[T]]
   @scala.inline
-  def BulkWriteDeleteManyOperation[T](deleteMany: BulkWriteDeleteOperation[T]): BulkWriteOperation[T] = {
-    val __obj = js.Dynamic.literal(deleteMany = deleteMany.asInstanceOf[js.Any])
-    __obj.asInstanceOf[BulkWriteOperation[T]]
-  }
+  implicit def apply[T](value: BulkWriteDeleteOneOperation[T]): BulkWriteOperation[T] = value.asInstanceOf[BulkWriteOperation[T]]
   @scala.inline
-  def BulkWriteUpdateOneOperation[T](updateOne: BulkWriteUpdateOperation[T]): BulkWriteOperation[T] = {
-    val __obj = js.Dynamic.literal(updateOne = updateOne.asInstanceOf[js.Any])
-    __obj.asInstanceOf[BulkWriteOperation[T]]
-  }
+  implicit def apply[T](value: BulkWriteInsertOneOperation[T]): BulkWriteOperation[T] = value.asInstanceOf[BulkWriteOperation[T]]
   @scala.inline
-  def BulkWriteUpdateManyOperation[T](updateMany: BulkWriteUpdateOperation[T]): BulkWriteOperation[T] = {
-    val __obj = js.Dynamic.literal(updateMany = updateMany.asInstanceOf[js.Any])
-    __obj.asInstanceOf[BulkWriteOperation[T]]
-  }
+  implicit def apply[T](value: BulkWriteReplaceOneOperation[T]): BulkWriteOperation[T] = value.asInstanceOf[BulkWriteOperation[T]]
   @scala.inline
-  def BulkWriteInsertOneOperation[T](insertOne: AnonDocument[T]): BulkWriteOperation[T] = {
-    val __obj = js.Dynamic.literal(insertOne = insertOne.asInstanceOf[js.Any])
-    __obj.asInstanceOf[BulkWriteOperation[T]]
-  }
+  implicit def apply[T](value: BulkWriteUpdateManyOperation[T]): BulkWriteOperation[T] = value.asInstanceOf[BulkWriteOperation[T]]
   @scala.inline
-  def BulkWriteDeleteOneOperation[T](deleteOne: BulkWriteDeleteOperation[T]): BulkWriteOperation[T] = {
-    val __obj = js.Dynamic.literal(deleteOne = deleteOne.asInstanceOf[js.Any])
-    __obj.asInstanceOf[BulkWriteOperation[T]]
-  }
+  implicit def apply[T](value: BulkWriteUpdateOneOperation[T]): BulkWriteOperation[T] = value.asInstanceOf[BulkWriteOperation[T]]
 }
 

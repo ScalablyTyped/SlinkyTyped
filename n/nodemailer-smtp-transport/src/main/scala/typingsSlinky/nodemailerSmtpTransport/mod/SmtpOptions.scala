@@ -1,7 +1,7 @@
 package typingsSlinky.nodemailerSmtpTransport.mod
 
 import typingsSlinky.node.tlsMod.ConnectionOptions
-import typingsSlinky.nodemailerSmtpTransport.AnonMaxConnections
+import typingsSlinky.nodemailerSmtpTransport.anon.MaxConnections
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -59,7 +59,7 @@ trait SmtpOptions extends js.Object {
   /**
     * see Pooled SMTP for details about connection pooling
     */
-  var pool: js.UndefOr[AnonMaxConnections] = js.native
+  var pool: js.UndefOr[MaxConnections] = js.native
   /**
     * is the port to connect to (defaults to 25 or 465)
     */
@@ -277,7 +277,7 @@ object SmtpOptions {
         ret
     }
     @scala.inline
-    def withPool(value: AnonMaxConnections): Self = {
+    def withPool(value: MaxConnections): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pool")(value.asInstanceOf[js.Any])
         ret

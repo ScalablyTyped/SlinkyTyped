@@ -1,6 +1,5 @@
 package typingsSlinky.prefixfree
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLLinkElement
 import org.scalajs.dom.raw.HTMLStyleElement
@@ -29,7 +28,7 @@ trait StyleFix extends js.Object {
 
 @JSGlobal("StyleFix")
 @js.native
-object StyleFix extends TopLevel[StyleFix] {
+object StyleFix extends js.Object {
   type StyleFixer = js.Function3[/* css */ String, /* raw */ Boolean, /* element */ Element, String]
 }
 

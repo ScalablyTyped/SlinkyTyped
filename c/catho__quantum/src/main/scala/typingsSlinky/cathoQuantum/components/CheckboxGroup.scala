@@ -3,7 +3,7 @@ package typingsSlinky.cathoQuantum.components
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.cathoQuantum.AnonColorsSpacing
+import typingsSlinky.cathoQuantum.anon.ColorsSpacing
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.button
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.checkbox
 import typingsSlinky.cathoQuantum.checkboxMod.CheckboxGroupProps
@@ -33,7 +33,7 @@ object CheckboxGroup {
     @scala.inline
     def options(value: Options): this.type = set("options", value.asInstanceOf[js.Any])
     @scala.inline
-    def theme(value: AnonColorsSpacing): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: ColorsSpacing): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: CheckboxGroupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

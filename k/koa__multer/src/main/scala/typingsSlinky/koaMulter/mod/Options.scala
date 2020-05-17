@@ -1,6 +1,6 @@
 package typingsSlinky.koaMulter.mod
 
-import typingsSlinky.koaMulter.AnonFieldNameSize
+import typingsSlinky.koaMulter.anon.FieldNameSize
 import typingsSlinky.node.httpMod.IncomingMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +23,7 @@ trait Options extends js.Object {
     * An object specifying the size limits of the following optional properties. This object is passed to busboy
     * directly, and the details of properties can be found on https://github.com/mscdex/busboy#busboy-methods
     */
-  var limits: js.UndefOr[AnonFieldNameSize] = js.native
+  var limits: js.UndefOr[FieldNameSize] = js.native
   /** The storage engine to use for uploaded files. */
   var storage: js.UndefOr[StorageEngine] = js.native
 }
@@ -67,7 +67,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withLimits(value: AnonFieldNameSize): Self = {
+    def withLimits(value: FieldNameSize): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("limits")(value.asInstanceOf[js.Any])
         ret

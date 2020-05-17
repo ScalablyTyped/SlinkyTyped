@@ -18,48 +18,16 @@ package object ioteventsMod {
   type DetectorModelName = java.lang.String
   type DetectorModelSummaries = js.Array[typingsSlinky.awsSdk.ioteventsMod.DetectorModelSummary]
   type DetectorModelVersion = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
-    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVATING
-    - typingsSlinky.awsSdk.awsSdkStrings.INACTIVE
-    - typingsSlinky.awsSdk.awsSdkStrings.DEPRECATED
-    - typingsSlinky.awsSdk.awsSdkStrings.DRAFT
-    - typingsSlinky.awsSdk.awsSdkStrings.PAUSED
-    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
-    - java.lang.String
-  */
-  type DetectorModelVersionStatus = typingsSlinky.awsSdk.ioteventsMod._DetectorModelVersionStatus | java.lang.String
   type DetectorModelVersionSummaries = js.Array[typingsSlinky.awsSdk.ioteventsMod.DetectorModelVersionSummary]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.BATCH
-    - typingsSlinky.awsSdk.awsSdkStrings.SERIAL
-    - java.lang.String
-  */
-  type EvaluationMethod = typingsSlinky.awsSdk.ioteventsMod._EvaluationMethod | java.lang.String
   type EventName = java.lang.String
   type Events = js.Array[typingsSlinky.awsSdk.ioteventsMod.Event]
   type FirehoseSeparator = java.lang.String
   type InputArn = java.lang.String
   type InputDescription = java.lang.String
   type InputName = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.CREATING
-    - typingsSlinky.awsSdk.awsSdkStrings.UPDATING
-    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
-    - typingsSlinky.awsSdk.awsSdkStrings.DELETING
-    - java.lang.String
-  */
-  type InputStatus = typingsSlinky.awsSdk.ioteventsMod._InputStatus | java.lang.String
   type InputSummaries = js.Array[typingsSlinky.awsSdk.ioteventsMod.InputSummary]
   type KeyValue = java.lang.String
   type LoggingEnabled = scala.Boolean
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.ERROR
-    - typingsSlinky.awsSdk.awsSdkStrings.INFO
-    - typingsSlinky.awsSdk.awsSdkStrings.DEBUG
-    - java.lang.String
-  */
-  type LoggingLevel = typingsSlinky.awsSdk.ioteventsMod._LoggingLevel | java.lang.String
   type MQTTTopic = java.lang.String
   type MaxResults = scala.Double
   type NextToken = java.lang.String
@@ -77,10 +45,4 @@ package object ioteventsMod {
   type UseBase64 = scala.Boolean
   type VariableName = java.lang.String
   type VariableValue = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2018-07-27`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.ioteventsMod._apiVersion | java.lang.String
 }

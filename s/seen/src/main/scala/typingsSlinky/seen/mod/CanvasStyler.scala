@@ -1,8 +1,8 @@
 package typingsSlinky.seen.mod
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
-import typingsSlinky.seen.AnonFill
-import typingsSlinky.seen.AnonStroke
+import typingsSlinky.seen.anon.Fill
+import typingsSlinky.seen.anon.Stroke
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +12,8 @@ import scala.scalajs.js.annotation._
 class CanvasStyler protected () extends js.Object {
   def this(ctx: CanvasRenderingContext2D) = this()
   def draw(): this.type = js.native
-  def draw(style: AnonStroke): this.type = js.native
+  def draw(style: Stroke): this.type = js.native
   def fill(): this.type = js.native
-  def fill(style: AnonFill): this.type = js.native
+  def fill(style: Fill): this.type = js.native
 }
 

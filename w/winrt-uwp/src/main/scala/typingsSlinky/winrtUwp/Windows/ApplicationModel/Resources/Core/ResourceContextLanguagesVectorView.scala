@@ -1,17 +1,16 @@
 package typingsSlinky.winrtUwp.Windows.ApplicationModel.Resources.Core
 
 import typingsSlinky.std.Array
-import typingsSlinky.winrtUwp.AnonIndex
-import typingsSlinky.winrtUwp.AnonItemsArray
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
+import typingsSlinky.winrtUwp.anon.Index
+import typingsSlinky.winrtUwp.anon.ItemsArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a collection of ResourceContext language qualifiers. */
-@JSGlobal("Windows.ApplicationModel.Resources.Core.ResourceContextLanguagesVectorView")
 @js.native
-abstract class ResourceContextLanguagesVectorView () extends Array[String] {
+trait ResourceContextLanguagesVectorView extends Array[String] {
   /** Gets the number of ResourceContext language qualifiers in the set. */
   var size: Double = js.native
   /**
@@ -29,13 +28,13 @@ abstract class ResourceContextLanguagesVectorView () extends Array[String] {
     * Returns the ResourceContext language qualifiers that start at the specified index in the set.
     * @param startIndex The zero-based index of the start of the ResourceContext language qualifiers in the set to return.
     */
-  def getMany(startIndex: Double): AnonItemsArray = js.native
-  def indexOf(value: String, extra: js.Any*): AnonIndex = js.native
+  def getMany(startIndex: Double): ItemsArray = js.native
+  def indexOf(value: String, extra: js.Any*): Index = js.native
   /**
     * Returns the index of a specified ResourceContext language qualifier in the set.
     * @param value The ResourceContext language qualifier to find in the set.
     */
   @JSName("indexOf")
-  def indexOf_AnonIndex(value: String): AnonIndex = js.native
+  def indexOf_Index(value: String): Index = js.native
 }
 

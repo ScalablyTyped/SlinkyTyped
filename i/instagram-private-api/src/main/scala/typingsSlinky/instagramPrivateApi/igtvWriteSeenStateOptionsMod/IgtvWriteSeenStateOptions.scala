@@ -1,7 +1,7 @@
 package typingsSlinky.instagramPrivateApi.igtvWriteSeenStateOptionsMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.instagramPrivateApi.AnonViewprogresss
+import typingsSlinky.instagramPrivateApi.anon.Viewprogresss
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IgtvWriteSeenStateOptions extends js.Object {
   var grid_impressions: js.UndefOr[js.Array[String]] = js.native
-  var impressions: js.UndefOr[StringDictionary[AnonViewprogresss]] = js.native
+  var impressions: js.UndefOr[StringDictionary[Viewprogresss]] = js.native
 }
 
 object IgtvWriteSeenStateOptions {
@@ -37,7 +37,7 @@ object IgtvWriteSeenStateOptions {
         ret
     }
     @scala.inline
-    def withImpressions(value: StringDictionary[AnonViewprogresss]): Self = {
+    def withImpressions(value: StringDictionary[Viewprogresss]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("impressions")(value.asInstanceOf[js.Any])
         ret

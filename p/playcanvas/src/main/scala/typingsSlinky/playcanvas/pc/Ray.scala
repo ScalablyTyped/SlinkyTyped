@@ -20,11 +20,8 @@ import scala.scalajs.js.annotation._
   * @property {pc.Vec3} origin The starting point of the ray.
   * @property {pc.Vec3} direction The direction of the ray.
   */
-@JSGlobal("pc.Ray")
 @js.native
-class Ray () extends js.Object {
-  def this(origin: Vec3) = this()
-  def this(origin: Vec3, direction: Vec3) = this()
+trait Ray extends js.Object {
   /**
     * The direction of the ray.
     */
@@ -33,5 +30,33 @@ class Ray () extends js.Object {
     * The starting point of the ray.
     */
   var origin: Vec3 = js.native
+}
+
+object Ray {
+  @scala.inline
+  def apply(direction: Vec3, origin: Vec3): Ray = {
+    val __obj = js.Dynamic.literal(direction = direction.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Ray]
+  }
+  @scala.inline
+  implicit class RayOps[Self <: Ray] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDirection(value: Vec3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("direction")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrigin(value: Vec3): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

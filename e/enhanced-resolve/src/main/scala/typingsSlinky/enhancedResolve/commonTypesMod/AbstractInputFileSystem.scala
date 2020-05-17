@@ -1,7 +1,7 @@
 package typingsSlinky.enhancedResolve.commonTypesMod
 
-import typingsSlinky.enhancedResolve.AnonEncoding
-import typingsSlinky.enhancedResolve.AnonFlag
+import typingsSlinky.enhancedResolve.anon.Encoding
+import typingsSlinky.enhancedResolve.anon.Flag
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.node.fsMod.Stats
@@ -32,12 +32,12 @@ trait AbstractInputFileSystem extends js.Object {
   ): Unit = js.native
   def readFile(
     filename: String,
-    options: AnonEncoding,
+    options: Encoding,
     callback: js.Function2[/* err */ ErrnoException, /* data */ String, Unit]
   ): Unit = js.native
   def readFile(
     filename: String,
-    options: AnonFlag,
+    options: Flag,
     callback: js.Function2[/* err */ ErrnoException, /* data */ Buffer, Unit]
   ): Unit = js.native
   def readdir(path: String, callback: js.Function2[/* err */ ErrnoException, /* files */ js.Array[String], Unit]): Unit = js.native

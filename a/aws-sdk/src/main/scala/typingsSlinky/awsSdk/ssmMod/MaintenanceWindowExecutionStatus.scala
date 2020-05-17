@@ -1,0 +1,40 @@
+package typingsSlinky.awsSdk.ssmMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.awsSdk.awsSdkStrings.PENDING
+  - typingsSlinky.awsSdk.awsSdkStrings.IN_PROGRESS
+  - typingsSlinky.awsSdk.awsSdkStrings.SUCCESS
+  - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+  - typingsSlinky.awsSdk.awsSdkStrings.TIMED_OUT
+  - typingsSlinky.awsSdk.awsSdkStrings.CANCELLING
+  - typingsSlinky.awsSdk.awsSdkStrings.CANCELLED
+  - typingsSlinky.awsSdk.awsSdkStrings.SKIPPED_OVERLAPPING
+  - java.lang.String
+*/
+trait MaintenanceWindowExecutionStatus extends js.Object
+
+object MaintenanceWindowExecutionStatus {
+  @scala.inline
+  def PENDING: typingsSlinky.awsSdk.awsSdkStrings.PENDING = "PENDING".asInstanceOf[typingsSlinky.awsSdk.awsSdkStrings.PENDING]
+  @scala.inline
+  def IN_PROGRESS: typingsSlinky.awsSdk.awsSdkStrings.IN_PROGRESS = "IN_PROGRESS".asInstanceOf[typingsSlinky.awsSdk.awsSdkStrings.IN_PROGRESS]
+  @scala.inline
+  def SUCCESS: typingsSlinky.awsSdk.awsSdkStrings.SUCCESS = "SUCCESS".asInstanceOf[typingsSlinky.awsSdk.awsSdkStrings.SUCCESS]
+  @scala.inline
+  def FAILED: typingsSlinky.awsSdk.awsSdkStrings.FAILED = "FAILED".asInstanceOf[typingsSlinky.awsSdk.awsSdkStrings.FAILED]
+  @scala.inline
+  def TIMED_OUT: typingsSlinky.awsSdk.awsSdkStrings.TIMED_OUT = "TIMED_OUT".asInstanceOf[typingsSlinky.awsSdk.awsSdkStrings.TIMED_OUT]
+  @scala.inline
+  def CANCELLING: typingsSlinky.awsSdk.awsSdkStrings.CANCELLING = "CANCELLING".asInstanceOf[typingsSlinky.awsSdk.awsSdkStrings.CANCELLING]
+  @scala.inline
+  def CANCELLED: typingsSlinky.awsSdk.awsSdkStrings.CANCELLED = "CANCELLED".asInstanceOf[typingsSlinky.awsSdk.awsSdkStrings.CANCELLED]
+  @scala.inline
+  def SKIPPED_OVERLAPPING: typingsSlinky.awsSdk.awsSdkStrings.SKIPPED_OVERLAPPING = "SKIPPED_OVERLAPPING".asInstanceOf[typingsSlinky.awsSdk.awsSdkStrings.SKIPPED_OVERLAPPING]
+  @scala.inline
+  implicit def apply(value: java.lang.String): MaintenanceWindowExecutionStatus = value.asInstanceOf[MaintenanceWindowExecutionStatus]
+}
+

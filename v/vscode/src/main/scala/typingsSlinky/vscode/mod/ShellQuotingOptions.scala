@@ -1,6 +1,6 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonCharsToEscape
+import typingsSlinky.vscode.anon.CharsToEscape
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait ShellQuotingOptions extends js.Object {
   		 * are escaped. If a `{ escapeChar, charsToEscape }` literal is provide all characters
   		 * in `charsToEscape` are escaped using the `escapeChar`.
   		 */
-  var escape: js.UndefOr[String | AnonCharsToEscape] = js.native
+  var escape: js.UndefOr[String | CharsToEscape] = js.native
   /**
   		 * The character used for strong quoting. The string's length must be 1.
   		 */
@@ -36,7 +36,7 @@ object ShellQuotingOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEscape(value: String | AnonCharsToEscape): Self = {
+    def withEscape(value: String | CharsToEscape): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("escape")(value.asInstanceOf[js.Any])
         ret

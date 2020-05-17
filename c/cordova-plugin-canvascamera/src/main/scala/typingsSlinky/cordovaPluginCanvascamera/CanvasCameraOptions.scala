@@ -1,5 +1,6 @@
 package typingsSlinky.cordovaPluginCanvascamera
 
+import typingsSlinky.cordovaPluginCanvascamera.anon.Height
 import typingsSlinky.cordovaPluginCanvascamera.cordovaPluginCanvascameraStrings.back
 import typingsSlinky.cordovaPluginCanvascamera.cordovaPluginCanvascameraStrings.data
 import typingsSlinky.cordovaPluginCanvascamera.cordovaPluginCanvascameraStrings.file
@@ -14,8 +15,8 @@ trait CanvasCameraOptions extends js.Object {
     * String, optional, default: file, file to use files for rendering (lower CPU / higher storage) or data to use base64 jpg data for rendering (higher cpu / lower storage).
     */
   var cameraFacing: js.UndefOr[front | back] = js.native
-  var canvas: js.UndefOr[AnonWidth] = js.native
-  var capture: js.UndefOr[AnonWidth] = js.native
+  var canvas: js.UndefOr[Height] = js.native
+  var capture: js.UndefOr[Height] = js.native
   /**
     * Boolean, optional, default: false, a boolean to set flash mode on/off.
     */
@@ -77,7 +78,7 @@ object CanvasCameraOptions {
         ret
     }
     @scala.inline
-    def withCanvas(value: AnonWidth): Self = {
+    def withCanvas(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("canvas")(value.asInstanceOf[js.Any])
         ret
@@ -89,7 +90,7 @@ object CanvasCameraOptions {
         ret
     }
     @scala.inline
-    def withCapture(value: AnonWidth): Self = {
+    def withCapture(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("capture")(value.asInstanceOf[js.Any])
         ret

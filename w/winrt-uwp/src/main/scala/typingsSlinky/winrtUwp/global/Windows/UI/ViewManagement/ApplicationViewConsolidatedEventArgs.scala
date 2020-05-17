@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.UI.ViewManagement
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Contains the results of a window (app view) consolidation operation. */
+@JSGlobal("Windows.UI.ViewManagement.ApplicationViewConsolidatedEventArgs")
+@js.native
+abstract class ApplicationViewConsolidatedEventArgs ()
+  extends typingsSlinky.winrtUwp.Windows.UI.ViewManagement.ApplicationViewConsolidatedEventArgs
+

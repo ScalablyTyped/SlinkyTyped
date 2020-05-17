@@ -1,7 +1,7 @@
 package typingsSlinky.antd.anchorLinkMod
 
-import typingsSlinky.antd.AnonAntAnchor
-import typingsSlinky.antd.AnonHrefString
+import typingsSlinky.antd.anon.AntAnchor
+import typingsSlinky.antd.anon.HrefString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ class default () extends AnchorLink
 @JSImport("antd/lib/anchor/AnchorLink", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var contextTypes: AnonAntAnchor = js.native
-  var defaultProps: AnonHrefString = js.native
+  var contextTypes: AntAnchor = js.native
+  var defaultProps: HrefString = js.native
 }
 

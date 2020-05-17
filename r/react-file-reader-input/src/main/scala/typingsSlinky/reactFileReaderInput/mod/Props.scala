@@ -1,7 +1,7 @@
 package typingsSlinky.reactFileReaderInput.mod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,12 +33,12 @@ trait Props extends js.Object {
     * @param event The event that triggered file changes
     * @param results The array of files
     */
-  def onChange(event: SyntheticEvent[Event_, _], results: js.Array[Result]): Unit = js.native
+  def onChange(event: SyntheticEvent[Event, _], results: js.Array[Result]): Unit = js.native
 }
 
 object Props {
   @scala.inline
-  def apply(onChange: (SyntheticEvent[Event_, _], js.Array[Result]) => Unit): Props = {
+  def apply(onChange: (SyntheticEvent[Event, _], js.Array[Result]) => Unit): Props = {
     val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction2(onChange))
     __obj.asInstanceOf[Props]
   }
@@ -49,7 +49,7 @@ object Props {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnChange(value: (SyntheticEvent[Event_, _], js.Array[Result]) => Unit): Self = {
+    def withOnChange(value: (SyntheticEvent[Event, _], js.Array[Result]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
         ret

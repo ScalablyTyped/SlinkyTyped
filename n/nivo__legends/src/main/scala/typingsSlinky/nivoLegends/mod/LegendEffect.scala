@@ -1,6 +1,6 @@
 package typingsSlinky.nivoLegends.mod
 
-import typingsSlinky.nivoLegends.PartialitemTextColorstrin
+import typingsSlinky.nivoLegends.anon.PartialitemTextColorstrin
 import typingsSlinky.nivoLegends.nivoLegendsStrings.hover
 import scala.scalajs.js
 import scala.scalajs.js.`|`

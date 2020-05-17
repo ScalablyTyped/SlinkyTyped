@@ -1,11 +1,11 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonComponentValue
+import typingsSlinky.devextreme.anon.ComponentValue
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait dxDropDownBoxOptions extends dxDropDownEditorOptions[dxDropDownBox] {
   /** Specifies a custom template for the drop-down content. */
   var contentTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
-      /* templateData */ AnonComponentValue, 
+      /* templateData */ ComponentValue, 
       /* contentElement */ dxElement, 
       String | Element | JQuery
     ])
@@ -62,7 +62,7 @@ object dxDropDownBoxOptions {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
     def withContentTemplateFunction2(
-      value: (/* templateData */ AnonComponentValue, /* contentElement */ dxElement) => String | Element | JQuery
+      value: (/* templateData */ ComponentValue, /* contentElement */ dxElement) => String | Element | JQuery
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentTemplate")(js.Any.fromFunction2(value))
@@ -77,7 +77,7 @@ object dxDropDownBoxOptions {
     @scala.inline
     def withContentTemplate(
       value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
-          /* templateData */ AnonComponentValue, 
+          /* templateData */ ComponentValue, 
           /* contentElement */ dxElement, 
           String | Element | JQuery
         ])

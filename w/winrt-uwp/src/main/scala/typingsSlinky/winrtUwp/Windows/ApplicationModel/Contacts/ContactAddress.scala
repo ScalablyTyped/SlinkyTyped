@@ -5,10 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the address of a contact. */
-@JSGlobal("Windows.ApplicationModel.Contacts.ContactAddress")
 @js.native
-/** Initializes a new instance of a ContactAddress class. */
-class ContactAddress () extends js.Object {
+trait ContactAddress extends js.Object {
   /** Gets and sets the country of a contact address. The maximum string length for the country is 1024 characters. */
   var country: String = js.native
   /** Gets and sets the description of a contact address. The maximum string length for the description is 512 characters. */
@@ -23,5 +21,71 @@ class ContactAddress () extends js.Object {
   var region: String = js.native
   /** Gets and sets the street address of a contact address. The maximum string length for the street address is 1024 characters. */
   var streetAddress: String = js.native
+}
+
+object ContactAddress {
+  @scala.inline
+  def apply(
+    country: String,
+    description: String,
+    kind: ContactAddressKind,
+    locality: String,
+    postalCode: String,
+    region: String,
+    streetAddress: String
+  ): ContactAddress = {
+    val __obj = js.Dynamic.literal(country = country.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], locality = locality.asInstanceOf[js.Any], postalCode = postalCode.asInstanceOf[js.Any], region = region.asInstanceOf[js.Any], streetAddress = streetAddress.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ContactAddress]
+  }
+  @scala.inline
+  implicit class ContactAddressOps[Self <: ContactAddress] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCountry(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("country")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKind(value: ContactAddressKind): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("kind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocality(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPostalCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("postalCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRegion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("region")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStreetAddress(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("streetAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

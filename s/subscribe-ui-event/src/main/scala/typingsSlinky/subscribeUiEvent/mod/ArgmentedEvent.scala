@@ -1,8 +1,8 @@
 package typingsSlinky.subscribeUiEvent.mod
 
-import typingsSlinky.subscribeUiEvent.AnonAxisIntention
-import typingsSlinky.subscribeUiEvent.AnonDelta
-import typingsSlinky.subscribeUiEvent.AnonHeight
+import typingsSlinky.subscribeUiEvent.anon.AxisIntention
+import typingsSlinky.subscribeUiEvent.anon.Delta
+import typingsSlinky.subscribeUiEvent.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,23 +10,16 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ArgmentedEvent[T /* <: EventType */] extends js.Object {
   var mainType: String = js.native
-  var resize: AnonHeight = js.native
-  var scroll: AnonDelta = js.native
+  var resize: Height = js.native
+  var scroll: Delta = js.native
   var subType: String = js.native
-  var touch: AnonAxisIntention = js.native
+  var touch: AxisIntention = js.native
   var `type`: T = js.native
 }
 
 object ArgmentedEvent {
   @scala.inline
-  def apply[T](
-    mainType: String,
-    resize: AnonHeight,
-    scroll: AnonDelta,
-    subType: String,
-    touch: AnonAxisIntention,
-    `type`: T
-  ): ArgmentedEvent[T] = {
+  def apply[T](mainType: String, resize: Height, scroll: Delta, subType: String, touch: AxisIntention, `type`: T): ArgmentedEvent[T] = {
     val __obj = js.Dynamic.literal(mainType = mainType.asInstanceOf[js.Any], resize = resize.asInstanceOf[js.Any], scroll = scroll.asInstanceOf[js.Any], subType = subType.asInstanceOf[js.Any], touch = touch.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArgmentedEvent[T]]
@@ -44,13 +37,13 @@ object ArgmentedEvent {
         ret
     }
     @scala.inline
-    def withResize(value: AnonHeight): Self[T] = {
+    def withResize(value: Height): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resize")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withScroll(value: AnonDelta): Self[T] = {
+    def withScroll(value: Delta): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scroll")(value.asInstanceOf[js.Any])
         ret
@@ -62,7 +55,7 @@ object ArgmentedEvent {
         ret
     }
     @scala.inline
-    def withTouch(value: AnonAxisIntention): Self[T] = {
+    def withTouch(value: AxisIntention): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("touch")(value.asInstanceOf[js.Any])
         ret

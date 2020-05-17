@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.cloudwatchMod
 
-import typingsSlinky.awsSdk.DescribeAlarmsInputwaiter
+import typingsSlinky.awsSdk.anon.DescribeAlarmsInputwaiter
 import typingsSlinky.awsSdk.awsSdkStrings.alarmExists
 import typingsSlinky.awsSdk.awsSdkStrings.compositeAlarmExists
 import typingsSlinky.awsSdk.configMod.ConfigBase

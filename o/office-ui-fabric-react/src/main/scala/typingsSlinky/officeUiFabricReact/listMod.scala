@@ -1,5 +1,6 @@
 package typingsSlinky.officeUiFabricReact
 
+import typingsSlinky.officeUiFabricReact.anon.OnRenderCell
 import typingsSlinky.officeUiFabricReact.listTypesMod.IListProps
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`0`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`1`
@@ -21,7 +22,7 @@ object listMod extends js.Object {
   /* static members */
   @js.native
   object List extends js.Object {
-    var defaultProps: AnonOnRenderCell = js.native
+    var defaultProps: OnRenderCell = js.native
   }
   
   @js.native

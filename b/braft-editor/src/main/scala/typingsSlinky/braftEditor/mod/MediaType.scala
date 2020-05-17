@@ -1,22 +1,22 @@
 package typingsSlinky.braftEditor.mod
 
 import org.scalajs.dom.raw.File
-import typingsSlinky.braftEditor.AnonAudio
-import typingsSlinky.braftEditor.AnonEmbed
-import typingsSlinky.braftEditor.AnonError
+import typingsSlinky.braftEditor.anon.Audio
+import typingsSlinky.braftEditor.anon.Embed
+import typingsSlinky.braftEditor.anon.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait MediaType extends js.Object {
-  var accepts: js.UndefOr[AnonAudio] = js.native
-  var externals: js.UndefOr[AnonEmbed] = js.native
+  var accepts: js.UndefOr[Audio] = js.native
+  var externals: js.UndefOr[Embed] = js.native
   var items: js.UndefOr[js.Array[_]] = js.native
   var onChange: js.UndefOr[js.Function] = js.native
   var onInsert: js.UndefOr[js.Function] = js.native
   var pasteImage: js.UndefOr[Boolean] = js.native
-  var uploadFn: js.UndefOr[js.Function1[/* params */ AnonError, Unit]] = js.native
+  var uploadFn: js.UndefOr[js.Function1[/* params */ Error, Unit]] = js.native
   var validateFn: js.UndefOr[js.Function1[/* file */ File, Boolean | js.Thenable[_]]] = js.native
 }
 
@@ -33,7 +33,7 @@ object MediaType {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAccepts(value: AnonAudio): Self = {
+    def withAccepts(value: Audio): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("accepts")(value.asInstanceOf[js.Any])
         ret
@@ -45,7 +45,7 @@ object MediaType {
         ret
     }
     @scala.inline
-    def withExternals(value: AnonEmbed): Self = {
+    def withExternals(value: Embed): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("externals")(value.asInstanceOf[js.Any])
         ret
@@ -105,7 +105,7 @@ object MediaType {
         ret
     }
     @scala.inline
-    def withUploadFn(value: /* params */ AnonError => Unit): Self = {
+    def withUploadFn(value: /* params */ Error => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("uploadFn")(js.Any.fromFunction1(value))
         ret

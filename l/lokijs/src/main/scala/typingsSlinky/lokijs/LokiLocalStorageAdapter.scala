@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
   * A loki persistence adapter which persists to web browser's local storage object
   * @constructor LokiLocalStorageAdapter
   */
-@JSGlobal("LokiLocalStorageAdapter")
 @js.native
-class LokiLocalStorageAdapter () extends js.Object {
+trait LokiLocalStorageAdapter extends js.Object {
   /**
     * deleteDatabase() - delete the database from localstorage, will throw an error if it
     * can't be deleted
@@ -35,5 +34,43 @@ class LokiLocalStorageAdapter () extends js.Object {
     dbstring: String,
     callback: js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]
   ): Unit = js.native
+}
+
+object LokiLocalStorageAdapter {
+  @scala.inline
+  def apply(
+    deleteDatabase: (String, js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]) => Unit,
+    loadDatabase: (String, js.Function1[/* dataOrError */ js.Any | js.Error, Unit]) => Unit,
+    saveDatabase: (String, String, js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]) => Unit
+  ): LokiLocalStorageAdapter = {
+    val __obj = js.Dynamic.literal(deleteDatabase = js.Any.fromFunction2(deleteDatabase), loadDatabase = js.Any.fromFunction2(loadDatabase), saveDatabase = js.Any.fromFunction3(saveDatabase))
+    __obj.asInstanceOf[LokiLocalStorageAdapter]
+  }
+  @scala.inline
+  implicit class LokiLocalStorageAdapterOps[Self <: LokiLocalStorageAdapter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDeleteDatabase(value: (String, js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteDatabase")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withLoadDatabase(value: (String, js.Function1[/* dataOrError */ js.Any | js.Error, Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadDatabase")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSaveDatabase(value: (String, String, js.Function1[/* err */ js.UndefOr[js.Error | Null], Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("saveDatabase")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

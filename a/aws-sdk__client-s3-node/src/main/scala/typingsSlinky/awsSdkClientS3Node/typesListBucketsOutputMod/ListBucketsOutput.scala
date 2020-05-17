@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientS3Node.typesListBucketsOutputMod
 
-import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientS3Node.typesBucketMod.UnmarshalledBucket
 import typingsSlinky.awsSdkClientS3Node.typesOwnerMod.UnmarshalledOwner
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ListBucketsOutput
   extends MetadataBearer
-     with _OutputTypesUnion {
+     with OutputTypesUnion {
   /**
     * _Buckets shape
     */

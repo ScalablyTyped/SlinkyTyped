@@ -1,5 +1,6 @@
 package typingsSlinky.phosphorWidgets.tabbarMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLUListElement
 import typingsSlinky.phosphorSignaling.mod.ISignal
 import typingsSlinky.phosphorWidgets.tabbarMod.TabBar.ICurrentChangedArgs
@@ -14,7 +15,6 @@ import typingsSlinky.phosphorWidgets.tabbarMod.TabBar.Orientation
 import typingsSlinky.phosphorWidgets.tabbarMod.TabBar.RemoveBehavior
 import typingsSlinky.phosphorWidgets.titleMod.Title
 import typingsSlinky.phosphorWidgets.widgetMod.Widget
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -240,7 +240,7 @@ class TabBar_[T] () extends Widget {
     *
     * This should not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
   /**
     * Insert a tab into the tab bar at the specified index.
     *

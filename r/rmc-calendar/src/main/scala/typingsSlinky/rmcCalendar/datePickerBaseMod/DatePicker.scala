@@ -2,8 +2,8 @@ package typingsSlinky.rmcCalendar.datePickerBaseMod
 
 import slinky.core.TagMod
 import typingsSlinky.react.mod.Component
-import typingsSlinky.rmcCalendar.AnonClient
-import typingsSlinky.rmcCalendar.AnonFirstDate
+import typingsSlinky.rmcCalendar.anon.Client
+import typingsSlinky.rmcCalendar.anon.FirstDate
 import typingsSlinky.rmcCalendar.dataTypesMod.Models.CellData
 import typingsSlinky.rmcCalendar.dataTypesMod.Models.MonthData
 import typingsSlinky.rmcCalendar.datePickerPropsMod.PropsType
@@ -22,7 +22,7 @@ trait DatePicker
   @JSName("componentWillReceiveProps")
   def componentWillReceiveProps_MDatePicker(nextProps: PropsType): Unit = js.native
   def computeVisible(clientHeight: Double, scrollTop: Double): Boolean = js.native
-  def createOnScroll(): js.Function1[/* data */ AnonClient, Unit] = js.native
+  def createOnScroll(): js.Function1[/* data */ Client, Unit] = js.native
   def genMonthComponent(data: MonthData): TagMod[Any] = js.native
   def genMonthData(): MonthData = js.native
   def genMonthData(date: js.Date): MonthData = js.native
@@ -30,13 +30,12 @@ trait DatePicker
   def genWeekData(firstDate: js.Date): js.Array[js.Array[CellData]] = js.native
   def getDateWithoutTime(): Double = js.native
   def getDateWithoutTime(date: js.Date): Double = js.native
-  def getMonthDate(): AnonFirstDate = js.native
-  def getMonthDate(date: js.Date): AnonFirstDate = js.native
-  def getMonthDate(date: js.Date, addMonth: Double): AnonFirstDate = js.native
+  def getMonthDate(): FirstDate = js.native
+  def getMonthDate(date: js.Date): FirstDate = js.native
+  def getMonthDate(date: js.Date, addMonth: Double): FirstDate = js.native
   def inDate(date: Double, tick: Double): Boolean = js.native
   def onCellClick(day: CellData): Unit = js.native
   def selectDateRange(startDate: js.Date): Unit = js.native
-  def selectDateRange(startDate: js.Date, endDate: js.UndefOr[scala.Nothing], clear: Boolean): Unit = js.native
   def selectDateRange(startDate: js.Date, endDate: js.Date): Unit = js.native
   def selectDateRange(startDate: js.Date, endDate: js.Date, clear: Boolean): Unit = js.native
   @JSName("shouldComponentUpdate")

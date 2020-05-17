@@ -1,6 +1,5 @@
 package typingsSlinky.playcanvas.pc
 
-import typingsSlinky.playcanvas.AnonApp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,10 +43,8 @@ import scala.scalajs.js.annotation._
   * @param {pc.Entity} args.entity - The {@link pc.Entity} that the script is attached to
   *
   */
-@JSGlobal("pc.ScriptType")
 @js.native
-class ScriptType protected () extends EventHandler {
-  def this(args: AnonApp) = this()
+trait ScriptType extends EventHandler {
   /**
     * The {@link pc.Application} that the instance of this type
     * belongs to.
@@ -117,31 +114,5 @@ class ScriptType protected () extends EventHandler {
     * @param {number} dt - The delta time in seconds since the last frame.
     */
   var update: js.UndefOr[js.Function1[/* dt */ Double, Unit]] = js.native
-}
-
-/* static members */
-@JSGlobal("pc.ScriptType")
-@js.native
-object ScriptType extends js.Object {
-  /**
-    * @readonly
-    * @static
-    * @function
-    * @name pc.ScriptType.extend
-    * @param {object} methods - Object with methods, where key - is name of method, and value - is function.
-    * @description Shorthand function to extend Script Type prototype with list of methods.
-    * @example
-    * var PlayerController = pc.createScript('playerController');
-    *
-    * PlayerController.extend({
-    *     initialize: function () {
-    *         // called once on initialize
-    *     },
-    *     update: function (dt) {
-    *         // called each tick
-    *     }
-    * });
-    */
-  def extend(methods: js.Any): Unit = js.native
 }
 

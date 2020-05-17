@@ -1,6 +1,6 @@
 package typingsSlinky.vueTelInput.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait VueTelInputMethods extends js.Object {
   def getCountries(list: js.Array[_]): js.Array[_] = js.native
   def getItemClass(index: Double, iso2: String): js.Any = js.native
   def initializeCountry(): Unit = js.native
-  def keyboardNav(e: Event_): Unit = js.native
+  def keyboardNav(e: Event): Unit = js.native
   def onBlur(): Unit = js.native
   def onInput(): Unit = js.native
   def reset(): Unit = js.native
@@ -29,7 +29,7 @@ object VueTelInputMethods {
     getCountries: js.Array[_] => js.Array[_],
     getItemClass: (Double, String) => js.Any,
     initializeCountry: () => Unit,
-    keyboardNav: Event_ => Unit,
+    keyboardNav: Event => Unit,
     onBlur: () => Unit,
     onInput: () => Unit,
     reset: () => Unit,
@@ -81,7 +81,7 @@ object VueTelInputMethods {
         ret
     }
     @scala.inline
-    def withKeyboardNav(value: Event_ => Unit): Self = {
+    def withKeyboardNav(value: Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyboardNav")(js.Any.fromFunction1(value))
         ret

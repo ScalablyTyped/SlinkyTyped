@@ -1,12 +1,12 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.PivotFieldData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.PivotFieldLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.PivotFieldUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientResult
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Ascending
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Date
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Descending
@@ -24,9 +24,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.8]
   */
-@JSGlobal("Excel.PivotField")
 @js.native
-class PivotField () extends ClientObject {
+trait PivotField extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_PivotField: RequestContext = js.native
@@ -148,7 +147,7 @@ class PivotField () extends ClientObject {
     */
   def load(): PivotField = js.native
   def load(options: PivotFieldLoadOptions): PivotField = js.native
-  def load(propertyNamesAndPaths: AnonExpand): PivotField = js.native
+  def load(propertyNamesAndPaths: Expand): PivotField = js.native
   def load(propertyNames: String): PivotField = js.native
   def load(propertyNames: js.Array[String]): PivotField = js.native
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.

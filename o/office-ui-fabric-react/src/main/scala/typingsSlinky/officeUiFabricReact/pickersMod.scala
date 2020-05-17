@@ -2,6 +2,10 @@ package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
+import typingsSlinky.officeUiFabricReact.anon.CreateGenericItem
+import typingsSlinky.officeUiFabricReact.anon.EnableAutofillOnKeyPress
+import typingsSlinky.officeUiFabricReact.anon.IGenericItemkeyKey
+import typingsSlinky.officeUiFabricReact.anon.OnRenderItem
 import typingsSlinky.officeUiFabricReact.autofillTypesMod.IAutofillProps
 import typingsSlinky.officeUiFabricReact.basePickerTypesMod.IBasePickerProps
 import typingsSlinky.officeUiFabricReact.basePickerTypesMod.ValidationState
@@ -99,28 +103,28 @@ object pickersMod extends js.Object {
   /* static members */
   @js.native
   object Autofill extends js.Object {
-    var defaultProps: AnonEnableAutofillOnKeyPress = js.native
+    var defaultProps: EnableAutofillOnKeyPress = js.native
   }
   
   /* static members */
   @js.native
   object CompactPeoplePickerBase extends js.Object {
     /** Default props for CompactPeoplePicker. */
-    var defaultProps: AnonCreateGenericItem = js.native
+    var defaultProps: CreateGenericItem = js.native
   }
   
   /* static members */
   @js.native
   object ListPeoplePickerBase extends js.Object {
     /** Default props for ListPeoplePicker. */
-    var defaultProps: AnonCreateGenericItem = js.native
+    var defaultProps: CreateGenericItem = js.native
   }
   
   /* static members */
   @js.native
   object NormalPeoplePickerBase extends js.Object {
     /** Default props for NormalPeoplePicker. */
-    var defaultProps: AnonCreateGenericItem = js.native
+    var defaultProps: CreateGenericItem = js.native
   }
   
   @js.native
@@ -137,7 +141,7 @@ object pickersMod extends js.Object {
   /* static members */
   @js.native
   object TagPickerBase extends js.Object {
-    var defaultProps: AnonOnRenderItem = js.native
+    var defaultProps: OnRenderItem = js.native
   }
   
   @js.native

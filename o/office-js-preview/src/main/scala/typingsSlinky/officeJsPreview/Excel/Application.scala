@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ApplicationData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ApplicationLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ApplicationUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Automatic
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.AutomaticExceptTables
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Calculating
@@ -25,9 +25,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.Application")
 @js.native
-class Application () extends ClientObject {
+trait Application extends ClientObject {
   /**
     *
     * Returns the Excel calculation engine version used for the last full recalculation. Read-only.
@@ -122,7 +121,7 @@ class Application () extends ClientObject {
     */
   def load(): Application = js.native
   def load(options: ApplicationLoadOptions): Application = js.native
-  def load(propertyNamesAndPaths: AnonExpand): Application = js.native
+  def load(propertyNamesAndPaths: Expand): Application = js.native
   def load(propertyNames: String): Application = js.native
   def load(propertyNames: js.Array[String]): Application = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

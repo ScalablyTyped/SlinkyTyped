@@ -1,7 +1,7 @@
 package typingsSlinky.bizcharts.mod
 
-import typingsSlinky.bizcharts.AnonOffsetX
-import typingsSlinky.bizcharts.AnonOffsetY
+import typingsSlinky.bizcharts.anon.OffsetX
+import typingsSlinky.bizcharts.anon.OffsetY
 import typingsSlinky.react.mod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,14 +11,14 @@ import scala.scalajs.js.annotation._
 trait FacetProps
   extends Props[js.Any] {
   var autoSetAxis: js.UndefOr[Boolean] = js.native
-  var colTitle: js.UndefOr[AnonOffsetY] = js.native
+  var colTitle: js.UndefOr[OffsetY] = js.native
   var eachView: js.UndefOr[
     js.Function2[/* view */ js.UndefOr[js.Any], /* facet */ js.UndefOr[js.Any], Unit]
   ] = js.native
   var fields: js.UndefOr[String | js.Array[_]] = js.native
   var margin: js.UndefOr[Double | js.Array[Double]] = js.native
   var padding: js.UndefOr[Double | js.Array[Double]] = js.native
-  var rowTitle: js.UndefOr[AnonOffsetX] = js.native
+  var rowTitle: js.UndefOr[OffsetX] = js.native
   var showTitle: js.UndefOr[Boolean] = js.native
   var `type`: js.UndefOr[FacetType] = js.native
 }
@@ -48,7 +48,7 @@ object FacetProps {
         ret
     }
     @scala.inline
-    def withColTitle(value: AnonOffsetY): Self = {
+    def withColTitle(value: OffsetY): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("colTitle")(value.asInstanceOf[js.Any])
         ret
@@ -108,7 +108,7 @@ object FacetProps {
         ret
     }
     @scala.inline
-    def withRowTitle(value: AnonOffsetX): Self = {
+    def withRowTitle(value: OffsetX): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowTitle")(value.asInstanceOf[js.Any])
         ret

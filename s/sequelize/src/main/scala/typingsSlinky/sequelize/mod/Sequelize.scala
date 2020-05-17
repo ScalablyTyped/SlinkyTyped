@@ -1,7 +1,7 @@
 package typingsSlinky.sequelize.mod
 
-import typingsSlinky.sequelize.Anon1
-import typingsSlinky.sequelize.AnonQuery
+import typingsSlinky.sequelize.anon.Query
+import typingsSlinky.sequelize.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -60,7 +60,7 @@ trait Sequelize
     * @param options Options supplied
     * @param options.logging A function that logs sql queries, or false for no logging
     */
-  def createSchema(schema: String, options: Anon1): typingsSlinky.bluebird.mod.^[_] = js.native
+  def createSchema(schema: String, options: `1`): typingsSlinky.bluebird.mod.^[_] = js.native
   /**
     * Returns the database version
     */
@@ -141,7 +141,7 @@ trait Sequelize
     * @param options Options supplied
     * @param options.logging A function that logs sql queries, or false for no logging
     */
-  def dropAllSchemas(options: Anon1): typingsSlinky.bluebird.mod.^[_] = js.native
+  def dropAllSchemas(options: `1`): typingsSlinky.bluebird.mod.^[_] = js.native
   /**
     * Drop a single schema
     *
@@ -153,7 +153,7 @@ trait Sequelize
     * @param options Options supplied
     * @param options.logging A function that logs sql queries, or false for no logging
     */
-  def dropSchema(schema: String, options: Anon1): typingsSlinky.bluebird.mod.^[_] = js.native
+  def dropSchema(schema: String, options: `1`): typingsSlinky.bluebird.mod.^[_] = js.native
   /**
     * Escape value.
     *
@@ -229,8 +229,8 @@ trait Sequelize
     */
   def query(sql: String): typingsSlinky.bluebird.mod.^[_] = js.native
   def query(sql: String, options: QueryOptions): typingsSlinky.bluebird.mod.^[_] = js.native
-  def query(sql: AnonQuery): typingsSlinky.bluebird.mod.^[_] = js.native
-  def query(sql: AnonQuery, options: QueryOptions): typingsSlinky.bluebird.mod.^[_] = js.native
+  def query(sql: Query): typingsSlinky.bluebird.mod.^[_] = js.native
+  def query(sql: Query, options: QueryOptions): typingsSlinky.bluebird.mod.^[_] = js.native
   /**
     * Get the fn for random based on the dialect
     */
@@ -255,7 +255,7 @@ trait Sequelize
     * @param options Options supplied
     * @param options.logging A function that logs sql queries, or false for no logging
     */
-  def showAllSchemas(options: Anon1): typingsSlinky.bluebird.mod.^[_] = js.native
+  def showAllSchemas(options: `1`): typingsSlinky.bluebird.mod.^[_] = js.native
   /**
     * Sync all defined models to the DB.
     *

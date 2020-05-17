@@ -1,6 +1,6 @@
 package typingsSlinky.browserfs.emscriptenFsMod
 
-import typingsSlinky.browserfs.AnonOpts
+import typingsSlinky.browserfs.anon.Opts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait EmscriptenFSNode extends js.Object {
   var mode: Double = js.native
-  var mount: AnonOpts = js.native
+  var mount: Opts = js.native
   var name: String = js.native
   var node_ops: EmscriptenNodeOps = js.native
   var parent: EmscriptenFSNode = js.native
@@ -19,7 +19,7 @@ object EmscriptenFSNode {
   @scala.inline
   def apply(
     mode: Double,
-    mount: AnonOpts,
+    mount: Opts,
     name: String,
     node_ops: EmscriptenNodeOps,
     parent: EmscriptenFSNode,
@@ -41,7 +41,7 @@ object EmscriptenFSNode {
         ret
     }
     @scala.inline
-    def withMount(value: AnonOpts): Self = {
+    def withMount(value: Opts): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mount")(value.asInstanceOf[js.Any])
         ret

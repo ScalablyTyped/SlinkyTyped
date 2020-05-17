@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeMaterialTextfield.mod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextInputProps
@@ -9,7 +10,6 @@ import typingsSlinky.reactNativeMaterialTextfield.reactNativeMaterialTextfieldSt
 import typingsSlinky.reactNativeMaterialTextfield.reactNativeMaterialTextfieldStrings.dotted
 import typingsSlinky.reactNativeMaterialTextfield.reactNativeMaterialTextfieldStrings.none
 import typingsSlinky.reactNativeMaterialTextfield.reactNativeMaterialTextfieldStrings.solid
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +36,7 @@ trait TextFieldProps extends TextInputProps {
   var labelTextStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
   var lineType: js.UndefOr[solid | dotted | dashed | none] = js.native
   var lineWidth: js.UndefOr[Double] = js.native
-  var onPress: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onPress: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   var prefix: js.UndefOr[String] = js.native
   var renderLeftAccessory: js.UndefOr[js.Function0[ReactElement]] = js.native
   var renderRightAccessory: js.UndefOr[js.Function0[ReactElement]] = js.native
@@ -326,7 +326,7 @@ object TextFieldProps {
         ret
     }
     @scala.inline
-    def withOnPress(value: /* event */ Event_ => Unit): Self = {
+    def withOnPress(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPress")(js.Any.fromFunction1(value))
         ret

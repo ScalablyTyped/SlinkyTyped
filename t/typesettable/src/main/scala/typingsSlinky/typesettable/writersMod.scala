@@ -1,5 +1,7 @@
 package typingsSlinky.typesettable
 
+import typingsSlinky.typesettable.anon.KinIXAlignnumber
+import typingsSlinky.typesettable.anon.KinIYAlignnumber
 import typingsSlinky.typesettable.contextsMod.IPenFactoryContext
 import typingsSlinky.typesettable.measurersMod.AbstractMeasurer
 import typingsSlinky.typesettable.wrappersMod.Wrapper

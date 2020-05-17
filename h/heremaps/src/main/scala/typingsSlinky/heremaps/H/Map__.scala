@@ -3,7 +3,6 @@ package typingsSlinky.heremaps.H
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.heremaps.H.Map_.EngineType
-import typingsSlinky.heremaps.H.Map_.Options
 import typingsSlinky.heremaps.H.geo.IPoint
 import typingsSlinky.heremaps.H.geo.Rect
 import typingsSlinky.heremaps.H.map.DataModel
@@ -29,17 +28,8 @@ import scala.scalajs.js.annotation._
   * Map class defines map instance in the application. By creating this object you will initialize a visible map object which is attached to the provided dom element.
   * Map class is an entry point to all operations related to layers, map objects and geo-screen transformations. By specifying options you can initialize map with predefined view.
   */
-@JSGlobal("H.Map")
 @js.native
-class Map__ protected () extends EventTarget {
-  /**
-    * Constructor
-    * @param element {Element} - html element into which the map will be rendered
-    * @param baseLayer {H.map.layer.Layer} - The layer to be used as the base (bottom most) layer.
-    * @param opt_options {H.Map.Options=} - additional map options
-    */
-  def this(element: Element, baseLayer: Layer) = this()
-  def this(element: Element, baseLayer: Layer, opt_options: Options) = this()
+trait Map__ extends EventTarget {
   /**
     * This method adds a layer to the map.
     * @param layer {H.map.layer.Layer} - The map layer to be added

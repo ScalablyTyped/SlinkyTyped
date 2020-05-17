@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientBooks.AnonAssociation
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientBooks.anon.Association
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AssociatedResource extends js.Object {
   /** Return a list of associated books. */
-  def list(request: AnonAssociation): Request_[Volumes] = js.native
+  def list(request: Association): Request[Volumes] = js.native
 }
 
 object AssociatedResource {
   @scala.inline
-  def apply(list: AnonAssociation => Request_[Volumes]): AssociatedResource = {
+  def apply(list: Association => Request[Volumes]): AssociatedResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[AssociatedResource]
   }
@@ -25,7 +25,7 @@ object AssociatedResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withList(value: AnonAssociation => Request_[Volumes]): Self = {
+    def withList(value: Association => Request[Volumes]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

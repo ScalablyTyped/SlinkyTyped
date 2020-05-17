@@ -1,6 +1,6 @@
 package typingsSlinky.oakdexPokedex.mod
 
-import typingsSlinky.oakdexPokedex.AnonBug
+import typingsSlinky.oakdexPokedex.anon.Bug
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PokemonType extends js.Object {
   var color: String = js.native
-  var effectivness: AnonBug = js.native
+  var effectivness: Bug = js.native
   var names: Translations = js.native
 }
 
 object PokemonType {
   @scala.inline
-  def apply(color: String, effectivness: AnonBug, names: Translations): PokemonType = {
+  def apply(color: String, effectivness: Bug, names: Translations): PokemonType = {
     val __obj = js.Dynamic.literal(color = color.asInstanceOf[js.Any], effectivness = effectivness.asInstanceOf[js.Any], names = names.asInstanceOf[js.Any])
     __obj.asInstanceOf[PokemonType]
   }
@@ -31,7 +31,7 @@ object PokemonType {
         ret
     }
     @scala.inline
-    def withEffectivness(value: AnonBug): Self = {
+    def withEffectivness(value: Bug): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("effectivness")(value.asInstanceOf[js.Any])
         ret

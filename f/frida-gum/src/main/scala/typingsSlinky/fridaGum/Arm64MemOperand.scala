@@ -1,5 +1,6 @@
 package typingsSlinky.fridaGum
 
+import typingsSlinky.fridaGum.anon.Index
 import typingsSlinky.fridaGum.fridaGumStrings.mem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,12 +11,12 @@ trait Arm64MemOperand
   extends Arm64BaseOperand
      with Arm64Operand {
   var `type`: mem = js.native
-  var value: AnonIndex = js.native
+  var value: Index = js.native
 }
 
 object Arm64MemOperand {
   @scala.inline
-  def apply(`type`: mem, value: AnonIndex): Arm64MemOperand = {
+  def apply(`type`: mem, value: Index): Arm64MemOperand = {
     val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Arm64MemOperand]
@@ -33,7 +34,7 @@ object Arm64MemOperand {
         ret
     }
     @scala.inline
-    def withValue(value: AnonIndex): Self = {
+    def withValue(value: Index): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
         ret

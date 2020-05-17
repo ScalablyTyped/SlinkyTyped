@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeSortableGrid.mod
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeSortableGrid.AnonTransform
+import typingsSlinky.reactNativeSortableGrid.anon.Transform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,7 +40,7 @@ trait SortableGridProps extends js.Object {
     * Custom animation to override the default wiggle. Must be an object
     * containing a key transform, which is an array of transformations.
     */
-  var dragStartAnimation: js.UndefOr[AnonTransform] = js.native
+  var dragStartAnimation: js.UndefOr[Transform] = js.native
   /**
     * When used together with itemsPerRow, sets the size of a block to
     * something other than the default square
@@ -149,7 +149,7 @@ object SortableGridProps {
         ret
     }
     @scala.inline
-    def withDragStartAnimation(value: AnonTransform): Self = {
+    def withDragStartAnimation(value: Transform): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragStartAnimation")(value.asInstanceOf[js.Any])
         ret

@@ -1,9 +1,9 @@
 package typingsSlinky.swaggerNodeRunner.mod
 
 import typingsSlinky.express.mod.NextFunction
-import typingsSlinky.expressServeStaticCore.mod._Global_.Express.Application
-import typingsSlinky.expressServeStaticCore.mod._Global_.Express.Request
-import typingsSlinky.expressServeStaticCore.mod._Global_.Express.Response
+import typingsSlinky.expressServeStaticCore.mod.global.Express.Application
+import typingsSlinky.expressServeStaticCore.mod.global.Express.Request
+import typingsSlinky.expressServeStaticCore.mod.global.Express.Response
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.mod
 
-import typingsSlinky.uifabricUtilities.AnonDelay
+import typingsSlinky.uifabricUtilities.anon.Delay
 import typingsSlinky.uifabricUtilities.delayedRenderMod.IDelayedRenderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,6 +17,6 @@ class DelayedRender protected ()
 @JSImport("office-ui-fabric-react", "DelayedRender")
 @js.native
 object DelayedRender extends js.Object {
-  var defaultProps: AnonDelay = js.native
+  var defaultProps: Delay = js.native
 }
 

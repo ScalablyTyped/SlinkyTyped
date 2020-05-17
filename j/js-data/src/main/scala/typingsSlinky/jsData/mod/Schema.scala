@@ -1,8 +1,8 @@
 package typingsSlinky.jsData.mod
 
-import typingsSlinky.jsData.AnonAllOf
-import typingsSlinky.jsData.AnonArray
-import typingsSlinky.jsData.AnonInteger
+import typingsSlinky.jsData.anon.AllOf
+import typingsSlinky.jsData.anon.Array
+import typingsSlinky.jsData.anon.Integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,9 +28,9 @@ class Schema protected () extends Component {
 @JSImport("js-data", "Schema")
 @js.native
 object Schema extends js.Object {
-  var typeGroupValidators: AnonInteger = js.native
-  var types: AnonArray = js.native
-  var validationKeywords: AnonAllOf = js.native
+  var typeGroupValidators: Integer = js.native
+  var types: Array = js.native
+  var validationKeywords: AllOf = js.native
   def validate(value: js.Any, schema: js.Any, opts: js.Any): js.Array[SchemaValidationError] = js.native
 }
 

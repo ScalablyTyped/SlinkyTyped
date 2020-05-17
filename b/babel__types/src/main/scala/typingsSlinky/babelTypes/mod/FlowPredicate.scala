@@ -1,7 +1,5 @@
 package typingsSlinky.babelTypes.mod
 
-import typingsSlinky.babelTypes.babelTypesStrings.DeclaredPredicate
-import typingsSlinky.babelTypes.babelTypesStrings.InferredPredicate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,20 +8,12 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.babelTypes.mod.DeclaredPredicate_
   - typingsSlinky.babelTypes.mod.InferredPredicate_
 */
-trait FlowPredicate extends _Node
+trait FlowPredicate extends Node
 
 object FlowPredicate {
   @scala.inline
-  def DeclaredPredicate_(`type`: DeclaredPredicate, value: Flow): FlowPredicate = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowPredicate]
-  }
+  implicit def apply(value: DeclaredPredicate_): FlowPredicate = value.asInstanceOf[FlowPredicate]
   @scala.inline
-  def InferredPredicate_(`type`: InferredPredicate): FlowPredicate = {
-    val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowPredicate]
-  }
+  implicit def apply(value: InferredPredicate_): FlowPredicate = value.asInstanceOf[FlowPredicate]
 }
 

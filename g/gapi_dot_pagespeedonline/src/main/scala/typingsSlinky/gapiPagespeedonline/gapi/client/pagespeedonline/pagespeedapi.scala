@@ -1,8 +1,8 @@
 package typingsSlinky.gapiPagespeedonline.gapi.client.pagespeedonline
 
 import typingsSlinky.gapi.gapi.client.HttpRequest
-import typingsSlinky.gapiPagespeedonline.AnonFields
 import typingsSlinky.gapiPagespeedonline.GoogleApiPageSpeedOnlineResource
+import typingsSlinky.gapiPagespeedonline.anon.Fields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +12,12 @@ trait pagespeedapi extends js.Object {
   /**
     * Runs Page Speed analysis on the page at the specified URL, and returns a Page Speed score, a list of suggestions to make that page faster, and other information.
     */
-  def runpagespeed(`object`: AnonFields): HttpRequest[GoogleApiPageSpeedOnlineResource] = js.native
+  def runpagespeed(`object`: Fields): HttpRequest[GoogleApiPageSpeedOnlineResource] = js.native
 }
 
 object pagespeedapi {
   @scala.inline
-  def apply(runpagespeed: AnonFields => HttpRequest[GoogleApiPageSpeedOnlineResource]): pagespeedapi = {
+  def apply(runpagespeed: Fields => HttpRequest[GoogleApiPageSpeedOnlineResource]): pagespeedapi = {
     val __obj = js.Dynamic.literal(runpagespeed = js.Any.fromFunction1(runpagespeed))
     __obj.asInstanceOf[pagespeedapi]
   }
@@ -28,7 +28,7 @@ object pagespeedapi {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withRunpagespeed(value: AnonFields => HttpRequest[GoogleApiPageSpeedOnlineResource]): Self = {
+    def withRunpagespeed(value: Fields => HttpRequest[GoogleApiPageSpeedOnlineResource]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("runpagespeed")(js.Any.fromFunction1(value))
         ret

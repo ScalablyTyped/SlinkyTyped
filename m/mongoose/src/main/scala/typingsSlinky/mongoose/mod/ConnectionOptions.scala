@@ -1,8 +1,8 @@
 package typingsSlinky.mongoose.mod
 
 import typingsSlinky.mongodb.mod.MongoClientOptions
-import typingsSlinky.mongoose.AnonAutoIndex
-import typingsSlinky.mongoose.AnonExtraOptions
+import typingsSlinky.mongoose.anon.AutoIndex
+import typingsSlinky.mongoose.anon.ExtraOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,12 +24,12 @@ trait ConnectionOptions extends MongoClientOptions {
     * is set to true.(default: false) */
   var autoCreate: js.UndefOr[Boolean] = js.native
   /** Configure csfle as especified in MongoDB official guide */
-  var autoEncryption: js.UndefOr[AnonExtraOptions] = js.native
+  var autoEncryption: js.UndefOr[ExtraOptions] = js.native
   var autoIndex: js.UndefOr[Boolean] = js.native
   /** mongoose-specific options */
   /** See https://mongoosejs.com/docs/guide.html#bufferCommands */
   var bufferCommands: js.UndefOr[Boolean] = js.native
-  var config: js.UndefOr[AnonAutoIndex] = js.native
+  var config: js.UndefOr[AutoIndex] = js.native
   /** passed to the connection db instance */
   var db: js.UndefOr[js.Any] = js.native
   /** database Name for Mongodb Atlas Connection */
@@ -81,7 +81,7 @@ object ConnectionOptions {
         ret
     }
     @scala.inline
-    def withAutoEncryption(value: AnonExtraOptions): Self = {
+    def withAutoEncryption(value: ExtraOptions): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("autoEncryption")(value.asInstanceOf[js.Any])
         ret
@@ -117,7 +117,7 @@ object ConnectionOptions {
         ret
     }
     @scala.inline
-    def withConfig(value: AnonAutoIndex): Self = {
+    def withConfig(value: AutoIndex): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("config")(value.asInstanceOf[js.Any])
         ret

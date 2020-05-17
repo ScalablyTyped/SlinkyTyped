@@ -4,10 +4,32 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("InfoPath.DataDOM")
 @js.native
-class DataDOM protected () extends js.Object {
+trait DataDOM extends js.Object {
   @JSName("InfoPath.DataDOM_typekey")
   var InfoPathDotDataDOM_typekey: DataDOM = js.native
+}
+
+object DataDOM {
+  @scala.inline
+  def apply(InfoPathDotDataDOM_typekey: DataDOM): DataDOM = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("InfoPath.DataDOM_typekey")(InfoPathDotDataDOM_typekey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DataDOM]
+  }
+  @scala.inline
+  implicit class DataDOMOps[Self <: DataDOM] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withInfoPathDotDataDOM_typekey(value: DataDOM): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("InfoPath.DataDOM_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

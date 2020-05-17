@@ -1,14 +1,14 @@
 package typingsSlinky.oracleOraclejet.ojdatetimepickerMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonCancel
-import typingsSlinky.oracleOraclejet.AnonChangeMonth
-import typingsSlinky.oracleOraclejet.AnonClass
-import typingsSlinky.oracleOraclejet.AnonConverterHint
-import typingsSlinky.oracleOraclejet.AnonDefinition
-import typingsSlinky.oracleOraclejet.AnonDisabled
-import typingsSlinky.oracleOraclejet.AnonFooterLayout
-import typingsSlinky.oracleOraclejet.AnonInstruction
+import typingsSlinky.oracleOraclejet.anon.Cancel
+import typingsSlinky.oracleOraclejet.anon.ChangeMonth
+import typingsSlinky.oracleOraclejet.anon.Class
+import typingsSlinky.oracleOraclejet.anon.ConverterHint
+import typingsSlinky.oracleOraclejet.anon.Definition
+import typingsSlinky.oracleOraclejet.anon.Disabled
+import typingsSlinky.oracleOraclejet.anon.FooterLayout
+import typingsSlinky.oracleOraclejet.anon.Instruction
 import typingsSlinky.oracleOraclejet.ojdatetimepickerMod.ojInputDate.DayFormatterInput
 import typingsSlinky.oracleOraclejet.ojdatetimepickerMod.ojInputDate.DayFormatterOutput
 import typingsSlinky.oracleOraclejet.ojmessagingMod.^
@@ -40,27 +40,27 @@ trait ojInputDateTimeSettablePropertiesLenient
   var autocomplete: js.UndefOr[on | off | String] = js.native
   var autofocus: js.UndefOr[Boolean] = js.native
   var converter: js.UndefOr[Converter[String] | RegisteredConverter] = js.native
-  var datePicker: js.UndefOr[AnonChangeMonth] = js.native
+  var datePicker: js.UndefOr[ChangeMonth] = js.native
   var dayFormatter: js.UndefOr[js.Function1[/* param */ DayFormatterInput, Null | all | DayFormatterOutput]] = js.native
-  var dayMetaData: js.UndefOr[StringDictionary[StringDictionary[StringDictionary[AnonDisabled]]]] = js.native
+  var dayMetaData: js.UndefOr[StringDictionary[StringDictionary[StringDictionary[Disabled]]]] = js.native
   var describedBy: js.UndefOr[String] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
-  var displayOptions: js.UndefOr[AnonConverterHint] = js.native
-  var help: js.UndefOr[AnonInstruction] = js.native
-  var helpHints: js.UndefOr[AnonDefinition] = js.native
+  var displayOptions: js.UndefOr[ConverterHint] = js.native
+  var help: js.UndefOr[Instruction] = js.native
+  var helpHints: js.UndefOr[Definition] = js.native
   var keyboardEdit: js.UndefOr[enabled | disabled] = js.native
   var labelHint: js.UndefOr[String] = js.native
   var max: js.UndefOr[String] = js.native
   var messagesCustom: js.UndefOr[js.Array[^]] = js.native
   var min: js.UndefOr[String] = js.native
-  var pickerAttributes: js.UndefOr[AnonClass] = js.native
+  var pickerAttributes: js.UndefOr[Class] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var rawValue: js.UndefOr[String] = js.native
   var readonly: js.UndefOr[Boolean] = js.native
   var renderMode: js.UndefOr[jet | native] = js.native
   var required: js.UndefOr[Boolean] = js.native
-  var timePicker: js.UndefOr[AnonFooterLayout] = js.native
-  var translations: js.UndefOr[AnonCancel] = js.native
+  var timePicker: js.UndefOr[FooterLayout] = js.native
+  var translations: js.UndefOr[Cancel] = js.native
   var valid: js.UndefOr[
     typingsSlinky.oracleOraclejet.oracleOraclejetStrings.valid | pending | invalidHidden | invalidShown
   ] = js.native
@@ -129,7 +129,7 @@ object ojInputDateTimeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withDatePicker(value: AnonChangeMonth): Self = {
+    def withDatePicker(value: ChangeMonth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("datePicker")(value.asInstanceOf[js.Any])
         ret
@@ -153,7 +153,7 @@ object ojInputDateTimeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withDayMetaData(value: StringDictionary[StringDictionary[StringDictionary[AnonDisabled]]]): Self = {
+    def withDayMetaData(value: StringDictionary[StringDictionary[StringDictionary[Disabled]]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dayMetaData")(value.asInstanceOf[js.Any])
         ret
@@ -189,7 +189,7 @@ object ojInputDateTimeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withDisplayOptions(value: AnonConverterHint): Self = {
+    def withDisplayOptions(value: ConverterHint): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("displayOptions")(value.asInstanceOf[js.Any])
         ret
@@ -201,7 +201,7 @@ object ojInputDateTimeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withHelp(value: AnonInstruction): Self = {
+    def withHelp(value: Instruction): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("help")(value.asInstanceOf[js.Any])
         ret
@@ -213,7 +213,7 @@ object ojInputDateTimeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withHelpHints(value: AnonDefinition): Self = {
+    def withHelpHints(value: Definition): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("helpHints")(value.asInstanceOf[js.Any])
         ret
@@ -285,7 +285,7 @@ object ojInputDateTimeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withPickerAttributes(value: AnonClass): Self = {
+    def withPickerAttributes(value: Class): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pickerAttributes")(value.asInstanceOf[js.Any])
         ret
@@ -357,7 +357,7 @@ object ojInputDateTimeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTimePicker(value: AnonFooterLayout): Self = {
+    def withTimePicker(value: FooterLayout): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("timePicker")(value.asInstanceOf[js.Any])
         ret
@@ -369,7 +369,7 @@ object ojInputDateTimeSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonCancel): Self = {
+    def withTranslations(value: Cancel): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

@@ -1,13 +1,13 @@
 package typingsSlinky.cometd.mod
 
-import typingsSlinky.cometd.AnonHosts
+import typingsSlinky.cometd.anon.Hosts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait BaseMessage extends Message {
-  var advice: js.UndefOr[AnonHosts] = js.native
+  var advice: js.UndefOr[Hosts] = js.native
   var channel: String = js.native
   var clientId: js.UndefOr[String] = js.native
   var connectionType: js.UndefOr[ConnectionType] = js.native
@@ -46,7 +46,7 @@ object BaseMessage {
         ret
     }
     @scala.inline
-    def withAdvice(value: AnonHosts): Self = {
+    def withAdvice(value: Hosts): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("advice")(value.asInstanceOf[js.Any])
         ret

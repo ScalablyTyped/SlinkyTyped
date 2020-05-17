@@ -1,5 +1,7 @@
 package typingsSlinky.firebaseFirestore
 
+import typingsSlinky.firebaseFirestore.anon.ChangedDocs
+import typingsSlinky.firebaseFirestore.anon.TrackRemovals
 import typingsSlinky.firebaseFirestore.collectionsMod.DocumentKeySet_
 import typingsSlinky.firebaseFirestore.collectionsMod.DocumentMap_
 import typingsSlinky.firebaseFirestore.collectionsMod.NullableMaybeDocumentMap_
@@ -34,10 +36,10 @@ object testRemoteDocumentCacheMod extends js.Object {
     def getDocumentsMatchingQuery(query: Query, sinceReadTime: SnapshotVersion): js.Promise[DocumentMap_] = js.native
     def getEntries(documentKeys: DocumentKeySet_): js.Promise[NullableMaybeDocumentMap_] = js.native
     def getEntry(documentKey: DocumentKey): js.Promise[MaybeDocument | Null] = js.native
-    def getNewDocumentChanges(sinceReadTime: SnapshotVersion): js.Promise[AnonChangedDocs] = js.native
+    def getNewDocumentChanges(sinceReadTime: SnapshotVersion): js.Promise[ChangedDocs] = js.native
     def getSize(): js.Promise[Double] = js.native
     def newChangeBuffer(): RemoteDocumentChangeBuffer = js.native
-    def newChangeBuffer(options: AnonTrackRemovals): RemoteDocumentChangeBuffer = js.native
+    def newChangeBuffer(options: TrackRemovals): RemoteDocumentChangeBuffer = js.native
     def removeEntry(documentKey: DocumentKey): js.Promise[Unit] = js.native
     def removeEntry(documentKey: DocumentKey, version: SnapshotVersion): js.Promise[Unit] = js.native
   }

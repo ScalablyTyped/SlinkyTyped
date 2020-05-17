@@ -5,10 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides the data for the SampleRequested event. */
-@JSGlobal("Windows.Media.Core.MediaStreamSourceSampleRequestedEventArgs")
 @js.native
-abstract class MediaStreamSourceSampleRequestedEventArgs () extends js.Object {
+trait MediaStreamSourceSampleRequestedEventArgs extends js.Object {
   /** Gets the object that represents the request for a MediaStreamSample . */
   var request: MediaStreamSourceSampleRequest = js.native
+}
+
+object MediaStreamSourceSampleRequestedEventArgs {
+  @scala.inline
+  def apply(request: MediaStreamSourceSampleRequest): MediaStreamSourceSampleRequestedEventArgs = {
+    val __obj = js.Dynamic.literal(request = request.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MediaStreamSourceSampleRequestedEventArgs]
+  }
+  @scala.inline
+  implicit class MediaStreamSourceSampleRequestedEventArgsOps[Self <: MediaStreamSourceSampleRequestedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRequest(value: MediaStreamSourceSampleRequest): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

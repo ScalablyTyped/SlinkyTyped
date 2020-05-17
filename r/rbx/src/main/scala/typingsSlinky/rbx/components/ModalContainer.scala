@@ -1,5 +1,6 @@
 package typingsSlinky.rbx.components
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.SVGElement
 import slinky.core.ReactComponentClass
@@ -8,7 +9,6 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rbx.modalContainerMod.ModalContainerProps
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +39,7 @@ object ModalContainer {
     @scala.inline
     def containerClassName(value: String): this.type = set("containerClassName", value.asInstanceOf[js.Any])
     @scala.inline
-    def document(value: Document_): this.type = set("document", value.asInstanceOf[js.Any])
+    def document(value: Document): this.type = set("document", value.asInstanceOf[js.Any])
     @scala.inline
     def innerRefRefObject(value: ReactRef[HTMLElement | SVGElement | ReactComponentClass[js.Object]]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     @scala.inline

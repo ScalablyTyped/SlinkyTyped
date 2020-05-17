@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabServices.messagesMod.KernelMessage
 
-import typingsSlinky.jupyterlabServices.AnonName
+import typingsSlinky.jupyterlabServices.anon.Name
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.iopub
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.stream
 import typingsSlinky.phosphorCoreutils.jsonMod.JSONObject
@@ -16,16 +16,16 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IStreamMsg
   extends IIOPubMessage[stream]
-     with _Message {
+     with Message {
   @JSName("content")
-  var content_IStreamMsg: AnonName = js.native
+  var content_IStreamMsg: Name = js.native
 }
 
 object IStreamMsg {
   @scala.inline
   def apply(
     channel: iopub,
-    content: AnonName,
+    content: Name,
     header: IHeader[stream],
     metadata: JSONObject,
     parent_header: IHeader[MessageType] | js.Object
@@ -40,7 +40,7 @@ object IStreamMsg {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContent(value: AnonName): Self = {
+    def withContent(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
         ret

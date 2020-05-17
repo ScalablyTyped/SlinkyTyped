@@ -1,8 +1,8 @@
 package typingsSlinky.sparkpost.mod
 
-import typingsSlinky.sparkpost.AnonEmailrfc822
-import typingsSlinky.sparkpost.AnonListid
-import typingsSlinky.sparkpost.AnonTemplateid
+import typingsSlinky.sparkpost.anon.Emailrfc822
+import typingsSlinky.sparkpost.anon.Listid
+import typingsSlinky.sparkpost.anon.Templateid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ trait CreateTransmission extends js.Object {
     */
   var cc: js.UndefOr[js.Array[Recipient]] = js.native
   /** Content that will be used to construct a message */
-  var content: InlineContent | AnonTemplateid | AnonEmailrfc822 = js.native
+  var content: InlineContent | Templateid | Emailrfc822 = js.native
   /** Description of the transmission */
   var description: js.UndefOr[String] = js.native
   /** Transmission level metadata containing key/value pairs */
@@ -30,7 +30,7 @@ trait CreateTransmission extends js.Object {
   /** JSON object in which transmission options are defined */
   var options: js.UndefOr[TransmissionOptions] = js.native
   /** Inline recipient objects or object containing stored recipient list ID */
-  var recipients: js.UndefOr[js.Array[Recipient] | AnonListid] = js.native
+  var recipients: js.UndefOr[js.Array[Recipient] | Listid] = js.native
   /** SparkPost Enterprise API only: email to use for envelope FROM */
   var return_path: js.UndefOr[String] = js.native
   /** Key/value pairs that are provided to the substitution engine */
@@ -39,7 +39,7 @@ trait CreateTransmission extends js.Object {
 
 object CreateTransmission {
   @scala.inline
-  def apply(content: InlineContent | AnonTemplateid | AnonEmailrfc822): CreateTransmission = {
+  def apply(content: InlineContent | Templateid | Emailrfc822): CreateTransmission = {
     val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateTransmission]
   }
@@ -50,7 +50,7 @@ object CreateTransmission {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withContent(value: InlineContent | AnonTemplateid | AnonEmailrfc822): Self = {
+    def withContent(value: InlineContent | Templateid | Emailrfc822): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
         ret
@@ -128,7 +128,7 @@ object CreateTransmission {
         ret
     }
     @scala.inline
-    def withRecipients(value: js.Array[Recipient] | AnonListid): Self = {
+    def withRecipients(value: js.Array[Recipient] | Listid): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("recipients")(value.asInstanceOf[js.Any])
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.reactBootstrapTypeahead.mod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.TagMod
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,10 +14,10 @@ trait TypeaheadInputProps[T /* <: TypeaheadModel */] extends js.Object {
   var inputProps: js.UndefOr[InputProps] = js.native
   var labelKey: js.UndefOr[TypeaheadLabelKey[T]] = js.native
   var multiple: js.UndefOr[Boolean] = js.native
-  var onBlur: js.UndefOr[js.Function1[/* e */ Event_, Unit]] = js.native
+  var onBlur: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
   var onChange: js.UndefOr[js.Function1[/* selected */ js.Array[T], Unit]] = js.native
-  var onFocus: js.UndefOr[js.Function1[/* e */ Event_, Unit]] = js.native
-  var onKeyDown: js.UndefOr[js.Function1[/* e */ Event_, Unit]] = js.native
+  var onFocus: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
+  var onKeyDown: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
   var placeholder: js.UndefOr[String] = js.native
   var renderToken: js.UndefOr[
     js.Function3[
@@ -109,7 +109,7 @@ object TypeaheadInputProps {
         ret
     }
     @scala.inline
-    def withOnBlur(value: /* e */ Event_ => Unit): Self[T] = {
+    def withOnBlur(value: /* e */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
         ret
@@ -133,7 +133,7 @@ object TypeaheadInputProps {
         ret
     }
     @scala.inline
-    def withOnFocus(value: /* e */ Event_ => Unit): Self[T] = {
+    def withOnFocus(value: /* e */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
         ret
@@ -145,7 +145,7 @@ object TypeaheadInputProps {
         ret
     }
     @scala.inline
-    def withOnKeyDown(value: /* e */ Event_ => Unit): Self[T] = {
+    def withOnKeyDown(value: /* e */ Event => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onKeyDown")(js.Any.fromFunction1(value))
         ret

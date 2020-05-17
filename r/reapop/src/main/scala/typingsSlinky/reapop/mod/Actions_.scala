@@ -1,7 +1,7 @@
 package typingsSlinky.reapop.mod
 
-import typingsSlinky.reapop.AnonPayload
-import typingsSlinky.reapop.AnonType
+import typingsSlinky.reapop.anon.Payload
+import typingsSlinky.reapop.anon.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,8 +10,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Actions_ extends js.Object {
   def addNotification(notification: Notification): Notification = js.native
-  def removeNotification(notification: Notification): AnonPayload = js.native
-  def removeNotifications(): AnonType = js.native
+  def removeNotification(notification: Notification): Payload = js.native
+  def removeNotifications(): Type = js.native
   def updateNotification(notification: Notification): Notification = js.native
 }
 
@@ -19,8 +19,8 @@ object Actions_ {
   @scala.inline
   def apply(
     addNotification: Notification => Notification,
-    removeNotification: Notification => AnonPayload,
-    removeNotifications: () => AnonType,
+    removeNotification: Notification => Payload,
+    removeNotifications: () => Type,
     updateNotification: Notification => Notification
   ): Actions_ = {
     val __obj = js.Dynamic.literal(addNotification = js.Any.fromFunction1(addNotification), removeNotification = js.Any.fromFunction1(removeNotification), removeNotifications = js.Any.fromFunction0(removeNotifications), updateNotification = js.Any.fromFunction1(updateNotification))
@@ -39,13 +39,13 @@ object Actions_ {
         ret
     }
     @scala.inline
-    def withRemoveNotification(value: Notification => AnonPayload): Self = {
+    def withRemoveNotification(value: Notification => Payload): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("removeNotification")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withRemoveNotifications(value: () => AnonType): Self = {
+    def withRemoveNotifications(value: () => Type): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("removeNotifications")(js.Any.fromFunction0(value))
         ret

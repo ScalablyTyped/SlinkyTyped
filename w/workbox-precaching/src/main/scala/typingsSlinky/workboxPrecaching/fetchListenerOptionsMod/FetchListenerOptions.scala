@@ -1,7 +1,7 @@
 package typingsSlinky.workboxPrecaching.fetchListenerOptionsMod
 
 import org.scalajs.dom.experimental.URL
-import typingsSlinky.workboxPrecaching.AnonUrl
+import typingsSlinky.workboxPrecaching.anon.Url
 import typingsSlinky.workboxPrecaching.urlmanipulationMod.URLManipulation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -64,7 +64,7 @@ object FetchListenerOptions {
         ret
     }
     @scala.inline
-    def withUrlManipulation(value: /* url */ AnonUrl => js.Array[URL]): Self = {
+    def withUrlManipulation(value: /* url */ Url => js.Array[URL]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("urlManipulation")(js.Any.fromFunction1(value))
         ret

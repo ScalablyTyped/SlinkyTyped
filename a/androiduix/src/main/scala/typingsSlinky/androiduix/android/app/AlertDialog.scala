@@ -16,12 +16,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.app.AlertDialog")
 @js.native
-class AlertDialog protected () extends Dialog {
-  def this(context: Context) = this()
-  def this(context: Context, cancelable: Boolean) = this()
-  def this(context: Context, cancelable: Boolean, cancelListener: OnCancelListener) = this()
+trait AlertDialog extends Dialog {
   var mAlert: js.Any = js.native
   def getButton(whichButton: Double): Button = js.native
   def getListView(): ListView = js.native
@@ -42,13 +38,11 @@ class AlertDialog protected () extends Dialog {
   ): Unit = js.native
 }
 
-/* static members */
 @JSGlobal("android.app.AlertDialog")
 @js.native
 object AlertDialog extends js.Object {
   @js.native
-  class Builder protected () extends js.Object {
-    def this(context: Context) = this()
+  trait Builder extends js.Object {
     var P: js.Any = js.native
     def create(): AlertDialog = js.native
     def getContext(): Context = js.native
@@ -85,10 +79,5 @@ object AlertDialog extends js.Object {
     def show(): AlertDialog = js.native
   }
   
-  var THEME_DEVICE_DEFAULT_DARK: Double = js.native
-  var THEME_DEVICE_DEFAULT_LIGHT: Double = js.native
-  var THEME_HOLO_DARK: Double = js.native
-  var THEME_HOLO_LIGHT: Double = js.native
-  var THEME_TRADITIONAL: Double = js.native
 }
 

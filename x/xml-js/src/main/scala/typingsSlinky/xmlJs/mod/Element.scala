@@ -1,6 +1,6 @@
 package typingsSlinky.xmlJs.mod
 
-import typingsSlinky.xmlJs.AnonAttributesDeclarationAttributes
+import typingsSlinky.xmlJs.anon.AttributesDeclarationAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait Element extends js.Object {
   var attributes: js.UndefOr[Attributes] = js.native
   var cdata: js.UndefOr[String] = js.native
   var comment: js.UndefOr[String] = js.native
-  var declaration: js.UndefOr[AnonAttributesDeclarationAttributes] = js.native
+  var declaration: js.UndefOr[AttributesDeclarationAttributes] = js.native
   var doctype: js.UndefOr[String] = js.native
   var elements: js.UndefOr[js.Array[Element]] = js.native
   var instruction: js.UndefOr[String] = js.native
@@ -68,7 +68,7 @@ object Element {
         ret
     }
     @scala.inline
-    def withDeclaration(value: AnonAttributesDeclarationAttributes): Self = {
+    def withDeclaration(value: AttributesDeclarationAttributes): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("declaration")(value.asInstanceOf[js.Any])
         ret

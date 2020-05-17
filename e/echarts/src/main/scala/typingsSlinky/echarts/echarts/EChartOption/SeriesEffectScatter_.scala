@@ -1,13 +1,13 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonAnimationDelay
-import typingsSlinky.echarts.AnonAnimationDelayUpdate
-import typingsSlinky.echarts.AnonAnimationDuration
-import typingsSlinky.echarts.AnonBorderRadius
-import typingsSlinky.echarts.AnonBrushType
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonItemStyleLabel
-import typingsSlinky.echarts.AnonShadowOffsetY
+import typingsSlinky.echarts.anon.AnimationDelay
+import typingsSlinky.echarts.anon.AnimationDelayUpdate
+import typingsSlinky.echarts.anon.AnimationDuration
+import typingsSlinky.echarts.anon.BorderRadius
+import typingsSlinky.echarts.anon.BrushType
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.ItemStyleLabel
+import typingsSlinky.echarts.anon.ShadowOffsetY
 import typingsSlinky.echarts.echarts.EChartOption.SeriesEffectScatter.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -388,7 +388,7 @@ trait SeriesEffectScatter_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-effectScatter.emphasis
     */
-  var emphasis: js.UndefOr[AnonItemStyleLabel] = js.native
+  var emphasis: js.UndefOr[ItemStyleLabel] = js.native
   /**
     * Define what is encoded to for each dimension of `data`.
     * For example:
@@ -452,7 +452,7 @@ trait SeriesEffectScatter_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-effectScatter.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonShadowOffsetY] = js.native
+  var itemStyle: js.UndefOr[ShadowOffsetY] = js.native
   /**
     * Text label of , to explain some data information about graphic
     * item like value, name and so on.
@@ -464,7 +464,7 @@ trait SeriesEffectScatter_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-effectScatter.label
     */
-  var label: js.UndefOr[AnonBorderRadius] = js.native
+  var label: js.UndefOr[BorderRadius] = js.native
   /**
     * Whether to enable highlighting chart when
     * [legend](https://echarts.apache.org/en/option.html#legend)
@@ -483,21 +483,21 @@ trait SeriesEffectScatter_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-effectScatter.markArea
     */
-  var markArea: js.UndefOr[AnonAnimationDelayUpdate] = js.native
+  var markArea: js.UndefOr[AnimationDelayUpdate] = js.native
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-effectScatter.markLine
     */
-  var markLine: js.UndefOr[AnonAnimationDelay] = js.native
+  var markLine: js.UndefOr[AnimationDelay] = js.native
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-effectScatter.markPoint
     */
-  var markPoint: js.UndefOr[AnonAnimationDuration] = js.native
+  var markPoint: js.UndefOr[AnimationDuration] = js.native
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -525,7 +525,7 @@ trait SeriesEffectScatter_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-effectScatter.rippleEffect
     */
-  var rippleEffect: js.UndefOr[AnonBrushType] = js.native
+  var rippleEffect: js.UndefOr[BrushType] = js.native
   /**
     * When
     * [dataset](https://echarts.apache.org/en/option.html#dataset)
@@ -660,7 +660,7 @@ trait SeriesEffectScatter_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-effectScatter.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * @default
     * "effectScatter"
@@ -917,7 +917,7 @@ object SeriesEffectScatter_ {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonItemStyleLabel): Self = {
+    def withEmphasis(value: ItemStyleLabel): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -965,7 +965,7 @@ object SeriesEffectScatter_ {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonShadowOffsetY): Self = {
+    def withItemStyle(value: ShadowOffsetY): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -977,7 +977,7 @@ object SeriesEffectScatter_ {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonBorderRadius): Self = {
+    def withLabel(value: BorderRadius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -1001,7 +1001,7 @@ object SeriesEffectScatter_ {
         ret
     }
     @scala.inline
-    def withMarkArea(value: AnonAnimationDelayUpdate): Self = {
+    def withMarkArea(value: AnimationDelayUpdate): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markArea")(value.asInstanceOf[js.Any])
         ret
@@ -1013,7 +1013,7 @@ object SeriesEffectScatter_ {
         ret
     }
     @scala.inline
-    def withMarkLine(value: AnonAnimationDelay): Self = {
+    def withMarkLine(value: AnimationDelay): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markLine")(value.asInstanceOf[js.Any])
         ret
@@ -1025,7 +1025,7 @@ object SeriesEffectScatter_ {
         ret
     }
     @scala.inline
-    def withMarkPoint(value: AnonAnimationDuration): Self = {
+    def withMarkPoint(value: AnimationDuration): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("markPoint")(value.asInstanceOf[js.Any])
         ret
@@ -1061,7 +1061,7 @@ object SeriesEffectScatter_ {
         ret
     }
     @scala.inline
-    def withRippleEffect(value: AnonBrushType): Self = {
+    def withRippleEffect(value: BrushType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rippleEffect")(value.asInstanceOf[js.Any])
         ret
@@ -1157,7 +1157,7 @@ object SeriesEffectScatter_ {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.hellosignEmbedded.mod.HelloSign
 
-import typingsSlinky.hellosignEmbedded.AnonCcroles
+import typingsSlinky.hellosignEmbedded.anon.Ccroles
 import typingsSlinky.hellosignEmbedded.hellosignEmbeddedStrings.template_created
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation._
 trait TemplateCreatedMessageEvent extends MessageEvent {
   var event: template_created = js.native
   var template_id: String = js.native
-  var template_info: AnonCcroles = js.native
+  var template_info: Ccroles = js.native
 }
 
 object TemplateCreatedMessageEvent {
   @scala.inline
-  def apply(event: template_created, template_id: String, template_info: AnonCcroles): TemplateCreatedMessageEvent = {
+  def apply(event: template_created, template_id: String, template_info: Ccroles): TemplateCreatedMessageEvent = {
     val __obj = js.Dynamic.literal(event = event.asInstanceOf[js.Any], template_id = template_id.asInstanceOf[js.Any], template_info = template_info.asInstanceOf[js.Any])
     __obj.asInstanceOf[TemplateCreatedMessageEvent]
   }
@@ -38,7 +38,7 @@ object TemplateCreatedMessageEvent {
         ret
     }
     @scala.inline
-    def withTemplate_info(value: AnonCcroles): Self = {
+    def withTemplate_info(value: Ccroles): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("template_info")(value.asInstanceOf[js.Any])
         ret

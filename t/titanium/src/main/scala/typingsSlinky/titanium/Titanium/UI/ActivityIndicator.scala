@@ -24,9 +24,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * An activity indicator that lets the user know an action is taking place.
 		 */
-@JSGlobal("Titanium.UI.ActivityIndicator")
 @js.native
-class ActivityIndicator () extends View {
+trait ActivityIndicator extends View {
   /**
   			 * Color of the message text, as a color name or hex triplet.
   			 */

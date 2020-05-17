@@ -1,6 +1,6 @@
 package typingsSlinky.splitpanes.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,12 +13,12 @@ trait splitPanesMethods extends js.Object {
   def findNextExpandedPane(splitterIndex: Double): js.Object = js.native
   def findPrevExpandedPane(splitterIndex: Double): js.Object = js.native
   def getCurrentDragPercentage(drag: js.Object): Double = js.native
-  def getCurrentMouseDrag(e: Event_): positionTypes = js.native
-  def onMouseDown(e: Event_, splitterIndex: Double): Unit = js.native
-  def onMouseMove(e: Event_): Unit = js.native
+  def getCurrentMouseDrag(e: Event): positionTypes = js.native
+  def onMouseDown(e: Event, splitterIndex: Double): Unit = js.native
+  def onMouseMove(e: Event): Unit = js.native
   def onMouseUp(): Unit = js.native
-  def onSplitterClick(e: Event_, splitterIndex: Double): Unit = js.native
-  def onSplitterDblClick(e: Event_, splitterIndex: Double): Unit = js.native
+  def onSplitterClick(e: Event, splitterIndex: Double): Unit = js.native
+  def onSplitterDblClick(e: Event, splitterIndex: Double): Unit = js.native
   def sumNextPanesSize(splitterIndex: Double): js.Object = js.native
   def sumPrevPanesSize(splitterIndex: Double): js.Object = js.native
 }
@@ -32,12 +32,12 @@ object splitPanesMethods {
     findNextExpandedPane: Double => js.Object,
     findPrevExpandedPane: Double => js.Object,
     getCurrentDragPercentage: js.Object => Double,
-    getCurrentMouseDrag: Event_ => positionTypes,
-    onMouseDown: (Event_, Double) => Unit,
-    onMouseMove: Event_ => Unit,
+    getCurrentMouseDrag: Event => positionTypes,
+    onMouseDown: (Event, Double) => Unit,
+    onMouseMove: Event => Unit,
     onMouseUp: () => Unit,
-    onSplitterClick: (Event_, Double) => Unit,
-    onSplitterDblClick: (Event_, Double) => Unit,
+    onSplitterClick: (Event, Double) => Unit,
+    onSplitterDblClick: (Event, Double) => Unit,
     sumNextPanesSize: Double => js.Object,
     sumPrevPanesSize: Double => js.Object
   ): splitPanesMethods = {
@@ -87,19 +87,19 @@ object splitPanesMethods {
         ret
     }
     @scala.inline
-    def withGetCurrentMouseDrag(value: Event_ => positionTypes): Self = {
+    def withGetCurrentMouseDrag(value: Event => positionTypes): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getCurrentMouseDrag")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnMouseDown(value: (Event_, Double) => Unit): Self = {
+    def withOnMouseDown(value: (Event, Double) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseDown")(js.Any.fromFunction2(value))
         ret
     }
     @scala.inline
-    def withOnMouseMove(value: Event_ => Unit): Self = {
+    def withOnMouseMove(value: Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseMove")(js.Any.fromFunction1(value))
         ret
@@ -111,13 +111,13 @@ object splitPanesMethods {
         ret
     }
     @scala.inline
-    def withOnSplitterClick(value: (Event_, Double) => Unit): Self = {
+    def withOnSplitterClick(value: (Event, Double) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSplitterClick")(js.Any.fromFunction2(value))
         ret
     }
     @scala.inline
-    def withOnSplitterDblClick(value: (Event_, Double) => Unit): Self = {
+    def withOnSplitterDblClick(value: (Event, Double) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSplitterDblClick")(js.Any.fromFunction2(value))
         ret

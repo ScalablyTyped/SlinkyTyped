@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 trait EnumDeclaration
   extends DeclarationStatement
      with JSDocContainer
-     with _HasJSDoc {
+     with HasJSDoc {
   @JSName("kind")
   var kind_EnumDeclaration: typingsSlinky.typescript.mod.SyntaxKind.EnumDeclaration = js.native
   var members: NodeArray[EnumMember] = js.native

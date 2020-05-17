@@ -1,20 +1,20 @@
 package typingsSlinky.puppeteer.mod
 
-import typingsSlinky.puppeteer.AnonEnd
+import typingsSlinky.puppeteer.anon.End
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CoverageEntry extends js.Object {
-  var ranges: js.Array[AnonEnd] = js.native
+  var ranges: js.Array[End] = js.native
   var text: String = js.native
   var url: String = js.native
 }
 
 object CoverageEntry {
   @scala.inline
-  def apply(ranges: js.Array[AnonEnd], text: String, url: String): CoverageEntry = {
+  def apply(ranges: js.Array[End], text: String, url: String): CoverageEntry = {
     val __obj = js.Dynamic.literal(ranges = ranges.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[CoverageEntry]
   }
@@ -25,7 +25,7 @@ object CoverageEntry {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withRanges(value: js.Array[AnonEnd]): Self = {
+    def withRanges(value: js.Array[End]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ranges")(value.asInstanceOf[js.Any])
         ret

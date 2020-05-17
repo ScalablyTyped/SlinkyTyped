@@ -2,7 +2,7 @@ package typingsSlinky.reactFilepond.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactFilepond.AnonFetch
+import typingsSlinky.reactFilepond.anon.Fetch
 import typingsSlinky.reactFilepond.mod.FilePondErrorDescription
 import typingsSlinky.reactFilepond.mod.FilePondProps
 import scala.scalajs.js
@@ -147,7 +147,7 @@ object FilePond {
     @scala.inline
     def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
     @scala.inline
-    def server(value: String | AnonFetch): this.type = set("server", value.asInstanceOf[js.Any])
+    def server(value: String | Fetch): this.type = set("server", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: FilePondProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

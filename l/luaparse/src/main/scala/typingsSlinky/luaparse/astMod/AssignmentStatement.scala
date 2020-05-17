@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait AssignmentStatement
-  extends _Statement
+  extends Statement
      with Base[typingsSlinky.luaparse.luaparseStrings.AssignmentStatement] {
   var init: js.Array[Expression] = js.native
   var variables: js.Array[IndexExpression | MemberExpression | Identifier] = js.native

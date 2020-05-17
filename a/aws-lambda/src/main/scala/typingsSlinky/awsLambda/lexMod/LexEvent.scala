@@ -1,8 +1,8 @@
 package typingsSlinky.awsLambda.lexMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.awsLambda.AnonAlias
-import typingsSlinky.awsLambda.AnonConfirmationStatus
+import typingsSlinky.awsLambda.anon.Alias
+import typingsSlinky.awsLambda.anon.ConfirmationStatus
 import typingsSlinky.awsLambda.awsLambdaStrings.DialogCodeHook
 import typingsSlinky.awsLambda.awsLambdaStrings.FulfillmentCodeHook
 import typingsSlinky.awsLambda.awsLambdaStrings.Text
@@ -14,8 +14,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait LexEvent extends js.Object {
-  var bot: AnonAlias = js.native
-  var currentIntent: AnonConfirmationStatus = js.native
+  var bot: Alias = js.native
+  var currentIntent: ConfirmationStatus = js.native
   var inputTranscript: String = js.native
   var invocationSource: DialogCodeHook | FulfillmentCodeHook = js.native
   var messageVersion: `1Dot0` = js.native
@@ -28,8 +28,8 @@ trait LexEvent extends js.Object {
 object LexEvent {
   @scala.inline
   def apply(
-    bot: AnonAlias,
-    currentIntent: AnonConfirmationStatus,
+    bot: Alias,
+    currentIntent: ConfirmationStatus,
     inputTranscript: String,
     invocationSource: DialogCodeHook | FulfillmentCodeHook,
     messageVersion: `1Dot0`,
@@ -47,13 +47,13 @@ object LexEvent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBot(value: AnonAlias): Self = {
+    def withBot(value: Alias): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bot")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withCurrentIntent(value: AnonConfirmationStatus): Self = {
+    def withCurrentIntent(value: ConfirmationStatus): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("currentIntent")(value.asInstanceOf[js.Any])
         ret

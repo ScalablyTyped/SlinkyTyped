@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientDfareporting.gapi.client.dfareporting
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientDfareporting.AnonFields
-import typingsSlinky.gapiClientDfareporting.AnonKey
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientDfareporting.anon.Fields
+import typingsSlinky.gapiClientDfareporting.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PlatformTypesResource extends js.Object {
   /** Gets one platform type by ID. */
-  def get(request: AnonFields): Request_[PlatformType] = js.native
+  def get(request: Fields): Request[PlatformType] = js.native
   /** Retrieves a list of platform types. */
-  def list(request: AnonKey): Request_[PlatformTypesListResponse] = js.native
+  def list(request: Key): Request[PlatformTypesListResponse] = js.native
 }
 
 object PlatformTypesResource {
   @scala.inline
-  def apply(get: AnonFields => Request_[PlatformType], list: AnonKey => Request_[PlatformTypesListResponse]): PlatformTypesResource = {
+  def apply(get: Fields => Request[PlatformType], list: Key => Request[PlatformTypesListResponse]): PlatformTypesResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[PlatformTypesResource]
   }
@@ -28,13 +28,13 @@ object PlatformTypesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonFields => Request_[PlatformType]): Self = {
+    def withGet(value: Fields => Request[PlatformType]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonKey => Request_[PlatformTypesListResponse]): Self = {
+    def withList(value: Key => Request[PlatformTypesListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

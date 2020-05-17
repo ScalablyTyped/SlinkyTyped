@@ -1,6 +1,6 @@
 package typingsSlinky.koa.mod
 
-import typingsSlinky.koa.AnonCall
+import typingsSlinky.koa.anon.Call
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait BaseContext
     * See: https://github.com/jshttp/http-assert
     */
   @JSName("assert")
-  var assert_Original: AnonCall = js.native
+  var assert_Original: Call = js.native
   /**
     * Similar to .throw(), adds assertion.
     *

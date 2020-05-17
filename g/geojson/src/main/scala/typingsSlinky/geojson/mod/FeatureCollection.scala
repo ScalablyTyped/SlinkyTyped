@@ -5,7 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait FeatureCollection[G /* <: Geometry | Null */, P] extends GeoJsonObject {
+trait FeatureCollection[G /* <: Geometry | Null */, P]
+  extends GeoJsonObject
+     with GeoJSON {
   var features: js.Array[Feature[G, P]] = js.native
   @JSName("type")
   var type_FeatureCollection: typingsSlinky.geojson.geojsonStrings.FeatureCollection = js.native

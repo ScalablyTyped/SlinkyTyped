@@ -1,5 +1,6 @@
 package typingsSlinky.lokijs
 
+import typingsSlinky.lokijs.anon.PageSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,18 +22,15 @@ import scala.scalajs.js.annotation._
   * @param [options.delimiter] - allows you to override the default delimeter
   * @constructor LokiPartitioningAdapter
   */
-@JSGlobal("LokiPartitioningAdapter")
 @js.native
-class LokiPartitioningAdapter protected () extends LokiPersistenceAdapter {
-  def this(adapter: LokiPersistenceAdapter) = this()
-  def this(adapter: LokiPersistenceAdapter, options: AnonPageSize) = this()
+trait LokiPartitioningAdapter extends LokiPersistenceAdapter {
   var adapter: LokiPersistenceAdapter | Null = js.native
   var dbname: String = js.native
   var dbref: Loki | Null = js.native
   var dirtyPartitions: js.UndefOr[js.Array[Double]] = js.native
   @JSName("mode")
   var mode_LokiPartitioningAdapter: String = js.native
-  var options: AnonPageSize = js.native
+  var options: PageSize = js.native
   var pageIterator: PageIterator | js.Object = js.native
   /**
     * Saves a database by partioning into separate key/value saves.
@@ -69,5 +67,122 @@ class LokiPartitioningAdapter protected () extends LokiPersistenceAdapter {
     * @param callback - adapter callback to return load result to caller
     */
   def saveNextPartition(callback: js.Function1[/* err */ js.Error | Null, Unit]): Unit = js.native
+}
+
+object LokiPartitioningAdapter {
+  @scala.inline
+  def apply(
+    dbname: String,
+    exportDatabase: (String, Loki, js.Function1[/* err */ js.Error | Null, Unit]) => Unit,
+    loadDatabase: (String, js.Function1[/* value */ js.Any, Unit]) => Unit,
+    loadNextPage: js.Function0[Unit] => Unit,
+    loadNextPartition: (Double, js.Function0[Unit]) => Unit,
+    mode: String,
+    options: PageSize,
+    pageIterator: PageIterator | js.Object,
+    saveNextPage: js.Function1[/* err */ js.Error | Null, Unit] => Unit,
+    saveNextPartition: js.Function1[/* err */ js.Error | Null, Unit] => Unit
+  ): LokiPartitioningAdapter = {
+    val __obj = js.Dynamic.literal(dbname = dbname.asInstanceOf[js.Any], exportDatabase = js.Any.fromFunction3(exportDatabase), loadDatabase = js.Any.fromFunction2(loadDatabase), loadNextPage = js.Any.fromFunction1(loadNextPage), loadNextPartition = js.Any.fromFunction2(loadNextPartition), mode = mode.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], pageIterator = pageIterator.asInstanceOf[js.Any], saveNextPage = js.Any.fromFunction1(saveNextPage), saveNextPartition = js.Any.fromFunction1(saveNextPartition))
+    __obj.asInstanceOf[LokiPartitioningAdapter]
+  }
+  @scala.inline
+  implicit class LokiPartitioningAdapterOps[Self <: LokiPartitioningAdapter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDbname(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbname")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExportDatabase(value: (String, Loki, js.Function1[/* err */ js.Error | Null, Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("exportDatabase")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withLoadNextPage(value: js.Function0[Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadNextPage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLoadNextPartition(value: (Double, js.Function0[Unit]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("loadNextPartition")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOptions(value: PageSize): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPageIterator(value: PageIterator | js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pageIterator")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSaveNextPage(value: js.Function1[/* err */ js.Error | Null, Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("saveNextPage")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSaveNextPartition(value: js.Function1[/* err */ js.Error | Null, Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("saveNextPartition")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAdapter(value: LokiPersistenceAdapter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adapter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdapterNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("adapter")(null)
+        ret
+    }
+    @scala.inline
+    def withDbref(value: Loki): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbref")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDbrefNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dbref")(null)
+        ret
+    }
+    @scala.inline
+    def withDirtyPartitions(value: js.Array[Double]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dirtyPartitions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutDirtyPartitions: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dirtyPartitions")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

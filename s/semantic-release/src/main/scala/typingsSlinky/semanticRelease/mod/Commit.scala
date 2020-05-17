@@ -1,7 +1,7 @@
 package typingsSlinky.semanticRelease.mod
 
-import typingsSlinky.semanticRelease.AnonEmail
-import typingsSlinky.semanticRelease.AnonLong
+import typingsSlinky.semanticRelease.anon.Email
+import typingsSlinky.semanticRelease.anon.Long
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait Commit extends js.Object {
   /**
   		 * The commit author information.
   		 */
-  var author: AnonEmail = js.native
+  var author: Email = js.native
   /**
   		 * The commit body.
   		 */
@@ -19,11 +19,11 @@ trait Commit extends js.Object {
   /**
   		 * The commit abbreviated and full hash.
   		 */
-  var commit: AnonLong = js.native
+  var commit: Long = js.native
   /**
   		 * The committer information.
   		 */
-  var committer: AnonEmail = js.native
+  var committer: Email = js.native
   /**
   		 * The committer date.
   		 */
@@ -43,21 +43,21 @@ trait Commit extends js.Object {
   /**
   		 * The commit abbreviated and full tree hash.
   		 */
-  var tree: AnonLong = js.native
+  var tree: Long = js.native
 }
 
 object Commit {
   @scala.inline
   def apply(
-    author: AnonEmail,
+    author: Email,
     body: String,
-    commit: AnonLong,
-    committer: AnonEmail,
+    commit: Long,
+    committer: Email,
     committerDate: String,
     hash: String,
     message: String,
     subject: String,
-    tree: AnonLong
+    tree: Long
   ): Commit = {
     val __obj = js.Dynamic.literal(author = author.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], commit = commit.asInstanceOf[js.Any], committer = committer.asInstanceOf[js.Any], committerDate = committerDate.asInstanceOf[js.Any], hash = hash.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any], tree = tree.asInstanceOf[js.Any])
     __obj.asInstanceOf[Commit]
@@ -69,7 +69,7 @@ object Commit {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAuthor(value: AnonEmail): Self = {
+    def withAuthor(value: Email): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
         ret
@@ -81,13 +81,13 @@ object Commit {
         ret
     }
     @scala.inline
-    def withCommit(value: AnonLong): Self = {
+    def withCommit(value: Long): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("commit")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withCommitter(value: AnonEmail): Self = {
+    def withCommitter(value: Email): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("committer")(value.asInstanceOf[js.Any])
         ret
@@ -117,7 +117,7 @@ object Commit {
         ret
     }
     @scala.inline
-    def withTree(value: AnonLong): Self = {
+    def withTree(value: Long): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tree")(value.asInstanceOf[js.Any])
         ret

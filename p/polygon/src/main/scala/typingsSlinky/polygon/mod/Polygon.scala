@@ -1,9 +1,9 @@
 package typingsSlinky.polygon.mod
 
-import typingsSlinky.polygon.AnonH
-import typingsSlinky.polygon.AnonHeight
-import typingsSlinky.polygon.AnonPosition
-import typingsSlinky.polygon.AnonX1
+import typingsSlinky.polygon.anon.H
+import typingsSlinky.polygon.anon.Height
+import typingsSlinky.polygon.anon.Position
+import typingsSlinky.polygon.anon.X1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +36,7 @@ trait Polygon extends js.Object {
   /**
     * Returns an object `{x:_, y:_, w:_, h:_}` representing the axis-aligned bounding box of this polygyon
     */
-  def aabb(): AnonH = js.native
+  def aabb(): H = js.native
   /**
     * Computes the area of the polygon
     */
@@ -63,10 +63,10 @@ trait Polygon extends js.Object {
     * See the tests for more info
     */
   def contains(thing: js.Array[typingsSlinky.vec2.mod.^]): Boolean = js.native
-  def contains(thing: AnonH): Boolean = js.native
-  def contains(thing: AnonHeight): Boolean = js.native
-  def contains(thing: AnonPosition): Boolean = js.native
-  def contains(thing: AnonX1): Boolean = js.native
+  def contains(thing: H): Boolean = js.native
+  def contains(thing: Height): Boolean = js.native
+  def contains(thing: Position): Boolean = js.native
+  def contains(thing: X1): Boolean = js.native
   /**
     * Returns true if `vec2` is inside the polygon
     */

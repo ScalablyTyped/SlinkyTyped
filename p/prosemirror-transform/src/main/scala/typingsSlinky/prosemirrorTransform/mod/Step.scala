@@ -3,7 +3,7 @@ package typingsSlinky.prosemirrorTransform.mod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.prosemirrorModel.mod.Node
 import typingsSlinky.prosemirrorModel.mod.Schema
-import typingsSlinky.prosemirrorTransform.AnonInstantiable
+import typingsSlinky.prosemirrorTransform.anon.Instantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -66,6 +66,6 @@ object Step extends js.Object {
     * register an ID for your step classes. Try to pick something
     * that's unlikely to clash with steps from other modules.
     */
-  def jsonID(id: String, stepClass: AnonInstantiable): Unit = js.native
+  def jsonID(id: String, stepClass: Instantiable): Unit = js.native
 }
 

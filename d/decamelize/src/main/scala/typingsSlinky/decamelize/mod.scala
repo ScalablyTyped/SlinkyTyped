@@ -1,5 +1,6 @@
 package typingsSlinky.decamelize
 
+import typingsSlinky.decamelize.anon.Call
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +12,7 @@ object mod extends js.Object {
   // declare function decamelize(string: string, separator?: string): string;
   // export = decamelize;
   @JSName("default")
-  var default_Original: AnonCall = js.native
+  var default_Original: Call = js.native
   /**
   	Convert a camelized string into a lowercased one with a custom separator: `unicornRainbow` → `unicorn_rainbow`.
   	@param string - The camelcase string to decamelize.

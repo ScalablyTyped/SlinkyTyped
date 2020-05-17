@@ -1,7 +1,7 @@
 package typingsSlinky.divaJs.interfacesMod
 
-import typingsSlinky.divaJs.AnonD
-import typingsSlinky.divaJs.AnonH
+import typingsSlinky.divaJs.anon.D
+import typingsSlinky.divaJs.anon.H
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,13 +10,13 @@ import scala.scalajs.js.annotation._
 trait Page extends js.Object {
   var api: Double = js.native
   var canvas: String = js.native
-  var d: AnonH = js.native
+  var d: H = js.native
   var f: String = js.native
   var facingPages: Boolean = js.native
   var il: String = js.native
   var l: String = js.native
   var m: Double = js.native
-  var otherImages: AnonD = js.native
+  var otherImages: D = js.native
   var paged: Boolean = js.native
   var url: String = js.native
   var xoffset: Double = js.native
@@ -28,13 +28,13 @@ object Page {
   def apply(
     api: Double,
     canvas: String,
-    d: AnonH,
+    d: H,
     f: String,
     facingPages: Boolean,
     il: String,
     l: String,
     m: Double,
-    otherImages: AnonD,
+    otherImages: D,
     paged: Boolean,
     url: String,
     xoffset: Double,
@@ -62,7 +62,7 @@ object Page {
         ret
     }
     @scala.inline
-    def withD(value: AnonH): Self = {
+    def withD(value: H): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("d")(value.asInstanceOf[js.Any])
         ret
@@ -98,7 +98,7 @@ object Page {
         ret
     }
     @scala.inline
-    def withOtherImages(value: AnonD): Self = {
+    def withOtherImages(value: D): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("otherImages")(value.asInstanceOf[js.Any])
         ret

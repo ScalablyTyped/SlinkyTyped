@@ -1,8 +1,8 @@
 package typingsSlinky.next.utilsMod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.next.AppInitialPropsnamestring
-import typingsSlinky.next.ErrorstatusCodenumber
+import typingsSlinky.next.anon.AppInitialPropsnamestring
+import typingsSlinky.next.anon.ErrorstatusCodenumber
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.node.querystringMod.ParsedUrlQuery

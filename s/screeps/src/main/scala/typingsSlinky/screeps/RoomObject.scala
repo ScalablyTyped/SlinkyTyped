@@ -1,6 +1,5 @@
 package typingsSlinky.screeps
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +26,43 @@ trait RoomObject extends js.Object {
   var room: js.UndefOr[Room] = js.native
 }
 
-@JSGlobal("RoomObject")
-@js.native
-object RoomObject extends TopLevel[RoomObjectConstructor]
+object RoomObject {
+  @scala.inline
+  def apply(effects: js.Array[RoomObjectEffect], pos: RoomPosition): RoomObject = {
+    val __obj = js.Dynamic.literal(effects = effects.asInstanceOf[js.Any], pos = pos.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RoomObject]
+  }
+  @scala.inline
+  implicit class RoomObjectOps[Self <: RoomObject] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEffects(value: js.Array[RoomObjectEffect]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("effects")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPos(value: RoomPosition): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("pos")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRoom(value: Room): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("room")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRoom: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("room")(js.undefined)
+        ret
+    }
+  }
+  
+}
 

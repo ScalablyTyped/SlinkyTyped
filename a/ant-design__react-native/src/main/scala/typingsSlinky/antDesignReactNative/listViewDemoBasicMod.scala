@@ -1,6 +1,7 @@
 package typingsSlinky.antDesignReactNative
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.antDesignReactNative.anon.Layout
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,14 +14,9 @@ object listViewDemoBasicMod extends js.Object {
   trait BasicListExample
     extends Component[js.Any, js.Any, js.Any] {
     @JSName("state")
-    var state_BasicListExample: AnonLayout = js.native
+    var state_BasicListExample: Layout = js.native
     def onFetch(
-      page: js.UndefOr[scala.Nothing],
-      startFetch: js.Function2[/* arg0 */ js.Array[String], /* arg1 */ Double, Unit],
-      abortFetch: js.Function0[Unit]
-    ): js.Promise[Unit] = js.native
-    def onFetch(
-      page: Double,
+      page: js.UndefOr[Double],
       startFetch: js.Function2[/* arg0 */ js.Array[String], /* arg1 */ Double, Unit],
       abortFetch: js.Function0[Unit]
     ): js.Promise[Unit] = js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.ol.eventMod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object preventDefault extends js.Object {
   def apply(evt: BaseEvent): Unit = js.native
-  def apply(evt: Event_): Unit = js.native
+  def apply(evt: Event): Unit = js.native
 }
 

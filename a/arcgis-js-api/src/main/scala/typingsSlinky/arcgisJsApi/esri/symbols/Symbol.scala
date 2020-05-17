@@ -1,5 +1,6 @@
 package typingsSlinky.arcgisJsApi.esri.symbols
 
+import typingsSlinky.arcgisJsApi.esri.symbolsSymbol3D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,4 +11,13 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.arcgisJsApi.esri.WebStyleSymbol
 */
 trait Symbol extends js.Object
+
+object Symbol {
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.Symbol2D): Symbol = value.asInstanceOf[Symbol]
+  @scala.inline
+  implicit def apply(value: typingsSlinky.arcgisJsApi.esri.WebStyleSymbol): Symbol = value.asInstanceOf[Symbol]
+  @scala.inline
+  implicit def apply(value: symbolsSymbol3D): Symbol = value.asInstanceOf[Symbol]
+}
 

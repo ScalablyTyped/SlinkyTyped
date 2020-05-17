@@ -1,7 +1,7 @@
 package typingsSlinky.rascal.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.rascal.AnonRegularPool
+import typingsSlinky.rascal.anon.RegularPool
 import typingsSlinky.rascal.rascalStrings.fixed
 import typingsSlinky.rascal.rascalStrings.random
 import scala.scalajs.js
@@ -18,7 +18,7 @@ trait VhostConfig extends js.Object {
   var connections: js.UndefOr[js.Array[ConnectionConfig]] = js.native
   var exchanges: js.UndefOr[StringDictionary[ExchangeConfig] | js.Array[String]] = js.native
   var namespace: js.UndefOr[String | Boolean] = js.native
-  var publicationChannelPools: js.UndefOr[AnonRegularPool] = js.native
+  var publicationChannelPools: js.UndefOr[RegularPool] = js.native
   var publications: js.UndefOr[StringDictionary[PublicationConfig]] = js.native
   var queues: js.UndefOr[StringDictionary[QueueConfig] | js.Array[String]] = js.native
   var subscriptions: js.UndefOr[StringDictionary[SubscriptionConfig]] = js.native
@@ -133,7 +133,7 @@ object VhostConfig {
         ret
     }
     @scala.inline
-    def withPublicationChannelPools(value: AnonRegularPool): Self = {
+    def withPublicationChannelPools(value: RegularPool): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("publicationChannelPools")(value.asInstanceOf[js.Any])
         ret

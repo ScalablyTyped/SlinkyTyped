@@ -1,13 +1,13 @@
 package typingsSlinky.angularUiTree.AngularUITree
 
-import typingsSlinky.angularUiTree.AnonIndex
+import typingsSlinky.angularUiTree.anon.Index
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IEventInfo extends js.Object {
-  var dest: AnonIndex = js.native
+  var dest: Index = js.native
   var elements: js.Any = js.native
   var pos: IPosition = js.native
   var source: IEventSourceInfo = js.native
@@ -15,7 +15,7 @@ trait IEventInfo extends js.Object {
 
 object IEventInfo {
   @scala.inline
-  def apply(dest: AnonIndex, elements: js.Any, pos: IPosition, source: IEventSourceInfo): IEventInfo = {
+  def apply(dest: Index, elements: js.Any, pos: IPosition, source: IEventSourceInfo): IEventInfo = {
     val __obj = js.Dynamic.literal(dest = dest.asInstanceOf[js.Any], elements = elements.asInstanceOf[js.Any], pos = pos.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
     __obj.asInstanceOf[IEventInfo]
   }
@@ -26,7 +26,7 @@ object IEventInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDest(value: AnonIndex): Self = {
+    def withDest(value: Index): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dest")(value.asInstanceOf[js.Any])
         ret

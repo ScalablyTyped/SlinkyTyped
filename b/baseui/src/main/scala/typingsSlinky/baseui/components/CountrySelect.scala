@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonCountrySelect
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
@@ -45,7 +44,7 @@ object CountrySelect {
     @scala.inline
     def onCountryChange(value: /* event */ OnChangeParams => _): this.type = set("onCountryChange", js.Any.fromFunction1(value))
     @scala.inline
-    def overrides(value: AnonCountrySelect): this.type = set("overrides", value.asInstanceOf[js.Any])
+    def overrides(value: typingsSlinky.baseui.anon.CountrySelect): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline
     def size(value: mini | default_ | compact | large_): this.type = set("size", value.asInstanceOf[js.Any])
   }

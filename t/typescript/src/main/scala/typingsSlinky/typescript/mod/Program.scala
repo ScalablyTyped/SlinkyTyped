@@ -1,6 +1,6 @@
 package typingsSlinky.typescript.mod
 
-import typingsSlinky.typescript.AnonAssignable
+import typingsSlinky.typescript.anon.Assignable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,7 +45,7 @@ trait Program extends ScriptReferenceHost {
   def getOptionsDiagnostics(): js.Array[Diagnostic] = js.native
   def getOptionsDiagnostics(cancellationToken: CancellationToken): js.Array[Diagnostic] = js.native
   def getProjectReferences(): js.UndefOr[js.Array[ProjectReference]] = js.native
-  def getRelationCacheSizes(): AnonAssignable = js.native
+  def getRelationCacheSizes(): Assignable = js.native
   def getResolvedProjectReferences(): js.UndefOr[js.Array[js.UndefOr[ResolvedProjectReference]]] = js.native
   /**
     * Get a list of root file names that were passed to a 'createProgram'

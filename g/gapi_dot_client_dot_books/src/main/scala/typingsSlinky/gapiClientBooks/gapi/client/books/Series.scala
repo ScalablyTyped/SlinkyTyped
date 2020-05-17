@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClientBooks.AnonBannerImageUrl
+import typingsSlinky.gapiClientBooks.anon.BannerImageUrl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait Series extends js.Object {
   /** Resource type. */
   var kind: js.UndefOr[String] = js.native
-  var series: js.UndefOr[js.Array[AnonBannerImageUrl]] = js.native
+  var series: js.UndefOr[js.Array[BannerImageUrl]] = js.native
 }
 
 object Series {
@@ -37,7 +37,7 @@ object Series {
         ret
     }
     @scala.inline
-    def withSeries(value: js.Array[AnonBannerImageUrl]): Self = {
+    def withSeries(value: js.Array[BannerImageUrl]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("series")(value.asInstanceOf[js.Any])
         ret

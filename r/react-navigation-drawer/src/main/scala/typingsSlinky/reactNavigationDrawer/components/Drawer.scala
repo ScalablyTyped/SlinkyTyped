@@ -7,7 +7,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeGestureHandler.mod.PanGestureHandler
-import typingsSlinky.reactNavigationDrawer.AnonProgress
+import typingsSlinky.reactNavigationDrawer.anon.Progress
 import typingsSlinky.reactNavigationDrawer.drawerMod.Props
 import typingsSlinky.reactNavigationDrawer.drawerMod.default
 import typingsSlinky.reactNavigationDrawer.reactNavigationDrawerStrings.`on-drag`
@@ -56,8 +56,8 @@ object Drawer {
     onClose: () => Unit,
     onOpen: () => Unit,
     open: Boolean,
-    renderDrawerContent: /* props */ AnonProgress => TagMod[Any],
-    renderSceneContent: /* props */ AnonProgress => TagMod[Any],
+    renderDrawerContent: /* props */ Progress => TagMod[Any],
+    renderSceneContent: /* props */ Progress => TagMod[Any],
     statusBarAnimation: slide | none | fade,
     swipeEdgeWidth: Double,
     swipeVelocityThreshold: Double

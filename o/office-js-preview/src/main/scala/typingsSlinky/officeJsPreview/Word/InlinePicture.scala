@@ -1,12 +1,12 @@
 package typingsSlinky.officeJsPreview.Word
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientResult
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJsPreview.Word.Interfaces.InlinePictureData
 import typingsSlinky.officeJsPreview.Word.Interfaces.InlinePictureLoadOptions
 import typingsSlinky.officeJsPreview.Word.Interfaces.InlinePictureUpdateData
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.After
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Before
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Bmp_
@@ -46,9 +46,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: WordApi 1.1]
   */
-@JSGlobal("Word.InlinePicture")
 @js.native
-class InlinePicture () extends ClientObject {
+trait InlinePicture extends ClientObject {
   /**
     *
     * Gets or sets a string that represents the alternative text associated with the inline image.
@@ -423,8 +422,8 @@ class InlinePicture () extends ClientObject {
   def load(): InlinePicture = js.native
   def load(option: String): InlinePicture = js.native
   def load(option: js.Array[String]): InlinePicture = js.native
-  def load(option: AnonExpand): InlinePicture = js.native
   def load(option: InlinePictureLoadOptions): InlinePicture = js.native
+  def load(option: Expand): InlinePicture = js.native
   /**
     *
     * Selects the inline picture. This causes Word to scroll to the selection.

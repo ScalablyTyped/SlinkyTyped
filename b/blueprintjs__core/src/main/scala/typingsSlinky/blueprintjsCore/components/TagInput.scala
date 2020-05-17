@@ -1,5 +1,6 @@
 package typingsSlinky.blueprintjsCore.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
@@ -17,7 +18,6 @@ import typingsSlinky.blueprintjsCore.tagInputMod.ITagInputProps
 import typingsSlinky.blueprintjsCore.tagInputMod.TagInputAddMethod
 import typingsSlinky.blueprintjsCore.tagMod.ITagProps
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -62,7 +62,7 @@ object TagInput {
     @scala.inline
     def onChange(value: /* values */ js.Array[TagMod[Any]] => Boolean | Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onInputChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit): this.type = set("onInputChange", js.Any.fromFunction1(value))
+    def onInputChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit): this.type = set("onInputChange", js.Any.fromFunction1(value))
     @scala.inline
     def onKeyDown(value: (/* event */ SyntheticKeyboardEvent[HTMLElement], /* index */ js.UndefOr[Double]) => Unit): this.type = set("onKeyDown", js.Any.fromFunction2(value))
     @scala.inline

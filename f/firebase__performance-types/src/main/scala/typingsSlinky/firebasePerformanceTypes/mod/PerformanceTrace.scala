@@ -1,7 +1,7 @@
 package typingsSlinky.firebasePerformanceTypes.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.firebasePerformanceTypes.AnonAttributes
+import typingsSlinky.firebasePerformanceTypes.anon.Attributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,7 +61,7 @@ trait PerformanceTrace extends js.Object {
     * custom attributes.
     */
   def record(startTime: Double, duration: Double): Unit = js.native
-  def record(startTime: Double, duration: Double, options: AnonAttributes): Unit = js.native
+  def record(startTime: Double, duration: Double, options: Attributes): Unit = js.native
   /**
     * Removes the specified custom attribute from a trace instance.
     *

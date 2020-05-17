@@ -1,8 +1,8 @@
 package typingsSlinky.tinySliderReact.components
 
+import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.std.Event_
 import typingsSlinky.tinySliderReact.mod.TinySliderInfo
 import typingsSlinky.tinySliderReact.mod.TinySliderProps
 import typingsSlinky.tinySliderReact.mod.TinySliderSettings
@@ -21,7 +21,7 @@ object TinySliderReact {
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
     @scala.inline
-    def onClick(value: (/* slideClicked */ Double, /* info */ String, /* event */ Event_) => Unit): this.type = set("onClick", js.Any.fromFunction3(value))
+    def onClick(value: (/* slideClicked */ Double, /* info */ String, /* event */ Event) => Unit): this.type = set("onClick", js.Any.fromFunction3(value))
     @scala.inline
     def onIndexChanged(value: /* info */ TinySliderInfo => Unit): this.type = set("onIndexChanged", js.Any.fromFunction1(value))
     @scala.inline

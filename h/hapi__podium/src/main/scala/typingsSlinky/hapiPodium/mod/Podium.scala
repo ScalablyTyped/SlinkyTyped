@@ -2,14 +2,14 @@ package typingsSlinky.hapiPodium.mod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.hapiPodium.AnonChannel
+import typingsSlinky.hapiPodium.anon.Channel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Podium
-  extends _Events
+  extends Events
      with /**
   * Creates a new podium emitter
   * @param events  if present, the value is passed to podium.registerEvent().
@@ -35,8 +35,8 @@ Instantiable0[Podium]
     */
   def emit(criteria: String, data: js.Any): Unit = js.native
   def emit(criteria: String, data: js.Any, callback: js.Function0[Unit]): Unit = js.native
-  def emit(criteria: AnonChannel, data: js.Any): Unit = js.native
-  def emit(criteria: AnonChannel, data: js.Any, callback: js.Function0[Unit]): Unit = js.native
+  def emit(criteria: Channel, data: js.Any): Unit = js.native
+  def emit(criteria: Channel, data: js.Any, callback: js.Function0[Unit]): Unit = js.native
   /**
     * podium.hasListeners(name)
     * Returns whether an event has any listeners subscribed

@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IInputReplyMsg
   extends IStdinMessage[input_reply]
-     with _Message {
+     with Message {
   @JSName("content")
   var content_IInputReplyMsg: ReplyContent[IInputReply] = js.native
   @JSName("parent_header")

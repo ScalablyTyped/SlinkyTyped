@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientBooks.gapi.client.books
 
-import typingsSlinky.gapiClientBooks.AnonArtUrl
+import typingsSlinky.gapiClientBooks.anon.ArtUrl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Offers extends js.Object {
   /** A list of offers. */
-  var items: js.UndefOr[js.Array[AnonArtUrl]] = js.native
+  var items: js.UndefOr[js.Array[ArtUrl]] = js.native
   /** Resource type. */
   var kind: js.UndefOr[String] = js.native
 }
@@ -26,7 +26,7 @@ object Offers {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withItems(value: js.Array[AnonArtUrl]): Self = {
+    def withItems(value: js.Array[ArtUrl]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +8,8 @@ import scala.scalajs.js.annotation._
 trait Viewpoint
   extends Accessor
      with JSONSupport
-     with _GoToTarget2D
-     with _GoToTarget3D {
+     with GoToTarget2D
+     with GoToTarget3D {
   /**
     * The viewpoint camera (3D only).
     * > **Z-values** defined in a geographic or metric coordinate system are expressed in meters. However, in local scenes that use a projected coordinate system, vertical units are assumed to be the same as the horizontal units specified by the service.
@@ -40,8 +39,4 @@ trait Viewpoint
     */
   var targetGeometry: Geometry_ = js.native
 }
-
-@JSGlobal("__esri.Viewpoint")
-@js.native
-object Viewpoint extends TopLevel[ViewpointConstructor]
 

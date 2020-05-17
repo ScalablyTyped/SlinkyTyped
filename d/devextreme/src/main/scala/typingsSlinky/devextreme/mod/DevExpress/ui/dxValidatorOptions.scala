@@ -1,7 +1,7 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonApplyValidationResults
-import typingsSlinky.devextreme.AnonBrokenRule
+import typingsSlinky.devextreme.anon.ApplyValidationResults
+import typingsSlinky.devextreme.anon.BrokenRule
 import typingsSlinky.devextreme.mod.DevExpress.DOMComponentOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,11 +10,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait dxValidatorOptions extends DOMComponentOptions[dxValidator] {
   /** An object that specifies what and when to validate, and how to apply the validation result. */
-  var adapter: js.UndefOr[AnonApplyValidationResults] = js.native
+  var adapter: js.UndefOr[ApplyValidationResults] = js.native
   /** Specifies the editor name to be used in the validation default messages. */
   var name: js.UndefOr[String] = js.native
   /** A function that is executed after a value is validated. */
-  var onValidated: js.UndefOr[js.Function1[/* validatedInfo */ AnonBrokenRule, _]] = js.native
+  var onValidated: js.UndefOr[js.Function1[/* validatedInfo */ BrokenRule, _]] = js.native
   /** Specifies the validation group the editor will be related to. */
   var validationGroup: js.UndefOr[String] = js.native
   /** An array of validation rules to be checked for the editor with which the dxValidator object is associated. */
@@ -38,7 +38,7 @@ object dxValidatorOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAdapter(value: AnonApplyValidationResults): Self = {
+    def withAdapter(value: ApplyValidationResults): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("adapter")(value.asInstanceOf[js.Any])
         ret
@@ -62,7 +62,7 @@ object dxValidatorOptions {
         ret
     }
     @scala.inline
-    def withOnValidated(value: /* validatedInfo */ AnonBrokenRule => _): Self = {
+    def withOnValidated(value: /* validatedInfo */ BrokenRule => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onValidated")(js.Any.fromFunction1(value))
         ret

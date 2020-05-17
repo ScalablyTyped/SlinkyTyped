@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.searchBarMod
 
-import typingsSlinky.antDesignReactNative.AnonNativeEvent
+import typingsSlinky.antDesignReactNative.anon.NativeEvent
 import typingsSlinky.antDesignReactNative.libStyleMod.WithThemeStyles
 import typingsSlinky.antDesignReactNative.searchBarPropsTypeMod.SearchBarPropsType
 import typingsSlinky.antDesignReactNative.searchBarStyleMod.SearchBarStyle
@@ -15,7 +15,7 @@ trait SearchBarProps
   extends SearchBarPropsType
      with WithThemeStyles[SearchBarStyle] {
   var onChangeText: js.UndefOr[js.Function1[/* text */ String, Unit]] = js.native
-  var onSubmitEditing: js.UndefOr[js.Function1[/* event */ AnonNativeEvent, Unit]] = js.native
+  var onSubmitEditing: js.UndefOr[js.Function1[/* event */ NativeEvent, Unit]] = js.native
   var style: js.UndefOr[StyleProp[TextStyle]] = js.native
 }
 
@@ -44,7 +44,7 @@ object SearchBarProps {
         ret
     }
     @scala.inline
-    def withOnSubmitEditing(value: /* event */ AnonNativeEvent => Unit): Self = {
+    def withOnSubmitEditing(value: /* event */ NativeEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmitEditing")(js.Any.fromFunction1(value))
         ret

@@ -1,7 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,14 +9,4 @@ import scala.scalajs.js.annotation._
 trait StereoPannerNode extends AudioNode {
   val pan: org.scalajs.dom.raw.AudioParam = js.native
 }
-
-@JSGlobal("StereoPannerNode")
-@js.native
-object StereoPannerNode
-  extends Instantiable1[/* context */ BaseAudioContext, org.scalajs.dom.raw.StereoPannerNode]
-     with Instantiable2[
-      /* context */ BaseAudioContext, 
-      /* options */ StereoPannerOptions, 
-      org.scalajs.dom.raw.StereoPannerNode
-    ]
 

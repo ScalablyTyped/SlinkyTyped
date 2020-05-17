@@ -1,9 +1,9 @@
 package typingsSlinky.feflowCli.Feflow
 
-import typingsSlinky.feflowCli.Anon
 import typingsSlinky.feflowCli.Command
 import typingsSlinky.feflowCli.Hook
 import typingsSlinky.feflowCli.Logger
+import typingsSlinky.feflowCli.anon._empty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait ctx extends js.Object {
   /**
     * Feflow context params
     */
-  var args: Anon = js.native
+  var args: _empty = js.native
   /**
     * Feflow command includes: (register)
     */
@@ -63,7 +63,7 @@ trait ctx extends js.Object {
 object ctx {
   @scala.inline
   def apply(
-    args: Anon,
+    args: _empty,
     commander: Command,
     config: String,
     configPath: String,
@@ -85,7 +85,7 @@ object ctx {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withArgs(value: Anon): Self = {
+    def withArgs(value: _empty): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("args")(value.asInstanceOf[js.Any])
         ret

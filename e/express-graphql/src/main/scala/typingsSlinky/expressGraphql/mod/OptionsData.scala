@@ -23,7 +23,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait OptionsData extends js.Object {
+trait OptionsData extends OptionsResult {
   /**
     * A value to pass as the context to the graphql() function.
     */

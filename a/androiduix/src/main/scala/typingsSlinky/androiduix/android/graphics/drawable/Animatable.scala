@@ -11,9 +11,37 @@ trait Animatable extends js.Object {
   def stop(): Unit = js.native
 }
 
-@JSGlobal("android.graphics.drawable.Animatable")
-@js.native
-object Animatable extends js.Object {
-  def isImpl(obj: js.Any): js.Any = js.native
+object Animatable {
+  @scala.inline
+  def apply(isRunning: () => Boolean, start: () => Unit, stop: () => Unit): Animatable = {
+    val __obj = js.Dynamic.literal(isRunning = js.Any.fromFunction0(isRunning), start = js.Any.fromFunction0(start), stop = js.Any.fromFunction0(stop))
+    __obj.asInstanceOf[Animatable]
+  }
+  @scala.inline
+  implicit class AnimatableOps[Self <: Animatable] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsRunning(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isRunning")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStart(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStop(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

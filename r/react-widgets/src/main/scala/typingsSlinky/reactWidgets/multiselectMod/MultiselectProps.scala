@@ -1,9 +1,9 @@
 package typingsSlinky.reactWidgets.multiselectMod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.reactWidgets.AnonAction
-import typingsSlinky.reactWidgets.AnonLastSearchTerm
-import typingsSlinky.reactWidgets.AnonOriginalEvent
+import typingsSlinky.reactWidgets.anon.Action
+import typingsSlinky.reactWidgets.anon.LastSearchTerm
+import typingsSlinky.reactWidgets.anon.OriginalEvent
 import typingsSlinky.reactWidgets.commonPropsMod.AutoFocus
 import typingsSlinky.reactWidgets.commonPropsMod.ReactWidgetsCommonDropdownProps
 import typingsSlinky.reactWidgets.reactWidgetsBooleans.`false`
@@ -109,7 +109,7 @@ trait MultiselectProps
     * Change event Handler that is called when the value is changed. The handler is called with
     * an array of values.
     */
-  var onChange: js.UndefOr[js.Function2[/* dataItems */ js.Array[_], /* metadata */ AnonAction, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function2[/* dataItems */ js.Array[_], /* metadata */ Action, Unit]] = js.native
   /**
     * This handler fires when the user chooses to create a new tag, not in the data list. It is
     * up to the widget parent to implement creation logic, a common implementation is shown
@@ -120,12 +120,12 @@ trait MultiselectProps
     * Called when the value of the text box changes either from typing or a pasted value.
     * onSearch should be used when the searchTerm prop is set.
     */
-  var onSearch: js.UndefOr[js.Function2[/* searchTerm */ String, /* metadata */ AnonLastSearchTerm, Unit]] = js.native
+  var onSearch: js.UndefOr[js.Function2[/* searchTerm */ String, /* metadata */ LastSearchTerm, Unit]] = js.native
   /**
     * This handler fires when an item has been selected from the list. It fires before the
     * onChange handler, and fires regardless of whether the value has actually changed
     */
-  var onSelect: js.UndefOr[js.Function2[/* value */ js.Any, /* metadata */ AnonOriginalEvent, Unit]] = js.native
+  var onSelect: js.UndefOr[js.Function2[/* value */ js.Any, /* metadata */ OriginalEvent, Unit]] = js.native
   /**
     * Called when the Multiselect is about to open or close. onToggle should be used when the
     * open prop is set otherwise the widget will never open or close.
@@ -435,7 +435,7 @@ object MultiselectProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: (/* dataItems */ js.Array[_], /* metadata */ AnonAction) => Unit): Self = {
+    def withOnChange(value: (/* dataItems */ js.Array[_], /* metadata */ Action) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction2(value))
         ret
@@ -459,7 +459,7 @@ object MultiselectProps {
         ret
     }
     @scala.inline
-    def withOnSearch(value: (/* searchTerm */ String, /* metadata */ AnonLastSearchTerm) => Unit): Self = {
+    def withOnSearch(value: (/* searchTerm */ String, /* metadata */ LastSearchTerm) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSearch")(js.Any.fromFunction2(value))
         ret
@@ -471,7 +471,7 @@ object MultiselectProps {
         ret
     }
     @scala.inline
-    def withOnSelect(value: (/* value */ js.Any, /* metadata */ AnonOriginalEvent) => Unit): Self = {
+    def withOnSelect(value: (/* value */ js.Any, /* metadata */ OriginalEvent) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction2(value))
         ret

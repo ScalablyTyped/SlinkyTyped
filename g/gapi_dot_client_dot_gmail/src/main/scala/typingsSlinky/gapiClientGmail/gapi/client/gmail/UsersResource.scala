@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientGmail.gapi.client.gmail
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientGmail.AnonAlt
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientGmail.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,25 +15,25 @@ trait UsersResource extends js.Object {
   var settings: SettingsResource = js.native
   var threads: ThreadsResource = js.native
   /** Gets the current user's Gmail profile. */
-  def getProfile(request: AnonAlt): Request_[Profile] = js.native
+  def getProfile(request: Alt): Request[Profile] = js.native
   /** Stop receiving push notifications for the given user mailbox. */
-  def stop(request: AnonAlt): Request_[Unit] = js.native
+  def stop(request: Alt): Request[Unit] = js.native
   /** Set up or update a push notification watch on the given user mailbox. */
-  def watch(request: AnonAlt): Request_[WatchResponse] = js.native
+  def watch(request: Alt): Request[WatchResponse] = js.native
 }
 
 object UsersResource {
   @scala.inline
   def apply(
     drafts: DraftsResource,
-    getProfile: AnonAlt => Request_[Profile],
+    getProfile: Alt => Request[Profile],
     history: HistoryResource,
     labels: LabelsResource,
     messages: MessagesResource,
     settings: SettingsResource,
-    stop: AnonAlt => Request_[Unit],
+    stop: Alt => Request[Unit],
     threads: ThreadsResource,
-    watch: AnonAlt => Request_[WatchResponse]
+    watch: Alt => Request[WatchResponse]
   ): UsersResource = {
     val __obj = js.Dynamic.literal(drafts = drafts.asInstanceOf[js.Any], getProfile = js.Any.fromFunction1(getProfile), history = history.asInstanceOf[js.Any], labels = labels.asInstanceOf[js.Any], messages = messages.asInstanceOf[js.Any], settings = settings.asInstanceOf[js.Any], stop = js.Any.fromFunction1(stop), threads = threads.asInstanceOf[js.Any], watch = js.Any.fromFunction1(watch))
     __obj.asInstanceOf[UsersResource]
@@ -51,7 +51,7 @@ object UsersResource {
         ret
     }
     @scala.inline
-    def withGetProfile(value: AnonAlt => Request_[Profile]): Self = {
+    def withGetProfile(value: Alt => Request[Profile]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getProfile")(js.Any.fromFunction1(value))
         ret
@@ -81,7 +81,7 @@ object UsersResource {
         ret
     }
     @scala.inline
-    def withStop(value: AnonAlt => Request_[Unit]): Self = {
+    def withStop(value: Alt => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction1(value))
         ret
@@ -93,7 +93,7 @@ object UsersResource {
         ret
     }
     @scala.inline
-    def withWatch(value: AnonAlt => Request_[WatchResponse]): Self = {
+    def withWatch(value: Alt => Request[WatchResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("watch")(js.Any.fromFunction1(value))
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.gatsby.mod
 
-import typingsSlinky.gatsby.AnonDel
-import typingsSlinky.gatsby.AnonNodeId
+import typingsSlinky.gatsby.anon.Del
+import typingsSlinky.gatsby.anon.NodeId
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait CreateNodeArgs[TNode /* <: js.Object */] extends ParentSpanPluginArgs {
   var node: Node with TNode = js.native
   var traceId: String = js.native
-  var traceTags: AnonNodeId = js.native
+  var traceTags: NodeId = js.native
 }
 
 object CreateNodeArgs {
@@ -19,7 +19,7 @@ object CreateNodeArgs {
   def apply[TNode](
     actions: Actions,
     boundActionCreators: Actions,
-    cache: AnonDel,
+    cache: Del,
     createContentDigest: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof createContentDigest */ js.Any,
     createNodeId: js.Function,
     emitter: EventEmitter,
@@ -36,7 +36,7 @@ object CreateNodeArgs {
     schema: NodePluginSchema,
     store: Store,
     traceId: String,
-    traceTags: AnonNodeId,
+    traceTags: NodeId,
     tracing: Tracing
   ): CreateNodeArgs[TNode] = {
     val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], boundActionCreators = boundActionCreators.asInstanceOf[js.Any], cache = cache.asInstanceOf[js.Any], createContentDigest = createContentDigest.asInstanceOf[js.Any], createNodeId = createNodeId.asInstanceOf[js.Any], emitter = emitter.asInstanceOf[js.Any], getNode = getNode.asInstanceOf[js.Any], getNodeAndSavePathDependency = getNodeAndSavePathDependency.asInstanceOf[js.Any], getNodes = getNodes.asInstanceOf[js.Any], getNodesByType = getNodesByType.asInstanceOf[js.Any], hasNodeChanged = hasNodeChanged.asInstanceOf[js.Any], loadNodeContent = loadNodeContent.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any], parentSpan = parentSpan.asInstanceOf[js.Any], pathPrefix = pathPrefix.asInstanceOf[js.Any], reporter = reporter.asInstanceOf[js.Any], schema = schema.asInstanceOf[js.Any], store = store.asInstanceOf[js.Any], traceId = traceId.asInstanceOf[js.Any], traceTags = traceTags.asInstanceOf[js.Any], tracing = tracing.asInstanceOf[js.Any])
@@ -61,7 +61,7 @@ object CreateNodeArgs {
         ret
     }
     @scala.inline
-    def withTraceTags(value: AnonNodeId): Self[TNode] = {
+    def withTraceTags(value: NodeId): Self[TNode] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("traceTags")(value.asInstanceOf[js.Any])
         ret

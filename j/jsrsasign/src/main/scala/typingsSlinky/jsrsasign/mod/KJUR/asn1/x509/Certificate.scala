@@ -1,6 +1,6 @@
 package typingsSlinky.jsrsasign.mod.KJUR.asn1.x509
 
-import typingsSlinky.jsrsasign.AnonPrvkeyobj
+import typingsSlinky.jsrsasign.anon.Prvkeyobj
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,6 +32,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class Certificate ()
   extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.x509.Certificate {
-  def this(params: AnonPrvkeyobj) = this()
+  def this(params: Prvkeyobj) = this()
 }
 

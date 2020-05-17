@@ -9,16 +9,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Cluster")
 @js.native
-class Cluster protected () extends js.Object {
-  /**
-    * Creates a single cluster that manages a group of proximate markers.
-    * Used internally, do not call this constructor directly.
-    * @param mc The <code>MarkerClusterer</code> object with which this
-    *       cluster is associated.
-    */
-  def this(mc: MarkerClusterer) = this()
+trait Cluster extends js.Object {
   /**
     * Adds a marker to the cluster.
     *
@@ -101,5 +93,106 @@ class Cluster protected () extends js.Object {
     * Updates the cluster icon.
     */
   def updateIcon_(): Unit = js.native
+}
+
+object Cluster {
+  @scala.inline
+  def apply(
+    addMarker: Marker => Boolean,
+    calculateBounds_ : () => Unit,
+    getBounds: () => LatLngBounds,
+    getCenter: () => LatLng,
+    getMap: () => Map[Element],
+    getMarkerClusterer: () => MarkerClusterer,
+    getMarkers: () => js.Array[Marker],
+    getSize: () => Double,
+    isMarkerAlreadyAdded_ : Marker => Boolean,
+    isMarkerInClusterBounds: Marker => Boolean,
+    remove: () => Unit,
+    updateIcon_ : () => Unit
+  ): Cluster = {
+    val __obj = js.Dynamic.literal(addMarker = js.Any.fromFunction1(addMarker), calculateBounds_ = js.Any.fromFunction0(calculateBounds_), getBounds = js.Any.fromFunction0(getBounds), getCenter = js.Any.fromFunction0(getCenter), getMap = js.Any.fromFunction0(getMap), getMarkerClusterer = js.Any.fromFunction0(getMarkerClusterer), getMarkers = js.Any.fromFunction0(getMarkers), getSize = js.Any.fromFunction0(getSize), isMarkerAlreadyAdded_ = js.Any.fromFunction1(isMarkerAlreadyAdded_), isMarkerInClusterBounds = js.Any.fromFunction1(isMarkerInClusterBounds), remove = js.Any.fromFunction0(remove), updateIcon_ = js.Any.fromFunction0(updateIcon_))
+    __obj.asInstanceOf[Cluster]
+  }
+  @scala.inline
+  implicit class ClusterOps[Self <: Cluster] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddMarker(value: Marker => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addMarker")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCalculateBounds_(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calculateBounds_")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetBounds(value: () => LatLngBounds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBounds")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetCenter(value: () => LatLng): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCenter")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMap(value: () => Map[Element]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMap")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMarkerClusterer(value: () => MarkerClusterer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMarkerClusterer")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetMarkers(value: () => js.Array[Marker]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getMarkers")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSize(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSize")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsMarkerAlreadyAdded_(value: Marker => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isMarkerAlreadyAdded_")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsMarkerInClusterBounds(value: Marker => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isMarkerInClusterBounds")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withRemove(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateIcon_(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateIcon_")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -8,18 +8,8 @@ import scala.scalajs.js.annotation._
 /**
   * Prevents a DOM sub-tree from receiving tab navigations and focus.
   **/
-@JSGlobal("WinJS.UI.TabContainer")
 @js.native
-class TabContainer protected () extends js.Object {
-  //#region Constructors
-  /**
-    * Creates a new TabContainer.
-    * @constructor
-    * @param element The DOM element that hosts the TabContainer control.
-    * @param options An object that contains one or more property/value pairs to apply to the new control. Each property of the options object corresponds to one of the control's properties.
-    **/
-  def this(element: HTMLElement) = this()
-  def this(element: HTMLElement, options: js.Any) = this()
+trait TabContainer extends js.Object {
   //#endregion Methods
   //#region Properties
   /**
@@ -38,13 +28,37 @@ class TabContainer protected () extends js.Object {
   def dispose(): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("WinJS.UI.TabContainer")
-@js.native
-object TabContainer extends js.Object {
-  /**
-    * Indicates that the object is compatibile with declarative processing.
-    **/
-  var supportedForProcessing: Boolean = js.native
+object TabContainer {
+  @scala.inline
+  def apply(childFocus: HTMLElement, dispose: () => Unit, tabIndex: Double): TabContainer = {
+    val __obj = js.Dynamic.literal(childFocus = childFocus.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), tabIndex = tabIndex.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TabContainer]
+  }
+  @scala.inline
+  implicit class TabContainerOps[Self <: TabContainer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withChildFocus(value: HTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("childFocus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDispose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispose")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withTabIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("tabIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

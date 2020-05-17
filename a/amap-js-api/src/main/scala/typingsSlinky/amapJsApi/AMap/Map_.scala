@@ -2,34 +2,23 @@ package typingsSlinky.amapJsApi.AMap
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.amapJsApi.AMap.Map.Feature
-import typingsSlinky.amapJsApi.AMap.Map.Options
 import typingsSlinky.amapJsApi.AMap.Map.Status
 import typingsSlinky.amapJsApi.AMap.Map.ViewMode
-import typingsSlinky.amapJsApi.AnonCity
-import typingsSlinky.amapJsApi.AnonLocation
-import typingsSlinky.amapJsApi.PartialStatus
 import typingsSlinky.amapJsApi.amapJsApiBooleans.`false`
 import typingsSlinky.amapJsApi.amapJsApiStrings.all
 import typingsSlinky.amapJsApi.amapJsApiStrings.circle
 import typingsSlinky.amapJsApi.amapJsApiStrings.marker
 import typingsSlinky.amapJsApi.amapJsApiStrings.polygon_
 import typingsSlinky.amapJsApi.amapJsApiStrings.polyline
+import typingsSlinky.amapJsApi.anon.City
+import typingsSlinky.amapJsApi.anon.Location
+import typingsSlinky.amapJsApi.anon.PartialStatus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("AMap.Map")
 @js.native
-class Map_ protected () extends EventEmitter {
-  /**
-    * 构造一个地图对象
-    * @param container 地图容器的id或者是DOM元素
-    * @param opts 选项
-    */
-  def this(container: String) = this()
-  def this(container: HTMLElement) = this()
-  def this(container: String, opts: Options) = this()
-  def this(container: HTMLElement, opts: Options) = this()
+trait Map_ extends EventEmitter {
   def add(overlay: js.Array[Overlay[_]]): Unit = js.native
   /**
     * 添加覆盖物/图层
@@ -67,7 +56,7 @@ class Map_ protected () extends EventEmitter {
     * 唤起高德地图客户端marker详情页
     * @param obj 唤起参数
     */
-  def detailOnAMAP(obj: AnonLocation): Unit = js.native
+  def detailOnAMAP(obj: Location): Unit = js.native
   def geodeticCoordToLngLat(pixel: Pixel): LngLat = js.native
   /**
     * 返回添加的覆盖物对象
@@ -93,7 +82,7 @@ class Map_ protected () extends EventEmitter {
   /**
     * 获取地图中心点所在区域
     */
-  def getCity(callback: js.Function1[/* cityData */ AnonCity, Unit]): Unit = js.native
+  def getCity(callback: js.Function1[/* cityData */ City, Unit]): Unit = js.native
   /**
     * 返回地图对象的容器
     */
@@ -209,7 +198,7 @@ class Map_ protected () extends EventEmitter {
     * 唤起高德地图客户端marker页
     * @param obj 唤起参数
     */
-  def poiOnAMAP(obj: AnonLocation): Unit = js.native
+  def poiOnAMAP(obj: Location): Unit = js.native
   def remove(overlay: js.Array[Overlay[_]]): Unit = js.native
   /**
     * 删除覆盖物/图层

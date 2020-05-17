@@ -1,6 +1,6 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.Partialbubblesbooleancomp
+import typingsSlinky.aliApp.anon.Partialbubblesbooleancomp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

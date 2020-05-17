@@ -2,7 +2,7 @@ package typingsSlinky.inputmask.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.KeyboardEvent
-import typingsSlinky.inputmask.AnonBack
+import typingsSlinky.inputmask.anon.Back
 import typingsSlinky.inputmask.inputmaskStrings.number
 import typingsSlinky.inputmask.inputmaskStrings.text
 import scala.scalajs.js
@@ -281,7 +281,7 @@ trait Options extends js.Object {
     *
     * @default { front: "-", back: "" }
     */
-  var negationSymbol: js.UndefOr[AnonBack] = js.native
+  var negationSymbol: js.UndefOr[Back] = js.native
   /**
     * Disable value property patching
     *
@@ -974,7 +974,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withNegationSymbol(value: AnonBack): Self = {
+    def withNegationSymbol(value: Back): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("negationSymbol")(value.asInstanceOf[js.Any])
         ret

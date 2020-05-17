@@ -1,7 +1,7 @@
 package typingsSlinky.vegaTypings.configMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.vegaTypings.AnonBind
+import typingsSlinky.vegaTypings.anon.Bind
 import typingsSlinky.vegaTypings.autosizeMod.AutoSize
 import typingsSlinky.vegaTypings.colorMod.Color
 import typingsSlinky.vegaTypings.paddingMod.Padding
@@ -29,7 +29,7 @@ trait Config extends js.Object {
   var axisY: js.UndefOr[AxisConfig] = js.native
   var background: js.UndefOr[Null | Color | SignalRef] = js.native
    // TODO
-  var events: js.UndefOr[AnonBind] = js.native
+  var events: js.UndefOr[Bind] = js.native
   var group: js.UndefOr[js.Any] = js.native
   var image: js.UndefOr[MarkConfig] = js.native
   var legend: js.UndefOr[LegendConfig] = js.native
@@ -217,7 +217,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withEvents(value: AnonBind): Self = {
+    def withEvents(value: Bind): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("events")(value.asInstanceOf[js.Any])
         ret

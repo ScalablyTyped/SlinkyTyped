@@ -1,0 +1,16 @@
+package typingsSlinky.mfiles.global.MFiles
+
+import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.mfiles.IViews
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("MFiles.Views")
+@js.native
+class Views () extends IViews
+
+@JSGlobal("MFiles.Views")
+@js.native
+object Views extends Instantiable0[IViews]
+

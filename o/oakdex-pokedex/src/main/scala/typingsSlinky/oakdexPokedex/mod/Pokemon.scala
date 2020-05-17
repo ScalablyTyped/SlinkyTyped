@@ -1,8 +1,8 @@
 package typingsSlinky.oakdexPokedex.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oakdexPokedex.AnonFemale
-import typingsSlinky.oakdexPokedex.AnonJump
+import typingsSlinky.oakdexPokedex.anon.Female
+import typingsSlinky.oakdexPokedex.anon.Jump
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait Pokemon extends js.Object {
   var ev_yield: StatObject = js.native
   var evolution_from: String | Null = js.native
   var evolutions: js.Array[PokemonEvolution] = js.native
-  var gender_ratios: Null | AnonFemale = js.native
+  var gender_ratios: Null | Female = js.native
   var hatch_time: js.Array[Double] = js.native
   var height_eu: String = js.native
   var height_us: String = js.native
@@ -34,7 +34,7 @@ trait Pokemon extends js.Object {
   var move_learnsets: js.Array[MoveLearnset] = js.native
   var names: Translations = js.native
   var national_id: Double = js.native
-  var pokeathlon_stats: js.UndefOr[AnonJump] = js.native
+  var pokeathlon_stats: js.UndefOr[Jump] = js.native
   var pokedex_entries: StringDictionary[Translations] = js.native
   var sinnoh_id: Double | Null = js.native
   var types: js.Array[String] = js.native
@@ -245,7 +245,7 @@ object Pokemon {
         ret
     }
     @scala.inline
-    def withGender_ratios(value: AnonFemale): Self = {
+    def withGender_ratios(value: Female): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gender_ratios")(value.asInstanceOf[js.Any])
         ret
@@ -305,7 +305,7 @@ object Pokemon {
         ret
     }
     @scala.inline
-    def withPokeathlon_stats(value: AnonJump): Self = {
+    def withPokeathlon_stats(value: Jump): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pokeathlon_stats")(value.asInstanceOf[js.Any])
         ret

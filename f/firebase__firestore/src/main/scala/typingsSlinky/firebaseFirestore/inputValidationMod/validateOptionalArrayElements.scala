@@ -11,14 +11,7 @@ object validateOptionalArrayElements extends js.Object {
     functionName: String,
     optionName: String,
     typeDescription: String,
-    argument: js.UndefOr[scala.Nothing],
-    validator: js.Function1[/* arg0 */ T, Boolean]
-  ): Unit = js.native
-  def apply[T](
-    functionName: String,
-    optionName: String,
-    typeDescription: String,
-    argument: js.Array[T],
+    argument: js.UndefOr[js.Array[T]],
     validator: js.Function1[/* arg0 */ T, Boolean]
   ): Unit = js.native
 }

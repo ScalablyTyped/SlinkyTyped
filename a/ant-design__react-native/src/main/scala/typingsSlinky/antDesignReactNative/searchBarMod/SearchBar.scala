@@ -1,7 +1,7 @@
 package typingsSlinky.antDesignReactNative.searchBarMod
 
 import slinky.core.SyntheticEvent
-import typingsSlinky.antDesignReactNative.AnonNativeEvent
+import typingsSlinky.antDesignReactNative.anon.NativeEvent
 import typingsSlinky.antDesignReactNative.searchBarPropsTypeMod.SearchBarState
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactNative.mod.NodeHandle
@@ -21,6 +21,6 @@ trait SearchBar
   def onCancel(): Unit = js.native
   def onChangeText(value: String): Unit = js.native
   def onFocus(e: SyntheticEvent[NodeHandle, TextInputFocusEventData]): Unit = js.native
-  def onSubmit(_underscore: AnonNativeEvent): Unit = js.native
+  def onSubmit(_underscore: NativeEvent): Unit = js.native
 }
 

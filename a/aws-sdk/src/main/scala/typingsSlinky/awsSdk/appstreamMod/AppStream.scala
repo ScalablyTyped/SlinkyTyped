@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.appstreamMod
 
-import typingsSlinky.awsSdk.DescribeFleetsRequestwait
+import typingsSlinky.awsSdk.anon.DescribeFleetsRequestwait
 import typingsSlinky.awsSdk.awsSdkStrings.fleetStarted
 import typingsSlinky.awsSdk.awsSdkStrings.fleetStopped
 import typingsSlinky.awsSdk.configMod.ConfigBase

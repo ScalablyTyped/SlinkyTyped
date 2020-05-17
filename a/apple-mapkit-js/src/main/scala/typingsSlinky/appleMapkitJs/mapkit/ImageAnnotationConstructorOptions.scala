@@ -1,6 +1,6 @@
 package typingsSlinky.appleMapkitJs.mapkit
 
-import typingsSlinky.appleMapkitJs.Anon1
+import typingsSlinky.appleMapkitJs.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,12 +13,12 @@ trait ImageAnnotationConstructorOptions extends AnnotationConstructorOptions {
   /**
     * An object containing URLs for the image assets in multiple resolutions.
     */
-  var url: Anon1 = js.native
+  var url: `1` = js.native
 }
 
 object ImageAnnotationConstructorOptions {
   @scala.inline
-  def apply(url: Anon1): ImageAnnotationConstructorOptions = {
+  def apply(url: `1`): ImageAnnotationConstructorOptions = {
     val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImageAnnotationConstructorOptions]
   }
@@ -29,7 +29,7 @@ object ImageAnnotationConstructorOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withUrl(value: Anon1): Self = {
+    def withUrl(value: `1`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
         ret

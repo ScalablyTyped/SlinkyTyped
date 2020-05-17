@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("MSHTML.DOMStorageEvent")
 @js.native
-class DOMStorageEvent protected () extends js.Object {
+trait DOMStorageEvent extends js.Object {
   @JSName("MSHTML.DOMStorageEvent_typekey")
   var MSHTMLDotDOMStorageEvent_typekey: DOMStorageEvent = js.native
   val bubbles: Boolean = js.native
@@ -39,5 +38,178 @@ class DOMStorageEvent protected () extends js.Object {
   def preventDefault(): Unit = js.native
   def stopImmediatePropagation(): Unit = js.native
   def stopPropagation(): Unit = js.native
+}
+
+object DOMStorageEvent {
+  @scala.inline
+  def apply(
+    MSHTMLDotDOMStorageEvent_typekey: DOMStorageEvent,
+    bubbles: Boolean,
+    cancelBubble: Boolean,
+    cancelable: Boolean,
+    currentTarget: IEventTarget,
+    defaultPrevented: Boolean,
+    eventPhase: Double,
+    initEvent: (String, Boolean, Boolean) => Unit,
+    initStorageEvent: (String, Boolean, Boolean, String, String, String, String, IHTMLStorage) => Unit,
+    isTrusted: Boolean,
+    key: String,
+    newValue: String,
+    oldValue: String,
+    preventDefault: () => Unit,
+    srcElement: IHTMLElement,
+    stopImmediatePropagation: () => Unit,
+    stopPropagation: () => Unit,
+    storageArea: IHTMLStorage,
+    target: IEventTarget,
+    timeStamp: Double,
+    `type`: String,
+    url: String
+  ): DOMStorageEvent = {
+    val __obj = js.Dynamic.literal(bubbles = bubbles.asInstanceOf[js.Any], cancelBubble = cancelBubble.asInstanceOf[js.Any], cancelable = cancelable.asInstanceOf[js.Any], currentTarget = currentTarget.asInstanceOf[js.Any], defaultPrevented = defaultPrevented.asInstanceOf[js.Any], eventPhase = eventPhase.asInstanceOf[js.Any], initEvent = js.Any.fromFunction3(initEvent), initStorageEvent = js.Any.fromFunction8(initStorageEvent), isTrusted = isTrusted.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], newValue = newValue.asInstanceOf[js.Any], oldValue = oldValue.asInstanceOf[js.Any], preventDefault = js.Any.fromFunction0(preventDefault), srcElement = srcElement.asInstanceOf[js.Any], stopImmediatePropagation = js.Any.fromFunction0(stopImmediatePropagation), stopPropagation = js.Any.fromFunction0(stopPropagation), storageArea = storageArea.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    __obj.updateDynamic("MSHTML.DOMStorageEvent_typekey")(MSHTMLDotDOMStorageEvent_typekey.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DOMStorageEvent]
+  }
+  @scala.inline
+  implicit class DOMStorageEventOps[Self <: DOMStorageEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMSHTMLDotDOMStorageEvent_typekey(value: DOMStorageEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MSHTML.DOMStorageEvent_typekey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBubbles(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bubbles")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCancelBubble(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelBubble")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCancelable(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancelable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrentTarget(value: IEventTarget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultPrevented(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultPrevented")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEventPhase(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("eventPhase")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInitEvent(value: (String, Boolean, Boolean) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initEvent")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withInitStorageEvent(value: (String, Boolean, Boolean, String, String, String, String, IHTMLStorage) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initStorageEvent")(js.Any.fromFunction8(value))
+        ret
+    }
+    @scala.inline
+    def withIsTrusted(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isTrusted")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNewValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOldValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreventDefault(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preventDefault")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSrcElement(value: IHTMLElement): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("srcElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStopImmediatePropagation(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopImmediatePropagation")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStopPropagation(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stopPropagation")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStorageArea(value: IHTMLStorage): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("storageArea")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTarget(value: IEventTarget): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimeStamp(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeStamp")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUrl(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("url")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

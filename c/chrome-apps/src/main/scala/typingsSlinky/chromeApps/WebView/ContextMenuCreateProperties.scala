@@ -1,9 +1,8 @@
 package typingsSlinky.chromeApps.WebView
 
-import typingsSlinky.chromeApps.AnonCHECKBOX
+import typingsSlinky.chromeApps.anon.CHECKBOX
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chrome.integer
-import typingsSlinky.chromeApps.chromeAppsStrings.CHECKBOX
 import typingsSlinky.chromeApps.chromeAppsStrings.NORMAL
 import typingsSlinky.chromeApps.chromeAppsStrings.RADIO
 import typingsSlinky.chromeApps.chromeAppsStrings.SEPARATOR
@@ -65,10 +64,10 @@ trait ContextMenuCreateProperties extends js.Object {
     */
   var `type`: js.UndefOr[
     ToStringLiteral[
-      AnonCHECKBOX, 
-      /* keyof chrome-apps.AnonCHECKBOX */ NORMAL | CHECKBOX | RADIO | SEPARATOR, 
+      CHECKBOX, 
+      /* keyof chrome-apps.anon.CHECKBOX */ NORMAL | typingsSlinky.chromeApps.chromeAppsStrings.CHECKBOX | RADIO | SEPARATOR, 
       Exclude[
-        /* keyof chrome-apps.AnonCHECKBOX */ NORMAL | CHECKBOX | RADIO | SEPARATOR, 
+        /* keyof chrome-apps.anon.CHECKBOX */ NORMAL | typingsSlinky.chromeApps.chromeAppsStrings.CHECKBOX | RADIO | SEPARATOR, 
         normal_ | checkbox_ | radio_ | separator_
       ]
     ]
@@ -198,10 +197,10 @@ object ContextMenuCreateProperties {
     @scala.inline
     def withType(
       value: ToStringLiteral[
-          AnonCHECKBOX, 
-          /* keyof chrome-apps.AnonCHECKBOX */ NORMAL | CHECKBOX | RADIO | SEPARATOR, 
+          CHECKBOX, 
+          /* keyof chrome-apps.anon.CHECKBOX */ NORMAL | typingsSlinky.chromeApps.chromeAppsStrings.CHECKBOX | RADIO | SEPARATOR, 
           Exclude[
-            /* keyof chrome-apps.AnonCHECKBOX */ NORMAL | CHECKBOX | RADIO | SEPARATOR, 
+            /* keyof chrome-apps.anon.CHECKBOX */ NORMAL | typingsSlinky.chromeApps.chromeAppsStrings.CHECKBOX | RADIO | SEPARATOR, 
             normal_ | checkbox_ | radio_ | separator_
           ]
         ]

@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonEventHeight
+import typingsSlinky.devextreme.anon.EventHeight
 import typingsSlinky.devextreme.devextremeStrings.all
 import typingsSlinky.devextreme.devextremeStrings.bottom
 import typingsSlinky.devextreme.devextremeStrings.left
@@ -24,11 +24,11 @@ trait dxResizableOptions extends DOMComponentOptions[dxResizable] {
   /** Specifies the lower width boundary for resizing. */
   var minWidth: js.UndefOr[Double] = js.native
   /** A function that is executed each time the widget is resized by one pixel. */
-  var onResize: js.UndefOr[js.Function1[/* e */ AnonEventHeight, _]] = js.native
+  var onResize: js.UndefOr[js.Function1[/* e */ EventHeight, _]] = js.native
   /** A function that is executed when resizing ends. */
-  var onResizeEnd: js.UndefOr[js.Function1[/* e */ AnonEventHeight, _]] = js.native
+  var onResizeEnd: js.UndefOr[js.Function1[/* e */ EventHeight, _]] = js.native
   /** A function that is executed when resizing starts. */
-  var onResizeStart: js.UndefOr[js.Function1[/* e */ AnonEventHeight, _]] = js.native
+  var onResizeStart: js.UndefOr[js.Function1[/* e */ EventHeight, _]] = js.native
 }
 
 object dxResizableOptions {
@@ -104,7 +104,7 @@ object dxResizableOptions {
         ret
     }
     @scala.inline
-    def withOnResize(value: /* e */ AnonEventHeight => _): Self = {
+    def withOnResize(value: /* e */ EventHeight => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onResize")(js.Any.fromFunction1(value))
         ret
@@ -116,7 +116,7 @@ object dxResizableOptions {
         ret
     }
     @scala.inline
-    def withOnResizeEnd(value: /* e */ AnonEventHeight => _): Self = {
+    def withOnResizeEnd(value: /* e */ EventHeight => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onResizeEnd")(js.Any.fromFunction1(value))
         ret
@@ -128,7 +128,7 @@ object dxResizableOptions {
         ret
     }
     @scala.inline
-    def withOnResizeStart(value: /* e */ AnonEventHeight => _): Self = {
+    def withOnResizeStart(value: /* e */ EventHeight => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onResizeStart")(js.Any.fromFunction1(value))
         ret

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TableValue
   extends Base[typingsSlinky.luaparse.luaparseStrings.TableValue]
-     with _Node {
+     with Node {
   var value: Expression = js.native
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.ace.AceAjax
 
-import org.scalablytyped.runtime.Instantiable4
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -148,22 +147,230 @@ trait Range extends js.Object {
   def toScreenRange(session: IEditSession): Range = js.native
 }
 
-/**
-  * Creates a new `Range` object with the given starting and ending row and column points.
-  * @param startRow The starting row
-  * @param startColumn The starting column
-  * @param endRow The ending row
-  * @param endColumn The ending column
-  **/
-@JSGlobal("AceAjax.Range")
-@js.native
-object Range extends Instantiable4[
-      /* startRow */ Double, 
-      /* startColumn */ Double, 
-      /* endRow */ Double, 
-      /* endColumn */ Double, 
-      Range
-    ] {
-  def fromPoints(pos1: Position, pos2: Position): Range = js.native
+object Range {
+  @scala.inline
+  def apply(
+    clipRows: (Double, Double) => Range,
+    collapseRows: () => Range,
+    compare: (Double, Double) => Double,
+    compareEnd: (Double, Double) => Double,
+    compareInside: (Double, Double) => Double,
+    comparePoint: Range => Double,
+    compareRange: Range => Double,
+    compareStart: (Double, Double) => Double,
+    contains: (Double, Double) => Boolean,
+    containsRange: Range => Boolean,
+    end: Position,
+    endColumn: Double,
+    endRow: Double,
+    extend: (Double, Double) => Range,
+    fromPoints: (Range, Range) => Range,
+    inside: (Double, Double) => Boolean,
+    insideEnd: (Double, Double) => Boolean,
+    insideStart: (Double, Double) => Boolean,
+    intersects: Range => Boolean,
+    isEmpty: () => Boolean,
+    isEnd: (Double, Double) => Boolean,
+    isEqual: Range => Unit,
+    isMultiLine: () => Boolean,
+    isStart: (Double, Double) => Boolean,
+    setEnd: (Double, Double) => Unit,
+    setStart: (Double, Double) => Unit,
+    start: Position,
+    startColumn: Double,
+    startRow: Double,
+    toScreenRange: IEditSession => Range
+  ): Range = {
+    val __obj = js.Dynamic.literal(clipRows = js.Any.fromFunction2(clipRows), collapseRows = js.Any.fromFunction0(collapseRows), compare = js.Any.fromFunction2(compare), compareEnd = js.Any.fromFunction2(compareEnd), compareInside = js.Any.fromFunction2(compareInside), comparePoint = js.Any.fromFunction1(comparePoint), compareRange = js.Any.fromFunction1(compareRange), compareStart = js.Any.fromFunction2(compareStart), contains = js.Any.fromFunction2(contains), containsRange = js.Any.fromFunction1(containsRange), end = end.asInstanceOf[js.Any], endColumn = endColumn.asInstanceOf[js.Any], endRow = endRow.asInstanceOf[js.Any], extend = js.Any.fromFunction2(extend), fromPoints = js.Any.fromFunction2(fromPoints), inside = js.Any.fromFunction2(inside), insideEnd = js.Any.fromFunction2(insideEnd), insideStart = js.Any.fromFunction2(insideStart), intersects = js.Any.fromFunction1(intersects), isEmpty = js.Any.fromFunction0(isEmpty), isEnd = js.Any.fromFunction2(isEnd), isEqual = js.Any.fromFunction1(isEqual), isMultiLine = js.Any.fromFunction0(isMultiLine), isStart = js.Any.fromFunction2(isStart), setEnd = js.Any.fromFunction2(setEnd), setStart = js.Any.fromFunction2(setStart), start = start.asInstanceOf[js.Any], startColumn = startColumn.asInstanceOf[js.Any], startRow = startRow.asInstanceOf[js.Any], toScreenRange = js.Any.fromFunction1(toScreenRange))
+    __obj.asInstanceOf[Range]
+  }
+  @scala.inline
+  implicit class RangeOps[Self <: Range] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withClipRows(value: (Double, Double) => Range): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clipRows")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withCollapseRows(value: () => Range): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("collapseRows")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withCompare(value: (Double, Double) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compare")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withCompareEnd(value: (Double, Double) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareEnd")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withCompareInside(value: (Double, Double) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareInside")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withComparePoint(value: Range => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("comparePoint")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCompareRange(value: Range => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareRange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCompareStart(value: (Double, Double) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("compareStart")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withContains(value: (Double, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withContainsRange(value: Range => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containsRange")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEnd(value: Position): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndColumn(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndRow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtend(value: (Double, Double) => Range): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extend")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withFromPoints(value: (Range, Range) => Range): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fromPoints")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withInside(value: (Double, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inside")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withInsideEnd(value: (Double, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insideEnd")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withInsideStart(value: (Double, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insideStart")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withIntersects(value: Range => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intersects")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsEmpty(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEmpty")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsEnd(value: (Double, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEnd")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withIsEqual(value: Range => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isEqual")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsMultiLine(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isMultiLine")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsStart(value: (Double, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isStart")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetEnd(value: (Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setEnd")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetStart(value: (Double, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStart")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withStart(value: Position): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartColumn(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startColumn")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStartRow(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startRow")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withToScreenRange(value: IEditSession => Range): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toScreenRange")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,11 +1,11 @@
 package typingsSlinky.tabris
 
+import typingsSlinky.tabris.mod.ColorValue
 import typingsSlinky.tabris.mod.FontStyle
+import typingsSlinky.tabris.mod.FontValue
 import typingsSlinky.tabris.mod.FontWeight
 import typingsSlinky.tabris.mod.LayoutDataValue
-import typingsSlinky.tabris.mod._ColorValue
-import typingsSlinky.tabris.mod._FontValue
-import typingsSlinky.tabris.mod._LinearGradientValue
+import typingsSlinky.tabris.mod.LinearGradientValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -418,9 +418,9 @@ object tabrisStrings {
   
   @js.native
   sealed trait initial
-    extends _ColorValue
-       with _FontValue
-       with _LinearGradientValue
+    extends ColorValue
+       with FontValue
+       with LinearGradientValue
   
   @js.native
   sealed trait internal extends js.Object

@@ -6,7 +6,6 @@ import scala.scalajs.js.annotation._
 
 package object typesMod {
   type ClassNameList = js.Array[java.lang.String]
-  type ClassNamesState = js.UndefOr[org.scalablytyped.runtime.StringDictionary[scala.Boolean]]
   type FocusEventHandler = js.Function1[
     /* event */ slinky.web.SyntheticFocusEvent[org.scalajs.dom.raw.HTMLElement], 
     scala.Unit
@@ -23,7 +22,4 @@ package object typesMod {
   ]
   type OptionTypeBase = org.scalablytyped.runtime.StringDictionary[js.Any]
   type OptionsType[OptionType /* <: typingsSlinky.reactSelect.typesMod.OptionTypeBase */] = js.Array[OptionType]
-  type ValueType[OptionType /* <: typingsSlinky.reactSelect.typesMod.OptionTypeBase */] = js.UndefOr[
-    OptionType | typingsSlinky.reactSelect.typesMod.OptionsType[OptionType] | scala.Null
-  ]
 }

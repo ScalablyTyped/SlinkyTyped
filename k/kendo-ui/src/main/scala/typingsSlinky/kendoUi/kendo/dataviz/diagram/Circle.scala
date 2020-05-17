@@ -1,14 +1,12 @@
 package typingsSlinky.kendoUi.kendo.dataviz.diagram
 
-import typingsSlinky.kendoUi.kendo.Observable_
+import typingsSlinky.kendoUi.kendo.Observable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.dataviz.diagram.Circle")
 @js.native
-class Circle () extends Observable_ {
-  def this(options: CircleOptions) = this()
+trait Circle extends Observable {
   var drawingElement: typingsSlinky.kendoUi.kendo.drawing.Circle = js.native
   var options: CircleOptions = js.native
   def position(): Unit = js.native

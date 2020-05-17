@@ -11,9 +11,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * A list item is an individual item in a list section.
 		 */
-@JSGlobal("Titanium.UI.ListItem")
 @js.native
-class ListItem () extends Proxy {
+trait ListItem extends Proxy {
   /**
   			 * Sets an accessory on the right side of an item.
   			 */

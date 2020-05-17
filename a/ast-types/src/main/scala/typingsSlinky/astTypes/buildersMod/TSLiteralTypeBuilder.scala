@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonLiteral
+import typingsSlinky.astTypes.anon.Literal
 import typingsSlinky.astTypes.kindsMod.BooleanLiteralKind
 import typingsSlinky.astTypes.kindsMod.NumericLiteralKind
 import typingsSlinky.astTypes.kindsMod.StringLiteralKind
@@ -18,6 +18,6 @@ trait TSLiteralTypeBuilder extends js.Object {
   def apply(literal: StringLiteralKind): TSLiteralType = js.native
   def apply(literal: TemplateLiteralKind): TSLiteralType = js.native
   def apply(literal: UnaryExpressionKind): TSLiteralType = js.native
-  def from(params: AnonLiteral): TSLiteralType = js.native
+  def from(params: Literal): TSLiteralType = js.native
 }
 

@@ -1,21 +1,36 @@
 package typingsSlinky.winrtUwp.Windows.Devices.Perception.Provider
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterable
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** A group of IPerceptionFrameProvider identifiers to be controlled together. */
-@JSGlobal("Windows.Devices.Perception.Provider.PerceptionControlGroup")
 @js.native
-class PerceptionControlGroup protected () extends js.Object {
-  /**
-    * Creates a PerceptionControlGroup containing the IPerceptionFrameProviders with the ids specified.
-    * @param ids A list of the unique identifiers associated with the grouped IPerceptionFrameProviders. To be controllable, the id must match the associated PerceptionFrameProviderInfo::Id property.
-    */
-  def this(ids: IIterable[String]) = this()
+trait PerceptionControlGroup extends js.Object {
   /** The id(s) of the IPerceptionFrameProvider(s) controlled by this group. */
   var frameProviderIds: IVectorView[String] = js.native
+}
+
+object PerceptionControlGroup {
+  @scala.inline
+  def apply(frameProviderIds: IVectorView[String]): PerceptionControlGroup = {
+    val __obj = js.Dynamic.literal(frameProviderIds = frameProviderIds.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PerceptionControlGroup]
+  }
+  @scala.inline
+  implicit class PerceptionControlGroupOps[Self <: PerceptionControlGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFrameProviderIds(value: IVectorView[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("frameProviderIds")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -26,14 +26,8 @@ import scala.scalajs.js.annotation._
   * Game Objects directly register themselves with the Factory and inject their own creation
   * methods into the class.
   */
-@JSGlobal("Phaser.GameObjects.GameObjectFactory")
 @js.native
-class GameObjectFactory protected () extends js.Object {
-  /**
-    * 
-    * @param scene The Scene to which this Game Object Factory belongs.
-    */
-  def this(scene: Scene) = this()
+trait GameObjectFactory extends js.Object {
   /**
     * A reference to the Scene Display List.
     */
@@ -949,27 +943,5 @@ class GameObjectFactory protected () extends js.Object {
     * @param height The height of the Game Object.
     */
   def zone(x: Double, y: Double, width: Double, height: Double): Zone = js.native
-}
-
-/* static members */
-@JSGlobal("Phaser.GameObjects.GameObjectFactory")
-@js.native
-object GameObjectFactory extends js.Object {
-  /**
-    * Static method called directly by the Game Object factory functions.
-    * With this method you can register a custom GameObject factory in the GameObjectFactory,
-    * providing a name (`factoryType`) and the constructor (`factoryFunction`) in order
-    * to be called when you call to Phaser.Scene.add[ factoryType ] method.
-    * @param factoryType The key of the factory that you will use to call to Phaser.Scene.add[ factoryType ] method.
-    * @param factoryFunction The constructor function to be called when you invoke to the Phaser.Scene.add method.
-    */
-  def register(factoryType: String, factoryFunction: js.Function): Unit = js.native
-  /**
-    * Static method called directly by the Game Object factory functions.
-    * With this method you can remove a custom GameObject factory registered in the GameObjectFactory,
-    * providing a its `factoryType`.
-    * @param factoryType The key of the factory that you want to remove from the GameObjectFactory.
-    */
-  def remove(factoryType: String): Unit = js.native
 }
 

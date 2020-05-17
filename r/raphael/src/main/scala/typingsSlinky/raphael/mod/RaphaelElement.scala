@@ -7,7 +7,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RaphaelElement[TTechnology /* <: RaphaelTechnology */, TNode /* <: /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any */] extends RaphaelBaseElement[TTechnology] {
+trait RaphaelElement[TTechnology /* <: RaphaelTechnology */, TNode /* <: /* import warning: importer.ImportType#apply Failed type conversion: raphael.raphael.RaphaelElementByTechnologyMap<std.SVGElement, raphael.raphael.VMLElement>[TTechnology] */ js.Any */]
+  extends RaphaelBaseElement[TTechnology]
+     with RaphaelUnwrapElement[TTechnology, js.Any] {
   /**
     * Unique id of the element. Especially useful when you want to listen to events of the element, because all
     * events are fired in format `<module>.<action>.<id>`. Also useful for the {@link RaphaelPaper.getById} method.

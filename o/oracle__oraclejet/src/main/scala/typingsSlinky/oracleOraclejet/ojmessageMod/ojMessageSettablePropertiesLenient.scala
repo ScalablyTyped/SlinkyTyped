@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojmessageMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonCategoriesLabelCloseIcon
+import typingsSlinky.oracleOraclejet.anon.CategoriesLabelCloseIcon
 import typingsSlinky.oracleOraclejet.ojmessageMod.ojMessage.DisplayOptions
 import typingsSlinky.oracleOraclejet.ojmessageMod.ojMessage.Message
 import scala.scalajs.js
@@ -14,7 +14,7 @@ trait ojMessageSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
   var displayOptions: js.UndefOr[DisplayOptions] = js.native
   var message: js.UndefOr[Message] = js.native
-  var translations: js.UndefOr[AnonCategoriesLabelCloseIcon] = js.native
+  var translations: js.UndefOr[CategoriesLabelCloseIcon] = js.native
 }
 
 object ojMessageSettablePropertiesLenient {
@@ -54,7 +54,7 @@ object ojMessageSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonCategoriesLabelCloseIcon): Self = {
+    def withTranslations(value: CategoriesLabelCloseIcon): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

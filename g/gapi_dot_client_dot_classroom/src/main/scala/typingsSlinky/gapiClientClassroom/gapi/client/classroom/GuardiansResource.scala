@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientClassroom.gapi.client.classroom
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientClassroom.AnonGuardianId
-import typingsSlinky.gapiClientClassroom.AnonPageToken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientClassroom.anon.GuardianId
+import typingsSlinky.gapiClientClassroom.anon.PageToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,8 +29,8 @@ trait GuardiansResource extends js.Object {
     * the requested `student_id`, but no `Guardian` record exists for that
     * student with the provided `guardian_id`.
     */
-  def delete(): Request_[js.Object] = js.native
-  def delete(request: AnonGuardianId): Request_[js.Object] = js.native
+  def delete(): Request[js.Object] = js.native
+  def delete(request: GuardianId): Request[js.Object] = js.native
   /**
     * Returns a specific guardian.
     *
@@ -48,8 +48,8 @@ trait GuardiansResource extends js.Object {
     * the requested `student_id`, but no `Guardian` record exists for that
     * student that matches the provided `guardian_id`.
     */
-  def get(): Request_[Guardian] = js.native
-  def get(request: AnonGuardianId): Request_[Guardian] = js.native
+  def get(): Request[Guardian] = js.native
+  def get(request: GuardianId): Request[Guardian] = js.native
   /**
     * Returns a list of guardians that the requesting user is permitted to
     * view, restricted to those that match the request.
@@ -72,7 +72,7 @@ trait GuardiansResource extends js.Object {
     * &#42; `NOT_FOUND` if a `student_id` is specified, and its format can be
     * recognized, but Classroom has no record of that student.
     */
-  def list(): Request_[ListGuardiansResponse] = js.native
-  def list(request: AnonPageToken): Request_[ListGuardiansResponse] = js.native
+  def list(): Request[ListGuardiansResponse] = js.native
+  def list(request: PageToken): Request[ListGuardiansResponse] = js.native
 }
 

@@ -5,71 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.Effect")
 @js.native
-class Effect protected () extends IDisposable {
-  /**
-    * Instantiates an effect.
-    * An effect can be used to create/manage/execute vertex and fragment shaders.
-    * @param baseName Name of the effect.
-    * @param attributesNamesOrOptions List of attribute names that will be passed to the shader or set of all options to create the effect.
-    * @param uniformsNamesOrEngine List of uniform variable names that will be passed to the shader or the engine that will be used to render effect.
-    * @param samplers List of sampler variables that will be passed to the shader.
-    * @param engine Engine to be used to render the effect
-    * @param defines Define statements to be added to the shader.
-    * @param fallbacks Possible fallbacks for this effect to improve performance when needed.
-    * @param onCompiled Callback that will be called when the shader is compiled.
-    * @param onError Callback that will be called if an error occurs during shader compilation.
-    * @param indexParameters Parameters to be used with Babylons include syntax to iterate over an array (eg. {lights: 10})
-    */
-  def this(
-    baseName: js.Any,
-    attributesNamesOrOptions: js.Array[String],
-    uniformsNamesOrEngine: js.Array[String],
-    samplers: js.UndefOr[Nullable[js.Array[String]]],
-    engine: js.UndefOr[ThinEngine],
-    defines: js.UndefOr[Nullable[String]],
-    fallbacks: js.UndefOr[Nullable[IEffectFallbacks]],
-    onCompiled: js.UndefOr[Nullable[js.Function1[/* effect */ Effect, Unit]]],
-    onError: js.UndefOr[Nullable[js.Function2[/* effect */ Effect, /* errors */ String, Unit]]],
-    indexParameters: js.UndefOr[js.Any]
-  ) = this()
-  def this(
-    baseName: js.Any,
-    attributesNamesOrOptions: js.Array[String],
-    uniformsNamesOrEngine: ThinEngine,
-    samplers: js.UndefOr[Nullable[js.Array[String]]],
-    engine: js.UndefOr[ThinEngine],
-    defines: js.UndefOr[Nullable[String]],
-    fallbacks: js.UndefOr[Nullable[IEffectFallbacks]],
-    onCompiled: js.UndefOr[Nullable[js.Function1[/* effect */ Effect, Unit]]],
-    onError: js.UndefOr[Nullable[js.Function2[/* effect */ Effect, /* errors */ String, Unit]]],
-    indexParameters: js.UndefOr[js.Any]
-  ) = this()
-  def this(
-    baseName: js.Any,
-    attributesNamesOrOptions: IEffectCreationOptions,
-    uniformsNamesOrEngine: js.Array[String],
-    samplers: js.UndefOr[Nullable[js.Array[String]]],
-    engine: js.UndefOr[ThinEngine],
-    defines: js.UndefOr[Nullable[String]],
-    fallbacks: js.UndefOr[Nullable[IEffectFallbacks]],
-    onCompiled: js.UndefOr[Nullable[js.Function1[/* effect */ Effect, Unit]]],
-    onError: js.UndefOr[Nullable[js.Function2[/* effect */ Effect, /* errors */ String, Unit]]],
-    indexParameters: js.UndefOr[js.Any]
-  ) = this()
-  def this(
-    baseName: js.Any,
-    attributesNamesOrOptions: IEffectCreationOptions,
-    uniformsNamesOrEngine: ThinEngine,
-    samplers: js.UndefOr[Nullable[js.Array[String]]],
-    engine: js.UndefOr[ThinEngine],
-    defines: js.UndefOr[Nullable[String]],
-    fallbacks: js.UndefOr[Nullable[IEffectFallbacks]],
-    onCompiled: js.UndefOr[Nullable[js.Function1[/* effect */ Effect, Unit]]],
-    onError: js.UndefOr[Nullable[js.Function2[/* effect */ Effect, /* errors */ String, Unit]]],
-    indexParameters: js.UndefOr[js.Any]
-  ) = this()
+trait Effect extends IDisposable {
   var _allFallbacksProcessed: js.Any = js.native
   var _attributeLocationByName: js.Any = js.native
   var _attributes: js.Any = js.native
@@ -510,36 +447,720 @@ class Effect protected () extends IDisposable {
   def setVector4(uniformName: String, vector4: IVector4Like): Effect = js.native
 }
 
-/* static members */
-@JSGlobal("BABYLON.Effect")
-@js.native
-object Effect extends js.Object {
-  /**
-    * Store of each included file for a shader (The can be looked up using effect.key)
-    */
-  var IncludesShadersStore: org.scalablytyped.runtime.StringDictionary[String] = js.native
-  /**
-    * Gets or sets the relative url used to load shaders if using the engine in non-minified mode
-    */
-  var ShadersRepository: String = js.native
-  /**
-    * Store of each shader (The can be looked up using effect.key)
-    */
-  var ShadersStore: org.scalablytyped.runtime.StringDictionary[String] = js.native
-  var _baseCache: js.Any = js.native
-  var _uniqueIdSeed: js.Any = js.native
-  /**
-    * This function will add a new shader to the shader store
-    * @param name the name of the shader
-    * @param pixelShader optional pixel shader content
-    * @param vertexShader optional vertex shader content
-    */
-  def RegisterShader(name: String): Unit = js.native
-  def RegisterShader(name: String, pixelShader: String): Unit = js.native
-  def RegisterShader(name: String, pixelShader: String, vertexShader: String): Unit = js.native
-  /**
-    * Resets the cache of effects.
-    */
-  def ResetCache(): Unit = js.native
+object Effect {
+  @scala.inline
+  def apply(
+    _allFallbacksProcessed: js.Any,
+    _attributeLocationByName: js.Any,
+    _attributes: js.Any,
+    _attributesNames: js.Any,
+    _bindTexture: (String, Nullable[InternalTexture]) => Unit,
+    _bonesComputationForcedToCPU: Boolean,
+    _cacheFloat2: (String, Double, Double) => Boolean,
+    _cacheFloat3: (String, Double, Double, Double) => Boolean,
+    _cacheFloat4: (String, Double, Double, Double, Double) => Boolean,
+    _cacheMatrix: (String, IMatrixLike) => Boolean,
+    _checkIsReady: js.Any,
+    _compilationError: js.Any,
+    _engine: js.Any,
+    _fallbacks: js.Any,
+    _fragmentSourceCode: js.Any,
+    _fragmentSourceCodeOverride: js.Any,
+    _indexParameters: js.Any,
+    _isReady: js.Any,
+    _isReadyInternal: js.Any,
+    _key: String,
+    _loadShader: js.Any,
+    _prepareEffect: () => Unit,
+    _processCompilationErrors: js.Any,
+    _rebuildProgram: (String, String, js.Function1[/* pipelineContext */ IPipelineContext, Unit], js.Function1[/* message */ String, Unit]) => Unit,
+    _samplerList: js.Any,
+    _samplers: js.Any,
+    _transformFeedbackVaryings: js.Any,
+    _uniformBuffersNames: js.Any,
+    _uniforms: js.Any,
+    _uniformsNames: js.Any,
+    _useFinalCode: js.Any,
+    _valueCache: js.Any,
+    _vertexSourceCode: js.Any,
+    _vertexSourceCodeOverride: js.Any,
+    _wasPreviouslyReady: Boolean,
+    allFallbacksProcessed: () => Boolean,
+    bindUniformBlock: (String, Double) => Unit,
+    bindUniformBuffer: (DataBuffer, String) => Unit,
+    defines: String,
+    dispose: () => Unit,
+    executeWhenCompiled: js.Function1[Effect, Unit] => Unit,
+    getAttributeLocation: Double => Double,
+    getAttributeLocationByName: String => Double,
+    getAttributesCount: () => Double,
+    getAttributesNames: () => js.Array[String],
+    getCompilationError: () => String,
+    getEngine: () => Engine,
+    getPipelineContext: () => Nullable[IPipelineContext],
+    getSamplers: () => js.Array[String],
+    getUniform: String => Nullable[WebGLUniformLocation],
+    getUniformIndex: String => Double,
+    isReady: () => Boolean,
+    isSupported: () => Boolean,
+    key: () => String,
+    name: js.Any,
+    onBindObservable: () => Observable[Effect],
+    onCompileObservable: Observable[Effect],
+    onErrorObservable: Observable[Effect],
+    setArray: (String, js.Array[Double]) => Effect,
+    setArray2: (String, js.Array[Double]) => Effect,
+    setArray3: (String, js.Array[Double]) => Effect,
+    setArray4: (String, js.Array[Double]) => Effect,
+    setBool: (String, Boolean) => Effect,
+    setColor3: (String, IColor3Like) => Effect,
+    setColor4: (String, IColor3Like, Double) => Effect,
+    setDepthStencilTexture: (String, Nullable[RenderTargetTexture]) => Unit,
+    setDirectColor4: (String, IColor4Like) => Effect,
+    setFloat: (String, Double) => Effect,
+    setFloat2: (String, Double, Double) => Effect,
+    setFloat3: (String, Double, Double, Double) => Effect,
+    setFloat4: (String, Double, Double, Double, Double) => Effect,
+    setFloatArray: (String, js.typedarray.Float32Array) => Effect,
+    setFloatArray2: (String, js.typedarray.Float32Array) => Effect,
+    setFloatArray3: (String, js.typedarray.Float32Array) => Effect,
+    setFloatArray4: (String, js.typedarray.Float32Array) => Effect,
+    setInt: (String, Double) => Effect,
+    setIntArray: (String, js.typedarray.Int32Array) => Effect,
+    setIntArray2: (String, js.typedarray.Int32Array) => Effect,
+    setIntArray3: (String, js.typedarray.Int32Array) => Effect,
+    setIntArray4: (String, js.typedarray.Int32Array) => Effect,
+    setMatrices: (String, js.typedarray.Float32Array) => Effect,
+    setMatrix: (String, IMatrixLike) => Effect,
+    setMatrix2x2: (String, js.typedarray.Float32Array) => Effect,
+    setMatrix3x3: (String, js.typedarray.Float32Array) => Effect,
+    setTexture: (String, Nullable[BaseTexture]) => Unit,
+    setTextureArray: (String, js.Array[BaseTexture]) => Unit,
+    setTextureFromPostProcess: (String, Nullable[PostProcess]) => Unit,
+    setTextureFromPostProcessOutput: (String, Nullable[PostProcess]) => Unit,
+    setVector2: (String, IVector2Like) => Effect,
+    setVector3: (String, IVector3Like) => Effect,
+    setVector4: (String, IVector4Like) => Effect,
+    uniqueId: Double
+  ): Effect = {
+    val __obj = js.Dynamic.literal(_allFallbacksProcessed = _allFallbacksProcessed.asInstanceOf[js.Any], _attributeLocationByName = _attributeLocationByName.asInstanceOf[js.Any], _attributes = _attributes.asInstanceOf[js.Any], _attributesNames = _attributesNames.asInstanceOf[js.Any], _bindTexture = js.Any.fromFunction2(_bindTexture), _bonesComputationForcedToCPU = _bonesComputationForcedToCPU.asInstanceOf[js.Any], _cacheFloat2 = js.Any.fromFunction3(_cacheFloat2), _cacheFloat3 = js.Any.fromFunction4(_cacheFloat3), _cacheFloat4 = js.Any.fromFunction5(_cacheFloat4), _cacheMatrix = js.Any.fromFunction2(_cacheMatrix), _checkIsReady = _checkIsReady.asInstanceOf[js.Any], _compilationError = _compilationError.asInstanceOf[js.Any], _engine = _engine.asInstanceOf[js.Any], _fallbacks = _fallbacks.asInstanceOf[js.Any], _fragmentSourceCode = _fragmentSourceCode.asInstanceOf[js.Any], _fragmentSourceCodeOverride = _fragmentSourceCodeOverride.asInstanceOf[js.Any], _indexParameters = _indexParameters.asInstanceOf[js.Any], _isReady = _isReady.asInstanceOf[js.Any], _isReadyInternal = _isReadyInternal.asInstanceOf[js.Any], _key = _key.asInstanceOf[js.Any], _loadShader = _loadShader.asInstanceOf[js.Any], _prepareEffect = js.Any.fromFunction0(_prepareEffect), _processCompilationErrors = _processCompilationErrors.asInstanceOf[js.Any], _rebuildProgram = js.Any.fromFunction4(_rebuildProgram), _samplerList = _samplerList.asInstanceOf[js.Any], _samplers = _samplers.asInstanceOf[js.Any], _transformFeedbackVaryings = _transformFeedbackVaryings.asInstanceOf[js.Any], _uniformBuffersNames = _uniformBuffersNames.asInstanceOf[js.Any], _uniforms = _uniforms.asInstanceOf[js.Any], _uniformsNames = _uniformsNames.asInstanceOf[js.Any], _useFinalCode = _useFinalCode.asInstanceOf[js.Any], _valueCache = _valueCache.asInstanceOf[js.Any], _vertexSourceCode = _vertexSourceCode.asInstanceOf[js.Any], _vertexSourceCodeOverride = _vertexSourceCodeOverride.asInstanceOf[js.Any], _wasPreviouslyReady = _wasPreviouslyReady.asInstanceOf[js.Any], allFallbacksProcessed = js.Any.fromFunction0(allFallbacksProcessed), bindUniformBlock = js.Any.fromFunction2(bindUniformBlock), bindUniformBuffer = js.Any.fromFunction2(bindUniformBuffer), defines = defines.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), executeWhenCompiled = js.Any.fromFunction1(executeWhenCompiled), getAttributeLocation = js.Any.fromFunction1(getAttributeLocation), getAttributeLocationByName = js.Any.fromFunction1(getAttributeLocationByName), getAttributesCount = js.Any.fromFunction0(getAttributesCount), getAttributesNames = js.Any.fromFunction0(getAttributesNames), getCompilationError = js.Any.fromFunction0(getCompilationError), getEngine = js.Any.fromFunction0(getEngine), getPipelineContext = js.Any.fromFunction0(getPipelineContext), getSamplers = js.Any.fromFunction0(getSamplers), getUniform = js.Any.fromFunction1(getUniform), getUniformIndex = js.Any.fromFunction1(getUniformIndex), isReady = js.Any.fromFunction0(isReady), isSupported = js.Any.fromFunction0(isSupported), key = js.Any.fromFunction0(key), name = name.asInstanceOf[js.Any], onBindObservable = js.Any.fromFunction0(onBindObservable), onCompileObservable = onCompileObservable.asInstanceOf[js.Any], onErrorObservable = onErrorObservable.asInstanceOf[js.Any], setArray = js.Any.fromFunction2(setArray), setArray2 = js.Any.fromFunction2(setArray2), setArray3 = js.Any.fromFunction2(setArray3), setArray4 = js.Any.fromFunction2(setArray4), setBool = js.Any.fromFunction2(setBool), setColor3 = js.Any.fromFunction2(setColor3), setColor4 = js.Any.fromFunction3(setColor4), setDepthStencilTexture = js.Any.fromFunction2(setDepthStencilTexture), setDirectColor4 = js.Any.fromFunction2(setDirectColor4), setFloat = js.Any.fromFunction2(setFloat), setFloat2 = js.Any.fromFunction3(setFloat2), setFloat3 = js.Any.fromFunction4(setFloat3), setFloat4 = js.Any.fromFunction5(setFloat4), setFloatArray = js.Any.fromFunction2(setFloatArray), setFloatArray2 = js.Any.fromFunction2(setFloatArray2), setFloatArray3 = js.Any.fromFunction2(setFloatArray3), setFloatArray4 = js.Any.fromFunction2(setFloatArray4), setInt = js.Any.fromFunction2(setInt), setIntArray = js.Any.fromFunction2(setIntArray), setIntArray2 = js.Any.fromFunction2(setIntArray2), setIntArray3 = js.Any.fromFunction2(setIntArray3), setIntArray4 = js.Any.fromFunction2(setIntArray4), setMatrices = js.Any.fromFunction2(setMatrices), setMatrix = js.Any.fromFunction2(setMatrix), setMatrix2x2 = js.Any.fromFunction2(setMatrix2x2), setMatrix3x3 = js.Any.fromFunction2(setMatrix3x3), setTexture = js.Any.fromFunction2(setTexture), setTextureArray = js.Any.fromFunction2(setTextureArray), setTextureFromPostProcess = js.Any.fromFunction2(setTextureFromPostProcess), setTextureFromPostProcessOutput = js.Any.fromFunction2(setTextureFromPostProcessOutput), setVector2 = js.Any.fromFunction2(setVector2), setVector3 = js.Any.fromFunction2(setVector3), setVector4 = js.Any.fromFunction2(setVector4), uniqueId = uniqueId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Effect]
+  }
+  @scala.inline
+  implicit class EffectOps[Self <: Effect] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def with_allFallbacksProcessed(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_allFallbacksProcessed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_attributeLocationByName(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_attributeLocationByName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_attributes(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_attributes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_attributesNames(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_attributesNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_bindTexture(value: (String, Nullable[InternalTexture]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_bindTexture")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def with_bonesComputationForcedToCPU(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_bonesComputationForcedToCPU")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_cacheFloat2(value: (String, Double, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_cacheFloat2")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def with_cacheFloat3(value: (String, Double, Double, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_cacheFloat3")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def with_cacheFloat4(value: (String, Double, Double, Double, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_cacheFloat4")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def with_cacheMatrix(value: (String, IMatrixLike) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_cacheMatrix")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def with_checkIsReady(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_checkIsReady")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_compilationError(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_compilationError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_engine(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_engine")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_fallbacks(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fallbacks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_fragmentSourceCode(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fragmentSourceCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_fragmentSourceCodeOverride(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_fragmentSourceCodeOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_indexParameters(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_indexParameters")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_isReady(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_isReady")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_isReadyInternal(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_isReadyInternal")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_key(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_key")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_loadShader(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_loadShader")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_prepareEffect(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_prepareEffect")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def with_processCompilationErrors(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_processCompilationErrors")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_rebuildProgram(
+      value: (String, String, js.Function1[/* pipelineContext */ IPipelineContext, Unit], js.Function1[/* message */ String, Unit]) => Unit
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_rebuildProgram")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def with_samplerList(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_samplerList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_samplers(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_samplers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_transformFeedbackVaryings(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_transformFeedbackVaryings")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_uniformBuffersNames(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_uniformBuffersNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_uniforms(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_uniforms")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_uniformsNames(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_uniformsNames")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_useFinalCode(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_useFinalCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_valueCache(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_valueCache")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_vertexSourceCode(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_vertexSourceCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_vertexSourceCodeOverride(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_vertexSourceCodeOverride")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_wasPreviouslyReady(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_wasPreviouslyReady")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAllFallbacksProcessed(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("allFallbacksProcessed")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withBindUniformBlock(value: (String, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindUniformBlock")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withBindUniformBuffer(value: (DataBuffer, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bindUniformBuffer")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withDefines(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defines")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExecuteWhenCompiled(value: js.Function1[Effect, Unit] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("executeWhenCompiled")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetAttributeLocation(value: Double => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeLocation")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetAttributeLocationByName(value: String => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributeLocationByName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetAttributesCount(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributesCount")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetAttributesNames(value: () => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAttributesNames")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetCompilationError(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getCompilationError")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetEngine(value: () => Engine): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getEngine")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPipelineContext(value: () => Nullable[IPipelineContext]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPipelineContext")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSamplers(value: () => js.Array[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSamplers")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetUniform(value: String => Nullable[WebGLUniformLocation]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getUniform")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetUniformIndex(value: String => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getUniformIndex")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsReady(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isReady")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withIsSupported(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isSupported")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withKey(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withName(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnBindObservable(value: () => Observable[Effect]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBindObservable")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOnCompileObservable(value: Observable[Effect]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompileObservable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOnErrorObservable(value: Observable[Effect]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onErrorObservable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSetArray(value: (String, js.Array[Double]) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setArray")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetArray2(value: (String, js.Array[Double]) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setArray2")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetArray3(value: (String, js.Array[Double]) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setArray3")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetArray4(value: (String, js.Array[Double]) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setArray4")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetBool(value: (String, Boolean) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setBool")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetColor3(value: (String, IColor3Like) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setColor3")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetColor4(value: (String, IColor3Like, Double) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setColor4")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withSetDepthStencilTexture(value: (String, Nullable[RenderTargetTexture]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDepthStencilTexture")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetDirectColor4(value: (String, IColor4Like) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDirectColor4")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetFloat(value: (String, Double) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFloat")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetFloat2(value: (String, Double, Double) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFloat2")(js.Any.fromFunction3(value))
+        ret
+    }
+    @scala.inline
+    def withSetFloat3(value: (String, Double, Double, Double) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFloat3")(js.Any.fromFunction4(value))
+        ret
+    }
+    @scala.inline
+    def withSetFloat4(value: (String, Double, Double, Double, Double) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFloat4")(js.Any.fromFunction5(value))
+        ret
+    }
+    @scala.inline
+    def withSetFloatArray(value: (String, js.typedarray.Float32Array) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFloatArray")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetFloatArray2(value: (String, js.typedarray.Float32Array) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFloatArray2")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetFloatArray3(value: (String, js.typedarray.Float32Array) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFloatArray3")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetFloatArray4(value: (String, js.typedarray.Float32Array) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setFloatArray4")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetInt(value: (String, Double) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setInt")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetIntArray(value: (String, js.typedarray.Int32Array) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setIntArray")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetIntArray2(value: (String, js.typedarray.Int32Array) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setIntArray2")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetIntArray3(value: (String, js.typedarray.Int32Array) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setIntArray3")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetIntArray4(value: (String, js.typedarray.Int32Array) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setIntArray4")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetMatrices(value: (String, js.typedarray.Float32Array) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMatrices")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetMatrix(value: (String, IMatrixLike) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMatrix")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetMatrix2x2(value: (String, js.typedarray.Float32Array) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMatrix2x2")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetMatrix3x3(value: (String, js.typedarray.Float32Array) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setMatrix3x3")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetTexture(value: (String, Nullable[BaseTexture]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTexture")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetTextureArray(value: (String, js.Array[BaseTexture]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTextureArray")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetTextureFromPostProcess(value: (String, Nullable[PostProcess]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTextureFromPostProcess")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetTextureFromPostProcessOutput(value: (String, Nullable[PostProcess]) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTextureFromPostProcessOutput")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetVector2(value: (String, IVector2Like) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setVector2")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetVector3(value: (String, IVector3Like) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setVector3")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSetVector4(value: (String, IVector4Like) => Effect): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setVector4")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withUniqueId(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_onBindObservable(value: Nullable[Observable[Effect]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_onBindObservable")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_onBindObservableNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_onBindObservable")(null)
+        ret
+    }
+    @scala.inline
+    def with_pipelineContext(value: Nullable[IPipelineContext]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_pipelineContext")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_pipelineContextNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_pipelineContext")(null)
+        ret
+    }
+    @scala.inline
+    def withOnBind(value: Effect => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBind")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnBindNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onBind")(null)
+        ret
+    }
+    @scala.inline
+    def withOnCompiled(value: Effect => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompiled")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOnCompiledNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onCompiled")(null)
+        ret
+    }
+    @scala.inline
+    def withOnError(value: (Effect, /* errors */ String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withOnErrorNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(null)
+        ret
+    }
+  }
+  
 }
 

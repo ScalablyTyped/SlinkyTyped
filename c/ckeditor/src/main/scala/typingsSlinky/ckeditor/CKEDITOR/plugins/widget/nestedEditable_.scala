@@ -1,15 +1,12 @@
 package typingsSlinky.ckeditor.CKEDITOR.plugins.widget
 
-import typingsSlinky.ckeditor.AnonFilter
 import typingsSlinky.ckeditor.CKEDITOR.dom.element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("CKEDITOR.plugins.widget.nestedEditable")
 @js.native
-class nestedEditable_ protected () extends element {
-  def this(editor: typingsSlinky.ckeditor.CKEDITOR.editor, element: element, config: AnonFilter) = this()
+trait nestedEditable_ extends element {
   val editor: typingsSlinky.ckeditor.CKEDITOR.editor = js.native
   val enterMode: Double = js.native
   val filter: typingsSlinky.ckeditor.CKEDITOR.filter = js.native

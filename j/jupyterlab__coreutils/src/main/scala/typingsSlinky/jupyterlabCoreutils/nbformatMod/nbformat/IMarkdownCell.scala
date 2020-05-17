@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IMarkdownCell
   extends IBaseCell
-     with _ICell {
+     with ICell {
   /**
     * Cell attachments.
     */

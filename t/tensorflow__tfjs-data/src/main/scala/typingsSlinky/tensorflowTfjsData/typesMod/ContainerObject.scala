@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ContainerObject[T]
-  extends /* x */ StringDictionary[ContainerOrT[T]]
-     with Container[T]
+  extends Container[T]
+     with /* x */ StringDictionary[ContainerOrT[T]]
 
 object ContainerObject {
   @scala.inline

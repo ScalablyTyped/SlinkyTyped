@@ -1,6 +1,6 @@
 package typingsSlinky.instagramPrivateApi.mediaConfigureSidecarOptionsMod
 
-import typingsSlinky.instagramPrivateApi.AnonAndroidversion
+import typingsSlinky.instagramPrivateApi.anon.Androidversion
 import typingsSlinky.instagramPrivateApi.mediaConfigureOptionsMod.MediaLocation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ trait MediaConfigureSidecarOptions extends js.Object {
   var caption: js.UndefOr[String] = js.native
   var children_metadata: js.Array[MediaConfigureSidecarItem] = js.native
   var client_sidecar_id: js.UndefOr[String] = js.native
-  var device: js.UndefOr[AnonAndroidversion] = js.native
+  var device: js.UndefOr[Androidversion] = js.native
   var device_id: js.UndefOr[String] = js.native
   var location: js.UndefOr[MediaLocation | String] = js.native
   var source_type: js.UndefOr[String] = js.native
@@ -101,7 +101,7 @@ object MediaConfigureSidecarOptions {
         ret
     }
     @scala.inline
-    def withDevice(value: AnonAndroidversion): Self = {
+    def withDevice(value: Androidversion): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("device")(value.asInstanceOf[js.Any])
         ret

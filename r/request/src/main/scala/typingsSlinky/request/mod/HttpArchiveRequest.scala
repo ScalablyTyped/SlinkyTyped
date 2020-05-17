@@ -1,6 +1,6 @@
 package typingsSlinky.request.mod
 
-import typingsSlinky.request.AnonMimeType
+import typingsSlinky.request.anon.MimeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait HttpArchiveRequest extends js.Object {
   var headers: js.UndefOr[js.Array[NameValuePair]] = js.native
   var method: js.UndefOr[String] = js.native
-  var postData: js.UndefOr[AnonMimeType] = js.native
+  var postData: js.UndefOr[MimeType] = js.native
   var url: js.UndefOr[String] = js.native
 }
 
@@ -50,7 +50,7 @@ object HttpArchiveRequest {
         ret
     }
     @scala.inline
-    def withPostData(value: AnonMimeType): Self = {
+    def withPostData(value: MimeType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("postData")(value.asInstanceOf[js.Any])
         ret

@@ -2,7 +2,7 @@ package typingsSlinky.victory.mod
 
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DOMAttributes
-import typingsSlinky.victory.AnonX
+import typingsSlinky.victory.anon.X
 import typingsSlinky.victory.victoryStrings.parallel
 import typingsSlinky.victory.victoryStrings.perpendicular
 import typingsSlinky.victory.victoryStrings.vertical
@@ -75,7 +75,7 @@ trait VictoryLabelProps extends js.Object {
     * Victory components will pass an origin prop is to define the center point in svg coordinates for polar charts.
     * **This prop should not be set manually.**
     */
-  var origin: js.UndefOr[AnonX] = js.native
+  var origin: js.UndefOr[X] = js.native
   /**
     * Victory components can pass a boolean polar prop to specify whether a label is part of a polar chart.
     * **This prop should not be set manually.**
@@ -294,7 +294,7 @@ object VictoryLabelProps {
         ret
     }
     @scala.inline
-    def withOrigin(value: AnonX): Self = {
+    def withOrigin(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("origin")(value.asInstanceOf[js.Any])
         ret

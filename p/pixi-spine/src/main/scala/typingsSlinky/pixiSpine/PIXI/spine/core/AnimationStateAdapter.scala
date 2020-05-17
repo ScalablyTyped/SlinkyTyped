@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("PIXI.spine.core.AnimationStateAdapter")
 @js.native
-abstract class AnimationStateAdapter () extends AnimationStateListener {
+trait AnimationStateAdapter extends AnimationStateListener {
   @JSName("complete")
   def complete_MAnimationStateAdapter(entry: TrackEntry): Unit = js.native
   @JSName("dispose")
@@ -19,5 +18,64 @@ abstract class AnimationStateAdapter () extends AnimationStateListener {
   def interrupt_MAnimationStateAdapter(entry: TrackEntry): Unit = js.native
   @JSName("start")
   def start_MAnimationStateAdapter(entry: TrackEntry): Unit = js.native
+}
+
+object AnimationStateAdapter {
+  @scala.inline
+  def apply(
+    complete: TrackEntry => Unit,
+    dispose: TrackEntry => Unit,
+    end: TrackEntry => Unit,
+    event: (TrackEntry, Event) => Unit,
+    interrupt: TrackEntry => Unit,
+    start: TrackEntry => Unit
+  ): AnimationStateAdapter = {
+    val __obj = js.Dynamic.literal(complete = js.Any.fromFunction1(complete), dispose = js.Any.fromFunction1(dispose), end = js.Any.fromFunction1(end), event = js.Any.fromFunction2(event), interrupt = js.Any.fromFunction1(interrupt), start = js.Any.fromFunction1(start))
+    __obj.asInstanceOf[AnimationStateAdapter]
+  }
+  @scala.inline
+  implicit class AnimationStateAdapterOps[Self <: AnimationStateAdapter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withComplete(value: TrackEntry => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("complete")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDispose(value: TrackEntry => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispose")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEnd(value: TrackEntry => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("end")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withEvent(value: (TrackEntry, Event) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withInterrupt(value: TrackEntry => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("interrupt")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withStart(value: TrackEntry => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

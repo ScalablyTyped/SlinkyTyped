@@ -1,13 +1,13 @@
 package typingsSlinky.firebaseStorage.mod.firebaseAppTypesAugmentingMod
 
-import typingsSlinky.firebaseStorage.AnonCall
+import typingsSlinky.firebaseStorage.anon.Call
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait FirebaseNamespace extends js.Object {
-  var storage: js.UndefOr[AnonCall] = js.native
+  var storage: js.UndefOr[Call] = js.native
 }
 
 object FirebaseNamespace {
@@ -23,7 +23,7 @@ object FirebaseNamespace {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withStorage(value: AnonCall): Self = {
+    def withStorage(value: Call): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("storage")(value.asInstanceOf[js.Any])
         ret

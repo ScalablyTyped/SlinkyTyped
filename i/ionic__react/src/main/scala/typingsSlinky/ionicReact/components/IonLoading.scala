@@ -4,11 +4,11 @@ import org.scalajs.dom.raw.CustomEvent
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonLoadingElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonLoadingElement
 import typingsSlinky.ionicCore.mod.Mode
 import typingsSlinky.ionicCore.oldAnimationAnimationInterfaceMod.Animation
 import typingsSlinky.ionicCore.spinnerConfigsMod.SpinnerTypes
-import typingsSlinky.ionicReact.LoadingOptionsReactContro
+import typingsSlinky.ionicReact.anon.LoadingOptionsReactContro
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +22,7 @@ object IonLoading {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, Ref[js.Any]] {
     @scala.inline
     def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,8 +1,8 @@
 package typingsSlinky.oracleOraclejet.ojpictochartMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.Anon14
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
+import typingsSlinky.oracleOraclejet.anon.`14`
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.all
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.alphaFade
@@ -49,9 +49,9 @@ trait ojPictoChartSettablePropertiesLenient[K, D]
   var rowHeight: js.UndefOr[Double] = js.native
   var selection: js.UndefOr[js.Array[K]] = js.native
   var selectionMode: js.UndefOr[single | multiple | none] = js.native
-  var tooltip: js.UndefOr[Anon14[K]] = js.native
+  var tooltip: js.UndefOr[`14`[K]] = js.native
   var trackResize: js.UndefOr[on | off] = js.native
-  var translations: js.UndefOr[AnonLabelAndValue] = js.native
+  var translations: js.UndefOr[LabelAndValue] = js.native
 }
 
 object ojPictoChartSettablePropertiesLenient {
@@ -295,7 +295,7 @@ object ojPictoChartSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTooltip(value: Anon14[K]): Self[K, D] = {
+    def withTooltip(value: `14`[K]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
@@ -319,7 +319,7 @@ object ojPictoChartSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelAndValue): Self[K, D] = {
+    def withTranslations(value: LabelAndValue): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

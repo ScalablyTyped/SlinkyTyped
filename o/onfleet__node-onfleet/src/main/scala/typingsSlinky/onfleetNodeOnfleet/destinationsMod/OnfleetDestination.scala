@@ -1,6 +1,6 @@
 package typingsSlinky.onfleetNodeOnfleet.destinationsMod
 
-import typingsSlinky.onfleetNodeOnfleet.AnonApartment
+import typingsSlinky.onfleetNodeOnfleet.anon.Apartment
 import typingsSlinky.onfleetNodeOnfleet.metadataMod.OnfleetMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait OnfleetDestination extends js.Object {
-  var address: AnonApartment = js.native
+  var address: Apartment = js.native
   var id: String = js.native
   var location: Location = js.native
   var metadata: js.Array[OnfleetMetadata] = js.native
@@ -20,7 +20,7 @@ trait OnfleetDestination extends js.Object {
 object OnfleetDestination {
   @scala.inline
   def apply(
-    address: AnonApartment,
+    address: Apartment,
     id: String,
     location: Location,
     metadata: js.Array[OnfleetMetadata],
@@ -38,7 +38,7 @@ object OnfleetDestination {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddress(value: AnonApartment): Self = {
+    def withAddress(value: Apartment): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("address")(value.asInstanceOf[js.Any])
         ret

@@ -2,8 +2,8 @@ package typingsSlinky.reactMapGl.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactMapGl.AnonHeight
-import typingsSlinky.reactMapGl.AnonMaxPitch
+import typingsSlinky.reactMapGl.anon.Height
+import typingsSlinky.reactMapGl.anon.MaxPitch
 import typingsSlinky.reactMapGl.mod.MapError
 import typingsSlinky.reactMapGl.mod.MapLoadEvent
 import typingsSlinky.reactMapGl.mod.MapRequest
@@ -53,7 +53,7 @@ object StaticMap {
     @scala.inline
     def onLoad(value: /* event */ MapLoadEvent => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
     @scala.inline
-    def onResize(value: /* dimensions */ AnonHeight => Unit): this.type = set("onResize", js.Any.fromFunction1(value))
+    def onResize(value: /* dimensions */ Height => Unit): this.type = set("onResize", js.Any.fromFunction1(value))
     @scala.inline
     def pitch(value: Double): this.type = set("pitch", value.asInstanceOf[js.Any])
     @scala.inline
@@ -71,7 +71,7 @@ object StaticMap {
     @scala.inline
     def viewState(value: ViewState): this.type = set("viewState", value.asInstanceOf[js.Any])
     @scala.inline
-    def visibilityConstraints(value: AnonMaxPitch): this.type = set("visibilityConstraints", value.asInstanceOf[js.Any])
+    def visibilityConstraints(value: MaxPitch): this.type = set("visibilityConstraints", value.asInstanceOf[js.Any])
     @scala.inline
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])
     @scala.inline

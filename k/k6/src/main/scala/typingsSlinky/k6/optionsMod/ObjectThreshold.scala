@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ObjectThreshold extends js.Object {
+trait ObjectThreshold extends Threshold {
   /** Abort test if threshold violated. */
   var abortOnFail: js.UndefOr[Boolean] = js.native
   /** Duration to delay evaluation. Enables collecting additional metrics. */

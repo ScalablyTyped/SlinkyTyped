@@ -16,8 +16,8 @@ package object typesMod {
   ]
   type ReportData = js.Any
   type RunJSFunc = js.Function1[
-    /* o */ typingsSlinky.docxTemplates.AnonCtx, 
-    typingsSlinky.docxTemplates.AnonModifiedSandbox
+    /* o */ typingsSlinky.docxTemplates.anon.Ctx, 
+    typingsSlinky.docxTemplates.anon.ModifiedSandbox
   ]
   type VarValue = js.Any
 }

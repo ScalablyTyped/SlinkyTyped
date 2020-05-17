@@ -1,6 +1,6 @@
 package typingsSlinky.ckeditorCkeditor5Engine.mod.view
 
-import typingsSlinky.ckeditorCkeditor5Engine.AnonShallow
+import typingsSlinky.ckeditorCkeditor5Engine.anon.Shallow
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("@ckeditor/ckeditor5-engine", "view.TreeWalker")
 @js.native
 class TreeWalker protected () extends js.Object {
-  def this(options: AnonShallow) = this()
+  def this(options: Shallow) = this()
   val boundaries: Range = js.native
   val direction: TreeWalkerDirection = js.native
   val ignoreElementEnd: Boolean = js.native

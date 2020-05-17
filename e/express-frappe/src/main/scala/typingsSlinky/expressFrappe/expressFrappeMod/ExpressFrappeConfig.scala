@@ -3,8 +3,8 @@ package typingsSlinky.expressFrappe.expressFrappeMod
 import typingsSlinky.cors.mod.CorsOptions
 import typingsSlinky.express.mod.ErrorRequestHandler
 import typingsSlinky.express.mod.RequestHandler
-import typingsSlinky.expressFrappe.AnonJson
-import typingsSlinky.expressFrappe.AnonOptions
+import typingsSlinky.expressFrappe.anon.Json
+import typingsSlinky.expressFrappe.anon.Options
 import typingsSlinky.expressRouters.expressRoutersMod.RouteConfig
 import typingsSlinky.expressRouters.expressRoutersMod.RouteConfigAlternative
 import typingsSlinky.expressServeStaticCore.mod.NextFunction
@@ -18,14 +18,14 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait ExpressFrappeConfig extends js.Object {
-  var bodyParser: js.UndefOr[Boolean | AnonJson] = js.native
+  var bodyParser: js.UndefOr[Boolean | Json] = js.native
   var cors: js.UndefOr[Boolean | CorsOptions] = js.native
   var errorHandler: js.UndefOr[ErrorRequestHandler[ParamsDictionary, _, _, Query]] = js.native
   var io: js.UndefOr[ExpressFrappeSocketIOConfig] = js.native
   var middleware: js.UndefOr[js.Array[RequestHandler[ParamsDictionary, _, _, Query]]] = js.native
   var morgan: js.UndefOr[Boolean] = js.native
   var routes: js.UndefOr[js.Array[RouteConfig] | RouteConfigAlternative] = js.native
-  var static: js.UndefOr[String | AnonOptions] = js.native
+  var static: js.UndefOr[String | Options] = js.native
 }
 
 object ExpressFrappeConfig {
@@ -41,7 +41,7 @@ object ExpressFrappeConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBodyParser(value: Boolean | AnonJson): Self = {
+    def withBodyParser(value: Boolean | Json): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bodyParser")(value.asInstanceOf[js.Any])
         ret
@@ -127,7 +127,7 @@ object ExpressFrappeConfig {
         ret
     }
     @scala.inline
-    def withStatic(value: String | AnonOptions): Self = {
+    def withStatic(value: String | Options): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("static")(value.asInstanceOf[js.Any])
         ret

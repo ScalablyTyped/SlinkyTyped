@@ -1,5 +1,7 @@
 package typingsSlinky.asyncSema
 
+import typingsSlinky.asyncSema.anon.Capacity
+import typingsSlinky.asyncSema.anon.TimeUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +12,7 @@ object mod extends js.Object {
   @js.native
   class Sema protected () extends js.Object {
     def this(nr: Double) = this()
-    def this(nr: Double, hasInitFnPauseFnResumeFnCapacity: AnonCapacity) = this()
+    def this(nr: Double, hasInitFnPauseFnResumeFnCapacity: Capacity) = this()
     var free: js.Any = js.native
     var noTokens: js.Any = js.native
     var nrTokens: js.Any = js.native
@@ -27,6 +29,6 @@ object mod extends js.Object {
   }
   
   def RateLimit(rps: Double): js.Function0[js.Promise[Unit]] = js.native
-  def RateLimit(rps: Double, hasTimeUnitUniformDistribution: AnonTimeUnit): js.Function0[js.Promise[Unit]] = js.native
+  def RateLimit(rps: Double, hasTimeUnitUniformDistribution: TimeUnit): js.Function0[js.Promise[Unit]] = js.native
 }
 

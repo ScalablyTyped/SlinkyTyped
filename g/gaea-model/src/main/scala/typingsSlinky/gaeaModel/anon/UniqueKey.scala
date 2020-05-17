@@ -1,0 +1,34 @@
+package typingsSlinky.gaeaModel.anon
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait UniqueKey extends js.Object {
+  // 唯一 key，用来实例化组件
+  var uniqueKey: String = js.native
+}
+
+object UniqueKey {
+  @scala.inline
+  def apply(uniqueKey: String): UniqueKey = {
+    val __obj = js.Dynamic.literal(uniqueKey = uniqueKey.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UniqueKey]
+  }
+  @scala.inline
+  implicit class UniqueKeyOps[Self <: UniqueKey] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withUniqueKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("uniqueKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ContentColumns
   extends ContentBase
-     with _Content {
+     with Content {
   var columns: js.Array[Column] = js.native
 }
 

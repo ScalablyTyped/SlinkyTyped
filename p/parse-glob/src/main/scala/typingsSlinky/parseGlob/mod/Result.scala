@@ -1,7 +1,7 @@
 package typingsSlinky.parseGlob.mod
 
-import typingsSlinky.parseGlob.AnonBasename
-import typingsSlinky.parseGlob.AnonBraces
+import typingsSlinky.parseGlob.anon.Basename
+import typingsSlinky.parseGlob.anon.Braces
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait Result extends js.Object {
   /**
     * An object with boolean information about the glob.
     */
-  var is: AnonBraces = js.native
+  var is: Braces = js.native
   /**
     * A copy of the original, unmodified glob pattern.
     */
@@ -27,12 +27,12 @@ trait Result extends js.Object {
   /**
     * File path segments.
     */
-  var path: AnonBasename = js.native
+  var path: Basename = js.native
 }
 
 object Result {
   @scala.inline
-  def apply(base: String, glob: String, is: AnonBraces, orig: String, path: AnonBasename): Result = {
+  def apply(base: String, glob: String, is: Braces, orig: String, path: Basename): Result = {
     val __obj = js.Dynamic.literal(base = base.asInstanceOf[js.Any], glob = glob.asInstanceOf[js.Any], is = is.asInstanceOf[js.Any], orig = orig.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
     __obj.asInstanceOf[Result]
   }
@@ -55,7 +55,7 @@ object Result {
         ret
     }
     @scala.inline
-    def withIs(value: AnonBraces): Self = {
+    def withIs(value: Braces): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("is")(value.asInstanceOf[js.Any])
         ret
@@ -67,7 +67,7 @@ object Result {
         ret
     }
     @scala.inline
-    def withPath(value: AnonBasename): Self = {
+    def withPath(value: Basename): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
         ret

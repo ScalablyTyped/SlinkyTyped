@@ -1,6 +1,6 @@
 package typingsSlinky.next.serverRouterMod
 
-import typingsSlinky.next.AnonNewUrl
+import typingsSlinky.next.anon.NewUrl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("next/dist/next-server/server/router", "prepareDestination")
 @js.native
 object prepareDestination extends js.Object {
-  def apply(destination: String, params: Params): AnonNewUrl = js.native
-  def apply(destination: String, params: Params, isRedirect: Boolean): AnonNewUrl = js.native
+  def apply(destination: String, params: Params): NewUrl = js.native
+  def apply(destination: String, params: Params, isRedirect: Boolean): NewUrl = js.native
 }
 

@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("SP.WebInformation")
 @js.native
-class WebInformation () extends ClientObject {
+trait WebInformation extends ClientObject {
   def get_configuration(): Double = js.native
   def get_created(): js.Date = js.native
   def get_description(): String = js.native

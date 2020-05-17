@@ -1,5 +1,6 @@
 package typingsSlinky.baseui.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
@@ -24,7 +25,6 @@ import typingsSlinky.baseui.phoneInputMod.PhoneInputLiteProps
 import typingsSlinky.baseui.phoneInputMod.PhoneInputOverrides
 import typingsSlinky.baseui.selectMod.OnChangeParams
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -93,7 +93,7 @@ object PhoneInputLite {
     @scala.inline
     def onBlur(value: SyntheticFocusEvent[HTMLInputElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
-    def onChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def onCountryChange(value: /* event */ OnChangeParams => _): this.type = set("onCountryChange", js.Any.fromFunction1(value))
     @scala.inline
@@ -105,7 +105,7 @@ object PhoneInputLite {
     @scala.inline
     def onKeyUp(value: SyntheticKeyboardEvent[HTMLInputElement] => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
     @scala.inline
-    def onTextChange(value: /* event */ SyntheticEvent[Event_, HTMLInputElement] => _): this.type = set("onTextChange", js.Any.fromFunction1(value))
+    def onTextChange(value: /* event */ SyntheticEvent[Event, HTMLInputElement] => _): this.type = set("onTextChange", js.Any.fromFunction1(value))
     @scala.inline
     def overrides(value: PhoneInputOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline

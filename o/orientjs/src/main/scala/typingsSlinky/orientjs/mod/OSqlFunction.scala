@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait OSqlFunction extends _OSqlExpression {
+trait OSqlFunction extends OSqlExpression {
   var abs: AbsSqlFunction = js.native
   var avg: AbsSqlFunction = js.native
   var db: ODB = js.native

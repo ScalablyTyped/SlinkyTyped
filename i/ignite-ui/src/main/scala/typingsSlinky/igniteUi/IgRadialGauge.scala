@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -401,7 +401,7 @@ object IgRadialGauge {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAlignLabel(value: (/* event */ Event_, /* ui */ AlignLabelEventUIParam) => Unit): Self = {
+    def withAlignLabel(value: (/* event */ Event, /* ui */ AlignLabelEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("alignLabel")(js.Any.fromFunction2(value))
         ret
@@ -569,7 +569,7 @@ object IgRadialGauge {
         ret
     }
     @scala.inline
-    def withFormatLabel(value: (/* event */ Event_, /* ui */ FormatLabelEventUIParam) => Unit): Self = {
+    def withFormatLabel(value: (/* event */ Event, /* ui */ FormatLabelEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formatLabel")(js.Any.fromFunction2(value))
         ret
@@ -1241,7 +1241,7 @@ object IgRadialGauge {
         ret
     }
     @scala.inline
-    def withValueChanged(value: (/* event */ Event_, /* ui */ ValueChangedEventUIParam) => Unit): Self = {
+    def withValueChanged(value: (/* event */ Event, /* ui */ ValueChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("valueChanged")(js.Any.fromFunction2(value))
         ret

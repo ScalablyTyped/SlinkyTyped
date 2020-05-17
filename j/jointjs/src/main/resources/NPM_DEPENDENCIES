@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "jointjs" : "3.1.1"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "jointjs" : "3.1.1"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

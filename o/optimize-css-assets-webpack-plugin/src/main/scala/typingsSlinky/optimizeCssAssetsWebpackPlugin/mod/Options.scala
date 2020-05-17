@@ -1,6 +1,6 @@
 package typingsSlinky.optimizeCssAssetsWebpackPlugin.mod
 
-import typingsSlinky.optimizeCssAssetsWebpackPlugin.AnonProcess
+import typingsSlinky.optimizeCssAssetsWebpackPlugin.anon.Process
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ trait Options extends js.Object {
     *
     * @default cssnano
     */
-  var cssProcessor: js.UndefOr[AnonProcess] = js.native
+  var cssProcessor: js.UndefOr[Process] = js.native
   /**
     * The options passed to the `cssProcessor`.
     *
@@ -81,7 +81,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withCssProcessor(value: AnonProcess): Self = {
+    def withCssProcessor(value: Process): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cssProcessor")(value.asInstanceOf[js.Any])
         ret

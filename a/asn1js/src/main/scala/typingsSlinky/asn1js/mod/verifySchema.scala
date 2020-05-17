@@ -1,6 +1,6 @@
 package typingsSlinky.asn1js.mod
 
-import typingsSlinky.asn1js.AnonResult
+import typingsSlinky.asn1js.anon.Result
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +15,6 @@ object verifySchema extends js.Object {
     * @param {*} inputSchema Input ASN.1 schema to verify against to
     * @returns {{ verified: boolean, result?: any }}
     */
-  def apply(inputBuffer: js.typedarray.ArrayBuffer, inputSchema: js.Any): AnonResult = js.native
+  def apply(inputBuffer: js.typedarray.ArrayBuffer, inputSchema: js.Any): Result = js.native
 }
 

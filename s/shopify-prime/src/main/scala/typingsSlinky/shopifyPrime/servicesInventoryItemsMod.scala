@@ -1,10 +1,10 @@
 package typingsSlinky.shopifyPrime
 
+import org.scalajs.dom.raw.Location
 import typingsSlinky.shopifyPrime.infrastructureMod.BaseService
 import typingsSlinky.shopifyPrime.inventoryItemMod.InventoryItem
 import typingsSlinky.shopifyPrime.inventoryItemsMod.InventoryItemListOptions
 import typingsSlinky.shopifyPrime.optionsBaseMod.FieldOptions
-import typingsSlinky.std.Location_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,8 +20,8 @@ object servicesInventoryItemsMod extends js.Object {
       * @param id Id of the inventory item being retrieved.
       * @param options Options for filtering the result.
       */
-    def get(id: Double): js.Promise[Location_] = js.native
-    def get(id: Double, options: FieldOptions): js.Promise[Location_] = js.native
+    def get(id: Double): js.Promise[Location] = js.native
+    def get(id: Double, options: FieldOptions): js.Promise[Location] = js.native
     /**
       * Gets a list of up to 250 of the shop's inventory items.
       * @param options Options for filtering the result.

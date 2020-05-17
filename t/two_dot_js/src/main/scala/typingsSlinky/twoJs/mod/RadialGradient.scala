@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("two.js", "RadialGradient")
 @js.native
-class RadialGradient protected () extends _Color {
+class RadialGradient protected () extends Color {
   def this(x: Double, y: Double, radius: Double, stops: js.Array[Stop]) = this()
   def this(x: Double, y: Double, radius: Double, stops: js.Array[Stop], fx: Double) = this()
   def this(x: Double, y: Double, radius: Double, stops: js.Array[Stop], fx: Double, fy: Double) = this()

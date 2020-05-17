@@ -4,17 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Microsoft.Maps.HeatMapLayer")
 @js.native
-class HeatMapLayer protected () extends IDataLayer {
-  /**
-    * @constructor
-    * @requires The Microsoft.Maps.Heatmap module.
-    * @param locations Set of locations to visualize as a heat map.
-    * @param options Options for customizing how the heat map is rendered.
-    */
-  def this(locations: js.Array[Location | Pushpin]) = this()
-  def this(locations: js.Array[Location | Pushpin], options: IHeatMapLayerOptions) = this()
+trait HeatMapLayer extends IDataLayer {
   /** Disposes the heat map layer. */
   def dispose(): Unit = js.native
   /**
@@ -47,5 +38,72 @@ class HeatMapLayer protected () extends IDataLayer {
     * Shows the heat map layer.
     */
   def show(): Unit = js.native
+}
+
+object HeatMapLayer {
+  @scala.inline
+  def apply(
+    clear: () => Unit,
+    dispose: () => Unit,
+    getVisible: () => Boolean,
+    hide: () => Unit,
+    setLocations: js.Array[Location | Pushpin] => Unit,
+    setOptions: IHeatMapLayerOptions => Unit,
+    setVisible: Boolean => Unit,
+    show: () => Unit
+  ): HeatMapLayer = {
+    val __obj = js.Dynamic.literal(clear = js.Any.fromFunction0(clear), dispose = js.Any.fromFunction0(dispose), getVisible = js.Any.fromFunction0(getVisible), hide = js.Any.fromFunction0(hide), setLocations = js.Any.fromFunction1(setLocations), setOptions = js.Any.fromFunction1(setOptions), setVisible = js.Any.fromFunction1(setVisible), show = js.Any.fromFunction0(show))
+    __obj.asInstanceOf[HeatMapLayer]
+  }
+  @scala.inline
+  implicit class HeatMapLayerOps[Self <: HeatMapLayer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDispose(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("dispose")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetVisible(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getVisible")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHide(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hide")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetLocations(value: js.Array[Location | Pushpin] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setLocations")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetOptions(value: IHeatMapLayerOptions => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setOptions")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetVisible(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setVisible")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withShow(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("show")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

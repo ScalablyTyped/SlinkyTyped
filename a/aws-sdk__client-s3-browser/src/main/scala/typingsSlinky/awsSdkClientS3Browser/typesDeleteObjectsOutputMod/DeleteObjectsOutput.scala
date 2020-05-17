@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdkClientS3Browser.typesDeleteObjectsOutputMod
 
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.requester_
-import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Browser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientS3Browser.typesDeletedObjectMod.UnmarshalledDeletedObject
 import typingsSlinky.awsSdkClientS3Browser.typesErrorMod.UnmarshalledError
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait DeleteObjectsOutput
   extends MetadataBearer
-     with _OutputTypesUnion {
+     with OutputTypesUnion {
   /**
     * _DeletedObjects shape
     */

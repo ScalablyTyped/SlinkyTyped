@@ -31,7 +31,6 @@ import typingsSlinky.reactRouterDom.mod.BrowserRouterProps
 import typingsSlinky.reactRouterDom.mod.HashRouterProps
 import typingsSlinky.reactRouterDom.mod.LinkProps
 import typingsSlinky.reactRouterDom.mod.NavLinkProps
-import typingsSlinky.reactRouterRedux.AnonRouter
 import typingsSlinky.reactRouterRedux.mod.ConnectedRouterProps
 import typingsSlinky.reactRouterRedux.mod.RouterAction
 import typingsSlinky.reactRouterRedux.mod.RouterState
@@ -143,7 +142,7 @@ object routerMod extends js.Object {
     val CALL_HISTORY_METHOD: /* "@@router/CALL_HISTORY_METHOD" */ String = js.native
     val LOCATION_CHANGE: /* "@@router/LOCATION_CHANGE" */ String = js.native
     val routerReducer: Reducer[RouterState, AnyAction] = js.native
-    def createMatchSelector(path: String): js.Function1[/* state */ AnonRouter, `match`[js.Object] | Null] = js.native
+    def createMatchSelector(path: String): js.Function1[/* state */ typingsSlinky.reactRouterRedux.anon.Router, `match`[js.Object] | Null] = js.native
     def go(n: Double): RouterAction = js.native
     def goBack(): RouterAction = js.native
     def goForward(): RouterAction = js.native

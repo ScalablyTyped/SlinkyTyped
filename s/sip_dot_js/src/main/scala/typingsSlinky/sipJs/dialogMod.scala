@@ -1,5 +1,6 @@
 package typingsSlinky.sipJs
 
+import typingsSlinky.sipJs.anon.Cseq
 import typingsSlinky.sipJs.dialogStateMod.DialogState
 import typingsSlinky.sipJs.messagesMod.IncomingRequestMessage
 import typingsSlinky.sipJs.messagesMod.IncomingResponseMessage
@@ -85,7 +86,7 @@ object dialogMod extends js.Object {
       * @param method - Outgoing request method.
       */
     def createOutgoingRequestMessage(method: String): OutgoingRequestMessage = js.native
-    def createOutgoingRequestMessage(method: String, options: AnonCseq): OutgoingRequestMessage = js.native
+    def createOutgoingRequestMessage(method: String, options: Cseq): OutgoingRequestMessage = js.native
     /** Destructor. */
     def dispose(): Unit = js.native
     /**

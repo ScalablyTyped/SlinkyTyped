@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LineLayout
   extends Layout
-     with _AnyLayout {
+     with AnyLayout {
   var `line-cap`: js.UndefOr[butt | round | square] = js.native
   var `line-join`: js.UndefOr[bevel | round | miter | Expression] = js.native
   var `line-miter-limit`: js.UndefOr[Double | Expression] = js.native

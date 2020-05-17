@@ -1,9 +1,8 @@
 package typingsSlinky.rpio
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.node.Buffer
-import typingsSlinky.rpio.RPIO.CallbackFunction
-import typingsSlinky.rpio.RPIO.Options
+import typingsSlinky.rpio.RPIO_.CallbackFunction
+import typingsSlinky.rpio.RPIO_.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -287,8 +286,4 @@ trait Rpio extends js.Object {
     */
   def writepad(group: Double, control: Double): Unit = js.native
 }
-
-@JSGlobal("rpio")
-@js.native
-object rpio extends TopLevel[Rpio]
 

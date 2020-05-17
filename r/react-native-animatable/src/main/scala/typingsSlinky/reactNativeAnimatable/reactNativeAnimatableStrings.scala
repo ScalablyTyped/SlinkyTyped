@@ -2,7 +2,7 @@ package typingsSlinky.reactNativeAnimatable
 
 import typingsSlinky.reactNativeAnimatable.mod.Animation
 import typingsSlinky.reactNativeAnimatable.mod.Direction
-import typingsSlinky.reactNativeAnimatable.mod._Easing
+import typingsSlinky.reactNativeAnimatable.mod.Easing
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -48,88 +48,88 @@ object reactNativeAnimatableStrings {
   sealed trait bounceOutUp extends Animation
   
   @js.native
-  sealed trait ease extends _Easing
+  sealed trait ease extends Easing
   
   @js.native
-  sealed trait `ease-in` extends _Easing
+  sealed trait `ease-in` extends Easing
   
   @js.native
-  sealed trait `ease-in-back` extends _Easing
+  sealed trait `ease-in-back` extends Easing
   
   @js.native
-  sealed trait `ease-in-circ` extends _Easing
+  sealed trait `ease-in-circ` extends Easing
   
   @js.native
-  sealed trait `ease-in-cubic` extends _Easing
+  sealed trait `ease-in-cubic` extends Easing
   
   @js.native
-  sealed trait `ease-in-expo` extends _Easing
+  sealed trait `ease-in-expo` extends Easing
   
   @js.native
-  sealed trait `ease-in-out` extends _Easing
+  sealed trait `ease-in-out` extends Easing
   
   @js.native
-  sealed trait `ease-in-out-back` extends _Easing
+  sealed trait `ease-in-out-back` extends Easing
   
   @js.native
-  sealed trait `ease-in-out-circ` extends _Easing
+  sealed trait `ease-in-out-circ` extends Easing
   
   @js.native
-  sealed trait `ease-in-out-cubic` extends _Easing
+  sealed trait `ease-in-out-cubic` extends Easing
   
   @js.native
-  sealed trait `ease-in-out-expo` extends _Easing
+  sealed trait `ease-in-out-expo` extends Easing
   
   @js.native
-  sealed trait `ease-in-out-quad` extends _Easing
+  sealed trait `ease-in-out-quad` extends Easing
   
   @js.native
-  sealed trait `ease-in-out-quart` extends _Easing
+  sealed trait `ease-in-out-quart` extends Easing
   
   @js.native
-  sealed trait `ease-in-out-quint` extends _Easing
+  sealed trait `ease-in-out-quint` extends Easing
   
   @js.native
-  sealed trait `ease-in-out-sine` extends _Easing
+  sealed trait `ease-in-out-sine` extends Easing
   
   @js.native
-  sealed trait `ease-in-quad` extends _Easing
+  sealed trait `ease-in-quad` extends Easing
   
   @js.native
-  sealed trait `ease-in-quart` extends _Easing
+  sealed trait `ease-in-quart` extends Easing
   
   @js.native
-  sealed trait `ease-in-quint` extends _Easing
+  sealed trait `ease-in-quint` extends Easing
   
   @js.native
-  sealed trait `ease-in-sine` extends _Easing
+  sealed trait `ease-in-sine` extends Easing
   
   @js.native
-  sealed trait `ease-out` extends _Easing
+  sealed trait `ease-out` extends Easing
   
   @js.native
-  sealed trait `ease-out-back` extends _Easing
+  sealed trait `ease-out-back` extends Easing
   
   @js.native
-  sealed trait `ease-out-circ` extends _Easing
+  sealed trait `ease-out-circ` extends Easing
   
   @js.native
-  sealed trait `ease-out-cubic` extends _Easing
+  sealed trait `ease-out-cubic` extends Easing
   
   @js.native
-  sealed trait `ease-out-expo` extends _Easing
+  sealed trait `ease-out-expo` extends Easing
   
   @js.native
-  sealed trait `ease-out-quad` extends _Easing
+  sealed trait `ease-out-quad` extends Easing
   
   @js.native
-  sealed trait `ease-out-quart` extends _Easing
+  sealed trait `ease-out-quart` extends Easing
   
   @js.native
-  sealed trait `ease-out-quint` extends _Easing
+  sealed trait `ease-out-quint` extends Easing
   
   @js.native
-  sealed trait `ease-out-sine` extends _Easing
+  sealed trait `ease-out-sine` extends Easing
   
   @js.native
   sealed trait fadeIn extends Animation
@@ -213,7 +213,7 @@ object reactNativeAnimatableStrings {
   sealed trait lightSpeedOut extends Animation
   
   @js.native
-  sealed trait linear extends _Easing
+  sealed trait linear extends Easing
   
   @js.native
   sealed trait normal extends Direction

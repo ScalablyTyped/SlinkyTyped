@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientCompute.gapi.client.compute
 
-import typingsSlinky.gapiClientCompute.AnonCode
+import typingsSlinky.gapiClientCompute.anon.Code
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -53,7 +53,7 @@ trait Route extends js.Object {
   /** A list of instance tags to which this route applies. */
   var tags: js.UndefOr[js.Array[String]] = js.native
   /** [Output Only] If potential misconfigurations are detected for this route, this field will be populated with warning messages. */
-  var warnings: js.UndefOr[js.Array[AnonCode]] = js.native
+  var warnings: js.UndefOr[js.Array[Code]] = js.native
 }
 
 object Route {
@@ -261,7 +261,7 @@ object Route {
         ret
     }
     @scala.inline
-    def withWarnings(value: js.Array[AnonCode]): Self = {
+    def withWarnings(value: js.Array[Code]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("warnings")(value.asInstanceOf[js.Any])
         ret

@@ -8,5 +8,12 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.typescript.mod.SyntaxKind.PlusToken
   - typingsSlinky.typescript.mod.SyntaxKind.MinusToken
 */
-trait AdditiveOperator extends js.Object
+trait AdditiveOperator extends AdditiveOperatorOrHigher
+
+object AdditiveOperator {
+  @scala.inline
+  implicit def apply(value: typingsSlinky.typescript.mod.SyntaxKind.MinusToken): AdditiveOperator = value.asInstanceOf[AdditiveOperator]
+  @scala.inline
+  implicit def apply(value: typingsSlinky.typescript.mod.SyntaxKind.PlusToken): AdditiveOperator = value.asInstanceOf[AdditiveOperator]
+}
 

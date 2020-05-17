@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonTypeName
+import typingsSlinky.astTypes.anon.TypeName
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.kindsMod.TSQualifiedNameKind
 import typingsSlinky.astTypes.kindsMod.TSTypeParameterInstantiationKind
@@ -15,6 +15,6 @@ trait TSTypeReferenceBuilder extends js.Object {
   def apply(typeName: IdentifierKind, typeParameters: TSTypeParameterInstantiationKind): TSTypeReference = js.native
   def apply(typeName: TSQualifiedNameKind): TSTypeReference = js.native
   def apply(typeName: TSQualifiedNameKind, typeParameters: TSTypeParameterInstantiationKind): TSTypeReference = js.native
-  def from(params: AnonTypeName): TSTypeReference = js.native
+  def from(params: TypeName): TSTypeReference = js.native
 }
 

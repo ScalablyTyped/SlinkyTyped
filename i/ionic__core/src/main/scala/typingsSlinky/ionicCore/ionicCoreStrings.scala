@@ -10,7 +10,7 @@ import typingsSlinky.ionicCore.mod.Side
 import typingsSlinky.ionicCore.mod.TextFieldTypes
 import typingsSlinky.ionicCore.navInterfaceMod.NavDirection
 import typingsSlinky.ionicCore.platformMod.Platforms
-import typingsSlinky.ionicCore.rangeInterfaceMod._KnobName
+import typingsSlinky.ionicCore.rangeInterfaceMod.KnobName
 import typingsSlinky.ionicCore.segmentSegmentInterfaceMod.SegmentButtonLayout
 import typingsSlinky.ionicCore.selectInterfaceMod.SelectInterface
 import typingsSlinky.ionicCore.spinnerConfigsMod.SpinnerTypes
@@ -22,10 +22,10 @@ import scala.scalajs.js.annotation._
 
 object ionicCoreStrings {
   @js.native
-  sealed trait A extends _KnobName
+  sealed trait A extends KnobName
   
   @js.native
-  sealed trait B extends _KnobName
+  sealed trait B extends KnobName
   
   @js.native
   sealed trait _forceStatusbarPadding extends js.Object

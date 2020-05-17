@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LookupTransform extends _Transforms {
+trait LookupTransform extends Transforms {
   var as: js.UndefOr[(js.Array[String | SignalRef]) | SignalRef] = js.native
   var default: js.UndefOr[js.Any] = js.native
   var fields: js.Array[FieldRef] | SignalRef = js.native

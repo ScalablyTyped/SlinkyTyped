@@ -1,6 +1,6 @@
 package typingsSlinky.angularCompiler.t2ApiMod
 
-import typingsSlinky.angularCompiler.AnonDirective
+import typingsSlinky.angularCompiler.anon.Directive
 import typingsSlinky.angularCompiler.astMod.AST
 import typingsSlinky.angularCompiler.r3AstMod.BoundAttribute
 import typingsSlinky.angularCompiler.r3AstMod.BoundEvent
@@ -54,7 +54,7 @@ trait BoundTarget[DirectiveT /* <: DirectiveMeta */] extends js.Object {
     * For a given `Reference`, get the reference's target - either an `Element`, a `Template`, or
     * a directive on a particular node.
     */
-  def getReferenceTarget(ref: Reference): AnonDirective[DirectiveT] | Element | Template | Null = js.native
+  def getReferenceTarget(ref: Reference): Directive[DirectiveT] | Element | Template | Null = js.native
   /**
     * Given a particular `Reference` or `Variable`, get the `Template` which created it.
     *

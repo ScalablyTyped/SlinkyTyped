@@ -7,18 +7,33 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientTreeView.ExpandedChanging event.
   */
-@JSGlobal("ASPxClientTreeViewNodeCancelEventArgs")
 @js.native
-class ASPxClientTreeViewNodeCancelEventArgs protected () extends ASPxClientProcessingModeCancelEventArgs {
-  /**
-    * Initializes a new object of the ASPxClientTreeViewNodeCancelEventArgs type with the specified settings.
-    * @param processOnServer true to process the event on the server side; false to completely handle it on the client side.
-    * @param node An ASPxClientTreeViewNode object that represents a node related to the event.
-    */
-  def this(processOnServer: Boolean, node: ASPxClientTreeViewNode) = this()
+trait ASPxClientTreeViewNodeCancelEventArgs extends ASPxClientProcessingModeCancelEventArgs {
   /**
     * Gets a node object related to the event.
     */
   var node: ASPxClientTreeViewNode = js.native
+}
+
+object ASPxClientTreeViewNodeCancelEventArgs {
+  @scala.inline
+  def apply(cancel: Boolean, node: ASPxClientTreeViewNode, processOnServer: Boolean): ASPxClientTreeViewNodeCancelEventArgs = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any], processOnServer = processOnServer.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientTreeViewNodeCancelEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientTreeViewNodeCancelEventArgsOps[Self <: ASPxClientTreeViewNodeCancelEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNode(value: ASPxClientTreeViewNode): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("node")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

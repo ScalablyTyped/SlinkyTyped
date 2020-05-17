@@ -1,9 +1,10 @@
 package typingsSlinky.materialDataTable
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import typingsSlinky.materialBase.foundationMod.MDCFoundation
 import typingsSlinky.materialDataTable.adapterMod.MDCDataTableAdapter
-import typingsSlinky.std.Event_
+import typingsSlinky.materialDataTable.anon.PartialMDCDataTableAdapte
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +30,7 @@ object foundationMod extends js.Object {
     /**
       * Handles change event originated from row checkboxes.
       */
-    def handleRowCheckboxChange(event: Event_): Unit = js.native
+    def handleRowCheckboxChange(event: Event): Unit = js.native
     /**
       * Re-initializes header row checkbox and row checkboxes when selectable rows are added or removed from table.
       * Use this if registering checkbox is synchronous.

@@ -1,6 +1,7 @@
 package typingsSlinky.typedGithubApi
 
 import typingsSlinky.moment.mod.Moment
+import typingsSlinky.typedGithubApi.anon.Admin
 import typingsSlinky.typedGithubApi.githubRefMod.OptionsOrRef
 import typingsSlinky.typedGithubApi.interfacesUserMod.UserSummary
 import typingsSlinky.typedGithubApi.repositoryMod.Repository
@@ -39,7 +40,7 @@ object distRepositoryMod extends js.Object {
     var openIssuesCount: Double = js.native
     @JSName("owner")
     var owner_RepositoryClass: UserSummary = js.native
-    var permissions: AnonAdmin = js.native
+    var permissions: Admin = js.native
     var pushed: Moment = js.native
     var size: Double = js.native
     var starGazersCount: Double = js.native

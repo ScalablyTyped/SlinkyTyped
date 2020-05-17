@@ -1,10 +1,10 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.CustomXmlPartData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.CustomXmlPartLoadOptions
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientResult
+import typingsSlinky.officeJsPreview.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,9 +15,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.5]
   */
-@JSGlobal("Excel.CustomXmlPart")
 @js.native
-class CustomXmlPart () extends ClientObject {
+trait CustomXmlPart extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_CustomXmlPart: RequestContext = js.native
@@ -54,7 +53,7 @@ class CustomXmlPart () extends ClientObject {
     */
   def load(): CustomXmlPart = js.native
   def load(options: CustomXmlPartLoadOptions): CustomXmlPart = js.native
-  def load(propertyNamesAndPaths: AnonExpand): CustomXmlPart = js.native
+  def load(propertyNamesAndPaths: Expand): CustomXmlPart = js.native
   def load(propertyNames: String): CustomXmlPart = js.native
   def load(propertyNames: js.Array[String]): CustomXmlPart = js.native
   /**

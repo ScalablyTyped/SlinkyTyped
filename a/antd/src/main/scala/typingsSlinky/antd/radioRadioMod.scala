@@ -1,6 +1,8 @@
 package typingsSlinky.antd
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.antd.anon.Type
+import typingsSlinky.antd.anon.TypeofRadioGroup
 import typingsSlinky.antd.contextMod.ConfigConsumerProps
 import typingsSlinky.antd.radioButtonMod.RadioButtonProps
 import typingsSlinky.antd.radioInterfaceMod.RadioChangeEvent
@@ -37,7 +39,7 @@ object radioRadioMod extends js.Object {
     var Button: ForwardRefExoticComponent[RadioButtonProps with RefAttributes[_]] = js.native
     var Group: TypeofRadioGroup = js.native
     var contextType: Context[RadioGroupContextProps | Null] = js.native
-    var defaultProps: AnonType = js.native
+    var defaultProps: Type = js.native
   }
   
 }

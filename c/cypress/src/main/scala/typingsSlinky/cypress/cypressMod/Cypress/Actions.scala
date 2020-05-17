@@ -1,10 +1,12 @@
 package typingsSlinky.cypress.cypressMod.Cypress
 
 import org.scalajs.dom.raw.BeforeUnloadEvent
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.cypress.JQuery_
-import typingsSlinky.cypress.Mocha_.IRunnable
-import typingsSlinky.cypress.Mocha_.ITest
+import org.scalajs.dom.raw.Window
+import typingsSlinky.cypress.JQuery
+import typingsSlinky.cypress.Mocha.IRunnable
+import typingsSlinky.cypress.Mocha.ITest
 import typingsSlinky.cypress.cypressBooleans.`false`
 import typingsSlinky.cypress.cypressStrings.commandColonend
 import typingsSlinky.cypress.cypressStrings.commandColonenqueued
@@ -27,8 +29,6 @@ import typingsSlinky.cypress.cypressStrings.windowColonload
 import typingsSlinky.cypress.cypressStrings.windowColonunload
 import typingsSlinky.cypress.sinonMod.SinonSpy
 import typingsSlinky.cypress.sinonMod.SinonStub
-import typingsSlinky.std.Event_
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -81,7 +81,7 @@ trait Actions extends js.Object {
     * Fires whenever **Cypress** is scrolling your application. This event is fired when Cypress is {% url 'waiting for and calculating actionability' interacting-with-elements %}. It will scroll to 'uncover' elements currently being covered. This event is extremely useful to debug why Cypress may think an element is not interactive.
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
-  def apply(action: scrolled, fn: js.Function1[/* $el */ JQuery_[HTMLElement], Unit]): Unit = js.native
+  def apply(action: scrolled, fn: js.Function1[/* $el */ JQuery[HTMLElement], Unit]): Unit = js.native
   /**
     * Fires after the test and all **afterEach** and **after** hooks run.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -160,7 +160,7 @@ trait Actions extends js.Object {
     * Fires as the page begins to load, but before any of your applications JavaScript has executed. This fires at the exact same time as `cy.visit()` `onBeforeLoad` callback. Useful to modify the window on a page transition.
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
-  def apply(action: windowColonbeforeColonload, fn: js.Function1[/* win */ Window_, Unit]): Unit = js.native
+  def apply(action: windowColonbeforeColonload, fn: js.Function1[/* win */ Window, Unit]): Unit = js.native
   /**
     * Fires when your application is about to navigate away. The real event object is provided to you. Your app may have set a `returnValue` on the event, which is useful to assert on.
     * @see https://on.cypress.io/catalog-of-events#App-Events
@@ -184,11 +184,11 @@ trait Actions extends js.Object {
     * Fires after all your resources have finished loading after a page transition. This fires at the exact same time as a `cy.visit()` `onLoad` callback.
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
-  def apply(action: windowColonload, fn: js.Function1[/* win */ Window_, Unit]): Unit = js.native
+  def apply(action: windowColonload, fn: js.Function1[/* win */ Window, Unit]): Unit = js.native
   /**
     * Fires when your application is has unloaded and is navigating away. The real event object is provided to you. This event is not cancelable.
     * @see https://on.cypress.io/catalog-of-events#App-Events
     */
-  def apply(action: windowColonunload, fn: js.Function1[/* event */ Event_, Unit]): Unit = js.native
+  def apply(action: windowColonunload, fn: js.Function1[/* event */ Event, Unit]): Unit = js.native
 }
 

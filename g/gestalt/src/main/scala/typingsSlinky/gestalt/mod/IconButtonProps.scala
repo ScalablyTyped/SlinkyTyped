@@ -1,7 +1,7 @@
 package typingsSlinky.gestalt.mod
 
-import typingsSlinky.gestalt.AnonEvent
-import typingsSlinky.gestalt.AnonPath
+import typingsSlinky.gestalt.anon.Event
+import typingsSlinky.gestalt.anon.Path
 import typingsSlinky.gestalt.gestaltStrings.blue
 import typingsSlinky.gestalt.gestaltStrings.darkGray
 import typingsSlinky.gestalt.gestaltStrings.gray
@@ -26,11 +26,11 @@ trait IconButtonProps extends js.Object {
   var accessibilityHaspopup: js.UndefOr[Boolean] = js.native
   var accessibilityLabel: String = js.native
   var bgColor: js.UndefOr[transparent | transparentDarkGray | gray | lightGray | white | blue] = js.native
-  var dangerouslySetSvgPath: js.UndefOr[AnonPath] = js.native
+  var dangerouslySetSvgPath: js.UndefOr[Path] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
   var icon: js.UndefOr[Icons] = js.native
   var iconColor: js.UndefOr[blue | darkGray | gray | red | white | orange] = js.native
-  var onClick: js.UndefOr[js.Function1[/* args */ AnonEvent, Unit]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* args */ Event, Unit]] = js.native
   var selected: js.UndefOr[Boolean] = js.native
   var size: js.UndefOr[xs | sm | md | lg | xl] = js.native
 }
@@ -90,7 +90,7 @@ object IconButtonProps {
         ret
     }
     @scala.inline
-    def withDangerouslySetSvgPath(value: AnonPath): Self = {
+    def withDangerouslySetSvgPath(value: Path): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetSvgPath")(value.asInstanceOf[js.Any])
         ret
@@ -138,7 +138,7 @@ object IconButtonProps {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* args */ AnonEvent => Unit): Self = {
+    def withOnClick(value: /* args */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret

@@ -1,13 +1,13 @@
 package typingsSlinky.followRedirects.mod
 
-import typingsSlinky.followRedirects.AnonHttp
+import typingsSlinky.followRedirects.anon.Http
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait FollowOptions[Options] extends js.Object {
-  var agents: js.UndefOr[AnonHttp] = js.native
+  var agents: js.UndefOr[Http] = js.native
   var beforeRedirect: js.UndefOr[js.Function1[/* options */ Options with FollowOptions[Options], Unit]] = js.native
   var followRedirects: js.UndefOr[Boolean] = js.native
   var maxBodyLength: js.UndefOr[Double] = js.native
@@ -28,7 +28,7 @@ object FollowOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[Options] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[Options] with Other]
     @scala.inline
-    def withAgents(value: AnonHttp): Self[Options] = {
+    def withAgents(value: Http): Self[Options] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("agents")(value.asInstanceOf[js.Any])
         ret

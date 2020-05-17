@@ -49,20 +49,15 @@ import typingsSlinky.androiduix.androidui.attr.AttrBinder.ClassBinderMap
 import typingsSlinky.androiduix.java_.lang.Runnable
 import typingsSlinky.androiduix.java_.util.ArrayList
 import typingsSlinky.androiduix.java_.util.List
-import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.widget.AbsListView")
 @js.native
-abstract class AbsListView_ protected ()
+trait AbsListView_
   extends AdapterView[ListAdapter]
      with OnGlobalLayoutListener
      with OnTouchModeChangeListener {
-  def this(context: Context) = this()
-  def this(context: Context, bindElement: HTMLElement) = this()
-  def this(context: Context, bindElement: HTMLElement, defStyle: Map[String, String]) = this()
   var _mOverflingDistance: js.Any = js.native
   var mActivePointerId: js.Any = js.native
   var mAdapter: ListAdapter = js.native

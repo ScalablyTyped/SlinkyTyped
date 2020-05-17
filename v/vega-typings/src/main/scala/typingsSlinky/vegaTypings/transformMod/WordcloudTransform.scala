@@ -11,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait WordcloudTransform extends _Transforms {
+trait WordcloudTransform extends Transforms {
   var as: js.UndefOr[(Vector7[String | SignalRef]) | SignalRef] = js.native
   var font: js.UndefOr[String | TransformField] = js.native
   var fontSize: js.UndefOr[Double | TransformField] = js.native

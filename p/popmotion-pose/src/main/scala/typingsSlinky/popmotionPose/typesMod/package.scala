@@ -13,12 +13,6 @@ package object typesMod {
   type DragBounds = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in popmotion-pose.popmotion-pose/lib/types.BoundingBoxDimension ]:? number | string}
     */ typingsSlinky.popmotionPose.popmotionPoseStrings.DragBounds with org.scalablytyped.runtime.TopLevel[js.Any]
-  /* Rewritten from type alias, can be one of: 
-    - scala.Boolean
-    - typingsSlinky.popmotionPose.popmotionPoseStrings.x
-    - typingsSlinky.popmotionPose.popmotionPoseStrings.y
-  */
-  type Draggable = typingsSlinky.popmotionPose.typesMod._Draggable | scala.Boolean
   type Pose = typingsSlinky.poseCore.typesMod.Pose[
     typingsSlinky.popmotion.mod.Action_, 
     typingsSlinky.popmotionPose.typesMod.TransitionDefinition

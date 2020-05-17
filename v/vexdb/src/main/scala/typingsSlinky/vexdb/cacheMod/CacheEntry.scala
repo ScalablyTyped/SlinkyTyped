@@ -1,6 +1,6 @@
 package typingsSlinky.vexdb.cacheMod
 
-import typingsSlinky.vexdb.AnonResult
+import typingsSlinky.vexdb.anon.Result
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CacheEntry[T] extends js.Object {
   var expiry: Double = js.native
-  var value: AnonResult[T] = js.native
+  var value: Result[T] = js.native
 }
 
 object CacheEntry {
   @scala.inline
-  def apply[T](expiry: Double, value: AnonResult[T]): CacheEntry[T] = {
+  def apply[T](expiry: Double, value: Result[T]): CacheEntry[T] = {
     val __obj = js.Dynamic.literal(expiry = expiry.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[CacheEntry[T]]
   }
@@ -30,7 +30,7 @@ object CacheEntry {
         ret
     }
     @scala.inline
-    def withValue(value: AnonResult[T]): Self[T] = {
+    def withValue(value: Result[T]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
         ret

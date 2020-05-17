@@ -9,10 +9,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("android.app.ActivityThread")
 @js.native
-class ActivityThread protected () extends js.Object {
-  def this(androidUI: AndroidUI) = this()
+trait ActivityThread extends js.Object {
   var activityResumeTimeout: js.Any = js.native
   var androidUI: AndroidUI = js.native
   var mLaunchedActivities: Set[Activity] = js.native
@@ -59,12 +57,5 @@ class ActivityThread protected () extends js.Object {
   def scheduleLaunchActivity(callActivity: Activity, intent: Intent): Unit = js.native
   def scheduleLaunchActivity(callActivity: Activity, intent: Intent, options: Bundle): Unit = js.native
   /* private */ def updateVisibility(activity: js.Any, show: js.Any): js.Any = js.native
-}
-
-/* static members */
-@JSGlobal("android.app.ActivityThread")
-@js.native
-object ActivityThread extends js.Object {
-  /* private */ def getActivityName(activity: js.Any): js.Any = js.native
 }
 

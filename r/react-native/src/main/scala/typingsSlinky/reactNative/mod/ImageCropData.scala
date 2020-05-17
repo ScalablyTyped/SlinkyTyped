@@ -1,7 +1,7 @@
 package typingsSlinky.reactNative.mod
 
-import typingsSlinky.reactNative.AnonHeight
-import typingsSlinky.reactNative.AnonX
+import typingsSlinky.reactNative.anon.Height
+import typingsSlinky.reactNative.anon.X
 import typingsSlinky.reactNative.reactNativeStrings.contain
 import typingsSlinky.reactNative.reactNativeStrings.cover
 import typingsSlinky.reactNative.reactNativeStrings.stretch
@@ -14,12 +14,12 @@ trait ImageCropData extends js.Object {
   /**
     * (Optional) size to scale the cropped image to.
     */
-  var displaySize: js.UndefOr[AnonHeight] = js.native
+  var displaySize: js.UndefOr[Height] = js.native
   /**
     * The top-left corner of the cropped image, specified in the original
     * image's coordinate space.
     */
-  var offset: AnonX = js.native
+  var offset: X = js.native
   /**
     * (Optional) the resizing mode to use when scaling the image. If the
     * `displaySize` param is not specified, this has no effect.
@@ -29,12 +29,12 @@ trait ImageCropData extends js.Object {
     * The size (dimensions) of the cropped image, specified in the original
     * image's coordinate space.
     */
-  var size: AnonHeight = js.native
+  var size: Height = js.native
 }
 
 object ImageCropData {
   @scala.inline
-  def apply(offset: AnonX, size: AnonHeight): ImageCropData = {
+  def apply(offset: X, size: Height): ImageCropData = {
     val __obj = js.Dynamic.literal(offset = offset.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImageCropData]
   }
@@ -45,19 +45,19 @@ object ImageCropData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOffset(value: AnonX): Self = {
+    def withOffset(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withSize(value: AnonHeight): Self = {
+    def withSize(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withDisplaySize(value: AnonHeight): Self = {
+    def withDisplaySize(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("displaySize")(value.asInstanceOf[js.Any])
         ret

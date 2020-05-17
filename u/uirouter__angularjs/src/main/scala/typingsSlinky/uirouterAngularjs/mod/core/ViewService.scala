@@ -1,6 +1,6 @@
 package typingsSlinky.uirouterAngularjs.mod.core
 
-import typingsSlinky.uirouterCore.AnonUiViewContextAnchor
+import typingsSlinky.uirouterCore.anon.UiViewContextAnchor
 import typingsSlinky.uirouterCore.commonCommonMod.TypedMap
 import typingsSlinky.uirouterCore.viewInterfaceMod.ActiveUIView
 import typingsSlinky.uirouterCore.viewInterfaceMod.ViewConfig
@@ -90,7 +90,7 @@ object ViewService extends js.Object {
     *
     * @returns the normalized uiViewName and uiViewContextAnchor that the view targets
     */
-  def normalizeUIViewTarget(context: ViewContext): AnonUiViewContextAnchor = js.native
-  def normalizeUIViewTarget(context: ViewContext, rawViewName: String): AnonUiViewContextAnchor = js.native
+  def normalizeUIViewTarget(context: ViewContext): UiViewContextAnchor = js.native
+  def normalizeUIViewTarget(context: ViewContext, rawViewName: String): UiViewContextAnchor = js.native
 }
 

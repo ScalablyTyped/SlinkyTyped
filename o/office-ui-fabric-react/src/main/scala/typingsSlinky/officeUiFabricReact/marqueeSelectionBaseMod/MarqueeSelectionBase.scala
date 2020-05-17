@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.marqueeSelectionBaseMod
 
-import typingsSlinky.officeUiFabricReact.AnonIsEnabled
+import typingsSlinky.officeUiFabricReact.anon.IsEnabled
 import typingsSlinky.officeUiFabricReact.marqueeSelectionTypesMod.IMarqueeSelectionProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -55,6 +55,6 @@ class MarqueeSelectionBase protected ()
 @JSImport("office-ui-fabric-react/lib/components/MarqueeSelection/MarqueeSelection.base", "MarqueeSelectionBase")
 @js.native
 object MarqueeSelectionBase extends js.Object {
-  var defaultProps: AnonIsEnabled = js.native
+  var defaultProps: IsEnabled = js.native
 }
 

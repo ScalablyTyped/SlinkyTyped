@@ -1,6 +1,6 @@
 package typingsSlinky.baiduApp.swan
 
-import typingsSlinky.baiduApp.AnonPadding
+import typingsSlinky.baiduApp.anon.Padding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait MapContext extends js.Object {
   		 */
   def getCenterLocation(options: GetCenterLocationOptions): OpenLocationOptions = js.native
   def getRegion(options: GetRegionOptions): Unit = js.native
-  def includePoints(options: AnonPadding): Unit = js.native
+  def includePoints(options: Padding): Unit = js.native
   /**
   		 * 将地图中心移动到当前定位点，需要配合map组件的show-location使用
   		 */
@@ -28,7 +28,7 @@ object MapContext {
   def apply(
     getCenterLocation: GetCenterLocationOptions => OpenLocationOptions,
     getRegion: GetRegionOptions => Unit,
-    includePoints: AnonPadding => Unit,
+    includePoints: Padding => Unit,
     moveToLocation: () => Unit,
     translateMarker: TranslateMarkerOptions => Unit
   ): MapContext = {
@@ -54,7 +54,7 @@ object MapContext {
         ret
     }
     @scala.inline
-    def withIncludePoints(value: AnonPadding => Unit): Self = {
+    def withIncludePoints(value: Padding => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("includePoints")(js.Any.fromFunction1(value))
         ret

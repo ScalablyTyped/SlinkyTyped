@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a device service command session which allows the caller to submit predefined commands to the modem on a mobile broadband device service. */
-@JSGlobal("Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession")
 @js.native
-abstract class MobileBroadbandDeviceServiceCommandSession () extends js.Object {
+trait MobileBroadbandDeviceServiceCommandSession extends js.Object {
   /** Closes the command session on a mobile broadband device service. */
   def closeSession(): Unit = js.native
   /**
@@ -26,5 +25,43 @@ abstract class MobileBroadbandDeviceServiceCommandSession () extends js.Object {
     * @return An asynchronous operation that returns the result of the command.
     */
   def sendSetCommandAsync(commandId: Double, data: IBuffer): IPromiseWithIAsyncOperation[MobileBroadbandDeviceServiceCommandResult] = js.native
+}
+
+object MobileBroadbandDeviceServiceCommandSession {
+  @scala.inline
+  def apply(
+    closeSession: () => Unit,
+    sendQueryCommandAsync: (Double, IBuffer) => IPromiseWithIAsyncOperation[MobileBroadbandDeviceServiceCommandResult],
+    sendSetCommandAsync: (Double, IBuffer) => IPromiseWithIAsyncOperation[MobileBroadbandDeviceServiceCommandResult]
+  ): MobileBroadbandDeviceServiceCommandSession = {
+    val __obj = js.Dynamic.literal(closeSession = js.Any.fromFunction0(closeSession), sendQueryCommandAsync = js.Any.fromFunction2(sendQueryCommandAsync), sendSetCommandAsync = js.Any.fromFunction2(sendSetCommandAsync))
+    __obj.asInstanceOf[MobileBroadbandDeviceServiceCommandSession]
+  }
+  @scala.inline
+  implicit class MobileBroadbandDeviceServiceCommandSessionOps[Self <: MobileBroadbandDeviceServiceCommandSession] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCloseSession(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("closeSession")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSendQueryCommandAsync(value: (Double, IBuffer) => IPromiseWithIAsyncOperation[MobileBroadbandDeviceServiceCommandResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendQueryCommandAsync")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withSendSetCommandAsync(value: (Double, IBuffer) => IPromiseWithIAsyncOperation[MobileBroadbandDeviceServiceCommandResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sendSetCommandAsync")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

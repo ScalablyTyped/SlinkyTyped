@@ -1,6 +1,6 @@
 package typingsSlinky.chartist.mod
 
-import typingsSlinky.chartist.AnonY
+import typingsSlinky.chartist.anon.Y
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ILineChartAxis extends js.Object {
   var labelInterpolationFnc: js.UndefOr[js.Function] = js.native
-  var labelOffset: js.UndefOr[AnonY] = js.native
+  var labelOffset: js.UndefOr[Y] = js.native
   var offset: js.UndefOr[Double] = js.native
   var position: js.UndefOr[String] = js.native
   var showGrid: js.UndefOr[Boolean] = js.native
@@ -40,7 +40,7 @@ object ILineChartAxis {
         ret
     }
     @scala.inline
-    def withLabelOffset(value: AnonY): Self = {
+    def withLabelOffset(value: Y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("labelOffset")(value.asInstanceOf[js.Any])
         ret

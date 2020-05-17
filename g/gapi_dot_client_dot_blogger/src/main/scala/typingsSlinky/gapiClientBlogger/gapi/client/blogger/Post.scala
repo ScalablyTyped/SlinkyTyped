@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientBlogger.gapi.client.blogger
 
-import typingsSlinky.gapiClientBlogger.AnonDisplayName
-import typingsSlinky.gapiClientBlogger.AnonId
-import typingsSlinky.gapiClientBlogger.AnonLat
-import typingsSlinky.gapiClientBlogger.AnonTotalItems
-import typingsSlinky.gapiClientBlogger.AnonUrl
+import typingsSlinky.gapiClientBlogger.anon.DisplayName
+import typingsSlinky.gapiClientBlogger.anon.Id
+import typingsSlinky.gapiClientBlogger.anon.Lat
+import typingsSlinky.gapiClientBlogger.anon.TotalItems
+import typingsSlinky.gapiClientBlogger.anon.Url
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,9 +12,9 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Post extends js.Object {
   /** The author of this Post. */
-  var author: js.UndefOr[AnonDisplayName] = js.native
+  var author: js.UndefOr[DisplayName] = js.native
   /** Data about the blog containing this Post. */
-  var blog: js.UndefOr[AnonId] = js.native
+  var blog: js.UndefOr[Id] = js.native
   /** The content of the Post. May contain HTML markup. */
   var content: js.UndefOr[String] = js.native
   /** The JSON meta-data for the Post. */
@@ -24,19 +24,19 @@ trait Post extends js.Object {
   /** The identifier of this Post. */
   var id: js.UndefOr[String] = js.native
   /** Display image for the Post. */
-  var images: js.UndefOr[js.Array[AnonUrl]] = js.native
+  var images: js.UndefOr[js.Array[Url]] = js.native
   /** The kind of this entity. Always blogger#post */
   var kind: js.UndefOr[String] = js.native
   /** The list of labels this Post was tagged with. */
   var labels: js.UndefOr[js.Array[String]] = js.native
   /** The location for geotagged posts. */
-  var location: js.UndefOr[AnonLat] = js.native
+  var location: js.UndefOr[Lat] = js.native
   /** RFC 3339 date-time when this Post was published. */
   var published: js.UndefOr[String] = js.native
   /** Comment control and display setting for readers of this post. */
   var readerComments: js.UndefOr[String] = js.native
   /** The container of comments on this Post. */
-  var replies: js.UndefOr[AnonTotalItems] = js.native
+  var replies: js.UndefOr[TotalItems] = js.native
   /** The API REST URL to fetch this resource from. */
   var selfLink: js.UndefOr[String] = js.native
   /** Status of the post. Only set for admin-level requests */
@@ -64,7 +64,7 @@ object Post {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAuthor(value: AnonDisplayName): Self = {
+    def withAuthor(value: DisplayName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("author")(value.asInstanceOf[js.Any])
         ret
@@ -76,7 +76,7 @@ object Post {
         ret
     }
     @scala.inline
-    def withBlog(value: AnonId): Self = {
+    def withBlog(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("blog")(value.asInstanceOf[js.Any])
         ret
@@ -136,7 +136,7 @@ object Post {
         ret
     }
     @scala.inline
-    def withImages(value: js.Array[AnonUrl]): Self = {
+    def withImages(value: js.Array[Url]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("images")(value.asInstanceOf[js.Any])
         ret
@@ -172,7 +172,7 @@ object Post {
         ret
     }
     @scala.inline
-    def withLocation(value: AnonLat): Self = {
+    def withLocation(value: Lat): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
         ret
@@ -208,7 +208,7 @@ object Post {
         ret
     }
     @scala.inline
-    def withReplies(value: AnonTotalItems): Self = {
+    def withReplies(value: TotalItems): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("replies")(value.asInstanceOf[js.Any])
         ret

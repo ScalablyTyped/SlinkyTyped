@@ -1,13 +1,12 @@
 package typingsSlinky.kendoUi.kendo.dataviz
 
-import typingsSlinky.kendoUi.kendo.Observable_
+import typingsSlinky.kendoUi.kendo.Observable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.dataviz.ChartSeries")
 @js.native
-class ChartSeries () extends Observable_ {
+trait ChartSeries extends Observable {
   var options: ChartSeriesOptions = js.native
   def data(): js.Any = js.native
   def data(data: js.Any): Unit = js.native

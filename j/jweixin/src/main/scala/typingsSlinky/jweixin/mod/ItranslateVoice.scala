@@ -1,6 +1,6 @@
 package typingsSlinky.jweixin.mod
 
-import typingsSlinky.jweixin.AnonTranslateResult
+import typingsSlinky.jweixin.anon.TranslateResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,12 +14,12 @@ trait ItranslateVoice extends BaseParams {
   var localId: String = js.native
    // 默认为1，显示进度提示
   @JSName("success")
-  def success_MItranslateVoice(res: AnonTranslateResult): Unit = js.native
+  def success_MItranslateVoice(res: TranslateResult): Unit = js.native
 }
 
 object ItranslateVoice {
   @scala.inline
-  def apply(isShowProgressTips: Double, localId: String, success: AnonTranslateResult => Unit): ItranslateVoice = {
+  def apply(isShowProgressTips: Double, localId: String, success: TranslateResult => Unit): ItranslateVoice = {
     val __obj = js.Dynamic.literal(isShowProgressTips = isShowProgressTips.asInstanceOf[js.Any], localId = localId.asInstanceOf[js.Any], success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[ItranslateVoice]
   }
@@ -42,7 +42,7 @@ object ItranslateVoice {
         ret
     }
     @scala.inline
-    def withSuccess(value: AnonTranslateResult => Unit): Self = {
+    def withSuccess(value: TranslateResult => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

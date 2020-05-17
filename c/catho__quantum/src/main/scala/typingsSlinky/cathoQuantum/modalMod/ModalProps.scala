@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.cathoQuantum.AnonBreakpointsColors
+import typingsSlinky.cathoQuantum.anon.BreakpointsColors
 import typingsSlinky.react.mod.MouseEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,7 @@ trait ModalProps extends js.Object {
   var children: js.UndefOr[js.Array[TagMod[Any]] | TagMod[Any]] = js.native
   var closeButtonAriaLabel: js.UndefOr[String] = js.native
   var onClose: js.UndefOr[MouseEventHandler[HTMLButtonElement]] = js.native
-  var theme: js.UndefOr[AnonBreakpointsColors] = js.native
+  var theme: js.UndefOr[BreakpointsColors] = js.native
 }
 
 object ModalProps {
@@ -73,7 +73,7 @@ object ModalProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonBreakpointsColors): Self = {
+    def withTheme(value: BreakpointsColors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

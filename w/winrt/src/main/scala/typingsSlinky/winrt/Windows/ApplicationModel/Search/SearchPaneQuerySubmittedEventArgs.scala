@@ -4,7 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs")
 @js.native
-class SearchPaneQuerySubmittedEventArgs () extends ISearchPaneQuerySubmittedEventArgs
+trait SearchPaneQuerySubmittedEventArgs extends ISearchPaneQuerySubmittedEventArgs
+
+object SearchPaneQuerySubmittedEventArgs {
+  @scala.inline
+  def apply(language: String, queryText: String): SearchPaneQuerySubmittedEventArgs = {
+    val __obj = js.Dynamic.literal(language = language.asInstanceOf[js.Any], queryText = queryText.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SearchPaneQuerySubmittedEventArgs]
+  }
+}
 

@@ -1,9 +1,5 @@
 package typingsSlinky.screeps
 
-import typingsSlinky.screeps.screepsStrings.closed
-import typingsSlinky.screeps.screepsStrings.normal
-import typingsSlinky.screeps.screepsStrings.novice
-import typingsSlinky.screeps.screepsStrings.respawn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,14 +12,8 @@ trait RoomStatus extends js.Object
 
 object RoomStatus {
   @scala.inline
-  def RoomStatusPermanent(status: normal | closed, timestamp: Null): RoomStatus = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
-    __obj.asInstanceOf[RoomStatus]
-  }
+  implicit def apply(value: RoomStatusPermanent): RoomStatus = value.asInstanceOf[RoomStatus]
   @scala.inline
-  def RoomStatusTemporary(status: novice | respawn, timestamp: Double): RoomStatus = {
-    val __obj = js.Dynamic.literal(status = status.asInstanceOf[js.Any], timestamp = timestamp.asInstanceOf[js.Any])
-    __obj.asInstanceOf[RoomStatus]
-  }
+  implicit def apply(value: RoomStatusTemporary): RoomStatus = value.asInstanceOf[RoomStatus]
 }
 

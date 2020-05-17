@@ -1,6 +1,6 @@
 package typingsSlinky.vara.mod
 
-import typingsSlinky.vara.AnonX
+import typingsSlinky.vara.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait TextStep extends TextProperties {
     * Whether the x or y coordinate should be from its calculated position,
     * ie the position if x or y coordinates were not applied
     */
-  var fromCurrentPosition: js.UndefOr[AnonX] = js.native
+  var fromCurrentPosition: js.UndefOr[X] = js.native
   /**
     * String or integer, for if animations are called manually or when using the get() method.
     * Default is the index of the object.
@@ -66,7 +66,7 @@ object TextStep {
         ret
     }
     @scala.inline
-    def withFromCurrentPosition(value: AnonX): Self = {
+    def withFromCurrentPosition(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fromCurrentPosition")(value.asInstanceOf[js.Any])
         ret

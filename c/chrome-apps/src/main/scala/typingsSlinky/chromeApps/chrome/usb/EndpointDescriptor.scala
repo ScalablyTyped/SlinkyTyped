@@ -1,19 +1,16 @@
 package typingsSlinky.chromeApps.chrome.usb
 
-import typingsSlinky.chromeApps.AnonADAPTIVE
-import typingsSlinky.chromeApps.AnonBULK
-import typingsSlinky.chromeApps.AnonDATA_
-import typingsSlinky.chromeApps.AnonIN
+import typingsSlinky.chromeApps.anon.ADAPTIVE
+import typingsSlinky.chromeApps.anon.BULK
+import typingsSlinky.chromeApps.anon.DATA_
+import typingsSlinky.chromeApps.anon.IN
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chrome.integer
-import typingsSlinky.chromeApps.chromeAppsStrings.ADAPTIVE
 import typingsSlinky.chromeApps.chromeAppsStrings.ASYNCHRONOUS
-import typingsSlinky.chromeApps.chromeAppsStrings.BULK
 import typingsSlinky.chromeApps.chromeAppsStrings.CONTROL
 import typingsSlinky.chromeApps.chromeAppsStrings.DATA
 import typingsSlinky.chromeApps.chromeAppsStrings.EXPLICIT_FEEDBACK
 import typingsSlinky.chromeApps.chromeAppsStrings.FEEDBACK
-import typingsSlinky.chromeApps.chromeAppsStrings.IN
 import typingsSlinky.chromeApps.chromeAppsStrings.INTERRUPT
 import typingsSlinky.chromeApps.chromeAppsStrings.ISOCHRONOUS
 import typingsSlinky.chromeApps.chromeAppsStrings.NOTIFICATION
@@ -49,9 +46,12 @@ trait EndpointDescriptor extends js.Object {
     * @see Direction
     */
   var direction: ToStringLiteral[
-    AnonIN, 
-    /* keyof chrome-apps.AnonIN */ IN | OUT, 
-    Exclude[/* keyof chrome-apps.AnonIN */ IN | OUT, in_ | out_]
+    IN, 
+    /* keyof chrome-apps.anon.IN */ typingsSlinky.chromeApps.chromeAppsStrings.IN | OUT, 
+    Exclude[
+      /* keyof chrome-apps.anon.IN */ typingsSlinky.chromeApps.chromeAppsStrings.IN | OUT, 
+      in_ | out_
+    ]
   ] = js.native
   /**
     * Extra descriptor data associated with this endpoint.
@@ -68,10 +68,10 @@ trait EndpointDescriptor extends js.Object {
     */
   var synchronization: js.UndefOr[
     ToStringLiteral[
-      AnonADAPTIVE, 
-      /* keyof chrome-apps.AnonADAPTIVE */ ASYNCHRONOUS | ADAPTIVE | SYNCHRONOUS, 
+      ADAPTIVE, 
+      /* keyof chrome-apps.anon.ADAPTIVE */ ASYNCHRONOUS | typingsSlinky.chromeApps.chromeAppsStrings.ADAPTIVE | SYNCHRONOUS, 
       Exclude[
-        /* keyof chrome-apps.AnonADAPTIVE */ ASYNCHRONOUS | ADAPTIVE | SYNCHRONOUS, 
+        /* keyof chrome-apps.anon.ADAPTIVE */ ASYNCHRONOUS | typingsSlinky.chromeApps.chromeAppsStrings.ADAPTIVE | SYNCHRONOUS, 
         asynchronous_ | adaptive_ | synchronous_
       ]
     ]
@@ -82,10 +82,10 @@ trait EndpointDescriptor extends js.Object {
     *
     */
   var `type`: ToStringLiteral[
-    AnonBULK, 
-    /* keyof chrome-apps.AnonBULK */ CONTROL | INTERRUPT | ISOCHRONOUS | BULK, 
+    BULK, 
+    /* keyof chrome-apps.anon.BULK */ CONTROL | INTERRUPT | ISOCHRONOUS | typingsSlinky.chromeApps.chromeAppsStrings.BULK, 
     Exclude[
-      /* keyof chrome-apps.AnonBULK */ CONTROL | INTERRUPT | ISOCHRONOUS | BULK, 
+      /* keyof chrome-apps.anon.BULK */ CONTROL | INTERRUPT | ISOCHRONOUS | typingsSlinky.chromeApps.chromeAppsStrings.BULK, 
       control_ | interrupt_ | isochronous_ | bulk_
     ]
   ] = js.native
@@ -95,10 +95,10 @@ trait EndpointDescriptor extends js.Object {
     */
   var usage: js.UndefOr[
     ToStringLiteral[
-      AnonDATA_, 
-      /* keyof chrome-apps.AnonDATA */ DATA | FEEDBACK | EXPLICIT_FEEDBACK | PERIODIC | NOTIFICATION, 
+      DATA_, 
+      /* keyof chrome-apps.anon.DATA */ DATA | FEEDBACK | EXPLICIT_FEEDBACK | PERIODIC | NOTIFICATION, 
       Exclude[
-        /* keyof chrome-apps.AnonDATA */ DATA | FEEDBACK | EXPLICIT_FEEDBACK | PERIODIC | NOTIFICATION, 
+        /* keyof chrome-apps.anon.DATA */ DATA | FEEDBACK | EXPLICIT_FEEDBACK | PERIODIC | NOTIFICATION, 
         notification_ | data_ | periodic_ | feedback_ | explicitFeedback
       ]
     ]
@@ -110,17 +110,20 @@ object EndpointDescriptor {
   def apply(
     address: integer,
     direction: ToStringLiteral[
-      AnonIN, 
-      /* keyof chrome-apps.AnonIN */ IN | OUT, 
-      Exclude[/* keyof chrome-apps.AnonIN */ IN | OUT, in_ | out_]
+      IN, 
+      /* keyof chrome-apps.anon.IN */ typingsSlinky.chromeApps.chromeAppsStrings.IN | OUT, 
+      Exclude[
+        /* keyof chrome-apps.anon.IN */ typingsSlinky.chromeApps.chromeAppsStrings.IN | OUT, 
+        in_ | out_
+      ]
     ],
     extra_data: js.typedarray.ArrayBuffer,
     maximumPacketSize: integer,
     `type`: ToStringLiteral[
-      AnonBULK, 
-      /* keyof chrome-apps.AnonBULK */ CONTROL | INTERRUPT | ISOCHRONOUS | BULK, 
+      BULK, 
+      /* keyof chrome-apps.anon.BULK */ CONTROL | INTERRUPT | ISOCHRONOUS | typingsSlinky.chromeApps.chromeAppsStrings.BULK, 
       Exclude[
-        /* keyof chrome-apps.AnonBULK */ CONTROL | INTERRUPT | ISOCHRONOUS | BULK, 
+        /* keyof chrome-apps.anon.BULK */ CONTROL | INTERRUPT | ISOCHRONOUS | typingsSlinky.chromeApps.chromeAppsStrings.BULK, 
         control_ | interrupt_ | isochronous_ | bulk_
       ]
     ]
@@ -144,9 +147,12 @@ object EndpointDescriptor {
     @scala.inline
     def withDirection(
       value: ToStringLiteral[
-          AnonIN, 
-          /* keyof chrome-apps.AnonIN */ IN | OUT, 
-          Exclude[/* keyof chrome-apps.AnonIN */ IN | OUT, in_ | out_]
+          IN, 
+          /* keyof chrome-apps.anon.IN */ typingsSlinky.chromeApps.chromeAppsStrings.IN | OUT, 
+          Exclude[
+            /* keyof chrome-apps.anon.IN */ typingsSlinky.chromeApps.chromeAppsStrings.IN | OUT, 
+            in_ | out_
+          ]
         ]
     ): Self = {
         val ret = this.duplicate
@@ -168,10 +174,10 @@ object EndpointDescriptor {
     @scala.inline
     def withType(
       value: ToStringLiteral[
-          AnonBULK, 
-          /* keyof chrome-apps.AnonBULK */ CONTROL | INTERRUPT | ISOCHRONOUS | BULK, 
+          BULK, 
+          /* keyof chrome-apps.anon.BULK */ CONTROL | INTERRUPT | ISOCHRONOUS | typingsSlinky.chromeApps.chromeAppsStrings.BULK, 
           Exclude[
-            /* keyof chrome-apps.AnonBULK */ CONTROL | INTERRUPT | ISOCHRONOUS | BULK, 
+            /* keyof chrome-apps.anon.BULK */ CONTROL | INTERRUPT | ISOCHRONOUS | typingsSlinky.chromeApps.chromeAppsStrings.BULK, 
             control_ | interrupt_ | isochronous_ | bulk_
           ]
         ]
@@ -195,10 +201,10 @@ object EndpointDescriptor {
     @scala.inline
     def withSynchronization(
       value: ToStringLiteral[
-          AnonADAPTIVE, 
-          /* keyof chrome-apps.AnonADAPTIVE */ ASYNCHRONOUS | ADAPTIVE | SYNCHRONOUS, 
+          ADAPTIVE, 
+          /* keyof chrome-apps.anon.ADAPTIVE */ ASYNCHRONOUS | typingsSlinky.chromeApps.chromeAppsStrings.ADAPTIVE | SYNCHRONOUS, 
           Exclude[
-            /* keyof chrome-apps.AnonADAPTIVE */ ASYNCHRONOUS | ADAPTIVE | SYNCHRONOUS, 
+            /* keyof chrome-apps.anon.ADAPTIVE */ ASYNCHRONOUS | typingsSlinky.chromeApps.chromeAppsStrings.ADAPTIVE | SYNCHRONOUS, 
             asynchronous_ | adaptive_ | synchronous_
           ]
         ]
@@ -216,10 +222,10 @@ object EndpointDescriptor {
     @scala.inline
     def withUsage(
       value: ToStringLiteral[
-          AnonDATA_, 
-          /* keyof chrome-apps.AnonDATA */ DATA | FEEDBACK | EXPLICIT_FEEDBACK | PERIODIC | NOTIFICATION, 
+          DATA_, 
+          /* keyof chrome-apps.anon.DATA */ DATA | FEEDBACK | EXPLICIT_FEEDBACK | PERIODIC | NOTIFICATION, 
           Exclude[
-            /* keyof chrome-apps.AnonDATA */ DATA | FEEDBACK | EXPLICIT_FEEDBACK | PERIODIC | NOTIFICATION, 
+            /* keyof chrome-apps.anon.DATA */ DATA | FEEDBACK | EXPLICIT_FEEDBACK | PERIODIC | NOTIFICATION, 
             notification_ | data_ | periodic_ | feedback_ | explicitFeedback
           ]
         ]

@@ -1,7 +1,7 @@
 package typingsSlinky.relayRuntime.readerNodeMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.relayRuntime.AnonFragmentName
+import typingsSlinky.relayRuntime.anon.FragmentName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,14 +13,14 @@ trait ReaderMatchField extends ReaderField {
   val alias: js.UndefOr[String | Null] = js.native
   val args: js.UndefOr[js.Array[ReaderArgument] | Null] = js.native
   val kind: String = js.native
-  val matchesByType: StringDictionary[AnonFragmentName] = js.native
+  val matchesByType: StringDictionary[FragmentName] = js.native
   val name: String = js.native
   val storageKey: js.UndefOr[String | Null] = js.native
 }
 
 object ReaderMatchField {
   @scala.inline
-  def apply(kind: String, matchesByType: StringDictionary[AnonFragmentName], name: String): ReaderMatchField = {
+  def apply(kind: String, matchesByType: StringDictionary[FragmentName], name: String): ReaderMatchField = {
     val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], matchesByType = matchesByType.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReaderMatchField]
   }
@@ -37,7 +37,7 @@ object ReaderMatchField {
         ret
     }
     @scala.inline
-    def withMatchesByType(value: StringDictionary[AnonFragmentName]): Self = {
+    def withMatchesByType(value: StringDictionary[FragmentName]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("matchesByType")(value.asInstanceOf[js.Any])
         ret

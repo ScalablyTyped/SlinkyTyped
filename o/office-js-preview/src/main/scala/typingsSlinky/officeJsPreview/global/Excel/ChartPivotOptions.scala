@@ -1,0 +1,17 @@
+package typingsSlinky.officeJsPreview.global.Excel
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  *
+  * Encapsulates the options for the pivot chart.
+  *
+  * [Api set: ExcelApi 1.9]
+  */
+@JSGlobal("Excel.ChartPivotOptions")
+@js.native
+class ChartPivotOptions ()
+  extends typingsSlinky.officeJsPreview.Excel.ChartPivotOptions
+

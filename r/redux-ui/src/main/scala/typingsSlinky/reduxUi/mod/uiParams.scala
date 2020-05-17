@@ -1,6 +1,6 @@
 package typingsSlinky.reduxUi.mod
 
-import typingsSlinky.reduxUi.AnonPure
+import typingsSlinky.reduxUi.anon.Pure
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait uiParams[UIStateShape] extends js.Object {
     js.Function3[/* stateProps */ js.Any, /* dispatchProps */ js.Any, /* ownProps */ js.Any, _]
   ] = js.native
   // optional `options` passed to react-redux @connect
-  var options: js.UndefOr[AnonPure] = js.native
+  var options: js.UndefOr[Pure] = js.native
   // optional persist, defaults to false. if set to true persist will keep UI
   // state for this component after it unmounts. if set to false the UI state
   // will be deleted and recreated when the component remounts
@@ -70,7 +70,7 @@ object uiParams {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonPure): Self[UIStateShape] = {
+    def withOptions(value: Pure): Self[UIStateShape] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

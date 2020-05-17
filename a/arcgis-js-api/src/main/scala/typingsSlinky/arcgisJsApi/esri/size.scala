@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -164,7 +163,48 @@ trait size extends js.Object {
   def createVisualVariables(params: sizeCreateVisualVariablesParams): js.Promise[sizeVisualVariableResult] = js.native
 }
 
-@JSGlobal("__esri.size")
-@js.native
-object size extends TopLevel[size]
+object size {
+  @scala.inline
+  def apply(
+    createAgeRenderer: sizeCreateAgeRendererParams => js.Promise[sizeAgeRendererResult],
+    createClassBreaksRenderer: sizeCreateClassBreaksRendererParams => js.Promise[sizeClassBreaksRendererResult],
+    createContinuousRenderer: sizeCreateContinuousRendererParams => js.Promise[sizeContinuousRendererResult],
+    createVisualVariables: sizeCreateVisualVariablesParams => js.Promise[sizeVisualVariableResult]
+  ): size = {
+    val __obj = js.Dynamic.literal(createAgeRenderer = js.Any.fromFunction1(createAgeRenderer), createClassBreaksRenderer = js.Any.fromFunction1(createClassBreaksRenderer), createContinuousRenderer = js.Any.fromFunction1(createContinuousRenderer), createVisualVariables = js.Any.fromFunction1(createVisualVariables))
+    __obj.asInstanceOf[size]
+  }
+  @scala.inline
+  implicit class sizeOps[Self <: size] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreateAgeRenderer(value: sizeCreateAgeRendererParams => js.Promise[sizeAgeRendererResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createAgeRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateClassBreaksRenderer(value: sizeCreateClassBreaksRendererParams => js.Promise[sizeClassBreaksRendererResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createClassBreaksRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateContinuousRenderer(value: sizeCreateContinuousRendererParams => js.Promise[sizeContinuousRendererResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createContinuousRenderer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCreateVisualVariables(value: sizeCreateVisualVariablesParams => js.Promise[sizeVisualVariableResult]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createVisualVariables")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
 

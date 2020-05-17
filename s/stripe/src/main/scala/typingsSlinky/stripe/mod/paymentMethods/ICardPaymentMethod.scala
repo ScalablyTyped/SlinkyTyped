@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.paymentMethods
 
-import typingsSlinky.stripe.AnonChecks
+import typingsSlinky.stripe.anon.Checks
 import typingsSlinky.stripe.mod.IMetadata
 import typingsSlinky.stripe.stripeStrings.card
 import typingsSlinky.stripe.stripeStrings.payment_method
@@ -12,14 +12,14 @@ import scala.scalajs.js.annotation._
 trait ICardPaymentMethod
   extends IBasePaymentMethod
      with IPaymentMethod {
-  var card: AnonChecks = js.native
+  var card: Checks = js.native
   var `type`: card = js.native
 }
 
 object ICardPaymentMethod {
   @scala.inline
   def apply(
-    card: AnonChecks,
+    card: Checks,
     created: Double,
     id: String,
     livemode: Boolean,
@@ -39,7 +39,7 @@ object ICardPaymentMethod {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCard(value: AnonChecks): Self = {
+    def withCard(value: Checks): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("card")(value.asInstanceOf[js.Any])
         ret

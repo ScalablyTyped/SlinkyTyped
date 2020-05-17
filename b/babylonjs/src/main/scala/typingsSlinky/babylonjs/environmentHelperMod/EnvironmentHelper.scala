@@ -1,8 +1,8 @@
 package typingsSlinky.babylonjs.environmentHelperMod
 
-import typingsSlinky.babylonjs.AnonException
-import typingsSlinky.babylonjs.PartialIEnvironmentHelper
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
+import typingsSlinky.babylonjs.anon.Exception
+import typingsSlinky.babylonjs.anon.PartialIEnvironmentHelper
 import typingsSlinky.babylonjs.backgroundMaterialMod.BackgroundMaterial
 import typingsSlinky.babylonjs.baseTextureMod.BaseTexture
 import typingsSlinky.babylonjs.mathColorMod.Color3
@@ -90,7 +90,7 @@ class EnvironmentHelper protected () extends js.Object {
     * This observable will be notified with any error during the creation of the environment,
     * mainly texture creation errors.
     */
-  var onErrorObservable: Observable[AnonException] = js.native
+  var onErrorObservable: Observable[Exception] = js.native
   /**
     * Dispose all the elements created by the Helper.
     */

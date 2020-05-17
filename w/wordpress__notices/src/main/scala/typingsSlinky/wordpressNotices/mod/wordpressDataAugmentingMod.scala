@@ -1,7 +1,7 @@
 package typingsSlinky.wordpressNotices.mod
 
-import typingsSlinky.wordpressNotices.TypeofimportedActions
-import typingsSlinky.wordpressNotices.TypeofimportedSelectors
+import typingsSlinky.wordpressNotices.anon.TypeofimportedActions
+import typingsSlinky.wordpressNotices.anon.TypeofimportedSelectors
 import typingsSlinky.wordpressNotices.wordpressNoticesStrings.coreSlashnotices
 import scala.scalajs.js
 import scala.scalajs.js.`|`

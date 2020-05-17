@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeMaterialKit.mod
 
-import typingsSlinky.reactNativeMaterialKit.AnonMax
+import typingsSlinky.reactNativeMaterialKit.anon.Max
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
 trait MKRangeSliderProperties extends BaseSlider {
   var maxValue: js.UndefOr[Double] = js.native
   var minValue: js.UndefOr[Double] = js.native
-  var onChange: js.UndefOr[js.Function1[/* curValue */ AnonMax, Unit]] = js.native
-  var onConfirm: js.UndefOr[js.Function1[/* curValue */ AnonMax, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* curValue */ Max, Unit]] = js.native
+  var onConfirm: js.UndefOr[js.Function1[/* curValue */ Max, Unit]] = js.native
   var onStart: js.UndefOr[js.Function0[Unit]] = js.native
 }
 
@@ -51,7 +51,7 @@ object MKRangeSliderProperties {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* curValue */ AnonMax => Unit): Self = {
+    def withOnChange(value: /* curValue */ Max => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -63,7 +63,7 @@ object MKRangeSliderProperties {
         ret
     }
     @scala.inline
-    def withOnConfirm(value: /* curValue */ AnonMax => Unit): Self = {
+    def withOnConfirm(value: /* curValue */ Max => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onConfirm")(js.Any.fromFunction1(value))
         ret

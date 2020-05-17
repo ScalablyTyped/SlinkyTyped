@@ -2,6 +2,7 @@ package typingsSlinky.cypress
 
 import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.HTMLCanvasElement
+import typingsSlinky.cypress.anon.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +24,7 @@ object blobUtilMod extends js.Object {
   def canvasToBlob(canvas: HTMLCanvasElement, `type`: String): js.Promise[Blob] = js.native
   def canvasToBlob(canvas: HTMLCanvasElement, `type`: String, quality: Double): js.Promise[Blob] = js.native
   def createBlob(parts: js.Array[_]): Blob = js.native
-  def createBlob(parts: js.Array[_], options: AnonType): Blob = js.native
+  def createBlob(parts: js.Array[_], options: Type): Blob = js.native
   def createObjectURL(blob: Blob): String = js.native
   def dataURLToBlob(dataURL: String): js.Promise[Blob] = js.native
   def imgSrcToBlob(src: String): js.Promise[Blob] = js.native

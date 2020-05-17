@@ -1,0 +1,43 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.container
+
+import typingsSlinky.activexLibreoffice.`type`
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Replacement of hierarchical elements. */
+@js.native
+trait XHierarchicalNameReplace extends XHierarchicalNameAccess {
+  /** replaces the element at the specified name. */
+  def replaceByHierarchicalName(aName: String, aElement: js.Any): Unit = js.native
+}
+
+object XHierarchicalNameReplace {
+  @scala.inline
+  def apply(
+    acquire: () => Unit,
+    getByHierarchicalName: String => js.Any,
+    hasByHierarchicalName: String => Boolean,
+    queryInterface: `type` => js.Any,
+    release: () => Unit,
+    replaceByHierarchicalName: (String, js.Any) => Unit
+  ): XHierarchicalNameReplace = {
+    val __obj = js.Dynamic.literal(acquire = js.Any.fromFunction0(acquire), getByHierarchicalName = js.Any.fromFunction1(getByHierarchicalName), hasByHierarchicalName = js.Any.fromFunction1(hasByHierarchicalName), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), replaceByHierarchicalName = js.Any.fromFunction2(replaceByHierarchicalName))
+    __obj.asInstanceOf[XHierarchicalNameReplace]
+  }
+  @scala.inline
+  implicit class XHierarchicalNameReplaceOps[Self <: XHierarchicalNameReplace] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withReplaceByHierarchicalName(value: (String, js.Any) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("replaceByHierarchicalName")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
+}
+

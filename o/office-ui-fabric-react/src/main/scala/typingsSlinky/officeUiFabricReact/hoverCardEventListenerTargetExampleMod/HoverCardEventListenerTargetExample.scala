@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.hoverCardEventListenerTargetExampleMod
 
-import typingsSlinky.officeUiFabricReact.AnonEventListenerTarget
+import typingsSlinky.officeUiFabricReact.anon.EventListenerTarget
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +14,6 @@ class HoverCardEventListenerTargetExample ()
   var _setEventListenerTarget: js.Any = js.native
   var _setTarget: js.Any = js.native
   @JSName("state")
-  var state_HoverCardEventListenerTargetExample: AnonEventListenerTarget = js.native
+  var state_HoverCardEventListenerTargetExample: EventListenerTarget = js.native
 }
 

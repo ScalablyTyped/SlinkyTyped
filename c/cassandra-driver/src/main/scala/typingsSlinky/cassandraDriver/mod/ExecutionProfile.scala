@@ -1,7 +1,7 @@
 package typingsSlinky.cassandraDriver.mod
 
-import typingsSlinky.cassandraDriver.AnonConsistency
-import typingsSlinky.cassandraDriver.AnonLanguage
+import typingsSlinky.cassandraDriver.anon.Consistency
+import typingsSlinky.cassandraDriver.anon.Language
 import typingsSlinky.cassandraDriver.policiesMod.policies.loadBalancing.LoadBalancingPolicy
 import typingsSlinky.cassandraDriver.policiesMod.policies.retry.RetryPolicy
 import typingsSlinky.cassandraDriver.typesMod.types.consistencies
@@ -12,9 +12,9 @@ import scala.scalajs.js.annotation._
 @JSImport("cassandra-driver", "ExecutionProfile")
 @js.native
 class ExecutionProfile protected () extends js.Object {
-  def this(name: String, options: AnonConsistency) = this()
+  def this(name: String, options: Consistency) = this()
   var consistency: js.UndefOr[consistencies] = js.native
-  var graphOptions: js.UndefOr[AnonLanguage] = js.native
+  var graphOptions: js.UndefOr[Language] = js.native
   var loadBalancing: js.UndefOr[LoadBalancingPolicy] = js.native
   var name: String = js.native
   var readTimeout: js.UndefOr[Double] = js.native

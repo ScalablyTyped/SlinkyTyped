@@ -1,6 +1,6 @@
 package typingsSlinky.hapiHapi.mod
 
-import typingsSlinky.hapiHapi.AnonIsOriginMatch
+import typingsSlinky.hapiHapi.anon.IsOriginMatch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait RequestInfo extends js.Object {
   /** request processing completion timestamp (0 is still processing). */
   var completed: Double = js.native
   /** if CORS is enabled for the route, contains the following: */
-  var cors: AnonIsOriginMatch = js.native
+  var cors: IsOriginMatch = js.native
   /** content of the HTTP 'Host' header (e.g. 'example.com:8080'). */
   var host: String = js.native
   /** the hostname part of the 'Host' header (e.g. 'example.com'). */
@@ -36,7 +36,7 @@ object RequestInfo {
   def apply(
     acceptEncoding: String,
     completed: Double,
-    cors: AnonIsOriginMatch,
+    cors: IsOriginMatch,
     host: String,
     hostname: String,
     id: String,
@@ -68,7 +68,7 @@ object RequestInfo {
         ret
     }
     @scala.inline
-    def withCors(value: AnonIsOriginMatch): Self = {
+    def withCors(value: IsOriginMatch): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cors")(value.asInstanceOf[js.Any])
         ret

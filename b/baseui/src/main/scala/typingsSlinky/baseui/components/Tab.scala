@@ -1,5 +1,6 @@
 package typingsSlinky.baseui.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.KeyboardEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
@@ -10,7 +11,6 @@ import typingsSlinky.baseui.baseuiStrings.vertical
 import typingsSlinky.baseui.tabsMod.SharedProps
 import typingsSlinky.baseui.tabsMod.TabOverrides
 import typingsSlinky.baseui.tabsMod.TabProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +33,7 @@ object Tab {
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     @scala.inline
-    def onClick(value: /* e */ Event_ => _): this.type = set("onClick", js.Any.fromFunction1(value))
+    def onClick(value: /* e */ Event => _): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline
     def onKeyDown(value: /* e */ KeyboardEvent => _): this.type = set("onKeyDown", js.Any.fromFunction1(value))
     @scala.inline

@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.rcSteps.AnonError
+import typingsSlinky.rcSteps.anon.Error
 import typingsSlinky.rcSteps.rcStepsStrings.error
 import typingsSlinky.rcSteps.rcStepsStrings.finish
 import typingsSlinky.rcSteps.rcStepsStrings.process
@@ -21,7 +21,7 @@ trait StepProps extends js.Object {
   var disabled: js.UndefOr[Boolean] = js.native
   var icon: js.UndefOr[TagMod[Any]] = js.native
   var iconPrefix: js.UndefOr[String] = js.native
-  var icons: js.UndefOr[AnonError] = js.native
+  var icons: js.UndefOr[Error] = js.native
   var onClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
   var onStepClick: js.UndefOr[js.Function1[/* stepIndex */ Double, Unit]] = js.native
   // The following are undocumented upstream, but listed in PropTypes
@@ -107,7 +107,7 @@ object StepProps {
         ret
     }
     @scala.inline
-    def withIcons(value: AnonError): Self = {
+    def withIcons(value: Error): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("icons")(value.asInstanceOf[js.Any])
         ret

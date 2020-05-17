@@ -1,7 +1,7 @@
 package typingsSlinky.smoothie.mod
 
-import typingsSlinky.smoothie.AnonIndex
-import typingsSlinky.smoothie.AnonLineWidth
+import typingsSlinky.smoothie.anon.Index
+import typingsSlinky.smoothie.anon.LineWidth
 import typingsSlinky.smoothie.smoothieStrings.bezier
 import typingsSlinky.smoothie.smoothieStrings.linear
 import typingsSlinky.smoothie.smoothieStrings.step
@@ -46,8 +46,8 @@ trait IChartOptions extends js.Object {
   /** Optional function to format time stamps for bottom of chart. You may use <code>SmoothieChart.timeFormatter</code>, or your own/ */
   var timestampFormatter: js.UndefOr[js.Function1[/* date */ js.Date, String]] = js.native
   var tooltip: js.UndefOr[Boolean] = js.native
-  var tooltipFormatter: js.UndefOr[js.Function2[/* timestamp */ Double, /* data */ js.Array[AnonIndex], String]] = js.native
-  var tooltipLine: js.UndefOr[AnonLineWidth] = js.native
+  var tooltipFormatter: js.UndefOr[js.Function2[/* timestamp */ Double, /* data */ js.Array[Index], String]] = js.native
+  var tooltipLine: js.UndefOr[LineWidth] = js.native
   /** Callback function that formats the intermediate y value labels */
   var yIntermediateFormatter: js.UndefOr[js.Function2[/* intermediate */ Double, /* precision */ Double, String]] = js.native
   /** Callback function that formats the max y value label */
@@ -286,7 +286,7 @@ object IChartOptions {
         ret
     }
     @scala.inline
-    def withTooltipFormatter(value: (/* timestamp */ Double, /* data */ js.Array[AnonIndex]) => String): Self = {
+    def withTooltipFormatter(value: (/* timestamp */ Double, /* data */ js.Array[Index]) => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipFormatter")(js.Any.fromFunction2(value))
         ret
@@ -298,7 +298,7 @@ object IChartOptions {
         ret
     }
     @scala.inline
-    def withTooltipLine(value: AnonLineWidth): Self = {
+    def withTooltipLine(value: LineWidth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipLine")(value.asInstanceOf[js.Any])
         ret

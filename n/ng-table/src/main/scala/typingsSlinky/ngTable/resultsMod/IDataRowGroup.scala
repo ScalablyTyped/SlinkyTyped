@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IDataRowGroup[T] extends js.Object {
+trait IDataRowGroup[T] extends DataResult[T] {
   @JSName("$hideRows")
   var $hideRows: Boolean = js.native
   var data: js.Array[T] = js.native

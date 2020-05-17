@@ -1,8 +1,8 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonAllowClearing
-import typingsSlinky.devextreme.AnonGroupInterval
-import typingsSlinky.devextreme.AnonSearchMode
+import typingsSlinky.devextreme.anon.AllowClearing
+import typingsSlinky.devextreme.anon.GroupInterval
+import typingsSlinky.devextreme.anon.SearchMode
 import typingsSlinky.devextreme.devextremeStrings.Equalssign
 import typingsSlinky.devextreme.devextremeStrings.Greaterthansign
 import typingsSlinky.devextreme.devextremeStrings.GreaterthansignEqualssign
@@ -27,8 +27,8 @@ import typingsSlinky.devextreme.devextremeStrings.number
 import typingsSlinky.devextreme.devextremeStrings.right
 import typingsSlinky.devextreme.devextremeStrings.startswith
 import typingsSlinky.devextreme.devextremeStrings.string_
-import typingsSlinky.devextreme.mod._Global_.JQueryPromise
-import typingsSlinky.devextreme.mod._Global_.Promise
+import typingsSlinky.devextreme.mod.global.JQueryPromise
+import typingsSlinky.devextreme.mod.global.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -75,7 +75,7 @@ trait GridBaseColumn extends js.Object {
   /** Specifies a CSS class to be applied to the column. */
   var cssClass: js.UndefOr[String] = js.native
   /** Customizes the text displayed in column cells. */
-  var customizeText: js.UndefOr[js.Function1[/* cellInfo */ AnonGroupInterval, String]] = js.native
+  var customizeText: js.UndefOr[js.Function1[/* cellInfo */ GroupInterval, String]] = js.native
   /** Binds the column to a field of the dataSource. */
   var dataField: js.UndefOr[String] = js.native
   /** Casts column values to a specific data type. */
@@ -107,13 +107,13 @@ trait GridBaseColumn extends js.Object {
   /** Formats a value before it is displayed in a column cell. */
   var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.native
   /** Specifies data settings for the header filter. */
-  var headerFilter: js.UndefOr[AnonSearchMode] = js.native
+  var headerFilter: js.UndefOr[SearchMode] = js.native
   /** Specifies the order in which columns are hidden when the widget adapts to the screen or container size. Ignored if allowColumnResizing is true and columnResizingMode is "widget". */
   var hidingPriority: js.UndefOr[Double] = js.native
   /** Specifies whether the column bands other columns or not. */
   var isBand: js.UndefOr[Boolean] = js.native
   /** Specifies options of a lookup column. */
-  var lookup: js.UndefOr[AnonAllowClearing] = js.native
+  var lookup: js.UndefOr[AllowClearing] = js.native
   /** Specifies the minimum width of the column. */
   var minWidth: js.UndefOr[Double] = js.native
   /** Specifies the identifier of the column. */
@@ -380,7 +380,7 @@ object GridBaseColumn {
         ret
     }
     @scala.inline
-    def withCustomizeText(value: /* cellInfo */ AnonGroupInterval => String): Self = {
+    def withCustomizeText(value: /* cellInfo */ GroupInterval => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customizeText")(js.Any.fromFunction1(value))
         ret
@@ -558,7 +558,7 @@ object GridBaseColumn {
         ret
     }
     @scala.inline
-    def withHeaderFilter(value: AnonSearchMode): Self = {
+    def withHeaderFilter(value: SearchMode): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headerFilter")(value.asInstanceOf[js.Any])
         ret
@@ -594,7 +594,7 @@ object GridBaseColumn {
         ret
     }
     @scala.inline
-    def withLookup(value: AnonAllowClearing): Self = {
+    def withLookup(value: AllowClearing): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lookup")(value.asInstanceOf[js.Any])
         ret

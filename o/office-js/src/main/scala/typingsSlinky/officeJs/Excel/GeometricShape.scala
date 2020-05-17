@@ -1,9 +1,9 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.GeometricShapeData
 import typingsSlinky.officeJs.Excel.Interfaces.GeometricShapeLoadOptions
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
+import typingsSlinky.officeJs.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,9 +14,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.9]
   */
-@JSGlobal("Excel.GeometricShape")
 @js.native
-class GeometricShape () extends ClientObject {
+trait GeometricShape extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_GeometricShape: RequestContext = js.native
@@ -41,7 +40,7 @@ class GeometricShape () extends ClientObject {
     */
   def load(): GeometricShape = js.native
   def load(options: GeometricShapeLoadOptions): GeometricShape = js.native
-  def load(propertyNamesAndPaths: AnonExpand): GeometricShape = js.native
+  def load(propertyNamesAndPaths: Expand): GeometricShape = js.native
   def load(propertyNames: String): GeometricShape = js.native
   def load(propertyNames: js.Array[String]): GeometricShape = js.native
   /**

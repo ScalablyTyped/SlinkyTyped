@@ -2,28 +2,35 @@ package typingsSlinky.makerJs.MakerJs.models
 
 import typingsSlinky.makerJs.MakerJs.IModel
 import typingsSlinky.makerJs.MakerJs.IPathMap
-import typingsSlinky.makerJs.MakerJs.IPoint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("MakerJs.models.Polygon")
 @js.native
-class Polygon protected () extends IModel {
-  def this(numberOfSides: Double, radius: Double) = this()
-  def this(numberOfSides: Double, radius: Double, firstCornerAngleInDegrees: Double) = this()
-  def this(numberOfSides: Double, radius: Double, firstCornerAngleInDegrees: Double, circumscribed: Boolean) = this()
+trait Polygon extends IModel {
   @JSName("paths")
   var paths_Polygon: IPathMap = js.native
 }
 
-/* static members */
-@JSGlobal("MakerJs.models.Polygon")
-@js.native
-object Polygon extends js.Object {
-  def circumscribedRadius(radius: Double, angleInRadians: Double): Double = js.native
-  def getPoints(numberOfSides: Double, radius: Double): js.Array[IPoint] = js.native
-  def getPoints(numberOfSides: Double, radius: Double, firstCornerAngleInDegrees: Double): js.Array[IPoint] = js.native
-  def getPoints(numberOfSides: Double, radius: Double, firstCornerAngleInDegrees: Double, circumscribed: Boolean): js.Array[IPoint] = js.native
+object Polygon {
+  @scala.inline
+  def apply(paths: IPathMap): Polygon = {
+    val __obj = js.Dynamic.literal(paths = paths.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Polygon]
+  }
+  @scala.inline
+  implicit class PolygonOps[Self <: Polygon] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPaths(value: IPathMap): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("paths")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

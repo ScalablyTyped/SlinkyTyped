@@ -1,13 +1,13 @@
 package typingsSlinky.openpgp.mod
 
-import typingsSlinky.openpgp.AnonData
-import typingsSlinky.openpgp.AnonMessage
-import typingsSlinky.openpgp.AnonSignature
-import typingsSlinky.openpgp.AnonSignatureSignature
-import typingsSlinky.openpgp.SignOptionsarmorfalsedeta
-import typingsSlinky.openpgp.SignOptionsarmorfalsedetaArmor
-import typingsSlinky.openpgp.SignOptionsarmortruedetac
-import typingsSlinky.openpgp.SignOptionsarmortruedetacArmor
+import typingsSlinky.openpgp.anon.Data
+import typingsSlinky.openpgp.anon.Message
+import typingsSlinky.openpgp.anon.SignOptionsarmorfalsedeta
+import typingsSlinky.openpgp.anon.SignOptionsarmorfalsedetaArmor
+import typingsSlinky.openpgp.anon.SignOptionsarmortruedetac
+import typingsSlinky.openpgp.anon.SignOptionsarmortruedetacArmor
+import typingsSlinky.openpgp.anon.Signature
+import typingsSlinky.openpgp.anon.SignatureSignature
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,10 +15,10 @@ import scala.scalajs.js.annotation._
 @JSImport("openpgp", "sign")
 @js.native
 object sign extends js.Object {
-  def apply(options: SignOptionsarmorfalsedeta): js.Promise[AnonMessage] = js.native
-  def apply(options: SignOptionsarmorfalsedetaArmor): js.Promise[AnonSignatureSignature] = js.native
-  def apply(options: SignOptionsarmortruedetac): js.Promise[AnonData] = js.native
-  def apply(options: SignOptionsarmortruedetacArmor): js.Promise[AnonSignature] = js.native
+  def apply(options: SignOptionsarmorfalsedeta): js.Promise[Message] = js.native
+  def apply(options: SignOptionsarmorfalsedetaArmor): js.Promise[SignatureSignature] = js.native
+  def apply(options: SignOptionsarmortruedetac): js.Promise[Data] = js.native
+  def apply(options: SignOptionsarmortruedetacArmor): js.Promise[Signature] = js.native
   def apply(options: SignOptions): js.Promise[SignResult] = js.native
 }
 

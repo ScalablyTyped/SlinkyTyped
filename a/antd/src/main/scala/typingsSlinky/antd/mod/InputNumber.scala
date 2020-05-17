@@ -1,6 +1,6 @@
 package typingsSlinky.antd.mod
 
-import typingsSlinky.antd.AnonStep
+import typingsSlinky.antd.anon.Step
 import typingsSlinky.antd.inputNumberMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +14,6 @@ class InputNumber () extends default
 @JSImport("antd", "InputNumber")
 @js.native
 object InputNumber extends js.Object {
-  var defaultProps: AnonStep = js.native
+  var defaultProps: Step = js.native
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.gatsby.mod
 
-import typingsSlinky.gatsby.AnonContent
-import typingsSlinky.gatsby.AnonOwner
+import typingsSlinky.gatsby.anon.Content
+import typingsSlinky.gatsby.anon.Owner
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,14 +11,14 @@ trait Node extends NodeInput {
   @JSName("children")
   var children_Node: js.Array[String] = js.native
   @JSName("internal")
-  var internal_Node: AnonContent with AnonOwner = js.native
+  var internal_Node: Content with Owner = js.native
   @JSName("parent")
   var parent_Node: String = js.native
 }
 
 object Node {
   @scala.inline
-  def apply(children: js.Array[String], id: String, internal: AnonContent with AnonOwner, parent: String): Node = {
+  def apply(children: js.Array[String], id: String, internal: Content with Owner, parent: String): Node = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], internal = internal.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any])
     __obj.asInstanceOf[Node]
   }
@@ -35,7 +35,7 @@ object Node {
         ret
     }
     @scala.inline
-    def withInternal(value: AnonContent with AnonOwner): Self = {
+    def withInternal(value: Content with Owner): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("internal")(value.asInstanceOf[js.Any])
         ret

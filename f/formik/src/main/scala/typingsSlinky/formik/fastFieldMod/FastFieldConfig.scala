@@ -3,7 +3,7 @@ package typingsSlinky.formik.fastFieldMod
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.formik.AnonFormik
+import typingsSlinky.formik.anon.Formik
 import typingsSlinky.formik.typesMod.GenericFieldHTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +19,7 @@ trait FastFieldConfig[T] extends js.Object {
   var render: js.UndefOr[js.Function1[/* props */ FastFieldProps[_], TagMod[Any]]] = js.native
   var shouldUpdate: js.UndefOr[
     js.Function2[
-      /* nextProps */ T with GenericFieldHTMLAttributes with AnonFormik, 
+      /* nextProps */ T with GenericFieldHTMLAttributes with Formik, 
       /* props */ js.Object, 
       Boolean
     ]
@@ -133,7 +133,7 @@ object FastFieldConfig {
     }
     @scala.inline
     def withShouldUpdate(
-      value: (/* nextProps */ T with GenericFieldHTMLAttributes with AnonFormik, /* props */ js.Object) => Boolean
+      value: (/* nextProps */ T with GenericFieldHTMLAttributes with Formik, /* props */ js.Object) => Boolean
     ): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shouldUpdate")(js.Any.fromFunction2(value))

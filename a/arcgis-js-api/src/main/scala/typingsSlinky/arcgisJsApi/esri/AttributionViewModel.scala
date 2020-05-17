@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.disabled
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.loading
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ready
@@ -31,8 +30,4 @@ trait AttributionViewModel extends Accessor {
     */
   var view: MapView | SceneView = js.native
 }
-
-@JSGlobal("__esri.AttributionViewModel")
-@js.native
-object AttributionViewModel extends TopLevel[AttributionViewModelConstructor]
 

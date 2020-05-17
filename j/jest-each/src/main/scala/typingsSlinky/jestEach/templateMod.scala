@@ -1,5 +1,6 @@
 package typingsSlinky.jestEach
 
+import typingsSlinky.jestEach.anon.Arguments
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("jest-each/build/table/template", JSImport.Namespace)
 @js.native
 object templateMod extends js.Object {
-  def default(title: String, headings: js.Array[String], row: js.Array[_]): js.Array[AnonArguments] = js.native
+  def default(title: String, headings: js.Array[String], row: js.Array[_]): js.Array[Arguments] = js.native
   def getPath[Obj /* <: Template */](obj: Obj, path: js.Array[String]): js.Any = js.native
   def getPath[Obj /* <: Template */, A /* <: /* keyof Obj */ String */, B /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof Obj[A] */ js.Any */](obj: Obj, path: js.Tuple2[A, B]): /* import warning: importer.ImportType#apply Failed type conversion: Obj[A][B] */ js.Any = js.native
   def getPath[Obj /* <: Template */, A /* <: /* keyof Obj */ String */, B /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof Obj[A] */ js.Any */, C /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof Obj[A][B] */ js.Any */](obj: Obj, path: js.Tuple3[A, B, C]): /* import warning: importer.ImportType#apply Failed type conversion: Obj[A][B][C] */ js.Any = js.native

@@ -19,49 +19,22 @@ trait AnyPaint extends js.Object
 
 object AnyPaint {
   @scala.inline
-  def RasterPaint(): AnyPaint = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AnyPaint]
-  }
+  implicit def apply(value: BackgroundPaint): AnyPaint = value.asInstanceOf[AnyPaint]
   @scala.inline
-  def SymbolPaint(): AnyPaint = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AnyPaint]
-  }
+  implicit def apply(value: CirclePaint): AnyPaint = value.asInstanceOf[AnyPaint]
   @scala.inline
-  def LinePaint(): AnyPaint = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AnyPaint]
-  }
+  implicit def apply(value: FillExtrusionPaint): AnyPaint = value.asInstanceOf[AnyPaint]
   @scala.inline
-  def HeatmapPaint(): AnyPaint = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AnyPaint]
-  }
+  implicit def apply(value: FillPaint): AnyPaint = value.asInstanceOf[AnyPaint]
   @scala.inline
-  def HillshadePaint(): AnyPaint = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AnyPaint]
-  }
+  implicit def apply(value: HeatmapPaint): AnyPaint = value.asInstanceOf[AnyPaint]
   @scala.inline
-  def BackgroundPaint(): AnyPaint = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AnyPaint]
-  }
+  implicit def apply(value: HillshadePaint): AnyPaint = value.asInstanceOf[AnyPaint]
   @scala.inline
-  def FillExtrusionPaint(): AnyPaint = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AnyPaint]
-  }
+  implicit def apply(value: LinePaint): AnyPaint = value.asInstanceOf[AnyPaint]
   @scala.inline
-  def FillPaint(): AnyPaint = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AnyPaint]
-  }
+  implicit def apply(value: RasterPaint): AnyPaint = value.asInstanceOf[AnyPaint]
   @scala.inline
-  def CirclePaint(): AnyPaint = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[AnyPaint]
-  }
+  implicit def apply(value: SymbolPaint): AnyPaint = value.asInstanceOf[AnyPaint]
 }
 

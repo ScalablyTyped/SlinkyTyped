@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.fall
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.spring
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.summer
@@ -68,8 +67,4 @@ trait DaylightViewModel extends Accessor {
     */
   var yearPlaying: Boolean = js.native
 }
-
-@JSGlobal("__esri.DaylightViewModel")
-@js.native
-object DaylightViewModel extends TopLevel[DaylightViewModelConstructor]
 

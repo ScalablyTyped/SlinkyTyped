@@ -1,0 +1,12 @@
+package typingsSlinky.activexMsxml2.global.MSXML2
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Microsoft XML Writer 6.0 */
+@JSGlobal("MSXML2.MXXMLWriter60")
+@js.native
+class MXXMLWriter60 protected ()
+  extends typingsSlinky.activexMsxml2.MSXML2.MXXMLWriter60
+

@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.metadataServiceMod
 
-import typingsSlinky.awsSdk.AnonTimeout
+import typingsSlinky.awsSdk.anon.Timeout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait MetadataServiceOptions extends js.Object {
   /**
     * a map of options to pass to the underlying HTTP request.
     */
-  var httpOptions: js.UndefOr[AnonTimeout] = js.native
+  var httpOptions: js.UndefOr[Timeout] = js.native
   /**
     * the maximum number of retries to perform for timeout errors.
     */
@@ -50,7 +50,7 @@ object MetadataServiceOptions {
         ret
     }
     @scala.inline
-    def withHttpOptions(value: AnonTimeout): Self = {
+    def withHttpOptions(value: Timeout): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("httpOptions")(value.asInstanceOf[js.Any])
         ret

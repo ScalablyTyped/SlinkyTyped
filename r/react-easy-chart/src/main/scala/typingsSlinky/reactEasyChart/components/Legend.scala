@@ -2,7 +2,7 @@ package typingsSlinky.reactEasyChart.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactEasyChart.AnonColorString
+import typingsSlinky.reactEasyChart.anon.ColorString
 import typingsSlinky.reactEasyChart.mod.LegendProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ object Legend {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactEasyChart.mod.Legend] {
     @scala.inline
-    def config(value: js.Array[AnonColorString]): this.type = set("config", value.asInstanceOf[js.Any])
+    def config(value: js.Array[ColorString]): this.type = set("config", value.asInstanceOf[js.Any])
     @scala.inline
     def horizontal(value: Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
   }

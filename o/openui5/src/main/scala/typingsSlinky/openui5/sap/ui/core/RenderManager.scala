@@ -6,12 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("sap.ui.core.RenderManager")
 @js.native
-/**
-  * Creates an instance of the RenderManager.
-  */
-class RenderManager () extends Object {
+trait RenderManager extends Object {
   /**
     * Adds a class to the class collection if the name is not empty or null.The class collection is
     * flushed if it is written to the buffer using {@link #writeClasses}

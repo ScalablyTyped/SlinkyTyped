@@ -1,7 +1,7 @@
 package typingsSlinky.grommet.dropButtonMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.grommet.AnonLeft
+import typingsSlinky.grommet.anon.Left
 import typingsSlinky.grommet.dropMod.DropProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait DropButtonProps extends js.Object {
-  var dropAlign: js.UndefOr[AnonLeft] = js.native
+  var dropAlign: js.UndefOr[Left] = js.native
   var dropContent: ReactElement = js.native
   var dropProps: js.UndefOr[DropProps] = js.native
   var dropTarget: js.UndefOr[js.Object] = js.native
@@ -37,7 +37,7 @@ object DropButtonProps {
         ret
     }
     @scala.inline
-    def withDropAlign(value: AnonLeft): Self = {
+    def withDropAlign(value: Left): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropAlign")(value.asInstanceOf[js.Any])
         ret

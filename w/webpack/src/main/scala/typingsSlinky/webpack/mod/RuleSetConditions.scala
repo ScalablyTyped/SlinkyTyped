@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RuleSetConditions
   extends Array[RuleSetCondition]
-     with _RuleSetCondition
+     with RuleSetCondition
 

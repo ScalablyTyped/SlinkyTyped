@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientCloudiot.gapi.client.cloudiot
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientCloudiot.AnonAccesstoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientCloudiot.anon.Accesstoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +12,12 @@ trait ConfigVersionsResource extends js.Object {
     * Lists the last few versions of the device configuration in descending
     * order (i.e.: newest first).
     */
-  def list(request: AnonAccesstoken): Request_[ListDeviceConfigVersionsResponse] = js.native
+  def list(request: Accesstoken): Request[ListDeviceConfigVersionsResponse] = js.native
 }
 
 object ConfigVersionsResource {
   @scala.inline
-  def apply(list: AnonAccesstoken => Request_[ListDeviceConfigVersionsResponse]): ConfigVersionsResource = {
+  def apply(list: Accesstoken => Request[ListDeviceConfigVersionsResponse]): ConfigVersionsResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[ConfigVersionsResource]
   }
@@ -28,7 +28,7 @@ object ConfigVersionsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withList(value: AnonAccesstoken => Request_[ListDeviceConfigVersionsResponse]): Self = {
+    def withList(value: Accesstoken => Request[ListDeviceConfigVersionsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

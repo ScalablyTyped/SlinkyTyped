@@ -5,12 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object docdbMod {
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.immediate_
-    - typingsSlinky.awsSdk.awsSdkStrings.`pending-reboot`
-    - java.lang.String
-  */
-  type ApplyMethod = typingsSlinky.awsSdk.docdbMod._ApplyMethod | java.lang.String
   type AttributeValueList = js.Array[typingsSlinky.awsSdk.docdbMod.String]
   type AvailabilityZoneList = js.Array[typingsSlinky.awsSdk.docdbMod.AvailabilityZone]
   type AvailabilityZones = js.Array[typingsSlinky.awsSdk.docdbMod.String]
@@ -41,16 +35,6 @@ package object docdbMod {
   type ParametersList = js.Array[typingsSlinky.awsSdk.docdbMod.Parameter]
   type PendingMaintenanceActionDetails = js.Array[typingsSlinky.awsSdk.docdbMod.PendingMaintenanceAction]
   type PendingMaintenanceActions = js.Array[typingsSlinky.awsSdk.docdbMod.ResourcePendingMaintenanceActions]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`db-instance`
-    - typingsSlinky.awsSdk.awsSdkStrings.`db-parameter-group`
-    - typingsSlinky.awsSdk.awsSdkStrings.`db-security-group`
-    - typingsSlinky.awsSdk.awsSdkStrings.`db-snapshot`
-    - typingsSlinky.awsSdk.awsSdkStrings.`db-cluster`
-    - typingsSlinky.awsSdk.awsSdkStrings.`db-cluster-snapshot`
-    - java.lang.String
-  */
-  type SourceType = typingsSlinky.awsSdk.docdbMod._SourceType | java.lang.String
   type String = java.lang.String
   type SubnetIdentifierList = js.Array[typingsSlinky.awsSdk.docdbMod.String]
   type SubnetList = js.Array[typingsSlinky.awsSdk.docdbMod.Subnet]
@@ -59,10 +43,4 @@ package object docdbMod {
   type ValidUpgradeTargetList = js.Array[typingsSlinky.awsSdk.docdbMod.UpgradeTarget]
   type VpcSecurityGroupIdList = js.Array[typingsSlinky.awsSdk.docdbMod.String]
   type VpcSecurityGroupMembershipList = js.Array[typingsSlinky.awsSdk.docdbMod.VpcSecurityGroupMembership]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2014-10-31`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.docdbMod._apiVersion | java.lang.String
 }

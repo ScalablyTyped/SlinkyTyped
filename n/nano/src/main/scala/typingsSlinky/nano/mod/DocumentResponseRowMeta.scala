@@ -1,6 +1,6 @@
 package typingsSlinky.nano.mod
 
-import typingsSlinky.nano.AnonRev
+import typingsSlinky.nano.anon.Rev
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +12,12 @@ import scala.scalajs.js.annotation._
 trait DocumentResponseRowMeta extends js.Object {
   var id: String = js.native
   var key: String = js.native
-  var value: AnonRev = js.native
+  var value: Rev = js.native
 }
 
 object DocumentResponseRowMeta {
   @scala.inline
-  def apply(id: String, key: String, value: AnonRev): DocumentResponseRowMeta = {
+  def apply(id: String, key: String, value: Rev): DocumentResponseRowMeta = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[DocumentResponseRowMeta]
   }
@@ -40,7 +40,7 @@ object DocumentResponseRowMeta {
         ret
     }
     @scala.inline
-    def withValue(value: AnonRev): Self = {
+    def withValue(value: Rev): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
         ret

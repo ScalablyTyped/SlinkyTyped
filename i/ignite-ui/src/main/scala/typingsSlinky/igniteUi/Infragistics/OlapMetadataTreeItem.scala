@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Infragistics.OlapMetadataTreeItem")
 @js.native
-class OlapMetadataTreeItem () extends js.Object {
+trait OlapMetadataTreeItem extends js.Object {
   /**
   	 * Returns the caption text that should be displayed for this tree item.
   	 */
@@ -59,5 +58,46 @@ class OlapMetadataTreeItem () extends js.Object {
   	 *             Item type for the level5 tree items. Contain an item() of type $.ig.Level.
   	 */
   def `type`(): Double = js.native
+}
+
+object OlapMetadataTreeItem {
+  @scala.inline
+  def apply(caption: () => String, children: () => js.Object, item: () => js.Object, `type`: () => Double): OlapMetadataTreeItem = {
+    val __obj = js.Dynamic.literal(caption = js.Any.fromFunction0(caption), children = js.Any.fromFunction0(children), item = js.Any.fromFunction0(item))
+    __obj.updateDynamic("type")(js.Any.fromFunction0(`type`))
+    __obj.asInstanceOf[OlapMetadataTreeItem]
+  }
+  @scala.inline
+  implicit class OlapMetadataTreeItemOps[Self <: OlapMetadataTreeItem] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCaption(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("caption")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withChildren(value: () => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withItem(value: () => js.Object): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withType(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.nodePolyglot.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.nodePolyglot.AnonLength
+import typingsSlinky.nodePolyglot.anon.Length
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait InterpolationOptions
   extends /* interpolationKey */ StringDictionary[js.Any] {
   @JSName("_")
   var _underscore: js.UndefOr[String] = js.native
-  var smart_count: js.UndefOr[Double | AnonLength] = js.native
+  var smart_count: js.UndefOr[Double | Length] = js.native
 }
 
 object InterpolationOptions {
@@ -39,7 +39,7 @@ object InterpolationOptions {
         ret
     }
     @scala.inline
-    def withSmart_count(value: Double | AnonLength): Self = {
+    def withSmart_count(value: Double | Length): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("smart_count")(value.asInstanceOf[js.Any])
         ret

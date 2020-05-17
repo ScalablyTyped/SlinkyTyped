@@ -12,14 +12,8 @@ trait Options extends js.Object
 
 object Options {
   @scala.inline
-  def OptionsWithUri(uri: String): Options = {
-    val __obj = js.Dynamic.literal(uri = uri.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Options]
-  }
+  implicit def apply(value: OptionsWithUri): Options = value.asInstanceOf[Options]
   @scala.inline
-  def OptionsWithUrl(url: String): Options = {
-    val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Options]
-  }
+  implicit def apply(value: OptionsWithUrl): Options = value.asInstanceOf[Options]
 }
 

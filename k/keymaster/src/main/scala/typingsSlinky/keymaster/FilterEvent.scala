@@ -1,13 +1,14 @@
 package typingsSlinky.keymaster
 
+import typingsSlinky.keymaster.anon.TagName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait FilterEvent extends js.Object {
-  var srcElement: js.UndefOr[AnonTagName] = js.native
-  var target: js.UndefOr[AnonTagName] = js.native
+  var srcElement: js.UndefOr[TagName] = js.native
+  var target: js.UndefOr[TagName] = js.native
 }
 
 object FilterEvent {
@@ -23,7 +24,7 @@ object FilterEvent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSrcElement(value: AnonTagName): Self = {
+    def withSrcElement(value: TagName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("srcElement")(value.asInstanceOf[js.Any])
         ret
@@ -35,7 +36,7 @@ object FilterEvent {
         ret
     }
     @scala.inline
-    def withTarget(value: AnonTagName): Self = {
+    def withTarget(value: TagName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
         ret

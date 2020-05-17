@@ -1,6 +1,6 @@
 package typingsSlinky.yup.mod
 
-import typingsSlinky.yup.AnonName
+import typingsSlinky.yup.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,13 +11,13 @@ trait SchemaFieldInnerTypeDescription extends SchemaFieldDescription {
   var innerType: js.UndefOr[SchemaFieldDescription] = js.native
   var label: String = js.native
   var meta: js.Object = js.native
-  var tests: js.Array[AnonName] = js.native
+  var tests: js.Array[Name] = js.native
   var `type`: String = js.native
 }
 
 object SchemaFieldInnerTypeDescription {
   @scala.inline
-  def apply(label: String, meta: js.Object, tests: js.Array[AnonName], `type`: String): SchemaFieldInnerTypeDescription = {
+  def apply(label: String, meta: js.Object, tests: js.Array[Name], `type`: String): SchemaFieldInnerTypeDescription = {
     val __obj = js.Dynamic.literal(label = label.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any], tests = tests.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SchemaFieldInnerTypeDescription]
@@ -41,7 +41,7 @@ object SchemaFieldInnerTypeDescription {
         ret
     }
     @scala.inline
-    def withTests(value: js.Array[AnonName]): Self = {
+    def withTests(value: js.Array[Name]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tests")(value.asInstanceOf[js.Any])
         ret

@@ -2,19 +2,12 @@ package typingsSlinky.amapJsApi.AMap
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.amapJsApi.AMap.InfoWindow.Anchor
-import typingsSlinky.amapJsApi.AMap.InfoWindow.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("AMap.InfoWindow")
 @js.native
-/**
-  * 信息展示窗体
-  * @param options 选项
-  */
-class InfoWindow_[ExtraData] () extends Overlay[ExtraData] {
-  def this(options: Options[_]) = this()
+trait InfoWindow_[ExtraData] extends Overlay[ExtraData] {
   /**
     * 关闭信息窗体
     */

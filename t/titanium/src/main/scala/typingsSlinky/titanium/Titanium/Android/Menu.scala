@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * The Titanium binding of an Android Options Menu.
 		 */
-@JSGlobal("Titanium.Android.Menu")
 @js.native
-class Menu () extends Proxy {
+trait Menu extends Proxy {
   /**
   			 * Array of menu items in this menu.
   			 */

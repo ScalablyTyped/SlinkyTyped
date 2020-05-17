@@ -1,6 +1,6 @@
 package typingsSlinky.mapboxSpritezero.mod
 
-import typingsSlinky.mapboxSpritezero.AnonId
+import typingsSlinky.mapboxSpritezero.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait GenerateLayoutOptions extends js.Object {
   /** If true, generate DataLayout ; if false, generate ImgLayout */
   var format: Boolean = js.native
-  var imgs: js.Array[AnonId] = js.native
+  var imgs: js.Array[Id] = js.native
   /** overrides the max_size in mapnik */
   var maxIconSize: js.UndefOr[Double] = js.native
   /** Ratio of a 72dpi screen pixel to the destination pixel density */
@@ -20,7 +20,7 @@ trait GenerateLayoutOptions extends js.Object {
 
 object GenerateLayoutOptions {
   @scala.inline
-  def apply(format: Boolean, imgs: js.Array[AnonId], pixelRatio: Double): GenerateLayoutOptions = {
+  def apply(format: Boolean, imgs: js.Array[Id], pixelRatio: Double): GenerateLayoutOptions = {
     val __obj = js.Dynamic.literal(format = format.asInstanceOf[js.Any], imgs = imgs.asInstanceOf[js.Any], pixelRatio = pixelRatio.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenerateLayoutOptions]
   }
@@ -37,7 +37,7 @@ object GenerateLayoutOptions {
         ret
     }
     @scala.inline
-    def withImgs(value: js.Array[AnonId]): Self = {
+    def withImgs(value: js.Array[Id]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("imgs")(value.asInstanceOf[js.Any])
         ret

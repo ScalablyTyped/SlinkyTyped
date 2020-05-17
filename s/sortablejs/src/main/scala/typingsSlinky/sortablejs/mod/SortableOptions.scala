@@ -1,13 +1,13 @@
 package typingsSlinky.sortablejs.mod
 
 import org.scalajs.dom.raw.DataTransfer
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.TouchEvent
-import typingsSlinky.sortablejs.AnonGet
-import typingsSlinky.sortablejs.AnonX
+import typingsSlinky.sortablejs.anon.Get
+import typingsSlinky.sortablejs.anon.X
 import typingsSlinky.sortablejs.sortablejsNumbers.`-1`
 import typingsSlinky.sortablejs.sortablejsNumbers.`1`
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -87,7 +87,7 @@ trait SortableOptions extends js.Object {
     * Class name for the cloned DOM Element when using forceFallback
     */
   var fallbackClass: js.UndefOr[String] = js.native
-  var fallbackOffset: js.UndefOr[AnonX] = js.native
+  var fallbackOffset: js.UndefOr[X] = js.native
   /**
     * Appends the cloned DOM Element into the Document's Body
     */
@@ -102,7 +102,7 @@ trait SortableOptions extends js.Object {
   var filter: js.UndefOr[
     String | (js.ThisFunction3[
       /* this */ Sortable, 
-      /* event */ Event_ | TouchEvent, 
+      /* event */ Event | TouchEvent, 
       /* target */ HTMLElement, 
       /* sortable */ Sortable, 
       Boolean
@@ -163,7 +163,7 @@ trait SortableOptions extends js.Object {
     * Event when you move an item in the list or between lists
     */
   var onMove: js.UndefOr[
-    js.Function2[/* evt */ MoveEvent, /* originalEvent */ Event_, Boolean | `-1` | `1`]
+    js.Function2[/* evt */ MoveEvent, /* originalEvent */ Event, Boolean | `-1` | `1`]
   ] = js.native
   /**
     * Element is removed from the list into another list
@@ -201,7 +201,7 @@ trait SortableOptions extends js.Object {
     * sorting inside list
     */
   var sort: js.UndefOr[Boolean] = js.native
-  var store: js.UndefOr[AnonGet] = js.native
+  var store: js.UndefOr[Get] = js.native
   /**
     * Threshold of the swap zone.
     * Defaults to `1`
@@ -402,7 +402,7 @@ object SortableOptions {
         ret
     }
     @scala.inline
-    def withFallbackOffset(value: AnonX): Self = {
+    def withFallbackOffset(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fallbackOffset")(value.asInstanceOf[js.Any])
         ret
@@ -441,7 +441,7 @@ object SortableOptions {
     def withFilter(
       value: String | (js.ThisFunction3[
           /* this */ Sortable, 
-          /* event */ Event_ | TouchEvent, 
+          /* event */ Event | TouchEvent, 
           /* target */ HTMLElement, 
           /* sortable */ Sortable, 
           Boolean
@@ -614,7 +614,7 @@ object SortableOptions {
         ret
     }
     @scala.inline
-    def withOnMove(value: (/* evt */ MoveEvent, /* originalEvent */ Event_) => Boolean | `-1` | `1`): Self = {
+    def withOnMove(value: (/* evt */ MoveEvent, /* originalEvent */ Event) => Boolean | `-1` | `1`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMove")(js.Any.fromFunction2(value))
         ret
@@ -734,7 +734,7 @@ object SortableOptions {
         ret
     }
     @scala.inline
-    def withStore(value: AnonGet): Self = {
+    def withStore(value: Get): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("store")(value.asInstanceOf[js.Any])
         ret

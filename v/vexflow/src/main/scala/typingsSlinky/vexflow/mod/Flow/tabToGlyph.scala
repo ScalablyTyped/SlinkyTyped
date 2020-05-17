@@ -1,6 +1,6 @@
 package typingsSlinky.vexflow.mod.Flow
 
-import typingsSlinky.vexflow.AnonCode
+import typingsSlinky.vexflow.anon.Code
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("vexflow", "Flow.tabToGlyph")
 @js.native
 object tabToGlyph extends js.Object {
-  def apply(fret: String): AnonCode = js.native
+  def apply(fret: String): Code = js.native
 }
 

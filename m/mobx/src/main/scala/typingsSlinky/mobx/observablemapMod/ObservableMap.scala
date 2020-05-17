@@ -32,8 +32,7 @@ class ObservableMap[K, V] ()
   var name: String = js.native
   @JSName(js.Symbol.toStringTag)
   var toStringTag_ObservableMap: typingsSlinky.mobx.mobxStrings.Map = js.native
-  def enhancer(newValue: V, oldValue: V, name: String): V = js.native
-  def enhancer(newValue: V, oldValue: js.UndefOr[scala.Nothing], name: String): V = js.native
+  def enhancer(newValue: V, oldValue: js.UndefOr[V], name: String): V = js.native
   def merge(other: js.Any): ObservableMap[K, V] = js.native
   def merge(other: IKeyValueMap[V]): ObservableMap[K, V] = js.native
   /** Merge another object into this object, returns this. */

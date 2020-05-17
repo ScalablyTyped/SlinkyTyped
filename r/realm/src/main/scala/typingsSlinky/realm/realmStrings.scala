@@ -1,5 +1,6 @@
 package typingsSlinky.realm
 
+import typingsSlinky.realm.Realm.PropertyType
 import typingsSlinky.realm.Realm.Sync.AccessLevel
 import typingsSlinky.realm.Realm.Sync.ClientResyncMode
 import typingsSlinky.realm.Realm.Sync.LogLevel
@@ -9,7 +10,6 @@ import typingsSlinky.realm.Realm.Sync.ProgressDirection
 import typingsSlinky.realm.Realm.Sync.ProgressMode
 import typingsSlinky.realm.Realm.Sync.RealmListenerEventName
 import typingsSlinky.realm.Realm.Sync.SessionStopPolicy
-import typingsSlinky.realm.Realm._PropertyType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -73,7 +73,7 @@ object realmStrings {
   sealed trait available extends RealmListenerEventName
   
   @js.native
-  sealed trait bool extends _PropertyType
+  sealed trait bool extends PropertyType
   
   @js.native
   sealed trait change extends RealmListenerEventName
@@ -82,10 +82,10 @@ object realmStrings {
   sealed trait currentUser extends js.Object
   
   @js.native
-  sealed trait data extends _PropertyType
+  sealed trait data extends PropertyType
   
   @js.native
-  sealed trait date extends _PropertyType
+  sealed trait date extends PropertyType
   
   @js.native
   sealed trait debug extends LogLevel
@@ -100,7 +100,7 @@ object realmStrings {
   sealed trait discard extends ClientResyncMode
   
   @js.native
-  sealed trait double extends _PropertyType
+  sealed trait double extends PropertyType
   
   @js.native
   sealed trait download extends ProgressDirection
@@ -115,7 +115,7 @@ object realmStrings {
   sealed trait fatal extends LogLevel
   
   @js.native
-  sealed trait float extends _PropertyType
+  sealed trait float extends PropertyType
   
   @js.native
   sealed trait forCurrentlyOutstandingWork extends ProgressMode
@@ -130,16 +130,16 @@ object realmStrings {
   sealed trait info extends LogLevel
   
   @js.native
-  sealed trait int extends _PropertyType
+  sealed trait int extends PropertyType
   
   @js.native
   sealed trait invalid extends js.Object
   
   @js.native
-  sealed trait linkingObjects extends _PropertyType
+  sealed trait linkingObjects extends PropertyType
   
   @js.native
-  sealed trait list extends _PropertyType
+  sealed trait list extends PropertyType
   
   @js.native
   sealed trait manual extends ClientResyncMode
@@ -175,7 +175,7 @@ object realmStrings {
   sealed trait schema extends js.Object
   
   @js.native
-  sealed trait string extends _PropertyType
+  sealed trait string extends PropertyType
   
   @js.native
   sealed trait throwException extends OpenRealmTimeOutBehavior

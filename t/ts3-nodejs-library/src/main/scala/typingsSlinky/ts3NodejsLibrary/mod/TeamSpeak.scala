@@ -1,6 +1,6 @@
 package typingsSlinky.ts3NodejsLibrary.mod
 
-import typingsSlinky.ts3NodejsLibrary.PartialConnectionParams
+import typingsSlinky.ts3NodejsLibrary.anon.PartialConnectionParams
 import typingsSlinky.ts3NodejsLibrary.queryResponseMod.QueryResponse
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LeafObject extends js.Object {
+trait LeafObject extends SitemapLeaf {
   var changeFreq: js.UndefOr[String] = js.native
   var lastMod: js.UndefOr[String | js.Date] = js.native
   var url: String = js.native

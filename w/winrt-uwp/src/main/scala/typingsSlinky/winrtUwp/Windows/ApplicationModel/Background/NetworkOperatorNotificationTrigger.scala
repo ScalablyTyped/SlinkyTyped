@@ -5,15 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a mobile network operator notification trigger. */
-@JSGlobal("Windows.ApplicationModel.Background.NetworkOperatorNotificationTrigger")
 @js.native
-class NetworkOperatorNotificationTrigger protected () extends js.Object {
-  /**
-    * Initializes a new instance of a mobile network operator notification.
-    * @param networkAccountId Specifies the unique identifier of the mobile broadband account.
-    */
-  def this(networkAccountId: String) = this()
+trait NetworkOperatorNotificationTrigger extends js.Object {
   /** Gets the account identifier for the mobile network operator notification trigger. */
   var networkAccountId: String = js.native
+}
+
+object NetworkOperatorNotificationTrigger {
+  @scala.inline
+  def apply(networkAccountId: String): NetworkOperatorNotificationTrigger = {
+    val __obj = js.Dynamic.literal(networkAccountId = networkAccountId.asInstanceOf[js.Any])
+    __obj.asInstanceOf[NetworkOperatorNotificationTrigger]
+  }
+  @scala.inline
+  implicit class NetworkOperatorNotificationTriggerOps[Self <: NetworkOperatorNotificationTrigger] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNetworkAccountId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkAccountId")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

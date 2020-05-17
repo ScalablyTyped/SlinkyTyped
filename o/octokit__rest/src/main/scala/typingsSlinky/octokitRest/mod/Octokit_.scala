@@ -1,32 +1,32 @@
 package typingsSlinky.octokitRest.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.octokitRest.AnonAcceptInvitation
-import typingsSlinky.octokitRest.AnonAddAssignees
-import typingsSlinky.octokitRest.AnonAddCollaborator
-import typingsSlinky.octokitRest.AnonAddEmails
-import typingsSlinky.octokitRest.AnonAddMember
-import typingsSlinky.octokitRest.AnonAddOrUpdateMembership
-import typingsSlinky.octokitRest.AnonAddOrUpdateRestrictionsForOrg
-import typingsSlinky.octokitRest.AnonAddRepoToInstallation
-import typingsSlinky.octokitRest.AnonAfter
-import typingsSlinky.octokitRest.AnonCancelImport
-import typingsSlinky.octokitRest.AnonCancelWorkflowRun
-import typingsSlinky.octokitRest.AnonCheckAuthorization
-import typingsSlinky.octokitRest.AnonCheckIfMerged
-import typingsSlinky.octokitRest.AnonCheckIsStarred
-import typingsSlinky.octokitRest.AnonCheckStarringRepo
-import typingsSlinky.octokitRest.AnonCode
-import typingsSlinky.octokitRest.AnonCreate
-import typingsSlinky.octokitRest.AnonCreateBlob
-import typingsSlinky.octokitRest.AnonCreateForCommitComment
-import typingsSlinky.octokitRest.AnonGet
-import typingsSlinky.octokitRest.AnonGetAnon191
-import typingsSlinky.octokitRest.AnonGetAnon319
-import typingsSlinky.octokitRest.AnonGetConductCode
-import typingsSlinky.octokitRest.AnonGetForRepo
-import typingsSlinky.octokitRest.AnonGetTemplate
-import typingsSlinky.octokitRest.AnonRender
+import typingsSlinky.octokitRest.anon.AcceptInvitation
+import typingsSlinky.octokitRest.anon.AddAssignees
+import typingsSlinky.octokitRest.anon.AddCollaborator
+import typingsSlinky.octokitRest.anon.AddEmails
+import typingsSlinky.octokitRest.anon.AddMember
+import typingsSlinky.octokitRest.anon.AddOrUpdateMembership
+import typingsSlinky.octokitRest.anon.AddOrUpdateRestrictionsForOrg
+import typingsSlinky.octokitRest.anon.AddRepoToInstallation
+import typingsSlinky.octokitRest.anon.After
+import typingsSlinky.octokitRest.anon.CancelImport
+import typingsSlinky.octokitRest.anon.CancelWorkflowRun
+import typingsSlinky.octokitRest.anon.CheckAuthorization
+import typingsSlinky.octokitRest.anon.CheckIfMerged
+import typingsSlinky.octokitRest.anon.CheckIsStarred
+import typingsSlinky.octokitRest.anon.CheckStarringRepo
+import typingsSlinky.octokitRest.anon.Code
+import typingsSlinky.octokitRest.anon.Create
+import typingsSlinky.octokitRest.anon.CreateBlob
+import typingsSlinky.octokitRest.anon.CreateForCommitComment
+import typingsSlinky.octokitRest.anon.Get
+import typingsSlinky.octokitRest.anon.Get191
+import typingsSlinky.octokitRest.anon.Get319
+import typingsSlinky.octokitRest.anon.GetConductCode
+import typingsSlinky.octokitRest.anon.GetForRepo
+import typingsSlinky.octokitRest.anon.GetTemplate
+import typingsSlinky.octokitRest.anon.Render
 import typingsSlinky.octokitRest.mod.Octokit.AnyResponse
 import typingsSlinky.octokitRest.mod.Octokit.AuthBasic
 import typingsSlinky.octokitRest.mod.Octokit.AuthJWT
@@ -46,37 +46,37 @@ import scala.scalajs.js.annotation._
 @js.native
 class Octokit_ () extends js.Object {
   def this(options: Options) = this()
-  var actions: AnonCancelWorkflowRun = js.native
-  var activity: AnonCheckStarringRepo = js.native
-  var apps: AnonAddRepoToInstallation = js.native
-  var checks: AnonCreate = js.native
-  var codesOfConduct: AnonGetConductCode = js.native
-  var emojis: AnonGet = js.native
-  var gists: AnonCheckIsStarred = js.native
-  var git: AnonCreateBlob = js.native
-  var gitignore: AnonGetTemplate = js.native
-  var hook: AnonAfter = js.native
-  var interactions: AnonAddOrUpdateRestrictionsForOrg = js.native
-  var issues: AnonAddAssignees = js.native
-  var licenses: AnonGetForRepo = js.native
+  var actions: CancelWorkflowRun = js.native
+  var activity: CheckStarringRepo = js.native
+  var apps: AddRepoToInstallation = js.native
+  var checks: Create = js.native
+  var codesOfConduct: GetConductCode = js.native
+  var emojis: Get = js.native
+  var gists: CheckIsStarred = js.native
+  var git: CreateBlob = js.native
+  var gitignore: GetTemplate = js.native
+  var hook: After = js.native
+  var interactions: AddOrUpdateRestrictionsForOrg = js.native
+  var issues: AddAssignees = js.native
+  var licenses: GetForRepo = js.native
   var log: Log = js.native
-  var markdown: AnonRender = js.native
-  var meta: AnonGetAnon191 = js.native
-  var migrations: AnonCancelImport = js.native
-  var oauthAuthorizations: AnonCheckAuthorization = js.native
-  var orgs: AnonAddOrUpdateMembership = js.native
+  var markdown: Render = js.native
+  var meta: Get191 = js.native
+  var migrations: CancelImport = js.native
+  var oauthAuthorizations: CheckAuthorization = js.native
+  var orgs: AddOrUpdateMembership = js.native
   @JSName("paginate")
   var paginate_Original: Paginate = js.native
-  var projects: AnonAddCollaborator = js.native
-  var pulls: AnonCheckIfMerged = js.native
-  var rateLimit: AnonGetAnon319 = js.native
-  var reactions: AnonCreateForCommitComment = js.native
-  var repos: AnonAcceptInvitation = js.native
+  var projects: AddCollaborator = js.native
+  var pulls: CheckIfMerged = js.native
+  var rateLimit: Get319 = js.native
+  var reactions: CreateForCommitComment = js.native
+  var repos: AcceptInvitation = js.native
   @JSName("request")
   var request_Original: Request = js.native
-  var search: AnonCode = js.native
-  var teams: AnonAddMember = js.native
-  var users: AnonAddEmails = js.native
+  var search: Code = js.native
+  var teams: AddMember = js.native
+  var users: AddEmails = js.native
   def authenticate(auth: AuthBasic): Unit = js.native
   def authenticate(auth: AuthJWT): Unit = js.native
   def authenticate(auth: AuthOAuthSecret): Unit = js.native

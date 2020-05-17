@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojtableMod.ojTable
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.oracleOraclejet.Anon22
+import typingsSlinky.oracleOraclejet.anon.`22`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ trait HeaderRendererContext[K, D] extends js.Object {
   var columnIndex: Double = js.native
   var componentElement: Element = js.native
   var data: String = js.native
-  var headerContext: Anon22[K, D] = js.native
+  var headerContext: `22`[K, D] = js.native
   var parentElement: Element = js.native
 }
 
@@ -36,7 +36,7 @@ object HeaderRendererContext {
     columnIndex: Double,
     componentElement: Element,
     data: String,
-    headerContext: Anon22[K, D],
+    headerContext: `22`[K, D],
     parentElement: Element
   ): HeaderRendererContext[K, D] = {
     val __obj = js.Dynamic.literal(columnIndex = columnIndex.asInstanceOf[js.Any], componentElement = componentElement.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], headerContext = headerContext.asInstanceOf[js.Any], parentElement = parentElement.asInstanceOf[js.Any])
@@ -67,7 +67,7 @@ object HeaderRendererContext {
         ret
     }
     @scala.inline
-    def withHeaderContext(value: Anon22[K, D]): Self[K, D] = {
+    def withHeaderContext(value: `22`[K, D]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headerContext")(value.asInstanceOf[js.Any])
         ret

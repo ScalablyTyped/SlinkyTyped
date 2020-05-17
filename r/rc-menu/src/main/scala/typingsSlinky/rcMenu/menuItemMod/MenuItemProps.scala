@@ -4,8 +4,7 @@ import org.scalajs.dom.raw.Element
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.rcMenu.AnonHover
-import typingsSlinky.rcMenu.AnonKey
+import typingsSlinky.rcMenu.anon.Hover
 import typingsSlinky.rcMenu.interfaceMod.DestroyEventHandler
 import typingsSlinky.rcMenu.interfaceMod.HoverEventHandler
 import typingsSlinky.rcMenu.interfaceMod.LegacyFunctionRef
@@ -293,7 +292,7 @@ object MenuItemProps {
         ret
     }
     @scala.inline
-    def withOnItemHover(value: /* info */ AnonHover => Unit): Self = {
+    def withOnItemHover(value: /* info */ Hover => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemHover")(js.Any.fromFunction1(value))
         ret
@@ -305,7 +304,7 @@ object MenuItemProps {
         ret
     }
     @scala.inline
-    def withOnMouseEnter(value: /* info */ AnonKey => Unit): Self = {
+    def withOnMouseEnter(value: /* info */ typingsSlinky.rcMenu.anon.Key => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseEnter")(js.Any.fromFunction1(value))
         ret
@@ -317,7 +316,7 @@ object MenuItemProps {
         ret
     }
     @scala.inline
-    def withOnMouseLeave(value: /* info */ AnonKey => Unit): Self = {
+    def withOnMouseLeave(value: /* info */ typingsSlinky.rcMenu.anon.Key => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onMouseLeave")(js.Any.fromFunction1(value))
         ret

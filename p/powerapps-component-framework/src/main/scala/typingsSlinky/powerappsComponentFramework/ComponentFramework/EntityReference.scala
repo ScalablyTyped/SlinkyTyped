@@ -1,6 +1,6 @@
 package typingsSlinky.powerappsComponentFramework.ComponentFramework
 
-import typingsSlinky.powerappsComponentFramework.AnonGuid
+import typingsSlinky.powerappsComponentFramework.anon.Guid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait EntityReference extends js.Object {
   /**
   		 * The record id. Read-only.
   		 */
-  var id: AnonGuid = js.native
+  var id: Guid = js.native
   /**
   		 * The name of the entity reference. Read-only.
   		 */
@@ -26,7 +26,7 @@ trait EntityReference extends js.Object {
 
 object EntityReference {
   @scala.inline
-  def apply(id: AnonGuid, name: String): EntityReference = {
+  def apply(id: Guid, name: String): EntityReference = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[EntityReference]
   }
@@ -37,7 +37,7 @@ object EntityReference {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withId(value: AnonGuid): Self = {
+    def withId(value: Guid): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
         ret

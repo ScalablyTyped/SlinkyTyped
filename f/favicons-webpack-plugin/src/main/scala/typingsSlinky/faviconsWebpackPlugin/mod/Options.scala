@@ -1,7 +1,7 @@
 package typingsSlinky.faviconsWebpackPlugin.mod
 
-import typingsSlinky.faviconsWebpackPlugin.PartialConfiguration
-import typingsSlinky.faviconsWebpackPlugin.optionsOptions
+import typingsSlinky.faviconsWebpackPlugin.anon.PartialConfiguration
+import typingsSlinky.faviconsWebpackPlugin.anon.optionsOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.lestate.mod
 
-import typingsSlinky.lestate.AnonInitialState
+import typingsSlinky.lestate.anon.InitialState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object createState extends js.Object {
   def apply(): LeState = js.native
-  def apply(props: AnonInitialState): LeState = js.native
+  def apply(props: InitialState): LeState = js.native
 }
 

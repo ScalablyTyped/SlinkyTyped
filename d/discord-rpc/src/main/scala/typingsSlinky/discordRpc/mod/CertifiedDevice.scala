@@ -1,6 +1,6 @@
 package typingsSlinky.discordRpc.mod
 
-import typingsSlinky.discordRpc.AnonName
+import typingsSlinky.discordRpc.anon.Name
 import typingsSlinky.discordRpc.discordRpcStrings.audioinput
 import typingsSlinky.discordRpc.discordRpcStrings.audiooutput
 import typingsSlinky.discordRpc.discordRpcStrings.videoinput
@@ -13,22 +13,22 @@ trait CertifiedDevice extends js.Object {
   var automaticGainControl: js.UndefOr[Boolean] = js.native
   var echoCancellation: js.UndefOr[Boolean] = js.native
   var hardwareMute: js.UndefOr[Boolean] = js.native
-  var model: AnonName = js.native
+  var model: Name = js.native
   var noiseSuppression: js.UndefOr[Boolean] = js.native
   var related: js.Array[String] = js.native
   var `type`: audioinput | audiooutput | videoinput = js.native
   var uuid: String = js.native
-  var vendor: AnonName = js.native
+  var vendor: Name = js.native
 }
 
 object CertifiedDevice {
   @scala.inline
   def apply(
-    model: AnonName,
+    model: Name,
     related: js.Array[String],
     `type`: audioinput | audiooutput | videoinput,
     uuid: String,
-    vendor: AnonName
+    vendor: Name
   ): CertifiedDevice = {
     val __obj = js.Dynamic.literal(model = model.asInstanceOf[js.Any], related = related.asInstanceOf[js.Any], uuid = uuid.asInstanceOf[js.Any], vendor = vendor.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
@@ -41,7 +41,7 @@ object CertifiedDevice {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withModel(value: AnonName): Self = {
+    def withModel(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
         ret
@@ -65,7 +65,7 @@ object CertifiedDevice {
         ret
     }
     @scala.inline
-    def withVendor(value: AnonName): Self = {
+    def withVendor(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("vendor")(value.asInstanceOf[js.Any])
         ret

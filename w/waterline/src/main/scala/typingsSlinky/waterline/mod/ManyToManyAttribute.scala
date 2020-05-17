@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 /* Inlined waterline.waterline.BaseAttribute<any> & {  collection  :string,   via  :string,   dominant ? :boolean} */
 @js.native
-trait ManyToManyAttribute extends _Attribute {
+trait ManyToManyAttribute extends Attribute {
   var after: js.UndefOr[AttributeValidation[String]] = js.native
   var alpha: js.UndefOr[AttributeValidation[Boolean]] = js.native
   var alphanumeric: js.UndefOr[AttributeValidation[Boolean]] = js.native

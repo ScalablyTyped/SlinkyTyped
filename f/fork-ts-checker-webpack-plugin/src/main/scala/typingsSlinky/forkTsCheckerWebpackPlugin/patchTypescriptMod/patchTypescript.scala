@@ -1,6 +1,6 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin.patchTypescriptMod
 
-import typingsSlinky.forkTsCheckerWebpackPlugin.Typeofts
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.Typeofts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

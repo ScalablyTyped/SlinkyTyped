@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.AnimationEvent
 import org.scalajs.dom.raw.ClipboardEvent
 import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.ErrorEvent
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
@@ -15,7 +16,6 @@ import org.scalajs.dom.raw.UIEvent
 import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.std.DocumentAndElementEventHandlersEventMap
 import typingsSlinky.std.ElementEventMap
-import typingsSlinky.std.Event_
 import typingsSlinky.std.GlobalEventHandlersEventMap
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import scala.scalajs.js
@@ -28,9 +28,9 @@ trait WebViewElementEventMap
      with GlobalEventHandlersEventMap
      with DocumentAndElementEventHandlersEventMap {
   @JSName("close")
-  var close_WebViewElementEventMap: CloseEvent = js.native
+  var close_WebViewElementEventMap: Event = js.native
   var consolemessage: ConsoleMessageEvent = js.native
-  var contentload: ContentLoadEvent = js.native
+  var contentload: Event = js.native
   var dialog: DialogEvent = js.native
   var exit: ExitEvent = js.native
   var findupdate: FindUpdateEvent = js.native
@@ -39,7 +39,7 @@ trait WebViewElementEventMap
   var loadredirect: LoadRedirectEvent = js.native
   @JSName("loadstart")
   var loadstart_WebViewElementEventMap: LoadStartEvent = js.native
-  var loadstop: LoadStopEvent = js.native
+  var loadstop: Event = js.native
   var newwindow: NewWindowEvent = js.native
   var permissionrequest: PermissionRequestEvent = js.native
   var responsive: ResponsiveEvent = js.native
@@ -58,53 +58,53 @@ object WebViewElementEventMap {
     animationstart: AnimationEvent,
     auxclick: MouseEvent,
     blur: FocusEvent,
-    cancel: Event_,
-    canplay: Event_,
-    canplaythrough: Event_,
-    change: Event_,
+    cancel: Event,
+    canplay: Event,
+    canplaythrough: Event,
+    change: Event,
     click: MouseEvent,
-    close: CloseEvent,
+    close: Event,
     consolemessage: ConsoleMessageEvent,
-    contentload: ContentLoadEvent,
+    contentload: Event,
     contextmenu: MouseEvent,
     copy: ClipboardEvent,
-    cuechange: Event_,
+    cuechange: Event,
     cut: ClipboardEvent,
     dblclick: MouseEvent,
     dialog: DialogEvent,
     drag: DragEvent,
     dragend: DragEvent,
     dragenter: DragEvent,
-    dragexit: Event_,
+    dragexit: Event,
     dragleave: DragEvent,
     dragover: DragEvent,
     dragstart: DragEvent,
     drop: DragEvent,
-    durationchange: Event_,
-    emptied: Event_,
-    ended: Event_,
+    durationchange: Event,
+    emptied: Event,
+    ended: Event,
     error: ErrorEvent,
     exit: ExitEvent,
     findupdate: FindUpdateEvent,
     focus: FocusEvent,
     focusin: FocusEvent,
     focusout: FocusEvent,
-    fullscreenchange: Event_,
-    fullscreenerror: Event_,
+    fullscreenchange: Event,
+    fullscreenerror: Event,
     gotpointercapture: PointerEvent,
-    input: Event_,
-    invalid: Event_,
+    input: Event,
+    invalid: Event,
     keydown: KeyboardEvent,
     keypress: KeyboardEvent,
     keyup: KeyboardEvent,
-    load: Event_,
+    load: Event,
     loadabort: LoadAbortEvent,
     loadcommit: LoadCommitEvent,
-    loadeddata: Event_,
-    loadedmetadata: Event_,
+    loadeddata: Event,
+    loadedmetadata: Event,
     loadredirect: LoadRedirectEvent,
     loadstart: LoadStartEvent,
-    loadstop: LoadStopEvent,
+    loadstop: Event,
     lostpointercapture: PointerEvent,
     mousedown: MouseEvent,
     mouseenter: MouseEvent,
@@ -115,10 +115,10 @@ object WebViewElementEventMap {
     mouseup: MouseEvent,
     newwindow: NewWindowEvent,
     paste: ClipboardEvent,
-    pause: Event_,
+    pause: Event,
     permissionrequest: PermissionRequestEvent,
-    play: Event_,
-    playing: Event_,
+    play: Event,
+    playing: Event,
     pointercancel: PointerEvent,
     pointerdown: PointerEvent,
     pointerenter: PointerEvent,
@@ -128,23 +128,23 @@ object WebViewElementEventMap {
     pointerover: PointerEvent,
     pointerup: PointerEvent,
     progress: ProgressEvent,
-    ratechange: Event_,
-    reset: Event_,
+    ratechange: Event,
+    reset: Event,
     resize: UIEvent,
     responsive: ResponsiveEvent,
-    scroll: Event_,
+    scroll: Event,
     securitypolicyviolation: SecurityPolicyViolationEvent,
-    seeked: Event_,
-    seeking: Event_,
-    select: Event_,
-    selectionchange: Event_,
-    selectstart: Event_,
+    seeked: Event,
+    seeking: Event,
+    select: Event,
+    selectionchange: Event,
+    selectstart: Event,
     sizechanged: SizeChangedEvent,
-    stalled: Event_,
-    submit: Event_,
-    suspend: Event_,
-    timeupdate: Event_,
-    toggle: Event_,
+    stalled: Event,
+    submit: Event,
+    suspend: Event,
+    timeupdate: Event,
+    toggle: Event,
     touchcancel: TouchEvent,
     touchend: TouchEvent,
     touchmove: TouchEvent,
@@ -154,8 +154,8 @@ object WebViewElementEventMap {
     transitionrun: TransitionEvent,
     transitionstart: TransitionEvent,
     unresponsive: UnresponsiveEvent,
-    volumechange: Event_,
-    waiting: Event_,
+    volumechange: Event,
+    waiting: Event,
     wheel: WheelEvent,
     zoomchange: ZoomChangeEvent
   ): WebViewElementEventMap = {
@@ -169,7 +169,7 @@ object WebViewElementEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClose(value: CloseEvent): Self = {
+    def withClose(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("close")(value.asInstanceOf[js.Any])
         ret
@@ -181,7 +181,7 @@ object WebViewElementEventMap {
         ret
     }
     @scala.inline
-    def withContentload(value: ContentLoadEvent): Self = {
+    def withContentload(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentload")(value.asInstanceOf[js.Any])
         ret
@@ -229,7 +229,7 @@ object WebViewElementEventMap {
         ret
     }
     @scala.inline
-    def withLoadstop(value: LoadStopEvent): Self = {
+    def withLoadstop(value: Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loadstop")(value.asInstanceOf[js.Any])
         ret

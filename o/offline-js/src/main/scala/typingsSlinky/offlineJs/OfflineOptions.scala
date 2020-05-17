@@ -1,5 +1,6 @@
 package typingsSlinky.offlineJs
 
+import typingsSlinky.offlineJs.anon.Delay
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,13 +13,13 @@ trait OfflineOptions extends js.Object {
   var checks: js.UndefOr[OfflineChecks] = js.native
   var game: js.UndefOr[Boolean] = js.native
   var interceptRequests: js.UndefOr[Boolean] = js.native
-  var reconnect: AnonDelay = js.native
+  var reconnect: Delay = js.native
   var requests: js.UndefOr[Boolean] = js.native
 }
 
 object OfflineOptions {
   @scala.inline
-  def apply(reconnect: AnonDelay): OfflineOptions = {
+  def apply(reconnect: Delay): OfflineOptions = {
     val __obj = js.Dynamic.literal(reconnect = reconnect.asInstanceOf[js.Any])
     __obj.asInstanceOf[OfflineOptions]
   }
@@ -29,7 +30,7 @@ object OfflineOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withReconnect(value: AnonDelay): Self = {
+    def withReconnect(value: Delay): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("reconnect")(value.asInstanceOf[js.Any])
         ret

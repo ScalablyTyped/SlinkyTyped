@@ -6,12 +6,12 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait MediaDevicesEventMap extends js.Object {
-  var devicechange: Event_ = js.native
+  var devicechange: org.scalajs.dom.raw.Event = js.native
 }
 
 object MediaDevicesEventMap {
   @scala.inline
-  def apply(devicechange: Event_): MediaDevicesEventMap = {
+  def apply(devicechange: org.scalajs.dom.raw.Event): MediaDevicesEventMap = {
     val __obj = js.Dynamic.literal(devicechange = devicechange.asInstanceOf[js.Any])
     __obj.asInstanceOf[MediaDevicesEventMap]
   }
@@ -22,7 +22,7 @@ object MediaDevicesEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDevicechange(value: Event_): Self = {
+    def withDevicechange(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("devicechange")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.reReselect.mod
 
-import typingsSlinky.reReselect.AnonCacheSize
+import typingsSlinky.reReselect.anon.CacheSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("re-reselect", "LruObjectCache")
 @js.native
 class LruObjectCache protected () extends ICacheObject {
-  def this(options: AnonCacheSize) = this()
+  def this(options: CacheSize) = this()
   def get(key: ObjectCacheKey): js.Any = js.native
   @JSName("isValidCacheKey")
   def isValidCacheKey_MLruObjectCache(key: ObjectCacheKey): Boolean = js.native

@@ -2,8 +2,8 @@ package typingsSlinky.pgPromise.mod
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.pgPromise.AnonEmptyUpdate
-import typingsSlinky.pgPromise.AnonOptions
+import typingsSlinky.pgPromise.anon.EmptyUpdate
+import typingsSlinky.pgPromise.anon.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait IHelpers extends js.Object {
     typingsSlinky.pgPromise.mod.ColumnSet
   ] = js.native
   var TableName: Instantiable1[/* table */ String | ITable, typingsSlinky.pgPromise.mod.TableName] = js.native
-  def concat(queries: js.Array[String | QueryFile | AnonOptions]): String = js.native
+  def concat(queries: js.Array[String | QueryFile | Options]): String = js.native
   def insert(data: js.Array[js.Object]): String = js.native
   def insert(data: js.Array[js.Object], columns: QueryColumns): String = js.native
   def insert(data: js.Array[js.Object], columns: QueryColumns, table: String): String = js.native
@@ -35,19 +35,19 @@ trait IHelpers extends js.Object {
   def update(data: js.Array[js.Object]): js.Any = js.native
   def update(data: js.Array[js.Object], columns: QueryColumns): js.Any = js.native
   def update(data: js.Array[js.Object], columns: QueryColumns, table: String): js.Any = js.native
-  def update(data: js.Array[js.Object], columns: QueryColumns, table: String, options: AnonEmptyUpdate): js.Any = js.native
+  def update(data: js.Array[js.Object], columns: QueryColumns, table: String, options: EmptyUpdate): js.Any = js.native
   def update(data: js.Array[js.Object], columns: QueryColumns, table: ITable): js.Any = js.native
-  def update(data: js.Array[js.Object], columns: QueryColumns, table: ITable, options: AnonEmptyUpdate): js.Any = js.native
+  def update(data: js.Array[js.Object], columns: QueryColumns, table: ITable, options: EmptyUpdate): js.Any = js.native
   def update(data: js.Array[js.Object], columns: QueryColumns, table: TableName): js.Any = js.native
-  def update(data: js.Array[js.Object], columns: QueryColumns, table: TableName, options: AnonEmptyUpdate): js.Any = js.native
+  def update(data: js.Array[js.Object], columns: QueryColumns, table: TableName, options: EmptyUpdate): js.Any = js.native
   def update(data: js.Object): js.Any = js.native
   def update(data: js.Object, columns: QueryColumns): js.Any = js.native
   def update(data: js.Object, columns: QueryColumns, table: String): js.Any = js.native
-  def update(data: js.Object, columns: QueryColumns, table: String, options: AnonEmptyUpdate): js.Any = js.native
+  def update(data: js.Object, columns: QueryColumns, table: String, options: EmptyUpdate): js.Any = js.native
   def update(data: js.Object, columns: QueryColumns, table: ITable): js.Any = js.native
-  def update(data: js.Object, columns: QueryColumns, table: ITable, options: AnonEmptyUpdate): js.Any = js.native
+  def update(data: js.Object, columns: QueryColumns, table: ITable, options: EmptyUpdate): js.Any = js.native
   def update(data: js.Object, columns: QueryColumns, table: TableName): js.Any = js.native
-  def update(data: js.Object, columns: QueryColumns, table: TableName, options: AnonEmptyUpdate): js.Any = js.native
+  def update(data: js.Object, columns: QueryColumns, table: TableName, options: EmptyUpdate): js.Any = js.native
   def values(data: js.Array[js.Object]): String = js.native
   def values(data: js.Array[js.Object], columns: QueryColumns): String = js.native
   def values(data: js.Object): String = js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.jsreportHtmlToXlsx.mod.jsreportCoreAugmentingMod
 
-import typingsSlinky.jsreportHtmlToXlsx.AnonHtmlEngine
+import typingsSlinky.jsreportHtmlToXlsx.anon.HtmlEngine
 import typingsSlinky.jsreportHtmlToXlsx.jsreportHtmlToXlsxStrings.`html-to-xlsx`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Template extends js.Object {
-  var htmlToXlsx: AnonHtmlEngine = js.native
+  var htmlToXlsx: HtmlEngine = js.native
   var recipe: `html-to-xlsx` | String = js.native
 }
 
 object Template {
   @scala.inline
-  def apply(htmlToXlsx: AnonHtmlEngine, recipe: `html-to-xlsx` | String): Template = {
+  def apply(htmlToXlsx: HtmlEngine, recipe: `html-to-xlsx` | String): Template = {
     val __obj = js.Dynamic.literal(htmlToXlsx = htmlToXlsx.asInstanceOf[js.Any], recipe = recipe.asInstanceOf[js.Any])
     __obj.asInstanceOf[Template]
   }
@@ -25,7 +25,7 @@ object Template {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withHtmlToXlsx(value: AnonHtmlEngine): Self = {
+    def withHtmlToXlsx(value: HtmlEngine): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("htmlToXlsx")(value.asInstanceOf[js.Any])
         ret

@@ -3,7 +3,7 @@ package typingsSlinky.passportWindowsauth.mod
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
-import typingsSlinky.passportWindowsauth.AnonBase
+import typingsSlinky.passportWindowsauth.anon.Base
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait Options extends js.Object {
   var getUserNameFromHeader: js.UndefOr[js.Function1[/* req */ Request_[ParamsDictionary, _, _, Query], String]] = js.native
   var integrated: js.UndefOr[Boolean] = js.native
-  var ldap: js.UndefOr[AnonBase] = js.native
+  var ldap: js.UndefOr[Base] = js.native
   var passReqToCallback: js.UndefOr[Boolean] = js.native
   var passwordField: js.UndefOr[String] = js.native
   var usernameField: js.UndefOr[String] = js.native
@@ -55,7 +55,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withLdap(value: AnonBase): Self = {
+    def withLdap(value: Base): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ldap")(value.asInstanceOf[js.Any])
         ret

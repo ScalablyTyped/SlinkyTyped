@@ -3,11 +3,11 @@ package typingsSlinky.baseui.components
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonBeginDate
-import typingsSlinky.baseui.AnonDate
-import typingsSlinky.baseui.AnonDateDate
-import typingsSlinky.baseui.AnonDateEvent
-import typingsSlinky.baseui.StatefulDatepickerPropsDa
+import typingsSlinky.baseui.anon.BeginDate
+import typingsSlinky.baseui.anon.Date
+import typingsSlinky.baseui.anon.DateDate
+import typingsSlinky.baseui.anon.DateEvent
+import typingsSlinky.baseui.anon.StatefulDatepickerPropsDa
 import typingsSlinky.baseui.baseuiStrings.change_
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
@@ -80,19 +80,19 @@ object StatefulDatepicker {
     @scala.inline
     def mountNode(value: HTMLElement): this.type = set("mountNode", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* args */ AnonDate => js.Any): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* args */ Date => js.Any): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def onClose(value: () => _): this.type = set("onClose", js.Any.fromFunction0(value))
     @scala.inline
-    def onDayClick(value: /* args */ AnonDateEvent => _): this.type = set("onDayClick", js.Any.fromFunction1(value))
+    def onDayClick(value: /* args */ DateEvent => _): this.type = set("onDayClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onDayMouseLeave(value: /* args */ AnonDateEvent => _): this.type = set("onDayMouseLeave", js.Any.fromFunction1(value))
+    def onDayMouseLeave(value: /* args */ DateEvent => _): this.type = set("onDayMouseLeave", js.Any.fromFunction1(value))
     @scala.inline
-    def onDayMouseOver(value: /* args */ AnonDateEvent => _): this.type = set("onDayMouseOver", js.Any.fromFunction1(value))
+    def onDayMouseOver(value: /* args */ DateEvent => _): this.type = set("onDayMouseOver", js.Any.fromFunction1(value))
     @scala.inline
-    def onMonthChange(value: /* args */ AnonDateDate => _): this.type = set("onMonthChange", js.Any.fromFunction1(value))
+    def onMonthChange(value: /* args */ DateDate => _): this.type = set("onMonthChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onYearChange(value: /* args */ AnonDateDate => _): this.type = set("onYearChange", js.Any.fromFunction1(value))
+    def onYearChange(value: /* args */ DateDate => _): this.type = set("onYearChange", js.Any.fromFunction1(value))
     @scala.inline
     def orientation(value: horizontal | vertical): this.type = set("orientation", value.asInstanceOf[js.Any])
     @scala.inline
@@ -106,7 +106,7 @@ object StatefulDatepicker {
     @scala.inline
     def quickSelect(value: Boolean): this.type = set("quickSelect", value.asInstanceOf[js.Any])
     @scala.inline
-    def quickSelectOptions(value: js.Array[AnonBeginDate]): this.type = set("quickSelectOptions", value.asInstanceOf[js.Any])
+    def quickSelectOptions(value: js.Array[BeginDate]): this.type = set("quickSelectOptions", value.asInstanceOf[js.Any])
     @scala.inline
     def range(value: Boolean): this.type = set("range", value.asInstanceOf[js.Any])
     @scala.inline

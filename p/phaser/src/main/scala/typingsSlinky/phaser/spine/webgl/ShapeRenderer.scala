@@ -1,6 +1,5 @@
 package typingsSlinky.phaser.spine.webgl
 
-import org.scalajs.dom.raw.WebGLRenderingContext
 import typingsSlinky.phaser.spine.ArrayLike
 import typingsSlinky.phaser.spine.Color
 import typingsSlinky.phaser.spine.Disposable
@@ -8,13 +7,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("spine.webgl.ShapeRenderer")
 @js.native
-class ShapeRenderer protected () extends Disposable {
-  def this(context: ManagedWebGLRenderingContext) = this()
-  def this(context: WebGLRenderingContext) = this()
-  def this(context: ManagedWebGLRenderingContext, maxVertices: Double) = this()
-  def this(context: WebGLRenderingContext, maxVertices: Double) = this()
+trait ShapeRenderer extends Disposable {
   var check: js.Any = js.native
   var color: js.Any = js.native
   var context: js.Any = js.native

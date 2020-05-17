@@ -2,18 +2,17 @@ package typingsSlinky.reactBigCalendar.mod
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactBigCalendar.AnonDate
-import typingsSlinky.reactBigCalendar.AnonDateHeader
-import typingsSlinky.reactBigCalendar.AnonEvent
+import typingsSlinky.reactBigCalendar.anon.Date
+import typingsSlinky.reactBigCalendar.anon.DateHeader
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Components_[TEvent /* <: js.Object */] extends js.Object {
-  var agenda: js.UndefOr[AnonDate] = js.native
+  var agenda: js.UndefOr[Date] = js.native
   var dateCellWrapper: js.UndefOr[ReactComponentClass[js.Object] | ReactElement] = js.native
-  var day: js.UndefOr[AnonEvent] = js.native
+  var day: js.UndefOr[typingsSlinky.reactBigCalendar.anon.Event] = js.native
   var event: js.UndefOr[ReactComponentClass[EventProps[TEvent]]] = js.native
   var eventContainerWrapper: js.UndefOr[ReactComponentClass[js.Object] | ReactElement] = js.native
   var eventWrapper: js.UndefOr[ReactComponentClass[EventWrapperProps[TEvent]]] = js.native
@@ -21,13 +20,13 @@ trait Components_[TEvent /* <: js.Object */] extends js.Object {
     * component used as a header for each column in the TimeGridHeader
     */
   var header: js.UndefOr[ReactComponentClass[HeaderProps]] = js.native
-  var month: js.UndefOr[AnonDateHeader] = js.native
+  var month: js.UndefOr[DateHeader] = js.native
   var resourceHeader: js.UndefOr[ReactComponentClass[ResourceHeaderProps]] = js.native
   var timeGutterHeader: js.UndefOr[ReactComponentClass[js.Object] | ReactElement] = js.native
   var timeGutterWrapper: js.UndefOr[ReactComponentClass[js.Object] | ReactElement] = js.native
   var timeSlotWrapper: js.UndefOr[ReactComponentClass[js.Object] | ReactElement] = js.native
   var toolbar: js.UndefOr[ReactComponentClass[ToolbarProps]] = js.native
-  var week: js.UndefOr[AnonEvent] = js.native
+  var week: js.UndefOr[typingsSlinky.reactBigCalendar.anon.Event] = js.native
 }
 
 object Components_ {
@@ -43,7 +42,7 @@ object Components_ {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[TEvent] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TEvent] with Other]
     @scala.inline
-    def withAgenda(value: AnonDate): Self[TEvent] = {
+    def withAgenda(value: Date): Self[TEvent] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("agenda")(value.asInstanceOf[js.Any])
         ret
@@ -91,7 +90,7 @@ object Components_ {
         ret
     }
     @scala.inline
-    def withDay(value: AnonEvent): Self[TEvent] = {
+    def withDay(value: typingsSlinky.reactBigCalendar.anon.Event): Self[TEvent] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("day")(value.asInstanceOf[js.Any])
         ret
@@ -211,7 +210,7 @@ object Components_ {
         ret
     }
     @scala.inline
-    def withMonth(value: AnonDateHeader): Self[TEvent] = {
+    def withMonth(value: DateHeader): Self[TEvent] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("month")(value.asInstanceOf[js.Any])
         ret
@@ -379,7 +378,7 @@ object Components_ {
         ret
     }
     @scala.inline
-    def withWeek(value: AnonEvent): Self[TEvent] = {
+    def withWeek(value: typingsSlinky.reactBigCalendar.anon.Event): Self[TEvent] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("week")(value.asInstanceOf[js.Any])
         ret

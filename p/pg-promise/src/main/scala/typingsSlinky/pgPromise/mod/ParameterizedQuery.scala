@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 // API: http://vitaly-t.github.io/pg-promise/ParameterizedQuery.html
 @JSImport("pg-promise", "ParameterizedQuery")
 @js.native
-class ParameterizedQuery () extends _QueryParam {
+class ParameterizedQuery () extends QueryParam {
   def this(options: String) = this()
   def this(options: IParameterizedQuery) = this()
   def this(options: QueryFile) = this()

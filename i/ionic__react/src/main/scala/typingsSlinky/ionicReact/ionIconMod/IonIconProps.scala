@@ -1,6 +1,6 @@
 package typingsSlinky.ionicReact.ionIconMod
 
-import typingsSlinky.ionicReact.AnonIos
+import typingsSlinky.ionicReact.anon.Ios
 import typingsSlinky.ionicReact.ionicReactStrings.ios
 import typingsSlinky.ionicReact.ionicReactStrings.md
 import scala.scalajs.js
@@ -12,10 +12,10 @@ trait IonIconProps extends js.Object {
   var ariaLabel: js.UndefOr[String] = js.native
   var color: js.UndefOr[String] = js.native
   var flipRtl: js.UndefOr[Boolean] = js.native
-  var icon: js.UndefOr[AnonIos | String] = js.native
-  var ios: js.UndefOr[AnonIos | String] = js.native
+  var icon: js.UndefOr[Ios | String] = js.native
+  var ios: js.UndefOr[Ios | String] = js.native
   var `lazy`: js.UndefOr[Boolean] = js.native
-  var md: js.UndefOr[AnonIos | String] = js.native
+  var md: js.UndefOr[Ios | String] = js.native
   var mode: js.UndefOr[ios | md] = js.native
   var name: js.UndefOr[String] = js.native
   var size: js.UndefOr[String] = js.native
@@ -71,7 +71,7 @@ object IonIconProps {
         ret
     }
     @scala.inline
-    def withIcon(value: AnonIos | String): Self = {
+    def withIcon(value: Ios | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
         ret
@@ -83,7 +83,7 @@ object IonIconProps {
         ret
     }
     @scala.inline
-    def withIos(value: AnonIos | String): Self = {
+    def withIos(value: Ios | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ios")(value.asInstanceOf[js.Any])
         ret
@@ -107,7 +107,7 @@ object IonIconProps {
         ret
     }
     @scala.inline
-    def withMd(value: AnonIos | String): Self = {
+    def withMd(value: Ios | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("md")(value.asInstanceOf[js.Any])
         ret

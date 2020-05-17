@@ -1,9 +1,9 @@
 package typingsSlinky.openpgp.mod
 
-import typingsSlinky.openpgp.DecryptOptionsformatbinar
-import typingsSlinky.openpgp.DecryptOptionsformatutf8
-import typingsSlinky.openpgp.DecryptResultdataUint8Arr
-import typingsSlinky.openpgp.DecryptResultdatastringRe
+import typingsSlinky.openpgp.anon.DecryptOptionsformatbinar
+import typingsSlinky.openpgp.anon.DecryptOptionsformatutf8
+import typingsSlinky.openpgp.anon.DecryptResultdataUint8Arr
+import typingsSlinky.openpgp.anon.DecryptResultdatastringRe
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

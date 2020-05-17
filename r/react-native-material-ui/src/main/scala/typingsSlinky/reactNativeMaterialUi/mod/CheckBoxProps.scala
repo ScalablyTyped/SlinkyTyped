@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeMaterialUi.mod
 
-import typingsSlinky.reactNativeMaterialUi.AnonLabel
+import typingsSlinky.reactNativeMaterialUi.anon.Label
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait CheckBoxProps extends js.Object {
   var checkedIcon: js.UndefOr[String] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
   var label: String = js.native
-  var style: js.UndefOr[AnonLabel] = js.native
+  var style: js.UndefOr[Label] = js.native
   var uncheckedIcon: js.UndefOr[String] = js.native
   var value: String | Double = js.native
   def onCheck(checked: Boolean): Unit = js.native
@@ -84,7 +84,7 @@ object CheckBoxProps {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonLabel): Self = {
+    def withStyle(value: Label): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

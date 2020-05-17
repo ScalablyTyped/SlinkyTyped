@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("MatterJS.BoundsFactory")
 @js.native
-class BoundsFactory () extends js.Object {
+trait BoundsFactory extends js.Object {
   /**
     * Returns true if the bounds contains the given point.
     * @method contains
@@ -52,5 +51,64 @@ class BoundsFactory () extends js.Object {
     * @param {vector} velocity
     */
   def update(bounds: IBound, vertices: Vertices, velocity: Vector): Unit = js.native
+}
+
+object BoundsFactory {
+  @scala.inline
+  def apply(
+    contains: (IBound, Vector) => Boolean,
+    create: Vertices => IBound,
+    overlaps: (IBound, IBound) => Boolean,
+    shift: (IBound, Vector) => Unit,
+    translate: (IBound, Vector) => Unit,
+    update: (IBound, Vertices, Vector) => Unit
+  ): BoundsFactory = {
+    val __obj = js.Dynamic.literal(contains = js.Any.fromFunction2(contains), create = js.Any.fromFunction1(create), overlaps = js.Any.fromFunction2(overlaps), shift = js.Any.fromFunction2(shift), translate = js.Any.fromFunction2(translate), update = js.Any.fromFunction3(update))
+    __obj.asInstanceOf[BoundsFactory]
+  }
+  @scala.inline
+  implicit class BoundsFactoryOps[Self <: BoundsFactory] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContains(value: (IBound, Vector) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withCreate(value: Vertices => IBound): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withOverlaps(value: (IBound, IBound) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("overlaps")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withShift(value: (IBound, Vector) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shift")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withTranslate(value: (IBound, Vector) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("translate")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: (IBound, Vertices, Vector) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

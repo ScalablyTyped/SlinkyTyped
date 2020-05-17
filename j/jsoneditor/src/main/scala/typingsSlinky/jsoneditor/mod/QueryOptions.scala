@@ -1,17 +1,17 @@
 package typingsSlinky.jsoneditor.mod
 
-import typingsSlinky.jsoneditor.AnonDirection
-import typingsSlinky.jsoneditor.AnonField
-import typingsSlinky.jsoneditor.AnonFields
+import typingsSlinky.jsoneditor.anon.Direction
+import typingsSlinky.jsoneditor.anon.Field
+import typingsSlinky.jsoneditor.anon.Fields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait QueryOptions extends js.Object {
-  var filter: js.UndefOr[AnonField] = js.native
-  var projection: js.UndefOr[AnonFields] = js.native
-  var sort: js.UndefOr[AnonDirection] = js.native
+  var filter: js.UndefOr[Field] = js.native
+  var projection: js.UndefOr[Fields] = js.native
+  var sort: js.UndefOr[Direction] = js.native
 }
 
 object QueryOptions {
@@ -27,7 +27,7 @@ object QueryOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFilter(value: AnonField): Self = {
+    def withFilter(value: Field): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
         ret
@@ -39,7 +39,7 @@ object QueryOptions {
         ret
     }
     @scala.inline
-    def withProjection(value: AnonFields): Self = {
+    def withProjection(value: Fields): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("projection")(value.asInstanceOf[js.Any])
         ret
@@ -51,7 +51,7 @@ object QueryOptions {
         ret
     }
     @scala.inline
-    def withSort(value: AnonDirection): Self = {
+    def withSort(value: Direction): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sort")(value.asInstanceOf[js.Any])
         ret

@@ -130,18 +130,6 @@ object SeriesVariwideOptions {
         ret
     }
     @scala.inline
-    def withCrisp(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crisp")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutCrisp: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("crisp")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withData(
       value: js.Array[
           (js.Tuple2[Double | String, Double]) | (js.Tuple3[Double | String, Double, Double]) | SeriesVariwideDataOptions
@@ -155,54 +143,6 @@ object SeriesVariwideOptions {
     def withoutData: Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withDepth(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutDepth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("depth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeColor(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeColor")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeColor: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeColor")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withEdgeWidth(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeWidth")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutEdgeWidth: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("edgeWidth")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withGroupZPadding(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupZPadding")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutGroupZPadding: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("groupZPadding")(js.undefined)
         ret
     }
     @scala.inline

@@ -1,19 +1,19 @@
 package typingsSlinky.azure.mod
 
-import typingsSlinky.azure.AnonExpiry
+import typingsSlinky.azure.anon.Expiry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SharedAccessPolicy extends js.Object {
-  var AccessPolicy: AnonExpiry = js.native
+  var AccessPolicy: Expiry = js.native
   var Id: js.UndefOr[String] = js.native
 }
 
 object SharedAccessPolicy {
   @scala.inline
-  def apply(AccessPolicy: AnonExpiry): SharedAccessPolicy = {
+  def apply(AccessPolicy: Expiry): SharedAccessPolicy = {
     val __obj = js.Dynamic.literal(AccessPolicy = AccessPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[SharedAccessPolicy]
   }
@@ -24,7 +24,7 @@ object SharedAccessPolicy {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAccessPolicy(value: AnonExpiry): Self = {
+    def withAccessPolicy(value: Expiry): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("AccessPolicy")(value.asInstanceOf[js.Any])
         ret

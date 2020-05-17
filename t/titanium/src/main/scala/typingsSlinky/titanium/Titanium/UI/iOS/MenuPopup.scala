@@ -14,9 +14,8 @@ import scala.scalajs.js.annotation._
 			 * See also:
 			 * * [iOS Developer Library: UIMenuController](https://developer.apple.com/documentation/uikit/uimenucontroller)
 			 */
-@JSGlobal("Titanium.UI.iOS.MenuPopup")
 @js.native
-class MenuPopup () extends Proxy {
+trait MenuPopup extends Proxy {
   /**
   				 * The items of the menu popup.
   				 */

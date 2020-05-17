@@ -1,7 +1,7 @@
 package typingsSlinky.stripe.mod.resources
 
 import typingsSlinky.std.Extract
-import typingsSlinky.stripe.AnonTypeT
+import typingsSlinky.stripe.anon.TypeT
 import typingsSlinky.stripe.mod.HeaderOptions
 import typingsSlinky.stripe.mod.IList
 import typingsSlinky.stripe.mod.IListPromise
@@ -37,14 +37,14 @@ class PaymentMethods () extends js.Object {
   def detach(paymentMethodId: String, options: HeaderOptions): js.Promise[IPaymentMethod] = js.native
   def detach(paymentMethodId: String, options: HeaderOptions, response: IResponseFn[IPaymentMethod]): js.Promise[IPaymentMethod] = js.native
   def detach(paymentMethodId: String, response: IResponseFn[IPaymentMethod]): js.Promise[IPaymentMethod] = js.native
-  def list[T /* <: IPaymentMethodType */](data: IPaymentMethodListOptions[T]): IListPromise[Extract[IPaymentMethod, AnonTypeT[T]]] = js.native
-  def list[T /* <: IPaymentMethodType */](data: IPaymentMethodListOptions[T], options: HeaderOptions): IListPromise[Extract[IPaymentMethod, AnonTypeT[T]]] = js.native
+  def list[T /* <: IPaymentMethodType */](data: IPaymentMethodListOptions[T]): IListPromise[Extract[IPaymentMethod, TypeT[T]]] = js.native
+  def list[T /* <: IPaymentMethodType */](data: IPaymentMethodListOptions[T], options: HeaderOptions): IListPromise[Extract[IPaymentMethod, TypeT[T]]] = js.native
   def list[T /* <: IPaymentMethodType */](
     data: IPaymentMethodListOptions[T],
     options: HeaderOptions,
     response: IResponseFn[IList[IPaymentMethod]]
-  ): IListPromise[Extract[IPaymentMethod, AnonTypeT[T]]] = js.native
-  def list[T /* <: IPaymentMethodType */](data: IPaymentMethodListOptions[T], response: IResponseFn[IList[IPaymentMethod]]): IListPromise[Extract[IPaymentMethod, AnonTypeT[T]]] = js.native
+  ): IListPromise[Extract[IPaymentMethod, TypeT[T]]] = js.native
+  def list[T /* <: IPaymentMethodType */](data: IPaymentMethodListOptions[T], response: IResponseFn[IList[IPaymentMethod]]): IListPromise[Extract[IPaymentMethod, TypeT[T]]] = js.native
   def retrieve(paymentMethodId: String): js.Promise[IPaymentMethod] = js.native
   def retrieve(paymentMethodId: String, options: HeaderOptions): js.Promise[IPaymentMethod] = js.native
   def retrieve(paymentMethodId: String, options: HeaderOptions, response: IResponseFn[IPaymentMethod]): js.Promise[IPaymentMethod] = js.native

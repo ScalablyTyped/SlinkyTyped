@@ -1,5 +1,6 @@
 package typingsSlinky.antDesignReactNative
 
+import typingsSlinky.antDesignReactNative.anon.ValueUndefined
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +13,7 @@ object pickerViewDemoBasicMod extends js.Object {
   trait PickerViewExample
     extends Component[js.Object, js.Object, js.Any] {
     @JSName("state")
-    var state_PickerViewExample: AnonValueUndefined = js.native
+    var state_PickerViewExample: ValueUndefined = js.native
     def onChange(value: js.Any): Unit = js.native
   }
   

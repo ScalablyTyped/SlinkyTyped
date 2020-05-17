@@ -1,6 +1,6 @@
 package typingsSlinky.wonderJs.viewMod
 
-import typingsSlinky.wonderJs.AnonX
+import typingsSlinky.wonderJs.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 class ViewWebGL protected () extends IView {
   def this(dom: js.Any) = this()
   @JSName("offset")
-  val offset_ViewWebGL: AnonX = js.native
+  val offset_ViewWebGL: X = js.native
 }
 
 /* static members */

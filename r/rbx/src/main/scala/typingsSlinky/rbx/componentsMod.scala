@@ -1,6 +1,24 @@
 package typingsSlinky.rbx
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.rbx.anon.Active
+import typingsSlinky.rbx.anon.AsElementType
+import typingsSlinky.rbx.anon.NoneTAsComponentextendsEl
+import typingsSlinky.rbx.anon.NoneTAsComponentextendsElBody
+import typingsSlinky.rbx.anon.NoneTAsComponentextendsElCall
+import typingsSlinky.rbx.anon.NoneTAsComponentextendsElContainer
+import typingsSlinky.rbx.anon.NoneTAsComponentextendsElDefaultProps
+import typingsSlinky.rbx.anon.NoneTAsComponentextendsElDisplayName
+import typingsSlinky.rbx.anon.PickBadgeHelpersPropsFloa
+import typingsSlinky.rbx.anon.PickDropdownContainerProp
+import typingsSlinky.rbx.anon.PickModalContainerPropsac
+import typingsSlinky.rbx.anon.PickNavbarContainerPropsf
+import typingsSlinky.rbx.anon.PreferHelpersPropsOverridBackgroundColor
+import typingsSlinky.rbx.anon.TypeofDropdownContainer
+import typingsSlinky.rbx.anon.TypeofModalContainer
+import typingsSlinky.rbx.anon.TypeofModalPortal
+import typingsSlinky.rbx.anon.TypeofNavbarContainer
+import typingsSlinky.rbx.anon.`7`
 import typingsSlinky.rbx.breadcrumbBreadcrumbMod.BreadcrumbModifierProps
 import typingsSlinky.rbx.breadcrumbItemMod.BreadcrumbItemProps
 import typingsSlinky.rbx.dropdownContextMod.DropdownContextValue
@@ -97,12 +115,12 @@ object componentsMod extends js.Object {
     @JSName("$$typeof")
     var DollarDollartypeof: js.Symbol = js.native
     var Item: ForwardRefAsExoticComponent[BreadcrumbItemProps, ReactElement] = js.native
-    var defaultProps: AnonAsElementType with (Partial[
+    var defaultProps: AsElementType with (Partial[
         HelpersPropsOverrides with PickBadgeHelpersPropsFloa with BreadcrumbModifierProps with (Pick[_, String | Double | js.Symbol])
       ]) = js.native
     var displayName: js.UndefOr[String] = js.native
     def apply[TAsComponent /* <: ReactElement */](
-      props: Anon7[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with BreadcrumbModifierProps with (Pick[
+      props: `7`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with BreadcrumbModifierProps with (Pick[
           ComponentProps[TAsComponent], 
           Exclude[
             /* keyof react.react.ComponentProps<TAsComponent> */ String, 
@@ -120,12 +138,12 @@ object componentsMod extends js.Object {
     var Footer: NoneTAsComponentextendsEl = js.native
     var Header: NoneTAsComponentextendsElCall = js.native
     var Image: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-    var defaultProps: AnonAsElementType with (Partial[
+    var defaultProps: AsElementType with (Partial[
         HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[_, String | Double | js.Symbol])
       ]) = js.native
     var displayName: js.UndefOr[String] = js.native
     def apply[TAsComponent /* <: ReactElement */](
-      props: Anon7[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[
+      props: `7`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[
           ComponentProps[TAsComponent], 
           Exclude[
             /* keyof react.react.ComponentProps<TAsComponent> */ String, 
@@ -146,10 +164,10 @@ object componentsMod extends js.Object {
     var Item: ForwardRefAsExoticComponent[DropdownItemProps, ReactElement] = js.native
     var Menu: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
     var Trigger: ForwardRefAsExoticComponent[DropdownTriggerProps, ReactElement] = js.native
-    var defaultProps: AnonAsElementType with (Partial[PickDropdownContainerProp with (Pick[_, String | Double | js.Symbol])]) = js.native
+    var defaultProps: AsElementType with (Partial[PickDropdownContainerProp with (Pick[_, String | Double | js.Symbol])]) = js.native
     var displayName: js.UndefOr[String] = js.native
     def apply[TAsComponent /* <: ReactElement */](
-      props: Anon7[TAsComponent] with PickDropdownContainerProp with (Pick[
+      props: `7`[TAsComponent] with PickDropdownContainerProp with (Pick[
           ComponentProps[TAsComponent], 
           Exclude[
             /* keyof react.react.ComponentProps<TAsComponent> */ String, 
@@ -164,12 +182,12 @@ object componentsMod extends js.Object {
     @JSName("$$typeof")
     var DollarDollartypeof: js.Symbol = js.native
     var Item: ForwardRefAsExoticComponent[LevelItemProps, ReactElement] = js.native
-    var defaultProps: AnonAsElementType with (Partial[
+    var defaultProps: AsElementType with (Partial[
         HelpersPropsOverrides with PickBadgeHelpersPropsFloa with LevelModifierProps with (Pick[_, String | Double | js.Symbol])
       ]) = js.native
     var displayName: js.UndefOr[String] = js.native
     def apply[TAsComponent /* <: ReactElement */](
-      props: Anon7[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with LevelModifierProps with (Pick[
+      props: `7`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with LevelModifierProps with (Pick[
           ComponentProps[TAsComponent], 
           Exclude[
             /* keyof react.react.ComponentProps<TAsComponent> */ String, 
@@ -184,12 +202,12 @@ object componentsMod extends js.Object {
     @JSName("$$typeof")
     var DollarDollartypeof: js.Symbol = js.native
     var Item: ForwardRefAsExoticComponent[ListItemProps, ReactElement] = js.native
-    var defaultProps: AnonAsElementType with (Partial[
+    var defaultProps: AsElementType with (Partial[
         HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[_, String | Double | js.Symbol])
       ]) = js.native
     var displayName: js.UndefOr[String] = js.native
     def apply[TAsComponent /* <: ReactElement */](
-      props: Anon7[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[
+      props: `7`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[
           ComponentProps[TAsComponent], 
           Exclude[
             /* keyof react.react.ComponentProps<TAsComponent> */ String, 
@@ -204,12 +222,12 @@ object componentsMod extends js.Object {
     @JSName("$$typeof")
     var DollarDollartypeof: js.Symbol = js.native
     var Item: ForwardRefAsExoticComponent[MediaItemProps, ReactElement] = js.native
-    var defaultProps: AnonAsElementType with (Partial[
+    var defaultProps: AsElementType with (Partial[
         HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[_, String | Double | js.Symbol])
       ]) = js.native
     var displayName: js.UndefOr[String] = js.native
     def apply[TAsComponent /* <: ReactElement */](
-      props: Anon7[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[
+      props: `7`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[
           ComponentProps[TAsComponent], 
           Exclude[
             /* keyof react.react.ComponentProps<TAsComponent> */ String, 
@@ -225,12 +243,12 @@ object componentsMod extends js.Object {
     var DollarDollartypeof: js.Symbol = js.native
     var Label: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
     var List: NoneTAsComponentextendsElDefaultProps = js.native
-    var defaultProps: AnonAsElementType with (Partial[
+    var defaultProps: AsElementType with (Partial[
         HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[_, String | Double | js.Symbol])
       ]) = js.native
     var displayName: js.UndefOr[String] = js.native
     def apply[TAsComponent /* <: ReactElement */](
-      props: Anon7[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[
+      props: `7`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[
           ComponentProps[TAsComponent], 
           Exclude[
             /* keyof react.react.ComponentProps<TAsComponent> */ String, 
@@ -246,12 +264,12 @@ object componentsMod extends js.Object {
     @JSName("$$typeof")
     var DollarDollartypeof: js.Symbol = js.native
     var Header: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
-    var defaultProps: AnonAsElementType with (Partial[
+    var defaultProps: AsElementType with (Partial[
         HelpersPropsOverrides with PickBadgeHelpersPropsFloa with MessageModifierProps with (Pick[_, String | Double | js.Symbol])
       ]) = js.native
     var displayName: js.UndefOr[String] = js.native
     def apply[TAsComponent /* <: ReactElement */](
-      props: Anon7[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with MessageModifierProps with (Pick[
+      props: `7`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with MessageModifierProps with (Pick[
           ComponentProps[TAsComponent], 
           Exclude[
             /* keyof react.react.ComponentProps<TAsComponent> */ String, 
@@ -272,11 +290,11 @@ object componentsMod extends js.Object {
     @JSName("$$typeof")
     var DollarDollartypeof: js.Symbol = js.native
     var Portal: TypeofModalPortal = js.native
-    var defaultProps: AnonAsElementType with (Partial[PickModalContainerPropsac with (Pick[_, String | Double | js.Symbol])]) = js.native
+    var defaultProps: AsElementType with (Partial[PickModalContainerPropsac with (Pick[_, String | Double | js.Symbol])]) = js.native
     var displayName: js.UndefOr[String] = js.native
-    var propTypes: AnonActive = js.native
+    var propTypes: Active = js.native
     def apply[TAsComponent /* <: ReactElement */](
-      props: Anon7[TAsComponent] with PickModalContainerPropsac with (Pick[
+      props: `7`[TAsComponent] with PickModalContainerPropsac with (Pick[
           ComponentProps[TAsComponent], 
           Exclude[
             /* keyof react.react.ComponentProps<TAsComponent> */ String, 
@@ -300,10 +318,10 @@ object componentsMod extends js.Object {
     var Link: ForwardRefAsExoticComponent[NavbarLinkProps, ReactElement] = js.native
     var Menu: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
     var Segment: ForwardRefAsExoticComponent[NavbarSegmentProps, ReactElement] = js.native
-    var defaultProps: AnonAsElementType with (Partial[PickNavbarContainerPropsf with (Pick[_, String | Double | js.Symbol])]) = js.native
+    var defaultProps: AsElementType with (Partial[PickNavbarContainerPropsf with (Pick[_, String | Double | js.Symbol])]) = js.native
     var displayName: js.UndefOr[String] = js.native
     def apply[TAsComponent /* <: ReactElement */](
-      props: Anon7[TAsComponent] with PickNavbarContainerPropsf with (Pick[
+      props: `7`[TAsComponent] with PickNavbarContainerPropsf with (Pick[
           ComponentProps[TAsComponent], 
           Exclude[
             /* keyof react.react.ComponentProps<TAsComponent> */ String, 
@@ -321,12 +339,12 @@ object componentsMod extends js.Object {
     var Link: ForwardRefAsExoticComponent[PaginationLinkProps, ReactElement] = js.native
     var List: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
     var Step: ForwardRefAsExoticComponent[PaginationStepProps, ReactElement] = js.native
-    var defaultProps: AnonAsElementType with (Partial[
+    var defaultProps: AsElementType with (Partial[
         HelpersPropsOverrides with PickBadgeHelpersPropsFloa with PaginationModifiers with (Pick[_, String | Double | js.Symbol])
       ]) = js.native
     var displayName: js.UndefOr[String] = js.native
     def apply[TAsComponent /* <: ReactElement */](
-      props: Anon7[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with PaginationModifiers with (Pick[
+      props: `7`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with PaginationModifiers with (Pick[
           ComponentProps[TAsComponent], 
           Exclude[
             /* keyof react.react.ComponentProps<TAsComponent> */ String, 
@@ -344,12 +362,12 @@ object componentsMod extends js.Object {
     var Heading: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
     var Icon: ForwardRefAsExoticComponent[PreferHelpersPropsOverridBackgroundColor, ReactElement] = js.native
     var Tab: NoneTAsComponentextendsElDisplayName = js.native
-    var defaultProps: AnonAsElementType with (Partial[
+    var defaultProps: AsElementType with (Partial[
         HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[_, String | Double | js.Symbol])
       ]) = js.native
     var displayName: js.UndefOr[String] = js.native
     def apply[TAsComponent /* <: ReactElement */](
-      props: Anon7[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[
+      props: `7`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with (Pick[
           ComponentProps[TAsComponent], 
           Exclude[
             /* keyof react.react.ComponentProps<TAsComponent> */ String, 
@@ -364,12 +382,12 @@ object componentsMod extends js.Object {
     @JSName("$$typeof")
     var DollarDollartypeof: js.Symbol = js.native
     var Group: ForwardRefAsExoticComponent[TabGroupProps, ReactElement] = js.native
-    var defaultProps: AnonAsElementType with (Partial[
+    var defaultProps: AsElementType with (Partial[
         HelpersPropsOverrides with PickBadgeHelpersPropsFloa with TabModifierProps with (Pick[_, String | Double | js.Symbol])
       ]) = js.native
     var displayName: js.UndefOr[String] = js.native
     def apply[TAsComponent /* <: ReactElement */](
-      props: Anon7[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with TabModifierProps with (Pick[
+      props: `7`[TAsComponent] with HelpersPropsOverrides with PickBadgeHelpersPropsFloa with TabModifierProps with (Pick[
           ComponentProps[TAsComponent], 
           Exclude[
             /* keyof react.react.ComponentProps<TAsComponent> */ String, 

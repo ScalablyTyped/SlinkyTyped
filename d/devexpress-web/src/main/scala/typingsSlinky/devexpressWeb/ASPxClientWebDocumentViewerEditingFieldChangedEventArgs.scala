@@ -7,16 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientWebDocumentViewer.EditingFieldChanged and ASPxClientReportDesigner.PreviewEditingFieldChanged events.
   */
-@JSGlobal("ASPxClientWebDocumentViewerEditingFieldChangedEventArgs")
 @js.native
-class ASPxClientWebDocumentViewerEditingFieldChangedEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Creates a new instance of the ASPxClientWebDocumentViewerEditingFieldChangedEventArgs class with the specified settings.
-    * @param field An editing field whose value has been changed. This value is assigned to the ASPxClientWebDocumentViewerEditingFieldChangedEventArgs.Field property.
-    * @param oldValue An object that specifies an editing field's previous value. This value is assigned to the ASPxClientWebDocumentViewerEditingFieldChangedEventArgs.OldValue property.
-    * @param newValue An object that specifies an editing field's new value. This value is assigned to the ASPxClientWebDocumentViewerEditingFieldChangedEventArgs.NewValue property.
-    */
-  def this(field: ASPxClientWebDocumentViewerEditingField, oldValue: js.Any, newValue: js.Any) = this()
+trait ASPxClientWebDocumentViewerEditingFieldChangedEventArgs extends ASPxClientEventArgs {
   /**
     * Gets an editing field whose value has been changed.
     */
@@ -29,5 +21,39 @@ class ASPxClientWebDocumentViewerEditingFieldChangedEventArgs protected () exten
     * Provides access to a previous value of an editing field.
     */
   var OldValue: js.Any = js.native
+}
+
+object ASPxClientWebDocumentViewerEditingFieldChangedEventArgs {
+  @scala.inline
+  def apply(Field: ASPxClientWebDocumentViewerEditingField, NewValue: js.Any, OldValue: js.Any): ASPxClientWebDocumentViewerEditingFieldChangedEventArgs = {
+    val __obj = js.Dynamic.literal(Field = Field.asInstanceOf[js.Any], NewValue = NewValue.asInstanceOf[js.Any], OldValue = OldValue.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientWebDocumentViewerEditingFieldChangedEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientWebDocumentViewerEditingFieldChangedEventArgsOps[Self <: ASPxClientWebDocumentViewerEditingFieldChangedEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withField(value: ASPxClientWebDocumentViewerEditingField): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Field")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNewValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NewValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOldValue(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("OldValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

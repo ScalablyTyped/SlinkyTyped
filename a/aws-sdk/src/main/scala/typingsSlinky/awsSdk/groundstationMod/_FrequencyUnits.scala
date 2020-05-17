@@ -1,8 +1,0 @@
-package typingsSlinky.awsSdk.groundstationMod
-
-import scala.scalajs.js
-import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
-
-trait _FrequencyUnits extends js.Object
-

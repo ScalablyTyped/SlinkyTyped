@@ -10,9 +10,8 @@ import scala.scalajs.js.annotation._
 			 * A PreviewAction provides options to configure actions used by the iOS 9 3D-Touch "Peek and Pop"
 			 * feature.
 			 */
-@JSGlobal("Titanium.UI.iOS.PreviewAction")
 @js.native
-class PreviewAction () extends Proxy {
+trait PreviewAction extends Proxy {
   /**
   				 * The style of the action.
   				 */

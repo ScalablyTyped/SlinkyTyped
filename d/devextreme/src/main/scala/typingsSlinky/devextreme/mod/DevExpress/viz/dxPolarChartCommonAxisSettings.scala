@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonColorOpacity
+import typingsSlinky.devextreme.anon.ColorOpacity
 import typingsSlinky.devextreme.devextremeStrings.betweenLabels
 import typingsSlinky.devextreme.devextremeStrings.crossLabels
 import scala.scalajs.js
@@ -20,13 +20,13 @@ trait dxPolarChartCommonAxisSettings extends js.Object {
   /** Specifies whether to force the axis to start and end on ticks. */
   var endOnTick: js.UndefOr[Boolean] = js.native
   /** An object defining the configuration options for the grid lines of an axis in the PolarChart widget. */
-  var grid: js.UndefOr[AnonColorOpacity] = js.native
+  var grid: js.UndefOr[ColorOpacity] = js.native
   /** Indicates whether or not an axis is inverted. */
   var inverted: js.UndefOr[Boolean] = js.native
   /** An object defining the label configuration options that are common for all axes in the PolarChart widget. */
   var label: js.UndefOr[dxPolarChartCommonAxisSettingsLabel] = js.native
   /** Specifies the options of the minor grid. */
-  var minorGrid: js.UndefOr[AnonColorOpacity] = js.native
+  var minorGrid: js.UndefOr[ColorOpacity] = js.native
   /** Specifies the options of the minor ticks. */
   var minorTick: js.UndefOr[dxPolarChartCommonAxisSettingsMinorTick] = js.native
   /** Specifies the opacity of the line that represents an axis. */
@@ -114,7 +114,7 @@ object dxPolarChartCommonAxisSettings {
         ret
     }
     @scala.inline
-    def withGrid(value: AnonColorOpacity): Self = {
+    def withGrid(value: ColorOpacity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(value.asInstanceOf[js.Any])
         ret
@@ -150,7 +150,7 @@ object dxPolarChartCommonAxisSettings {
         ret
     }
     @scala.inline
-    def withMinorGrid(value: AnonColorOpacity): Self = {
+    def withMinorGrid(value: ColorOpacity): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("minorGrid")(value.asInstanceOf[js.Any])
         ret

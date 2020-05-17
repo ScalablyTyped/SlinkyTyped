@@ -1,7 +1,7 @@
 package typingsSlinky.nodeHueApi.mod
 
-import typingsSlinky.nodeHueApi.AnonDescription
-import typingsSlinky.nodeHueApi.AnonMajor
+import typingsSlinky.nodeHueApi.anon.Description
+import typingsSlinky.nodeHueApi.anon.Major
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,15 +10,15 @@ import scala.scalajs.js.annotation._
 trait IBridgeDescription extends js.Object {
   var icons: js.UndefOr[js.Array[IBridgeIcon]] = js.native
   var manufacturer: String = js.native
-  var model: AnonDescription = js.native
+  var model: Description = js.native
   var name: String = js.native
   var url: String = js.native
-  var version: AnonMajor = js.native
+  var version: Major = js.native
 }
 
 object IBridgeDescription {
   @scala.inline
-  def apply(manufacturer: String, model: AnonDescription, name: String, url: String, version: AnonMajor): IBridgeDescription = {
+  def apply(manufacturer: String, model: Description, name: String, url: String, version: Major): IBridgeDescription = {
     val __obj = js.Dynamic.literal(manufacturer = manufacturer.asInstanceOf[js.Any], model = model.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
     __obj.asInstanceOf[IBridgeDescription]
   }
@@ -35,7 +35,7 @@ object IBridgeDescription {
         ret
     }
     @scala.inline
-    def withModel(value: AnonDescription): Self = {
+    def withModel(value: Description): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("model")(value.asInstanceOf[js.Any])
         ret
@@ -53,7 +53,7 @@ object IBridgeDescription {
         ret
     }
     @scala.inline
-    def withVersion(value: AnonMajor): Self = {
+    def withVersion(value: Major): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
         ret

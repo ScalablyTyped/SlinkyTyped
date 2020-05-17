@@ -1,7 +1,7 @@
 package typingsSlinky.simplecrawler.crawlerMod
 
 import typingsSlinky.node.httpMod.Agent
-import typingsSlinky.simplecrawler.AnonDictkey
+import typingsSlinky.simplecrawler.anon.Dictkey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RequestOptions extends js.Object {
   var agent: Agent | typingsSlinky.node.httpsMod.Agent = js.native
-  var headers: AnonDictkey = js.native
+  var headers: Dictkey = js.native
   var host: String = js.native
   var method: HTTPMethods = js.native
   var port: js.UndefOr[Double] = js.native
@@ -19,7 +19,7 @@ object RequestOptions {
   @scala.inline
   def apply(
     agent: Agent | typingsSlinky.node.httpsMod.Agent,
-    headers: AnonDictkey,
+    headers: Dictkey,
     host: String,
     method: HTTPMethods
   ): RequestOptions = {
@@ -39,7 +39,7 @@ object RequestOptions {
         ret
     }
     @scala.inline
-    def withHeaders(value: AnonDictkey): Self = {
+    def withHeaders(value: Dictkey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headers")(value.asInstanceOf[js.Any])
         ret

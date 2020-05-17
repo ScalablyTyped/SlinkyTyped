@@ -1,13 +1,13 @@
 package typingsSlinky.reactEmailEditor.mod
 
-import typingsSlinky.reactEmailEditor.AnonTools
+import typingsSlinky.reactEmailEditor.anon.Tools
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait AppearanceConfig extends js.Object {
-  val panels: js.UndefOr[AnonTools] = js.native
+  val panels: js.UndefOr[Tools] = js.native
   val theme: js.UndefOr[ThemeColor] = js.native
 }
 
@@ -24,7 +24,7 @@ object AppearanceConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withPanels(value: AnonTools): Self = {
+    def withPanels(value: Tools): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("panels")(value.asInstanceOf[js.Any])
         ret

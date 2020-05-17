@@ -1,6 +1,6 @@
 package typingsSlinky.tsutils.utilUtilMod
 
-import typingsSlinky.tsutils.BindingElementnameIdentif
+import typingsSlinky.tsutils.anon.BindingElementnameIdentif
 import typingsSlinky.typescript.mod.BindingPattern
 import scala.scalajs.js
 import scala.scalajs.js.`|`

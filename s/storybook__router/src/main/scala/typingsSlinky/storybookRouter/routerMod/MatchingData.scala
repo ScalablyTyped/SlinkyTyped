@@ -1,13 +1,13 @@
 package typingsSlinky.storybookRouter.routerMod
 
-import typingsSlinky.storybookRouter.AnonPath
+import typingsSlinky.storybookRouter.anon.Path
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait MatchingData extends js.Object {
-  var `match`: Null | AnonPath = js.native
+  var `match`: Null | Path = js.native
 }
 
 object MatchingData {
@@ -23,7 +23,7 @@ object MatchingData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMatch(value: AnonPath): Self = {
+    def withMatch(value: Path): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("match")(value.asInstanceOf[js.Any])
         ret

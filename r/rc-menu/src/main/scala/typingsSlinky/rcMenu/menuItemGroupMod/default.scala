@@ -1,6 +1,6 @@
 package typingsSlinky.rcMenu.menuItemGroupMod
 
-import typingsSlinky.rcMenu.AnonDisabled
+import typingsSlinky.rcMenu.anon.Disabled
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ class default () extends MenuItemGroup
 @JSImport("rc-menu/lib/MenuItemGroup", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonDisabled = js.native
+  var defaultProps: Disabled = js.native
   var isMenuItemGroup: Boolean = js.native
 }
 

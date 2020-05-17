@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeNavigation.optionsMod
 
 import typingsSlinky.reactNative.mod.ImageRequireSource
-import typingsSlinky.reactNativeNavigation.AnonPassProps
+import typingsSlinky.reactNativeNavigation.anon.PassProps
 import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.always
 import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.ifRoom
 import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.never
@@ -19,7 +19,7 @@ trait OptionsTopBarButton extends js.Object {
   /**
     * Set the button as a custom component
     */
-  var component: js.UndefOr[AnonPassProps] = js.native
+  var component: js.UndefOr[PassProps] = js.native
   /**
     * Disable icon tinting
     */
@@ -104,7 +104,7 @@ object OptionsTopBarButton {
         ret
     }
     @scala.inline
-    def withComponent(value: AnonPassProps): Self = {
+    def withComponent(value: PassProps): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("component")(value.asInstanceOf[js.Any])
         ret

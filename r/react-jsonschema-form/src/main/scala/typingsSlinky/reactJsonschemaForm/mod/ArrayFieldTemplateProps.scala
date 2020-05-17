@@ -2,27 +2,27 @@ package typingsSlinky.reactJsonschemaForm.mod
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.jsonSchema.mod.JSONSchema6
-import typingsSlinky.reactJsonschemaForm.AnonChildren
-import typingsSlinky.reactJsonschemaForm.AnonDefinitions
-import typingsSlinky.reactJsonschemaForm.AnonDescription
-import typingsSlinky.reactJsonschemaForm.AnonId
+import typingsSlinky.reactJsonschemaForm.anon.Children
+import typingsSlinky.reactJsonschemaForm.anon.Definitions
+import typingsSlinky.reactJsonschemaForm.anon.Description
+import typingsSlinky.reactJsonschemaForm.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ArrayFieldTemplateProps[T] extends js.Object {
-  var DescriptionField: ReactComponentClass[AnonDescription] = js.native
-  var TitleField: ReactComponentClass[AnonId] = js.native
+  var DescriptionField: ReactComponentClass[Description] = js.native
+  var TitleField: ReactComponentClass[Id] = js.native
   var canAdd: Boolean = js.native
   var className: String = js.native
   var disabled: Boolean = js.native
   var formContext: js.Any = js.native
   var formData: T = js.native
   var idSchema: IdSchema[_] = js.native
-  var items: js.Array[AnonChildren] = js.native
+  var items: js.Array[Children] = js.native
   var readonly: Boolean = js.native
-  var registry: AnonDefinitions = js.native
+  var registry: Definitions = js.native
   var required: Boolean = js.native
   var schema: JSONSchema6 = js.native
   var title: String = js.native
@@ -33,18 +33,18 @@ trait ArrayFieldTemplateProps[T] extends js.Object {
 object ArrayFieldTemplateProps {
   @scala.inline
   def apply[T](
-    DescriptionField: ReactComponentClass[AnonDescription],
-    TitleField: ReactComponentClass[AnonId],
+    DescriptionField: ReactComponentClass[Description],
+    TitleField: ReactComponentClass[Id],
     canAdd: Boolean,
     className: String,
     disabled: Boolean,
     formContext: js.Any,
     formData: T,
     idSchema: IdSchema[_],
-    items: js.Array[AnonChildren],
+    items: js.Array[Children],
     onAddClick: js.Any => js.Function1[/* event */ js.Any, Unit],
     readonly: Boolean,
-    registry: AnonDefinitions,
+    registry: Definitions,
     required: Boolean,
     schema: JSONSchema6,
     title: String,
@@ -60,13 +60,13 @@ object ArrayFieldTemplateProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withDescriptionField(value: ReactComponentClass[AnonDescription]): Self[T] = {
+    def withDescriptionField(value: ReactComponentClass[Description]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("DescriptionField")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withTitleField(value: ReactComponentClass[AnonId]): Self[T] = {
+    def withTitleField(value: ReactComponentClass[Id]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("TitleField")(value.asInstanceOf[js.Any])
         ret
@@ -108,7 +108,7 @@ object ArrayFieldTemplateProps {
         ret
     }
     @scala.inline
-    def withItems(value: js.Array[AnonChildren]): Self[T] = {
+    def withItems(value: js.Array[Children]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
         ret
@@ -126,7 +126,7 @@ object ArrayFieldTemplateProps {
         ret
     }
     @scala.inline
-    def withRegistry(value: AnonDefinitions): Self[T] = {
+    def withRegistry(value: Definitions): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("registry")(value.asInstanceOf[js.Any])
         ret

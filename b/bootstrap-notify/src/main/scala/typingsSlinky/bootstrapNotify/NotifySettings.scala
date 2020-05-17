@@ -1,7 +1,10 @@
 package typingsSlinky.bootstrapNotify
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.bootstrapNotify.anon.Align
+import typingsSlinky.bootstrapNotify.anon.Enter
+import typingsSlinky.bootstrapNotify.anon.X
+import typingsSlinky.jquery.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,18 +13,18 @@ import scala.scalajs.js.annotation._
 trait NotifySettings extends js.Object {
   var allow_dismiss: js.UndefOr[Boolean] = js.native
   var allow_duplicates: js.UndefOr[Boolean] = js.native
-  var animate: js.UndefOr[AnonEnter] = js.native
+  var animate: js.UndefOr[Enter] = js.native
   var delay: js.UndefOr[Double] = js.native
   var element: js.UndefOr[String] = js.native
   var icon_type: js.UndefOr[String] = js.native
   var mouse_over: js.UndefOr[String] = js.native
   var newest_on_top: js.UndefOr[Boolean] = js.native
-  var offset: js.UndefOr[Double | AnonX] = js.native
-  var onClose: js.UndefOr[js.Function1[/* $ele */ JQuery_[HTMLElement], Unit]] = js.native
-  var onClosed: js.UndefOr[js.Function1[/* $ele */ JQuery_[HTMLElement], Unit]] = js.native
-  var onShow: js.UndefOr[js.Function1[/* $ele */ JQuery_[HTMLElement], Unit]] = js.native
-  var onShown: js.UndefOr[js.Function1[/* $ele */ JQuery_[HTMLElement], Unit]] = js.native
-  var placement: js.UndefOr[AnonAlign] = js.native
+  var offset: js.UndefOr[Double | X] = js.native
+  var onClose: js.UndefOr[js.Function1[/* $ele */ JQuery[HTMLElement], Unit]] = js.native
+  var onClosed: js.UndefOr[js.Function1[/* $ele */ JQuery[HTMLElement], Unit]] = js.native
+  var onShow: js.UndefOr[js.Function1[/* $ele */ JQuery[HTMLElement], Unit]] = js.native
+  var onShown: js.UndefOr[js.Function1[/* $ele */ JQuery[HTMLElement], Unit]] = js.native
+  var placement: js.UndefOr[Align] = js.native
   var position: js.UndefOr[String] = js.native
   var showProgressbar: js.UndefOr[Boolean] = js.native
   var spacing: js.UndefOr[Double] = js.native
@@ -69,7 +72,7 @@ object NotifySettings {
         ret
     }
     @scala.inline
-    def withAnimate(value: AnonEnter): Self = {
+    def withAnimate(value: Enter): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("animate")(value.asInstanceOf[js.Any])
         ret
@@ -141,7 +144,7 @@ object NotifySettings {
         ret
     }
     @scala.inline
-    def withOffset(value: Double | AnonX): Self = {
+    def withOffset(value: Double | X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
         ret
@@ -153,7 +156,7 @@ object NotifySettings {
         ret
     }
     @scala.inline
-    def withOnClose(value: /* $ele */ JQuery_[HTMLElement] => Unit): Self = {
+    def withOnClose(value: /* $ele */ JQuery[HTMLElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction1(value))
         ret
@@ -165,7 +168,7 @@ object NotifySettings {
         ret
     }
     @scala.inline
-    def withOnClosed(value: /* $ele */ JQuery_[HTMLElement] => Unit): Self = {
+    def withOnClosed(value: /* $ele */ JQuery[HTMLElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClosed")(js.Any.fromFunction1(value))
         ret
@@ -177,7 +180,7 @@ object NotifySettings {
         ret
     }
     @scala.inline
-    def withOnShow(value: /* $ele */ JQuery_[HTMLElement] => Unit): Self = {
+    def withOnShow(value: /* $ele */ JQuery[HTMLElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.Any.fromFunction1(value))
         ret
@@ -189,7 +192,7 @@ object NotifySettings {
         ret
     }
     @scala.inline
-    def withOnShown(value: /* $ele */ JQuery_[HTMLElement] => Unit): Self = {
+    def withOnShown(value: /* $ele */ JQuery[HTMLElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onShown")(js.Any.fromFunction1(value))
         ret
@@ -201,7 +204,7 @@ object NotifySettings {
         ret
     }
     @scala.inline
-    def withPlacement(value: AnonAlign): Self = {
+    def withPlacement(value: Align): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("placement")(value.asInstanceOf[js.Any])
         ret

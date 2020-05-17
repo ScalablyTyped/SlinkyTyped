@@ -1,18 +1,18 @@
 package typingsSlinky.reactNativeVideo.mod
 
-import typingsSlinky.reactNativeVideo.Anon
+import typingsSlinky.reactNativeVideo.anon._empty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait LoadError extends js.Object {
-  var error: Anon = js.native
+  var error: _empty = js.native
 }
 
 object LoadError {
   @scala.inline
-  def apply(error: Anon): LoadError = {
+  def apply(error: _empty): LoadError = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoadError]
   }
@@ -23,7 +23,7 @@ object LoadError {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withError(value: Anon): Self = {
+    def withError(value: _empty): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret

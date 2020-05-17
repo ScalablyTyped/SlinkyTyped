@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ContentUnorderedList
   extends ContentBase
-     with _Content {
+     with Content {
   var `type`: js.UndefOr[UnorderedListType] = js.native
   var ul: js.Array[UnorderedListElement] = js.native
 }

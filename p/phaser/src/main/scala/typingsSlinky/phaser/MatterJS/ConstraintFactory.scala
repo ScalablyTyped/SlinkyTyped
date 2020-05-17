@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("MatterJS.ConstraintFactory")
 @js.native
-class ConstraintFactory () extends js.Object {
+trait ConstraintFactory extends js.Object {
   /**
     * Creates a new constraint.
     * All properties have default values, and many are pre-calculated automatically based on other properties.
@@ -16,5 +15,27 @@ class ConstraintFactory () extends js.Object {
     * @return {constraint} constraint
     */
   def create(options: IConstraintDefinition): ConstraintType = js.native
+}
+
+object ConstraintFactory {
+  @scala.inline
+  def apply(create: IConstraintDefinition => ConstraintType): ConstraintFactory = {
+    val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create))
+    __obj.asInstanceOf[ConstraintFactory]
+  }
+  @scala.inline
+  implicit class ConstraintFactoryOps[Self <: ConstraintFactory] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCreate(value: IConstraintDefinition => ConstraintType): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

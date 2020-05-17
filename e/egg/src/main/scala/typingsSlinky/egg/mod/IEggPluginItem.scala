@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IEggPluginItem extends js.Object {
+trait IEggPluginItem extends EggPluginItem {
   @JSName("package")
   var _package: js.UndefOr[String] = js.native
   var enable: js.UndefOr[Boolean] = js.native

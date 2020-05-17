@@ -2,8 +2,8 @@ package typingsSlinky.antDesignPro.pageHeaderMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antDesignPro.AnonKey
-import typingsSlinky.antDesignPro.AnonTitle
+import typingsSlinky.antDesignPro.anon.Key
+import typingsSlinky.antDesignPro.anon.Title
 import typingsSlinky.history.mod.Location
 import typingsSlinky.history.mod.LocationState
 import typingsSlinky.react.mod.CSSProperties
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PageHeaderProps extends js.Object {
   var action: js.UndefOr[TagMod[Any] | String] = js.native
-  var breadcrumbList: js.UndefOr[js.Array[AnonTitle]] = js.native
+  var breadcrumbList: js.UndefOr[js.Array[Title]] = js.native
   var breadcrumbNameMap: js.UndefOr[js.Any] = js.native
   var breadcrumbSeparator: js.UndefOr[TagMod[Any]] = js.native
   var className: js.UndefOr[String] = js.native
@@ -33,7 +33,7 @@ trait PageHeaderProps extends js.Object {
   var tabActiveKey: js.UndefOr[String] = js.native
   var tabBarExtraContent: js.UndefOr[TagMod[Any]] = js.native
   var tabDefaultActiveKey: js.UndefOr[String] = js.native
-  var tabList: js.UndefOr[js.Array[AnonKey]] = js.native
+  var tabList: js.UndefOr[js.Array[Key]] = js.native
   var title: js.UndefOr[TagMod[Any] | String | Double] = js.native
   var wide: js.UndefOr[Boolean] = js.native
   def itemRender(menuItem: js.Any): TagMod[Any] = js.native
@@ -76,7 +76,7 @@ object PageHeaderProps {
         ret
     }
     @scala.inline
-    def withBreadcrumbList(value: js.Array[AnonTitle]): Self = {
+    def withBreadcrumbList(value: js.Array[Title]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("breadcrumbList")(value.asInstanceOf[js.Any])
         ret
@@ -346,7 +346,7 @@ object PageHeaderProps {
         ret
     }
     @scala.inline
-    def withTabList(value: js.Array[AnonKey]): Self = {
+    def withTabList(value: js.Array[Key]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tabList")(value.asInstanceOf[js.Any])
         ret

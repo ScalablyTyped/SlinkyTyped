@@ -1,9 +1,9 @@
 package typingsSlinky.sipml.SIPml.Session
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.sipml.AnonAudio
-import typingsSlinky.sipml.AnonEvents
-import typingsSlinky.sipml.AnonMaxHeight
+import typingsSlinky.sipml.anon.Audio
+import typingsSlinky.sipml.anon.Events
+import typingsSlinky.sipml.anon.MaxHeight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,15 +11,15 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Configuration extends js.Object {
   var audio_remote: js.UndefOr[HTMLElement] = js.native
-  var bandwidth: js.UndefOr[AnonAudio] = js.native
-  var events_listener: js.UndefOr[AnonEvents] = js.native
+  var bandwidth: js.UndefOr[Audio] = js.native
+  var events_listener: js.UndefOr[Events] = js.native
   var expires: js.UndefOr[Double] = js.native
   var from: js.UndefOr[String] = js.native
   var sip_caps: js.UndefOr[js.Array[js.Object]] = js.native
   var sip_headers: js.UndefOr[js.Array[js.Object]] = js.native
   var video_local: js.UndefOr[HTMLElement] = js.native
   var video_remote: js.UndefOr[HTMLElement] = js.native
-  var video_size: js.UndefOr[AnonMaxHeight] = js.native
+  var video_size: js.UndefOr[MaxHeight] = js.native
 }
 
 object Configuration {
@@ -47,7 +47,7 @@ object Configuration {
         ret
     }
     @scala.inline
-    def withBandwidth(value: AnonAudio): Self = {
+    def withBandwidth(value: Audio): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bandwidth")(value.asInstanceOf[js.Any])
         ret
@@ -59,7 +59,7 @@ object Configuration {
         ret
     }
     @scala.inline
-    def withEvents_listener(value: AnonEvents): Self = {
+    def withEvents_listener(value: Events): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("events_listener")(value.asInstanceOf[js.Any])
         ret
@@ -143,7 +143,7 @@ object Configuration {
         ret
     }
     @scala.inline
-    def withVideo_size(value: AnonMaxHeight): Self = {
+    def withVideo_size(value: MaxHeight): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("video_size")(value.asInstanceOf[js.Any])
         ret

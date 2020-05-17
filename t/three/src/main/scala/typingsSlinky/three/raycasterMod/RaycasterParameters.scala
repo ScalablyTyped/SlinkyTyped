@@ -1,6 +1,6 @@
 package typingsSlinky.three.raycasterMod
 
-import typingsSlinky.three.AnonThreshold
+import typingsSlinky.three.anon.Threshold
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait RaycasterParameters extends js.Object {
   var LOD: js.UndefOr[js.Any] = js.native
   var Line: js.UndefOr[js.Any] = js.native
   var Mesh: js.UndefOr[js.Any] = js.native
-  var Points: js.UndefOr[AnonThreshold] = js.native
+  var Points: js.UndefOr[Threshold] = js.native
   var Sprite: js.UndefOr[js.Any] = js.native
 }
 
@@ -63,7 +63,7 @@ object RaycasterParameters {
         ret
     }
     @scala.inline
-    def withPoints(value: AnonThreshold): Self = {
+    def withPoints(value: Threshold): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Points")(value.asInstanceOf[js.Any])
         ret

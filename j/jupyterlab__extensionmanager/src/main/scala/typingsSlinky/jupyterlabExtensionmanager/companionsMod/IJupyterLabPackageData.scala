@@ -1,13 +1,13 @@
 package typingsSlinky.jupyterlabExtensionmanager.companionsMod
 
-import typingsSlinky.jupyterlabExtensionmanager.AnonDiscovery
+import typingsSlinky.jupyterlabExtensionmanager.anon.Discovery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IJupyterLabPackageData extends js.Object {
-  var jupyterlab: js.UndefOr[AnonDiscovery] = js.native
+  var jupyterlab: js.UndefOr[Discovery] = js.native
 }
 
 object IJupyterLabPackageData {
@@ -23,7 +23,7 @@ object IJupyterLabPackageData {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withJupyterlab(value: AnonDiscovery): Self = {
+    def withJupyterlab(value: Discovery): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("jupyterlab")(value.asInstanceOf[js.Any])
         ret

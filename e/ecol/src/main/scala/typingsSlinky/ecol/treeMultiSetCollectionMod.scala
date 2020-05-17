@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.ecol.collectionEventMod.CollectionEvent
 import typingsSlinky.ecol.ieventdispatcherMod.IEventDispatcher
-import typingsSlinky.tstl.Iteratoranyanyany
+import typingsSlinky.tstl.anon.Iteratoranyanyany
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import typingsSlinky.tstl.mod.base.Container
 import typingsSlinky.tstl.setContainerMod.SetContainer
@@ -64,6 +64,14 @@ object treeMultiSetCollectionMod extends js.Object {
     /* InferMemberOverrides */
     override def assign[InputIterator /* <: IForwardIterator[T, InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
     /**
+      * Iterator to the first element.
+      *
+      * @return Iterator to the first element.
+      */
+    /* InferMemberOverrides */
+    /* InferMemberOverrides */
+    override def begin(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[T, TreeMultiSet[T], Iterator[T], ReverseIterator[T], T] = js.native
+    /**
       * @inheritDoc
       */
     /* InferMemberOverrides */
@@ -79,6 +87,14 @@ object treeMultiSetCollectionMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def count(key: T): Double = js.native
+    /**
+      * Iterator to the end.
+      *
+      * @return Iterator to the end.
+      */
+    /* InferMemberOverrides */
+    /* InferMemberOverrides */
+    override def end(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[T, TreeMultiSet[T], Iterator[T], ReverseIterator[T], T] = js.native
     /**
       * Erase elements in range.
       *
@@ -137,6 +153,14 @@ object treeMultiSetCollectionMod extends js.Object {
     /* InferMemberOverrides */
     override def merge(source: TreeMultiSet[T]): Unit = js.native
     /**
+      * Reverse iterator to the first element in reverse.
+      *
+      * @return Reverse iterator to the first.
+      */
+    /* InferMemberOverrides */
+    /* InferMemberOverrides */
+    override def rbegin(): ReverseIterator[T] = js.native
+    /**
       * @inheritDoc
       */
     def refresh(): Unit = js.native
@@ -148,6 +172,14 @@ object treeMultiSetCollectionMod extends js.Object {
       * @inheritDoc
       */
     def refresh(it: Iterator[T]): Unit = js.native
+    /**
+      * Reverse iterator to the reverse end.
+      *
+      * @return Reverse iterator to the end.
+      */
+    /* InferMemberOverrides */
+    /* InferMemberOverrides */
+    override def rend(): ReverseIterator[T] = js.native
     /**
       * Swap elements.
       *

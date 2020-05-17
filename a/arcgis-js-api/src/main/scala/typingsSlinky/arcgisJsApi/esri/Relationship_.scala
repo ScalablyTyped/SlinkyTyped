@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`many-to-many`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`one-to-many`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`one-to-one`
@@ -41,8 +40,4 @@ trait Relationship_ extends Accessor {
     */
   var relatedTableId: Double = js.native
 }
-
-@JSGlobal("__esri.Relationship")
-@js.native
-object Relationship_ extends TopLevel[RelationshipConstructor]
 

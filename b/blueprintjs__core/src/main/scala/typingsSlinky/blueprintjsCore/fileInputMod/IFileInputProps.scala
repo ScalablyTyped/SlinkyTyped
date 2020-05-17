@@ -1,5 +1,6 @@
 package typingsSlinky.blueprintjsCore.fileInputMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLLabelElement
@@ -9,7 +10,6 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.FormEventHandler
 import typingsSlinky.react.mod.HTMLProps
 import typingsSlinky.react.mod.LabelHTMLAttributes
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -150,7 +150,7 @@ object IFileInputProps {
         ret
     }
     @scala.inline
-    def withOnInputChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit): Self = {
+    def withOnInputChange(value: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInputChange")(js.Any.fromFunction1(value))
         ret

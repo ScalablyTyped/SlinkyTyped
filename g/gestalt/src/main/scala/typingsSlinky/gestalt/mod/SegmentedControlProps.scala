@@ -1,7 +1,7 @@
 package typingsSlinky.gestalt.mod
 
 import slinky.core.TagMod
-import typingsSlinky.gestalt.AnonActiveIndex
+import typingsSlinky.gestalt.anon.ActiveIndex
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
 import scala.scalajs.js
@@ -14,12 +14,12 @@ trait SegmentedControlProps extends js.Object {
   var responsive: js.UndefOr[Boolean] = js.native
   var selectedItemIndex: Double = js.native
   var size: js.UndefOr[md | lg] = js.native
-  def onChange(args: AnonActiveIndex): Unit = js.native
+  def onChange(args: ActiveIndex): Unit = js.native
 }
 
 object SegmentedControlProps {
   @scala.inline
-  def apply(items: js.Array[TagMod[Any]], onChange: AnonActiveIndex => Unit, selectedItemIndex: Double): SegmentedControlProps = {
+  def apply(items: js.Array[TagMod[Any]], onChange: ActiveIndex => Unit, selectedItemIndex: Double): SegmentedControlProps = {
     val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), selectedItemIndex = selectedItemIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[SegmentedControlProps]
   }
@@ -36,7 +36,7 @@ object SegmentedControlProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: AnonActiveIndex => Unit): Self = {
+    def withOnChange(value: ActiveIndex => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret

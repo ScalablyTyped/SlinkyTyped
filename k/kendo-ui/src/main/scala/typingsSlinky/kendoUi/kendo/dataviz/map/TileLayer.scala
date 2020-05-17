@@ -5,12 +5,31 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.dataviz.map.TileLayer")
 @js.native
-class TileLayer protected () extends Layer_ {
-  def this(map: Map) = this()
-  def this(map: Map, options: TileLayerOptions) = this()
+trait TileLayer extends Layer_ {
   @JSName("options")
   var options_TileLayer: TileLayerOptions = js.native
+}
+
+object TileLayer {
+  @scala.inline
+  def apply(hide: () => Unit, map: Map, options: TileLayerOptions, show: () => Unit): TileLayer = {
+    val __obj = js.Dynamic.literal(hide = js.Any.fromFunction0(hide), map = map.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], show = js.Any.fromFunction0(show))
+    __obj.asInstanceOf[TileLayer]
+  }
+  @scala.inline
+  implicit class TileLayerOps[Self <: TileLayer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOptions(value: TileLayerOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

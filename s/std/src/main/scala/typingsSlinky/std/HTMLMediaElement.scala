@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.std.stdStrings.encrypted
 import typingsSlinky.std.stdStrings.msneedkey
 import typingsSlinky.std.stdStrings.waitingforkey
@@ -112,7 +111,7 @@ trait HTMLMediaElement extends HTMLElement {
   var onencrypted: (js.ThisFunction1[/* this */ this.type, /* ev */ MediaEncryptedEvent, _]) | Null = js.native
   /** @deprecated */
   var onmsneedkey: (js.ThisFunction1[/* this */ this.type, /* ev */ MSMediaKeyNeededEvent, _]) | Null = js.native
-  var onwaitingforkey: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
+  var onwaitingforkey: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
   /**
     * Gets a flag that specifies whether playback is paused.
     */
@@ -184,17 +183,20 @@ trait HTMLMediaElement extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_waitingforkey(`type`: waitingforkey, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
+  def addEventListener_waitingforkey(
+    `type`: waitingforkey,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_waitingforkey(
     `type`: waitingforkey,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_waitingforkey(
     `type`: waitingforkey,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   def addTextTrack(kind: TextTrackKind): org.scalajs.dom.raw.TextTrack = js.native
@@ -268,35 +270,23 @@ trait HTMLMediaElement extends HTMLElement {
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_waitingforkey(`type`: waitingforkey, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
+  def removeEventListener_waitingforkey(
+    `type`: waitingforkey,
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+  ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_waitingforkey(
     `type`: waitingforkey,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_waitingforkey(
     `type`: waitingforkey,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
     options: org.scalajs.dom.raw.EventListenerOptions
   ): Unit = js.native
   def setMediaKeys(): js.Promise[Unit] = js.native
   def setMediaKeys(mediaKeys: MediaKeys): js.Promise[Unit] = js.native
-}
-
-@JSGlobal("HTMLMediaElement")
-@js.native
-object HTMLMediaElement
-  extends Instantiable0[org.scalajs.dom.raw.HTMLMediaElement] {
-  val HAVE_CURRENT_DATA: Double = js.native
-  val HAVE_ENOUGH_DATA: Double = js.native
-  val HAVE_FUTURE_DATA: Double = js.native
-  val HAVE_METADATA: Double = js.native
-  val HAVE_NOTHING: Double = js.native
-  val NETWORK_EMPTY: Double = js.native
-  val NETWORK_IDLE: Double = js.native
-  val NETWORK_LOADING: Double = js.native
-  val NETWORK_NO_SOURCE: Double = js.native
 }
 

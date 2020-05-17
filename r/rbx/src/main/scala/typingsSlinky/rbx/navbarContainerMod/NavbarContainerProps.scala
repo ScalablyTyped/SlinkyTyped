@@ -1,11 +1,12 @@
 package typingsSlinky.rbx.navbarContainerMod
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.SVGElement
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactRef
-import typingsSlinky.rbx.BinVariablesbreakpointsLi
-import typingsSlinky.rbx.KinVariablesbreakpointsto
+import typingsSlinky.rbx.anon.BinVariablesbreakpointsLi
+import typingsSlinky.rbx.anon.KinVariablesbreakpointsto
 import typingsSlinky.rbx.rbxNumbers.`1`
 import typingsSlinky.rbx.rbxNumbers.`2`
 import typingsSlinky.rbx.rbxNumbers.`3`
@@ -48,7 +49,6 @@ import typingsSlinky.rbx.rbxStrings.uppercase
 import typingsSlinky.rbx.rbxStrings.warning
 import typingsSlinky.rbx.rbxStrings.white
 import typingsSlinky.react.mod.Ref
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -74,7 +74,7 @@ trait NavbarContainerProps extends js.Object {
   var color: js.UndefOr[
     primary | success | info | warning | danger | light | dark | white | black | link
   ] = js.native
-  var document: js.UndefOr[Document_] = js.native
+  var document: js.UndefOr[Document] = js.native
   var fixed: js.UndefOr[top | bottom] = js.native
   var hidden: js.UndefOr[Boolean] = js.native
   var innerRef: js.UndefOr[Ref[HTMLElement | SVGElement | ReactComponentClass[js.Object]]] = js.native
@@ -280,7 +280,7 @@ object NavbarContainerProps {
         ret
     }
     @scala.inline
-    def withDocument(value: Document_): Self = {
+    def withDocument(value: Document): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("document")(value.asInstanceOf[js.Any])
         ret

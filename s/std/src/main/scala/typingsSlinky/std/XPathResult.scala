@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,19 +28,158 @@ trait XPathResult extends js.Object {
   def snapshotItem(index: Double): org.scalajs.dom.raw.Node | Null = js.native
 }
 
-@JSGlobal("XPathResult")
-@js.native
-object XPathResult
-  extends Instantiable0[org.scalajs.dom.raw.XPathResult] {
-  val ANY_TYPE: Double = js.native
-  val ANY_UNORDERED_NODE_TYPE: Double = js.native
-  val BOOLEAN_TYPE: Double = js.native
-  val FIRST_ORDERED_NODE_TYPE: Double = js.native
-  val NUMBER_TYPE: Double = js.native
-  val ORDERED_NODE_ITERATOR_TYPE: Double = js.native
-  val ORDERED_NODE_SNAPSHOT_TYPE: Double = js.native
-  val STRING_TYPE: Double = js.native
-  val UNORDERED_NODE_ITERATOR_TYPE: Double = js.native
-  val UNORDERED_NODE_SNAPSHOT_TYPE: Double = js.native
+object XPathResult {
+  @scala.inline
+  def apply(
+    ANY_TYPE: Double,
+    ANY_UNORDERED_NODE_TYPE: Double,
+    BOOLEAN_TYPE: Double,
+    FIRST_ORDERED_NODE_TYPE: Double,
+    NUMBER_TYPE: Double,
+    ORDERED_NODE_ITERATOR_TYPE: Double,
+    ORDERED_NODE_SNAPSHOT_TYPE: Double,
+    STRING_TYPE: Double,
+    UNORDERED_NODE_ITERATOR_TYPE: Double,
+    UNORDERED_NODE_SNAPSHOT_TYPE: Double,
+    booleanValue: scala.Boolean,
+    invalidIteratorState: scala.Boolean,
+    iterateNext: () => org.scalajs.dom.raw.Node | Null,
+    numberValue: Double,
+    resultType: Double,
+    snapshotItem: Double => org.scalajs.dom.raw.Node | Null,
+    snapshotLength: Double,
+    stringValue: java.lang.String
+  ): XPathResult = {
+    val __obj = js.Dynamic.literal(ANY_TYPE = ANY_TYPE.asInstanceOf[js.Any], ANY_UNORDERED_NODE_TYPE = ANY_UNORDERED_NODE_TYPE.asInstanceOf[js.Any], BOOLEAN_TYPE = BOOLEAN_TYPE.asInstanceOf[js.Any], FIRST_ORDERED_NODE_TYPE = FIRST_ORDERED_NODE_TYPE.asInstanceOf[js.Any], NUMBER_TYPE = NUMBER_TYPE.asInstanceOf[js.Any], ORDERED_NODE_ITERATOR_TYPE = ORDERED_NODE_ITERATOR_TYPE.asInstanceOf[js.Any], ORDERED_NODE_SNAPSHOT_TYPE = ORDERED_NODE_SNAPSHOT_TYPE.asInstanceOf[js.Any], STRING_TYPE = STRING_TYPE.asInstanceOf[js.Any], UNORDERED_NODE_ITERATOR_TYPE = UNORDERED_NODE_ITERATOR_TYPE.asInstanceOf[js.Any], UNORDERED_NODE_SNAPSHOT_TYPE = UNORDERED_NODE_SNAPSHOT_TYPE.asInstanceOf[js.Any], booleanValue = booleanValue.asInstanceOf[js.Any], invalidIteratorState = invalidIteratorState.asInstanceOf[js.Any], iterateNext = js.Any.fromFunction0(iterateNext), numberValue = numberValue.asInstanceOf[js.Any], resultType = resultType.asInstanceOf[js.Any], snapshotItem = js.Any.fromFunction1(snapshotItem), snapshotLength = snapshotLength.asInstanceOf[js.Any], stringValue = stringValue.asInstanceOf[js.Any])
+    __obj.asInstanceOf[XPathResult]
+  }
+  @scala.inline
+  implicit class XPathResultOps[Self <: org.scalajs.dom.raw.XPathResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withANY_TYPE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ANY_TYPE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withANY_UNORDERED_NODE_TYPE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ANY_UNORDERED_NODE_TYPE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBOOLEAN_TYPE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("BOOLEAN_TYPE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFIRST_ORDERED_NODE_TYPE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FIRST_ORDERED_NODE_TYPE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNUMBER_TYPE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("NUMBER_TYPE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withORDERED_NODE_ITERATOR_TYPE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ORDERED_NODE_ITERATOR_TYPE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withORDERED_NODE_SNAPSHOT_TYPE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ORDERED_NODE_SNAPSHOT_TYPE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSTRING_TYPE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("STRING_TYPE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUNORDERED_NODE_ITERATOR_TYPE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UNORDERED_NODE_ITERATOR_TYPE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUNORDERED_NODE_SNAPSHOT_TYPE(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("UNORDERED_NODE_SNAPSHOT_TYPE")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBooleanValue(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("booleanValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInvalidIteratorState(value: scala.Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invalidIteratorState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIterateNext(value: () => org.scalajs.dom.raw.Node | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("iterateNext")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNumberValue(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("numberValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResultType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resultType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSnapshotItem(value: Double => org.scalajs.dom.raw.Node | Null): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotItem")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSnapshotLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("snapshotLength")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withStringValue(value: java.lang.String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("stringValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSingleNodeValue(value: org.scalajs.dom.raw.Node): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleNodeValue")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSingleNodeValueNull: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("singleNodeValue")(null)
+        ret
+    }
+  }
+  
 }
 

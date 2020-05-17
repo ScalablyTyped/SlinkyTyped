@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactVirtualized.AnonClientHeight
+import typingsSlinky.reactVirtualized.anon.ClientHeight
 import typingsSlinky.reactVirtualized.esCellMeasurerMod.CellMeasurerCacheInterface
 import typingsSlinky.reactVirtualized.esMasonryMod.MasonryCellProps
 import typingsSlinky.reactVirtualized.esMasonryMod.MasonryProps
@@ -32,7 +32,7 @@ object Masonry {
     @scala.inline
     def onCellsRendered(value: /* params */ IndexRange => Unit): this.type = set("onCellsRendered", js.Any.fromFunction1(value))
     @scala.inline
-    def onScroll(value: /* params */ AnonClientHeight => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
+    def onScroll(value: /* params */ ClientHeight => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
     @scala.inline
     def overscanByPixels(value: Double): this.type = set("overscanByPixels", value.asInstanceOf[js.Any])
     @scala.inline

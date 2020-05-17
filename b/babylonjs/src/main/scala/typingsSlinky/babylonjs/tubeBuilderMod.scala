@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs
 
+import typingsSlinky.babylonjs.anon.RadiusFunction
 import typingsSlinky.babylonjs.meshMod.Mesh
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
@@ -38,8 +39,8 @@ object tubeBuilderMod extends js.Object {
       * @see https://doc.babylonjs.com/how_to/parametric_shapes
       * @see https://doc.babylonjs.com/how_to/set_shapes#tube
       */
-    def CreateTube(name: String, options: AnonRadiusFunction): Mesh = js.native
-    def CreateTube(name: String, options: AnonRadiusFunction, scene: Nullable[Scene]): Mesh = js.native
+    def CreateTube(name: String, options: RadiusFunction): Mesh = js.native
+    def CreateTube(name: String, options: RadiusFunction, scene: Nullable[Scene]): Mesh = js.native
   }
   
 }

@@ -22,13 +22,15 @@ trait OrgsCreateHookParams extends js.Object {
     * Must be passed as "web".
     */
   var name: String = js.native
-  var org: String = js.native
+  @JSName("org")
+  var org_ : String = js.native
 }
 
 object OrgsCreateHookParams {
   @scala.inline
-  def apply(config: OrgsCreateHookParamsConfig, name: String, org: String): OrgsCreateHookParams = {
-    val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], org = org.asInstanceOf[js.Any])
+  def apply(config: OrgsCreateHookParamsConfig, name: String, org_ : String): OrgsCreateHookParams = {
+    val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrgsCreateHookParams]
   }
   @scala.inline
@@ -50,7 +52,7 @@ object OrgsCreateHookParams {
         ret
     }
     @scala.inline
-    def withOrg(value: String): Self = {
+    def withOrg_(value: String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("org")(value.asInstanceOf[js.Any])
         ret

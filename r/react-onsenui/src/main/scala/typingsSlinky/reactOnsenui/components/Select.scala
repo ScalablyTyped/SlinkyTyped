@@ -4,7 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
-import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameAutofocus
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameAutofocus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

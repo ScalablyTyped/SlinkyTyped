@@ -1,6 +1,6 @@
 package typingsSlinky.primereact.sliderMod
 
-import typingsSlinky.primereact.AnonOriginalEventEventValue
+import typingsSlinky.primereact.anon.OriginalEventEventValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +13,8 @@ trait SliderProps extends js.Object {
   var id: js.UndefOr[String] = js.native
   var max: js.UndefOr[Double] = js.native
   var min: js.UndefOr[Double] = js.native
-  var onChange: js.UndefOr[js.Function1[/* e */ AnonOriginalEventEventValue, Unit]] = js.native
-  var onSlideEnd: js.UndefOr[js.Function1[/* e */ AnonOriginalEventEventValue, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* e */ OriginalEventEventValue, Unit]] = js.native
+  var onSlideEnd: js.UndefOr[js.Function1[/* e */ OriginalEventEventValue, Unit]] = js.native
   var orientation: js.UndefOr[String] = js.native
   var range: js.UndefOr[Boolean] = js.native
   var step: js.UndefOr[Double] = js.native
@@ -108,7 +108,7 @@ object SliderProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* e */ AnonOriginalEventEventValue => Unit): Self = {
+    def withOnChange(value: /* e */ OriginalEventEventValue => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -120,7 +120,7 @@ object SliderProps {
         ret
     }
     @scala.inline
-    def withOnSlideEnd(value: /* e */ AnonOriginalEventEventValue => Unit): Self = {
+    def withOnSlideEnd(value: /* e */ OriginalEventEventValue => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSlideEnd")(js.Any.fromFunction1(value))
         ret

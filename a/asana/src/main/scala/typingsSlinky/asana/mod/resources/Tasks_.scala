@@ -1,6 +1,6 @@
 package typingsSlinky.asana.mod.resources
 
-import typingsSlinky.asana.CreateParamsworkspacestri
+import typingsSlinky.asana.anon.CreateParamsworkspacestri
 import typingsSlinky.asana.mod.resources.Stories.Type
 import typingsSlinky.asana.mod.resources.Tasks.AddProjectParams
 import typingsSlinky.asana.mod.resources.Tasks.CommentParams

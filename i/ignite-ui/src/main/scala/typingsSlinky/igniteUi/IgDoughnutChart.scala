@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -145,7 +145,7 @@ object IgDoughnutChart {
         ret
     }
     @scala.inline
-    def withBrowserNotSupported(value: (/* event */ Event_, /* ui */ BrowserNotSupportedEventUIParam) => Unit): Self = {
+    def withBrowserNotSupported(value: (/* event */ Event, /* ui */ BrowserNotSupportedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("browserNotSupported")(js.Any.fromFunction2(value))
         ret
@@ -169,7 +169,7 @@ object IgDoughnutChart {
         ret
     }
     @scala.inline
-    def withHoleDimensionsChanged(value: (/* event */ Event_, /* ui */ HoleDimensionsChangedEventUIParam) => Unit): Self = {
+    def withHoleDimensionsChanged(value: (/* event */ Event, /* ui */ HoleDimensionsChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("holeDimensionsChanged")(js.Any.fromFunction2(value))
         ret
@@ -241,7 +241,7 @@ object IgDoughnutChart {
         ret
     }
     @scala.inline
-    def withSliceClick(value: (/* event */ Event_, /* ui */ SliceClickEventUIParam) => Unit): Self = {
+    def withSliceClick(value: (/* event */ Event, /* ui */ SliceClickEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sliceClick")(js.Any.fromFunction2(value))
         ret
@@ -253,7 +253,7 @@ object IgDoughnutChart {
         ret
     }
     @scala.inline
-    def withTooltipHidden(value: (/* event */ Event_, /* ui */ TooltipHiddenEventUIParam) => Unit): Self = {
+    def withTooltipHidden(value: (/* event */ Event, /* ui */ TooltipHiddenEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipHidden")(js.Any.fromFunction2(value))
         ret
@@ -265,7 +265,7 @@ object IgDoughnutChart {
         ret
     }
     @scala.inline
-    def withTooltipHiding(value: (/* event */ Event_, /* ui */ TooltipHidingEventUIParam) => Unit): Self = {
+    def withTooltipHiding(value: (/* event */ Event, /* ui */ TooltipHidingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipHiding")(js.Any.fromFunction2(value))
         ret
@@ -277,7 +277,7 @@ object IgDoughnutChart {
         ret
     }
     @scala.inline
-    def withTooltipShowing(value: (/* event */ Event_, /* ui */ TooltipShowingEventUIParam) => Unit): Self = {
+    def withTooltipShowing(value: (/* event */ Event, /* ui */ TooltipShowingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipShowing")(js.Any.fromFunction2(value))
         ret
@@ -289,7 +289,7 @@ object IgDoughnutChart {
         ret
     }
     @scala.inline
-    def withTooltipShown(value: (/* event */ Event_, /* ui */ TooltipShownEventUIParam) => Unit): Self = {
+    def withTooltipShown(value: (/* event */ Event, /* ui */ TooltipShownEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltipShown")(js.Any.fromFunction2(value))
         ret

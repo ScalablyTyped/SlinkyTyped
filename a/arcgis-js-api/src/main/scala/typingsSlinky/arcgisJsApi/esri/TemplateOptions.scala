@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`a3-landscape`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`a3-portrait`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`a4-landscape`
@@ -136,8 +135,4 @@ trait TemplateOptions extends Accessor {
     */
   var width: Double = js.native
 }
-
-@JSGlobal("__esri.TemplateOptions")
-@js.native
-object TemplateOptions extends TopLevel[TemplateOptionsConstructor]
 

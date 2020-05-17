@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "wordpress__block-serialization-default-parser"
-version := "3.2-dt-20190701Z-41eb0d"
-scalaVersion := "2.13.1"
+version := "3.2-dt-20190701Z-77d4df"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e",
-  "org.scalablytyped.slinky" %%% "wordpress__block-serialization-spec-parser" % "3.1-dt-20190617Z-d45f71")
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb",
+  "org.scalablytyped.slinky" %%% "wordpress__block-serialization-spec-parser" % "3.1-dt-20190617Z-275935")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

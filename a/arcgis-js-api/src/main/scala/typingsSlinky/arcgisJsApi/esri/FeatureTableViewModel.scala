@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,7 +36,48 @@ trait FeatureTableViewModel extends js.Object {
   var layer: FeatureLayer = js.native
 }
 
-@JSGlobal("__esri.FeatureTableViewModel")
-@js.native
-object FeatureTableViewModel extends TopLevel[FeatureTableViewModelConstructor]
+object FeatureTableViewModel {
+  @scala.inline
+  def apply(
+    attachmentsEnabled: Boolean,
+    fieldConfigs: js.Array[FieldColumnConfig],
+    hiddenFields: Collection[String],
+    layer: FeatureLayer
+  ): FeatureTableViewModel = {
+    val __obj = js.Dynamic.literal(attachmentsEnabled = attachmentsEnabled.asInstanceOf[js.Any], fieldConfigs = fieldConfigs.asInstanceOf[js.Any], hiddenFields = hiddenFields.asInstanceOf[js.Any], layer = layer.asInstanceOf[js.Any])
+    __obj.asInstanceOf[FeatureTableViewModel]
+  }
+  @scala.inline
+  implicit class FeatureTableViewModelOps[Self <: FeatureTableViewModel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAttachmentsEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attachmentsEnabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFieldConfigs(value: js.Array[FieldColumnConfig]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fieldConfigs")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHiddenFields(value: Collection[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hiddenFields")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLayer(value: FeatureLayer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("layer")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

@@ -1,13 +1,13 @@
 package typingsSlinky.exceljs.mod
 
-import typingsSlinky.exceljs.AnonImageId
-import typingsSlinky.exceljs.AnonIncludeEmpty
-import typingsSlinky.exceljs.PartialColumn
-import typingsSlinky.exceljs.PartialColumnAlignment
-import typingsSlinky.exceljs.PartialPageSetup
-import typingsSlinky.exceljs.PartialWorksheetProtectio
-import typingsSlinky.exceljs.editAsstringhyperlinksIma
-import typingsSlinky.exceljs.editAsstringhyperlinksImaEditAs
+import typingsSlinky.exceljs.anon.ImageId
+import typingsSlinky.exceljs.anon.IncludeEmpty
+import typingsSlinky.exceljs.anon.PartialColumn
+import typingsSlinky.exceljs.anon.PartialColumnAlignment
+import typingsSlinky.exceljs.anon.PartialPageSetup
+import typingsSlinky.exceljs.anon.PartialWorksheetProtectio
+import typingsSlinky.exceljs.anon.editAsstringhyperlinksIma
+import typingsSlinky.exceljs.anon.editAsstringhyperlinksImaEditAs
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -108,7 +108,7 @@ trait Worksheet extends js.Object {
   /**
   	 * Iterate over all rows (including empty rows) in a worksheet
   	 */
-  def eachRow(opt: AnonIncludeEmpty, callback: js.Function2[/* row */ Row, /* rowNumber */ Double, Unit]): Unit = js.native
+  def eachRow(opt: IncludeEmpty, callback: js.Function2[/* row */ Row, /* rowNumber */ Double, Unit]): Unit = js.native
   def fillFormula(range: String, formula: String): Unit = js.native
   def fillFormula(range: String, formula: String, results: js.Array[js.Array[Double] | Double]): Unit = js.native
   def fillFormula(
@@ -154,7 +154,7 @@ trait Worksheet extends js.Object {
   	 */
   def getColumn(indexOrKey: Double): PartialColumn = js.native
   def getColumnKey(key: String): PartialColumn = js.native
-  def getImages(): js.Array[AnonImageId] = js.native
+  def getImages(): js.Array[ImageId] = js.native
   /**
   	 * Get or create row by 1-based index
   	 */

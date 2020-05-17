@@ -1,7 +1,7 @@
 package typingsSlinky.vexflow.mod.Flow
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.vexflow.AnonCodeLine
+import typingsSlinky.vexflow.anon.CodeLine
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ class TimeSignature protected ()
 @js.native
 object TimeSignature extends js.Object {
   @js.native
-  object glyphs extends /* name */ StringDictionary[AnonCodeLine]
+  object glyphs extends /* name */ StringDictionary[CodeLine]
   
 }
 

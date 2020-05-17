@@ -1,6 +1,7 @@
 package typingsSlinky.antd
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.antd.anon.OmitModalStaticFunctionsw
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

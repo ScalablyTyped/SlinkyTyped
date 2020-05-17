@@ -24,35 +24,8 @@ class LexicalGoalAssertion protected ()
   def this(
     openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],
     lexicalKeyword: typingsSlinky.grammarkdown.nodesMod.Token[LexicalKeyword],
-    goalKeyword: js.UndefOr[scala.Nothing],
-    symbol: typingsSlinky.grammarkdown.nodesMod.Identifier
-  ) = this()
-  def this(
-    openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],
-    lexicalKeyword: typingsSlinky.grammarkdown.nodesMod.Token[LexicalKeyword],
     goalKeyword: typingsSlinky.grammarkdown.nodesMod.Token[GoalKeyword],
     symbol: typingsSlinky.grammarkdown.nodesMod.Identifier
-  ) = this()
-  def this(
-    openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],
-    lexicalKeyword: typingsSlinky.grammarkdown.nodesMod.Token[LexicalKeyword],
-    goalKeyword: js.UndefOr[scala.Nothing],
-    symbol: js.UndefOr[scala.Nothing],
-    closeBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[CloseBracketToken]
-  ) = this()
-  def this(
-    openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],
-    lexicalKeyword: typingsSlinky.grammarkdown.nodesMod.Token[LexicalKeyword],
-    goalKeyword: js.UndefOr[scala.Nothing],
-    symbol: typingsSlinky.grammarkdown.nodesMod.Identifier,
-    closeBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[CloseBracketToken]
-  ) = this()
-  def this(
-    openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],
-    lexicalKeyword: typingsSlinky.grammarkdown.nodesMod.Token[LexicalKeyword],
-    goalKeyword: typingsSlinky.grammarkdown.nodesMod.Token[GoalKeyword],
-    symbol: js.UndefOr[scala.Nothing],
-    closeBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[CloseBracketToken]
   ) = this()
   def this(
     openBracketToken: typingsSlinky.grammarkdown.nodesMod.Token[OpenBracketToken],

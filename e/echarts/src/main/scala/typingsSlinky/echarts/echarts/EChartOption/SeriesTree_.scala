@@ -1,11 +1,11 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonBorderRadius
-import typingsSlinky.echarts.AnonBorderType
-import typingsSlinky.echarts.AnonCurvenessShadowBlur
-import typingsSlinky.echarts.AnonEmphasisItemStyle
-import typingsSlinky.echarts.AnonExtraCssText
-import typingsSlinky.echarts.AnonLineStyleAnonCurvenessShadowBlur
+import typingsSlinky.echarts.anon.BorderRadius
+import typingsSlinky.echarts.anon.BorderType
+import typingsSlinky.echarts.anon.CurvenessShadowBlur
+import typingsSlinky.echarts.anon.EmphasisItemStyle
+import typingsSlinky.echarts.anon.ExtraCssText
+import typingsSlinky.echarts.anon.LineStyleCurvenessShadowBlur
 import typingsSlinky.echarts.echarts.EChartOption.SeriesTree.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -60,7 +60,7 @@ trait SeriesTree_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-tree.emphasis
     */
-  var emphasis: js.UndefOr[AnonLineStyleAnonCurvenessShadowBlur] = js.native
+  var emphasis: js.UndefOr[LineStyleCurvenessShadowBlur] = js.native
   /**
     * Subtree collapses and expands interaction, `default true`.
     * As the drawing area is limited, and usually the nodes of a tree
@@ -130,7 +130,7 @@ trait SeriesTree_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBorderType] = js.native
+  var itemStyle: js.UndefOr[BorderType] = js.native
   /**
     * `label` describes the style of the text corresponding to each
     * node.
@@ -138,7 +138,7 @@ trait SeriesTree_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.label
     */
-  var label: js.UndefOr[AnonBorderRadius] = js.native
+  var label: js.UndefOr[BorderRadius] = js.native
   /**
     * The layout of the tree, which can be `orthogonal` and `radial`
     * 。Here the `orthogonal` layout is what we usually refer to the
@@ -169,7 +169,7 @@ trait SeriesTree_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.leaves
     */
-  var leaves: js.UndefOr[AnonEmphasisItemStyle] = js.native
+  var leaves: js.UndefOr[EmphasisItemStyle] = js.native
   /**
     * Distance between tree component and the left side of the container.
     *
@@ -192,7 +192,7 @@ trait SeriesTree_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.lineStyle
     */
-  var lineStyle: js.UndefOr[AnonCurvenessShadowBlur] = js.native
+  var lineStyle: js.UndefOr[CurvenessShadowBlur] = js.native
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -354,7 +354,7 @@ trait SeriesTree_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.tooltip
     */
-  var tooltip: js.UndefOr[AnonExtraCssText] = js.native
+  var tooltip: js.UndefOr[ExtraCssText] = js.native
   /**
     * Distance between tree component and the top side of the container.
     *
@@ -456,7 +456,7 @@ object SeriesTree_ {
         ret
     }
     @scala.inline
-    def withEmphasis(value: AnonLineStyleAnonCurvenessShadowBlur): Self = {
+    def withEmphasis(value: LineStyleCurvenessShadowBlur): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -516,7 +516,7 @@ object SeriesTree_ {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonBorderType): Self = {
+    def withItemStyle(value: BorderType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -528,7 +528,7 @@ object SeriesTree_ {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonBorderRadius): Self = {
+    def withLabel(value: BorderRadius): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -552,7 +552,7 @@ object SeriesTree_ {
         ret
     }
     @scala.inline
-    def withLeaves(value: AnonEmphasisItemStyle): Self = {
+    def withLeaves(value: EmphasisItemStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("leaves")(value.asInstanceOf[js.Any])
         ret
@@ -576,7 +576,7 @@ object SeriesTree_ {
         ret
     }
     @scala.inline
-    def withLineStyle(value: AnonCurvenessShadowBlur): Self = {
+    def withLineStyle(value: CurvenessShadowBlur): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lineStyle")(value.asInstanceOf[js.Any])
         ret
@@ -696,7 +696,7 @@ object SeriesTree_ {
         ret
     }
     @scala.inline
-    def withTooltip(value: AnonExtraCssText): Self = {
+    def withTooltip(value: ExtraCssText): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

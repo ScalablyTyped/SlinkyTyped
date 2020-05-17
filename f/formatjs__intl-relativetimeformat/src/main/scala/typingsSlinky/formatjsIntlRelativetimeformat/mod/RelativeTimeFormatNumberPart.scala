@@ -7,7 +7,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RelativeTimeFormatNumberPart extends NumberFormatPart {
+trait RelativeTimeFormatNumberPart
+  extends NumberFormatPart
+     with Part {
   var unit: Unit = js.native
 }
 

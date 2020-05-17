@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LinkPathTransform extends _Transforms {
+trait LinkPathTransform extends Transforms {
   var as: js.UndefOr[String | SignalRef] = js.native
   var orient: js.UndefOr[LinkPathOrient | SignalRef] = js.native
   var require: js.UndefOr[SignalRef] = js.native

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ContentTocItem
   extends ContentBase
-     with _Content {
+     with Content {
   var text: String | ContentTocItem = js.native
   var tocItem: Boolean | String | js.Array[String] = js.native
   var tocMargin: js.UndefOr[Margins] = js.native

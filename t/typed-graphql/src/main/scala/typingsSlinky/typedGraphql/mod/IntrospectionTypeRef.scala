@@ -1,7 +1,5 @@
 package typingsSlinky.typedGraphql.mod
 
-import typingsSlinky.typedGraphql.typedGraphqlStrings.LIST
-import typingsSlinky.typedGraphql.typedGraphqlStrings.NON_NULL
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,19 +13,10 @@ trait IntrospectionTypeRef extends js.Object
 
 object IntrospectionTypeRef {
   @scala.inline
-  def IntrospectionNamedTypeRef(kind: String, name: String): IntrospectionTypeRef = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[IntrospectionTypeRef]
-  }
+  implicit def apply(value: IntrospectionListTypeRef): IntrospectionTypeRef = value.asInstanceOf[IntrospectionTypeRef]
   @scala.inline
-  def IntrospectionListTypeRef(kind: LIST): IntrospectionTypeRef = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
-    __obj.asInstanceOf[IntrospectionTypeRef]
-  }
+  implicit def apply(value: IntrospectionNamedTypeRef): IntrospectionTypeRef = value.asInstanceOf[IntrospectionTypeRef]
   @scala.inline
-  def IntrospectionNonNullTypeRef(kind: NON_NULL): IntrospectionTypeRef = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any])
-    __obj.asInstanceOf[IntrospectionTypeRef]
-  }
+  implicit def apply(value: IntrospectionNonNullTypeRef): IntrospectionTypeRef = value.asInstanceOf[IntrospectionTypeRef]
 }
 

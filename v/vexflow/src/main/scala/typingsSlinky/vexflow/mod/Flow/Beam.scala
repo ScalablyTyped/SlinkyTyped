@@ -1,6 +1,6 @@
 package typingsSlinky.vexflow.mod.Flow
 
-import typingsSlinky.vexflow.AnonBeammiddleonly
+import typingsSlinky.vexflow.anon.Beammiddleonly
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ object Beam extends js.Object {
     groups: js.Array[typingsSlinky.vexflow.Vex.Flow.Fraction]
   ): js.Array[typingsSlinky.vexflow.Vex.Flow.Beam] = js.native
   def generateBeams(notes: js.Array[typingsSlinky.vexflow.Vex.Flow.StemmableNote]): js.Array[typingsSlinky.vexflow.Vex.Flow.Beam] = js.native
-  def generateBeams(notes: js.Array[typingsSlinky.vexflow.Vex.Flow.StemmableNote], config: AnonBeammiddleonly): js.Array[typingsSlinky.vexflow.Vex.Flow.Beam] = js.native
+  def generateBeams(notes: js.Array[typingsSlinky.vexflow.Vex.Flow.StemmableNote], config: Beammiddleonly): js.Array[typingsSlinky.vexflow.Vex.Flow.Beam] = js.native
   def getDefaultBeamGroups(time_sig: String): js.Array[typingsSlinky.vexflow.Vex.Flow.Fraction] = js.native
 }
 

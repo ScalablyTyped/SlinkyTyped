@@ -11,3 +11,12 @@ import scala.scalajs.js.annotation._
 */
 trait InvalidatedProject[T /* <: BuilderProgram */] extends js.Object
 
+object InvalidatedProject {
+  @scala.inline
+  implicit def apply[T](value: BuildInvalidedProject[T]): InvalidatedProject[T] = value.asInstanceOf[InvalidatedProject[T]]
+  @scala.inline
+  implicit def apply[T](value: UpdateBundleProject[T]): InvalidatedProject[T] = value.asInstanceOf[InvalidatedProject[T]]
+  @scala.inline
+  implicit def apply[T](value: UpdateOutputFileStampsProject): InvalidatedProject[T] = value.asInstanceOf[InvalidatedProject[T]]
+}
+

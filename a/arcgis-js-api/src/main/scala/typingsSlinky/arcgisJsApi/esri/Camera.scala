@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +8,7 @@ import scala.scalajs.js.annotation._
 trait Camera
   extends Accessor
      with JSONSupport
-     with _GoToTarget3D {
+     with GoToTarget3D {
   /**
     * The field of view of the camera in degrees.
     *
@@ -42,8 +41,4 @@ trait Camera
     */
   var tilt: Double = js.native
 }
-
-@JSGlobal("__esri.Camera")
-@js.native
-object Camera extends TopLevel[CameraConstructor]
 

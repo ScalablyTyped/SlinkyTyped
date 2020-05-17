@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobileRn.checkboxNativeMod
 
-import typingsSlinky.antdMobileRn.Anon0
+import typingsSlinky.antdMobileRn.anon.`0`
 import typingsSlinky.antdMobileRn.checkboxPropsTypeMod.CheckboxPropsType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,6 +18,6 @@ class default protected () extends Checkbox {
 object default extends js.Object {
   var AgreeItem: js.Any = js.native
   var CheckboxItem: js.Any = js.native
-  var defaultProps: Anon0 = js.native
+  var defaultProps: `0` = js.native
 }
 

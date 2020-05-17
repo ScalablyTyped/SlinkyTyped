@@ -1,14 +1,14 @@
 package typingsSlinky.braintree.mod
 
-import typingsSlinky.braintree.AnonCompany
-import typingsSlinky.braintree.AnonMakeDefault
+import typingsSlinky.braintree.anon.Company
+import typingsSlinky.braintree.anon.MakeDefault
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait CreditCardCreateRequest extends js.Object {
-  var billingAddress: js.UndefOr[AnonCompany] = js.native
+  var billingAddress: js.UndefOr[Company] = js.native
   var billingAddressId: js.UndefOr[String] = js.native
   var cardholderName: js.UndefOr[String] = js.native
   var customerId: String = js.native
@@ -17,7 +17,7 @@ trait CreditCardCreateRequest extends js.Object {
   var expirationMonth: js.UndefOr[String] = js.native
   var expirationYear: js.UndefOr[String] = js.native
   var number: js.UndefOr[String] = js.native
-  var options: js.UndefOr[AnonMakeDefault] = js.native
+  var options: js.UndefOr[MakeDefault] = js.native
   var paymentMethodNonce: js.UndefOr[String] = js.native
   var token: js.UndefOr[String] = js.native
 }
@@ -41,7 +41,7 @@ object CreditCardCreateRequest {
         ret
     }
     @scala.inline
-    def withBillingAddress(value: AnonCompany): Self = {
+    def withBillingAddress(value: Company): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("billingAddress")(value.asInstanceOf[js.Any])
         ret
@@ -137,7 +137,7 @@ object CreditCardCreateRequest {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonMakeDefault): Self = {
+    def withOptions(value: MakeDefault): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

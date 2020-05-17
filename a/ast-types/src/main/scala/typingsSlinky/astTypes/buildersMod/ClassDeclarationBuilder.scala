@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonImplements
+import typingsSlinky.astTypes.anon.Implements
 import typingsSlinky.astTypes.kindsMod.ClassBodyKind
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
@@ -15,6 +15,6 @@ trait ClassDeclarationBuilder extends js.Object {
   def apply(id: Null, body: ClassBodyKind, superClass: ExpressionKind): ClassDeclaration = js.native
   def apply(id: IdentifierKind, body: ClassBodyKind): ClassDeclaration = js.native
   def apply(id: IdentifierKind, body: ClassBodyKind, superClass: ExpressionKind): ClassDeclaration = js.native
-  def from(params: AnonImplements): ClassDeclaration = js.native
+  def from(params: Implements): ClassDeclaration = js.native
 }
 

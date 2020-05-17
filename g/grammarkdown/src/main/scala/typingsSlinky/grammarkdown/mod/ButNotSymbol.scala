@@ -15,31 +15,8 @@ class ButNotSymbol protected ()
   def this(left: LexicalSymbol, butKeyword: typingsSlinky.grammarkdown.nodesMod.Token[ButKeyword]) = this()
   def this(
     left: LexicalSymbol,
-    butKeyword: js.UndefOr[scala.Nothing],
-    notKeyword: typingsSlinky.grammarkdown.nodesMod.Token[NotKeyword]
-  ) = this()
-  def this(
-    left: LexicalSymbol,
     butKeyword: typingsSlinky.grammarkdown.nodesMod.Token[ButKeyword],
     notKeyword: typingsSlinky.grammarkdown.nodesMod.Token[NotKeyword]
-  ) = this()
-  def this(
-    left: LexicalSymbol,
-    butKeyword: js.UndefOr[scala.Nothing],
-    notKeyword: js.UndefOr[scala.Nothing],
-    right: LexicalSymbol
-  ) = this()
-  def this(
-    left: LexicalSymbol,
-    butKeyword: js.UndefOr[scala.Nothing],
-    notKeyword: typingsSlinky.grammarkdown.nodesMod.Token[NotKeyword],
-    right: LexicalSymbol
-  ) = this()
-  def this(
-    left: LexicalSymbol,
-    butKeyword: typingsSlinky.grammarkdown.nodesMod.Token[ButKeyword],
-    notKeyword: js.UndefOr[scala.Nothing],
-    right: LexicalSymbol
   ) = this()
   def this(
     left: LexicalSymbol,

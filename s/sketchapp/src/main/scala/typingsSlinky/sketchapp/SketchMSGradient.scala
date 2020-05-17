@@ -1,5 +1,6 @@
 package typingsSlinky.sketchapp
 
+import typingsSlinky.sketchapp.anon.X
 import typingsSlinky.sketchapp.sketchappStrings.gradient
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,11 +10,11 @@ import scala.scalajs.js.annotation._
 trait SketchMSGradient extends js.Object {
   var _class: gradient = js.native
   var elipseLength: Double = js.native
-  var from: AnonX = js.native
+  var from: X = js.native
   var gradientType: Double = js.native
   var shouldSmoothenOpacity: Boolean = js.native
   var stops: js.Array[SketchMSGradientStop] = js.native
-  var to: AnonX = js.native
+  var to: X = js.native
 }
 
 object SketchMSGradient {
@@ -21,11 +22,11 @@ object SketchMSGradient {
   def apply(
     _class: gradient,
     elipseLength: Double,
-    from: AnonX,
+    from: X,
     gradientType: Double,
     shouldSmoothenOpacity: Boolean,
     stops: js.Array[SketchMSGradientStop],
-    to: AnonX
+    to: X
   ): SketchMSGradient = {
     val __obj = js.Dynamic.literal(_class = _class.asInstanceOf[js.Any], elipseLength = elipseLength.asInstanceOf[js.Any], from = from.asInstanceOf[js.Any], gradientType = gradientType.asInstanceOf[js.Any], shouldSmoothenOpacity = shouldSmoothenOpacity.asInstanceOf[js.Any], stops = stops.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any])
     __obj.asInstanceOf[SketchMSGradient]
@@ -49,7 +50,7 @@ object SketchMSGradient {
         ret
     }
     @scala.inline
-    def withFrom(value: AnonX): Self = {
+    def withFrom(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("from")(value.asInstanceOf[js.Any])
         ret
@@ -73,7 +74,7 @@ object SketchMSGradient {
         ret
     }
     @scala.inline
-    def withTo(value: AnonX): Self = {
+    def withTo(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
         ret

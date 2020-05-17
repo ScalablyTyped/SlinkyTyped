@@ -1,7 +1,7 @@
 package typingsSlinky.resourceLoader.resourceLoaderMod
 
 import org.scalajs.dom.raw.XMLHttpRequest
-import typingsSlinky.resourceLoader.AnonCrossOrigin
+import typingsSlinky.resourceLoader.anon.CrossOrigin
 import typingsSlinky.resourceLoader.mod.default
 import typingsSlinky.resourceLoader.resourceLoaderMod.Resource.IMetadata
 import typingsSlinky.resourceLoader.resourceLoaderMod.Resource.LOAD_TYPE
@@ -34,8 +34,8 @@ import scala.scalajs.js.annotation._
 class Resource_ protected () extends js.Object {
   def this(name: String, url: String) = this()
   def this(name: String, url: js.Array[String]) = this()
-  def this(name: String, url: String, options: AnonCrossOrigin) = this()
-  def this(name: String, url: js.Array[String], options: AnonCrossOrigin) = this()
+  def this(name: String, url: String, options: CrossOrigin) = this()
+  def this(name: String, url: js.Array[String], options: CrossOrigin) = this()
   /**
     * The child resources this resource owns.
     *

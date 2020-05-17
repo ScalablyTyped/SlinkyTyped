@@ -1,6 +1,6 @@
 package typingsSlinky.x2js.mod
 
-import typingsSlinky.std.Document_
+import org.scalajs.dom.raw.Document
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +36,7 @@ trait X2JS extends js.Object {
     * 
     * @memberOf X2JS
     */
-  def dom2js[T](domNode: Document_): T = js.native
+  def dom2js[T](domNode: Document): T = js.native
   /**
     * Gets the current version of x2js. 
     * 
@@ -54,7 +54,7 @@ trait X2JS extends js.Object {
     * 
     * @memberOf X2JS
     */
-  def js2dom[T](jsObject: T): Document_ = js.native
+  def js2dom[T](jsObject: T): Document = js.native
   /**
     * Transforms JavaScript objects into an XML string.
     * 
@@ -83,7 +83,7 @@ trait X2JS extends js.Object {
     * 
     * @memberOf X2JS
     */
-  def xml2dom(xml: String): Document_ = js.native
+  def xml2dom(xml: String): Document = js.native
   /**
     * Transformns an XML string into JavaScript objects.
     * 

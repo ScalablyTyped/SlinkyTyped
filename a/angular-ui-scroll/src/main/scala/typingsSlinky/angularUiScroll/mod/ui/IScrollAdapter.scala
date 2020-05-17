@@ -1,13 +1,13 @@
 package typingsSlinky.angularUiScroll.mod.ui
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Window
 import typingsSlinky.angular.JQLite
 import typingsSlinky.angular.JQuery
 import typingsSlinky.angular.mod.IAugmentedJQueryStatic
 import typingsSlinky.angular.mod.IRepeatScope
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -80,8 +80,8 @@ trait IScrollAdapter extends js.Object {
   def topVisibleElement(element: js.Function0[Unit]): JQLite = js.native
   def topVisibleElement(element: JQuery): JQLite = js.native
   def topVisibleElement(element: ArrayLike[Element]): JQLite = js.native
-  def topVisibleElement(element: Document_): JQLite = js.native
+  def topVisibleElement(element: Document): JQLite = js.native
   def topVisibleElement(element: Element): JQLite = js.native
-  def topVisibleElement(element: Window_): JQLite = js.native
+  def topVisibleElement(element: Window): JQLite = js.native
 }
 

@@ -1,13 +1,13 @@
 package typingsSlinky.reactReduxToastr.mod
 
-import typingsSlinky.reactReduxToastr.AnonId
+import typingsSlinky.reactReduxToastr.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ToastrState extends js.Object {
-  var confirm: js.UndefOr[AnonId] = js.native
+  var confirm: js.UndefOr[Id] = js.native
   var toastrs: js.Array[Toastr_] = js.native
 }
 
@@ -30,7 +30,7 @@ object ToastrState {
         ret
     }
     @scala.inline
-    def withConfirm(value: AnonId): Self = {
+    def withConfirm(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("confirm")(value.asInstanceOf[js.Any])
         ret

@@ -3,7 +3,7 @@ package typingsSlinky.awsSdkClientS3Node.typesCopyObjectOutputMod
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.AES256
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.awsColonkms
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.requester_
-import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientS3Node.typesCopyObjectResultMod.UnmarshalledCopyObjectResult
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CopyObjectOutput
   extends MetadataBearer
-     with _OutputTypesUnion {
+     with OutputTypesUnion {
   /**
     * _CopyObjectResult shape
     */

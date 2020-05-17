@@ -7,18 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientSpreadsheet.CellBeginEdit event.
   */
-@JSGlobal("ASPxClientSpreadsheetCellBeginEditEventArgs")
 @js.native
-class ASPxClientSpreadsheetCellBeginEditEventArgs protected () extends ASPxClientCancelEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientSpreadsheetCellBeginEditEventArgs object. For internal use only.
-    * @param columnIndex Gets the active cell's column index.
-    * @param rowIndex Gets the active cell's row index.
-    * @param formula Gets the active cell's formula.
-    * @param value Gets the active cell's current value.
-    * @param sheetName Gets the current worksheet's name.
-    */
-  def this(columnIndex: Double, rowIndex: Double, formula: String, value: String, sheetName: String) = this()
+trait ASPxClientSpreadsheetCellBeginEditEventArgs extends ASPxClientCancelEventArgs {
   /**
     * Gets the active cell's column index.
     */
@@ -39,5 +29,58 @@ class ASPxClientSpreadsheetCellBeginEditEventArgs protected () extends ASPxClien
     * Gets the active cell's current value.
     */
   var value: String = js.native
+}
+
+object ASPxClientSpreadsheetCellBeginEditEventArgs {
+  @scala.inline
+  def apply(
+    cancel: Boolean,
+    columnIndex: Double,
+    formula: String,
+    rowIndex: Double,
+    sheetName: String,
+    value: String
+  ): ASPxClientSpreadsheetCellBeginEditEventArgs = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], columnIndex = columnIndex.asInstanceOf[js.Any], formula = formula.asInstanceOf[js.Any], rowIndex = rowIndex.asInstanceOf[js.Any], sheetName = sheetName.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientSpreadsheetCellBeginEditEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientSpreadsheetCellBeginEditEventArgsOps[Self <: ASPxClientSpreadsheetCellBeginEditEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withColumnIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("columnIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFormula(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("formula")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRowIndex(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rowIndex")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSheetName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sheetName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValue(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonComponentDxScrollView
+import typingsSlinky.devextreme.anon.ComponentDxScrollView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation._
 @js.native
 trait dxScrollViewOptions extends dxScrollableOptions[dxScrollView] {
   /** A function that is executed when the "pull to refresh" gesture is performed. Supported in mobile themes only. */
-  var onPullDown: js.UndefOr[js.Function1[/* e */ AnonComponentDxScrollView, _]] = js.native
+  var onPullDown: js.UndefOr[js.Function1[/* e */ ComponentDxScrollView, _]] = js.native
   /** A function that is executed when the content is scrolled down to the bottom. */
-  var onReachBottom: js.UndefOr[js.Function1[/* e */ AnonComponentDxScrollView, _]] = js.native
+  var onReachBottom: js.UndefOr[js.Function1[/* e */ ComponentDxScrollView, _]] = js.native
   /** Specifies the text shown in the pullDown panel when pulling the content down lowers the refresh threshold. */
   var pulledDownText: js.UndefOr[String] = js.native
   /** Specifies the text shown in the pullDown panel while pulling the content down to the refresh threshold. */
@@ -34,7 +34,7 @@ object dxScrollViewOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withOnPullDown(value: /* e */ AnonComponentDxScrollView => _): Self = {
+    def withOnPullDown(value: /* e */ ComponentDxScrollView => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPullDown")(js.Any.fromFunction1(value))
         ret
@@ -46,7 +46,7 @@ object dxScrollViewOptions {
         ret
     }
     @scala.inline
-    def withOnReachBottom(value: /* e */ AnonComponentDxScrollView => _): Self = {
+    def withOnReachBottom(value: /* e */ ComponentDxScrollView => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onReachBottom")(js.Any.fromFunction1(value))
         ret

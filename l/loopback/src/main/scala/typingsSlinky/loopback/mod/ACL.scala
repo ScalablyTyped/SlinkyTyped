@@ -1,7 +1,7 @@
 package typingsSlinky.loopback.mod
 
-import typingsSlinky.loopback.AnonAccessType
-import typingsSlinky.loopback.AnonAcls
+import typingsSlinky.loopback.anon.AccessType
+import typingsSlinky.loopback.anon.Acls
 import typingsSlinky.loopback.loopbackStrings.ALARM
 import typingsSlinky.loopback.loopbackStrings.ALLOW
 import typingsSlinky.loopback.loopbackStrings.AUDIT
@@ -62,7 +62,7 @@ class ACL () extends PersistedModel {
   var property: String = js.native
   /** settings Extends the `Model.settings` object. */
   @JSName("settings")
-  var settings_ACL: AnonAcls = js.native
+  var settings_ACL: Acls = js.native
   /**
     * Get matching score for the given `AccessRequest`.
     * @param {AccessRequest} req The request
@@ -86,7 +86,7 @@ object ACL extends js.Object {
     *   READ, REPLICATE, WRITE, or EXECUTE.
     * @param {() => void} callback Callback functio
     */
-  def checkAccessForContext(context: AnonAccessType, callback: js.Function0[Unit]): Unit = js.native
+  def checkAccessForContext(context: AccessType, callback: js.Function0[Unit]): Unit = js.native
   /**
     * Check if the given access token can invoke the method
     * @param {AccessToken} token The access token

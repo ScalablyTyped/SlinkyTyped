@@ -1,8 +1,8 @@
 package typingsSlinky.marko.taglibLookupTaglibLookupMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.marko.AnonAttributeGroups
-import typingsSlinky.marko.AnonName
+import typingsSlinky.marko.anon.AttributeGroups
+import typingsSlinky.marko.anon.Name
 import typingsSlinky.marko.tagMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait TaglibLookup extends js.Object {
-  var merged: AnonAttributeGroups = js.native
+  var merged: AttributeGroups = js.native
   var taglibsById: StringDictionary[typingsSlinky.marko.taglibMod.default] = js.native
   def addTaglib(taglib: typingsSlinky.marko.taglibMod.default): Unit = js.native
   def forEachAttribute(
@@ -44,9 +44,9 @@ trait TaglibLookup extends js.Object {
   def forEachTextTransformer(callback: js.Function1[/* trans */ typingsSlinky.marko.transformerMod.default, _]): Unit = js.native
   def forEachTextTransformer(callback: js.Function1[/* trans */ typingsSlinky.marko.transformerMod.default, _], thisObj: js.Any): Unit = js.native
   def getAttribute(element: String, attr: String): js.UndefOr[typingsSlinky.marko.attributeMod.default] = js.native
-  def getAttribute(element: String, attr: AnonName): js.UndefOr[typingsSlinky.marko.attributeMod.default] = js.native
+  def getAttribute(element: String, attr: Name): js.UndefOr[typingsSlinky.marko.attributeMod.default] = js.native
   def getAttribute(element: Element, attr: String): js.UndefOr[typingsSlinky.marko.attributeMod.default] = js.native
-  def getAttribute(element: Element, attr: AnonName): js.UndefOr[typingsSlinky.marko.attributeMod.default] = js.native
+  def getAttribute(element: Element, attr: Name): js.UndefOr[typingsSlinky.marko.attributeMod.default] = js.native
   def getInputFiles(): js.Array[String] = js.native
   def getTag(element: String): js.UndefOr[^] = js.native
   def getTag(element: Element): js.UndefOr[^] = js.native

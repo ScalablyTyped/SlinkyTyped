@@ -1,6 +1,6 @@
 package typingsSlinky.angularCompiler.publicApiMod
 
-import typingsSlinky.angularCompiler.AnonDirective
+import typingsSlinky.angularCompiler.anon.Directive
 import typingsSlinky.angularCompiler.r3AstMod.BoundAttribute
 import typingsSlinky.angularCompiler.r3AstMod.BoundEvent
 import typingsSlinky.angularCompiler.r3AstMod.Reference
@@ -28,7 +28,7 @@ class R3BoundTarget[DirectiveT /* <: DirectiveMeta */] protected ()
       ],
     references: Map[
         BoundAttribute | BoundEvent | Reference | TextAttribute, 
-        AnonDirective[DirectiveT] | typingsSlinky.angularCompiler.r3AstMod.Element | Template
+        Directive[DirectiveT] | typingsSlinky.angularCompiler.r3AstMod.Element | Template
       ],
     exprTargets: Map[typingsSlinky.angularCompiler.astMod.AST, Reference | Variable],
     symbols: Map[Reference | Variable, Template],

@@ -1,6 +1,6 @@
 package typingsSlinky.grahamScan.mod
 
-import typingsSlinky.grahamScan.AnonX
+import typingsSlinky.grahamScan.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ConvexHullGrahamScan extends js.Object {
   def addPoint(x: Double, y: Double): Unit = js.native
-  def getHull(): js.Array[AnonX] = js.native
+  def getHull(): js.Array[X] = js.native
 }
 
 object ConvexHullGrahamScan {
   @scala.inline
-  def apply(addPoint: (Double, Double) => Unit, getHull: () => js.Array[AnonX]): ConvexHullGrahamScan = {
+  def apply(addPoint: (Double, Double) => Unit, getHull: () => js.Array[X]): ConvexHullGrahamScan = {
     val __obj = js.Dynamic.literal(addPoint = js.Any.fromFunction2(addPoint), getHull = js.Any.fromFunction0(getHull))
     __obj.asInstanceOf[ConvexHullGrahamScan]
   }
@@ -30,7 +30,7 @@ object ConvexHullGrahamScan {
         ret
     }
     @scala.inline
-    def withGetHull(value: () => js.Array[AnonX]): Self = {
+    def withGetHull(value: () => js.Array[X]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getHull")(js.Any.fromFunction0(value))
         ret

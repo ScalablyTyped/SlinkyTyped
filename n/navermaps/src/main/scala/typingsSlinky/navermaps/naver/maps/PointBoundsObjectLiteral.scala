@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PointBoundsObjectLiteral extends js.Object {
+trait PointBoundsObjectLiteral extends PointBoundsLiteral {
   var maxX: Double = js.native
   var maxY: Double = js.native
   var minX: Double = js.native

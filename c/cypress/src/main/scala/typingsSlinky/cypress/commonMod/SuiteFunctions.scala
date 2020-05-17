@@ -1,6 +1,6 @@
 package typingsSlinky.cypress.commonMod
 
-import typingsSlinky.cypress.Mocha_.Suite_
+import typingsSlinky.cypress.Mocha.Suite
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,20 +10,20 @@ trait SuiteFunctions extends js.Object {
   /**
     * Creates a suite.
     */
-  def create(opts: CreateOptions): Suite_ = js.native
+  def create(opts: CreateOptions): Suite = js.native
   /**
     * Create an exclusive Suite; convenience function
     */
-  def only(opts: CreateOptions): Suite_ = js.native
+  def only(opts: CreateOptions): Suite = js.native
   /**
     * Create a Suite, but skip it; convenience function
     */
-  def skip(opts: CreateOptions): Suite_ = js.native
+  def skip(opts: CreateOptions): Suite = js.native
 }
 
 object SuiteFunctions {
   @scala.inline
-  def apply(create: CreateOptions => Suite_, only: CreateOptions => Suite_, skip: CreateOptions => Suite_): SuiteFunctions = {
+  def apply(create: CreateOptions => Suite, only: CreateOptions => Suite, skip: CreateOptions => Suite): SuiteFunctions = {
     val __obj = js.Dynamic.literal(create = js.Any.fromFunction1(create), only = js.Any.fromFunction1(only), skip = js.Any.fromFunction1(skip))
     __obj.asInstanceOf[SuiteFunctions]
   }
@@ -34,19 +34,19 @@ object SuiteFunctions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCreate(value: CreateOptions => Suite_): Self = {
+    def withCreate(value: CreateOptions => Suite): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnly(value: CreateOptions => Suite_): Self = {
+    def withOnly(value: CreateOptions => Suite): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("only")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withSkip(value: CreateOptions => Suite_): Self = {
+    def withSkip(value: CreateOptions => Suite): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("skip")(js.Any.fromFunction1(value))
         ret

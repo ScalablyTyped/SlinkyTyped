@@ -1,6 +1,6 @@
 package typingsSlinky.zchatBrowser.mod
 
-import typingsSlinky.zchatBrowser.AnonJwtfn
+import typingsSlinky.zchatBrowser.anon.Jwtfn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait InitProps extends js.Object {
   var account_key: String = js.native
-  var authentication: js.UndefOr[AnonJwtfn] = js.native
+  var authentication: js.UndefOr[Jwtfn] = js.native
 }
 
 object InitProps {
@@ -30,7 +30,7 @@ object InitProps {
         ret
     }
     @scala.inline
-    def withAuthentication(value: AnonJwtfn): Self = {
+    def withAuthentication(value: Jwtfn): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("authentication")(value.asInstanceOf[js.Any])
         ret

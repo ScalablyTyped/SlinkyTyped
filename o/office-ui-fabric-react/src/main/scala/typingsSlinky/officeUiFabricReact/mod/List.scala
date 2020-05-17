@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.mod
 
-import typingsSlinky.officeUiFabricReact.AnonOnRenderCell
+import typingsSlinky.officeUiFabricReact.anon.OnRenderCell
 import typingsSlinky.officeUiFabricReact.listTypesMod.IListProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,6 +17,6 @@ class List[T] protected ()
 @JSImport("office-ui-fabric-react", "List")
 @js.native
 object List extends js.Object {
-  var defaultProps: AnonOnRenderCell = js.native
+  var defaultProps: OnRenderCell = js.native
 }
 

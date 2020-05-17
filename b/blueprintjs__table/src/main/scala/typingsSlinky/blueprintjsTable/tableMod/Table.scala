@@ -2,9 +2,9 @@ package typingsSlinky.blueprintjsTable.tableMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.blueprintjsCore.mod.AbstractComponent2
-import typingsSlinky.blueprintjsTable.AnonChildrenArray
-import typingsSlinky.blueprintjsTable.AnonNextScrollLeft
-import typingsSlinky.blueprintjsTable.ValidationMapIColumnInter
+import typingsSlinky.blueprintjsTable.anon.ChildrenArray
+import typingsSlinky.blueprintjsTable.anon.NextScrollLeft
+import typingsSlinky.blueprintjsTable.anon.ValidationMapIColumnInter
 import typingsSlinky.blueprintjsTable.contextMod.IColumnInteractionBarContextTypes
 import typingsSlinky.blueprintjsTable.esmRegionsMod.IRegion
 import typingsSlinky.blueprintjsTable.gridMod.Grid
@@ -132,7 +132,7 @@ class Table protected () extends AbstractComponent2[ITableProps, ITableState, IT
   def componentWillUnmount_MTable(): Unit = js.native
   def getChildContext(): IColumnInteractionBarContextTypes = js.native
   @JSName("getSnapshotBeforeUpdate")
-  def getSnapshotBeforeUpdate_MTable(): AnonNextScrollLeft = js.native
+  def getSnapshotBeforeUpdate_MTable(): NextScrollLeft = js.native
   def renderHotkeys(): ReactElement = js.native
   /**
     * __Experimental!__ Resizes all rows in the table to the approximate
@@ -188,6 +188,6 @@ object Table extends js.Object {
   var displayName: String = js.native
   var isSelectionModeEnabled: js.Any = js.native
   var resizeRowsByApproximateHeightDefaults: js.Any = js.native
-  def getDerivedStateFromProps(props: ITableProps, state: ITableState): AnonChildrenArray = js.native
+  def getDerivedStateFromProps(props: ITableProps, state: ITableState): ChildrenArray = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.ol.olXmlMod
 
-import typingsSlinky.std.Document_
+import org.scalajs.dom.raw.Document
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("ol/xml", "parse")
 @js.native
 object parse extends js.Object {
-  def apply(xml: String): Document_ = js.native
+  def apply(xml: String): Document = js.native
 }
 

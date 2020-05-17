@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ReadonlyJSONObject
   extends /* key */ StringDictionary[ReadonlyJSONValue]
-     with _ReadonlyJSONValue
+     with ReadonlyJSONValue
 
 object ReadonlyJSONObject {
   @scala.inline

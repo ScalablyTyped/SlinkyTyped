@@ -1,7 +1,7 @@
 package typingsSlinky.reactBootstrapTable.mod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,11 +11,11 @@ trait InsertModalFooterProps extends js.Object {
   /**
   	 * Callback function to call prior to closing the Insert Modal window.
   	 */
-  var beforeClose: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event_, _], Unit]] = js.native
+  var beforeClose: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event, _], Unit]] = js.native
   /**
   	 * Callback function to be called prior to saving the new row.
   	 */
-  var beforeSave: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event_, _], Unit]] = js.native
+  var beforeSave: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event, _], Unit]] = js.native
   /**
   	 * Header class name.
   	 */
@@ -67,7 +67,7 @@ object InsertModalFooterProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBeforeClose(value: /* e */ SyntheticEvent[Event_, _] => Unit): Self = {
+    def withBeforeClose(value: /* e */ SyntheticEvent[Event, _] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeClose")(js.Any.fromFunction1(value))
         ret
@@ -79,7 +79,7 @@ object InsertModalFooterProps {
         ret
     }
     @scala.inline
-    def withBeforeSave(value: /* e */ SyntheticEvent[Event_, _] => Unit): Self = {
+    def withBeforeSave(value: /* e */ SyntheticEvent[Event, _] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeSave")(js.Any.fromFunction1(value))
         ret

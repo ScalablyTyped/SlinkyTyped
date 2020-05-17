@@ -1,6 +1,6 @@
 package typingsSlinky.exceljs.mod
 
-import typingsSlinky.exceljs.PartialXlsxWriteOptions
+import typingsSlinky.exceljs.anon.PartialXlsxWriteOptions
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.streamMod.Stream
 import scala.scalajs.js

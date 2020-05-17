@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.Security.Cryptography.Core
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Represents a reusable hashing object and contains the result of a hashing operation. */
+@JSGlobal("Windows.Security.Cryptography.Core.CryptographicHash")
+@js.native
+abstract class CryptographicHash ()
+  extends typingsSlinky.winrtUwp.Windows.Security.Cryptography.Core.CryptographicHash
+

@@ -1,6 +1,6 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonErrMsg
+import typingsSlinky.aliApp.anon.ErrMsg
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait SetKeepScreenOnOptions
   /** 是否保持屏幕常亮 */
   var keepScreenOn: Boolean = js.native
   @JSName("success")
-  var success_SetKeepScreenOnOptions: js.UndefOr[js.Function1[/* res */ AnonErrMsg, Unit]] = js.native
+  var success_SetKeepScreenOnOptions: js.UndefOr[js.Function1[/* res */ ErrMsg, Unit]] = js.native
 }
 
 object SetKeepScreenOnOptions {
@@ -35,7 +35,7 @@ object SetKeepScreenOnOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonErrMsg => Unit): Self = {
+    def withSuccess(value: /* res */ ErrMsg => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

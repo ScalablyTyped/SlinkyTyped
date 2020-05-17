@@ -1,14 +1,15 @@
 package typingsSlinky.reactBigCalendar.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.reactBigCalendar.AnonAction
-import typingsSlinky.reactBigCalendar.AnonStart
-import typingsSlinky.reactBigCalendar.AnonX
+import typingsSlinky.reactBigCalendar.anon.Action
+import typingsSlinky.reactBigCalendar.anon.Start
+import typingsSlinky.reactBigCalendar.anon.X
 import typingsSlinky.reactBigCalendar.mod.CalendarProps
 import typingsSlinky.reactBigCalendar.mod.Components_
 import typingsSlinky.reactBigCalendar.mod.DateLocalizer
@@ -20,7 +21,6 @@ import typingsSlinky.reactBigCalendar.mod.View
 import typingsSlinky.reactBigCalendar.mod.ViewsProps
 import typingsSlinky.reactBigCalendar.mod.stringOrDate
 import typingsSlinky.reactBigCalendar.reactBigCalendarStrings.ignoreEvents
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -99,19 +99,19 @@ object Calendar {
     @scala.inline
     def min(value: stringOrDate): this.type = set("min", value.asInstanceOf[js.Any])
     @scala.inline
-    def onDoubleClickEvent(value: (TEvent, /* e */ SyntheticEvent[Event_, HTMLElement]) => Unit): this.type = set("onDoubleClickEvent", js.Any.fromFunction2(value))
+    def onDoubleClickEvent(value: (TEvent, /* e */ SyntheticEvent[Event, HTMLElement]) => Unit): this.type = set("onDoubleClickEvent", js.Any.fromFunction2(value))
     @scala.inline
     def onDrillDown(value: (/* date */ js.Date, /* view */ View) => Unit): this.type = set("onDrillDown", js.Any.fromFunction2(value))
     @scala.inline
     def onNavigate(value: (/* newDate */ js.Date, /* view */ View, /* action */ NavigateAction) => Unit): this.type = set("onNavigate", js.Any.fromFunction3(value))
     @scala.inline
-    def onRangeChange(value: /* range */ js.Array[js.Date] | AnonStart => Unit): this.type = set("onRangeChange", js.Any.fromFunction1(value))
+    def onRangeChange(value: /* range */ js.Array[js.Date] | Start => Unit): this.type = set("onRangeChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onSelectEvent(value: (TEvent, /* e */ SyntheticEvent[Event_, HTMLElement]) => Unit): this.type = set("onSelectEvent", js.Any.fromFunction2(value))
+    def onSelectEvent(value: (TEvent, /* e */ SyntheticEvent[Event, HTMLElement]) => Unit): this.type = set("onSelectEvent", js.Any.fromFunction2(value))
     @scala.inline
-    def onSelectSlot(value: /* slotInfo */ AnonAction => Unit): this.type = set("onSelectSlot", js.Any.fromFunction1(value))
+    def onSelectSlot(value: /* slotInfo */ Action => Unit): this.type = set("onSelectSlot", js.Any.fromFunction1(value))
     @scala.inline
-    def onSelecting(value: /* range */ AnonStart => js.UndefOr[Boolean | Null]): this.type = set("onSelecting", js.Any.fromFunction1(value))
+    def onSelecting(value: /* range */ Start => js.UndefOr[Boolean | Null]): this.type = set("onSelecting", js.Any.fromFunction1(value))
     @scala.inline
     def onShowMore(value: (/* events */ js.Array[TEvent], /* date */ js.Date) => Unit): this.type = set("onShowMore", js.Any.fromFunction2(value))
     @scala.inline
@@ -119,7 +119,7 @@ object Calendar {
     @scala.inline
     def popup(value: Boolean): this.type = set("popup", value.asInstanceOf[js.Any])
     @scala.inline
-    def popupOffset(value: Double | AnonX): this.type = set("popupOffset", value.asInstanceOf[js.Any])
+    def popupOffset(value: Double | X): this.type = set("popupOffset", value.asInstanceOf[js.Any])
     @scala.inline
     def resourceAccessorFunction1(value: TEvent => _): this.type = set("resourceAccessor", js.Any.fromFunction1(value))
     @scala.inline

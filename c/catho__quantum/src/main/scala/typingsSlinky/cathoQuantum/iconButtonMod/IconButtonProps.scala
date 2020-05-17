@@ -1,6 +1,6 @@
 package typingsSlinky.cathoQuantum.iconButtonMod
 
-import typingsSlinky.cathoQuantum.AnonSpacing
+import typingsSlinky.cathoQuantum.anon.Spacing
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.error
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.large
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.medium
@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation._
 trait IconButtonProps extends js.Object {
   var size: js.UndefOr[xsmall | small | medium | large | xlarge] = js.native
   var skin: js.UndefOr[neutral | primary | secondary | success | warning | error] = js.native
-  var theme: js.UndefOr[AnonSpacing] = js.native
+  var theme: js.UndefOr[Spacing] = js.native
 }
 
 object IconButtonProps {
@@ -60,7 +60,7 @@ object IconButtonProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonSpacing): Self = {
+    def withTheme(value: Spacing): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

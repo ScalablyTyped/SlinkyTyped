@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.AnonDelegate
+import typingsSlinky.astTypes.anon.Delegate
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.YieldExpression
 import scala.scalajs.js
@@ -13,6 +13,6 @@ trait YieldExpressionBuilder extends js.Object {
   def apply(argument: Null, delegate: Boolean): YieldExpression = js.native
   def apply(argument: ExpressionKind): YieldExpression = js.native
   def apply(argument: ExpressionKind, delegate: Boolean): YieldExpression = js.native
-  def from(params: AnonDelegate): YieldExpression = js.native
+  def from(params: Delegate): YieldExpression = js.native
 }
 

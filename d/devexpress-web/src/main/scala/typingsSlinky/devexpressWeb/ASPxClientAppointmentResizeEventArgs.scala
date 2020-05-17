@@ -7,22 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientScheduler.AppointmentResize event.
   */
-@JSGlobal("ASPxClientAppointmentResizeEventArgs")
 @js.native
-class ASPxClientAppointmentResizeEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientAppointmentResizeEventArgs class.
-    * @param operation An ASPxClientAppointmentOperation object providing methods to perform or cancel the resize operation.
-    * @param appointmentId A string containing an appointment identifier.
-    * @param oldInterval An  object specifying the appointment's interval before the resize operation.
-    * @param newInterval An  object specifying the appointment's interval after the resize operation.
-    */
-  def this(
-    operation: ASPxClientAppointmentOperation,
-    appointmentId: String,
-    oldInterval: ASPxClientTimeInterval,
-    newInterval: ASPxClientTimeInterval
-  ) = this()
+trait ASPxClientAppointmentResizeEventArgs extends ASPxClientEventArgs {
   /**
     * Gets the resized appointment's identifier.
     */
@@ -43,5 +29,57 @@ class ASPxClientAppointmentResizeEventArgs protected () extends ASPxClientEventA
     * Provides access to an object that enables you to choose an operation to perform.
     */
   var operation: ASPxClientAppointmentOperation = js.native
+}
+
+object ASPxClientAppointmentResizeEventArgs {
+  @scala.inline
+  def apply(
+    appointmentId: String,
+    handled: Boolean,
+    newInterval: ASPxClientTimeInterval,
+    oldInterval: ASPxClientTimeInterval,
+    operation: ASPxClientAppointmentOperation
+  ): ASPxClientAppointmentResizeEventArgs = {
+    val __obj = js.Dynamic.literal(appointmentId = appointmentId.asInstanceOf[js.Any], handled = handled.asInstanceOf[js.Any], newInterval = newInterval.asInstanceOf[js.Any], oldInterval = oldInterval.asInstanceOf[js.Any], operation = operation.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientAppointmentResizeEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientAppointmentResizeEventArgsOps[Self <: ASPxClientAppointmentResizeEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppointmentId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHandled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("handled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNewInterval(value: ASPxClientTimeInterval): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("newInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOldInterval(value: ASPxClientTimeInterval): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("oldInterval")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOperation(value: ASPxClientAppointmentOperation): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("operation")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

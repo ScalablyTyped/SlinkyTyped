@@ -1,7 +1,7 @@
 package typingsSlinky.sharepoint.SP.JsGrid
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.sharepoint.AnonBottom
+import typingsSlinky.sharepoint.anon.Bottom
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +28,7 @@ object IEditControlCellContext {
     NotifyExpandControl: () => Unit,
     SetCurrentValue: js.Any => Unit,
     Show: HTMLElement => Unit,
-    cellExpandSpace: AnonBottom,
+    cellExpandSpace: Bottom,
     cellHeight: Double,
     cellRect: js.Any,
     cellStyle: js.Any,

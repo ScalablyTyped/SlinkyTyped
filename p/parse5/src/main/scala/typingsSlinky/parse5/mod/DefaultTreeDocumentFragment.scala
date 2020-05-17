@@ -6,7 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait DefaultTreeDocumentFragment extends DefaultTreeParentNode {
+trait DefaultTreeDocumentFragment
+  extends DefaultTreeParentNode
+     with DocumentFragment {
   /**
     * The name of the node.
     */

@@ -1,6 +1,6 @@
 package typingsSlinky.keystonejsKeystone.mod
 
-import typingsSlinky.keystonejsKeystone.AnonDistDir
+import typingsSlinky.keystonejsKeystone.anon.DistDir
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class BaseApp () extends js.Object {
   def build(): Unit | js.Promise[Unit] = js.native
-  def build(args: AnonDistDir): Unit | js.Promise[Unit] = js.native
+  def build(args: DistDir): Unit | js.Promise[Unit] = js.native
 }
 

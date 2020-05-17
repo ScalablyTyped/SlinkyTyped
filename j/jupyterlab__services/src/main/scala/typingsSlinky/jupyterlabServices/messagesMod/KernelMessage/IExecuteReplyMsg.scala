@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IExecuteReplyMsg
   extends IShellMessage[execute_reply]
-     with _Message {
+     with Message {
   @JSName("content")
   var content_IExecuteReplyMsg: ReplyContent[IExecuteReply] with IExecuteCount = js.native
   @JSName("parent_header")

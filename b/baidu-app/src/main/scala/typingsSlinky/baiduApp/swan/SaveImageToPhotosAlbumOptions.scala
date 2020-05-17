@@ -1,6 +1,6 @@
 package typingsSlinky.baiduApp.swan
 
-import typingsSlinky.baiduApp.AnonErrMsg
+import typingsSlinky.baiduApp.anon.ErrMsg
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,12 +13,12 @@ trait SaveImageToPhotosAlbumOptions
   		 */
   var filePath: String = js.native
   @JSName("success")
-  def success_MSaveImageToPhotosAlbumOptions(res: AnonErrMsg): Unit = js.native
+  def success_MSaveImageToPhotosAlbumOptions(res: ErrMsg): Unit = js.native
 }
 
 object SaveImageToPhotosAlbumOptions {
   @scala.inline
-  def apply(filePath: String, success: AnonErrMsg => Unit): SaveImageToPhotosAlbumOptions = {
+  def apply(filePath: String, success: ErrMsg => Unit): SaveImageToPhotosAlbumOptions = {
     val __obj = js.Dynamic.literal(filePath = filePath.asInstanceOf[js.Any], success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[SaveImageToPhotosAlbumOptions]
   }
@@ -35,7 +35,7 @@ object SaveImageToPhotosAlbumOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: AnonErrMsg => Unit): Self = {
+    def withSuccess(value: ErrMsg => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.vegaTypings.sceneMod
 
-import typingsSlinky.vegaTypings.AnonRole
+import typingsSlinky.vegaTypings.anon.Role
 import typingsSlinky.vegaTypings.vegaTypingsStrings.ltr
 import typingsSlinky.vegaTypings.vegaTypingsStrings.rtl
 import scala.scalajs.js
@@ -27,7 +27,7 @@ trait SceneText extends js.Object {
   var limit: js.UndefOr[Double] = js.native
   var lineBreak: js.UndefOr[String] = js.native
   var lineHeight: js.UndefOr[Double] = js.native
-  var mark: AnonRole = js.native
+  var mark: Role = js.native
   var radius: js.UndefOr[Double] = js.native
   var text: String = js.native
   var theta: js.UndefOr[Double] = js.native
@@ -44,7 +44,7 @@ object SceneText {
     fill: String,
     font: String,
     fontSize: Double,
-    mark: AnonRole,
+    mark: Role,
     text: String,
     x: Double,
     y: Double
@@ -95,7 +95,7 @@ object SceneText {
         ret
     }
     @scala.inline
-    def withMark(value: AnonRole): Self = {
+    def withMark(value: Role): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mark")(value.asInstanceOf[js.Any])
         ret

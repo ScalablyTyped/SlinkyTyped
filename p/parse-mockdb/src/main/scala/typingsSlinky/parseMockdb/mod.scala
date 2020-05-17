@@ -1,6 +1,6 @@
 package typingsSlinky.parseMockdb
 
-import typingsSlinky.parse.mod._Global_.Parse.Cloud.BeforeSaveRequest
+import typingsSlinky.parse.mod.global.Parse.Cloud.BeforeSaveRequest
 import typingsSlinky.parseMockdb.ParseMockDB.HookType
 import scala.scalajs.js
 import scala.scalajs.js.`|`

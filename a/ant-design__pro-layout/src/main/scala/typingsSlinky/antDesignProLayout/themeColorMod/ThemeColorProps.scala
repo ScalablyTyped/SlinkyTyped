@@ -1,23 +1,23 @@
 package typingsSlinky.antDesignProLayout.themeColorMod
 
-import typingsSlinky.antDesignProLayout.AnonColor
-import typingsSlinky.antDesignProLayout.AnonDefaultMessage
+import typingsSlinky.antDesignProLayout.anon.Color
+import typingsSlinky.antDesignProLayout.anon.DefaultMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ThemeColorProps extends js.Object {
-  var colors: js.UndefOr[js.Array[AnonColor]] = js.native
+  var colors: js.UndefOr[js.Array[Color]] = js.native
   var title: js.UndefOr[String] = js.native
   var value: String = js.native
-  def formatMessage(data: AnonDefaultMessage): String = js.native
+  def formatMessage(data: DefaultMessage): String = js.native
   def onChange(color: String): Unit = js.native
 }
 
 object ThemeColorProps {
   @scala.inline
-  def apply(formatMessage: AnonDefaultMessage => String, onChange: String => Unit, value: String): ThemeColorProps = {
+  def apply(formatMessage: DefaultMessage => String, onChange: String => Unit, value: String): ThemeColorProps = {
     val __obj = js.Dynamic.literal(formatMessage = js.Any.fromFunction1(formatMessage), onChange = js.Any.fromFunction1(onChange), value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThemeColorProps]
   }
@@ -28,7 +28,7 @@ object ThemeColorProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFormatMessage(value: AnonDefaultMessage => String): Self = {
+    def withFormatMessage(value: DefaultMessage => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("formatMessage")(js.Any.fromFunction1(value))
         ret
@@ -46,7 +46,7 @@ object ThemeColorProps {
         ret
     }
     @scala.inline
-    def withColors(value: js.Array[AnonColor]): Self = {
+    def withColors(value: js.Array[Color]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("colors")(value.asInstanceOf[js.Any])
         ret

@@ -1,9 +1,12 @@
 package typingsSlinky.materialTabScroller
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.materialBase.foundationMod.MDCFoundation
 import typingsSlinky.materialTabScroller.adapterMod.MDCTabScrollerAdapter
+import typingsSlinky.materialTabScroller.anon.ANIMATING
+import typingsSlinky.materialTabScroller.anon.AREASELECTOR
+import typingsSlinky.materialTabScroller.anon.PartialMDCTabScrollerAdap
 import typingsSlinky.materialTabScroller.rtlScrollerMod.MDCTabScrollerRTL
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +32,7 @@ object foundationMod extends js.Object {
     /**
       * Handles the transitionend event
       */
-    def handleTransitionEnd(evt: Event_): Unit = js.native
+    def handleTransitionEnd(evt: Event): Unit = js.native
     /**
       * Increment the scroll value by the scrollXIncrement using animation.
       * @param scrollXIncrement The value by which to increment the scroll position
@@ -54,17 +57,17 @@ object foundationMod extends js.Object {
   /* static members */
   @js.native
   object MDCTabScrollerFoundation extends js.Object {
-    val cssClasses: AnonANIMATING = js.native
+    val cssClasses: ANIMATING = js.native
     val defaultAdapter: MDCTabScrollerAdapter = js.native
-    val strings: AnonAREASELECTOR = js.native
+    val strings: AREASELECTOR = js.native
   }
   
   /* static members */
   @js.native
   object default extends js.Object {
-    val cssClasses: AnonANIMATING = js.native
+    val cssClasses: ANIMATING = js.native
     val defaultAdapter: MDCTabScrollerAdapter = js.native
-    val strings: AnonAREASELECTOR = js.native
+    val strings: AREASELECTOR = js.native
   }
   
 }

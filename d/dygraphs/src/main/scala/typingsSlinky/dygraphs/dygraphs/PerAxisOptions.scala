@@ -1,7 +1,7 @@
 package typingsSlinky.dygraphs.dygraphs
 
-import typingsSlinky.dygraphs.AnonLabel
 import typingsSlinky.dygraphs.Dygraph
+import typingsSlinky.dygraphs.anon.Label
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -142,7 +142,7 @@ trait PerAxisOptions extends js.Object {
       /* opts */ js.Function1[/* name */ String, _], 
       /* dygraph */ Dygraph, 
       /* vals */ js.Array[Double], 
-      js.Array[AnonLabel]
+      js.Array[Label]
     ]
   ] = js.native
   /**
@@ -415,7 +415,7 @@ object PerAxisOptions {
     }
     @scala.inline
     def withTicker(
-      value: (/* min */ Double, /* max */ Double, /* pixels */ Double, /* opts */ js.Function1[/* name */ String, _], /* dygraph */ Dygraph, /* vals */ js.Array[Double]) => js.Array[AnonLabel]
+      value: (/* min */ Double, /* max */ Double, /* pixels */ Double, /* opts */ js.Function1[/* name */ String, _], /* dygraph */ Dygraph, /* vals */ js.Array[Double]) => js.Array[Label]
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ticker")(js.Any.fromFunction6(value))

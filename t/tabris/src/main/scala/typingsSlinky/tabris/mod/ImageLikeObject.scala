@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ImageLikeObject extends _ImageValue {
+trait ImageLikeObject extends ImageValue {
   var height: js.UndefOr[Double | auto] = js.native
   var scale: js.UndefOr[Double | auto] = js.native
   var src: String | ImageBitmap | Blob = js.native

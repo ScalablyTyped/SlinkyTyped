@@ -1,6 +1,6 @@
 package typingsSlinky.yaml.parseCstMod.CST
 
-import typingsSlinky.yaml.AnonErrors
+import typingsSlinky.yaml.anon.Errors
 import typingsSlinky.yaml.utilMod.Type.QUOTE_DOUBLE
 import typingsSlinky.yaml.utilMod.Type.QUOTE_SINGLE
 import scala.scalajs.js
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait QuoteValue
   extends Scalar
      with Node {
-  val strValue: Null | String | AnonErrors = js.native
+  val strValue: Null | String | Errors = js.native
   @JSName("type")
   var type_QuoteValue: QUOTE_DOUBLE | QUOTE_SINGLE = js.native
 }
@@ -43,7 +43,7 @@ object QuoteValue {
         ret
     }
     @scala.inline
-    def withStrValue(value: String | AnonErrors): Self = {
+    def withStrValue(value: String | Errors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("strValue")(value.asInstanceOf[js.Any])
         ret

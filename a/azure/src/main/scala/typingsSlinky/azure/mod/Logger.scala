@@ -1,6 +1,6 @@
 package typingsSlinky.azure.mod
 
-import typingsSlinky.azure.AnonALERT
+import typingsSlinky.azure.anon.ALERT
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ class Logger () extends js.Object {
 @JSImport("azure", "Logger")
 @js.native
 object Logger extends js.Object {
-  var LogLevels: AnonALERT = js.native
+  var LogLevels: ALERT = js.native
   var logPriority: js.Array[String] = js.native
 }
 

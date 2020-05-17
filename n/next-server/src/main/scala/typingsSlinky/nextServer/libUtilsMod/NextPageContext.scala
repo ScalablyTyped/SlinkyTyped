@@ -1,6 +1,6 @@
 package typingsSlinky.nextServer.libUtilsMod
 
-import typingsSlinky.nextServer.ErrorstatusCodenumber
+import typingsSlinky.nextServer.anon.ErrorstatusCodenumber
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.node.querystringMod.ParsedUrlQuery

@@ -2,7 +2,6 @@ package typingsSlinky.cliBox.mod
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.cliBox.AnonMarks
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +14,7 @@ trait BoxConstructor
       (/* text */ String) | (/* text */ Text), 
       Box
     ] {
-  var defaults: AnonMarks = js.native
+  var defaults: typingsSlinky.cliBox.anon.Marks = js.native
   def apply(options: String): Box = js.native
   def apply(options: String, text: String): Box = js.native
   def apply(options: String, text: Text): Box = js.native

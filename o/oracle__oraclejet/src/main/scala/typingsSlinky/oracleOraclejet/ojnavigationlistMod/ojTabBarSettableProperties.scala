@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojnavigationlistMod
 
-import typingsSlinky.oracleOraclejet.AnonAccessibleReorderAfterItem
-import typingsSlinky.oracleOraclejet.AnonRendererSelectable
+import typingsSlinky.oracleOraclejet.anon.AccessibleReorderAfterItem
+import typingsSlinky.oracleOraclejet.anon.RendererSelectable
 import typingsSlinky.oracleOraclejet.mod.baseComponentSettableProperties
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.all
@@ -27,12 +27,12 @@ trait ojTabBarSettableProperties[K, D] extends baseComponentSettableProperties {
   var data: (DataProvider[K, D]) | Null = js.native
   var display: all | icons = js.native
   var edge: top | bottom | start | end = js.native
-  var item: AnonRendererSelectable[K, D] = js.native
+  var item: RendererSelectable[K, D] = js.native
   var overflow: popup | hidden = js.native
   var reorderable: enabled | disabled = js.native
   var selection: js.Any = js.native
   @JSName("translations")
-  var translations_ojTabBarSettableProperties: AnonAccessibleReorderAfterItem = js.native
+  var translations_ojTabBarSettableProperties: AccessibleReorderAfterItem = js.native
   var truncation: none | progressive = js.native
 }
 
@@ -43,11 +43,11 @@ object ojTabBarSettableProperties {
     currentItem: js.Any,
     display: all | icons,
     edge: top | bottom | start | end,
-    item: AnonRendererSelectable[K, D],
+    item: RendererSelectable[K, D],
     overflow: popup | hidden,
     reorderable: enabled | disabled,
     selection: js.Any,
-    translations: AnonAccessibleReorderAfterItem,
+    translations: AccessibleReorderAfterItem,
     truncation: none | progressive
   ): ojTabBarSettableProperties[K, D] = {
     val __obj = js.Dynamic.literal(as = as.asInstanceOf[js.Any], currentItem = currentItem.asInstanceOf[js.Any], display = display.asInstanceOf[js.Any], edge = edge.asInstanceOf[js.Any], item = item.asInstanceOf[js.Any], overflow = overflow.asInstanceOf[js.Any], reorderable = reorderable.asInstanceOf[js.Any], selection = selection.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any], truncation = truncation.asInstanceOf[js.Any])
@@ -84,7 +84,7 @@ object ojTabBarSettableProperties {
         ret
     }
     @scala.inline
-    def withItem(value: AnonRendererSelectable[K, D]): Self[K, D] = {
+    def withItem(value: RendererSelectable[K, D]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("item")(value.asInstanceOf[js.Any])
         ret
@@ -108,7 +108,7 @@ object ojTabBarSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonAccessibleReorderAfterItem): Self[K, D] = {
+    def withTranslations(value: AccessibleReorderAfterItem): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

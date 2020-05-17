@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ObjectRefinedBatchRequest[RT /* <: js.UndefOr[ResponseType] */] extends js.Object {
+trait ObjectRefinedBatchRequest[RT /* <: js.UndefOr[ResponseType] */] extends RefinedBatchRequest[RT] {
   var body: js.UndefOr[RequestBody | Null] = js.native
   var method: String = js.native
   var params: js.UndefOr[RefinedParams[RT] | Null] = js.native

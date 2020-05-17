@@ -2,8 +2,8 @@ package typingsSlinky.glReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.glReact.AnonColor
-import typingsSlinky.glReact.AnonDst
+import typingsSlinky.glReact.anon.Color
+import typingsSlinky.glReact.anon.Dst
 import typingsSlinky.glReact.mod.NodeProps
 import typingsSlinky.glReact.mod.ShaderDefinition
 import typingsSlinky.glReact.mod.ShaderIdentifier
@@ -23,9 +23,9 @@ object Node {
     @scala.inline
     def backbuffering(value: Boolean): this.type = set("backbuffering", value.asInstanceOf[js.Any])
     @scala.inline
-    def blendFunc(value: AnonDst): this.type = set("blendFunc", value.asInstanceOf[js.Any])
+    def blendFunc(value: Dst): this.type = set("blendFunc", value.asInstanceOf[js.Any])
     @scala.inline
-    def clear(value: AnonColor): this.type = set("clear", value.asInstanceOf[js.Any])
+    def clear(value: Color): this.type = set("clear", value.asInstanceOf[js.Any])
     @scala.inline
     def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
     @scala.inline

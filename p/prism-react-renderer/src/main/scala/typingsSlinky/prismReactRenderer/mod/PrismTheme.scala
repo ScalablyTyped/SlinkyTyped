@@ -1,6 +1,6 @@
 package typingsSlinky.prismReactRenderer.mod
 
-import typingsSlinky.prismReactRenderer.AnonLanguages
+import typingsSlinky.prismReactRenderer.anon.Languages
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait PrismTheme extends js.Object {
   var plain: PrismThemeEntry = js.native
-  var styles: js.Array[AnonLanguages] = js.native
+  var styles: js.Array[Languages] = js.native
 }
 
 object PrismTheme {
   @scala.inline
-  def apply(plain: PrismThemeEntry, styles: js.Array[AnonLanguages]): PrismTheme = {
+  def apply(plain: PrismThemeEntry, styles: js.Array[Languages]): PrismTheme = {
     val __obj = js.Dynamic.literal(plain = plain.asInstanceOf[js.Any], styles = styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrismTheme]
   }
@@ -30,7 +30,7 @@ object PrismTheme {
         ret
     }
     @scala.inline
-    def withStyles(value: js.Array[AnonLanguages]): Self = {
+    def withStyles(value: js.Array[Languages]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
         ret

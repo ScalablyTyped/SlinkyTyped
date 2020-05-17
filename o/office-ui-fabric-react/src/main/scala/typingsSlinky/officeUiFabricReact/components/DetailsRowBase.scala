@@ -6,7 +6,7 @@ import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.officeUiFabricReact.AnonEventName
+import typingsSlinky.officeUiFabricReact.anon.EventName
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.CheckboxVisibility
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IColumn
 import typingsSlinky.officeUiFabricReact.detailsRowCheckTypesMod.IDetailsCheckboxProps
@@ -70,7 +70,7 @@ object DetailsRowBase {
     @scala.inline
     def enableUpdateAnimations(value: Boolean): this.type = set("enableUpdateAnimations", value.asInstanceOf[js.Any])
     @scala.inline
-    def eventsToRegister(value: js.Array[AnonEventName]): this.type = set("eventsToRegister", value.asInstanceOf[js.Any])
+    def eventsToRegister(value: js.Array[EventName]): this.type = set("eventsToRegister", value.asInstanceOf[js.Any])
     @scala.inline
     def getCellValueKey(
       value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* column */ js.UndefOr[IColumn]) => String

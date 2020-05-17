@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.blueprintjsCore.mod.AbstractComponent2
-import typingsSlinky.blueprintjsTable.AnonLoading
+import typingsSlinky.blueprintjsTable.anon.Loading
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ class TableBody ()
 @JSImport("@blueprintjs/table/lib/esm/tableBody", "TableBody")
 @js.native
 object TableBody extends js.Object {
-  var defaultProps: AnonLoading = js.native
+  var defaultProps: Loading = js.native
   def cellClassNames(rowIndex: Double, columnIndex: Double): js.Array[String] = js.native
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.jupyterlabUiComponents.iconregistryMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.jupyterlabUiComponents.INodeOptionstagspandiv
+import typingsSlinky.jupyterlabUiComponents.anon.INodeOptionstagspandiv
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

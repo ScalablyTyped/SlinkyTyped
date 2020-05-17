@@ -1,6 +1,6 @@
 package typingsSlinky.mixpanelBrowser.mod
 
-import typingsSlinky.mixpanelBrowser.PartialOutTrackingOptions
+import typingsSlinky.mixpanelBrowser.anon.PartialOutTrackingOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

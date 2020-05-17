@@ -107,6 +107,17 @@ import typingsSlinky.activexWord.activexWordStrings.ppvObj
 import typingsSlinky.activexWord.activexWordStrings.rgdispid
 import typingsSlinky.activexWord.activexWordStrings.rgszNames
 import typingsSlinky.activexWord.activexWordStrings.riid
+import typingsSlinky.activexWord.anon.CNames
+import typingsSlinky.activexWord.anon.CancelContentControl
+import typingsSlinky.activexWord.anon.CancelPvWindow
+import typingsSlinky.activexWord.anon.DocDocument
+import typingsSlinky.activexWord.anon.DocHandled
+import typingsSlinky.activexWord.anon.InUndoRedoNewXMLNode
+import typingsSlinky.activexWord.anon.Itinfo
+import typingsSlinky.activexWord.anon.Pctinfo
+import typingsSlinky.activexWord.anon.PpvObj
+import typingsSlinky.activexWord.anon.SelSelection
+import typingsSlinky.activexWord.anon.SyncEventTypeMsoSyncEventType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -117,271 +128,323 @@ trait ActiveXObject extends js.Object {
     obj: Application,
     event: DocumentBeforeClose,
     argNames: js.Tuple2[Doc, Cancel],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonCancel, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ typingsSlinky.activexWord.anon.Cancel, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: DocumentBeforePrint,
     argNames: js.Tuple2[Doc, Cancel],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonCancel, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ typingsSlinky.activexWord.anon.Cancel, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: DocumentBeforeSave,
     argNames: js.Tuple3[Doc, SaveAsUI, Cancel],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonDoc, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ typingsSlinky.activexWord.anon.Doc, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: DocumentOpen,
     argNames: js.Array[Doc],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonDocDocument, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ DocDocument, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: DocumentSync,
     argNames: js.Tuple2[Doc, SyncEventType],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonSyncEventType, Unit]
+    handler: js.ThisFunction1[
+      /* this */ Application, 
+      /* parameter */ typingsSlinky.activexWord.anon.SyncEventType, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: Application,
     event: EPostageInsert,
     argNames: js.Array[Doc],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonDocDocument, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ DocDocument, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: EPostagePropertyDialog,
     argNames: js.Array[Doc],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonDocDocument, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ DocDocument, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: GetIDsOfNames,
     argNames: js.Tuple5[riid, rgszNames, cNames, lcid, rgdispid],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonCNames, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ CNames, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: GetTypeInfoCount,
     argNames: js.Array[pctinfo],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonPctinfo, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ Pctinfo, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: GetTypeInfo,
     argNames: js.Tuple3[itinfo, lcid, pptinfo],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonItinfo, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ Itinfo, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: MailMergeAfterMerge,
     argNames: js.Tuple2[Doc, DocResult],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonDocResult, Unit]
+    handler: js.ThisFunction1[
+      /* this */ Application, 
+      /* parameter */ typingsSlinky.activexWord.anon.DocResult, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: Application,
     event: MailMergeAfterRecordMerge,
     argNames: js.Array[Doc],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonDocDocument, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ DocDocument, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: MailMergeBeforeMerge,
     argNames: js.Tuple4[Doc, StartRecord, EndRecord, Cancel],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonEndRecord, Unit]
+    handler: js.ThisFunction1[
+      /* this */ Application, 
+      /* parameter */ typingsSlinky.activexWord.anon.EndRecord, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: Application,
     event: MailMergeBeforeRecordMerge,
     argNames: js.Tuple2[Doc, Cancel],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonCancel, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ typingsSlinky.activexWord.anon.Cancel, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: MailMergeDataSourceLoad,
     argNames: js.Array[Doc],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonDocDocument, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ DocDocument, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: MailMergeDataSourceValidate2,
     argNames: js.Tuple2[Doc, Handled],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonDocHandled, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ DocHandled, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: MailMergeDataSourceValidate,
     argNames: js.Tuple2[Doc, Handled],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonHandled, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ typingsSlinky.activexWord.anon.Handled, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: MailMergeWizardSendToCustom,
     argNames: js.Array[Doc],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonDocDocument, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ DocDocument, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: MailMergeWizardStateChange,
     argNames: js.Tuple4[Doc, FromState, ToState, Handled],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonFromState, Unit]
+    handler: js.ThisFunction1[
+      /* this */ Application, 
+      /* parameter */ typingsSlinky.activexWord.anon.FromState, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: Application,
     event: NewDocument,
     argNames: js.Array[Doc],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonDocDocument, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ DocDocument, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: ProtectedViewWindowActivate,
     argNames: js.Array[PvWindow],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonPvWindow, Unit]
+    handler: js.ThisFunction1[
+      /* this */ Application, 
+      /* parameter */ typingsSlinky.activexWord.anon.PvWindow, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: Application,
     event: ProtectedViewWindowBeforeClose,
     argNames: js.Tuple3[PvWindow, CloseReason, Cancel],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonCloseReason, Unit]
+    handler: js.ThisFunction1[
+      /* this */ Application, 
+      /* parameter */ typingsSlinky.activexWord.anon.CloseReason, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: Application,
     event: ProtectedViewWindowBeforeEdit,
     argNames: js.Tuple2[PvWindow, Cancel],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonCancelPvWindow, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ CancelPvWindow, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: ProtectedViewWindowDeactivate,
     argNames: js.Array[PvWindow],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonPvWindow, Unit]
+    handler: js.ThisFunction1[
+      /* this */ Application, 
+      /* parameter */ typingsSlinky.activexWord.anon.PvWindow, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: Application,
     event: ProtectedViewWindowOpen,
     argNames: js.Array[PvWindow],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonPvWindow, Unit]
+    handler: js.ThisFunction1[
+      /* this */ Application, 
+      /* parameter */ typingsSlinky.activexWord.anon.PvWindow, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: Application,
     event: ProtectedViewWindowSize,
     argNames: js.Array[PvWindow],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonPvWindow, Unit]
+    handler: js.ThisFunction1[
+      /* this */ Application, 
+      /* parameter */ typingsSlinky.activexWord.anon.PvWindow, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: Application,
     event: QueryInterface,
     argNames: js.Tuple2[riid, ppvObj],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonPpvObj, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ PpvObj, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: WindowActivate,
     argNames: js.Tuple2[Doc, Wn],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonWn, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ typingsSlinky.activexWord.anon.Wn, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: WindowBeforeDoubleClick,
     argNames: js.Tuple2[Sel, Cancel],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonSel, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ typingsSlinky.activexWord.anon.Sel, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: WindowBeforeRightClick,
     argNames: js.Tuple2[Sel, Cancel],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonSel, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ typingsSlinky.activexWord.anon.Sel, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: WindowDeactivate,
     argNames: js.Tuple2[Doc, Wn],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonWn, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ typingsSlinky.activexWord.anon.Wn, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: WindowSelectionChange,
     argNames: js.Array[Sel],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonSelSelection, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ SelSelection, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: WindowSize,
     argNames: js.Tuple2[Doc, Wn],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonWn, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ typingsSlinky.activexWord.anon.Wn, Unit]
   ): Unit = js.native
   def on(
     obj: Application,
     event: XMLSelectionChange,
     argNames: js.Tuple4[Sel, OldXMLNode, NewXMLNode, Reason],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonNewXMLNode, Unit]
+    handler: js.ThisFunction1[
+      /* this */ Application, 
+      /* parameter */ typingsSlinky.activexWord.anon.NewXMLNode, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: Application,
     event: XMLValidationError,
     argNames: js.Array[XMLNode],
-    handler: js.ThisFunction1[/* this */ Application, /* parameter */ AnonXMLNode, Unit]
+    handler: js.ThisFunction1[/* this */ Application, /* parameter */ typingsSlinky.activexWord.anon.XMLNode, Unit]
   ): Unit = js.native
   def on(
     obj: Document,
     event: BuildingBlockInsert,
     argNames: js.Tuple5[Range, Name, Category, BlockType, Template],
-    handler: js.ThisFunction1[/* this */ Document, /* parameter */ AnonBlockType, Unit]
+    handler: js.ThisFunction1[/* this */ Document, /* parameter */ typingsSlinky.activexWord.anon.BlockType, Unit]
   ): Unit = js.native
   def on(
     obj: Document,
     event: ContentControlAfterAdd,
     argNames: js.Tuple2[NewContentControl, InUndoRedo],
-    handler: js.ThisFunction1[/* this */ Document, /* parameter */ AnonInUndoRedo, Unit]
+    handler: js.ThisFunction1[/* this */ Document, /* parameter */ typingsSlinky.activexWord.anon.InUndoRedo, Unit]
   ): Unit = js.native
   def on(
     obj: Document,
     event: ContentControlBeforeContentUpdate,
     argNames: js.Tuple2[ContentControl, Content],
-    handler: js.ThisFunction1[/* this */ Document, /* parameter */ AnonContent, Unit]
+    handler: js.ThisFunction1[/* this */ Document, /* parameter */ typingsSlinky.activexWord.anon.Content, Unit]
   ): Unit = js.native
   def on(
     obj: Document,
     event: ContentControlBeforeDelete,
     argNames: js.Tuple2[OldContentControl, InUndoRedo],
-    handler: js.ThisFunction1[/* this */ Document, /* parameter */ AnonOldContentControl, Unit]
+    handler: js.ThisFunction1[
+      /* this */ Document, 
+      /* parameter */ typingsSlinky.activexWord.anon.OldContentControl, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: Document,
     event: ContentControlBeforeStoreUpdate,
     argNames: js.Tuple2[ContentControl, Content],
-    handler: js.ThisFunction1[/* this */ Document, /* parameter */ AnonContent, Unit]
+    handler: js.ThisFunction1[/* this */ Document, /* parameter */ typingsSlinky.activexWord.anon.Content, Unit]
   ): Unit = js.native
   def on(
     obj: Document,
     event: ContentControlOnEnter,
     argNames: js.Array[ContentControl],
-    handler: js.ThisFunction1[/* this */ Document, /* parameter */ AnonContentControl, Unit]
+    handler: js.ThisFunction1[
+      /* this */ Document, 
+      /* parameter */ typingsSlinky.activexWord.anon.ContentControl, 
+      Unit
+    ]
   ): Unit = js.native
   def on(
     obj: Document,
     event: ContentControlOnExit,
     argNames: js.Tuple2[ContentControl, Cancel],
-    handler: js.ThisFunction1[/* this */ Document, /* parameter */ AnonCancelContentControl, Unit]
+    handler: js.ThisFunction1[/* this */ Document, /* parameter */ CancelContentControl, Unit]
   ): Unit = js.native
   def on(
     obj: Document,
     event: Sync,
     argNames: js.Array[SyncEventType],
-    handler: js.ThisFunction1[/* this */ Document, /* parameter */ AnonSyncEventTypeMsoSyncEventType, Unit]
+    handler: js.ThisFunction1[/* this */ Document, /* parameter */ SyncEventTypeMsoSyncEventType, Unit]
   ): Unit = js.native
   def on(
     obj: Document,
     event: XMLAfterInsert,
     argNames: js.Tuple2[NewXMLNode, InUndoRedo],
-    handler: js.ThisFunction1[/* this */ Document, /* parameter */ AnonInUndoRedoNewXMLNode, Unit]
+    handler: js.ThisFunction1[/* this */ Document, /* parameter */ InUndoRedoNewXMLNode, Unit]
   ): Unit = js.native
   def on(
     obj: Document,
     event: XMLBeforeDelete,
     argNames: js.Tuple3[DeletedRange, OldXMLNode, InUndoRedo],
-    handler: js.ThisFunction1[/* this */ Document, /* parameter */ AnonDeletedRange, Unit]
+    handler: js.ThisFunction1[
+      /* this */ Document, 
+      /* parameter */ typingsSlinky.activexWord.anon.DeletedRange, 
+      Unit
+    ]
   ): Unit = js.native
   @JSName("on")
   def on_AddRef(

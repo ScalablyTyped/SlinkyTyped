@@ -1,7 +1,7 @@
 package typingsSlinky.primereact.slideMenuMod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.primereact.menuItemMod.MenuItem
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,8 +18,8 @@ trait SlideMenuProps extends js.Object {
   var id: js.UndefOr[String] = js.native
   var menuWidth: js.UndefOr[Double] = js.native
   var model: js.UndefOr[js.Array[MenuItem]] = js.native
-  var onHide: js.UndefOr[js.Function1[/* e */ Event_, Unit]] = js.native
-  var onShow: js.UndefOr[js.Function1[/* e */ Event_, Unit]] = js.native
+  var onHide: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
+  var onShow: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
   var popup: js.UndefOr[Boolean] = js.native
   var style: js.UndefOr[js.Object] = js.native
   var viewportHeight: js.UndefOr[Double] = js.native
@@ -158,7 +158,7 @@ object SlideMenuProps {
         ret
     }
     @scala.inline
-    def withOnHide(value: /* e */ Event_ => Unit): Self = {
+    def withOnHide(value: /* e */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onHide")(js.Any.fromFunction1(value))
         ret
@@ -170,7 +170,7 @@ object SlideMenuProps {
         ret
     }
     @scala.inline
-    def withOnShow(value: /* e */ Event_ => Unit): Self = {
+    def withOnShow(value: /* e */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onShow")(js.Any.fromFunction1(value))
         ret

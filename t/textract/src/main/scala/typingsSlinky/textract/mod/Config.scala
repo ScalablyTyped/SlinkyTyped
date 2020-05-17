@@ -1,9 +1,9 @@
 package typingsSlinky.textract.mod
 
 import typingsSlinky.node.childProcessMod.ExecException
-import typingsSlinky.textract.AnonCmd
-import typingsSlinky.textract.AnonCrop
-import typingsSlinky.textract.AnonLang
+import typingsSlinky.textract.anon.Cmd
+import typingsSlinky.textract.anon.Crop
+import typingsSlinky.textract.anon.Lang
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,7 +44,7 @@ trait Config extends js.Object {
     * It is not suggested you modify this without understanding what trouble that might get you in.
     * See [this GH issue](https://github.com/dbashford/textract/issues/75) for why textract overrides that library's default.
     */
-  var pdftotextOptions: js.UndefOr[AnonCrop] = js.native
+  var pdftotextOptions: js.UndefOr[Crop] = js.native
   /**
     * Pass this in as true and textract will not strip any line breaks.
     * @default false
@@ -62,7 +62,7 @@ trait Config extends js.Object {
     * See `unrtf` manual for available options
     */
   var rtf: js.UndefOr[extractorExecOpts] = js.native
-  var tesseract: js.UndefOr[AnonLang | AnonCmd] = js.native
+  var tesseract: js.UndefOr[Lang | Cmd] = js.native
 }
 
 object Config {
@@ -138,7 +138,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withPdftotextOptions(value: AnonCrop): Self = {
+    def withPdftotextOptions(value: Crop): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pdftotextOptions")(value.asInstanceOf[js.Any])
         ret
@@ -186,7 +186,7 @@ object Config {
         ret
     }
     @scala.inline
-    def withTesseract(value: AnonLang | AnonCmd): Self = {
+    def withTesseract(value: Lang | Cmd): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tesseract")(value.asInstanceOf[js.Any])
         ret

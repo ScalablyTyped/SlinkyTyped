@@ -1,6 +1,6 @@
 package typingsSlinky.baiduApp.swan
 
-import typingsSlinky.baiduApp.AnonLatitude
+import typingsSlinky.baiduApp.anon.Latitude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation._
 trait GetCenterLocationOptions
   extends BaseOptions[js.Any, js.Any] {
   @JSName("success")
-  def success_MGetCenterLocationOptions(res: AnonLatitude): Unit = js.native
+  def success_MGetCenterLocationOptions(res: Latitude): Unit = js.native
 }
 
 object GetCenterLocationOptions {
   @scala.inline
-  def apply(success: AnonLatitude => Unit): GetCenterLocationOptions = {
+  def apply(success: Latitude => Unit): GetCenterLocationOptions = {
     val __obj = js.Dynamic.literal(success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[GetCenterLocationOptions]
   }
@@ -26,7 +26,7 @@ object GetCenterLocationOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSuccess(value: AnonLatitude => Unit): Self = {
+    def withSuccess(value: Latitude => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.nightwatch.mod
 
-import typingsSlinky.nightwatch.AnonBuild
+import typingsSlinky.nightwatch.anon.Build
 import typingsSlinky.nightwatch.nightwatchStrings.browser
 import typingsSlinky.nightwatch.nightwatchStrings.client
 import typingsSlinky.nightwatch.nightwatchStrings.driver
@@ -100,7 +100,7 @@ trait WebDriverProtocolSessions extends js.Object {
     */
   def status(): this.type = js.native
   def status(
-    callback: js.ThisFunction1[/* this */ NightwatchAPI, /* result */ NightwatchCallbackResult[AnonBuild], Unit]
+    callback: js.ThisFunction1[/* this */ NightwatchAPI, /* result */ NightwatchCallbackResult[Build], Unit]
   ): this.type = js.native
   /**
     * Configure the amount of time that a particular type of operation can execute for before they are aborted and a |Timeout| error is returned to the client.

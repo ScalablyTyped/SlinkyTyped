@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Defines a simple state common to most of the client commands.
   */
-@JSGlobal("SimpleCommandState")
 @js.native
-class SimpleCommandState () extends js.Object {
+trait SimpleCommandState extends js.Object {
   /**
     * Specifies a command availability.
     */
@@ -18,5 +17,33 @@ class SimpleCommandState () extends js.Object {
     * Specifies a command visibility.
     */
   var visible: Boolean = js.native
+}
+
+object SimpleCommandState {
+  @scala.inline
+  def apply(enabled: Boolean, visible: Boolean): SimpleCommandState = {
+    val __obj = js.Dynamic.literal(enabled = enabled.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SimpleCommandState]
+  }
+  @scala.inline
+  implicit class SimpleCommandStateOps[Self <: SimpleCommandState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withEnabled(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enabled")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVisible(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("visible")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

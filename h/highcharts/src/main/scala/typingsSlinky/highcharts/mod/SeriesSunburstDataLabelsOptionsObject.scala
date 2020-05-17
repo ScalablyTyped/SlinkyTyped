@@ -33,30 +33,6 @@ object SeriesSunburstDataLabelsOptionsObject {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAlign(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAlign: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("align")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withAllowOverlap(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowOverlap")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutAllowOverlap: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("allowOverlap")(js.undefined)
-        ret
-    }
-    @scala.inline
     def withRotationMode(value: SeriesSunburstDataLabelsRotationValue): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rotationMode")(value.asInstanceOf[js.Any])

@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.DocumentFragment
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.ractive.AnonInstantiable
+import typingsSlinky.ractive.anon.Instantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -355,12 +355,12 @@ class Ractive[T /* <: Ractive[T] */] () extends js.Object {
   	 * @param opts
   	 */
   def transition(transition: String, node: HTMLElement): js.Promise[Unit] = js.native
-  def transition(transition: String, node: HTMLElement, opts: typingsSlinky.ractive.TransitionOpts): js.Promise[Unit] = js.native
-  def transition(transition: String, opts: typingsSlinky.ractive.TransitionOpts): js.Promise[Unit] = js.native
+  def transition(transition: String, node: HTMLElement, opts: typingsSlinky.ractive.anon.TransitionOpts): js.Promise[Unit] = js.native
+  def transition(transition: String, opts: typingsSlinky.ractive.anon.TransitionOpts): js.Promise[Unit] = js.native
   def transition(transition: Transition): js.Promise[Unit] = js.native
   def transition(transition: Transition, node: HTMLElement): js.Promise[Unit] = js.native
-  def transition(transition: Transition, node: HTMLElement, opts: typingsSlinky.ractive.TransitionOpts): js.Promise[Unit] = js.native
-  def transition(transition: Transition, opts: typingsSlinky.ractive.TransitionOpts): js.Promise[Unit] = js.native
+  def transition(transition: Transition, node: HTMLElement, opts: typingsSlinky.ractive.anon.TransitionOpts): js.Promise[Unit] = js.native
+  def transition(transition: Transition, opts: typingsSlinky.ractive.anon.TransitionOpts): js.Promise[Unit] = js.native
   /**
   	 * Remove the link at the given keypath.
   	 * @param keypath
@@ -418,7 +418,7 @@ object Ractive extends js.Object {
   /** The parent constructor used to create this constructor. */
   var Parent: Static[Ractive[Ractive[_]]] = js.native
   /** The Ractive constructor used to create this constructor. */
-  var Ractive: AnonInstantiable = js.native
+  var Ractive: Instantiable = js.native
   val VERSION: String = js.native
   var adaptors: Registry[Adaptor] = js.native
   var components: Registry[Component] = js.native

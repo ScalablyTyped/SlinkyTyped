@@ -1,6 +1,6 @@
 package typingsSlinky.entriaRelayExperimental.useLegacyPaginationFragmentMod
 
-import typingsSlinky.entriaRelayExperimental.AnonOnComplete
+import typingsSlinky.entriaRelayExperimental.anon.OnComplete
 import typingsSlinky.entriaRelayExperimental.useLoadMoreFunctionMod.LoadMoreFn
 import typingsSlinky.entriaRelayExperimental.useRefetchableFragmentNodeMod.Options
 import typingsSlinky.entriaRelayExperimental.useRefetchableFragmentNodeMod.RefetchFnDynamic
@@ -30,8 +30,8 @@ object ReturnTypePaginationFragment {
     hasPrevious: Boolean,
     isLoadingNext: Boolean,
     isLoadingPrevious: Boolean,
-    loadNext: (/* count */ Double, /* options */ js.UndefOr[AnonOnComplete]) => Disposable,
-    loadPrevious: (/* count */ Double, /* options */ js.UndefOr[AnonOnComplete]) => Disposable,
+    loadNext: (/* count */ Double, /* options */ js.UndefOr[OnComplete]) => Disposable,
+    loadPrevious: (/* count */ Double, /* options */ js.UndefOr[OnComplete]) => Disposable,
     refetch: RefetchFnDynamic[TQuery, TKey, Options]
   ): ReturnTypePaginationFragment[TQuery, TKey, TFragmentData] = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], hasNext = hasNext.asInstanceOf[js.Any], hasPrevious = hasPrevious.asInstanceOf[js.Any], isLoadingNext = isLoadingNext.asInstanceOf[js.Any], isLoadingPrevious = isLoadingPrevious.asInstanceOf[js.Any], loadNext = js.Any.fromFunction2(loadNext), loadPrevious = js.Any.fromFunction2(loadPrevious), refetch = refetch.asInstanceOf[js.Any])
@@ -74,13 +74,13 @@ object ReturnTypePaginationFragment {
         ret
     }
     @scala.inline
-    def withLoadNext(value: (/* count */ Double, /* options */ js.UndefOr[AnonOnComplete]) => Disposable): Self[TQuery, TKey, TFragmentData] = {
+    def withLoadNext(value: (/* count */ Double, /* options */ js.UndefOr[OnComplete]) => Disposable): Self[TQuery, TKey, TFragmentData] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loadNext")(js.Any.fromFunction2(value))
         ret
     }
     @scala.inline
-    def withLoadPrevious(value: (/* count */ Double, /* options */ js.UndefOr[AnonOnComplete]) => Disposable): Self[TQuery, TKey, TFragmentData] = {
+    def withLoadPrevious(value: (/* count */ Double, /* options */ js.UndefOr[OnComplete]) => Disposable): Self[TQuery, TKey, TFragmentData] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loadPrevious")(js.Any.fromFunction2(value))
         ret

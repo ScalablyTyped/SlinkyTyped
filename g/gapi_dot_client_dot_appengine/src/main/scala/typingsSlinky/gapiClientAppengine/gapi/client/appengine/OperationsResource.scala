@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientAppengine.gapi.client.appengine
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAppengine.AnonFilter
-import typingsSlinky.gapiClientAppengine.AnonOperationsId
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAppengine.anon.Filter
+import typingsSlinky.gapiClientAppengine.anon.OperationsId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait OperationsResource extends js.Object {
     * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API
     * service.
     */
-  def get(request: AnonOperationsId): Request_[Operation] = js.native
+  def get(request: OperationsId): Request[Operation] = js.native
   /**
     * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.NOTE: the name
     * binding allows API services to override the binding to use different resource name schemes, such as users/&#42;/operations. To override the binding, API
@@ -21,12 +21,12 @@ trait OperationsResource extends js.Object {
     * includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection
     * id.
     */
-  def list(request: AnonFilter): Request_[ListOperationsResponse] = js.native
+  def list(request: Filter): Request[ListOperationsResponse] = js.native
 }
 
 object OperationsResource {
   @scala.inline
-  def apply(get: AnonOperationsId => Request_[Operation], list: AnonFilter => Request_[ListOperationsResponse]): OperationsResource = {
+  def apply(get: OperationsId => Request[Operation], list: Filter => Request[ListOperationsResponse]): OperationsResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[OperationsResource]
   }
@@ -37,13 +37,13 @@ object OperationsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonOperationsId => Request_[Operation]): Self = {
+    def withGet(value: OperationsId => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonFilter => Request_[ListOperationsResponse]): Self = {
+    def withList(value: Filter => Request[ListOperationsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.gaeaModel.FitGaea
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.gaeaModel.AnonCurrentUnit
+import typingsSlinky.gaeaModel.anon.CurrentUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,7 +44,7 @@ trait ComponentPropsGaeaEdit extends js.Object {
   /**
     * 控制 number 单位
     */
-  var number: js.UndefOr[AnonCurrentUnit] = js.native
+  var number: js.UndefOr[CurrentUnit] = js.native
   /**
     * 当 editor 为 selector 时的数组配置
     */
@@ -134,7 +134,7 @@ object ComponentPropsGaeaEdit {
         ret
     }
     @scala.inline
-    def withNumber(value: AnonCurrentUnit): Self = {
+    def withNumber(value: CurrentUnit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("number")(value.asInstanceOf[js.Any])
         ret

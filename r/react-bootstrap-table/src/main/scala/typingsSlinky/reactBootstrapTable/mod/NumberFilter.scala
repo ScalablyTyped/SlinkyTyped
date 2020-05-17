@@ -1,17 +1,17 @@
 package typingsSlinky.reactBootstrapTable.mod
 
-import typingsSlinky.reactBootstrapTable.AnonComparator
-import typingsSlinky.reactBootstrapTable.AnonNumber
+import typingsSlinky.reactBootstrapTable.anon.Comparator
+import typingsSlinky.reactBootstrapTable.anon.Number
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait NumberFilter extends _Filter {
+trait NumberFilter extends Filter {
   /**
   	 * Default value for the filter.
   	 */
-  var defaultValue: js.UndefOr[AnonComparator] = js.native
+  var defaultValue: js.UndefOr[Comparator] = js.native
   /**
   	 * Delay time in milliseconds after the last key press prior to applying the filter. Defaults to 500ms.
   	 */
@@ -31,7 +31,7 @@ trait NumberFilter extends _Filter {
   /**
   	 * CSS Style to use for the select filter.
   	 */
-  var style: js.UndefOr[AnonNumber] = js.native
+  var style: js.UndefOr[Number] = js.native
   /**
   	 * Filter type must be 'NumberFilter'
   	 */
@@ -70,7 +70,7 @@ object NumberFilter {
         ret
     }
     @scala.inline
-    def withDefaultValue(value: AnonComparator): Self = {
+    def withDefaultValue(value: Comparator): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
         ret
@@ -130,7 +130,7 @@ object NumberFilter {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonNumber): Self = {
+    def withStyle(value: Number): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

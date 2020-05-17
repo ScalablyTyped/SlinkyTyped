@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
   * @name pc.GamePads
   * @classdesc Input handler for accessing GamePad input.
   */
-@JSGlobal("pc.GamePads")
 @js.native
-class GamePads () extends js.Object {
+trait GamePads extends js.Object {
   /**
     * @function
     * @name pc.GamePads#getAxis
@@ -56,5 +55,57 @@ class GamePads () extends js.Object {
     * @returns {boolean} True if the button was pressed since the last frame.
     */
   def wasPressed(index: Double, button: Double): Boolean = js.native
+}
+
+object GamePads {
+  @scala.inline
+  def apply(
+    getAxis: (Double, Double) => Double,
+    isPressed: (Double, Double) => Boolean,
+    poll: () => js.Array[js.Object],
+    update: () => Unit,
+    wasPressed: (Double, Double) => Boolean
+  ): GamePads = {
+    val __obj = js.Dynamic.literal(getAxis = js.Any.fromFunction2(getAxis), isPressed = js.Any.fromFunction2(isPressed), poll = js.Any.fromFunction0(poll), update = js.Any.fromFunction0(update), wasPressed = js.Any.fromFunction2(wasPressed))
+    __obj.asInstanceOf[GamePads]
+  }
+  @scala.inline
+  implicit class GamePadsOps[Self <: GamePads] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetAxis(value: (Double, Double) => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAxis")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withIsPressed(value: (Double, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPressed")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withPoll(value: () => js.Array[js.Object]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("poll")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUpdate(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withWasPressed(value: (Double, Double) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("wasPressed")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

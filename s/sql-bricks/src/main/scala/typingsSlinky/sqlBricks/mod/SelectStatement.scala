@@ -8,7 +8,9 @@ import scala.scalajs.js.annotation._
   * A SELECT statement
   */
 @js.native
-trait SelectStatement extends Statement {
+trait SelectStatement
+  extends Statement
+     with TableName {
   def and(options: js.Any*): SelectStatement = js.native
   def as(alias: String): SelectStatement = js.native
   def crossJoin(firstTbl: String, otherTbls: String*): SelectStatement = js.native

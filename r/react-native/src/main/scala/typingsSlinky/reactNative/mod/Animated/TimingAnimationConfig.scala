@@ -1,6 +1,6 @@
 package typingsSlinky.reactNative.mod.Animated
 
-import typingsSlinky.reactNative.AnonX
+import typingsSlinky.reactNative.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,13 +10,13 @@ trait TimingAnimationConfig extends AnimationConfig {
   var delay: js.UndefOr[Double] = js.native
   var duration: js.UndefOr[Double] = js.native
   var easing: js.UndefOr[js.Function1[/* value */ Double, Double]] = js.native
-  var toValue: Double | AnimatedValue | AnonX | AnimatedValueXY | AnimatedInterpolation = js.native
+  var toValue: Double | AnimatedValue | X | AnimatedValueXY | AnimatedInterpolation = js.native
 }
 
 object TimingAnimationConfig {
   @scala.inline
   def apply(
-    toValue: Double | AnimatedValue | AnonX | AnimatedValueXY | AnimatedInterpolation,
+    toValue: Double | AnimatedValue | X | AnimatedValueXY | AnimatedInterpolation,
     useNativeDriver: Boolean
   ): TimingAnimationConfig = {
     val __obj = js.Dynamic.literal(toValue = toValue.asInstanceOf[js.Any], useNativeDriver = useNativeDriver.asInstanceOf[js.Any])
@@ -29,7 +29,7 @@ object TimingAnimationConfig {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withToValue(value: Double | AnimatedValue | AnonX | AnimatedValueXY | AnimatedInterpolation): Self = {
+    def withToValue(value: Double | AnimatedValue | X | AnimatedValueXY | AnimatedInterpolation): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("toValue")(value.asInstanceOf[js.Any])
         ret

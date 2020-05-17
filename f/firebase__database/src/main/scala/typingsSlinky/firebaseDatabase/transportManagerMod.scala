@@ -1,5 +1,7 @@
 package typingsSlinky.firebaseDatabase
 
+import typingsSlinky.firebaseDatabase.anon.TypeofBrowserPollConnecti
+import typingsSlinky.firebaseDatabase.anon.TypeofWebSocketConnection
 import typingsSlinky.firebaseDatabase.repoInfoMod.RepoInfo
 import typingsSlinky.firebaseDatabase.transportMod.TransportConstructor
 import scala.scalajs.js

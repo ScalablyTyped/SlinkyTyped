@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkTypes.middlewareMod
 
-import typingsSlinky.awsSdkTypes.HandlerOptionsstepinitial
+import typingsSlinky.awsSdkTypes.anon.HandlerOptionsstepinitial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

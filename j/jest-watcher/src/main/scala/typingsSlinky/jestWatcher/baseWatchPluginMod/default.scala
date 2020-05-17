@@ -1,6 +1,6 @@
 package typingsSlinky.jestWatcher.baseWatchPluginMod
 
-import typingsSlinky.jestWatcher.AnonStdin
+import typingsSlinky.jestWatcher.anon.Stdin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("jest-watcher/build/BaseWatchPlugin", JSImport.Default)
 @js.native
 class default protected () extends BaseWatchPlugin {
-  def this(hasStdinStdout: AnonStdin) = this()
+  def this(hasStdinStdout: Stdin) = this()
 }
 

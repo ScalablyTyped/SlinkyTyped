@@ -55,7 +55,7 @@ object VerticalAxis {
         ret
     }
     @scala.inline
-    def withCrossAxisLine(value: x): Self = {
+    def withCrossAxisLine(value: typingsSlinky.reactBeautifulDnd.reactBeautifulDndStrings.x): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("crossAxisLine")(value.asInstanceOf[js.Any])
         ret

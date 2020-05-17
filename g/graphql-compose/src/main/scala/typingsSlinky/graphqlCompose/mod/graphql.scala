@@ -1,10 +1,10 @@
 package typingsSlinky.graphqlCompose.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.graphql.AnonDescription
-import typingsSlinky.graphql.AnonDirectives
-import typingsSlinky.graphql.AnonMaxErrors
-import typingsSlinky.graphql.VisitorKeyMapASTKindToNod
+import typingsSlinky.graphql.anon.Description
+import typingsSlinky.graphql.anon.Directives
+import typingsSlinky.graphql.anon.MaxErrors
+import typingsSlinky.graphql.anon.VisitorKeyMapASTKindToNod
 import typingsSlinky.graphql.astMod.ASTKindToNode
 import typingsSlinky.graphql.astMod.ASTNode
 import typingsSlinky.graphql.astMod.ArgumentNode
@@ -381,11 +381,11 @@ object graphql extends js.Object {
   ): js.Array[DangerousChange] = js.native
   def findDeprecatedUsages(schema: typingsSlinky.graphql.schemaMod.GraphQLSchema, ast: DocumentNode): js.Array[typingsSlinky.graphql.graphQLErrorMod.GraphQLError] = js.native
   def formatError(error: typingsSlinky.graphql.graphQLErrorMod.GraphQLError): GraphQLFormattedError[Record[String, _]] = js.native
-  def getDescription(node: AnonDescription, options: Maybe[BuildSchemaOptions]): js.UndefOr[String] = js.native
-  def getDirectiveValues(directiveDef: typingsSlinky.graphql.directivesMod.GraphQLDirective, node: AnonDirectives): js.UndefOr[StringDictionary[js.Any]] = js.native
+  def getDescription(node: Description, options: Maybe[BuildSchemaOptions]): js.UndefOr[String] = js.native
+  def getDirectiveValues(directiveDef: typingsSlinky.graphql.directivesMod.GraphQLDirective, node: Directives): js.UndefOr[StringDictionary[js.Any]] = js.native
   def getDirectiveValues(
     directiveDef: typingsSlinky.graphql.directivesMod.GraphQLDirective,
-    node: AnonDirectives,
+    node: Directives,
     variableValues: Maybe[StringDictionary[_]]
   ): js.UndefOr[StringDictionary[js.Any]] = js.native
   def getIntrospectionQuery(): String = js.native
@@ -569,7 +569,7 @@ object graphql extends js.Object {
     documentAST: DocumentNode,
     rules: js.Array[ValidationRule],
     typeInfo: typingsSlinky.graphql.typeInfoMod.TypeInfo,
-    options: AnonMaxErrors
+    options: MaxErrors
   ): js.Array[typingsSlinky.graphql.graphQLErrorMod.GraphQLError] = js.native
   def validateSchema(schema: typingsSlinky.graphql.schemaMod.GraphQLSchema): js.Array[typingsSlinky.graphql.graphQLErrorMod.GraphQLError] = js.native
   def valueFromAST(valueNode: Maybe[ValueNode], `type`: GraphQLInputType): js.Any = js.native

@@ -2,7 +2,6 @@ package typingsSlinky.antdMobileRn.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antdMobileRn.AnonBrief
 import typingsSlinky.antdMobileRn.listItemNativeMod.BriefProps
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -24,7 +23,7 @@ object Brief {
     @scala.inline
     def styleNull: this.type = set("style", null)
     @scala.inline
-    def styles(value: AnonBrief): this.type = set("styles", value.asInstanceOf[js.Any])
+    def styles(value: typingsSlinky.antdMobileRn.anon.Brief): this.type = set("styles", value.asInstanceOf[js.Any])
     @scala.inline
     def wrap(value: Boolean): this.type = set("wrap", value.asInstanceOf[js.Any])
   }

@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientDfareporting.gapi.client.dfareporting
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientDfareporting.AnonAction
-import typingsSlinky.gapiClientDfareporting.AnonFields
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientDfareporting.anon.Action
+import typingsSlinky.gapiClientDfareporting.anon.Fields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ChangeLogsResource extends js.Object {
   /** Gets one change log by ID. */
-  def get(request: AnonFields): Request_[ChangeLog] = js.native
+  def get(request: Fields): Request[ChangeLog] = js.native
   /** Retrieves a list of change logs. This method supports paging. */
-  def list(request: AnonAction): Request_[ChangeLogsListResponse] = js.native
+  def list(request: Action): Request[ChangeLogsListResponse] = js.native
 }
 
 object ChangeLogsResource {
   @scala.inline
-  def apply(get: AnonFields => Request_[ChangeLog], list: AnonAction => Request_[ChangeLogsListResponse]): ChangeLogsResource = {
+  def apply(get: Fields => Request[ChangeLog], list: Action => Request[ChangeLogsListResponse]): ChangeLogsResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[ChangeLogsResource]
   }
@@ -28,13 +28,13 @@ object ChangeLogsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonFields => Request_[ChangeLog]): Self = {
+    def withGet(value: Fields => Request[ChangeLog]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonAction => Request_[ChangeLogsListResponse]): Self = {
+    def withList(value: Action => Request[ChangeLogsListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

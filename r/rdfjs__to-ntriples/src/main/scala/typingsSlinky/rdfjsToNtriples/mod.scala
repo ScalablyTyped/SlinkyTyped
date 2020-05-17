@@ -2,6 +2,7 @@ package typingsSlinky.rdfjsToNtriples
 
 import typingsSlinky.rdfJs.mod.Quad
 import typingsSlinky.rdfJs.mod.Term
+import typingsSlinky.rdfjsToNtriples.anon.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

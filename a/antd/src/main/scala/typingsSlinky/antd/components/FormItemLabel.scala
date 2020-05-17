@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.FormItemLabelPropsrequire
+import typingsSlinky.antd.anon.FormItemLabelPropsrequire
 import typingsSlinky.antd.gridColMod.ColProps
 import typingsSlinky.antd.interfaceMod.FormLabelAlign
 import scala.scalajs.js

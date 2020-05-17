@@ -11,7 +11,7 @@ import typingsSlinky.formatjsIntlUtils.unifiedNumberformatTypesMod.UnifiedNumber
 import typingsSlinky.formatjsIntlUtils.unifiedNumberformatTypesMod.UnifiedNumberFormatOptionsSignDisplay
 import typingsSlinky.formatjsIntlUtils.unifiedNumberformatTypesMod.UnifiedNumberFormatOptionsStyle
 import typingsSlinky.formatjsIntlUtils.unifiedNumberformatTypesMod.UnifiedNumberFormatOptionsUnitDisplay
-import typingsSlinky.reactIntl.Anon3
+import typingsSlinky.reactIntl.anon.`3`
 import typingsSlinky.reactIntl.mod.FormatNumberOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -62,13 +62,13 @@ object FormattedNumberParts {
     def useGrouping(value: Boolean): this.type = set("useGrouping", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: FormatNumberOptions with Anon3): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: FormatNumberOptions with `3`): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(
     value: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<(value : std.Parameters<std.Intl.NumberFormat['format']>[0], opts ? : react-intl.react-intl.FormatNumberOptions): string>[0] */ js.Any
   ): Builder = {
     val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[FormatNumberOptions with Anon3]))
+    new Builder(js.Array(this.component, __props.asInstanceOf[FormatNumberOptions with `3`]))
   }
 }
 

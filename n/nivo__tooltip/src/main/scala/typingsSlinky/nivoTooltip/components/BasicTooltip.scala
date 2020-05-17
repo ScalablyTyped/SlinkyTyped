@@ -3,7 +3,7 @@ package typingsSlinky.nivoTooltip.components
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.nivoTooltip.Pickanytooltip
+import typingsSlinky.nivoTooltip.anon.Pickanytooltip
 import typingsSlinky.nivoTooltip.mod.BasicTooltipProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

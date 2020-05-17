@@ -1,5 +1,6 @@
 package typingsSlinky.wonderJs
 
+import typingsSlinky.wonderJs.anon.X
 import typingsSlinky.wonderJs.domEventMod.DomEvent
 import typingsSlinky.wonderJs.eventNameHandlerMod.EEventName
 import typingsSlinky.wonderJs.ieventdataMod.ITouchData
@@ -20,7 +21,7 @@ object touchEventMod extends js.Object {
     var lastY: Double = js.native
     var location: Point = js.native
     var locationInView: Point = js.native
-    val movementDelta: AnonX = js.native
+    val movementDelta: X = js.native
     val touchData: ITouchData = js.native
   }
   

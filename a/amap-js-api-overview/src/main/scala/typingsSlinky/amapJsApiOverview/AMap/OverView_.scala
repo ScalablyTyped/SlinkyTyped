@@ -2,7 +2,6 @@ package typingsSlinky.amapJsApiOverview.AMap
 
 import typingsSlinky.amapJsApi.AMap.EventEmitter
 import typingsSlinky.amapJsApi.AMap.TileLayer
-import typingsSlinky.amapJsApiOverview.AMap.OverView.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,10 +9,8 @@ import scala.scalajs.js.annotation._
 /**
   * 地图鹰眼插件
   */
-@JSGlobal("AMap.OverView")
 @js.native
-class OverView_[L /* <: TileLayer */] () extends EventEmitter {
-  def this(options: Options[L]) = this()
+trait OverView_[L /* <: TileLayer */] extends EventEmitter {
   /***
     * 折叠鹰眼窗口
     */

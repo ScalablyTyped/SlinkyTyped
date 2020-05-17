@@ -1,7 +1,7 @@
 package typingsSlinky.emberMocha.mod
 
 import typingsSlinky.emberTestHelpers.mod.ModuleCallbacks
-import typingsSlinky.mocha.Mocha_.ISuiteCallbackContext
+import typingsSlinky.mocha.Mocha.ISuiteCallbackContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

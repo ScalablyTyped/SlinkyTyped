@@ -1,7 +1,7 @@
 package typingsSlinky.cliTable.mod
 
-import typingsSlinky.cliTable.PartialRecordtoptopmidtop
-import typingsSlinky.cliTable.Partialpaddingleftnumberp
+import typingsSlinky.cliTable.anon.PartialRecordtoptopmidtop
+import typingsSlinky.cliTable.anon.Partialpaddingleftnumberp
 import typingsSlinky.cliTable.cliTableStrings.left
 import typingsSlinky.cliTable.cliTableStrings.middle
 import typingsSlinky.cliTable.cliTableStrings.right

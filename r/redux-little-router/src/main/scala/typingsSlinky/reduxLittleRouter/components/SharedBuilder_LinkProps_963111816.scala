@@ -1,13 +1,13 @@
 package typingsSlinky.reduxLittleRouter.components
 
+import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reduxLittleRouter.AnonPayload
+import typingsSlinky.reduxLittleRouter.anon.Payload
 import typingsSlinky.reduxLittleRouter.mod.Href
 import typingsSlinky.reduxLittleRouter.mod.Location
 import typingsSlinky.reduxLittleRouter.mod.LocationOptions
 import typingsSlinky.reduxLittleRouter.mod.ObjectLiteral
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,13 +23,13 @@ class SharedBuilder_LinkProps_963111816[R <: js.Object] (val args: js.Array[js.A
   @scala.inline
   def location(value: Location): this.type = set("location", value.asInstanceOf[js.Any])
   @scala.inline
-  def onClick(value: /* event */ Event_ => _): this.type = set("onClick", js.Any.fromFunction1(value))
+  def onClick(value: /* event */ Event => _): this.type = set("onClick", js.Any.fromFunction1(value))
   @scala.inline
   def persistQuery(value: Boolean): this.type = set("persistQuery", value.asInstanceOf[js.Any])
   @scala.inline
-  def push(value: (/* href */ Href, /* options */ LocationOptions) => AnonPayload): this.type = set("push", js.Any.fromFunction2(value))
+  def push(value: (/* href */ Href, /* options */ LocationOptions) => Payload): this.type = set("push", js.Any.fromFunction2(value))
   @scala.inline
-  def replace(value: (/* href */ Href, /* options */ LocationOptions) => AnonPayload): this.type = set("replace", js.Any.fromFunction2(value))
+  def replace(value: (/* href */ Href, /* options */ LocationOptions) => Payload): this.type = set("replace", js.Any.fromFunction2(value))
   @scala.inline
   def replaceState(value: Boolean): this.type = set("replaceState", value.asInstanceOf[js.Any])
   @scala.inline

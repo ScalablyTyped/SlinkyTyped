@@ -1,7 +1,7 @@
 package typingsSlinky.cypress.sinonChaiMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.cypress.Chai_.ChaiPlugin
+import typingsSlinky.cypress.Chai.ChaiPlugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

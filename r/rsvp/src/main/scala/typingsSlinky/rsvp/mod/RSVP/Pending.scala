@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Pending
-  extends _PromiseState[js.Any] {
+  extends PromiseState[js.Any] {
   var state: pending = js.native
 }
 

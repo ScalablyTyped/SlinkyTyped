@@ -1,6 +1,6 @@
 package typingsSlinky.vexflow.mod.Flow
 
-import typingsSlinky.vexflow.AnonLastnote
+import typingsSlinky.vexflow.anon.Lastindices
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +24,7 @@ class StaveTie protected ()
     * two ties can be used, each with either "first_note" or "last_note" missing.
     *
     **/
-  def this(notes: AnonLastnote) = this()
-  def this(notes: AnonLastnote, text: String) = this()
+  def this(notes: Lastindices) = this()
+  def this(notes: Lastindices, text: String) = this()
 }
 

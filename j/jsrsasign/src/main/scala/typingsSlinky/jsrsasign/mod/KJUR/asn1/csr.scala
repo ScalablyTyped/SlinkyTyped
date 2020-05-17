@@ -1,7 +1,7 @@
 package typingsSlinky.jsrsasign.mod.KJUR.asn1
 
-import typingsSlinky.jsrsasign.AnonCsrinfo
-import typingsSlinky.jsrsasign.AnonExt
+import typingsSlinky.jsrsasign.anon.Csrinfo
+import typingsSlinky.jsrsasign.anon.Ext
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.csr.PEMInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -57,7 +57,7 @@ object csr extends js.Object {
   @js.native
   class CertificationRequest ()
     extends typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.csr.CertificationRequest {
-    def this(params: AnonCsrinfo) = this()
+    def this(params: Csrinfo) = this()
   }
   
   /**
@@ -164,7 +164,7 @@ object csr extends js.Object {
       * });
       */
     def newCSRPEM(): String = js.native
-    def newCSRPEM(param: AnonExt): String = js.native
+    def newCSRPEM(param: Ext): String = js.native
   }
   
 }

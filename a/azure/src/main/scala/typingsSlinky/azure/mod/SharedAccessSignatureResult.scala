@@ -1,6 +1,6 @@
 package typingsSlinky.azure.mod
 
-import typingsSlinky.azure.AnonSe
+import typingsSlinky.azure.anon.Se
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,13 +9,13 @@ import scala.scalajs.js.annotation._
 trait SharedAccessSignatureResult extends js.Object {
   var baseUrl: String = js.native
   var path: String = js.native
-  var queryString: AnonSe = js.native
+  var queryString: Se = js.native
   def url(): String = js.native
 }
 
 object SharedAccessSignatureResult {
   @scala.inline
-  def apply(baseUrl: String, path: String, queryString: AnonSe, url: () => String): SharedAccessSignatureResult = {
+  def apply(baseUrl: String, path: String, queryString: Se, url: () => String): SharedAccessSignatureResult = {
     val __obj = js.Dynamic.literal(baseUrl = baseUrl.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], queryString = queryString.asInstanceOf[js.Any], url = js.Any.fromFunction0(url))
     __obj.asInstanceOf[SharedAccessSignatureResult]
   }
@@ -38,7 +38,7 @@ object SharedAccessSignatureResult {
         ret
     }
     @scala.inline
-    def withQueryString(value: AnonSe): Self = {
+    def withQueryString(value: Se): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("queryString")(value.asInstanceOf[js.Any])
         ret

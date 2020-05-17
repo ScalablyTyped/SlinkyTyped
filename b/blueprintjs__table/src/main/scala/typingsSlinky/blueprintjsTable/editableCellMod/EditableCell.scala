@@ -1,7 +1,7 @@
 package typingsSlinky.blueprintjsTable.editableCellMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.blueprintjsTable.AnonTruncated
+import typingsSlinky.blueprintjsTable.anon.Truncated
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -37,7 +37,7 @@ class EditableCell protected ()
 @JSImport("@blueprintjs/table/lib/esm/cell/editableCell", "EditableCell")
 @js.native
 object EditableCell extends js.Object {
-  var defaultProps: AnonTruncated = js.native
+  var defaultProps: Truncated = js.native
   var displayName: String = js.native
 }
 

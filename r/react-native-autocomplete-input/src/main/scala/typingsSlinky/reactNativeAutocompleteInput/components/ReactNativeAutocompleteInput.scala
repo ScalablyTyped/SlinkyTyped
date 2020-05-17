@@ -5,8 +5,8 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNative.AnonStart
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.Start
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -101,7 +101,7 @@ import typingsSlinky.reactNative.reactNativeStrings.username
 import typingsSlinky.reactNative.reactNativeStrings.words
 import typingsSlinky.reactNative.reactNativeStrings.yes
 import typingsSlinky.reactNative.reactNativeStrings.yesExcludeDescendants
-import typingsSlinky.reactNativeAutocompleteInput.AnonIndex
+import typingsSlinky.reactNativeAutocompleteInput.anon.Index
 import typingsSlinky.reactNativeAutocompleteInput.mod.AutocompleteProps
 import typingsSlinky.reactNativeAutocompleteInput.mod.default
 import typingsSlinky.std.Partial
@@ -337,7 +337,7 @@ object ReactNativeAutocompleteInput {
     @scala.inline
     def selectTextOnFocus(value: Boolean): this.type = set("selectTextOnFocus", value.asInstanceOf[js.Any])
     @scala.inline
-    def selection(value: AnonStart): this.type = set("selection", value.asInstanceOf[js.Any])
+    def selection(value: Start): this.type = set("selection", value.asInstanceOf[js.Any])
     @scala.inline
     def selectionColor(value: String): this.type = set("selectionColor", value.asInstanceOf[js.Any])
     @scala.inline
@@ -380,7 +380,7 @@ object ReactNativeAutocompleteInput {
   
   def withProps[T](p: AutocompleteProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T](data: js.Array[T], renderItem: AnonIndex[T] => TagMod[Any]): Builder[T] = {
+  def apply[T](data: js.Array[T], renderItem: Index[T] => TagMod[Any]): Builder[T] = {
     val __props = js.Dynamic.literal(data = data.asInstanceOf[js.Any], renderItem = js.Any.fromFunction1(renderItem))
     new Builder[T](js.Array(this.component, __props.asInstanceOf[AutocompleteProps[T]]))
   }

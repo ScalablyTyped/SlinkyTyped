@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.WebGLShader
 import typingsSlinky.babylonjs.ipipelinecontextMod.IPipelineContext
 import typingsSlinky.babylonjs.thinEngineMod.ThinEngine
 import typingsSlinky.babylonjs.typesMod.Nullable
+import typingsSlinky.std.WebGLTransformFeedback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +23,7 @@ object webGLPipelineContextMod extends js.Object {
     var program: Nullable[WebGLProgram] = js.native
     var programLinkError: Nullable[String] = js.native
     var programValidationError: Nullable[String] = js.native
-    var transformFeedback: js.UndefOr[typingsSlinky.std.WebGLTransformFeedback | Null] = js.native
+    var transformFeedback: js.UndefOr[WebGLTransformFeedback | Null] = js.native
     var vertexCompilationError: Nullable[String] = js.native
     var vertexShader: js.UndefOr[WebGLShader] = js.native
     @JSName("isAsync")

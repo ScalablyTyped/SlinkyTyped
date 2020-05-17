@@ -1,6 +1,5 @@
 package typingsSlinky.antd.directoryTreeMod
 
-import typingsSlinky.antd.AnonExpandAction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +14,7 @@ class default protected () extends DirectoryTree {
 @JSImport("antd/lib/tree/DirectoryTree", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonExpandAction = js.native
+  var defaultProps: typingsSlinky.antd.anon.ExpandAction = js.native
   def getDerivedStateFromProps(nextProps: DirectoryTreeProps): DirectoryTreeState = js.native
 }
 

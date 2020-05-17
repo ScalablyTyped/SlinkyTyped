@@ -6,13 +6,13 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait RTCIceGathererEventMap extends js.Object {
-  var error: Event_ = js.native
+  var error: org.scalajs.dom.raw.Event = js.native
   var localcandidate: RTCIceGathererEvent = js.native
 }
 
 object RTCIceGathererEventMap {
   @scala.inline
-  def apply(error: Event_, localcandidate: RTCIceGathererEvent): RTCIceGathererEventMap = {
+  def apply(error: org.scalajs.dom.raw.Event, localcandidate: RTCIceGathererEvent): RTCIceGathererEventMap = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], localcandidate = localcandidate.asInstanceOf[js.Any])
     __obj.asInstanceOf[RTCIceGathererEventMap]
   }
@@ -23,7 +23,7 @@ object RTCIceGathererEventMap {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withError(value: Event_): Self = {
+    def withError(value: org.scalajs.dom.raw.Event): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret

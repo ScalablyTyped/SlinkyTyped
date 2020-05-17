@@ -1,7 +1,7 @@
 package typingsSlinky.jsmediatags.mod
 
-import typingsSlinky.jsmediatags.TypeofMediaFileReader
-import typingsSlinky.jsmediatags.TypeofMediaTagReader
+import typingsSlinky.jsmediatags.anon.TypeofMediaFileReader
+import typingsSlinky.jsmediatags.anon.TypeofMediaTagReader
 import typingsSlinky.jsmediatags.mediaFileReaderMod.default
 import typingsSlinky.jsmediatags.typesMod.CallbackType
 import typingsSlinky.jsmediatags.typesMod.LoadCallbackType

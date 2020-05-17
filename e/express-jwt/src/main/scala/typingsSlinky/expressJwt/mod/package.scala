@@ -56,5 +56,4 @@ package object mod {
     ], 
     scala.Unit
   ]
-  type secretType = java.lang.String | typingsSlinky.node.Buffer
 }

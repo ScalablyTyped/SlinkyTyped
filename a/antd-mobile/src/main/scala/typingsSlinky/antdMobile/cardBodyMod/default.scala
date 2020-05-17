@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobile.cardBodyMod
 
-import typingsSlinky.antdMobile.AnonPrefixCls
+import typingsSlinky.antdMobile.anon.PrefixCls
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ class default () extends CardBody
 @JSImport("antd-mobile/lib/card/CardBody", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonPrefixCls = js.native
+  var defaultProps: PrefixCls = js.native
 }
 

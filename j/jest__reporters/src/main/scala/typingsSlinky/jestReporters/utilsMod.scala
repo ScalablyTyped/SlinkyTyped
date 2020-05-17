@@ -1,5 +1,6 @@
 package typingsSlinky.jestReporters
 
+import typingsSlinky.jestReporters.anon.Basename
 import typingsSlinky.jestReporters.typesMod.SummaryOptions
 import typingsSlinky.jestTestResult.typesMod.AggregatedResult
 import typingsSlinky.jestTypes.configMod.GlobalConfig
@@ -16,8 +17,8 @@ object utilsMod extends js.Object {
   def getSummary(aggregatedResults: AggregatedResult): String = js.native
   def getSummary(aggregatedResults: AggregatedResult, options: SummaryOptions): String = js.native
   def printDisplayName(config: ProjectConfig): String = js.native
-  def relativePath(config: GlobalConfig, testPath: String): AnonBasename = js.native
-  def relativePath(config: ProjectConfig, testPath: String): AnonBasename = js.native
+  def relativePath(config: GlobalConfig, testPath: String): Basename = js.native
+  def relativePath(config: ProjectConfig, testPath: String): Basename = js.native
   def trimAndFormatPath(pad: Double, config: GlobalConfig, testPath: String, columns: Double): String = js.native
   def trimAndFormatPath(pad: Double, config: ProjectConfig, testPath: String, columns: Double): String = js.native
   def wrapAnsiString(string: String, terminalWidth: Double): String = js.native

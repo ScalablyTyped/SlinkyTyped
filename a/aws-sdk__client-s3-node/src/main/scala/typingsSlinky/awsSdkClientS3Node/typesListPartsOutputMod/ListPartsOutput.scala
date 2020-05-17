@@ -5,7 +5,7 @@ import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.REDUCED_REDUND
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.STANDARD
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.STANDARD_IA
 import typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.requester_
-import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod._OutputTypesUnion
+import typingsSlinky.awsSdkClientS3Node.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientS3Node.typesInitiatorMod.UnmarshalledInitiator
 import typingsSlinky.awsSdkClientS3Node.typesOwnerMod.UnmarshalledOwner
 import typingsSlinky.awsSdkClientS3Node.typesPartMod.UnmarshalledPart
@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ListPartsOutput
   extends MetadataBearer
-     with _OutputTypesUnion {
+     with OutputTypesUnion {
   /**
     * <p>Date when multipart upload will become eligible for abort operation by lifecycle.</p>
     */

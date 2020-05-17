@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeGoogleSignin.mod
 
-import typingsSlinky.reactNativeGoogleSignin.AnonEmail
+import typingsSlinky.reactNativeGoogleSignin.anon.Email
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,12 +19,12 @@ trait User extends js.Object {
     * specified in configure().
     */
   var serverAuthCode: String | Null = js.native
-  var user: AnonEmail = js.native
+  var user: Email = js.native
 }
 
 object User {
   @scala.inline
-  def apply(user: AnonEmail): User = {
+  def apply(user: Email): User = {
     val __obj = js.Dynamic.literal(user = user.asInstanceOf[js.Any])
     __obj.asInstanceOf[User]
   }
@@ -35,7 +35,7 @@ object User {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withUser(value: AnonEmail): Self = {
+    def withUser(value: Email): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("user")(value.asInstanceOf[js.Any])
         ret

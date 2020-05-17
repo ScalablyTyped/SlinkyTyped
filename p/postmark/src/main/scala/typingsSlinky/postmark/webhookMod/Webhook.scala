@@ -1,6 +1,6 @@
 package typingsSlinky.postmark.webhookMod
 
-import typingsSlinky.postmark.AnonBounce
+import typingsSlinky.postmark.anon.Bounce
 import typingsSlinky.postmark.messageSupportingTypesMod.Header
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,13 +12,13 @@ trait Webhook extends js.Object {
   var HttpHeaders: js.UndefOr[js.Array[Header]] = js.native
   var ID: Double = js.native
   var MessageStream: String = js.native
-  var Triggers: AnonBounce = js.native
+  var Triggers: Bounce = js.native
   var Url: String = js.native
 }
 
 object Webhook {
   @scala.inline
-  def apply(ID: Double, MessageStream: String, Triggers: AnonBounce, Url: String): Webhook = {
+  def apply(ID: Double, MessageStream: String, Triggers: Bounce, Url: String): Webhook = {
     val __obj = js.Dynamic.literal(ID = ID.asInstanceOf[js.Any], MessageStream = MessageStream.asInstanceOf[js.Any], Triggers = Triggers.asInstanceOf[js.Any], Url = Url.asInstanceOf[js.Any])
     __obj.asInstanceOf[Webhook]
   }
@@ -41,7 +41,7 @@ object Webhook {
         ret
     }
     @scala.inline
-    def withTriggers(value: AnonBounce): Self = {
+    def withTriggers(value: Bounce): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Triggers")(value.asInstanceOf[js.Any])
         ret

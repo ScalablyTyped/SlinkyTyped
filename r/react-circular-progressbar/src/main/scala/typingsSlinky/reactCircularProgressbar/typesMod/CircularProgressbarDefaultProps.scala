@@ -1,6 +1,6 @@
 package typingsSlinky.reactCircularProgressbar.typesMod
 
-import typingsSlinky.reactCircularProgressbar.AnonBackground
+import typingsSlinky.reactCircularProgressbar.anon.Background
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait CircularProgressbarDefaultProps extends js.Object {
   var backgroundPadding: Double = js.native
   var circleRatio: Double = js.native
   var className: String = js.native
-  var classes: AnonBackground = js.native
+  var classes: Background = js.native
   var counterClockwise: Boolean = js.native
   var maxValue: Double = js.native
   var minValue: Double = js.native
@@ -27,7 +27,7 @@ object CircularProgressbarDefaultProps {
     backgroundPadding: Double,
     circleRatio: Double,
     className: String,
-    classes: AnonBackground,
+    classes: Background,
     counterClockwise: Boolean,
     maxValue: Double,
     minValue: Double,
@@ -69,7 +69,7 @@ object CircularProgressbarDefaultProps {
         ret
     }
     @scala.inline
-    def withClasses(value: AnonBackground): Self = {
+    def withClasses(value: Background): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
         ret

@@ -1,5 +1,6 @@
 package typingsSlinky.reactVirtualized
 
+import typingsSlinky.reactVirtualized.anon.OnResize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +16,7 @@ object windowScrollerMod extends js.Object {
   /* static members */
   @js.native
   object WindowScroller extends js.Object {
-    var defaultProps: AnonOnResize = js.native
+    var defaultProps: OnResize = js.native
   }
   
 }

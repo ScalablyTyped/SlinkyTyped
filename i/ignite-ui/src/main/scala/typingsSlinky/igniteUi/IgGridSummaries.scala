@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -289,7 +289,7 @@ object IgGridSummaries {
         ret
     }
     @scala.inline
-    def withDropDownCancelClicked(value: (/* event */ Event_, /* ui */ DropDownCancelClickedEventUIParam) => Unit): Self = {
+    def withDropDownCancelClicked(value: (/* event */ Event, /* ui */ DropDownCancelClickedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownCancelClicked")(js.Any.fromFunction2(value))
         ret
@@ -301,7 +301,7 @@ object IgGridSummaries {
         ret
     }
     @scala.inline
-    def withDropDownClosed(value: (/* event */ Event_, /* ui */ DropDownClosedEventUIParam) => Unit): Self = {
+    def withDropDownClosed(value: (/* event */ Event, /* ui */ DropDownClosedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownClosed")(js.Any.fromFunction2(value))
         ret
@@ -313,7 +313,7 @@ object IgGridSummaries {
         ret
     }
     @scala.inline
-    def withDropDownClosing(value: (/* event */ Event_, /* ui */ DropDownClosingEventUIParam) => Unit): Self = {
+    def withDropDownClosing(value: (/* event */ Event, /* ui */ DropDownClosingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownClosing")(js.Any.fromFunction2(value))
         ret
@@ -349,7 +349,7 @@ object IgGridSummaries {
         ret
     }
     @scala.inline
-    def withDropDownOKClicked(value: (/* event */ Event_, /* ui */ DropDownOKClickedEventUIParam) => Unit): Self = {
+    def withDropDownOKClicked(value: (/* event */ Event, /* ui */ DropDownOKClickedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownOKClicked")(js.Any.fromFunction2(value))
         ret
@@ -361,7 +361,7 @@ object IgGridSummaries {
         ret
     }
     @scala.inline
-    def withDropDownOpened(value: (/* event */ Event_, /* ui */ DropDownOpenedEventUIParam) => Unit): Self = {
+    def withDropDownOpened(value: (/* event */ Event, /* ui */ DropDownOpenedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownOpened")(js.Any.fromFunction2(value))
         ret
@@ -373,7 +373,7 @@ object IgGridSummaries {
         ret
     }
     @scala.inline
-    def withDropDownOpening(value: (/* event */ Event_, /* ui */ DropDownOpeningEventUIParam) => Unit): Self = {
+    def withDropDownOpening(value: (/* event */ Event, /* ui */ DropDownOpeningEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dropDownOpening")(js.Any.fromFunction2(value))
         ret
@@ -529,7 +529,7 @@ object IgGridSummaries {
         ret
     }
     @scala.inline
-    def withSummariesCalculated(value: (/* event */ Event_, /* ui */ SummariesCalculatedEventUIParam) => Unit): Self = {
+    def withSummariesCalculated(value: (/* event */ Event, /* ui */ SummariesCalculatedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("summariesCalculated")(js.Any.fromFunction2(value))
         ret
@@ -541,7 +541,7 @@ object IgGridSummaries {
         ret
     }
     @scala.inline
-    def withSummariesCalculating(value: (/* event */ Event_, /* ui */ SummariesCalculatingEventUIParam) => Unit): Self = {
+    def withSummariesCalculating(value: (/* event */ Event, /* ui */ SummariesCalculatingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("summariesCalculating")(js.Any.fromFunction2(value))
         ret
@@ -565,7 +565,7 @@ object IgGridSummaries {
         ret
     }
     @scala.inline
-    def withSummariesMethodSelectionChanged(value: (/* event */ Event_, /* ui */ SummariesMethodSelectionChangedEventUIParam) => Unit): Self = {
+    def withSummariesMethodSelectionChanged(value: (/* event */ Event, /* ui */ SummariesMethodSelectionChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("summariesMethodSelectionChanged")(js.Any.fromFunction2(value))
         ret
@@ -589,7 +589,7 @@ object IgGridSummaries {
         ret
     }
     @scala.inline
-    def withSummariesToggled(value: (/* event */ Event_, /* ui */ SummariesToggledEventUIParam) => Unit): Self = {
+    def withSummariesToggled(value: (/* event */ Event, /* ui */ SummariesToggledEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("summariesToggled")(js.Any.fromFunction2(value))
         ret
@@ -601,7 +601,7 @@ object IgGridSummaries {
         ret
     }
     @scala.inline
-    def withSummariesToggling(value: (/* event */ Event_, /* ui */ SummariesTogglingEventUIParam) => Unit): Self = {
+    def withSummariesToggling(value: (/* event */ Event, /* ui */ SummariesTogglingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("summariesToggling")(js.Any.fromFunction2(value))
         ret

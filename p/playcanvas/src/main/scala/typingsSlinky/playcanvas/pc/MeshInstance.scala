@@ -44,10 +44,8 @@ import scala.scalajs.js.annotation._
   * var node = new pc.GraphNode();
   * var meshInstance = new pc.MeshInstance(node, mesh, material);
   */
-@JSGlobal("pc.MeshInstance")
 @js.native
-class MeshInstance protected () extends js.Object {
-  def this(node: GraphNode, mesh: Mesh, material: Material) = this()
+trait MeshInstance extends js.Object {
   /**
     * The world space axis-aligned bounding box for this
     * mesh instance.

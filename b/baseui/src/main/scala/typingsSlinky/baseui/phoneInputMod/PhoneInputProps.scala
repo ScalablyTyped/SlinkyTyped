@@ -1,10 +1,10 @@
 package typingsSlinky.baseui.phoneInputMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
 import typingsSlinky.baseui.inputMod.InputProps
 import typingsSlinky.baseui.selectMod.OnChangeParams
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait PhoneInputProps extends InputProps {
   var maxDropdownHeight: js.UndefOr[String] = js.native
   var maxDropdownWidth: js.UndefOr[String] = js.native
   var onCountryChange: js.UndefOr[js.Function1[/* event */ OnChangeParams, _]] = js.native
-  var onTextChange: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, HTMLInputElement], _]] = js.native
+  var onTextChange: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLInputElement], _]] = js.native
   @JSName("overrides")
   var overrides_PhoneInputProps: js.UndefOr[PhoneInputOverrides] = js.native
   var text: js.UndefOr[String] = js.native
@@ -95,7 +95,7 @@ object PhoneInputProps {
         ret
     }
     @scala.inline
-    def withOnTextChange(value: /* event */ SyntheticEvent[Event_, HTMLInputElement] => _): Self = {
+    def withOnTextChange(value: /* event */ SyntheticEvent[Event, HTMLInputElement] => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTextChange")(js.Any.fromFunction1(value))
         ret

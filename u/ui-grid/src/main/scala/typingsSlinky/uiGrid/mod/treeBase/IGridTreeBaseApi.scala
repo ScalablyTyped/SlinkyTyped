@@ -1,6 +1,6 @@
 package typingsSlinky.uiGrid.mod.treeBase
 
-import typingsSlinky.uiGrid.AnonRowCollapsed
+import typingsSlinky.uiGrid.anon.RowCollapsed
 import typingsSlinky.uiGrid.mod.IGridRowOf
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IGridTreeBaseApi[TEntity] extends js.Object {
   // Events
-  var on: AnonRowCollapsed[TEntity] = js.native
+  var on: RowCollapsed[TEntity] = js.native
   // Methods
   /**
     * Collapse all tree rows
@@ -71,7 +71,7 @@ object IGridTreeBaseApi {
     expandRow: IGridRowOf[TEntity] => Unit,
     getRowChildren: IGridRowOf[TEntity] => js.Array[IGridRowOf[TEntity]],
     getTreeState: () => ITreeState,
-    on: AnonRowCollapsed[TEntity],
+    on: RowCollapsed[TEntity],
     setTreeState: ITreeState => Unit,
     toggleRowTreeState: IGridRowOf[TEntity] => Unit
   ): IGridTreeBaseApi[TEntity] = {
@@ -127,7 +127,7 @@ object IGridTreeBaseApi {
         ret
     }
     @scala.inline
-    def withOn(value: AnonRowCollapsed[TEntity]): Self[TEntity] = {
+    def withOn(value: RowCollapsed[TEntity]): Self[TEntity] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
         ret

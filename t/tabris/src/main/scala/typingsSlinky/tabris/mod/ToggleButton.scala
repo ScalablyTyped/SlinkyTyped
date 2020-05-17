@@ -1,7 +1,7 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.AnonChildrenString
-import typingsSlinky.tabris.OmitToggleButtonset
+import typingsSlinky.tabris.anon.ChildrenString
+import typingsSlinky.tabris.anon.OmitToggleButtonset
 import typingsSlinky.tabris.tabrisStrings.alignment
 import typingsSlinky.tabris.tabrisStrings.centerX
 import typingsSlinky.tabris.tabrisStrings.checked
@@ -40,7 +40,7 @@ class ToggleButton () extends Widget {
     * @constant
     */
   @JSName("jsxAttributes")
-  val jsxAttributes_ToggleButton: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with AnonChildrenString = js.native
+  val jsxAttributes_ToggleButton: (JSXAttributes[this.type, Omit[this.type, set | typingsSlinky.tabris.tabrisStrings.jsxAttributes]]) with ChildrenString = js.native
   /**
     * Fired when the [*alignment*](#alignment) property has changed.
     */

@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCore
 
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonTabElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonTabElement
 import typingsSlinky.ionicCore.mod.ComponentRef
 import typingsSlinky.ionicCore.mod.FrameworkDelegate
 import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface

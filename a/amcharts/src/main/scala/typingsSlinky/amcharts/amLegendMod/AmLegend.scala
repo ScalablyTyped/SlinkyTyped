@@ -1,6 +1,6 @@
 package typingsSlinky.amcharts.amLegendMod
 
-import typingsSlinky.amcharts.AnonDataItem
+import typingsSlinky.amcharts.anon.DataItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -227,7 +227,7 @@ trait AmLegend extends js.Object {
     * @param type Either "clickLabel" or "clickMarker" or "hideItem".
     * @param handler The event handler.
     */
-  def addListener(`type`: String, handler: js.Function1[/* e */ AnonDataItem, Unit]): Unit = js.native
+  def addListener(`type`: String, handler: js.Function1[/* e */ DataItem, Unit]): Unit = js.native
   /**
     * Removes event listener from chart object.
     */
@@ -237,7 +237,7 @@ trait AmLegend extends js.Object {
 object AmLegend {
   @scala.inline
   def apply(
-    addListener: (String, js.Function1[/* e */ AnonDataItem, Unit]) => Unit,
+    addListener: (String, js.Function1[/* e */ DataItem, Unit]) => Unit,
     align: String,
     autoMargins: Boolean,
     backgroundAlpha: Double,
@@ -294,7 +294,7 @@ object AmLegend {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAddListener(value: (String, js.Function1[/* e */ AnonDataItem, Unit]) => Unit): Self = {
+    def withAddListener(value: (String, js.Function1[/* e */ DataItem, Unit]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("addListener")(js.Any.fromFunction2(value))
         ret

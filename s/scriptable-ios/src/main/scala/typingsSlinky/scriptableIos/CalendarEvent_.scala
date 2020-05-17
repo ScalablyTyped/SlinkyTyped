@@ -15,15 +15,8 @@ import scala.scalajs.js.annotation._
   * In order to add the event to your calendar, you must call the save() function.
   * @see https://docs.scriptable.app/calendarevent/#-new-calendarevent
   */
-@JSGlobal("CalendarEvent")
 @js.native
-/**
-  * _Manages events in calendars._
-  *
-  * In order to add the event to your calendar, you must call the save() function.
-  * @see https://docs.scriptable.app/calendarevent/#-new-calendarevent
-  */
-class CalendarEvent_ () extends js.Object {
+trait CalendarEvent_ extends js.Object {
   /**
     * _Attendees associated with the event._
     *
@@ -135,5 +128,134 @@ class CalendarEvent_ () extends js.Object {
     * @see https://docs.scriptable.app/calendarevent/#-save
     */
   def save(): Unit = js.native
+}
+
+object CalendarEvent_ {
+  @scala.inline
+  def apply(
+    addRecurrenceRule: RecurrenceRule => Unit,
+    attendees: js.Array[Attendees],
+    availability: busy | free | tentative | unavailable,
+    calendar: Calendar,
+    endDate: js.Date,
+    identifier: String,
+    isAllDay: Boolean,
+    location: String,
+    notes: String,
+    presentEdit: () => js.Promise[CalendarEvent],
+    remove: () => Unit,
+    removeAllRecurrenceRules: () => Unit,
+    save: () => Unit,
+    startDate: js.Date,
+    timeZone: String,
+    title: String
+  ): CalendarEvent_ = {
+    val __obj = js.Dynamic.literal(addRecurrenceRule = js.Any.fromFunction1(addRecurrenceRule), attendees = attendees.asInstanceOf[js.Any], availability = availability.asInstanceOf[js.Any], calendar = calendar.asInstanceOf[js.Any], endDate = endDate.asInstanceOf[js.Any], identifier = identifier.asInstanceOf[js.Any], isAllDay = isAllDay.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], notes = notes.asInstanceOf[js.Any], presentEdit = js.Any.fromFunction0(presentEdit), remove = js.Any.fromFunction0(remove), removeAllRecurrenceRules = js.Any.fromFunction0(removeAllRecurrenceRules), save = js.Any.fromFunction0(save), startDate = startDate.asInstanceOf[js.Any], timeZone = timeZone.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
+    __obj.asInstanceOf[CalendarEvent_]
+  }
+  @scala.inline
+  implicit class CalendarEvent_Ops[Self <: CalendarEvent_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAddRecurrenceRule(value: RecurrenceRule => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("addRecurrenceRule")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withAttendees(value: js.Array[Attendees]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("attendees")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAvailability(value: busy | free | tentative | unavailable): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("availability")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCalendar(value: Calendar): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("calendar")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEndDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("endDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIdentifier(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("identifier")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsAllDay(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isAllDay")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLocation(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("location")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNotes(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("notes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPresentEdit(value: () => js.Promise[CalendarEvent]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("presentEdit")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRemove(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRemoveAllRecurrenceRules(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("removeAllRecurrenceRules")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSave(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("save")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withStartDate(value: js.Date): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("startDate")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTimeZone(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("timeZone")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

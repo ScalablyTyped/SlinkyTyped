@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait SnapshotMeta
-  extends /* key */ StringDictionary[js.Any] {
+  extends // Users can use server middleware to add additional metadata to snapshots.
+/* key */ StringDictionary[js.Any] {
   var ctime: Double = js.native
   var mtime: Double = js.native
 }

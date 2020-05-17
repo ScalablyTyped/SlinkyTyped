@@ -1,11 +1,11 @@
 package typingsSlinky.history.mod
 
-import typingsSlinky.history.Fn0
-import typingsSlinky.history.FnCall
-import typingsSlinky.history.FnCallLocation
-import typingsSlinky.history.FnCallLvRv
-import typingsSlinky.history.FnCallOptions
-import typingsSlinky.history.FnCallPathStateKeyCurrentLocation
+import typingsSlinky.history.anon.Fn0
+import typingsSlinky.history.anon.FnCall
+import typingsSlinky.history.anon.FnCallLocation
+import typingsSlinky.history.anon.FnCallLvRv
+import typingsSlinky.history.anon.FnCallOptions
+import typingsSlinky.history.anon.FnCallPathStateKeyCurrentLocation
 import typingsSlinky.history.createBrowserHistoryMod.BrowserHistoryBuildOptions
 import typingsSlinky.history.createHashHistoryMod.HashHistoryBuildOptions
 import typingsSlinky.history.createMemoryHistoryMod.MemoryHistory

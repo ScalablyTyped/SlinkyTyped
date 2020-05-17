@@ -1,7 +1,7 @@
 package typingsSlinky.fundamentalReact.multiInputMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.fundamentalReact.AnonText
+import typingsSlinky.fundamentalReact.anon.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait MultiInputProps
   var placeholder: js.UndefOr[String] = js.native
   var popoverProps: js.UndefOr[js.Any] = js.native
   var tagProps: js.UndefOr[js.Any] = js.native
-  var validationState: js.UndefOr[AnonText] = js.native
+  var validationState: js.UndefOr[Text] = js.native
 }
 
 object MultiInputProps {
@@ -175,7 +175,7 @@ object MultiInputProps {
         ret
     }
     @scala.inline
-    def withValidationState(value: AnonText): Self = {
+    def withValidationState(value: Text): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validationState")(value.asInstanceOf[js.Any])
         ret

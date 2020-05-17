@@ -2,7 +2,7 @@ package typingsSlinky.recharts.mod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.recharts.EventAttributesPartialPre
+import typingsSlinky.recharts.anon.EventAttributesPartialPre
 import typingsSlinky.recharts.rechartsNumbers.`100`
 import typingsSlinky.recharts.rechartsNumbers.`200`
 import typingsSlinky.recharts.rechartsNumbers.`300`

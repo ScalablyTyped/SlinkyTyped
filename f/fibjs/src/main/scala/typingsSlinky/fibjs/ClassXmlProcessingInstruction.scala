@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Class_XmlProcessingInstruction")
 @js.native
-class ClassXmlProcessingInstruction () extends ClassXmlNode {
+trait ClassXmlProcessingInstruction extends ClassXmlNode {
   /**
   	 * class prop 
   	 *

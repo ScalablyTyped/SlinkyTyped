@@ -1,7 +1,5 @@
 package typingsSlinky.titanium.Titanium
 
-import typingsSlinky.titanium.Titanium.UI.TabGroup
-import typingsSlinky.titanium.Titanium.UI.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,20 +9,12 @@ import scala.scalajs.js.annotation._
 	 */
 @JSGlobal("Titanium.XML")
 @js.native
-class XML () extends Module
-
-/**
-	 * The top level XML module.  The XML module is used for parsing and processing XML-based content.
-	 */
-/* static members */
-@JSGlobal("Titanium.XML")
-@js.native
 object XML extends js.Object {
   /**
   		 * Represents an attribute of an [Element](Titanium.XML.Element).
   		 */
   @js.native
-  class Attr () extends Node {
+  trait Attr extends Node {
     /**
     			 * Attribute name
     			 */
@@ -73,14 +63,14 @@ object XML extends js.Object {
   		 * to be escaped.
   		 */
   @js.native
-  class CDATASection () extends Text
+  trait CDATASection extends Text
   
   /**
   		 * An interface extending <Titanium.XML.Node> with a set of attributes and methods for accessing character data in the DOM.
   		 * Implements the [DOM Level 2 API](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-FF21A306) on Android and iOS. For reasons of compatibility with the javascript engine, text is represented by UTF-8 instead of UTF-16 on Android and iOS.
   		 */
   @js.native
-  class CharacterData () extends Node {
+  trait CharacterData extends Node {
     /**
     			 * The character data of the node that implements this interface. Throws an exception during setting if this node is readonly.
     			 */
@@ -130,13 +120,13 @@ object XML extends js.Object {
   		 * Represents the contents of an XML comment.
   		 */
   @js.native
-  class Comment () extends CharacterData
+  trait Comment extends CharacterData
   
   /**
   		 * The <Titanium.XML.DOMImplementation> interface provides a number of methods for performing operations that are independent of any particular instance of the document object model.Implements the [DOM Level 2 API](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-102161490) on Android and iOS.
   		 */
   @js.native
-  class DOMImplementation () extends Proxy {
+  trait DOMImplementation extends Proxy {
     /**
     			 * Creates an <Titanium.XML.Document> object of the specified type with its document element. Raises an exception if qualifiedName is malformed, contains an illegal character, or is inconsistent with namespaceURI. Also raises an exception if doctype has already been used with a different document.
     			 */
@@ -155,7 +145,7 @@ object XML extends js.Object {
   		 * The DOM Document returned from <Titanium.XML.parseString>.
   		 */
   @js.native
-  class Document () extends Node {
+  trait Document extends Node {
     /**
     			 * An interface to the list of entities that are defined for the document, such as via a Document Type Definition (DTD).
     			 */
@@ -247,13 +237,13 @@ object XML extends js.Object {
   		 * A lightweight document object used as a container for a group of nodes.
   		 */
   @js.native
-  class DocumentFragment () extends Node
+  trait DocumentFragment extends Node
   
   /**
   		 * Each <Titanium.XML.Document> has a `doctype` attribute whose value is either 'null' or a <Titanium.XML.DocumentType> object.
   		 */
   @js.native
-  class DocumentType () extends Node {
+  trait DocumentType extends Node {
     /**
     			 * A <Titanium.XML.NamedNodeMap> containing the general entities, both external and internal, declared in the DTD. Parameter entities are not contained. Duplicates are discarded.
     			 */
@@ -315,7 +305,7 @@ object XML extends js.Object {
   		 * Implements the [DOM Level 2 API](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-745549614) on Android and iOS with some non-standard extensions.
   		 */
   @js.native
-  class Element () extends Node {
+  trait Element extends Node {
     /**
     			 * The name of the element, as defined by its tag.
     			 */
@@ -392,7 +382,7 @@ object XML extends js.Object {
   		 * Implements the [DOM Level 2 API](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-527DCFF2) on Android and iOS.
   		 */
   @js.native
-  class Entity () extends Node {
+  trait Entity extends Node {
     /**
     			 * For unparsed entities, the name of the notation for the entity. For parsed entities, this is `null`.
     			 */
@@ -426,14 +416,14 @@ object XML extends js.Object {
   		 * Represents an XML entity reference.
   		 */
   @js.native
-  class EntityReference () extends Node
+  trait EntityReference extends Node
   
   /**
   		 * A key-value paired map that maps String objects to <Titanium.XML.Node> objects.
   		 * Implements the [DOM Level 2 API](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1780488922) on Android and iOS.
   		 */
   @js.native
-  class NamedNodeMap () extends Proxy {
+  trait NamedNodeMap extends Proxy {
     /**
     			 * The number of nodes in the map. The valid range of child node indices is 0-`length`-1, inclusive.
     			 */
@@ -477,7 +467,7 @@ object XML extends js.Object {
   		 * A single node in the [Document](Titanium.XML.Document) tree.
   		 */
   @js.native
-  class Node () extends Proxy {
+  trait Node extends Proxy {
     /**
     			 * Used with [nodeType](Titanium.XML.Node.nodeType) to identify an
     			 * [Attr](Titanium.XML.Attr) node.
@@ -652,7 +642,7 @@ object XML extends js.Object {
   		 * A list of <Titanium.XML.Node> objects. Implements the [DOM Level 2 API](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-536297177) on Android and iOS.
   		 */
   @js.native
-  class NodeList () extends Proxy {
+  trait NodeList extends Proxy {
     /**
     			 * The length of the node list.
     			 */
@@ -672,7 +662,7 @@ object XML extends js.Object {
   		 * Represents a notation declared in the DTD.  Implements the [DOM Level 2 API](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-5431D1B9) on Android and iOS.
   		 */
   @js.native
-  class Notation () extends Proxy {
+  trait Notation extends Proxy {
     /**
     			 * The public identifier of this notation. If the public identifier was not specified, this is `null`.
     			 */
@@ -697,7 +687,7 @@ object XML extends js.Object {
   		 * A way to keep processor-specific information in the text of the document. Implements the [DOM Level 2 API](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1004215813) on Android and iOS.
   		 */
   @js.native
-  class ProcessingInstruction () extends Proxy {
+  trait ProcessingInstruction extends Proxy {
     /**
     			 * Retrieve the content of this processing instruction. This from the first non white space character after the target to the character immediatly preceding the ?>. When setting a processing instruction, a DOMException may be thrown on an invalid instruction.
     			 */
@@ -727,75 +717,12 @@ object XML extends js.Object {
   		 * Represents the textual content of an <Titanium.XML.Element> or <Titanium.XML.Attr> Implements the [DOM Level 2 API](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1312295772) on Android and iOS.
   		 */
   @js.native
-  class Text () extends CharacterData {
+  trait Text extends CharacterData {
     /**
     			 * Breaks this node into two nodes at the specified by offset, and returns a new node of the same type, which contains all the content at and after the offset point. Throws an exception if the specified offset is negative or if this node is read only.
     			 */
     def splitText(offset: Double): Text = js.native
   }
   
-  /**
-  		 * The name of the API that this proxy corresponds to.
-  		 */
-  val apiName: String = js.native
-  /**
-  		 * Indicates if the proxy will bubble an event to its parent.
-  		 */
-  var bubbleParent: Boolean = js.native
-  /**
-  		 * The Window or TabGroup whose Activity lifecycle should be triggered on the proxy.
-  		 */
-  var lifecycleContainer: Window | TabGroup = js.native
-  /**
-  		 * Adds the specified callback as an event listener for the named event.
-  		 */
-  def addEventListener(name: String, callback: js.Function1[/* param0 */ Event, Unit]): Unit = js.native
-  /**
-  		 * Applies the properties to the proxy.
-  		 */
-  def applyProperties(props: js.Any): Unit = js.native
-  /**
-  		 * Fires a synthesized event to any registered listeners.
-  		 */
-  def fireEvent(name: String): Unit = js.native
-  def fireEvent(name: String, event: js.Any): Unit = js.native
-  /**
-  		 * Gets the value of the <Titanium.XML.apiName> property.
-  		 * @deprecated Access <Titanium.XML.apiName> instead.
-  		 */
-  def getApiName(): String = js.native
-  /**
-  		 * Gets the value of the <Titanium.XML.bubbleParent> property.
-  		 * @deprecated Access <Titanium.XML.bubbleParent> instead.
-  		 */
-  def getBubbleParent(): Boolean = js.native
-  /**
-  		 * Gets the value of the <Titanium.XML.lifecycleContainer> property.
-  		 * @deprecated Access <Titanium.XML.lifecycleContainer> instead.
-  		 */
-  def getLifecycleContainer(): Window | TabGroup = js.native
-  /**
-  		 * Parses an XML string into a <Titanium.XML.Document> object.
-  		 */
-  def parseString(xml: String): Document = js.native
-  /**
-  		 * Removes the specified callback as an event listener for the named event.
-  		 */
-  def removeEventListener(name: String, callback: js.Function1[/* param0 */ Event, Unit]): Unit = js.native
-  /**
-  		 * Serializes a [Node](Titanium.XML.Node) object into a string.
-  		 */
-  def serializeToString(node: Node): String = js.native
-  /**
-  		 * Sets the value of the <Titanium.XML.bubbleParent> property.
-  		 * @deprecated Set the value using <Titanium.XML.bubbleParent> instead.
-  		 */
-  def setBubbleParent(bubbleParent: Boolean): Unit = js.native
-  def setLifecycleContainer(lifecycleContainer: TabGroup): Unit = js.native
-  /**
-  		 * Sets the value of the <Titanium.XML.lifecycleContainer> property.
-  		 * @deprecated Set the value using <Titanium.XML.lifecycleContainer> instead.
-  		 */
-  def setLifecycleContainer(lifecycleContainer: Window): Unit = js.native
 }
 

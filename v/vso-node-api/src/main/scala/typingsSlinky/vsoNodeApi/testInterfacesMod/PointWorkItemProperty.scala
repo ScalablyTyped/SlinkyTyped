@@ -1,18 +1,18 @@
 package typingsSlinky.vsoNodeApi.testInterfacesMod
 
-import typingsSlinky.vsoNodeApi.AnonValueAny
+import typingsSlinky.vsoNodeApi.anon.ValueAny
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait PointWorkItemProperty extends js.Object {
-  var workItem: AnonValueAny = js.native
+  var workItem: ValueAny = js.native
 }
 
 object PointWorkItemProperty {
   @scala.inline
-  def apply(workItem: AnonValueAny): PointWorkItemProperty = {
+  def apply(workItem: ValueAny): PointWorkItemProperty = {
     val __obj = js.Dynamic.literal(workItem = workItem.asInstanceOf[js.Any])
     __obj.asInstanceOf[PointWorkItemProperty]
   }
@@ -23,7 +23,7 @@ object PointWorkItemProperty {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withWorkItem(value: AnonValueAny): Self = {
+    def withWorkItem(value: ValueAny): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("workItem")(value.asInstanceOf[js.Any])
         ret

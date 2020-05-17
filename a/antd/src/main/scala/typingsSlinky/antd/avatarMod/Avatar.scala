@@ -1,7 +1,7 @@
 package typingsSlinky.antd.avatarMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.AnonIsImgExist
+import typingsSlinky.antd.anon.IsImgExist
 import typingsSlinky.antd.contextMod.ConfigConsumerProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -16,7 +16,7 @@ trait Avatar
   var lastChildrenWidth: js.Any = js.native
   var lastNodeWidth: js.Any = js.native
   @JSName("state")
-  var state_Avatar: AnonIsImgExist = js.native
+  var state_Avatar: IsImgExist = js.native
   @JSName("componentDidMount")
   def componentDidMount_MAvatar(): Unit = js.native
   @JSName("componentDidUpdate")

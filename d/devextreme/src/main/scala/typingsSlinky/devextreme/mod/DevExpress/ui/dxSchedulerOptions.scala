@@ -1,23 +1,23 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonAgendaDuration
-import typingsSlinky.devextreme.AnonAllowAdding
-import typingsSlinky.devextreme.AnonAllowMultiple
-import typingsSlinky.devextreme.AnonAppointmentCount
-import typingsSlinky.devextreme.AnonAppointmentData
-import typingsSlinky.devextreme.AnonAppointmentDataAppointmentElement
-import typingsSlinky.devextreme.AnonAppointmentDataCancel
-import typingsSlinky.devextreme.AnonAppointmentDataComponent
-import typingsSlinky.devextreme.AnonAppointmentElement
-import typingsSlinky.devextreme.AnonAutoScroll
-import typingsSlinky.devextreme.AnonCellData
-import typingsSlinky.devextreme.AnonCellDataCellElement
-import typingsSlinky.devextreme.AnonElementForm
-import typingsSlinky.devextreme.AnonEndDate
-import typingsSlinky.devextreme.AnonForm
-import typingsSlinky.devextreme.AnonOldData
-import typingsSlinky.devextreme.AnonTargetedAppointmentData
+import typingsSlinky.devextreme.anon.AgendaDuration
+import typingsSlinky.devextreme.anon.AllowAdding
+import typingsSlinky.devextreme.anon.AllowMultiple
+import typingsSlinky.devextreme.anon.AppointmentCount
+import typingsSlinky.devextreme.anon.AppointmentData
+import typingsSlinky.devextreme.anon.AppointmentDataAppointmentElement
+import typingsSlinky.devextreme.anon.AppointmentDataCancel
+import typingsSlinky.devextreme.anon.AppointmentDataComponent
+import typingsSlinky.devextreme.anon.AppointmentElement
+import typingsSlinky.devextreme.anon.AutoScroll
+import typingsSlinky.devextreme.anon.CellData
+import typingsSlinky.devextreme.anon.CellDataCellElement
+import typingsSlinky.devextreme.anon.ElementForm
+import typingsSlinky.devextreme.anon.EndDate
+import typingsSlinky.devextreme.anon.Form
+import typingsSlinky.devextreme.anon.OldData
+import typingsSlinky.devextreme.anon.TargetedAppointmentData
 import typingsSlinky.devextreme.devextremeNumbers.`0`
 import typingsSlinky.devextreme.devextremeNumbers.`1`
 import typingsSlinky.devextreme.devextremeNumbers.`2`
@@ -42,7 +42,7 @@ import typingsSlinky.devextreme.devextremeStrings.workWeek
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -56,17 +56,17 @@ trait dxSchedulerOptions extends WidgetOptions[dxScheduler] {
   /** Specifies a custom template for cell overflow indicators. */
   var appointmentCollectorTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
-      /* data */ AnonAppointmentCount, 
+      /* data */ AppointmentCount, 
       /* collectorElement */ dxElement, 
       String | Element | JQuery
     ])
   ] = js.native
   /** Configures appointment reordering using drag and drop gestures. */
-  var appointmentDragging: js.UndefOr[AnonAutoScroll] = js.native
+  var appointmentDragging: js.UndefOr[AutoScroll] = js.native
   /** Specifies a custom template for appointments. */
   var appointmentTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
-      /* model */ AnonAppointmentData, 
+      /* model */ AppointmentData, 
       /* itemIndex */ Double, 
       /* contentElement */ dxElement, 
       String | Element | JQuery
@@ -75,7 +75,7 @@ trait dxSchedulerOptions extends WidgetOptions[dxScheduler] {
   /** Specifies a custom template for tooltips displayed when users click an appointment or cell overflow indicator. */
   var appointmentTooltipTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
-      /* model */ AnonAppointmentData, 
+      /* model */ AppointmentData, 
       /* itemIndex */ Double, 
       /* contentElement */ dxElement, 
       String | Element | JQuery
@@ -92,7 +92,7 @@ trait dxSchedulerOptions extends WidgetOptions[dxScheduler] {
     agenda | day | month | timelineDay | timelineMonth | timelineWeek | timelineWorkWeek | week | workWeek
   ] = js.native
   /** Customizes the date navigator's text. */
-  var customizeDateNavigatorText: js.UndefOr[js.Function1[/* info */ AnonEndDate, String]] = js.native
+  var customizeDateNavigatorText: js.UndefOr[js.Function1[/* info */ EndDate, String]] = js.native
   /** Specifies a custom template for table cells. */
   var dataCellTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
@@ -128,7 +128,7 @@ trait dxSchedulerOptions extends WidgetOptions[dxScheduler] {
     ])
   ] = js.native
   /** Specifies which editing operations an end-user can perform on appointments. */
-  var editing: js.UndefOr[Boolean | AnonAllowAdding] = js.native
+  var editing: js.UndefOr[Boolean | AllowAdding] = js.native
   /** Specifies the name of the data source item field that defines the ending of an appointment. */
   var endDateExpr: js.UndefOr[String] = js.native
   /** Specifies the name of the data source item field that defines the timezone of the appointment end date. */
@@ -152,34 +152,34 @@ trait dxSchedulerOptions extends WidgetOptions[dxScheduler] {
   /** The text or HTML markup displayed by the widget if the item collection is empty. Available for the Agenda view only. */
   var noDataText: js.UndefOr[String] = js.native
   /** A function that is executed after an appointment is added to the data source. */
-  var onAppointmentAdded: js.UndefOr[js.Function1[/* e */ AnonAppointmentDataComponent, _]] = js.native
+  var onAppointmentAdded: js.UndefOr[js.Function1[/* e */ AppointmentDataComponent, _]] = js.native
   /** A function that is executed before an appointment is added to the data source. */
-  var onAppointmentAdding: js.UndefOr[js.Function1[/* e */ AnonAppointmentDataCancel, _]] = js.native
+  var onAppointmentAdding: js.UndefOr[js.Function1[/* e */ AppointmentDataCancel, _]] = js.native
   /** A function that is executed when an appointment is clicked or tapped. */
-  var onAppointmentClick: js.UndefOr[(js.Function1[/* e */ AnonAppointmentElement, _]) | String] = js.native
+  var onAppointmentClick: js.UndefOr[(js.Function1[/* e */ AppointmentElement, _]) | String] = js.native
   /** A function that is executed when a user attempts to open the browser's context menu for an appointment. Allows you to replace this context menu with a custom context menu. */
-  var onAppointmentContextMenu: js.UndefOr[(js.Function1[/* e */ AnonTargetedAppointmentData, _]) | String] = js.native
+  var onAppointmentContextMenu: js.UndefOr[(js.Function1[/* e */ TargetedAppointmentData, _]) | String] = js.native
   /** A function that is executed when an appointment is double-clicked or double-tapped. */
-  var onAppointmentDblClick: js.UndefOr[(js.Function1[/* e */ AnonAppointmentElement, _]) | String] = js.native
+  var onAppointmentDblClick: js.UndefOr[(js.Function1[/* e */ AppointmentElement, _]) | String] = js.native
   /** A function that is executed after an appointment is deleted from the data source. */
-  var onAppointmentDeleted: js.UndefOr[js.Function1[/* e */ AnonAppointmentDataComponent, _]] = js.native
+  var onAppointmentDeleted: js.UndefOr[js.Function1[/* e */ AppointmentDataComponent, _]] = js.native
   /** A function that is executed before an appointment is deleted from the data source. */
-  var onAppointmentDeleting: js.UndefOr[js.Function1[/* e */ AnonAppointmentDataCancel, _]] = js.native
+  var onAppointmentDeleting: js.UndefOr[js.Function1[/* e */ AppointmentDataCancel, _]] = js.native
   /** @deprecated Use the onAppointmentFormOpening option instead. */
   /** A function that is executed before an appointment details form is opened. */
-  var onAppointmentFormCreated: js.UndefOr[js.Function1[/* e */ AnonForm, _]] = js.native
+  var onAppointmentFormCreated: js.UndefOr[js.Function1[/* e */ Form, _]] = js.native
   /** A function that is executed before an appointment details form is opened. */
-  var onAppointmentFormOpening: js.UndefOr[js.Function1[/* e */ AnonElementForm, _]] = js.native
+  var onAppointmentFormOpening: js.UndefOr[js.Function1[/* e */ ElementForm, _]] = js.native
   /** A function that is executed when an appointment is rendered. */
-  var onAppointmentRendered: js.UndefOr[js.Function1[/* e */ AnonAppointmentDataAppointmentElement, _]] = js.native
+  var onAppointmentRendered: js.UndefOr[js.Function1[/* e */ AppointmentDataAppointmentElement, _]] = js.native
   /** A function that is executed after an appointment is updated in the data source. */
-  var onAppointmentUpdated: js.UndefOr[js.Function1[/* e */ AnonAppointmentDataComponent, _]] = js.native
+  var onAppointmentUpdated: js.UndefOr[js.Function1[/* e */ AppointmentDataComponent, _]] = js.native
   /** A function that is executed before an appointment is updated in the data source. */
-  var onAppointmentUpdating: js.UndefOr[js.Function1[/* e */ AnonOldData, _]] = js.native
+  var onAppointmentUpdating: js.UndefOr[js.Function1[/* e */ OldData, _]] = js.native
   /** A function that is executed when a view cell is clicked. */
-  var onCellClick: js.UndefOr[(js.Function1[/* e */ AnonCellData, _]) | String] = js.native
+  var onCellClick: js.UndefOr[(js.Function1[/* e */ CellData, _]) | String] = js.native
   /** A function that is executed when a user attempts to open the browser's context menu for a cell. Allows you to replace this context menu with a custom context menu. */
-  var onCellContextMenu: js.UndefOr[(js.Function1[/* e */ AnonCellDataCellElement, _]) | String] = js.native
+  var onCellContextMenu: js.UndefOr[(js.Function1[/* e */ CellDataCellElement, _]) | String] = js.native
   /** Specifies the edit mode for recurring appointments. */
   var recurrenceEditMode: js.UndefOr[dialog | occurrence | series] = js.native
   /** Specifies the name of the data source item field that defines exceptions for the current recurring appointment. */
@@ -198,7 +198,7 @@ trait dxSchedulerOptions extends WidgetOptions[dxScheduler] {
     ])
   ] = js.native
   /** Specifies an array of resources available in the scheduler. */
-  var resources: js.UndefOr[js.Array[AnonAllowMultiple]] = js.native
+  var resources: js.UndefOr[js.Array[AllowMultiple]] = js.native
   /** Currently selected cells' data. */
   var selectedCellData: js.UndefOr[js.Array[_]] = js.native
   /** Specifies whether to apply shading to cover the timetable up to the current time. */
@@ -231,7 +231,7 @@ trait dxSchedulerOptions extends WidgetOptions[dxScheduler] {
   /** Specifies and configures the views to be available in the view switcher. */
   var views: js.UndefOr[
     js.Array[
-      day | week | workWeek | month | timelineDay | timelineWeek | timelineWorkWeek | timelineMonth | agenda | AnonAgendaDuration
+      day | week | workWeek | month | timelineDay | timelineWeek | timelineWorkWeek | timelineMonth | agenda | AgendaDuration
     ]
   ] = js.native
 }
@@ -274,7 +274,7 @@ object dxSchedulerOptions {
     }
     @scala.inline
     def withAppointmentCollectorTemplateFunction2(
-      value: (/* data */ AnonAppointmentCount, /* collectorElement */ dxElement) => String | Element | JQuery
+      value: (/* data */ AppointmentCount, /* collectorElement */ dxElement) => String | Element | JQuery
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentCollectorTemplate")(js.Any.fromFunction2(value))
@@ -289,7 +289,7 @@ object dxSchedulerOptions {
     @scala.inline
     def withAppointmentCollectorTemplate(
       value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
-          /* data */ AnonAppointmentCount, 
+          /* data */ AppointmentCount, 
           /* collectorElement */ dxElement, 
           String | Element | JQuery
         ])
@@ -305,7 +305,7 @@ object dxSchedulerOptions {
         ret
     }
     @scala.inline
-    def withAppointmentDragging(value: AnonAutoScroll): Self = {
+    def withAppointmentDragging(value: AutoScroll): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentDragging")(value.asInstanceOf[js.Any])
         ret
@@ -324,7 +324,7 @@ object dxSchedulerOptions {
     }
     @scala.inline
     def withAppointmentTemplateFunction3(
-      value: (/* model */ AnonAppointmentData, /* itemIndex */ Double, /* contentElement */ dxElement) => String | Element | JQuery
+      value: (/* model */ AppointmentData, /* itemIndex */ Double, /* contentElement */ dxElement) => String | Element | JQuery
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentTemplate")(js.Any.fromFunction3(value))
@@ -333,7 +333,7 @@ object dxSchedulerOptions {
     @scala.inline
     def withAppointmentTemplate(
       value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
-          /* model */ AnonAppointmentData, 
+          /* model */ AppointmentData, 
           /* itemIndex */ Double, 
           /* contentElement */ dxElement, 
           String | Element | JQuery
@@ -357,7 +357,7 @@ object dxSchedulerOptions {
     }
     @scala.inline
     def withAppointmentTooltipTemplateFunction3(
-      value: (/* model */ AnonAppointmentData, /* itemIndex */ Double, /* contentElement */ dxElement) => String | Element | JQuery
+      value: (/* model */ AppointmentData, /* itemIndex */ Double, /* contentElement */ dxElement) => String | Element | JQuery
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("appointmentTooltipTemplate")(js.Any.fromFunction3(value))
@@ -366,7 +366,7 @@ object dxSchedulerOptions {
     @scala.inline
     def withAppointmentTooltipTemplate(
       value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
-          /* model */ AnonAppointmentData, 
+          /* model */ AppointmentData, 
           /* itemIndex */ Double, 
           /* contentElement */ dxElement, 
           String | Element | JQuery
@@ -439,7 +439,7 @@ object dxSchedulerOptions {
         ret
     }
     @scala.inline
-    def withCustomizeDateNavigatorText(value: /* info */ AnonEndDate => String): Self = {
+    def withCustomizeDateNavigatorText(value: /* info */ EndDate => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customizeDateNavigatorText")(js.Any.fromFunction1(value))
         ret
@@ -586,7 +586,7 @@ object dxSchedulerOptions {
         ret
     }
     @scala.inline
-    def withEditing(value: Boolean | AnonAllowAdding): Self = {
+    def withEditing(value: Boolean | AllowAdding): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editing")(value.asInstanceOf[js.Any])
         ret
@@ -742,7 +742,7 @@ object dxSchedulerOptions {
         ret
     }
     @scala.inline
-    def withOnAppointmentAdded(value: /* e */ AnonAppointmentDataComponent => _): Self = {
+    def withOnAppointmentAdded(value: /* e */ AppointmentDataComponent => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAppointmentAdded")(js.Any.fromFunction1(value))
         ret
@@ -754,7 +754,7 @@ object dxSchedulerOptions {
         ret
     }
     @scala.inline
-    def withOnAppointmentAdding(value: /* e */ AnonAppointmentDataCancel => _): Self = {
+    def withOnAppointmentAdding(value: /* e */ AppointmentDataCancel => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAppointmentAdding")(js.Any.fromFunction1(value))
         ret
@@ -766,13 +766,13 @@ object dxSchedulerOptions {
         ret
     }
     @scala.inline
-    def withOnAppointmentClickFunction1(value: /* e */ AnonAppointmentElement => _): Self = {
+    def withOnAppointmentClickFunction1(value: /* e */ AppointmentElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAppointmentClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnAppointmentClick(value: (js.Function1[/* e */ AnonAppointmentElement, _]) | String): Self = {
+    def withOnAppointmentClick(value: (js.Function1[/* e */ AppointmentElement, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAppointmentClick")(value.asInstanceOf[js.Any])
         ret
@@ -784,13 +784,13 @@ object dxSchedulerOptions {
         ret
     }
     @scala.inline
-    def withOnAppointmentContextMenuFunction1(value: /* e */ AnonTargetedAppointmentData => _): Self = {
+    def withOnAppointmentContextMenuFunction1(value: /* e */ TargetedAppointmentData => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAppointmentContextMenu")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnAppointmentContextMenu(value: (js.Function1[/* e */ AnonTargetedAppointmentData, _]) | String): Self = {
+    def withOnAppointmentContextMenu(value: (js.Function1[/* e */ TargetedAppointmentData, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAppointmentContextMenu")(value.asInstanceOf[js.Any])
         ret
@@ -802,13 +802,13 @@ object dxSchedulerOptions {
         ret
     }
     @scala.inline
-    def withOnAppointmentDblClickFunction1(value: /* e */ AnonAppointmentElement => _): Self = {
+    def withOnAppointmentDblClickFunction1(value: /* e */ AppointmentElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAppointmentDblClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnAppointmentDblClick(value: (js.Function1[/* e */ AnonAppointmentElement, _]) | String): Self = {
+    def withOnAppointmentDblClick(value: (js.Function1[/* e */ AppointmentElement, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAppointmentDblClick")(value.asInstanceOf[js.Any])
         ret
@@ -820,7 +820,7 @@ object dxSchedulerOptions {
         ret
     }
     @scala.inline
-    def withOnAppointmentDeleted(value: /* e */ AnonAppointmentDataComponent => _): Self = {
+    def withOnAppointmentDeleted(value: /* e */ AppointmentDataComponent => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAppointmentDeleted")(js.Any.fromFunction1(value))
         ret
@@ -832,7 +832,7 @@ object dxSchedulerOptions {
         ret
     }
     @scala.inline
-    def withOnAppointmentDeleting(value: /* e */ AnonAppointmentDataCancel => _): Self = {
+    def withOnAppointmentDeleting(value: /* e */ AppointmentDataCancel => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAppointmentDeleting")(js.Any.fromFunction1(value))
         ret
@@ -844,7 +844,7 @@ object dxSchedulerOptions {
         ret
     }
     @scala.inline
-    def withOnAppointmentFormCreated(value: /* e */ AnonForm => _): Self = {
+    def withOnAppointmentFormCreated(value: /* e */ Form => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAppointmentFormCreated")(js.Any.fromFunction1(value))
         ret
@@ -856,7 +856,7 @@ object dxSchedulerOptions {
         ret
     }
     @scala.inline
-    def withOnAppointmentFormOpening(value: /* e */ AnonElementForm => _): Self = {
+    def withOnAppointmentFormOpening(value: /* e */ ElementForm => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAppointmentFormOpening")(js.Any.fromFunction1(value))
         ret
@@ -868,7 +868,7 @@ object dxSchedulerOptions {
         ret
     }
     @scala.inline
-    def withOnAppointmentRendered(value: /* e */ AnonAppointmentDataAppointmentElement => _): Self = {
+    def withOnAppointmentRendered(value: /* e */ AppointmentDataAppointmentElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAppointmentRendered")(js.Any.fromFunction1(value))
         ret
@@ -880,7 +880,7 @@ object dxSchedulerOptions {
         ret
     }
     @scala.inline
-    def withOnAppointmentUpdated(value: /* e */ AnonAppointmentDataComponent => _): Self = {
+    def withOnAppointmentUpdated(value: /* e */ AppointmentDataComponent => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAppointmentUpdated")(js.Any.fromFunction1(value))
         ret
@@ -892,7 +892,7 @@ object dxSchedulerOptions {
         ret
     }
     @scala.inline
-    def withOnAppointmentUpdating(value: /* e */ AnonOldData => _): Self = {
+    def withOnAppointmentUpdating(value: /* e */ OldData => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAppointmentUpdating")(js.Any.fromFunction1(value))
         ret
@@ -904,13 +904,13 @@ object dxSchedulerOptions {
         ret
     }
     @scala.inline
-    def withOnCellClickFunction1(value: /* e */ AnonCellData => _): Self = {
+    def withOnCellClickFunction1(value: /* e */ CellData => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCellClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnCellClick(value: (js.Function1[/* e */ AnonCellData, _]) | String): Self = {
+    def withOnCellClick(value: (js.Function1[/* e */ CellData, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCellClick")(value.asInstanceOf[js.Any])
         ret
@@ -922,13 +922,13 @@ object dxSchedulerOptions {
         ret
     }
     @scala.inline
-    def withOnCellContextMenuFunction1(value: /* e */ AnonCellDataCellElement => _): Self = {
+    def withOnCellContextMenuFunction1(value: /* e */ CellDataCellElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCellContextMenu")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnCellContextMenu(value: (js.Function1[/* e */ AnonCellDataCellElement, _]) | String): Self = {
+    def withOnCellContextMenu(value: (js.Function1[/* e */ CellDataCellElement, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCellContextMenu")(value.asInstanceOf[js.Any])
         ret
@@ -1021,7 +1021,7 @@ object dxSchedulerOptions {
         ret
     }
     @scala.inline
-    def withResources(value: js.Array[AnonAllowMultiple]): Self = {
+    def withResources(value: js.Array[AllowMultiple]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("resources")(value.asInstanceOf[js.Any])
         ret
@@ -1188,7 +1188,7 @@ object dxSchedulerOptions {
     @scala.inline
     def withViews(
       value: js.Array[
-          day | week | workWeek | month | timelineDay | timelineWeek | timelineWorkWeek | timelineMonth | agenda | AnonAgendaDuration
+          day | week | workWeek | month | timelineDay | timelineWeek | timelineWorkWeek | timelineMonth | agenda | AgendaDuration
         ]
     ): Self = {
         val ret = this.duplicate

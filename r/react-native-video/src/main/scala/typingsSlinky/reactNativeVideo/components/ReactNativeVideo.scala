@@ -3,7 +3,7 @@ package typingsSlinky.reactNativeVideo.components
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNative.ReadonlyactionNamestring
+import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
@@ -29,11 +29,11 @@ import typingsSlinky.reactNative.reactNativeStrings.polite
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.yes
-import typingsSlinky.reactNativeVideo.AnonBufferForPlaybackAfterRebufferMs
-import typingsSlinky.reactNativeVideo.AnonLanguage
-import typingsSlinky.reactNativeVideo.AnonType
-import typingsSlinky.reactNativeVideo.AnonUri
-import typingsSlinky.reactNativeVideo.AnonValue
+import typingsSlinky.reactNativeVideo.anon.BufferForPlaybackAfterRebufferMs
+import typingsSlinky.reactNativeVideo.anon.Language
+import typingsSlinky.reactNativeVideo.anon.Type
+import typingsSlinky.reactNativeVideo.anon.Uri
+import typingsSlinky.reactNativeVideo.anon.Value
 import typingsSlinky.reactNativeVideo.mod.FilterType
 import typingsSlinky.reactNativeVideo.mod.LoadError
 import typingsSlinky.reactNativeVideo.mod.OnBandwidthUpdateData
@@ -102,7 +102,7 @@ object ReactNativeVideo {
     @scala.inline
     def automaticallyWaitsToMinimizeStalling(value: Boolean): this.type = set("automaticallyWaitsToMinimizeStalling", value.asInstanceOf[js.Any])
     @scala.inline
-    def bufferConfig(value: AnonBufferForPlaybackAfterRebufferMs): this.type = set("bufferConfig", value.asInstanceOf[js.Any])
+    def bufferConfig(value: BufferForPlaybackAfterRebufferMs): this.type = set("bufferConfig", value.asInstanceOf[js.Any])
     @scala.inline
     def collapsable(value: Boolean): this.type = set("collapsable", value.asInstanceOf[js.Any])
     @scala.inline
@@ -290,11 +290,11 @@ object ReactNativeVideo {
     @scala.inline
     def seek(value: Double): this.type = set("seek", value.asInstanceOf[js.Any])
     @scala.inline
-    def selectedAudioTrack(value: AnonType): this.type = set("selectedAudioTrack", value.asInstanceOf[js.Any])
+    def selectedAudioTrack(value: Type): this.type = set("selectedAudioTrack", value.asInstanceOf[js.Any])
     @scala.inline
-    def selectedTextTrack(value: AnonType): this.type = set("selectedTextTrack", value.asInstanceOf[js.Any])
+    def selectedTextTrack(value: Type): this.type = set("selectedTextTrack", value.asInstanceOf[js.Any])
     @scala.inline
-    def selectedVideoTrack(value: AnonValue): this.type = set("selectedVideoTrack", value.asInstanceOf[js.Any])
+    def selectedVideoTrack(value: Value): this.type = set("selectedVideoTrack", value.asInstanceOf[js.Any])
     @scala.inline
     def shouldRasterizeIOS(value: Boolean): this.type = set("shouldRasterizeIOS", value.asInstanceOf[js.Any])
     @scala.inline
@@ -308,7 +308,7 @@ object ReactNativeVideo {
     @scala.inline
     def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
     @scala.inline
-    def textTracks(value: js.Array[AnonLanguage]): this.type = set("textTracks", value.asInstanceOf[js.Any])
+    def textTracks(value: js.Array[Language]): this.type = set("textTracks", value.asInstanceOf[js.Any])
     @scala.inline
     def translateX(value: Double): this.type = set("translateX", value.asInstanceOf[js.Any])
     @scala.inline
@@ -331,7 +331,7 @@ object ReactNativeVideo {
   
   def withProps(p: VideoProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(source: AnonUri | Double): Builder = {
+  def apply(source: Uri | Double): Builder = {
     val __props = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[VideoProperties]))
   }

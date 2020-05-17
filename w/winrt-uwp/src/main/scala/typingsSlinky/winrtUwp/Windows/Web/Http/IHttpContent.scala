@@ -1,6 +1,5 @@
 package typingsSlinky.winrtUwp.Windows.Web.Http
 
-import typingsSlinky.winrtUwp.AnonLength
 import typingsSlinky.winrtUwp.Windows.Foundation.IClosable
 import typingsSlinky.winrtUwp.Windows.Foundation.IPromiseWithIAsyncOperationWithProgress
 import typingsSlinky.winrtUwp.Windows.Foundation.IStringable
@@ -8,6 +7,7 @@ import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IInputStream
 import typingsSlinky.winrtUwp.Windows.Storage.Streams.IOutputStream
 import typingsSlinky.winrtUwp.Windows.Web.Http.Headers.HttpContentHeaderCollection
+import typingsSlinky.winrtUwp.anon.Length
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,7 +42,7 @@ trait IHttpContent
   /**
     * Determines whether the HTTP content has a valid length in bytes.
     */
-  def tryComputeLength(): AnonLength = js.native
+  def tryComputeLength(): Length = js.native
   /**
     * Write the HTTP content to an output stream as an asynchronous operation.
     * @param outputStream The output stream to write to.
@@ -60,7 +60,7 @@ object IHttpContent {
     readAsBufferAsync: () => IPromiseWithIAsyncOperationWithProgress[IBuffer, Double],
     readAsInputStreamAsync: () => IPromiseWithIAsyncOperationWithProgress[IInputStream, Double],
     readAsStringAsync: () => IPromiseWithIAsyncOperationWithProgress[String, Double],
-    tryComputeLength: () => AnonLength,
+    tryComputeLength: () => Length,
     writeToStreamAsync: IOutputStream => IPromiseWithIAsyncOperationWithProgress[Double, Double]
   ): IHttpContent = {
     val __obj = js.Dynamic.literal(bufferAllAsync = js.Any.fromFunction0(bufferAllAsync), close = js.Any.fromFunction0(close), headers = headers.asInstanceOf[js.Any], readAsBufferAsync = js.Any.fromFunction0(readAsBufferAsync), readAsInputStreamAsync = js.Any.fromFunction0(readAsInputStreamAsync), readAsStringAsync = js.Any.fromFunction0(readAsStringAsync), tryComputeLength = js.Any.fromFunction0(tryComputeLength), writeToStreamAsync = js.Any.fromFunction1(writeToStreamAsync))
@@ -103,7 +103,7 @@ object IHttpContent {
         ret
     }
     @scala.inline
-    def withTryComputeLength(value: () => AnonLength): Self = {
+    def withTryComputeLength(value: () => Length): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tryComputeLength")(js.Any.fromFunction0(value))
         ret

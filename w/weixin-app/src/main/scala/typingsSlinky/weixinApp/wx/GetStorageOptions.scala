@@ -1,6 +1,6 @@
 package typingsSlinky.weixinApp.wx
 
-import typingsSlinky.weixinApp.Anon0
+import typingsSlinky.weixinApp.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +12,12 @@ trait GetStorageOptions
   var key: String = js.native
   /** 接口调用的回调函数,res = {data: key对应的内容} */
   @JSName("success")
-  def success_MGetStorageOptions(res: Anon0): Unit = js.native
+  def success_MGetStorageOptions(res: `0`): Unit = js.native
 }
 
 object GetStorageOptions {
   @scala.inline
-  def apply(key: String, success: Anon0 => Unit): GetStorageOptions = {
+  def apply(key: String, success: `0` => Unit): GetStorageOptions = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[GetStorageOptions]
   }
@@ -34,7 +34,7 @@ object GetStorageOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: Anon0 => Unit): Self = {
+    def withSuccess(value: `0` => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

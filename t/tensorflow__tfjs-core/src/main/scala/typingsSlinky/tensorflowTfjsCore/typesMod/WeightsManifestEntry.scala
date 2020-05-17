@@ -1,6 +1,6 @@
 package typingsSlinky.tensorflowTfjsCore.typesMod
 
-import typingsSlinky.tensorflowTfjsCore.AnonDtype
+import typingsSlinky.tensorflowTfjsCore.anon.Dtype
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.bool
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.float32
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.int32
@@ -31,7 +31,7 @@ trait WeightsManifestEntry extends js.Object {
   /**
     * Information for dequantization of the weight.
     */
-  var quantization: js.UndefOr[AnonDtype] = js.native
+  var quantization: js.UndefOr[Dtype] = js.native
   /**
     * Shape of the weight.
     */
@@ -81,7 +81,7 @@ object WeightsManifestEntry {
         ret
     }
     @scala.inline
-    def withQuantization(value: AnonDtype): Self = {
+    def withQuantization(value: Dtype): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("quantization")(value.asInstanceOf[js.Any])
         ret

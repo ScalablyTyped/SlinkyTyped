@@ -8,10 +8,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait MDXProviderComponents extends /**
+trait MDXProviderComponents
+  extends /**
   * Any other components we wish to define
   */
-/* key */ StringDictionary[TagMod[Any]] {
+/* key */ StringDictionary[TagMod[Any]]
+     with MDXProviderComponentsProp {
   /**
     * Link	<https://mdxjs.com> or [MDX](https://mdxjs.com)
     */

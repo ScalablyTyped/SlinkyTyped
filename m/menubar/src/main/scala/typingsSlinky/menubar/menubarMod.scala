@@ -1,12 +1,13 @@
 package typingsSlinky.menubar
 
-import typingsSlinky.electron.Electron.App_
+import typingsSlinky.electron.Electron.App
 import typingsSlinky.electron.Electron.BrowserWindowConstructorOptions
 import typingsSlinky.electron.Electron.LoadURLOptions
 import typingsSlinky.electron.Electron.NativeImage_
 import typingsSlinky.electron.Electron.Rectangle
 import typingsSlinky.electron.mod.BrowserWindow
 import typingsSlinky.electron.mod.Tray
+import typingsSlinky.menubar.anon.PartialOptions
 import typingsSlinky.menubar.menubarBooleans.`false`
 import typingsSlinky.menubar.menubarStrings.bottomCenter
 import typingsSlinky.menubar.menubarStrings.bottomLeft
@@ -44,8 +45,8 @@ import scala.scalajs.js.annotation._
 object menubarMod extends js.Object {
   @js.native
   class Menubar protected () extends EventEmitter {
-    def this(app: App_) = this()
-    def this(app: App_, options: PartialOptions) = this()
+    def this(app: App) = this()
+    def this(app: App, options: PartialOptions) = this()
     var _app: js.Any = js.native
     var _browserWindow: js.UndefOr[js.Any] = js.native
     var _cachedBounds: js.UndefOr[js.Any] = js.native
@@ -56,7 +57,7 @@ object menubarMod extends js.Object {
       * The Electron [App](https://electronjs.org/docs/api/app)
       * instance.
       */
-    val app: App_ = js.native
+    val app: App = js.native
     var appReady: js.Any = js.native
     /**
       * Callback on tray icon click or double-click.

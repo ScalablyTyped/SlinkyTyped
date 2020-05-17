@@ -1,5 +1,6 @@
 package typingsSlinky.ionic
 
+import typingsSlinky.ionic.anon.NameString
 import typingsSlinky.ionic.commandMod.Command
 import typingsSlinky.ionic.definitionsMod.App
 import typingsSlinky.ionic.definitionsMod.CommandInstanceInfo
@@ -22,7 +23,7 @@ object linkMod extends js.Object {
     def chooseApp(apps: js.Array[App]): js.Promise[String] = js.native
     def confirmGithubRepoExists(): js.Promise[Unit] = js.native
     def connectGithub(app: App, repoId: Double, branches: js.Array[String]): js.Promise[js.UndefOr[String]] = js.native
-    def createApp(hasName: AnonNameString, runinfo: CommandInstanceInfo): js.Promise[String] = js.native
+    def createApp(hasName: NameString, runinfo: CommandInstanceInfo): js.Promise[String] = js.native
     def formatRepoName(fullName: String): String = js.native
     def linkApp(app: App, runinfo: CommandInstanceInfo): js.Promise[Unit] = js.native
     def linkGithub(app: App): js.Promise[js.UndefOr[String]] = js.native

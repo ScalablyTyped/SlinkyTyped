@@ -1,6 +1,6 @@
 package typingsSlinky.ddTrace.mod.plugins
 
-import typingsSlinky.ddTrace.AnonRequest
+import typingsSlinky.ddTrace.anon.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait HttpServer extends Http_ {
   /**
     * Hooks to run before spans are finished.
     */
-  var hooks: js.UndefOr[AnonRequest] = js.native
+  var hooks: js.UndefOr[Request] = js.native
 }
 
 object HttpServer {
@@ -27,7 +27,7 @@ object HttpServer {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withHooks(value: AnonRequest): Self = {
+    def withHooks(value: Request): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hooks")(value.asInstanceOf[js.Any])
         ret

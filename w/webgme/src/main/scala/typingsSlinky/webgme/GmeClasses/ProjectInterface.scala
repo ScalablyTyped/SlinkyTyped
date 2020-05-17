@@ -2,7 +2,7 @@ package typingsSlinky.webgme.GmeClasses
 
 import typingsSlinky.webgme.Core.DataObject
 import typingsSlinky.webgme.Core.ObjectHash
-import typingsSlinky.webgme.Global.GmeLogger
+import typingsSlinky.webgme.Global_.GmeLogger
 import typingsSlinky.webgme.GmeCommon.Dictionary
 import typingsSlinky.webgme.GmeCommon.LoadObject
 import typingsSlinky.webgme.GmeCommon.MetadataHash

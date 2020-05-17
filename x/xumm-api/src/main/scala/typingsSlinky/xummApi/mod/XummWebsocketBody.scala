@@ -1,6 +1,6 @@
 package typingsSlinky.xummApi.mod
 
-import typingsSlinky.xummApi.AnonWeb
+import typingsSlinky.xummApi.anon.Web
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait XummWebsocketBody extends js.Object {
   var custom_meta: XummCustomMeta = js.native
   var payload_uuidv4: String = js.native
   var reference_call_uuidv4: String = js.native
-  var return_url: AnonWeb = js.native
+  var return_url: Web = js.native
   var signed: Boolean = js.native
   var user_token: Boolean = js.native
 }
@@ -21,7 +21,7 @@ object XummWebsocketBody {
     custom_meta: XummCustomMeta,
     payload_uuidv4: String,
     reference_call_uuidv4: String,
-    return_url: AnonWeb,
+    return_url: Web,
     signed: Boolean,
     user_token: Boolean
   ): XummWebsocketBody = {
@@ -53,7 +53,7 @@ object XummWebsocketBody {
         ret
     }
     @scala.inline
-    def withReturn_url(value: AnonWeb): Self = {
+    def withReturn_url(value: Web): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("return_url")(value.asInstanceOf[js.Any])
         ret

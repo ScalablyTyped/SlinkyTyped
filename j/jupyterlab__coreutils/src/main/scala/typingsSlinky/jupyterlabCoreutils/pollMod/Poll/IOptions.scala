@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabCoreutils.pollMod.Poll
 
-import typingsSlinky.jupyterlabCoreutils.PartialFrequency
+import typingsSlinky.jupyterlabCoreutils.anon.PartialFrequency
 import typingsSlinky.jupyterlabCoreutils.interfacesMod.IPoll.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,12 +1,12 @@
 package typingsSlinky.discordRpc.mod
 
-import typingsSlinky.discordRpc.AnonAvatar
-import typingsSlinky.discordRpc.AnonCapacity
-import typingsSlinky.discordRpc.AnonCode
-import typingsSlinky.discordRpc.AnonDescription
-import typingsSlinky.discordRpc.AnonForce
-import typingsSlinky.discordRpc.AnonId
-import typingsSlinky.discordRpc.AnonTimeout
+import typingsSlinky.discordRpc.anon.Avatar
+import typingsSlinky.discordRpc.anon.Capacity
+import typingsSlinky.discordRpc.anon.Code
+import typingsSlinky.discordRpc.anon.Description
+import typingsSlinky.discordRpc.anon.Force
+import typingsSlinky.discordRpc.anon.Id
+import typingsSlinky.discordRpc.anon.Timeout
 import typingsSlinky.discordRpc.discordRpcStrings.connected
 import typingsSlinky.discordRpc.discordRpcStrings.ready
 import typingsSlinky.node.eventsMod.EventEmitter
@@ -18,21 +18,21 @@ import scala.scalajs.js.annotation._
 @js.native
 class Client protected () extends EventEmitter {
   def this(options: RPCClientOptions) = this()
-  var application: AnonDescription = js.native
-  var user: AnonAvatar = js.native
-  def captureShortcut(callback: js.Function2[/* shortcut */ js.Array[AnonCode], /* stop */ js.Function0[Unit], Unit]): js.Promise[js.Function0[Unit]] = js.native
+  var application: Description = js.native
+  var user: Avatar = js.native
+  def captureShortcut(callback: js.Function2[/* shortcut */ js.Array[Code], /* stop */ js.Function0[Unit], Unit]): js.Promise[js.Function0[Unit]] = js.native
   def clearActivity(): js.Promise[_] = js.native
   def clearActivity(pid: Double): js.Promise[_] = js.native
   def closeJoinRequest(user: String): js.Promise[_] = js.native
-  def closeJoinRequest(user: AnonId): js.Promise[_] = js.native
+  def closeJoinRequest(user: Id): js.Promise[_] = js.native
   def connect(clientId: String): js.Promise[Client] = js.native
   def connectToLobby(id: String, secret: String): js.Promise[_] = js.native
   def createLobby(`type`: String, capacity: Double, metadata: js.Any): js.Promise[_] = js.native
   def deleteLobby(lobby: String): js.Promise[_] = js.native
-  def deleteLobby(lobby: AnonId): js.Promise[_] = js.native
+  def deleteLobby(lobby: Id): js.Promise[_] = js.native
   def destroy(): js.Promise[Unit] = js.native
   def disconnectFromLobby(lobby: String): js.Promise[_] = js.native
-  def disconnectFromLobby(lobby: AnonId): js.Promise[_] = js.native
+  def disconnectFromLobby(lobby: Id): js.Promise[_] = js.native
   def getChannel(id: String): js.Promise[Channel] = js.native
   def getChannel(id: String, timeout: Double): js.Promise[Channel] = js.native
   def getChannels(): js.Promise[js.Array[Channel]] = js.native
@@ -58,15 +58,15 @@ class Client protected () extends EventEmitter {
   @JSName("once")
   def once_ready(event: ready, listener: js.Function0[Unit]): this.type = js.native
   def selectTextChannel(id: String): js.Promise[Channel] = js.native
-  def selectTextChannel(id: String, options: AnonTimeout): js.Promise[Channel] = js.native
+  def selectTextChannel(id: String, options: Timeout): js.Promise[Channel] = js.native
   def selectVoiceChannel(id: String): js.Promise[Channel] = js.native
-  def selectVoiceChannel(id: String, options: AnonForce): js.Promise[Channel] = js.native
+  def selectVoiceChannel(id: String, options: Force): js.Promise[Channel] = js.native
   def sendJoinInvite(user: String): js.Promise[_] = js.native
-  def sendJoinInvite(user: AnonId): js.Promise[_] = js.native
+  def sendJoinInvite(user: Id): js.Promise[_] = js.native
   def sendJoinRequest(user: String): js.Promise[_] = js.native
-  def sendJoinRequest(user: AnonId): js.Promise[_] = js.native
+  def sendJoinRequest(user: Id): js.Promise[_] = js.native
   def sendToLobby(lobby: String, data: js.Any): js.Promise[_] = js.native
-  def sendToLobby(lobby: AnonId, data: js.Any): js.Promise[_] = js.native
+  def sendToLobby(lobby: Id, data: js.Any): js.Promise[_] = js.native
   def setActivity(): js.Promise[_] = js.native
   def setActivity(args: Presence): js.Promise[_] = js.native
   def setActivity(args: Presence, pid: Double): js.Promise[_] = js.native
@@ -76,12 +76,12 @@ class Client protected () extends EventEmitter {
   def subscribe(event: String, args: js.Any, callback: js.Function1[/* data */ js.Any, Unit]): js.Promise[Subscription] = js.native
   def subscribe(event: String, callback: js.Function1[/* data */ js.Any, Unit]): js.Promise[Subscription] = js.native
   def updateLobby(lobby: String): js.Promise[_] = js.native
-  def updateLobby(lobby: String, options: AnonCapacity): js.Promise[_] = js.native
-  def updateLobby(lobby: AnonId): js.Promise[_] = js.native
-  def updateLobby(lobby: AnonId, options: AnonCapacity): js.Promise[_] = js.native
+  def updateLobby(lobby: String, options: Capacity): js.Promise[_] = js.native
+  def updateLobby(lobby: Id): js.Promise[_] = js.native
+  def updateLobby(lobby: Id, options: Capacity): js.Promise[_] = js.native
   def updateLobbyMember(lobby: String, user: String, metadata: js.Any): js.Promise[_] = js.native
-  def updateLobbyMember(lobby: String, user: AnonId, metadata: js.Any): js.Promise[_] = js.native
-  def updateLobbyMember(lobby: AnonId, user: String, metadata: js.Any): js.Promise[_] = js.native
-  def updateLobbyMember(lobby: AnonId, user: AnonId, metadata: js.Any): js.Promise[_] = js.native
+  def updateLobbyMember(lobby: String, user: Id, metadata: js.Any): js.Promise[_] = js.native
+  def updateLobbyMember(lobby: Id, user: String, metadata: js.Any): js.Promise[_] = js.native
+  def updateLobbyMember(lobby: Id, user: Id, metadata: js.Any): js.Promise[_] = js.native
 }
 

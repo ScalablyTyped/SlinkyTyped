@@ -1,6 +1,6 @@
 package typingsSlinky.reactAsync.components
 
-import typingsSlinky.reactAsync.AnonChildrenInitial
+import typingsSlinky.reactAsync.anon.ChildrenInitial
 import typingsSlinky.reactAsync.mod.AsyncState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,11 +11,11 @@ object IfPending {
   @js.native
   object component extends js.Object
   
-  def withProps[T](p: AnonChildrenInitial[T]): SharedBuilder_AnonChildrenInitial69102890[T] = new SharedBuilder_AnonChildrenInitial69102890[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[T](p: ChildrenInitial[T]): SharedBuilder_ChildrenInitial_198089325[T] = new SharedBuilder_ChildrenInitial_198089325[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T](state: AsyncState[T]): SharedBuilder_AnonChildrenInitial69102890[T] = {
+  def apply[T](state: AsyncState[T]): SharedBuilder_ChildrenInitial_198089325[T] = {
     val __props = js.Dynamic.literal(state = state.asInstanceOf[js.Any])
-    new SharedBuilder_AnonChildrenInitial69102890[T](js.Array(this.component, __props.asInstanceOf[AnonChildrenInitial[T]]))
+    new SharedBuilder_ChildrenInitial_198089325[T](js.Array(this.component, __props.asInstanceOf[ChildrenInitial[T]]))
   }
 }
 

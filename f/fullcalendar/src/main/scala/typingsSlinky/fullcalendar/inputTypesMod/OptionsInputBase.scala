@@ -1,6 +1,7 @@
 package typingsSlinky.fullcalendar.inputTypesMod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.fullcalendar.fullcalendarStrings.ISO
 import typingsSlinky.fullcalendar.fullcalendarStrings.`jquery-ui`
@@ -13,11 +14,10 @@ import typingsSlinky.fullcalendar.fullcalendarStrings.parent
 import typingsSlinky.fullcalendar.fullcalendarStrings.popover
 import typingsSlinky.fullcalendar.fullcalendarStrings.standard
 import typingsSlinky.fullcalendar.fullcalendarStrings.week
-import typingsSlinky.fullcalendar.jqueryHooksMod._Global_.JQuery
+import typingsSlinky.fullcalendar.jqueryHooksMod.global.JQuery
 import typingsSlinky.fullcalendar.viewMod.default
 import typingsSlinky.moment.mod.Duration_
 import typingsSlinky.moment.mod.Moment
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -113,7 +113,7 @@ trait OptionsInputBase extends js.Object {
       /* event */ EventObjectInput, 
       /* delta */ Duration_, 
       /* revertFunc */ js.Function, 
-      /* jsEvent */ Event_, 
+      /* jsEvent */ Event, 
       /* ui */ js.Any, 
       /* view */ default, 
       Unit
@@ -122,7 +122,7 @@ trait OptionsInputBase extends js.Object {
   var eventDurationEditable: js.UndefOr[Boolean] = js.native
   var eventLimit: js.UndefOr[Boolean | Double] = js.native
   var eventLimitClick: js.UndefOr[
-    popover | week | day | String | (js.Function2[/* cellinfo */ CellInfo, /* jsevent */ Event_, Unit])
+    popover | week | day | String | (js.Function2[/* cellinfo */ CellInfo, /* jsevent */ Event, Unit])
   ] = js.native
   var eventLimitText: js.UndefOr[String | (js.Function1[/* eventCnt */ Double, String])] = js.native
   var eventLongPressDelay: js.UndefOr[Double] = js.native
@@ -150,7 +150,7 @@ trait OptionsInputBase extends js.Object {
       /* event */ EventObjectInput, 
       /* delta */ Duration_, 
       /* revertFunc */ js.Function, 
-      /* jsEvent */ Event_, 
+      /* jsEvent */ Event, 
       /* ui */ js.Any, 
       /* view */ default, 
       Unit
@@ -196,8 +196,8 @@ trait OptionsInputBase extends js.Object {
   var minTime: js.UndefOr[DurationInput] = js.native
   var monthNames: js.UndefOr[js.Array[String]] = js.native
   var monthNamesShort: js.UndefOr[js.Array[String]] = js.native
-  var navLinkDayClick: js.UndefOr[String | (js.Function2[/* date */ Moment, /* jsEvent */ Event_, Unit])] = js.native
-  var navLinkWeekClick: js.UndefOr[String | (js.Function2[/* weekStart */ js.Any, /* jsEvent */ Event_, Unit])] = js.native
+  var navLinkDayClick: js.UndefOr[String | (js.Function2[/* date */ Moment, /* jsEvent */ Event, Unit])] = js.native
+  var navLinkWeekClick: js.UndefOr[String | (js.Function2[/* weekStart */ js.Any, /* jsEvent */ Event, Unit])] = js.native
   var navLinks: js.UndefOr[Boolean] = js.native
   var nextDayThreshold: js.UndefOr[DurationInput] = js.native
   var noEventsMessage: js.UndefOr[String] = js.native
@@ -231,7 +231,7 @@ trait OptionsInputBase extends js.Object {
   var timeFormat: js.UndefOr[String] = js.native
   var timezone: js.UndefOr[String | Boolean] = js.native
   var titleFormat: js.UndefOr[String] = js.native
-  var unselect: js.UndefOr[js.Function2[/* view */ default, /* jsEvent */ Event_, Unit]] = js.native
+  var unselect: js.UndefOr[js.Function2[/* view */ default, /* jsEvent */ Event, Unit]] = js.native
   var unselectAuto: js.UndefOr[Boolean] = js.native
   var unselectCancel: js.UndefOr[String] = js.native
   var validRange: js.UndefOr[RangeInput] = js.native
@@ -863,7 +863,7 @@ object OptionsInputBase {
     }
     @scala.inline
     def withEventDrop(
-      value: (/* event */ EventObjectInput, /* delta */ Duration_, /* revertFunc */ js.Function, /* jsEvent */ Event_, /* ui */ js.Any, /* view */ default) => Unit
+      value: (/* event */ EventObjectInput, /* delta */ Duration_, /* revertFunc */ js.Function, /* jsEvent */ Event, /* ui */ js.Any, /* view */ default) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("eventDrop")(js.Any.fromFunction6(value))
@@ -900,14 +900,14 @@ object OptionsInputBase {
         ret
     }
     @scala.inline
-    def withEventLimitClickFunction2(value: (/* cellinfo */ CellInfo, /* jsevent */ Event_) => Unit): Self = {
+    def withEventLimitClickFunction2(value: (/* cellinfo */ CellInfo, /* jsevent */ Event) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("eventLimitClick")(js.Any.fromFunction2(value))
         ret
     }
     @scala.inline
     def withEventLimitClick(
-      value: popover | week | day | String | (js.Function2[/* cellinfo */ CellInfo, /* jsevent */ Event_, Unit])
+      value: popover | week | day | String | (js.Function2[/* cellinfo */ CellInfo, /* jsevent */ Event, Unit])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("eventLimitClick")(value.asInstanceOf[js.Any])
@@ -1053,7 +1053,7 @@ object OptionsInputBase {
     }
     @scala.inline
     def withEventResize(
-      value: (/* event */ EventObjectInput, /* delta */ Duration_, /* revertFunc */ js.Function, /* jsEvent */ Event_, /* ui */ js.Any, /* view */ default) => Unit
+      value: (/* event */ EventObjectInput, /* delta */ Duration_, /* revertFunc */ js.Function, /* jsEvent */ Event, /* ui */ js.Any, /* view */ default) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("eventResize")(js.Any.fromFunction6(value))
@@ -1372,13 +1372,13 @@ object OptionsInputBase {
         ret
     }
     @scala.inline
-    def withNavLinkDayClickFunction2(value: (/* date */ Moment, /* jsEvent */ Event_) => Unit): Self = {
+    def withNavLinkDayClickFunction2(value: (/* date */ Moment, /* jsEvent */ Event) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("navLinkDayClick")(js.Any.fromFunction2(value))
         ret
     }
     @scala.inline
-    def withNavLinkDayClick(value: String | (js.Function2[/* date */ Moment, /* jsEvent */ Event_, Unit])): Self = {
+    def withNavLinkDayClick(value: String | (js.Function2[/* date */ Moment, /* jsEvent */ Event, Unit])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("navLinkDayClick")(value.asInstanceOf[js.Any])
         ret
@@ -1390,13 +1390,13 @@ object OptionsInputBase {
         ret
     }
     @scala.inline
-    def withNavLinkWeekClickFunction2(value: (/* weekStart */ js.Any, /* jsEvent */ Event_) => Unit): Self = {
+    def withNavLinkWeekClickFunction2(value: (/* weekStart */ js.Any, /* jsEvent */ Event) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("navLinkWeekClick")(js.Any.fromFunction2(value))
         ret
     }
     @scala.inline
-    def withNavLinkWeekClick(value: String | (js.Function2[/* weekStart */ js.Any, /* jsEvent */ Event_, Unit])): Self = {
+    def withNavLinkWeekClick(value: String | (js.Function2[/* weekStart */ js.Any, /* jsEvent */ Event, Unit])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("navLinkWeekClick")(value.asInstanceOf[js.Any])
         ret
@@ -1716,7 +1716,7 @@ object OptionsInputBase {
         ret
     }
     @scala.inline
-    def withUnselect(value: (/* view */ default, /* jsEvent */ Event_) => Unit): Self = {
+    def withUnselect(value: (/* view */ default, /* jsEvent */ Event) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("unselect")(js.Any.fromFunction2(value))
         ret

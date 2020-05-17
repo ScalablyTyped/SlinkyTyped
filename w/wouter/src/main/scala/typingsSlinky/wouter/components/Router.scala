@@ -2,7 +2,7 @@ package typingsSlinky.wouter.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.wouter.PartialRouterPropschildre
+import typingsSlinky.wouter.anon.PartialRouterPropschildre
 import typingsSlinky.wouter.mod.DefaultParams
 import typingsSlinky.wouter.mod.LocationHookOptions
 import typingsSlinky.wouter.mod.LocationTuple

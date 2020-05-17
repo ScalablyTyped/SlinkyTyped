@@ -1,5 +1,6 @@
 package typingsSlinky.agGrid
 
+import typingsSlinky.agGrid.anon.InstantiableICellEditorComp
 import typingsSlinky.agGrid.colDefMod.ColDef
 import typingsSlinky.agGrid.iCellEditorMod.ICellEditorComp
 import typingsSlinky.agGrid.iCellEditorMod.ICellEditorParams
@@ -16,7 +17,7 @@ object cellEditorFactoryMod extends js.Object {
     var componentResolver: js.Any = js.native
     var context: js.Any = js.native
     var gridOptionsWrapper: js.Any = js.native
-    def addCellEditor(key: String, cellEditor: AnonInstantiableICellEditorComp): Unit = js.native
+    def addCellEditor(key: String, cellEditor: InstantiableICellEditorComp): Unit = js.native
     def createCellEditor(column: ColDef, params: ICellEditorParams): Promise[ICellEditorComp] = js.native
     /* private */ def init(): js.Any = js.native
   }

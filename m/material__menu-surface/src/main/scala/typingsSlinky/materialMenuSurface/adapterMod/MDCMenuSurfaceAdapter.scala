@@ -2,7 +2,7 @@ package typingsSlinky.materialMenuSurface.adapterMod
 
 import org.scalajs.dom.raw.ClientRect
 import org.scalajs.dom.raw.Element
-import typingsSlinky.materialMenuSurface.PartialMDCMenuDistance
+import typingsSlinky.materialMenuSurface.anon.PartialMDCMenuDistance
 import typingsSlinky.materialMenuSurface.typesMod.MDCMenuDimensions
 import typingsSlinky.materialMenuSurface.typesMod.MDCMenuPoint
 import scala.scalajs.js

@@ -1,6 +1,6 @@
 package typingsSlinky.hapi.mod
 
-import typingsSlinky.hapi.AnonPayload
+import typingsSlinky.hapi.anon.Payload
 import typingsSlinky.hapi.mod.Lifecycle.ReturnValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ trait ServerAuthSchemeObject extends js.Object {
     * An object with the following keys:
     * * payload
     */
-  var options: js.UndefOr[AnonPayload] = js.native
+  var options: js.UndefOr[Payload] = js.native
   /**
     * A lifecycle method to authenticate the request payload.
     * When the scheme payload() method returns an error with a message, it means payload validation failed due to bad
@@ -85,7 +85,7 @@ object ServerAuthSchemeObject {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonPayload): Self = {
+    def withOptions(value: Payload): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

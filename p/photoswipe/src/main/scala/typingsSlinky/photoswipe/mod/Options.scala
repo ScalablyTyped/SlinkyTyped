@@ -1,7 +1,7 @@
 package typingsSlinky.photoswipe.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.photoswipe.AnonW
+import typingsSlinky.photoswipe.anon.W
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -119,7 +119,7 @@ trait Options extends js.Object {
     *
     * Default undefined.
     */
-  var getThumbBoundsFn: js.UndefOr[js.Function1[/* index */ Double, AnonW]] = js.native
+  var getThumbBoundsFn: js.UndefOr[js.Function1[/* index */ Double, W]] = js.native
   /**
     * The same as the previous option, just for closing (zoom-out) transition.
     * After PhotoSwipe is opened pswp--open class will be added to the root element, you may use it to apply different transition duration in CSS.
@@ -386,7 +386,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withGetThumbBoundsFn(value: /* index */ Double => AnonW): Self = {
+    def withGetThumbBoundsFn(value: /* index */ Double => W): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getThumbBoundsFn")(js.Any.fromFunction1(value))
         ret

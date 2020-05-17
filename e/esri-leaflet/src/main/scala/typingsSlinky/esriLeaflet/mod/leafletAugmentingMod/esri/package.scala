@@ -20,8 +20,6 @@ package object esri {
     * Options for Find Task
     */
   type FindOptions = typingsSlinky.esriLeaflet.mod.leafletAugmentingMod.esri.ServiceOptions
-  type GeoJSONGeometry = typingsSlinky.geojson.mod.Point | typingsSlinky.geojson.mod.Polygon | typingsSlinky.geojson.mod.LineString
-  type Geometry = typingsSlinky.esriLeaflet.mod.leafletAugmentingMod.esri.LeafletGeometry | typingsSlinky.esriLeaflet.mod.leafletAugmentingMod.esri.GeoJSONGeometry
   /**
     * Options for IdentifyFeatures
     */
@@ -30,10 +28,6 @@ package object esri {
     * Options for ImageService
     */
   type ImageServiceOptions = typingsSlinky.esriLeaflet.mod.leafletAugmentingMod.esri.ServiceOptions
-  type LeafletGeometry = typingsSlinky.leaflet.mod.Marker_[js.Any] | typingsSlinky.leaflet.mod.Polygon_[js.Any] | (typingsSlinky.leaflet.mod.Polyline_[
-    typingsSlinky.geojson.mod.LineString | typingsSlinky.geojson.mod.MultiLineString, 
-    js.Any
-  ]) | typingsSlinky.leaflet.mod.LatLngExpression | typingsSlinky.leaflet.mod.LatLngBounds_ | typingsSlinky.leaflet.mod.GeoJSON_[js.Any]
   /**
     * Options for MapService
     */
@@ -43,7 +37,6 @@ package object esri {
     */
   type QueryOptions = typingsSlinky.esriLeaflet.mod.leafletAugmentingMod.esri.TaskOptions
   type ResponseCallbackHandler = js.Function2[/* error */ js.UndefOr[js.Any], /* response */ js.UndefOr[js.Any], scala.Unit]
-  type SpatialReferenceExpression = scala.Double | typingsSlinky.esriLeaflet.mod.leafletAugmentingMod.esri.SpatialReference
   type StyleCallback = js.Function1[/* feature */ js.Any, js.Any]
   /**
     * Options for Task

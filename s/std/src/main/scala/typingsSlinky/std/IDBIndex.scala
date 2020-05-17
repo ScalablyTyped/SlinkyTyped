@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -86,9 +85,4 @@ trait IDBIndex extends js.Object {
   def openKeyCursor(query: IDBValidKey): org.scalajs.dom.raw.IDBRequest = js.native
   def openKeyCursor(query: IDBValidKey, direction: IDBCursorDirection): org.scalajs.dom.raw.IDBRequest = js.native
 }
-
-@JSGlobal("IDBIndex")
-@js.native
-object IDBIndex
-  extends Instantiable0[org.scalajs.dom.raw.IDBIndex]
 

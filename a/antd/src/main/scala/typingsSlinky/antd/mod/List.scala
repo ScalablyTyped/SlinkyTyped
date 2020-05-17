@@ -1,8 +1,8 @@
 package typingsSlinky.antd.mod
 
-import typingsSlinky.antd.AnonDataSource
-import typingsSlinky.antd.AnonGrid
-import typingsSlinky.antd.TypeofItem
+import typingsSlinky.antd.anon.DataSource
+import typingsSlinky.antd.anon.Grid
+import typingsSlinky.antd.anon.TypeofItem
 import typingsSlinky.antd.listMod.ListProps
 import typingsSlinky.antd.listMod.default
 import scala.scalajs.js
@@ -20,7 +20,7 @@ class List[T] protected () extends default[T] {
 @js.native
 object List extends js.Object {
   var Item: TypeofItem = js.native
-  var childContextTypes: AnonGrid = js.native
-  var defaultProps: AnonDataSource = js.native
+  var childContextTypes: Grid = js.native
+  var defaultProps: DataSource = js.native
 }
 

@@ -1,6 +1,7 @@
 package typingsSlinky.jpm
 
 import typingsSlinky.jpm.FFAddonSDK.BrowserWindow
+import typingsSlinky.jpm.anon.IsPrivate
 import typingsSlinky.jpm.jpmStrings.activate
 import typingsSlinky.jpm.jpmStrings.close
 import typingsSlinky.jpm.jpmStrings.deactivate
@@ -32,7 +33,7 @@ object windowsMod extends js.Object {
       * @param options.isPrivate determines whether the new window should be private or not
       */
     def open(options: String): BrowserWindow = js.native
-    def open(options: AnonIsPrivate): BrowserWindow = js.native
+    def open(options: IsPrivate): BrowserWindow = js.native
   }
   
   val browserWindows: BrowserWindows_ = js.native

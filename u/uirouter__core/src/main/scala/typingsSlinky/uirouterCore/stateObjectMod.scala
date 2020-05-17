@@ -1,13 +1,17 @@
 package typingsSlinky.uirouterCore
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.uirouterCore.anon.Inherit
+import typingsSlinky.uirouterCore.anon.InheritBoolean
+import typingsSlinky.uirouterCore.anon.NameGlob
+import typingsSlinky.uirouterCore.anon.State
 import typingsSlinky.uirouterCore.paramMod.Param
 import typingsSlinky.uirouterCore.resolvableMod.Resolvable
 import typingsSlinky.uirouterCore.stateInterfaceMod.LazyLoadResult
 import typingsSlinky.uirouterCore.stateInterfaceMod.StateDeclaration
+import typingsSlinky.uirouterCore.stateInterfaceMod.StateOrName
 import typingsSlinky.uirouterCore.stateInterfaceMod.ViewDeclaration
 import typingsSlinky.uirouterCore.stateInterfaceMod._StateDeclaration
-import typingsSlinky.uirouterCore.stateInterfaceMod._StateOrName
 import typingsSlinky.uirouterCore.targetStateMod.TargetState
 import typingsSlinky.uirouterCore.transitionInterfaceMod.HookResult
 import typingsSlinky.uirouterCore.transitionInterfaceMod.TransitionStateHookFn
@@ -22,10 +26,10 @@ import scala.scalajs.js.annotation._
 object stateObjectMod extends js.Object {
   @js.native
   /** @deprecated use State.create() */
-  class StateObject () extends _StateOrName {
+  class StateObject () extends StateOrName {
     def this(config: StateDeclaration) = this()
     /** @hidden */
-    var __stateObjectCache: AnonNameGlob = js.native
+    var __stateObjectCache: NameGlob = js.native
     /** Prototypally inherits from [[StateDeclaration.abstract]] */
     var `abstract`: Boolean = js.native
     /**
@@ -60,7 +64,7 @@ object stateObjectMod extends js.Object {
     /** The parent [[StateObject]] objects from this state up to the root */
     var path: js.Array[StateObject] = js.native
     /** Prototypally inherits from [[StateDeclaration.redirectTo]] */
-    var redirectTo: String | (js.Function1[/* $transition$ */ Transition, TargetState]) | AnonState = js.native
+    var redirectTo: String | (js.Function1[/* $transition$ */ Transition, TargetState]) | State = js.native
     /** A list of [[Resolvable]] objects.  The internal representation of [[resolve]]. */
     var resolvables: js.Array[Resolvable] = js.native
     /** Prototypally inherits from [[StateDeclaration.resolve]] */
@@ -115,7 +119,7 @@ object stateObjectMod extends js.Object {
       * @param opts options
       */
     def parameter(id: String): Param = js.native
-    def parameter(id: String, opts: AnonInheritBoolean): Param = js.native
+    def parameter(id: String, opts: InheritBoolean): Param = js.native
     /**
       * Gets the state's `Param` objects
       *
@@ -126,7 +130,7 @@ object stateObjectMod extends js.Object {
       * @param opts options
       */
     def parameters(): js.Array[Param] = js.native
-    def parameters(opts: AnonInherit): js.Array[Param] = js.native
+    def parameters(opts: Inherit): js.Array[Param] = js.native
     /**
       * Returns the root node of this state's tree.
       *

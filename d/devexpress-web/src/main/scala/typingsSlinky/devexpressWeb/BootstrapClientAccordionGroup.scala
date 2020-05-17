@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Represents a client-side equivalent of the Accordion's BootstrapAccordionGroup object.
   */
-@JSGlobal("BootstrapClientAccordionGroup")
 @js.native
-class BootstrapClientAccordionGroup () extends ASPxClientNavBarGroup {
+trait BootstrapClientAccordionGroup extends ASPxClientNavBarGroup {
   /**
     * Gets the BootstrapClientAccordion object to which the current group belongs.
     */
@@ -33,5 +32,69 @@ class BootstrapClientAccordionGroup () extends ASPxClientNavBarGroup {
     * @param text A String specifying the badge text.
     */
   def SetHeaderBadgeText(text: String): Unit = js.native
+}
+
+object BootstrapClientAccordionGroup {
+  @scala.inline
+  def apply(
+    GetEnabled: () => Boolean,
+    GetExpanded: () => Boolean,
+    GetHeaderBadgeIconCssClass: () => String,
+    GetHeaderBadgeText: () => String,
+    GetItem: Double => ASPxClientNavBarItem,
+    GetItemByName: String => ASPxClientNavBarItem,
+    GetItemCount: () => Double,
+    GetText: () => String,
+    GetVisible: () => Boolean,
+    SetExpanded: Boolean => Unit,
+    SetHeaderBadgeIconCssClass: String => Unit,
+    SetHeaderBadgeText: String => Unit,
+    SetText: String => Unit,
+    SetVisible: Boolean => Unit,
+    index: Double,
+    name: String,
+    navBar: BootstrapClientAccordion
+  ): BootstrapClientAccordionGroup = {
+    val __obj = js.Dynamic.literal(GetEnabled = js.Any.fromFunction0(GetEnabled), GetExpanded = js.Any.fromFunction0(GetExpanded), GetHeaderBadgeIconCssClass = js.Any.fromFunction0(GetHeaderBadgeIconCssClass), GetHeaderBadgeText = js.Any.fromFunction0(GetHeaderBadgeText), GetItem = js.Any.fromFunction1(GetItem), GetItemByName = js.Any.fromFunction1(GetItemByName), GetItemCount = js.Any.fromFunction0(GetItemCount), GetText = js.Any.fromFunction0(GetText), GetVisible = js.Any.fromFunction0(GetVisible), SetExpanded = js.Any.fromFunction1(SetExpanded), SetHeaderBadgeIconCssClass = js.Any.fromFunction1(SetHeaderBadgeIconCssClass), SetHeaderBadgeText = js.Any.fromFunction1(SetHeaderBadgeText), SetText = js.Any.fromFunction1(SetText), SetVisible = js.Any.fromFunction1(SetVisible), index = index.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], navBar = navBar.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BootstrapClientAccordionGroup]
+  }
+  @scala.inline
+  implicit class BootstrapClientAccordionGroupOps[Self <: BootstrapClientAccordionGroup] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetHeaderBadgeIconCssClass(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetHeaderBadgeIconCssClass")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetHeaderBadgeText(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GetHeaderBadgeText")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetHeaderBadgeIconCssClass(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetHeaderBadgeIconCssClass")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetHeaderBadgeText(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("SetHeaderBadgeText")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withNavBar(value: BootstrapClientAccordion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("navBar")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

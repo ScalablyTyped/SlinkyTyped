@@ -1,13 +1,13 @@
 package typingsSlinky.asn1js.mod
 
-import typingsSlinky.asn1js.AnonIsIndefiniteForm
+import typingsSlinky.asn1js.anon.IsIndefiniteForm
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait LocalLengthBlockParams extends js.Object {
-  var lenBlock: js.UndefOr[AnonIsIndefiniteForm] = js.native
+  var lenBlock: js.UndefOr[IsIndefiniteForm] = js.native
 }
 
 object LocalLengthBlockParams {
@@ -23,7 +23,7 @@ object LocalLengthBlockParams {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withLenBlock(value: AnonIsIndefiniteForm): Self = {
+    def withLenBlock(value: IsIndefiniteForm): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lenBlock")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.pgPromise.mod
 
-import typingsSlinky.pgPromise.AnonBinary
+import typingsSlinky.pgPromise.anon.Binary
 import typingsSlinky.pgPromise.pgSubsetMod.IColumn
 import typingsSlinky.pgPromise.pgSubsetMod.IResult
 import scala.scalajs.js
@@ -19,7 +19,7 @@ object IResultExt {
   @scala.inline
   def apply(
     _parsers: js.Array[js.Function],
-    _types: AnonBinary,
+    _types: Binary,
     command: String,
     fields: js.Array[IColumn],
     rowAsArray: Boolean,

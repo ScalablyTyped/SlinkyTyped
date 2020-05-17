@@ -1,6 +1,6 @@
 package typingsSlinky.vscodeLanguageserverProtocol.protocolColorProviderMod
 
-import typingsSlinky.vscodeLanguageserverProtocol.AnonColorProvider
+import typingsSlinky.vscodeLanguageserverProtocol.anon.ColorProvider
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait ColorClientCapabilities extends js.Object {
   /**
     * The text document client capabilities
     */
-  var textDocument: js.UndefOr[AnonColorProvider] = js.native
+  var textDocument: js.UndefOr[ColorProvider] = js.native
 }
 
 object ColorClientCapabilities {
@@ -26,7 +26,7 @@ object ColorClientCapabilities {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTextDocument(value: AnonColorProvider): Self = {
+    def withTextDocument(value: ColorProvider): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("textDocument")(value.asInstanceOf[js.Any])
         ret

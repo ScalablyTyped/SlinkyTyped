@@ -1,11 +1,11 @@
 package typingsSlinky.reactMedia.components
 
+import org.scalajs.dom.raw.Window
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMedia.mod.MediaQueryValue
 import typingsSlinky.reactMedia.mod.SingleQueryProps
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ object ReactMedia {
     @scala.inline
     def render(value: () => TagMod[Any]): this.type = set("render", js.Any.fromFunction0(value))
     @scala.inline
-    def targetWindow(value: Window_): this.type = set("targetWindow", value.asInstanceOf[js.Any])
+    def targetWindow(value: Window): this.type = set("targetWindow", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SingleQueryProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

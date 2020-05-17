@@ -37,13 +37,12 @@ package object mod {
   type GotInstance[T] = T with (typingsSlinky.std.Record[
     typingsSlinky.got.gotStrings.get_ | typingsSlinky.got.gotStrings.post_ | typingsSlinky.got.gotStrings.put_ | typingsSlinky.got.gotStrings.patch | typingsSlinky.got.gotStrings.head_ | typingsSlinky.got.gotStrings.delete_, 
     T
-  ]) with typingsSlinky.got.AnonCancelError
+  ]) with typingsSlinky.got.anon.CancelError
   type GotStreamFn = js.Function2[
     /* url */ typingsSlinky.got.mod.GotUrl, 
     /* options */ js.UndefOr[typingsSlinky.got.mod.GotOptions[java.lang.String | scala.Null]], 
     typingsSlinky.got.mod.GotEmitter with typingsSlinky.node.streamMod.Duplex
   ]
-  type GotUrl = java.lang.String | typingsSlinky.node.httpsMod.RequestOptions | typingsSlinky.node.urlMod.Url | typingsSlinky.node.urlMod.URL_
   /**
     * @param options Unnormalized request options.
     */

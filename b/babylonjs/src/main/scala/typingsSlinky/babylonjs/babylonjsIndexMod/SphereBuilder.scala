@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.babylonjsIndexMod
 
-import typingsSlinky.babylonjs.AnonDiameterX
+import typingsSlinky.babylonjs.anon.DiameterX
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
@@ -32,7 +32,7 @@ object SphereBuilder extends js.Object {
     * @returns the sphere mesh
     * @see https://doc.babylonjs.com/how_to/set_shapes#sphere
     */
-  def CreateSphere(name: String, options: AnonDiameterX): typingsSlinky.babylonjs.meshMod.Mesh = js.native
-  def CreateSphere(name: String, options: AnonDiameterX, scene: Nullable[Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateSphere(name: String, options: DiameterX): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateSphere(name: String, options: DiameterX, scene: Nullable[Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
 }
 

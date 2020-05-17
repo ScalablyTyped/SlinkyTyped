@@ -1,22 +1,33 @@
 package typingsSlinky.breeze.breeze
 
-import typingsSlinky.breeze.AnonIsCaseSensitive
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("breeze.LocalQueryComparisonOptions")
 @js.native
-class LocalQueryComparisonOptions protected () extends js.Object {
-  def this(config: AnonIsCaseSensitive) = this()
+trait LocalQueryComparisonOptions extends js.Object {
   def setAsDefault(): Unit = js.native
 }
 
-/* static members */
-@JSGlobal("breeze.LocalQueryComparisonOptions")
-@js.native
-object LocalQueryComparisonOptions extends js.Object {
-  var caseInsensitiveSQL: LocalQueryComparisonOptions = js.native
-  var defaultInstance: LocalQueryComparisonOptions = js.native
+object LocalQueryComparisonOptions {
+  @scala.inline
+  def apply(setAsDefault: () => Unit): LocalQueryComparisonOptions = {
+    val __obj = js.Dynamic.literal(setAsDefault = js.Any.fromFunction0(setAsDefault))
+    __obj.asInstanceOf[LocalQueryComparisonOptions]
+  }
+  @scala.inline
+  implicit class LocalQueryComparisonOptionsOps[Self <: LocalQueryComparisonOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSetAsDefault(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAsDefault")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

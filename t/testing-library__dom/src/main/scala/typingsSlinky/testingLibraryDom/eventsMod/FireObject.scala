@@ -1,9 +1,9 @@
 package typingsSlinky.testingLibraryDom.eventsMod
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Node
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,417 +12,417 @@ import scala.scalajs.js.annotation._
 @js.native
 trait FireObject extends js.Object {
   var abort: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var animationEnd: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var animationIteration: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var animationStart: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var blur: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var canPlay: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var canPlayThrough: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var change: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var click: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var compositionEnd: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var compositionStart: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var compositionUpdate: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var contextMenu: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var copy: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var cut: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var dblClick: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var doubleClick: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var drag: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var dragEnd: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var dragEnter: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var dragExit: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var dragLeave: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var dragOver: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var dragStart: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var drop: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var durationChange: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var emptied: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var encrypted: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var ended: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var error: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var focus: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var focusIn: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var focusOut: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var gotPointerCapture: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var input: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var invalid: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var keyDown: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var keyPress: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var keyUp: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var load: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var loadStart: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var loadedData: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var loadedMetadata: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var lostPointerCapture: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var mouseDown: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var mouseEnter: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var mouseLeave: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var mouseMove: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var mouseOut: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var mouseOver: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var mouseUp: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var paste: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var pause: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var play: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var playing: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var pointerCancel: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var pointerDown: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var pointerEnter: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var pointerLeave: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var pointerMove: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var pointerOut: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var pointerOver: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var pointerUp: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var popState: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var progress: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var rateChange: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var reset: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var scroll: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var seeked: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var seeking: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var select: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var stalled: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var submit: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var suspend: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var timeUpdate: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var touchCancel: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var touchEnd: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var touchMove: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var touchStart: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var transitionEnd: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var volumeChange: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var waiting: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
   var wheel: js.Function2[
-    /* element */ Document_ | Element | Window_ | Node, 
+    /* element */ Document | Element | Window | Node, 
     /* options */ js.UndefOr[js.Object], 
     Boolean
   ] = js.native
@@ -431,89 +431,89 @@ trait FireObject extends js.Object {
 object FireObject {
   @scala.inline
   def apply(
-    abort: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    animationEnd: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    animationIteration: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    animationStart: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    blur: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    canPlay: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    canPlayThrough: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    change: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    click: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    compositionEnd: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    compositionStart: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    compositionUpdate: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    contextMenu: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    copy: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    cut: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    dblClick: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    doubleClick: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    drag: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    dragEnd: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    dragEnter: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    dragExit: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    dragLeave: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    dragOver: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    dragStart: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    drop: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    durationChange: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    emptied: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    encrypted: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    ended: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    error: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    focus: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    focusIn: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    focusOut: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    gotPointerCapture: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    input: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    invalid: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    keyDown: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    keyPress: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    keyUp: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    load: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    loadStart: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    loadedData: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    loadedMetadata: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    lostPointerCapture: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    mouseDown: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    mouseEnter: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    mouseLeave: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    mouseMove: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    mouseOut: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    mouseOver: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    mouseUp: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    paste: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    pause: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    play: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    playing: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    pointerCancel: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    pointerDown: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    pointerEnter: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    pointerLeave: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    pointerMove: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    pointerOut: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    pointerOver: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    pointerUp: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    popState: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    progress: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    rateChange: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    reset: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    scroll: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    seeked: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    seeking: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    select: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    stalled: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    submit: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    suspend: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    timeUpdate: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    touchCancel: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    touchEnd: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    touchMove: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    touchStart: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    transitionEnd: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    volumeChange: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    waiting: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
-    wheel: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+    abort: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    animationEnd: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    animationIteration: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    animationStart: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    blur: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    canPlay: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    canPlayThrough: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    change: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    click: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    compositionEnd: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    compositionStart: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    compositionUpdate: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    contextMenu: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    copy: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    cut: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    dblClick: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    doubleClick: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    drag: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    dragEnd: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    dragEnter: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    dragExit: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    dragLeave: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    dragOver: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    dragStart: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    drop: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    durationChange: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    emptied: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    encrypted: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    ended: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    error: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    focus: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    focusIn: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    focusOut: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    gotPointerCapture: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    input: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    invalid: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    keyDown: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    keyPress: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    keyUp: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    load: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    loadStart: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    loadedData: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    loadedMetadata: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    lostPointerCapture: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    mouseDown: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    mouseEnter: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    mouseLeave: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    mouseMove: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    mouseOut: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    mouseOver: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    mouseUp: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    paste: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    pause: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    play: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    playing: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    pointerCancel: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    pointerDown: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    pointerEnter: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    pointerLeave: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    pointerMove: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    pointerOut: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    pointerOver: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    pointerUp: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    popState: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    progress: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    rateChange: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    reset: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    scroll: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    seeked: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    seeking: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    select: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    stalled: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    submit: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    suspend: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    timeUpdate: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    touchCancel: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    touchEnd: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    touchMove: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    touchStart: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    transitionEnd: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    volumeChange: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    waiting: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean,
+    wheel: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
   ): FireObject = {
     val __obj = js.Dynamic.literal(abort = js.Any.fromFunction2(abort), animationEnd = js.Any.fromFunction2(animationEnd), animationIteration = js.Any.fromFunction2(animationIteration), animationStart = js.Any.fromFunction2(animationStart), blur = js.Any.fromFunction2(blur), canPlay = js.Any.fromFunction2(canPlay), canPlayThrough = js.Any.fromFunction2(canPlayThrough), change = js.Any.fromFunction2(change), click = js.Any.fromFunction2(click), compositionEnd = js.Any.fromFunction2(compositionEnd), compositionStart = js.Any.fromFunction2(compositionStart), compositionUpdate = js.Any.fromFunction2(compositionUpdate), contextMenu = js.Any.fromFunction2(contextMenu), copy = js.Any.fromFunction2(copy), cut = js.Any.fromFunction2(cut), dblClick = js.Any.fromFunction2(dblClick), doubleClick = js.Any.fromFunction2(doubleClick), drag = js.Any.fromFunction2(drag), dragEnd = js.Any.fromFunction2(dragEnd), dragEnter = js.Any.fromFunction2(dragEnter), dragExit = js.Any.fromFunction2(dragExit), dragLeave = js.Any.fromFunction2(dragLeave), dragOver = js.Any.fromFunction2(dragOver), dragStart = js.Any.fromFunction2(dragStart), drop = js.Any.fromFunction2(drop), durationChange = js.Any.fromFunction2(durationChange), emptied = js.Any.fromFunction2(emptied), encrypted = js.Any.fromFunction2(encrypted), ended = js.Any.fromFunction2(ended), error = js.Any.fromFunction2(error), focus = js.Any.fromFunction2(focus), focusIn = js.Any.fromFunction2(focusIn), focusOut = js.Any.fromFunction2(focusOut), gotPointerCapture = js.Any.fromFunction2(gotPointerCapture), input = js.Any.fromFunction2(input), invalid = js.Any.fromFunction2(invalid), keyDown = js.Any.fromFunction2(keyDown), keyPress = js.Any.fromFunction2(keyPress), keyUp = js.Any.fromFunction2(keyUp), load = js.Any.fromFunction2(load), loadStart = js.Any.fromFunction2(loadStart), loadedData = js.Any.fromFunction2(loadedData), loadedMetadata = js.Any.fromFunction2(loadedMetadata), lostPointerCapture = js.Any.fromFunction2(lostPointerCapture), mouseDown = js.Any.fromFunction2(mouseDown), mouseEnter = js.Any.fromFunction2(mouseEnter), mouseLeave = js.Any.fromFunction2(mouseLeave), mouseMove = js.Any.fromFunction2(mouseMove), mouseOut = js.Any.fromFunction2(mouseOut), mouseOver = js.Any.fromFunction2(mouseOver), mouseUp = js.Any.fromFunction2(mouseUp), paste = js.Any.fromFunction2(paste), pause = js.Any.fromFunction2(pause), play = js.Any.fromFunction2(play), playing = js.Any.fromFunction2(playing), pointerCancel = js.Any.fromFunction2(pointerCancel), pointerDown = js.Any.fromFunction2(pointerDown), pointerEnter = js.Any.fromFunction2(pointerEnter), pointerLeave = js.Any.fromFunction2(pointerLeave), pointerMove = js.Any.fromFunction2(pointerMove), pointerOut = js.Any.fromFunction2(pointerOut), pointerOver = js.Any.fromFunction2(pointerOver), pointerUp = js.Any.fromFunction2(pointerUp), popState = js.Any.fromFunction2(popState), progress = js.Any.fromFunction2(progress), rateChange = js.Any.fromFunction2(rateChange), reset = js.Any.fromFunction2(reset), scroll = js.Any.fromFunction2(scroll), seeked = js.Any.fromFunction2(seeked), seeking = js.Any.fromFunction2(seeking), select = js.Any.fromFunction2(select), stalled = js.Any.fromFunction2(stalled), submit = js.Any.fromFunction2(submit), suspend = js.Any.fromFunction2(suspend), timeUpdate = js.Any.fromFunction2(timeUpdate), touchCancel = js.Any.fromFunction2(touchCancel), touchEnd = js.Any.fromFunction2(touchEnd), touchMove = js.Any.fromFunction2(touchMove), touchStart = js.Any.fromFunction2(touchStart), transitionEnd = js.Any.fromFunction2(transitionEnd), volumeChange = js.Any.fromFunction2(volumeChange), waiting = js.Any.fromFunction2(waiting), wheel = js.Any.fromFunction2(wheel))
     __obj.asInstanceOf[FireObject]
@@ -526,7 +526,7 @@ object FireObject {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
     def withAbort(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("abort")(js.Any.fromFunction2(value))
@@ -534,7 +534,7 @@ object FireObject {
     }
     @scala.inline
     def withAnimationEnd(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("animationEnd")(js.Any.fromFunction2(value))
@@ -542,7 +542,7 @@ object FireObject {
     }
     @scala.inline
     def withAnimationIteration(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("animationIteration")(js.Any.fromFunction2(value))
@@ -550,7 +550,7 @@ object FireObject {
     }
     @scala.inline
     def withAnimationStart(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("animationStart")(js.Any.fromFunction2(value))
@@ -558,7 +558,7 @@ object FireObject {
     }
     @scala.inline
     def withBlur(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("blur")(js.Any.fromFunction2(value))
@@ -566,7 +566,7 @@ object FireObject {
     }
     @scala.inline
     def withCanPlay(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("canPlay")(js.Any.fromFunction2(value))
@@ -574,7 +574,7 @@ object FireObject {
     }
     @scala.inline
     def withCanPlayThrough(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("canPlayThrough")(js.Any.fromFunction2(value))
@@ -582,7 +582,7 @@ object FireObject {
     }
     @scala.inline
     def withChange(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.Any.fromFunction2(value))
@@ -590,7 +590,7 @@ object FireObject {
     }
     @scala.inline
     def withClick(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("click")(js.Any.fromFunction2(value))
@@ -598,7 +598,7 @@ object FireObject {
     }
     @scala.inline
     def withCompositionEnd(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("compositionEnd")(js.Any.fromFunction2(value))
@@ -606,7 +606,7 @@ object FireObject {
     }
     @scala.inline
     def withCompositionStart(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("compositionStart")(js.Any.fromFunction2(value))
@@ -614,7 +614,7 @@ object FireObject {
     }
     @scala.inline
     def withCompositionUpdate(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("compositionUpdate")(js.Any.fromFunction2(value))
@@ -622,7 +622,7 @@ object FireObject {
     }
     @scala.inline
     def withContextMenu(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenu")(js.Any.fromFunction2(value))
@@ -630,7 +630,7 @@ object FireObject {
     }
     @scala.inline
     def withCopy(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("copy")(js.Any.fromFunction2(value))
@@ -638,7 +638,7 @@ object FireObject {
     }
     @scala.inline
     def withCut(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cut")(js.Any.fromFunction2(value))
@@ -646,7 +646,7 @@ object FireObject {
     }
     @scala.inline
     def withDblClick(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dblClick")(js.Any.fromFunction2(value))
@@ -654,7 +654,7 @@ object FireObject {
     }
     @scala.inline
     def withDoubleClick(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("doubleClick")(js.Any.fromFunction2(value))
@@ -662,7 +662,7 @@ object FireObject {
     }
     @scala.inline
     def withDrag(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("drag")(js.Any.fromFunction2(value))
@@ -670,7 +670,7 @@ object FireObject {
     }
     @scala.inline
     def withDragEnd(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragEnd")(js.Any.fromFunction2(value))
@@ -678,7 +678,7 @@ object FireObject {
     }
     @scala.inline
     def withDragEnter(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragEnter")(js.Any.fromFunction2(value))
@@ -686,7 +686,7 @@ object FireObject {
     }
     @scala.inline
     def withDragExit(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragExit")(js.Any.fromFunction2(value))
@@ -694,7 +694,7 @@ object FireObject {
     }
     @scala.inline
     def withDragLeave(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragLeave")(js.Any.fromFunction2(value))
@@ -702,7 +702,7 @@ object FireObject {
     }
     @scala.inline
     def withDragOver(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragOver")(js.Any.fromFunction2(value))
@@ -710,7 +710,7 @@ object FireObject {
     }
     @scala.inline
     def withDragStart(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dragStart")(js.Any.fromFunction2(value))
@@ -718,7 +718,7 @@ object FireObject {
     }
     @scala.inline
     def withDrop(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("drop")(js.Any.fromFunction2(value))
@@ -726,7 +726,7 @@ object FireObject {
     }
     @scala.inline
     def withDurationChange(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("durationChange")(js.Any.fromFunction2(value))
@@ -734,7 +734,7 @@ object FireObject {
     }
     @scala.inline
     def withEmptied(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emptied")(js.Any.fromFunction2(value))
@@ -742,7 +742,7 @@ object FireObject {
     }
     @scala.inline
     def withEncrypted(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("encrypted")(js.Any.fromFunction2(value))
@@ -750,7 +750,7 @@ object FireObject {
     }
     @scala.inline
     def withEnded(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ended")(js.Any.fromFunction2(value))
@@ -758,7 +758,7 @@ object FireObject {
     }
     @scala.inline
     def withError(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(js.Any.fromFunction2(value))
@@ -766,7 +766,7 @@ object FireObject {
     }
     @scala.inline
     def withFocus(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("focus")(js.Any.fromFunction2(value))
@@ -774,7 +774,7 @@ object FireObject {
     }
     @scala.inline
     def withFocusIn(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("focusIn")(js.Any.fromFunction2(value))
@@ -782,7 +782,7 @@ object FireObject {
     }
     @scala.inline
     def withFocusOut(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("focusOut")(js.Any.fromFunction2(value))
@@ -790,7 +790,7 @@ object FireObject {
     }
     @scala.inline
     def withGotPointerCapture(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("gotPointerCapture")(js.Any.fromFunction2(value))
@@ -798,7 +798,7 @@ object FireObject {
     }
     @scala.inline
     def withInput(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("input")(js.Any.fromFunction2(value))
@@ -806,7 +806,7 @@ object FireObject {
     }
     @scala.inline
     def withInvalid(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("invalid")(js.Any.fromFunction2(value))
@@ -814,7 +814,7 @@ object FireObject {
     }
     @scala.inline
     def withKeyDown(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyDown")(js.Any.fromFunction2(value))
@@ -822,7 +822,7 @@ object FireObject {
     }
     @scala.inline
     def withKeyPress(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyPress")(js.Any.fromFunction2(value))
@@ -830,7 +830,7 @@ object FireObject {
     }
     @scala.inline
     def withKeyUp(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keyUp")(js.Any.fromFunction2(value))
@@ -838,7 +838,7 @@ object FireObject {
     }
     @scala.inline
     def withLoad(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("load")(js.Any.fromFunction2(value))
@@ -846,7 +846,7 @@ object FireObject {
     }
     @scala.inline
     def withLoadStart(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loadStart")(js.Any.fromFunction2(value))
@@ -854,7 +854,7 @@ object FireObject {
     }
     @scala.inline
     def withLoadedData(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loadedData")(js.Any.fromFunction2(value))
@@ -862,7 +862,7 @@ object FireObject {
     }
     @scala.inline
     def withLoadedMetadata(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("loadedMetadata")(js.Any.fromFunction2(value))
@@ -870,7 +870,7 @@ object FireObject {
     }
     @scala.inline
     def withLostPointerCapture(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lostPointerCapture")(js.Any.fromFunction2(value))
@@ -878,7 +878,7 @@ object FireObject {
     }
     @scala.inline
     def withMouseDown(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mouseDown")(js.Any.fromFunction2(value))
@@ -886,7 +886,7 @@ object FireObject {
     }
     @scala.inline
     def withMouseEnter(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mouseEnter")(js.Any.fromFunction2(value))
@@ -894,7 +894,7 @@ object FireObject {
     }
     @scala.inline
     def withMouseLeave(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mouseLeave")(js.Any.fromFunction2(value))
@@ -902,7 +902,7 @@ object FireObject {
     }
     @scala.inline
     def withMouseMove(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mouseMove")(js.Any.fromFunction2(value))
@@ -910,7 +910,7 @@ object FireObject {
     }
     @scala.inline
     def withMouseOut(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mouseOut")(js.Any.fromFunction2(value))
@@ -918,7 +918,7 @@ object FireObject {
     }
     @scala.inline
     def withMouseOver(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mouseOver")(js.Any.fromFunction2(value))
@@ -926,7 +926,7 @@ object FireObject {
     }
     @scala.inline
     def withMouseUp(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("mouseUp")(js.Any.fromFunction2(value))
@@ -934,7 +934,7 @@ object FireObject {
     }
     @scala.inline
     def withPaste(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("paste")(js.Any.fromFunction2(value))
@@ -942,7 +942,7 @@ object FireObject {
     }
     @scala.inline
     def withPause(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pause")(js.Any.fromFunction2(value))
@@ -950,7 +950,7 @@ object FireObject {
     }
     @scala.inline
     def withPlay(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("play")(js.Any.fromFunction2(value))
@@ -958,7 +958,7 @@ object FireObject {
     }
     @scala.inline
     def withPlaying(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("playing")(js.Any.fromFunction2(value))
@@ -966,7 +966,7 @@ object FireObject {
     }
     @scala.inline
     def withPointerCancel(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointerCancel")(js.Any.fromFunction2(value))
@@ -974,7 +974,7 @@ object FireObject {
     }
     @scala.inline
     def withPointerDown(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointerDown")(js.Any.fromFunction2(value))
@@ -982,7 +982,7 @@ object FireObject {
     }
     @scala.inline
     def withPointerEnter(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointerEnter")(js.Any.fromFunction2(value))
@@ -990,7 +990,7 @@ object FireObject {
     }
     @scala.inline
     def withPointerLeave(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointerLeave")(js.Any.fromFunction2(value))
@@ -998,7 +998,7 @@ object FireObject {
     }
     @scala.inline
     def withPointerMove(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointerMove")(js.Any.fromFunction2(value))
@@ -1006,7 +1006,7 @@ object FireObject {
     }
     @scala.inline
     def withPointerOut(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointerOut")(js.Any.fromFunction2(value))
@@ -1014,7 +1014,7 @@ object FireObject {
     }
     @scala.inline
     def withPointerOver(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointerOver")(js.Any.fromFunction2(value))
@@ -1022,7 +1022,7 @@ object FireObject {
     }
     @scala.inline
     def withPointerUp(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pointerUp")(js.Any.fromFunction2(value))
@@ -1030,7 +1030,7 @@ object FireObject {
     }
     @scala.inline
     def withPopState(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("popState")(js.Any.fromFunction2(value))
@@ -1038,7 +1038,7 @@ object FireObject {
     }
     @scala.inline
     def withProgress(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("progress")(js.Any.fromFunction2(value))
@@ -1046,7 +1046,7 @@ object FireObject {
     }
     @scala.inline
     def withRateChange(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rateChange")(js.Any.fromFunction2(value))
@@ -1054,7 +1054,7 @@ object FireObject {
     }
     @scala.inline
     def withReset(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.Any.fromFunction2(value))
@@ -1062,7 +1062,7 @@ object FireObject {
     }
     @scala.inline
     def withScroll(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("scroll")(js.Any.fromFunction2(value))
@@ -1070,7 +1070,7 @@ object FireObject {
     }
     @scala.inline
     def withSeeked(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seeked")(js.Any.fromFunction2(value))
@@ -1078,7 +1078,7 @@ object FireObject {
     }
     @scala.inline
     def withSeeking(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("seeking")(js.Any.fromFunction2(value))
@@ -1086,7 +1086,7 @@ object FireObject {
     }
     @scala.inline
     def withSelect(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("select")(js.Any.fromFunction2(value))
@@ -1094,7 +1094,7 @@ object FireObject {
     }
     @scala.inline
     def withStalled(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stalled")(js.Any.fromFunction2(value))
@@ -1102,7 +1102,7 @@ object FireObject {
     }
     @scala.inline
     def withSubmit(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("submit")(js.Any.fromFunction2(value))
@@ -1110,7 +1110,7 @@ object FireObject {
     }
     @scala.inline
     def withSuspend(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("suspend")(js.Any.fromFunction2(value))
@@ -1118,7 +1118,7 @@ object FireObject {
     }
     @scala.inline
     def withTimeUpdate(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("timeUpdate")(js.Any.fromFunction2(value))
@@ -1126,7 +1126,7 @@ object FireObject {
     }
     @scala.inline
     def withTouchCancel(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("touchCancel")(js.Any.fromFunction2(value))
@@ -1134,7 +1134,7 @@ object FireObject {
     }
     @scala.inline
     def withTouchEnd(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("touchEnd")(js.Any.fromFunction2(value))
@@ -1142,7 +1142,7 @@ object FireObject {
     }
     @scala.inline
     def withTouchMove(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("touchMove")(js.Any.fromFunction2(value))
@@ -1150,7 +1150,7 @@ object FireObject {
     }
     @scala.inline
     def withTouchStart(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("touchStart")(js.Any.fromFunction2(value))
@@ -1158,7 +1158,7 @@ object FireObject {
     }
     @scala.inline
     def withTransitionEnd(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("transitionEnd")(js.Any.fromFunction2(value))
@@ -1166,7 +1166,7 @@ object FireObject {
     }
     @scala.inline
     def withVolumeChange(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("volumeChange")(js.Any.fromFunction2(value))
@@ -1174,7 +1174,7 @@ object FireObject {
     }
     @scala.inline
     def withWaiting(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("waiting")(js.Any.fromFunction2(value))
@@ -1182,7 +1182,7 @@ object FireObject {
     }
     @scala.inline
     def withWheel(
-      value: (/* element */ Document_ | Element | Window_ | Node, /* options */ js.UndefOr[js.Object]) => Boolean
+      value: (/* element */ Document | Element | Window | Node, /* options */ js.UndefOr[js.Object]) => Boolean
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("wheel")(js.Any.fromFunction2(value))

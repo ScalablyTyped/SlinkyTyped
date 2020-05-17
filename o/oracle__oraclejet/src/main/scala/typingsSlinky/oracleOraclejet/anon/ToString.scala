@@ -1,0 +1,19 @@
+package typingsSlinky.oracleOraclejet.anon
+
+import org.scalablytyped.runtime.StringDictionary
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ToString
+  extends /* key */ StringDictionary[js.Any]
+
+object ToString {
+  @scala.inline
+  def apply(): ToString = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[ToString]
+  }
+}
+

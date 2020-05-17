@@ -1,5 +1,6 @@
 package typingsSlinky.phosphorWidgets.commandpaletteMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLUListElement
@@ -9,7 +10,6 @@ import typingsSlinky.phosphorWidgets.commandpaletteMod.CommandPalette.IItemOptio
 import typingsSlinky.phosphorWidgets.commandpaletteMod.CommandPalette.IOptions
 import typingsSlinky.phosphorWidgets.commandpaletteMod.CommandPalette.IRenderer
 import typingsSlinky.phosphorWidgets.widgetMod.Widget
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -111,7 +111,7 @@ class CommandPalette_ protected () extends Widget {
     * called in response to events on the command palette's DOM node.
     * It should not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
   /**
     * Clear the search results and schedule an update.
     *

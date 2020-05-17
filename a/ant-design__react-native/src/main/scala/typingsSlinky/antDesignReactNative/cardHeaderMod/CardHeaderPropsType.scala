@@ -2,7 +2,7 @@ package typingsSlinky.antDesignReactNative.cardHeaderMod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.antDesignReactNative.PickCardStyleheaderConten
+import typingsSlinky.antDesignReactNative.anon.PickCardStyleheaderConten
 import typingsSlinky.antDesignReactNative.libStyleMod.WithThemeStyles
 import scala.scalajs.js
 import scala.scalajs.js.`|`

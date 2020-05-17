@@ -1,17 +1,35 @@
 package typingsSlinky.winrtUwp.Windows.System.RemoteSystems
 
-import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** An IRemoteSystemFilter that limits the set of discoverable remote systems by allowing only those of specific device types. */
-@JSGlobal("Windows.System.RemoteSystems.RemoteSystemKindFilter")
 @js.native
-class RemoteSystemKindFilter protected () extends IRemoteSystemFilter {
-  /** Initializes an instance of the RemoteSystemKindFilter class with a list of string representations of device types to target. These strings should conform to the values of the properties of the RemoteSystemKinds class. */
-  def this(remoteSystemKinds: IIterable[String]) = this()
+trait RemoteSystemKindFilter extends IRemoteSystemFilter {
   /** String representation(s) of the device type(s) that the containing RemoteSystemKindFilter object targets. */
   var remoteSystemKinds: RemoteSystemKinds = js.native
+}
+
+object RemoteSystemKindFilter {
+  @scala.inline
+  def apply(remoteSystemKinds: RemoteSystemKinds): RemoteSystemKindFilter = {
+    val __obj = js.Dynamic.literal(remoteSystemKinds = remoteSystemKinds.asInstanceOf[js.Any])
+    __obj.asInstanceOf[RemoteSystemKindFilter]
+  }
+  @scala.inline
+  implicit class RemoteSystemKindFilterOps[Self <: RemoteSystemKindFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withRemoteSystemKinds(value: RemoteSystemKinds): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remoteSystemKinds")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

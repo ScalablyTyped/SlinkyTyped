@@ -9,9 +9,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the properties of images to scan. */
-@JSGlobal("Windows.Devices.Scanners.ImageScanner")
 @js.native
-abstract class ImageScanner () extends js.Object {
+trait ImageScanner extends js.Object {
   /** Gets and sets the scan settings of the auto-configured scan unit, like the file format, including compression to deliver the scanned data in. This property is ignored if the scanner is not capable of auto-configuration. */
   var autoConfiguration: ImageScannerAutoConfiguration = js.native
   /** Gets the default scan source chosen for this scanner device. */
@@ -50,20 +49,87 @@ abstract class ImageScanner () extends js.Object {
   def scanPreviewToStreamAsync(scanSource: ImageScannerScanSource, targetStream: IRandomAccessStream): IPromiseWithIAsyncOperation[ImageScannerPreviewResult] = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Devices.Scanners.ImageScanner")
-@js.native
-object ImageScanner extends js.Object {
-  /**
-    * Creates an instance of a ImageScanner object based on a scanners device information ID. This method is required for broker device enumeration.
-    * @param deviceId The device information ID. See DeviceInformation.Id property.
-    * @return The ImageScanner object.
-    */
-  def fromIdAsync(deviceId: String): IPromiseWithIAsyncOperation[ImageScanner] = js.native
-  /**
-    * Returns the class selection string that apps can use to enumerate scanner devices. This method is required for the brokered device enumeration.
-    * @return The class selection.
-    */
-  def getDeviceSelector(): String = js.native
+object ImageScanner {
+  @scala.inline
+  def apply(
+    autoConfiguration: ImageScannerAutoConfiguration,
+    defaultScanSource: ImageScannerScanSource,
+    deviceId: String,
+    feederConfiguration: ImageScannerFeederConfiguration,
+    flatbedConfiguration: ImageScannerFlatbedConfiguration,
+    isPreviewSupported: ImageScannerScanSource => Boolean,
+    isScanSourceSupported: ImageScannerScanSource => Boolean,
+    scanFilesToFolderAsync: (ImageScannerScanSource, StorageFolder) => IPromiseWithIAsyncOperationWithProgress[ImageScannerScanResult, Double],
+    scanPreviewToStreamAsync: (ImageScannerScanSource, IRandomAccessStream) => IPromiseWithIAsyncOperation[ImageScannerPreviewResult]
+  ): ImageScanner = {
+    val __obj = js.Dynamic.literal(autoConfiguration = autoConfiguration.asInstanceOf[js.Any], defaultScanSource = defaultScanSource.asInstanceOf[js.Any], deviceId = deviceId.asInstanceOf[js.Any], feederConfiguration = feederConfiguration.asInstanceOf[js.Any], flatbedConfiguration = flatbedConfiguration.asInstanceOf[js.Any], isPreviewSupported = js.Any.fromFunction1(isPreviewSupported), isScanSourceSupported = js.Any.fromFunction1(isScanSourceSupported), scanFilesToFolderAsync = js.Any.fromFunction2(scanFilesToFolderAsync), scanPreviewToStreamAsync = js.Any.fromFunction2(scanPreviewToStreamAsync))
+    __obj.asInstanceOf[ImageScanner]
+  }
+  @scala.inline
+  implicit class ImageScannerOps[Self <: ImageScanner] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoConfiguration(value: ImageScannerAutoConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("autoConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDefaultScanSource(value: ImageScannerScanSource): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultScanSource")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDeviceId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deviceId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFeederConfiguration(value: ImageScannerFeederConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("feederConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFlatbedConfiguration(value: ImageScannerFlatbedConfiguration): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("flatbedConfiguration")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIsPreviewSupported(value: ImageScannerScanSource => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isPreviewSupported")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withIsScanSourceSupported(value: ImageScannerScanSource => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isScanSourceSupported")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withScanFilesToFolderAsync(
+      value: (ImageScannerScanSource, StorageFolder) => IPromiseWithIAsyncOperationWithProgress[ImageScannerScanResult, Double]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scanFilesToFolderAsync")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withScanPreviewToStreamAsync(
+      value: (ImageScannerScanSource, IRandomAccessStream) => IPromiseWithIAsyncOperation[ImageScannerPreviewResult]
+    ): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("scanPreviewToStreamAsync")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

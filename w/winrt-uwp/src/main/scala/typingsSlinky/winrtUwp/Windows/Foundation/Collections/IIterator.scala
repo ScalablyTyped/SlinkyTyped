@@ -1,6 +1,6 @@
 package typingsSlinky.winrtUwp.Windows.Foundation.Collections
 
-import typingsSlinky.winrtUwp.AnonItems
+import typingsSlinky.winrtUwp.anon.Items
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait IIterator[T] extends js.Object {
   /**
     * Retrieves all items in the collection.
     */
-  def getMany(): AnonItems[T] = js.native
+  def getMany(): Items[T] = js.native
   /**
     * Advances the iterator to the next item in the collection.
     * @return True if the iterator refers to a valid item in the collection; false if the iterator passes the end of the collection.
@@ -25,7 +25,7 @@ trait IIterator[T] extends js.Object {
 
 object IIterator {
   @scala.inline
-  def apply[T](current: T, getMany: () => AnonItems[T], hasCurrent: Boolean, moveNext: () => Boolean): IIterator[T] = {
+  def apply[T](current: T, getMany: () => Items[T], hasCurrent: Boolean, moveNext: () => Boolean): IIterator[T] = {
     val __obj = js.Dynamic.literal(current = current.asInstanceOf[js.Any], getMany = js.Any.fromFunction0(getMany), hasCurrent = hasCurrent.asInstanceOf[js.Any], moveNext = js.Any.fromFunction0(moveNext))
     __obj.asInstanceOf[IIterator[T]]
   }
@@ -42,7 +42,7 @@ object IIterator {
         ret
     }
     @scala.inline
-    def withGetMany(value: () => AnonItems[T]): Self[T] = {
+    def withGetMany(value: () => Items[T]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getMany")(js.Any.fromFunction0(value))
         ret

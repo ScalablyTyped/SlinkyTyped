@@ -1,7 +1,7 @@
 package typingsSlinky.next.utilsMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.next.ErrorstatusCodenumber
+import typingsSlinky.next.anon.ErrorstatusCodenumber
 import typingsSlinky.node.querystringMod.ParsedUrlQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`

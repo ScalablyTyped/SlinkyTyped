@@ -1,6 +1,6 @@
 package typingsSlinky.mochaSugarFree.mod
 
-import typingsSlinky.mochaSugarFree.OptionsfnHookFunc
+import typingsSlinky.mochaSugarFree.anon.OptionsfnHookFunc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

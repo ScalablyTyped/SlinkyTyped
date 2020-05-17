@@ -1,6 +1,6 @@
 package typingsSlinky.instagramPrivateApi.mediaConfigureVideoOptionsMod
 
-import typingsSlinky.instagramPrivateApi.AnonLength
+import typingsSlinky.instagramPrivateApi.anon.Length
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.`0`
 import typingsSlinky.instagramPrivateApi.instagramPrivateApiStrings.`1`
 import scala.scalajs.js
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait MediaConfigureVideoOptions extends js.Object {
   var audio_muted: js.UndefOr[Boolean] = js.native
-  var clips: js.UndefOr[js.Array[AnonLength]] = js.native
+  var clips: js.UndefOr[js.Array[Length]] = js.native
   var geotag_enabled: js.UndefOr[`1` | `0`] = js.native
   var height: Double = js.native
   var length: Double = js.native
@@ -72,7 +72,7 @@ object MediaConfigureVideoOptions {
         ret
     }
     @scala.inline
-    def withClips(value: js.Array[AnonLength]): Self = {
+    def withClips(value: js.Array[Length]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("clips")(value.asInstanceOf[js.Any])
         ret

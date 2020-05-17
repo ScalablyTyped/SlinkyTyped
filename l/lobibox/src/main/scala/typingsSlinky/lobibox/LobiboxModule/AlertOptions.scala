@@ -1,16 +1,16 @@
 package typingsSlinky.lobibox.LobiboxModule
 
-import typingsSlinky.lobibox.AnonIconClass
+import typingsSlinky.lobibox.anon.IconClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait AlertOptions extends MessageBoxesOptions {
-  var error: js.UndefOr[AnonIconClass] = js.native
-  var info: js.UndefOr[AnonIconClass] = js.native
-  var success: js.UndefOr[AnonIconClass] = js.native
-  var warning: js.UndefOr[AnonIconClass] = js.native
+  var error: js.UndefOr[IconClass] = js.native
+  var info: js.UndefOr[IconClass] = js.native
+  var success: js.UndefOr[IconClass] = js.native
+  var warning: js.UndefOr[IconClass] = js.native
 }
 
 object AlertOptions {
@@ -26,7 +26,7 @@ object AlertOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withError(value: AnonIconClass): Self = {
+    def withError(value: IconClass): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("error")(value.asInstanceOf[js.Any])
         ret
@@ -38,7 +38,7 @@ object AlertOptions {
         ret
     }
     @scala.inline
-    def withInfo(value: AnonIconClass): Self = {
+    def withInfo(value: IconClass): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("info")(value.asInstanceOf[js.Any])
         ret
@@ -50,7 +50,7 @@ object AlertOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: AnonIconClass): Self = {
+    def withSuccess(value: IconClass): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(value.asInstanceOf[js.Any])
         ret
@@ -62,7 +62,7 @@ object AlertOptions {
         ret
     }
     @scala.inline
-    def withWarning(value: AnonIconClass): Self = {
+    def withWarning(value: IconClass): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("warning")(value.asInstanceOf[js.Any])
         ret

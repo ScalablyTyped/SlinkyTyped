@@ -5,7 +5,7 @@ import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.TouchableWithoutFeedbackProps
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeMaterialDropdown.PartialDropDownProps
+import typingsSlinky.reactNativeMaterialDropdown.anon.PartialDropDownProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

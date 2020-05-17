@@ -1,5 +1,6 @@
 package typingsSlinky.sindresorhusFnv1a
 
+import typingsSlinky.sindresorhusFnv1a.anon.Call
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +12,7 @@ object mod extends js.Object {
   // declare function fnv1a(string: string): number;
   // export = fnv1a;
   @JSName("default")
-  var default_Original: AnonCall = js.native
+  var default_Original: Call = js.native
   /**
   	[FNV-1a](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) non-cryptographic hash function.
   	@returns The hash as a positive integer.

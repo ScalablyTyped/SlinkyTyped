@@ -1,8 +1,8 @@
 package typingsSlinky.passport.mod
 
-import typingsSlinky.passport.AnonFamilyName
-import typingsSlinky.passport.AnonType
-import typingsSlinky.passport.AnonValue
+import typingsSlinky.passport.anon.FamilyName
+import typingsSlinky.passport.anon.Type
+import typingsSlinky.passport.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,10 +10,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Profile extends js.Object {
   var displayName: String = js.native
-  var emails: js.UndefOr[js.Array[AnonType]] = js.native
+  var emails: js.UndefOr[js.Array[Type]] = js.native
   var id: String = js.native
-  var name: js.UndefOr[AnonFamilyName] = js.native
-  var photos: js.UndefOr[js.Array[AnonValue]] = js.native
+  var name: js.UndefOr[FamilyName] = js.native
+  var photos: js.UndefOr[js.Array[Value]] = js.native
   var provider: String = js.native
   var username: js.UndefOr[String] = js.native
 }
@@ -49,7 +49,7 @@ object Profile {
         ret
     }
     @scala.inline
-    def withEmails(value: js.Array[AnonType]): Self = {
+    def withEmails(value: js.Array[Type]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emails")(value.asInstanceOf[js.Any])
         ret
@@ -61,7 +61,7 @@ object Profile {
         ret
     }
     @scala.inline
-    def withName(value: AnonFamilyName): Self = {
+    def withName(value: FamilyName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
         ret
@@ -73,7 +73,7 @@ object Profile {
         ret
     }
     @scala.inline
-    def withPhotos(value: js.Array[AnonValue]): Self = {
+    def withPhotos(value: js.Array[Value]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("photos")(value.asInstanceOf[js.Any])
         ret

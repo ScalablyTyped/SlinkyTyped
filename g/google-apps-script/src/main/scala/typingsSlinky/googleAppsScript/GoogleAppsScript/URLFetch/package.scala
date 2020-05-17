@@ -6,5 +6,4 @@ import scala.scalajs.js.annotation._
 
 package object URLFetch {
   type HttpHeaders = org.scalablytyped.runtime.StringDictionary[java.lang.String]
-  type Payload = java.lang.String | org.scalablytyped.runtime.StringDictionary[js.Any] | typingsSlinky.googleAppsScript.GoogleAppsScript.Base.Blob
 }

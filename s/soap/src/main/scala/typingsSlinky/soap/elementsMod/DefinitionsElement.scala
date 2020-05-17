@@ -2,7 +2,7 @@ package typingsSlinky.soap.elementsMod
 
 import org.scalablytyped.runtime.Instantiable4
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.soap.AnonTypes
+import typingsSlinky.soap.anon.Types
 import typingsSlinky.soap.typesMod.IWsdlBaseOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +23,7 @@ class DefinitionsElement () extends Element {
   ] = js.native
   var bindings: StringDictionary[BindingElement] = js.native
   var complexTypes: js.Any = js.native
-  var descriptions: AnonTypes = js.native
+  var descriptions: Types = js.native
   var messages: StringDictionary[MessageElement] = js.native
   var portTypes: StringDictionary[PortTypeElement] = js.native
   var schemas: StringDictionary[SchemaElement] = js.native

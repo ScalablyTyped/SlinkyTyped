@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<@storybook/api.@storybook/api.State> */
 @js.native
-trait Patch extends js.Object {
+trait Patch extends InputPatch {
   var customQueryParams: js.UndefOr[QueryParams] = js.native
   var default: js.UndefOr[Boolean] = js.native
   var dismissedVersionNotification: js.UndefOr[String] = js.native

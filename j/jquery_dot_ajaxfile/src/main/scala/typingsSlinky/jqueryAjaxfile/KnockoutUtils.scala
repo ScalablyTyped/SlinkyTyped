@@ -2,6 +2,8 @@ package typingsSlinky.jqueryAjaxfile
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.jqueryAjaxfile.anon.AddDisposeCallback
+import typingsSlinky.jqueryAjaxfile.anon.Clear
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,11 +13,11 @@ trait KnockoutUtils extends js.Object {
   //////////////////////////////////
   // utils.domData.js
   //////////////////////////////////
-  var domData: AnonClear = js.native
+  var domData: Clear = js.native
   //////////////////////////////////
   // utils.domNodeDisposal.js
   //////////////////////////////////
-  var domNodeDisposal: AnonAddDisposeCallback = js.native
+  var domNodeDisposal: AddDisposeCallback = js.native
   //////////////////////////////////
   // utils.js
   //////////////////////////////////

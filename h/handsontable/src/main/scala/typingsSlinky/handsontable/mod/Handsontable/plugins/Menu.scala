@@ -1,8 +1,8 @@
 package typingsSlinky.handsontable.mod.Handsontable.plugins
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.handsontable.mod._Handsontable.Core
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ trait Menu extends js.Object {
   def closeAllSubMenus(): Unit = js.native
   def closeSubMenu(row: Double): Unit = js.native
   def destroy(): Unit = js.native
-  def executeCommand(event: Event_): Unit = js.native
+  def executeCommand(event: Event): Unit = js.native
   def isOpened(): Boolean = js.native
   def isSubMenu(): Boolean = js.native
   def open(): Unit = js.native
@@ -38,7 +38,7 @@ trait Menu extends js.Object {
   def setOffset(area: String): Unit = js.native
   def setOffset(area: String, offset: Double): Unit = js.native
   def setPosition(coords: js.Object): Unit = js.native
-  def setPosition(coords: Event_): Unit = js.native
+  def setPosition(coords: Event): Unit = js.native
   def setPositionAboveCursor(cursor: Cursor): Unit = js.native
   def setPositionBelowCursor(cursor: Cursor): Unit = js.native
   def setPositionOnLeftOfCursor(cursor: Cursor): Unit = js.native

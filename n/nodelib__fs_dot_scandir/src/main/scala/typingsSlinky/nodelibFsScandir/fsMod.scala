@@ -1,14 +1,19 @@
 package typingsSlinky.nodelibFsScandir
 
-import typingsSlinky.node.Anon4
-import typingsSlinky.node.Anon5
-import typingsSlinky.node.AnonEncodingWithFileTypes
-import typingsSlinky.node.AnonWithFileTypes
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
+import typingsSlinky.node.anon.EncodingWithFileTypes
+import typingsSlinky.node.anon.WithFileTypes
+import typingsSlinky.node.anon.`4`
+import typingsSlinky.node.anon.`5`
 import typingsSlinky.node.fsMod.Dirent
 import typingsSlinky.node.fsMod.PathLike
 import typingsSlinky.node.fsMod.Stats
+import typingsSlinky.nodelibFsScandir.anon.FnCall
+import typingsSlinky.nodelibFsScandir.anon.PartialFileSystemAdapter
+import typingsSlinky.nodelibFsScandir.anon.Typeoflstat
+import typingsSlinky.nodelibFsScandir.anon.Typeofreaddir
+import typingsSlinky.nodelibFsScandir.anon.Typeofstat
 import typingsSlinky.nodelibFsScandir.nodelibFsScandirStrings.buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -31,11 +36,11 @@ object fsMod extends js.Object {
     def lstatSync(path: PathLike): Stats = js.native
     def readdirSync(path: PathLike): js.Array[Buffer | String] = js.native
     def readdirSync(path: PathLike, options: String): js.Array[Buffer | String] = js.native
-    def readdirSync(path: PathLike, options: Anon4): js.Array[Buffer | String] = js.native
-    def readdirSync(path: PathLike, options: Anon5): js.Array[Dirent] = js.native
-    def readdirSync(path: PathLike, options: AnonEncodingWithFileTypes): js.Array[Buffer] = js.native
-    def readdirSync(path: PathLike, options: AnonWithFileTypes): js.Array[String] = js.native
     def readdirSync(path: PathLike, options: BufferEncoding): js.Array[String] = js.native
+    def readdirSync(path: PathLike, options: EncodingWithFileTypes): js.Array[Buffer] = js.native
+    def readdirSync(path: PathLike, options: WithFileTypes): js.Array[String] = js.native
+    def readdirSync(path: PathLike, options: `4`): js.Array[Buffer | String] = js.native
+    def readdirSync(path: PathLike, options: `5`): js.Array[Dirent] = js.native
     @JSName("readdirSync")
     def readdirSync_buffer(path: PathLike, options: buffer): js.Array[Buffer] = js.native
     def statSync(path: PathLike): Stats = js.native

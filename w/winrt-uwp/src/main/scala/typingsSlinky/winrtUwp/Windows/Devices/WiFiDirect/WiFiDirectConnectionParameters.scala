@@ -1,16 +1,13 @@
 package typingsSlinky.winrtUwp.Windows.Devices.WiFiDirect
 
-import typingsSlinky.winrtUwp.Windows.Devices.Enumeration.DevicePairingKinds
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Used by an app to specify the connection parameters for a Wi-Fi Direct connect/pairing operation. */
-@JSGlobal("Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters")
 @js.native
-/** Creates a new WiFiDirectConnectionParameters object. */
-class WiFiDirectConnectionParameters () extends js.Object {
+trait WiFiDirectConnectionParameters extends js.Object {
   /** The group owner intent value used for group owner negotiation in a Wi-Fi Direct connect/pairing operation. */
   var groupOwnerIntent: Double = js.native
   /** Gets a list of supported configuration methods, in order of preference. */
@@ -19,15 +16,41 @@ class WiFiDirectConnectionParameters () extends js.Object {
   var preferredPairingProcedure: WiFiDirectPairingProcedure = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Devices.WiFiDirect.WiFiDirectConnectionParameters")
-@js.native
-object WiFiDirectConnectionParameters extends js.Object {
-  /**
-    * Gets a list of the DevicePairingKinds supporting the given configuration method.
-    * @param configurationMethod A value specifying a configuration method.
-    * @return A value specifying a pairing kind, for use with the pairing functionality in the Windows.Devices.Enumeration API.
-    */
-  def getDevicePairingKinds(configurationMethod: WiFiDirectConfigurationMethod): DevicePairingKinds = js.native
+object WiFiDirectConnectionParameters {
+  @scala.inline
+  def apply(
+    groupOwnerIntent: Double,
+    preferenceOrderedConfigurationMethods: IVector[WiFiDirectConfigurationMethod],
+    preferredPairingProcedure: WiFiDirectPairingProcedure
+  ): WiFiDirectConnectionParameters = {
+    val __obj = js.Dynamic.literal(groupOwnerIntent = groupOwnerIntent.asInstanceOf[js.Any], preferenceOrderedConfigurationMethods = preferenceOrderedConfigurationMethods.asInstanceOf[js.Any], preferredPairingProcedure = preferredPairingProcedure.asInstanceOf[js.Any])
+    __obj.asInstanceOf[WiFiDirectConnectionParameters]
+  }
+  @scala.inline
+  implicit class WiFiDirectConnectionParametersOps[Self <: WiFiDirectConnectionParameters] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGroupOwnerIntent(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("groupOwnerIntent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreferenceOrderedConfigurationMethods(value: IVector[WiFiDirectConfigurationMethod]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preferenceOrderedConfigurationMethods")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPreferredPairingProcedure(value: WiFiDirectPairingProcedure): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("preferredPairingProcedure")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

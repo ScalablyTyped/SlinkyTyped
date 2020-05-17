@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,9 +14,4 @@ trait HTMLLegendElement extends HTMLElement {
     */
   val form: org.scalajs.dom.raw.HTMLFormElement | Null = js.native
 }
-
-@JSGlobal("HTMLLegendElement")
-@js.native
-object HTMLLegendElement
-  extends Instantiable0[org.scalajs.dom.raw.HTMLLegendElement]
 

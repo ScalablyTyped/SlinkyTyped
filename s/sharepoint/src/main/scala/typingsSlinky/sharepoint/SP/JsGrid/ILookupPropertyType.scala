@@ -1,7 +1,7 @@
 package typingsSlinky.sharepoint.SP.JsGrid
 
-import typingsSlinky.sharepoint.AnonBLimitToList
-import typingsSlinky.sharepoint.AnonDataValue
+import typingsSlinky.sharepoint.anon.BLimitToList
+import typingsSlinky.sharepoint.anon.DataValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait ILookupPropertyType extends IPropertyType {
   def GetImageSource(record: IRecord, dataValue: js.Any): String = js.native
   def GetIsLimitedToList(): Boolean = js.native
   def GetItems(fnCallback: js.Any): Unit = js.native
-  def GetSerializableLookupPropType(): AnonBLimitToList = js.native
+  def GetSerializableLookupPropType(): BLimitToList = js.native
   def GetStyleId(dataValue: js.Any): String = js.native
   def LocalizedToData(localized: String): js.Any = js.native
 }
@@ -21,12 +21,12 @@ trait ILookupPropertyType extends IPropertyType {
 object ILookupPropertyType {
   @scala.inline
   def apply(
-    BeginValidateNormalizeConvert: (Double, String, js.Any, Boolean, js.Function1[/* args */ AnonDataValue, Unit], js.Any) => Unit,
+    BeginValidateNormalizeConvert: (Double, String, js.Any, Boolean, js.Function1[/* args */ DataValue, Unit], js.Any) => Unit,
     DataToLocalized: js.Any => String,
     GetImageSource: (IRecord, js.Any) => String,
     GetIsLimitedToList: () => Boolean,
     GetItems: js.Any => Unit,
-    GetSerializableLookupPropType: () => AnonBLimitToList,
+    GetSerializableLookupPropType: () => BLimitToList,
     GetStyleId: js.Any => String,
     ID: String,
     LocalizedToData: String => js.Any
@@ -65,7 +65,7 @@ object ILookupPropertyType {
         ret
     }
     @scala.inline
-    def withGetSerializableLookupPropType(value: () => AnonBLimitToList): Self = {
+    def withGetSerializableLookupPropType(value: () => BLimitToList): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("GetSerializableLookupPropType")(js.Any.fromFunction0(value))
         ret

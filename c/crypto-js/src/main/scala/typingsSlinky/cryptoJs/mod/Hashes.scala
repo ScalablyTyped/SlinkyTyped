@@ -1,11 +1,10 @@
 package typingsSlinky.cryptoJs.mod
 
-import typingsSlinky.cryptoJs.AnonAES
-import typingsSlinky.cryptoJs.AnonAnsiX923
-import typingsSlinky.cryptoJs.AnonBase64
-import typingsSlinky.cryptoJs.AnonCBC
-import typingsSlinky.cryptoJs.AnonHex
-import typingsSlinky.cryptoJs.AnonWordArray
+import typingsSlinky.cryptoJs.anon.AES
+import typingsSlinky.cryptoJs.anon.AnsiX923
+import typingsSlinky.cryptoJs.anon.Base64
+import typingsSlinky.cryptoJs.anon.CBC
+import typingsSlinky.cryptoJs.anon.Hex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,12 +19,12 @@ trait Hashes extends js.Object {
   var Rabbit: CipherHelper = js.native
   var RabbitLegacy: CipherHelper = js.native
   var TripleDES: CipherHelper = js.native
-  var algo: AnonAES = js.native
-  var enc: AnonBase64 = js.native
-  var format: AnonHex = js.native
-  var lib: AnonWordArray = js.native
-  var mode: AnonCBC = js.native
-  var pad: AnonAnsiX923 = js.native
+  var algo: AES = js.native
+  var enc: Base64 = js.native
+  var format: Hex = js.native
+  var lib: typingsSlinky.cryptoJs.anon.WordArray = js.native
+  var mode: CBC = js.native
+  var pad: AnsiX923 = js.native
   def HmacMD5(message: String): WordArray = js.native
   def HmacMD5(message: String, key: String, options: js.Any*): WordArray = js.native
   def HmacMD5(message: String, key: WordArray, options: js.Any*): WordArray = js.native

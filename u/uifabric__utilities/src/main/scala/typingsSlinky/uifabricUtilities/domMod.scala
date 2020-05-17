@@ -1,10 +1,10 @@
 package typingsSlinky.uifabricUtilities
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Event_
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Window
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
 import typingsSlinky.uifabricUtilities.ivirtualelementMod.IVirtualElement
 import scala.scalajs.js
@@ -28,32 +28,27 @@ object domMod extends js.Object {
   def findElementRecursive(element: HTMLElement, matchFunction: js.Function1[/* element */ HTMLElement, Boolean]): HTMLElement | Null = js.native
   def getChildren(parent: HTMLElement): js.Array[HTMLElement] = js.native
   def getChildren(parent: HTMLElement, allowVirtualChildren: Boolean): js.Array[HTMLElement] = js.native
-  def getDocument(): js.UndefOr[Document_] = js.native
-  def getDocument(rootElement: HTMLElement): js.UndefOr[Document_] = js.native
+  def getDocument(): js.UndefOr[Document] = js.native
+  def getDocument(rootElement: HTMLElement): js.UndefOr[Document] = js.native
   def getParent(child: HTMLElement): HTMLElement | Null = js.native
   def getParent(child: HTMLElement, allowVirtualParents: Boolean): HTMLElement | Null = js.native
   def getRect(): js.UndefOr[IRectangle] = js.native
   def getRect(element: HTMLElement): js.UndefOr[IRectangle] = js.native
-  def getRect(element: Window_): js.UndefOr[IRectangle] = js.native
+  def getRect(element: Window): js.UndefOr[IRectangle] = js.native
   def getVirtualParent(child: HTMLElement): js.UndefOr[HTMLElement] = js.native
-  def getWindow(): js.UndefOr[Window_] = js.native
-  def getWindow(rootElement: Element): js.UndefOr[Window_] = js.native
+  def getWindow(): js.UndefOr[Window] = js.native
+  def getWindow(rootElement: Element): js.UndefOr[Window] = js.native
   def isVirtualElement(element: HTMLElement): /* is @uifabric/utilities.@uifabric/utilities/lib/dom/IVirtualElement.IVirtualElement */ Boolean = js.native
   def isVirtualElement(element: IVirtualElement): /* is @uifabric/utilities.@uifabric/utilities/lib/dom/IVirtualElement.IVirtualElement */ Boolean = js.native
-  def on(element: Element, eventName: String, callback: js.Function1[/* ev */ Event_, Unit]): js.Function0[Unit] = js.native
+  def on(element: Element, eventName: String, callback: js.Function1[/* ev */ Event, Unit]): js.Function0[Unit] = js.native
   def on(
     element: Element,
     eventName: String,
-    callback: js.Function1[/* ev */ Event_, Unit],
+    callback: js.Function1[/* ev */ Event, Unit],
     options: Boolean
   ): js.Function0[Unit] = js.native
-  def on(element: Window_, eventName: String, callback: js.Function1[/* ev */ Event_, Unit]): js.Function0[Unit] = js.native
-  def on(
-    element: Window_,
-    eventName: String,
-    callback: js.Function1[/* ev */ Event_, Unit],
-    options: Boolean
-  ): js.Function0[Unit] = js.native
+  def on(element: Window, eventName: String, callback: js.Function1[/* ev */ Event, Unit]): js.Function0[Unit] = js.native
+  def on(element: Window, eventName: String, callback: js.Function1[/* ev */ Event, Unit], options: Boolean): js.Function0[Unit] = js.native
   def portalContainsElement(target: HTMLElement): Boolean = js.native
   def portalContainsElement(target: HTMLElement, parent: HTMLElement): Boolean = js.native
   def raiseClick(target: Element): Unit = js.native

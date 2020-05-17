@@ -1,5 +1,6 @@
 package typingsSlinky.officeUiFabricReact
 
+import typingsSlinky.officeUiFabricReact.anon.RequiredPickIShimmeredDet
 import typingsSlinky.officeUiFabricReact.shimmeredDetailsListTypesMod.IShimmeredDetailsListStyles
 import scala.scalajs.js
 import scala.scalajs.js.`|`

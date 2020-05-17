@@ -17,18 +17,5 @@ package object marketplacemeteringMod {
   type UsageQuantity = scala.Double
   type UsageRecordList = js.Array[typingsSlinky.awsSdk.marketplacemeteringMod.UsageRecord]
   type UsageRecordResultList = js.Array[typingsSlinky.awsSdk.marketplacemeteringMod.UsageRecordResult]
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.Success_
-    - typingsSlinky.awsSdk.awsSdkStrings.CustomerNotSubscribed
-    - typingsSlinky.awsSdk.awsSdkStrings.DuplicateRecord
-    - java.lang.String
-  */
-  type UsageRecordResultStatus = typingsSlinky.awsSdk.marketplacemeteringMod._UsageRecordResultStatus | java.lang.String
   type VersionInteger = scala.Double
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2016-01-14`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.marketplacemeteringMod._apiVersion | java.lang.String
 }

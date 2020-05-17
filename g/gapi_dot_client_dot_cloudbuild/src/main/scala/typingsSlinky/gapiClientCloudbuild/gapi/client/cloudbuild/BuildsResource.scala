@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientCloudbuild.gapi.client.cloudbuild
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientCloudbuild.AnonBearertoken
-import typingsSlinky.gapiClientCloudbuild.AnonCallback
-import typingsSlinky.gapiClientCloudbuild.AnonFields
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientCloudbuild.anon.Bearertoken
+import typingsSlinky.gapiClientCloudbuild.anon.Callback
+import typingsSlinky.gapiClientCloudbuild.anon.Fields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait BuildsResource extends js.Object {
   /** Cancels a requested build in progress. */
-  def cancel(request: AnonBearertoken): Request_[Build] = js.native
+  def cancel(request: Bearertoken): Request[Build] = js.native
   /**
     * Starts a build with the specified configuration.
     *
@@ -19,30 +19,30 @@ trait BuildsResource extends js.Object {
     * the build, which can be passed to GetBuild to determine its status (e.g.,
     * success or failure).
     */
-  def create(request: AnonCallback): Request_[Operation] = js.native
+  def create(request: Callback): Request[Operation] = js.native
   /**
     * Returns information about a previously requested build.
     *
     * The Build that is returned includes its status (e.g., success or failure,
     * or in-progress), and timing information.
     */
-  def get(request: AnonBearertoken): Request_[Build] = js.native
+  def get(request: Bearertoken): Request[Build] = js.native
   /**
     * Lists previously requested builds.
     *
     * Previously requested builds may still be in-progress, or may have finished
     * successfully or unsuccessfully.
     */
-  def list(request: AnonFields): Request_[ListBuildsResponse] = js.native
+  def list(request: Fields): Request[ListBuildsResponse] = js.native
 }
 
 object BuildsResource {
   @scala.inline
   def apply(
-    cancel: AnonBearertoken => Request_[Build],
-    create: AnonCallback => Request_[Operation],
-    get: AnonBearertoken => Request_[Build],
-    list: AnonFields => Request_[ListBuildsResponse]
+    cancel: Bearertoken => Request[Build],
+    create: Callback => Request[Operation],
+    get: Bearertoken => Request[Build],
+    list: Fields => Request[ListBuildsResponse]
   ): BuildsResource = {
     val __obj = js.Dynamic.literal(cancel = js.Any.fromFunction1(cancel), create = js.Any.fromFunction1(create), get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[BuildsResource]
@@ -54,25 +54,25 @@ object BuildsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCancel(value: AnonBearertoken => Request_[Build]): Self = {
+    def withCancel(value: Bearertoken => Request[Build]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withCreate(value: AnonCallback => Request_[Operation]): Self = {
+    def withCreate(value: Callback => Request[Operation]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("create")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonBearertoken => Request_[Build]): Self = {
+    def withGet(value: Bearertoken => Request[Build]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonFields => Request_[ListBuildsResponse]): Self = {
+    def withList(value: Fields => Request[ListBuildsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

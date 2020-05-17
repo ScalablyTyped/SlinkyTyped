@@ -4,7 +4,7 @@ import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactLazylog.AnonText
+import typingsSlinky.reactLazylog.anon.Text
 import typingsSlinky.reactLazylog.linePartMod.LinePartProps
 import typingsSlinky.reactLazylog.linePartMod.default
 import scala.scalajs.js
@@ -28,7 +28,7 @@ object LinePart {
   
   def withProps(p: LinePartProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(part: AnonText): Builder = {
+  def apply(part: Text): Builder = {
     val __props = js.Dynamic.literal(part = part.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[LinePartProps]))
   }

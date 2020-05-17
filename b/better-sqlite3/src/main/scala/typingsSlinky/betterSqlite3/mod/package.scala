@@ -8,7 +8,7 @@ package object mod {
   type ArgumentTypes[F /* <: typingsSlinky.betterSqlite3.mod.VariableArgFunction */] = js.Any
   type ColumnDefinition = typingsSlinky.betterSqlite3.mod.BetterSqlite3.ColumnDefinition
   type Database = typingsSlinky.betterSqlite3.mod.BetterSqlite3.Database
-  type Integer = (js.Function1[/* val */ typingsSlinky.integer.mod.IntLike, typingsSlinky.integer.mod.IntClass]) with typingsSlinky.betterSqlite3.TypeofInteger
+  type Integer = (js.Function1[/* val */ typingsSlinky.integer.mod.IntLike, typingsSlinky.integer.mod.IntClass]) with typingsSlinky.betterSqlite3.anon.TypeofInteger
   type SqliteError = org.scalablytyped.runtime.Instantiable2[
     /* message */ java.lang.String, 
     /* code */ java.lang.String, 

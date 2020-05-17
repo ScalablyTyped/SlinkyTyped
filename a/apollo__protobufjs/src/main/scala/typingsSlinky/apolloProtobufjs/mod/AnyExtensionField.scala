@@ -13,16 +13,8 @@ trait AnyExtensionField extends AnyNestedObject
 
 object AnyExtensionField {
   @scala.inline
-  def IExtensionField(extend: String, id: Double, `type`: String): AnyExtensionField = {
-    val __obj = js.Dynamic.literal(extend = extend.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnyExtensionField]
-  }
+  implicit def apply(value: IExtensionField): AnyExtensionField = value.asInstanceOf[AnyExtensionField]
   @scala.inline
-  def IExtensionMapField(extend: String, id: Double, keyType: String, `type`: String): AnyExtensionField = {
-    val __obj = js.Dynamic.literal(extend = extend.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], keyType = keyType.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AnyExtensionField]
-  }
+  implicit def apply(value: IExtensionMapField): AnyExtensionField = value.asInstanceOf[AnyExtensionField]
 }
 

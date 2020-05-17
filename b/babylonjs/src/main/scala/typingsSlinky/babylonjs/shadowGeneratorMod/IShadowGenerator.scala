@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.shadowGeneratorMod
 
-import typingsSlinky.babylonjs.PartialuseInstancesboolea
+import typingsSlinky.babylonjs.anon.PartialuseInstancesboolea
 import typingsSlinky.babylonjs.effectMod.Effect
 import typingsSlinky.babylonjs.materialDefinesMod.MaterialDefines
 import typingsSlinky.babylonjs.mathVectorMod.Matrix

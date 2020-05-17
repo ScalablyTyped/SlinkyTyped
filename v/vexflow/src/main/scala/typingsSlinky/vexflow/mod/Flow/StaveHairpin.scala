@@ -1,10 +1,10 @@
 package typingsSlinky.vexflow.mod.Flow
 
-import typingsSlinky.vexflow.AnonFirstnote
-import typingsSlinky.vexflow.AnonLeftshiftticks
 import typingsSlinky.vexflow.Vex.Flow.Modifier.Position
 import typingsSlinky.vexflow.Vex.Flow.StaveHairpin.`type`
 import typingsSlinky.vexflow.Vex.IRenderContext
+import typingsSlinky.vexflow.anon.Firstnote
+import typingsSlinky.vexflow.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class StaveHairpin protected ()
   extends typingsSlinky.vexflow.Vex.Flow.StaveHairpin {
-  def this(notes: AnonFirstnote, `type`: `type`) = this()
+  def this(notes: Firstnote, `type`: typingsSlinky.vexflow.Vex.Flow.StaveHairpin.`type`) = this()
 }
 
 /* static members */
@@ -23,17 +23,17 @@ object StaveHairpin extends js.Object {
   def FormatByTicksAndDraw(
     ctx: IRenderContext,
     formatter: typingsSlinky.vexflow.Vex.Flow.Formatter,
-    notes: AnonFirstnote,
+    notes: Firstnote,
     `type`: `type`,
     position: Position
   ): Unit = js.native
   def FormatByTicksAndDraw(
     ctx: IRenderContext,
     formatter: typingsSlinky.vexflow.Vex.Flow.Formatter,
-    notes: AnonFirstnote,
+    notes: Firstnote,
     `type`: `type`,
     position: Position,
-    options: AnonLeftshiftticks
+    options: Height
   ): Unit = js.native
 }
 

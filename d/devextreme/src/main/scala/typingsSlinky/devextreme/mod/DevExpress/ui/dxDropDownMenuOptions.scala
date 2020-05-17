@@ -1,12 +1,12 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonEventJQueryEvent
-import typingsSlinky.devextreme.AnonItemIndexModel
+import typingsSlinky.devextreme.anon.EventJQueryEvent
+import typingsSlinky.devextreme.anon.ItemIndexModel
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,9 +31,9 @@ trait dxDropDownMenuOptions extends WidgetOptions[dxDropDownMenu] {
   /** An array of items displayed by the widget. */
   var items: js.UndefOr[js.Array[_]] = js.native
   /** A function that is executed when the button that opens the drop-down menu is clicked or tapped. */
-  var onButtonClick: js.UndefOr[(js.Function1[/* e */ AnonEventJQueryEvent, _]) | String] = js.native
+  var onButtonClick: js.UndefOr[(js.Function1[/* e */ EventJQueryEvent, _]) | String] = js.native
   /** A function that is executed when a menu item is clicked or tapped. */
-  var onItemClick: js.UndefOr[(js.Function1[/* e */ AnonItemIndexModel, _]) | String] = js.native
+  var onItemClick: js.UndefOr[(js.Function1[/* e */ ItemIndexModel, _]) | String] = js.native
   /** Specifies whether or not the drop-down menu is displayed. */
   var opened: js.UndefOr[Boolean] = js.native
   /** Specifies the popup element's height in pixels. */
@@ -138,13 +138,13 @@ object dxDropDownMenuOptions {
         ret
     }
     @scala.inline
-    def withOnButtonClickFunction1(value: /* e */ AnonEventJQueryEvent => _): Self = {
+    def withOnButtonClickFunction1(value: /* e */ EventJQueryEvent => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onButtonClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnButtonClick(value: (js.Function1[/* e */ AnonEventJQueryEvent, _]) | String): Self = {
+    def withOnButtonClick(value: (js.Function1[/* e */ EventJQueryEvent, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onButtonClick")(value.asInstanceOf[js.Any])
         ret
@@ -156,13 +156,13 @@ object dxDropDownMenuOptions {
         ret
     }
     @scala.inline
-    def withOnItemClickFunction1(value: /* e */ AnonItemIndexModel => _): Self = {
+    def withOnItemClickFunction1(value: /* e */ ItemIndexModel => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnItemClick(value: (js.Function1[/* e */ AnonItemIndexModel, _]) | String): Self = {
+    def withOnItemClick(value: (js.Function1[/* e */ ItemIndexModel, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onItemClick")(value.asInstanceOf[js.Any])
         ret

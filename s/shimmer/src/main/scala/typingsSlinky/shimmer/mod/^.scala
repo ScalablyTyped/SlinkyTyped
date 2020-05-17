@@ -1,6 +1,6 @@
 package typingsSlinky.shimmer.mod
 
-import typingsSlinky.shimmer.AnonLogger
+import typingsSlinky.shimmer.anon.Logger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("shimmer", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
-  def apply(options: AnonLogger): Unit = js.native
+  def apply(options: Logger): Unit = js.native
   def massUnwrap[Nodule /* <: js.Object */](nodules: js.Array[Nodule], names: js.Array[/* keyof Nodule */ String]): Unit = js.native
   def massWrap[Nodule /* <: js.Object */, FieldName /* <: /* keyof Nodule */ String */](
     nodules: js.Array[Nodule],

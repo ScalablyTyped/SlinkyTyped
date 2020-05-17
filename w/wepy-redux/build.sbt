@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "wepy-redux"
-version := "1.7-dt-20190717Z-2ad0a3"
-scalaVersion := "2.13.1"
+version := "1.7-dt-20190717Z-b9de5f"
+scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "redux" % "4.0.5-e999f1",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-8ac92e",
-  "org.scalablytyped.slinky" %%% "wepy" % "1.7-dt-20191126Z-590c1f")
+  "org.scalablytyped.slinky" %%% "redux" % "4.0.5-d1b67b",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb",
+  "org.scalablytyped.slinky" %%% "wepy" % "1.7-dt-20191126Z-c7a103")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

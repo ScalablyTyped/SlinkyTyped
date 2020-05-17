@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.Devices.Sensors
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Provides data for what sensor triggered the data threshold monitoring task. */
+@JSGlobal("Windows.Devices.Sensors.SensorDataThresholdTriggerDetails")
+@js.native
+abstract class SensorDataThresholdTriggerDetails ()
+  extends typingsSlinky.winrtUwp.Windows.Devices.Sensors.SensorDataThresholdTriggerDetails
+

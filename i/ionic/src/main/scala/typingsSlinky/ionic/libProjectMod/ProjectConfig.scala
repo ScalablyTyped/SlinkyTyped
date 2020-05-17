@@ -1,6 +1,6 @@
 package typingsSlinky.ionic.libProjectMod
 
-import typingsSlinky.ionic.PartialReadonlyIProjectCo
+import typingsSlinky.ionic.anon.PartialReadonlyIProjectCo
 import typingsSlinky.ionic.definitionsMod.IProjectConfig
 import typingsSlinky.ionic.definitionsMod.ProjectType
 import typingsSlinky.ionicCliFramework.mod.BaseConfig

@@ -1,7 +1,7 @@
 package typingsSlinky.reactSortableTree.mod
 
-import typingsSlinky.reactSortableTree.FullTreeTreeIndexTreePath
-import typingsSlinky.reactSortableTree.FullTreedepthnumbernewNod
+import typingsSlinky.reactSortableTree.anon.FullTreeTreeIndexTreePath
+import typingsSlinky.reactSortableTree.anon.FullTreedepthnumbernewNod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,22 +1,22 @@
 package typingsSlinky.reactNativeFirebase.mod.RNFirebase
 
-import typingsSlinky.reactNativeFirebase.AnonBundleId
-import typingsSlinky.reactNativeFirebase.AnonInstallApp
+import typingsSlinky.reactNativeFirebase.anon.BundleId
+import typingsSlinky.reactNativeFirebase.anon.InstallApp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait ActionCodeSettings extends js.Object {
-  var android: AnonInstallApp = js.native
+  var android: InstallApp = js.native
   var handleCodeInApp: js.UndefOr[Boolean] = js.native
-  var iOS: AnonBundleId = js.native
+  var iOS: BundleId = js.native
   var url: String = js.native
 }
 
 object ActionCodeSettings {
   @scala.inline
-  def apply(android: AnonInstallApp, iOS: AnonBundleId, url: String): ActionCodeSettings = {
+  def apply(android: InstallApp, iOS: BundleId, url: String): ActionCodeSettings = {
     val __obj = js.Dynamic.literal(android = android.asInstanceOf[js.Any], iOS = iOS.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActionCodeSettings]
   }
@@ -27,13 +27,13 @@ object ActionCodeSettings {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withAndroid(value: AnonInstallApp): Self = {
+    def withAndroid(value: InstallApp): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("android")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withIOS(value: AnonBundleId): Self = {
+    def withIOS(value: BundleId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("iOS")(value.asInstanceOf[js.Any])
         ret

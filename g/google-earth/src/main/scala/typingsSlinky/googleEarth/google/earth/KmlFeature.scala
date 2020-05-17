@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("google.earth.KmlFeature")
 @js.native
-class KmlFeature () extends KmlObject {
+trait KmlFeature extends KmlObject {
   /**
     * Stores either the lookAt or camera view.
     */
@@ -148,5 +147,246 @@ class KmlFeature () extends KmlObject {
     * In the Google Earth List View, each feature has a checkbox that allows the user to control visibility of the feature.
     */
   def setVisibility(visibility: Boolean): Unit = js.native
+}
+
+object KmlFeature {
+  @scala.inline
+  def apply(
+    click: KmlMouseEvent => Unit,
+    dblclick: KmlMouseEvent => Unit,
+    equals: KmlObject => Boolean,
+    getAbstractView: () => KmlAbstractView,
+    getAddress: () => String,
+    getBalloonHtml: () => String,
+    getBalloonHtmlUnsafe: () => String,
+    getComputedStyle: () => KmlStyle,
+    getDescription: () => String,
+    getId: () => String,
+    getKml: () => String,
+    getName: () => String,
+    getNextSibling: () => KmlFeature,
+    getOpacity: () => Double,
+    getOpen: () => Boolean,
+    getOwnerDocument: () => KmlDocument,
+    getParentNode: () => KmlObject,
+    getPreviousSibling: () => KmlFeature,
+    getRegion: () => KmlRegion,
+    getSnippet: () => String,
+    getStyleSelector: () => KmlStyleSelector,
+    getStyleUrl: () => String,
+    getTimePrimitive: () => KmlTimePrimitive,
+    getType: () => String,
+    getUrl: () => String,
+    getVisibility: () => Boolean,
+    mousedown: KmlMouseEvent => Unit,
+    mousemove: KmlMouseEvent => Unit,
+    mouseout: KmlMouseEvent => Unit,
+    mouseover: KmlMouseEvent => Unit,
+    mouseup: KmlMouseEvent => Unit,
+    release: () => Unit,
+    setAbstractView: KmlAbstractView => Unit,
+    setAddress: String => Unit,
+    setDescription: String => Unit,
+    setName: String => Unit,
+    setOpacity: Double => Unit,
+    setOpen: Boolean => Unit,
+    setRegion: KmlRegion => Unit,
+    setSnippet: String => Unit,
+    setStyleSelector: KmlStyleSelector => Unit,
+    setStyleUrl: String => Unit,
+    setTimePrimitive: KmlTimePrimitive => Unit,
+    setVisibility: Boolean => Unit
+  ): KmlFeature = {
+    val __obj = js.Dynamic.literal(click = js.Any.fromFunction1(click), dblclick = js.Any.fromFunction1(dblclick), equals = js.Any.fromFunction1(equals), getAbstractView = js.Any.fromFunction0(getAbstractView), getAddress = js.Any.fromFunction0(getAddress), getBalloonHtml = js.Any.fromFunction0(getBalloonHtml), getBalloonHtmlUnsafe = js.Any.fromFunction0(getBalloonHtmlUnsafe), getComputedStyle = js.Any.fromFunction0(getComputedStyle), getDescription = js.Any.fromFunction0(getDescription), getId = js.Any.fromFunction0(getId), getKml = js.Any.fromFunction0(getKml), getName = js.Any.fromFunction0(getName), getNextSibling = js.Any.fromFunction0(getNextSibling), getOpacity = js.Any.fromFunction0(getOpacity), getOpen = js.Any.fromFunction0(getOpen), getOwnerDocument = js.Any.fromFunction0(getOwnerDocument), getParentNode = js.Any.fromFunction0(getParentNode), getPreviousSibling = js.Any.fromFunction0(getPreviousSibling), getRegion = js.Any.fromFunction0(getRegion), getSnippet = js.Any.fromFunction0(getSnippet), getStyleSelector = js.Any.fromFunction0(getStyleSelector), getStyleUrl = js.Any.fromFunction0(getStyleUrl), getTimePrimitive = js.Any.fromFunction0(getTimePrimitive), getType = js.Any.fromFunction0(getType), getUrl = js.Any.fromFunction0(getUrl), getVisibility = js.Any.fromFunction0(getVisibility), mousedown = js.Any.fromFunction1(mousedown), mousemove = js.Any.fromFunction1(mousemove), mouseout = js.Any.fromFunction1(mouseout), mouseover = js.Any.fromFunction1(mouseover), mouseup = js.Any.fromFunction1(mouseup), release = js.Any.fromFunction0(release), setAbstractView = js.Any.fromFunction1(setAbstractView), setAddress = js.Any.fromFunction1(setAddress), setDescription = js.Any.fromFunction1(setDescription), setName = js.Any.fromFunction1(setName), setOpacity = js.Any.fromFunction1(setOpacity), setOpen = js.Any.fromFunction1(setOpen), setRegion = js.Any.fromFunction1(setRegion), setSnippet = js.Any.fromFunction1(setSnippet), setStyleSelector = js.Any.fromFunction1(setStyleSelector), setStyleUrl = js.Any.fromFunction1(setStyleUrl), setTimePrimitive = js.Any.fromFunction1(setTimePrimitive), setVisibility = js.Any.fromFunction1(setVisibility))
+    __obj.asInstanceOf[KmlFeature]
+  }
+  @scala.inline
+  implicit class KmlFeatureOps[Self <: KmlFeature] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetAbstractView(value: () => KmlAbstractView): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAbstractView")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetAddress(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAddress")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetBalloonHtml(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBalloonHtml")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetBalloonHtmlUnsafe(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getBalloonHtmlUnsafe")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetComputedStyle(value: () => KmlStyle): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getComputedStyle")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetDescription(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getDescription")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetKml(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getKml")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetName(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getName")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetNextSibling(value: () => KmlFeature): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getNextSibling")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetOpacity(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getOpacity")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetOpen(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getOpen")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetPreviousSibling(value: () => KmlFeature): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getPreviousSibling")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRegion(value: () => KmlRegion): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRegion")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetSnippet(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getSnippet")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetStyleSelector(value: () => KmlStyleSelector): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStyleSelector")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetStyleUrl(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getStyleUrl")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetTimePrimitive(value: () => KmlTimePrimitive): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getTimePrimitive")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetVisibility(value: () => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getVisibility")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetAbstractView(value: KmlAbstractView => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAbstractView")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetAddress(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setAddress")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetDescription(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setDescription")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetName(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setName")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetOpacity(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setOpacity")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetOpen(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setOpen")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetRegion(value: KmlRegion => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setRegion")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetSnippet(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setSnippet")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetStyleSelector(value: KmlStyleSelector => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStyleSelector")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetStyleUrl(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setStyleUrl")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetTimePrimitive(value: KmlTimePrimitive => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setTimePrimitive")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetVisibility(value: Boolean => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setVisibility")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

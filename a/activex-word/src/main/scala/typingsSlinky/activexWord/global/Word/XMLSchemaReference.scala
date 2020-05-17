@@ -1,0 +1,11 @@
+package typingsSlinky.activexWord.global.Word
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("Word.XMLSchemaReference")
+@js.native
+class XMLSchemaReference protected ()
+  extends typingsSlinky.activexWord.Word.XMLSchemaReference
+

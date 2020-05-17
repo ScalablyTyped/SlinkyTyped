@@ -13,6 +13,7 @@ package object ej {
   type CheckBox = typingsSlinky.ejWebAll.ej.CheckBox_
   type ColorPicker = typingsSlinky.ejWebAll.ej.ColorPicker_
   type ComboBox = typingsSlinky.ejWebAll.ej.ComboBox_
+  type CurrencyTextbox = typingsSlinky.ejWebAll.ej.Editor
   type DatePicker = typingsSlinky.ejWebAll.ej.DatePicker_
   type DateRangePicker = typingsSlinky.ejWebAll.ej.DateRangePicker_
   type DateTimePicker = typingsSlinky.ejWebAll.ej.DateTimePicker_
@@ -33,8 +34,10 @@ package object ej {
   type MaskEdit = typingsSlinky.ejWebAll.ej.MaskEdit_
   type Menu = typingsSlinky.ejWebAll.ej.Menu_
   type NavigationDrawer = typingsSlinky.ejWebAll.ej.NavigationDrawer_
+  type NumericTextbox = typingsSlinky.ejWebAll.ej.Editor
   type Pager = typingsSlinky.ejWebAll.ej.Pager_
   type PdfViewer = typingsSlinky.ejWebAll.ej.PdfViewer_
+  type PercentageTextbox = typingsSlinky.ejWebAll.ej.Editor
   type PivotChart = typingsSlinky.ejWebAll.ej.PivotChart_
   type PivotClient = typingsSlinky.ejWebAll.ej.PivotClient_
   type PivotGauge = typingsSlinky.ejWebAll.ej.PivotGauge_
@@ -42,7 +45,7 @@ package object ej {
   type PivotPager = typingsSlinky.ejWebAll.ej.PivotPager_
   type PivotSchemaDesigner = typingsSlinky.ejWebAll.ej.PivotSchemaDesigner_
   type PivotTreeMap = typingsSlinky.ejWebAll.ej.PivotTreeMap_
-  type Print_ = typingsSlinky.ejWebAll.ej.Print__
+  type Print = typingsSlinky.ejWebAll.ej.Print_
   type ProgressBar = typingsSlinky.ejWebAll.ej.ProgressBar_
   type RTE = typingsSlinky.ejWebAll.ej.RTE_
   type RadialMenu = typingsSlinky.ejWebAll.ej.RadialMenu_

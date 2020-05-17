@@ -1,6 +1,6 @@
 package typingsSlinky.stripe.mod.issuing.cardholders
 
-import typingsSlinky.stripe.AnonAddressICardholderBillingAddress
+import typingsSlinky.stripe.anon.AddressICardholderBillingAddress
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait ICardholderCreateOptions extends ICardholderUpdateOptions {
     * The cardholder’s billing address.
     */
   @JSName("billing")
-  var billing_ICardholderCreateOptions: AnonAddressICardholderBillingAddress = js.native
+  var billing_ICardholderCreateOptions: AddressICardholderBillingAddress = js.native
   /**
     * The cardholder’s name. This will be printed on cards issued to them.
     */
@@ -24,7 +24,7 @@ trait ICardholderCreateOptions extends ICardholderUpdateOptions {
 
 object ICardholderCreateOptions {
   @scala.inline
-  def apply(billing: AnonAddressICardholderBillingAddress, name: String, `type`: CardholderType): ICardholderCreateOptions = {
+  def apply(billing: AddressICardholderBillingAddress, name: String, `type`: CardholderType): ICardholderCreateOptions = {
     val __obj = js.Dynamic.literal(billing = billing.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICardholderCreateOptions]
@@ -36,7 +36,7 @@ object ICardholderCreateOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBilling(value: AnonAddressICardholderBillingAddress): Self = {
+    def withBilling(value: AddressICardholderBillingAddress): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("billing")(value.asInstanceOf[js.Any])
         ret

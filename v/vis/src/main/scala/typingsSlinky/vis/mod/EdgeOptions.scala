@@ -1,9 +1,8 @@
 package typingsSlinky.vis.mod
 
-import typingsSlinky.vis.AnonAlign
-import typingsSlinky.vis.AnonColor
-import typingsSlinky.vis.AnonForceDirection
-import typingsSlinky.vis.AnonFrom
+import typingsSlinky.vis.anon.Align
+import typingsSlinky.vis.anon.ForceDirection
+import typingsSlinky.vis.anon.From
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,10 +10,10 @@ import scala.scalajs.js.annotation._
 @js.native
 trait EdgeOptions extends js.Object {
   var arrowStrikethrough: js.UndefOr[Boolean] = js.native
-  var arrows: js.UndefOr[String | AnonFrom] = js.native
-  var color: js.UndefOr[String | AnonColor] = js.native
+  var arrows: js.UndefOr[String | From] = js.native
+  var color: js.UndefOr[String | typingsSlinky.vis.anon.Color] = js.native
   var dashes: js.UndefOr[Boolean | js.Array[Double]] = js.native
-  var font: js.UndefOr[String | AnonAlign] = js.native
+  var font: js.UndefOr[String | Align] = js.native
   var hidden: js.UndefOr[Boolean] = js.native
   var hoverWidth: js.UndefOr[Double] = js.native
    // please note, hoverWidth could be also a function. This case is not represented here
@@ -27,7 +26,7 @@ trait EdgeOptions extends js.Object {
    // please note, selectionWidth could be also a function. This case is not represented here
   var selfReferenceSize: js.UndefOr[Double] = js.native
   var shadow: js.UndefOr[Boolean | OptionsShadow] = js.native
-  var smooth: js.UndefOr[Boolean | AnonForceDirection] = js.native
+  var smooth: js.UndefOr[Boolean | ForceDirection] = js.native
   var title: js.UndefOr[String] = js.native
   var value: js.UndefOr[Double] = js.native
   var width: js.UndefOr[Double] = js.native
@@ -58,7 +57,7 @@ object EdgeOptions {
         ret
     }
     @scala.inline
-    def withArrows(value: String | AnonFrom): Self = {
+    def withArrows(value: String | From): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("arrows")(value.asInstanceOf[js.Any])
         ret
@@ -70,7 +69,7 @@ object EdgeOptions {
         ret
     }
     @scala.inline
-    def withColor(value: String | AnonColor): Self = {
+    def withColor(value: String | typingsSlinky.vis.anon.Color): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("color")(value.asInstanceOf[js.Any])
         ret
@@ -94,7 +93,7 @@ object EdgeOptions {
         ret
     }
     @scala.inline
-    def withFont(value: String | AnonAlign): Self = {
+    def withFont(value: String | Align): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("font")(value.asInstanceOf[js.Any])
         ret
@@ -226,7 +225,7 @@ object EdgeOptions {
         ret
     }
     @scala.inline
-    def withSmooth(value: Boolean | AnonForceDirection): Self = {
+    def withSmooth(value: Boolean | ForceDirection): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("smooth")(value.asInstanceOf[js.Any])
         ret

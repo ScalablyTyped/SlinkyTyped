@@ -1,7 +1,7 @@
 package typingsSlinky.pizzip.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.pizzip.AnonBase64
+import typingsSlinky.pizzip.anon.Base64
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +31,7 @@ trait ZipObject extends js.Object {
   /**
     * the options of the file.
     */
-  var options: AnonBase64 = js.native
+  var options: Base64 = js.native
   /**
     * The UNIX permissions of the file, if any. Also accepts a string representing the octal value : "644", "755", etc. On nodejs you can use the mode attribute of nodejs' fs.Stats.
     */
@@ -71,7 +71,7 @@ object ZipObject {
     dir: Boolean,
     dosPermissions: Double,
     name: String,
-    options: AnonBase64,
+    options: Base64,
     unixPermissions: Double | String
   ): ZipObject = {
     val __obj = js.Dynamic.literal(asArrayBuffer = js.Any.fromFunction0(asArrayBuffer), asBinary = js.Any.fromFunction0(asBinary), asNodeBuffer = js.Any.fromFunction0(asNodeBuffer), asText = js.Any.fromFunction0(asText), asUint8Array = js.Any.fromFunction0(asUint8Array), comment = comment.asInstanceOf[js.Any], date = date.asInstanceOf[js.Any], dir = dir.asInstanceOf[js.Any], dosPermissions = dosPermissions.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], unixPermissions = unixPermissions.asInstanceOf[js.Any])
@@ -144,7 +144,7 @@ object ZipObject {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonBase64): Self = {
+    def withOptions(value: Base64): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

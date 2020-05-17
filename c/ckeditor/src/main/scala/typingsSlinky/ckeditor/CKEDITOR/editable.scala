@@ -1,6 +1,5 @@
 package typingsSlinky.ckeditor.CKEDITOR
 
-import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ckeditor.CKEDITOR.dom.element
 import typingsSlinky.ckeditor.CKEDITOR.dom.range
 import typingsSlinky.ckeditor.CKEDITOR.dom.text
@@ -8,11 +7,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("CKEDITOR.editable")
 @js.native
-class editable protected () extends element {
-  def this(editor: editor, element: element) = this()
-  def this(editor: editor, element: HTMLElement) = this()
+trait editable extends element {
   var hasFocus: Boolean = js.native
   val status: String = js.native
   def attachClass(className: String): Unit = js.native

@@ -1,17 +1,13 @@
 package typingsSlinky.kendoUi.kendo.ui
 
-import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.JQuery
 import typingsSlinky.kendoUi.kendo.data.DataSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.ui.FileManager")
 @js.native
-class FileManager protected () extends Widget {
-  def this(element: Element) = this()
-  def this(element: Element, options: FileManagerOptions) = this()
+trait FileManager extends Widget {
   var dataSource: DataSource = js.native
   @JSName("options")
   var options_FileManager: FileManagerOptions = js.native
@@ -23,13 +19,5 @@ class FileManager protected () extends Widget {
   def path(): Unit = js.native
   def refresh(): Unit = js.native
   def view(): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("kendo.ui.FileManager")
-@js.native
-object FileManager extends js.Object {
-  var fn: FileManager = js.native
-  def extend(proto: js.Object): FileManager = js.native
 }
 

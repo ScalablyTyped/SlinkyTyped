@@ -1,7 +1,7 @@
 package typingsSlinky.mobx.internalMod
 
-import typingsSlinky.mobx.AnonConfigurable
-import typingsSlinky.mobx.AnonEnumerable
+import typingsSlinky.mobx.anon.Configurable
+import typingsSlinky.mobx.anon.Enumerable
 import typingsSlinky.mobx.decoratorsMod.BabelDescriptor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ object namedActionDecorator extends js.Object {
     /* target */ js.Any, 
     /* prop */ js.Any, 
     /* descriptor */ BabelDescriptor, 
-    Unit | AnonConfigurable | AnonEnumerable
+    Unit | Configurable | Enumerable
   ] = js.native
 }
 

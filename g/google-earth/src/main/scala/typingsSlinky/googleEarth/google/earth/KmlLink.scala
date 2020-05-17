@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("google.earth.KmlLink")
 @js.native
-class KmlLink () extends KmlObject {
+trait KmlLink extends KmlObject {
   /**
     * A URL (either an HTTP address or a local file specification).
     * When the parent of Link is a NetworkLink, href is a KML file.
@@ -99,5 +98,134 @@ class KmlLink () extends KmlObject {
     * Specifies how the link is refreshed when the camera changes.
     */
   def setViewRefreshTime(viewRefreshTime: Double): Unit = js.native
+}
+
+object KmlLink {
+  @scala.inline
+  def apply(
+    click: KmlMouseEvent => Unit,
+    dblclick: KmlMouseEvent => Unit,
+    equals: KmlObject => Boolean,
+    getHref: () => String,
+    getId: () => String,
+    getOwnerDocument: () => KmlDocument,
+    getParentNode: () => KmlObject,
+    getRefreshInterval: () => Double,
+    getRefreshMode: () => KmlRefreshModeEnum,
+    getType: () => String,
+    getUrl: () => String,
+    getViewBoundScale: () => Double,
+    getViewFormat: () => String,
+    getViewRefreshMode: () => KmlViewRefreshModeEnum,
+    getViewRefreshTime: () => Double,
+    mousedown: KmlMouseEvent => Unit,
+    mousemove: KmlMouseEvent => Unit,
+    mouseout: KmlMouseEvent => Unit,
+    mouseover: KmlMouseEvent => Unit,
+    mouseup: KmlMouseEvent => Unit,
+    release: () => Unit,
+    setHref: String => Unit,
+    setRefreshInterval: Double => Unit,
+    setRefreshMode: KmlRefreshModeEnum => Unit,
+    setViewBoundScale: Double => Unit,
+    setViewFormat: String => Unit,
+    setViewRefreshMode: KmlViewRefreshModeEnum => Unit,
+    setViewRefreshTime: Double => Unit
+  ): KmlLink = {
+    val __obj = js.Dynamic.literal(click = js.Any.fromFunction1(click), dblclick = js.Any.fromFunction1(dblclick), equals = js.Any.fromFunction1(equals), getHref = js.Any.fromFunction0(getHref), getId = js.Any.fromFunction0(getId), getOwnerDocument = js.Any.fromFunction0(getOwnerDocument), getParentNode = js.Any.fromFunction0(getParentNode), getRefreshInterval = js.Any.fromFunction0(getRefreshInterval), getRefreshMode = js.Any.fromFunction0(getRefreshMode), getType = js.Any.fromFunction0(getType), getUrl = js.Any.fromFunction0(getUrl), getViewBoundScale = js.Any.fromFunction0(getViewBoundScale), getViewFormat = js.Any.fromFunction0(getViewFormat), getViewRefreshMode = js.Any.fromFunction0(getViewRefreshMode), getViewRefreshTime = js.Any.fromFunction0(getViewRefreshTime), mousedown = js.Any.fromFunction1(mousedown), mousemove = js.Any.fromFunction1(mousemove), mouseout = js.Any.fromFunction1(mouseout), mouseover = js.Any.fromFunction1(mouseover), mouseup = js.Any.fromFunction1(mouseup), release = js.Any.fromFunction0(release), setHref = js.Any.fromFunction1(setHref), setRefreshInterval = js.Any.fromFunction1(setRefreshInterval), setRefreshMode = js.Any.fromFunction1(setRefreshMode), setViewBoundScale = js.Any.fromFunction1(setViewBoundScale), setViewFormat = js.Any.fromFunction1(setViewFormat), setViewRefreshMode = js.Any.fromFunction1(setViewRefreshMode), setViewRefreshTime = js.Any.fromFunction1(setViewRefreshTime))
+    __obj.asInstanceOf[KmlLink]
+  }
+  @scala.inline
+  implicit class KmlLinkOps[Self <: KmlLink] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetHref(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getHref")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRefreshInterval(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRefreshInterval")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRefreshMode(value: () => KmlRefreshModeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRefreshMode")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetViewBoundScale(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getViewBoundScale")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetViewFormat(value: () => String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getViewFormat")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetViewRefreshMode(value: () => KmlViewRefreshModeEnum): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getViewRefreshMode")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetViewRefreshTime(value: () => Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getViewRefreshTime")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetHref(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setHref")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetRefreshInterval(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setRefreshInterval")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetRefreshMode(value: KmlRefreshModeEnum => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setRefreshMode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetViewBoundScale(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setViewBoundScale")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetViewFormat(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setViewFormat")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetViewRefreshMode(value: KmlViewRefreshModeEnum => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setViewRefreshMode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetViewRefreshTime(value: Double => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setViewRefreshTime")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.highcharts.mod
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +32,7 @@ object RangeSelectorButtonsEventsOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClick(value: (/* e */ Event_, /* Return */ js.UndefOr[Boolean]) => Unit): Self = {
+    def withClick(value: (/* e */ Event, /* Return */ js.UndefOr[Boolean]) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("click")(js.Any.fromFunction2(value))
         ret

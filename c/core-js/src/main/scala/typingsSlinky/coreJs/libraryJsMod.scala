@@ -1,7 +1,9 @@
 package typingsSlinky.coreJs
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.coreJs.core.Locale_
+import typingsSlinky.coreJs.anon.FnCall
+import typingsSlinky.coreJs.anon.Typeofcore
+import typingsSlinky.coreJs.core.Locale
 import typingsSlinky.std.ArrayLike
 import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.MapConstructor
@@ -66,7 +68,7 @@ object libraryJsMod extends js.Object {
   val _underscore: Boolean = js.native
   val global: js.Any = js.native
   val version: java.lang.String = js.native
-  def addLocale(lang: java.lang.String, locale: Locale_): Typeofcore = js.native
+  def addLocale(lang: java.lang.String, locale: Locale): Typeofcore = js.native
   def clearImmediate(handle: Double): Unit = js.native
   def delay(msec: Double): js.Promise[Unit] = js.native
   @JSName("$for")

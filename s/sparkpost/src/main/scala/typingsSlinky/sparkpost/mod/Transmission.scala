@@ -1,7 +1,7 @@
 package typingsSlinky.sparkpost.mod
 
-import typingsSlinky.sparkpost.AnonEmailrfc822
-import typingsSlinky.sparkpost.AnonTemplateid
+import typingsSlinky.sparkpost.anon.Emailrfc822
+import typingsSlinky.sparkpost.anon.Templateid
 import typingsSlinky.sparkpost.sparkpostStrings.Canceled
 import typingsSlinky.sparkpost.sparkpostStrings.Generating
 import typingsSlinky.sparkpost.sparkpostStrings.Success
@@ -15,7 +15,7 @@ trait Transmission extends js.Object {
   /** Name of the campaign */
   var campaign_id: String = js.native
   /** Content that will be used to construct a message */
-  var content: InlineContent | AnonTemplateid | AnonEmailrfc822 = js.native
+  var content: InlineContent | Templateid | Emailrfc822 = js.native
   /** Description of the transmission */
   var description: String = js.native
   /** ID of the transmission */
@@ -42,7 +42,7 @@ object Transmission {
   @scala.inline
   def apply(
     campaign_id: String,
-    content: InlineContent | AnonTemplateid | AnonEmailrfc822,
+    content: InlineContent | Templateid | Emailrfc822,
     description: String,
     id: String,
     metadata: js.Any,
@@ -71,7 +71,7 @@ object Transmission {
         ret
     }
     @scala.inline
-    def withContent(value: InlineContent | AnonTemplateid | AnonEmailrfc822): Self = {
+    def withContent(value: InlineContent | Templateid | Emailrfc822): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("content")(value.asInstanceOf[js.Any])
         ret

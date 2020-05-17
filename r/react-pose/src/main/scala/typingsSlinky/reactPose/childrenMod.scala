@@ -1,5 +1,6 @@
 package typingsSlinky.reactPose
 
+import typingsSlinky.reactPose.anon.PartialState
 import typingsSlinky.reactPose.transitionTypesMod.Props
 import typingsSlinky.reactPose.transitionTypesMod.State
 import scala.scalajs.js

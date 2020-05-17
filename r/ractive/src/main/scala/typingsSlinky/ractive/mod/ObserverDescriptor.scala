@@ -10,3 +10,10 @@ import scala.scalajs.js.annotation._
 */
 trait ObserverDescriptor[T /* <: Ractive[T] */] extends js.Object
 
+object ObserverDescriptor {
+  @scala.inline
+  implicit def apply[T](value: ObserverArrayDescriptor[T]): ObserverDescriptor[T] = value.asInstanceOf[ObserverDescriptor[T]]
+  @scala.inline
+  implicit def apply[T](value: ObserverBaseDescriptor[T]): ObserverDescriptor[T] = value.asInstanceOf[ObserverDescriptor[T]]
+}
+

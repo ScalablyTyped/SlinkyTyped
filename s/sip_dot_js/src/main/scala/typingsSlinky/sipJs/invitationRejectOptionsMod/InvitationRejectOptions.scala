@@ -1,6 +1,6 @@
 package typingsSlinky.sipJs.invitationRejectOptionsMod
 
-import typingsSlinky.sipJs.AnonBody
+import typingsSlinky.sipJs.anon.Body
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait InvitationRejectOptions extends js.Object {
   /**
     * Body
     */
-  var body: js.UndefOr[String | AnonBody] = js.native
+  var body: js.UndefOr[String | Body] = js.native
   /**
     * Array of extra headers added to the response.
     */
@@ -38,7 +38,7 @@ object InvitationRejectOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBody(value: String | AnonBody): Self = {
+    def withBody(value: String | Body): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("body")(value.asInstanceOf[js.Any])
         ret

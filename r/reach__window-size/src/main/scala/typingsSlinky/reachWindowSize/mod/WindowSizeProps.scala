@@ -1,19 +1,19 @@
 package typingsSlinky.reachWindowSize.mod
 
 import slinky.core.TagMod
-import typingsSlinky.reachWindowSize.AnonHeight
+import typingsSlinky.reachWindowSize.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait WindowSizeProps extends js.Object {
-  def children(size: AnonHeight): TagMod[Any] = js.native
+  def children(size: Height): TagMod[Any] = js.native
 }
 
 object WindowSizeProps {
   @scala.inline
-  def apply(children: AnonHeight => TagMod[Any]): WindowSizeProps = {
+  def apply(children: Height => TagMod[Any]): WindowSizeProps = {
     val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children))
     __obj.asInstanceOf[WindowSizeProps]
   }
@@ -24,7 +24,7 @@ object WindowSizeProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withChildren(value: AnonHeight => TagMod[Any]): Self = {
+    def withChildren(value: Height => TagMod[Any]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("children")(js.Any.fromFunction1(value))
         ret

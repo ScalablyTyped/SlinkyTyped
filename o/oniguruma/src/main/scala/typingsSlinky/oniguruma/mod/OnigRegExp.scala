@@ -1,6 +1,6 @@
 package typingsSlinky.oniguruma.mod
 
-import typingsSlinky.oniguruma.CaptureIndexmatchstring
+import typingsSlinky.oniguruma.anon.CaptureIndexmatchstring
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -3,7 +3,7 @@ package typingsSlinky.reactOnsenui.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.HTMLAttributesidclassNameAutoRefresh
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameAutoRefresh
 import typingsSlinky.reactOnsenui.mod.AnimationOptions
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.horizontal
 import typingsSlinky.reactOnsenui.reactOnsenuiStrings.vertical

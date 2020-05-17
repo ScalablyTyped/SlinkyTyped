@@ -10,10 +10,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Slick.Data.DataView")
 @js.native
-class DataView[T /* <: SlickData */] () extends DataProvider[T] {
-  def this(options: DataViewOptions[T]) = this()
+trait DataView[T /* <: SlickData */] extends DataProvider[T] {
   var onPagingInfoChanged: Event[OnPagingInfoChangedEventData] = js.native
   var onRowCountChanged: Event[OnRowCountChangedEventData] = js.native
   var onRowsChanged: Event[OnRowsChangedEventData] = js.native

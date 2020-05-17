@@ -1,6 +1,6 @@
 package typingsSlinky.gapiDrive.gapi.client.drive
 
-import typingsSlinky.gapiDrive.AnonAdditionalRoles
+import typingsSlinky.gapiDrive.anon.AdditionalRoles
 import typingsSlinky.gapiDrive.gapiDriveStrings.driveNumbersignpermission
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,7 @@ trait PermissionResource extends js.Object {
   var photoLink: String = js.native
   var role: String = js.native
   var selfLink: String = js.native
-  var teamDrivePermissionDetails: js.Array[AnonAdditionalRoles] = js.native
+  var teamDrivePermissionDetails: js.Array[AdditionalRoles] = js.native
   var `type`: String = js.native
   var value: String = js.native
   var withLink: Boolean = js.native
@@ -43,7 +43,7 @@ object PermissionResource {
     photoLink: String,
     role: String,
     selfLink: String,
-    teamDrivePermissionDetails: js.Array[AnonAdditionalRoles],
+    teamDrivePermissionDetails: js.Array[AdditionalRoles],
     `type`: String,
     value: String,
     withLink: Boolean
@@ -137,7 +137,7 @@ object PermissionResource {
         ret
     }
     @scala.inline
-    def withTeamDrivePermissionDetails(value: js.Array[AnonAdditionalRoles]): Self = {
+    def withTeamDrivePermissionDetails(value: js.Array[AdditionalRoles]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("teamDrivePermissionDetails")(value.asInstanceOf[js.Any])
         ret

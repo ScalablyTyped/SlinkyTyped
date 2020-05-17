@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait VFileOptions
   extends /* key */ StringDictionary[js.Any]
-     with _VFileCompatible {
+     with VFileCompatible {
   var basename: js.UndefOr[String] = js.native
   var contents: js.UndefOr[VFileContents] = js.native
   var cwd: js.UndefOr[String] = js.native

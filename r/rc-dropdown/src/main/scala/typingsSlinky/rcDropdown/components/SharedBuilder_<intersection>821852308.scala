@@ -1,10 +1,10 @@
 package typingsSlinky.rcDropdown.components
 
+import org.scalajs.dom.raw.Event
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,6 +24,8 @@ class `SharedBuilder_<intersection>821852308`[R <: js.Object] (val args: js.Arra
     value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AnimationType */ js.Any
   ): this.type = set("animation", value.asInstanceOf[js.Any])
   @scala.inline
+  def getPopupContainer(value: js.Any): this.type = set("getPopupContainer", value.asInstanceOf[js.Any])
+  @scala.inline
   def hideAction(
     value: js.Array[
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionType */ _
@@ -32,7 +34,7 @@ class `SharedBuilder_<intersection>821852308`[R <: js.Object] (val args: js.Arra
   @scala.inline
   def minOverlayWidthMatchTrigger(value: Boolean): this.type = set("minOverlayWidthMatchTrigger", value.asInstanceOf[js.Any])
   @scala.inline
-  def onOverlayClick(value: /* e */ Event_ => Unit): this.type = set("onOverlayClick", js.Any.fromFunction1(value))
+  def onOverlayClick(value: /* e */ Event => Unit): this.type = set("onOverlayClick", js.Any.fromFunction1(value))
   @scala.inline
   def onVisibleChange(value: /* visible */ Boolean => Unit): this.type = set("onVisibleChange", js.Any.fromFunction1(value))
   @scala.inline

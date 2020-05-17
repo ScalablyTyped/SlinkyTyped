@@ -2,10 +2,9 @@ package typingsSlinky.octokitRest.mod.Octokit
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.node.httpMod.Agent
-import typingsSlinky.octokitRest.AnonAgent
-import typingsSlinky.octokitRest.AnonClientId
-import typingsSlinky.octokitRest.AnonDebug
-import typingsSlinky.octokitRest.AnonOn2fa
+import typingsSlinky.octokitRest.anon.ClientId
+import typingsSlinky.octokitRest.anon.Debug
+import typingsSlinky.octokitRest.anon.On2fa
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,18 +16,16 @@ trait Options
     * @deprecated Use {request: {agent}} instead. See https://github.com/octokit/request.js#request
     */
   var agent: js.UndefOr[Agent] = js.native
-  var auth: js.UndefOr[
-    String | AnonOn2fa | AnonClientId | (js.Function0[String | js.Promise[String]]) | js.Any
-  ] = js.native
+  var auth: js.UndefOr[String | On2fa | ClientId | (js.Function0[String | js.Promise[String]]) | js.Any] = js.native
   var authStrategy: js.UndefOr[js.Any] = js.native
   var baseUrl: js.UndefOr[String] = js.native
   /**
     * @deprecated Use {userAgent, previews} instead. See https://github.com/octokit/request.js#request
     */
   var headers: js.UndefOr[StringDictionary[js.Any]] = js.native
-  var log: js.UndefOr[AnonDebug] = js.native
+  var log: js.UndefOr[Debug] = js.native
   var previews: js.UndefOr[js.Array[String]] = js.native
-  var request: js.UndefOr[AnonAgent] = js.native
+  var request: js.UndefOr[typingsSlinky.octokitRest.anon.Agent] = js.native
   /**
     * @deprecated Use {request: {timeout}} instead. See https://github.com/octokit/request.js#request
     */
@@ -67,7 +64,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withAuth(value: String | AnonOn2fa | AnonClientId | (js.Function0[String | js.Promise[String]]) | js.Any): Self = {
+    def withAuth(value: String | On2fa | ClientId | (js.Function0[String | js.Promise[String]]) | js.Any): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("auth")(value.asInstanceOf[js.Any])
         ret
@@ -115,7 +112,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withLog(value: AnonDebug): Self = {
+    def withLog(value: Debug): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
         ret
@@ -139,7 +136,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withRequest(value: AnonAgent): Self = {
+    def withRequest(value: typingsSlinky.octokitRest.anon.Agent): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("request")(value.asInstanceOf[js.Any])
         ret

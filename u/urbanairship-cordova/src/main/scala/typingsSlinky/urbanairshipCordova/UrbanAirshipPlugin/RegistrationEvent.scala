@@ -1,12 +1,12 @@
 package typingsSlinky.urbanairshipCordova.UrbanAirshipPlugin
 
-import typingsSlinky.std.Event_
+import typingsSlinky.std.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RegistrationEvent extends Event_ {
+trait RegistrationEvent extends Event {
   /**
     * The channel ID for the device.
     */

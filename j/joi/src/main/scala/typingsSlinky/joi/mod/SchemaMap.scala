@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SchemaMap
   extends /* key */ StringDictionary[SchemaLike | js.Array[SchemaLike]]
-     with _SchemaLike
+     with SchemaLike
 
 object SchemaMap {
   @scala.inline

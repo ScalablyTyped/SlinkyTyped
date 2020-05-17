@@ -7,26 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Convenience constructor. Returns a PayPalPayment with the specified amount, currency code, and short description.
   */
-@JSGlobal("PayPalPayment")
 @js.native
-class PayPalPayment protected () extends js.Object {
-  /**
-    * @param amount The amount of the payment.
-    * @param currencyCode The ISO 4217 currency for the payment.
-    * @param shortDescription A short descripton of the payment.
-    * @param intent • "Sale" for an immediate payment.
-    * • "Auth" for payment authorization only, to be captured separately at a later time.
-    * • "Order" for taking an order, with authorization and capture to be done separately at a later time.
-    * @param details PayPalPaymentDetails object (optional).
-    */
-  def this(amount: String, currency: String, shortDescription: String, intent: String) = this()
-  def this(
-    amount: String,
-    currency: String,
-    shortDescription: String,
-    intent: String,
-    details: PayPalPaymentDetails
-  ) = this()
+trait PayPalPayment extends js.Object {
   /**
     * The amount of the payment.
     */
@@ -76,5 +58,99 @@ class PayPalPayment protected () extends js.Object {
     * Optional text which will appear on the customer's credit card statement. (up to 22 characters).
     */
   var softDescriptor: String = js.native
+}
+
+object PayPalPayment {
+  @scala.inline
+  def apply(
+    amount: String,
+    bnCode: String,
+    currency: String,
+    custom: String,
+    details: PayPalPaymentDetails,
+    intent: String,
+    invoiceNumber: String,
+    items: js.Array[PayPalItem],
+    shippingAddress: PayPalShippingAddress,
+    shortDescription: String,
+    softDescriptor: String
+  ): PayPalPayment = {
+    val __obj = js.Dynamic.literal(amount = amount.asInstanceOf[js.Any], bnCode = bnCode.asInstanceOf[js.Any], currency = currency.asInstanceOf[js.Any], custom = custom.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], intent = intent.asInstanceOf[js.Any], invoiceNumber = invoiceNumber.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], shippingAddress = shippingAddress.asInstanceOf[js.Any], shortDescription = shortDescription.asInstanceOf[js.Any], softDescriptor = softDescriptor.asInstanceOf[js.Any])
+    __obj.asInstanceOf[PayPalPayment]
+  }
+  @scala.inline
+  implicit class PayPalPaymentOps[Self <: PayPalPayment] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAmount(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("amount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withBnCode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("bnCode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCurrency(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currency")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCustom(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("custom")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDetails(value: PayPalPaymentDetails): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withIntent(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("intent")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInvoiceNumber(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("invoiceNumber")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withItems(value: js.Array[PayPalItem]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShippingAddress(value: PayPalShippingAddress): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shippingAddress")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShortDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("shortDescription")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSoftDescriptor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("softDescriptor")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

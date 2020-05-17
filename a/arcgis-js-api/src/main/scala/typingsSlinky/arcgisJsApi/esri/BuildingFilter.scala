@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +32,49 @@ trait BuildingFilter extends JSONSupport {
   var name: String = js.native
 }
 
-@JSGlobal("__esri.BuildingFilter")
-@js.native
-object BuildingFilter extends TopLevel[BuildingFilterConstructor]
+object BuildingFilter {
+  @scala.inline
+  def apply(
+    description: String,
+    filterBlocks: Collection[BuildingFilterBlock],
+    id: String,
+    name: String,
+    toJSON: () => js.Any
+  ): BuildingFilter = {
+    val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any], filterBlocks = filterBlocks.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON))
+    __obj.asInstanceOf[BuildingFilter]
+  }
+  @scala.inline
+  implicit class BuildingFilterOps[Self <: BuildingFilter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFilterBlocks(value: Collection[BuildingFilterBlock]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("filterBlocks")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("id")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

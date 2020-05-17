@@ -1,7 +1,7 @@
 package typingsSlinky.victory.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.victory.AnonAxisLabel
+import typingsSlinky.victory.anon.AxisLabel
 import typingsSlinky.victory.victoryStrings.axis
 import typingsSlinky.victory.victoryStrings.axisLabel
 import typingsSlinky.victory.victoryStrings.bottom
@@ -167,7 +167,7 @@ trait VictoryAxisProps extends VictoryCommonProps {
     *
     * note: custom angle and verticalAnchor properties may be included in labels styles.
     */
-  var style: js.UndefOr[AnonAxisLabel] = js.native
+  var style: js.UndefOr[AxisLabel] = js.native
   /**
     * The tickComponent prop takes in an entire component which will be used
     * to create tick lines. The new element created from the passed tickComponent
@@ -399,7 +399,7 @@ object VictoryAxisProps {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonAxisLabel): Self = {
+    def withStyle(value: AxisLabel): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

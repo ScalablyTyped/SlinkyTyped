@@ -4,10 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("ErrorCorrectionLevel")
 @js.native
-class ErrorCorrectionLevel protected () extends js.Object {
-  def this(ordinal: Double, bits: Double, name: String) = this()
+trait ErrorCorrectionLevel extends js.Object {
   val Bits: Double = js.native
   val Name: String = js.native
   var bits: Double = js.native
@@ -15,10 +13,37 @@ class ErrorCorrectionLevel protected () extends js.Object {
   var ordinal_Renamed_Field: Double = js.native
 }
 
-/* static members */
-@JSGlobal("ErrorCorrectionLevel")
-@js.native
-object ErrorCorrectionLevel extends js.Object {
-  def forBits(bits: Double): ErrorCorrectionLevel = js.native
+object ErrorCorrectionLevel {
+  @scala.inline
+  def apply(Bits: Double, Name: String, bits: Double, name: String, ordinal_Renamed_Field: Double): ErrorCorrectionLevel = {
+    val __obj = js.Dynamic.literal(Bits = Bits.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], bits = bits.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], ordinal_Renamed_Field = ordinal_Renamed_Field.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ErrorCorrectionLevel]
+  }
+  @scala.inline
+  implicit class ErrorCorrectionLevelOps[Self <: ErrorCorrectionLevel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBits(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Bits")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withOrdinal_Renamed_Field(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ordinal_Renamed_Field")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

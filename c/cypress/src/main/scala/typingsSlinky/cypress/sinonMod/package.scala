@@ -14,9 +14,4 @@ package object sinonMod {
   type SinonStubbedInstance[TType] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof TType ]: cypress.cypress/types/sinon.SinonStubbedMember<TType[P]>}
     */ typingsSlinky.cypress.cypressStrings.SinonStubbedInstance with org.scalablytyped.runtime.TopLevel[TType]
-  /**
-    * Replaces a type with a Sinon stub if it's a function.
-    */
-  type SinonStubbedMember[T] = T | typingsSlinky.cypress.sinonMod.SinonStub
-  type SinonTimerId = scala.Double | typingsSlinky.cypress.AnonId
 }

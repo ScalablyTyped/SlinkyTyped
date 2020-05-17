@@ -1,7 +1,7 @@
 package typingsSlinky.babylonjs.abstractMeshMod
 
-import typingsSlinky.babylonjs.AnonInd
-import typingsSlinky.babylonjs.AnonX
+import typingsSlinky.babylonjs.anon.Ind
+import typingsSlinky.babylonjs.anon.X
 import typingsSlinky.babylonjs.mathVectorMod.Matrix
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.babylonjs.typesMod.IndicesArray
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait FacetDataStorage extends js.Object {
   var bbSize: Vector3 = js.native
-  var depthSortedFacets: js.Array[AnonInd] = js.native
+  var depthSortedFacets: js.Array[Ind] = js.native
   var depthSortedIndices: IndicesArray = js.native
   var facetDataEnabled: Boolean = js.native
   var facetDepthSort: Boolean = js.native
@@ -28,21 +28,21 @@ trait FacetDataStorage extends js.Object {
   var invertedMatrix: Matrix = js.native
   var partitioningBBoxRatio: Double = js.native
   var partitioningSubdivisions: Double = js.native
-  var subDiv: AnonX = js.native
-  def facetDepthSortFunction(f1: AnonInd, f2: AnonInd): Double = js.native
+  var subDiv: X = js.native
+  def facetDepthSortFunction(f1: Ind, f2: Ind): Double = js.native
 }
 
 object FacetDataStorage {
   @scala.inline
   def apply(
     bbSize: Vector3,
-    depthSortedFacets: js.Array[AnonInd],
+    depthSortedFacets: js.Array[Ind],
     depthSortedIndices: IndicesArray,
     facetDataEnabled: Boolean,
     facetDepthSort: Boolean,
     facetDepthSortEnabled: Boolean,
     facetDepthSortFrom: Vector3,
-    facetDepthSortFunction: (AnonInd, AnonInd) => Double,
+    facetDepthSortFunction: (Ind, Ind) => Double,
     facetDepthSortOrigin: Vector3,
     facetNb: Double,
     facetNormals: js.Array[Vector3],
@@ -52,7 +52,7 @@ object FacetDataStorage {
     invertedMatrix: Matrix,
     partitioningBBoxRatio: Double,
     partitioningSubdivisions: Double,
-    subDiv: AnonX
+    subDiv: X
   ): FacetDataStorage = {
     val __obj = js.Dynamic.literal(bbSize = bbSize.asInstanceOf[js.Any], depthSortedFacets = depthSortedFacets.asInstanceOf[js.Any], depthSortedIndices = depthSortedIndices.asInstanceOf[js.Any], facetDataEnabled = facetDataEnabled.asInstanceOf[js.Any], facetDepthSort = facetDepthSort.asInstanceOf[js.Any], facetDepthSortEnabled = facetDepthSortEnabled.asInstanceOf[js.Any], facetDepthSortFrom = facetDepthSortFrom.asInstanceOf[js.Any], facetDepthSortFunction = js.Any.fromFunction2(facetDepthSortFunction), facetDepthSortOrigin = facetDepthSortOrigin.asInstanceOf[js.Any], facetNb = facetNb.asInstanceOf[js.Any], facetNormals = facetNormals.asInstanceOf[js.Any], facetParameters = facetParameters.asInstanceOf[js.Any], facetPartitioning = facetPartitioning.asInstanceOf[js.Any], facetPositions = facetPositions.asInstanceOf[js.Any], invertedMatrix = invertedMatrix.asInstanceOf[js.Any], partitioningBBoxRatio = partitioningBBoxRatio.asInstanceOf[js.Any], partitioningSubdivisions = partitioningSubdivisions.asInstanceOf[js.Any], subDiv = subDiv.asInstanceOf[js.Any])
     __obj.asInstanceOf[FacetDataStorage]
@@ -70,7 +70,7 @@ object FacetDataStorage {
         ret
     }
     @scala.inline
-    def withDepthSortedFacets(value: js.Array[AnonInd]): Self = {
+    def withDepthSortedFacets(value: js.Array[Ind]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("depthSortedFacets")(value.asInstanceOf[js.Any])
         ret
@@ -124,7 +124,7 @@ object FacetDataStorage {
         ret
     }
     @scala.inline
-    def withFacetDepthSortFunction(value: (AnonInd, AnonInd) => Double): Self = {
+    def withFacetDepthSortFunction(value: (Ind, Ind) => Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("facetDepthSortFunction")(js.Any.fromFunction2(value))
         ret
@@ -184,7 +184,7 @@ object FacetDataStorage {
         ret
     }
     @scala.inline
-    def withSubDiv(value: AnonX): Self = {
+    def withSubDiv(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("subDiv")(value.asInstanceOf[js.Any])
         ret

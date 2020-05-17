@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.NumberDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,9 +14,4 @@ trait StyleSheetList
   val length: Double = js.native
   def item(index: Double): org.scalajs.dom.raw.StyleSheet | Null = js.native
 }
-
-@JSGlobal("StyleSheetList")
-@js.native
-object StyleSheetList
-  extends Instantiable0[org.scalajs.dom.raw.StyleSheetList]
 

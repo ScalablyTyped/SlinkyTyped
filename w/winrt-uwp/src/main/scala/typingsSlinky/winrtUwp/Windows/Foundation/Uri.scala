@@ -5,20 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Defines an object that represents a Uniform Resource Identifier (URI) value and parses it into components. The Uri object is used by many other Windows Runtime APIs that are not necessarily confined to web browser scenarios. */
-@JSGlobal("Windows.Foundation.Uri")
 @js.native
-class Uri protected () extends js.Object {
-  /**
-    * Initializes a new Uri object from the specified Uniform Resource Identifier (URI) string. Initializing the Uri also parses the string and populates the Uri properties that represent URI components.
-    * @param uri The string from which the new Uri object is created.
-    */
-  def this(uri: String) = this()
-  /**
-    * Initializes a new Uri by combining a base Uniform Resource Identifier (URI) and a relative URI. Initializing the Uri also parses the combined string and populates the Uri properties that represent URI components.
-    * @param baseUri The base URI.
-    * @param relativeUri The relative URI.
-    */
-  def this(baseUri: String, relativeUri: String) = this()
+trait Uri extends js.Object {
   /** Gets a fully canonical RFC-compliant representation of the current URI. */
   var absoluteCanonicalUri: String = js.native
   /** Gets the entire, non-canonical URI (It is non-canonical because it might actually be an IRI, per the Windows.Foundation.Uri encoding behavior; see Remarks.). */
@@ -67,21 +55,153 @@ class Uri protected () extends js.Object {
   def equals(pUri: Uri): Boolean = js.native
 }
 
-/* static members */
-@JSGlobal("Windows.Foundation.Uri")
-@js.native
-object Uri extends js.Object {
-  /**
-    * Converts a Uniform Resource Identifier (URI) string to its escaped representation.
-    * @param toEscape The string to convert.
-    * @return The escaped representation of toEscape.
-    */
-  def escapeComponent(toEscape: String): String = js.native
-  /**
-    * Converts the specified string by replacing any escape sequences with their unescaped representation.
-    * @param toUnescape The string to convert.
-    * @return The unescaped representation of stringToUnescape.
-    */
-  def unescapeComponent(toUnescape: String): String = js.native
+object Uri {
+  @scala.inline
+  def apply(
+    absoluteCanonicalUri: String,
+    absoluteUri: String,
+    combineUri: String => Uri,
+    displayIri: String,
+    displayUri: String,
+    domain: String,
+    equals: Uri => Boolean,
+    extension: String,
+    fragment: String,
+    host: String,
+    password: String,
+    path: String,
+    port: Double,
+    query: String,
+    queryParsed: WwwFormUrlDecoder,
+    rawUri: String,
+    schemeName: String,
+    suspicious: Boolean,
+    userName: String
+  ): Uri = {
+    val __obj = js.Dynamic.literal(absoluteCanonicalUri = absoluteCanonicalUri.asInstanceOf[js.Any], absoluteUri = absoluteUri.asInstanceOf[js.Any], combineUri = js.Any.fromFunction1(combineUri), displayIri = displayIri.asInstanceOf[js.Any], displayUri = displayUri.asInstanceOf[js.Any], domain = domain.asInstanceOf[js.Any], equals = js.Any.fromFunction1(equals), extension = extension.asInstanceOf[js.Any], fragment = fragment.asInstanceOf[js.Any], host = host.asInstanceOf[js.Any], password = password.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any], query = query.asInstanceOf[js.Any], queryParsed = queryParsed.asInstanceOf[js.Any], rawUri = rawUri.asInstanceOf[js.Any], schemeName = schemeName.asInstanceOf[js.Any], suspicious = suspicious.asInstanceOf[js.Any], userName = userName.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Uri]
+  }
+  @scala.inline
+  implicit class UriOps[Self <: Uri] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAbsoluteCanonicalUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("absoluteCanonicalUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAbsoluteUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("absoluteUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCombineUri(value: String => Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("combineUri")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDisplayIri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayIri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDisplayUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("displayUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDomain(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("domain")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEquals(value: Uri => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("equals")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withExtension(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extension")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFragment(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fragment")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHost(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("host")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPassword(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("password")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPath(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("path")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPort(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("port")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQuery(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withQueryParsed(value: WwwFormUrlDecoder): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("queryParsed")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRawUri(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("rawUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSchemeName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("schemeName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSuspicious(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("suspicious")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUserName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("userName")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

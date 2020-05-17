@@ -2,7 +2,7 @@ package typingsSlinky.materialUiDatatables.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.materialUiDatatables.PartialDataTableProps
+import typingsSlinky.materialUiDatatables.anon.PartialDataTableProps
 import typingsSlinky.materialUiDatatables.materialUiDatatablesStrings.filter
 import typingsSlinky.materialUiDatatables.mod.Column
 import typingsSlinky.materialUiDatatables.mod.default

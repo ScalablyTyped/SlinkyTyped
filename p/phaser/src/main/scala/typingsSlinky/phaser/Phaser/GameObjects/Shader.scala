@@ -18,7 +18,6 @@ import typingsSlinky.phaser.Phaser.GameObjects.Components.Visible
 import typingsSlinky.phaser.Phaser.Input.Pointer
 import typingsSlinky.phaser.Phaser.Renderer.Canvas.CanvasRenderer
 import typingsSlinky.phaser.Phaser.Renderer.WebGL.WebGLRenderer
-import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.Phaser.Textures.Texture
 import typingsSlinky.phaser.integer
 import scala.scalajs.js
@@ -65,9 +64,8 @@ import scala.scalajs.js.annotation._
   * use these Game Objects sparingly. If you need to have a fully batched custom shader, then please look at using
   * a custom pipeline instead. However, for background or special masking effects, they are extremely effective.
   */
-@JSGlobal("Phaser.GameObjects.Shader")
 @js.native
-class Shader protected ()
+trait Shader
   extends GameObject
      with ComputedSize
      with Depth
@@ -77,37 +75,6 @@ class Shader protected ()
      with ScrollFactor
      with Transform
      with Visible {
-  /**
-    * 
-    * @param scene The Scene to which this Game Object belongs. A Game Object can only belong to one Scene at a time.
-    * @param key The key of the shader to use from the shader cache, or a BaseShader instance.
-    * @param x The horizontal position of this Game Object in the world. Default 0.
-    * @param y The vertical position of this Game Object in the world. Default 0.
-    * @param width The width of the Game Object. Default 128.
-    * @param height The height of the Game Object. Default 128.
-    * @param textures Optional array of texture keys to bind to the iChannel0...3 uniforms. The textures must already exist in the Texture Manager.
-    * @param textureData Additional texture data if you want to create shader with none NPOT textures.
-    */
-  def this(
-    scene: Scene,
-    key: String,
-    x: js.UndefOr[Double],
-    y: js.UndefOr[Double],
-    width: js.UndefOr[Double],
-    height: js.UndefOr[Double],
-    textures: js.UndefOr[js.Array[String]],
-    textureData: js.UndefOr[js.Any]
-  ) = this()
-  def this(
-    scene: Scene,
-    key: BaseShader,
-    x: js.UndefOr[Double],
-    y: js.UndefOr[Double],
-    width: js.UndefOr[Double],
-    height: js.UndefOr[Double],
-    textures: js.UndefOr[js.Array[String]],
-    textureData: js.UndefOr[js.Any]
-  ) = this()
   /**
     * Uint8 view to the vertex raw buffer. Used for uploading vertex buffer resources to the GPU.
     */

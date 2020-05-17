@@ -1,7 +1,7 @@
 package typingsSlinky.baseui.paginationMod
 
 import slinky.core.TagMod
-import typingsSlinky.baseui.AnonNextPage
+import typingsSlinky.baseui.anon.NextPage
 import typingsSlinky.baseui.baseuiStrings.change_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ trait StatefulContainerProps extends js.Object {
   var children: TagMod[Any] = js.native
   var initialState: js.UndefOr[State] = js.native
   var numPages: Double = js.native
-  var onPageChange: js.UndefOr[js.Function1[/* args */ AnonNextPage, _]] = js.native
+  var onPageChange: js.UndefOr[js.Function1[/* args */ NextPage, _]] = js.native
   var stateReducer: js.UndefOr[StateReducer] = js.native
 }
 
@@ -59,7 +59,7 @@ object StatefulContainerProps {
         ret
     }
     @scala.inline
-    def withOnPageChange(value: /* args */ AnonNextPage => _): Self = {
+    def withOnPageChange(value: /* args */ NextPage => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPageChange")(js.Any.fromFunction1(value))
         ret

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ReactRefLike[T] extends js.Object {
+trait ReactRefLike[T] extends ReactLegacyRefLike[T] {
   val current: T | Null = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobileRn.listIndexNativeMod
 
-import typingsSlinky.antdMobileRn.AnonArrowV
+import typingsSlinky.antdMobileRn.anon.ArrowV
 import typingsSlinky.antdMobileRn.listPropsTypeMod.ListPropsType
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ListProps extends ListPropsType {
   var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  var styles: js.UndefOr[AnonArrowV] = js.native
+  var styles: js.UndefOr[ArrowV] = js.native
 }
 
 object ListProps {
@@ -45,7 +45,7 @@ object ListProps {
         ret
     }
     @scala.inline
-    def withStyles(value: AnonArrowV): Self = {
+    def withStyles(value: ArrowV): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("styles")(value.asInstanceOf[js.Any])
         ret

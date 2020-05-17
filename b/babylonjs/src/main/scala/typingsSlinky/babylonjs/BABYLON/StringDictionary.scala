@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("BABYLON.StringDictionary")
 @js.native
-class StringDictionary[T] () extends js.Object {
+trait StringDictionary[T] extends js.Object {
   var _count: js.Any = js.native
   var _data: js.Any = js.native
   /**
@@ -91,5 +90,127 @@ class StringDictionary[T] () extends js.Object {
     * @returns true if the value was updated (or false if the key was not found)
     */
   def set(key: String, value: T): Boolean = js.native
+}
+
+object StringDictionary {
+  @scala.inline
+  def apply[T](
+    _count: js.Any,
+    _data: js.Any,
+    add: (String, T) => Boolean,
+    clear: () => Unit,
+    contains: String => Boolean,
+    copyFrom: StringDictionary[T] => Unit,
+    count: () => Double,
+    first: js.Function2[/* key */ String, /* val */ T, js.Any] => js.Any | Null,
+    forEach: js.Function2[/* key */ String, /* val */ T, Unit] => Unit,
+    get: String => js.UndefOr[T],
+    getAndRemove: String => Nullable[T],
+    getOrAdd: (String, T) => T,
+    getOrAddWithFactory: (String, js.Function1[/* key */ String, T]) => T,
+    remove: String => Boolean,
+    set: (String, T) => Boolean
+  ): StringDictionary[T] = {
+    val __obj = js.Dynamic.literal(_count = _count.asInstanceOf[js.Any], _data = _data.asInstanceOf[js.Any], add = js.Any.fromFunction2(add), clear = js.Any.fromFunction0(clear), contains = js.Any.fromFunction1(contains), copyFrom = js.Any.fromFunction1(copyFrom), count = js.Any.fromFunction0(count), first = js.Any.fromFunction1(first), forEach = js.Any.fromFunction1(forEach), get = js.Any.fromFunction1(get), getAndRemove = js.Any.fromFunction1(getAndRemove), getOrAdd = js.Any.fromFunction2(getOrAdd), getOrAddWithFactory = js.Any.fromFunction2(getOrAddWithFactory), remove = js.Any.fromFunction1(remove), set = js.Any.fromFunction2(set))
+    __obj.asInstanceOf[StringDictionary[T]]
+  }
+  @scala.inline
+  implicit class StringDictionaryOps[Self[t] <: StringDictionary[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def with_count(value: js.Any): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_count")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def with_data(value: js.Any): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("_data")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAdd(value: (String, T) => Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("add")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withClear(value: () => Unit): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withContains(value: String => Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contains")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCopyFrom(value: StringDictionary[T] => Unit): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("copyFrom")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withCount(value: () => Double): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withFirst(value: js.Function2[/* key */ String, /* val */ T, js.Any] => js.Any | Null): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withForEach(value: js.Function2[/* key */ String, /* val */ T, Unit] => Unit): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("forEach")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGet(value: String => js.UndefOr[T]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetAndRemove(value: String => Nullable[T]): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAndRemove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetOrAdd(value: (String, T) => T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getOrAdd")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withGetOrAddWithFactory(value: (String, js.Function1[/* key */ String, T]) => T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getOrAddWithFactory")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withRemove(value: String => Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSet(value: (String, T) => Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("set")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

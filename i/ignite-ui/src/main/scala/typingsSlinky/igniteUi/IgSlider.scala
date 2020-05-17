@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -99,7 +99,7 @@ object IgSlider {
         ret
     }
     @scala.inline
-    def withBookmarkClick(value: (/* event */ Event_, /* ui */ BookmarkClickEventUIParam) => Unit): Self = {
+    def withBookmarkClick(value: (/* event */ Event, /* ui */ BookmarkClickEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bookmarkClick")(js.Any.fromFunction2(value))
         ret
@@ -111,7 +111,7 @@ object IgSlider {
         ret
     }
     @scala.inline
-    def withBookmarkHit(value: (/* event */ Event_, /* ui */ BookmarkHitEventUIParam) => Unit): Self = {
+    def withBookmarkHit(value: (/* event */ Event, /* ui */ BookmarkHitEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bookmarkHit")(js.Any.fromFunction2(value))
         ret
@@ -135,7 +135,7 @@ object IgSlider {
         ret
     }
     @scala.inline
-    def withChange(value: (/* event */ Event_, /* ui */ ChangeEventUIParam) => Unit): Self = {
+    def withChange(value: (/* event */ Event, /* ui */ ChangeEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("change")(js.Any.fromFunction2(value))
         ret
@@ -195,7 +195,7 @@ object IgSlider {
         ret
     }
     @scala.inline
-    def withSlide(value: (/* event */ Event_, /* ui */ SlideEventUIParam) => Unit): Self = {
+    def withSlide(value: (/* event */ Event, /* ui */ SlideEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("slide")(js.Any.fromFunction2(value))
         ret
@@ -207,7 +207,7 @@ object IgSlider {
         ret
     }
     @scala.inline
-    def withStart(value: (/* event */ Event_, /* ui */ StartEventUIParam) => Unit): Self = {
+    def withStart(value: (/* event */ Event, /* ui */ StartEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("start")(js.Any.fromFunction2(value))
         ret
@@ -231,7 +231,7 @@ object IgSlider {
         ret
     }
     @scala.inline
-    def withStop(value: (/* event */ Event_, /* ui */ StopEventUIParam) => Unit): Self = {
+    def withStop(value: (/* event */ Event, /* ui */ StopEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stop")(js.Any.fromFunction2(value))
         ret

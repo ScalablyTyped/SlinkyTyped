@@ -1,8 +1,8 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesHeatmap
 
-import typingsSlinky.echarts.AnonBorderType
-import typingsSlinky.echarts.AnonDistance
-import typingsSlinky.echarts.AnonItemStyleAnonBorderTypeLabelAnonDistance
+import typingsSlinky.echarts.anon.BorderType
+import typingsSlinky.echarts.anon.Distance
+import typingsSlinky.echarts.anon.ItemStyleBorderTypeLabelDistance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait DataObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-heatmap.data.emphasis
     */
-  var emphasis: js.UndefOr[AnonItemStyleAnonBorderTypeLabelAnonDistance] = js.native
+  var emphasis: js.UndefOr[ItemStyleBorderTypeLabelDistance] = js.native
   /**
     * Style of a single data point. It is valid with
     * [coordinateSystem](https://echarts.apache.org/en/option.html#series-heatmap.coordinateSystem)
@@ -21,7 +21,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-heatmap.data.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBorderType] = js.native
+  var itemStyle: js.UndefOr[BorderType] = js.native
   /**
     * It is valid with
     * [coordinateSystem](https://echarts.apache.org/en/option.html#series-heatmap.coordinateSystem)
@@ -30,7 +30,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-heatmap.data.label
     */
-  var label: js.UndefOr[AnonDistance] = js.native
+  var label: js.UndefOr[Distance] = js.native
   /**
     * Name of data item.
     *
@@ -60,7 +60,7 @@ object DataObject {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withEmphasis(value: AnonItemStyleAnonBorderTypeLabelAnonDistance): Self = {
+    def withEmphasis(value: ItemStyleBorderTypeLabelDistance): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("emphasis")(value.asInstanceOf[js.Any])
         ret
@@ -72,7 +72,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonBorderType): Self = {
+    def withItemStyle(value: BorderType): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -84,7 +84,7 @@ object DataObject {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonDistance): Self = {
+    def withLabel(value: Distance): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret

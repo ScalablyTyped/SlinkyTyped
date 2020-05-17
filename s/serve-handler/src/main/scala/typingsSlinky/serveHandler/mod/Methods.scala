@@ -1,10 +1,10 @@
 package typingsSlinky.serveHandler.mod
 
 import typingsSlinky.node.httpMod.ServerResponse
-import typingsSlinky.serveHandler.FnCall
-import typingsSlinky.serveHandler.Typeoflstat
-import typingsSlinky.serveHandler.Typeofreaddir
-import typingsSlinky.serveHandler.Typeofrealpath
+import typingsSlinky.serveHandler.anon.FnCall
+import typingsSlinky.serveHandler.anon.Typeoflstat
+import typingsSlinky.serveHandler.anon.Typeofreaddir
+import typingsSlinky.serveHandler.anon.Typeofrealpath
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

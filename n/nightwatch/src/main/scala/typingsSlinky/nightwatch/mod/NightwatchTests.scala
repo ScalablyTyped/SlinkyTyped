@@ -12,14 +12,8 @@ trait NightwatchTests extends js.Object
 
 object NightwatchTests {
   @scala.inline
-  def NightwatchTestFunctions(): NightwatchTests = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[NightwatchTests]
-  }
+  implicit def apply(value: NightwatchTestFunctions): NightwatchTests = value.asInstanceOf[NightwatchTests]
   @scala.inline
-  def NightwatchTestHooks(): NightwatchTests = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[NightwatchTests]
-  }
+  implicit def apply(value: NightwatchTestHooks): NightwatchTests = value.asInstanceOf[NightwatchTests]
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.playcanvas.mod
 
-import typingsSlinky.playcanvas.AnonDistanceModel
+import typingsSlinky.playcanvas.anon.DistanceModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,7 +50,7 @@ class SoundInstance3d protected ()
   def this(
     manager: typingsSlinky.playcanvas.pc.SoundManager,
     sound: typingsSlinky.playcanvas.pc.Sound,
-    options: AnonDistanceModel
+    options: DistanceModel
   ) = this()
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.reduxLittleRouter.mod
 
-import typingsSlinky.reduxLittleRouter.AnonPayload
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
+import typingsSlinky.reduxLittleRouter.anon.Payload
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,10 +12,10 @@ trait LinkProps extends js.Object {
   var className: js.UndefOr[String] = js.native
   var href: Href = js.native
   var location: js.UndefOr[Location] = js.native
-  var onClick: js.UndefOr[js.Function1[/* event */ Event_, _]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* event */ Event, _]] = js.native
   var persistQuery: js.UndefOr[Boolean] = js.native
-  var push: js.UndefOr[js.Function2[/* href */ Href, /* options */ LocationOptions, AnonPayload]] = js.native
-  var replace: js.UndefOr[js.Function2[/* href */ Href, /* options */ LocationOptions, AnonPayload]] = js.native
+  var push: js.UndefOr[js.Function2[/* href */ Href, /* options */ LocationOptions, Payload]] = js.native
+  var replace: js.UndefOr[js.Function2[/* href */ Href, /* options */ LocationOptions, Payload]] = js.native
   var replaceState: js.UndefOr[Boolean] = js.native
   var style: js.UndefOr[ObjectLiteral[_]] = js.native
   var target: js.UndefOr[String] = js.native
@@ -76,7 +76,7 @@ object LinkProps {
         ret
     }
     @scala.inline
-    def withOnClick(value: /* event */ Event_ => _): Self = {
+    def withOnClick(value: /* event */ Event => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClick")(js.Any.fromFunction1(value))
         ret
@@ -100,7 +100,7 @@ object LinkProps {
         ret
     }
     @scala.inline
-    def withPush(value: (/* href */ Href, /* options */ LocationOptions) => AnonPayload): Self = {
+    def withPush(value: (/* href */ Href, /* options */ LocationOptions) => Payload): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("push")(js.Any.fromFunction2(value))
         ret
@@ -112,7 +112,7 @@ object LinkProps {
         ret
     }
     @scala.inline
-    def withReplace(value: (/* href */ Href, /* options */ LocationOptions) => AnonPayload): Self = {
+    def withReplace(value: (/* href */ Href, /* options */ LocationOptions) => Payload): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("replace")(js.Any.fromFunction2(value))
         ret

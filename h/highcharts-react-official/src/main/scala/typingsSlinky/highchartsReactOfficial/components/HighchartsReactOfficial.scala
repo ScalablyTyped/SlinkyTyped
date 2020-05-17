@@ -4,7 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.highcharts.mod.Chart_
 import typingsSlinky.highcharts.mod.Options
-import typingsSlinky.highchartsReactOfficial.TypeofHighcharts
+import typingsSlinky.highchartsReactOfficial.anon.TypeofHighcharts
 import typingsSlinky.highchartsReactOfficial.mod.HighchartsReact.Props
 import typingsSlinky.highchartsReactOfficial.mod.default
 import scala.scalajs.js

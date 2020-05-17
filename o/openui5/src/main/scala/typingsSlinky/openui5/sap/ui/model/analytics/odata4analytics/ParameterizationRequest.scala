@@ -4,14 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("sap.ui.model.analytics.odata4analytics.ParameterizationRequest")
 @js.native
-class ParameterizationRequest protected () extends js.Object {
-  /**
-    * Create a request object for interaction with a query parameterization.
-    * @param oParameterization Description of a query parameterization
-    */
-  def this(oParameterization: Parameterization) = this()
+trait ParameterizationRequest extends js.Object {
   /**
     * Get the description of the parameterization on which this requestoperates on
     * @returns Description of a         query parameterization
@@ -39,5 +33,50 @@ class ParameterizationRequest protected () extends js.Object {
     * to the upper boundary parameter
     */
   def setParameterValue(sParameterName: String, sValue: String, sToValue: String): Unit = js.native
+}
+
+object ParameterizationRequest {
+  @scala.inline
+  def apply(
+    getParameterization: () => Parameterization,
+    getURIToParameterizationEntitySet: String => Unit,
+    getURIToParameterizationEntry: String => Unit,
+    setParameterValue: (String, String, String) => Unit
+  ): ParameterizationRequest = {
+    val __obj = js.Dynamic.literal(getParameterization = js.Any.fromFunction0(getParameterization), getURIToParameterizationEntitySet = js.Any.fromFunction1(getURIToParameterizationEntitySet), getURIToParameterizationEntry = js.Any.fromFunction1(getURIToParameterizationEntry), setParameterValue = js.Any.fromFunction3(setParameterValue))
+    __obj.asInstanceOf[ParameterizationRequest]
+  }
+  @scala.inline
+  implicit class ParameterizationRequestOps[Self <: ParameterizationRequest] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withGetParameterization(value: () => Parameterization): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getParameterization")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetURIToParameterizationEntitySet(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getURIToParameterizationEntitySet")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetURIToParameterizationEntry(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getURIToParameterizationEntry")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSetParameterValue(value: (String, String, String) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setParameterValue")(js.Any.fromFunction3(value))
+        ret
+    }
+  }
+  
 }
 

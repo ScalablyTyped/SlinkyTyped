@@ -1,6 +1,6 @@
 package typingsSlinky.stripeV3.stripe
 
-import typingsSlinky.stripeV3.AnonBillingdetailsCard
+import typingsSlinky.stripeV3.anon.BillingdetailsCard
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait HandleCardPaymentWithoutElementsOptions extends HandleCardPaymentOptions {
     * the payment method, such as billing details
     */
   @JSName("payment_method_data")
-  var payment_method_data_HandleCardPaymentWithoutElementsOptions: js.UndefOr[AnonBillingdetailsCard] = js.native
+  var payment_method_data_HandleCardPaymentWithoutElementsOptions: js.UndefOr[BillingdetailsCard] = js.native
   /**
     * Instead of payment_method, the ID of a Source may be passed in.
     * (Note that this is undocumented as of August 2019).
@@ -51,7 +51,7 @@ object HandleCardPaymentWithoutElementsOptions {
         ret
     }
     @scala.inline
-    def withPayment_method_data(value: AnonBillingdetailsCard): Self = {
+    def withPayment_method_data(value: BillingdetailsCard): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("payment_method_data")(value.asInstanceOf[js.Any])
         ret

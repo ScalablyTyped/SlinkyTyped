@@ -12,7 +12,9 @@ import scala.scalajs.js.annotation._
   * @template S̤t̤a̤m̤p̤ The type of the `Stamp` (when extending a `Stamp`.)
   */
 @js.native
-trait ExtendedDescriptor[Obj, S̤t̤a̤m̤p̤ /* <: StampSignature */] extends Descriptor[Obj, S̤t̤a̤m̤p̤] {
+trait ExtendedDescriptor[Obj, S̤t̤a̤m̤p̤ /* <: StampSignature */]
+  extends Descriptor[Obj, S̤t̤a̤m̤p̤]
+     with Composable {
   /** A set of options made available to the `Stamp` and its initializers during object instance creation. These will be copied by assignment. */
   var conf: js.UndefOr[PropertyMap] = js.native
   /** A set of options made available to the `Stamp` and its initializers during object instance creation. These will be deep merged. */

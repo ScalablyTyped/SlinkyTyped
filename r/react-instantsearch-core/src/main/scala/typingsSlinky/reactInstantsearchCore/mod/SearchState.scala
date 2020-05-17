@@ -1,61 +1,186 @@
 package typingsSlinky.reactInstantsearchCore.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.reactInstantsearchCore.AnonConfigure
-import typingsSlinky.reactInstantsearchCore.AnonDictkey
-import typingsSlinky.reactInstantsearchCore.AnonMax
+import typingsSlinky.reactInstantsearchCore.anon.Dictkey
+import typingsSlinky.reactInstantsearchCore.anon.Max
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
+@js.native
 trait SearchState
   extends /* widgetId */ StringDictionary[js.Any] {
-  var configure: js.UndefOr[AnonDictkey] = js.undefined
-  var hierarchicalMenu: js.UndefOr[StringDictionary[String]] = js.undefined
-  var hitsPerPage: js.UndefOr[Double] = js.undefined
-  var indices: js.UndefOr[StringDictionary[AnonConfigure]] = js.undefined
-  var menu: js.UndefOr[StringDictionary[String]] = js.undefined
-  var multiRange: js.UndefOr[StringDictionary[String]] = js.undefined
-  var page: js.UndefOr[Double] = js.undefined
-  var query: js.UndefOr[String] = js.undefined
-  var range: js.UndefOr[StringDictionary[AnonMax]] = js.undefined
-  var refinementList: js.UndefOr[StringDictionary[js.Array[String]]] = js.undefined
-  var sortBy: js.UndefOr[String] = js.undefined
-  var toggle: js.UndefOr[StringDictionary[Boolean]] = js.undefined
+  var configure: js.UndefOr[Dictkey] = js.native
+  var hierarchicalMenu: js.UndefOr[StringDictionary[String]] = js.native
+  var hitsPerPage: js.UndefOr[Double] = js.native
+  var indices: js.UndefOr[StringDictionary[typingsSlinky.reactInstantsearchCore.anon.Configure]] = js.native
+  var menu: js.UndefOr[StringDictionary[String]] = js.native
+  var multiRange: js.UndefOr[StringDictionary[String]] = js.native
+  var page: js.UndefOr[Double] = js.native
+  var query: js.UndefOr[String] = js.native
+  var range: js.UndefOr[StringDictionary[Max]] = js.native
+  var refinementList: js.UndefOr[StringDictionary[js.Array[String]]] = js.native
+  var sortBy: js.UndefOr[String] = js.native
+  var toggle: js.UndefOr[StringDictionary[Boolean]] = js.native
 }
 
 object SearchState {
   @scala.inline
-  def apply(
-    StringDictionary: /* widgetId */ StringDictionary[js.Any] = null,
-    configure: AnonDictkey = null,
-    hierarchicalMenu: StringDictionary[String] = null,
-    hitsPerPage: Int | Double = null,
-    indices: StringDictionary[AnonConfigure] = null,
-    menu: StringDictionary[String] = null,
-    multiRange: StringDictionary[String] = null,
-    page: Int | Double = null,
-    query: String = null,
-    range: StringDictionary[AnonMax] = null,
-    refinementList: StringDictionary[js.Array[String]] = null,
-    sortBy: String = null,
-    toggle: StringDictionary[Boolean] = null
-  ): SearchState = {
+  def apply(): SearchState = {
     val __obj = js.Dynamic.literal()
-    if (StringDictionary != null) js.Dynamic.global.Object.assign(__obj, StringDictionary)
-    if (configure != null) __obj.updateDynamic("configure")(configure.asInstanceOf[js.Any])
-    if (hierarchicalMenu != null) __obj.updateDynamic("hierarchicalMenu")(hierarchicalMenu.asInstanceOf[js.Any])
-    if (hitsPerPage != null) __obj.updateDynamic("hitsPerPage")(hitsPerPage.asInstanceOf[js.Any])
-    if (indices != null) __obj.updateDynamic("indices")(indices.asInstanceOf[js.Any])
-    if (menu != null) __obj.updateDynamic("menu")(menu.asInstanceOf[js.Any])
-    if (multiRange != null) __obj.updateDynamic("multiRange")(multiRange.asInstanceOf[js.Any])
-    if (page != null) __obj.updateDynamic("page")(page.asInstanceOf[js.Any])
-    if (query != null) __obj.updateDynamic("query")(query.asInstanceOf[js.Any])
-    if (range != null) __obj.updateDynamic("range")(range.asInstanceOf[js.Any])
-    if (refinementList != null) __obj.updateDynamic("refinementList")(refinementList.asInstanceOf[js.Any])
-    if (sortBy != null) __obj.updateDynamic("sortBy")(sortBy.asInstanceOf[js.Any])
-    if (toggle != null) __obj.updateDynamic("toggle")(toggle.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchState]
   }
+  @scala.inline
+  implicit class SearchStateOps[Self <: SearchState] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withConfigure(value: Dictkey): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configure")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutConfigure: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("configure")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHierarchicalMenu(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchicalMenu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHierarchicalMenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hierarchicalMenu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withHitsPerPage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hitsPerPage")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutHitsPerPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hitsPerPage")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withIndices(value: StringDictionary[typingsSlinky.reactInstantsearchCore.anon.Configure]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indices")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutIndices: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("indices")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMenu(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMenu: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withMultiRange(value: StringDictionary[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutMultiRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("multiRange")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withPage(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutPage: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("page")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withQuery(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutQuery: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRange(value: StringDictionary[Max]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRange: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("range")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withRefinementList(value: StringDictionary[js.Array[String]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refinementList")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutRefinementList: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("refinementList")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withSortBy(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortBy")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutSortBy: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("sortBy")(js.undefined)
+        ret
+    }
+    @scala.inline
+    def withToggle(value: StringDictionary[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withoutToggle: Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("toggle")(js.undefined)
+        ret
+    }
+  }
+  
 }
 

@@ -3,9 +3,9 @@ package typingsSlinky.oracleOraclejet.ojtagcloudMod
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.Anon24
-import typingsSlinky.oracleOraclejet.AnonHoverBehaviorDelay
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
+import typingsSlinky.oracleOraclejet.anon.HoverBehaviorDelay
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
+import typingsSlinky.oracleOraclejet.anon.`24`
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponent
 import typingsSlinky.oracleOraclejet.ojtagcloudMod.ojTagCloud.ItemContext
@@ -80,11 +80,11 @@ trait ojTagCloud_[K, D] extends dvtBaseComponent[ojTagCloudSettableProperties[K,
   var onTouchResponseChanged: (js.Function1[CustomEvent, _]) | Null = js.native
   var selection: js.Array[K] = js.native
   var selectionMode: single | multiple | none = js.native
-  var styleDefaults: AnonHoverBehaviorDelay = js.native
-  var tooltip: Anon24[K] = js.native
+  var styleDefaults: HoverBehaviorDelay = js.native
+  var tooltip: `24`[K] = js.native
   var touchResponse: touchStart | auto = js.native
   @JSName("translations")
-  var translations_ojTagCloud_ : AnonLabelAndValue = js.native
+  var translations_ojTagCloud_ : LabelAndValue = js.native
   def addEventListener(
     `type`: animationOnDataChangeChanged,
     listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]
@@ -221,9 +221,9 @@ trait ojTagCloud_[K, D] extends dvtBaseComponent[ojTagCloudSettableProperties[K,
   @JSName("getProperty")
   def getProperty_selectionMode(property: selectionMode): single | multiple | none = js.native
   @JSName("getProperty")
-  def getProperty_styleDefaults(property: styleDefaults): AnonHoverBehaviorDelay = js.native
+  def getProperty_styleDefaults(property: styleDefaults): HoverBehaviorDelay = js.native
   @JSName("getProperty")
-  def getProperty_tooltip(property: tooltip): Anon24[K] = js.native
+  def getProperty_tooltip(property: tooltip): `24`[K] = js.native
   @JSName("getProperty")
   def getProperty_touchResponse(property: touchResponse): touchStart | auto = js.native
   def setProperties(properties: ojTagCloudSettablePropertiesLenient[K, D]): Unit = js.native
@@ -255,10 +255,10 @@ trait ojTagCloud_[K, D] extends dvtBaseComponent[ojTagCloudSettableProperties[K,
   @JSName("setProperty")
   def setProperty_selection(property: selection, value: js.Array[K]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_styleDefaults(property: styleDefaults, value: AnonHoverBehaviorDelay): Unit = js.native
+  def setProperty_styleDefaults(property: styleDefaults, value: HoverBehaviorDelay): Unit = js.native
   @JSName("setProperty")
-  def setProperty_tooltip(property: tooltip, value: Anon24[K]): Unit = js.native
+  def setProperty_tooltip(property: tooltip, value: `24`[K]): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonLabelAndValue): Unit = js.native
+  def setProperty_translations(property: translations, value: LabelAndValue): Unit = js.native
 }
 

@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,9 +9,4 @@ trait HTMLMenuElement extends HTMLElement {
   /** @deprecated */
   var compact: scala.Boolean = js.native
 }
-
-@JSGlobal("HTMLMenuElement")
-@js.native
-object HTMLMenuElement
-  extends Instantiable0[org.scalajs.dom.raw.HTMLMenuElement]
 

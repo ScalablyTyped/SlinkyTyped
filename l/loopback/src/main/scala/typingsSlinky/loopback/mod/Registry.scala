@@ -1,7 +1,7 @@
 package typingsSlinky.loopback.mod
 
-import typingsSlinky.loopback.AnonConnector
-import typingsSlinky.loopback.AnonRelations
+import typingsSlinky.loopback.anon.Connector
+import typingsSlinky.loopback.anon.Relations
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ class Registry () extends js.Object {
     * @property {any} [relations] Model relations to add/update
     * @header loopback.configureModel(ModelCtor, config
     */
-  def configureModel(ModelCtor: Model, config: AnonRelations): Unit = js.native
+  def configureModel(ModelCtor: Model, config: Relations): Unit = js.native
   /**
     * Create a data source with passing the provided options to the connector
     * @param {string} name Optional name.
@@ -30,7 +30,7 @@ class Registry () extends js.Object {
     * @property {*} [*] Other&nbsp;connector properties.
     *   See the relevant connector documentation
     */
-  def createDataSource(name: String, options: AnonConnector): Unit = js.native
+  def createDataSource(name: String, options: Connector): Unit = js.native
   /**
     * Create a named vanilla JavaScript class constructor with an attached
     * set of properties and options

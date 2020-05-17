@@ -2,11 +2,12 @@ package typingsSlinky.d3Fetch
 
 import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.raw.Blob
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.d3Dsv.mod.DSVParsedArray
 import typingsSlinky.d3Dsv.mod.DSVRowArray
 import typingsSlinky.d3Dsv.mod.DSVRowString
-import typingsSlinky.std.Document_
+import typingsSlinky.d3Fetch.anon.PartialHTMLImageElement
 import typingsSlinky.std.XMLDocument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -63,14 +64,14 @@ object mod extends js.Object {
       js.UndefOr[ParsedRow | Null]
     ]
   ): js.Promise[DSVParsedArray[ParsedRow]] = js.native
-  def html(url: String): js.Promise[Document_] = js.native
-  def html(url: String, init: RequestInit): js.Promise[Document_] = js.native
+  def html(url: String): js.Promise[Document] = js.native
+  def html(url: String, init: RequestInit): js.Promise[Document] = js.native
   def image(url: String): js.Promise[HTMLImageElement] = js.native
   def image(url: String, init: PartialHTMLImageElement): js.Promise[HTMLImageElement] = js.native
   def json[ParsedJSONObject /* <: js.Any */](url: String): js.Promise[ParsedJSONObject] = js.native
   def json[ParsedJSONObject /* <: js.Any */](url: String, init: RequestInit): js.Promise[ParsedJSONObject] = js.native
-  def svg(url: String): js.Promise[Document_] = js.native
-  def svg(url: String, init: RequestInit): js.Promise[Document_] = js.native
+  def svg(url: String): js.Promise[Document] = js.native
+  def svg(url: String, init: RequestInit): js.Promise[Document] = js.native
   def text(url: String): js.Promise[String] = js.native
   def text(url: String, init: RequestInit): js.Promise[String] = js.native
   def tsv[Columns /* <: String */](url: String): js.Promise[DSVRowArray[Columns]] = js.native

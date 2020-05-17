@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojpictochartMod
 
-import typingsSlinky.oracleOraclejet.Anon14
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
+import typingsSlinky.oracleOraclejet.anon.`14`
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponentSettableProperties
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.all
@@ -47,9 +47,9 @@ trait ojPictoChartSettableProperties[K, D] extends dvtBaseComponentSettablePrope
   var rowHeight: Double | Null = js.native
   var selection: js.Array[K] = js.native
   var selectionMode: single | multiple | none = js.native
-  var tooltip: Anon14[K] = js.native
+  var tooltip: `14`[K] = js.native
   @JSName("translations")
-  var translations_ojPictoChartSettableProperties: AnonLabelAndValue = js.native
+  var translations_ojPictoChartSettableProperties: LabelAndValue = js.native
 }
 
 object ojPictoChartSettableProperties {
@@ -68,9 +68,9 @@ object ojPictoChartSettableProperties {
     layoutOrigin: topEnd | bottomStart | bottomEnd | topStart,
     selection: js.Array[K],
     selectionMode: single | multiple | none,
-    tooltip: Anon14[K],
+    tooltip: `14`[K],
     trackResize: on | off,
-    translations: AnonLabelAndValue
+    translations: LabelAndValue
   ): ojPictoChartSettableProperties[K, D] = {
     val __obj = js.Dynamic.literal(animationOnDataChange = animationOnDataChange.asInstanceOf[js.Any], animationOnDisplay = animationOnDisplay.asInstanceOf[js.Any], as = as.asInstanceOf[js.Any], drilling = drilling.asInstanceOf[js.Any], hiddenCategories = hiddenCategories.asInstanceOf[js.Any], highlightMatch = highlightMatch.asInstanceOf[js.Any], highlightedCategories = highlightedCategories.asInstanceOf[js.Any], hoverBehavior = hoverBehavior.asInstanceOf[js.Any], hoverBehaviorDelay = hoverBehaviorDelay.asInstanceOf[js.Any], layout = layout.asInstanceOf[js.Any], layoutOrigin = layoutOrigin.asInstanceOf[js.Any], selection = selection.asInstanceOf[js.Any], selectionMode = selectionMode.asInstanceOf[js.Any], tooltip = tooltip.asInstanceOf[js.Any], trackResize = trackResize.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojPictoChartSettableProperties[K, D]]
@@ -160,13 +160,13 @@ object ojPictoChartSettableProperties {
         ret
     }
     @scala.inline
-    def withTooltip(value: Anon14[K]): Self[K, D] = {
+    def withTooltip(value: `14`[K]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelAndValue): Self[K, D] = {
+    def withTranslations(value: LabelAndValue): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

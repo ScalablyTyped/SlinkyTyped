@@ -12,9 +12,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Defines a set of properties to use with a DataPackage object. */
-@JSGlobal("Windows.ApplicationModel.DataTransfer.DataPackagePropertySet")
 @js.native
-abstract class DataPackagePropertySet () extends js.Object {
+trait DataPackagePropertySet extends js.Object {
   /** Gets or sets the Uniform Resource Identifier (URI) of the app's location in the Windows Store. */
   var applicationListingUri: Uri = js.native
   /** Gets or sets the name of the app that created the DataPackage object. */
@@ -77,5 +76,162 @@ abstract class DataPackagePropertySet () extends js.Object {
     * @param key The key.
     */
   def remove(key: String): Unit = js.native
+}
+
+object DataPackagePropertySet {
+  @scala.inline
+  def apply(
+    applicationListingUri: Uri,
+    applicationName: String,
+    clear: () => Unit,
+    contentSourceApplicationLink: Uri,
+    contentSourceWebLink: Uri,
+    description: String,
+    enterpriseId: String,
+    fileTypes: IVector[String],
+    first: () => IIterator[IKeyValuePair[_, _]],
+    getView: () => IMapView[String, _],
+    hasKey: String => Boolean,
+    insert: (String, js.Any) => Boolean,
+    logoBackgroundColor: Color,
+    lookup: String => js.Any,
+    packageFamilyName: String,
+    remove: String => Unit,
+    size: Double,
+    square30x30Logo: IRandomAccessStreamReference,
+    thumbnail: IRandomAccessStreamReference,
+    title: String
+  ): DataPackagePropertySet = {
+    val __obj = js.Dynamic.literal(applicationListingUri = applicationListingUri.asInstanceOf[js.Any], applicationName = applicationName.asInstanceOf[js.Any], clear = js.Any.fromFunction0(clear), contentSourceApplicationLink = contentSourceApplicationLink.asInstanceOf[js.Any], contentSourceWebLink = contentSourceWebLink.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], enterpriseId = enterpriseId.asInstanceOf[js.Any], fileTypes = fileTypes.asInstanceOf[js.Any], first = js.Any.fromFunction0(first), getView = js.Any.fromFunction0(getView), hasKey = js.Any.fromFunction1(hasKey), insert = js.Any.fromFunction2(insert), logoBackgroundColor = logoBackgroundColor.asInstanceOf[js.Any], lookup = js.Any.fromFunction1(lookup), packageFamilyName = packageFamilyName.asInstanceOf[js.Any], remove = js.Any.fromFunction1(remove), size = size.asInstanceOf[js.Any], square30x30Logo = square30x30Logo.asInstanceOf[js.Any], thumbnail = thumbnail.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
+    __obj.asInstanceOf[DataPackagePropertySet]
+  }
+  @scala.inline
+  implicit class DataPackagePropertySetOps[Self <: DataPackagePropertySet] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withApplicationListingUri(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationListingUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withApplicationName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("applicationName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withClear(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("clear")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withContentSourceApplicationLink(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentSourceApplicationLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentSourceWebLink(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentSourceWebLink")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDescription(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("description")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEnterpriseId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("enterpriseId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFileTypes(value: IVector[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("fileTypes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFirst(value: () => IIterator[IKeyValuePair[_, _]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("first")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetView(value: () => IMapView[String, _]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getView")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withHasKey(value: String => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hasKey")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withInsert(value: (String, js.Any) => Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withLogoBackgroundColor(value: Color): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("logoBackgroundColor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLookup(value: String => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("lookup")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withPackageFamilyName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packageFamilyName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRemove(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("remove")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withSize(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSquare30x30Logo(value: IRandomAccessStreamReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("square30x30Logo")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withThumbnail(value: IRandomAccessStreamReference): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("thumbnail")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("title")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

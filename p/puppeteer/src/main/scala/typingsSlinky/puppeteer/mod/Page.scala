@@ -2,7 +2,6 @@ package typingsSlinky.puppeteer.mod
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.puppeteer.AnonMetrics
 import typingsSlinky.puppeteer.puppeteerStrings.close
 import typingsSlinky.puppeteer.puppeteerStrings.console
 import typingsSlinky.puppeteer.puppeteerStrings.dialog
@@ -152,7 +151,10 @@ trait Page
     handler: js.Function2[/* e */ js.UndefOr[scala.Nothing], /* repeated */ js.Any, Unit]
   ): this.type = js.native
   @JSName("on")
-  def on_metrics(eventName: metrics, handler: js.Function2[/* e */ AnonMetrics, /* repeated */ js.Any, Unit]): this.type = js.native
+  def on_metrics(
+    eventName: metrics,
+    handler: js.Function2[/* e */ typingsSlinky.puppeteer.anon.Metrics, /* repeated */ js.Any, Unit]
+  ): this.type = js.native
   @JSName("on")
   def on_pageerror(eventName: pageerror, handler: js.Function2[/* e */ js.Error, /* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("on")
@@ -203,7 +205,10 @@ trait Page
     handler: js.Function2[/* e */ js.UndefOr[scala.Nothing], /* repeated */ js.Any, Unit]
   ): this.type = js.native
   @JSName("once")
-  def once_metrics(eventName: metrics, handler: js.Function2[/* e */ AnonMetrics, /* repeated */ js.Any, Unit]): this.type = js.native
+  def once_metrics(
+    eventName: metrics,
+    handler: js.Function2[/* e */ typingsSlinky.puppeteer.anon.Metrics, /* repeated */ js.Any, Unit]
+  ): this.type = js.native
   @JSName("once")
   def once_pageerror(eventName: pageerror, handler: js.Function2[/* e */ js.Error, /* repeated */ js.Any, Unit]): this.type = js.native
   @JSName("once")

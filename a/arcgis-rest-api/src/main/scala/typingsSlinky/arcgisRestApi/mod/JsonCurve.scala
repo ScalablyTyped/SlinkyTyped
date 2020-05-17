@@ -14,24 +14,12 @@ trait JsonCurve extends js.Object
 
 object JsonCurve {
   @scala.inline
-  def CircularArc(c: js.Tuple2[Position, Position2D]): JsonCurve = {
-    val __obj = js.Dynamic.literal(c = c.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JsonCurve]
-  }
+  implicit def apply(value: Arc): JsonCurve = value.asInstanceOf[JsonCurve]
   @scala.inline
-  def Arc(a: js.Tuple7[Position, Position2D, Double, Double, Double, Double, Double]): JsonCurve = {
-    val __obj = js.Dynamic.literal(a = a.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JsonCurve]
-  }
+  implicit def apply(value: BezierCurve): JsonCurve = value.asInstanceOf[JsonCurve]
   @scala.inline
-  def OldCircularArc(a: js.Tuple4[Position, Position2D, Double, Double]): JsonCurve = {
-    val __obj = js.Dynamic.literal(a = a.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JsonCurve]
-  }
+  implicit def apply(value: CircularArc): JsonCurve = value.asInstanceOf[JsonCurve]
   @scala.inline
-  def BezierCurve(b: js.Tuple3[Position, Position2D, Position2D]): JsonCurve = {
-    val __obj = js.Dynamic.literal(b = b.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JsonCurve]
-  }
+  implicit def apply(value: OldCircularArc): JsonCurve = value.asInstanceOf[JsonCurve]
 }
 

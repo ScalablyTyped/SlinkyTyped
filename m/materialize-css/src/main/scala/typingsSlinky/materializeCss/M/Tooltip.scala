@@ -1,15 +1,12 @@
 package typingsSlinky.materializeCss.M
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.materializeCss.MElements
-import typingsSlinky.materializeCss.PartialTooltipOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("M.Tooltip")
 @js.native
-class Tooltip ()
+trait Tooltip
   extends Component[TooltipOptions]
      with Openable {
   /**
@@ -18,23 +15,33 @@ class Tooltip ()
   var isHovered: Boolean = js.native
 }
 
-/* static members */
-@JSGlobal("M.Tooltip")
-@js.native
-object Tooltip extends js.Object {
-  /**
-    * Get Instance
-    */
-  def getInstance(elem: Element): Tooltip = js.native
-  /**
-    * Init Tooltips
-    */
-  def init(els: MElements): js.Array[Tooltip] = js.native
-  def init(els: MElements, options: PartialTooltipOptions): js.Array[Tooltip] = js.native
-  /**
-    * Init Tooltip
-    */
-  def init(els: Element): Tooltip = js.native
-  def init(els: Element, options: PartialTooltipOptions): Tooltip = js.native
+object Tooltip {
+  @scala.inline
+  def apply(
+    close: () => Unit,
+    destroy: () => Unit,
+    el: Element,
+    isHovered: Boolean,
+    isOpen: Boolean,
+    open: () => Unit,
+    options: TooltipOptions
+  ): Tooltip = {
+    val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close), destroy = js.Any.fromFunction0(destroy), el = el.asInstanceOf[js.Any], isHovered = isHovered.asInstanceOf[js.Any], isOpen = isOpen.asInstanceOf[js.Any], open = js.Any.fromFunction0(open), options = options.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Tooltip]
+  }
+  @scala.inline
+  implicit class TooltipOps[Self <: Tooltip] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withIsHovered(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("isHovered")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

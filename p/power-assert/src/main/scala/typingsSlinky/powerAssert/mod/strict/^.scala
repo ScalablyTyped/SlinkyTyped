@@ -1,8 +1,8 @@
 package typingsSlinky.powerAssert.mod.strict
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.powerAssert.AnonActual
-import typingsSlinky.powerAssert.FnCall
+import typingsSlinky.powerAssert.anon.Actual
+import typingsSlinky.powerAssert.anon.FnCall
 import typingsSlinky.powerAssert.mod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @JSImport("power-assert", "strict")
 @js.native
 object ^ extends js.Object {
-  var AssertionError: Instantiable1[js.UndefOr[/* options */ AnonActual], typingsSlinky.powerAssert.mod.AssertionError] = js.native
+  var AssertionError: Instantiable1[js.UndefOr[/* options */ Actual], typingsSlinky.powerAssert.mod.AssertionError] = js.native
   @JSName("doesNotThrow")
   var doesNotThrow_Original: FnCall = js.native
   @JSName("throws")

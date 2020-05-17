@@ -1,6 +1,6 @@
 package typingsSlinky.webpackHotClient.mod
 
-import typingsSlinky.webpackHotClient.ReadonlyOptions
+import typingsSlinky.webpackHotClient.anon.ReadonlyOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

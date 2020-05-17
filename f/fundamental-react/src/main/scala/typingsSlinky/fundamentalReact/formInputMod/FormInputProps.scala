@@ -1,7 +1,7 @@
 package typingsSlinky.fundamentalReact.formInputMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.fundamentalReact.AnonState
+import typingsSlinky.fundamentalReact.anon.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait FormInputProps
   var placeholder: js.UndefOr[String] = js.native
   var readOnly: js.UndefOr[Boolean] = js.native
   var `type`: js.UndefOr[String] = js.native
-  var validationState: js.UndefOr[AnonState] = js.native
+  var validationState: js.UndefOr[State] = js.native
   var value: js.UndefOr[String | Double] = js.native
 }
 
@@ -143,7 +143,7 @@ object FormInputProps {
         ret
     }
     @scala.inline
-    def withValidationState(value: AnonState): Self = {
+    def withValidationState(value: State): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("validationState")(value.asInstanceOf[js.Any])
         ret

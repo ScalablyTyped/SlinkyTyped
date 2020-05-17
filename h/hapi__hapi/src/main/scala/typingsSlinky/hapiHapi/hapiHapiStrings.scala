@@ -2,7 +2,7 @@ package typingsSlinky.hapiHapi
 
 import typingsSlinky.hapiHapi.mod.AccessEntity
 import typingsSlinky.hapiHapi.mod.AuthMode
-import typingsSlinky.hapiHapi.mod.Lifecycle._FailAction
+import typingsSlinky.hapiHapi.mod.Lifecycle.FailAction
 import typingsSlinky.hapiHapi.mod.PayloadOutput
 import typingsSlinky.hapiHapi.mod.ReferrerPolicy
 import typingsSlinky.hapiHapi.mod.RequestEventType
@@ -112,7 +112,7 @@ object hapiHapiStrings {
   sealed trait disconnect extends RequestEventType
   
   @js.native
-  sealed trait error extends _FailAction
+  sealed trait error extends FailAction
   
   @js.native
   sealed trait file extends PayloadOutput
@@ -148,7 +148,7 @@ object hapiHapiStrings {
   sealed trait https extends js.Object
   
   @js.native
-  sealed trait ignore extends _FailAction
+  sealed trait ignore extends FailAction
   
   @js.native
   sealed trait internal extends js.Object
@@ -160,7 +160,7 @@ object hapiHapiStrings {
   sealed trait latin1 extends js.Object
   
   @js.native
-  sealed trait log extends _FailAction
+  sealed trait log extends FailAction
   
   @js.native
   sealed trait `no-referrer` extends ReferrerPolicy

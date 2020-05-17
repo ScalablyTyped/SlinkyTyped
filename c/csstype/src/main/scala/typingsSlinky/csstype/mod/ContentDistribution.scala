@@ -11,9 +11,9 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.stretch
 */
 trait ContentDistribution
-  extends _AlignContentProperty
-     with _JustifyContentProperty
-     with _PlaceContentProperty
+  extends AlignContentProperty
+     with JustifyContentProperty
+     with PlaceContentProperty
 
 object ContentDistribution {
   @scala.inline

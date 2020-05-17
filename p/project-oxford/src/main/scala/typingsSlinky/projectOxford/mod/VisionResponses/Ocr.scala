@@ -1,6 +1,6 @@
 package typingsSlinky.projectOxford.mod.VisionResponses
 
-import typingsSlinky.projectOxford.AnonLines
+import typingsSlinky.projectOxford.anon.Lines
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,13 +9,13 @@ import scala.scalajs.js.annotation._
 trait Ocr extends js.Object {
   var language: String = js.native
   var orientation: String = js.native
-  var regions: js.Array[AnonLines] = js.native
+  var regions: js.Array[Lines] = js.native
   var textAngle: Double = js.native
 }
 
 object Ocr {
   @scala.inline
-  def apply(language: String, orientation: String, regions: js.Array[AnonLines], textAngle: Double): Ocr = {
+  def apply(language: String, orientation: String, regions: js.Array[Lines], textAngle: Double): Ocr = {
     val __obj = js.Dynamic.literal(language = language.asInstanceOf[js.Any], orientation = orientation.asInstanceOf[js.Any], regions = regions.asInstanceOf[js.Any], textAngle = textAngle.asInstanceOf[js.Any])
     __obj.asInstanceOf[Ocr]
   }
@@ -38,7 +38,7 @@ object Ocr {
         ret
     }
     @scala.inline
-    def withRegions(value: js.Array[AnonLines]): Self = {
+    def withRegions(value: js.Array[Lines]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("regions")(value.asInstanceOf[js.Any])
         ret

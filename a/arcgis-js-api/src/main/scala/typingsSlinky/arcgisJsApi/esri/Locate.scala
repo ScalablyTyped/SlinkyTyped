@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.IHandle
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`locate-error`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.locate
@@ -89,8 +88,4 @@ trait Locate
   @JSName("on")
   def on_locateerror(name: `locate-error`, eventHandler: LocateLocateErrorEventHandler): IHandle = js.native
 }
-
-@JSGlobal("__esri.Locate")
-@js.native
-object Locate extends TopLevel[LocateConstructor]
 

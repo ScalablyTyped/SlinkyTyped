@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientDfareporting.gapi.client.dfareporting
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientDfareporting.AnonAccountUserRoleOnly
-import typingsSlinky.gapiClientDfareporting.AnonFields
-import typingsSlinky.gapiClientDfareporting.AnonKey
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientDfareporting.anon.AccountUserRoleOnly
+import typingsSlinky.gapiClientDfareporting.anon.Fields
+import typingsSlinky.gapiClientDfareporting.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,28 +11,28 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UserRolesResource extends js.Object {
   /** Deletes an existing user role. */
-  def delete(request: AnonFields): Request_[Unit] = js.native
+  def delete(request: Fields): Request[Unit] = js.native
   /** Gets one user role by ID. */
-  def get(request: AnonFields): Request_[UserRole] = js.native
+  def get(request: Fields): Request[UserRole] = js.native
   /** Inserts a new user role. */
-  def insert(request: AnonKey): Request_[UserRole] = js.native
+  def insert(request: Key): Request[UserRole] = js.native
   /** Retrieves a list of user roles, possibly filtered. This method supports paging. */
-  def list(request: AnonAccountUserRoleOnly): Request_[UserRolesListResponse] = js.native
+  def list(request: AccountUserRoleOnly): Request[UserRolesListResponse] = js.native
   /** Updates an existing user role. This method supports patch semantics. */
-  def patch(request: AnonFields): Request_[UserRole] = js.native
+  def patch(request: Fields): Request[UserRole] = js.native
   /** Updates an existing user role. */
-  def update(request: AnonKey): Request_[UserRole] = js.native
+  def update(request: Key): Request[UserRole] = js.native
 }
 
 object UserRolesResource {
   @scala.inline
   def apply(
-    delete: AnonFields => Request_[Unit],
-    get: AnonFields => Request_[UserRole],
-    insert: AnonKey => Request_[UserRole],
-    list: AnonAccountUserRoleOnly => Request_[UserRolesListResponse],
-    patch: AnonFields => Request_[UserRole],
-    update: AnonKey => Request_[UserRole]
+    delete: Fields => Request[Unit],
+    get: Fields => Request[UserRole],
+    insert: Key => Request[UserRole],
+    list: AccountUserRoleOnly => Request[UserRolesListResponse],
+    patch: Fields => Request[UserRole],
+    update: Key => Request[UserRole]
   ): UserRolesResource = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[UserRolesResource]
@@ -44,37 +44,37 @@ object UserRolesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDelete(value: AnonFields => Request_[Unit]): Self = {
+    def withDelete(value: Fields => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonFields => Request_[UserRole]): Self = {
+    def withGet(value: Fields => Request[UserRole]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withInsert(value: AnonKey => Request_[UserRole]): Self = {
+    def withInsert(value: Key => Request[UserRole]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonAccountUserRoleOnly => Request_[UserRolesListResponse]): Self = {
+    def withList(value: AccountUserRoleOnly => Request[UserRolesListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPatch(value: AnonFields => Request_[UserRole]): Self = {
+    def withPatch(value: Fields => Request[UserRole]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonKey => Request_[UserRole]): Self = {
+    def withUpdate(value: Key => Request[UserRole]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

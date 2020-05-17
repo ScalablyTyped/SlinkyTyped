@@ -3,8 +3,8 @@ package typingsSlinky.jsforce.queryMod
 import typingsSlinky.jsforce.jsforceStrings.ASC
 import typingsSlinky.jsforce.jsforceStrings.DESC
 import typingsSlinky.jsforce.recordResultMod.RecordResult
-import typingsSlinky.node.AnonEnd
 import typingsSlinky.node.NodeJS.WritableStream
+import typingsSlinky.node.anon.End
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.std.Promise
 import scala.scalajs.js
@@ -56,7 +56,7 @@ class Query[T] ()
   /* InferMemberOverrides */
   override def pipe[T /* <: WritableStream */](destination: T): T = js.native
   /* InferMemberOverrides */
-  override def pipe[T /* <: WritableStream */](destination: T, options: AnonEnd): T = js.native
+  override def pipe[T /* <: WritableStream */](destination: T, options: End): T = js.native
   def run(): Query[T] = js.native
   def run(options: ExecuteOptions): Query[T] = js.native
   def run(

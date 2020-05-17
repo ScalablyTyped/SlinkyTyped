@@ -1,0 +1,18 @@
+package typingsSlinky.winrtUwp.global.Windows.Perception.Spatial
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("Windows.Perception.Spatial.SpatialAnchor")
+@js.native
+abstract class SpatialAnchor ()
+  extends typingsSlinky.winrtUwp.Windows.Perception.Spatial.SpatialAnchor
+
+/* static members */
+@JSGlobal("Windows.Perception.Spatial.SpatialAnchor")
+@js.native
+object SpatialAnchor extends js.Object {
+  var tryCreateRelativeTo: js.Any = js.native
+}
+

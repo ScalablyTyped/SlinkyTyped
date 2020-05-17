@@ -30,30 +30,6 @@ object RelayProp {
         ret.asInstanceOf[js.Dynamic].updateDynamic("environment")(value.asInstanceOf[js.Any])
         ret
     }
-    @scala.inline
-    def withHasMore(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasMore")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutHasMore: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("hasMore")(js.undefined)
-        ret
-    }
-    @scala.inline
-    def withRefetch(value: scala.Nothing): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refetch")(value.asInstanceOf[js.Any])
-        ret
-    }
-    @scala.inline
-    def withoutRefetch: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refetch")(js.undefined)
-        ret
-    }
   }
   
 }

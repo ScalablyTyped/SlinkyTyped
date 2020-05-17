@@ -4,32 +4,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("SFS2X.Requests.MessageRecipientMode")
 @js.native
-class MessageRecipientMode protected () extends js.Object {
-  /**
-    * Creates a new MessageRecipientMode instance.
-    * @param {number} mode   One of the costants contained in this class, describing the recipient mode.
-    * @param {any}    target The moderator/administrator message recipient/s, according to the selected recipient mode.
-    */
-  def this(mode: Double, target: js.Any) = this()
+trait MessageRecipientMode extends js.Object {
   /** @type {number} Returns the selected recipient mode. */
   var mode: Double = js.native
   /** @type {any} Returns the moderator/administrator message target, according to the selected recipient mode. */
   var target: js.Any = js.native
 }
 
-/* static members */
-@JSGlobal("SFS2X.Requests.MessageRecipientMode")
-@js.native
-object MessageRecipientMode extends js.Object {
-  /** @type {number} The moderator/administrator message will be sent to all the clients who subscribed a specific Room Group. */
-  var TO_GROUP: Double = js.native
-  /** @type {number} The moderator/administrator message will be sent to all the users in a specific Room. */
-  var TO_ROOM: Double = js.native
-  /** @type {number} The moderator/administrator message will be sent to a specific user. */
-  var TO_USER: Double = js.native
-  /** @type {number} The moderator/administrator message will be sent to all the users in the Zone. */
-  var TO_ZONE: Double = js.native
+object MessageRecipientMode {
+  @scala.inline
+  def apply(mode: Double, target: js.Any): MessageRecipientMode = {
+    val __obj = js.Dynamic.literal(mode = mode.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MessageRecipientMode]
+  }
+  @scala.inline
+  implicit class MessageRecipientModeOps[Self <: MessageRecipientMode] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withMode(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("mode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTarget(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

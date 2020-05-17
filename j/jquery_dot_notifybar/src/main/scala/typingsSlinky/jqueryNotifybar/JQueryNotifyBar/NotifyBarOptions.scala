@@ -1,7 +1,7 @@
 package typingsSlinky.jqueryNotifybar.JQueryNotifyBar
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,7 +45,7 @@ trait NotifyBarOptions extends js.Object {
   /**
     * Custom jQuery object for notify bar.
     */
-  var jqObject: js.UndefOr[JQuery_[HTMLElement]] = js.native
+  var jqObject: js.UndefOr[JQuery[HTMLElement]] = js.native
   /**
     * Callback on before hide.
     */
@@ -177,7 +177,7 @@ object NotifyBarOptions {
         ret
     }
     @scala.inline
-    def withJqObject(value: JQuery_[HTMLElement]): Self = {
+    def withJqObject(value: JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("jqObject")(value.asInstanceOf[js.Any])
         ret

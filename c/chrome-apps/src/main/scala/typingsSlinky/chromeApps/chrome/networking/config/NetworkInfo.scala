@@ -1,6 +1,6 @@
 package typingsSlinky.chromeApps.chrome.networking.config
 
-import typingsSlinky.chromeApps.AnonWIFI
+import typingsSlinky.chromeApps.anon.WIFI
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chromeAppsStrings.None
 import typingsSlinky.chromeApps.chromeAppsStrings.WI_FI
@@ -36,12 +36,12 @@ trait NetworkInfo extends js.Object {
   /** Identifier indicating the security type of the network. */
   var Security: js.UndefOr[None | `WEP-PSK` | `WPA-PSK` | `WPA-EAP`] = js.native
   /** Currently only WiFi supported. */
-  var Type: ToStringLiteral[AnonWIFI, WI_FI, Exclude[WI_FI, WiFi]] = js.native
+  var Type: ToStringLiteral[WIFI, WI_FI, Exclude[WI_FI, WiFi]] = js.native
 }
 
 object NetworkInfo {
   @scala.inline
-  def apply(Type: ToStringLiteral[AnonWIFI, WI_FI, Exclude[WI_FI, WiFi]]): NetworkInfo = {
+  def apply(Type: ToStringLiteral[WIFI, WI_FI, Exclude[WI_FI, WiFi]]): NetworkInfo = {
     val __obj = js.Dynamic.literal(Type = Type.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkInfo]
   }
@@ -52,7 +52,7 @@ object NetworkInfo {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withType(value: ToStringLiteral[AnonWIFI, WI_FI, Exclude[WI_FI, WiFi]]): Self = {
+    def withType(value: ToStringLiteral[WIFI, WI_FI, Exclude[WI_FI, WiFi]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("Type")(value.asInstanceOf[js.Any])
         ret

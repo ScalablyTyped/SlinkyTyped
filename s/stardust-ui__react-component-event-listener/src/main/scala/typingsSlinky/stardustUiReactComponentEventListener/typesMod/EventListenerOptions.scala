@@ -1,8 +1,8 @@
 package typingsSlinky.stardustUiReactComponentEventListener.typesMod
 
 import org.scalajs.dom.raw.Node
+import org.scalajs.dom.raw.Window
 import slinky.core.facade.ReactRef
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait EventListenerOptions[T /* <: EventTypes */] extends js.Object {
   /** A function which receives a notification when an event of the specified type occurs. */
   var listener: EventHandler[T] = js.native
   /** A ref object with a target node. */
-  var targetRef: ReactRef[Node | Window_] = js.native
+  var targetRef: ReactRef[Node | Window] = js.native
   /** A case-sensitive string representing the event type to listen for. */
   var `type`: T = js.native
 }
@@ -23,7 +23,7 @@ object EventListenerOptions {
   @scala.inline
   def apply[T](
     listener: /* import warning: importer.ImportType#apply Failed type conversion: std.DocumentEventMap[T] */ /* e */ js.Any => Unit,
-    targetRef: ReactRef[Node | Window_],
+    targetRef: ReactRef[Node | Window],
     `type`: T
   ): EventListenerOptions[T] = {
     val __obj = js.Dynamic.literal(listener = js.Any.fromFunction1(listener), targetRef = targetRef.asInstanceOf[js.Any])
@@ -45,7 +45,7 @@ object EventListenerOptions {
         ret
     }
     @scala.inline
-    def withTargetRef(value: ReactRef[Node | Window_]): Self[T] = {
+    def withTargetRef(value: ReactRef[Node | Window]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("targetRef")(value.asInstanceOf[js.Any])
         ret

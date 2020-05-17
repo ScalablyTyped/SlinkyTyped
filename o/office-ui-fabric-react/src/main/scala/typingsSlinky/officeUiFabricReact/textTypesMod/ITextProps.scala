@@ -17,7 +17,7 @@ import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.xSmall
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.xxLarge
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.xxLargePlus
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.uifabricFoundation.AnonSlots
+import typingsSlinky.uifabricFoundation.anon.Slots
 import typingsSlinky.uifabricFoundation.libIcomponentMod.IStylesFunctionOrObject
 import typingsSlinky.uifabricFoundation.libIcomponentMod.ITokenFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -30,7 +30,7 @@ import scala.scalajs.js.annotation._
 trait ITextProps
   extends HTMLAttributes[HTMLElement]
      with ITextSlots
-     with AnonSlots[ITextSlots] {
+     with Slots[ITextSlots] {
   /**
     * Optionally render the component as another component type or primitive.
     */

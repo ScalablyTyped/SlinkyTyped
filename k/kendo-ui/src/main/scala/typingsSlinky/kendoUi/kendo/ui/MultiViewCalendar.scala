@@ -1,16 +1,12 @@
 package typingsSlinky.kendoUi.kendo.ui
 
-import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.ui.MultiViewCalendar")
 @js.native
-class MultiViewCalendar protected () extends Widget {
-  def this(element: Element) = this()
-  def this(element: Element, options: MultiViewCalendarOptions) = this()
+trait MultiViewCalendar extends Widget {
   @JSName("options")
   var options_MultiViewCalendar: MultiViewCalendarOptions = js.native
   var wrapper: JQuery = js.native
@@ -34,13 +30,5 @@ class MultiViewCalendar protected () extends Widget {
   def value(value: String): Unit = js.native
   def value(value: js.Date): Unit = js.native
   def view(): js.Any = js.native
-}
-
-/* static members */
-@JSGlobal("kendo.ui.MultiViewCalendar")
-@js.native
-object MultiViewCalendar extends js.Object {
-  var fn: MultiViewCalendar = js.native
-  def extend(proto: js.Object): MultiViewCalendar = js.native
 }
 

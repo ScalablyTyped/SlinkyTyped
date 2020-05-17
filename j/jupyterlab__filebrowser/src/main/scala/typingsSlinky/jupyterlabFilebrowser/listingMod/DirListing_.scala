@@ -1,5 +1,6 @@
 package typingsSlinky.jupyterlabFilebrowser.listingMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.jupyterlabFilebrowser.listingMod.DirListing.IOptions
@@ -11,7 +12,6 @@ import typingsSlinky.phosphorAlgorithm.iterMod.IIterator
 import typingsSlinky.phosphorSignaling.mod.ISignal
 import typingsSlinky.phosphorWidgets.mod.Widget
 import typingsSlinky.phosphorWidgets.mod.Widget.ResizeMessage
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -213,7 +213,7 @@ class DirListing_ protected () extends Widget {
     * called in response to events on the panel's DOM node. It should
     * not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
   /**
     * Get whether an item is selected by name.
     *

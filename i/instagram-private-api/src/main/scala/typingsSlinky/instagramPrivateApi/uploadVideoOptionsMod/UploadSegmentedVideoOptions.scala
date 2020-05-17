@@ -1,6 +1,5 @@
 package typingsSlinky.instagramPrivateApi.uploadVideoOptionsMod
 
-import typingsSlinky.instagramPrivateApi.AnonBuffer
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -38,7 +37,7 @@ object UploadSegmentedVideoOptions {
         ret
     }
     @scala.inline
-    def withSegmentDivider(value: /* options */ AnonBuffer => js.Array[Buffer]): Self = {
+    def withSegmentDivider(value: /* options */ typingsSlinky.instagramPrivateApi.anon.Buffer => js.Array[Buffer]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("segmentDivider")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientIdentitytoolkit.gapi.client.identitytoolkit
 
-import typingsSlinky.gapiClientIdentitytoolkit.AnonDisplayName
+import typingsSlinky.gapiClientIdentitytoolkit.anon.DisplayName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +28,7 @@ trait SetAccountInfoResponse extends js.Object {
   /** The photo url of the user. */
   var photoUrl: js.UndefOr[String] = js.native
   /** The user's profiles at the associated IdPs. */
-  var providerUserInfo: js.UndefOr[js.Array[AnonDisplayName]] = js.native
+  var providerUserInfo: js.UndefOr[js.Array[DisplayName]] = js.native
   /** If idToken is STS id token, then this field will be refresh token. */
   var refreshToken: js.UndefOr[String] = js.native
 }
@@ -166,7 +166,7 @@ object SetAccountInfoResponse {
         ret
     }
     @scala.inline
-    def withProviderUserInfo(value: js.Array[AnonDisplayName]): Self = {
+    def withProviderUserInfo(value: js.Array[DisplayName]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("providerUserInfo")(value.asInstanceOf[js.Any])
         ret

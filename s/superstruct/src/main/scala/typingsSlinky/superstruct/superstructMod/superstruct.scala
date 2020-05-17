@@ -1,6 +1,6 @@
 package typingsSlinky.superstruct.superstructMod
 
-import typingsSlinky.superstruct.PartialSuperstructSetting
+import typingsSlinky.superstruct.anon.PartialSuperstructSetting
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

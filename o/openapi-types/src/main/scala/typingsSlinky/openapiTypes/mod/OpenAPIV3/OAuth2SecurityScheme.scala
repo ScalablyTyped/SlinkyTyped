@@ -1,6 +1,6 @@
 package typingsSlinky.openapiTypes.mod.OpenAPIV3
 
-import typingsSlinky.openapiTypes.AnonAuthorizationCode
+import typingsSlinky.openapiTypes.anon.AuthorizationCode
 import typingsSlinky.openapiTypes.openapiTypesStrings.oauth2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait OAuth2SecurityScheme extends SecuritySchemeObject {
-  var flows: AnonAuthorizationCode = js.native
+  var flows: AuthorizationCode = js.native
   var `type`: oauth2 = js.native
 }
 
 object OAuth2SecurityScheme {
   @scala.inline
-  def apply(flows: AnonAuthorizationCode, `type`: oauth2): OAuth2SecurityScheme = {
+  def apply(flows: AuthorizationCode, `type`: oauth2): OAuth2SecurityScheme = {
     val __obj = js.Dynamic.literal(flows = flows.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[OAuth2SecurityScheme]
@@ -26,7 +26,7 @@ object OAuth2SecurityScheme {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFlows(value: AnonAuthorizationCode): Self = {
+    def withFlows(value: AuthorizationCode): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("flows")(value.asInstanceOf[js.Any])
         ret

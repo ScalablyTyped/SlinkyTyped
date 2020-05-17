@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a container for app settings. The methods and properties of this class support creating, deleting, enumerating, and traversing the container hierarchy. */
-@JSGlobal("Windows.Storage.ApplicationDataContainer")
 @js.native
-abstract class ApplicationDataContainer () extends js.Object {
+trait ApplicationDataContainer extends js.Object {
   /** Gets the child application settings containers of this application settings container. */
   var containers: IMapView[String, ApplicationDataContainer] = js.native
   /** Gets the type (local or roaming) of the app data store that is associated with the current settings container. */
@@ -30,5 +29,64 @@ abstract class ApplicationDataContainer () extends js.Object {
     * @param name The name of the settings container.
     */
   def deleteContainer(name: String): Unit = js.native
+}
+
+object ApplicationDataContainer {
+  @scala.inline
+  def apply(
+    containers: IMapView[String, ApplicationDataContainer],
+    createContainer: (String, ApplicationDataCreateDisposition) => ApplicationDataContainer,
+    deleteContainer: String => Unit,
+    locality: ApplicationDataLocality,
+    name: String,
+    values: IPropertySet
+  ): ApplicationDataContainer = {
+    val __obj = js.Dynamic.literal(containers = containers.asInstanceOf[js.Any], createContainer = js.Any.fromFunction2(createContainer), deleteContainer = js.Any.fromFunction1(deleteContainer), locality = locality.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ApplicationDataContainer]
+  }
+  @scala.inline
+  implicit class ApplicationDataContainerOps[Self <: ApplicationDataContainer] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withContainers(value: IMapView[String, ApplicationDataContainer]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("containers")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCreateContainer(value: (String, ApplicationDataCreateDisposition) => ApplicationDataContainer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("createContainer")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withDeleteContainer(value: String => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("deleteContainer")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withLocality(value: ApplicationDataLocality): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("locality")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("name")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withValues(value: IPropertySet): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("values")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

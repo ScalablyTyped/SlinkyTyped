@@ -14,17 +14,17 @@ object ImageFormatter {
   
   def apply(p: js.Any): Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Formatters.ImageFormatter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Formatters.ImageFormatter
   ] = new Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Formatters.ImageFormatter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Formatters.ImageFormatter
   ](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: ImageFormatter.type): Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Formatters.ImageFormatter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Formatters.ImageFormatter
   ] = new Default[
     tag.type, 
-    typingsSlinky.reactDataGrid.AdazzleReactDataGridPlugins.Formatters.ImageFormatter
+    typingsSlinky.reactDataGrid.global.AdazzleReactDataGridPlugins.Formatters.ImageFormatter
   ](js.Array(this.component, js.Dictionary.empty))()
 }
 

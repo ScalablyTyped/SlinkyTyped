@@ -2,6 +2,8 @@ package typingsSlinky.antd
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
+import typingsSlinky.antd.anon.PartialTypographyProps
+import typingsSlinky.antd.anon.WeakValidationMapTypograp
 import typingsSlinky.antd.textMod.TextProps
 import typingsSlinky.antd.typographyParagraphMod.ParagraphProps
 import typingsSlinky.antd.typographyTitleMod.TitleProps

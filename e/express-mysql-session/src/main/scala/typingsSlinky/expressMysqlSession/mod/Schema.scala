@@ -1,6 +1,6 @@
 package typingsSlinky.expressMysqlSession.mod
 
-import typingsSlinky.expressMysqlSession.PartialColumnNames
+import typingsSlinky.expressMysqlSession.anon.PartialColumnNames
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,13 +1,14 @@
 package typingsSlinky.hapi.mod
 
-import typingsSlinky.hapi.AnonEtag
-import typingsSlinky.hapi.ReadonlyRequest
+import typingsSlinky.hapi.anon.Etag
+import typingsSlinky.hapi.anon.ReadonlyRequest
+import typingsSlinky.hapi.mod.Lifecycle.ReturnValueTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ResponseToolkit extends js.Object {
+trait ResponseToolkit extends ReturnValueTypes {
   /**
     * A response symbol. When returned by a lifecycle method, the request lifecycle skips to the finalizing step
     * without further interaction with the node response stream. It is the developer's responsibility to write
@@ -63,7 +64,7 @@ trait ResponseToolkit extends js.Object {
     * [See docs](https://github.com/hapijs/hapi/blob/master/API.md#-hentityoptions)
     */
   def entity(): js.UndefOr[ResponseObject] = js.native
-  def entity(options: AnonEtag): js.UndefOr[ResponseObject] = js.native
+  def entity(options: Etag): js.UndefOr[ResponseObject] = js.native
   /**
     * Redirects the client to the specified uri. Same as calling h.response().redirect(uri).
     * @param url

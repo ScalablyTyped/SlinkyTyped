@@ -1,5 +1,6 @@
 package typingsSlinky.three
 
+import typingsSlinky.three.anon.HeightScale
 import typingsSlinky.three.bufferGeometryMod.BufferGeometry
 import typingsSlinky.three.geometryMod.Geometry
 import scala.scalajs.js
@@ -19,7 +20,7 @@ object torusKnotGeometryMod extends js.Object {
       p: js.UndefOr[Double],
       q: js.UndefOr[Double]
     ) = this()
-    var parameters: AnonHeightScale = js.native
+    var parameters: HeightScale = js.native
   }
   
   @js.native
@@ -32,7 +33,7 @@ object torusKnotGeometryMod extends js.Object {
       p: js.UndefOr[Double],
       q: js.UndefOr[Double]
     ) = this()
-    var parameters: AnonHeightScale = js.native
+    var parameters: HeightScale = js.native
   }
   
 }

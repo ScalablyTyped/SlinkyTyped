@@ -1,6 +1,6 @@
 package typingsSlinky.reactShare.components
 
-import typingsSlinky.reactShare.CommonShareButtonPropsquo
+import typingsSlinky.reactShare.anon.CommonShareButtonPropsquo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,11 +10,11 @@ object FacebookShareButton {
   @js.native
   object component extends js.Object
   
-  def withProps(p: CommonShareButtonPropsquo): SharedBuilder_CommonShareButtonPropsquo1795168681 = new SharedBuilder_CommonShareButtonPropsquo1795168681(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: CommonShareButtonPropsquo): SharedBuilder_CommonShareButtonPropsquo922984608 = new SharedBuilder_CommonShareButtonPropsquo922984608(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(url: String): SharedBuilder_CommonShareButtonPropsquo1795168681 = {
+  def apply(url: String): SharedBuilder_CommonShareButtonPropsquo922984608 = {
     val __props = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
-    new SharedBuilder_CommonShareButtonPropsquo1795168681(js.Array(this.component, __props.asInstanceOf[CommonShareButtonPropsquo]))
+    new SharedBuilder_CommonShareButtonPropsquo922984608(js.Array(this.component, __props.asInstanceOf[CommonShareButtonPropsquo]))
   }
 }
 

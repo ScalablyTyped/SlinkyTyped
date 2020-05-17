@@ -12,9 +12,8 @@ trait RTCIceGatherCandidate extends js.Object
 
 object RTCIceGatherCandidate {
   @scala.inline
-  def RTCIceCandidateDictionary(): RTCIceGatherCandidate = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[RTCIceGatherCandidate]
-  }
+  implicit def apply(value: RTCIceCandidateComplete): RTCIceGatherCandidate = value.asInstanceOf[RTCIceGatherCandidate]
+  @scala.inline
+  implicit def apply(value: RTCIceCandidateDictionary): RTCIceGatherCandidate = value.asInstanceOf[RTCIceGatherCandidate]
 }
 

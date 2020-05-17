@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientDfareporting.gapi.client.dfareporting
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientDfareporting.AnonFields
-import typingsSlinky.gapiClientDfareporting.AnonHeight
-import typingsSlinky.gapiClientDfareporting.AnonKey
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientDfareporting.anon.Fields
+import typingsSlinky.gapiClientDfareporting.anon.Height
+import typingsSlinky.gapiClientDfareporting.anon.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,19 +11,19 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SizesResource extends js.Object {
   /** Gets one size by ID. */
-  def get(request: AnonFields): Request_[Size] = js.native
+  def get(request: Fields): Request[Size] = js.native
   /** Inserts a new size. */
-  def insert(request: AnonKey): Request_[Size] = js.native
+  def insert(request: Key): Request[Size] = js.native
   /** Retrieves a list of sizes, possibly filtered. */
-  def list(request: AnonHeight): Request_[SizesListResponse] = js.native
+  def list(request: Height): Request[SizesListResponse] = js.native
 }
 
 object SizesResource {
   @scala.inline
   def apply(
-    get: AnonFields => Request_[Size],
-    insert: AnonKey => Request_[Size],
-    list: AnonHeight => Request_[SizesListResponse]
+    get: Fields => Request[Size],
+    insert: Key => Request[Size],
+    list: Height => Request[SizesListResponse]
   ): SizesResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[SizesResource]
@@ -35,19 +35,19 @@ object SizesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonFields => Request_[Size]): Self = {
+    def withGet(value: Fields => Request[Size]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withInsert(value: AnonKey => Request_[Size]): Self = {
+    def withInsert(value: Key => Request[Size]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonHeight => Request_[SizesListResponse]): Self = {
+    def withList(value: Height => Request[SizesListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

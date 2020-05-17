@@ -1,6 +1,6 @@
 package typingsSlinky.mangopay2NodejsSdk.mod.models
 
-import typingsSlinky.mangopay2NodejsSdk.PartialKycDocumentData
+import typingsSlinky.mangopay2NodejsSdk.anon.PartialKycDocumentData
 import typingsSlinky.mangopay2NodejsSdk.mod.kycDocument.KycDocumentData
 import scala.scalajs.js
 import scala.scalajs.js.`|`

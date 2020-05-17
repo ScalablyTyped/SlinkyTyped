@@ -1,6 +1,6 @@
 package typingsSlinky.lyricist.mod
 
-import typingsSlinky.lyricist.AnonFeatures
+import typingsSlinky.lyricist.anon.Features
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait User extends js.Object {
   var api_path: String = js.native
   var avatar: Avatar = js.native
-  var current_user_metadata: AnonFeatures = js.native
+  var current_user_metadata: Features = js.native
   var header_image_url: String = js.native
   var human_readable_role_for_display: String = js.native
   var id: Double = js.native
@@ -25,7 +25,7 @@ object User {
   def apply(
     api_path: String,
     avatar: Avatar,
-    current_user_metadata: AnonFeatures,
+    current_user_metadata: Features,
     header_image_url: String,
     human_readable_role_for_display: String,
     id: Double,
@@ -57,7 +57,7 @@ object User {
         ret
     }
     @scala.inline
-    def withCurrent_user_metadata(value: AnonFeatures): Self = {
+    def withCurrent_user_metadata(value: Features): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("current_user_metadata")(value.asInstanceOf[js.Any])
         ret

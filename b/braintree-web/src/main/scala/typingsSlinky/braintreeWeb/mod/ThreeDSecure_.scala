@@ -1,11 +1,11 @@
 package typingsSlinky.braintreeWeb.mod
 
 import org.scalajs.dom.raw.HTMLIFrameElement
-import typingsSlinky.braintreeWeb.AnonAddFrame
-import typingsSlinky.braintreeWeb.AnonBin
-import typingsSlinky.braintreeWeb.AnonClient
-import typingsSlinky.braintreeWeb.AnonRemoveFrame
-import typingsSlinky.braintreeWeb.AnonVersion
+import typingsSlinky.braintreeWeb.anon.AddFrame
+import typingsSlinky.braintreeWeb.anon.Bin
+import typingsSlinky.braintreeWeb.anon.Client
+import typingsSlinky.braintreeWeb.anon.RemoveFrame
+import typingsSlinky.braintreeWeb.anon.Version
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -60,10 +60,10 @@ trait ThreeDSecure_ extends js.Object {
     *   client: client
     * }, callback);
     */
-  def create(options: AnonClient): js.Promise[ThreeDSecure_] = js.native
-  def create(options: AnonClient, callback: callback): Unit = js.native
-  def create(options: AnonVersion): js.Promise[ThreeDSecure_] = js.native
-  def create(options: AnonVersion, callback: callback): Unit = js.native
+  def create(options: Client): js.Promise[ThreeDSecure_] = js.native
+  def create(options: Client, callback: callback): Unit = js.native
+  def create(options: Version): js.Promise[ThreeDSecure_] = js.native
+  def create(options: Version, callback: callback): Unit = js.native
   /**
     * Gather the data needed for a 3D Secure lookup call.
     *
@@ -87,8 +87,8 @@ trait ThreeDSecure_ extends js.Object {
     *   // send payload to server to do server side lookup
     * });
     */
-  def prepareLookup(options: AnonBin): js.Promise[String] = js.native
-  def prepareLookup(options: AnonBin, callback: callback): Unit = js.native
+  def prepareLookup(options: Bin): js.Promise[String] = js.native
+  def prepareLookup(options: Bin, callback: callback): Unit = js.native
   /**
     * @callback ThreeDSecure~removeFrameCallback
     * @description The callback used for options.removeFrame in {@link ThreeDSecure#verifyCard|verifyCard}.
@@ -148,7 +148,7 @@ trait ThreeDSecure_ extends js.Object {
     *   }
     * });
     */
-  def verifyCard(options: AnonAddFrame): js.Promise[ThreeDSecureVerifyPayload] = js.native
-  def verifyCard(options: AnonRemoveFrame, callback: callback): Unit = js.native
+  def verifyCard(options: AddFrame): js.Promise[ThreeDSecureVerifyPayload] = js.native
+  def verifyCard(options: RemoveFrame, callback: callback): Unit = js.native
 }
 

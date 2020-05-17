@@ -1,6 +1,5 @@
 package typingsSlinky.minappEnv
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.minappEnv.Intl.DateTimeFormatOptions
 import typingsSlinky.minappEnv.minappEnvStrings.default
 import typingsSlinky.minappEnv.minappEnvStrings.number
@@ -203,8 +202,4 @@ trait Date extends js.Object {
   /** Returns a date converted to a string using Universal Coordinated Time (UTC). */
   def toUTCString(): java.lang.String = js.native
 }
-
-@JSGlobal("Date")
-@js.native
-object Date extends TopLevel[DateConstructor]
 

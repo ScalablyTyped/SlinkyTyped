@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientPlusdomains.gapi.client.plusdomains
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientPlusdomains.AnonFields
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientPlusdomains.anon.Fields
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait AudiencesResource extends js.Object {
   /** List all of the audiences to which a user can share. */
-  def list(request: AnonFields): Request_[AudiencesFeed] = js.native
+  def list(request: Fields): Request[AudiencesFeed] = js.native
 }
 
 object AudiencesResource {
   @scala.inline
-  def apply(list: AnonFields => Request_[AudiencesFeed]): AudiencesResource = {
+  def apply(list: Fields => Request[AudiencesFeed]): AudiencesResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[AudiencesResource]
   }
@@ -25,7 +25,7 @@ object AudiencesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withList(value: AnonFields => Request_[AudiencesFeed]): Self = {
+    def withList(value: Fields => Request[AudiencesFeed]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

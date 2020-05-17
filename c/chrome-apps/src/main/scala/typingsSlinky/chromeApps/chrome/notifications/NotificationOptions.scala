@@ -1,6 +1,6 @@
 package typingsSlinky.chromeApps.chrome.notifications
 
-import typingsSlinky.chromeApps.AnonBASIC
+import typingsSlinky.chromeApps.anon.BASIC
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chrome.double
 import typingsSlinky.chromeApps.chrome.integer
@@ -9,7 +9,6 @@ import typingsSlinky.chromeApps.chromeAppsNumbers.`-2`
 import typingsSlinky.chromeApps.chromeAppsNumbers.`0`
 import typingsSlinky.chromeApps.chromeAppsNumbers.`1`
 import typingsSlinky.chromeApps.chromeAppsNumbers.`2`
-import typingsSlinky.chromeApps.chromeAppsStrings.BASIC
 import typingsSlinky.chromeApps.chromeAppsStrings.IMAGE
 import typingsSlinky.chromeApps.chromeAppsStrings.LIST
 import typingsSlinky.chromeApps.chromeAppsStrings.PROGRESS
@@ -96,10 +95,10 @@ trait NotificationOptions extends js.Object {
     * @see enum TemplateType
     */
   var `type`: ToStringLiteral[
-    AnonBASIC, 
-    /* keyof chrome-apps.AnonBASIC */ BASIC | IMAGE | LIST | PROGRESS, 
+    BASIC, 
+    /* keyof chrome-apps.anon.BASIC */ typingsSlinky.chromeApps.chromeAppsStrings.BASIC | IMAGE | LIST | PROGRESS, 
     Exclude[
-      /* keyof chrome-apps.AnonBASIC */ BASIC | IMAGE | LIST | PROGRESS, 
+      /* keyof chrome-apps.anon.BASIC */ typingsSlinky.chromeApps.chromeAppsStrings.BASIC | IMAGE | LIST | PROGRESS, 
       basic_ | image_ | list_ | progress_
     ]
   ] = js.native
@@ -112,10 +111,10 @@ object NotificationOptions {
     message: String,
     title: String,
     `type`: ToStringLiteral[
-      AnonBASIC, 
-      /* keyof chrome-apps.AnonBASIC */ BASIC | IMAGE | LIST | PROGRESS, 
+      BASIC, 
+      /* keyof chrome-apps.anon.BASIC */ typingsSlinky.chromeApps.chromeAppsStrings.BASIC | IMAGE | LIST | PROGRESS, 
       Exclude[
-        /* keyof chrome-apps.AnonBASIC */ BASIC | IMAGE | LIST | PROGRESS, 
+        /* keyof chrome-apps.anon.BASIC */ typingsSlinky.chromeApps.chromeAppsStrings.BASIC | IMAGE | LIST | PROGRESS, 
         basic_ | image_ | list_ | progress_
       ]
     ]
@@ -151,10 +150,10 @@ object NotificationOptions {
     @scala.inline
     def withType(
       value: ToStringLiteral[
-          AnonBASIC, 
-          /* keyof chrome-apps.AnonBASIC */ BASIC | IMAGE | LIST | PROGRESS, 
+          BASIC, 
+          /* keyof chrome-apps.anon.BASIC */ typingsSlinky.chromeApps.chromeAppsStrings.BASIC | IMAGE | LIST | PROGRESS, 
           Exclude[
-            /* keyof chrome-apps.AnonBASIC */ BASIC | IMAGE | LIST | PROGRESS, 
+            /* keyof chrome-apps.anon.BASIC */ typingsSlinky.chromeApps.chromeAppsStrings.BASIC | IMAGE | LIST | PROGRESS, 
             basic_ | image_ | list_ | progress_
           ]
         ]

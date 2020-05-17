@@ -1,6 +1,6 @@
 package typingsSlinky.antdMobileRn.wingBlankIndexNativeMod
 
-import typingsSlinky.antdMobileRn.AnonSizeString
+import typingsSlinky.antdMobileRn.anon.SizeString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ class default () extends WingBlank
 @JSImport("antd-mobile-rn/lib/wing-blank/index.native", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonSizeString = js.native
+  var defaultProps: SizeString = js.native
 }
 

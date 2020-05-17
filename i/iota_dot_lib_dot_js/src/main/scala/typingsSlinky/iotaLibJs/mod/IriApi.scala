@@ -1,8 +1,8 @@
 package typingsSlinky.iotaLibJs.mod
 
-import typingsSlinky.iotaLibJs.AnonAddresses
-import typingsSlinky.iotaLibJs.AnonBalances
-import typingsSlinky.iotaLibJs.AnonBranchTransaction
+import typingsSlinky.iotaLibJs.anon.Addresses
+import typingsSlinky.iotaLibJs.anon.Balances
+import typingsSlinky.iotaLibJs.anon.BranchTransaction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,13 +28,13 @@ trait IriApi extends js.Object {
     callback: js.Function2[/* error */ js.Error, /* response */ js.Object, Unit]
   ): Unit = js.native
   def findTransactions(
-    searchValues: AnonAddresses,
+    searchValues: Addresses,
     callback: js.Function2[/* error */ js.Error, /* hashes */ js.Array[String], Unit]
   ): Unit = js.native
   def getBalances(
     addresses: js.Array[String],
     treshold: Double,
-    callback: js.Function2[/* error */ js.Error, /* response */ AnonBalances, Unit]
+    callback: js.Function2[/* error */ js.Error, /* response */ Balances, Unit]
   ): Unit = js.native
   def getInclusionStates(
     transactions: js.Array[String],
@@ -46,7 +46,7 @@ trait IriApi extends js.Object {
   def getTips(callback: js.Function2[/* error */ js.Error, /* hashes */ js.Array[String], Unit]): Unit = js.native
   def getTransactionsToApprove(
     depth: Double,
-    callback: js.Function2[/* error */ js.Error, /* response */ AnonBranchTransaction, Unit]
+    callback: js.Function2[/* error */ js.Error, /* response */ BranchTransaction, Unit]
   ): Unit = js.native
   def getTrytes(
     hashes: js.Array[String],
@@ -69,13 +69,13 @@ object IriApi {
     addNeighbors: (js.Array[String], js.Function2[/* error */ js.Error, /* addedNeighbors */ Double, Unit]) => Unit,
     attachToTangle: (String, String, Double, js.Array[String], js.Function2[/* error */ js.Error, /* trytes */ js.Array[String], Unit]) => Unit,
     broadcastTransactions: (js.Array[String], js.Function2[/* error */ js.Error, /* response */ js.Object, Unit]) => Unit,
-    findTransactions: (AnonAddresses, js.Function2[/* error */ js.Error, /* hashes */ js.Array[String], Unit]) => Unit,
-    getBalances: (js.Array[String], Double, js.Function2[/* error */ js.Error, /* response */ AnonBalances, Unit]) => Unit,
+    findTransactions: (Addresses, js.Function2[/* error */ js.Error, /* hashes */ js.Array[String], Unit]) => Unit,
+    getBalances: (js.Array[String], Double, js.Function2[/* error */ js.Error, /* response */ Balances, Unit]) => Unit,
     getInclusionStates: (js.Array[String], js.Array[String], js.Function2[/* error */ js.Error, /* states */ js.Array[Boolean], Unit]) => Unit,
     getNeighbors: js.Function2[/* error */ js.Error, /* neighbors */ js.Array[Neighbor], Unit] => Unit,
     getNodeInfo: js.Function2[/* error */ js.Error, /* info */ NodeInfo, Unit] => Unit,
     getTips: js.Function2[/* error */ js.Error, /* hashes */ js.Array[String], Unit] => Unit,
-    getTransactionsToApprove: (Double, js.Function2[/* error */ js.Error, /* response */ AnonBranchTransaction, Unit]) => Unit,
+    getTransactionsToApprove: (Double, js.Function2[/* error */ js.Error, /* response */ BranchTransaction, Unit]) => Unit,
     getTrytes: (js.Array[String], js.Function2[/* error */ js.Error, /* trytes */ js.Array[String], Unit]) => Unit,
     interruptAttachingToTangle: js.Function2[/* error */ js.Error, /* response */ js.Object, Unit] => Unit,
     removeNeighbors: (js.Array[String], js.Function2[/* error */ js.Error, /* removedNeighbors */ js.Array[Double], Unit]) => Unit,
@@ -116,7 +116,7 @@ object IriApi {
     }
     @scala.inline
     def withFindTransactions(
-      value: (AnonAddresses, js.Function2[/* error */ js.Error, /* hashes */ js.Array[String], Unit]) => Unit
+      value: (Addresses, js.Function2[/* error */ js.Error, /* hashes */ js.Array[String], Unit]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("findTransactions")(js.Any.fromFunction2(value))
@@ -124,7 +124,7 @@ object IriApi {
     }
     @scala.inline
     def withGetBalances(
-      value: (js.Array[String], Double, js.Function2[/* error */ js.Error, /* response */ AnonBalances, Unit]) => Unit
+      value: (js.Array[String], Double, js.Function2[/* error */ js.Error, /* response */ Balances, Unit]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getBalances")(js.Any.fromFunction3(value))
@@ -158,7 +158,7 @@ object IriApi {
     }
     @scala.inline
     def withGetTransactionsToApprove(
-      value: (Double, js.Function2[/* error */ js.Error, /* response */ AnonBranchTransaction, Unit]) => Unit
+      value: (Double, js.Function2[/* error */ js.Error, /* response */ BranchTransaction, Unit]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getTransactionsToApprove")(js.Any.fromFunction2(value))

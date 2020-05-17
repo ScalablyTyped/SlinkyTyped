@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`picture-fill`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,10 +9,10 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.arcgisJsApi.esri.Symbol2D3D because Already inherited
 - typingsSlinky.arcgisJsApi.esri.symbols.Symbol2D3D because Already inherited */ @js.native
 trait PictureFillSymbol
-  extends FillSymbol
+  extends Symbol2D
+     with FillSymbol
      with typingsSlinky.arcgisJsApi.esri.symbols.FillSymbol
      with typingsSlinky.arcgisJsApi.esri.symbols.Symbol2D
-     with Symbol2D
      with symbolsFillSymbol {
   /**
     * The height of the image in points. This value may be autocast with a string expressing size in points or pixels (e.g. `12px`).
@@ -77,8 +76,4 @@ trait PictureFillSymbol
     */
   var yscale: Double = js.native
 }
-
-@JSGlobal("__esri.PictureFillSymbol")
-@js.native
-object PictureFillSymbol extends TopLevel[PictureFillSymbolConstructor]
 

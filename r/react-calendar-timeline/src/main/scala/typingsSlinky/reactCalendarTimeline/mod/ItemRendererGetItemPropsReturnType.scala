@@ -1,6 +1,7 @@
 package typingsSlinky.reactCalendarTimeline.mod
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
@@ -10,7 +11,6 @@ import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.react.mod.ReactEventHandler
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.TouchEventHandler
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,7 +34,7 @@ object ItemRendererGetItemPropsReturnType {
   def apply(
     className: String,
     key: Id,
-    onContextMenu: SyntheticEvent[Event_, Element] => scala.Unit,
+    onContextMenu: SyntheticEvent[Event, Element] => scala.Unit,
     onDoubleClick: SyntheticMouseEvent[Element] => scala.Unit,
     onMouseDown: SyntheticMouseEvent[Element] => scala.Unit,
     onMouseUp: SyntheticMouseEvent[Element] => scala.Unit,
@@ -64,7 +64,7 @@ object ItemRendererGetItemPropsReturnType {
         ret
     }
     @scala.inline
-    def withOnContextMenu(value: SyntheticEvent[Event_, Element] => scala.Unit): Self = {
+    def withOnContextMenu(value: SyntheticEvent[Event, Element] => scala.Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContextMenu")(js.Any.fromFunction1(value))
         ret

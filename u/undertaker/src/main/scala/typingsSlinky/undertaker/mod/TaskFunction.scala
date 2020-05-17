@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TaskFunction
   extends TaskFunctionBase
-     with TaskFunctionParams {
+     with TaskFunctionParams
+     with Task {
   /* InferMemberOverrides */
   override def apply(T0: /* done */ js.Function1[/* error */ js.UndefOr[js.Any], Unit]): Unit | Duplex | Process | js.Promise[scala.Nothing] | js.Any = js.native
 }

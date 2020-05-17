@@ -1,6 +1,6 @@
 package typingsSlinky.oracleOraclejet.ojdataproviderMod
 
-import typingsSlinky.oracleOraclejet.AnonInstantiable
+import typingsSlinky.oracleOraclejet.anon.Instantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@oracle/oraclejet/ojdataprovider", "FetchByKeysMixin")
 @js.native
 object FetchByKeysMixin extends js.Object {
-  def applyMixin(derivedCtor: AnonInstantiable): js.Any = js.native
+  def applyMixin(derivedCtor: Instantiable): js.Any = js.native
 }
 

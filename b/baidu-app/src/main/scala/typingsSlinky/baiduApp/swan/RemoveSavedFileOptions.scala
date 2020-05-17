@@ -1,6 +1,6 @@
 package typingsSlinky.baiduApp.swan
 
-import typingsSlinky.baiduApp.AnonFilePath
+import typingsSlinky.baiduApp.anon.FilePath
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait RemoveSavedFileOptions
   var filePath: String = js.native
   /** 接口调用成功的回调函数 */
   @JSName("success")
-  var success_RemoveSavedFileOptions: js.UndefOr[js.Function1[/* res */ AnonFilePath, Unit]] = js.native
+  var success_RemoveSavedFileOptions: js.UndefOr[js.Function1[/* res */ FilePath, Unit]] = js.native
 }
 
 object RemoveSavedFileOptions {
@@ -33,7 +33,7 @@ object RemoveSavedFileOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: /* res */ AnonFilePath => Unit): Self = {
+    def withSuccess(value: /* res */ FilePath => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

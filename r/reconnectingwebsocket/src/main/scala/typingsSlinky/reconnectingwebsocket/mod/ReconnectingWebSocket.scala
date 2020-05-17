@@ -2,8 +2,8 @@ package typingsSlinky.reconnectingwebsocket.mod
 
 import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.EventListenerOptions
-import typingsSlinky.reconnectingwebsocket.FnCall
-import typingsSlinky.reconnectingwebsocket.FnCallData
+import typingsSlinky.reconnectingwebsocket.anon.FnCall
+import typingsSlinky.reconnectingwebsocket.anon.FnCallData
 import typingsSlinky.reconnectingwebsocket.reconnectingwebsocketStrings.close
 import typingsSlinky.reconnectingwebsocket.reconnectingwebsocketStrings.connecting
 import typingsSlinky.reconnectingwebsocket.reconnectingwebsocketStrings.error

@@ -1,6 +1,6 @@
 package typingsSlinky.umbraco.umbraco.services
 
-import typingsSlinky.umbraco.AnonUrl
+import typingsSlinky.umbraco.anon.Url
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,13 +13,13 @@ trait ISearchContent extends js.Object {
   var editorPath: String = js.native
   var id: Double = js.native
   var menuUrl: String = js.native
-  var metaData: AnonUrl = js.native
+  var metaData: Url = js.native
   var subTitle: String = js.native
 }
 
 object ISearchContent {
   @scala.inline
-  def apply(editorPath: String, id: Double, menuUrl: String, metaData: AnonUrl, subTitle: String): ISearchContent = {
+  def apply(editorPath: String, id: Double, menuUrl: String, metaData: Url, subTitle: String): ISearchContent = {
     val __obj = js.Dynamic.literal(editorPath = editorPath.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], menuUrl = menuUrl.asInstanceOf[js.Any], metaData = metaData.asInstanceOf[js.Any], subTitle = subTitle.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISearchContent]
   }
@@ -48,7 +48,7 @@ object ISearchContent {
         ret
     }
     @scala.inline
-    def withMetaData(value: AnonUrl): Self = {
+    def withMetaData(value: Url): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("metaData")(value.asInstanceOf[js.Any])
         ret

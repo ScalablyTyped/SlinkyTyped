@@ -1,6 +1,6 @@
 package typingsSlinky.handsontable.mod.Handsontable.comments
 
-import typingsSlinky.handsontable.AnonHeight
+import typingsSlinky.handsontable.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CommentObject extends js.Object {
   var readOnly: js.UndefOr[Boolean] = js.native
-  var style: js.UndefOr[AnonHeight] = js.native
+  var style: js.UndefOr[Height] = js.native
   var value: js.UndefOr[String] = js.native
 }
 
@@ -37,7 +37,7 @@ object CommentObject {
         ret
     }
     @scala.inline
-    def withStyle(value: AnonHeight): Self = {
+    def withStyle(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("style")(value.asInstanceOf[js.Any])
         ret

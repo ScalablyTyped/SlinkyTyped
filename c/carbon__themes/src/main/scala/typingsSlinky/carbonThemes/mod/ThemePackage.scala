@@ -1,6 +1,6 @@
 package typingsSlinky.carbonThemes.mod
 
-import typingsSlinky.carbonThemes.AnonG10
+import typingsSlinky.carbonThemes.anon.G10
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,7 +54,7 @@ trait ThemePackage extends js.Object {
   var text02: String = js.native
   var text03: String = js.native
   var text04: String = js.native
-  var themes: AnonG10 = js.native
+  var themes: G10 = js.native
   var ui01: String = js.native
   var ui02: String = js.native
   var ui03: String = js.native
@@ -113,7 +113,7 @@ object ThemePackage {
     text02: String,
     text03: String,
     text04: String,
-    themes: AnonG10,
+    themes: G10,
     ui01: String,
     ui02: String,
     ui03: String,
@@ -403,7 +403,7 @@ object ThemePackage {
         ret
     }
     @scala.inline
-    def withThemes(value: AnonG10): Self = {
+    def withThemes(value: G10): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("themes")(value.asInstanceOf[js.Any])
         ret

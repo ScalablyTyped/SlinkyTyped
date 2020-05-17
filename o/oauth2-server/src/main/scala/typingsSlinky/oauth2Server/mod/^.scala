@@ -1,6 +1,6 @@
 package typingsSlinky.oauth2Server.mod
 
-import typingsSlinky.oauth2Server.TypeofOAuth2Server
+import typingsSlinky.oauth2Server.anon.TypeofOAuth2Server
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

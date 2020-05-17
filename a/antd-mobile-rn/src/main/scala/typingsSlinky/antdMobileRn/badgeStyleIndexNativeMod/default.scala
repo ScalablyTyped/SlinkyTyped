@@ -1,13 +1,13 @@
 package typingsSlinky.antdMobileRn.badgeStyleIndexNativeMod
 
-import typingsSlinky.antdMobileRn.AnonBorderStyle
-import typingsSlinky.antdMobileRn.AnonFlexDirectionString
-import typingsSlinky.antdMobileRn.AnonHeight
-import typingsSlinky.antdMobileRn.AnonOverflow
-import typingsSlinky.antdMobileRn.AnonPosition
-import typingsSlinky.antdMobileRn.AnonTextAlign
-import typingsSlinky.antdMobileRn.AnonTop
-import typingsSlinky.antdMobileRn.AnonWidth
+import typingsSlinky.antdMobileRn.anon.BorderStyle
+import typingsSlinky.antdMobileRn.anon.FlexDirectionString
+import typingsSlinky.antdMobileRn.anon.Height
+import typingsSlinky.antdMobileRn.anon.Overflow
+import typingsSlinky.antdMobileRn.anon.Position
+import typingsSlinky.antdMobileRn.anon.TextAlign
+import typingsSlinky.antdMobileRn.anon.Top
+import typingsSlinky.antdMobileRn.anon.Width
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,13 +15,13 @@ import scala.scalajs.js.annotation._
 @JSImport("antd-mobile-rn/lib/badge/style/index.native", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var dot: AnonHeight = js.native
-  var dotSizelarge: AnonWidth = js.native
-  var text: AnonTextAlign = js.native
-  var textCorner: AnonPosition = js.native
-  var textCornerWrap: AnonOverflow = js.native
-  var textCornerlarge: AnonTop = js.native
-  var textDom: AnonBorderStyle = js.native
-  var wrap: AnonFlexDirectionString = js.native
+  var dot: Height = js.native
+  var dotSizelarge: Width = js.native
+  var text: TextAlign = js.native
+  var textCorner: Position = js.native
+  var textCornerWrap: Overflow = js.native
+  var textCornerlarge: Top = js.native
+  var textDom: BorderStyle = js.native
+  var wrap: FlexDirectionString = js.native
 }
 

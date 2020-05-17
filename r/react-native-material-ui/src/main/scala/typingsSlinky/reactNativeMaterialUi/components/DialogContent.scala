@@ -2,7 +2,7 @@ package typingsSlinky.reactNativeMaterialUi.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactNativeMaterialUi.AnonContentContainer
+import typingsSlinky.reactNativeMaterialUi.anon.ContentContainer
 import typingsSlinky.reactNativeMaterialUi.mod.Dialog.Content
 import typingsSlinky.reactNativeMaterialUi.mod.DialogContentProps
 import scala.scalajs.js
@@ -19,7 +19,7 @@ object DialogContent {
     extends AnyVal
        with StBuildingComponent[tag.type, Content] {
     @scala.inline
-    def style(value: AnonContentContainer): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: ContentContainer): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: DialogContentProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

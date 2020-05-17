@@ -1,6 +1,8 @@
 package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.officeUiFabricReact.anon.ReadonlyICheckboxProps
+import typingsSlinky.officeUiFabricReact.anon.ReadonlyICheckboxState
 import typingsSlinky.officeUiFabricReact.checkboxBaseMod.ICheckboxState
 import typingsSlinky.officeUiFabricReact.checkboxTypesMod.ICheckboxProps
 import scala.scalajs.js

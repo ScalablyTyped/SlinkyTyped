@@ -15,6 +15,7 @@ import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.`public-
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.`public-read`
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.awsColonkms
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.requester_
+import typingsSlinky.awsSdkClientS3Browser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.cryptoMod.SourceData
 import typingsSlinky.awsSdkTypes.httpMod.BrowserHttpOptions
@@ -23,7 +24,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PutObjectInput[StreamType] extends js.Object {
+trait PutObjectInput[StreamType] extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *

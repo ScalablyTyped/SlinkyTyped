@@ -1,7 +1,7 @@
 package typingsSlinky.rdflib.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.rdflib.AnonDelete
+import typingsSlinky.rdflib.anon.Delete
 import typingsSlinky.rdflib.rdflibStrings.FunctionalProperty
 import typingsSlinky.rdflib.rdflibStrings.InverseFunctionalProperty
 import typingsSlinky.rdflib.rdflibStrings.`two-direction`
@@ -43,7 +43,7 @@ class IndexedFormula protected () extends Formula {
     * @param target The name of the document to patch
     * @param patchCallback Callback to be called when patching is complete
     */
-  def applyPatch(patch: AnonDelete, target: NamedNode_, patchCallback: js.Function0[Unit]): Unit = js.native
+  def applyPatch(patch: Delete, target: NamedNode_, patchCallback: js.Function0[Unit]): Unit = js.native
   /**
     * Returns the symbol with canonical URI as smushed
     * @param term A RDF node

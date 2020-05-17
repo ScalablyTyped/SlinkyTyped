@@ -1,6 +1,6 @@
 package typingsSlinky.reactNavigationStack.modularHeaderBackButtonMod
 
-import typingsSlinky.reactNavigationStack.AnonTruncatedTitle
+import typingsSlinky.reactNavigationStack.anon.TruncatedTitle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ class default () extends ModularHeaderBackButton
 @JSImport("react-navigation-stack/lib/typescript/views/Header/ModularHeaderBackButton", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonTruncatedTitle = js.native
+  var defaultProps: TruncatedTitle = js.native
 }
 

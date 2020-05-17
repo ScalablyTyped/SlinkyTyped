@@ -1,8 +1,8 @@
 package typingsSlinky.bizcharts.mod
 
 import typingsSlinky.antvG2.mod.Styles.line
-import typingsSlinky.bizcharts.AnonDodgeBy
-import typingsSlinky.bizcharts.AnonName
+import typingsSlinky.bizcharts.anon.DodgeBy
+import typingsSlinky.bizcharts.anon.Name
 import typingsSlinky.react.mod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait GeomProps
   extends Props[js.Any] {
   var active: js.UndefOr[Boolean] = js.native
-  var adjust: js.UndefOr[String | (js.Array[AnonDodgeBy | String])] = js.native
+  var adjust: js.UndefOr[String | (js.Array[DodgeBy | String])] = js.native
    // 图形激活交互开关
   var animate: js.UndefOr[js.Any] = js.native
   var color: js.UndefOr[
@@ -35,7 +35,7 @@ trait GeomProps
     ])
   ] = js.native
   var style: js.UndefOr[js.Object | (js.Tuple2[String, js.Object])] = js.native
-  var tooltip: js.UndefOr[Boolean | String | (js.Tuple2[String, js.Function1[/* repeated */ _, AnonName]])] = js.native
+  var tooltip: js.UndefOr[Boolean | String | (js.Tuple2[String, js.Function1[/* repeated */ _, Name]])] = js.native
   var `type`: js.UndefOr[GeomType] = js.native
 }
 
@@ -64,7 +64,7 @@ object GeomProps {
         ret
     }
     @scala.inline
-    def withAdjust(value: String | (js.Array[AnonDodgeBy | String])): Self = {
+    def withAdjust(value: String | (js.Array[DodgeBy | String])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("adjust")(value.asInstanceOf[js.Any])
         ret
@@ -205,7 +205,7 @@ object GeomProps {
         ret
     }
     @scala.inline
-    def withTooltip(value: Boolean | String | (js.Tuple2[String, js.Function1[/* repeated */ _, AnonName]])): Self = {
+    def withTooltip(value: Boolean | String | (js.Tuple2[String, js.Function1[/* repeated */ _, Name]])): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret

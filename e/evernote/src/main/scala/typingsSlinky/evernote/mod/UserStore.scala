@@ -1,11 +1,11 @@
 package typingsSlinky.evernote.mod
 
-import typingsSlinky.evernote.AnonAccountEmailDomain
-import typingsSlinky.evernote.AnonAuthenticationToken
-import typingsSlinky.evernote.AnonMessageStoreUrl
-import typingsSlinky.evernote.AnonName
-import typingsSlinky.evernote.AnonNoteStoreUrl
-import typingsSlinky.evernote.AnonProfiles
+import typingsSlinky.evernote.anon.AccountEmailDomain
+import typingsSlinky.evernote.anon.AuthenticationToken
+import typingsSlinky.evernote.anon.MessageStoreUrl
+import typingsSlinky.evernote.anon.Name
+import typingsSlinky.evernote.anon.NoteStoreUrl
+import typingsSlinky.evernote.anon.Profiles
 import typingsSlinky.evernote.mod.Types.ServiceLevel
 import typingsSlinky.evernote.mod.Types.Timestamp
 import typingsSlinky.evernote.mod.Types.User
@@ -19,7 +19,7 @@ import scala.scalajs.js.annotation._
 object UserStore extends js.Object {
   @js.native
   class AuthenticationResult () extends js.Object {
-    def this(args: AnonAuthenticationToken) = this()
+    def this(args: AuthenticationToken) = this()
     var authenticationToken: js.UndefOr[String] = js.native
     var currentTime: js.UndefOr[Timestamp] = js.native
     var expiration: js.UndefOr[Timestamp] = js.native
@@ -34,20 +34,20 @@ object UserStore extends js.Object {
   
   @js.native
   class BootstrapInfo () extends js.Object {
-    def this(args: AnonProfiles) = this()
+    def this(args: Profiles) = this()
     var profiles: js.UndefOr[js.Array[BootstrapProfile]] = js.native
   }
   
   @js.native
   class BootstrapProfile () extends js.Object {
-    def this(args: AnonName) = this()
+    def this(args: Name) = this()
     var name: js.UndefOr[String] = js.native
     var settings: js.UndefOr[BootstrapSettings] = js.native
   }
   
   @js.native
   class BootstrapSettings () extends js.Object {
-    def this(args: AnonAccountEmailDomain) = this()
+    def this(args: AccountEmailDomain) = this()
     var accountEmailDomain: js.UndefOr[String] = js.native
     var enableFacebookSharing: js.UndefOr[Boolean] = js.native
     var enableGiftSubscriptions: js.UndefOr[Boolean] = js.native
@@ -66,7 +66,7 @@ object UserStore extends js.Object {
   
   @js.native
   class PublicUserInfo () extends js.Object {
-    def this(args: AnonNoteStoreUrl) = this()
+    def this(args: NoteStoreUrl) = this()
     var noteStoreUrl: js.UndefOr[String] = js.native
     var serviceLevel: js.UndefOr[ServiceLevel] = js.native
     var userId: js.UndefOr[UserID] = js.native
@@ -76,7 +76,7 @@ object UserStore extends js.Object {
   
   @js.native
   class UserUrls () extends js.Object {
-    def this(args: AnonMessageStoreUrl) = this()
+    def this(args: MessageStoreUrl) = this()
     var messageStoreUrl: js.UndefOr[String] = js.native
     var noteStoreUrl: js.UndefOr[String] = js.native
     var userStoreUrl: js.UndefOr[String] = js.native

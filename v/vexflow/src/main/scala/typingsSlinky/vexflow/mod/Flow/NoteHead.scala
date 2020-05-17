@@ -1,6 +1,6 @@
 package typingsSlinky.vexflow.mod.Flow
 
-import typingsSlinky.vexflow.AnonCustomglyphcode
+import typingsSlinky.vexflow.anon.Customglyphcode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class NoteHead protected ()
   extends typingsSlinky.vexflow.Vex.Flow.NoteHead {
-  def this(head_options: AnonCustomglyphcode) = this()
+  def this(head_options: Customglyphcode) = this()
 }
 
 /* static members */

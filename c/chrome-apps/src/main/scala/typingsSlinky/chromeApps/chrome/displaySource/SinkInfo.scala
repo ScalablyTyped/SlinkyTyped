@@ -1,9 +1,8 @@
 package typingsSlinky.chromeApps.chrome.displaySource
 
-import typingsSlinky.chromeApps.AnonCONNECTED
+import typingsSlinky.chromeApps.anon.CONNECTED
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chrome.integer
-import typingsSlinky.chromeApps.chromeAppsStrings.CONNECTED
 import typingsSlinky.chromeApps.chromeAppsStrings.CONNECTING
 import typingsSlinky.chromeApps.chromeAppsStrings.Connected_
 import typingsSlinky.chromeApps.chromeAppsStrings.Connecting_
@@ -25,10 +24,10 @@ trait SinkInfo extends js.Object {
     * @see SinkState
     */
   var state: ToStringLiteral[
-    AnonCONNECTED, 
-    /* keyof chrome-apps.AnonCONNECTED */ CONNECTED | CONNECTING | DISCONNECTED, 
+    CONNECTED, 
+    /* keyof chrome-apps.anon.CONNECTED */ typingsSlinky.chromeApps.chromeAppsStrings.CONNECTED | CONNECTING | DISCONNECTED, 
     Exclude[
-      /* keyof chrome-apps.AnonCONNECTED */ CONNECTED | CONNECTING | DISCONNECTED, 
+      /* keyof chrome-apps.anon.CONNECTED */ typingsSlinky.chromeApps.chromeAppsStrings.CONNECTED | CONNECTING | DISCONNECTED, 
       Connected_ | Connecting_ | Disconnected_
     ]
   ] = js.native
@@ -40,10 +39,10 @@ object SinkInfo {
     id: integer,
     name: String,
     state: ToStringLiteral[
-      AnonCONNECTED, 
-      /* keyof chrome-apps.AnonCONNECTED */ CONNECTED | CONNECTING | DISCONNECTED, 
+      CONNECTED, 
+      /* keyof chrome-apps.anon.CONNECTED */ typingsSlinky.chromeApps.chromeAppsStrings.CONNECTED | CONNECTING | DISCONNECTED, 
       Exclude[
-        /* keyof chrome-apps.AnonCONNECTED */ CONNECTED | CONNECTING | DISCONNECTED, 
+        /* keyof chrome-apps.anon.CONNECTED */ typingsSlinky.chromeApps.chromeAppsStrings.CONNECTED | CONNECTING | DISCONNECTED, 
         Connected_ | Connecting_ | Disconnected_
       ]
     ]
@@ -72,10 +71,10 @@ object SinkInfo {
     @scala.inline
     def withState(
       value: ToStringLiteral[
-          AnonCONNECTED, 
-          /* keyof chrome-apps.AnonCONNECTED */ CONNECTED | CONNECTING | DISCONNECTED, 
+          CONNECTED, 
+          /* keyof chrome-apps.anon.CONNECTED */ typingsSlinky.chromeApps.chromeAppsStrings.CONNECTED | CONNECTING | DISCONNECTED, 
           Exclude[
-            /* keyof chrome-apps.AnonCONNECTED */ CONNECTED | CONNECTING | DISCONNECTED, 
+            /* keyof chrome-apps.anon.CONNECTED */ typingsSlinky.chromeApps.chromeAppsStrings.CONNECTED | CONNECTING | DISCONNECTED, 
             Connected_ | Connecting_ | Disconnected_
           ]
         ]

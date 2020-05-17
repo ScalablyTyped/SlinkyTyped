@@ -2,7 +2,7 @@ package typingsSlinky.tinymce.mod
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Window
 import typingsSlinky.tinymce.mod.settings.Menu
 import typingsSlinky.tinymce.tinymceBooleans.`false`
 import scala.scalajs.js
@@ -57,7 +57,7 @@ trait Settings_ extends js.Object {
   var extended_valid_elements: js.UndefOr[String] = js.native
   var external_plugins: js.UndefOr[js.Object] = js.native
   var file_browser_callback: js.UndefOr[
-    js.Function4[/* field_name */ String, /* url */ String, /* type */ String, /* win */ Window_, Unit]
+    js.Function4[/* field_name */ String, /* url */ String, /* type */ String, /* win */ Window, Unit]
   ] = js.native
   var file_browser_callback_types: js.UndefOr[String] = js.native
   var file_picker_callback: js.UndefOr[
@@ -703,7 +703,7 @@ object Settings_ {
         ret
     }
     @scala.inline
-    def withFile_browser_callback(value: (/* field_name */ String, /* url */ String, /* type */ String, /* win */ Window_) => Unit): Self = {
+    def withFile_browser_callback(value: (/* field_name */ String, /* url */ String, /* type */ String, /* win */ Window) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("file_browser_callback")(js.Any.fromFunction4(value))
         ret

@@ -3,6 +3,10 @@ package typingsSlinky.reactRelay
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ClassicElement
+import typingsSlinky.reactRelay.anon.Data
+import typingsSlinky.reactRelay.anon.EntryPointReference
+import typingsSlinky.reactRelay.anon.FetchKey
+import typingsSlinky.reactRelay.anon.NetworkCacheConfig
 import typingsSlinky.reactRelay.entryPointTypesMod.EntryPoint
 import typingsSlinky.reactRelay.entryPointTypesMod.EntryPointProps
 import typingsSlinky.reactRelay.entryPointTypesMod.EnvironmentProviderOptions
@@ -33,7 +37,7 @@ object libHooksMod extends js.Object {
   def EntryPointContainer[TPreloadedQueries /* <: js.Object */, TPreloadedNestedEntryPoints /* <: js.Object */, TRuntimeProps /* <: js.Object */, TExtraProps, TEntryPointComponent /* <: ReactComponentClass[
     EntryPointProps[TPreloadedQueries, TPreloadedNestedEntryPoints, TRuntimeProps, TExtraProps]
   ] */](
-    hasEntryPointReferenceProps: AnonEntryPointReference[
+    hasEntryPointReferenceProps: EntryPointReference[
       TEntryPointComponent, 
       TRuntimeProps, 
       TPreloadedQueries, 
@@ -69,7 +73,7 @@ object libHooksMod extends js.Object {
     environment: Environment,
     query: GraphQLTaggedNode,
     variables: /* import warning: importer.ImportType#apply Failed type conversion: TQuery['variables'] */ js.Any,
-    options: AnonNetworkCacheConfig
+    options: NetworkCacheConfig
   ): Observable[
     /* import warning: importer.ImportType#apply Failed type conversion: TQuery['response'] */ js.Any
   ] = js.native
@@ -148,7 +152,7 @@ object libHooksMod extends js.Object {
   def useLazyLoadQuery_variables[TQuery /* <: OperationType */](
     gqlQuery: GraphQLTaggedNode,
     variables: /* import warning: importer.ImportType#apply Failed type conversion: TQuery['variables'] */ js.Any,
-    options: AnonFetchKey
+    options: FetchKey
   ): /* import warning: importer.ImportType#apply Failed type conversion: TQuery['response'] */ js.Any = js.native
   def usePaginationFragment[TQuery /* <: OperationType */, TKey /* <: typingsSlinky.reactRelay.useLegacyPaginationFragmentMod.KeyType */](fragmentInput: GraphQLTaggedNode): // tslint:disable-next-line no-unnecessary-generics
   typingsSlinky.reactRelay.useLegacyPaginationFragmentMod.ReturnType[
@@ -163,7 +167,7 @@ object libHooksMod extends js.Object {
     typingsSlinky.reactRelay.useLegacyPaginationFragmentMod.Call[typingsSlinky.reactRelay.useLegacyPaginationFragmentMod.KeyReturnType[TKey]] | Null
   ] = js.native
   def usePreloadedQuery[TQuery /* <: OperationType */](gqlQuery: GraphQLTaggedNode, preloadedQuery: PreloadedQuery[TQuery, EnvironmentProviderOptions]): /* import warning: importer.ImportType#apply Failed type conversion: TQuery['response'] */ js.Any = js.native
-  def useRefetchableFragment[TQuery /* <: OperationType */, TKey /* <: AnonData */](fragmentInput: GraphQLTaggedNode, fragmentRef: TKey): typingsSlinky.reactRelay.useRefetchableFragmentMod.ReturnType[TQuery, TKey] = js.native
+  def useRefetchableFragment[TQuery /* <: OperationType */, TKey /* <: Data */](fragmentInput: GraphQLTaggedNode, fragmentRef: TKey): typingsSlinky.reactRelay.useRefetchableFragmentMod.ReturnType[TQuery, TKey] = js.native
   def useRelayEnvironment(): typingsSlinky.relayRuntime.mod.Environment = js.native
 }
 

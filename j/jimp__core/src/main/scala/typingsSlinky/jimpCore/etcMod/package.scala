@@ -12,7 +12,7 @@ package object etcMod {
     /* this */ jimp, 
     /* err */ js.Error | scala.Null, 
     /* value */ jimp, 
-    /* coords */ typingsSlinky.jimpCore.AnonX, 
+    /* coords */ typingsSlinky.jimpCore.anon.X, 
     js.Any
   ]
 }

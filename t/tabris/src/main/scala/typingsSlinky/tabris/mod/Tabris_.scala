@@ -1,7 +1,7 @@
 package typingsSlinky.tabris.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.tabris.AnonHeadless
+import typingsSlinky.tabris.anon.Headless
 import typingsSlinky.tabris.tabrisStrings.symbols
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -57,7 +57,7 @@ class Tabris_ protected () extends NativeObject {
     * @param options
     */
   def _init(client: js.Any): Unit = js.native
-  def _init(client: js.Any, options: AnonHeadless): Unit = js.native
+  def _init(client: js.Any, options: Headless): Unit = js.native
   /**
     * Callback for the native client to issue JavaScript events to the `NativeObject` with the given `cid`.
     * Triggers a flush event afterwards. Errors are caught and logged to the console. Returns true if the

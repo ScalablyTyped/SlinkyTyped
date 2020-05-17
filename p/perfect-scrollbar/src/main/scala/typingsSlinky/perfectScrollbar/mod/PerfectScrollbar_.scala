@@ -1,7 +1,7 @@
 package typingsSlinky.perfectScrollbar.mod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.perfectScrollbar.AnonX
+import typingsSlinky.perfectScrollbar.anon.X
 import typingsSlinky.perfectScrollbar.mod.PerfectScrollbar.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -30,7 +30,7 @@ trait PerfectScrollbar_ extends js.Object {
   var railYHeight: Double = js.native
   var railYMarginHeight: Double = js.native
   var railYRatio: Double = js.native
-  var reach: AnonX = js.native
+  var reach: X = js.native
   var scrollbarX: HTMLElement = js.native
   var scrollbarXActive: Boolean = js.native
   var scrollbarXBottom: Double = js.native
@@ -74,7 +74,7 @@ object PerfectScrollbar_ {
     railYHeight: Double,
     railYMarginHeight: Double,
     railYRatio: Double,
-    reach: AnonX,
+    reach: X,
     scrollbarX: HTMLElement,
     scrollbarXActive: Boolean,
     scrollbarXBottom: Double,
@@ -232,7 +232,7 @@ object PerfectScrollbar_ {
         ret
     }
     @scala.inline
-    def withReach(value: AnonX): Self = {
+    def withReach(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("reach")(value.asInstanceOf[js.Any])
         ret

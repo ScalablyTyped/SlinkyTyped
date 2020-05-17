@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCore
 
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonSlidesElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonSlidesElement
 import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
 import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
 import scala.scalajs.js

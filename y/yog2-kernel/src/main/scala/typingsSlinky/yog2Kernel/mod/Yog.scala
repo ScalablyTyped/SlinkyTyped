@@ -7,10 +7,10 @@ import typingsSlinky.lodash.mod.LoDashImplicitWrapper
 import typingsSlinky.lodash.mod.LoDashStatic
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
-import typingsSlinky.yog2Kernel.AnonCleanCache
-import typingsSlinky.yog2Kernel.TypeofRAL
-import typingsSlinky.yog2Kernel.TypeofRALPromise
-import typingsSlinky.yog2Kernel.Typeofexpress
+import typingsSlinky.yog2Kernel.anon.CleanCache
+import typingsSlinky.yog2Kernel.anon.TypeofRAL
+import typingsSlinky.yog2Kernel.anon.TypeofRALPromise
+import typingsSlinky.yog2Kernel.anon.Typeofexpress
 import typingsSlinky.yogLog.mod.Logger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -39,7 +39,7 @@ trait Yog extends js.Object {
   var reloadIsomorphic: js.UndefOr[js.Function0[Unit]] = js.native
   // debug模式时存在
   var reloadView: js.UndefOr[js.Function0[Unit]] = js.native
-  var view: AnonCleanCache = js.native
+  var view: CleanCache = js.native
   /**
     * Creates a lodash object which wraps value to enable implicit method chain sequences.
     * Methods that operate on and return arrays, collections, and functions can be chained together.

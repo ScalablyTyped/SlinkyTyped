@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientSqladmin.gapi.client.sqladmin
 
-import typingsSlinky.gapiClientSqladmin.AnonAvailable
+import typingsSlinky.gapiClientSqladmin.anon.Available
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ trait DatabaseInstance extends js.Object {
   /** HTTP 1.1 Entity tag for the resource. */
   var etag: js.UndefOr[String] = js.native
   /** The name and status of the failover replica. This property is applicable only to Second Generation instances. */
-  var failoverReplica: js.UndefOr[AnonAvailable] = js.native
+  var failoverReplica: js.UndefOr[Available] = js.native
   /**
     * The GCE zone that the instance is serving from. In case when the instance is failed over to standby zone, this value may be different with what user
     * specified in the settings.
@@ -163,7 +163,7 @@ object DatabaseInstance {
         ret
     }
     @scala.inline
-    def withFailoverReplica(value: AnonAvailable): Self = {
+    def withFailoverReplica(value: Available): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("failoverReplica")(value.asInstanceOf[js.Any])
         ret

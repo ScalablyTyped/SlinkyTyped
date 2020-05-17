@@ -1,20 +1,20 @@
 package typingsSlinky.favicons.mod
 
-import typingsSlinky.favicons.AnonContents
+import typingsSlinky.favicons.anon.Contents
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait FavIconResponse extends js.Object {
-  var files: js.Array[AnonContents] = js.native
+  var files: js.Array[Contents] = js.native
   var html: js.Array[String] = js.native
-  var images: js.Array[AnonContents] = js.native
+  var images: js.Array[Contents] = js.native
 }
 
 object FavIconResponse {
   @scala.inline
-  def apply(files: js.Array[AnonContents], html: js.Array[String], images: js.Array[AnonContents]): FavIconResponse = {
+  def apply(files: js.Array[Contents], html: js.Array[String], images: js.Array[Contents]): FavIconResponse = {
     val __obj = js.Dynamic.literal(files = files.asInstanceOf[js.Any], html = html.asInstanceOf[js.Any], images = images.asInstanceOf[js.Any])
     __obj.asInstanceOf[FavIconResponse]
   }
@@ -25,7 +25,7 @@ object FavIconResponse {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFiles(value: js.Array[AnonContents]): Self = {
+    def withFiles(value: js.Array[Contents]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
         ret
@@ -37,7 +37,7 @@ object FavIconResponse {
         ret
     }
     @scala.inline
-    def withImages(value: js.Array[AnonContents]): Self = {
+    def withImages(value: js.Array[Contents]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("images")(value.asInstanceOf[js.Any])
         ret

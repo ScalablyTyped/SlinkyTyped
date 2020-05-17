@@ -1,7 +1,7 @@
 package typingsSlinky.passportWindowsauth.mod
 
 import typingsSlinky.passport.mod.Strategy
-import typingsSlinky.passportWindowsauth.OptionspassReqToCallbackt
+import typingsSlinky.passportWindowsauth.anon.OptionspassReqToCallbackt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

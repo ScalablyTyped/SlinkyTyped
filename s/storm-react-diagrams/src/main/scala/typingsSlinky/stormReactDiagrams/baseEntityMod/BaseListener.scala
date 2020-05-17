@@ -1,13 +1,13 @@
 package typingsSlinky.stormReactDiagrams.baseEntityMod
 
-import typingsSlinky.stormReactDiagrams.AnonLocked
+import typingsSlinky.stormReactDiagrams.anon.Locked
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait BaseListener[T /* <: BaseEntity[BaseListener[_]] */] extends js.Object {
-  var lockChanged: js.UndefOr[js.Function1[/* event */ BaseEvent[T] with AnonLocked, Unit]] = js.native
+  var lockChanged: js.UndefOr[js.Function1[/* event */ BaseEvent[T] with Locked, Unit]] = js.native
 }
 
 object BaseListener {
@@ -23,7 +23,7 @@ object BaseListener {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withLockChanged(value: /* event */ BaseEvent[T] with AnonLocked => Unit): Self[T] = {
+    def withLockChanged(value: /* event */ BaseEvent[T] with Locked => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lockChanged")(js.Any.fromFunction1(value))
         ret

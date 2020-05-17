@@ -1,7 +1,6 @@
 package typingsSlinky.reactBootstrapTable2Filter.mod
 
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactBootstrapTable2Filter.AnonComparator
 import typingsSlinky.reactBootstrapTableNext.mod.TableColumnFilterProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +13,7 @@ trait NumberFilterProps[T /* <: js.Object */] extends js.Object {
   var comparatorClassName: js.UndefOr[String] = js.native
   var comparatorStyle: js.UndefOr[CSSProperties] = js.native
   var comparators: js.UndefOr[js.Array[Comparator]] = js.native
-  var defaultValue: js.UndefOr[js.Any with AnonComparator] = js.native
+  var defaultValue: js.UndefOr[js.Any with typingsSlinky.reactBootstrapTable2Filter.anon.Comparator] = js.native
   var delay: js.UndefOr[Double] = js.native
   var getFilter: js.UndefOr[js.Function1[/* filter */ TableColumnFilterProps[_, _], Unit]] = js.native
   var id: js.UndefOr[String] = js.native
@@ -92,7 +91,7 @@ object NumberFilterProps {
         ret
     }
     @scala.inline
-    def withDefaultValue(value: js.Any with AnonComparator): Self[T] = {
+    def withDefaultValue(value: js.Any with typingsSlinky.reactBootstrapTable2Filter.anon.Comparator): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defaultValue")(value.asInstanceOf[js.Any])
         ret

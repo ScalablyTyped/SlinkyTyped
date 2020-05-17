@@ -13,9 +13,8 @@ import scala.scalajs.js.annotation._
 /**
 			 * Dynamic behavior to support collisions between items and boundaries.
 			 */
-@JSGlobal("Titanium.UI.iOS.CollisionBehavior")
 @js.native
-class CollisionBehavior () extends Proxy {
+trait CollisionBehavior extends Proxy {
   /**
   				 * Boundary identfiers added to this behavior.
   				 */

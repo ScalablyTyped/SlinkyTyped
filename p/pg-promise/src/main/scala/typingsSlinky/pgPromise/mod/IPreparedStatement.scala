@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IPreparedStatement extends _QueryParam {
+trait IPreparedStatement extends QueryParam {
   var binary: js.UndefOr[Boolean] = js.native
   var name: js.UndefOr[String] = js.native
   var rowMode: js.UndefOr[array | Null | Unit] = js.native

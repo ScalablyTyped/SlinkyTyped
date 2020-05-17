@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.OmitInactivityTimerset
+import typingsSlinky.tabris.anon.OmitInactivityTimerset
 import typingsSlinky.tabris.tabrisStrings.delay
 import scala.scalajs.js
 import scala.scalajs.js.`|`

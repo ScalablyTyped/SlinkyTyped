@@ -1,6 +1,6 @@
 package typingsSlinky.cryptex.mod
 
-import typingsSlinky.cryptex.AnonDataKey
+import typingsSlinky.cryptex.anon.DataKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait CryptexConfig extends js.Object {
   var algorithm: js.UndefOr[String] = js.native
   var keySource: String = js.native
-  var keySourceOpts: js.UndefOr[AnonDataKey] = js.native
+  var keySourceOpts: js.UndefOr[DataKey] = js.native
   var secretEncoding: js.UndefOr[String] = js.native
   var secrets: js.Object = js.native
 }
@@ -51,7 +51,7 @@ object CryptexConfig {
         ret
     }
     @scala.inline
-    def withKeySourceOpts(value: AnonDataKey): Self = {
+    def withKeySourceOpts(value: DataKey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("keySourceOpts")(value.asInstanceOf[js.Any])
         ret

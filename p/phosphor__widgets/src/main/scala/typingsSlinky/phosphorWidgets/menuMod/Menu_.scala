@@ -1,5 +1,6 @@
 package typingsSlinky.phosphorWidgets.menuMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLUListElement
 import typingsSlinky.phosphorCommands.mod.CommandRegistry
 import typingsSlinky.phosphorSignaling.mod.ISignal
@@ -11,7 +12,6 @@ import typingsSlinky.phosphorWidgets.menuMod.Menu.IRenderer
 import typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.next
 import typingsSlinky.phosphorWidgets.phosphorWidgetsStrings.previous
 import typingsSlinky.phosphorWidgets.widgetMod.Widget
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -231,7 +231,7 @@ class Menu_ protected () extends Widget {
     * called in response to events on the menu's DOM nodes. It should
     * not be called directly by user code.
     */
-  def handleEvent(event: Event_): Unit = js.native
+  def handleEvent(event: Event): Unit = js.native
   /**
     * Insert a menu item into the menu at the specified index.
     *

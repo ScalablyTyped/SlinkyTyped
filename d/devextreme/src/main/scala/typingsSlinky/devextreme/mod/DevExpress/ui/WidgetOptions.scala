@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.AnonComponentElement
+import typingsSlinky.devextreme.anon.ComponentElement
 import typingsSlinky.devextreme.mod.DevExpress.DOMComponentOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,7 @@ trait WidgetOptions[T] extends DOMComponentOptions[T] {
   /** Specifies whether the widget changes its state when a user pauses on it. */
   var hoverStateEnabled: js.UndefOr[Boolean] = js.native
   /** A function that is executed when the widget's content is ready and each time the content is changed. */
-  var onContentReady: js.UndefOr[js.Function1[/* e */ AnonComponentElement[T], _]] = js.native
+  var onContentReady: js.UndefOr[js.Function1[/* e */ ComponentElement[T], _]] = js.native
   /** Specifies the number of the element when the Tab key is used for navigating. */
   var tabIndex: js.UndefOr[Double] = js.native
   /** Specifies whether the widget is visible. */
@@ -113,7 +113,7 @@ object WidgetOptions {
         ret
     }
     @scala.inline
-    def withOnContentReady(value: /* e */ AnonComponentElement[T] => _): Self[T] = {
+    def withOnContentReady(value: /* e */ ComponentElement[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onContentReady")(js.Any.fromFunction1(value))
         ret

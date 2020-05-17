@@ -2,8 +2,8 @@ package typingsSlinky.baseui.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.AnonEventAny
-import typingsSlinky.baseui.AnonNextPage
+import typingsSlinky.baseui.anon.EventAny
+import typingsSlinky.baseui.anon.NextPage
 import typingsSlinky.baseui.baseuiStrings.change_
 import typingsSlinky.baseui.paginationMod.Labels
 import typingsSlinky.baseui.paginationMod.PaginationOverrides
@@ -27,11 +27,11 @@ object StatefulPagination {
     @scala.inline
     def labels(value: Labels): this.type = set("labels", value.asInstanceOf[js.Any])
     @scala.inline
-    def onNextClick(value: /* args */ AnonEventAny => _): this.type = set("onNextClick", js.Any.fromFunction1(value))
+    def onNextClick(value: /* args */ EventAny => _): this.type = set("onNextClick", js.Any.fromFunction1(value))
     @scala.inline
-    def onPageChange(value: /* args */ AnonNextPage => _): this.type = set("onPageChange", js.Any.fromFunction1(value))
+    def onPageChange(value: /* args */ NextPage => _): this.type = set("onPageChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onPrevClick(value: /* args */ AnonEventAny => _): this.type = set("onPrevClick", js.Any.fromFunction1(value))
+    def onPrevClick(value: /* args */ EventAny => _): this.type = set("onPrevClick", js.Any.fromFunction1(value))
     @scala.inline
     def overrides(value: PaginationOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     @scala.inline

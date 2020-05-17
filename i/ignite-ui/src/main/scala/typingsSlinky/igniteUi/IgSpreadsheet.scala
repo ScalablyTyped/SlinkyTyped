@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -259,7 +259,7 @@ object IgSpreadsheet {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActionExecuted(value: (/* event */ Event_, /* ui */ ActionExecutedEventUIParam) => Unit): Self = {
+    def withActionExecuted(value: (/* event */ Event, /* ui */ ActionExecutedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("actionExecuted")(js.Any.fromFunction2(value))
         ret
@@ -271,7 +271,7 @@ object IgSpreadsheet {
         ret
     }
     @scala.inline
-    def withActionExecuting(value: (/* event */ Event_, /* ui */ ActionExecutingEventUIParam) => Unit): Self = {
+    def withActionExecuting(value: (/* event */ Event, /* ui */ ActionExecutingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("actionExecuting")(js.Any.fromFunction2(value))
         ret
@@ -295,7 +295,7 @@ object IgSpreadsheet {
         ret
     }
     @scala.inline
-    def withActiveCellChanged(value: (/* event */ Event_, /* ui */ ActiveCellChangedEventUIParam) => Unit): Self = {
+    def withActiveCellChanged(value: (/* event */ Event, /* ui */ ActiveCellChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("activeCellChanged")(js.Any.fromFunction2(value))
         ret
@@ -307,7 +307,7 @@ object IgSpreadsheet {
         ret
     }
     @scala.inline
-    def withActivePaneChanged(value: (/* event */ Event_, /* ui */ ActivePaneChangedEventUIParam) => Unit): Self = {
+    def withActivePaneChanged(value: (/* event */ Event, /* ui */ ActivePaneChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("activePaneChanged")(js.Any.fromFunction2(value))
         ret
@@ -319,7 +319,7 @@ object IgSpreadsheet {
         ret
     }
     @scala.inline
-    def withActiveTableChanged(value: (/* event */ Event_, /* ui */ ActiveTableChangedEventUIParam) => Unit): Self = {
+    def withActiveTableChanged(value: (/* event */ Event, /* ui */ ActiveTableChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("activeTableChanged")(js.Any.fromFunction2(value))
         ret
@@ -343,7 +343,7 @@ object IgSpreadsheet {
         ret
     }
     @scala.inline
-    def withActiveWorksheetChanged(value: (/* event */ Event_, /* ui */ ActiveWorksheetChangedEventUIParam) => Unit): Self = {
+    def withActiveWorksheetChanged(value: (/* event */ Event, /* ui */ ActiveWorksheetChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("activeWorksheetChanged")(js.Any.fromFunction2(value))
         ret
@@ -415,7 +415,7 @@ object IgSpreadsheet {
         ret
     }
     @scala.inline
-    def withContextMenuOpening(value: (/* event */ Event_, /* ui */ ContextMenuOpeningEventUIParam) => Unit): Self = {
+    def withContextMenuOpening(value: (/* event */ Event, /* ui */ ContextMenuOpeningEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contextMenuOpening")(js.Any.fromFunction2(value))
         ret
@@ -427,7 +427,7 @@ object IgSpreadsheet {
         ret
     }
     @scala.inline
-    def withEditModeEntered(value: (/* event */ Event_, /* ui */ EditModeEnteredEventUIParam) => Unit): Self = {
+    def withEditModeEntered(value: (/* event */ Event, /* ui */ EditModeEnteredEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editModeEntered")(js.Any.fromFunction2(value))
         ret
@@ -439,7 +439,7 @@ object IgSpreadsheet {
         ret
     }
     @scala.inline
-    def withEditModeEntering(value: (/* event */ Event_, /* ui */ EditModeEnteringEventUIParam) => Unit): Self = {
+    def withEditModeEntering(value: (/* event */ Event, /* ui */ EditModeEnteringEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editModeEntering")(js.Any.fromFunction2(value))
         ret
@@ -451,7 +451,7 @@ object IgSpreadsheet {
         ret
     }
     @scala.inline
-    def withEditModeExited(value: (/* event */ Event_, /* ui */ EditModeExitedEventUIParam) => Unit): Self = {
+    def withEditModeExited(value: (/* event */ Event, /* ui */ EditModeExitedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editModeExited")(js.Any.fromFunction2(value))
         ret
@@ -463,7 +463,7 @@ object IgSpreadsheet {
         ret
     }
     @scala.inline
-    def withEditModeExiting(value: (/* event */ Event_, /* ui */ EditModeExitingEventUIParam) => Unit): Self = {
+    def withEditModeExiting(value: (/* event */ Event, /* ui */ EditModeExitingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editModeExiting")(js.Any.fromFunction2(value))
         ret
@@ -475,7 +475,7 @@ object IgSpreadsheet {
         ret
     }
     @scala.inline
-    def withEditModeValidationError(value: (/* event */ Event_, /* ui */ EditModeValidationErrorEventUIParam) => Unit): Self = {
+    def withEditModeValidationError(value: (/* event */ Event, /* ui */ EditModeValidationErrorEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editModeValidationError")(js.Any.fromFunction2(value))
         ret
@@ -487,7 +487,7 @@ object IgSpreadsheet {
         ret
     }
     @scala.inline
-    def withEditRangePasswordNeeded(value: (/* event */ Event_, /* ui */ EditRangePasswordNeededEventUIParam) => Unit): Self = {
+    def withEditRangePasswordNeeded(value: (/* event */ Event, /* ui */ EditRangePasswordNeededEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editRangePasswordNeeded")(js.Any.fromFunction2(value))
         ret
@@ -535,7 +535,7 @@ object IgSpreadsheet {
         ret
     }
     @scala.inline
-    def withHyperlinkExecuting(value: (/* event */ Event_, /* ui */ HyperlinkExecutingEventUIParam) => Unit): Self = {
+    def withHyperlinkExecuting(value: (/* event */ Event, /* ui */ HyperlinkExecutingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hyperlinkExecuting")(js.Any.fromFunction2(value))
         ret
@@ -679,7 +679,7 @@ object IgSpreadsheet {
         ret
     }
     @scala.inline
-    def withSelectionChanged(value: (/* event */ Event_, /* ui */ IgSpreadsheetSelectionChangedEventUIParam) => Unit): Self = {
+    def withSelectionChanged(value: (/* event */ Event, /* ui */ IgSpreadsheetSelectionChangedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectionChanged")(js.Any.fromFunction2(value))
         ret
@@ -703,7 +703,7 @@ object IgSpreadsheet {
         ret
     }
     @scala.inline
-    def withUserPromptDisplaying(value: (/* event */ Event_, /* ui */ UserPromptDisplayingEventUIParam) => Unit): Self = {
+    def withUserPromptDisplaying(value: (/* event */ Event, /* ui */ UserPromptDisplayingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("userPromptDisplaying")(js.Any.fromFunction2(value))
         ret
@@ -751,7 +751,7 @@ object IgSpreadsheet {
         ret
     }
     @scala.inline
-    def withWorkbookDirtied(value: (/* event */ Event_, /* ui */ WorkbookDirtiedEventUIParam) => Unit): Self = {
+    def withWorkbookDirtied(value: (/* event */ Event, /* ui */ WorkbookDirtiedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("workbookDirtied")(js.Any.fromFunction2(value))
         ret

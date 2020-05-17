@@ -13,7 +13,6 @@ import typingsSlinky.mssql.mod.ISqlTypeWithNoParams
 import typingsSlinky.mssql.mod.ISqlTypeWithPrecisionScale
 import typingsSlinky.mssql.mod.ISqlTypeWithScale
 import typingsSlinky.mssql.mod.ISqlTypeWithTvpType
-import typingsSlinky.mssql.mod.config
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,9 +30,9 @@ object msnodesqlv8Mod extends js.Object {
   @js.native
   class ConnectionPool protected ()
     extends typingsSlinky.mssql.mod.ConnectionPool {
-    def this(config: config) = this()
+    def this(config: typingsSlinky.mssql.mod.config) = this()
     def this(connectionString: String) = this()
-    def this(config: config, callback: js.Function1[/* err */ js.UndefOr[js.Any], Unit]) = this()
+    def this(config: typingsSlinky.mssql.mod.config, callback: js.Function1[/* err */ js.UndefOr[js.Any], Unit]) = this()
     def this(connectionString: String, callback: js.Function1[/* err */ js.UndefOr[js.Any], Unit]) = this()
   }
   

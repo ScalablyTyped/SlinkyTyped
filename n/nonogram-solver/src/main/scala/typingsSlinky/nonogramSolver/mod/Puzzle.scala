@@ -1,6 +1,6 @@
 package typingsSlinky.nonogramSolver.mod
 
-import typingsSlinky.nonogramSolver.RequiredInput
+import typingsSlinky.nonogramSolver.anon.RequiredInput
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

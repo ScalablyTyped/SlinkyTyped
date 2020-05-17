@@ -1,25 +1,24 @@
 package typingsSlinky.winrt.Windows.Devices.Sms
 
-import typingsSlinky.winrt.AnonProgress
 import typingsSlinky.winrt.Windows.Foundation.AsyncOperationProgressHandler
 import typingsSlinky.winrt.Windows.Foundation.AsyncOperationWithProgressCompletedHandler
 import typingsSlinky.winrt.Windows.Foundation.AsyncStatus
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVectorView
 import typingsSlinky.winrt.Windows.Foundation.IAsyncInfo
 import typingsSlinky.winrt.Windows.Foundation.IAsyncOperationWithProgress
+import typingsSlinky.winrt.anon.Progress
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Windows.Devices.Sms.GetSmsMessagesOperation")
 @js.native
-class GetSmsMessagesOperation ()
+trait GetSmsMessagesOperation
   extends IAsyncOperationWithProgress[IVectorView[ISmsMessage], Double]
      with IAsyncInfo {
   @JSName("completed")
   var completed_Original: AsyncOperationWithProgressCompletedHandler[IVectorView[ISmsMessage], Double] = js.native
   @JSName("operation")
-  var operation_GetSmsMessagesOperation: AnonProgress = js.native
+  var operation_GetSmsMessagesOperation: Progress = js.native
   @JSName("progress")
   var progress_Original: AsyncOperationProgressHandler[IVectorView[ISmsMessage], Double] = js.native
   /* InferMemberOverrides */

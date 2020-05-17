@@ -1,6 +1,6 @@
 package typingsSlinky.reactRouterNavigation.mod
 
-import typingsSlinky.reactRouterNavigation.AnonHeight
+import typingsSlinky.reactRouterNavigation.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait TabsProps extends TabBarProps {
     ]
   ] = js.native
   // <Tabs /> only:
-  var initialLayout: js.UndefOr[AnonHeight] = js.native
+  var initialLayout: js.UndefOr[Height] = js.native
 }
 
 object TabsProps {
@@ -49,7 +49,7 @@ object TabsProps {
         ret
     }
     @scala.inline
-    def withInitialLayout(value: AnonHeight): Self = {
+    def withInitialLayout(value: Height): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("initialLayout")(value.asInstanceOf[js.Any])
         ret

@@ -1,13 +1,13 @@
 package typingsSlinky.restify.mod
 
-import typingsSlinky.restify.AnonPassword
+import typingsSlinky.restify.anon.Password
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait RequestAuthorization extends js.Object {
-  var basic: js.UndefOr[AnonPassword] = js.native
+  var basic: js.UndefOr[Password] = js.native
   var credentials: String = js.native
   var scheme: String = js.native
 }
@@ -37,7 +37,7 @@ object RequestAuthorization {
         ret
     }
     @scala.inline
-    def withBasic(value: AnonPassword): Self = {
+    def withBasic(value: Password): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("basic")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`at-least`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`at-most`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`greater-than`
@@ -63,8 +62,4 @@ trait HistogramRangeSliderViewModel extends SliderViewModel {
     */
   def generateWhereClause(field: String): String = js.native
 }
-
-@JSGlobal("__esri.HistogramRangeSliderViewModel")
-@js.native
-object HistogramRangeSliderViewModel extends TopLevel[HistogramRangeSliderViewModelConstructor]
 

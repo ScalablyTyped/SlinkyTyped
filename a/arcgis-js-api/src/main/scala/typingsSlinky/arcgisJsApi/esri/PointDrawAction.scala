@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.IHandle
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`cursor-update`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`draw-complete`
@@ -29,8 +28,4 @@ trait PointDrawAction extends DrawAction {
   @JSName("on")
   def on_drawcomplete(name: `draw-complete`, eventHandler: PointDrawActionDrawCompleteEventHandler): IHandle = js.native
 }
-
-@JSGlobal("__esri.PointDrawAction")
-@js.native
-object PointDrawAction extends TopLevel[PointDrawActionConstructor]
 

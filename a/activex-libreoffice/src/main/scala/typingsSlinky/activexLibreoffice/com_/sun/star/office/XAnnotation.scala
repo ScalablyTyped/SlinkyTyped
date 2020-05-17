@@ -1,0 +1,121 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.office
+
+import typingsSlinky.activexLibreoffice.`type`
+import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertyChangeListener
+import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertySet
+import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XPropertySetInfo
+import typingsSlinky.activexLibreoffice.com_.sun.star.beans.XVetoableChangeListener
+import typingsSlinky.activexLibreoffice.com_.sun.star.geometry.RealPoint2D
+import typingsSlinky.activexLibreoffice.com_.sun.star.geometry.RealSize2D
+import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XComponent
+import typingsSlinky.activexLibreoffice.com_.sun.star.lang.XEventListener
+import typingsSlinky.activexLibreoffice.com_.sun.star.text.XText
+import typingsSlinky.activexLibreoffice.com_.sun.star.util.DateTime
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** This interface gives access to an annotation inside a document. */
+@js.native
+trait XAnnotation
+  extends XPropertySet
+     with XComponent {
+  /** a reference to the document content this annotation is anchored to. */
+  var Anchor: js.Any = js.native
+  /** stores the full name of the author who created this annotation. */
+  var Author: String = js.native
+  /** stores the date and time this annotation was last edited. */
+  var DateTime: typingsSlinky.activexLibreoffice.com_.sun.star.util.DateTime = js.native
+  /** stores the initials of the author who created this annotation. */
+  var Initials: String = js.native
+  /**
+    * this is an optional position that gives the user interface a hint where the annotation should be rendered. This could be an offset to the annotations
+    * anchor.
+    */
+  var Position: RealPoint2D = js.native
+  /** this is an optional size that gives the user interface a hint how large the annotation should be rendered. */
+  var Size: RealSize2D = js.native
+  /** gives access to the annotations text. */
+  var TextRange: XText = js.native
+}
+
+object XAnnotation {
+  @scala.inline
+  def apply(
+    Anchor: js.Any,
+    Author: String,
+    DateTime: DateTime,
+    Initials: String,
+    Position: RealPoint2D,
+    PropertySetInfo: XPropertySetInfo,
+    Size: RealSize2D,
+    TextRange: XText,
+    acquire: () => Unit,
+    addEventListener: XEventListener => Unit,
+    addPropertyChangeListener: (String, XPropertyChangeListener) => Unit,
+    addVetoableChangeListener: (String, XVetoableChangeListener) => Unit,
+    dispose: () => Unit,
+    getPropertySetInfo: () => XPropertySetInfo,
+    getPropertyValue: String => js.Any,
+    queryInterface: `type` => js.Any,
+    release: () => Unit,
+    removeEventListener: XEventListener => Unit,
+    removePropertyChangeListener: (String, XPropertyChangeListener) => Unit,
+    removeVetoableChangeListener: (String, XVetoableChangeListener) => Unit,
+    setPropertyValue: (String, js.Any) => Unit
+  ): XAnnotation = {
+    val __obj = js.Dynamic.literal(Anchor = Anchor.asInstanceOf[js.Any], Author = Author.asInstanceOf[js.Any], DateTime = DateTime.asInstanceOf[js.Any], Initials = Initials.asInstanceOf[js.Any], Position = Position.asInstanceOf[js.Any], PropertySetInfo = PropertySetInfo.asInstanceOf[js.Any], Size = Size.asInstanceOf[js.Any], TextRange = TextRange.asInstanceOf[js.Any], acquire = js.Any.fromFunction0(acquire), addEventListener = js.Any.fromFunction1(addEventListener), addPropertyChangeListener = js.Any.fromFunction2(addPropertyChangeListener), addVetoableChangeListener = js.Any.fromFunction2(addVetoableChangeListener), dispose = js.Any.fromFunction0(dispose), getPropertySetInfo = js.Any.fromFunction0(getPropertySetInfo), getPropertyValue = js.Any.fromFunction1(getPropertyValue), queryInterface = js.Any.fromFunction1(queryInterface), release = js.Any.fromFunction0(release), removeEventListener = js.Any.fromFunction1(removeEventListener), removePropertyChangeListener = js.Any.fromFunction2(removePropertyChangeListener), removeVetoableChangeListener = js.Any.fromFunction2(removeVetoableChangeListener), setPropertyValue = js.Any.fromFunction2(setPropertyValue))
+    __obj.asInstanceOf[XAnnotation]
+  }
+  @scala.inline
+  implicit class XAnnotationOps[Self <: XAnnotation] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAnchor(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Anchor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withAuthor(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Author")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDateTime(value: DateTime): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("DateTime")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInitials(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Initials")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPosition(value: RealPoint2D): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Position")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withSize(value: RealSize2D): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Size")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextRange(value: XText): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TextRange")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
+

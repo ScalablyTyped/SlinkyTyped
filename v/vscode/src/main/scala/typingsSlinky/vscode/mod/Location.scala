@@ -6,7 +6,9 @@ import scala.scalajs.js.annotation._
 
 @JSImport("vscode", "Location")
 @js.native
-class Location protected () extends js.Object {
+class Location protected ()
+  extends Declaration
+     with Definition {
   def this(uri: Uri, rangeOrPosition: Position) = this()
   /**
   		 * Creates a new location object.

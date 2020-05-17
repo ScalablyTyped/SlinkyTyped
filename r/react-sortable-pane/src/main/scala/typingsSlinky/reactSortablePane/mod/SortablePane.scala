@@ -8,10 +8,10 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactSortablePane.AnonChildren
-import typingsSlinky.reactSortablePane.AnonNext
-import typingsSlinky.reactSortablePane.AnonPageX
-import typingsSlinky.resizeObserverPolyfill.mod._Global_.ResizeObserver
+import typingsSlinky.reactSortablePane.anon.Children
+import typingsSlinky.reactSortablePane.anon.Next
+import typingsSlinky.reactSortablePane.anon.PageX
+import typingsSlinky.resizeObserverPolyfill.mod.global.ResizeObserver
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -68,12 +68,12 @@ class SortablePane protected ()
     * @return {object}               - Object containing 'previous' and 'next'
     *                                  pane halfway points
     */
-  def getSurroundingHalfSizes(currentPane: Double, sizes: js.Array[Double], margin: Double): AnonNext = js.native
+  def getSurroundingHalfSizes(currentPane: Double, sizes: js.Array[Double], margin: Double): Next = js.native
   def handleMouseDown(pos: Double, pressX: Double, pressY: Double, e: SyntheticMouseEvent[HTMLElement]): Unit = js.native
   def handleMouseDown(pos: Double, pressX: Double, pressY: Double, e: SyntheticTouchEvent[HTMLElement]): Unit = js.native
   def handleMouseUp(e: MouseEvent): Unit = js.native
   def handleMouseUp(e: TouchEvent): Unit = js.native
-  def handleMove(hasPageXPageY: AnonPageX): Unit = js.native
+  def handleMove(hasPageXPageY: PageX): Unit = js.native
   def handleResizeStart(
     i: Double,
     e: SyntheticMouseEvent[HTMLElement],
@@ -123,6 +123,6 @@ class SortablePane protected ()
 @JSImport("react-sortable-pane", "SortablePane")
 @js.native
 object SortablePane extends js.Object {
-  var defaultProps: AnonChildren = js.native
+  var defaultProps: Children = js.native
 }
 

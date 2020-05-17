@@ -1,7 +1,6 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.AnonBorderColor
-import typingsSlinky.echarts.AnonLineStyle
+import typingsSlinky.echarts.anon.BorderColor
 import typingsSlinky.echarts.echarts.EChartOption.Calendar.DayLabel
 import typingsSlinky.echarts.echarts.EChartOption.Calendar.MonthLabel
 import typingsSlinky.echarts.echarts.EChartOption.Calendar.YearLabel
@@ -58,7 +57,7 @@ trait Calendar_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#calendar.itemStyle
     */
-  var itemStyle: js.UndefOr[AnonBorderColor] = js.native
+  var itemStyle: js.UndefOr[BorderColor] = js.native
   /**
     * Distance between calendar component and the left side of the container.
     * left value can be instant pixel value like 20;
@@ -104,7 +103,7 @@ trait Calendar_ extends js.Object {
   /**
     * Calendar coordinates splitLine style.
     */
-  var splitLine: js.UndefOr[AnonLineStyle] = js.native
+  var splitLine: js.UndefOr[typingsSlinky.echarts.anon.LineStyle] = js.native
   /**
     * Distance between calendar component and the top side of the container.
     * top value can be instant pixel value like 20;
@@ -223,7 +222,7 @@ object Calendar_ {
         ret
     }
     @scala.inline
-    def withItemStyle(value: AnonBorderColor): Self = {
+    def withItemStyle(value: BorderColor): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("itemStyle")(value.asInstanceOf[js.Any])
         ret
@@ -307,7 +306,7 @@ object Calendar_ {
         ret
     }
     @scala.inline
-    def withSplitLine(value: AnonLineStyle): Self = {
+    def withSplitLine(value: typingsSlinky.echarts.anon.LineStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("splitLine")(value.asInstanceOf[js.Any])
         ret

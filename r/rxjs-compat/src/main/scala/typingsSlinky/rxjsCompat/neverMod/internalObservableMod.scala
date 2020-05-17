@@ -1,75 +1,75 @@
 package typingsSlinky.rxjsCompat.neverMod
 
-import typingsSlinky.rxjsCompat.Fn0
-import typingsSlinky.rxjsCompat.Fn1
-import typingsSlinky.rxjsCompat.Fn10
-import typingsSlinky.rxjsCompat.Fn2
-import typingsSlinky.rxjsCompat.Fn3
-import typingsSlinky.rxjsCompat.Fn4
-import typingsSlinky.rxjsCompat.Fn5
-import typingsSlinky.rxjsCompat.Fn6
-import typingsSlinky.rxjsCompat.Fn7
-import typingsSlinky.rxjsCompat.Fn8
-import typingsSlinky.rxjsCompat.Fn9
-import typingsSlinky.rxjsCompat.FnCall
-import typingsSlinky.rxjsCompat.FnCallSubjectFactorySelector
-import typingsSlinky.rxjsCompat.FnCallThis
-import typingsSlinky.rxjsCompat.FnCallThisAccumulatorSeed
-import typingsSlinky.rxjsCompat.FnCallThisAccumulatorSeedConcurrent
-import typingsSlinky.rxjsCompat.FnCallThisBufferSizeStartBufferEvery
-import typingsSlinky.rxjsCompat.FnCallThisBufferSizeWindowTimeScheduler
-import typingsSlinky.rxjsCompat.FnCallThisBufferSizeWindowTimeSelectorScheduler
-import typingsSlinky.rxjsCompat.FnCallThisBufferTimeSpanBufferCreationIntervalMaxBufferSizeScheduler
-import typingsSlinky.rxjsCompat.FnCallThisCallback
-import typingsSlinky.rxjsCompat.FnCallThisClosingNotifier
-import typingsSlinky.rxjsCompat.FnCallThisClosingSelector
-import typingsSlinky.rxjsCompat.FnCallThisCompareKeySelector
-import typingsSlinky.rxjsCompat.FnCallThisCompareToComparor
-import typingsSlinky.rxjsCompat.FnCallThisComparer
-import typingsSlinky.rxjsCompat.FnCallThisConcurrent
-import typingsSlinky.rxjsCompat.FnCallThisCount
-import typingsSlinky.rxjsCompat.FnCallThisDefaultValue
-import typingsSlinky.rxjsCompat.FnCallThisDelayDurationSelectorSubscriptionDelay
-import typingsSlinky.rxjsCompat.FnCallThisDelayScheduler
-import typingsSlinky.rxjsCompat.FnCallThisDueScheduler
-import typingsSlinky.rxjsCompat.FnCallThisDueTimeScheduler
-import typingsSlinky.rxjsCompat.FnCallThisDueWithObservableScheduler
-import typingsSlinky.rxjsCompat.FnCallThisDurationScheduler
-import typingsSlinky.rxjsCompat.FnCallThisDurationSchedulerConfig
-import typingsSlinky.rxjsCompat.FnCallThisDurationSelectorConfig
-import typingsSlinky.rxjsCompat.FnCallThisFunc
-import typingsSlinky.rxjsCompat.FnCallThisIndexDefaultValue
-import typingsSlinky.rxjsCompat.FnCallThisInnerObservable
-import typingsSlinky.rxjsCompat.FnCallThisInnerObservableConcurrent
-import typingsSlinky.rxjsCompat.FnCallThisKeyCompare
-import typingsSlinky.rxjsCompat.FnCallThisKeySelectorElementSelectorDurationSelectorSubjectSelector
-import typingsSlinky.rxjsCompat.FnCallThisKeySelectorFlushes
-import typingsSlinky.rxjsCompat.FnCallThisNextErrorComplete
-import typingsSlinky.rxjsCompat.FnCallThisNotifier
-import typingsSlinky.rxjsCompat.FnCallThisObservableResultSelector
-import typingsSlinky.rxjsCompat.FnCallThisObservables
-import typingsSlinky.rxjsCompat.FnCallThisOpeningsClosingSelector
-import typingsSlinky.rxjsCompat.FnCallThisPeriodScheduler
-import typingsSlinky.rxjsCompat.FnCallThisPredicate
-import typingsSlinky.rxjsCompat.FnCallThisPredicateDefaultValue
-import typingsSlinky.rxjsCompat.FnCallThisPredicateThisArg
-import typingsSlinky.rxjsCompat.FnCallThisProject
-import typingsSlinky.rxjsCompat.FnCallThisProjectConcurrent
-import typingsSlinky.rxjsCompat.FnCallThisProjectConcurrentScheduler
-import typingsSlinky.rxjsCompat.FnCallThisProjectThisArg
-import typingsSlinky.rxjsCompat.FnCallThisProperties
-import typingsSlinky.rxjsCompat.FnCallThisScheduler
-import typingsSlinky.rxjsCompat.FnCallThisSchedulerDelay
-import typingsSlinky.rxjsCompat.FnCallThisSelector
-import typingsSlinky.rxjsCompat.FnCallThisV1V2V3V4V5V6Scheduler
-import typingsSlinky.rxjsCompat.FnCallThisV2V3V4V5V6
-import typingsSlinky.rxjsCompat.FnCallThisV2V3V4V5V6ConcurrentScheduler
-import typingsSlinky.rxjsCompat.FnCallThisV2V3V4V5V6Project
-import typingsSlinky.rxjsCompat.FnCallThisV2V3V4V5V6Scheduler
-import typingsSlinky.rxjsCompat.FnCallThisValue
-import typingsSlinky.rxjsCompat.FnCallThisWindowBoundaries
-import typingsSlinky.rxjsCompat.FnCallThisWindowSizeStartWindowEvery
-import typingsSlinky.rxjsCompat.FnCallThisWindowTimeSpanWindowCreationIntervalMaxWindowSizeScheduler
+import typingsSlinky.rxjsCompat.anon.Fn0
+import typingsSlinky.rxjsCompat.anon.Fn1
+import typingsSlinky.rxjsCompat.anon.Fn10
+import typingsSlinky.rxjsCompat.anon.Fn2
+import typingsSlinky.rxjsCompat.anon.Fn3
+import typingsSlinky.rxjsCompat.anon.Fn4
+import typingsSlinky.rxjsCompat.anon.Fn5
+import typingsSlinky.rxjsCompat.anon.Fn6
+import typingsSlinky.rxjsCompat.anon.Fn7
+import typingsSlinky.rxjsCompat.anon.Fn8
+import typingsSlinky.rxjsCompat.anon.Fn9
+import typingsSlinky.rxjsCompat.anon.FnCall
+import typingsSlinky.rxjsCompat.anon.FnCallSubjectFactorySelector
+import typingsSlinky.rxjsCompat.anon.FnCallThis
+import typingsSlinky.rxjsCompat.anon.FnCallThisAccumulatorSeed
+import typingsSlinky.rxjsCompat.anon.FnCallThisAccumulatorSeedConcurrent
+import typingsSlinky.rxjsCompat.anon.FnCallThisBufferSizeStartBufferEvery
+import typingsSlinky.rxjsCompat.anon.FnCallThisBufferSizeWindowTimeScheduler
+import typingsSlinky.rxjsCompat.anon.FnCallThisBufferSizeWindowTimeSelectorScheduler
+import typingsSlinky.rxjsCompat.anon.FnCallThisBufferTimeSpanBufferCreationIntervalMaxBufferSizeScheduler
+import typingsSlinky.rxjsCompat.anon.FnCallThisCallback
+import typingsSlinky.rxjsCompat.anon.FnCallThisClosingNotifier
+import typingsSlinky.rxjsCompat.anon.FnCallThisClosingSelector
+import typingsSlinky.rxjsCompat.anon.FnCallThisCompareKeySelector
+import typingsSlinky.rxjsCompat.anon.FnCallThisCompareToComparor
+import typingsSlinky.rxjsCompat.anon.FnCallThisComparer
+import typingsSlinky.rxjsCompat.anon.FnCallThisConcurrent
+import typingsSlinky.rxjsCompat.anon.FnCallThisCount
+import typingsSlinky.rxjsCompat.anon.FnCallThisDefaultValue
+import typingsSlinky.rxjsCompat.anon.FnCallThisDelayDurationSelectorSubscriptionDelay
+import typingsSlinky.rxjsCompat.anon.FnCallThisDelayScheduler
+import typingsSlinky.rxjsCompat.anon.FnCallThisDueScheduler
+import typingsSlinky.rxjsCompat.anon.FnCallThisDueTimeScheduler
+import typingsSlinky.rxjsCompat.anon.FnCallThisDueWithObservableScheduler
+import typingsSlinky.rxjsCompat.anon.FnCallThisDurationScheduler
+import typingsSlinky.rxjsCompat.anon.FnCallThisDurationSchedulerConfig
+import typingsSlinky.rxjsCompat.anon.FnCallThisDurationSelectorConfig
+import typingsSlinky.rxjsCompat.anon.FnCallThisFunc
+import typingsSlinky.rxjsCompat.anon.FnCallThisIndexDefaultValue
+import typingsSlinky.rxjsCompat.anon.FnCallThisInnerObservable
+import typingsSlinky.rxjsCompat.anon.FnCallThisInnerObservableConcurrent
+import typingsSlinky.rxjsCompat.anon.FnCallThisKeyCompare
+import typingsSlinky.rxjsCompat.anon.FnCallThisKeySelectorElementSelectorDurationSelectorSubjectSelector
+import typingsSlinky.rxjsCompat.anon.FnCallThisKeySelectorFlushes
+import typingsSlinky.rxjsCompat.anon.FnCallThisNextErrorComplete
+import typingsSlinky.rxjsCompat.anon.FnCallThisNotifier
+import typingsSlinky.rxjsCompat.anon.FnCallThisObservableResultSelector
+import typingsSlinky.rxjsCompat.anon.FnCallThisObservables
+import typingsSlinky.rxjsCompat.anon.FnCallThisOpeningsClosingSelector
+import typingsSlinky.rxjsCompat.anon.FnCallThisPeriodScheduler
+import typingsSlinky.rxjsCompat.anon.FnCallThisPredicate
+import typingsSlinky.rxjsCompat.anon.FnCallThisPredicateDefaultValue
+import typingsSlinky.rxjsCompat.anon.FnCallThisPredicateThisArg
+import typingsSlinky.rxjsCompat.anon.FnCallThisProject
+import typingsSlinky.rxjsCompat.anon.FnCallThisProjectConcurrent
+import typingsSlinky.rxjsCompat.anon.FnCallThisProjectConcurrentScheduler
+import typingsSlinky.rxjsCompat.anon.FnCallThisProjectThisArg
+import typingsSlinky.rxjsCompat.anon.FnCallThisProperties
+import typingsSlinky.rxjsCompat.anon.FnCallThisScheduler
+import typingsSlinky.rxjsCompat.anon.FnCallThisSchedulerDelay
+import typingsSlinky.rxjsCompat.anon.FnCallThisSelector
+import typingsSlinky.rxjsCompat.anon.FnCallThisV1V2V3V4V5V6Scheduler
+import typingsSlinky.rxjsCompat.anon.FnCallThisV2V3V4V5V6
+import typingsSlinky.rxjsCompat.anon.FnCallThisV2V3V4V5V6ConcurrentScheduler
+import typingsSlinky.rxjsCompat.anon.FnCallThisV2V3V4V5V6Project
+import typingsSlinky.rxjsCompat.anon.FnCallThisV2V3V4V5V6Scheduler
+import typingsSlinky.rxjsCompat.anon.FnCallThisValue
+import typingsSlinky.rxjsCompat.anon.FnCallThisWindowBoundaries
+import typingsSlinky.rxjsCompat.anon.FnCallThisWindowSizeStartWindowEvery
+import typingsSlinky.rxjsCompat.anon.FnCallThisWindowTimeSpanWindowCreationIntervalMaxWindowSizeScheduler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -336,36 +336,17 @@ object internalObservableMod extends js.Object {
     def bufferCount[T](bufferSize: Double): js.Any = js.native
     def bufferCount[T](bufferSize: Double, startBufferEvery: Double): js.Any = js.native
     def bufferTime[T](bufferTimeSpan: Double): js.Any = js.native
-    def bufferTime[T](bufferTimeSpan: Double, bufferCreationInterval: js.UndefOr[scala.Nothing], maxBufferSize: Double): js.Any = js.native
+    def bufferTime[T](bufferTimeSpan: Double, bufferCreationInterval: js.UndefOr[Double | Null], maxBufferSize: Double): js.Any = js.native
     def bufferTime[T](
       bufferTimeSpan: Double,
-      bufferCreationInterval: js.UndefOr[scala.Nothing],
+      bufferCreationInterval: js.UndefOr[Double | Null],
       maxBufferSize: Double,
-      scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
-    ): js.Any = js.native
-    def bufferTime[T](
-      bufferTimeSpan: Double,
-      bufferCreationInterval: js.UndefOr[scala.Nothing],
       scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
     ): js.Any = js.native
     def bufferTime[T](bufferTimeSpan: Double, bufferCreationInterval: Double): js.Any = js.native
-    def bufferTime[T](bufferTimeSpan: Double, bufferCreationInterval: Double, maxBufferSize: Double): js.Any = js.native
     def bufferTime[T](
       bufferTimeSpan: Double,
       bufferCreationInterval: Double,
-      maxBufferSize: Double,
-      scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
-    ): js.Any = js.native
-    def bufferTime[T](
-      bufferTimeSpan: Double,
-      bufferCreationInterval: Double,
-      scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
-    ): js.Any = js.native
-    def bufferTime[T](bufferTimeSpan: Double, bufferCreationInterval: Null, maxBufferSize: Double): js.Any = js.native
-    def bufferTime[T](
-      bufferTimeSpan: Double,
-      bufferCreationInterval: Null,
-      maxBufferSize: Double,
       scheduler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SchedulerLike */ js.Any
     ): js.Any = js.native
     def bufferTime[T](

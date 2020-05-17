@@ -1,7 +1,7 @@
 package typingsSlinky.plottable.utilsMod
 
 import typingsSlinky.lodash.mod.MemoizedFunction
-import typingsSlinky.plottable.AnonMaximumExtents
+import typingsSlinky.plottable.anon.MaximumExtents
 import typingsSlinky.plottable.datasetMod.Dataset
 import typingsSlinky.plottable.interfacesMod.IAccessor
 import typingsSlinky.plottable.stackingUtilsMod.GenericStackingResult
@@ -23,7 +23,7 @@ object Stacking extends js.Object {
     stackingOrder: IStackingOrder
   ): StackingResult = js.native
   def stackedExtent(stackingResult: StackingResult, keyAccessor: IAccessor[_], filter: IAccessor[Boolean]): js.Array[Double] = js.native
-  def stackedExtents[D](stackingResult: GenericStackingResult[D]): AnonMaximumExtents[D] = js.native
+  def stackedExtents[D](stackingResult: GenericStackingResult[D]): MaximumExtents[D] = js.native
   @js.native
   object IStackingOrder extends js.Object {
     var bottomup: typingsSlinky.plottable.plottableStrings.bottomup = js.native

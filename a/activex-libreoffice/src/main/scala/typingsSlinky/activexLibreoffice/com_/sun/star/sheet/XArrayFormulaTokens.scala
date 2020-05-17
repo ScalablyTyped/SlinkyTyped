@@ -1,0 +1,57 @@
+package typingsSlinky.activexLibreoffice.com_.sun.star.sheet
+
+import typingsSlinky.activexLibreoffice.LibreOffice.SeqEquiv
+import typingsSlinky.std.SafeArray
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** gives access to an array formula as token sequence. */
+@js.native
+trait XArrayFormulaTokens extends js.Object {
+  /** returns the array formula as sequence of tokens. */
+  var ArrayTokens: SafeArray[FormulaToken] = js.native
+  /** returns the array formula as sequence of tokens. */
+  def getArrayTokens(): SafeArray[FormulaToken] = js.native
+  /** sets the array formula as sequence of tokens. */
+  def setArrayTokens(aTokens: SeqEquiv[FormulaToken]): Unit = js.native
+}
+
+object XArrayFormulaTokens {
+  @scala.inline
+  def apply(
+    ArrayTokens: SafeArray[FormulaToken],
+    getArrayTokens: () => SafeArray[FormulaToken],
+    setArrayTokens: SeqEquiv[FormulaToken] => Unit
+  ): XArrayFormulaTokens = {
+    val __obj = js.Dynamic.literal(ArrayTokens = ArrayTokens.asInstanceOf[js.Any], getArrayTokens = js.Any.fromFunction0(getArrayTokens), setArrayTokens = js.Any.fromFunction1(setArrayTokens))
+    __obj.asInstanceOf[XArrayFormulaTokens]
+  }
+  @scala.inline
+  implicit class XArrayFormulaTokensOps[Self <: XArrayFormulaTokens] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withArrayTokens(value: SafeArray[FormulaToken]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ArrayTokens")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetArrayTokens(value: () => SafeArray[FormulaToken]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getArrayTokens")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withSetArrayTokens(value: SeqEquiv[FormulaToken] => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("setArrayTokens")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
+}
+

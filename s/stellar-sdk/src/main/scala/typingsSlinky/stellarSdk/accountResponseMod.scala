@@ -2,6 +2,7 @@ package typingsSlinky.stellarSdk
 
 import typingsSlinky.std.Record
 import typingsSlinky.stellarBase.mod.AssetType
+import typingsSlinky.stellarSdk.anon.Value
 import typingsSlinky.stellarSdk.horizonApiMod.Horizon.AccountThresholds
 import typingsSlinky.stellarSdk.horizonApiMod.Horizon.BalanceLine
 import typingsSlinky.stellarSdk.horizonApiMod.Horizon.Flags
@@ -39,7 +40,7 @@ object accountResponseMod extends js.Object {
     val subentry_count: Double = js.native
     val thresholds: AccountThresholds = js.native
     def accountId(): String = js.native
-    def data(options: AnonValue): js.Promise[AnonValue] = js.native
+    def data(options: Value): js.Promise[Value] = js.native
     def effects(): js.Promise[CollectionPage[EffectRecord]] = js.native
     def effects(options: CallFunctionTemplateOptions): js.Promise[CollectionPage[EffectRecord]] = js.native
     def incrementSequenceNumber(): Unit = js.native

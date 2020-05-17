@@ -1,7 +1,7 @@
 package typingsSlinky.sdpTransform.mod
 
-import typingsSlinky.sdpTransform.AnonMids
-import typingsSlinky.sdpTransform.AnonSemantic
+import typingsSlinky.sdpTransform.anon.Mids
+import typingsSlinky.sdpTransform.anon.Semantic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SessionAttributes extends SharedAttributes {
   // a=group:BUNDLE audio video
-  var groups: js.UndefOr[js.Array[AnonMids]] = js.native
+  var groups: js.UndefOr[js.Array[Mids]] = js.native
   // a=ice-options:google-ice
   var iceOptions: js.UndefOr[String] = js.native
   var icelite: js.UndefOr[String] = js.native
   // a=msid-semantic: WMS Jvlam5X3SX1OP6pn20zWogvaKJz5Hjf9OnlV
-  var msidSemantic: js.UndefOr[AnonSemantic] = js.native
+  var msidSemantic: js.UndefOr[Semantic] = js.native
 }
 
 object SessionAttributes {
@@ -30,7 +30,7 @@ object SessionAttributes {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGroups(value: js.Array[AnonMids]): Self = {
+    def withGroups(value: js.Array[Mids]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("groups")(value.asInstanceOf[js.Any])
         ret
@@ -66,7 +66,7 @@ object SessionAttributes {
         ret
     }
     @scala.inline
-    def withMsidSemantic(value: AnonSemantic): Self = {
+    def withMsidSemantic(value: Semantic): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("msidSemantic")(value.asInstanceOf[js.Any])
         ret

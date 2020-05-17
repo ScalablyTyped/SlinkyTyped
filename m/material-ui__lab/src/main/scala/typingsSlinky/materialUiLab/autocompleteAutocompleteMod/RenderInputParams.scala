@@ -1,6 +1,6 @@
 package typingsSlinky.materialUiLab.autocompleteAutocompleteMod
 
-import typingsSlinky.materialUiLab.AnonClassName
+import typingsSlinky.materialUiLab.anon.ClassName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait RenderInputParams extends js.Object {
   var InputLabelProps: js.Object = js.native
-  var InputProps: AnonClassName = js.native
+  var InputProps: ClassName = js.native
   var disabled: Boolean = js.native
   var id: String = js.native
   var inputProps: js.Object = js.native
@@ -18,7 +18,7 @@ object RenderInputParams {
   @scala.inline
   def apply(
     InputLabelProps: js.Object,
-    InputProps: AnonClassName,
+    InputProps: ClassName,
     disabled: Boolean,
     id: String,
     inputProps: js.Object
@@ -39,7 +39,7 @@ object RenderInputParams {
         ret
     }
     @scala.inline
-    def withInputProps(value: AnonClassName): Self = {
+    def withInputProps(value: ClassName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("InputProps")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,8 @@
 package typingsSlinky.sipJs
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.sipJs.anon.PartialUserAgentOptions
+import typingsSlinky.sipJs.anon.RequiredUserAgentOptions
 import typingsSlinky.sipJs.coreMod.Logger
 import typingsSlinky.sipJs.coreMod.LoggerFactory
 import typingsSlinky.sipJs.coreMod.URI

@@ -5,13 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("dynamsoft.BarcodeReader")
 @js.native
-/**
-  * Constructs a new KPainter
-  */
-class BarcodeReader_ () extends js.Object {
-  def this(dbrKey: String) = this()
+trait BarcodeReader_ extends js.Object {
   /** 
     * Append a new template string to current runtime settings.
     * @method BarcodeReader#decode
@@ -66,5 +61,92 @@ class BarcodeReader_ () extends js.Object {
   def outputSettingsToString(): js.Any = js.native
   def resetRuntimeSettings(): Unit = js.native
   def updateRuntimeSettings(setting: RunTimeSetting): Unit = js.native
+}
+
+object BarcodeReader_ {
+  @scala.inline
+  def apply(
+    appendTplStringToRuntimeSettings: (String, Double) => Unit,
+    decode: String => js.Promise[_],
+    decodeBase64String: String => js.Promise[_],
+    getAllLocalizationResults: () => js.Any,
+    getAllParameterTemplateNames: () => js.Any,
+    getRuntimeSettings: () => RunTimeSetting,
+    initRuntimeSettingsWithString: () => js.Any,
+    outputSettingsToString: () => js.Any,
+    resetRuntimeSettings: () => Unit,
+    updateRuntimeSettings: RunTimeSetting => Unit
+  ): BarcodeReader_ = {
+    val __obj = js.Dynamic.literal(appendTplStringToRuntimeSettings = js.Any.fromFunction2(appendTplStringToRuntimeSettings), decode = js.Any.fromFunction1(decode), decodeBase64String = js.Any.fromFunction1(decodeBase64String), getAllLocalizationResults = js.Any.fromFunction0(getAllLocalizationResults), getAllParameterTemplateNames = js.Any.fromFunction0(getAllParameterTemplateNames), getRuntimeSettings = js.Any.fromFunction0(getRuntimeSettings), initRuntimeSettingsWithString = js.Any.fromFunction0(initRuntimeSettingsWithString), outputSettingsToString = js.Any.fromFunction0(outputSettingsToString), resetRuntimeSettings = js.Any.fromFunction0(resetRuntimeSettings), updateRuntimeSettings = js.Any.fromFunction1(updateRuntimeSettings))
+    __obj.asInstanceOf[BarcodeReader_]
+  }
+  @scala.inline
+  implicit class BarcodeReader_Ops[Self <: BarcodeReader_] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAppendTplStringToRuntimeSettings(value: (String, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("appendTplStringToRuntimeSettings")(js.Any.fromFunction2(value))
+        ret
+    }
+    @scala.inline
+    def withDecode(value: String => js.Promise[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decode")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withDecodeBase64String(value: String => js.Promise[_]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("decodeBase64String")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withGetAllLocalizationResults(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllLocalizationResults")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetAllParameterTemplateNames(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getAllParameterTemplateNames")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withGetRuntimeSettings(value: () => RunTimeSetting): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getRuntimeSettings")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withInitRuntimeSettingsWithString(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("initRuntimeSettingsWithString")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withOutputSettingsToString(value: () => js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("outputSettingsToString")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withResetRuntimeSettings(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resetRuntimeSettings")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withUpdateRuntimeSettings(value: RunTimeSetting => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("updateRuntimeSettings")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

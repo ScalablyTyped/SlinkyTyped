@@ -1,6 +1,6 @@
 package typingsSlinky.tslint.ruleMod
 
-import typingsSlinky.tslint.AnonOptionsAny
+import typingsSlinky.tslint.anon.OptionsAny
 import typingsSlinky.tslint.tslintBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -32,7 +32,7 @@ trait IRuleMetadata extends js.Object {
     * Examples of what a standard config for the rule might look like.
     * Using a string[] here is deprecated. Write the options as a JSON object instead.
     */
-  var optionExamples: js.UndefOr[js.Array[`true` | AnonOptionsAny | js.Array[_] | String]] = js.native
+  var optionExamples: js.UndefOr[js.Array[`true` | js.Array[_] | OptionsAny | String]] = js.native
   /**
     * Schema of the options the rule accepts.
     * The first boolean for whether the rule is enabled or not is already implied.
@@ -171,7 +171,7 @@ object IRuleMetadata {
         ret
     }
     @scala.inline
-    def withOptionExamples(value: js.Array[`true` | AnonOptionsAny | js.Array[_] | String]): Self = {
+    def withOptionExamples(value: js.Array[`true` | js.Array[_] | OptionsAny | String]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("optionExamples")(value.asInstanceOf[js.Any])
         ret

@@ -2,11 +2,11 @@ package typingsSlinky.next.loadComponentsMod
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
-import typingsSlinky.next.AnonParams
-import typingsSlinky.next.AnonPaths
-import typingsSlinky.next.AnonPreview
-import typingsSlinky.next.AnonProps
-import typingsSlinky.next.AnonPropsP
+import typingsSlinky.next.anon.Params
+import typingsSlinky.next.anon.Paths
+import typingsSlinky.next.anon.Preview
+import typingsSlinky.next.anon.Props
+import typingsSlinky.next.anon.PropsP
 import typingsSlinky.next.getPageFilesMod.BuildManifest
 import typingsSlinky.next.mod.GetServerSideProps
 import typingsSlinky.next.mod.GetStaticPaths
@@ -94,7 +94,7 @@ object LoadComponentsReturnType {
         ret
     }
     @scala.inline
-    def withGetServerSideProps(value: /* context */ AnonPreview => js.Promise[AnonPropsP[StringDictionary[_]]]): Self = {
+    def withGetServerSideProps(value: /* context */ Preview => js.Promise[PropsP[StringDictionary[_]]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getServerSideProps")(js.Any.fromFunction1(value))
         ret
@@ -106,7 +106,7 @@ object LoadComponentsReturnType {
         ret
     }
     @scala.inline
-    def withGetStaticPaths(value: () => js.Promise[AnonPaths]): Self = {
+    def withGetStaticPaths(value: () => js.Promise[Paths]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getStaticPaths")(js.Any.fromFunction0(value))
         ret
@@ -118,7 +118,7 @@ object LoadComponentsReturnType {
         ret
     }
     @scala.inline
-    def withGetStaticProps(value: /* ctx */ AnonParams => js.Promise[AnonProps[StringDictionary[_]]]): Self = {
+    def withGetStaticProps(value: /* ctx */ Params => js.Promise[Props[StringDictionary[_]]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getStaticProps")(js.Any.fromFunction1(value))
         ret

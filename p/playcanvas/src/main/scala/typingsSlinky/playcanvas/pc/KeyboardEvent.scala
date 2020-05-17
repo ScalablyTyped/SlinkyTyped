@@ -24,10 +24,8 @@ import scala.scalajs.js.annotation._
   * };
   * app.keyboard.on("keydown", onKeyDown, this);
   */
-@JSGlobal("pc.KeyboardEvent")
 @js.native
-class KeyboardEvent protected () extends js.Object {
-  def this(keyboard: Keyboard, event: KeyboardEvent) = this()
+trait KeyboardEvent extends js.Object {
   /**
     * The element that fired the keyboard event.
     */
@@ -40,5 +38,39 @@ class KeyboardEvent protected () extends js.Object {
     * The keyCode of the key that has changed. See the pc.KEY_* constants.
     */
   var key: Double = js.native
+}
+
+object KeyboardEvent {
+  @scala.inline
+  def apply(element: Element, event: KeyboardEvent, key: Double): KeyboardEvent = {
+    val __obj = js.Dynamic.literal(element = element.asInstanceOf[js.Any], event = event.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any])
+    __obj.asInstanceOf[KeyboardEvent]
+  }
+  @scala.inline
+  implicit class KeyboardEventOps[Self <: KeyboardEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withElement(value: Element): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("element")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withEvent(value: KeyboardEvent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("event")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withKey(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("key")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

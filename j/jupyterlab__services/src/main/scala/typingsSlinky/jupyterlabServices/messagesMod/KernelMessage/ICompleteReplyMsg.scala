@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ICompleteReplyMsg
   extends IShellMessage[complete_reply]
-     with _Message {
+     with Message {
   @JSName("content")
   var content_ICompleteReplyMsg: ReplyContent[ICompleteReply] = js.native
   @JSName("parent_header")

@@ -1,7 +1,7 @@
 package typingsSlinky.openssiWebsdk.mod
 
-import typingsSlinky.openssiWebsdk.AnonAttributes
-import typingsSlinky.openssiWebsdk.AnonName
+import typingsSlinky.openssiWebsdk.anon.Attributes
+import typingsSlinky.openssiWebsdk.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,13 +11,13 @@ trait Credential extends js.Object {
   var credential_definition_id: CredentialDefinitionID = js.native
   var id: String = js.native
   var issuer_did: DID = js.native
-  var offer: js.UndefOr[AnonAttributes] = js.native
+  var offer: js.UndefOr[Attributes] = js.native
   var properties: Properties = js.native
   var role: String = js.native
   var schema_name: String = js.native
   var schema_version: String = js.native
   var state: CredentialState = js.native
-  var to: AnonName = js.native
+  var to: Name = js.native
 }
 
 object Credential {
@@ -31,7 +31,7 @@ object Credential {
     schema_name: String,
     schema_version: String,
     state: CredentialState,
-    to: AnonName
+    to: Name
   ): Credential = {
     val __obj = js.Dynamic.literal(credential_definition_id = credential_definition_id.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], issuer_did = issuer_did.asInstanceOf[js.Any], properties = properties.asInstanceOf[js.Any], role = role.asInstanceOf[js.Any], schema_name = schema_name.asInstanceOf[js.Any], schema_version = schema_version.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any], to = to.asInstanceOf[js.Any])
     __obj.asInstanceOf[Credential]
@@ -91,13 +91,13 @@ object Credential {
         ret
     }
     @scala.inline
-    def withTo(value: AnonName): Self = {
+    def withTo(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("to")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withOffer(value: AnonAttributes): Self = {
+    def withOffer(value: Attributes): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("offer")(value.asInstanceOf[js.Any])
         ret

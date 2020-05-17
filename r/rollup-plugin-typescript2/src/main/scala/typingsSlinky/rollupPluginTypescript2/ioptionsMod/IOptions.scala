@@ -1,6 +1,6 @@
 package typingsSlinky.rollupPluginTypescript2.ioptionsMod
 
-import typingsSlinky.rollupPluginTypescript2.TypeoftsTypes
+import typingsSlinky.rollupPluginTypescript2.anon.TypeoftsTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -11,9 +11,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Box2D.Dynamics.b2Body")
 @js.native
-class b2Body () extends js.Object {
+trait b2Body extends js.Object {
   /**
   		* Apply a force at a world point. If the force is not applied at the center of mass, it will generate a torque and affect the angular velocity. This wakes up the body.
   		* @param force The world force vector, usually in Newtons (N).
@@ -318,23 +317,5 @@ class b2Body () extends js.Object {
   		* @return The newly created bodies from the split.
   		**/
   def Split(callback: js.Function1[/* fixture */ b2Fixture, Boolean]): b2Body = js.native
-}
-
-/* static members */
-@JSGlobal("Box2D.Dynamics.b2Body")
-@js.native
-object b2Body extends js.Object {
-  /**
-  		* Dynamic Body
-  		**/
-  var b2_dynamicBody: Double = js.native
-  /**
-  		* Kinematic Body
-  		**/
-  var b2_kinematicBody: Double = js.native
-  /**
-  		* Static Body
-  		**/
-  var b2_staticBody: Double = js.native
 }
 

@@ -8,9 +8,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a mobile broadband network and the current network state. */
-@JSGlobal("Windows.Networking.NetworkOperators.MobileBroadbandNetwork")
 @js.native
-abstract class MobileBroadbandNetwork () extends js.Object {
+trait MobileBroadbandNetwork extends js.Object {
   /** The name of the currently connected access point. */
   var accessPointName: String = js.native
   /** Attempts to get the latest network activation error. */
@@ -38,5 +37,106 @@ abstract class MobileBroadbandNetwork () extends js.Object {
   def getVoiceCallSupportAsync(): IPromiseWithIAsyncOperation[Boolean] = js.native
   /** Displays the connect UI for a specific mobile network. */
   def showConnectionUI(): Unit = js.native
+}
+
+object MobileBroadbandNetwork {
+  @scala.inline
+  def apply(
+    accessPointName: String,
+    activationNetworkError: Double,
+    getVoiceCallSupportAsync: () => IPromiseWithIAsyncOperation[Boolean],
+    networkAdapter: NetworkAdapter,
+    networkRegistrationState: NetworkRegistrationState,
+    packetAttachNetworkError: Double,
+    registeredDataClass: DataClasses,
+    registeredProviderId: String,
+    registeredProviderName: String,
+    registrationNetworkError: Double,
+    registrationUiccApps: IVectorView[MobileBroadbandUiccApp],
+    showConnectionUI: () => Unit
+  ): MobileBroadbandNetwork = {
+    val __obj = js.Dynamic.literal(accessPointName = accessPointName.asInstanceOf[js.Any], activationNetworkError = activationNetworkError.asInstanceOf[js.Any], getVoiceCallSupportAsync = js.Any.fromFunction0(getVoiceCallSupportAsync), networkAdapter = networkAdapter.asInstanceOf[js.Any], networkRegistrationState = networkRegistrationState.asInstanceOf[js.Any], packetAttachNetworkError = packetAttachNetworkError.asInstanceOf[js.Any], registeredDataClass = registeredDataClass.asInstanceOf[js.Any], registeredProviderId = registeredProviderId.asInstanceOf[js.Any], registeredProviderName = registeredProviderName.asInstanceOf[js.Any], registrationNetworkError = registrationNetworkError.asInstanceOf[js.Any], registrationUiccApps = registrationUiccApps.asInstanceOf[js.Any], showConnectionUI = js.Any.fromFunction0(showConnectionUI))
+    __obj.asInstanceOf[MobileBroadbandNetwork]
+  }
+  @scala.inline
+  implicit class MobileBroadbandNetworkOps[Self <: MobileBroadbandNetwork] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAccessPointName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("accessPointName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withActivationNetworkError(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("activationNetworkError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGetVoiceCallSupportAsync(value: () => IPromiseWithIAsyncOperation[Boolean]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("getVoiceCallSupportAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withNetworkAdapter(value: NetworkAdapter): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkAdapter")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNetworkRegistrationState(value: NetworkRegistrationState): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("networkRegistrationState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPacketAttachNetworkError(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packetAttachNetworkError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRegisteredDataClass(value: DataClasses): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registeredDataClass")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRegisteredProviderId(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registeredProviderId")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRegisteredProviderName(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registeredProviderName")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRegistrationNetworkError(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registrationNetworkError")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRegistrationUiccApps(value: IVectorView[MobileBroadbandUiccApp]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("registrationUiccApps")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShowConnectionUI(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("showConnectionUI")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

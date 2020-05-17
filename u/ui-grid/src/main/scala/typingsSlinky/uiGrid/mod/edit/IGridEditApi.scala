@@ -1,18 +1,18 @@
 package typingsSlinky.uiGrid.mod.edit
 
-import typingsSlinky.uiGrid.AnonAfterCellEdit
+import typingsSlinky.uiGrid.anon.AfterCellEdit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IGridEditApi[TEntity] extends js.Object {
-  var on: AnonAfterCellEdit[TEntity] = js.native
+  var on: AfterCellEdit[TEntity] = js.native
 }
 
 object IGridEditApi {
   @scala.inline
-  def apply[TEntity](on: AnonAfterCellEdit[TEntity]): IGridEditApi[TEntity] = {
+  def apply[TEntity](on: AfterCellEdit[TEntity]): IGridEditApi[TEntity] = {
     val __obj = js.Dynamic.literal(on = on.asInstanceOf[js.Any])
     __obj.asInstanceOf[IGridEditApi[TEntity]]
   }
@@ -23,7 +23,7 @@ object IGridEditApi {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[TEntity] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[TEntity] with Other]
     @scala.inline
-    def withOn(value: AnonAfterCellEdit[TEntity]): Self[TEntity] = {
+    def withOn(value: AfterCellEdit[TEntity]): Self[TEntity] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("on")(value.asInstanceOf[js.Any])
         ret

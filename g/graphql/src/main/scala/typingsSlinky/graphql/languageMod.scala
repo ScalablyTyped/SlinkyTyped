@@ -1,5 +1,6 @@
 package typingsSlinky.graphql
 
+import typingsSlinky.graphql.anon.VisitorKeyMapASTKindToNod
 import typingsSlinky.graphql.astMod.ASTKindToNode
 import typingsSlinky.graphql.astMod.ASTNode
 import typingsSlinky.graphql.astMod.ArgumentNode

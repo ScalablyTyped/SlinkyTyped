@@ -1,6 +1,6 @@
 package typingsSlinky.baiduApp.swan
 
-import typingsSlinky.baiduApp.AnonEncryptedData
+import typingsSlinky.baiduApp.anon.EncryptedData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,12 +11,12 @@ trait GetShareInfoOptions
   /** shareTicket */
   var shareTicket: String = js.native
   @JSName("success")
-  def success_MGetShareInfoOptions(res: AnonEncryptedData): Unit = js.native
+  def success_MGetShareInfoOptions(res: EncryptedData): Unit = js.native
 }
 
 object GetShareInfoOptions {
   @scala.inline
-  def apply(shareTicket: String, success: AnonEncryptedData => Unit): GetShareInfoOptions = {
+  def apply(shareTicket: String, success: EncryptedData => Unit): GetShareInfoOptions = {
     val __obj = js.Dynamic.literal(shareTicket = shareTicket.asInstanceOf[js.Any], success = js.Any.fromFunction1(success))
     __obj.asInstanceOf[GetShareInfoOptions]
   }
@@ -33,7 +33,7 @@ object GetShareInfoOptions {
         ret
     }
     @scala.inline
-    def withSuccess(value: AnonEncryptedData => Unit): Self = {
+    def withSuccess(value: EncryptedData => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

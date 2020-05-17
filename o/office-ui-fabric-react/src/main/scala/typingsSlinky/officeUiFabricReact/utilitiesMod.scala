@@ -1,8 +1,11 @@
 package typingsSlinky.officeUiFabricReact
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Window
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
@@ -113,19 +116,17 @@ import typingsSlinky.react.mod.Context
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.FunctionComponent
 import typingsSlinky.react.mod.PropsWithoutRef
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Event_
 import typingsSlinky.std.Partial
 import typingsSlinky.std.TypedPropertyDescriptor
-import typingsSlinky.std.Window_
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricMergeStyles.istylesetMod.IProcessedStyleSet
 import typingsSlinky.uifabricMergeStyles.istylesetMod.IStyleSet
-import typingsSlinky.uifabricUtilities.AnonAsyncPlaceholder
-import typingsSlinky.uifabricUtilities.AnonConfigurable
-import typingsSlinky.uifabricUtilities.AnonFocus
-import typingsSlinky.uifabricUtilities.AnonRootRef
-import typingsSlinky.uifabricUtilities.AnonRtl
+import typingsSlinky.uifabricUtilities.anon.AsyncPlaceholder
+import typingsSlinky.uifabricUtilities.anon.Configurable
+import typingsSlinky.uifabricUtilities.anon.Delay
+import typingsSlinky.uifabricUtilities.anon.Focus
+import typingsSlinky.uifabricUtilities.anon.RootRef
+import typingsSlinky.uifabricUtilities.anon.Rtl
 import typingsSlinky.uifabricUtilities.asAsyncMod.IAsAsyncOptions
 import typingsSlinky.uifabricUtilities.baseComponentTypesMod.IBaseProps
 import typingsSlinky.uifabricUtilities.classNamesFunctionMod.IClassNamesFunctionOptions
@@ -235,7 +236,7 @@ object utilitiesMod extends js.Object {
   val CustomizerContext: Context[ICustomizerContext] = js.native
   val DATA_IS_SCROLLABLE_ATTRIBUTE: /* "data-is-scrollable" */ String = js.native
   val DATA_PORTAL_ATTRIBUTE: /* "data-portal-element" */ String = js.native
-  val FocusRects: ReactComponentClass[AnonRootRef] = js.native
+  val FocusRects: ReactComponentClass[RootRef] = js.native
   val IsFocusVisibleClassName: /* "ms-Fabric--isFocusVisible" */ String = js.native
   val SELECTION_CHANGE: /* "change" */ String = js.native
   val anchorProperties: js.Array[String] = js.native
@@ -271,7 +272,7 @@ object utilitiesMod extends js.Object {
   def allowScrollOnElement(element: HTMLElement, events: typingsSlinky.uifabricUtilities.eventGroupMod.EventGroup): Unit = js.native
   def appendFunction(parent: js.Any, functions: js.Any*): js.Function0[Unit] = js.native
   def arraysEqual[T](array1: js.Array[T], array2: js.Array[T]): Boolean = js.native
-  def asAsync[TProps](options: IAsAsyncOptions[TProps]): ForwardRefExoticComponent[PropsWithoutRef[TProps with AnonAsyncPlaceholder]] = js.native
+  def asAsync[TProps](options: IAsAsyncOptions[TProps]): ForwardRefExoticComponent[PropsWithoutRef[TProps with AsyncPlaceholder]] = js.native
   def assertNever(x: scala.Nothing): scala.Nothing = js.native
   def assign(target: js.Any, args: js.Any*): js.Any = js.native
   def calculatePrecision(value: String): Double = js.native
@@ -322,14 +323,14 @@ object utilitiesMod extends js.Object {
   def flatten[T](array: js.Array[T | js.Array[T]]): js.Array[T] = js.native
   def focusAsync(): Unit = js.native
   def focusAsync(element: HTMLElement): Unit = js.native
-  def focusAsync(element: AnonFocus): Unit = js.native
+  def focusAsync(element: Focus): Unit = js.native
   def focusFirstChild(rootElement: HTMLElement): Boolean = js.native
   def format(s: String, values: js.Any*): String = js.native
   def getChildren(parent: HTMLElement): js.Array[HTMLElement] = js.native
   def getChildren(parent: HTMLElement, allowVirtualChildren: Boolean): js.Array[HTMLElement] = js.native
   def getDistanceBetweenPoints(point1: IPoint, point2: IPoint): Double = js.native
-  def getDocument(): js.UndefOr[Document_] = js.native
-  def getDocument(rootElement: HTMLElement): js.UndefOr[Document_] = js.native
+  def getDocument(): js.UndefOr[Document] = js.native
+  def getDocument(rootElement: HTMLElement): js.UndefOr[Document] = js.native
   def getElementIndexPath(fromElement: HTMLElement, toElement: HTMLElement): js.Array[Double] = js.native
   def getFirstFocusable(rootElement: HTMLElement, currentElement: HTMLElement): HTMLElement | Null = js.native
   def getFirstFocusable(rootElement: HTMLElement, currentElement: HTMLElement, includeElementsInFocusZones: Boolean): HTMLElement | Null = js.native
@@ -344,12 +345,8 @@ object utilitiesMod extends js.Object {
   def getFocusableByIndexPath(parent: HTMLElement, path: js.Array[Double]): js.UndefOr[HTMLElement] = js.native
   def getId(): String = js.native
   def getId(prefix: String): String = js.native
-  def getInitials(displayName: js.UndefOr[scala.Nothing], isRtl: Boolean): String = js.native
-  def getInitials(displayName: js.UndefOr[scala.Nothing], isRtl: Boolean, allowPhoneInitials: Boolean): String = js.native
-  def getInitials(displayName: String, isRtl: Boolean): String = js.native
-  def getInitials(displayName: String, isRtl: Boolean, allowPhoneInitials: Boolean): String = js.native
-  def getInitials(displayName: Null, isRtl: Boolean): String = js.native
-  def getInitials(displayName: Null, isRtl: Boolean, allowPhoneInitials: Boolean): String = js.native
+  def getInitials(displayName: js.UndefOr[Null | String], isRtl: Boolean): String = js.native
+  def getInitials(displayName: js.UndefOr[Null | String], isRtl: Boolean, allowPhoneInitials: Boolean): String = js.native
   def getLanguage(): String | Null = js.native
   def getLastFocusable(rootElement: HTMLElement, currentElement: HTMLElement): HTMLElement | Null = js.native
   def getLastFocusable(rootElement: HTMLElement, currentElement: HTMLElement, includeElementsInFocusZones: Boolean): HTMLElement | Null = js.native
@@ -406,17 +403,17 @@ object utilitiesMod extends js.Object {
     tabbable: js.UndefOr[Boolean]
   ): HTMLElement | Null = js.native
   def getRTL(): Boolean = js.native
-  def getRTL(theme: AnonRtl): Boolean = js.native
+  def getRTL(theme: Rtl): Boolean = js.native
   def getRTLSafeKeyCode(key: Double): Double = js.native
-  def getRTLSafeKeyCode(key: Double, theme: AnonRtl): Double = js.native
+  def getRTLSafeKeyCode(key: Double, theme: Rtl): Double = js.native
   def getRect(): js.UndefOr[IRectangle] = js.native
   def getRect(element: HTMLElement): js.UndefOr[IRectangle] = js.native
-  def getRect(element: Window_): js.UndefOr[IRectangle] = js.native
+  def getRect(element: Window): js.UndefOr[IRectangle] = js.native
   def getResourceUrl(url: String): String = js.native
   def getScrollbarWidth(): Double = js.native
   def getVirtualParent(child: HTMLElement): js.UndefOr[HTMLElement] = js.native
-  def getWindow(): js.UndefOr[Window_] = js.native
-  def getWindow(rootElement: Element): js.UndefOr[Window_] = js.native
+  def getWindow(): js.UndefOr[Window] = js.native
+  def getWindow(rootElement: Element): js.UndefOr[Window] = js.native
   def hasHorizontalOverflow(element: HTMLElement): Boolean = js.native
   def hasOverflow(element: HTMLElement): Boolean = js.native
   def hasVerticalOverflow(element: HTMLElement): Boolean = js.native
@@ -425,7 +422,7 @@ object utilitiesMod extends js.Object {
   def hoistStatics[TSource /* <: js.Object */, TDest](source: TSource, dest: TDest): TDest = js.native
   def initializeComponentRef[TProps /* <: IBaseProps[_] */, TState](obj: ReactComponentClass[TProps]): Unit = js.native
   def initializeFocusRects(): Unit = js.native
-  def initializeFocusRects(window: Window_): Unit = js.native
+  def initializeFocusRects(window: Window): Unit = js.native
   def isControlled[P](props: P, valueProp: /* keyof P */ String): Boolean = js.native
   def isDirectionalKeyCode(which: Double): Boolean = js.native
   def isElementFocusSubZone(): Boolean = js.native
@@ -450,7 +447,7 @@ object utilitiesMod extends js.Object {
       js.UndefOr[T]
     ]
   ): js.UndefOr[js.Array[js.UndefOr[T]]] = js.native
-  def memoize[T /* <: js.Function */](target: js.Any, key: String, descriptor: TypedPropertyDescriptor[T]): AnonConfigurable[T] = js.native
+  def memoize[T /* <: js.Function */](target: js.Any, key: String, descriptor: TypedPropertyDescriptor[T]): Configurable[T] = js.native
   def memoizeFunction[T /* <: js.Function1[/* repeated */ js.Any, RET_TYPE] */, RET_TYPE](cb: T): T = js.native
   def memoizeFunction[T /* <: js.Function1[/* repeated */ js.Any, RET_TYPE] */, RET_TYPE](cb: T, maxCacheSize: Double): T = js.native
   def memoizeFunction[T /* <: js.Function1[/* repeated */ js.Any, RET_TYPE] */, RET_TYPE](cb: T, maxCacheSize: Double, ignoreNullOrUndefinedResult: Boolean): T = js.native
@@ -468,20 +465,15 @@ object utilitiesMod extends js.Object {
   @JSName("merge")
   def merge_false[T](target: Partial[T], args: (js.UndefOr[Partial[T] | Null | `false`])*): T = js.native
   def nullRender(): ReactElement | Null = js.native
-  def on(element: Element, eventName: String, callback: js.Function1[/* ev */ Event_, Unit]): js.Function0[Unit] = js.native
+  def on(element: Element, eventName: String, callback: js.Function1[/* ev */ Event, Unit]): js.Function0[Unit] = js.native
   def on(
     element: Element,
     eventName: String,
-    callback: js.Function1[/* ev */ Event_, Unit],
+    callback: js.Function1[/* ev */ Event, Unit],
     options: Boolean
   ): js.Function0[Unit] = js.native
-  def on(element: Window_, eventName: String, callback: js.Function1[/* ev */ Event_, Unit]): js.Function0[Unit] = js.native
-  def on(
-    element: Window_,
-    eventName: String,
-    callback: js.Function1[/* ev */ Event_, Unit],
-    options: Boolean
-  ): js.Function0[Unit] = js.native
+  def on(element: Window, eventName: String, callback: js.Function1[/* ev */ Event, Unit]): js.Function0[Unit] = js.native
+  def on(element: Window, eventName: String, callback: js.Function1[/* ev */ Event, Unit], options: Boolean): js.Function0[Unit] = js.native
   def portalContainsElement(target: HTMLElement): Boolean = js.native
   def portalContainsElement(target: HTMLElement, parent: HTMLElement): Boolean = js.native
   def precisionRound(value: Double, precision: Double): Double = js.native
@@ -615,7 +607,7 @@ object utilitiesMod extends js.Object {
   /* static members */
   @js.native
   object DelayedRender extends js.Object {
-    var defaultProps: typingsSlinky.uifabricUtilities.AnonDelay = js.native
+    var defaultProps: Delay = js.native
   }
   
   /* static members */

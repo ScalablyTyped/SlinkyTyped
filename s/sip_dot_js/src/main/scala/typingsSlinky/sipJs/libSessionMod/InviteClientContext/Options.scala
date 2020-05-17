@@ -1,6 +1,6 @@
 package typingsSlinky.sipJs.libSessionMod.InviteClientContext
 
-import typingsSlinky.sipJs.AnonFromDisplayName
+import typingsSlinky.sipJs.anon.FromDisplayName
 import typingsSlinky.sipJs.libSessionDescriptionHandlerMod.SessionDescriptionHandlerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,7 @@ trait Options extends js.Object {
   /** Deprecated. */
   var onInfo: js.UndefOr[js.Any] = js.native
   /** Deprecated. */
-  var params: js.UndefOr[AnonFromDisplayName] = js.native
+  var params: js.UndefOr[FromDisplayName] = js.native
   /** Deprecated. */
   var renderbody: js.UndefOr[String] = js.native
   /** Deprecated. */
@@ -115,7 +115,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withParams(value: AnonFromDisplayName): Self = {
+    def withParams(value: FromDisplayName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("params")(value.asInstanceOf[js.Any])
         ret

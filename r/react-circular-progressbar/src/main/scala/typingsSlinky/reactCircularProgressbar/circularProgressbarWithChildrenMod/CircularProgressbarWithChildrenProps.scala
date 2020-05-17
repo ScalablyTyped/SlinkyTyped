@@ -2,7 +2,7 @@ package typingsSlinky.reactCircularProgressbar.circularProgressbarWithChildrenMo
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactCircularProgressbar.AnonBackground
+import typingsSlinky.reactCircularProgressbar.anon.Background
 import typingsSlinky.reactCircularProgressbar.typesMod.CircularProgressbarStyles
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ trait CircularProgressbarWithChildrenProps extends js.Object {
   var children: js.UndefOr[TagMod[Any]] = js.native
   var circleRatio: js.UndefOr[Double] = js.native
   var className: js.UndefOr[String] = js.native
-  var classes: js.UndefOr[AnonBackground] = js.native
+  var classes: js.UndefOr[Background] = js.native
   var counterClockwise: js.UndefOr[Boolean] = js.native
   var maxValue: js.UndefOr[Double] = js.native
   var minValue: js.UndefOr[Double] = js.native
@@ -111,7 +111,7 @@ object CircularProgressbarWithChildrenProps {
         ret
     }
     @scala.inline
-    def withClasses(value: AnonBackground): Self = {
+    def withClasses(value: Background): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
         ret

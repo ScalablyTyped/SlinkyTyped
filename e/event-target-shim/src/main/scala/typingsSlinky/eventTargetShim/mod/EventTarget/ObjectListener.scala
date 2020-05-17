@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ObjectListener[TEvent] extends js.Object {
+trait ObjectListener[TEvent] extends Listener[TEvent] {
   def handleEvent(event: TEvent): Unit = js.native
 }
 

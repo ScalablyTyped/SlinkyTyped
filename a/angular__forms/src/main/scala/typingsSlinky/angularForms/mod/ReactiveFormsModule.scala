@@ -1,7 +1,7 @@
 package typingsSlinky.angularForms.mod
 
 import typingsSlinky.angularCore.mod.ModuleWithProviders
-import typingsSlinky.angularForms.AnonWarnOnNgModelWithFormControl
+import typingsSlinky.angularForms.anon.WarnOnNgModelWithFormControl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,6 +22,6 @@ object ReactiveFormsModule extends js.Object {
     * * `warnOnNgModelWithFormControl` Configures when to emit a warning when an `ngModel`
     * binding is used with reactive form directives.
     */
-  def withConfig(opts: AnonWarnOnNgModelWithFormControl): ModuleWithProviders[ReactiveFormsModule] = js.native
+  def withConfig(opts: WarnOnNgModelWithFormControl): ModuleWithProviders[ReactiveFormsModule] = js.native
 }
 

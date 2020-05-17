@@ -1,6 +1,6 @@
 package typingsSlinky.pdfjsDist.mod
 
-import typingsSlinky.pdfjsDist.AnonInfo
+import typingsSlinky.pdfjsDist.anon.Info
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,7 +44,7 @@ trait PDFDocumentProxy extends js.Object {
   /**
     * A promise that is resolved with the info and metadata of the PDF.
     **/
-  def getMetadata(): PDFPromise[AnonInfo] = js.native
+  def getMetadata(): PDFPromise[Info] = js.native
   /**
     *  A promise that is resolved with an array that is a tree outline (if it has one) of the PDF.  @see PDFTreeNode
     **/
@@ -70,7 +70,7 @@ object PDFDocumentProxy {
     getData: () => PDFPromise[js.typedarray.Uint8Array],
     getDestinations: () => PDFPromise[js.Array[_]],
     getJavaScript: () => PDFPromise[js.Array[String]],
-    getMetadata: () => PDFPromise[AnonInfo],
+    getMetadata: () => PDFPromise[Info],
     getOutline: () => PDFPromise[js.Array[PDFTreeNode]],
     getPage: Double => PDFPromise[PDFPageProxy],
     isEncrypted: () => PDFPromise[Boolean],
@@ -128,7 +128,7 @@ object PDFDocumentProxy {
         ret
     }
     @scala.inline
-    def withGetMetadata(value: () => PDFPromise[AnonInfo]): Self = {
+    def withGetMetadata(value: () => PDFPromise[Info]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getMetadata")(js.Any.fromFunction0(value))
         ret

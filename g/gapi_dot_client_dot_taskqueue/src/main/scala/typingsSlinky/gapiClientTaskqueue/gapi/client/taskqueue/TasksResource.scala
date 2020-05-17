@@ -1,10 +1,10 @@
 package typingsSlinky.gapiClientTaskqueue.gapi.client.taskqueue
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientTaskqueue.AnonFields
-import typingsSlinky.gapiClientTaskqueue.AnonGroupByTag
-import typingsSlinky.gapiClientTaskqueue.AnonKey
-import typingsSlinky.gapiClientTaskqueue.AnonNewLeaseSeconds
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientTaskqueue.anon.Fields
+import typingsSlinky.gapiClientTaskqueue.anon.GroupByTag
+import typingsSlinky.gapiClientTaskqueue.anon.Key
+import typingsSlinky.gapiClientTaskqueue.anon.NewLeaseSeconds
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,31 +12,31 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TasksResource extends js.Object {
   /** Delete a task from a TaskQueue. */
-  def delete(request: AnonFields): Request_[Unit] = js.native
+  def delete(request: Fields): Request[Unit] = js.native
   /** Get a particular task from a TaskQueue. */
-  def get(request: AnonFields): Request_[Task] = js.native
+  def get(request: Fields): Request[Task] = js.native
   /** Insert a new task in a TaskQueue */
-  def insert(request: AnonKey): Request_[Task] = js.native
+  def insert(request: Key): Request[Task] = js.native
   /** Lease 1 or more tasks from a TaskQueue. */
-  def lease(request: AnonGroupByTag): Request_[Tasks] = js.native
+  def lease(request: GroupByTag): Request[Tasks] = js.native
   /** List Tasks in a TaskQueue */
-  def list(request: AnonKey): Request_[Tasks2] = js.native
+  def list(request: Key): Request[Tasks2] = js.native
   /** Update tasks that are leased out of a TaskQueue. This method supports patch semantics. */
-  def patch(request: AnonNewLeaseSeconds): Request_[Task] = js.native
+  def patch(request: NewLeaseSeconds): Request[Task] = js.native
   /** Update tasks that are leased out of a TaskQueue. */
-  def update(request: AnonNewLeaseSeconds): Request_[Task] = js.native
+  def update(request: NewLeaseSeconds): Request[Task] = js.native
 }
 
 object TasksResource {
   @scala.inline
   def apply(
-    delete: AnonFields => Request_[Unit],
-    get: AnonFields => Request_[Task],
-    insert: AnonKey => Request_[Task],
-    lease: AnonGroupByTag => Request_[Tasks],
-    list: AnonKey => Request_[Tasks2],
-    patch: AnonNewLeaseSeconds => Request_[Task],
-    update: AnonNewLeaseSeconds => Request_[Task]
+    delete: Fields => Request[Unit],
+    get: Fields => Request[Task],
+    insert: Key => Request[Task],
+    lease: GroupByTag => Request[Tasks],
+    list: Key => Request[Tasks2],
+    patch: NewLeaseSeconds => Request[Task],
+    update: NewLeaseSeconds => Request[Task]
   ): TasksResource = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), get = js.Any.fromFunction1(get), insert = js.Any.fromFunction1(insert), lease = js.Any.fromFunction1(lease), list = js.Any.fromFunction1(list), patch = js.Any.fromFunction1(patch), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[TasksResource]
@@ -48,43 +48,43 @@ object TasksResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDelete(value: AnonFields => Request_[Unit]): Self = {
+    def withDelete(value: Fields => Request[Unit]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withGet(value: AnonFields => Request_[Task]): Self = {
+    def withGet(value: Fields => Request[Task]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withInsert(value: AnonKey => Request_[Task]): Self = {
+    def withInsert(value: Key => Request[Task]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withLease(value: AnonGroupByTag => Request_[Tasks]): Self = {
+    def withLease(value: GroupByTag => Request[Tasks]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("lease")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonKey => Request_[Tasks2]): Self = {
+    def withList(value: Key => Request[Tasks2]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withPatch(value: AnonNewLeaseSeconds => Request_[Task]): Self = {
+    def withPatch(value: NewLeaseSeconds => Request[Task]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("patch")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withUpdate(value: AnonNewLeaseSeconds => Request_[Task]): Self = {
+    def withUpdate(value: NewLeaseSeconds => Request[Task]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("update")(js.Any.fromFunction1(value))
         ret

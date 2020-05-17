@@ -1,7 +1,7 @@
 package typingsSlinky.tetherDrop.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import typingsSlinky.tether.mod.ITetherOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait IDropOptions extends js.Object {
-  var beforeClose: js.UndefOr[js.Function2[/* event */ Event_, /* drop */ Drop, Boolean]] = js.native
+  var beforeClose: js.UndefOr[js.Function2[/* event */ Event, /* drop */ Drop, Boolean]] = js.native
   var blurDelay: js.UndefOr[Double] = js.native
   var classes: js.UndefOr[String] = js.native
   var closeDelay: js.UndefOr[Double] = js.native
@@ -40,7 +40,7 @@ object IDropOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withBeforeClose(value: (/* event */ Event_, /* drop */ Drop) => Boolean): Self = {
+    def withBeforeClose(value: (/* event */ Event, /* drop */ Drop) => Boolean): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("beforeClose")(js.Any.fromFunction2(value))
         ret

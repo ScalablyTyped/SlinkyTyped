@@ -2,8 +2,8 @@ package typingsSlinky.through2
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.node.AnonEnd
 import typingsSlinky.node.NodeJS.WritableStream
+import typingsSlinky.node.anon.End
 import typingsSlinky.node.streamMod.DuplexOptions
 import typingsSlinky.node.streamMod.Transform
 import scala.scalajs.js
@@ -23,7 +23,7 @@ object mod extends js.Object {
     /* InferMemberOverrides */
     override def pipe[T /* <: WritableStream */](destination: T): T = js.native
     /* InferMemberOverrides */
-    override def pipe[T /* <: WritableStream */](destination: T, options: AnonEnd): T = js.native
+    override def pipe[T /* <: WritableStream */](destination: T, options: End): T = js.native
   }
   
   def apply(): Transform = js.native

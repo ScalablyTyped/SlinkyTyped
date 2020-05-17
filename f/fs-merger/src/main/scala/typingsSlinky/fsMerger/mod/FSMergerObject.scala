@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait FSMergerObject extends js.Object {
+trait FSMergerObject extends Node {
   var getDestinationPath: js.UndefOr[js.Function] = js.native
   var prefix: js.UndefOr[String] = js.native
   var root: String = js.native

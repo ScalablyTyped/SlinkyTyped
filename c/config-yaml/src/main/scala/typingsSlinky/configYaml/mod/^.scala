@@ -1,6 +1,6 @@
 package typingsSlinky.configYaml.mod
 
-import typingsSlinky.configYaml.PartialOptions
+import typingsSlinky.configYaml.anon.PartialOptions
 import typingsSlinky.node.fsMod.PathLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`

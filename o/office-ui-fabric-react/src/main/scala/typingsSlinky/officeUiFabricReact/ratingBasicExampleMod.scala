@@ -1,5 +1,6 @@
 package typingsSlinky.officeUiFabricReact
 
+import typingsSlinky.officeUiFabricReact.anon.CustomIconStarRating
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation._
 object ratingBasicExampleMod extends js.Object {
   @js.native
   class RatingBasicExample protected ()
-    extends Component[js.Object, AnonCustomIconStarRating, js.Any] {
+    extends Component[js.Object, CustomIconStarRating, js.Any] {
     def this(props: js.Object) = this()
     var _customTheme: js.Any = js.native
     var _getRatingComponentAriaLabel: js.Any = js.native

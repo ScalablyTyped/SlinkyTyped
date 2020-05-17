@@ -4,7 +4,7 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.d3Shape.mod.Series
 import typingsSlinky.reactNativeSvg.mod.LinearGradientProps
 import typingsSlinky.reactNativeSvg.mod.RadialGradientProps
-import typingsSlinky.reactNativeSvgCharts.AnonColor
+import typingsSlinky.reactNativeSvgCharts.anon.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait StackedAreaChartProps[T] extends ChartProps[T] {
   var renderDecorator: js.UndefOr[js.Function0[js.Object]] = js.native
   var renderGradient: js.UndefOr[
     js.Function1[
-      /* props */ AnonColor[T], 
+      /* props */ Color[T], 
       ReactComponentClass[LinearGradientProps | RadialGradientProps]
     ]
   ] = js.native
@@ -99,7 +99,7 @@ object StackedAreaChartProps {
         ret
     }
     @scala.inline
-    def withRenderGradient(value: /* props */ AnonColor[T] => ReactComponentClass[LinearGradientProps | RadialGradientProps]): Self[T] = {
+    def withRenderGradient(value: /* props */ Color[T] => ReactComponentClass[LinearGradientProps | RadialGradientProps]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("renderGradient")(js.Any.fromFunction1(value))
         ret

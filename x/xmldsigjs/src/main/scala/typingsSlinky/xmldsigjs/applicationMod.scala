@@ -1,6 +1,6 @@
 package typingsSlinky.xmldsigjs
 
-import typingsSlinky.std.Crypto_
+import typingsSlinky.std.Crypto
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ object applicationMod extends js.Object {
   class Application () extends js.Object
   
   @js.native
-  trait CryptoEx extends Crypto_ {
+  trait CryptoEx extends Crypto {
     var name: String = js.native
   }
   
@@ -30,7 +30,7 @@ object applicationMod extends js.Object {
       * @param  {Crypto} crypto
       * @returns void
       */
-    def setEngine(name: String, crypto: Crypto_): Unit = js.native
+    def setEngine(name: String, crypto: org.scalajs.dom.crypto.Crypto): Unit = js.native
   }
   
 }

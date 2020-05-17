@@ -13,14 +13,22 @@ trait ActiveXObject extends js.Object {
     obj: StdFont,
     event: FontChanged,
     argNames: js.Array[PropertyName],
-    handler: js.ThisFunction1[/* this */ StdFont, /* parameter */ AnonPropertyName, Unit]
+    handler: js.ThisFunction1[
+      /* this */ StdFont, 
+      /* parameter */ typingsSlinky.activexStdole.anon.PropertyName, 
+      Unit
+    ]
   ): Unit = js.native
 }
 
 object ActiveXObject {
   @scala.inline
   def apply(
-    on: (StdFont, FontChanged, js.Array[PropertyName], js.ThisFunction1[/* this */ StdFont, /* parameter */ AnonPropertyName, Unit]) => Unit
+    on: (StdFont, FontChanged, js.Array[PropertyName], js.ThisFunction1[
+      /* this */ StdFont, 
+      /* parameter */ typingsSlinky.activexStdole.anon.PropertyName, 
+      Unit
+    ]) => Unit
   ): ActiveXObject = {
     val __obj = js.Dynamic.literal(on = js.Any.fromFunction4(on))
     __obj.asInstanceOf[ActiveXObject]
@@ -33,7 +41,11 @@ object ActiveXObject {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
     def withOn(
-      value: (StdFont, FontChanged, js.Array[PropertyName], js.ThisFunction1[/* this */ StdFont, /* parameter */ AnonPropertyName, Unit]) => Unit
+      value: (StdFont, FontChanged, js.Array[PropertyName], js.ThisFunction1[
+          /* this */ StdFont, 
+          /* parameter */ typingsSlinky.activexStdole.anon.PropertyName, 
+          Unit
+        ]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("on")(js.Any.fromFunction4(value))

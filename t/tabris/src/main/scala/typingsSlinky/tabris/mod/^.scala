@@ -5,6 +5,7 @@ import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable3
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.tabris.Crypto
 import typingsSlinky.tabris.RequestInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object ^ extends js.Object {
   @JSName("Crypto")
-  var Crypto_ : Instantiable0[typingsSlinky.tabris.Crypto_] = js.native
+  var Crypto_ : Instantiable0[Crypto] = js.native
   var Headers: Instantiable1[
     js.UndefOr[
       typingsSlinky.tabris.Headers | (js.Array[js.Tuple2[String, String]]) | StringDictionary[String]
@@ -33,7 +34,7 @@ object ^ extends js.Object {
     typingsSlinky.tabris.Request
   ] = js.native
   var Storage: Instantiable0[typingsSlinky.tabris.Storage] = js.native
-  var crypto: typingsSlinky.tabris.Crypto_ = js.native
+  var crypto: Crypto = js.native
   var fetch: js.Function2[
     /* url */ String | typingsSlinky.tabris.Request, 
     /* init */ js.UndefOr[RequestInit], 

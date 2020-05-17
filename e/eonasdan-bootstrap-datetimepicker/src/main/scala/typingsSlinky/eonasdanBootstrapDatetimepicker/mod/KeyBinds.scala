@@ -1,6 +1,6 @@
 package typingsSlinky.eonasdanBootstrapDatetimepicker.mod
 
-import typingsSlinky.eonasdanBootstrapDatetimepicker.mod._Global_.JQuery
+import typingsSlinky.eonasdanBootstrapDatetimepicker.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

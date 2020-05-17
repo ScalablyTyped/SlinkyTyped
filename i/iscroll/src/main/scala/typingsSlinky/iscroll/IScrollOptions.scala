@@ -1,5 +1,6 @@
 package typingsSlinky.iscroll
 
+import typingsSlinky.iscroll.anon.Fn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +10,7 @@ trait IScrollOptions extends js.Object {
   var HWCompositing: js.UndefOr[Boolean] = js.native
   var bounce: js.UndefOr[Boolean] = js.native
   ///String or function
-  var bounceEasing: js.UndefOr[String | AnonFn] = js.native
+  var bounceEasing: js.UndefOr[String | Fn] = js.native
   var bounceLock: js.UndefOr[Boolean] = js.native
   var bounceTime: js.UndefOr[Double] = js.native
   var checkDOMChanges: js.UndefOr[Boolean] = js.native
@@ -105,7 +106,7 @@ object IScrollOptions {
         ret
     }
     @scala.inline
-    def withBounceEasing(value: String | AnonFn): Self = {
+    def withBounceEasing(value: String | Fn): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("bounceEasing")(value.asInstanceOf[js.Any])
         ret

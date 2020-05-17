@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabServices.contentsMod.Contents
 
-import typingsSlinky.jupyterlabServices.PartialIModel
+import typingsSlinky.jupyterlabServices.anon.PartialIModel
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.`new`
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.delete
 import typingsSlinky.jupyterlabServices.jupyterlabServicesStrings.rename

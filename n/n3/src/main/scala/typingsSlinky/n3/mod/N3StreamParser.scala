@@ -1,6 +1,6 @@
 package typingsSlinky.n3.mod
 
-import typingsSlinky.n3.AnonEnd
+import typingsSlinky.n3.anon.End
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.NodeJS.WritableStream
@@ -23,9 +23,9 @@ trait N3StreamParser[Q /* <: BaseQuad */]
   def isPaused(): Boolean = js.native
   def pause(): this.type = js.native
   def pipe(destination: WritableStream): WritableStream = js.native
-  def pipe(destination: WritableStream, options: AnonEnd): WritableStream = js.native
+  def pipe(destination: WritableStream, options: End): WritableStream = js.native
   def pipe(destination: Stream[Q]): Stream[Q] = js.native
-  def pipe(destination: Stream[Q], options: AnonEnd): Stream[Q] = js.native
+  def pipe(destination: Stream[Q], options: End): Stream[Q] = js.native
   def resume(): this.type = js.native
   def setEncoding(): Unit = js.native
   // read(size?: number): string | Buffer; // Overwritten by RDF.Stream

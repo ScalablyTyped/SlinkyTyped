@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait IEntity extends _IMinecraftObject {
+trait IEntity extends IMinecraftObject {
   /**
     * The identifier of the entity, e.g., "minecraft:sheep", or "minecraft:pumpkin_seeds"
     */

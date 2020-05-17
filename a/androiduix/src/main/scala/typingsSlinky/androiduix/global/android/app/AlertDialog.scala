@@ -1,0 +1,34 @@
+package typingsSlinky.androiduix.global.android.app
+
+import typingsSlinky.androiduix.android.content.Context
+import typingsSlinky.androiduix.android.content.DialogInterface.OnCancelListener
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("android.app.AlertDialog")
+@js.native
+class AlertDialog protected ()
+  extends typingsSlinky.androiduix.android.app.AlertDialog {
+  def this(context: Context) = this()
+  def this(context: Context, cancelable: Boolean) = this()
+  def this(context: Context, cancelable: Boolean, cancelListener: OnCancelListener) = this()
+}
+
+/* static members */
+@JSGlobal("android.app.AlertDialog")
+@js.native
+object AlertDialog extends js.Object {
+  @js.native
+  class Builder protected ()
+    extends typingsSlinky.androiduix.android.app.AlertDialog.Builder {
+    def this(context: Context) = this()
+  }
+  
+  var THEME_DEVICE_DEFAULT_DARK: Double = js.native
+  var THEME_DEVICE_DEFAULT_LIGHT: Double = js.native
+  var THEME_HOLO_DARK: Double = js.native
+  var THEME_HOLO_LIGHT: Double = js.native
+  var THEME_TRADITIONAL: Double = js.native
+}
+

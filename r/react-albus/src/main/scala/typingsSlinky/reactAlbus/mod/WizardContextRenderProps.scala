@@ -1,26 +1,21 @@
 package typingsSlinky.reactAlbus.mod
 
-import slinky.core.TagMod
+import typingsSlinky.reactAlbus.anon.Children
+import typingsSlinky.reactAlbus.anon.Render
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.reactAlbus.AnonRender
-  - typingsSlinky.reactAlbus.AnonChildren
+  - typingsSlinky.reactAlbus.anon.Render
+  - typingsSlinky.reactAlbus.anon.Children
 */
 trait WizardContextRenderProps extends js.Object
 
 object WizardContextRenderProps {
   @scala.inline
-  def AnonRender(): WizardContextRenderProps = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[WizardContextRenderProps]
-  }
+  implicit def apply(value: Children): WizardContextRenderProps = value.asInstanceOf[WizardContextRenderProps]
   @scala.inline
-  def AnonChildren(children: WizardContext => TagMod[Any]): WizardContextRenderProps = {
-    val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children))
-    __obj.asInstanceOf[WizardContextRenderProps]
-  }
+  implicit def apply(value: Render): WizardContextRenderProps = value.asInstanceOf[WizardContextRenderProps]
 }
 

@@ -1,12 +1,12 @@
 package typingsSlinky.officeUiFabricReact.dropdownTypesMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import typingsSlinky.officeUiFabricReact.keytipTypesMod.IKeytipProps
 import typingsSlinky.officeUiFabricReact.selectableDroppableTextTypesMod.ISelectableDroppableTextProps
-import typingsSlinky.std.Event_
 import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -54,7 +54,7 @@ trait IDropdownProps extends ISelectableDroppableTextProps[IDropdown, HTMLDivEle
   @JSName("onChange")
   var onChange_IDropdownProps: js.UndefOr[
     js.Function3[
-      SyntheticEvent[EventTarget with HTMLDivElement, Event_], 
+      SyntheticEvent[EventTarget with HTMLDivElement, Event], 
       /* option */ js.UndefOr[IDropdownOption], 
       /* index */ js.UndefOr[Double], 
       Unit
@@ -211,7 +211,7 @@ object IDropdownProps {
     }
     @scala.inline
     def withOnChange(
-      value: (SyntheticEvent[EventTarget with HTMLDivElement, Event_], /* option */ js.UndefOr[IDropdownOption], /* index */ js.UndefOr[Double]) => Unit
+      value: (SyntheticEvent[EventTarget with HTMLDivElement, Event], /* option */ js.UndefOr[IDropdownOption], /* index */ js.UndefOr[Double]) => Unit
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction3(value))

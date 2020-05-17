@@ -1,12 +1,11 @@
 package typingsSlinky.chromeApps.chrome.certificateProvider
 
-import typingsSlinky.chromeApps.AnonINVALIDPIN
-import typingsSlinky.chromeApps.AnonPIN
+import typingsSlinky.chromeApps.anon.INVALIDPIN
+import typingsSlinky.chromeApps.anon.PIN
 import typingsSlinky.chromeApps.chrome.ToStringLiteral
 import typingsSlinky.chromeApps.chromeAppsStrings.INVALID_PIN
 import typingsSlinky.chromeApps.chromeAppsStrings.INVALID_PUK
 import typingsSlinky.chromeApps.chromeAppsStrings.MAX_ATTEMPTS_EXCEEDED
-import typingsSlinky.chromeApps.chromeAppsStrings.PIN
 import typingsSlinky.chromeApps.chromeAppsStrings.PUK
 import typingsSlinky.chromeApps.chromeAppsStrings.UNKNOWN_ERROR
 import typingsSlinky.std.Exclude
@@ -31,10 +30,10 @@ trait RequestPinDetails extends js.Object {
     */
   var errorType: js.UndefOr[
     ToStringLiteral[
-      AnonINVALIDPIN, 
-      /* keyof chrome-apps.AnonINVALIDPIN */ INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR, 
+      INVALIDPIN, 
+      /* keyof chrome-apps.anon.INVALIDPIN */ INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR, 
       Exclude[
-        /* keyof chrome-apps.AnonINVALIDPIN */ INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR, 
+        /* keyof chrome-apps.anon.INVALIDPIN */ INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR, 
         INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR
       ]
     ]
@@ -45,9 +44,12 @@ trait RequestPinDetails extends js.Object {
     */
   var requestType: js.UndefOr[
     ToStringLiteral[
-      AnonPIN, 
-      /* keyof chrome-apps.AnonPIN */ PIN | PUK, 
-      Exclude[/* keyof chrome-apps.AnonPIN */ PIN | PUK, PIN | PUK]
+      PIN, 
+      /* keyof chrome-apps.anon.PIN */ typingsSlinky.chromeApps.chromeAppsStrings.PIN | PUK, 
+      Exclude[
+        /* keyof chrome-apps.anon.PIN */ typingsSlinky.chromeApps.chromeAppsStrings.PIN | PUK, 
+        typingsSlinky.chromeApps.chromeAppsStrings.PIN | PUK
+      ]
     ]
   ] = js.native
   /**
@@ -89,10 +91,10 @@ object RequestPinDetails {
     @scala.inline
     def withErrorType(
       value: ToStringLiteral[
-          AnonINVALIDPIN, 
-          /* keyof chrome-apps.AnonINVALIDPIN */ INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR, 
+          INVALIDPIN, 
+          /* keyof chrome-apps.anon.INVALIDPIN */ INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR, 
           Exclude[
-            /* keyof chrome-apps.AnonINVALIDPIN */ INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR, 
+            /* keyof chrome-apps.anon.INVALIDPIN */ INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR, 
             INVALID_PIN | INVALID_PUK | MAX_ATTEMPTS_EXCEEDED | UNKNOWN_ERROR
           ]
         ]
@@ -110,9 +112,12 @@ object RequestPinDetails {
     @scala.inline
     def withRequestType(
       value: ToStringLiteral[
-          AnonPIN, 
-          /* keyof chrome-apps.AnonPIN */ PIN | PUK, 
-          Exclude[/* keyof chrome-apps.AnonPIN */ PIN | PUK, PIN | PUK]
+          PIN, 
+          /* keyof chrome-apps.anon.PIN */ typingsSlinky.chromeApps.chromeAppsStrings.PIN | PUK, 
+          Exclude[
+            /* keyof chrome-apps.anon.PIN */ typingsSlinky.chromeApps.chromeAppsStrings.PIN | PUK, 
+            typingsSlinky.chromeApps.chromeAppsStrings.PIN | PUK
+          ]
         ]
     ): Self = {
         val ret = this.duplicate

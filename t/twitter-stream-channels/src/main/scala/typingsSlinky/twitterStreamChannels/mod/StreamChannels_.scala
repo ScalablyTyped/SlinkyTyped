@@ -1,7 +1,7 @@
 package typingsSlinky.twitterStreamChannels.mod
 
 import typingsSlinky.node.eventsMod.EventEmitter
-import typingsSlinky.twitterStreamChannels.AnonRemoveAllListeners
+import typingsSlinky.twitterStreamChannels.anon.RemoveAllListeners
 import typingsSlinky.twitterStreamChannels.mod.StreamChannels.Channels
 import typingsSlinky.twitterStreamChannels.mod.StreamChannels.StreamChannelsOptions
 import scala.scalajs.js
@@ -54,6 +54,6 @@ class StreamChannels_ protected () extends EventEmitter {
     * @see https://github.com/topheman/twitter-stream-channels/blob/master/lib/StreamChannels.js#L120
     */
   def stop(): StreamChannels = js.native
-  def stop(options: AnonRemoveAllListeners): StreamChannels = js.native
+  def stop(options: RemoveAllListeners): StreamChannels = js.native
 }
 

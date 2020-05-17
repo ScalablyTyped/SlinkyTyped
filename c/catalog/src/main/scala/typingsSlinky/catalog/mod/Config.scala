@@ -1,7 +1,7 @@
 package typingsSlinky.catalog.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.catalog.PartialTheme
+import typingsSlinky.catalog.anon.PartialTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -4,6 +4,8 @@ import typingsSlinky.akamaiEdgeworkers.akamaiEdgeworkersBooleans.`true`
 import typingsSlinky.akamaiEdgeworkers.akamaiEdgeworkersStrings.Lax
 import typingsSlinky.akamaiEdgeworkers.akamaiEdgeworkersStrings.None
 import typingsSlinky.akamaiEdgeworkers.akamaiEdgeworkersStrings.Strict
+import typingsSlinky.akamaiEdgeworkers.anon.Domain
+import typingsSlinky.akamaiEdgeworkers.anon.ToUTCString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -83,9 +85,9 @@ object mod extends js.Object {
     * header representation.
     */
   class SetCookie () extends js.Object {
-    def this(opts: AnonDomain) = this()
+    def this(opts: Domain) = this()
     var domain: String = js.native
-    var expires: AnonToUTCString = js.native
+    var expires: ToUTCString = js.native
     var httpOnly: Boolean = js.native
     var maxAge: Double = js.native
     var name: String = js.native

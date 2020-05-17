@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.NodeList
-import typingsSlinky.ionicCore.AnonClearExistingCallbacks
+import typingsSlinky.ionicCore.anon.ClearExistingCallbacks
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,10 +41,7 @@ trait Animation
   def getEasing(): String = js.native
   def isRoot(): Boolean = js.native
   def onFinish(callback: js.Function1[/* animation */ js.UndefOr[this.type], Unit]): Animation = js.native
-  def onFinish(
-    callback: js.Function1[/* animation */ js.UndefOr[this.type], Unit],
-    opts: AnonClearExistingCallbacks
-  ): Animation = js.native
+  def onFinish(callback: js.Function1[/* animation */ js.UndefOr[this.type], Unit], opts: ClearExistingCallbacks): Animation = js.native
   def play(): Unit = js.native
   def play(opts: PlayOptions): Unit = js.native
   def playAsync(): js.Promise[Animation] = js.native

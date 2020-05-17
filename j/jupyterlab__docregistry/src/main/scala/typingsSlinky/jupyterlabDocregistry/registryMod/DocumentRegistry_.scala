@@ -1,9 +1,9 @@
 package typingsSlinky.jupyterlabDocregistry.registryMod
 
 import typingsSlinky.jupyterlabApputils.clientsessionMod.IClientSession.IKernelPreference
-import typingsSlinky.jupyterlabDocregistry.PartialIFileType
-import typingsSlinky.jupyterlabDocregistry.PartialIModel
-import typingsSlinky.jupyterlabDocregistry.PartialIModelChunk
+import typingsSlinky.jupyterlabDocregistry.anon.PartialIFileType
+import typingsSlinky.jupyterlabDocregistry.anon.PartialIModel
+import typingsSlinky.jupyterlabDocregistry.anon.PartialIModelChunk
 import typingsSlinky.jupyterlabDocregistry.registryMod.DocumentRegistry.IChangedArgs
 import typingsSlinky.jupyterlabDocregistry.registryMod.DocumentRegistry.IFileType
 import typingsSlinky.jupyterlabDocregistry.registryMod.DocumentRegistry.IOptions
@@ -200,7 +200,6 @@ class DocumentRegistry_ () extends IDisposable {
     * - all other global factories
     */
   def preferredWidgetFactories(path: String): js.Array[WidgetFactory] = js.native
-  def setDefaultWidgetFactory(fileType: String): Unit = js.native
   /**
     * Set overrides for the default widget factory for a file type.
     *
@@ -221,6 +220,7 @@ class DocumentRegistry_ () extends IDisposable {
     * if `factory` cannot open files of type `fileType`, this will throw
     * an error.
     */
+  def setDefaultWidgetFactory(fileType: String): Unit = js.native
   def setDefaultWidgetFactory(fileType: String, factory: String): Unit = js.native
   /**
     * Create an iterator over the registered extensions for a given widget.

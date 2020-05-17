@@ -1,7 +1,7 @@
 package typingsSlinky.socketIoRedis.mod
 
 import typingsSlinky.socketIo.mod.Adapter
-import typingsSlinky.socketIoRedis.AnonExcept
+import typingsSlinky.socketIoRedis.anon.Except
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,8 +38,8 @@ trait RedisAdapter extends Adapter {
   		 *    - flags: Any flags that we want to send along ('json', 'volatile', 'broadcast')
   		 * @param remote The optional flag, whether the packet came from another node
   		 */
-  def broadcast(packet: js.Any, opts: AnonExcept): Unit = js.native
-  def broadcast(packet: js.Any, opts: AnonExcept, remote: Boolean): Unit = js.native
+  def broadcast(packet: js.Any, opts: Except): Unit = js.native
+  def broadcast(packet: js.Any, opts: Except, remote: Boolean): Unit = js.native
   /**
   		 * clientRooms returns the list of rooms the client with the given ID has joined
   		 * (even on another node).

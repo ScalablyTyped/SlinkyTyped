@@ -1,19 +1,19 @@
 package typingsSlinky.expo.notificationsTypesMod
 
 import org.scalajs.dom.experimental.NotificationOptions
-import typingsSlinky.expo.AnonChannelId
-import typingsSlinky.expo.AnonDisplayInForeground
+import typingsSlinky.expo.anon.ChannelId
+import typingsSlinky.expo.anon.DisplayInForeground
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait LocalNotification extends js.Object {
-  var android: js.UndefOr[AnonChannelId] = js.native
+  var android: js.UndefOr[ChannelId] = js.native
   var body: js.UndefOr[String] = js.native
   var categoryId: js.UndefOr[String] = js.native
   var data: js.UndefOr[js.Any] = js.native
-  var ios: js.UndefOr[AnonDisplayInForeground] = js.native
+  var ios: js.UndefOr[DisplayInForeground] = js.native
   var title: String = js.native
   var web: js.UndefOr[NotificationOptions] = js.native
 }
@@ -37,7 +37,7 @@ object LocalNotification {
         ret
     }
     @scala.inline
-    def withAndroid(value: AnonChannelId): Self = {
+    def withAndroid(value: ChannelId): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("android")(value.asInstanceOf[js.Any])
         ret
@@ -85,7 +85,7 @@ object LocalNotification {
         ret
     }
     @scala.inline
-    def withIos(value: AnonDisplayInForeground): Self = {
+    def withIos(value: DisplayInForeground): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ios")(value.asInstanceOf[js.Any])
         ret

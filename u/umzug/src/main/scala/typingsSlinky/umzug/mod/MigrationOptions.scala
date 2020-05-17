@@ -1,6 +1,6 @@
 package typingsSlinky.umzug.mod
 
-import typingsSlinky.umzug.AnonDown
+import typingsSlinky.umzug.anon.Down
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait MigrationOptions extends js.Object {
     * See https://github.com/sequelize/umzug/tree/master/test/fixtures
     * for examples.
     */
-  var customResolver: js.UndefOr[js.Function1[/* path */ String, AnonDown]] = js.native
+  var customResolver: js.UndefOr[js.Function1[/* path */ String, Down]] = js.native
   /*
     * The params that gets passed to the migrations.
     * Might be an array or a synchronous function which returns an array.
@@ -45,7 +45,7 @@ object MigrationOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCustomResolver(value: /* path */ String => AnonDown): Self = {
+    def withCustomResolver(value: /* path */ String => Down): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customResolver")(js.Any.fromFunction1(value))
         ret

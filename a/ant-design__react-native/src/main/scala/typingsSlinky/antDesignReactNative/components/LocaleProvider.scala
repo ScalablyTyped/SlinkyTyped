@@ -2,7 +2,7 @@ package typingsSlinky.antDesignReactNative.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignReactNative.PartialLocale
+import typingsSlinky.antDesignReactNative.anon.PartialLocale
 import typingsSlinky.antDesignReactNative.localeProviderMod.LocaleProviderProps
 import typingsSlinky.antDesignReactNative.localeProviderMod.default
 import scala.scalajs.js

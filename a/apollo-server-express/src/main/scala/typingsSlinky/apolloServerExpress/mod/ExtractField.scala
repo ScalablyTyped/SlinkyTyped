@@ -1,6 +1,6 @@
 package typingsSlinky.apolloServerExpress.mod
 
-import typingsSlinky.graphqlTools.AnonFrom
+import typingsSlinky.graphqlTools.anon.From
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class ExtractField protected ()
   extends typingsSlinky.graphqlTools.mod.ExtractField {
-  def this(hasFromTo: AnonFrom) = this()
+  def this(hasFromTo: From) = this()
 }
 

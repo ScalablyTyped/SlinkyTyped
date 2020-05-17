@@ -1,12 +1,12 @@
 package typingsSlinky.primereact.components
 
+import org.scalajs.dom.raw.Event
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.dropdownMod.DropdownProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -59,11 +59,11 @@ object Dropdown {
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
-    def onChange(value: /* e */ AnonValue => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ Value => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
-    def onContextMenu(value: /* event */ Event_ => Unit): this.type = set("onContextMenu", js.Any.fromFunction1(value))
+    def onContextMenu(value: /* event */ Event => Unit): this.type = set("onContextMenu", js.Any.fromFunction1(value))
     @scala.inline
-    def onMouseDown(value: /* event */ Event_ => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
+    def onMouseDown(value: /* event */ Event => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
     @scala.inline
     def optionLabel(value: String): this.type = set("optionLabel", value.asInstanceOf[js.Any])
     @scala.inline

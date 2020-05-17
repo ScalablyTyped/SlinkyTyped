@@ -9,9 +9,8 @@ import scala.scalajs.js.annotation._
 /**
 		 * An audio recorder object used for recording audio from the device microphone.
 		 */
-@JSGlobal("Titanium.Media.AudioRecorder")
 @js.native
-class AudioRecorder () extends Proxy {
+trait AudioRecorder extends Proxy {
   /**
   			 * Audio compression to be used for the recording.
   			 */

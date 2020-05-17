@@ -1,6 +1,6 @@
 package typingsSlinky.cytoscape.mod
 
-import typingsSlinky.cytoscape.AnonX
+import typingsSlinky.cytoscape.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +12,12 @@ trait NodeSingularLayout extends js.Object {
     * Meant for use in layout positioning to do overlap detection.
     * @param options The layout options object.
     */
-  def layoutDimensions(options: LayoutDimensionOptions): AnonX = js.native
+  def layoutDimensions(options: LayoutDimensionOptions): X = js.native
 }
 
 object NodeSingularLayout {
   @scala.inline
-  def apply(layoutDimensions: LayoutDimensionOptions => AnonX): NodeSingularLayout = {
+  def apply(layoutDimensions: LayoutDimensionOptions => X): NodeSingularLayout = {
     val __obj = js.Dynamic.literal(layoutDimensions = js.Any.fromFunction1(layoutDimensions))
     __obj.asInstanceOf[NodeSingularLayout]
   }
@@ -28,7 +28,7 @@ object NodeSingularLayout {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withLayoutDimensions(value: LayoutDimensionOptions => AnonX): Self = {
+    def withLayoutDimensions(value: LayoutDimensionOptions => X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("layoutDimensions")(js.Any.fromFunction1(value))
         ret

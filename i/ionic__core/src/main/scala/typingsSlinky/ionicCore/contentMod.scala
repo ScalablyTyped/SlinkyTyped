@@ -1,13 +1,13 @@
 package typingsSlinky.ionicCore
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonContentElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonContentElement
 import typingsSlinky.ionicCore.contentInterfaceMod.ScrollBaseDetail
 import typingsSlinky.ionicCore.contentInterfaceMod.ScrollDetail
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface
 import typingsSlinky.ionicCore.stencilCoreMod.EventEmitter
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -90,7 +90,7 @@ object contentMod extends js.Object {
       * and `scrollToPoint()` to scroll the content into a certain point.
       */
     def getScrollElement(): js.Promise[HTMLElement] = js.native
-    def onClick(ev: Event_): Unit = js.native
+    def onClick(ev: Event): Unit = js.native
     @JSName("render")
     def render_MContent(): js.Any = js.native
     /**
@@ -108,13 +108,6 @@ object contentMod extends js.Object {
       */
     def scrollToBottom(): js.Promise[Unit] = js.native
     def scrollToBottom(duration: Double): js.Promise[Unit] = js.native
-    def scrollToPoint(): js.Promise[Unit] = js.native
-    def scrollToPoint(x: js.UndefOr[scala.Nothing], y: js.UndefOr[scala.Nothing], duration: Double): js.Promise[Unit] = js.native
-    def scrollToPoint(x: js.UndefOr[scala.Nothing], y: Double): js.Promise[Unit] = js.native
-    def scrollToPoint(x: js.UndefOr[scala.Nothing], y: Double, duration: Double): js.Promise[Unit] = js.native
-    def scrollToPoint(x: js.UndefOr[scala.Nothing], y: Null, duration: Double): js.Promise[Unit] = js.native
-    def scrollToPoint(x: Double): js.Promise[Unit] = js.native
-    def scrollToPoint(x: Double, y: js.UndefOr[scala.Nothing], duration: Double): js.Promise[Unit] = js.native
     /**
       * Scroll to a specified X/Y location in the component.
       *
@@ -122,10 +115,11 @@ object contentMod extends js.Object {
       * @param y The point to scroll to on the vertical axis.
       * @param duration The amount of time to take scrolling to that point. Defaults to `0`.
       */
+    def scrollToPoint(): js.Promise[Unit] = js.native
+    def scrollToPoint(x: Double): js.Promise[Unit] = js.native
     def scrollToPoint(x: Double, y: Double): js.Promise[Unit] = js.native
     def scrollToPoint(x: Double, y: Double, duration: Double): js.Promise[Unit] = js.native
     def scrollToPoint(x: Double, y: Null, duration: Double): js.Promise[Unit] = js.native
-    def scrollToPoint(x: Null, y: js.UndefOr[scala.Nothing], duration: Double): js.Promise[Unit] = js.native
     def scrollToPoint(x: Null, y: Double): js.Promise[Unit] = js.native
     def scrollToPoint(x: Null, y: Double, duration: Double): js.Promise[Unit] = js.native
     def scrollToPoint(x: Null, y: Null, duration: Double): js.Promise[Unit] = js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.cassandraDriver.metadataMod.metadata
 
-import typingsSlinky.cassandraDriver.AnonFrozen
+import typingsSlinky.cassandraDriver.anon.Frozen
 import typingsSlinky.cassandraDriver.typesMod.types.dataTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation._
 trait DataTypeInfo extends js.Object {
   var code: dataTypes = js.native
   var info: String | DataTypeInfo | js.Array[DataTypeInfo] = js.native
-  var options: AnonFrozen = js.native
+  var options: Frozen = js.native
 }
 
 object DataTypeInfo {
   @scala.inline
-  def apply(code: dataTypes, info: String | DataTypeInfo | js.Array[DataTypeInfo], options: AnonFrozen): DataTypeInfo = {
+  def apply(code: dataTypes, info: String | DataTypeInfo | js.Array[DataTypeInfo], options: Frozen): DataTypeInfo = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], info = info.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
     __obj.asInstanceOf[DataTypeInfo]
   }
@@ -38,7 +38,7 @@ object DataTypeInfo {
         ret
     }
     @scala.inline
-    def withOptions(value: AnonFrozen): Self = {
+    def withOptions(value: Frozen): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("options")(value.asInstanceOf[js.Any])
         ret

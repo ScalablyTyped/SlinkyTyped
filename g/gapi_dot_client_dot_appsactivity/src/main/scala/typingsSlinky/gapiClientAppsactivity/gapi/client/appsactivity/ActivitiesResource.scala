@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientAppsactivity.gapi.client.appsactivity
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAppsactivity.AnonAlt
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAppsactivity.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,12 +13,12 @@ trait ActivitiesResource extends js.Object {
     * acted on, e.g. Drive files a user can see. An activity is a record of past events. Multiple events may be merged if they are similar. A request is
     * scoped to activities from a given Google service using the source parameter.
     */
-  def list(request: AnonAlt): Request_[ListActivitiesResponse] = js.native
+  def list(request: Alt): Request[ListActivitiesResponse] = js.native
 }
 
 object ActivitiesResource {
   @scala.inline
-  def apply(list: AnonAlt => Request_[ListActivitiesResponse]): ActivitiesResource = {
+  def apply(list: Alt => Request[ListActivitiesResponse]): ActivitiesResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[ActivitiesResource]
   }
@@ -29,7 +29,7 @@ object ActivitiesResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withList(value: AnonAlt => Request_[ListActivitiesResponse]): Self = {
+    def withList(value: Alt => Request[ListActivitiesResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

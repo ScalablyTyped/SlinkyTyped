@@ -1,7 +1,7 @@
 package typingsSlinky.blueprintjsCore.htmlSelectMod
 
 import org.scalajs.dom.raw.HTMLSelectElement
-import typingsSlinky.blueprintjsCore.PartialIIconProps
+import typingsSlinky.blueprintjsCore.anon.PartialIIconProps
 import typingsSlinky.blueprintjsCore.htmlMod.IElementRefProps
 import typingsSlinky.blueprintjsCore.propsMod.IOptionProps
 import typingsSlinky.react.mod.ChangeEvent

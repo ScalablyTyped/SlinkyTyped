@@ -1,7 +1,7 @@
 package typingsSlinky.bootstrap3Dialog.BootstrapDialog
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,21 +12,21 @@ trait DialogContext extends js.Object {
   def close(): Unit = js.native
   /** Disable all buttons in dialog footer when it's false, enable all when it's true. */
   def enableButtons(enable: Boolean): Unit = js.native
-  def getButton(buttonId: String): JQuery_[HTMLElement] = js.native
+  def getButton(buttonId: String): JQuery[HTMLElement] = js.native
   /** Get data entry according to the given key, returns null if no data entry found. */
   def getData(dataName: String): js.Any = js.native
   /** Return the raw modal, equivalent to $('<div class='modal fade'...></div>') */
-  def getModal(): JQuery_[HTMLElement] = js.native
+  def getModal(): JQuery[HTMLElement] = js.native
   /** Return the raw modal body. */
-  def getModalBody(): JQuery_[HTMLElement] = js.native
+  def getModalBody(): JQuery[HTMLElement] = js.native
   /** Return the raw modal content. */
-  def getModalContent(): JQuery_[HTMLElement] = js.native
+  def getModalContent(): JQuery[HTMLElement] = js.native
   /** Return the raw modal dialog. */
-  def getModalDialog(): JQuery_[HTMLElement] = js.native
+  def getModalDialog(): JQuery[HTMLElement] = js.native
   /** Return the raw modal footer. */
-  def getModalFooter(): JQuery_[HTMLElement] = js.native
+  def getModalFooter(): JQuery[HTMLElement] = js.native
   /** Return the raw modal header. */
-  def getModalHeader(): JQuery_[HTMLElement] = js.native
+  def getModalHeader(): JQuery[HTMLElement] = js.native
   def getTitle(): String = js.native
   /** Open the dialog. Usage: dialogInstance.open() */
   def open(): Unit = js.native
@@ -53,14 +53,14 @@ object DialogContext {
   def apply(
     close: () => Unit,
     enableButtons: Boolean => Unit,
-    getButton: String => JQuery_[HTMLElement],
+    getButton: String => JQuery[HTMLElement],
     getData: String => js.Any,
-    getModal: () => JQuery_[HTMLElement],
-    getModalBody: () => JQuery_[HTMLElement],
-    getModalContent: () => JQuery_[HTMLElement],
-    getModalDialog: () => JQuery_[HTMLElement],
-    getModalFooter: () => JQuery_[HTMLElement],
-    getModalHeader: () => JQuery_[HTMLElement],
+    getModal: () => JQuery[HTMLElement],
+    getModalBody: () => JQuery[HTMLElement],
+    getModalContent: () => JQuery[HTMLElement],
+    getModalDialog: () => JQuery[HTMLElement],
+    getModalFooter: () => JQuery[HTMLElement],
+    getModalHeader: () => JQuery[HTMLElement],
     getTitle: () => String,
     open: () => Unit,
     realize: () => Unit,
@@ -92,7 +92,7 @@ object DialogContext {
         ret
     }
     @scala.inline
-    def withGetButton(value: String => JQuery_[HTMLElement]): Self = {
+    def withGetButton(value: String => JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getButton")(js.Any.fromFunction1(value))
         ret
@@ -104,37 +104,37 @@ object DialogContext {
         ret
     }
     @scala.inline
-    def withGetModal(value: () => JQuery_[HTMLElement]): Self = {
+    def withGetModal(value: () => JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getModal")(js.Any.fromFunction0(value))
         ret
     }
     @scala.inline
-    def withGetModalBody(value: () => JQuery_[HTMLElement]): Self = {
+    def withGetModalBody(value: () => JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getModalBody")(js.Any.fromFunction0(value))
         ret
     }
     @scala.inline
-    def withGetModalContent(value: () => JQuery_[HTMLElement]): Self = {
+    def withGetModalContent(value: () => JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getModalContent")(js.Any.fromFunction0(value))
         ret
     }
     @scala.inline
-    def withGetModalDialog(value: () => JQuery_[HTMLElement]): Self = {
+    def withGetModalDialog(value: () => JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getModalDialog")(js.Any.fromFunction0(value))
         ret
     }
     @scala.inline
-    def withGetModalFooter(value: () => JQuery_[HTMLElement]): Self = {
+    def withGetModalFooter(value: () => JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getModalFooter")(js.Any.fromFunction0(value))
         ret
     }
     @scala.inline
-    def withGetModalHeader(value: () => JQuery_[HTMLElement]): Self = {
+    def withGetModalHeader(value: () => JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getModalHeader")(js.Any.fromFunction0(value))
         ret

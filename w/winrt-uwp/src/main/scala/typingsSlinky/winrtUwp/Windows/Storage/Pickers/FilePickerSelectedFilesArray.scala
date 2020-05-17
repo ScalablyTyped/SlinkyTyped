@@ -1,18 +1,17 @@
 package typingsSlinky.winrtUwp.Windows.Storage.Pickers
 
 import typingsSlinky.std.Array
-import typingsSlinky.winrtUwp.AnonIndex
-import typingsSlinky.winrtUwp.AnonItemsStorageFile
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrtUwp.Windows.Storage.StorageFile
+import typingsSlinky.winrtUwp.anon.Index
+import typingsSlinky.winrtUwp.anon.ItemsStorageFile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a collection of storage files that the user has selected by using a file picker. */
-@JSGlobal("Windows.Storage.Pickers.FilePickerSelectedFilesArray")
 @js.native
-abstract class FilePickerSelectedFilesArray () extends Array[StorageFile] {
+trait FilePickerSelectedFilesArray extends Array[StorageFile] {
   /** Gets the number of StorageFile objects in the collection. */
   var size: Double = js.native
   /**
@@ -30,13 +29,13 @@ abstract class FilePickerSelectedFilesArray () extends Array[StorageFile] {
     * Retrieves the StorageFile objects that start at the specified index in the collection.
     * @param startIndex The zero-based index of the start of the objects in the collection to return.
     */
-  def getMany(startIndex: Double): AnonItemsStorageFile = js.native
-  def indexOf(value: StorageFile, extra: js.Any*): AnonIndex = js.native
+  def getMany(startIndex: Double): ItemsStorageFile = js.native
+  def indexOf(value: StorageFile, extra: js.Any*): Index = js.native
   /**
     * Retrieves the index of a specified StorageFile object in the collection.
     * @param value The object to find in the collection.
     */
   @JSName("indexOf")
-  def indexOf_AnonIndex(value: StorageFile): AnonIndex = js.native
+  def indexOf_Index(value: StorageFile): Index = js.native
 }
 

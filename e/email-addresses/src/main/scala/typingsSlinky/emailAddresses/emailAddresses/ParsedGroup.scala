@@ -1,6 +1,6 @@
 package typingsSlinky.emailAddresses.emailAddresses
 
-import typingsSlinky.emailAddresses.AnonName
+import typingsSlinky.emailAddresses.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,13 +10,13 @@ trait ParsedGroup extends js.Object {
   var addresses: js.Array[ParsedMailbox] = js.native
   var name: String = js.native
   var node: js.UndefOr[ASTNode] = js.native
-  var parts: AnonName = js.native
+  var parts: Name = js.native
   var `type`: String = js.native
 }
 
 object ParsedGroup {
   @scala.inline
-  def apply(addresses: js.Array[ParsedMailbox], name: String, parts: AnonName, `type`: String): ParsedGroup = {
+  def apply(addresses: js.Array[ParsedMailbox], name: String, parts: Name, `type`: String): ParsedGroup = {
     val __obj = js.Dynamic.literal(addresses = addresses.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parts = parts.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParsedGroup]
@@ -40,7 +40,7 @@ object ParsedGroup {
         ret
     }
     @scala.inline
-    def withParts(value: AnonName): Self = {
+    def withParts(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("parts")(value.asInstanceOf[js.Any])
         ret

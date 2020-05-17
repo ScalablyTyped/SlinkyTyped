@@ -1,14 +1,14 @@
 package typingsSlinky.reduxForm.reduxFormMod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SubmitHandler[FormData, P, ErrorType] extends js.Object {
-  def apply(event: SyntheticEvent[Event_, _]): Unit = js.native
+  def apply(event: SyntheticEvent[Event, _]): Unit = js.native
   def apply(submit: FormSubmitHandler[FormData, P, ErrorType]): js.Any = js.native
   def apply(
     submit: FormSubmitHandler[FormData, P, ErrorType],

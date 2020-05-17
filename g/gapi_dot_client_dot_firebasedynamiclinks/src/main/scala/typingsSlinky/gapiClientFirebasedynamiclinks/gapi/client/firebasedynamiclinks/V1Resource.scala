@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientFirebasedynamiclinks.gapi.client.firebasedynamiclinks
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientFirebasedynamiclinks.AnonAccesstoken
-import typingsSlinky.gapiClientFirebasedynamiclinks.AnonAlt
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientFirebasedynamiclinks.anon.Accesstoken
+import typingsSlinky.gapiClientFirebasedynamiclinks.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,16 +14,16 @@ trait V1Resource extends js.Object {
     * duration. Metrics include number of clicks, redirects, installs,
     * app first opens, and app reopens.
     */
-  def getLinkStats(request: AnonAlt): Request_[DynamicLinkStats] = js.native
+  def getLinkStats(request: Alt): Request[DynamicLinkStats] = js.native
   /** Get iOS strong/weak-match info for post-install attribution. */
-  def installAttribution(request: AnonAccesstoken): Request_[GetIosPostInstallAttributionResponse] = js.native
+  def installAttribution(request: Accesstoken): Request[GetIosPostInstallAttributionResponse] = js.native
 }
 
 object V1Resource {
   @scala.inline
   def apply(
-    getLinkStats: AnonAlt => Request_[DynamicLinkStats],
-    installAttribution: AnonAccesstoken => Request_[GetIosPostInstallAttributionResponse]
+    getLinkStats: Alt => Request[DynamicLinkStats],
+    installAttribution: Accesstoken => Request[GetIosPostInstallAttributionResponse]
   ): V1Resource = {
     val __obj = js.Dynamic.literal(getLinkStats = js.Any.fromFunction1(getLinkStats), installAttribution = js.Any.fromFunction1(installAttribution))
     __obj.asInstanceOf[V1Resource]
@@ -35,13 +35,13 @@ object V1Resource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetLinkStats(value: AnonAlt => Request_[DynamicLinkStats]): Self = {
+    def withGetLinkStats(value: Alt => Request[DynamicLinkStats]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getLinkStats")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withInstallAttribution(value: AnonAccesstoken => Request_[GetIosPostInstallAttributionResponse]): Self = {
+    def withInstallAttribution(value: Accesstoken => Request[GetIosPostInstallAttributionResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("installAttribution")(js.Any.fromFunction1(value))
         ret

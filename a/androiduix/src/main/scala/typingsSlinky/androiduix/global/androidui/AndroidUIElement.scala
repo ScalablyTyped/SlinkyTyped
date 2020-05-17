@@ -1,0 +1,11 @@
+package typingsSlinky.androiduix.global.androidui
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("androidui.AndroidUIElement")
+@js.native
+class AndroidUIElement ()
+  extends typingsSlinky.androiduix.androidui.AndroidUIElement
+

@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait SpecificDateTimeFormatOptions
-  extends typingsSlinky.std.Intl.DateTimeFormatOptions {
+  extends typingsSlinky.std.Intl.DateTimeFormatOptions
+     with DateTimeFormatOptions {
   @JSName("day")
   var day_SpecificDateTimeFormatOptions: js.UndefOr[DateTimeDigital] = js.native
   @JSName("era")

@@ -1,7 +1,7 @@
 package typingsSlinky.promisePg.mod
 
-import typingsSlinky.pg.TypeofPg
-import typingsSlinky.pg.TypeofarrayParser
+import typingsSlinky.pg.anon.TypeofPg
+import typingsSlinky.pg.anon.TypeofarrayParser
 import typingsSlinky.pg.mod.ConnectionConfig
 import typingsSlinky.pg.mod.Defaults_
 import typingsSlinky.pg.mod.PoolConfig

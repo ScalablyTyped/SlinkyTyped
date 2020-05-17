@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientAdexchangebuyer.gapi.client.adexchangebuyer
 
-import typingsSlinky.gapiClientAdexchangebuyer.AnonArcStatus
+import typingsSlinky.gapiClientAdexchangebuyer.anon.ArcStatus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CreativeDealIds extends js.Object {
   /** A list of external deal ids and ARC approval status. */
-  var dealStatuses: js.UndefOr[js.Array[AnonArcStatus]] = js.native
+  var dealStatuses: js.UndefOr[js.Array[ArcStatus]] = js.native
   /** Resource type. */
   var kind: js.UndefOr[String] = js.native
 }
@@ -26,7 +26,7 @@ object CreativeDealIds {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDealStatuses(value: js.Array[AnonArcStatus]): Self = {
+    def withDealStatuses(value: js.Array[ArcStatus]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dealStatuses")(value.asInstanceOf[js.Any])
         ret

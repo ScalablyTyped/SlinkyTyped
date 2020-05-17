@@ -7,14 +7,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("sap.ui.test.Opa5")
 @js.native
-/**
-  * Helps you when writing tests for UI5 applications.Provides convenience to wait and retrieve for UI5
-  * controls without relying on global IDs.Makes it easy to wait until your UI is in the state you need
-  * for testing, e.g.: waiting for backend data.
-  */
-class Opa5 () extends Object {
+trait Opa5 extends Object {
   /**
     * Create a page object configured as arrangement, action and assertion to the Opa.config.Use it to
     * structure your arrangement, action and assertion based on parts of the screen to avoid name clashes

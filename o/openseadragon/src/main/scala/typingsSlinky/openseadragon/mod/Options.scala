@@ -3,8 +3,8 @@ package typingsSlinky.openseadragon.mod
 import org.scalajs.dom.raw.CanvasGradient
 import org.scalajs.dom.raw.CanvasPattern
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.openseadragon.AnonImage
-import typingsSlinky.openseadragon.AnonLevels
+import typingsSlinky.openseadragon.anon.Image
+import typingsSlinky.openseadragon.anon.Levels
 import typingsSlinky.openseadragon.openseadragonBooleans.`false`
 import typingsSlinky.openseadragon.openseadragonStrings.ABSOLUTE
 import typingsSlinky.openseadragon.openseadragonStrings.Anonymous
@@ -138,9 +138,7 @@ trait Options extends js.Object {
   var smoothTileEdgesMinZoom: js.UndefOr[Double] = js.native
   var springStiffness: js.UndefOr[Double] = js.native
   var tabIndex: js.UndefOr[Double] = js.native
-  var tileSources: js.UndefOr[
-    String | (js.Array[String | TileSource]) | TileSourceOptions | AnonLevels | AnonImage
-  ] = js.native
+  var tileSources: js.UndefOr[String | (js.Array[String | TileSource]) | TileSourceOptions | Levels | Image] = js.native
   var timeout: js.UndefOr[Double] = js.native
   var useCanvas: js.UndefOr[Boolean] = js.native
   var viewportMargins: js.UndefOr[js.Object] = js.native
@@ -1429,7 +1427,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withTileSources(value: String | (js.Array[String | TileSource]) | TileSourceOptions | AnonLevels | AnonImage): Self = {
+    def withTileSources(value: String | (js.Array[String | TileSource]) | TileSourceOptions | Levels | Image): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tileSources")(value.asInstanceOf[js.Any])
         ret

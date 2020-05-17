@@ -1,6 +1,6 @@
 package typingsSlinky.tryghostContentApi.mod
 
-import typingsSlinky.tryghostContentApi.AnonPosts
+import typingsSlinky.tryghostContentApi.anon.Posts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait Author
      with Metadata
      with GhostData {
   var bio: js.UndefOr[Nullable[String]] = js.native
-  var count: js.UndefOr[AnonPosts] = js.native
+  var count: js.UndefOr[Posts] = js.native
   var cover_image: js.UndefOr[Nullable[String]] = js.native
   var facebook: js.UndefOr[Nullable[String]] = js.native
   var location: js.UndefOr[Nullable[String]] = js.native
@@ -53,7 +53,7 @@ object Author {
         ret
     }
     @scala.inline
-    def withCount(value: AnonPosts): Self = {
+    def withCount(value: Posts): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
         ret

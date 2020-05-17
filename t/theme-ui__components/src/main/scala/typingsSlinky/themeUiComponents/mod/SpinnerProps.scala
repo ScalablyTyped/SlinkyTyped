@@ -1,5 +1,6 @@
 package typingsSlinky.themeUiComponents.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.SVGSVGElement
 import slinky.core.ReactComponentClass
@@ -16,7 +17,7 @@ import slinky.web.SyntheticPointerEvent
 import typingsSlinky.csstype.mod.GlobalsNumber
 import typingsSlinky.emotionCore.mod.InterpolationWithTheme
 import typingsSlinky.emotionSerialize.mod.Interpolation
-import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -36,7 +37,6 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
-import typingsSlinky.std.Event_
 import typingsSlinky.styledSystem.mod.RequiredTheme
 import typingsSlinky.styledSystem.mod.ResponsiveValue
 import typingsSlinky.styledSystem.mod.ThemeValue
@@ -230,7 +230,7 @@ trait SpinnerProps extends js.Object {
   var cx: js.UndefOr[Double | String] = js.native
   var cy: js.UndefOr[Double | String] = js.native
   var d: js.UndefOr[String] = js.native
-  var dangerouslySetInnerHTML: js.UndefOr[AnonHtml] = js.native
+  var dangerouslySetInnerHTML: js.UndefOr[Html] = js.native
   var decelerate: js.UndefOr[Double | String] = js.native
   var descent: js.UndefOr[Double | String] = js.native
   var diffuseConstant: js.UndefOr[Double | String] = js.native
@@ -1767,7 +1767,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withDangerouslySetInnerHTML(value: AnonHtml): Self = {
+    def withDangerouslySetInnerHTML(value: Html): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetInnerHTML")(value.asInstanceOf[js.Any])
         ret
@@ -3123,7 +3123,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnAbort(value: SyntheticEvent[Event_, SVGSVGElement] => Unit): Self = {
+    def withOnAbort(value: SyntheticEvent[Event, SVGSVGElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAbort")(js.Any.fromFunction1(value))
         ret
@@ -3183,7 +3183,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnBeforeInput(value: SyntheticEvent[EventTarget with SVGSVGElement, Event_] => Unit): Self = {
+    def withOnBeforeInput(value: SyntheticEvent[EventTarget with SVGSVGElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeInput")(js.Any.fromFunction1(value))
         ret
@@ -3207,7 +3207,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnCanPlay(value: SyntheticEvent[Event_, SVGSVGElement] => Unit): Self = {
+    def withOnCanPlay(value: SyntheticEvent[Event, SVGSVGElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlay")(js.Any.fromFunction1(value))
         ret
@@ -3219,7 +3219,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnCanPlayThrough(value: SyntheticEvent[Event_, SVGSVGElement] => Unit): Self = {
+    def withOnCanPlayThrough(value: SyntheticEvent[Event, SVGSVGElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlayThrough")(js.Any.fromFunction1(value))
         ret
@@ -3231,7 +3231,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: SyntheticEvent[EventTarget with SVGSVGElement, Event_] => Unit): Self = {
+    def withOnChange(value: SyntheticEvent[EventTarget with SVGSVGElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -3435,7 +3435,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnDurationChange(value: SyntheticEvent[Event_, SVGSVGElement] => Unit): Self = {
+    def withOnDurationChange(value: SyntheticEvent[Event, SVGSVGElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDurationChange")(js.Any.fromFunction1(value))
         ret
@@ -3447,7 +3447,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnEmptied(value: SyntheticEvent[Event_, SVGSVGElement] => Unit): Self = {
+    def withOnEmptied(value: SyntheticEvent[Event, SVGSVGElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEmptied")(js.Any.fromFunction1(value))
         ret
@@ -3459,7 +3459,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnEncrypted(value: SyntheticEvent[Event_, SVGSVGElement] => Unit): Self = {
+    def withOnEncrypted(value: SyntheticEvent[Event, SVGSVGElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEncrypted")(js.Any.fromFunction1(value))
         ret
@@ -3471,7 +3471,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnEnded(value: SyntheticEvent[Event_, SVGSVGElement] => Unit): Self = {
+    def withOnEnded(value: SyntheticEvent[Event, SVGSVGElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEnded")(js.Any.fromFunction1(value))
         ret
@@ -3483,7 +3483,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnError(value: SyntheticEvent[Event_, SVGSVGElement] => Unit): Self = {
+    def withOnError(value: SyntheticEvent[Event, SVGSVGElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
         ret
@@ -3507,7 +3507,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnInput(value: SyntheticEvent[EventTarget with SVGSVGElement, Event_] => Unit): Self = {
+    def withOnInput(value: SyntheticEvent[EventTarget with SVGSVGElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInput")(js.Any.fromFunction1(value))
         ret
@@ -3519,7 +3519,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnInvalid(value: SyntheticEvent[EventTarget with SVGSVGElement, Event_] => Unit): Self = {
+    def withOnInvalid(value: SyntheticEvent[EventTarget with SVGSVGElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInvalid")(js.Any.fromFunction1(value))
         ret
@@ -3567,7 +3567,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnLoad(value: SyntheticEvent[Event_, SVGSVGElement] => Unit): Self = {
+    def withOnLoad(value: SyntheticEvent[Event, SVGSVGElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction1(value))
         ret
@@ -3579,7 +3579,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnLoadStart(value: SyntheticEvent[Event_, SVGSVGElement] => Unit): Self = {
+    def withOnLoadStart(value: SyntheticEvent[Event, SVGSVGElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadStart")(js.Any.fromFunction1(value))
         ret
@@ -3591,7 +3591,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnLoadedData(value: SyntheticEvent[Event_, SVGSVGElement] => Unit): Self = {
+    def withOnLoadedData(value: SyntheticEvent[Event, SVGSVGElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedData")(js.Any.fromFunction1(value))
         ret
@@ -3603,7 +3603,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnLoadedMetadata(value: SyntheticEvent[Event_, SVGSVGElement] => Unit): Self = {
+    def withOnLoadedMetadata(value: SyntheticEvent[Event, SVGSVGElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedMetadata")(js.Any.fromFunction1(value))
         ret
@@ -3711,7 +3711,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnPause(value: SyntheticEvent[Event_, SVGSVGElement] => Unit): Self = {
+    def withOnPause(value: SyntheticEvent[Event, SVGSVGElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.Any.fromFunction1(value))
         ret
@@ -3723,7 +3723,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnPlay(value: SyntheticEvent[Event_, SVGSVGElement] => Unit): Self = {
+    def withOnPlay(value: SyntheticEvent[Event, SVGSVGElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.Any.fromFunction1(value))
         ret
@@ -3735,7 +3735,7 @@ object SpinnerProps {
         ret
     }
     @scala.inline
-    def withOnPlaying(value: SyntheticEvent[Event_, SVGSVGElement] => Unit): Self = {
+    def withOnPlaying(value: SyntheticEvent[Event, SVGSVGElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaying")(js.Any.fromFunction1(value))
         ret

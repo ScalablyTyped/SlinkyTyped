@@ -1,7 +1,7 @@
 package typingsSlinky.auth0.mod
 
-import typingsSlinky.auth0.AnonAlg
-import typingsSlinky.auth0.AnonCert
+import typingsSlinky.auth0.anon.Alg
+import typingsSlinky.auth0.anon.Cert
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -48,7 +48,7 @@ trait Client extends js.Object {
     * Free text description of the purpose of the Client. (Max character length: `140`).
     */
   var description: js.UndefOr[String] = js.native
-  var encryption_key: js.UndefOr[AnonCert] = js.native
+  var encryption_key: js.UndefOr[Cert] = js.native
   var form_template: js.UndefOr[String] = js.native
   /**
     * A set of grant types that the client is authorized to use
@@ -58,7 +58,7 @@ trait Client extends js.Object {
     * Whether this client a first party client or not.
     */
   var is_first_party: js.UndefOr[Boolean] = js.native
-  var jwt_configuration: js.UndefOr[AnonAlg] = js.native
+  var jwt_configuration: js.UndefOr[Alg] = js.native
   /**
     * The URL of the client logo (recommended size: 150x150).
     */
@@ -293,7 +293,7 @@ object Client {
         ret
     }
     @scala.inline
-    def withEncryption_key(value: AnonCert): Self = {
+    def withEncryption_key(value: Cert): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("encryption_key")(value.asInstanceOf[js.Any])
         ret
@@ -341,7 +341,7 @@ object Client {
         ret
     }
     @scala.inline
-    def withJwt_configuration(value: AnonAlg): Self = {
+    def withJwt_configuration(value: Alg): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("jwt_configuration")(value.asInstanceOf[js.Any])
         ret

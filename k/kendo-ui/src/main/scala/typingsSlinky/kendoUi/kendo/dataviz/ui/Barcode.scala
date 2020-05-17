@@ -1,6 +1,5 @@
 package typingsSlinky.kendoUi.kendo.dataviz.ui
 
-import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.JQuery
 import typingsSlinky.kendoUi.JQueryPromise
 import typingsSlinky.kendoUi.kendo.drawing.PDFOptions
@@ -9,11 +8,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.dataviz.ui.Barcode")
 @js.native
-class Barcode protected () extends Widget {
-  def this(element: Element) = this()
-  def this(element: Element, options: BarcodeOptions) = this()
+trait Barcode extends Widget {
   @JSName("options")
   var options_Barcode: BarcodeOptions = js.native
   var wrapper: JQuery = js.native
@@ -27,13 +23,5 @@ class Barcode protected () extends Widget {
   def value(): String = js.native
   def value(value: String): Unit = js.native
   def value(value: Double): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("kendo.dataviz.ui.Barcode")
-@js.native
-object Barcode extends js.Object {
-  var fn: Barcode = js.native
-  def extend(proto: js.Object): Barcode = js.native
 }
 

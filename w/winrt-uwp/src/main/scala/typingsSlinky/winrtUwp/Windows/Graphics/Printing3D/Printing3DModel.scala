@@ -8,10 +8,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the 3D model in a 3D Manufacturing Format (3MF) package. */
-@JSGlobal("Windows.Graphics.Printing3D.Printing3DModel")
 @js.native
-/** Creates an instance of the Printing3DModel class. */
-class Printing3DModel () extends js.Object {
+trait Printing3DModel extends js.Object {
   /** Gets or sets the root 3D Manufacturing Format (3MF) component. It represents the build plate on a 3D printer and defines what will be printed. */
   var build: Printing3DComponent = js.native
   /** Gets all 3D Manufacturing Format (3MF) components used in the 3D model. */
@@ -35,5 +33,92 @@ class Printing3DModel () extends js.Object {
     * @return Results of the operation.
     */
   def repairAsync(): IPromiseWithIAsyncAction = js.native
+}
+
+object Printing3DModel {
+  @scala.inline
+  def apply(
+    build: Printing3DComponent,
+    components: IVector[Printing3DComponent],
+    material: Printing3DMaterial,
+    meshes: IVector[Printing3DMesh],
+    metadata: IMap[String, String],
+    repairAsync: () => IPromiseWithIAsyncAction,
+    requiredExtensions: IVector[String],
+    textures: IVector[Printing3DModelTexture],
+    unit: Printing3DModelUnit,
+    version: String
+  ): Printing3DModel = {
+    val __obj = js.Dynamic.literal(build = build.asInstanceOf[js.Any], components = components.asInstanceOf[js.Any], material = material.asInstanceOf[js.Any], meshes = meshes.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], repairAsync = js.Any.fromFunction0(repairAsync), requiredExtensions = requiredExtensions.asInstanceOf[js.Any], textures = textures.asInstanceOf[js.Any], unit = unit.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Printing3DModel]
+  }
+  @scala.inline
+  implicit class Printing3DModelOps[Self <: Printing3DModel] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBuild(value: Printing3DComponent): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("build")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withComponents(value: IVector[Printing3DComponent]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("components")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMaterial(value: Printing3DMaterial): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("material")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMeshes(value: IVector[Printing3DMesh]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("meshes")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMetadata(value: IMap[String, String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("metadata")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRepairAsync(value: () => IPromiseWithIAsyncAction): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("repairAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withRequiredExtensions(value: IVector[String]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("requiredExtensions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTextures(value: IVector[Printing3DModelTexture]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("textures")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withUnit(value: Printing3DModelUnit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("unit")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withVersion(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("version")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

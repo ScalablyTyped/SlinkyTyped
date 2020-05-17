@@ -1,7 +1,7 @@
 package typingsSlinky.apolloServer.exportsMod
 
 import typingsSlinky.graphql.astMod.DocumentNode
-import typingsSlinky.graphqlTools.DocumentNodedefinitionsAr
+import typingsSlinky.graphqlTools.anon.DocumentNodedefinitionsAr
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

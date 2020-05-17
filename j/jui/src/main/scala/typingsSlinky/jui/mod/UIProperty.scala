@@ -1,6 +1,6 @@
 package typingsSlinky.jui.mod
 
-import typingsSlinky.jui.AnonItems
+import typingsSlinky.jui.anon.Items
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UIProperty extends js.Object {
   def apply(selector: js.Any): this.type = js.native
-  def apply(selector: js.Any, options: AnonItems): this.type = js.native
+  def apply(selector: js.Any, options: Items): this.type = js.native
   def addItem(item: js.Array[_]): Unit = js.native
   def addItem(item: js.Object): Unit = js.native
   /**

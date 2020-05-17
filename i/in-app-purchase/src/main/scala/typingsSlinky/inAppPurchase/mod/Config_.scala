@@ -1,6 +1,6 @@
 package typingsSlinky.inAppPurchase.mod
 
-import typingsSlinky.inAppPurchase.AnonClientEmail
+import typingsSlinky.inAppPurchase.anon.ClientEmail
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +35,7 @@ trait Config_ extends js.Object {
   // optional, for Google Play subscriptions
   var googleRefreshToken: js.UndefOr[String] = js.native
   // Configurations for Google Service Account validation: You can validate with just packageName, productId, and purchaseToken
-  var googleServiceAccount: js.UndefOr[AnonClientEmail] = js.native
+  var googleServiceAccount: js.UndefOr[ClientEmail] = js.native
   /* Configurations for Roku */
   // this comes from Roku Developer Dashboard
   var rokuApiKey: js.UndefOr[String] = js.native
@@ -216,7 +216,7 @@ object Config_ {
         ret
     }
     @scala.inline
-    def withGoogleServiceAccount(value: AnonClientEmail): Self = {
+    def withGoogleServiceAccount(value: ClientEmail): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("googleServiceAccount")(value.asInstanceOf[js.Any])
         ret

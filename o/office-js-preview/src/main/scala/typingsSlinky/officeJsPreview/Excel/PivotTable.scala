@@ -1,11 +1,11 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.PivotTableData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.PivotTableLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.PivotTableUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,9 +17,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.3]
   */
-@JSGlobal("Excel.PivotTable")
 @js.native
-class PivotTable () extends ClientObject {
+trait PivotTable extends ClientObject {
   /**
     *
     * Specifies whether the PivotTable allows the application of multiple PivotFilters on a given PivotField in the table.
@@ -121,7 +120,7 @@ class PivotTable () extends ClientObject {
     */
   def load(): PivotTable = js.native
   def load(options: PivotTableLoadOptions): PivotTable = js.native
-  def load(propertyNamesAndPaths: AnonExpand): PivotTable = js.native
+  def load(propertyNamesAndPaths: Expand): PivotTable = js.native
   def load(propertyNames: String): PivotTable = js.native
   def load(propertyNames: js.Array[String]): PivotTable = js.native
   /**

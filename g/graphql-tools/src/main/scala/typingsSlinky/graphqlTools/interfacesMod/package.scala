@@ -13,7 +13,6 @@ package object interfacesMod {
     /* info */ typingsSlinky.graphql.definitionMod.GraphQLResolveInfo, 
     js.Any
   ]
-  type IConnector[TContext] = typingsSlinky.graphqlTools.interfacesMod.IConnectorCls[TContext] | typingsSlinky.graphqlTools.interfacesMod.IConnectorFn[TContext]
   type IConnectorFn[TContext] = js.Function1[/* context */ js.UndefOr[TContext], js.Any]
   type IConnectors[TContext] = org.scalablytyped.runtime.StringDictionary[typingsSlinky.graphqlTools.interfacesMod.IConnector[TContext]]
   type IDirectiveResolvers[TSource, TContext] = org.scalablytyped.runtime.StringDictionary[typingsSlinky.graphqlTools.interfacesMod.DirectiveResolverFn[TSource, TContext]]
@@ -28,7 +27,7 @@ package object interfacesMod {
     /* source */ TSource, 
     /* args */ TArgs, 
     /* context */ TContext, 
-    /* info */ typingsSlinky.graphqlTools.GraphQLResolveInfomergeIn, 
+    /* info */ typingsSlinky.graphqlTools.anon.GraphQLResolveInfomergeIn, 
     js.Any
   ]
   type IMockFn = typingsSlinky.graphql.definitionMod.GraphQLFieldResolver[js.Any, js.Any, org.scalablytyped.runtime.StringDictionary[js.Any]]
@@ -42,28 +41,11 @@ package object interfacesMod {
   type IResolvers[TSource, TContext] = org.scalablytyped.runtime.StringDictionary[
     js.Function0[js.Any] | (typingsSlinky.graphqlTools.interfacesMod.IResolverObject[TSource, TContext, js.Any]) | (typingsSlinky.graphqlTools.interfacesMod.IResolverOptions[TSource, TContext, js.Any]) | typingsSlinky.graphql.mod.GraphQLScalarType | typingsSlinky.graphqlTools.interfacesMod.IEnumResolver
   ]
-  type IResolversParameter = (js.Array[
-    (typingsSlinky.graphqlTools.interfacesMod.IResolvers[js.Any, js.Any]) | (js.Function1[
-      /* mergeInfo */ typingsSlinky.graphqlTools.interfacesMod.MergeInfo, 
-      typingsSlinky.graphqlTools.interfacesMod.IResolvers[js.Any, js.Any]
-    ])
-  ]) | (typingsSlinky.graphqlTools.interfacesMod.IResolvers[js.Any, js.Any]) | (js.Function1[
-    /* mergeInfo */ typingsSlinky.graphqlTools.interfacesMod.MergeInfo, 
-    typingsSlinky.graphqlTools.interfacesMod.IResolvers[js.Any, js.Any]
-  ])
-  type ITypeDefinitions = typingsSlinky.graphqlTools.interfacesMod.ITypedef | js.Array[typingsSlinky.graphqlTools.interfacesMod.ITypedef]
-  type ITypedef = (js.Function0[
-    js.Array[
-      /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias graphql-tools.graphql-tools/dist/Interfaces.ITypedef */ js.Object
-    ]
-  ]) | java.lang.String | typingsSlinky.graphql.astMod.DocumentNode | typingsSlinky.graphql.astMod.ASTNode
   type NextResolverFn = js.Function0[js.Promise[js.Any]]
   type ResolveType[T /* <: typingsSlinky.graphql.definitionMod.GraphQLType */] = js.Function1[/* type */ T, T]
-  type UnitOrList[Type] = Type | js.Array[Type]
   type VisitType = js.Function2[
     /* name */ java.lang.String, 
     /* candidates */ js.Array[typingsSlinky.graphqlTools.interfacesMod.MergeTypeCandidate], 
     typingsSlinky.graphqlTools.interfacesMod.VisitTypeResult
   ]
-  type VisitTypeResult = typingsSlinky.graphql.definitionMod.GraphQLNamedType | typingsSlinky.graphqlTools.interfacesMod.TypeWithResolvers | scala.Null
 }

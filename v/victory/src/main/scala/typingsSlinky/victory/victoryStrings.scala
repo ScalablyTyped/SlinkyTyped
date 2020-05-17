@@ -1,6 +1,7 @@
 package typingsSlinky.victory
 
 import typingsSlinky.victory.mod.AnimationEasing
+import typingsSlinky.victory.mod.ColorScalePropType
 import typingsSlinky.victory.mod.ContainerType
 import typingsSlinky.victory.mod.InterpolationPropType
 import typingsSlinky.victory.mod.OrientationTypes
@@ -8,7 +9,6 @@ import typingsSlinky.victory.mod.ScalePropType
 import typingsSlinky.victory.mod.ScatterSymbolType
 import typingsSlinky.victory.mod.TextAnchorType
 import typingsSlinky.victory.mod.VerticalAnchorType
-import typingsSlinky.victory.mod._ColorScalePropType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,7 +45,7 @@ object victoryStrings {
   sealed trait basisOpen extends InterpolationPropType
   
   @js.native
-  sealed trait blue extends _ColorScalePropType
+  sealed trait blue extends ColorScalePropType
   
   @js.native
   sealed trait bottom extends OrientationTypes
@@ -101,7 +101,7 @@ object victoryStrings {
   sealed trait circleOut extends AnimationEasing
   
   @js.native
-  sealed trait cool extends _ColorScalePropType
+  sealed trait cool extends ColorScalePropType
   
   @js.native
   sealed trait cornerRadius extends js.Object
@@ -160,16 +160,16 @@ object victoryStrings {
   sealed trait expOut extends AnimationEasing
   
   @js.native
-  sealed trait green extends _ColorScalePropType
+  sealed trait green extends ColorScalePropType
   
   @js.native
-  sealed trait greyscale extends _ColorScalePropType
+  sealed trait greyscale extends ColorScalePropType
   
   @js.native
   sealed trait grid extends js.Object
   
   @js.native
-  sealed trait heatmap extends _ColorScalePropType
+  sealed trait heatmap extends ColorScalePropType
   
   @js.native
   sealed trait horizontal extends js.Object
@@ -261,7 +261,7 @@ object victoryStrings {
   sealed trait quadOut extends AnimationEasing
   
   @js.native
-  sealed trait qualitative extends _ColorScalePropType
+  sealed trait qualitative extends ColorScalePropType
   
   @js.native
   sealed trait radial extends InterpolationPropType
@@ -270,7 +270,7 @@ object victoryStrings {
   sealed trait radius extends js.Object
   
   @js.native
-  sealed trait red extends _ColorScalePropType
+  sealed trait red extends ColorScalePropType
   
   @js.native
   sealed trait right extends OrientationTypes
@@ -344,7 +344,7 @@ object victoryStrings {
   sealed trait voronoi extends ContainerType
   
   @js.native
-  sealed trait warm extends _ColorScalePropType
+  sealed trait warm extends ColorScalePropType
   
   @js.native
   sealed trait x extends js.Object

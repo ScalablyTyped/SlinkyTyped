@@ -1,6 +1,5 @@
 package typingsSlinky.googlemaps.google.maps.visualization
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,17 +18,6 @@ object MapsEngineStatus extends js.Object {
   
   @js.native
   sealed trait UNKNOWN_ERROR extends MapsEngineStatus
-  
-  @JSBracketAccess
-  def apply(value: String): js.UndefOr[MapsEngineStatus with String] = js.native
-  /* "INVALID_LAYER" */ @js.native
-  object INVALID_LAYER extends TopLevel[INVALID_LAYER with String]
-  
-  /* "OK" */ @js.native
-  object OK extends TopLevel[OK with String]
-  
-  /* "UNKNOWN_ERROR" */ @js.native
-  object UNKNOWN_ERROR extends TopLevel[UNKNOWN_ERROR with String]
   
 }
 

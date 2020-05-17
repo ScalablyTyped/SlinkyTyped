@@ -2,7 +2,7 @@ package typingsSlinky.firebaseFirestore.apiDatabaseMod
 
 import typingsSlinky.firebaseAuthInteropTypes.mod.FirebaseAuthInternalName
 import typingsSlinky.firebaseComponent.mod.Provider
-import typingsSlinky.firebaseFirestore.AnonDelete
+import typingsSlinky.firebaseFirestore.anon.Delete
 import typingsSlinky.firebaseFirestore.apiObserverMod.PartialObserver
 import typingsSlinky.firebaseFirestore.apiObserverMod.Unsubscribe
 import typingsSlinky.firebaseFirestore.apiUserDataConverterMod.UserDataConverter
@@ -23,7 +23,7 @@ class Firestore protected () extends FirebaseFirestore {
   def this(databaseIdOrApp: FirestoreDatabase, authProvider: Provider[FirebaseAuthInternalName]) = this()
   def this(databaseIdOrApp: FirebaseApp, authProvider: Provider[FirebaseAuthInternalName]) = this()
   @JSName("INTERNAL")
-  var INTERNAL_Firestore: AnonDelete = js.native
+  var INTERNAL_Firestore: Delete = js.native
   var _credentials: js.Any = js.native
   val _dataConverter: UserDataConverter = js.native
   val _databaseId: DatabaseId = js.native

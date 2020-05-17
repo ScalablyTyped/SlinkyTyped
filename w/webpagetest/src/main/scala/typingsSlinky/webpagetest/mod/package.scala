@@ -12,5 +12,4 @@ package object mod {
     scala.Unit
   ]
   type TestScript = js.Array[typingsSlinky.webpagetest.mod.TestScriptCommand]
-  type TestScriptCommand = java.lang.String | (org.scalablytyped.runtime.StringDictionary[java.lang.String | scala.Double | (js.Array[scala.Double | java.lang.String])])
 }

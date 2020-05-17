@@ -1,7 +1,7 @@
 package typingsSlinky.devextreme.mod.DevExpress.data
 
-import typingsSlinky.devextreme.AnonChanges
-import typingsSlinky.devextreme.AnonMessage
+import typingsSlinky.devextreme.anon.Changes
+import typingsSlinky.devextreme.anon.Message
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +19,9 @@ trait DataSourceOptions extends js.Object {
   /** Specifies an item mapping function. */
   var map: js.UndefOr[js.Function1[/* dataItem */ js.Any, _]] = js.native
   /** A function that is executed after data is loaded. */
-  var onChanged: js.UndefOr[js.Function1[/* e */ AnonChanges, _]] = js.native
+  var onChanged: js.UndefOr[js.Function1[/* e */ Changes, _]] = js.native
   /** A function that is executed when data loading fails. */
-  var onLoadError: js.UndefOr[js.Function1[/* error */ AnonMessage, _]] = js.native
+  var onLoadError: js.UndefOr[js.Function1[/* error */ Message, _]] = js.native
   /** A function that is executed when the data loading status changes. */
   var onLoadingChanged: js.UndefOr[js.Function1[/* isLoading */ Boolean, _]] = js.native
   /** Specifies the maximum number of data items per page. Applies only if paginate is true. */
@@ -123,7 +123,7 @@ object DataSourceOptions {
         ret
     }
     @scala.inline
-    def withOnChanged(value: /* e */ AnonChanges => _): Self = {
+    def withOnChanged(value: /* e */ Changes => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChanged")(js.Any.fromFunction1(value))
         ret
@@ -135,7 +135,7 @@ object DataSourceOptions {
         ret
     }
     @scala.inline
-    def withOnLoadError(value: /* error */ AnonMessage => _): Self = {
+    def withOnLoadError(value: /* error */ Message => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadError")(js.Any.fromFunction1(value))
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.mapsjs.mod
 
-import typingsSlinky.mapsjs.AnonX
+import typingsSlinky.mapsjs.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +24,7 @@ object sphericalMercator extends js.Object {
   def getQuadTreeNodeToMapEnvelope(x: Double, y: Double, z: Double): envelope = js.native
   def getRadius(): Double = js.native
   def getTileSizePix(): Double = js.native
-  def getXYZFromQuadKey(key: String): AnonX = js.native
+  def getXYZFromQuadKey(key: String): X = js.native
   def projectFromLatLon(lonLat: point): point = js.native
   def setDpi(dpi: Double): Unit = js.native
   def setMaxZoomLevel(maxZ: Double): Unit = js.native

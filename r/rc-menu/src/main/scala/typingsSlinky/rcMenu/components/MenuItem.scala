@@ -6,8 +6,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.rcMenu.AnonHover
-import typingsSlinky.rcMenu.AnonKey
+import typingsSlinky.rcMenu.anon.Hover
 import typingsSlinky.rcMenu.interfaceMod.MenuInfo
 import typingsSlinky.rcMenu.interfaceMod.MenuMode
 import typingsSlinky.rcMenu.interfaceMod.RenderIconType
@@ -69,11 +68,11 @@ object MenuItem {
     @scala.inline
     def onDestroy(value: /* key */ Key => Unit): this.type = set("onDestroy", js.Any.fromFunction1(value))
     @scala.inline
-    def onItemHover(value: /* info */ AnonHover => Unit): this.type = set("onItemHover", js.Any.fromFunction1(value))
+    def onItemHover(value: /* info */ Hover => Unit): this.type = set("onItemHover", js.Any.fromFunction1(value))
     @scala.inline
-    def onMouseEnter(value: /* info */ AnonKey => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+    def onMouseEnter(value: /* info */ typingsSlinky.rcMenu.anon.Key => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
     @scala.inline
-    def onMouseLeave(value: /* info */ AnonKey => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+    def onMouseLeave(value: /* info */ typingsSlinky.rcMenu.anon.Key => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
     @scala.inline
     def onSelect(value: /* info */ SelectInfo => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline

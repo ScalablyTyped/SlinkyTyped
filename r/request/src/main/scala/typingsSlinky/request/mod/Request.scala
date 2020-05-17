@@ -8,8 +8,8 @@ import typingsSlinky.node.netMod.Socket
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Stream
 import typingsSlinky.node.urlMod.Url
-import typingsSlinky.request.AnonConnect
-import typingsSlinky.request.Urlhrefstringpathnamestri
+import typingsSlinky.request.anon.Connect
+import typingsSlinky.request.anon.Urlhrefstringpathnamestri
 import typingsSlinky.request.requestBooleans.`false`
 import typingsSlinky.request.requestBooleans.`true`
 import typingsSlinky.request.requestStrings.complete
@@ -71,7 +71,7 @@ trait Request
   var time: js.UndefOr[Boolean] = js.native
   var timeout: js.UndefOr[Double] = js.native
   var timing: js.UndefOr[Boolean] = js.native
-  var timings: js.UndefOr[AnonConnect] = js.native
+  var timings: js.UndefOr[Connect] = js.native
   var tunnel: Boolean = js.native
   var uri: Urlhrefstringpathnamestri = js.native
   var withCredentials: js.UndefOr[Boolean] = js.native

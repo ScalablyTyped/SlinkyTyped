@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.ruby
   - typingsSlinky.csstype.csstypeStrings.table
 */
-trait DisplayInside extends _DisplayProperty
+trait DisplayInside extends DisplayProperty
 
 object DisplayInside {
   @scala.inline

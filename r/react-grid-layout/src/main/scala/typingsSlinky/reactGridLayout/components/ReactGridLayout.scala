@@ -5,8 +5,8 @@ import org.scalajs.dom.raw.MouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactGridLayout.AnonE
-import typingsSlinky.reactGridLayout.AnonH
+import typingsSlinky.reactGridLayout.anon.E
+import typingsSlinky.reactGridLayout.anon.H
 import typingsSlinky.reactGridLayout.mod.Layout
 import typingsSlinky.reactGridLayout.mod.ReactGridLayoutProps
 import typingsSlinky.reactGridLayout.mod.^
@@ -42,7 +42,7 @@ object ReactGridLayout {
     @scala.inline
     def draggableHandle(value: String): this.type = set("draggableHandle", value.asInstanceOf[js.Any])
     @scala.inline
-    def droppingItem(value: AnonH): this.type = set("droppingItem", value.asInstanceOf[js.Any])
+    def droppingItem(value: H): this.type = set("droppingItem", value.asInstanceOf[js.Any])
     @scala.inline
     def isDraggable(value: Boolean): this.type = set("isDraggable", value.asInstanceOf[js.Any])
     @scala.inline
@@ -68,7 +68,7 @@ object ReactGridLayout {
       value: (/* layout */ js.Array[Layout], /* oldItem */ Layout, /* newItem */ Layout, /* placeholder */ Layout, /* event */ MouseEvent, /* element */ HTMLElement) => Unit
     ): this.type = set("onDragStop", js.Any.fromFunction6(value))
     @scala.inline
-    def onDrop(value: /* elemParams */ AnonE => Unit): this.type = set("onDrop", js.Any.fromFunction1(value))
+    def onDrop(value: /* elemParams */ E => Unit): this.type = set("onDrop", js.Any.fromFunction1(value))
     @scala.inline
     def onLayoutChange(value: /* layout */ js.Array[Layout] => Unit): this.type = set("onLayoutChange", js.Any.fromFunction1(value))
     @scala.inline

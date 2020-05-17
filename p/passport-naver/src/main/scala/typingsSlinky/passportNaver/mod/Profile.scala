@@ -1,6 +1,6 @@
 package typingsSlinky.passportNaver.mod
 
-import typingsSlinky.passportNaver.AnonAge
+import typingsSlinky.passportNaver.anon.Age
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Profile
   extends typingsSlinky.passport.mod.Profile {
-  var _json: AnonAge = js.native
+  var _json: Age = js.native
 }
 
 object Profile {
   @scala.inline
-  def apply(_json: AnonAge, displayName: String, id: String, provider: String): Profile = {
+  def apply(_json: Age, displayName: String, id: String, provider: String): Profile = {
     val __obj = js.Dynamic.literal(_json = _json.asInstanceOf[js.Any], displayName = displayName.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], provider = provider.asInstanceOf[js.Any])
     __obj.asInstanceOf[Profile]
   }
@@ -24,7 +24,7 @@ object Profile {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def with_json(value: AnonAge): Self = {
+    def with_json(value: Age): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("_json")(value.asInstanceOf[js.Any])
         ret

@@ -1,13 +1,13 @@
 package typingsSlinky.grommet.formMod
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
-import typingsSlinky.grommet.AnonInvalid
+import typingsSlinky.grommet.anon.Invalid
 import typingsSlinky.grommet.grommetStrings.blur
 import typingsSlinky.grommet.grommetStrings.submit
 import typingsSlinky.react.mod.ChangeEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,10 +16,10 @@ import scala.scalajs.js.annotation._
 trait FormProps extends js.Object {
   var errors: js.UndefOr[js.Object] = js.native
   var infos: js.UndefOr[js.Object] = js.native
-  var messages: js.UndefOr[AnonInvalid] = js.native
+  var messages: js.UndefOr[Invalid] = js.native
   var onChange: js.UndefOr[js.Function1[/* event */ ChangeEvent[Element], Unit]] = js.native
-  var onReset: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event_, Element], _]] = js.native
-  var onSubmit: js.UndefOr[js.Function1[SyntheticEvent[EventTarget with Element, Event_], Unit]] = js.native
+  var onReset: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, Element], _]] = js.native
+  var onSubmit: js.UndefOr[js.Function1[SyntheticEvent[EventTarget with Element, Event], Unit]] = js.native
   var validate: js.UndefOr[blur | submit] = js.native
   var value: js.UndefOr[js.Object] = js.native
 }
@@ -61,7 +61,7 @@ object FormProps {
         ret
     }
     @scala.inline
-    def withMessages(value: AnonInvalid): Self = {
+    def withMessages(value: Invalid): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("messages")(value.asInstanceOf[js.Any])
         ret
@@ -85,7 +85,7 @@ object FormProps {
         ret
     }
     @scala.inline
-    def withOnReset(value: /* event */ SyntheticEvent[Event_, Element] => _): Self = {
+    def withOnReset(value: /* event */ SyntheticEvent[Event, Element] => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onReset")(js.Any.fromFunction1(value))
         ret
@@ -97,7 +97,7 @@ object FormProps {
         ret
     }
     @scala.inline
-    def withOnSubmit(value: SyntheticEvent[EventTarget with Element, Event_] => Unit): Self = {
+    def withOnSubmit(value: SyntheticEvent[EventTarget with Element, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(js.Any.fromFunction1(value))
         ret

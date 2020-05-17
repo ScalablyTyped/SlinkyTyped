@@ -1,7 +1,7 @@
 package typingsSlinky.graphqlCompose.unionTypeComposerMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.graphql.GraphQLUnionTypeConfigany
+import typingsSlinky.graphql.anon.GraphQLUnionTypeConfigany
 import typingsSlinky.graphql.astMod.UnionTypeDefinitionNode
 import typingsSlinky.graphql.astMod.UnionTypeExtensionNode
 import typingsSlinky.graphql.definitionMod.GraphQLAbstractType

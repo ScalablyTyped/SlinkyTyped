@@ -2,14 +2,14 @@ package typingsSlinky.reactLazylog.lineContentMod
 
 import slinky.core.TagMod
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactLazylog.AnonText
+import typingsSlinky.reactLazylog.anon.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait LineContentProps extends js.Object {
-  var data: js.Array[AnonText] = js.native
+  var data: js.Array[Text] = js.native
   var formatPart: js.UndefOr[js.Function1[/* text */ String, TagMod[Any]]] = js.native
   var number: Double = js.native
   var style: js.UndefOr[CSSProperties] = js.native
@@ -17,7 +17,7 @@ trait LineContentProps extends js.Object {
 
 object LineContentProps {
   @scala.inline
-  def apply(data: js.Array[AnonText], number: Double): LineContentProps = {
+  def apply(data: js.Array[Text], number: Double): LineContentProps = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any])
     __obj.asInstanceOf[LineContentProps]
   }
@@ -28,7 +28,7 @@ object LineContentProps {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withData(value: js.Array[AnonText]): Self = {
+    def withData(value: js.Array[Text]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

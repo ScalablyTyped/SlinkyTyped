@@ -1,6 +1,6 @@
 package typingsSlinky.webgme.GmeClasses
 
-import typingsSlinky.webgme.AnonChildren
+import typingsSlinky.webgme.anon.Children
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ trait MetaNodeParameters extends js.Object {
     */
   var multiplicity: js.UndefOr[Boolean] = js.native
   /** the input parameters of the query. */
-  var `object`: AnonChildren = js.native
+  var `object`: Children = js.native
   /** 
     * if true, the query filters out the 
     * abstract and connection-like nodes 
@@ -33,7 +33,7 @@ trait MetaNodeParameters extends js.Object {
 
 object MetaNodeParameters {
   @scala.inline
-  def apply(`object`: AnonChildren): MetaNodeParameters = {
+  def apply(`object`: Children): MetaNodeParameters = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.asInstanceOf[MetaNodeParameters]
@@ -45,7 +45,7 @@ object MetaNodeParameters {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withObject(value: AnonChildren): Self = {
+    def withObject(value: Children): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("object")(value.asInstanceOf[js.Any])
         ret

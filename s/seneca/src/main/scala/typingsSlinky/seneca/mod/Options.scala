@@ -1,17 +1,17 @@
 package typingsSlinky.seneca.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.seneca.AnonAct
-import typingsSlinky.seneca.AnonActcaller
-import typingsSlinky.seneca.AnonActive
-import typingsSlinky.seneca.AnonActrouter
-import typingsSlinky.seneca.AnonAdd
-import typingsSlinky.seneca.AnonBasic
-import typingsSlinky.seneca.AnonHost
-import typingsSlinky.seneca.AnonInterval
-import typingsSlinky.seneca.AnonLevel
-import typingsSlinky.seneca.AnonLocal
-import typingsSlinky.seneca.AnonRunning
+import typingsSlinky.seneca.anon.Act
+import typingsSlinky.seneca.anon.Actcaller
+import typingsSlinky.seneca.anon.Active
+import typingsSlinky.seneca.anon.Actrouter
+import typingsSlinky.seneca.anon.Add
+import typingsSlinky.seneca.anon.Basic
+import typingsSlinky.seneca.anon.Host
+import typingsSlinky.seneca.anon.Interval
+import typingsSlinky.seneca.anon.Level
+import typingsSlinky.seneca.anon.Local
+import typingsSlinky.seneca.anon.Running
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,39 +20,39 @@ import scala.scalajs.js.annotation._
 trait Options
   extends /* plugin_name */ StringDictionary[js.Any] {
   // Action cache. Makes inbound messages idempotent.
-  var actcache: js.UndefOr[AnonActive] = js.native
+  var actcache: js.UndefOr[Active] = js.native
   // Default seneca-admin settings.
   // TODO: move to seneca-admin!
-  var admin: js.UndefOr[AnonLocal] = js.native
+  var admin: js.UndefOr[Local] = js.native
   // Wait time for plugins to close gracefully.
   var deathdelay: js.UndefOr[Double] = js.native
   // Debug settings.
-  var debug: js.UndefOr[AnonActcaller] = js.native
+  var debug: js.UndefOr[Actcaller] = js.native
      // milliseconds
   // Register (true) default plugins. Set false to not register when
   // using custom versions.
-  var default_plugins: js.UndefOr[AnonBasic] = js.native
+  var default_plugins: js.UndefOr[Basic] = js.native
   var errhandler: js.UndefOr[GlobalErrorHandler] = js.native
   // Standard length of identifiers for actions.
   var idlen: js.UndefOr[Double] = js.native
   // Internal settings.
-  var internal: js.UndefOr[AnonActrouter] = js.native
-  var log: js.UndefOr[LogSpec | AnonLevel] = js.native
+  var internal: js.UndefOr[Actrouter] = js.native
+  var log: js.UndefOr[LogSpec | Level] = js.native
   // Plugin settings
   var plugin: js.UndefOr[js.Any] = js.native
   // Settings for network REPL.
-  var repl: js.UndefOr[AnonHost] = js.native
+  var repl: js.UndefOr[Host] = js.native
   // Action statistics settings. See rolling-stats module.
-  var stats: js.UndefOr[AnonInterval] = js.native
+  var stats: js.UndefOr[Interval] = js.native
   // Log status at periodic intervals.
-  var status: js.UndefOr[AnonRunning] = js.native
+  var status: js.UndefOr[Running] = js.native
   // Enforce strict behaviours. Relax when backwards compatibility needed.
-  var strict: js.UndefOr[AnonAdd] = js.native
+  var strict: js.UndefOr[Add] = js.native
   var tag: js.UndefOr[String] = js.native
   // Standard timeout for actions.
   var timeout: js.UndefOr[Double] = js.native
   // Action executor tracing. See gate-executor module.
-  var trace: js.UndefOr[AnonAct] = js.native
+  var trace: js.UndefOr[Act] = js.native
   // zig module settings for seneca.start() chaining.
   var zig: js.UndefOr[js.Any] = js.native
 }
@@ -70,7 +70,7 @@ object Options {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withActcache(value: AnonActive): Self = {
+    def withActcache(value: Active): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("actcache")(value.asInstanceOf[js.Any])
         ret
@@ -82,7 +82,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withAdmin(value: AnonLocal): Self = {
+    def withAdmin(value: Local): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("admin")(value.asInstanceOf[js.Any])
         ret
@@ -106,7 +106,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withDebug(value: AnonActcaller): Self = {
+    def withDebug(value: Actcaller): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("debug")(value.asInstanceOf[js.Any])
         ret
@@ -118,7 +118,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withDefault_plugins(value: AnonBasic): Self = {
+    def withDefault_plugins(value: Basic): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("default_plugins")(value.asInstanceOf[js.Any])
         ret
@@ -154,7 +154,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withInternal(value: AnonActrouter): Self = {
+    def withInternal(value: Actrouter): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("internal")(value.asInstanceOf[js.Any])
         ret
@@ -166,7 +166,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withLog(value: LogSpec | AnonLevel): Self = {
+    def withLog(value: LogSpec | Level): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("log")(value.asInstanceOf[js.Any])
         ret
@@ -190,7 +190,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withRepl(value: AnonHost): Self = {
+    def withRepl(value: Host): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("repl")(value.asInstanceOf[js.Any])
         ret
@@ -202,7 +202,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withStats(value: AnonInterval): Self = {
+    def withStats(value: Interval): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("stats")(value.asInstanceOf[js.Any])
         ret
@@ -214,7 +214,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withStatus(value: AnonRunning): Self = {
+    def withStatus(value: Running): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
         ret
@@ -226,7 +226,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withStrict(value: AnonAdd): Self = {
+    def withStrict(value: Add): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("strict")(value.asInstanceOf[js.Any])
         ret
@@ -262,7 +262,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withTrace(value: AnonAct): Self = {
+    def withTrace(value: Act): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("trace")(value.asInstanceOf[js.Any])
         ret

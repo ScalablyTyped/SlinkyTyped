@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TransformableToBuffer extends js.Object {
+trait TransformableToBuffer extends BufferLike {
   def toBuffer(): Buffer = js.native
 }
 

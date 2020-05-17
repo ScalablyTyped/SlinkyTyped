@@ -11,9 +11,6 @@ import scala.scalajs.js.annotation._
   * @classdesc Manages creation of {@link pc.SpriteComponent}s.
   * @param {pc.Application} app - The application.
   */
-@JSGlobal("pc.SpriteComponentSystem")
 @js.native
-class SpriteComponentSystem protected () extends ComponentSystem {
-  def this(app: Application) = this()
-}
+trait SpriteComponentSystem extends ComponentSystem
 

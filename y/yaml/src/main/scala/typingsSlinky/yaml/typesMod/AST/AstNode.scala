@@ -11,3 +11,12 @@ import scala.scalajs.js.annotation._
 */
 trait AstNode extends js.Object
 
+object AstNode {
+  @scala.inline
+  implicit def apply(value: Alias): AstNode = value.asInstanceOf[AstNode]
+  @scala.inline
+  implicit def apply(value: CollectionNode): AstNode = value.asInstanceOf[AstNode]
+  @scala.inline
+  implicit def apply(value: ScalarNode): AstNode = value.asInstanceOf[AstNode]
+}
+

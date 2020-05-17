@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.std.stdStrings.`2d`
 import typingsSlinky.std.stdStrings.bitmaprenderer
 import typingsSlinky.std.stdStrings.webgl
@@ -64,8 +63,4 @@ trait OffscreenCanvas
     */
   def transferToImageBitmap(): ImageBitmap = js.native
 }
-
-@JSGlobal("OffscreenCanvas")
-@js.native
-object OffscreenCanvas extends Instantiable2[/* width */ Double, /* height */ Double, OffscreenCanvas]
 

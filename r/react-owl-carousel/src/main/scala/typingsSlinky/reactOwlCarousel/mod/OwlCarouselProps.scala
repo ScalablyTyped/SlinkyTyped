@@ -2,6 +2,7 @@ package typingsSlinky.reactOwlCarousel.mod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.SyntheticEvent
@@ -14,7 +15,7 @@ import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticPointerEvent
-import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -79,7 +80,6 @@ import typingsSlinky.reactOwlCarousel.reactOwlCarouselStrings.tree
 import typingsSlinky.reactOwlCarousel.reactOwlCarouselStrings.url
 import typingsSlinky.reactOwlCarousel.reactOwlCarouselStrings.vertical
 import typingsSlinky.reactOwlCarousel.reactOwlCarouselStrings.yes
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -186,7 +186,7 @@ trait OwlCarouselProps extends js.Object {
   var controlsClass: js.UndefOr[String] = js.native
   val coords: js.UndefOr[String] = js.native
   val crossOrigin: js.UndefOr[String] = js.native
-  val dangerouslySetInnerHTML: js.UndefOr[AnonHtml] = js.native
+  val dangerouslySetInnerHTML: js.UndefOr[Html] = js.native
   val data: js.UndefOr[String] = js.native
   val datatype: js.UndefOr[String] = js.native
   val dateTime: js.UndefOr[String] = js.native
@@ -1595,7 +1595,7 @@ object OwlCarouselProps {
         ret
     }
     @scala.inline
-    def withDangerouslySetInnerHTML(value: AnonHtml): Self = {
+    def withDangerouslySetInnerHTML(value: Html): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("dangerouslySetInnerHTML")(value.asInstanceOf[js.Any])
         ret
@@ -2711,7 +2711,7 @@ object OwlCarouselProps {
         ret
     }
     @scala.inline
-    def withOnAbort(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+    def withOnAbort(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onAbort")(js.Any.fromFunction1(value))
         ret
@@ -2771,7 +2771,7 @@ object OwlCarouselProps {
         ret
     }
     @scala.inline
-    def withOnBeforeInput(value: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit): Self = {
+    def withOnBeforeInput(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBeforeInput")(js.Any.fromFunction1(value))
         ret
@@ -2795,7 +2795,7 @@ object OwlCarouselProps {
         ret
     }
     @scala.inline
-    def withOnCanPlay(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+    def withOnCanPlay(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlay")(js.Any.fromFunction1(value))
         ret
@@ -2807,7 +2807,7 @@ object OwlCarouselProps {
         ret
     }
     @scala.inline
-    def withOnCanPlayThrough(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+    def withOnCanPlayThrough(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCanPlayThrough")(js.Any.fromFunction1(value))
         ret
@@ -3047,7 +3047,7 @@ object OwlCarouselProps {
         ret
     }
     @scala.inline
-    def withOnDurationChange(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+    def withOnDurationChange(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDurationChange")(js.Any.fromFunction1(value))
         ret
@@ -3059,7 +3059,7 @@ object OwlCarouselProps {
         ret
     }
     @scala.inline
-    def withOnEmptied(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+    def withOnEmptied(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEmptied")(js.Any.fromFunction1(value))
         ret
@@ -3071,7 +3071,7 @@ object OwlCarouselProps {
         ret
     }
     @scala.inline
-    def withOnEncrypted(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+    def withOnEncrypted(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEncrypted")(js.Any.fromFunction1(value))
         ret
@@ -3083,7 +3083,7 @@ object OwlCarouselProps {
         ret
     }
     @scala.inline
-    def withOnEnded(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+    def withOnEnded(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onEnded")(js.Any.fromFunction1(value))
         ret
@@ -3095,7 +3095,7 @@ object OwlCarouselProps {
         ret
     }
     @scala.inline
-    def withOnError(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+    def withOnError(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onError")(js.Any.fromFunction1(value))
         ret
@@ -3143,7 +3143,7 @@ object OwlCarouselProps {
         ret
     }
     @scala.inline
-    def withOnInput(value: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit): Self = {
+    def withOnInput(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInput")(js.Any.fromFunction1(value))
         ret
@@ -3155,7 +3155,7 @@ object OwlCarouselProps {
         ret
     }
     @scala.inline
-    def withOnInvalid(value: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit): Self = {
+    def withOnInvalid(value: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInvalid")(js.Any.fromFunction1(value))
         ret
@@ -3203,7 +3203,7 @@ object OwlCarouselProps {
         ret
     }
     @scala.inline
-    def withOnLoad(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+    def withOnLoad(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoad")(js.Any.fromFunction1(value))
         ret
@@ -3227,7 +3227,7 @@ object OwlCarouselProps {
         ret
     }
     @scala.inline
-    def withOnLoadStart(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+    def withOnLoadStart(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadStart")(js.Any.fromFunction1(value))
         ret
@@ -3239,7 +3239,7 @@ object OwlCarouselProps {
         ret
     }
     @scala.inline
-    def withOnLoadedData(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+    def withOnLoadedData(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedData")(js.Any.fromFunction1(value))
         ret
@@ -3263,7 +3263,7 @@ object OwlCarouselProps {
         ret
     }
     @scala.inline
-    def withOnLoadedMetadata(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+    def withOnLoadedMetadata(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onLoadedMetadata")(js.Any.fromFunction1(value))
         ret
@@ -3371,7 +3371,7 @@ object OwlCarouselProps {
         ret
     }
     @scala.inline
-    def withOnPause(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+    def withOnPause(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPause")(js.Any.fromFunction1(value))
         ret
@@ -3383,7 +3383,7 @@ object OwlCarouselProps {
         ret
     }
     @scala.inline
-    def withOnPlay(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+    def withOnPlay(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlay")(js.Any.fromFunction1(value))
         ret
@@ -3407,7 +3407,7 @@ object OwlCarouselProps {
         ret
     }
     @scala.inline
-    def withOnPlaying(value: SyntheticEvent[Event_, HTMLDivElement] => Unit): Self = {
+    def withOnPlaying(value: SyntheticEvent[Event, HTMLDivElement] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPlaying")(js.Any.fromFunction1(value))
         ret

@@ -4,6 +4,8 @@ import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.SVGElement
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
+import typingsSlinky.rbx.anon.PreferHelpersPropsOverrid
+import typingsSlinky.rbx.anon.`0`
 import typingsSlinky.rbx.exoticMod.ForwardRefAsExoticComponent
 import typingsSlinky.rbx.exoticMod.FromReactType
 import typingsSlinky.rbx.typesMod.Prefer
@@ -23,7 +25,7 @@ object baseMod extends js.Object {
     factory: ReactComponentClass[HTMLElement | SVGElement | ReactComponentClass[js.Object]],
     defaultProps: Partial[
       Prefer[
-        (PropsWithoutRef[TOwnProps with Anon0[TDefaultComponent]]) with RefAttributes[FromReactType[TDefaultComponent]], 
+        (PropsWithoutRef[TOwnProps with `0`[TDefaultComponent]]) with RefAttributes[FromReactType[TDefaultComponent]], 
         ComponentPropsWithoutRef[TDefaultComponent]
       ]
     ]

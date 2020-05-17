@@ -1,19 +1,19 @@
 package typingsSlinky.aphrodite.mod
 
-import typingsSlinky.aphrodite.AnonContent
+import typingsSlinky.aphrodite.anon.Content
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait StaticRendererResult extends js.Object {
-  var css: AnonContent = js.native
+  var css: Content = js.native
   var html: String = js.native
 }
 
 object StaticRendererResult {
   @scala.inline
-  def apply(css: AnonContent, html: String): StaticRendererResult = {
+  def apply(css: Content, html: String): StaticRendererResult = {
     val __obj = js.Dynamic.literal(css = css.asInstanceOf[js.Any], html = html.asInstanceOf[js.Any])
     __obj.asInstanceOf[StaticRendererResult]
   }
@@ -24,7 +24,7 @@ object StaticRendererResult {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCss(value: AnonContent): Self = {
+    def withCss(value: Content): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("css")(value.asInstanceOf[js.Any])
         ret

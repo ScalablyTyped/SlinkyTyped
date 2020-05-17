@@ -1,6 +1,5 @@
 package typingsSlinky.kendoUi.kendo.dataviz.ui
 
-import org.scalajs.dom.raw.Element
 import typingsSlinky.kendoUi.JQuery
 import typingsSlinky.kendoUi.JQueryPromise
 import typingsSlinky.kendoUi.kendo.data.DataSource
@@ -11,11 +10,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.dataviz.ui.StockChart")
 @js.native
-class StockChart protected () extends Widget {
-  def this(element: Element) = this()
-  def this(element: Element, options: StockChartOptions) = this()
+trait StockChart extends Widget {
   var dataSource: DataSource = js.native
   var navigator: Navigator = js.native
   @JSName("options")
@@ -31,13 +27,5 @@ class StockChart protected () extends Widget {
   def setDataSource(dataSource: DataSource): Unit = js.native
   def setOptions(options: js.Any): Unit = js.native
   def svg(): String = js.native
-}
-
-/* static members */
-@JSGlobal("kendo.dataviz.ui.StockChart")
-@js.native
-object StockChart extends js.Object {
-  var fn: StockChart = js.native
-  def extend(proto: js.Object): StockChart = js.native
 }
 

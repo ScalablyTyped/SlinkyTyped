@@ -1,9 +1,9 @@
 package typingsSlinky.gapiClientAdsensehost.gapi.client.adsensehost
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientAdsensehost.AnonAdClientId
-import typingsSlinky.gapiClientAdsensehost.AnonMaxResults
-import typingsSlinky.gapiClientAdsensehost.AnonQuotaUser
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientAdsensehost.anon.AdClientId
+import typingsSlinky.gapiClientAdsensehost.anon.MaxResults
+import typingsSlinky.gapiClientAdsensehost.anon.QuotaUser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,19 +11,19 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UrlchannelsResource extends js.Object {
   /** Delete a URL channel from the host AdSense account. */
-  def delete(request: AnonQuotaUser): Request_[UrlChannel] = js.native
+  def delete(request: QuotaUser): Request[UrlChannel] = js.native
   /** Add a new URL channel to the host AdSense account. */
-  def insert(request: AnonAdClientId): Request_[UrlChannel] = js.native
+  def insert(request: AdClientId): Request[UrlChannel] = js.native
   /** List all host URL channels in the host AdSense account. */
-  def list(request: AnonMaxResults): Request_[UrlChannels] = js.native
+  def list(request: MaxResults): Request[UrlChannels] = js.native
 }
 
 object UrlchannelsResource {
   @scala.inline
   def apply(
-    delete: AnonQuotaUser => Request_[UrlChannel],
-    insert: AnonAdClientId => Request_[UrlChannel],
-    list: AnonMaxResults => Request_[UrlChannels]
+    delete: QuotaUser => Request[UrlChannel],
+    insert: AdClientId => Request[UrlChannel],
+    list: MaxResults => Request[UrlChannels]
   ): UrlchannelsResource = {
     val __obj = js.Dynamic.literal(delete = js.Any.fromFunction1(delete), insert = js.Any.fromFunction1(insert), list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[UrlchannelsResource]
@@ -35,19 +35,19 @@ object UrlchannelsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withDelete(value: AnonQuotaUser => Request_[UrlChannel]): Self = {
+    def withDelete(value: QuotaUser => Request[UrlChannel]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delete")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withInsert(value: AnonAdClientId => Request_[UrlChannel]): Self = {
+    def withInsert(value: AdClientId => Request[UrlChannel]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("insert")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonMaxResults => Request_[UrlChannels]): Self = {
+    def withList(value: MaxResults => Request[UrlChannels]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

@@ -1,7 +1,7 @@
 package typingsSlinky.expo.aRMod
 
-import typingsSlinky.expo.AnonName
 import typingsSlinky.expo.aRMod.AnchorType.Image
+import typingsSlinky.expo.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ImageAnchor extends Anchor {
   var id: String = js.native
-  var image: js.UndefOr[AnonName] = js.native
+  var image: js.UndefOr[Name] = js.native
   var transform: Matrix = js.native
   var `type`: AnchorType with Image = js.native
 }
@@ -47,7 +47,7 @@ object ImageAnchor {
         ret
     }
     @scala.inline
-    def withImage(value: AnonName): Self = {
+    def withImage(value: Name): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("image")(value.asInstanceOf[js.Any])
         ret

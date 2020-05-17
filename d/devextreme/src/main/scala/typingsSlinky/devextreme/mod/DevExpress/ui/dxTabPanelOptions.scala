@@ -1,12 +1,12 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonElementEventItemData
-import typingsSlinky.devextreme.AnonElementItemDataItemElement
+import typingsSlinky.devextreme.anon.ElementEventItemData
+import typingsSlinky.devextreme.anon.ElementItemDataItemElement
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
-import typingsSlinky.devextreme.mod._Global_.JQuery
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,11 +31,11 @@ trait dxTabPanelOptions extends dxMultiViewOptions[dxTabPanel] {
   @JSName("items")
   var items_dxTabPanelOptions: js.UndefOr[js.Array[String | dxTabPanelItem | _]] = js.native
   /** A function that is executed when a tab is clicked or tapped. */
-  var onTitleClick: js.UndefOr[(js.Function1[/* e */ AnonElementEventItemData, _]) | String] = js.native
+  var onTitleClick: js.UndefOr[(js.Function1[/* e */ ElementEventItemData, _]) | String] = js.native
   /** A function that is executed when a tab has been held for a specified period. */
-  var onTitleHold: js.UndefOr[js.Function1[/* e */ AnonElementEventItemData, _]] = js.native
+  var onTitleHold: js.UndefOr[js.Function1[/* e */ ElementEventItemData, _]] = js.native
   /** A function that is executed after a tab is rendered. */
-  var onTitleRendered: js.UndefOr[js.Function1[/* e */ AnonElementItemDataItemElement, _]] = js.native
+  var onTitleRendered: js.UndefOr[js.Function1[/* e */ ElementItemDataItemElement, _]] = js.native
   /** Specifies whether to repaint only those elements whose data changed. */
   var repaintChangesOnly: js.UndefOr[Boolean] = js.native
   /** A Boolean value specifying if tabs in the title are scrolled by content. */
@@ -116,13 +116,13 @@ object dxTabPanelOptions {
         ret
     }
     @scala.inline
-    def withOnTitleClickFunction1(value: /* e */ AnonElementEventItemData => _): Self = {
+    def withOnTitleClickFunction1(value: /* e */ ElementEventItemData => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTitleClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnTitleClick(value: (js.Function1[/* e */ AnonElementEventItemData, _]) | String): Self = {
+    def withOnTitleClick(value: (js.Function1[/* e */ ElementEventItemData, _]) | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTitleClick")(value.asInstanceOf[js.Any])
         ret
@@ -134,7 +134,7 @@ object dxTabPanelOptions {
         ret
     }
     @scala.inline
-    def withOnTitleHold(value: /* e */ AnonElementEventItemData => _): Self = {
+    def withOnTitleHold(value: /* e */ ElementEventItemData => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTitleHold")(js.Any.fromFunction1(value))
         ret
@@ -146,7 +146,7 @@ object dxTabPanelOptions {
         ret
     }
     @scala.inline
-    def withOnTitleRendered(value: /* e */ AnonElementItemDataItemElement => _): Self = {
+    def withOnTitleRendered(value: /* e */ ElementItemDataItemElement => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTitleRendered")(js.Any.fromFunction1(value))
         ret

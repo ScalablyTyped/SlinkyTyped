@@ -1,10 +1,10 @@
 package typingsSlinky.plotlyJs.mod
 
-import typingsSlinky.plotlyJs.PartialAnnotationsAlign
-import typingsSlinky.plotlyJs.PartialCamera
-import typingsSlinky.plotlyJs.PartialDomain
-import typingsSlinky.plotlyJs.PartialPoint
-import typingsSlinky.plotlyJs.PartialSceneAxisBackgroundcolor
+import typingsSlinky.plotlyJs.anon.PartialAnnotationsAlign
+import typingsSlinky.plotlyJs.anon.PartialCamera
+import typingsSlinky.plotlyJs.anon.PartialDomain
+import typingsSlinky.plotlyJs.anon.PartialPoint
+import typingsSlinky.plotlyJs.anon.PartialSceneAxisBackgroundcolor
 import typingsSlinky.plotlyJs.plotlyJsBooleans.`false`
 import typingsSlinky.plotlyJs.plotlyJsStrings.auto
 import typingsSlinky.plotlyJs.plotlyJsStrings.closest

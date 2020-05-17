@@ -1,20 +1,20 @@
 package typingsSlinky.vsoNodeApi.notificationInterfacesMod
 
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonAliasMemberGroupRole
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonAlwaysReturnBasicInformation
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonBoth
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonCanOptOut
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonDateTime
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonDelayRangeStart
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonDeliveryPreferencesEditable
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonDisabledAsDuplicateOfDefault
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonEachMember
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonIncludeEventTypeInformation
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonIncludeFields
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonIncludeRemoteServices
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonNotFound
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonSuspendUnprocessed
-import typingsSlinky.vsoNodeApi.AnonEnumValuesAnonView
+import typingsSlinky.vsoNodeApi.anon.EnumValuesAliasMemberGroupRole
+import typingsSlinky.vsoNodeApi.anon.EnumValuesAlwaysReturnBasicInformation
+import typingsSlinky.vsoNodeApi.anon.EnumValuesBoth
+import typingsSlinky.vsoNodeApi.anon.EnumValuesCanOptOut
+import typingsSlinky.vsoNodeApi.anon.EnumValuesDateTime
+import typingsSlinky.vsoNodeApi.anon.EnumValuesDelayRangeStart
+import typingsSlinky.vsoNodeApi.anon.EnumValuesDeliveryPreferencesEditable
+import typingsSlinky.vsoNodeApi.anon.EnumValuesDisabledAsDuplicateOfDefault
+import typingsSlinky.vsoNodeApi.anon.EnumValuesEachMember
+import typingsSlinky.vsoNodeApi.anon.EnumValuesIncludeEventTypeInformation
+import typingsSlinky.vsoNodeApi.anon.EnumValuesIncludeFields
+import typingsSlinky.vsoNodeApi.anon.EnumValuesIncludeRemoteServices
+import typingsSlinky.vsoNodeApi.anon.EnumValuesNotFound
+import typingsSlinky.vsoNodeApi.anon.EnumValuesSuspendUnprocessed
+import typingsSlinky.vsoNodeApi.anon.EnumValuesView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,38 +24,38 @@ import scala.scalajs.js.annotation._
 object TypeInfo extends js.Object {
   var ActorNotificationReason: js.Any = js.native
   var BatchNotificationOperation: js.Any = js.native
-  var EvaluationOperationStatus: AnonEnumValuesAnonNotFound = js.native
-  var EventPublisherQueryFlags: AnonEnumValuesAnonIncludeRemoteServices = js.native
-  var EventTypeQueryFlags: AnonEnumValuesAnonIncludeFields = js.native
+  var EvaluationOperationStatus: EnumValuesNotFound = js.native
+  var EventPublisherQueryFlags: EnumValuesIncludeRemoteServices = js.native
+  var EventTypeQueryFlags: EnumValuesIncludeFields = js.native
   var NotificationEventField: js.Any = js.native
   var NotificationEventFieldType: js.Any = js.native
   var NotificationEventType: js.Any = js.native
-  var NotificationOperation: AnonEnumValuesAnonSuspendUnprocessed = js.native
+  var NotificationOperation: EnumValuesSuspendUnprocessed = js.native
   var NotificationReason: js.Any = js.native
-  var NotificationReasonType: AnonEnumValuesAnonAliasMemberGroupRole = js.native
+  var NotificationReasonType: EnumValuesAliasMemberGroupRole = js.native
   var NotificationStatistic: js.Any = js.native
-  var NotificationStatisticType: AnonEnumValuesAnonDelayRangeStart = js.native
+  var NotificationStatisticType: EnumValuesDelayRangeStart = js.native
   var NotificationStatisticsQuery: js.Any = js.native
   var NotificationStatisticsQueryConditions: js.Any = js.native
   var NotificationSubscriber: js.Any = js.native
-  var NotificationSubscriberDeliveryPreference: AnonEnumValuesAnonEachMember = js.native
+  var NotificationSubscriberDeliveryPreference: EnumValuesEachMember = js.native
   var NotificationSubscriberUpdateParameters: js.Any = js.native
   var NotificationSubscription: js.Any = js.native
   var NotificationSubscriptionTemplate: js.Any = js.native
   var NotificationSubscriptionUpdateParameters: js.Any = js.native
   var NotificationTracing: js.Any = js.native
-  var SubscriberFlags: AnonEnumValuesAnonDeliveryPreferencesEditable = js.native
+  var SubscriberFlags: EnumValuesDeliveryPreferencesEditable = js.native
   var SubscriptionDiagnostics: js.Any = js.native
   var SubscriptionEvaluationRequest: js.Any = js.native
   var SubscriptionEvaluationResult: js.Any = js.native
-  var SubscriptionFieldType: AnonEnumValuesAnonDateTime = js.native
-  var SubscriptionFlags: AnonEnumValuesAnonCanOptOut = js.native
-  var SubscriptionPermissions: AnonEnumValuesAnonView = js.native
+  var SubscriptionFieldType: EnumValuesDateTime = js.native
+  var SubscriptionFlags: EnumValuesCanOptOut = js.native
+  var SubscriptionPermissions: EnumValuesView = js.native
   var SubscriptionQuery: js.Any = js.native
   var SubscriptionQueryCondition: js.Any = js.native
-  var SubscriptionQueryFlags: AnonEnumValuesAnonAlwaysReturnBasicInformation = js.native
-  var SubscriptionStatus: AnonEnumValuesAnonDisabledAsDuplicateOfDefault = js.native
-  var SubscriptionTemplateQueryFlags: AnonEnumValuesAnonIncludeEventTypeInformation = js.native
-  var SubscriptionTemplateType: AnonEnumValuesAnonBoth = js.native
+  var SubscriptionQueryFlags: EnumValuesAlwaysReturnBasicInformation = js.native
+  var SubscriptionStatus: EnumValuesDisabledAsDuplicateOfDefault = js.native
+  var SubscriptionTemplateQueryFlags: EnumValuesIncludeEventTypeInformation = js.native
+  var SubscriptionTemplateType: EnumValuesBoth = js.native
 }
 

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait UIEventInit extends EventInit {
   var detail: js.UndefOr[Double] = js.native
-  var view: js.UndefOr[Window_ | Null] = js.native
+  var view: js.UndefOr[org.scalajs.dom.raw.Window | Null] = js.native
 }
 
 object UIEventInit {
@@ -35,7 +35,7 @@ object UIEventInit {
         ret
     }
     @scala.inline
-    def withView(value: Window_): Self = {
+    def withView(value: org.scalajs.dom.raw.Window): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("view")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientS3Browser.typesPutBucketAccelerateConfigurationInputMod
 
-import typingsSlinky.awsSdkClientS3Browser.inputTypesUnionMod._InputTypesUnion
+import typingsSlinky.awsSdkClientS3Browser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientS3Browser.typesAccelerateConfigurationMod.AccelerateConfiguration
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.httpMod.BrowserHttpOptions
@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PutBucketAccelerateConfigurationInput extends _InputTypesUnion {
+trait PutBucketAccelerateConfigurationInput extends InputTypesUnion {
   /**
     * An object that may be queried to determine if the underlying operation has been aborted.
     *

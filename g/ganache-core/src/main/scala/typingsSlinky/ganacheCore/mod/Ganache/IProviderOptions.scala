@@ -1,6 +1,6 @@
 package typingsSlinky.ganacheCore.mod.Ganache
 
-import typingsSlinky.ganacheCore.AnonLog
+import typingsSlinky.ganacheCore.anon.Log
 import typingsSlinky.ganacheCore.ganacheCoreStrings.byzantium
 import typingsSlinky.ganacheCore.ganacheCoreStrings.constantinople
 import typingsSlinky.ganacheCore.ganacheCoreStrings.istanbul
@@ -26,7 +26,7 @@ trait IProviderOptions extends js.Object {
   var hardfork: js.UndefOr[byzantium | constantinople | petersburg | istanbul | muirGlacier] = js.native
   var hd_path: js.UndefOr[String] = js.native
   var locked: js.UndefOr[Boolean] = js.native
-  var logger: js.UndefOr[AnonLog] = js.native
+  var logger: js.UndefOr[Log] = js.native
   var mnemonic: js.UndefOr[String] = js.native
   var networkId: js.UndefOr[Double] = js.native
   var network_id: js.UndefOr[Double] = js.native
@@ -221,7 +221,7 @@ object IProviderOptions {
         ret
     }
     @scala.inline
-    def withLogger(value: AnonLog): Self = {
+    def withLogger(value: Log): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("logger")(value.asInstanceOf[js.Any])
         ret

@@ -6,6 +6,7 @@ import org.scalablytyped.runtime.Instantiable2
 import org.scalablytyped.runtime.Instantiable5
 import org.scalablytyped.runtime.Instantiable7
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.highcharts.mod.AnimationOptionsObject
 import typingsSlinky.highcharts.mod.AnnotationsOptions
@@ -35,7 +36,6 @@ import typingsSlinky.highcharts.mod.TimeOptions
 import typingsSlinky.highcharts.mod.Time_
 import typingsSlinky.highcharts.mod.TooltipOptions
 import typingsSlinky.highcharts.mod.WrapProceedFunction
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -451,17 +451,16 @@ object Highcharts extends js.Object {
   def error(code: Double, stop: Boolean): Unit = js.native
   def error(code: Double, stop: Boolean, chart: Chart_): Unit = js.native
   def error(code: Double, stop: Boolean, chart: Chart_, params: Dictionary[String]): Unit = js.native
-  def extend[T](a: T, b: js.Object): T = js.native
-  def extend[T](a: js.UndefOr[scala.Nothing], b: js.Object): T = js.native
+  def extend[T](a: js.UndefOr[T], b: js.Object): T = js.native
   def extendClass[T](parent: Class[T], members: Dictionary[_]): Class[T] = js.native
   def find[T](arr: js.Array[T], callback: js.Function): js.UndefOr[T] = js.native
   def fireEvent[T](el: T, `type`: String): Unit = js.native
   def fireEvent[T](el: T, `type`: String, eventArguments: Dictionary[_]): Unit = js.native
   def fireEvent[T](el: T, `type`: String, eventArguments: Dictionary[_], defaultFunction: js.Function): Unit = js.native
   def fireEvent[T](el: T, `type`: String, eventArguments: Dictionary[_], defaultFunction: EventCallbackFunction[T]): Unit = js.native
-  def fireEvent[T](el: T, `type`: String, eventArguments: Event_): Unit = js.native
-  def fireEvent[T](el: T, `type`: String, eventArguments: Event_, defaultFunction: js.Function): Unit = js.native
-  def fireEvent[T](el: T, `type`: String, eventArguments: Event_, defaultFunction: EventCallbackFunction[T]): Unit = js.native
+  def fireEvent[T](el: T, `type`: String, eventArguments: Event): Unit = js.native
+  def fireEvent[T](el: T, `type`: String, eventArguments: Event, defaultFunction: js.Function): Unit = js.native
+  def fireEvent[T](el: T, `type`: String, eventArguments: Event, defaultFunction: EventCallbackFunction[T]): Unit = js.native
   def format(str: String, ctx: js.Any): String = js.native
   def format(str: String, ctx: js.Any, time: Time_): String = js.native
   def formatSingle(format: String, `val`: js.Any): String = js.native
@@ -483,10 +482,10 @@ object Highcharts extends js.Object {
   def isString(s: js.Any): Boolean = js.native
   def keys(obj: js.Any): js.Array[String] = js.native
   def map(arr: js.Array[_], fn: js.Function): js.Array[_] = js.native
+  def merge[T](): T = js.native
   def merge[T](a: T, n: js.UndefOr[js.Object]*): T = js.native
+  def merge[T](extend: Boolean): T = js.native
   def merge[T](extend: Boolean, a: T, n: js.UndefOr[js.Object]*): T = js.native
-  def merge[T](extend: Boolean, n: js.UndefOr[js.Object]*): T = js.native
-  def merge[T](n: js.UndefOr[js.Object]*): T = js.native
   def normalizeTickInterval(interval: Double): Double = js.native
   def normalizeTickInterval(interval: Double, multiples: js.Array[_]): Double = js.native
   def normalizeTickInterval(interval: Double, multiples: js.Array[_], magnitude: Double): Double = js.native
@@ -535,9 +534,7 @@ object Highcharts extends js.Object {
     props: Dictionary[_],
     pointProps: Dictionary[_]
   ): typingsSlinky.highcharts.mod.Series = js.native
-  def setAnimation(animation: js.UndefOr[scala.Nothing], chart: Chart_): Unit = js.native
-  def setAnimation(animation: Boolean, chart: Chart_): Unit = js.native
-  def setAnimation(animation: AnimationOptionsObject, chart: Chart_): Unit = js.native
+  def setAnimation(animation: js.UndefOr[AnimationOptionsObject | Boolean], chart: Chart_): Unit = js.native
   def setOptions(options: Options): Options = js.native
   def some(arr: js.Array[_], fn: js.Function, ctx: js.Any): Boolean = js.native
   def splat(obj: js.Any): js.Array[_] = js.native

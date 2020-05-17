@@ -1,11 +1,11 @@
 package typingsSlinky.greasemonkey.GM
 
+import org.scalajs.dom.raw.Document
 import typingsSlinky.greasemonkey.greasemonkeyBooleans.`false`
 import typingsSlinky.greasemonkey.greasemonkeyNumbers.`1`
 import typingsSlinky.greasemonkey.greasemonkeyNumbers.`2`
 import typingsSlinky.greasemonkey.greasemonkeyNumbers.`3`
 import typingsSlinky.greasemonkey.greasemonkeyNumbers.`4`
-import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait Response[TContext] extends js.Object {
   val response: js.Any = js.native
   val responseHeaders: String = js.native
   val responseText: String = js.native
-  val responseXML: Document_ | `false` = js.native
+  val responseXML: Document | `false` = js.native
   val status: Double = js.native
   val statusText: String = js.native
 }
@@ -32,7 +32,7 @@ object Response {
     response: js.Any,
     responseHeaders: String,
     responseText: String,
-    responseXML: Document_ | `false`,
+    responseXML: Document | `false`,
     status: Double,
     statusText: String
   ): Response[TContext] = {
@@ -76,7 +76,13 @@ object Response {
         ret
     }
     @scala.inline
-    def withResponseXML(value: Document_ | `false`): Self[TContext] = {
+    def withResponseXMLDocument(value: Document): Self[TContext] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("responseXML")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResponseXML(value: Document | `false`): Self[TContext] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("responseXML")(value.asInstanceOf[js.Any])
         ret

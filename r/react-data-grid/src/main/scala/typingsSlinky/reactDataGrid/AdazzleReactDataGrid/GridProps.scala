@@ -2,8 +2,8 @@ package typingsSlinky.reactDataGrid.AdazzleReactDataGrid
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactDataGrid.AnonEnableShiftSelect
-import typingsSlinky.reactDataGrid.AnonIdx
+import typingsSlinky.reactDataGrid.anon.EnableShiftSelect
+import typingsSlinky.reactDataGrid.anon.Idx
 import typingsSlinky.reactDataGrid.reactDataGridStrings.ASC
 import typingsSlinky.reactDataGrid.reactDataGridStrings.DESC
 import typingsSlinky.reactDataGrid.reactDataGridStrings.NONE
@@ -107,7 +107,7 @@ trait GridProps[T] extends js.Object {
     * Called when a cell is deselected.
     * @param coordinates The row and column indices of the deselected cell.
     */
-  var onCellDeSelected: js.UndefOr[js.Function1[/* coordinates */ AnonIdx, Unit]] = js.native
+  var onCellDeSelected: js.UndefOr[js.Function1[/* coordinates */ Idx, Unit]] = js.native
   /**
     * Invoked when the user clicks on one cell to expand it.
     * @param e Information about the event
@@ -117,7 +117,7 @@ trait GridProps[T] extends js.Object {
     * Called when a cell is selected.
     * @param coordinates The row and column indices of the selected cell.
     */
-  var onCellSelected: js.UndefOr[js.Function1[/* coordinates */ AnonIdx, Unit]] = js.native
+  var onCellSelected: js.UndefOr[js.Function1[/* coordinates */ Idx, Unit]] = js.native
   /**
     * Invoked when the user pulls down the drag handle of an editable cell.
     * Should update the values of the selected cells.
@@ -220,7 +220,7 @@ trait GridProps[T] extends js.Object {
   /**
     * Options object for selecting rows
     */
-  var rowSelection: js.UndefOr[AnonEnableShiftSelect[T]] = js.native
+  var rowSelection: js.UndefOr[EnableShiftSelect[T]] = js.native
   /**
     * The total number of rows to render. Required.
     */
@@ -492,7 +492,7 @@ object GridProps {
         ret
     }
     @scala.inline
-    def withOnCellDeSelected(value: /* coordinates */ AnonIdx => Unit): Self[T] = {
+    def withOnCellDeSelected(value: /* coordinates */ Idx => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCellDeSelected")(js.Any.fromFunction1(value))
         ret
@@ -516,7 +516,7 @@ object GridProps {
         ret
     }
     @scala.inline
-    def withOnCellSelected(value: /* coordinates */ AnonIdx => Unit): Self[T] = {
+    def withOnCellSelected(value: /* coordinates */ Idx => Unit): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCellSelected")(js.Any.fromFunction1(value))
         ret
@@ -774,7 +774,7 @@ object GridProps {
         ret
     }
     @scala.inline
-    def withRowSelection(value: AnonEnableShiftSelect[T]): Self[T] = {
+    def withRowSelection(value: EnableShiftSelect[T]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("rowSelection")(value.asInstanceOf[js.Any])
         ret

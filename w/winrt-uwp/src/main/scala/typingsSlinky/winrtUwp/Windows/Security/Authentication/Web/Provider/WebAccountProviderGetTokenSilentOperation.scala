@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents a get token silently operation. */
-@JSGlobal("Windows.Security.Authentication.Web.Provider.WebAccountProviderGetTokenSilentOperation")
 @js.native
-abstract class WebAccountProviderGetTokenSilentOperation () extends js.Object {
+trait WebAccountProviderGetTokenSilentOperation extends js.Object {
   /** Gets or sets the cache expiration time. */
   var cacheExpirationTime: js.Date = js.native
   /** Gets the kind of web account provider operation. */

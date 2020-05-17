@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientPubsub.gapi.client.pubsub
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientPubsub.AnonAccesstoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientPubsub.anon.Accesstoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,12 +13,12 @@ trait SnapshotsResource extends js.Object {
     * Returns an empty policy if the resource exists and does not have a policy
     * set.
     */
-  def getIamPolicy(request: AnonAccesstoken): Request_[Policy] = js.native
+  def getIamPolicy(request: Accesstoken): Request[Policy] = js.native
   /**
     * Sets the access control policy on the specified resource. Replaces any
     * existing policy.
     */
-  def setIamPolicy(request: AnonAccesstoken): Request_[Policy] = js.native
+  def setIamPolicy(request: Accesstoken): Request[Policy] = js.native
   /**
     * Returns permissions that a caller has on the specified resource.
     * If the resource does not exist, this will return an empty set of
@@ -28,15 +28,15 @@ trait SnapshotsResource extends js.Object {
     * UIs and command-line tools, not for authorization checking. This operation
     * may "fail open" without warning.
     */
-  def testIamPermissions(request: AnonAccesstoken): Request_[TestIamPermissionsResponse] = js.native
+  def testIamPermissions(request: Accesstoken): Request[TestIamPermissionsResponse] = js.native
 }
 
 object SnapshotsResource {
   @scala.inline
   def apply(
-    getIamPolicy: AnonAccesstoken => Request_[Policy],
-    setIamPolicy: AnonAccesstoken => Request_[Policy],
-    testIamPermissions: AnonAccesstoken => Request_[TestIamPermissionsResponse]
+    getIamPolicy: Accesstoken => Request[Policy],
+    setIamPolicy: Accesstoken => Request[Policy],
+    testIamPermissions: Accesstoken => Request[TestIamPermissionsResponse]
   ): SnapshotsResource = {
     val __obj = js.Dynamic.literal(getIamPolicy = js.Any.fromFunction1(getIamPolicy), setIamPolicy = js.Any.fromFunction1(setIamPolicy), testIamPermissions = js.Any.fromFunction1(testIamPermissions))
     __obj.asInstanceOf[SnapshotsResource]
@@ -48,19 +48,19 @@ object SnapshotsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGetIamPolicy(value: AnonAccesstoken => Request_[Policy]): Self = {
+    def withGetIamPolicy(value: Accesstoken => Request[Policy]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getIamPolicy")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withSetIamPolicy(value: AnonAccesstoken => Request_[Policy]): Self = {
+    def withSetIamPolicy(value: Accesstoken => Request[Policy]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("setIamPolicy")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withTestIamPermissions(value: AnonAccesstoken => Request_[TestIamPermissionsResponse]): Self = {
+    def withTestIamPermissions(value: Accesstoken => Request[TestIamPermissionsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("testIamPermissions")(js.Any.fromFunction1(value))
         ret

@@ -1,10 +1,10 @@
 package typingsSlinky.aliOss.mod
 
-import typingsSlinky.aliOss.AnonContent
-import typingsSlinky.aliOss.AnonData
-import typingsSlinky.aliOss.AnonDataRes
-import typingsSlinky.aliOss.AnonExpires
-import typingsSlinky.aliOss.AnonRes
+import typingsSlinky.aliOss.anon.Content
+import typingsSlinky.aliOss.anon.Data
+import typingsSlinky.aliOss.anon.DataRes
+import typingsSlinky.aliOss.anon.Expires
+import typingsSlinky.aliOss.anon.Res
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,29 +21,29 @@ class ImageClient protected () extends js.Object {
   /**
     * Get an image from the image channel.
     */
-  def get(name: String): js.Promise[AnonContent] = js.native
-  def get(name: String, file: js.Any): js.Promise[AnonContent] = js.native
-  def get(name: String, file: js.Any, options: ImageGetOptions): js.Promise[AnonContent] = js.native
+  def get(name: String): js.Promise[Content] = js.native
+  def get(name: String, file: js.Any): js.Promise[Content] = js.native
+  def get(name: String, file: js.Any, options: ImageGetOptions): js.Promise[Content] = js.native
   /**
     * Get a image exif info by image object name from the image channel.
     */
-  def getExif(name: String): js.Promise[AnonData] = js.native
-  def getExif(name: String, options: RequestOptions): js.Promise[AnonData] = js.native
+  def getExif(name: String): js.Promise[Data] = js.native
+  def getExif(name: String, options: RequestOptions): js.Promise[Data] = js.native
   /**
     * Get a image info and exif info by image object name from the image channel.
     */
-  def getInfo(name: String): js.Promise[AnonData] = js.native
-  def getInfo(name: String, options: RequestOptions): js.Promise[AnonData] = js.native
+  def getInfo(name: String): js.Promise[Data] = js.native
+  def getInfo(name: String, options: RequestOptions): js.Promise[Data] = js.native
   /**
     * Get an image read stream.
     */
-  def getStream(name: String): js.Promise[AnonRes] = js.native
-  def getStream(name: String, options: ImageGetOptions): js.Promise[AnonRes] = js.native
+  def getStream(name: String): js.Promise[Res] = js.native
+  def getStream(name: String, options: ImageGetOptions): js.Promise[Res] = js.native
   /**
     * Get a style by name from the image channel.
     */
-  def getStyle(name: String): js.Promise[AnonDataRes] = js.native
-  def getStyle(name: String, options: RequestOptions): js.Promise[AnonDataRes] = js.native
+  def getStyle(name: String): js.Promise[DataRes] = js.native
+  def getStyle(name: String, options: RequestOptions): js.Promise[DataRes] = js.native
   /**
     * Get all styles from the image channel.
     */
@@ -52,12 +52,12 @@ class ImageClient protected () extends js.Object {
   /**
     * todo
     */
-  def putStyle(name: String, style: String): js.Promise[AnonData] = js.native
-  def putStyle(name: String, style: String, options: RequestOptions): js.Promise[AnonData] = js.native
+  def putStyle(name: String, style: String): js.Promise[Data] = js.native
+  def putStyle(name: String, style: String, options: RequestOptions): js.Promise[Data] = js.native
   /**
     * Create a signature url for directly download.
     */
   def signatureUrl(name: String): String = js.native
-  def signatureUrl(name: String, options: AnonExpires): String = js.native
+  def signatureUrl(name: String, options: Expires): String = js.native
 }
 

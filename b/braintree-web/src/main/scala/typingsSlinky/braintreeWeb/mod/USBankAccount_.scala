@@ -1,7 +1,7 @@
 package typingsSlinky.braintreeWeb.mod
 
-import typingsSlinky.braintreeWeb.AnonBankDetails
-import typingsSlinky.braintreeWeb.AnonClient
+import typingsSlinky.braintreeWeb.anon.BankDetails
+import typingsSlinky.braintreeWeb.anon.Client
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait USBankAccount_ extends js.Object {
     * @param {callback} callback The second argument, `data`, is the {@link USBankAccount} instance.
     * @returns {void}
     */
-  def create(options: AnonClient, callback: callback): Unit = js.native
+  def create(options: Client, callback: callback): Unit = js.native
   /**
     * Cleanly tear down anything set up by {@link module:braintree-web/us-bank-account.create|create}.
     * @public
@@ -109,6 +109,6 @@ trait USBankAccount_ extends js.Object {
     *   });
     * });
     */
-  def tokenize(options: AnonBankDetails, callback: callback): Unit = js.native
+  def tokenize(options: BankDetails, callback: callback): Unit = js.native
 }
 

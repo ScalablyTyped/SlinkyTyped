@@ -1,16 +1,16 @@
 package typingsSlinky.plotlyJs.mod
 
-import typingsSlinky.plotlyJs.AnonEnd
-import typingsSlinky.plotlyJs.PartialDataTitle
-import typingsSlinky.plotlyJs.PartialDelta
-import typingsSlinky.plotlyJs.PartialFont
-import typingsSlinky.plotlyJs.PartialGauge
-import typingsSlinky.plotlyJs.PartialHoverLabel
-import typingsSlinky.plotlyJs.PartialPlotMarker
-import typingsSlinky.plotlyJs.PartialPlotNumber
-import typingsSlinky.plotlyJs.PartialScatterLine
-import typingsSlinky.plotlyJs.PartialScatterMarkerLine
-import typingsSlinky.plotlyJs.Partialrowsnumbercolumnsn
+import typingsSlinky.plotlyJs.anon.End
+import typingsSlinky.plotlyJs.anon.PartialDataTitle
+import typingsSlinky.plotlyJs.anon.PartialDelta
+import typingsSlinky.plotlyJs.anon.PartialFont
+import typingsSlinky.plotlyJs.anon.PartialGauge
+import typingsSlinky.plotlyJs.anon.PartialHoverLabel
+import typingsSlinky.plotlyJs.anon.PartialPlotMarker
+import typingsSlinky.plotlyJs.anon.PartialPlotNumber
+import typingsSlinky.plotlyJs.anon.PartialScatterLine
+import typingsSlinky.plotlyJs.anon.PartialScatterMarkerLine
+import typingsSlinky.plotlyJs.anon.Partialrowsnumbercolumnsn
 import typingsSlinky.plotlyJs.plotlyJsBooleans.`false`
 import typingsSlinky.plotlyJs.plotlyJsStrings.`bottom center`
 import typingsSlinky.plotlyJs.plotlyJsStrings.`bottom left`
@@ -211,7 +211,7 @@ trait PlotData extends js.Object {
   var width: Double | js.Array[Double] = js.native
   var x: (js.Array[js.Array[Datum] | Datum]) | TypedArray = js.native
   var xaxis: String = js.native
-  var xbins: AnonEnd = js.native
+  var xbins: End = js.native
   var xgap: Double = js.native
   var xy: js.typedarray.Float32Array = js.native
   var y: (js.Array[js.Array[Datum] | Datum]) | TypedArray = js.native
@@ -297,7 +297,7 @@ object PlotData {
     width: Double | js.Array[Double],
     x: (js.Array[js.Array[Datum] | Datum]) | TypedArray,
     xaxis: String,
-    xbins: AnonEnd,
+    xbins: End,
     xgap: Double,
     xy: js.typedarray.Float32Array,
     y: (js.Array[js.Array[Datum] | Datum]) | TypedArray,
@@ -426,7 +426,7 @@ object PlotData {
     }
     @scala.inline
     def withHoverinfo(
-      value: all | name | none | skip | text | x | xPlussigntext | xPlussignname | xPlussigny | xPlussignyPlussigntext | xPlussignyPlussignname | xPlussignyPlussignz | xPlussignyPlussignzPlussigntext | xPlussignyPlussignzPlussignname | yPlussignname | yPlussignx | yPlussigntext | yPlussignxPlussigntext | yPlussignxPlussignname | yPlussignz | yPlussignzPlussigntext | yPlussignzPlussignname | yPlussignxPlussignz | yPlussignxPlussignzPlussigntext | yPlussignxPlussignzPlussignname | zPlussignx | zPlussignxPlussigntext | zPlussignxPlussignname | zPlussignyPlussignx | zPlussignyPlussignxPlussigntext | zPlussignyPlussignxPlussignname | zPlussignxPlussigny | zPlussignxPlussignyPlussigntext | zPlussignxPlussignyPlussignname
+      value: all | name | none | skip | text | typingsSlinky.plotlyJs.plotlyJsStrings.x | xPlussigntext | xPlussignname | xPlussigny | xPlussignyPlussigntext | xPlussignyPlussignname | xPlussignyPlussignz | xPlussignyPlussignzPlussigntext | xPlussignyPlussignzPlussignname | yPlussignname | yPlussignx | yPlussigntext | yPlussignxPlussigntext | yPlussignxPlussignname | yPlussignz | yPlussignzPlussigntext | yPlussignzPlussignname | yPlussignxPlussignz | yPlussignxPlussignzPlussigntext | yPlussignxPlussignzPlussignname | zPlussignx | zPlussignxPlussigntext | zPlussignxPlussignname | zPlussignyPlussignx | zPlussignyPlussignxPlussigntext | zPlussignyPlussignxPlussignname | zPlussignxPlussigny | zPlussignxPlussignyPlussigntext | zPlussignxPlussignyPlussignname
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hoverinfo")(value.asInstanceOf[js.Any])
@@ -841,7 +841,7 @@ object PlotData {
         ret
     }
     @scala.inline
-    def withXbins(value: AnonEnd): Self = {
+    def withXbins(value: End): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("xbins")(value.asInstanceOf[js.Any])
         ret

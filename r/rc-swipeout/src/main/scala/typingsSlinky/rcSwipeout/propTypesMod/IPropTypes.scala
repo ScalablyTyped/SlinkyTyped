@@ -1,6 +1,6 @@
 package typingsSlinky.rcSwipeout.propTypesMod
 
-import typingsSlinky.rcSwipeout.AnonClassName
+import typingsSlinky.rcSwipeout.anon.ClassName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,11 +9,11 @@ import scala.scalajs.js.annotation._
 trait IPropTypes extends js.Object {
   var autoClose: js.UndefOr[Boolean] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
-  var left: js.UndefOr[js.Array[AnonClassName]] = js.native
+  var left: js.UndefOr[js.Array[ClassName]] = js.native
   var onClose: js.UndefOr[js.Function0[Unit]] = js.native
   var onOpen: js.UndefOr[js.Function0[Unit]] = js.native
   var prefixCls: js.UndefOr[String] = js.native
-  var right: js.UndefOr[js.Array[AnonClassName]] = js.native
+  var right: js.UndefOr[js.Array[ClassName]] = js.native
   var style: js.UndefOr[js.Any] = js.native
 }
 
@@ -54,7 +54,7 @@ object IPropTypes {
         ret
     }
     @scala.inline
-    def withLeft(value: js.Array[AnonClassName]): Self = {
+    def withLeft(value: js.Array[ClassName]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("left")(value.asInstanceOf[js.Any])
         ret
@@ -102,7 +102,7 @@ object IPropTypes {
         ret
     }
     @scala.inline
-    def withRight(value: js.Array[AnonClassName]): Self = {
+    def withRight(value: js.Array[ClassName]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("right")(value.asInstanceOf[js.Any])
         ret

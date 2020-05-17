@@ -1,6 +1,5 @@
 package typingsSlinky.officeJsPreview.Excel
 
-import typingsSlinky.officeJsPreview.AnonExpand
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.ChartUpdateData
@@ -8,6 +7,7 @@ import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientResult
 import typingsSlinky.officeJsPreview.OfficeExtension.EventHandlers
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Auto
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Columns
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Fill
@@ -28,9 +28,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.Chart")
 @js.native
-class Chart () extends ClientObject {
+trait Chart extends ClientObject {
   /**
     *
     * Represents chart axes. Read-only.
@@ -263,7 +262,7 @@ class Chart () extends ClientObject {
     */
   def load(): Chart = js.native
   def load(options: ChartLoadOptions): Chart = js.native
-  def load(propertyNamesAndPaths: AnonExpand): Chart = js.native
+  def load(propertyNamesAndPaths: Expand): Chart = js.native
   def load(propertyNames: String): Chart = js.native
   def load(propertyNames: js.Array[String]): Chart = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

@@ -11,8 +11,8 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.reactDayPicker.AnonNextMonth
-import typingsSlinky.reactDayPicker.PartialModifiers
+import typingsSlinky.reactDayPicker.anon.NextMonth
+import typingsSlinky.reactDayPicker.anon.PartialModifiers
 import typingsSlinky.reactDayPicker.commonMod.ClassNames
 import typingsSlinky.reactDayPicker.commonMod.DayModifiers
 import typingsSlinky.reactDayPicker.commonMod.Modifier
@@ -34,7 +34,7 @@ trait DayPickerProps extends js.Object {
   var fixedWeeks: js.UndefOr[Boolean] = js.native
   var fromMonth: js.UndefOr[js.Date] = js.native
   var initialMonth: js.UndefOr[js.Date] = js.native
-  var labels: js.UndefOr[AnonNextMonth] = js.native
+  var labels: js.UndefOr[NextMonth] = js.native
   var locale: js.UndefOr[String] = js.native
   var localeUtils: js.UndefOr[
     /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LocaleUtils */ js.Any
@@ -342,7 +342,7 @@ object DayPickerProps {
         ret
     }
     @scala.inline
-    def withLabels(value: AnonNextMonth): Self = {
+    def withLabels(value: NextMonth): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("labels")(value.asInstanceOf[js.Any])
         ret

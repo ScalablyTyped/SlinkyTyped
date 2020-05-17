@@ -1,7 +1,7 @@
 package typingsSlinky.reactSortablePane.paneMod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactSortablePane.AnonClassName
+import typingsSlinky.reactSortablePane.anon.ClassName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,6 +19,6 @@ class Pane ()
 @JSImport("react-sortable-pane/lib/pane", "Pane")
 @js.native
 object Pane extends js.Object {
-  var defaultProps: AnonClassName = js.native
+  var defaultProps: ClassName = js.native
 }
 

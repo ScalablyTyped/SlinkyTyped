@@ -1,14 +1,12 @@
 package typingsSlinky.kendoUi.kendo.dataviz.diagram
 
-import typingsSlinky.kendoUi.kendo.Observable_
+import typingsSlinky.kendoUi.kendo.Observable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("kendo.dataviz.diagram.Image")
 @js.native
-class Image () extends Observable_ {
-  def this(options: ImageOptions) = this()
+trait Image extends Observable {
   var drawingElement: typingsSlinky.kendoUi.kendo.drawing.Image = js.native
   var options: ImageOptions = js.native
   def position(): Unit = js.native

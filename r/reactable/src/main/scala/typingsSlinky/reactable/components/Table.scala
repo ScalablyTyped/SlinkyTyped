@@ -2,7 +2,7 @@ package typingsSlinky.reactable.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.reactable.AnonColumn
+import typingsSlinky.reactable.anon.Column
 import typingsSlinky.reactable.mod.ColumnsType
 import typingsSlinky.reactable.mod.TableComponentProperties
 import scala.scalajs.js
@@ -27,7 +27,7 @@ object Table {
     @scala.inline
     def data(value: js.Array[T]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
-    def defaultSort(value: AnonColumn): this.type = set("defaultSort", value.asInstanceOf[js.Any])
+    def defaultSort(value: Column): this.type = set("defaultSort", value.asInstanceOf[js.Any])
     @scala.inline
     def filterBy(value: String): this.type = set("filterBy", value.asInstanceOf[js.Any])
     @scala.inline

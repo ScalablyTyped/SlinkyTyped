@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IHistoryRequestMsg
   extends IShellMessage[history_request]
-     with _Message {
+     with Message {
   @JSName("content")
   var content_IHistoryRequestMsg: IHistoryRequestRange | IHistoryRequestSearch | IHistoryRequestTail = js.native
 }

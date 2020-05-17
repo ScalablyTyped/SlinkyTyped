@@ -2,7 +2,7 @@ package typingsSlinky.braftEditor.mod
 
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.braftEditor.AnonFamily
+import typingsSlinky.braftEditor.anon.Family
 import typingsSlinky.braftEditor.braftEditorStrings.`vi-vn`
 import typingsSlinky.braftEditor.braftEditorStrings.`zh-hant`
 import typingsSlinky.braftEditor.braftEditorStrings.center
@@ -47,7 +47,7 @@ trait BraftEditorProps extends js.Object {
   var excludeControls: js.UndefOr[js.Array[BuiltInControlType]] = js.native
   var extendControls: js.UndefOr[js.Array[ExtendControlType]] = js.native
   var fixPlaceholder: js.UndefOr[Boolean] = js.native
-  var fontFamilies: js.UndefOr[js.Array[AnonFamily]] = js.native
+  var fontFamilies: js.UndefOr[js.Array[Family]] = js.native
   var fontSizes: js.UndefOr[js.Array[Double]] = js.native
   var handleBeforeInput: js.UndefOr[js.Function] = js.native
   var handleDroppedFiles: js.UndefOr[js.Function] = js.native
@@ -344,7 +344,7 @@ object BraftEditorProps {
         ret
     }
     @scala.inline
-    def withFontFamilies(value: js.Array[AnonFamily]): Self = {
+    def withFontFamilies(value: js.Array[Family]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fontFamilies")(value.asInstanceOf[js.Any])
         ret

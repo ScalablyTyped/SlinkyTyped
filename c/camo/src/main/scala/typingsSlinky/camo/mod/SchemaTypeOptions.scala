@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SchemaTypeOptions[Type] extends js.Object {
+trait SchemaTypeOptions[Type] extends SchemaTypeExtended {
   /**
   		 * Posible options
   		 */

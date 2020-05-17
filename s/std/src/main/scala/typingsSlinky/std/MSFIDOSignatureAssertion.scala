@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +9,26 @@ trait MSFIDOSignatureAssertion extends MSAssertion {
   val signature: MSFIDOSignature = js.native
 }
 
-@JSGlobal("MSFIDOSignatureAssertion")
-@js.native
-object MSFIDOSignatureAssertion extends Instantiable0[MSFIDOSignatureAssertion]
+object MSFIDOSignatureAssertion {
+  @scala.inline
+  def apply(id: java.lang.String, signature: MSFIDOSignature, `type`: MSCredentialType): MSFIDOSignatureAssertion = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], signature = signature.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MSFIDOSignatureAssertion]
+  }
+  @scala.inline
+  implicit class MSFIDOSignatureAssertionOps[Self <: MSFIDOSignatureAssertion] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withSignature(value: MSFIDOSignature): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("signature")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
+}
 

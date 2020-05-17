@@ -1,11 +1,11 @@
 package typingsSlinky.gapiClientTasks.gapi.client.tasks
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientTasks.AnonAlt
-import typingsSlinky.gapiClientTasks.AnonFields
-import typingsSlinky.gapiClientTasks.AnonKey
-import typingsSlinky.gapiClientTasks.AnonMaxResults
-import typingsSlinky.gapiClientTasks.AnonOauthtoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientTasks.anon.Alt
+import typingsSlinky.gapiClientTasks.anon.Fields
+import typingsSlinky.gapiClientTasks.anon.Key
+import typingsSlinky.gapiClientTasks.anon.MaxResults
+import typingsSlinky.gapiClientTasks.anon.Oauthtoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,19 +13,19 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TasklistsResource extends js.Object {
   /** Deletes the authenticated user's specified task list. */
-  def delete(request: AnonAlt): Request_[Unit] = js.native
+  def delete(request: Alt): Request[Unit] = js.native
   /** Returns the authenticated user's specified task list. */
-  def get(request: AnonAlt): Request_[TaskList] = js.native
+  def get(request: Alt): Request[TaskList] = js.native
   /** Creates a new task list and adds it to the authenticated user's task lists. */
-  def insert(request: AnonFields): Request_[TaskList] = js.native
-  def insert(request: AnonKey, body: TaskList): Request_[TaskList] = js.native
+  def insert(request: Fields): Request[TaskList] = js.native
+  def insert(request: Key, body: TaskList): Request[TaskList] = js.native
   /** Returns all the authenticated user's task lists. */
-  def list(request: AnonMaxResults): Request_[TaskLists_] = js.native
-  def patch(request: AnonAlt, body: TaskList): Request_[TaskList] = js.native
+  def list(request: MaxResults): Request[TaskLists] = js.native
+  def patch(request: Alt, body: TaskList): Request[TaskList] = js.native
   /** Updates the authenticated user's specified task list. This method supports patch semantics. */
-  def patch(request: AnonOauthtoken): Request_[TaskList] = js.native
-  def update(request: AnonAlt, body: TaskList): Request_[TaskList] = js.native
+  def patch(request: Oauthtoken): Request[TaskList] = js.native
+  def update(request: Alt, body: TaskList): Request[TaskList] = js.native
   /** Updates the authenticated user's specified task list. */
-  def update(request: AnonOauthtoken): Request_[TaskList] = js.native
+  def update(request: Oauthtoken): Request[TaskList] = js.native
 }
 

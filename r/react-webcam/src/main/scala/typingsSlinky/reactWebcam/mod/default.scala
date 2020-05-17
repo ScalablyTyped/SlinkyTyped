@@ -1,6 +1,6 @@
 package typingsSlinky.reactWebcam.mod
 
-import typingsSlinky.reactWebcam.AnonAudio
+import typingsSlinky.reactWebcam.anon.Audio
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ class default protected () extends Webcam {
 @JSImport("react-webcam", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonAudio = js.native
+  var defaultProps: Audio = js.native
   var mountedInstances: js.Array[Webcam] = js.native
   var userMediaRequested: Boolean = js.native
 }

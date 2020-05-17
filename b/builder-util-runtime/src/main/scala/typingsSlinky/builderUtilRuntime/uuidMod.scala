@@ -1,5 +1,7 @@
 package typingsSlinky.builderUtilRuntime
 
+import typingsSlinky.builderUtilRuntime.anon.Format
+import typingsSlinky.builderUtilRuntime.anon.Variant
 import typingsSlinky.builderUtilRuntime.builderUtilRuntimeBooleans.`false`
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
@@ -24,10 +26,10 @@ object uuidMod extends js.Object {
   @js.native
   object UUID extends js.Object {
     val OID: Buffer = js.native
-    def check(uuid: String): `false` | AnonFormat | AnonVariant = js.native
-    def check(uuid: String, offset: Double): `false` | AnonFormat | AnonVariant = js.native
-    def check(uuid: Buffer): `false` | AnonFormat | AnonVariant = js.native
-    def check(uuid: Buffer, offset: Double): `false` | AnonFormat | AnonVariant = js.native
+    def check(uuid: String): `false` | Format | Variant = js.native
+    def check(uuid: String, offset: Double): `false` | Format | Variant = js.native
+    def check(uuid: Buffer): `false` | Format | Variant = js.native
+    def check(uuid: Buffer, offset: Double): `false` | Format | Variant = js.native
     def parse(input: String): Buffer = js.native
     def v5(name: String, namespace: Buffer): js.Any = js.native
     def v5(name: Buffer, namespace: Buffer): js.Any = js.native

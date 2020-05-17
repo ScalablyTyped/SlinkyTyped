@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -122,8 +121,4 @@ trait Expand extends Widget_ {
     */
   def toggle(): Unit = js.native
 }
-
-@JSGlobal("__esri.Expand")
-@js.native
-object Expand extends TopLevel[ExpandConstructor]
 

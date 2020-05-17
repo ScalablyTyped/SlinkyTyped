@@ -1,11 +1,11 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.IconSetConditionalFormatData
 import typingsSlinky.officeJs.Excel.Interfaces.IconSetConditionalFormatLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.IconSetConditionalFormatUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.FiveArrows
 import typingsSlinky.officeJs.officeJsStrings.FiveArrowsGray
 import typingsSlinky.officeJs.officeJsStrings.FiveBoxes
@@ -37,9 +37,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.6]
   */
-@JSGlobal("Excel.IconSetConditionalFormat")
 @js.native
-class IconSetConditionalFormat () extends ClientObject {
+trait IconSetConditionalFormat extends ClientObject {
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_IconSetConditionalFormat: RequestContext = js.native
@@ -78,7 +77,7 @@ class IconSetConditionalFormat () extends ClientObject {
     */
   def load(): IconSetConditionalFormat = js.native
   def load(options: IconSetConditionalFormatLoadOptions): IconSetConditionalFormat = js.native
-  def load(propertyNamesAndPaths: AnonExpand): IconSetConditionalFormat = js.native
+  def load(propertyNamesAndPaths: Expand): IconSetConditionalFormat = js.native
   def load(propertyNames: String): IconSetConditionalFormat = js.native
   def load(propertyNames: js.Array[String]): IconSetConditionalFormat = js.native
   /** Sets multiple properties on the object at the same time, based on an existing loaded object. */

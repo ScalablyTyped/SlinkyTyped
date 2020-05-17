@@ -1,9 +1,9 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonArgumentFormat
-import typingsSlinky.devextreme.AnonColorDashStyle
-import typingsSlinky.devextreme.AnonGroupName
-import typingsSlinky.devextreme.AnonHatching
+import typingsSlinky.devextreme.anon.ArgumentFormat
+import typingsSlinky.devextreme.anon.ColorDashStyle
+import typingsSlinky.devextreme.anon.GroupName
+import typingsSlinky.devextreme.anon.Hatching
 import typingsSlinky.devextreme.devextremeStrings.datetime
 import typingsSlinky.devextreme.devextremeStrings.none
 import typingsSlinky.devextreme.devextremeStrings.numeric
@@ -20,15 +20,15 @@ trait dxPieChartSeriesTypesCommonPieChartSeries extends js.Object {
   /** Specifies the required type for series arguments. */
   var argumentType: js.UndefOr[datetime | numeric | string_] = js.native
   /** An object defining the series border configuration options. */
-  var border: js.UndefOr[AnonColorDashStyle] = js.native
+  var border: js.UndefOr[ColorDashStyle] = js.native
   /** Specifies a series color. */
   var color: js.UndefOr[String] = js.native
   /** Specifies the chart elements to highlight when a series is hovered over. */
   var hoverMode: js.UndefOr[none | onlyPoint] = js.native
   /** An object defining configuration options for a hovered series. */
-  var hoverStyle: js.UndefOr[AnonHatching] = js.native
+  var hoverStyle: js.UndefOr[Hatching] = js.native
   /** An object defining the label configuration options. */
-  var label: js.UndefOr[AnonArgumentFormat] = js.native
+  var label: js.UndefOr[ArgumentFormat] = js.native
   /** Specifies how many points are acceptable to be in a series to display all labels for these points. Otherwise, the labels will not be displayed. */
   var maxLabelCount: js.UndefOr[Double] = js.native
   /** Specifies a minimal size of a displayed pie segment. */
@@ -36,9 +36,9 @@ trait dxPieChartSeriesTypesCommonPieChartSeries extends js.Object {
   /** Specifies the chart elements to highlight when the series is selected. */
   var selectionMode: js.UndefOr[none | onlyPoint] = js.native
   /** An object defining configuration options for the series when it is selected. */
-  var selectionStyle: js.UndefOr[AnonHatching] = js.native
+  var selectionStyle: js.UndefOr[Hatching] = js.native
   /** Specifies chart segment grouping options. */
-  var smallValuesGrouping: js.UndefOr[AnonGroupName] = js.native
+  var smallValuesGrouping: js.UndefOr[GroupName] = js.native
   /** Specifies the name of the data source field that provides data about a point. */
   var tagField: js.UndefOr[String] = js.native
   /** Specifies the data source field that provides values for series points. */
@@ -82,7 +82,7 @@ object dxPieChartSeriesTypesCommonPieChartSeries {
         ret
     }
     @scala.inline
-    def withBorder(value: AnonColorDashStyle): Self = {
+    def withBorder(value: ColorDashStyle): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("border")(value.asInstanceOf[js.Any])
         ret
@@ -118,7 +118,7 @@ object dxPieChartSeriesTypesCommonPieChartSeries {
         ret
     }
     @scala.inline
-    def withHoverStyle(value: AnonHatching): Self = {
+    def withHoverStyle(value: Hatching): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hoverStyle")(value.asInstanceOf[js.Any])
         ret
@@ -130,7 +130,7 @@ object dxPieChartSeriesTypesCommonPieChartSeries {
         ret
     }
     @scala.inline
-    def withLabel(value: AnonArgumentFormat): Self = {
+    def withLabel(value: ArgumentFormat): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
         ret
@@ -178,7 +178,7 @@ object dxPieChartSeriesTypesCommonPieChartSeries {
         ret
     }
     @scala.inline
-    def withSelectionStyle(value: AnonHatching): Self = {
+    def withSelectionStyle(value: Hatching): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("selectionStyle")(value.asInstanceOf[js.Any])
         ret
@@ -190,7 +190,7 @@ object dxPieChartSeriesTypesCommonPieChartSeries {
         ret
     }
     @scala.inline
-    def withSmallValuesGrouping(value: AnonGroupName): Self = {
+    def withSmallValuesGrouping(value: GroupName): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("smallValuesGrouping")(value.asInstanceOf[js.Any])
         ret

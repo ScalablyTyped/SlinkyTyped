@@ -1,8 +1,7 @@
 package typingsSlinky.playcanvas.pc
 
 import org.scalajs.dom.raw.HTMLCanvasElement
-import typingsSlinky.playcanvas.AnonBase
-import typingsSlinky.playcanvas.AnonColor
+import typingsSlinky.playcanvas.anon.Base
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,11 +22,8 @@ import scala.scalajs.js.annotation._
   * @property {boolean} textureHalfFloatRenderable Determines if 16-bit floating-point textures can be used as frame buffer. [read only].
   * @property {pc.ScopeSpace} scope The scope namespace for shader attributes and variables. [read only].
   */
-@JSGlobal("pc.GraphicsDevice")
 @js.native
-class GraphicsDevice protected () extends EventHandler {
-  def this(canvas: HTMLCanvasElement) = this()
-  def this(canvas: HTMLCanvasElement, options: js.Any) = this()
+trait GraphicsDevice extends EventHandler {
   /**
     * The canvas DOM element that provides the underlying WebGL context used by the graphics device.
     */
@@ -148,7 +144,7 @@ class GraphicsDevice protected () extends EventHandler {
     *     flags: pc.CLEARFLAG_COLOR | pc.CLEARFLAG_DEPTH
     * });
     */
-  def clear(options: AnonColor): Unit = js.native
+  def clear(options: typingsSlinky.playcanvas.anon.Color): Unit = js.native
   /**
     * @function
     * @name pc.GraphicsDevice#clearShaderCache
@@ -181,8 +177,8 @@ class GraphicsDevice protected () extends EventHandler {
     *     indexed: false
     * });
     */
-  def draw(primitive: AnonBase): Unit = js.native
-  def draw(primitive: AnonBase, numInstances: Double): Unit = js.native
+  def draw(primitive: Base): Unit = js.native
+  def draw(primitive: Base, numInstances: Double): Unit = js.native
   /**
     * @function
     * @name pc.GraphicsDevice#getBlending

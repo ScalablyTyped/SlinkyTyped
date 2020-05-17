@@ -1,5 +1,8 @@
 package typingsSlinky.firebaseAdmin.admin.messaging
 
+import typingsSlinky.firebaseAdmin.ConditionMessage
+import typingsSlinky.firebaseAdmin.TokenMessage
+import typingsSlinky.firebaseAdmin.TopicMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,19 +16,10 @@ trait Message extends js.Object
 
 object Message {
   @scala.inline
-  def TokenMessage(token: String): Message = {
-    val __obj = js.Dynamic.literal(token = token.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Message]
-  }
+  implicit def apply(value: ConditionMessage): Message = value.asInstanceOf[Message]
   @scala.inline
-  def TopicMessage(topic: String): Message = {
-    val __obj = js.Dynamic.literal(topic = topic.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Message]
-  }
+  implicit def apply(value: TokenMessage): Message = value.asInstanceOf[Message]
   @scala.inline
-  def ConditionMessage(condition: String): Message = {
-    val __obj = js.Dynamic.literal(condition = condition.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Message]
-  }
+  implicit def apply(value: TopicMessage): Message = value.asInstanceOf[Message]
 }
 

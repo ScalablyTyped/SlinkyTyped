@@ -1,0 +1,26 @@
+package typingsSlinky.winrtUwp.global.Windows.Web.Http
+
+import typingsSlinky.winrtUwp.Windows.Storage.Streams.IBuffer
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Provides HTTP content that uses a buffer. */
+@JSGlobal("Windows.Web.Http.HttpBufferContent")
+@js.native
+class HttpBufferContent protected ()
+  extends typingsSlinky.winrtUwp.Windows.Web.Http.HttpBufferContent {
+  /**
+    * Initializes a new instance of the HttpBufferContent class with the specified buffer.
+    * @param content The content used to initialize the HttpBufferContent .
+    */
+  def this(content: IBuffer) = this()
+  /**
+    * Initializes a new instance of the HttpBufferContent class with an offset and count of bytes from the specified buffer.
+    * @param content The content used to initialize the HttpBufferContent .
+    * @param offset The offset in bytes from the beginning of the content buffer to initialize the HttpBufferContent .
+    * @param count The count of bytes in the content buffer to initialize the HttpBufferContent .
+    */
+  def this(content: IBuffer, offset: Double, count: Double) = this()
+}
+

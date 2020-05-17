@@ -7,9 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Contains settings that specify parameters affecting how the dashboard (dashboard item) is exported.
   */
-@JSGlobal("ASPxClientDashboardExportOptions")
 @js.native
-class ASPxClientDashboardExportOptions () extends js.Object {
+trait ASPxClientDashboardExportOptions extends js.Object {
   /** @deprecated This AutoFitPageCount property is obsolete now. Use the DashboardPdfExportOptions.AutoFitPageCount property instead. To learn more, see the following KB article: https://www.devexpress.com/Support/Center/Question/Details/T488764 */
   /**
     * Gets or sets the number of horizontal/vertical pages spanning the total width/height of a dashboard (dashboard item).
@@ -105,5 +104,155 @@ class ASPxClientDashboardExportOptions () extends js.Object {
     * Provides access to options for exporting a Treemap dashboard item.
     */
   var TreemapOptions: TreemapExportOptions = js.native
+}
+
+object ASPxClientDashboardExportOptions {
+  @scala.inline
+  def apply(
+    AutoFitPageCount: Double,
+    CardOptions: CardExportOptions,
+    ChartOptions: ChartExportOptions,
+    ExcelOptions: ExcelFormatOptions,
+    FilterState: String,
+    GaugeOptions: GaugeExportOptions,
+    GridOptions: GridExportOptions,
+    ImageOptions: ImageFormatOptions,
+    MapOptions: MapExportOptions,
+    PageLayout: String,
+    PaperKind: String,
+    PieOptions: PieExportOptions,
+    PivotOptions: PivotExportOptions,
+    RangeFilterOptions: RangeFilterExportOptions,
+    ScaleFactor: Double,
+    ScaleMode: String,
+    ShowTitle: Boolean,
+    Title: String,
+    TreemapOptions: TreemapExportOptions
+  ): ASPxClientDashboardExportOptions = {
+    val __obj = js.Dynamic.literal(AutoFitPageCount = AutoFitPageCount.asInstanceOf[js.Any], CardOptions = CardOptions.asInstanceOf[js.Any], ChartOptions = ChartOptions.asInstanceOf[js.Any], ExcelOptions = ExcelOptions.asInstanceOf[js.Any], FilterState = FilterState.asInstanceOf[js.Any], GaugeOptions = GaugeOptions.asInstanceOf[js.Any], GridOptions = GridOptions.asInstanceOf[js.Any], ImageOptions = ImageOptions.asInstanceOf[js.Any], MapOptions = MapOptions.asInstanceOf[js.Any], PageLayout = PageLayout.asInstanceOf[js.Any], PaperKind = PaperKind.asInstanceOf[js.Any], PieOptions = PieOptions.asInstanceOf[js.Any], PivotOptions = PivotOptions.asInstanceOf[js.Any], RangeFilterOptions = RangeFilterOptions.asInstanceOf[js.Any], ScaleFactor = ScaleFactor.asInstanceOf[js.Any], ScaleMode = ScaleMode.asInstanceOf[js.Any], ShowTitle = ShowTitle.asInstanceOf[js.Any], Title = Title.asInstanceOf[js.Any], TreemapOptions = TreemapOptions.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientDashboardExportOptions]
+  }
+  @scala.inline
+  implicit class ASPxClientDashboardExportOptionsOps[Self <: ASPxClientDashboardExportOptions] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAutoFitPageCount(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("AutoFitPageCount")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withCardOptions(value: CardExportOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("CardOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withChartOptions(value: ChartExportOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ChartOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExcelOptions(value: ExcelFormatOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ExcelOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withFilterState(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("FilterState")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGaugeOptions(value: GaugeExportOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GaugeOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withGridOptions(value: GridExportOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("GridOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withImageOptions(value: ImageFormatOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ImageOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withMapOptions(value: MapExportOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("MapOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPageLayout(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PageLayout")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPaperKind(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PaperKind")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPieOptions(value: PieExportOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PieOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPivotOptions(value: PivotExportOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("PivotOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withRangeFilterOptions(value: RangeFilterExportOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("RangeFilterOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScaleFactor(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScaleFactor")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withScaleMode(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ScaleMode")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withShowTitle(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("ShowTitle")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitle(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("Title")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTreemapOptions(value: TreemapExportOptions): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("TreemapOptions")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

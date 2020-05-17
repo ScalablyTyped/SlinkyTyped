@@ -2,8 +2,8 @@ package typingsSlinky.oracleOraclejet.ojchartMod
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.Anon0
-import typingsSlinky.oracleOraclejet.AnonLabelAndValue
+import typingsSlinky.oracleOraclejet.anon.LabelAndValue
+import typingsSlinky.oracleOraclejet.anon.`0`
 import typingsSlinky.oracleOraclejet.ojchartMod.ojSparkChart.ItemContext
 import typingsSlinky.oracleOraclejet.ojchartMod.ojSparkChart.ReferenceObject
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
@@ -141,9 +141,9 @@ trait ojSparkChart_[K, D] extends dvtBaseComponent[ojSparkChartSettablePropertie
   var referenceObjects: js.Array[ReferenceObject] = js.native
   var svgClassName: String = js.native
   var svgStyle: js.Object = js.native
-  var tooltip: Anon0 = js.native
+  var tooltip: `0` = js.native
   @JSName("translations")
-  var translations_ojSparkChart_ : AnonLabelAndValue = js.native
+  var translations_ojSparkChart_ : LabelAndValue = js.native
   var `type`: area | lineWithArea | bar | line = js.native
   var visualEffects: none | auto = js.native
   def addEventListener(
@@ -397,7 +397,7 @@ trait ojSparkChart_[K, D] extends dvtBaseComponent[ojSparkChartSettablePropertie
   @JSName("getProperty")
   def getProperty_svgStyle(property: svgStyle): /* import warning: importer.ImportType#apply Failed type conversion: @oracle/oraclejet.@oracle/oraclejet/ojchart.ojSparkChart<K, D>['svgStyle'] */ js.Any = js.native
   @JSName("getProperty")
-  def getProperty_tooltip(property: tooltip): Anon0 = js.native
+  def getProperty_tooltip(property: tooltip): `0` = js.native
   @JSName("getProperty")
   def getProperty_type(property: `type`): area | lineWithArea | bar | line = js.native
   @JSName("getProperty")
@@ -468,8 +468,8 @@ trait ojSparkChart_[K, D] extends dvtBaseComponent[ojSparkChartSettablePropertie
   @JSName("setProperty")
   def setProperty_svgStyle(property: svgStyle, value: js.Object): Unit = js.native
   @JSName("setProperty")
-  def setProperty_tooltip(property: tooltip, value: Anon0): Unit = js.native
+  def setProperty_tooltip(property: tooltip, value: `0`): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonLabelAndValue): Unit = js.native
+  def setProperty_translations(property: translations, value: LabelAndValue): Unit = js.native
 }
 

@@ -1,8 +1,8 @@
 package typingsSlinky.reactAdal.mod
 
-import typingsSlinky.reactAdal.Anon0
-import typingsSlinky.reactAdal.AnonACCESSTOKENKEY
-import typingsSlinky.reactAdal.AnonERROR
+import typingsSlinky.reactAdal.anon.ACCESSTOKENKEY
+import typingsSlinky.reactAdal.anon.ERROR
+import typingsSlinky.reactAdal.anon.`0`
 import typingsSlinky.reactAdal.reactAdalNumbers.`483`
 import typingsSlinky.reactAdal.reactAdalNumbers.`600`
 import typingsSlinky.reactAdal.reactAdalStrings.Canceled
@@ -25,14 +25,14 @@ trait Constants extends js.Object {
   var ERROR_DESCRIPTION: error_description = js.native
   var EXPIRES_IN: expires_in = js.native
   var ID_TOKEN: id_token = js.native
-  var LEVEL_STRING_MAP: Anon0 = js.native
+  var LEVEL_STRING_MAP: `0` = js.native
   var LOADFRAME_TIMEOUT: `6000` = js.native
-  var LOGGING_LEVEL: AnonERROR = js.native
+  var LOGGING_LEVEL: ERROR = js.native
   var POPUP_HEIGHT: `600` = js.native
   var POPUP_WIDTH: `483` = js.native
   var RESOURCE_DELIMETER: Verticalline = js.native
   var SESSION_STATE: session_state = js.native
-  var STORAGE: AnonACCESSTOKENKEY = js.native
+  var STORAGE: ACCESSTOKENKEY = js.native
   var TOKEN_RENEW_STATUS_CANCELED: Canceled = js.native
   var TOKEN_RENEW_STATUS_COMPLETED: Completed = js.native
   var TOKEN_RENEW_STATUS_IN_PROGRESS: `In Progress` = js.native
@@ -45,14 +45,14 @@ object Constants {
     ERROR_DESCRIPTION: error_description,
     EXPIRES_IN: expires_in,
     ID_TOKEN: id_token,
-    LEVEL_STRING_MAP: Anon0,
+    LEVEL_STRING_MAP: `0`,
     LOADFRAME_TIMEOUT: `6000`,
-    LOGGING_LEVEL: AnonERROR,
+    LOGGING_LEVEL: ERROR,
     POPUP_HEIGHT: `600`,
     POPUP_WIDTH: `483`,
     RESOURCE_DELIMETER: Verticalline,
     SESSION_STATE: session_state,
-    STORAGE: AnonACCESSTOKENKEY,
+    STORAGE: ACCESSTOKENKEY,
     TOKEN_RENEW_STATUS_CANCELED: Canceled,
     TOKEN_RENEW_STATUS_COMPLETED: Completed,
     TOKEN_RENEW_STATUS_IN_PROGRESS: `In Progress`
@@ -91,7 +91,7 @@ object Constants {
         ret
     }
     @scala.inline
-    def withLEVEL_STRING_MAP(value: Anon0): Self = {
+    def withLEVEL_STRING_MAP(value: `0`): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("LEVEL_STRING_MAP")(value.asInstanceOf[js.Any])
         ret
@@ -103,7 +103,7 @@ object Constants {
         ret
     }
     @scala.inline
-    def withLOGGING_LEVEL(value: AnonERROR): Self = {
+    def withLOGGING_LEVEL(value: ERROR): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("LOGGING_LEVEL")(value.asInstanceOf[js.Any])
         ret
@@ -133,7 +133,7 @@ object Constants {
         ret
     }
     @scala.inline
-    def withSTORAGE(value: AnonACCESSTOKENKEY): Self = {
+    def withSTORAGE(value: ACCESSTOKENKEY): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("STORAGE")(value.asInstanceOf[js.Any])
         ret

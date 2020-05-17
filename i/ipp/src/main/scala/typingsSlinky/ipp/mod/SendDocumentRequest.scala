@@ -1,6 +1,6 @@
 package typingsSlinky.ipp.mod
 
-import typingsSlinky.ipp.AnonDocumentnaturallanguage
+import typingsSlinky.ipp.anon.Documentnaturallanguage
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SendDocumentRequest extends js.Object {
   var data: js.UndefOr[Buffer] = js.native
-  var `operation-attributes-tag`: AnonDocumentnaturallanguage = js.native
+  var `operation-attributes-tag`: Documentnaturallanguage = js.native
 }
 
 object SendDocumentRequest {
   @scala.inline
-  def apply(`operation-attributes-tag`: AnonDocumentnaturallanguage): SendDocumentRequest = {
+  def apply(`operation-attributes-tag`: Documentnaturallanguage): SendDocumentRequest = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("operation-attributes-tag")(`operation-attributes-tag`.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendDocumentRequest]
@@ -26,7 +26,7 @@ object SendDocumentRequest {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def `withOperation-attributes-tag`(value: AnonDocumentnaturallanguage): Self = {
+    def `withOperation-attributes-tag`(value: Documentnaturallanguage): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("operation-attributes-tag")(value.asInstanceOf[js.Any])
         ret

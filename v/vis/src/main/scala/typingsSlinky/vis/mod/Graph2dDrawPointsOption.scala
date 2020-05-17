@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait Graph2dDrawPointsOption extends js.Object {
+trait Graph2dDrawPointsOption extends Graph2dOptionDrawPoints {
   var enabled: js.UndefOr[Boolean] = js.native
   var onRender: js.UndefOr[js.Function0[Boolean]] = js.native
    // TODO

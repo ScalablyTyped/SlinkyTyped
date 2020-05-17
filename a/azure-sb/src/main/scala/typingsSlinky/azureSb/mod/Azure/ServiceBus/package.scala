@@ -8,7 +8,6 @@ package object ServiceBus {
   type DateString = java.lang.String
   type Dictionary[T] = org.scalablytyped.runtime.StringDictionary[T]
   type Duration = java.lang.String
-  type MessageOrName = typingsSlinky.azureSb.mod.Azure.ServiceBus.Message | java.lang.String
   type ReceiveSubscriptionMessageOptions = typingsSlinky.azureSb.mod.Azure.ServiceBus.ReceiveQueueMessageOptions
   type ResponseCallback = js.Function2[
     /* error */ js.Error | scala.Null, 

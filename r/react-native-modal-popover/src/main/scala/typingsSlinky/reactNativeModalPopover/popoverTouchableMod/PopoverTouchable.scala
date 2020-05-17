@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeModalPopover.popoverTouchableMod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactNativeModalPopover.AnonOnPopoverDisplayed
+import typingsSlinky.reactNativeModalPopover.anon.OnPopoverDisplayed
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,6 +27,6 @@ class PopoverTouchable protected ()
 @JSImport("react-native-modal-popover/lib/PopoverTouchable", "PopoverTouchable")
 @js.native
 object PopoverTouchable extends js.Object {
-  var propTypes: AnonOnPopoverDisplayed = js.native
+  var propTypes: OnPopoverDisplayed = js.native
 }
 

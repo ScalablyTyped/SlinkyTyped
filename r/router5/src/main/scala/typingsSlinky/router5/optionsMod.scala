@@ -1,5 +1,6 @@
 package typingsSlinky.router5
 
+import typingsSlinky.router5.anon.PartialOptions
 import typingsSlinky.router5.routerMod.Router
 import scala.scalajs.js
 import scala.scalajs.js.`|`

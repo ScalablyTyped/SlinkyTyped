@@ -1,11 +1,11 @@
 package typingsSlinky.atlassianCrowdClient.mod
 
-import typingsSlinky.atlassianCrowdClient.AnonAttributes
-import typingsSlinky.atlassianCrowdClient.AnonAuthenticate
-import typingsSlinky.atlassianCrowdClient.AnonChildren
-import typingsSlinky.atlassianCrowdClient.AnonCookie
-import typingsSlinky.atlassianCrowdClient.AnonCreate
-import typingsSlinky.atlassianCrowdClient.AnonGroup
+import typingsSlinky.atlassianCrowdClient.anon.Attributes
+import typingsSlinky.atlassianCrowdClient.anon.Authenticate
+import typingsSlinky.atlassianCrowdClient.anon.Children
+import typingsSlinky.atlassianCrowdClient.anon.Cookie
+import typingsSlinky.atlassianCrowdClient.anon.Create
+import typingsSlinky.atlassianCrowdClient.anon.Group
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,11 +13,11 @@ import scala.scalajs.js.annotation._
 @js.native
 trait CrowdClient
   extends typingsSlinky.atlassianCrowdClient.apiMod.^ {
-  var authentication: AnonAuthenticate = js.native
-  var config: AnonCookie = js.native
-  var group: AnonChildren = js.native
-  var search: AnonGroup = js.native
-  var session: AnonCreate = js.native
-  var user: AnonAttributes = js.native
+  var authentication: Authenticate = js.native
+  var config: Cookie = js.native
+  var group: Children = js.native
+  var search: Group = js.native
+  var session: Create = js.native
+  var user: Attributes = js.native
 }
 

@@ -157,7 +157,6 @@ object protocolConverterMod extends js.Object {
     def asSymbolInformation(item: SymbolInformation): typingsSlinky.vscode.mod.SymbolInformation = js.native
     def asSymbolInformation(item: SymbolInformation, uri: Uri): typingsSlinky.vscode.mod.SymbolInformation = js.native
     def asSymbolInformations(): js.UndefOr[scala.Nothing] = js.native
-    def asSymbolInformations(values: js.UndefOr[scala.Nothing], uri: Uri): js.UndefOr[scala.Nothing] = js.native
     def asSymbolInformations(values: js.Array[SymbolInformation]): js.UndefOr[js.Array[typingsSlinky.vscode.mod.SymbolInformation]] = js.native
     def asSymbolInformations(values: js.Array[SymbolInformation], uri: Uri): js.UndefOr[js.Array[typingsSlinky.vscode.mod.SymbolInformation]] = js.native
     def asSymbolInformations(values: Null, uri: Uri): js.UndefOr[scala.Nothing] = js.native

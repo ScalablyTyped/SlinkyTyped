@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojpopupMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonAriaCloseSkipLink
+import typingsSlinky.oracleOraclejet.anon.AriaCloseSkipLink
 import typingsSlinky.oracleOraclejet.ojpopupMod.ojPopup.Position
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.auto
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.default
@@ -26,7 +26,7 @@ trait ojPopupSettablePropertiesLenient
   var modality: js.UndefOr[modeless | modal] = js.native
   var position: js.UndefOr[Position] = js.native
   var tail: js.UndefOr[none | simple] = js.native
-  var translations: js.UndefOr[AnonAriaCloseSkipLink] = js.native
+  var translations: js.UndefOr[AriaCloseSkipLink] = js.native
 }
 
 object ojPopupSettablePropertiesLenient {
@@ -114,7 +114,7 @@ object ojPopupSettablePropertiesLenient {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonAriaCloseSkipLink): Self = {
+    def withTranslations(value: AriaCloseSkipLink): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

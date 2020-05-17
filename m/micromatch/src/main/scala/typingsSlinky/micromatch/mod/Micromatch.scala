@@ -1,7 +1,7 @@
 package typingsSlinky.micromatch.mod
 
-import typingsSlinky.micromatch.partstrueScanOptions
-import typingsSlinky.micromatch.tokenstrueScanOptions
+import typingsSlinky.micromatch.anon.partstrueScanOptions
+import typingsSlinky.micromatch.anon.tokenstrueScanOptions
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -339,12 +339,12 @@ trait Micromatch extends js.Object {
   def parse(glob: String): js.Object = js.native
   def parse(glob: String, options: Options): js.Object = js.native
   def scan(pattern: String): ScanInfo = js.native
-  def scan(pattern: String, options: ScanOptions): ScanInfo = js.native
   /**
     * Scan a glob pattern to separate the pattern into segments.
     */
   def scan(pattern: String, options: partstrueScanOptions): ScanInfoWithParts = js.native
   def scan(pattern: String, options: tokenstrueScanOptions): ScanInfoWithTokens = js.native
+  def scan(pattern: String, options: ScanOptions): ScanInfo = js.native
   /**
     * Returns true if some of the strings in the given `list` match any of the given glob `patterns`.
     *

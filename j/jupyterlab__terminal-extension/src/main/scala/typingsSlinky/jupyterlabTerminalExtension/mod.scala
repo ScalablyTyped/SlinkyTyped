@@ -8,6 +8,7 @@ import typingsSlinky.jupyterlabApputils.mod.WidgetTracker
 import typingsSlinky.jupyterlabCoreutils.tokensMod.ISettingRegistry
 import typingsSlinky.jupyterlabTerminal.tokensMod.ITerminal.ITerminal
 import typingsSlinky.jupyterlabTerminal.tokensMod.ITerminalTracker
+import typingsSlinky.jupyterlabTerminalExtension.anon.PartialIOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,8 +1,8 @@
 package typingsSlinky.reactEasyChart.mod
 
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.reactEasyChart.AnonBottom
-import typingsSlinky.reactEasyChart.AnonX
+import typingsSlinky.reactEasyChart.anon.Bottom
+import typingsSlinky.reactEasyChart.anon.X
 import typingsSlinky.reactEasyChart.reactEasyChartStrings.linear
 import typingsSlinky.reactEasyChart.reactEasyChartStrings.text
 import typingsSlinky.reactEasyChart.reactEasyChartStrings.time
@@ -15,7 +15,7 @@ trait BarChartProps extends js.Object {
   /** Whether to show axis labels */
   var axes: js.UndefOr[Boolean] = js.native
   /** Labels for each of the axis */
-  var axisLabels: js.UndefOr[AnonX] = js.native
+  var axisLabels: js.UndefOr[X] = js.native
   /** The width of an individual bar in pixels */
   var barWidth: js.UndefOr[Double] = js.native
   var clickHandler: js.UndefOr[js.Function2[/* data */ BarData, /* mouseEvent */ MouseEvent, _]] = js.native
@@ -32,7 +32,7 @@ trait BarChartProps extends js.Object {
   var interpolate: js.UndefOr[String] = js.native
   var lineData: js.UndefOr[js.Array[LineData]] = js.native
   /** css margins */
-  var margin: js.UndefOr[AnonBottom] = js.native
+  var margin: js.UndefOr[Bottom] = js.native
   var mouseMoveHandler: js.UndefOr[js.Function2[/* data */ BarData, /* mouseEvent */ MouseEvent, _]] = js.native
   var mouseOutHandler: js.UndefOr[js.Function2[/* data */ BarData, /* mouseEvent */ MouseEvent, _]] = js.native
   var mouseOverHandler: js.UndefOr[js.Function2[/* data */ BarData, /* mouseEvent */ MouseEvent, _]] = js.native
@@ -87,7 +87,7 @@ object BarChartProps {
         ret
     }
     @scala.inline
-    def withAxisLabels(value: AnonX): Self = {
+    def withAxisLabels(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("axisLabels")(value.asInstanceOf[js.Any])
         ret
@@ -195,7 +195,7 @@ object BarChartProps {
         ret
     }
     @scala.inline
-    def withMargin(value: AnonBottom): Self = {
+    def withMargin(value: Bottom): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("margin")(value.asInstanceOf[js.Any])
         ret

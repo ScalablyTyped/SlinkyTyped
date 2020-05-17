@@ -3,7 +3,7 @@ package typingsSlinky.storybookAddons.typesMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Object
 import typingsSlinky.std.PropertyKey
-import typingsSlinky.storybookAddons.AnonBase
+import typingsSlinky.storybookAddons.anon.Base
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ trait OptionsParameter
   var hierarchySeparator: js.UndefOr[js.RegExp] = js.native
   var showRoots: js.UndefOr[Boolean] = js.native
   var storySort: js.UndefOr[js.Any] = js.native
-  var theme: js.UndefOr[AnonBase] = js.native
+  var theme: js.UndefOr[Base] = js.native
 }
 
 object OptionsParameter {
@@ -84,7 +84,7 @@ object OptionsParameter {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonBase): Self = {
+    def withTheme(value: Base): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

@@ -1,6 +1,6 @@
 package typingsSlinky.paypalRestSdk.mod
 
-import typingsSlinky.paypalRestSdk.AnonGiftwrap
+import typingsSlinky.paypalRestSdk.anon.Giftwrap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Amount extends js.Object {
   var currency: String = js.native
-  var details: js.UndefOr[AnonGiftwrap] = js.native
+  var details: js.UndefOr[Giftwrap] = js.native
   var total: String = js.native
 }
 
@@ -37,7 +37,7 @@ object Amount {
         ret
     }
     @scala.inline
-    def withDetails(value: AnonGiftwrap): Self = {
+    def withDetails(value: Giftwrap): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("details")(value.asInstanceOf[js.Any])
         ret

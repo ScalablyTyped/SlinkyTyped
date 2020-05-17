@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,8 +45,4 @@ trait BasemapGallery extends Widget_ {
     */
   var viewModel: BasemapGalleryViewModel = js.native
 }
-
-@JSGlobal("__esri.BasemapGallery")
-@js.native
-object BasemapGallery extends TopLevel[BasemapGalleryConstructor]
 

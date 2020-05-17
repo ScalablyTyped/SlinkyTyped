@@ -1,6 +1,6 @@
 package typingsSlinky.oracleOraclejet.ojchartMod
 
-import typingsSlinky.oracleOraclejet.AnonQ2Color
+import typingsSlinky.oracleOraclejet.anon.Q2Color
 import typingsSlinky.oracleOraclejet.mod.JetSettableProperties
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.area
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.auto
@@ -54,7 +54,7 @@ trait ojChartSeriesSettableProperties extends JetSettableProperties {
   var assignedToY2: js.UndefOr[on | off] = js.native
   var borderColor: js.UndefOr[String] = js.native
   var borderWidth: js.UndefOr[Double] = js.native
-  var boxPlot: js.UndefOr[AnonQ2Color] = js.native
+  var boxPlot: js.UndefOr[Q2Color] = js.native
   var categories: js.UndefOr[js.Array[String]] = js.native
   var color: js.UndefOr[String] = js.native
   var displayInLegend: js.UndefOr[on | off | auto] = js.native
@@ -173,7 +173,7 @@ object ojChartSeriesSettableProperties {
         ret
     }
     @scala.inline
-    def withBoxPlot(value: AnonQ2Color): Self = {
+    def withBoxPlot(value: Q2Color): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("boxPlot")(value.asInstanceOf[js.Any])
         ret

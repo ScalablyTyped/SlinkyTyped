@@ -7,24 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientHint.Showing event.
   */
-@JSGlobal("ASPxClientHintShowingEventArgs")
 @js.native
-class ASPxClientHintShowingEventArgs protected () extends ASPxClientEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientHintShowingEventArgs class with specified settings.
-    * @param targetElement An object that is the target element of the hint.
-    * @param hintElement An object that is the hint element.
-    * @param contentElement An object that is the hint's content element.
-    * @param titleElement An object that is the hint's title element.
-    * @param cancel true, if the action that raised the event should be canceled; otherwise, false.
-    */
-  def this(
-    targetElement: js.Any,
-    hintElement: js.Any,
-    contentElement: js.Any,
-    titleElement: js.Any,
-    cancel: Boolean
-  ) = this()
+trait ASPxClientHintShowingEventArgs extends ASPxClientEventArgs {
   /**
     * Gets or sets a value indicating whether the event should be canceled.
     */
@@ -45,5 +29,57 @@ class ASPxClientHintShowingEventArgs protected () extends ASPxClientEventArgs {
     * Gets the object that is the hint's title.
     */
   var titleElement: js.Any = js.native
+}
+
+object ASPxClientHintShowingEventArgs {
+  @scala.inline
+  def apply(
+    cancel: Boolean,
+    contentElement: js.Any,
+    hintElement: js.Any,
+    targetElement: js.Any,
+    titleElement: js.Any
+  ): ASPxClientHintShowingEventArgs = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], contentElement = contentElement.asInstanceOf[js.Any], hintElement = hintElement.asInstanceOf[js.Any], targetElement = targetElement.asInstanceOf[js.Any], titleElement = titleElement.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientHintShowingEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientHintShowingEventArgsOps[Self <: ASPxClientHintShowingEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCancel(value: Boolean): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("cancel")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentElement(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withHintElement(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("hintElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTargetElement(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("targetElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTitleElement(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("titleElement")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

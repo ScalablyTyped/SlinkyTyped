@@ -1,7 +1,7 @@
 package typingsSlinky.tstl.mod
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.tstl.Iteratoranyanyanyany
+import typingsSlinky.tstl.anon.Iteratoranyanyanyany
 import typingsSlinky.tstl.binaryPredicatorMod.BinaryPredicator
 import typingsSlinky.tstl.hasherMod.Hasher
 import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator

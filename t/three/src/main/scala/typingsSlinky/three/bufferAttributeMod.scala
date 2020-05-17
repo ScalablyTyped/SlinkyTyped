@@ -1,6 +1,11 @@
 package typingsSlinky.three
 
 import typingsSlinky.std.ArrayLike
+import typingsSlinky.three.anon.B
+import typingsSlinky.three.anon.Count
+import typingsSlinky.three.anon.W
+import typingsSlinky.three.anon.X
+import typingsSlinky.three.anon.Y
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,15 +30,15 @@ object bufferAttributeMod extends js.Object {
     var needsUpdate: Boolean = js.native
     var normalized: Boolean = js.native
     var onUpload: js.Function = js.native
-    var updateRange: AnonCount = js.native
+    var updateRange: Count = js.native
     var version: Double = js.native
     def copy(source: BufferAttribute): this.type = js.native
     def copyArray(array: ArrayLike[Double]): BufferAttribute = js.native
     def copyAt(index1: Double, attribute: BufferAttribute, index2: Double): BufferAttribute = js.native
-    def copyColorsArray(colors: js.Array[AnonB]): BufferAttribute = js.native
-    def copyVector2sArray(vectors: js.Array[AnonX]): BufferAttribute = js.native
-    def copyVector3sArray(vectors: js.Array[AnonY]): BufferAttribute = js.native
-    def copyVector4sArray(vectors: js.Array[AnonW]): BufferAttribute = js.native
+    def copyColorsArray(colors: js.Array[B]): BufferAttribute = js.native
+    def copyVector2sArray(vectors: js.Array[X]): BufferAttribute = js.native
+    def copyVector3sArray(vectors: js.Array[Y]): BufferAttribute = js.native
+    def copyVector4sArray(vectors: js.Array[W]): BufferAttribute = js.native
     def getW(index: Double): Double = js.native
     def getX(index: Double): Double = js.native
     def getY(index: Double): Double = js.native

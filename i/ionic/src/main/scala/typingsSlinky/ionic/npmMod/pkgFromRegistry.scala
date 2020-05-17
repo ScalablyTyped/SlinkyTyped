@@ -1,6 +1,6 @@
 package typingsSlinky.ionic.npmMod
 
-import typingsSlinky.ionic.PartialPkgManagerOptions
+import typingsSlinky.ionic.anon.PartialPkgManagerOptions
 import typingsSlinky.ionic.definitionsMod.NpmClient
 import typingsSlinky.ionicCliFramework.definitionsMod.PackageJson
 import scala.scalajs.js

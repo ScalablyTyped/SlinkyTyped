@@ -1,10 +1,10 @@
 package typingsSlinky.materialUi.MaterialUI.Switches
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait RadioButtonProps extends CommonEnhancedSwitchProps[RadioButton] {
   var inputStyle: js.UndefOr[CSSProperties] = js.native
   var labelStyle: js.UndefOr[CSSProperties] = js.native
   var onCheck: js.UndefOr[
-    js.Function2[SyntheticEvent[EventTarget with js.Object, Event_], /* selected */ String, Unit]
+    js.Function2[SyntheticEvent[EventTarget with js.Object, Event], /* selected */ String, Unit]
   ] = js.native
   var uncheckedIcon: js.UndefOr[ReactElement] = js.native
    // Normally an SvgIcon
@@ -86,7 +86,7 @@ object RadioButtonProps {
         ret
     }
     @scala.inline
-    def withOnCheck(value: (SyntheticEvent[EventTarget with js.Object, Event_], /* selected */ String) => Unit): Self = {
+    def withOnCheck(value: (SyntheticEvent[EventTarget with js.Object, Event], /* selected */ String) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onCheck")(js.Any.fromFunction2(value))
         ret

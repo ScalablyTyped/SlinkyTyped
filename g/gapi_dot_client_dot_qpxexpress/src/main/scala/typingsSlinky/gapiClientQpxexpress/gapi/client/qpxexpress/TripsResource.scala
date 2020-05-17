@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientQpxexpress.gapi.client.qpxexpress
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientQpxexpress.AnonAlt
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientQpxexpress.anon.Alt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait TripsResource extends js.Object {
   /** Returns a list of flights. */
-  def search(request: AnonAlt): Request_[TripsSearchResponse] = js.native
+  def search(request: Alt): Request[TripsSearchResponse] = js.native
 }
 
 object TripsResource {
   @scala.inline
-  def apply(search: AnonAlt => Request_[TripsSearchResponse]): TripsResource = {
+  def apply(search: Alt => Request[TripsSearchResponse]): TripsResource = {
     val __obj = js.Dynamic.literal(search = js.Any.fromFunction1(search))
     __obj.asInstanceOf[TripsResource]
   }
@@ -25,7 +25,7 @@ object TripsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSearch(value: AnonAlt => Request_[TripsSearchResponse]): Self = {
+    def withSearch(value: Alt => Request[TripsSearchResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("search")(js.Any.fromFunction1(value))
         ret

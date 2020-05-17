@@ -1,6 +1,6 @@
 package typingsSlinky.nivoSankey.mod
 
-import typingsSlinky.nivoSankey.AnonId
+import typingsSlinky.nivoSankey.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,15 +8,15 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SankeyLinkProps extends js.Object {
   var color: String = js.native
-  var source: AnonId = js.native
-  var target: AnonId = js.native
+  var source: Id = js.native
+  var target: Id = js.native
   var thickness: Double = js.native
   var value: Double = js.native
 }
 
 object SankeyLinkProps {
   @scala.inline
-  def apply(color: String, source: AnonId, target: AnonId, thickness: Double, value: Double): SankeyLinkProps = {
+  def apply(color: String, source: Id, target: Id, thickness: Double, value: Double): SankeyLinkProps = {
     val __obj = js.Dynamic.literal(color = color.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any], thickness = thickness.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[SankeyLinkProps]
   }
@@ -33,13 +33,13 @@ object SankeyLinkProps {
         ret
     }
     @scala.inline
-    def withSource(value: AnonId): Self = {
+    def withSource(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("source")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withTarget(value: AnonId): Self = {
+    def withTarget(value: Id): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
         ret

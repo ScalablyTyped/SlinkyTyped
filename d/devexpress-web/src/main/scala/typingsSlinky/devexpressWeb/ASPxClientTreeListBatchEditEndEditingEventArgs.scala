@@ -7,15 +7,8 @@ import scala.scalajs.js.annotation._
 /**
   * Provides data for the ASPxClientTreeList.BatchEditEndEditing event.
   */
-@JSGlobal("ASPxClientTreeListBatchEditEndEditingEventArgs")
 @js.native
-class ASPxClientTreeListBatchEditEndEditingEventArgs protected () extends ASPxClientCancelEventArgs {
-  /**
-    * Initializes a new instance of the ASPxClientTreeListBatchEditEndEditingEventArgs class.
-    * @param nodeKey A String value that identifies the processed node.
-    * @param nodeValues An object representing a data source’s field values.
-    */
-  def this(nodeKey: String, nodeValues: js.Any) = this()
+trait ASPxClientTreeListBatchEditEndEditingEventArgs extends ASPxClientCancelEventArgs {
   /**
     * Gets the processed node's key value.
     */
@@ -24,5 +17,33 @@ class ASPxClientTreeListBatchEditEndEditingEventArgs protected () extends ASPxCl
     * Gets the value of the processed cell.
     */
   var nodeValues: js.Any = js.native
+}
+
+object ASPxClientTreeListBatchEditEndEditingEventArgs {
+  @scala.inline
+  def apply(cancel: Boolean, nodeKey: String, nodeValues: js.Any): ASPxClientTreeListBatchEditEndEditingEventArgs = {
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], nodeKey = nodeKey.asInstanceOf[js.Any], nodeValues = nodeValues.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ASPxClientTreeListBatchEditEndEditingEventArgs]
+  }
+  @scala.inline
+  implicit class ASPxClientTreeListBatchEditEndEditingEventArgsOps[Self <: ASPxClientTreeListBatchEditEndEditingEventArgs] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withNodeKey(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeKey")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withNodeValues(value: js.Any): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("nodeValues")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

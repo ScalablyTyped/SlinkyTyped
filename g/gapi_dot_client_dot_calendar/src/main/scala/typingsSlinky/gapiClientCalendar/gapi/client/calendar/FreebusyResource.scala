@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientCalendar.gapi.client.calendar
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientCalendar.AnonQuotaUser
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientCalendar.anon.QuotaUser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait FreebusyResource extends js.Object {
   /** Returns free/busy information for a set of calendars. */
-  def query(request: AnonQuotaUser): Request_[FreeBusyResponse] = js.native
+  def query(request: QuotaUser): Request[FreeBusyResponse] = js.native
 }
 
 object FreebusyResource {
   @scala.inline
-  def apply(query: AnonQuotaUser => Request_[FreeBusyResponse]): FreebusyResource = {
+  def apply(query: QuotaUser => Request[FreeBusyResponse]): FreebusyResource = {
     val __obj = js.Dynamic.literal(query = js.Any.fromFunction1(query))
     __obj.asInstanceOf[FreebusyResource]
   }
@@ -25,7 +25,7 @@ object FreebusyResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withQuery(value: AnonQuotaUser => Request_[FreeBusyResponse]): Self = {
+    def withQuery(value: QuotaUser => Request[FreeBusyResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("query")(js.Any.fromFunction1(value))
         ret

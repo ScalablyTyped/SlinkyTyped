@@ -1,9 +1,9 @@
 package typingsSlinky.oracleOraclejet.ojtreemapMod
 
-import typingsSlinky.oracleOraclejet.Anon26
-import typingsSlinky.oracleOraclejet.Anon27
-import typingsSlinky.oracleOraclejet.AnonGroupLabelDisplay
-import typingsSlinky.oracleOraclejet.AnonLabelDataVisualization
+import typingsSlinky.oracleOraclejet.anon.GroupLabelDisplay
+import typingsSlinky.oracleOraclejet.anon.LabelDataVisualization
+import typingsSlinky.oracleOraclejet.anon.`26`
+import typingsSlinky.oracleOraclejet.anon.`27`
 import typingsSlinky.oracleOraclejet.ojdataproviderMod.DataProvider
 import typingsSlinky.oracleOraclejet.ojdvtBaseMod.dvtBaseComponentSettableProperties
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.all
@@ -45,18 +45,18 @@ trait ojTreemapSettableProperties[K, D] extends dvtBaseComponentSettableProperti
   var hoverBehaviorDelay: Double = js.native
   var isolatedNode: js.Any = js.native
   var layout: sliceAndDiceHorizontal | sliceAndDiceVertical | squarified = js.native
-  var nodeContent: Anon26[K, D] = js.native
-  var nodeDefaults: AnonGroupLabelDisplay = js.native
+  var nodeContent: `26`[K, D] = js.native
+  var nodeDefaults: GroupLabelDisplay = js.native
   var nodeSeparators: bevels | gaps = js.native
   var rootNode: js.Any = js.native
   var selection: js.Array[_] = js.native
   var selectionMode: none | single | multiple = js.native
   var sizeLabel: String = js.native
   var sorting: on | off = js.native
-  var tooltip: Anon27[K, D] = js.native
+  var tooltip: `27`[K, D] = js.native
   var touchResponse: touchStart | auto = js.native
   @JSName("translations")
-  var translations_ojTreemapSettableProperties: AnonLabelDataVisualization = js.native
+  var translations_ojTreemapSettableProperties: LabelDataVisualization = js.native
 }
 
 object ojTreemapSettableProperties {
@@ -78,18 +78,18 @@ object ojTreemapSettableProperties {
     hoverBehaviorDelay: Double,
     isolatedNode: js.Any,
     layout: sliceAndDiceHorizontal | sliceAndDiceVertical | squarified,
-    nodeContent: Anon26[K, D],
-    nodeDefaults: AnonGroupLabelDisplay,
+    nodeContent: `26`[K, D],
+    nodeDefaults: GroupLabelDisplay,
     nodeSeparators: bevels | gaps,
     rootNode: js.Any,
     selection: js.Array[_],
     selectionMode: none | single | multiple,
     sizeLabel: String,
     sorting: on | off,
-    tooltip: Anon27[K, D],
+    tooltip: `27`[K, D],
     touchResponse: touchStart | auto,
     trackResize: on | off,
-    translations: AnonLabelDataVisualization
+    translations: LabelDataVisualization
   ): ojTreemapSettableProperties[K, D] = {
     val __obj = js.Dynamic.literal(animationDuration = animationDuration.asInstanceOf[js.Any], animationOnDataChange = animationOnDataChange.asInstanceOf[js.Any], animationOnDisplay = animationOnDisplay.asInstanceOf[js.Any], animationUpdateColor = animationUpdateColor.asInstanceOf[js.Any], as = as.asInstanceOf[js.Any], colorLabel = colorLabel.asInstanceOf[js.Any], displayLevels = displayLevels.asInstanceOf[js.Any], drilling = drilling.asInstanceOf[js.Any], groupGaps = groupGaps.asInstanceOf[js.Any], hiddenCategories = hiddenCategories.asInstanceOf[js.Any], highlightMatch = highlightMatch.asInstanceOf[js.Any], highlightedCategories = highlightedCategories.asInstanceOf[js.Any], hoverBehavior = hoverBehavior.asInstanceOf[js.Any], hoverBehaviorDelay = hoverBehaviorDelay.asInstanceOf[js.Any], isolatedNode = isolatedNode.asInstanceOf[js.Any], layout = layout.asInstanceOf[js.Any], nodeContent = nodeContent.asInstanceOf[js.Any], nodeDefaults = nodeDefaults.asInstanceOf[js.Any], nodeSeparators = nodeSeparators.asInstanceOf[js.Any], rootNode = rootNode.asInstanceOf[js.Any], selection = selection.asInstanceOf[js.Any], selectionMode = selectionMode.asInstanceOf[js.Any], sizeLabel = sizeLabel.asInstanceOf[js.Any], sorting = sorting.asInstanceOf[js.Any], tooltip = tooltip.asInstanceOf[js.Any], touchResponse = touchResponse.asInstanceOf[js.Any], trackResize = trackResize.asInstanceOf[js.Any], translations = translations.asInstanceOf[js.Any])
     __obj.asInstanceOf[ojTreemapSettableProperties[K, D]]
@@ -197,13 +197,13 @@ object ojTreemapSettableProperties {
         ret
     }
     @scala.inline
-    def withNodeContent(value: Anon26[K, D]): Self[K, D] = {
+    def withNodeContent(value: `26`[K, D]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nodeContent")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withNodeDefaults(value: AnonGroupLabelDisplay): Self[K, D] = {
+    def withNodeDefaults(value: GroupLabelDisplay): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("nodeDefaults")(value.asInstanceOf[js.Any])
         ret
@@ -245,7 +245,7 @@ object ojTreemapSettableProperties {
         ret
     }
     @scala.inline
-    def withTooltip(value: Anon27[K, D]): Self[K, D] = {
+    def withTooltip(value: `27`[K, D]): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("tooltip")(value.asInstanceOf[js.Any])
         ret
@@ -257,7 +257,7 @@ object ojTreemapSettableProperties {
         ret
     }
     @scala.inline
-    def withTranslations(value: AnonLabelDataVisualization): Self[K, D] = {
+    def withTranslations(value: LabelDataVisualization): Self[K, D] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

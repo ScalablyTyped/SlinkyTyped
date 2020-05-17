@@ -1,8 +1,8 @@
 package typingsSlinky.blueprintjsCore.overlayMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,7 +43,7 @@ trait IOverlayableProps extends IOverlayLifecycleProps {
     * mouse or key event). Note that, since this component is controlled by the `isOpen` prop, it
     * will not actually close itself until that prop becomes `false`.
     */
-  var onClose: js.UndefOr[js.Function1[/* event */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]], Unit]] = js.native
+  var onClose: js.UndefOr[js.Function1[/* event */ js.UndefOr[SyntheticEvent[Event, HTMLElement]], Unit]] = js.native
   /**
     * Space-delimited string of class names applied to the `Portal` element if
     * `usePortal={true}`.
@@ -139,7 +139,7 @@ object IOverlayableProps {
         ret
     }
     @scala.inline
-    def withOnClose(value: /* event */ js.UndefOr[SyntheticEvent[Event_, HTMLElement]] => Unit): Self = {
+    def withOnClose(value: /* event */ js.UndefOr[SyntheticEvent[Event, HTMLElement]] => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClose")(js.Any.fromFunction1(value))
         ret

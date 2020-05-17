@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait EncryptionKeyOptions extends js.Object {
+trait EncryptionKeyOptions extends RotateEncryptionKeyOptions {
   var encryptionKey: js.UndefOr[String | Buffer] = js.native
   var kmsKeyName: js.UndefOr[String] = js.native
 }

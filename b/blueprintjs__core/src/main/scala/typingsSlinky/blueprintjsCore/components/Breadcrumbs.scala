@@ -3,7 +3,7 @@ package typingsSlinky.blueprintjsCore.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.blueprintjsCore.PartialIOverflowListProps
+import typingsSlinky.blueprintjsCore.anon.PartialIOverflowListProps
 import typingsSlinky.blueprintjsCore.boundaryMod.Boundary
 import typingsSlinky.blueprintjsCore.breadcrumbMod.IBreadcrumbProps
 import typingsSlinky.blueprintjsCore.breadcrumbsMod.IBreadcrumbsProps

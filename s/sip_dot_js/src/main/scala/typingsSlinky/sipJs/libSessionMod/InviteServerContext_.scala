@@ -1,6 +1,6 @@
 package typingsSlinky.sipJs.libSessionMod
 
-import typingsSlinky.sipJs.AnonModifiers
+import typingsSlinky.sipJs.anon.Modifiers
 import typingsSlinky.sipJs.bodyMod.Body
 import typingsSlinky.sipJs.coreMod.IncomingRequestMessage
 import typingsSlinky.sipJs.coreMod.InviteServerTransaction
@@ -136,8 +136,8 @@ class InviteServerContext_ protected () extends Session {
     */
   @JSName("accept")
   def accept_This(): this.type = js.native
-  /* protected */ def generateResponseOfferAnswer(options: AnonModifiers): js.Promise[js.UndefOr[Body]] = js.native
-  /* protected */ def handlePrackOfferAnswer(request: IncomingPrackRequest, options: AnonModifiers): js.Promise[js.UndefOr[Body]] = js.native
+  /* protected */ def generateResponseOfferAnswer(options: Modifiers): js.Promise[js.UndefOr[Body]] = js.native
+  /* protected */ def handlePrackOfferAnswer(request: IncomingPrackRequest, options: Modifiers): js.Promise[js.UndefOr[Body]] = js.native
   def onCancel(message: IncomingRequestMessage): Unit = js.native
   def progress(): js.Any = js.native
   def progress(options: js.Any): js.Any = js.native

@@ -1,5 +1,6 @@
 package typingsSlinky.ionic
 
+import typingsSlinky.ionic.anon.RequiredProjectIntegratio
 import typingsSlinky.ionic.commandMod.Command
 import typingsSlinky.ionic.definitionsMod.CommandInstanceInfo
 import scala.scalajs.js

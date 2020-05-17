@@ -13,19 +13,10 @@ trait JWK extends js.Object
 
 object JWK {
   @scala.inline
-  def EC(crv: String, kty: typingsSlinky.jwkToPem.jwkToPemStrings.EC, x: String, y: String): JWK = {
-    val __obj = js.Dynamic.literal(crv = crv.asInstanceOf[js.Any], kty = kty.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JWK]
-  }
+  implicit def apply(value: EC): JWK = value.asInstanceOf[JWK]
   @scala.inline
-  def ECPrivate(crv: String, d: String, kty: typingsSlinky.jwkToPem.jwkToPemStrings.EC): JWK = {
-    val __obj = js.Dynamic.literal(crv = crv.asInstanceOf[js.Any], d = d.asInstanceOf[js.Any], kty = kty.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JWK]
-  }
+  implicit def apply(value: ECPrivate): JWK = value.asInstanceOf[JWK]
   @scala.inline
-  def RSA(e: String, kty: typingsSlinky.jwkToPem.jwkToPemStrings.RSA, n: String): JWK = {
-    val __obj = js.Dynamic.literal(e = e.asInstanceOf[js.Any], kty = kty.asInstanceOf[js.Any], n = n.asInstanceOf[js.Any])
-    __obj.asInstanceOf[JWK]
-  }
+  implicit def apply(value: RSA): JWK = value.asInstanceOf[JWK]
 }
 

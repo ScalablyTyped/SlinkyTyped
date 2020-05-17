@@ -1,17 +1,17 @@
 package typingsSlinky.yandexMaps.mod.control
 
-import typingsSlinky.yandexMaps.AnonContent
-import typingsSlinky.yandexMaps.AnonEnabled
-import typingsSlinky.yandexMaps.IBaseButtonParametersOpti
+import typingsSlinky.yandexMaps.anon.Content
+import typingsSlinky.yandexMaps.anon.Enabled
+import typingsSlinky.yandexMaps.anon.IBaseButtonParametersOpti
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait IButtonParameters extends js.Object {
-  var data: js.UndefOr[AnonContent] = js.native
+  var data: js.UndefOr[Content] = js.native
   var options: js.UndefOr[IBaseButtonParametersOpti] = js.native
-  var state: js.UndefOr[AnonEnabled] = js.native
+  var state: js.UndefOr[Enabled] = js.native
 }
 
 object IButtonParameters {
@@ -27,7 +27,7 @@ object IButtonParameters {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withData(value: AnonContent): Self = {
+    def withData(value: Content): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret
@@ -51,7 +51,7 @@ object IButtonParameters {
         ret
     }
     @scala.inline
-    def withState(value: AnonEnabled): Self = {
+    def withState(value: Enabled): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("state")(value.asInstanceOf[js.Any])
         ret

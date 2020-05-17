@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`above-and-below`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`centered-on`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`high-to-low`
@@ -77,8 +76,4 @@ trait AuthoringInfoVisualVariable
     */
   var units: seconds | minutes | hours | days | months | years = js.native
 }
-
-@JSGlobal("__esri.AuthoringInfoVisualVariable")
-@js.native
-object AuthoringInfoVisualVariable extends TopLevel[AuthoringInfoVisualVariableConstructor]
 

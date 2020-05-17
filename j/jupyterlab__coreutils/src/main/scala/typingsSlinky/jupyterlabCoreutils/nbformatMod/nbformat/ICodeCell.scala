@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabCoreutils.nbformatMod.nbformat
 
-import typingsSlinky.jupyterlabCoreutils.PartialICodeCellMetadata
+import typingsSlinky.jupyterlabCoreutils.anon.PartialICodeCellMetadata
 import typingsSlinky.jupyterlabCoreutils.jupyterlabCoreutilsStrings.code
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ICodeCell
   extends IBaseCell
-     with _ICell {
+     with ICell {
   /**
     * String identifying the type of cell.
     */

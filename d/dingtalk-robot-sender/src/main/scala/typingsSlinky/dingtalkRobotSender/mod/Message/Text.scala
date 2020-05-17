@@ -1,7 +1,7 @@
 package typingsSlinky.dingtalkRobotSender.mod.Message
 
-import typingsSlinky.dingtalkRobotSender.AnonAtMobiles
-import typingsSlinky.dingtalkRobotSender.AnonContent
+import typingsSlinky.dingtalkRobotSender.anon.AtMobiles
+import typingsSlinky.dingtalkRobotSender.anon.Content
 import typingsSlinky.dingtalkRobotSender.dingtalkRobotSenderStrings.text
 import typingsSlinky.dingtalkRobotSender.mod.MessageType
 import scala.scalajs.js
@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait Text extends MessageType {
-  var at: js.UndefOr[AnonAtMobiles] = js.native
+  var at: js.UndefOr[AtMobiles] = js.native
   var msgtype: text = js.native
-  var text: AnonContent = js.native
+  var text: Content = js.native
 }
 
 object Text {
   @scala.inline
-  def apply(msgtype: text, text: AnonContent): Text = {
+  def apply(msgtype: text, text: Content): Text = {
     val __obj = js.Dynamic.literal(msgtype = msgtype.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
     __obj.asInstanceOf[Text]
   }
@@ -34,13 +34,13 @@ object Text {
         ret
     }
     @scala.inline
-    def withText(value: AnonContent): Self = {
+    def withText(value: Content): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("text")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withAt(value: AnonAtMobiles): Self = {
+    def withAt(value: AtMobiles): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("at")(value.asInstanceOf[js.Any])
         ret

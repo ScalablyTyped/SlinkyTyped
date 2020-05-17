@@ -29,7 +29,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.fridaGum.fridaGumStrings.ip
   - typingsSlinky.fridaGum.fridaGumStrings.pc
 */
-trait ArmRegister extends _ArmCallArgument
+trait ArmRegister extends ArmCallArgument
 
 object ArmRegister {
   @scala.inline

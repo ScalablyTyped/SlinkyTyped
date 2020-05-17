@@ -1,5 +1,6 @@
 package typingsSlinky.instagramPrivateApi
 
+import typingsSlinky.instagramPrivateApi.anon.Broadcastid
 import typingsSlinky.instagramPrivateApi.liveObsSettingsMod.LiveRtmpSettings
 import typingsSlinky.instagramPrivateApi.mediaEntityOembedResponseMod.MediaEntityOembedResponse
 import scala.scalajs.js
@@ -28,7 +29,7 @@ object entitiesMod extends js.Object {
   /* static members */
   @js.native
   object LiveEntity extends js.Object {
-    def getUrlAndKey(info: AnonBroadcastid): LiveRtmpSettings = js.native
+    def getUrlAndKey(info: Broadcastid): LiveRtmpSettings = js.native
   }
   
   /* static members */

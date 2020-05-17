@@ -1,10 +1,10 @@
 package typingsSlinky.nivoCore.mod
 
-import typingsSlinky.nivoCore.PartialcontainerPartialCS
-import typingsSlinky.nivoCore.PartialdomainPartiallineP
-import typingsSlinky.nivoCore.PartiallineColorstringlin
-import typingsSlinky.nivoCore.PartiallinePartialCSSProp
-import typingsSlinky.nivoCore.PartialtextPartialCSSProp
+import typingsSlinky.nivoCore.anon.PartialcontainerPartialCS
+import typingsSlinky.nivoCore.anon.PartialdomainPartiallineP
+import typingsSlinky.nivoCore.anon.PartiallineColorstringlin
+import typingsSlinky.nivoCore.anon.PartiallinePartialCSSProp
+import typingsSlinky.nivoCore.anon.PartialtextPartialCSSProp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

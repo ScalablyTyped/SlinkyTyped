@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait WindowTransform extends _Transforms {
+trait WindowTransform extends Transforms {
   var as: js.UndefOr[(js.Array[String | SignalRef | Null]) | SignalRef] = js.native
   var fields: js.UndefOr[(js.Array[FieldRef | Null]) | SignalRef] = js.native
   var frame: js.UndefOr[(Vector2[Double | SignalRef | Null]) | SignalRef] = js.native

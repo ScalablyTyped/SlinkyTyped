@@ -1,8 +1,8 @@
 package typingsSlinky.devextreme.mod.DevExpress.data
 
-import typingsSlinky.devextreme.AnonColumnPath
-import typingsSlinky.devextreme.mod._Global_.JQueryPromise
-import typingsSlinky.devextreme.mod._Global_.Promise
+import typingsSlinky.devextreme.anon.ColumnPath
+import typingsSlinky.devextreme.mod.global.JQueryPromise
+import typingsSlinky.devextreme.mod.global.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait PivotGridDataSource extends js.Object {
   /** Collapses a specific header item. */
   def collapseHeaderItem(area: String, path: js.Array[String | Double | js.Date]): Unit = js.native
   /** Provides access to the facts that were used to calculate a specific summary value. */
-  def createDrillDownDataSource(options: AnonColumnPath): DataSource = js.native
+  def createDrillDownDataSource(options: ColumnPath): DataSource = js.native
   /** Disposes of all the resources allocated to the PivotGridDataSource instance. */
   def dispose(): Unit = js.native
   def expandAll(id: String): Unit = js.native

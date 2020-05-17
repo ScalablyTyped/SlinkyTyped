@@ -1,15 +1,15 @@
 package typingsSlinky.nivoCore.mod
 
-import typingsSlinky.nivoCore.AnonDictkey
-import typingsSlinky.nivoCore.AnonId
+import typingsSlinky.nivoCore.anon.Dictkey
+import typingsSlinky.nivoCore.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait SvgDefsAndFill[T] extends js.Object {
-  var defs: js.UndefOr[js.Array[AnonDictkey]] = js.native
-  var fill: js.UndefOr[js.Array[AnonId[T]]] = js.native
+  var defs: js.UndefOr[js.Array[Dictkey]] = js.native
+  var fill: js.UndefOr[js.Array[Id[T]]] = js.native
 }
 
 object SvgDefsAndFill {
@@ -25,7 +25,7 @@ object SvgDefsAndFill {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
     @scala.inline
-    def withDefs(value: js.Array[AnonDictkey]): Self[T] = {
+    def withDefs(value: js.Array[Dictkey]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("defs")(value.asInstanceOf[js.Any])
         ret
@@ -37,7 +37,7 @@ object SvgDefsAndFill {
         ret
     }
     @scala.inline
-    def withFill(value: js.Array[AnonId[T]]): Self[T] = {
+    def withFill(value: js.Array[Id[T]]): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fill")(value.asInstanceOf[js.Any])
         ret

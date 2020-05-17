@@ -12,14 +12,8 @@ trait AST extends js.Object
 
 object AST {
   @scala.inline
-  def LeftOnlyAST(left: Node): AST = {
-    val __obj = js.Dynamic.literal(left = left.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AST]
-  }
+  implicit def apply(value: BinaryAST): AST = value.asInstanceOf[AST]
   @scala.inline
-  def BinaryAST(left: AST | Node, operator: Operator, right: AST | Node): AST = {
-    val __obj = js.Dynamic.literal(left = left.asInstanceOf[js.Any], operator = operator.asInstanceOf[js.Any], right = right.asInstanceOf[js.Any])
-    __obj.asInstanceOf[AST]
-  }
+  implicit def apply(value: LeftOnlyAST): AST = value.asInstanceOf[AST]
 }
 

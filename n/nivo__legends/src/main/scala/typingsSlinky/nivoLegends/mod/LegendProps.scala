@@ -1,7 +1,7 @@
 package typingsSlinky.nivoLegends.mod
 
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.nivoLegends.AnonColor
+import typingsSlinky.nivoLegends.anon.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LegendProps extends js.Object {
   var anchor: LegendAnchor = js.native
-  var data: js.UndefOr[js.Array[AnonColor]] = js.native
+  var data: js.UndefOr[js.Array[Color]] = js.native
   var direction: LegendDirection = js.native
   var effects: js.UndefOr[js.Array[LegendEffect]] = js.native
   var itemBackground: js.UndefOr[String] = js.native
@@ -70,7 +70,7 @@ object LegendProps {
         ret
     }
     @scala.inline
-    def withData(value: js.Array[AnonColor]): Self = {
+    def withData(value: js.Array[Color]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("data")(value.asInstanceOf[js.Any])
         ret

@@ -1,5 +1,6 @@
 package typingsSlinky.gapiYoutube
 
+import typingsSlinky.gapiYoutube.anon.Title
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,12 +22,12 @@ trait GoogleApiYouTubeGuideCategoryResource extends js.Object {
   /**
     * The snippet object contains basic details about the category, such as its title.
     */
-  var snippet: AnonTitle = js.native
+  var snippet: Title = js.native
 }
 
 object GoogleApiYouTubeGuideCategoryResource {
   @scala.inline
-  def apply(etag: String, id: String, kind: String, snippet: AnonTitle): GoogleApiYouTubeGuideCategoryResource = {
+  def apply(etag: String, id: String, kind: String, snippet: Title): GoogleApiYouTubeGuideCategoryResource = {
     val __obj = js.Dynamic.literal(etag = etag.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], snippet = snippet.asInstanceOf[js.Any])
     __obj.asInstanceOf[GoogleApiYouTubeGuideCategoryResource]
   }
@@ -55,7 +56,7 @@ object GoogleApiYouTubeGuideCategoryResource {
         ret
     }
     @scala.inline
-    def withSnippet(value: AnonTitle): Self = {
+    def withSnippet(value: Title): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("snippet")(value.asInstanceOf[js.Any])
         ret

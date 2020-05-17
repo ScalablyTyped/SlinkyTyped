@@ -3,8 +3,8 @@ package typingsSlinky.devextreme.mod.DevExpress.ui
 import typingsSlinky.devextreme.devextremeStrings.invalid
 import typingsSlinky.devextreme.devextremeStrings.pending
 import typingsSlinky.devextreme.devextremeStrings.valid
-import typingsSlinky.devextreme.mod._Global_.JQueryPromise
-import typingsSlinky.devextreme.mod._Global_.Promise
+import typingsSlinky.devextreme.mod.global.JQueryPromise
+import typingsSlinky.devextreme.mod.global.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

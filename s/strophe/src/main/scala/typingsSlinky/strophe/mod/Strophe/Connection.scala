@@ -1,7 +1,7 @@
 package typingsSlinky.strophe.mod.Strophe
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.strophe.AnonMatchBare
+import typingsSlinky.strophe.anon.MatchBare
 import typingsSlinky.strophe.mucMod.stropheAugmentingMod.Strophe.MUC.Plugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -151,7 +151,7 @@ class Connection protected () extends js.Object {
     `type`: String,
     id: String,
     from: String,
-    options: AnonMatchBare
+    options: MatchBare
   ): js.Any = js.native
    //todo: Is callback correct?
   /** Function: addTimedHandler

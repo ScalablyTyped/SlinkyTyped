@@ -8,9 +8,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the results of a resource download operation. */
-@JSGlobal("Windows.Media.Streaming.Adaptive.AdaptiveMediaSourceDownloadResult")
 @js.native
-abstract class AdaptiveMediaSourceDownloadResult () extends js.Object {
+trait AdaptiveMediaSourceDownloadResult extends js.Object {
   /** Gets or sets a buffer containing the downloaded resource. */
   var buffer: IBuffer = js.native
   /** Gets or sets a string that identifies the MIME content type of the downloaded resource. */
@@ -21,5 +20,57 @@ abstract class AdaptiveMediaSourceDownloadResult () extends js.Object {
   var inputStream: IInputStream = js.native
   /** Gets or sets the Uniform Resource Identifier (URI) of the downloaded resource. */
   var resourceUri: Uri = js.native
+}
+
+object AdaptiveMediaSourceDownloadResult {
+  @scala.inline
+  def apply(
+    buffer: IBuffer,
+    contentType: String,
+    extendedStatus: Double,
+    inputStream: IInputStream,
+    resourceUri: Uri
+  ): AdaptiveMediaSourceDownloadResult = {
+    val __obj = js.Dynamic.literal(buffer = buffer.asInstanceOf[js.Any], contentType = contentType.asInstanceOf[js.Any], extendedStatus = extendedStatus.asInstanceOf[js.Any], inputStream = inputStream.asInstanceOf[js.Any], resourceUri = resourceUri.asInstanceOf[js.Any])
+    __obj.asInstanceOf[AdaptiveMediaSourceDownloadResult]
+  }
+  @scala.inline
+  implicit class AdaptiveMediaSourceDownloadResultOps[Self <: AdaptiveMediaSourceDownloadResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withBuffer(value: IBuffer): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("buffer")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withContentType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("contentType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withExtendedStatus(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("extendedStatus")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withInputStream(value: IInputStream): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("inputStream")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withResourceUri(value: Uri): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("resourceUri")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

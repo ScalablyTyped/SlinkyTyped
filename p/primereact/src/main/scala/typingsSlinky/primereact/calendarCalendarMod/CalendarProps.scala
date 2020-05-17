@@ -1,10 +1,10 @@
 package typingsSlinky.primereact.calendarCalendarMod
 
+import org.scalajs.dom.raw.Event
 import slinky.core.TagMod
-import typingsSlinky.primereact.AnonOriginalEventEvent
-import typingsSlinky.primereact.AnonOriginalEventValue
+import typingsSlinky.primereact.anon.OriginalEventEvent
+import typingsSlinky.primereact.anon.OriginalEventValue
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,14 +39,14 @@ trait CalendarProps extends js.Object {
   var monthNavigator: js.UndefOr[Boolean] = js.native
   var name: js.UndefOr[String] = js.native
   var numberOfMonths: js.UndefOr[Double] = js.native
-  var onBlur: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onChange: js.UndefOr[js.Function1[/* e */ AnonOriginalEventEvent, Unit]] = js.native
-  var onClearButtonClick: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onFocus: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onInput: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onSelect: js.UndefOr[js.Function1[/* e */ AnonOriginalEventValue, Unit]] = js.native
-  var onTodayButtonClick: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onViewDateChange: js.UndefOr[js.Function1[/* e */ AnonOriginalEventValue, Unit]] = js.native
+  var onBlur: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* e */ OriginalEventEvent, Unit]] = js.native
+  var onClearButtonClick: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onFocus: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onInput: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onSelect: js.UndefOr[js.Function1[/* e */ OriginalEventValue, Unit]] = js.native
+  var onTodayButtonClick: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onViewDateChange: js.UndefOr[js.Function1[/* e */ OriginalEventValue, Unit]] = js.native
   var panelClassName: js.UndefOr[String] = js.native
   var panelStyle: js.UndefOr[js.Object] = js.native
   var placeholder: js.UndefOr[String] = js.native
@@ -428,7 +428,7 @@ object CalendarProps {
         ret
     }
     @scala.inline
-    def withOnBlur(value: /* event */ Event_ => Unit): Self = {
+    def withOnBlur(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
         ret
@@ -440,7 +440,7 @@ object CalendarProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* e */ AnonOriginalEventEvent => Unit): Self = {
+    def withOnChange(value: /* e */ OriginalEventEvent => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -452,7 +452,7 @@ object CalendarProps {
         ret
     }
     @scala.inline
-    def withOnClearButtonClick(value: /* event */ Event_ => Unit): Self = {
+    def withOnClearButtonClick(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onClearButtonClick")(js.Any.fromFunction1(value))
         ret
@@ -464,7 +464,7 @@ object CalendarProps {
         ret
     }
     @scala.inline
-    def withOnFocus(value: /* event */ Event_ => Unit): Self = {
+    def withOnFocus(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
         ret
@@ -476,7 +476,7 @@ object CalendarProps {
         ret
     }
     @scala.inline
-    def withOnInput(value: /* event */ Event_ => Unit): Self = {
+    def withOnInput(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onInput")(js.Any.fromFunction1(value))
         ret
@@ -488,7 +488,7 @@ object CalendarProps {
         ret
     }
     @scala.inline
-    def withOnSelect(value: /* e */ AnonOriginalEventValue => Unit): Self = {
+    def withOnSelect(value: /* e */ OriginalEventValue => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onSelect")(js.Any.fromFunction1(value))
         ret
@@ -500,7 +500,7 @@ object CalendarProps {
         ret
     }
     @scala.inline
-    def withOnTodayButtonClick(value: /* event */ Event_ => Unit): Self = {
+    def withOnTodayButtonClick(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTodayButtonClick")(js.Any.fromFunction1(value))
         ret
@@ -512,7 +512,7 @@ object CalendarProps {
         ret
     }
     @scala.inline
-    def withOnViewDateChange(value: /* e */ AnonOriginalEventValue => Unit): Self = {
+    def withOnViewDateChange(value: /* e */ OriginalEventValue => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onViewDateChange")(js.Any.fromFunction1(value))
         ret

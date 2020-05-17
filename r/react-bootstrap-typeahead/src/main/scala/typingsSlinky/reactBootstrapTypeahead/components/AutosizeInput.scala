@@ -6,7 +6,7 @@ import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.LegacyRef
-import typingsSlinky.reactBootstrapTypeahead.PickCSSPropertiesboxSizin
+import typingsSlinky.reactBootstrapTypeahead.anon.PickCSSPropertiesboxSizin
 import typingsSlinky.reactBootstrapTypeahead.mod.AutosizeInputProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

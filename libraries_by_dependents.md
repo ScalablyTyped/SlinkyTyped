@@ -367,7 +367,6 @@
 | 915 | [rollup-plugin-commonjs](./r/rollup-plugin-commonjs) | Convert CommonJS modules to ES2015
 | 914 | [deep-extend](./d/deep-extend) | Recursive object extending
 | 914 | [protobufjs](./p/protobufjs) | Protocol Buffers for JavaScript (& TypeScript).
-| 910 | [googleapis](./g/googleapis) | Google APIs Client Library for Node.js
 | 910 | [xlsx](./x/xlsx) | SheetJS Spreadsheet data parser and writer
 | 906 | [elliptic](./e/elliptic) | EC cryptography
 | 897 | [tinycolor2](./t/tinycolor2) | Fast Color Parsing and Manipulation
@@ -604,6 +603,7 @@
 | 511 | [es6-promisify](./e/es6-promisify) | Converts callback-based functions to ES6 Promises
 | 511 | [promise-polyfill](./p/promise-polyfill) | Lightweight promise polyfill. A+ compliant
 | 509 | [karma-chrome-launcher](./k/karma-chrome-launcher) | A Karma plugin. Launcher for Chrome and Chrome Can
+| 505 | [immutability-helper](./i/immutability-helper) | mutate a copy of data without changing the origina
 | 505 | [react-lifecycles-compat](./r/react-lifecycles-compat) | Backwards compatibility polyfill for React class c
 | 505 | [tar-fs](./t/tar-fs) | filesystem bindings for tar-stream
 | 504 | [lodash_dot_isfunction](./l/lodash_dot_isfunction) | The Lodash method _.isFunction exported as a modul
@@ -1477,6 +1477,7 @@
 | 169 | [rtl-detect](./r/rtl-detect) | Library will help you to detect if the locale is r
 | 169 | [tail](./t/tail) | tail a file in node
 | 168 | [eyes](./e/eyes) | a customizable value inspector
+| 168 | [google-cloud__pubsub](./g/google-cloud__pubsub) | Cloud Pub/Sub Client Library for Node.js
 | 168 | [gulp-nodemon](./g/gulp-nodemon) | it's gulp + nodemon + convenience
 | 168 | [jsbn](./j/jsbn) | The jsbn library is a fast, portable implementatio
 | 168 | [lodash_dot_uniqby](./l/lodash_dot_uniqby) | The lodash method _.uniqBy exported as a module.
@@ -1505,6 +1506,7 @@
 | 164 | [mem](./m/mem) | Memoize functions - An optimization used to speed 
 | 164 | [os-tmpdir](./o/os-tmpdir) | Node.js os.tmpdir() ponyfill
 | 163 | [bech32](./b/bech32) | Bech32 encoding / decoding
+| 163 | [combined-stream](./c/combined-stream) | A stream that emits multiple other streams one aft
 | 163 | [csstype](./c/csstype) | Strict TypeScript and Flow types for style based o
 | 163 | [feathersjs__errors](./f/feathersjs__errors) | Common error types for Feathers apps
 | 163 | [git-url-parse](./g/git-url-parse) | A high level git url parser for common git provide
@@ -1898,6 +1900,7 @@
 | 114 | [masonry-layout](./m/masonry-layout) | Cascading grid layout library
 | 114 | [simplemde](./s/simplemde) | A simple, beautiful, and embeddable JavaScript Mar
 | 114 | [viewerjs](./v/viewerjs) | JavaScript image viewer.
+| 114 | [x-ray](./x/x-ray) | structure any website
 | 113 | [angular-cookies](./a/angular-cookies) | AngularJS module for cookies
 | 113 | [base64-url](./b/base64-url) | Base64 encode, decode, escape and unescape for URL
 | 113 | [elegant-spinner](./e/elegant-spinner) | Elegant spinner for interactive CLI apps
@@ -2341,6 +2344,7 @@
 | 79 | [number-is-nan](./n/number-is-nan) | ES2015 Number.isNaN() ponyfill
 | 79 | [react-native-fs](./r/react-native-fs) | Native filesystem access for react-native
 | 79 | [react-outside-click-handl](./r/react-outside-click-handler) | A React component for dealing with clicks outside 
+| 79 | [rpio](./r/rpio) | High performance GPIO/i2c/PWM/SPI module for Raspb
 | 79 | [safe-json-stringify](./s/safe-json-stringify) | Prevent defined property getters from throwing err
 | 79 | [storybook__addon-info](./s/storybook__addon-info) | A Storybook addon to show additional information f
 | 79 | [superstruct](./s/superstruct) | A simple, expressive way to validate data in JavaS
@@ -2899,6 +2903,7 @@
 | 52 | [fast-diff](./f/fast-diff) | Fast Javascript text diff
 | 52 | [find-my-way](./f/find-my-way) | Crazy fast http radix based router
 | 52 | [fuzzaldrin](./f/fuzzaldrin) | Fuzzy filtering and string scoring
+| 52 | [google-gax](./g/google-gax) | Google API Extensions
 | 52 | [html-encoding-sniffer](./h/html-encoding-sniffer) | Sniff the encoding from a HTML byte stream
 | 52 | [ignore-styles](./i/ignore-styles) | Ignore imported style files when running in Node
 | 52 | [incremental-dom](./i/incremental-dom) | An in-place virtual DOM library
@@ -3178,6 +3183,7 @@
 | 42 | [crossroads](./c/crossroads) | Flexible router which can be used in multiple envi
 | 42 | [flickity](./f/flickity) | Touch, responsive, flickable carousels
 | 42 | [fs-tree-diff](./f/fs-tree-diff) | Backs out file tree changes
+| 42 | [grpc__grpc-js](./g/grpc__grpc-js) | gRPC Library for Node - pure JS implementation
 | 42 | [is-integer](./i/is-integer) | ES2015 (ES6) Number.isInteger polyfill
 | 42 | [js-nacl](./j/js-nacl) | High-level API to libsodium.
 | 42 | [material__linear-progress](./m/material__linear-progress) | The Material Components for the web linear progres
@@ -3554,7 +3560,6 @@
 | 32 | [crossfilter](./c/crossfilter) | Fast multidimensional filtering for coordinated vi
 | 32 | [cryptojs](./c/cryptojs) | Following googlecode project crypto-js, provide st
 | 32 | [detect-it](./d/detect-it) | Detect if a device is mouse only, touch only, or h
-| 32 | [dojo](./d/dojo) | Dojo core is a powerful, lightweight library that 
 | 32 | [duplexer3](./d/duplexer3) | Like duplexer but using streams3
 | 32 | [edge-js](./e/edge-js) | Edge.js: run .NET and Node.js in-process on Window
 | 32 | [ethereumjs-common](./e/ethereumjs-common) | Resources common to all Ethereum implementations
@@ -3737,6 +3742,7 @@
 | 29 | [protobufjs__pool](./p/protobufjs__pool) | A general purpose buffer pool.
 | 29 | [ratelimiter](./r/ratelimiter) | abstract rate limiter backed by redis
 | 29 | [react-circular-progressba](./r/react-circular-progressbar) | A circular progress indicator component
+| 29 | [react-instantsearch-dom](./r/react-instantsearch-dom) | ⚡ Lightning-fast search for React DOM, by Algolia
 | 29 | [react-move](./r/react-move) | Beautiful, data-driven animations for React.
 | 29 | [relateurl](./r/relateurl) | Minify URLs by converting them from absolute to re
 | 29 | [rfc6902](./r/rfc6902) | Complete implementation of RFC6902 (patch and diff
@@ -3834,7 +3840,6 @@
 | 27 | [uuid-1345](./u/uuid-1345) | Generate UUIDs of versions 1, 3, 4, and 5.
 | 27 | [webpack-cleanup-plugin](./w/webpack-cleanup-plugin) | Plugin for webpack to cleanup extraneous files fro
 | 27 | [wiring-pi](./w/wiring-pi) | Bindings to wiringPi
-| 27 | [wpapi](./w/wpapi) | An isomorphic JavaScript client for interacting wi
 | 27 | [zenscroll](./z/zenscroll) | A module to smooth-scroll web pages and scrollable
 | 27 | [zeroclipboard](./z/zeroclipboard) | The ZeroClipboard library provides an easy way to 
 | 27 | [zip-webpack-plugin](./z/zip-webpack-plugin) | Webpack plugin to zip up emitted files.
@@ -3854,6 +3859,7 @@
 | 26 | [is-text-path](./i/is-text-path) | Check if a file path is a text file
 | 26 | [is-valid-glob](./i/is-valid-glob) | Return true if a value is a valid glob pattern or 
 | 26 | [jdataview](./j/jdataview) | A unique way to work with a binary file in the bro
+| 26 | [jimp__utils](./j/jimp__utils) | Utils for jimp extensions.
 | 26 | [jxon](./j/jxon) | A complete, bidirectional, JXON library
 | 26 | [koa-proxies](./k/koa-proxies) | Http Proxy Middleware for Koa@2.x/next
 | 26 | [lodash_dot_take](./l/lodash_dot_take) | The lodash method _.take exported as a module.
@@ -3902,6 +3908,7 @@
 | 25 | [intl-tel-input](./i/intl-tel-input) | A JavaScript plugin for entering and validating in
 | 25 | [iron](./i/iron) | Encapsulated tokens (encrypted and mac'ed objects)
 | 25 | [jest-runner](./j/jest-runner) | -
+| 25 | [jointjs](./j/jointjs) | JavaScript diagramming library
 | 25 | [jquery-mask-plugin](./j/jquery-mask-plugin) | A jQuery Plugin to make masks on form fields and h
 | 25 | [jsonpack](./j/jsonpack) | A compression algorithm for JSON
 | 25 | [jsrender](./j/jsrender) | Best-of-breed templating in browser or on Node.js 
@@ -4075,6 +4082,7 @@
 | 22 | [parse-unit](./p/parse-unit) | parses number and unit, '20px' into 
 | 22 | [promise_dot_allsettled](./p/promise_dot_allsettled) | ES Proposal spec-compliant shim for Promise.allSet
 | 22 | [react-infinite-scroll-com](./r/react-infinite-scroll-component) | An Infinite Scroll component in react.
+| 22 | [react-instantsearch](./r/react-instantsearch) | ⚡ Lightning-fast search for React and React Native
 | 22 | [react-native-actionsheet](./r/react-native-actionsheet) | Cross platform ActionSheet. This component impleme
 | 22 | [react-native-i18n](./r/react-native-i18n) | Provide I18n to your React Native application
 | 22 | [react-qr-reader](./r/react-qr-reader) | A react component for reading QR codes from the we
@@ -4156,7 +4164,6 @@
 | 20 | [bitwise](./b/bitwise) | Manipulates bits, nibbles, bytes, and buffers.
 | 20 | [blocked](./b/blocked) | check if the event loop is blocked
 | 20 | [bwip-js](./b/bwip-js) | JavaScript barcode generator supporting over 100 t
-| 20 | [conventional-changelog-wr](./c/conventional-changelog-writer) | Write logs based on conventional commits and templ
 | 20 | [cordova-plugin-file-trans](./c/cordova-plugin-file-transfer) | Cordova File Transfer Plugin
 | 20 | [countdown](./c/countdown) | A simple JavaScript API for producing an accurate,
 | 20 | [d3-contour](./d/d3-contour) | Compute contour polygons using marching squares.
@@ -4681,6 +4688,7 @@
 | 13 | [angular-gettext](./a/angular-gettext) | Gettext support for Angular.js
 | 13 | [angular-spinner](./a/angular-spinner) | Angular directive to show an animated spinner (usi
 | 13 | [aria-query](./a/aria-query) | Programmatic access to the ARIA specification
+| 13 | [asmcrypto_dot_js](./a/asmcrypto_dot_js) | Asm.js implementation of WebCrypto API
 | 13 | [asyncblock](./a/asyncblock) | A simple and powerful abstraction of node-fibers
 | 13 | [authenticator](./a/authenticator) | Two- / Multi- Factor Authenication (2FA / MFA) for
 | 13 | [backbone_dot_paginator](./b/backbone_dot_paginator) | A pageable Backbone.Collection superset. Supports 
@@ -5814,7 +5822,6 @@
 | 5 | [ember-resolver](./e/ember-resolver) | The default modules based resolver for Ember CLI.
 | 5 | [ember__ordered-set](./e/ember__ordered-set) | The default blueprint for ember-cli addons.
 | 5 | [esfx__internal-deprecate](./e/esfx__internal-deprecate) | This package provides internal utilities for '@esf
-| 5 | [espruino](./e/espruino) | Command Line Interface and library for Communicati
 | 5 | [expectations](./e/expectations) | jasmine-style 'expect' calls for mocha and other t
 | 5 | [express-mongo-sanitize](./e/express-mongo-sanitize) | Sanitize your express payload to prevent MongoDB o
 | 5 | [express-ntlm](./e/express-ntlm) | An express middleware to have simple NTLM-authenti
@@ -5875,7 +5882,6 @@
 | 5 | [lang_dot_js](./l/lang_dot_js) | Laravel's Lang in JavaScript
 | 5 | [langmap](./l/langmap) | List of all the known languages in their English a
 | 5 | [layui-layer](./l/layui-layer) | npm version of layui-layer
-| 5 | [leadfoot](./l/leadfoot) | Leadfoot. A JavaScript client library that brings 
 | 5 | [librato-node](./l/librato-node) | A node.js client for Librato Metrics (http://metri
 | 5 | [lime-js](./l/lime-js) | JavaScript LIME implementation
 | 5 | [lingui__core](./l/lingui__core) | I18n tools for javascript
@@ -6179,6 +6185,7 @@
 | 4 | [react-file-input](./r/react-file-input) | Simple file input component for React
 | 4 | [react-google-places-sugge](./r/react-google-places-suggest) | React component to select geolocated suggestion fr
 | 4 | [react-input-calendar](./r/react-input-calendar) | Datepicker widget react component
+| 4 | [react-mosaic-component](./r/react-mosaic-component) | A React Tiling Window Manager
 | 4 | [react-multi-ref](./r/react-multi-ref) | Utility for keeping references to multiple React e
 | 4 | [react-native-easy-upgrade](./r/react-native-easy-upgrade) | Easy to upgrade your react-native app
 | 4 | [react-native-material-men](./r/react-native-material-menu) | Material Menu for React Native
@@ -6504,6 +6511,7 @@
 | 3 | [react-flag-icon-css](./r/react-flag-icon-css) | React SVG country flags component
 | 3 | [react-flags-select](./r/react-flags-select) | react-flags-select React component
 | 3 | [react-from-dom](./r/react-from-dom) | Convert HTML/XML source code or DOM nodes to React
+| 3 | [react-instantsearch-core](./r/react-instantsearch-core) | ⚡ Lightning-fast search for React, by Algolia
 | 3 | [react-loadable-visibility](./r/react-loadable-visibility) | A wrapper around react-loadable for elements that 
 | 3 | [react-native-elevated-vie](./r/react-native-elevated-view) | Cross platform solution to elevation for React Nat
 | 3 | [react-native-html-to-pdf](./r/react-native-html-to-pdf) | Convert html strings to PDF documents using React 
@@ -6793,6 +6801,7 @@
 | 2 | [mali-onerror](./m/mali-onerror) | On error middleware for Mali
 | 2 | [math-trunc](./m/math-trunc) | ES6 Math.trunc() ponyfill
 | 2 | [merge-env](./m/merge-env) | An object merging function that has special suppor
+| 2 | [mergerino](./m/mergerino) | immutable state merge util
 | 2 | [microevent_dot_ts](./m/microevent_dot_ts) | Zero cost events
 | 2 | [minecraft-scripting-types](./m/minecraft-scripting-types-shared) | Shared TypeScript definitions for Minecraft Bedroc
 | 2 | [minimal-bit-array](./m/minimal-bit-array) | Minimal bit array implementation that is compatibl
@@ -7371,6 +7380,7 @@
 | 1 | [react-gamepad](./r/react-gamepad) | A Gamepad handler as a React component
 | 1 | [react-hook-mousetrap](./r/react-hook-mousetrap) | A react hook to trigger callbacks on specified key
 | 1 | [react-howler](./r/react-howler) | A React.js wrapper for howler.js (audio player)
+| 1 | [react-instantsearch-nativ](./r/react-instantsearch-native) | ⚡ Lightning-fast search for React Native, by Algol
 | 1 | [react-json](./r/react-json) | A JSON editor packed as a React.js component and t
 | 1 | [react-motion-loop](./r/react-motion-loop) | Looping animation for react-motion Spring
 | 1 | [react-native-app-intro-sl](./r/react-native-app-intro-slider) | Simple and configurable app introduction slider fo

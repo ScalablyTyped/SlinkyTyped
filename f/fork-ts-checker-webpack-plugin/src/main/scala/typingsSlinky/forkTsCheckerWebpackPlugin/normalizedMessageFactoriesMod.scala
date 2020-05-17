@@ -1,6 +1,7 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin
 
 import typingsSlinky.eslint.mod.Linter.LintMessage
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.Typeofts
 import typingsSlinky.forkTsCheckerWebpackPlugin.normalizedMessageMod.NormalizedMessage
 import typingsSlinky.tslint.mod.RuleFailure
 import typingsSlinky.typescript.mod.Diagnostic

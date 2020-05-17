@@ -1,5 +1,6 @@
 package typingsSlinky.baseui.fileUploaderMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.File
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
@@ -8,7 +9,6 @@ import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.std.DataTransferItem
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -105,7 +105,7 @@ object FileUploaderProps {
         ret
     }
     @scala.inline
-    def withGetDataTransferItems(value: /* event */ SyntheticEvent[Event_, js.Any] => js.Promise[js.Array[File | DataTransferItem]]): Self = {
+    def withGetDataTransferItems(value: /* event */ SyntheticEvent[Event, js.Any] => js.Promise[js.Array[File | DataTransferItem]]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getDataTransferItems")(js.Any.fromFunction1(value))
         ret
@@ -250,7 +250,7 @@ object FileUploaderProps {
     }
     @scala.inline
     def withOnDrop(
-      value: (/* accepted */ js.Array[File], /* rejected */ js.Array[File], /* event */ SyntheticEvent[Event_, HTMLElement]) => js.Any
+      value: (/* accepted */ js.Array[File], /* rejected */ js.Array[File], /* event */ SyntheticEvent[Event, HTMLElement]) => js.Any
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDrop")(js.Any.fromFunction3(value))
@@ -264,7 +264,7 @@ object FileUploaderProps {
     }
     @scala.inline
     def withOnDropAccepted(
-      value: (/* acceptedOrRejected */ js.Array[File], /* event */ SyntheticEvent[Event_, HTMLElement]) => js.Any
+      value: (/* acceptedOrRejected */ js.Array[File], /* event */ SyntheticEvent[Event, HTMLElement]) => js.Any
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDropAccepted")(js.Any.fromFunction2(value))
@@ -278,7 +278,7 @@ object FileUploaderProps {
     }
     @scala.inline
     def withOnDropRejected(
-      value: (/* acceptedOrRejected */ js.Array[File], /* event */ SyntheticEvent[Event_, HTMLElement]) => js.Any
+      value: (/* acceptedOrRejected */ js.Array[File], /* event */ SyntheticEvent[Event, HTMLElement]) => js.Any
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDropRejected")(js.Any.fromFunction2(value))

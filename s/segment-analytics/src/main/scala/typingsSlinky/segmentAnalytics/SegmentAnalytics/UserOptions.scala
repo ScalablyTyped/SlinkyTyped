@@ -1,15 +1,15 @@
 package typingsSlinky.segmentAnalytics.SegmentAnalytics
 
-import typingsSlinky.segmentAnalytics.AnonKey
-import typingsSlinky.segmentAnalytics.AnonKeyString
+import typingsSlinky.segmentAnalytics.anon.Key
+import typingsSlinky.segmentAnalytics.anon.KeyString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait UserOptions extends js.Object {
-  var cookie: js.UndefOr[AnonKey] = js.native
-  var localStorage: js.UndefOr[AnonKeyString] = js.native
+  var cookie: js.UndefOr[Key] = js.native
+  var localStorage: js.UndefOr[KeyString] = js.native
   var persist: js.UndefOr[Boolean] = js.native
 }
 
@@ -26,7 +26,7 @@ object UserOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withCookie(value: AnonKey): Self = {
+    def withCookie(value: Key): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cookie")(value.asInstanceOf[js.Any])
         ret
@@ -38,7 +38,7 @@ object UserOptions {
         ret
     }
     @scala.inline
-    def withLocalStorage(value: AnonKeyString): Self = {
+    def withLocalStorage(value: KeyString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("localStorage")(value.asInstanceOf[js.Any])
         ret

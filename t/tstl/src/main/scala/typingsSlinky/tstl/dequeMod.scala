@@ -108,6 +108,13 @@ object dequeMod extends js.Object {
     /* InferMemberOverrides */
     override def assign[InputIterator /* <: IForwardIterator[T, InputIterator] */](first: InputIterator, last: InputIterator): Unit = js.native
     /**
+      * Iterator to the first element.
+      *
+      * @return Iterator to the first element.
+      */
+    /* InferMemberOverrides */
+    override def begin(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[T, Deque[T], Iterator[T], ReverseIterator[T], T] = js.native
+    /**
       * The capacity to store elements.
       *
       * @return The capacity.
@@ -118,6 +125,13 @@ object dequeMod extends js.Object {
       */
     /* InferMemberOverrides */
     override def clear(): Unit = js.native
+    /**
+      * Iterator to the end.
+      *
+      * @return Iterator to the end.
+      */
+    /* InferMemberOverrides */
+    override def end(): typingsSlinky.tstl.icontainerMod.IContainer.Iterator[T, Deque[T], Iterator[T], ReverseIterator[T], T] = js.native
     /**
       * Erase elements in range.
       *
@@ -150,9 +164,30 @@ object dequeMod extends js.Object {
       */
     def pop_front(): Unit = js.native
     /**
+      * Insert an element at the end.
+      *
+      * @param val Value to insert.
+      */
+    /* InferMemberOverrides */
+    override def push_back(`val`: T): Unit = js.native
+    /**
       * @inheritDoc
       */
     def push_front(`val`: T): Unit = js.native
+    /**
+      * Reverse iterator to the first element in reverse.
+      *
+      * @return Reverse iterator to the first.
+      */
+    /* InferMemberOverrides */
+    override def rbegin(): ReverseIterator[T] = js.native
+    /**
+      * Reverse iterator to the reverse end.
+      *
+      * @return Reverse iterator to the end.
+      */
+    /* InferMemberOverrides */
+    override def rend(): ReverseIterator[T] = js.native
     /**
       * Reserve {@link capacity} enable to store *n* elements.
       *

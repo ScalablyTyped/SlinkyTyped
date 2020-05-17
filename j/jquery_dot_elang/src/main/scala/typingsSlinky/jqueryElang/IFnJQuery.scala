@@ -1,7 +1,7 @@
 package typingsSlinky.jqueryElang
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,17 +9,17 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IFnJQuery extends js.Object {
   def fnPlugin(
-    context: JQuery_[HTMLElement],
+    context: JQuery[HTMLElement],
     options: js.Any,
     command: String,
     pluginName: String,
     pluginDataAttribute: String
-  ): JQuery_[HTMLElement] = js.native
+  ): JQuery[HTMLElement] = js.native
 }
 
 object IFnJQuery {
   @scala.inline
-  def apply(fnPlugin: (JQuery_[HTMLElement], js.Any, String, String, String) => JQuery_[HTMLElement]): IFnJQuery = {
+  def apply(fnPlugin: (JQuery[HTMLElement], js.Any, String, String, String) => JQuery[HTMLElement]): IFnJQuery = {
     val __obj = js.Dynamic.literal(fnPlugin = js.Any.fromFunction5(fnPlugin))
     __obj.asInstanceOf[IFnJQuery]
   }
@@ -30,7 +30,7 @@ object IFnJQuery {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFnPlugin(value: (JQuery_[HTMLElement], js.Any, String, String, String) => JQuery_[HTMLElement]): Self = {
+    def withFnPlugin(value: (JQuery[HTMLElement], js.Any, String, String, String) => JQuery[HTMLElement]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("fnPlugin")(js.Any.fromFunction5(value))
         ret

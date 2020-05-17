@@ -1,6 +1,6 @@
 package typingsSlinky.yandexMaps.mod
 
-import typingsSlinky.yandexMaps.AnonChildren
+import typingsSlinky.yandexMaps.anon.Children
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,8 +12,8 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.yandexMaps.mod.IGeoObjectCollection because var conflicts: events, options. Inlined add, add, each, each, get, getBounds, getIterator, getLength, getPixelBounds, indexOf, remove, removeAll, set, splice */ @JSImport("yandex-maps", "GeoObjectCollection")
 @js.native
 class GeoObjectCollection () extends IGeoObject {
-  def this(feature: AnonChildren) = this()
-  def this(feature: AnonChildren, options: js.Object) = this()
+  def this(feature: Children) = this()
+  def this(feature: Children, options: js.Object) = this()
   def add(child: IGeoObject): this.type = js.native
   def add(child: IGeoObject, index: Double): this.type = js.native
   def each(callback: js.Function1[/* object */ IGeoObject, Unit]): Unit = js.native

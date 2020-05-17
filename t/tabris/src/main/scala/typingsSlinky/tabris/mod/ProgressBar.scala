@@ -1,6 +1,6 @@
 package typingsSlinky.tabris.mod
 
-import typingsSlinky.tabris.OmitProgressBarset
+import typingsSlinky.tabris.anon.OmitProgressBarset
 import typingsSlinky.tabris.tabrisStrings.error
 import typingsSlinky.tabris.tabrisStrings.maximum
 import typingsSlinky.tabris.tabrisStrings.minimum

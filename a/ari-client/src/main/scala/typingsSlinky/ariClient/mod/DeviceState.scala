@@ -1,6 +1,6 @@
 package typingsSlinky.ariClient.mod
 
-import typingsSlinky.ariClient.AnonDeviceStateString
+import typingsSlinky.ariClient.anon.DeviceStateString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait DeviceState extends Resource {
   def list(): js.Promise[js.Array[DeviceState]] = js.native
   /* Methods */
   def list(callback: js.Function2[/* err */ js.Error, /* devicestates */ js.Array[this.type], Unit]): Unit = js.native
-  def update(params: AnonDeviceStateString): js.Promise[Unit] = js.native
-  def update(params: AnonDeviceStateString, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def update(params: DeviceStateString): js.Promise[Unit] = js.native
+  def update(params: DeviceStateString, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
 }
 

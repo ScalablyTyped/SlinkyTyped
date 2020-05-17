@@ -5,7 +5,7 @@ import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antDesignPro.AnonDictkey
+import typingsSlinky.antDesignPro.anon.Dictkey
 import typingsSlinky.antDesignPro.noticeIconMod.NoticeIconProps
 import typingsSlinky.antDesignPro.noticeIconMod.default
 import typingsSlinky.antDesignPro.noticeIconTabMod.NoticeIconData
@@ -36,7 +36,7 @@ object NoticeIcon {
     @scala.inline
     def loading(value: Boolean): this.type = set("loading", value.asInstanceOf[js.Any])
     @scala.inline
-    def locale(value: AnonDictkey): this.type = set("locale", value.asInstanceOf[js.Any])
+    def locale(value: Dictkey): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline
     def onClear(value: /* tabName */ String => Unit): this.type = set("onClear", js.Any.fromFunction1(value))
     @scala.inline

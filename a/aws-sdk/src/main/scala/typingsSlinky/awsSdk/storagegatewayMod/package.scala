@@ -6,25 +6,7 @@ import scala.scalajs.js.annotation._
 
 package object storagegatewayMod {
   type ActivationKey = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.ACCESS_DENIED
-    - typingsSlinky.awsSdk.awsSdkStrings.DETACHED
-    - typingsSlinky.awsSdk.awsSdkStrings.JOINED
-    - typingsSlinky.awsSdk.awsSdkStrings.JOINING
-    - typingsSlinky.awsSdk.awsSdkStrings.NETWORK_ERROR
-    - typingsSlinky.awsSdk.awsSdkStrings.TIMEOUT
-    - typingsSlinky.awsSdk.awsSdkStrings.UNKNOWN_ERROR
-    - java.lang.String
-  */
-  type ActiveDirectoryStatus = typingsSlinky.awsSdk.storagegatewayMod._ActiveDirectoryStatus | java.lang.String
   type Authentication = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.COMPLETE
-    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
-    - typingsSlinky.awsSdk.awsSdkStrings.PENDING
-    - java.lang.String
-  */
-  type AvailabilityMonitorTestStatus = typingsSlinky.awsSdk.storagegatewayMod._AvailabilityMonitorTestStatus | java.lang.String
   type BandwidthDownloadRateLimit = scala.Double
   type BandwidthType = java.lang.String
   type BandwidthUploadRateLimit = scala.Double
@@ -58,12 +40,6 @@ package object storagegatewayMod {
   type FileShareId = java.lang.String
   type FileShareInfoList = js.Array[typingsSlinky.awsSdk.storagegatewayMod.FileShareInfo]
   type FileShareStatus = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.NFS
-    - typingsSlinky.awsSdk.awsSdkStrings.SMB
-    - java.lang.String
-  */
-  type FileShareType = typingsSlinky.awsSdk.storagegatewayMod._FileShareType | java.lang.String
   type FileShareUser = java.lang.String
   type FileShareUserList = js.Array[typingsSlinky.awsSdk.storagegatewayMod.FileShareUser]
   type Folder = java.lang.String
@@ -78,15 +54,6 @@ package object storagegatewayMod {
   type GatewayType = java.lang.String
   type Gateways = js.Array[typingsSlinky.awsSdk.storagegatewayMod.GatewayInfo]
   type Host = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.VMWARE
-    - typingsSlinky.awsSdk.awsSdkStrings.`HYPER-V`
-    - typingsSlinky.awsSdk.awsSdkStrings.EC2
-    - typingsSlinky.awsSdk.awsSdkStrings.KVM
-    - typingsSlinky.awsSdk.awsSdkStrings.OTHER
-    - java.lang.String
-  */
-  type HostEnvironment = typingsSlinky.awsSdk.storagegatewayMod._HostEnvironment | java.lang.String
   type Hosts = js.Array[typingsSlinky.awsSdk.storagegatewayMod.Host]
   type HourOfDay = scala.Double
   type IPV4AddressCIDR = java.lang.String
@@ -105,17 +72,6 @@ package object storagegatewayMod {
   type NextUpdateAvailabilityDate = java.lang.String
   type NotificationId = java.lang.String
   type NumTapesToCreate = scala.Double
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.private__
-    - typingsSlinky.awsSdk.awsSdkStrings.`public-read`
-    - typingsSlinky.awsSdk.awsSdkStrings.`public-read-write`
-    - typingsSlinky.awsSdk.awsSdkStrings.`authenticated-read`
-    - typingsSlinky.awsSdk.awsSdkStrings.`bucket-owner-read`
-    - typingsSlinky.awsSdk.awsSdkStrings.`bucket-owner-full-control`
-    - typingsSlinky.awsSdk.awsSdkStrings.`aws-exec-read`
-    - java.lang.String
-  */
-  type ObjectACL = typingsSlinky.awsSdk.storagegatewayMod._ObjectACL | java.lang.String
   type OrganizationalUnit = java.lang.String
   type Path = java.lang.String
   type PermissionId = scala.Double
@@ -128,13 +84,6 @@ package object storagegatewayMod {
   type Role = java.lang.String
   type SMBFileShareInfoList = js.Array[typingsSlinky.awsSdk.storagegatewayMod.SMBFileShareInfo]
   type SMBGuestPassword = java.lang.String
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.ClientSpecified
-    - typingsSlinky.awsSdk.awsSdkStrings.MandatorySigning
-    - typingsSlinky.awsSdk.awsSdkStrings.MandatoryEncryption
-    - java.lang.String
-  */
-  type SMBSecurityStrategy = typingsSlinky.awsSdk.storagegatewayMod._SMBSecurityStrategy | java.lang.String
   type SnapshotDescription = java.lang.String
   type SnapshotId = java.lang.String
   type Squash = java.lang.String
@@ -177,12 +126,6 @@ package object storagegatewayMod {
   type VolumeStatus = java.lang.String
   type VolumeType = java.lang.String
   type VolumeUsedInBytes = scala.Double
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`2013-06-30`
-    - typingsSlinky.awsSdk.awsSdkStrings.latest_
-    - java.lang.String
-  */
-  type apiVersion = typingsSlinky.awsSdk.storagegatewayMod._apiVersion | java.lang.String
   type double = scala.Double
   type integer = scala.Double
   type long = scala.Double

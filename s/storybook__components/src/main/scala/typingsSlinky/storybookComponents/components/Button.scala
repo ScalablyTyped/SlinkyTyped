@@ -1,18 +1,44 @@
 package typingsSlinky.storybookComponents.components
 
 import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.react.mod.RefAttributes
+import typingsSlinky.storybookComponents.buttonButtonMod.ButtonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Could't extract props from js.Any because couldn't resolve ClassTree. */
 object Button {
-  @JSImport("@storybook/components/dist/form/input/input", "Button")
+  @JSImport("@storybook/components", "Button")
   @js.native
   object component extends js.Object
   
-  def apply(p: js.Any): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Button.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, Ref[js.Any]] {
+    @scala.inline
+    def containsIcon(value: Boolean): this.type = set("containsIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def inForm(value: Boolean): this.type = set("inForm", value.asInstanceOf[js.Any])
+    @scala.inline
+    def isLink(value: Boolean): this.type = set("isLink", value.asInstanceOf[js.Any])
+    @scala.inline
+    def outline(value: Boolean): this.type = set("outline", value.asInstanceOf[js.Any])
+    @scala.inline
+    def primary(value: Boolean): this.type = set("primary", value.asInstanceOf[js.Any])
+    @scala.inline
+    def secondary(value: Boolean): this.type = set("secondary", value.asInstanceOf[js.Any])
+    @scala.inline
+    def small(value: Boolean): this.type = set("small", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tertiary(value: Boolean): this.type = set("tertiary", value.asInstanceOf[js.Any])
+  }
+  
+  def withProps(p: ButtonProps with RefAttributes[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: Button.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

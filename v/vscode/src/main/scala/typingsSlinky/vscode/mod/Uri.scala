@@ -1,6 +1,6 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonAuthority
+import typingsSlinky.vscode.anon.Authority
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -76,7 +76,7 @@ class Uri protected () extends ConfigurationScope {
   		 * @return A new Uri that reflects the given change. Will return `this` Uri if the change
   		 *  is not changing anything.
   		 */
-  def `with`(change: AnonAuthority): Uri = js.native
+  def `with`(change: Authority): Uri = js.native
 }
 
 /* static members */

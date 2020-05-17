@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TreeLinksTransform extends _Transforms {
+trait TreeLinksTransform extends Transforms {
   var `type`: treelinks = js.native
 }
 

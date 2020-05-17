@@ -1,6 +1,5 @@
 package typingsSlinky.std
 
-import org.scalablytyped.runtime.Instantiable0
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,9 +25,4 @@ trait AudioParam extends js.Object {
   def setValueCurveAtTime(values: js.typedarray.Float32Array, startTime: Double, duration: Double): org.scalajs.dom.raw.AudioParam = js.native
   def setValueCurveAtTime(values: js.Iterable[Double], startTime: Double, duration: Double): org.scalajs.dom.raw.AudioParam = js.native
 }
-
-@JSGlobal("AudioParam")
-@js.native
-object AudioParam
-  extends Instantiable0[org.scalajs.dom.raw.AudioParam]
 

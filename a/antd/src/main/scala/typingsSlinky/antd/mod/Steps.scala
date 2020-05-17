@@ -1,7 +1,7 @@
 package typingsSlinky.antd.mod
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.antd.AnonCurrent
+import typingsSlinky.antd.anon.Current
 import typingsSlinky.antd.libStepsMod.StepProps
 import typingsSlinky.antd.libStepsMod.default
 import scala.scalajs.js
@@ -17,6 +17,6 @@ class Steps () extends default
 @js.native
 object Steps extends js.Object {
   var Step: ReactComponentClass[StepProps] = js.native
-  var defaultProps: AnonCurrent = js.native
+  var defaultProps: Current = js.native
 }
 

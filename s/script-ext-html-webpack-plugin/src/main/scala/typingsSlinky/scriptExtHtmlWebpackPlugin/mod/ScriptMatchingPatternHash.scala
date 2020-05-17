@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait ScriptMatchingPatternHash extends js.Object {
+trait ScriptMatchingPatternHash extends ScriptMatchingPattern {
   var test: ScriptMatchingPatternBase = js.native
 }
 

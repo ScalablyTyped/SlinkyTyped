@@ -1,6 +1,5 @@
 package typingsSlinky.activexInterop
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,7 +30,43 @@ trait Enumerator[T] extends js.Object {
   def moveNext(): Unit = js.native
 }
 
-@JSGlobal("Enumerator")
-@js.native
-object Enumerator extends TopLevel[EnumeratorConstructor]
+object Enumerator {
+  @scala.inline
+  def apply[T](atEnd: () => Boolean, item: () => T, moveFirst: () => Unit, moveNext: () => Unit): Enumerator[T] = {
+    val __obj = js.Dynamic.literal(atEnd = js.Any.fromFunction0(atEnd), item = js.Any.fromFunction0(item), moveFirst = js.Any.fromFunction0(moveFirst), moveNext = js.Any.fromFunction0(moveNext))
+    __obj.asInstanceOf[Enumerator[T]]
+  }
+  @scala.inline
+  implicit class EnumeratorOps[Self[t] <: Enumerator[t], T] (val x: Self[T]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self[T] = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self[T]]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self[T] with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self[T] with Other]
+    @scala.inline
+    def withAtEnd(value: () => Boolean): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("atEnd")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withItem(value: () => T): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("item")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withMoveFirst(value: () => Unit): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveFirst")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withMoveNext(value: () => Unit): Self[T] = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("moveNext")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
+}
 

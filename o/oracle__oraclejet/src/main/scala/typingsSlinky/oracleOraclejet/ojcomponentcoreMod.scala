@@ -1,6 +1,7 @@
 package typingsSlinky.oracleOraclejet
 
 import org.scalajs.dom.raw.Element
+import typingsSlinky.oracleOraclejet.anon.InitialRender
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,6 +13,6 @@ object ojcomponentcoreMod extends js.Object {
   def subtreeDetached(node: Element): Unit = js.native
   def subtreeHidden(node: Element): Unit = js.native
   def subtreeShown(node: Element): Unit = js.native
-  def subtreeShown(node: Element, options: AnonInitialRender): Unit = js.native
+  def subtreeShown(node: Element, options: InitialRender): Unit = js.native
 }
 

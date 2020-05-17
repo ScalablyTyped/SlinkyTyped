@@ -1,10 +1,10 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.AnonComponentTElementDxElement
-import typingsSlinky.devextreme.AnonDuration
-import typingsSlinky.devextreme.AnonElementModelTarget
-import typingsSlinky.devextreme.AnonElementTarget
-import typingsSlinky.devextreme.AnonModelTarget
+import typingsSlinky.devextreme.anon.ComponentTElementDxElement
+import typingsSlinky.devextreme.anon.Duration
+import typingsSlinky.devextreme.anon.ElementModelTarget
+import typingsSlinky.devextreme.anon.ElementTarget
+import typingsSlinky.devextreme.anon.ModelTarget
 import typingsSlinky.devextreme.devextremeStrings.Bright
 import typingsSlinky.devextreme.devextremeStrings.Carmine
 import typingsSlinky.devextreme.devextremeStrings.Default
@@ -37,7 +37,7 @@ trait BaseChartOptions[T] extends BaseWidgetOptions[T] {
   /** Specifies adaptive layout options. */
   var adaptiveLayout: js.UndefOr[BaseChartAdaptiveLayout] = js.native
   /** Specifies animation options. */
-  var animation: js.UndefOr[AnonDuration | Boolean] = js.native
+  var animation: js.UndefOr[Duration | Boolean] = js.native
   /** Customizes the appearance of an individual point label. */
   var customizeLabel: js.UndefOr[js.Function1[/* pointInfo */ js.Any, dxChartSeriesTypesCommonSeriesLabel]] = js.native
   /** Customizes the appearance of an individual series point. */
@@ -47,17 +47,17 @@ trait BaseChartOptions[T] extends BaseWidgetOptions[T] {
   /** Specifies options of the legend. */
   var legend: js.UndefOr[BaseChartLegend] = js.native
   /** A function that is executed when all series are ready. */
-  var onDone: js.UndefOr[js.Function1[/* e */ AnonComponentTElementDxElement[T], _]] = js.native
+  var onDone: js.UndefOr[js.Function1[/* e */ ComponentTElementDxElement[T], _]] = js.native
   /** A function that is executed when a series point is clicked or tapped. */
-  var onPointClick: js.UndefOr[(js.Function1[/* e */ AnonModelTarget[T], _]) | String] = js.native
+  var onPointClick: js.UndefOr[(js.Function1[/* e */ ModelTarget[T], _]) | String] = js.native
   /** A function that is executed after the pointer enters or leaves a series point. */
-  var onPointHoverChanged: js.UndefOr[js.Function1[/* e */ AnonElementTarget, _]] = js.native
+  var onPointHoverChanged: js.UndefOr[js.Function1[/* e */ ElementTarget, _]] = js.native
   /** A function that is executed when a series point is selected or selection is canceled. */
-  var onPointSelectionChanged: js.UndefOr[js.Function1[/* e */ AnonElementTarget, _]] = js.native
+  var onPointSelectionChanged: js.UndefOr[js.Function1[/* e */ ElementTarget, _]] = js.native
   /** A function that is executed when a tooltip becomes hidden. */
-  var onTooltipHidden: js.UndefOr[js.Function1[/* e */ AnonElementModelTarget[T], _]] = js.native
+  var onTooltipHidden: js.UndefOr[js.Function1[/* e */ ElementModelTarget[T], _]] = js.native
   /** A function that is executed when a tooltip appears. */
-  var onTooltipShown: js.UndefOr[js.Function1[/* e */ AnonElementModelTarget[T], _]] = js.native
+  var onTooltipShown: js.UndefOr[js.Function1[/* e */ ElementModelTarget[T], _]] = js.native
   /** Sets the palette to be used for colorizing series and their elements. */
   var palette: js.UndefOr[
     js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
@@ -98,7 +98,7 @@ object BaseChartOptions {
         ret
     }
     @scala.inline
-    def withAnimation(value: AnonDuration | Boolean): Self[T] = {
+    def withAnimation(value: Duration | Boolean): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("animation")(value.asInstanceOf[js.Any])
         ret
@@ -158,7 +158,7 @@ object BaseChartOptions {
         ret
     }
     @scala.inline
-    def withOnDone(value: /* e */ AnonComponentTElementDxElement[T] => _): Self[T] = {
+    def withOnDone(value: /* e */ ComponentTElementDxElement[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onDone")(js.Any.fromFunction1(value))
         ret
@@ -170,13 +170,13 @@ object BaseChartOptions {
         ret
     }
     @scala.inline
-    def withOnPointClickFunction1(value: /* e */ AnonModelTarget[T] => _): Self[T] = {
+    def withOnPointClickFunction1(value: /* e */ ModelTarget[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPointClick")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withOnPointClick(value: (js.Function1[/* e */ AnonModelTarget[T], _]) | String): Self[T] = {
+    def withOnPointClick(value: (js.Function1[/* e */ ModelTarget[T], _]) | String): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPointClick")(value.asInstanceOf[js.Any])
         ret
@@ -188,7 +188,7 @@ object BaseChartOptions {
         ret
     }
     @scala.inline
-    def withOnPointHoverChanged(value: /* e */ AnonElementTarget => _): Self[T] = {
+    def withOnPointHoverChanged(value: /* e */ ElementTarget => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPointHoverChanged")(js.Any.fromFunction1(value))
         ret
@@ -200,7 +200,7 @@ object BaseChartOptions {
         ret
     }
     @scala.inline
-    def withOnPointSelectionChanged(value: /* e */ AnonElementTarget => _): Self[T] = {
+    def withOnPointSelectionChanged(value: /* e */ ElementTarget => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onPointSelectionChanged")(js.Any.fromFunction1(value))
         ret
@@ -212,7 +212,7 @@ object BaseChartOptions {
         ret
     }
     @scala.inline
-    def withOnTooltipHidden(value: /* e */ AnonElementModelTarget[T] => _): Self[T] = {
+    def withOnTooltipHidden(value: /* e */ ElementModelTarget[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTooltipHidden")(js.Any.fromFunction1(value))
         ret
@@ -224,7 +224,7 @@ object BaseChartOptions {
         ret
     }
     @scala.inline
-    def withOnTooltipShown(value: /* e */ AnonElementModelTarget[T] => _): Self[T] = {
+    def withOnTooltipShown(value: /* e */ ElementModelTarget[T] => _): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onTooltipShown")(js.Any.fromFunction1(value))
         ret

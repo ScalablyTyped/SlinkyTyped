@@ -1,6 +1,6 @@
 package typingsSlinky.jszip.mod
 
-import typingsSlinky.jszip.AnonLevel
+import typingsSlinky.jszip.anon.Level
 import typingsSlinky.jszip.jszipStrings.DOS
 import typingsSlinky.jszip.jszipStrings.UNIX
 import scala.scalajs.js
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait JSZipGeneratorOptions[T /* <: OutputType */] extends js.Object {
   var comment: js.UndefOr[String] = js.native
   var compression: js.UndefOr[Compression] = js.native
-  var compressionOptions: js.UndefOr[Null | AnonLevel] = js.native
+  var compressionOptions: js.UndefOr[Null | Level] = js.native
   var encodeFileName: js.UndefOr[js.Function1[/* filename */ String, String]] = js.native
   /**
     * mime-type for the generated file.
@@ -63,7 +63,7 @@ object JSZipGeneratorOptions {
         ret
     }
     @scala.inline
-    def withCompressionOptions(value: AnonLevel): Self[T] = {
+    def withCompressionOptions(value: Level): Self[T] = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("compressionOptions")(value.asInstanceOf[js.Any])
         ret

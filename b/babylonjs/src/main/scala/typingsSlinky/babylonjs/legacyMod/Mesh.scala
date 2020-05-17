@@ -1,9 +1,9 @@
 package typingsSlinky.babylonjs.legacyMod
 
-import typingsSlinky.babylonjs.AnonFaceColors
-import typingsSlinky.babylonjs.AnonH
-import typingsSlinky.babylonjs.AnonMax
-import typingsSlinky.babylonjs.AnonUpdatable
+import typingsSlinky.babylonjs.anon.FaceColors
+import typingsSlinky.babylonjs.anon.H
+import typingsSlinky.babylonjs.anon.Max
+import typingsSlinky.babylonjs.anon.Updatable
 import typingsSlinky.babylonjs.physicsImpostorMod.IPhysicsEnabledObject
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
@@ -145,7 +145,7 @@ object Mesh extends js.Object {
     * @param meshesOrMinMaxVector could be an array of meshes or a `{min:` Vector3`, max:` Vector3`}` object
     * @returns a vector3
     */
-  def Center(meshesOrMinMaxVector: AnonMax): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  def Center(meshesOrMinMaxVector: Max): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
   /**
     * Creates a box mesh. Please consider using the same method from the MeshBuilder class instead
     * @param name defines the name of the mesh to create
@@ -434,7 +434,7 @@ object Mesh extends js.Object {
     * @returns a new Mesh
     * @see http://doc.babylonjs.com/how_to/polyhedra_shapes#icosphere
     */
-  def CreateIcoSphere(name: String, options: AnonUpdatable, scene: typingsSlinky.babylonjs.sceneMod.Scene): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateIcoSphere(name: String, options: Updatable, scene: typingsSlinky.babylonjs.sceneMod.Scene): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates lathe mesh.
     * The lathe is a shape with a symetry axis : a 2D model shape is rotated around this axis to design the lathe.
@@ -589,7 +589,7 @@ object Mesh extends js.Object {
     * @param scene defines the hosting scene
     * @returns a new Mesh
     */
-  def CreatePolyhedron(name: String, options: AnonFaceColors, scene: typingsSlinky.babylonjs.sceneMod.Scene): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePolyhedron(name: String, options: FaceColors, scene: typingsSlinky.babylonjs.sceneMod.Scene): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   /**
     * Creates a ribbon mesh. Please consider using the same method from the MeshBuilder class instead
     * @see http://doc.babylonjs.com/how_to/parametric_shapes
@@ -696,8 +696,8 @@ object Mesh extends js.Object {
     zmin: Double,
     xmax: Double,
     zmax: Double,
-    subdivisions: AnonH,
-    precision: AnonH,
+    subdivisions: H,
+    precision: H,
     scene: typingsSlinky.babylonjs.sceneMod.Scene
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateTiledGround(
@@ -706,8 +706,8 @@ object Mesh extends js.Object {
     zmin: Double,
     xmax: Double,
     zmax: Double,
-    subdivisions: AnonH,
-    precision: AnonH,
+    subdivisions: H,
+    precision: H,
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     updatable: Boolean
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
@@ -1096,7 +1096,7 @@ object Mesh extends js.Object {
     * @param meshes defines the list of meshes to scan
     * @returns an object `{min:` Vector3`, max:` Vector3`}`
     */
-  def MinMax(meshes: js.Array[typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh]): AnonMax = js.native
+  def MinMax(meshes: js.Array[typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh]): Max = js.native
   /**
     * Returns a new Mesh object parsed from the source provided.
     * @param parsedMesh is the source

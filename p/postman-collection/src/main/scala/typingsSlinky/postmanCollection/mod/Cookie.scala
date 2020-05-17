@@ -1,7 +1,7 @@
 package typingsSlinky.postmanCollection.mod
 
-import typingsSlinky.postmanCollection.AnonKey
-import typingsSlinky.postmanCollection.AnonValue
+import typingsSlinky.postmanCollection.anon.Key
+import typingsSlinky.postmanCollection.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ class Cookie () extends PropertyBase[CookieDefinition] {
   def this(options: CookieDefinition) = this()
   var domain: String = js.native
   var expires: js.Date = js.native
-  var extensions: js.UndefOr[js.Array[AnonKey]] = js.native
+  var extensions: js.UndefOr[js.Array[Key]] = js.native
   var hostOnly: js.UndefOr[Boolean] = js.native
   var httpOnly: js.UndefOr[Boolean] = js.native
   var maxAge: js.UndefOr[Double] = js.native
@@ -31,6 +31,6 @@ class Cookie () extends PropertyBase[CookieDefinition] {
 object Cookie extends js.Object {
   def isCookie(obj: js.Any): Boolean = js.native
   def parse(str: String): CookieDefinition = js.native
-  def splitParam(param: String): AnonValue = js.native
+  def splitParam(param: String): Value = js.native
 }
 

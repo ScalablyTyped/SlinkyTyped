@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("Word.MailMerge")
 @js.native
-class MailMerge protected () extends js.Object {
+trait MailMerge extends js.Object {
   val Application: typingsSlinky.activexWord.Word.Application = js.native
   val Creator: Double = js.native
   val DataSource: MailMergeDataSource = js.native

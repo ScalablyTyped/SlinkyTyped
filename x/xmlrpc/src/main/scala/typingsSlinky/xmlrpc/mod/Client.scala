@@ -1,6 +1,6 @@
 package typingsSlinky.xmlrpc.mod
 
-import typingsSlinky.xmlrpc.AnonProcessors
+import typingsSlinky.xmlrpc.anon.Processors
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Client extends js.Object {
   var cookies: js.UndefOr[Cookies] = js.native
-  var headersProcessors: AnonProcessors = js.native
+  var headersProcessors: Processors = js.native
   var isSecure: Boolean = js.native
   var options: ClientOptions = js.native
   def getCookie(name: String): String = js.native
@@ -24,7 +24,7 @@ object Client {
   @scala.inline
   def apply(
     getCookie: String => String,
-    headersProcessors: AnonProcessors,
+    headersProcessors: Processors,
     isSecure: Boolean,
     methodCall: (String, js.Array[_], js.Function2[/* error */ js.Object, /* value */ js.Any, Unit]) => Unit,
     options: ClientOptions,
@@ -46,7 +46,7 @@ object Client {
         ret
     }
     @scala.inline
-    def withHeadersProcessors(value: AnonProcessors): Self = {
+    def withHeadersProcessors(value: Processors): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headersProcessors")(value.asInstanceOf[js.Any])
         ret

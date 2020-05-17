@@ -1,7 +1,7 @@
 package typingsSlinky.hapiHapi.mod
 
-import typingsSlinky.hapiHapi.AnonIncludeSubDomains
-import typingsSlinky.hapiHapi.AnonRule
+import typingsSlinky.hapiHapi.anon.IncludeSubDomains
+import typingsSlinky.hapiHapi.anon.Rule
 import typingsSlinky.hapiHapi.hapiHapiBooleans.`false`
 import typingsSlinky.hapiHapi.hapiHapiBooleans.`true`
 import typingsSlinky.hapiHapi.hapiHapiStrings.deny
@@ -11,11 +11,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RouteOptionsSecureObject extends js.Object {
+trait RouteOptionsSecureObject extends RouteOptionsSecure {
   /**
     * hsts - controls the 'Strict-Transport-Security' header
     */
-  var hsts: js.UndefOr[Boolean | Double | AnonIncludeSubDomains] = js.native
+  var hsts: js.UndefOr[Boolean | Double | IncludeSubDomains] = js.native
   /**
     * boolean controlling the 'X-Download-Options' header for Internet Explorer, preventing downloads from executing in your context. Defaults to true setting the header to 'noopen'.
     */
@@ -32,7 +32,7 @@ trait RouteOptionsSecureObject extends js.Object {
   /**
     * controls the 'X-Frame-Options' header
     */
-  var xframe: js.UndefOr[`true` | deny | sameorigin | AnonRule] = js.native
+  var xframe: js.UndefOr[`true` | deny | sameorigin | Rule] = js.native
   /**
     * boolean that controls the 'X-XSS-PROTECTION' header for Internet Explorer. Defaults to true which sets the header to equal '1; mode=block'.
     * Note: this setting can create a security vulnerability in versions of Internet Exploere below 8, as well as unpatched versions of IE8. See here and here for more information. If you actively
@@ -60,7 +60,7 @@ object RouteOptionsSecureObject {
         ret
     }
     @scala.inline
-    def withHsts(value: Boolean | Double | AnonIncludeSubDomains): Self = {
+    def withHsts(value: Boolean | Double | IncludeSubDomains): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("hsts")(value.asInstanceOf[js.Any])
         ret
@@ -108,7 +108,7 @@ object RouteOptionsSecureObject {
         ret
     }
     @scala.inline
-    def withXframe(value: `true` | deny | sameorigin | AnonRule): Self = {
+    def withXframe(value: `true` | deny | sameorigin | Rule): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("xframe")(value.asInstanceOf[js.Any])
         ret

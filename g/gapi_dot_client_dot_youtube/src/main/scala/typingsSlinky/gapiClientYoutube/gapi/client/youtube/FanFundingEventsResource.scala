@@ -1,7 +1,7 @@
 package typingsSlinky.gapiClientYoutube.gapi.client.youtube
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientYoutube.AnonPageToken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientYoutube.anon.PageToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait FanFundingEventsResource extends js.Object {
   /** Lists fan funding events for a channel. */
-  def list(request: AnonPageToken): Request_[FanFundingEventListResponse] = js.native
+  def list(request: PageToken): Request[FanFundingEventListResponse] = js.native
 }
 
 object FanFundingEventsResource {
   @scala.inline
-  def apply(list: AnonPageToken => Request_[FanFundingEventListResponse]): FanFundingEventsResource = {
+  def apply(list: PageToken => Request[FanFundingEventListResponse]): FanFundingEventsResource = {
     val __obj = js.Dynamic.literal(list = js.Any.fromFunction1(list))
     __obj.asInstanceOf[FanFundingEventsResource]
   }
@@ -25,7 +25,7 @@ object FanFundingEventsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withList(value: AnonPageToken => Request_[FanFundingEventListResponse]): Self = {
+    def withList(value: PageToken => Request[FanFundingEventListResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

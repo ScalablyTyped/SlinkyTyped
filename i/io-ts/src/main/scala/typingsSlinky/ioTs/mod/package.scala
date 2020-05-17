@@ -38,15 +38,6 @@ package object mod {
   ]
   type Exact_[T, X /* <: T */] = T with typingsSlinky.ioTs.ioTsStrings.Exact with org.scalablytyped.runtime.TopLevel[js.Any]
   type FunctionC = typingsSlinky.ioTs.mod.FunctionType
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.ioTs.mod.HasPropsRefinement
-    - typingsSlinky.ioTs.mod.HasPropsReadonly
-    - typingsSlinky.ioTs.mod.HasPropsIntersection
-    - typingsSlinky.ioTs.mod.InterfaceType[js.Any, js.Any, js.Any, js.Any]
-    - typingsSlinky.ioTs.mod.StrictType[js.Any, js.Any, js.Any, js.Any]
-    - typingsSlinky.ioTs.mod.PartialType[js.Any, js.Any, js.Any, js.Any]
-  */
-  type HasProps = typingsSlinky.ioTs.mod._HasProps | (typingsSlinky.ioTs.mod.InterfaceType[js.Any, js.Any, js.Any, js.Any]) | (typingsSlinky.ioTs.mod.StrictType[js.Any, js.Any, js.Any, js.Any]) | (typingsSlinky.ioTs.mod.PartialType[js.Any, js.Any, js.Any, js.Any])
   type InputOf[C /* <: typingsSlinky.ioTs.mod.Any_ */] = /* import warning: importer.ImportType#apply Failed type conversion: C['_I'] */ js.Any
   type Int = typingsSlinky.ioTs.mod.Branded[scala.Double, typingsSlinky.ioTs.mod.IntBrand]
   type IntersectionC[CS /* <: Array[typingsSlinky.ioTs.mod.Mixed_] */] = typingsSlinky.ioTs.mod.IntersectionType[
@@ -62,7 +53,6 @@ package object mod {
   type Is[A] = js.Function1[/* u */ js.Any, /* is A */ scala.Boolean]
   type KeyofC[D /* <: org.scalablytyped.runtime.StringDictionary[js.Any] */] = typingsSlinky.ioTs.mod.KeyofType[D]
   type LiteralC[V /* <: typingsSlinky.ioTs.mod.LiteralValue */] = typingsSlinky.ioTs.mod.LiteralType[V]
-  type LiteralValue = java.lang.String | scala.Double | scala.Boolean
   type Mixed_ = typingsSlinky.ioTs.mod.Type_[js.Any, js.Any, js.Any]
   type NeverC = typingsSlinky.ioTs.mod.NeverType
   type NullC = typingsSlinky.ioTs.mod.NullType_
@@ -89,7 +79,7 @@ package object mod {
     js.Any
   ]
   type Props = org.scalablytyped.runtime.StringDictionary[typingsSlinky.ioTs.mod.Mixed_]
-  type PropsOf[T /* <: typingsSlinky.ioTs.AnonProps */] = /* import warning: importer.ImportType#apply Failed type conversion: T['props'] */ js.Any
+  type PropsOf[T /* <: typingsSlinky.ioTs.anon.Props */] = /* import warning: importer.ImportType#apply Failed type conversion: T['props'] */ js.Any
   type ReadonlyArrayC[C /* <: typingsSlinky.ioTs.mod.Mixed_ */] = typingsSlinky.ioTs.mod.ReadonlyArrayType[
     C, 
     js.Array[typingsSlinky.ioTs.mod.TypeOf[C]], 
@@ -134,35 +124,6 @@ package object mod {
     js.Any
   ]
   type StringC = typingsSlinky.ioTs.mod.StringType
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.ioTs.mod.InterfaceType[typingsSlinky.ioTs.mod.TaggedProps[Tag], A, O, js.Any]
-    - typingsSlinky.ioTs.mod.StrictType[typingsSlinky.ioTs.mod.TaggedProps[Tag], A, O, js.Any]
-    - typingsSlinky.ioTs.mod.TaggedRefinement[Tag, A, O]
-    - typingsSlinky.ioTs.mod.TaggedUnion_[Tag, A, O]
-    - typingsSlinky.ioTs.mod.TaggedIntersection[Tag, A, O]
-    - typingsSlinky.ioTs.mod.TaggedExact[Tag, A, O]
-    - typingsSlinky.ioTs.mod.RecursiveType[js.Any, A, O, js.Any]
-  */
-  type Tagged[Tag /* <: java.lang.String */, A, O] = (typingsSlinky.ioTs.mod._Tagged[Tag, A, O]) | (typingsSlinky.ioTs.mod.InterfaceType[typingsSlinky.ioTs.mod.TaggedProps[Tag], A, O, js.Any]) | (typingsSlinky.ioTs.mod.StrictType[typingsSlinky.ioTs.mod.TaggedProps[Tag], A, O, js.Any]) | (typingsSlinky.ioTs.mod.RecursiveType[js.Any, A, O, js.Any])
-  type TaggedIntersectionArgument[Tag /* <: java.lang.String */] = (js.Array[typingsSlinky.ioTs.mod.Tagged[Tag, js.Any, js.Any]]) | (js.Tuple2[
-    typingsSlinky.ioTs.mod.Mixed_ | (typingsSlinky.ioTs.mod.Tagged[Tag, js.Any, js.Any]), 
-    typingsSlinky.ioTs.mod.Mixed_ | (typingsSlinky.ioTs.mod.Tagged[Tag, js.Any, js.Any])
-  ]) | (js.Tuple3[
-    typingsSlinky.ioTs.mod.Mixed_ | (typingsSlinky.ioTs.mod.Tagged[Tag, js.Any, js.Any]), 
-    typingsSlinky.ioTs.mod.Mixed_ | (typingsSlinky.ioTs.mod.Tagged[Tag, js.Any, js.Any]), 
-    typingsSlinky.ioTs.mod.Mixed_ | (typingsSlinky.ioTs.mod.Tagged[Tag, js.Any, js.Any])
-  ]) | (js.Tuple4[
-    typingsSlinky.ioTs.mod.Mixed_ | (typingsSlinky.ioTs.mod.Tagged[Tag, js.Any, js.Any]), 
-    typingsSlinky.ioTs.mod.Mixed_ | (typingsSlinky.ioTs.mod.Tagged[Tag, js.Any, js.Any]), 
-    typingsSlinky.ioTs.mod.Mixed_ | (typingsSlinky.ioTs.mod.Tagged[Tag, js.Any, js.Any]), 
-    typingsSlinky.ioTs.mod.Mixed_ | (typingsSlinky.ioTs.mod.Tagged[Tag, js.Any, js.Any])
-  ]) | (js.Tuple5[
-    typingsSlinky.ioTs.mod.Mixed_ | (typingsSlinky.ioTs.mod.Tagged[Tag, js.Any, js.Any]), 
-    typingsSlinky.ioTs.mod.Mixed_ | (typingsSlinky.ioTs.mod.Tagged[Tag, js.Any, js.Any]), 
-    typingsSlinky.ioTs.mod.Mixed_ | (typingsSlinky.ioTs.mod.Tagged[Tag, js.Any, js.Any]), 
-    typingsSlinky.ioTs.mod.Mixed_ | (typingsSlinky.ioTs.mod.Tagged[Tag, js.Any, js.Any]), 
-    typingsSlinky.ioTs.mod.Mixed_ | (typingsSlinky.ioTs.mod.Tagged[Tag, js.Any, js.Any])
-  ])
   type TaggedProps[Tag /* <: java.lang.String */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in Tag ]: io-ts.io-ts.LiteralType<any>}
     */ typingsSlinky.ioTs.ioTsStrings.TaggedProps with org.scalablytyped.runtime.TopLevel[js.Any]

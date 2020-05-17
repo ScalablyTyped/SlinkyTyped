@@ -11,14 +11,8 @@ import scala.scalajs.js.annotation._
   * The Impact Physics Factory allows you to easily create Impact Physics enabled Game Objects.
   * Objects that are created by this Factory are automatically added to the physics world.
   */
-@JSGlobal("Phaser.Physics.Impact.Factory")
 @js.native
-class Factory protected () extends js.Object {
-  /**
-    * 
-    * @param world A reference to the Impact Physics world.
-    */
-  def this(world: World) = this()
+trait Factory extends js.Object {
   /**
     * A reference to the Scene.Systems this Impact Physics instance belongs to.
     */

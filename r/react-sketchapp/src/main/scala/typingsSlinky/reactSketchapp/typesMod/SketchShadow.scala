@@ -1,6 +1,6 @@
 package typingsSlinky.reactSketchapp.typesMod
 
-import typingsSlinky.reactSketchapp.AnonWidth
+import typingsSlinky.reactSketchapp.anon.Width
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait SketchShadow extends js.Object {
   var shadowColor: Color = js.native
   var shadowInner: Boolean = js.native
-  var shadowOffset: AnonWidth = js.native
+  var shadowOffset: Width = js.native
   var shadowOpacity: Double = js.native
   var shadowRadius: Double = js.native
   var shadowSpread: Double = js.native
@@ -20,7 +20,7 @@ object SketchShadow {
   def apply(
     shadowColor: Color,
     shadowInner: Boolean,
-    shadowOffset: AnonWidth,
+    shadowOffset: Width,
     shadowOpacity: Double,
     shadowRadius: Double,
     shadowSpread: Double
@@ -47,7 +47,7 @@ object SketchShadow {
         ret
     }
     @scala.inline
-    def withShadowOffset(value: AnonWidth): Self = {
+    def withShadowOffset(value: Width): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("shadowOffset")(value.asInstanceOf[js.Any])
         ret

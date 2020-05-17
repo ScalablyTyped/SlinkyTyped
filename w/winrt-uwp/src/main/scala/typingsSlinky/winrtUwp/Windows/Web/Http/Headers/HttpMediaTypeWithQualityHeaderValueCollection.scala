@@ -1,18 +1,17 @@
 package typingsSlinky.winrtUwp.Windows.Web.Http.Headers
 
 import typingsSlinky.std.Array
-import typingsSlinky.winrtUwp.AnonIndex
-import typingsSlinky.winrtUwp.AnonItemsHttpMediaTypeWithQualityHeaderValue
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrtUwp.Windows.Foundation.Collections.IVectorView
+import typingsSlinky.winrtUwp.anon.Index
+import typingsSlinky.winrtUwp.anon.ItemsHttpMediaTypeWithQualityHeaderValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Represents the value of the Accept HTTP header on an HTTP request. */
-@JSGlobal("Windows.Web.Http.Headers.HttpMediaTypeWithQualityHeaderValueCollection")
 @js.native
-abstract class HttpMediaTypeWithQualityHeaderValueCollection () extends Array[HttpMediaTypeWithQualityHeaderValue] {
+trait HttpMediaTypeWithQualityHeaderValueCollection extends Array[HttpMediaTypeWithQualityHeaderValue] {
   /** Gets the number of HttpMediaTypeWithQualityHeaderValue objects in the collection. */
   var size: Double = js.native
   /**
@@ -37,19 +36,19 @@ abstract class HttpMediaTypeWithQualityHeaderValueCollection () extends Array[Ht
     * Retrieves the HttpMediaTypeWithQualityHeaderValue items that start at the specified index in the collection.
     * @param startIndex The zero-based index of the start of the HttpMediaTypeWithQualityHeaderValue items in the HttpMediaTypeWithQualityHeaderValueCollection .
     */
-  def getMany(startIndex: Double): AnonItemsHttpMediaTypeWithQualityHeaderValue = js.native
+  def getMany(startIndex: Double): ItemsHttpMediaTypeWithQualityHeaderValue = js.native
   /**
     * Returns an immutable view of the HttpMediaTypeWithQualityHeaderValueCollection .
     * @return The view of the HttpMediaTypeWithQualityHeaderValueCollection .
     */
   def getView(): IVectorView[HttpMediaTypeWithQualityHeaderValue] = js.native
-  def indexOf(value: HttpMediaTypeWithQualityHeaderValue, extra: js.Any*): AnonIndex = js.native
+  def indexOf(value: HttpMediaTypeWithQualityHeaderValue, extra: js.Any*): Index = js.native
   /**
     * Retrieves the index of an HttpMediaTypeWithQualityHeaderValue in the collection.
     * @param value The HttpMediaTypeWithQualityHeaderValue to find in the HttpMediaTypeWithQualityHeaderValueCollection .
     */
   @JSName("indexOf")
-  def indexOf_AnonIndex(value: HttpMediaTypeWithQualityHeaderValue): AnonIndex = js.native
+  def indexOf_Index(value: HttpMediaTypeWithQualityHeaderValue): Index = js.native
   /**
     * Inserts an HttpMediaTypeWithQualityHeaderValue into the collection at the specified index.
     * @param index The zero-based index at which value should be inserted.

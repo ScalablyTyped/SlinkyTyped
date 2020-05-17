@@ -1,8 +1,8 @@
 package typingsSlinky.screenfull.mod
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import typingsSlinky.screenfull.screenfullBooleans.`true`
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,7 +43,7 @@ trait Screenfull extends js.Object {
   		screenfull.off('change', callback);
   		```
   		*/
-  def off(name: EventName, handler: js.Function1[/* event */ Event_, Unit]): Unit = js.native
+  def off(name: EventName, handler: js.Function1[/* event */ Event, Unit]): Unit = js.native
   /**
   		Add a listener for when the browser switches in and out of fullscreen or when there is an error.
   		@example
@@ -62,15 +62,15 @@ trait Screenfull extends js.Object {
   		}
   		```
   		*/
-  def on(name: EventName, handler: js.Function1[/* event */ Event_, Unit]): Unit = js.native
+  def on(name: EventName, handler: js.Function1[/* event */ Event, Unit]): Unit = js.native
   /**
   		Alias for `.on('change', function)`.
   		*/
-  def onchange(handler: js.Function1[/* event */ Event_, Unit]): Unit = js.native
+  def onchange(handler: js.Function1[/* event */ Event, Unit]): Unit = js.native
   /**
   		Alias for `.on('error', function)`.
   		*/
-  def onerror(handler: js.Function1[/* event */ Event_, Unit]): Unit = js.native
+  def onerror(handler: js.Function1[/* event */ Event, Unit]): Unit = js.native
   /**
   		Make an element fullscreen.
   		If your page is inside an `<iframe>` you will need to add a `allowfullscreen` attribute (+ `webkitallowfullscreen` and `mozallowfullscreen`).

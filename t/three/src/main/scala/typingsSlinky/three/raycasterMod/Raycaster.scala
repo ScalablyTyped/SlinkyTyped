@@ -1,6 +1,6 @@
 package typingsSlinky.three.raycasterMod
 
-import typingsSlinky.three.AnonX
+import typingsSlinky.three.anon.X
 import typingsSlinky.three.cameraMod.Camera
 import typingsSlinky.three.object3DMod.Object3D
 import typingsSlinky.three.rayMod.Ray
@@ -74,6 +74,6 @@ class Raycaster () extends js.Object {
   	 * @param coords 2D coordinates of the mouse, in normalized device coordinates (NDC)---X and Y components should be between -1 and 1.
   	 * @param camera camera from which the ray should originate
   	 */
-  def setFromCamera(coords: AnonX, camera: Camera): Unit = js.native
+  def setFromCamera(coords: X, camera: Camera): Unit = js.native
 }
 

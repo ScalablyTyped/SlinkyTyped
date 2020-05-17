@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignReactNative.mod
 
-import typingsSlinky.antDesignReactNative.AnonSize
+import typingsSlinky.antDesignReactNative.anon.Size
 import typingsSlinky.antDesignReactNative.wingBlankMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +14,6 @@ class WingBlank () extends default
 @JSImport("@ant-design/react-native", "WingBlank")
 @js.native
 object WingBlank extends js.Object {
-  var defaultProps: AnonSize = js.native
+  var defaultProps: Size = js.native
 }
 

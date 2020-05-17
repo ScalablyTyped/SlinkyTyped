@@ -1,23 +1,23 @@
 package typingsSlinky.swPrecache
 
+import typingsSlinky.swPrecache.mod.Handler
 import typingsSlinky.swPrecache.mod.Method
-import typingsSlinky.swPrecache.mod._Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object swPrecacheStrings {
   @js.native
-  sealed trait cacheFirst extends _Handler
+  sealed trait cacheFirst extends Handler
   
   @js.native
-  sealed trait cacheOnly extends _Handler
+  sealed trait cacheOnly extends Handler
   
   @js.native
   sealed trait delete extends Method
   
   @js.native
-  sealed trait fastest extends _Handler
+  sealed trait fastest extends Handler
   
   @js.native
   sealed trait get extends Method
@@ -26,10 +26,10 @@ object swPrecacheStrings {
   sealed trait head extends Method
   
   @js.native
-  sealed trait networkFirst extends _Handler
+  sealed trait networkFirst extends Handler
   
   @js.native
-  sealed trait networkOnly extends _Handler
+  sealed trait networkOnly extends Handler
   
   @js.native
   sealed trait post extends Method

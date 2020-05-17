@@ -1,10 +1,10 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.AnonColumnColumnIndex
-import typingsSlinky.devextreme.AnonGroupContinuedMessage
-import typingsSlinky.devextreme.AnonOldValue
-import typingsSlinky.devextreme.AnonRowIndex
+import typingsSlinky.devextreme.anon.ColumnColumnIndex
+import typingsSlinky.devextreme.anon.GroupContinuedMessage
+import typingsSlinky.devextreme.anon.OldValue
+import typingsSlinky.devextreme.anon.RowIndex
 import typingsSlinky.devextreme.devextremeStrings.adaptive
 import typingsSlinky.devextreme.devextremeStrings.buttons
 import typingsSlinky.devextreme.devextremeStrings.cancel
@@ -34,23 +34,23 @@ trait dxDataGridColumn extends GridBaseColumn {
   var calculateGroupValue: js.UndefOr[String | (js.Function1[/* rowData */ js.Any, _])] = js.native
   /** Specifies a custom template for data cells. */
   var cellTemplate: js.UndefOr[
-    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ AnonOldValue, _])
+    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ OldValue, _])
   ] = js.native
   /** An array of grid columns. */
   var columns: js.UndefOr[js.Array[dxDataGridColumn | String]] = js.native
   /** Specifies a custom template for data cells in editing state. */
   var editCellTemplate: js.UndefOr[
-    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ AnonRowIndex, _])
+    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ RowIndex, _])
   ] = js.native
   /** Specifies a custom template for group cells (group rows). */
   var groupCellTemplate: js.UndefOr[
-    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ AnonGroupContinuedMessage, _])
+    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ GroupContinuedMessage, _])
   ] = js.native
   /** Specifies the index of a column when grid records are grouped by the values of this column. */
   var groupIndex: js.UndefOr[Double] = js.native
   /** Specifies a custom template for column headers. */
   var headerCellTemplate: js.UndefOr[
-    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* columnHeader */ dxElement, /* headerInfo */ AnonColumnColumnIndex, _])
+    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* columnHeader */ dxElement, /* headerInfo */ ColumnColumnIndex, _])
   ] = js.native
   /** Specifies whether or not to display the column when grid records are grouped by it. */
   var showWhenGrouped: js.UndefOr[Boolean] = js.native
@@ -137,7 +137,7 @@ object dxDataGridColumn {
         ret
     }
     @scala.inline
-    def withCellTemplateFunction2(value: (/* cellElement */ dxElement, /* cellInfo */ AnonOldValue) => _): Self = {
+    def withCellTemplateFunction2(value: (/* cellElement */ dxElement, /* cellInfo */ OldValue) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cellTemplate")(js.Any.fromFunction2(value))
         ret
@@ -150,7 +150,7 @@ object dxDataGridColumn {
     }
     @scala.inline
     def withCellTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ AnonOldValue, _])
+      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ OldValue, _])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("cellTemplate")(value.asInstanceOf[js.Any])
@@ -175,7 +175,7 @@ object dxDataGridColumn {
         ret
     }
     @scala.inline
-    def withEditCellTemplateFunction2(value: (/* cellElement */ dxElement, /* cellInfo */ AnonRowIndex) => _): Self = {
+    def withEditCellTemplateFunction2(value: (/* cellElement */ dxElement, /* cellInfo */ RowIndex) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editCellTemplate")(js.Any.fromFunction2(value))
         ret
@@ -188,7 +188,7 @@ object dxDataGridColumn {
     }
     @scala.inline
     def withEditCellTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ AnonRowIndex, _])
+      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ RowIndex, _])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("editCellTemplate")(value.asInstanceOf[js.Any])
@@ -201,7 +201,7 @@ object dxDataGridColumn {
         ret
     }
     @scala.inline
-    def withGroupCellTemplateFunction2(value: (/* cellElement */ dxElement, /* cellInfo */ AnonGroupContinuedMessage) => _): Self = {
+    def withGroupCellTemplateFunction2(value: (/* cellElement */ dxElement, /* cellInfo */ GroupContinuedMessage) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("groupCellTemplate")(js.Any.fromFunction2(value))
         ret
@@ -214,7 +214,7 @@ object dxDataGridColumn {
     }
     @scala.inline
     def withGroupCellTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ AnonGroupContinuedMessage, _])
+      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ GroupContinuedMessage, _])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("groupCellTemplate")(value.asInstanceOf[js.Any])
@@ -239,7 +239,7 @@ object dxDataGridColumn {
         ret
     }
     @scala.inline
-    def withHeaderCellTemplateFunction2(value: (/* columnHeader */ dxElement, /* headerInfo */ AnonColumnColumnIndex) => _): Self = {
+    def withHeaderCellTemplateFunction2(value: (/* columnHeader */ dxElement, /* headerInfo */ ColumnColumnIndex) => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headerCellTemplate")(js.Any.fromFunction2(value))
         ret
@@ -252,7 +252,7 @@ object dxDataGridColumn {
     }
     @scala.inline
     def withHeaderCellTemplate(
-      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* columnHeader */ dxElement, /* headerInfo */ AnonColumnColumnIndex, _])
+      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* columnHeader */ dxElement, /* headerInfo */ ColumnColumnIndex, _])
     ): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headerCellTemplate")(value.asInstanceOf[js.Any])

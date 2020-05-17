@@ -1,6 +1,6 @@
 package typingsSlinky.gapiCalendar.gapi.client.calendar
 
-import typingsSlinky.gapiCalendar.AnonId
+import typingsSlinky.gapiCalendar.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait FreeBusyQueryParameters extends js.Object {
   var calendarExpansionMax: js.UndefOr[integer] = js.native
   var groupExpansionMax: js.UndefOr[integer] = js.native
-  var items: js.Array[AnonId] = js.native
+  var items: js.Array[Id] = js.native
   var timeMax: datetime = js.native
   var timeMin: datetime = js.native
   var timeZone: js.UndefOr[String] = js.native
@@ -17,7 +17,7 @@ trait FreeBusyQueryParameters extends js.Object {
 
 object FreeBusyQueryParameters {
   @scala.inline
-  def apply(items: js.Array[AnonId], timeMax: datetime, timeMin: datetime): FreeBusyQueryParameters = {
+  def apply(items: js.Array[Id], timeMax: datetime, timeMin: datetime): FreeBusyQueryParameters = {
     val __obj = js.Dynamic.literal(items = items.asInstanceOf[js.Any], timeMax = timeMax.asInstanceOf[js.Any], timeMin = timeMin.asInstanceOf[js.Any])
     __obj.asInstanceOf[FreeBusyQueryParameters]
   }
@@ -28,7 +28,7 @@ object FreeBusyQueryParameters {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withItems(value: js.Array[AnonId]): Self = {
+    def withItems(value: js.Array[Id]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("items")(value.asInstanceOf[js.Any])
         ret

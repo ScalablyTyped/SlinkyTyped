@@ -6,9 +6,8 @@ import scala.scalajs.js.annotation._
 
 //#endregion
 //#region Formatter
-@JSGlobal("google.visualization.DefaultFormatter")
 @js.native
-class DefaultFormatter () extends js.Object {
+trait DefaultFormatter extends js.Object {
   /**
     * Reformats the data in the specified column.
     *
@@ -16,5 +15,27 @@ class DefaultFormatter () extends js.Object {
     * @param columnIndex - The zero-based index of the column to format. To format multiple columns, you must call this method multiple times, with different colIndex values.
     */
   def format(data: DataTable, columnIndex: Double): Unit = js.native
+}
+
+object DefaultFormatter {
+  @scala.inline
+  def apply(format: (DataTable, Double) => Unit): DefaultFormatter = {
+    val __obj = js.Dynamic.literal(format = js.Any.fromFunction2(format))
+    __obj.asInstanceOf[DefaultFormatter]
+  }
+  @scala.inline
+  implicit class DefaultFormatterOps[Self <: DefaultFormatter] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withFormat(value: (DataTable, Double) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("format")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

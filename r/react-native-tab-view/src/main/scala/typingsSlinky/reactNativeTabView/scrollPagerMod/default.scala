@@ -1,6 +1,6 @@
 package typingsSlinky.reactNativeTabView.scrollPagerMod
 
-import typingsSlinky.reactNativeTabView.AnonBounces
+import typingsSlinky.reactNativeTabView.anon.Bounces
 import typingsSlinky.reactNativeTabView.typesMod.Route
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +14,6 @@ class default[T /* <: Route */] () extends ScrollPager[T]
 @JSImport("react-native-tab-view/lib/typescript/src/ScrollPager", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: AnonBounces = js.native
+  var defaultProps: Bounces = js.native
 }
 

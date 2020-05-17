@@ -1,6 +1,5 @@
 package typingsSlinky.flatpickr.mod.flatpickr
 
-import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.FocusEvent
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLInputElement
@@ -8,15 +7,15 @@ import org.scalajs.dom.raw.HTMLSelectElement
 import org.scalajs.dom.raw.HTMLSpanElement
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.Node
-import typingsSlinky.flatpickr.AnonElement
-import typingsSlinky.flatpickr.AnonGetDaysInMonth
+import typingsSlinky.flatpickr.anon.Element
+import typingsSlinky.flatpickr.anon.GetDaysInMonth
+import typingsSlinky.flatpickr.anon.kinkeyofOptionsOptionsk
 import typingsSlinky.flatpickr.formattingMod.Formats_
 import typingsSlinky.flatpickr.formattingMod.RevFormat_
 import typingsSlinky.flatpickr.formattingMod.TokenRegex_
-import typingsSlinky.flatpickr.globalsMod._Global_.Date
-import typingsSlinky.flatpickr.globalsMod._Global_.HTMLElement
+import typingsSlinky.flatpickr.globalsMod.global.Date
+import typingsSlinky.flatpickr.globalsMod.global.HTMLElement
 import typingsSlinky.flatpickr.instanceMod.DayElement
-import typingsSlinky.flatpickr.kinkeyofOptionsOptionsk
 import typingsSlinky.flatpickr.optionsMod.DateOption
 import typingsSlinky.flatpickr.optionsMod.ParsedOptions
 import scala.scalajs.js
@@ -28,7 +27,7 @@ import scala.scalajs.js.annotation._
 trait Instance extends js.Object {
   var __hideNextMonthArrow: Boolean = js.native
   var __hidePrevMonthArrow: Boolean = js.native
-  var _handlers: js.Array[AnonElement] = js.native
+  var _handlers: js.Array[Element] = js.native
   var _hideNextMonthArrow: Boolean = js.native
   var _hidePrevMonthArrow: Boolean = js.native
   var _initialDate: Date = js.native
@@ -79,15 +78,15 @@ trait Instance extends js.Object {
   var timeContainer: js.UndefOr[HTMLDivElement] = js.native
   var todayDateElem: js.UndefOr[DayElement] = js.native
   var tokenRegex: TokenRegex_ = js.native
-  var utils: AnonGetDaysInMonth = js.native
+  var utils: GetDaysInMonth = js.native
   var weekNumbers: js.UndefOr[HTMLDivElement] = js.native
   var weekWrapper: js.UndefOr[HTMLDivElement] = js.native
   var weekdayContainer: HTMLDivElement = js.native
   var yearElements: js.Array[HTMLInputElement] = js.native
-  def _bind[E /* <: Element */](element: E, event: String, handler: js.Function1[/* e */ js.UndefOr[js.Any], Unit]): Unit = js.native
-  def _bind[E /* <: Element */](element: E, event: js.Array[String], handler: js.Function1[/* e */ js.UndefOr[js.Any], Unit]): Unit = js.native
-  def _bind[E /* <: Element */](element: js.Array[E], event: String, handler: js.Function1[/* e */ js.UndefOr[js.Any], Unit]): Unit = js.native
-  def _bind[E /* <: Element */](
+  def _bind[E /* <: org.scalajs.dom.raw.Element */](element: E, event: String, handler: js.Function1[/* e */ js.UndefOr[js.Any], Unit]): Unit = js.native
+  def _bind[E /* <: org.scalajs.dom.raw.Element */](element: E, event: js.Array[String], handler: js.Function1[/* e */ js.UndefOr[js.Any], Unit]): Unit = js.native
+  def _bind[E /* <: org.scalajs.dom.raw.Element */](element: js.Array[E], event: String, handler: js.Function1[/* e */ js.UndefOr[js.Any], Unit]): Unit = js.native
+  def _bind[E /* <: org.scalajs.dom.raw.Element */](
     element: js.Array[E],
     event: js.Array[String],
     handler: js.Function1[/* e */ js.UndefOr[js.Any], Unit]

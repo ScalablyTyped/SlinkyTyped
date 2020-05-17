@@ -1,13 +1,14 @@
 package typingsSlinky.headroom
 
 import org.scalajs.dom.raw.Element
+import typingsSlinky.headroom.anon.Initial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait HeadroomOptions extends js.Object {
-  var classes: js.UndefOr[AnonInitial] = js.native
+  var classes: js.UndefOr[Initial] = js.native
   var offset: js.UndefOr[Double] = js.native
   var onBottom: js.UndefOr[js.Function0[Unit]] = js.native
   var onNotBottom: js.UndefOr[js.Function0[Unit]] = js.native
@@ -32,7 +33,7 @@ object HeadroomOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withClasses(value: AnonInitial): Self = {
+    def withClasses(value: Initial): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("classes")(value.asInstanceOf[js.Any])
         ret

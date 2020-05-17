@@ -1,7 +1,7 @@
 package typingsSlinky.flatpickr.localeMod
 
-import typingsSlinky.flatpickr.AnonLonghand
-import typingsSlinky.flatpickr.AnonShorthand
+import typingsSlinky.flatpickr.anon.Longhand
+import typingsSlinky.flatpickr.anon.Shorthand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,20 +15,20 @@ trait CustomLocale extends js.Object {
   var firstDayOfWeek: js.UndefOr[Double] = js.native
   var hourAriaLabel: js.UndefOr[String] = js.native
   var minuteAriaLabel: js.UndefOr[String] = js.native
-  var months: AnonShorthand = js.native
+  var months: Shorthand = js.native
   var ordinal: js.UndefOr[js.Function1[/* nth */ Double, String]] = js.native
   var rangeSeparator: js.UndefOr[String] = js.native
   var scrollTitle: js.UndefOr[String] = js.native
   var time_24hr: js.UndefOr[Boolean] = js.native
   var toggleTitle: js.UndefOr[String] = js.native
   var weekAbbreviation: js.UndefOr[String] = js.native
-  var weekdays: AnonLonghand = js.native
+  var weekdays: Longhand = js.native
   var yearAriaLabel: js.UndefOr[String] = js.native
 }
 
 object CustomLocale {
   @scala.inline
-  def apply(months: AnonShorthand, weekdays: AnonLonghand): CustomLocale = {
+  def apply(months: Shorthand, weekdays: Longhand): CustomLocale = {
     val __obj = js.Dynamic.literal(months = months.asInstanceOf[js.Any], weekdays = weekdays.asInstanceOf[js.Any])
     __obj.asInstanceOf[CustomLocale]
   }
@@ -39,13 +39,13 @@ object CustomLocale {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withMonths(value: AnonShorthand): Self = {
+    def withMonths(value: Shorthand): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("months")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withWeekdays(value: AnonLonghand): Self = {
+    def withWeekdays(value: Longhand): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("weekdays")(value.asInstanceOf[js.Any])
         ret

@@ -2,13 +2,13 @@ package typingsSlinky.angularMaterial.mod.angularAugmentingMod.material
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.angular.JQuery
 import typingsSlinky.angular.mod.IControllerConstructor
 import typingsSlinky.angular.mod.IScope
 import typingsSlinky.angular.mod.Injectable
-import typingsSlinky.angularMaterial.AnonLeft
-import typingsSlinky.std.Event_
+import typingsSlinky.angularMaterial.anon.Left
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ trait IPresetDialog[T] extends js.Object {
   def clickOutsideToClose(): T = js.native
   def clickOutsideToClose(clickOutsideToClose: Boolean): T = js.native
   def closeTo(to: String): T = js.native
-  def closeTo(to: AnonLeft): T = js.native
+  def closeTo(to: Left): T = js.native
   def closeTo(to: Element): T = js.native
    // default: true
   def controller(): T = js.native
@@ -49,9 +49,9 @@ trait IPresetDialog[T] extends js.Object {
   def multiple(multiple: Boolean): T = js.native
   def ok(ok: String): T = js.native
   def openFrom(from: String): T = js.native
-  def openFrom(from: AnonLeft): T = js.native
+  def openFrom(from: Left): T = js.native
   def openFrom(from: Element): T = js.native
-  def openFrom(from: Event_): T = js.native
+  def openFrom(from: Event): T = js.native
   def parent(): T = js.native
   def parent(parent: String): T = js.native
   def parent(parent: JQuery): T = js.native

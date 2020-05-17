@@ -1,7 +1,13 @@
 package typingsSlinky.jupyterlabServices
 
+import org.scalablytyped.runtime.Instantiable0
+import org.scalablytyped.runtime.Instantiable1
 import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.experimental.Response
+import typingsSlinky.jupyterlabServices.anon.CLOSED
+import typingsSlinky.jupyterlabServices.anon.Instantiable
+import typingsSlinky.jupyterlabServices.anon.InstantiableRequest
+import typingsSlinky.jupyterlabServices.anon.PartialISettings
 import typingsSlinky.std.Error
 import typingsSlinky.std.RequestInfo
 import scala.scalajs.js
@@ -23,15 +29,15 @@ object serverconnectionMod extends js.Object {
       /**
         * The `Headers` object constructor.
         */
-      val Headers: AnonInstantiable = js.native
+      val Headers: Instantiable with Instantiable0[typingsSlinky.std.global.Headers] = js.native
       /**
         * The `Request` object constructor.
         */
-      val Request: AnonInstantiableRequest = js.native
+      val Request: InstantiableRequest with (Instantiable1[/* input */ RequestInfo, typingsSlinky.std.global.Request]) = js.native
       /**
         * The `WebSocket` object constructor.
         */
-      val WebSocket: AnonCLOSED = js.native
+      val WebSocket: CLOSED with (Instantiable1[/* url */ String, typingsSlinky.std.global.WebSocket]) = js.native
       /**
         * The app url of the JupyterLab application.
         */

@@ -77,8 +77,7 @@ object pluginsMod extends js.Object {
       deletedIds: js.Array[Double]
     ): Unit = js.native
     def removeReflections(project: ProjectReflection, reflections: js.Array[typingsSlinky.typedoc.reflectionsMod.Reflection]): Unit = js.native
-    def removeTags(comment: js.UndefOr[scala.Nothing], tagName: String): Unit = js.native
-    def removeTags(comment: Comment, tagName: String): Unit = js.native
+    def removeTags(comment: js.UndefOr[Comment], tagName: String): Unit = js.native
   }
   
   /* static members */

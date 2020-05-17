@@ -6,9 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** Provides information about the type of descriptor, its size (in bytes), and gets the descriptor data. */
-@JSGlobal("Windows.Devices.Usb.UsbDescriptor")
 @js.native
-abstract class UsbDescriptor () extends js.Object {
+trait UsbDescriptor extends js.Object {
   /** Gets the type of descriptor. */
   var descriptorType: Double = js.native
   /** Gets the length of the descriptor. */
@@ -18,5 +17,39 @@ abstract class UsbDescriptor () extends js.Object {
     * @param buffer A caller-supplied buffer that receives descriptor data.
     */
   def readDescriptorBuffer(buffer: IBuffer): Unit = js.native
+}
+
+object UsbDescriptor {
+  @scala.inline
+  def apply(descriptorType: Double, length: Double, readDescriptorBuffer: IBuffer => Unit): UsbDescriptor = {
+    val __obj = js.Dynamic.literal(descriptorType = descriptorType.asInstanceOf[js.Any], length = length.asInstanceOf[js.Any], readDescriptorBuffer = js.Any.fromFunction1(readDescriptorBuffer))
+    __obj.asInstanceOf[UsbDescriptor]
+  }
+  @scala.inline
+  implicit class UsbDescriptorOps[Self <: UsbDescriptor] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withDescriptorType(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("descriptorType")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withLength(value: Double): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("length")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withReadDescriptorBuffer(value: IBuffer => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readDescriptorBuffer")(js.Any.fromFunction1(value))
+        ret
+    }
+  }
+  
 }
 

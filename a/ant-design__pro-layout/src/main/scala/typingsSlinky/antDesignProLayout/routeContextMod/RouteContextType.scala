@@ -1,6 +1,6 @@
 package typingsSlinky.antDesignProLayout.routeContextMod
 
-import typingsSlinky.antDesignProLayout.AnonDefaultOpenAll
+import typingsSlinky.antDesignProLayout.anon.DefaultOpenAll
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.realDark
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.sidemenu
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.topmenu
@@ -24,7 +24,7 @@ trait RouteContextType extends js.Object {
   var isChildrenLayout: js.UndefOr[Boolean] = js.native
   var isMobile: js.UndefOr[Boolean] = js.native
   var layout: js.UndefOr[sidemenu | topmenu] = js.native
-  var menu: js.UndefOr[AnonDefaultOpenAll] = js.native
+  var menu: js.UndefOr[DefaultOpenAll] = js.native
   var menuData: js.UndefOr[js.Array[MenuDataItem]] = js.native
   var navTheme: js.UndefOr[
     (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MenuTheme */ js.Any) | realDark
@@ -166,7 +166,7 @@ object RouteContextType {
         ret
     }
     @scala.inline
-    def withMenu(value: AnonDefaultOpenAll): Self = {
+    def withMenu(value: DefaultOpenAll): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("menu")(value.asInstanceOf[js.Any])
         ret

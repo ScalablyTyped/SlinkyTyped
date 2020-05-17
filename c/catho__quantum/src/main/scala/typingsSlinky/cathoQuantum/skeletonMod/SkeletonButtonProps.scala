@@ -1,6 +1,6 @@
 package typingsSlinky.cathoQuantum.skeletonMod
 
-import typingsSlinky.cathoQuantum.AnonSpacingObject
+import typingsSlinky.cathoQuantum.anon.SpacingObject
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.large
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.medium
 import typingsSlinky.cathoQuantum.cathoQuantumStrings.small
@@ -12,12 +12,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SkeletonButtonProps extends js.Object {
   var size: xsmall | small | medium | large = js.native
-  var theme: AnonSpacingObject = js.native
+  var theme: SpacingObject = js.native
 }
 
 object SkeletonButtonProps {
   @scala.inline
-  def apply(size: xsmall | small | medium | large, theme: AnonSpacingObject): SkeletonButtonProps = {
+  def apply(size: xsmall | small | medium | large, theme: SpacingObject): SkeletonButtonProps = {
     val __obj = js.Dynamic.literal(size = size.asInstanceOf[js.Any], theme = theme.asInstanceOf[js.Any])
     __obj.asInstanceOf[SkeletonButtonProps]
   }
@@ -34,7 +34,7 @@ object SkeletonButtonProps {
         ret
     }
     @scala.inline
-    def withTheme(value: AnonSpacingObject): Self = {
+    def withTheme(value: SpacingObject): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("theme")(value.asInstanceOf[js.Any])
         ret

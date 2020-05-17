@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.xlsx.xlsxStrings.sheet
   - typingsSlinky.xlsx.xlsxStrings.chart
 */
-trait SheetType extends _SheetKeys
+trait SheetType extends SheetKeys
 
 object SheetType {
   @scala.inline

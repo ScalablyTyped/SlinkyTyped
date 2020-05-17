@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientBigquerydatatransfer.gapi.client.bigquerydatatransfer
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientBigquerydatatransfer.AnonAccesstoken
-import typingsSlinky.gapiClientBigquerydatatransfer.AnonFilter
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientBigquerydatatransfer.anon.Accesstoken
+import typingsSlinky.gapiClientBigquerydatatransfer.anon.Filter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,17 +12,17 @@ trait LocationsResource extends js.Object {
   var dataSources: DataSourcesResource = js.native
   var transferConfigs: TransferConfigsResource = js.native
   /** Get information about a location. */
-  def get(request: AnonAccesstoken): Request_[Location] = js.native
+  def get(request: Accesstoken): Request[Location] = js.native
   /** Lists information about the supported locations for this service. */
-  def list(request: AnonFilter): Request_[ListLocationsResponse] = js.native
+  def list(request: Filter): Request[ListLocationsResponse] = js.native
 }
 
 object LocationsResource {
   @scala.inline
   def apply(
     dataSources: DataSourcesResource,
-    get: AnonAccesstoken => Request_[Location],
-    list: AnonFilter => Request_[ListLocationsResponse],
+    get: Accesstoken => Request[Location],
+    list: Filter => Request[ListLocationsResponse],
     transferConfigs: TransferConfigsResource
   ): LocationsResource = {
     val __obj = js.Dynamic.literal(dataSources = dataSources.asInstanceOf[js.Any], get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), transferConfigs = transferConfigs.asInstanceOf[js.Any])
@@ -41,13 +41,13 @@ object LocationsResource {
         ret
     }
     @scala.inline
-    def withGet(value: AnonAccesstoken => Request_[Location]): Self = {
+    def withGet(value: Accesstoken => Request[Location]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonFilter => Request_[ListLocationsResponse]): Self = {
+    def withList(value: Filter => Request[ListLocationsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

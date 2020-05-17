@@ -2,8 +2,8 @@ package typingsSlinky.antd.utilsMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Window
 import typingsSlinky.antd.affixMod.default
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 trait ObserverEntity extends js.Object {
   var affixList: js.Array[default] = js.native
   var eventHandlers: StringDictionary[js.Any] = js.native
-  var target: HTMLElement | Window_ = js.native
+  var target: HTMLElement | Window = js.native
 }
 
 object ObserverEntity {
@@ -20,7 +20,7 @@ object ObserverEntity {
   def apply(
     affixList: js.Array[default],
     eventHandlers: StringDictionary[js.Any],
-    target: HTMLElement | Window_
+    target: HTMLElement | Window
   ): ObserverEntity = {
     val __obj = js.Dynamic.literal(affixList = affixList.asInstanceOf[js.Any], eventHandlers = eventHandlers.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
     __obj.asInstanceOf[ObserverEntity]
@@ -44,13 +44,19 @@ object ObserverEntity {
         ret
     }
     @scala.inline
+    def withTargetWindow(value: Window): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
     def withTargetHTMLElement(value: HTMLElement): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withTarget(value: HTMLElement | Window_): Self = {
+    def withTarget(value: HTMLElement | Window): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
         ret

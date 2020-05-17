@@ -2,8 +2,7 @@ package typingsSlinky.gestalt.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.AnonLabel
-import typingsSlinky.gestalt.AnonValue
+import typingsSlinky.gestalt.anon.Value
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
 import typingsSlinky.gestalt.mod.SelectListProps
@@ -40,7 +39,7 @@ object SelectList {
   
   def withProps(p: SelectListProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(id: String, onChange: AnonValue => Unit, options: js.Array[AnonLabel]): Builder = {
+  def apply(id: String, onChange: Value => Unit, options: js.Array[typingsSlinky.gestalt.anon.Label]): Builder = {
     val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), options = options.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[SelectListProps]))
   }

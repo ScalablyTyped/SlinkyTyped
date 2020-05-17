@@ -1,6 +1,7 @@
 package typingsSlinky.smoothScrollbar
 
 import org.scalajs.dom.raw.TouchEvent
+import typingsSlinky.smoothScrollbar.anon.X
 import typingsSlinky.smoothScrollbar.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +24,7 @@ object glowMod extends js.Object {
     def adjust(): Unit = js.native
     def mount(): Unit = js.native
     def recordTouch(event: TouchEvent): Unit = js.native
-    def render(hasXY: AnonX, color: String): Unit = js.native
+    def render(hasXY: X, color: String): Unit = js.native
     def unmount(): Unit = js.native
   }
   

@@ -10,11 +10,25 @@ trait OnTouchListener extends js.Object {
   def onTouch(v: typingsSlinky.androiduix.android.view.View, event: MotionEvent): Unit = js.native
 }
 
-@JSGlobal("android.view.View.OnTouchListener")
-@js.native
-object OnTouchListener extends js.Object {
-  def fromFunction(
-    func: js.Function2[/* v */ typingsSlinky.androiduix.android.view.View, /* event */ MotionEvent, Unit]
-  ): OnTouchListener = js.native
+object OnTouchListener {
+  @scala.inline
+  def apply(onTouch: (typingsSlinky.androiduix.android.view.View, MotionEvent) => Unit): OnTouchListener = {
+    val __obj = js.Dynamic.literal(onTouch = js.Any.fromFunction2(onTouch))
+    __obj.asInstanceOf[OnTouchListener]
+  }
+  @scala.inline
+  implicit class OnTouchListenerOps[Self <: OnTouchListener] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withOnTouch(value: (typingsSlinky.androiduix.android.view.View, MotionEvent) => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("onTouch")(js.Any.fromFunction2(value))
+        ret
+    }
+  }
+  
 }
 

@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait PivotTransform extends _Transforms {
+trait PivotTransform extends Transforms {
   var field: FieldRef = js.native
   var groupby: js.UndefOr[js.Array[FieldRef] | SignalRef] = js.native
   var key: js.UndefOr[String | TransformField] = js.native

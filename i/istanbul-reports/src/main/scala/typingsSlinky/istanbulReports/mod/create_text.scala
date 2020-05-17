@@ -2,7 +2,7 @@ package typingsSlinky.istanbulReports.mod
 
 import typingsSlinky.istanbulLibReport.mod.Node
 import typingsSlinky.istanbulLibReport.mod.Visitor
-import typingsSlinky.istanbulReports.OptionsmaxColsnumber
+import typingsSlinky.istanbulReports.anon.OptionsmaxColsnumber
 import typingsSlinky.istanbulReports.istanbulReportsStrings.text
 import typingsSlinky.std.Partial
 import scala.scalajs.js

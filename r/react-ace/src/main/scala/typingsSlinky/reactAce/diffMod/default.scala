@@ -1,7 +1,7 @@
 package typingsSlinky.reactAce.diffMod
 
-import typingsSlinky.reactAce.PartialIDiffEditorProps
-import typingsSlinky.reactAce.ValidationMapIDiffEditorP
+import typingsSlinky.reactAce.anon.PartialIDiffEditorProps
+import typingsSlinky.reactAce.anon.ValidationMapIDiffEditorP
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

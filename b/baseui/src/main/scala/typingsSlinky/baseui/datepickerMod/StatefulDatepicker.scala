@@ -2,7 +2,7 @@ package typingsSlinky.baseui.datepickerMod
 
 import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
-import typingsSlinky.baseui.StatefulDatepickerPropsDa
+import typingsSlinky.baseui.anon.StatefulDatepickerPropsDa
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

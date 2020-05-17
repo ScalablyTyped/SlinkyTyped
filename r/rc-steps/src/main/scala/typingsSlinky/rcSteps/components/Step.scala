@@ -6,7 +6,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.rcSteps.AnonError
+import typingsSlinky.rcSteps.anon.Error
 import typingsSlinky.rcSteps.mod.StepProps
 import typingsSlinky.rcSteps.rcStepsStrings.error
 import typingsSlinky.rcSteps.rcStepsStrings.finish
@@ -39,7 +39,7 @@ object Step {
     @scala.inline
     def iconPrefix(value: String): this.type = set("iconPrefix", value.asInstanceOf[js.Any])
     @scala.inline
-    def icons(value: AnonError): this.type = set("icons", value.asInstanceOf[js.Any])
+    def icons(value: Error): this.type = set("icons", value.asInstanceOf[js.Any])
     @scala.inline
     def onClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     @scala.inline

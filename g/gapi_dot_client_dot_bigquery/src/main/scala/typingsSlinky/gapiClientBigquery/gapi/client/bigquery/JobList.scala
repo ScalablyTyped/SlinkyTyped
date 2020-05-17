@@ -1,6 +1,6 @@
 package typingsSlinky.gapiClientBigquery.gapi.client.bigquery
 
-import typingsSlinky.gapiClientBigquery.AnonConfiguration
+import typingsSlinky.gapiClientBigquery.anon.Configuration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ trait JobList extends js.Object {
   /** A hash of this page of results. */
   var etag: js.UndefOr[String] = js.native
   /** List of jobs that were requested. */
-  var jobs: js.UndefOr[js.Array[AnonConfiguration]] = js.native
+  var jobs: js.UndefOr[js.Array[Configuration]] = js.native
   /** The resource type of the response. */
   var kind: js.UndefOr[String] = js.native
   /** A token to request the next page of results. */
@@ -42,7 +42,7 @@ object JobList {
         ret
     }
     @scala.inline
-    def withJobs(value: js.Array[AnonConfiguration]): Self = {
+    def withJobs(value: js.Array[Configuration]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("jobs")(value.asInstanceOf[js.Any])
         ret

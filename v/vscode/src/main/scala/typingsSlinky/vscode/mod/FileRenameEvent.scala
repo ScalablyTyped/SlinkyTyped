@@ -1,6 +1,6 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonNewUri
+import typingsSlinky.vscode.anon.NewUri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,12 +10,12 @@ trait FileRenameEvent extends js.Object {
   /**
   		 * The files that got renamed.
   		 */
-  val files: js.Array[AnonNewUri] = js.native
+  val files: js.Array[NewUri] = js.native
 }
 
 object FileRenameEvent {
   @scala.inline
-  def apply(files: js.Array[AnonNewUri]): FileRenameEvent = {
+  def apply(files: js.Array[NewUri]): FileRenameEvent = {
     val __obj = js.Dynamic.literal(files = files.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileRenameEvent]
   }
@@ -26,7 +26,7 @@ object FileRenameEvent {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withFiles(value: js.Array[AnonNewUri]): Self = {
+    def withFiles(value: js.Array[NewUri]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("files")(value.asInstanceOf[js.Any])
         ret

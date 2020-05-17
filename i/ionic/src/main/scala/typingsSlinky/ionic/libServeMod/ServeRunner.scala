@@ -1,6 +1,6 @@
 package typingsSlinky.ionic.libServeMod
 
-import typingsSlinky.ionic.PartialCommandMetadata
+import typingsSlinky.ionic.anon.PartialCommandMetadata
 import typingsSlinky.ionic.definitionsMod.DevAppDetails
 import typingsSlinky.ionic.definitionsMod.LabServeDetails
 import typingsSlinky.ionic.definitionsMod.Runner

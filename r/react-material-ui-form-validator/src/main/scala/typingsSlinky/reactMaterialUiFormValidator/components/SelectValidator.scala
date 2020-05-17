@@ -1,5 +1,6 @@
 package typingsSlinky.reactMaterialUiFormValidator.components
 
+import org.scalajs.dom.raw.Event
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
@@ -10,7 +11,6 @@ import typingsSlinky.materialUi.MaterialUI.Menus.DropDownMenuProps
 import typingsSlinky.materialUi.MaterialUI.SelectFieldProps
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactMaterialUiFormValidator.mod.ValidatorComponentProps
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -76,7 +76,7 @@ object SelectValidator {
     def onBlur(value: SyntheticFocusEvent[js.Object] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     @scala.inline
     def onChange(
-      value: (/* e */ SyntheticEvent[Event_, js.Object], /* index */ Double, /* menuItemValue */ js.Any) => Unit
+      value: (/* e */ SyntheticEvent[Event, js.Object], /* index */ Double, /* menuItemValue */ js.Any) => Unit
     ): this.type = set("onChange", js.Any.fromFunction3(value))
     @scala.inline
     def onFocus(value: SyntheticFocusEvent[js.Object] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))

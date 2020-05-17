@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("mapbox-gl", "LngLatBounds")
 @js.native
-class LngLatBounds () extends js.Object {
+class LngLatBounds () extends LngLatBoundsLike {
   def this(boundsLike: js.Tuple2[LngLatLike, LngLatLike]) = this()
   def this(boundsLike: js.Tuple4[Double, Double, Double, Double]) = this()
   def this(sw: LngLatLike, ne: LngLatLike) = this()
@@ -15,8 +15,9 @@ class LngLatBounds () extends js.Object {
   var sw: LngLatLike = js.native
   /** Check if the point is within the bounding box. */
   def contains(lnglat: LngLatLike): Boolean = js.native
+  def extend(obj: LngLatBoundsLike): this.type = js.native
   /** Extend the bounds to include a given LngLat or LngLatBounds. */
-  def extend(obj: LngLatBoundsLike | LngLatLike): this.type = js.native
+  def extend(obj: LngLatLike): this.type = js.native
   /** Get the point equidistant from this box's corners */
   def getCenter(): LngLat = js.native
   /** Get east edge longitude */

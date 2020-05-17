@@ -11,8 +11,7 @@ import scala.scalajs.js.annotation._
 object objMod extends js.Object {
   def contains[V](obj: Dict[V], key: String): Boolean = js.native
   def contains[V](obj: Dict[V], key: Double): Boolean = js.native
-  def defaulted[V](value: V, defaultValue: V): V = js.native
-  def defaulted[V](value: js.UndefOr[scala.Nothing], defaultValue: V): V = js.native
+  def defaulted[V](value: js.UndefOr[V], defaultValue: V): V = js.native
   def forEach[V](obj: Dict[V], fn: js.Function2[/* key */ String, /* val */ V, Unit]): Unit = js.native
   def forEachNumber[V](obj: Dict[V], fn: js.Function2[/* key */ Double, /* val */ V, Unit]): Unit = js.native
   def get[V](obj: Dict[V], key: String): V | Null = js.native

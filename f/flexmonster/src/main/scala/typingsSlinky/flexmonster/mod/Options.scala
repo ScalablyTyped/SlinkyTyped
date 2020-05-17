@@ -1,8 +1,8 @@
 package typingsSlinky.flexmonster.mod
 
-import typingsSlinky.flexmonster.AnonActiveMeasure
-import typingsSlinky.flexmonster.AnonDateFormat
-import typingsSlinky.flexmonster.AnonDragging
+import typingsSlinky.flexmonster.anon.ActiveMeasure
+import typingsSlinky.flexmonster.anon.DateFormat
+import typingsSlinky.flexmonster.anon.Dragging
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Options extends js.Object {
   var caseSensitiveMembers: js.UndefOr[Boolean] = js.native
-  var chart: js.UndefOr[AnonActiveMeasure] = js.native
+  var chart: js.UndefOr[ActiveMeasure] = js.native
   var configuratorActive: js.UndefOr[Boolean] = js.native
   var configuratorButton: js.UndefOr[Boolean] = js.native
   var datePattern: js.UndefOr[String] = js.native
@@ -20,8 +20,8 @@ trait Options extends js.Object {
   var defaultHierarchySortName: js.UndefOr[String] = js.native
   var drillThrough: js.UndefOr[Boolean] = js.native
   var editing: js.UndefOr[Boolean] = js.native
-  var filter: js.UndefOr[AnonDateFormat] = js.native
-  var grid: js.UndefOr[AnonDragging] = js.native
+  var filter: js.UndefOr[DateFormat] = js.native
+  var grid: js.UndefOr[Dragging] = js.native
   var grouping: js.UndefOr[Boolean] = js.native
   var saveAllFormats: js.UndefOr[Boolean] = js.native
   var selectEmptyCells: js.UndefOr[Boolean] = js.native
@@ -70,7 +70,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withChart(value: AnonActiveMeasure): Self = {
+    def withChart(value: ActiveMeasure): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("chart")(value.asInstanceOf[js.Any])
         ret
@@ -190,7 +190,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withFilter(value: AnonDateFormat): Self = {
+    def withFilter(value: DateFormat): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("filter")(value.asInstanceOf[js.Any])
         ret
@@ -202,7 +202,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withGrid(value: AnonDragging): Self = {
+    def withGrid(value: Dragging): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("grid")(value.asInstanceOf[js.Any])
         ret

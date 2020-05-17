@@ -1,7 +1,7 @@
 package typingsSlinky.wonderJs.viewMod
 
 import org.scalajs.dom.raw.WebGLRenderingContext
-import typingsSlinky.wonderJs.AnonY
+import typingsSlinky.wonderJs.anon.Y
 import typingsSlinky.wonderJs.mainDataMod.ContextConfigData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 trait IView extends js.Object {
   var dom: js.Any = js.native
   var height: Double = js.native
-  var offset: AnonY = js.native
+  var offset: Y = js.native
   var styleHeight: String = js.native
   var styleWidth: String = js.native
   var width: Double = js.native
@@ -28,7 +28,7 @@ object IView {
     getContext: ContextConfigData => WebGLRenderingContext,
     height: Double,
     initCanvas: () => Unit,
-    offset: AnonY,
+    offset: Y,
     styleHeight: String,
     styleWidth: String,
     width: Double,
@@ -69,7 +69,7 @@ object IView {
         ret
     }
     @scala.inline
-    def withOffset(value: AnonY): Self = {
+    def withOffset(value: Y): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("offset")(value.asInstanceOf[js.Any])
         ret

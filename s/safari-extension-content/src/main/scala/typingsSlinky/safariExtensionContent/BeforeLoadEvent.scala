@@ -1,12 +1,12 @@
 package typingsSlinky.safariExtensionContent
 
-import typingsSlinky.std.Event_
+import typingsSlinky.std.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait BeforeLoadEvent extends Event_ {
+trait BeforeLoadEvent extends Event {
   var url: String = js.native
 }
 

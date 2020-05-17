@@ -1,7 +1,7 @@
 package typingsSlinky.arangodb.ArangoDB
 
-import typingsSlinky.arangodb.AnonIsSystem
-import typingsSlinky.arangodb.AnonLimit
+import typingsSlinky.arangodb.anon.IsSystem
+import typingsSlinky.arangodb.anon.Limit
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +22,7 @@ trait Collection[T /* <: js.Object */] extends js.Object {
   def document(selector: DocumentLike): Document[T] = js.native
   def documentId(documentKey: String): String = js.native
   def drop(): Unit = js.native
-  def drop(options: AnonIsSystem): Unit = js.native
+  def drop(options: IsSystem): Unit = js.native
   // Indexes
   def dropIndex(index: String): Boolean = js.native
   def dropIndex(index: IndexLike): Boolean = js.native
@@ -79,7 +79,7 @@ trait Collection[T /* <: js.Object */] extends js.Object {
   def replace(selector: DocumentLike, data: DocumentData[T]): UpdateResult[T] = js.native
   def replace(selector: DocumentLike, data: DocumentData[T], options: ReplaceOptions): UpdateResult[T] = js.native
   def replaceByExample(example: Partial[Document[T]], newValue: DocumentData[T]): Double = js.native
-  def replaceByExample(example: Partial[Document[T]], newValue: DocumentData[T], options: AnonLimit): Double = js.native
+  def replaceByExample(example: Partial[Document[T]], newValue: DocumentData[T], options: Limit): Double = js.native
   def replaceByExample(example: Partial[Document[T]], newValue: DocumentData[T], waitForSync: Boolean): Double = js.native
   def replaceByExample(example: Partial[Document[T]], newValue: DocumentData[T], waitForSync: Boolean, limit: Double): Double = js.native
   def revision(): String = js.native

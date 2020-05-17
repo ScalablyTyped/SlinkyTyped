@@ -1,6 +1,5 @@
 package typingsSlinky.arcgisJsApi.esri
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.disabled
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.ready
 import scala.scalajs.js
@@ -52,8 +51,4 @@ trait ZoomViewModel extends Accessor {
     */
   def zoomOut(): Unit = js.native
 }
-
-@JSGlobal("__esri.ZoomViewModel")
-@js.native
-object ZoomViewModel extends TopLevel[ZoomViewModelConstructor]
 

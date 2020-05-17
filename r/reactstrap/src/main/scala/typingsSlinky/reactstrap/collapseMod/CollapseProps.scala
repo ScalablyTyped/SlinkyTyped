@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.AllHTMLAttributes
 import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.reactstrap.AnonHide
+import typingsSlinky.reactstrap.anon.Hide
 import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ trait CollapseProps
      with /* key */ StringDictionary[js.Any] {
   var classNames: js.UndefOr[String] = js.native
   var cssModule: js.UndefOr[CSSModule] = js.native
-  var delay: js.UndefOr[AnonHide] = js.native
+  var delay: js.UndefOr[Hide] = js.native
   var isOpen: js.UndefOr[Boolean] = js.native
   var navbar: js.UndefOr[Boolean] = js.native
   var onClosed: js.UndefOr[js.Function0[Unit]] = js.native
@@ -68,7 +68,7 @@ object CollapseProps {
         ret
     }
     @scala.inline
-    def withDelay(value: AnonHide): Self = {
+    def withDelay(value: Hide): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("delay")(value.asInstanceOf[js.Any])
         ret

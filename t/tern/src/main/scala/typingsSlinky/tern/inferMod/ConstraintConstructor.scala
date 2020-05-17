@@ -2,7 +2,7 @@ package typingsSlinky.tern.inferMod
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.tern.AnonInstantiable
+import typingsSlinky.tern.anon.Instantiable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,5 +10,5 @@ import scala.scalajs.js.annotation._
 // #### Constraints ####
 @js.native
 trait ConstraintConstructor
-  extends Instantiable1[/* methods */ StringDictionary[js.Any], AnonInstantiable]
+  extends Instantiable1[/* methods */ StringDictionary[js.Any], Instantiable]
 

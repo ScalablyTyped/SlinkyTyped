@@ -1,15 +1,13 @@
 package typingsSlinky.sharepoint.SP.Taxonomy
 
-import typingsSlinky.sharepoint.SP.ClientContext
 import typingsSlinky.sharepoint.SP.ClientObject
 import typingsSlinky.sharepoint.SP.Guid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("SP.Taxonomy.TaxonomySession")
 @js.native
-class TaxonomySession () extends ClientObject {
+trait TaxonomySession extends ClientObject {
   def getDefaultKeywordsTermStore(): TermStore = js.native
   def getDefaultSiteCollectionTermStore(): TermStore = js.native
   def getTerm(guid: Guid): Term = js.native
@@ -38,12 +36,5 @@ class TaxonomySession () extends ClientObject {
   def get_offlineTermStoreNames(): js.Array[String] = js.native
   def get_termStores(): TermStoreCollection = js.native
   def updateCache(): Unit = js.native
-}
-
-/* static members */
-@JSGlobal("SP.Taxonomy.TaxonomySession")
-@js.native
-object TaxonomySession extends js.Object {
-  def getTaxonomySession(context: ClientContext): TaxonomySession = js.native
 }
 

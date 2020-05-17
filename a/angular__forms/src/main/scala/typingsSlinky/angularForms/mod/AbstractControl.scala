@@ -1,8 +1,8 @@
 package typingsSlinky.angularForms.mod
 
-import typingsSlinky.angularForms.AnonEmitEvent
-import typingsSlinky.angularForms.AnonEmitEventBoolean
-import typingsSlinky.angularForms.AnonOnlySelf
+import typingsSlinky.angularForms.anon.EmitEvent
+import typingsSlinky.angularForms.anon.EmitEventBoolean
+import typingsSlinky.angularForms.anon.OnlySelf
 import typingsSlinky.rxjs.mod.Observable_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -202,7 +202,7 @@ abstract class AbstractControl () extends js.Object {
     * When false, no events are emitted.
     */
   def disable(): Unit = js.native
-  def disable(opts: AnonEmitEvent): Unit = js.native
+  def disable(opts: EmitEvent): Unit = js.native
   /**
     * Enables the control. This means the control is included in validation checks and
     * the aggregate value of its parent. Its status recalculates based on its value and
@@ -222,7 +222,7 @@ abstract class AbstractControl () extends js.Object {
     * When false, no events are emitted.
     */
   def enable(): Unit = js.native
-  def enable(opts: AnonEmitEvent): Unit = js.native
+  def enable(opts: EmitEvent): Unit = js.native
   def get(path: String): AbstractControl | Null = js.native
   /**
     * Retrieves a child control given the control's name or path.
@@ -324,7 +324,7 @@ abstract class AbstractControl () extends js.Object {
     * marks all direct ancestors. Default is false.
     */
   def markAsDirty(): Unit = js.native
-  def markAsDirty(opts: AnonOnlySelf): Unit = js.native
+  def markAsDirty(opts: OnlySelf): Unit = js.native
   /**
     * Marks the control as `pending`.
     *
@@ -342,7 +342,7 @@ abstract class AbstractControl () extends js.Object {
     *
     */
   def markAsPending(): Unit = js.native
-  def markAsPending(opts: AnonEmitEvent): Unit = js.native
+  def markAsPending(opts: EmitEvent): Unit = js.native
   /**
     * Marks the control as `pristine`.
     *
@@ -360,7 +360,7 @@ abstract class AbstractControl () extends js.Object {
     * marks all direct ancestors. Default is false..
     */
   def markAsPristine(): Unit = js.native
-  def markAsPristine(opts: AnonOnlySelf): Unit = js.native
+  def markAsPristine(opts: OnlySelf): Unit = js.native
   /**
     * Marks the control as `touched`. A control is touched by focus and
     * blur events that do not change the value.
@@ -375,7 +375,7 @@ abstract class AbstractControl () extends js.Object {
     * marks all direct ancestors. Default is false.
     */
   def markAsTouched(): Unit = js.native
-  def markAsTouched(opts: AnonOnlySelf): Unit = js.native
+  def markAsTouched(opts: OnlySelf): Unit = js.native
   /**
     * Marks the control as `untouched`.
     *
@@ -392,7 +392,7 @@ abstract class AbstractControl () extends js.Object {
     * marks all direct ancestors. Default is false.
     */
   def markAsUntouched(): Unit = js.native
-  def markAsUntouched(opts: AnonOnlySelf): Unit = js.native
+  def markAsUntouched(opts: OnlySelf): Unit = js.native
   /**
     * Patches the value of the control. Abstract method (implemented in sub-classes).
     */
@@ -416,7 +416,7 @@ abstract class AbstractControl () extends js.Object {
     */
   def setAsyncValidators(newValidator: AsyncValidatorFn): Unit = js.native
   def setErrors(): Unit = js.native
-  def setErrors(errors: Null, opts: AnonEmitEventBoolean): Unit = js.native
+  def setErrors(errors: Null, opts: EmitEventBoolean): Unit = js.native
   /**
     * Sets errors on a form control when running validations manually, rather than automatically.
     *
@@ -440,7 +440,7 @@ abstract class AbstractControl () extends js.Object {
     * ```
     */
   def setErrors(errors: ValidationErrors): Unit = js.native
-  def setErrors(errors: ValidationErrors, opts: AnonEmitEventBoolean): Unit = js.native
+  def setErrors(errors: ValidationErrors, opts: EmitEventBoolean): Unit = js.native
   def setParent(parent: FormArray): Unit = js.native
   /**
     * @param parent Sets the parent of the control
@@ -477,6 +477,6 @@ abstract class AbstractControl () extends js.Object {
     * When false, no events are emitted.
     */
   def updateValueAndValidity(): Unit = js.native
-  def updateValueAndValidity(opts: AnonEmitEvent): Unit = js.native
+  def updateValueAndValidity(opts: EmitEvent): Unit = js.native
 }
 

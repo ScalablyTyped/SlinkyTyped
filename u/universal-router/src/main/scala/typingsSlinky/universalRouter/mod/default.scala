@@ -4,7 +4,7 @@ import typingsSlinky.pathToRegexp.mod.Key
 import typingsSlinky.pathToRegexp.mod.ParseOptions
 import typingsSlinky.pathToRegexp.mod.Path
 import typingsSlinky.pathToRegexp.mod.RegExpOptions
-import typingsSlinky.universalRouter.AnonCall
+import typingsSlinky.universalRouter.anon.Call
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ class default[C /* <: Context */, R] protected () extends UniversalRouter[C, R] 
 @js.native
 object default extends js.Object {
   @JSName("pathToRegexp")
-  var pathToRegexp_Original: AnonCall = js.native
+  var pathToRegexp_Original: Call = js.native
   def pathToRegexp(path: Path): js.RegExp = js.native
   def pathToRegexp(path: Path, keys: js.Array[Key]): js.RegExp = js.native
   def pathToRegexp(path: Path, keys: js.Array[Key], options: RegExpOptions with ParseOptions): js.RegExp = js.native

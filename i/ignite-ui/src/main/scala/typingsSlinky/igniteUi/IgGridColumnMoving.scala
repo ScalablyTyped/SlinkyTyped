@@ -1,7 +1,7 @@
 package typingsSlinky.igniteUi
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -266,7 +266,7 @@ object IgGridColumnMoving {
         ret
     }
     @scala.inline
-    def withColumnDragCanceled(value: (/* event */ Event_, /* ui */ ColumnDragCanceledEventUIParam) => Unit): Self = {
+    def withColumnDragCanceled(value: (/* event */ Event, /* ui */ ColumnDragCanceledEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnDragCanceled")(js.Any.fromFunction2(value))
         ret
@@ -278,7 +278,7 @@ object IgGridColumnMoving {
         ret
     }
     @scala.inline
-    def withColumnDragEnd(value: (/* event */ Event_, /* ui */ ColumnDragEndEventUIParam) => Unit): Self = {
+    def withColumnDragEnd(value: (/* event */ Event, /* ui */ ColumnDragEndEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnDragEnd")(js.Any.fromFunction2(value))
         ret
@@ -290,7 +290,7 @@ object IgGridColumnMoving {
         ret
     }
     @scala.inline
-    def withColumnDragStart(value: (/* event */ Event_, /* ui */ ColumnDragStartEventUIParam) => Unit): Self = {
+    def withColumnDragStart(value: (/* event */ Event, /* ui */ ColumnDragStartEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnDragStart")(js.Any.fromFunction2(value))
         ret
@@ -302,7 +302,7 @@ object IgGridColumnMoving {
         ret
     }
     @scala.inline
-    def withColumnMoved(value: (/* event */ Event_, /* ui */ ColumnMovedEventUIParam) => Unit): Self = {
+    def withColumnMoved(value: (/* event */ Event, /* ui */ ColumnMovedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnMoved")(js.Any.fromFunction2(value))
         ret
@@ -314,7 +314,7 @@ object IgGridColumnMoving {
         ret
     }
     @scala.inline
-    def withColumnMoving(value: (/* event */ Event_, /* ui */ ColumnMovingEventUIParam) => Unit): Self = {
+    def withColumnMoving(value: (/* event */ Event, /* ui */ ColumnMovingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("columnMoving")(js.Any.fromFunction2(value))
         ret
@@ -566,7 +566,7 @@ object IgGridColumnMoving {
         ret
     }
     @scala.inline
-    def withMovingDialogClosed(value: (/* event */ Event_, /* ui */ MovingDialogClosedEventUIParam) => Unit): Self = {
+    def withMovingDialogClosed(value: (/* event */ Event, /* ui */ MovingDialogClosedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("movingDialogClosed")(js.Any.fromFunction2(value))
         ret
@@ -578,7 +578,7 @@ object IgGridColumnMoving {
         ret
     }
     @scala.inline
-    def withMovingDialogClosing(value: (/* event */ Event_, /* ui */ MovingDialogClosingEventUIParam) => Unit): Self = {
+    def withMovingDialogClosing(value: (/* event */ Event, /* ui */ MovingDialogClosingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("movingDialogClosing")(js.Any.fromFunction2(value))
         ret
@@ -590,7 +590,7 @@ object IgGridColumnMoving {
         ret
     }
     @scala.inline
-    def withMovingDialogContentsRendered(value: (/* event */ Event_, /* ui */ MovingDialogContentsRenderedEventUIParam) => Unit): Self = {
+    def withMovingDialogContentsRendered(value: (/* event */ Event, /* ui */ MovingDialogContentsRenderedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("movingDialogContentsRendered")(js.Any.fromFunction2(value))
         ret
@@ -602,7 +602,7 @@ object IgGridColumnMoving {
         ret
     }
     @scala.inline
-    def withMovingDialogContentsRendering(value: (/* event */ Event_, /* ui */ MovingDialogContentsRenderingEventUIParam) => Unit): Self = {
+    def withMovingDialogContentsRendering(value: (/* event */ Event, /* ui */ MovingDialogContentsRenderingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("movingDialogContentsRendering")(js.Any.fromFunction2(value))
         ret
@@ -626,7 +626,7 @@ object IgGridColumnMoving {
         ret
     }
     @scala.inline
-    def withMovingDialogDragColumnMoved(value: (/* event */ Event_, /* ui */ MovingDialogDragColumnMovedEventUIParam) => Unit): Self = {
+    def withMovingDialogDragColumnMoved(value: (/* event */ Event, /* ui */ MovingDialogDragColumnMovedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("movingDialogDragColumnMoved")(js.Any.fromFunction2(value))
         ret
@@ -638,7 +638,7 @@ object IgGridColumnMoving {
         ret
     }
     @scala.inline
-    def withMovingDialogDragColumnMoving(value: (/* event */ Event_, /* ui */ MovingDialogDragColumnMovingEventUIParam) => Unit): Self = {
+    def withMovingDialogDragColumnMoving(value: (/* event */ Event, /* ui */ MovingDialogDragColumnMovingEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("movingDialogDragColumnMoving")(js.Any.fromFunction2(value))
         ret
@@ -650,7 +650,7 @@ object IgGridColumnMoving {
         ret
     }
     @scala.inline
-    def withMovingDialogDragged(value: (/* event */ Event_, /* ui */ MovingDialogDraggedEventUIParam) => Unit): Self = {
+    def withMovingDialogDragged(value: (/* event */ Event, /* ui */ MovingDialogDraggedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("movingDialogDragged")(js.Any.fromFunction2(value))
         ret
@@ -698,7 +698,7 @@ object IgGridColumnMoving {
         ret
     }
     @scala.inline
-    def withMovingDialogMoveDownButtonPressed(value: (/* event */ Event_, /* ui */ MovingDialogMoveDownButtonPressedEventUIParam) => Unit): Self = {
+    def withMovingDialogMoveDownButtonPressed(value: (/* event */ Event, /* ui */ MovingDialogMoveDownButtonPressedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("movingDialogMoveDownButtonPressed")(js.Any.fromFunction2(value))
         ret
@@ -710,7 +710,7 @@ object IgGridColumnMoving {
         ret
     }
     @scala.inline
-    def withMovingDialogMoveUpButtonPressed(value: (/* event */ Event_, /* ui */ MovingDialogMoveUpButtonPressedEventUIParam) => Unit): Self = {
+    def withMovingDialogMoveUpButtonPressed(value: (/* event */ Event, /* ui */ MovingDialogMoveUpButtonPressedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("movingDialogMoveUpButtonPressed")(js.Any.fromFunction2(value))
         ret
@@ -722,7 +722,7 @@ object IgGridColumnMoving {
         ret
     }
     @scala.inline
-    def withMovingDialogOpened(value: (/* event */ Event_, /* ui */ MovingDialogOpenedEventUIParam) => Unit): Self = {
+    def withMovingDialogOpened(value: (/* event */ Event, /* ui */ MovingDialogOpenedEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("movingDialogOpened")(js.Any.fromFunction2(value))
         ret
@@ -734,7 +734,7 @@ object IgGridColumnMoving {
         ret
     }
     @scala.inline
-    def withMovingDialogOpening(value: (/* event */ Event_, /* ui */ MovingDialogOpeningEventUIParam) => Unit): Self = {
+    def withMovingDialogOpening(value: (/* event */ Event, /* ui */ MovingDialogOpeningEventUIParam) => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("movingDialogOpening")(js.Any.fromFunction2(value))
         ret

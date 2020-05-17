@@ -1,6 +1,6 @@
 package typingsSlinky.ember.mod.Ember
 
-import typingsSlinky.std.Event_
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("ember", "Ember.ViewUtils")
 @js.native
 object ViewUtils extends js.Object {
-  def isSimpleClick(event: Event_): Boolean = js.native
+  def isSimpleClick(event: Event): Boolean = js.native
 }
 

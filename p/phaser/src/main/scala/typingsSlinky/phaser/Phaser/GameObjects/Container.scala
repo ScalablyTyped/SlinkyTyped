@@ -10,7 +10,6 @@ import typingsSlinky.phaser.Phaser.GameObjects.Components.TransformMatrix
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Visible
 import typingsSlinky.phaser.Phaser.Geom.Point
 import typingsSlinky.phaser.Phaser.Math.Vector2
-import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -51,9 +50,8 @@ import scala.scalajs.js.annotation._
   * flexible manner as those not within them. In short, don't use them for the sake of it. You pay a small cost
   * every time you create one, try to structure your game around avoiding that where possible.
   */
-@JSGlobal("Phaser.GameObjects.Container")
 @js.native
-class Container protected ()
+trait Container
   extends GameObject
      with AlphaSingle
      with BlendMode
@@ -62,17 +60,6 @@ class Container protected ()
      with Mask
      with Transform
      with Visible {
-  /**
-    * 
-    * @param scene The Scene to which this Game Object belongs. A Game Object can only belong to one Scene at a time.
-    * @param x The horizontal position of this Game Object in the world. Default 0.
-    * @param y The vertical position of this Game Object in the world. Default 0.
-    * @param children An optional array of Game Objects to add to this Container.
-    */
-  def this(scene: Scene) = this()
-  def this(scene: Scene, x: Double) = this()
-  def this(scene: Scene, x: Double, y: Double) = this()
-  def this(scene: Scene, x: Double, y: Double, children: js.Array[GameObject]) = this()
   /**
     * Internal value to allow Containers to be used for input and physics.
     * Do not change this value. It has no effect other than to break things.

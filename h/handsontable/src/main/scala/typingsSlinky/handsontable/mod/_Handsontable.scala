@@ -1,9 +1,11 @@
 package typingsSlinky.handsontable.mod
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLTableCellElement
 import org.scalajs.dom.raw.HTMLTableElement
+import org.scalajs.dom.raw.Window
 import typingsSlinky.handsontable.handsontableStrings.autoColumnSize
 import typingsSlinky.handsontable.handsontableStrings.autoRowSize
 import typingsSlinky.handsontable.handsontableStrings.autofill
@@ -102,8 +104,6 @@ import typingsSlinky.handsontable.mod.Handsontable.plugins.TouchScroll
 import typingsSlinky.handsontable.mod.Handsontable.plugins.TrimRows
 import typingsSlinky.handsontable.mod.Handsontable.wot.CellCoords
 import typingsSlinky.handsontable.mod.Handsontable.wot.CellRange
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -118,9 +118,9 @@ object _Handsontable extends js.Object {
     var forceFullRender: Boolean = js.native
     var isDestroyed: Boolean = js.native
     var renderCall: Boolean = js.native
-    var rootDocument: Document_ = js.native
+    var rootDocument: Document = js.native
     var rootElement: HTMLElement = js.native
-    var rootWindow: Window_ = js.native
+    var rootWindow: Window = js.native
     var table: HTMLTableElement = js.native
     def addHook[K /* <: /* keyof handsontable.handsontable.Handsontable.Hooks.Events */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 161 */ js.Any */](
       key: K,

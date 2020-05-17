@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait TargetConfiguration extends js.Object {
+trait TargetConfiguration extends TargetConfigType {
   /**
     * The arch or list of archs.
     */

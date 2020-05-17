@@ -1,13 +1,15 @@
 package typingsSlinky.amapJsApi.AMap.Polygon
 
 import typingsSlinky.amapJsApi.AMap.LocationValue
+import typingsSlinky.amapJsApi.ReferOverlayOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Options[ExtraData]
-  extends typingsSlinky.amapJsApi.AMap.PathOverlay.Options[ExtraData] {
+  extends typingsSlinky.amapJsApi.AMap.PathOverlay.Options[ExtraData]
+     with ReferOverlayOptions[js.Any] {
   /**
     * 多边形填充颜色
     */

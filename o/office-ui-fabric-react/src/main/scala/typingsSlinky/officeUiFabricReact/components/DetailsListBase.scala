@@ -1,5 +1,6 @@
 package typingsSlinky.officeUiFabricReact.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
@@ -8,7 +9,7 @@ import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.officeUiFabricReact.AnonCallback
+import typingsSlinky.officeUiFabricReact.anon.Callback
 import typingsSlinky.officeUiFabricReact.detailsFooterTypesMod.IDetailsFooterProps
 import typingsSlinky.officeUiFabricReact.detailsHeaderTypesMod.IDetailsHeaderProps
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.CheckboxVisibility
@@ -29,7 +30,6 @@ import typingsSlinky.officeUiFabricReact.groupedListTypesMod.IGroup
 import typingsSlinky.officeUiFabricReact.listTypesMod.IListProps
 import typingsSlinky.officeUiFabricReact.selectionZoneMod.ISelectionZoneProps
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
-import typingsSlinky.std.Event_
 import typingsSlinky.std.Partial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
 import typingsSlinky.uifabricStyling.ithemeMod.ITheme
@@ -144,11 +144,11 @@ object DetailsListBase {
     ): this.type = set("onDidUpdate", js.Any.fromFunction1(value))
     @scala.inline
     def onItemContextMenu(
-      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event_]) => Unit | Boolean
+      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event]) => Unit | Boolean
     ): this.type = set("onItemContextMenu", js.Any.fromFunction3(value))
     @scala.inline
     def onItemInvoked(
-      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event_]) => Unit
+      value: (/* item */ js.UndefOr[js.Any], /* index */ js.UndefOr[Double], /* ev */ js.UndefOr[Event]) => Unit
     ): this.type = set("onItemInvoked", js.Any.fromFunction3(value))
     @scala.inline
     def onRenderCheckbox(
@@ -183,7 +183,7 @@ object DetailsListBase {
     @scala.inline
     def onShouldVirtualize(value: /* props */ IListProps[_] => Boolean): this.type = set("onShouldVirtualize", js.Any.fromFunction1(value))
     @scala.inline
-    def rowElementEventMap(value: js.Array[AnonCallback]): this.type = set("rowElementEventMap", value.asInstanceOf[js.Any])
+    def rowElementEventMap(value: js.Array[Callback]): this.type = set("rowElementEventMap", value.asInstanceOf[js.Any])
     @scala.inline
     def selection(value: ISelection[IObjectWithKey]): this.type = set("selection", value.asInstanceOf[js.Any])
     @scala.inline

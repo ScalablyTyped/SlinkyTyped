@@ -1,12 +1,12 @@
 package typingsSlinky.officeJs.Excel
 
-import typingsSlinky.officeJs.AnonExpand
 import typingsSlinky.officeJs.Excel.Interfaces.TableData
 import typingsSlinky.officeJs.Excel.Interfaces.TableLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.TableUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.EventHandlers
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
+import typingsSlinky.officeJs.anon.Expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,9 +18,8 @@ import scala.scalajs.js.annotation._
   *
   * [Api set: ExcelApi 1.1]
   */
-@JSGlobal("Excel.Table")
 @js.native
-class Table () extends ClientObject {
+trait Table extends ClientObject {
   /**
     *
     * Represents the AutoFilter object of the table. Read-Only.
@@ -205,7 +204,7 @@ class Table () extends ClientObject {
     */
   def load(): Table = js.native
   def load(options: TableLoadOptions): Table = js.native
-  def load(propertyNamesAndPaths: AnonExpand): Table = js.native
+  def load(propertyNamesAndPaths: Expand): Table = js.native
   def load(propertyNames: String): Table = js.native
   def load(propertyNames: js.Array[String]): Table = js.native
   /**

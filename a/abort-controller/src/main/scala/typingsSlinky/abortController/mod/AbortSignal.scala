@@ -1,7 +1,7 @@
 package typingsSlinky.abortController.mod
 
 import typingsSlinky.abortController.abortControllerStrings.loose
-import typingsSlinky.eventTargetShim.AnonAddEventListener
+import typingsSlinky.eventTargetShim.anon.AddEventListener
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation._
 /**
   * AbortSignal cannot be constructed directly.
   */
-class AbortSignal () extends AnonAddEventListener[Events, loose] {
+class AbortSignal () extends AddEventListener[Events, loose] {
   /**
     * Returns `true` if this `AbortSignal`"s `AbortController` has signaled to abort, and `false` otherwise.
     */

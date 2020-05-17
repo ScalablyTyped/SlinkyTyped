@@ -3,7 +3,7 @@ package typingsSlinky.oracleOraclejet.ojpopupMod
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.oracleOraclejet.AnonAriaCloseSkipLink
+import typingsSlinky.oracleOraclejet.anon.AriaCloseSkipLink
 import typingsSlinky.oracleOraclejet.mod.baseComponent
 import typingsSlinky.oracleOraclejet.ojpopupMod.ojPopup.Position
 import typingsSlinky.oracleOraclejet.oracleOraclejetStrings.auto
@@ -61,7 +61,7 @@ trait ojPopup_ extends baseComponent[ojPopupSettableProperties] {
   var position: Position = js.native
   var tail: none | simple = js.native
   @JSName("translations")
-  var translations_ojPopup_ : AnonAriaCloseSkipLink = js.native
+  var translations_ojPopup_ : AriaCloseSkipLink = js.native
   def addEventListener(`type`: autoDismissChanged, listener: js.ThisFunction1[/* this */ HTMLElement, CustomEvent, _]): Unit = js.native
   def addEventListener(
     `type`: autoDismissChanged,
@@ -190,6 +190,6 @@ trait ojPopup_ extends baseComponent[ojPopupSettableProperties] {
   @JSName("setProperty")
   def setProperty_position(property: position, value: Position): Unit = js.native
   @JSName("setProperty")
-  def setProperty_translations(property: translations, value: AnonAriaCloseSkipLink): Unit = js.native
+  def setProperty_translations(property: translations, value: AriaCloseSkipLink): Unit = js.native
 }
 

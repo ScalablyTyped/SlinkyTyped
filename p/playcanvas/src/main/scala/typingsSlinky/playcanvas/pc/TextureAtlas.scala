@@ -1,6 +1,6 @@
 package typingsSlinky.playcanvas.pc
 
-import typingsSlinky.playcanvas.AnonBorder
+import typingsSlinky.playcanvas.anon.Border
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,9 +32,8 @@ import scala.scalajs.js.annotation._
   *     }
   * };
   */
-@JSGlobal("pc.TextureAtlas")
 @js.native
-class TextureAtlas () extends EventHandler {
+trait TextureAtlas extends EventHandler {
   /**
     * Contains frames which define portions of the texture atlas.
     */
@@ -73,6 +72,6 @@ class TextureAtlas () extends EventHandler {
     *     border: new pc.Vec4(5, 5, 5, 5)
     * });
     */
-  def setFrame(key: String, data: AnonBorder): Unit = js.native
+  def setFrame(key: String, data: Border): Unit = js.native
 }
 

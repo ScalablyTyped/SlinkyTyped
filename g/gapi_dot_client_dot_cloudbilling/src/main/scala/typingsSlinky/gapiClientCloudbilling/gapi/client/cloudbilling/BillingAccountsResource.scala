@@ -1,8 +1,8 @@
 package typingsSlinky.gapiClientCloudbilling.gapi.client.cloudbilling
 
-import typingsSlinky.gapiClient.gapi.client.Request_
-import typingsSlinky.gapiClientCloudbilling.AnonAlt
-import typingsSlinky.gapiClientCloudbilling.AnonBearertoken
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.gapiClientCloudbilling.anon.Alt
+import typingsSlinky.gapiClientCloudbilling.anon.Bearertoken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,19 +15,19 @@ trait BillingAccountsResource extends js.Object {
     * must be an [owner of the billing
     * account](https://support.google.com/cloud/answer/4430947).
     */
-  def get(request: AnonAlt): Request_[BillingAccount] = js.native
+  def get(request: Alt): Request[BillingAccount] = js.native
   /**
     * Lists the billing accounts that the current authenticated user
     * [owns](https://support.google.com/cloud/answer/4430947).
     */
-  def list(request: AnonBearertoken): Request_[ListBillingAccountsResponse] = js.native
+  def list(request: Bearertoken): Request[ListBillingAccountsResponse] = js.native
 }
 
 object BillingAccountsResource {
   @scala.inline
   def apply(
-    get: AnonAlt => Request_[BillingAccount],
-    list: AnonBearertoken => Request_[ListBillingAccountsResponse],
+    get: Alt => Request[BillingAccount],
+    list: Bearertoken => Request[ListBillingAccountsResponse],
     projects: ProjectsResource
   ): BillingAccountsResource = {
     val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list), projects = projects.asInstanceOf[js.Any])
@@ -40,13 +40,13 @@ object BillingAccountsResource {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withGet(value: AnonAlt => Request_[BillingAccount]): Self = {
+    def withGet(value: Alt => Request[BillingAccount]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("get")(js.Any.fromFunction1(value))
         ret
     }
     @scala.inline
-    def withList(value: AnonBearertoken => Request_[ListBillingAccountsResponse]): Self = {
+    def withList(value: Bearertoken => Request[ListBillingAccountsResponse]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("list")(js.Any.fromFunction1(value))
         ret

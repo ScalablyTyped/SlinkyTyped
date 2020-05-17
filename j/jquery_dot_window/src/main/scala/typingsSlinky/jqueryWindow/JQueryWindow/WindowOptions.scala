@@ -1,8 +1,8 @@
 package typingsSlinky.jqueryWindow.JQueryWindow
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jqueryWindow.AnonX
 import typingsSlinky.jqueryWindow.JQuery
+import typingsSlinky.jqueryWindow.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -53,7 +53,7 @@ trait WindowOptions extends js.Object {
   /**
     random the new created window position, it only works when options x,y value both are -1
     **/
-  var createRandomOffset: js.UndefOr[AnonX] = js.native
+  var createRandomOffset: js.UndefOr[X] = js.native
   /**
     to describe the customized button display and callback function
     **/
@@ -365,7 +365,7 @@ object WindowOptions {
         ret
     }
     @scala.inline
-    def withCreateRandomOffset(value: AnonX): Self = {
+    def withCreateRandomOffset(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("createRandomOffset")(value.asInstanceOf[js.Any])
         ret

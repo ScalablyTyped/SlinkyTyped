@@ -4,7 +4,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.DOMAttributes
-import typingsSlinky.victory.AnonY
+import typingsSlinky.victory.anon.Y
 import typingsSlinky.victory.mod.BlockProps
 import typingsSlinky.victory.mod.VictoryClipContainerProps
 import scala.scalajs.js
@@ -39,7 +39,7 @@ object VictoryClipContainer {
     @scala.inline
     def groupComponent(value: ReactElement): this.type = set("groupComponent", value.asInstanceOf[js.Any])
     @scala.inline
-    def origin(value: AnonY): this.type = set("origin", value.asInstanceOf[js.Any])
+    def origin(value: Y): this.type = set("origin", value.asInstanceOf[js.Any])
     @scala.inline
     def polar(value: Boolean): this.type = set("polar", value.asInstanceOf[js.Any])
     @scala.inline

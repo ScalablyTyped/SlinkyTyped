@@ -15,7 +15,7 @@ import typingsSlinky.homeworks.homeworks.TabMoveEventType
 import typingsSlinky.homeworks.homeworks.TabOptions
 import typingsSlinky.homeworks.homeworks.ToggleOptions
 import typingsSlinky.homeworks.homeworks.UploadOptions
-import typingsSlinky.jquery.JQuery_.EventHandlerBase
+import typingsSlinky.jquery.JQuery.EventHandlerBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

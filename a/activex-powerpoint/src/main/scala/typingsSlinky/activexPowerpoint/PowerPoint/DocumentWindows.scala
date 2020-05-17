@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("PowerPoint.DocumentWindows")
 @js.native
-class DocumentWindows protected () extends js.Object {
+trait DocumentWindows extends js.Object {
   val Application: typingsSlinky.activexPowerpoint.PowerPoint.Application = js.native
   val Count: Double = js.native
   val Parent: js.Any = js.native

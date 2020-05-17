@@ -1,0 +1,20 @@
+package typingsSlinky.devexpressWeb.global
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/**
+  * Provides data for the ASPxClientTreeList.BatchEditConfirmShowing event.
+  */
+@JSGlobal("ASPxClientTreeListBatchEditConfirmShowingEventArgs")
+@js.native
+class ASPxClientTreeListBatchEditConfirmShowingEventArgs protected ()
+  extends typingsSlinky.devexpressWeb.ASPxClientTreeListBatchEditConfirmShowingEventArgs {
+  /**
+    * Initializes a new instance of the ASPxClientTreeListBatchEditConfirmShowingEventArgs class.
+    * @param requestTriggerID A string value specifying the client identifier of an object that initiates a request.
+    */
+  def this(requestTriggerID: String) = this()
+}
+

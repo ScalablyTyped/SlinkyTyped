@@ -1,7 +1,7 @@
 package typingsSlinky.jsreportChromePdf.mod.jsreportCoreAugmentingMod
 
-import typingsSlinky.jsreportChromePdf.PartialChrome
-import typingsSlinky.jsreportChromePdf.PartialChromeImage
+import typingsSlinky.jsreportChromePdf.anon.PartialChrome
+import typingsSlinky.jsreportChromePdf.anon.PartialChromeImage
 import typingsSlinky.jsreportChromePdf.jsreportChromePdfStrings.`chrome-image`
 import typingsSlinky.jsreportChromePdf.jsreportChromePdfStrings.`chrome-pdf`
 import scala.scalajs.js

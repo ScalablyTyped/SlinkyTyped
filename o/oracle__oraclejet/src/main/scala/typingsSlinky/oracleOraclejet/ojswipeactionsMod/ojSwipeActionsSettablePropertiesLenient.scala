@@ -1,7 +1,7 @@
 package typingsSlinky.oracleOraclejet.ojswipeactionsMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.oracleOraclejet.AnonAriaHideActionsDescription
+import typingsSlinky.oracleOraclejet.anon.AriaHideActionsDescription
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ojSwipeActionsSettablePropertiesLenient
   extends /* key */ StringDictionary[js.Any] {
-  var translations: js.UndefOr[AnonAriaHideActionsDescription] = js.native
+  var translations: js.UndefOr[AriaHideActionsDescription] = js.native
 }
 
 object ojSwipeActionsSettablePropertiesLenient {
@@ -26,7 +26,7 @@ object ojSwipeActionsSettablePropertiesLenient {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withTranslations(value: AnonAriaHideActionsDescription): Self = {
+    def withTranslations(value: AriaHideActionsDescription): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("translations")(value.asInstanceOf[js.Any])
         ret

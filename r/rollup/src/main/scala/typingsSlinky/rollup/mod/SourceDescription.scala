@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait SourceDescription extends js.Object {
+trait SourceDescription extends LoadResult {
   var ast: js.UndefOr[Program] = js.native
   var code: String = js.native
   var map: js.UndefOr[SourceMapInput] = js.native

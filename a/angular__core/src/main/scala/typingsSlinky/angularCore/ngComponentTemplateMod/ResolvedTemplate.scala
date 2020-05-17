@@ -1,6 +1,6 @@
 package typingsSlinky.angularCore.ngComponentTemplateMod
 
-import typingsSlinky.angularCore.AnonCharacter
+import typingsSlinky.angularCore.anon.Character
 import typingsSlinky.typescript.mod.ClassDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +23,7 @@ trait ResolvedTemplate extends js.Object {
     * If the template is declared inline within a TypeScript source file, the line and
     * character are based on the full source file content.
     */
-  def getCharacterAndLineOfPosition(pos: Double): AnonCharacter = js.native
+  def getCharacterAndLineOfPosition(pos: Double): Character = js.native
 }
 
 object ResolvedTemplate {
@@ -32,7 +32,7 @@ object ResolvedTemplate {
     container: ClassDeclaration,
     content: String,
     filePath: String,
-    getCharacterAndLineOfPosition: Double => AnonCharacter,
+    getCharacterAndLineOfPosition: Double => Character,
     `inline`: Boolean,
     start: Double
   ): ResolvedTemplate = {
@@ -65,7 +65,7 @@ object ResolvedTemplate {
         ret
     }
     @scala.inline
-    def withGetCharacterAndLineOfPosition(value: Double => AnonCharacter): Self = {
+    def withGetCharacterAndLineOfPosition(value: Double => Character): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("getCharacterAndLineOfPosition")(js.Any.fromFunction1(value))
         ret

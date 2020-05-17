@@ -12,3 +12,14 @@ import scala.scalajs.js.annotation._
 */
 trait AddSheetResult[T] extends js.Object
 
+object AddSheetResult {
+  @scala.inline
+  implicit def apply[T](value: Chart): AddSheetResult[T] = value.asInstanceOf[AddSheetResult[T]]
+  @scala.inline
+  implicit def apply[T](value: DialogSheet): AddSheetResult[T] = value.asInstanceOf[AddSheetResult[T]]
+  @scala.inline
+  implicit def apply[T](value: Sheet): AddSheetResult[T] = value.asInstanceOf[AddSheetResult[T]]
+  @scala.inline
+  implicit def apply[T](value: Worksheet): AddSheetResult[T] = value.asInstanceOf[AddSheetResult[T]]
+}
+

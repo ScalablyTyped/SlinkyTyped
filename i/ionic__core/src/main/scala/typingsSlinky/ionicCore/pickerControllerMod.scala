@@ -1,6 +1,6 @@
 package typingsSlinky.ionicCore
 
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonPickerElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonPickerElement
 import typingsSlinky.ionicCore.overlaysInterfaceMod.OverlayController
 import typingsSlinky.ionicCore.pickerInterfaceMod.PickerOptions
 import typingsSlinky.ionicCore.stencilCoreMod.ComponentInterface

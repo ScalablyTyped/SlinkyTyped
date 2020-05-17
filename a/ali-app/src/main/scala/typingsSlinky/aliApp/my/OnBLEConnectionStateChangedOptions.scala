@@ -1,6 +1,6 @@
 package typingsSlinky.aliApp.my
 
-import typingsSlinky.aliApp.AnonConnected
+import typingsSlinky.aliApp.anon.Connected
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 trait OnBLEConnectionStateChangedOptions
   extends BaseOptions[js.Any, js.Any] {
   @JSName("success")
-  var success_OnBLEConnectionStateChangedOptions: js.UndefOr[js.Function1[/* res */ AnonConnected, Unit]] = js.native
+  var success_OnBLEConnectionStateChangedOptions: js.UndefOr[js.Function1[/* res */ Connected, Unit]] = js.native
 }
 
 object OnBLEConnectionStateChangedOptions {
@@ -25,7 +25,7 @@ object OnBLEConnectionStateChangedOptions {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withSuccess(value: /* res */ AnonConnected => Unit): Self = {
+    def withSuccess(value: /* res */ Connected => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("success")(js.Any.fromFunction1(value))
         ret

@@ -1,9 +1,9 @@
 package typingsSlinky.devextreme.mod.DevExpress.data
 
-import typingsSlinky.devextreme.AnonAllowSearch
-import typingsSlinky.devextreme.AnonChildren
-import typingsSlinky.devextreme.AnonSummaryProcess
-import typingsSlinky.devextreme.AnonValue
+import typingsSlinky.devextreme.anon.AllowSearch
+import typingsSlinky.devextreme.anon.Children
+import typingsSlinky.devextreme.anon.SummaryProcess
+import typingsSlinky.devextreme.anon.Value
 import typingsSlinky.devextreme.devextremeStrings.absoluteVariation
 import typingsSlinky.devextreme.devextremeStrings.asc
 import typingsSlinky.devextreme.devextremeStrings.avg
@@ -58,13 +58,13 @@ trait PivotGridDataSourceField extends js.Object {
   /** Specifies the field's order among the other fields in the same area. Corresponds to the field's order in the fields array by default. */
   var areaIndex: js.UndefOr[Double] = js.native
   /** Specifies a custom aggregate function. Applies only if the summaryType is "custom" and the remoteOperations is false. Cannot be used with an XmlaStore. */
-  var calculateCustomSummary: js.UndefOr[js.Function1[/* options */ AnonSummaryProcess, _]] = js.native
+  var calculateCustomSummary: js.UndefOr[js.Function1[/* options */ SummaryProcess, _]] = js.native
   /** Specifies a custom post-processing function for summary values. */
   var calculateSummaryValue: js.UndefOr[js.Function1[/* e */ dxPivotGridSummaryCell, Double]] = js.native
   /** Specifies the field's caption to be displayed in the field chooser and on the field panel. */
   var caption: js.UndefOr[String] = js.native
   /** Customizes the text displayed in summary cells. */
-  var customizeText: js.UndefOr[js.Function1[/* cellInfo */ AnonValue, String]] = js.native
+  var customizeText: js.UndefOr[js.Function1[/* cellInfo */ Value, String]] = js.native
   /** Specifies which data source field provides data for the pivot grid field. */
   var dataField: js.UndefOr[String] = js.native
   /** Casts field values to a specific data type. */
@@ -86,7 +86,7 @@ trait PivotGridDataSourceField extends js.Object {
   /** Specifies the name of the field's group. */
   var groupName: js.UndefOr[String] = js.native
   /** Configures the field's header filter. */
-  var headerFilter: js.UndefOr[AnonAllowSearch] = js.native
+  var headerFilter: js.UndefOr[AllowSearch] = js.native
   /** Specifies whether the field should be treated as a measure (a field providing data for calculation). */
   var isMeasure: js.UndefOr[Boolean] = js.native
   /** Specifies the field's identifier. */
@@ -110,7 +110,7 @@ trait PivotGridDataSourceField extends js.Object {
   /** Specifies the field values' sorting order. */
   var sortOrder: js.UndefOr[asc | desc] = js.native
   /** Specifies a custom comparison function that sorts the field's values in the headers. */
-  var sortingMethod: js.UndefOr[js.Function2[/* a */ AnonChildren, /* b */ AnonChildren, Double]] = js.native
+  var sortingMethod: js.UndefOr[js.Function2[/* a */ Children, /* b */ Children, Double]] = js.native
   /** Specifies a predefined post-processing function. Does not apply when the calculateSummaryValue option is set. */
   var summaryDisplayMode: js.UndefOr[
     absoluteVariation | percentOfColumnGrandTotal | percentOfColumnTotal | percentOfGrandTotal | percentOfRowGrandTotal | percentOfRowTotal | percentVariation
@@ -222,7 +222,7 @@ object PivotGridDataSourceField {
         ret
     }
     @scala.inline
-    def withCalculateCustomSummary(value: /* options */ AnonSummaryProcess => _): Self = {
+    def withCalculateCustomSummary(value: /* options */ SummaryProcess => _): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("calculateCustomSummary")(js.Any.fromFunction1(value))
         ret
@@ -258,7 +258,7 @@ object PivotGridDataSourceField {
         ret
     }
     @scala.inline
-    def withCustomizeText(value: /* cellInfo */ AnonValue => String): Self = {
+    def withCustomizeText(value: /* cellInfo */ Value => String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("customizeText")(js.Any.fromFunction1(value))
         ret
@@ -396,7 +396,7 @@ object PivotGridDataSourceField {
         ret
     }
     @scala.inline
-    def withHeaderFilter(value: AnonAllowSearch): Self = {
+    def withHeaderFilter(value: AllowSearch): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("headerFilter")(value.asInstanceOf[js.Any])
         ret
@@ -540,7 +540,7 @@ object PivotGridDataSourceField {
         ret
     }
     @scala.inline
-    def withSortingMethod(value: (/* a */ AnonChildren, /* b */ AnonChildren) => Double): Self = {
+    def withSortingMethod(value: (/* a */ Children, /* b */ Children) => Double): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("sortingMethod")(js.Any.fromFunction2(value))
         ret

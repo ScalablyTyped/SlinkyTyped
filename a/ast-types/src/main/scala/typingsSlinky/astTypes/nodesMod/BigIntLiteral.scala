@@ -1,7 +1,7 @@
 package typingsSlinky.astTypes.nodesMod
 
-import typingsSlinky.astTypes.AnonFlags
-import typingsSlinky.astTypes.AnonRawString
+import typingsSlinky.astTypes.anon.Flags
+import typingsSlinky.astTypes.anon.RawString
 import typingsSlinky.astTypes.kindsMod.CommentKind
 import typingsSlinky.astTypes.kindsMod.SourceLocationKind
 import scala.scalajs.js
@@ -12,9 +12,9 @@ import scala.scalajs.js.annotation._
 @js.native
 trait BigIntLiteral extends ASTNode {
   var comments: js.UndefOr[js.Array[CommentKind]] = js.native
-  var extra: AnonRawString = js.native
+  var extra: RawString = js.native
   var loc: js.UndefOr[SourceLocationKind] = js.native
-  var regex: js.UndefOr[AnonFlags] = js.native
+  var regex: js.UndefOr[Flags] = js.native
   var `type`: typingsSlinky.astTypes.astTypesStrings.BigIntLiteral = js.native
   var value: String | Double = js.native
 }
@@ -22,7 +22,7 @@ trait BigIntLiteral extends ASTNode {
 object BigIntLiteral {
   @scala.inline
   def apply(
-    extra: AnonRawString,
+    extra: RawString,
     `type`: typingsSlinky.astTypes.astTypesStrings.BigIntLiteral,
     value: String | Double
   ): BigIntLiteral = {
@@ -37,7 +37,7 @@ object BigIntLiteral {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withExtra(value: AnonRawString): Self = {
+    def withExtra(value: RawString): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("extra")(value.asInstanceOf[js.Any])
         ret
@@ -79,7 +79,7 @@ object BigIntLiteral {
         ret
     }
     @scala.inline
-    def withRegex(value: AnonFlags): Self = {
+    def withRegex(value: Flags): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("regex")(value.asInstanceOf[js.Any])
         ret

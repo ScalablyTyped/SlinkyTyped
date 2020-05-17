@@ -1,6 +1,6 @@
 package typingsSlinky.terminalKit.terminalMod
 
-import typingsSlinky.terminalKit.AnonItems
+import typingsSlinky.terminalKit.anon.Items
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ trait ProgressBarController extends js.Object {
   def startItem(name: String): Unit = js.native
   def stop(): Unit = js.native
   def update(updateObject: Double): Unit = js.native
-  def update(updateObject: AnonItems): Unit = js.native
+  def update(updateObject: Items): Unit = js.native
 }
 

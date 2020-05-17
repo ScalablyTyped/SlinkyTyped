@@ -1,10 +1,10 @@
 package typingsSlinky.primereact.multiSelectMod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
-import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
-import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,9 +21,9 @@ trait MultiSelectProps extends js.Object {
   var id: js.UndefOr[String] = js.native
   var itemTemplate: js.UndefOr[js.Function1[/* item */ js.Any, js.UndefOr[ReactElement]]] = js.native
   var maxSelectedLabels: js.UndefOr[Double] = js.native
-  var onBlur: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
-  var onChange: js.UndefOr[js.Function1[/* e */ AnonValue, Unit]] = js.native
-  var onFocus: js.UndefOr[js.Function1[/* event */ Event_, Unit]] = js.native
+  var onBlur: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
+  var onFocus: js.UndefOr[js.Function1[/* event */ Event, Unit]] = js.native
   var optionLabel: js.UndefOr[String] = js.native
   var options: js.UndefOr[js.Array[_]] = js.native
   var placeholder: js.UndefOr[String] = js.native
@@ -170,7 +170,7 @@ object MultiSelectProps {
         ret
     }
     @scala.inline
-    def withOnBlur(value: /* event */ Event_ => Unit): Self = {
+    def withOnBlur(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onBlur")(js.Any.fromFunction1(value))
         ret
@@ -182,7 +182,7 @@ object MultiSelectProps {
         ret
     }
     @scala.inline
-    def withOnChange(value: /* e */ AnonValue => Unit): Self = {
+    def withOnChange(value: /* e */ Value => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
         ret
@@ -194,7 +194,7 @@ object MultiSelectProps {
         ret
     }
     @scala.inline
-    def withOnFocus(value: /* event */ Event_ => Unit): Self = {
+    def withOnFocus(value: /* event */ Event => Unit): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("onFocus")(js.Any.fromFunction1(value))
         ret

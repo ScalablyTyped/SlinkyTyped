@@ -1,6 +1,6 @@
 package typingsSlinky.playcanvas.mod
 
-import typingsSlinky.playcanvas.AnonAddressU
+import typingsSlinky.playcanvas.anon.AddressU
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -99,6 +99,6 @@ import scala.scalajs.js.annotation._
 class Texture protected ()
   extends typingsSlinky.playcanvas.pc.Texture {
   def this(graphicsDevice: typingsSlinky.playcanvas.pc.GraphicsDevice) = this()
-  def this(graphicsDevice: typingsSlinky.playcanvas.pc.GraphicsDevice, options: AnonAddressU) = this()
+  def this(graphicsDevice: typingsSlinky.playcanvas.pc.GraphicsDevice, options: AddressU) = this()
 }
 

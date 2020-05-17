@@ -1,8 +1,8 @@
 package typingsSlinky.babylonjs.abstractMeshMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.babylonjs.AnonActions
 import typingsSlinky.babylonjs.abstractActionManagerMod.AbstractActionManager
+import typingsSlinky.babylonjs.anon.Actions
 import typingsSlinky.babylonjs.boundingInfoMod.BoundingInfo
 import typingsSlinky.babylonjs.boundingInfoMod.ICullable
 import typingsSlinky.babylonjs.cameraMod.Camera
@@ -114,7 +114,7 @@ class AbstractMesh protected ()
   /** @hidden */
   var _unIndexed: Boolean = js.native
   /** @hidden */
-  var _waitingData: AnonActions = js.native
+  var _waitingData: Actions = js.native
   /**
     * Gets or sets the current action manager
     * @see http://doc.babylonjs.com/how_to/how_to_use_actions

@@ -2,15 +2,15 @@ package typingsSlinky.wreck.mod
 
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.streamMod.Readable
-import typingsSlinky.wreck.AnonHttp
-import typingsSlinky.wreck.PromiseIncomingMessagereq
+import typingsSlinky.wreck.anon.Http
+import typingsSlinky.wreck.anon.PromiseIncomingMessagereq
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait WreckObject extends js.Object {
-  var agents: AnonHttp = js.native
+  var agents: Http = js.native
   var events: js.UndefOr[WreckEventEmitter] = js.native
   def defaults(options: RequestOptions): WreckObject = js.native
   def delete(uri: String, options: RequestOptions with ReadOptions): js.Promise[RequestResponse] = js.native

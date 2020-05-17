@@ -1,8 +1,8 @@
 package typingsSlinky.vexflow.Vex
 
-import typingsSlinky.vexflow.AnonCopyright
-import typingsSlinky.vexflow.AnonHa
-import typingsSlinky.vexflow.AnonXMax
+import typingsSlinky.vexflow.anon.Copyright
+import typingsSlinky.vexflow.anon.Ha
+import typingsSlinky.vexflow.anon.XMax_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,17 +13,17 @@ import scala.scalajs.js.annotation._
 @js.native
 trait IFont extends js.Object {
   var ascender: Double = js.native
-  var boundingBox: AnonXMax = js.native
+  var boundingBox: XMax_ = js.native
   var cssFontStyle: String = js.native
   var cssFontWeight: String = js.native
   var descender: Double = js.native
   var familyName: String = js.native
-  var glyphs: js.Array[AnonHa] = js.native
+  var glyphs: js.Array[Ha] = js.native
   var lineHeight: Double = js.native
   /**
     * This property is missing in vexflow_font.js, but present in gonville_original.js and gonville_all.js.
     */
-  var original_font_information: js.UndefOr[AnonCopyright] = js.native
+  var original_font_information: js.UndefOr[Copyright] = js.native
   var resolution: Double = js.native
   var underlinePosition: Double = js.native
   var underlineThickness: Double = js.native
@@ -33,12 +33,12 @@ object IFont {
   @scala.inline
   def apply(
     ascender: Double,
-    boundingBox: AnonXMax,
+    boundingBox: XMax_,
     cssFontStyle: String,
     cssFontWeight: String,
     descender: Double,
     familyName: String,
-    glyphs: js.Array[AnonHa],
+    glyphs: js.Array[Ha],
     lineHeight: Double,
     resolution: Double,
     underlinePosition: Double,
@@ -60,7 +60,7 @@ object IFont {
         ret
     }
     @scala.inline
-    def withBoundingBox(value: AnonXMax): Self = {
+    def withBoundingBox(value: XMax_): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("boundingBox")(value.asInstanceOf[js.Any])
         ret
@@ -90,7 +90,7 @@ object IFont {
         ret
     }
     @scala.inline
-    def withGlyphs(value: js.Array[AnonHa]): Self = {
+    def withGlyphs(value: js.Array[Ha]): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("glyphs")(value.asInstanceOf[js.Any])
         ret
@@ -120,7 +120,7 @@ object IFont {
         ret
     }
     @scala.inline
-    def withOriginal_font_information(value: AnonCopyright): Self = {
+    def withOriginal_font_information(value: Copyright): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("original_font_information")(value.asInstanceOf[js.Any])
         ret

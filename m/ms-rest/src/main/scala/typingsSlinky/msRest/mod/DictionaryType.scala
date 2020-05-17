@@ -1,18 +1,18 @@
 package typingsSlinky.msRest.mod
 
-import typingsSlinky.msRest.AnonValue
+import typingsSlinky.msRest.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait DictionaryType extends BaseMapperType {
-  var `type`: AnonValue = js.native
+  var `type`: Value = js.native
 }
 
 object DictionaryType {
   @scala.inline
-  def apply(name: MapperType, `type`: AnonValue): DictionaryType = {
+  def apply(name: MapperType, `type`: Value): DictionaryType = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DictionaryType]
@@ -24,7 +24,7 @@ object DictionaryType {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withType(value: AnonValue): Self = {
+    def withType(value: Value): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
         ret

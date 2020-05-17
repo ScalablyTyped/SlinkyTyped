@@ -1,8 +1,8 @@
 package typingsSlinky.karmaViewport.viewportMod
 
 import org.scalajs.dom.raw.HTMLIFrameElement
-import typingsSlinky.karmaViewport.ReadonlyViewportConfigura
-import typingsSlinky.karmaViewport.adapterMod._Global_.Window
+import typingsSlinky.karmaViewport.adapterMod.global.Window
+import typingsSlinky.karmaViewport.anon.ReadonlyViewportConfigura
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

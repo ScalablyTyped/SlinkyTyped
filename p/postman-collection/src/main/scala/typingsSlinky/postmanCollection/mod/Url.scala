@@ -1,9 +1,9 @@
 package typingsSlinky.postmanCollection.mod
 
-import typingsSlinky.postmanCollection.AnonForcePort
-import typingsSlinky.postmanCollection.AnonIgnoredDisabled
-import typingsSlinky.postmanCollection.AnonPassword
-import typingsSlinky.postmanCollection.AnonUnresolved
+import typingsSlinky.postmanCollection.anon.ForcePort
+import typingsSlinky.postmanCollection.anon.IgnoredDisabled
+import typingsSlinky.postmanCollection.anon.Password
+import typingsSlinky.postmanCollection.anon.Unresolved
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 class Url protected () extends PropertyBase[UrlDefinition] {
   def this(options: String) = this()
   def this(options: UrlDefinition) = this()
-  var auth: js.UndefOr[AnonPassword] = js.native
+  var auth: js.UndefOr[Password] = js.native
   var hash: js.UndefOr[String] = js.native
   var host: js.UndefOr[js.Array[String] | String] = js.native
   var path: js.UndefOr[js.Array[String] | String] = js.native
@@ -29,13 +29,13 @@ class Url protected () extends PropertyBase[UrlDefinition] {
   def getHost(): String = js.native
   def getOAuth1BaseUrl(): String = js.native
   def getPath(): String = js.native
-  def getPath(options: AnonUnresolved): String = js.native
+  def getPath(options: Unresolved): String = js.native
   def getPathWithQuery(): String = js.native
   def getQueryString(): String = js.native
-  def getQueryString(options: AnonIgnoredDisabled): String = js.native
+  def getQueryString(options: IgnoredDisabled): String = js.native
   def getRaw(): String = js.native
   def getRemote(): String = js.native
-  def getRemote(options: AnonForcePort): String = js.native
+  def getRemote(options: ForcePort): String = js.native
   def removeQueryParams(params: String): Unit = js.native
   def removeQueryParams(params: js.Array[QueryParamDefinition | String]): Unit = js.native
   def removeQueryParams(params: QueryParamDefinition): Unit = js.native

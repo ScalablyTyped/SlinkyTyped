@@ -4,8 +4,8 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.dygraphs.AnonX
 import typingsSlinky.dygraphs.Dygraph
+import typingsSlinky.dygraphs.anon.X
 import typingsSlinky.dygraphs.dygraphsStrings.always
 import typingsSlinky.dygraphs.dygraphsStrings.follow
 import typingsSlinky.dygraphs.dygraphsStrings.never
@@ -79,7 +79,7 @@ trait Options
     * See also documentation on <a href='http://dygraphs.com/per-axis.html'>per-series and
     * per-axis options</a>.
     */
-  var axes: js.UndefOr[AnonX] = js.native
+  var axes: js.UndefOr[X] = js.native
   /**
     * A function to call when the canvas is clicked.
     */
@@ -576,7 +576,7 @@ object Options {
         ret
     }
     @scala.inline
-    def withAxes(value: AnonX): Self = {
+    def withAxes(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("axes")(value.asInstanceOf[js.Any])
         ret

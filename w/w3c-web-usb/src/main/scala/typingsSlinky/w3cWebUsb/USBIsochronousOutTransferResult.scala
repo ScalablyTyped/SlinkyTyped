@@ -4,10 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("USBIsochronousOutTransferResult")
 @js.native
-class USBIsochronousOutTransferResult protected () extends js.Object {
-  def this(packets: js.Array[USBIsochronousOutTransferPacket]) = this()
+trait USBIsochronousOutTransferResult extends js.Object {
   val packets: js.Array[USBIsochronousOutTransferPacket] = js.native
+}
+
+object USBIsochronousOutTransferResult {
+  @scala.inline
+  def apply(packets: js.Array[USBIsochronousOutTransferPacket]): USBIsochronousOutTransferResult = {
+    val __obj = js.Dynamic.literal(packets = packets.asInstanceOf[js.Any])
+    __obj.asInstanceOf[USBIsochronousOutTransferResult]
+  }
+  @scala.inline
+  implicit class USBIsochronousOutTransferResultOps[Self <: USBIsochronousOutTransferResult] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withPackets(value: js.Array[USBIsochronousOutTransferPacket]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("packets")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

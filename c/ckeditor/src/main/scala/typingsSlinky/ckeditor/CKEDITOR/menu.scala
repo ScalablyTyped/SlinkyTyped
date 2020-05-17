@@ -1,21 +1,20 @@
 package typingsSlinky.ckeditor.CKEDITOR
 
-import typingsSlinky.ckeditor.AnonElement
 import typingsSlinky.ckeditor.CKEDITOR.dom.element
 import typingsSlinky.ckeditor.CKEDITOR.dom.elementPath
 import typingsSlinky.ckeditor.CKEDITOR.dom.selection
+import typingsSlinky.ckeditor.anon.Element
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSGlobal("CKEDITOR.menu")
 @js.native
-class menu () extends js.Object {
+trait menu extends js.Object {
   def add(item: js.Any): Unit = js.native
   def addListener(
     listenerFn: js.Function3[/* startElement */ element, /* selection */ selection, /* path */ elementPath, _]
   ): Unit = js.native
-  def findItemByCommandName(commandName: String): AnonElement = js.native
+  def findItemByCommandName(commandName: String): Element = js.native
   def hide(): Unit = js.native
   def hide(returnFocus: Boolean): Unit = js.native
   def removeAll(): Unit = js.native

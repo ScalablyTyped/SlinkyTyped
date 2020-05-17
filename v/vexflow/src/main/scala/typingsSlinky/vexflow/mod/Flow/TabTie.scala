@@ -1,6 +1,6 @@
 package typingsSlinky.vexflow.mod.Flow
 
-import typingsSlinky.vexflow.AnonFirstindices
+import typingsSlinky.vexflow.anon.Firstindices
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class TabTie protected ()
   extends typingsSlinky.vexflow.Vex.Flow.TabTie {
-  def this(notes: AnonFirstindices) = this()
-  def this(notes: AnonFirstindices, text: String) = this()
+  def this(notes: Firstindices) = this()
+  def this(notes: Firstindices, text: String) = this()
 }
 

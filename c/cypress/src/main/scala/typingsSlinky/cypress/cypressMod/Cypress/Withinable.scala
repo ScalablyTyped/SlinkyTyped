@@ -1,7 +1,7 @@
 package typingsSlinky.cypress.cypressMod.Cypress
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.cypress.JQuery_
+import typingsSlinky.cypress.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ trait Withinable extends js.Object {
     *
     * @default depends on context, null if outside of within wrapper
     */
-  var withinSubject: JQuery_[HTMLElement] | HTMLElement | Null = js.native
+  var withinSubject: JQuery[HTMLElement] | HTMLElement | Null = js.native
 }
 
 object Withinable {
@@ -39,7 +39,7 @@ object Withinable {
         ret
     }
     @scala.inline
-    def withWithinSubject(value: JQuery_[HTMLElement] | HTMLElement): Self = {
+    def withWithinSubject(value: JQuery[HTMLElement] | HTMLElement): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("withinSubject")(value.asInstanceOf[js.Any])
         ret

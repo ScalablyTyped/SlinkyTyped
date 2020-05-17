@@ -1,7 +1,7 @@
 package typingsSlinky.vscode.mod
 
-import typingsSlinky.vscode.AnonIgnoreIfExists
-import typingsSlinky.vscode.AnonIgnoreIfNotExists
+import typingsSlinky.vscode.anon.IgnoreIfExists
+import typingsSlinky.vscode.anon.IgnoreIfNotExists
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,8 +22,8 @@ class WorkspaceEdit () extends js.Object {
   		 * @param metadata Optional metadata for the entry.
   		 */
   def createFile(uri: Uri): Unit = js.native
-  def createFile(uri: Uri, options: AnonIgnoreIfExists): Unit = js.native
-  def createFile(uri: Uri, options: AnonIgnoreIfExists, metadata: WorkspaceEditEntryMetadata): Unit = js.native
+  def createFile(uri: Uri, options: IgnoreIfExists): Unit = js.native
+  def createFile(uri: Uri, options: IgnoreIfExists, metadata: WorkspaceEditEntryMetadata): Unit = js.native
   /**
   		 * Delete the text at the given range.
   		 *
@@ -40,8 +40,8 @@ class WorkspaceEdit () extends js.Object {
   		 * @param metadata Optional metadata for the entry.
   		 */
   def deleteFile(uri: Uri): Unit = js.native
-  def deleteFile(uri: Uri, options: AnonIgnoreIfNotExists): Unit = js.native
-  def deleteFile(uri: Uri, options: AnonIgnoreIfNotExists, metadata: WorkspaceEditEntryMetadata): Unit = js.native
+  def deleteFile(uri: Uri, options: IgnoreIfNotExists): Unit = js.native
+  def deleteFile(uri: Uri, options: IgnoreIfNotExists, metadata: WorkspaceEditEntryMetadata): Unit = js.native
   /**
   		 * Get all text edits grouped by resource.
   		 *
@@ -82,8 +82,8 @@ class WorkspaceEdit () extends js.Object {
   		 * @param metadata Optional metadata for the entry.
   		 */
   def renameFile(oldUri: Uri, newUri: Uri): Unit = js.native
-  def renameFile(oldUri: Uri, newUri: Uri, options: AnonIgnoreIfExists): Unit = js.native
-  def renameFile(oldUri: Uri, newUri: Uri, options: AnonIgnoreIfExists, metadata: WorkspaceEditEntryMetadata): Unit = js.native
+  def renameFile(oldUri: Uri, newUri: Uri, options: IgnoreIfExists): Unit = js.native
+  def renameFile(oldUri: Uri, newUri: Uri, options: IgnoreIfExists, metadata: WorkspaceEditEntryMetadata): Unit = js.native
   /**
   		 * Replace the given range with given text for the given resource.
   		 *

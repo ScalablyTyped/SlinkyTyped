@@ -5,6 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object Slick {
+  type AutoTooltips = typingsSlinky.slickgrid.Slick.Plugin[typingsSlinky.slickgrid.Slick.SlickData]
   type CellCssStylesHash = org.scalablytyped.runtime.NumberDictionary[org.scalablytyped.runtime.StringDictionary[java.lang.String]]
   type Formatter[T /* <: typingsSlinky.slickgrid.Slick.SlickData */] = js.Function5[
     /* row */ scala.Double, 

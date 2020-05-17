@@ -2,6 +2,8 @@ package typingsSlinky.entriaRelayExperimental
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.facade.ReactElement
+import typingsSlinky.entriaRelayExperimental.anon.FetchKey
+import typingsSlinky.entriaRelayExperimental.anon.NetworkCacheConfig
 import typingsSlinky.entriaRelayExperimental.relayEnvironmentProviderMod.Props
 import typingsSlinky.entriaRelayExperimental.useFragmentMod.NonNullableArrayFragmentReturn
 import typingsSlinky.entriaRelayExperimental.useFragmentMod.NonNullableFragmentReturn
@@ -34,7 +36,7 @@ object mod extends js.Object {
     environment: Environment,
     query: GraphQLTaggedNode,
     variables: /* import warning: importer.ImportType#apply Failed type conversion: TQuery['variables'] */ js.Any,
-    options: AnonNetworkCacheConfig
+    options: NetworkCacheConfig
   ): Observable[
     /* import warning: importer.ImportType#apply Failed type conversion: TQuery['response'] */ js.Any
   ] = js.native
@@ -58,7 +60,7 @@ object mod extends js.Object {
     typingsSlinky.entriaRelayExperimental.useLegacyPaginationFragmentMod.NonNullableFragmentReturn[TKey] with typingsSlinky.entriaRelayExperimental.useLegacyPaginationFragmentMod.NullableFragmentReturn[TKey]
   ] = js.native
   def useQuery[TQuery /* <: OperationType */](gqlQuery: GraphQLTaggedNode): /* import warning: importer.ImportType#apply Failed type conversion: TQuery['response'] */ js.Any = js.native
-  def useQuery[TQuery /* <: OperationType */](gqlQuery: GraphQLTaggedNode, variables: Null, options: AnonFetchKey): /* import warning: importer.ImportType#apply Failed type conversion: TQuery['response'] */ js.Any = js.native
+  def useQuery[TQuery /* <: OperationType */](gqlQuery: GraphQLTaggedNode, variables: Null, options: FetchKey): /* import warning: importer.ImportType#apply Failed type conversion: TQuery['response'] */ js.Any = js.native
   @JSName("useQuery")
   def useQuery_variables[TQuery /* <: OperationType */](
     gqlQuery: GraphQLTaggedNode,
@@ -68,7 +70,7 @@ object mod extends js.Object {
   def useQuery_variables[TQuery /* <: OperationType */](
     gqlQuery: GraphQLTaggedNode,
     variables: /* import warning: importer.ImportType#apply Failed type conversion: TQuery['variables'] */ js.Any,
-    options: AnonFetchKey
+    options: FetchKey
   ): /* import warning: importer.ImportType#apply Failed type conversion: TQuery['response'] */ js.Any = js.native
   def useRefetchableFragment[TQuery /* <: OperationType */, TKey /* <: StringDictionary[js.Any] | Null */](fragmentInput: GraphQLTaggedNode, fragmentRef: TKey): ReturnTypeRefetchableFragment[TQuery, TKey] = js.native
   def useRelayEnvironment(): Environment = js.native

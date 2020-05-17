@@ -7,9 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /** The functionality described in this topic is not available to all Windows and Windows Phone apps. For your code to call these APIs, Microsoft must approve your use of them and provision your developer account. Otherwise the calls will fail at runtime. */
-@JSGlobal("Windows.ApplicationModel.Email.EmailMailboxChangeReader")
 @js.native
-abstract class EmailMailboxChangeReader () extends js.Object {
+trait EmailMailboxChangeReader extends js.Object {
   /** Accepts all changes. */
   def acceptChanges(): Unit = js.native
   /**
@@ -22,5 +21,43 @@ abstract class EmailMailboxChangeReader () extends js.Object {
     * @return A batch of changes.
     */
   def readBatchAsync(): IPromiseWithIAsyncOperation[IVectorView[_]] = js.native
+}
+
+object EmailMailboxChangeReader {
+  @scala.inline
+  def apply(
+    acceptChanges: () => Unit,
+    acceptChangesThrough: EmailMailboxChange => Unit,
+    readBatchAsync: () => IPromiseWithIAsyncOperation[IVectorView[_]]
+  ): EmailMailboxChangeReader = {
+    val __obj = js.Dynamic.literal(acceptChanges = js.Any.fromFunction0(acceptChanges), acceptChangesThrough = js.Any.fromFunction1(acceptChangesThrough), readBatchAsync = js.Any.fromFunction0(readBatchAsync))
+    __obj.asInstanceOf[EmailMailboxChangeReader]
+  }
+  @scala.inline
+  implicit class EmailMailboxChangeReaderOps[Self <: EmailMailboxChangeReader] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withAcceptChanges(value: () => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptChanges")(js.Any.fromFunction0(value))
+        ret
+    }
+    @scala.inline
+    def withAcceptChangesThrough(value: EmailMailboxChange => Unit): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("acceptChangesThrough")(js.Any.fromFunction1(value))
+        ret
+    }
+    @scala.inline
+    def withReadBatchAsync(value: () => IPromiseWithIAsyncOperation[IVectorView[_]]): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("readBatchAsync")(js.Any.fromFunction0(value))
+        ret
+    }
+  }
+  
 }
 

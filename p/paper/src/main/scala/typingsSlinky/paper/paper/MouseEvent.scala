@@ -12,9 +12,8 @@ import scala.scalajs.js.annotation._
   * {@link Item#onMouseLeave}. The MouseEvent object is the only parameter passed
   * to these functions and contains information about the mouse event.
   */
-@JSGlobal("paper.MouseEvent")
 @js.native
-class MouseEvent () extends Event {
+trait MouseEvent extends Event {
   /** 
     * The current target for the event, as the event traverses the scene graph.
     * It always refers to the element the event handler has been attached to as
@@ -38,5 +37,63 @@ class MouseEvent () extends Event {
     * The type of mouse event.
     */
   var `type`: String = js.native
+}
+
+object MouseEvent {
+  @scala.inline
+  def apply(
+    currentTarget: Item,
+    delta: Point,
+    modifiers: js.Any,
+    point: Point,
+    preventDefault: () => Unit,
+    stop: () => Unit,
+    stopPropagation: () => Unit,
+    target: Item,
+    timeStamp: Double,
+    `type`: String
+  ): MouseEvent = {
+    val __obj = js.Dynamic.literal(currentTarget = currentTarget.asInstanceOf[js.Any], delta = delta.asInstanceOf[js.Any], modifiers = modifiers.asInstanceOf[js.Any], point = point.asInstanceOf[js.Any], preventDefault = js.Any.fromFunction0(preventDefault), stop = js.Any.fromFunction0(stop), stopPropagation = js.Any.fromFunction0(stopPropagation), target = target.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[MouseEvent]
+  }
+  @scala.inline
+  implicit class MouseEventOps[Self <: MouseEvent] (val x: Self) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def withCurrentTarget(value: Item): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("currentTarget")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withDelta(value: Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("delta")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withPoint(value: Point): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("point")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withTarget(value: Item): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("target")(value.asInstanceOf[js.Any])
+        ret
+    }
+    @scala.inline
+    def withType(value: String): Self = {
+        val ret = this.duplicate
+        ret.asInstanceOf[js.Dynamic].updateDynamic("type")(value.asInstanceOf[js.Any])
+        ret
+    }
+  }
+  
 }
 

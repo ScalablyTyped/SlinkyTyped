@@ -1,9 +1,9 @@
 package typingsSlinky.gaeaModel.FitGaea
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.gaeaModel.AnonMapUniqueKey
-import typingsSlinky.gaeaModel.AnonSource
-import typingsSlinky.gaeaModel.AnonUniqueKey
+import typingsSlinky.gaeaModel.anon.MapUniqueKey
+import typingsSlinky.gaeaModel.anon.Source
+import typingsSlinky.gaeaModel.anon.UniqueKey
 import typingsSlinky.gaeaModel.gaeaModelStrings.`new`
 import typingsSlinky.gaeaModel.gaeaModelStrings.combo
 import typingsSlinky.gaeaModel.gaeaModelStrings.viewport
@@ -13,15 +13,15 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait CurrentDragComponentInfo extends js.Object {
-  var comboInfo: js.UndefOr[AnonSource] = js.native
+  var comboInfo: js.UndefOr[Source] = js.native
   // 开始拖拽在父级中的位置
   var dragStartIndex: Double = js.native
   // 开始拖拽父级的 dom
   var dragStartParentElement: HTMLElement = js.native
-  var newInfo: js.UndefOr[AnonUniqueKey] = js.native
+  var newInfo: js.UndefOr[UniqueKey] = js.native
   // 类型
   var `type`: `new` | combo | viewport = js.native
-  var viewportInfo: js.UndefOr[AnonMapUniqueKey] = js.native
+  var viewportInfo: js.UndefOr[MapUniqueKey] = js.native
 }
 
 object CurrentDragComponentInfo {
@@ -56,7 +56,7 @@ object CurrentDragComponentInfo {
         ret
     }
     @scala.inline
-    def withComboInfo(value: AnonSource): Self = {
+    def withComboInfo(value: Source): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("comboInfo")(value.asInstanceOf[js.Any])
         ret
@@ -68,7 +68,7 @@ object CurrentDragComponentInfo {
         ret
     }
     @scala.inline
-    def withNewInfo(value: AnonUniqueKey): Self = {
+    def withNewInfo(value: UniqueKey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("newInfo")(value.asInstanceOf[js.Any])
         ret
@@ -80,7 +80,7 @@ object CurrentDragComponentInfo {
         ret
     }
     @scala.inline
-    def withViewportInfo(value: AnonMapUniqueKey): Self = {
+    def withViewportInfo(value: MapUniqueKey): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("viewportInfo")(value.asInstanceOf[js.Any])
         ret

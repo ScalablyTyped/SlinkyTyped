@@ -1,8 +1,8 @@
 package typingsSlinky.tablesorter.stickyHeaderOptionsMod
 
-import typingsSlinky.jquery.JQuery_.Selector
-import typingsSlinky.tablesorter.mod._Global_.HTMLElement
-import typingsSlinky.tablesorter.mod._Global_.JQuery
+import typingsSlinky.jquery.JQuery.Selector
+import typingsSlinky.tablesorter.mod.global.HTMLElement
+import typingsSlinky.tablesorter.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.openssiWebsdk.mod
 
-import typingsSlinky.openssiWebsdk.AnonDid
+import typingsSlinky.openssiWebsdk.anon.Did
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,15 +8,15 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ConnectionAgent extends js.Object {
   var name: AgentName = js.native
-  var pairwise: AnonDid = js.native
-  var public: AnonDid = js.native
+  var pairwise: Did = js.native
+  var public: Did = js.native
   var role: String = js.native
   var url: AgentURL = js.native
 }
 
 object ConnectionAgent {
   @scala.inline
-  def apply(name: AgentName, pairwise: AnonDid, public: AnonDid, role: String, url: AgentURL): ConnectionAgent = {
+  def apply(name: AgentName, pairwise: Did, public: Did, role: String, url: AgentURL): ConnectionAgent = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], pairwise = pairwise.asInstanceOf[js.Any], public = public.asInstanceOf[js.Any], role = role.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConnectionAgent]
   }
@@ -33,13 +33,13 @@ object ConnectionAgent {
         ret
     }
     @scala.inline
-    def withPairwise(value: AnonDid): Self = {
+    def withPairwise(value: Did): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("pairwise")(value.asInstanceOf[js.Any])
         ret
     }
     @scala.inline
-    def withPublic(value: AnonDid): Self = {
+    def withPublic(value: Did): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("public")(value.asInstanceOf[js.Any])
         ret

@@ -1,18 +1,18 @@
 package typingsSlinky.reactNativeTabView.scrollPagerMod
 
-import typingsSlinky.reactNativeTabView.AnonX
+import typingsSlinky.reactNativeTabView.anon.X
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait State extends js.Object {
-  var initialOffset: AnonX = js.native
+  var initialOffset: X = js.native
 }
 
 object State {
   @scala.inline
-  def apply(initialOffset: AnonX): State = {
+  def apply(initialOffset: X): State = {
     val __obj = js.Dynamic.literal(initialOffset = initialOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[State]
   }
@@ -23,7 +23,7 @@ object State {
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     @scala.inline
-    def withInitialOffset(value: AnonX): Self = {
+    def withInitialOffset(value: X): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("initialOffset")(value.asInstanceOf[js.Any])
         ret

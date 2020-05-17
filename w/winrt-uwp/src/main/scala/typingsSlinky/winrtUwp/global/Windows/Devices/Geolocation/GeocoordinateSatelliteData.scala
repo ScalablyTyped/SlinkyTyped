@@ -1,0 +1,12 @@
+package typingsSlinky.winrtUwp.global.Windows.Devices.Geolocation
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/** Provides additional information about a Geocoordinate . This information is only applicable to position estimates obtained using satellite signals. */
+@JSGlobal("Windows.Devices.Geolocation.GeocoordinateSatelliteData")
+@js.native
+abstract class GeocoordinateSatelliteData ()
+  extends typingsSlinky.winrtUwp.Windows.Devices.Geolocation.GeocoordinateSatelliteData
+

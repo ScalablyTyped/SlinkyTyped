@@ -1,5 +1,7 @@
 package typingsSlinky.twitchExt
 
+import typingsSlinky.twitchExt.anon.PartialTwitchExtContext
+import typingsSlinky.twitchExt.anon.X
 import typingsSlinky.twitchExt.twitchExtBooleans.`false`
 import typingsSlinky.twitchExt.twitchExtBooleans.`true`
 import typingsSlinky.twitchExt.twitchExtStrings.arePlayerControlsVisible
@@ -87,7 +89,7 @@ trait TwitchExt extends js.Object {
     contextCallback: js.Function2[
       /* context */ PartialTwitchExtContext, 
       /* changed */ js.Array[
-        /* keyof twitch-ext.PartialTwitchExtContext */ isPaused | bufferSize | isTheatreMode | isMuted | isFullScreen | hlsLatencyBroadcaster | volume | videoResolution | displayResolution | playbackMode | mode | arePlayerControlsVisible | bitrate | game | language | theme
+        /* keyof twitch-ext.anon.PartialTwitchExtContext */ isPaused | bufferSize | isTheatreMode | isMuted | isFullScreen | hlsLatencyBroadcaster | volume | videoResolution | displayResolution | playbackMode | mode | arePlayerControlsVisible | bitrate | game | language | theme
       ], 
       Unit
     ]
@@ -106,7 +108,7 @@ trait TwitchExt extends js.Object {
   	 * @param callback This callback is called whenever an extension changes position in the player.
   	 * @see https://dev.twitch.tv/docs/extensions/reference/#onpositionchanged
   	 */
-  def onPositionChanged(callback: js.Function1[/* position */ AnonX, Unit]): Unit = js.native
+  def onPositionChanged(callback: js.Function1[/* position */ X, Unit]): Unit = js.native
   /**
   	 * This function registers a callback that gets called whenever an extension is hidden/re-shown. (This occurs only
   	 * for mobile or component extensions.) When an extension is not visible in the mobile app, it does not receive

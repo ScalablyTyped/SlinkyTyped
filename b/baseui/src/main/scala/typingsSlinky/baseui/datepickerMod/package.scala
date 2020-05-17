@@ -11,6 +11,6 @@ package object datepickerMod {
     /* currentState */ typingsSlinky.baseui.datepickerMod.ContainerState, 
     typingsSlinky.baseui.datepickerMod.ContainerState
   ]
-  type StatefulDatepickerProps[T] = T with typingsSlinky.baseui.datepickerMod.StatefulContainerProps[T] with typingsSlinky.baseui.AnonChildren[T]
-  type onChange = js.Function1[/* args */ typingsSlinky.baseui.AnonDate, js.Any]
+  type StatefulDatepickerProps[T] = T with typingsSlinky.baseui.datepickerMod.StatefulContainerProps[T] with typingsSlinky.baseui.anon.Children[T]
+  type onChange = js.Function1[/* args */ typingsSlinky.baseui.anon.Date, js.Any]
 }

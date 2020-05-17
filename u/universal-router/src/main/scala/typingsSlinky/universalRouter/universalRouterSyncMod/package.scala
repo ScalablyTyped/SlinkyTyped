@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 package object universalRouterSyncMod {
   type Context = org.scalablytyped.runtime.StringDictionary[js.Any]
   type ErrorHandler[C /* <: typingsSlinky.universalRouter.universalRouterSyncMod.Context */, R] = js.Function2[
-    /* error */ typingsSlinky.universalRouter.Errorstatusnumber, 
+    /* error */ typingsSlinky.universalRouter.anon.Errorstatusnumber, 
     /* context */ C with (typingsSlinky.universalRouter.universalRouterSyncMod.RouteContext[C, R]), 
     typingsSlinky.universalRouter.universalRouterSyncMod.Result[R]
   ]
@@ -17,6 +17,5 @@ package object universalRouterSyncMod {
     /* params */ typingsSlinky.universalRouter.universalRouterSyncMod.QueryParams, 
     typingsSlinky.universalRouter.universalRouterSyncMod.Result[R]
   ]
-  type Result[T] = T | scala.Unit
   type Routes[C /* <: typingsSlinky.universalRouter.universalRouterSyncMod.Context */, R] = js.Array[typingsSlinky.universalRouter.universalRouterSyncMod.Route[C, R]]
 }

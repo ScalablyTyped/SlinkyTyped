@@ -2,9 +2,9 @@ package typingsSlinky.ionicReact.ionBackButtonMod
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.facade.ReactRef
-import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonBackButtonElement
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonBackButtonElement
 import typingsSlinky.ionicCore.mod.Color
-import typingsSlinky.ionicReact.AnonIos
+import typingsSlinky.ionicReact.anon.Ios
 import typingsSlinky.ionicReact.ionicReactStrings.button
 import typingsSlinky.ionicReact.ionicReactStrings.ios
 import typingsSlinky.ionicReact.ionicReactStrings.md
@@ -14,7 +14,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Omit<@ionic/core.@ionic/core.JSX.IonBackButton, 'icon'> & @ionic/react.@ionic/react/dist/types/components/IonicReactProps.IonicReactProps & {  icon ? :{  ios  :string,   md  :string} | string,   ref ? :react.react.RefObject<@ionic/core.@ionic/core/dist/types/components._Global_.HTMLIonBackButtonElement>} */
+/* Inlined std.Omit<@ionic/core.@ionic/core.JSX.IonBackButton, 'icon'> & @ionic/react.@ionic/react/dist/types/components/IonicReactProps.IonicReactProps & {  icon ? :{  ios  :string,   md  :string} | string,   ref ? :react.react.RefObject<@ionic/core.@ionic/core/dist/types/components.<global>.HTMLIonBackButtonElement>} */
 @js.native
 trait Props extends js.Object {
   var `class`: js.UndefOr[String] = js.native
@@ -22,7 +22,7 @@ trait Props extends js.Object {
   var color: js.UndefOr[Color] = js.native
   var defaultHref: js.UndefOr[String] = js.native
   var disabled: js.UndefOr[Boolean] = js.native
-  var icon: js.UndefOr[AnonIos | String] = js.native
+  var icon: js.UndefOr[Ios | String] = js.native
   var mode: js.UndefOr[ios | md] = js.native
   var ref: js.UndefOr[ReactRef[HTMLIonBackButtonElement]] = js.native
   var style: js.UndefOr[StringDictionary[js.Any]] = js.native
@@ -103,7 +103,7 @@ object Props {
         ret
     }
     @scala.inline
-    def withIcon(value: AnonIos | String): Self = {
+    def withIcon(value: Ios | String): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("icon")(value.asInstanceOf[js.Any])
         ret

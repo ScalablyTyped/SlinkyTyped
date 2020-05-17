@@ -1,8 +1,8 @@
 package typingsSlinky.mediumEditor.MediumEditor
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.std.Document_
-import typingsSlinky.std.Window_
+import org.scalajs.dom.raw.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ trait CoreOptions extends js.Object {
   var anchorPreview: js.UndefOr[AnchorPreviewOptions | Boolean] = js.native
   var autoLink: js.UndefOr[Boolean] = js.native
   var buttonLabels: js.UndefOr[String | Boolean] = js.native
-  var contentWindow: js.UndefOr[Window_] = js.native
+  var contentWindow: js.UndefOr[Window] = js.native
   var delay: js.UndefOr[Double] = js.native
   var disableDoubleReturn: js.UndefOr[Boolean] = js.native
   var disableEditing: js.UndefOr[Boolean] = js.native
@@ -25,7 +25,7 @@ trait CoreOptions extends js.Object {
   var extensions: js.UndefOr[js.Any] = js.native
   var imageDragging: js.UndefOr[Boolean] = js.native
   var keyboardCommands: js.UndefOr[KeyboardCommandsOptions | Boolean] = js.native
-  var ownerDocument: js.UndefOr[Document_] = js.native
+  var ownerDocument: js.UndefOr[Document] = js.native
   var paste: js.UndefOr[PasteOptions] = js.native
   var placeholder: js.UndefOr[PlaceholderOptions | Boolean] = js.native
   var spellcheck: js.UndefOr[Boolean] = js.native
@@ -118,7 +118,7 @@ object CoreOptions {
         ret
     }
     @scala.inline
-    def withContentWindow(value: Window_): Self = {
+    def withContentWindow(value: Window): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("contentWindow")(value.asInstanceOf[js.Any])
         ret
@@ -238,7 +238,7 @@ object CoreOptions {
         ret
     }
     @scala.inline
-    def withOwnerDocument(value: Document_): Self = {
+    def withOwnerDocument(value: Document): Self = {
         val ret = this.duplicate
         ret.asInstanceOf[js.Dynamic].updateDynamic("ownerDocument")(value.asInstanceOf[js.Any])
         ret
